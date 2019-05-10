@@ -11,12 +11,12 @@ helpviewer_keywords:
 - _bittestandset intrinsic
 - _bittestandset64 intrinsic
 ms.assetid: 6d6c8670-fea0-4c1c-9aad-2bb842715203
-ms.openlocfilehash: 95acb833b05b67e7781973d6b3bd6fdcfe97615b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dadeeae23b1808bbee13940727a3bdbace1dad54
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62264174"
 ---
 # <a name="bittestandset-bittestandset64"></a>_bittestandset、_bittestandset64
 

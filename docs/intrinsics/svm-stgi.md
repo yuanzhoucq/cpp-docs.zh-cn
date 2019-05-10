@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __svm_stgi intrinsic
 - STGI instruction
 ms.assetid: 96488da4-5587-4e99-8674-627a9e51be84
-ms.openlocfilehash: 9f7e35bbecf4051e4a47c32753b3a221dd2a4cc1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea138f17a24af21afa937991f77bd1e2a689c3f7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62390212"
 ---
 # <a name="svmstgi"></a>__svm_stgi
 
@@ -30,7 +30,7 @@ void __svm_stgi(void);
 
 `__svm_stgi` 函数等同于 `STGI` 计算机指令。 全局中断标志确定微处理器忽略、 推迟，或处理的 I/O 完成、 硬件温度警报或调试异常等事件中断。
 
-此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索文档中，"AMD64 体系结构编程人员手动卷 2： 系统编程中，"文档数 24593，修订 3.11， [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/)站点。
+此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索文档中，"AMD64 体系结构编程人员手动卷 2:系统编程，"文档数 24593，3.11，修订[AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/)站点。
 
 ## <a name="requirements"></a>要求
 

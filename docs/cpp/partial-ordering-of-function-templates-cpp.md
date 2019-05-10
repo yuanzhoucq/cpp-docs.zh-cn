@@ -5,11 +5,11 @@ helpviewer_keywords:
 - partial ordering of function templates
 ms.assetid: 0c17347d-0e80-47ad-b5ac-046462d9dc73
 ms.openlocfilehash: 9a3dc687f197770f7a11440699163787b1dc48ef
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183359"
 ---
 # <a name="partial-ordering-of-function-templates-c"></a>函数模板的部分排序 (C++)
 
@@ -74,7 +74,7 @@ int main() {
 }
 ```
 
-### <a name="output"></a>输出
+### <a name="output"></a>Output
 
 ```Output
 Less specialized function called

@@ -2,17 +2,15 @@
 title: IUnknown 实现类 (ATL)
 ms.date: 11/04/2016
 ms.topic: reference
-f1_keywords:
-- vc.atl.Iunknown
 helpviewer_keywords:
 - IUnknown implementation classes
 ms.assetid: 47b69bb5-69d8-4a9c-84a8-329bdde2bb3f
-ms.openlocfilehash: 97ca30c90cb8fa85685e30aa61d954008cf7cc54
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 26751c013d65142393377394006a9833e6c8f7bb
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261886"
 ---
 # <a name="iunknown-implementation-classes"></a>IUnknown 实现类
 

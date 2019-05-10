@@ -7,12 +7,12 @@ helpviewer_keywords:
 - VMREAD instruction
 - __vmx_vmread intrinsic
 ms.assetid: 08bdd7a0-6435-4ea6-b9a0-f592d870e5aa
-ms.openlocfilehash: 0a4528bed4426ce5b611e986a69f4b0b8c750548
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5c7b72ba3bf1bd60324704b774bcedaf5612240f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62390043"
 ---
 # <a name="vmxvmread"></a>__vmx_vmread
 

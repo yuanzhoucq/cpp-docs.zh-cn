@@ -39,12 +39,12 @@ helpviewer_keywords:
 - m_dwStatus
 - m_pCUtlPropInfo
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
-ms.openlocfilehash: 18145f3dc9545f79b08d9d92cacdafad0520c992
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3418ce11e1a607d66fee593b32fd3a4b7d197407
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409013"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl 类
 

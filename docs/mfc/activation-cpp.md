@@ -19,11 +19,11 @@ helpviewer_keywords:
 - OLE activation [MFC]
 ms.assetid: ed8357d9-e487-4aaa-aa6b-2edc4de25dfa
 ms.openlocfilehash: a6009e5209ce71c6eed28faff2f55792a64de408
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392929"
 ---
 # <a name="activation-c"></a>Activation (C++)
 
@@ -31,7 +31,7 @@ ms.locfileid: "57276944"
 
 还有可能要编辑一个单独的窗口中嵌入的 OLE 项。 如果容器或服务器应用程序不支持就地激活，则会发生这种情况。 在这种情况下，当用户双击嵌入的项时，在一个单独的窗口中启动服务器应用程序和嵌入的项将显示为其自己的文档。 用户编辑此窗口中的项。 编辑完成后，用户关闭服务器应用程序，并返回到容器应用程序。
 
-作为替代方法，用户可以选择"打开编辑"与**\<对象 > 打开**命令**编辑**菜单。 这将在单独的窗口中打开对象。
+作为替代方法，用户可以选择"打开编辑"与 **\<对象 > 打开** 命令**编辑**菜单。 这将在单独的窗口中打开对象。
 
 > [!NOTE]
 >  编辑嵌入的项单独的窗口中的 OLE，版本 1 中的标准行为，某些 OLE 应用程序可能支持仅这种样式的编辑。

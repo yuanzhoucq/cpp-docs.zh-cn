@@ -5,12 +5,12 @@ helpviewer_keywords:
 - 32-bit code porting
 - upgrading Visual C++ applications, 32-bit code
 ms.assetid: 18cdacaa-4742-43db-9e4c-2d9e73d8cc84
-ms.openlocfilehash: 3b9740c47e7fc0b449bf53a11a0ba7a4486a9ce4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 41cac1b23d5ab16825891ef654341016958ab826
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592811"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59034908"
 ---
 # <a name="upgrading-projects-from-earlier-versions-of-visual-c"></a>从 Visual C++ 早期版本升级项目
 
@@ -33,9 +33,18 @@ ms.locfileid: "50592811"
 
 有关如何更新目标 Windows 版本的信息，请参阅[修改 WINVER 和 _WIN32_WINNT](../porting/modifying-winver-and-win32-winnt.md)。
 
+## <a name="in-this-section"></a>本节内容
+
+[将代码升级到通用 CRT](upgrade-your-code-to-the-universal-crt.md)<br/>
+[修改 WINVER 和 _WIN32_WINNT](modifying-winver-and-win32-winnt.md)<br/>
+[修复库内部的依赖项](fix-your-dependencies-on-library-internals.md)<br/>
+[浮点迁移问题](floating-point-migration-issues.md)<br/>
+[使用 Visual Studio 中的本机多目标来生成旧项目](use-native-multi-targeting.md)<br/>
+[Visual Studio 2019 预览版已弃用 Visual C++ 功能](features-deprecated-in-visual-studio.md)<br/>
+[生成系统更改](build-system-changes.md)<br/>
+
 ## <a name="see-also"></a>请参阅
 
-[生成系统更改](../build/build-system-changes.md)<br/>
-[Visual Studio 2017 中 Visual C++ 的新增功能](../what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
+[Visual Studio 2017 中 Visual C++ 的新增功能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
 [Visual C++ 更改历史记录（2003 - 2015）](../porting/visual-cpp-change-history-2003-2015.md)<br/>
 [非标准行为](../cpp/nonstandard-behavior.md)

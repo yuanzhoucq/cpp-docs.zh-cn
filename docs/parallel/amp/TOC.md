@@ -7,4 +7,4 @@
 # [使用 Lambda 表达式、函数对象和受限函数](using-lambdas-function-objects-and-restricted-functions.md)
 # [图形 (C++ AMP)](graphics-cpp-amp.md)
 # [使用 accelerator 和 accelerator_view 对象](using-accelerator-and-accelerator-view-objects.md)
-# [参考](reference/toc.md)
+# [引用](reference/toc.md)

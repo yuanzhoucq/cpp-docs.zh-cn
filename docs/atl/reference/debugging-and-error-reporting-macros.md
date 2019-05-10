@@ -1,6 +1,6 @@
 ---
 title: 调试和错误报告宏
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - atldef/ATL::_ATL_DEBUG_INTERFACES
 - atldef/ATL::_ATL_DEBUG_QI
@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 0f556e64160c61f2fb15c5f5d6f9e170c2008ac8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
-ms.translationtype: MT
+ms.openlocfilehash: a243351ff337cb517f8a8231c18c495c8d2ca302
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57287318"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221079"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>调试和错误报告宏
 
@@ -29,7 +29,7 @@ ms.locfileid: "57287318"
 |[ATLASSERT](#atlassert)|执行相同的功能[_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)宏 C 运行时库中找到。|
 |[ATLENSURE](#atlensure)|执行参数验证。 调用`AtlThrow`必要|
 |[ATLTRACENOTIMPL](#atltracenotimpl)|将消息发送到转储设备未实现指定的函数。|
-|[ATLTRACE](#alttrace)|报告到输出设备，如调试器窗口中，根据所指示的标志和级别的警告。 包含用于向后兼容。|
+|[ATLTRACE](#atltrace)|报告到输出设备，如调试器窗口中，根据所指示的标志和级别的警告。 包含用于向后兼容。|
 |[ATLTRACE2](#atltrace2)|报告到输出设备，如调试器窗口中，根据所指示的标志和级别的警告。|
 
 ##  <a name="_atl_debug_interfaces"></a>  _ATL_DEBUG_INTERFACES
@@ -176,7 +176,7 @@ ATLTRACE(
 ### <a name="parameters"></a>参数
 
 *exp*<br/>
-[in]字符串和要发送到 Visual c + + 输出窗口或捕获这些消息的任何应用程序的变量。
+[in]字符串和要发送到输出窗口或捕获这些消息的任何应用程序的变量。
 
 *category*<br/>
 [in]事件或在其上报告的方法的类型。 请参阅备注类别的列表。
@@ -207,7 +207,7 @@ ATLTRACE2(
 ### <a name="parameters"></a>参数
 
 *exp*<br/>
-[in]要将发送到 Visual c + + 输出窗口或捕获这些消息的任何应用程序的字符串。
+[in]要将发送到输出窗口或捕获这些消息的任何应用程序的字符串。
 
 *category*<br/>
 [in]事件或在其上报告的方法的类型。 请参阅备注类别的列表。
@@ -220,7 +220,7 @@ ATLTRACE2(
 
 ### <a name="remarks"></a>备注
 
-ATLTRACE2 的缩写形式将字符串写入调试器的输出窗口。 ATLTRACE2 第二种形式还将输出写入到调试器的输出窗口中，但可能会发生的 ATL/MFC 跟踪工具的设置 (请参阅[ATLTraceTool 示例](../../visual-cpp-samples.md))。 例如，如果您设置*级别*到 4 和 ATL/MFC 跟踪工具到级别 0 中，不会看到消息。 *级别*可以是 0、 1、 2、 3 或 4。 默认情况下，0，报告最严重的问题。
+ATLTRACE2 的缩写形式将字符串写入调试器的输出窗口。 ATLTRACE2 第二种形式还将输出写入到调试器的输出窗口中，但可能会发生的 ATL/MFC 跟踪工具的设置 (请参阅[ATLTraceTool 示例](../../overview/visual-cpp-samples.md))。 例如，如果您设置*级别*到 4 和 ATL/MFC 跟踪工具到级别 0 中，不会看到消息。 *级别*可以是 0、 1、 2、 3 或 4。 默认情况下，0，报告最严重的问题。
 
 *类别*参数列出了要设置的跟踪标志。 这些标志对应于为其您要报告的方法的类型。 以下各表列出可用于有效的跟踪标志*类别*参数。
 

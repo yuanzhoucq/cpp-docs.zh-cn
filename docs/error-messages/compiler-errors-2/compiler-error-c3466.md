@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3466
 ms.assetid: 69a877d9-a749-474b-bfc3-8d3fd53ba8fd
-ms.openlocfilehash: d24980760ee86551946876e8af5c370af2753276
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6eae1c44d8dae9118258c83c5919947803f49215
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62402549"
 ---
 # <a name="compiler-error-c3466"></a>编译器错误 C3466
 
@@ -19,7 +19,7 @@ type： 不能转发泛型类的专用化
 
 不能使用类型转发泛型类的专用化。
 
-有关详细信息，请参阅[类型转发 (C + + CLI)](../../windows/type-forwarding-cpp-cli.md)。
+有关详细信息，请参阅[类型转发 (C++/CLI)](../../extensions/type-forwarding-cpp-cli.md)。
 
 ## <a name="example"></a>示例
 

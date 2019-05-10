@@ -64,11 +64,11 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: 9ea7dec3-ea98-48ff-87d0-a5afc924aaf2
 ms.openlocfilehash: 2cf0467c2b4799c2009f866b7aa22be5e421f762
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384696"
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 
@@ -93,7 +93,7 @@ template<typename Value,
 *值*<br/>
 受控序列中的元素的类型。
 
-*容器*<br/>
+*Container*<br/>
 基础容器的类型。
 
 ## <a name="requirements"></a>要求
@@ -210,7 +210,7 @@ a b c
 a b c
 ```
 
-## <a name="back"></a> queue:: back (STL/CLR)
+## <a name="back"></a> queue::back (STL/CLR)
 
 访问最后一个元素。
 
@@ -358,7 +358,7 @@ int main()
 a b c
 ```
 
-## <a name="container_type"></a> queue:: container_type (STL/CLR)
+## <a name="container_type"></a> queue::container_type (STL/CLR)
 
 基础容器的类型。
 
@@ -512,7 +512,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="front"></a> queue:: front (STL/CLR)
+## <a name="front"></a> queue::front (STL/CLR)
 
 访问第一个元素。
 
@@ -778,7 +778,7 @@ int main()
 a b c
 ```
 
-## <a name="op_as"></a> queue::operator = (STL/CLR)
+## <a name="op_as"></a> queue::operator= (STL/CLR)
 
 替换受控序列。
 
@@ -832,7 +832,7 @@ a b c
 a b c
 ```
 
-## <a name="pop"></a> queue:: pop (STL/CLR)
+## <a name="pop"></a> queue::pop (STL/CLR)
 
 删除最后一个元素。
 
@@ -880,7 +880,7 @@ a b c
 b c
 ```
 
-## <a name="push"></a> queue:: push (STL/CLR)
+## <a name="push"></a> queue::push (STL/CLR)
 
 添加一个新的最后一个元素。
 
@@ -921,7 +921,7 @@ int main()
 a b c
 ```
 
-## <a name="queue"></a> queue:: queue (STL/CLR)
+## <a name="queue"></a> queue::queue (STL/CLR)
 
 构造容器适配器对象。
 
@@ -939,7 +939,7 @@ explicit queue(container_type% wrapped);
 *right*<br/>
 要复制的对象。
 
-*包装*<br/>
+*wrapped*<br/>
 若要使用的已包装的容器。
 
 ### <a name="remarks"></a>备注
@@ -1117,7 +1117,7 @@ size() = 2 after popping
 size() = 4 after adding 2
 ```
 
-## <a name="size_type"></a> queue:: size_type (STL/CLR)
+## <a name="size_type"></a> queue::size_type (STL/CLR)
 
 两个元素间的带符号距离的类型。
 
@@ -1216,7 +1216,7 @@ a b c d
 a b c
 ```
 
-## <a name="value_type"></a> queue:: value_type (STL/CLR)
+## <a name="value_type"></a> queue::value_type (STL/CLR)
 
 元素的类型。
 
@@ -1261,7 +1261,7 @@ int main()
 a b c
 ```
 
-## <a name="op_neq"></a> 运算符 ！ = （队列） (STL/CLR)
+## <a name="op_neq"></a> operator!= (queue) (STL/CLR)
 
 队列不相等比较。
 
@@ -1332,7 +1332,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="op_lt"></a> 运算符&lt;（队列） (STL/CLR)
+## <a name="op_lt"></a> operator&lt; (queue) (STL/CLR)
 
 队列小于比较。
 
@@ -1403,7 +1403,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a> 运算符&lt;= （队列） (STL/CLR)
+## <a name="op_lteq"></a> operator&lt;= (queue) (STL/CLR)
 
 队列小于或等于比较。
 
@@ -1474,7 +1474,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_eq"></a> 运算符 = = （队列） (STL/CLR)
+## <a name="op_eq"></a> operator== (queue) (STL/CLR)
 
 队列相等比较。
 
@@ -1545,7 +1545,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="op_gt"></a> 运算符&gt;（队列） (STL/CLR)
+## <a name="op_gt"></a> operator&gt; (queue) (STL/CLR)
 
 大于比较的队列。
 
@@ -1616,7 +1616,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a> 运算符&gt;= （队列） (STL/CLR)
+## <a name="op_gteq"></a> operator&gt;= (queue) (STL/CLR)
 
 队列大于或等于比较。
 

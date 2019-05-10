@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /CLRTHREADATTRIBUTE linker option
 - -CLRTHREADATTRIBUTE linker option
 ms.assetid: 4907e9ef-5031-446c-aecf-0a0b32fae1e8
-ms.openlocfilehash: f1a637f74cf1da608149779821a25340d35f8739
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ad07c84a5c470cd5fa1ac10ff6d2baed5c35c025
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62272463"
 ---
 # <a name="clrthreadattribute-set-clr-thread-attribute"></a>/CLRTHREADATTRIBUTE（设置 CLR 线程特性）
 
@@ -41,7 +41,7 @@ STAThreadAttribute 特性应用于您的程序的入口点。
 
 如果使用的默认入口点 （main 或 wmain，例如） 指定的线程模型是通过 /CLRTHREADATTRIBUTE 或上来将线程处理特性 （STAThreadAttribute 或 MTAThreadAttribute） 上的默认入口函数。
 
-如果使用非默认入口点，指定线程模型使用 /CLRTHREADATTRIBUTE 或放置线程处理特性，可以在非默认入口函数，并指定使用的非默认入口点[/ENTRY](../../build/reference/entry-entry-point-symbol.md).
+如果使用非默认入口点，指定线程模型使用 /CLRTHREADATTRIBUTE 或放置线程处理特性，可以在非默认入口函数，并指定使用的非默认入口点[/ENTRY](entry-entry-point-symbol.md).
 
 如果 /CLRTHREADATTRIBUTE 使用指定的线程模型不一致的源代码中指定的线程处理模型，将忽略 /CLRTHREADATTRIBUTE 链接器并将其应用源代码中指定的线程处理模型。
 
@@ -49,7 +49,7 @@ STAThreadAttribute 特性应用于您的程序的入口点。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
 1. 展开“配置属性”节点。
 
@@ -65,5 +65,5 @@ STAThreadAttribute 特性应用于您的程序的入口点。
 
 ## <a name="see-also"></a>请参阅
 
-[设置链接器选项](../../build/reference/setting-linker-options.md)<br/>
-[链接器选项](../../build/reference/linker-options.md)
+[MSVC 链接器参考](linking.md)<br/>
+[MSVC 链接器选项](linker-options.md)

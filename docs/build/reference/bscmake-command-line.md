@@ -4,14 +4,17 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - BSCMAKE, command line
 ms.assetid: 8006e8cf-8bfe-4c23-868a-b0a25e6bbf0f
-ms.openlocfilehash: b6268eb6d0ea39e72a1d8fd40ab563347c05f0c6
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 61035ce0f211e6a474bb83fc7de7d95b4a29cf3d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62272905"
 ---
 # <a name="bscmake-command-line"></a>BSCMAKE 命令行
+
+> [!WARNING]
+> 虽然安装 Visual Studio 时仍会安装 BSCMAKE，但 IDE 将不再使用它。 从 Visual Studio 2008 起，浏览信息和符号信息自动存储在解决方案文件夹的 SQL Server .sdf 文件中。
 
 若要运行 BSCMAKE，使用以下命令行语法：
 
@@ -33,8 +36,8 @@ BSCMAKE [options] sbrfiles
 BSCMAKE main.sbr file1.sbr file2.sbr
 ```
 
-有关相关信息，请参阅[BSCMAKE 命令文件](../../build/reference/bscmake-command-file-response-file.md)并[BSCMAKE 选项](../../build/reference/bscmake-options.md)。
+有关相关信息，请参阅[BSCMAKE 命令文件](bscmake-command-file-response-file.md)并[BSCMAKE 选项](bscmake-options.md)。
 
 ## <a name="see-also"></a>请参阅
 
-[BSCMAKE 参考](../../build/reference/bscmake-reference.md)
+[BSCMAKE 参考](bscmake-reference.md)

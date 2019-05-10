@@ -21,11 +21,11 @@ helpviewer_keywords:
 - A4509
 ms.assetid: 52b38267-6023-4bdc-a0ef-863362f48eec
 ms.openlocfilehash: 867ef50065c6ed63a4da6d37523bd5a1f3cbadba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167838"
 ---
 # <a name="arm-assembler-diagnostic-messages"></a>ARM 汇编程序诊断消息
 
@@ -60,7 +60,7 @@ ARM 体系结构不能保证在执行此指令时，会发生什么情况。  �
 label
 ```
 
-> 滚动块区域中不允许 A2202: Pre UAL 指令语法
+> A2202:不允许滚动块区域中预 UAL 指令语法
 
 Thumb 代码必须使用统一组装器语言 (UAL) 语法。  旧语法不再被接受
 
@@ -69,7 +69,7 @@ Thumb 代码必须使用统一组装器语言 (UAL) 语法。  旧语法不再�
     ADDSEQ r0, r1         ; OK
 ```
 
-> A2513： 旋转必须为偶数
+> A2513:旋转必须为偶数
 
 在 ARM 模式下，没有用于指定常量替代语法。  而不是编写`#<const>`，可以编写`#<byte>,#<rot>`，它表示获取通过旋转值的常量值`<byte>`向右`<rot>`。  当您使用此语法时，必须将的值设置`<rot>`甚至。
 
@@ -78,7 +78,7 @@ Thumb 代码必须使用统一组装器语言 (UAL) 语法。  旧语法不再�
     MOV r0, #4, #1       ; A2513: Rotation must be even
 ```
 
-> A2557： 返回写入的字节数不正确
+> A2557:返回写入的字节数不正确
 
 NEON 结构上加载和存储的说明 (`VLDn`， `VSTn`)，没有用于指定回写到基寄存器替代语法。  而不是将一个感叹号 （！） 置于地址后，可以指定即时值，该值指示要添加到基寄存器的偏移量。  如果您使用此语法，必须指定确切的已加载或存储由指令的字节数。
 
@@ -90,7 +90,7 @@ NEON 结构上加载和存储的说明 (`VLDn`， `VSTn`)，没有用于指定�
 
 ## <a name="diagnostic-messages---warnings"></a>诊断消息的警告
 
-> A4228： 对齐值超出了区域对齐方式;不能保证的对齐方式
+> A4228:对齐值超出了区域对齐方式;不能保证的对齐方式
 
 中指定的对齐方式`ALIGN`指令大于包含它的对齐方式`AREA`。  因此，在组装器不能保证`ALIGN`指令将起作用。
 
@@ -104,7 +104,7 @@ AREA |.myarea2|,ALIGN=3
 ALIGN 8           ; OK
 ```
 
-> 此旋转的常量的使用已弃用 A4508:
+> A4508:此旋转的常量的使用不推荐使用
 
 在 ARM 模式下，没有用于指定常量替代语法。  而不是编写`#<const>`，可以编写`#<byte>,#<rot>`，它表示获取通过旋转值的常量值`<byte>`向右`<rot>`。  在某些上下文中，ARM 已弃用这些旋转的常量的使用。 在这些情况下，使用基本`#<const>`语法相反。
 
@@ -113,7 +113,7 @@ ALIGN 8           ; OK
     ANDS r0, r0, #4, #2            ; A4508: Use of this rotated constant is deprecated
 ```
 
-> 这种形式的条件指令已弃用 A4509:
+> A4509:这种形式的条件指令已弃用
 
 通过 ARM ARMv8 体系结构中已弃用这种形式的条件指令。 我们建议更改代码以使用的条件分支。 若要查看仍受支持的条件说明，请查阅[ARM 体系结构参考手册](http://go.microsoft.com/fwlink/p/?linkid=246464)。
 

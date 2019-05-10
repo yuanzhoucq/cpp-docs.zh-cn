@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3071
 ms.assetid: 69879e66-a60e-4058-9bbd-d5c5e2d8ee37
-ms.openlocfilehash: 6960dbf62fd30b822f0d7c7a3c46a29a4115913f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1debe431711681a98b9472c85864d84373ec42d6
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428344"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62406634"
 ---
 # <a name="compiler-error-c3071"></a>编译器错误 C3071
 
@@ -19,7 +19,7 @@ ms.locfileid: "50428344"
 
 不能在本机类型上使用 CLR 运算符。 可以在 ref 类或 ref 结构（值类型）上使用运算符，但不可在本机类型（如 int）或本机类型的别名（如 System::Int32）上使用。 这些类型不能从 C++ 代码中以引用本机变量的方式进行装箱，因此无法使用此运算符。
 
-有关详细信息，请参阅[跟踪引用运算符](../../windows/tracking-reference-operator-cpp-component-extensions.md)。
+有关详细信息，请参阅[跟踪引用运算符](../../extensions/tracking-reference-operator-cpp-component-extensions.md)。
 
 ## <a name="example"></a>示例
 

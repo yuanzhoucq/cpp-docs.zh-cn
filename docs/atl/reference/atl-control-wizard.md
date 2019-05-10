@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ATL Control Wizard
 ms.assetid: 991f8e72-ffbc-4382-a4ce-e255acfba5b6
 ms.openlocfilehash: 58c3ebe4c2a15aa3f0d59191c37a7f2422a63ab5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57287892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261203"
 ---
 # <a name="atl-control-wizard"></a>ATL 控件向导
 
@@ -40,7 +40,7 @@ ms.locfileid: "57287892"
 
 ### <a name="c"></a>C++
 
-提供创建要实现对象的 c + + 类的信息。
+提供的信息C++为了实现对象创建的类。
 
 - **短名称**
 

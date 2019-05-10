@@ -99,11 +99,11 @@ helpviewer_keywords:
 - operator>= member [STL/CLR]
 ms.assetid: dd669da3-3c0e-45e9-8596-f6b483720941
 ms.openlocfilehash: ff5ddcfa101baf4c85145d1c6d64a6a3b9e7df58
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393761"
 ---
 # <a name="deque-stlclr"></a>deque (STL/CLR)
 
@@ -209,7 +209,7 @@ template<typename Value>
 |<xref:System.Collections.Generic.IEnumerable%601>|通过类型化的元素进行排序。|
 |<xref:System.Collections.Generic.ICollection%601>|维护的组类型化的元素。|
 |<xref:System.Collections.Generic.IList%601>|维护类型化元素的有序的的组。|
-|IDeque < 值\>|维护泛型容器。|
+|IDeque<Value\>|维护泛型容器。|
 
 ## <a name="remarks"></a>备注
 
@@ -246,7 +246,7 @@ void assign(System::Collections::Generic::IEnumerable<Value>^ right);
 *first*<br/>
 要插入范围的起始处。
 
-*最后一个*<br/>
+*last*<br/>
 要插入的范围的下限。
 
 *right*<br/>
@@ -306,7 +306,7 @@ a b
 a b c
 ```
 
-## <a name="at"></a> deque:: at (STL/CLR)
+## <a name="at"></a> deque::at (STL/CLR)
 
 访问指定位置处的元素。
 
@@ -358,7 +358,7 @@ a b c
 a x c
 ```
 
-## <a name="back"></a> deque:: back (STL/CLR)
+## <a name="back"></a> deque::back (STL/CLR)
 
 访问最后一个元素。
 
@@ -460,7 +460,7 @@ back_item = c
 a b x
 ```
 
-## <a name="begin"></a> deque:: begin (STL/CLR)
+## <a name="begin"></a> deque::begin (STL/CLR)
 
 指定受控序列的开头。
 
@@ -572,7 +572,7 @@ a b
 size() = 0
 ```
 
-## <a name="const_iterator"></a> deque:: const_iterator (STL/CLR)
+## <a name="const_iterator"></a> deque::const_iterator (STL/CLR)
 
 受控序列的常量迭代器的类型。
 
@@ -699,7 +699,7 @@ int main()
 c b a
 ```
 
-## <a name="deque"></a> deque:: deque (STL/CLR)
+## <a name="deque"></a> deque::deque (STL/CLR)
 
 构造容器对象。
 
@@ -724,7 +724,7 @@ deque(System::Collections::Generic::IEnumerable<Value>^ right);
 *first*<br/>
 要插入范围的起始处。
 
-*最后一个*<br/>
+*last*<br/>
 要插入的范围的下限。
 
 *right*<br/>
@@ -844,7 +844,7 @@ x x x x x x
 x x x x x x
 ```
 
-## <a name="difference_type"></a> deque:: difference_type (STL/CLR)
+## <a name="difference_type"></a> deque::difference_type (STL/CLR)
 
 两个元素之间的带符号距离的类型。
 
@@ -1005,7 +1005,7 @@ a b c
 a x y
 ```
 
-## <a name="erase"></a> deque:: erase (STL/CLR)
+## <a name="erase"></a> deque::erase (STL/CLR)
 
 移除指定位置处的元素。
 
@@ -1021,7 +1021,7 @@ iterator erase(iterator first, iterator last);
 *first*<br/>
 要清除范围的起始处。
 
-*最后一个*<br/>
+*last*<br/>
 要清除范围的末尾。
 
 *where*<br/>
@@ -1084,7 +1084,7 @@ erase(begin(), end()-1) = e
 size() = 1
 ```
 
-## <a name="front"></a> deque:: front (STL/CLR)
+## <a name="front"></a> deque::front (STL/CLR)
 
 访问第一个元素。
 
@@ -1445,7 +1445,7 @@ void insert(iterator where,
 *first*<br/>
 要插入范围的起始处。
 
-*最后一个*<br/>
+*last*<br/>
 要插入的范围的下限。
 
 *right*<br/>
@@ -1580,7 +1580,7 @@ a b c
 x b c
 ```
 
-## <a name="op_neq"></a> deque:: operator ！ = (STL/CLR)
+## <a name="op_neq"></a> deque::operator!= (STL/CLR)
 
 Deque 等于比较。
 
@@ -1701,7 +1701,7 @@ a b c
 a x c
 ```
 
-## <a name="pop_back"></a> deque:: pop_back (STL/CLR)
+## <a name="pop_back"></a> deque::pop_back (STL/CLR)
 
 删除最后一个元素。
 
@@ -1748,7 +1748,7 @@ a b c
 a b
 ```
 
-## <a name="pop_front"></a> deque:: pop_front (STL/CLR)
+## <a name="pop_front"></a> deque::pop_front (STL/CLR)
 
 删除第一个元素。
 
@@ -1795,7 +1795,7 @@ a b c
 b c
 ```
 
-## <a name="push_back"></a> deque:: push_back (STL/CLR)
+## <a name="push_back"></a> deque::push_back (STL/CLR)
 
 添加一个新的最后一个元素。
 
@@ -1835,7 +1835,7 @@ int main()
 a b c
 ```
 
-## <a name="push_front"></a> deque:: push_front (STL/CLR)
+## <a name="push_front"></a> deque::push_front (STL/CLR)
 
 添加一个新的第一个元素。
 
@@ -1875,7 +1875,7 @@ int main()
 c b a
 ```
 
-## <a name="rbegin"></a> deque:: rbegin (STL/CLR)
+## <a name="rbegin"></a> deque::rbegin (STL/CLR)
 
 指定反向受控序列的开头。
 
@@ -1930,7 +1930,7 @@ a b c
 a y x
 ```
 
-## <a name="reference"></a> deque:: reference (STL/CLR)
+## <a name="reference"></a> deque::reference (STL/CLR)
 
 元素的引用的类型。
 
@@ -2101,7 +2101,7 @@ size() = 0
 x x x x x
 ```
 
-## <a name="reverse_iterator"></a> deque:: reverse_iterator (STL/CLR)
+## <a name="reverse_iterator"></a> deque::reverse_iterator (STL/CLR)
 
 受控序列的反向迭代器的类型。
 
@@ -2203,7 +2203,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="size_type"></a> deque:: size_type (STL/CLR)
+## <a name="size_type"></a> deque::size_type (STL/CLR)
 
 两个元素间的带符号距离的类型。
 
@@ -2248,7 +2248,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="swap"></a> deque:: swap (STL/CLR)
+## <a name="swap"></a> deque::swap (STL/CLR)
 
 交换两个容器的内容。
 
@@ -2361,7 +2361,7 @@ a b c d
 a b c
 ```
 
-## <a name="value_type"></a> deque:: value_type (STL/CLR)
+## <a name="value_type"></a> deque::value_type (STL/CLR)
 
 元素的类型。
 
@@ -2406,7 +2406,7 @@ int main()
 a b c
 ```
 
-## <a name="op_lt"></a> 运算符&lt;(deque) (STL/CLR)
+## <a name="op_lt"></a> operator&lt; (deque) (STL/CLR)
 
 Deque 小于比较。
 
@@ -2475,7 +2475,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a> 运算符&lt;= (deque) (STL/CLR)
+## <a name="op_lteq"></a> operator&lt;= (deque) (STL/CLR)
 
 Deque 小于或等于比较。
 
@@ -2544,7 +2544,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_as"></a> 运算符 = (deque) (STL/CLR)
+## <a name="op_as"></a> operator= (deque) (STL/CLR)
 
 替换受控序列。
 
@@ -2597,7 +2597,7 @@ a b c
 a b c
 ```
 
-## <a name="op_eq"></a> 运算符 = = (deque) (STL/CLR)
+## <a name="op_eq"></a> operator== (deque) (STL/CLR)
 
 Deque 相等比较。
 
@@ -2666,7 +2666,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="op_gt"></a> 运算符&gt;(deque) (STL/CLR)
+## <a name="op_gt"></a> operator&gt; (deque) (STL/CLR)
 
 Deque 大于比较。
 
@@ -2735,7 +2735,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a> 运算符&gt;= (deque) (STL/CLR)
+## <a name="op_gteq"></a> operator&gt;= (deque) (STL/CLR)
 
 Deque 大于或等于比较。
 

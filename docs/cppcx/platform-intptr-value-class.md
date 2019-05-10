@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::IntPtr Struct
 ms.assetid: 6c0326e8-edfd-4e53-a963-240b845dcde8
-ms.openlocfilehash: eda65255aa76d6a801bdc0f80c437a9dc975d8f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8101fa2c82a0ac3e3b573384d14d9a7eff6ecf61
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152730"
 ---
 # <a name="platformintptr-value-class"></a>Platform::IntPtr 值类
 
@@ -58,7 +58,7 @@ IntPtr( __int64 handle-or-pointer );   IntPtr( void* value );   IntPtr( int 32-b
 
 ### <a name="parameters"></a>参数
 
-*value*<br/>
+*值*<br/>
 一个 64 位句柄或指针，或指向 64 位值或可被转换为 64 位值的 32 位值的指针。
 
 ## <a name="op-explicit"> </a> IntPtr::op_explicit 运算符
@@ -73,10 +73,10 @@ static IntPtr::operator IntPtr( void* value1);   static IntPtr::operator IntPtr(
 
 ### <a name="parameters"></a>参数
 
-*值 1*<br/>
+*value1*<br/>
 指向句柄或 IntPtr 的指针。
 
-*Value2*<br/>
+*value2*<br/>
 可以转换为 IntPtr 的 32 位整数。
 
 *value3*<br/>
@@ -102,4 +102,4 @@ int32 IntPtr::ToInt32();
 
 ## <a name="see-also"></a>请参阅
 
-[平台命名空间](../cppcx/platform-namespace-c-cx.md)
+[Platform 命名空间](../cppcx/platform-namespace-c-cx.md)

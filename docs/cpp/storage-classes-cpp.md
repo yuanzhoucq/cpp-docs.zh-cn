@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
-ms.openlocfilehash: 31f9ba4e16fa1216db4fb66c7b7faeca333f2c43
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 92435b2bab670dd366f26c981443e98e4a4e3c29
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520299"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221996"
 ---
 # <a name="storage-classes-c"></a>存储类 (C++)
 
@@ -24,7 +24,7 @@ A*存储类*在上下文中的 C++ 变量声明是控制对象的生存期、 �
 
 1. [可变](../cpp/mutable-data-members-cpp.md)关键字视为存储类说明符。 但是，它只存在于类定义的成员列表中。
 
-1. **Visual c + + 2010年及更高版本：** **自动**关键字不再是 c + + 存储类说明符，并**注册**关键字被弃用。 **Visual Studio 2017 版本 15.7 及更高版本：** (适用于[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):**注册**从 c + + 语言中删除关键字。
+1. **Visual Studio 2010 和更高版本：****自动**关键字不再是C++存储类说明符，并**注册**关键字被弃用。 **Visual Studio 2017 版本 15.7 及更高版本：** (适用于[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):**注册**关键字已从C++语言。
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class
@@ -36,7 +36,7 @@ A*存储类*在上下文中的 C++ 变量声明是控制对象的生存期、 �
 - [extern](#extern)
 - [thread_local](#thread_local)
 
-## <a name="static"></a> 静态
+## <a name="static"></a> static
 
 **静态**关键字用于声明变量和函数在全局范围、 命名空间范围和类范围。 静态变量还可在本地范围声明。
 
@@ -167,7 +167,7 @@ var == value
 
 声明**const**变量**extern**存储类会强制变量具有外部链接。 一个初始化**extern const**定义的翻译单元中允许使用变量。 在正在定义的翻译单元之外的翻译单元中进行初始化将生成未定义的结果。 有关详细信息，请参阅[使用 extern 指定链接](../cpp/using-extern-to-specify-linkage.md)
 
-[/Zc: externconstexpr](../build/reference/zc-externconstexpr.md)编译器选项将使编译器要应用[外部链接]()到通过使用声明的变量`extern constexpr`。 在早期版本的 Visual Studio 中，并且默认情况下或者如果 **/Zc:externConstexpr-** 指定，则 Visual Studio 将应用到的内部链接**constexpr**变量，即使**extern**关键字使用。 **/Zc: externconstexpr**选项是从开始在 Visual Studio 2017 更新 15.6 版中提供。 和默认情况下处于关闭状态。 /Permissive-option 不会启用 /zc: externconstexpr。
+[/Zc: externconstexpr](../build/reference/zc-externconstexpr.md)编译器选项将使编译器要应用[外部链接](../c-language/external-linkage.md)到通过使用声明的变量`extern constexpr`。 在早期版本的 Visual Studio 中，并且默认情况下或者如果 **/Zc:externConstexpr-** 指定，则 Visual Studio 将应用到的内部链接**constexpr**变量，即使**extern**关键字使用。 **/Zc: externconstexpr**选项是从开始在 Visual Studio 2017 更新 15.6 版中提供。 和默认情况下处于关闭状态。 /Permissive-option 不会启用 /zc: externconstexpr。
 
 下面的代码演示两个**extern**声明， `DefinedElsewhere` （引用不同的翻译单元中定义的名称） 和`DefinedHere`（引用在封闭范围中定义的名称）：
 
@@ -219,7 +219,7 @@ void DoSomething()
 
 在 Windows 中，`thread_local`功能上等效于[__declspec （thread)](../cpp/thread.md)只不过 **__declspec （thread)** 可应用于类型定义和在 C 代码中有效。 请尽可能使用 `thread_local`，因为它是 C++ 标准的一部分，因此更易于移植。
 
-##  <a name="register"></a>  注册
+##  <a name="register"></a>  register
 
 **Visual Studio 2017 版本 15.3 及更高版本**(适用于[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):**注册**关键字不再是受支持的存储类。 关键字是仍保留供将来使用标准中。
 

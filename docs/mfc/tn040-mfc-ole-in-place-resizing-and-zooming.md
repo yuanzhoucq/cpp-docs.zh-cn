@@ -9,12 +9,12 @@ helpviewer_keywords:
 - zooming and in-place activation
 - in-place activation, zooming and resizing
 ms.assetid: 4d7859bd-0b2e-4254-be62-2735cecf02c6
-ms.openlocfilehash: e2f6c6acfefaae877790fd2cc0926bc2474c79b8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c2cb25388184ac969bec7c01d8077a458c03a03a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305458"
 ---
 # <a name="tn040-mfcole-in-place-resizing-and-zooming"></a>TN040:MFC/OLE 就地调整大小和缩放
 
@@ -40,7 +40,7 @@ ms.locfileid: "57283756"
 
 当前缩放系数可通过调用 `COleServerDoc::GetZoomFactor` 确定。 在文档未处于就地活动状态时调用它将始终生成 100% 缩放系数（也称为 1:1 比例）。 在文档处于就地活动状态时调用它可能返回 100% 以外的缩放系数。
 
-有关正确进行缩放的示例，请参阅 MFC OLE 示例[HIERSVR](../visual-cpp-samples.md)。 HIERSVR 中的缩放实际上很复杂，因为它显示了文本，而文本通常不是以线性方式（提示、排字约定、设计宽度和高度共同让问题复杂化了）缩放的。 尽管如此，HIERSVR 是实现正确的缩放的合理参考，是 MFC 教程如此[SCRIBBLE](../visual-cpp-samples.md) （第 7 步）。
+有关正确进行缩放的示例，请参阅 MFC OLE 示例[HIERSVR](../overview/visual-cpp-samples.md)。 HIERSVR 中的缩放实际上很复杂，因为它显示了文本，而文本通常不是以线性方式（提示、排字约定、设计宽度和高度共同让问题复杂化了）缩放的。 尽管如此，HIERSVR 是实现正确的缩放的合理参考，是 MFC 教程如此[SCRIBBLE](../overview/visual-cpp-samples.md) （第 7 步）。
 
 `COleServerDoc::GetZoomFactor` 根据从容器或从 `COleServerItem` 和 `COleServerDoc` 类的实现获得的很多不同的指标确定缩放系数。 简而言之，当前缩放系数由以下公式确定：
 

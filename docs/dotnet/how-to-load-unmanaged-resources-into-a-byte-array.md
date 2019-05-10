@@ -1,5 +1,5 @@
 ---
-title: 如何：将非托管资源加载到一个字节数组
+title: 如何：将非托管的资源加载到字节数组
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - unmanaged resources, loading into Byte array
 - native resources
 ms.assetid: cdada6cd-6d42-437a-a90f-44a0b18d6a93
-ms.openlocfilehash: d7d35af462a2d598995f222221a4023d09c73ff3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 641bdf4429bca35800e3fbbbb7622f2651bb3fee
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579869"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64344973"
 ---
-# <a name="how-to-load-unmanaged-resources-into-a-byte-array"></a>如何：将非托管资源加载到一个字节数组
+# <a name="how-to-load-unmanaged-resources-into-a-byte-array"></a>如何：将非托管的资源加载到字节数组
 
 本主题讨论了几种方法加载到非托管的资源<xref:System.Byte>数组。
 

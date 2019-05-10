@@ -1,6 +1,6 @@
 ---
 title: CAtlServiceModuleT 类
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - CAtlServiceModuleT
 - ATLBASE/ATL::CAtlServiceModuleT
@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlServiceModuleT class
 ms.assetid: 8fc753ce-4a50-402b-9b4a-0a4ce5dd496c
-ms.openlocfilehash: 2d4d5d4a5c4d8a52f792cc04a968974967c1e13a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
-ms.translationtype: MT
+ms.openlocfilehash: 1d44e356d907afcb261c0b4a765f8807bb54dc19
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270496"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221190"
 ---
 # <a name="catlservicemodulet-class"></a>CAtlServiceModuleT 类
 
@@ -186,7 +186,7 @@ HRESULT InitializeSecurity() throw();
 
 ### <a name="remarks"></a>备注
 
-在 Visual Studio.NET 2003 中，此方法未实现基类中。 Visual Studio 项目向导生成的代码中包括此方法，但如果使用 ATL 7.1 编译 Visual c + + 的早期版本中创建的项目将出现编译错误。 从派生的任何类`CAtlServiceModuleT`必须在派生类中实现此方法。
+从派生的任何类`CAtlServiceModuleT`必须在派生类中实现此方法。
 
 在调用中使用 PKT 级别身份验证、 RPC_C_IMP_LEVEL_IDENTIFY 的模拟级别和相应的非 null 安全描述符`CoInitializeSecurity`。
 

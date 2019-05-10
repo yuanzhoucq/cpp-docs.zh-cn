@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2440
 ms.assetid: 36e6676c-f04f-4715-8ba1-f096c4bf3b44
-ms.openlocfilehash: 86841e15469f15ebb329e0957d4dacb5a96d6fe3
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8de433361901b5d247616c154afc48d637373d43
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518497"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448034"
 ---
 # <a name="compiler-error-c2440"></a>编译器错误 C2440
 
@@ -21,7 +21,7 @@ conversion： 无法从 type1 转换为 type2
 
 ## <a name="example"></a>示例
 
-如果你尝试初始化非常量会导致 C2440 `char*` (或`wchar_t*`) 通过使用 c + + 代码中的字符串文字时编译器一致性选项[/zc: strictstrings](../../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md)设置。 在 C 中，字符串文字的类型是数组`char`，但在 c + +，它是数组`const char`。 此示例生成 C2440:
+如果你尝试初始化非常量会导致 C2440 `char*` (或`wchar_t*`) 通过使用中的字符串文字C++代码，当编译器一致性选项[/zc: strictstrings](../../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md)设置。 在 C 中，字符串文字的类型是数组`char`，但在C++，它是数组`const char`。 此示例生成 C2440:
 
 ```cpp
 // C2440s.cpp
@@ -80,9 +80,9 @@ Base * func(Derived * d) {
 
 第 15 和 16 的下一个示例行上的 C2440 错误限定与`Incompatible calling conventions for UDT return value`消息。 一个*UDT*是用户定义类型，如类、 结构或联合。 UDT 的调用约定指定与实际的调用约定的 udt 并且涉及函数指针前向声明冲突的返回类型中，会导致这些类型的不兼容性错误。
 
-在示例中，首先有某结构和函数返回该结构中; 前向声明编译器将假定该结构使用 c + + 调用约定。 接下来结构定义，其中，默认情况下，使用 C 调用约定。 因为编译器不知道该结构的调用约定，直到它完成读取整个结构中的返回类型的结构的调用约定`get_c2`也被假定为 c + +。
+在示例中，首先有某结构和函数返回该结构中; 前向声明编译器将假定该结构使用C++调用约定。 接下来结构定义，其中，默认情况下，使用 C 调用约定。 因为编译器不知道该结构的调用约定，直到它完成读取整个结构中的返回类型的结构的调用约定`get_c2`也被假定为C++。
 
-该结构后跟另一个返回该结构的函数声明，但此时，编译器知道该结构的调用约定为 c + +。 同样，函数指针，它返回该结构，定义在结构定义之后，以便让编译器知道该结构使用 c + + 调用约定。
+该结构后跟另一个返回该结构的函数声明，但此时，编译器知道该结构的调用约定是C++。 同样，函数指针，它返回该结构，定义在结构定义之后，以便让编译器知道该结构使用C++调用约定。
 
 若要解决由于不兼容调用约定而发生的 C2440，声明在 UDT 定义之后返回 UDT 的函数。
 
@@ -143,7 +143,7 @@ int main() {
 
 ## <a name="example"></a>示例
 
-错误使用的用户定义的转换也可能出现 C2440。 例如，如果转换运算符具有已定义为`explicit`，编译器不能将其隐式转换。 有关用户定义的转换的详细信息，请参阅[用户定义的转换 (C + + CLI)](../../dotnet/user-defined-conversions-cpp-cli.md))。 此示例生成 C2440:
+错误使用的用户定义的转换也可能出现 C2440。 例如，如果转换运算符具有已定义为`explicit`，编译器不能将其隐式转换。 有关用户定义的转换的详细信息，请参阅[用户定义的转换 (C++/CLI)](../../dotnet/user-defined-conversions-cpp-cli.md))。 此示例生成 C2440:
 
 ```cpp
 // C2440d.cpp
@@ -167,7 +167,7 @@ int main() {
 
 ## <a name="example"></a>示例
 
-如果你尝试创建其类型为的 Visual c + + 数组的实例，也可能出现 C2440 <xref:System.Array>。  有关详细信息，请参阅[数组](../../windows/arrays-cpp-component-extensions.md)。  下一步的示例生成 C2440:
+如果你尝试创建视觉对象的实例，也可能出现 C2440C++数组的类型为<xref:System.Array>。  有关详细信息，请参阅[数组](../../extensions/arrays-cpp-component-extensions.md)。  下一步的示例生成 C2440:
 
 ```cpp
 // C2440e.cpp
@@ -194,7 +194,7 @@ int main() {
 
 ## <a name="example"></a>示例
 
-Visual c + + 编译器不再允许[const_cast 运算符](../../cpp/const-cast-operator.md)向下强制转换时使用的源代码 **/clr**编译编程。
+MicrosoftC++编译器不再允许[const_cast 运算符](../../cpp/const-cast-operator.md)向下强制转换时使用的源代码 **/clr**编译编程。
 
 若要解决此 C2440，请使用正确的强制转换运算符。 有关详细信息，请参阅[强制转换运算符](../../cpp/casting-operators.md)。
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing projects
 - projects [C++], testing
 ms.assetid: 88cdd377-c5c8-4201-889d-32f5653ebead
-ms.openlocfilehash: a604d8ef0b44db04d9a6da8fdc959d08384f1bf3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa1af9cd355265214827527b986b8602a25e93f3
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437305"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57808269"
 ---
 # <a name="walkthrough-testing-a-project-c"></a>演练：测试项目 (C++)
 
@@ -51,16 +51,16 @@ ms.locfileid: "50437305"
 
 1. 打开 `return 0;` 语句的快捷菜单，然后选择“运行到光标处”。 代码左侧的黄色箭头指向要执行的下一语句。
 
-1. `Cardgame` 终止时，`Cardgame::totalParticipants` 数应减少。 此时，`Cardgame::totalParticipants` 应等于 0，因为已删除所有 `Cardgame` 实例，但“监视 1”窗口指示 `Cardgame::totalparticipants` 等于 18。 此差异表明代码中存在 bug，可通过完成下一个演练（[演练：调试项目 (C++)](../ide/walkthrough-debugging-a-project-cpp.md)）来检测和修复该 bug。
+1. `Cardgame` 终止时，`Cardgame::totalParticipants` 数应减少。 此时，`Cardgame::totalParticipants` 应等于 0，因为已删除所有 `Cardgame` 实例，但“监视 1”窗口指示 `Cardgame::totalparticipants` 等于 18。 此差异表明代码中存在 bug，可通过完成下一个演练来检测和修复，[演练：调试项目 (C++)](../ide/walkthrough-debugging-a-project-cpp.md)。
 
 1. 要停止该程序，请在菜单栏上选择“调试” > “停止调试”或选择 Shift+F5 键盘快捷方式。
 
 ## <a name="next-steps"></a>后续步骤
 
 上一步：[演练：生成项目 (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
-下一步：[演练：调试项目 (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
+**下一篇：**[演练：调试项目 (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
 
 ## <a name="see-also"></a>请参阅
 
 [C++ 语言参考](../cpp/cpp-language-reference.md)<br/>
-[生成 C/C++ 程序](../build/building-c-cpp-programs.md)<br/>
+[项目和生成系统](../build/projects-and-build-systems-cpp.md)<br/>

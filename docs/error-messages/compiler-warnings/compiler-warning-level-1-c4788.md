@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4788
 ms.assetid: 47d75bda-f833-4bdd-93a0-a134df0cd303
 ms.openlocfilehash: c51a4409c2a3028823462539343654b5eac365d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62187200"
 ---
 # <a name="compiler-warning-level-1-c4788"></a>编译器警告（等级 1）C4788
 
@@ -21,7 +21,7 @@ identifier： 标识符被截断为 number 个字符
 
 生成的 funclet 名称可能太长，并且编译器将其截断，并生成 C4788。
 
-若要解决此警告，请缩短原始函数名称。 如果函数是 c + + 模板函数或方法，使用 typedef 名称的一部分。 例如：
+若要解决此警告，请缩短原始函数名称。 如果函数为C++模板函数或方法，则会将 typedef 用于名称的一部分。 例如：
 
 ```
 C1<x, y, z<T>>::C2<a,b,c>::f

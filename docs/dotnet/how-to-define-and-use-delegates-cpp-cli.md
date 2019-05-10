@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - delegates
 ms.assetid: 1cdf3420-89c1-47c0-b796-aa984020e0f8
-ms.openlocfilehash: 3254f01a2d6399626ad78bb742a2cfd861d095ba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bcbf5bf978da5b6c13dd131e7a19975381bd97a5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387365"
 ---
 # <a name="how-to-define-and-use-delegates-ccli"></a>如何：定义和使用委托 (C++/CLI)
 
-本文介绍如何定义和使用委托在 C + + /cli CLI。
+本文介绍如何定义和使用委托中的C++/CLI。
 
 尽管.NET Framework 提供了多个委托，但有时您可能需要定义新委托。
 
@@ -504,4 +504,4 @@ int main() {
 
 ## <a name="see-also"></a>请参阅
 
-[委托（C++ 组件扩展）](../windows/delegate-cpp-component-extensions.md)
+[委托（C++ 组件扩展）](../extensions/delegate-cpp-component-extensions.md)

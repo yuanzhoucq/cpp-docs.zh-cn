@@ -8,11 +8,11 @@ helpviewer_keywords:
 - A2069
 ms.assetid: 57dbf072-da61-4306-8d41-a4d9c97fec1a
 ms.openlocfilehash: 42402af411852325c605f82744e345c33313bf3d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62201905"
 ---
 # <a name="ml-nonfatal-error-a2069"></a>ML 非致命错误 A2069
 

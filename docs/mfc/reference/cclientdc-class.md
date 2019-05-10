@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CClientDC [MFC], CClientDC
 - CClientDC [MFC], m_hWnd
 ms.assetid: 8a871d6b-06f8-496e-9fa3-9a5780848369
-ms.openlocfilehash: 1c506e1fe3d36b9f356f8ef250e0310a10a917cc
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a67af5d7d82b8bd7d0490d4ae6f9535bf3283ea2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62206619"
 ---
 # <a name="cclientdc-class"></a>CClientDC 类
 
@@ -100,7 +100,7 @@ HWND m_hWnd;
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 MDI](../../visual-cpp-samples.md)<br/>
+[MFC 示例 MDI](../../overview/visual-cpp-samples.md)<br/>
 [CDC 类](../../mfc/reference/cdc-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CDC 类](../../mfc/reference/cdc-class.md)

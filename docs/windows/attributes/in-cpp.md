@@ -1,17 +1,17 @@
 ---
-title: 在 （c + + COM 属性）
+title: 中 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.in
 helpviewer_keywords:
 - in attribute
 ms.assetid: 7b450cc4-4d2e-4910-a195-7487c6b7c373
-ms.openlocfilehash: bf23b1c776eccc284e5329b62bd45b0bd678823f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06d78552ef2ebb878ed630eb377e6249ba60cad4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409338"
 ---
 # <a name="in-c"></a>in (C++)
 
@@ -25,7 +25,7 @@ ms.locfileid: "50449694"
 
 ## <a name="remarks"></a>备注
 
-**中**c + + 属性具有相同的功能[中](/windows/desktop/Midl/in)MIDL 特性。
+**中**C++属性具有相同的功能[中](/windows/desktop/Midl/in)MIDL 特性。
 
 ## <a name="example"></a>示例
 
@@ -39,7 +39,7 @@ ms.locfileid: "50449694"
 |-|-|
 |**适用对象**|接口参数，接口方法|
 |**可重复**|否|
-|**必需的特性**|无|
+|**必需的特性**|None|
 |**无效的特性**|**retval**|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。

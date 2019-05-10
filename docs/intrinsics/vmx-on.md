@@ -7,12 +7,12 @@ helpviewer_keywords:
 - VMXON instruction
 - __vmx_on intrinsic
 ms.assetid: 16804991-6a75-4adf-8ec2-bc95acfa4801
-ms.openlocfilehash: defecf06ffb738b824f3f9b3484a89a4db634ab3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: de903eeeb29e3c194a36ccb4cb038ba89b8ea82f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62390134"
 ---
 # <a name="vmxon"></a>__vmx_on
 

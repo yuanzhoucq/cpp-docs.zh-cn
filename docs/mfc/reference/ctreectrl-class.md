@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: 92666e10d82d96b76ad43b652ed90e0e41b8f853
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3819e861b7a5e6ff27fe632a33413b588a5a4835
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323630"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -1366,7 +1366,7 @@ HTREEITEM HitTest(TVHITTESTINFO* pHitTestInfo) const;
 
 |||
 |-|-|
-|值|含义|
+|“值”|含义|
 |TVHT_ABOVE|客户端区域的上方。|
 |TVHT_BELOW|下面的工作区。|
 |TVHT_NOWHERE|在客户端区域中，但最后一项之下。|
@@ -2341,7 +2341,7 @@ BOOL SortChildrenCB(LPTVSORTCB pSort);
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 CMNCTRL1](../../visual-cpp-samples.md)<br/>
+[MFC 示例 CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CImageList 类](../../mfc/reference/cimagelist-class.md)

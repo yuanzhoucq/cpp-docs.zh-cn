@@ -13,14 +13,14 @@ helpviewer_keywords:
 - upgrading Visual C++ applications [MFC], OLE1 to OLE2
 - TN041
 ms.assetid: 67f55552-4b04-4ddf-af0b-4d9eaf5da957
-ms.openlocfilehash: 2bdf0c353151c8e932b3e8641a72b2116c45f3f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b398a1adbf2f47343eed076f32ade5bb2564cd52
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305445"
 ---
-# <a name="tn041-mfcole1-migration-to-mfcole-2"></a>TN041：MFC/OLE1 迁移到 MFC/OLE 2
+# <a name="tn041-mfcole1-migration-to-mfcole-2"></a>TN041:MFC/OLE1 迁移到 MFC/OLE 2
 
 > [!NOTE]
 > 以下技术说明在首次包括在联机文档中后未更新。 因此，某些过程和主题可能已过时或不正确。 要获得最新信息，建议你在联机文档索引中搜索热点话题。
@@ -29,7 +29,7 @@ ms.locfileid: "50568514"
 
 MFC 2.5（及更高版本）中的 OLE 2 类的设计目的之一是保留 MFC 2.0 中提供的针对 OLE 1.0 支持的很多相同体系结构。 因此，MFC 2.0 中的很多相同的 OLE 类仍存在于此版本的 MFC 中（`COleDocument`、`COleServerDoc`、`COleClientItem` 和 `COleServerItem`）。 此外，这些类中的很多 API 完全相同。 但是，OLE 2 与 OLE 1.0 差别很大，因此您可以预料某些细节已更改。 如果您熟悉 MFC 2.0 的 OLE1 支持，则会对 MFC 的 2.0 支持感到很亲切。
 
-如果您要采用现有 MFC/OLE1 应用程序并向其添加 OLE 2 功能，则应该先阅读本说明。 本说明介绍了一些常规问题，可能会遇到移植到 MFC/OLE 2 将 OLE1 功能时，然后讨论移植 MFC 2.0 中包含的两个应用程序时发现的问题： MFC OLE 示例[OCLIENT](../visual-cpp-samples.md)和[HIERSVR](../visual-cpp-samples.md)。
+如果您要采用现有 MFC/OLE1 应用程序并向其添加 OLE 2 功能，则应该先阅读本说明。 本说明介绍了一些常规问题，可能会遇到移植到 MFC/OLE 2 将 OLE1 功能时，然后讨论移植 MFC 2.0 中包含的两个应用程序时发现的问题： MFC OLE 示例[OCLIENT](../overview/visual-cpp-samples.md)和[HIERSVR](../overview/visual-cpp-samples.md)。
 
 ## <a name="mfc-documentview-architecture-is-important"></a>MFC 文档/视图体系结构很重要
 
@@ -45,19 +45,19 @@ MFC 的“罐装实现”类（如 `CToolBar`、`CStatusBar` 和 `CScrollView`�
 
 有很多包含 OLE 功能的 MFC 示例。 以下每个应用程序采用不同的角度来实现 OLE：
 
-- [HIERSVR](../visual-cpp-samples.md)意味着主要用于充当服务器应用程序。 它作为 MFC/OLE1 应用程序包含在 MFC 2.0 中，并且已经移植到 MFC/OLE 2，然后进行了扩展以实现在 OLE 2 中可用的很多 OLE 功能。
+- [HIERSVR](../overview/visual-cpp-samples.md)意味着主要用于充当服务器应用程序。 它作为 MFC/OLE1 应用程序包含在 MFC 2.0 中，并且已经移植到 MFC/OLE 2，然后进行了扩展以实现在 OLE 2 中可用的很多 OLE 功能。
 
-- [OCLIENT](../visual-cpp-samples.md)这是一个独立的容器应用程序，用于从容器的角度演示很多 OLE 功能。 它也已经从 MFC 2.0 移植，然后进行了扩展以支持很多更高级的 OLE 功能，如自定义剪贴板格式和指向嵌入项的链接。
+- [OCLIENT](../overview/visual-cpp-samples.md)这是一个独立的容器应用程序，用于从容器的角度演示很多 OLE 功能。 它也已经从 MFC 2.0 移植，然后进行了扩展以支持很多更高级的 OLE 功能，如自定义剪贴板格式和指向嵌入项的链接。
 
-- [DRAWCLI](../visual-cpp-samples.md)此应用程序实现 OLE 容器支持得与 OCLIENT 的作用，不同之处在于它是现有的面向对象的绘图程序的框架内。 它向您展示如何实现 OLE 容器支持并将其集成到现有应用程序。
+- [DRAWCLI](../overview/visual-cpp-samples.md)此应用程序实现 OLE 容器支持得与 OCLIENT 的作用，不同之处在于它是现有的面向对象的绘图程序的框架内。 它向您展示如何实现 OLE 容器支持并将其集成到现有应用程序。
 
-- [SUPERPAD](../visual-cpp-samples.md)此应用程序，同时作为独立应用程序，也是 OLE 服务器。 它实现的服务器支持是高度简化的。 其中特别重要的是，它如何使用 OLE 剪贴板服务将数据复制到剪贴板，同时使用内置于 Windows“编辑”控件的功能实现剪贴板粘贴功能。 这展示了传统 Windows API 使用方法的有趣结合以及与新的 OLE API 的集成。
+- [SUPERPAD](../overview/visual-cpp-samples.md)此应用程序，同时作为独立应用程序，也是 OLE 服务器。 它实现的服务器支持是高度简化的。 其中特别重要的是，它如何使用 OLE 剪贴板服务将数据复制到剪贴板，同时使用内置于 Windows“编辑”控件的功能实现剪贴板粘贴功能。 这展示了传统 Windows API 使用方法的有趣结合以及与新的 OLE API 的集成。
 
 有关示例应用程序的详细信息，请参阅“MFC 示例帮助”。
 
 ## <a name="case-study-oclient-from-mfc-20"></a>案例研究：MFC 2.0 中的 OCLIENT
 
-与上述[OCLIENT](../visual-cpp-samples.md)包含在 MFC 2.0 中，并实现了 OLE 使用 mfc/ole1。 最初将此应用程序转换为使用 MFC/OLE 2 类所采用的步骤如下所述。 初始移植完成后添加了很多功能，用来更好地演示 MFC/OLE 类。 此处将不会转换这些功能；有关这些高级功能的详细信息，请参阅示例本身。
+与上述[OCLIENT](../overview/visual-cpp-samples.md)包含在 MFC 2.0 中，并实现了 OLE 使用 mfc/ole1。 最初将此应用程序转换为使用 MFC/OLE 2 类所采用的步骤如下所述。 初始移植完成后添加了很多功能，用来更好地演示 MFC/OLE 类。 此处将不会转换这些功能；有关这些高级功能的详细信息，请参阅示例本身。
 
 > [!NOTE]
 > 编译器错误和分步过程是使用 Visual C++ 2.0 创建的。 特定错误消息和位置在 Visual C++ 4.0 中可能已更改，但概念性信息仍然有效。
@@ -291,7 +291,7 @@ ON_COMMAND(ID_OLE_EDIT_CONVERT, OnEditConvert)
 
 OLE 最有趣的功能之一是就地激活（也称为“可视化编辑”）。 此功能可让服务器接管容器的一部分用户界面，以便为用户提供更无缝的编辑界面。 若要向 OCLIENT 实现就地激活，则需要添加一些特殊资源和一些附加代码。 这些资源和代码通常由 AppWizard 提供 — 事实上，此处的很多代码是直接通过“容器”支持从新的 AppWizard 应用程序借用的。
 
-首先，当存在处于就地活动状态的项时，必须添加要使用的菜单资源。 您可以复制 IDR_OCLITYPE 资源并删除除“文件”和“窗口”弹出项之外的所有资源，以便在 Visual C++ 中创建此额外菜单资源。 文件和窗口弹出窗口，以指示组的分隔之间插入两个分隔条 (它应如下所示： 文件&#124;&#124;窗口)。 有关这些分隔条的含义以及服务器和容器菜单如何合并的详细信息请参阅[菜单和资源： 菜单合并](../mfc/menus-and-resources-menu-merging.md)。
+首先，当存在处于就地活动状态的项时，必须添加要使用的菜单资源。 您可以复制 IDR_OCLITYPE 资源并删除除“文件”和“窗口”弹出项之外的所有资源，以便在 Visual C++ 中创建此额外菜单资源。 文件和窗口弹出窗口，以指示组的分隔之间插入两个分隔条 (它应如下所示：文件&#124;&#124;窗口)。 有关这些分隔条的含义以及服务器和容器菜单如何合并的详细信息请参阅[菜单和资源：菜单合并](../mfc/menus-and-resources-menu-merging.md)。
 
 创建这些菜单后，您需要通知框架。 此操作在将文档模板添加 InitInstance 中的文档模板列表前通过调用文档模板的 `CDocTemplate::SetContainerInfo` 完成。 注册文档模板的新代码如下所示：
 
@@ -351,7 +351,7 @@ BOOL CRectItem::OnChangeItemPosition(const CRect& rectPos)
 }
 ```
 
-此时，这里有足够的代码来支持就地激活项和处理活动项的大小调整和移动，但没有代码支持用户退出编辑会话。 尽管某些服务器通过处理 Esc 键自行提供此功能，但建议容器提供两种停用项的方法：(1) 在项的外部单击和 (2) 按 Esc 键。
+此时，这里有足够的代码来支持就地激活项和处理活动项的大小调整和移动，但没有代码支持用户退出编辑会话。 尽管某些服务器将自行提供此功能通过处理 esc 键，但建议容器提供两种方式停用某项：（1） 通过单击在项的外部和 （2） 通过按 ESC 键。
 
 对于按 Esc 键的情况，请使用 Visual C++ 添加将 VK_ESCAPE 键映射到命令的快捷键，ID_CANCEL_EDIT 将被添加到资源。 此命令的处理程序如下：
 
@@ -422,7 +422,7 @@ void CMainView::OnSize(UINT nType, int cx, int cy)
 
 ## <a name="case-study-hiersvr-from-mfc-20"></a>案例研究：MFC 2.0 中的 HIERSVR
 
-[HIERSVR](../visual-cpp-samples.md)还包含在 MFC 2.0 并实现了使用 mfc/ole1 OLE。 本说明简要介绍此应用程序最初转换为使用 MFC/OLE 2 类所采用的步骤。 初始移植完成后添加了很多功能，用来更好地演示 MFC/OLE 2 类。 此处将不会转换这些功能；有关这些高级功能的详细信息，请参阅示例本身。
+[HIERSVR](../overview/visual-cpp-samples.md)还包含在 MFC 2.0 并实现了使用 mfc/ole1 OLE。 本说明简要介绍此应用程序最初转换为使用 MFC/OLE 2 类所采用的步骤。 初始移植完成后添加了很多功能，用来更好地演示 MFC/OLE 2 类。 此处将不会转换这些功能；有关这些高级功能的详细信息，请参阅示例本身。
 
 > [!NOTE]
 > 编译器错误和分步过程是使用 Visual C++ 2.0 创建的。 特定错误消息和位置在 Visual C++ 4.0 中可能已更改，但概念性信息仍然有效。
@@ -445,7 +445,7 @@ void CMainView::OnSize(UINT nType, int cx, int cy)
 
 如果命令行上存在 /Embedding，则不显示应用程序的主窗口。
 
-你将需要**GUID**为您的文档。 这是文档类型（128 位）的唯一标识符。 AppWizard 将为您创建一个 GUID，因此，如果您使用此处所述的从 AppWizard 生成的服务器应用程序复制新代码的方法，则只需“窃用”该应用程序中的 GUID。 如果未使用此方法，则可以在 BIN 目录中使用 GUIDGEN.EXE 实用工具。
+你将需要**GUID**为您的文档。 这是文档类型（128 位）的唯一标识符。 AppWizard 将为你创建一个 GUID，因此，如果你使用此处所述的从 AppWizard 生成的服务器应用程序复制新代码的方法，则只需“窃用”该应用程序中的 GUID。 如果未使用此方法，则可以在 BIN 目录中使用 GUIDGEN.EXE 实用工具。
 
 必须通过调用 `COleTemplateServer` 对象将您的 `COleTemplateServer::ConnectTemplate` 对象“连接”到文档模板。
 
@@ -600,7 +600,7 @@ CSize CServerItem::CalcNodeSize()
 }
 ```
 
-CServerItem 还将重写`COleServerItem::OnGetTextData`。 此函数在 MFC/OLE 中已过时，已由其他机制取代。 MFC 3.0 版的 MFC OLE 示例[HIERSVR](../visual-cpp-samples.md)实现此功能通过重写`COleServerItem::OnRenderFileData`。 此功能对此基本移植并不重要，因此您可以取消 OnGetTextData 重写。
+CServerItem 还将重写`COleServerItem::OnGetTextData`。 此函数在 MFC/OLE 中已过时，已由其他机制取代。 MFC 3.0 版的 MFC OLE 示例[HIERSVR](../overview/visual-cpp-samples.md)实现此功能通过重写`COleServerItem::OnRenderFileData`。 此功能对此基本移植并不重要，因此您可以取消 OnGetTextData 重写。
 
 尚未解决的 svritem.cpp 中有很多错误。 它们不是“真正”的错误，而只是由前面的错误导致的错误。
 
@@ -644,7 +644,7 @@ void CServerView::OnEditCopy()
 
 - 您需要向框架告知这些特殊资源和类。
 
-菜单资源很容易创建。 运行 Visual C++，将菜单资源 IDR_HIERSVRTYPE 复制到名为 IDR_HIERSVRTYPE_SRVR_IP 的菜单资源。 修改菜单，以便只保留“编辑”和“帮助”菜单弹出项。 在编辑和帮助菜单之间菜单中添加两个分隔符 (它应如下所示： 编辑&#124;&#124;帮助)。 有关这些分隔条的含义以及服务器和容器菜单如何合并的详细信息，请参阅[菜单和资源： 菜单合并](../mfc/menus-and-resources-menu-merging.md)。
+菜单资源很容易创建。 运行 Visual C++，将菜单资源 IDR_HIERSVRTYPE 复制到名为 IDR_HIERSVRTYPE_SRVR_IP 的菜单资源。 修改菜单，以便只保留“编辑”和“帮助”菜单弹出项。 在编辑和帮助菜单之间菜单中添加两个分隔符 (它应如下所示：编辑&#124;&#124;帮助)。 有关这些分隔条的含义以及服务器和容器菜单如何合并的详细信息，请参阅[菜单和资源：菜单合并](../mfc/menus-and-resources-menu-merging.md)。
 
 子集工具栏的位图创建起来很轻松：在选中“服务器”选项的情况下从新的 AppWizard 生成的应用程序中复制位图。 此位图随后会导入 Visual C++。 请确保为位图提供 ID IDR_HIERSVRTYPE_SRVR_IP。
 

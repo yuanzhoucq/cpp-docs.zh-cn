@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __outword intrinsic
 - out instruction
 ms.assetid: 995f8834-0f50-4b4f-a7a2-af0e7c371cda
-ms.openlocfilehash: 8a34dfe8bfaedf8f6df5e6f26015eeccd67ed957
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 067f438d2135f4d61245606ab25af5a6f1ec9568
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62262952"
 ---
 # <a name="outword"></a>__outword
 

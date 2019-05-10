@@ -1,6 +1,6 @@
 ---
 title: CAnimationVariable 类
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CAnimationVariable
 - AFXANIMATIONCONTROLLER/CAnimationVariable
@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CAnimationVariable [MFC], m_pParentObject
 - CAnimationVariable [MFC], m_variable
 ms.assetid: 506e697e-31a8-4033-a27e-292f4d7b42d9
-ms.openlocfilehash: 335d29e1e2e8e5b54ec1434a4c072ff3909b3823
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 42fd3ddc504e85ba3f69588bee54c6540b628129
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62338267"
 ---
 # <a name="canimationvariable-class"></a>CAnimationVariable 类
 
@@ -68,7 +68,7 @@ class CAnimationVariable;
 |名称|描述|
 |----------|-----------------|
 |[CAnimationVariable::CAnimationVariable](#canimationvariable)|构造一个动画变量对象。|
-|[CAnimationVariable::~CAnimationVariable](#canimationvariable__~canimationvariable)|析构函数。 CAnimationVariable 对象被销毁时调用。|
+|[CAnimationVariable::~CAnimationVariable](#_dtorcanimationvariable)|析构函数。 CAnimationVariable 对象被销毁时调用。|
 
 ### <a name="public-methods"></a>公共方法
 

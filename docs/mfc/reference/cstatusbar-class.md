@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CStatusBar [MFC], SetPaneStyle
 - CStatusBar [MFC], SetPaneText
 ms.assetid: a3bde3db-e71c-4881-a3ca-1d5481c345ba
-ms.openlocfilehash: cb52f1138ba7ff01c6fbf2f7ec13d5f39e9422d8
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d714159aa9fd52df682b1e5f3dbf3957bbef1b91
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323838"
 ---
 # <a name="cstatusbar-class"></a>CStatusBar 类
 
@@ -506,8 +506,8 @@ BOOL SetPaneText(
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 CTRLBARS](../../visual-cpp-samples.md)<br/>
-[MFC 示例 DLGCBR32](../../visual-cpp-samples.md)<br/>
+[MFC 示例 CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
+[MFC 示例 DLGCBR32](../../overview/visual-cpp-samples.md)<br/>
 [CControlBar 类](../../mfc/reference/ccontrolbar-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CStatusBarCtrl 类](../../mfc/reference/cstatusbarctrl-class.md)<br/>

@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCOutlookBarPane [MFC], EnableContextMenuItems
 - CMFCOutlookBarPane [MFC], RemoveAllButtons
 ms.assetid: 094e2ef3-a118-487e-a4cc-27626108fe08
-ms.openlocfilehash: 9f1fd2435222b33d0dfb188d2a51442c2f6aa82a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b23aa9e30c130cea8c84290b62cc19794376d4c1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62374098"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>CMFCOutlookBarPane 类
 
@@ -111,7 +111,7 @@ Outlook 栏的示例，请参阅 OutlookDemo 示例项目。
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何使用各种方法`CMFCOutlookBarPane`类。 该示例演示如何创建 Outlook 栏窗格、 启用页滚动模式、 停靠、 启用和设置 Outlook 栏的背景色。 此代码片段属于[Outlook 多视图示例](../../visual-cpp-samples.md)。
+下面的示例演示如何使用各种方法`CMFCOutlookBarPane`类。 该示例演示如何创建 Outlook 栏窗格、 启用页滚动模式、 停靠、 启用和设置 Outlook 栏的背景色。 此代码片段属于[Outlook 多视图示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_OutlookMultiViews#3](../../mfc/reference/codesnippet/cpp/cmfcoutlookbarpane-class_1.h)]
 [!code-cpp[NVC_MFC_OutlookMultiViews#4](../../mfc/reference/codesnippet/cpp/cmfcoutlookbarpane-class_2.cpp)]

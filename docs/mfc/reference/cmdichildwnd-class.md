@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], MDIRestore
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
-ms.openlocfilehash: efcf5057481345c001cc48224f53c666623d0780
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 13f027e68184a4869e88883ff8b8d3b123b94e3e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403927"
 ---
 # <a name="cmdichildwnd-class"></a>CMDIChildWnd 类
 
@@ -73,7 +73,7 @@ MDI 子窗口看上去像一个典型的框架窗口，只不过 MDI 子窗口�
 
 - 间接构造通过文档模板。
 
-在调用之前`Create`或`LoadFrame`，必须构造上使用 c + + 堆的框架窗口对象**新**运算符。 然后再调用`Create`您还可以注册窗口类[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)全局函数设置的帧的图标和类样式。
+在调用之前`Create`或`LoadFrame`，必须构造上堆使用的框架窗口对象C++**新**运算符。 然后再调用`Create`您还可以注册窗口类[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)全局函数设置的帧的图标和类样式。
 
 使用`Create`成员函数将为快速参数传递的帧创建参数。
 
@@ -89,7 +89,7 @@ MDI 子窗口看上去像一个典型的框架窗口，只不过 MDI 子窗口�
 
 - 当前处于活动状态的 MDI 子窗口菜单完全替换 MDI 框架窗口的菜单中，并且当前处于活动状态的 MDI 子窗口的标题添加到 MDI 框架窗口的标题。 实现结合 MDI 框架窗口的 MDI 子窗口函数的更多示例，请参阅`CMDIFrameWnd`类说明。
 
-不使用 c + +**删除**运算符来销毁框架窗口。 请改用 `CWnd::DestroyWindow`。 `CFrameWnd`的实现`PostNcDestroy`销毁窗口时，将删除 c + + 对象。 当用户关闭帧窗口时，默认值`OnClose`处理程序将调用`DestroyWindow`。
+不要使用C++**删除**运算符来销毁框架窗口。 请改用 `CWnd::DestroyWindow`。 `CFrameWnd`的实现`PostNcDestroy`将删除C++时销毁窗口对象。 当用户关闭帧窗口时，默认值`OnClose`处理程序将调用`DestroyWindow`。
 
 有关详细信息`CMDIChildWnd`，请参阅[帧 Windows](../../mfc/frame-windows.md)。
 
@@ -287,9 +287,9 @@ void SetHandles(
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 MDI](../../visual-cpp-samples.md)<br/>
-[MFC 示例 MDIDOCVW](../../visual-cpp-samples.md)<br/>
-[MFC 示例 SNAPVW](../../visual-cpp-samples.md)<br/>
+[MFC 示例 MDI](../../overview/visual-cpp-samples.md)<br/>
+[MFC 示例 MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
+[MFC 示例 SNAPVW](../../overview/visual-cpp-samples.md)<br/>
 [CFrameWnd 类](../../mfc/reference/cframewnd-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>

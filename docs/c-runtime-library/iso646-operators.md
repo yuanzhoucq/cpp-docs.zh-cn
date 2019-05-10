@@ -2,12 +2,12 @@
 title: ISO646 运算符
 ms.date: 04/11/2018
 ms.assetid: 93e6d3e7-4889-4d8e-8dcb-c1a6b9bbe0f5
-ms.openlocfilehash: fbb9822002d55ebb90baaff27911017ab6564b30
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e3942a88505282777a153ec9cd79f28460459362
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442492"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738719"
 ---
 # <a name="iso646-operators"></a>ISO646 运算符
 

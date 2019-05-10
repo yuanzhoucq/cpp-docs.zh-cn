@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2978
 ms.assetid: 5e7bee82-e266-4ccd-ad2e-ee89606ec5bf
-ms.openlocfilehash: 25798e793bec7d09ea1f307ec1e2d9a63b9dbe27
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf682bf14246754cca74a43dffc39761ff6125c1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428101"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395321"
 ---
 # <a name="compiler-error-c2978"></a>编译器错误 C2978
 
 语法错误：应为“keyword1”或“keyword2”；却发现类型“keyword3”；泛型中不支持非类型参数
 
-未正确声明泛型类。 请参阅[泛型](../../windows/generics-cpp-component-extensions.md)有关详细信息。
+未正确声明泛型类。 请参阅[泛型](../../extensions/generics-cpp-component-extensions.md)有关详细信息。
 
 ## <a name="example"></a>示例
 

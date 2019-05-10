@@ -29,12 +29,12 @@ helpviewer_keywords:
 - data transfer [C++], asynchronous
 - CBindStatusCallback class
 ms.assetid: 0f5da276-6031-4418-b2a9-a4750ef29e77
-ms.openlocfilehash: e8c8d3f170803a792ca2ea8c7a37a18fd2cebd48
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6e5e55a23ee678bbedf76f608bc4fdf562cc1822
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62259711"
 ---
 # <a name="cbindstatuscallback-class"></a>CBindStatusCallback 类
 
@@ -101,7 +101,7 @@ class ATL_NO_VTABLE CBindStatusCallback : public CComObjectRootEx <T ::_ThreadMo
 
 `CBindStatusCallback` 类实现 `IBindStatusCallback` 接口。 `IBindStatusCallback` 必须由实现你的应用程序以便它可以从异步数据传输接收通知。 由系统提供的异步名字对象使用`IBindStatusCallback`方法来发送和接收异步数据有关的信息传输到和从您的对象。
 
-通常情况下，`CBindStatusCallback`对象是与特定的绑定操作相关联。 例如，在[异步](../../visual-cpp-samples.md)示例中，当你设置的 URL 属性，它会创建`CBindStatusCallback`对的调用中的对象`Download`:
+通常情况下，`CBindStatusCallback`对象是与特定的绑定操作相关联。 例如，在[异步](../../overview/visual-cpp-samples.md)示例中，当你设置的 URL 属性，它会创建`CBindStatusCallback`对的调用中的对象`Download`:
 
 [!code-cpp[NVC_ATL_Windowing#86](../../atl/codesnippet/cpp/cbindstatuscallback-class_1.h)]
 
@@ -528,7 +528,7 @@ void Function_Name(
     DWORD dwSize);
 ```
 
-在下面的示例 (摘自[异步](../../visual-cpp-samples.md)示例)，该函数`OnData`将接收到的数据写入到文本框。
+在下面的示例 (摘自[异步](../../overview/visual-cpp-samples.md)示例)，该函数`OnData`将接收到的数据写入到文本框。
 
 ### <a name="example"></a>示例
 

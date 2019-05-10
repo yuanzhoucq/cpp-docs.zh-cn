@@ -7,15 +7,15 @@ helpviewer_keywords:
 - common controls [MFC], about common controls
 ms.assetid: a252acad-3cc0-440e-bbc6-43eaaf8cb7bb
 ms.openlocfilehash: 6a31c783e19603eadb90fd0e6be99ff55f4eaeb7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62352172"
 ---
 # <a name="making-and-using-controls"></a>创建和使用控件
 
-Visual c + + 中创建了对话框的大多数控件[对话框编辑器](../windows/dialog-editor.md)。 但您也可以在任何对话框或窗口中创建控件。
+您将为对话框的大多数控件在视觉对象C++[对话框编辑器](../windows/dialog-editor.md)。 但您也可以在任何对话框或窗口中创建控件。
 
 ## <a name="what-do-you-want-to-know-more-about"></a>你想要了解更多信息
 

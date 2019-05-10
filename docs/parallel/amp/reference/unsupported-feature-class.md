@@ -1,6 +1,6 @@
 ---
 title: unsupported_feature 类
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - unsupported_feature
 - AMPRT/unsupported_feature
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - unsupported_feature class
 ms.assetid: 6b1ab917-df13-48c7-9648-7cb2465a0ff5
-ms.openlocfilehash: 6a742c3fd1965882c3fa72cb1fab985cd4d981d1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7635f999b227d02ec7fd56296fef1b0b047abd29
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405464"
 ---
 # <a name="unsupportedfeature-class"></a>unsupported_feature 类
 
@@ -31,7 +31,7 @@ class unsupported_feature : public runtime_exception;
 
 |名称|描述|
 |----------|-----------------|
-|[unsupported_feature 构造函数](#ctor)|构造的新实例`unsupported_feature`异常。|
+|[unsupported_feature 构造函数](#unsupported_feature)|构造的新实例`unsupported_feature`异常。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -41,9 +41,9 @@ class unsupported_feature : public runtime_exception;
 
 `unsupported_feature`
 
-## <a name="unsupported_feature__ctor"></a> unsupported_feature
+## <a name="unsupportedfeature"></a>unsupported_feature
 
-  构造的功能异常的新实例。
+  构造的新实例`unsupported_feature`异常。
 
 ### <a name="syntax"></a>语法
 

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - handlers, global
 ms.assetid: dd88a812-3bc7-4ce8-8283-4b674c246534
-ms.openlocfilehash: 9c6f355bc43fc53d2b8d27a1ee69c059d0f50692
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d1b8452d19172bf16817c36032189accfd855539
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387391"
 ---
 # <a name="how-to-define-and-install-a-global-exception-handler"></a>如何：定义和安装全局异常处理程序
 
@@ -73,4 +73,4 @@ int main()
 
 ## <a name="see-also"></a>请参阅
 
-[异常处理](../windows/exception-handling-cpp-component-extensions.md)
+[异常处理](../extensions/exception-handling-cpp-component-extensions.md)

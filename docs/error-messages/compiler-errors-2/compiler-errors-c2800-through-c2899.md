@@ -1,6 +1,6 @@
 ---
-title: 编译器错误 C2800-C2899
-ms.date: 11/17/2017
+title: 编译器错误 C2800 - C2899
+ms.date: 04/21/2019
 f1_keywords:
 - C2816
 - C2820
@@ -42,14 +42,14 @@ helpviewer_keywords:
 - C2895
 - C2899
 ms.assetid: e5de1e92-746a-4315-a331-c5d9efb76dbb
-ms.openlocfilehash: 7c35cd91f836070ff45faa489e1c16c40909f922
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: a0367d1d465d4460202f4d6d29468e59f6a74657
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332070"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64856728"
 ---
-# <a name="compiler-errors-c2800-through-c2899"></a>编译器错误 C2800-C2899
+# <a name="compiler-errors-c2800-through-c2899"></a>编译器错误 C2800 - C2899
 
 在本部分文档中的文章说明了由编译器生成的错误消息的子集。
 
@@ -110,7 +110,7 @@ ms.locfileid: "51332070"
 |编译器错误 C2848|'*类*： 托管/WinRT 类型不能是联合的成员|
 |[编译器错误 C2849](compiler-error-c2849.md)|'*接口*： 接口不能有析构函数|
 |[编译器错误 C2850](compiler-error-c2850.md)|'*构造*： 只允许在文件范围内; 可能不是在嵌套结构|
-|编译器错误 C2851|'*枚举*： 公共 WinRT 枚举只能使用 int 或 unsigned 的 int 作为基类型|
+|编译器错误 C2851|'*枚举*:公共 WinRT 枚举只能使用 int 或 unsigned 的 int 作为基类型|
 |编译器错误 C2852|'*标识符*： 只有数据成员可以在类中初始化|
 |编译器错误 C2853|'*标识符*： 非静态数据成员不能具有包含 auto 的类型|
 |[编译器错误 C2854](compiler-error-c2854.md)|#pragma hdrstop 中出现语法错误|
@@ -159,3 +159,8 @@ ms.locfileid: "51332070"
 |[编译器错误 C2897](compiler-error-c2897.md)|析构函数/终结器不能是函数模板|
 |[编译器错误 C2898](compiler-error-c2898.md)|'*声明*： 不能是虚成员函数模板|
 |编译器错误 C2899|已过时。|
+
+## <a name="see-also"></a>请参阅
+
+[C /C++编译器和生成工具错误和警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[编译器错误 C2000-C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

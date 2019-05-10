@@ -1,16 +1,16 @@
 ---
 title: 演练：创建数据流代理
-ms.date: 11/19/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - creating dataflow agents [Concurrency Runtime]
 - dataflow agents, creating [Concurrency Runtime]
 ms.assetid: 9db5ce3f-c51b-4de1-b79b-9ac2a0cbd130
-ms.openlocfilehash: bba72404b1c39ef1835b0c96883154b385181b6a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: bd0aa1c2ca2263e469cd45a4af650fa9b3e8c508
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266752"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857433"
 ---
 # <a name="walkthrough-creating-a-dataflow-agent"></a>演练：创建数据流代理
 

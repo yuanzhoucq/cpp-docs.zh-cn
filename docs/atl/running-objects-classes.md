@@ -2,18 +2,16 @@
 title: 对象类 (ATL)
 ms.date: 11/04/2016
 ms.topic: reference
-f1_keywords:
-- vc.atl.objects.running
 helpviewer_keywords:
 - object classes, running
 - objects [C++], running objects classes
 ms.assetid: b4d63c41-81fd-4000-96c5-ea0a011f4308
-ms.openlocfilehash: b18264aa3e89ca3ad45d32a9af3000e949a86f1e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0bead33f5439fa90d376fdb64f98dfdbab52ec82
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62274429"
 ---
 # <a name="running-objects-classes"></a>正在运行的对象类
 

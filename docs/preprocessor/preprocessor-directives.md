@@ -6,11 +6,11 @@ helpviewer_keywords:
 - preprocessor, directives
 ms.assetid: e0fc4564-b6cf-4a36-bf51-6ccd7abd0a94
 ms.openlocfilehash: 9481e977f2afb3de27a74278893a217fde48044b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62179966"
 ---
 # <a name="preprocessor-directives"></a>预处理器指令
 
@@ -27,7 +27,7 @@ ms.locfileid: "50608021"
 |[#else](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)|[#ifdef](../preprocessor/hash-ifdef-and-hash-ifndef-directives-c-cpp.md)|[#line](../preprocessor/hash-line-directive-c-cpp.md)|[#endif](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)|
 |[#ifndef](../preprocessor/hash-ifdef-and-hash-ifndef-directives-c-cpp.md)|[#pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)|||
 
-数字符号 (**#**) 必须位于包含指令; 的行的第一个非空白字符的空白字符可以出现数字符号与指令的第一个字母之间。 某些指令包含自变量或值。 （除外的自变量或值是该指令的一部分） 在指令后面的任何文本的前面必须是单行注释分隔符 (**//**) 或括在注释分隔符 ( __/\*\*/__). 包含预处理器指令的行可以继续通过前面紧邻的结束行标记以反斜杠 (**\\**)。
+数字符号 (**#**) 必须位于包含指令; 的行的第一个非空白字符的空白字符可以出现数字符号与指令的第一个字母之间。 某些指令包含参数或值。 （除外的自变量或值是该指令的一部分） 在指令后面的任何文本的前面必须是单行注释分隔符 (**//**) 或括在注释分隔符 ( __/\*\*/__). 包含预处理器指令的行可以继续通过前面紧邻的结束行标记以反斜杠 (**\\**)。
 
 预处理器指令可以出现在源文件中的任何位置，但是它们仅应用于源文件的剩余部分。
 

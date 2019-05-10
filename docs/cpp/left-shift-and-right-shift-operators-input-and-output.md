@@ -13,12 +13,12 @@ helpviewer_keywords:
 - shift operators [C++]
 - operators [C++], shift
 ms.assetid: 25fa0cbb-5fdd-4657-8745-b35f7d8f1606
-ms.openlocfilehash: 2f118c11aab9fb2bbdd6cfa4f23425077b382b23
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: fd048bedc45b14bdc7b83120ad039296b54aa850
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565837"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222061"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>左的移和右移运算符 (&gt; &gt;并&lt; &lt;)
 
@@ -26,8 +26,8 @@ ms.locfileid: "50565837"
 
 ## <a name="syntax"></a>语法
 
-> *shift 表达式* `<<` *加法表达式*
-> *shift 表达式* `>>` *加法表达式*
+> *shift-expression* `<<` *additive-expression*
+> *shift-expression* `>>` *additive-expression*
 
 ## <a name="remarks"></a>备注
 
@@ -61,7 +61,7 @@ int main() {
 }
 ```
 
-如果你左移有符号的数字，以至于符号位受影响，则结果是不确定的。 以下示例将显示 Visual C++ 中 1 位左移到符号位时所发生的情况。
+如果你左移有符号的数字，以至于符号位受影响，则结果是不确定的。 下面的示例演示左移到符号位位置 1 的位时，会发生什么情况。
 
 ```cpp
 #include <iostream>
@@ -89,7 +89,7 @@ int main() {
 右移位运算符将导致位模式中的*shift 表达式*要按指定位数向右移动*加法表达式*。 对于无符号数字，因移位运算而空出的位上将用零填充。 对于有符号数字，符号位用于填充空出的位。 也就是说，如果数字为正，则使用 0；如果数字为负，则使用 1。
 
 > [!IMPORTANT]
-> 符号为负的数字右移的结果依实现而定。 虽然 Visual C++ 使用符号位填充空出的位，但是无法保证其他实现也会这样执行。
+> 符号为负的数字右移的结果依实现而定。 尽管 MicrosoftC++编译器使用符号位填充空出的位，则不能保证其他实现也执行该操作。
 
 以下示例显示使用无符号数字的右移运算：
 

@@ -1,15 +1,15 @@
 ---
 title: 优点和缺点的链接到 CRT 所使用的方法
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - _ATL_MIN_CRT macro
 ms.assetid: 49b485f7-9487-49e4-b12a-0f710b620e2b
-ms.openlocfilehash: bc322c704374374d6e7c075dbf466fc2b038b0ba
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
-ms.translationtype: MT
+ms.openlocfilehash: b2e504de91cea9fef6e9acb0fc851bc2cc271e97
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283210"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221281"
 ---
 # <a name="benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt"></a>优点和缺点的链接到 CRT 所使用的方法
 

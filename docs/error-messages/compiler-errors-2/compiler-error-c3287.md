@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3287
 ms.assetid: c1fa73d2-2c82-4136-a7da-0e75e3b420ad
 ms.openlocfilehash: ab0b93aa1a74ea79515e24ef2b1e289cf0227dac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62222672"
 ---
 # <a name="compiler-error-c3287"></a>编译器错误 C3287
 
@@ -19,7 +19,7 @@ ms.locfileid: "50538669"
 
 用户定义的集合类必须包含对 `MoveNext` 和 `Current`的定义。
 
-有关更多信息，请参见 [如何：使用 for each 循环访问用户定义集合](../../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md) 。
+请参阅[如何：与每个循环 Over a User-Defined 集合](../../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md)有关详细信息。
 
 ## <a name="example"></a>示例
 

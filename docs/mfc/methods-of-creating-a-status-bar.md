@@ -10,11 +10,11 @@ helpviewer_keywords:
 - status bars [MFC], creating
 ms.assetid: 9aeaf290-7099-4762-a5ba-9c26705333c9
 ms.openlocfilehash: a2301301d0012bd93ffedd0452dec140174402e0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383845"
 ---
 # <a name="methods-of-creating-a-status-bar"></a>创建状态栏的方法
 
@@ -22,7 +22,7 @@ MFC 提供了两个类，创建状态条：[CStatusBar](../mfc/reference/cstatus
 
 `CStatusBarCtrl` 通常会导致较小的可执行文件，以及你可能更愿意使用`CStatusBarCtrl`如果不想将状态栏集成到 MFC 体系结构。 如果你打算使用`CStatusBarCtrl`和将状态栏集成到 MFC 体系结构，必须采取额外注意将控制操作传送到 MFC 状态栏。 此通信并不困难;但是，它是在使用时是不需要的额外工作`CStatusBar`。
 
-Visual c + + 提供了两种方式利用状态栏常见控件。
+VisualC++提供了两个方法来充分利用公共控件状态栏。
 
 - 创建使用状态栏`CStatusBar`，然后调用[CStatusBar::GetStatusBarCtrl](../mfc/reference/cstatusbar-class.md#getstatusbarctrl)若要访问`CStatusBarCtrl`成员函数。
 

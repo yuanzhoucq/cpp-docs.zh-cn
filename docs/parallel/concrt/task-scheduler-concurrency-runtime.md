@@ -17,18 +17,18 @@ helpviewer_keywords:
 - task scheduler [Concurrency Runtime], wait function
 ms.assetid: 9aba278c-e0c9-4ede-b7c6-fedf7a365d90
 ms.openlocfilehash: c5d37d320344d2ebf83be2c939f5a7372d4af306
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57286804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180051"
 ---
 # <a name="task-scheduler-concurrency-runtime"></a>任务计划程序（并发运行时）
 
 文档这一部分的主题介绍并发运行时任务计划程序的重要功能。 如果希望细微调整并发运行时的现有代码的性能，则任务计划程序会很有用。
 
 > [!IMPORTANT]
->  任务计划程序不可以从通用 Windows 平台 (UWP) 应用。 有关详细信息，请参阅[创建异步操作在 c + + UWP 应用的](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)。
+>  任务计划程序不可以从通用 Windows 平台 (UWP) 应用。 有关详细信息，请参阅[创建异步操作C++适用于 UWP 应用](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)。
 >
 >  在 Visual Studio 2015 及更高版本， [concurrency:: task](../../parallel/concrt/reference/task-class.md)类和 ppltasks.h 中的相关的类型使用 Windows 线程池作为其计划程序。 本主题不再适用于在 ppltasks.h 中定义的类型。 并行算法（例如 parallel_for）继续使用并发运行时作为默认计划程序。
 
@@ -45,7 +45,7 @@ ms.locfileid: "57286804"
 
 ## <a name="related-topics"></a>相关主题
 
-|标题|描述|
+|Title|描述|
 |-----------|-----------------|
 |[计划程序实例](../../parallel/concrt/scheduler-instances.md)|介绍计划程序实例以及如何使用 `concurrency::Scheduler` 和 `concurrency::CurrentScheduler` 类来管理它们。 当希望将显式计划策略与特定类型的工作负荷相关联时，可使用计划程序实例。|
 |[计划程序策略](../../parallel/concrt/scheduler-policies.md)|介绍计划程序策略的角色。 当希望控制计划程序在管理任务时使用的策略时，可使用计划程序策略。|

@@ -1,6 +1,6 @@
 ---
 title: tile_barrier 类
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - tile_barrier
 - AMP/tile_barrier
@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - tile_barrier class
 ms.assetid: b4ccdccb-0032-4e11-b7bd-dc9d43445dee
-ms.openlocfilehash: 4336a4cc317344c881f60e5ed4c5bdf8328a34b8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f0e742a0cc1a0809fc08b3862cadb7e3deb36fa8
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62351503"
 ---
 # <a name="tilebarrier-class"></a>tile_barrier 类
 
@@ -56,7 +56,7 @@ class tile_barrier;
 
 **命名空间：** 并发
 
-## <a name="tile_barrier__ctor"></a>  tile_barrier 构造函数
+## <a name="ctor"></a>  tile_barrier 构造函数
 
 通过复制现有初始化类的新实例。
 
@@ -72,7 +72,7 @@ tile_barrier(
 *_Other*<br/>
 `tile_barrier`要复制对象。
 
-## <a name="wait"></a>  wait
+## <a name="wait"></a>等待
 
 指示线程组 (Tile) 中的所有线程停止执行，直到 Tile 中的所有线程完成等待。
 
@@ -82,7 +82,7 @@ tile_barrier(
 void wait() const restrict(amp);
 ```
 
-## <a name="wait_with_all_memory_fence"></a>  wait_with_all_memory_fence
+## <a name="waitwithallmemoryfence"></a>wait_with_all_memory_fence
 
 阻止平铺中的所有线程都达到此调用之前的磁贴中的所有线程的执行。 这可确保所有内存访问对于线程平铺中的其他线程是可见的并已按程序顺序执行。
 
@@ -92,7 +92,7 @@ void wait() const restrict(amp);
 void wait_with_all_memory_fence() const restrict(amp);
 ```
 
-## <a name="wait_with_global_memory_fence"></a>  wait_with_global_memory_fence
+## <a name="waitwithglobalmemoryfence"></a>wait_with_global_memory_fence
 
 阻止平铺中的所有线程都达到此调用之前的磁贴中的所有线程的执行。 这可确保所有全局内存访问对于线程平铺中的其他线程是可见并已按程序顺序执行。
 
@@ -102,7 +102,7 @@ void wait_with_all_memory_fence() const restrict(amp);
 void wait_with_global_memory_fence() const  restrict(amp);
 ```
 
-## <a name="wait_with_tile_static_memory_fence"></a>  wait_with_tile_static_memory_fence
+## <a name="waitwithtilestaticmemoryfence"></a>wait_with_tile_static_memory_fence
 
 阻止平铺中的所有线程都达到此调用之前的磁贴中的所有线程的执行。 这可确保`tile_static`内存访问对于线程平铺中的其他线程是可见并已按程序顺序执行。
 

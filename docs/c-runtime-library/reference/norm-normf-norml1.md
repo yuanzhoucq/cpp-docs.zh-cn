@@ -31,11 +31,11 @@ helpviewer_keywords:
 - norml function
 ms.assetid: 9786ecfe-0019-4553-b378-0af6c691e15c
 ms.openlocfilehash: 3c1803a54f0dfc27975af5bb0eeb7e5c042b2579
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628106"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156131"
 ---
 # <a name="norm-normf-norml"></a>norm、normf、norml1
 
@@ -65,7 +65,7 @@ long double norm( _Lcomplex z );  // C++ only
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，可以调用的重载**norm**采用 **_Fcomplex**或 **_Lcomplex**的值，并返回**float**或**长双精度型**值。 在 C 程序中， **norm**始终采用 **_Dcomplex**值并返回**double**值。
+因为C++允许重载，可以调用的重载**norm**采用 **_Fcomplex**或 **_Lcomplex**值，并返回**float**或**长双精度型**值。 在 C 程序中， **norm**始终采用 **_Dcomplex**值并返回**double**值。
 
 ## <a name="requirements"></a>要求
 

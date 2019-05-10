@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Zc:noexceptTypes
 - -Zc:noexceptTypes
 ms.assetid: 1cbf7e3c-0f82-4f91-84dd-612bcf26d2c6
-ms.openlocfilehash: f5f2fa3ef85e7ff15b28188e45a4ec397878873c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28e06f54049d36262134b6be7eadb0e6e5349a45
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315932"
 ---
 # <a name="zcnoexcepttypes-c17-noexcept-rules"></a>/Zc:noexceptTypes （c + + 17 noexcept 规则）
 
@@ -27,7 +27,7 @@ C + + 17 标准使`throw()`的别名作为`noexcept`，删除`throw(<type list>)
 
 当 **/Zc:noexceptTypes**指定选项，编译器符合 C + + 17 标准，并将[throw （)](../../cpp/exception-specifications-throw-cpp.md)作为别名[noexcept](../../cpp/noexcept-cpp.md)，删除`throw(<type list>)`并`throw(...)`，并允许某些类型，以便包括`noexcept`。 **/Zc:noexceptTypes**选项才可用[/std: c + + 17](std-specify-language-standard-version.md)或[/std:latest](std-specify-language-standard-version.md)已启用。 **/Zc:noexceptTypes**默认情况下启用符合 ISO C + + 17 标准。 [触发-](permissive-standards-conformance.md)选项不会影响 **/Zc:noexceptTypes**。 关闭此选项通过指定 **/Zc:noexceptTypes-** 若要还原到 C + + 14 的行为`noexcept`时 **/std::C + + 17**或 **/std::latest**指定。
 
-从 Visual Studio 2017 版本 15.5 开始，c + + 编译器诊断 c++17 模式中的声明中的多个不匹配的异常规范，或者当[触发-](permissive-standards-conformance.md)指定选项。
+在 Visual Studio 2017 版本 15.5 中，从C++编译器诊断 c++17 模式中的声明中的多个不匹配的异常规范，或者当[触发-](permissive-standards-conformance.md)指定选项。
 
 此示例演示如何使用异常说明符声明时行为 **/Zc:noexceptTypes**设置或禁用选项。 若要显示的行为设置时，通过使用编译`cl /EHsc /W4 noexceptTypes.cpp`。 若要显示禁用时的行为，编译使用`cl /EHsc /W4 /Zc:noexceptTypes- noexceptTypes.cpp`。
 
@@ -73,14 +73,14 @@ struct B : A
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择**配置属性** > **C/c + +** > **命令行**属性页。
+1. 选择**配置属性** > **C /C++** > **命令行**属性页。
 
 1. 修改**其他选项**属性以包含 **/Zc:noexceptTypes**或 **/Zc:noexceptTypes-** ，然后选择**确定**。
 
 ## <a name="see-also"></a>请参阅
 
-[/Zc（一致性）](../../build/reference/zc-conformance.md)<br/>
+[/Zc（一致性）](zc-conformance.md)<br/>
 [noexcept](../../cpp/noexcept-cpp.md)<br/>
 [异常规范 (throw)](../../cpp/exception-specifications-throw-cpp.md)

@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - VectorView Class
 ms.assetid: 05cd461d-dce7-49d3-b0e7-2e5c78ed8192
-ms.openlocfilehash: 4f4a5cbd2f1b6c06b339950307dbb333fc6392ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02b5e15a816ec057bfb0a8201b7591e628c3ea2c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161376"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView 类
 
@@ -110,7 +110,7 @@ T GetAt(
 
 ### <a name="return-value"></a>返回值
 
-`index` 参数指定的元素。 元素类型由 VectorView 模板参数指定*T*。
+`index` 参数指定的元素。 元素类型由 VectorView 模板参数指定 *T* 。
 
 ## <a name="getmany"></a>  Vectorview:: Getmany 方法
 
@@ -154,7 +154,7 @@ virtual bool IndexOf(
 
 ### <a name="parameters"></a>参数
 
-*value*<br/>
+*值*<br/>
 要查找的项。
 
 *index*<br/>
@@ -253,7 +253,7 @@ VectorView(
 *size*<br/>
 VectorView 中元素的数量。
 
-*value*<br/>
+*值*<br/>
 用于初始化当前 VectorView 中每个元素的值。
 
 *v*<br/>
@@ -271,7 +271,7 @@ VectorView 中元素的数量。
 *first*<br/>
 用于初始化当前 VectorView 的对象序列中的第一个元素。 类型`first`通过传递*完美转发*。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
-*最后一个*<br/>
+*last*<br/>
 用于初始化当前 VectorView 的对象序列中的最后一个元素。 类型`last`通过传递*完美转发*。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
 ## <a name="see-also"></a>请参阅

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - examples [MFC], dialog boxes
 - menu items [MFC], examples
 ms.assetid: e8692549-acd7-478f-9c5e-ba310ce8cccd
-ms.openlocfilehash: 8c60469747c24b4c295348a14cb569c4118c76d9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1e730125e47609f0bf87814b32962336cb752b04
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62173276"
 ---
 # <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>示例:显示一个对话框，通过菜单命令
 
@@ -44,17 +44,22 @@ ms.locfileid: "57260473"
 
 1. 添加对话框中的类。 请参阅[添加类](../ide/adding-a-class-visual-cpp.md)有关详细信息。
 
-1. 在中**类视图**，选择文档类 (CDisplayDialogDoc)。 在 **“属性”** 窗口中，单击 **“事件”** 按钮。 双击的左窗格中的菜单命令 (ID_VIEW_TEST) 的 ID**属性**窗口，然后选择**命令**。 在右窗格中，单击向下箭头，然后选择**\<添加 > OnViewTest**。
+1. 在中**类视图**，选择文档类 (CDisplayDialogDoc)。 在 **“属性”** 窗口中，单击 **“事件”** 按钮。 双击的左窗格中的菜单命令 (ID_VIEW_TEST) 的 ID**属性**窗口，然后选择**命令**。 在右窗格中，单击向下箭头，然后选择 **\<添加 > OnViewTest** 。
 
    如果与大型机的 MDI 应用程序添加菜单命令，请改为选择应用程序类 (CDisplayDialogApp)。
 
 1. 将以下 include 语句 CDisplayDialogDoc.cpp （或 CDisplayDialogApp.cpp） 添加现有包含语句之后：
 
-   [!code-cpp[NVC_MFCControlLadenDialog#42](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_1.cpp)]
+   ```cpp
+   #include "TestDialog.h"
+   ```
 
 1. 将以下代码添加到`OnViewTest`来实现该函数：
 
-   [!code-cpp[NVC_MFCControlLadenDialog#43](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_2.cpp)]
+   ```cpp
+   CTestDialog testdlg;
+   testdlg.DoModal();  
+   ```
 
 ### <a name="to-display-a-modeless-dialog-box"></a>若要显示无模式对话框
 
@@ -64,29 +69,46 @@ ms.locfileid: "57260473"
 
    - 声明声明前面的第一类的对话框类：
 
-         [!code-cpp[NVC_MFCControlLadenDialog#44](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_3.h)]
+   ```cpp
+   class CTestDialog;
+   ```
 
    - 将指针声明为对话框的后的 public 节中的属性：
 
-         [!code-cpp[NVC_MFCControlLadenDialog#45](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_4.h)]
+   ```cpp
+   CTestDialog* m_pTestDlg;
+   ```
 
 1. 编辑 DisplayDialogView.cpp:
 
    - 添加以下 include 语句后现有 include 语句：
 
-         [!code-cpp[NVC_MFCControlLadenDialog#42](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_1.cpp)]
+   ```cpp
+   #include "TestDialog.h"
+   ```
 
    - 将以下代码添加到构造函数：
 
-         [!code-cpp[NVC_MFCControlLadenDialog#46](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_5.cpp)]
+   ```cpp
+   m_pTestDlg = NULL;
+   ```
 
    - 将以下代码添加到析构函数：
 
-         [!code-cpp[NVC_MFCControlLadenDialog#47](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_6.cpp)]
+   ```cpp
+   delete m_pTestDlg;
+   ```
 
    - 将以下代码添加到`OnViewTest`来实现该函数：
 
-         [!code-cpp[NVC_MFCControlLadenDialog#48](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_7.cpp)]
+   ```cpp
+   if (NULL == m_pTestDlg)
+   {
+      m_pTestDlg = new CTestDialog(this);
+      m_pTestDlg->Create(CTestDialog::IDD, this);
+   }
+   m_pTestDlg->ShowWindow(SW_SHOW); 
+   ```
 
 ## <a name="see-also"></a>请参阅
 

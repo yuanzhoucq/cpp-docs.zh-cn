@@ -1,5 +1,5 @@
 ---
-title: event_source （c + + COM 属性）
+title: event_source (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.event_source
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - event sources
 - event handling, creating event source
 ms.assetid: 0983e36a-6127-4fbb-8a22-8dfec6564c16
-ms.openlocfilehash: e7a58abc617fcfed69020bdace60758a6bf75337
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81eba3c032a3556d1c69ad02652455ebc07ab6be
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409625"
 ---
 # <a name="eventsource"></a>event_source
 
@@ -67,7 +67,7 @@ ms.locfileid: "50510560"
 |**适用对象**|**类**，**结构**|
 |**可重复**|否|
 |**必需的特性**|**组件类**时 `type`=`com`|
-|**无效的特性**|无|
+|**无效的特性**|None|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

@@ -1,17 +1,17 @@
 ---
-title: 如何：在 C++/CLI 中使用事件
+title: 如何：使用中的事件C++/CLI
 ms.date: 11/04/2016
 helpviewer_keywords:
 - events [C++], accessing in interfaces
 ms.assetid: fbf452dc-2dd7-4322-adc0-656512d654d1
-ms.openlocfilehash: eb18922b998db6b959921c8d786e0d558a9c5ce1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6b4ecbba5651341965d2cf4df5b5ad2ead7f9f26
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387170"
 ---
-# <a name="how-to-use-events-in-ccli"></a>如何：在 C++/CLI 中使用事件
+# <a name="how-to-use-events-in-ccli"></a>如何：使用中的事件C++/CLI
 
 本文介绍如何使用声明事件和函数调用该事件的接口和实现接口的类和事件处理程序。
 
@@ -649,4 +649,4 @@ hello
 
 ## <a name="see-also"></a>请参阅
 
-[event](../windows/event-cpp-component-extensions.md)
+[event](../extensions/event-cpp-component-extensions.md)

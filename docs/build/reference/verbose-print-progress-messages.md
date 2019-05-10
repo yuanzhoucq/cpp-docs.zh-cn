@@ -13,12 +13,12 @@ helpviewer_keywords:
 - dependencies [C++], dependency information in linker output
 - VERBOSE linker option
 ms.assetid: 9c347d98-4c37-4724-a39e-0983934693ab
-ms.openlocfilehash: 290d2e5c5c5a87042ee805cdaed90cce4418a389
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7aed1e17034b40ffdad4da4136fc5a64361b3d77
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317297"
 ---
 # <a name="verbose-print-progress-messages"></a>/VERBOSE（打印进度消息）
 
@@ -33,16 +33,16 @@ ms.locfileid: "57423746"
 |选项|描述|
 |------------|-----------------|
 |/VERBOSE|显示有关链接的过程的详细信息。|
-|/VERBOSE:ICF|显示有关链接器活动的使用而得出的信息[/opt: icf](../../build/reference/opt-optimizations.md)。|
+|/VERBOSE:ICF|显示有关链接器活动的使用而得出的信息[/opt: icf](opt-optimizations.md)。|
 |/VERBOSE:INCR|有关增量链接过程的信息。|
 |/VERBOSE:LIB|显示进度消息，该消息仅指示所搜索的库。<br /><br /> 显示的信息，包括库搜索过程，并且列出了每个库和对象名称 （包含完整路径），要从库中和一系列对象引用的符号解析的符号。|
-|/VERBOSE:REF|显示有关链接器活动的使用而得出的信息[/opt: ref](../../build/reference/opt-optimizations.md)。|
-|/VERBOSE:SAFESEH|显示有关与安全异常处理时不兼容的模块的信息[/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)未指定。|
+|/VERBOSE:REF|显示有关链接器活动的使用而得出的信息[/opt: ref](opt-optimizations.md)。|
+|/VERBOSE:SAFESEH|显示有关与安全异常处理时不兼容的模块的信息[/SAFESEH](safeseh-image-has-safe-exception-handlers.md)未指定。|
 |/VERBOSE:UNUSEDLIBS|显示有关在创建映像时未使用的任何库文件的信息。|
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置 Visual c + + 项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
 1. 展开**链接器**文件夹。
 
@@ -56,5 +56,5 @@ ms.locfileid: "57423746"
 
 ## <a name="see-also"></a>请参阅
 
-[设置链接器选项](../../build/reference/setting-linker-options.md)<br/>
-[链接器选项](../../build/reference/linker-options.md)
+[MSVC 链接器参考](linking.md)<br/>
+[MSVC 链接器选项](linker-options.md)

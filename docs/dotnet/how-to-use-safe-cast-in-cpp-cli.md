@@ -1,19 +1,19 @@
 ---
-title: 如何：在 C++/CLI 中使用 safe_cast
+title: 如何：使用 safe_cast 中的C++/CLI
 ms.date: 11/04/2016
 helpviewer_keywords:
 - safe_cast keyword [C++], upcasting
 ms.assetid: 0fbc87d8-ecdf-4cd5-81f4-0d8cc18e2aff
-ms.openlocfilehash: 30aee0407e41533d34a860f3cedceb0be5b7b881
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 66faadba9530bc7f3c12513277582e405e1b1b34
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389081"
 ---
-# <a name="how-to-use-safecast-in-ccli"></a>如何：在 C++/CLI 中使用 safe_cast
+# <a name="how-to-use-safecast-in-ccli"></a>如何：使用 safe_cast 中的C++/CLI
 
-本文介绍如何使用 safe_cast 中 C + + /cli 应用程序。 璝惠 safe_cast 在 C + + /CX 中，请参阅[safe_cast](../windows/safe-cast-cpp-component-extensions.md)。
+本文介绍如何使用 safe_cast 中的C++/CLI 应用程序。 有关在 safe_cast 信息C++/CX，请参阅[safe_cast](../extensions/safe-cast-cpp-component-extensions.md)。
 
 ## <a name="upcasting"></a>向上转换
 
@@ -331,4 +331,4 @@ int main() {
 
 ## <a name="see-also"></a>请参阅
 
-[safe_cast](../windows/safe-cast-cpp-component-extensions.md)
+[safe_cast](../extensions/safe-cast-cpp-component-extensions.md)

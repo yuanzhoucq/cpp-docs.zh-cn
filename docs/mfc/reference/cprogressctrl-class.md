@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], SetStep
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
-ms.openlocfilehash: 131bee5f9eae1e6e2be4d48941d148edbde68262
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 15241485278f09d16c86fc7274f2fc1d85a7a2f7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372402"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl 类
 
@@ -297,7 +297,7 @@ int GetState() const;
 
 当前的进度栏控件，这是以下值之一的状态：
 
-|值|状态|
+|“值”|状态|
 |-----------|-----------|
 |PBST_NORMAL|正在进行|
 |PBST_ERROR|Error|
@@ -604,6 +604,6 @@ int StepIt();
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 CMNCTRL2](../../visual-cpp-samples.md)<br/>
+[MFC 示例 CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)

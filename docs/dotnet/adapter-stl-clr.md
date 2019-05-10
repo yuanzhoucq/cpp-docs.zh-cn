@@ -50,11 +50,11 @@ helpviewer_keywords:
 - range_adapter member [STL/CLR]
 ms.assetid: 71ce7e51-42b6-4f70-9595-303791a97677
 ms.openlocfilehash: d5c554439d9bb418b9b62484ee10cd6917cf1777
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397674"
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 
@@ -124,7 +124,7 @@ template<typename Key,
 
 #### <a name="parameters"></a>参数
 
-*如果给定*<br/>
+*Coll*<br/>
 已包装的集合的类型。
 
 ### <a name="specializations"></a>专用化
@@ -136,9 +136,9 @@ template<typename Key,
 |IList|维护元素的有序的组。|
 |IDictionary|维护一组的 {key，值} 对。|
 |IEnumerable\<值 >|通过类型化的元素序列。|
-|ICollection\<值 >|维护一的组类型化的元素。|
+|ICollection\<Value>|维护一的组类型化的元素。|
 |IList\<值 >|维护类型化元素的有序的组。|
-|IDictionary\<值 >|维护一组的类型化 {key，值} 对。|
+|IDictionary\<Value>|维护一组的类型化 {key，值} 对。|
 
 ### <a name="members"></a>成员
 
@@ -600,7 +600,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="op_eq"></a> collection_adapter::operator = (STL/CLR)
+## <a name="op_eq"></a> collection_adapter::operator= (STL/CLR)
 
 替换存储的 BCL 句柄。
 
@@ -930,7 +930,7 @@ template<typename Iter>
 *first*<br/>
 要包装的第一个迭代器。
 
-*最后一个*<br/>
+*last*<br/>
 要包装的第二个迭代器。
 
 ### <a name="remarks"></a>备注
@@ -1034,7 +1034,7 @@ template<typename Iter>
 
 Range_adapter 存储一对迭代器，进而分隔的元素序列。 该对象实现四个 BCL 接口，使您循环访问元素的顺序。 使用此模板类来操作 STL/CLR 范围与 BCL 容器非常相似。
 
-## <a name="range_adapter_op_eq"></a> range_adapter::operator = (STL/CLR)
+## <a name="range_adapter_op_eq"></a> range_adapter::operator= (STL/CLR)
 
 替换存储的迭代器对。
 
@@ -1109,7 +1109,7 @@ range_adapter(Iter first, Iter last);
 *first*<br/>
 要包装的第一个迭代器。
 
-*最后一个*<br/>
+*last*<br/>
 要包装的第二个迭代器。
 
 *right*<br/>

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - charizing operator
 - '#@ preprocessor operator'
 ms.assetid: dee03314-d27c-4063-965c-64756efbef22
-ms.openlocfilehash: 7259487a3289173bc77517c8c616638c370041c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c9acc9b9872e096cd441b950632c341e975fecb8
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403517"
 ---
 # <a name="charizing-operator-"></a>字符化运算符 (#@)
 **Microsoft 专用**

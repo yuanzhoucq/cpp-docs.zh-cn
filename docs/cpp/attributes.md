@@ -1,13 +1,13 @@
 ---
 title: C++ 中的属性
-ms.date: 06/01/2018
+ms.date: 05/06/2019
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
-ms.openlocfilehash: 81de2816c208d5ddc879f04d70912c3dddcd7832
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
-ms.translationtype: MT
+ms.openlocfilehash: bc92e5f3e279edc6fbea7f99d52c469f9fdf04f8
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694109"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222303"
 ---
 # <a name="attributes-in-c"></a>C++ 中的属性
 
@@ -15,7 +15,7 @@ C++ 标准定义的一组特性，并允许编译器供应商来定义其自己�
 
 在某些情况下，标准属性与特定于编译器 declspec 参数相重叠。 在 Visual C++ 中，你可以使用`[[deprecated]]`属性而不是使用`declspec(deprecated)`和属性将由任何符合的编译器识别。 所有其他 declspec 参数如 dllimport 和 dllexport，目前还没有特性等效项因此必须继续使用 declspec 语法。 属性不会影响类型系统中，并且它们不会更改程序的含义。 编译器忽略它们无法识别的属性值。
 
-**Visual Studio 2017 版本 15.3 及更高版本**(适用于[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): 在属性列表的范围内，可以指定所有名称的命名空间使用单个**使用**引导：
+**Visual Studio 2017 版本 15.3 及更高版本**(适用于[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):在属性列表的范围内，可以指定所有名称的命名空间使用单个**使用**引导：
 
 ```cpp
 void g() {
@@ -39,9 +39,9 @@ void Foo(int);
 
 - `[[carries_dependency]]` 指定该函数将传播数据依赖项排序方面线程同步。 该特性可以应用到一个或多个参数，以指定传入的参数传送到函数体的依赖项。 该特性可以应用于函数自身，以指定返回值包含函数的依赖项。 编译器可以使用此信息来生成更高效的代码。
 
-- `[[deprecated]]` **Visual Studio 2015 及更高版本：** 指定函数不应使用，但可能不存在在将来版本的库界面。 编译器可以使用此客户端代码尝试调用函数时生成一条信息性消息。 可以应用于类、 typedef 名称、 变量、 非静态数据成员、 函数、 命名空间、 枚举、 一个枚举器或模板专用化的声明。
+- `[[deprecated]]` **Visual Studio 2015 及更高版本：** 指定一个函数不应使用，但可能不存在在将来版本的库界面。 编译器可以使用此客户端代码尝试调用函数时生成一条信息性消息。 可以应用于类、 typedef 名称、 变量、 非静态数据成员、 函数、 命名空间、 枚举、 一个枚举器或模板专用化的声明。
 
-- `[[fallthrough]]`**2017年及更高版本的 visual Studio:** (适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md))`[[fallthrough]]`的上下文中可以使用属性[切换](switch-statement-cpp.md)语句作为对的提示编译器 （或任何人阅读代码） 是旨在 fallthrough 行为。 Visual C++ 编译器当前不会警告 fallthrough 行为，因此此特性没有任何效果编译器行为。
+- `[[fallthrough]]`**2017年及更高版本的 visual Studio:** (适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md))`[[fallthrough]]`的上下文中可以使用属性[切换](switch-statement-cpp.md)语句作为对的提示编译器 （或任何人阅读代码） 是旨在 fallthrough 行为。 MicrosoftC++编译器当前不会警告 fallthrough 行为，因此，此属性必须没有影响编译器行为。
 
 - `[[nodiscard]]`**15.3 及更高版本的 visual Studio 2017:** (适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)) 指定函数的返回值不应被丢弃。 引发警告 C4834，在此示例中所示：
 
@@ -77,10 +77,10 @@ void Foo(int);
 
   该示例将引发这些警告：
 
-  - 26494 (类型规则 5： 始终初始化对象。)
+  - 26494 (键入规则 5:始终初始化对象。）
 
-  - 26485 (边界规则 3： 组到指针的衰减。)
+  - 26485 (边界规则 3:到指针的衰减没有数组。）
 
-  - 26481 (边界规则 1： 请勿使用指针算法。 改为使用 span。）
+  - 26481 (边界规则 1:请勿使用指针算法。 改为使用 span。）
 
   当使用 CppCoreCheck 代码分析工具安装和激活编译此代码时，将触发前两个警告。 但第三条警告，因属性而不会激发。 你可以在不包括特定的规则数的情况下编写 [[gsl::suppress(bounds)]] 来取消显示整个边界配置文件。 C++ 核心准则旨在帮助你编写更好、 更安全的代码。 禁止显示属性，可以轻松若要关闭的警告，它们都并不需要时。

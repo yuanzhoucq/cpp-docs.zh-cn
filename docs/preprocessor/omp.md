@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, omp
 - omp pragma
 ms.assetid: 652414c5-78ed-4b7f-8283-1a9fe4c5e78d
-ms.openlocfilehash: 691c3095c2a9312885f8cf4f89e35e2e9696a7b1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8dda3b8df18772a328e56fb7347a746325c4cdec
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326386"
 ---
 # <a name="omp"></a>omp
 将一个或多个 OpenMP 指令与任何可选指令子句一起使用。

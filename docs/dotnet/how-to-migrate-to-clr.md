@@ -1,5 +1,5 @@
 ---
-title: 如何： 迁移到-clr
+title: 如何：迁移到-clr
 ms.custom: get-started-article
 ms.date: 09/18/2018
 helpviewer_keywords:
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-ms.openlocfilehash: d293b6c3795b9abe57da0c6bcb92dd3f1de810ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 9abc85227d6091005d7e097d3305150f4ca347a1
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454439"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448082"
 ---
 # <a name="how-to-migrate-to-clr"></a>如何：迁移到 /clr
 
-本主题讨论编译本机代码时出现的问题 **/clr** (请参阅[/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)有关详细信息)。 **/clr**允许本机 c + + 代码调用和被调用从除了其他本机 c + + 代码的.NET 程序集。 请参阅[混合 （本机和托管） 程序集](../dotnet/mixed-native-and-managed-assemblies.md)并[本机和.NET 互操作性](../dotnet/native-and-dotnet-interoperability.md)有关详细信息进行编译的优势 **/clr**。
+本主题讨论编译本机代码时出现的问题 **/clr** (请参阅[/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)有关详细信息)。 **/clr**允许本机C++代码调用，并从.NET 程序集除了其他本机调用C++代码。 请参阅[混合 （本机和托管） 程序集](../dotnet/mixed-native-and-managed-assemblies.md)并[本机和.NET 互操作性](../dotnet/native-and-dotnet-interoperability.md)有关详细信息进行编译的优势 **/clr**。
 
 ## <a name="known-issues-compiling-library-projects-with-clr"></a>已知的问题编译类库项目使用 /clr
 
@@ -35,36 +35,36 @@ ms.locfileid: "50454439"
     }
     ```
 
-## <a name="compile-with-visual-c"></a>使用 Visual c + + 编译
+## <a name="compile-with-visual-c"></a>使用视觉对象进行编译C++
 
 使用之前 **/clr**上你的项目中的任何模块，首次编译和链接本机项目使用 Visual Studio 2010。
 
 以下步骤，遵循的顺序，提供的最简单路径 **/clr**编译。 务必要编译并在每个步骤后运行你的项目。
 
-### <a name="versions-prior-to-visual-c-2003"></a>Visual c + + 2003年之前的版本
+### <a name="versions-prior-to-visual-studio-2003"></a>Visual Studio 2003 之前的版本
 
-如果要从 Visual c + + 2003年之前的版本升级到 Visual Studio 2010，您可能会看到与 Visual c + + 2003年中增强的 c + + 标准一致性相关的编译器错误
+如果要从 Visual Studio 2003 之前的版本升级到 Visual Studio 2010，您可能会看到编译器错误相关的增强型C++Visual Studio 2003 中的标准合规性
 
-### <a name="upgrading-from-visual-c-2003"></a>从 Visual c + + 2003年升级
+### <a name="upgrading-from-visual-studio-2003"></a>从 Visual Studio 2003 升级
 
-Visual c + + 2003年生成的项目之前应首先编译而无需 **/clr**如 Visual Studio 现在增加了 ANSI/ISO 符合性和一些重大更改。 可能需要最大关注的更改是[CRT 中的安全功能](../c-runtime-library/security-features-in-the-crt.md)。 使用 CRT 的代码是很有可能会生成弃用警告。 这些警告可以禁止显示，但正在迁移到新[Security-Enhanced 版本的 CRT 函数](../c-runtime-library/security-enhanced-versions-of-crt-functions.md)是首选方法，因为它们提供更佳的安全性，但可能会泄露你的代码中的安全问题。
+上一生成 Visual Studio 2003 项目应首先编译而无需 **/clr**如 Visual Studio 现在增加了 ANSI/ISO 符合性和一些重大更改。 可能需要最大关注的更改是[CRT 中的安全功能](../c-runtime-library/security-features-in-the-crt.md)。 使用 CRT 的代码是很有可能会生成弃用警告。 这些警告可以禁止显示，但正在迁移到新[Security-Enhanced 版本的 CRT 函数](../c-runtime-library/security-enhanced-versions-of-crt-functions.md)是首选方法，因为它们提供更佳的安全性，但可能会泄露你的代码中的安全问题。
 
-### <a name="upgrading-from-managed-extensions-for-c"></a>从托管扩展升级 c + +
+### <a name="upgrading-from-managed-extensions-for-c"></a>从托管扩展升级C++
 
-从 Visual Studio 2005 中，使用托管扩展 c + + 编写的代码将不会编译下 **/clr**。
+在 Visual Studio 2005 中，使用托管扩展为编写的代码中启动C++将不会在编译 **/clr**。
 
-## <a name="convert-c-code-to-c"></a>将 C 代码转换为 c + +
+## <a name="convert-c-code-to-c"></a>将转换为 C 代码C++
 
-尽管 Visual Studio 将编译 C 文件，但有必要将其转换为用于 c + + **/clr**编译。 实际文件名并不需要进行更改;可以使用 **/Tp** (请参阅[/Tc、 /Tp、 /TC、 /TP （指定源文件类型）](../build/reference/tc-tp-tc-tp-specify-source-file-type.md)。)请注意，虽然 c + + 源代码文件所需 **/clr**，不需要重构代码以使用面向对象的模式。
+尽管 Visual Studio 将编译 C 文件，但有必要将其转换为C++有关 **/clr**编译。 实际文件名并不需要进行更改;可以使用 **/Tp** (请参阅[/Tc、 /Tp、 /TC、 /TP （指定源文件类型）](../build/reference/tc-tp-tc-tp-specify-source-file-type.md)。)请注意，虽然C++所需的源代码文件 **/clr**，不需要重构代码以使用面向对象的模式。
 
-C 代码是非常可能需要更改编译为 c + + 文件时。 C + + 类型安全规则非常严格，，因此必须使用强制转换显式进行类型转换。 例如，malloc 返回 void 的指针，但可以分配给指向 C 中使用强制转换任何类型的指针：
+C 代码是非常可能需要更改作为编译时C++文件。 C++类型安全规则非常严格，因此必须使用强制转换显式进行类型转换。 例如，malloc 返回 void 的指针，但可以分配给指向 C 中使用强制转换任何类型的指针：
 
 ```
 int* a = malloc(sizeof(int));   // C code
 int* b = (int*)malloc(sizeof(int));   // C++ equivalent
 ```
 
-函数指针是还严格类型安全的 c + +，因此下面的 C 代码需要进行修改。 C + + 中最好创建`typedef`的定义的函数指针类型，以及如何将该类型强制转换函数指针：
+函数指针也是完全类型安全的C++，因此，下面的 C 代码需要进行修改。 在C++最好创建`typedef`的定义的函数指针类型，以及如何将该类型强制转换函数指针：
 
 ```
 NewFunc1 = GetProcAddress( hLib, "Func1" );   // C code
@@ -72,9 +72,9 @@ typedef int(*MYPROC)(int);   // C++ equivalent
 NewFunc2 = (MYPROC)GetProcAddress( hLib, "Func2" );
 ```
 
-C + + 还要求这些函数是原型或完全定义可以引用或调用之前。
+C++此外需要这些函数是原型或完全定义可以引用或调用之前。
 
-在 C 代码中使用恰好是 c + + 中的关键字的标识符 (如**虚拟**，**新**，**删除**， **bool**， **，则返回 true**， **false**等) 必须重命名。 这通常可以通过简单的搜索和替换操作。
+发生这种情况是中的关键字的标识符在 C 代码中使用C++(如**虚拟**，**新**，**删除**， **bool**， **true**， **false**等) 必须重命名。 这通常可以通过简单的搜索和替换操作。
 
 ```
 COMObj1->lpVtbl->Method(COMObj, args);  // C code
@@ -98,7 +98,7 @@ COMObj2->Method(args);  // C++ equivalent
 **/clr**可以通过中的说明在开发环境中选取[/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)。 正如前面提到的此步骤将自动禁用冲突的项目设置。
 
 > [!NOTE]
->  从 Visual c + + 2003 中，升级托管的库或 web 服务项目时 **/Zl**编译器选项将添加到**命令行**属性页。 这将导致 LNK2001。 删除 **/Zl**从**命令行**属性页后，可以解决。 请参阅[/Zl （省略默认库名）](../build/reference/zl-omit-default-library-name.md)并[使用项目属性](../ide/working-with-project-properties.md)有关详细信息。 或添加到链接器的 msvcrt.lib 和 msvcmrt.lib**附加依赖项**属性。
+>  从 Visual Studio 2003 中，升级托管的库或 web 服务项目时 **/Zl**编译器选项将添加到**命令行**属性页。 这将导致 LNK2001。 删除 **/Zl**从**命令行**属性页后，可以解决。 请参阅[/Zl （省略默认库名）](../build/reference/zl-omit-default-library-name.md)并[设置编译器和生成属性](../build/working-with-project-properties.md)有关详细信息。 或添加到链接器的 msvcrt.lib 和 msvcmrt.lib**附加依赖项**属性。
 
 对于使用生成文件生成的项目，不兼容的编译器选项必须处于禁用状态一次手动 **/clr**添加。 请参阅 /[/clr 限制](../build/reference/clr-restrictions.md)为与不兼容的编译器选项的信息 **/clr**。
 
@@ -106,7 +106,7 @@ COMObj2->Method(args);  // C++ equivalent
 
 预编译标头受 **/clr**。 但是，如果您仅编译某些 CPP 文件与 **/clr** （编译为本机 rest） 的某些更改将需要因为预编译标头生成具有 **/clr**与那些不兼容生成不含 **/clr**。 此不兼容性是由于在于 **/clr**生成，并需要的元数据。 编译的模块 **/clr**因此可以不使用预编译标头不包含元数据，和非 **/clr**模块不能使用预编译标头文件包含元数据。
 
-编译的项目编译某些模块的位置的最简单办法 **/clr**是完全禁用预编译标头。 （在项目属性页对话框中，打开 C/c + + 节点，并选择预编译标头。 然后创建/使用预编译标头属性更改为"不使用预编译标头"。）
+编译的项目编译某些模块的位置的最简单办法 **/clr**是完全禁用预编译标头。 (在项目属性页对话框中，打开 C /C++节点，然后选择预编译标头。 然后创建/使用预编译标头属性更改为"不使用预编译标头"。）
 
 但是，特别是对于大型项目中，预编译标头提供更好的编译速度，因此禁用此功能不需要这样做。 在这种情况下最好配置 **/clr**和非 **/clr**文件以使用单独的预编译标头。 这可以通过一个步骤中选择多要编译的模块 **/clr**使用**解决方案资源管理器**、 右键单击组，并选择属性。 然后更改通过文件创建/使用 PCH 和预编译头文件的属性，以分别使用不同的标头文件的名称和 PCH 文件。
 
@@ -142,7 +142,7 @@ COMObj2->Method(args);  // C++ equivalent
 
 ### <a name="performance-issues"></a>性能问题
 
-生成为 MSIL 的本机 c + + 方法间接调用时，可能会看到性能降低 （虚拟函数调用或使用函数指针）。 若要了解详细信息，请参阅[双重形式转换](../dotnet/double-thunking-cpp.md)。
+您可能会看到性能下降时本机C++间接调用 MSIL 中生成的方法 （虚拟函数调用或使用函数指针）。 若要了解详细信息，请参阅[双重形式转换](../dotnet/double-thunking-cpp.md)。
 
 当从 MSIL 的本机移动，请将注意到您的工作集大小的增加。 这是因为公共语言运行时提供了许多功能，以确保该程序正确运行。 如果你 **/clr**应用程序没有正常运行，你可能想要启用 C4793 （默认情况下关闭），请参阅[编译器警告 （等级 1 和 3） C4793](../error-messages/compiler-warnings/compiler-warning-level-1-and-3-c4793.md)有关详细信息。
 
@@ -150,19 +150,19 @@ COMObj2->Method(args);  // C++ equivalent
 
 在某些情况下，CLR 可关闭，完成您的托管的代码之前运行。 使用`std::set_terminate`和`SIGTERM`可以导致这。 请参阅[signal 常量](../c-runtime-library/signal-constants.md)并[set_terminate](../c-runtime-library/abnormal-termination.md)有关详细信息。
 
-## <a name="using-new-visual-c-features"></a>使用 Visual c + + 的新功能
+## <a name="using-new-visual-c-features"></a>使用新的视觉对象C++功能
 
-应用程序编译、 链接和运行之后, 可以开始在编译使用的任何模块中使用.NET 功能 **/clr**。 有关详细信息，请参阅[运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)。
+应用程序编译、 链接和运行之后, 可以开始在编译使用的任何模块中使用.NET 功能 **/clr**。 有关详细信息，请参阅[运行时平台的组件扩展](../extensions/component-extensions-for-runtime-platforms.md)。
 
-如果用于 c + + 托管扩展，可以转换代码以使用新语法。 转换为 c + + 托管扩展的详细信息，请参阅[C + + /cli 迁移入门](../dotnet/cpp-cli-migration-primer.md)。
+如果使用托管扩展C++，可以将转换代码以使用新语法。 有关转换托管扩展的详细信息C++，请参阅[ C++CLI 迁移入门](../dotnet/cpp-cli-migration-primer.md)。
 
-有关.NET 中 Visual c + + 编程的信息，请参阅：
+为视觉对象中的.NET 编程的信息C++请参阅：
 
 - [使用 C++/CLI (Visual C++) 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
 
 - [本机和 .NET 的互操作性](../dotnet/native-and-dotnet-interoperability.md)
 
-- [适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)
+- [适用于运行时平台的组件扩展](../extensions/component-extensions-for-runtime-platforms.md)
 
 ## <a name="see-also"></a>请参阅
 

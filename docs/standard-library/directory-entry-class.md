@@ -35,11 +35,11 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_entry::operator&gt;
 - std::experimental::filesystem::directory_entry::operator&gt;=
 ms.openlocfilehash: c1b68aefd44d8f0ac60c36307dee93333d801bb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533817"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64342978"
 ---
 # <a name="directoryentry-class"></a>directory_entry 类
 
@@ -110,7 +110,7 @@ void assign(const std::experimental::filesystem::path& pval,
 *stat_arg*<br/>
 存储的文件名称的状态。
 
-*为 ymstat_arg*<br/>
+*symstat_arg*<br/>
 存储的文件名称的符号链接状态。
 
 ## <a name="directory_entry"></a> directory_entry
@@ -134,7 +134,7 @@ explicit directory_entry(const std::experimental::filesystem::path& pval,
 *stat_arg*<br/>
 存储的文件名称的状态。
 
-*为 ymstat_arg*<br/>
+*symstat_arg*<br/>
 存储的文件名称的符号链接状态。
 
 ## <a name="op_neq"></a> 运算符 ！ =
@@ -237,7 +237,7 @@ bool operator&gt;=(const directory_entry& right) const noexcept;
 operator const std::experimental::filesystem::path&() const;
 ```
 
-## <a name="path"></a> 路径
+## <a name="path"></a> path
 
 成员函数返回 `mypath`。
 
@@ -264,7 +264,7 @@ void replace_filename(
 *stat_arg*<br/>
 存储的文件名称的状态。
 
-*为 ymstat_arg*<br/>
+*symstat_arg*<br/>
 存储的文件名称的符号链接状态。
 
 ## <a name="status"></a> 状态
@@ -287,7 +287,7 @@ file_status status(error_code& ec) const noexcept;
 
 ## <a name="symlink_status"></a> symlink_status
 
-这两个成员函数返回`mysymstat`可能是第一次更改，如下所示： 如果`status_known(mysymstat)`然后不执行任何操作。 否则为 `mysymstat = symlink_status(mypval)`。
+这两个成员函数返回`mysymstat`可能是第一次更改，如下所示：如果`status_known(mysymstat)`然后不执行任何操作。 否则为 `mysymstat = symlink_status(mypval)`。
 
 ```cpp
 file_status symlink_status() const;

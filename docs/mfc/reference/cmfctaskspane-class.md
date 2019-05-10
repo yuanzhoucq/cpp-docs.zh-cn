@@ -195,18 +195,17 @@ helpviewer_keywords:
 - CMFCTasksPane [MFC], OnActivateTasksPanePage
 ms.assetid: b456328e-2525-4642-b78b-9edd1a1a7d3f
 ms.openlocfilehash: 137f30262ce01ad82c075302b6e85bf67ae7b9be
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62218649"
 ---
 # <a name="cmfctaskspane-class"></a>CMFCTasksPane 类
 
 有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。
 
-
-  `CMFCTasksPane` 类实现可点击项（任务）的列表。
+`CMFCTasksPane` 类实现可点击项（任务）的列表。
 
 ## <a name="syntax"></a>语法
 
@@ -327,8 +326,7 @@ class CMFCTasksPane : public CDockablePane
 
 ## <a name="remarks"></a>备注
 
-
-  `CMFCTasksPane` 类实现下列功能：
+`CMFCTasksPane` 类实现下列功能：
 
 - 可以对项进行分组，并且每个项分组均可具有关联的标题。
 

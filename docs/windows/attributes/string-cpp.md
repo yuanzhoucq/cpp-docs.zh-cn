@@ -1,17 +1,17 @@
 ---
-title: 字符串 （c + + COM 属性）
+title: 字符串 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.string
 helpviewer_keywords:
 - string attribute
 ms.assetid: ddde900a-2e99-4fcd-86e8-57e1bdba7c93
-ms.openlocfilehash: 8bf708067341ecde4fb18d565b7d72866312decd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1b528fb922a15655de403c6099ee1d36e2fb3de
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407271"
 ---
 # <a name="string-c"></a>string (C++)
 
@@ -25,7 +25,7 @@ ms.locfileid: "50603185"
 
 ## <a name="remarks"></a>备注
 
-**字符串**c + + 属性具有相同的功能[字符串](/windows/desktop/Midl/string)MIDL 特性。
+**字符串**C++属性具有相同的功能[字符串](/windows/desktop/Midl/string)MIDL 特性。
 
 ## <a name="example"></a>示例
 
@@ -52,8 +52,8 @@ __interface IFireTabCtrl
 |-|-|
 |**适用对象**|数组或指针，指向 array，接口参数，接口方法|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

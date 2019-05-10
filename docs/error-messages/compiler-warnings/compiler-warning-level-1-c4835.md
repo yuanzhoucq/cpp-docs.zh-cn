@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C4835
 ms.assetid: d2e44c62-7b0e-4a45-943d-97903e27ed9d
 ms.openlocfilehash: 0427a97a9e368a19a40a8d1a552f7713e36f831e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62380846"
 ---
 # <a name="compiler-warning-level-1-c4835"></a>编译器警告（等级 1）C4835
 
 variable： 在主机程序集中首次执行托管的代码之后，将不会运行导出的数据的初始值设定项
 
-在访问托管组件之间的数据时，建议不使用本机 c + + 导入和导出机制。 相反，声明在托管类型的内部数据成员，并引用元数据与`#using`客户端中。 有关详细信息，请参阅 [#using 指令](../../preprocessor/hash-using-directive-cpp.md)。
+在访问托管组件之间的数据时，建议您不要使用本机C++导入和导出机制。 相反，声明在托管类型的内部数据成员，并引用元数据与`#using`客户端中。 有关详细信息，请参阅 [#using 指令](../../preprocessor/hash-using-directive-cpp.md)。
 
 ## <a name="example"></a>示例
 

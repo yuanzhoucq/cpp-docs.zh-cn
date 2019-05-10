@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dllimport attribute [C++], DEF files
 - DLLs [C++], DEF files
 ms.assetid: aefdbf50-f603-488a-b0d7-ed737bae311d
-ms.openlocfilehash: f6e553a85e6c17a3ea914365ad29ad5136e50629
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 13a6a375d6200f73dd9845d057d1954c2b65485c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273412"
 ---
 # <a name="importing-using-def-files"></a>使用 DEF 文件导入
 
@@ -59,8 +59,8 @@ if (ulDataInDll == 0L)   /*sample code fragment*/
 
 使用常量是更大风险，因为如果你忘记了使用额外级别的间接寻址，可能无法访问导入地址表指向的变量，该变量。 由于导入地址表当前通过只读的编译器和链接器，此类问题可能通常表现为访问冲突。
 
-如果它发现的.def 文件中的常量来应对这种情况下，当前的 Visual c + + 链接器会发出警告。 使用常量的唯一的真正原因是如果您不能重新编译的头文件中未列出某些对象文件 **__declspec （dllimport)** 原型上。
+如果它发现的.def 文件中的常量来应对这种情况下，当前 MSVC 链接器会发出警告。 使用常量的唯一的真正原因是如果您不能重新编译的头文件中未列出某些对象文件 **__declspec （dllimport)** 原型上。
 
 ## <a name="see-also"></a>请参阅
 
-[导入到应用程序中](../build/importing-into-an-application.md)
+[导入到应用程序中](importing-into-an-application.md)

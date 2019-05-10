@@ -9,14 +9,17 @@ helpviewer_keywords:
 - response files
 - command files
 ms.assetid: abdffeea-35c7-4f2d-8c17-7d0d80bac314
-ms.openlocfilehash: 43f5a886dd41941a0675e31bc8c9d3f23c607023
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6a55fd616a00aeb3ade229bf7cff8220f86085b7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295040"
 ---
 # <a name="bscmake-command-file-response-file"></a>BSCMAKE 命令文件（响应文件）
+
+> [!WARNING]
+> 虽然安装 Visual Studio 时仍会安装 BSCMAKE，但 IDE 将不再使用它。 从 Visual Studio 2008 起，浏览信息和符号信息自动存储在解决方案文件夹的 SQL Server .sdf 文件中。
 
 您可以提供部分或全部命令文件中的命令行输入。 指定命令文件使用以下语法：
 
@@ -45,4 +48,4 @@ file1.sbr file2.sbr file3.sbr file4.sbr
 
 ## <a name="see-also"></a>请参阅
 
-[BSCMAKE 参考](../../build/reference/bscmake-reference.md)
+[BSCMAKE 参考](bscmake-reference.md)

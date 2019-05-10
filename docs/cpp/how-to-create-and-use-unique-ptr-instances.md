@@ -5,11 +5,11 @@ ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 9a373030-e587-452f-b9a5-c5f9d58b7673
 ms.openlocfilehash: 48e459b69592bf4c231407c2a378a7b7e01ff4ae
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153644"
 ---
 # <a name="how-to-create-and-use-uniqueptr-instances"></a>如何：创建和使用 unique_ptr 实例
 
@@ -19,7 +19,7 @@ ms.locfileid: "54220577"
 
 ![移动的唯一所有权&#95;ptr](../cpp/media/unique_ptr.png "移动的唯一所有权&#95;ptr")
 
-`unique_ptr`在中定义`<memory>`C++ 标准库中的标头。 它是完全与原始指针一样有效，可以在 c + + 标准库容器中使用。 添加`unique_ptr`到 C++ 标准库容器的实例是高效因为移动构造函数的`unique_ptr`无需进行复制操作。
+`unique_ptr`在中定义`<memory>`C++ 标准库中的标头。 它是完全与原始指针一样有效，并且可以用在C++标准库容器。 添加`unique_ptr`到 C++ 标准库容器的实例是高效因为移动构造函数的`unique_ptr`无需进行复制操作。
 
 ## <a name="example"></a>示例
 

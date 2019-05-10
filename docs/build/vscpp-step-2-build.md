@@ -1,45 +1,45 @@
 ---
-title: 生成并运行 c + + 控制台应用程序项目
-description: 生成并运行 Visual c + + 中的 Hello World 控制台应用
+title: 生成并运行 C++ 控制台应用项目
+description: 生成并运行视觉对象中的 Hello World 控制台应用C++
 ms.custom: mvc
 ms.date: 12/12/2017
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d71-719d-42dc-90d7-1d0ca31a2f55
-ms.openlocfilehash: 09780d5823190eb4cb3b4ad13bb60e33808e4987
-ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
+ms.openlocfilehash: 59813a553a9034503d8bf432400db31e6e3d9478
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52977727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62314228"
 ---
-# <a name="build-and-run-a-c-console-app-project"></a>生成并运行 c + + 控制台应用程序项目
+# <a name="build-and-run-a-c-console-app-project"></a>生成并运行 C++ 控制台应用项目
 
-时创建一个 c + + 控制台应用程序项目并输入你的代码后，可以构建和运行 Visual Studio 中，，然后从命令行运行作为一款独立应用。
+创建后C++控制台应用程序项目，然后输入你的代码，您可以构建和运行 Visual Studio 中，，然后从命令行运行作为一款独立应用。
 
 ## <a name="prerequisites"></a>系统必备
 
-- 使用 c + + 工作负载安装并运行您的计算机上具有 Visual Studio 中使用的桌面开发。 如果未尚未安装，请按照中的步骤[Visual Studio 中的安装 c + + 支持](../build/vscpp-step-0-installation.md)。
+- 在 Visual Studio 中安装“使用 C++ 的桌面开发”工作负载并在计算机上运行。 如果未尚未安装，请按照中的步骤[安装C++Visual Studio 中支持](vscpp-step-0-installation.md)。
 
-- 创建"Hello，World ！" 项目并输入其源代码。 如果尚未执行此操作，请按照中的步骤[创建一个 c + + 控制台应用程序项目](../build/vscpp-step-1-create.md)。
+- 创建"Hello，World ！" 项目并输入其源代码。 如果尚未执行此操作，请按照中的步骤[创建C++控制台应用程序项目](vscpp-step-1-create.md)。
 
 如果 Visual Studio 外观如下所示，您就可以生成并运行你的应用：
 
-   ![准备好生成新项目](../build/media/vscpp-ready-to-build.png "准备好生成新项目")
+   ![准备好生成新项目](media/vscpp-ready-to-build.png "准备好生成新项目")
 
 ## <a name="build-and-run-your-code-in-visual-studio"></a>生成并在 Visual Studio 中运行你的代码
 
-1. 若要生成项目时，选择**生成解决方案**从**生成**菜单。 **输出**窗口会显示生成过程的结果。
+1. 若要生成项目，请从“生成”菜单选择“生成解决方案”。 “输出”窗口将显示生成过程的结果。
 
-   ![生成项目](../build/media/vscpp-build-solution.gif "生成项目")
+   ![生成项目](media/vscpp-build-solution.gif "Build the project")
 
-1. 若要运行代码，在菜单栏上，选择**调试**，**启动但不调试**。
+1. 若要运行代码，请在菜单栏上选择“调试”、“开始执行(不调试)”。
 
-   ![启动项目](../build/media/vscpp-start-without-debugging.gif "启动项目")
+   ![启动项目](media/vscpp-start-without-debugging.gif "Start the project")
 
-   打开一个控制台窗口，然后运行您的应用程序。 当在 Visual Studio 中启动控制台应用程序时，它运行你的代码，然后打印"按任意键继续。 . ." 若要让人可以看到输出。
+   随即将打开控制台窗口，然后运行你的应用。 在 Visual Studio 中启动控制台应用时，它会运行代码，然后输出“按任意键继续。 . 。” 让你有机会看到输出。
 
-祝贺你！ 你已创建你的第一个"Hello，world ！" 在 Visual Studio 中的控制台应用 ！ 按某个键关闭控制台窗口并返回到 Visual Studio。
+祝贺你！ 你在 Visual Studio 中已创建首个“Hello, world!” 控制台应用！ 按任意键关闭该控制台窗口并返回到 Visual Studio。
 
 [我遇到了问题。](#build-and-run-your-code-in-visual-studio-issues)
 
@@ -55,7 +55,7 @@ ms.locfileid: "52977727"
 
 1. 在命令提示符窗口中，右键单击要将您的应用程序的路径粘贴到命令提示符。 按 Enter 以运行你的应用。
 
-   ![在命令提示符下运行应用程序](../build/media/vscpp-run-in-cmd.gif "在命令提示符下运行应用")
+   ![在命令提示符下运行应用程序](media/vscpp-run-in-cmd.gif "在命令提示符下运行应用")
 
 恭喜，你已生成并在 Visual Studio 中运行控制台应用 ！
 
@@ -63,11 +63,11 @@ ms.locfileid: "52977727"
 
 ## <a name="next-steps"></a>后续步骤
 
-一旦你已生成并运行此简单应用程序，您就可以为更复杂的项目。 请参阅[使用 Visual Studio IDE 进行 c + + 桌面开发](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)有关更多详细演练，介绍了 Visual c + + 在 Visual Studio 中的功能。
+一旦你已生成并运行此简单应用程序，您就可以为更复杂的项目。 请参阅[使用 Visual Studio IDE 中为C++的桌面开发](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)更多详细演练，介绍了视觉对象的功能C++在 Visual Studio 中。
 
 ## <a name="troubleshooting-guide"></a>故障排除指南
 
-到这里的解决方案到常见的问题时创建第一个 c + + 项目。
+到这里的解决方案到常见的问题时创建你的第一个C++项目。
 
 ### <a name="build-and-run-your-code-in-visual-studio-issues"></a>生成并运行你的代码在 Visual Studio 问题
 

@@ -1,17 +1,17 @@
 ---
-title: defaultbind （c + + COM 属性）
+title: defaultbind (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.defaultbind
 helpviewer_keywords:
 - defaultbind attribute
 ms.assetid: b20a8437-24e6-4b6d-a2df-09fe5e1006e0
-ms.openlocfilehash: 43d5a1c827824f64ad1376a2461cfec6b9405fe7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f0dd9101966f22253e6c4098c3c64d22d0a0cba6
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50458391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62148063"
 ---
 # <a name="defaultbind"></a>defaultbind
 
@@ -25,7 +25,7 @@ ms.locfileid: "50458391"
 
 ## <a name="remarks"></a>备注
 
-**Defaultbind** c + + 属性具有相同的功能[defaultbind](/windows/desktop/Midl/defaultbind) MIDL 特性。
+**Defaultbind** C++属性具有相同的功能[defaultbind](/windows/desktop/Midl/defaultbind) MIDL 特性。
 
 ## <a name="example"></a>示例
 
@@ -39,8 +39,8 @@ ms.locfileid: "50458391"
 |-|-|
 |**适用对象**|接口方法|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

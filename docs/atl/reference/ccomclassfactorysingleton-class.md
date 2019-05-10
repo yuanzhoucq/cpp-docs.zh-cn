@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComClassFactorySingleton class
 ms.assetid: debb983c-382b-487b-8d42-7ea26dc158b8
-ms.openlocfilehash: 480b4c2a6e052e8e0823b97b548fc5d07b55230f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
-ms.translationtype: MT
+ms.openlocfilehash: c415da15341f7800a706379d991cb753f5991170
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290386"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221171"
 ---
 # <a name="ccomclassfactorysingleton-class"></a>CComClassFactorySingleton 类
 
@@ -108,7 +108,7 @@ CComPtr<IUnknown> m_spObj;
 
 每次调用[CreateInstance](#createinstance)方法只需将查询此对象的接口指针。
 
-请注意，当前的窗体`m_spObj`提供了一项重大更改的一种方式，`CComClassFactorySingleton`曾在以前版本的 atl。 在早期版本中`CComClassFactorySingleton`用作类工厂，同时在服务器初始化过程中创建对象。 在 Visual c + +.NET 2003 中，创建对象，第一次请求。 此更改可能导致程序依赖于早期的初始化错误。
+请注意，当前的窗体`m_spObj`提供了一项重大更改的一种方式，`CComClassFactorySingleton`曾在以前版本的 atl。 在早期版本中`CComClassFactorySingleton`用作类工厂，同时在服务器初始化过程中创建对象。 视觉对象中C++.NET 2003年及更高版本中，创建对象时，第一次请求。 此更改可能导致程序依赖于早期的初始化错误。
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,18 +1,16 @@
 ---
 title: ATL 类概述
 ms.date: 11/04/2016
-f1_keywords:
-- vc.atl.classes
 helpviewer_keywords:
 - classes [C++], ATL
 - ATL, class reference
 ms.assetid: c38ac93d-c3a2-4ce7-8153-f1d34c0f0fa6
-ms.openlocfilehash: 9d0e74a02a114392a3fc686142f84a9a807d1537
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: fbb9e2454aadd33db61c722704e17ce95f3df4c4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223369"
 ---
 # <a name="atl-class-overview"></a>ATL 类概述
 

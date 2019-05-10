@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3888
 ms.assetid: 40820812-79c5-4dcd-a19d-b4164d25fc8a
-ms.openlocfilehash: 067412e59041cb98b68cb373c4671c243ab8a0ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e4d52946126e7be6c6f2aef34b5eb5a93a0babad
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62187374"
 ---
 # <a name="compiler-error-c3888"></a>编译器错误 C3888
 
 “name”：C++/CLI 不支持与此 literal 数据成员关联的常量表达式
 
-使用 *literal* 关键字声明的 [名称](../../windows/literal-cpp-component-extensions.md) 数据成员是使用编译器不支持的值初始化的。 编译器仅支持常量整型、枚举或字符串类型。 **C3888** 错误可能的原因是数据成员是使用字节数组初始化的。
+使用 *literal* 关键字声明的 [名称](../../extensions/literal-cpp-component-extensions.md) 数据成员是使用编译器不支持的值初始化的。 编译器仅支持常量整型、枚举或字符串类型。 **C3888** 错误可能的原因是数据成员是使用字节数组初始化的。
 
 ### <a name="to-correct-this-error"></a>更正此错误
 
@@ -25,4 +25,4 @@ ms.locfileid: "50479061"
 
 ## <a name="see-also"></a>请参阅
 
-[名称](../../windows/literal-cpp-component-extensions.md)
+[名称](../../extensions/literal-cpp-component-extensions.md)

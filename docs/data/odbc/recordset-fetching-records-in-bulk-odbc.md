@@ -1,5 +1,5 @@
 ---
-title: 记录集：批量提取记录 (ODBC)
+title: 记录集：提取记录大容量 (ODBC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - bulk row fetching, implementing
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - rowsets, bulk row fetching
 - RFX (ODBC), bulk row fetching
 ms.assetid: 20d10fe9-c58a-414a-b675-cdf9aa283e4f
-ms.openlocfilehash: 55a89a66b36d12e6341b85d7dfa655b299638fcd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2fdcbf18fcb0d97ba7b2a39aa9bbbd79e65a4112
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397843"
 ---
-# <a name="recordset-fetching-records-in-bulk-odbc"></a>记录集：批量提取记录 (ODBC)
+# <a name="recordset-fetching-records-in-bulk-odbc"></a>记录集：提取记录大容量 (ODBC)
 
 本主题适用于 MFC ODBC 类。
 
@@ -137,7 +137,7 @@ void MultiRowSet::DoBulkFieldExchange( CFieldExchange* pFX )
 > [!NOTE]
 >  必须调用`Close`成员函数之前将派生`CRecordset`类超出作用域。 这可确保释放由框架分配任何内存。 它是一个良好的编程做法始终显式调用`Close`，无论是否已实现批量行提取。
 
-记录字段交换 (RFX) 有关详细信息，请参阅[记录字段交换： RFX 的工作机制](../../data/odbc/record-field-exchange-how-rfx-works.md)。 有关使用参数的详细信息，请参阅[CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype)并[记录集： 参数化记录集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)。
+记录字段交换 (RFX) 有关详细信息，请参阅[记录字段交换：RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。 有关使用参数的详细信息，请参阅[CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype)和[记录集：参数化记录集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)。
 
 ## <a name="see-also"></a>请参阅
 

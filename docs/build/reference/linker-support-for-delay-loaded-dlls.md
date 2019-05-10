@@ -4,22 +4,22 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - delayed loading of DLLs, linker support
 ms.assetid: b2d7e449-2809-42b1-9c90-2c0ca5e31a14
-ms.openlocfilehash: 3fddc749c1e03b0f21c74f922943713d52339679
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
-ms.translationtype: MT
+ms.openlocfilehash: 384ea563853906a76e2c9993cbcedb3b15c354f2
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421150"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217590"
 ---
 # <a name="linker-support-for-delay-loaded-dlls"></a>链接器的延迟加载 DLL 支持
 
-Visual c + + 链接器现在支持 Dll 的延迟的加载。 这使你的需要使用 Windows SDK 函数**LoadLibrary**并**GetProcAddress**来实现延迟加载的 DLL。
+MSVC 链接器现在支持 Dll 的延迟的加载。 这使你的需要使用 Windows SDK 函数**LoadLibrary**并**GetProcAddress**来实现延迟加载的 DLL。
 
-在 Visual c + + 6.0 中之前, 在运行时加载 DLL 的唯一方法是通过使用**LoadLibrary**并**GetProcAddress**; 操作系统将加载 DLL 时可执行文件或 DLL 使用已加载。
+视觉对象之前C++6.0，在运行时加载 DLL 的唯一方法是通过使用**LoadLibrary**并**GetProcAddress**; 操作系统将加载 DLL 时可执行文件或 DLL 使用已加载。
 
-从开始 Visual c + + 6.0 中，隐式链接与 DLL 时，链接器提供了选项，若要延迟加载 DLL，直到该程序调用一个函数，该 DLL 中。
+从开始 Visual C++ 6.0，隐式链接与 DLL 时，链接器提供了选项要延迟加载 DLL 直到程序调用一个函数，该 DLL 中。
 
-应用程序可能会延迟加载 DLL 使用[/DELAYLOAD （延迟加载导入）](../../build/reference/delayload-delay-load-import.md)链接器选项的帮助器函数 （Visual c + + 提供的默认实现）。 帮助器函数将加载 DLL 在运行时通过调用**LoadLibrary**并**GetProcAddress**为您。
+应用程序可能会延迟加载 DLL 使用[/DELAYLOAD （延迟加载导入）](delayload-delay-load-import.md)帮助程序函数使用链接器选项 (默认实现提供视觉对象的C++)。 帮助器函数将加载 DLL 在运行时通过调用**LoadLibrary**并**GetProcAddress**为您。
 
 应考虑延迟加载 DLL，如果：
 
@@ -31,25 +31,25 @@ DLL 的延迟的加载可以指定的生成过程。EXE 或。DLL 项目。 答:
 
 以下主题介绍了延迟加载 Dll:
 
-- [指定要延迟加载的 DLL](../../build/reference/specifying-dlls-to-delay-load.md)
+- [指定要延迟加载的 DLL](specifying-dlls-to-delay-load.md)
 
-- [显式卸载延迟加载的 DLL](../../build/reference/explicitly-unloading-a-delay-loaded-dll.md)
+- [显式卸载延迟加载的 DLL](explicitly-unloading-a-delay-loaded-dll.md)
 
-- [加载被延迟加载的 DLL 的所有导入](../../build/reference/loading-all-imports-for-a-delay-loaded-dll.md)
+- [加载被延迟加载的 DLL 的所有导入](loading-all-imports-for-a-delay-loaded-dll.md)
 
-- [绑定导入](../../build/reference/binding-imports.md)
+- [绑定导入](binding-imports.md)
 
-- [错误处理和通知](../../build/reference/error-handling-and-notification.md)
+- [错误处理和通知](error-handling-and-notification.md)
 
-- [转储延迟加载的导入](../../build/reference/dumping-delay-loaded-imports.md)
+- [转储延迟加载的导入](dumping-delay-loaded-imports.md)
 
-- [延迟加载 DLL 的约束](../../build/reference/constraints-of-delay-loading-dlls.md)
+- [延迟加载 DLL 的约束](constraints-of-delay-loading-dlls.md)
 
 - [了解 Helper 函数](understanding-the-helper-function.md)
 
-- [开发自己的 Helper 函数](../../build/reference/developing-your-own-helper-function.md)
+- [开发自己的 Helper 函数](developing-your-own-helper-function.md)
 
 ## <a name="see-also"></a>请参阅
 
-[Visual C++ 中的 DLL](../../build/dlls-in-visual-cpp.md)<br/>
-[链接](../../build/reference/linking.md)
+[创建 C /C++ Visual Studio 中的 Dll](../dlls-in-visual-cpp.md)<br/>
+[MSVC 链接器参考](linking.md)

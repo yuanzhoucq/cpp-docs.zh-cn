@@ -12,12 +12,12 @@ helpviewer_keywords:
 - documents [MFC], MFC document/view model
 - document objects [MFC], document/view architecture
 ms.assetid: 6127768a-553f-462a-b01b-a5ee6068c81e
-ms.openlocfilehash: ec933d29474695c1b94b72e712d68a9b3a08bd4e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d1b1f80f44fdc66a3174ea75c15e139f98a4520b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389670"
 ---
 # <a name="documentview-architecture"></a>文档/视图体系结构
 
@@ -80,7 +80,7 @@ MFC 框架同时向用户和程序员来说，最明显的组成部分是文档�
 
 - [使用数据库类不结合文档和视图](../data/mfc-using-database-classes-without-documents-and-views.md)
 
-- [示例](../visual-cpp-samples.md)
+- [示例](../overview/visual-cpp-samples.md)
 
 ## <a name="see-also"></a>请参阅
 

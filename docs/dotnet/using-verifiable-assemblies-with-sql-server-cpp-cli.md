@@ -4,24 +4,24 @@ ms.date: 10/17/2018
 helpviewer_keywords:
 - verifiable assemblies [C++], with SQL Server
 ms.assetid: 5248a60d-aa88-4ff3-b30a-b791c3ea2de9
-ms.openlocfilehash: a977aa81a598e1698dfbc1c5679b85378b7ba6fc
-ms.sourcegitcommit: d04dfe95801bafcbd5371e40e626fe5c678343b8
+ms.openlocfilehash: 27dec67cc0932a784cdd041ba346bb8c635b280d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52389924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384408"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>结合使用 SQL Server 和可验证的程序集 (C++/CLI)
 
-扩展存储的过程，打包为动态链接库 (Dll)，提供一种方法来扩展 SQL Server 功能，通过使用 Visual c + + 开发的函数。 扩展存储的过程将作为 Dll 中的函数。 除了函数外，还可以定义扩展存储的过程[用户定义类型](../cpp/classes-and-structs-cpp.md)和聚合函数 （如 SUM 或 AVG）。
+扩展存储的过程，打包为动态链接库 (Dll)，提供一种方法来扩展 SQL Server 功能，通过使用视觉对象开发的函数C++。 扩展存储的过程将作为 Dll 中的函数。 除了函数外，还可以定义扩展存储的过程[用户定义类型](../cpp/classes-and-structs-cpp.md)和聚合函数 （如 SUM 或 AVG）。
 
 当客户端执行扩展存储的过程时，SQL Server DLL 的搜索与扩展存储过程相关联，并加载此 DLL。 SQL Server 调用请求的扩展存储的过程，并指定的安全上下文下执行。 扩展存储，然后传递结果集，并将参数返回给服务器的过程。
 
 SQL Server transact-sql (T-SQL) 以允许你可验证程序集安装到 SQL Server 中提供的扩展。 SQL Server 的权限集指定安全上下文中，具有以下级别的安全性：
 
-- 不受限制的模式： 您自己承担; 运行代码代码不需要是可验证类型安全的。
+- 不受限制的模式：您自己承担; 运行代码代码不需要是可验证类型安全的。
 
-- 安全模式： 运行可验证类型安全代码;使用 /clr: safe 编译。
+- 安全模式：运行可验证类型安全代码;使用 /clr: safe 编译。
 
 > [!IMPORTANT]
 > 不推荐使用 visual Studio 2015 和 Visual Studio 2017 不支持 **/clr: pure**并 **/clr: safe**创建可验证项目。 如果需要可验证代码，我们建议将转换为 C# 代码。

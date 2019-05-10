@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - raw_property_prefixes attribute
 ms.assetid: 03a0f48c-c460-4175-a762-9f7f8d84b12f
-ms.openlocfilehash: 1e44b5265e486f0e5b5896bed41b62ebbdaa4fd3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 23250b524fdaa2181c8e28229ccec680ffdae715
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62179797"
 ---
 # <a name="rawpropertyprefixes"></a>raw_property_prefixes
 
-**C + + 专用**
+**C++特定**
 
 指定用于三个属性方法的备用前缀。
 
@@ -40,7 +40,7 @@ raw_property_prefixes("GetPrefix","PutPrefix","PutRefPrefix")
 
 默认情况下，低级别`propget`， `propput`，并`propputref`具有前缀的命名的成员函数公开方法**get_**， **put_**，和**putref_** 分别。 这些前缀与在 MIDL 生成的标头文件中使用的名称兼容。
 
-**结束 c + + 专用**
+**结束C++特定**
 
 ## <a name="see-also"></a>请参阅
 

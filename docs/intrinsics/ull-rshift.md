@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ull_rshift intrinsic
 - __ull_rshift intrinsic
 ms.assetid: b7ff5254-3540-4e6e-b57c-a6c4beb7dca2
-ms.openlocfilehash: 940e1e3a957b44f0aaa225f7fc9e107926ba879f
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 5d62ec1526aff595c14a53e9eca43a7a3118c8fa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62390121"
 ---
 # <a name="ullrshift"></a>__ull_rshift
 
@@ -31,7 +31,7 @@ unsigned __int64 __ull_rshift(
 
 #### <a name="parameters"></a>参数
 
-*掩码*<br/>
+*mask*<br/>
 [in]要右移位的 64 位整数值。
 
 *nBit*<br/>
@@ -74,7 +74,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>输出
+## <a name="output"></a>Output
 
 ```
 1

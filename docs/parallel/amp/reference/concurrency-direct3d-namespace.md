@@ -11,15 +11,15 @@ helpviewer_keywords:
 - direct3d namespace
 ms.assetid: 9566a2f1-4d5f-43e4-a3ac-676643d38420
 ms.openlocfilehash: 6afbd7b3a3f4280ad658c1cb9d8802cc3251d0ed
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405477"
 ---
 # <a name="concurrencydirect3d-namespace"></a>Concurrency::direct3d 命名空间
 
-`direct3d`命名空间提供支持 D3D 互操作性的函数。 它可以无缝使用 D3D 资源在 AMP 代码中的计算以及允许使用的资源在 AMP 中创建在 D3D 代码中，而无需创建冗余的中间副本。 以增量方式，可以通过使用 c + + AMP 加速的 DirectX 应用程序的计算密集型部分，并使用从 AMP 计算生成的数据上的 D3D API。
+`direct3d`命名空间提供支持 D3D 互操作性的函数。 它可以无缝使用 D3D 资源在 AMP 代码中的计算以及允许使用的资源在 AMP 中创建在 D3D 代码中，而无需创建冗余的中间副本。 用户能够以增量方式加快 DirectX 应用程序的计算密集型部分，通过使用C++AMP，然后使用从 AMP 计算生成的数据上的 D3D API。
 
 ## <a name="syntax"></a>语法
 

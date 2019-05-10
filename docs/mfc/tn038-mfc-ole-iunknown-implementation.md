@@ -1,5 +1,5 @@
 ---
-title: TN038:-OLE IUnknown 实现
+title: TN038:MFC OLE IUnknown 实现
 ms.date: 06/28/2018
 f1_keywords:
 - vc.mfc.ole
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - INTERFACE_PART macro
 ms.assetid: 19d946ba-beaf-4881-85c6-0b598d7f6f11
 ms.openlocfilehash: 0722ce294e6a088446b8ba681810cf3f7885f122
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305471"
 ---
-# <a name="tn038-mfcole-iunknown-implementation"></a>TN038：MFC/OLE IUnknown 实现
+# <a name="tn038-mfcole-iunknown-implementation"></a>TN038:MFC/OLE IUnknown 实现
 
 > [!NOTE]
 > 以下技术说明在首次包括在联机文档中后未更新。 因此，某些过程和主题可能已过时或不正确。 要获得最新信息，建议你在联机文档索引中搜索热点话题。
 
-OLE 2 的核心是“OLE 组件对象模型”，又称为 COM。 COM 定义协同对象如何互相通信的标准。 这包括“对象”外观的详细信息，其中包括方法如何在对象上分派。 COM 还定义了一个基类，所有兼容 COM 的类都由此派生。 此基类是[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)。 尽管[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)接口被称为 c + + 类，但是 COM 并不特定于任何一种语言，它可以在 C、 PASCAL 或任何其他可以支持的 COM 对象二进制布局的语言中实现。
+OLE 2 的核心是“OLE 组件对象模型”，又称为 COM。 COM 定义协同对象如何互相通信的标准。 这包括“对象”外观的详细信息，其中包括方法如何在对象上分派。 COM 还定义了一个基类，所有兼容 COM 的类都由此派生。 此基类是[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)。 尽管[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)接口被称为C++类，COM 不是特定于任何一种语言，它可以在 C、 PASCAL 或任何其他可以支持的 COM 对象二进制布局的语言中实现。
 
 OLE 将所有类派生自[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)作为"接口。 这是一个重要的区别，因为"接口"例如[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)携带没有实现。 它只定义对象借由通信的协议，而不定义这些实现可以完成的具体事项。 这对于允许最大灵活性的系统而言是合理的。 MFC 的作用是实现 MFC/C++ 程序的默认行为。
 
@@ -49,7 +49,7 @@ public:
 > [!NOTE]
 > 此例中省略了某些必要的调用约定详细信息，例如 `__stdcall`。
 
-[AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)并[发行](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)成员函数控制对象的内存管理。 COM 使用引用计数方案跟踪对象。 从来不会像在 C++ 中一样直接引用对象。 相反，始终通过指针引用 COM 对象。 若要在所有者用完时释放对象使用它，该对象的[释放](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)成员调用 （而不是使用 delete 运算符，如像传统的 c + + 对象）。 引用计数机制允许管理单个对象的多个引用。 实现[AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)并[发行](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)维护引用计数对象 — 其引用计数达到零时才会删除该对象。
+[AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)并[发行](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)成员函数控制对象的内存管理。 COM 使用引用计数方案跟踪对象。 从来不会像在 C++ 中一样直接引用对象。 相反，始终通过指针引用 COM 对象。 若要在所有者用完时释放对象使用它，该对象的[释放](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)调用成员 (而不是使用 delete 运算符，如就执行此操作的传统的C++对象)。 引用计数机制允许管理单个对象的多个引用。 实现[AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)并[发行](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)维护引用计数对象 — 其引用计数达到零时才会删除该对象。
 
 [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)并[发行](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)从实现的角度而言相当简单明了。 此处为普通实现：
 
@@ -367,7 +367,7 @@ CEditPrintObj::CPrintObj 的实现将与上面对 CEditPrintObj::CEditObj 的定
 
 除支持独立 COM 对象外，MFC 还支持聚合。 聚合本身是太复杂的主题，介绍;请参阅[聚合](/windows/desktop/com/aggregation)聚合的详细信息的主题。 本说明将简单介绍对内置到框架和接口映射中的聚合的支持。
 
-有两种方法可以使用聚合：(1) 使用支持聚合的 COM 对象，和 (2) 实现可由另一个对象聚合的对象。 这些功能可称为“使用聚合对象”和“使对象可聚合”。 MFC 两者都支持。
+有两种方法可以使用聚合：（1） 使用支持聚合，COM 对象和 （2） 实现可由另一个聚合的对象。 这些功能可称为“使用聚合对象”和“使对象可聚合”。 MFC 两者都支持。
 
 ### <a name="using-an-aggregate-object"></a>使用聚合对象
 
@@ -464,7 +464,7 @@ DWORD ExternalQueryInterface(
 指向 IID 的较远指针（QueryInterface 的第一个自变量）
 
 *ppvObj*<br/>
-指向 IUnknown* 的指针（QueryInterface 的第二个自变量）
+指向 IUnknown* 的指针（QueryInterface 的第二个参数）
 
 #### <a name="remarks"></a>备注
 
@@ -549,7 +549,7 @@ END_INTERFACE_MAP
 
 #### <a name="parameters"></a>参数
 
-*类*<br/>
+*theClass*<br/>
 要在其中定义接口映射的类
 
 *baseClass*<br/>
@@ -567,7 +567,7 @@ INTERFACE_PART(theClass, iid, localClass)
 
 #### <a name="parameters"></a>参数
 
-*类*<br/>
+*theClass*<br/>
 包含接口映射的类的名称。
 
 *iid*<br/>
@@ -615,7 +615,7 @@ INTERFACE_AGGREGATE(theClass, theAggr)
 
 #### <a name="parameters"></a>参数
 
-*类*<br/>
+*theClass*<br/>
 包含接口映射的类的名称，
 
 *theAggr*<br/>

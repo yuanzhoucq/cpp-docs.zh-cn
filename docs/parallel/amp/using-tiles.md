@@ -3,15 +3,15 @@ title: 使用平铺
 ms.date: 11/19/2018
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
 ms.openlocfilehash: ede62c80a83b5f5fc1d691bf52dde67140e68246
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176089"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405364"
 ---
 # <a name="using-tiles"></a>使用平铺
 
-可以使用平铺来最大化应用程序加速。 平铺将线程划分为相等的矩形子集或*磁贴*。 如果您使用合适的平铺大小和平铺的算法，您可以在 c + + AMP 代码中获取更多加速。 平铺的基本组件包括：
+可以使用平铺来最大化应用程序加速。 平铺将线程划分为相等的矩形子集或*磁贴*。 如果您使用合适的平铺大小和平铺的算法，您可以获得更多加速从在C++AMP 代码。 平铺的基本组件包括：
 
 - `tile_static` 变量。 平铺的主要优点是从性能提升`tile_static`访问。 中的数据的访问权限`tile_static`内存可以明显快于访问全局空间中的数据 (`array`或`array_view`对象)。 实例`tile_static`变量，将创建的每个磁贴和磁贴中的所有线程都都可以访问该变量。 在典型的平铺算法中，数据复制到`tile_static`一次从全局内存的内存，然后从访问很多时候`tile_static`内存。
 
@@ -289,15 +289,15 @@ t_idx.barrier.wait();
 
 - `tile_static`
 
-一个*内存界定*可确保内存访问可用于其他线程在线程平铺，并且内存访问根据程序顺序执行。 若要确保这一点，编译器和处理器重新排序读取和写入界定。 在 c + + AMP 中内存界定创建调用这些方法之一：
+一个*内存界定*可确保内存访问可用于其他线程在线程平铺，并且内存访问根据程序顺序执行。 若要确保这一点，编译器和处理器重新排序读取和写入界定。 在C++AMP 中，会产生内存界定通过调用下列方法之一：
 
-- [tile_barrier:: wait 方法](reference/tile-barrier-class.md#wait)： 创建界定全局和`tile_static`内存。
+- [tile_barrier:: wait 方法](reference/tile-barrier-class.md#wait):创建界定全局和`tile_static`内存。
 
-- [tile_barrier:: wait_with_all_memory_fence 方法](reference/tile-barrier-class.md#wait_with_all_memory_fence)： 创建界定全局和`tile_static`内存。
+- [tile_barrier:: wait_with_all_memory_fence 方法](reference/tile-barrier-class.md#wait_with_all_memory_fence):创建界定全局和`tile_static`内存。
 
-- [tile_barrier:: wait_with_global_memory_fence 方法](reference/tile-barrier-class.md#wait_with_global_memory_fence)： 创建仅全局内存界定。
+- [tile_barrier:: wait_with_global_memory_fence 方法](reference/tile-barrier-class.md#wait_with_global_memory_fence):创建仅全局内存界定。
 
-- [tile_barrier:: wait_with_tile_static_memory_fence 方法](reference/tile-barrier-class.md#wait_with_tile_static_memory_fence)： 创建唯一界定`tile_static`内存。
+- [tile_barrier:: wait_with_tile_static_memory_fence 方法](reference/tile-barrier-class.md#wait_with_tile_static_memory_fence):创建唯一界定`tile_static`内存。
 
 调用需要可以提高您的应用程序性能的特定限制。 关卡类型影响如何编译器和硬件重新排列语句。 例如，如果你使用全局内存界定，它将应用仅为是全局内存访问并因此，编译器和硬件可能重新排序读取和写入到`tile_static`上隔离的两个方面的变量。
 

@@ -4,12 +4,12 @@ ms.date: 10/22/2018
 helpviewer_keywords:
 - OLE DB, application design considerations
 ms.assetid: 8caa7d99-d2bb-42c9-8884-74f228bb6ecc
-ms.openlocfilehash: 3e0175c6b554c319a662ffd726023caf7176d9fe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2f0a7a114c671e17d8f95280ab00ed93570e8609
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395555"
 ---
 # <a name="ole-db-architectural-design-issues"></a>OLE DB 结构设计问题
 
@@ -29,9 +29,9 @@ Microsoft 还提供了几个库来完成此任务： OLE DB 模板库、 OLE DB 
 
 例如，如果您想要更新行集中的数据，但忘记指定这使用向导创建使用者时，您可以指定的功能在事后通过设置`DBPROP_IRowsetChange`和`DBPROP_UPDATABILITY`命令对象上的属性。 然后，创建行集时，它具有`IRowsetChange`接口。
 
-## <a name="do-you-have-older-code-using-another-data-access-technology-ado-odbc-or-dao"></a>您是否具有使用其他数据访问技术（ADO、ODBC 或 DAO）的更早代码？
+## <a name="do-you-have-older-code-using-another-data-access-technology-ado-odbc-or-dao"></a>你是否使用另一种数据访问技术 （ADO、 ODBC 或 DAO） 的较旧代码？
 
-给定技术 （如 ADO 组件使用 OLE DB 组件并将 ODBC 代码迁移到 OLE DB） 的可能组合，涵盖所有情况下已超出 Visual c + + 文档的讨论范围。 但是，涉及各种方案的许多文章都可在以下 Microsoft 网站上：
+给定技术 （如 ADO 组件使用 OLE DB 组件并将 ODBC 代码迁移到 OLE DB） 的可能组合，涵盖所有情况下不在视觉对象的范围内C++文档。 但是，涉及各种方案的许多文章都可在以下 Microsoft 网站上：
 
 - [Microsoft 帮助和支持](https://support.microsoft.com/)
 

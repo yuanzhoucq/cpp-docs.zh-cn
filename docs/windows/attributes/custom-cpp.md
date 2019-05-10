@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - custom attributes, defining
 ms.assetid: 3abac928-4d55-4ea6-8cf6-8427a4ad79f1
-ms.openlocfilehash: 7aca125879591f71fe2ba60f34b712918350940f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 227e67696e679452a9c6c0e18c04e3d918f7a93f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62148168"
 ---
 # <a name="custom-c"></a>custom (C++)
 
@@ -31,12 +31,12 @@ ms.locfileid: "50565693"
 *uuid*<br/>
 唯一 ID。
 
-*value*<br/>
+*值*<br/>
 一个值，可以将放入一个变体。
 
 ## <a name="remarks"></a>备注
 
-**自定义**c + + 属性会导致信息会放入类型库。 你将需要一种工具，从类型库中读取自定义值。
+**自定义**C++属性将可能会放入类型库的信息。 你将需要一种工具，从类型库中读取自定义值。
 
 **自定义**属性具有相同的功能[自定义](/windows/desktop/Midl/custom)MIDL 特性。
 
@@ -49,7 +49,7 @@ ms.locfileid: "50565693"
 |**适用对象**|非 COM**接口**，**类**，**枚举**s，`idl_module`方法、 接口成员、 接口参数**typedef**s，**union**s，**结构**s|
 |**可重复**|是|
 |**必需的特性**|**组件类**（当使用类）|
-|**无效的特性**|无|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

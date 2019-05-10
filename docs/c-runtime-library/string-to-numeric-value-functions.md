@@ -16,12 +16,12 @@ helpviewer_keywords:
 - parsing, numeric strings
 - string conversion, to numeric values
 ms.assetid: 11cbd9ce-033b-4914-bf66-029070e7e385
-ms.openlocfilehash: d3e53c665378efdd63a373027f4edd6b7fb90ad3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f24b75c2fdb3aa0d84b16874d2d01f1cb96d4b9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544564"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743884"
 ---
 # <a name="string-to-numeric-value-functions"></a>字符串到数值函数
 
@@ -39,7 +39,7 @@ ms.locfileid: "50544564"
 
 **strtod** 系列中的每个函数都可将以空值终止的字符串转换为数值。 下表中列出了可用函数。
 
-|函数|描述|
+|函数|说明|
 |--------------|-----------------|
 |`strtod`|将字符串转换为双精度浮点值|
 |`strtol`|将字符串转换为长整型|

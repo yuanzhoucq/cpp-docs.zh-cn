@@ -1,6 +1,6 @@
 ---
 title: basic_ostream 类
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - ostream/std::basic_ostream
 - ostream/std::basic_ostream::flush
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::basic_ostream [C++], tellp
 - std::basic_ostream [C++], write
 ms.assetid: 5baadc65-b662-4fab-8c9f-94457c58cda1
-ms.openlocfilehash: dce4911bd4b7abe6c73551d6a0b178d9b2700dbb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 64a32513e9dc151e64fccdb0ef678a75588f0a41
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62371643"
 ---
 # <a name="basicostream-class"></a>basic_ostream 类
 
@@ -48,7 +48,7 @@ class basic_ostream : virtual public basic_ios<Elem, Tr>
 
 ## <a name="remarks"></a>备注
 
-重载 [operator<<](#op_lt_lt) 的大部分成员函数是格式化的输出函数。 它们遵循以下模式：
+重载 [operator<<](#basic_ostream_operator_lt_lt) 的大部分成员函数是格式化的输出函数。 它们遵循以下模式：
 
 ```cpp
 iostate state = goodbit;
@@ -122,7 +122,7 @@ return (*this);
 |[put](#put)|将字符放入流中。|
 |[seekp](#seekp)|重置在输出流中的位置。|
 |[sentry](#sentry)|嵌套的类描述一个对象，该对象的声明构造格式化的输出函数和未格式化的输出函数。|
-|[swap](#op_eq)|将此 `basic_ostream` 对象的值与提供的 `basic_ostream` 对象的值进行交换。|
+|[swap](#swap)|将此 `basic_ostream` 对象的值与提供的 `basic_ostream` 对象的值进行交换。|
 |[tellp](#tellp)|报告在输出流中的位置。|
 |[write](#write)|将字符放入流中。|
 
@@ -130,7 +130,7 @@ return (*this);
 
 |运算符|描述|
 |-|-|
-|[operator=](#basic_ostream_operator_eq)|将提供的 `basic_ostream` 对象参数的值赋给此对象。|
+|[operator=](#op_eq)|将提供的 `basic_ostream` 对象参数的值赋给此对象。|
 |[operator<<](#basic_ostream_operator_lt_lt)|写入流。|
 
 ## <a name="requirements"></a>要求
@@ -237,7 +237,7 @@ basic_ostream<Elem, Tr>& operator<<(const void* val);
 
 ### <a name="parameters"></a>参数
 
-*pfn*<br/>
+*Pfn*<br/>
 函数指针。
 
 *strbuf*<br/>

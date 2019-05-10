@@ -1,17 +1,17 @@
 ---
-title: 对象 （c + + COM 特性）
+title: 对象 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.object
 helpviewer_keywords:
 - object attribute
 ms.assetid: f2d3c231-630d-4b4c-bd15-b1c30df362dd
-ms.openlocfilehash: 1cae9e6b014f33dfbbcccdeb4172d6f35349e307
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0f544e84e5110761dfd01e25abef4352f055ff5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50526148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407531"
 ---
 # <a name="object-c"></a>object (C++)
 
@@ -25,7 +25,7 @@ ms.locfileid: "50526148"
 
 ## <a name="remarks"></a>备注
 
-前面的接口定义中，当**对象**c + + 属性导致将接口置于.idl 文件作为自定义的接口。
+前面的接口定义中，当**对象**C++属性导致将接口置于.idl 文件作为自定义的接口。
 
 使用对象标记任何接口必须继承自`IUnknown`。 如果从任何基接口继承，则满足此条件`IUnknown`。 如果没有基接口继承自`IUnknown`，编译器将导致使用标记的接口**对象**为派生`IUnknown`。
 
@@ -41,8 +41,8 @@ ms.locfileid: "50526148"
 |-|-|
 |**适用对象**|**interface**|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

@@ -1,27 +1,18 @@
 ---
 title: 字符串和字符文本 （C++）
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 f1_keywords:
 - R
 helpviewer_keywords:
-- L constant
-- escape sequences
-- Null strings, null-terminated strings
-- literal strings, C++
-- Null strings
-- string literals, syntax
-- string literals
-- literal strings
-- strings [C++], string literals
-- NULL, character constant
-- wide characters, strings
+- literal strings [C++]
+- string literals [C++]
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
-ms.openlocfilehash: d3721f3624a64a24de0a5458d88de4836b07a9c1
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
-ms.translationtype: MT
+ms.openlocfilehash: d3c85854256816d5553959a16526ad0d13cf14b4
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329834"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221974"
 ---
 # <a name="string-and-character-literals--c"></a>字符串和字符文本 （C++）
 
@@ -70,7 +61,7 @@ int main()
 }
 ```
 
-字符串文本可以米有前缀，也可以具有 `u8`、`L`、`u` 和 `U` 前缀以分别指示窄字符（单字节或多字节）、UTF-8、宽字符（UCS-2 或 UTF-16）、UTF-16 和 UTF-32 编码。 原始字符串文本可以具有 `R``u8R`、`LR`、`uR` 和 `UR` 前缀来表示这些编码的原始版本等效项。  若要创建临时或静态 std::string 值，可以使用带 `s` 后缀的字符串文本或原始字符串文本。 有关详细信息，请参阅下面的“字符串文本”一节。 有关基本源字符集、通用字符名称以及在源代码中使用扩展代码页中的字符的详细信息，请参阅 [Character Sets](../cpp/character-sets.md)。
+字符串文本可以没有前缀，也可以使用 `u8`、`L`、`u` 和 `U` 前缀来分别指示窄字符（单字节或多字节）、UTF-8、宽字符（UCS-2 或 UTF-16）、UTF-16 和 UTF-32 编码。 原始字符串文本可以使用 `R`、`u8R`、`LR`、`uR` 和 `UR` 前缀来表示这些编码的原始版本等效项。  若要创建临时或静态 std::string 值，可以使用带 `s` 后缀的字符串文本或原始字符串文本。 有关详细信息，请参阅下面的“字符串文本”一节。 有关基本源字符集、通用字符名称以及如何在源代码中使用扩展代码页中的字符的详细信息，请参阅[字符集](../cpp/character-sets.md)。
 
 ## <a name="character-literals"></a>字符文本
 
@@ -112,11 +103,11 @@ int main()
 | 反斜杠 | \\\\ |
 | 水平制表符 | \\t |
 | 问号 | ? 或 \\? |
-| 垂直制表符 | \\V |
+| 垂直制表符 | \\v |
 | 单引号 | \\' |
-| 退格符 | \\B |
+| 退格符 | \\b |
 | 双引号 | \\" |
-| 回车符 | \\R |
+| 回车符 | \\r |
 | null 字符 | \\0 |
 | 换页符 | \\f |
 | 八进制 | \\ooo |
@@ -254,7 +245,7 @@ auto s4 = U"hello"; // const char32_t*
 
 ### <a name="raw-string-literals-c11"></a>原始字符串 (C++11)
 
-原始字符串文本是一个以 null 结尾的数组-任何字符类型，包含的任何图形字符，包括双引号 （"）、 反斜杠 (\\)，或换行字符。 原始字符串通常用于使用字符类的正则表达式，还用于 HTML 字符串和 XML 字符串。 有关示例，请参阅以下文章：[关于 C++ 11 的 Bjarne Stroustrup 常见问题](http://www.stroustrup.com/C++11FAQ.html)。
+原始字符串文本是一个以 null 结尾的数组-任何字符类型，包含的任何图形字符，包括双引号 （"）、 反斜杠 (\\)，或换行字符。 原始字符串通常用于使用字符类的正则表达式，还用于 HTML 字符串和 XML 字符串。 有关示例，请参阅以下文章：[关于 c++11 的 Bjarne Stroustrup 常见问题](http://www.stroustrup.com/C++11FAQ.html)。
 
 ```cpp
 // represents the string: An unescaped \ character
@@ -328,7 +319,7 @@ const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);
 
 **Microsoft 专用**
 
-在 Visual c + + 可以使用字符串文字，若要将指针初始化为非常量**char**或**wchar_t**。 可以在 C99 代码中使用，但 C++98 中已弃用，C++11 中已删除。 尝试修改该字符串将导致访问冲突，例如：
+在 MicrosoftC++可以使用字符串文本以将指针初始化为非常量**char**或**wchar_t**。 可以在 C99 代码中使用，但 C++98 中已弃用，C++11 中已删除。 尝试修改该字符串将导致访问冲突，例如：
 
 ```cpp
 wchar_t* str = L"hello";

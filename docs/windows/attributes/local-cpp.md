@@ -1,17 +1,17 @@
 ---
-title: 本地 （c + + COM 属性）
+title: 本地 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.local
 helpviewer_keywords:
 - local attribute
 ms.assetid: 35cdd668-bd8e-492a-b7b8-263e7b662437
-ms.openlocfilehash: 377d6ffbddb5f88533c8b4f054f0d658a9b19573
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 678968bb7b0f2e7af94124bea5b0967df27e43f7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409221"
 ---
 # <a name="local-c"></a>local (C++)
 
@@ -25,7 +25,7 @@ ms.locfileid: "50489084"
 
 ## <a name="remarks"></a>备注
 
-**本地**c + + 属性具有相同的功能[本地](/windows/desktop/Midl/local)MIDL 特性。
+**本地**C++属性具有相同的功能[本地](/windows/desktop/Midl/local)MIDL 特性。
 
 ## <a name="example"></a>示例
 
@@ -39,7 +39,7 @@ ms.locfileid: "50489084"
 |-|-|
 |**适用对象**|**接口**，接口方法|
 |**可重复**|否|
-|**必需的特性**|无|
+|**必需的特性**|None|
 |**无效的特性**|`dispinterface`|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。

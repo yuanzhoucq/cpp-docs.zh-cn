@@ -1,5 +1,5 @@
 ---
-title: 默认值 （c + + COM 属性）
+title: 默认值 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.default
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - attributes [C#], default attribute
 - defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
-ms.openlocfilehash: 1c9c8cd9a6bf0d6ea34db5d62d7767874b4dd4b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c6448b00fef50a7654816a2c39af2943db12d314
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62148076"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -32,7 +32,7 @@ ms.locfileid: "50560605"
 
 如果未指定默认接口，则第一个出现的非源接口用作默认接口。
 
-*接口 2*<br/>
+*interface2*<br/>
 （可选）默认源接口。 你还必须使用 [source](source-cpp.md) 属性指定此接口。
 
 如果未指定默认源接口，则第一个源接口用作默认接口。
@@ -102,7 +102,7 @@ int main() {
 |**适用对象**|**类**，**结构**，数据成员|
 |**可重复**|否|
 |**必需的特性**|**组件类**(当应用于**类**或**结构**)|
-|**无效的特性**|无|
+|**无效的特性**|None|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

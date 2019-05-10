@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetRange
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
-ms.openlocfilehash: a68f3570f0e8c3315e8b0716cddcd37563894e76
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 8c69473ab813c2fa692044fddc406a74a5aeb197
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62253512"
 ---
 # <a name="cdatetimectrl-class"></a>CDateTimeCtrl 类
 
@@ -446,7 +446,7 @@ COLORREF SetMonthCalColor(
 *iColor*<br/>
 **int**值，该值指定要设置的月份的日历控件的区域。 此值可以是以下值之一。
 
-|值|含义|
+|“值”|含义|
 |-----------|-------------|
 |MCSC_BACKGROUND|设置显示不同的月份的背景色。|
 |MCSC_MONTHBK|设置显示在一个月中的背景色。|
@@ -599,7 +599,7 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew = NULL);
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 CMNCTRL1](../../visual-cpp-samples.md)<br/>
+[MFC 示例 CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CMonthCalCtrl 类](../../mfc/reference/cmonthcalctrl-class.md)

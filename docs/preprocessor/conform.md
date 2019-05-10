@@ -9,28 +9,28 @@ helpviewer_keywords:
 - forScope conform pragma
 - pragmas, conform
 ms.assetid: 71b3e174-c53c-4bfc-adf3-af39b1554191
-ms.openlocfilehash: 6589fe23359eecd654b23380747fbd3213c54dce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35c3b06106779a9056f682ff76c6ed4b4ab1ab41
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62366754"
 ---
 # <a name="conform"></a>conform
-**C + + 专用**
+**C++特定**
 
 指定的运行时行为[/zc: forscope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)编译器选项。
 
 ## <a name="syntax"></a>语法
 
-> **#pragma 符合 (** *名称*[**，显示**] [**，** {**上** | **关闭**}][[**，** {**推送** | **pop** }] [**，** *标识符*]] **)**
+> **#pragma conform(** *name* [**, show** ] [**,** { **on** | **off** } ] [ [**,** { **push** | **pop** } ] [**,** *identifier* ] ] **)**
 
 ### <a name="parameters"></a>参数
 
 *name*<br/>
 指定要修改的编译器选项的名称。 唯一有效*名称*是`forScope`。
 
-**显示**<br/>
+**show**<br/>
 （可选）当前设置将导致*名称*（true 或 false） 在编译期间显示通过一条警告消息。 例如 `#pragma conform(forScope, show)`。
 
 **上**，**关闭**<br/>

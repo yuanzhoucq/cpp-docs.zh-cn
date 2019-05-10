@@ -18,11 +18,11 @@ helpviewer_keywords:
 - std::error_condition::message
 ms.assetid: 6690f481-97c9-4554-a0ff-851dc96b7a06
 ms.openlocfilehash: ccc2b41aa6c008fbda29c065ad63aa9f61b6680f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413679"
 ---
 # <a name="errorcondition-class"></a>error_condition 类
 
@@ -88,7 +88,7 @@ void assign(value_type val, const error_category& _Cat);
 |参数|描述|
 |---------------|-----------------|
 |*val*|要存储在 `error_code` 中的错误代码值。|
-|*则*|要存储在 `error_code` 中的错误类别。|
+|*_Cat*|要存储在 `error_code` 中的错误类别。|
 
 ### <a name="remarks"></a>备注
 
@@ -140,7 +140,7 @@ error_condition(_Enum _Errcode,
 |参数|描述|
 |---------------|-----------------|
 |*val*|要存储在 `error_condition` 中的错误代码值。|
-|*则*|要存储在 `error_condition` 中的错误类别。|
+|*_Cat*|要存储在 `error_condition` 中的错误类别。|
 |*_Errcode*|要存储在 `error_condition` 中的枚举值。|
 
 ### <a name="remarks"></a>备注

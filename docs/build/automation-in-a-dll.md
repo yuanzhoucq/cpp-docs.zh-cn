@@ -5,12 +5,12 @@ helpviewer_keywords:
 - DLLs [C++], Automation
 - Automation [C++], DLLs
 ms.assetid: 2728ecd1-14e2-4ae0-a946-e749e11dbb74
-ms.openlocfilehash: 3cc5ca456842707a2c3de7b2fd74abc73d9a5307
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
-ms.translationtype: MT
+ms.openlocfilehash: dedc832d6726dccf8c0c2e88f9f4d5c67590c1c2
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422281"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220930"
 ---
 # <a name="automation-in-a-dll"></a>DLL 中的自动化
 
@@ -32,4 +32,4 @@ ms.locfileid: "57422281"
 
 ## <a name="see-also"></a>请参阅
 
-[Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)
+[创建 C /C++ Visual Studio 中的 Dll](dlls-in-visual-cpp.md)

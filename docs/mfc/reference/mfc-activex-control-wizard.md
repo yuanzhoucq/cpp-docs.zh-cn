@@ -10,12 +10,12 @@ helpviewer_keywords:
 - MFC ActiveX Control Wizard
 - OLE controls [MFC]
 ms.assetid: f19d698c-bdc3-4c74-af97-3d6ccb441b75
-ms.openlocfilehash: 009c7a2b0c703facf70b7a4b2706f288c4d7fd9a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 3341f840c46584c4e45afe3607c83433976e6c37
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267573"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217647"
 ---
 # <a name="mfc-activex-control-wizard"></a>MFC ActiveX 控件向导
 
@@ -32,7 +32,7 @@ ActiveX 控件可以具有复杂的用户界面。 某些控件可能类似于�
 
 如果需要创建 ActiveX 对象的容器，请参阅[创建 ActiveX 控件容器](../../mfc/reference/creating-an-mfc-activex-control-container.md)。
 
-MFC starter 项目包括 c + + 源文件 (.cpp)、 资源 (.rc) 文件和项目 (.vcxproj) 文件。 在这些初学者文件中生成的代码基于 MFC。
+MFC starter 项目包括C++源文件 (.cpp)、 资源 (.rc) 文件和项目 (.vcxproj) 文件。 在这些初学者文件中生成的代码基于 MFC。
 
 下面的示例列表显示了任务和类型的增强功能的 ActiveX 控件：
 
@@ -64,6 +64,6 @@ MFC starter 项目包括 c + + 源文件 (.cpp)、 资源 (.rc) 文件和项目 
 
 ## <a name="see-also"></a>请参阅
 
-[创建和管理 Visual C++ 项目](../../ide/creating-and-managing-visual-cpp-projects.md)<br/>
-[Visual C++ 项目类型](../../ide/visual-cpp-project-types.md)<br/>
+[Visual Studio 项目 - C++](../../build/creating-and-managing-visual-cpp-projects.md)<br/>
+[C++在 Visual Studio 中的项目类型](../../build/reference/visual-cpp-project-types.md)<br/>
 [概念](../../atl/active-template-library-atl-concepts.md)

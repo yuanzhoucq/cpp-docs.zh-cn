@@ -1,5 +1,5 @@
 ---
-title: '#include 指令 （C/c + +）'
+title: '#include 指令 (C /C++)'
 ms.date: 11/04/2016
 f1_keywords:
 - '#include'
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - '#include directive'
 - include directive (#include)
 ms.assetid: 17067dc0-8db1-4f2d-b43e-ec12ecf83238
-ms.openlocfilehash: da68f71d2a3830cdd86870d8ef072c3fb04933db
-ms.sourcegitcommit: 45835842604602a011813d0cd70abc5df91b89ed
+ms.openlocfilehash: 7ffccb34d52f8ffa1e6b9cc64a58d3471d02ac92
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50750400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388125"
 ---
 # <a name="include-directive-cc"></a>#include 指令 (C/C++)
 
@@ -32,7 +32,7 @@ ms.locfileid: "50750400"
 
 *路径规范*可能可跟目录规范是文件名。 文件名必须命名现有文件。 语法*路径规范*取决于其编译该程序的操作系统。
 
-有关如何通过使用编译的 c + + 应用程序中引用程序集信息[/clr](../build/reference/clr-common-language-runtime-compilation.md)，请参阅[#using](../preprocessor/hash-using-directive-cpp.md)。
+有关如何在引用程序集信息C++通过使用编译的应用程序[/clr](../build/reference/clr-common-language-runtime-compilation.md)，请参阅[#using](../preprocessor/hash-using-directive-cpp.md)。
 
 两种语法形式都会导致指令被替换为指定包含文件的整个内容。 两种形式之间的区别在于，在未完全指定路径时预处理器搜索标头文件的顺序。 下表显示了这两种语法形式之间的差异。
 
@@ -49,7 +49,7 @@ ms.locfileid: "50750400"
 
 当嵌套了包含文件并从命令行开始编译时，目录搜索会从父文件的目录开始，然后在所有祖父文件的目录中继续进行。 即，搜索将相对于包含当前正在处理的源的目录开始。 如果找不到该文件，则搜索会移动到由指定的目录[/I （附加包含目录）](../build/reference/i-additional-include-directories.md)编译器选项。 最后，将搜索 INCLUDE 环境变量指定的目录。
 
-从 Visual Studio 开发环境中，将忽略 INCLUDE 环境变量。 有关如何设置搜索包含文件的目录信息 — 这也适用于 LIB 环境变量，请参阅[VC + + Directories Property Page](../ide/vcpp-directories-property-page.md)。
+从 Visual Studio 开发环境中，将忽略 INCLUDE 环境变量。 有关如何设置搜索包含文件的目录信息 — 这也适用于 LIB 环境变量，请参阅[VC + + Directories Property Page](../build/reference/vcpp-directories-property-page.md)。
 
 此示例使用尖括号显示文件包含：
 

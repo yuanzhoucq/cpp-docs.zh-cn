@@ -1,6 +1,6 @@
 ---
 title: locale 类
-ms.date: 11/04/2016
+ms.date: 03/19/2019
 f1_keywords:
 - xlocale/std::locale
 - xlocale/std::locale::category
@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: 888aeff3e8661338d1a017c06325108a4240ace3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a1f5ace58af427645a0ad4eb8706506cc52ab08c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413172"
 ---
 # <a name="locale-class"></a>locale 类
 
@@ -296,7 +296,7 @@ locale combine(const locale& Loc) const;
 
 ### <a name="return-value"></a>返回值
 
-此成员函数返回在替换或添加到的区域设置对象**\*这**方面`Facet`中列出*Loc*。
+此成员函数返回在替换或添加到的区域设置对象 **\*这** 方面`Facet`中列出*Loc*。
 
 ### <a name="example"></a>示例
 
@@ -403,8 +403,14 @@ The previous locale was: C
 
 成员类提供用作索引以查找区域设置中的 facet 的唯一 facet 标识。
 
-class id { protected:    id(); private:    id(const id&) // not defined void operator=(const id&)  // not defined    };
-
+```cpp
+class id 
+{
+   protected:    id();
+   private:      id(const id&)
+   void operator=(const id&)  // not defined    
+};
+```
 ### <a name="remarks"></a>备注
 
 该成员类描述每个唯一区域设置 facet 所需的静态成员对象。 请注意，不能复制或分配类的对象`id`。

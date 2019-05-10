@@ -1,17 +1,17 @@
 ---
-title: 同步 （c + + COM 属性）
+title: 同步 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.synchronize
 helpviewer_keywords:
 - synchronize attribute
 ms.assetid: 15fc8544-955d-4765-b3d5-0f619c8b3f40
-ms.openlocfilehash: e5afec6257c421c0d3d5c95ba77c29767d0df280
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea5236b887fb0df2a0acdd1e4050c66a4719072b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407128"
 ---
 # <a name="synchronize"></a>synchronize
 
@@ -25,7 +25,7 @@ ms.locfileid: "50620891"
 
 ## <a name="remarks"></a>备注
 
-**同步**c + + 属性实现为同步对象的目标方法的支持。 同步通过控制目标方法的访问权限允许多个对象使用公共资源 （如类的方法）。
+**同步**C++属性实现为同步对象的目标方法的支持。 同步通过控制目标方法的访问权限允许多个对象使用公共资源 （如类的方法）。
 
 此属性由插入该代码调用了正确`Lock`目标方法的开头 （由线程模型） 的方法。 该方法退出时,`Unlock`自动调用。 有关这些函数的详细信息，请参阅[CComAutoThreadModule::Lock](../../atl/reference/ccomautothreadmodule-class.md#lock)
 
@@ -69,7 +69,7 @@ class CMyClass {
 |**适用对象**|类方法方法|
 |**可重复**|否|
 |**必需的特性**|一个或多个以下： `coclass`， `progid`，或`vi_progid`。|
-|**无效的特性**|无|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

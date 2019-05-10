@@ -8,12 +8,12 @@ helpviewer_keywords:
 - stosq instruction
 - __stosq intrinsic
 ms.assetid: 3ea28297-4369-4c2d-bf0c-91fa539ce209
-ms.openlocfilehash: f395a8b0fc7194f36bb3388d631628a829f33aca
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: eacb12f7c02b82607d980281f8d4a0bc1e1d7c14
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62390342"
 ---
 # <a name="stosq"></a>__stosq
 
@@ -76,7 +76,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>输出
+## <a name="output"></a>Output
 
 ```
 0 ffffffffffff ffffffffffff 0

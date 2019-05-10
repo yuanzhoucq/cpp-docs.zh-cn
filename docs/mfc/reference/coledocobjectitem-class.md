@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleDocObjectItem [MFC], QueryCommand
 - COleDocObjectItem [MFC], Release
 ms.assetid: d150d306-8fd3-4831-b06d-afbe71d8fc9b
-ms.openlocfilehash: af6d866298309f5ddb8eb21a5caeb3d1526b166a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 382960b4dc4dcfa61c836a87044dd14585756174
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62225508"
 ---
 # <a name="coledocobjectitem-class"></a>COleDocObjectItem 类
 
@@ -151,7 +151,7 @@ HRESULT ExecCommand(
 
 如果成功，则为 S_OK 返回否则，返回以下错误代码之一。
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
 |E_UNEXPECTED|出现意外的错误。|
 |E_FAIL|出现错误。|
@@ -305,7 +305,7 @@ virtual void Release(OLECLOSE dwCloseOption = OLECLOSE_NOSAVE);
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 MFCBIND](../../visual-cpp-samples.md)<br/>
+[MFC 示例 MFCBIND](../../overview/visual-cpp-samples.md)<br/>
 [COleClientItem 类](../../mfc/reference/coleclientitem-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [COleClientItem 类](../../mfc/reference/coleclientitem-class.md)<br/>

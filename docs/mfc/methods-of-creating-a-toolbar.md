@@ -10,11 +10,11 @@ helpviewer_keywords:
 - CToolBarCtrl class [MFC], creating toolbars
 ms.assetid: f19d8d65-d49f-445c-abe8-d47d3e4101c8
 ms.openlocfilehash: f269ad990042f51554ec598b0bddbe5a6d7776b8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383901"
 ---
 # <a name="methods-of-creating-a-toolbar"></a>创建工具栏的方法
 
@@ -22,7 +22,7 @@ MFC 提供了两个类来创建工具栏：[CToolBar](../mfc/reference/ctoolbar-
 
 `CToolBarCtrl` 通常会导致较小的可执行文件，以及你可能更愿意使用`CToolBarCtrl`如果你不想要将工具栏集成到 MFC 体系结构。 如果你打算使用`CToolBarCtrl`和将工具栏集成到 MFC 体系结构，必须采取额外注意将工具栏控制操作传送到 MFC。 此通信并不困难;但是，它是在使用时是不需要的额外工作`CToolBar`。
 
-Visual c + + 提供了两种方式利用工具栏公共控件。
+VisualC++提供两种方法，以利用工具栏公共控件。
 
 - 创建工具栏使用`CToolBar`，然后调用[CToolBar::GetToolBarCtrl](../mfc/reference/ctoolbar-class.md#gettoolbarctrl)若要访问`CToolBarCtrl`成员函数。
 

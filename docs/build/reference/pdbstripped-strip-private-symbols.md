@@ -11,12 +11,12 @@ helpviewer_keywords:
 - PDB files, stripping private symbols
 - PDBSTRIPPED linker option
 ms.assetid: 9b9e0070-6a13-4142-8180-19c003fbbd55
-ms.openlocfilehash: c0a79eb8d1c00be2b855ec08ffe44f4e7d7a2e05
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3ed36eca727a15a3c70bc51a07cd3c143d7f66da
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320131"
 ---
 # <a name="pdbstripped-strip-private-symbols"></a>/PDBSTRIPPED（去除私有符号）
 
@@ -31,7 +31,7 @@ ms.locfileid: "57412622"
 
 ## <a name="remarks"></a>备注
 
-在生成程序图像与任何编译器或链接器生成的 PDB 文件的选项时，/PDBSTRIPPED 选项将创建第二个程序数据库 (PDB) 文件 ([/debug](../../build/reference/debug-generate-debug-info.md)， [/z7](../../build/reference/z7-zi-zi-debug-information-format.md)，/Zd 或 /Zi)。 此 PDB 文件省略您不希望交付给客户的符号。 第二个 PDB 文件将仅包含：
+在生成程序图像与任何编译器或链接器生成的 PDB 文件的选项时，/PDBSTRIPPED 选项将创建第二个程序数据库 (PDB) 文件 ([/debug](debug-generate-debug-info.md)， [/z7](z7-zi-zi-debug-information-format.md)，/Zd 或 /Zi)。 此 PDB 文件省略您不希望交付给客户的符号。 第二个 PDB 文件将仅包含：
 
 - 公共符号
 
@@ -53,7 +53,7 @@ ms.locfileid: "57412622"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置 Visual c + + 项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
 1. 单击**链接器**文件夹。
 
@@ -67,5 +67,5 @@ ms.locfileid: "57412622"
 
 ## <a name="see-also"></a>请参阅
 
-[设置链接器选项](../../build/reference/setting-linker-options.md)<br/>
-[链接器选项](../../build/reference/linker-options.md)
+[MSVC 链接器参考](linking.md)<br/>
+[MSVC 链接器选项](linker-options.md)

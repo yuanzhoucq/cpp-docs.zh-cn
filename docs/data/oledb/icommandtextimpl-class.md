@@ -22,12 +22,12 @@ helpviewer_keywords:
 - m_strCommandText
 - SetCommandText method
 ms.assetid: 9c2715cc-1e55-4468-8327-85341617ed46
-ms.openlocfilehash: ee206dd6eb44acc23f30aebadb558d4f72bcd8bf
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: de9e930056db7b91968ca1ce471a87809693376a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62408974"
 ---
 # <a name="icommandtextimpl-class"></a>ICommandTextImpl 类
 

@@ -1,17 +1,17 @@
 ---
-title: nonbrowsable （c + + COM 属性）
+title: nonbrowsable (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.nonbrowsable
 helpviewer_keywords:
 - nonbrowsable attribute
 ms.assetid: e71a98e7-4b65-454a-9829-342b9f2a84be
-ms.openlocfilehash: 34b3c93b60009284897c4b7c1c29ceb4fefa2c49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0a5e01c0fde49c7debb7749f5a1d148acb9cca6f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409117"
 ---
 # <a name="nonbrowsable"></a>nonbrowsable
 
@@ -25,7 +25,7 @@ ms.locfileid: "50592620"
 
 ## <a name="remarks"></a>备注
 
-**Nonbrowsable** c + + 属性具有相同的功能[nonbrowsable](/windows/desktop/Midl/nonbrowsable) MIDL 特性。
+**Nonbrowsable** C++属性具有相同的功能[nonbrowsable](/windows/desktop/Midl/nonbrowsable) MIDL 特性。
 
 ## <a name="example"></a>示例
 
@@ -51,8 +51,8 @@ __interface IMyI
 |-|-|
 |**适用对象**|接口方法|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

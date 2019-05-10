@@ -41,16 +41,15 @@ helpviewer_keywords:
 - CMFCPropertySheet [MFC], SetLook
 ms.assetid: 01d93573-9698-440f-a6a4-5bebbee879dc
 ms.openlocfilehash: 7e5b553e6a10bee0e5b05bb32b9af3069269ca91
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294559"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64344227"
 ---
 # <a name="cmfcpropertysheet-class"></a>CMFCPropertySheet 类
 
-
-  `CMFCPropertySheet` 类支持每个属性页由页选项卡、工具栏按钮、树控件节点或列表项表示的属性表。
+`CMFCPropertySheet` 类支持每个属性页由页选项卡、工具栏按钮、树控件节点或列表项表示的属性表。
 
 ## <a name="syntax"></a>语法
 
@@ -93,9 +92,7 @@ class CMFCPropertySheet : public CPropertySheet
 
 ## <a name="remarks"></a>备注
 
-
-  `CMFCPropertySheet` 类表示属性表，也称为选项卡对话框。 
-  `CMFCPropertySheet` 类可以用多种方式显示属性页。
+`CMFCPropertySheet` 类表示属性表，也称为选项卡对话框。 `CMFCPropertySheet` 类可以用多种方式显示属性页。
 
 执行以下步骤，以便在应用程序中使用 `CMFCPropertySheet` 类：
 
@@ -511,7 +508,7 @@ void SetLook(
 
 下表列出了可以在中指定的枚举值*查找*参数。
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
 |`CMFCPropertySheet::PropSheetLook_Tabs`|（默认值）显示每个属性页的选项卡。 选项卡显示在属性表的顶部，并具有堆积，如果有更多选项卡而不能显示单个行中。|
 |`CMFCPropertySheet::PropSheetLook_OutlookBar`|在左侧和右侧的属性表的 Microsoft Outlook 栏样式显示导航按钮的列表。 在列表中的每个按钮对应于属性页。 如果有多个按钮而不能显示在列表的可见区域中，框架将显示滚动箭头。|

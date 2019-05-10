@@ -9,15 +9,15 @@ helpviewer_keywords:
 - pragmas, intrinsic
 ms.assetid: 25c86ac7-ef40-47b7-a2c0-fada9c5dc3c5
 ms.openlocfilehash: 393a73fcf31c7c00b2057862792ff0536cc98ad8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212368"
 ---
 # <a name="intrinsic"></a>intrinsic
 
-指定对杂注自变量列表中指定的函数的调用是内部的。
+指定对杂注参数列表中指定的函数的调用是内部的。
 
 ## <a name="syntax"></a>语法
 
@@ -44,7 +44,7 @@ ms.locfileid: "50677456"
 
 使用内部函数的程序的运行速度比较快，因为它们没有函数调用的开销，但是，由于生成了附加代码，它们可能比较大。
 
-**x86 特定**
+**x86 Specific**
 
 `_disable`和`_enable`内部函数生成内核模式说明以禁用/启用中断，可以是内核模式驱动程序中很有用。
 
@@ -84,7 +84,7 @@ int main() {
 |[atan2](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|[log](../c-runtime-library/reference/log-logf-log10-log10f.md)|[sin](../c-runtime-library/reference/sin-sinf-sinl.md)|[tan](../c-runtime-library/reference/tan-tanf-tanl.md)|
 |[cos](../c-runtime-library/reference/cos-cosf-cosl.md)||||
 
-可以使用[/fp: strict](../build/reference/fp-specify-floating-point-behavior.md)或[/Za](../build/reference/za-ze-disable-language-extensions.md)重写的则返回 true 的内部浮点选项的生成。 在此情况下，函数将生成为库例程，后者将自变量直接传递到浮点芯片，而不是将自变量推送到程序堆栈。
+可以使用[/fp: strict](../build/reference/fp-specify-floating-point-behavior.md)或[/Za](../build/reference/za-ze-disable-language-extensions.md)重写的则返回 true 的内部浮点选项的生成。 在此情况下，函数将生成为库例程，后者将参数直接传递到浮点芯片，而不是将参数推送到程序堆栈。
 
 请参阅[#pragma 函数](../preprocessor/function-c-cpp.md)有关信息和有关如何启用/禁用的源文本块的内部函数的示例。
 

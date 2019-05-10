@@ -1,20 +1,20 @@
 ---
 title: 演练：向 MFC 项目添加 D2D 对象
-ms.date: 09/20/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - MFC, D2D
 - D2D [MFC]
 ms.assetid: dda36c33-c231-4da6-a62f-72d69a12b6dd
-ms.openlocfilehash: 0793511f09be9dcb37732c4c16bfd2b3038a6cf4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5710add59c0e5d27b2969ae22087533cae901ca9
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567253"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64558172"
 ---
 # <a name="walkthrough-adding-a-d2d-object-to-an-mfc-project"></a>演练：向 MFC 项目添加 D2D 对象
 
-本演练介绍了如何添加基本 Direct2D (D2D) 对象传递给 Visual c + +，Microsoft 基础类库 (MFC) 项目，然后将该项目生成到的应用程序将打印"Hello，world"渐变背景。
+本演练介绍了如何添加基本 Direct2D 到视觉对象 (D2D) 对象C++，Microsoft 基础类库 (MFC) 项目，然后生成项目的应用程序将打印为"Hello，world"渐变背景。
 
 本演练演示如何完成这些任务：
 
@@ -32,13 +32,13 @@ ms.locfileid: "50567253"
 
 ## <a name="prerequisites"></a>系统必备
 
-若要完成本演练，必须具有 Visual Studio 一并安装**使用 c + + 的桌面开发**工作负载和可选**用于 x86 和 x64 的 Visual c + + MFC**组件。
+若要完成本演练，必须具有 Visual Studio 一并安装**使用的桌面开发C++** 工作负荷和可选**VisualC++用于 x86 和 x64 的 MFC**组件。
 
 ## <a name="to-create-an-mfc-application"></a>若要创建的 MFC 应用程序
 
-1. 上**文件**菜单，依次指向**新建**，然后选择**项目**。
+1. 使用**MFC 应用程序向导**创建 MFC 应用程序。 请参阅[演练：使用新的 MFC Shell 控件](walkthrough-using-the-new-mfc-shell-controls.md)有关如何打开你的 Visual Studio 版本的向导的说明。
 
-1. 在中**新的项目**对话框中，在下的左窗格**已安装的模板**，展开**Visual c + +** ，然后选择**MFC**。 在中间窗格中，选择**MFC 应用程序**。 在中**名称**框中，键入*MFCD2DWalkthrough*。 选择 **“确定”**。
+1. 在中**名称**框中，键入*MFCD2DWalkthrough*。 选择 **“确定”**。
 
 1. 在中**MFC 应用程序向导**，选择**完成**而无需更改任何设置。
 

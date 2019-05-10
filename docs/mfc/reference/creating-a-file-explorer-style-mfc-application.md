@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Explorer-style applications [MFC], creating
 ms.assetid: f843ab5d-2d5d-41ca-88a4-badc0d2f8052
 ms.openlocfilehash: 16969b7ef9c0447dfce971af8d329c5b93367041
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372239"
 ---
 # <a name="creating-a-file-explorer-style-mfc-application"></a>创建文件资源管理器样式的 MFC 应用程序
 

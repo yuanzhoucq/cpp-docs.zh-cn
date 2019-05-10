@@ -1,5 +1,5 @@
 ---
-title: event_receiver （c + + COM 属性）
+title: event_receiver (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.event_receiver
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - event sinks, creating
 - event sinks
 ms.assetid: bf8fe770-3ea2-4128-b46b-166222ee4097
-ms.openlocfilehash: e483ece1019d4a8203215eddbc4d3b9d545328a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81a3ec88c336ddeb550f133e657854b3b6f89d96
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409626"
 ---
 # <a name="eventreceiver"></a>event_receiver
 
@@ -35,7 +35,7 @@ ms.locfileid: "50663178"
 *type*<br/>
 以下值之一的枚举：
 
-- `native` 非托管 C/c + + 代码 （本机类的默认值）。
+- `native` 对于非托管 C /C++代码 （本机类的默认值）。
 
 - `com` ，用于 COM 代码。 此值需要包含以下头文件：
 
@@ -54,7 +54,7 @@ ms.locfileid: "50663178"
 
 ## <a name="remarks"></a>备注
 
-**Event_receiver** c + + 属性指定的类或结构应用于将事件接收器，使用 Visual c + + 统一的事件模型。
+**Event_receiver** C++属性指定的类或结构应用于会是事件接收器，使用视觉对象C++统一的事件模型。
 
 **event_receiver**用于[event_source](event-source.md)属性和[__hook](../../cpp/hook.md)并[__unhook](../../cpp/unhook.md)关键字。 使用`event_source`创建事件源。 使用 **__hook**事件接收器的方法将关联 （"挂钩"） 的事件源的事件的事件接收方方法中。 使用 **__unhook**若要取消关联它们。
 
@@ -72,7 +72,7 @@ ms.locfileid: "50663178"
 |**适用对象**|**类**，**结构**|
 |**可重复**|否|
 |**必需的特性**|`coclass` 当*layout_dependent*=**，则返回 true**|
-|**无效的特性**|无|
+|**无效的特性**|None|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

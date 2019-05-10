@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: 50f3e7a79b80514b6c28bd9aee86c720d6e20cf6
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e24dd53f9c805f57ce974a81a4963434f1868095
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316205"
 ---
 # <a name="zc-conformance"></a>/Zc（一致性）
 
@@ -26,22 +26,22 @@ ms.locfileid: "57413909"
 
 ## <a name="remarks"></a>备注
 
-当 Visual Studio 已实现对 C 或 c + + 不符合标准的扩展时，可以使用`/Zc`一致性选项以指定符合标准的或特定于 Microsoft 的行为。 对于一些选项，特定于 Microsoft 的行为是默认值，以防止对现有代码的大规模重大更改。 在其他情况下，默认值为标准的行为，其中中安全、 性能或兼容性的改进带来的重大更改的成本。 较新版本的 Visual Studio 可能会改变每个符合性选项的默认设置。 有关每个符合性选项的详细信息，请参阅特定选项的主题。 [触发-](permissive-standards-conformance.md)编译器选项隐式设置为其符合的设置的默认情况下不设置的符合性选项。
+当 Visual Studio 已实现的扩展到 C 或C++不符合标准，则可以使用`/Zc`一致性选项以指定符合标准的或特定于 Microsoft 的行为。 对于一些选项，特定于 Microsoft 的行为是默认值，以防止对现有代码的大规模重大更改。 在其他情况下，默认值为标准的行为，其中中安全、 性能或兼容性的改进带来的重大更改的成本。 较新版本的 Visual Studio 可能会改变每个符合性选项的默认设置。 有关每个符合性选项的详细信息，请参阅特定选项的主题。 [触发-](permissive-standards-conformance.md)编译器选项隐式设置为其符合的设置的默认情况下不设置的符合性选项。
 
 这些是`/Zc`编译器选项：
 
 |选项|行为|
 |---|---|
 |[alignedNew\[-\]](zc-alignednew.md)|启用 C + + 17 过度对齐动态分配 （在默认情况下在 C + + 17）。|
-|[auto\[-\]](zc-auto-deduce-variable-type.md)|强制实施的新的标准 c + + 含义`auto`(在默认情况下)。|
+|[auto\[-\]](zc-auto-deduce-variable-type.md)|强制执行新的标准C++这意味着`auto`(在默认情况下)。|
 |[__cplusplus\[-\]](zc-cplusplus.md)|启用 **__cplusplus**宏来报告的受支持的标准 （默认情况下关闭）。|
 |[externConstexpr\[-\]](zc-externconstexpr.md)|启用外部链接的`constexpr`变量 （默认情况下关闭）。|
-|[forScope\[-\]](zc-forscope-force-conformance-in-for-loop-scope.md)|强制执行标准 c + +`for`范围规则 (在默认情况下)。|
+|[forScope\[-\]](zc-forscope-force-conformance-in-for-loop-scope.md)|强制执行标准C++`for`范围规则 (在默认情况下)。|
 |[implicitNoexcept\[-\]](zc-implicitnoexcept-implicit-exception-specifiers.md)|启用隐式`noexcept`上所需的功能 (在默认情况下)。|
 |[inline\[-\]](zc-inline-remove-unreferenced-comdat.md)|如果它为 COMDAT 或具有内部链接只能删除未引用的函数或数据 （默认情况下关闭）。|
 |[noexceptTypes\[-\]](zc-noexcepttypes.md)|强制执行 C + + 17 noexcept 规则 (在默认情况下，在 C + + 17 或更高版本)。|
 |[referenceBinding\[-\]](zc-referencebinding-enforce-reference-binding-rules.md)|UDT 临时不会绑定到的非常量左值引用 （默认情况下关闭）。|
-|[rvalueCast\[-\]](zc-rvaluecast-enforce-type-conversion-rules.md)|强制实施标准 c + + 显式类型转换规则 （默认情况下关闭）。|
+|[rvalueCast\[-\]](zc-rvaluecast-enforce-type-conversion-rules.md)|强制执行标准C++显式类型转换规则 （默认情况下关闭）。|
 |[sizedDealloc\[-\]](zc-sizeddealloc-enable-global-sized-dealloc-functions.md)|启用 C + + 14 个全局大小的释放函数 (在默认情况下)。|
 |[strictStrings\[-\]](zc-strictstrings-disable-string-literal-type-conversion.md)|禁用字符串文本`char*`或`wchar_t*`转换 （默认情况下关闭）。|
 |[ternary\[-\]](zc-ternary.md)|强制实施条件运算符的操作数类型上的规则 （默认情况下关闭）。|
@@ -55,5 +55,5 @@ ms.locfileid: "57413909"
 
 ## <a name="see-also"></a>请参阅
 
-[编译器选项](compiler-options.md)<br/>
-[设置编译器选项](setting-compiler-options.md)
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)

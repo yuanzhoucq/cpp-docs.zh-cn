@@ -2,16 +2,16 @@
 title: DHTML 编辑命令映射
 ms.date: 11/04/2016
 ms.assetid: c1b49876-039e-4a26-bb24-ea98ccf254a1
-ms.openlocfilehash: 1f84a56876f1108e9b02d44f6ef0dec50f065c57
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7f420619983283c225ca8fca23c5ea349def1d1b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278257"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323055"
 ---
 # <a name="dhtml-editing-command-maps"></a>DHTML 编辑命令映射
 
-下列宏可用于将 DHTML 编辑命令映射[CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-派生的类。 有关其用法的示例，请参阅[HTMLEdit 示例](../../visual-cpp-samples.md)。
+下列宏可用于将 DHTML 编辑命令映射[CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-派生的类。 有关其用法的示例，请参阅[HTMLEdit 示例](../../overview/visual-cpp-samples.md)。
 
 ### <a name="dhtml-editing-command-map-macros"></a>DHTML 编辑命令映射宏
 
@@ -46,7 +46,7 @@ DECLARE_DHTMLEDITING_CMDMAP(className)
 
 ### <a name="example"></a>示例
 
-请参阅[HTMLEdit 示例](../../visual-cpp-samples.md)。
+请参阅[HTMLEdit 示例](../../overview/visual-cpp-samples.md)。
 
 ### <a name="requirements"></a>要求
 
@@ -89,7 +89,7 @@ END_DHTMLEDITING_CMDMAP()
 
 ### <a name="example"></a>示例
 
-请参阅[HTMLEdit 示例](../../visual-cpp-samples.md)。
+请参阅[HTMLEdit 示例](../../overview/visual-cpp-samples.md)。
 
 ### <a name="requirements"></a>要求
 
@@ -113,7 +113,7 @@ HTML 编辑命令所属*cmdID*映射 （例如 2&gt;idm_copy&lt;2)。
 
 ### <a name="example"></a>示例
 
-请参阅[HTMLEdit 示例](../../visual-cpp-samples.md)。
+请参阅[HTMLEdit 示例](../../overview/visual-cpp-samples.md)。
 
 ### <a name="requirements"></a>要求
 
@@ -140,7 +140,7 @@ HTML 编辑命令所属*cmdID*映射 （例如 2&gt;idm_copy&lt;2)。
 
 ### <a name="example"></a>示例
 
-请参阅[HTMLEdit 示例](../../visual-cpp-samples.md)。
+请参阅[HTMLEdit 示例](../../overview/visual-cpp-samples.md)。
 
 ### <a name="requirements"></a>要求
 
@@ -167,7 +167,7 @@ HTML 编辑命令所属*cmdID*映射 （例如 2&gt;idm_copy&lt;2)。
 
 ### <a name="example"></a>示例
 
-请参阅[HTMLEdit 示例](../../visual-cpp-samples.md)。
+请参阅[HTMLEdit 示例](../../overview/visual-cpp-samples.md)。
 
 ### <a name="requirements"></a>要求
 
@@ -197,7 +197,7 @@ HTML 编辑命令所属*cmdID*映射 （例如 2&gt;idm_copy&lt;2)。
 
 ### <a name="example"></a>示例
 
-请参阅[HTMLEdit 示例](../../visual-cpp-samples.md)。
+请参阅[HTMLEdit 示例](../../overview/visual-cpp-samples.md)。
 
 ### <a name="requirements"></a>要求
 

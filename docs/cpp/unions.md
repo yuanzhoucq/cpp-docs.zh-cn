@@ -1,18 +1,18 @@
 ---
 title: Unions
-ms.date: 11/19/2018
+ms.date: 05/06/2019
 f1_keywords:
 - union_cpp
 helpviewer_keywords:
 - class types [C++], unions as
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
-ms.openlocfilehash: f14f1197c4c835e9dfb753b1396e12e2d2f12772
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
-ms.translationtype: MT
+ms.openlocfilehash: 58f4940d209b783b00c7167265ff1a2a733c947c
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176518"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222341"
 ---
 # <a name="unions"></a>Unions
 
@@ -31,7 +31,7 @@ union [name]  { member-list };
 *name*<br/>
 为联合提供的类型名称。
 
-*成员的列表*<br/>
+*member-list*<br/>
 联合可以包含的成员。 请参阅“备注”。
 
 ## <a name="remarks"></a>备注
@@ -64,7 +64,6 @@ int main()
 在前面的示例中，任何访问联合的代码都需要了解保存数据的成员。 此问题最常见的解决方案是将联合以及其他枚举成员（指示当前存储在联合中的数据的类型）放入一个结构中。 这称为*可区分联合*和下面的示例演示了基本模式。
 
 ```cpp
-#include "stdafx.h"
 #include <queue>
 
 using namespace std;

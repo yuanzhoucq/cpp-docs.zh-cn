@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - signbit function
 ms.openlocfilehash: ce2f632f11296bf71036011a57f242365951d7f2
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356324"
 ---
 # <a name="signbit"></a>signbit
 
@@ -44,11 +44,11 @@ inline bool signbit(
 
 ## <a name="return-value"></a>返回值
 
-**signbit**返回一个非零值 (**true** c + +) 如果该参数*x*为负或负无穷大。 它将返回 0 (**false**中 c + +) 如果参数为非负、 正无穷大或 NAN。
+**signbit**返回一个非零值 (**true**在C++) 如果该参数*x*为负或负无穷大。 它将返回 0 (**false**中C++) 如果参数为非负、 正无穷大或 NAN。
 
 ## <a name="remarks"></a>备注
 
-**signbit**时编译为 C 和 c + + 作为编译时的重载的内联函数是宏。
+**signbit**是一个宏时编译为 C 和重载的内联函数作为编译时C++。
 
 ## <a name="requirements"></a>要求
 
@@ -61,7 +61,7 @@ inline bool signbit(
 ## <a name="see-also"></a>请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
-[isfinite，_finite、 _finitef](finite-finitef.md)<br/>
+[isfinite、_finite、_finitef](finite-finitef.md)<br/>
 [isinf](isinf.md)<br/>
 [isnan、_isnan、_isnanf](isnan-isnan-isnanf.md)<br/>
 [isnormal](isnormal.md)<br/>

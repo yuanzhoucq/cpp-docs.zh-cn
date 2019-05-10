@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-ms.openlocfilehash: ef9838fa8a6a34eac1d2d3531ff93fb124c81d4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b8a29efc5b18432eabfeddc75af12737538281c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330201"
 ---
 # <a name="platformstring-class"></a>Platform::String 类
 
@@ -72,7 +72,7 @@ public ref class String sealed : Object,
 |[String::Data](#data)|返回指向当前字符串开头的指针。|
 |[String::Dispose](#dispose)|释放资源。|
 |[String::End](#end)|返回通过当前字符串末尾的指针。|
-|[String:: equals](#equals)|指示指定对象是否等于当前对象。|
+|[String::Equals](#equals)|指示指定对象是否等于当前对象。|
 |[String::GetHashCode](#gethashcode)|返回此实例的哈希代码。|
 |[String::IsEmpty](#isempty)|指示当前字符串对象是否为空。|
 |[String::IsFastPass](#isfastpass)|指示当前字符串对象是否参与*快速传递*操作。 在快速传递操作中，将挂起引用计数。|
@@ -85,11 +85,11 @@ public ref class String sealed : Object,
 
 |成员|描述|
 |------------|-----------------|
-|[String:: operator = = 运算符](#operator-equality)|指示指定的字符串对象是否具有相同的值。|
+|[String:: operator = = 运算符](#operator-equality)|指示两个指定的字符串对象是否具有相同的值。|
 |[operator+ 运算符](#operator-plus)|将两个字符串对象串联成一个新的字符串对象。|
 |[String:: operator > 运算符](#operator-greater-than)|指示一个字符串对象的值是否大于或等于第二个字符串对象的值。|
 |[String:: operator > = 运算符](#operator-greater-than-or-equals)|指示一个字符串对象的值是否大于或等于第二个字符串对象的值。|
-|[String:: operator ！ = 运算符](#operator-inequality)|指示两个指定字符串对象是否具有不同的值。|
+|[String:: operator ！ = 运算符](#operator-inequality)|指示两个指定的字符串对象是否具有不同的值。|
 |[String:: operator < 运算符](#operator-less-than)|指示一个字符串对象的值是否小于第二个字符串对象的值。|
 
 ### <a name="requirements"></a>要求
@@ -282,7 +282,7 @@ bool IsFastPass();
 
 ### <a name="remarks"></a>备注
 
-在引用计数对象作为参数并且被调用的函数只读取该对象的函数调用中，编译器可以安全地挂起引用计数并改进调用性能。 没有可供您的代码对此属性执行的任何操作。 系统处理所有详细信息。
+在引用计数对象作为参数并且被调用的函数只读取该对象的函数调用中，编译器可以安全地挂起引用计数并改进调用性能。 没有可供你的代码对此属性执行的任何操作。 系统处理所有详细信息。
 
 ## <a name="length"></a>  String:: length 方法
 
@@ -411,7 +411,7 @@ bool String::operator>=( String^ str1, String^ str2);
 
 ## <a name="operator-inequality"></a> String:: operator ！ =
 
-指示两个指定`String`对象具有不同的值。
+指示两个`String`对象具有不同的值。
 
 ### <a name="syntax"></a>语法
 
@@ -498,4 +498,4 @@ String^ String::ToString();
 
 ## <a name="see-also"></a>请参阅
 
-[平台命名空间](../cppcx/platform-namespace-c-cx.md)
+[Platform 命名空间](../cppcx/platform-namespace-c-cx.md)

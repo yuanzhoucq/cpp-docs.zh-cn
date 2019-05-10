@@ -1,20 +1,20 @@
 ---
 title: 按字母顺序列出的编译器选项
-ms.date: 08/20/2018
+ms.date: 05/06/2019
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 73236485026b82895426a2651b48a83fc35ce8b7
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
-ms.translationtype: MT
+ms.openlocfilehash: ba4357f4c14e5cca9363ad2029374ede93529a2a
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415872"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221773"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>按字母顺序列出的编译器选项
 
 下面是一个完整的按字母顺序的编译器选项列表。 有关按类别排序的列表，请参见 [按类别列出的编译器选项](compiler-options-listed-by-category.md)。
 
-|选项|目标|
+|选项|用途|
 |------------|-------------|
 |[@](at-specify-a-compiler-response-file.md)|指定响应文件。|
 |[/?](help-compiler-command-line-help.md)|列出编译器选项。|
@@ -34,7 +34,7 @@ ms.locfileid: "57415872"
 |[/E](e-preprocess-to-stdout.md)|将预处理器输出复制到标准输出。|
 |[/EH](eh-exception-handling-model.md)|指定异常处理模型。|
 |[/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|将预处理器输出复制到标准输出。|
-|[/errorReport](errorreport-report-internal-compiler-errors.md)|允许您直接向 Visual C++ 团队提供内部编译器错误(ICE)信息。|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)|允许您直接向 Microsoft 提供内部编译器错误 (ICE) 信息C++团队。|
 |[/execution-charset](execution-charset-set-execution-character-set.md)|设置执行字符集。|
 |[/F](f-set-stack-size.md)|设置堆栈大小。|
 |[/favor](favor-optimize-for-architecture-specifics.md)|生成代码适用于特定 x64 体系结构或 AMD64 和扩展内存 64 技术 (EM64T) 体系结构中的微体系结构的具体情况。|
@@ -45,7 +45,7 @@ ms.locfileid: "57415872"
 |[/Fe](fe-name-exe-file.md)|重命名可执行文件。|
 |[/FI](fi-name-forced-include-file.md)|预处理指定的包含文件。|
 |[/Fi](fi-preprocess-output-file-name.md)|设置预处理输出文件名。|
-|[/Fm](fm-name-mapfile.md)|创建映射文件。|
+|[/Fm](fm-name-mapfile.md)|创建一个映射文件。|
 |[/Fo](fo-object-file-name.md)|创建对象文件。|
 |[/fp](fp-specify-floating-point-behavior.md)|指定浮点行为。|
 |[/Fp](fp-name-dot-pch-file.md)|指定预编译头文件名。|
@@ -60,7 +60,7 @@ ms.locfileid: "57415872"
 |[/GH](gh-enable-pexit-hook-function.md)|调用挂钩函数 `_pexit`。|
 |[/Gh](gh-enable-penter-hook-function.md)|调用挂钩函数 `_penter`。|
 |[/GL](gl-whole-program-optimization.md)|启用全程序优化。|
-|[/Gm](gm-enable-minimal-rebuild.md)|启用最小重新生成。|
+|[/Gm](gm-enable-minimal-rebuild.md)|已否决。 启用最小重新生成。|
 |[/GR](gr-enable-run-time-type-information.md)|启用运行时类型信息 (RTTI)。|
 |[/Gr](gd-gr-gv-gz-calling-convention.md)|使用 `__fastcall` 调用约定（仅限 x86）。|
 |[/GS](gs-buffer-security-check.md)|缓冲区安全检查。|
@@ -79,7 +79,7 @@ ms.locfileid: "57415872"
 |[/hotpatch](hotpatch-create-hotpatchable-image.md)|创建可热修补的映像。|
 |[/I](i-additional-include-directories.md)|在目录中搜索包含文件。|
 |[/J](j-default-char-type-is-unsigned.md)|更改默认的 `char` 类型。|
-|[/JMC](jmc.md)|支持本机 c + + ' 仅我的代码进行调试。|
+|[/JMC](jmc.md)|支持本机C++仅我的代码调试。|
 |[/kernel](kernel-create-kernel-mode-binary.md)|编译器和链接器将创建可在 Windows 内核中执行的二进制文件。|
 |[/LD](md-mt-ld-use-run-time-library.md)|创建动态链接库。|
 |[/LDd](md-mt-ld-use-run-time-library.md)|创建调试动态链接库。|
@@ -97,7 +97,7 @@ ms.locfileid: "57415872"
 |[/Od](od-disable-debug.md)|禁用优化。|
 |[/Og](og-global-optimizations.md)|已否决。 使用全局优化。|
 |[/Oi](oi-generate-intrinsic-functions.md)|生成内部函数。|
-|[/openmp](openmp-enable-openmp-2-0-support.md)|在源代码中启用 [#pragma omp](../../preprocessor/omp.md) 。|
+|[/openmp](openmp-enable-openmp-2-0-support.md)|使[ `#pragma omp` ](../../preprocessor/omp.md)指令在源代码中。|
 |[/Os](os-ot-favor-small-code-favor-fast-code.md)|代码大小优先。|
 |[/Ot](os-ot-favor-small-code-favor-fast-code.md)|代码速度优先。|
 |[/Ox](ox-full-optimization.md)|使用最大优化 (/Ob2gity /Gs)。|
@@ -114,11 +114,11 @@ ms.locfileid: "57415872"
 |[/sdl](sdl-enable-additional-security-checks.md)|启用更多安全功能和警告。|
 |[/showIncludes](showincludes-list-include-files.md)|在编译期间显示包含文件的列表。|
 |[/source-charset](source-charset-set-source-character-set.md)|设置源字符集。|
-|[/std](std-specify-language-standard-version.md)|C + + 标准的版本兼容性选择器。|
+|[/std](std-specify-language-standard-version.md)|C++标准版本兼容性的选择器。|
 |[/Tc](tc-tp-tc-tp-specify-source-file-type.md)|指定 C 源文件。|
 |[/TC](tc-tp-tc-tp-specify-source-file-type.md)|指定源的所有文件都都 c。|
 |[/Tp](tc-tp-tc-tp-specify-source-file-type.md)|指定 C++ 源文件。|
-|[/TP](tc-tp-tc-tp-specify-source-file-type.md)|指定源的所有文件都的 c + +。|
+|[/TP](tc-tp-tc-tp-specify-source-file-type.md)|指定源的所有文件都都C++。|
 |[/U](u-u-undefine-symbols.md)|移除预定义宏。|
 |[/u](u-u-undefine-symbols.md)|移除所有的预定义宏。|
 |[/utf-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|设置源和执行字符集设置为 utf-8。|
@@ -153,7 +153,7 @@ ms.locfileid: "57415872"
 |[/Zc](zc-conformance.md)|指定下的标准行为[/Ze](za-ze-disable-language-extensions.md)。[/Za、 /Ze （禁用语言扩展）](za-ze-disable-language-extensions.md)|
 |[/Ze](za-ze-disable-language-extensions.md)|已否决。 启用语言扩展。|
 |[/Zf](zf.md)|改进了 PDB 中并行生成的生成时间。|
-|[/Zg](zg-generate-function-prototypes.md)|已在 Visual C++ 2015 中删除。 生成函数原型。|
+|[/Zg](zg-generate-function-prototypes.md)|在 Visual Studio 2015 中删除。 生成函数原型。|
 |[/ZI](z7-zi-zi-debug-information-format.md)|将调试信息包含在与“编辑并继续”兼容的程序数据库中。|
 |[/Zi](z7-zi-zi-debug-information-format.md)|生成完整的调试信息。|
 |[/Zl](zl-omit-default-library-name.md)|从 .obj 文件中移除默认库名（仅限 x86）。|
@@ -164,6 +164,5 @@ ms.locfileid: "57415872"
 
 ## <a name="see-also"></a>请参阅
 
-[C/C++ 生成参考](c-cpp-building-reference.md)<br/>
-[编译器选项](compiler-options.md)<br/>
-[设置编译器选项](setting-compiler-options.md)
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)

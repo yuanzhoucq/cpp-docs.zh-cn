@@ -15,19 +15,19 @@ helpviewer_keywords:
 - overriding, DoFieldExchange
 - m_nFields data member, initializing
 ms.assetid: f00d882a-ff1b-4a75-9717-98d8762bb237
-ms.openlocfilehash: c0e1a35e5476c9e2e335c6f2863429d89e4fa28a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 82f0d946cac3429150250e2df5d1bfd674ec30ee
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395672"
 ---
 # <a name="record-field-exchange-working-with-the-wizard-code"></a>记录字段交换：使用向导代码
 
 本主题说明代码的 MFC 应用程序向导并**添加类**(如中所述[添加 MFC ODBC 使用者](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) 为支持 RFX 和如何你可能想要更改该代码编写。
 
 > [!NOTE]
->  本主题适用于从派生的类`CRecordset`中的批量行提取尚未实现。 如果使用批量行提取，实现批量记录字段交换 (Bulk RFX)。 批量 RFX 是类似于 RFX。 若要了解的差异，请参阅[记录集： 提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+>  本主题适用于从派生的类`CRecordset`中的批量行提取尚未实现。 如果使用批量行提取，实现批量记录字段交换 (Bulk RFX)。 批量 RFX 是类似于 RFX。 若要了解的差异，请参阅[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 当使用 MFC 应用程序向导创建记录集类或**添加类**，向导会将您基于数据源中，表的并在向导中做出的列选择写入 RFX 相关的以下元素：
 
@@ -99,7 +99,7 @@ void CSections::DoFieldExchange(CFieldExchange* pFX)
 
 - 调用`CFieldExchange::SetFieldType`，通过`pFX`指针。 此调用指定到结尾的所有 RFX 函数都调用`DoFieldExchange`或者对下一步调用`SetFieldType`输出列。 有关详细信息，请参阅[CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype)。
 
-- 多次调用`RFX_Text`全局函数，一个每个字段数据成员 (其中的所有`CString`在示例中的变量)。 这些调用指定数据源的列名称和字段数据成员之间的关系。 RFX 函数执行实际数据传输。 类库提供对所有常见的数据类型的 RFX 函数。 有关 RFX 函数的详细信息，请参阅[记录字段交换： 使用 RFX 函数](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)。
+- 多次调用`RFX_Text`全局函数，一个每个字段数据成员 (其中的所有`CString`在示例中的变量)。 这些调用指定数据源的列名称和字段数据成员之间的关系。 RFX 函数执行实际数据传输。 类库提供对所有常见的数据类型的 RFX 函数。 有关 RFX 函数的详细信息，请参阅[记录字段交换：使用 RFX 函数](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)。
 
     > [!NOTE]
     >  在结果集中列的顺序必须与 RFX 函数调用中的顺序匹配`DoFieldExchange`。

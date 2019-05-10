@@ -3,15 +3,15 @@ title: 图形 (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
 ms.openlocfilehash: 4a40575d84c9a0efedcb3c7c9717fc310870b530
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405659"
 ---
 # <a name="graphics-c-amp"></a>图形 (C++ AMP)
 
-C + + AMP 中包含一些 Api [concurrency:: graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md)可用于访问在 Gpu 的纹理支持的命名空间。 一些常见的情况有：
+C++AMP 中包含一些 Api [concurrency:: graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md)可用于访问在 Gpu 的纹理支持的命名空间。 一些常见的情况有：
 
 - 可以使用[纹理](../../parallel/amp/reference/texture-class.md)类作为计算和利用漏洞攻击的数据容器*空间局部性*的纹理缓存和 GPU 硬件的布局。 空间局部性是相距较近的数据元素的属性。
 
@@ -67,8 +67,7 @@ C + + AMP 中包含一些 Api [concurrency:: graphics](../../parallel/amp/refere
 
 - 具有两个或四个组件的短矢量。 唯一的例外是 `double_4`，不允许使用此短矢量。
 
-
-  `texture` 对象的秩可以是 1、2 或 3。 在 `texture` 调用的 lambda 中，`parallel_for_each` 对象只能通过引用来捕获。 纹理存储作为 Direct3D 纹理对象存储在 GPU 中。 有关纹理和纹素在 Direct3D 中的详细信息，请参阅[Direct3D 11 中的纹理简介](http://go.microsoft.com/fwlink/p/?linkid=248502)。
+`texture` 对象的秩可以是 1、2 或 3。 在 `texture` 调用的 lambda 中，`parallel_for_each` 对象只能通过引用来捕获。 纹理存储作为 Direct3D 纹理对象存储在 GPU 中。 有关纹理和纹素在 Direct3D 中的详细信息，请参阅[Direct3D 11 中的纹理简介](http://go.microsoft.com/fwlink/p/?linkid=248502)。
 
 你所使用的纹素类型可以是图形编程中使用的众多纹理格式中的一种。 例如，RGBA 格式可以使用 32 位，其中，R、G、B 和 A 标量元素各 8 位。 图形卡的纹理硬件可以访问基于格式的各个元素。 例如，如果你使用的是 RGBA 格式，则纹理硬件可以提取每个 8 位组件形成 32 位窗体。 在 C++ AMP 中，你可以设置每个纹理标量元素的位数，以便自动访问代码中的各个标量元素，而不必进行移位。
 
@@ -217,8 +216,7 @@ void UseBitsPerScalarElement() { // Create the image data. // Each unsigned int 
 
 - T 不是**双**， `norm`，或`unorm`。
 
-- 
-  `texture::bits_per_scalar_element` 属性为 32。
+- `texture::bits_per_scalar_element` 属性为 32。
 
 如果不符合这三个条件，则 `texture` 对象为只读对象。 编译期间将检查前两个条件。 如果有代码尝试写入 `readonly` 纹理对象，将产生编译错误。 为条件`texture::bits_per_scalar_element`在运行时，检测，并在运行时生成[unsupported_feature](../../parallel/amp/reference/unsupported-feature-class.md)异常，如果尝试写入只读`texture`对象。
 
@@ -265,7 +263,7 @@ void copyHostArrayToTexture() { // Copy from source array to texture object by u
 
 ## <a name="texture-view-classes"></a>纹理视图类
 
-引入了 c + + AMP [texture_view 类](../../parallel/amp/reference/texture-view-class.md)Visual Studio 2013 中。 纹理视图支持相同的纹素类型和为排名[texture 类](../../parallel/amp/reference/texture-class.md)，但与纹理不同，它们提供对其他硬件功能，如纹理采样和 mipmap 访问。 纹理视图支持对基础纹理数据进行只读、只写和读/写访问。
+C++引入了 AMP [texture_view 类](../../parallel/amp/reference/texture-view-class.md)Visual Studio 2013 中。 纹理视图支持相同的纹素类型和为排名[texture 类](../../parallel/amp/reference/texture-class.md)，但与纹理不同，它们提供对其他硬件功能，如纹理采样和 mipmap 访问。 纹理视图支持对基础纹理数据进行只读、只写和读/写访问。
 
 - 只读访问由 `texture_view<const T, N>` 模板专用化提供，支持具有 1 个、2 个或 4 个组件的元素、纹理采样以及动态访问在实例化视图时确定的一系列 mipmap 级别。
 
@@ -273,12 +271,11 @@ void copyHostArrayToTexture() { // Copy from source array to texture object by u
 
 - 读写访问由非专用模板类 `texture_view<T, N>` 提供，与纹理一样，支持仅具有 1 个组件的元素；视图可以访问在实例化视图时确定的一个 mipmap 级别。 它不支持采样。
 
-纹理视图类似于数组视图，但不是提供自动数据管理和移动功能， [array_view 类](../../parallel/amp/reference/array-view-class.md)优于[array 类](../../parallel/amp/reference/array-class.md)。 
-  `texture_view` 只能在基础纹理数据所在的快捷键视图中进行访问。
+纹理视图类似于数组视图，但不是提供自动数据管理和移动功能， [array_view 类](../../parallel/amp/reference/array-view-class.md)优于[array 类](../../parallel/amp/reference/array-class.md)。 `texture_view` 只能在基础纹理数据所在的快捷键视图中进行访问。
 
 ### <a name="writeonlytextureview-deprecated"></a>弃用 writeonly_texture_view
 
-对于 Visual Studio 2013 中，c + + AMP 引入了更好地支持硬件纹理功能，例如采样和 mipmap，无法支持通过[writeonly_texture_view 类](../../parallel/amp/reference/writeonly-texture-view-class.md)。 新引入的 `texture_view` 类支持 `writeonly_texture_view` 中功能的超集；因此，`writeonly_texture_view` 已被弃用。
+对于 Visual Studio 2013， C++ AMP 引入了更好地支持硬件纹理功能，例如采样和 mipmap，不可能受[writeonly_texture_view 类](../../parallel/amp/reference/writeonly-texture-view-class.md)。 新引入的 `texture_view` 类支持 `writeonly_texture_view` 中功能的超集；因此，`writeonly_texture_view` 已被弃用。
 
 我们建议（至少在新代码中）使用 `texture_view` 来访问之前由 `writeonly_texture_view` 提供的功能。 请比较下面两个代码示例，这两个示例均会写入具有 2 个组件的纹理对象 (int_2)。 请注意，在这两种情况下，都必须通过 lambda 表达式中的值来捕获视图 `wo_tv4`。 以下是采用新 `texture_view` 类的示例：
 
@@ -310,7 +307,7 @@ void write2ComponentTexture() {
 
 你可以看到，如果只是写入主 mipmap 级别，则两个代码示例几乎完全相同。 如果已在现有代码中使用 `writeonly_texture_view` 并且不打算改进该代码，则不必进行更改。 但是，如果你考虑改进该代码，则我们建议你重写代码以便使用 `texture_view`，因为它的一些改进支持一些新硬件纹理功能。 有关这些新功能的更多信息，请阅读下文。
 
-有关不推荐使用的详细信息`writeonly_texture_view`，请参阅[c + + AMP 中的纹理视图设计概述](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/25/overview-of-the-texture-view-design-in-c-amp.aspx)本机代码博客中的并行编程。
+有关不推荐使用的详细信息`writeonly_texture_view`，请参阅[中的纹理视图设计概述C++a m P](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/25/overview-of-the-texture-view-design-in-c-amp.aspx)本机代码博客中的并行编程。
 
 ### <a name="instantiating-texture-view-objects"></a>实例化纹理视图对象
 
@@ -382,7 +379,7 @@ void write2ComponentTexture() {
 
 元素基于浮点类型（例如，float、float_2 或 float_4）的纹理视图也可以使用纹理采样来读取，以便利用对各种筛选模式和寻址模式的硬件支持。 C++ AMP 支持计算情景下两种最常见的筛选模式，即点筛选（最近邻域）和线性筛选（加权平均），同时支持四种寻址模式，即重叠寻址、镜像寻址、钳位寻址和边框寻址。 有关寻址模式的详细信息，请参阅[address_mode 枚举](reference/concurrency-graphics-namespace-enums.md#address_mode)。
 
-除了 C++ AMP 直接支持的模式外，你还可以访问底层平台的其他筛选模式和寻址模式，方法是使用互操作 API 采用通过平台 API 直接创建的纹理采样器。 例如，Direct3D 支持各向异性筛选等其他筛选模式，并可以对纹理的各个维度应用不同的寻址模式。 通过使用 Direct3D API，你可以创建一个坐标为纵向重叠、横向镜像并进行各向异性筛选采样的纹理采样器，然后通过 `make_sampler` 互操作 API 利用 C++ AMP 代码中的采样器。 有关详细信息请参阅[c + + AMP 中的纹理采样](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/18/texture-sampling-in-c-amp.aspx)本机代码博客中的并行编程。
+除了 C++ AMP 直接支持的模式外，你还可以访问底层平台的其他筛选模式和寻址模式，方法是使用互操作 API 采用通过平台 API 直接创建的纹理采样器。 例如，Direct3D 支持各向异性筛选等其他筛选模式，并可以对纹理的各个维度应用不同的寻址模式。 通过使用 Direct3D API，你可以创建一个坐标为纵向重叠、横向镜像并进行各向异性筛选采样的纹理采样器，然后通过 `make_sampler` 互操作 API 利用 C++ AMP 代码中的采样器。 有关详细信息请参阅[中的纹理采样C++AMP](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/18/texture-sampling-in-c-amp.aspx)本机代码博客中的并行编程。
 
 纹理视图还支持读取 mipmap。 只读纹理视图（具有常量元素类型的视图）可以提供最大的灵活性，原因在于可对实例化时确定的一系列 mip 级别进行动态采样，而且支持具有 1、2 或 4 个组件的元素。 元素仅具有一个组件的读写纹理视图也支持 mipmap，但仅限实例化时确定的一个 mipmap 级别。 有关详细信息，请参阅[具有 Mipmap 的纹理](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/08/22/texture-with-mipmaps.aspx)本机代码博客中的并行编程。
 
@@ -407,7 +404,7 @@ parallel_for_each(w_view.extent, [=](index<2> idx) restrict(amp)
 
 ## <a name="interoperability"></a>互操作性
 
-C + + AMP 运行时支持之间的互操作性`texture<T,1>`并[ID3D11Texture1D 接口](http://go.microsoft.com/fwlink/p/?linkId=248503)之间`texture<T,2>`并[ID3D11Texture2D 接口](http://go.microsoft.com/fwlink/p/?linkId=255317)，和之间`texture<T,3>`并[ID3D11Texture3D 接口](http://go.microsoft.com/fwlink/p/?linkId=255377)。 [Get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture)方法采用`texture`对象，并返回`IUnknown`接口。 [Make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture)方法采用`IUnknown`接口和一个`accelerator_view`对象，并返回`texture`对象。
+C++ AMP 运行时支持之间的互操作性`texture<T,1>`并[ID3D11Texture1D 接口](http://go.microsoft.com/fwlink/p/?linkId=248503)之间`texture<T,2>`并[ID3D11Texture2D 接口](http://go.microsoft.com/fwlink/p/?linkId=255317)，之间以及`texture<T,3>`并[ID3D11Texture3D 接口](http://go.microsoft.com/fwlink/p/?linkId=255377)。 [Get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture)方法采用`texture`对象，并返回`IUnknown`接口。 [Make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture)方法采用`IUnknown`接口和一个`accelerator_view`对象，并返回`texture`对象。
 
 ## <a name="see-also"></a>请参阅
 

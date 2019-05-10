@@ -10,12 +10,12 @@ helpviewer_keywords:
 - checksum setting
 - RELEASE linker option
 ms.assetid: 93bcadf4-29ac-4824-914b-6997e3751d22
-ms.openlocfilehash: 9192768f711da721cfef65314573d78caa8c2442
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 1dc09b38beeb763733f8fa6a8ffa972059b30e03
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62318922"
 ---
 # <a name="release-set-the-checksum"></a>/RELEASE（设置校验和）
 
@@ -29,11 +29,11 @@ ms.locfileid: "57426636"
 
 操作系统要求的设备驱动程序的校验和。 设置发布版本的设备驱动程序的校验和，以确保与将来的操作系统的兼容性。
 
-默认情况下设置 /RELEASE 选项时[已](../../build/reference/subsystem-specify-subsystem.md)指定选项。
+默认情况下设置 /RELEASE 选项时[已](subsystem-specify-subsystem.md)指定选项。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置 Visual c + + 项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
 1. 单击**链接器**文件夹。
 
@@ -47,5 +47,5 @@ ms.locfileid: "57426636"
 
 ## <a name="see-also"></a>请参阅
 
-[设置链接器选项](../../build/reference/setting-linker-options.md)<br/>
-[链接器选项](../../build/reference/linker-options.md)
+[MSVC 链接器参考](linking.md)<br/>
+[MSVC 链接器选项](linker-options.md)

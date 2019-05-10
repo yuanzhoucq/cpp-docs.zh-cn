@@ -1,17 +1,17 @@
 ---
-title: 唯一 （c + + COM 属性）
+title: 唯一 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.unique
 helpviewer_keywords:
 - unique attribute
 ms.assetid: abd7ed14-5ae7-44a8-8333-0058e9c92b2f
-ms.openlocfilehash: 9d049983bb072e073180f1821f04b79e5f5c7444
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5d7a2d60dc295a4390f777a9ff3718f41321ddd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407102"
 ---
 # <a name="unique-c"></a>unique (C++)
 
@@ -25,7 +25,7 @@ ms.locfileid: "50512802"
 
 ## <a name="remarks"></a>备注
 
-**唯一**c + + 属性具有相同的功能[唯一](/windows/desktop/Midl/unique)MIDL 特性。
+**唯一**C++属性具有相同的功能[唯一](/windows/desktop/Midl/unique)MIDL 特性。
 
 ## <a name="example"></a>示例
 
@@ -39,8 +39,8 @@ ms.locfileid: "50512802"
 |-|-|
 |**适用对象**|**typedef**， **struct**，**联合**，接口参数，接口方法|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

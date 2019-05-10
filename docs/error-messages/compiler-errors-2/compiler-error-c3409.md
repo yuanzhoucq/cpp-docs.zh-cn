@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3409
 ms.assetid: e372d9fa-230c-4b28-b6d3-6ad81ccf9dbb
-ms.openlocfilehash: b6ceb6f2e8700a5459dbd01db443ef90de314b5e
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 24f107e0c1f74f95afc521c8a4c888a26a35c13a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62173387"
 ---
 # <a name="compiler-error-c3409"></a>编译器错误 C3409
 
@@ -19,7 +19,7 @@ ms.locfileid: "51330081"
 
 ## <a name="remarks"></a>备注
 
-括号被解释为编译器[特性](../../windows/cpp-attributes-reference.md)找到块，但没有属性。
+括号被解释为编译器[特性](../../windows/attributes-alphabetical-reference.md)找到块，但没有属性。
 
 使用方括号作为 lambda 表达式定义的一部分时，编译器可能生成此错误。 当编译器无法确定是否方括号是定义的 lambda 表达式或特性块的一部分时，将发生此错误。 有关 lambda 表达式的详细信息，请参阅 [Lambda 表达式](../../cpp/lambda-expressions-in-cpp.md)。
 
@@ -69,6 +69,6 @@ int main()
 
 ## <a name="see-also"></a>请参阅
 
-[attribute](../../windows/cpp-attributes-reference.md)<br/>
+[attribute](../../windows/attributes-alphabetical-reference.md)<br/>
 [Lambda 表达式](../../cpp/lambda-expressions-in-cpp.md)<br/>
 [Lambda 表达式语法](../../cpp/lambda-expression-syntax.md)

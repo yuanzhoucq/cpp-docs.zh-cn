@@ -1,18 +1,16 @@
 ---
 title: nonextensible 特性
 ms.date: 11/04/2016
-f1_keywords:
-- nonextensible
 helpviewer_keywords:
 - nonextensible attribute
 - dual interfaces, nonextensible attribute
 ms.assetid: 02a4a18b-ffd3-4d53-8fd1-feb1c05ad5ac
-ms.openlocfilehash: 5aa5b8514435e9876500daa4d92504d75eb6dc23
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: cc57acb8bd7bc3e32c764606da651f57316ceabf
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57257626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62250098"
 ---
 # <a name="nonextensible-attribute"></a>nonextensible 特性
 

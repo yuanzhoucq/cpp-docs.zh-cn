@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - auto_search attribute
 ms.assetid: 0fee2503-cd28-4d8c-b4d5-15ca0a91d2d2
-ms.openlocfilehash: 54695f54414439349638a62189393c8790512625
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29638afbe42a5c5f1894bc7047d10e05363f494e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403550"
 ---
 # <a name="autosearch"></a>auto_search
 
-**C + + 专用**
+**C++特定**
 
 指定，使用引用类型库时`#import`和本身引用了另一个类型库，则编译器可以隐式`#import`其他类型库。
 
@@ -27,7 +27,7 @@ auto_search
 
 ## <a name="remarks"></a>备注
 
-**结束 c + + 专用**
+**结束C++特定**
 
 ## <a name="see-also"></a>请参阅
 

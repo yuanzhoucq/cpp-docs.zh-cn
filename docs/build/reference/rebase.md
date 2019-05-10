@@ -11,12 +11,12 @@ helpviewer_keywords:
 - executable files [C++], base address
 - /REBASE editbin option [C++]
 ms.assetid: 3f89d874-af5c-485b-974b-fd205f6e1a4b
-ms.openlocfilehash: f0b581dfc116e25228a9aa9133c4de027e194799
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 42cbcb911fcd0aa7753d84aae5523d28371b9972
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319195"
 ---
 # <a name="rebase"></a>/REBASE
 
@@ -26,7 +26,7 @@ ms.locfileid: "57422034"
 
 ## <a name="remarks"></a>备注
 
-此选项设置为指定的文件的基址。 EDITBIN 将分配新的基址，根据大小接近的 64 KB 向上舍入为每个文件的连续地址空间中。 有关基址的详细信息，请参阅[基址](../../build/reference/base-base-address.md)（/ 基） 链接器选项。
+此选项设置为指定的文件的基址。 EDITBIN 将分配新的基址，根据大小接近的 64 KB 向上舍入为每个文件的连续地址空间中。 有关基址的详细信息，请参阅[基址](base-base-address.md)（/ 基） 链接器选项。
 
 指定的程序可执行文件和中的 Dll*文件*它们是以数据为基础的顺序在 EDITBIN 命令行参数。 您可以选择指定一个或多个*修饰符*，每个由逗号分隔 (**，**):
 
@@ -38,4 +38,4 @@ ms.locfileid: "57422034"
 
 ## <a name="see-also"></a>请参阅
 
-[EDITBIN 选项](../../build/reference/editbin-options.md)
+[EDITBIN 选项](editbin-options.md)

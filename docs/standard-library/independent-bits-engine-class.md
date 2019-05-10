@@ -7,11 +7,11 @@ helpviewer_keywords:
 - independent_bits_engine class
 ms.assetid: 889e9a82-f457-49a7-9d2e-26e0fc3cd907
 ms.openlocfilehash: 8f420ca054d20cd222b8eda9a4a35a383a8e535a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159218"
 ---
 # <a name="independentbitsengine-class"></a>independent_bits_engine 类
 
@@ -26,7 +26,7 @@ class independent_bits_engine;
 
 ### <a name="parameters"></a>参数
 
-*引擎*<br/>
+*Engine*<br/>
 基引擎类型。
 
 *W*<br/>

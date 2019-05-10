@@ -5,11 +5,11 @@ helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), symbols reference
 ms.assetid: 96ed59cc-dafa-4299-bb2e-9c7c3f496491
 ms.openlocfilehash: e57583ce2b4184120569be3a44d87ffc3f51586c
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62210211"
 ---
 # <a name="symbols-reference"></a>符号参考
 
@@ -23,14 +23,14 @@ ms.locfileid: "51326610"
 
 |||
 |-|-|
-|[\@cpu](../../assembler/masm/at-cpu.md)|[\@environ](../../assembler/masm/at-environ.md)|
+|[\@Cpu](../../assembler/masm/at-cpu.md)|[\@environ](../../assembler/masm/at-environ.md)|
 |[\@接口](../../assembler/masm/at-interface.md)|[\@版本](../../assembler/masm/at-version.md)|
 
 ## <a name="file-information"></a>文件信息
 
 |||
 |-|-|
-|[\@FileCur](../../assembler/masm/at-filecur.md)|[\@文件名](../../assembler/masm/at-filename.md)|
+|[\@FileCur](../../assembler/masm/at-filecur.md)|[\@FileName](../../assembler/masm/at-filename.md)|
 |[\@行](../../assembler/masm/at-line.md)||
 
 ## <a name="macro-functions"></a>宏函数
@@ -51,9 +51,9 @@ ms.locfileid: "51326610"
 
 ||||
 |-|-|-|
-|[\@代码](../../assembler/masm/at-code.md)|[\@CodeSize](../../assembler/masm/at-codesize.md)|[\@CurSeg](../../assembler/masm/at-curseg.md)|
-|[\@数据](../../assembler/masm/at-data.md)|[\@DataSize](../../assembler/masm/at-datasize.md)|[\@fardata](../../assembler/masm/at-fardata.md)|
-|[\@fardata？](../../assembler/masm/at-fardata-q.md)|[\@模型](../../assembler/masm/at-model.md)|[\@堆栈](../../assembler/masm/at-stack.md)|
+|[\@code](../../assembler/masm/at-code.md)|[\@CodeSize](../../assembler/masm/at-codesize.md)|[\@CurSeg](../../assembler/masm/at-curseg.md)|
+|[\@data](../../assembler/masm/at-data.md)|[\@DataSize](../../assembler/masm/at-datasize.md)|[\@fardata](../../assembler/masm/at-fardata.md)|
+|[\@fardata?](../../assembler/masm/at-fardata-q.md)|[\@模型](../../assembler/masm/at-model.md)|[\@stack](../../assembler/masm/at-stack.md)|
 |[\@WordSize](../../assembler/masm/at-wordsize.md)|||
 
 ## <a name="see-also"></a>请参阅

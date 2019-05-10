@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3662
 ms.assetid: 61bd3e41-a86b-42c0-be89-d992d3906ff1
-ms.openlocfilehash: c8f2252c05e3e264740004f4126c7557f30b126a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28d8df02d63fc1b16a392a2df83524cd616d5ab3
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400300"
 ---
 # <a name="compiler-error-c3662"></a>编译器错误 C3662
 
@@ -19,7 +19,7 @@ ms.locfileid: "50657322"
 
 不允许在本机类型的成员上使用重写说明符。
 
-有关详细信息，请参阅[显式重写](../../windows/explicit-overrides-cpp-component-extensions.md)。
+有关详细信息，请参阅[显式重写](../../extensions/explicit-overrides-cpp-component-extensions.md)。
 
 ## <a name="example"></a>示例
 

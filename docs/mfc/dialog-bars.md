@@ -8,19 +8,18 @@ helpviewer_keywords:
 - dialog bars
 - dialog bars [MFC], about dialog bars
 ms.assetid: 485c8055-6bb0-4051-8417-dd2971499321
-ms.openlocfilehash: b4f8975cb67f754778280f84ece98de2ef949c1a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e4e843327daba6f0aa468cb07394165bc70fa7f0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389618"
 ---
 # <a name="dialog-bars"></a>对话栏
 
 对话栏是一个工具栏，一种类型的[控件条](../mfc/control-bars.md)，可以包含任何类型的控件。 因为它具有无模式对话框的特征[CDialogBar](../mfc/reference/cdialogbar-class.md)对象提供了更强大的工具栏。
 
-工具栏和 `CDialogBar` 对象之间有一些主要差异。 
-  `CDialogBar` 对象是从可以借助 Visual C++ 对话框编辑器创建的、可包含各种 Windows 控件的对话框模板资源创建的。 用户可以在控件之间进行切换。 您可以指定对齐样式，以将对话栏与父框架窗口的任何部分对齐，甚至可以在调整父窗口大小时将其留在原来的位置。 下图演示了带有各种控件的对话栏。
+工具栏和 `CDialogBar` 对象之间有一些主要差异。 `CDialogBar` 对象是从可以借助 Visual C++ 对话框编辑器创建的、可包含各种 Windows 控件的对话框模板资源创建的。 用户可以在控件之间进行切换。 您可以指定对齐样式，以将对话栏与父框架窗口的任何部分对齐，甚至可以在调整父窗口大小时将其留在原来的位置。 下图演示了带有各种控件的对话栏。
 
 ![VC 对话栏](../mfc/media/vc378t1.gif "VC 对话栏") <br/>
 对话栏
@@ -34,4 +33,4 @@ ms.locfileid: "57297757"
 ## <a name="see-also"></a>请参阅
 
 [用户界面元素](../mfc/user-interface-elements-mfc.md)<br/>
-[示例](../visual-cpp-samples.md)
+[示例](../overview/visual-cpp-samples.md)

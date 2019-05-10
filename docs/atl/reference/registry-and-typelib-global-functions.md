@@ -1,6 +1,6 @@
 ---
 title: 注册表和类型库全局函数
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - atlbase/ATL::AtlGetPerUserRegistration
 - afxpriv/ATL::AfxRegCreateKey
@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - RegistryDataExchange function, global functions
 ms.assetid: d58b8a4e-975c-4417-8b34-d3c847f679b3
-ms.openlocfilehash: f94dd1770ff194e47e2e38cc3a9b5cf0cbaebe58
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c5fdaceb47b6cd09dd9d66f26af1337a8dc6bbae
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62275074"
 ---
 # <a name="registry-and-typelib-global-functions"></a>注册表和类型库全局函数
 
@@ -33,8 +33,8 @@ ms.locfileid: "57301826"
 
 |||
 |-|-|
-|[AfxRegCreateKey](#afxrefcreatekey)|创建指定的注册表项。|
-|[AfxRegDeleteKey](#afxrefdeletekey)|删除指定的注册表项。|
+|[AfxRegCreateKey](#afxregcreatekey)|创建指定的注册表项。|
+|[AfxRegDeleteKey](#afxregdeletekey)|删除指定的注册表项。|
 |[AfxRegisterPreviewHandler](#afxregisterpreviewhandler)|用于注册预览处理程序的帮助程序。|
 |[AfxUnregisterPreviewHandler](#afxunregisterpreviewhandler)| 用于注销预览处理程序的帮助程序。 |
 |[AtlRegisterTypeLib](#atlregistertypelib)|调用此函数可注册类型库。|
@@ -343,7 +343,7 @@ ATLAPI AtlUnRegisterTypeLib(
 
 ### <a name="remarks"></a>备注
 
-使用此帮助器函数[CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib)并[AtlComModuleUnregisterServer](#atlcommoduleunregisterserver)。
+使用此帮助器函数[CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib)并[AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver)。
 
 ### <a name="requirements"></a>要求
 

@@ -1,17 +1,17 @@
 ---
-title: nonextensible （c + + COM 特性）
+title: nonextensible (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.nonextensible
 helpviewer_keywords:
 - nonextensible attribute
 ms.assetid: c7ef1554-809f-4ea0-a7cd-dc7786d40c3e
-ms.openlocfilehash: 332f61148ccf8cb5816e8bd347181ac9d130a730
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed396b3d55e16cf195949c713ab574812b796a1a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407570"
 ---
 # <a name="nonextensible"></a>nonextensible
 
@@ -25,7 +25,7 @@ ms.locfileid: "50512436"
 
 ## <a name="remarks"></a>备注
 
-**Nonextensible** c + + 属性具有相同的功能[nonextensible](/windows/desktop/Midl/nonextensible) MIDL 特性。
+**Nonextensible** C++属性具有相同的功能[nonextensible](/windows/desktop/Midl/nonextensible) MIDL 特性。
 
 利用**nonextensible**还要求[oleautomation](oleautomation.md)属性。
 
@@ -57,7 +57,7 @@ __interface IFireTabCtrl
 |**适用对象**|**interface**|
 |**可重复**|否|
 |**必需的特性**|`dual` 和`oleautomation`，或 `dispinterface`|
-|**无效的特性**|无|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

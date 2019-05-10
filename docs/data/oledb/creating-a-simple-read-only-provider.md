@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB providers, creating
 - OLE DB provider templates, creating providers
 ms.assetid: ade8ccdd-9ea4-4e46-a964-18460c2a2401
-ms.openlocfilehash: 2ac8e45ca06a5566923141adf5a22dc6710eeeab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a80678f6bc512c45c0df2ea5cbfc4708f1252ac0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62361948"
 ---
 # <a name="creating-a-simple-read-only-provider"></a>创建简单的只读提供程序
 

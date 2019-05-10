@@ -133,11 +133,11 @@ helpviewer_keywords:
 - CPaneFrameWnd [MFC], m_bUseSaveBits
 ms.assetid: ea3423a3-2763-482e-b763-817036ded10d
 ms.openlocfilehash: 3172556b3b12141aaae45992dee36061aebf2a15
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372902"
 ---
 # <a name="cpaneframewnd-class"></a>CPaneFrameWnd 类
 
@@ -229,7 +229,7 @@ class CPaneFrameWnd : public CWnd
 
 ### <a name="data-members"></a>数据成员
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[CPaneFrameWnd::m_bUseSaveBits](#m_busesavebits)|指定是否将窗口类注册 CS_SAVEBITS 类样式。|
 
@@ -741,7 +741,7 @@ virtual LRESULT HitTest(
 
 以下值之一：
 
-|值|含义|
+|“值”|含义|
 |-----------|-------------|
 |HTNOWHERE|关键是微型框架窗口外。|
 |HTCLIENT|关键是工作区中。|

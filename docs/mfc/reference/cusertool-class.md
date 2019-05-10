@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CUserTool [MFC], m_strInitialDirectory
 - CUserTool [MFC], m_strLabel
 ms.assetid: 7c287d3e-d012-488d-b4e1-aa0f83f294bb
-ms.openlocfilehash: ca9035ecfcde0c2e82628c5509a16557a487b8cc
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5bb0ae073b722c97e8e30158f8f7832fd88b2fbc
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323419"
 ---
 # <a name="cusertool-class"></a>CUserTool 类
 
@@ -70,7 +70,7 @@ class CUserTool : public CObject
 
 ### <a name="data-members"></a>数据成员
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[CUserTool::m_strArguments](#m_strarguments)|用户工具命令行参数。|
 |[CUserTool::m_strInitialDirectory](#m_strinitialdirectory)|用户工具初始目录。|
@@ -82,7 +82,7 @@ class CUserTool : public CObject
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何创建从工具`CUserToolsManager`对象，设置`m_strLabel`成员变量，并设置用户工具运行的应用程序。 此代码片段属于[Visual Studio 演示示例](../../visual-cpp-samples.md)。
+下面的示例演示如何创建从工具`CUserToolsManager`对象，设置`m_strLabel`成员变量，并设置用户工具运行的应用程序。 此代码片段属于[Visual Studio 演示示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#35](../../mfc/codesnippet/cpp/cusertool-class_1.cpp)]
 

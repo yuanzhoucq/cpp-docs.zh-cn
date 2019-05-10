@@ -5,12 +5,12 @@ helpviewer_keywords:
 - connection points [C++], adding to ATL objects
 - Implement Connection Point ATL wizard
 ms.assetid: 843531be-4a36-4db0-9d54-e029b1a72a8b
-ms.openlocfilehash: 39943c1bb071efba4fc3f2b42b227a4516e3856c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7341e69852ed804122e0196b51d305f5af0c35b9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223514"
 ---
 # <a name="adding-connection-points-to-an-object"></a>将连接点添加到对象
 
@@ -36,7 +36,7 @@ ms.locfileid: "57299906"
 
    [!code-cpp[NVC_ATL_Windowing#82](../atl/codesnippet/cpp/adding-connection-points-to-an-object_2.idl)]
 
-   请参阅中的.idl 文件[Circ](../visual-cpp-samples.md) ATL 示例有关的示例。
+   请参阅中的.idl 文件[Circ](../overview/visual-cpp-samples.md) ATL 示例有关的示例。
 
 3. 使用类视图将方法和属性添加到事件接口。 右键单击类视图中的类，指向**外**快捷菜单，然后单击**添加连接点**。
 

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - toolbars [MFC], wrapping
 - floating palettes
 ms.assetid: b7f9f9d4-f629-47d2-a3c4-2b33fa6b51e4
-ms.openlocfilehash: 93d1e067777b1c6f4430fe9cc44ae531559b6962
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 01450dca56ad662c8db0a35f89749c4a288109b3
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62352289"
 ---
 # <a name="docking-and-floating-toolbars"></a>停靠和浮动工具栏
 
@@ -50,7 +50,7 @@ Microsoft 基础类库支持可停靠工具栏。 可停靠工具栏可以附加
 
 - [设置换行位置固定样式工具栏](#_core_setting_wrap_positions_for_a_fixed_style_toolbar)
 
-请参阅 MFC 常规示例[DOCKTOOL](../visual-cpp-samples.md)有关示例。
+请参阅 MFC 常规示例[DOCKTOOL](../overview/visual-cpp-samples.md)有关示例。
 
 ##  <a name="_core_enabling_docking_in_a_frame_window"></a> 启用停靠在框架窗口中
 
@@ -78,7 +78,7 @@ Microsoft 基础类库支持可停靠工具栏。 可停靠工具栏可以附加
 
 ##  <a name="_core_dynamically_resizing_the_toolbar"></a> 动态调整大小的工具栏
 
-截至 Visual c + + 4.0 版，你可更加动态重设大小的浮动工具栏应用程序的用户。 通常，工具栏的长、 线性形状，水平显示。 但可以更改工具栏的方向和形状。 例如，当用户将停靠工具栏根据一个框架窗口的垂直边，形状将更改为竖排版式。 还有可能工具栏重塑，一个具有多个行的按钮的矩形。
+截至 VisualC++版本 4.0 中，您可以让的应用程序动态重设大小的浮动工具栏的用户。 通常，工具栏的长、 线性形状，水平显示。 但可以更改工具栏的方向和形状。 例如，当用户将停靠工具栏根据一个框架窗口的垂直边，形状将更改为竖排版式。 还有可能工具栏重塑，一个具有多个行的按钮的矩形。
 
 你可以：
 
@@ -104,7 +104,7 @@ Microsoft 基础类库支持可停靠工具栏。 可停靠工具栏可以附加
 
 [!code-cpp[NVC_MFCDocViewSDI#10](../mfc/codesnippet/cpp/docking-and-floating-toolbars_1.cpp)]
 
-MFC 常规示例[DOCKTOOL](../visual-cpp-samples.md)演示如何使用类的成员函数[CControlBar](../mfc/reference/ccontrolbar-class.md)并[CToolBar](../mfc/reference/ctoolbar-class.md)管理工具栏的动态布局。 请参阅文件 EDITBAR。在 DOCKTOOL CPP。
+MFC 常规示例[DOCKTOOL](../overview/visual-cpp-samples.md)演示如何使用类的成员函数[CControlBar](../mfc/reference/ccontrolbar-class.md)并[CToolBar](../mfc/reference/ctoolbar-class.md)管理工具栏的动态布局。 请参阅文件 EDITBAR。在 DOCKTOOL CPP。
 
 ### <a name="what-do-you-want-to-know-more-about"></a>你想要了解更多信息
 

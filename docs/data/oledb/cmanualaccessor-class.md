@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CreateAccessor method
 - CreateParameterAccessor method
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
-ms.openlocfilehash: 98689fc3262cd8fc3bcb29e0bda59b1f40761141
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 526415f14172911b26462fab97d9e0a7513b8cad
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62231059"
 ---
 # <a name="cmanualaccessor-class"></a>CManualAccessor 类
 
@@ -216,7 +216,7 @@ HRESULT CreateParameterAccessor(int nBindEntries,
 
 ## <a name="see-also"></a>请参阅
 
-[DBViewer](../../visual-cpp-samples.md)<br/>
+[DBViewer](../../overview/visual-cpp-samples.md)<br/>
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CAccessor 类](../../data/oledb/caccessor-class.md)<br/>

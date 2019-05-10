@@ -1,18 +1,18 @@
 ---
 title: Platform::Collections::InputIterator 类
-ms.date: 12/30/2016
+ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::InputIterator::InputIterator
 helpviewer_keywords:
 - InputIterator Class
 ms.assetid: ef72eea4-32a9-42b9-8119-ce87dbdcd3be
-ms.openlocfilehash: d01519870d52a51a18e25f73d5caa853d90a8792
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49b131b01fe3d9cad5f8366fd4cc0c110b5d060c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161792"
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Platform::Collections::InputIterator 类
 
@@ -53,7 +53,7 @@ InputIterator 模板类的类型名称。
 |名称|描述|
 |----------|-----------------|
 |[InputIterator::operator!= 运算符](#operator-inequality)|指示当前 InputIterator 是否不等于指定的 InputIterator。|
-|[InputIterator::operator* 运算符](#operator-decrement)|检索对当前 InputIterator 指定的元素的引用。|
+|[InputIterator::operator* 运算符](#operator-dereference)|检索对当前 InputIterator 指定的元素的引用。|
 |[InputIterator::operator++ 运算符](#operator-increment)|递增当前 InputIterator。|
 |[InputIterator::operator== 运算符](#operator-equality)|指示当前 InputIterator 是否等于指定的 InputIterator。|
 |[InputIterator::operator-> 运算符](#operator-arrow)|检索当前 InputIterator 引用的元素的地址。|
@@ -76,12 +76,12 @@ InputIterator 模板类的类型名称。
 
 ```
 InputIterator();
-explicit InputIterator(Windows::Foundation::Collections<X>^ iter);
+explicit InputIterator(Windows::Foundation::Collections<X>^ iterator);
 ```
 
 ### <a name="parameters"></a>参数
 
-*Iter*<br/>
+*Iterator*<br/>
 迭代器对象。
 
 ## <a name="operator-arrow"></a>  Inputiterator:: Operator-&gt;运算符

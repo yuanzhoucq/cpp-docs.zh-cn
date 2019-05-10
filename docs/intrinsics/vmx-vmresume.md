@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __vmx_vmresume intrinsic
 - VMRESUME instruction
 ms.assetid: 233fe1b6-c727-493a-a484-1b2363732281
-ms.openlocfilehash: 4be197566f32c5edf49a9036b1ac641416d28fc4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d2bfe9a8f98b8a03a82768177217d70674708c39
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62390004"
 ---
 # <a name="vmxvmresume"></a>__vmx_vmresume
 

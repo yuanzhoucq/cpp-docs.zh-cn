@@ -1,5 +1,5 @@
 ---
-title: 版本 （c + + COM 属性）
+title: 版本 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.version
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - version attribute
 - version information, version attribute
 ms.assetid: db6ce5d8-82c2-4329-b1a8-8ca2f67342cb
-ms.openlocfilehash: 01c4cca846326d237fdacd19187a44e21bd15913
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fe1df9e12b9adbf9ce55978fd3479f7e740ddc96
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407154"
 ---
 # <a name="version-c"></a>version (C++)
 
@@ -31,7 +31,7 @@ ms.locfileid: "50519309"
 
 ## <a name="remarks"></a>备注
 
-**版本**c + + 属性具有相同的功能[版本](/windows/desktop/Midl/version)MIDL 特性并将传递给生成的.idl 文件。
+**版本**C++属性具有相同的功能[版本](/windows/desktop/Midl/version)MIDL 特性并将传递给生成的.idl 文件。
 
 ## <a name="example"></a>示例
 
@@ -46,7 +46,7 @@ ms.locfileid: "50519309"
 |**适用对象**|**类**，**结构**|
 |**可重复**|否|
 |**必需的特性**|**coclass**|
-|**无效的特性**|无|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

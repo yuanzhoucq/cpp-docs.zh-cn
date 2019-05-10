@@ -1,6 +1,6 @@
 ---
 title: uninitialized_object 类
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - uninitialized_object
 - AMPRT/uninitialized_object
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - uninitialized_object class
 ms.assetid: 6ae3c4e8-64a6-4511-a158-03be197b63af
-ms.openlocfilehash: 1c431364aee0f1d1e75059abdb023ae52cf92155
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 05c24672531d50fa9bc31587e6c6733fdff21f29
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405451"
 ---
 # <a name="uninitializedobject-class"></a>uninitialized_object 类
 
@@ -31,7 +31,7 @@ class uninitialized_object : public runtime_exception;
 
 |名称|描述|
 |----------|-----------------|
-|[uninitialized_object 构造函数](#ctor)|初始化 `uninitialized_object` 类的新实例。|
+|[uninitialized_object 构造函数](#uninitialized_object)|初始化 `uninitialized_object` 类的新实例。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -46,17 +46,18 @@ class uninitialized_object : public runtime_exception;
 **标头：** amprt.h
 
 **命名空间：** 并发
-## <a name="uninitialized_object__ctor"></a> unsupported_feature
 
-构造的功能异常的新实例。
+## <a name="uninitializedobject"></a>uninitialized_object
+
+构造的新实例`uninitialized_object`异常。
 
 ### <a name="syntax"></a>语法
 
 ```
-explicit unsupported_feature(
+explicit uninitialized_object(
     const char * _Message ) throw();
 
-unsupported_feature() throw();
+uninitialized_object() throw();
 ```
 
 ### <a name="parameters"></a>参数
@@ -66,7 +67,7 @@ unsupported_feature() throw();
 
 ### <a name="return-value"></a>返回值
 
-`unsupported_feature` 对象。
+`uninitialized_object`异常对象。
 
 ## <a name="see-also"></a>请参阅
 

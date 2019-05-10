@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3084
 ms.assetid: 0362cb70-e24e-476f-a24d-8f5bb97c3afd
-ms.openlocfilehash: 7659c17d999a8720ffb0ccdcdb631b27949167b7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 01e229fe0ae5bf9e04c577bb653ff1ed7fdb33bf
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62243279"
 ---
 # <a name="compiler-error-c3084"></a>编译器错误 C3084
 
@@ -19,7 +19,7 @@ ms.locfileid: "50572674"
 
 未正确声明终结器或析构函数。
 
-例如，析构函数不应标记为密封。  派生类型无法访问析构函数。  有关详细信息，请参阅[显式重写](../../windows/explicit-overrides-cpp-component-extensions.md)并[析构函数和终结器中如何： 定义和使用类和结构 (C + + CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)。
+例如，析构函数不应标记为密封。  派生类型无法访问析构函数。  有关详细信息，请参阅[显式重写](../../extensions/explicit-overrides-cpp-component-extensions.md)和[析构函数和终结器中如何：定义和使用类和结构 (C++/CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)。
 
 ## <a name="example"></a>示例
 

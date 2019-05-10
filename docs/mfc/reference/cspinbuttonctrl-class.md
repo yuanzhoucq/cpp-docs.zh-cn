@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: ff61fb4f918e25d430fc31ae55c3ad8794ce39f1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6f864a37c46158ab98776cd96d9f50d7cfaeb13d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62324397"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl 类
 
@@ -399,7 +399,7 @@ void SetRange32(
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 CMNCTRL2](../../visual-cpp-samples.md)<br/>
+[MFC 示例 CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CSliderCtrl 类](../../mfc/reference/csliderctrl-class.md)

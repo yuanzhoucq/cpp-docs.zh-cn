@@ -14,12 +14,12 @@ helpviewer_keywords:
 - -GS compiler option [C++]
 - buffers [C++], avoiding overruns
 ms.assetid: 8d8a5ea1-cd5e-42e1-bc36-66e1cd7e731e
-ms.openlocfilehash: 6681ff09b846011af1b500f88a535c208d0bc1c1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 10afa874092eb563903ba5f49c6add136afc869c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292167"
 ---
 # <a name="gs-buffer-security-check"></a>/GS（缓冲区安全检查）
 
@@ -88,7 +88,7 @@ struct { int a; int b; };
 
 在 x86，如果函数使用异常处理程序，编译器将插入安全 cookie 来保护异常处理程序的地址。 展开帧的过程期间将检查该 cookie。
 
-**/GS**保护*易受攻击的参数*，传递到函数。 易受攻击的参数是指针，c + + 引用，C 结构 （c + + POD 类型），其中包含一个指针或 GS 缓冲区。
+**/GS**保护*易受攻击的参数*，传递到函数。 易受攻击的参数是指针，C++引用，C 结构 (C++的 POD 类型)，其中包含一个指针或 GS 缓冲区。
 
 Cookie 和本地变量之前分配的易受攻击的参数。 缓冲区溢出可以覆盖这些参数。 和之前该函数将返回和执行安全检查，使用这些参数的函数中的代码可能会导致攻击。 为了尽量减少这种危险，编译器将函数 prolog 过程中使用易受攻击的参数的副本，并将其放任何缓冲区的存储区域下方。
 
@@ -96,7 +96,7 @@ Cookie 和本地变量之前分配的易受攻击的参数。 缓冲区溢出可
 
 - 不包含 GS 缓冲区的函数。
 
-- 优化 ([/O 选项](../../build/reference/o-options-optimize-code.md)) 未启用。
+- 优化 ([/O 选项](o-options-optimize-code.md)) 未启用。
 
 - 具有变量参数列表 （...） 的函数。
 
@@ -116,9 +116,9 @@ Cookie 和本地变量之前分配的易受攻击的参数。 缓冲区溢出可
 
 1. 在中**解决方案资源管理器**，右键单击项目，然后单击**属性**。
 
-   有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+   有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
-1. 在中**属性页**对话框中，单击**C/c + +** 文件夹。
+1. 在中**属性页**对话框中，单击**C /C++** 文件夹。
 
 1. 单击**代码生成**属性页。
 
@@ -157,5 +157,5 @@ int main() {
 
 ## <a name="see-also"></a>请参阅
 
-[编译器选项](../../build/reference/compiler-options.md)<br/>
-[设置编译器选项](../../build/reference/setting-compiler-options.md)
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)

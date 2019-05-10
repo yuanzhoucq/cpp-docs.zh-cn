@@ -27,11 +27,11 @@ helpviewer_keywords:
 - _abnormal_termination keyword [C++]
 ms.assetid: 30d60071-ea49-4bfb-a8e6-7a420de66381
 ms.openlocfilehash: 400c831eec1c570f26dfc010b4e4c61e7d21b1c4
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62266837"
 ---
 # <a name="try-except-statement"></a>try-except 语句
 
@@ -41,11 +41,11 @@ ms.locfileid: "51326649"
 
 ## <a name="syntax"></a>语法
 
-> **\_\_请尝试**<br/>
+> **\_\_try**<br/>
 > {<br/>
 > &nbsp;&nbsp;&nbsp;&nbsp;受保护的代码<br/>
 > }<br/>
-> **\_\_除**(*表达式*)<br/>
+> **\_\_except** ( *expression* )<br/>
 > {<br/>
 > &nbsp;&nbsp;&nbsp;&nbsp;异常处理程序代码<br/>
 > }<br/>
@@ -168,7 +168,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>输出
+### <a name="output"></a>Output
 
 ```Output
 hello

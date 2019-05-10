@@ -13,16 +13,15 @@ helpviewer_keywords:
 - task_continuation_context class
 ms.assetid: 1fb5a76a-3682-45c2-a615-8b6b527741f0
 ms.openlocfilehash: 5d7d92fcd1bb00513b9e05030afa56726e87183b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212852"
 ---
 # <a name="taskcontinuationcontext-class"></a>task_continuation_context 类
 
-
-  `task_continuation_context` 类可让你指定想要执行延续的位置。 最好仅使用从 Windows 运行时应用此类。 对于非 Windows 运行时应用程序，任务延续的执行上下文是由运行时，并且不可配置。
+`task_continuation_context` 类可让你指定想要执行延续的位置。 最好仅使用从 Windows 运行时应用此类。 对于非 Windows 运行时应用程序，任务延续的执行上下文是由运行时，并且不可配置。
 
 ## <a name="syntax"></a>语法
 
@@ -74,7 +73,7 @@ static task_continuation_context get_current_winrt_context();
 
 返回的值`get_current_winrt_context`可以用于指示运行时，执行延续的捕获的上下文 (sta 对 MTA)，在单元模型中不考虑前面的任务是否可识别单元。 单元识别任务是对 Windows 运行时进行解包的任务`IAsyncInfo`接口或源于此类任务的任务。
 
-此方法是类似于`use_current`方法，但它也是可用于本机 c + + 代码，而无需 C + + /cli CX 扩展支持。 适用于在使用由高级用户编写 C + + /cli CX 无关的本机模式和 Windows 运行时调用方的库代码。 除非需要此功能，否则我们建议`use_current`方法，仅可供 C + + /cli CX 客户端。
+此方法是类似于`use_current`方法，但它也是可用于本机C++编写代码而不C++/CX 扩展支持。 它目标是通过使用高级用户编写的C++本机模式和 Windows 运行时调用方的 /CX-agnostic 库代码。 除非需要此功能，否则我们建议`use_current`方法，仅可供C++/CX 客户端。
 
 ##  <a name="use_arbitrary"></a> use_arbitrary
 

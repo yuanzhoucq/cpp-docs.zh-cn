@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TN023
 - standard resources
 ms.assetid: 60af8415-c576-4c2f-a711-ca5da0b9a1f2
-ms.openlocfilehash: b4edc00f77152b8d677f3113e0ed6386569b0988
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d29f0ab2254a52e01f2016f64a37ddfce47955bb
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306033"
 ---
 # <a name="tn023-standard-mfc-resources"></a>TN023:标准 MFC 资源
 
@@ -23,7 +23,7 @@ ms.locfileid: "57277672"
 
 MFC 提供了可在应用程序中使用的两种预定义资源：剪贴画资源和标准框架资源。
 
-剪贴画资源是框架并不依赖的、但您可能希望添加到应用程序的用户界面的附加资源。 以下剪贴画资源包含在 MFC 常规示例[剪贴画](../visual-cpp-samples.md):
+剪贴画资源是框架并不依赖的、但您可能希望添加到应用程序的用户界面的附加资源。 以下剪贴画资源包含在 MFC 常规示例[剪贴画](../overview/visual-cpp-samples.md):
 
 - Common.rc:包含单个文件的资源：
 
@@ -39,7 +39,7 @@ MFC 提供了可在应用程序中使用的两种预定义资源：剪贴画资�
 
 - Prompts.rc:包含 ID_FILE_NEW 菜单提示字符串资源的每个预定义的命令，如"创建新的文档"。
 
-- Commdlg.rc:包含标准 COMMDLG 对话框模板的 Visual c + + 兼容的.rc 文件。
+- Commdlg.rc:视觉对象C++兼容的.rc 文件，其中包含标准 COMMDLG 对话框模板。
 
 标准框架资源是带有框架所依赖的由 AFX 定义的 ID 的资源，用于内部实现。 您很少需要更改这些 AFX 定义的资源。 如果您确实要更改，则应遵循本主题后面所述的过程。
 

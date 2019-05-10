@@ -5,15 +5,15 @@ helpviewer_keywords:
 - parallel algorithms [Concurrency Runtime]
 ms.assetid: 045dca7b-4d73-4558-a44c-383b88a28473
 ms.openlocfilehash: 75491130e8e5fc426116685332490efd2c5fe60b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262865"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346343"
 ---
 # <a name="parallel-algorithms"></a>并行算法
 
-并行模式库 (PPL) 提供了同时执行多个数据集合的工作的算法。 这些算法类似于所提供的 c + + 标准库。
+并行模式库 (PPL) 提供了同时执行多个数据集合的工作的算法。 这些算法类似于所提供的C++标准库。
 
 并行算法由并发运行时中的现有功能组成。 例如， [concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for)算法使用[concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)对象执行并行循环迭代。 `parallel_for`算法分区工作提供可用的计算资源数以最佳方式。
 
@@ -45,8 +45,7 @@ ms.locfileid: "57262865"
 
 `parallel_for`算法对任务进行分区并行执行以最佳方式。 当工作负载不平衡时，此算法还会使用工作窃取算法和范围窃取来平衡这些分区。 当某个循环迭代以协作方式阻止时，运行时将重新分发分配给其他线程或处理器的当前线程的范围的迭代。 同样，当某个线程完成一系列迭代，运行时重新分配给该线程从其他线程的工作。 `parallel_for`算法还支持*嵌套并行度*。 当一个并行循环包含另一个并行循环时，运行时之间协调处理资源更高效地并行执行循环体。
 
-
-  `parallel_for` 算法有多个重载版本。 第一个版本使用起始值、 结束值和一个工作函数 （lambda 表达式、 函数对象或函数指针）。 第二个版本进入起始值、 结束值、 值的步骤，并且工作函数。 此函数的第一个版本使用的步长值为 1。 其余版本采用分区程序对象，使您能够指定 `parallel_for` 如何在线程之间对范围进行分区。 中的部分中的更详细地介绍了分区程序[分区工作](#partitions)本文档中。
+`parallel_for` 算法有多个重载版本。 第一个版本使用起始值、 结束值和一个工作函数 （lambda 表达式、 函数对象或函数指针）。 第二个版本进入起始值、 结束值、 值的步骤，并且工作函数。 此函数的第一个版本使用的步长值为 1。 其余版本采用分区程序对象，使您能够指定 `parallel_for` 如何在线程之间对范围进行分区。 中的部分中的更详细地介绍了分区程序[分区工作](#partitions)本文档中。
 
 可以将许多转换`for`循环，以使用`parallel_for`。 但是，`parallel_for`算法不同于`for`语句按以下方式：
 
@@ -85,9 +84,9 @@ ms.locfileid: "57262865"
 
 ##  <a name="parallel_for_each"></a> Parallel_for_each 算法
 
-[Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)算法对迭代的容器，如所提供的 c + + 标准库，以并行执行任务。 它使用相同的分区逻辑的`parallel_for`算法使用。
+[Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)算法执行任务对迭代的容器，如所提供的C++中并行的标准库。 它使用相同的分区逻辑的`parallel_for`算法使用。
 
-`parallel_for_each`算法类似于 c + + 标准库[std:: for_each](../../standard-library/algorithm-functions.md#for_each)算法，不同之处在于`parallel_for_each`算法并发执行任务。 像其他并行算法，`parallel_for_each`不会按特定顺序执行任务。
+`parallel_for_each`算法类似于C++标准库[std:: for_each](../../standard-library/algorithm-functions.md#for_each)算法，不同之处在于`parallel_for_each`算法并发执行任务。 像其他并行算法，`parallel_for_each`不会按特定顺序执行任务。
 
 尽管`parallel_for_each`算法适用于向前迭代器和随机访问迭代器，它将使用随机访问迭代器更好地执行。
 
@@ -135,7 +134,7 @@ ms.locfileid: "57262865"
 
 ##  <a name="parallel_transform_reduce"></a> Parallel_transform 和 parallel_reduce 算法
 
-[Concurrency:: parallel_transform](reference/concurrency-namespace-functions.md#parallel_transform)并[concurrency:: parallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce)算法是 c + + 标准库算法的并行版本[std:: transform](../../standard-library/algorithm-functions.md#transform)并[std:: accumulate](../../standard-library/numeric-functions.md#accumulate)分别。 并发运行时版本的行为类似于 c + + 标准库版本只不过操作顺序不确定，因为它们并行执行。 当您使用的集足够大，可从并行处理中获得性能和可扩展性优势时，请使用这些算法。
+[Concurrency:: parallel_transform](reference/concurrency-namespace-functions.md#parallel_transform)并[concurrency:: parallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce)算法是并行版本的C++标准库算法[std::transform](../../standard-library/algorithm-functions.md#transform)并[std:: accumulate](../../standard-library/numeric-functions.md#accumulate)分别。 并发运行时版本行为类似于C++标准库版本，只不过操作顺序不确定，因为它们并行执行。 当您使用的集足够大，可从并行处理中获得性能和可扩展性优势时，请使用这些算法。
 
 > [!IMPORTANT]
 >  因为这些迭代器会生成稳定的内存地址，所以 `parallel_transform` 算法和 `parallel_reduce` 算法仅支持随机访问、双向和向前迭代器。 而且这些迭代器必须生成非 `const` 左值。
@@ -157,8 +156,7 @@ ms.locfileid: "57262865"
 > [!WARNING]
 >  本示例演示 `parallel_transform` 的基本用法。 由于工作函数不会执行大量工作，因此本示例中不会有显著的性能提升。
 
-
-  `parallel_transform` 算法有两个重载。 第一个重载采用一个输入范围和一个一元函数。 该一元函数可以是采用一个自变量的 Lambda 表达式、一个函数对象或从 `unary_function` 派生的一个类型。 第二个重载采用两个输入范围和一个二元函数。 二元函数可以采用两个自变量、 函数对象或从派生的类型的 lambda 表达式[std:: binary_function](../../standard-library/binary-function-struct.md)。 下面的示例阐释了这些差异。
+`parallel_transform` 算法有两个重载。 第一个重载采用一个输入范围和一个一元函数。 该一元函数可以是采用一个自变量的 Lambda 表达式、一个函数对象或从 `unary_function` 派生的一个类型。 第二个重载采用两个输入范围和一个二元函数。 二元函数可以采用两个自变量、 函数对象或从派生的类型的 lambda 表达式[std:: binary_function](../../standard-library/binary-function-struct.md)。 下面的示例阐释了这些差异。
 
 [!code-cpp[concrt-parallel-transform-vectors#2](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_5.cpp)]
 
@@ -185,7 +183,7 @@ ms.locfileid: "57262865"
 
 ###  <a name="map_reduce_example"></a> 示例：执行映射和降低并行
 
-一个*映射*操作将函数应用于序列中的每个值。 一个*减少*操作组合为一个值序列的元素。 可以使用 c + + 标准库[std:: transform](../../standard-library/algorithm-functions.md#transform)并[std:: accumulate](../../standard-library/numeric-functions.md#accumulate)函数来执行映射和化简操作。 但是，对于许多问题，您可以使用 `parallel_transform` 算法并行执行映射操作，并使用 `parallel_reduce` 算法并行执行化简操作。
+一个*映射*操作将函数应用于序列中的每个值。 一个*减少*操作组合为一个值序列的元素。 可以使用C++标准库[std:: transform](../../standard-library/algorithm-functions.md#transform)并[std:: accumulate](../../standard-library/numeric-functions.md#accumulate)函数来执行映射和化简操作。 但是，对于许多问题，您可以使用 `parallel_transform` 算法并行执行映射操作，并使用 `parallel_reduce` 算法并行执行化简操作。
 
 下面的示例将按串行方式计算质数和所需的时间与按并行方式计算质数和所需的时间进行比较。 映射阶段会将非质数值转换为 0，而化简阶段将对这些值求和。
 
@@ -199,8 +197,7 @@ ms.locfileid: "57262865"
 
 并行执行对数据源的操作，一个重要步骤是将*分区*成可由多个线程同时访问的多个部分的源。 分区程序将指定并行算法应如何在线程之间对范围进行分区。 如本文档前面所述，PPL 使用的是默认分区机制，该默认分区机制创建初始工作负荷并在工作负荷不平衡时使用工作窃取算法和范围窃取来平衡这些分区。 例如，当某个循环迭代完成一个迭代范围时，运行时会将其他线程的工作重新分配给该线程。 但是，在某些方案中，你可能希望指定另一个更适用于你的问题的分区机制。
 
-
-  `parallel_for`、`parallel_for_each` 和 `parallel_transform` 算法提供采用一个附加参数 `_Partitioner` 的重载版本。 此参数定义了用于划分工作的分区程序类型。 以下是 PPL 定义的分区程序种类：
+`parallel_for`、`parallel_for_each` 和 `parallel_transform` 算法提供采用一个附加参数 `_Partitioner` 的重载版本。 此参数定义了用于划分工作的分区程序类型。 以下是 PPL 定义的分区程序种类：
 
 [concurrency::affinity_partitioner](../../parallel/concrt/reference/affinity-partitioner-class.md)<br/>
 将工作划分为一个固定数量的范围（通常是可用于在循环中工作的辅助线程的数量）。 此分区程序类型与 `static_partitioner` 类似，但通过将范围映射到辅助线程的方式改善了缓存的关联。 当在相同数据集中多次执行一个循环（例如一个循环内的循环）且数据适合缓存时，此分区程序类型可提高性能。 此分区程序不完全参与取消。 它也不使用协作停滞语义，因此不能与具有前向依赖关系的并行循环一起使用。
@@ -236,18 +233,15 @@ ms.locfileid: "57262865"
 
 PPL 提供三种排序算法： [concurrency:: parallel_sort](reference/concurrency-namespace-functions.md#parallel_sort)， [concurrency:: parallel_buffered_sort](reference/concurrency-namespace-functions.md#parallel_buffered_sort)，并[concurrency:: parallel_radixsort](reference/concurrency-namespace-functions.md#parallel_radixsort)。 当您具有可受益于并行排序的数据集时，这些排序算法很有用。 具体而言，当您具有大型数据集时或使用需要消耗大量计算资源的比较操作对数据进行排序时，并行排序很有用。 每种算法都会就地对元素排序。
 
+`parallel_sort` 和 `parallel_buffered_sort` 算法都是基于比较的算法。 即，它们按值来比较元素。 `parallel_sort` 算法没有其他内存要求，适用于通用排序。 `parallel_buffered_sort`算法的性能优于`parallel_sort`，但它需要 o （n） 空间。
 
-  `parallel_sort` 和 `parallel_buffered_sort` 算法都是基于比较的算法。 即，它们按值来比较元素。 
-  `parallel_sort` 算法没有其他内存要求，适用于通用排序。 `parallel_buffered_sort`算法的性能优于`parallel_sort`，但它需要 o （n） 空间。
-
-
-  `parallel_radixsort` 算法是基于哈希的。 即，它使用整数键来对元素排序。 通过使用键，此算法可以直接计算元素的目标，而不是使用比较。 如`parallel_buffered_sort`，此算法要求 o （n） 空间。
+`parallel_radixsort` 算法是基于哈希的。 即，它使用整数键来对元素排序。 通过使用键，此算法可以直接计算元素的目标，而不是使用比较。 如`parallel_buffered_sort`，此算法要求 o （n） 空间。
 
 下表总结了三种并行排序算法的重要属性。
 
 |算法|描述|排序机制|排序稳定性|内存要求|时间复杂性|迭代器访问|
 |---------------|-----------------|-----------------------|--------------------|-------------------------|---------------------|---------------------|
-|`parallel_sort`|通用的基于比较的排序。|基于比较（升序）|不稳定|无|O((N/P)log(N/P) + 2N((P-1)/P))|随机|
+|`parallel_sort`|通用的基于比较的排序。|基于比较（升序）|不稳定|None|O((N/P)log(N/P) + 2N((P-1)/P))|随机|
 |`parallel_buffered_sort`|需要 O(N) 空间，基于比较的更快的通用排序。|基于比较（升序）|不稳定|需要额外的 o （n） 空间|O((N/P)log(N))|随机|
 |`parallel_radixsort`|需要 O(N) 空间，基于整数键的排序。|基于哈希|稳定版|需要额外的 o （n） 空间|O(N/P)|随机|
 
@@ -258,7 +252,7 @@ PPL 提供三种排序算法： [concurrency:: parallel_sort](reference/concurre
 这些并行排序算法遵循取消和异常处理的规则。 有关取消和异常处理在并发运行时的详细信息，请参阅[取消并行算法](../../parallel/concrt/cancellation-in-the-ppl.md#algorithms)并[异常处理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)。
 
 > [!TIP]
->  这些并行排序算法支持移动语义。 可以定义一个移动赋值运算符，以使交换操作的出现更有效。 有关移动语义和移动赋值运算符的详细信息，请参阅[右值引用声明符： & &](../../cpp/rvalue-reference-declarator-amp-amp.md)，并[移动构造函数和移动赋值运算符 （c + +）](../../cpp/move-constructors-and-move-assignment-operators-cpp.md)。 如果您不提供移动赋值运算符或交换函数，排序算法将使用复制构造函数。
+>  这些并行排序算法支持移动语义。 可以定义一个移动赋值运算符，以使交换操作的出现更有效。 有关移动语义和移动赋值运算符的详细信息，请参阅[右值引用声明符： & &](../../cpp/rvalue-reference-declarator-amp-amp.md)，并[移动构造函数和移动赋值运算符 (C++)](../../cpp/move-constructors-and-move-assignment-operators-cpp.md)。 如果您不提供移动赋值运算符或交换函数，排序算法将使用复制构造函数。
 
 下面的基本示例演示如何使用 `parallel_sort` 对 `vector` 值的 `int` 进行排序。 默认情况下`parallel_sort`使用[std:: less](../../standard-library/less-struct.md)值进行比较。
 
@@ -317,7 +311,7 @@ PPL 提供三种排序算法： [concurrency:: parallel_sort](reference/concurre
 
 ## <a name="related-topics"></a>相关主题
 
-|标题|描述|
+|Title|说明|
 |-----------|-----------------|
 |[如何：编写 parallel_for 循环](../../parallel/concrt/how-to-write-a-parallel-for-loop.md)|演示如何使用`parallel_for`算法来执行矩阵乘法。|
 |[如何：编写 parallel_for_each 循环](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md)|演示如何使用`parallel_for_each`算法来计算质数的计数[std:: array](../../standard-library/array-class-stl.md)并行中的对象。|

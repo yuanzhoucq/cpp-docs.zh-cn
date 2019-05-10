@@ -1,18 +1,18 @@
 ---
 title: __declspec
-ms.date: 10/09/2018
+ms.date: 03/21/2019
 f1_keywords:
 - __declspec_cpp
 - __declspec
 - _declspec
 helpviewer_keywords:
 - __declspec keyword [C++]
-ms.openlocfilehash: 3ee83203cc992ba8c5d05b7bb6974d3576baf59c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e924f3e4a038f900e084dbf84d85430d815c8e8f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645089"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154498"
 ---
 # <a name="declspec"></a>__declspec
 
@@ -32,6 +32,7 @@ extended-decl-modifier-seq：<br/>
 extended-decl-modifier：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**align(** *#* **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**allocate("** *segname* **")**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**allocator**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**appdomain**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**code_seg("** *segname* **")**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**deprecated**<br/>
@@ -55,7 +56,7 @@ extended-decl-modifier：<br/>
 
 空格用于分隔声明修饰符序列。 示例显示在后面的部分。
 
-扩展的特性语法支持这些特定于 Microsoft 的存储类特性：[对齐](../cpp/align-cpp.md)，[分配](../cpp/allocate.md)， [appdomain](../cpp/appdomain.md)， [code_seg](../cpp/code-seg-declspec.md)，[弃用](../cpp/deprecated-cpp.md)， [dllexport](../cpp/dllexport-dllimport.md)， [dllimport](../cpp/dllexport-dllimport.md)， [jitintrinsic](../cpp/jitintrinsic.md)，[裸](../cpp/naked-cpp.md)， [noalias](../cpp/noalias.md)， [noinline](../cpp/noinline.md)， [noreturn](../cpp/noreturn.md)， [nothrow](../cpp/nothrow-cpp.md)， [novtable](../cpp/novtable.md)[进程](../cpp/process.md)，[限制](../cpp/restrict.md)， [safebuffers](../cpp/safebuffers.md)， [selectany](../cpp/selectany.md)， [spectre](../cpp/spectre.md)，和[线程](../cpp/thread.md)。 它还支持这些 COM 对象属性：[属性](../cpp/property-cpp.md)并[uuid](../cpp/uuid-cpp.md)。
+扩展的特性语法支持这些特定于 Microsoft 的存储类特性：[对齐](../cpp/align-cpp.md)，[分配](../cpp/allocate.md)，[分配器](../cpp/allocator.md)， [appdomain](../cpp/appdomain.md)， [code_seg](../cpp/code-seg-declspec.md)，[弃用](../cpp/deprecated-cpp.md)， [dllexport](../cpp/dllexport-dllimport.md)， [dllimport](../cpp/dllexport-dllimport.md)， [jitintrinsic](../cpp/jitintrinsic.md)， [naked](../cpp/naked-cpp.md)， [noalias](../cpp/noalias.md)， [noinline](../cpp/noinline.md)， [noreturn](../cpp/noreturn.md)， [nothrow](../cpp/nothrow-cpp.md)，[novtable](../cpp/novtable.md)，[进程](../cpp/process.md)，[限制](../cpp/restrict.md)， [safebuffers](../cpp/safebuffers.md)， [selectany](../cpp/selectany.md)， [spectre](../cpp/spectre.md)，并[线程](../cpp/thread.md)。 它还支持这些 COM 对象属性：[属性](../cpp/property-cpp.md)并[uuid](../cpp/uuid-cpp.md)。
 
 **Code_seg**， **dllexport**， **dllimport**，**裸**， **noalias**， **nothrow**，**属性**，**限制**， **selectany**，**线程**，和**uuid**存储类特性是仅的声明的函数应用于的对象的属性。 **线程**属性会影响数据仅和对象。 **裸**并**spectre**特性影响函数只能。 **Dllimport**并**dllexport**特性影响函数、 数据和对象。 **属性**， **selectany**，并**uuid**特性影响 COM 对象。
 
@@ -79,7 +80,7 @@ class __declspec(dllimport) X {};
 
 使用的一般准则 **__declspec**特性用于简单声明如下所示：
 
-*声明说明符 seq* *init 声明符列表*;
+*decl-specifier-seq* *init-declarator-list*;
 
 *声明说明符 seq*应包含，除此之外，基类型 (例如**int**， **float**即**typedef**，或类名)、存储类 (例如**静态**， **extern**)，或 **__declspec**扩展。 *Init 声明符列表*应包含，除此之外，声明的指针部分。 例如：
 

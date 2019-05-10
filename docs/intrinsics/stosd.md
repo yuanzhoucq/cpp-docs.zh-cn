@@ -8,12 +8,12 @@ helpviewer_keywords:
 - rep stosd instruction
 - __stosd intrinsic
 ms.assetid: 03104247-1cea-49f6-b6f8-287917bf5680
-ms.openlocfilehash: c32c439af5544eb561f776381cb1afa98337efcb
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 43a0efcfb94b7e53dacec16caccdacf86a96f5bb
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62390251"
 ---
 # <a name="stosd"></a>__stosd
 

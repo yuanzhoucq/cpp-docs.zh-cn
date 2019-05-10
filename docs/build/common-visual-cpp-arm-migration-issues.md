@@ -1,38 +1,38 @@
 ---
 title: Visual C++ ARM 迁移的常见问题
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 ms.assetid: 0f4c434e-0679-4331-ba0a-cc15dd435a46
-ms.openlocfilehash: 6aea623bc9f096265decbe91ccdc5d5f1f6ecef1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 78d87000240acd394edf823a778ae29060c6d09c
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618502"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220884"
 ---
 # <a name="common-visual-c-arm-migration-issues"></a>Visual C++ ARM 迁移的常见问题
 
-使用 Microsoft Visual c + + (MSVC)，相同的 c + + 源代码可能会比在 x86 或 x64 体系结构上生成 ARM 体系结构不同的结果。
+当使用 MicrosoftC++相同的编译器 (MSVC)C++源代码可能会比在 x86 或 x64 体系结构上生成 ARM 体系结构不同的结果。
 
 ## <a name="sources-of-migration-issues"></a>迁移问题的来源
 
 将代码从 x86 或 x64 体系结构迁移到 ARM 体系结构时可能遇到的许多问题与可能调用未定义的、 实现自定义的或未指定操作的源代码构造。
 
-*未定义的行为*是 c + + 标准没有定义的行为，并由具有不合理的结果的操作导致： 例如，将浮点值转换为无符号整数，或移位值的位置数这为负或超过其提升的类型中的位数。
+*未定义的行为*是行为的C++标准未定义，并由具有不合理的结果的操作导致： 例如，将浮点值转换为无符号整数，或转移数的值为负或超出的位数与其提升的类型中的位置。
 
-*实现定义的行为*是 c + + 标准要求编译器供应商联系，以定义和文档的行为。 即使这样做因此可能不是可移植，程序可以安全地依赖于实现定义的行为。 实现定义的行为的示例包括内置数据类型和其对齐要求的大小。 实现定义的行为可能会影响运算的一个示例访问变量参数列表。
+*实现定义的行为*是行为的C++标准要求编译器供应商联系，以定义和文档。 即使这样做因此可能不是可移植，程序可以安全地依赖于实现定义的行为。 实现定义的行为的示例包括内置数据类型和其对齐要求的大小。 实现定义的行为可能会影响运算的一个示例访问变量参数列表。
 
-*未指定行为*是 c + + 标准离开有意不确定的行为。 尽管行为被视为非确定性的但未指定的行为的特定调用由编译器实现决定。 但是，编译器供应商以预先确定的结果或保证一致的行为类似调用之间没有要求，并且没有任何要求有关的文档。 未指定的一个示例是行为的包括函数调用的参数的子表达式的计算顺序。
+*未指定行为*是行为的C++标准离开有意不确定性。 尽管行为被视为非确定性的但未指定的行为的特定调用由编译器实现决定。 但是，编译器供应商以预先确定的结果或保证一致的行为类似调用之间没有要求，并且没有任何要求有关的文档。 未指定的一个示例是行为的包括函数调用的参数的子表达式的计算顺序。
 
-其他迁移问题可归因于 ARM 和 x86 或 x64 体系结构，以不同的方式与 c + + 标准进行交互的硬件差异。 例如，x86 和 x64 体系结构的强内存模型向`volatile`-限定变量已用于简化某些类型在过去的线程间通信的一些附加属性。 但 ARM 体系结构的弱内存模型不支持此使用，也不会 c + + 标准要求它。
+其他迁移问题可归因于 ARM 和与之交互的 x86 或 x64 体系结构之间的硬件差异C++标准以不同的方式。 例如，x86 和 x64 体系结构的强内存模型向`volatile`-限定变量已用于简化某些类型在过去的线程间通信的一些附加属性。 但 ARM 体系结构的弱内存模型不支持此使用，也不C++标准版需要它。
 
 > [!IMPORTANT]
->  尽管`volatile`提升可用于 x86 和 x64，这些附加属性上实现线程间的通信的有限的形式某些属性没有足够权限来实现线程间的通信通常情况下。 C + + 标准建议，而是使用适当的同步基元实现此类通信。
+>  尽管`volatile`提升可用于 x86 和 x64，这些附加属性上实现线程间的通信的有限的形式某些属性没有足够权限来实现线程间的通信通常情况下。 C++标准建议，而是使用适当的同步基元实现此类通信。
 
 因为不同的平台可能以不同的方式表达这些类型的行为，将软件平台之间移植会非常困难并易于产生 bug 如果它依赖于特定平台的行为。 但许多这些类型的行为，可以观察到，并可能会出现稳定，依赖于它们是至少不可移植的并在未定义或未指定行为的情况下，也是错误的。 甚至在此文档中引用的行为不应将其上，并可能在将来更改，编译器或 CPU 的实现。
 
 ## <a name="example-migration-issues"></a>示例迁移问题
 
-本文档其余部分介绍了这些 c + + 语言元素不同的行为如何生成不同的平台上不同的结果。
+本文档其余部分介绍了如何这些不同的行为C++语言元素可以生成不同的平台上不同的结果。
 
 ### <a name="conversion-of-floating-point-to-unsigned-integer"></a>为无符号整数的浮点转换
 
@@ -92,12 +92,12 @@ Handle::acquire(operator->(memory_handle), operator*(p));
 
 ### <a name="volatile-keyword-default-behavior"></a>易失关键字默认行为
 
-MSVC 编译器支持两种不同的解释`volatile`存储可以通过使用编译器开关指定的限定符。 [/Volatile: ms](../build/reference/volatile-volatile-keyword-interpretation.md)开关用于选择 Microsoft 扩展易失性保证强排序的语义，因为由于这些体系结构上强内存模型已针对 x86 和 x64 传统的用例。 [/Volatile: iso](../build/reference/volatile-volatile-keyword-interpretation.md)开关用于选择严格 c + + 标准可变语义，不能保证强排序。
+MSVC 编译器支持两种不同的解释`volatile`存储可以通过使用编译器开关指定的限定符。 [/Volatile: ms](reference/volatile-volatile-keyword-interpretation.md)开关用于选择 Microsoft 扩展易失性保证强排序的语义，因为由于这些体系结构上强内存模型已针对 x86 和 x64 传统的用例。 [/Volatile: iso](reference/volatile-volatile-keyword-interpretation.md)严格开关用于选择C++不能保证强排序的标准易失性语义。
 
-在 ARM 体系结构中，默认值是 **/volatile: iso**由于 ARM 处理器具有弱排序内存模型，而且因为 ARM 软件不依赖于扩展的语义的旧版 **/volatile: ms** ，通常没有与执行的软件进行交互。 但是，它是仍有时方便或甚至需要编译 ARM 程序以使用扩展的语义。 例如，可能会以端口的程序，使用 ISO c + + 语义，成本过高或驱动程序软件可能需要遵守的传统的语义，才能正常工作。 在这些情况下，你可以使用 **/volatile: ms**交换机; 但是，若要重新创建在 ARM 目标上的传统可变语义，编译器必须将插入围绕每个读取或写入的内存屏障`volatile`变量以强制实施强排序，这会对性能产生负面影响。
+在 ARM 体系结构中，默认值是 **/volatile: iso**由于 ARM 处理器具有弱排序内存模型，而且因为 ARM 软件不依赖于扩展的语义的旧版 **/volatile: ms** ，通常没有与执行的软件进行交互。 但是，它是仍有时方便或甚至需要编译 ARM 程序以使用扩展的语义。 例如，它可能是成本过高端口的程序，使用 ISOC++语义或驱动程序软件可能需要遵守的传统的语义，才能正常工作。 在这些情况下，你可以使用 **/volatile: ms**交换机; 但是，若要重新创建在 ARM 目标上的传统可变语义，编译器必须将插入围绕每个读取或写入的内存屏障`volatile`变量以强制实施强排序，这会对性能产生负面影响。
 
 在 x86 和 x64 体系结构中，默认值是 **/volatile: ms**因为很多的软件的已创建为这些体系结构使用 MSVC 依赖于它们。 在编译 x86 和 x64 的程序时，可以指定 **/volatile: iso**开关来帮助避免不必要依赖传统的易失性语义，并将提升可移植性。
 
 ## <a name="see-also"></a>请参阅
 
-[为 ARM 处理器配置 Visual C++](../build/configuring-programs-for-arm-processors-visual-cpp.md)
+[为 ARM 处理器配置 Visual C++](configuring-programs-for-arm-processors-visual-cpp.md)

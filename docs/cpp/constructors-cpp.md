@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: e2027d967aebe68618e44e454ec268770b53ee4b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: a45cee1abd9351a8fef56769706fe8944a7965b8
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154732"
 ---
 # <a name="constructors-c"></a>构造函数 (C++)
 
@@ -636,7 +636,7 @@ Derived d3 = d2 calls: Base(Base&)
 Derived d4 calls: Base()*/
 ```
 
-**Visual Studio 2017 版本 15.7 及更高版本**:**使用**中的语句 **/std: c + + 17**模式将引入作用域从基类除具有相同签名的所有构造函数在派生类中的构造函数。 一般而言，当派生类未声明新数据成员或构造函数时，最好使用继承构造函数。 另请参阅[Visual Studio 2017 版本 15.7 中的改进](../cpp-conformance-improvements-2017.md#improvements_157)。
+**Visual Studio 2017 版本 15.7 及更高版本**：**使用**中的语句 **/std: c + + 17**模式将引入作用域从除在派生类中具有相同签名到构造函数基类的所有构造函数。 一般而言，当派生类未声明新数据成员或构造函数时，最好使用继承构造函数。 另请参阅[Visual Studio 2017 版本 15.7 中的改进](../overview/cpp-conformance-improvements.md#improvements_157)。
 
 如果类型指定基类，则类模板可以从类型参数继承所有构造函数：
 

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - tzname function
 - time-zone variables
 ms.assetid: d06c7292-6b99-4aba-b284-16a96570c856
-ms.openlocfilehash: ad28ce701a4c6aa60208ed0cefe8f7dc06ef55a7
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 3f9f78d0798140399960cade7ead408f958450ba
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51325895"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748250"
 ---
 # <a name="daylight-dstbias-timezone-and-tzname"></a>_daylight、_dstbias、_timezone 和 _tzname
 
@@ -54,7 +54,7 @@ extern char *_tzname[2];
 
 在调用 `_ftime`、`localtime` 或 `_tzset` 时，`_daylight`、`_dstbias`、`_timezone` 和 `_tzname` 的值由 `TZ` 环境变量的值确定。 如果您未显式设置 `TZ` 的值，则 `_tzname[0]` 和 `_tzname[1]` 将分别包含“PST”和“PDT”的默认设置。  时间操作函数（[_tzset](../c-runtime-library/reference/tzset.md)、[_ftime](../c-runtime-library/reference/ftime-ftime32-ftime64.md)，和 [localtime](../c-runtime-library/reference/localtime-localtime32-localtime64.md)）尝试通过在操作系统中查询每个变量的默认值来设置 `_daylight`、`_dstbias` 和 `_timezone` 的值。 下表显示了时区全局变量的值。
 
-|变量|“值”|
+|变量|值|
 |--------------|-----------|
 |`_daylight`|如果在 `TZ` 中指定或从操作系统确定夏令时 (DST) 时区，则为非零值；否则为 0。 默认值为 1。|
 |`_dstbias`|夏令时的偏移量。|

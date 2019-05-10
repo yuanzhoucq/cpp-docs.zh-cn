@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE drag and drop [MFC], drop target
 - drag and drop [MFC], drop target
 ms.assetid: 0689f1ec-5326-4008-b226-4b373c881358
-ms.openlocfilehash: da04fa7fa84e7e5014d574583c9c95992db10f88
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 46501193569d7f3098e23c67c68c76ce20a82ea3
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405932"
 ---
 # <a name="drag-and-drop-implementing-a-drop-target"></a>拖放：实现放置目标
 
@@ -33,7 +33,7 @@ ms.locfileid: "57281939"
     |`OnDrop`|处理的数据要放入指定的窗口。|
     |`OnScrollBy`|需要滚动时在目标窗口中的特殊行为。|
 
-请参阅在 MAINVIEW。文件中的 MFC OLE 示例的 CPP [OCLIENT](../visual-cpp-samples.md)以举例说明这些函数是如何协同工作。
+请参阅在 MAINVIEW。文件中的 MFC OLE 示例的 CPP [OCLIENT](../overview/visual-cpp-samples.md)以举例说明这些函数是如何协同工作。
 
 有关详细信息，请参见:
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interfaces, session object
 - interfaces, list of
 ms.assetid: ac01a958-6dde-4bd7-8b63-94459e488335
-ms.openlocfilehash: 7e8a9cd204a07afc2b14c6a1e31e7c970c27cfc2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 2fb91365fec0709e1bb2a26afa519e6565862681
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404571"
 ---
 # <a name="session-object-interfaces"></a>会话对象接口
 

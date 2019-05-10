@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, pack
 - pack pragma
 ms.assetid: e4209cbb-5437-4b53-b3fe-ac264501d404
-ms.openlocfilehash: 9b959c161a933cc76590cfbd65d295aad36f07d7
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: bf1ae81184d53dd271f63c26e8f9a52a6410b232
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180025"
 ---
 # <a name="pack"></a>pack
 指定结构、联合和类成员的封装对齐。
@@ -26,7 +26,7 @@ ms.locfileid: "53627410"
 
 ### <a name="parameters"></a>参数
 
-**显示**<br/>
+**show**<br/>
 （可选）显示封装对齐的当前字节值。 该值由警告消息显示。
 
 **push**<br/>
@@ -60,7 +60,7 @@ ms.locfileid: "53627410"
 - [结构对齐示例](../build/x64-software-conventions.md#examples-of-structure-alignment)(特定于 x64)
 
    > [!WARNING]
-   > 请注意，在 Visual Studio 2015 和更高版本可使用标准的 alignas 和 alignof 运算符，这 不同于 `__alignof` 和 `declspec( align )`，它们是跨编译器可移植的。 C + + 标准不能解决封装，因此仍必须使用**pack** （或其他编译器上相应的扩展） 来指定小于目标体系结构的字大小的对齐方式。
+   > 请注意，在 Visual Studio 2015 和更高版本可使用标准的 alignas 和 alignof 运算符，这 不同于 `__alignof` 和 `declspec( align )`，它们是跨编译器可移植的。 C++标准不能解决封装，因此仍必须使用**pack** （或其他编译器上相应的扩展） 来指定小于目标体系结构的字大小的对齐方式。
 
 ## <a name="examples"></a>示例
 

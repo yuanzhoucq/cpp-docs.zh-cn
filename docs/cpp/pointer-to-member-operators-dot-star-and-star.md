@@ -12,11 +12,11 @@ helpviewer_keywords:
 - ->* operator
 ms.assetid: 2632be3f-1c81-4523-b56c-982a92a68688
 ms.openlocfilehash: 60dad0e3134662957ee21396d330af795e80918e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62267658"
 ---
 # <a name="pointer-to-member-operators--and--gt"></a>指针到成员运算符:。 * 和-&gt;*
 
@@ -69,7 +69,7 @@ int main() {
 }
 ```
 
-## <a name="output"></a>输出
+## <a name="output"></a>Output
 
 ```Output
 m_func1

@@ -24,11 +24,11 @@ helpviewer_keywords:
 - _aligned_malloc function
 ms.assetid: fb788d40-ee94-4039-aa4d-97d73dab1ca0
 ms.openlocfilehash: c89dff7d2159855037fee565f2148a8edb89f07d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341816"
 ---
 # <a name="alignedmalloc"></a>_aligned_malloc
 
@@ -48,7 +48,7 @@ void * _aligned_malloc(
 *size*<br/>
 请求的内存分配的大小。
 
-*对齐方式*<br/>
+*alignment*<br/>
 对齐值，必须是 2 的整数次幂。
 
 ## <a name="return-value"></a>返回值

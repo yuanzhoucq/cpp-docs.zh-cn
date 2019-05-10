@@ -54,12 +54,12 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-ms.openlocfilehash: a62919ebd6b2aba54aa8003743b0006571cdedf4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 14a4691e0c1f25a8f9e8b2b652c6e582f51c954a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62235115"
 ---
 # <a name="cimage-class"></a>CImage 类
 
@@ -1658,8 +1658,8 @@ BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
 
 ## <a name="see-also"></a>请参阅
 
-[MMXSwarm 示例](../../visual-cpp-samples.md)<br/>
-[SimpleImage 示例](../../visual-cpp-samples.md)<br/>
+[MMXSwarm 示例](../../overview/visual-cpp-samples.md)<br/>
+[SimpleImage 示例](../../overview/visual-cpp-samples.md)<br/>
 [与设备无关位图](/windows/desktop/gdi/device-independent-bitmaps)<br/>
 [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)<br/>
 [ATL COM 桌面组件](../../atl/atl-com-desktop-components.md)<br/>

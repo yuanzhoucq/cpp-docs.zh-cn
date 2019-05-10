@@ -30,12 +30,12 @@ helpviewer_keywords:
 - defining locales
 - _wsetlocale function
 ms.assetid: 3ffb684e-5990-4202-9553-b5339af9520d
-ms.openlocfilehash: 6c9f44e9619b9c34c9424e0be78186d14f2d6a21
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 618b3e58a52e89561439fe76bf1b30e3cbbce001
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356350"
 ---
 # <a name="setlocale-wsetlocale"></a>setlocale、_wsetlocale
 
@@ -271,8 +271,8 @@ int main()
     unsigned        threadID;
     unsigned char   str[BUFF_SIZE];
 
-    // Configure per-thread locale to cause all subsequently created
-    // threads to have their own locale.
+    // Enable per-thread locale causes all subsequent locale
+    // setting changes in this thread to only affect this thread.
     _configthreadlocale(_ENABLE_PER_THREAD_LOCALE);
 
     // Set the locale of the main thread to US English.

@@ -26,11 +26,11 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_iterator::operator-&gt;
 - std::experimental::filesystem::directory_iterator::operator++
 ms.openlocfilehash: 6763f2a96b771fadbec311cf8740352fff53e29a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413841"
 ---
 # <a name="directoryiterator-class"></a>directory_iterator 类
 
@@ -62,7 +62,7 @@ class directory_iterator;
 
 |成员函数|描述|
 |-|-|
-|[增量](#increment)|尝试转到目录中的下一个文件名。|
+|[increment](#increment)|尝试转到目录中的下一个文件名。|
 
 ### <a name="operators"></a>运算符
 
@@ -81,7 +81,7 @@ class directory_iterator;
 
 **命名空间：** std::experimental::filesystem
 
-## <a name="directory_iterator"></a> directory_iterator:: directory_iterator
+## <a name="directory_iterator"></a> directory_iterator::directory_iterator
 
 第一个构造函数将生成序列末迭代器。 第二个和第三个构造函数存储*pval*中`mydir`，然后尝试打开并读取`mydir`作为目录。 如果成功，它们将存储的第一个文件名的目录中`myentry`; 否则它们将生成一个序列末迭代器。
 
@@ -115,7 +115,7 @@ directory_iterator(directory_iterator&&) noexcept = default;
 directory_iterator& increment(error_code& ec) noexcept;
 ```
 
-## <a name="op_neq"></a> directory_iterator:: operator ！ =
+## <a name="op_neq"></a> directory_iterator::operator!=
 
 该成员运算符将返回 `!(*this == right)`。
 
@@ -128,7 +128,7 @@ bool operator!=(const directory_iterator& right) const;
 *right*<br/>
 [Directory_iterator](../standard-library/directory-iterator-class.md)要进行比较的`directory_iterator`。
 
-## <a name="op_as"></a> directory_iterator:: operator =
+## <a name="op_as"></a> directory_iterator::operator=
 
 默认成员赋值运算符的行为符合预期。
 
@@ -142,7 +142,7 @@ directory_iterator& operator=(directory_iterator&&) noexcept = default;
 *right*<br/>
 [Directory_iterator](../standard-library/directory-iterator-class.md)复制到`directory_iterator`。
 
-## <a name="op_eq"></a> directory_iterator:: operator = =
+## <a name="op_eq"></a> directory_iterator::operator==
 
 成员运算符将返回 **，则返回 true**仅当这两种`*this`并*右*为序列末迭代器或 both 是否未结束的-为序列末迭代。
 
@@ -155,7 +155,7 @@ bool operator==(const directory_iterator& right) const;
 *right*<br/>
 [Directory_iterator](../standard-library/directory-iterator-class.md)要进行比较的`directory_iterator`。
 
-## <a name="op_star"></a> directory_iterator:: operator *
+## <a name="op_star"></a> directory_iterator::operator*
 
 该成员运算符将返回 `myentry`。
 
@@ -163,7 +163,7 @@ bool operator==(const directory_iterator& right) const;
 const directory_entry& operator*() const;
 ```
 
-## <a name="op_cast"></a> directory_iterator:: operator->
+## <a name="op_cast"></a> directory_iterator::operator->
 
 成员函数返回 `&**this`。
 
@@ -171,7 +171,7 @@ const directory_entry& operator*() const;
 const directory_entry * operator->() const;
 ```
 
-## <a name="op_increment"></a> directory_iterator:: operator + +
+## <a name="op_increment"></a> directory_iterator::operator++
 
 第一个成员函数调用`increment()`，然后返回`*this`。 第二个成员函数生成的对象，调用副本`increment()`，然后返回副本。
 

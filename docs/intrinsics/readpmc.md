@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __readpmc intrinsic
 - rdpmc instruction
 ms.assetid: 14ed45a6-28b6-4635-8437-a597c04b43d4
-ms.openlocfilehash: 059d9344fa329e69666abaca4d73122ab29f8d2a
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 848c880e76d6d431ee56a0bb30a33b276837ce76
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396439"
 ---
 # <a name="readpmc"></a>__readpmc
 

@@ -1,5 +1,5 @@
 ---
-title: 自变量传递和命名约定
+title: 参数传递和命名约定
 ms.date: 12/17/2018
 helpviewer_keywords:
 - argument passing [C++], conventions
@@ -13,18 +13,18 @@ helpviewer_keywords:
 - passing arguments [C++], conventions
 - conventions [C++], argument names
 ms.assetid: de468979-eab8-4158-90c5-c198932f93b9
-ms.openlocfilehash: ca09d31d3d8d50ca94543c5e02262edd7b2deefc
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
-ms.translationtype: MT
+ms.openlocfilehash: 1928f8e479b0533c5a8b2e60de7af9eff93f7eed
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627236"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222264"
 ---
-# <a name="argument-passing-and-naming-conventions"></a>自变量传递和命名约定
+# <a name="argument-passing-and-naming-conventions"></a>参数传递和命名约定
 
 **Microsoft 专用**
 
-利用 Visual C++ 编译器，你可以指定用于传递自变量的约定并返回函数与调用方之间的值。 并非所有约定都在所有支持的平台上可用，某些约定使用平台特定的实现。 在大多数情况下，将忽略在特定平台上指定不支持的约定的关键字或编译器开关，并将使用平台默认约定。
+MicrosoftC++编译器，你可以指定传递自变量的约定和返回值的函数和调用方。 并非所有约定都在所有支持的平台上可用，某些约定使用平台特定的实现。 在大多数情况下，将忽略在特定平台上指定不支持的约定的关键字或编译器开关，并将使用平台默认约定。
 
 在 x86 平台上，所有自变量在传递时都将加宽到 32 位。 返回值也将加宽到 32 位，并将通过 EAX 寄存器返回，但在 EDX:EAX 寄存器对中返回的 8 字节结构除外。 更大的结构将在 EAX 寄存器中作为指向隐藏返回结构的指针返回。 参数将从右到左推送到堆栈中。 不是 POD 的结构不会在寄存器中返回。
 

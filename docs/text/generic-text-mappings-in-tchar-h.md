@@ -1,8 +1,6 @@
 ---
 title: Tchar.h 中的一般文本映射
 ms.date: 11/04/2016
-f1_keywords:
-- tchar.h
 helpviewer_keywords:
 - mapping generic-text
 - generic-text mappings [C++]
@@ -12,12 +10,12 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 01e1bb74-5a01-4093-8720-68b6c1fdda80
-ms.openlocfilehash: 59df523cc553881186921a878d131a109ae3cf27
-ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
+ms.openlocfilehash: 779702aa33e2aa24bf5a380bd8435745cc0aadbd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53978291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410702"
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Tchar.h 中的一般文本映射
 
@@ -47,7 +45,7 @@ ms.locfileid: "53978291"
 
 ### <a name="generic-text-data-type-mappings"></a>一般文本数据类型映射
 
-|一般文本<br /> 数据类型名称|_UNICODE （&AMP; A)<br /> 未定义 _MBCS|_MBCS<br /> 已定义|_UNICODE<br /> 已定义|
+|Generic-Text<br /> 数据类型名称|_UNICODE （&AMP; A)<br /> 未定义 _MBCS|_MBCS<br /> 已定义|_UNICODE<br /> 已定义|
 |--------------------------------------|----------------------------------------|------------------------|---------------------------|
 |`_TCHAR`|**char**|**char**|**wchar_t**|
 |`_TINT`|**int**|**unsigned int**|`wint_t`|

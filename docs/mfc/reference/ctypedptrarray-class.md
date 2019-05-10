@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CTypedPtrArray [MFC], SetAt
 - CTypedPtrArray [MFC], SetAtGrow
 ms.assetid: e3ecdf1a-a889-4156-92dd-ddbd36ccd919
-ms.openlocfilehash: 8a6fc0786a169f9c1e73eb8acadfc51d063334c9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 080e47746b83b6ff12db9f6df0fc27bcd202bb51
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275332"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346091"
 ---
 # <a name="ctypedptrarray-class"></a>CTypedPtrArray 类
 
@@ -71,7 +71,7 @@ class CTypedPtrArray : public BASE_CLASS
 
 ## <a name="remarks"></a>备注
 
-当你使用`CTypedPtrArray`而非`CPtrArray`或`CObArray`，c + + 类型检查功能可帮助消除错误引起的不匹配的指针类型。
+当你使用`CTypedPtrArray`而非`CPtrArray`或`CObArray`、C++类型检查的工具可帮助消除错误引起的不匹配的指针类型。
 
 此外，`CTypedPtrArray`包装执行大量的强制转换，如果您使用，则将需要`CObArray`或`CPtrArray`。
 
@@ -328,7 +328,7 @@ void SetAtGrow(
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例收集](../../visual-cpp-samples.md)<br/>
+[MFC 示例收集](../../overview/visual-cpp-samples.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CPtrArray 类](../../mfc/reference/cptrarray-class.md)<br/>
 [CObArray 类](../../mfc/reference/cobarray-class.md)

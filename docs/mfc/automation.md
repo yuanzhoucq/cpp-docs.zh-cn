@@ -20,12 +20,12 @@ helpviewer_keywords:
 - MFC COM, Automation
 - methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
-ms.openlocfilehash: b26a08bbe9ef9b9151910871201abe05a44d2f6c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7818aa708a762f2a284be029a6c3f3facd971d9a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62374150"
 ---
 # <a name="automation"></a>自动化
 
@@ -45,7 +45,7 @@ ms.locfileid: "57265556"
 
 更重要的是自动化提供给用户和解决方案提供商的支持。 自动化通过常用的定义完善的接口公开应用程序功能，使得可以使用单一的常规编程语言（如 Microsoft Visual Basic）而非不同的应用程序特定的宏语言来构建全面的解决方案。
 
-许多商业应用程序，如 Microsoft Excel 和 Microsoft Visual C++，允许您自动化大部分功能。 例如，在 Visual c + +，可以编写 VBScript 宏来自动执行生成、 代码编辑，或调试任务的方面。
+许多商业应用程序，如 Microsoft Excel 和 Microsoft Visual C++，允许您自动化大部分功能。 例如，在视觉对象C++，您可以编写 VBScript 宏来自动执行生成、 代码编辑，或调试任务的方面。
 
 ##  <a name="_core_passing_parameters_in_automation"></a> 在自动化中传递参数
 
@@ -55,17 +55,17 @@ ms.locfileid: "57265556"
 
 ## <a name="automation-samples"></a>自动化示例
 
-- [AUTOCLIK](../visual-cpp-samples.md) 使用此示例可了解自动化技术并作为学习远程自动化的基础。
+- [AUTOCLIK](../overview/visual-cpp-samples.md) 使用此示例可了解自动化技术并作为学习远程自动化的基础。
 
-- [ACDUAL](../visual-cpp-samples.md) 将双重接口添加到自动化服务器应用程序中。
+- [ACDUAL](../overview/visual-cpp-samples.md) 将双重接口添加到自动化服务器应用程序中。
 
-- [CALCDRIV](../visual-cpp-samples.md) 驱动 MFCCALC 的自动化客户端应用程序。
+- [CALCDRIV](../overview/visual-cpp-samples.md) 驱动 MFCCALC 的自动化客户端应用程序。
 
-- [INPROC](../visual-cpp-samples.md) 演示进程内自动化服务器应用程序。
+- [INPROC](../overview/visual-cpp-samples.md) 演示进程内自动化服务器应用程序。
 
-- [IPDRIVE](../visual-cpp-samples.md) 驱动 INPROC 的自动化客户端应用程序。
+- [IPDRIVE](../overview/visual-cpp-samples.md) 驱动 INPROC 的自动化客户端应用程序。
 
-- [MFCCALC](../visual-cpp-samples.md) 演示自动化客户端应用程序。
+- [MFCCALC](../overview/visual-cpp-samples.md) 演示自动化客户端应用程序。
 
 ## <a name="what-do-you-want-to-know-more-about"></a>你想要了解更多信息
 

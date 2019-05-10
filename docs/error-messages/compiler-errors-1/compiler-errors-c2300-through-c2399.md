@@ -1,6 +1,6 @@
 ---
-title: 编译器错误s C2300 Through C2399
-ms.date: 11/17/2017
+title: 编译器错误 C2300 - C2399
+ms.date: 04/21/2019
 f1_keywords:
 - C2303
 - C2304
@@ -56,14 +56,14 @@ helpviewer_keywords:
 - C2398
 - C2399
 ms.assetid: 07ca45b5-b2f0-4049-837b-40a7a3caed88
-ms.openlocfilehash: 6f95ec90a08b842259a383d7bfc6af2cba119e14
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28ab73857b46fed29e2ba8d7bc051ffb81b54bb3
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580630"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857368"
 ---
-# <a name="compiler-errors-c2300-through-c2399"></a>编译器错误s C2300 Through C2399
+# <a name="compiler-errors-c2300-through-c2399"></a>编译器错误 C2300 - C2399
 
 在本部分文档中的文章说明了由编译器生成的错误消息的子集。
 
@@ -103,7 +103,7 @@ ms.locfileid: "50580630"
 |[编译器错误 C2327](compiler-error-c2327.md)|'*标识符*： 不是类型名称、 静态或枚举器|
 |编译器错误 C2328|'*关键字*： 尚不支持关键字|
 |编译器错误 C2329|'*标识符*: __ptr64 不可用于指向函数的指针|
-|编译器错误 C2330|implementation_key （） 才受 #pragma start_map_region/stop_map_region 限定的区域中有效|
+|编译器错误 C2330|'implementation_key( )' is only valid in a region bounded by #pragma start_map_region/stop_map_region|
 |编译器错误 C2331|访问权限*标识符*现在定义为'*1>*'，以前它被定义为'*accessibility2*|
 |[编译器错误 C2332](compiler-error-c2332.md)|'*typedef*： 缺少标记名称|
 |[编译器错误 C2333](compiler-error-c2333.md)|'*函数*： 函数声明中的错误; 跳过函数体|
@@ -117,14 +117,14 @@ ms.locfileid: "50580630"
 |[编译器错误 C2341](compiler-error-c2341.md)|'*部分*： 必须使用 #pragma data_seg、 code_seg 或部分之前，若要使用定义段|
 |编译器错误 C2342|语法错误： 类型限定符冲突|
 |编译器错误 C2343|'*部分*： 节特性冲突|
-|[编译器错误 C2344](compiler-error-c2344.md)|对齐 (*数*): 对齐必须是 2 的幂|
-|[编译器错误 C2345](compiler-error-c2345.md)|对齐 (*数*): 非法的对齐值|
+|[编译器错误 C2344](compiler-error-c2344.md)|align(*number*): alignment must be power of two|
+|[编译器错误 C2345](compiler-error-c2345.md)|align(*number*): illegal alignment value|
 |[编译器错误 C2346](compiler-error-c2346.md)|'*函数*不能编译为本机:'*说明*|
 |编译器错误 C2347|已过时。|
 |[编译器错误 C2348](compiler-error-c2348.md)|'*类型*： 不是 C 样式聚合，不能嵌入的 IDL 中导出|
 |[编译器错误 C2349](compiler-error-c2349.md)|'*函数*不能编译为托管:'*说明*; 使用非托管的 #pragma|
 |[编译器错误 C2350](compiler-error-c2350.md)|'*标识符*不是静态成员|
-|[编译器错误 C2351](compiler-error-c2351.md)|已过时的 c + + 构造函数初始化语法|
+|[编译器错误 C2351](compiler-error-c2351.md)|已过时C++构造函数初始化语法|
 |[编译器错误 C2352](compiler-error-c2352.md)|'*标识符*： 非静态成员函数的非法调用|
 |[编译器错误 C2353](compiler-error-c2353.md)|异常规范不允许|
 |编译器错误 C2354|已过时。|
@@ -154,7 +154,7 @@ ms.locfileid: "50580630"
 |[编译器错误 C2378](compiler-error-c2378.md)|'*标识符*： 重定义; 符号不能使用 typedef 重载|
 |[编译器错误 C2379](compiler-error-c2379.md)|形参*数*具有不同的类型提升时|
 |[编译器错误 C2380](compiler-error-c2380.md)|前的类型*标识符*（构造函数的返回类型或当前类名的非法重定义？）|
-|[编译器错误 C2381](compiler-error-c2381.md)|'*标识符*： 重定义;__declspec （noreturn） 或 [[noreturn]] 不同|
+|[编译器错误 C2381](compiler-error-c2381.md)|'*identifier*': redefinition; '__declspec(noreturn)' or '[[noreturn]]' differs|
 |[编译器错误 C2382](compiler-error-c2382.md)|'*标识符*： 重定义; 不同的异常规范|
 |[编译器错误 C2383](compiler-error-c2383.md)|'*标识符*： 此符号上不允许使用默认自变量|
 |[编译器错误 C2384](compiler-error-c2384.md)|'*成员*： 不能对托管/WinRT 类的成员应用 thread_local 或 __declspec （thread）|
@@ -167,9 +167,14 @@ ms.locfileid: "50580630"
 |[编译器错误 C2391](compiler-error-c2391.md)|'*标识符*: friend 不能在类型定义过程|
 |[编译器错误 C2392](compiler-error-c2392.md)|'*member1*： 协变返回类型不支持在托管/WinRT 类型中，否则'*member2*将被重写|
 |[编译器错误 C2393](compiler-error-c2393.md)|'*符号*： 不能在段中分配 per-appdomain 符号*段*|
-|[编译器错误 C2394](compiler-error-c2394.md)|'*类型*:: 运算符*运算符*: CLR/WinRT 运算符无效。 至少一个参数必须是以下类型的: ' T ^，' T ^ %，' T ^ &，其中 T =*类型*|
-|[编译器错误 C2395](compiler-error-c2395.md)|'*类型*:: 运算符*运算符*: CLR/WinRT 运算符无效。 至少一个参数必须是以下类型的： 不，不 %，不 &，' T ^，不 ^ %，' T ^ &，其中 T =*类型*|
-|[编译器错误 C2396](compiler-error-c2396.md)|'*type1*:: 运算符*type2*: CLR/WinRT 用户定义的转换函数无效。 必须转换自或转换为: ' T ^，' T ^ %，' T ^ &，其中 T =*type1*|
+|[编译器错误 C2394](compiler-error-c2394.md)|'*类型*:: 运算符*运算符*:CLR/WinRT 运算符无效。 至少一个参数必须是以下类型之一：' T ^，' T ^ %'，' T ^ &，其中 T =*类型*|
+|[编译器错误 C2395](compiler-error-c2395.md)|'*类型*:: 运算符*运算符*:CLR/WinRT 运算符无效。 至少一个参数必须是以下类型之一：不，不 %，不 &，' T ^，' T ^ %，' T ^ &，其中 T =*类型*|
+|[编译器错误 C2396](compiler-error-c2396.md)|'*type1*:: 运算符*type2*:CLR/WinRT 用户定义的转换函数无效。 必须从转换或转换为：' T ^，' T ^ %，' T ^ &，其中 T =*type1*|
 |[编译器错误 C2397](compiler-error-c2397.md)|从转换*type1*到*type2*需要收缩转换|
 |编译器错误 C2398|元素*数量*： 从转换*type1*to*type2*需要收缩转换|
 |编译器错误 C2399|已过时。|
+
+## <a name="see-also"></a>请参阅
+
+[C /C++编译器和生成工具错误和警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[编译器错误 C2000-C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

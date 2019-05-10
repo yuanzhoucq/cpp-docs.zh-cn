@@ -1,6 +1,6 @@
 ---
 title: CL 环境变量
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - cl
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LIBPATH environment variable
 - environment variables, CL compiler
 ms.assetid: 2606585b-a681-42ee-986e-1c9a2da32108
-ms.openlocfilehash: 47d6966cdc821cee4bd9ffd61b36c0c79143b6c2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
-ms.translationtype: MT
+ms.openlocfilehash: 620ec386e06b1a0eed91c94e9b2b891d9955fd00
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412453"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217631"
 ---
 # <a name="cl-environment-variables"></a>CL 环境变量
 
@@ -22,7 +22,7 @@ CL 工具使用以下环境变量:
 
 - CL 和\_CL\_，如果定义。 CL 工具前面添加的选项和参数到命令行自变量，在 CL 环境变量中定义并追加选项和参数中定义\_CL\_之前处理。
 
-- INCLUDE，必须指向 Visual C++ 安装的 \include 子目录。
+- 包括必须指向 Visual Studio 安装的 \include 子目录。
 
 - LIBPATH，指定要搜索引用的元数据文件的目录[#using](../../preprocessor/hash-using-directive-cpp.md)。 有关 LIBPATH 的详细信息，请参阅 `#using`。
 
@@ -30,13 +30,13 @@ CL 工具使用以下环境变量:
 
 > 设置 CL = [[*选项*]...[*文件*]...][/link*链接选择*...]设置\_CL\_= [[*选项*]...[*文件*]...][/link*链接选择*...]
 
-有关 CL 的参数的详细信息和\_CL\_环境变量，请参阅[编译器命令行语法](../../build/reference/compiler-command-line-syntax.md)。
+有关 CL 的参数的详细信息和\_CL\_环境变量，请参阅[MSVC 编译器命令行语法](compiler-command-line-syntax.md)。
 
 可以使用这些环境变量定义最常使用的文件和选项，并使用命令行为特定用途定义特定文件和选项。 CL 和\_CL\_环境变量被限制为 1024年个字符 （命令行输入限制）。
 
 不能使用 /D 选项定义使用等号 (=) 的符号。 可以将等号替换为数字符号 (#)。 在这种方式，可以使用 CL 或\_CL\_环境变量来定义具有显式值的预处理器常量 — 例如，`/DDEBUG#1`可以定义`DEBUG=1`。
 
-有关相关信息，请参阅[设置环境变量](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md)。
+有关相关信息，请参阅[设置环境变量](../setting-the-path-and-environment-variables-for-command-line-builds.md)。
 
 ## <a name="examples"></a>示例
 
@@ -58,5 +58,5 @@ CL 工具使用以下环境变量:
 
 ## <a name="see-also"></a>请参阅
 
-[设置编译器选项](../../build/reference/setting-compiler-options.md)<br/>
-[编译器选项](../../build/reference/compiler-options.md)
+[设置编译器选项](compiler-command-line-syntax.md)<br/>
+[MSVC 编译器选项](compiler-options.md)

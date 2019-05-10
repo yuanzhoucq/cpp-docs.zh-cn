@@ -1,17 +1,17 @@
 ---
-title: 程序和链接 （c + +）
+title: 程序和链接 (C++)
 ms.date: 04/09/2018
 ms.assetid: a6493ba0-24e2-4c89-956e-9da1dea660cb
 ms.openlocfilehash: 4f509979a293f194333e610fbdae7be9d32ec121
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301508"
 ---
 # <a name="program-and-linkage-c"></a>程序和链接 (C++)
 
-在 c + + 程序中，*符号*，例如变量或函数名称，可以声明为任意数量的内，其作用域内，但它只能定义一次。 这是一个定义规则 (ODR)。 一个*声明*引入了 （或重新引入） 到该程序的名称。 一个*定义*引入了一个名称，并在一个变量的情况下显式初始化它。 一个*函数定义*包括签名以及函数体。
+在C++程序中，*符号*，例如变量或函数名称，可以声明为任意数量的内，其作用域内，但它只能定义一次。 这是一个定义规则 (ODR)。 一个*声明*引入了 （或重新引入） 到该程序的名称。 一个*定义*引入了一个名称，并在一个变量的情况下显式初始化它。 一个*函数定义*包括签名以及函数体。
 
 以下是声明：
 

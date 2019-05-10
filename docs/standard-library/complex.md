@@ -8,11 +8,11 @@ helpviewer_keywords:
 - complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
 ms.openlocfilehash: afcdb1246d9c02f83dbc8708326d10e802ad2779
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212087"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
@@ -40,11 +40,11 @@ ms.locfileid: "50525861"
 
 - 复数加法逆元 (， *b*) 是 (-、-*b*)，所有此类复数的乘法逆除 （0，0） 是
 
-   (/ (<sup>2</sup> + *b*<sup>2</sup>)、-*b*/ (<sup>2</sup> + *b*<sup>2</sup>))
+   (*a*/(*a*<sup>2</sup> + *b*<sup>2</sup>), -*b*/(*a*<sup>2</sup> + *b*<sup>2</sup>))
 
 通过表示复数*z* = (， *b*) 的形式*z* =   + *bi*，其中*我*<sup>2</sup> =-1，规则的实数集的代数可应用于复数集以及其组件。 例如：
 
-   (1 + 2*我*) \* (2 + 3*我*) = 1 \* (2 + 3*我*) + 2*我* \* (2 + 3*i*)= (2 + 3*我*) + (4*我*+ 6*我*<sup>2</sup>) = (2-6) + （3 + 4）*我*=-4 + 7*我*
+   (1 + 2*i*) \* (2 + 3*i*) = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*) = (2 + 3*i*) + (4*i* + 6*i*<sup>2</sup>) = (2 - 6) + (3 + 4)*i* = -4 + 7*i*
 
 复数的系统是一个域，但它不是一个有序域。 任何排序的复杂数字没有表示的字段的实数值和其子集，因此能应用于复杂数字不相等，因为它们是为实数。
 

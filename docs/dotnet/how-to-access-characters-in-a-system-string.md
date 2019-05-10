@@ -1,5 +1,5 @@
 ---
-title: 如何：访问 System::String 中的字符
+title: '如何：System:: string 中访问字符'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - examples [C++], strings
 - strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-ms.openlocfilehash: 6ecd3ed09e31e99898143e30ffe70c1c14aea9f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6b9e30a18ab1d2b8463ccccae0b265bc20904020
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62222931"
 ---
-# <a name="how-to-access-characters-in-a-systemstring"></a>如何：访问 System::String 中的字符
+# <a name="how-to-access-characters-in-a-systemstring"></a>如何：System:: string 中访问字符
 
 您可以访问的字符<xref:System.String>对象的高性能调用到非托管函数`wchar_t*`字符串。 该方法生成的第一个字符的内部指针<xref:System.String>对象。 此指针可以直接操作或固定并传递给函数应为普通`wchar_t`字符串。
 
@@ -22,7 +22,7 @@ ms.locfileid: "50667035"
 
 `PtrToStringChars` 返回<xref:System.Char>，这是内部指针 (也称为`byref`)。 在这种情况下，它是进行垃圾收集。 您无需将固定此指针，除非您要将其传递给本机函数。
 
-考虑下列代码。  因为不需要固定`ppchar`是一个内部指针和如果垃圾回收器移动它指向的字符串，它还将更新`ppchar`。 无需[pin_ptr (C + + CLI)](../windows/pin-ptr-cpp-cli.md)，代码将起作用且不具有可能会导致性能下降通过固定。
+考虑下列代码。  因为不需要固定`ppchar`是一个内部指针和如果垃圾回收器移动它指向的字符串，它还将更新`ppchar`。 无需[pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md)，代码将起作用且不具有可能会导致性能下降通过固定。
 
 如果传递`ppchar`到本机函数，则它必须是钉住指针; 垃圾回收器将不能更新任何指针的非托管的堆栈帧。
 
@@ -77,7 +77,7 @@ int main() {
 
 ## <a name="example"></a>示例
 
-内部指针具有本机 c + + 指针的所有属性。 例如，您可以使用它可以运行链接的数据结构并执行插入和删除只使用一个指针：
+内部指针具有本机的所有属性C++指针。 例如，您可以使用它可以运行链接的数据结构并执行插入和删除只使用一个指针：
 
 ```
 // PtrToStringChars_3.cpp

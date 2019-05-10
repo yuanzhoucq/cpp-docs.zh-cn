@@ -8,12 +8,12 @@ helpviewer_keywords:
 - in instruction
 - __indword intrinsic
 ms.assetid: 1068d686-586e-4e36-b962-d1d7c3315260
-ms.openlocfilehash: f4b37247093da14c8d5e8fed69b01265d3fed2ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 063ebd92682f8011bc6b60eee14c3443bc04c333
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348921"
 ---
 # <a name="indword"></a>__indword
 

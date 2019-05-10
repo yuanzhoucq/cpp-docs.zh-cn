@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Metadata Namespace
 ms.assetid: e3e114d8-a4b0-47f0-865a-9ce9d7212e86
-ms.openlocfilehash: 39a4709c8f66c4dcc2ee5185f2a1df27b0666445
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9626b3a9d28d28fd52a0d2295af8fda8855cd90c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387599"
 ---
 # <a name="platformmetadata-namespace"></a>Platform::Metadata 命名空间
 
@@ -30,7 +30,7 @@ namespace Platform {
 
 虽然此命名空间供内部使用，但是浏览器可以显示此命名空间的以下成员。
 
-|name|备注|
+|名称|备注|
 |----------|------------|
 |特性|特性的基类。|
 |[Platform::Metadata::DefaultMemberAttribute 特性](../cppcx/platform-metadata-defaultmemberattribute-attribute.md)|指示首选函数以在几个可能的重载函数中调用。|

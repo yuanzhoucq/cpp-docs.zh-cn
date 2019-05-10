@@ -1,6 +1,6 @@
 ---
 title: fpos 类
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - iosfwd/std::fpos
 - iosfwd/std::fpos::seekpos
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - std::fpos [C++], seekpos
 - std::fpos [C++], state
 ms.assetid: ffd0827c-fa34-47f4-b10e-5cb707fcde47
-ms.openlocfilehash: bf15cdf0ec4df1301b074ba2ae179dee3619d30d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 78b136d72067fa5fff58e8a7acc044fb4e1a409e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159452"
 ---
 # <a name="fpos-class"></a>fpos 类
 
@@ -86,7 +86,7 @@ fpos(Statetype _State, fpos_t _Filepos);
 *_Off*<br/>
 进入流的偏移量。
 
-*（_s)*<br/>
+*_State*<br/>
 `fpos` 对象的起始状态。
 
 *_Filepos*<br/>
@@ -215,13 +215,13 @@ fpos<Statetype>& operator+=(streamoff _Off);
 
 ### <a name="remarks"></a>备注
 
-成员函数将添加 *_Off*到存储的偏移的成员对象，然后返回**\*这**。 对于文件内的位置，结果通常仅对不具有状态依赖编码的二进制流有效。
+成员函数将添加 *_Off* 到存储的偏移的成员对象，然后返回 **\*这** 。 对于文件内的位置，结果通常仅对不具有状态依赖编码的二进制流有效。
 
 ### <a name="example"></a>示例
 
 请参阅 [operator!=](#op_neq)，了解使用 `operator+=` 的示例。
 
-## <a name="fpos__operator-"></a>  fpos::operator-
+## <a name="operator-"></a>  fpos::operator-
 
 递减文件位置指示器。
 
@@ -247,7 +247,7 @@ fpos<Statetype> operator-(streamoff _Off) const;
 
 请参阅 [operator!=](#op_neq)，了解使用 `operator-` 的示例。
 
-## <a name="fpos__operator-_eq"></a>  fpos::operator-=
+## <a name="operator-_eq"></a>  fpos::operator-=
 
 递减文件位置指示器。
 
@@ -356,7 +356,7 @@ void state(Statetype _State);
 
 ### <a name="parameters"></a>参数
 
-*（_s)*<br/>
+*_State*<br/>
 新的转换状态。
 
 ### <a name="return-value"></a>返回值

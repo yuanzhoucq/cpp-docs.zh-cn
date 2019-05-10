@@ -2,18 +2,16 @@
 title: ATL 控件：常规支持类
 ms.date: 11/04/2016
 ms.topic: reference
-f1_keywords:
-- vc.atl.controls
 helpviewer_keywords:
 - controls [ATL]
 - general support classes
 ms.assetid: cf73f1d2-7542-48e3-b8c8-9d3abf29f85b
-ms.openlocfilehash: bf5c1b9e2f4fb7414cc34d457bc0d8b1e27dcd91
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 3f00348ab0c9f25bdd4f6b7a2b05cd4b82ea48e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62262809"
 ---
 # <a name="controls-general-support-classes"></a>控件:常规支持类
 
@@ -31,7 +29,7 @@ ms.locfileid: "57262995"
 
 ## <a name="sample-program"></a>示例程序
 
-[ATLFire](../visual-cpp-samples.md)
+[ATLFire](../overview/visual-cpp-samples.md)
 
 ## <a name="related-articles"></a>相关文章
 

@@ -19,11 +19,11 @@ helpviewer_keywords:
 - CComEnumImpl class
 ms.assetid: cc0d8e76-e608-46db-87cd-4c7161fe32d2
 ms.openlocfilehash: ccd083f3bfd9ae694c97e466fcb40b348fec0c27
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62259854"
 ---
 # <a name="ccomenumimpl-class"></a>CComEnumImpl 类
 
@@ -82,7 +82,7 @@ COM 枚举器接口。 请参阅[IEnumString](/windows/desktop/api/objidl/nn-obj
 
 ## <a name="remarks"></a>备注
 
-请参阅[IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring)方法实现的示例。 `CComEnumImpl` 提供要枚举的项数组中的存储位置的 COM 枚举器接口的实现。 此类是类似于`IEnumOnSTLImpl`类，该类提供枚举器接口的实现基于 c + + 标准库容器。
+请参阅[IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring)方法实现的示例。 `CComEnumImpl` 提供要枚举的项数组中的存储位置的 COM 枚举器接口的实现。 此类是类似于`IEnumOnSTLImpl`类，该类提供枚举器接口的实现基于C++标准库容器。
 
 > [!NOTE]
 >  有关进一步之间的差异的详细信息`CComEnumImpl`并`IEnumOnSTLImpl`，请参阅[CComEnumImpl::Init](#init)。

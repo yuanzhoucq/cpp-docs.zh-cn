@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - /Zf
 - -Zf
-ms.openlocfilehash: 2c3f8d08f59c3a6803eda67126ef8a8f9ba6b1fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bed37a189e3eb1eb7b55dbdee1f81f360eafa721
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315845"
 ---
 # <a name="zf-faster-pdb-generation"></a>/Zf （更快的 PDB 生成）
 
@@ -23,7 +23,7 @@ ms.locfileid: "50595725"
 
 ## <a name="remarks"></a>备注
 
-**/Zf**选项更快地生成 PDB 文件的编译器支持使用时启用[/MP （使用多个进程生成）](mp-build-with-multiple-processes.md)选项，或当生成系统 (例如， [MSBuild](/visualstudio/msbuild/msbuild-reference)或[CMake](../../ide/cmake-tools-for-visual-cpp.md)) 可能会运行多个 cl.exe 编译器进程在同一时间。 此选项导致编译器前端延迟生成类型索引的 PDB 文件中每个类型记录的结束前的编译，则对 mspdbsrv.exe，而不是使每个记录的 RPC 请求的单个 RPC 调用中的所有请求。 这可以大大减少多个 cl.exe 编译器进程同时运行的环境中的 mspdbsrv.exe 过程 RPC 负载，从而改进生成吞吐量。
+**/Zf**选项更快地生成 PDB 文件的编译器支持使用时启用[/MP （使用多个进程生成）](mp-build-with-multiple-processes.md)选项，或当生成系统 (例如， [MSBuild](/visualstudio/msbuild/msbuild-reference)或[CMake](../cmake-projects-in-visual-studio.md)) 可能会运行多个 cl.exe 编译器进程在同一时间。 此选项导致编译器前端延迟生成类型索引的 PDB 文件中每个类型记录的结束前的编译，则对 mspdbsrv.exe，而不是使每个记录的 RPC 请求的单个 RPC 调用中的所有请求。 这可以大大减少多个 cl.exe 编译器进程同时运行的环境中的 mspdbsrv.exe 过程 RPC 负载，从而改进生成吞吐量。
 
 因为 **/Zf**选项仅适用于 PDB 生成，它需要[/Zi](z7-zi-zi-debug-information-format.md)或[/ZI](z7-zi-zi-debug-information-format.md)选项。
 
@@ -31,9 +31,9 @@ ms.locfileid: "50595725"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择**配置属性** > **C/c + +** > **命令行**属性页。
+1. 选择**配置属性** > **C /C++** > **命令行**属性页。
 
 1. 修改**其他选项**属性以包含 **/Zf** ，然后选择**确定**。
 

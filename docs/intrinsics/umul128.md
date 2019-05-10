@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - __umul128 intrinsic
 ms.assetid: 13684df3-3ac7-467c-b258-a0e93bc490b5
-ms.openlocfilehash: 94f26a6baeb4d3440d7f16af298b9880b91860f2
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: afca1e62127ac2dbcfc407982dbe191d379b4acb
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62390095"
 ---
 # <a name="umul128"></a>_umul128
 

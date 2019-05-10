@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: 8dc8c51cc1847d29b76e2017db4c1368b35b9a9f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 43eb171ce9b3ea3454855dc1f92d9aa1b74645d4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252940"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 
@@ -193,7 +193,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 
 ### <a name="data-members"></a>数据成员
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[CMFCTabCtrl::m_bEnableActivate](#m_benableactivate)|失去焦点时插入和已启用的新选项卡会阻止活动视图。|
 
@@ -243,7 +243,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何使用中的各种方法`CMFCTabCtrl`类，以配置`CMFCTabCtrl`对象。 该示例说明如何添加选项卡、 活动选项卡上显示关闭按钮、 启用可编辑的选项卡标签和显示选项卡式的窗口标签的弹出菜单。 此示例摘自[状态集合示例](../../visual-cpp-samples.md)。
+下面的示例演示如何使用中的各种方法`CMFCTabCtrl`类，以配置`CMFCTabCtrl`对象。 该示例说明如何添加选项卡、 活动选项卡上显示关闭按钮、 启用可编辑的选项卡标签和显示选项卡式的窗口标签的弹出菜单。 此示例摘自[状态集合示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_StateCollection#1](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_1.h)]
 [!code-cpp[NVC_MFC_StateCollection#3](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_2.cpp)]
@@ -355,7 +355,7 @@ BOOL Create(
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何使用`Create`中的方法`CMFCTabCtrl`类。 此示例摘自[状态集合示例](../../visual-cpp-samples.md)。
+下面的示例演示如何使用`Create`中的方法`CMFCTabCtrl`类。 此示例摘自[状态集合示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_StateCollection#1](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_1.h)]
 [!code-cpp[NVC_MFC_StateCollection#2](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_3.cpp)]
@@ -846,7 +846,7 @@ BOOL ModifyTabStyle(Style style);
 
 值*样式*参数可以是下列任一`CMFCTabCtrl::Style`枚举。
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |STYLE_3D|显示三维、 矩形具有圆角的选项卡。|
 |STYLE_3D_ONENOTE|显示三维选项卡具有一个垂直边和倾斜的一端和，有了圆形角。|
@@ -1078,7 +1078,7 @@ void SetResizeMode(ResizeMode resizeMode);
 
 *ResizeMode*参数可以是下列任一`ResizeMode`枚举值。
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |RESIZE_NO|不能调整大小选项卡控件。|
 |RESIZE_VERT|选项卡控件可以调整垂直方向，但不能水平大小。|

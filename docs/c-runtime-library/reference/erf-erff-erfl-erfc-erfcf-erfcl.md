@@ -37,11 +37,11 @@ helpviewer_keywords:
 - erfc function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
 ms.openlocfilehash: 4270d8366686ea282a4dd37741d9f8e37991b88f
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55702656"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62289194"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf、erff、erfl、erfc、erfcf、erfcl
 
@@ -99,7 +99,7 @@ long double erfcl(
 
 互为补充的高斯误差函数定义为 1-erf （x)。 **Erf**函数返回一个值范围介于-1.0 到 1.0。 无错误返回。 **Erfc**函数返回的值在 0 到 2 这个范围内。 如果*x*太大**erfc**，则**errno**变量设置为**ERANGE**。
 
-由于 c + + 允许重载，可以调用的重载**erf**并**erfc**采用并返回**float**并**长** **双**类型。 在 C 程序中， **erf**并**erfc**始终采用并返回**double**。
+因为C++允许重载，可以调用的重载**erf**并**erfc**采用并返回**float**并**长** **double**类型。 在 C 程序中， **erf**并**erfc**始终采用并返回**double**。
 
 ## <a name="requirements"></a>要求
 

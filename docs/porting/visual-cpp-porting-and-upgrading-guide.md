@@ -2,12 +2,12 @@
 title: Visual C++ 移植和升级指南
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-ms.openlocfilehash: 39b0e716ae6dbc1210130908b27cfa1d06f86ec6
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 8798d8b3da5a91adfc6f77912d4f34bf62549f54
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556863"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58898786"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++ 移植和升级指南
 
@@ -73,11 +73,11 @@ Visual Studio 中的生成系统和项目文件格式从 Visual Studio 2008 及�
 
 ## <a name="related-topics"></a>相关主题
 
-|标题|描述|
+|Title|说明|
 |-----------|-----------------|
 |[从 Visual C++ 早期版本升级项目](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|讨论如何使用在早期版本的 Visual C++ 中创建的项目。|
-|[Visual Studio 2017 RC 中 C++ 编译器的新增功能](../what-s-new-for-visual-cpp-in-visual-studio.md)|从 Visual Studio 2015 到 Visual Studio 2017 的 IDE 和工具更改|
-|[Visual Studio 2017 中 C++ 的符合性改进](../cpp-conformance-improvements-2017.md)|从 Visual Studio 2015 到 Visual Studio 2017 的标准符合性改进|
+|[Visual Studio 中的 C++ 编译器新变化](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)|当前版本 Visual Studio 的 IDE 和工具更改|
+|[Visual Studio 中的 C++ 符合性改进](../overview/cpp-conformance-improvements.md)|从 Visual Studio 2015 到 Visual Studio 的标准符合性改进|
 |[Visual C++ 更改历史记录（2003 - 2015）](visual-cpp-change-history-2003-2015.md)|导致代码可能需要更改的 Visual C++ 库和生成工具中的所有更改的列表（从 Visual Studio 2003 到 Visual Studio 2015）。|
 |[Visual C++ 新增功能（2003 - 2015）](visual-cpp-what-s-new-2003-through-2015.md)|从 Visual Studio 2003 到 Visual Studio 2015 的所有 Visual C++“新增功能”信息。|
 |[移植第三方库](porting-third-party-libraries.md)|如何使用 **vcpkg** 命令行工具将较旧的开源库移植到使用较新的 Visual C++ 工具集编译的版本。|
@@ -88,4 +88,4 @@ Visual Studio 中的生成系统和项目文件格式从 Visual Studio 2008 及�
 
 ## <a name="see-also"></a>请参阅
 
-[Visual C++](../visual-cpp-in-visual-studio.md)
+[Visual C++](../overview/visual-cpp-in-visual-studio.md)

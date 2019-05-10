@@ -30,11 +30,11 @@ helpviewer_keywords:
 - CVTBUFSIZE
 ms.assetid: 0a8d8a26-5940-4ae3-835e-0aa6ec1b0744
 ms.openlocfilehash: 168e0657150d072bbe41cd0ad6e914ca1f53e512
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62332284"
 ---
 # <a name="gcvts"></a>_gcvt_s
 
@@ -65,7 +65,7 @@ errno_t _gcvt_s(
 *sizeInBytes*<br/>
 缓冲区的大小。
 
-*value*<br/>
+*值*<br/>
 要转换的值。
 
 *digits*<br/>
@@ -77,7 +77,7 @@ errno_t _gcvt_s(
 
 ### <a name="error-conditions"></a>错误条件
 
-|*buffer*|*sizeInBytes*|*value*|*digits*|返回|中的值*缓冲区*|
+|*buffer*|*sizeInBytes*|*值*|*digits*|返回|中的值*缓冲区*|
 |--------------|-------------------|-------------|--------------|------------|-----------------------|
 |**NULL**|任何|任何|任何|**EINVAL**|未修改。|
 |不**NULL** （指向有效内存）|零|任何|任何|**EINVAL**|未修改。|

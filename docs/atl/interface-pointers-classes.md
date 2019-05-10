@@ -2,19 +2,17 @@
 title: 接口指针类 (ATL)
 ms.date: 11/04/2016
 ms.topic: reference
-f1_keywords:
-- vc.atl.pointers.interface
 helpviewer_keywords:
 - pointers, to interfaces
 - interfaces, pointers classes
 - interface pointers classes
 ms.assetid: 712617a1-17ae-4b5c-a32c-a48b758df7a6
-ms.openlocfilehash: 1b94a4a97bf3bc2c16703b51f52ea5f5664b500e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 992d4c7d882cd8837c3dbacbfde4855c9c94817f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62250342"
 ---
 # <a name="interface-pointers-classes"></a>接口指针类
 

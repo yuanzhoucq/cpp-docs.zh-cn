@@ -37,11 +37,11 @@ helpviewer_keywords:
 - environment paths
 ms.assetid: 47f9fc29-250e-4c09-b52e-9e9f0ef395ca
 ms.openlocfilehash: 40c2d0c42a3d61f84db78015388eba19742af06e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356818"
 ---
 # <a name="searchenvs-wsearchenvs"></a>_searchenv_s、_wsearchenv_s
 
@@ -87,7 +87,7 @@ errno_t _wsearchenv_s(
 *varname*<br/>
 要搜索的环境。
 
-*路径名*<br/>
+*pathname*<br/>
 用于存储完整路径的缓冲区。
 
 *numberOfElements*<br/>
@@ -101,7 +101,7 @@ errno_t _wsearchenv_s(
 
 ### <a name="error-conditions"></a>错误条件
 
-|*filename*|*varname*|*路径名*|*numberOfElements*|返回值|内容*路径名*|
+|*filename*|*varname*|*pathname*|*numberOfElements*|返回值|内容*路径名*|
 |----------------|---------------|----------------|------------------------|------------------|----------------------------|
 |任何|任何|**NULL**|任何|**EINVAL**|n/a|
 |**NULL**|任何|任何|任何|**EINVAL**|未更改|

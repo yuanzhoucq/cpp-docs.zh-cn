@@ -134,11 +134,11 @@ f1_keywords:
 - AMP_MATH/Concurrency::truncf
 ms.assetid: ba653308-dc28-4384-b2fd-6cd718a72f91
 ms.openlocfilehash: bc023d1cc27601b7da0a87aee7c3c1ac66479a7c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180345"
 ---
 # <a name="concurrencyprecisemath-namespace"></a>Concurrency::precise_math 命名空间
 
@@ -212,7 +212,7 @@ namespace precise_math;
 |[fmaxf](concurrency-precise-math-namespace-functions.md#fmaxf)|确定自变量的最大数值|
 |[fmin](concurrency-precise-math-namespace-functions.md#fmin)|已重载。 确定自变量的最小数值|
 |[fminf](concurrency-precise-math-namespace-functions.md#fminf)|确定自变量的最小数值|
-|[fmod 函数 (c + + AMP)](concurrency-precise-math-namespace-functions.md#fmod)|已重载。 计算 _X/_Y 的浮点余数|
+|[fmod 函数 (C++ a m P)](concurrency-precise-math-namespace-functions.md#fmod)|已重载。 计算 _X/_Y 的浮点余数|
 |[fmodf](concurrency-precise-math-namespace-functions.md#fmodf)|计算 _X/_Y 的浮点余数|
 |[fpclassify](concurrency-precise-math-namespace-functions.md#fpclassify)|已重载。 将参数值分类为 NaN、无穷大、正常、次正常、零|
 |[frexp](concurrency-precise-math-namespace-functions.md#frexp)|已重载。 获取的尾数和 _X 的指数|

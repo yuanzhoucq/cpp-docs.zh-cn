@@ -1,20 +1,18 @@
 ---
 title: ATL 服务
 ms.date: 11/04/2016
-f1_keywords:
-- CServiceModule
 helpviewer_keywords:
 - CServiceModule class
 - COM objects, ATL
 - services, ATL
 - ATL services
 ms.assetid: 8c09d1a8-7548-4d2c-947c-9d795a81659b
-ms.openlocfilehash: 3308e7fb38dfaab13c2570f216772e2af459a7f2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 052169154a62cbd07a82f08087fc2c2db8ae46c5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62251910"
 ---
 # <a name="atl-services"></a>ATL 服务
 

@@ -21,11 +21,11 @@ helpviewer_keywords:
 - _countof macro
 ms.assetid: 86198767-f7e5-4beb-898d-3cbbf60350a3
 ms.openlocfilehash: 60b4350d6cf14a545de67de0bdaee70ee2099006
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335342"
 ---
 # <a name="countof-macro"></a>_countof 宏
 
@@ -48,9 +48,9 @@ ms.locfileid: "50536131"
 
 ## <a name="remarks"></a>备注
 
-**_countof**为类似于函数的预处理器宏实现。 C + + 版本具有额外的模板的机制来检测在编译时，如果将指针传递而不是静态声明数组。
+**_countof**为类似于函数的预处理器宏实现。 C++版本都具有额外的模板的机制来检测在编译时，如果将指针传递而不是静态声明数组。
 
-絋粄*数组*实际上是一个数组，不是指针。 在 C 中， **_countof**生成错误的结果，如果*数组*的指针。 C + + **_countof**无法编译如果*数组*的指针。  一个数组作为参数传递给函数*为指针 decays*，这意味着，在函数内，您不能使用 **_countof**以确定数组的范围。
+絋粄*数组*实际上是一个数组，不是指针。 在 C 中， **_countof**生成错误的结果，如果*数组*的指针。 在C++， **_countof**无法编译如果*数组*是指针。  一个数组作为参数传递给函数*为指针 decays*，这意味着，在函数内，您不能使用 **_countof**以确定数组的范围。
 
 ## <a name="requirements"></a>要求
 

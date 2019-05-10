@@ -1,14 +1,14 @@
 ---
 title: 将控件置于网页上（ATL 教程，第 7 部分）
 ms.custom: get-started-article
-ms.date: 09/27/2018
+ms.date: 05/06/2019
 ms.assetid: 50dc4c95-c95b-4006-b88a-9826f7bdb222
-ms.openlocfilehash: baf0ca56ae7512ac76f64b29e3060e0749c083c1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
-ms.translationtype: MT
+ms.openlocfilehash: aab9557fd73e870c0362f876642e828616b538bd
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297445"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221233"
 ---
 # <a name="putting-the-control-on-a-web-page-atl-tutorial-part-7"></a>将控件置于网页上（ATL 教程，第 7 部分）
 
@@ -74,7 +74,7 @@ ms.locfileid: "57297445"
 
 ## <a name="indicating-that-the-control-is-safe-for-scripting"></a>该值指示控件为可安全执行脚本
 
-可以在 Internet Explorer 中查看与该控件的网页或详细信息为方便起见，使用 Visual c + + 中内置的 Web 浏览器视图。 若要查看您的控件在 Web 浏览器视图中，右键单击 PolyCtl.htm，然后单击**在浏览器中的查看**。
+可以仅在 Internet Explorer 中查看与该控件的网页。 由于安全漏洞，其他浏览器不再支持 ActiveX 控件。 
 
 > [!NOTE]
 > 如果控件不可见，知道某些浏览器，需要运行 ActiveX 控件的设置调整。 请参阅有关如何启用 ActiveX 控件的浏览器的文档。

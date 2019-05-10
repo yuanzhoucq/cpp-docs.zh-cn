@@ -13,12 +13,12 @@ helpviewer_keywords:
 - snapshots, ODBC recordsets
 - dynasets
 ms.assetid: 333337c5-575e-4d26-b5f6-47166ad7874d
-ms.openlocfilehash: d16087722752b7bbdabd37410908c7ea2ae18ceb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b201e152d83d3812253aa4803eebe715d726219d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397739"
 ---
 # <a name="recordset-odbc"></a>记录集 (ODBC)
 
@@ -65,13 +65,13 @@ ms.locfileid: "50435251"
 - 指定`CRecordset::readOnly`中*dwOptions*参数的`Open`。
 
     > [!NOTE]
-    >  有关动态集支持的 ODBC 驱动程序要求的信息，请参阅[ODBC](../../data/odbc/odbc-basics.md)。 有关此版本的 Visual c + + 中包含的 ODBC 驱动程序的列表和有关获取其他驱动程序的信息，请参阅[ODBC 驱动程序列表](../../data/odbc/odbc-driver-list.md)。
+    >  有关动态集支持的 ODBC 驱动程序要求的信息，请参阅[ODBC](../../data/odbc/odbc-basics.md)。 有关包含在视觉对象的此版本的 ODBC 驱动程序的列表C++和有关获取其他驱动程序的信息，请参阅[ODBC 驱动程序列表](../../data/odbc/odbc-driver-list.md)。
 
 ##  <a name="_core_your_recordsets"></a> 记录集
 
-对于每个非重复表、 视图或你想要访问的存储的过程，通常定义派生自的类`CRecordset`。 （例外情况是数据库联接，在其中一个记录集所表示的两个或多个表的列）。在派生的记录集类，请启用记录字段交换 (RFX) 机制或批量记录字段交换 (Bulk RFX) 机制，类似于对话框数据交换 (DDX) 机制。 RFX 和批量 RFX 简化数据源的数据的传输到记录集;RFX 此外将数据从传输您的记录集到数据源。 有关详细信息，请参阅[记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)并[记录集： 提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+对于每个非重复表、 视图或你想要访问的存储的过程，通常定义派生自的类`CRecordset`。 （例外情况是数据库联接，在其中一个记录集所表示的两个或多个表的列）。在派生的记录集类，请启用记录字段交换 (RFX) 机制或批量记录字段交换 (Bulk RFX) 机制，类似于对话框数据交换 (DDX) 机制。 RFX 和批量 RFX 简化数据源的数据的传输到记录集;RFX 此外将数据从传输您的记录集到数据源。 有关详细信息，请参阅[记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)和[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
-记录集对象使您可以访问所有所选的记录。 通过使用多个所选记录滚动`CRecordset`成员函数，如`MoveNext`和`MovePrev`。 同时，记录集对象都表示只有一个所选的记录，当前记录。 可以通过声明与列的表或从数据库查询结果的记录相对应的类成员变量的记录集来检查当前记录的字段。 有关记录集数据成员的信息，请参阅[记录集： 体系结构 (ODBC)](../../data/odbc/recordset-architecture-odbc.md)。
+记录集对象使您可以访问所有所选的记录。 通过使用多个所选记录滚动`CRecordset`成员函数，如`MoveNext`和`MovePrev`。 同时，记录集对象都表示只有一个所选的记录，当前记录。 可以通过声明与列的表或从数据库查询结果的记录相对应的类成员变量的记录集来检查当前记录的字段。 有关记录集数据成员的信息，请参阅[记录集：体系结构 (ODBC)](../../data/odbc/recordset-architecture-odbc.md)。
 
 以下主题介绍使用记录集对象的详细信息。 主题将列出按功能类别和自然浏览顺序以允许顺序读取。
 
@@ -89,7 +89,7 @@ ms.locfileid: "50435251"
 
 - [记录集：筛选记录 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)
 
-- [记录集：对记录进行排序 (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)
+- [记录集：排序记录 (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)
 
 - [记录集：参数化记录集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
 
@@ -99,13 +99,13 @@ ms.locfileid: "50435251"
 
 - [记录集：锁定记录 (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
 
-- [记录集：再次查询记录集 (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
+- [记录集：重新查询记录集 (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
 
 ### <a name="topics-about-somewhat-more-advanced-techniques"></a>有关某种程度上的主题更高级的技术
 
 - [记录集：执行联接 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
 
-- [记录集：为预定义查询声明一个类 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)
+- [记录集：声明预定义查询的类 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)
 
 - [记录集：动态绑定数据列 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)
 

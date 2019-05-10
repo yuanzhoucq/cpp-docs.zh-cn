@@ -5,18 +5,14 @@ f1_keywords:
 - namespace_CPP
 - using_CPP
 helpviewer_keywords:
-- namespaces [C++], C++
 - namespaces [C++]
-- namespaces [C++], global
-- global namespace
-- Visual C++, namespaces
 ms.assetid: d1a5a9ab-1cad-47e6-a82d-385bb77f4188
-ms.openlocfilehash: 532fdcb5de179bd2fdeb25091ace7210d55a2658
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 15717c6f2f34836de9b546af203a45dc8099d4d4
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508844"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222355"
 ---
 # <a name="namespaces-c"></a>命名空间 (C++)
 
@@ -154,7 +150,7 @@ namespace ContosoDataServer
 
 ## <a name="inline-namespaces-c-11"></a>内联命名空间 (C++ 11)
 
-与普通嵌套命名空间不同，内联命名空间的成员会被视为父命名空间的成员。 这一特性使针对重载函数的依赖于参数的查找可以对父命名空间和嵌套内联命名空间中具有重载的函数起作用。 它还可让你在内联命名空间中声明的模板的父命名空间中声明专用化。 下面的示例演示在默认情况下，外部代码如何绑定到内联命名空间：
+与普通嵌套命名空间不同，内联命名空间的成员会被视为父命名空间的成员。 这一特性使针对重载函数的依赖于自变量的查找可以对父命名空间和嵌套内联命名空间中具有重载的函数起作用。 它还可让你在内联命名空间中声明的模板的父命名空间中声明专用化。 下面的示例演示在默认情况下，外部代码如何绑定到内联命名空间：
 
 ```cpp
 //Header.h

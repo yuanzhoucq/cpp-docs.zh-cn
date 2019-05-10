@@ -1,17 +1,17 @@
 ---
-title: max_is （c + + COM 属性）
+title: max_is (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.max_is
 helpviewer_keywords:
 - max_is attribute
 ms.assetid: 7c851f5c-6649-4d77-a792-247c37d8f560
-ms.openlocfilehash: 10732d5ba3251185dc7027e3449486af3037f763
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dca2a3dc18aa3c3e75bbb682ed0b1b90adcd9236
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409273"
 ---
 # <a name="maxis"></a>max_is
 
@@ -25,12 +25,12 @@ ms.locfileid: "50627469"
 
 ### <a name="parameters"></a>参数
 
-*表达式*<br/>
+*expression*<br/>
 一个或多个 C 语言表达式。 允许使用空参数槽。
 
 ## <a name="remarks"></a>备注
 
-**Max_is** c + + 属性具有相同的功能[max_is](/windows/desktop/Midl/max-is) MIDL 特性。
+**Max_is** C++属性具有相同的功能[max_is](/windows/desktop/Midl/max-is) MIDL 特性。
 
 ## <a name="requirements"></a>要求
 
@@ -40,7 +40,7 @@ ms.locfileid: "50627469"
 |-|-|
 |**适用对象**|中的字段**struct**或**union**，接口参数，接口方法|
 |**可重复**|否|
-|**必需的特性**|无|
+|**必需的特性**|None|
 |**无效的特性**|**size_is**|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。

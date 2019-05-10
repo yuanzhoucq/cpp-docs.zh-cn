@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - D9025
 ms.assetid: 6edff72c-1508-46c2-99f4-0e4b3c5e60c9
-ms.openlocfilehash: fb9ab3152efe565501e91fbad5ebb279c4396968
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e7090dda72868ad7ee4d5f8e4f1ba6a0ad121c98
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62214087"
 ---
 # <a name="command-line-warning-d9025"></a>命令行警告 D9025
 
@@ -23,7 +23,7 @@ ms.locfileid: "50652421"
 
 如果在从开发环境中，编译时收到此警告，并且不确定冲突的选项来自哪里，考虑以下方面：
 
-- 在代码中或在项目的项目设置中，可以指定一个选项。 如果您看一下编译器的[命令行属性页](../../ide/command-line-property-pages.md)如果你看到中的选项冲突**所有选项**字段选项在项目的属性页，否则为设置选项，然后在源代码中设置。
+- 在代码中或在项目的项目设置中，可以指定一个选项。 如果您看一下编译器的[命令行属性页](../../build/reference/command-line-property-pages.md)如果你看到中的选项冲突**所有选项**字段选项在项目的属性页，否则为设置选项，然后在源代码中设置。
 
    如果项目的属性页中设置了选项，查看在编译器的预处理器属性页上 （使用解决方案资源管理器中选择的项目节点）。  如果您看不到选项集存在，检查每个源代码文件 （在解决方案资源管理器） 的预处理器属性页设置以确保它不存在添加。
 

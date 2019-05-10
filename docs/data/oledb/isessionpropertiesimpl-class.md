@@ -14,12 +14,12 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: ca0ba254-c7dc-4c52-abec-cf895a0c6a63
-ms.openlocfilehash: 7b9f402d9b1c45c2fa10c1128afd271229036f88
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ed8b7a271bc6ac234fc9276d6c88d26848da24f8
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62390680"
 ---
 # <a name="isessionpropertiesimpl-class"></a>ISessionPropertiesImpl 类
 

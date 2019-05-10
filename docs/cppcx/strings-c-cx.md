@@ -2,16 +2,16 @@
 title: 字符串 (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 5b34e1df-7c2b-4269-aba8-b767d36c49d9
-ms.openlocfilehash: 350c6133b9f910a067f760681832b81bac24f4e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f7cbdd02cb1d38231c476ba939009a95533a046
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403238"
 ---
 # <a name="strings-ccx"></a>字符串 (C++/CX)
 
-Windows 运行时中的文本表示在 C + + /cli CX 通过[platform:: string 类](../cppcx/platform-string-class.md)。 使用`Platform::String Class`或与其他 Windows 运行时组件交互跨应用程序二进制接口 (ABI) 边界时将字符串传递来回 Windows 运行时类中的方法。 虽然 `Platform::String Class` 为几种常见字符串操作提供方法，但它还不是全功能字符串类。 在您的 C++ 模块中，将标准 C++ 字符串类型（如 [wstring](../standard-library/basic-string-class.md) ）用于任何大量的文本处理，然后将最终结果转换为 [Platform::String^](../cppcx/platform-string-class.md) ，最后再向（或从）公共接口传递它。 在 `wstring` 或 `wchar_t*` 与 `Platform::String`之间进行转换很容易也很有效。
+Windows 运行时中的文本出现在C++通过 /CX [platform:: string 类](../cppcx/platform-string-class.md)。 使用`Platform::String Class`或与其他 Windows 运行时组件交互跨应用程序二进制接口 (ABI) 边界时将字符串传递来回 Windows 运行时类中的方法。 虽然 `Platform::String Class` 为几种常见字符串操作提供方法，但它还不是全功能字符串类。 在您的 C++ 模块中，将标准 C++ 字符串类型（如 [wstring](../standard-library/basic-string-class.md) ）用于任何大量的文本处理，然后将最终结果转换为 [Platform::String^](../cppcx/platform-string-class.md) ，最后再向（或从）公共接口传递它。 在 `wstring` 或 `wchar_t*` 与 `Platform::String`之间进行转换很容易也很有效。
 
 **快速传递**
 
@@ -73,4 +73,3 @@ void GetDecodedStrings(std::vector<std::wstring> strings)
     }
 }
 ```
-

@@ -49,11 +49,11 @@ helpviewer_keywords:
 - _ismbcl0 function
 ms.assetid: ee15ebd1-462c-4a43-95f3-6735836d626a
 ms.openlocfilehash: b4ea5a165e5fb06229c3fdf69c53cdf82c4f35f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62286625"
 ---
 # <a name="ismbcl0-ismbcl0l-ismbcl1-ismbcl1l-ismbcl2-ismbcl2l"></a>_ismbcl0、_ismbcl0_l、_ismbcl1、_ismbcl1_l、_ismbcl2、_ismbcl2_l
 
@@ -108,12 +108,12 @@ int _ismbcl2_l(
 
 |例程所返回的值|测试条件（仅代码页 932）|
 |-------------|-------------------------------------------|
-|**_ismbcl0**|JIS 非日本汉字： 0x8140< < =*c*< = 0x889E。|
-|**_ismbcl0_l**|JIS 非日本汉字： 0x8140< < =*c*< = 0x889E。|
-|**_ismbcl1**|JIS 1 级： 0x889f<> < =*c*< = 0x9872。|
-|**_ismbcl1_l**|JIS 1 级： 0x889f<> < =*c*< = 0x9872。|
-|**_ismbcl2**|JIS 2 级： 0x989f< < =*c*< = 0xEAA4。|
-|**_ismbcl2_l**|JIS 2 级： 0x989f< < =*c*< = 0xEAA4。|
+|**_ismbcl0**|JIS 非日本汉字：0x8140<=*c*<=0x889E.|
+|**_ismbcl0_l**|JIS 非日本汉字：0x8140<=*c*<=0x889E.|
+|**_ismbcl1**|JIS 1 级：0x889F<=*c*<=0x9872.|
+|**_ismbcl1_l**|JIS 1 级：0x889F<=*c*<=0x9872.|
+|**_ismbcl2**|0JIS 2 级：0x989F<=*c*<=0xEAA4.|
+|**_ismbcl2_l**|0JIS 2 级：0x989F<=*c*<=0xEAA4.|
 
 函数将检查指定的值*c*匹配的测试条件，上面所述，但不是会检查*c*是有效的多字节字符。 如果低字节位于范围 0x00 - 0x3F、0x7F 或 0xFD - 0xFF 内，这些函数将返回一个非零值，指明字符满足测试条件。 使用 [_ismbbtrail](ismbbtrail-ismbbtrail-l.md) 来测试是否定义了多字节字符。
 

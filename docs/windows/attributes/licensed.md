@@ -1,17 +1,17 @@
 ---
-title: 许可 （c + + COM 属性）
+title: 许可 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.licensed
 helpviewer_keywords:
 - licensed attribute
 ms.assetid: 09cf3b4a-d3f2-43e3-9180-d420333b23bf
-ms.openlocfilehash: b0b66da845151ca8cad17f3fb33e0e0a736a4813
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90fba74fb97ce49088145888c3b1925b4ee0829c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409325"
 ---
 # <a name="licensed"></a>licensed
 
@@ -25,7 +25,7 @@ ms.locfileid: "50566356"
 
 ## <a name="remarks"></a>备注
 
-**许可**c + + 属性具有相同的功能[许可](/windows/desktop/Midl/licensed)MIDL 特性。
+**许可**C++属性具有相同的功能[许可](/windows/desktop/Midl/licensed)MIDL 特性。
 
 ## <a name="example"></a>示例
 
@@ -57,7 +57,7 @@ public:
 |**适用对象**|**类**，**结构**|
 |**可重复**|否|
 |**必需的特性**|`coclass`|
-|**无效的特性**|无|
+|**无效的特性**|None|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

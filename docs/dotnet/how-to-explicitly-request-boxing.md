@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - boxing, explicitly requesting
 ms.assetid: 1359e6e5-162d-4f5d-9b6a-1690d93df3ee
-ms.openlocfilehash: ae0d26157bce1892888ea64d953d4c020c0bec87
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c27330e4e7699b6f0e9d6c612c2befe884a69b4c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387274"
 ---
 # <a name="how-to-explicitly-request-boxing"></a>如何：显式请求装箱
 
@@ -47,4 +47,4 @@ f(Object^ o)
 
 ## <a name="see-also"></a>请参阅
 
-[装箱](../windows/boxing-cpp-component-extensions.md)
+[装箱](../extensions/boxing-cpp-component-extensions.md)

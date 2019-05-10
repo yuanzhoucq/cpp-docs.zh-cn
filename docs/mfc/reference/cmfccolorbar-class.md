@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CMFCColorBar [MFC], SetPropList
 - CMFCColorBar [MFC], ShowCommandMessageString
 ms.assetid: 4756ee40-25a5-4cee-af7f-acab7993d1c7
-ms.openlocfilehash: f1f7610fc315da65145798058fdcf9752e7873d0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4eee24eb93be446f6b4f2631b70736c13a02f45c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403758"
 ---
 # <a name="cmfccolorbar-class"></a>CMFCColorBar 类
 
@@ -202,7 +202,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何使用各种方法中的配置颜色条`CMFCColorBar`类。 方法设置水平和垂直边距，启用其他按钮、 创建颜色栏控件窗口中，并设置当前选定的颜色。 此示例摘自[新的控件示例](../../visual-cpp-samples.md)。
+下面的示例演示如何使用各种方法中的配置颜色条`CMFCColorBar`类。 方法设置水平和垂直边距，启用其他按钮、 创建颜色栏控件窗口中，并设置当前选定的颜色。 此示例摘自[新的控件示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_NewControls#1](../../mfc/reference/codesnippet/cpp/cmfccolorbar-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#2](../../mfc/reference/codesnippet/cpp/cmfccolorbar-class_2.cpp)]

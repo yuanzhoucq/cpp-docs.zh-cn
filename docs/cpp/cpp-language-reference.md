@@ -1,23 +1,20 @@
 ﻿---
 title: C++ 语言参考
 ms.custom: index-page
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
-- language reference
 - C++, language reference
-- language reference, Visual C++
-- Visual C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
-ms.openlocfilehash: 4d184e70e6a7284d07e706ce8b8c247c96442750
-ms.sourcegitcommit: cce52b2232b94ce8fd8135155b86e2d38a4e4562
-ms.translationtype: MT
+ms.openlocfilehash: 1790f5d7ecf834c97a9242e8f42d1fb402604ac6
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54031260"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222490"
 ---
 # <a name="c-language-reference"></a>C++ 语言参考
 
-本参考将介绍在 Microsoft Visual C++ 中实现的 C++ 编程语言。 基于组织[ *c + + 参考手册批注*](http://www.stroustrup.com/arm.html) Margaret Ellis 和 Bjarne Stroustrup 和 ANSI/ISO c + + 国际标准 (ISO/IEC FDIS 14882)。 本文涵盖了 C++ 语言功能的 Microsoft 专用实现。
+此参考文章介绍C++编程语言在 Microsoft 中实现C++编译器。 基于组织[*带批注的C++参考手册*](http://www.stroustrup.com/arm.html) Margaret Ellis 和 Bjarne Stroustrup 和 ANSI/ISO 上C++国际标准 (ISO/IEC FDIS 14882)。 本文涵盖了 C++ 语言功能的 Microsoft 专用实现。
 
 有关现代 C++ 编程做法的概述，请参阅[欢迎回到 C++](welcome-back-to-cpp-modern-cpp.md)。
 
@@ -90,15 +87,15 @@ Microsoft C++ 专用修饰符。 内存寻址、 调用约定、**裸**函数，
 Microsoft 的 C++ 扩展。
 
 [非标准行为](../cpp/nonstandard-behavior.md)<br/>
-有关 Visual C++ 编译器的非标准行为的信息。
+使用了非标准行为的 Microsoft 信息C++编译器。
 
 [欢迎回到 C++](welcome-back-to-cpp-modern-cpp.md)<br/>
 现代 C++ 编程做法编写安全、 正确、 有效的程序的概述。
 
 ## <a name="related-sections"></a>相关章节
 
-[适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)<br/>
-有关使用 Visual C++ 来以公共语言运行时为目标的参考材料。
+[适用于运行时平台的组件扩展](../extensions/component-extensions-for-runtime-platforms.md)<br/>
+参考资料上使用 MicrosoftC++到目标.NET 编译器。
 
 [C/C++ 生成参考](../build/reference/c-cpp-building-reference.md)<br/>
 编译器选项、链接器选项和其他生成工具。
@@ -107,7 +104,7 @@ Microsoft 的 C++ 扩展。
 有关杂注、预处理器指令、预定义宏和预处理器的参考材料。
 
 [Visual C++ 库](../standard-library/cpp-standard-library-reference.md)<br/>
-指向各种 Visual C++ 库的参考起始页的链接的列表。
+一组指向参考起始页的各种 MicrosoftC++库。
 
 ## <a name="see-also"></a>请参阅
 

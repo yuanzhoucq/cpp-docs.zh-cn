@@ -6,16 +6,16 @@ f1_keywords:
 - math/isnormal
 helpviewer_keywords:
 - isnormal function
-ms.openlocfilehash: 93e3b8912ddf20bf8e190bb42e8413e6d909bbcc
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: e426fbce71efff1e810a03b8347e7c48aa0d91d2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62286435"
 ---
 # <a name="isnormal"></a>isnormal
 
-确定浮点值是否为无穷大。
+确定浮点值是否为标准值。
 
 ## <a name="syntax"></a>语法
 
@@ -27,7 +27,7 @@ int isnormal(
 template <class FloatingType>
 inline bool isnormal(
    FloatingType x
-) throw(); /* C++-only template function */
+) throw(); /* C++-only function template */
 ```
 
 ### <a name="parameters"></a>参数
@@ -37,11 +37,11 @@ inline bool isnormal(
 
 ## <a name="return-value"></a>返回值
 
-**isnormal**返回非零值 (**true** c + + 代码中) 如果该参数*x*是有限和次不正常。 **isnormal**返回 0 (**false** c + + 代码中) 如果参数为次正常、 无穷大或 NAN。
+**isnormal**返回非零值 (**true**在C++代码) 如果该参数*x*既不为零、 次正常、 infinite，也不 NaN。 否则为**isnormal**返回 0 (**false**在C++代码)。
 
 ## <a name="remarks"></a>备注
 
-**isnormal**时编译为 C 和 c + + 作为编译时的内联模板函数是宏。
+**isnormal**是一个宏时编译为 C 和内联函数模板作为编译时C++。
 
 ## <a name="requirements"></a>要求
 
@@ -54,7 +54,7 @@ inline bool isnormal(
 ## <a name="see-also"></a>请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
-[isfinite，_finite、 _finitef](finite-finitef.md)<br/>
+[isfinite、_finite、_finitef](finite-finitef.md)<br/>
 [isinf](isinf.md)<br/>
 [isnan、_isnan、_isnanf](isnan-isnan-isnanf.md)<br/>
 [_fpclass、_fpclassf](fpclass-fpclassf.md)<br/>

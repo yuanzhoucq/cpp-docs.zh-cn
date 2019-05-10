@@ -1,5 +1,5 @@
 ---
-title: 警告
+title: warning
 ms.date: 11/04/2016
 f1_keywords:
 - warning_CPP
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pop warning pragma
 - warning pragma
 ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
-ms.openlocfilehash: 53f79061ded358c9cb895fd7e8e245c46ed99fd5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1341472af22582635207a2bdff93b4367fd59330
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62179927"
 ---
 # <a name="warning-pragma"></a>警告杂注
 启用编译器警告消息的行为的选择性修改。
@@ -35,12 +35,12 @@ ms.locfileid: "50631711"
 
 |警告说明符|含义|
 |------------------------|-------------|
-|*1、 2、 3、 4*|将给定级别应用于指定的警告。 这也会启用默认情况下处于关闭状态的指定警告。|
+|*1, 2, 3, 4*|将给定级别应用于指定的警告。 这也会启用默认情况下处于关闭状态的指定警告。|
 |*default*|将警告行为重置为其默认值。 这也会启用默认情况下处于关闭状态的指定警告。 警告将在其默认存档级别生成。<br /><br /> 有关详细信息，请参阅 [Compiler Warnings That Are Off by Default](../preprocessor/compiler-warnings-that-are-off-by-default.md)。|
 |*disable*|不发出指定的警告消息。|
 |*error*|将指定警告报告为错误。|
 |*once*|只显示指定消息一次。|
-|*禁止显示*|将杂注的当前状态推送到堆栈上，禁用下一行的指定警告，然后弹出警告堆栈，从而重置杂注状态。|
+|*suppress*|将杂注的当前状态推送到堆栈上，禁用下一行的指定警告，然后弹出警告堆栈，从而重置杂注状态。|
 
 以下代码语句演示了 `warning-number-list` 参数可包含多个警告编号，并演示了可在同一杂注指令中指定多个 `warning-specifier` 参数。
 

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - manifests [C++]
 ms.assetid: 0af60aa9-d223-42cd-8426-b3fc543a2a81
-ms.openlocfilehash: 69e1868990358aeb4d790366b3a0bfa8d8999823
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f055e3d16dfc0ea4320883210458ae10daebdc45
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273349"
 ---
 # <a name="manifest-generation-in-visual-studio"></a>Visual Studio 中的清单生成
 
@@ -27,11 +27,8 @@ ms.locfileid: "57414741"
 
 1. 如果生成的清单工具的清单相同二进制文件中嵌入的清单，生成将继续到下一步的生成步骤。
 
-清单嵌入到最终二进制文件作为文本资源，它可以查看通过打开 Visual Studio 中的文件的最终二进制文件。 若要确保清单指向正确的库，请按照中所述的步骤[了解 Visual c + + 应用程序的依赖项](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md)或按照中所述的建议[疑难解答](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)部分。
+清单嵌入到最终二进制文件作为文本资源，它可以查看通过打开 Visual Studio 中的文件的最终二进制文件。 若要确保清单指向正确的库，请按照中所述的步骤[了解视觉对象的依赖项C++应用程序](../windows/understanding-the-dependencies-of-a-visual-cpp-application.md)或按照中所述的建议[故障排除](troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)部分。
 
 ## <a name="see-also"></a>请参阅
 
-[如何：将清单嵌入到 C/C++ 应用程序](../build/how-to-embed-a-manifest-inside-a-c-cpp-application.md)<br/>
-[有关私有程序集](/windows/desktop/SbsCs/about-private-assemblies-)<br/>
-[清单工具](/windows/desktop/SbsCs/mt-exe)<br/>
-[了解 C/C++ 程序的清单生成](../build/understanding-manifest-generation-for-c-cpp-programs.md)
+[了解 C/C++ 程序的清单生成](understanding-manifest-generation-for-c-cpp-programs.md)

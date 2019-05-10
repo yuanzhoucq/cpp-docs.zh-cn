@@ -33,11 +33,11 @@ helpviewer_keywords:
 - _tcreat function
 ms.assetid: 3b3b795d-1620-40ec-bd2b-a4bbb0d20fe5
 ms.openlocfilehash: 901a95a6a9361f95f38749dacf1a5001d97b3761
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335303"
 ---
 # <a name="creat-wcreat"></a>_creat、_wcreat
 
@@ -94,7 +94,7 @@ int _wcreat(
 |-----------|----------------|
 |**_S_IWRITE**|允许写入。|
 |**_S_IREAD**|允许读取。|
-|**_S_IREAD** &AMP;#124; **_S_IWRITE**|允许读取和写入。|
+|**_S_IREAD** &#124; **_S_IWRITE**|允许读取和写入。|
 
 如果未授予写入权限，则该文件为只读。 所有文件始终具有可读性；不能提供只写权限。 模式 **_S_IWRITE**并 **_S_IREAD** | **_S_IWRITE**是等效。 使用打开的文件 **_creat**始终在兼容性模式下打开 (请参阅[_sopen](sopen-wsopen.md)) 与 **_SH_DENYNO**。
 

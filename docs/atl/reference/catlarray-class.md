@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
-ms.openlocfilehash: ca4b0f4c8ffc3382984660caec7ae04107c8797a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6a0b83f722d1b616e9c10713646d337f9cb090a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260839"
 ---
 # <a name="catlarray-class"></a>CAtlArray 类
 
@@ -549,9 +549,9 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
 
 ## <a name="see-also"></a>请参阅
 
-[MMXSwarm 示例](../../visual-cpp-samples.md)<br/>
-[DynamicConsumer 示例](../../visual-cpp-samples.md)<br/>
-[UpdatePV 示例](../../visual-cpp-samples.md)<br/>
-[字幕示例](../../visual-cpp-samples.md)<br/>
+[MMXSwarm 示例](../../overview/visual-cpp-samples.md)<br/>
+[DynamicConsumer 示例](../../overview/visual-cpp-samples.md)<br/>
+[UpdatePV 示例](../../overview/visual-cpp-samples.md)<br/>
+[字幕示例](../../overview/visual-cpp-samples.md)<br/>
 [CArray 类](../../mfc/reference/carray-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

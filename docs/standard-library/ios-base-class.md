@@ -109,11 +109,11 @@ helpviewer_keywords:
 - std::ios_base [C++], xalloc
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
 ms.openlocfilehash: 8911c3763e6a0c861c162611e1b2617ec26f0cf9
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333346"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158586"
 ---
 # <a name="iosbase-class"></a>ios_base 类
 
@@ -265,7 +265,7 @@ typedef void (__cdecl *event_callback)(
 *_E*<br/>
 [事件](#event)。
 
-*（_b)*<br/>
+*_Base*<br/>
 其中调用了事件的流。
 
 *_I*<br/>
@@ -714,7 +714,7 @@ void *& pword(int _Idx);
 
 ### <a name="parameters"></a>参数
 
-*上 _Idx*<br/>
+*_Idx*<br/>
 要存储为 `pword` 的值的索引。
 
 ### <a name="remarks"></a>备注
@@ -902,7 +902,7 @@ fmtflags setf(
 
 ### <a name="parameters"></a>参数
 
-*掩码 （_m)*<br/>
+*_Mask*<br/>
 要打开的标志。
 
 *_Unset*<br/>
@@ -961,7 +961,7 @@ static bool sync_with_stdio(
 
 ### <a name="remarks"></a>备注
 
-静态成员函数存储`stdio`同步标志，它最初是**true**。 当 **，则返回 true**，此标志可确保对同一文件的操作都正确同步之间[iostreams](../standard-library/iostreams-conventions.md)函数和 c + + 标准库中所定义的。 否则为同步可能会或可能不保证，但可能会提高性能。 函数存储 *_Sync*中`stdio`同步标志，并返回其先前的存储的值。 您可以调用它可靠地仅在执行对标准流的任何操作之前。
+静态成员函数存储`stdio`同步标志，它最初是**true**。 当 **，则返回 true**，此标志可确保对同一文件的操作都正确同步之间[iostreams](../standard-library/iostreams-conventions.md)函数和定义中的C++标准库。 否则为同步可能会或可能不保证，但可能会提高性能。 函数存储 *_Sync*中`stdio`同步标志，并返回其先前的存储的值。 您可以调用它可靠地仅在执行对标准流的任何操作之前。
 
 ## <a name="unsetf"></a>ios_base::unsetf
 
@@ -975,7 +975,7 @@ void unsetf(
 
 ### <a name="parameters"></a>参数
 
-*掩码 （_m)*<br/>
+*_Mask*<br/>
 要关闭的标志。
 
 ### <a name="remarks"></a>备注

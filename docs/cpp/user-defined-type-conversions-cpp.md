@@ -23,11 +23,11 @@ helpviewer_keywords:
 - data type conversion [C++], explicit
 ms.assetid: d40e4310-a190-4e95-a34c-22c5c20aa0b9
 ms.openlocfilehash: 2af30ad3d1244146f32bf2402ed7eccdc4785c1b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62244124"
 ---
 # <a name="user-defined-type-conversions-c"></a>用户定义的类型转换 (C++)
 
@@ -39,7 +39,7 @@ ms.locfileid: "50459886"
 
 在以下情况下尝试隐式转换：
 
-- 提供给函数的参数与匹配参数的类型不同。
+- 提供给函数的自变量与匹配参数的类型不同。
 
 - 从函数返回的值与函数返回类型的类型不同。
 
@@ -151,7 +151,7 @@ int main(int argc, char* argv[])
 }
 ```
 
-在此示例中，请注意，你可以继续使用显示转换构造函数来执行 `payable` 的直接初始化。 如果你要改为复制初始化 `Money payable = 79.99;`，这将是一个错误操作。 对 `display_balance` 的首次调用不受影响，因为参数的类型正确。 对 `display_balance` 的第二次调用是一个错误，因为转换构造函数无法用于执行隐式转换。 第三个调用`display_balance`是合法的显式强制转换为由于`Money`，但请注意，编译器仍帮助完成该强制转换的方法是插入从隐式强制转换**float**到**双**.
+在此示例中，请注意，你可以继续使用显示转换构造函数来执行 `payable` 的直接初始化。 如果你要改为复制初始化 `Money payable = 79.99;`，这将是一个错误操作。 对 `display_balance` 的首次调用不受影响，因为自变量的类型正确。 对 `display_balance` 的第二次调用是一个错误，因为转换构造函数无法用于执行隐式转换。 第三个调用`display_balance`是合法的显式强制转换为由于`Money`，但请注意，编译器仍帮助完成该强制转换的方法是插入从隐式强制转换**float**到**双**.
 
 尽管允许隐式转换带来的便利很具吸引力，但执行此操作会引入难以发现的 Bug。 根据经验，应该让所有转换构造函数变为显式，除非你确定希望隐式执行特定转换。
 
@@ -193,7 +193,7 @@ void display_balance(const Money balance)
     operator struct String { char string_storage; }() // illegal
     ```
 
-- 转换函数不采用参数。 在声明中指定任何参数是一个错误操作。
+- 转换函数不采用自变量。 在声明中指定任何参数是一个错误操作。
 
 - 转换函数具有由转换函数名称（它也是转换的目标类型的名称）指定的返回类型。 在声明中指定返回类型是一个错误。
 
@@ -203,7 +203,7 @@ void display_balance(const Money balance)
 
 ### <a name="explicit-conversion-functions"></a>显式转换函数
 
-当转换函数声明为显式函数时，它只能用于执行显式强制转换。 这还将阻止接受转换函数目标类型的参数的函数同样隐式接受类类型的参数，并且将阻止从该类类型的值复制初始化目标类型的实例。 以下示例演示了如何定义显式转换函数，以及它对哪个代码格式正确所产生的影响。
+当转换函数声明为显式函数时，它只能用于执行显式强制转换。 这还将阻止接受转换函数目标类型的自变量的函数同样隐式接受类类型的自变量，并且将阻止从该类类型的值复制初始化目标类型的实例。 以下示例演示了如何定义显式转换函数，以及它对哪个代码格式正确所产生的影响。
 
 ```cpp
 #include <iostream>

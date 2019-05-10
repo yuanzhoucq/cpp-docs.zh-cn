@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - DUMPBIN program, command line
 ms.assetid: e6ad17d3-965d-41aa-9dfd-75bb073718d4
-ms.openlocfilehash: 4a1ce9f3b6ce3db6687820a4244da54efe38b4ab
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 1f94b26ca3bdc2778c2f9ed41103b456f5194fe3
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271939"
 ---
 # <a name="dumpbin-command-line"></a>DUMPBIN 命令行
 
@@ -29,5 +29,5 @@ DUMPBIN 时未指定一个选项，可以对文件运行 DUMPBIN，显示 /SUMMA
 
 ## <a name="see-also"></a>请参阅
 
-[C/C++ 生成工具](../../build/reference/c-cpp-build-tools.md)<br/>
-[DUMPBIN 参考](../../build/reference/dumpbin-reference.md)
+[其他 MSVC 生成工具](c-cpp-build-tools.md)<br/>
+[DUMPBIN 参考](dumpbin-reference.md)

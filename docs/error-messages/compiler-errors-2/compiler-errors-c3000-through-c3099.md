@@ -1,6 +1,6 @@
 ---
-title: 编译器错误 C3000-C3099
-ms.date: 11/17/2017
+title: 编译器错误 C3000 - C3099
+ms.date: 04/21/2019
 f1_keywords:
 - C3051
 - C3061
@@ -38,14 +38,14 @@ helpviewer_keywords:
 - C3093
 - C3098
 ms.assetid: 01b7b9cb-b351-4b5a-8cb0-1fcddb08d2ab
-ms.openlocfilehash: b7a01c35086fe503e39af2af60655c03301dc7c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08c7b691d6390e6c1070fc71dff116604731ebab
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475486"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64856928"
 ---
-# <a name="compiler-errors-c3000-through-c3099"></a>编译器错误 C3000-C3099
+# <a name="compiler-errors-c3000-through-c3099"></a>编译器错误 C3000 - C3099
 
 在本部分文档中的文章说明了由编译器生成的错误消息的子集。
 
@@ -58,7 +58,7 @@ ms.locfileid: "50475486"
 |编译器错误 C3000|已过时。|
 |[编译器错误 C3001](compiler-error-c3001.md)|'*消息*： 应为 OpenMP 指令名称|
 |[编译器错误 C3002](compiler-error-c3002.md)|'*name1* *name2*： 多个 OpenMP 指令名称|
-|[编译器错误 C3003](compiler-error-c3003.md)|'*指令*： 在指令子句之后不允许使用 OpenMP 指令名称|
+|[编译器错误 C3003](compiler-error-c3003.md)|'*指令*:在指令子句之后不允许使用 OpenMP 指令名称|
 |[编译器错误 C3004](compiler-error-c3004.md)|'*子句*： 子句在 OpenMP 无效*指令*指令|
 |[编译器错误 C3005](compiler-error-c3005.md)|'*消息*: OpenMP 上出现意外的标记'*指令*指令|
 |[编译器错误 C3006](compiler-error-c3006.md)|'*子句*： 子句在 OpenMP*指令*指令缺少应有的参数|
@@ -73,7 +73,7 @@ ms.locfileid: "50475486"
 |[编译器错误 C3015](compiler-error-c3015.md)|OpenMP“for”语句中的初始化格式不正确|
 |[编译器错误 C3016](compiler-error-c3016.md)|'*标识符*： 在 OpenMP for 语句的索引变量必须具有带符号的整型|
 |[编译器错误 C3017](compiler-error-c3017.md)|OpenMP“for”语句中的终止测试格式不正确|
-|[编译器错误 C3018](compiler-error-c3018.md)|'*标识符*: OpenMP for 测试或递增必须使用索引变量*变量*|
+|[编译器错误 C3018](compiler-error-c3018.md)|'*标识符*:OpenMP for 测试或递增必须使用索引变量*变量*|
 |[编译器错误 C3019](compiler-error-c3019.md)|在 OpenMP for 语句的增量具有格式不正确|
 |[编译器错误 C3020](compiler-error-c3020.md)|'*变量*: OpenMP for 循环索引变量不能在循环体中修改|
 |[编译器错误 C3021](compiler-error-c3021.md)|'*自变量*： 参数为空在 OpenMP*指令*指令|
@@ -123,7 +123,7 @@ ms.locfileid: "50475486"
 |[编译器错误 C3065](compiler-error-c3065.md)|不允许在非类范围上声明属性|
 |[编译器错误 C3066](compiler-error-c3066.md)|有很多方法可以调用此类型的对象用这些自变量|
 |编译器错误 C3067|初始值设定项列表不能用于内置运算符]|
-|[编译器错误 C3068](compiler-error-c3068.md)|'*标识符*: naked 函数不能包含会要求回退如果出现 c + + 异常的对象|
+|[编译器错误 C3068](compiler-error-c3068.md)|'*标识符*: naked 函数不能包含对象会要求回退如果C++出现异常|
 |[编译器错误 C3069](compiler-error-c3069.md)|运算符*运算符*： 不允许用于枚举类型|
 |[编译器错误 C3070](compiler-error-c3070.md)|'*标识符*： 属性没有 set 方法|
 |[编译器错误 C3071](compiler-error-c3071.md)|运算符*运算符*仅应用于 ref 类或值类型的实例|
@@ -155,3 +155,8 @@ ms.locfileid: "50475486"
 |[编译器错误 C3097](compiler-error-c3097.md)|'*特性*： 特性必须与作用域程序集: 或模块:|
 |编译器错误 C3098|'*标识符*： 属性有任何用户定义的构造函数|
 |[编译器错误 C3099](compiler-error-c3099.md)|'*关键字*： 使用 [system:: attributeusageattribute] / [Windows::Foundation::Metadata::AttributeUsageAttribute] 的托管 WinRT 属性|
+
+## <a name="see-also"></a>请参阅
+
+[C /C++编译器和生成工具错误和警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[编译器错误 C2000-C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

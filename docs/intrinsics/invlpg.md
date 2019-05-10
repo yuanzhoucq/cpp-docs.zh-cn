@@ -8,12 +8,12 @@ helpviewer_keywords:
 - invlpg instruction
 - __invlpg intrinsic
 ms.assetid: 3fb3633f-d9b7-4ec0-9e7f-a7f2fa8ed794
-ms.openlocfilehash: 0ff46aa15fbb8728ce02255209a32f01a168609b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4f941baae9f03ed288a99d59e2b06262962e339
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348739"
 ---
 # <a name="invlpg"></a>__invlpg
 

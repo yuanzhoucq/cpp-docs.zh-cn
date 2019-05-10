@@ -1,22 +1,22 @@
 ---
-title: 在 c + + 为 UWP 应用创建异步操作
+title: 创建异步操作在C++适用于 UWP 应用
 ms.date: 11/19/2018
 helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
 ms.openlocfilehash: 8815861e525a2824bb1bc7a7d0e40f96b053c6a4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413968"
 ---
-# <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>在 c + + 为 UWP 应用创建异步操作
+# <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>创建异步操作在C++适用于 UWP 应用
 
 本文档介绍了一些使用任务类生成通用 Windows 运行时 (UWP) 应用程序中基于 Windows 线程池的异步操作时，需要注意的关键点。
 
-异步编程的使用是 Windows 运行时应用模型中的关键组件，因为它使应用程序保持响应用户输入。 可以启动长期运行的任务，而不必阻止 UI 线程，并且可以在以后接收任务的结果。 也可以在任务在后台运行时取消任务和接收进度通知。 文档[c + + 中的异步编程](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)提供现已推出 Visual c + + 创建 UWP 应用的异步模式的概述。 此文档介绍如何使用和创建异步 Windows 运行时操作链。 本部分介绍如何使用 ppltasks.h 中的类型来生成可供另一个 Windows 运行时组件的异步操作和执行如何控制异步工作。 此外可以考虑阅读[异步编程模式和提示 Hilo （使用 c + + 和 XAML 的 Windows 应用商店应用） 中](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)若要了解我们如何使用任务类实现异步操作在 Hilo，使用 c + + 和 XAML 的 Windows 运行时应用。
+异步编程的使用是 Windows 运行时应用模型中的关键组件，因为它使应用程序保持响应用户输入。 可以启动长期运行的任务，而不必阻止 UI 线程，并且可以在以后接收任务的结果。 也可以在任务在后台运行时取消任务和接收进度通知。 文档[异步编程中C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)概述了可用的异步模式的视觉对象中C++创建 UWP 应用。 此文档介绍如何使用和创建异步 Windows 运行时操作链。 本部分介绍如何使用 ppltasks.h 中的类型来生成可供另一个 Windows 运行时组件的异步操作和执行如何控制异步工作。 此外可以考虑阅读[异步编程模式和提示在 Hilo (使用 Windows 应用商店应用C++和 XAML)](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)若要了解我们如何使用任务类实现异步操作在 Hilo，Windows 运行时应用使用C++和 XAML。
 
 > [!NOTE]
 >  可以使用[并行模式库](../../parallel/concrt/parallel-patterns-library-ppl.md)(PPL) 和[异步代理库](../../parallel/concrt/asynchronous-agents-library.md)UWP 应用中。 但是，不能使用任务计划程序或资源管理器。 本文档介绍更多 PPL 提供的可用只向 UWP 应用，而不适用于桌面应用程序功能。
@@ -37,19 +37,19 @@ ms.locfileid: "57426779"
 
 - [创建异步操作](#create-async)
 
-- [示例：创建 c + + Windows 运行时组件](#example-component)
+- [示例：创建C++Windows 运行时组件](#example-component)
 
 - [控制执行线程](#exethread)
 
-- [示例：在使用 c + + 和 XAML 的 Windows 运行时应用中控制执行](#example-app)
+- [示例：在包含的 Windows 运行时应用程序中控制执行C++和 XAML](#example-app)
 
 ##  <a name="create-async"></a> 创建异步操作
 
 可以使用并行模式库 (PPL) 中的任务和延续模型定义后台任务以及上一任务完成时要运行的其他任务。 这个功能由 [concurrency::task](../../parallel/concrt/reference/task-class.md) 类提供。 有关此模型和 `task` 类的详细信息，请参阅 [Task Parallelism](../../parallel/concrt/task-parallelism-concurrency-runtime.md)的上下文中同步运行。
 
-Windows 运行时是一个编程接口，可用于创建仅在特殊操作系统环境中运行的 UWP 应用。 此类应用程序使用授权的功能、 数据类型和设备，并从 Microsoft Store 分发。 Windows 运行时由*应用程序二进制接口*(ABI)。 ABI 是将 Windows 运行时 Api 提供给 Visual c + + 等编程语言的基础二进制协定。
+Windows 运行时是一个编程接口，可用于创建仅在特殊操作系统环境中运行的 UWP 应用。 此类应用程序使用授权的功能、 数据类型和设备，并从 Microsoft Store 分发。 Windows 运行时由*应用程序二进制接口*(ABI)。 ABI 是使 Windows 运行时 Api 等视觉对象的编程语言的基础二进制协定C++。
 
-通过使用 Windows 运行时，可以使用各种编程语言的最佳功能，并将它们合并到一个应用。 例如，可以在 JavaScript 中创建 UI，在 C++ 组件中执行计算密集型应用程序逻辑。 在后台执行这些计算密集型操作的能力是使 UI 保持响应状态的一个关键因素。 因为`task`类是特定于 c + +，则必须使用 Windows 运行时接口以异步操作传达给其他组件 （c + + 之外的语言编写可能）。 Windows 运行时提供可用来表示异步操作的四个接口：
+通过使用 Windows 运行时，可以使用各种编程语言的最佳功能，并将它们合并到一个应用。 例如，可以在 JavaScript 中创建 UI，在 C++ 组件中执行计算密集型应用程序逻辑。 在后台执行这些计算密集型操作的能力是使 UI 保持响应状态的一个关键因素。 因为`task`类是特定于C++，必须使用 Windows 运行时接口以异步操作传达给其他组件 (这可能语言编写的不是C++)。 Windows 运行时提供可用来表示异步操作的四个接口：
 
 [Windows::Foundation::IAsyncAction](/uwp/api/windows.foundation.iasyncaction)<br/>
 表示异步操作。
@@ -70,7 +70,7 @@ Windows 运行时是一个编程接口，可用于创建仅在特殊操作系统
 
 `create_async` 的返回类型由其参数的类型决定。 例如，如果工作函数不返回值并且不报告进度，则 `create_async` 返回 `IAsyncAction`。 如果工作函数不返回值，但还会报告进度，则 `create_async` 返回 `IAsyncActionWithProgress`。 若要报告进度，请提供 [concurrency::progress_reporter](../../parallel/concrt/reference/progress-reporter-class.md) 对象作为工作函数的参数。 报告进度的能力使您能够报告已执行的工作量和仍然剩余的工作量（比如以百分比表示）。 还可以使您在结果可用时报告结果。
 
-`IAsyncAction`、 `IAsyncActionWithProgress<TProgress>`、 `IAsyncOperation<TResult>`和 `IAsyncActionOperationWithProgress<TProgress, TProgress>` 接口均提供可以使您取消异步操作的 `Cancel` 方法。 `task` 类与取消标记一起使用。 当使用取消标记来取消工作时，运行时不会启动订阅此标记的新工作。 已处于活动状态的工作会监控其取消标记并在可能时停止。 文档 [Cancellation in the PPL](cancellation-in-the-ppl.md)中更详细地介绍了这种机制。 你可以使用 Windows 运行时连接任务取消`Cancel`两种方法中的方法。 首先，可以定义传递给 `create_async` 的工作函数以采用 [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) 对象。 当调用 `Cancel` 方法时，将取消此取消标记，并将常规取消规则应用于支持 `task` 调用的基础 `create_async` 对象。 如果没有提供 `cancellation_token` 对象，则基础 `task` 对象会隐式定义一个。 在需要以协作方式响应工作函数中的取消时，可定义一个 `cancellation_token` 对象。 部分[示例：在使用 c + + 和 XAML 的 Windows 运行时应用中控制执行](#example-app)显示了如何在使用的通用 Windows 平台 (UWP) 应用中执行取消的示例C#和使用自定义 Windows 运行时 c + + 组件的 XAML。
+`IAsyncAction`、 `IAsyncActionWithProgress<TProgress>`、 `IAsyncOperation<TResult>`和 `IAsyncActionOperationWithProgress<TProgress, TProgress>` 接口均提供可以使您取消异步操作的 `Cancel` 方法。 `task` 类与取消标记一起使用。 当使用取消标记来取消工作时，运行时不会启动订阅此标记的新工作。 已处于活动状态的工作会监控其取消标记并在可能时停止。 文档 [Cancellation in the PPL](cancellation-in-the-ppl.md)中更详细地介绍了这种机制。 你可以使用 Windows 运行时连接任务取消`Cancel`两种方法中的方法。 首先，可以定义传递给 `create_async` 的工作函数以采用 [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) 对象。 当调用 `Cancel` 方法时，将取消此取消标记，并将常规取消规则应用于支持 `task` 调用的基础 `create_async` 对象。 如果没有提供 `cancellation_token` 对象，则基础 `task` 对象会隐式定义一个。 在需要以协作方式响应工作函数中的取消时，可定义一个 `cancellation_token` 对象。 部分[示例：在包含的 Windows 运行时应用程序中控制执行C++和 XAML](#example-app)显示了如何在使用的通用 Windows 平台 (UWP) 应用中执行取消的示例C#和使用自定义 Windows 运行时的 XAMLC++组件。
 
 > [!WARNING]
 >  在一个任务延续链中，当取消了取消标记时，应始终清理状态，然后调用 [concurrency::cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) 。 如果是提早返回而不是调用 `cancel_current_task`，则操作将转换为已完成状态而非已取消状态。
@@ -90,9 +90,9 @@ Windows 运行时是一个编程接口，可用于创建仅在特殊操作系统
 
 [!code-cpp[concrt-windowsstore-primes#100](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_1.cpp)]
 
-##  <a name="example-component"></a> 示例：创建 c + + Windows 运行时组件和使用它从C#
+##  <a name="example-component"></a> 示例：创建C++Windows 运行时组件和使用它从C#
 
-请考虑使用 XAML 和 C# 来定义 UI 和 c + + Windows 运行时组件来执行计算密集型操作的应用程序。 在此示例中，C++ 组件会计算给定范围中的哪些数字是质数。 若要阐释四个 Windows 运行时异步任务接口之间的差异，首先，在 Visual Studio 中，创建**空白解决方案**并将其命名`Primes`。 然后在解决方案中添加一个“Windows 运行时组件”  项目并命名为 `PrimesLibrary`。 将以下代码添加到生成的 C++ 标头文件中（本示例将 Class1.h 重命名为 Primes.h）。 每个 `public` 方法定义四个异步接口之一。 返回一个值，方法返回[Windows::Foundation::Collections::IVector\<int >](/uwp/api/Windows.Foundation.Collections.IVector_T_)对象。 报告进度的方法生成 `double` 值，这些值定义了已完成的整体工作的百分比。
+请考虑使用 XAML 的应用程序和C#来定义 UI 和一个C++Windows 运行时组件来执行计算密集型操作。 在此示例中，C++ 组件会计算给定范围中的哪些数字是质数。 若要阐释四个 Windows 运行时异步任务接口之间的差异，首先，在 Visual Studio 中，创建**空白解决方案**并将其命名`Primes`。 然后在解决方案中添加一个“Windows 运行时组件”  项目并命名为 `PrimesLibrary`。 将以下代码添加到生成的 C++ 标头文件中（本示例将 Class1.h 重命名为 Primes.h）。 每个 `public` 方法定义四个异步接口之一。 返回一个值，方法返回[Windows::Foundation::Collections::IVector\<int >](/uwp/api/Windows.Foundation.Collections.IVector_T_)对象。 报告进度的方法生成 `double` 值，这些值定义了已完成的整体工作的百分比。
 
 [!code-cpp[concrt-windowsstore-primes#1](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_2.h)]
 
@@ -132,7 +132,7 @@ Windows 运行时是一个编程接口，可用于创建仅在特殊操作系统
 
 Windows 运行时使用的 COM 线程模型。 在此模型中，根据对象处理其同步的方式，对象被托管在不同的单元中。 线程安全对象托管在多线程单元 (MTA) 中。 必须通过单个线程访问的对象托管在单线程单元 (STA) 中。
 
-在具有 UI 的应用程序中，ASTA（应用程序 STA）线程负责发送窗口消息而且它是进程中唯一可以更新 STA 托管的 UI 控件的线程。 这会产生两种后果。 第一种是，要使应用程序保持响应状态，所有占用大量 CPU 的操作和 I/O 操作都不应在 ASTA 线程上运行。 第二种是，来自后台线程的结果都必须封送回 ASTA 以更新 UI。 在 c + + UWP 应用中，`MainPage`和其他 XAML 页面都运行在 atsa 中运行。 因此，在 ASTA 中声明的任务延续默认情况下也会在此运行，因此您可以在延续主体中直接更新控件。 但是，如果在另一个任务中嵌套任务，则此嵌套任务中的任何延续都在 MTA 中运行。 因此，您需要考虑是否显式指定这些延续在什么上下文中运行。
+在具有 UI 的应用程序中，ASTA（应用程序 STA）线程负责发送窗口消息而且它是进程中唯一可以更新 STA 托管的 UI 控件的线程。 这会产生两种后果。 第一种是，要使应用程序保持响应状态，所有占用大量 CPU 的操作和 I/O 操作都不应在 ASTA 线程上运行。 第二种是，来自后台线程的结果都必须封送回 ASTA 以更新 UI。 在C++UWP 应用`MainPage`和其他 XAML 页面都运行在 atsa 中运行。 因此，在 ASTA 中声明的任务延续默认情况下也会在此运行，因此您可以在延续主体中直接更新控件。 但是，如果在另一个任务中嵌套任务，则此嵌套任务中的任何延续都在 MTA 中运行。 因此，您需要考虑是否显式指定这些延续在什么上下文中运行。
 
 从异步操作创建的任务（如 `IAsyncOperation<TResult>`），使用了特殊语义，可以帮助您忽略线程处理详细信息。 虽然操作可能会在后台线程上运行（或者它可能根本不由线程支持），但其延续在默认情况下一定会在启动了延续操作的单元上运行（换言之，从调用了 `task::then`的单元运行）。 可以使用 [concurrency::task_continuation_context](../../parallel/concrt/reference/task-continuation-context-class.md) 类来控制延续的执行上下文。 使用这些静态帮助器方法来创建 `task_continuation_context` 对象：
 
@@ -153,7 +153,7 @@ Windows 运行时使用的 COM 线程模型。 在此模型中，根据对象处
 > [!IMPORTANT]
 > 对于在 STA 中运行的延续的主体，请不要调用 [concurrency::task::wait](reference/task-class.md#wait) 。 否则，运行时会引发 [concurrency::invalid_operation](../../parallel/concrt/reference/invalid-operation-class.md) ，原因是此方法阻止当前线程并可能导致应用停止响应。 但是，你可以调用 [concurrency::task::get](reference/task-class.md#get) 方法来接收基于任务的延续中的先行任务的结果。
 
-##  <a name="example-app"></a> 示例：在使用 c + + 和 XAML 的 Windows 运行时应用中控制执行
+##  <a name="example-app"></a> 示例：在包含的 Windows 运行时应用程序中控制执行C++和 XAML
 
 假设有一个 C++ XAML 应用程序，该应用程序从磁盘读取一个文件，在该文件中查找最常见的单词，然后在 UI 中显示结果。 若要创建此应用，首先，在 Visual Studio 中，创建**空白应用 (通用 Windows)** 项目并将其命名`CommonWords`。 在应用程序清单中，指定“文档库”  功能以使应用程序能够访问“文档”文件夹。 同时将文本 (.txt) 文件类型添加到应用程序清单的声明部分。 有关应用功能和声明的详细信息，请参阅 [应用包和部署](https://msdn.microsoft.com/library/windows/apps/hh464929.aspx)。
 

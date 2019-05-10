@@ -9,11 +9,11 @@ helpviewer_keywords:
 - unhandled exceptions [C++]
 ms.assetid: 13f09c53-9254-4407-9db9-14e730e047cc
 ms.openlocfilehash: 85227e0bd0ca33f925e8fe72b6489fa81305d031
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62312205"
 ---
 # <a name="unhandled-c-exceptions"></a>未处理的 C++ 异常
 
@@ -46,7 +46,7 @@ int main() {
 }
 ```
 
-## <a name="output"></a>输出
+## <a name="output"></a>Output
 
 ```Output
 term_func was called by terminate.

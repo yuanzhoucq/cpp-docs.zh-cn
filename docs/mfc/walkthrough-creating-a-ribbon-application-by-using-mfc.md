@@ -1,16 +1,16 @@
 ---
 title: 演练：使用 MFC 创建功能区应用程序
-ms.date: 11/04/2016
+ms.date: 04/25/2019
 helpviewer_keywords:
 - ribbon application, creating (MFC)
 - creating a ribbon aplication (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
-ms.openlocfilehash: a74e8863c32199d1c0309f70bceae867993ce721
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a45df5258a16885b50e11d4cca8ba99eb4b3d458
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271328"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64558225"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>演练：使用 MFC 创建功能区应用程序
 
@@ -22,9 +22,7 @@ ms.locfileid: "57271328"
 
 ### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>创建带功能区的 MFC 应用程序
 
-1. 使用**MFC 应用程序向导**创建具有功能区的 MFC 应用程序。 若要在运行向导时，**文件**菜单，依次指向**新建**，然后单击**项目**。
-
-1. 在中**新的项目**对话框框中，展开**Visual c + +** 节点下的**已安装的模板**，选择**MFC**，然后选择**MFC 应用程序**。 例如，键入项目的名称*MFCRibbonApp*，然后单击**确定**。
+1. 使用**MFC 应用程序向导**创建具有功能区的 MFC 应用程序。 请参阅[演练：使用新的 MFC Shell 控件](walkthrough-using-the-new-mfc-shell-controls.md)有关如何打开你的 Visual Studio 版本的向导的说明。
 
 1. 在中设置以下选项**MFC 应用程序向导**:
 
@@ -34,7 +32,7 @@ ms.locfileid: "57271328"
 
     1. 在中**文档模板属性**部分中，在**文件扩展名**框中，键入文件扩展名的文档，此应用程序创建，例如， *mfcrbnapp*.
 
-    1. 在中**数据库支持**部分中，请确保**None**处于选中状态。
+    1. 在中**数据库支持**部分 (仅 Visual Studio 2015)，请确保**None**处于选中状态。
 
     1. 在中**用户界面功能**部分中，请确保**使用功能区**处于选中状态。
 
@@ -87,9 +85,9 @@ ms.locfileid: "57271328"
 
 [如何：自定义应用程序按钮](../mfc/how-to-customize-the-application-button.md)
 
-有关端到端示例，请参阅[示例 （MFC 功能包）](../visual-cpp-samples.md)。
+有关端到端示例，请参阅[示例 （MFC 功能包）](../overview/visual-cpp-samples.md)。
 
 ## <a name="see-also"></a>请参阅
 
 [演练](../mfc/walkthroughs-mfc.md)<br/>
-[示例 （MFC 功能包）](../visual-cpp-samples.md)
+[示例 （MFC 功能包）](../overview/visual-cpp-samples.md)

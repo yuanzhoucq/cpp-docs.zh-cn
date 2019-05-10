@@ -1,21 +1,21 @@
 ---
 title: 活动模板库 (ATL) 概念
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - ATL, about ATL
 ms.assetid: a3960991-4d76-4da5-9568-3fa7fde53ff4
-ms.openlocfilehash: 90fd096f15f185feebc6f6ae8b73b010fe3c1813
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
-ms.translationtype: MT
+ms.openlocfilehash: 785b929e935962f6461ffbc3722f573a61cb8749
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265335"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221297"
 ---
 # <a name="active-template-library-atl-concepts"></a>活动模板库 (ATL) 概念
 
-活动模板库 (ATL) 是一组基于模板的 c + + 类，可用于创建小型、 快速组件对象模型 (COM) 对象。 它具有对密钥的 COM 功能，包括常用实现、 双重接口、 标准 COM 枚举器接口，连接点、 分离式接口和 ActiveX 控件的特殊支持。
+活动模板库 (ATL) 是一套基于模板的C++类，可快速创建小型，组件对象模型 (COM) 对象。 它具有对密钥的 COM 功能，包括常用实现、 双重接口、 标准 COM 枚举器接口，连接点、 分离式接口和 ActiveX 控件的特殊支持。
 
-如果做了大量 ATL 编程，你将想要了解有关详细信息属性，为简化 COM 编程而设计的 Visual c + +.NET 中的新功能。 有关详细信息，请参阅[特性化编程](../windows/attributed-programming-concepts.md)。
+如果做了大量 ATL 编程时，将想要详细了解 COM 和.NET 属性，用于简化 COM 编程。 有关详细信息，请参阅[特性化编程](../windows/attributed-programming-concepts.md)。 (COM 和.NET 属性将不会与混淆\[\[属性]] 中的功能C++标准。)
 
 ## <a name="in-this-section"></a>本节内容
 
@@ -87,7 +87,7 @@ ATL 7.0 讨论新的模块类。 Module 类实现的基本功能所需的 atl。
 
 ## <a name="related-sections"></a>相关章节
 
-[ATL 示例](../visual-cpp-samples.md)<br/>
+[ATL 示例](../overview/visual-cpp-samples.md)<br/>
 提供的说明以及指向 ATL 示例程序。
 
 [创建 ATL 项目](../atl/reference/creating-an-atl-project.md)<br/>

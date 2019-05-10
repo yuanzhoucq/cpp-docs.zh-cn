@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2872
 ms.assetid: c619ef97-6e0e-41d7-867c-f8d28a07d553
 ms.openlocfilehash: 103998c7872b683c7405796ee28bd550246ae9bf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62257603"
 ---
 # <a name="compiler-error-c2872"></a>编译器错误 C2872
 
@@ -21,7 +21,7 @@ ms.locfileid: "50566213"
 
 如果标头文件包含，则会发生 C2872 [using 指令](../../cpp/namespaces-cpp.md#using_directives)，并且后续的标头文件包括，其中包含在中指定的命名空间中也是一种`using`指令。 指定`using`指令仅后所有标头文件用指定`#include`。
 
-C2872 可以导致在 Visual Studio 2013 之间的冲突`Windows::Foundation::Metadata::Platform`枚举类型，而 C + + /cli CX 定义`Platform`命名空间。 若要解决此问题，请执行以下步骤：
+C2872 可以导致在 Visual Studio 2013 之间的冲突`Windows::Foundation::Metadata::Platform`枚举类型和C++/CX 定义`Platform`命名空间。 若要解决此问题，请执行以下步骤：
 
 - 从项目文件中删除的"using 命名空间 Windows::Foundation::Metadata"子句。
 

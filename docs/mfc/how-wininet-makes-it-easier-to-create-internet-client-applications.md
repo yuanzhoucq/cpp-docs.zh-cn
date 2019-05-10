@@ -7,17 +7,17 @@ helpviewer_keywords:
 - WinInet classes [MFC], Internet client applications
 ms.assetid: dc0f9f47-3184-4e7a-8074-2c63e0359885
 ms.openlocfilehash: 6da2ef1595e525bcfd407d67c806aa80cf90f1c3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57286759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62262705"
 ---
 # <a name="how-wininet-makes-it-easier-to-create-internet-client-applications"></a>WinInet 如何简化 Internet 客户端应用程序的创建
 
 Win32 Internet 扩展或 WinInet，提供对常用的 Internet 协议，包括 gopher、 FTP 和 HTTP 访问。 使用 WinInet，可以编写无需处理与 WinSock、 TCP/IP 或特定的 Internet 协议的详细信息的编程中，较高级别上的 Internet 客户端应用程序。 WinInet 为所有三个协议的熟悉的 Win32 API 界面提供一组一致的函数。 这种一致性降至最低，使基础协议发生变化 （例如，从 HTTP 到 FTP) 时所需的代码更改。
 
-Visual c + + 提供了两种方法供你使用 WinInet。 可以直接调用 Win32 Internet 函数 （请参阅 Windows SDK for 的详细信息中的 OLE 文档），也可以使用通过 WinInet [MFC WinInet 类](../mfc/mfc-classes-for-creating-internet-client-applications.md)。
+VisualC++提供两种方法可以使用 WinInet。 可以直接调用 Win32 Internet 函数 （请参阅 Windows SDK for 的详细信息中的 OLE 文档），也可以使用通过 WinInet [MFC WinInet 类](../mfc/mfc-classes-for-creating-internet-client-applications.md)。
 
 **您可以使用 WinInet 到：**
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, const_seg
 - const_seg pragma
 ms.assetid: 1eb58ee2-fb0e-4a39-9621-699c8f5ef957
-ms.openlocfilehash: ce932b068f5751b7cf1ceab969312defd18336f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c58f154f5e1ab6906b45d59f454a7dc2b5c0bfbe
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62366584"
 ---
 # <a name="constseg"></a>const_seg
 指定的段位置[const](../cpp/const-cpp.md)变量存储在.obj 文件中。
@@ -37,11 +37,11 @@ ms.locfileid: "50648339"
 
 使用*标识符*使多个记录只用一个**pop**命令。
 
-"*段名称*"<br/>
+"*segment-name*"<br/>
 （可选）段的名称。 与一起使用时**pop**，在堆栈中弹出和*段名称*将成为活动段名称。
 
-"*段类*"<br/>
-（可选）包含有关使用 c + + 2.0 版之前的兼容性。 它将被忽略。
+"*segment-class*"<br/>
+（可选）包含与的兼容性C++之前的版本 2.0。 它将被忽略。
 
 ## <a name="remarks"></a>备注
 

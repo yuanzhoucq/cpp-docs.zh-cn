@@ -20,12 +20,12 @@ helpviewer_keywords:
 - _CIlog intrinsic
 - CIlog intrinsic
 ms.assetid: 23503854-ddaa-4fe0-a4a3-7fbb3a43bdec
-ms.openlocfilehash: d55376688e2e7b01edb07ad9c4520024e940416a
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: 29b35e5807ca3bd1fbb994118314952a9a1760c4
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703267"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57737718"
 ---
 # <a name="cilog"></a>_CIlog
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - selectany __declspec keyword
 ms.assetid: 9c353017-5a42-4f50-b741-bd13da1ce84d
 ms.openlocfilehash: a6bf4076dfecbd29035716285f52c0a9faf81067
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62267292"
 ---
 # <a name="selectany"></a>selectany
 
@@ -34,7 +34,7 @@ __declspec( selectany ) declarator
 
 对于动态初始化的全局对象， **selectany**将放弃未引用的对象的初始化代码，以及。
 
-全局数据项一般只能在 EXE 或 DLL 项目中初始化一次。 **selectany**可以用于初始化由标头，定义时相同的标头出现在多个源代码文件中的全局数据。 **selectany**在 C 和 c + + 编译器中可用。
+全局数据项一般只能在 EXE 或 DLL 项目中初始化一次。 **selectany**可以用于初始化由标头，定义时相同的标头出现在多个源代码文件中的全局数据。 **selectany**现已推出两个 C 和C++编译器。
 
 > [!NOTE]
 >  **selectany**只能应用于外部可见的全局数据项的实际初始化。

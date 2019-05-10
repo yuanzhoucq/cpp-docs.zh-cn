@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COFF files, displaying information about
 - binary file dumper
 ms.assetid: 4bc06822-5330-44b4-8a3f-6180dfd41dfb
-ms.openlocfilehash: b590d852e8139aa7a12d7a7913915cd7a3bdccc6
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 45f6b9c71eaea93597e90de93c704d2ea260235e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273269"
 ---
 # <a name="dumpbin-reference"></a>DUMPBIN 参考
 
@@ -24,12 +24,12 @@ Microsoft COFF 二进制文件转储器 (DUMPBIN。EXE) 显示有关通用对象
 > [!NOTE]
 >  可以仅从 Visual Studio 命令提示符启动此工具。 无法从系统命令提示符或文件资源管理器中启动它。
 
-仅[/HEADERS](../../build/reference/headers.md) DUMPBIN 选项仅适用于使用产生的文件[/GL](../../build/reference/gl-whole-program-optimization.md)编译器选项。
+仅[/HEADERS](headers.md) DUMPBIN 选项仅适用于使用产生的文件[/GL](gl-whole-program-optimization.md)编译器选项。
 
-- [DUMPBIN 命令行](../../build/reference/dumpbin-command-line.md)
+- [DUMPBIN 命令行](dumpbin-command-line.md)
 
-- [DUMPBIN 选项](../../build/reference/dumpbin-options.md)
+- [DUMPBIN 选项](dumpbin-options.md)
 
 ## <a name="see-also"></a>请参阅
 
-[C/C++ 生成工具](../../build/reference/c-cpp-build-tools.md)
+[其他 MSVC 生成工具](c-cpp-build-tools.md)

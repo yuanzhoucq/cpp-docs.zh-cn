@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3537
 ms.assetid: f537ebd1-4fb0-4e09-a453-4f38db2c6881
-ms.openlocfilehash: 22387470019b0118d06b4cacd82a1df5c3e505fb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 50a06180dabfa192292fae7ba1962b6b7455bb89
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62375920"
 ---
 # <a name="compiler-error-c3537"></a>编译器错误 C3537
 

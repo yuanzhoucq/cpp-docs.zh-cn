@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Type Class
 ms.assetid: d6b03f1e-b240-49b9-a08e-53a460030475
-ms.openlocfilehash: 8df41f8845bad0847e8835c1c6c3a1019d2621d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 456dbff652c8f1b800308ff757930b425616a83f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182998"
 ---
 # <a name="platformtype-class"></a>Platform::Type 类
 
-包含有关类型的运行时信息，尤其是字符串名称和类型代码。 获取通过调用[object:: gettype](../cppcx/platform-object-class.md#gettype)上的任何对象或使用[typeid](../windows/typeid-cpp-component-extensions.md)运算符的类或结构的名称。
+包含有关类型的运行时信息，尤其是字符串名称和类型代码。 获取通过调用[object:: gettype](../cppcx/platform-object-class.md#gettype)上的任何对象或使用[typeid](../extensions/typeid-cpp-component-extensions.md)运算符的类或结构的名称。
 
 ## <a name="syntax"></a>语法
 
@@ -122,4 +122,4 @@ Platform::String^ ToString();
 
 ## <a name="see-also"></a>请参阅
 
-[平台命名空间](../cppcx/platform-namespace-c-cx.md)
+[Platform 命名空间](../cppcx/platform-namespace-c-cx.md)

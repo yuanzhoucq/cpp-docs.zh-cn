@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3481
 ms.assetid: 5d09375a-5ed3-4b61-86ed-45e91fd734c7
-ms.openlocfilehash: 32a04c2c49f8d9d974c3423756c4c9fc59a46495
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eff7c7a4f39524aa1d894b7b4590aa809714aae6
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62173350"
 ---
 # <a name="compiler-error-c3481"></a>编译器错误 C3481
 

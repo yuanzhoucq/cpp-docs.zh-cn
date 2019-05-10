@@ -7,20 +7,20 @@ helpviewer_keywords:
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
 ms.openlocfilehash: 176e358bd0217ac914eb4ee6079126d3f429b6dd
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184494"
 ---
 # <a name="arrays-c"></a>数组 (C++)
 
 数组是类似对象的集合。 数组最简单的用例是矢量，可以按以下序列声明矢量：
 
-> *声明说明符**标识符* **\[** *常量表达式* **]**<br/>
-> *声明说明符**标识符*  **\[]**<br/>
-> *声明说明符**标识符* **\[]\[** *常量表达式* **]** 。 . .<br/>
-> *声明说明符**标识符* **\[** *常量表达式* **]**  **\[** *常数表达式* **]** 。 . .
+> *声明说明符* *标识符* **\[** *常量表达式* **]**<br/>
+> *声明说明符* *标识符*  **\[]**<br/>
+> *声明说明符* *标识符* **\[]\[** *常量表达式* **]** 。 . .<br/>
+> *声明说明符* *标识符* **\[** *常量表达式* **]**  **\[** *常数表达式* **]** 。 . .
 
 1. 声明说明符：
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1083
 ms.assetid: 97e52df3-e79c-4f85-8f1e-bbd1057d55e7
-ms.openlocfilehash: ae4c6a9f6c41d94aa1e36ba4a79226b49df08b49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 522bc4a36be59d4e2c9425e50b1238eb9f4aba61
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368053"
 ---
 # <a name="fatal-error-c1083"></a>错误 C1083
 
@@ -25,7 +25,7 @@ ms.locfileid: "50628002"
 
 `#include <algorithm.h>`
 
-可能找不到你想要的文件。 大多数 c + + 标准库标头文件没有.h 文件扩展名。 \<算法 > 标头将找不到此`#include`指令。 若要解决此问题，请验证输入正确的文件名称，如本例所示：
+可能找不到你想要的文件。 大多数C++标准库标头文件没有.h 文件扩展名。 \<算法 > 标头将找不到此`#include`指令。 若要解决此问题，请验证输入正确的文件名称，如本例所示：
 
 `#include <algorithm>`
 
@@ -45,7 +45,7 @@ ms.locfileid: "50628002"
 
 `#include <stdio.h>`
 
-编译器遵循生成环境中，定义的搜索路径 **/I**编译器选项 **/X**编译器选项与**INCLUDE**环境变量。 有关详细信息，包括有关用于查找的文件的搜索顺序的特定详细信息，请参阅[#include 指令 （C/c + +）](../../preprocessor/hash-include-directive-c-cpp.md)并[#import 指令](../../preprocessor/hash-import-directive-cpp.md)。
+编译器遵循生成环境中，定义的搜索路径 **/I**编译器选项 **/X**编译器选项与**INCLUDE**环境变量。 有关详细信息，包括有关用于查找的文件的搜索顺序的特定详细信息，请参阅[#include 指令 (C /C++)](../../preprocessor/hash-include-directive-c-cpp.md)并[#import 指令](../../preprocessor/hash-import-directive-cpp.md)。
 
 如果包含文件位于相对于源目录，另一个目录并使用中的相对路径在 include 指令，您必须使用双引号而不是尖括号。 例如，如果在标头文件 myheader.h 的名为标头将项目源子目录中，然后此示例中未能找到该文件并将导致 C1083:
 
@@ -63,7 +63,7 @@ ms.locfileid: "50628002"
 
 ## <a name="third-party-library-issues-and-vcpkg"></a>第三方库问题和 Vcpkg
 
-如果尝试将第三方库配置为生成的一部分时看到此错误，请考虑使用[Vcpkg](../../vcpkg.md)，Visual c + + 包管理器，若要安装并生成库。 Vcpkg 支持大量且持续增长[的第三方库列表](https://github.com/Microsoft/vcpkg/tree/master/ports)，并设置所有配置属性和依赖项所需的成功生成项目的一部分。 有关详细信息，请参阅相关[Visual c + + 博客](https://blogs.msdn.microsoft.com/vcblog/2016/09/19/vcpkg-a-tool-to-acquire-and-build-c-open-source-libraries-on-windows/)发布。
+如果尝试将第三方库配置为生成的一部分时看到此错误，请考虑使用[Vcpkg](../../vcpkg.md)，视觉对象C++包管理器中，若要安装并生成库。 Vcpkg 支持大量且持续增长[的第三方库列表](https://github.com/Microsoft/vcpkg/tree/master/ports)，并设置所有配置属性和依赖项所需的成功生成项目的一部分。 有关详细信息，请参阅相关[可视化C++博客](https://blogs.msdn.microsoft.com/vcblog/2016/09/19/vcpkg-a-tool-to-acquire-and-build-c-open-source-libraries-on-windows/)文章。
 
 ## <a name="the-file-is-in-your-project-but-not-the-include-search-path"></a>该文件位于你的项目，但不是包含搜索路径
 
@@ -71,11 +71,11 @@ ms.locfileid: "50628002"
 
 若要修复此问题，请更改编译器用于搜索包含或导入的文件的路径。 新的项目使用默认值包括搜索路径。 您可能需要修改包含搜索路径添加为你的项目目录。 如果在命令行上编译，将添加到路径**INCLUDE**环境变量或 **/I**编译器选项来指定文件的路径。
 
-若要在 Visual Studio 中设置包含目录路径，请打开项目的**属性页**对话框。 选择**VC + + 目录**下**配置属性**中的左窗格中，然后编辑**包含目录**属性。 有关通过 Visual Studio 中的编译器搜索的每个用户和每个项目目录的详细信息，请参阅[VC + + Directories Property Page](../../ide/vcpp-directories-property-page.md)。 有关详细信息 **/I**编译器选项，请参阅[/I （附加包含目录）](../../build/reference/i-additional-include-directories.md)。
+若要在 Visual Studio 中设置包含目录路径，请打开项目的**属性页**对话框。 选择**VC + + 目录**下**配置属性**中的左窗格中，然后编辑**包含目录**属性。 有关通过 Visual Studio 中的编译器搜索的每个用户和每个项目目录的详细信息，请参阅[VC + + Directories Property Page](../../build/reference/vcpp-directories-property-page.md)。 有关详细信息 **/I**编译器选项，请参阅[/I （附加包含目录）](../../build/reference/i-additional-include-directories.md)。
 
 ## <a name="the-command-line-include-or-lib-environment-is-not-set"></a>未设置命令行包含或 LIB 环境
 
-在命令行中调用编译器时，通常会使用环境变量来指定搜索路径。 如果所描述的搜索路径**INCLUDE**或**LIB**未正确设置环境变量，可以生成 C1083 错误。 我们强烈建议使用开发人员命令提示符快捷方式的基本命令行环境设置生成。 有关详细信息，请参阅[生成 C/c + + 命令行上](../../build/building-on-the-command-line.md)。 有关如何使用环境变量的详细信息，请参阅[如何： 在生成中使用环境变量](/visualstudio/msbuild/how-to-use-environment-variables-in-a-build)。
+在命令行中调用编译器时，通常会使用环境变量来指定搜索路径。 如果所描述的搜索路径**INCLUDE**或**LIB**未正确设置环境变量，可以生成 C1083 错误。 我们强烈建议使用开发人员命令提示符快捷方式的基本命令行环境设置生成。 有关详细信息，请参阅[生成 C /C++命令行上](../../build/building-on-the-command-line.md)。 有关如何使用环境变量的详细信息，请参阅[如何：在生成中使用环境变量](/visualstudio/msbuild/how-to-use-environment-variables-in-a-build)。
 
 ## <a name="the-file-may-be-locked-or-in-use"></a>文件可能被锁定或正在使用
 
@@ -85,9 +85,9 @@ ms.locfileid: "50628002"
 
 C1083 错误还可能指示包含了错误版本的文件。 例如，某个生成可能包含错误版本的文件，该文件的 `#include` 指令针对不是用于该生成的头文件。 例如，某些文件可能仅适用于 x86 版本，或调试版本。 当找不到头文件时，编译器会生成 C1083 错误。 此问题的解决方法是使用正确的文件，而不是向生成添加头文件或目录。
 
-## <a name="the-precompiled-headers-are-not-yet-precompiled"></a>预编译标头尚未预编译
+## <a name="the-precompiled-headers-are-not-yet-precompiled"></a>预编译头尚未预编译
 
-当项目配置为使用预编译标头时，必须创建相关 .pch 文件，以便可以编译使用头内容的文件。 例如，新项目在项目目录中自动创建 stdafx.cpp 文件。 先编译该文件以创建预编译标头文件。 在典型生成过程设计中，这是自动完成。 有关详细信息，请参阅[创建预编译标头文件](../../build/reference/creating-precompiled-header-files.md)。
+当项目配置为使用预编译头时，必须创建相关 .pch 文件，以便可以编译使用头内容的文件。 例如，新项目在项目目录中自动创建 stdafx.cpp 文件。 先编译该文件以创建预编译的头文件。 在典型生成过程设计中，这是自动完成。 有关详细信息，请参阅[创建预编译标头文件](../../build/creating-precompiled-header-files.md)。
 
 ## <a name="additional-causes"></a>其他原因
 
@@ -116,7 +116,7 @@ C1083 错误还可能指示包含了错误版本的文件。 例如，某个生�
 #include "stdio.h"  // OK
 ```
 
-有关如何生成 C/c + + 项目在 IDE 中或命令行上的信息和有关设置环境变量的信息，请参阅[生成 C/c + + 程序](../../build/building-c-cpp-programs.md)。
+有关如何生成 C /C++项目在 IDE 或命令行和设置环境变量的信息请参阅[项目和生成系统](../../build/projects-and-build-systems-cpp.md)。
 
 ## <a name="see-also"></a>请参阅
 

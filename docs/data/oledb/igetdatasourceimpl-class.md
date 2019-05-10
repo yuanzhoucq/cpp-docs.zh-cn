@@ -14,12 +14,12 @@ helpviewer_keywords:
 - IGetDataSourceImpl class
 - GetDataSource method
 ms.assetid: d63f3178-d663-4f01-8c09-8aab2dd6805a
-ms.openlocfilehash: bb4147bda64e86770e133e10a60efa567cee7719
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 2056b93fd6c1d32b72996970352e87670ff406de
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62408935"
 ---
 # <a name="igetdatasourceimpl-class"></a>IGetDataSourceImpl 类
 

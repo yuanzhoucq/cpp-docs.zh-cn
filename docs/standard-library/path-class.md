@@ -5,11 +5,11 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::path
 ms.assetid: 8a1227ca-aeb2-4e0e-84aa-86e34e4f4fe8
 ms.openlocfilehash: 486245df3433f552c289786a0b20deb33c8fb6c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370445"
 ---
 # <a name="path-class"></a>path 类
 
@@ -50,7 +50,7 @@ class path;
 |[concat](#compare)|将追加到指定的序列`mypath`、 转换 （但不是插入分隔符） 根据需要。|
 |[empty](#empty)|返回 `mypath.empty()`。|
 |[end](#end)|返回类型的序列末迭代器`iterator`。|
-|[扩展](#extension)|返回的后缀`filename()`。|
+|[extension](#extension)|返回的后缀`filename()`。|
 |[filename](#filename)|返回 myname 的根目录组件，尤其是 `empty() path() : *--end()`。 组件可能为空。|
 |[generic_string](#generic_string)|返回 `this->string<Elem, Traits, Alloc>(al)` ，其中（在 Windows 下）任何反斜杠均转换为正斜杠。|
 |[generic_u16string](#generic_u16string)|返回 `u16string()` ，其中（在 Windows 下）任何反斜杠均转换为正斜杠。|
@@ -94,7 +94,7 @@ class path;
 |[operator=](#op_as)|将路径的元素替换为另一个路径的副本。|
 |[operator+=](#op_add)|各种`concat`表达式。|
 |[operator/=](#op_divide)|各种`append`表达式。|
-|[string_type 运算符](#op_string)|返回 `myname`。|
+|[operator string_type](#op_string)|返回 `myname`。|
 
 ## <a name="requirements"></a>要求
 
@@ -122,7 +122,7 @@ path& append(InIt first, InIt last);
 *first*<br/>
 指定序列的开头。
 
-*最后一个*<br/>
+*last*<br/>
 指定序列的末尾。
 
 ## <a name="assign"></a> path:: assign
@@ -145,7 +145,7 @@ path& assign(InIt first, InIt last);
 *first*<br/>
 指定序列的开头。
 
-*最后一个*<br/>
+*last*<br/>
 指定序列的末尾。
 
 ## <a name="begin"></a> path:: begin
@@ -213,7 +213,7 @@ path& concat(InIt first, InIt last);
 *first*<br/>
 指定序列的开头。
 
-*最后一个*<br/>
+*last*<br/>
 指定序列的末尾。
 
 ## <a name="const_iterator"></a> path::const_iterator
@@ -358,7 +358,7 @@ bool has_root_directory() const;
 bool has_root_name() const;
 ```
 
-## <a name="has_root_path"></a> path:: has_root_path
+## <a name="has_root_path"></a> path::has_root_path
 
 返回 `!root_path().empty()`。
 
@@ -374,7 +374,7 @@ bool has_root_path() const;
 bool has_stem() const;
 ```
 
-## <a name="is_absolute"></a> path:: is_absolute
+## <a name="is_absolute"></a> path::is_absolute
 
 对于 Windows，函数返回`has_root_name() && has_root_directory()`。 对于 Posix，函数将返回`has_root_directory()`。
 
@@ -431,7 +431,7 @@ class iterator
 
 1. 更改`myname`使指定元素中的所有迭代器失效`myname`。
 
-## <a name="make_preferred"></a> path:: make_preferred
+## <a name="make_preferred"></a> path::make_preferred
 
 将转换为每个分隔符`preferred_separator`根据需要。
 
@@ -499,7 +499,7 @@ path& operator+=(Elem elem);
 *ptr*<br/>
 添加了的指针。
 
-*Elem*<br/>
+*elem*<br/>
 在添加`value_type`或`Elem`。
 
 *source*<br/>
@@ -556,7 +556,7 @@ path& operator/=(const Source& source);
 operator string_type() const;
 ```
 
-## <a name="parent_path"></a> path:: parent_path
+## <a name="parent_path"></a> path::parent_path
 
 返回父路径组件`myname`。
 
@@ -599,13 +599,13 @@ path(InIt first, InIt last, const locale& loc);
 *source*<br/>
 这些构造的路径将成为副本源。
 
-*Loc*<br/>
+*loc*<br/>
 指定的区域设置。
 
 *first*<br/>
 要复制的第一个元素的位置。
 
-*最后一个*<br/>
+*last*<br/>
 要复制的最后一个元素的位置。
 
 ### <a name="remarks"></a>备注
@@ -642,7 +642,7 @@ static constexpr value_type preferred_separator == '/';
 
 请注意，在 Windows 下的大多数上下文中，同样允许在它的位置使用 L'/'。
 
-## <a name="relative_path"></a> path:: relative_path
+## <a name="relative_path"></a> path::relative_path
 
 返回的相对路径组件`myname`。
 
@@ -654,7 +654,7 @@ path relative_path() const;
 
 返回的相对路径组成部分`myname`，专门的后缀`myname`之后删除`root_path().native()`和任何立即其后的冗余目录分隔符。 组件可能为空。
 
-## <a name="remove_filename"></a> path:: remove_filename
+## <a name="remove_filename"></a> path::remove_filename
 
 删除文件名。
 
@@ -672,14 +672,14 @@ path& replace_extension(const path& newext = path());
 
 ### <a name="parameters"></a>参数
 
-*将 newext*<br/>
+*newext*<br/>
 新的扩展名。
 
 ### <a name="remarks"></a>备注
 
 首先删除后缀`extension().native()`从`myname`。 然后，如果`!newext.empty() && newext[0] != dot`(其中`dot`是`*path(".").c_str()`)，然后`dot`追加到`myname`。 然后*将 newext*追加到`myname`。
 
-## <a name="replace_filename"></a> path:: replace_filename
+## <a name="replace_filename"></a> path::replace_filename
 
 将替换文件名。
 
@@ -703,7 +703,7 @@ remove_filename();
 return (*this);
 ```
 
-## <a name="root_directory"></a> path:: root_directory
+## <a name="root_directory"></a> path::root_directory
 
 返回的根组件`myname`。
 
@@ -715,7 +715,7 @@ path root_directory() const;
 
 组件可能为空。
 
-## <a name="root_name"></a> path:: root_name
+## <a name="root_name"></a> path::root_name
 
 返回的根名称组件`myname`。
 
@@ -727,7 +727,7 @@ path root_name() const;
 
 组件可能为空。
 
-## <a name="root_path"></a> path:: root_path
+## <a name="root_path"></a> path::root_path
 
 返回的根路径组件`myname`。
 

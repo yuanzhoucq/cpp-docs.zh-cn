@@ -20,12 +20,12 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-ms.openlocfilehash: d05e1d113f4fc661cb6e2e2905fbd8c9dcdd7e2d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: d2a1c63f686b46aad4e174c86895f6f9fc00d260
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404714"
 ---
 # <a name="try-finally-statement"></a>try-finally 语句
 
@@ -33,11 +33,11 @@ ms.locfileid: "52175912"
 
 下面的语法描述**的 try-finally**语句：
 
-> **\_\_请尝试**<br/>
+> **\_\_try**<br/>
 > {<br/>
 > &nbsp;&nbsp;&nbsp;&nbsp;受保护的代码<br/>
 > }<br/>
-> **\_\_最后**<br/>
+> **\_\_finally**<br/>
 > {<br/>
 > &nbsp;&nbsp;&nbsp;&nbsp;终止代码<br/>
 > }<br/>
@@ -47,9 +47,9 @@ ms.locfileid: "52175912"
 try-finally-statement:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; **\_\_请尝试** *复合语句* **\_\_最后** *复合语句*
 
-**的 try-finally**语句是 C 和 c + + 语言的 Microsoft 扩展，使目标应用程序的代码块的执行被中断时保证清理代码的执行。 清理包括多个任务，如释放内存、关闭文件和释放文件句柄。 **的 try-finally**语句一点尤其适用于具有多个位置，则进行检查错误的可能会导致过早的例程将返回例程。
+**的 try-finally**语句是 C 的 Microsoft 扩展和C++可使代码块的执行被中断时保证清理代码的执行目标应用程序的语言。 清理包括多个任务，如释放内存、关闭文件和释放文件句柄。 **的 try-finally**语句一点尤其适用于具有多个位置，则进行检查错误的可能会导致过早的例程将返回例程。
 
-有关相关的信息和代码示例，请参阅[试用-除非语句](../cpp/try-except-statement.md)。 一般情况下处理结构化异常的详细信息，请参阅[结构化异常处理](../cpp/structured-exception-handling-c-cpp.md)。 在托管应用程序中处理异常的详细信息，请参阅[/clr 下的异常处理](../windows/exception-handling-cpp-component-extensions.md)。
+有关相关的信息和代码示例，请参阅[试用-除非语句](../cpp/try-except-statement.md)。 一般情况下处理结构化异常的详细信息，请参阅[结构化异常处理](../cpp/structured-exception-handling-c-cpp.md)。 有关详细信息中使用 C + 的托管应用程序的异常处理 + CLI，请参阅[/clr 下的异常处理](../extensions/exception-handling-cpp-component-extensions.md)。
 
 > [!NOTE]
 > 结构化异常处理适用于 Win32 中的 C 和 C++ 源文件。 但是，这不是专门为 C++ 设计的。 您可通过使用 C++ 异常处理来确保提高代码的可移植性。 此外，C++ 异常处理更为灵活，因此它可以处理任何类型的异常。 对于 C++ 程序，建议你使用 C++ 异常处理机制 ([try、 catch 和 throw](../cpp/try-throw-and-catch-statements-cpp.md)语句)。
@@ -66,7 +66,7 @@ try-finally-statement:<br/>
 
 如果在发生异常 **__try**块中，操作系统必须找到异常处理程序或程序将失败。 如果找到的处理程序，所有 **__finally**块被执行和处理程序中恢复执行。
 
-例如，假设一个函数调用系列将函数 A 链接到函数 D，如下图所示。 每个函数均有一个终止处理程序。 如果异常在函数 D 中引发并在函数 A 中得到处理，则当系统展开堆栈时，按以下顺序调用终止处理程序：D、C、B。
+例如，假设一个函数调用系列将函数 A 链接到函数 D，如下图所示。 每个函数均有一个终止处理程序。 如果异常是在函数 D 中引发并处理 A 中，当系统展开堆栈时按以下顺序调用终止处理程序：D、 C、 B。
 
 ![终止的顺序&#45;处理程序执行](../cpp/media/vc38cx1.gif "顺序终止&#45;处理程序执行") <br/>
 终止处理程序执行顺序

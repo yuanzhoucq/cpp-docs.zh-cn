@@ -1,6 +1,6 @@
 ---
 title: 标识符 （C++）
-ms.date: 09/12/2018
+ms.date: 05/07/2019
 helpviewer_keywords:
 - decorated names
 - decorated names, about decorated names
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - white space, in C++ identifiers
 - identifiers [C++]
 ms.assetid: 03a0dfb1-4530-4cdf-8295-5ea4dca4c1b8
-ms.openlocfilehash: 6f87486d0bb2614a3b2542cf050172a47f152c4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 61ca021a8f41074dcef6bf9df2e5683ede98deee
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653656"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222433"
 ---
 # <a name="identifiers-c"></a>标识符 （C++）
 
@@ -70,7 +70,7 @@ N O P Q R S T U V W X Y Z
 
 - 函数的参数的数量。
 
-美元符号 `$` 在 Visual C++ 中是有效标识符。 Visual C++ 还允许在标识符中使用通用字符名称允许的范围所表示的实际字符。 若要使用这些字符，必须使用包含它们的文件编码代码页保存文件。  此示例演示如何在代码中互换使用扩展字符和通用字符名称。
+美元符号`$`是 Microsoft 中的有效标识符字符C++编译器 （msvc） 编写。 MSVC 还允许你使用的通用字符名称标识符中允许的范围所表示的实际字符。 若要使用这些字符，必须使用包含它们的文件编码代码页保存文件。  此示例演示如何在代码中互换使用扩展字符和通用字符名称。
 
 ```cpp
 // extended_identifier.cpp
@@ -87,7 +87,7 @@ int main() {
 }
 ```
 
-编译 C++/CLI 代码时，标识符中允许的字符范围限制更少。 使用 /clr 编译的代码中的标识符应遵循  [标准 ECMA-335：公共语言基础结构 (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm)。
+编译 C++/CLI 代码时，标识符中允许的字符范围限制更少。 使用 /clr 编译的代码中的标识符应遵循[ECMA-335 标准：公共语言基础结构 (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm)。
 
 **结束 Microsoft 专用**
 
@@ -95,7 +95,7 @@ int main() {
 
 标识符不能与关键字有完全相同的拼写和大小写。 包含关键字的标识符是合法的。 例如，`Pint`是一个合法标识符，即使它包含**int**，这是一个关键字。
 
-使用两个顺序下划线字符 ( **__** ) 在一个标识符或在单个前导下划线后跟一个大写字母，将保留用于所有作用域中的 c + + 实现。 由于当前或将来的保留标识符可能发生冲突，因此应避免对文件范围的名称使用一个前导下划线后跟小写字母。
+使用两个顺序下划线字符 ( **__** ) 在一个标识符或在单个前导下划线后跟一个大写字母，将保留用于C++中的所有作用域的实现。 由于当前或将来的保留标识符可能发生冲突，因此应避免对文件范围的名称使用一个前导下划线后跟小写字母。
 
 ## <a name="see-also"></a>请参阅
 

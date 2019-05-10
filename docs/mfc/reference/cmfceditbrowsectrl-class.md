@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCEditBrowseCtrl [MFC], OnIllegalFileName
 - CMFCEditBrowseCtrl [MFC], SetBrowseButtonImage
 ms.assetid: 69cfd886-3d35-4bee-8901-7c88fcf9520f
-ms.openlocfilehash: 8d1f603f8439815c92360af40ccb807446d0e84a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0c6fb39e17e22bcac60d50b87f7370c6a9f91db9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62237637"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl 类
 
@@ -120,7 +120,7 @@ class CMFCEditBrowseCtrl : public CEdit
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何使用这两种方法`CMFCEditBrowseCtrl`类：`EnableFolderBrowseButton`和`EnableFileBrowseButton`。 此示例摘自[新的控件示例](../../visual-cpp-samples.md)。
+下面的示例演示如何使用这两种方法`CMFCEditBrowseCtrl`类：`EnableFolderBrowseButton`和`EnableFileBrowseButton`。 此示例摘自[新的控件示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_NewControls#6](../../mfc/reference/codesnippet/cpp/cmfceditbrowsectrl-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#7](../../mfc/reference/codesnippet/cpp/cmfceditbrowsectrl-class_2.cpp)]
@@ -207,7 +207,7 @@ CMFCEditBrowseCtrl::BrowseMode GetMode() const;
 
 下表列出可能的返回值。
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
 |`BrowseMode_Default`|**自定义模式**。 执行程序员定义的操作。|
 |`BrowseMode_File`|**文件模式**。 显示标准文件浏览器对话框。|

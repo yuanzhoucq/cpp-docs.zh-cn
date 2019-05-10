@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 C++ 互操作封送嵌入式指针
+title: 如何：封送嵌入式指针使用C++互操作
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,20 +10,20 @@ helpviewer_keywords:
 - pointers [C++], marshaling
 - data marshaling [C++], embedded pointers
 ms.assetid: 05fb8858-97f2-47aa-86b2-2c0ad713bdb2
-ms.openlocfilehash: d48297118fde98889acc0fd5f4abd29ee177cd8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c6d622060aaf700b6ea1a3bfe797ab3190eee797
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493719"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345743"
 ---
-# <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>如何：使用 C++ 互操作封送嵌入式指针
+# <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>如何：封送嵌入式指针使用C++互操作
 
 下面的代码示例使用[managed、 unmanaged](../preprocessor/managed-unmanaged.md) #pragma 指令以实现托管和非托管函数中同一文件中，但如果在单独的文件中定义，这些函数互操作方式相同。 文件仅包含非托管的函数无需使用编译[/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)。
 
 ## <a name="example"></a>示例
 
-下面的示例演示可以如何从托管函数调用非托管的函数采用包含指针的结构。 托管的函数创建该结构的实例并初始化使用 new 关键字对嵌入的指针 (而不是[ref new、 gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)关键字)。 此分配本机堆上的内存，因为没有需要固定要禁止显示垃圾回收的数组。 但是，必须显式删除内存以避免内存泄漏。
+下面的示例演示可以如何从托管函数调用非托管的函数采用包含指针的结构。 托管的函数创建该结构的实例并初始化使用 new 关键字对嵌入的指针 (而不是[ref new、 gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md)关键字)。 此分配本机堆上的内存，因为没有需要固定要禁止显示垃圾回收的数组。 但是，必须显式删除内存以避免内存泄漏。
 
 ```
 // marshal_embedded_pointer.cpp

@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
-ms.openlocfilehash: c1dc146f03b4ed5c0d9d82736959df3097f41199
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 99676ac0fff9584cd8453562f8918f6cadd66666
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385201"
 ---
 # <a name="task-class-concurrency-runtime"></a>task 类（并发运行时）
 
@@ -112,7 +112,7 @@ void get() const;
 如果任务已取消，调用`get`将引发[task_canceled](task-canceled-class.md)异常。 如果任务遇到了不同的异常或异常从前面的任务传播到此任务，则对 `get` 的调用将引发该异常。
 
 > [!IMPORTANT]
->  在通用 Windows 平台 (UWP) 应用中，不要调用[concurrency::task::wait](#wait)或`get`(`wait`调用`get`) 在 STA 上运行的代码 否则，运行时会引发[concurrency:: invalid_operation](invalid-operation-class.md)因为这些方法阻止当前线程，并可能导致应用停止响应。 但是，可以调用`get`方法来接收中基于任务的延续的先行任务的结果，因为结果立即可用。
+>  在通用 Windows 平台 (UWP) 应用中，不要调用[concurrency::task::wait](#wait)或`get`(`wait`调用`get`) 中的用户界面线程运行的代码。 否则，运行时会引发[concurrency:: invalid_operation](invalid-operation-class.md)因为这些方法阻止当前线程，并可能导致应用停止响应。 但是，可以调用`get`方法来接收中基于任务的延续的先行任务的结果，因为结果立即可用。
 
 ##  <a name="is_apartment_aware"></a> is_apartment_aware
 
@@ -180,8 +180,7 @@ task& operator= (task&& _Other);
 
 ### <a name="remarks"></a>备注
 
-
-  `task` 的行为方式与智能指针的类似，在分配副本之后，此 `task` 对象与 `_Other` 表示相同的实际任务。
+`task` 的行为方式与智能指针的类似，在分配副本之后，此 `task` 对象与 `_Other` 表示相同的实际任务。
 
 ##  <a name="operator_eq_eq"></a> 运算符 = =
 
@@ -252,8 +251,7 @@ task(
 
 ### <a name="remarks"></a>备注
 
-
-  `task` 的默认构造函数仅用于允许在容器中使用任务。 只有在分配有效任务后才能使用默认的构造任务。 等方法`get`，`wait`或`then`将引发[invalid_argument](../../../standard-library/invalid-argument-class.md)调用默认构造任务时的异常。
+`task` 的默认构造函数仅用于允许在容器中使用任务。 只有在分配有效任务后才能使用默认的构造任务。 等方法`get`，`wait`或`then`将引发[invalid_argument](../../../standard-library/invalid-argument-class.md)调用默认构造任务时的异常。
 
 通过 `task_completion_event` 创建的任务将在设置任务完成事件后完成（并安排好其延续）。
 
@@ -333,8 +331,7 @@ __declspec(
 
 ##  <a name="wait"></a> 等待
 
-等待此任务到达终止状态。 
-  `wait` 可执行内联任务，前提是所有任务依赖项得到满足并且后台辅助线程没有选取它执行。
+等待此任务到达终止状态。 `wait` 可执行内联任务，前提是所有任务依赖项得到满足并且后台辅助线程没有选取它执行。
 
 ```
 task_status wait() const;
@@ -347,7 +344,7 @@ task_status wait() const;
 ### <a name="remarks"></a>备注
 
 > [!IMPORTANT]
->  在通用 Windows 平台 (UWP) 应用中，不要调用`wait`在 STA 上运行的代码 否则，运行时会引发 [concurrency::invalid_operation](invalid-operation-class.md) ，原因是此方法阻止当前线程并可能导致应用停止响应。 但是，你可以调用 [concurrency::task::get](#get) 方法来接收基于任务的延续中的先行任务的结果。
+>  在通用 Windows 平台 (UWP) 应用中，不要调用`wait`中的用户界面线程运行的代码。 否则，运行时会引发 [concurrency::invalid_operation](invalid-operation-class.md) ，原因是此方法阻止当前线程并可能导致应用停止响应。 但是，你可以调用 [concurrency::task::get](#get) 方法来接收基于任务的延续中的先行任务的结果。
 
 ## <a name="see-also"></a>请参阅
 

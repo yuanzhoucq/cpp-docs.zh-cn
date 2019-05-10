@@ -9,12 +9,12 @@ helpviewer_keywords:
 - stack, setting size
 - /STACK editbin option
 ms.assetid: a39bcff0-c945-4355-80cc-8e4f24a5f142
-ms.openlocfilehash: 1d583a7259e1aecef0a638743fb0b6271ff09330
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6f30877800d4597054601f7459df88c78193fd3c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62318493"
 ---
 # <a name="stack"></a>/STACK
 
@@ -32,4 +32,4 @@ ms.locfileid: "57417744"
 
 ## <a name="see-also"></a>请参阅
 
-[EDITBIN 选项](../../build/reference/editbin-options.md)
+[EDITBIN 选项](editbin-options.md)

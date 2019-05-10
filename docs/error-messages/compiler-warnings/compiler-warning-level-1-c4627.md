@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4627
 ms.assetid: 8840f3e6-b496-423a-8635-eb55d5f854a2
-ms.openlocfilehash: e833141020de1aef51a1ea3823dea86b024e077d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06db3d7e585dfe49b2e0854973f63834648613b7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62221373"
 ---
 # <a name="compiler-warning-level-1-c4627"></a>编译器警告（等级 1）C4627
 
@@ -36,4 +36,4 @@ int main()
 
 ## <a name="see-also"></a>请参阅
 
-[创建预编译标头文件](../../build/reference/creating-precompiled-header-files.md)
+[创建预编译标头文件](../../build/creating-precompiled-header-files.md)

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - common dialog boxes [MFC]
 ms.assetid: 5c4f6443-896c-4b05-a7df-8169fdadc71d
 ms.openlocfilehash: 5efd885421d8c73c191e2a5603f37d1df85a5168
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388522"
 ---
 # <a name="common-dialog-classes"></a>通用对话框类
 
@@ -24,7 +24,7 @@ ms.locfileid: "57303061"
 
 ### <a name="common-dialog-classes"></a>通用对话框类
 
-|在派生的对话框类|目标|
+|在派生的对话框类|用途|
 |--------------------------|-------------|
 |[CColorDialog](../mfc/reference/ccolordialog-class.md)|允许用户选择颜色。|
 |[CFileDialog](../mfc/reference/cfiledialog-class.md)|允许用户选择打开或保存的文件名。|

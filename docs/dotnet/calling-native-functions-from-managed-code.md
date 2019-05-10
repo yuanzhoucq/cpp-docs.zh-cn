@@ -9,12 +9,12 @@ helpviewer_keywords:
 - calling native functions from managed code
 - interop [C++], calling native functions from managed code
 ms.assetid: 982cef18-20d9-42b4-8242-a77fa65f2e36
-ms.openlocfilehash: 97b0221a4ec73be41bb5ba052607dfb5ced233c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 285bfabbd5935df303a39ada11c388713ae24f34
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209186"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>从托管代码调用本机函数
 
@@ -29,11 +29,11 @@ ms.locfileid: "50462033"
 在本部分中的示例仅演示了如何`PInvoke`可用。 `PInvoke` 可以简化自定义的数据封送处理，这因为你提供属性而不是编写过程性的封送处理代码中声明的方式封送处理信息。
 
 > [!NOTE]
->  封送处理库提供了一种方法来以优化方式在本机和托管环境之间封送数据。 请参阅[Overview of Marshaling c + + 中](../dotnet/overview-of-marshaling-in-cpp.md)有关封送处理库的详细信息。 封送处理库是可用的数据，而不是针对函数。
+>  封送处理库提供了一种方法来以优化方式在本机和托管环境之间封送数据。 请参阅[Overview of Marshaling 中C++](../dotnet/overview-of-marshaling-in-cpp.md)有关封送处理库的详细信息。 封送处理库是可用的数据，而不是针对函数。
 
 ## <a name="pinvoke-and-the-dllimport-attribute"></a>PInvoke 和 DllImport 特性
 
-下面的示例演示如何使用`PInvoke`Visual c + + 程序中。 本机函数的 puts 定义在 msvcrt.dll 中。 DllImport 特性用于 puts 的声明。
+下面的示例演示如何使用`PInvoke`视觉对象中C++程序。 本机函数的 puts 定义在 msvcrt.dll 中。 DllImport 特性用于 puts 的声明。
 
 ```
 // platform_invocation_services.cpp
@@ -87,7 +87,7 @@ int main() {
 
 - 由于显式封送处理 Api 返回`IntPtr`32 位到 64 位可移植性类型，因此必须使用额外`ToPointer`调用。
 
-公开 c + + 的特定方法是更为高效、 显式方法，但代价是附加的复杂性。
+公开的特定方法C++是更高效、 显式方法，但代价是附加的复杂性。
 
 如果应用程序使用主要的非托管的数据类型，或如果它调用更多的非托管的 Api 比.NET Framework Api，我们建议你使用 IJW 功能。 若要在托管应用程序中调用偶尔的非托管的 API，是更细微而定。
 
@@ -95,7 +95,7 @@ int main() {
 
 来说，PInvoke 很方便地在 Windows 中调用函数。
 
-在此示例中，Visual c + + 程序进行互操作是 Win32 API 的一部分的 MessageBox 函数。
+在此示例中，视觉对象C++是 Win32 API 的一部分的 MessageBox 函数互操作程序。
 
 ```cpp
 // platform_invocation_services_4.cpp
@@ -123,7 +123,7 @@ PInvoke 还使用封送处理信息来查找 DLL 中的函数。 在 user32.dll 
 
 `char * MakeSpecial(char * pszString);`
 
-如果我们在 Visual c + + 应用程序中使用 PInvoke，我们可以编写类似于以下内容：
+如果我们在视觉对象中使用 PInvokeC++应用程序中，我们可以编写类似于以下内容：
 
 ```cpp
 [DllImport("mylib")]
@@ -168,11 +168,11 @@ int main() {
 
 ## <a name="marshaling-arguments"></a>封送处理参数
 
-使用`PInvoke`，没有封送处理需要之间管理和 c + + 本机基元类型具有相同形式。 例如，没有封送处理是 Int32 和 int、 Double 和 double 之间或之间必需的。
+与`PInvoke`，没有封送处理之间需要管理和C++具有相同形式的本机基元类型。 例如，没有封送处理是 Int32 和 int、 Double 和 double 之间或之间必需的。
 
 但是，您必须封送不具有相同的形式的类型。 这包括 char、 string 和 struct 类型。 下表显示封送处理程序使用的各种类型的映射：
 
-|wtypes.h|Visual C++|Visual c + + 和 /clr|公共语言运行时|
+|wtypes.h|Visual C++|VisualC++使用 /clr|公共语言运行时|
 |--------------|------------------|-----------------------------|-----------------------------|
 |句柄|Void \*|Void \*|IntPtr、 UIntPtr|
 |BYTE|unsigned char|unsigned char|Byte|
@@ -196,7 +196,7 @@ int main() {
 
 在本主题中前面所示示例中，DllImport 的 CharSet 参数指定如何将托管的字符串封送处理;在这种情况下，它们应封送到本机端为 ANSI 字符串。
 
-可以使用 MarshalAs 特性来指定各个自变量封送处理信息的本机函数。 有几个选项进行封送处理字符串\*参数： BStr、 ANSIBStr、 TBStr、 LPStr、 LPWStr 和 LPTStr。 默认选项为 LPStr。
+可以使用 MarshalAs 特性来指定各个自变量封送处理信息的本机函数。 有几个选项进行封送处理字符串\*参数：BStr、 ANSIBStr、 TBStr、 LPStr、 LPWStr 和 LPTStr。 默认选项为 LPStr。
 
 在此示例中，该字符串被封送为双字节 Unicode 字符字符串 LPWStr。 输出是第一个字母的 Hello World ！ 因为封送的字符串的第二个字节为 null，并且将放则将此解释为字符串的结尾标记。
 
@@ -217,7 +217,7 @@ int main() {
 
 MarshalAs 特性位于 System::Runtime::InteropServices 命名空间中。 该属性可以用于其他数据类型，例如数组。
 
-如本主题前面所述，封送处理库提供了一个新的本机和托管环境之间封送数据优化方法。 有关详细信息，请参阅[Overview of Marshaling c + + 中](../dotnet/overview-of-marshaling-in-cpp.md)。
+如本主题前面所述，封送处理库提供了一个新的本机和托管环境之间封送数据优化方法。 有关详细信息，请参阅[Overview of Marshaling 中C++ ](../dotnet/overview-of-marshaling-in-cpp.md)。
 
 ## <a name="performance-considerations"></a>性能注意事项
 

@@ -2,18 +2,18 @@
 title: 集合 (C++/CX)
 ms.date: 11/19/2018
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
-ms.openlocfilehash: 155f14a2948215afb918e15c345cfa83f630db9e
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 850ac0f4801a13a5407f8fe008740bbfa21cc02c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347322"
 ---
 # <a name="collections-ccx"></a>集合 (C++/CX)
 
-在 C + + /CX 程序，可任意使用标准模板库 (STL) 容器或任何其他用户定义的集合类型。 但是，当你传递集合来回跨 Windows 运行时应用程序二进制接口 (ABI) — 例如，到 XAML 控件或 JavaScript 客户端，必须使用 Windows 运行时集合类型。
+在C++/CX 程序，可任意使用标准模板库 (STL) 容器或任何其他用户定义的集合类型。 但是，当你传递集合来回跨 Windows 运行时应用程序二进制接口 (ABI) — 例如，到 XAML 控件或 JavaScript 客户端，必须使用 Windows 运行时集合类型。
 
-Windows 运行时定义的接口集合和相关的类型和 C + + /cli CX 提供具体的 c + + 实现在 collection.h 标头文件中。 下图显示了各个集合类型之间的关系：
+Windows 运行时定义集合和相关的类型的接口和C++/CX 提供具体的C++collection.h 标头文件中的实现。 下图显示了各个集合类型之间的关系：
 
 ![C&#43;&#43;&#47;CX 集合类型的继承树](../cppcx/media/cppcxcollectionsinheritancetree.png "C&#43;&#43;&#47;CX 集合类型的继承树")
 
@@ -28,7 +28,7 @@ Windows 运行时定义的接口集合和相关的类型和 C + + /cli CX 提供
    > [!IMPORTANT]
    > 代理迭代器 `VectorIterator` 和 `VectorViewIterator` 使用代理对象 `VectoryProxy<T>` 及 `ArrowProxy<T>` 实现与 STL 容器的共同使用。 有关更多信息，请参见本文后面的“VectorProxy 元素”。
 
-- C + + /cli CX 集合类型的支持的相同的线程安全保证与 STL 容器支持。
+- C++/CX 集合类型的支持的相同的线程安全保证与 STL 容器支持。
 
 - [Windows::Foundation::Collections::IObservableVector](/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) 和 [Windows::Foundation::Collections::IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) 定义了在集合以多种方式发生更改时触发的事件。 通过实现这些接口，  [Platform::Collections::Map](../cppcx/platform-collections-map-class.md) 和 [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) 支持与 XAML 集合的数据绑定。 例如，如果你有一个被数据绑定到 `Vector` 的 `Grid`，则当你向集合添加项目时，Grid UI 中会反映更改。
 
@@ -96,7 +96,7 @@ void FindButton(UIElementCollection^ col)
 
 ## <a name="collection-types"></a>集合类型
 
-集合分为四种类别：序列集合和关联集合各自的可修改版本和只读版本。 此外，C + + /cli CX 通过提供简化集合访问的三个迭代器类增强集合。
+集合分为四种类别：序列集合和关联集合各自的可修改版本和只读版本。 此外， C++/CX 通过提供简化集合访问的三个迭代器类增强集合。
 
 可以更改可修改集合的元素，但是，只读集合的元素（称作 *视图*）只能读取。 元素[Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md)或[Platform::Collections::VectorView](../cppcx/platform-collections-vectorview-class.md)集合可以通过使用迭代器或集合的访问[vector:: getat](../cppcx/platform-collections-vector-class.md#getat)和索引。 可以使用集合的访问关联集合的元素[map:: lookup](../cppcx/platform-collections-map-class.md#lookup)和密钥。
 
@@ -125,7 +125,7 @@ void FindButton(UIElementCollection^ col)
 
 ### <a name="begin-and-end-functions"></a>begin() 和 end() 函数
 
-若要简化使用 STL 以处理`Vector`， `VectorView`， `Map`， `MapView`，和任意`Windows::Foundation::Collections`对象，C + + /CX 支持的重载[begin 函数](../cppcx/begin-function.md)和[结束函数](../cppcx/end-function.md)非成员函数。
+若要简化使用 STL 以处理`Vector`， `VectorView`， `Map`， `MapView`，和任意`Windows::Foundation::Collections`对象， C++/CX 支持重载[begin 函数](../cppcx/begin-function.md)并[end 函数](../cppcx/end-function.md)非成员函数。
 
 下表列出可用迭代器和函数。
 
@@ -146,5 +146,5 @@ void FindButton(UIElementCollection^ col)
 ## <a name="see-also"></a>请参阅
 
 [类型系统](../cppcx/type-system-c-cx.md)<br/>
-[Visual c + + 语言参考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[VisualC++语言参考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [命名空间参考](../cppcx/namespaces-reference-c-cx.md)

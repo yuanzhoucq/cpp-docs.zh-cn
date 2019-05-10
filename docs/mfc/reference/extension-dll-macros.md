@@ -1,15 +1,15 @@
 ---
 title: 宏和用于管理 Dll 函数
-ms.date: 04/03/2017
+ms.date: 03/27/2019
 helpviewer_keywords:
 - module macros in MFC
 ms.assetid: 303f4161-cb5e-4099-81ad-acdb11aa60fb
-ms.openlocfilehash: 1d0cbd1f702a1d26dd2eaafd88efcfd61f52ff78
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: b27f8763b60dc7ce3ee074cad1365e7e1de3a7e6
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322197"
 ---
 # <a name="macros-and-functions-for-managing-dlls"></a>宏和用于管理 Dll 函数
 
@@ -20,10 +20,10 @@ ms.locfileid: "55850211"
 |[AfxOleInitModule](#afxoleinitmodule)|提供 OLE 支持来自动态链接到 MFC 的规则 MFC DLL。|
 |[AfxNetInitModule](#afxnetinitmodule)|提供了从动态链接到 MFC 的规则 MFC DLL 的 MFC 套接字支持。|
 |[AfxGetAmbientActCtx](#afxgetambientactctx)|获取每个模块状态标志的当前状态。|
-|[AfxGetStaticModuleState](#afxgetstaticmodulestate)|设置模块状态初始化之前和/或若要清理后还原以前的模块状态。|
-|[AfxInitExtensionModule]()#afxinitextensionmodule|初始化 DLL。|
+|[AfxGetStaticModuleState](#afxgetstaticmodulestate)|设置模块状态初始化之前和/或清理还原后的前一模块状态。|
+|[AfxInitExtensionModule](#afxinitextensionmodule)|初始化 DLL。|
 |[AfxSetAmbientActCtx](#afxsetambientactctx)|设置每个模块状态标志，这会影响 MFC 的 WinSxS 行为。|
-|[AfxTermExtensionModule]()#afxtermextensionmodule)|允许在 MFC 清理 MFC 扩展 DLL 时从 DLL 分离的每个进程。|
+|[AfxTermExtensionModule](#afxtermextensionmodule)|允许每个进程从 DLL 分离时清理 MFC 扩展 DLL 的 MFC。|
 
 ## <a name="afx_ext_class"></a>  AFX_EXT_CLASS
 
@@ -79,7 +79,7 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ));
 模块状态和 MFC 的详细信息，请参阅"管理数据的 MFC 模块状态"中[创建新文档、 Windows，和视图](../creating-new-documents-windows-and-views.md)并[技术说明 58](../tn058-mfc-module-state-implementation.md)。
 
 > [!NOTE]
->  当 MFC 创建激活上下文的程序集时，它使用[AfxWinInit](#afxwininit)以创建上下文和`AFX_MANAGE_STATE`激活和停用它。 另请注意，`AFX_MANAGE_STATE`为静态 MFC 库以及 MFC Dll 启用才能使 MFC 代码在用户 dll 选择的正确激活上下文中执行。 有关详细信息，请参阅[支持 MFC 模块状态中的激活上下文](../support-for-activation-contexts-in-the-mfc-module-state.md)。
+>  当 MFC 创建激活上下文的程序集时，它使用[AfxWinInit](application-information-and-management.md#afxwininit)以创建上下文和`AFX_MANAGE_STATE`激活和停用它。 另请注意，`AFX_MANAGE_STATE`为静态 MFC 库以及 MFC Dll 启用才能使 MFC 代码在用户 dll 选择的正确激活上下文中执行。 有关详细信息，请参阅[支持 MFC 模块状态中的激活上下文](../support-for-activation-contexts-in-the-mfc-module-state.md)。
 
 ### <a name="requirements"></a>要求
 
@@ -151,7 +151,7 @@ BOOL AFXAPI AfxGetAmbientActCtx();
 
 ## <a name="afxgetstaticmodulestate"></a> AfxGetStaticModuleState
 
-调用此函数以初始化之前将模块状态设置和/或后清除还原以前的模块状态。
+调用此函数以初始化之前将模块状态设置和/或清理还原后的前一模块状态。
 
 ### <a name="syntax"></a>语法
 
@@ -181,7 +181,7 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ));
 
 **标头：** afxstat_.h
 
-## <a name="afxinitextensionmodule"></a> AfxInitExtensionModule
+## <a name="afxinitextensionmodule"></a>AfxInitExtensionModule
 
 此函数中的 MFC 扩展 DLL 的调用`DllMain`以初始化 DLL。
 
@@ -228,7 +228,7 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
 `AfxInitExtensionModule` 生成的 DLL 的 HMODULE 副本和捕获 DLL 的运行时类 (`CRuntimeClass`结构) 以及其对象工厂 (`COleObjectFactory`对象) 用于更高版本时`CDynLinkLibrary`创建对象。
 MFC 扩展 Dll 需要做两件事中的其`DllMain`函数：
 
-- 调用[AfxInitExtensionModule](#_mfc_afxinitextensionmodule)并检查返回值。
+- 调用[AfxInitExtensionModule](#afxinitextensionmodule)并检查返回值。
 
 - 创建`CDynLinkLibrary`对象将会导出 DLL [CRuntimeClass 结构](cruntimeclass-structure.md)对象，或在具有其自己的自定义资源。
 
@@ -275,7 +275,7 @@ BOOL CMFCListViewApp::InitInstance()
 
 ## <a name="afxtermextensionmodule"></a>  AfxTermExtensionModule
 
-调用此函数以允许在 MFC 清理 MFC 扩展 DLL 时从 DLL 分离的每个进程 (时在进程退出，或为卸载 DLL 时，会发生该情况`AfxFreeLibrary`调用)。
+调用此函数可允许每个进程从 DLL 分离时清理 MFC 扩展 DLL 的 MFC (时在进程退出，或为卸载 DLL 时，会发生该情况`AfxFreeLibrary`调用)。
 
 ### <a name="syntax"></a>语法
 
@@ -289,7 +289,7 @@ void AFXAPI AfxTermExtensionModule(  AFX_EXTENSION_MODULE& state,  BOOL bAll  = 
 对引用[AFX_EXTENSION_MODULE](afx-extension-module-structure.md)结构，其中包含 MFC 扩展 DLL 模块的状态。
 
 *bAll*<br/>
-如果为 TRUE，清除所有 MFC 扩展 DLL 模块。 否则为清除仅当前的 DLL 模块。
+如果为 TRUE，清除所有 MFC 扩展 DLL 模块。 否则，清除仅当前的 DLL 模块。
 
 ### <a name="remarks"></a>备注
 

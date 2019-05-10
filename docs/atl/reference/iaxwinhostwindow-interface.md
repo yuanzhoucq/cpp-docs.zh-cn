@@ -14,11 +14,11 @@ helpviewer_keywords:
 - IAxWinHostWindow interface
 ms.assetid: 9821c035-cd52-4c46-b58a-9278064f09b4
 ms.openlocfilehash: 4bdfdf76b48c1e9f2c06213ee25cd15a113525dd
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62276102"
 ---
 # <a name="iaxwinhostwindow-interface"></a>IAxWinHostWindow 接口
 
@@ -52,7 +52,7 @@ interface IAxWinHostWindow : IUnknown
 
 ## <a name="requirements"></a>要求
 
-此接口的定义现在以 IDL 或 c + +，如下所示。
+此接口的定义现在以 IDL 或C++，如下所示。
 
 |定义类型|文件|
 |---------------------|----------|

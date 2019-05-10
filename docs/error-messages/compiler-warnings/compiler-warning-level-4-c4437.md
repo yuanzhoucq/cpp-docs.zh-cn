@@ -2,12 +2,12 @@
 title: 编译器警告（等级 4）C4437
 ms.date: 11/04/2016
 ms.assetid: dc07e350-20eb-474c-a7ad-f841ae7ec339
-ms.openlocfilehash: 29dd5e7aff8a12ab3df2e56c9f7517ca0f80bdbe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ff52ae6d10f7d4ba429bbf3457a2a6b969998d4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62391460"
 ---
 # <a name="compiler-warning-level-4-c4437"></a>编译器警告（等级 4）C4437
 

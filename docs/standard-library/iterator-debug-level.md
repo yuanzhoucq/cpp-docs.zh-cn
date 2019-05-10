@@ -7,11 +7,11 @@ helpviewer_keywords:
 - _ITERATOR_DEBUG_LEVEL
 ms.assetid: 718549cd-a9a9-4ab3-867b-aac00b321e67
 ms.openlocfilehash: a584fe5a97e251205e750507b27e53e6e7b9a20e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224189"
 ---
 # <a name="iteratordebuglevel"></a>_ITERATOR_DEBUG_LEVEL
 
@@ -49,7 +49,7 @@ _ITERATOR_DEBUG_LEVEL 宏控制是否[检查迭代器](../standard-library/check
 
 ### <a name="example"></a>示例
 
-若要指定 _ITERATOR_DEBUG_LEVEL 宏的值，请使用[/D](../build/reference/d-preprocessor-definitions.md)编译器选项来定义命令行上或使用`#define`之前 c + + 标准库标头都包含在源文件中。 例如，在命令行中，若要编译*sample.cpp*在调试模式下以及使用调试迭代器支持，可以指定在 _ITERATOR_DEBUG_LEVEL 宏的定义：
+若要指定 _ITERATOR_DEBUG_LEVEL 宏的值，请使用[/D](../build/reference/d-preprocessor-definitions.md)编译器选项来定义命令行上或使用`#define`之前C++标准库标头都包含在源文件中。 例如，在命令行中，若要编译*sample.cpp*在调试模式下以及使用调试迭代器支持，可以指定在 _ITERATOR_DEBUG_LEVEL 宏的定义：
 
 `cl /EHsc /Zi /MDd /D_ITERATOR_DEBUG_LEVEL=1 sample.cpp`
 
@@ -69,4 +69,4 @@ _ITERATOR_DEBUG_LEVEL 宏控制是否[检查迭代器](../standard-library/check
 
 [Checked Iterators](../standard-library/checked-iterators.md)<br/>
 [Debug Iterator Support](../standard-library/debug-iterator-support.md)<br/>
-[安全库：C++ 标准库](../standard-library/safe-libraries-cpp-standard-library.md)<br/>
+[：C++ 标准库](../standard-library/safe-libraries-cpp-standard-library.md)<br/>

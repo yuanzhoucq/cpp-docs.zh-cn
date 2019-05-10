@@ -12,12 +12,12 @@ helpviewer_keywords:
 - __writegsword intrinsic
 - __writegsdword intrinsic
 ms.assetid: 7746cf6d-2259-4139-9aab-c07dd75c8037
-ms.openlocfilehash: 9276c727d93491e3d85cbae26f6b3df9c0384c59
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: dbd3fff75107ae61f7680dee84b72ff3153bfa8e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389770"
 ---
 # <a name="writegsbyte-writegsdword-writegsqword-writegsword"></a>__writegsbyte, __writegsdword, __writegsqword, __writegsword
 
@@ -48,7 +48,7 @@ void __writegsqword(
 
 #### <a name="parameters"></a>参数
 
-*偏移量*<br/>
+*Offset*<br/>
 [in]从要写入到的 GS 开头的偏移量。
 
 *Data*<br/>

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - threading [C++], thread-safe class design
 ms.assetid: f266d4c6-0454-4bda-9758-26157ef74cc5
 ms.openlocfilehash: 6115d942abc61fbfc9d60ca1ccf97d4b423ff7c1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407687"
 ---
 # <a name="multithreading-how-to-use-the-mfc-synchronization-classes"></a>多线程处理：如何使用 MFC 同步类
 
@@ -54,7 +54,7 @@ singleLock.Unlock();
 
 此方法的缺点是，该类将比同一类稍慢而无需添加的同步对象。 此外，如果有多个线程可能会删除该对象的机会，合并的方法不始终有效。 在这种情况下，它是更好的做法维护单独的同步对象。
 
-有关确定要在不同情况下使用哪些同步类的信息，请参阅[多线程处理：何时使用同步类](multithreading-when-to-use-the-synchronization-classes.md)。 有关同步的详细信息，请参阅[同步](/windows/desktop/Sync/synchronization)Windows SDK 中。 有关在 MFC 中的多线程支持的详细信息，请参阅[使用 c + + 和 MFC 多线程处理](multithreading-with-cpp-and-mfc.md)。
+有关确定要在不同情况下使用哪些同步类的信息，请参阅[多线程处理：何时使用同步类](multithreading-when-to-use-the-synchronization-classes.md)。 有关同步的详细信息，请参阅[同步](/windows/desktop/Sync/synchronization)Windows SDK 中。 有关在 MFC 中的多线程支持的详细信息，请参阅[使用多线程处理C++和 MFC](multithreading-with-cpp-and-mfc.md)。
 
 ## <a name="see-also"></a>请参阅
 

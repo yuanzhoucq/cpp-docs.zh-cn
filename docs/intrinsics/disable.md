@@ -9,12 +9,12 @@ helpviewer_keywords:
 - rsm instruction
 - disable intrinsic
 ms.assetid: 52da3df9-815c-4524-9839-6d1742cff5c6
-ms.openlocfilehash: 64e7031ab578632322dfd5c73eb81e0750c1e0b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93db063c6b53f0bec739ba134728b83379a21f53
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62264161"
 ---
 # <a name="disable"></a>_disable
 

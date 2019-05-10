@@ -1,5 +1,5 @@
 ---
-title: TN026：DDX 和 DDV 例程
+title: TN026:DDX 和 DDV 例程
 ms.date: 06/28/2018
 f1_keywords:
 - DDX
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - DDV (dialog data validation), procedures
 ms.assetid: c2eba87a-4b47-4083-b28b-e2fa77dfb4c4
 ms.openlocfilehash: 89916e60d9677240f2d70e37e9a80e6ad7a76fc3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305861"
 ---
-# <a name="tn026-ddx-and-ddv-routines"></a>TN026：DDX 和 DDV 例程
+# <a name="tn026-ddx-and-ddv-routines"></a>TN026:DDX 和 DDV 例程
 
 > [!NOTE]
 > 以下技术说明在首次包括在联机文档中后未更新。 因此，某些过程和主题可能已过时或不正确。 要获得最新信息，建议你在联机文档索引中搜索热点话题。
@@ -25,7 +25,7 @@ ms.locfileid: "50581904"
 
 ## <a name="overview-of-dialog-data-exchange"></a>对话框数据交换的概述
 
-对话框数据的所有函数已都完成 c + + 代码。 没有任何特殊资源或神奇的宏。 该机制的核心是虚拟函数，它是类中重写每个对话框中，没有对话框数据交换和验证。 它始终位于此窗体中：
+完成所有对话框数据函数C++代码。 没有任何特殊资源或神奇的宏。 该机制的核心是虚拟函数，它是类中重写每个对话框中，没有对话框数据交换和验证。 它始终位于此窗体中：
 
 ```cpp
 void CMyDialog::DoDataExchange(CDataExchange* pDX)
@@ -63,7 +63,7 @@ DDV_Custom(pDX, field, ...);
 
 虽然我们调用此"对话框数据"，但所有功能都都可在派生自任何类中`CWnd`并都不限于只是对话框。
 
-标准 c + + 中的构造函数，通常具有的块中设置的数据的初始值`//{{AFX_DATA_INIT`和`//}}AFX_DATA_INIT`注释。
+初始数据值设置在标准C++构造函数中包含的块通常`//{{AFX_DATA_INIT`并`//}}AFX_DATA_INIT`注释。
 
 `CWnd::UpdateData` 是操作执行的初始化和错误处理围绕对调用`DoDataExchange`。
 
@@ -85,11 +85,11 @@ DDV_ 例程应立即为此，遵循 DDX_ 例程*字段*。
 
 有三个其他有趣的`CDataExchange`成员：
 
-- `m_pDlgWnd`： 包含的控件在窗口 （通常的对话）。 这是为了防止 DDX_ 和 DDV_ 全局函数的调用方无需将 this 传递到每个 DDX/DDV 例程。
+- `m_pDlgWnd`：包含控件的窗口 （通常的对话）。 这是为了防止 DDX_ 和 DDV_ 全局函数的调用方无需将 this 传递到每个 DDX/DDV 例程。
 
-- `PrepareCtrl`和`PrepareEditCtrl`： 准备用于数据交换的对话框控件。 存储该控件的句柄将焦点设置在验证失败。 `PrepareCtrl` 用于非编辑控件和`PrepareEditCtrl`用于编辑控件。
+- `PrepareCtrl`和`PrepareEditCtrl`:准备用于数据交换的对话框控件。 存储该控件的句柄将焦点设置在验证失败。 `PrepareCtrl` 用于非编辑控件和`PrepareEditCtrl`用于编辑控件。
 
-- `Fail`： 将一个消息框，提醒用户输入错误后调用。 此例程会将焦点还原到最后一个控件 (上次调用`PrepareCtrl`或`PrepareEditCtrl`)，并引发异常。 可以从 DDX_ 和 DDV_ 例程调用此成员函数。
+- `Fail`：将一个消息框，提醒用户输入错误后调用。 此例程会将焦点还原到最后一个控件 (上次调用`PrepareCtrl`或`PrepareEditCtrl`)，并引发异常。 可以从 DDX_ 和 DDV_ 例程调用此成员函数。
 
 ## <a name="user-extensions"></a>用户扩展
 
@@ -123,7 +123,7 @@ DDV_ 例程应立即为此，遵循 DDX_ 例程*字段*。
     > [!NOTE]
     > 此类的任意表达式的类向导无法编辑，因此应移动之外的特殊格式注释 (/ / {{AFX_DATA_MAP(CMyClass))。
 
-具有`DoDialogExchange`成员函数包括条件语句或与混合交换和验证函数调用的任何其他有效的 c + + 语句。
+具有`DoDialogExchange`成员函数包括条件语句或任何其他有效C++语句与混合的交换和验证函数调用。
 
 ```cpp
 //{{AFX_DATA_MAP(CMyClass)
@@ -143,21 +143,21 @@ else
 
 类向导允许您将自己 DDX_ 和 DDV_ 例程集成到类向导用户界面，从而支持 DDX/DDV 自定义项的子集。 执行此操作是有益的唯一成本，如果你打算重复使用在项目中或在许多项目中的特定 DDX 和 DDV 例程。
 
-若要执行此操作，DDX 中进行特殊的输入。CLW （以前版本的 Visual c + + 中 APSTUDIO 存储此信息。INI) 或在项目中。CLW 文件。 可以是特殊的条目，输入你的项目的 [常规信息] 部分中。CLW 文件或 [ExtraDDX] 节的 DDX。CLW \Program Files\Microsoft Visual Studio\Visual C + + \bin 目录中的文件。 您可能需要创建 DDX。CLW 文件，如果它尚不存在。 如果你计划仅在某个项目中使用自定义 DDX_/DDV_ 例程，将条目添加到你的项目 [常规信息] 节。CLW 改为文件。 如果您计划在多个项目使用的例程，将条目添加到 DDX [ExtraDDX] 部分。CLW。
+若要执行此操作，DDX 中进行特殊的输入。CLW (以前版本的视觉对象C++APSTUDIO 中存储此信息。INI) 或在项目中。CLW 文件。 可以是特殊的条目，输入你的项目的 [常规信息] 部分中。CLW 文件或 [ExtraDDX] 节的 DDX。在 \Program Files\Microsoft Visual Studio\Visual CLW 文件C++\bin 目录。 您可能需要创建 DDX。CLW 文件，如果它尚不存在。 如果你计划仅在某个项目中使用自定义 DDX_/DDV_ 例程，将条目添加到你的项目 [常规信息] 节。CLW 改为文件。 如果您计划在多个项目使用的例程，将条目添加到 DDX [ExtraDDX] 部分。CLW。
 
 这些特殊的项的常规格式为：
 
-> ExtraDDXCount =*n*
+> ExtraDDXCount=*n*
 
 其中*n*是 ExtraDDX 数目？ 行要遵循的窗体
 
-> ExtraDDX？ =*密钥*;*vb 密钥*;*提示符*;*类型*;*initValue*;*DDX_Proc* [;*DDV_Proc*;*prompt1*;*arg1* [;*prompt2*;*fmt2*]]
+> ExtraDDX?=*keys*; *vb-keys*; *prompt*; *type*; *initValue*; *DDX_Proc* [; *DDV_Proc*; *prompt1*; *arg1* [; *prompt2*; *fmt2*]]
 
 其中？ 是一个数字 1- *n* ，该值指示正在定义的列表中的 DDX 类型。
 
 由; 字符分隔每个字段。 字段和它们的用途如下所述。
 
-- *密钥*
+- *keys*
 
   单个字符，该值指示哪个对话框控件的允许使用此变量的类型的列表。
 
@@ -174,7 +174,7 @@ else
   n | 排序的下拉列表中
   1 | DDX 插入是否应添加到列表的开头 （默认值添加到结尾） 这通常用于传输的控制属性的 DDX 例程。
 
-- *vb 密钥*
+- *vb-keys*
 
   此字段用于仅在 16 位产品 VBX 控件 （VBX 控件不支持在 32 位产品）
 
@@ -186,17 +186,17 @@ else
 
   类型在标头文件中发出的单个标识符。 在上述示例使用 DDX_Time 中，必须先将此设置为 CTime。
 
-- *vb 密钥*
+- *vb-keys*
 
   不使用此版本中，应始终为空
 
 - *initValue*
 
-  初始价值-0 或空。 如果它为空，将 //{{AFX_DATA_INIT 部分的实现文件中不写入任何初始化行。 空白条目应该用于 c + + 对象 (如`CString`， `CTime`，依此类推) 的有保证正确初始化的构造函数。
+  初始价值-0 或空。 如果它为空，将 //{{AFX_DATA_INIT 部分的实现文件中不写入任何初始化行。 空白条目应使用的C++对象 (如`CString`， `CTime`，依此类推) 的有保证正确初始化的构造函数。
 
 - *DDX_Proc*
 
-  DDX_ 过程的单个标识符。 C + + 函数名称必须以"DDX_，"开头，但不包括"DDX_" \<DDX_Proc > 标识符。 在上述示例中， \<DDX_Proc > 标识符将时间。 当 ClassWizard 将写入到实现文件中的函数调用 {{AFX_DATA_MAP 部分中，它将追加此名称到 DDX_，因此到达 DDX_Time。
+  DDX_ 过程的单个标识符。 C++函数名称必须以"DDX_，"开头，但不包含"DDX_"中\<DDX_Proc > 标识符。 在上述示例中， \<DDX_Proc > 标识符将时间。 当 ClassWizard 将写入到实现文件中的函数调用 {{AFX_DATA_MAP 部分中，它将追加此名称到 DDX_，因此到达 DDX_Time。
 
 - *comment*
 
@@ -208,7 +208,7 @@ else
 
 - *arg*
 
-  DDV_ 过程的单个标识符。 C + + 函数名称必须以"DDV_"开头，但不是包括在"DDX_" \<DDX_Proc > 标识符。
+  DDV_ 过程的单个标识符。 C++函数名称必须以"DDV_"开头，但不是包括"DDX_"中\<DDX_Proc > 标识符。
 
   *arg*后跟 1 或 2 个 DDV 参数：
 
@@ -228,7 +228,7 @@ else
       |U | 无符号长时间 (即，DWORD)|
       |f | float|
       |F | double|
-      |秒 | 字符串|
+      |秒 | string|
 
 ## <a name="see-also"></a>请参阅
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - notifications [MFC], socket
 - sockets [MFC], notifications
 ms.assetid: 87d5bf70-6e77-49a9-9a64-aaadee2ad018
-ms.openlocfilehash: c08305b8aeeca00eaf41e4f1c24b51a46a8c4254
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: df7bfe8a95221682d0f7f4ebb123bd15b79144d5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358185"
 ---
 # <a name="windows-sockets-socket-notifications"></a>Windows 套接字：套接字通知
 
@@ -43,7 +43,7 @@ MFC 调用通知函数，以便你可以在收到通知时自定义套接字的�
 > [!NOTE]
 >  在中`CSocket`，则`OnConnect`通知函数从未被调用。 对于连接，您调用`Connect`，这将返回完成连接后 （成功或错误）。 如何处理连接通知是 MFC 实现详细信息。
 
-有关每个通知函数的详细信息，请参阅类下的函数`CAsyncSocket`中*MFC 参考*。 源代码和 MFC 示例有关的信息，请参阅[MFC 示例](../visual-cpp-samples.md)。
+有关每个通知函数的详细信息，请参阅类下的函数`CAsyncSocket`中*MFC 参考*。 源代码和 MFC 示例有关的信息，请参阅[MFC 示例](../overview/visual-cpp-samples.md)。
 
 有关详细信息，请参见:
 
@@ -51,13 +51,13 @@ MFC 调用通知函数，以便你可以在收到通知时自定义套接字的�
 
 - [Windows 套接字：从套接字类派生](../mfc/windows-sockets-deriving-from-socket-classes.md)
 
-- [Windows 套接字：使用存档的套接字如何工作](../mfc/windows-sockets-how-sockets-with-archives-work.md)
+- [Windows 套接字：使用存档的套接字的工作原理](../mfc/windows-sockets-how-sockets-with-archives-work.md)
 
 - [Windows 套接字：阻止](../mfc/windows-sockets-blocking.md)
 
 - [Windows 套接字：字节排序](../mfc/windows-sockets-byte-ordering.md)
 
-- [Windows 套接字：将字符串转换](../mfc/windows-sockets-converting-strings.md)
+- [Windows 套接字：转换字符串](../mfc/windows-sockets-converting-strings.md)
 
 ## <a name="see-also"></a>请参阅
 

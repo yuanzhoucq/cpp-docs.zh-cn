@@ -87,11 +87,11 @@ helpviewer_keywords:
 - RPTW1 macro
 ms.assetid: a5bf8b30-57f7-4971-8030-e773b7a1ae13
 ms.openlocfilehash: 61748cca2cdfcc2d72b6943bfeedd9597009e20b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440089"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357483"
 ---
 # <a name="rpt-rptf-rptw-rptfw-macros"></a>_RPT、_RPTF、_RPTW、_RPTFW 宏
 
@@ -132,7 +132,7 @@ _RPTFWn(
 *format*<br/>
 用于创建用户消息的格式控件字符串。
 
-*参数*<br/>
+*args*<br/>
 通过使用的替换参数*格式*。
 
 ## <a name="remarks"></a>备注
@@ -163,10 +163,10 @@ _RPTFWn(
 
 |宏|必需的标头|
 |-----------|---------------------|
-|**_RPT**宏|\<crtdbg.h>|
-|**_RPTF**宏|\<crtdbg.h>|
-|**_RPTW**宏|\<crtdbg.h>|
-|**_RPTFW**宏|\<crtdbg.h>|
+|**_RPT** macros|\<crtdbg.h>|
+|**_RPTF** macros|\<crtdbg.h>|
+|**_RPTW** macros|\<crtdbg.h>|
+|**_RPTFW** macros|\<crtdbg.h>|
 
 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

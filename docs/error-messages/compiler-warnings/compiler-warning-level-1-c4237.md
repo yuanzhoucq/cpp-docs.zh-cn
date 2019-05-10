@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4237
 ms.assetid: f2e86c4b-80d8-460e-9429-83c5f3f5d7ca
-ms.openlocfilehash: 04fcb99e1dd1e348716e25affb22b54079d53aa9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c68e84daa2ca1aa023123203bb851e92758f9e40
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472678"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447682"
 ---
 # <a name="compiler-warning-level-1-c4237"></a>编译器警告（等级 1）C4237
 
 keyword 关键字尚不受支持，但保留供将来使用
 
-Visual c + + 编译器中未实现 c + + 规范中的关键字，但关键字不能作为用户定义的符号。
+中的关键字C++规范未在 Microsoft 中实现C++编译器，但关键字不能作为用户定义的符号。
 
 下面的示例生成 C4237:
 

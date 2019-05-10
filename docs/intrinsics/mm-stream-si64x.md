@@ -7,12 +7,12 @@ helpviewer_keywords:
 - movnti instruction
 - _mm_stream_si64x intrinsic
 ms.assetid: 114c2cd0-085f-41aa-846e-87bdd56c9ee7
-ms.openlocfilehash: 11b289deeb2fd4aadf9b5d500a3379d8af26fbb9
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: d7f7a75be1602fbb70a230b0dd3a791be99d092a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396634"
 ---
 # <a name="mmstreamsi64x"></a>_mm_stream_si64x
 

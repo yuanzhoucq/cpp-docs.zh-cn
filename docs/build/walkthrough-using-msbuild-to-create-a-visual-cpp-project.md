@@ -1,25 +1,23 @@
 ---
-title: 演练：使用 MSBuild 创建 Visual C++ 项目
-ms.date: 09/24/2018
-f1_keywords:
-- msbuild.cpp.walkthrough.createproject
+title: 演练：使用 MSBuild 创建的视觉对象C++项目
+ms.date: 05/06/2019
 helpviewer_keywords:
 - 'msbuild (c++), walkthrough: create a project'
 ms.assetid: 52350d1c-c373-4868-923c-5e8be6f67adb
-ms.openlocfilehash: c5ccacb5e68c4f950d4ffa731fbc83decc4f10fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 8fb985cbf4e471589946e730e8bb09b43f0a5d84
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677209"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446208"
 ---
-# <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>演练：使用 MSBuild 创建 Visual C++ 项目
+# <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>演练：使用 MSBuild 创建的视觉对象C++项目
 
-本演练演示如何使用 MSBuild 生成 Visual c + + 项目的命令提示符处。 您将了解如何创建 c + + 源代码文件和 Visual c + + 控制台应用程序的基于 XML 的项目文件。 后生成项目时，将了解如何自定义生成过程。
+本演练演示如何使用 MSBuild 生成 Visual StudioC++在命令提示符下的项目。 您将学习如何创建C++源文件的视觉对象和一个基于 XML 的项目文件C++控制台应用程序。 后生成项目时，将了解如何自定义生成过程。
 
 本演练阐释了以下任务：
 
-- 正在创建你的项目的 c + + 源代码文件。
+- 创建C++源为您的项目文件。
 
 - 创建 XML MSBuild 项目文件。
 
@@ -31,7 +29,7 @@ ms.locfileid: "50677209"
 
 若要完成本演练，你需要具备以下条件：
 
-- Visual Studio 中使用一份**使用 c + + 的桌面开发**安装工作负载。
+- Visual Studio 中使用一份**使用的桌面开发C++** 安装工作负载。
 
 - 大致了解 MSBuild 系统。
 
@@ -39,13 +37,13 @@ ms.locfileid: "50677209"
 > 如果你想要更高版本通过使用 Visual Studio IDE 中编辑项目文件，则不使用此方法。 如果手动创建.vcxproj 文件，Visual Studio IDE 可能不能编辑或加载它，尤其是如果该项目在项目项中使用通配符。
 
 > [!NOTE]
-> 大多数低级别构建说明包含在 **.targets**并 **.props**属性中存储的 VCTargets 目录中定义的文件`$(VCTargetsPath)`。 这些文件在 Visual Studio 2017 Enterprise Edition 中的默认路径为 c:\\Program Files (x86)\\Microsoft Visual Studio\\2017年\\企业\\Common7\\IDE\\VC\\VCTargets\\。
+> 大多数低级别构建说明包含在 **.targets**并 **.props**属性中存储的 VCTargets 目录中定义的文件`$(VCTargetsPath)`。 这些文件在 Visual Studio 2019 Enterprise Edition 中的默认路径是 C:\Program Files (x86) \Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.Cpp.Common.props。
 
-## <a name="creating-the-c-source-files"></a>创建 c + + 源文件
+## <a name="creating-the-c-source-files"></a>创建C++源文件
 
-在本演练中，将创建具有源文件和头文件的项目。 源文件 main.cpp 包含控制台应用程序的主函数。 标头文件 main.h 包含代码以包括 iostream 标头文件。 可以通过使用 Visual Studio 或文本编辑器 （如 Visual Studio Code） 创建这些 c + + 文件。
+在本演练中，将创建具有源文件和头文件的项目。 源文件 main.cpp 包含控制台应用程序的主函数。 标头文件 main.h 包含代码以包括 iostream 标头文件。 您可以创建这些C++使用 Visual Studio 或 Visual Studio Code 等文本编辑器的文件。
 
-### <a name="to-create-the-c-source-files-for-your-project"></a>若要创建你的项目的 c + + 源代码文件
+### <a name="to-create-the-c-source-files-for-your-project"></a>若要创建C++源为您的项目文件
 
 1. 创建你的项目的目录。
 
@@ -75,16 +73,16 @@ MSBuild 项目文件是一个包含项目根元素的 XML 文件 (`<Project>`)�
 
 - 三个项组标记 (`<ItemGroup>`)，用于指定项目配置和平台、 源文件名和头文件的名称。
 
-- 三个导入标记 (`<Import>`)，用于指定 Microsoft Visual c + + 设置的位置。
+- 三个导入标记 (`<Import>`)，用于指定 Microsoft 视觉对象的位置C++设置。
 
 - 属性组标记 (`<PropertyGroup>`)，指定项目设置。
 
 ### <a name="to-create-the-msbuild-project-file"></a>若要创建 MSBuild 项目文件
 
-1. 使用文本编辑器创建名为的项目文件`myproject.vcxproj`，然后添加以下根`<Project>`元素。 在以下过程步骤根目录之间中插入元素`<Project>`标记：
+1. 使用文本编辑器创建名为的项目文件`myproject.vcxproj`，然后添加以下根`<Project>`元素。 在以下过程步骤根目录之间中插入元素`<Project>`标记。 (使用 ToolsVersion ="应为 15.0"，如果您使用的 Visual Studio 2017。)
 
     ```xml
-    <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     </Project>
     ```
 
@@ -103,28 +101,28 @@ MSBuild 项目文件是一个包含项目根元素的 XML 文件 (`<Project>`)�
     </ItemGroup>
     ```
 
-1. 以下代码添加到`<Import>`元素，它指定此项目的默认 c + + 设置的路径：
+1. 添加以下`<Import>`元素，它指定的默认路径C++此项目的设置：
 
     ```xml
     <Import Project="$(VCTargetsPath)\Microsoft.Cpp.default.props" />
     ```
 
-1. 添加以下属性组元素 (`<PropertyGroup>`)，它指定两个项目属性：
+1. 添加以下属性组元素 (`<PropertyGroup>`)，它指定两个项目属性。 （使用 v141，如果您使用的 Visual Studio 2017）。
 
     ```xml
     <PropertyGroup>
       <ConfigurationType>Application</ConfigurationType>
-      <PlatformToolset>v141</PlatformToolset>
+      <PlatformToolset>v142</PlatformToolset>
     </PropertyGroup>
     ```
 
-1. 以下代码添加到`<Import>`元素，用于指定此项目的当前 c + + 设置的路径：
+1. 添加以下`<Import>`元素，用于指定当前路径C++此项目的设置：
 
     ```xml
     <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
     ```
 
-1. 添加以下`<ClCompile>`中的子元素`<ItemGroup>`元素。 子元素指定要编译的 C/c + + 源文件的名称：
+1. 添加以下`<ClCompile>`中的子元素`<ItemGroup>`元素。 子元素指定 C 的名称 /C++要编译源文件：
 
     ```xml
     <ItemGroup>
@@ -135,7 +133,7 @@ MSBuild 项目文件是一个包含项目根元素的 XML 文件 (`<Project>`)�
    > [!NOTE]
    > `<ClCompile>` 是*构建面向*中定义， **VCTargets**目录。
 
-1. 添加以下`<ClInclude>`中的子元素`<ItemGroup>`元素。 子元素指定 C/c + + 源代码文件的标头文件的名称：
+1. 添加以下`<ClInclude>`中的子元素`<ItemGroup>`元素。 子元素指定 C 标头文件的名称 /C++源文件：
 
     ```xml
     <ItemGroup>
@@ -151,10 +149,10 @@ MSBuild 项目文件是一个包含项目根元素的 XML 文件 (`<Project>`)�
 
 ### <a name="complete-project-file"></a>完整的项目文件
 
-下面的代码演示在上一过程中创建完整的项目文件。
+下面的代码演示在上一过程中创建完整的项目文件。 (使用 ToolsVersion ="15.0"用于 Visual Studio 2017。)
 
 ```xml
-<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -168,7 +166,7 @@ MSBuild 项目文件是一个包含项目根元素的 XML 文件 (`<Project>`)�
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.default.props" />
   <PropertyGroup>
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ItemGroup>
@@ -235,7 +233,7 @@ MSBuild，可执行预定义的生成的目标、 应用用户定义的属性，
 
 ### <a name="using-msbuild-with-the-64-bit-compiler-and-tools"></a>使用 MSBuild 的 64 位编译器和工具
 
-如果已在 64 位 Windows 上安装 Visual c + +，默认情况下，将安装 64 位 x64 本机和跨工具。 您可以将 MSBuild 配置为使用 64 位编译器和工具来生成应用程序通过设置`PreferredToolArchitecture`属性。 此属性不会影响项目配置或平台属性。 默认情况下，使用这些工具的 32 位版本。 若要指定的编译器和工具的 64 位版本，请将以下属性组元素添加到后的 Myproject.vcxproj 项目文件`Microsoft.Cpp.default.props`\<导入 / > 元素：
+如果默认情况下，已在 64 位 Windows 上安装 Visual Studio，安装 64 位 x64 本机和跨工具。 您可以将 MSBuild 配置为使用 64 位编译器和工具来生成应用程序通过设置`PreferredToolArchitecture`属性。 此属性不会影响项目配置或平台属性。 默认情况下，使用这些工具的 32 位版本。 若要指定的编译器和工具的 64 位版本，请将以下属性组元素添加到后的 Myproject.vcxproj 项目文件`Microsoft.Cpp.default.props`\<导入 / > 元素：
 
 ```xml
 <PropertyGroup>
@@ -249,7 +247,7 @@ MSBuild，可执行预定义的生成的目标、 应用用户定义的属性，
 
 ### <a name="using-msbuild-with-a-different-toolset"></a>将 MSBuild 用于不同的工具集
 
-如果你具有的工具集和其他版本的 Visual c + + 安装的库，MSBuild 可以生成有关最新 Visual c + + 版本或其他已安装版本的应用程序。 例如，如果你已安装 Visual Studio 2012 Visual c + + 11.0 工具集指定为 Windows XP 中，将以下属性组元素添加到后的 Myproject.vcxproj 项目文件`Microsoft.Cpp.props`\<导入 / > 元素：
+如果你有工具集和视觉对象的其他版本的库C++安装，MSBuild 可以构建应用程序为当前视觉对象C++版本或其他已安装版本。 例如，如果已安装 Visual Studio 2012 中，指定视觉对象C++11.0 工具集，用于 Windows XP 中，将以下属性组元素添加到后的 Myproject.vcxproj 项目文件`Microsoft.Cpp.props`\<导入 / > 元素：
 
 ```xml
 <PropertyGroup>
@@ -257,7 +255,7 @@ MSBuild，可执行预定义的生成的目标、 应用用户定义的属性，
 </PropertyGroup>
 ```
 
-若要重新生成你的项目的 Visual c + + 11.0 Windows XP 工具集，请键入以下命令：
+若要重新生成项目与视觉对象C++11.0 Windows XP 工具集，请键入以下命令：
 
 `msbuild myproject.vcxproj /p:PlatformToolset=v110_xp /t:rebuild`
 
@@ -265,8 +263,8 @@ MSBuild，可执行预定义的生成的目标、 应用用户定义的属性，
 
 MSBuild 提供了多种自定义生成过程。 以下主题说明如何向 MSBuild 项目中添加自定义生成步骤、 工具和事件：
 
-- [如何：向 MSBuild 项目添加自定义生成步骤](../build/how-to-add-a-custom-build-step-to-msbuild-projects.md)
+- [如何：向 MSBuild 项目添加自定义生成步骤](how-to-add-a-custom-build-step-to-msbuild-projects.md)
 
-- [如何：向 MSBuild 项目添加自定义生成工具](../build/how-to-add-custom-build-tools-to-msbuild-projects.md)
+- [如何：向 MSBuild 项目添加自定义生成工具](how-to-add-custom-build-tools-to-msbuild-projects.md)
 
-- [如何：在 MSBuild 项目中使用生成事件](../build/how-to-use-build-events-in-msbuild-projects.md)
+- [如何：在 MSBuild 项目中使用生成事件](how-to-use-build-events-in-msbuild-projects.md)

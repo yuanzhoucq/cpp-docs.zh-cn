@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetTipSide
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
-ms.openlocfilehash: 0179d69726f49f2df02979264da4966b35178434
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 4db27112daf65b2c3f477527cd7b4351b91d7f18
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62324410"
 ---
 # <a name="csliderctrl-class"></a>CSliderCtrl 类
 
@@ -801,7 +801,7 @@ void SetToolTips(CToolTipCtrl* pWndTip);
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 CMNCTRL2](../../visual-cpp-samples.md)<br/>
+[MFC 示例 CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CProgressCtrl 类](../../mfc/reference/cprogressctrl-class.md)

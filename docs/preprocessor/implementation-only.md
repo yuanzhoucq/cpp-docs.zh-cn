@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - implementation_only attribute
 ms.assetid: d8cabc86-4425-45a0-9587-d57536980088
-ms.openlocfilehash: 9bc083b78cd0c3bd39241de2815580c9eca6a207
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c1435ca74ac2b5a73c308592b1affe6fca097d1b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383943"
 ---
 # <a name="implementationonly"></a>implementation_only
-**C + + 专用**
+**C++特定**
 
 取消生成 .tlh 头文件（主要头文件）。
 
@@ -35,7 +35,7 @@ implementation_only
 > [!NOTE]
 > **Implementation_only**属性中某个`#import`语句必须是与另一种结合使用`#import`语句的相同类型库的具有`no_implementation`属性。 否则，将生成编译器错误。 这是因为生成的包装器类定义`#import`语句`no_implementation`编译生成的实现所需属性是**implementation_only**属性。
 
-**结束 c + + 专用**
+**结束C++特定**
 
 ## <a name="see-also"></a>请参阅
 

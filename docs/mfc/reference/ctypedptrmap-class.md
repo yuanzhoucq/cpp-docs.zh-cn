@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CTypedPtrMap [MFC], RemoveKey
 - CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
-ms.openlocfilehash: 05689001f8c385191057a8dc824a508189a43f05
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: bc164125f867cf3e2f27b74e69b826cbed31ff1d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323565"
 ---
 # <a name="ctypedptrmap-class"></a>CTypedPtrMap Class
 
@@ -62,7 +62,7 @@ class CTypedPtrMap : public BASE_CLASS
 
 ## <a name="remarks"></a>备注
 
-当你使用`CTypedPtrMap`，c + + 类型检查功能可帮助消除错误引起的不匹配的指针类型。
+当你使用`CTypedPtrMap`、C++类型检查的工具可帮助消除错误引起的不匹配的指针类型。
 
 因为所有`CTypedPtrMap`函数是内联的使用此模板不会严重影响的大小或代码的速度。
 
@@ -216,7 +216,7 @@ void SetAt(KEY key, VALUE newValue);
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例收集](../../visual-cpp-samples.md)<br/>
+[MFC 示例收集](../../overview/visual-cpp-samples.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CMapPtrToPtr 类](../../mfc/reference/cmapptrtoptr-class.md)<br/>
 [CMapPtrToWord 类](../../mfc/reference/cmapptrtoword-class.md)<br/>

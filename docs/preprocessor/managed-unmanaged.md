@@ -12,12 +12,12 @@ helpviewer_keywords:
 - pragmas, managed
 - unmanaged pragma
 ms.assetid: f072ddcc-e1ec-408a-8ce1-326ddb60e4a4
-ms.openlocfilehash: 0cc253ad7d0d4529340a13546f931075b0c7dfdc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7fa1e3274b85faa9f3f72f4db5bf586ee5d8e274
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409858"
 ---
 # <a name="managed-unmanaged"></a>managed、unmanaged
 启用函数级控制以将函数编译为托管或未托管函数。

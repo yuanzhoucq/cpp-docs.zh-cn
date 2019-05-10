@@ -6,15 +6,15 @@ helpviewer_keywords:
 - exception handling, x64
 ms.assetid: 41fecd2d-3717-4643-b21c-65dcd2f18c93
 ms.openlocfilehash: 7dab7f3b6593bf4eaed1b8c804deb915677ccf5b
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195200"
 ---
 # <a name="x64-exception-handling"></a>x64 异常处理
 
-结构化的异常处理和 c + + 异常处理的编码约定和行为在 x64 上的概述。 异常处理的常规信息，请参阅[Visual c + + 中的异常处理](../cpp/exception-handling-in-visual-cpp.md)。
+结构化的异常处理的概述和C++编码约定和行为在 x64 上的异常处理。 异常处理的常规信息，请参阅[视觉对象中的异常处理C++ ](../cpp/exception-handling-in-visual-cpp.md)。
 
 ## <a name="unwind-data-for-exception-handling-debugger-support"></a>展开的异常处理，调试器支持的数据
 
@@ -38,7 +38,7 @@ Runtime_function 结构结构必须对齐在内存中的 DWORD。 所有地址�
 
 |||
 |-|-|
-|UBYTE:3|版本|
+|UBYTE:3|Version|
 |UBYTE:5|Flags|
 |UBYTE|序言的大小|
 |UBYTE|展开代码的计数|

@@ -8,19 +8,19 @@ helpviewer_keywords:
 - data [MFC]
 - ODBC [C++], RFX
 ms.assetid: f5ddfbf0-2901-48d7-9848-4fb84de3c7ee
-ms.openlocfilehash: f612f4be726707681ffbddff88ccc6b8a672e427
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8630fab11728b0c0cd16eee5035df028a8382706
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395711"
 ---
 # <a name="record-field-exchange-rfx"></a>记录字段交换 (RFX)
 
 MFC ODBC 数据库类自动执行数据源之间移动数据和一个[记录集](../../data/odbc/recordset-odbc.md)对象。 当您从派生类[CRecordset](../../mfc/reference/crecordset-class.md)并且未使用批量行提取，数据传输的记录字段交换 (RFX) 机制。
 
 > [!NOTE]
->  如果已实现批量行提取在派生`CRecordset`类，框架将使用批量记录字段交换 (Bulk RFX) 机制将数据传输。 有关详细信息，请参阅[记录集： 提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+>  如果已实现批量行提取在派生`CRecordset`类，框架将使用批量记录字段交换 (Bulk RFX) 机制将数据传输。 有关详细信息，请参阅[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 RFX 是类似于对话框数据交换 (DDX)。 数据源和记录集的字段数据成员之间移动数据时，需要对记录集的多个调用[DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) framework 之间的函数和很大程度的交互和[ODBC](../../data/odbc/odbc-basics.md). RFX 机制是类型安全的将保存您的工作是调用 ODBC 函数如`::SQLBindCol`。 有关 DDX 的更多信息，请参阅 [对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。
 
@@ -28,13 +28,13 @@ RFX 主要是透明的。 如果您声明您使用 MFC 应用程序向导的记�
 
 根据需要，则必须手动添加在三种情况下，少量的 RFX 代码：
 
-- 使用参数化的查询。 有关详细信息，请参阅[记录集： 参数化记录集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)。
+- 使用参数化的查询。 有关详细信息，请参阅[记录集：参数化记录集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)。
 
-- 执行联接 （使用一个记录集适用于两个或多个表中的列）。 有关详细信息，请参阅[记录集： 执行联接 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)。
+- 执行联接 （使用一个记录集适用于两个或多个表中的列）。 有关详细信息，请参阅[记录集：执行联接 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)。
 
-- 动态绑定数据列。 这是不太常用于参数化。 有关详细信息，请参阅[记录集： 动态绑定数据列 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)。
+- 动态绑定数据列。 这是不太常用于参数化。 有关详细信息，请参阅[记录集：动态绑定数据列 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)。
 
-如果你需要一个更高级的 RFX 了解，请参阅[记录字段交换： RFX 的工作机制](../../data/odbc/record-field-exchange-how-rfx-works.md)。
+如果你需要一个更高级的 RFX 了解，请参阅[记录字段交换：RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
 
 以下主题介绍使用记录集对象的详细信息：
 
@@ -42,7 +42,7 @@ RFX 主要是透明的。 如果您声明您使用 MFC 应用程序向导的记�
 
 - [记录字段交换：使用 RFX 函数](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)
 
-- [记录字段交换：RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)
+- [记录字段交换：RFX 工作原理](../../data/odbc/record-field-exchange-how-rfx-works.md)
 
 ## <a name="see-also"></a>请参阅
 

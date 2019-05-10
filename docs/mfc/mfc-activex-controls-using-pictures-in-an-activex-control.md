@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CLSID_CPicturePropPage [MFC]
 ms.assetid: 2e49735c-21b9-4442-bb3d-c82ef258eec9
 ms.openlocfilehash: 86e9bd220d06e714030f7d44888b210ba35fd345
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62239287"
 ---
 # <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>MFC ActiveX 控件：在 ActiveX 控件中使用图片
 
@@ -45,7 +45,7 @@ ActiveX 控件类提供了若干组件，可用于在控件内实现图片属性
 
 - 属性页用于操作控件的一个或多个图片属性。
 
-   此属性页是 ActiveX 控件可以使用的一组常用属性页的一部分。 ActiveX 控件属性页的详细信息，请参阅文章[MFC ActiveX 控件：使用常用属性页](../mfc/mfc-activex-controls-using-stock-property-pages.md)
+   此属性页是 ActiveX 控件可以使用的一组常用属性页的一部分。 ActiveX 控件属性页的详细信息，请参阅文章[MFC ActiveX 控件：使用内置属性页](../mfc/mfc-activex-controls-using-stock-property-pages.md)
 
 ##  <a name="_core_implementing_a_custom_picture_property_in_your_activex_control"></a> 在 ActiveX 控件中实现自定义图片属性
 

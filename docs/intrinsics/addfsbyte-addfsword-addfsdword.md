@@ -13,12 +13,12 @@ helpviewer_keywords:
 - __addfsword intrinsic
 - __addfsbyte intrinsic
 ms.assetid: 706c70df-6b52-4401-9268-2977ed8ad715
-ms.openlocfilehash: 477d8ddfe970c6d04e61a47eb4bb10e3fbc570de
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 61053d9f8c56d8352b12ed535dfa870c0856f558
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62264473"
 ---
 # <a name="addfsbyte-addfsword-addfsdword"></a>__addfsbyte, __addfsword, __addfsdword
 
@@ -45,7 +45,7 @@ void __addfsdword(
 
 #### <a name="parameters"></a>参数
 
-*偏移量*<br/>
+*Offset*<br/>
 [in]从开始处的偏移量`FS`。
 
 *Data*<br/>

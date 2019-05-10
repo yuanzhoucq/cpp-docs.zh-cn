@@ -13,11 +13,11 @@ helpviewer_keywords:
 - hierarchy, operator
 ms.assetid: 95c1f0ba-dad8-4034-b039-f79a904f112f
 ms.openlocfilehash: 0b560913deb57393a8547f0831e0d987eed41ab7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392344"
 ---
 # <a name="c-built-in-operators-precedence-and-associativity"></a>C++ 内置运算符、 优先级和关联性
 
@@ -50,11 +50,11 @@ C++ 语言包括所有 C 运算符并添加多个新的运算符。 运算符指
 |[逻辑非](../cpp/logical-negation-operator-exclpt.md)|[\!](../cpp/logical-negation-operator-exclpt.md)|
 |[一元求反](../cpp/unary-plus-and-negation-operators-plus-and.md)|[-](../cpp/unary-plus-and-negation-operators-plus-and.md)|
 |[一元加](../cpp/unary-plus-and-negation-operators-plus-and.md)|[+](../cpp/unary-plus-and-negation-operators-plus-and.md)|
-|[地址的](../cpp/address-of-operator-amp.md)|[&amp;](../cpp/address-of-operator-amp.md)|
+|[Address-of](../cpp/address-of-operator-amp.md)|[&amp;](../cpp/address-of-operator-amp.md)|
 |[间接寻址](../cpp/indirection-operator-star.md)|[&#42;](../cpp/indirection-operator-star.md)|
 |[创建对象](../cpp/new-operator-cpp.md)|[new](../cpp/new-operator-cpp.md)|
 |[销毁对象](../cpp/delete-operator-cpp.md)|[delete](../cpp/delete-operator-cpp.md)|
-|[强制转换](../cpp/cast-operator-parens.md)|[()](../cpp/cast-operator-parens.md)|
+|[Cast](../cpp/cast-operator-parens.md)|[()](../cpp/cast-operator-parens.md)|
 |**组 4 优先顺序，从左到右的关联性**|
 |[指针到成员 （对象或指针）](../cpp/pointer-to-member-operators-dot-star-and-star.md)|[.&#42;或->&#42;](../cpp/pointer-to-member-operators-dot-star-and-star.md)|
 |**组 5 优先顺序，从左到右的关联性**|
@@ -86,7 +86,7 @@ C++ 语言包括所有 C 运算符并添加多个新的运算符。 运算符指
 |**组 14 优先顺序，从左到右的关联性**|
 |[逻辑“或”](../cpp/logical-or-operator-pipe-pipe.md)|[&#124;&#124;](../cpp/logical-or-operator-pipe-pipe.md)|
 |**组 15 优先顺序，从右到左的关联性**|
-|[条件](../cpp/conditional-operator-q.md)|[? :](../cpp/conditional-operator-q.md)|
+|[Conditional](../cpp/conditional-operator-q.md)|[? :](../cpp/conditional-operator-q.md)|
 |**组 16 优先顺序，从右到左的关联性**|
 |[赋值](../cpp/assignment-operators.md)|[=](../cpp/assignment-operators.md)|
 |[乘法赋值](../cpp/assignment-operators.md)|[&#42;=](../cpp/assignment-operators.md)|

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4486
 ms.assetid: 2c0c59e3-d025-4d97-8da2-fa27df1402fc
-ms.openlocfilehash: b6e1fc7001908202efc2fb0ef3653153c007eac0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 402d5eefde6c2dfd5693e53c27edb00d1ac2e56c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404060"
 ---
 # <a name="compiler-warning-level-1-c4486"></a>编译器警告（等级 1）C4486
 
 function: ref 类或值类的私有虚方法应标记为 sealed
 
-由于无法访问或重写的托管的类或结构的私有虚拟成员函数，它应标记[密封](../../windows/sealed-cpp-component-extensions.md)。
+由于无法访问或重写的托管的类或结构的私有虚拟成员函数，它应标记[密封](../../extensions/sealed-cpp-component-extensions.md)。
 
 ## <a name="example"></a>示例
 

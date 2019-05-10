@@ -3,16 +3,16 @@ title: 在 Visual Studio 中部署、运行和调试 C++ Linux 项目
 description: 介绍如何从 Visual Studio 中的 C++ Linux 项目内针对远程目标编译、执行和调试代码。
 ms.date: 09/12/2018
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: 413f0b089b3b1398093073bcd6f49358143121c8
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: cdafb064f8a6269c5ccae938e280b5f47bff3b00
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328391"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562882"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>部署、运行和调试 Linux 项目
 
-在 Visual Studio 中创建 Linux C++ 项目，并使用 [Linux 连接管理器](../linux/connect-to-your-remote-linux-computer.md)连接到该项目，即可运行和调试该项目。 在远程目标上编译、执行和调试代码。
+在 Visual Studio 中创建 Linux C++ 项目，并使用 [Linux 连接管理器](connect-to-your-remote-linux-computer.md)连接到该项目，即可运行和调试该项目。 在远程目标上编译、执行和调试代码。
 
 与 Linux 项目交互并对其进行调试方法有若干种。
 
@@ -24,16 +24,16 @@ ms.locfileid: "51328391"
 
 1. 在“调试”属性页中选择调试模式。
 
-   GDB 用于调试在 Linux 上运行的应用程序。  但是，能以两种不同的模式运行，可从项目“**调试**”属性页中的“**调试模式**”选项中进行选择：
+   GDB 用于调试在 Linux 上运行的应用程序。 GDB 能以两种不同的模式运行，可从项目“调试”属性页中的“调试模式”选项中进行选择：
 
    ![GDB 选项](media/settings_debugger.png)
 
-   - 在“gdbserver”模式中，GDB 在本地运行，连接到在远程系统上运行的 gdbserver。  请注意，这是 Linux 控制台窗口唯一支持的模式。
+   - 在 gdbserver 模式下，GDB 在本地运行，连接到在远程系统上的 gdbserver。  请注意，这是 Linux 控制台窗口唯一支持的模式。
 
-   - 在“gdb”模式中，Visual Studio 调试器驱动远程系统上的 GDB，如果 GDB 的本地版本与目标计算机上安装的版本不兼容，则远程系统上的 GDB 更易兼容。 |
+   - 在 gdb 模式下，Visual Studio 调试程序在远程系统上驱动 GDB。 如果本地 GDB 版本与目标计算机上安装的版本不兼容，建议选择此选项。 |
 
    > [!NOTE]
-   > 如果不能在 gdbserver 调试模式中命中断点，请尝试 gdb 模式。 必须先将 gdb [安装](../linux/download-install-and-setup-the-linux-development-workload.md)在远程目标上。
+   > 如果不能在 gdbserver 调试模式中命中断点，请尝试 gdb 模式。 必须先将 gdb [安装](download-install-and-setup-the-linux-development-workload.md)在远程目标上。
 
 1. 使用 Visual Studio 中的标准“调试”工作栏，选择远程目标。
 
@@ -41,7 +41,7 @@ ms.locfileid: "51328391"
 
    ![远程目标](media/remote_target.png)
 
-   如果还未连接到远程目标，将会看见使用 [Linux 连接管理器](../linux/connect-to-your-remote-linux-computer.md)连接到远程目标的说明。
+   如果还未连接到远程目标，将会看见使用 [Linux 连接管理器](connect-to-your-remote-linux-computer.md)连接到远程目标的说明。
 
    ![远程体系结构](media/architecture.png)
 
@@ -57,7 +57,7 @@ ms.locfileid: "51328391"
 
    ![命中断点](media/hit_breakpoint.png)
 
-   现在，可以通过按命令键（如 F10 或 F11），与处于当前状态的应用程序交互、查看变量以及逐行执行代码。
+   现在，可通过按命令键（如 F10 或 F11），与处于当前状态的应用程序交互、查看变量以及逐行执行代码。
 
 1. 如果需要使用 Linux 控制台与应用进行交互，请选择“调试”>“Linux 控制台”。
 
@@ -69,7 +69,7 @@ ms.locfileid: "51328391"
 
 ## <a name="configure-other-debugging-options"></a>配置其他调试选项
 
-- 可以使用项目“**调试**”属性页中的“**程序参数**”项将命令行参数传递给可执行文件。
+- 可以使用项目“调试”属性页中的“程序参数”项将命令行参数传递给可执行文件。
 
    ![程序参数](media/settings_programarguments.png)
 
@@ -79,10 +79,10 @@ ms.locfileid: "51328391"
 
 ## <a name="next-steps"></a>后续步骤
 
-- 若要在 Linux 上调试 ARM 设备，请参阅此博客文章：[Debugging an embedded ARM device in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/)（在 Visual Studio 中调试嵌入的 ARM 设备）。
+- 要在 Linux 上调试 ARM 设备，请参阅此博客文章：[在 Visual Studio 中调试嵌入式 ARM 设备](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/)。
 
-- 若要使用 **Attach to Process** 命令进行调试，请参阅以下博客文章：[Linux C++ Workload improvements to the Project System, Linux Console Window, rsync and Attach to Process](https://blogs.msdn.microsoft.com/vcblog/2018/03/13/linux-c-workload-improvements-to-the-project-system-linux-console-window-rsync-and-attach-to-process/)（Linux C++ 工作负载对 Project System、Linux Console Window、rsync 和 Attach to Process 的改进）。
+- 要使用“附加到进程”命令进行调试，请参阅此博客文章：[Linux 项目系统，Linux 控制台窗口，同步和附加到进程的 Linux C ++ 工作负载改进](https://blogs.msdn.microsoft.com/vcblog/2018/03/13/linux-c-workload-improvements-to-the-project-system-linux-console-window-rsync-and-attach-to-process/)。
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 调试属性 (Linux C++)](../linux/prop-pages/debugging-linux.md)
+[C++ 调试属性 (Linux C++)](prop-pages/debugging-linux.md)

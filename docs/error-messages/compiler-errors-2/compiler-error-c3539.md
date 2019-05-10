@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3539
 ms.assetid: 34a33a0f-d1b6-498f-b312-ffad2d4799b3
-ms.openlocfilehash: 7cba9e0271d16420c5cfe4adbed2c7121d139d8f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be1051859ebbcbdc22a9b71f8c5adba2e75c4e92
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523905"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64344659"
 ---
 # <a name="compiler-error-c3539"></a>编译器错误 C3539
 

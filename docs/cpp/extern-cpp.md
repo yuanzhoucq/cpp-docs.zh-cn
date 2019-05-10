@@ -1,5 +1,5 @@
 ---
-title: extern （c + +）
+title: extern (C++)
 ms.date: 04/12/2018
 f1_keywords:
 - extern
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - external linkage, extern modifier
 ms.assetid: 1e2f0ae3-ae98-4410-85b5-222d6abc865a
 ms.openlocfilehash: 4a3a4e158794e06f28c638e87e014ddc3fb99837
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183734"
 ---
-# <a name="extern-c"></a>extern （c + +）
+# <a name="extern-c"></a>extern (C++)
 
 **Extern**关键字应用于全局变量、 函数或模板声明来指定该操作的名称具有*外部链接*。 链接和为何使用全局变量，建议不要使用的背景信息，请参阅[程序和链接](program-and-linkage-cpp.md)。
 
@@ -72,11 +72,11 @@ extern constexpr int x = 10; //error LNK2005: "int const x" already defined
 extern constexpr __declspec(selectany) int x = 10;
 ```
 
-## <a name="extern-c-and-extern-c-function-declarations"></a>extern"C"和 extern"c + +"函数声明
+## <a name="extern-c-and-extern-c-function-declarations"></a>extern"C"和 extern"C++"函数声明
 
-在 c + +，与字符串一起使用时**extern**指定另一种语言的链接约定，所用的声明符。 仅在之前被声明为具有 C 链接的情况下，才能访问 C 函数和数据。 但是，必须在单独编译的翻译单元中定义它们。
+在C++，与字符串一起使用时**extern**指定另一种语言的链接约定，所用的声明符。 仅在之前被声明为具有 C 链接的情况下，才能访问 C 函数和数据。 但是，必须在单独编译的翻译单元中定义它们。
 
-Microsoft C++ 支持字符串 **"C"** 和 **"C++"** 中*字符串文本*字段。 所有标准包含文件都使用**extern** "C"语法以允许要在 c + + 程序中使用的运行时库函数。
+Microsoft C++ 支持字符串 **"C"** 和 **"C++"** 中*字符串文本*字段。 所有标准包含文件都使用**extern** "C"语法以允许运行时库函数中使用C++程序。
 
 ## <a name="example"></a>示例
 

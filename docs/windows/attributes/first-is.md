@@ -1,17 +1,17 @@
 ---
-title: first_is （c + + COM 属性）
+title: first_is (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.first_is
 helpviewer_keywords:
 - first_is attribute
 ms.assetid: 89acbf56-3b38-4d44-83e8-1ce2f6f74ffd
-ms.openlocfilehash: fcabad8d6c512a84e44f050cd5b34d985d687636
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 79ddcb3a3ca256af4c7c30536d65c820dcef2afe
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409598"
 ---
 # <a name="firstis"></a>first_is
 
@@ -25,12 +25,12 @@ ms.locfileid: "50512790"
 
 ### <a name="parameters"></a>参数
 
-*表达式*<br/>
+*expression*<br/>
 一个或多个 C 语言表达式。 允许使用空参数槽。
 
 ## <a name="remarks"></a>备注
 
-**First_is** c + + 属性具有相同的功能[first_is](/windows/desktop/Midl/first-is) MIDL 特性。
+**First_is** C++属性具有相同的功能[first_is](/windows/desktop/Midl/first-is) MIDL 特性。
 
 ## <a name="example"></a>示例
 
@@ -64,8 +64,8 @@ requestedit] HRESULT get_I([out, retval]long *i);
 |-|-|
 |**适用对象**|中的字段**struct**或**union**，接口参数，接口方法|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

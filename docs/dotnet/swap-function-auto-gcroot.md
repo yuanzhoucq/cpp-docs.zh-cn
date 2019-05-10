@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - swap function
 ms.assetid: 2fe8146b-a7f7-445a-9ae9-53b5556be701
-ms.openlocfilehash: 084749bc92491593995904b6707ca94f6545981f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7ed4e3f946f314819e6c562d489050182a975b7b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384538"
 ---
 # <a name="swap-function-autogcroot"></a>swap 函数 (auto_gcroot)
 
@@ -31,10 +31,10 @@ void swap(
 
 #### <a name="parameters"></a>参数
 
-*_ 左*<br/>
+*_left*<br/>
 一个 `auto_gcroot`。
 
-*（_r)*<br/>
+*_right*<br/>
 另一个`auto_gcroot`。
 
 ## <a name="example"></a>示例

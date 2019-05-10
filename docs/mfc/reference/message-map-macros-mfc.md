@@ -1,6 +1,6 @@
 ---
 title: 消息映射宏 (MFC)
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - AFXWIN/DECLARE_MESSAGE_MAP
 - AFXWIN/BEGIN_MESSAGE_MAP
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - ranges, message map
 - message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
-ms.openlocfilehash: 09c023f6dcbf1fd33a0caac17af75f449d80c509
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: b1cc721ed994ae1c6704011199ac635ee462ded8
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412821"
 ---
 # <a name="message-map-macros-mfc"></a>消息映射宏 (MFC)
 
@@ -45,7 +45,7 @@ ms.locfileid: "55850267"
 |-|-|
 |[DECLARE_MESSAGE_MAP](#declare_message_map)|声明将在类中使用消息映射来将消息映射到函数（必须在类声明中使用）。|
 |[BEGIN_MESSAGE_MAP](#begin_message_map)|开始消息映射的定义（必须在类实现中使用）。|
-|[BEGIN_TEMPLATE_MESSAGE_MAP](#begin_template_interface_map)|开始消息映射包含单个模板参数的类类型的定义。 |
+|[BEGIN_TEMPLATE_MESSAGE_MAP](#begin_template_message_map)|开始消息映射包含单个模板参数的类类型的定义。 |
 |[END_MESSAGE_MAP](#end_message_map)|结束消息映射的定义（必须在类实现中使用）。|
 
 ### <a name="message-mapping-macros"></a>消息映射宏
@@ -67,7 +67,7 @@ ms.locfileid: "55850267"
 |||
 |-|-|
 |[ON_COMMAND_RANGE](#on_command_range)|指示哪个函数将处理在宏的前两个参数中指定的命令 ID 的范围。|
-|[ON_UPDATE_COMMAND_UI_RANGE](#on_update_command_ui_range)|指示哪个更新处理程序将处理命令中指定的 Id 的前两个 pa 范围] rameters 在宏。|
+|[ON_UPDATE_COMMAND_UI_RANGE](#on_update_command_ui_range)|指示哪个更新处理程序将处理在宏的前两个参数中指定的命令 ID 的范围。|
 |[ON_CONTROL_RANGE](#on_control_range)|指示哪个函数将处理来自在宏的第二个和第三个参数中指定的控件 ID 的范围的通知。 第一个参数是控件通知消息，如 BN_CLICKED。|
 
 消息映射、 消息映射声明和分界宏和消息映射宏的详细信息，请参阅[消息映射](../../mfc/reference/message-maps-mfc.md)并[消息处理和映射主题](../../mfc/message-handling-and-mapping.md)。 有关消息映射范围的详细信息，请参阅[消息映射范围的处理程序](../../mfc/handlers-for-message-map-ranges.md)。
@@ -108,7 +108,7 @@ END_MESSAGE_MAP()
 
 **标头:** afxwin.h
 
-##  <a name="begin_template_message_map"></a>BEGIN_TEMPLATE_MESSAGE_MAP
+## <a name="begintemplatemessagemap"></a>BEGIN_TEMPLATE_MESSAGE_MAP
 
 开始消息映射包含单个模板参数的类类型的定义。
 
@@ -199,12 +199,12 @@ END_MESSAGE_MAP( )
 ### <a name="syntax"></a>语法
 
 ```
-ON_COMMAND( id, memberFxn )
+ON_COMMAND( commandId, memberFxn )
 ```
 
 ### <a name="parameters"></a>参数
 
-*id*<br/>
+*commandId*<br/>
 命令 ID。
 
 *memberFxn*<br/>
@@ -216,7 +216,7 @@ ON_COMMAND( id, memberFxn )
 
 ON_COMMAND 当命令目标对象收到具有指定 ID 的 Windows WM_COMMAND 消息时，将调用成员函数`memberFxn`以处理消息。
 
-使用 ON_COMMAND 将映射到的成员函数的单个命令。 使用[ON_COMMAND_RANGE](#on_command_range)来将一系列命令 id 映射到一个成员函数。 只有一个消息映射条目可以与给定的命令 id 匹配。也就是说，不能将命令映射到多个处理程序。 有关详细信息和示例，请参阅[消息处理和映射主题](../../mfc/message-handling-and-mapping.md)。
+使用 ON_COMMAND 将映射到的成员函数的单个命令。 使用[ON_COMMAND_RANGE](#on_command_range)来将一系列命令 Id 映射到一个成员函数。 只有一个消息映射条目可以匹配给定的命令 id。 也就是说，不能将命令映射到多个处理程序。 有关详细信息和示例，请参阅[消息处理和映射主题](../../mfc/message-handling-and-mapping.md)。
 
 ### <a name="example"></a>示例
 
@@ -237,12 +237,12 @@ END_MESSAGE_MAP()
 ### <a name="syntax"></a>语法
 
 ```
-ON_COMMAND_EX(id, memberFxn);
+ON_COMMAND_EX(commandId, memberFxn);
 ```
 
 ### <a name="parameters"></a>参数
 
-*id*<br/>
+*commandId*<br/>
 命令 ID。
 
 *memberFxn*<br/>
@@ -265,7 +265,7 @@ ON_COMMAND_EX(id, memberFxn);
 ### <a name="syntax"></a>语法
 
 ```
-ON_CONTROL( wNotifyCode, id, memberFxn )
+ON_CONTROL( wNotifyCode, commandId, memberFxn )
 ```
 
 ### <a name="parameters"></a>参数
@@ -273,7 +273,7 @@ ON_CONTROL( wNotifyCode, id, memberFxn )
 *wNotifyCode*<br/>
 控件通知代码。
 
-*id*<br/>
+*commandId*<br/>
 命令 ID。
 
 *memberFxn*<br/>
@@ -356,7 +356,7 @@ LRESULT CMyWnd2::OnMyMessage(WPARAM wParam, LPARAM lParam)
 ### <a name="syntax"></a>语法
 
 ```
-ON_OLECMD( pguid, olecmdid, id )
+ON_OLECMD( pguid, olecmdid, commandId )
 ```
 
 ### <a name="parameters"></a>参数
@@ -367,7 +367,7 @@ ON_OLECMD( pguid, olecmdid, id )
 *olecmdid*<br/>
 OLE 命令的标识符。
 
-*id*<br/>
+*commandId*<br/>
 菜单 ID、 工具栏 ID、 按钮 ID 或其他资源或发出命令的对象的 ID。
 
 ### <a name="remarks"></a>备注
@@ -575,12 +575,12 @@ ON_THREAD_MESSAGE( message, memberFxn )
 ### <a name="syntax"></a>语法
 
 ```
-ON_UPDATE_COMMAND_UI( id, memberFxn )
+ON_UPDATE_COMMAND_UI( messageId, memberFxn )
 ```
 
 ### <a name="parameters"></a>参数
 
-*id*<br/>
+*messageId*<br/>
 消息 ID。
 
 *memberFxn*<br/>
@@ -721,7 +721,7 @@ Id 范围开头*id1*结尾*id2*。 指定来自任何映射控件的通知将为
 ## <a name="see-also"></a>请参阅
 
 [ON_COMMAND](message-map-macros-mfc.md#on_command)<br/>
-[TN006:消息映射](../tn006-message-maps.md)<br/>
+[TN006：消息映射](../tn006-message-maps.md)<br/>
 [COleCmdUI 类](colecmdui-class.md)<br/>
 [COleServerDoc::OnExecOleCmd](coleserverdoc-class.md#onexecolecmd)<br/>
 [RegisterWindowMessage](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea)<br/>

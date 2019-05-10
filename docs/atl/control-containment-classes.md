@@ -2,17 +2,15 @@
 title: 控件包含类 (ATL)
 ms.date: 11/04/2016
 ms.topic: reference
-f1_keywords:
-- vc.atl.controls.containment
 helpviewer_keywords:
 - control containment classes
 ms.assetid: e0812aee-c078-4ced-b967-247976552b9a
-ms.openlocfilehash: b08bf2ea4c0098a723e5864a59ed22855207208b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d70f6b6a432626e7b73989d8f34ecee094560b42
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62235085"
 ---
 # <a name="control-containment-classes"></a>控件包含类
 

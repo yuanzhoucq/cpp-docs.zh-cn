@@ -7,12 +7,12 @@ helpviewer_keywords:
 - module definition files, statement syntax
 - module definition files
 ms.assetid: f65cd3a7-65d7-4d06-939f-a8b1ecd50f2d
-ms.openlocfilehash: 6d6528b81777711e52153e19a656619a2895b0d6
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f6269ad2d5bf3952e485f2ca5e5d1f411c5f1e0c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62318506"
 ---
 # <a name="rules-for-module-definition-statements"></a>模块定义语句的规则
 
@@ -34,8 +34,8 @@ ms.locfileid: "57424751"
 
 - 数值参数是指定十进制或十六进制。
 
-- 如果字符串自变量与匹配[保留字](../../build/reference/reserved-words.md)，它必须括在双引号 （"）。
+- 如果字符串自变量与匹配[保留字](reserved-words.md)，它必须括在双引号 （"）。
 
 ## <a name="see-also"></a>请参阅
 
-[模块定义 (.Def) 文件](../../build/reference/module-definition-dot-def-files.md)
+[模块定义 (.Def) 文件](module-definition-dot-def-files.md)

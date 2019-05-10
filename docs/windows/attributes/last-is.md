@@ -1,17 +1,17 @@
 ---
-title: last_is （c + + COM 属性）
+title: last_is (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.last_is
 helpviewer_keywords:
 - last_is attribute
 ms.assetid: 9e045ac0-fa38-4249-af55-67bde5d0a58c
-ms.openlocfilehash: ce19d8d727a359054289200b2cdcb6a6427dc706
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39b35b218f3402839d956c4da0a00f290fe5d595
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409416"
 ---
 # <a name="lastis"></a>last_is
 
@@ -25,12 +25,12 @@ ms.locfileid: "50545712"
 
 ### <a name="parameters"></a>参数
 
-*表达式*<br/>
+*expression*<br/>
 一个或多个 C 语言表达式。 允许使用空参数槽。
 
 ## <a name="remarks"></a>备注
 
-**Last_is** c + + 属性具有相同的功能[last_is](/windows/desktop/Midl/last-is) MIDL 特性。
+**Last_is** C++属性具有相同的功能[last_is](/windows/desktop/Midl/last-is) MIDL 特性。
 
 ## <a name="example"></a>示例
 
@@ -44,8 +44,8 @@ ms.locfileid: "50545712"
 |-|-|
 |**适用对象**|中的字段**struct**或**union**，接口参数，接口方法|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

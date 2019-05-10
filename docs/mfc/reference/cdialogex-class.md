@@ -13,16 +13,15 @@ helpviewer_keywords:
 - CDialogEx [MFC], SetBackgroundImage
 ms.assetid: a6ed3b1f-aef8-4b66-ac78-2160faf63c13
 ms.openlocfilehash: f92058d1aa0dabccf6623d20a248fed8eb99ab26
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62168045"
 ---
 # <a name="cdialogex-class"></a>CDialogEx 类
 
-
-  `CDialogEx`类指定对话框的背景色和背景图像。
+`CDialogEx`类指定对话框的背景色和背景图像。
 
 ## <a name="syntax"></a>语法
 

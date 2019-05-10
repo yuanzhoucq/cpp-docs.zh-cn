@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __stosw intrinsic
 - rep stosw instruction
 ms.assetid: 7620fd1d-dba5-40e3-8e07-01aa68895133
-ms.openlocfilehash: 4bfdf2191a4bf88ce6d061e1729e194236564330
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c203973a79c2c3b1094ad8a5351db0999a56bf19
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62390290"
 ---
 # <a name="stosw"></a>__stosw
 

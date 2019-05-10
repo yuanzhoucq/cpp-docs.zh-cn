@@ -8,16 +8,16 @@ helpviewer_keywords:
 - /clr compiler option [C++], double thunking
 - interoperability [C++], double thunking
 ms.assetid: a85090b2-dc3c-498a-b40c-340db229dd6f
-ms.openlocfilehash: dc36679a9457939bb5fb110219b2ddfbf05c643e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f34af20ed3dd2c48659bdbf7794c443920dbb4e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404476"
 ---
 # <a name="double-thunking-c"></a>双重 Thunk (C++)
 
-双重形式转换是指可以体验中托管的上下文调用 Visual c + + 托管函数和程序执行的函数调用调用托管的函数调用函数的本机入口点时的性能降低。 本主题介绍了双重形式出现的位置和如何避免以提高性能。
+双重形式转换是指你可能会遇到函数调用托管上下文中的调用一个视觉对象时的性能降低C++托管的函数和程序执行调用托管的函数调用函数的本机入口点的位置。 本主题介绍了双重形式出现的位置和如何避免以提高性能。
 
 ## <a name="remarks"></a>备注
 
@@ -27,7 +27,7 @@ ms.locfileid: "50546401"
 
 同样，如果导出 ([dllexport、 dllimport](../cpp/dllexport-dllimport.md)) 托管的函数，生成一个本机入口点和任何函数导入，并调用该函数将调用通过本机入口点。 若要避免双重形式转换在此情况下，不要使用本机导出/导入语义;只需引用通过元数据`#using`(请参阅[#using 指令](../preprocessor/hash-using-directive-cpp.md))。
 
-编译器已更新，以减少不必要的双重形式转换。 例如，使用托管类型 （包括返回类型） 的签名中的任何函数会隐式标记为`__clrcall`。 双精度的转换 （thunk） 消除的详细信息，请参阅[ https://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx ](https://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx)。
+编译器已更新，以减少不必要的双重形式转换。 例如，使用托管类型 （包括返回类型） 的签名中的任何函数会隐式标记为`__clrcall`。
 
 ## <a name="example"></a>示例
 

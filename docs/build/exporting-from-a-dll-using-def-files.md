@@ -1,17 +1,17 @@
 ---
 title: 使用 DEF 文件从 DLL 导出
-ms.date: 01/09/2018
+ms.date: 05/06/2019
 helpviewer_keywords:
 - def files [C++], exporting from DLLs
 - .def files [C++], exporting from DLLs
 - exporting DLLs [C++], DEF files
 ms.assetid: 9d31eda2-184e-47de-a2ee-a93ebd603f8e
-ms.openlocfilehash: bed47c2c69b154c6bab996299eaeb4173c8298f3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
-ms.translationtype: MT
+ms.openlocfilehash: 92a140c6491e9e3f0d356509862dee39ebe3fae6
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416544"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220780"
 ---
 # <a name="exporting-from-a-dll-using-def-files"></a>使用 DEF 文件从 DLL 导出
 
@@ -21,7 +21,7 @@ ms.locfileid: "57416544"
 
 - 在文件中的第一个语句必须是 LIBRARY 语句。 此语句将 DEF 文件标识为属于 DLL。 LIBRARY 语句后跟的 DLL 的名称。 链接器将此名称放在 DLL 的导入库中。
 
-- EXPORTS 语句列出名称和 DLL 导出的函数的序号值 （可选）。 按照函数的名称加上分配函数的序号值 at 符号 (@) 和一个数字。 当指定序号值时，它们必须是介于 1 到 N，其中 N 是 DLL 导出函数的数目。 如果你想要按序号导出函数，请参阅[从按序号而不是按名称的 DLL 导出函数](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)以及本主题。
+- EXPORTS 语句列出名称和 DLL 导出的函数的序号值 （可选）。 按照函数的名称加上分配函数的序号值 at 符号 (@) 和一个数字。 当指定序号值时，它们必须是介于 1 到 N，其中 N 是 DLL 导出函数的数目。 如果你想要按序号导出函数，请参阅[从按序号而不是按名称的 DLL 导出函数](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)以及本主题。
 
 例如，包含用于实现二进制搜索树的代码的 DLL 可能看上去如下所示：
 
@@ -36,7 +36,10 @@ EXPORTS
 
 如果您使用[MFC DLL 向导](../mfc/reference/mfc-dll-wizard.md)若要创建非 MFC DLL，该向导将为您创建主干 DEF 文件并自动将其添加到你的项目。 添加到此文件导出的函数的名称。 对于非 MFC Dll，自行创建 DEF 文件，并将其添加到你的项目。 然后转到**项目** > **属性** > **链接器** > **输入** > **模块定义文件**并输入 DEF 文件的名称。 重复此步骤为每个配置和平台，或通过选择一次性执行其操作**配置 = 所有配置**，并**平台都 = 所有平台**。
 
-如果导出 c + + 文件中的函数，您必须将修饰的名放在 DEF 文件或使用 extern"C"定义具有标准 C 链接的导出的函数。 如果你需要将修饰的名放在 DEF 文件中，你可以通过使用获取它们[DUMPBIN](../build/reference/dumpbin-reference.md)工具或通过使用链接器[/map](../build/reference/map-generate-mapfile.md)选项。 请注意，由编译器产生的修饰的名特定的编译器。 如果您将放到 DEF 文件由 Visual c + + 编译器产生的修饰的名，也必须使用相同版本的 Visual c + +，以便调用应用程序中的修饰的名与 DLL 的 DEF f 中的导出的名相匹配生成链接到 DLL 的应用程序ile。
+如果要导出中的函数C++文件中，您必须将修饰的名放在 DEF 文件或使用 extern"C"定义具有标准 C 链接的导出的函数。 如果你需要将修饰的名放在 DEF 文件中，你可以通过使用获取它们[DUMPBIN](../build/reference/dumpbin-reference.md)工具或通过使用链接器[/map](../build/reference/map-generate-mapfile.md)选项。 请注意，由编译器产生的修饰的名特定的编译器。 如果由 Microsoft 将修饰的名放C++编译器 (MSVC) 到 DEF 文件链接到 DLL 的应用程序也必须生成，以便调用应用程序中的修饰的名匹配的导出的名中使用相同版本的 MSVCDLL 的 DEF 文件。 
+
+> [!NOTE]
+> 使用 Visual Studio 2015 生成的 DLL 可供使用 Visual Studio 2017 或 Visual Studio 2019 生成应用程序。
 
 如果您正在构建[扩展 DLL](../build/extension-dlls-overview.md)，并导出使用 DEF 文件，将以下代码放在开头和末尾包含导出的类的头文件：
 
@@ -56,32 +59,32 @@ EXPORTS
 
 ## <a name="what-do-you-want-to-do"></a>你希望做什么？
 
-- [使用 __declspec （dllexport） 从 DLL 导出](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [使用 __declspec （dllexport） 从 DLL 导出](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [导出和导入使用 AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)
+- [导出和导入使用 AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [导出 c + + 函数以用于 C 语言可执行文件](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [导出C++函数以用于 C 语言可执行文件](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [导出 C 函数以用于 C 或 c + + 语言可执行文件](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [导出 C 函数以用于 C 或C++-语言可执行文件](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [确定要使用的导出方法](../build/determining-which-exporting-method-to-use.md)
+- [确定要使用的导出方法](determining-which-exporting-method-to-use.md)
 
-- [导入到使用 __declspec （dllimport） 的应用程序](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [使用 __declspec(dllimport) 导入到应用程序中](importing-into-an-application-using-declspec-dllimport.md)
 
-- [初始化 DLL](../build/run-time-library-behavior.md#initializing-a-dll)
+- [初始化 DLL](run-time-library-behavior.md#initializing-a-dll)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？
 
-- [.def 文件](../build/reference/module-definition-dot-def-files.md)
+- [.def 文件](reference/module-definition-dot-def-files.md)
 
-- [模块定义语句的规则](../build/reference/rules-for-module-definition-statements.md)
+- [模块定义语句的规则](reference/rules-for-module-definition-statements.md)
 
-- [修饰的名](../build/reference/decorated-names.md)
+- [修饰的名](reference/decorated-names.md)
 
-- [导入和导出内联函数](../build/importing-and-exporting-inline-functions.md)
+- [导入和导出内联函数](importing-and-exporting-inline-functions.md)
 
-- [相互导入](../build/mutual-imports.md)
+- [相互导入](mutual-imports.md)
 
 ## <a name="see-also"></a>请参阅
 
-[从 DLL 导出](../build/exporting-from-a-dll.md)
+[从 DLL 导出](exporting-from-a-dll.md)

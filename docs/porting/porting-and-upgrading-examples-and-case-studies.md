@@ -1,15 +1,15 @@
 ---
-title: 迁移和升级：示例和案例研究
+title: 移植和升级：示例和案例研究
 ms.date: 11/04/2016
 ms.assetid: d48bbff9-1ea7-467f-8c8b-758601f01573
-ms.openlocfilehash: 1f49b72b8d390d5631687f67640f4ddd38bec3b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 50e22c9eac39927c4456eeff1ed05c46a239bd30
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568203"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747185"
 ---
-# <a name="porting-and-upgrading-examples-and-case-studies"></a>迁移和升级：示例和案例研究
+# <a name="porting-and-upgrading-examples-and-case-studies"></a>移植和升级：示例和案例研究
 
 通过查看成功的迁移情景，可以了解从以前的 Visual C++ 版本迁移到当前版本可能会遇到的问题。
 
@@ -21,7 +21,7 @@ ms.locfileid: "50568203"
 
 - [COM Spy](../porting/porting-guide-mfc-scribble.md) 是一个应用程序，在计算机上显示有关 COM+ 组件的信息。
 
-- [Spy++](../porting/porting-guide-spy-increment.md) 是一个应用程序，检查正在运行的应用程序中的 UI 元素并提供相关信息。
+- [Spy++](../porting/porting-guide-spy-increment.md) 是一个应用程序，检查在应用程序中运行的 UI 元素并提供相关信息。
 
 ## <a name="see-also"></a>请参阅
 

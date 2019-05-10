@@ -94,12 +94,12 @@ helpviewer_keywords:
 - COleIPFrameWndEx [MFC], WinHelpA
 - COleIPFrameWndEx [MFC], InitUserToobars
 ms.assetid: ebff1560-a1eb-4854-af00-95d4a192bd55
-ms.openlocfilehash: 8ebf63e6cf31f3852434926c3559774e7b4b46d3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ce0e3a8ecf4774bc0d259c0304b1e88532336bd1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224500"
 ---
 # <a name="coleipframewndex-class"></a>COleIPFrameWndEx 类
 
@@ -170,7 +170,7 @@ class COleIPFrameWndEx : public COleIPFrameWnd
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何将 `COleIPFrameWndEx` 类的实例作为子类并重写其方法。 该示例演示如何重写 `OnDestory` 方法、 `RepositionFrame` 方法、 `RecalcLayout` 方法和 `CalcWindowRect` 方法。 此代码片段属于 [Word Pad 示例](../../visual-cpp-samples.md)。
+下面的示例演示如何将 `COleIPFrameWndEx` 类的实例作为子类并重写其方法。 该示例演示如何重写 `OnDestory` 方法、 `RepositionFrame` 方法、 `RecalcLayout` 方法和 `CalcWindowRect` 方法。 此代码片段属于 [Word Pad 示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_WordPad#1](../../mfc/reference/codesnippet/cpp/coleipframewndex-class_1.cpp)]
 

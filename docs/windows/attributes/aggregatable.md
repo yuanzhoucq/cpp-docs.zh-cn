@@ -1,17 +1,17 @@
 ---
-title: 聚合 （c + + COM 属性）
+title: 聚合 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.aggregatable
 helpviewer_keywords:
 - aggregatable attribute
 ms.assetid: 9253a46a-cd76-41f2-b3b6-86f709bb069c
-ms.openlocfilehash: 74a561b9b70c5aee36781d102835c73dec2c3ac2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d5ceb46a124db8c0082495d48e6ee0e21655422
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62390992"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -25,7 +25,7 @@ ms.locfileid: "50582446"
 
 ### <a name="parameters"></a>参数
 
-*value*<br/>
+*值*<br/>
 （可选）用于指示何时可聚合 COM 对象的参数：
 
 - `never` 不能聚合的 COM 对象。
@@ -36,7 +36,7 @@ ms.locfileid: "50582446"
 
 ## <a name="remarks"></a>备注
 
-**聚合**c + + 属性具有相同的功能[聚合](/windows/desktop/Midl/aggregatable)MIDL 特性。 这意味着，编译器会将传递**聚合**属性通过到生成的.idl 文件。
+**聚合**C++属性具有相同的功能[聚合](/windows/desktop/Midl/aggregatable)MIDL 特性。 这意味着，编译器会将传递**聚合**属性通过到生成的.idl 文件。
 
 此属性要求 [coclass](coclass.md)、 [progid](progid.md)或 [vi_progid](vi-progid.md) 属性（或隐含这些属性之一的其他属性）也应用于同一个元素。 如果使用任何单个属性，则会自动应用另外两个属性。 例如，如果`progid`应用时，`vi_progid`和`coclass`也会应用。
 
@@ -75,7 +75,7 @@ class CMyClass {};
 |**适用对象**|**类**，**结构**|
 |**可重复**|否|
 |**必需的特性**|一个或多个以下： `coclass`， `progid`，或`vi_progid`。|
-|**无效的特性**|无|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

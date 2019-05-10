@@ -9,17 +9,17 @@ helpviewer_keywords:
 - __BOOL_DEFINED macro
 ms.assetid: 9abed3f2-d21c-4eb4-97c5-716342e613d8
 ms.openlocfilehash: e481cb9de7c80d147179efceab2fda9b160f3c21
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184268"
 ---
 # <a name="bool-c"></a>bool (C++)
 
 此关键字是内置类型。 此类型的变量可以具有值[，则返回 true](../cpp/true-cpp.md)并[false](../cpp/false-cpp.md)。 条件表达式具有类型**bool** ，因此拥有类型的值**bool**。 例如，`i!=0`现在具有 TRUE 或 FALSE，具体取决于值`i`。
 
-**Visual Studio 2017 15.3 及更高版本**(适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)): 操作数的后缀或前缀递增或递减运算符不能为类型**bool**。 换而言之，给定变量`b`类型的**bool**，不再允许两个表达式：
+**Visual Studio 2017 版本 15.3 及更高版本**(适用于[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):操作数的后缀或前缀递增或递减运算符不能为类型**bool**。 换而言之，给定变量`b`类型的**bool**，不再允许两个表达式：
 
 ```cpp
     b++;

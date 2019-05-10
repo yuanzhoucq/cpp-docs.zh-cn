@@ -1,19 +1,19 @@
 ---
-title: 类特性 (c + + COM)
+title: 类特性 (C++ COM)
 ms.date: 10/02/2018
 helpviewer_keywords:
 - attributes [C++/CLI], class attributes
 ms.assetid: fad04ea1-d8ff-46d4-bb42-2b4500a6ab60
-ms.openlocfilehash: bdc689107eb973b9701e3f1fbe37a10aa6ae8d85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d0913d09c51734f5255271c0d06e639810e0cb58
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62148414"
 ---
 # <a name="class-attributes"></a>类特性
 
-以下属性应用于[类](../../cpp/class-cpp.md)c + + 关键字。
+以下属性应用于[类](../../cpp/class-cpp.md)C++关键字。
 
 |特性|描述|
 |---------------|-----------------|
@@ -44,7 +44,7 @@ ms.locfileid: "50448862"
 |[noncreatable](noncreatable.md)|定义不能实例化本身的对象。|
 |[progid](progid.md)|定义控件的 ProgID。|
 |[registration_script](registration-script.md)|执行指定的注册脚本。|
-|[requestedit](requestedit.md)|指示该属性支持`OnRequestEdit`通知。|
+|[requestedit](requestedit.md)|指示该属性支持 `OnRequestEdit` 通知。|
 |[source](source-cpp.md)|指定连接点的控件的源接口的类上。 在属性或方法，`source`属性指示该成员返回的对象或`VARIANT`，它是事件的源。|
 |[support_error_info](support-error-info.md)|支持的错误报告目标对象。|
 |[threading](threading-cpp.md)|指定控件的线程模型。|

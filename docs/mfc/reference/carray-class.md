@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CArray [MFC], SetAtGrow
 - CArray [MFC], SetSize
 ms.assetid: fead8b00-4cfd-4625-ad0e-251df62ba92f
-ms.openlocfilehash: 342eea1d5bcf8adfe9a9ff0e8d915c9155b413ca
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f82dbf7dce2e14bf760bb76d23d23f667797ee0f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266128"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62391343"
 ---
 # <a name="carray-class"></a>CArray 类
 
@@ -630,7 +630,7 @@ void SetSize(
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例收集](../../visual-cpp-samples.md)<br/>
+[MFC 示例收集](../../overview/visual-cpp-samples.md)<br/>
 [CObject 类](../../mfc/reference/cobject-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CObArray 类](../../mfc/reference/cobarray-class.md)<br/>

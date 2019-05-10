@@ -15,16 +15,16 @@ helpviewer_keywords:
 - accessors [C++], static
 - BEGIN_ACCESSOR macro, example
 ms.assetid: 2de9e5eb-53ce-42b1-80fa-57d46600a80c
-ms.openlocfilehash: 4d52c36368b9b39815cbb9a103f84f140626ba2b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5dd7be3eccd59dc1a5a0dc1cd6932ca1310627c0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389042"
 ---
 # <a name="user-records"></a>用户记录
 
-若要使用静态访问器 (取值函数，它是派生自`CAccessor`)，使用者必须具有用户记录。 用户记录是包含用于处理输入或输出的数据元素的 c + + 类。 **ATL OLE DB 使用者向导**生成使用者用户记录。 可以将方法添加到可选任务，如处理的命令的用户记录。
+若要使用静态访问器 (取值函数，它是派生自`CAccessor`)，使用者必须具有用户记录。 用户记录是C++类，其中包含用于处理输入或输出的数据元素。 **ATL OLE DB 使用者向导**生成使用者用户记录。 可以将方法添加到可选任务，如处理的命令的用户记录。
 
 下面的代码演示示例记录的处理命令。 用户记录中 BEGIN_COLUMN_MAP 表示传递给使用者从提供程序的数据行集。 BEGIN_PARAM_MAP 表示一组命令参数。 此示例使用[CCommand](../../data/oledb/ccommand-class.md)类来处理命令参数。 映射条目中的数据成员表示到一个连续的类的每个实例的内存块的偏移量。 COLUMN_ENTRY 宏对应于提供者端 PROVIDER_COLUMN_ENTRY 宏。
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CWnd objects [MFC], creating
 ms.assetid: f5ff91a6-4069-47d7-9177-1e6c80d3792c
 ms.openlocfilehash: 606593e3700f04972e031ef43eba0a7e8c134e79
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62241943"
 ---
 # <a name="creating-windows"></a>创建窗口
 
@@ -20,7 +20,7 @@ ms.locfileid: "57304245"
 
 ## <a name="what-do-you-want-to-know-more-about"></a>你想要了解更多信息
 
-- [注册窗口"类"](../mfc/registering-window-classes.md) （而不是 c + + 窗口对象）
+- [注册窗口"类"](../mfc/registering-window-classes.md) (而不是C++窗口对象)
 
 - [常规窗口创建序列](../mfc/general-window-creation-sequence.md)
 

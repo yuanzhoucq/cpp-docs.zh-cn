@@ -5,12 +5,12 @@ f1_keywords:
 - /kernel
 - /kernel-
 ms.assetid: 6d7fdff0-c3d1-4b78-9367-4da588ce8b05
-ms.openlocfilehash: 33a0f4019d8ad278f5850c499ee552ee72279455
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d065364cf6d3ae824098634c070f3651324aa52a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291335"
 ---
 # <a name="kernel-create-kernel-mode-binary"></a>/kernel（创建内核模式二进制）
 
@@ -34,7 +34,7 @@ ms.locfileid: "57414747"
 
 没有任何`#pragma`相当于控制此选项。
 
-指定 **/kernel**选项告知编译器和链接器应将裁定哪些语言功能是允许在内核模式下，还要确保有足够的表达力来避免运行时不稳定，这是唯一的内核模式 c + +。 此目标通过以下方法实现：禁止使用在内核模式中有破坏性的 C++ 语言功能，并针对可能有破坏性但无法禁用的 C++ 语言功能提供警告。
+指定 **/kernel**选项告知编译器和链接器应将裁定哪些语言功能是允许在内核模式下，还要确保有足够的表达力来避免运行时不稳定，这是唯一的内核模式C++。 此目标通过以下方法实现：禁止使用在内核模式中有破坏性的 C++ 语言功能，并针对可能有破坏性但无法禁用的 C++ 语言功能提供警告。
 
 **/Kernel**选项适用于生成的编译器和链接器阶段，并在项目级别设置。 传递 **/kernel**开关来指示编译器生成的二进制文件，在链接后应加载的 Windows 内核。 编译器会将 C++ 语言功能的范围缩小为与内核兼容的子集。
 
@@ -42,12 +42,11 @@ ms.locfileid: "57414747"
 
 |行为类型|**/kernel** Behavior|
 |-------------------|---------------------------|
-|C++ 异常处理|禁用。 
-  `throw` 和 `try` 关键字的所有实例都发出了编译器错误（异常规范 `throw()` 除外）。 否 **/EH**选项将与兼容 **/kernel**，除 **/EH-**。|
+|C++ 异常处理|禁用。 `throw` 和 `try` 关键字的所有实例都发出了编译器错误（异常规范 `throw()` 除外）。 否 **/EH**选项将与兼容 **/kernel**，除 **/EH-**。|
 |RTTI|禁用。 除非以静态方式使用 `dynamic_cast`，否则 `typeid` 和 `dynamic_cast` 关键字的所有实例都会发出编译器错误。|
 |`new` 和 `delete`|您必须显式定义 `new()` 或 `delete()` 运算符；编译器和运行时都不会提供默认定义。|
 
-自定义调用约定， [/GS](../../build/reference/gs-buffer-security-check.md)生成选项和所有优化都允许使用时 **/kernel**选项。 内联基本上没有受 **/kernel**，与编译器遵循相同的语义。 如果你想要确保`__forceinline`遵循内联限定符，则必须确保该警告[C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md)启用，以便您了解特定`__forceinline`函数何时没有内联。
+自定义调用约定， [/GS](gs-buffer-security-check.md)生成选项和所有优化都允许使用时 **/kernel**选项。 内联基本上没有受 **/kernel**，与编译器遵循相同的语义。 如果你想要确保`__forceinline`遵循内联限定符，则必须确保该警告[C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md)启用，以便您了解特定`__forceinline`函数何时没有内联。
 
 当向编译器传递 **/kernel**开关，它会预定义名为预处理器宏`_KERNEL_MODE`且其值**1**。 你可以使用此宏，根据执行环境是处于用户模式还是内核模式下按条件编译代码。 例如，以下代码指定在针对内核模式执行对类进行编译时，类应该位于不可分页的内存段中。
 
@@ -89,9 +88,9 @@ class NONPAGESECTION MyNonPagedClass
 
 ### <a name="to-set-the-kernel-compiler-option-in-visual-studio"></a>在 Visual Studio 中设置 /kernel 编译器选项
 
-1. 打开**属性页**项目对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开**属性页**项目对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择**C/c + +** 文件夹。
+1. 选择**C /C++** 文件夹。
 
 1. 选择**命令行**属性页。
 
@@ -99,5 +98,5 @@ class NONPAGESECTION MyNonPagedClass
 
 ## <a name="see-also"></a>请参阅
 
-[编译器选项](../../build/reference/compiler-options.md)<br/>
-[设置编译器选项](../../build/reference/setting-compiler-options.md)
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3462
 ms.assetid: 56b75f35-9fad-42d9-a969-eeca5d709bec
-ms.openlocfilehash: 6c56e59be8bc4173c6568b47628f675ba4f4d782
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 020556be73f0bad8bea6836c9ec0dd0b92dd7f39
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62222366"
 ---
 # <a name="compiler-error-c3462"></a>编译器错误 C3462
 
@@ -19,7 +19,7 @@ ms.locfileid: "50651771"
 
 TypeForwardedTo 特性必须应用于引用的元数据中的类型。
 
-有关详细信息，请参阅[类型转发 (C + + CLI)](../../windows/type-forwarding-cpp-cli.md)。
+有关详细信息，请参阅[类型转发 (C++/CLI)](../../extensions/type-forwarding-cpp-cli.md)。
 
 ## <a name="example"></a>示例
 

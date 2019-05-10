@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CContextMenuManager [MFC], ShowPopupMenu
 - CContextMenuManager [MFC], TrackPopupMenu
 ms.assetid: 1de20640-243c-47e1-85de-1baa4153bc83
-ms.openlocfilehash: 594b78fd36dcb1ff92c63867688c38eac7520eba
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c8a51a33c69b09d0ecd61520b5f1c9ff18c290a0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182220"
 ---
 # <a name="ccontextmenumanager-class"></a>CContextMenuManager 类
 
@@ -81,7 +81,7 @@ class CContextMenuManager : public CObject
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何将添加到菜单`CContextMenuManager`对象，以及如何不关闭活动的弹出菜单时`CContextMenuManager`对象显示一个新的弹出菜单。 此代码片段属于[自定义页面示例](../../visual-cpp-samples.md)。
+下面的示例演示如何将添加到菜单`CContextMenuManager`对象，以及如何不关闭活动的弹出菜单时`CContextMenuManager`对象显示一个新的弹出菜单。 此代码片段属于[自定义页面示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_CustomPages#4](../../mfc/reference/codesnippet/cpp/ccontextmenumanager-class_1.cpp)]
 

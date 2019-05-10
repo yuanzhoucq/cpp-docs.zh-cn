@@ -12,20 +12,20 @@ helpviewer_keywords:
 - MFC, wizards
 - Class View tool, managing Windows messages
 ms.assetid: f5dd4d13-9dc1-4a49-b6bf-5b3cb45fa8ba
-ms.openlocfilehash: 5316899b7eb8828847af6d7db95edf3d8ba3822a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 41cbb86b4245bd78baecd222b5573ba5e877243a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62338293"
 ---
 # <a name="wizards-and-the-resource-editors"></a>向导和资源编辑器
 
-Visual c + + MFC 编程，以及许多集成的资源编辑器中包括用于多个向导。 对于 ActiveX 控件编程中， [ActiveX 控件向导](../mfc/reference/mfc-activex-control-wizard.md)非常相似的 MFC 应用程序向导的用途。 虽然可以编写 MFC 应用程序而无需大多数这些工具，这些工具将极大地简化并加速你的工作。
+VisualC++在 MFC 编程中，以及许多集成的资源编辑器包括用于多个向导。 对于 ActiveX 控件编程中， [ActiveX 控件向导](../mfc/reference/mfc-activex-control-wizard.md)非常相似的 MFC 应用程序向导的用途。 虽然可以编写 MFC 应用程序而无需大多数这些工具，这些工具将极大地简化并加速你的工作。
 
 ##  <a name="_core_use_appwizard_to_create_an_mfc_application"></a> 使用 MFC 应用程序向导创建 MFC 应用程序
 
-使用[MFC 应用程序向导](../mfc/reference/mfc-application-wizard.md)创建 Visual c + +，这可以包括 OLE 和数据库支持的 MFC 项目。 项目中的文件包含你的应用程序、 文档、 视图和框架窗口类;标准资源，包括菜单和可选的工具栏;其他所需的 Windows 文件;和可选的.rtf 文件包含标准 Windows 帮助主题，可以修改和创建程序的帮助文件中增加。
+使用[MFC 应用程序向导](../mfc/reference/mfc-application-wizard.md)若要在视觉对象中创建一个 MFC 项目C++，其中包含 OLE 和数据库支持。 项目中的文件包含你的应用程序、 文档、 视图和框架窗口类;标准资源，包括菜单和可选的工具栏;其他所需的 Windows 文件;和可选的.rtf 文件包含标准 Windows 帮助主题，可以修改和创建程序的帮助文件中增加。
 
 ##  <a name="_core_use_classwizard_to_manage_classes_and_windows_messages"></a> 使用类视图，管理类和 Windows 消息
 
@@ -44,11 +44,11 @@ Visual c + + MFC 编程，以及许多集成的资源编辑器中包括用于多
 
 ##  <a name="_core_use_the_resource_editors_to_create_and_edit_resources"></a> 使用资源编辑器来创建和编辑资源
 
-使用 Visual c + +[资源编辑器](../windows/resource-editors.md)来创建和编辑菜单、 对话框、 自定义控件、 快捷键、 位图、 图标、 游标、 字符串和版本资源。 截至 Visual c + + 4.0 版，工具栏编辑器创建工具栏大大简化。
+使用视觉对象C++[资源编辑器](../windows/resource-editors.md)创建和编辑菜单、 对话框、 自定义控件、 快捷键、 位图、 图标、 游标、 字符串和版本资源。 截至 VisualC++版本 4.0 中，工具栏编辑器可创建工具栏容易得多。
 
-为了帮助您更多，Microsoft 基础类库提供了一个名为常见文件。RES，其中包含你可以从常见复制的"剪贴画"资源。RES 并粘贴到您自己的资源文件。 常见。RES 包括工具栏按钮、 常见游标、 图标和的详细信息。 可以使用、 修改和重新分发应用程序中的这些资源。 有关常见的详细信息。RES，请参阅[剪贴画示例](../visual-cpp-samples.md)。
+为了帮助您更多，Microsoft 基础类库提供了一个名为常见文件。RES，其中包含你可以从常见复制的"剪贴画"资源。RES 并粘贴到您自己的资源文件。 常见。RES 包括工具栏按钮、 常见游标、 图标和的详细信息。 可以使用、 修改和重新分发应用程序中的这些资源。 有关常见的详细信息。RES，请参阅[剪贴画示例](../overview/visual-cpp-samples.md)。
 
-MFC 应用程序向导、 Visual c + + 向导、 资源编辑器和 MFC 框架为您做了大量工作，并使管理你的代码容易得多。 特定于应用程序大部分是代码的在文档和视图的类中。
+MFC 应用程序向导、 视觉对象C++向导中，资源编辑器和 MFC 框架为您做了大量工作，并使管理你的代码容易得多。 特定于应用程序大部分是代码的在文档和视图的类中。
 
 ## <a name="see-also"></a>请参阅
 

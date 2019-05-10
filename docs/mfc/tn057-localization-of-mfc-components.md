@@ -1,5 +1,5 @@
 ---
-title: TN057：MFC 组件的本地化
+title: TN057:本地化的 MFC 组件
 ms.date: 06/28/2018
 f1_keywords:
 - vc.mfc.components
@@ -14,13 +14,13 @@ helpviewer_keywords:
 - localization [MFC], resources
 ms.assetid: 5376d329-bd45-41bd-97f5-3d895a9a0af5
 ms.openlocfilehash: 812c2d29c42b523d7b88b03741dc20f08ee70f44
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399624"
 ---
-# <a name="tn057-localization-of-mfc-components"></a>TN057：MFC 组件的本地化
+# <a name="tn057-localization-of-mfc-components"></a>TN057:本地化的 MFC 组件
 
 > [!NOTE]
 > 以下技术说明在首次包括在联机文档中后未更新。 因此，某些过程和主题可能已过时或不正确。 要获得最新信息，建议你在联机文档索引中搜索热点话题。
@@ -35,7 +35,7 @@ ms.locfileid: "50428634"
 
 ## <a name="localizing-your-components-resources"></a>本地化组件的资源
 
-本地化应用程序或 DLL 涉及将这些资源替换为与目标语言匹配的资源。 对于您自己的资源，此操作比较简单：在资源编辑器中编辑资源并生成您的应用程序。 如果你的代码编写正确，将字符串或你希望本地化硬编码到 c + + 源代码的文本不可以通过简单修改资源来完成所有本地化。 事实上，你可以以某种方式实现你的组件，使它们都提供甚至不涉及生成原始代码的本地化版本。 这种方法更复杂，但很值得，并且这是为 MFC 本身选择的机制。 也可以通过将 EXE 或 DLL 文件加载到资源编辑器并直接编辑资源来本地化应用程序。 如有可能，每当您生成新版本的应用程序时，它都会要求重新应用那些更改。
+本地化应用程序或 DLL 涉及将这些资源替换为与目标语言匹配的资源。 对于您自己的资源，此操作比较简单：在资源编辑器中编辑资源并生成您的应用程序。 如果你的代码编写正确，将字符串或你希望本地化的文本不硬编码到在C++源代码中的所有本地化都可通过简单修改资源。 事实上，你可以以某种方式实现你的组件，使它们都提供甚至不涉及生成原始代码的本地化版本。 这种方法更复杂，但很值得，并且这是为 MFC 本身选择的机制。 也可以通过将 EXE 或 DLL 文件加载到资源编辑器并直接编辑资源来本地化应用程序。 如有可能，每当您生成新版本的应用程序时，它都会要求重新应用那些更改。
 
 避免这种情况的一个方法是在单独的 DLL（有时称为附属 DLL）中放置所有资源。 此 DLL 随后在运行时以动态方式加载，资源将从此 DLL 加载而不是从包含你的所有代码的主模块加载。 MFC 直接支持此方法。 请考虑一个名为 MYAPP.EXE 的应用程序；它可以将所有资源放在一个名为 MYRES.DLL 的 DLL 中。 在应用程序的 `InitInstance` 中，它将执行以下代码以加载该 DLL 并使 MFC 从该位置加载资源：
 
@@ -62,7 +62,7 @@ CMyApp::InitInstance()
 
 ## <a name="using-the-provided-mfc-localized-resources"></a>使用提供的 MFC 本地化资源
 
-您生成的任何 MFC 应用程序都会重复使用 MFC 中的两个内容：代码和资源。 也就是说，MFC 有各种错误消息、内置对话框以及 MFC 类使用的其他资源。 若要完全本地化应用程序，您不仅需要本地化应用程序的资源，还需要本地化直接来自 MFC 的资源。 MFC 自动提供了很多不同语言的资源文件，这样，当您面向的语言是 MFC 已支持的语言之一时，您只需确保使用这些本地化资源即可。
+你生成的任何 MFC 应用程序都会重复使用 MFC 中的两个内容：代码和资源。 也就是说，MFC 有各种错误消息、内置对话框以及 MFC 类使用的其他资源。 若要完全本地化应用程序，您不仅需要本地化应用程序的资源，还需要本地化直接来自 MFC 的资源。 MFC 自动提供了很多不同语言的资源文件，这样，当您面向的语言是 MFC 已支持的语言之一时，您只需确保使用这些本地化资源即可。
 
 到本文撰写之时为止，MFC 支持中文、德语、西班牙语、法语、意大利语、日语和朝鲜语。 包含这些本地化版本的文件位于 MFC\INCLUDE\L.*（“L”表示已本地化）目录中。 例如，德语位于 MFC\INCLUDE\L.DEU 中。 若要使应用程序以使用这些 RC 文件而不是 MFC\INCLUDE 中的文件，添加`/IC:\PROGRAM FILES\MICROSOFT VISUAL STUDIO .NET 2003\VC7\MFC\INCLUDE\L.DEU`到 RC 命令行 （这是只是一个示例; 你需要替换您的选择，以及在其中安装了 Visual C 的目录的区域设置++).
 

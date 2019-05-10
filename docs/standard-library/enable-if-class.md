@@ -8,11 +8,11 @@ helpviewer_keywords:
 - enable_if
 ms.assetid: c6b8d41c-a18f-4e30-a39e-b3aa0e8fd926
 ms.openlocfilehash: b6990dba20643b35dde36a492d40c3e3e76ae0b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413757"
 ---
 # <a name="enableif-class"></a>enable_if 类
 
@@ -50,7 +50,7 @@ using enable_if_t = typename enable_if<B,T>::type;
 
 以下是四种示例方案：
 
-- 方案 1：包装函数的返回类型：
+- 方案 1:包装一个函数的返回类型：
 
 ```cpp
     template <your_stuff>
@@ -64,7 +64,7 @@ yourfunction(args) {// ...
 }
 ```
 
-- 方案 2：添加具有默认参数的函数参数：
+- 方案 2:添加具有默认参数的函数参数：
 
 ```cpp
     template <your_stuff>
@@ -73,14 +73,14 @@ your_return_type_if_present
 }
 ```
 
-- 方案 3：添加具有默认参数的模板参数：
+- 方案 3:添加具有默认参数的模板参数：
 
 ```cpp
     template <your_stuff, typename Dummy = enable_if_t<your_condition>>
 rest_of_function_declaration_goes_here
 ```
 
-- 方案 4：如果你的函数具有非模板化的参数，你可以包装其类型：
+- 方案 4:如果你的函数具有非模板化的参数，可以包装其类型：
 
 ```cpp
     template <typename T>

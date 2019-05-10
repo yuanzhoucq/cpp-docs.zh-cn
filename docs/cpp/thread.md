@@ -1,6 +1,6 @@
 ---
 title: thread
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 f1_keywords:
 - thread_cpp
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TLS (thread local storage), compiler implementation
 - __declspec keyword [C++], thread
 ms.assetid: 667f2a77-6d1f-4b41-bee8-05e67324fab8
-ms.openlocfilehash: 089f339e5d203fe44789a7df1607f73ab13b8a24
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 59a1af8a7eb73207f84ddf2194d5fe9e77d7d46a
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440074"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221960"
 ---
 # <a name="thread"></a>thread
 
@@ -24,7 +24,7 @@ ms.locfileid: "50440074"
 
 ## <a name="syntax"></a>语法
 
-> **__declspec （线程）** *声明符*
+> **__declspec( thread )** *declarator*
 
 ## <a name="remarks"></a>备注
 
@@ -40,9 +40,9 @@ __declspec( thread ) int tls_i = 1;
 
 1. 如果通过函数调用 （包括构造函数） 初始化变量，此函数将只调用导致二进制/DLL 加载到进程的线程和二进制文件/DLL 已加载后启动这些线程。 为已在运行时加载该 DLL 的其他任何线程不调用初始化函数。 动态初始化永远不会获取该消息 DLL 不是在过程中，在线程启动时如果 DLL_THREAD_ATTACH，DllMain 调用，但在 DLL 上发生。
 
-1. 使用常量值以静态方式初始化的线程本地变量通常在所有线程上正确初始化。 但是，自 2017 年 12 月起时会出现已知的一致性问题凭此 constexpr 变量接收的 Microsoft Visual C++ 编译器中动态而不是静态初始化。
+1. 使用常量值以静态方式初始化的线程本地变量通常在所有线程上正确初始化。 但是，截至 2017 年 12 月没有已知的符合性问题在 microsoftC++编译器来接收动态而不是静态初始化的 constexpr 变量。
 
-   注意： 这两个问题应该在将来的编译器更新修复。
+   注意:这两个问题需要解决在将来的编译器更新。
 
 此外，声明线程本地对象和变量时必须遵守以下准则：
 

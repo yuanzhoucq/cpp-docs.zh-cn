@@ -1,17 +1,17 @@
 ---
-title: 实现 （c + + COM 属性）
+title: 实现 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.implements
 helpviewer_keywords:
 - implements attribute
 ms.assetid: 9cf0858b-cb7d-4d3c-81a6-97d87ed00d25
-ms.openlocfilehash: 519bbe0bdbef786c95ca3f6711b344b7a4f6b641
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 9425f998f0e8fbe5f16e6eb136e00ba3fb7bd5d9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409367"
 ---
 # <a name="implements-c"></a>implements (C++)
 
@@ -44,14 +44,14 @@ ms.locfileid: "51329875"
 |-|-|
 |**适用对象**|**类**，**结构**|
 |**可重复**|是|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="example"></a>示例
 
-下面的示例分为三个部分：.idl 文件和其关联的.h 文件和 c + + 文件。
+下面的示例分为三个部分：.idl 文件和其关联的.h 文件，和一个C++文件。
 
 假设以下.idl 文件中，将在提供给编译器。
 

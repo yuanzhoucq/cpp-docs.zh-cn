@@ -8,19 +8,19 @@ helpviewer_keywords:
 - CommitTrans method
 - Rollback method, ODBC transactions
 ms.assetid: 9e00bbf4-e9fb-4332-87fc-ec8ac61b3f68
-ms.openlocfilehash: 68ff6970243b36b56ab206b16bb2c3608cef71e1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 996b8410366661cb91cf82cfff823f17d3aad8b4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62329902"
 ---
 # <a name="transaction-how-transactions-affect-updates-odbc"></a>事务：事务如何影响更新 (ODBC)
 
-更新到[数据源](../../data/odbc/data-source-odbc.md)通过编辑缓冲区 （在事务外部使用的相同方法） 使用的事务处理期间管理。 记录集的字段数据成员共同作为包含记录集备份临时过程的当前记录的编辑缓冲区`AddNew`或`Edit`。 期间`Delete`事务内不备份操作，当前记录。 有关编辑缓冲区以及如何更新存储的当前记录的详细信息，请参阅[记录集： 如何更新记录 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)。
+更新到[数据源](../../data/odbc/data-source-odbc.md)通过编辑缓冲区 （在事务外部使用的相同方法） 使用的事务处理期间管理。 记录集的字段数据成员共同作为包含记录集备份临时过程的当前记录的编辑缓冲区`AddNew`或`Edit`。 期间`Delete`事务内不备份操作，当前记录。 有关编辑缓冲区以及如何更新存储的当前记录的详细信息，请参阅[记录集：如何记录集更新记录 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)。
 
 > [!NOTE]
->  如果已实现批量行提取，则不能调用`AddNew`， `Edit`，或`Delete`。 而是必须编写您自己的函数来执行与数据源的更新。 有关批量行提取的详细信息，请参阅[记录集： 提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+>  如果已实现批量行提取，则不能调用`AddNew`， `Edit`，或`Delete`。 而是必须编写您自己的函数来执行与数据源的更新。 有关批量行提取的详细信息，请参阅[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 在事务期间`AddNew`， `Edit`，和`Delete`可以提交或回滚操作。 效果`CommitTrans`和`Rollback`可能会导致要还原为编辑缓冲区的当前记录。 为了确保正确还原当前记录，请务必了解如何`CommitTrans`并`Rollback`的成员函数`CDatabase`使用的更新函数`CRecordset`。
 
@@ -48,7 +48,7 @@ ms.locfileid: "50437851"
 |---------------|------------------------------|-------------------|---------------------------|
 |`AddNew` 和`Update`，然后 `Rollback`|当前记录的内容是临时存储，以便为新记录腾出。 新记录输入到编辑缓冲区。 之后`Update`调用时，当前记录还原为编辑缓冲区。||添加到数据源所做的`Update`反转。|
 |`AddNew` (无需`Update`)，然后 `Rollback`|当前记录的内容是临时存储，以便为新记录腾出。 编辑缓冲区包含新记录。|调用`AddNew`再次将还原到一个空的新记录的编辑缓冲区。 或调用`Move`(0) 以还原到编辑缓冲区的旧值。|因为`Update`未调用，没有对数据源所做的更改。|
-|`Edit` 和`Update`，然后 `Rollback`|临时存储的当前记录的未编辑的版本。 对编辑缓冲区的内容进行编辑。 之后`Update`调用时，未编辑的记录版本仍临时存储。|*动态集*： 滚过当前记录，然后返回到还原到编辑缓冲区未编辑的记录的版本。<br /><br /> *快照*： 调用`Requery`若要刷新数据源的记录集。|到数据源所做的更改`Update`进行了互换。|
+|`Edit` 和`Update`，然后 `Rollback`|临时存储的当前记录的未编辑的版本。 对编辑缓冲区的内容进行编辑。 之后`Update`调用时，未编辑的记录版本仍临时存储。|*动态集*:滚过当前记录，然后返回到还原到编辑缓冲区未编辑的记录的版本。<br /><br /> *快照*:调用`Requery`若要刷新数据源的记录集。|到数据源所做的更改`Update`进行了互换。|
 |`Edit` (无需`Update`)，然后 `Rollback`|临时存储的当前记录的未编辑的版本。 对编辑缓冲区的内容进行编辑。|调用`Edit`以还原到编辑缓冲区未编辑的记录的版本。|因为`Update`未调用，没有对数据源所做的更改。|
 |`Delete` 然后 `Rollback`|删除当前记录的内容。|调用`Requery`从数据源还原当前记录的内容。|撤消删除的数据源的数据。|
 

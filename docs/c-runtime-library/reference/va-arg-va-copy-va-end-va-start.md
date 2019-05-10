@@ -38,11 +38,11 @@ helpviewer_keywords:
 - va_copy macro
 ms.assetid: a700dbbd-bfe5-4077-87b6-3a07af74a907
 ms.openlocfilehash: cc0a903f6bc4895f7d2ea6e80990dea94f28c6c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353558"
 ---
 # <a name="vaarg-vacopy-vaend-vastart"></a>va_arg、va_copy、va_end、va_start
 
@@ -94,7 +94,7 @@ void va_start(
 
 ## <a name="remarks"></a>备注
 
-**Va_arg**， **va_copy**， **va_end**，以及**va_start**宏提供可移植的方式来访问函数的自变量时函数采用数目可变的参数。 有两种版本的宏：STDARG.H 中定义的宏符合 ISO C99 标准；弃用了 VARARGS.H 中定义的宏但是将其保留以保证与写于 ANSI C89 标准之前的代码的后向兼容性。
+**Va_arg**， **va_copy**， **va_end**，以及**va_start**宏提供可移植的方式来访问函数的自变量时函数采用数目可变的参数。 有两个版本的宏：STDARG 中定义的宏。H 符合 ISO C99 标准;在 VARARGS 中定义的宏。H 不推荐使用，但会保留与写于 ANSI C89 标准之前编写的代码向后兼容。
 
 这些宏假定函数采用固定数量的必需参数，后面是可变数量的可选参数。 将必需参数声明为函数的普通参数，且可通过参数名称访问它们。 可选参数可通过 STDARG.H 中的宏访问（对于在 ANSI C89 标准之前编写的代码，通过 VARARGS.H），其将指针设置为参数列表中的第一个可选参数、检索列表中的参数并在参数处理完成后重置指针。
 

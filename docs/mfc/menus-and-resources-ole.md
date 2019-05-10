@@ -19,11 +19,11 @@ helpviewer_keywords:
 - OLE menus and resources [MFC]
 ms.assetid: 52bfa086-7d3d-466f-94c7-c7061f3bdb3a
 ms.openlocfilehash: 4e8f8c7fa8e24349a741b99822f13d5473373e17
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62225462"
 ---
 # <a name="menus-and-resources-ole"></a>菜单和资源 (OLE)
 
@@ -54,9 +54,9 @@ OLE 可视化编辑对其他要求菜单和其他资源，因为有多种模式�
 
 以下文章介绍了与容器、 服务器和菜单合并有必要实现就地激活相关的主题：
 
-- [菜单和资源：添加容器](../mfc/menus-and-resources-container-additions.md)
+- [菜单和资源：容器添加项](../mfc/menus-and-resources-container-additions.md)
 
-- [菜单和资源：添加服务器](../mfc/menus-and-resources-server-additions.md)
+- [菜单和资源：服务器添加项](../mfc/menus-and-resources-server-additions.md)
 
 - [菜单和资源：菜单合并](../mfc/menus-and-resources-menu-merging.md)
 

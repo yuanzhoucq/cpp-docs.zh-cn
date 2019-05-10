@@ -14,16 +14,16 @@ helpviewer_keywords:
 - frame window classes [MFC], created by application wizards
 - CMainFrame class [MFC]
 ms.assetid: 9947df73-4470-49a0-ac61-7b6ee401a74e
-ms.openlocfilehash: a0610ae901b817a1c8f7707d9ba87c15d634e134
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 46da8fc0cb98406bdf97285d7c6f824afd61c4bb
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392812"
 ---
 # <a name="frame-window-classes-created-by-the-application-wizard"></a>应用程序向导创建的框架窗口类
 
-当你使用[应用程序向导](../ide/creating-desktop-projects-by-using-application-wizards.md)创建主干应用程序，除了应用程序、 文档和视图类，应用程序向导创建应用程序的主框架窗口的派生的框架窗口类。 默认情况下，此类名为 `CMainFrame`，包含此类的文件名为 MAINFRM.H 和 MAINFRM.CPP。
+当你创建新的 MFC 项目从**新的项目**对话框中，除了应用程序、 文档和视图类，应用程序向导创建应用程序的主框架窗口的派生的框架窗口类。 默认情况下，此类名为 `CMainFrame`，包含此类的文件名为 MAINFRM.H 和 MAINFRM.CPP。
 
 如果你的应用程序是 SDI，你`CMainFrame`类派生自类[CFrameWnd](../mfc/reference/cframewnd-class.md)。
 
@@ -36,4 +36,5 @@ ms.locfileid: "57298056"
 ## <a name="see-also"></a>请参阅
 
 [框架窗口类](../mfc/frame-window-classes.md)<br/>
-[MFC 程序或控件的源文件和头文件](../ide/mfc-program-or-control-source-and-header-files.md)
+[MFC 程序或控件的源文件和头文件](../build/reference/mfc-program-or-control-source-and-header-files.md)
+

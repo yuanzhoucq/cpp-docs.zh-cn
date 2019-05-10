@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4687
 ms.assetid: 2f28e0b1-7358-4c88-bd70-aad8f0aa004c
-ms.openlocfilehash: 50551faf817f83d8a4af848a75af67ebe7004fe7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1978e1a35ba5b5d59b5961a21378d8af6921d145
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62311305"
 ---
 # <a name="compiler-warning-c4687"></a>编译器警告 C4687
 
@@ -19,7 +19,7 @@ class： 密封的抽象类不能实现接口 interface
 
 密封的抽象类型是通常仅用于包含静态成员函数。
 
-有关详细信息，请参阅[抽象](../../windows/abstract-cpp-component-extensions.md)并[密封](../../windows/sealed-cpp-component-extensions.md)。
+有关详细信息，请参阅[抽象](../../extensions/abstract-cpp-component-extensions.md)并[密封](../../extensions/sealed-cpp-component-extensions.md)。
 
 默认情况下，C4687 颁发为错误。 可以取消与 C4687[警告](../../preprocessor/warning.md)杂注。 如果不能确定你想要在密封的抽象类型中实现一个接口，则可以取消 C4687。
 

@@ -1,17 +1,17 @@
 ---
-title: odl （c + + COM 属性）
+title: odl (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.odl
 helpviewer_keywords:
 - odl attribute
 ms.assetid: 75dcb314-b50f-4a63-9180-507ac1bc78f3
-ms.openlocfilehash: e2fa1ddc0acfd0d6680ebd58c7762adb96ac180a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90f9f1df23542138b2fac0dcfe0e122f1993d805
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407635"
 ---
 # <a name="odl"></a>odl
 
@@ -25,7 +25,7 @@ ms.locfileid: "50571790"
 
 ## <a name="remarks"></a>备注
 
-**Odl** c + + 属性具有相同的功能[odl](/windows/desktop/Midl/odl) MIDL 特性。
+**Odl** C++属性具有相同的功能[odl](/windows/desktop/Midl/odl) MIDL 特性。
 
 ## <a name="example"></a>示例
 
@@ -57,8 +57,8 @@ public:
 |-|-|
 |**适用对象**|**interface**|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

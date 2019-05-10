@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4701
 ms.assetid: d7c76c66-1f3f-4d3c-abe4-5d94c84a5a1f
-ms.openlocfilehash: d2f95b9b2f4357d9719785880706c41f68fdfea0
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: cbe70de39d2306edd50bb936ac5bbb4ad14af0e5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395282"
 ---
 # <a name="compiler-warning-level-4-c4701"></a>编译器警告（等级 4）C4701
 
@@ -73,4 +73,4 @@ void main()
 ## <a name="see-also"></a>请参阅
 
 [编译器警告（等级 4）C4703](../../error-messages/compiler-warnings/compiler-warning-level-4-c4703.md)<br/>
-[警告、 /sdl 和改进未初始化的变量检测](http://blogs.msdn.com/b/sdl/archive/2012/06/06/warnings-sdl-and-improving-uninitialized-variable-detection.aspx)
+[警告、 /sdl 和改进未初始化的变量检测](https://www.microsoft.com/security/blog/2012/06/06/warnings-sdl-and-improving-uninitialized-variable-detection/)

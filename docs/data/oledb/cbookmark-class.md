@@ -67,12 +67,12 @@ helpviewer_keywords:
 - operator =, bookmarks
 - operator=, bookmarks
 ms.assetid: bc942f95-6f93-41d9-bb6e-bcdae4ae0b7a
-ms.openlocfilehash: b59d4de6751dd2a7f90c5de766b5f95cb7e7b330
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: fb2e3ec99471405f9c6521e0b70672c1da1b755c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209385"
 ---
 # <a name="cbookmark-class"></a>CBookmark 类
 
@@ -169,7 +169,7 @@ virtual DBLENGTH GetSize() const throw();
 
 缓冲区的大小（以字节为单位）。
 
-## <a name="setbookmark"></a> Cbookmark:: Setbookmark
+## <a name="setbookmark"></a> CBookmark::SetBookmark
 
 将书签值引用的复制*pBuffer*到`CBookmark`缓冲和缓冲区大小设置为*nSize*。
 

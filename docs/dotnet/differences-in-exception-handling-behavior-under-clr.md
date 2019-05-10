@@ -5,12 +5,12 @@ helpviewer_keywords:
 - EXCEPTION_CONTINUE_EXECUTION macro
 - set_se_translator function
 ms.assetid: 2e7e8daf-d019-44b0-a51c-62d7aaa89104
-ms.openlocfilehash: fea928fc293ef916d560e51ecb27aee452b6a4c3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ae745cfb96f4efe1ede7e3fc762842f9e4d63323
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400573"
 ---
 # <a name="differences-in-exception-handling-behavior-under-clr"></a>/CLR 下的异常处理行为的差异
 
@@ -18,7 +18,7 @@ ms.locfileid: "57414624"
 
 ##  <a name="vcconjumpingoutofafinallyblock"></a> 跳出 Finally 块
 
-在本机 C/c + + 代码中，跳出 __**最后**尽管它会生成一条警告，但允许使用结构化的异常处理 (SEH) 的块。  下[/clr](../build/reference/clr-common-language-runtime-compilation.md)，跳出**最后**块将导致错误：
+在本机 C /C++代码，跳出 __**最后**尽管它会生成一条警告，但允许使用结构化的异常处理 (SEH) 的块。  下[/clr](../build/reference/clr-common-language-runtime-compilation.md)，跳出**最后**块将导致错误：
 
 ```cpp
 // clr_exception_handling_4.cpp
@@ -88,7 +88,7 @@ int main() {
 }
 ```
 
-### <a name="output"></a>输出
+### <a name="output"></a>Output
 
 ```Output
 Caught a nested exception
@@ -141,7 +141,7 @@ int main() {
 }
 ```
 
-### <a name="output"></a>输出
+### <a name="output"></a>Output
 
 ```Output
 caught an SEH Exception
@@ -182,7 +182,7 @@ int main() {
 }
 ```
 
-### <a name="output"></a>输出
+### <a name="output"></a>Output
 
 ```Output
 Counter=-3
@@ -267,7 +267,7 @@ int main( int argc, char ** argv ) {
 }
 ```
 
-### <a name="output"></a>输出
+### <a name="output"></a>Output
 
 ```Output
 This is invoked since _set_se_translator is not supported when /clr is used
@@ -277,6 +277,6 @@ Caught an SEH exception with exception code: e0000101
 
 ## <a name="see-also"></a>请参阅
 
-[异常处理](../windows/exception-handling-cpp-component-extensions.md)<br/>
-[safe_cast](../windows/safe-cast-cpp-component-extensions.md)<br/>
+[异常处理](../extensions/exception-handling-cpp-component-extensions.md)<br/>
+[safe_cast](../extensions/safe-cast-cpp-component-extensions.md)<br/>
 [异常处理](../cpp/exception-handling-in-visual-cpp.md)

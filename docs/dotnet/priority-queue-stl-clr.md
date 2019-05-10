@@ -52,11 +52,11 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: 4d0000d3-68ff-4c4b-8157-7060540136f5
 ms.openlocfilehash: ed5e190f0c64aca3876d1cd1f05c9d75224355cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384759"
 ---
 # <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
 
@@ -80,7 +80,7 @@ template<typename Value,
 *值*<br/>
 受控序列中的元素的类型。
 
-*容器*<br/>
+*Container*<br/>
 基础容器的类型。
 
 ## <a name="requirements"></a>要求
@@ -575,7 +575,7 @@ int main()
 c a b
 ```
 
-## <a name="op_as"></a> priority_queue::operator = (STL/CLR)
+## <a name="op_as"></a> priority_queue::operator= (STL/CLR)
 
 替换受控序列。
 
@@ -707,10 +707,10 @@ template<typename InIt>
 *first*<br/>
 要插入范围的起始处。
 
-*最后一个*<br/>
+*last*<br/>
 要插入的范围的下限。
 
-*Pred*<br/>
+*pred*<br/>
 排序谓词对受控序列。
 
 *right*<br/>

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - Ob0 compiler option [C++]
 - inline expansion, compiler option
 ms.assetid: f134e6df-e939-4980-a01d-47425dbc562a
-ms.openlocfilehash: 6406b604ab74d29d8bc6c9bc0920fd0cf0bd055b
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6bf16e5725916e81e64d80c0a1f96bf502c8826c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320222"
 ---
 # <a name="ob-inline-function-expansion"></a>/Ob（内联函数展开）
 
@@ -45,12 +45,12 @@ ms.locfileid: "57426142"
 禁用内联扩展。 默认情况下，展开发生在编译器的自行对所有函数，通常称为*自动内联*。
 
 **1**<br/>
-允许的标记的函数仅扩展[内联](../../cpp/inline-functions-cpp.md)， `__inline`，或`__forceinline`，或在类声明中定义的 c + + 成员函数中。
+允许的标记的函数仅扩展[内联](../../cpp/inline-functions-cpp.md)， `__inline`，或`__forceinline`，或在C++类声明中定义的成员函数。
 
 **2**<br/>
 默认值。 允许对标记为 `inline`、`__inline` 或 `__forceinline` 的函数或是编译器选择的任何其他函数进行扩展。
 
-**/ Ob2**是在时生效[/o1，/o2 （最小化大小、 最大化速度）](../../build/reference/o1-o2-minimize-size-maximize-speed.md)或[/Ox （启用最速度优化）](../../build/reference/ox-full-optimization.md)使用。
+**/ Ob2**是在时生效[/o1，/o2 （最小化大小、 最大化速度）](o1-o2-minimize-size-maximize-speed.md)或[/Ox （启用最速度优化）](ox-full-optimization.md)使用。
 
 此选项要求您启用使用的优化 **/o1**， **/o2**， **/Ox**，或者 **/Og**。
 
@@ -61,13 +61,13 @@ ms.locfileid: "57426142"
 可以使用`#pragma` [auto_inline](../../preprocessor/auto-inline.md)指令以排除不考虑的候选项为内联展开的函数。 另请参阅`#pragma`[内部](../../preprocessor/intrinsic.md)指令。
 
 > [!NOTE]
-> 通过分析测试运行收集的信息将覆盖本应有效如果指定的优化 **/Ob**， **/Os**，或 **/Ot**。 有关详细信息，请参阅[按配置文件优化](../../build/reference/profile-guided-optimizations.md)。
+> 通过分析测试运行收集的信息将覆盖本应有效如果指定的优化 **/Ob**， **/Os**，或 **/Ot**。 有关详细信息，请参阅[按配置文件优化](../profile-guided-optimizations.md)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
-1. 展开**配置属性**， **C/c + +**，然后选择**优化**。
+1. 展开**配置属性**， **C /C++**，然后选择**优化**。
 
 1. 修改**内联函数扩展**属性。
 
@@ -77,6 +77,6 @@ ms.locfileid: "57426142"
 
 ## <a name="see-also"></a>请参阅
 
-[/O 选项（优化代码）](../../build/reference/o-options-optimize-code.md)<br/>
-[编译器选项](../../build/reference/compiler-options.md)<br/>
-[设置编译器选项](../../build/reference/setting-compiler-options.md)
+[/O 选项（优化代码）](o-options-optimize-code.md)<br/>
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)

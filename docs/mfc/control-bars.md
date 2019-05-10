@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CStatusBar class [MFC], control bars
 ms.assetid: 31831910-3d23-4d70-9e71-03cc02f01ec4
 ms.openlocfilehash: 4b75d9a96f091d0424592f34bdb1ed7ce76c2372
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152759"
 ---
 # <a name="control-bars"></a>控件条
 
@@ -42,8 +42,7 @@ ms.locfileid: "57283574"
 
 ## <a name="control-bars"></a>控件条
 
-控件条通过提供快速、一步式的命令操作，极大提升了程序的可用性。 
-  `CControlBar` 类提供了所有工具栏、状态栏和对话栏的常见功能。 `CControlBar` 提供了用于在其父框架窗口中定位控件条的功能。 由于控件条通常是父框架窗口的子窗口，因此它是客户端视图或框架窗口的 MDI 客户端的“同级”。 控件条对象使用有关其父窗口的客户端矩形的信息来为自身定位。 然后它改变父级的其余客户端窗口矩形，以便客户端视图或 MDI 客户端窗口填充客户端窗口的其余部分。
+控件条通过提供快速、一步式的命令操作，极大提升了程序的可用性。 `CControlBar` 类提供了所有工具栏、状态栏和对话栏的常见功能。 `CControlBar` 提供了用于在其父框架窗口中定位控件条的功能。 由于控件条通常是父框架窗口的子窗口，因此它是客户端视图或框架窗口的 MDI 客户端的“同级”。 控件条对象使用有关其父窗口的客户端矩形的信息来为自身定位。 然后它改变父级的其余客户端窗口矩形，以便客户端视图或 MDI 客户端窗口填充客户端窗口的其余部分。
 
 > [!NOTE]
 >  如果没有控制栏上的按钮**命令**或**UPDATE_COMMAND_UI**处理程序，该框架会自动禁用该按钮。

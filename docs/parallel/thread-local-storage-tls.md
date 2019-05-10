@@ -9,22 +9,22 @@ helpviewer_keywords:
 - thread attribute
 - Thread Local Storage [C++]
 ms.assetid: 80801907-d792-45ca-b776-df0cf2e9f197
-ms.openlocfilehash: f5a75f7964b0291a980b22d36e7ce6a0a87d3dc3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5c7bf2ae7cb5bfe71be9a1d72147e97c894064b3
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293454"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448911"
 ---
 # <a name="thread-local-storage-tls"></a>线程本地存储 (TLS)
 
-线程本地存储 (TLS) 是一种方法，给定的多线程进程中的每个线程可以使用这种方法分配用以存储线程特定的数据的位置。 动态绑定 （运行时） 线程特定的数据支持 TLS api ([TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)。  Win32 和 Visual C++ 编译器现在除了支持现有的 API 实现外，还支持静态绑定（负载时）每线程数据。
+线程本地存储 (TLS) 是一种方法，给定的多线程进程中的每个线程可以使用这种方法分配用以存储线程特定的数据的位置。 动态绑定 （运行时） 线程特定的数据支持 TLS api ([TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)。  Win32 和 MicrosoftC++编译器现在支持静态绑定 （负载时） 每个线程数据以外的现有 API 实现。
 
 ##  <a name="_core_compiler_implementation_for_tls"></a> TLS 的编译器实现
 
-**C + + 11:**`thread_local`存储类说明符是指定对象的线程本地存储区和类成员的建议的方法。 有关详细信息，请参阅[存储类 （c + +）](../cpp/storage-classes-cpp.md)。
+**C + + 11:**`thread_local`存储类说明符是指定对象的线程本地存储区和类成员的建议的方法。 有关详细信息，请参阅[存储类 (C++)](../cpp/storage-classes-cpp.md)。
 
-Visual c + + 还提供了一个特定于 Microsoft 的属性，[线程](../cpp/thread.md)，作为扩展的存储类修饰符。 使用 **__declspec**关键字来声明**线程**变量。 例如，以下代码声明了一个整数线程局部变量，并用一个值对其进行初始化：
+VisualC++还提供了特定于 Microsoft 的属性[线程](../cpp/thread.md)，作为扩展的存储类修饰符。 使用 **__declspec**关键字来声明**线程**变量。 例如，以下代码声明了一个整数线程局部变量，并用一个值对其进行初始化：
 
 ```
 __declspec( thread ) int tls_i = 1;
@@ -40,7 +40,7 @@ __declspec( thread ) int tls_i = 1;
     __declspec( thread )void func();     // This will generate an error.
     ```
 
-- **线程**可能仅在具有数据项上指定修饰符**静态**扩展盘区。 这包括全局数据对象 (同时**静态**并**extern**)，本地静态对象和 c + + 类的静态数据成员。 不能使用声明自动数据对象**线程**属性。 以下代码生成编译器错误：
+- **线程**可能仅在具有数据项上指定修饰符**静态**扩展盘区。 这包括全局数据对象 (同时**静态**并**extern**)，本地静态对象和静态数据成员的C++类。 不能使用声明自动数据对象**线程**属性。 以下代码生成编译器错误：
 
     ```
     void func1()
@@ -68,7 +68,7 @@ __declspec( thread ) int tls_i = 1;
     char __declspec( thread ) *ch;        // Error
     ```
 
-- 由于 c + + 声明对象使用**线程**允许特性，以下两个示例在语义上等效：
+- 由于声明的C++对象使用**线程**允许特性，以下两个示例在语义上等效：
 
     ```
     __declspec( thread ) class B

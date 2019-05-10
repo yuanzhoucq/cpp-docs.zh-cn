@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Zc compiler options (C++)
 - /Zc:inline
 ms.assetid: a4c94224-1d73-4bea-a9d5-4fa73dc924df
-ms.openlocfilehash: 6855773c6ec807a7488fa5604ddee7fd43983135
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06bdb3300aae88c6c4c8f7e66af658f47548ac5a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316049"
 ---
 # <a name="zcinline-remove-unreferenced-comdat"></a>/Zc:inline（移除未引用的 COMDAT）
 
@@ -27,7 +27,7 @@ ms.locfileid: "50441231"
 
 ## <a name="remarks"></a>备注
 
-当 **/zc: inline**指定，则编译器不会发出符号信息的未引用的 COMDAT 函数或数据，或只具有内部链接的函数或数据。 此优化将简化某些发布版本中，链接器所执行的工作时，或者当链接器选项[/opt: ref](../../build/reference/opt-optimizations.md)指定。 编译器执行此优化后，可显著减小 .obj 文件大小并提高链接器速度。 当禁用优化未启用此编译器选项 ([/Od](../../build/reference/od-disable-debug.md))，或者当[/GL （全程序优化）](../../build/reference/gl-whole-program-optimization.md)指定。
+当 **/zc: inline**指定，则编译器不会发出符号信息的未引用的 COMDAT 函数或数据，或只具有内部链接的函数或数据。 此优化将简化某些发布版本中，链接器所执行的工作时，或者当链接器选项[/opt: ref](opt-optimizations.md)指定。 编译器执行此优化后，可显著减小 .obj 文件大小并提高链接器速度。 当禁用优化未启用此编译器选项 ([/Od](od-disable-debug.md))，或者当[/GL （全程序优化）](gl-whole-program-optimization.md)指定。
 
 默认情况下，此选项处于关闭状态 (**/Zc:inline-**)。 [触发-](permissive-standards-conformance.md)选项不会启用 **/zc: inline**。
 
@@ -123,12 +123,12 @@ void main() {
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择**配置属性** > **C/c + +** > **语言**属性页。
+1. 选择**配置属性** > **C /C++** > **语言**属性页。
 
 1. 修改**删除未引用的代码和数据**属性，然后选择**确定**。
 
 ## <a name="see-also"></a>请参阅
 
-[/Zc（一致性）](../../build/reference/zc-conformance.md)<br/>
+[/Zc（一致性）](zc-conformance.md)<br/>

@@ -1,17 +1,17 @@
 ---
-title: includelib （c + + COM 属性）
+title: includelib (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.includelib
 helpviewer_keywords:
 - includelib attribute
 ms.assetid: cd90ea6e-5ae8-4f11-b8d1-662db95412b2
-ms.openlocfilehash: 4cfadc84b9131aa787323b4967ae9cfc4baabbcb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57f039eeae527dd03884b12e7d9eb424d87f597f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409351"
 ---
 # <a name="includelib-c"></a>includelib (C++)
 
@@ -30,7 +30,7 @@ ms.locfileid: "50570412"
 
 ## <a name="remarks"></a>备注
 
-**Includelib** c + + 属性会导致要包含在生成的.idl 文件中之后, 的.idl 或.h 文件`importlib`语句。
+**Includelib** C++属性将导致.idl 或.h 文件包含在生成的.idl 文件中之后,`importlib`语句。
 
 ## <a name="example"></a>示例
 
@@ -51,8 +51,8 @@ ms.locfileid: "50570412"
 |-|-|
 |**适用对象**|任何位置|
 |**可重复**|是|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

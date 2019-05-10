@@ -1,5 +1,5 @@
 ---
-title: 版本信息编辑器 （c + +）
+title: 版本信息编辑器 (C++)
 ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.version.F1
@@ -23,14 +23,14 @@ helpviewer_keywords:
 - GetFileVersionInfo
 - version information
 ms.assetid: 772e6f19-f765-4cec-9521-0ad3eeb99f9b
-ms.openlocfilehash: 8382371acfd423f8c6864e816b0357e3ef11718e
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: 7910522578d89657adb09eb7729eb7539e010027
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387820"
 ---
-# <a name="version-information-editor-c"></a>版本信息编辑器 （c + +）
+# <a name="version-information-editor-c"></a>版本信息编辑器 (C++)
 
 版本信息包括公司和产品标识、产品发行版号以及版权与商标通知。 与**版本信息编辑器**，创建和维护此存储在版本信息资源中的数据。 版本信息资源不必需的应用程序，但它是一个很好的收集标识的应用程序的信息。 安装 API 也使用版本信息。
 
@@ -60,7 +60,7 @@ ms.locfileid: "57210973"
 
 ### <a name="to-add-version-information-for-another-language-new-version-info-block"></a>若要添加另一种语言 （新版本信息块） 的版本信息
 
-1. 通过在 [资源视图](../windows/resource-view-window.md)中双击鼠标打开版本信息资源。
+1. 通过在 [资源视图](how-to-create-a-resource-script-file.md#create-resources)中双击鼠标打开版本信息资源。
 
 1. 在版本信息表中右键单击并选择**新版本信息块**。
 
@@ -70,7 +70,7 @@ ms.locfileid: "57210973"
 
 ### <a name="to-delete-a-version-information-block"></a>删除版本信息块
 
-1. 通过在 [资源视图](../windows/resource-view-window.md)中双击图标来打开版本信息资源。
+1. 通过在 [资源视图](how-to-create-a-resource-script-file.md#create-resources)中双击图标来打开版本信息资源。
 
 1. 右键单击想要删除选择的块标头**删除版本信息块**。
 

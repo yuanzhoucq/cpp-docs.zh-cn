@@ -7,11 +7,11 @@ helpviewer_keywords:
 - time_base class
 ms.assetid: 9ae37f0b-9a42-496e-9870-3d9b71bab8fb
 ms.openlocfilehash: e790237e506aa32bafdb39938d841307bbc4d9c3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412015"
 ---
 # <a name="timebase-class"></a>time_base 类
 
@@ -46,7 +46,7 @@ public:
 
 - `ymd` 指定订购年，月，然后一天，如 1979年/12/2 中所示。
 
-- `ydm` 指定订单的年份，一天，然后如下所示 1979年: 2 年 12 月。
+- `ydm` 指定订单的年份，一天，然后月，如 1979年中所示：2 年 12 月。
 
 ## <a name="requirements"></a>要求
 

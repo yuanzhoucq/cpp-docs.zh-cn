@@ -1,22 +1,18 @@
 ---
 title: 实现 CComObject、 CComAggObject 和 CComPolyObject
 ms.date: 11/04/2016
-f1_keywords:
-- CComPolyObject
-- CComAggObject
-- CComObject
 helpviewer_keywords:
 - CComPolyObject class, implementing
 - CreateInstance method
 - CComAggObject class
 - CComObject class, implementing
 ms.assetid: 5aabe938-104d-492e-9c41-9f7fb1c62098
-ms.openlocfilehash: b9aa3cc489260aecfa529dff5f7ed7eb19cf3151
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e2413c8fb9f5722f0245883c947067387838e57f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261782"
 ---
 # <a name="implementing-ccomobject-ccomaggobject-and-ccompolyobject"></a>实现 CComObject、 CComAggObject 和 CComPolyObject
 

@@ -1,17 +1,17 @@
 ---
-title: 包括 （c + + COM 属性）
+title: 包括 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.include
 helpviewer_keywords:
 - include attribute
 ms.assetid: d23f8b91-fe5b-48fa-9371-8bd73af7b8e3
-ms.openlocfilehash: 6fb385877285602c1eb6649d11e16558d7fb07ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d9c68601bea4cecd92b371dada5fb086aeb7657f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409442"
 ---
 # <a name="include-c"></a>include (C++)
 
@@ -30,9 +30,9 @@ ms.locfileid: "50544750"
 
 ## <a name="remarks"></a>备注
 
-**包括**c + + 属性会导致`#include`语句下面放置`import "docobj.idl"`语句生成的.idl 文件中。
+**包括**C++属性的原因`#include`语句下面放置`import "docobj.idl"`语句生成的.idl 文件中。
 
-**包括**c + + 属性具有相同的功能[包括](/windows/desktop/Midl/include)MIDL 特性。
+**包括**C++属性具有相同的功能[包括](/windows/desktop/Midl/include)MIDL 特性。
 
 ## <a name="example"></a>示例
 
@@ -53,8 +53,8 @@ ms.locfileid: "50544750"
 |-|-|
 |**适用对象**|任何位置|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

@@ -1,17 +1,17 @@
 ---
-title: 数据成员特性 (c + + COM)
+title: 数据成员特性 (C++ COM)
 ms.date: 10/02/2018
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 - data members [C++], attributes
 - data members [C++]
 ms.assetid: 95b2397d-1daf-4ae4-8cd0-06956d005b13
-ms.openlocfilehash: e188f4d9ad2c553ff142e45ec84bc0a04630b816
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad21ed16eee8cd14e8f798450ff385d5f429a280
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62148219"
 ---
 # <a name="data-member-attributes"></a>数据成员特性
 
@@ -31,7 +31,7 @@ ms.locfileid: "50512926"
 |[range](range-cpp.md)|指定参数或在运行时设置其值的字段的允许值的范围。|
 |[rdx](rdx.md)|创建注册表项或修改现有的注册表项。|
 |[readonly](readonly-cpp.md)|禁止分配给数据成员。|
-|[requestedit](requestedit.md)|指示该属性支持`OnRequestEdit`通知。|
+|[requestedit](requestedit.md)|指示该属性支持 `OnRequestEdit` 通知。|
 
 ## <a name="see-also"></a>请参阅
 

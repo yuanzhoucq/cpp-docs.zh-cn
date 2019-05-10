@@ -8,12 +8,12 @@ helpviewer_keywords:
 - OLE DB provider templates, stored procedures
 - stored procedures, OLE DB
 ms.assetid: 90507e4c-eca2-46c9-ad8c-07e10dc1d41b
-ms.openlocfilehash: 2c0c1c71103384439d0b7b94f942e1b5a6d9e651
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7ace43283c56c0c859b193f63e8ca104f6b52a31
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62165757"
 ---
 # <a name="using-stored-procedures"></a>使用存储过程
 
@@ -22,7 +22,7 @@ ms.locfileid: "50536146"
 存储的过程可以有任意数量的 （包括零个） 输入或输出参数，并可以传递返回值。 可以将值硬编码参数为特定的数据值，也可以使用参数标记 (问号？)。
 
 > [!NOTE]
->  CLR 必须使用编译使用 Visual c + + 创建的存储的过程的 SQL Server`/clr:safe`编译器选项。
+>  CLR SQL Server 存储过程创建使用视觉对象C++必须使用编译`/clr:safe`编译器选项。
 
 OLE DB 访问接口的 SQL Server (SQLOLEDB) 支持以下存储过程使用可返回数据的机制：
 

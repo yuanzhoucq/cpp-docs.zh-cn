@@ -5,20 +5,20 @@ helpviewer_keywords:
 - MAPI, MFC
 - sample applications [MFC], MAPI
 ms.assetid: 3af3085c-8c8f-47c9-a966-b82311a20bf6
-ms.openlocfilehash: 16f9868d6904b9c6648ee040a0171fb4aa0fdeba
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5672ddd73c3de437987576bd7edaf56e9b5b44c5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62226276"
 ---
 # <a name="mapi-samples"></a>MAPI 示例
 
 请参见以下演示 Microsoft 消息处理应用程序编程接口 (MAPI) 功能的示例程序：
 
-- [NPP](../visual-cpp-samples.md)
+- [NPP](../overview/visual-cpp-samples.md)
 
-- [DRAWCLI](../visual-cpp-samples.md)
+- [DRAWCLI](../overview/visual-cpp-samples.md)
 
 ## <a name="see-also"></a>请参阅
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - out instruction
 - __outbyte intrinsic
 ms.assetid: c4cd1a34-8a02-4e37-993d-3201bc17901a
-ms.openlocfilehash: fa17e4859e861a9be46b4ad32b7ad090f6c3dbc6
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 234892369572a2ee315687f5d70533a0c8cf4b59
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62262965"
 ---
 # <a name="outbyte"></a>__outbyte
 

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Internet [MFC], asynchronous downloading
 ms.assetid: 418b0c64-0046-4dae-8118-c9c762b5822e
 ms.openlocfilehash: e7a7ea51bca134e965747db8aac7f8a62822c9eb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62165835"
 ---
 # <a name="asynchronous-monikers-on-the-internet"></a>Internet 上的异步名字对象
 
@@ -41,8 +41,7 @@ ms.locfileid: "57305024"
 
 ## <a name="mfc-classes-for-asynchronous-monikers"></a>异步名字对象的 MFC 类
 
-[CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md)派生自[CMonikerFile](../mfc/reference/cmonikerfile-class.md)，后者又派生自[COleStreamFile](../mfc/reference/colestreamfile-class.md)。 
-  `COleStreamFile` 对象表示数据流；`CMonikerFile` 对象使用 `IMoniker` 获取数据，而 `CAsyncMonikerFile` 对象异步获取数据。
+[CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md)派生自[CMonikerFile](../mfc/reference/cmonikerfile-class.md)，后者又派生自[COleStreamFile](../mfc/reference/colestreamfile-class.md)。 `COleStreamFile` 对象表示数据流；`CMonikerFile` 对象使用 `IMoniker` 获取数据，而 `CAsyncMonikerFile` 对象异步获取数据。
 
 异步名字对象主要用在启用 Internet 的应用程序和 ActiveX 控件中，以在文件传输过程中提供具有响应能力的用户界面。 最好的例子是使用[CDataPathProperty](../mfc/reference/cdatapathproperty-class.md)为 ActiveX 控件提供异步属性。
 

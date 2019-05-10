@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ErrLook tool
 - Error lookup tool
 ms.assetid: 6040ffc1-2355-4a45-8998-84cbcba4ca91
-ms.openlocfilehash: 598e3d938645e3d024b2409d97b4b8f082ee2d85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c8afcafa7d1b8cd666eb5b02f09a14782f8621ca
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271770"
 ---
 # <a name="errlook-reference"></a>ERRLOOK 参考
 
@@ -20,19 +20,19 @@ ms.locfileid: "50621463"
 
 ## <a name="in-this-section"></a>本节内容
 
-[“值”编辑控件](../../build/reference/value-edit-control.md)<br/>
+[“值”编辑控件](value-edit-control.md)<br/>
 介绍 ERRLOOK 中的值编辑控件。
 
-[“错误消息”编辑控件](../../build/reference/error-message-edit-control.md)<br/>
+[“错误消息”编辑控件](error-message-edit-control.md)<br/>
 描述中 ERRLOOK 的错误消息编辑控件。
 
-[“模块”按钮](../../build/reference/modules-button.md)<br/>
+[“模块”按钮](modules-button.md)<br/>
 介绍在 ERRLOOK 模块按钮。
 
-[“查找”按钮](../../build/reference/look-up-button.md)<br/>
+[“查找”按钮](look-up-button.md)<br/>
 介绍 ERRLOOK 中的查找按钮。
 
 ## <a name="related-sections"></a>相关章节
 
-[C/C++ 生成工具](../../build/reference/c-cpp-build-tools.md)<br/>
-提供指向探讨 C/c + + 生成工具在 Visual c + + 中提供。
+[其他 MSVC 生成工具](c-cpp-build-tools.md)<br/>
+提供指向探讨 C /C++生成视觉对象中提供的工具C++。

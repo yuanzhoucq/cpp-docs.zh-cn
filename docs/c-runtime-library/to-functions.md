@@ -20,12 +20,12 @@ helpviewer_keywords:
 - case, converting
 - characters, converting
 ms.assetid: f636a4c6-8c9f-4be2-baac-064f9dbae300
-ms.openlocfilehash: 8a6a1a69147c135ce539393e535f0e1f2d03ccfa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 17d80507462b3eb0fdfb5d9e41da6162947bd3de
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580740"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742533"
 ---
 # <a name="to-functions"></a>to 函数
 
@@ -40,15 +40,15 @@ ms.locfileid: "50580740"
 
 **to** 函数和宏转换如下所示。
 
-|例程所返回的值|宏|描述|
+|例程所返回的值|宏|说明|
 |-------------|-----------|-----------------|
 |`__toascii`|`__toascii`|将 `c` 转换为 ASCII 字符|
 |`tolower`|`tolower`|如适用，将 `c` 转换为小写|
 |`_tolower`|`_tolower`|将 `c` 转换为小写|
-|`towlower`|无|将 `c` 转换为相应的宽字符小写字母|
+|`towlower`|None|将 `c` 转换为相应的宽字符小写字母|
 |`toupper`|`toupper`|如适用，将 `c` 转换为大写|
 |`_toupper`|`_toupper`|将 `c` 转换为大写|
-|`towupper`|无|将 c 转换为相应的宽字符大写字母|
+|`towupper`|None|将 c 转换为相应的宽字符大写字母|
 
 若要将 **的函数版本用于同时定义为宏的** 例程，或者使用 `#undef` 指令移除宏定义或不包括 CTYPE.H。 如果使用 /Za 编译器选项，编译器将使用 `toupper` 或 `tolower` 的函数版本。 `toupper` 和 `tolower` 函数的声明位于 STDLIB.H 中。
 

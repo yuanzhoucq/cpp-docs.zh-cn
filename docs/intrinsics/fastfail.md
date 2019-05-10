@@ -2,12 +2,12 @@
 title: __fastfail
 ms.date: 11/04/2016
 ms.assetid: 9cd32639-e395-4c75-9f3a-ac3ba7f49921
-ms.openlocfilehash: e96d981be5c5186d6cc472cc8f4dffcbf1c2b7bf
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: a9f75cbf3c572401ef26fb16ced221eb24d35534
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55849471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62263875"
 ---
 # <a name="fastfail"></a>__fastfail
 

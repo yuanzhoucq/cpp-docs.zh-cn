@@ -12,12 +12,12 @@ helpviewer_keywords:
 - user accounts [C++]
 - administrator (not running as) [C++]
 ms.assetid: e48a03ec-d345-49f6-809a-1a291eecbc81
-ms.openlocfilehash: bb67c4cf2f166a8dd67d14b9f61b23241fe442fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc06e2dc58d28c34a646ccffc0be90368b3297f5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411287"
 ---
 # <a name="running-as-a-member-of-the-users-group"></a>作为用户组的成员运行
 
@@ -29,11 +29,11 @@ ms.locfileid: "50607878"
 
 ## <a name="non-administrator-user-groups"></a>非管理员用户组
 
-应将开发人员通常使用的 Windows 用户帐户添加到用户组或超级用户组。 还应将开发人员添加到调试组。 作为用户组的成员，您可以执行例程任务，包括在使您的计算机免受不必要的风险的情况下运行程序以及访问 Internet 站点。 作为超级用户组的成员，你也可以执行任务，如应用程序的安装、打印机的安装和大多数“控制面板”的操作。 如果你需要执行管理员任务（如升级操作系统或配置系统参数），应登录到管理员帐户，登录时间以足够完成执行管理任务为宜。 或者，Windows **runas**命令可用于启动具有管理访问权限的特定应用程序。
+应将开发人员通常使用的 Windows 用户帐户添加到用户组或超级用户组。 还应将开发人员添加到调试组。 作为用户组的成员，你可以执行例程任务，包括在使你的计算机免受不必要的风险的情况下运行程序以及访问 Internet 站点。 作为超级用户组的成员，你也可以执行任务，如应用程序的安装、打印机的安装和大多数“控制面板”的操作。 如果你需要执行管理员任务（如升级操作系统或配置系统参数），应登录到管理员帐户，登录时间以足够完成执行管理任务为宜。 或者，Windows **runas**命令可用于启动具有管理访问权限的特定应用程序。
 
 ## <a name="exposing-customers-to-security-risks"></a>向客户公开安全风险
 
-不作为管理员组的一部分对于开发人员来说尤其重要，除保护开发的计算机外，还防止开发人员因疏忽而编写了要求客户加入管理员组以执行所开发的应用程序的代码。 如果开发过程中引入需要管理员访问权限的代码，它将在运行时失败，并将应用程序现在需要客户作为管理员运行这一事实通知您。
+不作为管理员组的一部分对于开发人员来说尤其重要，除保护开发的计算机外，还防止开发人员因疏忽而编写了要求客户加入管理员组以执行所开发的应用程序的代码。 如果开发过程中引入需要管理员访问权限的代码，它将在运行时失败，并将应用程序现在需要客户作为管理员运行这一事实通知你。
 
 ## <a name="code-that-requires-administrator-privileges"></a>需要管理员特权的代码
 

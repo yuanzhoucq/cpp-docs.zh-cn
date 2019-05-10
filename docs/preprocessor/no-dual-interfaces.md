@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - no_dual_interfaces attribute
 ms.assetid: 9acd5d9d-4a49-4cdc-9470-73a2c23cf512
-ms.openlocfilehash: d76fe3ce6bea4c3895da9d8b40d69852f912824e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ae75bc2e974f374768f1a9e5a0e1ced61e9904b0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409819"
 ---
 # <a name="nodualinterfaces"></a>no_dual_interfaces
-**C + + 专用**
+**C++特定**
 
 更改编译器为双重接口方法生成包装器函数的方式。
 
@@ -28,7 +28,7 @@ no_dual_interfaces
 
 通常，该包装器将通过接口的虚函数表调用方法。 与**no_dual_interfaces**，而是调用包装器`IDispatch::Invoke`来调用该方法。
 
-**结束 c + + 专用**
+**结束C++特定**
 
 ## <a name="see-also"></a>请参阅
 

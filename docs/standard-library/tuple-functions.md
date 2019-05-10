@@ -14,11 +14,11 @@ helpviewer_keywords:
 - std::make_tuple [C++]
 - std::tie [C++]
 ms.openlocfilehash: 93c11a89f7cdfa3949be2d97e401fad199a17d97
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62278952"
 ---
 # <a name="lttuplegt-functions"></a>&lt;tuple&gt; 函数
 
@@ -121,7 +121,7 @@ template <class T1, class T2, ..., class TN>
 *TN*<br/>
 第 N 个函数参数的类型。
 
-*TN*<br/>
+*tN*<br/>
 第 N 个函数参数的值。
 
 ### <a name="remarks"></a>备注
@@ -165,7 +165,7 @@ int main() {
 4 5 6 7
 ```
 
-## <a name="tie"></a>  将绑定
+## <a name="tie"></a>  tie
 
 从元素引用中生成一个 `tuple`。
 

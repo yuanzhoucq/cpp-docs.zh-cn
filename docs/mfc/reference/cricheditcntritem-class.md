@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CRichEditCntrItem [MFC], CRichEditCntrItem
 - CRichEditCntrItem [MFC], SyncToRichEditObject
 ms.assetid: 6c0b4efe-0fb8-4621-b5e1-fdcb8ec48c3b
-ms.openlocfilehash: 0f71607147b353c5071830bdce481f1e5e5d4717
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 674937df9b4ecef0d159a47a45a716d1175ad5d9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372109"
 ---
 # <a name="cricheditcntritem-class"></a>CRichEditCntrItem 类
 
@@ -49,7 +49,7 @@ class CRichEditCntrItem : public COleClientItem
 
 此 Windows 公共控件 (并因此[CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)和相关类) 仅适用于在 Windows 95/98 和 Windows NT 版本 3.51 下运行的程序和更高版本。
 
-在 MFC 应用程序中使用格式文本编辑容器项的示例，请参阅[写字板](../../visual-cpp-samples.md)示例应用程序。
+在 MFC 应用程序中使用格式文本编辑容器项的示例，请参阅[写字板](../../overview/visual-cpp-samples.md)示例应用程序。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -110,7 +110,7 @@ void SyncToRichEditObject(REOBJECT& reo);
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例写字板](../../visual-cpp-samples.md)<br/>
+[MFC 示例写字板](../../overview/visual-cpp-samples.md)<br/>
 [COleClientItem 类](../../mfc/reference/coleclientitem-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CRichEditDoc 类](../../mfc/reference/cricheditdoc-class.md)<br/>

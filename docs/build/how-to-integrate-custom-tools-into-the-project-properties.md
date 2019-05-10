@@ -1,17 +1,15 @@
 ---
 title: 如何：将自定义工具集成到项目属性
 ms.date: 04/27/2016
-f1_keywords:
-- msbuild.cpp.howto.integratecustomtools
 helpviewer_keywords:
 - 'msbuild (c++), howto: integrate custom tools'
 ms.assetid: f32d91a4-44e9-4de3-aa9a-1c7f709ad2ee
-ms.openlocfilehash: 3464bfb04211969a6d4209ca45a277100a99883d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
-ms.translationtype: MT
+ms.openlocfilehash: e9f0758bbb2ab796bd60516ca5d57c605e36fb56
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416392"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220684"
 ---
 # <a name="how-to-integrate-custom-tools-into-the-project-properties"></a>如何：将自定义工具集成到项目属性
 
@@ -39,4 +37,4 @@ ms.locfileid: "57416392"
 
 ## <a name="see-also"></a>请参阅
 
-[MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)
+[在命令行中的 MSBuildC++](msbuild-visual-cpp.md)

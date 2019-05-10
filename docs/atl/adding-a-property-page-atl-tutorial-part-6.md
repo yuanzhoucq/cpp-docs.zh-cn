@@ -4,11 +4,11 @@ ms.custom: get-started-article
 ms.date: 09/27/2018
 ms.assetid: df80d255-e7ea-49d9-b940-3f012e90cf9b
 ms.openlocfilehash: 9287b7a15e3653212ed6a5428cdfe5a530ececc3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62198498"
 ---
 # <a name="adding-a-property-page-atl-tutorial-part-6"></a>添加属性页（ATL 教程，第 6 部分）
 
@@ -44,7 +44,7 @@ ms.locfileid: "57264751"
 
 |文件|描述|
 |----------|-----------------|
-|PolyProp.h|包含 c + + 类`CPolyProp`，它可实现的属性页。|
+|PolyProp.h|包含C++类`CPolyProp`，它可实现的属性页。|
 |PolyProp.cpp|包括 PolyProp.h 文件。|
 |PolyProp.rgs|注册属性页对象以注册表脚本。|
 
@@ -106,7 +106,7 @@ ms.locfileid: "57264751"
 
 1. 展开`IDC_SIDES`节点在事件列表中。
 
-1. 选择`EN_CHANGE`，然后从右侧的下拉列表菜单，单击**\<添加 > OnEnChangeSides**。 `OnEnChangeSides`处理程序声明将添加到 Polyprop.h 和到 Polyprop.cpp 的处理程序实现。
+1. 选择`EN_CHANGE`，然后从右侧的下拉列表菜单，单击 **\<添加 > OnEnChangeSides** 。 `OnEnChangeSides`处理程序声明将添加到 Polyprop.h 和到 Polyprop.cpp 的处理程序实现。
 
 接下来，您将修改该处理程序。
 

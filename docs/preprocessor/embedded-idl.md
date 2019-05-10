@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - embedded_idl attribute
 ms.assetid: f1c1c2e8-3872-4172-8795-8d1288a20452
-ms.openlocfilehash: 202d5b23a5e2e8e673e3c220b9618cfe6cd4f0d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c46924d2757d01a934c21a70f23e6556f6a10fd3
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389341"
 ---
 # <a name="embeddedidl"></a>embedded_idl
 
-**C + + 专用**
+**C++特定**
 
 指定将类型库写入保留了特性生成的代码的 .tlh 文件。
 
@@ -30,9 +30,9 @@ embedded_idl[("param")]
 *param*<br/>
 可以是以下两个值之一：
 
-- **emitidl**： 从类型库导入的类型信息将出现在为特性化项目生成的 IDL 中。  如果不为 `embedded_idl` 指定参数，则这是默认值，并将有效。
+- **emitidl**:从类型库导入的类型信息将会显示在为特性化项目生成的 IDL 中。  如果不为 `embedded_idl` 指定参数，则这是默认值，并将有效。
 
-- **no_emitidl**： 从类型库导入的类型信息将不会显示在为特性化项目生成的 IDL 中。
+- **no_emitidl**:从类型库导入的类型信息不会出现在为特性化项目生成的 IDL 中。
 
 ## <a name="example"></a>示例
 
@@ -46,7 +46,7 @@ embedded_idl[("param")]
 
 ## <a name="remarks"></a>备注
 
-**结束 c + + 专用**
+**结束C++特定**
 
 ## <a name="see-also"></a>请参阅
 

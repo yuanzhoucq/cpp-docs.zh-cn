@@ -26,12 +26,12 @@ helpviewer_keywords:
 - _InterlockedAdd_acq intrinsic
 - _InterlockedAdd64_rel intrinsic
 ms.assetid: 3d319603-ea9c-4fdd-ae61-e52430ccc3b1
-ms.openlocfilehash: 473d113ff9af3b009075dfef657082034b1bbcb6
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 348e936bb05796e36ae45095f25b943076cec464
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62349512"
 ---
 # <a name="interlockedadd-intrinsic-functions"></a>_InterlockedAdd 内部函数
 
@@ -130,7 +130,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>输出
+## <a name="output"></a>Output
 
 ```Output
 0xffffff00 0xff0000 0xffffff00
@@ -160,7 +160,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>输出
+## <a name="output"></a>Output
 
 ```Output
 ff0000000000 + ff0000ffffffff = ffff00ffffffff

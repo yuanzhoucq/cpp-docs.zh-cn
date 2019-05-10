@@ -7,11 +7,11 @@ helpviewer_keywords:
 - __asm keyword [C++], as C macros
 ms.assetid: 677ba11c-21c8-4609-bba7-cd47312243b0
 ms.openlocfilehash: c48298cf802600995dbbf68885896b6feccb807d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167021"
 ---
 # <a name="defining-asm-blocks-as-c-macros"></a>将 __asm 块定义为 C 宏
 
@@ -49,7 +49,7 @@ __asm /* Port output */ { __asm mov al, 2  __asm mov dx, 0xD007 __asm out dx, al
 
 使用分号启动的程序集样式注释 (**;**) 继续到行尾。 这会导致宏出现问题，因为编译器将忽略注释后面的内容，直到到达逻辑行尾。 上述情况同样适用于单行 C 或 C++ 注释 (`// comment`)。 若要防止错误，请在定义为宏的 `/* comment */` 块中使用旧式 C 注释 (`__asm`)。
 
-编写为 C 宏的 `__asm` 块可以采用参数。 但与普通 C 宏不同，`__asm` 宏不能返回值。 这样您便无法在 C 或 C++ 表达式中使用这些宏。
+编写为 C 宏的 `__asm` 块可以采用自变量。 但与普通 C 宏不同，`__asm` 宏不能返回值。 这样您便无法在 C 或 C++ 表达式中使用这些宏。
 
 请注意，不要任意调用此类型的宏。 例如，调用使用 `__fastcall` 约定声明的函数中的汇编语言宏可能会导致意外的结果。 (请参阅[使用和保留内联程序集中的寄存器](../../assembler/inline/using-and-preserving-registers-in-inline-assembly.md)。)
 

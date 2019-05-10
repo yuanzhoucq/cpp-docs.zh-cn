@@ -1,21 +1,21 @@
 ---
-title: / CETCOMPAT （控制流强制技术兼容）
+title: / CETCOMPAT （CET 阴影堆栈兼容）
 ms.date: 02/19/2019
 f1_keywords:
 - /CETCOMPAT
 helpviewer_keywords:
 - /CETCOMPAT linker option
 - /CETCOMPAT
-ms.openlocfilehash: 48eb1e2369e54d855bd19bb1d26ad057c903b9d0
-ms.sourcegitcommit: 7cd712176e5bc341b9d8f899d41ad49f02f85e5f
+ms.openlocfilehash: 0ed5d9d4f9f4f4dc5cd4fc19df4179e86e430187
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2019
-ms.locfileid: "56418687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273243"
 ---
-# <a name="cetcompat-control-flow-enforcement-technology-compatible"></a>/ CETCOMPAT （控制流强制技术兼容）
+# <a name="cetcompat-cet-shadow-stack-compatible"></a>/ CETCOMPAT （CET 阴影堆栈兼容）
 
-指定是否将标记为控制流强制技术 (CET) 兼容的可执行映像。
+指定是否将标记为与控制流强制技术 (CET) 阴影堆栈兼容的可执行映像。
 
 ## <a name="syntax"></a>语法
 
@@ -24,19 +24,19 @@ ms.locfileid: "56418687"
 ## <a name="arguments"></a>自变量
 
 **NO**<br/>
-指定的可执行文件不应标记与 CET 兼容。
+指定的可执行文件不应标记与 CET 阴影堆栈兼容。
 
 ## <a name="remarks"></a>备注
 
-控制流强制技术 (CET) 是一项计算机处理器功能，可提供更有效地防止某些类型的恶意软件攻击的功能。 有关详细信息，请参阅[Intel 控制流强制技术预览](https://software.intel.com/sites/default/files/managed/4d/2a/control-flow-enforcement-technology-preview.pdf)。
+控制流强制技术 (CET) 阴影堆栈是一种计算机处理器功能，提供了功能来防范返回面向编程 (ROP) 基于恶意软件攻击。 有关详细信息，请参阅[Intel 控制流强制技术预览](https://software.intel.com/sites/default/files/managed/4d/2a/control-flow-enforcement-technology-preview.pdf)。
 
-**/CETCOMPAT**链接器选项通知链接器将标记作为 CET 兼容二进制文件。 **/CETCOMPAT:NO**将标记为与 cet 证书不兼容的二进制文件。 如果在命令行上指定这两个选项，则使用指定的最后一个。 此开关目前仅适用于 x86 和 x64 体系结构。
+**/CETCOMPAT**链接器选项通知链接器将标记作为 CET 阴影堆栈兼容的二进制文件。 **/CETCOMPAT:NO**将标记为与 CET 阴影堆栈不兼容的二进制文件。 如果在命令行上指定这两个选项，则使用指定的最后一个。 此开关目前仅适用于 x86 和 x64 体系结构。
 
 **/CETCOMPAT**选项是在 Visual Studio 2019 预览版 3 工具集开始提供。
 
 ### <a name="to-set-the-cetcompat-linker-option-in-visual-studio"></a>在 Visual Studio 中设置 /CETCOMPAT 链接器选项
 
-1. 打开**属性页**项目对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开**属性页**项目对话框。 有关详细信息，请参阅[使用项目属性](../working-with-project-properties.md)。
 
 1. 选择**配置属性** > **链接器** > **命令行**属性页。
 
@@ -48,5 +48,4 @@ ms.locfileid: "56418687"
 
 ## <a name="see-also"></a>请参阅
 
-[设置链接器选项](../../build/reference/setting-linker-options.md)<br/>
-[链接器选项](../../build/reference/linker-options.md)
+[链接器选项](linker-options.md)

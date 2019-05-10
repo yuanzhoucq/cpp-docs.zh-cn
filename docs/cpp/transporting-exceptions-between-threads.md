@@ -1,6 +1,6 @@
 ---
 title: 线程之间传输异常
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 helpviewer_keywords:
 - std::current_exception
 - transporting exceptions between threads
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - rethrow_exception
 - move exceptions between threads
 ms.assetid: 5c95d57b-acf5-491f-8122-57c5df0edd98
-ms.openlocfilehash: f403b1448855b60f323ed582794a00c3e6ae1b3a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: e59883c75fde9938a213fb4e888e6b05a79cf4f7
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464438"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221924"
 ---
 # <a name="transporting-exceptions-between-threads"></a>线程之间传输异常
 
-Visual C++ 支持*传输异常*从到另一个线程。 通过传输异常，你可以在一个线程中捕获异常，然后使该异常看似是在另一个线程中引发的。 例如，你可以使用该功能编写多线程应用程序，其中主线程将处理其辅助线程引发的所有异常。 传输异常对创建并行编程库或系统的开发人员最有用处。 若要实现传输异常，Visual C++ 提供[exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)类型和[current_exception](../standard-library/exception-functions.md#current_exception)， [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception)，和[make_exception_ptr](../standard-library/exception-functions.md#make_exception_ptr)函数。
+MicrosoftC++编译器 (MSVC) 支持*传输异常*到另一个线程中。 通过传输异常，你可以在一个线程中捕获异常，然后使该异常看似是在另一个线程中引发的。 例如，你可以使用该功能编写多线程应用程序，其中主线程将处理其辅助线程引发的所有异常。 传输异常对创建并行编程库或系统的开发人员最有用处。 若要实现传输异常，MSVC 提供[exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)类型并[current_exception](../standard-library/exception-functions.md#current_exception)， [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception)，和[make_exception_ptr](../standard-library/exception-functions.md#make_exception_ptr)函数。
 
 ## <a name="syntax"></a>语法
 
@@ -42,7 +42,7 @@ namespace std
 
 |参数|描述|
 |---------------|-----------------|
-|*未指定*|用于实现 `exception_ptr` 类型的未指定的内部类。|
+|*unspecified*|用于实现 `exception_ptr` 类型的未指定的内部类。|
 |*p*|引用异常的 `exception_ptr` 对象。|
 |*E*|表示异常的类。|
 |*e*|参数 `E` 类的实例。|
@@ -81,11 +81,11 @@ namespace std
 
 只有编译器选项和编程语句的以下组合可以传输异常。 其他组合要么不能捕获异常，要么能捕获但不能传输异常。
 
-- **/EHa**编译器选项和**捕获**语句可以传输 SEH 和 c + + 异常。
+- **/EHa**编译器选项和**捕获**语句可以传输 SEH 和C++异常。
 
-- **/EHa**， **/EHs**，并 **/EHsc**编译器选项和**捕获**语句可以传输 c + + 异常。
+- **/EHa**， **/EHs**，并 **/EHsc**编译器选项和**捕获**语句可以传输C++的异常。
 
-- **/CLR**编译器选项和**捕获**语句可以传输 c + + 异常。 **/CLR**编译器选项暗指的规范 **/EHa**选项。 请注意，编译器不支持传输托管异常。 这是因为托管异常，派生自[System.Exception 类](../standard-library/exception-class.md)，已经是您可以通过使用公共语言运行时的功能的线程之间移动的对象。
+- **/CLR**编译器选项和**捕获**语句可以传输C++异常。 **/CLR**编译器选项暗指的规范 **/EHa**选项。 请注意，编译器不支持传输托管异常。 这是因为托管异常，派生自[System.Exception 类](../standard-library/exception-class.md)，已经是您可以通过使用公共语言运行时的功能的线程之间移动的对象。
 
    > [!IMPORTANT]
    > 我们建议您指定 **/EHsc**编译器选项和 catch 仅 C++ 异常。 你可能面临安全威胁如果您使用 **/EHa**或 **/CLR**编译器选项和一个**捕获**语句使用省略号*异常声明*(`catch(...)`)。 你可能希望使用**捕获**语句捕获几个特定的异常。 但是，`catch(...)` 语句将捕获所有的 C++ 和 SEH 异常，包括致命的意外异常。 如果忽略意外异常或处理不当，恶意代码就可以趁此机会破坏你程序的安全性。
@@ -122,7 +122,7 @@ namespace std
 
 ### <a name="seh-exceptions"></a>SEH 异常
 
-如果您使用 **/EHa**编译器选项，可以在 c + + 中捕获 SEH 异常**捕获**块。 `current_exception` 函数返回引用 SEH 异常的 `exception_ptr` 对象。 并`rethrow_exception`函数将引发 SEH 异常，如果调用使用 thetransported`exception_ptr`对象作为其参数。
+如果您使用 **/EHa**编译器选项，可以捕获 SEH 异常中的C++**捕获**块。 `current_exception` 函数返回引用 SEH 异常的 `exception_ptr` 对象。 并`rethrow_exception`函数将引发 SEH 异常，如果调用使用 thetransported`exception_ptr`对象作为其参数。
 
 `current_exception`函数将返回 null`exception_ptr`如果调用 seh **__finally**终止处理程序 **__except**异常处理程序，或 **__except**筛选器表达式。
 
@@ -140,9 +140,9 @@ namespace std
 
 ## <a name="makeexceptionptr-function"></a>make_exception_ptr 函数
 
-`make_exception_ptr` 函数采用类的实例作为其自变量，然后返回引用该实例的 `exception_ptr`。 通常，指定[异常类](../standard-library/exception-class.md)对象作为参数传递给 `make_exception_ptr` 函数，但任意类对象都可以是参数。
+`make_exception_ptr` 函数采用类的实例作为其参数，然后返回引用该实例的 `exception_ptr`。 通常，指定[异常类](../standard-library/exception-class.md)对象作为参数传递给 `make_exception_ptr` 函数，但任意类对象都可以是参数。
 
-调用`make_exception_ptr`函数是等效于引发 c + + 异常，即捕获该中**捕获**块中，并调用`current_exception`函数以返回`exception_ptr`引用异常的对象。 Microsoft 实现的 `make_exception_ptr` 函数比调用并捕获异常更高效。
+调用`make_exception_ptr`函数是等效于引发C++异常，即捕获该中**捕获**块中，并调用`current_exception`函数以返回`exception_ptr`引用异常的对象。 Microsoft 实现的 `make_exception_ptr` 函数比调用并捕获异常更高效。
 
 应用程序通常不需要 `make_exception_ptr` 函数，因此，我们不建议使用此函数。
 

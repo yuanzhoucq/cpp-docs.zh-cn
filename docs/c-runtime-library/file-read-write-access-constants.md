@@ -10,12 +10,12 @@ helpviewer_keywords:
 - constants [C++], file attributes
 - file read/write access constants
 ms.assetid: 56cd1d22-39a5-4fcf-bea2-7046d249e8ee
-ms.openlocfilehash: 7bf16271c0d58e3d87e4c24795ec0bd1ee1ccb89
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0dfbc925c5252724cbb1caad58470849915242a9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666163"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746066"
 ---
 # <a name="file-readwrite-access-constants"></a>文件读取/写入访问常量
 
@@ -31,7 +31,7 @@ ms.locfileid: "50666163"
 
 访问类型如下表中所述：
 
-|访问类型|描述|
+|访问类型|说明|
 |----------|----------------|
 |**“r”**|打开以便读取。 如果文件不存在或找不到，调用以打开文件操作将失败。|
 |**“w”**|打开用于写入的空文件。 如果给定文件存在，则其内容会被销毁。|

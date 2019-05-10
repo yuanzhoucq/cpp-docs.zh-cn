@@ -4,18 +4,18 @@ ms.date: 11/19/2018
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: a86393954cdebec59bd2c6a50cd5e547ef06acb7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9aaf75916196f33904a51289d0a49725e042aa9e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62262098"
 ---
 # <a name="example-implementing-a-property-page"></a>示例:实现属性页
 
 此示例演示如何生成属性页的显示 （并允许您更改） 的属性[文档类](../mfc/document-classes.md)接口。
 
-示例基于[ATLPages 示例](../visual-cpp-samples.md)。
+示例基于[ATLPages 示例](../overview/visual-cpp-samples.md)。
 
 若要完成此示例中，你将：
 
@@ -164,4 +164,4 @@ End Module
 ## <a name="see-also"></a>请参阅
 
 [属性页](../atl/atl-com-property-pages.md)<br/>
-[ATLPages 示例](../visual-cpp-samples.md)
+[ATLPages 示例](../overview/visual-cpp-samples.md)

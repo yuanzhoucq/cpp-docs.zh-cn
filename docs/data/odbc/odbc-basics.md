@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ODBC, about ODBC
 - ODBC, components
 ms.assetid: ec529702-0fb2-4754-b8de-d1efa8eca18f
-ms.openlocfilehash: 81b1f6d06d909b5b046703b97c4574270efbdd46
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e14f5d051b9684cd79a34f5fb50feeb785d2f927
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395789"
 ---
 # <a name="odbc-basics"></a>ODBC 基础
 
@@ -25,7 +25,7 @@ ms.locfileid: "50591719"
 
 - [使用你的应用程序需要重新分发的哪些 ODBC 组件](../../data/odbc/redistributing-odbc-components-to-your-customers.md)
 
-您还需要阅读相关的文章[ODBC: ODBC 游标库](../../data/odbc/odbc-the-odbc-cursor-library.md)。
+您还需要阅读相关的文章[ODBC:ODBC 游标库](../../data/odbc/odbc-the-odbc-cursor-library.md)。
 
 > [!NOTE]
 > ODBC 数据源是可通过 MFC ODBC 类，如本主题中所述或 MFC 数据访问对象 (DAO) 类的访问。
@@ -63,7 +63,7 @@ ODBC 组件如下：
 
 数据库类支持对其具有 ODBC 驱动程序的任何数据源。 这可能，例如，包括关系数据库、 编制索引的顺序访问方法 (ISAM) 数据库、 Microsoft Excel 电子表格或文本文件。 ODBC 驱动程序管理到数据源的连接，SQL 用于从数据库中选择记录。
 
-有关此版本的 Visual c + + 中包含的 ODBC 驱动程序的列表和有关获取其他驱动程序的信息，请参阅[ODBC 驱动程序列表](../../data/odbc/odbc-driver-list.md)。
+有关包含在视觉对象的此版本的 ODBC 驱动程序的列表C++和有关获取其他驱动程序的信息，请参阅[ODBC 驱动程序列表](../../data/odbc/odbc-driver-list.md)。
 
 ## <a name="see-also"></a>请参阅
 

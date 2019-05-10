@@ -5,11 +5,11 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], methods
 ms.assetid: e20271de-6ffa-4ba0-848b-bafe6c9e510c
 ms.openlocfilehash: 71c4cdd5ea07b3468b7878a221129a0de5eb4974
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62386364"
 ---
 # <a name="mfc-activex-controls-methods"></a>MFC ActiveX 控件：方法
 
@@ -17,7 +17,7 @@ ActiveX 控件触发事件本身和其控件的容器之间进行通信。 容�
 
 方法和属性提供了导出的接口用于其他应用程序，例如自动化客户端和 ActiveX 控件容器。 ActiveX 控件属性的详细信息，请参阅文章[MFC ActiveX 控件：属性](../mfc/mfc-activex-controls-properties.md)。
 
-方法是类似于 c + + 类的成员函数的用法和用途。 有两种类型的控件可以实现的方法： 常用和自定义。 常用事件，库存方法类似于这些方法是为其[COleControl](../mfc/reference/colecontrol-class.md)提供实现。 常用方法的详细信息，请参阅文章[MFC ActiveX 控件：添加常用方法](../mfc/mfc-activex-controls-adding-stock-methods.md)。 自定义方法，开发人员，定义允许其他自定义控件。 有关详细信息，请参阅文章[MFC ActiveX 控件：添加自定义方法](../mfc/mfc-activex-controls-adding-custom-methods.md)。
+方法是类似的用法和用途的成员函数的C++类。 有两种类型的控件可以实现的方法： 常用和自定义。 常用事件，库存方法类似于这些方法是为其[COleControl](../mfc/reference/colecontrol-class.md)提供实现。 常用方法的详细信息，请参阅文章[MFC ActiveX 控件：添加常用方法](../mfc/mfc-activex-controls-adding-stock-methods.md)。 自定义方法，开发人员，定义允许其他自定义控件。 有关详细信息，请参阅文章[MFC ActiveX 控件：添加自定义方法](../mfc/mfc-activex-controls-adding-custom-methods.md)。
 
 Microsoft 基础类库 (MFC) 实现了一个机制，使控件以支持股票和自定义方法。 第一个部分是类`COleControl`。 派生自`CWnd`，`COleControl`成员函数支持所有 ActiveX 控件都通用的常用方法。 此机制的第二部分是调度映射。 调度映射是类似于消息映射;但是，而不是将函数映射到 Windows 消息 ID，调度映射到 IDispatch ID 映射的虚拟成员函数。
 
@@ -34,7 +34,7 @@ Microsoft 基础类库 (MFC) 实现了一个机制，使控件以支持股票和
 
 以下文章介绍了详细信息中的方法：
 
-- [MFC ActiveX 控件：添加常用方法](../mfc/mfc-activex-controls-adding-stock-methods.md)
+- [MFC ActiveX 控件：添加内置方法](../mfc/mfc-activex-controls-adding-stock-methods.md)
 
 - [MFC ActiveX 控件：添加自定义方法](../mfc/mfc-activex-controls-adding-custom-methods.md)
 

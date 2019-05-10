@@ -24,11 +24,11 @@ helpviewer_keywords:
 - wide characters, strings
 ms.assetid: a8d21fec-0d36-4085-9d81-9b1c61c7259d
 ms.openlocfilehash: 46ef195ec4685c327c4b5951ec44e5c363214b59
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155324"
 ---
 # <a name="wcsrtombs"></a>wcsrtombs
 
@@ -82,7 +82,7 @@ size_t wcsrtombs(
 
 在 C++ 中，此函数具有一个调用此函数的更新、更安全副本的模板重载。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
-## <a name="exceptions"></a>异常
+## <a name="exceptions"></a>Exceptions
 
 **Wcsrtombs**函数是多线程安全，只要当前线程中的函数不调用**setlocale**执行此函数时， *mbstate*不为 null。
 

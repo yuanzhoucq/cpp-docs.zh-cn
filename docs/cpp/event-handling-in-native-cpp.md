@@ -1,19 +1,19 @@
 ---
 title: 本机 C++ 中的事件处理
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 helpviewer_keywords:
-- event handling [C++], Visual C++
+- event handling [C++]
 ms.assetid: e4b9219a-15d8-42fb-83c8-6d2e4e087c8d
-ms.openlocfilehash: 210eea760e80814041b4e97f50c4164ef98d75e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 9eb0334e3633921842fcc06155ba0300ff6192e1
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50457546"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222188"
 ---
 # <a name="event-handling-in-native-c"></a>本机 C++ 中的事件处理
 
-在本机 C++ 事件处理中，你将设置事件源和事件接收器使用[event_source](../windows/event-source.md)和[event_receiver](../windows/event-receiver.md)属性，分别指定`type` = `native`. 这些特性允许应用它们的类在本机的非 COM 上下文中激发和处理事件。
+在本机 C++ 事件处理中，你将设置事件源和事件接收器使用[event_source](../windows/attributes/event-source.md)和[event_receiver](../windows/attributes/event-receiver.md)属性，分别指定`type` = `native`. 这些特性允许应用它们的类在本机的非 COM 上下文中激发和处理事件。
 
 ## <a name="declaring-events"></a>声明事件
 
@@ -81,7 +81,7 @@ int main() {
 }
 ```
 
-### <a name="output"></a>输出
+### <a name="output"></a>Output
 
 ```Output
 MyHandler2 was called with value 123.

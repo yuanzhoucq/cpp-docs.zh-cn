@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CRT_REPORT_HOOK type
 - _finddata_t type
 ms.assetid: 23312dd2-4a6a-4d70-9b48-2a5d0d8c9f28
-ms.openlocfilehash: dd508095508cf9d0d04778b06d6296296649f710
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85ebe9052d9e8bd18dfc9b3b123871e2e5acda4e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565316"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740471"
 ---
 # <a name="standard-types"></a>标准类型
 
@@ -189,7 +189,7 @@ Microsoft 运行库定义下列标准类型和 typedef。
 |int_fast64_t、uint_fast64_t|long long、unsigned long long|
 |intmax_t、uintmax_t|long long、unsigned long long|
 
-|类型|描述|声明位置|
+|类型|说明|声明位置|
 |----------|-----------------|-----------------|
 |`clock_t` (long)|存储时间值；由 [clock](../c-runtime-library/reference/clock.md) 使用。|TIME.H|
 |`_complex` 结构|存储复数的实数部分和虚数部分；由 [_cabs](../c-runtime-library/reference/cabs.md) 使用。|MATH.H|

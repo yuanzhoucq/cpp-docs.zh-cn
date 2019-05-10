@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB providers, creating
 - OLE DB provider templates, creating providers
 ms.assetid: f73017c3-c89f-41a6-a306-ea992cf6092c
-ms.openlocfilehash: b6e59dba375e78878d13a6014ce75edf2a21758b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3e46e87b0d5d538a0f9fd7e231debfef3fa95210
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62361888"
 ---
 # <a name="creating-an-ole-db-provider"></a>创建 OLE DB 提供程序
 
@@ -18,7 +18,7 @@ ms.locfileid: "50611193"
 
 基本步骤如下：
 
-1. 使用**ATL 项目向导**若要创建基本项目文件并**ATL OLEDB 提供程序向导**来创建提供程序 (选择**ATL OLEDB 提供程序**从**已安装** > **Visual c + +** > **ATL**文件夹中的**添加新项**)。
+1. 使用**ATL 项目向导**若要创建基本项目文件并**ATL OLEDB 提供程序向导**来创建提供程序 (选择**ATL OLEDB 提供程序**从**已安装** > **Visual C++**   >  **ATL**文件夹中的**添加新项**)。
 
    > [!NOTE]
    > 该项目必须包括 MFC 支持，然后再添加**ATL OLEDB 提供程序**。
@@ -38,5 +38,5 @@ ms.locfileid: "50611193"
 
 ## <a name="see-also"></a>请参阅
 
-[CatDB 示例： 数据源架构浏览器](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/catdb)<br/>
-[DBViewer 示例： 数据库浏览器](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/dbviewer)
+[CatDB 示例：数据源架构浏览器](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/catdb)<br/>
+[DBViewer 示例：数据库浏览器](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/dbviewer)

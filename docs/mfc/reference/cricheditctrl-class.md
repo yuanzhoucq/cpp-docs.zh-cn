@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: 634aa4adbe4e7084266be43ef932074373835c10
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 5517efca66744c43eeccd3fb91b97a6fedc8180e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372096"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl 类
 
@@ -269,7 +269,7 @@ class CRichEditCtrl : public CWnd
 
 - [使用 CRichEditCtrl](../../mfc/using-cricheditctrl.md)
 
-在 MFC 应用程序中使用格式文本编辑控件的示例，请参阅[写字板](../../visual-cpp-samples.md)示例应用程序。
+在 MFC 应用程序中使用格式文本编辑控件的示例，请参阅[写字板](../../overview/visual-cpp-samples.md)示例应用程序。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -2198,7 +2198,7 @@ BOOL Undo();
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例写字板](../../visual-cpp-samples.md)<br/>
+[MFC 示例写字板](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CEdit 类](../../mfc/reference/cedit-class.md)<br/>

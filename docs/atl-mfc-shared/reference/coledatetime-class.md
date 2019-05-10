@@ -1,6 +1,6 @@
 ---
 title: COleDateTime 类
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - COleDateTime
 - ATLCOMTIME/ATL::COleDateTime
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - dates, handling in MFC
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
-ms.openlocfilehash: a49b886bcf9c25642b1f7b8e843be11baf2d2d00
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 46b5f15a2f6048745a12b8c3a8c8a63404f71aa2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252696"
 ---
 # <a name="coledatetime-class"></a>COleDateTime 类
 
@@ -108,7 +108,7 @@ class COleDateTime
 
 `DATE`类型作为浮点值。 天是从 1899 年 12 月 30 日，在午夜测量的。 下表显示了某些日期和相关联的值：
 
-|日期|值|
+|日期|“值”|
 |----------|-----------|
 |1899 年 12 月 29日日午夜|-1.0|
 |1899 年 12 月 29日日，6 点|-1.25|
@@ -117,7 +117,7 @@ class COleDateTime
 |1900 年 1 月 1日日，上午 6|2.25|
 
 > [!CAUTION]
-> 请注意，在上面的表，尽管日的值变为负值 1899 年 12 月 30 日，午夜之前的时间值不这样做。 例如，上午 6:00 始终表示无论整数代表日是正值 （之后 1899 年 12 月 30 日） 或负值 （之前 1899 年 12 月 30 日） 的小数部分值 0.25。 这意味着，简单的浮动点比较会错误地进行排序`COleDateTime`表示为 12/29/1899年 6:00 AM**更高版本**个表示同一天上午 7:00。
+> 在上述表中，尽管日的值变为负值 1899 年 12 月 30 日，午夜之前的时间值不适用。 例如，上午 6:00 始终表示无论整数代表日是正值 （之后 1899 年 12 月 30 日） 或负值 （之前 1899 年 12 月 30 日） 的小数部分值 0.25。 这意味着，简单的浮动点比较会错误地进行排序`COleDateTime`表示为 12/29/1899年 6:00 AM**更高版本**个表示同一天上午 7:00。
 
 `COleDateTime`类处理 100 1 月 1 日，年 12 月 31 日的日期到 9999。 `COleDateTime`类使用公历; 它不支持对儒略历日期。 `COleDateTime` 将忽略夏时制。 (请参阅[日期和时间：自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。)
 
@@ -195,7 +195,7 @@ COleDateTime(int nYear,
 
 COleDateTime(WORD wDosDate,
     WORD wDosTime) throw();
-COleDateTime(const DBTIMESTAMP& dbts) throw();
+COleDateTime(const DBTIMESTAMP& timeStamp) throw();
 ```
 
 ### <a name="parameters"></a>参数
@@ -216,7 +216,7 @@ COleDateTime(const DBTIMESTAMP& dbts) throw();
 一个`SYSTEMTIME`结构转换为日期/时间值并复制到新`COleDateTime`对象。
 
 *filetimeSrc*<br/>
-一个`FILETIME`结构转换为日期/时间值并复制到新`COleDateTime`对象。 请注意，`FILETIME`使用协调世界时 (UTC)，因此如果结构中传递了本地时间，则结果将为不正确。 请参阅[文件时间](/windows/desktop/SysInfo/file-times)Windows SDK for 的详细信息中。
+一个`FILETIME`结构转换为日期/时间值并复制到新`COleDateTime`对象。 一个`FILETIME`使用协调世界时 (UTC)，因此如果结构中传递了本地时间，则结果将为不正确。 请参阅[文件时间](/windows/desktop/SysInfo/file-times)Windows SDK for 的详细信息中。
 
 *nYear*， *nMonth*，*第几日*，*几点*， *nMin*， *nSec*<br/>
 指示要复制到新的日期和时间值`COleDateTime`对象。
@@ -224,7 +224,7 @@ COleDateTime(const DBTIMESTAMP& dbts) throw();
 *wDosDate*， *wDosTime*<br/>
 MS-DOS 日期和时间值转换为日期/时间值并复制到新`COleDateTime`对象。
 
-*dbts*<br/>
+*timeStamp*<br/>
 对引用[DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype)结构，它包含当前本地时间。
 
 ### <a name="remarks"></a>备注
@@ -256,7 +256,7 @@ MS-DOS 日期和时间值转换为日期/时间值并复制到新`COleDateTime`�
 
 - `COleDateTime(` *systimeSrc* **)** 构造`COleDateTime`对象从`SYSTEMTIME`值。
 
-- `COleDateTime(` `filetimeSrc` **)** 构造`COleDateTime`对象从`FILETIME`值。 . 请注意，`FILETIME`使用协调世界时 (UTC)，因此如果结构中传递了本地时间，则结果将为不正确。 请参阅[文件时间](/windows/desktop/SysInfo/file-times)Windows SDK for 的详细信息中。
+- `COleDateTime(` `filetimeSrc` **)** 构造`COleDateTime`对象从`FILETIME`值。 . 一个`FILETIME`使用协调世界时 (UTC)，因此如果结构中传递了本地时间，则结果将为不正确。 有关详细信息，请参阅[文件时间](/windows/desktop/SysInfo/file-times)Windows SDK 中。
 
 - `COleDateTime(` `nYear``nMonth`， `nDay`， `nHour`， `nMin`， `nSec` **)** 构造`COleDateTime`从指定的数字值的对象。
 
@@ -300,7 +300,7 @@ CString Format(UINT nFormatID) const;
 指示要使用用于转换的区域设置 ID。 有关语言标识符的详细信息，请参阅[语言标识符](/windows/desktop/Intl/language-identifiers)。
 
 *lpszFormat*<br/>
-格式设置字符串类似于`printf`格式设置字符串。 每个格式设置代码，注释按百分比 ( `%`) 登录，将替换为相应`COleDateTime`组件。 格式设置字符串中的其他字符被复制到返回的字符串不变。 请参阅运行时函数[strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)有关详细信息。 值和格式设置代码的含义`Format`是：
+格式设置字符串类似于`printf`格式设置字符串。 每个格式设置代码，注释按百分比 ( `%`) 登录，将替换为相应`COleDateTime`组件。 格式设置字符串中的其他字符被复制到返回的字符串不变。 有关详细信息，请参阅运行时函数[strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。 值和格式设置代码的含义`Format`是：
 
 - `%H` 在当前的一天中的小时数
 
@@ -341,12 +341,12 @@ CString Format(UINT nFormatID) const;
 调用此方法以获取在时间`COleDateTime`对象作为`DBTIMESTAMP`数据结构。
 
 ```
-bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
+bool GetAsDBTIMESTAMP(DBTIMESTAMP& timeStamp) const throw();
 ```
 
 ### <a name="parameters"></a>参数
 
-*dbts*<br/>
+*timeStamp*<br/>
 对引用[DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype)结构。
 
 ### <a name="return-value"></a>返回值
@@ -355,7 +355,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
 
 ### <a name="remarks"></a>备注
 
-将所生成的时间存储在被引用*dbts*结构。 `DBTIMESTAMP`由此函数初始化的数据结构将具有其`fraction`成员设置为零。
+将所生成的时间存储在被引用*时间戳*结构。 `DBTIMESTAMP`由此函数初始化的数据结构将具有其`fraction`成员设置为零。
 
 ### <a name="example"></a>示例
 
@@ -382,19 +382,19 @@ bool GetAsSystemTime(SYSTEMTIME& sysTime) const throw();
 
 `GetAsSystemTime` 将所生成的时间存储在被引用*sysTime*对象。 `SYSTEMTIME`由此函数初始化的数据结构将具有其`wMilliseconds`成员设置为零。
 
-请参阅[GetStatus](#getstatus)有关详细信息的状态信息保存在`COleDateTime`对象。
+有关详细信息的状态信息保存在`COleDateTime`对象，请参阅[GetStatus](#getstatus)。
 
 ##  <a name="getasudate"></a>  COleDateTime::GetAsUDATE
 
 调用此方法以获取在时间`COleDateTime`对象作为`UDATE`数据结构。
 
 ```
-bool GetAsUDATE(UDATE& udate) const throw();
+bool GetAsUDATE(UDATE& uDate) const throw();
 ```
 
 ### <a name="parameters"></a>参数
 
-*udate*<br/>
+*uDate*<br/>
 对引用`UDATE`结构，以接收转换后的日期/时间值从`COleDateTime`对象。
 
 ### <a name="return-value"></a>返回值
@@ -684,7 +684,7 @@ DateTimeStatus GetStatus() const throw();
 
 ### <a name="return-value"></a>返回值
 
-返回此状态`COleDateTime`值。 如果您调用`GetStatus`上`COleDateTime`使用默认值构造的对象，它将返回有效。 如果您调用`GetStatus`上`COleDateTime`对象初始化其构造函数设置为 null，`GetStatus`将返回 null。 请参阅**备注**有关详细信息。
+返回此状态`COleDateTime`值。 如果您调用`GetStatus`上`COleDateTime`使用默认值构造的对象，它将返回有效。 如果您调用`GetStatus`上`COleDateTime`对象初始化其构造函数设置为 null，`GetStatus`将返回 null。
 
 ### <a name="remarks"></a>备注
 
@@ -708,7 +708,7 @@ enum DateTimeStatus
 
 - `COleDateTime::invalid` 指示此`COleDateTime`对象无效; 即，其值可能不正确。
 
-- `COleDateTime::null` 指示此`COleDateTime`对象为 null，也即，已为此对象提供任何值。 （此为"null"数据库意义上的"无任何值，"，而不 c + + 为 NULL。）
+- `COleDateTime::null` 指示此`COleDateTime`对象为 null，也即，已为此对象提供任何值。 (这是"null"数据库意义上的"无任何值，"，而不C++为 NULL。)
 
 状态`COleDateTime`对象是在以下情况下无效：
 
@@ -803,7 +803,7 @@ DateTimeStatus m_status;
 
 ### <a name="remarks"></a>备注
 
-此数据成员的类型是枚举的类型`DateTimeStatus`，其定义内`COleDateTime`类。 请参阅[COleDateTime::GetStatus](#getstatus)有关详细信息。
+此数据成员的类型是枚举的类型`DateTimeStatus`，其定义内`COleDateTime`类。 有关详细信息，请参阅[COleDateTime::GetStatus](#getstatus)。
 
 > [!CAUTION]
 >  此数据成员是针对高级编程情况。 应使用的内联成员函数[GetStatus](#getstatus)并[SetStatus](#setstatus)。 请参阅`SetStatus`有关显式设置此数据成员的其他注意事项。
@@ -819,7 +819,7 @@ COleDateTime& operator=(const time_t& timeSrc) throw();
 COleDateTime& operator=(const __time64_t& timeSrc) throw();
 COleDateTime& operator=(const SYSTEMTIME& systimeSrc) throw();
 COleDateTime& operator=(const FILETIME& filetimeSrc) throw();
-COleDateTime& operator=(const UDATE& udate) throw();
+COleDateTime& operator=(const UDATE& uDate) throw();
 ```
 
 ### <a name="remarks"></a>备注
@@ -836,9 +836,9 @@ COleDateTime& operator=(const UDATE& udate) throw();
 
 - **运算符 = (** *systimeSrc* **)** [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)值转换，并复制到此`COleDateTime`对象。 如果转换成功，该对象的状态设置为有效，则为如果不成功，它将设置为无效。
 
-- **运算符 = (** `udate` **)** `UDATE`值转换，并复制到此`COleDateTime`对象。 如果转换成功，该对象的状态设置为有效，则为如果不成功，它将设置为无效。 一个`UDATE`结构表示"已解包"的日期。 请参阅函数[VarDateFromUdate](/windows/desktop/api/oleauto/nf-oleauto-vardatefromudate)的更多详细信息。
+- **运算符 = (** `uDate` **)** `UDATE`值转换，并复制到此`COleDateTime`对象。 如果转换成功，该对象的状态设置为有效，则为如果不成功，它将设置为无效。 一个`UDATE`结构表示"已解包"的日期。 有关详细信息，请参阅函数[VarDateFromUdate](/windows/desktop/api/oleauto/nf-oleauto-vardatefromudate)。
 
-- **运算符 = (** `filetimeSrc` **)** [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)值转换，并复制到此`COleDateTime`对象。 如果转换成功，该对象的状态设置为有效，则为否则设置为无效。 `FILETIME` 使用协调世界时 (UTC)，因此，如果结构中传递 UTC 时间，结果将被转换从 UTC 时间为本地时间，并且将存储为变量时间。 此行为是与 Visual c + + 6.0 和 Visual c + +.NET 2003 SP2 中的相同。 请参阅[文件时间](/windows/desktop/SysInfo/file-times)Windows SDK for 的详细信息中。
+- **运算符 = (** `filetimeSrc` **)** [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)值转换，并复制到此`COleDateTime`对象。 如果转换成功，该对象的状态设置为有效，则为否则设置为无效。 `FILETIME` 使用协调世界时 (UTC)，因此，如果结构中传递 UTC 时间，结果将被转换从 UTC 时间为本地时间，并且将存储为变量时间。 此行为是与视觉对象中的相同C++6.0 和 Visual C++.NET 2003 SP2。 有关详细信息，请参阅[文件时间](/windows/desktop/SysInfo/file-times)Windows SDK 中。
 
 有关详细信息，请参阅[变体](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)Windows SDK 中的条目。
 
@@ -968,7 +968,7 @@ bool ParseDateTime(
 
 `"1/25/1996 8:30:00"  // always specify the full year, even in a 'short date' format`
 
-请注意，是否可以接受的转换为日期/时间值的字符串格式，还将影响的区域设置 ID。
+是否可以接受的转换为日期/时间值的字符串格式，还将影响的区域设置 ID。
 
 对于 VAR_DATEVALUEONLY，时间值设置为 0 或午夜的时间。 对于 VAR_TIMEVALUEONLY，日期值设置为日期 0，这意味着 1899 年 12 月 30。
 
@@ -1014,7 +1014,7 @@ int SetDate(
 
 下面是日期值的一些示例：
 
-|*nYear*|*nMonth*|*nDay*|值|
+|*nYear*|*nMonth*|*nDay*|“值”|
 |-------------|--------------|------------|-----------|
 |2000|2|29|29 2000 年 2 月|
 |1776|7|4|4 年 7 月圣瓦伦丁节|
@@ -1098,7 +1098,7 @@ int SetDateTime(
 
 下面是日期值的一些示例：
 
-|*nYear*|*nMonth*|*nDay*|值|
+|*nYear*|*nMonth*|*nDay*|“值”|
 |-------------|--------------|------------|-----------|
 |1995|4|15|1995 年 4 月 15日|
 |1789|7|14|17 年 7 月版|
@@ -1149,7 +1149,7 @@ void SetStatus(DateTimeStatus status) throw();
 *状态*参数值由定义`DateTimeStatus`枚举中定义的类型`COleDateTime`类。 请参阅[COleDateTime::GetStatus](#getstatus)有关详细信息。
 
 > [!CAUTION]
->  此函数是针对高级编程情况。 此函数不会更改此对象中的数据。 通常将用于将状态设置为**null**或**无效**。 请注意，赋值运算符 ([运算符 =](#eq)) 和[SetDateTime](#setdatetime)设置基于源值的对象的状态。
+>  此函数是针对高级编程情况。 此函数不会更改此对象中的数据。 通常将用于将状态设置为**null**或**无效**。 赋值运算符 ([运算符 =](#operator_eq)) 和[SetDateTime](#setdatetime)设置基于源值的对象的状态。
 
 ### <a name="example"></a>示例
 
@@ -1191,7 +1191,7 @@ int SetTime(
 
 下面是时间值的一些示例：
 
-|*nHour*|*nMin*|*nSec*|值|
+|*nHour*|*nMin*|*nSec*|“值”|
 |-------------|------------|------------|-----------|
 |1|3|3|01:03:03|
 |23|45|0|23:45:00|
@@ -1231,4 +1231,3 @@ int SetTime(
 [CTimeSpan 类](../../atl-mfc-shared/reference/ctimespan-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [ATL/MFC 共享类](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-

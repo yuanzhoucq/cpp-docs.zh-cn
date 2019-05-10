@@ -6,17 +6,17 @@ helpviewer_keywords:
 - ATL, classes
 ms.assetid: 7da42e2d-ac84-4506-92bd-502a86d68bdc
 ms.openlocfilehash: 561d6cb41ca066f5a2435b4eb1e8710ccaa99ea1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62248935"
 ---
 # <a name="atl-classes-and-structs"></a>ATL 类和结构
 
 活动模板库 (ATL) 包括以下类和结构。 若要按类别查找特定的类，请参阅[ATL 类概述](../../atl/atl-class-overview.md)。
 
-|类 / 结构|描述|头文件|
+|类 / 结构|描述|标头文件|
 |-----------|-----------------|-----------------|
 |[ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md)|包含用于呈现到各种目标，如打印机、 图元文件或 ActiveX 控件的信息。|atlctl.h|
 |[_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)|包含在 atl。 窗口化代码中的类实例数据|atlbase.h|
@@ -84,7 +84,7 @@ ms.locfileid: "57265562"
 |[CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)|此类存储数组的`IUnknown`指针。|atlcom.h|
 |[CComEnum](../../atl/reference/ccomenum-class.md)|此类定义基于数组的 COM 枚举器对象。|atlcom.h|
 |[CComEnumImpl](../../atl/reference/ccomenumimpl-class.md)|此类提供要枚举的项数组中的存储位置的 COM 枚举器接口的实现。|atlcom.h|
-|[CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)|此类定义一个基于 c + + 标准库集合的 COM 枚举器对象。|atlcom.h|
+|[CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)|此类定义一个基于 COM 的枚举器对象C++标准库集合。|atlcom.h|
 |[CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)|此类提供了将相同的方法作为[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) ，但不提供关键部分。|atlcore.h|
 |[CComGITPtr](../../atl/reference/ccomgitptr-class.md)|此类提供用于处理接口指针的方法和全局接口表 (GIT)。|atlbase.h|
 |[CComHeap](../../atl/reference/ccomheap-class.md)|此类实现[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)使用 COM 内存分配函数。|ATLComMem.h|
@@ -190,7 +190,7 @@ ms.locfileid: "57265562"
 |[IDispEventImpl](../../atl/reference/idispeventimpl-class.md)|此类提供的实现`IDispatch`方法。|atlcom.h|
 |[IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)|此类提供的实现`IDispatch`方法，而不从类型库中获取类型信息。|atlcom.h|
 |[IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md)|Microsoft HTML 分析和呈现引擎的接口。|atlbase.h ATLIFace.h|
-|[IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)|此类定义基于 c + + 标准库集合的枚举器接口。|atlcom.h|
+|[IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)|此类定义枚举器接口基于C++标准库集合。|atlcom.h|
 |[IObjectSafetyImpl](../../atl/reference/iobjectsafetyimpl-class.md)|此类提供的默认实现`IObjectSafety`接口，以允许客户端来检索和设置对象的安全级别。|atlctl.h|
 |[IObjectWithSiteImpl](../../atl/reference/iobjectwithsiteimpl-class.md)|此类提供允许其站点进行通信的对象的方法。|atlcom.h|
 |[IOleControlImpl](../../atl/reference/iolecontrolimpl-class.md)|此类提供的默认实现`IOleControl`接口并实现`IUnknown`。|atlctl.h|

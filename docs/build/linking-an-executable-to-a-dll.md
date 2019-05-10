@@ -11,12 +11,12 @@ helpviewer_keywords:
 - executable files [C++], linking to DLLs
 - loading DLLs [C++]
 ms.assetid: 7592e276-dd6e-4a74-90c8-e1ee35598ea3
-ms.openlocfilehash: 998ec23d2d0f16069783529aebafc8b91bb15834
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
-ms.translationtype: MT
+ms.openlocfilehash: b0a3a0acd9fe0270416745696079e382c35ec32d
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418798"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220655"
 ---
 # <a name="link-an-executable-to-a-dll"></a>链接到 DLL 的可执行文件
 
@@ -30,7 +30,7 @@ ms.locfileid: "57418798"
 
 <a name="determining-which-linking-method-to-use"></a>
 
-## <a name="determine-which-linking-method-to-use"></a>确定要使用的链接方法
+## <a name="link-an-executable-to-a-dll"></a>链接到 DLL 的可执行文件
 
 是使用隐式链接还是显式链接是一个必须进行应用程序的体系结构决策。 有一些优点和缺点的每个方法。
 
@@ -70,17 +70,17 @@ ms.locfileid: "57418798"
 
 <a name="linking-implicitly"></a>
 
-## <a name="how-to-link-implicitly-to-a-dll"></a>如何隐式链接到 DLL
+## <a name="link-an-executable-to-a-dll"></a>链接到 DLL 的可执行文件
 
 若要使用的隐式链接的 DLL，客户端的可执行文件必须从该 DLL 的提供程序获得这些文件：
 
-- 一个或多个标头文件 （.h 文件），包含导出的数据、 函数和/或 DLL 中的 c + + 类的声明。 类、 函数和 DLL 导出的数据必须所有标记为`__declspec(dllimport)`标头文件中。 有关详细信息，请参阅[dllexport、 dllimport](../cpp/dllexport-dllimport.md)。
+- 一个或多个标头文件 （.h 文件），包含导出的数据，函数的声明和/或C++DLL 中的类。 类、 函数和 DLL 导出的数据必须所有标记为`__declspec(dllimport)`标头文件中。 有关详细信息，请参阅[dllexport、 dllimport](../cpp/dllexport-dllimport.md)。
 
-- 导入库链接到可执行文件。 生成 DLL 时，链接器创建的导入库。 有关详细信息，请参阅[。LIB 文件](../build/reference/dot-lib-files-as-linker-input.md)。
+- 导入库链接到可执行文件。 生成 DLL 时，链接器创建的导入库。 有关详细信息，请参阅[。LIB 文件](reference/dot-lib-files-as-linker-input.md)。
 
 - 实际的 DLL 文件。
 
-若要使用通过隐式链接的 DLL，可执行文件必须包含声明的数据、 函数或 c + + 类中每个源文件，其中包含对导出的数据、 函数和类的调用 DLL 导出的标头文件。 从编码的角度来看，对导出的函数调用是就像任何其他函数调用一样。
+若要使用的 DLL 的隐式链接，可执行文件必须包括将数据，函数声明的头文件或C++中每个源文件，其中包含对导出的数据、 函数和类的调用的 DLL 的导出类。 从编码的角度来看，对导出的函数调用是就像任何其他函数调用一样。
 
 若要生成的调用的可执行文件，必须使用导入库链接。 如果使用外部生成文件或生成系统时，指定在其中列出的其他对象 (.obj) 文件的导入库或链接的库的文件名称。
 
@@ -139,10 +139,10 @@ HRESULT LoadAndCallSomeFunction(DWORD dwParam1, UINT * puParam2)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？
 
-- [使用导入库和导出文件](../build/reference/working-with-import-libraries-and-export-files.md)
+- [使用导入库和导出文件](reference/working-with-import-libraries-and-export-files.md)
 
 - [动态链接库搜索顺序](/windows/desktop/Dlls/dynamic-link-library-search-order)
 
 ## <a name="see-also"></a>请参阅
 
-[Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)
+[创建 C /C++ Visual Studio 中的 Dll](dlls-in-visual-cpp.md)

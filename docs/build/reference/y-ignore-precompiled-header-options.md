@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -Y- compiler option [C++]
 - /Y- compiler option [C++]
 ms.assetid: cfaecb36-58db-46b8-b04d-cca6072b1b7a
-ms.openlocfilehash: 7a823457b0d372527488e646f0d2fa83bd7a4740
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c56c25d587d84e599718d2e1a74d469def3501f7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316179"
 ---
 # <a name="y--ignore-precompiled-header-options"></a>/Y-（忽略预编译标头选项）
 
@@ -29,13 +29,13 @@ ms.locfileid: "57421514"
 
 预编译标头的详细信息，请参阅：
 
-- [/Y（预编译标头）](../../build/reference/y-precompiled-headers.md)
+- [/Y（预编译标头）](y-precompiled-headers.md)
 
-- [创建预编译标头文件](../../build/reference/creating-precompiled-header-files.md)
+- [预编译的头文件](../creating-precompiled-header-files.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
 1. 单击 **“C/C++”** 文件夹。
 
@@ -49,5 +49,5 @@ ms.locfileid: "57421514"
 
 ## <a name="see-also"></a>请参阅
 
-[编译器选项](../../build/reference/compiler-options.md)<br/>
-[设置编译器选项](../../build/reference/setting-compiler-options.md)
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)

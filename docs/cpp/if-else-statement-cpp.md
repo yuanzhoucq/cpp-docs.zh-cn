@@ -10,11 +10,11 @@ helpviewer_keywords:
 - if keyword [C++], if-else
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
 ms.openlocfilehash: 16aa65ab64d9fd855ae3306da88f8eb14eec759c
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183643"
 ---
 # <a name="if-else-statement-c"></a>if-else 语句 (C++)
 
@@ -113,7 +113,7 @@ int main()
 
 ## <a name="if_with_init"></a> 如果语句具有初始值设定项
 
-**Visual Studio 2017 15.3 及更高版本**(适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)):**如果**语句还可能包含声明和初始化命名的变量的表达式。 该变量时，才需要 if 块的作用域内时，请使用这种形式的 if 语句。
+**Visual Studio 2017 版本 15.3 及更高版本**(适用于[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):**如果**语句也可能包含声明并初始化命名的变量的表达式。 该变量时，才需要 if 块的作用域内时，请使用这种形式的 if 语句。
 
 ## <a name="example"></a>示例
 
@@ -165,7 +165,7 @@ int main()
 
 ## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr"> 如果 constexpr 语句
 
-**Visual Studio 2017 版本 15.3 及更高版本**(适用于[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): 在函数模板，你可以使用**如果 constexpr**语句进行编译时分支决策，而无需不必使用多个函数重载。 例如，可以编写单个函数的句柄参数解包 （需要零参数重载均没有）：
+**Visual Studio 2017 版本 15.3 及更高版本**(适用于[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):在函数模板，你可以使用**如果 constexpr**语句进行编译时分支决策，而不必求助于多个函数重载。 例如，可以编写单个函数的句柄参数解包 （需要零参数重载均没有）：
 
 ```cpp
 template <class T, class... Rest>

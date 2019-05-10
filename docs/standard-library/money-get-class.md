@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::money_get [C++], get
 ms.assetid: 692d3374-3fe7-4b46-8aeb-f8d91ed66b2e
 ms.openlocfilehash: 40ce364d768e682c9e85506d2af9e46a01c76e65
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383524"
 ---
 # <a name="moneyget-class"></a>money_get 类
 
@@ -108,13 +108,13 @@ virtual iter_type do_get(iter_type first,
 *first*<br/>
 确定待转换序列开头位置的输入迭代器。
 
-*最后一个*<br/>
+*last*<br/>
 确定待转换序列末尾位置的输入迭代器。
 
 *Intl*<br/>
 一个布尔值，该值指示在序列中预期的货币符号的类型：如果为国际，则为 **true**，如果为国内，则为 **false**。
 
-*iosbase*<br/>
+*Iosbase*<br/>
 一种格式标志，设定时表示货币符号是可选项；否则，它是必需项。
 
 *状态*<br/>
@@ -190,13 +190,13 @@ iter_type get(iter_type first,
 *first*<br/>
 确定待转换序列开头位置的输入迭代器。
 
-*最后一个*<br/>
+*last*<br/>
 确定待转换序列末尾位置的输入迭代器。
 
 *Intl*<br/>
 一个布尔值，该值指示在序列中预期的货币符号的类型：如果为国际，则为 **true**，如果为国内，则为 **false**。
 
-*iosbase*<br/>
+*Iosbase*<br/>
 一种格式标志，设定时表示货币符号是可选项；否则，它是必需项
 
 *状态*<br/>
@@ -291,11 +291,11 @@ explicit money_get(size_t _Refs = 0);
 
 可能的值 *_Refs*参数和其重要性：
 
-- 0：对象的生存期由包含该对象的区域设置管理。
+- 0:对象的生存期由包含它的区域设置管理。
 
-- 1：必须手动管理对象的生存期。
+- 1:必须手动管理的对象的生存期。
 
-- \> 1： 未定义这些值。
+- \> 1:未定义这些值。
 
 由于该析构函数受到保护，可能没有直接的示例。
 

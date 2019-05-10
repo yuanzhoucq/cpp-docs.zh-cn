@@ -20,12 +20,12 @@ helpviewer_keywords:
 - frame window classes [MFC], toolbar embedded in
 - LoadToolBar method [MFC]
 ms.assetid: cc00aaff-8a56-433b-b0c0-b857d76b4ffd
-ms.openlocfilehash: 39e790e5152dd07ab40901140ecdd8f8791a446e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9c784db2e1a482b313147e6837d6bbbd16d0ecb4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62168214"
 ---
 # <a name="toolbar-fundamentals"></a>工具栏基础知识
 
@@ -62,13 +62,13 @@ ms.locfileid: "57258393"
 1. 调用函数，可以让停靠、 浮动和工具提示。 有关这些调用的详细信息，请参阅文章[停靠和浮动工具栏](../mfc/docking-and-floating-toolbars.md)。
 
 > [!NOTE]
->  MFC 常规示例[DOCKTOOL](../visual-cpp-samples.md)包括旧的和新 MFC 工具栏的说明。 使用工具栏`COldToolbar`需要在步骤 2 中的调用`LoadBitmap`(而非`LoadToolBar`) 和`SetButtons`。 新的工具栏要求对调用`LoadToolBar`。
+>  MFC 常规示例[DOCKTOOL](../overview/visual-cpp-samples.md)包括旧的和新 MFC 工具栏的说明。 使用工具栏`COldToolbar`需要在步骤 2 中的调用`LoadBitmap`(而非`LoadToolBar`) 和`SetButtons`。 新的工具栏要求对调用`LoadToolBar`。
 
 停靠、 浮动和工具提示的调用是可选的。 您可以删除这些行从`OnCreate`您的喜好而定。 结果是保持固定，不能浮动或重新停靠并不能显示工具提示的工具栏。
 
 ##  <a name="_core_editing_the_toolbar_resource"></a> 编辑工具栏资源
 
-获取与应用程序向导的默认工具栏基于**RT_TOOLBAR** MFC 4.0 版中引入的自定义资源。 您可以编辑与此资源[工具栏编辑器](../windows/toolbar-editor.md)。 编辑器允许您轻松地添加、 删除和重新排列按钮。 它包含非常类似于 Visual c + + 中的常规图形编辑器的按钮的图形编辑器。 如果编辑工具栏的 Visual c + + 早期版本中，您会发现任务更容易现在。
+获取与应用程序向导的默认工具栏基于**RT_TOOLBAR** MFC 4.0 版中引入的自定义资源。 您可以编辑与此资源[工具栏编辑器](../windows/toolbar-editor.md)。 编辑器允许您轻松地添加、 删除和重新排列按钮。 它包含与视觉对象中的常规图形编辑器非常相似的按钮的图形编辑器C++。 如果编辑视觉对象的以前版本中的工具栏C++，您会发现任务更容易现在。
 
 若要连接到命令工具栏按钮，您为该按钮的命令 ID，如`ID_MYCOMMAND`。 在编辑器工具栏按钮的属性页中指定的命令 ID。 然后，创建命令的处理程序函数 (请参阅[消息映射到函数](../mfc/reference/mapping-messages-to-functions.md)有关详细信息)。
 

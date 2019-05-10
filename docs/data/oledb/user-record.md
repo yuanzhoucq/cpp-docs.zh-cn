@@ -8,12 +8,12 @@ helpviewer_keywords:
 - user records, described
 - rowsets, user record
 ms.assetid: 9c0d2864-2738-4f62-a750-1016d9c3523f
-ms.openlocfilehash: 4a06a378ba7d4084b68c98ab029aec1670be982d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b37835f1a3161edd10f61f9b4e76cfb5f558e07b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389107"
 ---
 # <a name="user-record"></a>用户记录
 

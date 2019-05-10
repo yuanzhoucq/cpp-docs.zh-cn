@@ -11,12 +11,12 @@ helpviewer_keywords:
 - dates [C++], MFC
 - formatting [C++], time
 ms.assetid: 201528e4-2ffa-48fc-af8f-203aa86d942a
-ms.openlocfilehash: e4aac4078ce6d75fb1613c158cdf790f2a596a01
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: be8462858585a5530f360dae97e155b4967239b0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62236399"
 ---
 # <a name="date-and-time-systemtime-support"></a>日期和时间：SYSTEMTIME 支持
 
@@ -24,7 +24,7 @@ ms.locfileid: "54893491"
 
 有关 SYSTEMTIME 结构的信息，请参阅[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)。 有关 FILETIME 结构的信息，请参阅[FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)。
 
-MFC 仍然提供采用 MS-DOS 样式的时间自变量的 `CTime` 构造函数，但是，从 MFC 版本 3.0 开始，`CTime` 类还支持采用 Win32 `SYSTEMTIME` 结构的构造函数和另一个采用 Win32 `FILETIME` 结构的构造函数。
+MFC 仍然提供采用 MS-DOS 样式的时间参数的 `CTime` 构造函数，但是，从 MFC 版本 3.0 开始，`CTime` 类还支持采用 Win32 `SYSTEMTIME` 结构的构造函数和另一个采用 Win32 `FILETIME` 结构的构造函数。
 
 新的 `CTime` 构造函数是：
 

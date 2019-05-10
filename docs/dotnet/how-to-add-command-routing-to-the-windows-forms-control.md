@@ -1,19 +1,19 @@
 ---
-title: 如何：向 Windows 窗体控件添加命令传送
+title: 如何：添加命令路由到 Windows 窗体控件
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - command routing [C++], adding to Windows Forms controls
 - Windows Forms controls [C++], command routing
 ms.assetid: bf138ece-b463-442a-b0a0-de7063a760c0
-ms.openlocfilehash: b3f93574e007fdb1b7d4009d85c573223091adf9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f633cf744314833409a3ffeacf8c850429e099c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62222905"
 ---
-# <a name="how-to-add-command-routing-to-the-windows-forms-control"></a>如何：向 Windows 窗体控件添加命令传送
+# <a name="how-to-add-command-routing-to-the-windows-forms-control"></a>如何：添加命令路由到 Windows 窗体控件
 
 [CWinFormsView](../mfc/reference/cwinformsview-class.md)将命令和更新命令 UI 消息路由到用户控件，使其能够处理 MFC 命令 （例如，框架菜单项和工具栏按钮）。
 
@@ -21,11 +21,11 @@ ms.locfileid: "50447107"
 
 `CWinFormsView` 处理多个常见的 MFC 视图通知转发给托管的用户控件。 这些通知包括[OnInitialUpdate](../mfc/reference/iview-interface.md#oninitialupdate)， [OnUpdate](../mfc/reference/iview-interface.md#onupdate)并[OnActivateView](../mfc/reference/iview-interface.md#onactivateview)方法。
 
-本主题假定你之前已完成[如何： 在对话框中创建用户控件并承载](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)并[如何： 创建用户控件和宿主 MDI 视图](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)。
+本主题假定你之前已完成[如何：在对话框中创建用户控件并承载](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)和[如何：创建用户控件并承载 MDI 视图](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)。
 
 ### <a name="to-create-the-mfc-host-application"></a>若要创建 MFC 宿主应用程序
 
-1. 打开 Windows 窗体控件库中创建[如何： 在对话框中创建用户控件并承载](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)。
+1. 打开 Windows 窗体控件库中创建[如何：在对话框中创建用户控件并承载](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)。
 
 1. 添加对 mfcmifc80.dll，可以通过右键单击项目节点中的执行此操作的引用**解决方案资源管理器**，选择**添加**，**引用**，然后浏览到Microsoft Visual Studio 10.0\VC\atlmfc\lib。
 
@@ -70,7 +70,7 @@ ms.locfileid: "50447107"
     }
     ```
 
-1. 打开你在中创建的 MFC 应用程序[如何： 创建用户控件和宿主 MDI 视图](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)。
+1. 打开你在中创建的 MFC 应用程序[如何：创建用户控件并承载 MDI 视图](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)。
 
 1. 添加将调用一个菜单选项`singleMenuHandler`。
 

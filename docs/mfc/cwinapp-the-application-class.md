@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CWinApp class [MFC], WinMain
 ms.assetid: 935822bb-d463-481b-a5f6-9719d68ed1d5
 ms.openlocfilehash: d9f0d4f5ba6b6b070b23ce98ecda8c7accf44934
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62241557"
 ---
 # <a name="cwinapp-the-application-class"></a>CWinApp:Application 类
 
@@ -35,7 +35,7 @@ MFC 中的主应用程序类将封装 Windows 操作系统的应用程序的初�
 若要初始化此应用程序，`WinMain` 将调用应用程序对象的 `InitApplication` 和 `InitInstance` 成员函数。 若要运行应用程序的消息循环`WinMain`调用**运行**成员函数。 终止时，`WinMain` 将调用应用程序对象的 `ExitInstance` 成员函数。
 
 > [!NOTE]
->  名称中所示**粗体**本文档中指示的 Microsoft 基础类库和 Visual c + + 提供的元素。 以 `monospaced` 类型显示的名称表示您创建或重写的元素。
+>  名称中所示**粗体**本文档中指示元素提供的 Microsoft 基础类库和视觉对象的C++。 以 `monospaced` 类型显示的名称表示您创建或重写的元素。
 
 ## <a name="see-also"></a>请参阅
 

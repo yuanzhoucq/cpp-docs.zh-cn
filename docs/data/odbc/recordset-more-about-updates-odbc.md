@@ -1,5 +1,5 @@
 ---
-title: 记录集：有关更新的更多信息 (ODBC)
+title: 记录集：有关更新 (ODBC) 的详细信息
 ms.date: 11/04/2016
 helpviewer_keywords:
 - records, updating
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - updating recordsets
 - recordsets, updating
 ms.assetid: 0353a742-d226-4fe2-8881-a7daeffe86cd
-ms.openlocfilehash: b34f6f51c6ff3a0995f4cf6044ddd7949644f42c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c29ff110fc507c4e449b2f3d082d98c159a35107
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397765"
 ---
-# <a name="recordset-more-about-updates-odbc"></a>记录集：有关更新的更多信息 (ODBC)
+# <a name="recordset-more-about-updates-odbc"></a>记录集：有关更新 (ODBC) 的详细信息
 
 本主题适用于 MFC ODBC 类。
 
@@ -30,7 +30,7 @@ ms.locfileid: "50665291"
 - [有关更新和删除成员函数的更多](#_core_more_about_update_and_delete)。
 
 > [!NOTE]
->  本主题适用于对象派生自`CRecordset`中的批量行提取尚未实现。 如果已实现批量行提取，某些信息不适用。 例如，不能调用`AddNew`， `Edit`， `Delete`，和`Update`成员函数; 但是，可以执行的事务。 有关批量行提取的详细信息，请参阅[记录集： 提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+>  本主题适用于对象派生自`CRecordset`中的批量行提取尚未实现。 如果已实现批量行提取，某些信息不适用。 例如，不能调用`AddNew`， `Edit`， `Delete`，和`Update`成员函数; 但是，可以执行的事务。 有关批量行提取的详细信息，请参阅[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 ##  <a name="_core_how_other_operations_affect_updates"></a> 其他操作如何影响更新
 
@@ -53,7 +53,7 @@ ms.locfileid: "50665291"
 
 ###  <a name="_core_how_scrolling_affects_updates"></a> 滚动如何影响更新
 
-当您[记录集： 滚动 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)在记录集中，编辑缓冲区填充与每个新的当前记录 （不先存储第一次一条记录）。 滚动跳过以前删除的记录。 如果向后滚动`AddNew`或`Edit`而无需调用调用`Update`， `CommitTrans`，或`Rollback`首先，任何更改都将丢失 （带您任何警告） 为一个新的记录放入编辑缓冲区。 编辑缓冲区填充与滚动到的记录、 已存储的记录将被释放，和数据源中未发生更改。 这同时适用于`AddNew`和`Edit`。
+当您[记录集：滚动 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)在记录集中，编辑缓冲区填充与每个新的当前记录 （不先存储第一次一条记录）。 滚动跳过以前删除的记录。 如果向后滚动`AddNew`或`Edit`而无需调用调用`Update`， `CommitTrans`，或`Rollback`首先，任何更改都将丢失 （带您任何警告） 为一个新的记录放入编辑缓冲区。 编辑缓冲区填充与滚动到的记录、 已存储的记录将被释放，和数据源中未发生更改。 这同时适用于`AddNew`和`Edit`。
 
 ##  <a name="_core_your_updates_and_the_updates_of_other_users"></a> 你的更新和其他用户的更新
 

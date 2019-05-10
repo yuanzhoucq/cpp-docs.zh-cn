@@ -1,6 +1,6 @@
 ---
-title: 编译器错误 c2500-C2599
-ms.date: 11/17/2017
+title: 编译器错误 C2500 - C2599
+ms.date: 04/21/2019
 f1_keywords:
 - C2501
 - C2508
@@ -52,14 +52,14 @@ helpviewer_keywords:
 - C2595
 - C2596
 ms.assetid: a869aaed-e9f6-49e3-b273-00ea7f45bed7
-ms.openlocfilehash: 836bab2fe3f38c7caf5249af2e7373a307db58e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 87728c2d7055715b7e7d986d5ab8792ceba5c450
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600975"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857079"
 ---
-# <a name="compiler-errors-c2500-through-c2599"></a>编译器错误 c2500-C2599
+# <a name="compiler-errors-c2500-through-c2599"></a>编译器错误 C2500 - C2599
 
 在本部分文档中的文章说明了由编译器生成的错误消息的子集。
 
@@ -88,15 +88,15 @@ ms.locfileid: "50600975"
 |[编译器错误 C2516](compiler-error-C2516.md)|'*类*： 不合法的基类|
 |[编译器错误 C2517](compiler-error-C2517.md)|'*标识符*： 右侧的:: 未定义|
 |[编译器错误 C2518](compiler-error-C2518.md)|关键字 '*关键字*在基类列表中非法; 已忽略|
-|编译器错误 C2519|'*标识符*: WinRT 特性可能只包含公共字段|
+|编译器错误 C2519|'*标识符*:WinRT 特性可能只包含公共字段|
 |编译器错误 C2520|'*类*： 没有可隐式转换的非显式构造函数|
 |[编译器错误 C2521](compiler-error-C2521.md)|析构函数/终结器不接受任何参数|
-|编译器错误 C2522|'*标识符*： 重载标识符不能用于*identifier1*因为它已在指定*identifier2*|
+|编译器错误 C2522|'*标识符*:重载标识符不能用于*identifier1*因为它已在指定*identifier2*|
 |[编译器错误 C2523](compiler-error-C2523.md)|'*类*:: ~*标识符*： 析构函数/终结器标记不匹配|
 |[编译器错误 C2524](compiler-error-C2524.md)|'*标识符*： 析构函数/终结器必须具有 void 参数列表|
-|编译器错误 C2525|'*标识符*: 参数'*identifier1*名为*identifier2*基上函数，并在已发布的实现必须匹配|
-|[编译器错误 C2526](compiler-error-C2526.md)|'*identifier1*: C 链接函数无法返回 c + + 类*identifier2*|
-|编译器错误 C2527|'*标识符*： 不能同时指定 DefaultOverload'*function1*'和'*function2*。 删除一个规范或实现过程中重命名该函数|
+|编译器错误 C2525|'*标识符*:参数*identifier1*名为*identifier2*基上函数，并在已发布的实现必须匹配|
+|[编译器错误 C2526](compiler-error-C2526.md)|'*identifier1*:C 链接函数无法返回C++类的*identifier2*|
+|编译器错误 C2527|'*标识符*:不能同时指定 defaultOverload '*function1*和*function2*。 删除一个规范或实现过程中重命名该函数|
 |[编译器错误 C2528](compiler-error-C2528.md)|'*标识符*： 指向引用的指针是非法的|
 |[编译器错误 C2529](compiler-error-C2529.md)|'*标识符*： 引用的引用是非法的|
 |[编译器错误 C2530](compiler-error-C2530.md)|'*标识符*： 必须初始化引用|
@@ -116,7 +116,7 @@ ms.locfileid: "50600975"
 |[编译器错误 C2544](compiler-error-C2544.md)|预期) 运算符 （）|
 |[编译器错误 C2545](compiler-error-C2545.md)|'*运算符*： 无法查找重载运算符|
 |编译器错误 C2546|'*标识符*： 当同时在 PIA 和非 PIA 必须先引用 PIA 中定义了一个类型|
-|编译器错误 C2547|'*标识符*： 已发布方法的所有参数必须显式都命名的声明上|
+|编译器错误 C2547|'*标识符*:已发布方法的所有参数必须显式都命名的声明上|
 |[编译器错误 C2548](compiler-error-C2548.md)|'*函数*： 缺少参数的默认参数*参数*|
 |[编译器错误 C2549](compiler-error-C2549.md)|用户定义的转换不能指定返回类型|
 |[编译器错误 C2550](compiler-error-C2550.md)|'*标识符*： 构造函数初始值设定项列表只能在构造函数定义|
@@ -168,3 +168,8 @@ ms.locfileid: "50600975"
 |[编译器错误 C2597](compiler-error-C2597.md)|非法引用非静态成员*标识符*|
 |[编译器错误 C2598](compiler-error-C2598.md)|链接规范必须在全局范围内|
 |[编译器错误 C2599](compiler-error-C2599.md)|'*标识符*： 不允许托管/WinRT 枚举的前向声明|
+
+## <a name="see-also"></a>请参阅
+
+[C /C++编译器和生成工具错误和警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[编译器错误 C2000-C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

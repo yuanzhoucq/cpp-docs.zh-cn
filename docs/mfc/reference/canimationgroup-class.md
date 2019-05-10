@@ -1,6 +1,6 @@
 ---
 title: CAnimationGroup 类
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CAnimationGroup
 - AFXANIMATIONCONTROLLER/CAnimationGroup
@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CAnimationGroup [MFC], m_nGroupID
 - CAnimationGroup [MFC], m_pParentController
 ms.assetid: 8bc18ceb-33a2-41d0-9731-71811adacab7
-ms.openlocfilehash: 9be0a5b76f91ddf4dc3d1c4ff2816b7ffd5a1986
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 32b2adfee2a36139a11caa12fa98bd240b0732dd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152065"
 ---
 # <a name="canimationgroup-class"></a>CAnimationGroup 类
 
@@ -70,7 +70,7 @@ class CAnimationGroup;
 |名称|描述|
 |----------|-----------------|
 |[CAnimationGroup::CAnimationGroup](#canimationgroup)|构造一个动画组。|
-|[CAnimationGroup::~CAnimationGroup](#canimationgroup__~canimationgroup)|析构函数。 当动画组被销毁时调用。|
+|[CAnimationGroup::~CAnimationGroup](#_dtorcanimationgroup)|析构函数。 当动画组被销毁时调用。|
 
 ### <a name="public-methods"></a>公共方法
 

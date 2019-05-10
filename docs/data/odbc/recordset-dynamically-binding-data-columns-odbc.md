@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-ms.openlocfilehash: c2fc870ba08bbec0a886b3d77281f3c697ae09fe
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: c2f2a6a6696f46fb5b8f2777c6c911269c9e7a80
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397886"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>记录集：动态绑定数据列 (ODBC)
 
@@ -26,7 +26,7 @@ ms.locfileid: "52175660"
 - [如何在运行时动态绑定列](#_core_how_to_bind_columns_dynamically)。
 
 > [!NOTE]
->  本主题适用于对象派生自`CRecordset`中的批量行提取尚未实现。 如果使用批量行提取，不建议通常所述的技术。 有关批量行提取的详细信息，请参阅[记录集： 提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+>  本主题适用于对象派生自`CRecordset`中的批量行提取尚未实现。 如果使用批量行提取，不建议通常所述的技术。 有关批量行提取的详细信息，请参阅[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 ##  <a name="_core_when_you_might_bind_columns_dynamically"></a> 当可能动态绑定列
 
@@ -91,10 +91,10 @@ ms.locfileid: "52175660"
 
 |||
 |-|-|
-|**表的当前列**| （图中的列表 1）在数据源的表中当前列的列表。 此列表可能与匹配的记录集中当前绑定的列的列表。|
-|**记录集的绑定列**| （图中的列表 2）记录集中绑定列的列表。 这些列中已有 RFX 语句在`DoFieldExchange`函数。|
-|**列-到-动态绑定**| （图中的列表 3）列的表中但不是在记录集的列表。 下面是你想要动态绑定的列。|
-|**列的动态值**| （图中的列表 4）从动态绑定列中检索包含存储的值的列表。 此列表的元素与中的列-到-动态绑定，一相对应。|
+|**Current-Table-Columns**| （图中的列表 1）在数据源的表中当前列的列表。 此列表可能与匹配的记录集中当前绑定的列的列表。|
+|**Bound-Recordset-Columns**| （图中的列表 2）记录集中绑定列的列表。 这些列中已有 RFX 语句在`DoFieldExchange`函数。|
+|**Columns-To-Bind-Dynamically**| （图中的列表 3）列的表中但不是在记录集的列表。 下面是你想要动态绑定的列。|
+|**Dynamic-Column-Values**| （图中的列表 4）从动态绑定列中检索包含存储的值的列表。 此列表的元素与中的列-到-动态绑定，一相对应。|
 
 ###  <a name="_core_building_your_lists"></a> 构建您的列表
 
@@ -136,11 +136,11 @@ ms.locfileid: "52175660"
 
 1. 生成动态列的值，平行的列-到-动态绑定，使其包含的每个列中的数据值。
 
-   例如，图中显示动态列值 (列表 4) 了其中一个元素：`CString`对象，其中包含当前记录的实际电话号码:"555-1212"。
+   例如，图中显示动态列值 (列表 4) 了其中一个元素：`CString`对象，其中包含当前记录的实际电话号码："555-1212".
 
    在最常见的情况下，列的动态值具有类型元素的`CString`。 如果处理的不同数据类型的列，则需要一个列表，其中可以包含各种类型的元素。
 
-前面的过程的结果是两个主要的列表： 列-到-包含要动态绑定列和动态列的值包含当前记录的列中的值的名称。
+前面的过程的结果是两个主要的列表：列-到-包含要动态绑定列和动态列的值包含当前记录的列中的值的名称。
 
 > [!TIP]
 > 如果新列不是所有相同的数据类型，可能需要一个额外的并行列表包含以某种方式定义的每个相应元素的类型的列列表中的项。 （可以使用值 AFX_RFX_BOOL，AFX_RFX_BYTE，并在其他方面，此 if 所需。 这些常量 AFXDB 中定义。H.)选择基于表示列数据类型的方式的列表类型。

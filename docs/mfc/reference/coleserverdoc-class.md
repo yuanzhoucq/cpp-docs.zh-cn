@@ -82,12 +82,12 @@ helpviewer_keywords:
 - COleServerDoc [MFC], OnSetItemRects
 - COleServerDoc [MFC], OnShowDocument
 ms.assetid: a9cdd96a-e0ac-43bb-9203-2c29237e965c
-ms.openlocfilehash: 3069c5f53b37984cbeae8bee1379bb8b0c36ccc3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4cada70723c7fadc9c91c40380b8a7e9fc46a07a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224215"
 ---
 # <a name="coleserverdoc-class"></a>COleServerDoc 类
 
@@ -943,7 +943,7 @@ void UpdateAllItems(
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 HIERSVR](../../visual-cpp-samples.md)<br/>
+[MFC 示例 HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [COleLinkingDoc 类](../../mfc/reference/colelinkingdoc-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [COleDocument 类](../../mfc/reference/coledocument-class.md)<br/>

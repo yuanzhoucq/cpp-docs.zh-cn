@@ -18,12 +18,12 @@ helpviewer_keywords:
 - data types [C++], enumerating
 - public members [C++]
 ms.assetid: 46b6ff4a-e441-4022-8892-78e69422f230
-ms.openlocfilehash: 769ba87f64a8096ac8c7f14cc091119345177b3b
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
-ms.translationtype: MT
+ms.openlocfilehash: 5f18a7faa4e77571a87cc0d76a43240aaf1fd52c
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426441"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447223"
 ---
 # <a name="reflection-ccli"></a>反射 (C++/CLI)
 
@@ -34,7 +34,7 @@ ms.locfileid: "57426441"
 若要访问的反射功能的最常见方法是通过<xref:System.Object.GetType%2A>方法。 此方法提供的<xref:System.Object?displayProperty=nameWithType>，从垃圾收集的所有类都派生的。
 
 > [!NOTE]
-> 如果使用生成.exe 只允许对用 Visual c + + 编译器生成的.exe 的反射 **/clr: pure**或 **/clr: safe**编译器选项。 **/Clr: pure**并 **/clr: safe**编译器选项都不建议使用在 Visual Studio 2015 和 Visual Studio 2017 中不可用。 请参阅[/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)有关详细信息。
+> 反射上使用 Microsoft 生成的.exeC++如果使用生成.exe 仅允许编译器 **/clr: pure**或 **/clr: safe**编译器选项。 **/Clr: pure**并 **/clr: safe**编译器选项都不建议使用在 Visual Studio 2015 和 Visual Studio 2017 中不可用。 请参阅[/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)有关详细信息。
 
 有关详细信息，请参阅<xref:System.Reflection>。
 
@@ -79,7 +79,7 @@ type of i = 'System.Int32'
 
 ## <a name="example-typeid"></a>示例： typeid
 
-如同`GetType`方法， [typeid](../windows/typeid-cpp-component-extensions.md)运算符将返回一个指向**类型**对象，因此此代码指示的类型名称**System.Int32**。 显示类型名称是最基本的反射功能，但可能会更有用的方法是检查或发现枚举类型的有效值。 这可以通过使用静态**Enum::GetNames**函数，它返回数组的字符串，每个都包含以文本形式的枚举值。  下面的示例检索有关的值枚举值的字符串数组**选项**(CLR) 枚举并将它们显示在循环中。
+如同`GetType`方法， [typeid](../extensions/typeid-cpp-component-extensions.md)运算符将返回一个指向**类型**对象，因此此代码指示的类型名称**System.Int32**。 显示类型名称是最基本的反射功能，但可能会更有用的方法是检查或发现枚举类型的有效值。 这可以通过使用静态**Enum::GetNames**函数，它返回数组的字符串，每个都包含以文本形式的枚举值。  下面的示例检索有关的值枚举值的字符串数组**选项**(CLR) 枚举并将它们显示在循环中。
 
 如果第四个选项添加到**选项**枚举，此代码将报告无需重新编译，即使该枚举在单独的程序集中定义的新选项。
 
@@ -181,7 +181,7 @@ public:
 
 反射系统已成功加载程序集的数组后**类型**对象检索与<xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType>函数。 每个数组元素包含有关不同类型的信息，尽管这种情况下，定义一个类。 使用循环，每个**类型**此数组中查询有关使用的类型成员**Type::GetMembers**函数。 此函数返回的数组**MethodInfo**对象，每个对象，其中包含有关成员函数、 数据成员或类型中的属性的信息。
 
-请注意，方法的列表包含函数显式中定义**TestClass**和函数隐式继承自**system:: object**类。 在.NET 中，而不是在 Visual c + + 语法中所描述的一部分，属性显示为 get/set 函数访问的基础数据成员。 Get/set 函数在此列表中显示为常规方法。 通过公共语言运行时，不是由 Visual c + + 编译器支持反射。
+请注意，方法的列表包含函数显式中定义**TestClass**和函数隐式继承自**system:: object**类。 在.NET 中，而不是视觉对象中所描述的一部分C++语法，属性显示为 get/set 函数访问的基础数据成员。 Get/set 函数在此列表中显示为常规方法。 通过公共语言运行时，不是由 Microsoft 支持反射C++编译器。
 
 尽管此代码用于检查你定义的程序集，但您可以使用此代码检查.NET 程序集。 例如，如果对 mscorlib 更改 TestAssembly，然后将看到每个类型和方法在 mscorlib.dll 中定义的列表。
 

@@ -31,11 +31,11 @@ helpviewer_keywords:
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
 ms.openlocfilehash: 2ac864d7e28823c95b0202c0a8f2454d03c64aff
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285981"
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p、log1pf、log1pl
 
@@ -93,7 +93,7 @@ long double log1pl(
 
 **Log1p**函数可能会比使用更精确`log(x + 1)`时*x*接近 0。
 
-由于 c + + 允许重载，可以调用的重载**log1p**采用并返回**float**并**长** **double**类型。 在 C 程序中， **log1p**始终采用并返回**double**。
+因为C++允许重载，可以调用的重载**log1p**采用并返回**float**并**长** **double**类型。 在 C 程序中， **log1p**始终采用并返回**double**。
 
 如果*x*是自然数，此函数返回的阶乘的对数 (*x* -1)。
 

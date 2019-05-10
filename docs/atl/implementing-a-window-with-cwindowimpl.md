@@ -1,8 +1,6 @@
 ---
 title: 实现与 CWindowImpl 窗口
 ms.date: 11/04/2016
-f1_keywords:
-- CWindowImpl
 helpviewer_keywords:
 - ATL, windows
 - windows [C++], subclassing
@@ -11,12 +9,12 @@ helpviewer_keywords:
 - subclassing ATL window classes
 - superclassing, ATL
 ms.assetid: 3fc40550-f1d6-4702-8b7c-4cf682b6a855
-ms.openlocfilehash: 7b1528e331a1431decb3916a06e67f0095615c2d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 265c3145d8ceacae540286f72939dc046e7c8b35
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62197840"
 ---
 # <a name="implementing-a-window-with-cwindowimpl"></a>实现与 CWindowImpl 窗口
 

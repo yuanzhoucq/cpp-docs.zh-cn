@@ -2,12 +2,12 @@
 title: C/C++ 语言和标准库
 ms.date: 11/04/2016
 ms.assetid: c26a6682-961a-43ef-ad33-2adc612f69ac
-ms.openlocfilehash: c071db1dcc6363e29f5dd7ca895330d738e021cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 8e7a51fc18b24475c5545fa912e376cc49645d94
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614417"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222218"
 ---
 # <a name="cc-language-and-standard-libraries"></a>C/C++ 语言和标准库
 
@@ -22,7 +22,7 @@ ms.locfileid: "50614417"
 |[C++ 标准库](../standard-library/cpp-standard-library-reference.md)|关于 Microsoft 实现的 C++ 标准库的参考内容。|
 |[C 语言参考](../c-language/c-language-reference.md)|关于 Microsoft 实现的 C 语言的参考内容。|
 |[C 运行时库参考](../c-runtime-library/c-run-time-library-reference.md)|C 运行时 (CRT) 的 Microsoft 实现的参考内容。|
-|[SafeInt 库](../windows/safeint-library.md)|关于能够在没有溢出风险的情况下处理整数的函数库的参考内容。|
-|[Visual C++](../visual-cpp-in-visual-studio.md)|描述 Visual C++ 在 Visual Studio 中的主要功能，以及指向其他 Visual C++ 文档的链接。|
-|[IDE 和开发工具](../ide/ide-and-tools-for-visual-cpp-development.md)|指向其他介绍如何使用 Visual Studio 及相关工具来创建、生成和部署 C++ 应用的文章的链接。|
-|[Visual C++ 的新增功能](../what-s-new-for-visual-cpp-in-visual-studio.md)|描述此发行版本中的新功能和改进。|
+|[SafeInt 库](../safeint/safeint-library.md)|处理整数时无溢出风险的函数的可移植库的参考内容。|
+|[Visual C++](../overview/visual-cpp-in-visual-studio.md)|介绍主要功能的C++在 Visual Studio 和 Visual Studio 的其余部分的链接C++文档。|
+|[Visual Studio 中的 C++ 开发概述](../overview/overview-of-cpp-development.md)|指向其他介绍如何使用 Visual Studio 及相关工具来创建、生成和部署 C++ 应用的文章的链接。|
+|[Visual C++ 的新增功能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)|描述此发行版本中的新功能和改进。|

@@ -1,17 +1,17 @@
 ---
-title: satype （c + + COM 属性）
+title: satype (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.satype
 helpviewer_keywords:
 - satype attribute
 ms.assetid: 1716590b-6bcb-4aba-b1bc-82f7335f02c3
-ms.openlocfilehash: 3d2d921e750adad0089df0d00590f256b56c732e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7588e8d855d648309c46d981898cfbbf7888f4c9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407297"
 ---
 # <a name="satype"></a>satype
 
@@ -36,12 +36,12 @@ ms.locfileid: "50517684"
 |-|-|
 |**适用对象**|接口参数，接口方法|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 ## <a name="remarks"></a>备注
 
-**Satype** c + + 属性指定的数据类型`SAFEARRAY`。
+**Satype** C++属性指定的数据类型`SAFEARRAY`。
 
 > [!NOTE]
 > 从删除一定程度的间接性`SAFEARRAY`从它在.cpp 文件中的声明方式生成的.idl 文件中的指针。

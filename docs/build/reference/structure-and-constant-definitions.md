@@ -2,12 +2,12 @@
 title: 结构和常量定义
 ms.date: 11/04/2016
 ms.assetid: 1df7cf46-b853-4788-a257-100d5c37997f
-ms.openlocfilehash: 47ecc8b91492139f3b8295ecabe4662bda5f8e1c
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ea7aa1ec25bcd0e8531ef63848de26da164da668
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317856"
 ---
 # <a name="structure-and-constant-definitions"></a>结构和常量定义
 
@@ -71,4 +71,4 @@ typedef struct ImgDelayDescr {
 
 ## <a name="see-also"></a>请参阅
 
-[了解 Helper 函数](../../build/reference/understanding-the-helper-function.md)
+[了解 Helper 函数](understanding-the-helper-function.md)

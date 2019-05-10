@@ -6,16 +6,16 @@ helpviewer_keywords:
 - notifications, support in providers
 - OLE DB providers, creating
 ms.assetid: bdfd5c9f-1c6f-4098-822c-dd650e70ab82
-ms.openlocfilehash: 04db02bc8ad4db0c669e07a0bcf1b60ffa22e8ad
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: d3f8314e7cd57617e35e50a67a4562d4055cb93a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62361852"
 ---
 # <a name="creating-an-updatable-provider"></a>创建可更新的提供程序
 
-Visual c + + 支持可更新的提供程序或可更新的提供程序 （写入） 数据存储区。 本主题讨论如何创建可更新的提供程序使用 OLE DB 模板。
+VisualC++支持可更新的提供程序或可更新的提供程序 （写入） 数据存储区。 本主题讨论如何创建可更新的提供程序使用 OLE DB 模板。
 
 本主题假定你着手工作提供程序。 有两个步骤创建可更新的提供程序。 您必须首先确定如何提供程序将对数据存储区; 进行的更改具体而言，是否更改会立即完成或者延迟，直到发出 update 命令。 部分"[使提供程序可更新](#vchowmakingprovidersupdatable)"的更改和的设置，需要在提供程序代码中执行操作。
 
@@ -40,7 +40,7 @@ Visual c + + 支持可更新的提供程序或可更新的提供程序 （写入
 
 1. 在行集类中，继承自`IRowsetChangeImpl`或`IRowsetUpdateImpl`。 这些类用于更改数据存储区提供相应的接口：
 
-   **添加 IRowsetChange**
+   **Adding IRowsetChange**
 
    添加`IRowsetChangeImpl`到使用此窗体继承链：
 
@@ -109,13 +109,13 @@ Visual c + + 支持可更新的提供程序或可更新的提供程序 （写入
 
    如果你实现`IRowsetChangeImpl`，必须在您的提供程序上设置以下属性。 这些属性主要用于请求通过接口`ICommandProperties::SetProperties`。
 
-   - `DBPROP_IRowsetChange`： 设置将自动设置`DBPROP_IRowsetChange`。
+   - `DBPROP_IRowsetChange`：这会自动设置集`DBPROP_IRowsetChange`。
 
-   - `DBPROP_UPDATABILITY`： 指定受支持的方法一个位掩码`IRowsetChange`: `SetData`， `DeleteRows`，或`InsertRow`。
+   - `DBPROP_UPDATABILITY`：指定受支持的方法上的位掩码`IRowsetChange`: `SetData`， `DeleteRows`，或`InsertRow`。
 
-   - `DBPROP_CHANGEINSERTEDROWS`： 使用者可以调用`IRowsetChange::DeleteRows`或`SetData`为新插入的行。
+   - `DBPROP_CHANGEINSERTEDROWS`：使用者可以调用`IRowsetChange::DeleteRows`或`SetData`为新插入的行。
 
-   - `DBPROP_IMMOBILEROWS`： 行集不会对插入或更新的行重新排序。
+   - `DBPROP_IMMOBILEROWS`：行集不会对插入或更新的行重新排序。
 
    **如果实现 IRowsetUpdateImpl**
 
@@ -123,15 +123,15 @@ Visual c + + 支持可更新的提供程序或可更新的提供程序 （写入
 
    - `DBPROP_IRowsetUpdate`。
 
-   - `DBPROP_OWNINSERT`： 必须为 READ_ONLY 和为 VARIANT_TRUE。
+   - `DBPROP_OWNINSERT`：必须为 READ_ONLY 和为 VARIANT_TRUE。
 
-   - `DBPROP_OWNUPDATEDELETE`： 必须为 READ_ONLY 和为 VARIANT_TRUE。
+   - `DBPROP_OWNUPDATEDELETE`：必须为 READ_ONLY 和为 VARIANT_TRUE。
 
-   - `DBPROP_OTHERINSERT`： 必须为 READ_ONLY 和为 VARIANT_TRUE。
+   - `DBPROP_OTHERINSERT`：必须为 READ_ONLY 和为 VARIANT_TRUE。
 
-   - `DBPROP_OTHERUPDATEDELETE`： 必须为 READ_ONLY 和为 VARIANT_TRUE。
+   - `DBPROP_OTHERUPDATEDELETE`：必须为 READ_ONLY 和为 VARIANT_TRUE。
 
-   - `DBPROP_REMOVEDELETED`： 必须为 READ_ONLY 和为 VARIANT_TRUE。
+   - `DBPROP_REMOVEDELETED`：必须为 READ_ONLY 和为 VARIANT_TRUE。
 
    - `DBPROP_MAXPENDINGROWS`。
 
@@ -413,7 +413,7 @@ virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,
 
 ### <a name="column-flags"></a>列标志
 
-如果在列上支持默认值，则需要将其使用中的元数据设置\<提供程序类\>SchemaRowset 类。 设置`m_bColumnHasDefault = VARIANT_TRUE`。
+如果在列上支持默认值，则需要将其使用中的元数据设置\<提供程序类\>SchemaRowset 类。 设置 `m_bColumnHasDefault = VARIANT_TRUE`。
 
 您也有责任设置指定使用 DBCOLUMNFLAGS 枚举类型的列标志。 列标志描述列特征。
 

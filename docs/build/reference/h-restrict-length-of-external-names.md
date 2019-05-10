@@ -10,12 +10,12 @@ helpviewer_keywords:
 - external names
 - -H compiler option [C++]
 ms.assetid: de701dd3-ed04-4c88-8195-960d2520ec2e
-ms.openlocfilehash: bb7821587d6c0bbe06eb6baa02227955582eb76d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bdd3da8d3a5165262c00bc3475122e31f5770726
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270381"
 ---
 # <a name="h-restrict-length-of-external-names"></a>/H（限制外部名称长度）
 
@@ -32,7 +32,7 @@ ms.locfileid: "57420409"
 
 ## <a name="remarks"></a>备注
 
-默认情况下，外部 （公共） 名称的长度为 2047 个字符。 这适用于 C 和 c + + 程序。 使用 **/H**只能减少标识符的最大长度，而不增加。 之间有空格 **/H**并*数*是可选的。
+默认情况下，外部 （公共） 名称的长度为 2047 个字符。 这适用于 C 和C++程序。 使用 **/H**只能减少标识符的最大长度，而不增加。 之间有空格 **/H**并*数*是可选的。
 
 如果程序包含外部名称长度超过*数*，会忽略多余字符。 如果编译的程序而无需 **/H** ，然后如果标识符包含超过 2047 个字符，编译器将生成[致命错误 C1064](../../error-messages/compiler-errors-1/fatal-error-c1064.md)。
 
@@ -40,7 +40,7 @@ ms.locfileid: "57420409"
 
 - 编译器将添加前导下划线 (**\_**) 到名称修改`__cdecl`（默认值） 和`__stdcall`注册时调用约定和前导 (**\@**) 修改名称为`__fastcall`调用约定。
 
-- 编译器将参数大小信息追加到名称修改`__fastcall`和`__stdcall`调用约定，并将类型信息添加到 c + + 名称。
+- 编译器将参数大小信息追加到名称修改`__fastcall`并`__stdcall`调用约定，并将添加类型信息传递给C++名称。
 
 您可能会发现 **/H**有用：
 
@@ -68,15 +68,15 @@ void func2(void) {}
 
 您还必须是使用时应谨慎 **/H**由于预定义的编译器的标识符选项。 如果最大标识符长度太小，某些预定义的标识符将无法解析，以及某些库函数调用。 例如，如果`printf`使用函数和选项 **/H5**指定在编译时，该符号 **_prin**将创建以引用`printf`，这将不会找到和在库中。
 
-利用 **/H**与不兼容[/GL （全程序优化）](../../build/reference/gl-whole-program-optimization.md)。
+利用 **/H**与不兼容[/GL （全程序优化）](gl-whole-program-optimization.md)。
 
-**/H**自 Visual Studio 2005 选项已弃用; 已增加最大长度限制以及 **/H**不再需要。 有关不推荐使用的编译器选项的列表，请参阅**已弃用并删除的编译器选项**中[按类别列出的编译器选项](../../build/reference/compiler-options-listed-by-category.md)。
+**/H**自 Visual Studio 2005 选项已弃用; 已增加最大长度限制以及 **/H**不再需要。 有关不推荐使用的编译器选项的列表，请参阅**已弃用并删除的编译器选项**中[按类别列出的编译器选项](compiler-options-listed-by-category.md)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择**配置属性** > **C/c + +** > **命令行**属性页。
+1. 选择**配置属性** > **C /C++** > **命令行**属性页。
 
 1. 输入中的编译器选项**其他选项**框。
 
@@ -86,5 +86,5 @@ void func2(void) {}
 
 ## <a name="see-also"></a>请参阅
 
-[编译器选项](../../build/reference/compiler-options.md)<br/>
-[设置编译器选项](../../build/reference/setting-compiler-options.md)
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)

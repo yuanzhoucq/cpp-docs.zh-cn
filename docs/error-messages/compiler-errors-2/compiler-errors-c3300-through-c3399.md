@@ -1,6 +1,6 @@
 ---
-title: 编译器错误 C3300-C3399
-ms.date: 11/17/2017
+title: 编译器错误 C3300 - C3399
+ms.date: 04/21/2019
 f1_keywords:
 - C3300
 - C3301
@@ -100,14 +100,14 @@ helpviewer_keywords:
 - C3377
 - C3378
 ms.assetid: 190b7d29-ffe6-4261-921d-140da1935d00
-ms.openlocfilehash: 22964c9482d87c466665949ad4b340d43b3a5622
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca55e19534f722a7231a1d30c63e2dbb77d25ec7
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652694"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857727"
 ---
-# <a name="compiler-errors-c3300-through-c3399"></a>编译器错误 C3300-C3399
+# <a name="compiler-errors-c3300-through-c3399"></a>编译器错误 C3300 - C3399
 
 在本部分文档中的文章说明了由编译器生成的错误消息的子集。
 
@@ -152,10 +152,10 @@ ms.locfileid: "50652694"
 |编译器错误 C3332|'*属性*： 语法不一致，属性*属性*是同时要求，并且有默认值|
 |[编译器错误 C3333](compiler-error-c3333.md)|'*库*： 不能 #import 损坏的类型库|
 |[编译器错误 C3334](compiler-error-c3334.md)|无法 #import 损坏的类型库|
-|编译器错误 C3335|'*标识符*： 有最多只能包含一个默认接口用于 coclass'*类*|
+|编译器错误 C3335|'*标识符*:有最多只能包含一个默认接口用于 coclass'*类*|
 |编译器错误 C3336|必须在类范围内执行此操作|
 |编译器错误 C3337|'*标识符*: defaultvtable 必须是组件类的事件源*类*|
-|编译器错误 C3338|'*标识符*： 有最多只能包含一个默认接口，它也用于 coclass 的事件源*类*|
+|编译器错误 C3338|'*标识符*:有最多只能包含一个默认接口，它也用于 coclass 的事件源*类*|
 |编译器错误 C3339|模板 template 参数在参数列表之后需要 class 或 typename|
 |[编译器错误 C3340](compiler-error-c3340.md)|'*标识符*： 接口不能是 restricted 和 default 中组件类*类*|
 |编译器错误 C3341|'*接口*: defaultvtable 接口必须是 dual 或者自定义|
@@ -165,7 +165,7 @@ ms.locfileid: "50652694"
 |[编译器错误 C3345](compiler-error-c3345.md)|'*名称*： 模块名称的标识符无效|
 |编译器错误 C3346|在非命名空间范围导出的声明|
 |[编译器错误 C3347](compiler-error-c3347.md)|'*自变量*： 所需属性中未指定参数*asttribute*|
-|编译器错误 C3348|导出的模板不是当前 c + + 标准的一部分|
+|编译器错误 C3348|导出的模板不属于当前C++标准|
 |编译器错误 C3349|'*类*::*成员*： 多路广播的特性已由提供程序实现*提供程序*|
 |[编译器错误 C3350](compiler-error-c3350.md)|'*函数*： 委托构造函数需要*数*个参数|
 |[编译器错误 C3351](compiler-error-c3351.md)|'*函数*： 如果将 NULL 对象实例传递给委托构造函数必须也传递静态成员函数的地址|
@@ -217,3 +217,8 @@ ms.locfileid: "50652694"
 |[编译器错误 C3397](compiler-error-c3397.md)|默认参数中不允许进行聚合初始化|
 |[编译器错误 C3398](compiler-error-c3398.md)|'*运算符*： 不能从转换*类型*to*类型*。 源表达式必须是函数符号|
 |[编译器错误 C3399](compiler-error-c3399.md)|'*类型*： 创建泛型参数的实例时无法提供变量|
+
+## <a name="see-also"></a>请参阅
+
+[C /C++编译器和生成工具错误和警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[编译器错误 C2000-C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

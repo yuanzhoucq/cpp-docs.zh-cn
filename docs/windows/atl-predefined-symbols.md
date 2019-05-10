@@ -5,18 +5,18 @@ helpviewer_keywords:
 - symbols [C++], ATL predefined
 - ATL symbols
 ms.assetid: 60d8f4e6-6ed9-47f3-9051-e4bf34384456
-ms.openlocfilehash: 16991746c5c858310466f7eebd91a8478d2dcc5c
-ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
+ms.openlocfilehash: 6e876fe27bd57194513f637fda90845ca68c59ee
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56954843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62390966"
 ---
 # <a name="atl-predefined-symbols"></a>ATL 预定义的符号
 
 在 ATL 标头文件中，定义了这些符号，但它们支持标准的 Windows 应用程序功能和操作。 这些符号主要用于对话框。
 
-当您正在使用对话框和控件中[对话框编辑器](../windows/dialog-editor.md)，这些符号将出现在**属性**与公共控件关联的窗口。 例如，如果您的对话框具有**取消**按钮，命令将与相关联的符号 IDCANCEL 中[属性窗口](/visualstudio/ide/reference/properties-window)。
+当您正在使用对话框和控件中[对话框编辑器](../windows/dialog-editor.md)，这些符号将出现在[属性窗口](/visualstudio/ide/reference/properties-window)与公共控件相关联。 例如，如果您的对话框具有**取消**按钮，命令将与相关联的符号 IDCANCEL 中**属性**窗口。
 
 |||
 |-|-|

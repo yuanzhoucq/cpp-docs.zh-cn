@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Enum Struct
 ms.assetid: cf82f0eb-7a37-4e4e-bbe7-e4aebbc9ec0a
-ms.openlocfilehash: 4431f21fe71bd7b6376f2f530b844077bc1fda6e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67870a0fcc685c420c7d24510e90c6f4ef9b72a9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387586"
 ---
 # <a name="platformenum-class"></a>Platform::Enum 类
 
@@ -30,7 +30,7 @@ public class Enum
 
 ### <a name="remarks"></a>备注
 
-使用 [public enum class](../windows/enum-class-cpp-component-extensions.md) 关键字创建枚举。 不要显式使用 Platform::Enum 类型。 有关更多信息，请参见 [枚举](../cppcx/enums-c-cx.md)中定义的接口的私有 C++ 特定实现。
+使用 [public enum class](../extensions/enum-class-cpp-component-extensions.md) 关键字创建枚举。 不要显式使用 Platform::Enum 类型。 有关更多信息，请参见 [枚举](../cppcx/enums-c-cx.md)中定义的接口的私有 C++ 特定实现。
 
 ### <a name="requirements"></a>要求
 
@@ -44,4 +44,4 @@ public class Enum
 
 ## <a name="see-also"></a>请参阅
 
-[平台命名空间](../cppcx/platform-namespace-c-cx.md)
+[Platform 命名空间](../cppcx/platform-namespace-c-cx.md)

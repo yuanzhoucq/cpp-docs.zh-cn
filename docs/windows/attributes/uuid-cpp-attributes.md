@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - uuid attribute
 ms.assetid: 90562a94-5e28-451b-a4b0-cadda7f66efe
-ms.openlocfilehash: e7d90cc2d1081b52370bcc189ce7545edf34a425
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eae79f9a4d0af6375834c0792c4004f52a16e07e
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631330"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448929"
 ---
 # <a name="uuid-c-attributes"></a>uuid（C++ 特性）
 
@@ -32,7 +32,7 @@ ms.locfileid: "50631330"
 
 ## <a name="remarks"></a>备注
 
-如果未指定的接口或类定义**uuid** c + + 属性，则 Visual c + + 编译器将提供一个。 当指定**uuid**，必须包括引号。
+如果未指定的接口或类定义**uuid** C++属性，则 MicrosoftC++编译器将提供一个。 当指定**uuid**，必须包括引号。
 
 如果未指定**uuid**，则编译器将在一台计算机上的不同的属性项目中生成的接口或类具有相同的名称相同的 GUID。
 
@@ -52,8 +52,8 @@ ms.locfileid: "50631330"
 |-|-|
 |**适用对象**|**类**， **struct**，**接口**，**联合**，**枚举**|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

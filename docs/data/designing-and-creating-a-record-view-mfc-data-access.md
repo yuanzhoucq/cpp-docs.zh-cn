@@ -9,12 +9,12 @@ helpviewer_keywords:
 - application wizards [C++], creating record view classes
 - designing record views
 ms.assetid: 1d6f5439-754f-4b8b-a19d-841a4657827b
-ms.openlocfilehash: b97ac5e61530742280dd8ee2183ec54229fb4441
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15a8afde8c86d3dae8198e8f42b2b7c3b49f0dfa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397960"
 ---
 # <a name="designing-and-creating-a-record-view--mfc-data-access"></a>设计和创建记录视图（MFC 数据访问）
 
@@ -34,11 +34,11 @@ ms.locfileid: "50613442"
 
 以下主题阐述了使用记录视图的其他详细信息：
 
-- [记录视图： 支持在记录视图中导航](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)
+- [记录视图：支持在记录视图中导航](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)
 
-- [记录视图： 使用记录视图](../data/using-a-record-view-mfc-data-access.md)
+- [记录视图：使用记录视图](../data/using-a-record-view-mfc-data-access.md)
 
-- [记录视图： 填充列表框从第二个记录集](../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md)
+- [记录视图：填充列表框从第二个记录集](../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md)
 
 ## <a name="see-also"></a>请参阅
 

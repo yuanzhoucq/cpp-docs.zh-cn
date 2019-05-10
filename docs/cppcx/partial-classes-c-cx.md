@@ -2,12 +2,12 @@
 title: 分部类 (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: 69d93575-636c-4564-8cca-6dfba0c7e328
-ms.openlocfilehash: feee9033662b118e7c6b25a9b5cae50020c2ae79
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71df19e98192a7704d4528fe730ce79977383a9b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384993"
 ---
 # <a name="partial-classes-ccx"></a>分部类 (C++/CX)
 
@@ -98,5 +98,5 @@ ms.locfileid: "50605447"
 ## <a name="see-also"></a>请参阅
 
 [类型系统](../cppcx/type-system-c-cx.md)<br/>
-[Visual c + + 语言参考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[VisualC++语言参考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [命名空间参考](../cppcx/namespaces-reference-c-cx.md)

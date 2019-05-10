@@ -2,7 +2,6 @@
 title: 将 TCHAR.H 数据类型用于 _MBCS 代码
 ms.date: 11/04/2016
 f1_keywords:
-- tchar.h
 - TCHAR
 helpviewer_keywords:
 - mapping generic-text
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 298583c5-22c3-40f6-920e-9ec96d42abd8
-ms.openlocfilehash: dcb194c72ca2a64317cddda8a1559e78edc0978f
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 0e26aefd8b9099a2ca5e76ce9e2b7d1def2f9854
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410494"
 ---
 # <a name="using-tcharh-data-types-with-mbcs-code"></a>将 TCHAR.H 数据类型用于 _MBCS 代码
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - scrolling [C++], recordsets
 - Move method (recordsets)
 ms.assetid: f38d2dcb-1e88-4e41-af25-98b00c276be4
-ms.openlocfilehash: e41b526b86922bafd1d923fa5848a5ef8ed4825e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5df8151664bd7e726087cb5323c1e4622264ad23
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397713"
 ---
 # <a name="recordset-scrolling-odbc"></a>记录集：滚动 (ODBC)
 
@@ -32,7 +32,7 @@ ms.locfileid: "50579581"
 
 ##  <a name="_core_scrolling_from_one_record_to_another"></a> 从一条记录滚动到另一个
 
-类`CRecordset`提供了`Move`滚动记录集内的成员函数。 这些函数将当前记录移的行集。 如果已实现批量行提取，`Move`操作按行集的大小重新定位该记录集。 如果你尚未实现批量行提取，调用`Move`函数重新定位该记录集按逐个记录每次。 有关批量行提取的详细信息，请参阅[记录集： 提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+类`CRecordset`提供了`Move`滚动记录集内的成员函数。 这些函数将当前记录移的行集。 如果已实现批量行提取，`Move`操作按行集的大小重新定位该记录集。 如果你尚未实现批量行提取，调用`Move`函数重新定位该记录集按逐个记录每次。 有关批量行提取的详细信息，请参阅[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 > [!NOTE]
 >  当在记录集中移动，不能跳过已删除的记录。 有关详细信息，请参阅[IsDeleted](../../mfc/reference/crecordset-class.md#isdeleted)成员函数。
@@ -89,11 +89,11 @@ rsCustSet.MoveFirst( );
 
 `IsEOF` 如果记录集位于最后一条记录，则返回非零值。 `IsBOF` 如果记录集定位在第一条 （在之前的所有记录），则返回非零值。 在任一情况下，没有最新记录来操作。 如果您调用`MovePrev`时`IsBOF`已 TRUE 或调用`MoveNext`时`IsEOF`是已为 TRUE，框架将引发`CDBException`。 此外可以使用`IsBOF`和`IsEOF`检查空记录集。
 
-有关记录集导航的详细信息，请参阅[记录集： 书签和绝对位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)。
+有关记录集导航的详细信息，请参阅[记录集：书签和绝对位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)。
 
 ##  <a name="_core_when_scrolling_is_supported"></a> 当支持滚动
 
-正如最初设计 SQL 提供仅向前滚动，但 ODBC 扩展了滚动功能。 对滚动的支持的可用级别取决于你的应用程序可使用您的驱动程序的 ODBC API 一致性级别，ODBC 驱动程序以及是否将 ODBC 游标库加载到内存中。 有关详细信息，请参阅[ODBC](../../data/odbc/odbc-basics.md)并[ODBC: ODBC 游标库](../../data/odbc/odbc-the-odbc-cursor-library.md)。
+正如最初设计 SQL 提供仅向前滚动，但 ODBC 扩展了滚动功能。 对滚动的支持的可用级别取决于你的应用程序可使用您的驱动程序的 ODBC API 一致性级别，ODBC 驱动程序以及是否将 ODBC 游标库加载到内存中。 有关详细信息，请参阅[ODBC](../../data/odbc/odbc-basics.md)和[ODBC:ODBC 游标库](../../data/odbc/odbc-the-odbc-cursor-library.md)。
 
 > [!TIP]
 >  您可以控制是否使用游标库。 请参阅*bUseCursorLib*并*dwOptions*参数[CDatabase::Open](../../mfc/reference/cdatabase-class.md#open)。

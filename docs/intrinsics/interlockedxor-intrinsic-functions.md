@@ -34,12 +34,12 @@ helpviewer_keywords:
 - InterlockedXor64 intrinsic
 - _InterlockedXor intrinsic
 ms.assetid: faef1796-cb5a-4430-b1e2-9d5eaf9b4a91
-ms.openlocfilehash: 8410420564ae641ff5e624cc5a1ddb0f260672e6
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: c86a743df84df37ffe3234d82d79abd987a4dcda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396686"
 ---
 # <a name="interlockedxor-intrinsic-functions"></a>_InterlockedXor 内部函数
 
@@ -162,7 +162,7 @@ __int64 _InterlockedXor64_rel(
 
 ## <a name="requirements"></a>要求
 
-|内部函数|体系结构|标头|
+|内部函数|体系结构|Header|
 |---------------|------------------|------------|
 |`_InterlockedXor`, `_InterlockedXor8`, `_InterlockedXor16`, `_InterlockedXor64`|x86、 ARM、 x64|\<intrin.h>|
 |`_InterlockedXor_acq`、`_InterlockedXor_nf`、`_InterlockedXor_rel`、`_InterlockedXor8_acq`、`_InterlockedXor8_nf`、`_InterlockedXor8_rel`、`_InterlockedXor16_acq`、`_InterlockedXor16_nf`、`_InterlockedXor16_rel`、`_InterlockedXor64_acq`、`_InterlockedXor64_nf`、`_InterlockedXor64_rel`、|ARM|\<intrin.h>|
@@ -171,7 +171,7 @@ __int64 _InterlockedXor64_rel(
 
 ## <a name="remarks"></a>备注
 
-每个函数名称中的数字指定了自变量的位大小。
+每个函数名称中的数字指定了参数的位大小。
 
 ARM 平台上，如果需要（例如在临界区的起点和终点）获取和发布语义，可以使用带 `_acq` 和 `_rel` 后缀的函数。 带 `_nf`（“无围墙”）后缀的 ARM 内部函数不能充当内存屏障。
 

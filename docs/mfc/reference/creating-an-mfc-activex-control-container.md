@@ -9,12 +9,12 @@ helpviewer_keywords:
 - containers [MFC], creating
 - OLE controls [MFC], containers
 ms.assetid: ec70e137-7c14-4940-bd0e-fd4edcc63ea5
-ms.openlocfilehash: f0d5fe419375535ab8c52378b9005df88634e99a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7591b3ed84c1703a201e4e62f699df877de36058
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275891"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220199"
 ---
 # <a name="creating-an-mfc-activex-control-container"></a>创建 MFC ActiveX 控件容器
 
@@ -39,4 +39,5 @@ ActiveX 控件容器是一个父程序，提供 ActiveX (以前称为 OLE) 控�
 
 ## <a name="see-also"></a>请参阅
 
-[Visual C++ 项目类型](../../ide/visual-cpp-project-types.md)
+[C++在 Visual Studio 中的项目类型](../../build/reference/visual-cpp-project-types.md)
+

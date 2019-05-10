@@ -2,16 +2,16 @@
 title: 编译器警告（等级 4）C4435
 ms.date: 11/04/2016
 ms.assetid: a04524af-2b71-4ff9-9729-d9d1d1904ed7
-ms.openlocfilehash: 7db1d483f571289c5b890c223ba1e59ba3d1f41e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 43c13c484d6e9accee7c4d2c58b72a4539a75c4c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62391473"
 ---
 # <a name="compiler-warning-level-4-c4435"></a>编译器警告（等级 4）C4435
 
-“class1”: /vd2 下的对象布局将因虚拟基“class2”而更改
+class1:/ Vd2 下的对象布局将因虚拟基 class2 而更改
 
 默认情况下，此警告处于关闭状态。 请参阅 [默认情况下处于关闭状态的编译器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 了解详细信息。
 

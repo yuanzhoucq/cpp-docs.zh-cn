@@ -31,11 +31,11 @@ helpviewer_keywords:
 - truncl function
 ms.assetid: de2038ac-ac0b-483e-870c-e8992dcd4fd0
 ms.openlocfilehash: 6e023b9d894ea1b40a0e056e73b7c32f1e3cbed7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62268931"
 ---
 # <a name="trunc-truncf-truncl"></a>trunc、truncf、truncl
 
@@ -68,14 +68,14 @@ float trunc( float x ); //C++ only
 |问题|返回|
 |-----------|------------|
 |*x* = ±INFINITY|x|
-|*x* = ±0|x|
+|*x* =  ±0|x|
 |*x* = NaN|NaN|
 
 按 [_matherr](matherr.md) 中所指定的报告错误。
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，可以调用的重载**trunc**采用并返回**float**并**长** **double**类型。 在 C 程序中， **trunc**始终采用并返回**double**。
+因为C++允许重载，可以调用的重载**trunc**采用并返回**float**并**长** **double**类型。 在 C 程序中， **trunc**始终采用并返回**double**。
 
 由于最大的浮点值是精确的整数，因此该函数不会自行溢出。 但是，将值还原为整型时可能会导致此函数溢出。
 

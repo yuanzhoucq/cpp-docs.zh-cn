@@ -1,6 +1,6 @@
 ---
 title: OpenMP 子句
-ms.date: 10/22/2018
+ms.date: 03/20/2019
 f1_keywords:
 - OpenMP clauses
 - copyin
@@ -33,34 +33,41 @@ helpviewer_keywords:
 - schedule OpenMP clause
 - shared OpenMP clause
 ms.assetid: 806e7d8f-b204-4e4c-a12c-273ab540a7ca
-ms.openlocfilehash: 7d65b8315ad42f4993e54c07d31d42fffa43c4db
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 590cb7d619895a04dfc511b6b77dad4074dc3f42
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362655"
 ---
 # <a name="openmp-clauses"></a>OpenMP 子句
 
 提供指向子句在 OpenMP API 中使用。
 
-Visual c + + 支持以下 OpenMP 子句：
+VisualC++支持以下 OpenMP 子句。
+
+常规属性：
 
 |子句|描述|
 |------|-----------|
+|[if](#if-openmp)|指定并行或序列中是否应执行一个循环。|
+|[num_threads](#num-threads)|设置线程团队中的线程数。|
+|[ordered](#ordered-openmp-clauses)|在并行所需[有关](openmp-directives.md#for-openmp)语句如果[排序](openmp-directives.md#ordered-openmp-directives)指令是在循环中使用。|
+|[schedule](#schedule)|适用于[为](openmp-directives.md#for-openmp)指令。|
+|[nowait](#nowait)|重写屏障指令中隐式。|
+
+为数据共享属性：
+
+|子句|描述|
+|------|-----------|
+|[private](#private-openmp)|指定每个线程应具有其自己的变量的实例。|
+|[firstprivate](#firstprivate)|指定每个线程应具有它自己的实例的变量和变量应使用变量的值进行初始化，因为它在并行构造之前存在。|
+|[lastprivate](#lastprivate)|指定变量在封闭上下文版本将设置为专用版本的任何线程执行的最后一次迭代 （for 循环构造） 或最后一个部分 （#pragma 节）。|
+|[shared](#shared-openmp)|指定应在所有线程之间共享一个或多个变量。|
+|[default](#default-openmp)|并行区域中指定的未区分范围的变量的行为。|
+|[reduction](#reduction)|指定对每个线程都是私有的一个或多个变量来降低操作并行区域末尾的使用者。|
 |[copyin](#copyin)|允许线程访问主线程的值为[threadprivate](openmp-directives.md#threadprivate)变量。|
 |[copyprivate](#copyprivate)|指定应在所有线程之间共享一个或多个变量。|
-|[default](#default-openmp)|并行区域中指定的未区分范围的变量的行为。|
-|[firstprivate](#firstprivate)|指定每个线程应具有它自己的实例的变量和变量应使用变量的值进行初始化，因为它在并行构造之前存在。|
-|[if](#if-openmp)|指定并行或序列中是否应执行一个循环。|
-|[lastprivate](#lastprivate)|指定变量在封闭上下文版本将设置为专用版本的任何线程执行的最后一次迭代 （for 循环构造） 或最后一个部分 （#pragma 节）。|
-|[nowait](#nowait)|重写屏障指令中隐式。|
-|[num_threads](#num-threads)|设置线程团队中的线程数。|
-|[排序](#ordered-openmp-clauses)|在并行所需[有关](openmp-directives.md#for-openmp)语句如果[排序](openmp-directives.md#ordered-openmp-directives)指令是在循环中使用。|
-|[private](#private-openmp)|指定每个线程应具有其自己的变量的实例。|
-|[reduction](#reduction)|指定对每个线程都是私有的一个或多个变量来降低操作并行区域末尾的使用者。|
-|[schedule](#schedule)|适用于[为](openmp-directives.md#for-openmp)指令。|
-|[shared](#shared-openmp)|指定应在所有线程之间共享一个或多个变量。|
 
 ## <a name="copyin"></a>copyin
 
@@ -81,7 +88,7 @@ copyin(var)
 
 - [parallel](openmp-directives.md#parallel)
 - [for](openmp-directives.md#for-openmp)
-- [部分](openmp-directives.md#sections-openmp)
+- [sections](openmp-directives.md#sections-openmp)
 
 有关详细信息，请参阅[2.7.2.7 copyin](../../../parallel/openmp/2-7-2-7-copyin.md)。
 
@@ -110,7 +117,7 @@ copyprivate(var)
 
 ### <a name="example"></a>示例
 
-```
+```cpp
 // omp_copyprivate.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -174,7 +181,7 @@ Value = 1.008000, thread = 0
 Value = 1.008000, thread = 1
 ```
 
-## <a name="default-openmp"></a>默认值 (OpenMP)
+## <a name="default-openmp"></a>default
 
 并行区域中指定的未区分范围的变量的行为。
 
@@ -190,7 +197,7 @@ default(shared | none)
 
 - [parallel](openmp-directives.md#parallel)
 - [for](openmp-directives.md#for-openmp)
-- [部分](openmp-directives.md#sections-openmp)
+- [sections](openmp-directives.md#sections-openmp)
 
 有关详细信息，请参阅[2.7.2.5 默认](../../../parallel/openmp/2-7-2-5-default.md)。
 
@@ -217,7 +224,7 @@ firstprivate(var)
 
 - [for](openmp-directives.md#for-openmp)
 - [parallel](openmp-directives.md#parallel)
-- [部分](openmp-directives.md#sections-openmp)
+- [sections](openmp-directives.md#sections-openmp)
 - [single](openmp-directives.md#single)
 
 有关详细信息，请参阅[2.7.2.2 firstprivate](../../../parallel/openmp/2-7-2-2-firstprivate.md)。
@@ -226,7 +233,7 @@ firstprivate(var)
 
 有关使用的示例`firstprivate`，请参阅中的示例[专用](#private-openmp)。
 
-## <a name="if-openmp"></a>如果 (OpenMP)
+## <a name="if-openmp"></a>if (OpenMP)
 
 指定并行或序列中是否应执行一个循环。
 
@@ -236,7 +243,7 @@ if(expression)
 
 ### <a name="parameters"></a>参数
 
-*表达式*<br/>
+*expression*<br/>
 整数表达式，如果其计算结果为 true （非零），将导致并行区域以并行执行的代码。 如果表达式的计算结果为 false （零），并行区域是在序列中执行 （由单线程）。
 
 ### <a name="remarks"></a>备注
@@ -245,13 +252,13 @@ if(expression)
 
 - [parallel](openmp-directives.md#parallel)
 - [for](openmp-directives.md#for-openmp)
-- [部分](openmp-directives.md#sections-openmp)
+- [sections](openmp-directives.md#sections-openmp)
 
 有关详细信息，请参阅[2.3 parallel 构造](../../../parallel/openmp/2-3-parallel-construct.md)。
 
 ### <a name="example"></a>示例
 
-```
+```cpp
 // omp_if.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -303,7 +310,7 @@ lastprivate(var)
 `lastprivate` 适用于以下指令：
 
 - [for](openmp-directives.md#for-openmp)
-- [部分](openmp-directives.md#sections-openmp)
+- [sections](openmp-directives.md#sections-openmp)
 
 有关详细信息，请参阅[2.7.2.3 lastprivate](../../../parallel/openmp/2-7-2-3-lastprivate.md)。
 
@@ -324,14 +331,14 @@ nowait
 `nowait` 适用于以下指令：
 
 - [for](openmp-directives.md#for-openmp)
-- [部分](openmp-directives.md#sections-openmp)
+- [sections](openmp-directives.md#sections-openmp)
 - [single](openmp-directives.md#single)
 
 有关详细信息，请参阅[2.4.1 for 构造](../../../parallel/openmp/2-4-1-for-construct.md)， [2.4.2 sections 构造](../../../parallel/openmp/2-4-2-sections-construct.md)，并[2.4.3 单一构造](../../../parallel/openmp/2-4-3-single-construct.md)。
 
 ### <a name="example"></a>示例
 
-```
+```cpp
 // omp_nowait.cpp
 // compile with: /openmp /c
 #include <stdio.h>
@@ -397,7 +404,7 @@ num_threads(num)
 
 - [parallel](openmp-directives.md#parallel)
 - [for](openmp-directives.md#for-openmp)
-- [部分](openmp-directives.md#sections-openmp)
+- [sections](openmp-directives.md#sections-openmp)
 
 有关详细信息，请参阅[2.3 parallel 构造](../../../parallel/openmp/2-3-parallel-construct.md)。
 
@@ -405,7 +412,7 @@ num_threads(num)
 
 请参阅[并行](openmp-directives.md#parallel)有关的使用示例`num_threads`子句。
 
-## <a name="ordered-openmp-clauses"></a>ordered （OpenMP 子句）
+## <a name="ordered-openmp-clauses"></a>ordered
 
 在并行所需[有关](openmp-directives.md#for-openmp)语句如果[排序](openmp-directives.md#ordered-openmp-directives)指令是在循环中使用。
 
@@ -423,7 +430,7 @@ ordered
 
 请参阅[排序](openmp-directives.md#ordered-openmp-directives)有关的使用示例`ordered`子句。
 
-## <a name="private-openmp"></a>专用 (OpenMP)
+## <a name="private-openmp"></a>private
 
 指定每个线程应具有其自己的变量的实例。
 
@@ -442,14 +449,14 @@ private(var)
 
 - [for](openmp-directives.md#for-openmp)
 - [parallel](openmp-directives.md#parallel)
-- [部分](openmp-directives.md#sections-openmp)
+- [sections](openmp-directives.md#sections-openmp)
 - [single](openmp-directives.md#single)
 
 有关详细信息，请参阅[2.7.2.1 专用](../../../parallel/openmp/2-7-2-1-private.md)。
 
 ### <a name="example"></a>示例
 
-```C
+```c
 // openmp_private.c
 // compile with: /openmp
 #include <windows.h>
@@ -635,8 +642,8 @@ reduction(operation:var)
 
 ### <a name="parameters"></a>参数
 
-*操作*<br/>
-要在变量上执行该操作的运算符 (`var`) 并行区域的末尾。
+*operation*<br/>
+要在变量上执行该操作的运算符*var*并行区域的末尾。
 
 *var*<br/>
 执行标量降低所依据的一个或多个变量。 如果指定多个变量，请用逗号分隔的变量名称。
@@ -645,15 +652,15 @@ reduction(operation:var)
 
 `reduction` 适用于以下指令：
 
-- [for](openmp-directives.md#for-openmp)
 - [parallel](openmp-directives.md#parallel)
-- [部分](openmp-directives.md#sections-openmp)
+- [for](openmp-directives.md#for-openmp)
+- [sections](openmp-directives.md#sections-openmp)
 
 有关详细信息，请参阅[2.7.2.6 减少](../../../parallel/openmp/2-7-2-6-reduction.md)。
 
 ### <a name="example"></a>示例
 
-```
+```cpp
 // omp_reduction.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -775,15 +782,10 @@ schedule(type[,size])
 ### <a name="parameters"></a>参数
 
 *type*<br/>
-计划的类型：
-
-- `dynamic`
-- `guided`
-- `runtime`
-- `static`
+种类型的计划，或者`dynamic`， `guided`， `runtime`，或`static`。
 
 *size*<br/>
-（可选）指定的迭代的大小。 `size` 必须是整数。 时未有效`type`是`runtime`。
+（可选）指定的迭代的大小。 *大小*必须是整数。 时未有效*类型*是`runtime`。
 
 ### <a name="remarks"></a>备注
 
@@ -903,7 +905,7 @@ int main( )
 ------------------------------------------------
 ```
 
-## <a name="shared-openmp"></a>共享 (OpenMP)
+## <a name="shared-openmp"></a>共享
 
 指定应在所有线程之间共享一个或多个变量。
 
@@ -922,9 +924,9 @@ shared(var)
 
 `shared` 适用于以下指令：
 
-- [for](openmp-directives.md#for-openmp)
 - [parallel](openmp-directives.md#parallel)
-- [部分](openmp-directives.md#sections-openmp)
+- [for](openmp-directives.md#for-openmp)
+- [sections](openmp-directives.md#sections-openmp)
 
 有关详细信息，请参阅[2.7.2.4 共享](../../../parallel/openmp/2-7-2-4-shared.md)。
 

@@ -25,11 +25,11 @@ helpviewer_keywords:
 - _resetstkoflw function
 ms.assetid: 319529cd-4306-4d22-810b-2063f3ad9e14
 ms.openlocfilehash: ad8c9b470c33a4c84f46ac7758d368917e7938e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357533"
 ---
 # <a name="resetstkoflw"></a>_resetstkoflw
 
@@ -88,7 +88,7 @@ int _resetstkoflw( void );
 
 在这些点上，堆栈尚未充分展开。
 
-堆栈溢出异常生成为结构化异常而非 c + + 异常，因此 **_resetstkoflw**不是普通有用**捕获**阻止，因为它不会捕获堆栈溢出异常。 但是，如果使用 [_set_se_translator](set-se-translator.md) 来实现引发 C++ 异常的结构化异常转换器（如第二个示例所示），则堆栈溢出异常会导致可由 C++ catch 块处理的 C++ 异常。
+堆栈溢出异常生成为结构化异常而不C++异常，因此 **_resetstkoflw**没有用于普通**捕获**阻止，因为它不会捕获堆栈溢出异常。 但是，如果使用 [_set_se_translator](set-se-translator.md) 来实现引发 C++ 异常的结构化异常转换器（如第二个示例所示），则堆栈溢出异常会导致可由 C++ catch 块处理的 C++ 异常。
 
 在 C++ catch 块中调用 **_resetstkoflw** 是不安全的，因为这是从通过结构化的异常转换器函数引发的异常到达的。 在这种情况下，不会释放堆栈空间，并且堆栈指针只有在 catch 块之外才会重置，即使已先于 catch 块对任何易损坏的对象调用析构函数。 在释放堆栈空间并且已重置堆栈指针之前，不应调用此函数。 因此，仅在退出 catch 块之后才调用它。 catch 块中应尽可能少地使用堆栈空间，因为在 catch 块自行尝试从上一个堆栈溢出中恢复时出现的堆栈溢出是不可恢复的，并且在 catch 块中的溢出触发其本身由同一个 catch 处理的异常时可能会导致程序停止响应。
 
@@ -104,7 +104,7 @@ int _resetstkoflw( void );
 
 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
-**库：** [CRT 库功能](../../c-runtime-library/crt-library-features.md)的所有版本。
+**库：** 所有版本的[CRT 库功能](../../c-runtime-library/crt-library-features.md)。
 
 ## <a name="example"></a>示例
 
@@ -212,7 +212,7 @@ resetting stack overflow
 
 ### <a name="description"></a>描述
 
-下面的示例演示的建议的用法 **_resetstkoflw**在程序中，将结构化的异常转换为 c + + 异常。
+下面的示例演示的建议的用法 **_resetstkoflw**在程序中的结构化的异常转换为C++异常。
 
 ### <a name="code"></a>代码
 

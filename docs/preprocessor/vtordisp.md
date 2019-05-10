@@ -8,16 +8,16 @@ helpviewer_keywords:
 - pragmas, vtordisp
 - vtordisp pragma
 ms.assetid: 05b7d73c-43fa-4b62-8c8a-170a9e427391
-ms.openlocfilehash: 075f00ad8a4071af57014638707503847b58756d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67c6c329bcee75012f6075334760925eca945501
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62179447"
 ---
 # <a name="vtordisp"></a>vtordisp
 
-**C + + 专用**
+**C++特定**
 
 控制隐藏的 vtordisp 构造函数/析构函数置换成员的添加。
 
@@ -44,7 +44,7 @@ ms.locfileid: "50557178"
 *on*<br/>
 等效于 `#pragma vtordisp(1)`。
 
-*关闭*<br/>
+*off*<br/>
 等效于 `#pragma vtordisp(0)`。
 
 ## <a name="remarks"></a>备注
@@ -65,7 +65,7 @@ class GetReal : virtual public VBase { ... };
 #pragma vtordisp(pop)
 ```
 
-**结束 c + + 专用**
+**结束C++特定**
 
 ## <a name="see-also"></a>请参阅
 

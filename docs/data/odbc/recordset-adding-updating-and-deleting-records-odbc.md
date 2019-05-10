@@ -1,5 +1,5 @@
 ---
-title: 记录集：添加、更新和删除记录 (ODBC)
+title: 记录集：添加、 更新和删除记录 (ODBC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - records [C++], updating
@@ -18,22 +18,22 @@ helpviewer_keywords:
 - ODBC recordsets [C++], editing records
 - records [C++], editing
 ms.assetid: 760c8889-bec4-482b-a8f2-319792a6af98
-ms.openlocfilehash: a13bffdc79f01c49c290b8b5d4388f06ce777105
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28c885119816c1df662cc0b941e02cb3cf747f3d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395620"
 ---
-# <a name="recordset-adding-updating-and-deleting-records-odbc"></a>记录集：添加、更新和删除记录 (ODBC)
+# <a name="recordset-adding-updating-and-deleting-records-odbc"></a>记录集：添加、 更新和删除记录 (ODBC)
 
 本主题适用于 MFC ODBC 类。
 
 > [!NOTE]
->  更有效地批量现在可以添加记录。 有关详细信息，请参阅[记录集： 添加记录 (ODBC)](../../data/odbc/recordset-adding-records-in-bulk-odbc.md)。
+>  更有效地批量现在可以添加记录。 有关详细信息，请参阅[记录集：在大容量 (ODBC) 中添加记录](../../data/odbc/recordset-adding-records-in-bulk-odbc.md)。
 
 > [!NOTE]
->  本主题适用于对象派生自`CRecordset`中的批量行提取尚未实现。 如果使用批量行提取，请参阅[记录集： 提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+>  本主题适用于对象派生自`CRecordset`中的批量行提取尚未实现。 如果使用批量行提取，请参阅[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 可更新的快照和动态集允许您可以添加、 编辑 （更新） 和删除记录。 本主题说明：
 
@@ -45,7 +45,7 @@ ms.locfileid: "50512367"
 
 - [如何删除一条记录](#_core_deleting_a_record_from_a_recordset)。
 
-有关如何执行更新详细信息并方式更新显示给其他用户，请参阅[记录集： 如何更新记录 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)。 通常情况下，当添加、 编辑或删除的记录，记录集的数据源立即更改。 而是可以为事务批处理相关的更新组。 如果事务正在进行时，更新不会成为最终直到提交事务。 这样即可取消或回滚所做的更改。 有关事务信息，请参阅[事务 (ODBC)](../../data/odbc/transaction-odbc.md)。
+有关如何执行更新详细信息并方式更新显示给其他用户，请参阅[记录集：如何记录集更新记录 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)。 通常情况下，当添加、 编辑或删除的记录，记录集的数据源立即更改。 而是可以为事务批处理相关的更新组。 如果事务正在进行时，更新不会成为最终直到提交事务。 这样即可取消或回滚所做的更改。 有关事务信息，请参阅[事务 (ODBC)](../../data/odbc/transaction-odbc.md)。
 
 下表总结了可用于具有不同更新特征的记录集的选项。
 
@@ -102,9 +102,9 @@ if( !rsStudentSet.CanUpdate( ) )
 
 1. 调用记录集对象的`Update`成员函数。
 
-   `Update` 通过将新记录写入数据源来完成添加。 如果您不能调用，会发生情况有关的信息为`Update`，请参阅[记录集： 如何更新记录 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)。
+   `Update` 通过将新记录写入数据源来完成添加。 如果您不能调用，会发生情况有关的信息为`Update`，请参阅[记录集：如何记录集更新记录 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)。
 
-有关如何添加记录的工作原理以及时添加的记录中是可见的记录集的信息，请参阅[记录集： 如何 AddNew、 Edit 和删除工作 (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)。
+有关如何添加记录的工作原理以及时添加的记录中是可见的记录集的信息，请参阅[记录集：如何 AddNew，编辑和删除 (ODBC) 的工作](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)。
 
 下面的示例演示如何添加新的记录：
 
@@ -147,7 +147,7 @@ if( !rsStudent.Update( ) )
 
 1. 调用记录集对象的`Update`成员函数。
 
-   `Update` 完成编辑通过写入到数据源的更改的记录。 如果您不能调用，会发生情况有关的信息为`Update`，请参阅[记录集： 如何更新记录 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)。
+   `Update` 完成编辑通过写入到数据源的更改的记录。 如果您不能调用，会发生情况有关的信息为`Update`，请参阅[记录集：如何记录集更新记录 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)。
 
 编辑记录后，已编辑的记录将保留当前记录。
 
@@ -197,7 +197,7 @@ rsStudent.Delete( );
 rsStudent.MoveNext( );
 ```
 
-有关效果的详细信息`AddNew`， `Edit`，并`Delete`成员函数，请参阅[记录集： 如何更新记录 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)。
+有关效果的详细信息`AddNew`， `Edit`，并`Delete`成员函数，请参阅[记录集：如何记录集更新记录 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)。
 
 ## <a name="see-also"></a>请参阅
 

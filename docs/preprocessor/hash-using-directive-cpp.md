@@ -1,5 +1,5 @@
 ---
-title: '#using 指令 (C + + CLI)'
+title: '#using 指令 (C++/CLI)'
 ms.date: 10/18/2018
 f1_keywords:
 - friend_as_cpp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - LIBPATH environment variable
 - preprocessor, directives
 ms.assetid: 870b15e5-f361-40a8-ba1c-c57d75c8809a
-ms.openlocfilehash: d69b06d29c366d0ff9c525421311001cab4e501c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ddae6137e94e10f5701e1e7d0f8f7a7514b18662
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383829"
 ---
-# <a name="using-directive-ccli"></a>#using 指令 (C + + CLI)
+# <a name="using-directive-ccli"></a>#using 指令 (C++/CLI)
 
 将元数据导入编译的程序[/clr](../build/reference/clr-common-language-runtime-compilation.md)。
 
@@ -37,7 +37,7 @@ MSIL .dll、.exe、.netmodule 或 .obj。例如，应用于对象的
 `#using <MyComponent.dll>`
 
 *as_friend*<br/>
-指定类型中所有*文件*可访问。 有关详细信息，请参阅[友元程序集 （c + +）](../dotnet/friend-assemblies-cpp.md)。
+指定类型中所有*文件*可访问。 有关详细信息，请参阅[友元程序集 (C++)](../dotnet/friend-assemblies-cpp.md)。
 
 ## <a name="remarks"></a>备注
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - __shiftright128 intrinsic
 ms.assetid: 5419a6c4-0de1-43fb-b314-4faa5b2d051f
-ms.openlocfilehash: 8c35625efa9ddc4cf5de3900c6e3e37047b2aa10
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: b721abc9be22709fdc221951e2012300d6b96762
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62390329"
 ---
 # <a name="shiftright128"></a>__shiftright128
 

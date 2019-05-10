@@ -7,15 +7,15 @@ helpviewer_keywords:
 - instantiation, explicit
 ms.assetid: 8b0d4e32-45a6-49d5-8041-1ebdd674410e
 ms.openlocfilehash: 45661653b4b8f1a4f94ece1c53aa86f4a431700b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392201"
 ---
 # <a name="explicit-instantiation"></a>显式实例化
 
-你可以使用显式实例化来创建模板化类或函数的实例化，而不用将其实际用于你的代码。 创建库 (.lib) 文件，使用模板进行分发时，这很有用，因为未实例化的模板定义不会被放到对象 (.obj) 文件。
+您可以使用显式实例化来创建模板化类或函数的实例化，而不用将其实际用于您的代码。 创建库 (.lib) 文件，使用模板进行分发时，这很有用，因为未实例化的模板定义不会被放到对象 (.obj) 文件。
 
 此代码显式实例化`MyStack`有关**int**变量和六个项：
 

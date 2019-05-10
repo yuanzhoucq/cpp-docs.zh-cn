@@ -10,12 +10,12 @@ helpviewer_keywords:
 - LoadLibrary method
 - explicit linking [C++]
 ms.assetid: b4535d19-6243-4146-a31a-a5cca4c7c9e3
-ms.openlocfilehash: 7c0b63d80a8b4b03b55d6e50af6c08a8de0937de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 661d7742fb0fedae45bc063ba3821193d6c5438e
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596534"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220609"
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>LoadLibrary 和 AfxLoadLibrary
 
@@ -30,22 +30,22 @@ ms.locfileid: "50596534"
 如果 Windows 无法加载 DLL，进程可以尝试从错误中恢复。 例如，进程无法通知错误的用户，要求用户指定另一个 DLL 路径。
 
 > [!IMPORTANT]
-> 请确保指定的任何 Dll 的完整路径。 加载文件时会首先搜索当前目录。 如果不符合条件的文件路径，可能会加载不是预期的文件。 若要防止这种情况的另一种方法是使用[/DEPENDENTLOADFLAG](../build/reference/dependentloadflag.md)链接器选项。
+> 请确保指定的任何 Dll 的完整路径。 加载文件时会首先搜索当前目录。 如果不符合条件的文件路径，可能会加载不是预期的文件。 若要防止这种情况的另一种方法是使用[/DEPENDENTLOADFLAG](reference/dependentloadflag.md)链接器选项。
 
 ## <a name="what-do-you-want-to-do"></a>你希望做什么？
 
-- [如何隐式链接到 DLL](../build/linking-an-executable-to-a-dll.md#linking-implicitly)
+- [将可执行文件链接到 DLL](linking-an-executable-to-a-dll.md#linking-implicitly)
 
-- [确定要使用的链接方法](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
+- [将可执行文件链接到 DLL](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？
 
 - [动态链接库搜索顺序](/windows/desktop/Dlls/dynamic-link-library-search-order)
 
-- [FreeLibrary 和 AfxFreeLibrary](../build/freelibrary-and-afxfreelibrary.md)
+- [FreeLibrary 和 AfxFreeLibrary](freelibrary-and-afxfreelibrary.md)
 
-- [GetProcAddress](../build/getprocaddress.md)
+- [GetProcAddress](getprocaddress.md)
 
 ## <a name="see-also"></a>请参阅
 
-- [Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)
+- [创建 C /C++ Visual Studio 中的 Dll](dlls-in-visual-cpp.md)

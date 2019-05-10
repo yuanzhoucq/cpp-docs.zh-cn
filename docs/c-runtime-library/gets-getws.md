@@ -28,12 +28,12 @@ helpviewer_keywords:
 - gets function
 - standard input, reading from
 ms.assetid: 1ec2dd4b-f801-48ea-97c2-892590f16024
-ms.openlocfilehash: 523a295e088fe692eb9abd8dcca6b3919d432c4e
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: bd5f4e885c0291be963320610942415fc7b61172
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55702734"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738530"
 ---
 # <a name="gets-getws"></a>gets、_getws
 

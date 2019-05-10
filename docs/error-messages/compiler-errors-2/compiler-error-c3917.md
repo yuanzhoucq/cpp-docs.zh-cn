@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3917
 ms.assetid: a24cd0c9-262f-46e5-9488-1c01f945933d
-ms.openlocfilehash: 393d1213f58ab50424093927cbc975651ce34e65
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9cb6d594124d995d766df280da2584665ab6d7a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62406426"
 ---
 # <a name="compiler-error-c3917"></a>编译器错误 C3917
 
@@ -19,7 +19,7 @@ ms.locfileid: "50567470"
 
 属性或事件定义中使用从 Visual Studio 2005 之前版本的语法。
 
-有关详细信息，请参阅 [property](../../windows/property-cpp-component-extensions.md)。
+有关详细信息，请参阅 [property](../../extensions/property-cpp-component-extensions.md)。
 
 ## <a name="example"></a>示例
 

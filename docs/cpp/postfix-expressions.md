@@ -6,12 +6,12 @@ helpviewer_keywords:
 - postfix expressions
 - expressions [C++], postfix
 ms.assetid: 7ac62a57-06df-422f-b012-a75b37d7cb9b
-ms.openlocfilehash: 6230cc161d7b7fc011d4f3082cc7b9452e136280
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: eb6e6e8914cf260df09581232066caf3f873c04e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245058"
 ---
 # <a name="postfix-expressions"></a>后缀表达式
 
@@ -23,7 +23,7 @@ ms.locfileid: "51332434"
 |-------------------|-----------------------|
 |[下标运算符](../cpp/subscript-operator.md)|**[ ]**|
 |[函数调用运算符](../cpp/function-call-operator-parens.md)|**( )**|
-|[显式类型转换运算符](../cpp/explicit-type-conversion-operator-parens.md)|*类型名称* **（)**|
+|[显式类型转换运算符](../cpp/explicit-type-conversion-operator-parens.md)|*type-name* **( )**|
 |[成员访问运算符](../cpp/member-access-operators-dot-and.md)|**.** 或 **->**|
 |[后缀递增运算符](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**++**|
 |[后缀递减运算符](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**--**|
@@ -59,11 +59,11 @@ simple-type-name ( expression-list )
 
 ## <a name="formal-and-actual-arguments"></a>形式和实际自变量
 
-调用程序会将信息传递到“实参”中的已调用函数。 已调用函数使用对应的“形参”访问信息。
+调用程序会将信息传递到“自变量”中的已调用函数。 已调用函数使用对应的“形式自变量”访问信息。
 
 当调用函数时，将执行以下任务：
 
-- 计算所有自变量（调用方提供的自变量）。 没有计算这些参数的隐含顺序，但所有参数都会计算，并且所有副作用都会在进入该函数前完成。
+- 计算所有实参（调用方提供的参数）。 没有计算这些自变量的隐含顺序，但所有自变量都会计算，并且所有副作用都会在进入该函数前完成。
 
 - 使用每个形参在表达式列表中对应的实参来初始化该形参。 （形参是在函数头中声明并在函数体中使用的参数。）转换就像是通过初始化完成的一样 - 标准的和用户定义的转换在将自变量转换为正确的类型时执行。 以下代码从概念上演示了所执行的初始化：
 
@@ -115,7 +115,7 @@ void func( long param1, double param2 )
 
 ## <a name="treatment-of-argument-types"></a>自变量类型的处理
 
-不能在函数主题内更改声明为 const 类型的形式自变量。 函数可以更改任何参数的类型不是**const**。 但是，更改是为函数，不影响自变量的值，除非自变量是不是类型对象的引用，否则**const**。
+不能在函数主题内更改声明为 const 类型的形参。 函数可以更改任何参数的类型不是**const**。 但是，更改是为函数，不影响自变量的值，除非自变量是不是类型对象的引用，否则**const**。
 
 以下函数阐释了其中的一些概念：
 
@@ -137,21 +137,21 @@ double& func2( double& d, const char *c ) {
 
 ## <a name="ellipses-and-default-arguments"></a>省略号和默认参数
 
-通过使用下列两种方法之一，可以声明函数以接受比函数定义中指定的参数更少的参数：省略号 (`...`) 或默认参数。
+通过使用下列两种方法之一，可以声明函数以接受比函数定义中指定的自变量更少的自变量：省略号 (`...`) 或默认自变量。
 
-省略号表示可能需要参数，但声明中未指定数目和类型。 这通常是较差的 C++ 编程做法，因为它使您无法获得 C++ 的一个优点，即类型安全。 不同的转换将应用于使用省略号声明的函数，而不是应用于那些已知其形式和实际自变量类型的函数：
+省略号表示可能需要参数，但声明中未指定数目和类型。 这通常是较差的 C++ 编程做法，因为它使您无法获得 C++ 的一个优点，即类型安全。 不同的转换将应用于使用省略号声明的函数，而不是应用于那些已知其参数和自变量类型的函数：
 
 - 如果自变量的类型**float**，它提升到类型**double**函数调用之前。
 
 - 所有有符号或无符号**char**，**短**、 枚举类型或位域转换为有符号或无符号**int**使用整型提升。
 
-- 类类型的所有自变量都作为数据结构通过值进行传递；副本是由二进制复制创建的，而不是通过调用类的复制构造函数（如果存在）创建的。
+- 类类型的所有参数都作为数据结构通过值进行传递；副本是由二进制复制创建的，而不是通过调用类的复制构造函数（如果存在）创建的。
 
 如果使用省略号，则必须在自变量列表中最后声明它。 有关传递可变数量的参数的详细信息，请参阅的讨论[va_arg、 va_start 和 va_list](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)中*运行时库参考*。
 
-有关 CLR 编程中默认参数的信息，请参阅[变量自变量列表 （...）(C++ /CLI CLI)](../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md).
+有关 CLR 编程中默认参数的信息，请参阅[变量自变量列表 （...）(C++ /CLI CLI)](../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
 
-如果函数调用中没有提供值，则可通过默认自变量指定自变量应采用的值。 以下代码片段演示默认自变量的工作方式。 指定默认自变量的限制的详细信息，请参阅[默认自变量](../cpp/default-arguments.md)。
+如果函数调用中没有提供值，则可通过默认参数指定参数应采用的值。 以下代码片段演示默认自变量的工作方式。 指定默认自变量的限制的详细信息，请参阅[默认自变量](../cpp/default-arguments.md)。
 
 ```cpp
 // expre_Ellipses_and_Default_Arguments.cpp
@@ -184,7 +184,7 @@ void print( const char *string, const char *terminator )
 }
 ```
 
-上面的程序声明一个采用两个自变量的函数 `print`。 但是，第二个参数，*终止符*，具有默认值， `"\n"`。 在中`main`，前两个调用`print`允许默认第二个自变量提供新行以终止打印的字符串。 第三个调用为第二个自变量指定显式值。 该程序的输出为
+上面的程序声明一个采用两个参数的函数 `print`。 但是，第二个参数，*终止符*，具有默认值， `"\n"`。 在中`main`，前两个调用`print`允许默认第二个自变量提供新行以终止打印的字符串。 第三个调用为第二个参数指定显式值。 该程序的输出为
 
 ```Output
 hello,

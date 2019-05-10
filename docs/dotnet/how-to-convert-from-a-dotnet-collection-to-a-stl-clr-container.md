@@ -1,18 +1,18 @@
 ---
-title: 如何：从 .NET 集合转换为 STL/CLR 容器
+title: 如何：从.NET 集合转换为 STL/CLR 容器
 ms.date: 11/04/2016
 helpviewer_keywords:
 - STL/CLR, converting from .NET collections
 - STL/CLR Containers [STL/CLR]
 ms.assetid: bb927c48-78e8-4150-bd0b-787c651f4a87
-ms.openlocfilehash: 39c2beda6ae95783a2a29134013d6f01288a29b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 836623f6d539b7b28765763a3dc36d477f8c1499
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387540"
 ---
-# <a name="how-to-convert-from-a-net-collection-to-a-stlclr-container"></a>如何：从 .NET 集合转换为 STL/CLR 容器
+# <a name="how-to-convert-from-a-net-collection-to-a-stlclr-container"></a>如何：从.NET 集合转换为 STL/CLR 容器
 
 本主题演示如何将.NET 集合转换为其等效的 STL/CLR 容器。 作为示例，我们演示如何将.NET 转换<xref:System.Collections.Generic.List%601>到 STL/CLR[向量](../dotnet/vector-stl-clr.md)以及如何将.NET 转换<xref:System.Collections.Generic.Dictionary%602>到 STL/CLR[映射](../dotnet/map-stl-clr.md)，但该过程是相似的所有集合和容器.
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Apply button in property sheet
 - property sheets, Apply button
 ms.assetid: 7e977015-59b8-406f-b545-aad0bfd8d55b
-ms.openlocfilehash: eb438351d273c872def8c98a67b7010cec0b4d76
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 30ee549a334a684deeb4a845f2fc49ee8bbe11db
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62240582"
 ---
 # <a name="handling-the-apply-button"></a>处理应用按钮
 
@@ -30,7 +30,7 @@ ms.locfileid: "57279440"
 
 若要实现“应用”按钮的效果，属性表必须告知其所有者或应用程序中的其他外部对象，应用属性页中的当前设置。 同时，属性表应禁用应用按钮通过调用`CPropertyPage::SetModified( FALSE )`其修改应用于外部对象的所有页面。
 
-此过程的示例，请参阅 MFC 常规示例[PROPDLG](../visual-cpp-samples.md)。
+此过程的示例，请参阅 MFC 常规示例[PROPDLG](../overview/visual-cpp-samples.md)。
 
 ## <a name="see-also"></a>请参阅
 

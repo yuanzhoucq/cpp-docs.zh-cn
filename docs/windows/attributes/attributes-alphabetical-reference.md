@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - attributes [C++/CLI]
 ms.assetid: fb2216ef-9fbd-44f4-afed-732aa99450e2
-ms.openlocfilehash: ecf59b0d920b39d8f129e3ff25b5518f985d78f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 386afe5362f876cd1489a35839f4f8cfc2381e91
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62148492"
 ---
 # <a name="attributes-alphabetical-reference"></a>按字母顺序的特性参考
 
-Microsoft c + + 编译器中提供了以下属性：
+以下属性可在 microsoftC++编译器：
 
 |特性|描述|
 |---------------|-----------------|
@@ -61,7 +61,7 @@ Microsoft c + + 编译器中提供了以下属性：
 |[hidden](hidden.md)|指示该项存在，但不是应在面向用户的浏览器中显示。|
 |[id](id.md)|指定的成员函数 （属性或方法，请在接口或调度接口） 的 DISPID。|
 |[idl_module](idl-module.md)|在 DLL 中指定的入口点。|
-|[idl_quote](idl-quote.md)|允许你使用属性或 IDL 构造不支持当前版本的 Visual c + + 中的。|
+|[idl_quote](idl-quote.md)|可以使用属性或视觉对象的当前版本中不支持的 IDL 构造C++。|
 |[iid_is](iid-is.md)|指定的接口指针指向了 COM 接口的 IID。|
 |[immediatebind](immediatebind.md)|指示数据库将立即收到通知的所有更改将数据绑定对象的属性。|
 |[implements](implements-cpp.md)|指定强制 IDL 组件类的成员的调度接口。|
@@ -103,7 +103,7 @@ Microsoft c + + 编译器中提供了以下属性：
 |[readonly](readonly-cpp.md)|禁止分配给一个变量。|
 |[ref](ref-cpp.md)|标识引用指针。|
 |[registration_script](registration-script.md)|执行指定的注册脚本。|
-|[requestedit](requestedit.md)|指示该属性支持`OnRequestEdit`通知。|
+|[requestedit](requestedit.md)|指示该属性支持 `OnRequestEdit` 通知。|
 |[requires_category](requires-category.md)|指定所需的组件类别的类。|
 |[restricted](restricted.md)|指定的库或模块、 接口或调度接口的成员不能任意调用。|
 |[retval](retval.md)|指定接收该成员的返回值的参数。|

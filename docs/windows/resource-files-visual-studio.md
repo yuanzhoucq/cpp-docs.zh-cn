@@ -24,12 +24,12 @@ helpviewer_keywords:
 - files [C++], editable types
 - resource editing
 ms.assetid: 4d2b6fcc-07cf-4289-be87-83a60f69533c
-ms.openlocfilehash: bd73db481659573d51e4abd56da9689e2e8ade25
-ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
+ms.openlocfilehash: 45db6d0139cfa3aa8a2eaa8fe6d18158cb6646ce
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387911"
 ---
 # <a name="resource-files-c"></a>资源文件 (C++)
 
@@ -54,7 +54,7 @@ ms.locfileid: "56676430"
 
 - 使用嵌套的条件包含资源文件。
 
-- 更新现有资源或将它们转换为 Visual c + +。
+- 更新现有资源或将其转换到视觉对象C++。
 
 - 从当前资源文件中导入图形资源或向其导出图形资源。
 
@@ -90,7 +90,7 @@ ms.locfileid: "56676430"
 
 ## <a name="manifest-resources"></a>清单资源
 
-在 c + + 桌面项目中，清单资源是描述应用程序使用的依赖项的 XML 文件。 例如，在 Visual Studio 中此 MFC 向导生成的清单文件定义应用程序应使用哪个版本的 Windows 公共控件 Dll:
+在C++桌面项目中，清单资源是描述应用程序使用的依赖项的 XML 文件。 例如，在 Visual Studio 中此 MFC 向导生成的清单文件定义应用程序应使用哪个版本的 Windows 公共控件 Dll:
 
 ```xml
 <description>Your app description here</description>
@@ -121,9 +121,9 @@ ms.locfileid: "56676430"
 
 1. 展开**资源文件**文件夹，然后：
 
-   - 若要在文本编辑器中打开，双击.manifest 文件。
+   - 若要在文本编辑器中打开，双击 *.manifest*文件。
 
-   - 若要打开另一个编辑器中，右击.manifest 文件，并选择**打开方式...**.指定要使用和选择的编辑器**打开**。
+   - 若要打开另一个编辑器中，右键单击 *.manifest*文件，然后选择**打开**。 指定要使用和选择的编辑器**打开**。
 
 ## <a name="requirements"></a>要求
 

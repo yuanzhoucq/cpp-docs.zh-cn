@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - CStringT class, using
 ms.assetid: 3a9fffb1-6f90-482a-ab69-4003e6084cb5
-ms.openlocfilehash: 60c741ec71e8637650a75d03322e98dc7c361c90
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49b21d8a267eb2e8cf8c806ef21b4dd8ab36a1ff
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252515"
 ---
 # <a name="using-cstringt"></a>使用 CStringT
 
@@ -31,4 +31,3 @@ ms.locfileid: "50554279"
 ## <a name="see-also"></a>请参阅
 
 [字符串 (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)
-

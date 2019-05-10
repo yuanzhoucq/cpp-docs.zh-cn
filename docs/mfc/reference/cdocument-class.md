@@ -120,12 +120,12 @@ helpviewer_keywords:
 - CDocument [MFC], m_clrRichPreviewTextColor
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
-ms.openlocfilehash: b7358c2206c15660b9ffb283802283ee71e57f03
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2d87ff67000fb5b70c0a5c965638875e6f50b22c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62164107"
 ---
 # <a name="cdocument-class"></a>CDocument 类
 
@@ -734,7 +734,7 @@ virtual void OnDocumentEvent(DocumentEvent deEvent);
 
 下表列出了可能的值为*deEvent*以及与其对应的事件。
 
-|值|相应的事件|
+|“值”|相应的事件|
 |-----------|-------------------------|
 |`onAfterNewDocument`|已创建新文档。|
 |`onAfterOpenDocument`|打开一个新的文档。|
@@ -1254,9 +1254,9 @@ void UpdateAllViews(
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 MDIDOCVW](../../visual-cpp-samples.md)<br/>
-[MFC 示例 SNAPVW](../../visual-cpp-samples.md)<br/>
-[MFC 示例 NPP](../../visual-cpp-samples.md)<br/>
+[MFC 示例 MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
+[MFC 示例 SNAPVW](../../overview/visual-cpp-samples.md)<br/>
+[MFC 示例 NPP](../../overview/visual-cpp-samples.md)<br/>
 [CCmdTarget 类](../../mfc/reference/ccmdtarget-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CCmdTarget 类](../../mfc/reference/ccmdtarget-class.md)<br/>

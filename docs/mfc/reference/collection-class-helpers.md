@@ -11,11 +11,11 @@ helpviewer_keywords:
 - helper functions collection class [MFC]
 ms.assetid: bc3a2368-9edd-4748-9e6a-13cba79517ca
 ms.openlocfilehash: 3992e6c0cf25925e01858016e4bac93d5552fe8b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62373461"
 ---
 # <a name="collection-class-helpers"></a>集合类帮助器
 
@@ -69,7 +69,7 @@ CompareElements(
 
 默认实现返回的比较的结果 *\*pElement1*并 *\*pElement2*。 重写此函数，以便它将一种方法适合于你的应用程序中的元素进行比较。
 
-C + + 语言定义比较运算符 ( `==`) 的简单类型 (**char**， **int**， **float**，依此类推)，但不定义比较运算符类和结构。 如果你想要使用`CompareElements`或若要实例化一个使用它的集合类，必须定义比较运算符或重载`CompareElements`返回适当的值的版本。
+C++语言定义比较运算符 ( `==`) 的简单类型 (**char**， **int**， **float**等)，但不定义比较运算符的类和结构。 如果你想要使用`CompareElements`或若要实例化一个使用它的集合类，必须定义比较运算符或重载`CompareElements`返回适当的值的版本。
 
 ### <a name="requirements"></a>要求
 

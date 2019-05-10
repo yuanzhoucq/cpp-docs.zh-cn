@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - HTML [MFC], about HTML
 ms.assetid: aab8ea9f-12d4-4bdd-a585-ac3124081a2a
-ms.openlocfilehash: 7617216f8fd9a0e4b62ac8b5f12314d38027d836
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 63a866786abc3b1eaa87a06492b43b1c9e354882
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62262991"
 ---
 # <a name="html-basics"></a>HTML 基础
 
-大多数浏览器具有查看您所浏览页面的 HTML 源的功能。 当您查看源时，将看到大量两侧是尖括号 (<>)、穿插文本的 HTML（超文本标记语言）标记。
+大多数浏览器具有查看您所浏览页面的 HTML 源的功能。 当您查看您将看到多个 HTML （超文本标记语言） 标记的源时，括起来的尖括号 （<>）、 穿插文本。
 
 下列步骤使用 HTML 标记生成简单网页。 在下列步骤中，您将使用“记事本”将文本键入文件中、进行一些更改、保存文件并在浏览器中重新加载页面来查看更改。
 
@@ -39,7 +39,7 @@ ms.locfileid: "57263359"
 
    请注意，标记是成对的，并且包含在尖括号中。 标记不区分大小写，但通常使用大写突出标记。
 
-   标记\<HTML > 启动文档和标记\</HTML > 结束它。 结束标记（不一定需要）与开始标记一样，但标记前具有一个正斜杠 (/)。 尖括号 (<) 与标记开头之间应没有空格。
+   标记\<HTML > 启动文档和标记\</HTML > 结束它。 结束标记（不一定需要）与开始标记一样，但标记前具有一个正斜杠 (/)。 应在尖括号 (<) 和标记开头之间没有空格。
 
 1. 切换回记事本和之后\<头/> 行中，键入：
 
@@ -107,7 +107,7 @@ Life is good.
 
 有关标记、特性和扩展的完整说明，请参阅超文本标记语言 (HTML) 规范：
 
-[http://www.w3.org/pub/WWW/MarkUp/](http://www.w3.org/pub/www/markup/)
+[最新的 HTML 已发布的版本](https://www.w3.org/TR/html/)W3C.org 处。
 
 ## <a name="see-also"></a>请参阅
 

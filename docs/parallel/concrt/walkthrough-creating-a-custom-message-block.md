@@ -1,16 +1,16 @@
 ---
 title: 演练：创建自定义消息块
-ms.date: 11/04/2016
+ms.date: 04/25/2019
 helpviewer_keywords:
 - creating custom message blocks Concurrency Runtime]
 - custom message blocks, creating [Concurrency Runtime]
 ms.assetid: 4c6477ad-613c-4cac-8e94-2c9e63cd43a1
-ms.openlocfilehash: e897163a1d394228ac1d8f566e4b0d761fbeeb42
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e7dfc5d78d2281d77b9ce882b302c4d7db776d3b
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272732"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64856984"
 ---
 # <a name="walkthrough-creating-a-custom-message-block"></a>演练：创建自定义消息块
 
@@ -72,7 +72,7 @@ ms.locfileid: "57272732"
 
 #### <a name="to-define-the-prioritybuffer-class"></a>若要定义 priority_buffer 类
 
-1. 创建 c + + 头文件并将其命名`priority_buffer.h`。 或者，可以使用现有的头文件的项目的一部分。
+1. 创建C++标头文件并将其命名`priority_buffer.h`。 或者，可以使用现有的头文件的项目的一部分。
 
 1. 在`priority_buffer.h`，添加以下代码。
 
@@ -88,8 +88,7 @@ ms.locfileid: "57272732"
 
 [!code-cpp[concrt-priority-buffer#3](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_4.h)]
 
-   
-  `priority_buffer` 类派生自 `propagator_block`。 因此，它可以同时发送和接收消息。 `priority_buffer`类可以具有多个目标接收消息的类型的`Type`。 它还可以发送消息的类型的多个源`tuple<PriorityType, Type>`。
+   `priority_buffer` 类派生自 `propagator_block`。 因此，它可以同时发送和接收消息。 `priority_buffer`类可以具有多个目标接收消息的类型的`Type`。 它还可以发送消息的类型的多个源`tuple<PriorityType, Type>`。
 
 1. 在中`private`一部分`priority_buffer`类中，添加以下成员变量。
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - CMutex [MFC], CMutex
 ms.assetid: 6330c050-4f01-4195-a099-2029b92f8cf1
 ms.openlocfilehash: f85e562af9d048503be20d1ab5d219fe8d2d039f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62373625"
 ---
 # <a name="cmutex-class"></a>CMutex 类
 
@@ -74,8 +74,7 @@ CMutex(
 指定如果线程创建`CMutex`对象最初有权访问由 mutex 控制的资源。
 
 *lpszName*<br/>
-
-  `CMutex` 对象的名称。 如果存在具有相同名称的另一个互斥体，则*lpszName*如果跨进程边界，将使用的对象必须提供。 如果**NULL**，将是未命名的互斥体。 如果名称匹配现有 mutex，构造函数将生成新`CMutex`对象引用该名称的互斥体。 如果名称匹配一个现有的同步对象，它不 mutex，构造将失败。
+`CMutex` 对象的名称。 如果存在具有相同名称的另一个互斥体，则*lpszName*如果跨进程边界，将使用的对象必须提供。 如果**NULL**，将是未命名的互斥体。 如果名称匹配现有 mutex，构造函数将生成新`CMutex`对象引用该名称的互斥体。 如果名称匹配一个现有的同步对象，它不 mutex，构造将失败。
 
 *lpsaAttribute*<br/>
 Mutex 对象的安全特性。 此结构的完整说明，请参阅[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK 中。

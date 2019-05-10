@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3464
 ms.assetid: 0ede05dc-4486-4921-8e8c-78ab5a2e09c5
-ms.openlocfilehash: d1645571ce3102687d5054e066ec1dc7d633b3aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b21810d6df1fbfaf5ea94d9515487b16d00af548
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50503114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62222327"
 ---
 # <a name="compiler-error-c3464"></a>编译器错误 C3464
 
@@ -19,7 +19,7 @@ ms.locfileid: "50503114"
 
 嵌套类型上不能进行类型转发。
 
-有关详细信息，请参阅[类型转发 (C + + CLI)](../../windows/type-forwarding-cpp-cli.md)。
+有关详细信息，请参阅[类型转发 (C++/CLI)](../../extensions/type-forwarding-cpp-cli.md)。
 
 ## <a name="example"></a>示例
 

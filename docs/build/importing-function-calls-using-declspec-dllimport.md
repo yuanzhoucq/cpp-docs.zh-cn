@@ -10,12 +10,12 @@ helpviewer_keywords:
 - __declspec(dllimport) keyword [C++]
 - function calls [C++], importing
 ms.assetid: 6b53c616-0c6d-419a-8e2a-d2fff20510b3
-ms.openlocfilehash: 055edf4efc066695abb60a09b84cb1b13302af9c
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 8635cf5d389f72972f471a4fd53ed56c3497bfe9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62188790"
 ---
 # <a name="importing-function-calls-using-declspecdllimport"></a>使用 __declspec(dllimport) 导入函数调用
 
@@ -74,4 +74,4 @@ call DWORD PTR __imp_func1
 
 ## <a name="see-also"></a>请参阅
 
-[导入到应用程序中](../build/importing-into-an-application.md)
+[导入到应用程序中](importing-into-an-application.md)

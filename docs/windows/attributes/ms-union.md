@@ -1,17 +1,17 @@
 ---
-title: ms_union （c + + COM 属性）
+title: ms_union (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.ms_union
 helpviewer_keywords:
 - ms_union attribute
 ms.assetid: bb548689-6962-457e-af56-8ffdf68987eb
-ms.openlocfilehash: 6b9788fc02a3bf4d59d34823ba83d86f97298597
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f83eeff4fd9b2177b862b101b7a2d4faeaaab87
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409104"
 ---
 # <a name="msunion"></a>ms_union
 
@@ -25,7 +25,7 @@ ms.locfileid: "50642463"
 
 ## <a name="remarks"></a>备注
 
-**Ms_union** c + + 属性具有相同的功能[ms_union](/windows/desktop/Midl/ms-union-attrib) MIDL 特性。
+**Ms_union** C++属性具有相同的功能[ms_union](/windows/desktop/Midl/ms-union-attrib) MIDL 特性。
 
 ## <a name="example"></a>示例
 
@@ -62,7 +62,7 @@ __interface IFireTabCtrl {
 |-|-|
 |**适用对象**|Nonencapsulated 的联合|
 |**可重复**|否|
-|**必需的特性**|无|
+|**必需的特性**|None|
 |**无效的特性**|`dispinterface`|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。

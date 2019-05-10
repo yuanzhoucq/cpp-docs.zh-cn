@@ -5,12 +5,12 @@ helpviewer_keywords:
 - CLR empty projects
 - CLR empty projects, creating
 ms.assetid: edb4574f-fea7-426d-9b5c-fa4ecad2befb
-ms.openlocfilehash: 0acfa073d0aa11dec63ad26f1fac4ec206cda6c1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: bd57ac4c6a821536b1c2cf3d222327d9924700cb
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612129"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221818"
 ---
 # <a name="how-to-create-clr-empty-projects"></a>如何：创建 CLR 空项目
 
@@ -23,9 +23,9 @@ ms.locfileid: "50612129"
 
 1. 在 **“文件”** 菜单上，单击 **“新建”**，然后单击 **“项目”**。
 
-   此时将出现 “新建项目” 对话框。
+   此时将出现“新建项目”对话框。
 
-1. 下**已安装的模板**，单击**Visual c + +** 节点; 然后单击**CLR**节点。 选择**CLR 空项目**图标。
+1. 下**已安装的模板**，单击**Visual C++** 节点; 然后单击**CLR**节点。 选择**CLR 空项目**图标。
 
 1. 在“名称”  框中，输入你的应用程序的唯一名称。
 
@@ -36,5 +36,5 @@ ms.locfileid: "50612129"
 
 ## <a name="see-also"></a>请参阅
 
-[Visual C++ 项目类型](../ide/visual-cpp-project-types.md)<br/>
-[Visual C++ 项目类型](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)
+[C++在 Visual Studio 中的项目类型](../build/reference/visual-cpp-project-types.md)<br/>
+[调试C++项目](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)

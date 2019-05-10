@@ -1,17 +1,17 @@
 ---
 title: basic_regex 类
-ms.date: 09/10/2018
+ms.date: 03/27/2019
 f1_keywords:
 - regex/std::basic_regex
 helpviewer_keywords:
 - basic_regex class
 ms.assetid: 8a18c6b4-f22a-4cfd-bc16-b4267867ebc3
-ms.openlocfilehash: 0799bbcbfb7cdbc1ee1755cf387de2aee46db027
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e3a38dc186a52c8431442d58bb10e56837396b07
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62414147"
 ---
 # <a name="basicregex-class"></a>basic_regex 类
 
@@ -58,14 +58,14 @@ class basic_regex
 |-|-|
 |公共静态 const flag_type icase|regex_constants::icase|
 |公共静态 const flag_type nosubs|regex_constants::nosubs|
-|公共静态 const flag_type 优化|regex_constants::optimize|
-|公共静态 const flag_type 逐份打印|regex_constants::collate|
+|public static const flag_type optimize|regex_constants::optimize|
+|public static const flag_type collate|regex_constants::collate|
 |公共静态 const flag_type ECMAScript|regex_constants::ECMAScript|
-|基本的静态公共 const flag_type|regex_constants::basic|
-|扩展的公共静态 const flag_type|regex_constants::extended|
-|公共静态 const flag_type awk|regex_constants::awk|
-|公共静态 const flag_type grep|regex_constants::grep|
-|公共静态 const flag_type egrep|regex_constants::egrep|
+|public static const flag_type basic|regex_constants::basic|
+|public static const flag_type extended|regex_constants::extended|
+|public static const flag_type awk|regex_constants::awk|
+|public static const flag_type grep|regex_constants::grep|
+|public static const flag_type egrep|regex_constants::egrep|
 |专用 RXtraits 特征||
 
 ### <a name="constructors"></a>构造函数
@@ -88,7 +88,7 @@ class basic_regex
 |-|-|
 |[assign](#assign)|将一个值分配到正则表达式对象。|
 |[flags](#flags)|返回语法选项标志。|
-|[get_loc](#get_loc)|返回存储的区域设置对象。|
+|[getloc](#getloc)|返回存储的区域设置对象。|
 |[imbue](#imbue)|更改存储的区域设置对象。|
 |[mark_count](#mark_count)|返回匹配的子表达式的数目。|
 |[swap](#swap)|交换两个正则表达式对象。|
@@ -248,7 +248,7 @@ basic_regex& assign(
 *flags*<br/>
 复制时要添加的语法选项标志。
 
-*len/t D >*<br/>
+*len/TD>*<br/>
 要复制的序列的长度。
 
 *str*<br/>
@@ -257,7 +257,7 @@ basic_regex& assign(
 *first*<br/>
 要复制的序列的开头。
 
-*最后一个*<br/>
+*last*<br/>
 要复制的序列的结尾。
 
 *IList*<br/>
@@ -322,7 +322,7 @@ explicit basic_regex(
 *flags*<br/>
 复制时要添加的语法选项标志。
 
-*len/t D >*<br/>
+*len/TD>*<br/>
 要复制的序列的长度。
 
 *str*<br/>
@@ -331,7 +331,7 @@ explicit basic_regex(
 *first*<br/>
 要复制的序列的开头。
 
-*最后一个*<br/>
+*last*<br/>
 要复制的序列的结尾。
 
 *IList*<br/>
@@ -391,7 +391,7 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>参数
 
-*Loc*<br/>
+*loc*<br/>
 要存储的区域设置对象。
 
 ### <a name="remarks"></a>备注

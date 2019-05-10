@@ -1,15 +1,15 @@
 ---
-title: 迁移指南：Spy++
+title: 移植指南：Spy++
 ms.date: 11/19/2018
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: 5bd69853b13d58ff79910eafcc601b0507d5a9ad
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: b28de2396ba94578a8d06038a1191be42dce49ea
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176999"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751369"
 ---
-# <a name="porting-guide-spy"></a>迁移指南：Spy++
+# <a name="porting-guide-spy"></a>移植指南：Spy++
 
 此移植案例研究旨在让你了解典型的移植项目、可能遇到的问题类型，以及解决移植问题的一些常用提示和技巧。 这并不是权威的移植指南，因为移植项目的体验很大程度取决于代码的详细信息。
 
@@ -292,7 +292,7 @@ afx_msg UINT OnNcHitTest(CPoint point);
 afx_msg LRESULT OnNcHitTest(CPoint point);
 ```
 
-由于从 CWnd 派生的不同类中总共出现了此函数的大约十个匹配项，当光标位于编辑器的函数上时，使用“转到定义”（键盘：F12）和“转到声明”（键盘：Ctrl+F12）有助于从“查找符号”工具窗口定位并导航到这些函数。 “转到定义”通常是两个选项中更有用的。 “转到声明”将查找声明而不是定义类声明，例如友元类声明或前向引用。
+此函数在 CWnd 派生的不同类中总共大约会出现十次，因此当光标位于编辑器中的函数上以找到它们并从“查找符号”工具窗口导航到它们时，使用“转到定义”（键盘：F12）和“转到声明”（键盘：Ctrl+F12）将非常有用。 “转到定义”通常是两个选项中更有用的。 “转到声明”将查找声明而不是定义类声明，例如友元类声明或前向引用。
 
 ##  <a name="mfc_changes"></a>步骤 9. MFC 更改
 
@@ -542,7 +542,7 @@ wsprintf(szTmp, "%d.%2.2d.%4.4d", rmj, rmm, rup);
 wsprintf(szTmp, _T("%d.%2.2d.%4.4d"), rmj, rmm, rup);
 ```
 
-\_T 宏可以使字符串文本编译为 char 字符串或 wchar_t 字符串，具体取决于 MBCS 或 UNICODE 的设置。 要在 Visual Studio 中将所有字符串替换为 \_T，首先需要打开“快速替换”框（键盘：Ctrl+F）或“在文件中替换”（键盘：Ctrl+Shift+H），然后选中“使用正则表达式”复选框。 输入 `((\".*?\")|('.+?'))` 作为搜索文本，输入 `_T($1)` 作为替换文本。 如果某些字符串周围已存在 \_T 宏，此过程将重新添加该宏，并且可能还会发现不需要 \_T 的情况（例如使用 `#include` 时），因此最好使用“替换下一个”而不是“全部替换”。
+\_T 宏可以使字符串文本编译为 char 字符串或 wchar_t 字符串，具体取决于 MBCS 或 UNICODE 的设置。 若要将 Visual Studio 中的所有字符串替换为 \_T，首先请打开“快速替换”（键盘：Ctrl+F）框或“在文件中替换”（键盘：Ctrl+Shift+H），然后选择“使用正则表达式”复选框。 输入 `((\".*?\")|('.+?'))` 作为搜索文本，输入 `_T($1)` 作为替换文本。 如果某些字符串周围已存在 \_T 宏，此过程将重新添加该宏，并且可能还会发现不需要 \_T 的情况（例如使用 `#include` 时），因此最好使用“替换下一个”而不是“全部替换”。
 
 此特定函数 [wsprintf](/windows/desktop/api/winuser/nf-winuser-wsprintfa) 实际上在 Windows 标头中已定义，相关文档建议不使用此函数，因为可能会发生缓冲区溢出。 `szTmp` 缓冲区未给定大小，因此函数无法检查该缓冲区是否可容纳要写入的所有数据。 请参阅下一节有关移植到安全 CRT 的内容，我们将在下一节修复其他类似的问题。 最终使用 [_stprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md) 进行替换。
 

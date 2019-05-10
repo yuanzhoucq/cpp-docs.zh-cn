@@ -16,11 +16,11 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 22638d86-ff3e-4124-933e-54b7c2a25968
 ms.openlocfilehash: b73a027422cfe9cbf03afece400c1b513cace151
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62239330"
 ---
 # <a name="mfc-activex-controls-using-stock-property-pages"></a>MFC ActiveX 控件：使用常用属性页
 
@@ -46,7 +46,7 @@ MFC 还提供了三个常用属性页，可用于 ActiveX 控件： `CLSID_CColo
 在进行这些修改后，重新生成项目。 您的控件现在具有字体、 图片和颜色属性的属性页。
 
 > [!NOTE]
->  如果不能访问控件常用属性页，则可能是因为 MFC DLL (MFCxx.DLL) 尚未正确注册与当前操作系统。 这通常会在不同于当前正在运行的操作系统安装 Visual c + +。
+>  如果不能访问控件常用属性页，则可能是因为 MFC DLL (MFCxx.DLL) 尚未正确注册与当前操作系统。 这通常来自正在安装 Visual 结果C++在不同于当前正在运行的操作系统。
 
 > [!TIP]
 >  如果常用属性页是不可见 （请参阅上一个便笺），通过运行 RegSvr32.exe 命令行中使用的完整路径名称从 dll 注册该 DLL。
@@ -54,4 +54,4 @@ MFC 还提供了三个常用属性页，可用于 ActiveX 控件： `CLSID_CColo
 ## <a name="see-also"></a>请参阅
 
 [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)<br/>
-[MFC ActiveX 控件：添加常用属性](../mfc/mfc-activex-controls-adding-stock-properties.md)
+[MFC ActiveX 控件：添加内置属性](../mfc/mfc-activex-controls-adding-stock-properties.md)

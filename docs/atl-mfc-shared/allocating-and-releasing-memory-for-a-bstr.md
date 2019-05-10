@@ -11,12 +11,12 @@ helpviewer_keywords:
 - memory deallocation, BSTR memory
 - strings [C++], releasing
 ms.assetid: 98041e29-3442-4a02-b425-7a4a13e9cc84
-ms.openlocfilehash: cfa921758122dfadb7b008740a14e352456a180f
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: adc3e1efd032bb3e3e45381da24c5a5b59852375
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62216964"
 ---
 # <a name="allocating-and-releasing-memory-for-a-bstr"></a>为 BSTR 分配和释放内存
 
@@ -46,4 +46,3 @@ ms.locfileid: "51518185"
 [CStringT::AllocSysString](../atl-mfc-shared/reference/cstringt-class.md#allocsysstring)<br/>
 [SysAllocString](/windows/desktop/api/oleauto/nf-oleauto-sysallocstring)<br/>
 [SysFreeString](/windows/desktop/api/oleauto/nf-oleauto-sysfreestring)
-

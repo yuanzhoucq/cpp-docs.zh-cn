@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - EDITBIN program, options
 ms.assetid: 2da9f88e-cbab-4d64-bb66-ef700535230f
-ms.openlocfilehash: 409c40986068475299c95f1be0dff5f15d022520
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e7338c6a45d74aa8efac1b72683cca7661c62e0a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271848"
 ---
 # <a name="editbin-options"></a>EDITBIN 选项
 
@@ -21,30 +21,30 @@ ms.locfileid: "57424322"
 
 EDITBIN 提供以下选项：
 
-|选项|目标|
+|选项|用途|
 |------------|-------------|
-|[/ALLOWBIND](../../build/reference/allowbind.md)|指定一个 DLL 是否可以绑定。|
-|[/ALLOWISOLATION](../../build/reference/allowisolation.md)|指定 DLL 或可执行文件清单查找行为。|
-|[/APPCONTAINER](../../build/reference/appcontainer.md)|指定应用是否必须在 AppContainer 内运行 — 例如，UWP 应用。|
-|[/BIND](../../build/reference/bind.md)|将指定对象中的入口点地址设为速度加载时间。|
-|[/DYNAMICBASE](../../build/reference/dynamicbase.md)|使用地址空间布局随机化 (ASLR) 功能，指定是否可在加载时随机重新设定 DLL 或可执行图像的基址。|
-|[/ERRORREPORT](../../build/reference/errorreport-editbin-exe.md)|向 Microsoft 报告内部错误。|
-|[/HEAP](../../build/reference/heap.md)|以字节设置可执行映像堆的大小。|
-|[/HIGHENTROPYVA](../../build/reference/highentropyva.md)|指定 DLL 或可执行映像是否支持高熵（64 位）地址空间布局随机化 (ASLR)。|
-|[/INTEGRITYCHECK](../../build/reference/integritycheck.md)|指定是否在加载时检查数字签名。|
-|[/LARGEADDRESSAWARE](../../build/reference/largeaddressaware.md)|指定对象是否支持大于 2 GB 的地址。|
-|[/NOLOGO](../../build/reference/nologo-editbin.md)|取消显示 EDITBIN 启动横幅。|
-|[/NXCOMPAT](../../build/reference/nxcompat.md)|指定可执行映像是否与 Windows 数据执行保护兼容。|
-|[/REBASE](../../build/reference/rebase.md)|设置指定对象的基址。|
-|[/RELEASE](../../build/reference/release.md)|在标头中设置校验和。|
-|[/SECTION](../../build/reference/section-editbin.md)|重写节的特性。|
-|[/STACK](../../build/reference/stack.md)|以字节设置可执行映像栈的大小。|
-|[/SUBSYSTEM](../../build/reference/subsystem.md)|指定执行环境。|
-|[/SWAPRUN](../../build/reference/swaprun.md)|指定可执行图像必须复制到交换文件，然后从其中运行。|
-|[/TSAWARE](../../build/reference/tsaware.md)|指定应用可在多用户环境中运行。|
-|[/VERSION](../../build/reference/version.md)|在标头中设置版本号。|
+|[/ALLOWBIND](allowbind.md)|指定一个 DLL 是否可以绑定。|
+|[/ALLOWISOLATION](allowisolation.md)|指定 DLL 或可执行文件清单查找行为。|
+|[/APPCONTAINER](appcontainer.md)|指定应用是否必须在 AppContainer 内运行 — 例如，UWP 应用。|
+|[/BIND](bind.md)|将指定对象中的入口点地址设为速度加载时间。|
+|[/DYNAMICBASE](dynamicbase.md)|使用地址空间布局随机化 (ASLR) 功能，指定是否可在加载时随机重新设定 DLL 或可执行图像的基址。|
+|[/ERRORREPORT](errorreport-editbin-exe.md)|向 Microsoft 报告内部错误。|
+|[/HEAP](heap.md)|以字节设置可执行映像堆的大小。|
+|[/HIGHENTROPYVA](highentropyva.md)|指定 DLL 或可执行映像是否支持高熵（64 位）地址空间布局随机化 (ASLR)。|
+|[/INTEGRITYCHECK](integritycheck.md)|指定是否在加载时检查数字签名。|
+|[/LARGEADDRESSAWARE](largeaddressaware.md)|指定对象是否支持大于 2 GB 的地址。|
+|[/NOLOGO](nologo-editbin.md)|取消显示 EDITBIN 启动横幅。|
+|[/NXCOMPAT](nxcompat.md)|指定可执行映像是否与 Windows 数据执行保护兼容。|
+|[/REBASE](rebase.md)|设置指定对象的基址。|
+|[/RELEASE](release.md)|在标头中设置校验和。|
+|[/SECTION](section-editbin.md)|重写节的特性。|
+|[/STACK](stack.md)|以字节设置可执行映像栈的大小。|
+|[/SUBSYSTEM](subsystem.md)|指定执行环境。|
+|[/SWAPRUN](swaprun.md)|指定可执行图像必须复制到交换文件，然后从其中运行。|
+|[/TSAWARE](tsaware.md)|指定应用可在多用户环境中运行。|
+|[/VERSION](version.md)|在标头中设置版本号。|
 
 ## <a name="see-also"></a>请参阅
 
-[C/C++ 生成工具](../../build/reference/c-cpp-build-tools.md)<br/>
-[EDITBIN 参考](../../build/reference/editbin-reference.md)
+[其他 MSVC 生成工具](c-cpp-build-tools.md)<br/>
+[EDITBIN 参考](editbin-reference.md)

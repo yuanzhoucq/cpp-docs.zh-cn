@@ -2,16 +2,16 @@
 title: 快速参考 (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: ba457195-26e5-43aa-b99d-24a871e550f4
-ms.openlocfilehash: eb407a0264a68f9b89e4a180c8b151076fdd109a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0526c9083d177688146926598b79e66ca2f9723c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362330"
 ---
 # <a name="quick-reference-ccx"></a>快速参考 (C++/CX)
 
-Windows 运行时支持仅在可信操作系统环境中执行，使用授权的功能、 数据类型和设备，并通过 Microsoft Store 分发的通用 Windows 平台 (UWP) 应用。 C + + /cli CX 简化为 Windows 运行时编写应用程序。 本文仅作为快速参考;有关更完整的文档，请参阅[类型系统](../cppcx/type-system-c-cx.md)。
+Windows 运行时支持仅在可信操作系统环境中执行，使用授权的功能、 数据类型和设备，并通过 Microsoft Store 分发的通用 Windows 平台 (UWP) 应用。 C++/CX 简化为 Windows 运行时编写应用程序。 本文仅作为快速参考;有关更完整的文档，请参阅[类型系统](../cppcx/type-system-c-cx.md)。
 
 在命令行上生成时，使用 **/ZW**编译器选项生成的 UWP 应用或 Windows 运行时组件。 若要访问 Windows 运行时声明，Windows 运行时元数据 (.winmd) 文件中定义，指定`#using`指令或 **/FU**编译器选项。 创建 UWP 应用程序的项目时，默认情况下的 Visual Studio 设置这些选项，并将对所有 Windows 运行时库的引用。
 
@@ -19,7 +19,7 @@ Windows 运行时支持仅在可信操作系统环境中执行，使用授权的
 
 |概念|标准 C++|C++/CX|备注|
 |-------------|--------------------|------------------------------------------------------------------|-------------|
-|基本类型|C++ 基础类型。|C + + /cli CX 基础类型来实现基本 Windows 运行时中定义的类型。|`default`命名空间包含 C + + /cli CX 内置的基础类型。 编译器隐式映射 C + + /cli CX 基础类型到标准 c + + 类型。<br /><br /> `Platform`系列的命名空间包含实现基本 Windows 运行时类型的类型。|
+|基本类型|C++ 基础类型。|C++/CX 实现 Windows 运行时中定义的基本类型的基础类型。|`default`命名空间包含C++/CX 内置的基础类型。 编译器隐式映射C++标准 /CX 基本类型C++类型。<br /><br /> `Platform`系列的命名空间包含实现基本 Windows 运行时类型的类型。|
 ||`bool`|`bool`|8 位布尔值。|
 ||`__wchar_t`|`char16`|表示 Unicode (UTF-16) 码位的 16 位非数字值。|
 ||`short`<br /><br /> `unsigned short`|`int16`<br /><br /> `uint16`|16 位带符号整数。<br /><br /> 16 位无符号整数。|
@@ -30,7 +30,7 @@ Windows 运行时支持仅在可信操作系统环境中执行，使用授权的
 ||（不适用）|`Platform::Guid`|`Platform` 命名空间中的 128 位非数字值 (GUID)。|
 ||`std::time_get`|`Windows::Foundation::DateTime`|日期-时间结构。|
 ||（不适用）|`Windows::Foundation::TimeSpan`|timespan 结构。|
-||（不适用）|`Platform::Object^`|引用计数的基对象的 Windows 运行时类型系统的 c + + 视图中。|
+||（不适用）|`Platform::Object^`|中的引用计数的基对象C++的 Windows 运行时类型系统视图。|
 ||`std::wstring`<br /><br /> `L"..."`|`Platform::String^`|`Platform::String^` 是用来表示文本的 Unicode 字符的引用计数不可变序列。|
 |指针|指向对象的指针 (`*`)：<br /><br /> `std::shared_ptr`|句柄到对象 (`^`，发音为“hat”)：<br /><br /> *T^ 标识符*|通过使用句柄到对象修饰符声明了所有 Windows 运行时类。 使用箭头 (`->`) 类成员访问运算符访问对象的成员。<br /><br /> Hat 修饰符表示"指向自动引用的 Windows 运行时对象视为。" 更确切地说，句柄到对象声明编译器应插入代码以便自动管理对象的引用计数，如果引用计数变为零，则删除对象。|
 |参考|引用对象 (`&`)：<br /><br /> *T* `&` *identifier*|跟踪引用 (`%`)：<br /><br /> *T* `%` *identifier*|可以通过使用跟踪声明类型的唯一 Windows 运行时引用修饰符。 使用点 (`.`) 类成员访问运算符访问对象的成员。<br /><br /> 跟踪引用表示"对自动引用计数的 Windows 运行时对象的引用。" 更确切地说，跟踪引用声明编译器应插入代码以便自动管理对象的引用计数，如果引用计数变为零，则删除对象。|
@@ -48,4 +48,4 @@ Windows 运行时支持仅在可信操作系统环境中执行，使用授权的
 
 ## <a name="see-also"></a>请参阅
 
-[Visual c + + 语言参考](../cppcx/visual-c-language-reference-c-cx.md)
+[VisualC++语言参考](../cppcx/visual-c-language-reference-c-cx.md)

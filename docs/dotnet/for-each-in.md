@@ -10,22 +10,22 @@ f1_keywords:
 helpviewer_keywords:
 - for each keyword [C++]
 ms.assetid: 0c3a364b-2747-43f3-bb8d-b7d3b7023f79
-ms.openlocfilehash: 61ddf4f8dd4042f7be0b892b4fe239caa932a85e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b1dfe3a32f88c0e9456e3d73c31c533911f8d3ac
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404450"
 ---
 # <a name="for-each-in"></a>for each, in
 
-通过数组或集合迭代。 此非标准关键字在 C++/CLI 和本机 C++ 项目中可用。 但是，建议不使用它。 请考虑使用标准[基于范围的 for 语句 （c + +）](../cpp/range-based-for-statement-cpp.md)相反。
+通过数组或集合迭代。 此非标准关键字在 C++/CLI 和本机 C++ 项目中可用。 但是，建议不使用它。 请考虑使用标准[基于范围的 for 语句 (C++)](../cpp/range-based-for-statement-cpp.md)相反。
 
 ## <a name="all-runtimes"></a>所有运行时
 
 ### <a name="syntax"></a>语法
 
-> **每个 (** *类型**标识符***中***表达式* **) {**<br/>
+> **每个 (** *类型* *标识符* **中** *表达式* **) {**<br/>
 > &nbsp;&nbsp;&nbsp;&nbsp;*语句*<br/>
 > **}**
 
@@ -35,12 +35,12 @@ ms.locfileid: "50532727"
 `identifier` 的类型。
 
 *identifier*<br/>
-代表集合元素的迭代变量。  当`identifier`是[跟踪引用运算符](../windows/tracking-reference-operator-cpp-component-extensions.md)，可以修改该元素。
+代表集合元素的迭代变量。  当`identifier`是[跟踪引用运算符](../extensions/tracking-reference-operator-cpp-component-extensions.md)，可以修改该元素。
 
-*表达式*<br/>
+*expression*<br/>
 数组表达式或集合。 集合元素必须让编译器能将其转换为 `identifier` 类型。
 
-*语句*<br/>
+*statements*<br/>
 要执行的一个或多个语句。
 
 ### <a name="remarks"></a>备注
@@ -49,17 +49,17 @@ ms.locfileid: "50532727"
 
 *语句*数组或集合中每个元素执行。 为集合中的所有元素完成迭代后，控制将传递给 `for each` 块之后的语句。
 
-`for each` 并`in`都[上下文相关的关键字](../windows/context-sensitive-keywords-cpp-component-extensions.md)。
+`for each` 并`in`都[上下文相关的关键字](../extensions/context-sensitive-keywords-cpp-component-extensions.md)。
 
 更多相关信息：
 
 - [使用 for each 循环访问 C++ 标准库集合](../dotnet/iterating-over-stl-collection-by-using-for-each.md)
 
-- [如何：使用 for each 循环访问数组](../dotnet/how-to-iterate-over-arrays-with-for-each.md)
+- [如何：For each 循环与数组](../dotnet/how-to-iterate-over-arrays-with-for-each.md)
 
-- [如何：使用 for each 循环访问泛型集合](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)
+- [如何：For each 循环与泛型集合](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)
 
-- [如何：使用 for each 循环访问用户定义集合](../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md)
+- [如何：For each 循环与用户定义的集合](../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md)
 
 ## <a name="windows-runtime"></a>Windows 运行时
 
@@ -111,7 +111,7 @@ Testing
 
 CLR 语法等同于**所有运行时**语法中，按如下所示除外。
 
-*表达式*<br/>
+*expression*<br/>
 托管的数组表达式或集合。 集合元素必须让编译器可以将其从转换<xref:System.Object>到*标识符*类型。
 
 *表达式*计算结果为的类型实现<xref:System.Collections.IEnumerable>， <xref:System.Collections.Generic.IEnumerable%601>，或定义的类型`GetEnumerator`方法可返回一种类型的实现<xref:System.Collections.IEnumerator>声明所有中定义的方法或`IEnumerator`.
@@ -159,4 +159,4 @@ Testing
 
 ## <a name="see-also"></a>请参阅
 
-[适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)
+[适用于运行时平台的组件扩展](../extensions/component-extensions-for-runtime-platforms.md)

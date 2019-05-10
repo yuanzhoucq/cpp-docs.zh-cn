@@ -31,11 +31,11 @@ helpviewer_keywords:
 - std::basic_stringbuf [C++], underflow
 ms.assetid: 40c85f9e-42a5-4a65-af5c-23c8e3bf8113
 ms.openlocfilehash: 1ed9deee46f7c99750ee3260a6b2a8de1f0f3397
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409754"
 ---
 # <a name="basicstringbuf-class"></a>basic_stringbuf 类
 
@@ -51,7 +51,7 @@ class basic_stringbuf : public basic_streambuf<Elem, Tr>
 
 ### <a name="parameters"></a>参数
 
-*分配*<br/>
+*Alloc*<br/>
 allocator 类。
 
 *Elem*<br/>
@@ -128,7 +128,7 @@ basic_stringbuf(
 
 ### <a name="parameters"></a>参数
 
-*模式 （_m)*<br/>
+*_Mode*<br/>
 [ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的枚举之一。
 
 *str*<br/>
@@ -241,7 +241,7 @@ virtual pos_type seekoff(
 *_Way*<br/>
 偏移操作的起点。 请参阅 [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir)，查看可能的值。
 
-*模式 （_m)*<br/>
+*_Mode*<br/>
 指定指针位置的模式。 默认值允许修改读取和写入位置。 有关详细信息，请参阅 [ios_base::openmode](../standard-library/ios-base-class.md#openmode)。
 
 ### <a name="return-value"></a>返回值
@@ -277,7 +277,7 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Mode = ios_base::in |
 *_Sp*<br/>
 要搜寻的位置。
 
-*模式 （_m)*<br/>
+*_Mode*<br/>
 指定指针位置的模式。 默认允许修改读取和写入位置。
 
 ### <a name="return-value"></a>返回值
@@ -379,7 +379,7 @@ virtual int_type underflow();
 
 ### <a name="remarks"></a>备注
 
-受保护虚拟成员函数尝试提取当前元素`byte`从输入缓冲区，提出当前流位置，并返回元素作为**traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)(**字节**)。 它可以在一种方法的操作： 如果读取的位置可用，它采用`byte`如元素存储在读取位置，并提升输入缓冲区的下一个指针。
+受保护虚拟成员函数尝试提取当前元素`byte`从输入缓冲区，提出当前流位置，并返回元素作为**traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)(**字节**)。 它可以执行操作的一种方法中：如果读取的位置可用，它采用`byte`如元素存储在读取位置，并提升输入缓冲区的下一个指针。
 
 ## <a name="swap"></a>  basic_streambuf::swap
 

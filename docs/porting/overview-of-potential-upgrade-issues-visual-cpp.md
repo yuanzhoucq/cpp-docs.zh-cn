@@ -2,12 +2,12 @@
 title: 潜在的升级问题概述 (Visual C++)
 ms.date: 11/04/2016
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: e4a1f4ecb6492bf74fca46df6f096ca79c71da18
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1dac6ad201656dc83428aa5182a59cb8ff824651
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504255"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58898825"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>潜在的升级问题概述 (Visual C++)
 
@@ -63,7 +63,7 @@ CRT 向来不支持混合与匹配，但通常还是能使用混合与匹配（�
 <PlatformToolset Condition="'$(VisualStudioVersion)'=='15.0'">v141</PlatformToolset>
 ```
 
-### <a name="lnk2019-unresolved-external"></a>LNK2019：无法解析的外部符号
+### <a name="lnk2019-unresolved-external"></a>LNK2019：无法解析的外部对象
 
 对于无法解析的符号，可能需要修复项目设置。
 
@@ -111,7 +111,7 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 升级时一个常见的编译器错误是将非常数参数传递到常数参数。 旧版本的编译器并不总是将其标记为错误。 有关详细信息，请参阅[编译器的更严格转换](porting-guide-spy-increment.md#stricter_conversions)。
 
-有关特定符合性改进的详细信息，请参阅 [Visual C++ 更改历史记录 2003 - 2015](visual-cpp-change-history-2003-2015.md) 以及 [Visual Studio 2017 中 C++ 的符合性改进](../cpp-conformance-improvements-2017.md)。
+有关特定符合性改进的详细信息，请参阅 [Visual C++ 更改历史记录 2003 - 2015](visual-cpp-change-history-2003-2015.md) 以及 [Visual Studio 中 C++ 的符合性改进](../overview/cpp-conformance-improvements.md)。
 
 ## <a name="errors-involving-stdinth-integral-types"></a>涉及 \<stdint.h> 整型类型的错误
 
@@ -127,7 +127,7 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 多年来，针对 C 运行时进行了许多更改。 已添加函数的许多安全版本，也删除了函数的一些安全版本。 此外，如前文所述，Microsoft 的 CRT 实现在 Visual Studio 2015 中重构为新的二进制文件和相关的 .lib 文件。
 
-如果错误涉及 CRT 函数，请搜索 [Visual C++ 更改历史记录（2003 - 2015）](visual-cpp-change-history-2003-2015.md)或 [Visual Studio 2017 中 C++ 的符合性改进](../cpp-conformance-improvements-2017.md)，查阅这些主题中是否包含附加信息。 如果错误为 LNK2019，无法解析的外部对象，请确保未删除函数。 否则，若确定函数仍存在，且调用代码正确，请检查项目是否使用了 `/NODEFAULTLIB`。 如果是这样，则需更新库列表，以便项目使用新通用 (UCRT) 库。 有关详细信息，请参阅有关库和依赖项的上述部分。
+如果错误涉及 CRT 函数，请搜索 [Visual C++ 更改历史记录 (2003 - 2015)](visual-cpp-change-history-2003-2015.md) 或 [Visual Studio 中 C++ 的符合性改进](../overview/cpp-conformance-improvements.md)，查阅这些主题中是否包含附加信息。 如果错误为 LNK2019，无法解析的外部对象，请确保未删除函数。 否则，若确定函数仍存在，且调用代码正确，请检查项目是否使用了 `/NODEFAULTLIB`。 如果是这样，则需更新库列表，以便项目使用新通用 (UCRT) 库。 有关详细信息，请参阅有关库和依赖项的上述部分。
 
 如果错误涉及 `printf` 或 `scanf`，请确保未在不包含 stdio.h 的情况下私下定义这两种函数中的任意一种。 如果定义了，请删除私有定义或删除到 legacy\_stdio\_definitions.lib 的链接。 可以在“附加依赖项”属性中的“配置属性” > “链接器” > “输入”下的“属性页”对话框中对此进行设置。 若要使用 Windows SDK 8.1 或更早的版本进行链接，请添加 legacy\_stdio\_definitions.lib。
 
@@ -161,11 +161,11 @@ C++ 标准发展的方式并不总是后向兼容。 在 C++11 中引入移动�
 
 ## <a name="atl--mfc"></a>ATL / MFC
 
-ATL 和 MFC 是相对稳定的 API，但偶尔对其进行更改。 有关详细信息，请参阅 [Visual C++ 更改历史记录 2003 - 2015](visual-cpp-change-history-2003-2015.md)、[Visual Studio 2017 中 Visual C++ 的新增功能](../what-s-new-for-visual-cpp-in-visual-studio.md)以及[Visual Studio 2017 中 C++ 的符合性改进](../cpp-conformance-improvements-2017.md)。
+ATL 和 MFC 是相对稳定的 API，但偶尔对其进行更改。 有关详细信息，请参阅 [Visual C++ 更改历史记 (2003 - 2015)](visual-cpp-change-history-2003-2015.md)、[Visual Studio 中 Visual C++ 的新增功能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)以及[Visual Studio 中 C++ 的符合性改进](../overview/cpp-conformance-improvements.md)。
 
 ### <a name="lnk-2005-dllmain12-already-defined-in-msvcrtdlib"></a>已在 MSVCRTD.lib 中定义 LNK 2005 _DllMain@12
 
-MFC 应用程序中可能发生此错误。 它指示 CRT 库和 MFC 库之间的顺序问题。 需要先链接 MFC，使其提供 new 和 delete 运算符。 要修复此错误，请使用 `/NODEFAULTLIB` 开关忽略 MSVCRTD.lib 和 mfcs140d.lib 这两个默认库。 然后将这些相同的 lib 添加为附加依赖项。
+MFC 应用程序中可能发生此错误。 它指示 CRT 库和 MFC 库之间的顺序问题。 需要先链接 MFC，使其提供 new 和 delete 运算符。 若要修复此错误，请使用 `/NODEFAULTLIB` 开关忽略以下默认库：MSVCRTD.lib 和 mfcs140d.lib。 然后将这些相同的 lib 添加为附加依赖项。
 
 ## <a name="32-vs-64-bit"></a>32 位和 64 位
 
@@ -182,4 +182,4 @@ MFC 应用程序中可能发生此错误。 它指示 CRT 库和 MFC 库之间�
 ## <a name="see-also"></a>请参阅
 
 [从 Visual C++ 早期版本升级项目](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
-[Visual Studio 2017 中 C++ 的符合性改进](../cpp-conformance-improvements-2017.md)
+[Visual Studio 中的 C++ 符合性改进](../overview/cpp-conformance-improvements.md)

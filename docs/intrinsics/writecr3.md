@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - _writecr3 intrinsic
 ms.assetid: 959d49fa-69d5-47cf-88d2-7688367fe38f
-ms.openlocfilehash: ede5e08d5bbf2807597eec3c7569bc9a6166518d
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 88467e4fb39abc9526e47a73f998d630470111a9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389926"
 ---
 # <a name="writecr3"></a>__writecr3
 

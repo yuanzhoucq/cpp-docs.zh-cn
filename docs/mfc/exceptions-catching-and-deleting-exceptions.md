@@ -10,15 +10,15 @@ helpviewer_keywords:
 - execution [MFC], returns from within catch block
 ms.assetid: 7c233ff0-89de-4de0-a68a-9e9cdb164311
 ms.openlocfilehash: 511850c3c17a4eb70529202f4b0c2b36132fc8ff
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57287199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62173261"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>异常:捕捉和删除异常
 
-下列说明和示例演示如何捕获和删除异常。 有关详细信息**尝试**，**捕获**，并**引发**关键字，请参见[c + + 异常处理](../cpp/cpp-exception-handling.md)。
+下列说明和示例演示如何捕获和删除异常。 有关详细信息**尝试**，**捕获**，并**引发**关键字，请参见[C++的异常处理](../cpp/cpp-exception-handling.md)。
 
 你的异常处理程序必须删除其处理的异常对象，因为如果未删除异常将导致在代码捕获异常时出现内存泄漏。
 

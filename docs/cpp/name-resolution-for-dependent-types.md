@@ -2,12 +2,12 @@
 title: 依赖类型的名称解析
 ms.date: 11/04/2016
 ms.assetid: 34066bb4-0c79-4fd8-bda7-539a60a277ab
-ms.openlocfilehash: 04db4b0efc5e58dbd3de6fc9979c3a3cdd44d84e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 798cc7067967e8992c32d7c0ced9f647e4877110
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563145"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222402"
 ---
 # <a name="name-resolution-for-dependent-types"></a>依赖类型的名称解析
 
@@ -82,7 +82,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>输出
+### <a name="output"></a>Output
 
 ```Output
 Int MyNamespace::myFunction
@@ -90,7 +90,7 @@ Int MyNamespace::myFunction
 
 ### <a name="template-disambiguation"></a>模板消除歧义
 
-Visual Studio 2012 对强制执行 C + + 98/03/11 标准规则使用"template"关键字消除歧义。 在以下示例中，Visual C++ 2010年以接受不一致性行和一致性行。  Visual Studio 2012 接受仅一致性行。
+Visual Studio 2012 对强制执行 C + + 98/03/11 标准规则使用"template"关键字消除歧义。 在以下示例中，Visual Studio 2010 将接受不一致性行和一致性行。  Visual Studio 2012 接受仅一致性行。
 
 ```cpp
 #include <iostream>

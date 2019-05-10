@@ -1,17 +1,17 @@
 ---
-title: registration_script （c + + COM 属性）
+title: registration_script (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.registration_script
 helpviewer_keywords:
 - registration_script attribute
 ms.assetid: 786f8072-9187-4163-a979-7a604dd4c888
-ms.openlocfilehash: 304d4139cb1adbbb7c345cd3ce6f7fc985907712
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b2c4d576a699dea7772821b5635944b2663c57c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407310"
 ---
 # <a name="registrationscript"></a>registration_script
 
@@ -25,12 +25,12 @@ ms.locfileid: "50555124"
 
 ### <a name="parameters"></a>参数
 
-*脚本*<br/>
+*script*<br/>
 自定义注册脚本 (.rgs) 文件的完整路径。 值为**无**，如`script = "none"`，指示组件类具有未注册要求。
 
 ## <a name="remarks"></a>备注
 
-**Registration_script** c + + 属性执行指定的自定义注册脚本*脚本*。 如果未指定此属性，使用标准.rgs 文件 （包含注册该组件的信息）。 .Rgs 文件的详细信息，请参阅[ATL 注册表组件 （注册器）](../../atl/atl-registry-component-registrar.md)。
+**Registration_script** C++属性都将执行指定的自定义注册脚本*脚本*。 如果未指定此属性，使用标准.rgs 文件 （包含注册该组件的信息）。 .Rgs 文件的详细信息，请参阅[ATL 注册表组件 （注册器）](../../atl/atl-registry-component-registrar.md)。
 
 此属性要求 [coclass](coclass.md)、 [progid](progid.md)或 [vi_progid](vi-progid.md) 属性（或隐含这些属性之一的其他属性）也应用于同一个元素。
 
@@ -66,7 +66,7 @@ class CMyClass:public IFace {};
 |**适用对象**|**类**，**结构**|
 |**可重复**|否|
 |**必需的特性**|一个或多个以下： `coclass`， `progid`，或`vi_progid`。|
-|**无效的特性**|无|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

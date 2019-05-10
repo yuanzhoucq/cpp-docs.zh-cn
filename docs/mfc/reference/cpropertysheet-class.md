@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CPropertySheet [MFC], SetWizardMode
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
-ms.openlocfilehash: 03f9e5e0cac9cc71080bfe97d6a3115fd3cc99b5
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 0e5194a356684f2ff86d74a0ed1f37f332bcffeb
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372447"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet 类
 
@@ -392,7 +392,7 @@ IDOK 或 IDCANCEL 如果函数成功，则否则为 0 或-1。 如果已建立�
 从其相应的对话框资源创建属性页，它可能会导致首次异常。 这将导致从之前创建该页面为所需的样式更改对话框资源的样式的属性页。 因为资源通常是只读的这将导致异常。 系统处理异常，并将已修改的资源的副本。 因此可以忽略第一个可能发生的异常。
 
 > [!NOTE]
->  如果使用的异步异常处理模型进行编译，操作系统必须处理此异常。 有关异常处理模型的详细信息，请参阅[/EH （异常处理模型）](../../build/reference/eh-exception-handling-model.md)。 在这种情况下，不换行对的调用`CPropertySheet::DoModal`与 c + + try catch 块中的 catch 处理所有异常，例如， `catch (...)`。 此块会处理适用于操作系统，并导致不可预知的行为的异常。 但是，您可以安全地使用 c + + 异常处理与特定异常类型或结构化的异常处理的访问冲突异常通过传递到操作系统。
+>  如果使用的异步异常处理模型进行编译，操作系统必须处理此异常。 有关异常处理模型的详细信息，请参阅[/EH （异常处理模型）](../../build/reference/eh-exception-handling-model.md)。 在这种情况下，不换行对的调用`CPropertySheet::DoModal`与C++try catch 块中的 catch 处理所有异常，例如， `catch (...)`。 此块会处理适用于操作系统，并导致不可预知的行为的异常。 但是，可以安全地使用C++异常处理与特定异常类型或结构化的异常处理的访问冲突异常通过传递到操作系统。
 
 若要避免生成此第一机会异常，您可以手动保证属性表具有正确[的窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。 需要设置以下样式的属性表：
 
@@ -830,9 +830,9 @@ void SetWizardMode();
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 CMNCTRL1](../../visual-cpp-samples.md)<br/>
-[MFC 示例 CMNCTRL2](../../visual-cpp-samples.md)<br/>
-[MFC 示例 PROPDLG](../../visual-cpp-samples.md)<br/>
-[MFC 示例 SNAPVW](../../visual-cpp-samples.md)<br/>
+[MFC 示例 CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
+[MFC 示例 CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
+[MFC 示例 PROPDLG](../../overview/visual-cpp-samples.md)<br/>
+[MFC 示例 SNAPVW](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)

@@ -1,6 +1,6 @@
 ---
-title: 编译器错误 C2700-C2799
-ms.date: 11/17/2017
+title: 编译器错误 C2700 - C2799
+ms.date: 04/21/2019
 f1_keywords:
 - C2716
 - C2717
@@ -40,14 +40,14 @@ helpviewer_keywords:
 - C2796
 - C2799
 ms.assetid: 6ee257bb-94bc-42b9-af2c-3c73926afba4
-ms.openlocfilehash: e29f344e0e45374f85715552f9ecc19ab90a9e7b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6f4391008bf9b0a066ba65f27a41697c6097c2e
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677846"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857638"
 ---
-# <a name="compiler-errors-c2700-through-c2799"></a>编译器错误 C2700-C2799
+# <a name="compiler-errors-c2700-through-c2799"></a>编译器错误 C2700 - C2799
 
 在本部分文档中的文章说明了由编译器生成的错误消息的子集。
 
@@ -62,7 +62,7 @@ ms.locfileid: "50677846"
 |[编译器错误 C2702](compiler-error-c2702.md)| __except 可能不会显示在终止块中|
 |[编译器错误 C2703](compiler-error-c2703.md)|非法的 __leave 语句|
 |[编译器错误 C2704](compiler-error-c2704.md)|'*函数*: __va_start 内部函数只能在 varargs 中|
-|[编译器错误 C2705](compiler-error-c2705.md)|'*标签*： 非法跳转到*exception_block*作用域|
+|[编译器错误 C2705](compiler-error-c2705.md)|'*label*': illegal jump into '*exception_block*' scope|
 |[编译器错误 C2706](compiler-error-c2706.md)|没有匹配 __try 的非法 __except (缺少} __try 块中？)|
 |[编译器错误 C2707](compiler-error-c2707.md)|'*标识符*： 内部函数的错误上下文|
 |[编译器错误 C2708](compiler-error-c2708.md)|'*标识符*： 以字节为单位的实际参数长度不同于上一个调用或引用|
@@ -130,7 +130,7 @@ ms.locfileid: "50677846"
 |[编译器错误 C2770](compiler-error-c2770.md)|为无效的显式模板/泛型参数*模板*|
 |[编译器错误 C2771](compiler-error-c2771.md)|#import 只能在全局或命名空间范围内使用 |
 |编译器错误 C2772|已过时。|
-|[编译器错误 C2773](compiler-error-c2773.md)|#import 和 #using 只在 c + + 编译器中可用|
+|[编译器错误 C2773](compiler-error-c2773.md)|#import 和 #using 仅适用于C++编译器|
 |[编译器错误 C2774](compiler-error-c2774.md)|'*标识符*： 没有 put 方法是与此属性相关联|
 |[编译器错误 C2775](compiler-error-c2775.md)|'*标识符*： 没有 get 方法是与此属性相关联|
 |[编译器错误 C2776](compiler-error-c2776.md)|只有一个 get 方法可以指定每个属性|
@@ -157,3 +157,8 @@ ms.locfileid: "50677846"
 |[编译器错误 C2797](compiler-error-c2797.md)|（已过时）'*标识符*： 未实现成员初始值设定项列表或非静态数据成员初始值设定项内部的列表初始化|
 |[编译器错误 C2798](compiler-error-c2798.md)|super::*标识符*不明确|
 |编译器错误 C2799|'*标识符*： 必须初始化常量限定类类型，而无需用户提供的默认构造函数的对象|
+
+## <a name="see-also"></a>请参阅
+
+[C /C++编译器和生成工具错误和警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[编译器错误 C2000-C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

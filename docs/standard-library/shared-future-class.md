@@ -19,11 +19,11 @@ helpviewer_keywords:
 - std::shared_future [C++], wait_for
 - std::shared_future [C++], wait_until
 ms.openlocfilehash: 2280c17c4ce58fe06365c107ad26d646c7ae2d72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412600"
 ---
 # <a name="sharedfuture-class"></a>shared_future 类
 
@@ -56,7 +56,7 @@ class shared_future;
 |----------|-----------------|
 |[get](#get)|检索存储在*关联异步状态*中的结果。|
 |[valid](#valid)|指定对象是否不为空。|
-|[等待](#wait)|阻止当前线程，直到关联异步状态为准备就绪。|
+|[wait](#wait)|阻止当前线程，直到关联异步状态为准备就绪。|
 |[wait_for](#wait_for)|进行阻止，直到关联异步状态为准备就绪或已过指定时间。|
 |[wait_until](#wait_until)|进行阻止，直到关联异步状态为准备就绪或直到指定时间点。|
 
@@ -154,7 +154,7 @@ bool valid() noexcept;
 
 **true**如果该对象具有关联异步状态; 否则为**false**。
 
-## <a name="wait"></a>  shared_future:: wait
+## <a name="wait"></a>  shared_future::wait
 
 阻止当前线程，直到关联异步状态为准备就绪。
 
@@ -166,7 +166,7 @@ void wait() const;
 
 只有当其异步提供程序存储了返回值或存储了异常时，关联的异步状态才会为准备就绪。
 
-## <a name="wait_for"></a>  shared_future:: wait_for
+## <a name="wait_for"></a>  shared_future::wait_for
 
 阻止当前线程，直到关联异步状态为准备就绪或已过指定时间。
 

@@ -142,11 +142,11 @@ helpviewer_keywords:
 - upper_bound function [STL/CLR]
 ms.assetid: ee2718dc-a98d-40b8-8341-593fe7d2ac15
 ms.openlocfilehash: 6011aad0ef86bc0e633687a6d8e017e9b12771c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62350827"
 ---
 # <a name="algorithm-stlclr"></a>algorithm (STL/CLR)
 
@@ -191,7 +191,7 @@ ms.locfileid: "50528721"
 |[lexicographical_compare (STL/CLR)](#lexicographical_compare)|比较两个序列，元素的元素，标识哪些序列两个较小者。|
 |[lower_bound (STL/CLR)](#lower_bound)|查找第一个元素的位置中的值大于或等于指定值的值的有序序列。|
 |[make_heap (STL/CLR)](#make_heap)|指定范围中的元素转换为堆上的第一个元素是最大堆。|
-|[最大值 (STL/CLR)](#max))|比较两个对象并返回两个更高版本。|
+|[max (STL/CLR)](#max))|比较两个对象并返回两个更高版本。|
 |[max_element (STL/CLR)](#max_element)|查找指定的值序列中的最大元素。|
 |[merge (STL/CLR)](#merge))|将两个已排序的源范围中的所有元素都合并为一个已排序目标范围。|
 |[min (STL/CLR)](#min)|比较两个对象并返回两个较小值。|
@@ -252,7 +252,7 @@ template<class _FwdIt, class _Pr> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`adjacent_find`。 有关详细信息，请参阅[adjacent_find](../standard-library/algorithm-functions.md#adjacent_find)。
+此函数的行为相同C++标准库函数`adjacent_find`。 有关详细信息，请参阅[adjacent_find](../standard-library/algorithm-functions.md#adjacent_find)。
 
 ## <a name="binary_search"></a> binary_search (STL/CLR)
 
@@ -270,9 +270,9 @@ template<class _FwdIt, class _Ty, class _Pr> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`binary_search`。 有关详细信息，请参阅[binary_search](../standard-library/algorithm-functions.md#binary_search)。
+此函数的行为相同C++标准库函数`binary_search`。 有关详细信息，请参阅[binary_search](../standard-library/algorithm-functions.md#binary_search)。
 
-## <a name="copy"></a> 复制 (STL/CLR)
+## <a name="copy"></a> copy (STL/CLR)
 
 将一个源范围中的元素值分配到目标范围，循环访问元素的源序列并将它们分配在一个向前方向的新位置。
 
@@ -285,7 +285,7 @@ template<class _InIt, class _OutIt> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`copy`。 有关详细信息，请参阅[复制](../standard-library/algorithm-functions.md#copy)。
+此函数的行为相同C++标准库函数`copy`。 有关详细信息，请参阅[复制](../standard-library/algorithm-functions.md#copy)。
 
 ## <a name="copy_backward"></a> copy_backward (STL/CLR)
 
@@ -301,7 +301,7 @@ template<class _BidIt1, class _BidIt2> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`copy_backward`。 有关详细信息，请参阅[copy_backward](../standard-library/algorithm-functions.md#copy_backward)。
+此函数的行为相同C++标准库函数`copy_backward`。 有关详细信息，请参阅[copy_backward](../standard-library/algorithm-functions.md#copy_backward)。
 
 ## <a name="count"></a> count (STL/CLR)
 
@@ -317,7 +317,7 @@ template<class _InIt, class _Ty> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`count`。 有关详细信息，请参阅[计数](../standard-library/algorithm-functions.md#count)。
+此函数的行为相同C++标准库函数`count`。 有关详细信息，请参阅[计数](../standard-library/algorithm-functions.md#count)。
 
 ## <a name="count_if"></a> count_if (STL/CLR)
 
@@ -333,7 +333,7 @@ template<class _InIt, class _Pr> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`count_if`。 有关详细信息，请参阅[count_if](../standard-library/algorithm-functions.md#count_if)。
+此函数的行为相同C++标准库函数`count_if`。 有关详细信息，请参阅[count_if](../standard-library/algorithm-functions.md#count_if)。
 
 ## <a name="equal"></a> 等于 (STL/CLR)
 
@@ -351,7 +351,7 @@ template<class _InIt1, class _InIt2, class _Pr> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`equal`。 有关详细信息，请参阅[等于](../standard-library/algorithm-functions.md#equal)。
+此函数的行为相同C++标准库函数`equal`。 有关详细信息，请参阅[等于](../standard-library/algorithm-functions.md#equal)。
 
 ## <a name="equal_range"></a> equal_range (STL/CLR)
 
@@ -370,9 +370,9 @@ template<class _FwdIt, class _Ty, class _Pr> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`equal_range`。 有关详细信息，请参阅[equal_range](../standard-library/algorithm-functions.md#equal_range)。
+此函数的行为相同C++标准库函数`equal_range`。 有关详细信息，请参阅[equal_range](../standard-library/algorithm-functions.md#equal_range)。
 
-## <a name="fill"></a> 填充 (STL/CLR)
+## <a name="fill"></a> fill (STL/CLR)
 
 将相同的新值分配给指定范围中的每个元素。
 
@@ -385,7 +385,7 @@ template<class _FwdIt, class _Ty> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`fill`。 有关详细信息，请参阅[填充](../standard-library/algorithm-functions.md#fill)。
+此函数的行为相同C++标准库函数`fill`。 有关详细信息，请参阅[填充](../standard-library/algorithm-functions.md#fill)。
 
 ## <a name="fill_n"></a> fill_n (STL/CLR)
 
@@ -400,7 +400,7 @@ template<class _OutIt, class _Diff, class _Ty> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`fill_n`。 有关详细信息，请参阅[fill_n](../standard-library/algorithm-functions.md#fill_n)。
+此函数的行为相同C++标准库函数`fill_n`。 有关详细信息，请参阅[fill_n](../standard-library/algorithm-functions.md#fill_n)。
 
 ## <a name="find"></a> find (STL/CLR)
 
@@ -415,7 +415,7 @@ template<class _InIt, class _Ty> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`find`。 有关详细信息，请参阅[查找](../standard-library/algorithm-functions.md#find)。
+此函数的行为相同C++标准库函数`find`。 有关详细信息，请参阅[查找](../standard-library/algorithm-functions.md#find)。
 
 ## <a name="find_end"></a> find_end (STL/CLR)
 
@@ -434,7 +434,7 @@ template<class _FwdIt1, class _FwdIt2, class _Pr> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`find_end`。 有关详细信息，请参阅[find_end](../standard-library/algorithm-functions.md#find_end)。
+此函数的行为相同C++标准库函数`find_end`。 有关详细信息，请参阅[find_end](../standard-library/algorithm-functions.md#find_end)。
 
 ## <a name="find_first_of"></a> find_first_of (STL/CLR)
 
@@ -453,7 +453,7 @@ template<class _FwdIt1, class _FwdIt2, class _Pr> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`find_first_of`。 有关详细信息，请参阅[find_first_of](../standard-library/algorithm-functions.md#find_first_of)。
+此函数的行为相同C++标准库函数`find_first_of`。 有关详细信息，请参阅[find_first_of](../standard-library/algorithm-functions.md#find_first_of)。
 
 ## <a name="find_if"></a> find_if (STL/CLR)
 
@@ -468,7 +468,7 @@ template<class _InIt, class _Pr> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`find_if`。 有关详细信息，请参阅[find_if](../standard-library/algorithm-functions.md#find_if)。
+此函数的行为相同C++标准库函数`find_if`。 有关详细信息，请参阅[find_if](../standard-library/algorithm-functions.md#find_if)。
 
 ## <a name="for_each"></a> for_each (STL/CLR)
 
@@ -483,7 +483,7 @@ template<class _InIt, class _Fn1> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`for_each`。 有关详细信息，请参阅[for_each](../standard-library/algorithm-functions.md#for_each)。
+此函数的行为相同C++标准库函数`for_each`。 有关详细信息，请参阅[for_each](../standard-library/algorithm-functions.md#for_each)。
 
 ## <a name="generate"></a> 生成 (STL/CLR)
 
@@ -498,7 +498,7 @@ template<class _FwdIt, class _Fn0> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`generate`。 有关详细信息，请参阅[生成](../standard-library/algorithm-functions.md#generate)。
+此函数的行为相同C++标准库函数`generate`。 有关详细信息，请参阅[生成](../standard-library/algorithm-functions.md#generate)。
 
 ## <a name="generate_n"></a> generate_n (STL/CLR)
 
@@ -513,7 +513,7 @@ template<class _OutIt, class _Diff, class _Fn0> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`generate_n`。 有关详细信息，请参阅[generate_n](../standard-library/algorithm-functions.md#generate_n)。
+此函数的行为相同C++标准库函数`generate_n`。 有关详细信息，请参阅[generate_n](../standard-library/algorithm-functions.md#generate_n)。
 
 ## <a name="includes"></a> 包括 (STL/CLR)
 
@@ -532,7 +532,7 @@ template<class _InIt1, class _InIt2, class _Pr> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`includes`。 有关详细信息，请参阅[包括](../standard-library/algorithm-functions.md#includes)。
+此函数的行为相同C++标准库函数`includes`。 有关详细信息，请参阅[包括](../standard-library/algorithm-functions.md#includes)。
 
 ## <a name="inplace_merge"></a> inplace_merge (STL/CLR)
 
@@ -550,7 +550,7 @@ template<class _BidIt, class _Pr> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`inplace_merge`的详细信息，请参阅[inplace_merge](../standard-library/algorithm-functions.md#inplace_merge)。
+此函数的行为相同C++标准库函数`inplace_merge`的详细信息，请参阅[inplace_merge](../standard-library/algorithm-functions.md#inplace_merge)。
 
 ## <a name="iter_swap"></a> iter_swap (STL/CLR)
 
@@ -565,7 +565,7 @@ template<class _FwdIt1, class _FwdIt2> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`iter_swap`。 有关详细信息，请参阅[iter_swap](../standard-library/algorithm-functions.md#iter_swap)。
+此函数的行为相同C++标准库函数`iter_swap`。 有关详细信息，请参阅[iter_swap](../standard-library/algorithm-functions.md#iter_swap)。
 
 ## <a name="lexicographical_compare"></a> lexicographical_compare (STL/CLR)
 
@@ -584,7 +584,7 @@ template<class _InIt1, class _InIt2, class _Pr> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`lexicographical_compare`。 有关详细信息，请参阅[lexicographical_compare](../standard-library/algorithm-functions.md#lexicographical_compare)。
+此函数的行为相同C++标准库函数`lexicographical_compare`。 有关详细信息，请参阅[lexicographical_compare](../standard-library/algorithm-functions.md#lexicographical_compare)。
 
 ## <a name="lower_bound"></a> lower_bound (STL/CLR)
 
@@ -602,7 +602,7 @@ template<class _FwdIt, class _Ty, class _Pr> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`lower_bound`。 有关详细信息，请参阅[lower_bound](../standard-library/algorithm-functions.md#lower_bound)。
+此函数的行为相同C++标准库函数`lower_bound`。 有关详细信息，请参阅[lower_bound](../standard-library/algorithm-functions.md#lower_bound)。
 
 ## <a name="make_heap"></a> make_heap (STL/CLR)
 
@@ -619,9 +619,9 @@ template<class _RanIt, class _Pr> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`make_heap`。 有关详细信息，请参阅[make_heap](../standard-library/algorithm-functions.md#make_heap)。
+此函数的行为相同C++标准库函数`make_heap`。 有关详细信息，请参阅[make_heap](../standard-library/algorithm-functions.md#make_heap)。
 
-## <a name="max"></a> 最大值 (STL/CLR)
+## <a name="max"></a> max (STL/CLR)
 
 比较两个对象并返回较大对象，其中排序条件可通过二元谓词指定。
 
@@ -636,7 +636,7 @@ template<class _Ty, class _Pr> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`max`。 有关详细信息，请参阅[最大](../standard-library/algorithm-functions.md#max)。
+此函数的行为相同C++标准库函数`max`。 有关详细信息，请参阅[最大](../standard-library/algorithm-functions.md#max)。
 
 ## <a name="max_element"></a> max_element (STL/CLR)
 
@@ -653,7 +653,7 @@ template<class _FwdIt, class _Pr> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`max_element`。 有关详细信息，请参阅[max_element](../standard-library/algorithm-functions.md#max_element)。
+此函数的行为相同C++标准库函数`max_element`。 有关详细信息，请参阅[max_element](../standard-library/algorithm-functions.md#max_element)。
 
 ## <a name="merge"></a> merge (STL/CLR)
 
@@ -672,9 +672,9 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Pr> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`merge`。 有关详细信息，请参阅[合并](../standard-library/algorithm-functions.md#merge)。
+此函数的行为相同C++标准库函数`merge`。 有关详细信息，请参阅[合并](../standard-library/algorithm-functions.md#merge)。
 
-## <a name="min"></a> 最小值 (STL/CLR)
+## <a name="min"></a> min (STL/CLR)
 
 比较两个对象并返回较小对象，其中排序条件可通过二元谓词指定。
 
@@ -689,7 +689,7 @@ template<class _Ty, class _Pr> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`min`。 有关详细信息，请参阅[min](../standard-library/algorithm-functions.md#min)。
+此函数的行为相同C++标准库函数`min`。 有关详细信息，请参阅[min](../standard-library/algorithm-functions.md#min)。
 
 ## <a name="min_element"></a> min_element (STL/CLR)
 
@@ -706,9 +706,9 @@ template<class _FwdIt, class _Pr> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`min_element`。 有关详细信息，请参阅[min_element](../standard-library/algorithm-functions.md#min_element)。
+此函数的行为相同C++标准库函数`min_element`。 有关详细信息，请参阅[min_element](../standard-library/algorithm-functions.md#min_element)。
 
-## <a name="mismatch"></a> 不匹配 (STL/CLR)
+## <a name="mismatch"></a> mismatch (STL/CLR)
 
 逐个元素比较两个范围是否相等或是否在二元谓词指定的意义上等效，并找到出现不同的第一个位置。
 
@@ -726,7 +726,7 @@ template<class _InIt1, class _InIt2, class _Pr> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`mismatch`。 有关详细信息，请参阅[不匹配](../standard-library/algorithm-functions.md#mismatch)。
+此函数的行为相同C++标准库函数`mismatch`。 有关详细信息，请参阅[不匹配](../standard-library/algorithm-functions.md#mismatch)。
 
 ## <a name="next_permutation"></a> next_permutation (STL/CLR)
 
@@ -743,7 +743,7 @@ template<class _BidIt, class _Pr> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`next_permutation`。 有关详细信息，请参阅[next_permutation](../standard-library/algorithm-functions.md#next_permutation)。
+此函数的行为相同C++标准库函数`next_permutation`。 有关详细信息，请参阅[next_permutation](../standard-library/algorithm-functions.md#next_permutation)。
 
 ## <a name="nth_element"></a> nth_element (STL/CLR)
 
@@ -761,7 +761,7 @@ template<class _RanIt, class _Pr> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`nth_element`。 有关详细信息，请参阅[nth_element](../standard-library/algorithm-functions.md#nth_element)。
+此函数的行为相同C++标准库函数`nth_element`。 有关详细信息，请参阅[nth_element](../standard-library/algorithm-functions.md#nth_element)。
 
 ## <a name="partial_sort"></a> partial_sort (STL/CLR)
 
@@ -779,7 +779,7 @@ template<class _RanIt, class _Pr> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`partial_sort`。 有关详细信息，请参阅[partial_sort](../standard-library/algorithm-functions.md#partial_sort)。
+此函数的行为相同C++标准库函数`partial_sort`。 有关详细信息，请参阅[partial_sort](../standard-library/algorithm-functions.md#partial_sort)。
 
 ## <a name="partial_sort_copy"></a> partial_sort_copy (STL/CLR)
 
@@ -798,9 +798,9 @@ template<class _InIt, class _RanIt, class _Pr> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`partial_sort_copy`。 有关详细信息，请参阅[partial_sort_copy](../standard-library/algorithm-functions.md#partial_sort_copy)。
+此函数的行为相同C++标准库函数`partial_sort_copy`。 有关详细信息，请参阅[partial_sort_copy](../standard-library/algorithm-functions.md#partial_sort_copy)。
 
-## <a name="partition"></a> 分区 (STL/CLR)
+## <a name="partition"></a> partition (STL/CLR)
 
 将范围中的元素分为两个不相交的集，满足一元谓词的元素在不满足一元谓词的元素之前。
 
@@ -813,7 +813,7 @@ template<class _BidIt, class _Pr> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`partition`。 有关详细信息，请参阅[分区](../standard-library/algorithm-functions.md#partition)。
+此函数的行为相同C++标准库函数`partition`。 有关详细信息，请参阅[分区](../standard-library/algorithm-functions.md#partition)。
 
 ## <a name="pop_heap"></a> pop_heap (STL/CLR)
 
@@ -830,7 +830,7 @@ template<class _RanIt, class _Pr> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`pop_heap`。 有关详细信息，请参阅[pop_heap](../standard-library/algorithm-functions.md#pop_heap)。
+此函数的行为相同C++标准库函数`pop_heap`。 有关详细信息，请参阅[pop_heap](../standard-library/algorithm-functions.md#pop_heap)。
 
 ## <a name="prev_permutation"></a> prev_permutation (STL/CLR)
 
@@ -847,7 +847,7 @@ template<class _BidIt, class _Pr> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`prev_permutation`。 有关详细信息，请参阅[prev_permutation](../standard-library/algorithm-functions.md#prev_permutation)。
+此函数的行为相同C++标准库函数`prev_permutation`。 有关详细信息，请参阅[prev_permutation](../standard-library/algorithm-functions.md#prev_permutation)。
 
 ## <a name="push_heap"></a> push_heap (STL/CLR)
 
@@ -864,7 +864,7 @@ template<class _RanIt, class _Pr> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`push_heap`。 有关详细信息，请参阅[push_heap](../standard-library/algorithm-functions.md#push_heap)。
+此函数的行为相同C++标准库函数`push_heap`。 有关详细信息，请参阅[push_heap](../standard-library/algorithm-functions.md#push_heap)。
 
 ## <a name="random_shuffle"></a> random_shuffle (STL/CLR)
 
@@ -881,9 +881,9 @@ template<class _RanIt, class _Fn1> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`random_shuffle`。 有关详细信息，请参阅[random_shuffle](../standard-library/algorithm-functions.md#random_shuffle)。
+此函数的行为相同C++标准库函数`random_shuffle`。 有关详细信息，请参阅[random_shuffle](../standard-library/algorithm-functions.md#random_shuffle)。
 
-## <a name="remove"></a> 删除 (STL/CLR)
+## <a name="remove"></a> remove (STL/CLR)
 
 从给定范围中消除指定值，而不影响剩余元素的顺序，并返回不包含指定值的新范围的末尾。
 
@@ -896,7 +896,7 @@ template<class _FwdIt, class _Ty> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`remove`。 有关详细信息，请参阅[删除](../standard-library/algorithm-functions.md#remove)。
+此函数的行为相同C++标准库函数`remove`。 有关详细信息，请参阅[删除](../standard-library/algorithm-functions.md#remove)。
 
 ## <a name="remove_copy"></a> remove_copy (STL/CLR)
 
@@ -912,7 +912,7 @@ template<class _InIt, class _OutIt, class _Ty> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`remove_copy`。 有关详细信息，请参阅[remove_copy](../standard-library/algorithm-functions.md#remove_copy)。
+此函数的行为相同C++标准库函数`remove_copy`。 有关详细信息，请参阅[remove_copy](../standard-library/algorithm-functions.md#remove_copy)。
 
 ## <a name="remove_copy_if"></a> remove_copy_if (STL/CLR)
 
@@ -928,7 +928,7 @@ template<class _InIt, class _OutIt, class _Pr> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`remove_copy_if`。 有关详细信息，请参阅[remove_copy_if](../standard-library/algorithm-functions.md#remove_copy_if)。
+此函数的行为相同C++标准库函数`remove_copy_if`。 有关详细信息，请参阅[remove_copy_if](../standard-library/algorithm-functions.md#remove_copy_if)。
 
 ## <a name="remove_if"></a> remove_if (STL/CLR)
 
@@ -943,7 +943,7 @@ template<class _FwdIt, class _Pr> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`remove_if`。 有关详细信息，请参阅[remove_if](../standard-library/algorithm-functions.md#remove_if)。
+此函数的行为相同C++标准库函数`remove_if`。 有关详细信息，请参阅[remove_if](../standard-library/algorithm-functions.md#remove_if)。
 
 ## <a name="replace"></a> replace (STL/CLR)
 
@@ -959,7 +959,7 @@ template<class _FwdIt, class _Ty> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`replace`。 有关详细信息，请参阅[替换为](../standard-library/algorithm-functions.md#replace)。
+此函数的行为相同C++标准库函数`replace`。 有关详细信息，请参阅[替换为](../standard-library/algorithm-functions.md#replace)。
 
 ## <a name="replace_copy"></a> replace_copy (STL/CLR)
 
@@ -975,7 +975,7 @@ template<class _InIt, class _OutIt, class _Ty> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`replace_copy`。 有关详细信息，请参阅[replace_copy](../standard-library/algorithm-functions.md#replace_copy)。
+此函数的行为相同C++标准库函数`replace_copy`。 有关详细信息，请参阅[replace_copy](../standard-library/algorithm-functions.md#replace_copy)。
 
 ## <a name="replace_copy_if"></a> replace_copy_if (STL/CLR)
 
@@ -991,7 +991,7 @@ template<class _InIt, class _OutIt, class _Pr, class _Ty> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`replace_copy_if`。 有关详细信息，请参阅[replace_copy_if](../standard-library/algorithm-functions.md#replace_copy_if)。
+此函数的行为相同C++标准库函数`replace_copy_if`。 有关详细信息，请参阅[replace_copy_if](../standard-library/algorithm-functions.md#replace_copy_if)。
 
 ## <a name="replace_if"></a> replace_if (STL/CLR)
 
@@ -1007,7 +1007,7 @@ template<class _FwdIt, class _Pr, class _Ty> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`replace_if`。 有关详细信息，请参阅[replace_if](../standard-library/algorithm-functions.md#replace_if)。
+此函数的行为相同C++标准库函数`replace_if`。 有关详细信息，请参阅[replace_if](../standard-library/algorithm-functions.md#replace_if)。
 
 ## <a name="reverse"></a> reverse (STL/CLR)
 
@@ -1022,7 +1022,7 @@ template<class _BidIt> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`reverse`。 有关详细信息，请参阅[反向](../standard-library/algorithm-functions.md#reverse)。
+此函数的行为相同C++标准库函数`reverse`。 有关详细信息，请参阅[反向](../standard-library/algorithm-functions.md#reverse)。
 
 ## <a name="reverse_copy"></a> reverse_copy (STL/CLR)
 
@@ -1037,9 +1037,9 @@ template<class _BidIt, class _OutIt> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`reverse_copy`。 有关详细信息，请参阅[reverse_copy](../standard-library/algorithm-functions.md#reverse_copy)。
+此函数的行为相同C++标准库函数`reverse_copy`。 有关详细信息，请参阅[reverse_copy](../standard-library/algorithm-functions.md#reverse_copy)。
 
-## <a name="rotate"></a> 旋转 (STL/CLR)
+## <a name="rotate"></a> rotate (STL/CLR)
 
 交换两个相邻范围中的元素。
 
@@ -1052,7 +1052,7 @@ template<class _FwdIt> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`rotate`。 有关详细信息，请参阅[旋转](../standard-library/algorithm-functions.md#rotate)。
+此函数的行为相同C++标准库函数`rotate`。 有关详细信息，请参阅[旋转](../standard-library/algorithm-functions.md#rotate)。
 
 ## <a name="rotate_copy"></a> rotate_copy (STL/CLR)
 
@@ -1068,7 +1068,7 @@ template<class _FwdIt, class _OutIt> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`rotate_copy`。 有关详细信息，请参阅[rotate_copy](../standard-library/algorithm-functions.md#rotate_copy)。
+此函数的行为相同C++标准库函数`rotate_copy`。 有关详细信息，请参阅[rotate_copy](../standard-library/algorithm-functions.md#rotate_copy)。
 
 ## <a name="search_"></a> 搜索 (STL/CLR)
 
@@ -1087,7 +1087,7 @@ template<class _FwdIt1, class _FwdIt2, class _Pr> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`search`。 有关详细信息，请参阅[搜索](../standard-library/algorithm-functions.md#search)。
+此函数的行为相同C++标准库函数`search`。 有关详细信息，请参阅[搜索](../standard-library/algorithm-functions.md#search)。
 
 ## <a name="search_n"></a> search_n (STL/CLR)
 
@@ -1106,7 +1106,7 @@ template<class _FwdIt1, class _Diff2, class _Ty, class _Pr> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`search_n`。 有关详细信息，请参阅[search_n](../standard-library/algorithm-functions.md#search_n)。
+此函数的行为相同C++标准库函数`search_n`。 有关详细信息，请参阅[search_n](../standard-library/algorithm-functions.md#search_n)。
 
 ## <a name="set_difference"></a> set_difference (STL/CLR)
 
@@ -1125,7 +1125,7 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Pr> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`set_difference`。 有关详细信息，请参阅[set_difference](../standard-library/algorithm-functions.md#set_difference)。
+此函数的行为相同C++标准库函数`set_difference`。 有关详细信息，请参阅[set_difference](../standard-library/algorithm-functions.md#set_difference)。
 
 ## <a name="set_intersection"></a> set_intersection (STL/CLR)
 
@@ -1144,7 +1144,7 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Pr> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`set_intersection`。 有关详细信息，请参阅[set_intersection](../standard-library/algorithm-functions.md#set_intersection)。
+此函数的行为相同C++标准库函数`set_intersection`。 有关详细信息，请参阅[set_intersection](../standard-library/algorithm-functions.md#set_intersection)。
 
 ## <a name="set_symmetric_difference"></a> set_symmetric_difference (STL/CLR)
 
@@ -1163,7 +1163,7 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Pr> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`set_symmetric_difference`。 有关详细信息，请参阅[set_symmetric_difference](../standard-library/algorithm-functions.md#set_symmetric_difference)。
+此函数的行为相同C++标准库函数`set_symmetric_difference`。 有关详细信息，请参阅[set_symmetric_difference](../standard-library/algorithm-functions.md#set_symmetric_difference)。
 
 ## <a name="set_union"></a> set_union (STL/CLR)
 
@@ -1182,9 +1182,9 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Pr> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`set_union`。 有关详细信息，请参阅[set_union](../standard-library/algorithm-functions.md#set_union)。
+此函数的行为相同C++标准库函数`set_union`。 有关详细信息，请参阅[set_union](../standard-library/algorithm-functions.md#set_union)。
 
-## <a name="sort"></a> 排序 (STL/CLR)
+## <a name="sort"></a> sort (STL/CLR)
 
 将指定范围中的元素按非降序顺序排列，或根据二元谓词指定的排序条件排列。
 
@@ -1199,7 +1199,7 @@ template<class _RanIt, class _Pr> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`sort`。 有关详细信息，请参阅[排序](../mfc/reference/cmfclistctrl-class.md#sort)。
+此函数的行为相同C++标准库函数`sort`。 有关详细信息，请参阅[排序](../mfc/reference/cmfclistctrl-class.md#sort)。
 
 ## <a name="sort_heap"></a> sort_heap (STL/CLR)
 
@@ -1216,7 +1216,7 @@ template<class _RanIt, class _Pr> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`sort_heap`。 有关详细信息，请参阅[sort_heap](../standard-library/algorithm-functions.md#sort_heap)。
+此函数的行为相同C++标准库函数`sort_heap`。 有关详细信息，请参阅[sort_heap](../standard-library/algorithm-functions.md#sort_heap)。
 
 ## <a name="stable_partition"></a> stable_partition (STL/CLR)
 
@@ -1231,7 +1231,7 @@ template<class _BidIt, class _Pr> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`stable_partition`。 有关详细信息，请参阅[stable_partition](../standard-library/algorithm-functions.md#stable_partition)。
+此函数的行为相同C++标准库函数`stable_partition`。 有关详细信息，请参阅[stable_partition](../standard-library/algorithm-functions.md#stable_partition)。
 
 ## <a name="stable_sort"></a> stable_sort (STL/CLR)
 
@@ -1248,9 +1248,9 @@ template<class _BidIt, class _Pr> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`stable_sort`。 有关详细信息，请参阅[stable_sort](../standard-library/algorithm-functions.md#stable_sort)。
+此函数的行为相同C++标准库函数`stable_sort`。 有关详细信息，请参阅[stable_sort](../standard-library/algorithm-functions.md#stable_sort)。
 
-## <a name="swap"></a> 交换 (STL/CLR)
+## <a name="swap"></a> swap (STL/CLR)
 
 在两种类型的对象之间交换元素值，将第一个对象的内容分配给第二个对象，将第二个对象的内容分配给第一个对象。
 
@@ -1263,7 +1263,7 @@ template<class _BidIt, class _Pr> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`swap`。 有关详细信息，请参阅[交换](../standard-library/algorithm-functions.md#swap)。
+此函数的行为相同C++标准库函数`swap`。 有关详细信息，请参阅[交换](../standard-library/algorithm-functions.md#swap)。
 
 ## <a name="swap_ranges"></a> swap_ranges (STL/CLR)
 
@@ -1279,7 +1279,7 @@ template<class _FwdIt1, class _FwdIt2> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`swap_ranges`。 有关详细信息，请参阅[swap_ranges](../standard-library/algorithm-functions.md#swap_ranges)。
+此函数的行为相同C++标准库函数`swap_ranges`。 有关详细信息，请参阅[swap_ranges](../standard-library/algorithm-functions.md#swap_ranges)。
 
 ## <a name="transform"></a> 转换 (STL/CLR)
 
@@ -1298,7 +1298,7 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Fn2> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`transform`。 有关详细信息，请参阅[转换](../standard-library/algorithm-functions.md#transform)。
+此函数的行为相同C++标准库函数`transform`。 有关详细信息，请参阅[转换](../standard-library/algorithm-functions.md#transform)。
 
 ## <a name="unique"></a> 唯一 (STL/CLR)
 
@@ -1315,7 +1315,7 @@ template<class _FwdIt, class _Pr> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`unique`。 有关详细信息，请参阅[唯一](../standard-library/algorithm-functions.md#unique)。
+此函数的行为相同C++标准库函数`unique`。 有关详细信息，请参阅[唯一](../standard-library/algorithm-functions.md#unique)。
 
 ## <a name="unique_copy"></a> unique_copy (STL/CLR)
 
@@ -1333,7 +1333,7 @@ template<class _InIt, class _OutIt, class _Pr> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`unique_copy`。 有关详细信息，请参阅[unique_copy](../standard-library/algorithm-functions.md#unique_copy)。
+此函数的行为相同C++标准库函数`unique_copy`。 有关详细信息，请参阅[unique_copy](../standard-library/algorithm-functions.md#unique_copy)。
 
 ## <a name="upper_bound"></a> upper_bound (STL/CLR)
 
@@ -1351,4 +1351,4 @@ template<class _FwdIt, class _Ty, class _Pr> inline
 
 ### <a name="remarks"></a>备注
 
-此函数的行为与 c + + 标准库函数相同`upper_bound`。 有关详细信息，请参阅[upper_bound](../standard-library/algorithm-functions.md#upper_bound)。
+此函数的行为相同C++标准库函数`upper_bound`。 有关详细信息，请参阅[upper_bound](../standard-library/algorithm-functions.md#upper_bound)。

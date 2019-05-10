@@ -9,16 +9,16 @@ helpviewer_keywords:
 - init_seg pragma
 - data segment initializing [C++]
 ms.assetid: 40a5898a-5c85-4aa9-8d73-3d967eb13610
-ms.openlocfilehash: f11ec6d3cee7af2ce785555af9b73d8c0eb58638
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 801496739fd9bd2b8a14e699ca4da9fe79f3a28d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383706"
 ---
 # <a name="initseg"></a>init_seg
 
-**C + + 专用**
+**C++特定**
 
 指定影响启动代码的执行顺序的关键字或代码部分。
 
@@ -71,7 +71,7 @@ int __cdecl myexit (void (__cdecl *pf)(void))
 
 不能指定**init_seg**多次在翻译单元中。
 
-即使你的对象没有用户定义的构造函数（未在代码中显式定义的构造函数），编译器也会生成一个构造函数（例如，绑定 v-表指针）。 因此，你的代码必须调用编译器生成的构造函数。
+即使您的对象没有用户定义的构造函数（未在代码中显式定义的构造函数），编译器也会生成一个构造函数（例如，绑定 v-表指针）。 因此，你的代码必须调用编译器生成的构造函数。
 
 ## <a name="example"></a>示例
 

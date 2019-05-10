@@ -1,5 +1,5 @@
 ---
-title: '#行指令 （C/c + +）'
+title: '#行指令 (C /C++)'
 ms.date: 10/18/2017
 f1_keywords:
 - '#line'
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - line directive (#line)
 - '#line directive'
 ms.assetid: 585c1dc4-5184-4f01-98f4-80c1909744d7
-ms.openlocfilehash: e478d287af097081910d192e2ac0fbee6890bfa2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad0fe1514e89b861bab046652b1768862cc8045b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383771"
 ---
 # <a name="line-directive-cc"></a>#line 指令 (C/C++)
 

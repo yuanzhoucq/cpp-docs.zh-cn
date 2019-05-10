@@ -2,16 +2,16 @@
 title: default 命名空间
 ms.date: 12/30/2016
 ms.assetid: 4712e9dc-57ba-43cc-811e-022e1dae4de8
-ms.openlocfilehash: ffea9e1132b4c66f38661392cbafb94635b318e1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 60a47c9549ee40b419eb5f4aa84720f8dcd1c366
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389458"
 ---
 # <a name="default-namespace"></a>default 命名空间
 
-`default`命名空间范围的内置类型支持的 C + + /cli CX。
+`default`命名空间范围的内置类型支持的C++/CX。
 
 ## <a name="syntax"></a>语法
 
@@ -32,7 +32,7 @@ namespace default;
 
 ### <a name="built-in-types"></a>内置类型
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |`char16`|表示 Unicode (UTF-16) 码位的 16 位非数字值。|
 |`float32`|32 位 IEEE 754 浮点数。|
@@ -52,4 +52,4 @@ namespace default;
 
 ## <a name="see-also"></a>请参阅
 
-[Visual c + + 语言参考](../cppcx/visual-c-language-reference-c-cx.md)
+[VisualC++语言参考](../cppcx/visual-c-language-reference-c-cx.md)

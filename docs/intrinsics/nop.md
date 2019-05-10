@@ -7,12 +7,12 @@ helpviewer_keywords:
 - nop instruction
 - __nop intrinsic
 ms.assetid: 7a2a938b-87e0-476d-a348-03ea7635b6b9
-ms.openlocfilehash: b0033b0e3a62a16c2856b0e25daeebdb5df0c81f
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 1e76110c1ef0c4b98c295578189eedc99d76eeb9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396621"
 ---
 # <a name="nop"></a>__nop
 

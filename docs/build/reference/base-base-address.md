@@ -20,12 +20,12 @@ helpviewer_keywords:
 - executable files [C++], base address
 - at sign symbol for base address
 ms.assetid: 00b9f6fe-0bd2-4772-a69c-7365eb199069
-ms.openlocfilehash: 87fdceea4ac71fe4bf0a53d7ae8e473bc97a01d7
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: dc6380903af0be2e6696ca3589813c249f71dd05
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416743"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812273"
 ---
 # <a name="base-base-address"></a>/BASE（基址）
 
@@ -38,9 +38,9 @@ ms.locfileid: "57416743"
 ## <a name="remarks"></a>备注
 
 > [!NOTE]
-> 出于安全原因，Microsoft 建议你使用[/DYNAMICBASE](../../build/reference/dynamicbase-use-address-space-layout-randomization.md)选项而不是指定可执行文件的基址。 这会生成可以随机变基可在加载时使用地址空间布局随机化 (ASLR) 功能的 Windows 可执行映像。 /DYNAMICBASE 选项在默认情况下处于打开状态。
+> 出于安全原因，Microsoft 建议你使用[/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)选项而不是指定可执行文件的基址。 这会生成可以随机变基可在加载时使用地址空间布局随机化 (ASLR) 功能的 Windows 可执行映像。 /DYNAMICBASE 选项在默认情况下处于打开状态。
 
-/ 基数选项设置为该程序，重写的默认位置为.exe 或 DLL 文件的基址。 .Exe 文件的默认基址是为 32 位映像 0x400000 处或 0x140000000 为 64 位映像。 对于 DLL 的默认基址是为 32 位映像 0x10000000 或 0x180000000 为 64 位映像。 在操作系统上不支持地址空间布局随机化 (ASLR)，或设置 /dynamicbase: no 选项时，操作系统首次尝试加载程序在其指定或默认基址。 如果有足够的空间有不可用，系统重新定位到该程序。 若要防止重定位，请使用[/fixed](../../build/reference/fixed-fixed-base-address.md)选项。
+/ 基数选项设置为该程序，重写的默认位置为.exe 或 DLL 文件的基址。 .Exe 文件的默认基址是为 32 位映像 0x400000 处或 0x140000000 为 64 位映像。 对于 DLL 的默认基址是为 32 位映像 0x10000000 或 0x180000000 为 64 位映像。 在操作系统上不支持地址空间布局随机化 (ASLR)，或设置 /dynamicbase: no 选项时，操作系统首次尝试加载程序在其指定或默认基址。 如果有足够的空间有不可用，系统重新定位到该程序。 若要防止重定位，请使用[/fixed](fixed-fixed-base-address.md)选项。
 
 如果链接器将发出错误*地址*不是 64 K 的倍数。 您可以选择指定程序; 的大小如果程序不适合在您指定的大小将链接器发出警告。
 
@@ -62,11 +62,11 @@ two    0x28100000    0x00300000    ; for DLLTWO.DLL
 link dlltwo.obj /dll /base:@dlls.txt,two
 ```
 
-若要设置的基址的另一种方法是使用*基*中的参数[名称](../../build/reference/name-c-cpp.md)或[库](../../build/reference/library.md)语句。 /BASE 和[/DLL](../../build/reference/dll-build-a-dll.md)选项一起构成了等效于**库**语句。
+若要设置的基址的另一种方法是使用*基*中的参数[名称](name-c-cpp.md)或[库](library.md)语句。 /BASE 和[/DLL](dll-build-a-dll.md)选项一起构成了等效于**库**语句。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置 Visual c + + 项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[Visual Studio 中的设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 选择**配置属性** > **链接器** > **高级**属性页。
 
@@ -78,5 +78,5 @@ link dlltwo.obj /dll /base:@dlls.txt,two
 
 ## <a name="see-also"></a>请参阅
 
-[设置链接器选项](../../build/reference/setting-linker-options.md)<br/>
-[链接器选项](../../build/reference/linker-options.md)
+[MSVC 链接器引用](linking.md)<br/>
+[MSVC 链接器选项](linker-options.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - lzcnt64 intrinsic
 - __lzcnt64 intrinsic
 ms.assetid: 412113e7-052e-46e5-8bfa-d5ad72abc10e
-ms.openlocfilehash: 7b1e499eff8c8c7de59dc6f96cb1060ce845e27d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 333d9f2b23fb90388af8395945256956c9222ab9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62263368"
 ---
 # <a name="lzcnt16-lzcnt-lzcnt64"></a>__lzcnt16、__lzcnt、__lzcnt64
 
@@ -43,7 +43,7 @@ unsigned __int64 __lzcnt64(
 
 #### <a name="parameters"></a>参数
 
-*value*<br/>
+*值*<br/>
 [in]16 位、 32 或 64 位无符号的整数，扫描的前导零。
 
 ## <a name="return-value"></a>返回值
@@ -54,9 +54,9 @@ unsigned __int64 __lzcnt64(
 
 |内部函数|体系结构|
 |---------------|------------------|
-|`__lzcnt16`|AMD： 高级的位操作 (ABM)<br /><br /> Intel: Haswell|
-|`__lzcnt`|AMD： 高级的位操作 (ABM)<br /><br /> Intel: Haswell|
-|`__lzcnt64`|AMD： 高级位操作 (ABM) 在 64 位模式下。<br /><br /> Intel: Haswell|
+|`__lzcnt16`|AMD:高级的位操作 (ABM)<br /><br /> Intel:Haswell|
+|`__lzcnt`|AMD:高级的位操作 (ABM)<br /><br /> Intel:Haswell|
+|`__lzcnt64`|AMD:高级位操作 (ABM) 在 64 位模式下。<br /><br /> Intel:Haswell|
 
 **标头文件** \<intrin.h >
 

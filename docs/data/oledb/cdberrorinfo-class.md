@@ -44,12 +44,12 @@ helpviewer_keywords:
 - GetErrorParameters method
 - GetErrorRecords method
 ms.assetid: 9a5c18a2-ee3e-40f5-ab4c-581288d7f737
-ms.openlocfilehash: e523f299831ee67d994a693e5357de96eba968aa
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bc13137a4222ba51cf3745f9706353d48068a072
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209329"
 ---
 # <a name="cdberrorinfo-class"></a>CDBErrorInfo 类
 
@@ -243,6 +243,6 @@ HRESULT GetErrorRecords(ULONG* pcRecords) throw();
 
 ## <a name="see-also"></a>请参阅
 
-[DBViewer](../../visual-cpp-samples.md)<br/>
+[DBViewer](../../overview/visual-cpp-samples.md)<br/>
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)

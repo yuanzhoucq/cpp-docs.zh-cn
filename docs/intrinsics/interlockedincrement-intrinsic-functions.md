@@ -44,18 +44,18 @@ helpviewer_keywords:
 - _InterlockedIncrement_acq intrinsic
 - InterlockedIncrement intrinsic
 ms.assetid: 37700615-f372-438b-bcef-d76e11839482
-ms.openlocfilehash: 3054a9eab21f6f7ec149f7f1c23c3c40fca3b9e1
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: b41ce5c744bde7cd89cabed6c829cfb06da75129
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62350083"
 ---
 # <a name="interlockedincrement-intrinsic-functions"></a>_InterlockedIncrement 内部函数
 
 **Microsoft 专用**
 
-提供编译器内部函数支持 Win32 Windows SDK [InterlockedIncrement](/windows/desktop/api/winbase/nf-winbase-interlockedincrement)函数。
+提供编译器内部函数支持 Win32 Windows SDK [InterlockedIncrement](/windows/desktop/api/winnt/nf-winnt-interlockedincrement)函数。
 
 ## <a name="syntax"></a>语法
 

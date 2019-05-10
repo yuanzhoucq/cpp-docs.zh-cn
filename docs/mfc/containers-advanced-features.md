@@ -12,12 +12,12 @@ helpviewer_keywords:
 - server/container applications [MFC]
 - containers [MFC], container applications
 ms.assetid: 221fd99c-b138-40fa-ad6a-974e3b3ad1f8
-ms.openlocfilehash: 9d83ba601766f4b6fb84576571239a250169abb1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 350431975a4335fc06e436237b7e0d3388faab64
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152925"
 ---
 # <a name="containers-advanced-features"></a>容器：高级的功能
 
@@ -39,7 +39,7 @@ ms.locfileid: "57278699"
 
 - 重写 `COleClientItem::CanActivate` 以避免在使用服务器自身进行就地编辑时就地编辑项目。
 
-   例如，MFC OLE 示例[OCLIENT](../visual-cpp-samples.md)具有嵌入由容器/服务器应用程序创建的项。 打开 OCLIENT 应用程序并就地编辑由容器/服务器应用程序创建的项目。 在编辑应用程序的项目时，您决定要嵌入由 MFC OLE 示例创建项目[HIERSVR](../visual-cpp-samples.md)。 为此，您无法使用就地激活。 您必须完全打开 HIERSVR 才能激活此项目。 由于 Microsoft 基础类库不支持此 OLE 功能，因此重写 `COleClientItem::CanActivate` 使您可检查此情况并防止应用程序中出现可能的运行时错误。
+   例如，MFC OLE 示例[OCLIENT](../overview/visual-cpp-samples.md)具有嵌入由容器/服务器应用程序创建的项。 打开 OCLIENT 应用程序并就地编辑由容器/服务器应用程序创建的项目。 在编辑应用程序的项目时，您决定要嵌入由 MFC OLE 示例创建项目[HIERSVR](../overview/visual-cpp-samples.md)。 为此，您无法使用就地激活。 您必须完全打开 HIERSVR 才能激活此项目。 由于 Microsoft 基础类库不支持此 OLE 功能，因此重写 `COleClientItem::CanActivate` 使您可检查此情况并防止应用程序中出现可能的运行时错误。
 
 如果要创建新的应用程序并希望它充当容器/服务器应用程序，请在应用程序向导的“OLE 选项”对话框中选择此选项，将自动创建此支持。 有关详细信息，请参阅文章[概述：创建 ActiveX 控件容器](../mfc/reference/creating-an-mfc-activex-control-container.md)。 有关 MFC 示例的信息，请参阅 MFC 示例。
 
@@ -69,7 +69,7 @@ ms.locfileid: "57278699"
 
          If the application is launched with the "/Embedded" switch, it should not show its main window, similar to a server application.
 
-MFC OLE 示例[OCLIENT](../visual-cpp-samples.md)实现此功能。 有关如何完成此操作的示例，请参阅`InitInstance`函数，在*OCLIENT。CPP*此示例应用程序的文件。
+MFC OLE 示例[OCLIENT](../overview/visual-cpp-samples.md)实现此功能。 有关如何完成此操作的示例，请参阅`InitInstance`函数，在*OCLIENT。CPP*此示例应用程序的文件。
 
 ## <a name="see-also"></a>请参阅
 

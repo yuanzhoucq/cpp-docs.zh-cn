@@ -11,12 +11,12 @@ helpviewer_keywords:
 - POINT structure
 - CPoint class
 ms.assetid: a6d4db93-35cc-444d-9221-c3e160f6edaa
-ms.openlocfilehash: 4f6ab15f80ac448b4e7383e2db92f22262c20d08
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 85e469e1f52a22917580ce8616aaba5ff57d08ed
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252614"
 ---
 # <a name="cpoint-class"></a>CPoint 类
 
@@ -47,11 +47,11 @@ class CPoint : public tagPOINT
 |名称|描述|
 |----------|-----------------|
 |[CPoint::operator-](#operator_-)|返回的差`CPoint`和大小或求反运算的一个点或两个点或大小为负值的偏移量之间的大小差异。|
-|[CPoint::operator ！ =](#operator_neq)|检查两个点之间不相等。|
+|[CPoint::operator !=](#operator_neq)|检查两个点之间不相等。|
 |[CPoint::operator +](#operator_add)|返回的总和`CPoint`和大小或点，或`CRect`大小偏移量。|
-|[CPoint::operator + =](#operator_add_eq)|偏移量`CPoint`通过添加大小或点。|
-|[CPoint::operator =](#operator_-_eq)|偏移量`CPoint`减去大小或点。|
-|[CPoint::operator = =](#operator_eq_eq)|两个点之间的相等性检查。|
+|[CPoint::operator +=](#operator_add_eq)|偏移量`CPoint`通过添加大小或点。|
+|[CPoint::operator -=](#operator_-_eq)|偏移量`CPoint`减去大小或点。|
+|[CPoint::operator ==](#operator_eq_eq)|两个点之间的相等性检查。|
 
 ## <a name="remarks"></a>备注
 
@@ -147,13 +147,13 @@ void Offset(SIZE size) throw();
 
 ### <a name="parameters"></a>参数
 
-*拼音*<br/>
+*xOffset*<br/>
 指定的偏移量`x`的成员`CPoint`。
 
-*正文*<br/>
+*yOffset*<br/>
 指定的偏移量`y`的成员`CPoint`。
 
-*点*<br/>
+*point*<br/>
 指定的量 ([点](/windows/desktop/api/windef/ns-windef-tagpoint)或`CPoint`) 的偏移`CPoint`。
 
 *size*<br/>
@@ -173,7 +173,7 @@ BOOL operator==(POINT point) const throw();
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 包含[点](/windows/desktop/api/windef/ns-windef-tagpoint)结构或`CPoint`对象。
 
 ### <a name="return-value"></a>返回值
@@ -194,7 +194,7 @@ BOOL operator!=(POINT point) const throw();
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 包含[点](/windows/desktop/api/windef/ns-windef-tagpoint)结构或`CPoint`对象。
 
 ### <a name="return-value"></a>返回值
@@ -219,7 +219,7 @@ void operator+=(POINT point) throw();
 *size*<br/>
 包含[大小](/windows/desktop/api/windef/ns-windef-tagsize)结构或[CSize](../../atl-mfc-shared/reference/csize-class.md)对象。
 
-*点*<br/>
+*point*<br/>
 包含[点](/windows/desktop/api/windef/ns-windef-tagpoint)结构或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象。
 
 ### <a name="remarks"></a>备注
@@ -234,7 +234,7 @@ void operator+=(POINT point) throw();
 
 [!code-cpp[NVC_ATLMFC_Utilities#31](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_4.cpp)]
 
-##  <a name="operator_-_eq"></a>  CPoint::operator =
+##  <a name="operator_-_eq"></a>  CPoint::operator -=
 
 第一个重载中减去从大小`CPoint`。
 
@@ -248,7 +248,7 @@ void operator-=(POINT point) throw();
 *size*<br/>
 包含[大小](/windows/desktop/api/windef/ns-windef-tagsize)结构或[CSize](../../atl-mfc-shared/reference/csize-class.md)对象。
 
-*点*<br/>
+*point*<br/>
 包含[点](/windows/desktop/api/windef/ns-windef-tagpoint)结构或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象。
 
 ### <a name="remarks"></a>备注
@@ -278,7 +278,7 @@ CRect operator+(const RECT* lpRect) const throw();
 *size*<br/>
 包含[大小](/windows/desktop/api/windef/ns-windef-tagsize)结构或[CSize](../../atl-mfc-shared/reference/csize-class.md)对象。
 
-*点*<br/>
+*point*<br/>
 包含[点](/windows/desktop/api/windef/ns-windef-tagpoint)结构或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象。
 
 *lpRect*<br/>
@@ -298,7 +298,7 @@ CRect operator+(const RECT* lpRect) const throw();
 
 [!code-cpp[NVC_ATLMFC_Utilities#33](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_6.cpp)]
 
-##  <a name="operator_-"></a>  CPoint::operator-
+##  <a name="operator_-"></a>  CPoint::operator -
 
 使用前两个重载之一来减去`CPoint`或`CSize`对象从`CPoint`。
 
@@ -311,7 +311,7 @@ CPoint operator-() const throw();
 
 ### <a name="parameters"></a>参数
 
-*点*<br/>
+*point*<br/>
 一个[点](/windows/desktop/api/windef/ns-windef-tagpoint)结构或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象。
 
 *size*<br/>
@@ -342,9 +342,8 @@ CPoint operator-() const throw();
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 MDI](../../visual-cpp-samples.md)<br/>
+[MFC 示例 MDI](../../overview/visual-cpp-samples.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [POINT 结构](/windows/desktop/api/windef/ns-windef-tagpoint)<br/>
 [CRect 类](../../atl-mfc-shared/reference/crect-class.md)<br/>
 [CSize 类](../../atl-mfc-shared/reference/csize-class.md)
-

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3536
 ms.assetid: 8d866075-866b-49eb-9979-ee27b308f7e3
-ms.openlocfilehash: b58136cc03efda83071c531b25889743de3485f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a16c5bd46d806d09861d5734b637c2c9d9b2f9d0
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456740"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345494"
 ---
 # <a name="compiler-error-c3536"></a>编译器错误 C3536
 

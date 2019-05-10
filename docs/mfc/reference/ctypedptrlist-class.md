@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CTypedPtrList [MFC], RemoveTail
 - CTypedPtrList [MFC], SetAt
 ms.assetid: c273096e-1756-4340-864b-4a08b674a65e
-ms.openlocfilehash: 756ef5043468f614c6ab3ac64598d62b29b2dc41
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9233e83a08fde87c15be5cc1c42a2f1dd3b56511
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57286018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62324501"
 ---
 # <a name="ctypedptrlist-class"></a>CTypedPtrList 类
 
@@ -71,7 +71,7 @@ class CTypedPtrList : public BASE_CLASS
 
 ## <a name="remarks"></a>备注
 
-当你使用`CTypedPtrList`而非`CObList`或`CPtrList`，c + + 类型检查功能可帮助消除错误引起的不匹配的指针类型。
+当你使用`CTypedPtrList`而非`CObList`或`CPtrList`、C++类型检查的工具可帮助消除错误引起的不匹配的指针类型。
 
 此外，`CTypedPtrList`包装执行大量的强制转换，如果您使用，则将需要`CObList`或`CPtrList`。
 
@@ -379,7 +379,7 @@ void SetAt(POSITION pos, TYPE newElement);
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例收集](../../visual-cpp-samples.md)<br/>
+[MFC 示例收集](../../overview/visual-cpp-samples.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CPtrList 类](../../mfc/reference/cptrlist-class.md)<br/>
 [CObList 类](../../mfc/reference/coblist-class.md)

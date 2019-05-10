@@ -6,12 +6,12 @@ helpviewer_keywords:
 - CString objects, reference counting
 - CString class (Visual C++)
 ms.assetid: ed018aaf-8b10-46f9-828c-f9c092dc7609
-ms.openlocfilehash: d6ebc63fdcfa8294bf81aee0ce4df0c2f83af6f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a84ae21b60d87971cb2f7b758dd369b4078607e6
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62199204"
 ---
 # <a name="using-cstring"></a>使用 CString
 
@@ -82,4 +82,3 @@ int main() {
 包含指向介绍管理字符串数据的多种方法的主题的链接。
 
 [字符串 (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)
-

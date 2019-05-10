@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: 6af054ea27233de2cc3b551bbec69c0ab3b4be9e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 45c03d142c34186660aa2715081ffb0f45e85ccc
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62164067"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -570,11 +570,11 @@ UINT GetLimitText() const;
 
 ### <a name="return-value"></a>返回值
 
-当前文本限制，以字节为单位，此`CEdit`对象。
+当前文本中的限制，TCHARs，此`CEdit`对象。
 
 ### <a name="remarks"></a>备注
 
-文本限制为文本，以字节为单位，编辑控件可以接受的最长。
+文本限制为文本，请在 TCHARs，编辑控件可以接受的最长。
 
 > [!NOTE]
 >  此成员函数是 Windows 95 和 Windows NT 4.0 开始支持。
@@ -606,14 +606,14 @@ int GetLine(
 指定要检索多行的行号的编辑控件。 行号是从零开始;值为 0 指定第一行。 单行编辑控件将忽略此参数。
 
 *lpszBuffer*<br/>
-指向用于接收缓冲区的行的副本。 缓冲区的第一个单词必须指定的最大可将复制到缓冲区的字符数。
+指向用于接收缓冲区的行的副本。 缓冲区的第一个单词必须指定 TCHARs，可复制到缓冲区的最大数目。
 
 *nMaxLength*<br/>
-指定的最大可将复制到缓冲区的字节数。 `GetLine` 中的第一个单词放入此值*lpszBuffer*之前 Windows 在调用。
+指定的最大 TCHAR 可以复制到缓冲区的字符数。 `GetLine` 中的第一个单词放入此值*lpszBuffer*之前 Windows 在调用。
 
 ### <a name="return-value"></a>返回值
 
-实际复制的字节数。 返回值为 0，如果指定的行号，则*nIndex*大于编辑控件中的行数。
+实际复制的字符数。 返回值为 0，如果指定的行号，则*nIndex*大于编辑控件中的行数。
 
 ### <a name="remarks"></a>备注
 
@@ -800,7 +800,7 @@ void LimitText(int nChars = 0);
 ### <a name="parameters"></a>参数
 
 *nChars*<br/>
-指定的用户可以输入的文本的长度 （以字节为单位）。 如果此参数为 0，则将文本长度设置为 UINT_MAX 字节。 这是默认行为。
+指定用户可以输入的文本的长度 （以 TCHARs)。 如果此参数为 0，则将文本长度设置为 UINT_MAX 字节。 这是默认行为。
 
 ### <a name="remarks"></a>备注
 
@@ -1449,8 +1449,8 @@ BOOL Undo();
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 CALCDRIV](../../visual-cpp-samples.md)<br/>
-[MFC 示例 CMNCTRL2](../../visual-cpp-samples.md)<br/>
+[MFC 示例 CALCDRIV](../../overview/visual-cpp-samples.md)<br/>
+[MFC 示例 CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CWnd 类](cwnd-class.md)<br/>

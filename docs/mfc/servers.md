@@ -11,11 +11,11 @@ helpviewer_keywords:
 - server applications [MFC]
 ms.assetid: e45172e8-eae3-400a-8139-0fa009a42fdc
 ms.openlocfilehash: 7b1eb0df439bcfde3aa295f23a90291e865df3a9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62307830"
 ---
 # <a name="servers"></a>服务器
 
@@ -47,7 +47,7 @@ ms.locfileid: "57290791"
 
 - [服务器：实现服务器文档](../mfc/servers-implementing-server-documents.md)
 
-- [服务器：实现就地框架 Windows](../mfc/servers-implementing-in-place-frame-windows.md)
+- [服务器：实现就地框架窗口](../mfc/servers-implementing-in-place-frame-windows.md)
 
 - [服务器：服务器项](../mfc/servers-server-items.md)
 
@@ -57,7 +57,7 @@ ms.locfileid: "57290791"
 
 [OLE](../mfc/ole-in-mfc.md)<br/>
 [容器](../mfc/containers.md)<br/>
-[容器：高级的功能](../mfc/containers-advanced-features.md)<br/>
+[容器：高级功能](../mfc/containers-advanced-features.md)<br/>
 [菜单和资源 (OLE)](../mfc/menus-and-resources-ole.md)<br/>
 [注册](../mfc/registration.md)<br/>
 [自动化服务器](../mfc/automation-servers.md)

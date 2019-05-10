@@ -15,11 +15,11 @@ helpviewer_keywords:
 - views [MFC], accessing document data from
 ms.assetid: 4e7f65dc-b166-45d8-bcd5-9bb0d399b946
 ms.openlocfilehash: 51f963acf5aacdfe4050a076d3bb0e651a92d021
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392968"
 ---
 # <a name="a-portrait-of-the-documentview-architecture"></a>文档/视图结构的纵览
 
@@ -27,7 +27,7 @@ ms.locfileid: "57298862"
 
 ## <a name="gaining-access-to-document-data-from-the-view"></a>获取从视图访问文档数据的权限
 
-该视图访问其文档的数据使用[GetDocument](../mfc/reference/cview-class.md#getdocument)函数，它返回一个指针，到文档中，或通过使视图类 c + +`friend`的文档类。 视图随后会在准备好绘制或以其他方式操作数据时使用其访问权限获取数据。
+该视图访问其文档的数据使用[GetDocument](../mfc/reference/cview-class.md#getdocument)函数，它将指针返回到文档中，或通过使视图类C++`friend`的文档类。 视图随后会在准备好绘制或以其他方式操作数据时使用其访问权限获取数据。
 
 例如，从该视图的[OnDraw](../mfc/reference/cview-class.md#ondraw)成员函数，该视图使用`GetDocument`获取文档指针。 然后，它使用该指针访问文档中的 `CString` 数据成员。 视图将字符串传递到 `TextOut` 函数。 若要查看此示例中的代码，请参阅[视图中绘制](../mfc/drawing-in-a-view.md)。
 

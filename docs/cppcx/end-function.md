@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - end Function
 ms.assetid: fb837bff-fc76-4bae-9096-facf0e03041c
-ms.openlocfilehash: 83e575ae29ca083642e1cf6296d6ffc8a989c316
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c46c601be2b2ed78cf79641a7fcf5324e615a771
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62375803"
 ---
 # <a name="end-function"></a>end 函数
 
@@ -67,4 +67,4 @@ template <typename T>
 
 ## <a name="see-also"></a>请参阅
 
-[Windows::Foundation::Collections Namespace](../cppcx/windows-foundation-collections-namespace-c-cx.md)
+[Windows::Foundation::Collections 命名空间](../cppcx/windows-foundation-collections-namespace-c-cx.md)

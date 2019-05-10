@@ -9,12 +9,12 @@ helpviewer_keywords:
 - __asm keyword [C++], vs. asm blocks
 - __asm keyword [C++]
 ms.assetid: 77ff3bc9-a492-4b5e-85e1-fa4e414e79cd
-ms.openlocfilehash: 6b94bf73e66550d0245ef1f55c17d6676e3b4356
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 43c7ae02e465ce8de2871d78e7ba604221aa7426
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591277"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65445902"
 ---
 # <a name="asm"></a>__asm
 
@@ -28,12 +28,12 @@ ms.locfileid: "50591277"
 ## <a name="grammar"></a>语法
 
 *asm 块*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__asm** *程序集指令* **;**<sub>选择</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__asm {** *程序集指令列表* **}** **;**<sub>选择</sub>
+&nbsp;&nbsp;&nbsp;&nbsp;**__asm** *assembly-instruction* **;**<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__asm {** *assembly-instruction-list* **}** **;**<sub>opt</sub>
 
 *程序集指令列表*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*程序集指令* **;**<sub>选择</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*程序集指令* **;***程序集指令列表* **;**<sub>选择</sub>
+&nbsp;&nbsp;&nbsp;&nbsp;*assembly-instruction* **;**<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*assembly-instruction* **;** *assembly-instruction-list* **;**<sub>opt</sub>
 
 ## <a name="remarks"></a>备注
 
@@ -41,7 +41,7 @@ ms.locfileid: "50591277"
 
 由于 `__asm` 关键字是语句分隔符，因此您可以将程序集指令放在同一行中。
 
-在 Visual C++ 2005 之前，指令
+Visual Studio 2005 中，该指令之前
 
 ```cpp
 __asm int 3

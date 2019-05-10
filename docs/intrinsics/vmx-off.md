@@ -7,12 +7,12 @@ helpviewer_keywords:
 - VMXOFF instruction
 - __vmx_off intrinsic
 ms.assetid: 78a32d46-9291-406c-b982-a550855aff18
-ms.openlocfilehash: 24f57195b60a788c0189a295fa7b6e4818a93d83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a01752bd510f9aa8cb159c23e691c9d244145e2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62390069"
 ---
 # <a name="vmxoff"></a>__vmx_off
 

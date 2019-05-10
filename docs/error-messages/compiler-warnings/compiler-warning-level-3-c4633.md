@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4633
 ms.assetid: 6d76f268-ba8c-448b-8e83-b903a18b583b
-ms.openlocfilehash: f1a4af399859c28f13432a344ae3dd921f9e1696
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 039489a804bb5d2bd17186b22bcfb8bea644c377
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62401730"
 ---
 # <a name="compiler-warning-level-3-c4633"></a>编译器警告（等级 3）C4633
 
 XML 文档注释目标： 错误： 原因
 
-名称传递给[ \<param >](../../ide/param-visual-cpp.md)编译器找不到标记。
+名称传递给[ \<param >](../../build/reference/param-visual-cpp.md)编译器找不到标记。
 
 下面的示例生成 C4633:
 

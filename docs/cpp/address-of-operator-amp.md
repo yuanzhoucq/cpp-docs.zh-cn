@@ -9,11 +9,11 @@ helpviewer_keywords:
 - '& operator [C++], address-of operator'
 ms.assetid: 2828221a-15f6-4acc-87fe-25e34feebb88
 ms.openlocfilehash: a03a6100c372e059bd9ef2ddde0558da307923dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385019"
 ---
 # <a name="address-of-operator-amp"></a>Address-of 运算符： &amp;
 
@@ -72,13 +72,13 @@ int main() {
 }
 ```
 
-## <a name="output"></a>输出
+## <a name="output"></a>Output
 
 ```Output
 &d equals &rd
 ```
 
-以下示例使用 address-of 运算符将指针参数传递给函数：
+以下示例使用 address-of 运算符将指针自变量传递给函数：
 
 ```cpp
 // expre_Address_Of_Operator3.cpp
@@ -99,7 +99,7 @@ int main() {
 }
 ```
 
-## <a name="output"></a>输出
+## <a name="output"></a>Output
 
 ```Output
 25

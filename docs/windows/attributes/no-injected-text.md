@@ -1,17 +1,17 @@
 ---
-title: no_injected_text （c + + COM 属性）
+title: no_injected_text (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.no_injected_text
 helpviewer_keywords:
 - no_injected_text attribute
 ms.assetid: 5256f808-e41e-4f4a-9ea5-e447919f5696
-ms.openlocfilehash: af4bb4b07439c0a5dacfa0d4956db564d2dccefe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 354643020e704a87daa2e56e923b6a0a704bf0b5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409286"
 ---
 # <a name="noinjectedtext"></a>no_injected_text
 
@@ -25,12 +25,12 @@ ms.locfileid: "50618112"
 
 ### <a name="parameters"></a>参数
 
-*一个布尔值*<br/>
+*boolean*<br/>
 （可选）**，则返回 true**如果你想注入，没有代码**false**若要允许代码注入。 **true**是默认值。
 
 ## <a name="remarks"></a>备注
 
-最常见用法**no_injected_text** c + + 属性是通过[/Fx](../../build/reference/fx-merge-injected-code.md)编译器选项，将插入**no_injected_text**属性拖动到.mrg 文件。
+最常见用法**no_injected_text** C++属性是由[/Fx](../../build/reference/fx-merge-injected-code.md)编译器选项，将插入**no_injected_text**属性拖动到.mrg 文件。
 
 ## <a name="requirements"></a>要求
 
@@ -40,8 +40,8 @@ ms.locfileid: "50618112"
 |-|-|
 |**适用对象**|任何位置|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

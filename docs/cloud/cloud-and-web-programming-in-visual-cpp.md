@@ -2,12 +2,12 @@
 title: Visual C++ 中的云和 Web 编程
 ms.date: 11/04/2016
 ms.assetid: b63611f1-9723-44d0-ba7f-c3ebef341313
-ms.openlocfilehash: ec5999a90701c427a3b7166803ee79a4a5cd19b2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 33431a8f8660af683ed2e39e10811c22fe2f4fcc
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385266"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Visual C++ 中的云和 Web 编程
 
@@ -17,11 +17,11 @@ C++ 中有多种选项可使你连接到 Web 和云。
 
 - [Microsoft Azure 移动服务](http://www.windowsazure.com/develop/mobile/)
 
-  提供的本机 Api，可以使用通用 Windows 平台 (UWP) 应用或 Windows 桌面应用中连接到 Windows Azure 移动服务。 虽然该网站上的大部分示例采用 C# 编写，但也可以使用 C++。 有关详细信息，请参阅[快速入门：添加移动服务使用 c + +](https://msdn.microsoft.com/library/windows/apps/dn263181.aspx)。
+  提供的本机 Api，可以使用通用 Windows 平台 (UWP) 应用或 Windows 桌面应用中连接到 Windows Azure 移动服务。 虽然该网站上的大部分示例采用 C# 编写，但也可以使用 C++。 有关详细信息，请参阅[快速入门：添加移动服务使用C++ ](https://msdn.microsoft.com/library/windows/apps/dn263181.aspx)。
 
-- [C + + 的 Microsoft Azure 存储客户端库](https://blogs.msdn.microsoft.com/windowsazurestorage/2015/04/29/microsoft-azure-storage-client-library-for-c-v1-0-0-general-availability/)
+- [用于 Microsoft Azure 存储客户端库C++](https://blogs.msdn.microsoft.com/windowsazurestorage/2015/04/29/microsoft-azure-storage-client-library-for-c-v1-0-0-general-availability/)
 
-  用于 c + + 的 Azure 存储客户端库提供全面的 API 使用 Azure 存储，包括但不是限于以下功能：
+  用于 Azure 存储客户端库C++提供全面的 API 使用 Azure 存储，包括但不是限于以下功能：
 
   - 创建、 读取、 删除和列出 blob 容器、 表和队列。
   - 创建、 读取、 删除、 列表和复制 blob 加上读取和写入 blob 范围。
@@ -58,5 +58,5 @@ C++ 中有多种选项可使你连接到 Web 和云。
 
 ## <a name="see-also"></a>请参阅
 
-[Visual C++](../visual-cpp-in-visual-studio.md) <br/>
+[Visual C++](../overview/visual-cpp-in-visual-studio.md) <br/>
 [网络和 web 服务](/windows/uwp/networking/)

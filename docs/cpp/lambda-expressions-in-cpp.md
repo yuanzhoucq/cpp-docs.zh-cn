@@ -1,17 +1,17 @@
 ---
 title: C++ 中的 Lambda 表达式
-ms.date: 11/19/2018
+ms.date: 05/07/2019
 helpviewer_keywords:
 - lambda expressions [C++]
 - lambda expressions [C++], overview
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
-ms.openlocfilehash: 9ebe4fec06996e908c619b6ac14af098b1c07a01
-ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
-ms.translationtype: MT
+ms.openlocfilehash: c7543b3558da88b41102fa7b790bb9d9f3f18463
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53978304"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222385"
 ---
 # <a name="lambda-expressions-in-c"></a>C++ 中的 Lambda 表达式
 
@@ -147,7 +147,7 @@ auto y = [] (auto first, auto second)
 };
 ```
 
-lambda 表达式可以将另一个 lambda 表达式作为其自变量。 详细信息，请参阅"高阶 Lambda 表达式"主题中[Lambda 表达式的示例](../cpp/examples-of-lambda-expressions.md)。
+Lambda 表达式可以将另一个 Lambda 表达式作为其自变量。 详细信息，请参阅"高阶 Lambda 表达式"主题中[Lambda 表达式的示例](../cpp/examples-of-lambda-expressions.md)。
 
 参数列表是可选的因为如果不执行操作将参数传递到 lambda 表达式和 lambda 声明符不包含，则可以省略空括号*异常规范*， *尾随返回类型*，或**可变**。
 
@@ -157,7 +157,7 @@ lambda 表达式可以将另一个 lambda 表达式作为其自变量。 详细�
 
 ### <a name="exception-specification"></a>异常规范
 
-你可以使用 `noexcept` 异常规范来指示 lambda 表达式不会引发任何异常。 如与普通函数，Visual C++ 编译器将生成警告[C4297](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md)如果 lambda 表达式声明`noexcept`异常规范且 lambda 体引发异常，如下所示：
+你可以使用 `noexcept` 异常规范来指示 lambda 表达式不会引发任何异常。 与普通函数，Microsoft 使用C++编译器将生成警告[C4297](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md)如果 lambda 表达式声明`noexcept`异常规范且 lambda 体引发异常，如下所示：
 
 ```cpp
 // throw_lambda_expression.cpp

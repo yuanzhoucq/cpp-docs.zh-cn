@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Web browsers
 - Web applications [MFC], creating
 ms.assetid: 257f8c03-33c3-428c-832e-0b70aff6168d
-ms.openlocfilehash: 207a6e162da6bc14e27c575ac163b160ab8e1ac1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 12df36188bd858f73ff4834236a19583023e5f93
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372226"
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>创建 Web 浏览器样式的 MFC 应用程序
 
@@ -39,7 +39,7 @@ WebBrowser 控件支持的 Web 浏览通过超链接和统一资源定位器 (UR
 
 因为`CHtmlView`只需实现 Microsoft Web 浏览器控件，它的支持，用于打印不与其他值一样[CView](../../mfc/reference/cview-class.md)-派生的类。 相反，web 浏览器控件实现打印机用户界面和打印。 因此， `CHtmlView` does 不支持打印预览，并在 framework 不提供其他打印支持功能： 例如， [CView::OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting)， [CView::OnBeginPrinting](../../mfc/reference/cview-class.md#onbeginprinting)，并[CView::OnEndPrinting](../../mfc/reference/cview-class.md#onendprinting)，这是其他 MFC 应用程序中可用。
 
-`CHtmlView` 充当 Web 浏览器控件，这将使你的应用程序到 Web 或 HTML 页的视图的包装器。 该向导创建的重写[OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate)在视图类中，提供 Microsoft Visual c + + 网站上的导航链接的函数：
+`CHtmlView` 充当 Web 浏览器控件，这将使你的应用程序到 Web 或 HTML 页的视图的包装器。 该向导创建的重写[OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate)函数在视图类中，向 Microsoft Visual 提供导航链接C++网站：
 
 ```cpp
 void CWebView::OnInitialUpdate()
@@ -71,6 +71,7 @@ void CWebView::OnInitialUpdate()
 
 [MFC 示例 MFCIE](https://github.com/Microsoft/VCSamples)<br/>
 [MFC 应用程序向导](../../mfc/reference/mfc-application-wizard.md)<br/>
-[使用项目属性](../../ide/working-with-project-properties.md)<br/>
-[属性页](../../ide/property-pages-visual-cpp.md)<br/>
-[使用项目属性](../../ide/working-with-project-properties.md)
+[设置编译器和生成属性](../../build/working-with-project-properties.md)<br/>
+[属性页](../../build/reference/property-pages-visual-cpp.md)<br/>
+[设置编译器和生成属性](../../build/working-with-project-properties.md)
+

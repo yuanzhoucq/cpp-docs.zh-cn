@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, code_seg
 - code_seg pragma
 ms.assetid: bf4faac1-a511-46a6-8d9e-456851d97d56
-ms.openlocfilehash: 80edcb709073021ccf024aaf14c9a914bd8d8939
-ms.sourcegitcommit: 31a2a9845f5e1d35ab054906d8cdc6582a5220bd
+ms.openlocfilehash: e566fb01bf70b343b75254a10466bdda2bc7ce1b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51597698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403498"
 ---
 # <a name="codeseg"></a>code_seg
 指定 .obj 文件中存储函数的文本段。
@@ -37,11 +37,11 @@ ms.locfileid: "51597698"
 
 *标识符*使多个记录将只用一个**pop**命令。
 
-"*段名称*"<br/>
+"*segment-name*"<br/>
 （可选）段的名称。 与一起使用时**pop**，在堆栈中弹出和*段名称*会成为活动文本段名称。
 
-"*段类*"<br/>
-（可选）被忽略，但包含与早于 2.0 版的 c + + 版本的兼容性。
+"*segment-class*"<br/>
+（可选）被忽略，但包含的兼容版本的C++早于 2.0 版。
 
 ## <a name="remarks"></a>备注
 

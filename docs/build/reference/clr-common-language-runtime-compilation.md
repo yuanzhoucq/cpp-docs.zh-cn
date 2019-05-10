@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Managed Extensions for C++, compiling
 - common language runtime, /clr compiler option
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
-ms.openlocfilehash: 5a908fc49776eaca68d9a79fb679b759155853d9
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
-ms.translationtype: MT
+ms.openlocfilehash: ea4a878afea4453796277486da88b85e7f74883c
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418849"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446520"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr（公共语言运行时编译）
 
@@ -47,17 +47,17 @@ ms.locfileid: "57418849"
 
 - **noAssembly**
 
-   **已弃用 /clr:noAssembly**。 请改用 [/LN (Create MSIL Module)](../../build/reference/ln-create-msil-module.md) 。
+   **已弃用 /clr:noAssembly**。 请改用 [/LN (Create MSIL Module)](ln-create-msil-module.md) 。
 
    指定不应将程序集清单插入输出文件中。 默认情况下， **noAssembly** 选项是无效的。
 
-   清单中不具有程序集元数据的托管程序称为 *“模块”*。 **noAssembly** 选项只能用于生成模块。 如果使用 [/c](../../build/reference/c-compile-without-linking.md) 和 **/clr:noAssembly**进行编译，请在创建模块的链接器阶段指定 [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md) 选项。
+   清单中不具有程序集元数据的托管程序称为 *“模块”*。 **noAssembly** 选项只能用于生成模块。 如果使用 [/c](c-compile-without-linking.md) 和 **/clr:noAssembly**进行编译，请在创建模块的链接器阶段指定 [/NOASSEMBLY](noassembly-create-a-msil-module.md) 选项。
 
-   在低于 Visual C++ 2005 的版本中， **/clr:noAssembly** 需要 **/LD**。 现在，指定 **/LD** 时即暗含 **/LD**。
+   在 Visual Studio 2005 之前, **/clr:noAssembly**必需 **/LD**。 现在，指定 **/LD** 时即暗含 **/LD**。
 
 - **initialAppDomain**
 
-   可以将 Visual c + + 应用程序在 CLR 版本 1 上运行。  使用 **initialAppDomain** 编译的应用程序不应由使用 ASP.NET 的应用程序使用，因为它在 CLR 版本 1 中不受支持 。
+   使视觉对象C++的 CLR 版本 1 上运行应用程序。  使用 **initialAppDomain** 编译的应用程序不应由使用 ASP.NET 的应用程序使用，因为它在 CLR 版本 1 中不受支持 。
 
 - **nostdlib**
 
@@ -65,27 +65,27 @@ ms.locfileid: "57418849"
 
 ## <a name="remarks"></a>备注
 
-托管代码是可以由 CLR 检查和管理的代码。 托管代码可以访问托管对象。 有关详细信息，请参阅 [/clr Restrictions](../../build/reference/clr-restrictions.md)。
+托管代码是可以由 CLR 检查和管理的代码。 托管代码可以访问托管对象。 有关详细信息，请参阅 [/clr Restrictions](clr-restrictions.md)。
 
-有关如何开发定义和使用托管类型的应用程序的信息，请参阅 [Component Extensions for Runtime Platforms](../../windows/component-extensions-for-runtime-platforms.md)。
+有关如何开发定义和使用托管类型的应用程序的信息，请参阅 [Component Extensions for Runtime Platforms](../../extensions/component-extensions-for-runtime-platforms.md)。
 
 使用 **/clr** 编译的应用程序可以包含也可以不包含托管数据。
 
-若要托管的应用程序上启用调试，请参阅[/ASSEMBLYDEBUG (添加 DebuggableAttribute)](../../build/reference/assemblydebug-add-debuggableattribute.md)。
+若要托管的应用程序上启用调试，请参阅[/ASSEMBLYDEBUG (添加 DebuggableAttribute)](assemblydebug-add-debuggableattribute.md)。
 
-只有 CLR 类型会在垃圾回收堆上实例化。 有关详细信息，请参阅[类和结构](../../windows/classes-and-structs-cpp-component-extensions.md)。 若要将函数编译为本机代码，请使用 `unmanaged` 杂注。 有关详细信息，请参阅[managed、 unmanaged](../../preprocessor/managed-unmanaged.md)。
+只有 CLR 类型会在垃圾回收堆上实例化。 有关详细信息，请参阅[类和结构](../../extensions/classes-and-structs-cpp-component-extensions.md)。 若要将函数编译为本机代码，请使用 `unmanaged` 杂注。 有关详细信息，请参阅[managed、 unmanaged](../../preprocessor/managed-unmanaged.md)。
 
-默认情况下， **/clr** 是无效的。 当 **/clr** 有效时， **/MD** 也有效。 有关详细信息，请参阅 [/MD、/MT、/LD（使用运行时库）](../../build/reference/md-mt-ld-use-run-time-library.md)。 **/MD** 确保从标准头 (.h) 文件中选择动态链接的多线程版本运行时例程。 托管编程必须进行多线程处理，因为 CLR 垃圾回收器将在辅助线程中运行终结器。
+默认情况下， **/clr** 是无效的。 当 **/clr** 有效时， **/MD** 也有效。 有关详细信息，请参阅 [/MD、/MT、/LD（使用运行时库）](md-mt-ld-use-run-time-library.md)。 **/MD** 确保从标准头 (.h) 文件中选择动态链接的多线程版本运行时例程。 托管编程必须进行多线程处理，因为 CLR 垃圾回收器将在辅助线程中运行终结器。
 
-如果通过使用编译 **/c**，可以指定与生成的输出文件的 CLR 类型[/CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md)。
+如果通过使用编译 **/c**，可以指定与生成的输出文件的 CLR 类型[/CLRIMAGETYPE](clrimagetype-specify-type-of-clr-image.md)。
 
-**/clr** 暗含 **/EHa**，且 **/clr** 不支持任何其他 **/EH**选项。 有关详细信息，请参阅 [/EH（异常处理模型）](../../build/reference/eh-exception-handling-model.md)。
+**/clr** 暗含 **/EHa**，且 **/clr** 不支持任何其他 **/EH**选项。 有关详细信息，请参阅 [/EH（异常处理模型）](eh-exception-handling-model.md)。
 
-有关如何确定文件的 CLR 映像类型的信息，请参阅 [/CLRHEADER](../../build/reference/clrheader.md)。
+有关如何确定文件的 CLR 映像类型的信息，请参阅 [/CLRHEADER](clrheader.md)。
 
 传递给链接器给定调用的所有模块都必须使用相同的运行时编译器选项（**/MD** 或 **/LD**）进行编译。
 
-使用 [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md) 链接器选项以在程序集中嵌入资源。 [/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md)、 [/KEYCONTAINER](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)和 [/KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md) 链接器选项也允许自定义程序集的创建方式。
+使用 [/ASSEMBLYRESOURCE](assemblyresource-embed-a-managed-resource.md) 链接器选项以在程序集中嵌入资源。 [/DELAYSIGN](delaysign-partially-sign-an-assembly.md)、 [/KEYCONTAINER](keycontainer-specify-a-key-container-to-sign-an-assembly.md)和 [/KEYFILE](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md) 链接器选项也允许自定义程序集的创建方式。
 
 使用 **/clr** 时， `_MANAGED` 符号定义为 1。 有关更多信息，请参见 [Predefined Macros](../../preprocessor/predefined-macros.md)。
 
@@ -105,5 +105,5 @@ class {} x;
 
 ## <a name="see-also"></a>请参阅
 
-[编译器选项](../../build/reference/compiler-options.md)<br/>
-[设置编译器选项](../../build/reference/setting-compiler-options.md)
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)

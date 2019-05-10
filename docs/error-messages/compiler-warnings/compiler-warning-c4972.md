@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4972
 ms.assetid: d18e8e65-b2ef-4d75-a207-fbd0c17c9060
-ms.openlocfilehash: dcf08f26809c7c61e3e00c41c555416c95f4a0e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c58258298fb91d04014e719732135a1f33f13b6
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62280693"
 ---
 # <a name="compiler-warning-c4972"></a>编译器警告 C4972
 
@@ -19,7 +19,7 @@ ms.locfileid: "50598826"
 
 取消引用值类型的句柄（也称为取消装箱），然后为其赋值，是不可验证的。
 
-有关更多信息，请参见 [装箱](../../windows/boxing-cpp-component-extensions.md)中定义的接口的私有 C++ 特定实现。
+有关更多信息，请参见 [装箱](../../extensions/boxing-cpp-component-extensions.md)中定义的接口的私有 C++ 特定实现。
 
 ## <a name="example"></a>示例
 

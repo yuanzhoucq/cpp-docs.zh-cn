@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - user-defined conversions [C++]
 ms.assetid: 8010fd59-2775-4e9a-a6ed-58055032d66f
-ms.openlocfilehash: 047b2cc0ebc65d29f5f25d1bdf50b68da58c75d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f168582e56e77f1ec848928b7ffd36879ba341a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384525"
 ---
 # <a name="user-defined-conversions-ccli"></a>用户定义的转换 (C++/CLI)
 
@@ -21,7 +21,7 @@ ms.locfileid: "50553720"
 
 可以使用本机类的构造函数将转换为本机类的引用或值类型。
 
-有关转换的详细信息，请参阅[装箱](../windows/boxing-cpp-component-extensions.md)并[标准转换](../cpp/standard-conversions.md)。
+有关转换的详细信息，请参阅[装箱](../extensions/boxing-cpp-component-extensions.md)并[标准转换](../cpp/standard-conversions.md)。
 
 ```
 // mcpp_User_Defined_Conversions.cpp
@@ -80,7 +80,7 @@ in N::N
 
 转换自运算符从一些其他类的对象创建在其中定义了运算符的类的对象。
 
-标准 c + + 不支持转换自运算符;标准 c + + 使用构造函数用于此目的。 但是，使用 CLR 类型时，Visual c + + 来调用转换自运算符提供语法支持。
+标准C++不支持转换自运算符;标准C++使用构造函数用于此目的。 但是，使用 CLR 类型，视觉对象时C++来调用转换自运算符提供语法支持。
 
 若要也与其他符合 cls 的语言进行互操作，可能希望与相应的转换自运算符包装给定类的每个用户定义一元构造函数。
 
@@ -321,4 +321,4 @@ int main() {
 
 ## <a name="see-also"></a>请参阅
 
-[类和结构](../windows/classes-and-structs-cpp-component-extensions.md)
+[类和结构](../extensions/classes-and-structs-cpp-component-extensions.md)

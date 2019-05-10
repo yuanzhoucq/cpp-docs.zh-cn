@@ -15,11 +15,11 @@ helpviewer_keywords:
 - .odl files
 ms.assetid: d405bc47-118d-4786-b371-920d035b2047
 ms.openlocfilehash: 32179f3913b52ca46f9ea7314b9957f4f4970713
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62374189"
 ---
 # <a name="automation-clients-using-type-libraries"></a>自动化客户端：使用类型库
 
@@ -29,15 +29,15 @@ ms.locfileid: "57282937"
 
 有关的信息[MkTypLib](/windows/desktop/Midl/differences-between-midl-and-mktyplib)，请参阅 Windows SDK。
 
-Visual c + + 可以读取类型库文件和创建调度类派生自[COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md)。 该类的对象具有属性和复制这些服务器对象的操作。 你的应用程序调用此对象的属性和操作，并继承其功能`COleDispatchDriver`这些将呼叫路由到 OLE 系统，又将其路由到的服务器对象。
+VisualC++可以读取类型库文件并创建派生自的调度类[COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md)。 该类的对象具有属性和复制这些服务器对象的操作。 你的应用程序调用此对象的属性和操作，并继承其功能`COleDispatchDriver`这些将呼叫路由到 OLE 系统，又将其路由到的服务器对象。
 
-Visual c + + 自动维护此类型库文件，如果您选择要创建项目时包括自动化。 为每个生成的一部分，将使用 MkTypLib 构建.tlb 文件。
+VisualC++自动为您维护此类型库文件，如果您选择要创建项目时包括自动化。 为每个生成的一部分，将使用 MkTypLib 构建.tlb 文件。
 
 ### <a name="to-create-a-dispatch-class-from-a-type-library-tlb-file"></a>若要从类型库 (.tlb) 文件创建调度类
 
 1. 在类视图或解决方案资源管理器中，右键单击项目，然后单击**外**，然后单击**添加类**快捷菜单上。
 
-1. 在中**添加类**对话框中，选择**Visual c + + MFC**的左窗格中的文件夹。 选择**从类型库的 MFC 类**从右窗格中单击图标**打开**。
+1. 在中**添加类**对话框中，选择**Visual C++/MFC**左窗格中的文件夹。 选择**从类型库的 MFC 类**从右窗格中单击图标**打开**。
 
 1. 在中**从类型库向导添加类**对话框框中，选择从类型库**可用的类型库**下拉列表。 **接口**框将显示可用于所选的类型库的接口。
 

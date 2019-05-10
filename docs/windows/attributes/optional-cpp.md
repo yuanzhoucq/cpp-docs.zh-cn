@@ -1,17 +1,17 @@
 ---
-title: 可选 （c + + COM 属性）
+title: 可选 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.optional
 helpviewer_keywords:
 - optional attribute
 ms.assetid: 86656a66-8e11-4589-8e30-9b0f34eeed03
-ms.openlocfilehash: 440e605b1dfd0b24060965c5ea5dd55424701cf7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bc6422ff652cfaba5fa71285294b93c1f0e8990e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407583"
 ---
 # <a name="optional-c"></a>optional (C++)
 
@@ -25,7 +25,7 @@ ms.locfileid: "50590107"
 
 ## <a name="remarks"></a>备注
 
-**可选**c + + 属性具有相同的功能[可选](/windows/desktop/Midl/optional)MIDL 特性。
+**可选**C++属性具有相同的功能[可选](/windows/desktop/Midl/optional)MIDL 特性。
 
 ## <a name="example"></a>示例
 
@@ -52,8 +52,8 @@ __interface IFireTabCtrl : IDispatch
 |-|-|
 |**适用对象**|接口参数|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

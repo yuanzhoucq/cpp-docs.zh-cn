@@ -1,17 +1,17 @@
 ---
-title: rdx （c + + COM 属性）
+title: rdx (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.rdx
 helpviewer_keywords:
 - rdx attribute
 ms.assetid: ff8e4312-c1ad-4934-bdaa-86f54409651e
-ms.openlocfilehash: 0b21e94ce3c54c0234dd7883aac3ef5cadbbc009
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2790c3de01d21242daee73fc442ad22d88739355
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407492"
 ---
 # <a name="rdx"></a>rdx
 
@@ -36,7 +36,7 @@ ms.locfileid: "50677872"
 
 ## <a name="remarks"></a>备注
 
-**Rdx** c + + 属性创建或修改现有的注册表项为 COM 组件。 该属性将 BEGIN_RDX_MAP 宏添加到实现的目标成员的对象。 `RegistryDataExchange`由于 BEGIN_RDX_MAP 宏，注入的函数可用于在注册表和数据成员之间传输数据
+**Rdx** C++属性创建或修改现有的注册表项为 COM 组件。 该属性将 BEGIN_RDX_MAP 宏添加到实现的目标成员的对象。 `RegistryDataExchange`由于 BEGIN_RDX_MAP 宏，注入的函数可用于在注册表和数据成员之间传输数据
 
 可以结合使用此特性[组件类](coclass.md)， [progid](progid.md)，或[vi_progid](vi-progid.md)属性或隐含其中之一的其他属性。
 
@@ -48,8 +48,8 @@ ms.locfileid: "50677872"
 |-|-|
 |**适用对象**|**类**或**结构**成员|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

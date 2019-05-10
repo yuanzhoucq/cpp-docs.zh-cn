@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3612
 ms.assetid: aa6e3a2b-4afa-481c-98c1-1b6d1f82f869
-ms.openlocfilehash: a6084632ac0a84cc058ea73eb3c2b632208792eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ab18381d3f263e3207662e1667ac5c835983412f
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475928"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64344491"
 ---
 # <a name="compiler-error-c3612"></a>编译器错误 C3612
 
@@ -19,7 +19,7 @@ type： 密封的类不能是抽象
 
 通过使用定义的类型`value`密封的默认情况下，和一个类是抽象的除非它实现了其基类的所有方法。 密封的抽象类既不是一个基类，也可以将它实例化。
 
-有关详细信息，请参阅[类和结构](../../windows/classes-and-structs-cpp-component-extensions.md)。
+有关详细信息，请参阅[类和结构](../../extensions/classes-and-structs-cpp-component-extensions.md)。
 
 ## <a name="example"></a>示例
 

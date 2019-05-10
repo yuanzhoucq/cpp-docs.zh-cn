@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pActiveWnd
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
-ms.openlocfilehash: 0e02f123580696519e59d828ec590456cbd2a81c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9f17561941d785e5eb7b5fd8c52ab452aa6369e7
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270120"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220418"
 ---
 # <a name="cwinthread-class"></a>CWinThread 类
 
@@ -126,7 +126,7 @@ class CWinThread : public CCmdTarget
 
 而不是调用`AfxBeginThread`，可以构造`CWinThread`-派生对象，然后调用`CreateThread`。 如果想要重用此两阶段构造方法非常有用`CWinThread`连续创建和终止的线程执行之间的对象。
 
-有关详细信息`CWinThread`，请参阅文章[使用 c + + 和 MFC 多线程处理](../../parallel/multithreading-with-cpp-and-mfc.md)，[多线程处理：创建用户界面线程](../../parallel/multithreading-creating-user-interface-threads.md)，[多线程处理：创建辅助线程](../../parallel/multithreading-creating-worker-threads.md)，和[多线程处理：如何使用同步类](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。
+有关详细信息`CWinThread`，请参阅文章[多线程处理与C++和 MFC](../../parallel/multithreading-with-cpp-and-mfc.md)，[多线程处理：创建用户界面线程](../../parallel/multithreading-creating-user-interface-threads.md)，[多线程处理：创建辅助线程](../../parallel/multithreading-creating-worker-threads.md)，和[多线程处理：如何使用同步类](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -311,8 +311,7 @@ BOOL m_bAutoDelete;
 
 `m_bAutoDelete`数据成员是类型 BOOL 的公共变量。
 
-
-  `m_bAutoDelete` 的值不影响关闭基础线程句柄的方式。 在销毁 `CWinThread` 对象时，始终关闭线程句柄。
+值`m_bAutoDelete`不会影响如何关闭基础线程句柄，但会影响关闭句柄的时间。 在销毁 `CWinThread` 对象时，始终关闭线程句柄。
 
 ##  <a name="m_hthread"></a>  CWinThread::m_hThread
 
@@ -324,7 +323,9 @@ HANDLE m_hThread;
 
 ### <a name="remarks"></a>备注
 
-`m_hThread`数据成员是公共类型的变量的句柄。 如果当前基础线程存在，才有效。
+`m_hThread`数据成员是公共类型的变量的句柄。 如果当前存在基础内核线程对象，并且尚未尚未关闭句柄，才有效。
+
+CWinThread 析构函数在调用 CloseHandle `m_hThread`。 如果[m_bAutoDelete](#m_bautodelete)是 TRUE 时的线程终止、 CWinThread 对象被销毁，这使任何指向 CWinThread 对象和其成员变量。 可能需要`m_hThread`成员来查看线程退出值，或者等待信号。 若要保留 CWinThread 对象并将其`m_hThread`线程执行期间和之后终止，成员设置`m_bAutoDelete`为 FALSE 之前允许线程执行，以继续。 否则为线程可能会终止、 销毁 CWinThread 对象，并关闭句柄，再尝试使用它。 如果使用此方法，您负责删除 CWinThread 对象。
 
 ##  <a name="m_nthreadid"></a>  CWinThread::m_nThreadID
 
@@ -336,7 +337,8 @@ DWORD m_nThreadID;
 
 ### <a name="remarks"></a>备注
 
-`m_nThreadID`数据成员是类型为 DWORD 的公共变量。 如果当前基础线程存在，才有效。
+`m_nThreadID`数据成员是类型为 DWORD 的公共变量。 如果当前存在于基础内核线程对象，才有效。
+另请参阅备注， [m_hThread](#m_hthread)生存期。
 
 ### <a name="example"></a>示例
 

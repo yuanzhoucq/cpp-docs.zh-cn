@@ -1,17 +1,17 @@
 ---
-title: 组件类 （c + + COM 属性）
+title: 组件类 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.coclass
 helpviewer_keywords:
 - coclass attribute
 ms.assetid: 42da6a10-3af9-4b43-9a1d-689d00b61eb3
-ms.openlocfilehash: 69f749dd6f8b2a8c42b4c75dd3790b9f7fbcf291
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1f99a2780ab4f451533a3e797e473f60680c6ab
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62148284"
 ---
 # <a name="coclass"></a>coclass
 
@@ -25,7 +25,7 @@ ms.locfileid: "50603081"
 
 ## <a name="remarks"></a>备注
 
-**组件类**c + + 属性置于生成的.idl 文件中组件类构造。
+**组件类**C++属性置于生成的.idl 文件中组件类构造。
 
 在定义组件类时，还可以指定[uuid](uuid-cpp-attributes.md)，[版本](version-cpp.md)，[线程](threading-cpp.md)， [vi_progid](vi-progid.md)，和[progid](progid.md)属性。 如果未指定其中的任意一个，它将生成。
 
@@ -133,8 +133,8 @@ public:
 |-|-|
 |**适用对象**|**类**，**结构**|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

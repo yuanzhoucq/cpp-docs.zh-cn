@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CDatabase [MFC], SetQueryTimeout
 - CDatabase [MFC], m_hdbc
 ms.assetid: bd0de70a-e3c3-4441-bcaa-bbf434426ca8
-ms.openlocfilehash: 0e523b2a145254cd9b7adf2b066605a679349f6c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ebc36d82af9bfe12ab30a86214e58610b5eaab95
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62253701"
 ---
 # <a name="cdatabase-class"></a>CDatabase 类
 
@@ -192,7 +192,7 @@ void Cancel();
 
 ### <a name="remarks"></a>备注
 
-请注意，MFC ODBC 类不能再使用异步处理;若要执行的异步操作，您必须直接调用 ODBC API 函数[SQLSetConnectOption](/previous-versions/windows/desktop/ms713564)。 有关详细信息，请参阅[异步执行](/previous-versions/windows/desktop/ms713563)Windows SDK 中。
+请注意，MFC ODBC 类不能再使用异步处理;若要执行异步操作，您必须直接调用 ODBC API 函数[SQLSetConnectOption](/sql/odbc/reference/syntax/sqlsetconnectoption-function)。 有关详细信息，请参阅[异步执行](/sql/odbc/reference/develop-app/asynchronous-execution)。
 
 ##  <a name="cantransact"></a>  CDatabase::CanTransact
 

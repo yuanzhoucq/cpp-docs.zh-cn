@@ -44,12 +44,12 @@ helpviewer_keywords:
 - _InterlockedExchange intrinsic
 - _InterlockedExchange8_nf
 ms.assetid: be2f232a-6301-462a-a92b-fcdeb8b0f209
-ms.openlocfilehash: ecf69b1e910dab9824131f26d8db1eb5615d6e18
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 3945b8a7516962531050e999e96bdef31b179bbb
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396738"
 ---
 # <a name="interlockedexchange-intrinsic-functions"></a>_InterlockedExchange 内部函数
 
@@ -156,7 +156,7 @@ __int64 _InterlockedExchange64_rel(
 
 ## <a name="requirements"></a>要求
 
-|内部函数|体系结构|标头|
+|内部函数|体系结构|Header|
 |---------------|------------------|------------|
 |`_InterlockedExchange`, `_InterlockedExchange8`, `_InterlockedExchange16`, `_InterlockedExchange64`|x86、 ARM、 x64|\<intrin.h>|
 |`_InterlockedExchange_acq`、`_InterlockedExchange_nf`、`_InterlockedExchange_rel`、`_InterlockedExchange8_acq`、`_InterlockedExchange8_nf`、`_InterlockedExchange8_rel`、`_InterlockedExchange16_acq`、`_InterlockedExchange16_nf`、`_InterlockedExchange16_rel`、`_InterlockedExchange64_acq`、`_InterlockedExchange64_nf`、`_InterlockedExchange64_rel`、|ARM|\<intrin.h>|
@@ -164,7 +164,7 @@ __int64 _InterlockedExchange64_rel(
 
 ## <a name="remarks"></a>备注
 
-`_InterlockedExchange` 提供了编译器内部函数支持 Win32 Windows SDK [InterlockedExchange](/windows/desktop/api/winbase/nf-winbase-interlockedexchange)函数。
+`_InterlockedExchange` 提供了编译器内部函数支持 Win32 Windows SDK [InterlockedExchange](/windows/desktop/api/winnt/nf-winnt-interlockedexchange)函数。
 
 `_InterlockedExchange` 存在几种变体，这些变体根据其涉及的数据类型和是否使用特定于处理器获取或发布语义而有所不同。
 

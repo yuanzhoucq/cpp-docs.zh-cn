@@ -1,5 +1,5 @@
 ---
-title: '#错误指令 （C/c + +）'
+title: '#错误指令 (C /C++)'
 ms.date: 11/04/2016
 f1_keywords:
 - '#error'
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - preprocessor, directives
 - error directive (#error directive)
 ms.assetid: d550a802-ff19-4347-9597-688935d23b2b
-ms.openlocfilehash: c83fc7ef8135ee0cba37a956df47bcab0f796007
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc229a8eae6938cba32787ecbec6a5aa6a17ab47
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383979"
 ---
 # <a name="error-directive-cc"></a>#error 指令 (C/C++)
 **#Error**指令在编译时发出用户指定的错误消息，然后终止编译。

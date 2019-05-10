@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorMenuButton [MFC], OnDraw
 - CMFCColorMenuButton [MFC], OnDrawOnCustomizeList
 ms.assetid: 42685704-e994-4f7b-9553-62283c27b754
-ms.openlocfilehash: 64d61cc9464ef0877baad33a8685cee1482f240d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5fccfbca9fe8c31070f3eb9f208c09cb3722b9b9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403719"
 ---
 # <a name="cmfccolormenubutton-class"></a>CMFCColorMenuButton 类
 
@@ -105,7 +105,7 @@ class CMFCColorMenuButton : public CMFCToolBarMenuButton
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何创建和使用中的各种方法配置颜色菜单按钮`CMFCColorMenuButton`类。 在示例中，`CPalette`对象是首次创建，然后用于构造的对象`CMFCColorMenuButton`类。 `CMFCColorMenuButton`对象然后配置通过启用其自动和其他按钮，并设置其颜色和列数。 此代码摘自[Word Pad 示例](../../visual-cpp-samples.md)。
+下面的示例演示如何创建和使用中的各种方法配置颜色菜单按钮`CMFCColorMenuButton`类。 在示例中，`CPalette`对象是首次创建，然后用于构造的对象`CMFCColorMenuButton`类。 `CMFCColorMenuButton`对象然后配置通过启用其自动和其他按钮，并设置其颜色和列数。 此代码摘自[Word Pad 示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_WordPad#5](../../mfc/reference/codesnippet/cpp/cmfccolormenubutton-class_1.h)]
 [!code-cpp[NVC_MFC_WordPad#6](../../mfc/reference/codesnippet/cpp/cmfccolormenubutton-class_2.cpp)]

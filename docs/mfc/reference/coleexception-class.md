@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COleException [MFC], Process
 - COleException [MFC], m_sc
 ms.assetid: 2571e9fe-26cc-42f0-9ad9-8ad5b4311ec1
-ms.openlocfilehash: 4b5dd2de2924b62dd76d7f16a494566849357de8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6874df550103abf727573d8e34b8adadd9643db8
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224778"
 ---
 # <a name="coleexception-class"></a>COleException 类
 
@@ -109,6 +109,6 @@ SCODE 的详细信息，请参阅[COM 错误代码的结构](/windows/desktop/co
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 CALCDRIV](../../visual-cpp-samples.md)<br/>
+[MFC 示例 CALCDRIV](../../overview/visual-cpp-samples.md)<br/>
 [CException 类](../../mfc/reference/cexception-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)

@@ -75,11 +75,11 @@ helpviewer_keywords:
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
 ms.openlocfilehash: b1a02d995594f5e079359151167ac970a3d1ab37
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348687"
 ---
 # <a name="cbutton-class"></a>CButton 类
 
@@ -321,7 +321,7 @@ int GetCheck() const;
 
 使用 BS_AUTOCHECKBOX、 BS_AUTORADIOBUTTON、 BS_AUTO3STATE、 BS_CHECKBOX、 BS_RADIOBUTTON，创建一个按钮控件的返回值或 BS_3STATE 样式是以下值之一：
 
-|值|含义|
+|“值”|含义|
 |-----------|-------------|
 |BST_UNCHECKED|按钮状态为未选中状态。|
 |BST_CHECKED|按钮状态进行检查。|
@@ -578,7 +578,7 @@ UINT GetState() const;
 
 一个位字段，包含指示按钮控件的当前状态的值的组合。 下表列出了可能的值。
 
-|按钮状态|值|描述|
+|按钮状态|“值”|描述|
 |------------------|-----------|-----------------|
 |BST_UNCHECKED|0x0000|初始状态。|
 |BST_CHECKED|0x0001|按钮控件处于选中状态。|
@@ -699,7 +699,7 @@ void SetCheck(int nCheck);
 *nCheck*<br/>
 指定的检查状态。 此参数可以是以下值之一：
 
-|值|含义|
+|“值”|含义|
 |-----------|-------------|
 |BST_UNCHECKED|按钮状态设置为未选中状态。|
 |BST_CHECKED|设置按钮的状态检查。|

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - COldToolBar class [MFC]
 ms.assetid: 3543257c-8547-43f0-a66a-ee641dc1cf89
 ms.openlocfilehash: bcfa11b2d7d7cd7426d0c75df71a4b0eb2d96ed6
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411378"
 ---
 # <a name="using-your-old-toolbars"></a>使用您的旧工具栏
 
-如果已使用以前版本的 Visual c + + 来创建自定义的工具栏，类的新实现[CToolBar](../mfc/reference/ctoolbar-class.md)可能导致问题。 因此您无需放弃您的旧工具栏来使用新的功能，以前的实现仍受支持。
+如果您使用过以前版本的视觉对象C++来创建自定义的工具栏，类的新实现[CToolBar](../mfc/reference/ctoolbar-class.md)可能导致问题。 因此您无需放弃您的旧工具栏来使用新的功能，以前的实现仍受支持。
 
 DOCKTOOL 示例不使用旧式工具栏，仅使用新式工具栏。
 

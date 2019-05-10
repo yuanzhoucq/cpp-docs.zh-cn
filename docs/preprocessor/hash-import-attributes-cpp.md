@@ -1,15 +1,15 @@
 ---
-title: '#导入特性 （c + +）'
+title: '#导入属性 (C++)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - '#import directive, attributes'
 ms.assetid: 2a5085e3-82ee-4f83-892b-0aa6cc13863b
-ms.openlocfilehash: 3cd1b259270ff8c76ac80ec66000f3c8177140fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 954dfec50db75c0e3d11f0924b0ee398cd211fe1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407700"
 ---
 # <a name="import-attributes-c"></a>#import 特性 (C++)
 提供指向与一起使用的属性`#import`指令。

@@ -37,11 +37,11 @@ helpviewer_keywords:
 - calculating absolute values
 ms.assetid: 60f789d1-4a1e-49f5-9e4e-0bdb277ea26a
 ms.openlocfilehash: 61aa0a48757a35708ffb85d2c0525bb4eac82d56
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341985"
 ---
 # <a name="abs-labs-llabs-abs64"></a>abs、labs、llabs、_abs64
 
@@ -75,9 +75,9 @@ float abs( float n );   // C++ only
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，可以调用的重载**abs**采用并返回**长**，**长****长**， **float**，**双**，和**长** **double**值。 这些重载在 \<cmath> 标头中进行定义。 在 C 程序中， **abs**始终采用并返回**int**。
+因为C++允许重载，可以调用的重载**abs**采用并返回**长**，**长****长**， **float**， **double**，并**长** **double**值。 这些重载在 \<cmath> 标头中进行定义。 在 C 程序中， **abs**始终采用并返回**int**。
 
-**特定于 Microsoft**： 可以使用任何整型表示的负整数的范围大于可使用该类型表示的正整数的范围，因为它是可以提供这些参数不能转换的函数。 如果自变量的绝对值无法由返回类型，表示**abs**函数返回参数值保持不变。 具体而言，`abs(INT_MIN)` 返回 `INT_MIN`、`labs(LONG_MIN)` 返回 `LONG_MIN`、`llabs(LLONG_MIN)` 返回 `LLONG_MIN`，`_abs64(_I64_MIN)` 返回 `_I64_MIN`。 这意味着**abs**函数不能用于保证正值。
+**特定于 Microsoft**:因为可使用任何整型类型表示的负整数的范围大于可使用该类型表示的正整数的范围，所以可以向这些不能被转换的函数提供参数。 如果自变量的绝对值无法由返回类型，表示**abs**函数返回参数值保持不变。 具体而言，`abs(INT_MIN)` 返回 `INT_MIN`、`labs(LONG_MIN)` 返回 `LONG_MIN`、`llabs(LLONG_MIN)` 返回 `LLONG_MIN`，`_abs64(_I64_MIN)` 返回 `_I64_MIN`。 这意味着**abs**函数不能用于保证正值。
 
 ## <a name="requirements"></a>要求
 
@@ -86,7 +86,7 @@ float abs( float n );   // C++ only
 |**abs**，**实验室**， **llabs**|\<math.h> 或 \<stdlib.h>|\<cmath>、\<cstdlib>、\<stdlib.h> 或 \<math.h>|
 |**_abs64**|\<stdlib.h>|\<cstdlib> 或 \<stdlib.h>|
 
-若要使用的重载的版本**abs** c + + 中必须包括\<cmath > 标头。
+若要使用的重载的版本**abs**中C++，则必须包括\<cmath > 标头。
 
 ## <a name="example"></a>示例
 

@@ -31,11 +31,11 @@ helpviewer_keywords:
 - CRecentDockSiteInfo [MFC], StoreDockInfo
 ms.assetid: 2dd14f95-d5a2-4461-a7a5-2c6c36a3a165
 ms.openlocfilehash: 4a522d4dc88e7d1937ffa5b859aec32615939f21
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372161"
 ---
 # <a name="crecentdocksiteinfo-class"></a>CRecentDockSiteInfo 类
 
@@ -75,8 +75,7 @@ class CRecentDockSiteInfo : public CObject
 
 ## <a name="remarks"></a>备注
 
-
-  `CRecentDockSiteInfo` 类是数据管理类。 它在 `CPane` 在停靠与浮动之间转换时跟踪其最近状态。 当用户双击浮动的可停靠窗格时，它会成为停靠状态。 双击停靠的窗格会使它恢复为以前的位置、大小和状态。 同样，当窗格重新停靠时，它会返回到以前的停靠位置。 通过此数据类可以实现此行为。 由于此类的成员存储停靠的窗格的状态信息，因此它们不应由应用程序直接修改。
+`CRecentDockSiteInfo` 类是数据管理类。 它在 `CPane` 在停靠与浮动之间转换时跟踪其最近状态。 当用户双击浮动的可停靠窗格时，它会成为停靠状态。 双击停靠的窗格会使它恢复为以前的位置、大小和状态。 同样，当窗格重新停靠时，它会返回到以前的停靠位置。 通过此数据类可以实现此行为。 由于此类的成员存储停靠的窗格的状态信息，因此它们不应由应用程序直接修改。
 
 每次创建窗格时会创建一个 `CRecentDockSiteInfo` 对象。 每个`CPane`对象具有一个成员变量[cpane:: M_recentdockinfo](../../mfc/reference/cpane-class.md#m_recentdockinfo)，用于存储此信息。
 

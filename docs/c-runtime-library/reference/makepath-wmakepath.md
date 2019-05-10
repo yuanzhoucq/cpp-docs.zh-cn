@@ -34,11 +34,11 @@ helpviewer_keywords:
 - tmakepath function
 ms.assetid: 5930b197-a7b8-46eb-8519-2841a58cd026
 ms.openlocfilehash: 073f8aba6936aa33dafcef7ed47f5286802a4948
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285694"
 ---
 # <a name="makepath-wmakepath"></a>_makepath、_wmakepath
 
@@ -68,7 +68,7 @@ void _wmakepath(
 *path*<br/>
 完整路径缓冲区。
 
-*驱动器*<br/>
+*drive*<br/>
 包含一个与所需的驱动器对应的字母（A、B 等）和可选的尾随冒号。 **_makepath**缺少时自动插入复合路径中的冒号。 如果*驱动器*是**NULL**或指向空字符串，无驱动器号出现在复合*路径*字符串。
 
 *dir*<br/>

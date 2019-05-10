@@ -1,19 +1,19 @@
 ---
 title: 如何：在通用 Windows 平台应用中使用现有 C++ 代码
-ms.date: 08/21/2018
+ms.date: 04/08/2019
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-ms.openlocfilehash: 55fb1f3fa89f192c83effb755966158394d2fbcf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3aeef205effe072a25fc0b3dabb9145245461d45
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528708"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59424191"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>如何：在通用 Windows 平台应用中使用现有 C++ 代码
 
-要在 UWP 环境中运行桌面程序，最简单的方法或许是使用桌面桥技术。 这包括 Desktop App Converter，它能将现有应用程序打包为 UWP 应用，而无需更改代码。 有关详细信息，请参阅[桌面桥](/windows/uwp/porting/desktop-to-uwp-root)。
+要在通用 Windows 平台 (UWP) 环境中运行桌面程序，最简单的方法或许是使用桌面桥技术。 这包括 Desktop App Converter，它能将现有应用程序打包为 UWP 应用，而无需更改代码。 有关详细信息，请参阅[桌面桥](/windows/uwp/porting/desktop-to-uwp-root)。
 
-本主题的剩余部分讨论如何将 C++ 库（DLL 和静态库）移植到通用 Windows 平台 (UWP)。 可能需要执行此操作，以便将核心 C++ 逻辑用于多个 UWP 应用。
+本主题的剩余部分讨论如何将 C++ 库（DLL 和静态库）移植到通用 Windows 平台。 可能需要执行此操作，以便将核心 C++ 逻辑用于多个 UWP 应用。
 
 UWP 应用在受保护的环境中运行，结果，很多可能危及平台安全的 Win32、COM 和 CRT API 调用都不被允许。 如果使用 `/ZW` 选项，则编译器可以检测此类调用并生成错误。 你可以使用应用程序上的应用认证工具包检测调用禁止的 API 的代码。 有关详细信息，请参见 [Windows 应用认证工具包](/windows/uwp/debug-test-perf/windows-app-certification-kit)。
 
@@ -54,11 +54,11 @@ UWP 应用在受保护的环境中运行，结果，很多可能危及平台安�
 
 为了获得更好的安全性和可靠性，通用 Windows 应用在受限的运行时环境中运行，因此不能像在经典 Windows 桌面应用程序中那样使用任何本机 DLL。 如果你有 DLL 的源代码，则可以移植此代码，以便使其在 UWP 上运行。 你首先更改几个项目设置和项目文件元数据，以将此项目标识为 UWP 项目。 你需要使用 `/ZW` 选项编译库代码，从而启用 C++/CX。 由于与该环境相关的控制更严格，在 UWP 应用中，某些 API 调用是不被允许的。 请参阅[用于 UWP 应用的 Win32 和 COM API](/uwp/win32-and-com/win32-and-com-for-uwp-apps)。
 
-如果你的本机 DLL 使用 __declspec(dllexport) 公开函数，则可使用以下过程。
+如果你的本机 DLL 使用 `__declspec(dllexport)` 公开函数，则可使用以下过程。
 
 ### <a name="to-port-a-native-dll-to-the-uwp-without-creating-a-new-project"></a>若要在无需创建新项目的情况下将本机 DLL 移植到 UWP
 
-1. 如果你的本机 DLL 使用 __declspec(dllexport) 导出函数，则可以通过将 DLL 重新编译为 UWP 项目，从 UWP 应用中调用这些函数。 例如，假设我们有一个 DLL，它使用类似于以下标头文件的代码，可导出几个类及其方法：
+1. 如果你的本机 DLL 使用 `__declspec(dllexport)` 导出函数，则可以通过将 DLL 重新编译为 UWP 项目，从 UWP 应用中调用这些函数。 例如，假设我们有一个 DLL，它使用类似于以下标头文件的代码，可导出几个类及其方法：
 
     ```cpp
     // giraffe.h
@@ -131,7 +131,7 @@ UWP 应用在受保护的环境中运行，结果，很多可能危及平台安�
 
    项目（stdafx.h、dllmain.cpp）中的其他所有内容都属于标准 Win32 项目模板。 如果想要遵循这些步骤，但又不想将自己的 DLL 用于这些步骤，请尝试创建 Win32 项目，在项目向导中选择 DLL，然后添加标头文件 giraffe.h 和代码文件 giraffe.cpp，并在此步骤中，将代码中的内容复制到相应的文件中。
 
-   该代码将在定义 `_DLL` 时（即当项目生成为 DLL 时），定义解析为 __declspec(dllexport) 的宏 `GIRAFFE_API`。
+   该代码将在定义 `_DLL` 时（即当项目生成为 DLL 时），定义解析为 `__declspec(dllexport)` 的宏 `GIRAFFE_API`。
 
 2. 打开 DLL 项目中的“项目属性”，并将“配置”设置为“所有配置”。
 
@@ -157,7 +157,7 @@ UWP 应用在受保护的环境中运行，结果，很多可能危及平台安�
 
    问题在于通用 Windows 项目对预编译标头文件使用不同的命名约定。
 
-6. 生成项目。 可能会收到一些有关不兼容的命令行选项的错误。 例如，许多 C++ 项目中默认设置有“启用最小重新生成(/Gm)”这一常用选项，它与 `/ZW` 不兼容。
+6. 生成项目。 可能会收到一些有关不兼容的命令行选项的错误。 例如，许多较旧的 C++ 项目中默认设置有“启用最小重新生成(/Gm)”这一常用选项（但现在已弃用），它与 `/ZW` 不兼容。
 
    当为通用 Windows 平台编译时，某些功能不可用。 将看到有关任何问题的编译器错误。 解决这些问题，直到有一个干净的生成。
 

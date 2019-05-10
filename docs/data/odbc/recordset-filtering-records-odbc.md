@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ODBC recordsets [C++], filtering records
 - filters [C++], recordset object
 ms.assetid: 5c075f37-c837-464d-90c1-d028a9d1c175
-ms.openlocfilehash: 47ac2b83df4da5fcfe0cbe5e9546571a50ecdfac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 050524df840be28d661da89d04b685a44238f88c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397856"
 ---
 # <a name="recordset-filtering-records-odbc"></a>记录集：筛选记录 (ODBC)
 
@@ -44,7 +44,7 @@ ms.locfileid: "50514746"
     > [!NOTE]
     >  用单引号上面显示了文本字符串"MATH101"。 在 ODBC SQL 规范中，使用单引号来表示字符的字符串文字。 查看在此情况下所使用的 DBMS 的引号要求您 ODBC 驱动程序文档。 此语法还讨论了进一步接近本主题的结尾。
 
-1. 设置任何其他所需的选项，如排序顺序、 锁定模式或参数。 指定一个参数是特别有用。 有关参数化筛选器的信息，请参阅[记录集： 参数化记录集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)。
+1. 设置任何其他所需的选项，如排序顺序、 锁定模式或参数。 指定一个参数是特别有用。 有关参数化筛选器的信息，请参阅[记录集：参数化记录集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)。
 
 1. 调用`Open`为新的对象 (或`Requery`以前打开的对象)。
 
@@ -82,15 +82,15 @@ m_strFilter = "StudentID = '100'";   // correct
 m_strFilter = "StudentID = 100";   // incorrect for some drivers
 ```
 
-上面显示的引号符合 ODBC 规范，但某些 Dbms 可能需要其他引号字符。 有关详细信息，请参阅[SQL： 自定义您记录集的 SQL 语句 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)。
+上面显示的引号符合 ODBC 规范，但某些 Dbms 可能需要其他引号字符。 有关详细信息，请参阅[SQL:自定义记录集的 SQL 语句 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)。
 
 > [!NOTE]
->  如果你选择覆盖通过将传递到你自己的 SQL 字符串的记录集的默认 SQL 字符串`Open`，如果具有自定义的字符串，不应设置筛选器**其中**子句。 有关重写默认的 sql 语句的详细信息，请参阅[SQL： 自定义您记录集的 SQL 语句 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)。
+>  如果你选择覆盖通过将传递到你自己的 SQL 字符串的记录集的默认 SQL 字符串`Open`，如果具有自定义的字符串，不应设置筛选器**其中**子句。 有关重写默认的 sql 语句的详细信息，请参阅[SQL:自定义记录集的 SQL 语句 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)。
 
 ## <a name="see-also"></a>请参阅
 
 [记录集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[记录集：对记录进行排序 (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)<br/>
+[记录集：排序记录 (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)<br/>
 [记录集：记录集如何选择记录 (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
 [记录集：记录集如何更新记录 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
 [记录集：锁定记录 (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

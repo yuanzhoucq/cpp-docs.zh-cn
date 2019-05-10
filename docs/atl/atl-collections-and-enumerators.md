@@ -7,12 +7,12 @@ helpviewer_keywords:
 - enumerators, ATL classes
 - collection interfaces
 ms.assetid: b2d37119-3ab2-4e0a-b65b-f377f07e4098
-ms.openlocfilehash: 690fc023b72b2606efc190aceb7c266a35a4ebb4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ebf7be8b2c80a714a27567ce0334475519a69454
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252360"
 ---
 # <a name="atl-collections-and-enumerators"></a>ATL 集合和枚举数
 
@@ -33,14 +33,14 @@ ms.locfileid: "57283042"
 讨论了每种类型的接口的不同的设计原则。
 
 [实现基于 C++ 标准库的集合](../atl/implementing-an-stl-based-collection.md)<br/>
-一个扩展的示例将指导你完成一个基于 c + + 标准库的集合的实现。
+将指导你完成的实现的扩展的示例C++基于标准库的集合。
 
 ## <a name="related-sections"></a>相关章节
 
 [ATL](../atl/active-template-library-atl-concepts.md)<br/>
 提供了关于如何使用 Active Template Library 进行编程的概念性主题的链接。
 
-[ATLCollections 示例](../visual-cpp-samples.md)<br/>
+[ATLCollections 示例](../overview/visual-cpp-samples.md)<br/>
 一个示例，演示如何使用`ICollectionOnSTLImpl`和`CComEnumOnSTL`，和自定义复制策略类的实现。
 
 ## <a name="see-also"></a>请参阅

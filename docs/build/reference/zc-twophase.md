@@ -9,12 +9,12 @@ helpviewer_keywords:
 - twoPhase
 - disable two-phase name lookup
 - /Zc:twoPhase
-ms.openlocfilehash: d5a53db5a5c0ae9c4cfec76e57f628499c8955c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5f990181fd1e606cf9d7dd33242752bed33aa456
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315791"
 ---
 # <a name="zctwophase--disable-two-phase-name-lookup"></a>/Zc: twophase-（禁用两阶段名称查找）
 
@@ -124,7 +124,7 @@ NS::func(NS::S)
 
 ### <a name="update-your-code-for-two-phase-conformance"></a>更新你的代码为两阶段的一致性
 
-较旧版本的编译器不需要关键字`template`和`typename`无处不在 c + + 标准要求它们。 在某些位置中需要这些关键字消除歧义编译器在查找的第一阶段期间分析依赖名称的方式。 例如：
+较旧版本的编译器不需要关键字`template`并`typename`无处不在C++标准要求它们。 在某些位置中需要这些关键字消除歧义编译器在查找的第一阶段期间分析依赖名称的方式。 例如：
 
 `T::Foo<a || b>(c);`
 
@@ -158,16 +158,16 @@ typename T::template X<T>::TYPE func(typename T::TYPE)
 
 下 **/zc: twophase-** ，并且在较旧编译器中，编译器只需要`template`第 2 行的关键字。 默认情况下，并在符合性模式下，编译器现在还要求`template`第 4，指示行的关键字`T::X<T>`是一个模板。 查找缺少此关键字的代码并将其以使符合标准代码提供。
 
-有关符合性问题的详细信息，请参阅[c + + 在 Visual Studio 中的符合性改进](../../cpp-conformance-improvements-2017.md)并[非标准行为](../../cpp/nonstandard-behavior.md)。
+有关符合性问题的详细信息，请参阅[ C++ Visual Studio 中的符合性改进](../../overview/cpp-conformance-improvements.md)并[非标准行为](../../cpp/nonstandard-behavior.md)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择**配置属性** > **C/c + +** > **命令行**属性页。
+1. 选择**配置属性** > **C /C++** > **命令行**属性页。
 
 1. 修改**其他选项**属性以包含 **/zc: twophase-** ，然后选择**确定**。
 
 ## <a name="see-also"></a>请参阅
 
-[/Zc（一致性）](../../build/reference/zc-conformance.md)<br/>
+[/Zc（一致性）](zc-conformance.md)<br/>

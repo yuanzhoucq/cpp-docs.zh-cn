@@ -13,18 +13,17 @@ helpviewer_keywords:
 - reusable component classes [MFC]
 ms.assetid: 96495ec3-319e-4163-b839-1af0428ed9dd
 ms.openlocfilehash: 86470c3e3e66d6aee2ce532570cea096641d2c1d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62186083"
 ---
 # <a name="ole-control-classes"></a>OLE 控件类
 
 这些是您在编写 OLE 控件时使用的主类。 `COleControlModule` OLE 控件模块中的类就像[CWinApp](../mfc/reference/cwinapp-class.md)应用程序中的类。 每个模块实现一个或多个 OLE 控件；这些控件由 `COleControl` 对象表示。 这些控件使用 `CConnectionPoint` 对象与其容器进行通信。
 
-
-  `CPictureHolder` 和 `CFontHolder` 类封装图片和字体的 COM 接口，而 `COlePropertyPage` 和 `CPropExchange` 类可帮助您实现控件的属性页和属性存留。
+`CPictureHolder` 和 `CFontHolder` 类封装图片和字体的 COM 接口，而 `COlePropertyPage` 和 `CPropExchange` 类可帮助您实现控件的属性页和属性存留。
 
 [COleControlModule](../mfc/reference/colecontrolmodule-class.md)<br/>
 替换 OLE 控制模块的 `CWinApp` 类。 从 `COleControlModule` 类派生来开发 OLE 控件模块对象。 它提供用于初始化 OLE 控件的模块的成员函数。
@@ -33,8 +32,7 @@ ms.locfileid: "57304545"
 从 `COleControl` 类派生来开发 OLE 控件。 此类从 `CWnd` 派生，它继承了 Windows 窗口对象的所有功能以及其他 OLE 特定的功能，如事件触发和支持方法和属性的功能。
 
 [CConnectionPoint](../mfc/reference/cconnectionpoint-class.md)<br/>
-
-  `CConnectionPoint` 类定义一类用于与其他 OLE 对象进行通信的特殊接口（称为“连接点”）。 连接点可实现能够对其他对象初始化操作的传出接口，如触发事件和更改通知。
+`CConnectionPoint` 类定义一类用于与其他 OLE 对象进行通信的特殊接口（称为“连接点”）。 连接点可实现能够对其他对象初始化操作的传出接口，如触发事件和更改通知。
 
 [CPictureHolder](../mfc/reference/cpictureholder-class.md)<br/>
 封装 Windows 图片对象和 `IPicture` COM 接口的功能；用于实现 OLE 控件的自定义 Picture 属性。

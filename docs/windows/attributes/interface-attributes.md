@@ -1,20 +1,20 @@
 ---
-title: 接口特性 (c + + COM)
+title: 接口特性 (C++ COM)
 ms.date: 10/02/2018
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 - interface attributes
 ms.assetid: 27fcdfee-abce-4585-8b53-ee31635356e8
-ms.openlocfilehash: d954b7622ac78142c84b40007ecda8138b1b8f2f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8218ccb66c6be9edef5d7de751a73bf4753d069f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409312"
 ---
 # <a name="interface-attributes"></a>接口特性
 
-以下属性应用于[接口 （或 __interface）](../../cpp/interface.md) c + + 关键字。
+以下属性应用于[接口 （或 __interface）](../../cpp/interface.md) C++关键字。
 
 |特性|描述|
 |---------------|-----------------|

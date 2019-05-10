@@ -19,12 +19,12 @@ helpviewer_keywords:
 - CStringData class
 - shared classes, CStringData
 ms.assetid: 4e31b5ca-3dbe-4fd5-b692-8211fbfb2593
-ms.openlocfilehash: 24d1321c66fb6cebbd2e86da3e85fdb8e1a3d33d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5977d26cade89f2e70453d5184323958e99e54c4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62198130"
 ---
 # <a name="cstringdata-class"></a>CStringData 类
 
@@ -46,9 +46,9 @@ struct CStringData
 |[data](#data)|检索一个字符串对象的字符数据。|
 |[IsLocked](#islocked)|确定是否锁定关联的字符串对象的缓冲区。|
 |[IsShared](#isshared)|确定是否关联的字符串对象的缓冲区的当前共享。|
-|[锁](#lock)|锁定关联的字符串对象的缓冲区。|
+|[Lock](#lock)|锁定关联的字符串对象的缓冲区。|
 |[发布](#release)|释放指定的字符串对象。|
-|[解锁](#unlock)|解除锁定关联的字符串对象的缓冲区。|
+|[Unlock](#unlock)|解除锁定关联的字符串对象的缓冲区。|
 
 ### <a name="data-members"></a>数据成员
 
@@ -253,4 +253,3 @@ void Unlock() throw();
 
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [ATL/MFC 共享类](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-

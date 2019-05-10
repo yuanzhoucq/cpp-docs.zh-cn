@@ -24,11 +24,11 @@ helpviewer_keywords:
 - exception handling, termination
 ms.assetid: 3ff1456a-7898-44bc-9266-a328a80b6006
 ms.openlocfilehash: 7be81dec7fba80a273d635cbd30b96b09928bc66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356441"
 ---
 # <a name="setterminate-crt"></a>set_terminate (CRT)
 
@@ -51,7 +51,7 @@ terminate_function set_terminate( terminate_function termFunction );
 
 ## <a name="remarks"></a>备注
 
-**Set_terminate**函数安装*termFunction*由调用的函数作为**终止**。 **set_terminate**用于 c + + 异常处理和引发异常之前可能在程序中的任意位置调用。 **终止**调用[中止](abort.md)默认情况下。 您可以更改此默认设置编写你自己的终止函数并调用**set_terminate**与作为其参数函数的名称。 **终止**调用的最后一个函数的参数被当作**set_terminate**。 执行任何所需的清除任务后*termFunction*应退出程序。 如果它没有退出 （如果它返回给调用方），[中止](abort.md)调用。
+**Set_terminate**函数安装*termFunction*由调用的函数作为**终止**。 **set_terminate**用于C++异常处理和引发异常之前可能在程序中的任意位置调用。 **终止**调用[中止](abort.md)默认情况下。 您可以更改此默认设置编写你自己的终止函数并调用**set_terminate**与作为其参数函数的名称。 **终止**调用的最后一个函数的参数被当作**set_terminate**。 执行任何所需的清除任务后*termFunction*应退出程序。 如果它没有退出 （如果它返回给调用方），[中止](abort.md)调用。
 
 在多线程环境中，终止单独为每个线程维护的函数。 每个新线程都需要安装自己的终止函数。 因此，每个线程都负责处理它自己的终止处理。
 

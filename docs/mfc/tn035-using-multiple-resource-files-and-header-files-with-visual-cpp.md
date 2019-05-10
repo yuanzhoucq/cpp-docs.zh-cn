@@ -1,5 +1,5 @@
 ---
-title: TN035:Visual c + + 中使用多个资源文件和头文件
+title: TN035:视觉对象使用多个资源文件和头文件C++
 ms.date: 11/04/2016
 f1_keywords:
 - vc.resources
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - resource files, multiple
 - TN035
 ms.assetid: 1f08ce5e-a912-44cc-ac56-7dd93ad73fb6
-ms.openlocfilehash: 7d97e4536c2a43e7e224e9056aa39df5480daeca
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8ce38c2f3f4effa993dfa32221d82bece65096dd
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279909"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448546"
 ---
-# <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035:Visual c + + 中使用多个资源文件和头文件
+# <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035:视觉对象使用多个资源文件和头文件C++
 
 > [!NOTE]
 >  以下技术说明在首次包括在联机文档中后未更新。 因此，某些过程和主题可能已过时或不正确。 要获得最新信息，建议你在联机文档索引中搜索热点话题。
@@ -33,7 +33,7 @@ ms.locfileid: "57279909"
 
 本说明按如下结构回答上述问题：
 
-- **概述如何 Visual c + + 管理资源文件和标头文件**概述了如何在 Visual c + + 中的资源设置包括命令允许您使用多个资源文件和头文件，同一项目中的。
+- **概述了 VisualC++管理的资源文件和标头文件**概述了如何资源设置包括视觉对象中命令的C++，可以使用多个资源文件和同一项目中的标头文件。
 
 - **应用程序向导创建的分析。RC 和。H 文件**会查看应用程序向导创建的应用程序所使用的多个资源和标头文件。 这些文件用作你可能需要添加到项目的其他资源文件和头文件的很好模型。
 
@@ -43,33 +43,33 @@ ms.locfileid: "57279909"
 
 - **使用同一个项目中的多个资源文件**介绍你可能想要分解成多个项目。RC 文件，并提供如何执行此操作的详细信息。
 
-- **非可编辑的 Visual c + + 文件的强制执行**介绍了如何可以确保 Visual c + + 不会编辑和无意中重新设置格式的自定义资源。
+- **强制的非可编辑视觉对象C++文件**介绍了如何才能确保 VisualC++不会编辑和无意中重新设置格式的自定义资源。
 
-- **管理共享的多个 Visual c + + 编辑符号。RC 文件**介绍如何跨多个共享同一符号。RC 文件以及如何避免将重复 ID 数值分配。
+- **管理符号的多个视觉对象的共享C++的编辑。RC 文件**介绍如何跨多个共享同一符号。RC 文件以及如何避免将重复 ID 数值分配。
 
-- **管理之间的依赖关系。RC 中。CPP、 和。H 文件**介绍 Visual c + + 如何避免不必要的重新编译。依赖于资源符号文件的 CPP 文件。
+- **管理之间的依赖关系。RC 中。CPP、 和。H 文件**介绍了 VisualC++可以避免不必要的重新编译。依赖于资源符号文件的 CPP 文件。
 
-- **如何 Visual c + + 管理设置包括信息**提供有关如何将跟踪 Visual c + + 的多个 （嵌套） 的技术详细信息。RC 文件和多个标头文件的 # include 指令包括的情况。RC 文件。
+- **如何将视觉C++管理设置包括信息**提供了有关如何将视觉技术详细信息C++跟踪的多个 （嵌套）。RC 文件和多个标头文件的 # include 指令包括的情况。RC 文件。
 
-**概述了 Visual c + + 的管理资源文件和头文件**
+**概述了 VisualC++管理资源文件和头文件**
 
 Visual C++ 将单个 .RC 资源文件和相应的 .H 头文件作为紧密关联的文件对进行管理。 编辑并保存 .RC 文件中的资源时，将间接编辑并保存相应 .H 文件中的符号。 虽然可以同时打开并编辑多个 .RC 文件（使用 Visual C++ 的 MDI 用户界面），但对于任何给定 .RC 文件，仅间接编辑一个相应的头文件。
 
 **符号头文件**
 
-默认情况下，无论资源文件的名称为何（例如 MYAPP.RC），Visual C++ 始终将相应的头文件命名为 RESOURCE.H。 使用**资源包括**命令**视图**菜单中 Visual c + +，您可以通过更新符号头文件文件中的更改此标头文件的名称**设置包括**对话框。
+默认情况下，无论资源文件的名称为何（例如 MYAPP.RC），Visual C++ 始终将相应的头文件命名为 RESOURCE.H。 使用**资源包括**命令**视图**视觉对象中的菜单C++，可以通过更新符号头文件文件中的更改此标头文件的名称**设置包括**对话框。
 
 **只读符号指令**
 
-虽然 Visual C++ 对于任何给定 .RC 文件仅编辑一个头文件，但 Visual C++ 支持引用在其他只读头文件中定义的符号。 使用**资源包括**命令**视图**菜单在 Visual c + +，可以指定任意数量的其他只读头文件，作为只读符号指令。 在“只读”限制下，当你在 .RC 文件中添加新资源时，可使用只读头文件中定义的符号；但如果删除此资源，符号仍将保留在只读头文件中。 无法更改分配给只读符号的数值。
+虽然 Visual C++ 对于任何给定 .RC 文件仅编辑一个头文件，但 Visual C++ 支持引用在其他只读头文件中定义的符号。 使用**资源包括**命令**视图**视觉对象中的菜单C++，可以指定任意数量的其他只读头文件作为只读符号指令。 在“只读”限制下，当你在 .RC 文件中添加新资源时，可使用只读头文件中定义的符号；但如果删除此资源，符号仍将保留在只读头文件中。 无法更改分配给只读符号的数值。
 
 **编译时指令**
 
-Visual C++ 还支持嵌套资源文件，即通过 #include 指令将一个 .RC 文件包括在另一 .RC 文件中。 使用 Visual C++ 编辑给定 .RC 文件时，通过 #include 指令包括的文件中的任何资源将不可见。 但当你编译此 .RC 文件时，也将编译通过 #include 指令包括的文件。 使用**资源包括**命令**视图**Visual c + + 中的菜单上，可以指定任意数量的 # include 指令包括的。RC 文件作为编译时指令。
+Visual C++ 还支持嵌套资源文件，即通过 #include 指令将一个 .RC 文件包括在另一 .RC 文件中。 使用 Visual C++ 编辑给定 .RC 文件时，通过 #include 指令包括的文件中的任何资源将不可见。 但当你编译此 .RC 文件时，也将编译通过 #include 指令包括的文件。 使用**资源包括**命令**视图**视觉对象中的菜单C++，可以指定任意数量的 # include 指令包括的。RC 文件作为编译时指令。
 
-请注意会发生什么情况如果读取到 Visual c + +。RC 文件的 #include 的另一个。RC 文件*不*指定为编译时指令。 如果将先前通过文本编辑器手动维护的 .RC 文件置于 Visual C++ 中，则可能会发生此情况。 Visual C++ 读取通过 #include 指令包括的 .RC 文件时，会将通过 #include 指令包括的资源合并到父 .RC 文件。 保存父 .RC 文件时，#include 语句实际上将被通过 #include 指令包括的资源替代。 如果不希望这一合并发生这种情况，则应删除 #include 语句从父对象。RC 文件*以前*到读取到 Visual c + +; 然后使用 Visual c + +，将添加回相同 #include 语句作为编译时指令。
+请注意会发生什么情况如果您阅读到视觉对象C++。RC 文件的 #include 的另一个。RC 文件*不*指定为编译时指令。 如果将先前通过文本编辑器手动维护的 .RC 文件置于 Visual C++ 中，则可能会发生此情况。 Visual C++ 读取通过 #include 指令包括的 .RC 文件时，会将通过 #include 指令包括的资源合并到父 .RC 文件。 保存父 .RC 文件时，#include 语句实际上将被通过 #include 指令包括的资源替代。 如果不希望这一合并发生这种情况，则应删除 #include 语句从父对象。RC 文件*以前*读取到的视觉对象C++; 然后使用视觉对象C++，重新添加相同 #include 语句作为编译时指令。
 
-Visual c + + 将保存在中。RC 文件以上三种设置包括信息 （符号头文件、 只读符号指令和编译时指令） 在 #include 指令*和*TEXTINCLUDE 资源中。 TEXTINCLUDE 资源，你通常不必处理的实现细节详见[如何 Visual c + + 管理设置包括信息](#_mfcnotes_tn035_set_includes)。
+VisualC++将保存在中。RC 文件以上三种设置包括信息 （符号头文件、 只读符号指令和编译时指令） 在 #include 指令*和*TEXTINCLUDE 资源中。 TEXTINCLUDE 资源，你通常不必处理的实现细节详见[如何 VisualC++管理设置包括信息](#_mfcnotes_tn035_set_includes)。
 
 **应用程序向导创建的分析。RC 和。H 文件**
 
@@ -91,7 +91,7 @@ RESOURCE.H     AFXRES.H
 
 可使用 Visual C++“文件包括”/“设置包括”命令查看其中多个文件关系。
 
-MYAPP。RC 使用 Visual c + + 编辑的应用程序资源文件。
+MYAPP。RC 的应用程序资源文件的编辑使用视觉对象C++。
 
 RESOURCE.H 是特定于应用程序的头文件。 AppWizard 始终将此文件命名为 RESOURCE.H，与 Visual C++ 的默认头文件命名方式一致。 此头文件的 #include 是资源文件 (MYAPP.RC) 中的第一个语句：
 
@@ -101,7 +101,7 @@ RESOURCE.H 是特定于应用程序的头文件。 AppWizard 始终将此文件�
 #include "resource.h"
 ```
 
-RES\MYAPP。RC2 包含的资源不会由 Visual c + + 编辑，但将包含在最终编译。EXE 文件。 默认情况下，AppWizard 不创建此类资源，因为 Visual C++ 可编辑所有标准资源，包括版本资源（此版本中的新功能）。 AppWizard 将生成空文件，以便你将已设置格式的自有自定义资源添加到此文件。
+RES\MYAPP。RC2 包含资源，不会由 Visual 编辑C++，但将包含在最终编译。EXE 文件。 默认情况下，AppWizard 不创建此类资源，因为 Visual C++ 可编辑所有标准资源，包括版本资源（此版本中的新功能）。 AppWizard 将生成空文件，以便你将已设置格式的自有自定义资源添加到此文件。
 
 如果使用已设置格式的自定义资源，可将这些资源添加到 RES\MYAPP.RC2 并使用 Visual C++ 进行编辑。
 
@@ -177,7 +177,7 @@ Visual C++ 和资源编译器通过 #include 指令将一个 .RC 文件包括在
 
 - 如果要通过文本编辑器以可读格式维护资源，应将资源保留在 Visual C++ 未编辑的 .RC 文件中。
 
-- 如果需要以其他专用数据编辑器可解释的二进制格式或文本格式保留用户定义的资源，则应将资源保留在单独 .RC 文件中，以防 Visual C++ 将格式更改为十六进制数据。 。在 MFC 高级概念示例 WAV （声音） 文件资源[SPEAKN](../visual-cpp-samples.md)是一个很好示例。
+- 如果需要以其他专用数据编辑器可解释的二进制格式或文本格式保留用户定义的资源，则应将资源保留在单独 .RC 文件中，以防 Visual C++ 将格式更改为十六进制数据。 。在 MFC 高级概念示例 WAV （声音） 文件资源[SPEAKN](../overview/visual-cpp-samples.md)是一个很好示例。
 
 还可以在“设置包括”对话框的编译时指令中通过 #include 指令包括另一 .RC 文件：
 
@@ -204,11 +204,11 @@ RESOURCE.H     AFXRES.H
     AFXPRINT.RC
 ```
 
-使用编译时指令时，可以将 Visual C++ 可编辑和不可编辑的资源组织到多个 .RC 文件中，其中，“主”MYAPP.RC 不执行任何操作，但会通过 #include 指令包括其他 .RC 文件。 如果使用 Visual C++ 项目 .MAK 文件，则应包括项目中的“主”.RC 文件，以便所有通过 #include 指令包括的资源随应用程序一起编译。
+使用编译时指令时，可以将 Visual C++ 可编辑和不可编辑的资源组织到多个 .RC 文件中，其中，“主”MYAPP.RC 不执行任何操作，但会通过 #include 指令包括其他 .RC 文件。 如果使用的 Visual StudioC++项目。MAK 文件，则你应包括"master"。RC 文件在项目中因此所有 # include 指令包括的资源将编译与应用程序。
 
-**实施 Visual c + + 文件的强制执行**
+**强制实施视觉对象的C++文件**
 
-应用程序向导创建 RES\MYAPP 中。RC2 文件是包含资源执行的操作的文件的示例*不*想要被意外读取到 Visual c + +，然后将其写回的格式设置信息会丢失。 要避免此问题，请将以下各行置于 RES\MYAPP.RC2 文件的开头：
+应用程序向导创建 RES\MYAPP 中。RC2 文件是包含资源执行的操作的文件的示例*不*想要被意外读取到的视觉对象C++，然后将它写回的格式设置信息会丢失。 要避免此问题，请将以下各行置于 RES\MYAPP.RC2 文件的开头：
 
 ```
 #ifdef APSTUDIO_INVOKED
@@ -216,9 +216,9 @@ RESOURCE.H     AFXRES.H
 #endif //APSTUDIO_INVOKED
 ```
 
-Visual c + + 编译时。RC 文件，它定义`APSTUDIO_INVOKED`以及`RC_INVOKED`。 如果 AppWizard 创建的文件结构被破坏，并且 Visual C++ 读取上述 #error 行，则它将报告错误，并中止读取 .RC 文件。
+当 VisualC++编译。RC 文件，它定义`APSTUDIO_INVOKED`以及`RC_INVOKED`。 如果 AppWizard 创建的文件结构被破坏，并且 Visual C++ 读取上述 #error 行，则它将报告错误，并中止读取 .RC 文件。
 
-**管理共享的多个 Visual c + + 编辑符号。RC 文件**
+**管理符号的多个视觉对象的共享C++的编辑。RC 文件**
 
 将资源拆分到你要在 Visual C++ 中单独编辑的多个 .RC 文件时，将产生两个问题：
 
@@ -261,7 +261,7 @@ ID_TOOLS_SPELL 符号保留在共享头文件 MYSHARED.H 中。 可使用文本�
 
 创建新 .RC 文件时，Visual C++ 先使用略高于最低合法值的值。 AppWizard 还会初始化这些值以更适于 MFC 应用程序。 有关 ID 值范围的详细信息，请参阅[技术说明 20](../mfc/tn020-id-naming-and-numbering-conventions.md)。
 
-现在，每次创建新的资源文件，即使在同一个项目，Visual c + + 定义相同`_APS_NEXT_`值。 因此，如果你在两个不同 .RC 文件中添加比如多个对话框，则 Visual C++ 很可能会将相同 #define 值分配到不同对话框。 例如，第一个 .RC 文件中的 IDD_MY_DLG1 可能会获得与第二个 .RC 文件中的 IDD_MY_DLG2 相同的数字 101。
+现在每次创建新的资源文件，甚至在同一项目中，视觉对象C++定义相同`_APS_NEXT_`值。 因此，如果你在两个不同 .RC 文件中添加比如多个对话框，则 Visual C++ 很可能会将相同 #define 值分配到不同对话框。 例如，第一个 .RC 文件中的 IDD_MY_DLG1 可能会获得与第二个 .RC 文件中的 IDD_MY_DLG2 相同的数字 101。
 
 若要避免此问题，应在各自 .RC 文件中对四个 ID 域中的每个域保留不同的数值范围。 执行此操作通过手动更新`_APS_NEXT`中的每个值。RC 文件**之前**开始添加资源。 例如，如果第一个。RC 文件使用默认`_APS_NEXT`值，则你可能想要分配以下`_APS_NEXT`第二个值。RC 文件：
 
@@ -300,9 +300,9 @@ Visual C++ 每次保存 .RC 文件时，均会将 //{{NO_DEPENDENCIES}} 注释�
 
 下面说明了 Visual C++ 如何维护 .RC 文件中的这些信息。 你不需要这些信息来使用 Visual C++，但是，这能够加强你的理解，使你能够更自信地使用“设置包括”功能。
 
-设置包括信息的上述三种类型的每个存储中。在两个窗体中的 RC 文件：（1） 作为 #include 或其他指令以资源编译器和 （2） 作为特殊的 TEXTINCLUDE 资源以仅由 Visual c + +。
+设置包括信息的上述三种类型的每个存储中。在两个窗体中的 RC 文件：（1） 作为 #include 或其他指令以资源编译器和 （2） 作为可解释的特殊 TEXTINCLUDE 资源只能由 Visual C++。
 
-TEXTINCLUDE 资源的用途是设置包括信息安全存储在 Visual c + + 的易于演示的窗体**设置包括**对话框。 TEXTINCLUDE 是*资源类型*由 Visual c + + 定义。 Visual C++ 可识别具有资源标识符 1、2 和 3 的三种特定 TEXTINCLUDE 资源：
+TEXTINCLUDE 资源的用途是设置包括信息安全存储在易于演示的窗体中的视觉对象中C++的**设置包括**对话框。 TEXTINCLUDE 是*资源类型*视觉对象定义C++。 Visual C++ 可识别具有资源标识符 1、2 和 3 的三种特定 TEXTINCLUDE 资源：
 
 |TEXTINCLUDE 资源 ID|设置包括信息的类型|
 |-----------------------------|--------------------------------------|

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - recordsets [C++], transactions
 - ODBC recordsets [C++], transactions
 ms.assetid: a2ec0995-2029-45f2-8092-6efd6f2a77f4
-ms.openlocfilehash: 0deb21a43ff17ca94efe29bdec37db7611331a86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a151ec5ca2b4bdc19bfa7dc626aebda0740a2c9e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62329915"
 ---
 # <a name="transaction-odbc"></a>事务 (ODBC)
 
@@ -29,7 +29,7 @@ ms.locfileid: "50615808"
 调用`AddNew`并`Edit`的成员函数`CRecordset`对象的数据源时调用立即影响`Update`。 `Delete` 调用还会立即生效。 与此相反，可以使用包含的多个调用的事务`AddNew`， `Edit`， `Update`，和`Delete`，这是执行但尚未提交直到您调用`CommitTrans`显式。 通过建立一个事务，可以保留回滚它们的功能的同时执行一系列的此类调用。 如果关键资源不可用或某些其他条件阻止完成整个事务，可以回滚而不是提交事务。 在这种情况下，任何属于该事务的更改不影响数据源。
 
 > [!NOTE]
->  目前，类`CRecordset`不支持对数据源的更新，如果已实现批量行提取。 这意味着不能进行到调用`AddNew`， `Edit`， `Delete`，或`Update`。 但是，您可以编写自己的函数来执行更新，然后调用给定的事务中的这些函数。 有关批量行提取的详细信息，请参阅[记录集： 提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+>  目前，类`CRecordset`不支持对数据源的更新，如果已实现批量行提取。 这意味着不能进行到调用`AddNew`， `Edit`， `Delete`，或`Update`。 但是，您可以编写自己的函数来执行更新，然后调用给定的事务中的这些函数。 有关批量行提取的详细信息，请参阅[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 > [!NOTE]
 >  除了会影响您的记录集，事务会影响，只要您使用 ODBC 直接执行的 SQL 语句**HDBC**与关联您`CDatabase`对象或 ODBC **HSTMT**基于该**HDBC**。

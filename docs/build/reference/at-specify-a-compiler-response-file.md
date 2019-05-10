@@ -8,12 +8,12 @@ helpviewer_keywords:
 - '@ compiler option'
 - cl.exe compiler, specifying response files
 ms.assetid: 400fffee-909d-4f60-bf76-45833e822685
-ms.openlocfilehash: dc61477da9547204acfce93bbedcd077787162c2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c2b5578e1ce1db590bdf5abbff0c91e858803ad7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62272996"
 ---
 # <a name="-specify-a-compiler-response-file"></a>@（指定编译器响应文件）
 
@@ -32,7 +32,7 @@ ms.locfileid: "57416951"
 
 响应文件可以包含将在命令行指定任何命令。 如果命令行自变量超过 127 个字符，这可能很有用。
 
-不能指定**\@** 选项响应文件中。 也就是说，响应文件不能嵌入另一个响应文件。
+不能指定 **\@** 选项响应文件中。 也就是说，响应文件不能嵌入另一个响应文件。
 
 从命令行中，您可以指定任意多个响应文件选项 (例如， `@respfile.1 @respfile.2`) 所需。
 
@@ -46,5 +46,5 @@ ms.locfileid: "57416951"
 
 ## <a name="see-also"></a>请参阅
 
-[编译器选项](../../build/reference/compiler-options.md)<br/>
-[设置编译器选项](../../build/reference/setting-compiler-options.md)
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)

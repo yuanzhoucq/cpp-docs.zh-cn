@@ -12,12 +12,12 @@ helpviewer_keywords:
 - endregion pragma
 - region pragma
 ms.assetid: c697f807-622f-4796-851b-68a42bbecd84
-ms.openlocfilehash: efc5f9c09449ff2fefff41261fe8b0eb0be80278
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c73a90aa2be83d643b74dde4645081e89da3ff73
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62179745"
 ---
 # <a name="region-endregion"></a>region、endregion
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /WL compiler option [C++]
 - WL compiler option [C++]
 ms.assetid: 332cadb4-8ea6-45fe-b67d-33ddec1f2c2e
-ms.openlocfilehash: 820143e1ff6feb718660fe8b297f2b96e26d2eb9
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c0d5110615f66dcf4f7dc170d89ee58c2e8fa5cb
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316530"
 ---
 # <a name="wl-enable-one-line-diagnostics"></a>/WL（启用单行诊断）
 
@@ -27,7 +27,7 @@ ms.locfileid: "57413805"
 
 ## <a name="remarks"></a>备注
 
-错误和警告消息，从 c + + 编译器可以跟默认情况下，新行上显示的其他信息。 从命令行编译时，可以将附加信息行追加到错误或警告消息。 如果捕获到日志文件生成输出，然后处理该日志以查找所有错误和警告，这可能是可取。 分号将从其他行分隔的错误或警告消息。
+错误和警告消息，从C++编译器可以跟默认情况下，新行上显示的附加信息。 从命令行编译时，可以将附加信息行追加到错误或警告消息。 如果捕获到日志文件生成输出，然后处理该日志以查找所有错误和警告，这可能是可取。 分号将从其他行分隔的错误或警告消息。
 
 并非所有错误和警告消息都具有附加行的信息。 下面的代码将生成的错误的附加行的信息;它会让您测试的影响，当您使用 **/WL**。
 
@@ -43,7 +43,7 @@ int main() {
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
 1. 单击 **“C/C++”** 文件夹。
 
@@ -57,5 +57,5 @@ int main() {
 
 ## <a name="see-also"></a>请参阅
 
-[编译器选项](../../build/reference/compiler-options.md)<br/>
-[设置编译器选项](../../build/reference/setting-compiler-options.md)
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)

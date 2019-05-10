@@ -1,5 +1,5 @@
 ---
-title: MFC：不结合文档和视图使用数据库类
+title: MFC:使用数据库类不结合文档和视图
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC applications [C++], without views
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - database applications [C++], without documents
 - user interface [C++], drawing information
 ms.assetid: 15bf52d4-91cf-4b1d-8b37-87c3ae70123a
-ms.openlocfilehash: 558917f1a1485f1a886356b3c272842579f6b03e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ab9946609fa20c4644873a684a754cbc8a41742f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396010"
 ---
-# <a name="mfc-using-database-classes-without-documents-and-views"></a>MFC：不结合文档和视图使用数据库类
+# <a name="mfc-using-database-classes-without-documents-and-views"></a>MFC:使用数据库类不结合文档和视图
 
 有时可能不想要使用在数据库应用程序框架的文档/视图体系结构。 本主题说明：
 
@@ -59,7 +59,7 @@ MFC 应用程序向导提供了若干选项**选择数据库支持**下, 表中�
 |**不支持文件的数据库视图**|派生自 `CRecordView`|提供文档支持，但没有序列化支持。 文档可以存储记录集和协调多个视图;不支持序列化或**新建**，**打开**，**保存**，以及**另存为**命令。 请参阅[应用程序的最小的文档](#_core_applications_with_minimal_documents)。 如果包含的数据库视图，则必须指定数据源。<br /><br /> 包括数据库标头文件、 链接库、 记录视图和一个记录集。 (仅适用于应用程序与**文档/视图体系结构支持**上选择的选项[应用程序类型、 MFC 应用程序向导](../mfc/reference/application-type-mfc-application-wizard.md)页。)|
 |**提供文件支持的数据库视图**|派生自 `CRecordView`|提供了完整的文档支持，包括序列化和与文档相关**文件**菜单命令。 数据库应用程序通常运行在每个记录的基础上而不是每个文件中的基础，因此不需要序列化。 但是，您可能必须序列化的特殊用法。 请参阅[应用程序的最小的文档](#_core_applications_with_minimal_documents)。 如果包含的数据库视图，则必须指定数据源。<br /><br /> 包括数据库标头文件、 链接库、 记录视图和一个记录集。 (仅适用于应用程序与**文档/视图体系结构支持**上选择的选项[应用程序类型、 MFC 应用程序向导](../mfc/reference/application-type-mfc-application-wizard.md)页。)|
 
-有关序列化和序列化的其他用途的替代方法的讨论，请参阅[序列化： 序列化 vs。数据库输入/输出](../mfc/serialization-serialization-vs-database-input-output.md)。
+有关序列化和序列化的其他用途的替代方法的讨论，请参阅[序列化：序列化与数据库输入/输出](../mfc/serialization-serialization-vs-database-input-output.md)。
 
 ##  <a name="_core_applications_with_minimal_documents"></a> 具有最小的文档的应用程序
 
@@ -81,7 +81,7 @@ MFC 应用程序向导有支持基于窗体的数据访问应用程序的两个�
 
 ###  <a name="_core_a_document_with_file_support"></a> 提供文件支持的文档
 
-选择应用程序向导数据库选项**数据库支持文件的视图**如果有其他用途与文档相关**文件**菜单命令和文档序列化。 对于您的程序的数据访问部分，您可以使用文档相同的方式中所述[文档不带文件支持](#_core_a_document_without_file_support)。 可用于文档的序列化功能，例如，读取和写入存储用户的首选项或其他有用信息的序列化的用户配置文件文档。 有关详细信息，请参阅[序列化： 序列化 vs。数据库输入/输出](../mfc/serialization-serialization-vs-database-input-output.md)。
+选择应用程序向导数据库选项**数据库支持文件的视图**如果有其他用途与文档相关**文件**菜单命令和文档序列化。 对于您的程序的数据访问部分，您可以使用文档相同的方式中所述[文档不带文件支持](#_core_a_document_without_file_support)。 可用于文档的序列化功能，例如，读取和写入存储用户的首选项或其他有用信息的序列化的用户配置文件文档。 有关详细信息，请参阅[序列化：序列化与数据库输入/输出](../mfc/serialization-serialization-vs-database-input-output.md)。
 
 应用程序向导支持此选项，但必须编写将文档序列化的代码。 文档数据成员中存储的序列化的信息。
 

@@ -7,18 +7,18 @@ helpviewer_keywords:
 - preprocessor, operators
 - '## preprocessor operator'
 ms.assetid: 4f173503-990f-4bff-aef3-ec4d1f1458ef
-ms.openlocfilehash: c013d6a4ce34372e2f195876166e299f62d85d3f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dab4da5fd65fc280d2061256a580a015917d24b6
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62179589"
 ---
 # <a name="token-pasting-operator-"></a>标记粘贴运算符 (##)
 
 双数字符号或"token-pasting"运算符 (**##**)，有时称为"合并"运算符，可在类似于对象的和类似函数的宏。 它允许将不同的标记加入到单个标记中，因此不能是宏定义中的第一个或最后一个标记。
 
-如果宏定义中的形式参数的前面或后面带有 token-pasting 运算符，则会立即将形式参数替换为未展开的实际自变量。 在替换前将不会对自变量执行宏扩展。
+如果宏定义中的形参的前面或后面带有 token-pasting 运算符，则会立即将形参替换为未扩展的实参。 在替换前将不会对自变量执行宏扩展。
 
 然后，每个匹配项中的标记粘贴运算符*令牌字符串*被删除，以及令牌之前和之后它被连接在一起。 生成的标记必须是有效的标记。 如果标记有效，则在它表示宏名称时扫描其中可能的替换。 标识符表示连接在一起的标记在替换前在程序中已知的名称。 每个标记表示在别处（在程序中或在编译器命令行上）定义的标记。 运算符前后的空白是可选的。
 

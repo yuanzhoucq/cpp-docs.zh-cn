@@ -1,6 +1,6 @@
 ---
 title: setbuf
-ms.date: 11/04/2016
+ms.date: 04/08/2019
 apiname:
 - setbuf
 apilocation:
@@ -22,12 +22,12 @@ helpviewer_keywords:
 - setbuf function
 - stream buffering
 ms.assetid: 13beda22-7b56-455d-8a6c-f2eb636885b9
-ms.openlocfilehash: 3b5fbccd304d406131b0c4f7d16a289f80484642
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 89f8a4d8eb853c774f4f7299ceaa9b9eb6177b42
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356378"
 ---
 # <a name="setbuf"></a>setbuf
 
@@ -44,7 +44,7 @@ void setbuf(
 
 ### <a name="parameters"></a>参数
 
-*流*<br/>
+*stream*<br/>
 指向**文件**结构的指针。
 
 *buffer*<br/>
@@ -52,9 +52,9 @@ void setbuf(
 
 ## <a name="remarks"></a>备注
 
-**Setbuf**函数控制缓冲*流*。 *流*参数必须引用打开的文件的已读取或写入。 如果*缓冲区*自变量是**NULL**，流是无缓冲。 如果不是，缓冲区必须指向字符数组的长度**BUFSIZ**，其中**BUFSIZ**是 STDIO 中定义的缓冲区大小。H. 用户指定的缓冲区（而不是给定流的默认系统分配的缓冲区）用于 I/O 缓存。 **Stderr**流是无缓冲的默认值，但你可以使用**setbuf**若要将分配到的缓冲区**stderr**。
+**Setbuf**函数控制缓冲*流*。 *流*参数必须引用打开的文件没有读取或写入。 如果*缓冲区*自变量是**NULL**，流是无缓冲。 如果不是，缓冲区必须指向字符数组的长度**BUFSIZ**，其中**BUFSIZ**是 STDIO 中定义的缓冲区大小。H. 用户指定的缓冲区（而不是给定流的默认系统分配的缓冲区）用于 I/O 缓存。 **Stderr**流缓冲默认情况下，但你可以使用**setbuf**若要将分配到的缓冲区**stderr**。
 
-**setbuf**已被取代[setvbuf](setvbuf.md)，对于新代码的首选例程。 **setbuf**保留与现有代码的兼容性。
+**setbuf**已被取代[setvbuf](setvbuf.md)，对于新代码的首选例程。 与不同**setvbuf**， **setbuf**无法报告错误。 **setvbuf**还允许您控制缓冲模式和缓冲区大小。 **setbuf**存在的与现有代码兼容性。
 
 ## <a name="requirements"></a>要求
 

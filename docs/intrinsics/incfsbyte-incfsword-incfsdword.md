@@ -13,12 +13,12 @@ helpviewer_keywords:
 - __incfsdword intrinsic
 - __incfsbyte intrinsic
 ms.assetid: 820457fb-e35e-42d3-bcb6-725da3281c64
-ms.openlocfilehash: f9f0bef89b32e1901c2f6b173baa90153b25a71d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e1e2630f8c0a66b681be2aa550f9c9255c92173
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62349541"
 ---
 # <a name="incfsbyte-incfsword-incfsdword"></a>__incfsbyte, __incfsword, __incfsdword
 
@@ -42,7 +42,7 @@ void __incfsdword(
 
 #### <a name="parameters"></a>参数
 
-*偏移量*<br/>
+*Offset*<br/>
 [in]从开始处的偏移量`FS`。
 
 ## <a name="requirements"></a>要求
@@ -61,7 +61,7 @@ void __incfsdword(
 
 ## <a name="see-also"></a>请参阅
 
-[__addfsword， \__addfsword， \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)<br/>
+[__addfsbyte, \__addfsword, \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)<br/>
 [__readfsbyte， \__readfsdword， \__readfsqword， \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)<br/>
 [__writefsbyte， \__writefsdword， \__writefsqword， \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)<br/>
 [编译器内部函数](../intrinsics/compiler-intrinsics.md)

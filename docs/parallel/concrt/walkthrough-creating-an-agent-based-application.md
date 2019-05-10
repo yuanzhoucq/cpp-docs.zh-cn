@@ -1,16 +1,16 @@
 ---
 title: 演练：创建基于代理的应用程序
-ms.date: 11/04/2016
+ms.date: 04/25/2019
 helpviewer_keywords:
 - asynchronous agents, creating
 - agent class, example
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
-ms.openlocfilehash: 1d55c9879a3dd90bb4a40b61a3bf958dbe960bc3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c249bc8138a3617cce3eae836751575b2626f4aa
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290054"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857315"
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>演练：创建基于代理的应用程序
 
@@ -40,17 +40,37 @@ ms.locfileid: "57290054"
 
 ##  <a name="createapplication"></a> 创建控制台应用程序
 
-本部分演示如何创建引用该程序将使用的标头文件的 Visual c + + 控制台应用程序。
+本部分演示如何创建C++控制台应用程序引用该程序将使用的标头文件。 初始步骤会有所不同，具体取决于所使用的 Visual Studio 版本。 请确保在左上角的此页中正确设置版本选择器。
 
-#### <a name="to-create-a-visual-c-application-by-using-the-win32-console-application-wizard"></a>若要使用 Win32 控制台应用程序向导创建的 Visual c + + 应用程序
+::: moniker range="vs-2019"
+
+### <a name="to-create-a-c-console-application-in-visual-studio-2019"></a>若要创建C++控制台应用程序在 Visual Studio 2019
+
+1. 从主菜单中，选择**文件** > **新建** > **项目**打开**创建一个新项目**对话框框。
+
+1. 在对话框顶部，设置**语言**到**C++**，将**平台**到**Windows**，并设置**项目类型**到**控制台**。 
+
+1. 从已筛选的项目类型列表中，选择**控制台应用程序**然后选择**下一步**。 在下一页上，输入`BasicAgent`作为项目的名称，并根据需要指定项目位置。
+
+1. 选择**创建**按钮创建项目。
+
+1. 右键单击项目节点中的**解决方案资源管理器**，然后选择**属性**。 下**配置属性** > **C /C++** > **预编译标头** > **预编译标头**选择**创建**。
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+### <a name="to-create-a-c-console-application-in-visual-studio-2017-and-earlier"></a>若要创建C++控制台应用程序在 Visual Studio 2017 及更早版本
 
 1. 上**文件**菜单上，单击**新建**，然后单击**项目**以显示**新项目**对话框。
 
-1. 在中**新的项目**对话框中，选择**Visual c + +** 中的节点**项目类型**窗格，然后选择**Win32 控制台应用程序**在中**模板**窗格。 例如，键入项目的名称`BasicAgent`，然后单击**确定**以显示**Win32 控制台应用程序向导**。
+1. 在中**新的项目**对话框中，选择**Visual C++** 中的节点**项目类型**窗格，然后选择**Win32 控制台应用程序**中**模板**窗格。 例如，键入项目的名称`BasicAgent`，然后单击**确定**以显示**Win32 控制台应用程序向导**。
 
 1. 在中**Win32 控制台应用程序向导**对话框中，单击**完成**。
 
-1. 在 stdafx.h 中，添加以下代码。
+::: moniker-end
+
+1. 在 stdafx.h 文件 （或具体取决于你的 Visual Studio 版本的 pch.h），添加以下代码。
 
 [!code-cpp[concrt-basic-agent#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_1.h)]
 
@@ -66,7 +86,7 @@ ms.locfileid: "57290054"
 
 #### <a name="to-create-the-filereader-class"></a>若要创建 file_reader 类
 
-1. 将新的 c + + 头文件添加到你的项目。 为此，请右键单击**标头文件**中的节点**解决方案资源管理器**，单击**添加**，然后单击**新项**。 在中**模板**窗格中，选择**标头文件 (.h)**。 在中**添加新项**对话框中，键入`file_reader.h`中**名称**框，然后单击**添加**。
+1. 添加一个新C++标头文件到你的项目。 为此，请右键单击**标头文件**中的节点**解决方案资源管理器**，单击**添加**，然后单击**新项**。 在中**模板**窗格中，选择**标头文件 (.h)**。 在中**添加新项**对话框中，键入`file_reader.h`中**名称**框，然后单击**添加**。
 
 1. 在 file_reader.h，添加以下代码。
 

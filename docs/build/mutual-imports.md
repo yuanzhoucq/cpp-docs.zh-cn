@@ -14,12 +14,12 @@ helpviewer_keywords:
 - extension DLLs [C++], mutual imports
 - exporting DLLs [C++], mutual imports
 ms.assetid: 2cc29537-92ee-4d92-af39-8b8b3afd808f
-ms.openlocfilehash: c2d34c54491bb4b85311be3ba1ebdaed87437246
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f01e69138a6ca1744645a1c2fa8525b7088e260d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295666"
 ---
 # <a name="mutual-imports"></a>相互导入
 
@@ -41,7 +41,7 @@ ms.locfileid: "57420682"
 
 下图显示了两个相互导入 Dll、 DLL1 和 DLL2 解决方案。 步骤 1 是运行 LIB，与上 DLL1 的 /DEF 选项集。 步骤 1 会产生 DLL1.lib、 导入库和 DLL1.exp。在步骤 2 中的导入库用于生成 DLL2，进而生成导入库 DLL2 的符号。 步骤 3 生成 DLL1，通过使用 DLL1.exp 和 DLL2.lib 作为输入。 请注意，DLL2.exp 文件不必要因为 LIB 未用于生成 DLL2 的导入库。
 
-![通过相互导入链接两个 Dll](../build/media/vc37yj1.gif "通过相互导入链接两个 Dll")<br/>
+![通过相互导入链接两个 Dll](media/vc37yj1.gif "通过相互导入链接两个 Dll")<br/>
 用相互导入链接两个 DLL
 
 ## <a name="limitations-of-afxext"></a>_AFXEXT 的限制
@@ -109,24 +109,24 @@ class CExampleA : public CObject
 
 ### <a name="what-do-you-want-to-do"></a>你希望做什么？
 
-- [从 DLL 导出](../build/exporting-from-a-dll.md)
+- [从 DLL 导出](exporting-from-a-dll.md)
 
-- [导出从 DLL 使用。DEF 文件](../build/exporting-from-a-dll-using-def-files.md)
+- [导出从 DLL 使用。DEF 文件](exporting-from-a-dll-using-def-files.md)
 
-- [使用 __declspec （dllexport） 从 DLL 导出](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [使用 __declspec （dllexport） 从 DLL 导出](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [导出和导入使用 AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)
+- [导出和导入使用 AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [导出 c + + 函数以用于 C 语言可执行文件](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [导出C++函数以用于 C 语言可执行文件](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [确定要使用的导出方法](../build/determining-which-exporting-method-to-use.md)
+- [确定要使用的导出方法](determining-which-exporting-method-to-use.md)
 
-- [导入到使用 __declspec （dllimport） 的应用程序](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [使用 __declspec(dllimport) 导入到应用程序中](importing-into-an-application-using-declspec-dllimport.md)
 
 ### <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？
 
-- [LIB 实用工具和 /DEF 选项](../build/reference/lib-reference.md)
+- [LIB 实用工具和 /DEF 选项](reference/lib-reference.md)
 
 ## <a name="see-also"></a>请参阅
 
-[导入和导出](../build/importing-and-exporting.md)
+[导入和导出](importing-and-exporting.md)

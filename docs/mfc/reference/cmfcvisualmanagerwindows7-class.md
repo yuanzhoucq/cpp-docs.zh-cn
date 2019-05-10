@@ -1,6 +1,6 @@
 ---
 title: CMFCVisualManagerWindows7 类
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CMFCVisualManagerWindows7
 - AFXVISUALMANAGERWINDOWS7/CMFCVisualManagerWindows7
@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCVisualManagerWindows7 Class [MFC]
 ms.assetid: e8d87df1-0c09-4b58-8ade-4e911f796e42
-ms.openlocfilehash: 296ccc0accdf2937406d9965118c1807aeb2604c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e729201f1a6b6fd41286cc6af2b8c08fc7ee697c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62373617"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>CMFCVisualManagerWindows7 类
 
@@ -34,7 +34,7 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 |名称|描述|
 |----------|-----------------|
 |[CMFCVisualManagerWindows7::CMFCVisualManagerWindows7](#cmfcvisualmanagerwindows7)|默认构造函数。|
-|[CMFCVisualManagerWindows7::~CMFCVisualManagerWindows7](#cmfcvisualmanagerwindows7__~cmfcvisualmanagerwindows7)|默认析构函数。|
+|[CMFCVisualManagerWindows7::~CMFCVisualManagerWindows7](#_dtorcmfcvisualmanagerwindows7)|默认析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
@@ -42,7 +42,7 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 |----------|-----------------|
 |`CMFCVisualManagerWindows7::CleanStyle`|清除当前视觉样式，并重置默认的视觉样式。|
 |`CMFCVisualManagerWindows7::CleanUp`|清除所有的用户界面中的对象并将重置菜单。|
-|`CMFCVisualManagerWindows7::DrawNcBtn`|绘制非工作区中的帧上的按钮。 框架将使用此方法以绘制降到最低，最大化、 关闭和还原中的窗口框架右上角的按钮。 当程序在使用非 Aero 主题时，不调用此方法。|
+|`CMFCVisualManagerWindows7::DrawNcBtn`|绘制非工作区中的帧上的按钮。 框架将使用此方法以绘制降到最低，最大化、 关闭和还原中的窗口框架右上角的按钮。 当该程序使用仅调用此方法`Aero`主题。|
 |`CMFCVisualManagerWindows7::DrawNcText`|在帧上的非工作区中绘制文本。 该框架使用此方法在框架窗口的顶部的标题栏中绘制应用程序标题。|
 |`CMFCVisualManagerWindows7::DrawSeparator`|上绘制一个分隔符[CMFCToolBar 类](../../mfc/reference/cmfctoolbar-class.md)。|
 |`CMFCVisualManagerWindows7::GetRibbonBar`|检索[CMFCRibbonBar 类](../../mfc/reference/cmfcribbonbar-class.md)与用户界面相关联。|
@@ -173,7 +173,7 @@ virtual COLORREF GetRibbonEditBackgroundColor (
 virtual void OnFillMenuImageRect(
     CDC* pDC,
     CMFCToolBarButton* pButton,
-    CRect rect,
+    CRect rectangle,
     CMFCVisualManager::AFX_BUTTON_STATE state);
 ```
 
@@ -185,7 +185,7 @@ virtual void OnFillMenuImageRect(
 *pButton*<br/>
 [in]一个指向`CMFCToolBarButton`。 框架填充此按钮的背景。
 
-*rect*<br/>
+*rectangle*<br/>
 [in]指定菜单按钮图像区域的边界矩形。
 
 *state*<br/>

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - RW2001
 ms.assetid: 963bdc7d-6ebe-4378-8bbc-47dfcf5d330c
 ms.openlocfilehash: 4d298cdd9d96c55f283ce7f0e2ba04dd664941f8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62226499"
 ---
 # <a name="resource-compiler-error-rw2001"></a>资源编译器错误 RW2001
 
@@ -19,7 +19,7 @@ ms.locfileid: "50584608"
 
 RC 文件包含 **#pragma**指令。
 
-使用 **#ifndef**预处理器指令与**RC_INVOKED**常量资源编译器定义时它可以处理的包含文件。 位置 **#pragma**指令的不是代码块中处理时**RC_INVOKED**定义常量。 仅由 C/c + + 编译器，而不是由资源编译器处理代码块中。 下面的示例代码演示了此种方法：
+使用 **#ifndef**预处理器指令与**RC_INVOKED**常量资源编译器定义时它可以处理的包含文件。 位置 **#pragma**指令的不是代码块中处理时**RC_INVOKED**定义常量。 仅由 C 处理块中的代码 /C++编译器而不是由资源编译器。 下面的示例代码演示了此种方法：
 
 ```
 #ifndef RC_INVOKED

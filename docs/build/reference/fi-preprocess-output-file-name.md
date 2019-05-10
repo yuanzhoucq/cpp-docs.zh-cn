@@ -9,16 +9,16 @@ helpviewer_keywords:
 - /Fi compiler option (C++)
 - preprocessing output files, file name
 ms.assetid: 6d0ba983-a8b7-41ec-84f5-b4688ef8efee
-ms.openlocfilehash: 02d2a27f0a3d6b6aee6c2cd6f7161c9de718446d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 990c48a72c3f6017d893ddf9b46bcbb737bfb634
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271250"
 ---
 # <a name="fi-preprocess-output-file-name"></a>/Fi（预处理输出文件名）
 
-指定的输出文件的名称[/P （预处理到文件）](../../build/reference/p-preprocess-to-a-file.md)编译器选项将预处理的输出。
+指定的输出文件的名称[/P （预处理到文件）](p-preprocess-to-a-file.md)编译器选项将预处理的输出。
 
 ## <a name="syntax"></a>语法
 
@@ -48,6 +48,6 @@ CL /P /FiMYPROCESS.I PROGRAM.CPP
 
 ## <a name="see-also"></a>请参阅
 
-[编译器选项](../../build/reference/compiler-options.md)<br/>
-[/P（预处理到文件）](../../build/reference/p-preprocess-to-a-file.md)<br/>
-[指定路径名](../../build/reference/specifying-the-pathname.md)
+[MSVC 编译器选项](compiler-options.md)<br/>
+[/P（预处理到文件）](p-preprocess-to-a-file.md)<br/>
+[指定路径名](specifying-the-pathname.md)

@@ -67,11 +67,11 @@ helpviewer_keywords:
 - CDaoQueryDef [MFC], m_pDatabase
 ms.assetid: 9676a4a3-c712-44d4-8c5d-d1cc78288d3a
 ms.openlocfilehash: 08fb2909a4fd2e5bda3dfc63d19224a515c7c699
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399741"
 ---
 # <a name="cdaoquerydef-class"></a>CDaoQueryDef 类
 
@@ -97,7 +97,7 @@ class CDaoQueryDef : public CObject
 |----------|-----------------|
 |[CDaoQueryDef::Append](#append)|将此 querydef 追加到数据库的 QueryDefs 集合作为保存的查询。|
 |[CDaoQueryDef::CanUpdate](#canupdate)|返回非零，如果查询可以更新数据库。|
-|[CDaoQueryDef::Close](#close)|关闭 querydef 对象。 使用它完成后销毁 c + + 对象。|
+|[CDaoQueryDef::Close](#close)|关闭 querydef 对象。 销毁C++对象时使用它完成。|
 |[CDaoQueryDef::Create](#create)|创建基础的 DAO querydef 对象。 将用作临时查询或调用 querydef`Append`将其保存在数据库中。|
 |[CDaoQueryDef::Execute](#execute)|执行由 querydef 对象定义的查询。|
 |[CDaoQueryDef::GetConnect](#getconnect)|返回与此 querydef 关联的连接字符串。 连接字符串标识数据源。 （有关 SQL 传递查询; 否则为空字符串。）|
@@ -252,7 +252,7 @@ CDaoQueryDef(CDaoDatabase* pDatabase);
 
 若要设置的 querydef 属性，可以使用[SetName](#setname)， [SetSQL](#setsql)，[为表示](#setconnect)， [SetODBCTimeout](#setodbctimeout)，和[SetReturnsRecords](#setreturnsrecords)成员函数。
 
-完成与 querydef 对象后，调用其[关闭](#close)成员函数。 如果您有一个指针指向 querydef，使用**删除**运算符要销毁的 c + + 对象。
+完成与 querydef 对象后，调用其[关闭](#close)成员函数。 如果您有一个指针指向 querydef，使用**删除**运算符来销毁C++对象。
 
 ##  <a name="close"></a>  CDaoQueryDef::Close
 
@@ -264,7 +264,7 @@ virtual void Close();
 
 ### <a name="remarks"></a>备注
 
-关闭 querydef 释放基础的 DAO 对象，但不会销毁已保存的 DAO querydef 对象或 c + +`CDaoQueryDef`对象。 这是不与相同[CDaoDatabase::DeleteQueryDef](../../mfc/reference/cdaodatabase-class.md#deletequerydef)，其中删除 querydef DAO （如果不是临时 querydef） 中的数据库的 QueryDefs 集合中。
+关闭 querydef 释放基础的 DAO 对象，但不会销毁已保存的 DAO querydef 对象或C++`CDaoQueryDef`对象。 这是不与相同[CDaoDatabase::DeleteQueryDef](../../mfc/reference/cdaodatabase-class.md#deletequerydef)，其中删除 querydef DAO （如果不是临时 querydef） 中的数据库的 QueryDefs 集合中。
 
 ##  <a name="create"></a>  CDaoQueryDef::Create
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - export files
 - import libraries, creating
 ms.assetid: d8175596-9773-4c2f-959d-b05b065a5161
-ms.openlocfilehash: fa759482d6949b27f5076643d83e92cddc1d8fac
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6f6f2d5c48c63ba6d8a8a7f67a98b949b32a8afa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316504"
 ---
 # <a name="working-with-import-libraries-and-export-files"></a>使用导入库和导出文件
 
@@ -27,4 +27,4 @@ ms.locfileid: "57416561"
 
 ## <a name="see-also"></a>请参阅
 
-[LIB 引用](../../build/reference/lib-reference.md)
+[LIB 引用](lib-reference.md)

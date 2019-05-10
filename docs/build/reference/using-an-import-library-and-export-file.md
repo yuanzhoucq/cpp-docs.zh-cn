@@ -6,12 +6,12 @@ helpviewer_keywords:
 - import libraries, using
 - export files
 ms.assetid: 2634256a-8aa5-4495-8c9e-6cde10e4ed76
-ms.openlocfilehash: 75a93d97478050718b3f6c32fa83d7320a38954b
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 030b792d4bbebecef9d9303238657a564a142ecf
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317778"
 ---
 # <a name="using-an-import-library-and-export-file"></a>使用导入库和导出文件
 
@@ -29,4 +29,4 @@ ms.locfileid: "57412973"
 
 ## <a name="see-also"></a>请参阅
 
-[使用导入库和导出文件](../../build/reference/working-with-import-libraries-and-export-files.md)
+[使用导入库和导出文件](working-with-import-libraries-and-export-files.md)

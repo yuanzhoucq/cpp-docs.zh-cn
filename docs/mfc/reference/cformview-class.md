@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CFormView [MFC], CFormView
 - CFormView [MFC], IsInitDlgCompleted
 ms.assetid: a99ec313-36f0-4f28-9d2b-de11de14ac19
-ms.openlocfilehash: 4d1f6a19e0fb2ddb88602600e02aec45936ce599
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8a0c11352ffab37f50ede5c67aa810fa20e838ed
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62181998"
 ---
 # <a name="cformview-class"></a>CFormView 类
 
@@ -115,8 +115,8 @@ BOOL IsInitDlgCompleted() const;
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 SNAPVW](../../visual-cpp-samples.md)<br/>
-[MFC 示例 VIEWEX](../../visual-cpp-samples.md)<br/>
+[MFC 示例 SNAPVW](../../overview/visual-cpp-samples.md)<br/>
+[MFC 示例 VIEWEX](../../overview/visual-cpp-samples.md)<br/>
 [CScrollView 类](../../mfc/reference/cscrollview-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CDialog 类](../../mfc/reference/cdialog-class.md)<br/>

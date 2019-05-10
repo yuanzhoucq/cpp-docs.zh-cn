@@ -7,21 +7,21 @@ helpviewer_keywords:
 - C4350
 ms.assetid: 4cc8ed67-64c4-4da5-a7a5-a639232baa23
 ms.openlocfilehash: 8f23751151d8d83c68608d926ef422d56dde41a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384200"
 ---
 # <a name="compiler-warning-level-1-c4350"></a>编译器警告（等级 1）C4350
 
 行为更改: 调用了“member1”而不是“member2”
 
-右值不能绑定到的非常量引用。 在 Visual Studio 2003 之前的 Visual c + + 版本，就可以将右值绑定到直接初始化中的非常量引用。 此代码将会提供一条警告。
+右值不能绑定到的非常量引用。 在视觉对象的版本C++在 Visual Studio 2003 中之前，可能会将右值绑定到直接初始化中的非常量引用。 此代码将会提供一条警告。
 
 为了向后兼容，仍可以将右值绑定到非常量引用但只要有可能，是首选标准转换。
 
-此警告表示从 Visual c + +.NET 2002年编译器行为的更改。 如果启用，此警告可能可能给出有关正确的代码。 例如，它可以为其赋予使用时**std::auto_ptr**类模板。
+此警告表示视觉对象中的行为的更改C++.NET 2002年的编译器。 如果启用，此警告可能可能给出有关正确的代码。 例如，它可以为其赋予使用时**std::auto_ptr**类模板。
 
 如果收到此警告，检查你的代码以查看是否这取决于绑定到非常量引用的右值。 将一个常量添加到该引用或提供其他的常量引用重载可能会解决此问题。
 

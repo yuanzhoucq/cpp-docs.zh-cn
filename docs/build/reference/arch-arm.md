@@ -2,16 +2,16 @@
 title: /arch (ARM)
 ms.date: 11/04/2016
 ms.assetid: 4f1406ff-f174-487c-a126-8ab06cf447c1
-ms.openlocfilehash: 7fd396f4ed9c02daff5363342d7c851d022919ac
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: b732a74d5fe223fdaf3b161d4ae92093ab5df407
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295196"
 ---
 # <a name="arch-arm"></a>/arch (ARM)
 
-为 ARM 上的代码生成指定体系结构。 另请参阅[/arch (x86)](../../build/reference/arch-x86.md)并[/arch (x64)](../../build/reference/arch-x64.md)。
+为 ARM 上的代码生成指定体系结构。 另请参阅[/arch (x86)](arch-x86.md)并[/arch (x64)](arch-x64.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -31,13 +31,13 @@ ms.locfileid: "57424985"
 
 `_M_ARM_FP`宏 （适用于仅用于 ARM) 指示 (如果有） **/arch**编译器选项已使用。 有关更多信息，请参见 [Predefined Macros](../../preprocessor/predefined-macros.md)。
 
-当你使用[/clr](../../build/reference/clr-common-language-runtime-compilation.md)进行编译， **/arch**对托管函数的代码生成没有影响。 **/arch**仅会影响代码生成的本机函数。
+当你使用[/clr](clr-common-language-runtime-compilation.md)进行编译， **/arch**对托管函数的代码生成没有影响。 **/arch**仅会影响代码生成的本机函数。
 
 ### <a name="to-set-the-archarmv7ve-or-archvfpv4-compiler-option-in-visual-studio"></a>在 Visual Studio 中设置 /arch:ARMv7VE 或 /arch:VFPv4 编译器选项
 
-1. 打开**属性页**项目对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开**属性页**项目对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择**C/c + +** 文件夹。
+1. 选择**C /C++** 文件夹。
 
 1. 选择**命令行**属性页。
 
@@ -49,6 +49,6 @@ ms.locfileid: "57424985"
 
 ## <a name="see-also"></a>请参阅
 
-[/arch（最小 CPU 体系结构）](../../build/reference/arch-minimum-cpu-architecture.md)<br/>
-[编译器选项](../../build/reference/compiler-options.md)<br/>
-[设置编译器选项](../../build/reference/setting-compiler-options.md)
+[/arch（最小 CPU 体系结构）](arch-minimum-cpu-architecture.md)<br/>
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)

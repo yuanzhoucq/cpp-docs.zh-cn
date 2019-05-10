@@ -1,18 +1,16 @@
 ---
 title: 指定属性页 (ATL)
 ms.date: 11/04/2016
-f1_keywords:
-- ISpecifyPropertyPages
 helpviewer_keywords:
 - ISpecifyPropertyPages method
 - property pages, specifying
 ms.assetid: ee8678cf-c708-49ab-b0ad-fc2db31f1ac3
-ms.openlocfilehash: d738759dfba50f26b788ee1b0761baf8bc4b00ab
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 47ee0c7d6d2ed464318ab80385ac71cff426a002
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57287120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62196556"
 ---
 # <a name="specifying-property-pages"></a>指定属性页
 
@@ -40,4 +38,4 @@ ms.locfileid: "57287120"
 ## <a name="see-also"></a>请参阅
 
 [属性页](../atl/atl-com-property-pages.md)<br/>
-[ATLPages 示例](../visual-cpp-samples.md)
+[ATLPages 示例](../overview/visual-cpp-samples.md)

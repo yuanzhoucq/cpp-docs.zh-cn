@@ -1,6 +1,6 @@
 ---
 title: task_handle 类
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - task_handle
 - PPL/concurrency::task_handle
@@ -8,17 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - task_handle class
 ms.assetid: 74a34b15-708b-4231-a509-947874292b13
-ms.openlocfilehash: 4193c2d1e08c1b5a43dc728edd24efd19be87268
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8528bc212603484be9325ed967e9475e4faa1348
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298082"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346159"
 ---
 # <a name="taskhandle-class"></a>task_handle 类
 
-
-  `task_handle` 类表示单个并行工作项。 它封装执行一项工作所需的指令和数据。
+`task_handle` 类表示单个并行工作项。 它封装执行一项工作所需的指令和数据。
 
 ## <a name="syntax"></a>语法
 
@@ -40,7 +39,7 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
 
 |名称|描述|
 |----------|-----------------|
-|[task_handle](#ctor)|构造一个新`task_handle`对象。 通过调用作为构造函数的参数指定的函数执行该任务的工作。|
+|[task_handle](#task_handle)|构造一个新`task_handle`对象。 通过调用作为构造函数的参数指定的函数执行该任务的工作。|
 |[~ task_handle 析构函数](#dtor)|销毁`task_handle`对象。|
 
 ### <a name="public-operators"></a>公共运算符
@@ -55,7 +54,7 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
 
 请注意，创建者`task_handle`对象是负责维护创建的生存期`task_handle`对象，直到并发运行时不再需要它。 通常情况下，这意味着`task_handle`对象必须销毁，直到`wait`或`run_and_wait`方法`task_group`或`structured_task_group`已调用到其排队。
 
-`task_handle` 对象通常是与 c + + lambda 结合使用。 因为您不知道 lambda 的真实类型[make_task](concurrency-namespace-functions.md#make_task)函数通常用于创建`task_handle`对象。
+`task_handle` 对象通常与结合使用C++的 lambda。 因为您不知道 lambda 的真实类型[make_task](concurrency-namespace-functions.md#make_task)函数通常用于创建`task_handle`对象。
 
 运行时创建一份工作函数传递给`task_handle`对象。 因此，在函数中发生的任何状态更改对象传递给`task_handle`对象不会显示在该函数对象的副本。
 
@@ -77,7 +76,7 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
 void operator()() const;
 ```
 
-##  <a name="task_handle__ctor"></a> task_handle
+## <a name="taskhandle"></a>task_handle
 
 构造一个新`task_handle`对象。 通过调用作为构造函数的参数指定的函数执行该任务的工作。
 

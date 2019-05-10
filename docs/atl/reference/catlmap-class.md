@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlMap class
 ms.assetid: 5e2fe028-8e6d-4686-93df-1433d2080ec3
-ms.openlocfilehash: 80975047b300f270c0ac58c8b8abfc59ff2b17ef
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1821532a4d5a3078202f180273b02945b8d8e4ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260605"
 ---
 # <a name="catlmap-class"></a>CAtlMap 类
 
@@ -91,7 +91,7 @@ Key 元素类型。
 
 ### <a name="cpair-data-members"></a>CPair 数据成员
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[CPair::m_key](#m_key)|存储密钥的元素，该数据成员。|
 |[CPair::m_value](#m_value)|存储值元素，该数据成员。|
@@ -782,6 +782,6 @@ V  m_value;
 
 ## <a name="see-also"></a>请参阅
 
-[字幕示例](../../visual-cpp-samples.md)<br/>
+[字幕示例](../../overview/visual-cpp-samples.md)<br/>
 [UpdatePV 示例](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)<br/>
 [类概述](../../atl/atl-class-overview.md)

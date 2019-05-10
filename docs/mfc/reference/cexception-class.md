@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
 ms.openlocfilehash: 689afa2ffbc27feec6f9e1704a6b295d5eabfaee
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62163995"
 ---
 # <a name="cexception-class"></a>CException 类
 
@@ -115,7 +115,7 @@ void Delete();
 
 您可以指定当构造对象时是否应删除该对象。 有关详细信息，请参阅[CException::CException](#cexception)。
 
-只需调用`Delete`如果您使用的 c + +**尝试**- **捕获**机制。 如果使用 MFC 宏**尝试**并**捕获**，则这些宏将自动调用此函数。
+只需调用`Delete`如果使用的C++**尝试**- **捕获**机制。 如果使用 MFC 宏**尝试**并**捕获**，则这些宏将自动调用此函数。
 
 ### <a name="example"></a>示例
 

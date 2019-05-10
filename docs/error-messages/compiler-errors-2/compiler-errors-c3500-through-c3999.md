@@ -1,6 +1,6 @@
 ---
-title: 编译器错误 C3500-c3999
-ms.date: 11/17/2017
+title: 编译器错误 C3500 - C3999
+ms.date: 04/21/2019
 f1_keywords:
 - C3502
 - C3503
@@ -246,14 +246,14 @@ f1_keywords:
 - C3998
 - C3999
 ms.assetid: bd6f23ad-b300-4e07-8e35-9661cab1585f
-ms.openlocfilehash: 02686b8c12643480dc18ad665eb7f17e2b8d1170
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5cb482804dac90a278036d594dc92e7be33e2bf
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575001"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857719"
 ---
-# <a name="compiler-errors-c3500-through-c3999"></a>编译器错误 C3500-c3999
+# <a name="compiler-errors-c3500-through-c3999"></a>编译器错误 C3500 - C3999
 
 在本部分文档中的文章说明了由编译器生成的错误消息的子集。
 
@@ -315,7 +315,7 @@ ms.locfileid: "50575001"
 |编译器错误 C3549|'*值*： 函数参数包不能具有默认自变量|
 |[编译器错误 C3550](compiler-error-c3550.md)|此上下文只允许纯“decltype(auto)”|
 |[编译器错误 C3551](compiler-error-c3551.md)|如果使用尾随返回类型，则主要返回类型应为单个类型说明符自动 (不*类型*)|
-|[编译器错误 C3552](compiler-error-c3552.md)|预期 decltype （auto)|
+|[编译器错误 C3552](compiler-error-c3552.md)|expected 'decltype(auto)'|
 |[编译器错误 C3553](compiler-error-c3553.md)|decltype 应为表达式而不是类型|
 |[编译器错误 C3554](compiler-error-c3554.md)|'*类型*不能与任何其他类型说明符组合|
 |[编译器错误 C3555](compiler-error-c3555.md)|“decltype”的参数不正确|
@@ -323,7 +323,7 @@ ms.locfileid: "50575001"
 |编译器错误 C3557|已过时。|
 |编译器错误 C3558|已过时。|
 |编译器错误 C3559|递归调用 '*函数*： 编译在 concurrency:: parallel_for_each 的调用关系图时，检测到递归:*函数*|
-|编译器错误 C3560|'*函数*： 编译在 concurrency:: parallel_for_each 的调用关系图时，IL 不可用:'*函数*|
+|编译器错误 C3560|'*函数*:编译在 concurrency:: parallel_for_each 的调用关系图时，IL 不可用: '*函数*|
 |编译器错误 C3561|平铺屏障操作不是统一平铺，编译在 concurrency:: parallel_for_each 的调用关系图时的控制流中找到:*函数*|
 |编译器错误 C3562|内部函数*函数*已限制为不超过*数*参数|
 |编译器错误 C3563|编译在 concurrency:: parallel_for_each 的调用关系图时检测到无限循环:*函数*|
@@ -338,7 +338,7 @@ ms.locfileid: "50575001"
 |编译器错误 C3572|'*类型*： 非法的计算域参数; 缺少公共成员: static const int rank 或 rank 值为非正值|
 |编译器错误 C3573|传递给 concurrency:: parallel_for_each graphics:: sampler 实例数不能超过*数*|
 |编译器错误 C3574|'*类型*： 非法的平铺范围： 必须是正数，并且 (1) Z < =*数*;（2) Z*Y*X < =*数*|
-|编译器错误 C3575|'*类型*： 非法的计算域参数; 缺少公共成员: concurrency::index <*数*> _map_index (const concurrency::index <*数*>&) restrict （amp)|
+|编译器错误 C3575|'*type*': illegal compute domain argument; missing public member: 'concurrency::index<*number*> _map_index(const concurrency::index<*number*>&) restrict(amp)'|
 |编译器错误 C3576|'*类型*: _parallel_for_each 参数 #*数*具有不受支持的类型|
 |编译器错误 C3577|concurrency:: parallel_for_each 内核参数是非法的： 无法解析对成员调用 void operator （) (*类型*) restrict （amp)|
 |编译器错误 C3578|传递给 concurrency:: parallel_for_each 的函数对象的大小不能超过*数*字节|
@@ -537,7 +537,7 @@ ms.locfileid: "50575001"
 |[编译器错误 C3771](compiler-error-c3771.md)|'*标识符*： 不能在最近的命名空间范围内找到友元声明|
 |[编译器错误 C3772](compiler-error-c3772.md)|'*标识符*： 友元模板声明无效|
 |编译器错误 C3773|请使用 /await 编译器开关来启用协同程序|
-|编译器错误 C3774|找不到 '*作用域*::*标识符*： 请包括*标头*标头|
+|编译器错误 C3774|找不到 '*作用域*::*标识符*:请附上*标头*标头|
 |编译器错误 C3775|返回类型*函数*不应*类型*|
 |编译器错误 C3776|不能返回 void 具有非 void 最终返回类型的协同程序中的类型的表达式|
 |编译器错误 C3777|'*函数*: 协同程序无法采用变量参数列表|
@@ -647,11 +647,11 @@ ms.locfileid: "50575001"
 |编译器错误 C3881|只能从直接基继承构造函数|
 |编译器错误 C3882|'*类*： 构造函数已继承自*类*|
 |编译器错误 C3883|'*成员*: initonly 静态数据成员必须进行初始化|
-|编译器错误 C3884|'*类型*： 未知大小的数组不能进行值初始化|
-|编译器错误 C3885|'*类型*： 不能使用空初始值设定项列表初始化未知大小的数组|
+|编译器错误 C3884|'*类型*:未知大小的数组不能进行值初始化|
+|编译器错误 C3885|'*类型*:不能使用空初始值设定项列表初始化未知大小的数组|
 |[编译器错误 C3886](compiler-error-c3886.md)|'*成员*: literal 数据成员必须被初始化|
 |[编译器错误 C3887](compiler-error-c3887.md)|'*成员*: literal 数据成员的初始值设定项必须是常量表达式|
-|[编译器错误 C3888](compiler-error-c3888.md)|'*成员*： 与此 literal 数据成员关联的常量表达式不受 C + + /cli CLI|
+|[编译器错误 C3888](compiler-error-c3888.md)|'*成员*： 不支持与此 literal 数据成员关联的常量表达式C++/CLI|
 |编译器错误 C3889|已过时。|
 |[编译器错误 C3890](compiler-error-c3890.md)|'*成员*： 不能采用 literal 数据成员的地址|
 |[编译器错误 C3891](compiler-error-c3891.md)|'*成员*: literal 数据成员不能用作左值|
@@ -715,11 +715,11 @@ ms.locfileid: "50575001"
 |编译器错误 C3949|包扩展，...，不能出现在带圆括号的抽象声明符|
 |编译器错误 C3950|已过时。|
 |编译器错误 C3951|不能使用提取的 WinRT 类型的指针到成员*类型*。 请改用委托。|
-|编译器错误 C3952|'*类型*: WinRT 不支持 in/out 数组。 使用 const 数组<T>^ 为 in 和 WriteOnlyArray<T>或数组<T>^ * 的公共 Api 上的 out|
+|编译器错误 C3952|'*类型*:WinRT 不支持中/out 数组。 使用 const 数组<T>^ 为 in 和 WriteOnlyArray<T>或数组<T>^ * 的公共 Api 上的 out|
 |编译器错误 C3953|不能使用托管的类*类型*WinRT 模块中。|
-|编译器错误 C3954|'*类型*: WinRT 类型上从已发布方法返回的数组必须使用窗体数组<T>^|
-|编译器错误 C3955|'*类型*： 公共构造函数不能包含 out 参数或 WriteOnlyArray<T>|
-|编译器错误 C3956|'*类型*： 类型标记为独占到'*类型*并不能用作的基*derived_type*|
+|编译器错误 C3954|'*类型*:从已发布方法返回对 WinRT 类型的数组必须使用窗体数组<T>^|
+|编译器错误 C3955|'*类型*:公共构造函数不能包含 out 参数或 WriteOnlyArray<T>|
+|编译器错误 C3956|'*类型*:类型标记为独占到 '*类型*并不能用作的基本*derived_type*|
 |编译器错误 C3957|'*类型*： 不能使用 new 在 WinRT 类型; 请改用 ref new|
 |编译器错误 C3958|'*类型*： 不能使用 gcnew WinRT 类型; 请改用 ref new|
 |编译器错误 C3959|ref new 可能仅用于创建 WinRT 类型对象|
@@ -760,5 +760,10 @@ ms.locfileid: "50575001"
 |编译器错误 C3994|'*类型*： 值类型不能实现接口或具有虚函数|
 |编译器错误 C3995|'*类型*： 值类型不能具有任何事件成员*标识符*|
 |编译器错误 C3996|已过时。|
-|编译器错误 C3998|c + +*版本*： 不受支持的 c + + 版本; 默认为 c + +*版本*|
-|编译器错误 C3999|未知错误请选择 Visual c + + 帮助菜单上的技术支持命令或打开技术支持帮助文件了解详细信息|
+|编译器错误 C3998|c + +*版本*： 不支持C++版本; 默认为 c + +*版本*|
+|编译器错误 C3999|未知的错误请选择视觉对象上的技术支持命令C++帮助菜单中，或打开技术支持帮助文件了解详细信息|
+
+## <a name="see-also"></a>请参阅
+
+[C /C++编译器和生成工具错误和警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[编译器错误 C2000-C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

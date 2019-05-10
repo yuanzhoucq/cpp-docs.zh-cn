@@ -7,15 +7,15 @@ helpviewer_keywords:
 - ATL
 ms.assetid: 77f565e8-c4ec-4a80-af4b-7278fcfe5c98
 ms.openlocfilehash: 8c2dcab962cd9863acf0f8e7070727f3b18117d5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261912"
 ---
 # <a name="introduction-to-atl"></a>ATL 简介
 
-ATL 是活动模板库、 一组基于模板的 c + + 类使用它可以轻松地创建小型、 快速的组件对象模型 (COM) 对象。 它提供了特殊支持密钥 COM 功能，包括： 股票的实现[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)， [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)， [IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2)，和`IDispatch`; 双接口;标准 COM 枚举器接口;连接点;分离式接口;和 ActiveX 控件。
+ATL 是活动模板库的基于模板的一组C++类使用它可以轻松地创建小，快速组件对象模型 (COM) 对象。 它提供了特殊支持密钥 COM 功能，包括： 股票的实现[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)， [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)， [IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2)，和`IDispatch`; 双接口;标准 COM 枚举器接口;连接点;分离式接口;和 ActiveX 控件。
 
 ATL 代码可以用于创建单线程对象、 单元模型对象、 自由线程模型对象或自由线程和单元模型对象。
 

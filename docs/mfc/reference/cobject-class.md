@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CObject [MFC], Serialize
 ms.assetid: 95e9acd3-d9eb-4ac0-b52b-ca4a501a7a3a
 ms.openlocfilehash: 515c4e90ee6ab77a6c7c1ae108393ea1aafb7c17
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388314"
 ---
 # <a name="cobject-class"></a>CObject 类
 
@@ -83,7 +83,7 @@ class AFX_NOVTABLE CObject
 
 第二级别宏[DECLARE_SERIAL](run-time-object-model-services.md#declare_serial)并[IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)，包括所有功能的第一级别宏，并且它们使对象可以"序列化"到和从"存档"。
 
-有关一般情况下派生 Microsoft 基础类和 c + + 类和使用信息`CObject`，请参阅[使用 CObject](../../mfc/using-cobject.md)并[序列化](../../mfc/serialization-in-mfc.md)。
+有关 Microsoft 基础类派生信息和C++类在一般情况下，并使用`CObject`，请参阅[使用 CObject](../../mfc/using-cobject.md)并[序列化](../../mfc/serialization-in-mfc.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -139,7 +139,7 @@ CObject(const CObject& objectSrc);
 
 如果您的类是可序列化 （它集成了 IMPLEMENT_SERIAL 宏），则必须在类声明具有默认构造函数 （不带任何参数的构造函数）。 如果不需要默认构造函数，声明一个私有或受保护"空"的构造函数。 有关详细信息，请参阅[使用 CObject](../../mfc/using-cobject.md)。
 
-标准 c + + 默认类复制构造函数执行成员按成员复制。 是否存在私有`CObject`复制构造函数可保证编译器错误消息，如果您的类的复制构造函数是所需但不可用。 如果您的类时要求此功能，因此必须提供一个复制构造函数。
+标准C++默认类的复制构造函数 does 成员按成员复制。 是否存在私有`CObject`复制构造函数可保证编译器错误消息，如果您的类的复制构造函数是所需但不可用。 如果您的类时要求此功能，因此必须提供一个复制构造函数。
 
 ### <a name="example"></a>示例
 
@@ -238,7 +238,7 @@ BOOL IsKindOf(const CRuntimeClass* pClass) const;
 
 此函数将测试*pClass* （1） 它是指定类的对象或者 （2） 它是派生自指定类的类的对象。 此函数仅适用于使用声明的类[DECLARE_DYNAMIC](run-time-object-model-services.md#declare_dynamic)， [DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate)，或[DECLARE_SERIAL](run-time-object-model-services.md#declare_serial)宏。
 
-不要使用此函数广泛因为它使您无法获得 c + + 多态性功能。 而是使用虚函数。
+不要使用此函数广泛因为它使您无法获得C++多形性功能。 而是使用虚函数。
 
 ### <a name="example"></a>示例
 

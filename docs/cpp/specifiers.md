@@ -7,11 +7,11 @@ helpviewer_keywords:
 - specifiers, in declarations
 ms.assetid: 8b14e844-9880-4571-8779-28c8efe44633
 ms.openlocfilehash: aef967b26321f289cb8c7bd0402d7fe8f12b77b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330968"
 ---
 # <a name="specifiers"></a>说明符
 
@@ -19,17 +19,17 @@ ms.locfileid: "50611401"
 
 以下占位符和语言关键字为声明说明符：
 
-*存储类说明符*
+*storage-class-specifier*
 
-*类型说明符*
+*type-specifier*
 
-*函数说明符*
+*function-specifier*
 
 [friend](friend-cpp.md)
 
-[typedef](aliases-and-typedefs-cpp.md) `(` *扩展声明修饰符 seq* `)`
+[typedef](aliases-and-typedefs-cpp.md) `(` *extended-decl-modifier-seq* `)`
 
-[__declspec](declspec.md) `(` *扩展声明修饰符 seq* `)`
+[__declspec](declspec.md) `(` *extended-decl-modifier-seq* `)`
 
 ## <a name="remarks"></a>备注
 
@@ -37,7 +37,7 @@ ms.locfileid: "50611401"
 
 下表列出了四个声明，并随后会列出每个声明*声明说明符*并*声明符*组件分开。
 
-|声明|*声明说明符*|`declarator`|
+|声明|*decl-specifiers*|`declarator`|
 |-----------------|------------------------|------------------|
 |`char *lpszAppName;`|**char**|`*lpszAppName`|
 |`typedef char * LPSTR;`|**char**|`*LPSTR`|

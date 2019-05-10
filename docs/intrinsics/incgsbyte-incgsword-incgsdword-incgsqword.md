@@ -16,12 +16,12 @@ helpviewer_keywords:
 - __incgsqword intrinsic
 - __incgsdword intrinsic
 ms.assetid: 06bfdf4f-7643-4fe0-8455-60ce3068073e
-ms.openlocfilehash: c0fb12a56a8c6e0220818d54ee5ec7413fe56b43
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 3b96fbdb343fa40b6615ac7f91f83099a294624c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62264018"
 ---
 # <a name="incgsbyte-incgsword-incgsdword-incgsqword"></a>__incgsbyte, __incgsword, __incgsdword, __incgsqword
 
@@ -48,7 +48,7 @@ void __incgsqword(
 
 #### <a name="parameters"></a>参数
 
-*偏移量*<br/>
+*Offset*<br/>
 [in]从开始处的偏移量`GS`。
 
 ## <a name="requirements"></a>要求
@@ -68,7 +68,7 @@ void __incgsqword(
 
 ## <a name="see-also"></a>请参阅
 
-[__addgsbyte， \__addgsword， \__addgsdword， \__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)<br/>
+[__addgsbyte, \__addgsword, \__addgsdword, \__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)<br/>
 [__readgsbyte， \__readgsdword， \__readgsqword， \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)<br/>
 [__writegsbyte， \__writegsdword， \__writegsqword， \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)<br/>
 [编译器内部函数](../intrinsics/compiler-intrinsics.md)

@@ -16,16 +16,16 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - IsSubclassed method [MFC]
 ms.assetid: 3236d4de-401f-49b7-918d-c84559ecc426
-ms.openlocfilehash: 08cdb90537dd50855a5bf223fbe54d58dfd6c365
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7042df6e7b7dc2c9a608470ba7cfc5a9e9f6127a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62239488"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>MFC ActiveX 控件：子类化 Windows 控件
 
-本文介绍了通过将常用的 Windows 控件子类化来创建 ActiveX 控件的过程。 将现有的 Windows 控件子类化是一种开发 ActiveX 控件的快速方法。 新的控件将具有已被子类化的 Windows 控件的能力，如绘制和响应鼠标单击。 MFC ActiveX 控件示例[按钮](../visual-cpp-samples.md)是子类化 Windows 控件的一个示例。
+本文介绍了通过将常用的 Windows 控件子类化来创建 ActiveX 控件的过程。 将现有的 Windows 控件子类化是一种开发 ActiveX 控件的快速方法。 新的控件将具有已被子类化的 Windows 控件的能力，如绘制和响应鼠标单击。 MFC ActiveX 控件示例[按钮](../overview/visual-cpp-samples.md)是子类化 Windows 控件的一个示例。
 
 >[!IMPORTANT]
 > ActiveX 是一项传统技术，不应使用新的开发。 有关取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
@@ -93,7 +93,7 @@ ActiveX 控件容器可以设计为自行执行消息反射，从而不必使用
 
 - 另外，请在。CPP 文件实现`OnOcmCommand`成员函数处理反射的消息。 *WParam*并*lParam*参数是不同于原始窗口消息。
 
-有关举例说明如何反映在处理消息，请参阅 MFC ActiveX 控件示例[按钮](../visual-cpp-samples.md)。 它演示了`OnOcmCommand`处理程序，它检测 BN_CLICKED 通知代码，并通过激发 （发送） 响应`Click`事件。
+有关举例说明如何反映在处理消息，请参阅 MFC ActiveX 控件示例[按钮](../overview/visual-cpp-samples.md)。 它演示了`OnOcmCommand`处理程序，它检测 BN_CLICKED 通知代码，并通过激发 （发送） 响应`Click`事件。
 
 ## <a name="see-also"></a>请参阅
 

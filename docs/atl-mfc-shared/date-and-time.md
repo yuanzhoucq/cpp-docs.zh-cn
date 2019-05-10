@@ -7,16 +7,16 @@ helpviewer_keywords:
 - MFC, date and time
 - dates, MFC
 ms.assetid: ecf56dc5-d418-4603-ad3e-af7e205a6403
-ms.openlocfilehash: dcb5ef9f21987e11608cfa29e77b24e96153e6b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 32222b4a2a529716db2c414e0281e1b1ba16a0dd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459444"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62236419"
 ---
 # <a name="date-and-time"></a>日期和时间
 
-MFC 支持多种不同的使用日期和时间。 这些方法包括：
+MFC 支持多种不同的使用日期和时间。 这些问题包括：
 
 - 通用时间类。 [CTime](../atl-mfc-shared/reference/ctime-class.md)并[CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md)类封装了大部分使用 ANSI 标准时间库，在时间中声明关联的功能。H.
 
@@ -36,4 +36,3 @@ MFC 支持多种不同的使用日期和时间。 这些方法包括：
 
 [概念](../mfc/mfc-concepts.md)<br/>
 [常规 MFC 主题](../mfc/general-mfc-topics.md)
-

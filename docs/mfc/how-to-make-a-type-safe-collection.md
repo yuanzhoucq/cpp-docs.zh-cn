@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serialization [MFC], collection classes
 - collection classes [MFC], deriving from nontemplate
 ms.assetid: 7230b2db-4283-4083-b098-eb231bf5b89e
-ms.openlocfilehash: d4241a77184458f5253b6d8987c310604310683c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c8be781bad699edb8cb0be844d79802269c3e0c5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160258"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>如何：创建类型安全集合
 
@@ -27,7 +27,7 @@ ms.locfileid: "57295183"
 
 - [使用非模板集合类](#_core_using_nontemplate_collection_classes)
 
-Microsoft 基础类库提供基于 C++ 模板的预定义类型安全集合。 由于它们是模板，因此这些类帮助提供类型安全并且易于使用，不必进行类型转换和其他与为了此目的使用非模板类有关的额外的工作。 MFC 示例[收集](../visual-cpp-samples.md)演示如何使用 MFC 应用程序中的基于模板的集合类。 一般将在编写新集合代码时使用这些类。
+Microsoft 基础类库提供基于 C++ 模板的预定义类型安全集合。 由于它们是模板，因此这些类帮助提供类型安全并且易于使用，不必进行类型转换和其他与为了此目的使用非模板类有关的额外的工作。 MFC 示例[收集](../overview/visual-cpp-samples.md)演示如何使用 MFC 应用程序中的基于模板的集合类。 一般将在编写新集合代码时使用这些类。
 
 ##  <a name="_core_using_template.2d.based_classes_for_type_safety"></a> 为了类型安全使用基于模板的类
 
@@ -51,11 +51,9 @@ Microsoft 基础类库提供基于 C++ 模板的预定义类型安全集合。 �
 
 ###  <a name="_core_serializing_elements"></a> 序列化元素
 
+`CArray`、`CList` 和 `CMap` 类将调用 `SerializeElements` 以将集合元素存储到存档中或从存档中读取集合元素。
 
-  `CArray`、`CList` 和 `CMap` 类将调用 `SerializeElements` 以将集合元素存储到存档中或从存档中读取集合元素。
-
-
-  `SerializeElements` 帮助器函数的默认实现将执行从对象到存档的位写入，或从存档到对象的位读取，具体取决于是将对象存储在存档中还是从存档中检索对象。 如果此操作不合适，则请重写 `SerializeElements`。
+`SerializeElements` 帮助器函数的默认实现将执行从对象到存档的位写入，或从存档到对象的位读取，具体取决于是将对象存储在存档中还是从存档中检索对象。 如果此操作不合适，则请重写 `SerializeElements`。
 
 如果您的集合存储派生自 `CObject` 的对象并且您在集合元素类的实现中使用 `IMPLEMENT_SERIAL` 宏，则可以使用内置于 `CArchive` 和 `CObject` 的序列化功能：
 

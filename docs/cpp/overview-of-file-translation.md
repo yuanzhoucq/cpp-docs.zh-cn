@@ -10,11 +10,11 @@ helpviewer_keywords:
 - preprocessing translation phase
 ms.assetid: 5036c7b7-ccff-4e2c-b052-a9ea6c71af87
 ms.openlocfilehash: cb8a8fea2411e4eb7de78545f70021f3617b0f52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325138"
 ---
 # <a name="overview-of-file-translation"></a>文件转换概述
 
@@ -43,9 +43,9 @@ C++ 预处理器是 ANSI C 预处理器的严格超集，但在某些实例中�
 
 - 支持单行注释。 请参阅[注释](../cpp/comments-cpp.md)有关详细信息。
 
-- 一个预定义的宏， `__cplusplus`，仅为 c + + 定义。 请参阅[预定义的宏](../preprocessor/predefined-macros.md)中*预处理器参考 》* 有关详细信息。
+- 一个预定的义宏`__cplusplus`，仅为定义C++。 请参阅[预定义的宏](../preprocessor/predefined-macros.md)中*预处理器参考 》* 有关详细信息。
 
-- C 预处理器不能识别 c + + 运算符： **。**<strong>\*</strong>， **->** <strong>\*</strong>，并 **::**。 请参阅[运算符](../cpp/cpp-built-in-operators-precedence-and-associativity.md)并[表达式](../cpp/expressions-cpp.md)，有关运算符的详细信息。
+- C 预处理器不能识别C++运算符： **。**<strong>\*</strong>， **->** <strong>\*</strong>，并 **::**。 请参阅[运算符](../cpp/cpp-built-in-operators-precedence-and-associativity.md)并[表达式](../cpp/expressions-cpp.md)，有关运算符的详细信息。
 
 ## <a name="see-also"></a>请参阅
 

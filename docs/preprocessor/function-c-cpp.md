@@ -8,12 +8,12 @@ helpviewer_keywords:
 - function pragma
 - pragmas, function
 ms.assetid: cbd1bd60-fabf-4b5a-9c3d-2d9f4b871365
-ms.openlocfilehash: 1c8c250e3ea28d56aec837f5c3353c3bb6515442
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c57ff2053b3c1fd52474c7eb0dd598641632f789
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409923"
 ---
 # <a name="function-cc"></a>函数 (C/C++)
 指定生成对杂注的自变量列表中指定的函数的调用。

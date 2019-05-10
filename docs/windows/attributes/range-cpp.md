@@ -1,17 +1,17 @@
 ---
-title: 范围 （c + + COM 属性）
+title: 范围 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.range
 helpviewer_keywords:
 - range attribute
 ms.assetid: f352f79e-ecb3-4cdd-9cdd-8406ef473594
-ms.openlocfilehash: b75915b901f55ce7ef8d295531ab5148c6535c93
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ce941fe95f2bbef3895c039984db1e1d2985ae1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407479"
 ---
 # <a name="range-c"></a>range (C++)
 
@@ -33,7 +33,7 @@ ms.locfileid: "50644955"
 
 ## <a name="remarks"></a>备注
 
-**范围**c + + 属性具有相同的功能[范围](/windows/desktop/Midl/range)MIDL 特性。
+**范围**C++属性具有相同的功能[范围](/windows/desktop/Midl/range)MIDL 特性。
 
 ## <a name="example"></a>示例
 
@@ -59,8 +59,8 @@ __interface ICustom {
 |-|-|
 |**适用对象**|接口方法，接口参数|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

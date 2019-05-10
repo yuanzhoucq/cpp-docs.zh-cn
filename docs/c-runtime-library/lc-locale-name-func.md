@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - ___lc_locale_name_func
 ms.assetid: ef858308-872e-43de-95e0-9b1b4084343e
-ms.openlocfilehash: 17724fe5335ba54d7e32ed7851b6a35b132b1086
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88ce07ca3fece558c23f4fcd9a12949f184b7532
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639837"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741055"
 ---
 # <a name="lclocalenamefunc"></a>___lc_locale_name_func
 

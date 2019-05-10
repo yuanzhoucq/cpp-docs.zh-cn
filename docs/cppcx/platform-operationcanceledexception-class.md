@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::OperationCanceledException
 ms.assetid: 5351bc20-5408-423a-8169-f09acc8a3fbb
-ms.openlocfilehash: 11a5b6b9886fdf59512446e8f7c3deb5045b7ce3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f129c49077a5c6bde54c5afb0ede2cfd9adf9db2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184075"
 ---
 # <a name="platformoperationcanceledexception-class"></a>Platform::OperationCanceledException 类
 

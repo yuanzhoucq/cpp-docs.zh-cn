@@ -9,11 +9,11 @@ helpviewer_keywords:
 - friend keyword [C++]
 ms.assetid: 8fe9ee55-d56f-40cd-9075-d9fb1375aff4
 ms.openlocfilehash: 769720877cc58de530791b268811d7d01adad3e6
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154476"
 ---
 # <a name="friend-c"></a>友元 (C++)
 
@@ -51,7 +51,7 @@ friend class F;
 friend F;
 ```
 
-如果该名称的现有类不最内部的命名空间中找到，则第一个窗体引入了一个新类 F。 **C++ 11**： 第二个窗体不会引入的新类; 当已声明的类，并声明模板类型参数或为友元的 typedef 时，必须使用它可以使用它。
+如果该名称的现有类不最内部的命名空间中找到，则第一个窗体引入了一个新类 F。 **C + + 11**:第二个窗体不会引入一个新的类;已声明类，并声明的模板类型参数或为友元的 typedef 时必须使用它时可以使用它。
 
 使用`class friend F`时被引用的类型具有尚未声明：
 

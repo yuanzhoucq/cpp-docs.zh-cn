@@ -15,11 +15,11 @@ helpviewer_keywords:
 - msclr::lock class
 ms.assetid: 5123edd9-6aed-497d-9a0b-f4b6d6c0d666
 ms.openlocfilehash: 43418da36aa2d87608a9d672e4345d24011be0b3
-ms.sourcegitcommit: 9813e146a4eb30929d8352872859e8fcb7ff6d2f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54805950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153434"
 ---
 # <a name="lock-class"></a>lock 类
 
@@ -41,14 +41,14 @@ ref class lock;
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|name|描述|
+|名称|描述|
 |---------|-----------|
 |[lock::lock](#lock)|构造`lock`对象，可以选择等待下去，为指定的量的时间，或者根本不获取锁。|
 |[lock::~lock](#tilde-lock)|因`lock`对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|name|描述|
+|名称|描述|
 |---------|-----------|
 |[lock::acquire](#acquire)|获取对象后，可以选择等待下去，为指定的量的时间，或者根本不获取锁的锁。|
 |[lock::is_locked](#is-locked)|指示是否要保持的锁。|
@@ -57,7 +57,7 @@ ref class lock;
 
 ### <a name="public-operators"></a>公共运算符
 
-|name|描述|
+|名称|描述|
 |---------|-----------|
 |[lock::operator&nbsp;bool](#operator-bool)|使用运算符`lock`条件表达式中。|
 |[lock::operator==](#operator-equality)|相等运算符。|

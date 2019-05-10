@@ -6,12 +6,12 @@ helpviewer_keywords:
 - static constructors, interface
 - interface static constructor
 ms.assetid: 1f031cb2-e94f-43dc-819b-44cf2faaaa49
-ms.openlocfilehash: 0617454e0957dccc7e28a5172a40273b5d93bede
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 326b315e1e6c4defbef3ab6e487c78635e0aa50f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62378946"
 ---
 # <a name="how-to-define-an-interface-static-constructor-ccli"></a>如何：定义接口静态构造函数 (C++/CLI)
 
@@ -56,4 +56,4 @@ in MyInterface static constructor
 
 ## <a name="see-also"></a>请参阅
 
-[接口类](../windows/interface-class-cpp-component-extensions.md)
+[接口类](../extensions/interface-class-cpp-component-extensions.md)

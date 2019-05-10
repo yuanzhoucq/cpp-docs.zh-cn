@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - marshal_as template [C++]
 ms.assetid: 2ed717da-2b11-41e5-981d-47d251771989
-ms.openlocfilehash: a30f86a41917419474f93a915b92d125112ec7ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2294d8fe94a32f281332c963b21a542366ae3207
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62386078"
 ---
 # <a name="marshalas"></a>marshal_as
 
@@ -39,7 +39,7 @@ To_Type marshal_as<To_Type>(
 
 ## <a name="remarks"></a>备注
 
-此方法是本机和托管类型之间转换数据的简化的方法。 若要确定支持哪些数据类型，请参阅[Overview of Marshaling c + + 中](../dotnet/overview-of-marshaling-in-cpp.md)。 某些数据转换需要上下文。 可以使用转换这些数据类型[marshal_context 类](../dotnet/marshal-context-class.md)。
+此方法是本机和托管类型之间转换数据的简化的方法。 若要确定支持哪些数据类型，请参阅[Overview of Marshaling 中C++ ](../dotnet/overview-of-marshaling-in-cpp.md)。 某些数据转换需要上下文。 可以使用转换这些数据类型[marshal_context 类](../dotnet/marshal-context-class.md)。
 
 如果你尝试封送数据类型不受支持的一对`marshal_as`将生成错误[C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)在编译时。 读取消息提供此错误以了解更多信息。 `C4996`可为多个只是已弃用的函数生成错误。 一个例子尝试封送一对不受支持的数据类型。
 

@@ -1,17 +1,17 @@
 ---
-title: requires_category （c + + COM 属性）
+title: requires_category (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.requires_category
 helpviewer_keywords:
 - requires_category attribute
 ms.assetid: a645fdc6-1ef5-414d-8c56-5fe2686d4687
-ms.openlocfilehash: e6621e2cec92eadb0ca4b4ac989b4ca7d578b2ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec35a1958d9fbcf77fef7f498c6c0dba3ab17df9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407362"
 ---
 # <a name="requirescategory"></a>requires_category
 
@@ -31,7 +31,7 @@ ms.locfileid: "50429833"
 
 ## <a name="remarks"></a>备注
 
-**Requires_category** c + + 属性指定目标类所需的组件类别。 有关详细信息，请参阅[REQUIRED_CATEGORY](../../atl/reference/category-macros.md#required_category)。
+**Requires_category** C++属性指定目标类所需的组件类别。 有关详细信息，请参阅[REQUIRED_CATEGORY](../../atl/reference/category-macros.md#required_category)。
 
 此属性要求 [coclass](coclass.md)、 [progid](progid.md)或 [vi_progid](vi-progid.md) 属性（或隐含这些属性之一的其他属性）也应用于同一个元素。
 
@@ -62,7 +62,7 @@ class CMyClass {};
 |**适用对象**|**类**，**结构**|
 |**可重复**|否|
 |**必需的特性**|一个或多个以下： `coclass`， `progid`，或`vi_progid`。|
-|**无效的特性**|无|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

@@ -2,16 +2,16 @@
 title: 编译器和链接器选项 (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: ecfadce8-3a3f-40cc-bb01-b4731f8d2fcb
-ms.openlocfilehash: 2165d802e6ff4bd530acac7c1ba6185c732a6499
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cc1964c57d6700995bb283c245e4c63c8e9e313b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383355"
 ---
 # <a name="compiler-and-linker-options-ccx"></a>编译器和链接器选项 (C++/CX)
 
-环境变量，C + + /cli CX 编译器选项和链接器选项支持的应用程序构建针对 Windows 运行时。
+环境变量， C++/CX 编译器选项和 Windows 运行时支持的应用程序生成的链接器选项。
 
 ## <a name="library-path"></a>库路径
 
@@ -31,7 +31,7 @@ ms.locfileid: "50577278"
 |选项|描述|
 |------------|-----------------|
 |/APPCONTAINER[:NO]|将可执行文件标记为可在 appcontainer（仅限）中运行。|
-|/WINMD [: {无&AMP;#124;仅}]|发出 .winmd 文件和关联的二进制文件。 此选项必须传递给链接器，才能发出 .winmd。<br /><br /> **NO**- 不发出 .winmd 文件，但是发出二进制文件。<br /><br /> **ONLY**- 发出 .winmd 文件，但是不发出二进制文件。|
+|/WINMD[:{NO&#124;ONLY}]|发出 .winmd 文件和关联的二进制文件。 此选项必须传递给链接器，才能发出 .winmd。<br /><br /> **NO**- 不发出 .winmd 文件，但是发出二进制文件。<br /><br /> **ONLY**- 发出 .winmd 文件，但是不发出二进制文件。|
 |/WINMDFILE:*filename*|要发出的 .winmd 文件的名称，而不是默认 .winmd 文件名。 如果在命令行上指定了多个文件名，则使用最后一个名称。|
 |/WINMDDELAYSIGN[:NO]|对 .winmd 文件进行部分签名并将公钥置于二进制文件中。<br /><br /> **NO**-（默认）不对 .winmd 文件进行签名。<br /><br /> 除非还指定了 /WINMDKEYFILE 或 /WINMDKEYCONTAINER，否则 /WINMDDELAYSIGN 不会产生任何效果。|
 |/WINMDKEYCONTAINER:*name*|指定用来对程序集进行签名的密钥容器。 *name* 参数对应于用于对元数据文件进行签名的密钥容器。|
@@ -43,4 +43,4 @@ ms.locfileid: "50577278"
 
 ## <a name="see-also"></a>请参阅
 
-[构建应用程序和库](../cppcx/building-apps-and-libraries-c-cx.md)
+[生成应用和库](../cppcx/building-apps-and-libraries-c-cx.md)

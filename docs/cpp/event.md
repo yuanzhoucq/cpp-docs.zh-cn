@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __event keyword [C++]
 - events [C++], __event
 ms.assetid: d3019b3e-722e-48df-8536-c05878461f9e
-ms.openlocfilehash: bd5f53e5d2b80b22c3a38f413c4fa79b27fa7026
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3a837e30d3cd66f7caa9b44971f432e00b0917ae
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154420"
 ---
 # <a name="event"></a>__event
 
@@ -62,7 +62,7 @@ __event HRESULT OnClick(int* b, char* s);
 
 COM 事件是接口。 事件源接口中的方法的参数应为*中*参数 （但不是强制这一点严格），因为*出*参数不是多播时无用。 如果您使用，将发出 1 级警告*出*参数。
 
-返回类型通常是 HRESULT 或**void**，但可以是任何整型类型，包括**枚举**。 当事件使用整数返回类型并且事件处理程序返回非零值时，这是错误情况，此时引发的事件将中止对其他委托的调用。 请注意，编译器会自动将标记作为事件源接口[源](../windows/source-cpp.md)为生成的 IDL 中。
+返回类型通常是 HRESULT 或**void**，但可以是任何整型类型，包括**枚举**。 当事件使用整数返回类型并且事件处理程序返回非零值时，这是错误情况，此时引发的事件将中止对其他委托的调用。 请注意，编译器会自动将标记作为事件源接口[源](../windows/attributes/source-cpp.md)为生成的 IDL 中。
 
 [__Interface](../cpp/interface.md)关键字始终是后需要 **__event** COM 事件源。
 
@@ -75,7 +75,7 @@ __event __interface IEvent1;
 
 ## <a name="managed-events"></a>托管事件
 
-有关新语法中的编码事件的信息，请参阅[事件](../windows/event-cpp-component-extensions.md)。
+有关新语法中的编码事件的信息，请参阅[事件](../extensions/event-cpp-component-extensions.md)。
 
 托管事件是数据成员或方法。 与事件使用时，委托的返回类型必须符合[公共语言规范](/dotnet/standard/language-independence-and-language-independent-components)。 事件处理程序的返回类型必须与委托的返回类型匹配。 有关委托的详细信息，请参阅[委托和事件](../dotnet/delegates-and-events.md)。 如果托管事件是数据成员，则其类型必须是指向委托的指针。
 
@@ -87,9 +87,9 @@ __event ClickEventHandler* OnClick;  // data member as event
 __event void OnClick(String* s);  // method as event
 ```
 
-隐式声明托管事件时，您可以指定添加或移除添加或移除事件处理程序时将调用的 add 和 remove 访问器。 您还可以定义从类外部调用（引发）事件的方法。
+隐式声明托管事件时，你可以指定添加或移除添加或移除事件处理程序时将调用的 add 和 remove 访问器。 您还可以定义从类外部调用（引发）事件的方法。
 
-## <a name="example-native-events"></a>示例：本机事件
+## <a name="example-native-events"></a>示例:本机事件
 
 ```cpp
 // EventHandling_Native_Event.cpp
@@ -101,7 +101,7 @@ public:
 };
 ```
 
-## <a name="example-com-events"></a>示例：COM 事件
+## <a name="example-com-events"></a>示例:COM 事件
 
 ```cpp
 // EventHandling_COM_Event.cpp
@@ -131,8 +131,8 @@ public:
 
 [关键字](../cpp/keywords-cpp.md)<br/>
 [事件处理](../cpp/event-handling.md)<br/>
-[event_source](../windows/event-source.md)<br/>
-[event_receiver](../windows/event-receiver.md)<br/>
+[event_source](../windows/attributes/event-source.md)<br/>
+[event_receiver](../windows/attributes/event-receiver.md)<br/>
 [__hook](../cpp/hook.md)<br/>
 [__unhook](../cpp/unhook.md)<br/>
 [__raise](../cpp/raise.md)

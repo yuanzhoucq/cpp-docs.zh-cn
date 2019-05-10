@@ -25,12 +25,12 @@ helpviewer_keywords:
 - IsAutoAccessor method
 - ReleaseAccessors method
 ms.assetid: 389b65be-11ca-4ae0-9290-60c621c4982b
-ms.openlocfilehash: 5fb39d2291c2698dc57150eb44a6bbd6778812bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 34c92f9057f2273d57b69bdb42c49a81923c3d2a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62284054"
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase 类
 
@@ -72,7 +72,7 @@ void Close();
 
 必须调用[ReleaseAccessors](../../data/oledb/caccessorbase-releaseaccessors.md)第一个。
 
-## <a name="geth"></a> Caccessorbase:: Gethaccessor
+## <a name="geth"></a> CAccessorBase::GetHAccessor
 
 检索指定访问器的访问器句柄。
 
@@ -105,7 +105,7 @@ ULONG GetNumAccessors() const;
 
 访问器类创建的数。
 
-## <a name="isauto"></a> Caccessorbase:: Isautoaccessor
+## <a name="isauto"></a> CAccessorBase::IsAutoAccessor
 
 如果自动检索数据的访问器在移动操作期间，则返回 true。
 

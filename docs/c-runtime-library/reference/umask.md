@@ -27,11 +27,11 @@ helpviewer_keywords:
 - files [C++], permission settings for
 ms.assetid: 5e9a13ba-5321-4536-8721-6afb6f4c8483
 ms.openlocfilehash: 113bf97b0fe93204cd41de20bc36a8be080a88b6
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155415"
 ---
 # <a name="umask"></a>_umask
 
@@ -62,7 +62,7 @@ int _umask( int pmode );
 |-|-|
 | **_S_IWRITE** | 允许写入。 |
 | **_S_IREAD** | 允许读取。 |
-| **_S_IREAD** &AMP;#124; **_S_IWRITE** | 允许读取和写入。 |
+| **_S_IREAD** &#124; **_S_IWRITE** | 允许读取和写入。 |
 
 当给定这两个常量时，它们使用按位 OR 运算符联接 ( **&#124;** )。 如果*pmode*自变量是 **_S_IREAD**，则不允许读取 （此文件为只写）。 如果*pmode*自变量是 **_S_IWRITE**，则不允许写入 （文件是只读的）。 例如，如果掩码中设置了写入位，则任何新文件都将为只读。 请注意在 MS-DOS 和 Windows 操作系统下，所有文件均可读；不可能提供只写权限。 因此，设置读取位与 **_umask**不起作用的文件模式。
 

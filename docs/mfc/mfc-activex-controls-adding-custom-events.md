@@ -15,12 +15,12 @@ helpviewer_keywords:
 - custom events [MFC]
 - FireEvent method, adding custom events
 ms.assetid: c584d053-1e34-47aa-958e-37d3e9b85892
-ms.openlocfilehash: 626aae04e0b19dc951814e4741cad3729acd3b72
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 48c5ddbc8a3bcf6f74c251820e83cdebcef05bc9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400729"
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>MFC ActiveX 控件：添加自定义事件
 
@@ -92,7 +92,7 @@ ms.locfileid: "57263008"
 
 1. 双击要跳转到实现中的消息处理程序代码的类视图中的新处理程序函数 (。ActiveX 控件的 CPP) 文件。
 
-下面的代码示例调用`InCircle`函数每次在控制窗口内单击鼠标左键。 此示例可以在 WM_LBUTTONDOWN 处理程序函数中，找到`OnLButtonDown`，请在[Circ 示例](../visual-cpp-samples.md)抽象。
+下面的代码示例调用`InCircle`函数每次在控制窗口内单击鼠标左键。 此示例可以在 WM_LBUTTONDOWN 处理程序函数中，找到`OnLButtonDown`，请在[Circ 示例](../overview/visual-cpp-samples.md)抽象。
 
 [!code-cpp[NVC_MFC_AxUI#10](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-events_4.cpp)]
 

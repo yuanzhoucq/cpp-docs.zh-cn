@@ -6,11 +6,11 @@ helpviewer_keywords:
 - create a task that completes after a delay, example [C++]
 ms.assetid: 3fc0a194-3fdb-4eba-8b8a-b890981a985d
 ms.openlocfilehash: 3292043d7900d5dc2bfba0afa5fdc237853a5be0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413900"
 ---
 # <a name="how-to-create-a-task-that-completes-after-a-delay"></a>如何：创建在延迟后完成的任务
 
@@ -18,23 +18,18 @@ ms.locfileid: "57272253"
 
 ## <a name="example"></a>示例
 
-下面的示例显示 `complete_after` 和 `cancel_after_timeout` 函数。 
-  `complete_after` 函数将创建在指定的延迟后完成的 `task` 对象。 它使用 `timer` 对象和 `call` 对象在指定延迟后设置 `task_completion_event` 对象。 通过使用 `task_completion_event` 类，您可以定义在一个线程或另一个任务发出有可用值的信号后完成的任务。 设置事件后，侦听器任务完成，它们的延续按计划运行。
+下面的示例显示 `complete_after` 和 `cancel_after_timeout` 函数。 `complete_after` 函数将创建在指定的延迟后完成的 `task` 对象。 它使用 `timer` 对象和 `call` 对象在指定延迟后设置 `task_completion_event` 对象。 通过使用 `task_completion_event` 类，您可以定义在一个线程或另一个任务发出有可用值的信号后完成的任务。 设置事件后，侦听器任务完成，它们的延续按计划运行。
 
 > [!TIP]
 >  有关详细信息`timer`并`call`类，它们是异步代理库的一部分，请参阅[异步消息块](../../parallel/concrt/asynchronous-message-blocks.md)。
 
-如果某任务在给定超时之前没有完成，则 `cancel_after_timeout` 函数基于 `complete_after` 函数构建以用于取消该任务。 
-  `cancel_after_timeout` 函数将创建两个任务。 第一个任务指示成功且在提供的任务完成后完成；第二个任务指示失败且在指定的超时后完成。 
-  `cancel_after_timeout` 函数将创建一个在成功或失败任务完成后运行的延续任务。 如果失败任务先完成，则延续将取消标记源，以便取消整个任务。
+如果某任务在给定超时之前没有完成，则 `cancel_after_timeout` 函数基于 `complete_after` 函数构建以用于取消该任务。 `cancel_after_timeout` 函数将创建两个任务。 第一个任务指示成功且在提供的任务完成后完成；第二个任务指示失败且在指定的超时后完成。 `cancel_after_timeout` 函数将创建一个在成功或失败任务完成后运行的延续任务。 如果失败任务先完成，则延续将取消标记源，以便取消整个任务。
 
 [!code-cpp[concrt-task-delay#1](../../parallel/concrt/codesnippet/cpp/how-to-create-a-task-that-completes-after-a-delay_1.cpp)]
 
 ## <a name="example"></a>示例
 
-下面的示例多次计算范围 [0, 100000] 内质数的计数。 如果在给定时间限制内没有完成，则操作失败。 
-  `count_primes` 函数演示如何使用 `cancel_after_timeout` 函数。 它会对给定范围内的质数进行计数，而且如果任务未在提供的时间内完成，则会失败。 
-  `wmain` 函数多次调用 `count_primes` 函数。 每次将时间限制减半。 当操作未在当前时间限制内完成后，程序结束。
+下面的示例多次计算范围 [0, 100000] 内质数的计数。 如果在给定时间限制内没有完成，则操作失败。 `count_primes` 函数演示如何使用 `cancel_after_timeout` 函数。 它会对给定范围内的质数进行计数，而且如果任务未在提供的时间内完成，则会失败。 `wmain` 函数多次调用 `count_primes` 函数。 每次将时间限制减半。 当操作未在当前时间限制内完成后，程序结束。
 
 [!code-cpp[concrt-task-delay#2](../../parallel/concrt/codesnippet/cpp/how-to-create-a-task-that-completes-after-a-delay_2.cpp)]
 

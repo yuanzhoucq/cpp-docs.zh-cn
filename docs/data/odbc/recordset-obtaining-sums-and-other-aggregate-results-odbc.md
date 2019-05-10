@@ -1,5 +1,5 @@
 ---
-title: 记录集：获取 SUM 及其他聚合结果 (ODBC)
+title: 记录集：获取 Sum 及其他聚合结果 (ODBC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - SQL, retrieving aggregate values from recordsets
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - SQL Server projects, retrieving aggregate values from recordsets
 - SQL aggregate values, retrieving from recordsets
 ms.assetid: 94500662-22a4-443e-82d7-acbe6eca447b
-ms.openlocfilehash: 7a63e6b0e4ac26fb2806d8505e3fcd8f5daf0f10
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e10f2e1574dae234d98d210784d4a8ddef3bb57e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397778"
 ---
-# <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>记录集：获取 SUM 及其他聚合结果 (ODBC)
+# <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>记录集：获取 Sum 及其他聚合结果 (ODBC)
 
 本主题适用于 MFC ODBC 类。
 

@@ -6,16 +6,16 @@ helpviewer_keywords:
 - .NET Framework [C++], Debug class
 - Debug class
 ms.assetid: 076bd528-1b6f-4e8a-a372-eb5849cf969a
-ms.openlocfilehash: ae400783112ca44a75f1224a9e8d6ebe52414070
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3a262a0d2ef429cb94f4648eb7c7180e7b130279
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393774"
 ---
 # <a name="debug-class-ccli"></a>Debug 类 (C++/CLI)
 
-当使用<xref:System.Diagnostics.Debug>在 Visual c + + 应用程序中，该行为不会更改调试版本和发布版本之间。
+使用时<xref:System.Diagnostics.Debug>视觉对象中C++应用程序，该行为不会更改调试版本和发布版本之间。
 
 ## <a name="remarks"></a>备注
 
@@ -49,7 +49,7 @@ int main() {
 }
 ```
 
-### <a name="output"></a>输出
+### <a name="output"></a>Output
 
 ```Output
     Entering Main

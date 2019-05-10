@@ -1,26 +1,26 @@
 ---
 title: 字符集
-ms.date: 04/12/2018
+ms.date: 05/06/2019
 helpviewer_keywords:
 - Character sets
 - basic source character set (C++)
 - universal character names
 - basic execution character set (C++)
 ms.assetid: 379a2af6-6422-425f-8352-ef0bca6c0d74
-ms.openlocfilehash: 5282d5b227e71c0ba6f822a9534a8a31cbd86db9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 92d60e3383abd7e3b3fa2d689958cf02a9b91e75
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664628"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222522"
 ---
 # <a name="character-sets"></a>字符集
 
-C++ 程序的文本存储在使用特定字符编码的源文件中。 C++ 标准指定源文件的基本源字符集和已编译文件的基本执行字符集。 Visual C++ 允许在源文件和已编译文件中使用额外一组特定于区域设置的字符。
+C++ 程序的文本存储在使用特定字符编码的源文件中。 C++ 标准指定源文件的基本源字符集和已编译文件的基本执行字符集。 MicrosoftC++编译器 (MSVC) 允许一组额外的区域设置特定字符在源文件中使用和已编译的文件。
 
 ## <a name="character-sets"></a>字符集
 
-C++ 标准指定可用于源文件的 *基本源字符集* 。 若要表示这组字符之外的字符，可以通过使用 *通用字符名称*指定其他字符。 编译后， *基本执行字符集* 和 *基本执行宽字符集* 表示可以出现在程序中的字符和字符串。 Visual C++ 实现允许在源代码和编译的代码中使用其他字符。
+C++ 标准指定可用于源文件的 *基本源字符集* 。 若要表示这组字符之外的字符，可以通过使用 *通用字符名称*指定其他字符。 编译后， *基本执行字符集* 和 *基本执行宽字符集* 表示可以出现在程序中的字符和字符串。 MSVC 实现允许在源代码和编译的代码中的其他字符。
 
 ### <a name="basic-source-character-set"></a>基本源字符集
 
@@ -36,7 +36,7 @@ C++ 标准指定可用于源文件的 *基本源字符集* 。 若要表示这�
 
 **Microsoft 专用**
 
-Visual C++ 包括作为基本源字符集成员的 `$` 字符。 Visual C++ 还允许基于文件编码在源文件中使用额外一组字符。 默认情况下，Visual Studio 通过使用默认代码页存储源文件。 当通过使用特定于区域设置的代码页或 Unicode 代码页保存源文件时，Visual C++ 允许你在你的源代码中使用该代码页的任何字符，基本源字符集中未明确允许的控制代码除外。 例如，如果你使用日语代码页保存文件，则可以在注释、标识符或字符串中放置日语字符。 Visual C++ 不允许使用不能转换为有效多字节字符或 Unicode 码位的字符序列。 并非所有允许的字符均可显示在标识符中，具体取决于编译器选项。 有关详细信息，请参阅 [Identifiers](../cpp/identifiers-cpp.md)。
+MSVC 包括`$`字符作为基本源字符集的成员。 MSVC 还允许一组额外的字符要在源代码文件中使用基于文件编码。 默认情况下，Visual Studio 通过使用默认代码页存储源文件。 当使用特定于区域设置代码页或 Unicode 代码页保存源文件时，MSVC，可在源代码中使用该代码页的字符的任何基本源字符集中未明确允许的控制代码除外设置。 例如，如果你使用日语代码页保存文件，则可以在注释、标识符或字符串中放置日语字符。 MSVC 不允许不能转换为有效多字节字符或 Unicode 码位的字符序列。 并非所有允许的字符均可显示在标识符中，具体取决于编译器选项。 有关详细信息，请参阅 [Identifiers](../cpp/identifiers-cpp.md)。
 
 **结束 Microsoft 专用**
 
@@ -48,7 +48,7 @@ Visual C++ 包括作为基本源字符集成员的 `$` 字符。 Visual C++ 还�
 
 **Microsoft 专用**
 
-Visual C++ 编译器将通用字符名称形式的字符和文本形式的字符视为可互换。 例如，你可以声明一个使用通用字符名称形式的标识符，并以文本形式使用它：
+MicrosoftC++编译器将通用字符名称形式和文本形式中的字符互换。 例如，你可以声明一个使用通用字符名称形式的标识符，并以文本形式使用它：
 
 ```cpp
 auto \u30AD = 42; // \u30AD is 'キ'

@@ -1,6 +1,6 @@
 ---
-title: 编译器错误 s C2200 through C2299
-ms.date: 11/17/2017
+title: 编译器错误 C2200 - C2299
+ms.date: 04/21/2019
 f1_keywords:
 - C2202
 - C2209
@@ -52,14 +52,14 @@ helpviewer_keywords:
 - C2291
 - C2294
 ms.assetid: 9b36d11b-9510-4390-96f1-0c9235124d14
-ms.openlocfilehash: b41887e941796e7f8f2f919ed76fbaaa624227ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5af97ab46a97d3019abcc937cc0a74c5f865a9ff
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432521"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857107"
 ---
-# <a name="compiler-errors-c2200-through-c2299"></a>编译器错误 s C2200 through C2299
+# <a name="compiler-errors-c2200-through-c2299"></a>编译器错误 C2200 - C2299
 
 在本部分文档中的文章说明了由编译器生成的错误消息的子集。
 
@@ -131,7 +131,7 @@ ms.locfileid: "50432521"
 |[编译器错误 C2259](compiler-error-c2259.md)|'*类*： 不能实例化抽象类|
 |编译器错误 C2260|'*说明符*： 无效的 InternalsVisibleToAttribute 友元程序集说明符|
 |[编译器错误 C2261](compiler-error-c2261.md)|'*字符串*： 程序集引用无效，无法解析|
-|[编译器错误 C2262](compiler-error-c2262.md)|'*说明符*: InternalsVisibleTo 声明不能具有指定的版本、 区域性或处理器体系结构|
+|[编译器错误 C2262](compiler-error-c2262.md)|'*说明符*:InternalsVisibleTo 声明不能具有指定的版本、 区域性或处理器体系结构|
 |编译器错误 C2263|已过时。|
 |[编译器错误 C2264](compiler-error-c2264.md)|'*函数*： 函数定义或声明中的错误; 未调用的函数|
 |编译器错误 C2265|已过时。|
@@ -159,7 +159,7 @@ ms.locfileid: "50432521"
 |[编译器错误 C2287](compiler-error-c2287.md)|'*标识符*： 继承表示形式:*inheritiance*是不太常规比所需'*继承*|
 |编译器错误 C2288|已过时。|
 |[编译器错误 C2289](compiler-error-c2289.md)|多次使用同一类型限定符|
-|[编译器错误 C2290](compiler-error-c2290.md)|忽略 c + + asm 语法。 使用__asm。|
+|[编译器错误 C2290](compiler-error-c2290.md)|C++忽略 asm 语法。 使用__asm。|
 |编译器错误 C2291|无法导出匿名命名空间。|
 |[编译器错误 C2292](compiler-error-c2292.md)|'*标识符*： 最好的条件继承表示形式： *inheritance1*声明，但*inheritance2*所需|
 |[编译器错误 C2293](compiler-error-c2293.md)|'*标识符*： 使成员变量作为 __based 说明符非法|
@@ -169,3 +169,8 @@ ms.locfileid: "50432521"
 |[编译器错误 C2297](compiler-error-c2297.md)|'*运算符*： 非法，右操作数具有类型*类型*|
 |[编译器错误 C2298](compiler-error-c2298.md)|缺少绑定指针到成员函数的调用|
 |[编译器错误 C2299](compiler-error-c2299.md)|'*函数*： 行为更改： 显式专用化不能复制构造函数或复制赋值运算符|
+
+## <a name="see-also"></a>请参阅
+
+[C /C++编译器和生成工具错误和警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[编译器错误 C2000-C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, include_alias
 - include_alias pragma
 ms.assetid: 3256d589-12b3-4af0-a586-199e96eabacc
-ms.openlocfilehash: 9d32cad2533b6044348651797d0278bcbebcafd6
-ms.sourcegitcommit: ae2f71fe0d64f1a90ef722759fe93c82abc064ab
+ms.openlocfilehash: 187fa94f7c2a5457df655081b87a7f49d38adfa2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53587871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384017"
 ---
 # <a name="includealias"></a>include_alias
 
@@ -21,8 +21,8 @@ ms.locfileid: "53587871"
 
 ## <a name="syntax"></a>语法
 
-> #<a name="pragma-includealiasaliasfilename-actualfilename"></a>include_alias 杂注 ("*alias_filename*"，"*actual_filename*")
-> #<a name="pragma-includealiasaliasfilename-actualfilename"></a>include_alias 杂注 (\<*alias_filename*>， \< *actual_filename*>)
+> #<a name="pragma-includealiasaliasfilename-actualfilename"></a>pragma include_alias("*alias_filename*", "*actual_filename*")
+> #<a name="pragma-includealiasaliasfilename-actualfilename"></a>pragma include_alias(\<*alias_filename*>, \<*actual_filename*>)
 
 ## <a name="remarks"></a>备注
 

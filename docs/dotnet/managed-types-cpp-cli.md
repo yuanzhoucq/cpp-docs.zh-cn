@@ -17,16 +17,16 @@ helpviewer_keywords:
 - exceptions, diagnosing odd behavior
 - compatibility, between assemblies
 ms.assetid: 679b8ed3-d966-4a0c-b627-2a3f3ec96b74
-ms.openlocfilehash: fe3b5e3a887e4a440c3570750c569ec6c71ea611
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b91918d526d83d4cf47436d02b7c67038576bafb
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152758"
 ---
 # <a name="managed-types-ccli"></a>托管类型 (C++/CLI)
 
-Visual c + + 允许对通过托管类型，为公共语言运行时功能提供支持，同时受影响的优点和限制的运行时的.NET 功能的访问。
+VisualC++允许通过托管类型，为公共语言运行时功能提供支持，同时受影响的优点和限制的运行时的.NET 功能的访问。
 
 ## <a name="main_functions"></a> 托管的类型和 main 函数
 
@@ -40,25 +40,27 @@ Visual c + + 允许对通过托管类型，为公共语言运行时功能提供�
 int main(int, char*[], char*[]) {}
 ```
 
-## <a name="dotnet"></a> 对应于 c + + 本机类型的.NET framework
+## <a name="dotnet"></a> 对应于.NET frameworkC++的本机类型
 
-下表显示了内置的 Visual c + + 类型，它们是预定义类型的别名的关键字在**系统**命名空间。
+下表显示了内置的视觉对象的关键字C++类型，它们是预定义类型的别名中**系统**命名空间。
 
-|Visual c + + 类型|.NET Framework 类型|
+|VisualC++类型|.NET Framework 类型|
 |-----------------------|-------------------------|
-|**bool**|**System.Boolean**|
-|**签名 char** (请参阅[/J](../build/reference/j-default-char-type-is-unsigned.md)有关详细信息)|**System.SByte**|
-|**unsigned char**|**System.Byte**|
-|**wchar_t**|**System.Char**|
-|**双精度**和**长双精度**|**System.Double**|
-|**float**|**System.Single**|
-|**int**，**带符号整型**，**长**，并**长签名**|**System.Int32**|
-|**无符号的整型**和**无符号长**|**System.UInt32**|
-|**__int64**和**签名 __int64**|**System.Int64**|
-|unsigned __int64|**System.UInt64**|
-|**短**和**短签名**|**System.Int16**|
-|**unsigned short**|**System.UInt16**|
-|**void**|**System.Void**|
+|**void**|<xref:System.Void?displayProperty=nameWithType>|
+|**bool**|<xref:System.Boolean?displayProperty=nameWithType>|
+|**有符号的字符** |<xref:System.SByte?displayProperty=nameWithType>|
+|**unsigned char**|<xref:System.Byte?displayProperty=nameWithType>|
+|**wchar_t**|<xref:System.Char?displayProperty=nameWithType>|
+|**短**和**短签名**|<xref:System.Int16?displayProperty=nameWithType>|
+|**unsigned short**|<xref:System.UInt16?displayProperty=nameWithType>|
+|**int**，**带符号整型**，**长**，并**长签名**|<xref:System.Int32?displayProperty=nameWithType>|
+|**无符号的整型**和**无符号长**|<xref:System.UInt32?displayProperty=nameWithType>|
+|**__int64**和**签名 __int64**|<xref:System.Int64?displayProperty=nameWithType>|
+|unsigned __int64|<xref:System.UInt64?displayProperty=nameWithType>|
+|**float**|<xref:System.Single?displayProperty=nameWithType>|
+|**双精度**和**长双精度**|<xref:System.Double?displayProperty=nameWithType>|
+
+有关编译器选项为默认值为有符号或无符号的详细信息**char**，请参阅[/J （默认 char 类型是无符号）](../build/reference/j-default-char-type-is-unsigned.md)。
 
 ## <a name="version_issues"></a> 嵌套在本机类型中的值类型的版本问题
 
@@ -112,7 +114,7 @@ int main() {
 }
 ```
 
-### <a name="output"></a>输出
+### <a name="output"></a>Output
 
 ```Output
 S.i = 5
@@ -125,9 +127,9 @@ S.i = 11
 
 但是，如果您添加到另一个成员`struct S`nested_value_types.cpp 中, (例如， `double d;`) 和无需重新编译客户端重新编译该组件，则结果为未处理的异常 (类型的<xref:System.IO.FileLoadException?displayProperty=fullName>)。
 
-## <a name="test_equality"></a> 如何： 测试相等性
+## <a name="test_equality"></a> 操作说明：确定相等性的测试
 
-在下面的示例中，使用 Managed Extensions for c + + 的相等性测试基于句柄的引用。
+在以下示例中，为确定相等性测试，使用托管扩展C++基于句柄的引用。
 
 ### <a name="example"></a>示例
 
@@ -150,7 +152,7 @@ IL_0012:  call       bool [mscorlib]System.String::op_Equality(string,
                                                                string)
 ```
 
-## <a name="diagnose_fix"></a> 如何： 诊断和修复程序集兼容性问题
+## <a name="diagnose_fix"></a> 操作说明：诊断和修复程序集兼容性问题
 
 本主题介绍了在编译时引用的程序集的版本与在运行时，引用的程序集的版本不匹配时可能发生以及如何避免此问题。
 

@@ -1,19 +1,15 @@
 ---
 title: 'Catlservicemodulet:: Run 函数'
 ms.date: 11/04/2016
-f1_keywords:
-- CServiceModule::Run
-- CServiceModule.Run
-- CSecurityDescriptor
 helpviewer_keywords:
 - ATL services, security
 ms.assetid: 42c010f0-e60e-459c-a63b-a53a24cda93b
-ms.openlocfilehash: 448a955f2e72e8c523bbf74d6ee7e122828915ad
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0f50c13912bbfef861e8650ee7589daea1e45725
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62250836"
 ---
 # <a name="catlservicemoduletrun-function"></a>Catlservicemodulet:: Run 函数
 

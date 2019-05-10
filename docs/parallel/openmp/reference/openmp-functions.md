@@ -1,6 +1,6 @@
 ---
 title: OpenMP 函数
-ms.date: 10/23/2018
+ms.date: 03/20/2019
 f1_keywords:
 - OpenMP functions
 - omp_destroy_lock
@@ -50,43 +50,60 @@ helpviewer_keywords:
 - omp_unset_lock OpenMP function
 - omp_unset_nest_lock OpenMP function
 ms.assetid: a55a2e5c-a260-44ee-bbd6-de7e2351b384
-ms.openlocfilehash: 0435d75b69ea870db50739933245925d6860cbf9
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 1bf0e08f3b28368d9aea5438b3036ac8a0283735
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62363084"
 ---
 # <a name="openmp-functions"></a>OpenMP 函数
 
 提供指向 OpenMP API 中使用的函数。
 
-OpenMP 标准的 Visual c + + 实现包括以下函数。
+视觉对象C++实现的 OpenMP 标准包括以下函数和数据类型。
+
+为环境执行：
 
 |函数|描述|
 |--------|-----------|
-|[omp_destroy_lock](#omp-destroy-lock)|取消初始化锁。|
-|[omp_destroy_nest_lock](#omp-destroy-nest-lock)|取消初始化可嵌套锁。|
-|[omp_get_dynamic](#omp-get-dynamic)|返回一个值，该值指示是否的即将推出的并行区域中可用的线程数可以调整运行时。|
-|[omp_get_max_threads](#omp-get-max-threads)|返回一个整数，如果无需并行区域可用的线程数大于或等于[num_threads](openmp-clauses.md#num-threads)此时在代码中定义。|
-|[omp_get_nested](#omp-get-nested)|返回一个值，该值指示是否启用了嵌套并行度。|
-|[omp_get_num_procs](#omp-get-num-procs)|返回调用函数时可用的处理器数。|
+|[omp_set_num_threads](#omp-set-num-threads)|在即将发布的并行区域设置的线程数，除非被重写[num_threads](openmp-clauses.md#num-threads)子句。|
 |[omp_get_num_threads](#omp-get-num-threads)|并行区域中返回线程的数。|
+|[omp_get_max_threads](#omp-get-max-threads)|返回一个整数，如果无需并行区域可用的线程数大于或等于[num_threads](openmp-clauses.md#num-threads)此时在代码中定义。|
 |[omp_get_thread_num](#omp-get-thread-num)|返回其线程团队中执行的线程的线程数。|
-|[omp_get_wtick](#omp-get-wtick)|返回处理器时钟计时周期之间等待的秒数。|
-|[omp_get_wtime](#omp-get-wtime)|返回从某一时刻已用的值以秒为单位的时间。|
+|[omp_get_num_procs](#omp-get-num-procs)|返回调用函数时可用的处理器数。|
 |[omp_in_parallel](#omp-in-parallel)|返回非零，如果从并行区域内调用。|
+|[omp_set_dynamic](#omp-set-dynamic)|指示运行时可进行调整的即将推出的并行区域中可用的线程数。|
+|[omp_get_dynamic](#omp-get-dynamic)|返回一个值，该值指示是否的即将推出的并行区域中可用的线程数可以调整运行时。|
+|[omp_set_nested](#omp-set-nested)|启用嵌套并行度。|
+|[omp_get_nested](#omp-get-nested)|返回一个值，该值指示是否启用了嵌套并行度。|
+
+锁：
+
+|函数|描述|
+|--------|-----------|
 |[omp_init_lock](#omp-init-lock)|初始化是简单的锁定。|
 |[omp_init_nest_lock](#omp-init-nest-lock)|初始化一个锁。|
-|[omp_set_dynamic](#omp-set-dynamic)|指示运行时可进行调整的即将推出的并行区域中可用的线程数。|
+|[omp_destroy_lock](#omp-destroy-lock)|取消初始化锁。|
+|[omp_destroy_nest_lock](#omp-destroy-nest-lock)|取消初始化可嵌套锁。|
 |[omp_set_lock](#omp-set-lock)|块线程执行，直到锁可用。|
 |[omp_set_nest_lock](#omp-set-nest-lock)|块线程执行，直到锁可用。|
-|[omp_set_nested](#omp-set-nested)|启用嵌套并行度。|
-|[omp_set_num_threads](#omp-set-num-threads)|在即将发布的并行区域设置的线程数，除非被重写[num_threads](openmp-clauses.md#num-threads)子句。|
-|[omp_test_lock](#omp-test-lock)|尝试设置一个锁，但不会阻止线程执行。|
-|[omp_test_nest_lock](#omp-test-nest-lock)|尝试设置可嵌套锁，但不会阻止线程执行。|
 |[omp_unset_lock](#omp-unset-lock)|释放锁。|
 |[omp_unset_nest_lock](#omp-unset-nest-lock)|释放可嵌套锁。|
+|[omp_test_lock](#omp-test-lock)|尝试设置一个锁，但不会阻止线程执行。|
+|[omp_test_nest_lock](#omp-test-nest-lock)|尝试设置可嵌套锁，但不会阻止线程执行。|
+
+|数据类型|描述|
+|---------|-----------|
+|`omp_lock_t`|一个类型，持有锁、 锁是否可用，或如果线程拥有锁的状态。|
+|`omp_nest_lock_t`|包含有关某个锁的信息的以下部分之一的类型： 是否锁可用，并且线程标识拥有锁和嵌套的计数。|
+
+有关计时例程：
+
+|函数|描述|
+|--------|-----------|
+|[omp_get_wtime](#omp-get-wtime)|返回从某一时刻已用的值以秒为单位的时间。|
+|[omp_get_wtick](#omp-get-wtick)|返回处理器时钟计时周期之间等待的秒数。|
 
 ## <a name="omp-destroy-lock"></a>omp_destroy_lock
 
@@ -101,7 +118,7 @@ void omp_destroy_lock(
 ### <a name="parameters"></a>参数
 
 *lock*<br/>
-类型的变量[omp_lock_t](openmp-data-types.md#omp-lock-t)与初始化[omp_init_lock](#omp-init-lock)。
+类型的变量`omp_lock_t`的未使用初始化[omp_init_lock](#omp-init-lock)。
 
 ### <a name="remarks"></a>备注
 
@@ -124,7 +141,7 @@ void omp_destroy_nest_lock(
 ### <a name="parameters"></a>参数
 
 *lock*<br/>
-类型的变量[omp_nest_lock_t](openmp-data-types.md#omp-nest-lock-t)与初始化[omp_init_nest_lock](#omp-init-nest-lock)。
+类型的变量`omp_nest_lock_t`的未使用初始化[omp_init_nest_lock](#omp-init-nest-lock)。
 
 ### <a name="remarks"></a>备注
 
@@ -170,7 +187,7 @@ int omp_get_max_threads( )
 
 ### <a name="example"></a>示例
 
-```
+```cpp
 // omp_get_max_threads.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -242,7 +259,7 @@ int omp_get_num_procs();
 
 ### <a name="example"></a>示例
 
-```
+```cpp
 // omp_get_num_procs.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -279,7 +296,7 @@ int omp_get_num_threads( );
 
 ### <a name="example"></a>示例
 
-```
+```cpp
 // omp_get_num_threads.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -367,7 +384,7 @@ double omp_get_wtime( );
 
 ### <a name="example"></a>示例
 
-```
+```cpp
 // omp_get_wtime.cpp
 // compile with: /openmp
 #include "omp.h"
@@ -410,7 +427,7 @@ int omp_in_parallel( );
 
 ### <a name="example"></a>示例
 
-```
+```cpp
 // omp_in_parallel.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -447,7 +464,7 @@ void omp_init_lock(
 ### <a name="parameters"></a>参数
 
 *lock*<br/>
-类型的变量[omp_lock_t](openmp-data-types.md#omp-lock-t)。
+`omp_lock_t` 类型的变量。
 
 ### <a name="remarks"></a>备注
 
@@ -455,7 +472,7 @@ void omp_init_lock(
 
 ### <a name="example"></a>示例
 
-```
+```cpp
 // omp_init_lock.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -539,7 +556,7 @@ void omp_init_nest_lock(
 ### <a name="parameters"></a>参数
 
 *lock*<br/>
-类型的变量[omp_nest_lock_t](openmp-data-types.md#omp-nest-lock-t)。
+`omp_nest_lock_t` 类型的变量。
 
 ### <a name="remarks"></a>备注
 
@@ -549,7 +566,7 @@ void omp_init_nest_lock(
 
 ### <a name="example"></a>示例
 
-```
+```cpp
 // omp_init_nest_lock.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -624,7 +641,7 @@ void omp_set_dynamic(
 ### <a name="parameters"></a>参数
 
 *val*<br/>
-一个值，指示是否可以通过在运行时调整在即将发布的并行区域中可用的线程数。  如果非零，则运行时可以调整的线程数，如果为零，则运行时不会动态调整线程数。
+一个值，指示是否可以通过在运行时调整在即将发布的并行区域中可用的线程数。 如果非零，则运行时可以调整的线程数，如果为零，则运行时不会动态调整线程数。
 
 ### <a name="remarks"></a>备注
 
@@ -638,7 +655,7 @@ void omp_set_dynamic(
 
 ### <a name="example"></a>示例
 
-```
+```cpp
 // omp_set_dynamic.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -675,7 +692,7 @@ void omp_set_lock(
 ### <a name="parameters"></a>参数
 
 *lock*<br/>
-类型的变量[omp_lock_t](openmp-data-types.md#omp-lock-t)与初始化[omp_init_lock](#omp-init-lock)。
+类型的变量`omp_lock_t`的未使用初始化[omp_init_lock](#omp-init-lock)。
 
 ### <a name="remarks"></a>备注
 
@@ -698,7 +715,7 @@ void omp_set_nest_lock(
 ### <a name="parameters"></a>参数
 
 *lock*<br/>
-类型的变量[omp_nest_lock_t](openmp-data-types.md#omp-nest-lock-t)与初始化[omp_init_nest_lock](#omp-init-nest-lock)。
+类型的变量`omp_nest_lock_t`的未使用初始化[omp_init_nest_lock](#omp-init-nest-lock)。
 
 ### <a name="remarks"></a>备注
 
@@ -729,7 +746,7 @@ OMP 嵌套并行度可以与开启`omp_set_nested`，或通过设置[OMP_NESTED]
 
 设置`omp_set_nested`将覆盖的设置`OMP_NESTED`环境变量。
 
-由于线程数以指数方式增加嵌套并行区域时，启用环境变量可能会中断是否则为正常运行的程序。  例如，将设置为 4 的 OMP 线程数与递归六次的函数需要 4096 (4 到 6 的强大功能) 线程。 除使用 O 绑定的应用程序，应用程序的性能通常会降低如果有更多个处理器的线程。
+由于线程数以指数方式增加嵌套并行区域时，启用环境变量可能会中断是否则为正常运行的程序。 例如，将设置为 4 的 OMP 线程数与递归六次的函数需要 4096 (4 到 6 的强大功能) 线程。 除使用 O 绑定的应用程序，应用程序的性能通常会降低如果有更多个处理器的线程。
 
 使用[omp_get_nested](#omp-get-nested)若要显示的当前设置`omp_set_nested`。
 
@@ -737,7 +754,7 @@ OMP 嵌套并行度可以与开启`omp_set_nested`，或通过设置[OMP_NESTED]
 
 ### <a name="example"></a>示例
 
-```
+```cpp
 // omp_set_nested.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -797,7 +814,7 @@ int omp_test_lock(
 ### <a name="parameters"></a>参数
 
 *lock*<br/>
-类型的变量[omp_lock_t](openmp-data-types.md#omp-lock-t)与初始化[omp_init_lock](#omp-init-lock)。
+类型的变量`omp_lock_t`的未使用初始化[omp_init_lock](#omp-init-lock)。
 
 ### <a name="remarks"></a>备注
 
@@ -805,7 +822,7 @@ int omp_test_lock(
 
 ### <a name="example"></a>示例
 
-```
+```cpp
 // omp_test_lock.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -870,7 +887,7 @@ int omp_test_nest_lock(
 ### <a name="parameters"></a>参数
 
 *lock*<br/>
-类型的变量[omp_nest_lock_t](openmp-data-types.md#omp-nest-lock-t)与初始化[omp_init_nest_lock](#omp-init-nest-lock)。
+类型的变量`omp_nest_lock_t`的未使用初始化[omp_init_nest_lock](#omp-init-nest-lock)。
 
 ### <a name="remarks"></a>备注
 
@@ -878,7 +895,7 @@ int omp_test_nest_lock(
 
 ### <a name="example"></a>示例
 
-```
+```cpp
 // omp_test_nest_lock.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -961,7 +978,7 @@ void omp_unset_lock(
 ### <a name="parameters"></a>参数
 
 *lock*<br/>
-类型的变量[omp_lock_t](openmp-data-types.md#omp-lock-t)与初始化[omp_init_lock](#omp-init-lock)、 由线程拥有和函数中执行。
+类型的变量`omp_lock_t`的未使用初始化[omp_init_lock](#omp-init-lock)、 由线程拥有和函数中执行。
 
 ### <a name="remarks"></a>备注
 
@@ -984,7 +1001,7 @@ void omp_unset_nest_lock(
 ### <a name="parameters"></a>参数
 
 *lock*<br/>
-类型的变量[omp_nest_lock_t](openmp-data-types.md#omp-nest-lock-t)与初始化[omp_init_nest_lock](#omp-init-nest-lock)、 由线程拥有和函数中执行。
+类型的变量`omp_nest_lock_t`的未使用初始化[omp_init_nest_lock](#omp-init-nest-lock)、 由线程拥有和函数中执行。
 
 ### <a name="remarks"></a>备注
 

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - reference::operator=
 ms.assetid: eed20d81-36b9-40b2-a3b6-340ed0bb4f34
 ms.openlocfilehash: b829a0b6224ca93192f15b088fcb98155bc3963a
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51517927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410923"
 ---
 # <a name="vectorltboolgtreferenceoperator"></a>vector&lt;bool&gt;::reference::operator=
 
@@ -34,7 +34,7 @@ reference& operator=(bool Val);
 右侧<br/>
 要将值赋给位的元素引用。
 
-*val*<br/>
+*Val*<br/>
 要赋给位的布尔值。
 
 ## <a name="example"></a>示例
@@ -95,7 +95,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>输出
+## <a name="output"></a>Output
 
 ```Output
 The vector is: true false false true true

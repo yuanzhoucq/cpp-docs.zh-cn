@@ -6,12 +6,12 @@ helpviewer_keywords:
 - helper functions, calling conventions
 - helper functions, return types
 ms.assetid: 0ffa4558-6005-4803-be95-7a8ec8837660
-ms.openlocfilehash: 15631b305246cbfd7dcd8081cb1ee488bf225fec
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: a85825eb49b1f8faab7862e902b226c1c1fb6d58
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294702"
 ---
 # <a name="calling-conventions-parameters-and-return-type"></a>调用约定、参数和返回类型
 
@@ -29,7 +29,7 @@ FARPROC WINAPI __delayLoadHelper2(
 *pidd*<br/>
 一个`const`指针，指向`ImgDelayDescr`，其中包含各种与导入相关的数据、 绑定信息时的时间戳和一组提供有关描述符内容的详细信息的属性的偏移量。 目前只有一个特性， `dlattrRva`，这表示描述符中的地址是相对虚拟地址。 有关详细信息，请参阅中的声明*delayimp.h*。
 
-定义`PCImgDelayDescr`结构，请参阅[结构和常量定义](../../build/reference/structure-and-constant-definitions.md)。
+定义`PCImgDelayDescr`结构，请参阅[结构和常量定义](structure-and-constant-definitions.md)。
 
 *ppfnIATEntry*<br/>
 指向延迟加载导入地址表 (IAT) 导入的函数的地址使用更新中的槽的指针。 帮助器例程需要存储它返回到此位置的相同值。
@@ -44,8 +44,7 @@ FARPROC WINAPI __delayLoadHelper2(
 
 - `LoadLibrary` 在指定的 DLL 上失败。
 
-- 
-  `GetProcAddress` 失败。
+- `GetProcAddress` 失败。
 
 它由你负责处理这些异常。
 
@@ -138,4 +137,4 @@ const PfnDliHook __pfnDliNotifyHook2 = delayHook;
 
 ## <a name="see-also"></a>请参阅
 
-[了解 Helper 函数](../../build/reference/understanding-the-helper-function.md)
+[了解 Helper 函数](understanding-the-helper-function.md)

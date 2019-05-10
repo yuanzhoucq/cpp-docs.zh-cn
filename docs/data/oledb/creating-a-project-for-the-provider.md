@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE DB providers, projects
 - projects [C++], creating
 ms.assetid: 076a75de-1d4b-486a-bcf8-9c0f6b049fa2
-ms.openlocfilehash: f63b09d47dd8f3ebe8750275bb005be89ca8fde8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc085b1f663369033947ed2a5577f334dd79c0aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677105"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62361946"
 ---
 # <a name="creating-a-project-for-the-provider"></a>为提供程序创建项目
 
@@ -19,12 +19,12 @@ ms.locfileid: "50677105"
 
 1. 在“文件”菜单上，单击“新建”，然后单击“项目”。
 
-   此时将出现 “新建项目” 对话框。
+   此时将出现“新建项目”对话框。
 
-1. 在中**项目类型**窗格中，单击**已安装** > **Visual c + +** > **MFC/ATL**文件夹。 在中**模板**窗格中，单击**ATL 项目**。
+1. 在中**项目类型**窗格中，单击**已安装** > **Visual C++**   >  **MFC/ATL**文件夹。 在中**模板**窗格中，单击**ATL 项目**。
 
     > [!NOTE]
-    > 在以前版本的 Visual Studio 中，找到下的项目类型**已安装** > **模板** > **Visual c + +**  > **ATL**。
+    > 在以前版本的 Visual Studio 中，找到下的项目类型**已安装** > **模板** > **Visual C++**   >  **ATL**。
 
 1. 在中**名称**框中，输入项目的名称，然后单击**确定**。
 

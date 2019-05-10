@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Active technology [C++]
 - MFC DLLs [C++], Active Technology
 ms.assetid: 3ed27f8d-164a-4562-ad61-9f2333404cc7
-ms.openlocfilehash: 82e18efe66350349c8cbef7f47b7d1fb226674f1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
-ms.translationtype: MT
+ms.openlocfilehash: f67fb9548601ac705ceda08d20d3049f0bf1e0a5
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420162"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220996"
 ---
 # <a name="active-technology-and-dlls"></a>Active 技术和 DLL
 
@@ -27,4 +27,4 @@ Active 技术使对象服务器得以在 DLL 内完全实现。 此类服务器�
 
 ## <a name="see-also"></a>请参阅
 
-[Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)
+[创建 C /C++ Visual Studio 中的 Dll](dlls-in-visual-cpp.md)

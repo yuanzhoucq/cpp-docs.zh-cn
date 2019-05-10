@@ -1,5 +1,5 @@
 ---
-title: '#define 指令 （C/c + +）'
+title: '#define 指令 (C /C++)'
 ms.date: 11/04/2016
 f1_keywords:
 - '#define'
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '#define directive, syntax'
 - '#define directive'
 ms.assetid: 33cf25c6-b24e-40bf-ab30-9008f0391710
-ms.openlocfilehash: dec555de64a3ebd166bdff5558957f09e1c2755e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8a0cc7e7836a0c82c72055fe8d9e7497995485d0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409897"
 ---
 # <a name="define-directive-cc"></a>#define 指令 (C/C++)
 
@@ -23,9 +23,9 @@ ms.locfileid: "50653747"
 
 ## <a name="syntax"></a>语法
 
-`#define` *标识符**令牌字符串*<sub>选择</sub>
+`#define` *identifier* *token-string*<sub>opt</sub>
 
-`#define` *标识符* `(` *标识符*<sub>选择</sub>`,` *...* `,` *标识符*<sub>选择</sub>`)` *令牌字符串*<sub>选择</sub>
+`#define` *identifier* `(` *identifier*<sub>opt</sub>`,` *...* `,` *identifier*<sub>opt</sub>`)` *token-string*<sub>opt</sub>
 
 ## <a name="remarks"></a>备注
 
@@ -37,7 +37,7 @@ ms.locfileid: "50653747"
 
 第二种语法形式定义一个带有参数的类似函数的宏。 此形式接受必须出现在括号内的参数的可选列表。 该宏的定义，每个后续匹配项后*标识符*(*标识符*<sub>选择</sub>，...，*标识符*<sub>opt</sub> ) 使用的版本替换*令牌字符串*替换形参的实参的参数。
 
-形参名称将显示在*令牌字符串*标记实际值的替换的位置。 每个参数名称中可以多次出现*令牌字符串*，并且名称可以按任意顺序出现。 调用中的参数数目必须与宏定义中的自变量数目一致。 对括号的自由使用将确保正确解释复杂的实参。
+形参名称将显示在*令牌字符串*标记实际值的替换的位置。 每个参数名称中可以多次出现*令牌字符串*，并且名称可以按任意顺序出现。 调用中的参数数目必须与宏定义中的参数数目一致。 对括号的自由使用将确保正确解释复杂的实参。
 
 将用逗号分隔列表中的形参。 列表中的每个名称必须是唯一的，并且列表必须用括号括起。 不能含有空格可分隔*标识符*和左括号。 使用行串连 — 放置一个反斜杠 (`\`) 在换行符前立即-多个源行上的长指令。 正式参数名称的范围扩展到结束的新行*令牌字符串*。
 
@@ -54,7 +54,7 @@ ms.locfileid: "50653747"
     ((rand()%(int)(((max) + 1)-(min)))+ (min))
 ```
 
-有副作用的自变量有时会导致宏产生意外的结果。 给定的形参可能会超过中出现一次*令牌字符串*。 如果将该形参替换为有副作用的表达式，则可能多次计算该表达式及其副作用。 (请参阅下面的示例[标记粘贴运算符 （#）](../preprocessor/token-pasting-operator-hash-hash.md)。)
+有副作用的参数有时会导致宏产生意外的结果。 给定的形参可能会超过中出现一次*令牌字符串*。 如果将该形参替换为有副作用的表达式，则可能多次计算该表达式及其副作用。 (请参阅下面的示例[标记粘贴运算符 （#）](../preprocessor/token-pasting-operator-hash-hash.md)。)
 
 `#undef` 指令促使忘记标识符的预处理器定义。 请参阅[#undef 指令](../preprocessor/hash-undef-directive-c-cpp.md)有关详细信息。
 
@@ -66,7 +66,7 @@ ms.locfileid: "50653747"
 
 如果新定义在语法上与原始定义相同，则 Microsoft C/C++ 允许您重新定义宏。 换言之，这两个定义可以具有不同的参数名称。 此行为不同于 ANSI C 中，这需要两个定义会从词法上完全相同。
 
-例如，下面两个宏除参数名称外完全相同。 ANSI C 不允许此类重新定义，但 Microsoft C/c + + 编译它时没有错误。
+例如，下面两个宏除参数名称外完全相同。 ANSI C 不允许此类重新定义，但 Microsoft C /C++将它编译没有错误。
 
 ```C
 #define multiply( f1, f2 ) ( f1 * f2 )

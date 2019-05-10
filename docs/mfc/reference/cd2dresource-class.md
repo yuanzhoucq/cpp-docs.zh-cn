@@ -1,6 +1,6 @@
 ---
 title: CD2DResource 类
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CD2DResource
 - AFXRENDERTARGET/CD2DResource
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - CD2DResource [MFC], m_bIsAutoDestroy
 - CD2DResource [MFC], m_pParentTarget
 ms.assetid: 34e3ee18-aab6-4c39-9294-de869e1f7820
-ms.openlocfilehash: 04d1fa57e34528f96f505fa20abb9b1131f80689
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e2cc6be7119a2df193aa2af415a9c8d4054f537c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396296"
 ---
 # <a name="cd2dresource-class"></a>CD2DResource 类
 
-提供用于创建和管理如画笔、 层和文本的 D2D 资源的界面一个抽象类。
+一个用于创建和管理等画笔、 层和文本的 D2D 资源提供一个接口的抽象类。
 
 ## <a name="syntax"></a>语法
 
@@ -46,7 +46,7 @@ class CD2DResource : public CObject;
 |名称|描述|
 |----------|-----------------|
 |[CD2DResource::CD2DResource](#cd2dresource)|构造一个 CD2DResource 对象。|
-|[CD2DResource::~CD2DResource](#cd2dresource__~cd2dresource)|析构函数。 当 D2D 资源对象被销毁时调用。|
+|[CD2DResource::~CD2DResource](#_dtorcd2dresource)|析构函数。 当 D2D 资源对象被销毁时调用。|
 
 ### <a name="public-methods"></a>公共方法
 
@@ -67,7 +67,7 @@ class CD2DResource : public CObject;
 
 |name|描述|
 |----------|-----------------|
-|[CD2DResource::m_bIsAutoDestroy](#m_bisautodestroy)|资源将是由所有者 (CRenderTarget) destoyed|
+|[CD2DResource::m_bIsAutoDestroy](#m_bisautodestroy)|资源将被销毁所有者 (CRenderTarget)|
 |[CD2DResource::m_pParentTarget](#m_pparenttarget)|指向父 CRenderTarget）|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
@@ -157,7 +157,7 @@ virtual BOOL IsValid() const = 0;
 
 ##  <a name="m_bisautodestroy"></a>  CD2DResource::m_bIsAutoDestroy
 
-资源将是由所有者 (CRenderTarget) destoyed
+资源将被销毁所有者 (CRenderTarget)
 
 ```
 BOOL m_bIsAutoDestroy;

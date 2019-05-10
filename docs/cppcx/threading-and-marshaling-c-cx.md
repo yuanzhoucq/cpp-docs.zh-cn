@@ -8,16 +8,16 @@ helpviewer_keywords:
 - agility, C++/CX
 - C++/CX, threading issues
 ms.assetid: 83e9ca1d-5107-4194-ae6f-e01bd928c614
-ms.openlocfilehash: ddf59e8df82b1ec98f4e1fabe9917027bdf0c75b
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
-ms.translationtype: MT
+ms.openlocfilehash: 4206dd9c675325d3141a56b0e57f6cf67dc5693d
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426753"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448149"
 ---
 # <a name="threading-and-marshaling-ccx"></a>线程处理和封送处理 (C++/CX)
 
-在大多数情况下，可以从任意线程访问 Windows 运行时类，类似于标准的 c + + 对象的实例。 此类称为“敏捷类”。 但是，少数预装 Windows 的 Windows 运行时类是敏捷，并且必须更常用作 COM 对象比标准 c + + 对象。 您无需是 COM 专家即可使用非敏捷类，但您需要考虑类的线程模型及其封送处理行为。 本文提供了针对您需要使用非敏捷类的实例的极少情况的背景和指南。
+在大多数情况下，Windows 运行时类的实例，如标准C++对象，可以从任意线程访问。 此类称为“敏捷类”。 但是，少量的预装 Windows 的 Windows 运行时类是敏捷，并且必须更常用作 COM 对象比标准C++对象。 您无需是 COM 专家即可使用非敏捷类，但您需要考虑类的线程模型及其封送处理行为。 本文提供了针对您需要使用非敏捷类的实例的极少情况的背景和指南。
 
 ## <a name="threading-model-and-marshaling-behavior"></a>线程模型和封送处理行为
 
@@ -35,7 +35,7 @@ Windows 运行时类可以多种方式支持并发线程访问，应用于它的
 
 ### <a name="compiler-warning-c4451-when-consuming-non-agile-classes"></a>编译器警告 C4451，使用非敏捷类时
 
-由于各种原因，一些类不能是敏捷类。 如果从用户界面线程和后台线程访问非敏捷类的实例，则应格外小心以确保运行时正确的行为。 在全局范围内实例化您的应用程序中的非敏捷运行时类，或者在一个自身也标记为敏捷的 ref 类中将一个非敏捷类型声明为类成员时，Visual C++ 编译器发出警告。
+由于各种原因，一些类不能是敏捷类。 如果从用户界面线程和后台线程访问非敏捷类的实例，则应格外小心以确保运行时正确的行为。 MicrosoftC++在全局范围内应用程序中实例化非敏捷运行时类或 ref 类本身中的类成员标记为敏捷声明非敏捷类型时，编译器会发出警告。
 
 在非敏捷类当中，最容易处理的是具有 `ThreadingModel`=Both 和 `MarshallingType`=Standard 的类。  只要使用 `Agile<T>` 帮助程序类就能使这些类成为敏捷类。   下面的示例演示类型 `Windows::Security::Credentials::UI::CredentialPickerOptions^`的非敏捷对象的声明，以及作为结果发出的编译器警告。
 
@@ -93,11 +93,11 @@ ref class MyOptions
 
 请注意， `Agile` 不能在 ref 类中作为返回值或参数传递。 `Agile<T>::Get()` 方法返回句柄到对象 (^)，您可以在公共方法或属性中跨越应用程序二进制接口 (ABI) 传递它。
 
-Visual c + + 中创建对已为"None"封送处理行为的进程内 Windows 运行时类的引用时编译器会发出警告 C4451，但不建议您考虑使用`Platform::Agile<T>`。  编译器无法提供超过此警告的任何帮助，因此，你有责任正确使用该类，并确保你的代码只从用户界面线程调用 STA 组件，以及只从后台线程调用 MTA 组件。
+视觉对象中C++，当创建对具有封送处理行为的"无"，编译器将发出警告 C4451，但不建议您考虑使用进程内 Windows 运行时类的引用时`Platform::Agile<T>`。  编译器无法提供超过此警告的任何帮助，因此，你有责任正确使用该类，并确保你的代码只从用户界面线程调用 STA 组件，以及只从后台线程调用 MTA 组件。
 
 ## <a name="authoring-agile-windows-runtime-components"></a>创作敏捷 Windows 运行时组件
 
-在定义的 ref 类在 C + + /CX 中，它是默认情况下敏捷 — 也就是说，它具有`ThreadingModel`= Both 和`MarshallingType`= Agile。  如果您使用 Windows 运行时 c + + 模板库，您可以使类成为敏捷通过派生自`FtmBase`，使用`FreeThreadedMarshaller`。  如果创作具有 `ThreadingModel`=Both 或 `ThreadingModel`=MTA 的类，则请确保该类是线程安全的。
+在定义中的 ref 类C++/CX，它是默认情况下敏捷 — 也就是说，它具有`ThreadingModel`= Both 和`MarshallingType`= Agile。  如果您使用的 Windows 运行时C++模板库中，您可以使类成为敏捷通过派生自`FtmBase`，使用`FreeThreadedMarshaller`。  如果创作具有 `ThreadingModel`=Both 或 `ThreadingModel`=MTA 的类，则请确保该类是线程安全的。
 
 可以修改 ref 类的线程处理模型和封送处理行为。 但是，如果所做的更改会使类为非敏捷类，则必须了解与这些更改关联的影响。
 

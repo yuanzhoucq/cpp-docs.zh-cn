@@ -1,17 +1,17 @@
 ---
-title: defaultvtable （c + + COM 属性）
+title: defaultvtable (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.defaultvtable
 helpviewer_keywords:
 - defaultvtable attribute
 ms.assetid: 5b3ed483-f69e-44dd-80fc-952028eb9d73
-ms.openlocfilehash: 40f901345601193db9752ea6c6dca980ded0625d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 813fb9dd4edf2f6e522e7310ba1e8bfcd55ed2b9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62147946"
 ---
 # <a name="defaultvtable"></a>defaultvtable
 
@@ -30,7 +30,7 @@ ms.locfileid: "50579928"
 
 ## <a name="remarks"></a>备注
 
-**Defaultvtable** c + + 属性具有相同的功能[defaultvtable](/windows/desktop/Midl/defaultvtable) MIDL 特性。
+**Defaultvtable** C++属性具有相同的功能[defaultvtable](/windows/desktop/Midl/defaultvtable) MIDL 特性。
 
 ## <a name="example"></a>示例
 
@@ -71,7 +71,7 @@ class CMyC3 : public IMyI3 {};
 |**适用对象**|**类**，**结构**|
 |**可重复**|否|
 |**必需的特性**|**coclass**|
-|**无效的特性**|无|
+|**无效的特性**|None|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

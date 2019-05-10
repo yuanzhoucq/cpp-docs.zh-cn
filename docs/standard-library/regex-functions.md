@@ -14,11 +14,11 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::swap [C++]
 ms.openlocfilehash: 47b3ae9d59db7c39d7b9667038d216f24530d5dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369600"
 ---
 # <a name="ltregexgt-functions"></a>&lt;regex&gt; 函数
 
@@ -87,7 +87,7 @@ bool regex_match(
 *BidIt*<br/>
 子匹配项的迭代器类型。 一般情况下的这个`string::const_iterator`， `wstring::const_iterator`，`const char*`或`const wchar_t*`。
 
-*分配*<br/>
+*Alloc*<br/>
 匹配结果分配器类。
 
 *Elem*<br/>
@@ -111,7 +111,7 @@ bool regex_match(
 *first*<br/>
 要匹配的序列的开头。
 
-*最后一个*<br/>
+*last*<br/>
 要匹配的序列的结尾。
 
 *match*<br/>
@@ -229,7 +229,7 @@ basic_string<Elem> regex_replace(
 *RXtraits*<br/>
 元素的特征类。
 
-*分配*<br/>
+*Alloc*<br/>
 正则表达式分配器类。
 
 *Elem*<br/>
@@ -244,7 +244,7 @@ basic_string<Elem> regex_replace(
 *fmt*<br/>
 替换内容的格式。
 
-*最后一个*<br/>
+*last*<br/>
 要匹配的序列的结尾。
 
 *out*<br/>
@@ -356,7 +356,7 @@ bool regex_search(
 *BidIt*<br/>
 子匹配项的迭代器类型。
 
-*分配*<br/>
+*Alloc*<br/>
 匹配结果分配器类。
 
 *Elem*<br/>
@@ -380,7 +380,7 @@ bool regex_search(
 *first*<br/>
 要匹配的序列的开头。
 
-*最后一个*<br/>
+*last*<br/>
 要匹配的序列的结尾。
 
 *match*<br/>

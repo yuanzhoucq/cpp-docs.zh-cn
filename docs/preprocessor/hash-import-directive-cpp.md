@@ -1,6 +1,6 @@
 ---
-title: '#导入指令 （c + +）'
-ms.date: 10/18/2018
+title: '#import 指令 (C++)'
+ms.date: 03/27/2019
 f1_keywords:
 - '#import'
 helpviewer_keywords:
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-ms.openlocfilehash: 8029adfd5b4f27e097df693c85ee0d711a13dc4e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 98a0f9f66fb209bb41215fc1e86a9682a4fed023
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407674"
 ---
 # <a name="import-directive-c"></a>#import 指令 (C++)
 
-**C + + 专用**
+**C++特定**
 
 过去一直合并类型库中的信息。 类型库的内容将转换为 C++ 类，主要描述 COM 接口。
 
@@ -72,7 +72,7 @@ ms.locfileid: "50612363"
 #import "..\drawctl\drawctl.tlb" no_namespace, raw_interfaces_only
 ```
 
-\-或-
+\- 或 -
 
 ```cpp
 #import "..\drawctl\drawctl.tlb" no_namespace raw_interfaces_only
@@ -109,7 +109,7 @@ ms.locfileid: "50612363"
 
 ##  <a name="_predir_the_23import_directive_header_files_created_by_import"></a> 创建导入的标头文件
 
-**#import**创建两个标头文件以重新构造 c + + 源代码中的类型库内容。 主头文件类似于 Microsoft 接口定义语言 (MIDL) 编译器生成的文件，但具有附加的编译器生成的代码和数据。 [主头文件](#_predir_the_primary_type_library_header_file)与类型库具有相同的基名称加上。TLH 扩展。 次头文件具有与类型库相同的基名称以及 .TLI 扩展。 它包含编译器生成的成员函数的实现，并且包含 (`#include`) 在主头文件中。
+**#import**创建两个标头文件以重新构造中的类型库内容C++的源代码。 主头文件类似于 Microsoft 接口定义语言 (MIDL) 编译器生成的文件，但具有附加的编译器生成的代码和数据。 [主头文件](#_predir_the_primary_type_library_header_file)与类型库具有相同的基名称加上。TLH 扩展。 次头文件具有与类型库相同的基名称以及 .TLI 扩展。 它包含编译器生成的成员函数的实现，并且包含 (`#include`) 在主头文件中。
 
 如果导入使用 byref 参数的调度接口属性，#import 将不会生成 __declspec ([属性](../cpp/property-cpp.md)) 函数的语句。
 
@@ -121,16 +121,16 @@ ms.locfileid: "50612363"
 
 - 当 **#import**是处理，编译器首先会检查标头存在并且保持最新。 如果是，则不需要重新创建。
 
-**#Import**指令也参与最小重新生成，并可以放置在预编译标头文件。 请参阅[创建预编译标头文件](../build/reference/creating-precompiled-header-files.md)有关详细信息。
+**#Import**指令也参与最小重新生成，并可以放置在预编译标头文件。 请参阅[创建预编译标头文件](../build/creating-precompiled-header-files.md)有关详细信息。
 
 ###  <a name="_predir_the_primary_type_library_header_file"></a> 主类型库标头文件
 主类型库头文件包含 7 个部分：
 
-- 标题样本：包含注释、COMDEF.H（定义标头中使用的一些标准宏）的 `#include` 语句和其他杂项安装信息。
+- 标题样本：包含注释、 `#include` COMDEF 的语句。H （它定义的标头中使用的一些标准宏），和其他杂项安装信息。
 
-- 转发引用和 typedef：包含结构声明（例如 `struct IMyInterface` 和 typedef）。
+- 前向引用和 typedef:包含结构声明如`struct IMyInterface`和 typedef。
 
-- 智能指针声明： 模板类`_com_ptr_t`是封装接口指针，并且不需要调用的智能指针实现`AddRef`， `Release`，`QueryInterface`函数。 此外，它在创建新的 COM 对象时会隐藏 `CoCreateInstance` 调用。 本部分使用宏语句`_COM_SMARTPTR_TYPEDEF`若要将模板专用化的 COM 接口的 typedef 建立[_com_ptr_t](../cpp/com-ptr-t-class.md)模板类。 例如，对于接口`IMyInterface`、。TLH 文件将包含：
+- 智能指针声明：此模板类`_com_ptr_t`是封装接口指针，并且不需要调用的智能指针实现`AddRef`， `Release`，`QueryInterface`函数。 此外，它在创建新的 COM 对象时会隐藏 `CoCreateInstance` 调用。 本部分使用宏语句`_COM_SMARTPTR_TYPEDEF`若要将模板专用化的 COM 接口的 typedef 建立[_com_ptr_t](../cpp/com-ptr-t-class.md)模板类。 例如，对于接口`IMyInterface`、。TLH 文件将包含：
 
     ```TLH
     _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
@@ -144,13 +144,13 @@ ms.locfileid: "50612363"
 
    然后类型 `IMyInterfacePtr` 可以代替原始的接口指针 `IMyInterface*` 使用。 因此，则无需调用各种`IUnknown`成员函数
 
-- Typeinfo 声明： 主要包含类定义和公开返回的各个 typeinfo 项的其他项`ITypeLib:GetTypeInfo`。 在本节中，类型库中每个 typeinfo 都会反映在标头中，具体形式取决于 `TYPEKIND` 信息。
+- Typeinfo 声明：主要包含类定义和公开返回的各个 typeinfo 项的其他项`ITypeLib:GetTypeInfo`。 在本节中，类型库中每个 typeinfo 都会反映在标头中，具体形式取决于 `TYPEKIND` 信息。
 
 - 可选旧式 GUID 定义：包含名为 GUID 常量的初始化。 这些是窗体的名称`CLSID_CoClass`和`IID_Interface`，类似于那些由 MIDL 编译器生成。
 
 - 用于次要类型库标头的 `#include` 语句。
 
-- 页脚样本：当前包含 `#pragma pack(pop)`。
+- 页脚样本：当前包括`#pragma pack(pop)`。
 
 除标题样本和页脚样本部分之外的所有部分的命名空间中都包含指定其名称`library`原始 IDL 文件中的语句。 您可使用类型库标头的名称，方法是通过显式限定命名空间名称或通过包括以下语句：
 
@@ -160,7 +160,7 @@ using namespace MyLib;
 
 后立即 **#import**的源代码中的语句。
 
-命名空间可通过使用抑制[no_namespace](#_predir_no_namespace)的属性 **#import**指令。 但是，禁止显示命名空间可能会导致名称冲突。 此外可以通过重命名命名空间[rename_namespace](#_predir_rename_namespace)属性。
+命名空间可通过使用抑制[no_namespace](no-namespace.md)) 的属性 **#import**指令。 但是，禁止显示命名空间可能会导致名称冲突。 此外可以通过重命名命名空间[rename_namespace](rename-namespace.md)属性。
 
 编译器提供了至其当前处理的类型库所需的任何类型库依赖项的完整路径。 路径是以注释形式写入编译器为每个已处理的类型库生成的类型库标头 (.TLH) 中的。
 
@@ -189,7 +189,7 @@ using namespace MyLib;
 
 有关详细信息，请参阅[#import 属性](../preprocessor/hash-import-attributes-cpp.md)。
 
-**结束 c + + 专用**
+**结束C++特定**
 
 ## <a name="see-also"></a>请参阅
 

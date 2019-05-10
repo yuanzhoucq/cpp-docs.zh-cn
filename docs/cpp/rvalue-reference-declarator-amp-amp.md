@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - '&& rvalue reference declarator'
 ms.assetid: eab0ce3a-c5a3-4992-aa70-6a8ab1f7491d
-ms.openlocfilehash: caec1ae10db273b6ed604af29b20a1908b1313cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 663b639dbfecf9253547e1dd3b4e40480c27b470
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614638"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222042"
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>右值引用声明符： &amp;&amp;
 
@@ -35,7 +35,7 @@ type-id && cast-expression
 
 若要实现移动语义，通常提供*移动构造函数，* ，并根据需要移动赋值运算符 (**运算符 =**)，向您的类。 其源是右值的复制和赋值操作随后会自动利用移动语义。 与默认复制构造函数不同，编译器不提供默认移动构造函数。 有关如何编写移动构造函数以及如何在你的应用程序中使用它的详细信息，请参阅[移动构造函数和移动赋值运算符 （C++）](../cpp/move-constructors-and-move-assignment-operators-cpp.md)。
 
-您还可以重载普通函数和运算符以利用移动语义。 Visual C++ 2010年移动语义引入到 C++ 标准库。 例如，`string` 类实现了执行移动语义的操作。 请考虑以下串联几个字符串并输出结果的示例：
+您还可以重载普通函数和运算符以利用移动语义。 Visual Studio 2010 引入到移动语义C++标准库。 例如，`string` 类实现了执行移动语义的操作。 请考虑以下串联几个字符串并输出结果的示例：
 
 ```cpp
 // string_concatenation.cpp
@@ -51,15 +51,15 @@ int main()
 }
 ```
 
-在 Visual c + + 2010 中之前, 每个调用到**operator +** 分配并返回新的临时`string`对象 （右值）。 **operator +** 由于不知道源字符串是左值还是右值，因此无法追加到另一个字符串。 如果两个源字符串都是左值，则它们可能会在程序中的其他位置引用，因此不能修改。 利用右值引用**operator +** 可以修改为采用右值，不能在程序中其他位置引用。 因此， **operator +** 现在可以将一个字符串追加到另一个。 这可以显著减少 `string` 类必须执行的动态内存分配的数量。 有关详细信息`string`类，请参阅[asic_string 类](../standard-library/basic-string-class.md)。
+在 Visual Studio 2010 中之前, 每个调用到**operator +** 分配并返回新的临时`string`对象 （右值）。 **operator +** 由于不知道源字符串是左值还是右值，因此无法追加到另一个字符串。 如果两个源字符串都是左值，则它们可能会在程序中的其他位置引用，因此不能修改。 利用右值引用**operator +** 可以修改为采用右值，不能在程序中其他位置引用。 因此， **operator +** 现在可以将一个字符串追加到另一个。 这可以显著减少 `string` 类必须执行的动态内存分配的数量。 有关详细信息`string`类，请参阅[asic_string 类](../standard-library/basic-string-class.md)。
 
-当编译器无法使用返回值优化 (RVO) 或命名返回值优化 (NRVO) 时，移动语义也很有用。 在这些情况下，如果类型定义了移动构造函数，则编译器将调用该函数。 有关命名返回值优化的详细信息，请参阅[Visual C++ 2005年中名为返回值优化](https://msdn.microsoft.com/library/ms364057.aspx)。
+当编译器无法使用返回值优化 (RVO) 或命名返回值优化 (NRVO) 时，移动语义也很有用。 在这些情况下，如果类型定义了移动构造函数，则编译器将调用该函数。 有关命名返回值优化的详细信息，请参阅[Visual Studio 2005 中名为返回值优化](https://msdn.microsoft.com/library/ms364057.aspx)。
 
 若要更好地了解移动语义，请考虑将元素插入 `vector` 对象的示例。 如果超出 `vector` 对象的容量，则 `vector` 对象必须为其元素重新分配内存，然后将所有元素复制到其他内存位置，以便为插入的元素腾出空间。 当插入操作复制某个元素时，它将创建一个新元素，调用复制构造函数以将数据从上一个元素复制到新元素，然后销毁上一个元素。 利用移动语义，您可以直接移动对象而不必执行成本高昂的内存分配和复制操作。
 
 若要在 `vector` 示例中利用移动语义，则可以编写将数据从一个对象移动到另一个对象的移动构造函数。
 
-有关移动语义引入 Visual C++ 2010年中的 C++ 标准库的详细信息，请参阅[C++ 标准库](../standard-library/cpp-standard-library-reference.md)。
+详细了解到的移动语义引入C++标准库在 Visual Studio 2010 中，请参阅[C++标准库](../standard-library/cpp-standard-library-reference.md)。
 
 ## <a name="perfect-forwarding"></a>完美转发
 
@@ -220,7 +220,7 @@ void g(MemoryBlock&&)
 MemoryBlock&& f(MemoryBlock&& block)
 {
    g(block);
-   return block;
+   return move(block);
 }
 
 int main()
@@ -375,7 +375,7 @@ print<T&&>: third
 print<const T&&>: fourth
 ```
 
-为了解析对 `print_type_and_value` 函数的每个调用，编译器首先会执行模板自变量推导。 然后，编译器在用推导出的模板参数替换参数类型时应用引用折叠规则。 例如，将局部变量 `s1` 传递给 `print_type_and_value` 函数将导致编译器生成以下函数签名：
+为了解析对 `print_type_and_value` 函数的每个调用，编译器首先会执行模板自变量推导。 然后，编译器在用推导出的模板自变量替换参数类型时应用引用折叠规则。 例如，将局部变量 `s1` 传递给 `print_type_and_value` 函数将导致编译器生成以下函数签名：
 
 ```cpp
 print_type_and_value<string&>(string& && t)
@@ -403,7 +403,7 @@ print_type_and_value<string&>(string& t)
 
 ## <a name="summary"></a>总结
 
-右值引用可将左值和右值区分开。 它们可以帮助您消除不必要的内存分配和复制操作需求，从而提高应用程序的性能。 它们还使您能够编写一个版本的函数，该函数可接受任意参数并将其转发给另一个函数，就像已直接调用其他函数一样。
+右值引用可将左值和右值区分开。 它们可以帮助您消除不必要的内存分配和复制操作需求，从而提高应用程序的性能。 它们还使你能够编写一个版本的函数，该函数可接受任意自变量并将其转发给另一个函数，就像已直接调用其他函数一样。
 
 ## <a name="see-also"></a>请参阅
 

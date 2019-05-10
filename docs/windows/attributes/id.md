@@ -1,17 +1,17 @@
 ---
-title: id （c + + COM 属性）
+title: id (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.id
 helpviewer_keywords:
 - id attribute
 ms.assetid: a48d2c99-c5d2-4f46-bf96-5ac88dcb5d0c
-ms.openlocfilehash: b7bcbd9229529ec00a3b778cafd5678d47af950c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5faf08418771deda3086a434cff6b1900a37e36e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409494"
 ---
 # <a name="id"></a>id
 
@@ -30,7 +30,7 @@ ms.locfileid: "50630016"
 
 ## <a name="remarks"></a>备注
 
-**Id** c + + 属性具有相同的功能[id](/windows/desktop/Midl/id) MIDL 特性。
+**Id** C++属性具有相同的功能[id](/windows/desktop/Midl/id) MIDL 特性。
 
 ## <a name="example"></a>示例
 
@@ -44,8 +44,8 @@ ms.locfileid: "50630016"
 |-|-|
 |**适用对象**|接口方法|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - strings [C++], class CString
 - casting CString objects
 ms.assetid: 5048de8a-5298-4891-b8a0-c554b5a3ac1b
-ms.openlocfilehash: f68f021d16de7ad701ce20c3be59ed6958aa6893
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eee23296d9aac40849dacf58c3b3d9bdf583d1df
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62236094"
 ---
 # <a name="cstring-operations-relating-to-c-style-strings"></a>与 C 样式字符串相关的 CString 操作
 
@@ -83,7 +83,7 @@ strcpy(myString, (LPCTSTR)aCString);
 
 ##  <a name="_core_using_cstring_objects_with_variable_argument_functions"></a> 将 CString 对象使用与可变自变量函数
 
-某些 C 函数采用数量可变的自变量。 一个要注意的示例是 `printf_s`。 由于声明这种函数的方法，编译器无法确定参数的类型，并且无法确定每个参数上要执行何种转换操作。 因此，在将 `CString` 对象传递到采用数量可变的自变量的函数时，使用显示类型强制转换非常重要。
+某些 C 函数采用数量可变的自变量。 一个要注意的示例是 `printf_s`。 由于声明这种函数的方法，编译器无法确定自变量的类型，并且无法确定每个自变量上要执行何种转换操作。 因此，在将 `CString` 对象传递到采用数量可变的自变量的函数时，使用显示类型强制转换非常重要。
 
 若要使用`CString`中的变量自变量函数，显式转换对象`CString`为 LPCTSTR 字符串，如下面的示例中所示。
 

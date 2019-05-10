@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - named_guids attribute
 ms.assetid: b905e5e5-07fe-4874-8993-e05b9d639045
-ms.openlocfilehash: 93b8dd33b7c9b3ce7e9de80497dda3162507e366
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4304e9533467bd33cf61a88ac918fe6d16285d6e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62371738"
 ---
 # <a name="namedguids"></a>named_guids
-**C + + 专用**
+**C++特定**
 
 告知编译器定义和初始化旧样式的窗体的 GUID 变量`LIBID_MyLib`， `CLSID_MyCoClass`， `IID_MyInterface`，和`DIID_MyDispInterface`。
 
@@ -26,7 +26,7 @@ named_guids
 
 ## <a name="remarks"></a>备注
 
-**结束 c + + 专用**
+**结束C++特定**
 
 ## <a name="see-also"></a>请参阅
 

@@ -29,11 +29,11 @@ helpviewer_keywords:
 - fputc function
 ms.assetid: 5a0a593d-43f4-4fa2-a401-ec4e23de4d2f
 ms.openlocfilehash: fc06c9f2060baae63071339768cef11fc5f34023
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288014"
 ---
 # <a name="fputc-fputwc"></a>fputc、fputwc
 
@@ -57,7 +57,7 @@ wint_t fputwc(
 *c*<br/>
 要写入的字符。
 
-*流*<br/>
+*stream*<br/>
 指向**文件**结构的指针。
 
 ## <a name="return-value"></a>返回值

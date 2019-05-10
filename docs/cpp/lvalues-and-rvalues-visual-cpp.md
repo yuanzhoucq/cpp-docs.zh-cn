@@ -1,18 +1,18 @@
 ---
-title: 值的类别： Lvalues 和 Rvalues （Visual c + +）
-ms.date: 04/06/2018
+title: 值的类别：Lvalues 和 Rvalues (C++)
+ms.date: 05/07/2019
 helpviewer_keywords:
 - R-values [C++]
 - L-values [C++]
 ms.assetid: a8843344-cccc-40be-b701-b71f7b5cdcaf
-ms.openlocfilehash: 74bfac5f5bb56549eee41a5479babf8e71b00aa6
-ms.sourcegitcommit: e9568560cdb95e83a8fba1e9bca21ece910d20b7
-ms.translationtype: MT
+ms.openlocfilehash: 4e3cfa87a8f1ae9b17f7c08afd8faeabea7102b3
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52453880"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222017"
 ---
-# <a name="lvalues-and-rvalues-visual-c"></a>左值和右值 （Visual C++）
+# <a name="lvalues-and-rvalues-c"></a>Lvalues 和 Rvalues (C++)
 
 每个 C++ 表达式有一个类型，并且属于*值类别*。 值类别是在创建、 复制和移动在表达式计算期间的临时对象时，编译器必须遵循的规则的基础。
 
@@ -20,7 +20,7 @@ C++ 17 标准定义表达式值的分类，如下所示：
 
 - 一个*glvalue*是的表达式的求值结果确定标识的对象、 位域或函数。
 - 一个*prvalue*是的表达式的求值结果初始化对象或一个位字段，或在它所出现的上下文中的指定计算运算符的操作数的值。
-- *Xvalue*是 glvalue 表示的对象或位域可以重复使用的资源，（通常是因为它即将达到其生命周期结束）。 示例： 特定类型的表达式涉及右值引用 (8.3.2) 产生 xvalues，如对其返回类型是右值引用的函数的调用或强制转换为右值引用类型。
+- *Xvalue*是 glvalue 表示的对象或位域可以重复使用的资源，（通常是因为它即将达到其生命周期结束）。 示例:特定类型的表达式涉及右值引用 (8.3.2) 产生 xvalues，如对其返回类型是右值引用的函数的调用或强制转换为右值引用类型。
 - *左值*是不是 xvalue glvalue。
 - *右值*prvalue 或 xvalue。
 

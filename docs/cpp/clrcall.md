@@ -7,11 +7,11 @@ helpviewer_keywords:
 - __clrcall keyword [C++]
 ms.assetid: 92096695-683a-40ed-bf65-0c8443572152
 ms.openlocfilehash: bc44feb97223de47f45734f75777ee040d0ebdd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62364566"
 ---
 # <a name="clrcall"></a>__clrcall
 
@@ -29,7 +29,7 @@ ms.locfileid: "50534571"
 
 [/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)意味着，所有函数和函数指针都是 **__clrcall** ，编译器将不允许将编译单位以外的任何标记中的函数 **__clrcall**。 当 **/clr: pure**使用，则 **__clrcall**只能在函数指针和外部声明上指定。
 
-可以直接调用 **__clrcall**函数从使用已编译的现有 c + + 代码 **/clr** ，只要该函数具有 MSIL 实现。 **__clrcall**不能直接从具有内联 asm，例如，调用特定于 CPU 的 intrinisics 的函数调用函数，即使这些函数将编译使用`/clr`。
+可以直接调用 **__clrcall**函数从现有的C++已通过使用已编译的代码 **/clr** ，只要该函数具有 MSIL 实现。 **__clrcall**不能直接从具有内联 asm，例如，调用特定于 CPU 的 intrinisics 的函数调用函数，即使这些函数将编译使用`/clr`。
 
 **__clrcall**函数指针仅用于在其中创建应用程序域中使用。  而不是传入 **__clrcall**函数指针跨应用程序域，请使用<xref:System.CrossAppDomainDelegate>。 有关详细信息，请参阅[应用程序域和 Visual C++](../dotnet/application-domains-and-visual-cpp.md)。
 

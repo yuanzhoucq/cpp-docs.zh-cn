@@ -1,17 +1,17 @@
 ---
-title: 事务：在记录集中执行事务 (ODBC)
+title: 事务：在记录集 (ODBC) 执行事务
 ms.date: 11/04/2016
 helpviewer_keywords:
 - transactions, updating recordsets
 ms.assetid: cf1d6b48-7fb8-4903-84f7-a1822054534d
-ms.openlocfilehash: df7c28ebfbb68f3e0163368247b90ff69058726d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e06d61d3d86233e136b0b3fe78f149a6778649b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62329824"
 ---
-# <a name="transaction-performing-a-transaction-in-a-recordset-odbc"></a>事务：在记录集中执行事务 (ODBC)
+# <a name="transaction-performing-a-transaction-in-a-recordset-odbc"></a>事务：在记录集 (ODBC) 执行事务
 
 本主题说明如何在记录集中执行事务。
 
@@ -22,7 +22,7 @@ ms.locfileid: "50659573"
 
 1. 调用`CDatabase`对象的`BeginTrans`成员函数。
 
-1. 如果你尚未实现批量行提取，调用`AddNew/Update`， `Edit/Update`，和`Delete`的很多时候根据需要与相同的数据库的一个或多个记录集对象的成员函数。 有关详细信息，请参阅[记录集： 添加、 更新和删除记录 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)。 如果已实现批量行提取，则必须编写您自己的函数来更新数据源。
+1. 如果你尚未实现批量行提取，调用`AddNew/Update`， `Edit/Update`，和`Delete`的很多时候根据需要与相同的数据库的一个或多个记录集对象的成员函数。 有关详细信息，请参阅[记录集：添加、 更新和删除记录 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)。 如果已实现批量行提取，则必须编写您自己的函数来更新数据源。
 
 1. 最后，调用`CDatabase`对象的`CommitTrans`成员函数。 如果在更新之一中出现错误，或者你决定取消所做的更改，则调用其`Rollback`成员函数。
 

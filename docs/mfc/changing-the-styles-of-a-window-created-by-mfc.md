@@ -21,12 +21,12 @@ helpviewer_keywords:
 - CMainFrame class [MFC]
 - styles [MFC], windows
 ms.assetid: 77fa4f03-96b4-4687-9ade-41e46f7e4b0a
-ms.openlocfilehash: c8a3a5d9b8b007887dfb31f7459c0269377b38fd
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0a002badf9c20ca7b2d1a129eca069e586893f3c
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294156"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64344208"
 ---
 # <a name="changing-the-styles-of-a-window-created-by-mfc"></a>更改 MFC 创建的窗口的样式
 
@@ -34,7 +34,7 @@ ms.locfileid: "57294156"
 
 ##  <a name="_core_changing_styles_in_a_new_mfc_application"></a> 在新的 MFC 应用程序中更改样式
 
-如果你使用 Visual c + + 2.0 或更高版本，你可以创建你的应用程序时更改应用程序向导中的默认窗口样式。 在应用程序向导的用户界面功能页上，可以更改主框架窗口和 MDI 子窗口的样式。 对于任一窗口类型，您可以指定其帧粗细 （胖或瘦） 和任何以下：
+如果您使用的 Visual C++ 2.0 或更高版本，创建你的应用程序时，可以更改应用程序向导中的默认窗口样式。 在应用程序向导的用户界面功能页上，可以更改主框架窗口和 MDI 子窗口的样式。 对于任一窗口类型，您可以指定其帧粗细 （胖或瘦） 和任何以下：
 
 - 窗口是否具有最小化或最大化控件。
 
@@ -50,7 +50,7 @@ ms.locfileid: "57294156"
 
 [!code-cpp[NVC_MFCDocView#15](../mfc/codesnippet/cpp/changing-the-styles-of-a-window-created-by-mfc_1.cpp)]
 
-[CTRLBARS](../visual-cpp-samples.md)示例应用程序演示了此更改窗口特性的方法。 具体取决于你的应用程序中的更改`PreCreateWindow`，可能会需要调用该函数的基类实现。
+[CTRLBARS](../overview/visual-cpp-samples.md)示例应用程序演示了此更改窗口特性的方法。 具体取决于你的应用程序中的更改`PreCreateWindow`，可能会需要调用该函数的基类实现。
 
 以下讨论涵盖了 SDI 用例和[MDI 用例](#_core_the_mdi_case)。
 

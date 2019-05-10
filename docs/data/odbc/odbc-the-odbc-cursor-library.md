@@ -1,5 +1,5 @@
 ---
-title: ODBC：ODBC 游标库
+title: ODBC:ODBC 游标库
 ms.date: 11/04/2016
 helpviewer_keywords:
 - cursor library [ODBC]
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - ODBC, timestamp
 - positioning cursors
 ms.assetid: 6608db92-82b1-4164-bb08-78153c227be3
-ms.openlocfilehash: e175a9b27cb19b0c2a67a08751b7a7717226ac55
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 862303a0dc66fbd49bfcba83336ab29dfc7145c0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395724"
 ---
-# <a name="odbc-the-odbc-cursor-library"></a>ODBC：ODBC 游标库
+# <a name="odbc-the-odbc-cursor-library"></a>ODBC:ODBC 游标库
 
 本主题介绍 ODBC 游标库，并说明如何使用它。 有关详细信息，请参见:
 

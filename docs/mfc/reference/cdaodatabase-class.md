@@ -59,11 +59,11 @@ helpviewer_keywords:
 - CDaoDatabase [MFC], m_pWorkspace
 ms.assetid: 8ff5b342-964d-449d-bef1-d0ff56aadf6d
 ms.openlocfilehash: d1e9db1ddebe05d42cbb8c4ba242938d6d86cc81
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399832"
 ---
 # <a name="cdaodatabase-class"></a>CDaoDatabase 类
 
@@ -254,7 +254,7 @@ virtual void Create(
 ### <a name="parameters"></a>参数
 
 *lpszName*<br/>
-字符串表达式，您创建的数据库文件的名称。 它可以完整路径和文件名，如"c:\\\MYDB。MDB"。 必须提供一个名称。 如果不提供文件扩展名的。追加 MDB。 如果网络支持的统一命名约定 (UNC)，您还可以指定网络路径，如"\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB"。 仅 Microsoft Jet (。可以使用此成员函数创建 MDB) 数据库文件。 (双反斜杠需要字符串文字，因为"\\"c + + 转义符。)
+字符串表达式，您创建的数据库文件的名称。 它可以完整路径和文件名，如"c:\\\MYDB。MDB"。 必须提供一个名称。 如果不提供文件扩展名的。追加 MDB。 如果网络支持的统一命名约定 (UNC)，您还可以指定网络路径，如"\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB"。 仅 Microsoft Jet (。可以使用此成员函数创建 MDB) 数据库文件。 (双反斜杠需要字符串文字，因为"\\"是C++转义符。)
 
 *lpszLocale*<br/>
 用来指定用于创建数据库的排序规则顺序的字符串表达式。 默认值为 `dbLangGeneral`。 可能的值有：
@@ -309,7 +309,7 @@ virtual void Create(
 
 ### <a name="remarks"></a>备注
 
-`Create` 创建数据库文件和基础 DAO 数据库对象并初始化 c + + 对象。 对象添加到关联的工作区数据库集合。 数据库对象处于打开状态;不要调用`Open*`后`Create`。
+`Create` 创建数据库文件和基础 DAO 数据库对象并初始化C++对象。 对象添加到关联的工作区数据库集合。 数据库对象处于打开状态;不要调用`Open*`后`Create`。
 
 > [!NOTE]
 >  使用`Create`，可以创建仅 Microsoft Jet (。MDB) 数据库。 无法创建 ISAM 数据库或 ODBC 的数据库。
@@ -523,7 +523,7 @@ CString GetName();
 
 ### <a name="remarks"></a>备注
 
-如果网络支持的统一命名约定 (UNC)，您还可以指定网络路径，例如，"\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB。MDB"。 (双反斜杠需要字符串文字，因为"\\"c + + 转义符。)
+如果网络支持的统一命名约定 (UNC)，您还可以指定网络路径，例如，"\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB。MDB"。 (双反斜杠需要字符串文字，因为"\\"是C++转义符。)
 
 例如，可能想要在标题中显示此名称。 如果正在检索名称时发生错误，则 MFC 会引发类型的异常[CDaoException](../../mfc/reference/cdaoexception-class.md)。
 
@@ -825,7 +825,7 @@ virtual void Open(
 ### <a name="parameters"></a>参数
 
 *lpszName*<br/>
-是现有的 Microsoft Jet 的名称的字符串表达式 (。MDB) 数据库文件。 如果文件名的扩展名，则需要。 如果网络支持的统一命名约定 (UNC)，您还可以指定网络路径，如"\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB。MDB"。 (双反斜杠需要字符串文字，因为"\\"c + + 转义符。)
+是现有的 Microsoft Jet 的名称的字符串表达式 (。MDB) 数据库文件。 如果文件名的扩展名，则需要。 如果网络支持的统一命名约定 (UNC)，您还可以指定网络路径，如"\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB。MDB"。 (双反斜杠需要字符串文字，因为"\\"是C++转义符。)
 
 使用时，某些注意事项适用*lpszName*。 如果它：
 

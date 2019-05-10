@@ -1,5 +1,5 @@
 ---
-title: MFC ActiveX 控件：Properties
+title: MFC ActiveX 控件：属性
 ms.date: 11/04/2016
 helpviewer_keywords:
 - properties [MFC], ActiveX controls
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - properties [MFC]
 ms.assetid: b678a53c-0d9e-476f-8aa0-23b80baaba46
 ms.openlocfilehash: 5e01854e7ae7acdc33275351d0d26a76dfeabc9b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62324319"
 ---
-# <a name="mfc-activex-controls-properties"></a>MFC ActiveX 控件：Properties
+# <a name="mfc-activex-controls-properties"></a>MFC ActiveX 控件：属性
 
-ActiveX 控件激发其控件容器与进行通信的事件。 容器，作为回报，使用方法和属性与该控件进行通信。 方法和属性是类似的用法和用途，分别为成员函数和 c + + 类的成员变量。 属性是向任何容器公开的数据成员的 ActiveX 控件。 属性包含 ActiveX 控件，如自动化客户端和 ActiveX 控件容器应用程序的提供的接口。
+ActiveX 控件激发其控件容器与进行通信的事件。 容器，作为回报，使用方法和属性与该控件进行通信。 方法和属性是类似的用法和用途，分别为成员函数和成员变量的C++类。 属性是向任何容器公开的数据成员的 ActiveX 控件。 属性包含 ActiveX 控件，如自动化客户端和 ActiveX 控件容器应用程序的提供的接口。
 
 属性也称为属性。
 
@@ -27,11 +27,11 @@ ActiveX 控件可以实现常用和自定义方法和属性。 类`COleControl`�
 
 以下文章讨论了 ActiveX 控件属性的更多详细信息中：
 
-- [MFC ActiveX 控件：添加常用属性](../mfc/mfc-activex-controls-adding-stock-properties.md)
+- [MFC ActiveX 控件：添加内置属性](../mfc/mfc-activex-controls-adding-stock-properties.md)
 
 - [MFC ActiveX 控件：添加自定义属性](../mfc/mfc-activex-controls-adding-custom-properties.md)
 
-- [MFC ActiveX 控件：高级的属性实现](../mfc/mfc-activex-controls-advanced-property-implementation.md)
+- [MFC ActiveX 控件：高级属性实现](../mfc/mfc-activex-controls-advanced-property-implementation.md)
 
 - [MFC ActiveX 控件：访问环境属性](../mfc/mfc-activex-controls-accessing-ambient-properties.md)
 

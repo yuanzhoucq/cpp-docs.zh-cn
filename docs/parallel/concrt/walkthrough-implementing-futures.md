@@ -1,16 +1,16 @@
 ---
 title: 演练：实现 Future
-ms.date: 11/04/2016
+ms.date: 04/25/2019
 helpviewer_keywords:
 - implementing futures [Concurrency Runtime]
 - futures, implementing [Concurrency Runtime]
 ms.assetid: 82ea75cc-aaec-4452-b10d-8abce0a87e5b
-ms.openlocfilehash: 7164919d649751ac11fefa5be3cb2e5b7798ee4f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 00ad8bbe6f950ad531bad751686393dce66643bb
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262124"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857067"
 ---
 # <a name="walkthrough-implementing-futures"></a>演练：实现 Future
 

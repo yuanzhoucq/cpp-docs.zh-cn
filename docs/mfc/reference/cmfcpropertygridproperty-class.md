@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CMFCPropertyGridProperty [MFC], m_strFormatLong
 - CMFCPropertyGridProperty [MFC], m_strFormatShort
 ms.assetid: 36f3fabe-0efe-468b-8a0b-5a7956db38a2
-ms.openlocfilehash: 550f238ae66bcaf7d5afc245b709c42c78769949
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: aa88cc2d4ee915b970157ee6ed280512e2352bcc
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62310445"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>CMFCPropertyGridProperty 类
 
@@ -282,7 +282,7 @@ class CMFCPropertyGridProperty : public CObject
 
 ### <a name="data-members"></a>数据成员
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[CMFCPropertyGridProperty::m_strFormatDouble](#m_strformatdouble)|双精度类型值的格式字符串。|
 |[CMFCPropertyGridProperty::m_strFormatFloat](#m_strformatfloat)|类型为 float 的值的格式字符串。|
@@ -297,7 +297,7 @@ class CMFCPropertyGridProperty : public CObject
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何构造`CMFCPropertyGridProperty`对象。 该示例还演示如何使用中的各种方法`CMFCPropertyGridProperty`类添加一个选项，添加个子项、 启用一个属性，并显示属性。 此示例摘自[新的控件示例](../../visual-cpp-samples.md)。
+下面的示例演示如何构造`CMFCPropertyGridProperty`对象。 该示例还演示如何使用中的各种方法`CMFCPropertyGridProperty`类添加一个选项，添加个子项、 启用一个属性，并显示属性。 此示例摘自[新的控件示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_NewControls#27](../../mfc/reference/codesnippet/cpp/cmfcpropertygridproperty-class_1.cpp)]
 

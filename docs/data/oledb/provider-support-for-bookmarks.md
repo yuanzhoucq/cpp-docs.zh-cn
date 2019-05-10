@@ -8,12 +8,12 @@ helpviewer_keywords:
 - IRowsetLocate class
 - OLE DB providers, bookmark support
 ms.assetid: 1b14ccff-4f76-462e-96ab-1aada815c377
-ms.openlocfilehash: 326a52805cb78a3f31141d3eac6a0942a7fee477
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: 207dcc92cd308052e4e5e7265bf0632c5096bed4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51264718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62283777"
 ---
 # <a name="provider-support-for-bookmarks"></a>用于书签的提供程序支持
 

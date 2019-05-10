@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SQL [C++], ODBC
 - ODBC [C++], SQL implementation
 ms.assetid: e3923bc4-b317-4e0b-afd8-3cd403eb0faf
-ms.openlocfilehash: c9ea15520f98a86f8af7c278bfc77463689a4606
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f93d97530068695359273b523e7d2ae46de01cb
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62329877"
 ---
 # <a name="sql"></a>SQL
 
@@ -50,9 +50,9 @@ SQL 语句如开头关键字谓词**创建**或**选择**。 SQL 是非常强大
 |**SELECT**|若要确定哪些表和数据源中的列将被用于。|
 |**WHERE**|若要应用筛选器，用于限制所选内容。|
 |**ORDER BY**|要应用于该记录集的排序顺序。|
-|**插入**|若要将新记录添加到记录集。|
-|**删除**|若要从记录集删除记录。|
-|**更新**|若要修改记录的字段。|
+|**INSERT**|若要将新记录添加到记录集。|
+|**DELETE**|若要从记录集删除记录。|
+|**UPDATE**|若要修改记录的字段。|
 
 此外，数据库类识别 ODBC**调用**语句，可用于在某些数据源上调用预定义的查询 （或存储的过程）。 ODBC 数据库驱动程序解释这些语句，并将替换为适用于每个 DBMS 命令。
 
@@ -61,9 +61,9 @@ SQL 语句如开头关键字谓词**创建**或**选择**。 SQL 是非常强大
 
 如果类不能识别中的用户提供语句`CRecordset::Open`，它被解释为表名。
 
-框架如何构造 SQL 语句的说明，请参阅[记录集： 如何选择记录 (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)并[SQL： 自定义您记录集的 SQL 语句 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)。
+框架如何构造 SQL 语句的说明，请参阅[记录集：如何记录集选择记录 (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)和[SQL:自定义记录集的 SQL 语句 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)。
 
-SQL 数据库使用类似于 C 和 c + + 中使用的数据类型。 有关这些相似之处的讨论，请参阅[SQL: SQL 和 c + + 数据类型 (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)。
+SQL 数据库使用类似于在 C 中使用的数据类型和C++。 有关这些相似之处的讨论，请参阅[SQL:SQL 和C++数据类型 (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)。
 
 你可以找到包括一系列支持的 SQL 语句、 数据类型、 SQL core 语法，以及建议发布的 sql，读取列表中的 sql 的详细信息*ODBC SDK* *程序员参考* MSDN 库 CD 上。
 
@@ -73,15 +73,15 @@ SQL 数据库使用类似于 C 和 c + + 中使用的数据类型。 有关这�
 
 记录集构造 SQL 语句，方法是建立到 SQL 语句的组成部分`CString`。 该字符串构造为**选择**语句，返回一组记录。
 
-当该记录集调用 ODBC 将 SQL 语句发送到数据源时，ODBC 驱动程序管理器将该语句传递到 ODBC 驱动程序和驱动程序将其发送到基础 DBMS。 DBMS 返回结果集的记录，并向应用程序的 ODBC 驱动程序返回的记录。 数据库类使您程序的访问权限的类型安全的 c + + 类中的结果集派生自`CRecordset`。
+当该记录集调用 ODBC 将 SQL 语句发送到数据源时，ODBC 驱动程序管理器将该语句传递到 ODBC 驱动程序和驱动程序将其发送到基础 DBMS。 DBMS 返回结果集的记录，并向应用程序的 ODBC 驱动程序返回的记录。 数据库类让您访问的结果集在类型安全的程序C++类派生自`CRecordset`。
 
 以下主题提供有关数据库类如何使用 SQL 的详细信息：
 
-- [SQL： 自定义记录集的 SQL 语句 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)
+- [SQL：自定义记录集的 SQL 语句 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)
 
 - [SQL：SQL 和 C++ 数据类型 (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)
 
-- [SQL：进行直接 SQL 调用 (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
+- [SQL：执行直接 SQL 调用 (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
 
 ## <a name="see-also"></a>请参阅
 

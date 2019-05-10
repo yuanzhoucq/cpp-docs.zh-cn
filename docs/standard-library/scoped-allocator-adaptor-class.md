@@ -24,11 +24,11 @@ helpviewer_keywords:
 - std::scoped_allocator_adaptor::select_on_container_copy_construction
 ms.assetid: 0d9b06a1-9a4a-4669-9470-8805cae48e89
 ms.openlocfilehash: c02f5171fac862b6f79e194f5940b0adeb2e93e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348206"
 ---
 # <a name="scopedallocatoradaptor-class"></a>scoped_allocator_adaptor 类
 
@@ -65,7 +65,7 @@ class scoped_allocator_adaptor;
 
 ### <a name="constructors"></a>构造函数
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[scoped_allocator_adaptor](#scoped_allocator_adaptor)|构造 `scoped_allocator_adaptor` 对象。|
 
@@ -88,7 +88,7 @@ class scoped_allocator_adaptor;
 
 ### <a name="structs"></a>结构
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[scoped_allocator_adaptor::rebind 结构](#rebind_struct)|将 `Outer::rebind\<Other>::other` 类型定义为 `scoped_allocator_adaptor\<Other, Inner...>` 的同义词。|
 
@@ -124,7 +124,7 @@ pointer allocate(size_type count);pointer allocate(size_type count, const_void_p
 *count*<br/>
 要分配足够大的存储空间的元素数。
 
-*提示*<br/>
+*hint*<br/>
 通过定位在请求之前分配的对象地址，指针可能对分配器对象有所帮助。
 
 ### <a name="return-value"></a>返回值
@@ -163,7 +163,7 @@ void construct(pair<Ty1, Ty2>* ptr, pair<Uy1, Uy2>&& right);
 *ptr*<br/>
 指向要构造对象的内存位置的指针。
 
-*参数*<br/>
+*args*<br/>
 参数列表。
 
 *first*<br/>
@@ -297,7 +297,7 @@ scoped_allocator_adaptor(Outer2&& al,
 *right*<br/>
 现有 `scoped_allocator_adaptor`。
 
-*Al*<br/>
+*al*<br/>
 要用作外部分配器的现有分配器。
 
 *rest*<br/>

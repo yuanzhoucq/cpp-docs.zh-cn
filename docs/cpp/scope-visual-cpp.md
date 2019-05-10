@@ -11,11 +11,11 @@ helpviewer_keywords:
 - scope, C++ names
 ms.assetid: 81fecbb0-338b-4325-8332-49f33e716352
 ms.openlocfilehash: 534bb9711ff54e21ca091b399aa3d13ec5a7359d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62267309"
 ---
 # <a name="scope-c"></a>范围 (C++)
 
@@ -25,7 +25,7 @@ ms.locfileid: "52176752"
 
 有六种范围：
 
-- **全局范围内**全局名称是指任何类、 函数或命名空间的外部声明。 但是，c + + 中甚至这些名称存在一个隐式全局命名空间。 从声明点扩展了全局名称的作用域到声明它们的文件的末尾。 对于全局名称，可见性也由规则的控制[链接](program-and-linkage-cpp.md)确定名称在程序中的其他文件中是否可见。
+- **全局范围内**全局名称是指任何类、 函数或命名空间的外部声明。 但是，在C++即使这些名称存在与隐式全局命名空间。 从声明点扩展了全局名称的作用域到声明它们的文件的末尾。 对于全局名称，可见性也由规则的控制[链接](program-and-linkage-cpp.md)确定名称在程序中的其他文件中是否可见。
 
 - **Namespace 作用域**中声明的名称[命名空间](namespaces-cpp.md)、 任何类或枚举的定义或函数块的外部是可见的声明点到命名空间的末尾。 跨不同的文件可能在多个块中定义命名空间。
 
@@ -54,7 +54,7 @@ i = 0
 ```
 
 > [!NOTE]
-> 参数 `szWhat` 被视为处于函数的范围内。 因此，它被当做就像已在函数的最外层块中声明一样。
+> 自变量 `szWhat` 被视为处于函数的范围内。 因此，它被当做就像已在函数的最外层块中声明一样。
 
 ## <a name="hiding-class-names"></a>隐藏类名
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - sockets [MFC], deriving from socket classes
 ms.assetid: 3a26e67a-e323-433b-9b05-eca018799801
 ms.openlocfilehash: 12ab66cfd9212cd79752e2f6359b857194c6428c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385253"
 ---
 # <a name="windows-sockets-deriving-from-socket-classes"></a>Windows 套接字：从套接字类派生
 
@@ -27,7 +27,7 @@ ms.locfileid: "57270292"
 
 有关详细信息，请参见:
 
-- [Windows 套接字：对存档使用套接字](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows 套接字：结合使用套接字和存档](../mfc/windows-sockets-using-sockets-with-archives.md)
 
 - [Windows 套接字：使用类 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
@@ -35,7 +35,7 @@ ms.locfileid: "57270292"
 
 - [Windows 套接字：字节排序](../mfc/windows-sockets-byte-ordering.md)
 
-- [Windows 套接字：将字符串转换](../mfc/windows-sockets-converting-strings.md)
+- [Windows 套接字：转换字符串](../mfc/windows-sockets-converting-strings.md)
 
 ## <a name="see-also"></a>请参阅
 

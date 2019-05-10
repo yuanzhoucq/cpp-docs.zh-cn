@@ -4,11 +4,11 @@ ms.custom: get-started-article
 ms.date: 09/27/2018
 ms.assetid: 2de12022-3148-4ce3-8606-8a9d4274f0e9
 ms.openlocfilehash: 57fc2adaadcca52cfc25736b5f9010fcb65a2ff0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252558"
 ---
 # <a name="adding-an-event-atl-tutorial-part-5"></a>添加事件（ATL 教程，第 5 部分）
 
@@ -134,7 +134,7 @@ ms.locfileid: "57278634"
 
 1. 在中**属性**窗口中，单击**消息**图标，然后单击`WM_LBUTTONDOWN`从左侧列表。
 
-1. 从下拉列表中显示，单击**\<添加 > OnLButtonDown**。 `OnLButtonDown`处理程序声明将添加到 PolyCtl.h，和的处理程序实现将添加到 PolyCtl.cpp。
+1. 从下拉列表中显示，单击 **\<添加 > OnLButtonDown**。 `OnLButtonDown`处理程序声明将添加到 PolyCtl.h，和的处理程序实现将添加到 PolyCtl.cpp。
 
 接下来，修改该处理程序。
 

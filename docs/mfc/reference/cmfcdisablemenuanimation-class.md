@@ -9,11 +9,11 @@ helpviewer_keywords:
 - CMFCDisableMenuAnimation [MFC], Restore
 ms.assetid: c6eb07da-c382-43d6-8028-007f2320e50e
 ms.openlocfilehash: bf8c598e9e105569e0a5676267e205b3d3939712
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62345599"
 ---
 # <a name="cmfcdisablemenuanimation-class"></a>CMFCDisableMenuAnimation 类
 
@@ -46,7 +46,7 @@ class CMFCDisableMenuAnimation
 
 |||
 |-|-|
-|name|描述|
+|名称|描述|
 |`CMFCDisableMenuAnimation::m_animType`|将存储以前的弹出菜单动画类型。|
 
 ### <a name="remarks"></a>备注

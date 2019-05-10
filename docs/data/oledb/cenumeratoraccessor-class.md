@@ -37,12 +37,12 @@ helpviewer_keywords:
 - m_szName
 - m_szParseName
 ms.assetid: 21e8e7ea-3511-4afe-b33f-d520f4ff82bb
-ms.openlocfilehash: 1fa04d94e4e6785e5a9d0941ce44a4404b1e28da
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e609b346bb4a0c2469c24e20540c646fa869ae26
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62230727"
 ---
 # <a name="cenumeratoraccessor-class"></a>CEnumeratorAccessor 类
 

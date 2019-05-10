@@ -7,11 +7,11 @@ helpviewer_keywords:
 - R6033
 ms.assetid: f9cffdc9-81bd-4a64-a698-02762cbd82c9
 ms.openlocfilehash: 39d8a20dacb0cdeb2a767529e9716bd476f406dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400001"
 ---
 # <a name="c-runtime-error-r6033"></a>C 运行时错误 R6033
 
@@ -29,4 +29,4 @@ ms.locfileid: "50467179"
 
 **程序员提供的的信息**
 
-此诊断指示在加载程序锁期间执行了 MSIL 指令。 如果已使用 /clr 标志编译本机 c + +，这可能发生。 只能对包含托管的代码的模块使用 /clr 标志。 有关详细信息，请参阅[混合程序集初始化](../../dotnet/initialization-of-mixed-assemblies.md)。
+此诊断指示在加载程序锁期间执行了 MSIL 指令。 发生这种情况在进行了编译本机C++使用 /clr 标志。 只能对包含托管的代码的模块使用 /clr 标志。 有关详细信息，请参阅[混合程序集初始化](../../dotnet/initialization-of-mixed-assemblies.md)。

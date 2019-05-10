@@ -1,19 +1,15 @@
 ---
 title: 类和结构 (C++)
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 helpviewer_keywords:
-- Visual C++, classes
-- structures, C++ classes
-- user-defined types
-- classes [C++]
-- user-defined types, C++ classes
+- C++, classes and structs
 ms.assetid: 516dd496-13fb-4f17-845a-e9ca45437873
-ms.openlocfilehash: 44736b9515363d1406b124858f72f12f8f7f552a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: a37a23296159de2632f6a218eb81315ee2d6a646
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562742"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222507"
 ---
 # <a name="classes-and-structs-c"></a>类和结构 (C++)
 
@@ -51,7 +47,7 @@ ms.locfileid: "50562742"
 
 三种类类型是结构、类和联合。 使用声明它们[struct](../cpp/struct-cpp.md)，[类](../cpp/class-cpp.md)，并[联合](../cpp/unions.md)关键字。 下表显示三种类类型之间的差异。
 
-有关联合的详细信息，请参阅[联合](../cpp/unions.md)。 有关托管的类和结构的信息，请参阅[类和结构](../windows/classes-and-structs-cpp-component-extensions.md)。
+有关联合的详细信息，请参阅[联合](../cpp/unions.md)。 有关类和结构中的信息C++/CLI 和C++/CX，请参阅[类和结构](../extensions/classes-and-structs-cpp-component-extensions.md)。
 
 ### <a name="access-control-and-constraints-of-structures-classes-and-unions"></a>结构、类和联合的访问控制和约束
 

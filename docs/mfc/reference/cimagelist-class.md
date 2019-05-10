@@ -75,11 +75,11 @@ helpviewer_keywords:
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
 ms.openlocfilehash: 2fc92858f84826e2b953fcbc9de020741e97b007
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62346361"
 ---
 # <a name="cimagelist-class"></a>CImageList 类
 
@@ -295,7 +295,7 @@ BOOL Copy(
 *uFlags*<br/>
 用于指定要进行的复制操作的类型的位标志值。 此参数可以是下列值之一：
 
-|值|含义|
+|“值”|含义|
 |-----------|-------------|
 |ILCF_MOVE|源映像复制到目标图像的索引。 此操作会导致给定图像的多个实例。 默认值为 ILCF_MOVE。|
 |ILCF_SWAP|源和目标图像交换内的图像列表的位置。|
@@ -357,7 +357,7 @@ BOOL Create(CImageList* pImageList);
 *nFlags*<br/>
 指定要创建图像列表的类型。 此参数可以是以下值的组合，但它可以包括只有一个`ILC_COLOR`值。
 
-|值|含义|
+|“值”|含义|
 |-----------|-------------|
 |ILC_COLOR|如果指定任何其他 ILC_COLOR * 标志时，请使用默认行为。 通常情况下，默认值是 ILC_COLOR4;但对于较旧的显示器驱动程序，默认值是 ILC_COLORDDB。|
 |ILC_COLOR4|使用 4 位 （16 种颜色） 与设备无关位图 (DIB) 部分作为位图图像列表。|
@@ -591,7 +591,7 @@ BOOL Draw(
 *nStyle*<br/>
 标志，指定的绘制样式。 它可以是一个或多个值：
 
-|值|含义|
+|“值”|含义|
 |-----------|-------------|
 |ILD_BLEND25 ILD_FOCUS|绘制图像，混合系统突出显示颜色的 25%。 如果图像列表不包含一个掩码，则此值无效。|
 |ILD_BLEND50, ILD_SELECTED, ILD_BLEND|绘制图像，混合系统突出显示颜色的 50%。 如果图像列表不包含一个掩码，则此值无效。|
@@ -720,7 +720,7 @@ BOOL DrawIndirect(
 *rgbFore*<br/>
 映像前景色，默认情况下 CLR_DEFAULT。 此参数可以是应用程序定义的 RGB 值或以下值之一：
 
-|值|含义|
+|“值”|含义|
 |-----------|-------------|
 |CLR_DEFAULT|默认前景色。 使用系统突出显示颜色作为前景色绘制图像。|
 |CLR_NONE|没有 blend 颜色。 图像与目标设备上下文的颜色混合。|

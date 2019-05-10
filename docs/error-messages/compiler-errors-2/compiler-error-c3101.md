@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3101
 ms.assetid: 4f673766-d4f7-4632-94a5-d36a83f7f4b5
-ms.openlocfilehash: 8db1ba622a0c83a7f2a6421d79ff5853cbc4d9a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d39afc548010df95bdf31b2c7708bc4fa0310bcd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404190"
 ---
 # <a name="compiler-error-c3101"></a>编译器错误 C3101
 
@@ -19,7 +19,7 @@ ms.locfileid: "50555553"
 
 在初始化命名的特性参数时，值必须是一个编译时常数。
 
-有关属性的详细信息，请参阅[用户定义的特性](../../windows/user-defined-attributes-cpp-component-extensions.md)。
+有关属性的详细信息，请参阅[用户定义的特性](../../extensions/user-defined-attributes-cpp-component-extensions.md)。
 
 ## <a name="example"></a>示例
 

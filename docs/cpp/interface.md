@@ -1,23 +1,23 @@
 ---
 title: __interface
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 f1_keywords:
 - __interface_cpp
 helpviewer_keywords:
 - __interface keyword [C++]
 ms.assetid: ca5d400b-d6d8-4ba2-89af-73f67e5ec056
-ms.openlocfilehash: 33a3d45f65ab5adf798a2b0f6b11191e6f6a0213
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 7c95e3700b4124c4793e0214ed3b06ecfeee72f1
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573523"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222076"
 ---
 # <a name="interface"></a>__interface
 
 **Microsoft 专用**
 
-可定义 Visual C++ 接口，如下所示：
+MicrosoftC++接口可以按如下所示定义：
 
 - 可从零个或多个基接口继承。
 
@@ -39,7 +39,7 @@ modifier __interface interface-name {interface-definition};
 
 ## <a name="remarks"></a>备注
 
-C + +[类](../cpp/class-cpp.md)或[结构](../cpp/struct-cpp.md)未能实现这些规则，但 **__interface**强制实施它们。
+一个C++[类](../cpp/class-cpp.md)或[结构](../cpp/struct-cpp.md)未能实现这些规则，但 **__interface**强制实施它们。
 
 例如，以下是示例接口定义：
 
@@ -50,7 +50,7 @@ __interface IMyInterface {
 };
 ```
 
-有关托管接口的信息，请参阅[接口类](../windows/interface-class-cpp-component-extensions.md)。
+有关托管接口的信息，请参阅[接口类](../extensions/interface-class-cpp-component-extensions.md)。
 
 请注意，您无需显式指示 `CommitX` 和 `get_X` 函数是纯虚函数。 第一个函数的等效声明为：
 

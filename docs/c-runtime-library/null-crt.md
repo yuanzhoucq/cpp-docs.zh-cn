@@ -8,16 +8,16 @@ helpviewer_keywords:
 - null pointers
 - NULL, null pointer value
 ms.assetid: f9aac2a0-4f79-423f-8738-a76dccc0b1c3
-ms.openlocfilehash: 2b94d3a89689b0ff0cddfa91e61832178e0a0b1b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 76e19e3e57405b66dfe1d7a24a289f864db35d5b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613936"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746860"
 ---
 # <a name="null-crt"></a>NULL (CRT)
 
-NULL 是与许多指针操作和函数一起使用的 null 指针值。 它等效于 0。 在下列标头文件中定义 NULL：CRTDBG.H、LOCALE.H、STDDEF.H、STDIO.H、STDLIB.H、STRING.H、TCHAR.H、TIME.H 和 WCHAR.H。
+NULL 是与许多指针操作和函数一起使用的 null 指针值。 它等效于 0。 NULL 在下列头文件中进行定义：CRTDBG.H、LOCALE.H、STDDEF.H、STDIO.H、STDLIB.H、STRING.H、TCHAR.H、TIME.H 和 WCHAR.H。
 
 ## <a name="see-also"></a>请参阅
 

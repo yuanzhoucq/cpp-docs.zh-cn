@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms controls [C++], hosting as an MFC view
 - hosting Windows Forms control [C++]
 ms.assetid: 43c02ab4-1366-434c-a980-0b19326d6ea0
-ms.openlocfilehash: c041ae941858184245879ced972c19e6e998b677
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9c59f28739ab94210c16bd800a48997f3f2282df
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62222866"
 ---
 # <a name="hosting-a-windows-forms-user-control-as-an-mfc-view"></a>以 MFC 视图的形式承载 Windows 窗体用户控件
 
@@ -25,9 +25,9 @@ MFC Windows 窗体视图是 ActiveX 控件，因为它们没有相同`hwnd`作�
 
 ## <a name="in-this-section"></a>本节内容
 
-[如何：创建用户控件并承载 MDI 视图](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)
+[如何：创建用户控件并托管 MDI 视图](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)
 
-[如何：向 Windows 窗体控件添加命令传送](../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)
+[如何：向 Windows 窗体控件添加命令路由](../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)
 
 [如何：调用 Windows 窗体控件的属性和方法](../dotnet/how-to-call-properties-and-methods-of-the-windows-forms-control.md)
 

@@ -1,6 +1,6 @@
 ---
 title: COM 接口入口点
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 helpviewer_keywords:
 - entry points, COM interfaces
 - state management, OLE/COM interfaces
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - MFC, managing state data
 - COM interfaces, entry points
 ms.assetid: 9e7421dc-0731-4748-9e1b-90acbaf26d77
-ms.openlocfilehash: 3c7b0067e66dfa8bc6f52bcd67637370f8c9a758
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: eb8fc425d6b9849f6367d9b207e5181652386be3
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62207847"
 ---
 # <a name="com-interface-entry-points"></a>COM 接口入口点
 
-对于 COM 接口的成员函数，使用[METHOD_PROLOGUE](com-interface-entry-points.md#method_prologue)宏维护适当的全局状态时调用导出接口的方法。
+对于 COM 接口的成员函数，使用`METHOD_PROLOGUE`宏维护适当的全局状态时调用导出接口的方法。
 
 通常，由 `CCmdTarget` 派生的对象实现的接口的成员函数已使用此宏提供 `pThis` 指针的自动初始化。 例如：
 

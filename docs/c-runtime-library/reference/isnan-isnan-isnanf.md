@@ -33,11 +33,11 @@ helpviewer_keywords:
 - isnan function
 ms.assetid: 391fbc5b-89a4-4fba-997e-68f1131caf82
 ms.openlocfilehash: 8a907dd33803cebd7bc5d71789834d115333b6a0
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157339"
 ---
 # <a name="isnan-isnan-isnanf"></a>isnan、_isnan、_isnanf
 
@@ -73,13 +73,13 @@ bool isnan(
 
 在 C 中， **isnan**宏和 **_isnan**并 **_isnanf**函数返回一个非零值，如果自变量*x*是 NAN; 否则为它们返回 0。
 
-C + + **isnan**模板函数返回**true**如果参数*x*是 NaN; 否则它将返回**false**。
+在C++，则**isnan**模板函数返回**true**如果参数*x*是 NaN; 否则它将返回**false**。
 
 ## <a name="remarks"></a>备注
 
 由于 NaN 值不相等，为任何其他 NaN 值，必须使用下列某个函数或宏来检测一个。 不能指定类型的 IEEE 754 浮点格式表示浮点运算的结果，则会生成 NaN。 有关如何表示用于输出的 NaN 的信息，请参阅[printf](printf-printf-l-wprintf-wprintf-l.md)。
 
-在作为 c + +，编译时**isnan**未定义宏，和一个**isnan**改为定义模板函数。 它的行为是相同的宏，但返回类型的值**bool**而不是整数。
+在作为编译时C++，则**isnan**未定义宏，和一个**isnan**改为定义模板函数。 它的行为是相同的宏，但返回类型的值**bool**而不是整数。
 
 **_Isnan**并 **_isnanf**函数是特定于 Microsoft 的。 **_Isnanf**函数才编译 x64 时可用。
 
@@ -97,6 +97,6 @@ C + + **isnan**模板函数返回**true**如果参数*x*是 NaN; 否则它将返
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [fpclassify](fpclassify.md)<br/>
 [_fpclass、_fpclassf](fpclass-fpclassf.md)<br/>
-[isfinite，_finite、 _finitef](finite-finitef.md)<br/>
+[isfinite、_finite、_finitef](finite-finitef.md)<br/>
 [isinf](isinf.md)<br/>
 [isnormal](isnormal.md)<br/>

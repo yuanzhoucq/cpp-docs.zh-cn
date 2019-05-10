@@ -11,11 +11,11 @@ helpviewer_keywords:
 - std::raw_storage_iterator [C++], iter_type
 ms.assetid: 6f033f15-f48e-452a-a326-647ea2cf346f
 ms.openlocfilehash: 8e13d03e577df4c64e85704993cfc0ff81af5f8f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50503007"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369756"
 ---
 # <a name="rawstorageiterator-class"></a>raw_storage_iterator 类
 
@@ -95,7 +95,7 @@ typedef ForwardIterator iter_type;
 
 该类型是模板参数 `ForwardIterator` 的同义词。
 
-## <a name="op_star"></a>  raw_storage_iterator:: operator\*
+## <a name="op_star"></a>  raw_storage_iterator::operator\*
 
 用于实现原始存储迭代器表达式 \* *ii* = *x* 的取消引用运算符。
 

@@ -1,18 +1,18 @@
 ---
 title: '&lt;system_error&gt;'
-ms.date: 11/04/2016
+ms.date: 03/15/2019
 f1_keywords:
 - <system_error>
 - system_error
 helpviewer_keywords:
 - system_error header
 ms.assetid: 5e046c6e-48d9-4740-8c8a-05f3727c1215
-ms.openlocfilehash: cb4870a22fd06039751f87f26dfa40e8ddcf2500
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9bba893f63ca935e0feeb891faa4e141e1958306
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412093"
 ---
 # <a name="ltsystemerrorgt"></a>&lt;system_error&gt;
 
@@ -30,12 +30,6 @@ ms.locfileid: "50662756"
 |-|-|
 |[generic_category](../standard-library/system-error-functions.md#generic_category)|表示一般错误的类别。|
 |[system_category](../standard-library/system-error-functions.md#system_category)|表示因低级别系统溢出而引起的错误类别。|
-
-### <a name="typedefs"></a>Typedef
-
-|类型名称|描述|
-|-|-|
-|[generic_errno](../standard-library/system-error-typedefs.md#generic_errno)|一种表示枚举的类型，用于为所有由 `<errno.h>` 中的 Posix 定义的错误代码宏提供符号名称。|
 
 ### <a name="functions"></a>函数
 

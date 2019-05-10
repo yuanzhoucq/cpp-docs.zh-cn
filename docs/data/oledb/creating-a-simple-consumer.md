@@ -4,12 +4,12 @@ ms.date: 11/06/2018
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: ae32d657-72ea-4db8-9839-75cb5cff68ae
-ms.openlocfilehash: 4346bca99d3744657072a4940776934e3c03e9de
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 060a39a8436ff73900ebfaea7d1c882b9862ee7e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62361945"
 ---
 # <a name="creating-a-simple-consumer"></a>创建简单使用者
 
@@ -19,9 +19,9 @@ ms.locfileid: "51326636"
 
 1. 在 **“文件”** 菜单上，单击 **“新建”**，然后单击 **“项目”**。
 
-   此时将出现 “新建项目” 对话框。
+   此时将出现“新建项目”对话框。
 
-1. 在中**项目类型**窗格中，单击**已安装** > **Visual c + +** > **Windows 桌面**文件夹中，然后单击**Windows 桌面向导**中的图标**模板**窗格。 在中**名称**框中，例如，输入你的项目名称*MyCons*。
+1. 在中**项目类型**窗格中，单击**已安装** > **Visual C++**   >  **Windows 桌面**文件夹，，然后单击**Windows 桌面向导**中的图标**模板**窗格。 在中**名称**框中，例如，输入你的项目名称*MyCons*。
 
 1. 单击 **“确定”**。
 
@@ -41,7 +41,7 @@ ms.locfileid: "51326636"
 
    “添加新项”对话框随即出现。
 
-1. 在中**类别**窗格中，单击**已安装** > **Visual c + +** > **ATL**，单击**ATL OLEDB 使用者**中的图标**模板**窗格中，，然后单击**添加**。
+1. 在中**类别**窗格中，单击**已安装** > **Visual C++**   >  **ATL**，单击**ATL OLEDB 使用者**中的图标**模板**窗格中，，然后单击**添加**。
 
    **ATL OLEDB 使用者向导**出现。
 
@@ -56,7 +56,7 @@ ms.locfileid: "51326636"
    1. 上**连接**选项卡上，在服务器上指定所需的信息，例如服务器名称、 登录 ID 和数据源和数据库的密码。
 
       > [!NOTE]
-      > 安全问题**允许保存密码**的功能**数据链接属性**对话框。 在中**输入信息以登录到服务器上**，有两个单选按钮：**使用 Windows NT 集成安全性**并**使用特定用户名和密码**。
+      > 安全问题**允许保存密码**的功能**数据链接属性**对话框。 在中**输入登录到服务器上的信息**，有两个单选按钮：**使用 Windows NT 集成安全性**并**使用特定用户名和密码**。
 
       > [!NOTE]
       > 如果选择**使用特定用户名和密码**，可以选择保存密码 (使用**允许保存密码**复选框); 但是，此选项是不安全。 我们建议您选择**使用 Windows NT 集成安全性**; 此选项使用 Windows NT 身份验证。

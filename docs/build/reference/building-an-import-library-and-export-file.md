@@ -25,12 +25,12 @@ helpviewer_keywords:
 - .lib files
 - EXP files
 ms.assetid: 2fe4f30a-1dd6-4b05-84b5-0752e1dee354
-ms.openlocfilehash: 31570b1e6680b5af5f0a774c290eba20f3b5fdb0
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 37c3169b66e1120dbfdb3a69379430e9bc8a1586
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294781"
 ---
 # <a name="building-an-import-library-and-export-file"></a>生成导入库和导出文件
 
@@ -68,4 +68,4 @@ ms.locfileid: "57413181"
 
 ## <a name="see-also"></a>请参阅
 
-[使用导入库和导出文件](../../build/reference/working-with-import-libraries-and-export-files.md)
+[使用导入库和导出文件](working-with-import-libraries-and-export-files.md)

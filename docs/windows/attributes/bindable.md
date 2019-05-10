@@ -1,17 +1,17 @@
 ---
-title: 可绑定 （c + + COM 属性）
+title: 可绑定 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.bindable
 helpviewer_keywords:
 - bindable attribute
 ms.assetid: a2360f92-927b-4af8-98cc-6eca7f4ec954
-ms.openlocfilehash: 08ecd3e242d1e3601f7a5a3ea54c51a679dca97a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 07f446b946d6703c4a8b9ae59ae0edd8172c6879
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62148388"
 ---
 # <a name="bindable"></a>bindable
 
@@ -25,15 +25,15 @@ ms.locfileid: "50664147"
 
 ## <a name="remarks"></a>备注
 
-**可绑定**c + + 属性具有相同的功能[可绑定](/windows/desktop/Midl/bindable)MIDL 特性。 可以使用它具有定义的属性上[propget](propget.md)， [propput](propput.md)，或[propputref](propputref.md)属性，或者你可以手动定义一个可绑定的方法。
+**可绑定**C++属性具有相同的功能[可绑定](/windows/desktop/Midl/bindable)MIDL 特性。 可以使用它具有定义的属性上[propget](propget.md)， [propput](propput.md)，或[propputref](propputref.md)属性，或者你可以手动定义一个可绑定的方法。
 
 以下的 MFC 示例显示了如何使用**可绑定**:
 
-- [控件示例： 基于 MFC 的 ActiveX 控件](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [控件示例：基于 MFC 的 ActiveX 控件](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
-- [CIRC 示例： ActiveX 控件](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [CIRC 示例：ActiveX 控件](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
-- [使用工具提示和帮助 TESTHELP 示例： ActiveX 控件](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [TESTHELP 示例：ActiveX 控件与工具提示和帮助](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
 ## <a name="example"></a>示例
 
@@ -66,8 +66,8 @@ __interface IPropDemo : IDispatch {
 |-|-|
 |**适用对象**|接口方法|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

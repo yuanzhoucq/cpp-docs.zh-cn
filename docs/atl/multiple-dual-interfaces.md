@@ -11,15 +11,15 @@ helpviewer_keywords:
 - COM_INTERFACE_ENTRY_IID macro
 ms.assetid: 7fea86e6-247f-4063-be6e-85588a9e3719
 ms.openlocfilehash: 2ed0e9e8c74e02917e852b8f95ebff1b048afaef
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57257353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261574"
 ---
 # <a name="multiple-dual-interfaces"></a>多个双重接口
 
-您可能想要将双重接口 （即，灵活性的 vtable 和后期绑定，从而使类可用于脚本编写语言，以及 c + +） 的优点组合使用多个继承的技术。
+你可能想要合并的双重接口优点 (vtable 和后期绑定，从而使类可用作脚本语言的灵活性C++) 使用多个继承的技术。
 
 尽管可以公开多个双重接口上的单个 COM 对象，但不建议。 如果有多个双重接口，必须有一个`IDispatch`公开接口。 方法可确保这种情况执行如降低函数或提高的代码复杂性的损失。 优点和缺点，应仔细权衡考虑这种方法，开发人员。
 

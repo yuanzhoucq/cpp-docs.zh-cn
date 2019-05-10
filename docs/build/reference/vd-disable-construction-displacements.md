@@ -16,12 +16,12 @@ helpviewer_keywords:
 - vd0 compiler option [C++]
 - Disable Construction Displacements compiler option
 ms.assetid: 93258964-14d7-4b1c-9cbc-d6f4d74eab69
-ms.openlocfilehash: a3e09bf923f9f77dfb594c598f8a14c766d052f8
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: db198dbdc7bd43ffd4de9bde39ee81a8b95a25ab
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316881"
 ---
 # <a name="vd-disable-construction-displacements"></a>/vd（禁用构造置换）
 
@@ -46,9 +46,9 @@ ms.locfileid: "57426407"
 
 ## <a name="remarks"></a>备注
 
-这些选项仅适用于使用虚拟基的 c + + 代码。
+这些选项只适用于C++使用虚拟基的代码。
 
-Visual c + + 中使用虚拟继承的情况下实现 c + + 构造置换支持。 构造置换解决问题创建的虚函数，在虚拟基中声明，派生类中重写时，在进一步的派生类的构造过程中从构造函数调用。
+VisualC++实现C++构造置换支持使用虚拟继承的情况下。 构造置换解决问题创建的虚函数，在虚拟基中声明，派生类中重写时，在进一步的派生类的构造过程中从构造函数调用。
 
 问题在于，可能会不正确传递虚拟函数`this`指针作为结果的到虚拟置换之间的差异的基的类和派生类的位移。 该解决方案提供了为每个虚拟基的类调用的 vtordisp 字段中，单个构造置换调整。
 
@@ -58,7 +58,7 @@ Visual c + + 中使用虚拟继承的情况下实现 c + + 构造置换支持。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
 1. 单击 **“C/C++”** 文件夹。
 
@@ -72,5 +72,5 @@ Visual c + + 中使用虚拟继承的情况下实现 c + + 构造置换支持。
 
 ## <a name="see-also"></a>请参阅
 
-[编译器选项](../../build/reference/compiler-options.md)<br/>
-[设置编译器选项](../../build/reference/setting-compiler-options.md)
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)

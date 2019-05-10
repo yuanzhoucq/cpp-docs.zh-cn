@@ -1,19 +1,19 @@
 ---
-title: ODBC：配置 ODBC 数据源
+title: ODBC:配置 ODBC 数据源
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC data sources, configuring
 - ODBC connections, configuring
 - configuring ODBC data sources
 ms.assetid: 1cd03e6a-8d59-4eca-a8c6-1010582d5e67
-ms.openlocfilehash: 96f4694e8aa321dc5844fc413ae9740bec5a416c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 259f0e2afa61096e4529a50ee2ba7de07b293c46
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395776"
 ---
-# <a name="odbc-configuring-an-odbc-data-source"></a>ODBC：配置 ODBC 数据源
+# <a name="odbc-configuring-an-odbc-data-source"></a>ODBC:配置 ODBC 数据源
 
 若要使用[数据源](../../data/odbc/data-source-odbc.md)与已开发的应用程序，您必须使用 ODBC 管理器对其进行配置。 跟踪可用的数据源和连接信息在 Windows 注册表中的 ODBC 管理器。 使用 ODBC 管理器来添加、 修改和删除中的数据源**数据源**对话框添加和删除 ODBC 驱动程序。
 

@@ -1,18 +1,18 @@
 ---
-title: 如何：在 Windows 桌面应用程序中使用 Windows 10 SDK
+title: 如何：使用 Windows 10 SDK 中的 Windows 桌面应用程序
 ms.custom: get-started-article
 ms.date: 07/12/2018
 ms.assetid: eed6421e-9355-44a6-9582-3f1d453a6d44
-ms.openlocfilehash: ed860a229866991b01266093058b71cc2ae84986
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f3f6897dfa0f180f629a2ca169ff74c5e5588365
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50669113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62350969"
 ---
-# <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>如何：在 Windows 桌面应用程序中使用 Windows 10 SDK
+# <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>如何：使用 Windows 10 SDK 中的 Windows 桌面应用程序
 
-当在 Visual Studio 2017 中创建经典 Windows 桌面项目时，它是默认设置使用 c + + 桌面工作负载的安装或上一次更新时已安装了 Windows 10 SDK 的版本进行生成。 Windows 7 和更高版本，此版本的 Windows SDK 都兼容。 请参阅[使用 Windows 标头](/windows/desktop/WinProg/using-the-windows-headers)有关面向特定版本 Windows 的详细信息。
+当在 Visual Studio 2017 中创建经典 Windows 桌面项目时，它默认设置使用的是 Windows 10 SDK 版本进行生成时安装C++桌面工作负载的安装或上一次更新。 Windows 7 和更高版本，此版本的 Windows SDK 都兼容。 请参阅[使用 Windows 标头](/windows/desktop/WinProg/using-the-windows-headers)有关面向特定版本 Windows 的详细信息。
 
 如果你想要面向早期版本的 sdk，则可以打开**项目 |属性**，然后选择从 Windows SDK 版本下拉列表中提供的其他 SDK 版本。
 
@@ -20,7 +20,7 @@ ms.locfileid: "50669113"
 
 ### <a name="to-target-the-windows-10-sdk"></a>面向 Windows 10 SDK
 
-1. 确保已安装 Windows 10 SDK。 Windows 10 SDK 安装的一部分**使用 c + + 的桌面开发**工作负荷。 独立版是在[下载和工具适用于 Windows 10](https://developer.microsoft.com/windows/downloads)。
+1. 确保已安装 Windows 10 SDK。 Windows 10 SDK 安装的一部分**使用的桌面开发C++** 工作负荷。 独立版是在[下载和工具适用于 Windows 10](https://developer.microsoft.com/windows/downloads)。
 
 2. 打开项目节点的快捷菜单，然后选择 **“重定向 SDK 版本”**。
 
@@ -38,11 +38,11 @@ ms.locfileid: "50669113"
 
    `Retargeting End: 1 completed, 0 failed, 0 skipped`
 
-4. 打开项目属性，然后在 **“配置属性”-&gt;“常规”** 部分中查看 **“Windows 目标平台版本”** 的值。 更改此处的值与执行过程具有相同的效果。 请参阅 [General Property Page (Project)](../ide/general-property-page-project.md)。
+4. 打开项目属性，然后在 **“配置属性”-&gt;“常规”** 部分中查看 **“Windows 目标平台版本”** 的值。 更改此处的值与执行过程具有相同的效果。 请参阅 [General Property Page (Project)](../build/reference/general-property-page-project.md)。
 
    ![目标平台版本](../windows/media/retargetingwindowssdk3.PNG "RetargetingWindowsSDK3")
 
-   此操作将更改项目宏的值，该项目宏中包含头文件和库文件的路径。 若要查看更改的内容，在**Visual c + + 目录**一部分**项目属性**对话框中，选择其中一个属性，例如**包含目录**，选择打开下拉列表中，然后选择\<编辑 >。 将显示 **“包含目录”** 对话框。
+   此操作将更改项目宏的值，该项目宏中包含头文件和库文件的路径。 若要查看更改的内容，在**可视化C++目录**一部分**项目属性**对话框中，选择其中一个属性，例如**包含目录**，选择打开下拉列表中，并选择\<编辑 >。 将显示 **“包含目录”** 对话框。
 
    ![包含目录对话框](../windows/media/retargetingwindowssdk4.PNG "RetargetingWindowsSDK4")
 
@@ -60,4 +60,4 @@ ms.locfileid: "50669113"
 
 ## <a name="see-also"></a>请参阅
 
-[Windows 桌面应用程序 （Visual c + +）](../windows/how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)
+[Windows 桌面应用程序 (Visual C++)](../windows/how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)

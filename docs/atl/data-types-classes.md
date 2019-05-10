@@ -2,22 +2,20 @@
 title: 数据类型类 (ATL)
 ms.date: 11/04/2016
 ms.topic: reference
-f1_keywords:
-- vc.atl.datatypes
 helpviewer_keywords:
 - data types classes [C++]
 - data types [C++], classes
 ms.assetid: 29882bab-9174-4dfa-8227-ccfeba80b865
-ms.openlocfilehash: bc0725554dda9640a5384e10d996a8b939961bd7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f2cc3949e019532a35674b67446a831944ac668e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62235023"
 ---
 # <a name="data-types-classes"></a>数据类型类
 
-以下类将包装 c + + 数据类型：
+下面的类包装C++数据类型：
 
 - [CComBSTR](../atl/reference/ccombstr-class.md)包装`BSTR`数据类型。
 

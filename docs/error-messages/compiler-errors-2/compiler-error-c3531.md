@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3531
 ms.assetid: 2bdb9fdc-9ddf-403e-8b92-02763d434487
-ms.openlocfilehash: 0f6094daddf40b0899dc7f341f50a31daf7a999b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6961d99d1a0d7d0ea063aee5544a1009af2547c7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397401"
 ---
 # <a name="compiler-error-c3531"></a>编译器错误 C3531
 

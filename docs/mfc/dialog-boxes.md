@@ -8,16 +8,16 @@ helpviewer_keywords:
 - CDialog class [MFC], MFC dialog boxes
 - MFC dialog boxes
 ms.assetid: e4feea1a-8360-4ccb-9b84-507f1ccd9ef3
-ms.openlocfilehash: 9add6f003f0f6cd4ab85980e1e35370770da43aa
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 32a8f8784459338131d4893f25d8798f8031b68b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62262627"
 ---
 # <a name="dialog-boxes"></a>对话框
 
-通过对话框用户适用于 Windows 应用程序频繁地通信。 类[CDialog](../mfc/reference/cdialog-class.md)管理对话框，Visual c + + 对话框编辑器轻松地设计对话框和创建它们的对话框模板资源，并且代码向导简化的初始化过程提供了一个接口和正在验证的控件在对话框中，收集用户输入的值。
+通过对话框用户适用于 Windows 应用程序频繁地通信。 类[CDialog](../mfc/reference/cdialog-class.md)提供用于管理对话框框中，视觉对象的接口C++对话框编辑器，可以轻松设计对话框并创建它们的对话框模板资源，并且代码向导简化的过程初始化和验证的控件在对话框中，收集用户输入的值。
 
 对话框包含控件，包括：
 
@@ -33,7 +33,7 @@ ms.locfileid: "57282053"
 
 ## <a name="what-do-you-want-to-know-more-about"></a>你想要了解更多信息
 
-- [示例：显示一个对话框，通过菜单命令](../mfc/example-displaying-a-dialog-box-via-a-menu-command.md)
+- [示例：通过菜单命令显示对话框](../mfc/example-displaying-a-dialog-box-via-a-menu-command.md)
 
 - [框架中的对话框组件](../mfc/dialog-box-components-in-the-framework.md)
 
@@ -61,7 +61,7 @@ ms.locfileid: "57282053"
 
 - [OLE 中的对话框](../mfc/dialog-boxes-in-ole.md)
 
-- 创建应用程序用户界面是一个对话框： 请参阅[CMNCTRL1](../visual-cpp-samples.md)或[CMNCTRL2](../visual-cpp-samples.md)示例程序。 应用程序向导提供了此选项。
+- 创建应用程序用户界面是一个对话框： 请参阅[CMNCTRL1](../overview/visual-cpp-samples.md)或[CMNCTRL2](../overview/visual-cpp-samples.md)示例程序。 应用程序向导提供了此选项。
 
 - [示例](../mfc/dialog-sample-list.md)
 

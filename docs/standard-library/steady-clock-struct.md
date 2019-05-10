@@ -5,11 +5,11 @@ f1_keywords:
 - chrono/std::chrono::steady_clock
 ms.assetid: 970d12ec-fc80-4391-a2f7-b57b2aec668d
 ms.openlocfilehash: 19e9f5c4dcfc7306b989605894e9a0787e0920ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412392"
 ---
 # <a name="steadyclock-struct"></a>steady_clock 结构
 
@@ -31,7 +31,7 @@ struct steady_clock;
 
 ### <a name="public-typedefs"></a>公共 typedef
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |`steady_clock::duration`|同义词`nanoseconds`中定义\<chrono >。|
 |`steady_clock::period`|同义词`nano`中定义\<比率 >。|
@@ -46,7 +46,7 @@ struct steady_clock;
 
 ## <a name="public-constants"></a>公共常量
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |`steady_clock::is_steady`|持有 **，则返回 true**。 `steady_clock` 是*稳定的*。|
 

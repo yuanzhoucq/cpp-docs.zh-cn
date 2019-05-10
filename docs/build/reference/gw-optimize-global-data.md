@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /Gw compiler option [C++]
 - -Gw compiler option [C++]
 ms.assetid: 6f90f4e9-5eb8-4c47-886e-631278a5a4a9
-ms.openlocfilehash: d2c7d8d9a3b3bb877fcf7f4418f3ed20a90a9a11
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 5796f353414a021908147bdd2f296ef8e02f69ad
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270706"
 ---
 # <a name="gw-optimize-global-data"></a>/Gw（优化全局数据）
 
@@ -26,19 +26,19 @@ ms.locfileid: "57420123"
 
 ## <a name="remarks"></a>备注
 
-**/Gw**选项将使在各个 COMDAT 节中打包全局数据编译器。 默认情况下 **/Gw**处于关闭状态，必须显式启用。 若要显式禁用它，请使用 **/Gw-**。 当同时 **/Gw**和[/GL](../../build/reference/gl-whole-program-optimization.md)都启用，链接器使用全程序优化来比较多个对象文件的 COMDAT 节，以排除未引用的全局数据或要合并相同只读全局数据。 这样可以显著减小生成的二进制可执行文件的大小。
+**/Gw**选项将使在各个 COMDAT 节中打包全局数据编译器。 默认情况下 **/Gw**处于关闭状态，必须显式启用。 若要显式禁用它，请使用 **/Gw-**。 当同时 **/Gw**和[/GL](gl-whole-program-optimization.md)都启用，链接器使用全程序优化来比较多个对象文件的 COMDAT 节，以排除未引用的全局数据或要合并相同只读全局数据。 这样可以显著减小生成的二进制可执行文件的大小。
 
-当你分别编译和链接时，可以使用[/opt: ref](../../build/reference/opt-optimizations.md)链接器选项以从使用编译对象文件中未引用的全局数据的可执行文件中排除 **/Gw**选项。
+当你分别编译和链接时，可以使用[/opt: ref](opt-optimizations.md)链接器选项以从使用编译对象文件中未引用的全局数据的可执行文件中排除 **/Gw**选项。
 
-此外可以使用[/opt: icf](../../build/reference/opt-optimizations.md)并[/LTCG](../../build/reference/ltcg-link-time-code-generation.md)链接器选项，可以在多个对象文件任何相同只读全局数据使用编译的可执行文件中执行 merge **/Gw**选项。
+此外可以使用[/opt: icf](opt-optimizations.md)并[/LTCG](ltcg-link-time-code-generation.md)链接器选项，可以在多个对象文件任何相同只读全局数据使用编译的可执行文件中执行 merge **/Gw**选项。
 
-有关详细信息，请参阅[简介 /Gw 编译器开关](http://blogs.msdn.com/b/vcblog/archive/2013/09/11/introducing-gw-compiler-switch.aspx)Visual c + + 团队博客上。
+有关详细信息，请参阅[简介 /Gw 编译器开关](http://blogs.msdn.com/b/vcblog/archive/2013/09/11/introducing-gw-compiler-switch.aspx)视觉对象上C++团队博客。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择**C/c + +** 文件夹。
+1. 选择**C /C++** 文件夹。
 
 1. 选择**命令行**属性页。
 
@@ -50,5 +50,5 @@ ms.locfileid: "57420123"
 
 ## <a name="see-also"></a>请参阅
 
-[编译器选项](../../build/reference/compiler-options.md)<br/>
-[设置编译器选项](../../build/reference/setting-compiler-options.md)
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)

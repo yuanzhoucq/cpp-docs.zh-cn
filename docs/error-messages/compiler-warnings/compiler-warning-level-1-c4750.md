@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4750
 ms.assetid: b0b2c938-7d2a-4c36-8270-7daee15ffee3
-ms.openlocfilehash: e82640b26df5ceab030d0c3f0e716e0ed72102ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2a6d83074f180a455e9c305fb4ca8ea270d0a593
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385395"
 ---
 # <a name="compiler-warning-level-1-c4750"></a>编译器警告（等级 1）C4750
 

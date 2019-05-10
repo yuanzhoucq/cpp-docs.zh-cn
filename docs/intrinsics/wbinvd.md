@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __wbinvd intrinsic
 - wbinvd instruction
 ms.assetid: 628d0981-39e5-49e1-bd43-706d123af121
-ms.openlocfilehash: 0f775ba94c2dee1c2568e66b09fa1ffb31f512bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 99c7a452e063dea328e4aa1362aae8783929deb0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62390017"
 ---
 # <a name="wbinvd"></a>__wbinvd
 

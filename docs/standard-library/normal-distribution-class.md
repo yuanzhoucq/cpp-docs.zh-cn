@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::normal_distribution [C++], param_type
 - std::normal_distribution [C++], param_type
 ms.assetid: bf92cdbd-bc72-4d4a-b588-173d748f0d7d
-ms.openlocfilehash: e0df3359a27a216692f0127ab7f17e1e1fce469a
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: d0de31a20e06d9b8ff3789cc7ae1928c9a7b6b7d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223605"
 ---
 # <a name="normaldistribution-class"></a>normal_distribution 类
 
@@ -209,7 +209,7 @@ explicit normal_distribution(const param_type& parm);
 
 ### <a name="remarks"></a>备注
 
-**前置条件：**`0.0 ≤ stddev`
+**前置条件：**`0.0 < stddev`
 
 第一个构造函数将构造一个对象，该对象存储的 `mean` 值保留值 *mean*，并且该对象存储的 `stddev` 值保留值 *stddev*。
 
@@ -244,7 +244,7 @@ struct param_type {
 
 ### <a name="remarks"></a>备注
 
-**前置条件：**`0.0 ≤ stddev`
+**前置条件：**`0.0 < stddev`
 
 在实例化时，可将此结构传递给分布的类构造函数、传递给 `param()` 成员函数以设置现有分布的存储参数，并传递给 `operator()` 以代替存储参数使用。
 

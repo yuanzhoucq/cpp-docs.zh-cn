@@ -3,18 +3,18 @@ title: B. 运行时库函数的存根
 ms.date: 01/22/2019
 ms.assetid: fdfdabe0-f678-4551-80d5-827b62354427
 ms.openlocfilehash: 1e8d439eefad005c673cfb6c4ea12399b8236fb5
-ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087257"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362980"
 ---
 # <a name="b-stubs-for-run-time-library-functions"></a>B. 运行时库函数的存根
 
-本部分提供有关 OpenMP C 和 c + + API 中定义的运行时库函数的存根 （stub）。 存根 （stub） 用于启用 OpenMP C 和 c + + API 不支持的平台可移植性。 在这些平台上 OpenMP 程序必须与包含这些存根 （stub） 函数的库链接。 存根 （stub） 函数假定 OpenMP 程序中的指令将被忽略。 在这种情况下，它们模拟串行语义。
+本部分提供有关 OpenMP C 中定义的运行时库函数的存根 （stub） 和C++API。 存根 （stub） 用于实现可移植性引入平台不支持 OpenMP C 和C++API。 在这些平台上 OpenMP 程序必须与包含这些存根 （stub） 函数的库链接。 存根 （stub） 函数假定 OpenMP 程序中的指令将被忽略。 在这种情况下，它们模拟串行语义。
 
 > [!NOTE]
-> 必须以独占方式通过这些函数访问锁定变量的锁函数中显示。 它不应初始化或以其他方式修改用户程序中。 用户不应进行假设 OpenMP C 和 c + + 实现用于实现基于方案的存根 （stub） 函数使用的锁的机制。
+> 必须以独占方式通过这些函数访问锁定变量的锁函数中显示。 它不应初始化或以其他方式修改用户程序中。 用户不应造成会假设机制使用 OpenMP C 和C++实现，以实现锁基于方案的存根 （stub） 函数使用。
 
 ## <a name="code"></a>代码
 

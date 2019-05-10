@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCRibbonUndoButton [MFC], GetActionNumber
 - CMFCRibbonUndoButton [MFC], HasMenu
 ms.assetid: 5c42adf7-871d-4239-901e-47ae7fb816fc
-ms.openlocfilehash: e78cf26b32d424bc9cc9441787192cda6f7aeb54
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: cd657ac035c004e7aa9bfcd2f6dbd2f3c90da80c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410069"
 ---
 # <a name="cmfcribbonundobutton-class"></a>CMFCRibbonUndoButton 类
 
@@ -56,7 +56,7 @@ class CMFCRibbonUndoButton : public CMFCRibbonGallery
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何构造的对象`CMFCRibbonUndoButton`类，并将新的操作添加到的操作的列表。 此代码片段属于[功能区的小工具示例](../../visual-cpp-samples.md)。
+下面的示例演示如何构造的对象`CMFCRibbonUndoButton`类，并将新的操作添加到的操作的列表。 此代码片段属于[功能区的小工具示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_RibbonGadgets#2](../../mfc/reference/codesnippet/cpp/cmfcribbonundobutton-class_1.cpp)]
 

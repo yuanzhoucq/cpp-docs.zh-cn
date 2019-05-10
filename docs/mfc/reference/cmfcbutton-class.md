@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nAlignStyle
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
-ms.openlocfilehash: 804c3219356d36f6a0a733937c5e354822a4be83
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0659e5335e1ebc495280a4e0cb5c0167f3b45e1d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403823"
 ---
 # <a name="cmfcbutton-class"></a>CMFCButton 类
 
@@ -154,7 +154,7 @@ class CMFCButton : public CButton
 
 ### <a name="data-members"></a>数据成员
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[CMFCButton::m_nAlignStyle](#m_nalignstyle)|指定按钮文本的对齐方式。|
 |[CMFCButton::m_bDontUseWinXPTheme](#m_bDontUseWinXPTheme)|指定是否使用 Windows XP 主题。|
@@ -180,7 +180,7 @@ class CMFCButton : public CButton
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何使用各种方法中的配置按钮属性`CMFCButton`类。 此示例摘自[新的控件示例](../../visual-cpp-samples.md)。
+下面的示例演示如何使用各种方法中的配置按钮属性`CMFCButton`类。 此示例摘自[新的控件示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#31](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_2.cpp)]
@@ -503,7 +503,7 @@ AlignStyle m_nAlignStyle;
 
 使用下列任一`CMFCButton::AlignStyle`枚举值，以指定按钮文本的对齐方式：
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
 |ALIGN_CENTER|（默认值）对齐到按钮的中心的按钮文本。|
 |ALIGN_LEFT|对齐到左侧和右侧的按钮的按钮文本。|
@@ -531,7 +531,7 @@ FlatStyle  m_nFlatStyle;
 
 下表列出了`CMFCButton::m_nFlatStyle`指定按钮的外观的枚举值。
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
 |BUTTONSTYLE_3D|（默认值）该按钮显示为具有高的三维边。 单击该按钮，该按钮显示到有深度的缩进按下。|
 |BUTTONSTYLE_FLAT|当鼠标置于按钮上，但不暂停时，按钮将显示为二维，且不具有凸起的边。 当鼠标悬停在按钮上时，按钮将显示具有较低的三维边。 单击该按钮，该按钮显示为浅表缩进按下。|
@@ -542,7 +542,7 @@ FlatStyle  m_nFlatStyle;
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何设置的值`m_nFlatStyle`中的成员变量`CMFCButton`类。 此示例摘自[新的控件示例](../../visual-cpp-samples.md)。
+下面的示例演示如何设置的值`m_nFlatStyle`中的成员变量`CMFCButton`类。 此示例摘自[新的控件示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#29](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_5.cpp)]
@@ -867,7 +867,7 @@ void SetImage(
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何使用各种版本的`SetImage`中的方法`CMFCButton`类。 此示例摘自[新的控件示例](../../visual-cpp-samples.md)。
+下面的示例演示如何使用各种版本的`SetImage`中的方法`CMFCButton`类。 此示例摘自[新的控件示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#31](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_2.cpp)]
@@ -891,7 +891,7 @@ void SetMouseCursor(HCURSOR hcursor);
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何使用`SetMouseCursor`中的方法`CMFCButton`类。 中的代码示例摘自[新的控件示例](../../visual-cpp-samples.md)。
+下面的示例演示如何使用`SetMouseCursor`中的方法`CMFCButton`类。 中的代码示例摘自[新的控件示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#30](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_6.cpp)]

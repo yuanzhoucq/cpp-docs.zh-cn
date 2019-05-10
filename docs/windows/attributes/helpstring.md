@@ -1,17 +1,17 @@
 ---
-title: helpstring （c + + COM 属性）
+title: helpstring (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpstring
 helpviewer_keywords:
 - helpstring attribute [C++]
 ms.assetid: 0401e905-a63e-4fad-98d0-d1efea111966
-ms.openlocfilehash: 12707dde61013caa1ed9feb1d0daa74cbb7b9d9a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 623b2c7fb4ce7c3e5de87d21f012d008720fdee2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409585"
 ---
 # <a name="helpstring"></a>helpstring
 
@@ -30,7 +30,7 @@ ms.locfileid: "50591368"
 
 ## <a name="remarks"></a>备注
 
-**Helpstring** c + + 属性具有相同的功能[helpstring](/windows/desktop/Midl/helpstring) MIDL 特性。
+**Helpstring** C++属性具有相同的功能[helpstring](/windows/desktop/Midl/helpstring) MIDL 特性。
 
 ## <a name="example"></a>示例
 
@@ -44,8 +44,8 @@ ms.locfileid: "50591368"
 |-|-|
 |**适用对象**|**接口**， **typedef**，**类**，方法、 属性|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - readfsqword intrinsic
 - __readfsqword intrinsic
 ms.assetid: f6ee7203-4179-402c-a464-0746c84ce6ac
-ms.openlocfilehash: e5610fcd9be369718875f2f7a7bd358e7c2b07dc
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: f291747d1f46ebdf3ea1f71cd9ab7e074058201d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62262724"
 ---
 # <a name="readfsbyte-readfsdword-readfsqword-readfsword"></a>__readfsbyte、__readfsdword、__readfsqword、__readfsword
 
@@ -48,7 +48,7 @@ unsigned __int64 __readfsqword(
 
 #### <a name="parameters"></a>参数
 
-*偏移量*<br/>
+*Offset*<br/>
 [in]从开始处的偏移量`FS`读取。
 
 ## <a name="return-value"></a>返回值

@@ -1,19 +1,19 @@
 ---
-title: 如何：在 C++/CLI 中使用跟踪引用
+title: 如何：使用跟踪引用在C++/CLI
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CLR types, passing by reference
 ms.assetid: d91e471c-34ff-4786-9e0d-c6db0494b946
-ms.openlocfilehash: 8b95f6e3a5d98676134622e5c8805c6c031a1a80
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8be575bd39bc3b2e6512ba1bcb40d9206731f83a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387131"
 ---
-# <a name="how-to-use-tracking-references-in-ccli"></a>如何：在 C++/CLI 中使用跟踪引用
+# <a name="how-to-use-tracking-references-in-ccli"></a>如何：使用跟踪引用在C++/CLI
 
-本文介绍如何使用跟踪引用 （%） 中 C + + /cli CLI，若要按引用传递公共语言运行时 (CLR) 类型。
+本文介绍如何使用跟踪引用 （%）在C++/CLI 公共语言运行时 (CLR) 类型通过引用来传递。
 
 ## <a name="to-pass-clr-types-by-reference"></a>若要通过引用来传递 CLR 类型
 
@@ -70,7 +70,7 @@ int main() {
 zip == 20100
 ```
 
-下一个示例演示该采用的地址的跟踪引用返回[interior_ptr (C + + CLI)](../windows/interior-ptr-cpp-cli.md)，并演示如何修改和通过跟踪引用来访问数据。
+下一个示例演示该采用的地址的跟踪引用返回[interior_ptr (C++/CLI)](../extensions/interior-ptr-cpp-cli.md)，并演示如何修改和通过跟踪引用来访问数据。
 
 ```cpp
 // tracking_reference_data.cpp
@@ -343,4 +343,4 @@ T &
 
 ## <a name="see-also"></a>请参阅
 
-[跟踪引用运算符](../windows/tracking-reference-operator-cpp-component-extensions.md)
+[跟踪引用运算符](../extensions/tracking-reference-operator-cpp-component-extensions.md)

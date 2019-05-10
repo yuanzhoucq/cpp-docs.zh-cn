@@ -1,6 +1,6 @@
 ---
 title: reverse_iterator 类
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - xutility/std::reverse_iterator
 - iterator/std::reverse_iterator::difference_type
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::reverse_iterator [C++], base
 - std::reverse_iterator [C++], operator_star
 ms.assetid: c0b34d04-ae9a-4999-9aff-28b313897ffa
-ms.openlocfilehash: c865caa6d47d68462740fb4e9b2f6b712d9b6df9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ae4a3da8f15f838900cb5a4324fbaeda01d918a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368782"
 ---
 # <a name="reverseiterator-class"></a>reverse_iterator 类
 
@@ -48,7 +48,7 @@ RandomIterator 表示要进行适配化以反向操作的迭代器的类型。
 
 一个迭代器的范围是 [*第一个*，*上次*)，其中左侧的方括号指示包含*第一个*，在右侧的括号指示包含的元素但不包括*最后一个*本身。 相同的元素包含在反向序列 [ **rev** - *第一个*， **rev** - *上次*) 以便如果*上次*是一个过去的结束元素在序列中，然后将第一个元素**rev** - *第一个*中的反向的序列点\*(*最后一个*-1)。 将所有反向迭代器与其基础迭代器关联的标识是：
 
-&\*( **reverse_iterator** (*我*)) = = &\*(*我*-1)。
+&\*( **reverse_iterator** ( *i* ) ) == &\*( *i* - 1 ).
 
 在实际操作中，这意味着在反向序列中，reverse_iterator 将引用迭代器在原有序列中引用的元素之外（右侧）一个位置的元素。 因此，如果迭代器在序列 (2, 4, 6, 8) 中发现元素 6，则 `reverse_iterator` 将在反向序列 (8, 6, 4, 2) 中发现元素 4。
 
@@ -84,7 +84,7 @@ RandomIterator 表示要进行适配化以反向操作的迭代器的类型。
 |[operator-](#operator-)|从 `reverse_iterator` 减去偏移量，并返回在偏移位置处发现元素的 `reverse_iterator`。|
 |[operator--](#operator--)|将 `reverse_iterator` 递减到前一元素。|
 |[operator-=](#operator-_eq)|从 `reverse_iterator` 减去指定偏移量。|
-|[operator->](#operator-_gt)|返回指向 `reverse_iterator` 发现的元素的指针。|
+|[operator->](#op-arrow)|返回指向 `reverse_iterator` 发现的元素的指针。|
 |[operator[]](#op_at)|返回对于从 `reverse_iterator` 发现的元素偏移指定个位置的元素的引用。|
 
 ## <a name="requirements"></a>要求
@@ -196,7 +196,7 @@ typedef RandomIterator iterator_type;
 
 请参阅 [reverse_iterator::base](#base)，获取关于如何声明和使用 `iterator_type` 的示例。
 
-## <a name="op_star"></a>  reverse_iterator:: operator\*
+## <a name="op_star"></a>  reverse_iterator::operator\*
 
 返回由 reverse_iterator 寻址的元素。
 
@@ -477,7 +477,7 @@ After the +2 offset, the iterator rVPOS1 now points
 to the third element in the reversed sequence: 6.
 ```
 
-## <a name="reverse_iterator__operator-"></a>reverse_iterator::operator-
+## <a name="operator-"></a>reverse_iterator::operator-
 
 从 `reverse_iterator` 减去偏移量，并返回在偏移位置处发现元素的 `reverse_iterator`。
 
@@ -554,7 +554,7 @@ After the -2 offset, the iterator rVPOS2 points
 to the 2nd element from the last in the reversed sequence: 9.
 ```
 
-## <a name="reverse_iterator__operator--"></a>reverse_iterator::operator--
+## <a name="operator--"></a>reverse_iterator::operator--
 
 向上一个元素逐量递减 reverse_iterato。
 
@@ -627,7 +627,7 @@ After the decrement, the iterator rVPOS1 points
 to the next-to-last element in the reversed sequence: 3.
 ```
 
-## <a name="reverse_iterator__operator-_eq"></a>  reverse_iterator::operator-=
+## <a name="operator-_eq"></a>  reverse_iterator::operator-=
 
 从 `reverse_iterator` 减去指定偏移量。
 
@@ -702,7 +702,7 @@ After the -2 offset, the iterator rVPOS1 now points
 to the 2nd element from the last in the reversed sequence: 9.
 ```
 
-## <a name="op_arrow"></a>reverse_iterator::operator&gt;
+## <a name="op-arrow"></a>reverse_iterator::operator&gt;
 
 返回指向 `reverse_iterator` 发现的元素的指针。
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CObject class [MFC], deriving serializable classes
 - CObject class [MFC], deriving from
 ms.assetid: 5ea4ea41-08b5-4bd8-b247-c5de8c152a27
-ms.openlocfilehash: e2c759dfd308beed0f04b8d8c2868abeeb1cfb45
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 26fdab5165ca098c5d7813ebf44983c261094449
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152054"
 ---
 # <a name="deriving-a-class-from-cobject"></a>从 CObject 派生类
 
@@ -47,19 +47,19 @@ ms.locfileid: "57301241"
 |使用宏|CObject::IsKindOf|CRuntimeClass::<br /><br /> CreateObject|CArchive::operator >><br /><br /> CArchive::operator <<|
 |----------------|-----------------------|--------------------------------------|-------------------------------------------------------|
 |基本`CObject`功能|否|否|否|
-|`DECLARE_DYNAMIC`|是|No|否|
+|`DECLARE_DYNAMIC`|是|否|否|
 |`DECLARE_DYNCREATE`|是|是|No|
 |`DECLARE_SERIAL`|是|是|是|
 
 #### <a name="to-use-basic-cobject-functionality"></a>若要使用基本 CObject 功能
 
-1. 使用普通的 c + + 语法来派生您的类从`CObject`(或从派生自的类`CObject`)。
+1. 使用普通C++语法来派生您的类从`CObject`(或从派生自的类`CObject`)。
 
    下面的示例显示了简单的情况下，从类派生`CObject`:
 
    [!code-cpp[NVC_MFCCObjectSample#1](../mfc/codesnippet/cpp/deriving-a-class-from-cobject_1.h)]
 
-通常情况下，但是，你可能想要重写某些`CObject`的成员函数来处理您的新类的具体情况。 例如，您可能通常想要重写`Dump`函数的`CObject`为您的类的内容提供调试输出。 有关如何重写的详细信息`Dump`，请参阅文章[诊断：转储对象内容](/previous-versions/visualstudio/visual-studio-2010/sc15kz85)。 您可能还想要重写`AssertValid`函数的`CObject`以提供自定义测试以验证数据成员的类对象的一致性。 有关如何重写的说明`AssertValid`，请参阅[MFC ASSERT_VALID 和 CObject::AssertValid](/previous-versions/visualstudio/visual-studio-2010/38z04tfa)。
+通常情况下，但是，你可能想要重写某些`CObject`的成员函数来处理您的新类的具体情况。 例如，您可能通常想要重写`Dump`函数的`CObject`为您的类的内容提供调试输出。 有关如何重写的详细信息`Dump`，请参阅文章[转储对象的自定义](/previous-versions/visualstudio/visual-studio-2010/sc15kz85(v=vs.100))。 您可能还想要重写`AssertValid`函数的`CObject`以提供自定义测试以验证数据成员的类对象的一致性。 有关如何重写的说明`AssertValid`，请参阅[MFC ASSERT_VALID 和 CObject::AssertValid](reference/diagnostic-services.md#assert_valid)。
 
 文章[指定级别的功能](../mfc/specifying-levels-of-functionality.md)介绍如何指定其他级别的功能，包括运行时类信息、 动态对象创建和序列化。
 

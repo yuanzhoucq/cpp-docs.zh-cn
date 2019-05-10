@@ -8,15 +8,15 @@ helpviewer_keywords:
 - ATL, MFC projects
 ms.assetid: aa66bad0-008f-4886-94c1-2a0a0d04bce4
 ms.openlocfilehash: 0b849ffb585ef99512cc68e1c734dc5b3a87d507
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323315"
 ---
 # <a name="details-of-atl-support-added-by-the-atl-wizard"></a>ATL 向导添加的 ATL 支持的详细信息
 
-当您[将 ATL 支持添加到现有的 MFC 可执行文件或 DLL](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)，Visual c + + 进行以下修改现有 MFC 项目 (在此示例中，该项目称为`MFCEXE`):
+时您[将 ATL 支持添加到现有的 MFC 可执行文件或 DLL](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)、 VisualC++进行以下修改现有 MFC 项目 (在此示例中，该项目称为`MFCEXE`):
 
 - 添加两个新文件 （.idl 文件和.rgs 文件中，用来注册服务器）。
 

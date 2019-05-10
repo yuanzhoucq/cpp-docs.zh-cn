@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMFCOutlookBar [MFC], SetButtonsFont
 - CMFCOutlookBar [MFC], SetMode2003
 ms.assetid: 2b335f71-ce99-4efd-b103-e65ba43ffc36
-ms.openlocfilehash: be11bcd4cdbcd8448cc54f688d7dab9b61f49a57
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: fc1281db0271393ec0538e26c2a2d2af09c99f7a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62374137"
 ---
 # <a name="cmfcoutlookbar-class"></a>CMFCOutlookBar 类
 
@@ -89,7 +89,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
 
 ## <a name="remarks"></a>备注
 
-Outlook 栏的示例，请参阅[OutlookDemo 示例：MFC OutlookDemo 应用程序](../../visual-cpp-samples.md)。
+Outlook 栏的示例，请参阅[OutlookDemo 示例：MFC OutlookDemo 应用程序](../../overview/visual-cpp-samples.md)。
 
 ## <a name="implementing-the-outlook-bar"></a>实现 Outlook 栏
 
@@ -294,7 +294,7 @@ virtual BOOL Create(
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何使用`Create`方法的`CMFCOutlookBar`类。 此代码片段属于[Outlook 多视图示例](../../visual-cpp-samples.md)。
+下面的示例演示如何使用`Create`方法的`CMFCOutlookBar`类。 此代码片段属于[Outlook 多视图示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_OutlookMultiViews#1](../../mfc/reference/codesnippet/cpp/cmfcoutlookbar-class_1.h)]
 [!code-cpp[NVC_MFC_OutlookMultiViews#2](../../mfc/reference/codesnippet/cpp/cmfcoutlookbar-class_2.cpp)]

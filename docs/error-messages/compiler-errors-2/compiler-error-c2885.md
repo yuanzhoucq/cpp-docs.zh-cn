@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2885
 ms.assetid: 7743e5f3-a034-44b4-9ee8-5a6254c27f8c
-ms.openlocfilehash: 8174faed09bdffbdc6974390cceb7c17661eab4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ff5e770052301e95f694d3712f95b82732c2faba
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652122"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447697"
 ---
 # <a name="compiler-error-c2885"></a>编译器错误 C2885
 
@@ -21,7 +21,7 @@ class::identifier： 不是有效使用的声明在非类范围内
 
 ## <a name="example"></a>示例
 
-为 Visual c + + 2005年执行的编译器一致性工作可以生成此错误： 将不再有效具有`using`声明嵌套的类型，则必须显式限定对嵌套类型，将类型放在名称中进行的每个引用空间，或创建一个 typedef。
+为 Visual Studio 2005 执行的编译器一致性工作可以生成此错误： 将不再有效具有`using`声明嵌套的类型，则必须显式限定对嵌套类型，将类型放在 n 中进行的每个引用amespace，或创建一个 typedef。
 
 下面的示例生成 C2885。
 
@@ -54,7 +54,7 @@ int main () {
 
 ## <a name="example"></a>示例
 
-如果使用`using`类的成员，c + + 关键字需要定义该成员在另一个类 （派生类）。
+如果您使用`using`关键字与一个类成员， C++ ，必须先定义该成员在另一个类 （派生类）。
 
 下面的示例生成 C2885。
 

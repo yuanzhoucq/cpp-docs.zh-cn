@@ -1,16 +1,16 @@
 ---
-title: 方法特性 (c + + COM)
+title: 方法特性 (C++ COM)
 ms.date: 10/02/2018
 helpviewer_keywords:
 - method attributes
 - attributes [C++/CLI], reference topics
 ms.assetid: b2313352-480d-488b-8c35-6242ffd3a549
-ms.openlocfilehash: 96a3eab3e6d2761019a9f0855ff7cbb978445f68
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa67d45dfc0fadd300caeaaeb8a7c25bb1c38bcb
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409170"
 ---
 # <a name="method-attributes"></a>方法特性
 
@@ -45,7 +45,7 @@ ms.locfileid: "50667917"
 |[propputref](propputref.md)|指定使用引用而不是值的属性设置函数。|
 |[ptr](ptr.md)|将一个指针，指定为完整的指针。|
 |[range](range-cpp.md)|指定参数或在运行时设置其值的字段的允许值的范围。|
-|[requestedit](requestedit.md)|指示该属性支持`OnRequestEdit`通知。|
+|[requestedit](requestedit.md)|指示该属性支持 `OnRequestEdit` 通知。|
 |[restricted](restricted.md)|指定不能任意调用模块、 接口或调度接口的成员。|
 |[satype](satype.md)|指定的数据类型`SAFEARRAY`结构。|
 |[source](source-cpp.md)|指定连接点的控件的源接口的类上。 在属性或方法，`source`属性指示该成员返回的对象或为事件源的变体。|

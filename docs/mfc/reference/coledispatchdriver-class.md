@@ -26,12 +26,12 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_bAutoRelease
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
-ms.openlocfilehash: 22ba71bc0abaefd20cb68d82d4fefe06ab7fa929
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c0c1fd14105bae3b5413f92b547339ccabf3bb91
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274567"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64341616"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver 类
 
@@ -83,7 +83,7 @@ class COleDispatchDriver
 
 OLE 调度接口提供对对象的方法和属性访问。 成员函数`COleDispatchDriver`附加、 分离、 创建和发布类型的调度连接`IDispatch`。 其他成员函数使用变量自变量列表来简化调用`IDispatch::Invoke`。
 
-此类可以直接使用，但它通常仅由添加类向导创建的类。 通过导入类型库中创建新的 c + + 类时，将新的类派生自`COleDispatchDriver`。
+此类可以直接使用，但它通常仅由添加类向导创建的类。 当你创建新C++通过导入类型库的类，新的类派生自`COleDispatchDriver`。
 
 有关详细信息使用`COleDispatchDriver`，请参阅以下文章：
 
@@ -408,7 +408,7 @@ void AFX_CDECL SetProperty(
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 CALCDRIV](../../visual-cpp-samples.md)<br/>
-[MFC 示例 ACDUAL](../../visual-cpp-samples.md)<br/>
+[MFC 示例 CALCDRIV](../../overview/visual-cpp-samples.md)<br/>
+[MFC 示例 ACDUAL](../../overview/visual-cpp-samples.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CCmdTarget 类](../../mfc/reference/ccmdtarget-class.md)

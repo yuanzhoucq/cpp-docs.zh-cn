@@ -11,11 +11,11 @@ helpviewer_keywords:
 - sockets [MFC], ports
 ms.assetid: e050261a-9285-4f31-a1c5-6c8033af5b4a
 ms.openlocfilehash: c33ec1376c1898272cf80e8d77c5cc273e16f9de
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389367"
 ---
 # <a name="windows-sockets-ports-and-socket-addresses"></a>Windows 套接字：端口和套接字地址
 
@@ -42,11 +42,11 @@ ms.locfileid: "57277765"
 
 - [Windows 套接字：使用类 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows 套接字：对存档使用套接字](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows 套接字：结合使用套接字和存档](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows 套接字：使用存档的套接字如何工作](../mfc/windows-sockets-how-sockets-with-archives-work.md)
+- [Windows 套接字：使用存档的套接字的工作原理](../mfc/windows-sockets-how-sockets-with-archives-work.md)
 
-- [Windows 套接字：Stream 套接字](../mfc/windows-sockets-stream-sockets.md)
+- [Windows 套接字：流套接字](../mfc/windows-sockets-stream-sockets.md)
 
 - [Windows 套接字：数据报套接字](../mfc/windows-sockets-datagram-sockets.md)
 

@@ -1,6 +1,6 @@
 ---
 title: 演练：正在更新 MFC 随意画图应用程序 （第 1 部分）
-ms.date: 09/20/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - examples [MFC], update existing application
 - ribbon UI, porting to
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-ms.openlocfilehash: 213bc8087b58eac232cc8fcfccc88e13785a807e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: cba28039cb7755149b35a47ddee82b6274fe4c72
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258757"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64558220"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>演练：正在更新 MFC 随意画图应用程序 （第 1 部分）
 
@@ -24,7 +24,7 @@ ms.locfileid: "57258757"
 
 ## <a name="prerequisites"></a>系统必备
 
-[Scribble 1.0 MFC 示例](http://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe)。 有关将转换为 Visual Studio 2017 的帮助，请参阅[移植指南：MFC Scribble](../porting/porting-guide-mfc-scribble.md)。
+[Scribble 1.0 MFC 示例](http://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe)。 有关转换到 Visual Studio 2017 或更高版本的帮助，请参阅[移植指南：MFC Scribble](../porting/porting-guide-mfc-scribble.md)。
 
 ##  <a name="top"></a> 部分
 
@@ -269,4 +269,4 @@ ms.locfileid: "57258757"
 ## <a name="see-also"></a>请参阅
 
 [演练](../mfc/walkthroughs-mfc.md)<br/>
-[演练：正在更新 MFC 随意画图应用程序 （第 2 部分）](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)
+[演练：更新 MFC 自由曲线应用程序（第 2 部分）](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)

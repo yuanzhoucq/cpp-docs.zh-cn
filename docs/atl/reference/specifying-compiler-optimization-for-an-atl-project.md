@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ATL projects, compiler optimization
 - ATL_NO_VTABLE macro
 ms.assetid: 7f379318-66d5-43dd-a53d-530758d3a228
-ms.openlocfilehash: 6e6fe09aaa0726a39aae8b85cb6581c5d0cd24e1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
-ms.translationtype: MT
+ms.openlocfilehash: 812245133b4b3b870c0c763eabcda0ec8d26e028
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280012"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221042"
 ---
 # <a name="specifying-compiler-optimization-for-an-atl-project"></a>指定 ATL 项目的编译器优化
 
@@ -54,8 +54,7 @@ ATL 然后定义 _ATL_NO_VTABLE，如下所示：
 ## <a name="see-also"></a>请参阅
 
 [ATL 项目向导](../../atl/reference/atl-project-wizard.md)<br/>
-[Visual C++ 项目类型](../../ide/visual-cpp-project-types.md)<br/>
-[使用应用程序向导创建桌面项目](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
+[C++在 Visual Studio 中的项目类型](../../build/reference/visual-cpp-project-types.md)<br/>
 [使用 ATL 和 C 运行时代码进行编程](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [ATL COM 对象基础知识](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [novtable](../../cpp/novtable.md)<br/>

@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: fc5d41221ab0f9679e7d38a399464efc1a38dd52
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2ff6cd6e0817f74c7688fc573d4b98f70704f96c
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305076"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222573"
 ---
 # <a name="cdc-class"></a>CDC 类
 
@@ -2047,7 +2047,7 @@ int EnumObjects(
 
 对于给定类型的每个对象，您传递的回调函数调用替换为该对象的信息。 系统调用的回调函数，直到没有更多对象或回调函数将返回 0。
 
-请注意 Microsoft Visual c + + 的新功能，可以使用普通函数，因为该函数传递给`EnumObjects`。 地址传递给`EnumObjects`指向与导出的函数的指针**导出**和使用 Pascal 调用约定。 在保护模式的应用程序，无需使用 Windows MakeProcInstance 函数创建此函数或使用 FreeProcInstance Windows 函数的使用后释放该函数。
+请注意，新的 Microsoft Visual 功能C++允许您使用的普通函数，为该函数传递给`EnumObjects`。 地址传递给`EnumObjects`指向与导出的函数的指针**导出**和使用 Pascal 调用约定。 在保护模式的应用程序，无需使用 Windows MakeProcInstance 函数创建此函数或使用 FreeProcInstance Windows 函数的使用后释放该函数。
 
 也不需要导出中的函数名称**导出**应用程序的模块定义文件中的语句。 你可以改用**导出**函数修饰符，如
 
@@ -3177,7 +3177,7 @@ DWORD GetGlyphOutline(
 *nFormat*<br/>
 指定该函数将返回信息的格式。 它可以是下列值之一或 0:
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |GGO_BITMAP|返回标志符号位图。 当该函数返回时，通过指向的缓冲区*lpBuffer*包含双字边界启动其中的行的每像素 1 位位图。|
 |GGO_NATIVE|返回在光栅化程序的本机格式，使用设备单位中数据点的曲线。 中时指定此值，指定任何转换*lpmat2*将被忽略。|
@@ -3424,7 +3424,7 @@ CSize GetOutputTabbedTextExtent(
 指向要测量的字符串。 你还可以传递[CString](../../atl-mfc-shared/reference/cstringt-class.md)为此参数的对象。
 
 *nCount*<br/>
-指定字符串中的字符数。 如果*nCount*为-1，长度进行计算。
+指定[字符串的长度](/windows/desktop/gdi/specifying-length-of-text-output-string)指向*lpszString*。
 
 *nTabPositions*<br/>
 指定指向数组中的制表位位置数*lpnTabStopPositions*。
@@ -3467,7 +3467,7 @@ CSize GetOutputTextExtent(const CString& str) const;
 指向字符的字符串。 你还可以传递[CString](../../atl-mfc-shared/reference/cstringt-class.md)为此参数的对象。
 
 *nCount*<br/>
-指定字符串中的字符数。 如果*nCount*为-1，长度进行计算。
+指定[字符串的长度](/windows/desktop/gdi/specifying-length-of-text-output-string)指向*lpszString*。
 
 *str*<br/>
 一个`CString`对象，其中包含要测量的指定的字符。
@@ -3669,7 +3669,7 @@ CSize GetTabbedTextExtent(
 指向字符字符串。 你还可以传递[CString](../../atl-mfc-shared/reference/cstringt-class.md)为此参数的对象。
 
 *nCount*<br/>
-指定字符串中的字符数。 如果*nCount*为-1，长度进行计算。
+指定[字符串的长度](/windows/desktop/gdi/specifying-length-of-text-output-string)指向*lpszString*。
 
 *nTabPositions*<br/>
 指定指向数组中的制表位位置数*lpnTabStopPositions*。
@@ -4087,7 +4087,7 @@ virtual BOOL GrayString(
 指定要传递到输出函数的数据的较远指针。 如果*lpfnOutput*为 NULL， *lpData*必须是指向要输出的字符串的长指针。
 
 *nCount*<br/>
-指定要输出的字符数。 如果此参数为 0，`GrayString`计算字符串的长度 (假定*lpData*是指向字符串的指针)。 如果*nCount*是-1 和指向函数*lpfnOutput*返回 0 时，图像时显示，但未变暗。
+指定要输出的字符数。 如果此参数为 0，`GrayString`计算字符串的长度 (假定*lpData*是指向字符串的指针)。 如果*nCount*为 1，通过所指向的函数*lpfnOutput*返回 0 时，图像时显示，但未变暗。
 
 *x*<br/>
 指定将此字符串的矩形的起始位置的逻辑 x 坐标。
@@ -5738,7 +5738,7 @@ int SetAbortProc(BOOL (CALLBACK* lpfn)(HDC, int));
 
 如果应用程序，以允许在后台处理过程中取消打印作业打印作业开始使用之前，它必须设置中止函数[StartDoc](#startdoc)成员函数。 打印管理器在后台处理，以允许应用程序来取消打印作业，或处理的磁盘空间不足条件调用中止函数。 如果设置中止函数，打印作业将失败，如果没有足够的磁盘空间用于后台打印。
 
-请注意，Microsoft Visual c + + 的功能简化传递给回调函数的创建`SetAbortProc`。 地址传递给`EnumObjects`成员函数是指向与导出的函数的指针`__declspec(dllexport)`且`__stdcall`调用约定。
+请注意，Microsoft 视觉对象的功能C++简化的传递给回调函数创建`SetAbortProc`。 地址传递给`EnumObjects`成员函数是指向与导出的函数的指针`__declspec(dllexport)`且`__stdcall`调用约定。
 
 也不需要导出中的函数名称**导出**应用程序的模块定义文件中的语句。 你可以改用**导出**函数修饰符，如
 
@@ -6322,7 +6322,7 @@ int SetStretchBltMode(int nStretchMode);
 *nStretchMode*<br/>
 指定的拉伸模式。 它可以是以下值之一：
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
 |BLACKONWHITE|执行布尔 AND 操作使用为已清除的和现有像素的颜色值。 如果位图是单色位图，此模式会保留代价白色像素是黑色像素。|
 |COLORONCOLOR|删除的像素为单位。 此模式下不尝试保留其信息的情况下删除所有消除的像素行数。|
@@ -6816,8 +6816,7 @@ BOOL StretchBlt(
 
 `StretchBlt`函数创建的位图的镜像，如果的迹象*nSrcWidth*并*nWidth*或*nSrcHeight*和*nHeight*参数不同。 如果*nSrcWidth*并*nWidth*符号不同，该函数将创建的沿 x 轴的位图的镜像。 如果*nSrcHeight*并*nHeight*符号不同，该函数将创建的沿 y 轴的位图的镜像。
 
-
-  `StretchBlt` 函数将在内存中拉伸或压缩源位图，然后将结果复制到目标。 如果一个模式将与该结果合并，则合并操作会等到拉伸的源位图复制到目标后执行。 如果使用画笔，则为在目标设备上下文中选择的画笔。 目标坐标将根据目标设备上下文进行转换；源坐标将根据源设备上下文进行转换。
+`StretchBlt` 函数将在内存中拉伸或压缩源位图，然后将结果复制到目标。 如果一个模式将与该结果合并，则合并操作会等到拉伸的源位图复制到目标后执行。 如果使用画笔，则为在目标设备上下文中选择的画笔。 目标坐标将根据目标设备上下文进行转换；源坐标将根据源设备上下文进行转换。
 
 如果目标位图、源位图和模式位图没有相同的颜色格式，`StretchBlt` 将转换源位图和模式位图，以与目标位图匹配。 在转换中将使用目标设备上下文的前景色和背景色。
 
@@ -6892,7 +6891,7 @@ CSize TabbedTextOut(
 指向要绘制的字符串。 可以将任一指针传递到字符数组或[CString](../../atl-mfc-shared/reference/cstringt-class.md)为此参数的对象。
 
 *nCount*<br/>
-指定字符串中的字符数。 如果*nCount*为-1，长度进行计算。
+指定[字符串的长度](/windows/desktop/gdi/specifying-length-of-text-output-string)指向*lpszString*。
 
 *nTabPositions*<br/>
 指定的制表位位置数组中的值的数目。

@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB consumer templates, classes
 ms.assetid: cfc7f698-1a0e-4a09-a4d3-ccb99e6654fe
-ms.openlocfilehash: a476fefa4338e73bf6eaf70fa16a5328a427b56d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb0b24798b3f2682bbbec7624df34b40a2a9f4cc
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62361485"
 ---
 # <a name="ole-db-consumer-templates-reference"></a>OLE DB 使用者模板参考
 
@@ -86,7 +86,7 @@ OLE DB 使用者模板包含以下类。 参考资料也包括在主题[OLE DB �
 [CNoRowset](../../data/oledb/cnorowset-class.md)<br/>
 可以将用作模板自变量，如果该命令不返回行集。
 
-[cRestrictions](../../data/oledb/crestrictions-class.md)<br/>
+[CRestrictions](../../data/oledb/crestrictions-class.md)<br/>
 使用指定的架构行集的限制。
 
 [CRowset](../../data/oledb/crowset-class.md)<br/>

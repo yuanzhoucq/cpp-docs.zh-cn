@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - __writedr intrinsic
 ms.assetid: ac55c1ee-df2f-41d4-a429-6f369d2a934d
-ms.openlocfilehash: f8049485d40185d83ed01c91ad336e83f3e79834
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c495e8c80029680512358198ca8fb0ce6e65414d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389861"
 ---
 # <a name="writedr"></a>__writedr
 

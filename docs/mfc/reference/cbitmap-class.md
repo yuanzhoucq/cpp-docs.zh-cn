@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-ms.openlocfilehash: 97d4561da12492c158673c4cc79c2baefd973c75
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 11e210680bdf68f1a1dcbfaed18ae56ce006c8ad
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388444"
 ---
 # <a name="cbitmap-class"></a>CBitmap 类
 
@@ -521,6 +521,6 @@ GDI 不使用这些值，但若要返回其应用程序调用时除外[GetBitmap
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 MDI](../../visual-cpp-samples.md)<br/>
+[MFC 示例 MDI](../../overview/visual-cpp-samples.md)<br/>
 [CGdiObject 类](../../mfc/reference/cgdiobject-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)

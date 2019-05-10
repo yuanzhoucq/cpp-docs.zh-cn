@@ -6,12 +6,12 @@ helpviewer_keywords:
 - maps, property
 - property maps
 ms.assetid: 44abde56-90ad-4612-854e-d2fa5426fa80
-ms.openlocfilehash: 0e1e9999c63bfa525988b67d020031fd76514b67
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 9df98dc85c9242693319542cea0730341d87a052
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62284028"
 ---
 # <a name="property-maps"></a>属性映射
 

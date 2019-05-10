@@ -10,16 +10,16 @@ helpviewer_keywords:
 - __stdcall keyword [C++]
 - DLL functions [C++], calling
 ms.assetid: 282f7fbf-a0f2-4b9f-b277-1982710be56c
-ms.openlocfilehash: 88705b2a33e3eb82043d93c534477fce96849502
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
-ms.translationtype: MT
+ms.openlocfilehash: 23b5692e28b9ea5b70c492e2564b8bf5385b1815
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417577"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221195"
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>从 Visual Basic 应用程序调用 DLL 函数
 
-对于 Visual Basic 应用程序 （或 Pascal 或 Fortran 等其他语言中的应用程序） 在 C/c + + DLL 中调用函数，函数必须使用导出正确的调用约定而无需由编译器进行任何名称修饰
+对于 Visual Basic 应用程序 （或 Pascal 或 Fortran 等其他语言中的应用程序） 在 C 中调用函数 /C++ DLL，必须使用正确的调用约定而无需由编译器进行任何名称修饰导出函数
 
 `__stdcall` 创建正确的函数的调用约定 （被调用的函数清理堆栈和从右到左传递的参数），但以不同的方式修饰函数名。 因此，当 **__declspec （dllexport)** 使用在 DLL 中导出的函数，修饰的名被导出。
 
@@ -33,7 +33,7 @@ int __stdcall func (int a, double b)
 
 C 调用约定 (`__cdecl`) 将作为该名称修饰`_func`。
 
-若要获取修饰的名，请使用[/map](../build/reference/map-generate-mapfile.md)。 利用 **__declspec （dllexport)** 执行以下操作：
+若要获取修饰的名，请使用[/map](reference/map-generate-mapfile.md)。 利用 **__declspec （dllexport)** 执行以下操作：
 
 - 如果使用 C 调用约定导出函数 (`__cdecl`)，则它抽出前导下划线 ( **\_** ) 导出名称时。
 
@@ -58,18 +58,18 @@ EXPORTS
 
 ## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？
 
-- [从 DLL 导出](../build/exporting-from-a-dll.md)
+- [从 DLL 导出](exporting-from-a-dll.md)
 
-- [导出从 DLL 使用。DEF 文件](../build/exporting-from-a-dll-using-def-files.md)
+- [导出从 DLL 使用。DEF 文件](exporting-from-a-dll-using-def-files.md)
 
-- [使用 __declspec （dllexport） 从 DLL 导出](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [使用 __declspec （dllexport） 从 DLL 导出](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [导出 c + + 函数以用于 C 语言可执行文件](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [导出C++函数以用于 C 语言可执行文件](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [确定要使用的导出方法](../build/determining-which-exporting-method-to-use.md)
+- [确定要使用的导出方法](determining-which-exporting-method-to-use.md)
 
-- [修饰的名](../build/reference/decorated-names.md)
+- [修饰的名](reference/decorated-names.md)
 
 ## <a name="see-also"></a>请参阅
 
-[Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)
+[创建 C /C++ Visual Studio 中的 Dll](dlls-in-visual-cpp.md)

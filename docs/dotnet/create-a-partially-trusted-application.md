@@ -1,5 +1,5 @@
 ---
-title: 如何： 创建部分受信任的应用程序 (C + + CLI)
+title: 如何：创建部分受信任的应用程序 (C++/CLI)
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,18 +10,18 @@ helpviewer_keywords:
 - interop [C++], partially trusted applications
 - /clr compiler option [C++], partially trusted applications
 ms.assetid: 4760cd0c-4227-4f23-a7fb-d25b51bf246e
-ms.openlocfilehash: fb65c8ff3dc4c3b03fa319fd1e7a6eb95f11bef2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: afdfb8ca11753d7def9d7da6f431082b1a90c345
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209117"
 ---
 # <a name="how-to-create-a-partially-trusted-application-by-removing-dependency-on-the-crt-library-dll"></a>如何：通过移除 CRT 库 DLL 上的依赖项来创建部分受信任的应用程序
 
-本主题讨论如何创建通过删除依赖于 msvcm90.dll 使用 Visual c + + 的部分受信任的公共语言运行时应用程序。
+本主题介绍了如何创建使用视觉对象的部分受信任的公共语言运行时应用程序C++通过删除对 msvcm90.dll 依赖关系。
 
-使用生成的 Visual c + + 应用程序 **/clr**将 msvcm90.dll，是 C 运行时库的一部分存在依赖关系。 当你想要在部分信任环境中使用应用程序时，CLR 将强制执行某些代码访问安全性规则对您的 DLL。 因此，将需要删除此依赖关系，因为 msvcm90.dll 包含本机代码，并且不能对其实施代码访问安全性策略。
+视觉对象C++通过生成应用程序 **/clr**将 msvcm90.dll，是 C 运行时库的一部分存在依赖关系。 当你想要在部分信任环境中使用应用程序时，CLR 将强制执行某些代码访问安全性规则对您的 DLL。 因此，将需要删除此依赖关系，因为 msvcm90.dll 包含本机代码，并且不能对其实施代码访问安全性策略。
 
 如果你的应用程序不使用 C 运行时库的任何功能，并且你想要从代码中删除对此库的依赖关系，您将需要使用 **/NODEFAULTLIB:msvcmrt.lib**链接器选项和链接ptrustm.lib 或 ptrustmd.lib。 这些库包含初始化和取消初始化应用程序的对象文件、 异常类使用的初始化代码和托管异常处理代码。 中的这些库的链接将删除对 msvcm90.dll 任何依赖关系。
 

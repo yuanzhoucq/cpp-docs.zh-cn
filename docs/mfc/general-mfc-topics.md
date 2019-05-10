@@ -6,24 +6,24 @@ helpviewer_keywords:
 - class libraries [MFC], MFC
 - MFC, application development
 ms.assetid: 617e9945-9bb3-471d-a3ba-e235fcfb55d1
-ms.openlocfilehash: a55bfae8599e2b221cb853cb17bd4113839fb9c1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 71cdda0abea8cec29c3b6e17ddfb584e32a931c6
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62219725"
 ---
 # <a name="general-mfc-topics"></a>常规 MFC 主题
 
 此系列文章包含有关 Microsoft 基础类 (MFC) 库的技术详细信息，并提供了 MFC 框架概述及其关键组件和子系统。
 
-Microsoft 基础类库是用于在 Microsoft Windows 中编程的应用程序框架。 MFC 采用 C++ 编写，它提供了执行以下操作所需的很多代码：管理窗口、菜单和对话框；执行基本输入/输出；存储数据对象的集合等。 你只需将特定于应用程序的代码添加到此框架中。 根据 c + + 类编程的性质，很容易地扩展或重写基本功能， [MFC 框架](../mfc/framework-mfc.md)提供。
+Microsoft 基础类库是用于在 Microsoft Windows 中编程的应用程序框架。 MFC 采用 C++ 编写，它提供了执行以下操作所需的很多代码：管理窗口、菜单和对话框；执行基本输入/输出；存储数据对象的集合等。 你只需将特定于应用程序的代码添加到此框架中。 考虑到的特性C++类进行编程，它是可以轻松地扩展或重写基本功能， [MFC 框架](../mfc/framework-mfc.md)提供。
 
 MFC 框架是一种让您基于 Windows 专家程序员的工作来进行开发的有力方法。 MFC 具有以下优点：缩短开发时间；提高代码的可移植性；提供强有力的支持而不会降低编程的自由性和灵活性；降低接触“难以编程”的用户界面元素和技术（如 Active 技术、OLE 和 Internet 编程）的难度。 此外，MFC 还通过数据访问对象 (DAO) 和开放式数据库连接 (ODBC) 简化了数据库编程，并通过 Windows 套接字简化了网络编程。 MFC 使用户可以轻松对属性表（“通过 Tab 切换对话框”）、打印预览和浮动的自定义工具栏等功能进行编程。
 
 ## <a name="in-this-section"></a>本节内容
 
-`MFC Samples`提供的[Visual c + + 示例](../visual-cpp-samples.md)
+`MFC Samples`提供的[可视化C++示例](../overview/visual-cpp-samples.md)
 
 [使用 MFC 源文件](../mfc/using-the-mfc-source-files.md)
 
@@ -33,7 +33,7 @@ MFC 框架是一种让您基于 Windows 专家程序员的工作来进行开发�
 
 [基于框架生成](../mfc/building-on-the-framework.md)
 
-[CWinApp:应用程序类](../mfc/cwinapp-the-application-class.md)
+[CWinApp：应用程序类](../mfc/cwinapp-the-application-class.md)
 
 [文档模板和文档/视图创建过程](../mfc/document-templates-and-the-document-view-creation-process.md)
 
@@ -47,7 +47,7 @@ MFC 框架是一种让您基于 Windows 专家程序员的工作来进行开发�
 
 [Windows Vista 公用控件的生成要求](../mfc/build-requirements-for-windows-vista-common-controls.md)
 
-[如何：添加重新启动管理器支持](../mfc/how-to-add-restart-manager-support.md)
+[如何：添加重启管理器支持](../mfc/how-to-add-restart-manager-support.md)
 
 [动态布局](../mfc/dynamic-layout.md)
 

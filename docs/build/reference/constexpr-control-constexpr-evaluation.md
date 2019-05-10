@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -constexpr control constexpr evaluation [C++]
 - constexpr control constexpr evaluation [C++]
 ms.assetid: 76d56784-f5ad-401d-841d-09d1059e8b8c
-ms.openlocfilehash: 49a9566ec0725b63330af3a41afb871c3be3cc27
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 178acc548fb9c89dcfde104d2a12d85637440e28
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294247"
 ---
 # <a name="constexpr-control-constexpr-evaluation"></a>/constexpr （控制 constexpr 计算）
 
@@ -36,7 +36,7 @@ ms.locfileid: "57414641"
 
 ## <a name="remarks"></a>备注
 
-**/Constexpr**编译器选项可控制的编译时计算**constexpr**表达式。 评估步骤、 递归级别和反向跟踪深度控制以阻止编译器上花费太多时间**constexpr**评估。 有关详细信息**constexpr**语言元素，请参阅[constexpr （c + +）](../../cpp/constexpr-cpp.md)。
+**/Constexpr**编译器选项可控制的编译时计算**constexpr**表达式。 评估步骤、 递归级别和反向跟踪深度控制以阻止编译器上花费太多时间**constexpr**评估。 有关详细信息**constexpr**语言元素，请参阅[constexpr (C++)](../../cpp/constexpr-cpp.md)。
 
 **/Constexpr**选项是在 Visual Studio 2015 开始提供。
 
@@ -44,7 +44,7 @@ ms.locfileid: "57414641"
 
 1. 打开你的项目**属性页**对话框。
 
-2. 下**配置属性**，展开**C/c + +** 文件夹，然后选择**命令行**属性页。
+2. 下**配置属性**，展开**C /C++** 文件夹，然后选择**命令行**属性页。
 
 3. 输入任何 **/constexpr**编译器选项，在**其他选项**框。 选择**确定**或**应用**以保存所做的更改。
 
@@ -54,5 +54,5 @@ ms.locfileid: "57414641"
 
 ## <a name="see-also"></a>请参阅
 
-[编译器选项](../../build/reference/compiler-options.md)<br/>
-[设置编译器选项](../../build/reference/setting-compiler-options.md)
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)

@@ -1,6 +1,6 @@
 ---
 title: tiled_index 类
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - tiled_index
 - AMP/tiled_index
@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - tiled_index class
 ms.assetid: 0ce2ae26-f1bb-4436-b473-a9e1b619bb38
-ms.openlocfilehash: cea1ac1d500a9cf3bcbdc1f5dde33a0002cbd363
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: dd8b6d7a0e174c88ad229da2d08a9ec8a11fb0aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57257899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62352185"
 ---
 # <a name="tiledindex-class"></a>tiled_index 类
 
@@ -79,7 +79,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 
 ### <a name="public-constants"></a>公共常量
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[barrier 常量](#tiled_index__barrier)|存储[tile_barrier](tile-barrier-class.md)对象，表示当前线程的平铺屏障。|
 |||
@@ -110,7 +110,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 
 **命名空间：** 并发
 
-## <a name="tiled_index__ctor"></a>  tiled_index 构造函数
+## <a name="ctor"></a>  tiled_index 构造函数
 
 初始化 `tiled_index` 类的新实例。
 
@@ -152,7 +152,7 @@ tiled_index(
 
 |||
 |-|-|
-|name|描述|
+|名称|描述|
 |`tiled_index(const index<rank>& _Global, const index<rank>& _Local, const index<rank>& _Tile, const index<rank>& _Tile_origin, const tile_barrier& _Barrier restrict(amp,cpu);`|初始化的新实例`tile_index`类从索引中全局坐标的平铺和本地坐标中的磁贴中的相对位置。 `_Global`和`_Tile_origin`参数可计算。|
 |`tiled_index(    const tiled_index& _Other) restrict(amp,cpu);`|初始化的新实例`tile_index`类的复制指定`tiled_index`对象。|
 

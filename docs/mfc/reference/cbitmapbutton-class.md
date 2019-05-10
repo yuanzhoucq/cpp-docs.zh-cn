@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CBitmapButton [MFC], LoadBitmaps
 - CBitmapButton [MFC], SizeToContent
 ms.assetid: 9ad6cb45-c3c4-4fb1-96d3-1fe3df7bbcfc
-ms.openlocfilehash: c800b40fcf2bb3008b35614390e4aafcb43a54f5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 45e0214cafb80c3e00a7e888a3170040f46113f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388457"
 ---
 # <a name="cbitmapbutton-class"></a>CBitmapButton 类
 
@@ -152,7 +152,7 @@ CBitmapButton();
 
 ### <a name="remarks"></a>备注
 
-创建 c + + 后`CBitmapButton`对象，请调用[CButton::Create](../../mfc/reference/cbutton-class.md#create)若要创建的 Windows 按钮控件，并将其附加到`CBitmapButton`对象。
+在创建后C++`CBitmapButton`对象，请调用[CButton::Create](../../mfc/reference/cbutton-class.md#create)若要创建的 Windows 按钮控件，并将其附加到`CBitmapButton`对象。
 
 ### <a name="example"></a>示例
 
@@ -224,6 +224,6 @@ void SizeToContent();
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 CTRLTEST](../../visual-cpp-samples.md)<br/>
+[MFC 示例 CTRLTEST](../../overview/visual-cpp-samples.md)<br/>
 [CButton 类](../../mfc/reference/cbutton-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)

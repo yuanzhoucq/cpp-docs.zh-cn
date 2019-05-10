@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCReBar [MFC], OnUpdateCmdUI
 - CMFCReBar [MFC], SetPaneAlignment
 ms.assetid: 02a60e29-6224-49c1-9e74-e0a7d9f8d023
-ms.openlocfilehash: b221abf772df06541ecde247a9db9401c0ed3c3a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7776bf504d502feee8ef51949b8adc8e44f94c8e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410130"
 ---
 # <a name="cmfcrebar-class"></a>CMFCReBar 类
 
@@ -71,7 +71,7 @@ Rebar 对象的行为类似于工具栏对象。 Rebar 控件可以包含一个�
 
 ## <a name="example"></a>示例
 
-下面的示例演示了如何使用 `CMFCReBar` 类中的各种方法。 该示例演示如何创建 rebar 控件并向其添加带区。 带区充当内部工具栏。 此代码片段属于[Rebar 测试示例](../../visual-cpp-samples.md)。
+下面的示例演示了如何使用 `CMFCReBar` 类中的各种方法。 该示例演示如何创建 rebar 控件并向其添加带区。 带区充当内部工具栏。 此代码片段属于[Rebar 测试示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_RebarTest#1](../../mfc/reference/codesnippet/cpp/cmfcrebar-class_1.h)]
 [!code-cpp[NVC_MFC_RebarTest#2](../../mfc/reference/codesnippet/cpp/cmfcrebar-class_2.cpp)]

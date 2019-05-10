@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, inline_recursion
 - inline_recursion pragma
 ms.assetid: cfef5791-63b7-45ac-9574-623747b9b9c9
-ms.openlocfilehash: 635d33d91e779d88b56e353d0cddf6b34b313855
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80ffabc6ac7c95fd7d9fb4e62bea38c2a04b04f0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523836"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383693"
 ---
 # <a name="inlinerecursion"></a>inline_recursion
 控制直接或相互递归函数调用的内联扩展。

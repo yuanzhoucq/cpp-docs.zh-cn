@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - high_property_prefixes attribute
 ms.assetid: 91c6cc2b-19b6-4aba-8831-d9e5cccb58b5
-ms.openlocfilehash: 130d19f275612e153955ae49f299fe2f36d098bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f8975ec9737e02bb1216166cc6c241549e95a07
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409832"
 ---
 # <a name="highpropertyprefixes"></a>high_property_prefixes
 
-**C + + 专用**
+**C++特定**
 
 指定用于三个属性方法的备用前缀。
 
@@ -40,7 +40,7 @@ high_property_prefixes("GetPrefix","PutPrefix","PutRefPrefix")
 
 默认情况下，高级错误处理`propget`， `propput`，并`propputref`使用的前缀命名的成员函数公开方法`Get`， `Put`，和`PutRef`分别。
 
-**结束 c + + 专用**
+**结束C++特定**
 
 ## <a name="see-also"></a>请参阅
 

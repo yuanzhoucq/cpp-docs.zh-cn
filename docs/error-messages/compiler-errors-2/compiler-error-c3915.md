@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3915
 ms.assetid: 2b0a5e5f-3aec-4a4b-9157-233031817084
-ms.openlocfilehash: 511da8ebe896cb2d0e2869f36bdb474cae5ba521
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85654e266c3157ab145e7ac7aab454a0d4f6c102
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62406439"
 ---
 # <a name="compiler-error-c3915"></a>编译器错误 C3915
 
@@ -19,7 +19,7 @@ type 不具有默认索引属性 （类索引器）
 
 类型不具有默认的索引的属性。
 
-有关详细信息，请参阅 [property](../../windows/property-cpp-component-extensions.md)。
+有关详细信息，请参阅 [property](../../extensions/property-cpp-component-extensions.md)。
 
 ## <a name="example"></a>示例
 

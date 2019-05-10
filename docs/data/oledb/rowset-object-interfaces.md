@@ -8,12 +8,12 @@ helpviewer_keywords:
 - OLE DB provider templates, object interfaces
 - interfaces, list of
 ms.assetid: 0d7a5d48-2fe4-434f-a84b-157c1fdc3494
-ms.openlocfilehash: f3d52568b6b32a757be3d248289876fd504a74c3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 1f3e6066af4b6870c5fa90f7bde373bb7be476ce
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62243973"
 ---
 # <a name="rowset-object-interfaces"></a>行集合对象接口
 

@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: fdfc0888e7d6213fb7c04a5257358da8f5dae138
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: eea37d03ca5a4fab450fbca0c4c3f6c76fefb407
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425089"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62225240"
 ---
 # <a name="clistctrl-class"></a>CListCtrl 类
 
@@ -4422,7 +4422,7 @@ BOOL Update(int nItem);
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 ROWLIST](../../visual-cpp-samples.md)<br/>
+[MFC 示例 ROWLIST](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 类](cwnd-class.md)<br/>
 [层次结构图](../hierarchy-chart.md)<br/>
 [CImageList 类](cimagelist-class.md)

@@ -1,24 +1,24 @@
 ---
-title: 使用资源文件 （c + +）
+title: 使用资源文件 (C++)
 ms.date: 02/14/2019
 helpviewer_keywords:
 - resources [C++], about resources
 - resources [C++], about resource files
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-ms.openlocfilehash: 71a76da9f4eadfdca0d69873b821f4ea8eb8fc05
-ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
+ms.openlocfilehash: a08c7ecb153b790f06da386ac93d1f05f5981e61
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387651"
 ---
 # <a name="working-with-resource-files"></a>使用资源文件
 
 > [!WARNING]
 > 本节适用于采用 C++ 编写的 Windows 桌面应用程序。
 >
-> 有关 c + + 编写的通用 Windows 平台应用中的资源的信息，请参阅[定义应用的资源](/windows/uwp/app-resources/)，或将资源添加到 C + + /cli （托管） 的 CLI 项目，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中 *.NET Framework 开发人员指南*。
+> 有关编写的通用 Windows 平台应用中的资源的信息C++，请参阅[定义应用的资源](/windows/uwp/app-resources/)，或将资源添加到C++/（托管） 的 CLI 项目，请参阅[的桌面应用中的资源](/dotnet/framework/resources/index) .NET Framework 开发人员指南中。
 
 资源可以组成任务的各种元素，如：
 
@@ -28,6 +28,9 @@ ms.locfileid: "56676417"
 - 菜单和对话框资源。
 
 可以向项目添加新资源并使用适当的资源编辑器修改这些资源。 大多数 Visual C++ 向导自动为项目生成 .rc 文件。
+
+> [!NOTE]
+> **资源编辑器**并**资源视图**在 Express 版本中不可用。
 
 若要手动将资源文件添加到托管项目，请参阅[桌面应用中创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 本文包含如何访问资源、 显示静态资源以及将资源字符串分配给属性。
 
@@ -46,7 +49,7 @@ ms.locfileid: "56676417"
 
 ## <a name="related-sections"></a>相关章节
 
-[Visual C++](../visual-cpp-in-visual-studio.md)<br/>
+[Visual C++](../overview/visual-cpp-in-visual-studio.md)<br/>
 提供 Visual C++ 文档的链接。
 
 [与我们交流](/visualstudio/ide/talk-to-us)<br/>

@@ -1,6 +1,6 @@
 ---
 title: uint_4 类
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_4::ywx
 - amp_short_vectors/Concurrency::graphics::uint_4::get_yxw
@@ -268,12 +268,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_4::rba
 - amp_short_vectors/Concurrency::graphics::uint_4::set_yzx
 ms.assetid: 1cda9e2c-5970-4ced-ae54-d7ff3c6746f4
-ms.openlocfilehash: e5c0482854a08973593e9c67f2f51d5706304831
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 413edb5c83dba465aff804658afc6931c7181e73
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405438"
 ---
 # <a name="uint4-class"></a>uint_4 类
 
@@ -455,7 +455,7 @@ class uint_4;
 
 ### <a name="public-constants"></a>公共常量
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[大小常量](#size)||
 
@@ -606,7 +606,7 @@ class uint_4;
 
 默认构造函数，初始化 0 的所有元素。
 
-## <a name="syntax"></a>语法
+### <a name="syntax"></a>语法
 
 ```
 uint_4() restrict(amp,cpu);
@@ -659,9 +659,9 @@ explicit inline uint_4(
 *_Other*<br/>
 用于初始化的对象。
 
-## <a name=""></a> 大小
+## <a name="size"></a>size
 
-## <a name="syntax"></a>语法
+### <a name="syntax"></a>语法
 
 ```
 static const int size = 4;

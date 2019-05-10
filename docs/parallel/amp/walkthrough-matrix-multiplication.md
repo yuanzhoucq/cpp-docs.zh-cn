@@ -1,33 +1,59 @@
 ---
 title: 演练：矩阵乘法
-ms.date: 11/19/2018
+ms.date: 04/23/2019
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
-ms.openlocfilehash: 597ba0f47c7b081f62c82bf8e1ca01c286d35140
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: afa9dba8938f9d701b8f21ca3575eb06eb688ac0
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300968"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877484"
 ---
 # <a name="walkthrough-matrix-multiplication"></a>演练：矩阵乘法
 
-此分步演练演示如何使用 c + + AMP 加快执行矩阵乘法。 显示这两种算法，另一个不包含平铺，另一个使用平铺。
+此分步演练演示如何使用C++AMP 可加速执行矩阵乘法。 显示这两种算法，另一个不包含平铺，另一个使用平铺。
 
 ## <a name="prerequisites"></a>系统必备
 
 开始之前：
 
-- 读取[c + + AMP 概述](../../parallel/amp/cpp-amp-overview.md)。
+- 读取[ C++ AMP 概述](../../parallel/amp/cpp-amp-overview.md)。
 
 - 读取[使用平铺](../../parallel/amp/using-tiles.md)。
 
-- 请确保在计算机上安装的 Windows 7、 Windows 8、 Windows Server 2008 R2 或 Windows Server 2012。
+- 请确保你至少运行 Windows 7 或 Windows Server 2008 R2。
 
 ### <a name="to-create-the-project"></a>要创建项目
 
+说明如何创建一个新的项目已安装 Visual Studio 的版本而异。 请确保你拥有版本选择器右上角设置为正确的版本。
+
+::: moniker range="vs-2019"
+
+### <a name="to-create-the-project-in-visual-studio-2019"></a>若要在 Visual Studio 2019 中创建项目
+
+1. 在菜单栏上依次选择**文件** > **新建** > **项目**打开**创建一个新项目**对话框。
+
+1. 在对话框顶部，设置**语言**到**C++**，将**平台**到**Windows**，并设置**项目类型**到**控制台**。 
+
+1. 从已筛选的项目类型列表中，选择**空项目**然后选择**下一步**。 在下一页上，输入*MatrixMultiply*中**名称**框来指定项目的名称并根据需要指定项目位置。
+
+   ![新控制台应用程序](../../build/media/mathclient-project-name-2019.png "新控制台应用程序")
+
+1. 选择**创建**按钮以创建客户端项目。
+
+1. 在中**解决方案资源管理器**，打开快捷菜单**源文件**，然后选择**添加** > **新项**。
+
+1. 在中**添加新项**对话框中，选择**C++文件 (.cpp)**，输入*MatrixMultiply.cpp*中**名称**框中，，然后选择**添加**按钮。
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+### <a name="to-create-a-project-in-visual-studio-2017-or-2015"></a>若要在 Visual Studio 2017 或 2015年中创建项目
+
 1. 在 Visual Studio 中菜单栏上依次选择**文件** > **新建** > **项目**。
 
-1. 下**已安装**在模板窗格中选择**Visual c + +**。
+1. 下**已安装**在模板窗格中选择**Visual C++** 。
 
 1. 选择**空项目**，输入*MatrixMultiply*中**名称**，然后再选择**确定**按钮。
 
@@ -35,7 +61,9 @@ ms.locfileid: "57300968"
 
 1. 在中**解决方案资源管理器**，打开快捷菜单**源文件**，然后选择**添加** > **新项**。
 
-1. 在中**添加新项**对话框中，选择**c + + 文件 (.cpp)**，输入*MatrixMultiply.cpp*中**名称**框中，，然后选择**添加**按钮。
+1. 在中**添加新项**对话框中，选择**C++文件 (.cpp)**，输入*MatrixMultiply.cpp*中**名称**框中，，然后选择**添加**按钮。
+
+::: moniker-end
 
 ## <a name="multiplication-without-tiling"></a>而无需平铺的乘法
 
@@ -49,35 +77,35 @@ ms.locfileid: "57300968"
 
 ![3&#45;的&#45;3 个产品矩阵](../../parallel/amp/media/campmatrixproductnontiled.png "3&#45;的&#45;3 个产品矩阵")
 
-### <a name="to-multiply-without-using-c-amp"></a>要相乘而无需使用 c + + AMP
+### <a name="to-multiply-without-using-c-amp"></a>要相乘而无需使用C++a m P
 
 1. 打开 MatrixMultiply.cpp 并使用下面的代码替换现有代码。
 
-```cpp
-#include <iostream>
+   ```cpp
+   #include <iostream>
 
-void MultiplyWithOutAMP() {
-    int aMatrix[3][2] = {{1, 4}, {2, 5}, {3, 6}};
-    int bMatrix[2][3] = {{7, 8, 9}, {10, 11, 12}};
-    int product[3][3] = {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}};
+   void MultiplyWithOutAMP() {
+       int aMatrix[3][2] = {{1, 4}, {2, 5}, {3, 6}};
+       int bMatrix[2][3] = {{7, 8, 9}, {10, 11, 12}};
+       int product[3][3] = {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}};
 
-    for (int row = 0; row < 3; row++) {
-        for (int col = 0; col < 3; col++) {
-            // Multiply the row of A by the column of B to get the row, column of product.
-            for (int inner = 0; inner < 2; inner++) {
-                product[row][col] += aMatrix[row][inner] * bMatrix[inner][col];
-            }
-            std::cout << product[row][col] << "  ";
-        }
-        std::cout << "\n";
-    }
-}
+       for (int row = 0; row < 3; row++) {
+           for (int col = 0; col < 3; col++) {
+               // Multiply the row of A by the column of B to get the row, column of product.
+               for (int inner = 0; inner < 2; inner++) {
+                   product[row][col] += aMatrix[row][inner] * bMatrix[inner][col];
+               }
+               std::cout << product[row][col] << "  ";
+           }
+           std::cout << "\n";
+       }
+   }
 
-void main() {
-    MultiplyWithOutAMP();
-    getchar();
-}
-```
+   void main() {
+       MultiplyWithOutAMP();
+       getchar();
+   }
+   ```
 
    该算法是一个简单的实现定义的矩阵乘法。 它不使用任何并行或线程算法以缩短计算时间。
 
@@ -87,65 +115,65 @@ void main() {
 
 1. 选择**Enter**退出该应用程序。
 
-### <a name="to-multiply-by-using-c-amp"></a>要通过使用 c + + AMP 相乘
+### <a name="to-multiply-by-using-c-amp"></a>要相乘通过使用C++a m P
 
 1. 在 MatrixMultiply.cpp，添加以下代码之前`main`方法。
 
-```cpp
-void MultiplyWithAMP() {
-    int aMatrix[] = { 1, 4, 2, 5, 3, 6 };
-    int bMatrix[] = { 7, 8, 9, 10, 11, 12 };
-    int productMatrix[] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+   ```cpp
+   void MultiplyWithAMP() {
+   int aMatrix[] = { 1, 4, 2, 5, 3, 6 };
+   int bMatrix[] = { 7, 8, 9, 10, 11, 12 };
+   int productMatrix[] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
-    array_view<int, 2> a(3, 2, aMatrix);
+   array_view<int, 2> a(3, 2, aMatrix);
 
-    array_view<int, 2> b(2, 3, bMatrix);
+   array_view<int, 2> b(2, 3, bMatrix);
 
-    array_view<int, 2> product(3, 3, productMatrix);
+   array_view<int, 2> product(3, 3, productMatrix);
 
-    parallel_for_each(product.extent,
-        [=] (index<2> idx) restrict(amp) {
-            int row = idx[0];
-            int col = idx[1];
-            for (int inner = 0; inner <2; inner++) {
-                product[idx] += a(row, inner)* b(inner, col);
-            }
-        });
+   parallel_for_each(product.extent,
+      [=] (index<2> idx) restrict(amp) {
+          int row = idx[0];
+          int col = idx[1];
+          for (int inner = 0; inner <2; inner++) {
+              product[idx] += a(row, inner)* b(inner, col);
+          }
+      });
 
-    product.synchronize();
+   product.synchronize();
 
-    for (int row = 0; row <3; row++) {
-        for (int col = 0; col <3; col++) {
-            //std::cout << productMatrix[row*3 + col] << "  ";
-            std::cout << product(row, col) << "  ";
-        }
-        std::cout << "\n";
-    }
-}
-```
+   for (int row = 0; row <3; row++) {
+      for (int col = 0; col <3; col++) {
+          //std::cout << productMatrix[row*3 + col] << "  ";
+          std::cout << product(row, col) << "  ";
+      }
+      std::cout << "\n";
+     }
+   }
+   ```
 
    AMP 代码类似于非 AMP 代码。 在调用`parallel_for_each`启动一个线程中每个元素`product.extent`，并替换`for`循环，分别针对行和列。 在行和列单元格的值现已推出`idx`。 您可以访问的元素`array_view`通过使用对象`[]`运算符和索引变量，或`()`运算符和行和列的变量。 该示例演示了这两种方法。 `array_view::synchronize`方法复制的值`product`返回到变量`productMatrix`变量。
 
 1. 添加以下`include`和`using`MatrixMultiply.cpp 顶部的语句。
 
-```cpp
-#include <amp.h>
-using namespace concurrency;
-```
+   ```cpp
+   #include <amp.h>
+   using namespace concurrency;
+   ```
 
 1. 修改`main`方法来调用`MultiplyWithAMP`方法。
 
-```cpp
-void main() {
-    MultiplyWithOutAMP();
-    MultiplyWithAMP();
-    getchar();
-}
-```
+   ```cpp
+   void main() {
+       MultiplyWithOutAMP();
+       MultiplyWithAMP();
+       getchar();
+   }
+   ```
 
-1. 选择**Ctrl**+**F5**键盘快捷方式，以便开始调试并验证输出是否正确。
+1. 按**Ctrl**+**F5**键盘快捷方式，以便开始调试并验证输出是否正确。
 
-1. 选择**空格键**退出该应用程序。
+1. 按**空格键**退出该应用程序。
 
 ## <a name="multiplication-with-tiling"></a>使用平铺的乘法
 
@@ -191,109 +219,108 @@ void main() {
 
 1. 在 MatrixMultiply.cpp，添加以下代码之前`main`方法。
 
-```cpp
-void MultiplyWithTiling() {
-    // The tile size is 2.
-    static const int TS = 2;
+   ```cpp
+   void MultiplyWithTiling() {
+       // The tile size is 2.
+       static const int TS = 2;
 
-    // The raw data.
-    int aMatrix[] = { 1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8 };
-    int bMatrix[] = { 1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8 };
-    int productMatrix[] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+       // The raw data.
+       int aMatrix[] = { 1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8 };
+       int bMatrix[] = { 1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8 };
+       int productMatrix[] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
-    // Create the array_view objects.
-    array_view<int, 2> a(4, 4, aMatrix);
-    array_view<int, 2> b(4, 4, bMatrix);
-    array_view<int, 2> product(4, 4, productMatrix);
+       // Create the array_view objects.
+       array_view<int, 2> a(4, 4, aMatrix);
+       array_view<int, 2> b(4, 4, bMatrix);
+       array_view<int, 2> product(4, 4, productMatrix);
 
-    // Call parallel_for_each by using 2x2 tiles.
-    parallel_for_each(product.extent.tile<TS, TS>(),
-        [=] (tiled_index<TS, TS> t_idx) restrict(amp)
-        {
-            // Get the location of the thread relative to the tile (row, col)
-            // and the entire array_view (rowGlobal, colGlobal).
-            int row = t_idx.local[0];
-            int col = t_idx.local[1];
-            int rowGlobal = t_idx.global[0];
-            int colGlobal = t_idx.global[1];
-            int sum = 0;
+       // Call parallel_for_each by using 2x2 tiles.
+       parallel_for_each(product.extent.tile<TS, TS>(),
+           [=] (tiled_index<TS, TS> t_idx) restrict(amp)
+           {
+               // Get the location of the thread relative to the tile (row, col)
+               // and the entire array_view (rowGlobal, colGlobal).
+               int row = t_idx.local[0];
+               int col = t_idx.local[1];
+               int rowGlobal = t_idx.global[0];
+               int colGlobal = t_idx.global[1];
+               int sum = 0;
 
-            // Given a 4x4 matrix and a 2x2 tile size, this loop executes twice for each thread.
-            // For the first tile and the first loop, it copies a into locA and e into locB.
-            // For the first tile and the second loop, it copies b into locA and g into locB.
-            for (int i = 0; i < 4; i += TS) {
-                tile_static int locA[TS][TS];
-                tile_static int locB[TS][TS];
-                locA[row][col] = a(rowGlobal, col + i);
-                locB[row][col] = b(row + i, colGlobal);
-                // The threads in the tile all wait here until locA and locB are filled.
-                t_idx.barrier.wait();
+               // Given a 4x4 matrix and a 2x2 tile size, this loop executes twice for each thread.
+               // For the first tile and the first loop, it copies a into locA and e into locB.
+               // For the first tile and the second loop, it copies b into locA and g into locB.
+               for (int i = 0; i < 4; i += TS) {
+                   tile_static int locA[TS][TS];
+                   tile_static int locB[TS][TS];
+                   locA[row][col] = a(rowGlobal, col + i);
+                   locB[row][col] = b(row + i, colGlobal);
+                   // The threads in the tile all wait here until locA and locB are filled.
+                   t_idx.barrier.wait();
 
-                // Return the product for the thread. The sum is retained across
-                // both iterations of the loop, in effect adding the two products
-                // together, for example, a*e.
-                for (int k = 0; k < TS; k++) {
-                    sum += locA[row][k] * locB[k][col];
-                }
+                   // Return the product for the thread. The sum is retained across
+                   // both iterations of the loop, in effect adding the two products
+                   // together, for example, a*e.
+                   for (int k = 0; k < TS; k++) {
+                       sum += locA[row][k] * locB[k][col];
+                   }
 
-                // All threads must wait until the sums are calculated. If any threads
-                // moved ahead, the values in locA and locB would change.
-                t_idx.barrier.wait();
-                // Now go on to the next iteration of the loop.
-            }
+                   // All threads must wait until the sums are calculated. If any threads
+                   // moved ahead, the values in locA and locB would change.
+                   t_idx.barrier.wait();
+                   // Now go on to the next iteration of the loop.
+               }
 
-            // After both iterations of the loop, copy the sum to the product variable by using the global location.
-            product[t_idx.global] = sum;
-        });
+               // After both iterations of the loop, copy the sum to the product variable by using the global location.
+               product[t_idx.global] = sum;
+           });
 
-    // Copy the contents of product back to the productMatrix variable.
-    product.synchronize();
+       // Copy the contents of product back to the productMatrix variable.
+       product.synchronize();
 
-    for (int row = 0; row <4; row++) {
-        for (int col = 0; col <4; col++) {
-            // The results are available from both the product and productMatrix variables.
-            //std::cout << productMatrix[row*3 + col] << "  ";
-            std::cout << product(row, col) << "  ";
-        }
-        std::cout << "\n";
-    }
-}
-```
+       for (int row = 0; row <4; row++) {
+           for (int col = 0; col <4; col++) {
+               // The results are available from both the product and productMatrix variables.
+               //std::cout << productMatrix[row*3 + col] << "  ";
+               std::cout << product(row, col) << "  ";
+           }
+           std::cout << "\n";
+       }
+   }
+   ```
 
-    This example is significantly different than the example without tiling. The code uses these conceptual steps:
+   此示例是明显不同于而无需平铺的示例。 此代码使用这些概念步骤：
+   1. 将磁贴 [0，0] 的元素复制`a`到`locA`。 将磁贴 [0，0] 的元素复制`b`到`locB`。 请注意，`product`平铺，不`a`和`b`。 因此，使用全局索引访问`a, b`，和`product`。 对调用`tile_barrier::wait`至关重要。 停止所有平铺中线程之前`locA`和`locB`填充。
 
-    1. 将磁贴 [0，0] 的元素复制`a`到`locA`。 将磁贴 [0，0] 的元素复制`b`到`locB`。 请注意，`product`平铺，不`a`和`b`。 因此，使用全局索引访问`a, b`，和`product`。 对调用`tile_barrier::wait`至关重要。 停止所有平铺中线程之前`locA`和`locB`填充。
+   1. 乘`locA`并`locB`并将结果放入`product`。
 
-    2. 乘`locA`并`locB`并将结果放入`product`。
+   1. 将磁贴 [0，1] 的元素复制`a`到`locA`。 将磁贴 [1，0] 的元素复制`b`到`locB`。
 
-    3. 将磁贴 [0，1] 的元素复制`a`到`locA`。 将磁贴 [1，0] 的元素复制`b`到`locB`。
+   1. 乘`locA`并`locB`并将其添加到已在结果`product`。
 
-    4. 乘`locA`并`locB`并将其添加到已在结果`product`。
+   1. 磁贴 [0，0] 的乘法操作已完成。
 
-    5. 磁贴 [0，0] 的乘法操作已完成。
+   1. 重复的其他四个磁贴。 没有专门为磁贴没有编制索引，线程可以按任意顺序执行。 每个线程执行时，`tile_static`适当地为每个磁贴创建变量，是对的调用和`tile_barrier::wait`控制在程序流。
 
-    6. 重复的其他四个磁贴。 没有专门为磁贴没有编制索引，线程可以按任意顺序执行。 每个线程执行时，`tile_static`适当地为每个磁贴创建变量，是对的调用和`tile_barrier::wait`控制在程序流。
+   1. 如您仔细检查该算法，请注意，每个 submatrix 加载到`tile_static`内存两次。 该数据传输需要时间。 但是，当数据在后`tile_static`内存中，对数据的访问是要快得多。 因为计算产品需要重复的访问 submatrices 中的值，则整体性能提升。 为每个算法，需要通过试验来找到最佳算法和磁贴大小。
 
-    7. 如您仔细检查该算法，请注意，每个 submatrix 加载到`tile_static`内存两次。 该数据传输需要时间。 但是，当数据在后`tile_static`内存中，对数据的访问是要快得多。 因为计算产品需要重复的访问 submatrices 中的值，则整体性能提升。 为每个算法，需要通过试验来找到最佳算法和磁贴大小。
+   在非 AMP 和非磁贴示例中，每个元素 A 和 B 从计算乘积的全局内存访问四次。 在磁贴的示例中，每个元素进行访问两次从全局内存和四次`tile_static`内存。 这不是显著的性能提升。 但是，如果 A 和 B 是 1024 x 1024 矩阵和图块大小是 16，会有显著的性能提升。 在这种情况下，每个元素将复制到`tile_static`内存仅 16 次，从访问`tile_static`内存 1024年时间。
 
-         在非 AMP 和非磁贴示例中，每个元素 A 和 B 从计算乘积的全局内存访问四次。 在磁贴的示例中，每个元素进行访问两次从全局内存和四次`tile_static`内存。 这不是显著的性能提升。 但是，如果 A 和 B 是 1024 x 1024 矩阵和图块大小是 16，会有显著的性能提升。 在这种情况下，每个元素将复制到`tile_static`内存仅 16 次，从访问`tile_static`内存 1024年时间。
+1. 修改 main 方法来调用`MultiplyWithTiling`方法，如下所示。
 
-2. 修改 main 方法来调用`MultiplyWithTiling`方法，如下所示。
+   ```cpp
+   void main() {
+       MultiplyWithOutAMP();
+       MultiplyWithAMP();
+       MultiplyWithTiling();
+       getchar();
+   }
+   ```
 
-```cpp
-void main() {
-    MultiplyWithOutAMP();
-    MultiplyWithAMP();
-    MultiplyWithTiling();
-    getchar();
-}
-```
+1. 按**Ctrl**+**F5**键盘快捷方式，以便开始调试并验证输出是否正确。
 
-3. 选择**Ctrl**+**F5**键盘快捷方式，以便开始调试并验证输出是否正确。
-
-4. 选择**空间**栏退出该应用程序。
+1. 按**空间**栏退出该应用程序。
 
 ## <a name="see-also"></a>请参阅
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
-[演练：调试 c + + AMP 应用程序](../../parallel/amp/walkthrough-debugging-a-cpp-amp-application.md)
+[演练：调试 C++ AMP 应用程序](../../parallel/amp/walkthrough-debugging-a-cpp-amp-application.md)

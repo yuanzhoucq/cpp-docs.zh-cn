@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-ms.openlocfilehash: 6be34e801f7314efe76a4bea61caf13693eee31d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 94166dfcb222d5cfece146e7ad67bb04d6ad06e9
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661092"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221838"
 ---
 # <a name="platformarray-class"></a>Platform::Array 类
 
@@ -56,8 +56,6 @@ Array 类是密封类，不能被继承。
 Windows 运行时类型系统不支持交错数组的概念，因此不能将传递 IVector < platform:: array\<T >> 作为返回值或方法参数。 要跨 ABI 传递交错数组或一系列序列，请使用 `IVector<IVector<T>^>`。
 
 有关何时以及如何使用 platform:: array 的详细信息，请参阅[Array 和 WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)。
-
-Windows 运行时类型系统不支持交错数组的概念，因此不能将传递 IVector < platform:: array\<T >> 作为返回值或方法参数。 要跨 ABI 传递交错数组或一系列序列，请使用 `IVector<IVector<T>^>`。
 
 此类在编译器会自动包括的 vccorlib.h 标头中定义。 它是在 IntelliSense 中而不是在对象浏览器中可见的因为它不是在 platform.winmd 中定义的公共类型。
 
@@ -126,5 +124,5 @@ property Array^ Value;
 
 ## <a name="see-also"></a>请参阅
 
-[平台命名空间](../cppcx/platform-namespace-c-cx.md)<br/>
+[Platform 命名空间](../cppcx/platform-namespace-c-cx.md)<br/>
 [Array 和 WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)

@@ -10,19 +10,19 @@ helpviewer_keywords:
 - named constants, enumeration declarations
 - declaring enumerations
 ms.assetid: 081829db-5dca-411e-a53c-bffef315bcb3
-ms.openlocfilehash: 3ed135c0fc32f9218783c964ed4ce79a9b3ec067
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: caec9ea7ac5482ff23b73676a3fd7b3d25ad293f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62398935"
 ---
 # <a name="enumerations-c"></a>枚举 (C++)
 
 枚举是用户定义的类型，其中包含一组称为枚举器的命名的整型常数。
 
 > [!NOTE]
->  本文包含 ISO 标准 c + + 语言**enum**类型和作用域内 （或强类型化）**枚举类**在 C + + 11 中引入的类型。 有关信息**公共枚举类**或**私有枚举类**类型在 C + + /cli 和 C + + /CX 中，请参阅[枚举类](../windows/enum-class-cpp-component-extensions.md)。
+>  这篇文章介绍 ISO 标准C++语言**enum**类型和作用域内 （或强类型化）**枚举类**在 C + + 11 中引入的类型。 璝惠**公共枚举类**或**私有枚举类**中的类型C++/CLI 和C++/CX，请参阅[枚举类](../extensions/enum-class-cpp-component-extensions.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -52,7 +52,7 @@ enum class C : short;  // ... may have any integral underlying type
 *type*<br/>
 枚举器的基础类型；所有枚举器都具有相同的基础类型。 可能是任何整型。
 
-*枚举列表*<br/>
+*enum-list*<br/>
 枚举中以逗号分隔的枚举器列表。 范围中的每个枚举器或变量名必须是唯一的。 但是，值可以重复。 在未区分范围枚举中，范围是周边范围;在限定了作用域枚举中，作用域是*枚举列表*本身。  在限定了作用域枚举中，列表可能为空的有效定义了新的整型类型。
 
 *class*<br/>
@@ -145,7 +145,7 @@ namespace ScopedEnumConversions
 
 ## <a name="no_enumerators"></a> 与任何枚举器枚举
 
-**Visual Studio 2017 15.3 及更高版本**(适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)): 通过使用显式的基础类型和任何枚举器定义枚举 （正则或指定了作用域），你可以有效引入一个新整数类型具有隐式转换为任何其他类型。 通过使用此类型而不其内置的基础类型，则可以消除导致意外的隐式转换的细微错误的可能性。
+**Visual Studio 2017 版本 15.3 及更高版本**(适用于[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):通过定义具有显式的基础类型和任何枚举器枚举 （定期或作用域内），实际上可以引入新的整型类型具有隐式转换为任何其他类型。 通过使用此类型而不其内置的基础类型，则可以消除导致意外的隐式转换的细微错误的可能性。
 
 ```cpp
 enum class byte : unsigned char { };

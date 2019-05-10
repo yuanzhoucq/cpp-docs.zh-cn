@@ -24,15 +24,15 @@ helpviewer_keywords:
 - shared classes
 ms.assetid: e13aaac3-21ec-4f4d-8834-432b40fde544
 ms.openlocfilehash: 5632de3d248ded83c1db2c0b469de165e676bf9d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62216865"
 ---
 # <a name="atlmfc-shared-classes"></a>ATL/MFC 共享类
 
-可以在任何本机 c + + 项目中使用这些实用程序类，而无需任何 MFC DLL。
+这些实用程序类可在任何固有C++而无需任何 MFC DLL 的项目。
 
 ## <a name="in-this-section"></a>本节内容
 

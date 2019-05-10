@@ -21,12 +21,12 @@ helpviewer_keywords:
 - _sys_nerr global variable
 - sys_nerr global variable
 ms.assetid: adbec641-6d91-4e19-8398-9a34046bd369
-ms.openlocfilehash: 50b44c659aac66dbaddad711cceef635f277d2c3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57d04fe5867c6a969b6aeca40f26b18b5dcd7a61
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487719"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750775"
 ---
 # <a name="errno-doserrno-syserrlist-and-sysnerr"></a>errno、_doserrno、_sys_errlist 和 _sys_nerr
 
@@ -59,7 +59,7 @@ ms.locfileid: "50487719"
 
 下表中的所有 `errno` 值是在 \<errno.h> 中预定义的常量，并且与 UNIX 兼容。 ISO C99 标准中仅指定了 `ERANGE`、`EILSEQ` 和 `EDOM`。
 
-|返回的常量|系统错误消息|“值”|
+|返回的常量|系统错误消息|值|
 |--------------|--------------------------|-----------|
 |`EPERM`|不允许执行该操作|1|
 |`ENOENT`|没有此文件或目录|2|

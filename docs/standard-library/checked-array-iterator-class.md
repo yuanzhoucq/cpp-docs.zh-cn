@@ -1,6 +1,6 @@
 ---
 title: checked_array_iterator 类
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - iterator/checked_array_iterator
 - iterator/stdext::checked_array_iterator::difference_type
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - stdext::checked_array_iterator [C++], reference
 - stdext::checked_array_iterator [C++], base
 ms.assetid: 7f07185e-d588-4ae3-9c4f-84ec4aa25a28
-ms.openlocfilehash: 2d7788a33321f794af6b395de3188bc51f662ad0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 688b93902da5b4492812b4715a248db9561ec258
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62379189"
 ---
 # <a name="checkedarrayiterator-class"></a>checked_array_iterator 类
 
@@ -495,7 +495,7 @@ bool operator>(const checked_array_iterator<_Iterator>& right) const;
 
 有关更多信息，请参见 [Checked Iterators](../standard-library/checked-iterators.md)。
 
-## <a name="lt_eq"></a>  checked_array_iterator::operator&lt;=
+## <a name="op_lt_eq"></a>  checked_array_iterator::operator&lt;=
 
 测试运算符左侧的 `checked_array_iterator` 是否小于或等于右侧的 `checked_array_iterator`。
 
@@ -514,7 +514,7 @@ bool operator<=(const checked_array_iterator<_Iterator>& right) const;
 
 有关更多信息，请参见 [Checked Iterators](../standard-library/checked-iterators.md)。
 
-## <a name="gt_eq"></a>  checked_array_iterator::operator&gt;=
+## <a name="op_gt_eq"></a>  checked_array_iterator::operator&gt;=
 
 测试运算符左侧的 `checked_array_iterator` 是否大于或等于右侧的 `checked_array_iterator`。
 
@@ -697,7 +697,7 @@ int main() {
 */
 ```
 
-## <a name="checked_array_iterator__operator--"></a>  checked_array_iterator::operator--
+## <a name="operator--"></a>  checked_array_iterator::operator--
 
 将 `checked_array_iterator` 递减到前一元素。
 
@@ -841,7 +841,7 @@ int main() {
 */
 ```
 
-## <a name="checked_array_iterator__operator-_eq"></a>  checked_array_iterator::operator-=
+## <a name="operator-_eq"></a>  checked_array_iterator::operator-=
 
 从 `checked_array_iterator` 递减指定偏移量。
 
@@ -890,7 +890,7 @@ int main() {
 */
 ```
 
-## <a name="checked_array_iterator__operator-"></a>  checked_array_iterator::operator-
+## <a name="operator-"></a>  checked_array_iterator::operator-
 
 从迭代器递减偏移量，并返回在新偏移位置处发现插入元素的新 `checked_array_iterator`。
 
@@ -910,8 +910,6 @@ difference_type operator-(const checked_array_iterator& right) const;
 寻址偏移元素的 `checked_array_iterator`。
 
 ### <a name="remarks"></a>备注
-
-有关代码示例，请参阅 [checked_array_iterator:: operator-](#operator-)。
 
 有关更多信息，请参见 [Checked Iterators](../standard-library/checked-iterators.md)。
 

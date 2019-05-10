@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /MANIFEST linker option
 - MANIFEST linker option
 ms.assetid: 98c52e1e-712c-4f49-b149-4d0a3501b600
-ms.openlocfilehash: 685d98d166a94f2c17feae7bfafbd64b77786e8d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 9a3ca3980a9cdff4e67885b2ad47ffa2385b0774
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321639"
 ---
 # <a name="manifest-create-side-by-side-assembly-manifest"></a>/MANIFEST（创建并行程序集清单）
 
@@ -29,7 +29,7 @@ ms.locfileid: "57418771"
 
 /MANIFEST:EMBED 选项指定链接器应该将清单文件作为 RT_MANIFEST 类型的资源嵌入映像。 可选 `ID` 参数是要用于清单的资源 ID。 对可执行文件使用值 1。 对 DLL 使用值 2 以使其能够指定专用依赖项。 如果未指定 `ID` 参数，当设置了 /DLL 选项时，默认值为 2；否则，默认值为 1。
 
-从 Visual Studio 2008 开始，可执行文件的清单文件包含指定用户帐户控制 (UAC) 信息的节。 如果指定了 /MANIFEST 但未指定[/MANIFESTUAC](../../build/reference/manifestuac-embeds-uac-information-in-manifest.md)也不[/DLL](../../build/reference/dll-build-a-dll.md)，已将 UAC 级别设置为默认 UAC 片段*asInvoker*插入到清单。 有关 UAC 级别的详细信息，请参阅[/MANIFESTUAC （将 UAC 信息嵌入在清单中）](../../build/reference/manifestuac-embeds-uac-information-in-manifest.md)。
+从 Visual Studio 2008 开始，可执行文件的清单文件包含指定用户帐户控制 (UAC) 信息的节。 如果指定了 /MANIFEST 但未指定[/MANIFESTUAC](manifestuac-embeds-uac-information-in-manifest.md)也不[/DLL](dll-build-a-dll.md)，已将 UAC 级别设置为默认 UAC 片段*asInvoker*插入到清单。 有关 UAC 级别的详细信息，请参阅[/MANIFESTUAC （将 UAC 信息嵌入在清单中）](manifestuac-embeds-uac-information-in-manifest.md)。
 
 若要更改 UAC 的默认行为，请执行以下操作之一：
 
@@ -37,13 +37,13 @@ ms.locfileid: "57418771"
 
 - 或者也可以指定 /MANIFESTUAC:NO 选项（如果不想在清单中生成 UAC 片段）。
 
-如果未指定 /MANIFEST 但指定[/MANIFESTDEPENDENCY](../../build/reference/manifestdependency-specify-manifest-dependencies.md)注释，将创建一个清单文件。 如果指定了 /MANIFEST:NO，则不会创建清单文件。
+如果未指定 /MANIFEST 但指定[/MANIFESTDEPENDENCY](manifestdependency-specify-manifest-dependencies.md)注释，将创建一个清单文件。 如果指定了 /MANIFEST:NO，则不会创建清单文件。
 
 如果指定了 /MANIFEST，则清单文件的名称与输出文件的名称相同，并且会将 .manifest 追加到文件名。 例如，如果输出文件名是 MyFile.exe，则清单文件名是 MyFile.exe.manifest。  如果指定了 /MANIFESTFILE:*名称*，清单的名称是你在中指定*名称*。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
 1. 展开“配置属性”节点。
 
@@ -59,5 +59,5 @@ ms.locfileid: "57418771"
 
 ## <a name="see-also"></a>请参阅
 
-[设置链接器选项](../../build/reference/setting-linker-options.md)<br/>
-[链接器选项](../../build/reference/linker-options.md)
+[MSVC 链接器参考](linking.md)<br/>
+[MSVC 链接器选项](linker-options.md)

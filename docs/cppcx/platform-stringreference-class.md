@@ -9,12 +9,12 @@ f1_keywords:
 - VCCORLIB/Platform::StringReference::GetHSTRING
 - VCCORLIB/Platform::StringReference::GetString
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-ms.openlocfilehash: 09b15a1530661ce537c9d2aab333a1a17fa52ff9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b6ab42dc630ce7e0014534064e8f1ce6da00857
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182985"
 ---
 # <a name="platformstringreference-class"></a>Platform::StringReference 类
 
@@ -148,7 +148,7 @@ StringReference& operator=(const ::default::char16* __strArg);
 
 ### <a name="remarks"></a>备注
 
-因为`StringReference`是标准 c + + 类而不是 ref 类，它不会出现在**对象浏览器**。
+因为`StringReference`是一种标准C++类并不是 ref 类，它不会出现在**对象浏览器**。
 
 ## <a name="operator-call"></a>  StringReference::operator() 运算符
 

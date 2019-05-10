@@ -1,18 +1,18 @@
 ---
-title: 如何：创建 CLR 控制台应用程序 (C + + CLI)
+title: 如何：创建 CLR 控制台应用程序 (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - console applications, templates
 - CLR console applications, project template
 ms.assetid: e89bce3c-706f-4ae0-8a90-cb1a0f674e70
-ms.openlocfilehash: 9ce50266eeb17ad858891149489db85b03855aec
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ba0fa81aa42f946dbaf005c00380573e44312c5a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387469"
 ---
-# <a name="how-to-create-clr-console-applications-ccli"></a>如何：创建 CLR 控制台应用程序 (C + + CLI)
+# <a name="how-to-create-clr-console-applications-ccli"></a>如何：创建 CLR 控制台应用程序 (C++/CLI)
 
 你可以使用控制台应用程序模板创建已具有基本项目引用和文件的控制台应用程序项目。
 
@@ -62,5 +62,5 @@ ms.locfileid: "57426325"
 
 ## <a name="see-also"></a>请参阅
 
-[CLR 项目](../ide/files-created-for-clr-projects.md)
+[CLR 项目](../build/reference/files-created-for-clr-projects.md)
 

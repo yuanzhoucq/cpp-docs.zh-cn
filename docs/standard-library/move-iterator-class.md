@@ -1,6 +1,6 @@
 ---
 title: move_iterator 类
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - iterator/std::move_iterator
 - iterator/std::move_iterator::iterator_type
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::move_iterator [C++], reference
 - std::move_iterator [C++], base
 ms.assetid: a5e5cdd8-a264-4c6b-9f9c-68b0e8edaab7
-ms.openlocfilehash: c9ff9385d43ac1c53f91a548ea01c04c1c67dc18
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3e2e62946325c082e761b6997ae584419175f8fe
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656116"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346197"
 ---
 # <a name="moveiterator-class"></a>move_iterator 类
 
@@ -175,7 +175,7 @@ move_iterator& operator+=(difference_type _Off);
 
 运算符将添加 *_Off*到存储的迭代器。 然后返回 `*this`。
 
-## <a name="move_iterator__operator-_eq"></a>  move_iterator::operator-=
+## <a name="operator-_eq"></a>  move_iterator::operator-=
 
 在前面的指定数目的元素之间移动。 此运算符会从存储的迭代器中减去一个偏移量。
 
@@ -234,7 +234,7 @@ reference operator[](difference_type _Off) const;
 
 运算符返回 `(reference)*(*this + _Off)`。
 
-## <a name="move_iterator__operator--"></a>move_iterator::operator--
+## <a name="operator--"></a>move_iterator::operator--
 
 前置减量和后置减量成员运算符对存储的迭代器执行减量运算。
 
@@ -251,7 +251,7 @@ move_iterator operator--();
 
 第二个（后置减量）运算符生成 `*this` 的副本，并计算 `--*this` 的结果。 然后返回该副本。
 
-## <a name="move_iterator__operator-"></a>move_iterator::operator-
+## <a name="operator-"></a>move_iterator::operator-
 
 递减存储的迭代器，并返回指示的值。
 

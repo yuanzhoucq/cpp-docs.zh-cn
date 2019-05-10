@@ -13,11 +13,11 @@ f1_keywords:
 - CONCRT/concurrency::message_status Enumeration
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
 ms.openlocfilehash: d3eb49cd1555f23cc83efb0d8d912998295b3c55
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337603"
 ---
 # <a name="concurrency-namespace-enums"></a>并发命名空间枚举
 
@@ -31,8 +31,7 @@ ms.locfileid: "57271185"
 
 ##  <a name="agent_status"></a>  agent_status 枚举
 
-
-  `agent` 的有效状态。
+`agent` 的有效状态。
 
 ```
 enum agent_status;
@@ -168,8 +167,7 @@ enum DynamicProgressFeedbackType;
 
 ##  <a name="join_type"></a>  join_type 枚举
 
-
-  `join` 消息块的类型。
+`join` 消息块的类型。
 
 ```
 enum join_type;
@@ -188,8 +186,7 @@ enum join_type;
 
 ##  <a name="message_status"></a>  message_status 枚举
 
-
-  `message` 对象的内容到块的有效响应。
+`message` 对象的内容到块的有效响应。
 
 ```
 enum message_status;
@@ -308,8 +305,7 @@ enum task_group_status;
 
 |名称|描述|
 |----------|-----------------|
-|`canceled`|
-  `task_group` 或 `structured_task_group` 对象已取消。 一个或多个任务可能未执行。|
+|`canceled`|`task_group` 或 `structured_task_group` 对象已取消。 一个或多个任务可能未执行。|
 |`completed`|排入 `task_group` 或 `structured_task_group` 对象的任务已成功完成。|
 |`not_complete`|排入 `task_group` 对象的任务尚未完成。 请注意，此值目前不是由并发运行时返回的。|
 

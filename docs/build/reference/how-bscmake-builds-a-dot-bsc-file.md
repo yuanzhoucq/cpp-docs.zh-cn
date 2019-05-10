@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - browse information files (.bsc), building
 ms.assetid: 8512b33e-c856-44a2-87bd-01ab10b52a95
-ms.openlocfilehash: e691e6ee2dcda0fb04735705078f1ed2ff139301
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6f721641e021396f112bfe4c075ca0f524100d1f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291153"
 ---
 # <a name="how-bscmake-builds-a-bsc-file"></a>BSCMAKE 如何生成 .Bsc 文件
 
@@ -25,4 +25,4 @@ BSCMAKE 查找具有与 /o 选项指定的名称的.bsc 文件。 如果未指�
 
 ## <a name="see-also"></a>请参阅
 
-[生成 .Bsc 文件](../../build/reference/building-a-dot-bsc-file.md)
+[生成 .Bsc 文件](building-a-dot-bsc-file.md)

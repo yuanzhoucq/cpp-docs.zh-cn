@@ -14,12 +14,12 @@ helpviewer_keywords:
 - set include directories
 - include directories, compiler option [C++]
 ms.assetid: 3e9add2a-5ed8-4d15-ad79-5b411e313a49
-ms.openlocfilehash: 72f871b99602c63e3edaea719faf5de6d4451515
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6ec8b15e77fec5214013c484e617904ed29e8197
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270137"
 ---
 # <a name="i-additional-include-directories"></a>/I （附加包含目录）
 
@@ -38,7 +38,7 @@ ms.locfileid: "57412843"
 
 若要添加多个目录，请多次使用此选项。 仅在找到指定的包含文件之前，将搜索目录。
 
-可以使用此选项与 ([/X （忽略标准包含路径）](../../build/reference/x-ignore-standard-include-paths.md)) 选项。
+可以使用此选项与 ([/X （忽略标准包含路径）](x-ignore-standard-include-paths.md)) 选项。
 
 编译器将按以下顺序搜索目录：
 
@@ -50,9 +50,9 @@ ms.locfileid: "57412843"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择**配置属性** > **C/c + +** > **常规**属性页。
+1. 选择**配置属性** > **C /C++** > **常规**属性页。
 
 1. 修改**附加包含目录**属性。
 
@@ -70,5 +70,5 @@ CL /I \INCLUDE /I\MY\INCLUDE MAIN.C
 
 ## <a name="see-also"></a>请参阅
 
-[编译器选项](../../build/reference/compiler-options.md)<br/>
-[设置编译器选项](../../build/reference/setting-compiler-options.md)
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)

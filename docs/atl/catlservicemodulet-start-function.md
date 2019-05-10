@@ -1,18 +1,15 @@
 ---
 title: 'Catlservicemodulet:: Start 函数'
 ms.date: 11/04/2016
-f1_keywords:
-- CServiceModule.Start
-- CServiceModule::Start
 helpviewer_keywords:
 - Start method
 ms.assetid: b5193a23-41bc-42d2-8d55-3eb43dc62238
-ms.openlocfilehash: 806cd8ec353e2111d249472fb9aa885e7548baab
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 204d02a1122ee78b38850bedae5f98b1f338ab1d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62250740"
 ---
 # <a name="catlservicemoduletstart-function"></a>Catlservicemodulet:: Start 函数
 

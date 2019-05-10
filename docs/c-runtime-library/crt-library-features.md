@@ -18,12 +18,12 @@ helpviewer_keywords:
 - libraries [C++], run-time
 - linking [C++], libraries
 ms.assetid: a889fd39-807d-48f2-807f-81492612463f
-ms.openlocfilehash: 08d85cd6993a2f3558ddb501dacac671c0d5d797
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b9a2691d492a277ffe0018b6e86b00cd245840ed
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540265"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58767686"
 ---
 # <a name="crt-library-features"></a>CRT 库功能
 
@@ -33,14 +33,14 @@ ms.locfileid: "50540265"
 
 C 运行时库 (CRT) 是集成了 ISO C99 标准库的 C++ 标准库。 实现 CRT 的 Visual C++ 库支持用于 .NET 开发的本机代码开发以及本机和托管混合代码。 所有版本的 CRT 都支持多线程开发。 大多数的库都支持通过静态链接将库直接链接到代码中，或通过动态链接让代码使用常用 DLL 文件。
 
-从 Visual Studio 2015 开始，CRT 已被重构为新的二进制文件。 通用 CRT (UCRT) 包含通过标准 C99 CRT 库导出的函数和全局函数。 UCRT 现为 Windows 组件，并作为 Windows 10 的一部分提供。 静态库、DLL 导入库和 UCRT 的头文件现在 Windows 10 SDK 中提供。 安装 Visual C++ 时，Visual Studio 安装程序将安装使用 UCRT 所需 Windows 10 SDK 的子集。 可以在 Visual Studio 2015 及更高版本支持的任何 Windows 版本上使用 UCRT。 可以使用 vcredist 重新分发它，以便支持 Windows 10 以外的 Windows 版本。 有关详细信息，请参阅 [Redistributing Visual C++ Files](../ide/redistributing-visual-cpp-files.md)。
+从 Visual Studio 2015 开始，CRT 已被重构为新的二进制文件。 通用 CRT (UCRT) 包含通过标准 C99 CRT 库导出的函数和全局函数。 UCRT 现为 Windows 组件，并作为 Windows 10 的一部分提供。 静态库、DLL 导入库和 UCRT 的头文件现在 Windows 10 SDK 中提供。 安装 Visual C++ 时，Visual Studio 安装程序将安装使用 UCRT 所需 Windows 10 SDK 的子集。 可以在 Visual Studio 2015 及更高版本支持的任何 Windows 版本上使用 UCRT。 可以使用 vcredist 重新分发它，以便支持 Windows 10 以外的 Windows 版本。 有关详细信息，请参阅 [Redistributing Visual C++ Files](../windows/redistributing-visual-cpp-files.md)。
 
 下表列出了实现 UCRT 的库。
 
 |库|关联的 DLL|特征|选项|预处理器指令|
 |-------------|--------------------|---------------------|------------|-----------------------------|
-|libucrt.lib|无|将 UCRT 静态链接到你的代码。|**/MT**|_MT|
-|libucrtd.lib|无|用于静态链接的 UCRT 调试版本。 不可再发行。|**/MTd**|_DEBUG, _MT|
+|libucrt.lib|None|将 UCRT 静态链接到你的代码。|**/MT**|_MT|
+|libucrtd.lib|None|用于静态链接的 UCRT 调试版本。 不可再发行。|**/MTd**|_DEBUG, _MT|
 |ucrt.lib|ucrtbase.dll|UCRT 的 DLL 导入库。|**/MD**|_MT, _DLL|
 |ucrtd.lib|ucrtbased.dll|UCRT 调试版本的 DLL 导入库。 不可再发行。|**/MDd**|_DEBUG, _MT, _DLL|
 
@@ -50,8 +50,8 @@ vcruntime 库包含 Visual C++ CRT 实现特定的代码，例如异常处理和
 
 |库|关联的 DLL|特征|选项|预处理器指令|
 |-------------|--------------------|---------------------|------------|-----------------------------|
-|libvcruntime.lib|无|静态链接到你的代码。|**/MT**|_MT|
-|libvcruntimed.lib|无|用于静态链接的调试版本。 不可再发行。|**/MTd**|_MT, _DEBUG|
+|libvcruntime.lib|None|静态链接到你的代码。|**/MT**|_MT|
+|libvcruntimed.lib|None|用于静态链接的调试版本。 不可再发行。|**/MTd**|_MT, _DEBUG|
 |vcruntime.lib|vcruntime\<version>.dll|vcruntime 的 DLL 导入库。|**/MD**|_MT, _DLL|
 |vcruntimed.lib|vcruntime\<version>d.dll|调试 vcruntime 的 DLL 导入库。 不可再发行。|**/MDd**|_DEBUG, _MT, _DLL|
 

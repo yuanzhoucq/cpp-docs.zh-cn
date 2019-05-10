@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /PDBALTPATH dumpbin option
 - PDB files, path
 ms.assetid: 72e200aa-e2c3-4ad8-b687-25528da1aaaf
-ms.openlocfilehash: 22bc53858aca3b037655829bd7449049971ca79f
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 660e39a97b9fed0c5a9228fe011e7c0fa2566e68
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320027"
 ---
 # <a name="pdbaltpath-use-alternate-pdb-path"></a>/PDBALTPATH（使用备用 PDB 路径）
 
@@ -36,5 +36,5 @@ ms.locfileid: "57419178"
 
 ## <a name="see-also"></a>请参阅
 
-[DUMPBIN 选项](../../build/reference/dumpbin-options.md)<br/>
-[/PDBPATH](../../build/reference/pdbpath.md)
+[DUMPBIN 选项](dumpbin-options.md)<br/>
+[/PDBPATH](pdbpath.md)

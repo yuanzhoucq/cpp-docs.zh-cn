@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - C4985
 ms.assetid: 832f001c-afe7-403d-a8b4-02334724c79e
-ms.openlocfilehash: 6f098b25848d4fca0431663bd61ad71646c8d644
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 73abb166910cc421f042d22d67efc122e416bceb
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62280186"
 ---
 # <a name="compiler-warning-level-4-c4985"></a>编译器警告（等级 4）C4985
 

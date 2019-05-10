@@ -1,5 +1,5 @@
 ---
-title: ODBC：直接调用 ODBC API 函数
+title: ODBC:直接调用 ODBC API 函数
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC API functions [C++], calling
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - catalog functions (ODBC), calling
 - ODBC [C++], API functions
 ms.assetid: 4295f1d9-4528-4d2e-bd6a-c7569953c7fa
-ms.openlocfilehash: e76ff4da090a00409465333f8cbc9816ab4c4de6
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 435df301ad54c7ff5b2f0e46190e3dad7e9c07f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395802"
 ---
-# <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC：直接调用 ODBC API 函数
+# <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC:直接调用 ODBC API 函数
 
 数据库类为提供更简单的接口[数据源](../../data/odbc/data-source-odbc.md)比 ODBC。 因此，类不封装所有 ODBC API。 类的功能以外的任何功能，您必须直接调用 ODBC API 函数。 例如，你必须调用 ODBC 目录函数 (`::SQLColumns`， `::SQLProcedures`， `::SQLTables`，等等) 直接。
 

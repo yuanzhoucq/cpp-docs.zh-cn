@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-ms.openlocfilehash: 245984d9702c997f16601bf5e2a9bd049ae5fed9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6f7b70dcbee639bdd44a195709bddde9e06dee21
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62414004"
 ---
 # <a name="concurrency-runtime"></a>并发运行时
 
@@ -20,7 +20,7 @@ ms.locfileid: "57258328"
 有关参考文档，请参阅[引用](../../parallel/concrt/reference/reference-concurrency-runtime.md)。
 
 > [!TIP]
->  并发运行时十分依赖 C++11 功能，并采用更现代的 C++ 样式。 要了解详细信息，请阅读[欢迎回到 c + +](../../cpp/welcome-back-to-cpp-modern-cpp.md)。
+>  并发运行时十分依赖 C++11 功能，并采用更现代的 C++ 样式。 要了解详细信息，请阅读[欢迎回到C++ ](../../cpp/welcome-back-to-cpp-modern-cpp.md)。
 
 ## <a name="choosing-concurrency-runtime-features"></a>选择并发运行时功能
 
@@ -98,8 +98,7 @@ ms.locfileid: "57258328"
 
 |||
 |-|-|
-|[Hilo（使用 C++ 和 XAML 的 Windows 应用商店应用）中的异步编程模式和提示](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|了解我们如何使用并发运行时在 Hilo，使用 c + + 和 XAML 的 Windows 运行时应用程序中实现异步操作。|
-|[Visual Studio 2010 中的并发运行时和并行模式库的代码示例](http://go.microsoft.com/fwlink/p/?linkid=183875)|提供演示并发运行时的示例应用程序和实用程序。|
+|[Hilo（使用 C++ 和 XAML 的 Windows 应用商店应用）中的异步编程模式和提示](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|了解我们如何使用并发运行时在 Hilo，实现异步操作 Windows 运行时应用使用C++和 XAML。|
 |[本机代码中的并行编程博客](http://go.microsoft.com/fwlink/p/?linkid=183873)|提供有关并发运行时中的并行编程的其他深度博客文章。|
 |[C++ 和本机代码中的并行计算论坛](http://go.microsoft.com/fwlink/p/?linkid=183874)|使你能够参与关于并发运行时的社区讨论。|
 |[并行编程](/dotnet/standard/parallel-programming/index)|介绍了有关在.NET Framework 中可用的并行编程模型。|

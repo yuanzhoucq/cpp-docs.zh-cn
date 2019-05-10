@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Unicode, string objects
 ms.assetid: 0b53a542-eeb1-4108-9ada-6700645b6f8f
-ms.openlocfilehash: cbc48008cd7b30f1630fc4ec2c30214e3c448c27
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b247e97f5aa6b5e85a6a6b6f57a64224a9e0f435
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252657"
 ---
 # <a name="string-data-management"></a>字符串数据管理
 
-Visual c + + 提供多种方式来管理字符串数据：
+VisualC++提供多种方式来管理字符串数据：
 
 - [字符串操作](../c-runtime-library/string-manipulation-crt.md)使用以 null 结尾的 C 样式字符串
 
@@ -33,7 +33,7 @@ Visual c + + 提供多种方式来管理字符串数据：
 
 - [CString 引用计数](#_core_cstring_reference_counting)
 
-[CStringT 类](../atl-mfc-shared/reference/cstringt-class.md)类提供用于操作字符串的支持。 它旨在替换和扩展通常由 C 运行时库字符串包提供的功能。 `CString`类提供成员函数和运算符的简化的字符串处理，类似于在 Basic 中的那些。 该类还提供构造函数和运算符的构造、 分配和比较`CString`s 和标准 c + + 字符串数据类型。 因为`CString`不派生自`CObject`，可以使用`CString`独立于大多数的 Microsoft 基础类库 (MFC) 的对象。
+[CStringT 类](../atl-mfc-shared/reference/cstringt-class.md)类提供用于操作字符串的支持。 它旨在替换和扩展通常由 C 运行时库字符串包提供的功能。 `CString`类提供成员函数和运算符的简化的字符串处理，类似于在 Basic 中的那些。 该类还提供构造函数和运算符的构造、 分配和比较`CString`s 和标准C++字符串数据类型。 因为`CString`不派生自`CObject`，可以使用`CString`独立于大多数的 Microsoft 基础类库 (MFC) 的对象。
 
 `CString` 对象遵循"值语义。" 一个`CString`对象表示一个唯一值。 想一想`CString`作为实际的字符串，而不是指向字符串的指针。
 
@@ -86,4 +86,3 @@ MFC 3.0 版及更高版本，MFC，其中包括`CString`，启用了对 Unicode 
 ## <a name="see-also"></a>请参阅
 
 [常规 MFC 主题](../mfc/general-mfc-topics.md)
-

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCImageEditorDialog [MFC], CMFCImageEditorDialog
 ms.assetid: 6a7d08f3-1ec2-4062-9b79-a0c2776b58d1
-ms.openlocfilehash: 57b1df49616967841a433a36a504beed0b900cde
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 97f16fa00b2e90fd9c43bf9b6792b4eafe7d7b88
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394519"
 ---
 # <a name="cmfcimageeditordialog-class"></a>CMFCImageEditorDialog 类
 
@@ -99,7 +99,7 @@ CMFCImageEditorDialog(
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何构造的对象`CMFCImageEditorDialog`类。 此示例摘自[新的控件示例](../../visual-cpp-samples.md)。
+下面的示例演示如何构造的对象`CMFCImageEditorDialog`类。 此示例摘自[新的控件示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_NewControls#8](../../mfc/reference/codesnippet/cpp/cmfcimageeditordialog-class_1.cpp)]
 [!code-cpp[NVC_MFC_NewControls#40](../../mfc/reference/codesnippet/cpp/cmfcimageeditordialog-class_2.cpp)]

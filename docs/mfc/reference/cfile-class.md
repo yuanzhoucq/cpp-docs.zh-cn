@@ -60,12 +60,12 @@ helpviewer_keywords:
 - CFile [MFC], m_hFile
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
-ms.openlocfilehash: f287b04b32b7bc45342ac7248fbe986a3dcf959e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: db499ffa5f1d82b6e3622287f86132930a929102
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385305"
 ---
 # <a name="cfile-class"></a>CFile 类
 
@@ -213,7 +213,7 @@ CAtlTransactionManager* pTM);
 
 仅选择下列文件访问模式选项之一。 默认文件访问模式为 `CFile::modeRead`，该模式为只读模式。
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
 |`CFile::modeRead`|只请求读取访问权限。|
 |`CFile::modeWrite`|只请求写入访问权限。|
@@ -221,7 +221,7 @@ CAtlTransactionManager* pTM);
 
 选择以下字符模式选项之一。
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
 |`CFile::typeBinary`|设置二元模式（仅在派生类中使用）。|
 |`CFile::typeText`|设置文本模式进行特殊处理，回车-换行对 （在仅派生类中使用）。|
@@ -229,7 +229,7 @@ CAtlTransactionManager* pTM);
 
 仅选择下列文件共享模式选项之一。 默认文件共享模式为 `CFile::shareExclusive`，该模式是独占模式。
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
 |`CFile::shareDenyNone`|没有任何共享限制。|
 |`CFile::shareDenyRead`|拒绝向所有其他用户提供读取访问权限。|
@@ -238,14 +238,14 @@ CAtlTransactionManager* pTM);
 
 选择下面的第一个（或全选）文件创建模式选项。 默认创建模式为 `CFile::modeNoTruncate`，该模式当前处于打开状态。
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
 |`CFile::modeCreate`|如果文件不存在，请创建一个新文件。 如果该文件已存在，它是被覆盖，并最初设置为长度为零。|
 |`CFile::modeNoTruncate`|若文件不存在，则创建新文件；否则，如果该文件已存在，则将其附加到 `CFile` 对象。|
 
 按照描述选择以下文件缓存选项。 默认情况下，系统将使用通用的缓存方案，该方案不可用作选项。
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
 |`CFile::osNoBuffer`|系统没有为文件使用中间缓存。 此选项取消以下 2 个选项。|
 |`CFile::osRandomAccess`|文件缓存针对随机访问进行了优化。 不要使用此选项和顺序扫描选项。|
@@ -254,7 +254,7 @@ CAtlTransactionManager* pTM);
 
 选择下列安全选项以防止继承文件句柄。 默认情况下，所有新的子进程都可以使用文件句柄。
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
 |`CFile::modeNoInherit`|阻止任何子进程使用文件句柄。|
 
@@ -731,7 +731,7 @@ UINT nFrom);
 
 下表列出了可能值*nFrom*参数。
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
 |`CFile::begin`|从文件开头向搜索。|
 |`CFile::current`|从文件指针的当前位置向搜索。|
@@ -918,7 +918,7 @@ virtual void Write(
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 DRAWCLI](../../visual-cpp-samples.md)<br/>
+[MFC 示例 DRAWCLI](../../overview/visual-cpp-samples.md)<br/>
 [CObject 类](../../mfc/reference/cobject-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CStdioFile 类](../../mfc/reference/cstdiofile-class.md)<br/>

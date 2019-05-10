@@ -27,11 +27,11 @@ helpviewer_keywords:
 - streams [C++], reading data from
 ms.assetid: 60e4958b-1097-46f5-a77b-94af5e7dba40
 ms.openlocfilehash: 81827363d670c7cdeeddcb86390323bf431c6f98
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287910"
 ---
 # <a name="freadnolock"></a>_fread_nolock
 
@@ -59,7 +59,7 @@ size_t _fread_nolock(
 *count*<br/>
 要读取的项的最大数量。
 
-*流*<br/>
+*stream*<br/>
 指向**文件**结构的指针。
 
 ## <a name="return-value"></a>返回值

@@ -6,15 +6,15 @@ helpviewer_keywords:
 - Visual C++, x64 calling conventions
 ms.assetid: 750f3d97-1706-4840-b2fc-41a007329a08
 ms.openlocfilehash: 11d29b6c31ccecfe5b9c51c2f9311213bd4a6732
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313812"
 ---
 # <a name="x64-software-conventions"></a>x64 软件约定
 
-本部分介绍了 c + + 调用约定方法对于 x64，x86 的 64 位扩展体系结构。
+本部分介绍了C++调用约定方法对于 x64，x86 的 64 位扩展体系结构。
 
 ## <a name="overview-of-x64-calling-conventions"></a>X64 调用约定的概述
 
@@ -195,10 +195,10 @@ X64 体系结构可提供 16 个通用寄存器 （以后称为整数寄存器�
 |-|-|-|
 |寄存器|状态|使用|
 |RAX|易失的|返回值寄存器|
-|RCX|易失的|第一个整型参数|
-|RDX|易失的|第二个整型参数|
-|R8|易失的|第三个整型参数|
-|R9|易失的|第四个整型参数|
+|RCX|易失的|第一个整型自变量|
+|RDX|易失的|第二个整型自变量|
+|R8|易失的|第三个整型自变量|
+|R9|易失的|第四个整型自变量|
 |R10:R11|易失的|必须根据需要由调用方保留；在 syscall/sysret 指令中使用|
 |R12:R15|非易失的|必须由被调用方保留|
 |RDI|非易失的|必须由被调用方保留|
@@ -209,7 +209,7 @@ X64 体系结构可提供 16 个通用寄存器 （以后称为整数寄存器�
 |XMM0、YMM0|易失的|第一个 FP 参数；使用 `__vectorcall` 时的第一个矢量类型参数|
 |XMM1、YMM1|易失的|第二个 FP 参数；使用 `__vectorcall` 时的第二个矢量类型参数|
 |XMM2、YMM2|易失的|第三个 FP 参数；使用 `__vectorcall` 时的第三个矢量类型参数|
-|XMM3、YMM3|易失的|第四个 FP 参数；使用 `__vectorcall` 时的第四个矢量类型参数|
+|XMM3、YMM3|易失的|第四个 FP 自变量；使用 `__vectorcall` 时的第四个矢量类型参数|
 |XMM4、YMM4|易失的|必须根据需要由调用方保留；使用 `__vectorcall` 时的第五个矢量类型参数|
 |XMM5、YMM5|易失的|必须根据需要由调用方保留；使用 `__vectorcall` 时的第六个矢量类型参数|
 |XMM6:XMM15、YMM6:YMM15|非易失的 (XMM)，易失的（YMM 的上半部分）|必须由被调用方保留。 YMM 寄存器必须根据需要由调用方保留。|
@@ -226,11 +226,11 @@ X64 体系结构可提供 16 个通用寄存器 （以后称为整数寄存器�
 
 ## <a name="x64-exception-handling"></a>x64 异常处理
 
-有关约定和用来实现结构化的异常处理和 c + + 异常处理行为在 x64 上的数据结构的信息，请参阅[x64 异常处理](exception-handling-x64.md)。
+有关用于实现结构化的异常处理的约定和数据结构的信息和C++异常处理行为在 x64 上，请参阅[x64 异常处理](exception-handling-x64.md)。
 
 ## <a name="intrinsics-and-inline-assembly"></a>内部函数和内联程序集
 
-一个编译器不是内联汇编程序支持 x64 的约束。 函数，这意味着不能编写 C 或 c + + 将必须编写为子例程或编译器支持的内部函数。 某些功能是敏感的性能，而有些则不然。 性能敏感的函数应作为内部函数实现。
+一个编译器不是内联汇编程序支持 x64 的约束。 这意味着，函数不能以 C 编写或C++必须将编写为子例程或编译器支持的内部函数。 某些功能是敏感的性能，而有些则不然。 性能敏感的函数应作为内部函数实现。
 
 编译器支持的内部函数中所述[编译器内部函数](../intrinsics/compiler-intrinsics.md)。
 

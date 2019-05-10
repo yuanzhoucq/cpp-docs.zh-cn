@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - COM components, registration-free
 ms.assetid: 7e585d6a-0314-45b2-8f1b-cae9ac4df037
-ms.openlocfilehash: 503c3e4399359d793ce660f36844d2edc6602146
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 783677c97835acc98751fc4a19f9405af752b71a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62188933"
 ---
 # <a name="how-to-build-registration-free-com-components"></a>如何：生成免注册 COM 组件
 
@@ -29,6 +29,4 @@ ms.locfileid: "57416762"
 
 ## <a name="see-also"></a>请参阅
 
-[独立的应用程序](/windows/desktop/SbsCs/isolated-applications)<br/>
-[有关通过并行程序集](/windows/desktop/SbsCs/about-side-by-side-assemblies-)<br/>
-[如何：生成独立应用程序以使用 COM 组件](../build/how-to-build-isolated-applications-to-consume-com-components.md)
+[如何：生成独立应用程序以使用 COM 组件](how-to-build-isolated-applications-to-consume-com-components.md)

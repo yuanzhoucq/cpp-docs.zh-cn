@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 C++ 互操作封送 COM 字符串
+title: 如何：封送 COM 字符串使用C++互操作
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - COM [C++], marshaling strings
 ms.assetid: 06590759-bf99-4e34-a3a9-4527ea592cc2
-ms.openlocfilehash: 664c9ed973e2dff4467d13742390da8a944eb87a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e86cf0b3e57eda9a0f4fa5fe2337d0c42de5669f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325476"
 ---
-# <a name="how-to-marshal-com-strings-using-c-interop"></a>如何：使用 C++ 互操作封送 COM 字符串
+# <a name="how-to-marshal-com-strings-using-c-interop"></a>如何：封送 COM 字符串使用C++互操作
 
 本主题演示如何能够 BSTR （偏好在 COM 编程中的基本字符串格式） 传递从托管到非托管函数，反之亦然。 有关与其他字符串类型进行互操作，请参阅以下主题：
 
@@ -28,7 +28,7 @@ ms.locfileid: "50559115"
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何将传递 BSTR （在 COM 编程中使用的字符串格式） 从托管到非托管函数。 调用托管函数使用<xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A>以获取.NET System.String 内容的 BSTR 表示形式的地址。 使用固定此指针[pin_ptr (C + + CLI)](../windows/pin-ptr-cpp-cli.md)以确保非托管的函数执行时，其物理地址在垃圾回收周期期间未发生更改。 禁止垃圾回收器移动到的内存[pin_ptr (C + + CLI)](../windows/pin-ptr-cpp-cli.md)超出范围。
+下面的示例演示如何将传递 BSTR （在 COM 编程中使用的字符串格式） 从托管到非托管函数。 调用托管函数使用<xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A>以获取.NET System.String 内容的 BSTR 表示形式的地址。 使用固定此指针[pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md)以确保非托管的函数执行时，其物理地址在垃圾回收周期期间未发生更改。 禁止垃圾回收器移动到的内存[pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md)超出范围。
 
 ```
 // MarshalBSTR1.cpp

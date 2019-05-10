@@ -1,18 +1,18 @@
 ---
 title: C++ 标准库中的函数对象
-ms.date: 11/04/2016
+ms.date: 03/15/2019
 helpviewer_keywords:
 - functors
 - C++ Standard Library, functors
 - C++ Standard Library, function objects
 - function objects
 ms.assetid: 85f8a735-2c7b-4f10-9c4d-95c666ec4192
-ms.openlocfilehash: 7af56f52b59b03dfed9e1233473239274a0dcbd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 310d846285612ad94ec9d66672fcb996557b07e2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159361"
 ---
 # <a name="function-objects-in-the-c-standard-library"></a>C++ 标准库中的函数对象
 
@@ -33,9 +33,17 @@ public:
         return a < b;
     }
 };
+
+int main()
+{
+    Functor f;
+    int a = 5;
+    int b = 7;
+    int ans = f(a, b);
+}
 ```
 
-`main` 函数的最后一行显示了函数对象的调用方式。 此调用看起来像是对函数的调用，但实际上它调用的是函子类型的 operator()。 调用函数对象和函数之间的相似性在于生成术语函数对象的方式。
+`main` 函数的最后一行显示了函数对象的调用方式。 此调用看起来像一个函数，但它的实际调用 operator （） 函子类型的调用。 调用函数对象和函数之间的相似性在于生成术语函数对象的方式。
 
 ## <a name="function-objects-and-containers"></a>函数对象和容器
 
@@ -48,7 +56,7 @@ template <class Key,
 class set
 ```
 
-第二个模板函数是函数对象 `less`。 此函数对象返回 **，则返回 true**传递给第一个参数是否小于第二个参数传递。 因为某些容器对其元素进行排序，所以容器需要一种方法来比较两个元素，而通过使用函数对象实现了这一点。 你可以创建函数对象并在容器的模板列表中指定它，从而定义你自己的排序条件。
+第二个模板函数是函数对象 `less`。 此函数对象返回 **，则返回 true**的第一个参数是否小于第二个参数。 因为某些容器对元素进行排序，容器需要一种方法比较两个元素。 通过使用函数对象进行比较。 你可以创建函数对象并在容器的模板列表中指定它，从而定义你自己的排序条件。
 
 ## <a name="function-objects-and-algorithms"></a>函数对象和算法
 

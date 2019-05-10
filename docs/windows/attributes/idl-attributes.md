@@ -1,5 +1,5 @@
 ---
-title: IDL 特性 (c + + COM)
+title: IDL 特性 (C++ COM)
 ms.date: 10/02/2018
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - IDL files [C++], attributes
 - .idl files [C++]
 ms.assetid: 04c596f4-c97b-4952-8053-316678b1d0b6
-ms.openlocfilehash: 6e88edf114e180a118d0467d5425d16e50d7c216
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29761d814505d2c2dd435d3416fe2367e1c16073
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593487"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448415"
 ---
 # <a name="idl-attributes"></a>IDL 特性
 
@@ -23,11 +23,11 @@ ms.locfileid: "50593487"
 
 - 依赖于一个向导，将让你可以修改.idl 文件的某些方面。
 
-现在，可以修改中使用 Visual c + + IDL 特性的源代码文件中的.idl 文件。 在许多情况下，Visual c + + IDL 特性具有与 MIDL 属性相同的名称。 当 Visual c + + IDL 属性和 MIDL 特性的名称是相同的时这意味着，将 Visual c + + 特性置于源代码文件中将生成包含其作用 MIDL 特性的.idl 文件。 但是，Visual c + + IDL 属性可能会提供 MIDL 特性的所有的功能。
+现在，可以修改中使用视觉对象的源代码文件中的.idl 文件C++IDL 特性。 在许多情况下，视觉对象C++IDL 特性具有与 MIDL 属性相同的名称。 当视觉对象的名称C++IDL 属性及其 MIDL 属性相同，这意味着将视觉对象C++源代码文件中的属性将导致.idl 文件包含其作用 MIDL 特性。 但是，视觉对象C++IDL 特性可能无法提供的 MIDL 特性的所有功能。
 
 如果不使用与[COM 特性](com-attributes.md)，IDL 属性，您可以定义接口。 编译的源代码时，这些属性用于定义生成的.idl 文件。 与 COM 特性的 ATL 项目中使用时，一些 IDL 特性，例如`coclass`，会导致代码注入到项目。
 
-请注意， [idl_quote](idl-quote.md)可让你使用不支持当前版本的 Visual c + + 中的 MIDL 构造。 这和其他属性，如[importlib](importlib.md)并[includelib](includelib-cpp.md)帮助你使用你当前的 Visual c + + 项目中的现有.idl 文件。
+请注意， [idl_quote](idl-quote.md)可让你使用不支持当前版本的视觉对象中的 MIDL 构造C++。 这和其他属性，如[importlib](importlib.md)并[includelib](includelib-cpp.md)帮助你使用你当前的 Visual Studio 中的现有.idl 文件C++项目。
 
 |特性|描述|
 |---------------|-----------------|
@@ -57,7 +57,7 @@ ms.locfileid: "50593487"
 |[helpstring](helpstring.md)|指定一个字符串，用于描述应用该字符串的元素。|
 |[hidden](hidden.md)|指示该项存在，但不是应在面向用户的浏览器中显示。|
 |[idl_module](idl-module.md)|在 DLL 中指定的入口点。|
-|[idl_quote](idl-quote.md)|允许你使用属性或 IDL 构造不支持当前版本的 Visual c + + 中的。|
+|[idl_quote](idl-quote.md)|可以使用属性或视觉对象的当前版本中不支持的 IDL 构造C++。|
 |[id](id.md)|指定的成员函数 （属性或方法，请在接口或调度接口） 的 DISPID。|
 |[iid_is](iid-is.md)|指定的接口指针指向了 COM 接口的 IID。|
 |[immediatebind](immediatebind.md)|指示数据库将立即收到通知的所有更改将数据绑定对象的属性。|
@@ -94,7 +94,7 @@ ms.locfileid: "50593487"
 |[range](range-cpp.md)|指定参数或在运行时设置其值的字段的允许值的范围。|
 |[readonly](readonly-cpp.md)|禁止分配给一个变量。|
 |[ref](ref-cpp.md)|标识引用指针。|
-|[requestedit](requestedit.md)|指示该属性支持`OnRequestEdit`通知。|
+|[requestedit](requestedit.md)|指示该属性支持 `OnRequestEdit` 通知。|
 |[restricted](restricted.md)|指定的库或模块、 接口或调度接口的成员不能任意调用。|
 |[retval](retval.md)|指定接收该成员的返回值的参数。|
 |[size_is](size-is.md)|指定的内存大小为固定大小的指针分配、 调整大小的指针和单字节或多维数组的指针。|

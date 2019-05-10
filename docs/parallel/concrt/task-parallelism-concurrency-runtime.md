@@ -9,11 +9,11 @@ helpviewer_keywords:
 - tasks [Concurrency Runtime]
 ms.assetid: 42f05ac3-2098-494a-ba84-737fcdcad077
 ms.openlocfilehash: c9f18dfd1498538ce3700fd73a27ce6f6088ee42
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180038"
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>任务并行（并发运行时）
 
@@ -70,9 +70,9 @@ ms.locfileid: "51331212"
 
 ##  <a name="lambdas"></a> 使用 Lambda 表达式
 
-由于其语法简洁，因此 Lambda 表达式是定义由任务和任务组执行的工作的常用方法。 下面是一些使用提示：
+由于其语法简洁，因此 lambda 表达式是定义由任务和任务组执行的工作的常用方法。 下面是一些使用提示：
 
-- 因为任务通常在后台线程上运行，所以在 lambda 表达式中捕获变量时请注意对象生存期。 如果通过值捕获变量，则会在 lambda 体中创建该变量的副本。 通过引用捕获时，不创建副本。 因此，请确保通过引用捕获的任何变量的生存期长于使用它的任务。
+- 因为任务通常在后台线程上运行，所以在 Lambda 表达式中捕获变量时请注意对象生存期。 如果通过值捕获变量，则会在 lambda 体中创建该变量的副本。 通过引用捕获时，不创建副本。 因此，请确保通过引用捕获的任何变量的生存期长于使用它的任务。
 
 - 将 lambda 表达式传递给任务时，不捕获通过引用在堆栈上分配的变量。
 
@@ -108,10 +108,10 @@ ms.locfileid: "51331212"
 
 如果在任务执行期间引发异常，则运行时会在对 `task::get` 或 `task::wait` 或是基于任务的延续的后续调用中封送该异常。 有关任务异常处理机制的详细信息，请参阅[异常处理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)。
 
-有关使用示例`task`， [concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md)，取消操作，请参阅[演练： 使用任务和 XML HTTP 请求](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)。 （本文档稍后会介绍 `task_completion_event` 类。）
+有关使用示例`task`， [concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md)，取消操作，请参阅[演练：使用任务和 XML HTTP 请求连接](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)。 （本文档稍后会介绍 `task_completion_event` 类。）
 
 > [!TIP]
->  若要了解特定于 UWP 应用中的任务的详细信息，请参阅[c + + 中的异步编程](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)并[创建异步操作在 c + + UWP 应用的](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)。
+>  若要了解特定于 UWP 应用中的任务的详细信息，请参阅[异步编程中C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)并[创建异步操作C++适用于 UWP 应用](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)。
 
 ##  <a name="continuations"></a> 延续任务
 
@@ -123,7 +123,7 @@ ms.locfileid: "51331212"
 
 - 在延续启动之前取消延续，或在延续正在运行时以协作方式取消延续。
 
-- 提供有关应如何计划延续的提示。 （这适用于通用 Windows 平台 (UWP) 应用程序。 有关详细信息，请参阅[创建异步操作在 c + + UWP 应用的](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)。)
+- 提供有关应如何计划延续的提示。 （这适用于通用 Windows 平台 (UWP) 应用程序。 有关详细信息，请参阅[创建异步操作C++适用于 UWP 应用](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)。)
 
 - 从同一前面的任务中调用多个延续。
 
@@ -156,7 +156,7 @@ ms.locfileid: "51331212"
 
 ##  <a name="composing-tasks"></a> 组合任务
 
-This section describes the [concurrency::when_all](reference/concurrency-namespace-functions.md#when_all) and [concurrency::when_any](reference/concurrency-namespace-functions.md#when_all) functions, which can help you compose multiple tasks to implement common patterns.
+本部分介绍[concurrency:: when_all](reference/concurrency-namespace-functions.md#when_all)并[concurrency:: when_any](reference/concurrency-namespace-functions.md#when_all)函数，它可帮助你组合多个任务以实现常见模式。
 
 ###  <a name="when-all"></a> When_all 函数
 
@@ -183,7 +183,7 @@ This section describes the [concurrency::when_all](reference/concurrency-namespa
 
 [!code-cpp[concrt-eh-when_all#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_10.cpp)]
 
-请考虑使用 c + + 和 XAML 并将一组文件写入到磁盘的 UWP 应用。 下面的示例演示如何使用 `when_all` 和 `observe_all_exceptions` 确保该程序观察到所有异常。
+请考虑使用的 UWP 应用C++和 XAML 并将一组文件写入到磁盘。 下面的示例演示如何使用 `when_all` 和 `observe_all_exceptions` 确保该程序观察到所有异常。
 
 [!code-cpp[concrt-eh-when_all#2](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_11.cpp)]
 
@@ -244,13 +244,13 @@ This section describes the [concurrency::when_all](reference/concurrency-namespa
 
 [Concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md)类可帮助简化这种任务组合。 与 `task` 类一样，类型参数 `T` 是由任务生成的结果的类型。 如果任务不返回值，则此类型可以是 `void`。 `T` 不能使用 `const` 修饰符。 通常会将 `task_completion_event` 对象提供给在它的值可用时向它发信号的线程或任务。 同时，一个或多个任务设置为该事件的侦听器。 设置事件时，侦听器任务完成，其延续会计划运行。
 
-有关使用示例`task_completion_event`若要实现在延迟后完成的任务，请参阅[如何： 创建任务的完成后延迟](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md)。
+有关使用示例`task_completion_event`若要实现在延迟后完成的任务，请参阅[如何：创建在延迟后完成的任务](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md)。
 
 ##  <a name="task-groups"></a> 任务组
 
 一个*任务组*将组织的任务的集合。 任务组会将任务推送到工作窃取队列。 计划程序从此队列中删除任务，然后在可用计算资源上执行它们。 将任务添加到任务组之后，可以等待所有任务完成或取消尚未开始的任务。
 
-使用 PPL [concurrency:: task_group](reference/task-group-class.md)并[concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)类来表示任务组，并[concurrency:: task_handle](../../parallel/concrt/reference/task-handle-class.md)类to represent the tasks that run in these groups. `task_handle` 类封装执行工作的代码。 与 `task` 类一样，工作函数采用 lambda 函数、函数指针或函数对象的形式。 通常不需要直接使用 `task_handle` 对象。 而是将工作函数传递给任务组，然后任务组会创建和管理 `task_handle` 对象。
+使用 PPL [concurrency:: task_group](reference/task-group-class.md)并[concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)类来表示任务组，并[concurrency:: task_handle](../../parallel/concrt/reference/task-handle-class.md)类来表示这些组中运行的任务。 `task_handle` 类封装执行工作的代码。 与 `task` 类一样，工作函数采用 lambda 函数、函数指针或函数对象的形式。 通常不需要直接使用 `task_handle` 对象。 而是将工作函数传递给任务组，然后任务组会创建和管理 `task_handle` 对象。
 
 PPL 将任务组划分为这两个类别：*非结构化的任务组*并*结构化任务组*。 PPL 使用 `task_group` 类表示非结构化任务组，使用 `structured_task_group` 类表示结构化任务组。
 
@@ -299,7 +299,7 @@ Message from task: 42
 
 因为 `parallel_invoke` 算法并发运行任务，所以输出消息的顺序可能会有所不同。
 
-有关完整示例，演示如何使用`parallel_invoke`算法，请参阅[如何： 使用 parallel_invoke 来编写并行排序例程](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)和[如何： 使用 parallel_invoke 来执行并行操作](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md). 有关使用的完整示例`task_group`类来实现异步功能，请参阅[演练： 实现 Future](../../parallel/concrt/walkthrough-implementing-futures.md)。
+有关完整示例，演示如何使用`parallel_invoke`算法，请参阅[如何：使用 parallel_invoke 来编写并行排序例程](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)和[如何：使用 parallel_invoke 来执行并行操作](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)。 有关使用的完整示例`task_group`类来实现异步功能，请参阅[演练：实现 Future](../../parallel/concrt/walkthrough-implementing-futures.md)。
 
 ##  <a name="robust"></a> 可靠编程
 
@@ -307,7 +307,7 @@ Message from task: 42
 
 ## <a name="related-topics"></a>相关主题
 
-|标题|描述|
+|Title|说明|
 |-----------|-----------------|
 |[如何：使用 parallel_invoke 来编写并行排序例程](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)|演示如何使用 `parallel_invoke` 算法提高双调排序算法的性能。|
 |[如何：使用 parallel_invoke 来执行并行操作](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|演示如何使用 `parallel_invoke` 算法提高对共享数据源执行多项操作的程序的性能。|

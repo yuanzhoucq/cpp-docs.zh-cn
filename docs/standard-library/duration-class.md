@@ -1,6 +1,6 @@
 ---
 title: duration 类
-ms.date: 11/04/2016
+ms.date: 03/27/2016
 f1_keywords:
 - chrono/std::chrono::duration
 - chrono/std::chrono::duration::duration
@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 06b863b3-65be-4ded-a72e-6e1eb1531077
 helpviewer_keywords:
 - std::chrono [C++], duration
-ms.openlocfilehash: 2b710de6275933b5dc05814664caef92cf251da4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49c68b1650ced36ebcf949ae2594508480e15136
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413796"
 ---
 # <a name="duration-class"></a>duration 类
 
@@ -50,7 +50,7 @@ class duration <duration<Rep, Period1>, Period2>;
 
 |名称|描述|
 |----------|-----------------|
-|[持续时间](#duration)|构造 `duration` 对象。|
+|[duration](#duration)|构造 `duration` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
@@ -59,7 +59,7 @@ class duration <duration<Rep, Period1>, Period2>;
 |[count](#count)|返回时间间隔内的时钟计时周期数。|
 |[max](#max)|静态。 返回模板参数 `Ref` 的最大允许值。|
 |[min](#min)|静态。 返回模板参数 `Ref` 的最低允许值。|
-|[零](#zero)|静态。 实际返回 `Rep`(0)。|
+|[zero](#zero)|静态。 实际返回 `Rep`(0)。|
 
 ### <a name="public-operators"></a>公共运算符
 
@@ -159,7 +159,7 @@ static constexpr duration min();
 
 实际上，返回 `duration(duration_values<rep>::min())`。
 
-## <a name="duration__operator-"></a>  duration::operator-
+## <a name="operator-"></a>  duration::operator-
 
 返回 `duration` 对象的副本及求反后的计时周期计数。
 
@@ -167,7 +167,7 @@ static constexpr duration min();
 constexpr duration operator-() const;
 ```
 
-## <a name="duration__operator--"></a>  duration::operator--
+## <a name="operator--"></a>  duration::operator--
 
 减小存储的计时周期计数。
 
@@ -277,7 +277,7 @@ duration& operator+=(const duration& Dur);
 
 执行相加后的 `duration` 对象。
 
-## <a name="duration__operator-_eq"></a>  duration::operator-=
+## <a name="operator-_eq"></a>  duration::operator-=
 
 从存储的计时周期计数减去指定的 `duration` 对象的计时周期计数。
 

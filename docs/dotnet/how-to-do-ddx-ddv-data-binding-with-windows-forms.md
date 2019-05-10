@@ -1,25 +1,25 @@
 ---
-title: 如何： 执行 DDX-DDV 数据绑定 Windows 窗体
+title: 如何：执行 DDX-DDV 数据绑定与 Windows 窗体
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC [C++], hosting a Windows Forms Control
 - Windows Forms [C++], MFC support
 ms.assetid: b2957370-cf1f-4779-94ac-228cd393686c
-ms.openlocfilehash: 793d6728c7726028c02b885784f122792d84dd2e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 558c763fd18cd1569ff23435bf6156b3117f117d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387313"
 ---
-# <a name="how-to-do-ddxddv-data-binding-with-windows-forms"></a>如何：使用 Windows 窗体执行 DDX/DDV 数据绑定
+# <a name="how-to-do-ddxddv-data-binding-with-windows-forms"></a>如何：执行 DDX/DDV 数据绑定与 Windows 窗体
 
 [DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol)调用[CWinFormsControl::CreateManagedControl](../mfc/reference/cwinformscontrol-class.md#createmanagedcontrol)创建控件匹配资源控件 id。 如果您使用`DDX_ManagedControl`有关`CWinFormsControl`控件 （在向导生成的代码），不应调用`CreateManagedControl`显式为相同的控件。
 
 调用`DDX_ManagedControl`中[CWnd::DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange)资源 Id 从创建控件。 数据交换，不需要将 DDX/DDV 函数与 Windows 窗体控件。 相反，可以将代码访问中的托管控件的属性放`DoDataExchange`对话框 （或视图） 类，如以下示例所示的方法。
 
-下面的示例演示如何将本机 c + + 字符串绑定到.NET 用户控件。
+下面的示例演示如何将绑定一个本机C++.NET 用户控件的字符串。
 
 ## <a name="example"></a>示例
 
@@ -27,7 +27,7 @@ ms.locfileid: "50456428"
 
 当创建该控件[CDialog::OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)调用`CMyDlg::DoDataExchange`第一次，因此任何代码，它引用`m_UserControl`后面必须出现`DDX_ManagedControl`调用。
 
-可以在中创建的 MFC01 应用程序中实现此代码[如何： 在对话框中创建用户控件并承载](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)。
+可以在中创建的 MFC01 应用程序中实现此代码[如何：在对话框中创建用户控件并承载](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)。
 
 CMFC01Dlg 声明中添加以下代码：
 

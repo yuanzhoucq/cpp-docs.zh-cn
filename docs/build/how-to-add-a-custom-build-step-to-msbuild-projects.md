@@ -1,17 +1,15 @@
 ---
 title: 如何：向 MSBuild 项目添加自定义生成步骤
 ms.date: 11/04/2016
-f1_keywords:
-- msbuild.cpp.howto.addcustombuildstep
 helpviewer_keywords:
 - 'msbuild (c++), howto: add a custom build step'
 ms.assetid: a20a0c47-4df4-4754-a1f0-a94a99958916
-ms.openlocfilehash: 57b7636c58a245bfea3a71dfb6aa7ee853329f19
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
-ms.translationtype: MT
+ms.openlocfilehash: d70f145a9d43463266a9c0bbff68e8e7f36ef2c6
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413220"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220726"
 ---
 # <a name="how-to-add-a-custom-build-step-to-msbuild-projects"></a>如何：向 MSBuild 项目添加自定义生成步骤
 
@@ -27,7 +25,7 @@ ms.locfileid: "57413220"
 
 ### <a name="to-define-what-is-executed-by-the-custom-build-step"></a>若要定义由自定义生成步骤执行的内容
 
-1. 将属性组添加到项目文件。 在此属性组中，指定命令、 其输入和输出和消息，如下面的示例中所示。 此示例创建一个.cab 文件中创建的 main.cpp 文件从[演练：使用 MSBuild 创建 Visual c + + 项目](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)。
+1. 将属性组添加到项目文件。 在此属性组中，指定命令、 其输入和输出和消息，如下面的示例中所示。 此示例创建一个.cab 文件中创建的 main.cpp 文件从[演练：使用 MSBuild 创建C++项目](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)。
 
     ```
     <ItemDefinitionGroup>
@@ -52,6 +50,6 @@ ms.locfileid: "57413220"
 
 ## <a name="see-also"></a>请参阅
 
-[演练：使用 MSBuild 创建 Visual C++ 项目](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
-[如何：在 MSBuild 项目中使用生成事件](../build/how-to-use-build-events-in-msbuild-projects.md)<br/>
-[如何：向 MSBuild 项目添加自定义生成工具](../build/how-to-add-custom-build-tools-to-msbuild-projects.md)
+[演练：使用 MSBuild 创建 C++ 项目](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
+[如何：在 MSBuild 项目中使用生成事件](how-to-use-build-events-in-msbuild-projects.md)<br/>
+[如何：向 MSBuild 项目添加自定义生成工具](how-to-add-custom-build-tools-to-msbuild-projects.md)

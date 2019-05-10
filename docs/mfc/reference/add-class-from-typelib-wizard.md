@@ -8,11 +8,11 @@ helpviewer_keywords:
 - COM interfaces, adding classes
 ms.assetid: 96152afd-9374-4649-a6ab-b0fa2a5592a3
 ms.openlocfilehash: a2c291e1c9e78d288bdb2d15f224520d764dfa1b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62297003"
 ---
 # <a name="add-class-from-typelib-wizard"></a>从类型库添加类向导
 
@@ -55,7 +55,7 @@ ms.locfileid: "57273876"
 
    指定要从使用 > 或 >> 按钮添加的接口生成的类名。 可以单击此框以选择类，然后使用向上或向下键可以滚动浏览列表中，查看在每个类名**类**中的框和文件名称**文件**框，向导生成时您单击**完成**。 在此框中仅能选择一个类。
 
-   可通过在此列表中选择一个类并单击 < 来删除该类。 不需要删除所有类; 在生成的类框中选择一个类通过单击**<<**，删除中的所有类**生成的类**框。
+   可通过在此列表中选择一个类并单击 < 来删除该类。 不需要删除所有类; 在生成的类框中选择一个类通过单击 **<<** ，删除中的所有类**生成的类**框。
 
 - **类**
 

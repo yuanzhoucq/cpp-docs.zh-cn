@@ -9,12 +9,12 @@ helpviewer_keywords:
 - int 2c instruction
 - __int2c intrinsic
 ms.assetid: aa20ff30-adef-42bb-8577-8010f3122f8e
-ms.openlocfilehash: df90e87684a40dcd489c875e2fa49d96ebf94b40
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 36ef8acd3d71c08a356d4210f16205828f691fa5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348883"
 ---
 # <a name="int2c"></a>__int2c
 

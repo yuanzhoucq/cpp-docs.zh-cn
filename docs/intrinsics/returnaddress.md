@@ -7,12 +7,12 @@ helpviewer_keywords:
 - _ReturnAddress intrinsic
 - ReturnAddress intrinsic
 ms.assetid: 7f4a5811-35e6-4f64-ba7c-21203380eeda
-ms.openlocfilehash: 01916a9306faa4159f54225b745fd56c35b5ae16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e5013b20f9e7ed0349d940d9be61cc1b4afc95d4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62390446"
 ---
 # <a name="returnaddress"></a>_ReturnAddress
 
@@ -20,7 +20,7 @@ ms.locfileid: "50641778"
 
 `_ReturnAddress`内部函数提供了将控件返回给调用方后执行在调用函数中指令的地址。
 
-生成以下程序和通过它在调试器中的步骤。 在逐步执行程序，请注意从返回的地址`_ReturnAddress`。 然后，从函数返回后立即其中`_ReturnAddress`已使用，打开[如何： 使用反汇编窗口](/visualstudio/debugger/how-to-use-the-disassembly-window)并记下要执行的下一个指令的地址匹配从返回的地址`_ReturnAddress`.
+生成以下程序和通过它在调试器中的步骤。 在逐步执行程序，请注意从返回的地址`_ReturnAddress`。 然后，从函数返回后立即其中`_ReturnAddress`已使用，请打开[如何：使用反汇编窗口](/visualstudio/debugger/how-to-use-the-disassembly-window)并记下要执行的下一个指令的地址与从返回的地址相匹配`_ReturnAddress`。
 
 优化如内联可能会影响返回的地址。 例如，如果使用编译下面的示例程序[/ob1](../build/reference/ob-inline-function-expansion.md)，`inline_func`将内联到调用函数， `main`。 因此，对调用`_ReturnAddress`从`inline_func`和`main`将每个生成相同的值。
 

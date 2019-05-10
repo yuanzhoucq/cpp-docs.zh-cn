@@ -20,15 +20,15 @@ helpviewer_keywords:
 - throw keyword [C++], throw() vs. throw(...)
 ms.assetid: 15e6a87b-b8a5-4032-a7ef-946c644ba12a
 ms.openlocfilehash: a55c1f2d5c2e73028b337d17b74fe1280f670707
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62266774"
 ---
 # <a name="try-throw-and-catch-statements-c"></a>try、throw 和 catch 语句 (C++)
 
-若要实现 c + + 中的异常处理，您可以使用**尝试**，**引发**，并**捕获**表达式。
+若要实现中的异常处理C++，则使用**尝试**，**引发**，和**捕获**表达式。
 
 首先，使用**尝试**块包含一个或多个可能引发异常的语句。
 

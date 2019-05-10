@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CDialogBar [MFC], CDialogBar
 - CDialogBar [MFC], Create
 ms.assetid: da2f7a30-970c-44e3-87f0-6094bd002cab
-ms.openlocfilehash: 2ae7c941b527a7cbaa01bf43ef4d41c9a4975dac
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: af84c5239a9cb3cbddb1ab4f0230e5b1a3373573
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400716"
 ---
 # <a name="cdialogbar-class"></a>CDialogBar 类
 
@@ -50,7 +50,7 @@ class CDialogBar : public CControlBar
 有关详细信息`CDialogBar`，请参阅文章[对话栏](../../mfc/dialog-bars.md)并[技术说明 31](../../mfc/tn031-control-bars.md)，控件条。
 
 > [!NOTE]
->  在当前版本中，`CDialogBar`对象不能承载 Windows 窗体控件。 有关 Visual c + + 的 Windows 窗体控件的详细信息，请参阅[在 MFC 中使用 Windows 窗体用户控件](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
+>  在当前版本中，`CDialogBar`对象不能承载 Windows 窗体控件。 视觉对象中的 Windows 窗体控件有关的详细信息C++，请参阅[在 MFC 中使用 Windows 窗体用户控件](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -143,7 +143,7 @@ Styl toolbar。 支持的其他工具栏样式是：
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 CTRLBARS](../../visual-cpp-samples.md)<br/>
+[MFC 示例 CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
 [CControlBar 类](../../mfc/reference/ccontrolbar-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CFormView 类](../../mfc/reference/cformview-class.md)<br/>

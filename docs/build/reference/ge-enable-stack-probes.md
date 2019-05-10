@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stack checking calls
 - Ge compiler option [C++]
 ms.assetid: 4b54deae-4e3c-4bfa-95f3-ba23590f7258
-ms.openlocfilehash: 34799529517e0263f71ce4f6f29537bf4b59056f
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a785ec041370e0bcbb2ce8b698bfba89235a0a0c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292180"
 ---
 # <a name="ge-enable-stack-probes"></a>/Ge（启用堆栈探测）
 
@@ -31,15 +31,15 @@ ms.locfileid: "57415417"
 
 ## <a name="remarks"></a>备注
 
-此机制是重写的堆栈探测功能的情况下很有用。 建议你使用[/Gh (启用 _penter 挂钩函数)](../../build/reference/gh-enable-penter-hook-function.md)而不是重写堆栈探测。
+此机制是重写的堆栈探测功能的情况下很有用。 建议你使用[/Gh (启用 _penter 挂钩函数)](gh-enable-penter-hook-function.md)而不是重写堆栈探测。
 
-[/Gs （控制堆栈检查调用）](../../build/reference/gs-control-stack-checking-calls.md)具有相同的效果。
+[/Gs （控制堆栈检查调用）](gs-control-stack-checking-calls.md)具有相同的效果。
 
-**/Ge**是不推荐使用; 开始在 Visual Studio 2005 中，编译器会自动生成堆栈检查。 有关不推荐使用的编译器选项的列表，请参阅**已弃用并删除的编译器选项**中[按类别列出的编译器选项](../../build/reference/compiler-options-listed-by-category.md)。
+**/Ge**是不推荐使用; 开始在 Visual Studio 2005 中，编译器会自动生成堆栈检查。 有关不推荐使用的编译器选项的列表，请参阅**已弃用并删除的编译器选项**中[按类别列出的编译器选项](compiler-options-listed-by-category.md)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
 1. 单击 **“C/C++”** 文件夹。
 
@@ -53,5 +53,5 @@ ms.locfileid: "57415417"
 
 ## <a name="see-also"></a>请参阅
 
-[编译器选项](../../build/reference/compiler-options.md)<br/>
-[设置编译器选项](../../build/reference/setting-compiler-options.md)
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)

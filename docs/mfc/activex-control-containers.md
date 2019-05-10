@@ -6,11 +6,11 @@ helpviewer_keywords:
 - OLE controls [MFC], containers
 ms.assetid: 0eb1a713-e607-4c79-a0c7-67c5f1fd5fab
 ms.openlocfilehash: e8340acafc81447052fcb8d90df8997e81dc4117
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394853"
 ---
 # <a name="activex-control-containers"></a>ActiveX 控件容器
 
@@ -43,13 +43,13 @@ ActiveX 控件容器与通过该控件交互公开[方法](../mfc/mfc-activex-co
 
 - [ActiveX 控件容器：查看和修改控件属性](../mfc/activex-control-containers-viewing-and-modifying-control-properties.md)
 
-- [ActiveX 控件容器：ActiveX 控件容器中的 ActiveX 控件编程](../mfc/programming-activex-controls-in-a-activex-control-container.md)
+- [ActiveX 控件容器：对 ActiveX 控件容器中的 ActiveX 控件编程](../mfc/programming-activex-controls-in-a-activex-control-container.md)
 
-- [ActiveX 控件容器：使用非对话框容器中的控件](../mfc/activex-control-containers-using-controls-in-a-non-dialog-container.md)
+- [ActiveX 控件容器：在非对话框容器中使用控件](../mfc/activex-control-containers-using-controls-in-a-non-dialog-container.md)
 
 在对话框中使用 ActiveX 控件的详细信息，请参阅[对话框编辑器](../windows/dialog-editor.md)主题。
 
-这些文章说明了使用 Visual c + + 和 MFC ActiveX 控件类开发 ActiveX 控件的详细信息的列表，请参阅[MFC ActiveX 控件](../mfc/mfc-activex-controls.md)。 文章将按功能类别进行分组。
+有关这些文章说明了开发 ActiveX 的详细信息的列表控制是否使用视觉对象C++和 MFC ActiveX 控件类，请参阅[MFC ActiveX 控件](../mfc/mfc-activex-controls.md)。 文章将按功能类别进行分组。
 
 ## <a name="see-also"></a>请参阅
 

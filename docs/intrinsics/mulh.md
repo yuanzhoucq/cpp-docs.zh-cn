@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - __mulh intrinsic
 ms.assetid: cd2ab093-9ef6-404d-ac34-0bee033882f3
-ms.openlocfilehash: 28826f285d23b083883237ff1fb02684e32d278c
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 122d7ff28a01c0b95c16c6a0f4cd20e883744d2e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62263069"
 ---
 # <a name="mulh"></a>__mulh
 

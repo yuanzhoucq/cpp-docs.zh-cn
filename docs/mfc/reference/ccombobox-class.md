@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: 847927a36bac8540dd95307ae3c0259d0adba12a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a76be4be87471f26970a5b517d9993ae324b56c5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62253982"
 ---
 # <a name="ccombobox-class"></a>CComboBox 类
 
@@ -337,7 +337,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 
 指示中所述的两个项目的相对位置`COMPAREITEMSTRUCT`结构。 它可以是以下值之一：
 
-|值|含义|
+|“值”|含义|
 |-----------|-------------|
 |- 1|第 1 项进行排序项 2 之前。|
 |0|第 1 项和项 2 排序相同。|
@@ -1557,7 +1557,7 @@ void ShowDropDown(BOOL bShowIt = TRUE);
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 CTRLBARS](../../visual-cpp-samples.md)<br/>
+[MFC 示例 CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>

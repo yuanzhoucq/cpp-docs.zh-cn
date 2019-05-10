@@ -2,17 +2,15 @@
 title: 站点信息类 (ATL)
 ms.date: 11/04/2016
 ms.topic: reference
-f1_keywords:
-- vc.atl.site
 helpviewer_keywords:
 - site information classes
 ms.assetid: 102eae20-7953-4efb-b27b-409885c9c064
-ms.openlocfilehash: 1f4483c9f35e2a9380bc52f60fc2fe78a28047db
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f6a6e53aa3214a2a2a766d90573481365fe382dd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62274334"
 ---
 # <a name="site-information-classes"></a>站点信息类
 

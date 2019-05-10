@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -SUBSYSTEM linker option
 - subsystem specifications
 ms.assetid: d7b133cf-cf22-4da8-ab46-6552702c0b9b
-ms.openlocfilehash: 0b6a8a841cefcd519cbeeae9f3355d72e1bbf286
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ecda3443d0422af4d5ceec9282d86590c53af2f5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62318240"
 ---
 # <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM（指定子系统）
 
@@ -42,7 +42,7 @@ Win32 字符模式应用程序。 操作系统提供为控制台应用程序提�
 可扩展固件接口子系统中。 请参阅 EFI 规范的详细信息。 有关示例，请参阅 Intel 网站。 最小和默认版本为 1.0。
 
 **NATIVE**<br/>
-用于 Windows NT 内核模式驱动程序。 此选项通常预留给 Windows 系统组件。 如果[/driver: wdm](../../build/reference/driver-windows-nt-kernel-mode-driver.md)指定，本机模式是默认值。
+用于 Windows NT 内核模式驱动程序。 此选项通常预留给 Windows 系统组件。 如果[/driver: wdm](driver-windows-nt-kernel-mode-driver.md)指定，本机模式是默认值。
 
 **POSIX**<br/>
 使用 Windows NT 中的 POSIX 子系统运行的应用程序。
@@ -73,7 +73,7 @@ Win32 字符模式应用程序。 操作系统提供为控制台应用程序提�
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置 Visual c + + 项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
 1. 选择链接器文件夹。
 
@@ -87,5 +87,5 @@ Win32 字符模式应用程序。 操作系统提供为控制台应用程序提�
 
 ## <a name="see-also"></a>请参阅
 
-[设置链接器选项](../../build/reference/setting-linker-options.md)<br/>
-[链接器选项](../../build/reference/linker-options.md)
+[MSVC 链接器参考](linking.md)<br/>
+[MSVC 链接器选项](linker-options.md)

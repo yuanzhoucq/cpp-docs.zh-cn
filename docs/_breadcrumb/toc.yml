@@ -8,7 +8,7 @@
       items:
         - name: 文档
           tocHref: /cpp/
-          topicHref: /cpp/visual-cpp-in-visual-studio
+          topicHref: /cpp/overview/visual-cpp-in-visual-studio
           items:
             - name: C++ 语言
               tocHref: /cpp/cpp/
@@ -19,6 +19,19 @@
             - name: C/C++ 预处理器
               tocHref: /cpp/preprocessor/
               topicHref: /cpp/c-cpp-preprocessor-reference
+            - name: 编译器内部函数和程序集语言
+              tocHref: /cpp/intrinsics/
+              topicHref: /cpp/intrinsics/compiler-intrinsics-and-assembly-language
+              items:
+                - name: ARM
+                  tocHref: /cpp/assembler/arm/
+                  topicHref: /cpp/assembler/arm/arm-assembler-reference
+                - name: 内联汇编程序
+                  tocHref: /cpp/assembler/inline/
+                  topicHref: /cpp/assembler/inline-assembler
+                - name: MASM
+                  tocHref: /cpp/assembler/masm/
+                  topicHref: /cpp/assembler/masm/microsoft-macro-assembler-reference
             - name: C 运行库
               tocHref: /cpp/c-runtime-library/
               topicHref: /cpp/c-runtime-library/c-run-time-library-reference
@@ -76,42 +89,23 @@
                 - name: ODBC
                   tocHref: /cpp/data/odbc/
                   topicHref: /cpp/data/odbc/open-database-connectivity-odbc
-            - name: IDE 和工具
-              tocHref: /cpp/ide/
-              topicHref: /cpp/ide/ide-and-tools-for-visual-cpp-development
+            - name: 编辑、导航和重构代码
+              tocHref: /cpp/ide
+              topicHref: /cpp/overview-of-cpp-development
               items:
                 - name: IDE
                   tocHref: /cpp/ide/
                   topicHref: /cpp/ide/using-the-visual-studio-ide-for-cpp-desktop-development
-                - name: 生成
-                  tocHref: /cpp/build/building-c-cpp-programs
+            - name: 生成 C/C++ 项目
+              tocHref: /cpp/build/building-c-cpp-programs
+              items:
+                - name: 生成参考
+                  tocHref: /cpp/build/reference/
+                  topicHref: /cpp/build/reference/c-cpp-building-reference
                   items:
-                    - name: 生成参考
-                      tocHref: /cpp/build/reference/
-                      topicHref: /cpp/build/reference/c-cpp-building-reference
-                      items:
-                        - name: 编译器错误
-                          tocHref: /cpp/error-messages/compiler-errors-1/
-                          topicHref: /cpp/compiler-errors-1/c-cpp-build-errors
-                        - name: 编译器警告
-                          tocHref: /cpp/compiler-warnings/
-                          topicHref: /cpp/compiler-warnings/compiler-warnings-c4000-through-C4199
-                        - name: 其他工具
-                          tocHref: /cpp/error-messages/tool-errors/
-                          topicHref: /cpp/error-messages/tool-errors/vectorizer-and-parallelizer-messages
-                - name: 编译器内部函数和程序集语言
-                  tocHref: /cpp/intrinsics/
-                  topicHref: /cpp/intrinsics/compiler-intrinsics-and-assembly-language
-                  items:
-                    - name: ARM
-                      tocHref: /cpp/assembler/arm/
-                      topicHref: /cpp/assembler/arm/arm-assembler-reference
-                    - name: 内联汇编程序
-                      tocHref: /cpp/assembler/inline/
-                      topicHref: /cpp/assembler/inline-assembler
-                    - name: MASM
-                      tocHref: /cpp/assembler/masm/
-                      topicHref: /cpp/assembler/masm/microsoft-macro-assembler-reference
+                    - name: 编译器和工具错误与警告
+                      tocHref: /cpp/error-messages/
+                      topicHref: /cpp/error-messages/compiler-errors-1/c-cpp-build-errors
             - name: 移植和升级
               tocHref: /cpp/porting/
               topicHref: /cpp/porting/visual-cpp-porting-and-upgrading-guide

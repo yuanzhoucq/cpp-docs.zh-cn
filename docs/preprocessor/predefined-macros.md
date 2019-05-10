@@ -1,7 +1,7 @@
 ---
 title: 预定义的宏
 ms.custom: update_every_version
-ms.date: 11/12/2018
+ms.date: 04/05/2019
 f1_keywords:
 - _ATL_VER
 - __ATOM__
@@ -143,18 +143,18 @@ helpviewer_keywords:
 - _WINRT_DLL macro
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
-ms.openlocfilehash: 9ebc23545817de0f249185700454237c66610c13
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.openlocfilehash: dedcab9b0addd3696749b50fef92b70081981c03
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62179901"
 ---
 # <a name="predefined-macros"></a>预定义的宏
 
-Visual c + + 编译器预定义某些预处理器宏，具体取决于语言 （C 或 c + +）、 编译目标，以及所选的编译器选项。
+Microsoft C /C++编译器 (MSVC) 预定义了某些预处理器宏，具体取决于语言 (C 或C++)，编译目标和所选的编译器选项。
 
-Visual c + + 支持由 ANSI/ISO C99 标准和 ISO C + + 14 标准指定的所需预定义的预处理器宏。 实现还支持多个更多特定于 Microsoft 的预处理器宏。 仅为特定的生成环境或编译器选项定义一些宏。 除非另有说明，如同它们指定为整个翻译单元定义宏 **/D**编译器选项参数。 在定义时，宏扩展到指定的值由编译之前预处理器。 预定义的宏不采用自变量，并且不能重新定义。
+MSVC 支持 ANSI/ISO C99 标准和 ISO C + + 14 和 C + + 17 标准所需的预定义的预处理器宏。 实现还支持多个更多特定于 Microsoft 的预处理器宏。 仅为特定的生成环境或编译器选项定义一些宏。 但另有说明，如同它们指定为整个翻译单元定义宏 **/D**编译器选项参数。 在定义时，宏扩展到指定的值由编译之前预处理器。 预定义的宏不采用自变量，并且不能重新定义。
 
 ## <a name="standard-predefined-identifier"></a>预定义的标准标识符
 
@@ -172,9 +172,9 @@ Visual c + + 支持由 ANSI/ISO C99 标准和 ISO C + + 14 标准指定的所需
 
 编译器支持 ISO C99 和 ISO C + + 17 标准来指定这些预定义的宏。
 
-- **&#95;&#95;cplusplus**在翻译单元作为 c + + 编译时定义为整数文字值。 否则，未定义。
+- **&#95;&#95;cplusplus**翻译单元作为编译时定义为整数文字值C++。 否则，未定义。
 
-- **&#95;&#95;日期&#95;&#95;** 当前源文件的编译日期。 日期是一个常量的长度的字符串文字的窗体*Mmm dd yyyy*。 月份名称*Mmm*等同于中的缩写的月份名称生成的 C 运行时库日期[asctime](../c-runtime-library/reference/asctime-wasctime.md)函数。 日期的第一个字符*dd*如果值小于 10 是一个空格。 始终定义此宏。
+- **&#95;&#95;日期&#95;&#95;** 当前源文件的编译日期。 日期是一个常量的长度的字符串文字的窗体*Mmm dd yyyy*。 月份名称*Mmm*生成的 C 运行时库 (CRT) 的缩写的月份名称相同[asctime](../c-runtime-library/reference/asctime-wasctime.md)函数。 日期的第一个字符*dd*如果值小于 10 是一个空格。 始终定义此宏。
 
 - **&#95;&#95;文件&#95;&#95;** 当前源文件的名称。 **&#95;&#95;文件&#95;&#95;** 扩展到字符的字符串文字。 若要确保显示文件的完整路径，请使用[/FC （完整的源代码文件路径中诊断）](../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md)。 始终定义此宏。
 
@@ -184,13 +184,13 @@ Visual c + + 支持由 ANSI/ISO C99 标准和 ISO C + + 14 标准指定的所需
 
 - **&#95;&#95;STDC&#95;HOSTED&#95; &#95;** 定义为 1，如果实现是*托管实现*，另一个支持整个所需的标准库。 否则，其定义为 0。
 
-- **&#95;&#95;STDCPP&#95;线程&#95;&#95;** 定义为 1，当且仅当一个程序可以有多个线程的执行，并编译为 c + +。 否则，未定义。
+- **&#95;&#95;STDCPP&#95;线程&#95;&#95;** 定义为 1，当且仅当一个程序可以有多个线程的执行，并编译为C++。 否则，未定义。
 
-- **&#95;&#95;时间&#95;&#95;** 预处理过的翻译单元的转换的时间。 时间是一个字符串文字的窗体*hh: mm:*，返回由 C 运行时库的时间相同[asctime](../c-runtime-library/reference/asctime-wasctime.md)函数。 始终定义此宏。
+- **&#95;&#95;时间&#95;&#95;** 预处理过的翻译单元的转换的时间。 时间是一个字符串文字的窗体*hh: mm:*，返回的 CRT 的时间相同[asctime](../c-runtime-library/reference/asctime-wasctime.md)函数。 始终定义此宏。
 
 ## <a name="microsoft-specific-predefined-macros"></a>特定于 Microsoft 的预定义的宏
 
-Microsoft Visual c + + 支持这些其他预定义的宏。
+MSVC 支持这些其他预定义的宏。
 
 - **&#95;&#95;ATOM&#95; &#95;** 定义为 1 时[/favor:ATOM](../build/reference/favor-optimize-for-architecture-specifics.md)设置编译器选项和编译器目标是 x86 或 x64。 否则，未定义。
 
@@ -198,9 +198,9 @@ Microsoft Visual c + + 支持这些其他预定义的宏。
 
 - **&#95;&#95;AVX2&#95; &#95;** 定义为 1 时[/arch:avx2](../build/reference/arch-x86.md)设置编译器选项和编译器目标是 x86 或 x64。 否则，未定义。
 
-- **&#95;CHAR&#95;未签名**定义为 1，如果默认**char**类型是无符号。 此值设置何时[/J (默认 char 类型是无符号)](../build/reference/j-default-char-type-is-unsigned.md)设置编译器选项。 否则，未定义。
+- **&#95;CHAR&#95;未签名**定义为 1，如果默认**char**类型是无符号。 此值定义时[/J (默认 char 类型是无符号)](../build/reference/j-default-char-type-is-unsigned.md)设置编译器选项。 否则，未定义。
 
-- **&#95;&#95;CLR&#95;VER**定义为一个表示公共语言运行时编译应用程序时使用的版本的整数文字。 该值在窗体中编码`Mmmbbbbb`，其中`M`是在运行时的主要版本`mm`是运行时，次要版本和`bbbbb`是生成号。 **&#95;&#95;CLR&#95;VER**如果定义[/clr](../build/reference/clr-common-language-runtime-compilation.md)设置编译器选项。 否则，未定义。
+- **&#95;&#95;CLR&#95;VER**定义为整数文字，用于表示版本的公共语言运行时 (CLR) 用于编译应用程序。 该值在窗体中编码`Mmmbbbbb`，其中`M`是在运行时的主要版本`mm`是运行时，次要版本和`bbbbb`是生成号。 **&#95;&#95;CLR&#95;VER**如果定义[/clr](../build/reference/clr-common-language-runtime-compilation.md)设置编译器选项。 否则，未定义。
 
     ```cpp
     // clr_ver.cpp
@@ -213,7 +213,7 @@ Microsoft Visual c + + 支持这些其他预定义的宏。
 
 - **&#95;控制&#95;数据流&#95;防止**定义为 1 时[/guard: cf （启用控制流保护）](../build/reference/guard-enable-control-flow-guard.md)设置编译器选项。 否则，未定义。
 
-- **&#95;&#95;计数器&#95;&#95;** 展开此项为整数文字，从 0 开始和每次源代码文件中使用时按 1 递增，或者包含的源文件标头。 **&#95;&#95;计数器&#95;&#95;** 当你使用预编译标头时，会记住其状态。 始终定义此宏。
+- **&#95;&#95;计数器&#95;&#95;** 展开此项为整数文字，从 0 开始。 每次它已在源文件中使用或在包含的源文件标头时，该值被递增 1。 **&#95;&#95;计数器&#95;&#95;** 当你使用预编译标头时，会记住其状态。 始终定义此宏。
 
   此示例使用`__COUNTER__`将唯一标识符分配到相同类型的三个不同的对象。 `exampleClass`构造函数采用整数作为参数。 在中`main`，该应用程序声明类型的三个对象`exampleClass`，并使用`__COUNTER__`作为唯一标识符参数：
 
@@ -257,7 +257,7 @@ Microsoft Visual c + + 支持这些其他预定义的宏。
     }
     ```
 
-- **&#95;&#95;cplusplus&#95;cli**定义为整数文字值 200406 在作为 c + + 编译时和一个[/clr](../build/reference/clr-common-language-runtime-compilation.md)设置编译器选项。 否则，未定义。 在定义时，  **&#95; &#95;cplusplus&#95;cli**实际上是整个翻译单元。
+- **&#95;&#95;cplusplus&#95;cli**定义为整数文字值 200406 时编译为C++和一个[/clr](../build/reference/clr-common-language-runtime-compilation.md)设置编译器选项。 否则，未定义。 在定义时，  **&#95; &#95;cplusplus&#95;cli**实际上是整个翻译单元。
 
     ```cpp
     // cplusplus_cli.cpp
@@ -272,7 +272,7 @@ Microsoft Visual c + + 支持这些其他预定义的宏。
     }
     ```
 
-- **&#95;&#95;cplusplus&#95;winrt**定义为整数文字值 201009 在作为 c + + 编译时和[/ZW （Windows 运行时编译）](../build/reference/zw-windows-runtime-compilation.md)设置编译器选项。 否则，未定义。
+- **&#95;&#95;cplusplus&#95;winrt**定义为整数文字值 201009 时编译为C++并[/ZW （Windows 运行时编译）](../build/reference/zw-windows-runtime-compilation.md)设置编译器选项。 否则，未定义。
 
 - **&#95;CPPRTTI**定义为 1，如果[/GR （启用运行时类型信息）](../build/reference/gr-enable-run-time-type-information.md)设置编译器选项。 否则，未定义。
 
@@ -282,15 +282,15 @@ Microsoft Visual c + + 支持这些其他预定义的宏。
 
 - **&#95;DLL**定义为 1 时[/MD](../build/reference/md-mt-ld-use-run-time-library.md)或[/MDd](../build/reference/md-mt-ld-use-run-time-library.md)设置 (多线程 DLL) 编译器选项。 否则，未定义。
 
-- **&#95;&#95;FUNCDNAME&#95; &#95;** 定义为字符串文字包含[修饰名](../build/reference/decorated-names.md)封闭函数。 仅在函数内定义宏。 **&#95; &#95;FUNCDNAME&#95; &#95;** 如果你使用不扩展宏[/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)或者[/P](../build/reference/p-preprocess-to-a-file.md)编译器选项。
+- **&#95;&#95;FUNCDNAME&#95; &#95;** 定义为字符串文字包含[修饰名](../build/reference/decorated-names.md)封闭函数。 仅在函数内定义宏。 **&#95; &#95;FUNCDNAME&#95; &#95;** 如果你使用未展开宏[/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)或者[/P](../build/reference/p-preprocess-to-a-file.md)编译器选项。
 
    此示例使用`__FUNCDNAME__`， `__FUNCSIG__`，和`__FUNCTION__`宏，以显示函数的信息。
 
    [!code-cpp[NVC_Predefined_Macros_Examples#1](../preprocessor/codesnippet/CPP/predefined-macros_1.cpp)]
 
-- **&#95;&#95;FUNCSIG&#95; &#95;** 定义为字符串文字包含封闭函数的签名。 仅在函数内定义宏。 **&#95; &#95;FUNCSIG&#95; &#95;** 如果你使用不扩展宏[/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)或者[/P](../build/reference/p-preprocess-to-a-file.md)编译器选项。 当为 64 位目标编译，调用约定是`__cdecl`默认情况下。 有关用法的示例，请参阅`__FUNCDNAME__`宏。
+- **&#95;&#95;FUNCSIG&#95; &#95;** 定义为字符串文字包含封闭函数的签名。 仅在函数内定义宏。 **&#95; &#95;FUNCSIG&#95; &#95;** 如果你使用未展开宏[/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)或者[/P](../build/reference/p-preprocess-to-a-file.md)编译器选项。 当为 64 位目标编译，调用约定是`__cdecl`默认情况下。 有关用法的示例，请参阅`__FUNCDNAME__`宏。
 
-- **&#95;&#95;函数&#95;&#95;** 定义为包含封闭函数的未修饰的名的字符串文字。 仅在函数内定义宏。 **&#95;&#95;函数&#95;&#95;** 如果你使用不扩展宏[/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)或者[/P](../build/reference/p-preprocess-to-a-file.md)编译器选项。 有关用法的示例，请参阅`__FUNCDNAME__`宏。
+- **&#95;&#95;函数&#95;&#95;** 定义为包含封闭函数的未修饰的名的字符串文字。 仅在函数内定义宏。 **&#95;&#95;函数&#95;&#95;** 如果你使用未展开宏[/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)或者[/P](../build/reference/p-preprocess-to-a-file.md)编译器选项。 有关用法的示例，请参阅`__FUNCDNAME__`宏。
 
 - **&#95;整数&#95;MAX&#95;位**定义为整数文字值 64、 非向量整型类型的最大大小 （以位为单位）。 始终定义此宏。
 
@@ -302,7 +302,7 @@ Microsoft Visual c + + 支持这些其他预定义的宏。
    }
    ```
 
-- **&#95;&#95;INTELLISENSE&#95; &#95;** 定义为 1 期间 IntelliSense 编译器将在 Visual Studio IDE 中传递。 否则，未定义。 可以使用此宏来防止的代码 IntelliSense 编译器不了解，或使用它来生成和智能感知编译器之间切换。 有关详细信息，请参阅[IntelliSense 速度缓慢问题的疑难解答提示](https://blogs.msdn.microsoft.com/vcblog/2011/03/29/troubleshooting-tips-for-intellisense-slowness/)。
+- **&#95;&#95;INTELLISENSE&#95; &#95;** 定义为 1 期间 IntelliSense 编译器将在 Visual Studio IDE 中传递。 否则，未定义。 可以使用此宏来防止的代码 IntelliSense 编译器不了解，或使用它来生成和智能感知编译器之间切换。 有关详细信息，请参阅[IntelliSense 速度缓慢问题的疑难解答提示](https://devblogs.microsoft.com/cppblog/troubleshooting-tips-for-intellisense-slowness/)。
 
 - **&#95;ISO&#95;可变**定义为 1，如果[/volatile: iso](../build/reference/volatile-volatile-keyword-interpretation.md)设置编译器选项。 否则，未定义。
 
@@ -314,13 +314,13 @@ Microsoft Visual c + + 支持这些其他预定义的宏。
 
 - **&#95;M&#95;ARM&#95;ARMV7VE**定义为 1 时[/arch:armv7ve](../build/reference/arch-arm.md)面向 ARM 处理器的编译设置编译器选项。 否则，未定义。
 
-- **&#95;M&#95;ARM&#95;FP**定义为整数文字值，该值指示这[/arch](../build/reference/arch-arm.md)编译器选项已设置，如果编译目标是 ARM 处理器。 否则，未定义。
+- **&#95;M&#95;ARM&#95;FP**定义为整数文字值，该值指示这[/arch](../build/reference/arch-arm.md)编译器选项已设置为 ARM 处理器目标。 否则，未定义。
 
-  - 在范围内如果未 30-39 `/arch` ARM 选项指定了、 已设置，通过该值指示默认体系结构 ARM (`VFPv3`)。
+  - 在范围内 30-39 如果没有值`/arch`ARM 选项指定了、 已设置，通过该值指示默认体系结构 ARM (`VFPv3`)。
 
-  - 在范围内 40-49 如果`/arch:VFPv4`设置。
+  - 一个值的范围中 40-49 如果`/arch:VFPv4`设置。
 
-  - 请参阅[/arch (ARM)](../build/reference/arch-arm.md)有关详细信息。
+  - 有关详细信息，请参阅[/arch (ARM)](../build/reference/arch-arm.md)。
 
 - **&#95;M&#95;ARM64**定义为 1 以 64 位 ARM 处理器为目标的编译。 否则，未定义。
 
@@ -338,7 +338,7 @@ Microsoft Visual c + + 支持这些其他预定义的宏。
 
 - **&#95;M&#95;FP&#95;STRICT**定义为 1，如果[/fp: strict](../build/reference/fp-specify-floating-point-behavior.md)设置编译器选项。 否则，未定义。
 
-- **&#95;M&#95;IX86**定义为整数文本值 600 编译该面向 x86 处理器。 没有为 x64 或 ARM 编译目标定义此宏。
+- **&#95;M&#95;IX86**定义为整数文本值 600 编译该面向 x86 处理器。 X64 或 ARM 编译目标并不被定义此宏。
 
 - **&#95;M&#95;IX86&#95;FP**定义为整数文字值，该值指示[/arch](../build/reference/arch-arm.md)编译器选项的集或默认值。 此宏始终定义编译目标为 x86 处理器。 否则，未定义。 在定义时，值为：
 
@@ -346,23 +346,23 @@ Microsoft Visual c + + 支持这些其他预定义的宏。
 
   - 1，如果`/arch:SSE`编译器选项已设置。
 
-  - 2 个 if `/arch:SSE2`，`/arch:AVX`或`/arch:AVX2`编译器选项已设置。 此值是默认值，如果`/arch`未指定编译器选项。 当`/arch:AVX`指定，则该宏 **&#95; &#95;AVX&#95; &#95;** 还定义。 当`/arch:AVX2`指定，则这两 **&#95; &#95;AVX&#95; &#95;** 并 **&#95; &#95;AVX2&#95; &#95;** 也被定义。
+  - 2 个 if `/arch:SSE2`， `/arch:AVX`，或`/arch:AVX2`编译器选项已设置。 此值是默认值，如果`/arch`未指定编译器选项。 当`/arch:AVX`指定，则该宏 **&#95; &#95;AVX&#95; &#95;** 还定义。 当`/arch:AVX2`指定，则这两 **&#95; &#95;AVX&#95; &#95;** 并 **&#95; &#95;AVX2&#95; &#95;** 也被定义。
 
-  - 请参阅[/arch (x86)](../build/reference/arch-x86.md)有关详细信息。
+  - 有关详细信息，请参阅 [/arch (x86)](../build/reference/arch-x86.md)。
 
 - **&#95;M&#95;X64**定义为整数值 100 的编译该面向 x64 处理器。 否则，未定义。
 
 - **&#95;托管**定义为 1 时[/clr](../build/reference/clr-common-language-runtime-compilation.md)设置编译器选项。 否则，未定义。
 
-- **&#95;MSC&#95;生成**定义为一个包含编译器的版本号的修订号元素的整数文字。 修订版本号是版本号的句点分隔的第四个元素。 例如，如果 Visual c + + 编译器的版本号为 15.00.20706.01，  **&#95;MSC&#95;生成**宏计算结果为 1。 始终定义此宏。
+- **&#95;MSC&#95;生成**定义为一个包含编译器的版本号的修订号元素的整数文字。 修订版本号是版本号的句点分隔的第四个元素。 例如，如果 Microsoft C 的版本号 /C++编译器为 15.00.20706.01，  **&#95;MSC&#95;生成**宏计算结果为 1。 始终定义此宏。
 
-- **&#95;MSC&#95;扩展插件**定义为 1，如果[/Ze （启用语言扩展）](../build/reference/za-ze-disable-language-extensions.md)编译器选项设置，这是默认设置。 否则，未定义。
+- **&#95;MSC&#95;扩展插件**定义为 1，如果在默认[/Ze （启用语言扩展）](../build/reference/za-ze-disable-language-extensions.md)设置编译器选项。 否则，未定义。
 
-- **&#95;MSC&#95;完整&#95;VER**定义为整数文本进行编码主要，次要版本号和生成的编译器的版本号的数字元素。 主版本号是句点分隔的版本号的第一个元素、 次版本号是第二个元素和内部版本号是第三个元素。 例如，如果 Visual c + + 编译器的版本号为 15.00.20706.01，  **&#95;MSC&#95;完全&#95;VER**宏计算结果为 150020706。 输入`cl /?`在命令行查看编译器的版本号。 始终定义此宏。
+- **&#95;MSC&#95;完整&#95;VER**定义为整数文本进行编码主要，次要版本号和生成的编译器的版本号的数字元素。 主版本号是句点分隔的版本号的第一个元素、 次版本号是第二个元素和内部版本号是第三个元素。 例如，如果 Microsoft C 的版本号 /C++编译器为 15.00.20706.01，  **&#95;MSC&#95;完全&#95;VER**宏计算结果为 150020706。 输入`cl /?`在命令行查看编译器的版本号。 始终定义此宏。
 
-- **&#95;MSC&#95;VER**定义为整数文本进行编码的编译器的版本号的主要和次要编号元素。 主版本号是句点分隔的版本号的第一个元素和次版本号是第二个元素。 例如，如果 Visual c + + 编译器的版本号为 17.00.51106.1，  **&#95;MSC&#95;VER**宏计算结果为 1700年。 输入`cl /?`在命令行查看编译器的版本号。 始终定义此宏。
+- **&#95;MSC&#95;VER**定义为整数文本进行编码的编译器的版本号的主要和次要编号元素。 主版本号是句点分隔的版本号的第一个元素和次版本号是第二个元素。 例如，如果 Microsoft C 的版本号 /C++编译器为 17.00.51106.1，  **&#95;MSC&#95;VER**宏计算结果为 1700年。 输入`cl /?`在命令行查看编译器的版本号。 始终定义此宏。
 
-   |Visual Studio 版本|&AMP;#95;MSC&AMP;#95;VER|
+   |Visual Studio 版本|**&#95;MSC&#95;VER**|
    |-|-|
    |Visual Studio 6.0|1200|
    |Visual Studio.NET 2002 (7.0)|1300|
@@ -375,27 +375,28 @@ Microsoft Visual c + + 支持这些其他预定义的宏。
    |Visual Studio 2015 (14.0)|1900|
    |Visual Studio 2017 RTW (15.0)|1910|
    |Visual Studio 2017 版本 15.3|1911|
-   |Visual Studio 2017 版本 15.5|公历 1912 年|
+   |Visual Studio 2017 版本 15.5|1912|
    |Visual Studio 2017 版本 15.6|1913|
    |Visual Studio 2017 15.7 版|1914|
    |Visual Studio 2017 版本 15.8|1915|
    |Visual Studio 2017 版本 15.9|1916|
+   |Visual Studio 2019 RTW (16.0)|1920|
 
-   若要测试的编译器版本或更新的 Visual Studio 或之后的给定版本中，使用 **>=** （大于或等于） 运算符比较 **&#95;MSC&#95;VER**针对已知的版本。 如果有多个版本进行比较以互相排斥的方式，我们建议你进行排序以降序版本号比较。 例如，此代码检查为编译器发布 Visual Studio 2015 及更高版本，然后编译器发布中或之后 Visual Studio 2013 中，然后，将所有编译器 Visual Studio 2013 之前发布的一项操作：
+   若要测试的编译器版本或更新的 Visual Studio 或之后的给定版本中，使用**>=** 运算符。 您可以使用它在条件指令中要比较 **&#95;MSC&#95;VER**针对该已知版本。 如果有多个互斥的版本进行比较，进行排序以降序版本号比较。 例如，此代码将检查发布 Visual Studio 2017 及更高版本的编译器。 接下来，它检查编译器中或 Visual Studio 2015 发布。 然后它会检查所有的编译器 Visual Studio 2015 之前发布：
 
    ```cpp
-   #if _MSC_VER >= 1900
+   #if _MSC_VER >= 1910
    // . . .
-   #elif _MSC_VER >= 1800
+   #elif _MSC_VER >= 1900
    // . . .
    #else
    // . . .
    #endif
    ```
 
-   有关详细信息，请参阅[Visual c + + 编译器版本](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/visual-c-compiler-version/)Visual c + + 团队博客中。
+   有关详细信息，请参阅[可视化C++编译器版本](https://devblogs.microsoft.com/cppblog/visual-c-compiler-version/)microsoftC++团队博客。
 
-- **&#95;MSVC&#95;LANG**定义为整数，指定由编译器针对 c + + 语言标准。 如果宏时编译为 c + +，为整数文字值 201402 L [/std: c + + 14](../build/reference/std-specify-language-standard-version.md)编译器选项设置，或默认情况下; 如果它设置为 201703 L [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)设置编译器选项; 并且设置为更高版本中，未指定值时[/std: c + + 最新](../build/reference/std-specify-language-standard-version.md)。 否则，该宏是不确定的。 **&#95;MSVC&#95;LANG**宏和[/std （指定语言标准版本）](../build/reference/std-specify-language-standard-version.md)编译器选项是在 Visual Studio 2015 Update 3 开始提供。
+- **&#95;MSVC&#95;LANG**定义为整数，指定C++语言标准由编译器作为目标。 仅在编译为代码中设置C++。 该宏是整数文本 201402 L 值默认情况下，或者当[/std: c + + 14](../build/reference/std-specify-language-standard-version.md)指定编译器选项。 如果宏设置为 201703 L [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)指定编译器选项。 设置为更高版本中，未指定值时[/std: c + + 最新](../build/reference/std-specify-language-standard-version.md)指定选项。 否则，该宏是不确定的。  **&#95;MSVC&#95;LANG**宏和[/std （指定语言标准版本）](../build/reference/std-specify-language-standard-version.md)编译器选项是在 Visual Studio 2015 Update 3 开始提供。
 
 - **&#95;&#95;MSVC&#95;运行时&#95;检查**定义为 1 时的[/RTC](../build/reference/rtc-run-time-error-checks.md)设置编译器选项。 否则，未定义。
 
@@ -403,7 +404,7 @@ Microsoft Visual c + + 支持这些其他预定义的宏。
 
 - **&#95;本机&#95;WCHAR&#95;T&#95;定义**定义为 1 时[/zc: wchar_t](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)编译器选项设置。 否则，未定义。
 
-- **&#95;OPENMP**定义为表示由 Visual c + +，实现的 OpenMP 规范日期，如果整数文本 200203 [/openmp （启用 OpenMP 2.0 支持）](../build/reference/openmp-enable-openmp-2-0-support.md)设置编译器选项。 否则，未定义。
+- **&#95;OPENMP**如果定义为整数文字 200203 [/openmp （启用 OpenMP 2.0 支持）](../build/reference/openmp-enable-openmp-2-0-support.md)设置编译器选项。 此值表示由 MSVC 实现的 OpenMP 规范的日期。 否则，未定义。
 
    ```cpp
    // _OPENMP_dir.cpp
@@ -416,19 +417,19 @@ Microsoft Visual c + + 支持这些其他预定义的宏。
 
 - **&#95;PREFAST&#95;** 定义为 1 时[/analyze](../build/reference/analyze-code-analysis.md)设置编译器选项。 否则，未定义。
 
-- **&#95;&#95;时间戳&#95;&#95;** 定义为字符串，其中包含的日期和时间返回 C 运行时库的缩写，常量长度为窗体中的当前的源文件的上次修改[asctime](../c-runtime-library/reference/asctime-wasctime.md)函数，例如， `Fri 19 Aug 13:32:58 2016`。 始终定义此宏。
+- **&#95;&#95;时间戳&#95;&#95;** 定义为一个包含的日期和当前源文件返回的 CRT 的缩写，常量长度形式的上次修改时间的字符串文字[asctime](../c-runtime-library/reference/asctime-wasctime.md)函数，例如， `Fri 19 Aug 13:32:58 2016`。 始终定义此宏。
 
 - **&#95;VC&#95;NODEFAULTLIB**定义为 1 时[/Zl （省略默认库名）](../build/reference/zl-omit-default-library-name.md)设置编译器选项。 否则，未定义。
 
-- **&#95;WCHAR&#95;T&#95;定义**定义为 1 时，默认[/zc: wchar_t](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)设置编译器选项。 **&#95;WCHAR&#95;T&#95;定义**宏定义的但如果不具有任何值`/Zc:wchar_t-`编译器选项设置，并**wchar_t**中包含的系统标头文件中定义应用项目。 否则，未定义。
+- **&#95;WCHAR&#95;T&#95;定义**定义为 1 时，默认[/zc: wchar_t](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)设置编译器选项。  **&#95;WCHAR&#95;T&#95;定义**宏定义的但如果不具有任何值`/Zc:wchar_t-`编译器选项设置，并**wchar_t**中包含的系统标头文件中定义应用项目。 否则，未定义。
 
 - **&#95;WIN32**定义为 1 编译目标为 32 位 ARM x86，在 64 位 ARM 或 x64。 否则，未定义。
 
 - **&#95;WIN64**编译目标为 64 位 ARM 或 x64 时定义为 1。 否则，未定义。
 
-- **&#95;WINRT&#95;DLL**定义为 1 时编译为 c + + 和同时[/ZW （Windows 运行时编译）](../build/reference/zw-windows-runtime-compilation.md)并[/LD 或 /LDd](../build/reference/md-mt-ld-use-run-time-library.md)编译器选项设置。 否则，未定义。
+- **&#95;WINRT&#95;DLL**定义为 1 时编译为C++且两[/ZW （Windows 运行时编译）](../build/reference/zw-windows-runtime-compilation.md)并[/LD 或 /LDd](../build/reference/md-mt-ld-use-run-time-library.md)设置编译器选项。 否则，未定义。
 
-用于确定 ATL 或 MFC 库版本的预处理器宏不是由编译器预定义的。 这些宏是在库、 标头中定义，因此它们未定义的预处理器指令中包含必需的标头之前。
+由编译器预定义标识 ATL 或 MFC 库版本没有预处理器宏。 ATL 和 MFC 库标头在内部定义这些版本的宏。 它们是必需的标头包含之前的预处理器指令中未定义。
 
 - **&#95;ATL&#95;VER**中定义\<atldef.h > 作为整形文本进行编码的 ATL 版本编号。
 

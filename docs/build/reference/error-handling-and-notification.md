@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - error handling, and notification
 ms.assetid: b621cf60-d869-451a-b05e-dc86d78addaa
-ms.openlocfilehash: 7aae4d68b272a6c12233f283d4b263648062b7c1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 29fe46e15712609ec0c4f268749aaefed103117e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293181"
 ---
 # <a name="error-handling-and-notification"></a>错误处理和通知
 
 错误处理和通知的详细信息，请参阅[了解 Helper 函数](understanding-the-helper-function.md)。
 
-挂钩函数的详细信息，请参阅[结构和常量定义](../../build/reference/structure-and-constant-definitions.md)。
+挂钩函数的详细信息，请参阅[结构和常量定义](structure-and-constant-definitions.md)。
 
 如果程序使用延迟加载 Dll，它必须处理错误能够稳定地因为该程序运行期间发生的失败会导致未经处理的异常。 失败处理包含两个部分：
 
@@ -27,12 +27,12 @@ ms.locfileid: "57418940"
 
 以下主题讨论错误处理和通知：
 
-- [通知挂钩](../../build/reference/notification-hooks.md)
+- [通知挂钩](notification-hooks.md)
 
-- [失败挂钩](../../build/reference/failure-hooks.md)
+- [失败挂钩](failure-hooks.md)
 
-- [异常](../../build/reference/exceptions-c-cpp.md)
+- [异常](exceptions-c-cpp.md)
 
 ## <a name="see-also"></a>请参阅
 
-[延迟加载 DLL 的链接器支持](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+[延迟加载 DLL 的链接器支持](linker-support-for-delay-loaded-dlls.md)

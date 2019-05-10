@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Os compiler option [C++]
 - -Os compiler option [C++]
 ms.assetid: 9a340806-fa15-4308-892c-355d83cac0f2
-ms.openlocfilehash: c2abf23c15e6550a6d115f2e2b41a9c59de5fa3a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d4e8d062685a543c428f0c86a22c17c8faf017ad
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320170"
 ---
 # <a name="os-ot-favor-small-code-favor-fast-code"></a>/Os、/Ot（代码大小优先、代码速度优先）
 
@@ -37,14 +37,14 @@ ms.locfileid: "57424634"
 
 ## <a name="remarks"></a>备注
 
-**/Os** （倾向于代码） 通过指示编译器大小优先于速度降至最低 Exe 和 Dll 的大小。 为机器代码的功能上类似序列，编译器可以减少许多 C 和 c + + 构造。 这些差异有时提供大小和速度的折衷。 **/Os**并 **/Ot**选项，可以指定一个首选项：
+**/Os** （倾向于代码） 通过指示编译器大小优先于速度降至最低 Exe 和 Dll 的大小。 编译器可以减少许多 C 和C++为机器代码的功能上类似序列构造。 这些差异有时提供大小和速度的折衷。 **/Os**并 **/Ot**选项，可以指定一个首选项：
 
-**/Ot** （优选代码速度） 指示编译器优选速度而非大小，从而最大化 Exe 和 Dll 的速度。 （这是默认值）。为机器代码的功能上类似序列，编译器可以减少许多 C 和 c + + 构造。 有时，这些差异提供大小和速度的折衷。 /Ot 选项隐含的最大化速度 ([/o2](../../build/reference/o1-o2-minimize-size-maximize-speed.md)) 选项。 **/O2**选项组合多个选项以生成速度非常快的代码。
+**/Ot** （优选代码速度） 指示编译器优选速度而非大小，从而最大化 Exe 和 Dll 的速度。 （这是默认值）。编译器可以减少许多 C 和C++为机器代码的功能上类似序列构造。 有时，这些差异提供大小和速度的折衷。 /Ot 选项隐含的最大化速度 ([/o2](o1-o2-minimize-size-maximize-speed.md)) 选项。 **/O2**选项组合多个选项以生成速度非常快的代码。
 
-如果您使用 **/Os**或 **/Ot**，则还必须指定[/Og](../../build/reference/og-global-optimizations.md)以优化的代码。
+如果您使用 **/Os**或 **/Ot**，则还必须指定[/Og](og-global-optimizations.md)以优化的代码。
 
 > [!NOTE]
->  通过分析测试运行收集的信息将覆盖本应有效如果指定的优化 **/Ob**， **/Os**，或 **/Ot**。 有关详细信息[按配置文件优化](../../build/reference/profile-guided-optimizations.md)。
+>  通过分析测试运行收集的信息将覆盖本应有效如果指定的优化 **/Ob**， **/Os**，或 **/Ot**。 有关详细信息[按配置文件优化](../profile-guided-optimizations.md)。
 
 **x86 Specific**
 
@@ -86,7 +86,7 @@ sub    eax, ecx
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
 1. 单击 **“C/C++”** 文件夹。
 
@@ -100,6 +100,6 @@ sub    eax, ecx
 
 ## <a name="see-also"></a>请参阅
 
-[/O 选项（优化代码）](../../build/reference/o-options-optimize-code.md)<br/>
-[编译器选项](../../build/reference/compiler-options.md)<br/>
-[设置编译器选项](../../build/reference/setting-compiler-options.md)
+[/O 选项（优化代码）](o-options-optimize-code.md)<br/>
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)

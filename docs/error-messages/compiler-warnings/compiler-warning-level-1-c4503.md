@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4503
 ms.assetid: 7c5a98ae-5b6d-41d8-b881-12d3ffd5e392
 ms.openlocfilehash: 94c88511d87c3adf3cf5687a94948c83ebc5b3d5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160973"
 ---
 # <a name="compiler-warning-level-1-c4503"></a>编译器警告（等级 1）C4503
 
@@ -23,7 +23,7 @@ ms.locfileid: "50459782"
 
 修饰的名的长度超出编译器限制 (4096)，已被截断。 若要避免此警告和截断，减少参数的数目或使用的标识符的名称长度。 修饰名超过编译器限制具有哈希应用并不处于名称冲突的危险。
 
-当你的代码包含模板时使用较旧版本的 Visual Studio，可以发出此警告重复上模板专用化。 例如，映射将映射 （从 c + + 标准库）。 在这种情况下，您可以使您 typedef 类型 (**结构**，例如)，其中包含该映射。
+当你的代码包含模板时使用较旧版本的 Visual Studio，可以发出此警告重复上模板专用化。 例如，映射的映射 (从C++标准库)。 在这种情况下，您可以使您 typedef 类型 (**结构**，例如)，其中包含该映射。
 
 但是，您可能决定不重构你的代码。  可以发布的应用程序生成 C4503，但如果截断符号上遇到链接时错误，它可以是更难以确定中错误的符号的类型。 调试可能还会更加困难;调试器可能无法映射到的类型名称的符号名称。 正确性的程序，但是，不受被截断的名称。
 

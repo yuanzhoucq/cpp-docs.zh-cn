@@ -36,12 +36,12 @@ helpviewer_keywords:
 - strings [C++], ATL class
 - CSimpleStringT class
 ms.assetid: 15814fcb-5b8f-4425-a97e-3b61fc9b48d8
-ms.openlocfilehash: 93cb3ae0b2f358f64f0d6de26899d1b08f275b7b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1ec28ed5b2f5428cabcf7570c7ac53904e9a64f0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252627"
 ---
 # <a name="csimplestringt-class"></a>CSimpleStringT 类
 
@@ -79,7 +79,7 @@ class CSimpleStringT
 |名称|描述|
 |----------|-----------------|
 |[CSimpleStringT::CSimpleStringT](#ctor)|构造`CSimpleStringT`以各种方式的对象。|
-|[CSimpleStringT:: ~ CSimpleStringT](#dtor)|析构函数。|
+|[CSimpleStringT::~CSimpleStringT](#dtor)|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
@@ -116,12 +116,12 @@ class CSimpleStringT
 |----------|-----------------|
 |[CSimpleStringT::operator PCXSTR](#operator_pcxstr)|直接访问存储在字符`CSimpleStringT`对象作为 C 样式字符串。|
 |[CSimpleStringT::operator\[\]](#operator_at)|返回位于给定位置处的字符 — 运算符替换为`GetAt`。|
-|[CSimpleStringT::operator + =](#operator_add_eq)|连接到现有字符串的末尾的新字符串。|
+|[CSimpleStringT::operator +=](#operator_add_eq)|连接到现有字符串的末尾的新字符串。|
 |[CSimpleStringT::operator =](#operator_eq)|将一个新值赋给`CSimpleStringT`对象。|
 
 ### <a name="remarks"></a>备注
 
-`CSimpleStringT` 是由 Visual c + + 支持的各种字符串类的基类。 它提供对基本缓冲区操作的字符串对象的内存管理的最小支持。 对于更高级的字符串对象，请参阅[CStringT 类](../../atl-mfc-shared/reference/cstringt-class.md)。
+`CSimpleStringT` 是视觉对象支持的各种字符串类的基类C++。 它提供对基本缓冲区操作的字符串对象的内存管理的最小支持。 对于更高级的字符串对象，请参阅[CStringT 类](../../atl-mfc-shared/reference/cstringt-class.md)。
 
 ### <a name="requirements"></a>要求
 
@@ -322,7 +322,7 @@ void Empty() throw();
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[字符串： CString 异常清理](../cstring-exception-cleanup.md)。
+有关详细信息，请参阅[字符串：CString 异常清理](../cstring-exception-cleanup.md)。
 
 ### <a name="example"></a>示例
 
@@ -740,7 +740,7 @@ XCHAR operator[](int iChar) const;
 > [!NOTE]
 >  您可以使用下标 (**[]**) 运算符来获取的值中的字符`CSimpleStringT`，但不能使用它来更改中的字符值`CSimpleStringT`。
 
-##  <a name="operator_add_eq"></a>  CSimpleStringT::operator + =
+##  <a name="operator_add_eq"></a>  CSimpleStringT::operator +=
 
 联接到现有字符串的末尾的新字符串或字符。
 
@@ -1175,7 +1175,7 @@ void UnlockBuffer() throw();
 
 `CSimpleStringT`析构函数自动调用`UnlockBuffer`以确保调用的析构函数时未锁定缓冲区。 此方法的示例，请参阅[LockBuffer](#lockbuffer)。
 
-##  <a name="dtor"></a>  CSimpleStringT:: ~ CSimpleStringT
+##  <a name="dtor"></a>  CSimpleStringT::~CSimpleStringT
 
 销毁 `CSimpleStringT` 对象。
 

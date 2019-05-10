@@ -23,12 +23,12 @@ helpviewer_keywords:
 - wcsrtombs_s function
 - wide characters, strings
 ms.assetid: 9dccb766-113c-44bb-9b04-07a634dddec8
-ms.openlocfilehash: 9ece21737b1e0b4d157b241286638ac376843fc6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd965271a65fa91b427c7af7bbd4173b129e1d8c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62188566"
 ---
 # <a name="wcsrtombss"></a>wcsrtombs_s
 
@@ -58,7 +58,7 @@ errno_t wcsrtombs_s(
 ### <a name="parameters"></a>参数
 
 *pReturnValue*<br/>
-要转换的字符数。
+以字节为单位包括 null 终止符的已转换字符串的大小。
 
 *mbstr*<br/>
 生成的已转换多字节字符字符串的缓冲区的地址。
@@ -114,7 +114,7 @@ errno_t wcsrtombs_s(
 
 在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
-## <a name="exceptions"></a>异常
+## <a name="exceptions"></a>Exceptions
 
 **Wcsrtombs_s**函数是多线程安全，只要当前线程中的函数不调用**setlocale**执行此函数时， *mbstate*为 null。
 

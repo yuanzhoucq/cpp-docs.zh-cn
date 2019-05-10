@@ -5,25 +5,25 @@ f1_keywords:
 - CWindowImpl
 - ATLWIN/ATL::CWindowImpl
 - ATLWIN/ATL::CWindowImpl::Create
-- ATLWIN/ATL::DefWindowProc
-- ATLWIN/ATL::GetCurrentMessage
-- ATLWIN/ATL::GetWindowProc
-- ATLWIN/ATL::OnFinalMessage
-- ATLWIN/ATL::SubclassWindow
-- ATLWIN/ATL::UnsubclassWindow
-- ATLWIN/ATL::GetWndClassInfo
-- ATLWIN/ATL::WindowProc
-- ATLWIN/ATL::m_pfnSuperWindowProc
+- ATLWIN/ATL::CWindowImpl::DefWindowProc
+- ATLWIN/ATL::CWindowImpl::GetCurrentMessage
+- ATLWIN/ATL::CWindowImpl::GetWindowProc
+- ATLWIN/ATL::CWindowImpl::OnFinalMessage
+- ATLWIN/ATL::CWindowImpl::SubclassWindow
+- ATLWIN/ATL::CWindowImpl::UnsubclassWindow
+- ATLWIN/ATL::CWindowImpl::GetWndClassInfo
+- ATLWIN/ATL::CWindowImpl::WindowProc
+- ATLWIN/ATL::CWindowImpl::m_pfnSuperWindowProc
 helpviewer_keywords:
 - CWindowImpl class
 - subclassing windows, ATL
 ms.assetid: 02eefd45-a0a6-4d1b-99f6-dbf627e2cc2f
-ms.openlocfilehash: 96807debc7a3af5eca5d7a0c17a7728431733325
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f835f2869af20a1cb22595837c317eb165ef5fe9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62276882"
 ---
 # <a name="cwindowimpl-class"></a>CWindowImpl 类
 
@@ -93,9 +93,7 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 > [!NOTE]
 >  由于 `CWndClassInfo` 只管理一个窗口类的信息，所以通过 `CWindowImpl` 实例创建的每个窗口都基于同一个窗口类。
 
-`CWindowImpl` 还支持窗口子类化。 
-  `SubclassWindow` 方法将现有的窗口附加到 `CWindowImpl` 对象并将窗口过程更改为 `CWindowImpl::WindowProc`。 
-  `CWindowImpl` 的每个实例可以子类化其他窗口。
+`CWindowImpl` 还支持窗口子类化。 `SubclassWindow` 方法将现有的窗口附加到 `CWindowImpl` 对象并将窗口过程更改为 `CWindowImpl::WindowProc`。 `CWindowImpl` 的每个实例可以子类化其他窗口。
 
 > [!NOTE]
 >  对于任何给定`CWindowImpl`对象，请调用`Create`或`SubclassWindow`。 不要对同一对象调用两种方法。

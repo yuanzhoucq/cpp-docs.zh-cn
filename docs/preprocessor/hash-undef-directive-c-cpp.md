@@ -1,5 +1,5 @@
 ---
-title: '#undef 指令 （C/c + +）'
+title: '#undef 指令 (C /C++)'
 ms.date: 11/04/2016
 f1_keywords:
 - '#undef'
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - undef directive (#undef)
 - preprocessor, directives
 ms.assetid: 88900e0e-2c19-4a63-b681-f3d3133c24ca
-ms.openlocfilehash: cb3a08165e41f336df0e141f50310f191cd83257
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4f4f5ce244be6d7f4e13d7a2abc5d21232c08d9d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409845"
 ---
 # <a name="undef-directive-cc"></a>#undef 指令 (C/C++)
 移除（取消定义）之前使用 `#define` 创建的名称。

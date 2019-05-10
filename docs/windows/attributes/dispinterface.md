@@ -1,17 +1,17 @@
 ---
-title: 调度接口 （c + + COM 属性）
+title: 调度接口 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.dispinterface
 helpviewer_keywords:
 - dispinterface attribute
 ms.assetid: 61c5a4a1-ae92-47e9-8ee4-f847be90172b
-ms.openlocfilehash: d0ace76fdbbc1ff930bccb4e6fc203895b4f1637
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6fd5010dc20d03c518206d81919e3beafbcaa9a9
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677274"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346299"
 ---
 # <a name="dispinterface"></a>dispinterface
 
@@ -50,7 +50,7 @@ dispinterface helloPro
 |-|-|
 |**适用对象**|**interface**|
 |**可重复**|否|
-|**必需的特性**|无|
+|**必需的特性**|None|
 |**无效的特性**|`dual`, `object`, `oleautomation`, `local`, `ms_union`|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。

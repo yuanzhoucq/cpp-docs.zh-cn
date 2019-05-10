@@ -1,6 +1,6 @@
 ---
 title: runtime_exception 类
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - runtime_exception
 - AMPRT/runtime_exception
@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - runtime_exception class
 ms.assetid: 8fe3ce2c-3d4c-4b9c-95e8-e592f37adefd
-ms.openlocfilehash: 5260d2f1d2e5a6a6498d501599037a90bc7bc9a0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 024ede0f05dfd646bcebe7acd2cfb86b5c54f6d1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62352723"
 ---
 # <a name="runtimeexception-class"></a>runtime_exception 类
 
@@ -39,7 +39,7 @@ class runtime_exception : public std::exception;
 
 |名称|描述|
 |----------|-----------------|
-|[get_error_code](#runtime_exception__get_error_code)|返回导致异常的错误代码。|
+|[get_error_code](#get_error_code)|返回导致异常的错误代码。|
 
 ### <a name="public-operators"></a>公共运算符
 
@@ -59,7 +59,7 @@ class runtime_exception : public std::exception;
 
 **命名空间：** 并发
 
-## <a name="runtime_exception__ctor"></a>  runtime_exception 构造函数
+## <a name="ctor"></a>  runtime_exception 构造函数
 
 初始化类的新实例。
 
@@ -102,7 +102,7 @@ runtime_exception(
 virtual ~runtime_exception() throw();
 ```
 
-## <a name="runtime_exception__get_error_code"></a>  get_error_code
+## <a name="geterrorcode"></a>get_error_code
 
 返回导致异常的错误代码。
 
@@ -116,7 +116,7 @@ HRESULT get_error_code() const throw();
 
 导致异常的错误的 HRESULT。
 
-## <a name="runtime_exception__operator_eq"></a>operator=
+## <a name="operator_eq"></a>operator=
   将指定的内容复制`runtime_exception`到此对象。
 
 ### <a name="syntax"></a>语法

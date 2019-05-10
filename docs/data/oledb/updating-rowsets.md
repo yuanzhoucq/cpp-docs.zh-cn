@@ -7,12 +7,12 @@ helpviewer_keywords:
 - updating rowsets
 - rowsets
 ms.assetid: 39588758-5c72-4254-a10d-cc2b1f473357
-ms.openlocfilehash: fb915a2f61c2adfedc41630e637f6b5beee30768
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7151d897469993b2f9be3575eb11a08844af3c69
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389055"
 ---
 # <a name="updating-rowsets"></a>更新行集合
 

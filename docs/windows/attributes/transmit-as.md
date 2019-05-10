@@ -1,17 +1,17 @@
 ---
-title: transmit_as （c + + COM 属性）
+title: transmit_as (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.transmit_as
 helpviewer_keywords:
 - transmit_as attribute
 ms.assetid: 53d0b8ab-5b06-423e-83eb-3d01a10424b2
-ms.openlocfilehash: 546b4c4b32837b46c48eafbe12e991bb6c1630ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e432d1a8f39cbc5e12f192ed7b07c29421bc403e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407167"
 ---
 # <a name="transmitas"></a>transmit_as
 
@@ -30,7 +30,7 @@ ms.locfileid: "50573246"
 
 ## <a name="remarks"></a>备注
 
-**Transmit_as** c + + 属性具有相同的功能[transmit_as](/windows/desktop/Midl/transmit-as) MIDL 特性。
+**Transmit_as** C++属性具有相同的功能[transmit_as](/windows/desktop/Midl/transmit-as) MIDL 特性。
 
 ## <a name="example"></a>示例
 
@@ -72,8 +72,8 @@ struct _TREE_NODE_TYPE * right;
 |-|-|
 |**适用对象**|**typedef**|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

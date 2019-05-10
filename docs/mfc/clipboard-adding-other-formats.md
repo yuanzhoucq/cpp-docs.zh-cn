@@ -9,12 +9,12 @@ helpviewer_keywords:
 - registering custom Clipboard data formats
 - custom Clipboard data formats
 ms.assetid: aea58159-65ed-4385-aeaa-3d9d5281903b
-ms.openlocfilehash: 16e949973ff621b1e4e36475d95763ac47b4a00d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 182abe71ccc9552c113ebb114b4351178e48b096
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62151859"
 ---
 # <a name="clipboard-adding-other-formats"></a>剪贴板：添加其他格式
 
@@ -36,7 +36,7 @@ ms.locfileid: "57280213"
 
 1. 通过调用添加标准格式`COleDataSource::CacheGlobalData`你想要支持每种标准格式。
 
-MFC OLE 示例程序中使用此技术[HIERSVR](../visual-cpp-samples.md) (检查`OnGetClipboardData`成员函数**CServerItem**类)。 在此示例中唯一的区别是第三步未实现，因为 HIERSVR 不支持任何其他标准格式。
+MFC OLE 示例程序中使用此技术[HIERSVR](../overview/visual-cpp-samples.md) (检查`OnGetClipboardData`成员函数**CServerItem**类)。 在此示例中唯一的区别是第三步未实现，因为 HIERSVR 不支持任何其他标准格式。
 
 ### <a name="what-do-you-want-to-know-more-about"></a>你想要了解更多信息
 

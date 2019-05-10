@@ -1,6 +1,6 @@
 ---
-title: 编译器错误 C2600 到 C2699
-ms.date: 11/17/2017
+title: 编译器错误 C2600 - C2699
+ms.date: 04/21/2019
 f1_keywords:
 - C2604
 - C2606
@@ -52,14 +52,14 @@ helpviewer_keywords:
 - C2686
 - C2697
 ms.assetid: 73c6319f-cbea-4a2f-913b-90dc1af61f64
-ms.openlocfilehash: af173a04f9ae1e8a3ec4c9b3c869a4e51867cf1b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ac5f5724490574aecf0e5b542f6fdd42b0ae5bb
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518646"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857054"
 ---
-# <a name="compiler-errors-c2600-through-c2699"></a>编译器错误 C2600 到 C2699
+# <a name="compiler-errors-c2600-through-c2699"></a>编译器错误 C2600 - C2699
 
 在本部分文档中的文章说明了由编译器生成的错误消息的子集。
 
@@ -72,8 +72,8 @@ ms.locfileid: "50518646"
 |[编译器错误 C2600](compiler-error-c2600.md)|'*函数*： 不能定义编译器生成的特殊成员函数 （必须在类中首先声明）|
 |[编译器错误 C2601](compiler-error-c2601.md)|'*函数*： 本地函数定义是非法的|
 |[编译器错误 C2602](compiler-error-c2602.md)|'*类*::*标识符*'不是基类的成员'*类*|
-|[编译器错误 C2603](compiler-error-c2603.md)|'*函数*： 太多块范围静态对象构造函数/析构函数在函数中使用|
-|编译器错误 C2604|'*标识符*： 不能实现多个接口方法|
+|[编译器错误 C2603](compiler-error-c2603.md)|'*函数*:太多块范围静态对象构造函数/析构函数在函数中使用|
+|编译器错误 C2604|'*标识符*:不能实现多个接口方法|
 |[编译器错误 C2605](compiler-error-c2605.md)|'*标识符*： 托管/WinRT 类中的此方法保留字|
 |编译器错误 C2606|'*class1*： 无法重新实现*成员*'，因为它从运行时基本继承'*class2*|
 |编译器错误 C2607|静态断言失败|
@@ -168,3 +168,8 @@ ms.locfileid: "50518646"
 |[编译器错误 C2696](compiler-error-c2696.md)|无法创建临时对象的托管 WinRT 类型*类型*|
 |编译器错误 C2697|已过时。|
 |[编译器错误 C2698](compiler-error-c2698.md)|using 声明为*declaration1*不能同时存在与现有 using 声明为*declaration2*|
+
+## <a name="see-also"></a>请参阅
+
+[C /C++编译器和生成工具错误和警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[编译器错误 C2000-C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - strings [C++], memory management
 - CStringT class, memory management
 ms.assetid: 88b8342d-19b5-48c4-9cf6-e4c44cece21e
-ms.openlocfilehash: f45aac11f0c42aecf8c72cf6f7d1630d50b780f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f83b088becf97ca3d8779a537e42369b4a8c832
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62235193"
 ---
 # <a name="memory-management-with-cstringt"></a>使用 CStringT 进行内存管理
 
@@ -31,9 +31,8 @@ ms.locfileid: "50598010"
 
 - [自定义字符串管理器的实现（高级方法）](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md)
 
-- [CFixedStringT： 示例的自定义字符串管理器](../atl-mfc-shared/cfixedstringt-example-of-a-custom-string-manager.md)
+- [CFixedStringT：自定义字符串管理器的一个示例](../atl-mfc-shared/cfixedstringt-example-of-a-custom-string-manager.md)
 
 ## <a name="see-also"></a>请参阅
 
-[CustomString 示例](../visual-cpp-samples.md)
-
+[CustomString 示例](../overview/visual-cpp-samples.md)

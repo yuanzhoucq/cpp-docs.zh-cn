@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - inject_statement attribute
 ms.assetid: 07d6f0f4-d9fb-4e18-aa62-f235f142ff5e
-ms.openlocfilehash: cf7d06eddb5ae6d08f57fb82613d97c7dcc36074
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 237ca796028aad7aff55442eb2806fe400330a29
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383719"
 ---
 # <a name="injectstatement"></a>inject_statement
 
-**C + + 专用**
+**C++特定**
 
 将其自变量作为源文本插入类型库标头。
 
@@ -34,7 +34,7 @@ inject_statement("source_text")
 
 该文本放置在用于将类型库内容包装在标头文件中的命名空间声明的开头。
 
-**结束 c + + 专用**
+**结束C++特定**
 
 ## <a name="see-also"></a>请参阅
 

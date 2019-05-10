@@ -1,17 +1,17 @@
 ---
-title: readonly （c + + COM 属性）
+title: readonly (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.readonly
 helpviewer_keywords:
 - readonly attribute
 ms.assetid: 1246cadd-5304-43a9-beea-51153d12704d
-ms.openlocfilehash: d174399b213bc6c8dbaeb0a01f3e457cfcf3a3e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7eea071b62130c65fbb46ebc8827fc2b428c4c0c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653032"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407336"
 ---
 # <a name="readonly-c"></a>readonly (C++)
 
@@ -55,8 +55,8 @@ __interface IFireTabCtrl
 |-|-|
 |**适用对象**|接口方法|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

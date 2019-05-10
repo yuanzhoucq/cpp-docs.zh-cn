@@ -1,18 +1,16 @@
 ---
 title: DCOMCNFG
 ms.date: 11/04/2016
-f1_keywords:
-- DCOMCNFG
 helpviewer_keywords:
 - DCOMCNFG utility
 - DCOM, configuring in ATL
 ms.assetid: 5a8126e9-ef27-40fb-a66e-9dce8d1a7e80
-ms.openlocfilehash: 4845093d3343e899a18c707846145c2630d7ac1d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a389a46cd02b40cef46d687743fd3416cc4f3154
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62250779"
 ---
 # <a name="dcomcnfg"></a>DCOMCNFG
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE DB provider templates [C++], about OLE DB provider templates
 - templates [C++], OLE DB
 ms.assetid: fccff85f-2af8-4500-82bd-6312d28a74b8
-ms.openlocfilehash: c88e03f509da3c97c270e308dc6dd44e3b44aeb7
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 793aa08630ec92f99c33c2a4f3688e78630a6c58
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62361251"
 ---
 # <a name="ole-db-provider-templates-c"></a>OLE DB 提供程序模板 (C++)
 
@@ -26,7 +26,7 @@ OLE DB 访问接口是为使用者对象的接口调用服务的 COM 对象的�
 
 提供程序可以是简单或复杂。 提供程序可以通过实现更多的接口来支持最少量的功能或成熟的生产质量提供程序。 提供程序可以返回一个表，允许客户端确定该表的格式并对该数据执行操作。
 
-每个提供程序实现一组标准的 COM 对象以处理来自客户端，与标准的含义的请求任何 OLE DB 使用者可以从任何提供程序，而不考虑语言 （如 c + + 和基本） 访问数据。
+每个提供程序实现一组标准的 COM 对象以处理来自客户端请求、 使用标准意味着任何 OLE DB 使用者可以从任何提供程序，而不考虑语言访问的数据 (如C++和基本版)。
 
 每个 COM 对象包含多个接口，其中一些是必需，其中一些是可选。 通过实现必需的接口，提供程序可保证最低任何的级别客户端应该能够使用的功能 （称为符合性）。 一个提供程序可以实现以提供其他功能的可选接口。 [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)介绍这些接口的详细信息。 客户端应始终调用`QueryInterface`以确定提供程序是否支持给定的接口。
 
@@ -38,9 +38,9 @@ OLE DB 提供程序模板支持 OLE DB 版本 2.7 规范。 使用 OLE DB 提供
 
 ## <a name="when-do-you-need-to-create-an-ole-db-provider"></a>你需要时创建的 OLE DB 访问接口？
 
-您始终不需要创建自己的提供程序;Microsoft 提供了多个中的预打包、 标准提供商**数据链接属性**Visual c + + 中的对话框。 若要创建的 OLE DB 访问接口的主要原因是利用通用数据访问策略。 因此是一些这样做的优点：
+您始终不需要创建自己的提供程序;Microsoft 提供了多个中的预打包、 标准提供商**数据链接属性**视觉对象中的对话框中C++。 若要创建的 OLE DB 访问接口的主要原因是利用通用数据访问策略。 因此是一些这样做的优点：
 
-- 通过任何语言如 c + +、 Basic 和 Visual Basic Scripting Edition 访问数据。 它允许你的组织中不同程序员访问相同的数据相同的方式，而不考虑它们使用何种语言。
+- 如通过任何语言访问数据C++，Basic 和 Visual Basic Scripting Edition。 它允许你的组织中不同程序员访问相同的数据相同的方式，而不考虑它们使用何种语言。
 
 - 打开到 SQL Server、 Excel 和 Access 等其他数据源数据。 这很有用，如果你想要在不同的格式中间传输数据。
 
@@ -56,8 +56,8 @@ OLE DB 提供程序模板支持 OLE DB 版本 2.7 规范。 使用 OLE DB 提供
 
 提供程序可以在复杂程度和功能会有很大。 最好将提供程序分类为只读的提供程序和可更新的提供程序：
 
-- Visual c + + 6.0 支持仅只读提供程序。 [创建 OLE DB 提供程序](../../data/oledb/creating-an-ole-db-provider.md)讨论如何创建只读提供程序。
-- Visual c + + 支持可更新的提供程序，可以更新 （写入） 数据存储区。 有关可更新的提供程序的信息，请参阅[创建可更新的提供程序](../../data/oledb/creating-an-updatable-provider.md); [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)示例是可更新的提供程序的一个示例。
+- Visual C++ 6.0 支持仅只读提供程序。 [创建 OLE DB 提供程序](../../data/oledb/creating-an-ole-db-provider.md)讨论如何创建只读提供程序。
+- VisualC++支持可更新的提供程序，可以更新 （写入） 数据存储区。 有关可更新的提供程序的信息，请参阅[创建可更新的提供程序](../../data/oledb/creating-an-updatable-provider.md); [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)示例是可更新的提供程序的一个示例。
 
 有关详细信息，请参见:
 

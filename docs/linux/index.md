@@ -2,12 +2,12 @@
 layout: LandingPage
 title: 使用 C++ 文档的 Linux 开发
 description: 创建和调试在 Linux 上运行的应用程序。
-ms.openlocfilehash: 78615df211381ec419b4fb46cac7a0ce8057c78e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 516b57ca976ddd89081581978c6ac5f86c64876e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393137"
 ---
 # <a name="linux-development-with-c-documentation"></a>使用 C++ 文档的 Linux 开发
 
@@ -64,8 +64,8 @@ ms.locfileid: "50461471"
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <h3><a href="/cpp/visual-cpp-in-visual-studio">Visual C++</a></h3>
-                        <p><a href="/cpp/ide/ide-and-tools-for-visual-cpp-development">用于 Visual C++ 开发的 IDE 和工具</a></p>
+                        <h3><a href="/cpp/overview/visual-cpp-in-visual-studio.md">Visual C++</a></h3>
+                        <p><a href="/cpp/overview-of-cpp-development">用于 Visual C++ 开发的 IDE 和工具</a></p>
                     </div>
                 </div>
             </div>

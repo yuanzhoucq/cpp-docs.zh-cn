@@ -1,27 +1,27 @@
 ---
-title: 如何：配置 Visual c + + 项目以面向 64 位 x64 平台
+title: 如何：配置 Visual StudioC++项目迁移至目标 64 位 x64 平台
 ms.date: 11/04/2016
 helpviewer_keywords:
 - platforms [C++], 64-bit
 - 64-bit programming [C++], configuring projects
 - project configurations [C++]
 ms.assetid: 2b9ae001-df36-4750-83b2-982145d632ad
-ms.openlocfilehash: 17255a5671880063f030ed0087c1fa839c5a14ef
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
-ms.translationtype: MT
+ms.openlocfilehash: a063c2f333a755ab86a4f91c9d14d0c65a6d1414
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421360"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446393"
 ---
-# <a name="how-to-configure-visual-c-projects-to-target-64-bit-x64-platforms"></a>如何：配置 Visual c + + 项目以面向 64 位 x64 平台
+# <a name="how-to-configure-visual-studio-c-projects-to-target-64-bit-x64-platforms"></a>如何：配置 Visual StudioC++项目迁移至目标 64 位 x64 平台
 
-可以使用 Visual Studio IDE 中的项目配置来设置 c + + 应用程序以面向 64 位 x64 平台。 还可以将 Win32 项目设置迁移到 64 位项目配置。
+可以使用 Visual Studio IDE 中的项目配置设置C++应用程序以面向 64 位 x64 平台。 还可以将 Win32 项目设置迁移到 64 位项目配置。
 
 ### <a name="to-set-up-c-applications-to-target-64-bit-platforms"></a>设置项目以面向 64 位平台
 
 1. 打开要配置的 C++ 项目。
 
-1. 打开该项目的属性页面。 有关详细信息，请参阅[使用项目属性](../ide/working-with-project-properties.md)。
+1. 打开该项目的属性页面。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](working-with-project-properties.md)。
 
    > [!NOTE]
    > 对于.NET 项目，请确保 **配置属性** 中选择节点或子节点之一 **\<项目名称> 属性页** 对话框; 否则为 **配置管理器** 按钮仍然不可用。
@@ -43,21 +43,20 @@ ms.locfileid: "57421360"
 
 - 当设置面向 64 位平台的项目时，如果“新建解决方案平台”  对话框处于打开状态，请在“从此处复制设置”  下拉列表中选择“Win32” 。 在项目级别会自动更新这些项目设置：
 
-  - [/MACHINE](../build/reference/machine-specify-target-platform.md) 链接器选项设置为 **/MACHINE:X64**。
+  - [/MACHINE](reference/machine-specify-target-platform.md) 链接器选项设置为 **/MACHINE:X64**。
 
-  - 关闭“注册输出” 。 有关详细信息，请参阅 [Linker Property Pages](../ide/linker-property-pages.md)。
+  - 关闭“注册输出” 。 有关详细信息，请参阅 [Linker Property Pages](reference/linker-property-pages.md)。
 
-  - “目标环境” 设置为 **/env x64**。 有关详细信息，请参阅[MIDL 属性页：常规](../ide/midl-property-pages-general.md)。
+  - “目标环境” 设置为 **/env x64**。 有关详细信息，请参阅[MIDL 属性页：常规](reference/midl-property-pages-general.md)。
 
-  - “验证参数” 被清除并且重置为默认值。 有关详细信息，请参阅[MIDL 属性页：高级](../ide/midl-property-pages-advanced.md)。
+  - “验证参数” 被清除并且重置为默认值。 有关详细信息，请参阅[MIDL 属性页：高级](reference/midl-property-pages-advanced.md)。
 
-  - 如果在 Win32 项目配置中已将“调试信息格式”  设置为 **/ZI** ，则在 64 位项目配置中将设置为 **/Zi** 。 有关详细信息，请参阅 [/Z7、/Zi、/ZI（调试信息格式）](../build/reference/z7-zi-zi-debug-information-format.md)。
+  - 如果在 Win32 项目配置中已将“调试信息格式”  设置为 **/ZI** ，则在 64 位项目配置中将设置为 **/Zi** 。 有关详细信息，请参阅 [/Z7、/Zi、/ZI（调试信息格式）](reference/z7-zi-zi-debug-information-format.md)。
 
   > [!NOTE]
   > 如果在文件级重写，则不会更改这些项目属性。
 
 ## <a name="see-also"></a>请参阅
 
-[.NET framework 64 位应用程序](/dotnet/framework/64-bit-apps)<br/>
-[针对 64 位 x64 目标配置 Visual C++](../build/configuring-programs-for-64-bit-visual-cpp.md)<br/>
+[配置C++适用于 64 位 x64 目标项目](configuring-programs-for-64-bit-visual-cpp.md)<br/>
 [调试 64 位应用程序](/visualstudio/debugger/debug-64-bit-applications)

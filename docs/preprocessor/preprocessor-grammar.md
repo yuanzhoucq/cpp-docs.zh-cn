@@ -6,50 +6,50 @@ helpviewer_keywords:
 - grammar, preprocessor
 - preprocessor, grammar
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
-ms.openlocfilehash: 17768b7ec1442f2af1abf76596527d4df69b1534
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6177cf5fddba549e410842ef3f270edcc13d4782
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62179875"
 ---
 # <a name="preprocessor-grammar"></a>预处理器语法
 
 *控制行*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#define** *标识符**令牌字符串*<sub>选择</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#define** <em>标识符</em>**(** *标识符*<sub>选择</sub> **，** ...**，** *标识符*<sub>选择</sub> **)** *令牌字符串*<sub>选择</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#include** **"** *路径规范* **"**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#include** **\<** *路径规范* **>**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#line** *数字序列***"** *filename* **"**<sub>选择</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#undef** *标识符*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#error** *令牌字符串*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#pragma** *令牌字符串*
+&nbsp;&nbsp;&nbsp;&nbsp;**#define** *identifier* *token-string*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#define** <em>identifier</em>**(** *identifier*<sub>opt</sub> **,** ... **,** *identifier*<sub>opt</sub> **)** *token-string*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#include** **"** *path-spec* **"**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#include** **\<** *path-spec* **>**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#line** *digit-sequence*  **"** *filename* **"**<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#undef** *identifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#error** *token-string*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#pragma** *token-string*
 
 *constant-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**定义 (** *标识符* **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**定义***标识符*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**defined(** *identifier* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**defined** *identifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;任何其他常量表达式
 
 *条件*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*if 部分**命令部件*<sub>优化</sub> *else 部分*<sub>选择</sub> *endif 行*
+&nbsp;&nbsp;&nbsp;&nbsp;*if-part* *elif-parts*<sub>opt</sub> *else-part*<sub>opt</sub> *endif-line*
 
-*if 部分*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*如果行**文本*
+*if-part* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*if-line* *text*
 
 *如果行*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#if** *常量表达式*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef** *标识符*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef** *标识符*
+&nbsp;&nbsp;&nbsp;&nbsp;**#if** *constant-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef** *identifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef** *identifier*
 
 *命令部件*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*命令行**文本*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*命令部件**命令行**文本*
+&nbsp;&nbsp;&nbsp;&nbsp;*elif-line* *text*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*elif-parts* *elif-line* *text*
 
 *命令行*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#elif** *常量表达式*
+&nbsp;&nbsp;&nbsp;&nbsp;**#elif** *constant-expression*
 
 *其他部件*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*其他行**文本*
+&nbsp;&nbsp;&nbsp;&nbsp;*else-line* *text*
 
 *其他行*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#else**
@@ -57,11 +57,11 @@ ms.locfileid: "50614183"
 *endif 行*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#endif**
 
-*数字序列*:<br/>
+*digit-sequence* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*digit*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;digit-sequence digit
 
-*数字*： 之一<br/>
+*digit* : one of<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;0 1 2 3 4 5 6 7 8 9
 
 *令牌字符串*:<br/>
@@ -74,17 +74,17 @@ ms.locfileid: "50614183"
 &nbsp;&nbsp;&nbsp;&nbsp;*operator*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*punctuator*
 
-*文件名*:<br/>
+*filename* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;合法操作系统文件名
 
-*路径规范*:<br/>
+*path-spec* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;合法文件路径
 
-*文本*:<br/>
+*text* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;文本的任何序列
 
 > [!NOTE]
-> 在中展开以下非终止符[词法约定](../cpp/lexical-conventions.md)一部分*c + + 语言参考*:*常量*，*常量表达式*，*标识符*，*关键字*，*运算符*，并且*标点符号*。
+> 在中展开以下非终止符[词法约定](../cpp/lexical-conventions.md)一部分*C++语言参考*:*常量*， *常量表达式*，*标识符*，*关键字*，*运算符*，并且*标点符号*。
 
 ## <a name="see-also"></a>请参阅
 

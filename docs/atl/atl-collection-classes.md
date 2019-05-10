@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CTraits classes
 - collection classes
 ms.assetid: 4d619d46-5b4e-41dd-b9fd-e86b1fbc00b5
-ms.openlocfilehash: 11da1dd7d72951d421d2600e3825e7cafe189240
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 70ca283468a51b4214273698a532ce2a85d52b44
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223427"
 ---
 # <a name="atl-collection-classes"></a>ATL 集合类
 
@@ -59,7 +59,7 @@ ATL 提供以下数组类来处理数量较少的对象。 但是，这些类是
 
 专用的集合类还提供用于管理内存的指针和接口指针：
 
-|类|目标|
+|类|用途|
 |-----------|-------------|
 |[CAutoPtrArray](../atl/reference/cautoptrarray-class.md)|构造的智能指针的数组时，提供了有用的方法。|
 |[CAutoPtrList](../atl/reference/cautoptrlist-class.md)|构造的智能指针的列表时提供有用的方法。|
@@ -116,13 +116,13 @@ CTraits 类的列表，请参阅[集合类](../atl/collection-classes.md)。
 
 下面的示例演示的集合类：
 
-- [MMXSwarm 示例](../visual-cpp-samples.md)
+- [MMXSwarm 示例](../overview/visual-cpp-samples.md)
 
-- [DynamicConsumer 示例](../visual-cpp-samples.md)
+- [DynamicConsumer 示例](../overview/visual-cpp-samples.md)
 
 - [UpdatePV 示例](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)
 
-- [字幕示例](../visual-cpp-samples.md)
+- [字幕示例](../overview/visual-cpp-samples.md)
 
 ## <a name="see-also"></a>请参阅
 

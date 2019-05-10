@@ -1,26 +1,26 @@
 ---
-title: 如何：创建可验证的 C++ 项目 (C++/CLI)
+title: 如何：创建可验证C++项目 (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - verifiable assemblies [C++], creating
 - conversions, C++ projects
-- Visual C++ projects
+- Visual Studio C++ projects
 ms.assetid: 4ef2cc1a-e3e5-4d67-8d8d-9c614f8ec5d3
-ms.openlocfilehash: acd37469f0702b73cdb1386fcf43091c8d27aebb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 0784e6f202750e846c75434eef62a12dab3952f1
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630433"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448106"
 ---
-# <a name="how-to-create-verifiable-c-projects-ccli"></a>如何： 创建可验证 c + + 项目 (C + + CLI)
+# <a name="how-to-create-verifiable-c-projects-ccli"></a>如何： 创建可验证C++项目 (C++/CLI)
 
-Visual c + + 应用程序向导不会创建可验证的项目。
+VisualC++应用程序向导不会创建可验证的项目。
 
 > [!IMPORTANT]
 > 不推荐使用 visual Studio 2015 和 Visual Studio 2017 不支持 **/clr: pure**并 **/clr: safe**创建可验证项目。 如果需要可验证代码，我们建议将转换为 C# 代码。
 
-但是，如果使用支持的 Visual c + + 编译器工具集的较旧版本 **/clr: pure**并 **/clr: safe**，项目可以转换为可验证。 本主题介绍如何设置项目属性和修改项目源文件来转换你的 Visual c + + 项目以生成可验证应用程序。
+但是，使用较旧版本的 MicrosoftC++支持的编译器工具集 **/clr: pure**并 **/clr: safe**，项目转换为可验证。 本主题介绍如何设置项目属性和修改项目源代码文件，以转换您的 Visual StudioC++项目以生成可验证应用程序。
 
 ## <a name="compiler-and-linker-settings"></a>编译器和链接器设置
 
@@ -28,7 +28,7 @@ Visual c + + 应用程序向导不会创建可验证的项目。
 
 ### <a name="to-change-the-compiler-and-linker-settings"></a>若要更改的编译器和链接器设置
 
-1. 显示项目属性页。 有关详细信息，请参阅[使用项目属性](../ide/working-with-project-properties.md)。
+1. 显示项目属性页。 有关详细信息，请参阅[设置编译器和生成属性](../build/working-with-project-properties.md)。
 
 1. 上**常规**页**配置属性**节点中，设置**公共语言运行时支持**属性设置为**安全 MSIL 公共语言运行时支持 (/: safe)**。
 
@@ -56,7 +56,7 @@ Visual c + + 应用程序向导不会创建可验证的项目。
 
 1. 将 _tmain() 更改为项目的主.cpp 文件中的 main （）。
 
-1. 显示项目属性页。 有关详细信息，请参阅[使用项目属性](../ide/working-with-project-properties.md)。
+1. 显示项目属性页。 有关详细信息，请参阅[设置编译器和生成属性](../build/working-with-project-properties.md)。
 
 1. 上**高级**页**链接器**节点中，输入`Main`作为**入口点**属性值。
 

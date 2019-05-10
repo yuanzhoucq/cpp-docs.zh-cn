@@ -16,11 +16,11 @@ helpviewer_keywords:
 - C4793
 ms.assetid: 819ada53-1d9c-49b8-a629-baf8c12314e6
 ms.openlocfilehash: e7ca3b10e09b0d6818fbc7f5607ebc9c95c7f15c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62280537"
 ---
 # <a name="compiler-warning-level-1-and-3-c4793"></a>编译器警告（等级 1 和等级 3）C4793
 
@@ -38,7 +38,7 @@ ms.locfileid: "50623244"
 |--------------------|-------------|
 |在托管代码中不支持对齐的数据类型|CLR 必须能够根据需要将数据分配不可能当数据与声明如对齐[__m128](../../cpp/m128.md)或[对齐](../../cpp/align-cpp.md)。|
 |在托管代码中不支持使用 __ImageBase 的函数|`__ImageBase` 是一个特殊的链接器符号通常用于仅由低级别的本机代码加载 DLL。|
-|不支持 varargs / clr 编译器选项|本机函数不能调用托管的函数，具有[变量自变量列表](../../cpp/functions-with-variable-argument-lists-cpp.md)(varargs) 因为这些函数有不同的堆栈布局要求。 但是，如果您指定 **/clr: pure**编译器选项，支持列表，因为该程序集可以仅包含托管函数的变量自变量。 有关详细信息，请参阅[纯代码和可验证代码 (C + + CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)。|
+|不支持 varargs / clr 编译器选项|本机函数不能调用托管的函数，具有[变量自变量列表](../../cpp/functions-with-variable-argument-lists-cpp.md)(varargs) 因为这些函数有不同的堆栈布局要求。 但是，如果您指定 **/clr: pure**编译器选项，支持列表，因为该程序集可以仅包含托管函数的变量自变量。 有关详细信息，请参阅[纯代码和可验证代码 (C++/CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)。|
 |64 位 CLR 不支持使用 __ptr32 修饰符声明的数据|一个指针，必须在当前平台上的本机指针的大小相同。 有关详细信息，请参阅[__ptr32， \__ptr64](../../cpp/ptr32-ptr64.md)。|
 |32 位 CLR 不支持使用 __ptr64 修饰符声明的数据|一个指针，必须在当前平台上的本机指针的大小相同。 有关详细信息，请参阅[__ptr32， \__ptr64](../../cpp/ptr32-ptr64.md)。|
 |托管代码中不支持一个或多个内部函数|在发出消息时的内部函数的名称不可用。 但是，内部函数，通常会导致该消息表示的低级别的机器指令。|

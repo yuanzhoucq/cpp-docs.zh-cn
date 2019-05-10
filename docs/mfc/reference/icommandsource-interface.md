@@ -1,6 +1,6 @@
 ---
 title: ICommandSource 接口
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - ICommandSource
 - AFXWINFORMS/ICommandSource
@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandSource interface [MFC]
 ms.assetid: a4b1f698-c09f-4ba8-9b13-0e74a0a4967e
-ms.openlocfilehash: 21c4f4544a6ccf2342580bc5859739fc1f50d0c2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: eed7abbbb40c532ad596f683b6ed2c98a0cadf9b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322077"
 ---
 # <a name="icommandsource-interface"></a>ICommandSource 接口
 
@@ -179,7 +179,7 @@ void RemoveCommandHandler(unsigned int cmdID);
 
 此方法删除映射到 cmdID 命令源对象中的命令处理程序。
 
-## <a name="removecommandrangecommandhandler"></a> ICommandSource::RemoveCommandRangeHandler
+## <a name="removecommandrangehandler"></a> ICommandSource::RemoveCommandRangeHandler
 
 从命令源对象中删除命令处理程序的组。
 ```
@@ -196,7 +196,7 @@ void RemoveCommandRangeUIHandler(
 命令 ID 范围的结束索引。
 ### <a name="remarks"></a>备注
 
-此方法中删除消息处理程序，从命令源对象通过 cmdIDMin 和 cmdIDMax，映射到指定的命令 Id 的组。
+此方法删除映射到由 cmdIDMin 和 cmdIDMax，命令源对象中的指定的命令 Id 的消息处理程序的组。
 
 ## <a name="removecommandrangeuihandler"></a> ICommandSource::RemoveCommandRangeUIHandler
 
@@ -215,7 +215,7 @@ void RemoveCommandRangeUIHandler(
 命令 ID 范围的结束索引。
 ### <a name="remarks"></a>备注
 
-此方法删除一组用户界面命令消息处理程序，从命令源对象通过 cmdIDMin 和 cmdIDMax，映射到指定的命令 Id。
+此方法删除一组用户界面命令消息处理程序映射到由 cmdIDMin 和 cmdIDMax，命令源对象中的指定的命令 Id。
 
 ## <a name="removecommanduihandler"></a> ICommandSource::RemoveCommandUIHandler
 

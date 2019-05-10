@@ -1,17 +1,17 @@
 ---
-title: 源 （c + + COM 属性）
+title: 源 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.source
 helpviewer_keywords:
 - source attribute
 ms.assetid: 1878d05d-7709-4e97-b114-c62f38f5140e
-ms.openlocfilehash: 59ed66acbbd6ef876e6052767dc5a5243d4b8dd6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 699ea64de49a4383bc8fb62b2f3b2133d7c496c9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407180"
 ---
 # <a name="source-c"></a>source (C++)
 
@@ -30,7 +30,7 @@ ms.locfileid: "50476516"
 
 ## <a name="remarks"></a>备注
 
-**源**c + + 属性具有相同的功能[源](/windows/desktop/Midl/source)MIDL 特性。
+**源**C++属性具有相同的功能[源](/windows/desktop/Midl/source)MIDL 特性。
 
 可以使用[默认](default-cpp.md)属性来指定默认源接口的对象。
 
@@ -77,7 +77,7 @@ class NN : public b
 |**适用对象**|**类**， **struct**，**接口**|
 |**可重复**|否|
 |**必需的特性**|`coclass` （当应用于类或结构）|
-|**无效的特性**|无|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ODBC recordsets [C++], locking records
 - data [C++], locking
 ms.assetid: 8fe8fcfe-b55a-41a8-9136-94a7cd1e4806
-ms.openlocfilehash: 08d7ca1db474a5735ccaabaa7d7d87b359730bb5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1265899e7060527d7e586689eb4c3148eebc4080
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397791"
 ---
 # <a name="recordset-locking-records-odbc"></a>记录集：锁定记录 (ODBC)
 
@@ -30,7 +30,7 @@ ms.locfileid: "50438686"
 当使用记录集来更新数据源上的记录时，你的应用程序可以锁定记录，这样没有其他用户可以在同一时间更新的记录。 除非系统可以保证两个用户不能同时更新的记录，记录在同一时间更新两个用户的状态为未定义。
 
 > [!NOTE]
->  本主题适用于对象派生自`CRecordset`中的批量行提取尚未实现。 如果已实现批量行提取，某些信息不适用。 例如，不能调用`Edit`和`Update`成员函数。 有关批量行提取的详细信息，请参阅[记录集： 提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+>  本主题适用于对象派生自`CRecordset`中的批量行提取尚未实现。 如果已实现批量行提取，某些信息不适用。 例如，不能调用`Edit`和`Update`成员函数。 有关批量行提取的详细信息，请参阅[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 ##  <a name="_core_record.2d.locking_modes"></a> 记录锁定模式
 

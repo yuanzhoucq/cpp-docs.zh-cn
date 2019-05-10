@@ -13,12 +13,12 @@ helpviewer_keywords:
 - /U compiler option [C++]
 - U compiler option [C++]
 ms.assetid: 7bc0474f-6d1f-419b-807d-0d8816763b2a
-ms.openlocfilehash: 59522b462f2393dd3fd4d8afefe9cbbe0e519203
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bfc03ebd5c900bf8bf81b4a50eed02111baf85ee
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316998"
 ---
 # <a name="u-u-undefine-symbols"></a>/U、/u（未定义符号）
 
@@ -46,18 +46,18 @@ ms.locfileid: "57413038"
 
 |符号|函数|
 |------------|--------------|
-|_CHAR_UNSIGNED|默认 char 类型是无符号。 定义何时[/J](../../build/reference/j-default-char-type-is-unsigned.md)指定选项。|
-|_CPPRTTI|为使用编译的代码定义[/GR](../../build/reference/gr-enable-run-time-type-information.md)选项。|
-|_CPPUNWIND|为使用编译的代码定义[/EHsc](../../build/reference/eh-exception-handling-model.md)选项。|
-|_DLL|定义何时[/MD](../../build/reference/md-mt-ld-use-run-time-library.md)指定选项。|
+|_CHAR_UNSIGNED|默认 char 类型是无符号。 定义何时[/J](j-default-char-type-is-unsigned.md)指定选项。|
+|_CPPRTTI|为使用编译的代码定义[/GR](gr-enable-run-time-type-information.md)选项。|
+|_CPPUNWIND|为使用编译的代码定义[/EHsc](eh-exception-handling-model.md)选项。|
+|_DLL|定义何时[/MD](md-mt-ld-use-run-time-library.md)指定选项。|
 |_M_IX86|默认情况下，为适用于 x86 的 600 定义目标。|
 |_MSC_VER|有关更多信息，请参见 [Predefined Macros](../../preprocessor/predefined-macros.md)。|
 |_WIN32|为 WIN32 应用程序定义。 始终定义。|
-|_MT|定义何时[/MD 或 /MT](../../build/reference/md-mt-ld-use-run-time-library.md)指定选项。|
+|_MT|定义何时[/MD 或 /MT](md-mt-ld-use-run-time-library.md)指定选项。|
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
 1. 单击 **“C/C++”** 文件夹。
 
@@ -71,9 +71,9 @@ ms.locfileid: "57413038"
 
 ## <a name="see-also"></a>请参阅
 
-[编译器选项](../../build/reference/compiler-options.md)<br/>
-[设置编译器选项](../../build/reference/setting-compiler-options.md)<br/>
-[/J（默认 char 类型是无符号的）](../../build/reference/j-default-char-type-is-unsigned.md)<br/>
-[/GR（启用运行时类型信息）](../../build/reference/gr-enable-run-time-type-information.md)<br/>
-[/EH（异常处理模型）](../../build/reference/eh-exception-handling-model.md)<br/>
-[/MD、/MT、/LD（使用运行时库）](../../build/reference/md-mt-ld-use-run-time-library.md)
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)<br/>
+[/J（默认 char 类型是无符号的）](j-default-char-type-is-unsigned.md)<br/>
+[/GR（启用运行时类型信息）](gr-enable-run-time-type-information.md)<br/>
+[/EH（异常处理模型）](eh-exception-handling-model.md)<br/>
+[/MD、/MT、/LD（使用运行时库）](md-mt-ld-use-run-time-library.md)

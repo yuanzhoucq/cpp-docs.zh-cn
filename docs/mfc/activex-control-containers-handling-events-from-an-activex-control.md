@@ -12,11 +12,11 @@ helpviewer_keywords:
 - BEGIN_EVENTSINK_MAP macro
 ms.assetid: f9c106db-052f-4e32-82ad-750646aa760b
 ms.openlocfilehash: 8087d84d2203e4f910200acdd1b00e58d14f920e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394892"
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>ActiveX 控件容器：处理 ActiveX 控件中的事件
 
@@ -28,7 +28,7 @@ ms.locfileid: "57293558"
 > [!NOTE]
 >  本文使用一个名为 Container、基于对话框的 ActiveX 控件容器项目和一个名为 Circ 的嵌入控件分别作为过程和代码中的示例。
 
-在属性窗口中使用事件按钮，可以在 ActiveX 控件容器应用程序中创建的映射可以发生的事件。 此映射，称为"事件接收器映射 '，创建和维护由 Visual c + +，当将事件处理程序添加到控件容器类。 每个事件处理程序，实现与事件映射条目时，将特定事件映射到容器事件处理程序成员函数。 指定的事件触发的 ActiveX 控件对象时调用此事件处理程序函数。
+在属性窗口中使用事件按钮，可以在 ActiveX 控件容器应用程序中创建的映射可以发生的事件。 此映射，称为"事件接收器映射 '，创建和维护视觉对象C++时将事件处理程序添加到控件容器类。 每个事件处理程序，实现与事件映射条目时，将特定事件映射到容器事件处理程序成员函数。 指定的事件触发的 ActiveX 控件对象时调用此事件处理程序函数。
 
 事件接收器映射的详细信息，请参阅[事件接收器映射](../mfc/reference/event-sink-maps.md)中*类库参考*。
 

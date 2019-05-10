@@ -1,6 +1,6 @@
 ---
 title: '&lt;shared_mutex&gt;'
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - <shared_mutex>
 - shared_mutex/std::swap
@@ -45,12 +45,12 @@ f1_keywords:
 - shared_mutex/std::shared_timed_mutex::try_lock_shared_until
 - shared_mutex/std::shared_timed_mutex::unlock_shared
 ms.assetid: 0b37a97d-ee5d-4050-b29f-09db9f76beb3
-ms.openlocfilehash: d54e054310b6077adb88c55b8923b6c13ce1c5ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 97d77399357030feaa90228a1b0cdeb80d48034c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412561"
 ---
 # <a name="ltsharedmutex"></a>&lt;shared_mutex>
 
@@ -60,13 +60,13 @@ ms.locfileid: "50467322"
 
 |类|描述|
 |-------------|-----------------|
-|[shared_mutex 类](../standard-library/shared-mutex.md#class_shared_mutex)|一种共享 mutex 类型，可由单个代理以独占方式锁定，或由多个代理以非独占方式共享。|
-|[shared_timed_mutex 类](../standard-library/shared-mutex.md#class_shared_timed_mutex)|一种共享的定时 mutex 类型，可由单个代理以独占方式锁定，或由多个代理以非独占方式共享。|
-|[shared_lock 类](../standard-library/shared-mutex.md#class_shared_lock)|一种模板类，包装共享 mutex 以支持定时锁定操作，由多个代理以非独占方式共享。|
+|[shared_mutex 类](#class_shared_mutex)|一种共享 mutex 类型，可由单个代理以独占方式锁定，或由多个代理以非独占方式共享。|
+|[shared_timed_mutex 类](#class_shared_timed_mutex)|一种共享的定时 mutex 类型，可由单个代理以独占方式锁定，或由多个代理以非独占方式共享。|
+|[shared_lock 类](#class_shared_lock)|一种模板类，包装共享 mutex 以支持定时锁定操作，由多个代理以非独占方式共享。|
 
 |函数|描述|
 |---------------|-----------------|
-|[swap](../standard-library/shared-mutex.md#function_swap)|交换由函数参数引用的共享 mutex 对象的内容。|
+|[swap](#function_swap)|交换由函数参数引用的共享 mutex 对象的内容。|
 
 ## <a name="syntax"></a>语法
 
@@ -104,7 +104,7 @@ void swap(shared_lock<Mutex>& x, shared_lock<Mutex>& y) noexcept;
 `shared_lock` 模板类扩展对定时锁定和所有权转移给共享 mutex 的支持。 Mutex 所有权可以在构造之时或之后获得，也可转移到另一个 `shared_lock` 对象。 可移动 `shared_lock` 类型的对象，但不能复制。
 
 > [!WARNING]
-> 从 Visual Studio 2015 开始，c + + 标准库同步类型基于 Windows 同步基元和不再使用 ConcRT （除非目标平台是 Windows XP）。 中定义的类型&lt;shared_mutex > 不能与任何 ConcRT 类型或函数。
+> 在 Visual Studio 2015 中，从C++标准库同步类型基于 Windows 同步基元，且不再使用 ConcRT （除非目标平台是 Windows XP）。 中定义的类型&lt;shared_mutex > 不能与任何 ConcRT 类型或函数。
 
 ## <a name="classes"></a>类
 
@@ -167,7 +167,7 @@ public:
    };
 ```
 
-###  <a name="&lt;shared"></a>shared_lock 类
+###  <a name="class_shared_lock"></a>shared_lock 类
 
 模板类 `shared_lock` 控制作用域中共享 mutex 对象的共享所有权。 模板参数必须是共享 mutex 类型。
 
@@ -215,7 +215,7 @@ private:
 
 ## <a name="functions"></a>函数
 
-###  <a name="function_swap"></a> 交换
+###  <a name="function_swap"></a> swap
 
 交换 `shared_lock` 对象。
 

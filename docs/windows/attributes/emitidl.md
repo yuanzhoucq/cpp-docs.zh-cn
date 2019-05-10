@@ -1,17 +1,17 @@
 ---
-title: emitidl （c + + COM 属性）
+title: emitidl (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.emitidl
 helpviewer_keywords:
 - emitidl attribute
 ms.assetid: 85b80c56-578e-4392-ac03-8443c74ebb7d
-ms.openlocfilehash: 4270c760c0d9d0ab833ee96dfbbaa9d6205026f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6c4055e0f14bced1e5047fc502a4bf274126f804
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409650"
 ---
 # <a name="emitidl"></a>emitidl
 
@@ -46,7 +46,7 @@ ms.locfileid: "50437927"
 
 ## <a name="remarks"></a>备注
 
-之后**emitidl**源代码文件中遇到 c + + 特性、 IDL 类别特性放在生成的.idl 文件。 如果没有任何**emitidl**特性，源代码文件中的 IDL 特性将输出到生成的.idl 文件。
+之后**emitidl** C++源代码文件中遇到特性、 IDL 类别特性放在生成的.idl 文件。 如果没有任何**emitidl**特性，源代码文件中的 IDL 特性将输出到生成的.idl 文件。
 
 可以有多个**emitidl**源代码文件中的属性。 如果`[emitidl(false)];`在没有后续的文件中遇到`[emitidl(true)];`，则没有属性处理到生成的.idl 文件。
 
@@ -60,8 +60,8 @@ ms.locfileid: "50437927"
 |-|-|
 |**适用对象**|任何位置|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

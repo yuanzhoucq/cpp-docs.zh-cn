@@ -2,18 +2,16 @@
 title: 连接点类 (ATL)
 ms.date: 11/04/2016
 ms.topic: reference
-f1_keywords:
-- vc.atl.connection
 helpviewer_keywords:
 - classes [C++], connection points
 - connection points classes
 ms.assetid: 076365fa-299a-4dce-84c3-a5dff0e0da1f
-ms.openlocfilehash: 24b65d54fe303e33e100299cf8a95d22ebc72cdc
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8e1ee67f75af1fa38693f7ddb487580ab733cc58
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62250809"
 ---
 # <a name="connection-points-classes"></a>连接点类
 

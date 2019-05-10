@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DYNAMICBASE editbin option
 - /DYNAMICBASE editbin option
 ms.assetid: edb3df90-7b07-42fb-a94a-f5a4c1d325d6
-ms.openlocfilehash: fb8bfd4f4b11d14dbbc605f4366cf1cd5446a319
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 13987b4ba9c25db0f5417da562ff86f4230937d7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271822"
 ---
 # <a name="dynamicbase"></a>/DYNAMICBASE
 
@@ -21,7 +21,7 @@ ms.locfileid: "50430780"
 
 ## <a name="syntax"></a>语法
 
-> **/DYNAMICBASE**[**： 否**]
+> **/DYNAMICBASE**[**:NO**]
 
 ## <a name="remarks"></a>备注
 
@@ -31,5 +31,5 @@ ms.locfileid: "50430780"
 
 ## <a name="see-also"></a>请参阅
 
-- [EDITBIN 选项](../../build/reference/editbin-options.md)
+- [EDITBIN 选项](editbin-options.md)
 - [Windows ISV 软件安全防御措施](https://msdn.microsoft.com/library/bb430720.aspx)

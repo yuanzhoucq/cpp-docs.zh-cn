@@ -11,12 +11,12 @@ helpviewer_keywords:
 - extracting library members
 - /EXTRACT library manager option
 ms.assetid: a2c5c2a1-9b7e-489a-a9a4-1dec694e1fc5
-ms.openlocfilehash: 4d7629707d99130551401fdda39a972ab2447480
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6c577300f747d6f546b7caa3c66bddd6a516e16b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271315"
 ---
 # <a name="extracting-a-library-member"></a>提取库成员
 
@@ -30,4 +30,4 @@ LIB library /EXTRACT:member /OUT:objectfile
 
 ## <a name="see-also"></a>请参阅
 
-[LIB 引用](../../build/reference/lib-reference.md)
+[LIB 引用](lib-reference.md)

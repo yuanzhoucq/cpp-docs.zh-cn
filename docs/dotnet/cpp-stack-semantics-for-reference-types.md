@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - reference types, C++ stack semantics for
 ms.assetid: 319a1304-f4a4-4079-8b84-01cec847d531
-ms.openlocfilehash: b2d2d5991f7b52727b366214b8ca9ed4d8e14956
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 4d9aaa493eab39199ac75b6b9fe888c3e103f115
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607852"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448078"
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>参考类型的 C++ 堆栈语义
 
-在 Visual C++ 2005 之前，只能使用 `new` 运算符来创建引用类型的实例（这会在垃圾回收堆上创建对象）。 但是现在，您可以使用用来在堆栈上创建本机类型的实例的相同语法创建引用类型的实例。 因此，不需要使用[ref new、 gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)创建引用类型的对象。 此外，当对象超出范围时，编译器将调用对象的析构函数。
+在 Visual Studio 2005 中之前, 引用类型的实例可以仅使用来创建`new`运算符，创建该对象垃圾回收堆。 但是现在，您可以使用用来在堆栈上创建本机类型的实例的相同语法创建引用类型的实例。 因此，不需要使用[ref new、 gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md)创建引用类型的对象。 此外，当对象超出范围时，编译器将调用对象的析构函数。
 
 ## <a name="remarks"></a>备注
 
@@ -27,7 +27,7 @@ ms.locfileid: "50607852"
 
 编译器不会为引用类型生成默认的赋值运算符。 赋值运算符允许您使用堆栈语义创建一个对象，并且借助使用堆栈语义创建的现有对象对其进行初始化。 引用类型的赋值运算符具有以下形式的签名：`void operator=( R% ){}`。
 
-如果您的类型的析构函数释放重要资源并且您将堆栈语义用于引用类型，则不需要显式调用析构函数（或调用 `delete`）。 引用类型中的析构函数的详细信息，请参阅[析构函数和终结器中如何： 定义和使用类和结构 (C + + CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)。
+如果您的类型的析构函数释放重要资源并且您将堆栈语义用于引用类型，则不需要显式调用析构函数（或调用 `delete`）。 引用类型中的析构函数的详细信息，请参阅[析构函数和终结器中如何：定义和使用类和结构 (C++/CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)。
 
 编译器生成的赋值运算符将遵循标准的 C++ 规则以及以下额外规则：
 
@@ -41,9 +41,9 @@ ms.locfileid: "50607852"
 
 以下引用类型不可与堆栈语义一起使用：
 
-- [委托（C++ 组件扩展）](../windows/delegate-cpp-component-extensions.md)
+- [委托（C++ 组件扩展）](../extensions/delegate-cpp-component-extensions.md)
 
-- [数组](../windows/arrays-cpp-component-extensions.md)
+- [数组](../extensions/arrays-cpp-component-extensions.md)
 
 - <xref:System.String>
 
@@ -101,7 +101,7 @@ int main() {
 }
 ```
 
-### <a name="output"></a>输出
+### <a name="output"></a>Output
 
 ```Output
 98
@@ -113,4 +113,4 @@ int main() {
 
 ## <a name="see-also"></a>请参阅
 
-[类和结构](../windows/classes-and-structs-cpp-component-extensions.md)
+[类和结构](../extensions/classes-and-structs-cpp-component-extensions.md)

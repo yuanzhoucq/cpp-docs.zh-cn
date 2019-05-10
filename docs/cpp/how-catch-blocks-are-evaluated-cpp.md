@@ -9,17 +9,17 @@ helpviewer_keywords:
 - types [C++], exception handling
 ms.assetid: 202dbf07-8ace-4b3b-b3ae-4b45c275e0b4
 ms.openlocfilehash: 7504439c565d4dfb720bc2fa7e097e3230733423
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153679"
 ---
 # <a name="how-catch-blocks-are-evaluated-c"></a>Catch 块的计算方式 (C++)
 
 虽然通常建议您引发派生自 std::exception 的类型，但 C++ 使您能够引发任何类型的异常。 可由捕获 C++ 异常**捕获**指定相同的类型，为所引发的异常，或可以捕获任何类型的异常处理程序的处理程序。
 
-如果引发的异常的类型是类，它还具有基类（或类），则它可由接受异常类型的基类和对异常类型的基的引用的处理程序捕获。 请注意，当异常由引用捕获时，会将其绑定到实际引发的异常对象；否则，它将为一个副本（与函数的自变量大致相同）。
+如果引发的异常的类型是类，它还具有基类（或类），则它可由接受异常类型的基类和对异常类型的基的引用的处理程序捕获。 请注意，当异常由引用捕获时，会将其绑定到实际引发的异常对象；否则，它将为一个副本（与函数的参数大致相同）。
 
 时引发异常，它可能以下类型的捕捉**捕获**处理程序：
 

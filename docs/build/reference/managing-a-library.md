@@ -40,12 +40,12 @@ helpviewer_keywords:
 - LIST library manager option
 - /CONVERT library manager option
 ms.assetid: f56a8b85-fbdc-4c09-8d8e-00f0ffe1da53
-ms.openlocfilehash: fb06fdf0298d627f289448930b490fb0660e381d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 74b8cf198d46f83de327c68ac5f883bd75e5db80
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321444"
 ---
 # <a name="managing-a-library"></a>管理库
 
@@ -64,7 +64,7 @@ LIB [options...] files...
 以下选项适用于生成和修改库：
 
 **/LIBPATH:** *dir*<br/>
-重写环境库路径。 有关详细信息，请参阅链接的说明[/LIBPATH](../../build/reference/libpath-additional-libpath.md)选项。
+重写环境库路径。 有关详细信息，请参阅链接的说明[/LIBPATH](libpath-additional-libpath.md)选项。
 
 **/LIST**<br/>
 到标准输出将显示有关输出库的信息。 输出可以定向到一个文件。 可以使用 /LIST 来确定现有库的内容，而无需修改它。
@@ -73,7 +73,7 @@ LIB [options...] files...
 当生成导入库，指定正在为其生成导入库的 DLL 的名称。
 
 **/NODEFAULTLIB**<br/>
-从其解析外部引用时搜索的库列表中删除一个或多个默认库。 请参阅[/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md)有关详细信息。
+从其解析外部引用时搜索的库列表中删除一个或多个默认库。 请参阅[/NODEFAULTLIB](nodefaultlib-ignore-libraries.md)有关详细信息。
 
 **/ 输入输出：** *文件名*<br/>
 重写默认输出文件名。 默认情况下，使用命令行和扩展上的第一个库或对象文件的基名称在当前目录中创建输出库。 lib。
@@ -82,7 +82,7 @@ LIB [options...] files...
 省略指定*对象*输出库中。 LIB 通过组合所有对象 （无论是在对象文件或库中），然后删除使用 /REMOVE 指定的任何对象来创建输出库。
 
 **/SUBSYSTEM:**{**控制台** &AMP;#124; **EFI_APPLICATION** &AMP;#124; **EFI_BOOT_SERVICE_DRIVER** &AMP;#124; **EFI_ROM**&AMP;#124; **EFI_RUNTIME_DRIVER** &AMP;#124; **本机** &AMP;#124; **POSIX** &AMP;#124; **WINDOWS** &AMP;#124; **WINDOWSCE**} [，#[。 # #]]<br/>
-告知操作系统如何运行通过链接到输出库创建的程序。 有关详细信息，请参阅链接的说明[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)选项。
+告知操作系统如何运行通过链接到输出库创建的程序。 有关详细信息，请参阅链接的说明[/SUBSYSTEM](subsystem-specify-subsystem.md)选项。
 
 在命令行上指定的 LIB 选项不区分大小写。
 
@@ -101,4 +101,4 @@ LIB 可用于执行以下库管理任务：
 
 ## <a name="see-also"></a>请参阅
 
-[LIB 引用](../../build/reference/lib-reference.md)
+[LIB 引用](lib-reference.md)

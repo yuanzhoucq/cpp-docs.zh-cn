@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ODBC Administrator [C++]
 - drivers [C++], ODBC
 ms.assetid: b8652790-3437-4e7d-bc83-6ea6981f008b
-ms.openlocfilehash: 5e83657462952be12a6a2d086aa2419093e06d0b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac893981ff8c697dc090f1e6ad5ac61886a69f99
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395841"
 ---
 # <a name="odbc-administrator"></a>ODBC 管理器
 
@@ -26,19 +26,19 @@ ODBC 管理器注册和配置[数据源](../../data/odbc/data-source-odbc.md)可
 
 ODBC 管理器安装在安装过程中。 如果选择了**自定义**安装，但未选择任何中的 ODBC 驱动程序**数据库选项**对话框中，您需要运行安装程序以安装所需的文件。
 
-安装过程中，选择你想要安装的 ODBC 驱动程序。 更高版本可以安装其他驱动程序随 Visual c + + 使用 Visual c + + 安装程序。
+安装过程中，选择你想要安装的 ODBC 驱动程序。 使用视觉对象更高版本安装其他驱动程序附带C++使用视觉对象C++安装程序。
 
-如果你想要使用 Visual c + + 安装的 ODBC 驱动程序不提供，必须运行安装程序附带驱动程序。
+如果你想要使用视觉对象安装 ODBC 驱动程序不是随C++，必须运行安装程序附带驱动程序。
 
-#### <a name="to-install-odbc-drivers-that-ship-with-visual-c"></a>若要使用 Visual c + + 安装附带的 ODBC 驱动程序
+#### <a name="to-install-odbc-drivers-that-ship-with-visual-c"></a>若要使用视觉对象安装附带的 ODBC 驱动程序C++
 
-1. 从您的 Visual c + + 分发 CD 运行安装程序。
+1. 从你的视觉对象运行安装程序C++分发 CD。
 
    打开安装程序中的对话框时，会显示。
 
 1. 单击**下一步**上每个对话框中，直到达到**安装选项**对话框。 选择**自定义**，然后单击**下一步**。
 
-1. 清除所有复选框**Microsoft Visual c + + 安装程序**除对话框**数据库选项**复选框，然后依次**详细信息**显示**数据库选项**对话框。
+1. 清除所有复选框**Microsoft VisualC++安装程序**对话框中，除**数据库选项**复选框，然后依次**详细信息**显示**数据库选项**对话框。
 
 1. 清除**Microsoft 数据访问对象**复选框，选中**Microsoft ODBC 驱动程序**复选框，然后依次**详细信息**。
 

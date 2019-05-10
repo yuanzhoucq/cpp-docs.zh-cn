@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::IValueType
 ms.assetid: 8b89b21e-0d7b-4cc2-baa3-93b17c82945c
-ms.openlocfilehash: 0146ab1b4f27ae6a939d498d59b66c30ace88552
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 62fe9d7d24a29d30d96f3608a89bd690529d10f4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209536"
 ---
 # <a name="platformivaluetype-interface"></a>Platform::IValueType 接口
 
@@ -24,4 +24,4 @@ interface class IValueType
 
 ## <a name="see-also"></a>请参阅
 
-[平台命名空间](../cppcx/platform-namespace-c-cx.md)
+[Platform 命名空间](../cppcx/platform-namespace-c-cx.md)

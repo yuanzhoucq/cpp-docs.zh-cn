@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, make_public
 - make_public pragma
 ms.assetid: c3665f4d-268a-4932-9661-c37c8ae6a341
-ms.openlocfilehash: cfc8d13ead28c0b817d7de015b9c507db152de6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d569758f90b9e55f65ad13517f86dea41d151ca8
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62371758"
 ---
 # <a name="makepublic"></a>make_public
 指示本机类型应具有公共程序集可访问性。

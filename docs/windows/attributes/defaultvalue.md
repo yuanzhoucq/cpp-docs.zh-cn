@@ -1,17 +1,17 @@
 ---
-title: 默认值 （c + + COM 属性）
+title: 默认值 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.defaultvalue
 helpviewer_keywords:
 - defaultvalue attribute
 ms.assetid: efa5d050-b2cc-4d9e-9b8e-79954f218d3a
-ms.openlocfilehash: 22aa969185afbac5ab395d0ac7dde23e715b8e58
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ff6924db6f4805bb5f2dbab69076a86020b2a075
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62147959"
 ---
 # <a name="defaultvalue"></a>defaultvalue
 
@@ -25,12 +25,12 @@ ms.locfileid: "50537665"
 
 ### <a name="parameters"></a>参数
 
-*value*<br/>
+*值*<br/>
 参数的默认值。
 
 ## <a name="remarks"></a>备注
 
-**Defaultvalue** c + + 属性具有相同的功能[defaultvalue](/windows/desktop/Midl/defaultvalue) MIDL 特性。
+**Defaultvalue** C++属性具有相同的功能[defaultvalue](/windows/desktop/Midl/defaultvalue) MIDL 特性。
 
 ## <a name="example"></a>示例
 
@@ -62,8 +62,8 @@ __interface IFireTabCtrl : IDispatch {
 |-|-|
 |**适用对象**|接口参数|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

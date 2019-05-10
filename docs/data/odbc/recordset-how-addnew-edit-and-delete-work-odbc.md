@@ -1,5 +1,5 @@
 ---
-title: 记录集：AddNew、Edit 和 Delete 的工作方式 (ODBC)
+title: 记录集：如何 AddNew，编辑和删除工作 (ODBC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - records [C++], updating
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - ODBC recordsets [C++], editing records
 - records [C++], editing
 ms.assetid: cab43d43-235a-4bed-ac05-67d10e94f34e
-ms.openlocfilehash: 84d4c2f1128f7b73189f69b056eee96619c31ef5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: e5fc6ad2a1fe00367cd8a0b1c53ac914b95018ab
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397830"
 ---
-# <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>记录集：AddNew、Edit 和 Delete 的工作方式 (ODBC)
+# <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>记录集：如何 AddNew，编辑和删除工作 (ODBC)
 
 本主题适用于 MFC ODBC 类。
 
@@ -39,9 +39,9 @@ ms.locfileid: "51331966"
 - [如何删除记录的工作原理](#_core_deleting_a_record)
 
 > [!NOTE]
->  本主题适用于对象派生自`CRecordset`中的批量行提取尚未实现。 如果使用批量行提取，请参阅[记录集： 提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+>  本主题适用于对象派生自`CRecordset`中的批量行提取尚未实现。 如果使用批量行提取，请参阅[记录集：(ODBC) 批量提取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
-作为补充，你可能想要读取[记录字段交换： RFX 的工作机制](../../data/odbc/record-field-exchange-how-rfx-works.md)，其中介绍了更新操作中的 RFX 相应角色。
+作为补充，你可能想要读取[记录字段交换：RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)，其中介绍了更新操作中的 RFX 相应角色。
 
 ##  <a name="_core_adding_a_record"></a> 添加一条记录
 
@@ -118,7 +118,7 @@ ms.locfileid: "51331966"
 
    1. 如果有更改，`Update`构造 SQL**更新**语句。 中列出的列**更新**语句基于已更改的字段数据成员。
 
-   1. `Update` 提交所做的更改 — 执行**更新**语句，并记录更改数据源，但时未提交的事务正在进行中 (请参阅[事务： 事务在执行记录集 (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)事务如何影响更新有关的信息)。 ODBC 保留一份记录，这样也会更改。
+   1. `Update` 提交所做的更改 — 执行**更新**语句，并记录更改数据源，但时未提交的事务正在进行中 (请参阅[事务：执行在记录集 (ODBC) 的事务](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)了解事务如何影响更新)。 ODBC 保留一份记录，这样也会更改。
 
    1. 与不同的过程`AddNew`，则`Edit`过程不会还原已存储的记录。 已编辑的记录将为当前记录保留在原位。
 
@@ -160,5 +160,5 @@ ms.locfileid: "51331966"
 ## <a name="see-also"></a>请参阅
 
 [记录集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[记录集：有关更新的更多信息 (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md)<br/>
+[记录集：详细了解更新 (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md)<br/>
 [记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)

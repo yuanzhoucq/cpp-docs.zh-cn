@@ -8,16 +8,15 @@ helpviewer_keywords:
 - comments, Implementation comments
 ms.assetid: 4d799c07-8e71-4a6b-90ab-8282d6ff48ce
 ms.openlocfilehash: 377997b66c5b9c005d1e1bee24890b756621b672
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62240732"
 ---
 # <a name="-implementation-comment"></a>// Implementation 注释
 
-
-  `// Implementation` 节是任何 MFC 类声明的最重要的部分。
+`// Implementation` 节是任何 MFC 类声明的最重要的部分。
 
 此节存储所有实现详细信息。 成员变量和成员函数都可在此节中出现。 此行下的所有内容在未来版本的 MFC 中都可能会更改。 除非您无法避免，否则不应依赖 `// Implementation` 行下面的详细信息。 此外，在实现行下声明的成员未记录，尽管某些实现在技术说明中讨论过。 无论基类函数是在哪个节中定义的，基类中的虚函数的重写都位于此节中，因为函数重写基类实现被视为实现详细信息。 通常，这些成员是受保护的，但并不总是这样。
 

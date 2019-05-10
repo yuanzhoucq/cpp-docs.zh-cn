@@ -35,12 +35,12 @@ helpviewer_keywords:
 - LIBCMTD.lib
 - -MT compiler option [C++]
 ms.assetid: cf7ed652-dc3a-49b3-aab9-ad60e5395579
-ms.openlocfilehash: a953a63409c0b6c281533466797e1fc0c30c7a66
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
-ms.translationtype: MT
+ms.openlocfilehash: 4ae63f2d45d5a1170f94de0480711bc719e4a2e0
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415820"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217618"
 ---
 # <a name="md-mt-ld-use-run-time-library"></a>/MD、/MT、/LD（使用运行时库）
 
@@ -62,22 +62,22 @@ ms.locfileid: "57415820"
 |**/MDd**|定义 `_DEBUG`、`_MT` 和 `_DLL`，并使此应用程序使用特定于多线程和 DLL 的调试版本的运行库。 它还会让编译器将库名称 MSVCRTD.lib 放入 .obj 文件中。|
 |**/MT**|使此应用程序使用运行库的多线程的静态版本。 定义 `_MT`，并使编译器将库名 LIBCMT.lib 放入 .obj 文件中，以便链接器使用 LIBCMT.lib 解析外部符号。|
 |**/MTd**|定义 `_DEBUG` 和 `_MT`。 此选项还会让编译器将库名称 LIBCMTD.lib 放置到 .obj 文件中，以便链接器将使用 LIBCMTD.lib 来解析外部符号。|
-|**/LD**|创建一个 DLL。<br /><br /> Pass **/DLL**到链接器选项。 链接器查找 `DllMain` 函数，但并不需要该函数。 如果没有编写 `DllMain` 函数，则链接器将插入返回 TRUE 的 `DllMain` 函数。<br /><br /> 链接 DLL 启动代码。<br /><br /> 如果未在命令行上指定导出 (.exp) 文件，则创建导入库 (.lib)。 将导入库链接到调用 DLL 的应用程序。<br /><br /> 解释[/Fe （命名 EXE 文件）](../../build/reference/fe-name-exe-file.md)为命名 DLL 而不是.exe 文件。 默认情况下，程序名称将成为*basename*.dll 而不是*basename*.exe。<br /><br /> 暗指 **/MT**除非显式指定，否则 **/MD**。|
+|**/LD**|创建一个 DLL。<br /><br /> Pass **/DLL**到链接器选项。 链接器查找 `DllMain` 函数，但并不需要该函数。 如果没有编写 `DllMain` 函数，则链接器将插入返回 TRUE 的 `DllMain` 函数。<br /><br /> 链接 DLL 启动代码。<br /><br /> 如果未在命令行上指定导出 (.exp) 文件，则创建导入库 (.lib)。 将导入库链接到调用 DLL 的应用程序。<br /><br /> 解释[/Fe （命名 EXE 文件）](fe-name-exe-file.md)为命名 DLL 而不是.exe 文件。 默认情况下，程序名称将成为*basename*.dll 而不是*basename*.exe。<br /><br /> 暗指 **/MT**除非显式指定，否则 **/MD**。|
 |**/LDd**|创建调试 DLL。 定义 `_MT` 和 `_DEBUG`。|
 
-有关 C 运行时库和使用进行编译时要使用哪些库的详细信息[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)，请参阅[CRT 库功能](../../c-runtime-library/crt-library-features.md)。
+有关 C 运行时库和使用进行编译时要使用哪些库的详细信息[/clr （公共语言运行时编译）](clr-common-language-runtime-compilation.md)，请参阅[CRT 库功能](../../c-runtime-library/crt-library-features.md)。
 
 传递给链接器给定调用的所有模块必须使用相同的运行时库编译器选项都编译 (**/MD**， **/MT**， **/LD**)。
 
 有关如何使用运行时库的调试版本的详细信息，请参阅[C 运行时库参考](../../c-runtime-library/c-run-time-library-reference.md)。
 
-有关 Dll 的详细信息，请参阅[Visual c + + 中的 Dll](../../build/dlls-in-visual-cpp.md)。
+有关 Dll 的详细信息，请参阅[创建 C /C++ Visual Studio 中的 Dll](../dlls-in-visual-cpp.md)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
-1. 展开**C/c + +** 文件夹。
+1. 展开**C /C++** 文件夹。
 
 1. 选择**代码生成**属性页。
 
@@ -89,5 +89,5 @@ ms.locfileid: "57415820"
 
 ## <a name="see-also"></a>请参阅
 
-[编译器选项](../../build/reference/compiler-options.md)<br/>
-[设置编译器选项](../../build/reference/setting-compiler-options.md)
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)

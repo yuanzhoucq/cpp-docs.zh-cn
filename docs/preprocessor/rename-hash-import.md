@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - rename attribute
 ms.assetid: 5c5c6153-1087-4b7b-87fb-fc59b90b9975
-ms.openlocfilehash: 15673a8b9ebaf298ae1b2b45c9a76a1691e681b1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0fbed04f040a47b5b389f40eeb15254da4a7940b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62179725"
 ---
 # <a name="rename-import"></a>重命名 (\#导入)
 
-**C + + 专用**
+**C++特定**
 
 解决名称冲突问题。
 
@@ -30,7 +30,7 @@ rename("OldName","NewName")
 *OldName*<br/>
 类型库中的旧名称。
 
-*新名称*<br/>
+*NewName*<br/>
 要替代旧名称使用的名称。
 
 ## <a name="remarks"></a>备注
@@ -56,7 +56,7 @@ rename("GetMyParent","GetMyParentX")
 
 这是因为名称 `GetMyParent` 仅在生成的类型库标头文件中出现。
 
-**结束 c + + 专用**
+**结束C++特定**
 
 ## <a name="see-also"></a>请参阅
 

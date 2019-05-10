@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ODBC recordsets, closing
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
-ms.openlocfilehash: d98f7e59e52b86a1b9b1c3ffac5c3e7160e6c36d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5d5dae5bc766c0cfc31b4fb76f7fe104be0dbd74
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395581"
 ---
 # <a name="recordset-creating-and-closing-recordsets-odbc"></a>记录集：创建和关闭记录集 (ODBC)
 
@@ -71,10 +71,10 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 // Use the snapshot to operate on its records...
 ```
 
-调用后`Open`，使用成员函数和数据成员的对象来处理记录。 在某些情况下，你可能想要再次查询或刷新记录集以包括在数据源上发生的更改。 有关详细信息，请参阅[记录集： 再次查询记录集 (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)。
+调用后`Open`，使用成员函数和数据成员的对象来处理记录。 在某些情况下，你可能想要再次查询或刷新记录集以包括在数据源上发生的更改。 有关详细信息，请参阅[记录集：再次查询记录集 (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)。
 
 > [!TIP]
->  在开发期间使用的连接字符串可能不能最终用户所需的连接字符串不同。 有关通用化你的应用程序在这方面的建议，请参阅[数据源： 管理连接 (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)。
+>  在开发期间使用的连接字符串可能不能最终用户所需的连接字符串不同。 有关通用化你的应用程序在这方面的建议，请参阅[数据源：管理连接 (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)。
 
 ##  <a name="_core_setting_recordset_options"></a> 设置记录集选项
 
@@ -105,7 +105,7 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 
    如果函数的堆栈帧上进行声明，当对象超出作用域对象被自动销毁。 否则，请使用**删除**运算符。
 
-`Close` 释放记录集的`HSTMT`处理。 它不会销毁 c + + 对象。
+`Close` 释放记录集的`HSTMT`处理。 它不会销毁C++对象。
 
 ## <a name="see-also"></a>请参阅
 

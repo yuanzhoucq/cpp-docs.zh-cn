@@ -1,17 +1,17 @@
 ---
-title: appobject （c + + COM 属性）
+title: appobject (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.appobject
 helpviewer_keywords:
 - appobject attribute
 ms.assetid: 8ce30b73-e945-403e-a755-6bc78078a695
-ms.openlocfilehash: 269c5bd3b51e2cc65fbb9c1c7766613595f8b547
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8219c8fdd1b1df93f92fc6c1d0324a2475d3384b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409702"
 ---
 # <a name="appobject"></a>appobject
 
@@ -25,7 +25,7 @@ ms.locfileid: "50486406"
 
 ## <a name="remarks"></a>备注
 
-**Appobject** c + + 属性具有相同的功能[appobject](/windows/desktop/Midl/appobject) MIDL 特性。
+**Appobject** C++属性具有相同的功能[appobject](/windows/desktop/Midl/appobject) MIDL 特性。
 
 ## <a name="example"></a>示例
 
@@ -55,7 +55,7 @@ class A : public ICustom {
 |**适用对象**|**类**，**结构**|
 |**可重复**|否|
 |**必需的特性**|`coclass`|
-|**无效的特性**|无|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

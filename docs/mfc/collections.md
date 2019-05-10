@@ -17,18 +17,18 @@ helpviewer_keywords:
 - collection classes [MFC], lists
 - collection classes [MFC], shapes
 ms.assetid: 02586e4c-851d-41d0-a722-feb11c17c74c
-ms.openlocfilehash: 5b74ee8a779ad2fffa801749d9818f985bc8c352
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f3dea68deaae73313fe389be49e8bbed7da3c93a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383827"
 ---
 # <a name="collections"></a>集合
 
 Microsoft 基础类库提供了用来管理对象的组的集合类。 这些类有两种类型：
 
-- [从 c + + 模板创建的集合类](#_core_the_template_based_collection_classes)
+- [从创建的集合类C++模板](#_core_the_template_based_collection_classes)
 
 - [并非从模板创建的集合类](#_core_the_collection_classes_not_based_on_templates)
 
@@ -55,7 +55,7 @@ Microsoft 基础类库提供了用来管理对象的组的集合类。 这些类
 
 ##  <a name="_core_the_template_based_collection_classes"></a> 基于模板的集合类
 
-若要实现包含任何类型的对象的类型安全的集合，最简单的方法是使用其中一个基于 MFC 模板的类。 有关这些类的示例，请参阅 MFC 示例[收集](../visual-cpp-samples.md)。
+若要实现包含任何类型的对象的类型安全的集合，最简单的方法是使用其中一个基于 MFC 模板的类。 有关这些类的示例，请参阅 MFC 示例[收集](../overview/visual-cpp-samples.md)。
 
 下表列出了基于 MFC 模板的集合类。
 

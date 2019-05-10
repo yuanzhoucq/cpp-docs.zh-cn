@@ -1,6 +1,6 @@
 ---
 title: CD2DGradientBrush 类
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CD2DGradientBrush
 - AFXRENDERTARGET/CD2DGradientBrush
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CD2DGradientBrush [MFC], m_extendMode
 - CD2DGradientBrush [MFC], m_pGradientStops
 ms.assetid: 5bf133e6-16b7-4e3a-845d-0ce63fafe5ec
-ms.openlocfilehash: f49a3a1a1aaebed47b05bf003926379c6f0b8102
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2e04d714e3479224cfc4e207b70483786be33db8
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62173374"
 ---
 # <a name="cd2dgradientbrush-class"></a>CD2DGradientBrush 类
 
@@ -42,7 +42,7 @@ class CD2DGradientBrush : public CD2DBrush;
 |名称|描述|
 |----------|-----------------|
 |[CD2DGradientBrush::CD2DGradientBrush](#cd2dgradientbrush)|构造一个 CD2DGradientBrush 对象。|
-|[CD2DGradientBrush::~CD2DGradientBrush](#cd2dgradientbrush__~cd2dgradientbrush)|析构函数。 当 D2D 渐变画笔对象被销毁时调用。|
+|[CD2DGradientBrush::~CD2DGradientBrush](#_dtorcd2dgradientbrush)|析构函数。 当 D2D 渐变画笔对象被销毁时调用。|
 
 ### <a name="protected-methods"></a>受保护的方法
 

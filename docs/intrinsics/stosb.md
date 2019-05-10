@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __stosb intrinsic
 - stosb instruction
 ms.assetid: 634589ed-2da3-439b-a381-a214d89bf10c
-ms.openlocfilehash: 25b037d17c1648816fe97fc5140aa0bfa7284f05
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 679f1a892a6ee5b458a05d1577ecf766bed385dd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62390277"
 ---
 # <a name="stosb"></a>__stosb
 

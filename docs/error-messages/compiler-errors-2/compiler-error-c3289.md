@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3289
 ms.assetid: 3c1c623b-7fcf-43ab-a89a-8722532a8d29
-ms.openlocfilehash: 0ebb56023694b1713bfe88379d07fc621da4d43f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d234ad4b7c48a66352e52d3517dfd675f27b002c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62222612"
 ---
 # <a name="compiler-error-c3289"></a>编译器错误 C3289
 
 “property”：无法索引 trivial 属性
 
-未正确声明属性。 必须为索引的属性定义访问器。 有关更多信息，请参见 [property](../../windows/property-cpp-component-extensions.md) 。
+未正确声明属性。 必须为索引的属性定义访问器。 有关更多信息，请参见 [property](../../extensions/property-cpp-component-extensions.md) 。
 
 ## <a name="example"></a>示例
 

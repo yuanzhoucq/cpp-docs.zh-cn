@@ -1,17 +1,17 @@
 ---
-title: 双 （c + + COM 属性）
+title: 双 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.dual
 helpviewer_keywords:
 - dual attribute
 ms.assetid: 5d4a9069-d819-42cd-ba56-bbcda17157d9
-ms.openlocfilehash: 30d334f58f0eb91c9ca44ba5a5b6b8edf3970510
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f02f6b69b31f10b41d5c920cfc2ad62dfa1cef2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409676"
 ---
 # <a name="dual"></a>dual
 
@@ -25,7 +25,7 @@ ms.locfileid: "50509949"
 
 ## <a name="remarks"></a>备注
 
-当**双**c + + 属性优先于接口时，会导致将接口置于生成的.idl 文件中的库块。
+当**双**C++属性优先于接口时，会导致将接口置于生成的.idl 文件中的库块。
 
 ## <a name="example"></a>示例
 
@@ -61,7 +61,7 @@ __interface IStatic : IDispatch
 |-|-|
 |**适用对象**|**interface**|
 |**可重复**|否|
-|**必需的特性**|无|
+|**必需的特性**|None|
 |**无效的特性**|`dispinterface`|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。

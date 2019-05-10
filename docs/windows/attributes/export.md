@@ -1,17 +1,17 @@
 ---
-title: 导出 （c + + COM 属性）
+title: 导出 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.export
 helpviewer_keywords:
 - export attribute
 ms.assetid: 70b3e848-fad6-4e09-8c72-be60ca72a4df
-ms.openlocfilehash: 951c0ef2f0da0fa897c299aa6b547d5c0788b285
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ffa4283b8a2b265809d06b72be96e217cf8bf9f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409611"
 ---
 # <a name="export"></a>export
 
@@ -25,7 +25,7 @@ ms.locfileid: "50661586"
 
 ## <a name="remarks"></a>备注
 
-**导出**c + + 属性会导致置于.idl 文件中，然后，可使其可用于任何语言的二进制兼容格式的类型库中的数据结构。
+**导出**C++属性将导致置于.idl 文件中，然后，可使其可用于任何语言的二进制兼容格式的类型库中的数据结构。
 
 无法应用**导出**属性为一个类，即使类仅具有公共成员 (等效于**结构**)。
 
@@ -56,8 +56,8 @@ struct MyStruct {
 |-|-|
 |**适用对象**|**union**， **typedef**，**枚举**，**结构**，或**接口**|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

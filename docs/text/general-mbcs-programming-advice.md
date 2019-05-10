@@ -1,20 +1,18 @@
 ---
 title: 常规 MBCS 编程建议
 ms.date: 11/04/2016
-f1_keywords:
-- _mbcs
 helpviewer_keywords:
 - MBCS [C++], dialog box fonts
 - MS Shell Dlg
 - MBCS [C++], programming
 - dialog boxes [C++], fonts
 ms.assetid: 7b541235-f3e5-4af0-b2c2-a0112cd5fbfb
-ms.openlocfilehash: 800e94bfb8a52b806ad45368499f126fbf163389
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 31c17d6d6dee49f75f5cd8f84aa0690e649aa509
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410664"
 ---
 # <a name="general-mbcs-programming-advice"></a>常规 MBCS 编程建议
 

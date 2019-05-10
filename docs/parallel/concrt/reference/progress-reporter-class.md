@@ -10,11 +10,11 @@ helpviewer_keywords:
 - progress_reporter class
 ms.assetid: b836efab-2d05-4649-b6fa-d15236f1f813
 ms.openlocfilehash: dac74085278418153ddec502f6257ce13885704d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394372"
 ---
 # <a name="progressreporter-class"></a>progress_reporter 类
 
@@ -32,7 +32,7 @@ class progress_reporter;
 *_ProgressType*<br/>
 通过进度报告器报告的每个进度通知的负载类型。
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 

@@ -238,12 +238,12 @@ helpviewer_keywords:
 - Update method
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-ms.openlocfilehash: cb79bfe7cf0a30e0ff4ed2a4a6860bc3042983ee
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: dc4f619fb0dba924693682c927247e809fe2cfe9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62361947"
 ---
 # <a name="crowset-class"></a>CRowset 类
 
@@ -275,7 +275,7 @@ class CRowset
 |[关闭](#close)|释放行和当前`IRowset`接口。|
 |[Compare](#compare)|比较两个创建一个书签，使用[IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539(v=vs.85))。|
 |[CRowset](#crowset)|创建一个新`CRowset`对象，并 （可选） 将其与`IRowset`作为参数提供的接口。|
-|[删除](#delete)|从行集使用删除的行[IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)(v%3dvs.85))。|
+|[删除](#delete)|从行集使用删除的行[IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85))。|
 |[FindNextRow](#findnextrow)|后指定的书签查找下一个匹配行。|
 |[GetApproximatePosition](#getapproximateposition)|返回对应于一个书签的行的近似位置。|
 |[GetData](#getdata)|从行的行集的副本检索数据。|
@@ -386,7 +386,7 @@ CRowset(IRowset* pRowset);
 
 ## <a name="delete"></a> CRowset::Delete
 
-调用[IRowsetChange::DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)(v%3dvs.85))从行集中删除当前行。
+调用[IRowsetChange::DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85))从行集中删除当前行。
 
 ### <a name="syntax"></a>语法
 
@@ -534,7 +534,7 @@ HRESULT GetDataHere(int nAccessor,
 
 ### <a name="remarks"></a>备注
 
-有关如何使用此函数的示例，请参阅[MultiRead 的示例](../../visual-cpp-samples.md)。
+有关如何使用此函数的示例，请参阅[MultiRead 的示例](../../overview/visual-cpp-samples.md)。
 
 ## <a name="getoriginaldata"></a> CRowset::GetOriginalData
 
@@ -937,8 +937,8 @@ HRESULT UpdateAll(DBCOUNTITEM* pcRows = NULL,
 
 ## <a name="see-also"></a>请参阅
 
-[DBViewer 示例](../../visual-cpp-samples.md)<br/>
-[MultiRead 的示例](../../visual-cpp-samples.md)<br/>
-[MultiRead 的属性示例](../../visual-cpp-samples.md)<br/>
+[DBViewer 示例](../../overview/visual-cpp-samples.md)<br/>
+[MultiRead 的示例](../../overview/visual-cpp-samples.md)<br/>
+[MultiRead 的属性示例](../../overview/visual-cpp-samples.md)<br/>
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)

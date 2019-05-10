@@ -14,12 +14,12 @@ helpviewer_keywords:
 - memory, managing
 - IAtlStringMgr class
 ms.assetid: 722f0346-a770-4aa7-8f94-177be8dba823
-ms.openlocfilehash: de0bd720d1806c7950fa9aecc2db6e72aeb1fb4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 978d33c719b9cb8c2708dc97fa78874534dfd748
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62199822"
 ---
 # <a name="iatlstringmgr-class"></a>IAtlStringMgr 类
 
@@ -37,7 +37,7 @@ __interface IAtlStringMgr
 
 |||
 |-|-|
-|[分配](#allocate)|调用此方法来分配新的字符串数据结构。|
+|[Allocate](#allocate)|调用此方法来分配新的字符串数据结构。|
 |[Clone](#clone)|调用此方法可供使用的另一个实例使用的新字符串管理器返回一个指向`CSimpleStringT`。|
 |[免费](#free)|调用此方法释放字符串数据结构。|
 |[GetNilString](#getnilstring)|返回一个指向`CStringData`使用空字符串对象的对象。|

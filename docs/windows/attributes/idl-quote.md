@@ -1,21 +1,21 @@
 ---
-title: idl_quote （c + + COM 属性）
+title: idl_quote (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.idl_quote
 helpviewer_keywords:
 - idl_quote attribute
 ms.assetid: a370e1b7-948b-4e67-9a25-58facf24e4c9
-ms.openlocfilehash: edfeb18053f3ae4fa8c45211833e0ceaa037cf79
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3fbec210d973926a312d3e750e806dd9ef13f5f9
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595567"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448524"
 ---
 # <a name="idlquote"></a>idl_quote
 
-可以使用不支持当前版本的 Visual c + + 中的 IDL 构造并将它们传递到生成的.idl 文件。
+可使用视觉对象的当前版本中不支持的 IDL 构造C++并将它们传递到生成的.idl 文件。
 
 ## <a name="syntax"></a>语法
 
@@ -26,11 +26,11 @@ ms.locfileid: "50595567"
 ### <a name="parameters"></a>参数
 
 *文本*<br/>
-希望 Visual c + + 编译器，而不返回编译器错误传递给生成的.idl 文件的属性名称。
+你想在 Microsoft 的属性名称C++编译器将通过传递到生成的.idl 文件，而不返回编译器错误。
 
 ## <a name="remarks"></a>备注
 
-如果**idl_quote** c + + 属性使用的独立特性 （与右括号后面的分号），然后*文本*原样合并的.idl 文件中放置。 如果**idl_quote**使用的符号*文本*放在该符号的属性块内。
+如果**idl_quote** C++属性使用的独立特性 （与右括号后面的分号），然后*文本*原样合并的.idl 文件中放置。 如果**idl_quote**使用的符号*文本*放在该符号的属性块内。
 
 ## <a name="example"></a>示例
 
@@ -79,8 +79,8 @@ __interface IStatic{
 |-|-|
 |**适用对象**|任何位置|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3490
 ms.assetid: 7638559a-fd06-4527-a9c1-0c8ae68b3123
-ms.openlocfilehash: 55580533d6a1a6b80f79b017ba78a08fb44df744
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e6c3c502290e88feec89877de7ad791084401cf
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62381067"
 ---
 # <a name="compiler-error-c3490"></a>编译器错误 C3490
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CReBar [MFC], Create
 - CReBar [MFC], GetReBarCtrl
 ms.assetid: c1ad2720-1d33-4106-8e4e-80aa84f93559
-ms.openlocfilehash: 4216898e85ebbec748598e10ebb31ce5510f7908
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5a87f70816e9342c7aa203a53d13699659cebb28
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372350"
 ---
 # <a name="crebar-class"></a>CReBar 类
 
@@ -175,6 +175,6 @@ CReBarCtrl& GetReBarCtrl() const;
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 MFCIE](../../visual-cpp-samples.md)<br/>
+[MFC 示例 MFCIE](../../overview/visual-cpp-samples.md)<br/>
 [CControlBar 类](../../mfc/reference/ccontrolbar-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)

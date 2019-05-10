@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4256
 ms.assetid: a755a32e-895a-4837-a2b5-4ea06b736798
-ms.openlocfilehash: b1f7534098a04c7c65a380d302999260c960f284
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3e8a3ab1b11c719730016e6a0cd248770cd89af8
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627573"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447770"
 ---
 # <a name="compiler-warning-level-4-c4256"></a>编译器警告（等级 4）C4256
 
-function： 带虚拟基的类的构造函数具有...;调用可能与较旧版本的 Visual c + + 兼容
+function： 带虚拟基的类的构造函数具有...;调用可能不兼容与较旧版本的视觉对象C++
 
 可能不兼容。
 
-请考虑以下代码示例。 如果定义的构造函数 S2::S2 (int i，...) 使用的版本 7 之前的, Visual c + + 编译器版本编译但下面的示例使用编译的当前版本，适用于 S3 的构造函数的调用由于无法正常工作特殊情况调用约定发生了更改。 如果两者都是使用 Visual C++ 6.0 编译的，该调用也无法完全正常工作，除非不为省略号传递任何参数。
+请考虑以下代码示例。 如果定义的构造函数 S2::S2 (int i，...) 已使用编译的版本的 MicrosoftC++之前版本 7，但下面的示例编译器编译使用最新版本，适用于 S3 的构造函数的调用无法正常工作由于特殊情况调用约定发生了更改。 如果两者都是使用 Visual C++ 6.0 编译的，该调用也无法完全正常工作，除非不为省略号传递任何参数。
 
 若要解决此警告，
 

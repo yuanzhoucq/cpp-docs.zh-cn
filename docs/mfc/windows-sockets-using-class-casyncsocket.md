@@ -12,17 +12,17 @@ helpviewer_keywords:
 - Windows Sockets [MFC], converting Unicode and MBCS strings
 ms.assetid: 825dae17-7c1b-4b86-8d6c-da7f1afb5d8d
 ms.openlocfilehash: 51274791393d95517bd8de5ae7248dc634018037
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399559"
 ---
 # <a name="windows-sockets-using-class-casyncsocket"></a>Windows 套接字：使用类 CAsyncSocket
 
 本文介绍如何使用类[CAsyncSocket](../mfc/reference/casyncsocket-class.md)。 请注意，此类将封装 Windows 套接字 API 级别非常低。 `CAsyncSocket` 适用于由编程人员了解详细信息中的网络通信，但希望的网络事件通知的回调方便地使用。 基于此假设，这篇文章仅提供基本说明。 您可能应考虑使用`CAsyncSocket`如果希望 Windows 套接字的易用性与 MFC 应用程序中的多个网络协议的处理，但不是想要以牺牲灵活性为代价。 你还可能会觉得您可以通过编程的更多的通信，直接自行比你无法使用类的更一般的替代模型获取更高的效率`CSocket`。
 
-`CAsyncSocket` 中所述*MFC 参考*。 Visual c + + 还提供 Windows 套接字规范，位于 Windows SDK 中。 细节被留给您。 Visual c + + 未提供的示例应用程序`CAsyncSocket`。
+`CAsyncSocket` 中所述*MFC 参考*。 VisualC++还提供 Windows 套接字规范，位于 Windows SDK 中。 细节被留给您。 VisualC++不提供的示例应用程序`CAsyncSocket`。
 
 如果您不了高度掌握网络通信，需要一个简单的解决方案，使用类[CSocket](../mfc/reference/csocket-class.md)与`CArchive`对象。 请参阅[Windows 套接字：对存档使用套接字](../mfc/windows-sockets-using-sockets-with-archives.md)有关详细信息。
 
@@ -105,7 +105,7 @@ ms.locfileid: "57263100"
 
 - [Windows 套接字：背景](../mfc/windows-sockets-background.md)
 
-- [Windows 套接字：Stream 套接字](../mfc/windows-sockets-stream-sockets.md)
+- [Windows 套接字：流套接字](../mfc/windows-sockets-stream-sockets.md)
 
 - [Windows 套接字：数据报套接字](../mfc/windows-sockets-datagram-sockets.md)
 

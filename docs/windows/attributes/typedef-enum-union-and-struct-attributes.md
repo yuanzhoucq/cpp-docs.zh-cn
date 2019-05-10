@@ -1,20 +1,20 @@
 ---
-title: Typedef、 Enum、 Union 和 Struct 特性 (c + + COM)
+title: Typedef、 Enum、 Union 和 Struct 特性 (C++ COM)
 ms.date: 10/02/2018
 helpviewer_keywords:
 - union attributes
 - attributes [C++/CLI], reference topics
 ms.assetid: f8a4fe94-dc02-4aed-bc31-3e500d42f4c7
-ms.openlocfilehash: 289935c3651535b5f935624dc33246fbe83a4ceb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2b56ada13a0c597866d538991ed1e83078924ac9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407219"
 ---
 # <a name="typedef-enum-union-and-struct-attributes"></a>Typedef、Enum、Union 和 Struct 特性
 
-以下属性应用于[typedef](../../cpp/aliases-and-typedefs-cpp.md)，[结构](../../cpp/struct-cpp.md)，并[枚举](../../cpp/enumerations-cpp.md)c + + 关键字。
+以下属性应用于[typedef](../../cpp/aliases-and-typedefs-cpp.md)，[结构](../../cpp/struct-cpp.md)，并[枚举](../../cpp/enumerations-cpp.md)C++关键字。
 
 ### <a name="typedef"></a>typedef
 

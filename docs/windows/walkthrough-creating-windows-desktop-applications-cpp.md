@@ -1,23 +1,23 @@
 ﻿---
-title: 演练：创建的传统 Windows 桌面应用程序 （c + +）
+title: 演练：创建传统的 Windows 桌面应用程序 (C++)
 ms.custom: get-started-article
-ms.date: 09/18/2018
+ms.date: 04/23/2019
 helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: 07da91ea092b4e7bee974b0387e72ea0cacaec8e
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 0bc9ef82863fde361964234cca54f12aac1e2abe
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893894"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877392"
 ---
-# <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>演练：创建的传统 Windows 桌面应用程序 （c + +）
+# <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>演练：创建传统的 Windows 桌面应用程序 (C++)
 
 本演练演示如何在 Visual Studio 中创建的传统 Windows 桌面应用程序。 示例应用程序将创建使用 Windows API 来显示"Hello，Windows 桌面 ！" 应用程序。 可以将本演练中开发的代码作为模式来创建其他 Windows 桌面应用程序。
 
-Windows API （也称为 Win32 API、 Windows 桌面 API 和 Windows 经典 API） 是基于 C 语言的框架，用于创建 Windows 应用程序。 它已在上世纪 80 年代以来存在并已用于几十年来创建 Windows 应用程序。 Windows API，如 MFC、 ATL 和.NET framework 之上构建了更高级和简单程序的框架。 即使最新式代码 UWP 和应用商店应用编写的 C + + WinRT 使用 Windows API 下方。 有关 Windows API 的详细信息，请参阅[Windows API 索引](/windows/desktop/apiindex/windows-api-list)。 有许多方法来创建 Windows 应用程序，但上述过程是第一个。
+Windows API （也称为 Win32 API、 Windows 桌面 API 和 Windows 经典 API） 是基于 C 语言的框架，用于创建 Windows 应用程序。 它已在上世纪 80 年代以来存在并已用于几十年来创建 Windows 应用程序。 Windows API，如 MFC、 ATL 和.NET framework 之上构建了更高级和简单程序的框架。 即使最新式代码编写的 UWP 和应用商店应用C++/WinRT 使用 Windows API 下方。 有关 Windows API 的详细信息，请参阅[Windows API 索引](/windows/desktop/apiindex/windows-api-list)。 有许多方法来创建 Windows 应用程序，但上述过程是第一个。
 
 > [!IMPORTANT]
 > 为了简洁起见，在文本中省略了某些代码语句。 [生成代码](#build-the-code)本文档末尾部分显示的完整代码。
@@ -26,23 +26,51 @@ Windows API （也称为 Win32 API、 Windows 桌面 API 和 Windows 经典 API�
 
 - 运行 Microsoft Windows 7 或更高版本的计算机。 建议使用 Windows 10 以获得最佳开发体验。
 
-- Visual Studio 2017 的副本。 有关如何下载和安装 Visual Studio 的信息，请参阅[安装 Visual Studio](/visualstudio/install/install-visual-studio)。 当您运行安装程序时，请确保**使用 c + + 的桌面开发**检查工作负荷。 别担心，如果您未安装 Visual Studio 时安装此工作负荷。 可以再次运行安装程序并立即安装。
+- Visual Studio 的副本。 有关如何下载和安装 Visual Studio 的信息，请参阅[安装 Visual Studio](/visualstudio/install/install-visual-studio)。 当您运行安装程序时，请确保**使用的桌面开发C++** 检查工作负荷。 别担心，如果您未安装 Visual Studio 时安装此工作负荷。 可以再次运行安装程序并立即安装。
 
-   ![使用 c + + 的桌面开发](../build/media/desktop-development-with-cpp.png "使用 c + + 的桌面开发")
+   ![使用的桌面开发C++ ](../build/media/desktop-development-with-cpp.png "使用的桌面开发C++")
 
 - 使用 Visual Studio IDE 的基础知识的了解。 如果使用过 Windows 桌面应用程序之前，您可能可以跟上。 有关的介绍，请参阅[Visual Studio IDE 功能导览](/visualstudio/ide/visual-studio-ide)。
 
-- 足够多要跟着介绍一起操作的 c + + 语言的基础知识的了解。 别担心，我们不执行任何操作太复杂。
+- 了解足够的基础知识C++若要跟着介绍一起操作的语言。 别担心，我们不执行任何操作太复杂。
 
 ## <a name="create-a-windows-desktop-project"></a>创建 Windows 桌面项目
 
-请按照这些步骤创建第一个 Windows 桌面项目，并输入一个有效的 Windows 桌面应用程序的代码。 如果使用早于 Visual Studio 2017 版本 15.3 的 Visual Studio 的版本，跳到[在 Visual Studio 2017 RTM 中创建 Windows 桌面项目](#create-in-vs2017-rtm)。
+请按照这些步骤创建第一个 Windows 桌面项目，并输入一个有效的 Windows 桌面应用程序的代码。 请确保，在此页的左上角的版本选择器设置为正在使用的 Visual Studio 的正确版本。
 
-### <a name="to-create-a-windows-desktop-project-in-visual-studio-2017-update-153-and-later"></a>若要创建 Windows 桌面项目在 Visual Studio 2017 Update 15.3 及更高版本
+::: moniker range="vs-2019"
+
+### <a name="to-create-a-windows-desktop-project-in-visual-studio-2019"></a>若要在 Visual Studio 2019 中创建 Windows 桌面项目
+
+1. 从主菜单中，选择**文件** > **新建** > **项目**打开**创建一个新项目**对话框框。
+
+1. 在对话框顶部，设置**语言**到**C++**，将**平台**到**Windows**，并设置**项目类型**到**桌面**。 
+
+1. 从已筛选的项目类型列表中，选择**Windows 桌面向导**然后选择**下一步**。 在下一步的页中，输入项目的名称并根据需要指定项目位置。
+
+1. 选择**创建**按钮创建项目。
+
+1. **Windows 桌面项目**对话框现在显示。 下**应用程序类型**，选择**Windows 应用程序 (.exe)**。 在“附加选项” 下，选择“空项目” 。 选择**确定**创建项目。
+
+1. 在中**解决方案资源管理器**，右键单击**DesktopApp**项目中，选择**添加**，然后选择**新项**。
+
+   ![到 DesktopApp 项目添加新项](../build/media/desktop-app-project-add-new-item-153.gif "到 DesktopApp 项目添加新项")
+
+1. 在“添加新项”  对话框中选择“C++ 文件(.cpp)” 。 在中**名称**框中，例如，键入文件的名称*HelloWindowsDesktop.cpp*。 选择“添加”。
+
+   ![将.cpp 文件添加到项目 DesktopApp](../build/media/desktop-app-add-cpp-file-153.png "将.cpp 文件添加到 DesktopApp 项目")
+
+现已创建你的项目，在编辑器中打开源文件。 若要继续，跳到[创建的代码](#create-the-code)。
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+### <a name="to-create-a-windows-desktop-project-in-visual-studio-2017"></a>若要在 Visual Studio 2017 中创建 Windows 桌面项目
 
 1. 在“文件”菜单上选择“新建”，再选择“项目”。
 
-1. 在中**新的项目**对话框中，在左窗格中，展开**已安装** > **Visual c + +**，然后选择**Windows 桌面**. 在中间窗格中，选择**Windows 桌面向导**。
+1. 中**新的项目**对话框中，在左窗格中，展开**已安装** > **Visual C++** ，然后选择**的Windows桌面**. 在中间窗格中，选择**Windows 桌面向导**。
 
    在中**名称**框中，例如，键入项目的名称*DesktopApp*。 选择 **“确定”**。
 
@@ -62,11 +90,15 @@ Windows API （也称为 Win32 API、 Windows 桌面 API 和 Windows 经典 API�
 
 现已创建你的项目，在编辑器中打开源文件。 若要继续，跳到[创建的代码](#create-the-code)。
 
-### <a id="create-in-vs2017-rtm"></a> 若要在 Visual Studio 2017 RTM 中创建 Windows 桌面项目
+::: moniker-end
+
+::: moniker range="vs-2015"
+
+### <a name="to-create-a-windows-desktop-project-in-visual-studio-2015"></a>若要在 Visual Studio 2015 中创建 Windows 桌面项目
 
 1. 在“文件”菜单上选择“新建”，再选择“项目”。
 
-1. 在中**新的项目**对话框中，在左窗格中，展开**已安装** > **模板** > **Visual c + +**，然后选择**Win32**。 在中间窗格中，选择“Win32 项目” 。
+1. 在中**新的项目**对话框中，在左窗格中，展开**已安装** > **模板** > **Visual C++** ，然后选择**Win32**。 在中间窗格中，选择“Win32 项目” 。
 
    在中**名称**框中，例如，键入项目的名称*DesktopApp*。 选择 **“确定”**。
 
@@ -90,13 +122,15 @@ Windows API （也称为 Win32 API、 Windows 桌面 API 和 Windows 经典 API�
 
 现已创建你的项目，在编辑器中打开源文件。
 
+::: moniker-end
+
 ## <a name="create-the-code"></a>创建代码
 
 接下来，您将了解如何在 Visual Studio 中创建 Windows 桌面应用程序的代码。
 
 ### <a name="to-start-a-windows-desktop-application"></a>启动 Windows 桌面应用程序
 
-1. 只需为每个 C 应用程序和 c + + 应用程序必须具有`main`函数作为起始点，每个 Windows 桌面应用程序必须具有`WinMain`函数。 `WinMain` 具有以下语法。
+1. 只需为每个 C 应用程序和C++应用程序必须具有`main`函数作为起始点，每个 Windows 桌面应用程序必须具有`WinMain`函数。 `WinMain` 具有以下语法。
 
    ```cpp
    int CALLBACK WinMain(
@@ -110,7 +144,7 @@ Windows API （也称为 Win32 API、 Windows 桌面 API 和 Windows 经典 API�
    有关参数和此函数的返回值的信息，请参阅[WinMain 入口点](/windows/desktop/api/winbase/nf-winbase-winmain)。
 
    > [!NOTE]
-   > 什么是所有这些多余的字词，如`CALLBACK`，或`HINSTANCE`，或`_In_`？ 传统的 Windows API 使用 typedef 和预处理器宏来全面抽象出的类型和特定于平台的详细信息的一些代码，调用约定，如 **__declspec**声明，以及编译器杂注。 在 Visual Studio 中，您可以使用 IntelliSense[快速信息](/visualstudio/ide/using-intellisense#quick-info)功能来查看这些 typedef 和宏的定义。 经过单词感兴趣，请将鼠标悬停或选中它，然后按**Ctrl**+**K**， **Ctrl**+**我**为包含定义的小弹出窗口。 有关详细信息，请参阅[使用 IntelliSense](/visualstudio/ide/using-intellisense)。 参数和返回类型通常使用*SAL 注释*来帮助你捕获编程错误。 有关详细信息，请参阅[使用 SAL 注释减少 C/c + + 代码缺陷](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)。
+   > 什么是所有这些多余的字词，如`CALLBACK`，或`HINSTANCE`，或`_In_`？ 传统的 Windows API 使用 typedef 和预处理器宏来全面抽象出的类型和特定于平台的详细信息的一些代码，调用约定，如 **__declspec**声明，以及编译器杂注。 在 Visual Studio 中，您可以使用 IntelliSense[快速信息](/visualstudio/ide/using-intellisense#quick-info)功能来查看这些 typedef 和宏的定义。 经过单词感兴趣，请将鼠标悬停或选中它，然后按**Ctrl**+**K**， **Ctrl**+**我**为包含定义的小弹出窗口。 有关详细信息，请参阅[使用 IntelliSense](/visualstudio/ide/using-intellisense)。 参数和返回类型通常使用*SAL 注释*来帮助你捕获编程错误。 有关详细信息，请参阅[使用 SAL 注释减少 C /C++代码缺陷](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)。
 
 1. Windows 桌面程序需要&lt;windows.h >。 &lt;tchar.h > 定义`TCHAR`宏，最终解析到**wchar_t**如果在项目中定义了 UNICODE 符号，否则它将解析为**char**。  如果始终生成与支持 UNICODE，不需要 TCHAR 和可以只需使用**wchar_t**直接。
 

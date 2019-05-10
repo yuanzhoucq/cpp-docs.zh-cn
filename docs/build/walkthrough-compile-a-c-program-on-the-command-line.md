@@ -1,66 +1,91 @@
 ---
-title: 演练： 编译 C 程序命令行上
+title: 演练：编译 C 程序命令行上
 ms.custom: conceptual
-ms.date: 09/24/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - command-line applications [C++], C programs
 - Visual C, compiling
 - compiling programs [C++]
 - C program compiling [C++]
 ms.assetid: 7e74cc2d-54b1-49de-b7ad-d3ae6b39ab8d
-ms.openlocfilehash: 756e0fa820806142f05ba45a52735692298f80d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 03876ba47270252caa21d7e2994a4f8321a6d59e
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656867"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877190"
 ---
-# <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>演练： 编译 C 程序命令行上
+# <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>演练：编译 C 程序命令行上
 
-Visual c + + 包括一个 C 编译器，可用于创建从基本的控制台程序到完整的 Windows 桌面应用程序、 移动应用和的详细信息。
+VisualC++包括一个 C 编译器，可用于创建从基本的控制台程序到完整的 Windows 桌面应用程序、 移动应用和的详细信息。
 
-本演练演示如何创建基本的"Hello，World"-使用文本编辑器中，样式 C 程序中，然后在命令行上对其进行编译。 如果您想使用 c + + 中命令行上，请参阅[演练： 编译本机 c + + 程序命令行上](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)。 如果你想要试用 Visual Studio IDE 而不是使用命令行，请参阅[演练： 使用项目和解决方案 （c + +）](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)或[使用 Visual Studio IDE 进行 c + + 桌面开发](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)。
+本演练演示如何创建基本的"Hello，World"-使用文本编辑器中，样式 C 程序中，然后在命令行上对其进行编译。 如果您想使用C++命令行中，请参阅[演练：在命令行上编译本机 C++ 程序](walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)。 如果你想要试用 Visual Studio IDE 而不是使用命令行，请参阅[演练：使用项目和解决方案 (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)或[使用 Visual Studio IDE 的C++桌面开发](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)。
 
 ## <a name="prerequisites"></a>系统必备
 
-若要完成本演练中，你必须安装 Visual Studio 和可选的 Visual c + + 组件或生成工具用于 Visual Studio。
+若要完成本演练中，你必须安装 Visual Studio 和可选的视觉对象C++组件或用于 Visual Studio 的生成工具。
 
 Visual Studio 是全功能的编辑器、 资源管理器、 调试器和编译器支持多种语言和平台的强大的集成的开发环境。 了解这些功能以及如何下载和安装 Visual Studio 中，包括免费的 Visual Studio Community 版，请参阅[安装 Visual Studio](/visualstudio/install/install-visual-studio)。
 
-用于 Visual Studio 版本的 Visual Studio 的生成工具安装仅命令行工具集、 编译器、 工具和生成 C 和 c + + 程序所需的库。 它非常适合生成实验室或教室练习和相对较快的安装。 若要安装仅命令行工具集，请下载[用于 Visual Studio 生成工具](https://go.microsoft.com/fwlink/p/?linkid=875721)运行安装程序。
+用于 Visual Studio 版本的 Visual Studio 的生成工具仅安装命令行工具集、 编译器、 工具和构建 C 所需的库和C++程序。 它非常适合生成实验室或教室练习和相对较快的安装。 若要安装仅命令行工具集，下载生成工具，用于从 Visual Studio [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/)页并运行安装程序。
 
-可以在命令行上生成的 C 或 c + + 程序前，必须验证安装了工具，以及，您可以从命令行访问它们。 Visual c + + 有复杂要求要查找的工具、 标头和使用的库的命令行环境。 **不能在普通命令提示符窗口中使用 Visual c + +** 而无需一些准备工作。 所需*开发人员命令提示*窗口中，这是一个常规的命令提示窗口，但不包含设置的所有必需的环境变量。 幸运的是，Visual c + + 安装用于启动已设置为命令行生成环境的开发人员命令提示快捷的方式。 遗憾的是，开发人员命令提示符快捷方式和所处位置的名称是在几乎每个版本的 Visual c + + 和不同版本的 Windows 上不同的。 在第一个演练任务是查找正确的快捷方式，以便使用。
+您可以生成一个 C 前或C++程序必须在命令行中，验证安装这些工具，并且，你可以从命令行访问它们。 VisualC++对要查找的工具、 标头和使用的库的命令行环境的复杂要求。 **不能使用视觉对象C++在纯命令提示符窗口中**而无需一些准备工作。 所需*开发人员命令提示*窗口中，这是一个常规的命令提示窗口，但不包含设置的所有必需的环境变量。 幸运的是，VisualC++安装的用于启动已设置为命令行生成环境的开发人员命令提示快捷方式。 遗憾的是，开发人员命令提示符快捷方式和所处位置的名称是不同视觉对象的几乎每个版本中C++和在不同版本的 Windows。 在第一个演练任务是查找正确的快捷方式，以便使用。
 
 > [!NOTE]
-> 开发人员命令提示符快捷方式会自动设置编译器和工具，以及任何必需的标头和库的正确路径。 其中某些值是不同的每个生成配置。 您必须设置这些环境值自己如果不使用其中一个快捷方式。 有关详细信息，请参阅[为命令行生成设置路径和环境变量](../build/setting-the-path-and-environment-variables-for-command-line-builds.md)。 生成环境很复杂，因为我们强烈建议你使用而不是构建你自己的开发人员命令提示符快捷方式。
+> 开发人员命令提示符快捷方式会自动设置编译器和工具，以及任何必需的标头和库的正确路径。 其中某些值是不同的每个生成配置。 您必须设置这些环境值自己如果不使用其中一个快捷方式。 有关详细信息，请参阅[为命令行生成设置路径和环境变量](setting-the-path-and-environment-variables-for-command-line-builds.md)。 生成环境很复杂，因为我们强烈建议你使用而不是构建你自己的开发人员命令提示符快捷方式。
 
-## <a name="open-a-developer-command-prompt"></a>打开开发人员命令提示
+这些说明会有所不同，具体取决于所使用的 Visual Studio 版本。 在继续之前，请确保左上版本选择器的此页已正确设置了。
 
-1. 如果已在 Windows 10 上安装 Visual Studio 2017，打开开始菜单，然后向下滚动并打开**Visual Studio 2017**文件夹 （不是 Visual Studio 2017 应用程序）。 选择**VS 2017 开发人员命令提示**若要打开命令提示符窗口。
+::: moniker range="vs-2019"
 
-   如果已在 Windows 10 上安装 Microsoft Visual c + + 生成工具 2015年，打开**启动**菜单，然后向下的滚动并打开**Visual c + + 生成工具**文件夹。 选择**Visual c + + 2015 x86 本机工具命令提示**若要打开命令提示符窗口。
+## <a name="open-a-developer-command-prompt-in-visual-studio-2019"></a>在 Visual Studio 2019 中打开开发人员命令提示
 
-   如果要使用不同版本的 Visual Studio 或在运行不同版本的 Windows，在开始菜单中查找或包含开发人员命令提示符快捷方式的 Visual Studio 工具文件夹的起始页。 此外可以使用 Windows 搜索功能搜索"开发人员命令提示符"并选择一个与你已安装的 Visual Studio 版本匹配。 使用快捷方式打开命令提示符窗口。
+如果已在 Windows 10 上安装 Visual Studio 2019，打开开始菜单，然后向下滚动并打开**Visual Studio 2019**文件夹 （不的 Visual Studio 2019 应用）。 选择**开发人员命令提示符处为 VS 2019**若要打开命令提示符窗口。
 
-1. 接下来，验证正确设置 Visual c + + 开发人员命令提示。 在命令提示符窗口中，输入`cl`并验证输出看起来类似如下：
+如果在使用不同版本的 Windows，在开始菜单中查找，或者包含开发人员命令提示符快捷方式的 Visual Studio 工具文件夹的起始页。 此外可以使用 Windows 搜索功能搜索"开发人员命令提示符"并选择一个与你已安装的 Visual Studio 版本匹配。 使用快捷方式打开命令提示符窗口。
 
-   ```Output
-   C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise>cl
-   Microsoft (R) C/C++ Optimizing Compiler Version 19.10.25017 for x86
-   Copyright (C) Microsoft Corporation.  All rights reserved.
+::: moniker-end
 
-   usage: cl [ option... ] filename... [ /link linkoption... ]
-   ```
+::: moniker range="vs-2017"
 
-   可能存在的当前目录或版本号，具体取决于 Visual c + + 和安装任何更新的版本之间的差异。 如果上面的输出类似于您所看到的内容，然后你便可以构建在命令行 C 或 c + + 程序。
+## <a name="open-a-developer-command-prompt-in-visual-studio-2017"></a>在 Visual Studio 2017 中打开开发人员命令提示
 
-   > [!NOTE]
-   > 如果您遇到错误，如"'cl' 无法识别为内部或外部命令、 可操作程序或批处理文件中，"错误 C1034 或错误 LNK1104 运行时**cl**命令，则可以不使用开发人员命令提示符下，或有问题与你安装的 Visual c + +。 必须修复此问题，然后才能继续。
+如果已在 Windows 10 上安装 Visual Studio 2017，打开开始菜单，然后向下滚动并打开**Visual Studio 2017**文件夹 （不是 Visual Studio 2017 应用程序）。 选择**VS 2017 开发人员命令提示**若要打开命令提示符窗口。
 
-   如果找不到开发人员命令提示符快捷方式，或当你输入时收到错误消息`cl`，则您的 Visual c + + 安装可能存在问题。 如果您使用的 Visual Studio 2017，请尝试重新安装**使用 c + + 的桌面开发**在 Visual Studio 安装程序的工作负荷。 有关详细信息，请参阅[Visual Studio 中的安装 c + + 支持](../build/vscpp-step-0-installation.md)。 或重新安装[用于 Visual Studio 生成工具](https://go.microsoft.com/fwlink/p/?linkid=875721)。 不转到下一节之前此示例的工作。 有关安装和故障排除 Visual Studio 的详细信息，请参阅[安装 Visual Studio](/visualstudio/install/install-visual-studio)。
+如果您运行不同版本的 Windows，在开始菜单中查找或包含开发人员命令提示符快捷方式的 Visual Studio 工具文件夹的起始页。 此外可以使用 Windows 搜索功能搜索"开发人员命令提示符"并选择一个与你已安装的 Visual Studio 版本匹配。 使用快捷方式打开命令提示符窗口。
 
-   > [!NOTE]
-   > 根据上计算机和系统安全配置的 Windows 版本，您可能需要右键单击以打开开发人员命令提示符快捷方式的快捷菜单，然后选择**以管理员身份运行**到已成功生成并运行通过完成本演练创建的程序。
+::: moniker-end
+
+::: moniker range="vs-2015"
+
+## <a name="open-a-developer-command-prompt-in-visual-studio-2015"></a>在 Visual Studio 2015 中打开开发人员命令提示
+
+如果已安装 Microsoft Visual C++ Windows 10 上生成工具 2015年打开**启动**菜单中，然后向下的滚动并打开**VisualC++生成工具**文件夹。 选择**可视化C++2015 x86 本机工具命令提示**以打开命令提示符窗口。
+
+如果您运行不同版本的 Windows，在开始菜单中查找或包含开发人员命令提示符快捷方式的 Visual Studio 工具文件夹的起始页。 此外可以使用 Windows 搜索功能搜索"开发人员命令提示符"并选择一个与你已安装的 Visual Studio 版本匹配。 使用快捷方式打开命令提示符窗口。
+   
+::: moniker-end
+
+
+接下来，确保视觉对象C++开发人员命令提示设置是否正确。 在命令提示符窗口中，输入`cl`并验证输出看起来类似如下：
+
+```Output
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise>cl
+Microsoft (R) C/C++ Optimizing Compiler Version 19.10.25017 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+usage: cl [ option... ] filename... [ /link linkoption... ]
+```
+
+可能会在当前目录或版本编号，具体取决于视觉对象的版本有所不同C++和安装任何更新。 如果上面的输出类似于您看到的则已准备好生成 C 或C++在命令行程序。
+
+> [!NOTE]
+> 如果您遇到错误，如"'cl' 无法识别为内部或外部命令、 可操作程序或批处理文件中，"错误 C1034 或错误 LNK1104 运行时**cl**命令，则可以不使用开发人员命令提示符下，或出错的视觉对象安装C++。 必须修复此问题，然后才能继续。
+
+如果找不到开发人员命令提示符快捷方式，或当你输入时收到错误消息`cl`，然后视觉对象C++安装可能会产生问题。 如果使用的 Visual Studio 2017 或更高版本，请尝试重新安装**使用的桌面开发C++**  Visual Studio 安装程序中的工作负荷。 有关详细信息，请参阅[安装C++Visual Studio 中支持](vscpp-step-0-installation.md)。 或重新安装中的生成工具[Visual Studio 下载](https://visualstudio.microsoft.com/downloads/)页。 不转到下一节之前此示例的工作。 有关安装和故障排除 Visual Studio 的详细信息，请参阅[安装 Visual Studio](/visualstudio/install/install-visual-studio)。
+
+> [!NOTE]
+> 根据上计算机和系统安全配置的 Windows 版本，您可能需要右键单击以打开开发人员命令提示符快捷方式的快捷菜单，然后选择**以管理员身份运行**到已成功生成并运行通过完成本演练创建的程序。
 
 ## <a name="create-a-c-source-file-and-compile-it-on-the-command-line"></a>创建 C 源文件并在命令行上对其进行编译
 
@@ -142,25 +167,25 @@ Visual Studio 是全功能的编辑器、 资源管理器、 调试器和编译�
 
 `cl file1.c file2.c file3.c`
 
-编译器输出一个名为 file1.exe 程序。 若要将名称更改为 program1.exe，添加[/out](../build/reference/out-output-file-name.md)链接器选项：
+编译器输出一个名为 file1.exe 程序。 若要将名称更改为 program1.exe，添加[/out](reference/out-output-file-name.md)链接器选项：
 
 `cl file1.c file2.c file3.c /link /out:program1.exe`
 
-若要自动捕获更多的编程错误，我们建议使用编译[/W3](../build/reference/compiler-option-warning-level.md)或[/w4](../build/reference/compiler-option-warning-level.md)警告等级选项：
+若要自动捕获更多的编程错误，我们建议使用编译[/W3](reference/compiler-option-warning-level.md)或[/w4](reference/compiler-option-warning-level.md)警告等级选项：
 
 `cl /W4 file1.c file2.c file3.c /link /out:program1.exe`
 
-编译器、 cl.exe，具有更多的选项可以应用于生成、 优化、 调试和分析你的代码。 有关快速列表中，输入`cl /?`开发人员命令提示符处。 也可以编译和链接单独并应用更复杂的生成方案中的链接器选项。 编译器和链接器选项和使用情况的详细信息，请参阅[C/c + + 生成参考](../build/reference/c-cpp-building-reference.md)。
+编译器、 cl.exe，具有更多的选项可以应用于生成、 优化、 调试和分析你的代码。 有关快速列表中，输入`cl /?`开发人员命令提示符处。 也可以编译和链接单独并应用更复杂的生成方案中的链接器选项。 编译器和链接器选项和使用情况的详细信息，请参阅[C /C++生成参考](reference/c-cpp-building-reference.md)。
 
-您可以使用 NMAKE 和生成文件或 MSBuild 和项目文件，若要配置和命令行上生成更复杂的项目。 有关使用这些工具的详细信息，请参阅[NMAKE 参考](../build/nmake-reference.md)并[MSBuild](../build/msbuild-visual-cpp.md)。
+您可以使用 NMAKE 和生成文件或 MSBuild 和项目文件，若要配置和命令行上生成更复杂的项目。 有关使用这些工具的详细信息，请参阅[NMAKE 参考](reference/nmake-reference.md)并[MSBuild](msbuild-visual-cpp.md)。
 
-C 和 c + + 语言非常相似，但不是相同。 Visual c + + 编译器使用一个简单的规则来确定你的代码对其进行编译时要使用的语言。 默认情况下，Visual C++ 编译器将以 .c 结尾的所有文件视为 C 源代码，将以 .cpp 结尾的所有文件视为 C++ 源代码。 若要强制编译器将所有文件都视为 C 非依赖的文件扩展名，请使用[/Tc](../build/reference/tc-tp-tc-tp-specify-source-file-type.md)编译器选项。
+C 和C++语言与此类似，但不是相同。 Microsoft C /C++编译器 (MSVC) 使用一个简单的规则来确定你的代码对其进行编译时要使用的语言。 默认情况下，MSVC 编译器将以.c C 源代码，结尾的所有文件和所有文件以作为.cpp 结尾的C++的源代码。 若要强制编译器将所有文件都视为 C 非依赖的文件扩展名，请使用[/Tc](reference/tc-tp-tc-tp-specify-source-file-type.md)编译器选项。
 
-Visual c + + C 编译器是符合 ISO C99 标准，但不是完全符合标准。 在大多数情况下，可移植 C 代码将编译并按预期方式运行。 Visual c + + 不支持在 ISO C11 中的大多数更改。 由 Visual c + + 编译器已弃用某些库函数和 POSIX 函数名称。 支持的函数，但首选的名称已更改。 有关详细信息，请参阅[CRT 中的安全功能](../c-runtime-library/security-features-in-the-crt.md)并[编译器警告 （等级 3） C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)。
+MSVC 是符合 ISO C99 标准，但不是完全符合标准。 在大多数情况下，可移植 C 代码将编译并按预期方式运行。 VisualC++不支持在 ISO C11 中的大多数更改。 某些库函数和 POSIX 函数名称不推荐使用 MSVC。 支持的函数，但首选的名称已更改。 有关详细信息，请参阅[CRT 中的安全功能](../c-runtime-library/security-features-in-the-crt.md)并[编译器警告 （等级 3） C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)。
 
 ## <a name="see-also"></a>请参阅
 
 [演练：创建标准 C++ 程序 (C++)](../windows/walkthrough-creating-a-standard-cpp-program-cpp.md)<br/>
 [C 语言参考](../c-language/c-language-reference.md)<br/>
-[生成 C/C++ 程序](../build/building-c-cpp-programs.md)<br/>
+[项目和生成系统](projects-and-build-systems-cpp.md)<br/>
 [兼容性](../c-runtime-library/compatibility.md)

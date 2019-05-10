@@ -12,38 +12,38 @@ helpviewer_keywords:
 - -EH compiler option [C++]
 - /EH compiler option [C++]
 ms.assetid: 754b916f-d206-4472-b55a-b6f1b0f2cb4d
-ms.openlocfilehash: e8707ac716a010ea1d3dc0fa51740e76a5822462
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 9f5eed60ecb51abc1d8fbd3c38773bbf782b23a5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271796"
 ---
 # <a name="eh-exception-handling-model"></a>/EH（异常处理模型）
 
-指定当编译器使用的异常处理类型、何时优化掉异常检查以及是否销毁由于异常而超出范围的 C++ 对象。 如果 **/EH**未指定，则编译器使代码能够捕获异步结构化的异常和 c + + 异常，但不会销毁由于异步异常超出范围的 c + + 对象。
+指定当编译器使用的异常处理类型、何时优化掉异常检查以及是否销毁由于异常而超出范围的 C++ 对象。 如果 **/EH**未指定，编译器使代码能够捕获这两个异步结构化的异常和C++异常，但不会销毁C++由于异步异常超出范围的对象。
 
 ## <a name="syntax"></a>语法
 
-> **/EH**{**s**|} [**c**] [**r**] [**-**]
+> **/EH**{**s**|**a**}[**c**][**r**][**-**]
 
 ## <a name="arguments"></a>自变量
 
 **a**<br/>
-异常处理模型同时捕获异步 （结构化） 和 c + + 的同步 （c + +） 异常情况下使用`catch(...)`语法。
+异常处理模型同时捕获异步 （结构化） 和同步 (C++) 异常按使用的C++`catch(...)`语法。
 
 **s**<br/>
-异常处理模型的同步 （c + +） 仅捕获异常并通知编译器假定函数声明为**extern"C"** 可能会引发异常。
+捕获同步异常处理模型 (C++) 仅异常并通知编译器假定函数声明为**extern"C"** 可能会引发异常。
 
 **c**<br/>
-如果用于**s** (**/EHsc**)、 c + + 仅捕获异常并通知编译器假定函数声明为**extern"C"** 从未引发 c + + 异常。 **/EHca** 与 **/EHa**相等。
+如果用于**s** (**/EHsc**)，会捕获C++仅异常并通知编译器假定函数声明为**extern"C"** 永远不会引发C++异常。 **/EHca** 与 **/EHa**相等。
 
 **r**<br/>
 告知编译器始终生成运行时终止检查所有**noexcept**函数。 默认情况下，运行时检查**noexcept**可能被优化掉如果编译器确定该函数调用仅非引发函数。
 
 ## <a name="remarks"></a>备注
 
-**/EHa** 编译器选项用于支持使用本机 C++ `catch(...)` 子句的异步结构化异常处理 (SEH)。 不指定情况下实现 SEH **/EHa**，可以使用 **__try**， **__except**，以及 **__finally**语法。 尽管 Windows 和 Visual C++ 支持 SEH，但强烈建议你使用 ISO 标准 C++ 异常处理（**/EHs** 或 **/EHsc**），因为它使代码更可移植并更灵活。 不过，在现有代码或为特定类型的程序 — 例如，在代码编译为支持公共语言运行时 ([/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)) — 您仍可能必须使用 SEH。 有关详细信息，请参阅 [Structured Exception Handling (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)。
+ **/EHa** 编译器选项用于支持使用本机 C++ `catch(...)` 子句的异步结构化异常处理 (SEH)。 不指定情况下实现 SEH **/EHa**，可以使用 **__try**， **__except**，以及 **__finally**语法。 尽管 Windows 和 Visual C++ 支持 SEH，但强烈建议你使用 ISO 标准 C++ 异常处理（**/EHs** 或 **/EHsc**），因为它使代码更可移植并更灵活。 不过，在现有代码或为特定类型的程序 — 例如，在代码编译为支持公共语言运行时 ([/clr （公共语言运行时编译）](clr-common-language-runtime-compilation.md)) — 您仍可能必须使用 SEH。 有关详细信息，请参阅 [Structured Exception Handling (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)。
 
 指定 **/EHa** 并尝试使用 `catch(...)` 处理所有异常可能很危险。 在大多数情况下，异步异常是不可恢复的，因而被认为是致命的。 捕获它们并继续可能导致进程损坏并使 Bug 难以发现和修复。
 
@@ -94,13 +94,13 @@ int main() {
 
 **/EHr**编译器选项将强制具有的所有函数中的运行时终止检查**noexcept**属性。 默认情况下，如果编译器后端确定该函数仅调用 *非引发* 函数，则运行时检查可能被优化掉。 非引发函数是具有一个指定不会引发任何异常的属性的函数。 这包括标记的函数**noexcept**， `throw()`， `__declspec(nothrow)`，以及何时**了 /EHc**指定，则**extern"C"** 函数。 非引发函数还包括编译器已通过检查确定为非引发的任何函数。 可以通过使用 **/EHr-** 显式设置默认值。
 
-但是，非引发属性不保证函数不会引发任何异常。 与不同的行为**noexcept**函数，Visual c + + 编译器会考虑通过使用声明的函数引发的异常`throw()`， `__declspec(nothrow)`，或**extern"C"** 为未定义行为。 使用这三个声明属性的函数不强制使用运行时终止检查确定是否存在异常。 可以使用 **/EHr**选项，可帮助你确定此未定义行为，通过强制编译器生成的转义的未经处理异常的运行时检查**noexcept**函数。
+但是，非引发属性不保证函数不会引发任何异常。 与不同的行为**noexcept**函数，MSVC 编译器会考虑通过使用声明的函数引发的异常`throw()`， `__declspec(nothrow)`，或**extern"C"** 作为未定义的行为。 使用这三个声明属性的函数不强制使用运行时终止检查确定是否存在异常。 可以使用 **/EHr**选项，可帮助你确定此未定义行为，通过强制编译器生成的转义的未经处理异常的运行时检查**noexcept**函数。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择**配置属性** > **C/c + +** > **代码生成**。
+1. 选择**配置属性** > **C /C++** > **代码生成**。
 
 1. 修改 **“启用 C++ 异常”** 属性。
 
@@ -112,8 +112,8 @@ int main() {
 
 ## <a name="see-also"></a>请参阅
 
-[编译器选项](../../build/reference/compiler-options.md)<br/>
-[设置编译器选项](../../build/reference/setting-compiler-options.md)<br/>
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)<br/>
 [错误和异常处理](../../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
 [异常规范 (throw)](../../cpp/exception-specifications-throw-cpp.md)<br/>
 [结构化异常处理 (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)

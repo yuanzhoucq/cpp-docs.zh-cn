@@ -11,12 +11,12 @@ helpviewer_keywords:
 - module definition files
 - /DEF linker option
 ms.assetid: 6497fa68-65f0-48ca-8f66-b87166fc631a
-ms.openlocfilehash: 4b6490186e2faf289844f7fb6b84f5a1c27b10a5
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c08412fb50835485e7941b2bb1db088943387b71
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62272303"
 ---
 # <a name="def-specify-module-definition-file"></a>/DEF（指定模块定义文件）
 
@@ -31,11 +31,11 @@ ms.locfileid: "57423496"
 
 ## <a name="remarks"></a>备注
 
-/DEF 选项将模块定义文件 (.def) 传递给链接器。 可以链接到指定只有一个.def 文件。 有关.def 文件的详细信息，请参阅[模块定义文件](../../build/reference/module-definition-dot-def-files.md)。
+/DEF 选项将模块定义文件 (.def) 传递给链接器。 可以链接到指定只有一个.def 文件。 有关.def 文件的详细信息，请参阅[模块定义文件](module-definition-dot-def-files.md)。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置 Visual c + + 项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
 1. 单击**链接器**文件夹。
 
@@ -51,5 +51,5 @@ ms.locfileid: "57423496"
 
 ## <a name="see-also"></a>请参阅
 
-[设置链接器选项](../../build/reference/setting-linker-options.md)<br/>
-[链接器选项](../../build/reference/linker-options.md)
+[MSVC 链接器参考](linking.md)<br/>
+[MSVC 链接器选项](linker-options.md)

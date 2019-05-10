@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0019
 ms.assetid: 5390a62b-aacf-4bc8-b9d7-08f1e0233423
-ms.openlocfilehash: d99750efcfc400cc85a865ebd30a8c2a3da1d07e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e97d9488df0eeb666cb78354d0363c2a359a159d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62359392"
 ---
 # <a name="project-build-error-prj0019"></a>项目生成错误 PRJ0019
 
@@ -21,6 +21,6 @@ ms.locfileid: "50620787"
 
 一种工具返回了错误代码而没有错误消息，还会看到 PRJ0019。 这可能发生，例如，如果 MIDL 将输出重定向到 NUL。
 
-请参阅[故障排除自定义生成步骤和生成事件](../../ide/troubleshooting-build-customizations.md)有关详细信息。
+请参阅[故障排除自定义生成步骤和生成事件](../../build/troubleshooting-build-customizations.md)有关详细信息。
 
 当运行作为用户组的成员并且需要管理访问权限，也可以发生此错误。 有关详细信息，请参阅[作为用户组的成员运行](../../security/running-as-a-member-of-the-users-group.md)。

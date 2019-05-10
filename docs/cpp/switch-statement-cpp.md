@@ -1,6 +1,6 @@
 ---
 title: switch 语句 (C++)
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - default_cpp
 - switch_cpp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - case keyword [C++], in switch statements
 - default keyword [C++]
 ms.assetid: 6c3f3ed3-5593-463c-8f4b-b33742b455c6
-ms.openlocfilehash: 67918b7df747d3bee923da500729e60b4fe04336
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
-ms.translationtype: MT
+ms.openlocfilehash: 8136b03d9e54b4d49bcb1417238066bd86bc6b89
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328846"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221935"
 ---
 # <a name="switch-statement-c"></a>switch 语句 (C++)
 
@@ -78,7 +78,7 @@ int main() {
 
 在上面的示例中，如果 `capa` 是大写 `c`，则 `A` 将递增。 **中断**之后的语句`capa++`终止执行**切换**语句体并将控制转移到**虽然**循环。 无需**中断**语句中，执行将"贯穿"到下一步的标记语句，以便`lettera`和`nota`也将递增。 由提供相似的用途**中断**语句`case 'a'`。 如果`c`是一个小写`a`，`lettera`会递增并**中断**语句将终止**切换**语句体。 如果`c`不是`a`或`A`，则**默认**执行语句。
 
-**2017 及更高版本的 visual Studio:** (适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)) `[[fallthrough]]` C++ 17 标准中指定属性。 可在**切换**语句的贯穿行为旨在作为提示编译器 （或任何读取代码）。 Visual c + + 编译器当前不会发出警告 fallthrough 行为，因此，此属性必须对编译器行为没有影响。 请注意，该属性应用于标记的语句; 中的空语句换而言之，分号是必需的。
+**2017 及更高版本的 visual Studio:** (适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)) `[[fallthrough]]` C++ 17 标准中指定属性。 可在**切换**语句的贯穿行为旨在作为提示编译器 （或任何读取代码）。 MicrosoftC++编译器当前不会警告 fallthrough 行为，因此，此属性必须对编译器行为没有影响。 请注意，该属性应用于标记的语句; 中的空语句换而言之，分号是必需的。
 
 ```cpp
 int main()
@@ -106,7 +106,7 @@ int main()
 }
 ```
 
-**Visual Studio 2017 15.3 及更高版本**(适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)): switch 语句可能引入并初始化其作用域仅限于 switch 语句的块变量：
+**Visual Studio 2017 版本 15.3 及更高版本**(适用于[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):Switch 语句可能会引入并初始化一个变量，其作用域被限制在 switch 语句的块：
 
 ```cpp
     switch (Gadget gadget(args); auto s = gadget.get_status())

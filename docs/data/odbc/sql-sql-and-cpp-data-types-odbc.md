@@ -1,37 +1,37 @@
 ---
-title: SQL：SQL 和 C++ 数据类型 (ODBC)
+title: SQL:SQL 和C++数据类型 (ODBC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - data types [C++], SQL vs. C++
 - SQL data types [C++]
 - SQL [C++], vs. C++ data types
 ms.assetid: 066e0070-d4da-435c-9c4b-f7cab3352c86
-ms.openlocfilehash: 6767d009ca376d8e8579baf32f2c9af1e282abce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3efa36342b7d16968113acd818a7a1386e4cefcc
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62329878"
 ---
-# <a name="sql-sql-and-c-data-types-odbc"></a>SQL：SQL 和 C++ 数据类型 (ODBC)
+# <a name="sql-sql-and-c-data-types-odbc"></a>SQL:SQL 和C++数据类型 (ODBC)
 
 > [!NOTE]
 >  此信息适用于 MFC ODBC 类。 如果您正在使用 MFC DAO 类，请参阅"比较的 Microsoft Jet 数据库引擎 SQL 和 ANSI SQL"DAO 帮助中的主题。
 
-下表将 ANSI SQL 数据类型映射到 c + + 数据类型。 这可以增强的附录 D 中的 C 语言信息*ODBC SDK* *程序员参考*MSDN 库 CD 上。 这些向导管理为你的大多数数据类型映射。 如果不使用向导，可以使用映射信息可帮助你手动编写字段交换代码。
+下表列出了 ANSI SQL 数据类型与C++数据类型。 这可以增强的附录 D 中的 C 语言信息*ODBC SDK* *程序员参考*MSDN 库 CD 上。 这些向导管理为你的大多数数据类型映射。 如果不使用向导，可以使用映射信息可帮助你手动编写字段交换代码。
 
-### <a name="ansi-sql-data-types-mapped-to-c-data-types"></a>ANSI SQL 数据类型映射到 c + + 数据类型
+### <a name="ansi-sql-data-types-mapped-to-c-data-types"></a>ANSI SQL 数据类型映射到C++数据类型
 
 |ANSI SQL 数据类型|C++ 数据类型|
 |------------------------|---------------------|
 |**CHAR**|`CString`|
 |DECIMAL|`CString` 1|
 |**SMALLINT**|**int**|
-|**真正**|**float**|
-|**整数**|**long**|
+|**REAL**|**float**|
+|**INTEGER**|**long**|
 |**FLOAT**|**double**|
 |**DOUBLE**|**double**|
-|**数值**|`CString` 1|
+|**NUMERIC**|`CString` 1|
 |**VARCHAR**|`CString`|
 |**LONGVARCHAR**|`CLongBinary`, `CString` 2|
 |**BIT**|**BOOL**|
@@ -41,8 +41,8 @@ ms.locfileid: "50649492"
 |**VARBINARY**|`CByteArray`|
 |**LONGVARBINARY**|`CLongBinary`, `CByteArray` 3|
 |DATE|`CTime`， `CString`|
-|**时间**|`CTime`， `CString`|
-|**时间戳**|`CTime`， `CString`|
+|**TIME**|`CTime`， `CString`|
+|**TIMESTAMP**|`CTime`， `CString`|
 
 1. ANSI**十进制**并**数值**映射到`CString`因为**SQL_C_CHAR**是默认 ODBC 传输类型。
 
@@ -57,4 +57,4 @@ ms.locfileid: "50649492"
 ## <a name="see-also"></a>请参阅
 
 [SQL](../../data/odbc/sql.md)<br/>
-[SQL：进行直接 SQL 调用 (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
+[SQL：执行直接 SQL 调用 (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)

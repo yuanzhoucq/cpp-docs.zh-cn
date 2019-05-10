@@ -9,11 +9,11 @@ helpviewer_keywords:
 - '&& operator'
 ms.assetid: 50cfa664-a8c4-4b31-9bab-2f80d7cd2d1f
 ms.openlocfilehash: 0843ba95467c3ae0d735476de48a8195a59788f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368651"
 ---
 # <a name="logical-and-operator-ampamp"></a>逻辑 AND 运算符： &amp;&amp;
 
@@ -41,7 +41,7 @@ char *pch = 0;
 
 如果 `pch` 为 null (0)，则从不计算表达式的右侧。 因此，无法通过 null 指针进行赋值。
 
-## <a name="operator-keyword-for-"></a>&& 的运算符关键字
+## <a name="operator-keyword-for-"></a>运算符关键字 （& a) （& a)
 
 **并**运算符是的文本等效**&&**。 有两种方法来访问**并**在程序中的运算符： 包含头文件`iso646.h`，或使用编译[/Za](../build/reference/za-ze-disable-language-extensions.md) （禁用语言扩展） 编译器选项。
 
@@ -69,6 +69,6 @@ int main() {
 
 ## <a name="see-also"></a>请参阅
 
-[C + + 内置运算符优先级和结合性](cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[C++内置运算符优先级和结合性](cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [C++ 内置运算符、优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [C 逻辑运算符](../c-language/c-logical-operators.md)

@@ -10,16 +10,16 @@ helpviewer_keywords:
 - members, pointers to
 - pointers_to_members pragma
 ms.assetid: 8325428c-c90a-4aed-9e82-cb1dda23f4ca
-ms.openlocfilehash: 57b316fafd6f55a5979cd42fb6ac1825e3a9ea08
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ee45a77a7094fb1ef9ba536bae391aaad00e812
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62179999"
 ---
 # <a name="pointerstomembers"></a>pointers_to_members
 
-**C + + 专用**
+**C++特定**
 
 指定是否可以在类成员关联的类定义之前声明指向类成员的指针，以及类成员是否用于控制指针大小和解释指针所需的代码。
 
@@ -40,7 +40,7 @@ ms.locfileid: "50511067"
 |*full_generality*|生成安全的（有时并非最佳）代码。 您使用*full_generality*如果关联的类定义之前声明指向成员的任何指针。 此自变量始终使用由指定的指针表示形式*大多数常规表示*参数。 等效于 /vmg。|
 |*best_case*|使用指向成员的所有指针的最佳大小写表示形式生成安全的最佳代码。 要求在声明指向类成员的指针之前定义此类。 默认值是*best_case*。|
 
-*大多数常规表示*参数指定编译器可以安全地使用引用指向翻译单元中的类的成员的任何指针的最小指针表示形式。 自变量可以是下列项之一：
+*大多数常规表示*参数指定编译器可以安全地使用引用指向翻译单元中的类的成员的任何指针的最小指针表示形式。 参数可以是下列项之一：
 
 |参数|注释|
 |--------------|--------------|

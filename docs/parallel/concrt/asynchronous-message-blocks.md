@@ -7,11 +7,11 @@ helpviewer_keywords:
 - greedy join [Concurrency Runtime]
 ms.assetid: 79c456c0-1692-480c-bb67-98f2434c1252
 ms.openlocfilehash: de6a433ab733207d5c56b46e693837056a0cd8b1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62237072"
 ---
 # <a name="asynchronous-message-blocks"></a>异步消息块
 
@@ -112,12 +112,12 @@ ms.locfileid: "57274158"
 |`unbounded_buffer`|双向|Ordered|不受限制|不受限制|
 |`overwrite_buffer`|双向|Ordered|不受限制|不受限制|
 |`single_assignment`|双向|Ordered|不受限制|不受限制|
-|`call`|目标|Ordered|不受限制|不适用|
+|`call`|Target|Ordered|不受限制|不适用|
 |`transformer`|双向|Ordered|不受限制|1|
 |`choice`|双向|Ordered|10|1|
 |`join`|双向|Ordered|不受限制|1|
 |`multitype_join`|双向|Ordered|10|1|
-|`timer`|源|不适用|不适用|1|
+|`timer`|Source|不适用|不适用|1|
 
 以下部分介绍更多详细信息中的消息块类型。
 

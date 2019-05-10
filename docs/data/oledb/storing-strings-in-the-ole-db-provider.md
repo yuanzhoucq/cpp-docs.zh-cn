@@ -4,12 +4,12 @@ ms.date: 10/26/2018
 helpviewer_keywords:
 - user records, editing
 ms.assetid: 36cb9635-067c-4cad-8f85-962f28026f6a
-ms.openlocfilehash: 54dfdb347c621cf6f8645feb6d13742f32503f9f
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: 5dce7dac84ef69da17baac135a68bd78698c4456
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51264614"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64344976"
 ---
 # <a name="storing-strings-in-the-ole-db-provider"></a>将字符串存储在 OLE DB 提供程序中
 

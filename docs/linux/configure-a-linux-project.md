@@ -1,17 +1,17 @@
 ---
 title: 在 Visual Studio 中配置 C++ Linux 项目
-ms.date: 09/18/2018
+ms.date: 11/12/2018
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: fd87b3d60e6625fb86ad1b494fd878b9b5ca031b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 84b9242ad5af79ed48d716fb5a35db56428e9a98
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622490"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57808360"
 ---
 # <a name="configure-a-linux-project"></a>配置 Linux 项目
 
-本主题介绍如何在 Visual Studio 中配置 C++ Linux 项目。 有关 Visual Studio 中 CMake Linux 项目的信息，请参阅[配置 Linux CMake 项目](cmake-linux-project.md)。
+本主题介绍如何在 Visual Studio 中配置基于 Linux 项目模板的 C++ Linux 项目。 有关 Visual Studio 中 CMake Linux 项目的信息，请参阅[配置 Linux CMake 项目](cmake-linux-project.md)。
 
 ## <a name="general-settings"></a>常规设置
 
@@ -89,7 +89,7 @@ apt install zip
 
 ## <a name="see-also"></a>请参阅
 
-[使用项目属性](../ide/working-with-project-properties.md)<br/>
+[设置编译器和生成属性](../build/working-with-project-properties.md)<br/>
 [C++ 常规属性 (Linux C++)](../linux/prop-pages/general-linux.md)<br/>
 [VC++ 目录 (Linux C++)](../linux/prop-pages/directories-linux.md)<br/>
 [复制源项目属性 (Linux C++)](../linux/prop-pages/copy-sources-project.md)<br/>

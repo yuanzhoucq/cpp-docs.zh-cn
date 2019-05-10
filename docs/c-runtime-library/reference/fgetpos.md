@@ -23,11 +23,11 @@ helpviewer_keywords:
 - streams, file position indicator
 ms.assetid: bfa05c38-1135-418c-bda1-d41be51acb62
 ms.openlocfilehash: e213c9830ffe6edf04b12a80828f14cc48f77524
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333925"
 ---
 # <a name="fgetpos"></a>fgetpos
 
@@ -44,7 +44,7 @@ int fgetpos(
 
 ### <a name="parameters"></a>参数
 
-*流*<br/>
+*stream*<br/>
 目标流。
 
 *pos*<br/>
@@ -52,7 +52,7 @@ int fgetpos(
 
 ## <a name="return-value"></a>返回值
 
-如果成功， **fgetpos**返回 0。 在失败时，它返回非零值，并设置**errno**下列任一清单常量 （在 STDIO 中定义。H): **EBADF**，这意味着指定的流不是有效的文件指针或不可访问，或**EINVAL**，这意味着*流*值或值*pos*是无效的例如，如果可以为 null 指针。 如果*流*或*pos*是**NULL**指针，该函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md).
+如果成功， **fgetpos**返回 0。 在失败时，它返回非零值，并设置**errno**下列任一清单常量 （在 STDIO 中定义。H):**EBADF**，这意味着指定的流不是有效的文件指针或不可访问，或**EINVAL**，这意味着*流*的值或值*pos*是无效的例如，如果可以为 null 指针。 如果*流*或*pos*是**NULL**指针，该函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="remarks"></a>备注
 

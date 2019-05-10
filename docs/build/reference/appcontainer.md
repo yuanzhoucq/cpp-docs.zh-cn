@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -APPCONTAINER editbin option
 - /APPCONTAINER editbin option
 ms.assetid: 0ca4f1ec-c8de-4a37-b3e2-deda7af0bb88
-ms.openlocfilehash: ad451f5900841abe3f0fe10ae99fa0183e14e5c5
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: eb922a29b00fee63effae302505f25c98b04523e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62274022"
 ---
 # <a name="appcontainer"></a>/APPCONTAINER
 
@@ -30,5 +30,5 @@ ms.locfileid: "57412584"
 
 ## <a name="see-also"></a>请参阅
 
-[EDITBIN 选项](../../build/reference/editbin-options.md)<br/>
+[EDITBIN 选项](editbin-options.md)<br/>
 [什么是通用 Windows 应用？](/windows/uwp/get-started/universal-application-platform-guide)

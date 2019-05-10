@@ -9,24 +9,24 @@ helpviewer_keywords:
 - /arch compiler option [C++]
 - arch compiler option [C++]
 ms.assetid: cc17da15-47bd-4e74-b905-4e73c3bdb8a0
-ms.openlocfilehash: d110a48cded49df92fbbc48eb96cee6fb2f8882e
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 83379ad7daca7dcb21f4ed0c0b94bb354161204a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273944"
 ---
 # <a name="arch-minimum-cpu-architecture"></a>/arch（最小 CPU 体系结构）
 
 体系结构选项指定代码生成的体系结构。 选择要使用的基本硬件体系结构以查看该目标平台的 /arch 选项。
 
-- [/arch (x86)](../../build/reference/arch-x86.md)
+- [/arch (x86)](arch-x86.md)
 
-- [/arch (x64)](../../build/reference/arch-x64.md)
+- [/arch (x64)](arch-x64.md)
 
-- [/arch (ARM)](../../build/reference/arch-arm.md)
+- [/arch (ARM)](arch-arm.md)
 
 ## <a name="see-also"></a>请参阅
 
-[编译器选项](../../build/reference/compiler-options.md)<br/>
-[设置编译器选项](../../build/reference/setting-compiler-options.md)
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)

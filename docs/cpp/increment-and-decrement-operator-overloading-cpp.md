@@ -8,11 +8,11 @@ helpviewer_keywords:
 - decrement operators [C++], types of
 ms.assetid: 5423c6ce-3999-4a77-92f6-ad540add1b1d
 ms.openlocfilehash: 4413c2bba600d1118870faca9a15b20398ec4dd4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183563"
 ---
 # <a name="increment-and-decrement-operator-overloading-c"></a>递增和递减运算符重载 (C++)
 
@@ -22,7 +22,7 @@ ms.locfileid: "50557259"
 
 - 前置递减和后置递减
 
-编写重载的运算符函数时，为这些运算符的前缀和后缀版本实现单独的版本很有用。 若要区分这两个，请遵循以下规则： 运算符的前缀形式被声明为任何其他一元运算符; 完全相同的方式后缀形式接受类型的其他自变量**int**。
+编写重载的运算符函数时，为这些运算符的前缀和后缀版本实现单独的版本很有用。 若要区分这两个，请遵循以下规则：运算符的前缀形式被声明为任何其他一元运算符; 完全相同的方式后缀形式接受类型的其他自变量**int**。
 
 > [!NOTE]
 >  当递增或递减运算符的前缀形式指定重载的运算符，其他参数必须是类型**int**; 指定任何其他类型都将产生错误。

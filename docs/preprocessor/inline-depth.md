@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, inline_depth
 - inline_depth pragma
 ms.assetid: 2bba60fe-43ea-4d09-90f7-aafaba3bad07
-ms.openlocfilehash: b08578406fab4fe3a025d502f71cfd90f8dca75b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 18d772c8a9f6218ed3afaa385f214445bd0fe8e6
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383680"
 ---
 # <a name="inlinedepth"></a>inline_depth
 指定内联启发式搜索深度，这样一来，如果它是在晚于 （在调用关系图） 深度，则函数将不内联*n*。

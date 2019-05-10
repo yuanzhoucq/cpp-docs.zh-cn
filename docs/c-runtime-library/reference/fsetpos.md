@@ -23,11 +23,11 @@ helpviewer_keywords:
 - fsetpos function
 ms.assetid: 6d19ff48-1a2b-47b3-9f23-ed0a47b5a46e
 ms.openlocfilehash: 9854c71e381da6ec9a75d440b9588e2476bada7c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287555"
 ---
 # <a name="fsetpos"></a>fsetpos
 
@@ -44,7 +44,7 @@ int fsetpos(
 
 ### <a name="parameters"></a>参数
 
-*流*<br/>
+*stream*<br/>
 指向**文件**结构的指针。
 
 *pos*<br/>
@@ -52,7 +52,7 @@ int fsetpos(
 
 ## <a name="return-value"></a>返回值
 
-如果成功， **fsetpos**返回 0。 在失败时，该函数返回非零值，并设置**errno**下列任一清单常量 （在 ERRNO 中定义。H): **EBADF**，这意味着文件不可访问或该对象的*流*指向不是一种有效的文件结构; 或**EINVAL**，这意味着的值无效*流*或*pos*传递。 如果传入了无效参数，这些函数则会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。
+如果成功， **fsetpos**返回 0。 在失败时，该函数返回非零值，并设置**errno**下列任一清单常量 （在 ERRNO 中定义。H):**EBADF**，这意味着文件不可访问或该对象的*流*指向不是一种有效的文件结构; 或**EINVAL**，这意味着一个无效值*流*或*pos*传递。 如果传入了无效参数，这些函数则会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。
 
 有关这些代码以及其他返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 

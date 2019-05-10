@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Ribbon Designer (MFC)
 - MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
-ms.openlocfilehash: 0972cdfbb80129b0c87c96fa7daf6768d18aa0c4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5740b2f93f451a74407483c98ce5bf547b79bf35
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62309180"
 ---
 # <a name="ribbon-designer-mfc"></a>功能区设计器 (MFC)
 
@@ -107,7 +107,7 @@ ms.locfileid: "57288774"
 
 - **面板：** 显示的一组相关控件的功能区栏区域。 每个功能区类别都包含一个或多个功能区面板。
 
-- **功能区元素：** 面板中的控件，例如，按钮和组合框。 若要查看功能区上可以承载各种控件，请参阅[RibbonGadgets 示例：功能区的小工具应用程序](../visual-cpp-samples.md)。
+- **功能区元素：** 面板中的控件，例如，按钮和组合框。 若要查看功能区上可以承载各种控件，请参阅[RibbonGadgets 示例：功能区的小工具应用程序](../overview/visual-cpp-samples.md)。
 
 ## <a name="see-also"></a>请参阅
 

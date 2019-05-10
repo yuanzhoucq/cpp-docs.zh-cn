@@ -8,11 +8,11 @@ helpviewer_keywords:
 - templates [C++]
 ms.assetid: 90fcc14a-2092-47af-9d2e-dba26d25b872
 ms.openlocfilehash: f1532b5aa4ea712feab08b49b7c035187ca0d042
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330487"
 ---
 # <a name="templates-c"></a>模板 (C++)
 
@@ -184,7 +184,7 @@ vector<int> myInts;
 vector<int, MyAllocator> ints;
 ```
 
-对于多个模板自变量，第一个默认自变量后的所有自变量必须具有默认自变量。
+对于多个模板参数，第一个默认参数后的所有参数必须具有默认参数。
 
 使用其参数都所有默认模板时，使用空尖括号内：
 

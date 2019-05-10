@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __vmx_vmwrite intrinsic
 - VMWRITE instruction
 ms.assetid: 88139792-fd3f-4210-97ca-9d84f43a0252
-ms.openlocfilehash: e368a1f6be51d37cdfe7ef352fca69e987fed62d
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: e52b1f181f00ce013a111d1a5a62abeff544e20a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389978"
 ---
 # <a name="vmxvmwrite"></a>__vmx_vmwrite
 

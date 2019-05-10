@@ -1,23 +1,23 @@
 ---
-title: 如何：在本机代码中捕捉从 MSIL 引发的异常
+title: 如何：在从 MSIL 引发的本机代码中捕捉异常
 ms.date: 11/04/2016
 helpviewer_keywords:
 - exceptions, catching
 - catching exceptions, thrown from MSIL
 - MSIL, catching exceptions in native code
 ms.assetid: c15afd2b-8505-43bf-8a4a-f1d41532a124
-ms.openlocfilehash: 73c9a9af66a6e292c76b96ec47a5853684e602f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 95ce7a2afabc34ea78376b12da61f419dab4af34
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62379034"
 ---
-# <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>如何：在本机代码中捕捉从 MSIL 引发的异常
+# <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>如何：在从 MSIL 引发的本机代码中捕捉异常
 
-在本机代码中，可以捕捉从 MSIL 的本机 c + + 异常。  您可以捕获与 CLR 异常`__try`和`__except`。
+在本机代码中，可以捕获本机C++从 MSIL 的异常。  您可以捕获与 CLR 异常`__try`和`__except`。
 
-有关详细信息，请参阅[结构化异常处理 （C/c + +）](../cpp/structured-exception-handling-c-cpp.md)并[c + + 异常处理](../cpp/cpp-exception-handling.md)。
+有关详细信息，请参阅[结构化异常处理 (C /C++)](../cpp/structured-exception-handling-c-cpp.md)并[C++的异常处理](../cpp/cpp-exception-handling.md)。
 
 ## <a name="example"></a>示例
 
@@ -79,4 +79,4 @@ caught an exception
 
 ## <a name="see-also"></a>请参阅
 
-[异常处理](../windows/exception-handling-cpp-component-extensions.md)
+[异常处理](../extensions/exception-handling-cpp-component-extensions.md)

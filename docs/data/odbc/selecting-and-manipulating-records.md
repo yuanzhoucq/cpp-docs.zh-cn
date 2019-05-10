@@ -6,12 +6,12 @@ helpviewer_keywords:
 - record selection, MFC ODBC classes
 - ODBC recordsets, selecting records
 ms.assetid: 7f0b3a4a-9941-4475-a612-9ec8d15b7691
-ms.openlocfilehash: d038a0f9d2e7ba1f0e6bcf925eadc2173339b9b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fa8b63dab24c921804c474df73f6b6da192a4cd8
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62329941"
 ---
 # <a name="selecting-and-manipulating-records"></a>选择和操作记录
 

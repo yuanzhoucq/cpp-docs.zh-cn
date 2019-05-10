@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CBasePane [MFC], UndockPane
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
-ms.openlocfilehash: 30a5eff8b18df8372c23b5f400c90ff85bdad0eb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e0d6b844ba4a5c373dd69c0435bbb9972db3b49b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62164158"
 ---
 # <a name="cbasepane-class"></a>CBasePane 类
 
@@ -342,7 +342,7 @@ class CBasePane : public CWnd
 
 ## <a name="example"></a>示例
 
-下面的示例演示了如何使用 `CBasePane` 类中的各种方法。 该示例演示如何检索从窗格`CFrameWndEx`类以及如何设置停靠模式、 窗格对齐和窗格样式。 代码摘自[Word Pad 示例](../../visual-cpp-samples.md)。
+下面的示例演示了如何使用 `CBasePane` 类中的各种方法。 该示例演示如何检索从窗格`CFrameWndEx`类以及如何设置停靠模式、 窗格对齐和窗格样式。 代码摘自[Word Pad 示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_WordPad#2](../../mfc/reference/codesnippet/cpp/cbasepane-class_1.cpp)]
 
@@ -1030,7 +1030,7 @@ virtual DWORD GetCurrentAlignment() const;
 
 控件条的当前对齐方式。 下表显示了可能的值：
 
-|值|对齐方式|
+|“值”|对齐方式|
 |-----------|---------------|
 |CBRS_ALIGN_LEFT|左对齐方式。|
 |CBRS_ALIGN_RIGHT|右对齐方式。|

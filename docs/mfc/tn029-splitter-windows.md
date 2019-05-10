@@ -7,12 +7,12 @@ helpviewer_keywords:
 - TN029
 - splitter windows [MFC], about splitter windows
 ms.assetid: 2c57ce99-2a3c-4eff-9cea-baccb13af075
-ms.openlocfilehash: 0c27545c6f425eda952e87c80ed1d37de9e1093a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6c2f619d9cd619ca598c66ca657faa1b9dccaaa2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305705"
 ---
 # <a name="tn029-splitter-windows"></a>TN029:拆分窗口
 
@@ -22,7 +22,7 @@ ms.locfileid: "57294988"
 
 一个`CSplitterWnd`支持两种不同样式的拆分窗口。
 
-在"静态拆分条中，"拆分器窗口创建窗格时创建它。 顺序和窗格数永远不会更改。 拆分条用于调整大小的不同窗格。 此样式可用于在每个窗格中显示不同的视图类。 Visual c + + 图形编辑器和 Windows 文件管理器是使用此拆分器样式的程序的示例。 这种样式的拆分器窗口中不使用拆分器框。
+在"静态拆分条中，"拆分器窗口创建窗格时创建它。 顺序和窗格数永远不会更改。 拆分条用于调整大小的不同窗格。 此样式可用于在每个窗格中显示不同的视图类。 视觉对象C++图形编辑器和 Windows 文件管理器是使用此拆分器样式的程序的示例。 这种样式的拆分器窗口中不使用拆分器框。
 
 在"动态拆分条中，"其他窗格创建和销毁作为用户拆分和取消拆分新视图。 此拆分器首先的单一视图，并提供了该用户启动拆分的拆分器框。 当在一个方向拆分视图时，拆分器窗口动态创建一个新的视图对象。 此新的视图对象表示新窗格。 如果该视图通过使用键盘界面拆分两个方向，拆分器窗口将创建三个新的视图对象的三个新窗格。 拆分处于活动状态，而 Windows 将拆分器中显示为窗格之间拆分栏。 用户删除拆分，但直到拆分器窗口本身该原始视图会一直被销毁时，Windows 会销毁附加视图对象。 使用动态拆分器样式的应用程序的示例 Microsoft Excel 和 Microsoft Word。
 
@@ -46,7 +46,7 @@ ms.locfileid: "57294988"
 
 ## <a name="splitter-examples"></a>拆分器示例
 
-直接或间接地，许多 MFC 示例程序使用拆分窗口。 MFC 常规示例[VIEWEX](../visual-cpp-samples.md)说明了几种静态拆分条中，包括如何将拆分器放在拆分器的用法。
+直接或间接地，许多 MFC 示例程序使用拆分窗口。 MFC 常规示例[VIEWEX](../overview/visual-cpp-samples.md)说明了几种静态拆分条中，包括如何将拆分器放在拆分器的用法。
 
 类向导还可用于创建新的多文档界面 (MDI) 子框架窗口类，其中包含拆分器窗口。 拆分窗口的详细信息，请参阅[多个文档类型、 视图和框架 Windows](../mfc/multiple-document-types-views-and-frame-windows.md)。
 

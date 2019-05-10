@@ -26,11 +26,11 @@ helpviewer_keywords:
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
 ms.openlocfilehash: 3fd18c2a8869d6b09703547f50ee6e096bd72395
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358043"
 ---
 # <a name="putw"></a>_putw
 
@@ -50,7 +50,7 @@ int _putw(
 *binint*<br/>
 要输出的二进制整数。
 
-*流*<br/>
+*stream*<br/>
 指向**文件**结构的指针。
 
 ## <a name="return-value"></a>返回值
@@ -107,7 +107,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>输出
+### <a name="output"></a>Output
 
 ```Output
 Wrote ten words

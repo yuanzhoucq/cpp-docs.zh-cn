@@ -1,17 +1,17 @@
 ---
-title: helpstringcontext （c + + COM 属性）
+title: helpstringcontext (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpstringcontext
 helpviewer_keywords:
 - helpstringcontext attribute [C++]
 ms.assetid: d4cd135e-d91c-4aa3-9353-8aeb096f52cf
-ms.openlocfilehash: d292dd53ff3009a571dd5b0a1ba102e75b648e4d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6df5b63291fbc54d6c12a116fccd8372e8ced9a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409572"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 
@@ -30,7 +30,7 @@ ms.locfileid: "50533596"
 
 ## <a name="remarks"></a>备注
 
-**Helpstringcontext** c + + 属性具有相同的功能[helpstringcontext](/windows/desktop/Midl/helpstringcontext) ODL 特性。
+**Helpstringcontext** C++属性具有相同的功能[helpstringcontext](/windows/desktop/Midl/helpstringcontext) ODL 特性。
 
 ## <a name="example"></a>示例
 
@@ -56,8 +56,8 @@ __interface IMyI
 |-|-|
 |**适用对象**|**类**，**接口**，接口方法|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

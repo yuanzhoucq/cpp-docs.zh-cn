@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - C4910
 ms.assetid: 67963560-fbca-4ca7-93db-06beaf7055f0
-ms.openlocfilehash: f0d1df0a383b6646d52fc2babc53ca656d49ace6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49cbbf3369fc4765d93e67e2dca84a4d975560d7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62242879"
 ---
 # <a name="compiler-warning-level-1-c4910"></a>编译器警告（等级 1）C4910
 

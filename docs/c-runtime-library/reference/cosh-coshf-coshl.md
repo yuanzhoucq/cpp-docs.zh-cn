@@ -29,11 +29,11 @@ helpviewer_keywords:
 - trigonometric functions
 - hyperbolic functions
 ms.openlocfilehash: 0f55e084e760cb6d04dbe7ec4fefb5e2ac1d79fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347439"
 ---
 # <a name="cosh-coshf-coshl"></a>cosh、 coshf、 coshl
 
@@ -65,18 +65,18 @@ long double cosh( long double x );  // C++ only
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
-|为**QNAN**， **IND**|无|**（_D)**|
-|*x* ≥ 7.104760e+002|**不精确**+**溢出**|**溢出**|
+|为**QNAN**， **IND**|无|**_DOMAIN**|
+|*x* ≥ 7.104760e+002|**INEXACT**+**OVERFLOW**|**OVERFLOW**|
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，可以调用的重载**cosh**采用并返回**float**或**长** **double**值。 在 C 程序中， **cosh**始终采用并返回**double**。
+因为C++允许重载，可以调用的重载**cosh**采用并返回**float**或**长** **double**值。 在 C 程序中， **cosh**始终采用并返回**double**。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|必需的标头 (C)|必需的标头 (C++)|
 |-------------|---------------------|-|
-|**coshf**， **cosl**， **coshl**|\<math.h>|\<cmath> 或 \<math.h>|
+|**coshf**, **cosl**, **coshl**|\<math.h>|\<cmath> 或 \<math.h>|
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

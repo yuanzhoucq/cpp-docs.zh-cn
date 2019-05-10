@@ -1,6 +1,6 @@
 ---
-title: 编译器错误 C2000-C2099
-ms.date: 11/17/2017
+title: 编译器错误 C2000 - C2099
+ms.date: 04/21/2019
 f1_keywords:
 - C2000
 - C2016
@@ -36,14 +36,14 @@ helpviewer_keywords:
 - C2096
 - C2098
 ms.assetid: d99a19eb-eeeb-4181-9b33-9cbe4459767b
-ms.openlocfilehash: aff0faff5d8e58b46aa6280eb8f259dbd64acee9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf1d2f647c13b589463624749e29dc277f6f1d3e
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548143"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857142"
 ---
-# <a name="compiler-errors-c2000-through-c2099"></a>编译器错误 C2000-C2099
+# <a name="compiler-errors-c2000-through-c2099"></a>编译器错误 C2000 - C2099
 
 在本部分文档中的文章说明了由编译器生成的错误消息的子集。
 
@@ -53,7 +53,7 @@ ms.locfileid: "50548143"
 
 |Error|消息|
 |-----------|-------------|
-|编译器错误 C2000|未知错误请选择 Visual c + + 帮助菜单上的技术支持命令或打开技术支持帮助文件了解详细信息|
+|编译器错误 C2000|未知的错误请选择视觉对象上的技术支持命令C++帮助菜单中，或打开技术支持帮助文件了解详细信息|
 |[编译器错误 C2001](compiler-error-c2001.md)|常量中有换行符|
 |[编译器错误 C2002](compiler-error-c2002.md)|无效的宽字符常量|
 |[编译器错误 C2003](compiler-error-c2003.md)|预期 defined 的 id|
@@ -65,7 +65,7 @@ ms.locfileid: "50548143"
 |[编译器错误 C2009](compiler-error-c2009.md)|重复使用的宏正式 '*标识符*|
 |[编译器错误 C2010](compiler-error-c2010.md)|'*字符*： 宏形参表中的意外|
 |[编译器错误 C2011](compiler-error-c2011.md)|'*标识符*':'*类型*类型重定义|
-|[编译器错误 C2012](compiler-error-c2012.md)|在“<”之后缺少名称|
+|[编译器错误 C2012](compiler-error-c2012.md)|之后缺少名称 ' <'|
 |[编译器错误 C2013](compiler-error-c2013.md)|缺少“>”|
 |[编译器错误 C2014](compiler-error-c2014.md)|预处理器命令必须作为第一个非空白空间启动|
 |[编译器错误 C2015](compiler-error-c2015.md)|常量中的字符太多|
@@ -76,7 +76,7 @@ ms.locfileid: "50548143"
 |[编译器错误 C2020](compiler-error-c2020.md)|'*成员*':'*类*成员重定义|
 |[编译器错误 C2021](compiler-error-c2021.md)|不应输入指数值，'*字符*|
 |[编译器错误 C2022](compiler-error-c2022.md)|'*数*： 对字符来说太大|
-|编译器错误 C2023|'*标识符*： 对齐方式 (*number1*) 不同于之前的声明 (*number2*)|
+|编译器错误 C2023|'*标识符*:对齐方式 (*number1*) 不同于之前的声明 (*number2*)|
 |编译器错误 C2024|alignas 属性适用于变量、 数据成员和仅标记类型|
 |编译器错误 C2025|无效或已损坏的二进制模块接口文件: '*文件名*|
 |[编译器错误 C2026](compiler-error-c2026.md)|字符串太大，已截断尾部字符|
@@ -149,7 +149,12 @@ ms.locfileid: "50548143"
 |[编译器错误 C2093](compiler-error-c2093.md)|'*identifier1*： 不能使用自动变量的地址初始化'*identifier2*|
 |[编译器错误 C2094](compiler-error-c2094.md)|标签 '*标识符*未定义|
 |[编译器错误 C2095](compiler-error-c2095.md)|'*函数*： 实参具有 void 类型： 参数*数*|
-|编译器错误 C2096|'*标识符*： 不能使用带括号的初始值设定项初始化数据成员|
+|编译器错误 C2096|'*标识符*:不能使用带括号的初始值设定项初始化数据成员|
 |[编译器错误 C2097](compiler-error-c2097.md)|初始化非法|
 |编译器错误 C2098|数据成员后的出现意外的标记*标识符*|
 |[编译器错误 C2099](compiler-error-c2099.md)|初始值设定项不是常量|
+
+## <a name="see-also"></a>请参阅
+
+[C /C++编译器和生成工具错误和警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[编译器错误 C2000-C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

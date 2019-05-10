@@ -17,12 +17,12 @@ helpviewer_keywords:
 - toolbars [MFC]
 - toolbars [MFC], implementing MFC toolbars
 ms.assetid: af3319ad-c430-4f90-8361-e6a2c06fd084
-ms.openlocfilehash: ce3b373bab67ba49a1f7aa41f2a9456ae7199028
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 55c43c47b93cd21d86293706fc7c3eb5145c39fd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62238554"
 ---
 # <a name="mfc-toolbar-implementation"></a>MFC 工具栏实现
 
@@ -84,11 +84,11 @@ MFC 工具栏可以也可用于显示"工具提示"— 很小的弹出窗口，�
 > [!TIP]
 >  如果您有大量投资的较早的 MFC 实现`CToolBar`，仍提供了支持。 请参阅文章[使用旧工具栏](../mfc/using-your-old-toolbars.md)。
 
-另请参阅 MFC 常规示例[DOCKTOOL](../visual-cpp-samples.md)。
+另请参阅 MFC 常规示例[DOCKTOOL](../overview/visual-cpp-samples.md)。
 
 ##  <a name="_core_the_toolbar_bitmap"></a> 工具栏位图
 
-一旦构建完毕就`CToolBar`对象创建通过加载一个位图，其中包含一个图像可查看每个按钮的工具栏图像。 应用程序向导会使用 Visual c + + 创建可自定义的标准工具栏位图[工具栏编辑器](../windows/toolbar-editor.md)。
+一旦构建完毕就`CToolBar`对象创建通过加载一个位图，其中包含一个图像可查看每个按钮的工具栏图像。 应用程序向导会使用该视觉对象创建可自定义的标准工具栏位图C++[工具栏编辑器](../windows/toolbar-editor.md)。
 
 ### <a name="what-do-you-want-to-know-more-about"></a>你想要了解更多信息
 

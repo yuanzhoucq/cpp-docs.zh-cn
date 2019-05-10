@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CMFCColorPopupMenu [MFC], SetPropList
 ms.assetid: 0bf9efe8-aed5-4ab7-b23b-eb284b4668be
 ms.openlocfilehash: 0c2fed4aa239faa96abf692a46a27102ce9820a1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403680"
 ---
 # <a name="cmfccolorpopupmenu-class"></a>CMFCColorPopupMenu 类
 
@@ -55,7 +55,7 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
 
 |||
 |-|-|
-|name|描述|
+|名称|描述|
 |`m_bEnabledInCustomizeMode`|一个布尔值，该值确定是否显示在颜色栏。|
 |`m_wndColorBar`|`CMFCColorBar`提供颜色选择的对象。|
 

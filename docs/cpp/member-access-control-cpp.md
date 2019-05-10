@@ -6,12 +6,12 @@ helpviewer_keywords:
 - member access [C++]
 - member-access control [C++]
 ms.assetid: 2d596bca-56ad-4277-94e1-ce3db45fa14a
-ms.openlocfilehash: 546b23b939078c723084bdfc659ff4fd3216b479
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 367ee5183498453b9ce647c8e91ad1194f90fbd2
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176220"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345033"
 ---
 # <a name="member-access-control-c"></a>成员访问控制 (C++)
 
@@ -42,7 +42,7 @@ protected:      // Declare protected function for derived classes only.
 |访问类型|含义|
 |--------------------|-------------|
 |[private](../cpp/private-cpp.md)|类成员声明为**专用**仅可由成员函数和友元 （类或函数） 的类。|
-|[protected](../cpp/protected-cpp.md)|类成员声明为**保护**可由成员函数和友元 （类或函数） 的类。 此外，它们还可由派生自该类的类使用。|
+|[受保护](../cpp/protected-cpp.md)|类成员声明为**保护**可由成员函数和友元 （类或函数） 的类。 此外，它们还可由派生自该类的类使用。|
 |[public](../cpp/public-cpp.md)|类成员声明为**公共**可以由任意函数。|
 
 访问控制有助于阻止您通过不适当的方式使用对象。 在执行显式类型转换（强制转换）时，此保护将丢失。

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - command IDs
 ms.assetid: e0171a2b-45b9-41fa-945d-ec2f7602ded0
 ms.openlocfilehash: 76071105e72f1ca4a851b9cdb76d5f1a96f44edb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62219883"
 ---
 # <a name="command-ids"></a>命令 ID
 
@@ -18,7 +18,7 @@ ms.locfileid: "57274566"
 
 例如，在编辑菜单中的清除所有项可能都分配一个 ID 如**ID_EDIT_CLEAR_ALL**。 类库预定义了一些 Id，特别是对于命令，该框架将处理本身，如**ID_EDIT_CLEAR_ALL**或**ID_FILE_OPEN**。 您将自行创建其他命令 Id。
 
-创建你自己的菜单在 Visual c + + 中菜单编辑器，时，最好遵循类库的命名约定，如所示**ID_FILE_OPEN**。 [标准命令](../mfc/standard-commands.md)介绍由类库定义的标准命令。
+当在视觉对象中创建你自己的菜单C++菜单编辑器中，它是最好按照类库的命名约定，如所示**ID_FILE_OPEN**。 [标准命令](../mfc/standard-commands.md)介绍由类库定义的标准命令。
 
 ## <a name="see-also"></a>请参阅
 

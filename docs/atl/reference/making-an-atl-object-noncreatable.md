@@ -7,12 +7,12 @@ helpviewer_keywords:
 - noncreatable ATL objects
 - ATL projects, noncreatable objects
 ms.assetid: 80d0bca2-dea0-4801-9a85-6243124437f6
-ms.openlocfilehash: da1d5c43d86d95d7eff9b6830b83b61737d3030f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
-ms.translationtype: MT
+ms.openlocfilehash: 5b259a677fdf3013ae1be6073afaf34f76a6e2fd
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267064"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221050"
 ---
 # <a name="making-an-atl-object-noncreatable"></a>使 ATL 对象不可创建
 
@@ -37,8 +37,7 @@ ms.locfileid: "57267064"
 ## <a name="see-also"></a>请参阅
 
 [ATL 项目向导](../../atl/reference/atl-project-wizard.md)<br/>
-[Visual C++ 项目类型](../../ide/visual-cpp-project-types.md)<br/>
-[使用应用程序向导创建桌面项目](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
+[C++在 Visual Studio 中的项目类型](../../build/reference/visual-cpp-project-types.md)<br/>
 [使用 ATL 和 C 运行时代码进行编程](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [ATL COM 对象基础知识](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [默认 ATL 项目配置](../../atl/reference/default-atl-project-configurations.md)

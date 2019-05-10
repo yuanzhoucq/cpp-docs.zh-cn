@@ -5,12 +5,12 @@ helpviewer_keywords:
 - bookmarks [C++], dynamically determining columns
 - dynamically determining columns [C++]
 ms.assetid: 58522b7a-894e-4b7d-a605-f80e900a7f5f
-ms.openlocfilehash: 7db319aa153cb281c8fd8b4eec16972f5ac0c2c9
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: 81353581d22f3d075fd19d783591ec856c21e241
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62175493"
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>动态确定返回给使用者的列
 
@@ -104,7 +104,7 @@ ATLCOLUMNINFO* CCustomWindowsFile::GetColumnInfo(void* pThis, ULONG* pcCols)
 }
 ```
 
-此示例使用静态数组来保存列信息。 如果使用者不想要书签列，则不使用数组中的一个条目。 若要处理的信息，请创建两个数组宏： ADD_COLUMN_ENTRY 和 ADD_COLUMN_ENTRY_EX。 ADD_COLUMN_ENTRY_EX 采用了额外的参数，*标志*，也就是说，当你指定的书签列时才需要。
+此示例使用静态数组来保存列信息。 如果使用者不想要书签列，则不使用数组中的一个条目。 若要处理的信息，您可以创建两个数组宏：ADD_COLUMN_ENTRY 和 ADD_COLUMN_ENTRY_EX。 ADD_COLUMN_ENTRY_EX 采用了额外的参数，*标志*，也就是说，当你指定的书签列时才需要。
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////  

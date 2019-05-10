@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CComMultiThreadModelNoCS class
 - threading [ATL]
 ms.assetid: 2b3f7a45-fd72-452c-aaf3-ccdaa621c821
-ms.openlocfilehash: 9b1622525635a4ea852dec9095fcd479b21044c4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ef2038a203b6cbfb2564bbe11d508ee43df0fd1b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261552"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62259217"
 ---
 # <a name="ccommultithreadmodelnocs-class"></a>CComMultiThreadModelNoCS 类
 
@@ -117,7 +117,7 @@ typedef CComFakeCriticalSection CriticalSection;
 
 ##  <a name="decrement"></a>  CComMultiThreadModelNoCS::Decrement
 
-此静态函数将调用 Win32 函数[InterlockedDecrement](/windows/desktop/api/winbase/nf-winbase-interlockeddecrement)，指向变量的值的递减*p*。
+此静态函数将调用 Win32 函数[InterlockedDecrement](/windows/desktop/api/winnt/nf-winnt-interlockeddecrement)，指向变量的值的递减*p*。
 
 ```
 static ULONG WINAPI Decrement(LPLONG p) throw();
@@ -138,7 +138,7 @@ static ULONG WINAPI Decrement(LPLONG p) throw();
 
 ##  <a name="increment"></a>  CComMultiThreadModelNoCS::Increment
 
-此静态函数将调用 Win32 函数[InterlockedIncrement](/windows/desktop/api/winbase/nf-winbase-interlockedincrement)，指向的变量的值时都会增加*p*。
+此静态函数将调用 Win32 函数[InterlockedIncrement](/windows/desktop/api/winnt/nf-winnt-interlockedincrement)，指向的变量的值时都会增加*p*。
 
 ```
 static ULONG WINAPI Increment(LPLONG p) throw();

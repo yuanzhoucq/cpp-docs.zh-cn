@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
 ms.openlocfilehash: 52e64df7522c5e58fa64398f599bffa4614a2684
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212374"
 ---
 # <a name="conditionvariable-class"></a>condition_variable 类
 
@@ -52,7 +52,7 @@ class condition_variable;
 |[native_handle](#native_handle)|返回表示 condition_variable 句柄的特定于实现的类型。|
 |[notify_all](#notify_all)|取消阻止正在等待 `condition_variable` 对象的所有线程。|
 |[notify_one](#notify_one)|取消阻止正在等待 `condition_variable` 对象的某个线程。|
-|[等待](#wait)|阻止线程。|
+|[wait](#wait)|阻止线程。|
 |[wait_for](#wait_for)|阻止某个线程，并设置线程阻止的时间间隔。|
 |[wait_until](#wait_until)|阻止某个线程，并设置线程阻止的最大时间点。|
 
@@ -115,7 +115,7 @@ void wait(unique_lock<mutex>& Lck, Predicate Pred);
 
 ### <a name="parameters"></a>参数
 
-*一个 Lck*<br/>
+*Lck*<br/>
 [unique_lock\<mutex>](../standard-library/unique-lock-class.md) 对象。
 
 *Pred*<br/>
@@ -151,7 +151,7 @@ bool wait_for(
 
 ### <a name="parameters"></a>参数
 
-*一个 Lck*<br/>
+*Lck*<br/>
 [unique_lock\<mutex>](../standard-library/unique-lock-class.md) 对象。
 
 *Rel_time*<br/>
@@ -209,7 +209,7 @@ bool wait_until(
 
 ### <a name="parameters"></a>参数
 
-*一个 Lck*<br/>
+*Lck*<br/>
 [unique_lock\<mutex>](../standard-library/unique-lock-class.md) 对象。
 
 *Abs_time*<br/>

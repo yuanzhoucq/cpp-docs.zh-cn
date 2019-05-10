@@ -3,12 +3,12 @@ title: /USEPROFILE （与 LTCG 使用 PGO 数据）
 ms.date: 03/14/2018
 f1_keywords:
 - USEPROFILE
-ms.openlocfilehash: 4b780bed3b92b874f2bf18fb0235e8e2baf95ae9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7bc0033ae5ef512cbd2e2063c5cb9bd9b061c180
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317128"
 ---
 # <a name="useprofile-run-pgo-in-thread-safe-mode"></a>/USEPROFILE (在线程安全模式下运行 PGO)
 
@@ -16,14 +16,14 @@ ms.locfileid: "50550626"
 
 ## <a name="syntax"></a>语法
 
-> **/USEPROFILE**[**:**{**过激**|**PGD =**_文件名_}]
+> **/USEPROFILE**[**:**{**AGGRESSIVE**|**PGD=**_filename_}]
 
 ### <a name="arguments"></a>自变量
 
-**积极**<br/>
+**AGGRESSIVE**<br/>
 此可选参数指定在优化的代码生成过程中，应使用主动速度优化。
 
-**PGD**=*文件名*<br/>
+**PGD**=*filename*<br/>
 指定 .pgd 文件的基文件名。 默认情况下，链接器使用带.pgd 扩展名基可执行文件名称。
 
 ## <a name="remarks"></a>备注
@@ -38,7 +38,7 @@ ms.locfileid: "50550626"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置 Visual c + + 项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
 1. 选择**配置属性** > **链接器** > **优化**属性页。
 
@@ -46,7 +46,7 @@ ms.locfileid: "50550626"
 
 1. 选择**配置属性** > **链接器** > **命令行**属性页。
 
-1. 输入 **/USEPROFILE**选项和可选参数置于**其他选项**框。 选择**确定**以保存所做的更改。
+1. 输入 **/USEPROFILE**选项和可选参数置于**其他选项**框。 选择“确定”以保存更改。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项
 
@@ -56,5 +56,5 @@ ms.locfileid: "50550626"
 
 [/GENPROFILE 和 /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)<br/>
 [/LTCG](ltcg-link-time-code-generation.md)<br/>
-[按配置文件优化](../../build/reference/profile-guided-optimizations.md)<br/>
-[用于按配置文件优化的环境变量](../../build/reference/environment-variables-for-profile-guided-optimizations.md)<br/>
+[按配置文件优化](../profile-guided-optimizations.md)<br/>
+[用于按配置文件优化的环境变量](../environment-variables-for-profile-guided-optimizations.md)<br/>

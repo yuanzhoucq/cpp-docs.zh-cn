@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Guid Struct
 ms.assetid: 25c0bfb2-7f93-44d8-bdf4-ef4fbac3424a
-ms.openlocfilehash: bf7d73e1e50bb77a84267f3a5388c07a49c54c79
-ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
+ms.openlocfilehash: 64c70b619380d7c2ed4aaaecad3ee01a1d0f79c7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56809693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383316"
 ---
 # <a name="platformguid-value-class"></a>Platform::Guid 值类
 
@@ -46,7 +46,7 @@ public value struct Guid
 
 **支持的最低服务器：** Windows Server 2012
 
-**命名空间：** 平台
+**命名空间：** Platform
 
 **元数据：** platform.winmd
 
@@ -190,7 +190,7 @@ static bool Platform::Guid::operator<(Platform::Guid guid1, Platform::Guid guid2
 
 则为 true *guid1*进行排序之前*guid2*。 将每个后的顺序是按字典顺序`Platform::Guid`像它是四个 32 位无符号值的数组。 这不是由 SQL Server 或.NET Framework 中，使用的顺序也不是按字典编辑顺序排序的字符串表示形式相同。
 
-提供此运算符，以便`Guid`对象可以更轻松地使用由 c + + 标准库。
+提供此运算符，以便`Guid`对象可以更轻松地使用C++标准库。
 
 ## <a name="operator-call"></a> Guid::operator() 运算符
 
@@ -208,4 +208,4 @@ const GUID& Platform::Guid::operator();
 
 ## <a name="see-also"></a>请参阅
 
-[平台命名空间](../cppcx/platform-namespace-c-cx.md)
+[Platform 命名空间](../cppcx/platform-namespace-c-cx.md)

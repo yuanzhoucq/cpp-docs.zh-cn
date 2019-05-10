@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1301
 ms.assetid: 760da428-7182-4b25-b20a-de90d4b9a9cd
-ms.openlocfilehash: b112c4498913c18d82ce8fbc4f6c6d211b906263
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a82d7756f1460c56d87a3d7b1360c140de19827
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160602"
 ---
 # <a name="linker-tools-error-lnk1301"></a>链接器工具错误 LNK1301
 
@@ -29,7 +29,7 @@ ms.locfileid: "50431234"
 
 - [/cgthreads（公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)
 
-- [按配置文件优化](../../build/reference/profile-guided-optimizations.md)
+- [按配置文件优化](../../build/profile-guided-optimizations.md)
 
 ### <a name="to-correct-this-error"></a>更正此错误
 

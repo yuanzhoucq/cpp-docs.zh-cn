@@ -9,11 +9,11 @@ helpviewer_keywords:
 - this pointer
 ms.assetid: 92e3256a-4ad9-4d46-8be1-d77fad90791f
 ms.openlocfilehash: c90a843ba978a98c1c61d9e096d62b85256ab0c4
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330474"
 ---
 # <a name="this-pointer"></a>this 指针
 
@@ -28,7 +28,7 @@ this->member-identifier
 
 ## <a name="remarks"></a>备注
 
-对象的**这**指针不是对象本身; 的一部分不会反映结果中的**sizeof**对象上的语句。 相反，当对某个对象调用非静态成员函数时，该对象的地址将由编译器作为隐藏的自变量传递给函数。 例如，以下函数调用：
+对象的**这**指针不是对象本身; 的一部分不会反映结果中的**sizeof**对象上的语句。 相反，当对某个对象调用非静态成员函数时，该对象的地址将由编译器作为隐藏的参数传递给函数。 例如，以下函数调用：
 
 ```cpp
 myDate.setMonth( 3 );
@@ -141,7 +141,7 @@ your buffer
 
 ## <a name="type-of-the-this-pointer"></a>this 指针的类型
 
-**这**指针的类型可以通过在函数声明中修改**const**并**易失性**关键字。 若要将函数声明为具有一个或多个关键字的特性，请将关键字添加到函数自变量列表的后面。
+**这**指针的类型可以通过在函数声明中修改**const**并**易失性**关键字。 若要将函数声明为具有一个或多个关键字的特性，请将关键字添加到函数参数列表的后面。
 
 请看以下示例：
 

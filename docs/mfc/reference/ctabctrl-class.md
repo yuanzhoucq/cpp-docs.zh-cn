@@ -73,11 +73,11 @@ helpviewer_keywords:
 - CTabCtrl [MFC], SetToolTips
 ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
 ms.openlocfilehash: ccf35c7a036a69487d5138baf8c017f9c5995bef
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323708"
 ---
 # <a name="ctabctrl-class"></a>CTabCtrl 类
 
@@ -517,7 +517,7 @@ DWORD GetItemState(
 
 对接收的状态信息的 DWORD 值的引用。 可以是以下值之一：
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
 |TCIS_BUTTONPRESSED|选择该选项卡控件项。|
 |TCIS_HIGHLIGHTED|突出显示该选项卡控件项，并使用当前突出显示颜色绘制选项卡和文本。 在使用突出显示颜色，这将是 true 的内插，不是抖色的颜色。|
@@ -858,7 +858,7 @@ BOOL SetItemState(
 *dwState*<br/>
 对包含的状态信息的 DWORD 值的引用。 可以是以下值之一：
 
-|值|描述|
+|“值”|描述|
 |-----------|-----------------|
 |TCIS_BUTTONPRESSED|选择该选项卡控件项。|
 |TCIS_HIGHLIGHTED|突出显示该选项卡控件项，并使用当前突出显示颜色绘制选项卡和文本。 在使用突出显示颜色，这将是 true 的内插，不是抖色的颜色。|

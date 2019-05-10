@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
 ms.openlocfilehash: 2b82e4237a525b09758323ae2483d8818fc938af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369938"
 ---
 # <a name="queue-class"></a>queue 类
 
@@ -45,7 +45,7 @@ class queue
 *Type*<br/>
 要存储在队列中的元素数据类型
 
-*容器*<br/>
+*Container*<br/>
 用来实现队列的基础容器的类型。
 
 ## <a name="remarks"></a>备注

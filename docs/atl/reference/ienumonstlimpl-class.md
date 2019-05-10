@@ -16,15 +16,15 @@ helpviewer_keywords:
 - IEnumOnSTLImpl class
 ms.assetid: 1789e77b-88b8-447d-a490-806b918912ce
 ms.openlocfilehash: 8ff29522351b542d0b674bc173040d4468d00f1c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62275264"
 ---
 # <a name="ienumonstlimpl-class"></a>IEnumOnSTLImpl 类
 
-此类定义基于 c + + 标准库集合的枚举器接口。
+此类定义枚举器接口基于C++标准库集合。
 
 ## <a name="syntax"></a>语法
 
@@ -49,7 +49,7 @@ COM 的枚举器。 请参阅[IEnumString](/windows/desktop/api/objidl/nn-objidl
 一个[复制策略类](../../atl/atl-copy-policy-classes.md)。
 
 *CollType*<br/>
-C + + 标准库容器类。
+一个C++标准库容器类。
 
 ## <a name="members"></a>成员
 
@@ -68,17 +68,17 @@ C + + 标准库容器类。
 |名称|描述|
 |----------|-----------------|
 |[IEnumOnSTLImpl::m_iter](#m_iter)|迭代器，表示集合中的枚举器的当前位置。|
-|[IEnumOnSTLImpl::m_pcollection](#m_pcollection)|指向 c + + 标准库容器保存要枚举的项的指针。|
+|[IEnumOnSTLImpl::m_pcollection](#m_pcollection)|一个指向C++保留要枚举的项的标准库容器。|
 |[IEnumOnSTLImpl::m_spUnk](#m_spunk)|`IUnknown`提供集合的对象的指针。|
 
 ## <a name="remarks"></a>备注
 
-`IEnumOnSTLImpl` 提供要枚举的项在兼容的 c + + 标准库容器中的存储位置的 COM 枚举器接口的实现。 此类是类似于[CComEnumImpl](../../atl/reference/ccomenumimpl-class.md)类，该类提供的枚举器接口的实现基于数组。
+`IEnumOnSTLImpl` 提供要枚举的项中的存储位置的 COM 枚举器接口的实现C++标准兼容库的容器。 此类是类似于[CComEnumImpl](../../atl/reference/ccomenumimpl-class.md)类，该类提供的枚举器接口的实现基于数组。
 
 > [!NOTE]
 >  请参阅[CComEnumImpl::Init](../../atl/reference/ccomenumimpl-class.md#init)有关进一步之间的差异的详细信息`CComEnumImpl`和`IEnumOnSTLImpl`。
 
-通常情况下，将*不*需要通过此接口实现从派生来创建您自己的枚举器类。 如果你想要使用基于 c + + 标准库容器的 ATL 提供的枚举器，则更常见的是创建的实例[CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)，或创建一个集合类，返回一个枚举器通过派生自[ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md)。
+通常情况下，将*不*需要通过此接口实现从派生来创建您自己的枚举器类。 如果你想要使用基于一个 ATL 提供的枚举器C++标准库容器，它是更常见的是创建的实例[CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)，或创建通过派生自返回一个枚举器的集合类[ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md)。
 
 但是，如果需要提供的自定义枚举器 （例如，一个公开的枚举数接口除了接口），您可以从此类派生。 在此情况下很可能需要重写[克隆](#clone)方法以提供您自己的实现。
 
@@ -108,7 +108,7 @@ HRESULT Init(
 [in]`IUnknown`必须保持活动状态的枚举器的生命周期内的对象的指针。 如果没有此类对象存在，则传递 NULL。
 
 collection<br/>
-对包含要枚举的项的 c + + 标准库容器的引用。
+对引用C++标准库容器，用于保存要枚举的项。
 
 ### <a name="return-value"></a>返回值
 

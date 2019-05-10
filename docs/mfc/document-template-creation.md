@@ -9,11 +9,11 @@ helpviewer_keywords:
 - templates [MFC], document templates
 ms.assetid: c87f1821-7cbf-442e-9690-f126ae7fb783
 ms.openlocfilehash: 85ff6ad47b37d85c812608dbee918f0543730eae
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62219803"
 ---
 # <a name="document-template-creation"></a>文档模板创建
 
@@ -23,7 +23,7 @@ ms.locfileid: "57271672"
 
 [!code-cpp[NVC_MFCDocView#7](../mfc/codesnippet/cpp/document-template-creation_1.cpp)]
 
-指向新指针`CMultiDocTemplate`使用对象作为参数[AddDocTemplate](../mfc/reference/cwinapp-class.md#adddoctemplate)。 自变量`CMultiDocTemplate`构造函数包含文档类型的菜单和快捷键，与关联的资源 ID 和三个用途[RUNTIME_CLASS](../mfc/reference/run-time-object-model-services.md#runtime_class)宏。 `RUNTIME_CLASS` 返回[CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)作为其参数名为的 c + + 类的对象。 这三个`CRuntimeClass`对象传递给文档模板构造函数提供文档创建过程中创建的指定类的新对象所需的信息。 该示例演示如何创建用于创建的文档模板`CScribDoc`对象与`CScribView`附加的对象。 视图是构建框架通过标准的 MDI 子框架窗口。
+指向新指针`CMultiDocTemplate`使用对象作为参数[AddDocTemplate](../mfc/reference/cwinapp-class.md#adddoctemplate)。 自变量`CMultiDocTemplate`构造函数包含文档类型的菜单和快捷键，与关联的资源 ID 和三个用途[RUNTIME_CLASS](../mfc/reference/run-time-object-model-services.md#runtime_class)宏。 `RUNTIME_CLASS` 返回[CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)对象的C++作为其参数名为的类。 这三个`CRuntimeClass`对象传递给文档模板构造函数提供文档创建过程中创建的指定类的新对象所需的信息。 该示例演示如何创建用于创建的文档模板`CScribDoc`对象与`CScribView`附加的对象。 视图是构建框架通过标准的 MDI 子框架窗口。
 
 ## <a name="see-also"></a>请参阅
 

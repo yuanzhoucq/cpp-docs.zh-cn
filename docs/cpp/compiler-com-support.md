@@ -1,22 +1,22 @@
 ---
 title: 编译器 COM 支持
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - cl.exe compiler, COM support
 - COM, compiler support
 ms.assetid: 76a78442-f2a4-4985-9967-67e20773f847
-ms.openlocfilehash: f0b1d6280dc27641287de8fe539cd3a148048245
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: e13874bad44610821bed9c588af6bd9124162116
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646038"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222209"
 ---
 # <a name="compiler-com-support"></a>编译器 COM 支持
 
 ## <a name="microsoft-specific"></a>Microsoft 专用
 
-Visual C++ 编译器可以直接读取组件对象模型 (COM) 类型库并将内容转换为可包含在编译中的 C++ 源代码。 提供了语言扩展来帮助在客户端上进行 COM 编程。
+MicrosoftC++编译器可以直接读取组件对象模型 (COM) 类型库并转换到的内容C++可以包含在编译的源代码。 提供了语言扩展来帮助在客户端上进行 COM 编程。
 
 通过使用[#import 预处理器指令](../preprocessor/hash-import-directive-cpp.md)，编译器可以读取类型库和转换到 C++ 标头文件，用于描述 COM 接口标记为类。 提供了一组 `#import` 特性来实现对生成的类型库头文件的内容的用户控制。
 

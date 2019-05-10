@@ -7,12 +7,12 @@ helpviewer_keywords:
 - attributes [C++/CLI], frequently asked questions
 - FAQs (frequently asked questions), attributed programming [C++]
 ms.assetid: a1b8349f-7f51-43c4-95ea-4edb6e5f243f
-ms.openlocfilehash: b273ad71c3c6eaed69fc715401219200f26f87eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fd4c24e3933738d128dffd41018466c33b419de8
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62148362"
 ---
 # <a name="attribute-programming-faq"></a>特性编程常见问题
 
@@ -40,12 +40,12 @@ ms.locfileid: "50434978"
 
 HRESULT 为通常用作返回值属性和 ATL 的一般情况下的简单数据类型。 下表介绍各种值。 更多的值包含在标头文件 winerror.h 中。
 
-|name|描述|“值”|
+|名称|描述|“值”|
 |----------|-----------------|-----------|
 |S_OK|操作成功|0x00000000|
 |E_UNEXPECTED|意外的失败|0x8000FFFF|
 |E_NOTIMPL|未实现|0x80004001|
-|E_OUTOFMEMORY|无法分配必要的内存|已用完 0x8007000E|
+|E_OUTOFMEMORY|无法分配必要的内存|0x8007000E|
 |E_INVALIDARG|一个或多个参数均无效|0x80070057|
 |E_NOINTERFACE|不支持此类接口|0x80004002|
 |E_POINTER|无效的指针|0x80004003|
@@ -114,7 +114,7 @@ class CMyClass
 
 ##  <a name="vcconattributeprogrammmingfaqanchor4"></a> 属性与继承？
 
-特性化和非特性化类可以继承其他类，它们可能本身由于与否。 从特性化类派生的结果是相同的属性提供程序已转换其代码后从该类派生。 属性未传输到派生类通过 c + + 继承。 特性提供程序仅转换代码附近，其属性。
+特性化和非特性化类可以继承其他类，它们可能本身由于与否。 从特性化类派生的结果是相同的属性提供程序已转换其代码后从该类派生。 属性不会传输到派生类通过C++继承。 特性提供程序仅转换代码附近，其属性。
 
 ##  <a name="vcconattributeprogrammmingfaqanchor5"></a> 如何在非属性化 ATL 项目中使用特性？
 
@@ -122,7 +122,7 @@ class CMyClass
 
 ##  <a name="vcconattributeprogrammmingfaqanchor6"></a> 如何使用特性化项目中的.idl 文件？
 
-您可能想要使用它在特性化 ATL 项目中的.idl 文件。 在这种情况下，将使用[importidl](importidl.md)属性中，编译到的.h 文件的.idl 文件 (请参阅[MIDL 属性页](../../ide/midl-property-pages.md)在项目的**属性页**对话框)，并然后在项目中包含的.h 文件。
+您可能想要使用它在特性化 ATL 项目中的.idl 文件。 在这种情况下，将使用[importidl](importidl.md)属性中，编译到的.h 文件的.idl 文件 (请参阅[MIDL 属性页](../../build/reference/midl-property-pages.md)在项目的**属性页**对话框)，并然后在项目中包含的.h 文件。
 
 ##  <a name="vcconattributeprogrammmingfaqanchor7"></a> 可以修改由属性插入的代码？
 

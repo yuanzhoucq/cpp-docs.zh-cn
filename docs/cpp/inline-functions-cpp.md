@@ -13,11 +13,11 @@ helpviewer_keywords:
 - inline functions [C++], class members
 ms.assetid: 355f120c-2847-4608-ac04-8dda18ffe10c
 ms.openlocfilehash: 55cf598877c2447e0f80e783b53b290699042b8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400586"
 ---
 # <a name="inline-functions-c"></a>内联函数 (C++)
 
@@ -78,7 +78,7 @@ int main()
 
 编译器将内联扩展选项和关键字视为建议。 不保证会对函数进行内联。 你不能强制编译器内联某个特定函数，即使 **__forceinline**关键字。 使用编译时 **/clr**，编译器将不内联函数是否存在安全特性应用于函数。
 
-**内联**关键字是仅在 C++ 中可用。 **__Inline**并 **__forceinline**关键字是 C 和 c + + 中可用。 与以前版本的兼容性 **_inline**和 **_forceinline**是的同义词 **__inline**，以及 **__forceinline**除非编译器选项[/Za\(禁用语言扩展)](../build/reference/za-ze-disable-language-extensions.md)指定。
+**内联**关键字是仅在 C++ 中可用。 **__Inline**并 **__forceinline**关键字是用于这两个 C 和C++。 与以前版本的兼容性 **_inline**和 **_forceinline**是的同义词 **__inline**，以及 **__forceinline**除非编译器选项[/Za\(禁用语言扩展)](../build/reference/za-ze-disable-language-extensions.md)指定。
 
 **内联**关键字告知编译器内联展开是首选。 但是，编译器可以创建函数的单独实例（实例化），并创建标准调用链接而不是内联插入代码。 可能会出现这种行为的两种情况是：
 
@@ -134,7 +134,7 @@ private:
 
 - 函数和调用方使用不同类型的异常处理（一个中使用 C++ 异常处理，另一个中使用结构化异常处理）。
 
-- 函数具有变量参数列表。
+- 函数具有变量自变量列表。
 
 - 除非使用 /Og、/Ox、/O1 或 /O2 进行编译，否则函数使用内联程序集。
 
@@ -217,7 +217,7 @@ int main()
 
 - 指定与任何其他函数使用相同的语法，只不过它们包含的内联函数**内联**函数声明中的关键字。
 
-- 计算一次作为内联函数的自变量传递的表达式。 在某些情况下，作为宏的自变量传递的表达式可计算多次。
+- 计算一次作为内联函数的参数传递的表达式。 在某些情况下，作为宏的自变量传递的表达式可计算多次。
 
 下面的示例演示了将小写字母转换为大写字母的宏：
 

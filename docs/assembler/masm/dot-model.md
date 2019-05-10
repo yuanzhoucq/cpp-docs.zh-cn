@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - .MODEL directive
 ms.assetid: 057f00df-1515-4c55-852a-d936c8a34b53
-ms.openlocfilehash: e72101d2d9cdea90b3304ccdb82e7b81fe2975d3
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c3917fea0f13e54d5f8f73599a2d28482bb6d259
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62204092"
 ---
 # <a name="model"></a>.MODEL
 
@@ -50,7 +50,7 @@ ms.locfileid: "51328528"
 
 ## <a name="code"></a>代码
 
-MASM 相关的示例，用于下载从编译器示例[Visual c + + 示例和相关文档的 Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=178749)。
+MASM 相关的示例，用于下载从编译器示例[可视化C++示例和相关文档的 Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=178749)。
 
 下面的示例演示如何将`.MODEL`指令。
 
@@ -89,4 +89,3 @@ end
 ## <a name="see-also"></a>请参阅
 
 [指令参考](../../assembler/masm/directives-reference.md)<br/>
-

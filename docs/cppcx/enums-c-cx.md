@@ -2,16 +2,16 @@
 title: 枚举 (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: 99fbbe28-c1cd-43af-9ead-60f90eba6e68
-ms.openlocfilehash: 54d542b9fea127101cc74d4f064a7598889c3bd7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f16a288a0b928b74ef42de5781fd1b54930927d6
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583152"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345821"
 ---
 # <a name="enums-ccx"></a>枚举 (C++/CX)
 
-C + + /CX 支持`public enum class`关键字，它是类似于标准 c + + `scoped  enum`。 当你使用通过 `public enum class` 关键字声明的枚举数时，必须使用枚举标识符确定每个枚举值的范围。
+C++/CX 支持`public enum class`关键字，它是类似于标准C++ `scoped  enum`。 当你使用通过 `public enum class` 关键字声明的枚举数时，必须使用枚举标识符确定每个枚举值的范围。
 
 ### <a name="remarks"></a>备注
 
@@ -40,5 +40,5 @@ C + + /CX 支持`public enum class`关键字，它是类似于标准 c + + `scop
 ## <a name="see-also"></a>请参阅
 
 [类型系统](../cppcx/type-system-c-cx.md)<br/>
-[Visual c + + 语言参考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[VisualC++语言参考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [命名空间参考](../cppcx/namespaces-reference-c-cx.md)

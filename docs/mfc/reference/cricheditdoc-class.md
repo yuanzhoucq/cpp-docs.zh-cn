@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CRichEditDoc [MFC], GetView
 - CRichEditDoc [MFC], m_bRTF
 ms.assetid: c936ec18-d516-49d4-b7fb-c9aa0229eddc
-ms.openlocfilehash: 4c2021128dcc06a76cf3b68c0ec49b72a5860046
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4cc3af7649d30a153b67cd8269e595c11018833f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372083"
 ---
 # <a name="cricheditdoc-class"></a>CRichEditDoc 类
 
@@ -55,7 +55,7 @@ class CRichEditDoc : public COleServerDoc
 
 此 Windows 公共控件 (并因此[CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)和相关类) 仅适用于在 Windows 95/98 和 Windows NT 版本 3.51 下运行的程序和更高版本。
 
-在 MFC 应用程序中使用格式文本编辑文档的示例，请参阅[写字板](../../visual-cpp-samples.md)示例应用程序。
+在 MFC 应用程序中使用格式文本编辑文档的示例，请参阅[写字板](../../overview/visual-cpp-samples.md)示例应用程序。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -146,7 +146,7 @@ BOOL m_bRTF;
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例写字板](../../visual-cpp-samples.md)<br/>
+[MFC 示例写字板](../../overview/visual-cpp-samples.md)<br/>
 [COleServerDoc 类](../../mfc/reference/coleserverdoc-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CRichEditView 类](../../mfc/reference/cricheditview-class.md)<br/>

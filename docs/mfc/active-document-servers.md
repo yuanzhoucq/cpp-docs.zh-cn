@@ -7,11 +7,11 @@ helpviewer_keywords:
 - active document servers [MFC]
 ms.assetid: 131fec1e-02a0-4305-a7ab-903b911232a7
 ms.openlocfilehash: 7050b810bb5e1f0c240222cd9b8c4922ced4238a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394963"
 ---
 # <a name="active-document-servers"></a>活动文档服务器
 
@@ -27,8 +27,7 @@ MFC 支持与活动文档[CDocObjectServer](../mfc/reference/cdocobjectserver-cl
 
 常规 MFC 服务器将挂钩其自己的 `COleServerItem` 派生类。 MFC 应用程序向导为您生成此类，如果您选择**袖珍服务器**或**完全服务器**复选框将允许应用程序服务器复合文档支持。 如果还选择**活动文档服务器**复选框，MFC 应用程序向导生成的类派生自`CDocObjectServerItem`相反。
 
-
-  `COleDocObjectItem` 类允许 OLE 容器成为活动文档容器。 可以使用 MFC 应用程序向导来创建活动文档容器通过选择**活动文档容器**MFC 应用程序向导的复合文档支持页中的复选框。 有关详细信息，请参阅[创建活动文档容器应用程序](../mfc/creating-an-active-document-container-application.md)。
+`COleDocObjectItem` 类允许 OLE 容器成为活动文档容器。 可以使用 MFC 应用程序向导来创建活动文档容器通过选择**活动文档容器**MFC 应用程序向导的复合文档支持页中的复选框。 有关详细信息，请参阅[创建活动文档容器应用程序](../mfc/creating-an-active-document-container-application.md)。
 
 ## <a name="see-also"></a>请参阅
 

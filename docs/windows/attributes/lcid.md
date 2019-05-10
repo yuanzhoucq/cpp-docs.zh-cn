@@ -1,17 +1,17 @@
 ---
-title: lcid （c + + COM 属性）
+title: lcid (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.lcid
 helpviewer_keywords:
 - LCID attribute
 ms.assetid: 7f248c69-ee1c-42c3-9411-39cf27c9f43d
-ms.openlocfilehash: e431736fcd38b3c08936e65ecf05594142ced4e1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d97ad86e143102c96e87ae0a32245b0c01042501
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409260"
 ---
 # <a name="lcid"></a>lcid
 
@@ -25,7 +25,7 @@ ms.locfileid: "50655307"
 
 ## <a name="remarks"></a>备注
 
-**Lcid** c + + 属性实现的功能[lcid](/windows/desktop/Midl/lcid) MIDL 特性。 如果你想要实现的库块的区域设置，使用**lcid =** `lcid`参数[模块](module-cpp.md)属性。
+**Lcid** C++属性实现的功能[lcid](/windows/desktop/Midl/lcid) MIDL 特性。 如果你想要实现的库块的区域设置，使用**lcid =** `lcid`参数[模块](module-cpp.md)属性。
 
 ## <a name="example"></a>示例
 
@@ -50,8 +50,8 @@ __interface IStatic {
 |-|-|
 |**适用对象**|接口参数|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

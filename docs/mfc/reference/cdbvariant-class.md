@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CDBVariant [MFC], m_pstringA
 - CDBVariant [MFC], m_pstringW
 ms.assetid: de23609c-c560-4b24-bd6b-9d8903fd5b49
-ms.openlocfilehash: 41ea20bcddc53142773d474af41021e9c71af1aa
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 48a2e08d056e3bfef8a06b80ae6607947923cbcb
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289853"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62253317"
 ---
 # <a name="cdbvariant-class"></a>CDBVariant 类
 
@@ -73,7 +73,7 @@ class CDBVariant
 
 ### <a name="public-union-members"></a>公共联合成员
 
-|name|描述|
+|名称|描述|
 |----------|-----------------|
 |[CDBVariant::m_boolVal](#m_boolval)|包含类型的值**BOOL**。|
 |[CDBVariant::m_chVal](#m_chval)|包含类型的值**无符号 char**。|
@@ -216,7 +216,7 @@ void Clear();
 
 `m_pdate`属于联合数据成员。 在访问之前`m_pdate`，首先检查的值[CDBVariant::m_dwType](#m_dwtype)。 如果`m_dwType`设置为 DBVT_DATE，则`m_pdate`包含有效的指针; 否则为访问`m_pdate`将生成不可靠的结果。
 
-有关 TIMESTAMP_STRUCT 数据类型的详细信息，请参阅主题[C 数据类型](/previous-versions/windows/desktop/ms714556)中的附录 D *ODBC 程序员参考*Windows SDK 中。
+有关 TIMESTAMP_STRUCT 数据类型的详细信息，请参阅主题[C 数据类型](/sql/odbc/reference/appendixes/c-data-types)中的附录 D *ODBC 程序员参考*Windows SDK 中。
 
 ##  <a name="m_pstring"></a>  CDBVariant::m_pstring
 

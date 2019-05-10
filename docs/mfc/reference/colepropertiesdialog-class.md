@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COlePropertiesDialog [MFC], m_psh
 - COlePropertiesDialog [MFC], m_vp
 ms.assetid: a54dbc89-1447-4329-bd01-00e98ec9e935
-ms.openlocfilehash: 37197ee20b31564c589099b10e0f8d3f0d1f7e86
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e574f535609ec9401bd76badf11fa7e05cc0c619
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224385"
 ---
 # <a name="colepropertiesdialog-class"></a>COlePropertiesDialog 类
 
@@ -261,7 +261,7 @@ virtual BOOL OnApplyScale(
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 CIRC](../../visual-cpp-samples.md)<br/>
+[MFC 示例 CIRC](../../overview/visual-cpp-samples.md)<br/>
 [COleDialog 类](../../mfc/reference/coledialog-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [COleDialog 类](../../mfc/reference/coledialog-class.md)<br/>

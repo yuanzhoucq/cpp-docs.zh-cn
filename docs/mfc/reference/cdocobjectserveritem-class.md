@@ -1,25 +1,27 @@
 ---
 title: CDocObjectServerItem 类
-ms.date: 09/12/2018
+ms.date: 03/27/2019
 f1_keywords:
 - CDocObjectServerItem
 - AFXDOCOB/CDocObjectServerItem
 - AFXDOCOB/CDocObjectServerItem::CDocObjectServerItem
 - AFXDOCOB/CDocObjectServerItem::GetDocument
+- AFXDOCOB/CDocObjectServerItem::OnDoVerb
 - AFXDOCOB/CDocObjectServerItem::OnHide
 - AFXDOCOB/CDocObjectServerItem::OnShow
 helpviewer_keywords:
 - CDocObjectServerItem [MFC], CDocObjectServerItem
 - CDocObjectServerItem [MFC], GetDocument
+- CDocObjectServerItem [MFC], OnDoVerb
 - CDocObjectServerItem [MFC], OnHide
 - CDocObjectServerItem [MFC], OnShow
 ms.assetid: 530f7156-50c8-4806-9328-602c9133f622
-ms.openlocfilehash: f11c202e85453897f6ebf04d8dc165d2b733a406
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 66ff2326cd3d08b3f6c8399d7e948d6aab5074c3
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62391134"
 ---
 # <a name="cdocobjectserveritem-class"></a>CDocObjectServerItem 类
 
@@ -49,7 +51,7 @@ class CDocObjectServerItem : public COleServerItem
 
 |名称|描述|
 |----------|-----------------|
-|[CDocObjectServerItem::OnDoVerb](#ondoverb)|如果框架试图隐藏 DocObject 项，将引发异常。|
+|[CDocObjectServerItem::OnDoVerb](#ondoverb)|调用以执行谓词。|
 |[CDocObjectServerItem::OnHide](#onhide)|如果框架试图隐藏 DocObject 项，将引发异常。|
 |[CDocObjectServerItem::OnShow](#onshow)|由框架调用以使该文档项就地活动状态。 如果项不是 DocObject，调用[COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow)。|
 
@@ -108,6 +110,23 @@ COleServerDoc* GetDocument() const;
 ### <a name="remarks"></a>备注
 
 这样，作为参数传递服务器文档的访问权限[CDocObjectServerItem](#cdocobjectserveritem)构造函数。
+
+##  <a name="ondoverb"></a>  CDocObjectServerItem::OnDoVerb
+
+由框架调用以执行指定的谓词。
+
+```
+virtual void OnDoVerb(LONG iVerb);
+```
+
+### <a name="parameters"></a>参数
+
+*iVerb*<br/>
+指定要执行的谓词。 有关可能的值，请参阅[IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) Windows SDK 中。
+
+### <a name="remarks"></a>备注
+
+默认实现调用[OnShow](#onshow)成员函数，如果该项是 DocObject 并且指定 OLEIVERB_INPLACEACTIVATE 或 OLEIVERB_SHOW。 如果此项不是 DocObject 或指定不同的谓词的默认实现调用[COleServerItem::OnDoVerb](../../mfc/reference/coleserveritem-class.md#ondoverb)。
 
 ##  <a name="onhide"></a>  CDocObjectServerItem::OnHide
 

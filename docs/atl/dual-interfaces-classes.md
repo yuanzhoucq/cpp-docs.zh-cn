@@ -2,18 +2,16 @@
 title: 双重接口类 (ATL)
 ms.date: 11/04/2016
 ms.topic: reference
-f1_keywords:
-- vc.atl.interfaces.dual
 helpviewer_keywords:
 - dual interfaces, classes
 - dual interfaces
 ms.assetid: c2b1b165-ff39-4e4a-a683-91eca9158304
-ms.openlocfilehash: f3ed6c347fc85504b06ce464dd479142c3bc05f2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1148b89251e88bd7a436ce9b7cd7797a32fba0c5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298836"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62250603"
 ---
 # <a name="dual-interfaces-classes"></a>双重接口类
 

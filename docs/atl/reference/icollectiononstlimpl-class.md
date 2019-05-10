@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICollectionOnSTLImpl class
 ms.assetid: 683c88b0-0d97-4779-a762-e493334ba7f9
-ms.openlocfilehash: fc1e4988237cb839cca9421b56dbcdd04067059d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6842f1c75ebbc9c3dfdd93f30d52fd2cb2936c03
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62275782"
 ---
 # <a name="icollectiononstlimpl-class"></a>ICollectionOnSTLImpl 类
 
@@ -35,7 +35,7 @@ class ICollectionOnSTLImpl : public T
 COM 集合接口。
 
 *CollType*<br/>
-C + + 标准库容器类。
+一个C++标准库容器类。
 
 *ItemType*<br/>
 容器接口所显示的项的类型。
@@ -163,5 +163,5 @@ CollType m_coll;
 
 ## <a name="see-also"></a>请参阅
 
-[ATLCollections 示例](../../visual-cpp-samples.md)<br/>
+[ATLCollections 示例](../../overview/visual-cpp-samples.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

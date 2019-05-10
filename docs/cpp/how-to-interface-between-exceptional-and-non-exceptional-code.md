@@ -5,11 +5,11 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: fd5bb4af-5665-46a1-a321-614b48d4061e
 ms.openlocfilehash: e8ff92f965f48faa7954ae0364ec7877428e519c
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183695"
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>如何：异常和非异常代码之间建立连接
 
@@ -191,7 +191,7 @@ BOOL DiffFiles2(const string& file1, const string& file2)
 }
 ```
 
-当从异常转换为错误代码时，一个潜在问题是错误代码包含的信息通常不及异常可存储的信息丰富。 若要解决此问题，可以提供**捕获**块为每种特定异常类型，可能会引发，并在执行日志记录以记录之前它将转换为错误代码的异常的详细信息。 如果多个函数都使用一组相同的这种方法可以创建大量代码重复**捕获**块。 避免代码重复的好方法是通过这些块重构到一个实现的私有实用工具函数**尝试**并**捕获**块并接受中调用的函数对象**尝试**块。 在每个公用函数中，将代码传递到实用工具函数以作为 Lambda 表达式。
+当从异常转换为错误代码时，一个潜在问题是错误代码包含的信息通常不及异常可存储的信息丰富。 若要解决此问题，可以提供**捕获**块为每种特定异常类型，可能会引发，并在执行日志记录以记录之前它将转换为错误代码的异常的详细信息。 如果多个函数都使用一组相同的这种方法可以创建大量代码重复**捕获**块。 避免代码重复的好方法是通过这些块重构到一个实现的私有实用工具函数**尝试**并**捕获**块并接受中调用的函数对象**尝试**块。 在每个公用函数中，将代码传递到实用工具函数以作为 lambda 表达式。
 
 ```cpp
 template<typename Func>

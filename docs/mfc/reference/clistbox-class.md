@@ -102,12 +102,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: 17ff89fde3ef893c2cfcd8beeb8482722af60358
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b448f725bac68c2b67dc44d660c664c075aa86da
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62225264"
 ---
 # <a name="clistbox-class"></a>CListBox 类
 
@@ -341,7 +341,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 
 指示中所述的两个项目的相对位置[COMPAREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct)结构。 它可能是以下值之一：
 
-|值|含义|
+|“值”|含义|
 |-----------|-------------|
 |-1|第 1 项进行排序项 2 之前。|
 |0|第 1 项和项 2 排序相同。|
@@ -478,7 +478,7 @@ int Dir(
 *attr*<br/>
 可以是任何组合**enum**值中所述`CFile::GetStatu` [s](../../mfc/reference/cfile-class.md#getstatus)，或以下值的任意组合：
 
-|值|含义|
+|“值”|含义|
 |-----------|-------------|
 |0x0000|可以读取或写入到文件。|
 |0x0001|可以从读取但不是会写入到文件。|
@@ -1538,7 +1538,7 @@ virtual int VKeyToItem(
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 CTRLTEST](../../visual-cpp-samples.md)<br/>
+[MFC 示例 CTRLTEST](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4803
 ms.assetid: 2552f3a6-c418-49f4-98a2-a929857be658
-ms.openlocfilehash: 3915307ac2bcc6a923c93382cfefa618ce01fe52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb8f5fe9d55a44193325a2fcfe9ef7675a2b3b89
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62406491"
 ---
 # <a name="compiler-warning-level-1-c4803"></a>编译器警告（等级 1）C4803
 
@@ -19,7 +19,7 @@ method： 引发方法具有不同的存储类从与事件 event
 
 事件方法必须具有与事件声明相同的存储类。 编译器将调整事件的方法是相同的存储类。
 
-如果必须实现一个接口中的事件的类，则会出现此警告。 编译器不隐式生成的事件引发方法在接口中。 当在类中实现该接口时，则编译器隐式生成引发方法和该方法将不是虚拟的因此该警告。 有关事件的详细信息，请参阅[事件](../../windows/event-cpp-component-extensions.md)。
+如果必须实现一个接口中的事件的类，则会出现此警告。 编译器不隐式生成的事件引发方法在接口中。 当在类中实现该接口时，则编译器隐式生成引发方法和该方法将不是虚拟的因此该警告。 有关事件的详细信息，请参阅[事件](../../extensions/event-cpp-component-extensions.md)。
 
 请参阅[警告](../../preprocessor/warning.md)杂注如何关闭警告信息。
 

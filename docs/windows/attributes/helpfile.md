@@ -1,17 +1,17 @@
 ---
-title: 帮助文件 （c + + COM 属性）
+title: 帮助文件 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpfile
 helpviewer_keywords:
 - helpfile attribute
 ms.assetid: d75161c1-1363-4019-ae09-e7e3b8a3971e
-ms.openlocfilehash: 594ab4d02065e9b4efe1142c5ced9b76642e5481
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7aff6addffb13d2d45953d190eeaac518fe48d6d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50488044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409559"
 ---
 # <a name="helpfile"></a>helpfile
 
@@ -30,7 +30,7 @@ ms.locfileid: "50488044"
 
 ## <a name="remarks"></a>备注
 
-**Helpfile** c + + 属性具有相同的功能[helpfile](/windows/desktop/Midl/helpfile) MIDL 特性。
+**Helpfile** C++属性具有相同的功能[helpfile](/windows/desktop/Midl/helpfile) MIDL 特性。
 
 ## <a name="example"></a>示例
 
@@ -44,8 +44,8 @@ ms.locfileid: "50488044"
 |-|-|
 |**适用对象**|**接口**， **typedef**，**类**，方法中，**属性**|
 |**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|无|
+|**必需的特性**|None|
+|**无效的特性**|None|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

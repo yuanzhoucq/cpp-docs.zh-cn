@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
-ms.openlocfilehash: 8579b3506d727f5c4faeb56a9c1f3ea88b7a4b6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d37d55c56e3c23d8d9129c985cb4272d2e3ee47a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368729"
 ---
 # <a name="platformexception-class"></a>Platform::Exception 类
 
@@ -149,8 +149,8 @@ public:property String^ Message;
 
 ### <a name="remarks"></a>备注
 
-在 Windows 8 中，此属性是只读的因为 abi 仅作为 HRESULTS 传输该版本的 Windows 运行时中的异常。 在 Windows 8.1 中，可跨 ABI 传输更加丰富的异常信息，你可以提供自定义消息，供其他组件以编程方式进行访问。 有关详细信息，请参阅[异常 (C + + /cli CX)](../cppcx/exceptions-c-cx.md)。
+在 Windows 8 中，此属性是只读的因为 abi 仅作为 HRESULTS 传输该版本的 Windows 运行时中的异常。 在 Windows 8.1 中，可跨 ABI 传输更加丰富的异常信息，你可以提供自定义消息，供其他组件以编程方式进行访问。 有关详细信息，请参阅[异常 (C++/CX)](../cppcx/exceptions-c-cx.md)。
 
 ## <a name="see-also"></a>请参阅
 
-[平台命名空间](../cppcx/platform-namespace-c-cx.md)
+[Platform 命名空间](../cppcx/platform-namespace-c-cx.md)

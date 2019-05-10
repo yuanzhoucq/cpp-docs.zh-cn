@@ -1,18 +1,34 @@
 ---
-title: 数学错误 M6101 到 M6205
-ms.date: 11/17/2017
+title: 数学错误
+ms.date: 04/16/2019
 ms.assetid: bdf3dc2a-d993-4f53-b0f2-9604e4914127
-ms.openlocfilehash: ef922f8057f25cb6e206f9f7bfbb099fdf81ac17
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 7d89a7b9f89342b973307f592e59d05cfe44f84f
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53177677"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64856705"
 ---
-# <a name="math-errors-m6101-through-m6205"></a>数学错误 M6101 到 M6205
+# <a name="math-errors-mxxxx"></a>数学错误 (Mxxxx)
 
-本部分是对运行时浮点数学库生成的错误的引用。
+本部分是对运行时浮点数学库生成的错误的引用。 数学运行时错误和警告具有窗体 M*xxxx*，其中*xxxx*是一个四位数字。
 
-在 Microsoft 的公共论坛中有关错误和警告都可能会发现更多帮助。 可以上搜索的错误或警告编号[开发人员社区](https://developercommunity.visualstudio.com)站点。 [Visual c + + 常规](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vcgeneral)论坛是有关 Visual c + + 其他论坛中未涉及的问题。 此外可以搜索错误和警告，并上提问[Stack Overflow](http://stackoverflow.com/)查找解决方案。
+[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
-有关更多帮助和社区资源的链接，请参阅[Visual c + + 帮助和社区](../../visual-cpp-help-and-community.md)。
+## <a name="math-errors"></a>数学错误
+
+[数学错误 M6101](math-error-m6101.md) \
+[数学错误 M6102](math-error-m6102.md) \
+[数学错误 M6107](math-error-m6107.md) \
+[数学错误 M6108](math-error-m6108.md) \
+[数学错误 M6110](math-error-m6110.md) \
+[数学错误 M6111](math-error-m6111.md) \
+[数学错误 M6201](math-error-m6201.md) \
+[数学错误 M6202](math-error-m6202.md) \
+[数学错误 M6203](math-error-m6203.md) \
+[数学错误 M6205](math-error-m6205.md)
+
+## <a name="see-also"></a>请参阅
+
+[C /C++编译器和生成工具错误和警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[数学和浮点支持](../../c-runtime-library/floating-point-support.md)

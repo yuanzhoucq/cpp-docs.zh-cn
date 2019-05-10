@@ -6,30 +6,30 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI]
 ms.assetid: 8be2de10-b1ff-4ca4-a114-75318408593c
-ms.openlocfilehash: 2536309025506ca66d9c4b7cdfbaabf5787945e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6567a7866516c09bca03fa9f3d3aa5aa997b6b4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62148430"
 ---
 # <a name="attributes-by-usage"></a>按用法分的特性
 
-本主题列出根据它们适用于 c + + 语言元素的属性。
+本主题列出根据属性C++应用于的语言元素。
 
 如果属性优先于不在该属性的范围内的元素，特性块视为注释。
 
 |特性|描述|
 |---------------|-----------------|
 |[模块特性](module-attributes.md)|适用于[模块](module-cpp.md)属性。|
-|[接口特性](interface-attributes.md)|适用于[__interface](../../cpp/interface.md) c + + 关键字。|
-|[类特性](class-attributes.md)|适用于 c + + 关键字。|
+|[接口特性](interface-attributes.md)|适用于[__interface](../../cpp/interface.md) C++关键字。|
+|[类特性](class-attributes.md)|适用于C++关键字。|
 |[方法特性](method-attributes.md)|适用于类、 组件类或接口中的方法。|
 |[参数特性](parameter-attributes.md)|适用于的类或接口中的方法的参数。|
 |[数据成员特性](data-member-attributes.md)|适用于类、 组件类或接口中的数据成员。|
-|[Typedef、Enum、Union 和 Struct 特性](typedef-enum-union-and-struct-attributes.md)|适用于 c + + 关键字。|
+|[Typedef、Enum、Union 和 Struct 特性](typedef-enum-union-and-struct-attributes.md)|适用于C++关键字。|
 |[数组特性](array-attributes.md)|适用于数组或`SAFEARRAY`s。|
-|[独立特性](stand-alone-attributes.md)|运行更像是代码行，但不是 c + + 关键字进行操作。 独立特性语句需要行尾的分号。|
+|[独立特性](stand-alone-attributes.md)|运行更像是代码行，但不会无法运行在C++关键字。 独立特性语句需要行尾的分号。|
 |[自定义属性](custom-attributes-cpp.md)|允许用户以扩展元数据。|
 
 ## <a name="module-attributes"></a>模块特性
@@ -41,7 +41,7 @@ ms.locfileid: "50449357"
 
 ## <a name="interface-attributes"></a>接口特性
 
-以下属性应用于[接口 （或 __interface）](../../cpp/interface.md) c + + 关键字。
+以下属性应用于[接口 （或 __interface）](../../cpp/interface.md) C++关键字。
 
 |特性|描述|
 |---------------|-----------------|

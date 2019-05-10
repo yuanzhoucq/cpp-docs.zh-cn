@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __inwordstring intrinsic
 - rep insw instruction
 ms.assetid: 6de37939-017a-4740-9e3d-7de78a30daba
-ms.openlocfilehash: b56a55da06e808bcccf123ccc9867a1b868834a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 52c36754e1eea56b84eeb494e82e37a5b043246e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62263446"
 ---
 # <a name="inwordstring"></a>__inwordstring
 

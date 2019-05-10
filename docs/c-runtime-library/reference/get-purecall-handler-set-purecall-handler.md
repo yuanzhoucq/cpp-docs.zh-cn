@@ -35,11 +35,11 @@ helpviewer_keywords:
 - _get_purecall_handler function
 ms.assetid: 2759b878-8afa-4129-86e7-72afc2153d9c
 ms.openlocfilehash: 0009b4bc1c7bf70bd84b9a82ecdc8643789e8164
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287395"
 ---
 # <a name="getpurecallhandler-setpurecallhandler"></a>_get_purecall_handler、_set_purecall_handler
 
@@ -57,7 +57,7 @@ _purecall_handler __cdecl _set_purecall_handler(
 
 ### <a name="parameters"></a>参数
 
-*函数*<br/>
+*function*<br/>
 要在调用纯虚函数时调用的函数。 一个 **_purecall_handler 中**函数必须具有 void 返回类型。
 
 ## <a name="return-value"></a>返回值
@@ -66,7 +66,7 @@ _purecall_handler __cdecl _set_purecall_handler(
 
 ## <a name="remarks"></a>备注
 
-**_Get_purecall_handler**并 **_set_purecall_handler**函数是特定于 Microsoft 的和仅适用于 c + + 代码。
+**_Get_purecall_handler**并 **_set_purecall_handler**函数是特定于 Microsoft 的和仅适用于C++代码。
 
 对纯虚拟函数的调用出错，因为它没有实现。 默认情况下，在调用纯虚函数时，编译器将生成代码来调用错误处理程序函数，这将终止该程序。 可以安装自己的错误处理程序进行纯虚拟函数调用，以捕获这些调用用于调试和报告目的。 若要使用错误处理程序，创建具有的函数 **_purecall_handler 中**签名，然后使用 **_set_purecall_handler**使它成为当前处理程序。
 
@@ -78,7 +78,7 @@ _purecall_handler __cdecl _set_purecall_handler(
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**_get_purecall_handler**， **_set_purecall_handler**|\<cstdlib> 或 \<stdlib.h>|
+|**_get_purecall_handler**, **_set_purecall_handler**|\<cstdlib> 或 \<stdlib.h>|
 
 有关兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

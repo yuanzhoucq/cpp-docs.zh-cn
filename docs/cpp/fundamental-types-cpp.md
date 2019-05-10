@@ -44,11 +44,11 @@ helpviewer_keywords:
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
 ms.openlocfilehash: f4af392ed559349b0e49fd26f3ecb4406a70b74b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153796"
 ---
 # <a name="fundamental-types--c"></a>基本类型 (C++)
 
@@ -68,16 +68,16 @@ C++ 中的基础类型分为三个类别：整数、浮点和 void。 整数类�
 
 |类别|类型|内容|
 |--------------|----------|--------------|
-|整数|**char**|类型**char**是一种整型类型通常包含基本执行字符集的成员，默认情况下，这是 Microsoft c + + 中的 ASCII。<br /><br /> C + + 编译器将类型的变量**char**，**签名 char**，并**unsigned char**不同类型。 类型的变量**char**升级到**int** ，就好像它们是类型**签名 char**默认情况下，除非使用 /J 编译选项。 在这种情况下将它们视为类型**unsigned char**并提升为**int**没有符号扩展。|
+|整数|**char**|类型**char**是一种整型类型通常包含基本执行字符集的成员，默认情况下，这是在 Microsoft 的 ASCII C++。<br /><br /> C++类型的变量视为编译器**char**，**签名 char**，并**unsigned char**不同类型。 类型的变量**char**升级到**int** ，就好像它们是类型**签名 char**默认情况下，除非使用 /J 编译选项。 在这种情况下将它们视为类型**unsigned char**并提升为**int**没有符号扩展。|
 ||**bool**|类型**bool**是一种整型类型可以具有两个值之一**true**或**false**。 其大小未指定。|
 ||**short**|类型**短整型**(或简称**短**) 是大于或等于类型的大小的整型类型**char**，但小于或等于类型大小**int**。<br /><br /> 类型的对象**短**可以声明为**short 签名**或**unsigned short**。 **简单地说签名**是的同义词**短**。|
 ||**int**|类型**int**是大于或等于类型的大小的整型类型**short int**，但小于或等于类型的大小**长**。<br /><br /> 类型的对象**int**可以声明为**带符号整型**或**无符号的 int**。**带符号整型**是的同义词**int**。|
-||**__int8**， **__int16**， **__int32**， **__int64**|固定大小的整数 `__int n`，其中 `n` 是整数变量的大小（以比特为单位）。 **__int8**， **__int16**， **__int32**并 **__int64**是 Microsoft 专用的关键字。 并非所有类型在所有体系结构上都都可用。 (**__int128**不受支持。)|
+||**__int8**, **__int16**, **__int32**, **__int64**|固定大小的整数 `__int n`，其中 `n` 是整数变量的大小（以比特为单位）。 **__int8**， **__int16**， **__int32**并 **__int64**是 Microsoft 专用的关键字。 并非所有类型在所有体系结构上都都可用。 (**__int128**不受支持。)|
 ||**long**|类型**长**(或**long int**) 是大于或等于类型的大小的整型类型**int**。<br /><br /> 类型的对象**长**可以声明为**长签名**或**无符号长**。 **签名长**是的同义词**长**。|
 ||**long long**|大于 unsigned**长**。<br /><br /> 类型的对象**超长**可以声明为**长长签名**或**无符号长长**。 **长时间长签名**是的同义词**超长**。|
 ||**wchar_t**， **__wchar_t**|类型的变量**wchar_t**指定宽字符或多字节字符类型。 默认情况下**wchar_t**是本机类型，但你可以使用[/zc: wchar_t-](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)以使**wchar_t**的 typedef **unsigned short**。 **__Wchar_t**类型是本机的 Microsoft 专用同义词**wchar_t**类型。<br /><br /> 在字符或字符串文本前使用 L 前缀可指定宽字符类型。|
 |浮点|**float**|类型**float**是最小的浮点类型。|
-||**double**|类型**双**浮动点类型是大于或等于类型**float**，但小于或等于类型的大小**长双精度型**。<br /><br /> Microsoft 专用： 的表示形式**长双精度**并**double**完全相同。 但是，**长双精度**并**double**是不同的类型。|
+||**double**|类型**双**浮动点类型是大于或等于类型**float**，但小于或等于类型的大小**长双精度型**。<br /><br /> Microsoft 专用：表示形式**长双精度**并**double**完全相同。 但是，**长双精度**并**double**是不同的类型。|
 ||**long double**|类型**长双精度**浮动点类型是大于或等于类型**double**。|
 
 **Microsoft 专用**

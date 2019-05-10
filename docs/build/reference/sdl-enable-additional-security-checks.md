@@ -4,12 +4,12 @@ ms.date: 11/26/2018
 f1_keywords:
 - VC.Project.VCCLCompilerTool.SDLCheck
 ms.assetid: 3dcf86a0-3169-4240-9f29-e04a9f535826
-ms.openlocfilehash: dd37dae4927531b86cfdac274493b945b066760a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 0618b796d492395c3e0e5413047ac0260082baff
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62318441"
 ---
 # <a name="sdl-enable-additional-security-checks"></a>/sdl（启用附加安全检查）
 
@@ -23,7 +23,7 @@ ms.locfileid: "57413090"
 
 ## <a name="remarks"></a>备注
 
-**/sdl**使提供的基线安全检查的超集[/GS](../../build/reference/gs-buffer-security-check.md)并重写 **/GS-**。 默认情况下 **/sdl**处于关闭状态。 **/sdl-** 禁用额外的安全检查。
+**/sdl**使提供的基线安全检查的超集[/GS](gs-buffer-security-check.md)并重写 **/GS-**。 默认情况下 **/sdl**处于关闭状态。 **/sdl-** 禁用额外的安全检查。
 
 ## <a name="compile-time-checks"></a>编译时检查
 
@@ -67,13 +67,13 @@ ms.locfileid: "57413090"
 
 #### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择**C/c + +** 文件夹。
+1. 选择**C /C++** 文件夹。
 
 1. 上**常规**页上，选择从选项**SDL 检查**下拉列表。
 
 ## <a name="see-also"></a>请参阅
 
-[编译器选项](../../build/reference/compiler-options.md)<br/>
-[设置编译器选项](../../build/reference/setting-compiler-options.md)
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)

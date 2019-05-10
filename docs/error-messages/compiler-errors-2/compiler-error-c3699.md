@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3699
 ms.assetid: 47c29afc-ab8b-4238-adfe-788dd6e00b3b
-ms.openlocfilehash: e413e4a08ce22ef109179ff0f98baf32ebba41c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93058d34ca9a17ab175a55a7bc7b953d369e65c5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62324761"
 ---
 # <a name="compiler-error-c3699"></a>编译器错误 C3699
 
@@ -36,7 +36,7 @@ int main() {
 
 ## <a name="example"></a>示例
 
-Trivial 属性不能具有引用类型。 有关更多信息，请参见 [property](../../windows/property-cpp-component-extensions.md) 。 下面的示例生成 C3699。
+Trivial 属性不能具有引用类型。 有关更多信息，请参见 [property](../../extensions/property-cpp-component-extensions.md) 。 下面的示例生成 C3699。
 
 ```
 // C3699_b.cpp

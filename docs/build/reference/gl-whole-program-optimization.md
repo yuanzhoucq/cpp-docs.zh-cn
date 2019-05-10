@@ -10,12 +10,12 @@ helpviewer_keywords:
 - -GL compiler option [C++]
 - GL compiler option [C++]
 ms.assetid: 09d51e2d-9728-4bd0-b5dc-3b8284aca1d1
-ms.openlocfilehash: b0aabdc1a2fb86479a165ae9559372316bd02260
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6251209dac74a504bb0635f0c544c39935090a42
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292128"
 ---
 # <a name="gl-whole-program-optimization"></a>/GL（全程序优化）
 
@@ -43,21 +43,21 @@ ms.locfileid: "57420669"
 
 - 即使另一个模块中定义的函数的模块中函数进行内联。
 
-使用生成的.obj 文件 **/GL**将不可用到此类链接器实用程序进行[EDITBIN](../../build/reference/editbin-reference.md)并[DUMPBIN](../../build/reference/dumpbin-reference.md)。
+使用生成的.obj 文件 **/GL**将不可用到此类链接器实用程序进行[EDITBIN](editbin-reference.md)并[DUMPBIN](dumpbin-reference.md)。
 
-如果编译您的程序与 **/GL**并[/c](../../build/reference/c-compile-without-linking.md)，应使用 /LTCG 链接器选项来创建输出文件。
+如果编译您的程序与 **/GL**并[/c](c-compile-without-linking.md)，应使用 /LTCG 链接器选项来创建输出文件。
 
-[/ZI](../../build/reference/z7-zi-zi-debug-information-format.md)不能用于 **/GL**
+[/ZI](z7-zi-zi-debug-information-format.md)不能用于 **/GL**
 
-使用生成的文件格式 **/GL**当前版本中可能无法读取由 Visual c + + 的后续版本。 不应提供与生成的.obj 文件组成的.lib 文件 **/GL**除非您是愿意提供的所有版本的 Visual c + + 的.lib 文件副本在你希望用户使用，现在和将来。
+使用生成的文件格式 **/GL**当前版本中可能无法读取视觉对象的后续版本C++。 不应提供与生成的.obj 文件组成的.lib 文件 **/GL**除非您是愿意提供视觉对象的所有版本的.lib 文件的副本C++在你希望用户使用，现在和将来。
 
 使用生成的.obj 文件 **/GL**预编译标头文件不应该用于生成的.lib 文件，除非将生成在同一台计算机上链接的.lib 文件 **/GL** .obj 文件。 在链接时，将需要从.obj 文件的预编译的头文件的信息。
 
-有关可用优化和全程序优化的限制的详细信息，请参阅[/LTCG](../../build/reference/ltcg-link-time-code-generation.md)。  **/GL**还可以按配置优化; 请参阅 /LTCG。  在编译时的配置文件引导式优化，如果希望从按配置优化的函数，必须使用进行编译[/Gy](../../build/reference/gy-enable-function-level-linking.md)或隐含 /Gy 编译器选项。
+有关可用优化和全程序优化的限制的详细信息，请参阅[/LTCG](ltcg-link-time-code-generation.md)。  **/GL**还可以按配置优化; 请参阅 /LTCG。  在编译时的配置文件引导式优化，如果希望从按配置优化的函数，必须使用进行编译[/Gy](gy-enable-function-level-linking.md)或隐含 /Gy 编译器选项。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 请参阅[/LTCG （链接时间代码生成）](../../build/reference/ltcg-link-time-code-generation.md)有关如何指定的信息 **/GL**开发环境中。
+1. 请参阅[/LTCG （链接时间代码生成）](ltcg-link-time-code-generation.md)有关如何指定的信息 **/GL**开发环境中。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项
 
@@ -65,5 +65,5 @@ ms.locfileid: "57420669"
 
 ## <a name="see-also"></a>请参阅
 
-[编译器选项](../../build/reference/compiler-options.md)<br/>
-[设置编译器选项](../../build/reference/setting-compiler-options.md)
+[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)

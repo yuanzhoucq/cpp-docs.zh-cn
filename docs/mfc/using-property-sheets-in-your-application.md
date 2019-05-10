@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Create method [MFC], property sheets
 - CPropertyPage class [MFC], styles
 ms.assetid: 240654d4-152b-4e3f-af7b-44234339206e
-ms.openlocfilehash: 76acbfa9625fe6cb9a575244b0ed6954eeaaf3f2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4fd68f57db082ab0b0da0e8248e0be239c63c99a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411521"
 ---
 # <a name="using-property-sheets-in-your-application"></a>在您的应用程序中使用属性表
 
@@ -58,7 +58,7 @@ ms.locfileid: "57301683"
 
 1. 在属性页和属性表的所有者之间交换数据。 这本文中所述[交换数据](../mfc/exchanging-data.md)。
 
-有关如何使用属性表的示例，请参阅 MFC 常规示例[PROPDLG](../visual-cpp-samples.md)。
+有关如何使用属性表的示例，请参阅 MFC 常规示例[PROPDLG](../overview/visual-cpp-samples.md)。
 
 ## <a name="see-also"></a>请参阅
 

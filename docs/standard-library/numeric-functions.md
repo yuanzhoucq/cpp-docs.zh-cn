@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::iota [C++]
 - std::partial_sum [C++]
 ms.openlocfilehash: 6df37cf4f6c8afe09f25550d4fc0d9acb553ac52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62236540"
 ---
 # <a name="ltnumericgt-functions"></a>&lt;numeric&gt; 函数
 
@@ -49,7 +49,7 @@ Type accumulate(
 *first*<br/>
 输入迭代器，此迭代器在要求和或根据指定二元运算合并的范围内发现第一个元素。
 
-*最后一个*<br/>
+*last*<br/>
 输入迭代器，此迭代器在要求和或根据指定二元运算合并的范围内发现最后一个元素，即迭代累计中实际包含的最后一个元素之外的一个位置。
 
 *val*<br/>
@@ -189,10 +189,10 @@ OutputIterator adjacent_difference(
 *first*<br/>
 输入迭代器，此迭代器在其中元素与各自前一元素不同的输入范围内或从中通过其他指定二元运算来操作值对的输入范围内发现第一个元素。
 
-*最后一个*<br/>
+*last*<br/>
 输入迭代器，此迭代器在其中元素与各自前一元素不同的输入范围内或从中通过其他指定二元运算来操作值对的输入范围内发现最后一个元素。
 
-*结果*<br/>
+*result*<br/>
 输出迭代器，此迭代器在存储一系列差值或指定运算结果的目标范围内发现第一个元素。
 
 *binary_op*<br/>
@@ -297,13 +297,13 @@ Type inner_product(
 
 ### <a name="parameters"></a>参数
 
-*First1*<br/>
+*first1*<br/>
 一个输入迭代器，该迭代器发现第一个范围内的第一个元素，该范围与第二个范围的内部乘积或一般化内部乘积将进行计算。
 
-*Last1*<br/>
+*last1*<br/>
 一个输入迭代器，该迭代器发现第一个范围内的最后一个元素，该范围与第二个范围的内部乘积或一般化内部乘积将进行计算。
 
-*First2*<br/>
+*first2*<br/>
 一个输入迭代器，该迭代器发现第二个范围内的第一个元素，该范围与第一个范围的内部乘积或一般化内部乘积将进行计算。
 
 *val*<br/>
@@ -437,10 +437,10 @@ void iota(ForwardIterator first, ForwardIterator last, Type value);
 *first*<br/>
 发现范围中要填充的第一个元素的输入迭代器。
 
-*最后一个*<br/>
+*last*<br/>
 发现范围中要填充的最后一个元素的输入迭代器。
 
-*value*<br/>
+*值*<br/>
 要存储在第一个元素中并连续增加后续元素的起始值。
 
 ### <a name="remarks"></a>备注
@@ -511,10 +511,10 @@ OutputIterator partial_sum(
 *first*<br/>
 输入迭代器，此迭代器在要部分求和或根据指定二元运算合并的范围内发现第一个元素。
 
-*最后一个*<br/>
+*last*<br/>
 输入迭代器，此迭代器在要部分求和或根据指定二元运算合并的范围内发现最后一个元素，即迭代累计中实际包含的最后一个元素之外的一个位置。
 
-*结果*<br/>
+*result*<br/>
 输出迭代器，此迭代器在存储一系列部分和或指定运算结果的目标范围内发现第一个元素。
 
 *binary_op*<br/>

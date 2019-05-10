@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4570
 ms.assetid: feec1225-e6ad-4995-8d96-c22e864a77bd
-ms.openlocfilehash: 1c92bd7f632ea6662c3cee1bcaa1dd0c917fb2a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 386d7c210c77469d67a75d66f7d8ae35c105b3b0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62401782"
 ---
 # <a name="compiler-warning-level-3-c4570"></a>编译器警告（等级 3）C4570
 
 type： 没有显式声明为抽象的但具有抽象函数
 
-包含的类型[抽象](../../windows/abstract-cpp-component-extensions.md)函数应本身标记为抽象。
+包含的类型[抽象](../../extensions/abstract-cpp-component-extensions.md)函数应本身标记为抽象。
 
 ## <a name="example"></a>示例
 

@@ -4,12 +4,12 @@ ms.date: 10/22/2018
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: efefd4c0-4491-4072-aa9b-59545641efb3
-ms.openlocfilehash: e3c3de8861cbb5bdd2e1553cf27602763bdc4d47
-ms.sourcegitcommit: db07d1b9750ed4e42b6060719673d9518668942c
+ms.openlocfilehash: e4de4070b1662e33d4b0c0c355cabde851746662
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56844524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362317"
 ---
 # <a name="creating-an-ole-db-consumer-using-a-wizard"></a>使用向导创建 OLE DB 使用者
 

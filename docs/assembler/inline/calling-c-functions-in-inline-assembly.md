@@ -10,11 +10,11 @@ helpviewer_keywords:
 - __asm keyword [C++], calling functions
 ms.assetid: f8a8d568-d175-4e23-9b24-36ef60a4cab3
 ms.openlocfilehash: 4d12321cd90f596c94c2337e100663436d512107
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167175"
 ---
 # <a name="calling-c-functions-in-inline-assembly"></a>在内联汇编程序内调用 C 函数
 
@@ -50,7 +50,7 @@ int main( void )
 }
 ```
 
-由于函数参数在堆栈上传递，因此仅需在调用函数之前推入所需参数（前面示例中的字符串指针）。 参数以相反顺序被推动，因此可按所需顺序结束堆栈。 模拟 C 语句
+由于函数自变量在堆栈上传递，因此仅需在调用函数之前推入所需自变量（前面示例中的字符串指针）。 自变量以相反顺序被推动，因此可按所需顺序结束堆栈。 模拟 C 语句
 
 ```cpp
 printf( format, hello, world );

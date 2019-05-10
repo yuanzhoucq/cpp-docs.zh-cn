@@ -15,12 +15,12 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - MFC ActiveX controls [MFC]
 ms.assetid: c911fb74-3afc-4bf3-a0f5-7922b14d9a1b
-ms.openlocfilehash: a33273c46562e8beba12910702d9ddc1a092575d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d10aad92088a02a1cab0977ea174abdf919a05e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62239680"
 ---
 # <a name="mfc-activex-controls"></a>MFC ActiveX 控件
 
@@ -96,7 +96,7 @@ ActiveX 控件容器与 ActiveX 控件之间的通信
 
 ##  <a name="_core_installing_activex_control_classes_and_tools"></a> 安装 ActiveX 控件类和工具
 
-在安装 Visual c + + 时，MFC ActiveX 控件类和零售和调试运行时 Dll 将自动安装，如果在安装程序 （它们通过默认选中） 中选择了 ActiveX 控件的 ActiveX 控件。
+当你安装 Visual C++，MFC ActiveX 控件类和零售和调试运行时 Dll 将自动安装，如果在安装程序 （它们通过默认选中） 中选择了 ActiveX 控件的 ActiveX 控件。
 
 默认情况下下 \Program Files\Microsoft Visual Studio.NET 中的以下子目录中安装的 ActiveX 控件类和工具：
 
@@ -116,7 +116,7 @@ ActiveX 控件容器与 ActiveX 控件之间的通信
 
    包含开发与 MFC 的 ActiveX 控件所需的库
 
-也有适用于 MFC ActiveX 控件示例。 有关这些示例的详细信息，请参阅[控件示例：基于 MFC 的 ActiveX 控件](../visual-cpp-samples.md)
+也有适用于 MFC ActiveX 控件示例。 有关这些示例的详细信息，请参阅[控件示例：基于 MFC 的 ActiveX 控件](../overview/visual-cpp-samples.md)
 
 ## <a name="see-also"></a>请参阅
 

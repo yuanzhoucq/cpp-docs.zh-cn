@@ -1,6 +1,6 @@
 ---
 title: valarray 类
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - valarray/std::valarray
 - valarray/std::valarray::value_type
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::valarray [C++], sum
 - std::valarray [C++], swap
 ms.assetid: 19b862f9-5d09-4003-8844-6ddd02c1a3a7
-ms.openlocfilehash: f38d431248c524a65b4a7a7126ba73b767a64173
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: efb186753de0e04bd01f9cc6e81c487084b88ac2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167512"
 ---
 # <a name="valarray-class"></a>valarray 类
 
@@ -88,7 +88,7 @@ ms.locfileid: "51525300"
 |-|-|
 |[operator!](#op_not)|一个一元运算符，它用于获取 `valarray` 中每个元素的逻辑 `NOT` 值。|
 |[operator%=](#op_mod_eq)|获取用指定 `valarray` 或元素类型的值对数组元素进行点除所得的余数。|
-|[operator&=](#op_amp_eq)|获取数组中元素的按位 `AND`，该数组具有指定 `valarray` 中的对应元素或具有元素类型的值。|
+|[operator&=](#op_and_eq)|获取数组中元素的按位 `AND`，该数组具有指定 `valarray` 中的对应元素或具有元素类型的值。|
 |[operator>>=](#op_gt_gt_eq)|将 `valarray` 操作数中的每个元素向右移动指定数目的位置，或者按第二个 `valarray` 指定的点算数右移。|
 |[operator<<=](#op_lt_lt_eq)|将 `valarray` 操作数中的每个元素向左移动指定数目的位置，或者按第二个 `valarray` 指定的点算数左移。|
 |[operator*=](#op_star_eq)|将指定 `valarray` 的元素或元素类型的值与操作数 `valarray` 进行点乘。|
@@ -508,7 +508,7 @@ valarray: ( 0 -3 4 -7 1 -3 ).
 */
 ```
 
-## <a name="and_eq"></a>valarray::operator&amp;=
+## <a name="op_and_eq"></a>valarray::operator&amp;=
 
 获取数组中元素的按位 **AND**，该数组具有指定 valarray 中的对应元素或具有元素类型的值。
 
@@ -906,7 +906,7 @@ valarray: ( 2 0 4 2 6 4 8 6 ).
 */
 ```
 
-## <a name="valarray__operator-"></a>  valarray::operator-
+## <a name="operator-"></a>  valarray::operator-
 
 一个一元运算符，该运算符将 valarray 中的所有元素相减。
 
@@ -958,7 +958,7 @@ valarray: ( 0 0 2 -2 4 -4 6 -6 8 -8 ).
 */
 ```
 
-## <a name="valarray__operator-_eq"></a>valarray::operator-=
+## <a name="operator-_eq"></a>valarray::operator-=
 
 将指定 valarray 的元素或元素类型的值与操作数 valarray 进行点减。
 
@@ -1276,7 +1276,7 @@ valarray 或值与操作数 valarray 的 valarray 或值相同的元素类型，
 
 ### <a name="remarks"></a>备注
 
-排他逻辑（或称为 **XOR**）具有以下语义：假设有元素 e1 和 e2，如果其中恰好有一个元素为 true，则 e1 **XOR** e2 为 **true**；如果两个元素都为 false 或都为 true，则为 **false**。
+排他逻辑或，称为**XOR**，具有以下语义：给定元素*电子*1 和*e*2 *e*1 **XOR** *电子*2 是**true**如果元素中的为 true;**false**如果这两个元素都为 false，或如果这两个元素，则返回 true。
 
 ### <a name="example"></a>示例
 
@@ -1849,10 +1849,10 @@ valarray(
 “计数”<br/>
 数值数组要包含的元素的数目。
 
-*val*<br/>
+*Val*<br/>
 要用于初始化数值数组中的元素的值。
 
-*ptr*<br/>
+*Ptr*<br/>
 指向要用于初始化数值数组中的元素的值的指针。
 
 右侧<br/>

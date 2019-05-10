@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3540
 ms.assetid: 3c0c959c-e3b7-40eb-b922-ccac44bd9d85
-ms.openlocfilehash: d0c4f1b71ccd12ad39fb25ef3411d2fb46b89da7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57e4145557272f76a890a356c79982346cd74d7e
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665811"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345473"
 ---
 # <a name="compiler-error-c3540"></a>编译器错误 C3540
 

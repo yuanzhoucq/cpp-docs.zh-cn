@@ -1,17 +1,17 @@
 ---
-title: 受限制 （c + + COM 属性）
+title: 受限制 (C++ COM 属性)
 ms.date: 10/03/2018
 f1_keywords:
 - vc-attr.restricted
 helpviewer_keywords:
 - restricted attribute
 ms.assetid: 504a96be-b904-4269-8be1-920feba201b4
-ms.openlocfilehash: 1aa18255f7d7a0740494050a149d436fb167fe8a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86f40fa49daf88668e37bef07f0db33d01cf1942
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407349"
 ---
 # <a name="restricted"></a>restricted
 
@@ -32,7 +32,7 @@ ms.locfileid: "50521019"
 
 ## <a name="remarks"></a>备注
 
-**受限**c + + 属性具有相同的功能[受限](/windows/desktop/Midl/restricted)MIDL 特性。
+**受限**C++属性具有相同的功能[受限](/windows/desktop/Midl/restricted)MIDL 特性。
 
 ## <a name="example"></a>示例
 
@@ -70,7 +70,7 @@ class c : public a, public b
 |**适用对象**|接口方法，**接口**，**类**，**结构**|
 |**可重复**|否|
 |**必需的特性**|**组件类**(当应用于**类**或**结构**)|
-|**无效的特性**|无|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

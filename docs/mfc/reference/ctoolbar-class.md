@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CToolBar [MFC], SetHeight
 - CToolBar [MFC], SetSizes
 ms.assetid: e868da26-5e07-4607-9651-e2f863ad9059
-ms.openlocfilehash: ee1820601f80ed270221b3186188793f7fdcbe08
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: aa49ebed2d48d9818c2d39ae4894d8caf1fbbf81
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323643"
 ---
 # <a name="ctoolbar-class"></a>CToolBar 类
 
@@ -98,7 +98,7 @@ class CToolBar : public CControlBar
 
 [CToolBar::GetToolBarCtrl](#gettoolbarctrl)，成员函数新增到 MFC 4.0，让您充分利用自定义工具栏和其他功能的 Windows 公共控件的支持。 `CToolBar` 成员函数为您提供的大多数 Windows 公共控件; 功能但是，在调用`GetToolBarCtrl`，您可以为您的工具栏甚至多个 Windows 95/98 工具栏的特征。 当您调用`GetToolBarCtrl`，它将返回到引用`CToolBarCtrl`对象。 请参阅[CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md)有关设计使用 Windows 公共控件的工具栏的详细信息。 有关公共控件的更多常规信息，请参阅[公共控件](/windows/desktop/Controls/common-controls-intro)Windows SDK 中。
 
-Visual c + + 提供了两个方法，以创建工具栏。 若要创建工具栏资源使用资源编辑器，请执行以下步骤：
+VisualC++提供了两个方法，以创建工具栏。 若要创建工具栏资源使用资源编辑器，请执行以下步骤：
 
 1. 创建工具栏资源。
 
@@ -717,9 +717,9 @@ void SetSizes(
 
 ## <a name="see-also"></a>请参阅
 
-[MFC 示例 CTRLBARS](../../visual-cpp-samples.md)<br/>
-[MFC 示例 DLGCBR32](../../visual-cpp-samples.md)<br/>
-[MFC 示例 DOCKTOOL](../../visual-cpp-samples.md)<br/>
+[MFC 示例 CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
+[MFC 示例 DLGCBR32](../../overview/visual-cpp-samples.md)<br/>
+[MFC 示例 DOCKTOOL](../../overview/visual-cpp-samples.md)<br/>
 [CControlBar 类](../../mfc/reference/ccontrolbar-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CToolBarCtrl 类](../../mfc/reference/ctoolbarctrl-class.md)<br/>

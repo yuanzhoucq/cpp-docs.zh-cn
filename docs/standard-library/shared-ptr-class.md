@@ -32,11 +32,11 @@ helpviewer_keywords:
 - std::shared_ptr [C++], use_count
 ms.assetid: 1469fc51-c658-43f1-886c-f4530dd84860
 ms.openlocfilehash: 791a18461b3a0ee8237dec47c87f9d441221141d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412548"
 ---
 # <a name="sharedptr-class"></a>shared_ptr 类
 
@@ -155,7 +155,7 @@ shared_ptr<int> sp6(sp2);   // error, template parameter int and argument shared
 
 |运算符|描述|
 |-|-|
-|[shared_ptr:: operator bool](#op_bool)|测试拥有的资源是否存在。|
+|[shared_ptr::operator bool](#op_bool)|测试拥有的资源是否存在。|
 |[shared_ptr::operator*](#op_star)|获取指定的值。|
 |[shared_ptr::operator=](#op_eq)|替换拥有的资源。|
 |[shared_ptr::operator-&gt;](#op_arrow)|获取指向指定的值的指针。|
@@ -239,7 +239,7 @@ sp0.get() == 0 == true
 *sp1.get() == 5
 ```
 
-## <a name="op_bool"></a>  shared_ptr:: operator bool
+## <a name="op_bool"></a>  shared_ptr::operator bool
 
 测试拥有的资源是否存在。
 
@@ -340,7 +340,7 @@ shared_ptr& operator=(unique_ptr<Other, Deletor>&& ap);
 *sp*<br/>
 要复制的共享指针。
 
-*亚太*<br/>
+*ap*<br/>
 要复制的自动指针。
 
 ### <a name="remarks"></a>备注
@@ -468,7 +468,7 @@ void reset(Other *ptr, D dtor, A alloc);
 *A*<br/>
 分配器的类型。
 
-*分配*<br/>
+*alloc*<br/>
 要复制的分配器。
 
 ### <a name="remarks"></a>备注
@@ -597,7 +597,7 @@ shared_ptr(const unique_ptr<Other, D>& up) = delete;
 *wp*<br/>
 弱指针。
 
-*亚太*<br/>
+*ap*<br/>
 要复制的自动指针。
 
 ### <a name="remarks"></a>备注

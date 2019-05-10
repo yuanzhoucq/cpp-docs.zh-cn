@@ -40,11 +40,11 @@ helpviewer_keywords:
 - error messages, getting
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
 ms.openlocfilehash: 00ff9d0df1a78d07eaa509201fb998b30396cc4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353815"
 ---
 # <a name="strerrors-strerrors-wcserrors-wcserrors"></a>strerror_s、_strerror_s、_wcserror_s、__wcserror_s
 
@@ -122,7 +122,7 @@ errno_t __wcserror_s(
 
 ## <a name="remarks"></a>备注
 
-**Strerror_s**函数映射*errnum*到错误消息字符串，并返回中的字符串*缓冲区*。 **_strerror_s**不采用错误编号; 它使用的当前值**errno**以确定相应的消息。 既不**strerror_s**也不 **_strerror_s**实际打印的消息： 需要为此，请调用输出函数，如[fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
+**Strerror_s**函数映射*errnum*到错误消息字符串，并返回中的字符串*缓冲区*。 **_strerror_s**不采用错误编号; 它使用的当前值**errno**以确定相应的消息。 既不**strerror_s**也不 **_strerror_s**实际打印的消息：为此，您需要调用输出函数，如[fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
 
 ```C
 if (( _access( "datafile",2 )) == -1 )

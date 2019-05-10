@@ -32,12 +32,12 @@ helpviewer_keywords:
 - Hash method
 - m_rgbookmarks
 ms.assetid: a8aa3149-7ce8-4976-a680-2da193fd3234
-ms.openlocfilehash: c5954aefaff2cdacb1aa1712f8b4bda93c9e434e
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e3513084697a60a33b9fa2ab02222a9b332cce79
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62408833"
 ---
 # <a name="irowsetlocateimpl-class"></a>IRowsetLocateImpl 类
 
@@ -113,7 +113,7 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 
 若要在行集中支持 OLE DB 的书签，请从此类继承的行集。
 
-实现书签支持的信息，请参阅[提供程序支持书签](../../data/oledb/provider-support-for-bookmarks.md)中*Visual c + + 程序员指南*并[书签](/previous-versions/windows/desktop/ms709728(v=vs.85))中*OLE DB 程序员参考*平台 SDK 中。
+有关实现书签支持的信息，请参阅[提供程序支持书签](../../data/oledb/provider-support-for-bookmarks.md)中*VisualC++程序员指南*和[书签](/previous-versions/windows/desktop/ms709728(v=vs.85))中*OLE DB 程序员参考*平台 SDK 中。
 
 ## <a name="compare"></a> IRowsetLocateImpl::Compare
 

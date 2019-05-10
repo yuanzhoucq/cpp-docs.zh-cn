@@ -1,6 +1,6 @@
 ---
 title: CDataConnection 类
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - ATL::CDataConnection
 - ATL.CDataConnection
@@ -65,12 +65,12 @@ helpviewer_keywords:
 - operator CSession*
 - CSession* operator
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-ms.openlocfilehash: 8a419a19c04b579c72df9938151f9ada657178f2
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 94c7025185a24b07d5968157d49c856d4359b33a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209278"
 ---
 # <a name="cdataconnection-class"></a>CDataConnection 类
 
@@ -104,7 +104,7 @@ class CDataConnection
 |[BOOL 运算符](#op_bool)|确定当前会话是否为打开。|
 |[operator bool](#op_bool_ole)|确定当前会话是否为打开。|
 |[CDataSource 运算符 （& a)](#op_cdata_amp)|返回对所包含的引用`CDataSource`对象。|
-|[运算符 CDataSource *](#op_cdata_star)|返回指向包含的 `CDataSource` 对象的指针。|
+|[operator CDataSource*](#op_cdata_star)|返回指向包含的 `CDataSource` 对象的指针。|
 |[运算符 CSession （& a)](#op_csession_amp)|返回对所包含的引用`CSession`对象。|
 |[运算符 CSession *](#op_csession_star)|返回指向包含的 `CSession` 对象的指针。|
 
@@ -119,7 +119,7 @@ class CDataConnection
 > [!NOTE]
 >  如果要创建需要处理多个会话的数据库应用程序，您需要使用[OpenNewSession](../../data/oledb/cdataconnection-opennewsession.md)。
 
-## <a name="#cdataconnection"></a> Cdataconnection:: Cdataconnection
+## <a name="cdataconnection"></a> Cdataconnection:: Cdataconnection
 
 实例化并初始化`CDataConnection`对象。
 
@@ -141,7 +141,7 @@ CDataConnection(const CDataConnection &ds);
 
 第二个重写创建一个新`CDataConnection`设置等效于指定类型的数据连接对象的对象。
 
-## <a name="#copy"></a> Cdataconnection:: Copy
+## <a name="copy"></a> CDataConnection::Copy
 
 创建现有数据连接的副本。
 
@@ -156,7 +156,7 @@ CDataConnection& Copy(const CDataConnection & ds) throw();
 *ds*<br/>
 [in]对要复制的现有数据连接的引用。
 
-## <a name="#open"></a> Cdataconnection:: Open
+## <a name="open"></a> Cdataconnection:: Open
 
 打开到将初始化字符串的数据源的连接。
 
@@ -175,7 +175,7 @@ HRESULT Open(LPCOLESTR szInitString) throw();
 
 标准的 HRESULT。
 
-## <a name="#opennewsession"></a> Cdataconnection:: Opennewsession
+## <a name="opennewsession"></a> CDataConnection::OpenNewSession
 
 将打开一个新的会话使用当前连接对象的数据源。
 
@@ -187,7 +187,7 @@ HRESULT OpenNewSession(CSession & session) throw();
 
 #### <a name="parameters"></a>参数
 
-*会话*<br/>
+*session*<br/>
 [输入/输出]对新的会话对象的引用。
 
 ### <a name="remarks"></a>备注
@@ -224,7 +224,7 @@ operator bool() throw();
 
 ### <a name="remarks"></a>备注
 
-返回**bool** （c + + 数据类型） 值。 **true**意味着当前会话处于打开状态;**false**表示关闭当前会话。
+返回**bool** (C++数据类型) 值。 **true**意味着当前会话处于打开状态;**false**表示关闭当前会话。
 
 ## <a name="op_cdata_amp"></a> Cdataconnection:: Operator CDataSource&amp;
 
@@ -286,7 +286,7 @@ operator const CSession&();
 
 [!code-cpp[NVC_OLEDB_Consumer#6](../../data/oledb/codesnippet/cpp/cdataconnection-operator-csession-amp_2.cpp)]
 
-## <a name="op_csession_star"></a> Cdataconnection:: Operator CSession *
+## <a name="op_csession_star"></a> CDataConnection::operator CSession*
 
 返回指向包含的 `CSession` 对象的指针。
 
