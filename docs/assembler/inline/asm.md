@@ -9,12 +9,12 @@ helpviewer_keywords:
 - __asm keyword [C++], vs. asm blocks
 - __asm keyword [C++]
 ms.assetid: 77ff3bc9-a492-4b5e-85e1-fa4e414e79cd
-ms.openlocfilehash: 6b94bf73e66550d0245ef1f55c17d6676e3b4356
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 43c7ae02e465ce8de2871d78e7ba604221aa7426
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167551"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65445902"
 ---
 # <a name="asm"></a>__asm
 
@@ -41,7 +41,7 @@ ms.locfileid: "62167551"
 
 由于 `__asm` 关键字是语句分隔符，因此您可以将程序集指令放在同一行中。
 
-在 Visual C++ 2005 之前，指令
+Visual Studio 2005 中，该指令之前
 
 ```cpp
 __asm int 3

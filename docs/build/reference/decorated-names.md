@@ -6,18 +6,21 @@ helpviewer_keywords:
 - name decoration [C++]
 - names [C++], decorated
 ms.assetid: a4e9ae8e-b239-4454-b401-4102793cb344
-ms.openlocfilehash: 3fae232e6ca886195315002f4e65063d8a23ddc8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e3950f79c4c88d031e04d0d145e0a03c9ebc0a37
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293896"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221791"
 ---
 # <a name="decorated-names"></a>修饰名
 
 C 和 C++ 程序中的函数、数据和对象均在内部由其修饰名表示。 一个*修饰名*是由编译器创建的对象、 数据或函数定义在编译期间已编码的字符串。 它记录名称以及调用约定、类型、函数参数和其他信息。 此名称修饰，也称为*名称重整*、 帮助链接器查找正确的函数和对象链接可执行文件时。
 
-修饰的命名约定在各种版本的 Visual C++ 中有所不同，并且可能在不同的目标体系结构上也不同。 若要正确链接使用 Visual C++、C 和 C++ 创建的源文件，应使用相同的编译器工具集、标志和目标体系结构编译 DLL 和库。
+修饰的命名约定在各种版本的 Visual Studio 中，已更改，并在不同的目标体系结构上也可能不同。 若要正确链接使用 Visual Studio 中，C 创建的源文件和C++应使用相同的编译器工具集、 标志和目标体系结构编译 Dll 和库。 
+
+> [!NOTE]
+> 使用 Visual Studio 2015 构建的库可供使用 Visual Studio 2017 或 Visual Studio 2019 生成应用程序。
 
 ##  <a name="Using"></a> 使用修饰名
 
@@ -25,7 +28,7 @@ C 和 C++ 程序中的函数、数据和对象均在内部由其修饰名表示�
 
 如果你更改函数名、类、调用约定、返回类型或任何参数，则修饰名也会改变。 在这种情况下，你必须获取新的修饰名，并将其用于指定了修饰名的任何位置。
 
-在链接到用其他编程语言编写的或使用其他编译器的代码时，名称修饰也很重要。 编译器不同，则使用名称修饰约定不同。 在可执行文件链接到用另一种语言编写的代码时，必须特别留意将导出和导入的名称与调用约定相匹配。 程序集语言代码必须使用 Visual C++ 修饰名和调用约定来链接到使用 Visual C++ 编写的源代码。
+在链接到用其他编程语言编写的或使用其他编译器的代码时，名称修饰也很重要。 编译器不同，则使用名称修饰约定不同。 在可执行文件链接到用另一种语言编写的代码时，必须特别留意将导出和导入的名称与调用约定相匹配。 程序集语言代码必须使用 MSVC 修饰名和调用约定来链接到使用 MSVC 编写的源代码。
 
 ##  <a name="Format"></a> 设置格式的C++修饰名
 

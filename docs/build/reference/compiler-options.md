@@ -1,6 +1,6 @@
 ---
 title: MSVC 编译器选项
-ms.date: 01/29/2018
+ms.date: 05/06/2019
 helpviewer_keywords:
 - cl.exe compiler
 - x86 MSVC compiler
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - compiler options, C++
 - x64 MSVC compiler
 ms.assetid: ed3376c8-bef4-4c9a-80e9-3b5da232644c
-ms.openlocfilehash: 831aade72cd728ec42aee5ef1f320deb7bdf173d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: ab41a5de027f28b361937e58fb179fd72db54e4e
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294260"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221738"
 ---
 # <a name="compiler-options"></a>编译器选项
 
-cl.exe 是一个控制 Microsoft Visual C ++（MSVC）C 和 C ++ 编译器和链接器的工具。 cl.exe 只能在支持 Microsoft Visual Studio for Windows 的操作系统上运行。
+cl.exe 是一种工具，用于控制在 Microsoft C++ (MSVC) C 和C++编译器和链接器。 cl.exe 只能在支持 Microsoft Visual Studio for Windows 的操作系统上运行。
 
 > [!NOTE]
 > 只能从 Visual Studio 开发人员命令提示符启动此工具。 无法从系统命令提示符或文件资源管理器中启动它。 有关详细信息，请参阅[使用命令行中的 MSVC 工具集](../building-on-the-command-line.md)。

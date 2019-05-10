@@ -7,12 +7,12 @@ helpviewer_keywords:
 - nochkclr.obj
 - LNK2019
 - _check_commonlanguageruntime_version
-ms.openlocfilehash: af40a48e36d316842ec9a744ad95d6c3b3af3731
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ef0bfd565b8c76816cc1f8a20b1521da238cdfc
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386338"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447709"
 ---
 # <a name="linker-tools-error-lnk2019"></a>链接器工具错误 LNK2019
 
@@ -86,7 +86,7 @@ ms.locfileid: "62386338"
 
 ### <a name="you-mix-code-that-uses-native-wchart-with-code-that-doesnt"></a>混合使用本机 wchar\_代码不会使用 t
 
-在 Visual C++ 2005 中完成的 C++ 语言一致性工作让 `wchar_t` 成为默认本机类型。 你必须使用 [/Zc:wchar_t-](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) 编译器选项来生成兼容使用 Visual C++ 早期版本进行编译的库和对象文件的代码。 如果不是所有文件使用相同的已都编译 **/Zc:wchar\_t**设置，类型引用可能不会解析为兼容的类型。 验证所有库和对象文件中的 `wchar_t` 类型是否兼容，方法是更新使用的类型或在编译时使用一致的 **/Zc:wchar_t** 设置。
+C++完成所做的 Visual Studio 2005 中的语言一致性工作`wchar_t`默认本机类型。 必须使用[/zc: wchar_t-](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)编译器选项来生成兼容使用 Visual Studio 的早期版本编译的库和对象文件的代码。 如果不是所有文件使用相同的已都编译 **/Zc:wchar\_t**设置，类型引用可能不会解析为兼容的类型。 验证所有库和对象文件中的 `wchar_t` 类型是否兼容，方法是更新使用的类型或在编译时使用一致的 **/Zc:wchar_t** 设置。
 
 ## <a name="third-party-library-issues-and-vcpkg"></a>第三方库问题和 Vcpkg
 

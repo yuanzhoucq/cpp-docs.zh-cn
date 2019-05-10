@@ -1,13 +1,13 @@
 ---
 title: C++ 中的属性
-ms.date: 06/01/2018
+ms.date: 05/06/2019
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
-ms.openlocfilehash: 81de2816c208d5ddc879f04d70912c3dddcd7832
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: bc92e5f3e279edc6fbea7f99d52c469f9fdf04f8
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62284742"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222303"
 ---
 # <a name="attributes-in-c"></a>C++ 中的属性
 
@@ -41,7 +41,7 @@ void Foo(int);
 
 - `[[deprecated]]` **Visual Studio 2015 及更高版本：** 指定一个函数不应使用，但可能不存在在将来版本的库界面。 编译器可以使用此客户端代码尝试调用函数时生成一条信息性消息。 可以应用于类、 typedef 名称、 变量、 非静态数据成员、 函数、 命名空间、 枚举、 一个枚举器或模板专用化的声明。
 
-- `[[fallthrough]]`**2017年及更高版本的 visual Studio:** (适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md))`[[fallthrough]]`的上下文中可以使用属性[切换](switch-statement-cpp.md)语句作为对的提示编译器 （或任何人阅读代码） 是旨在 fallthrough 行为。 Visual C++ 编译器当前不会警告 fallthrough 行为，因此此特性没有任何效果编译器行为。
+- `[[fallthrough]]`**2017年及更高版本的 visual Studio:** (适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md))`[[fallthrough]]`的上下文中可以使用属性[切换](switch-statement-cpp.md)语句作为对的提示编译器 （或任何人阅读代码） 是旨在 fallthrough 行为。 MicrosoftC++编译器当前不会警告 fallthrough 行为，因此，此属性必须没有影响编译器行为。
 
 - `[[nodiscard]]`**15.3 及更高版本的 visual Studio 2017:** (适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)) 指定函数的返回值不应被丢弃。 引发警告 C4834，在此示例中所示：
 

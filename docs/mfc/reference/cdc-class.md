@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: fc5d41221ab0f9679e7d38a399464efc1a38dd52
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ff6cd6e0817f74c7688fc573d4b98f70704f96c
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173536"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222573"
 ---
 # <a name="cdc-class"></a>CDC 类
 
@@ -3177,7 +3177,7 @@ DWORD GetGlyphOutline(
 *nFormat*<br/>
 指定该函数将返回信息的格式。 它可以是下列值之一或 0:
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |GGO_BITMAP|返回标志符号位图。 当该函数返回时，通过指向的缓冲区*lpBuffer*包含双字边界启动其中的行的每像素 1 位位图。|
 |GGO_NATIVE|返回在光栅化程序的本机格式，使用设备单位中数据点的曲线。 中时指定此值，指定任何转换*lpmat2*将被忽略。|
@@ -3424,7 +3424,7 @@ CSize GetOutputTabbedTextExtent(
 指向要测量的字符串。 你还可以传递[CString](../../atl-mfc-shared/reference/cstringt-class.md)为此参数的对象。
 
 *nCount*<br/>
-指定字符串中的字符数。 如果*nCount*为-1，长度进行计算。
+指定[字符串的长度](/windows/desktop/gdi/specifying-length-of-text-output-string)指向*lpszString*。
 
 *nTabPositions*<br/>
 指定指向数组中的制表位位置数*lpnTabStopPositions*。
@@ -3467,7 +3467,7 @@ CSize GetOutputTextExtent(const CString& str) const;
 指向字符的字符串。 你还可以传递[CString](../../atl-mfc-shared/reference/cstringt-class.md)为此参数的对象。
 
 *nCount*<br/>
-指定字符串中的字符数。 如果*nCount*为-1，长度进行计算。
+指定[字符串的长度](/windows/desktop/gdi/specifying-length-of-text-output-string)指向*lpszString*。
 
 *str*<br/>
 一个`CString`对象，其中包含要测量的指定的字符。
@@ -3669,7 +3669,7 @@ CSize GetTabbedTextExtent(
 指向字符字符串。 你还可以传递[CString](../../atl-mfc-shared/reference/cstringt-class.md)为此参数的对象。
 
 *nCount*<br/>
-指定字符串中的字符数。 如果*nCount*为-1，长度进行计算。
+指定[字符串的长度](/windows/desktop/gdi/specifying-length-of-text-output-string)指向*lpszString*。
 
 *nTabPositions*<br/>
 指定指向数组中的制表位位置数*lpnTabStopPositions*。
@@ -4087,7 +4087,7 @@ virtual BOOL GrayString(
 指定要传递到输出函数的数据的较远指针。 如果*lpfnOutput*为 NULL， *lpData*必须是指向要输出的字符串的长指针。
 
 *nCount*<br/>
-指定要输出的字符数。 如果此参数为 0，`GrayString`计算字符串的长度 (假定*lpData*是指向字符串的指针)。 如果*nCount*是-1 和指向函数*lpfnOutput*返回 0 时，图像时显示，但未变暗。
+指定要输出的字符数。 如果此参数为 0，`GrayString`计算字符串的长度 (假定*lpData*是指向字符串的指针)。 如果*nCount*为 1，通过所指向的函数*lpfnOutput*返回 0 时，图像时显示，但未变暗。
 
 *x*<br/>
 指定将此字符串的矩形的起始位置的逻辑 x 坐标。
@@ -6022,7 +6022,7 @@ DWORD SetLayout(DWORD dwLayout);
 *dwLayout*<br/>
 设备上下文布局和位图控制标志。 它可以是以下值的组合。
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |LAYOUT_BITMAPORIENTATIONPRESERVED|禁用对调用任何反射[cdc:: bitblt](#bitblt)并[CDC::StretchBlt](#stretchblt)。|
 |LAYOUT_RTL|设置默认水平布局为从右向左。|
@@ -6322,7 +6322,7 @@ int SetStretchBltMode(int nStretchMode);
 *nStretchMode*<br/>
 指定的拉伸模式。 它可以是以下值之一：
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
 |BLACKONWHITE|执行布尔 AND 操作使用为已清除的和现有像素的颜色值。 如果位图是单色位图，此模式会保留代价白色像素是黑色像素。|
 |COLORONCOLOR|删除的像素为单位。 此模式下不尝试保留其信息的情况下删除所有消除的像素行数。|
@@ -6891,7 +6891,7 @@ CSize TabbedTextOut(
 指向要绘制的字符串。 可以将任一指针传递到字符数组或[CString](../../atl-mfc-shared/reference/cstringt-class.md)为此参数的对象。
 
 *nCount*<br/>
-指定字符串中的字符数。 如果*nCount*为-1，长度进行计算。
+指定[字符串的长度](/windows/desktop/gdi/specifying-length-of-text-output-string)指向*lpszString*。
 
 *nTabPositions*<br/>
 指定的制表位位置数组中的值的数目。

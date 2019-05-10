@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: 5f5bc102-44c3-4688-bbe1-080594dcee5c
-ms.openlocfilehash: ea977020286d720ed3a6b1b13bf8ff8f5c85e5b2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 9609bc484310fbc9999182add384eb4e438378bf
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315958"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446241"
 ---
 # <a name="zcauto-deduce-variable-type"></a>/Zc:auto（推导变量类型）
 
@@ -26,7 +26,7 @@ ms.locfileid: "62315958"
 
 ## <a name="remarks"></a>备注
 
-C++ 标准为 `auto` 关键字定义了初始和修订的含义。 视觉对象之前C++2010 中，关键字声明自动存储类; 中的变量也就是说，变量的具有本地生存期。 从视觉对象C++2010 中，关键字中推导声明的初始化表达式中的某个变量的类型。 使用 **/zc: auto [-]** 编译器选项，以告知编译器要使用的初始或修订的含义`auto`关键字。 **/Zc: auto**选项默认为打开。 [触发-](permissive-standards-conformance.md)选项不会更改的默认设置 **/zc: auto**。
+C++ 标准为 `auto` 关键字定义了初始和修订的含义。 在 Visual Studio 2010 之前的关键字声明自动存储类; 中的变量也就是说，变量的具有本地生存期。 从 Visual Studio 2010 开始，关键字将推导声明的初始化表达式中的某个变量的类型。 使用 **/zc: auto [-]** 编译器选项，以告知编译器要使用的初始或修订的含义`auto`关键字。 **/Zc: auto**选项默认为打开。 [触发-](permissive-standards-conformance.md)选项不会更改的默认设置 **/zc: auto**。
 
 如果编译器将发出适当的诊断消息的使用`auto`关键字，这不符合当前 **/zc: auto**编译器选项。 有关详细信息，请参阅[auto 关键字](../../cpp/auto-keyword.md)。 有关使用视觉对象的一致性问题的详细信息C++，请参阅[非标准行为](../../cpp/nonstandard-behavior.md)。
 

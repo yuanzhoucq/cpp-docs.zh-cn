@@ -5,12 +5,12 @@ helpviewer_keywords:
 - structs [C++]
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
-ms.openlocfilehash: 090259a4ad6b46eccf66dca6c99b4eb532b7ae5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 5fe7d6876b094c84fe3d4cdbba417106edcca528
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387471"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447291"
 ---
 # <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>如何：定义和使用类和结构 (C++/CLI)
 
@@ -127,7 +127,7 @@ int main() {
 
 `public` 指示类型是否包含任何源文件可见`#using`指令包含的类型的程序集。  `private` 指示类型不可见的包含源文件`#using`指令包含的类型的程序集。 但是，专用类型都是相同的程序集内可见的。 默认情况下，一个类的可见性是`private`。
 
-默认情况下，在视觉对象之前C++2005 中，本机类型必须在程序集外部的公共可访问性。 启用[编译器警告 （等级 1） C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md)以帮助您查看私有本机类型使用不正确。 使用[make_public](../preprocessor/make-public.md)杂注提供公共可访问性不能修改源代码文件中的本机类型。
+默认情况下，在 Visual Studio 2005 之前的本机类型必须在程序集外部的公共可访问性。 启用[编译器警告 （等级 1） C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md)以帮助您查看私有本机类型使用不正确。 使用[make_public](../preprocessor/make-public.md)杂注提供公共可访问性不能修改源代码文件中的本机类型。
 
 有关详细信息，请参阅 [#using 指令](../preprocessor/hash-using-directive-cpp.md)。
 
@@ -588,7 +588,7 @@ int main() {
 Base::Test
 ```
 
-下一个示例显示的视觉对象C++编译器调用的函数派生程度最高的类中 — 即使需要转换，以匹配一个或多个参数，并不是函数调用的更好地匹配项的基类中调用函数。
+下一步的示例演示在 MicrosoftC++编译器调用的函数派生程度最高的类中 — 即使需要转换，以匹配一个或多个参数，并不是函数调用的更好地匹配项的基类中调用函数。
 
 ```cpp
 // compile with: /clr
@@ -736,7 +736,7 @@ CLR 垃圾回收器删除未使用的托管的对象，并在不再需要时释�
 
 视觉对象C++终结器不与相同<xref:System.Object.Finalize%2A>方法。 (CLR 文档使用终结器和<xref:System.Object.Finalize%2A>方法同义词)。 <xref:System.Object.Finalize%2A>垃圾回收器，它调用类的继承链中每个终结器调用方法。 与不同的视觉对象C++析构函数，派生类终结器调用不会导致编译器将调用所有基类中的终结器。
 
-因为视觉对象C++编译器支持的资源的确定性释放，请勿尝试实现<xref:System.IDisposable.Dispose%2A>或<xref:System.Object.Finalize%2A>方法。 但是，如果您熟悉这些方法，下面是一个视觉对象C++终结器和析构函数调用终结器将映射到<xref:System.IDisposable.Dispose%2A>模式：
+因为 MicrosoftC++编译器支持的资源的确定性释放，请勿尝试实现<xref:System.IDisposable.Dispose%2A>或<xref:System.Object.Finalize%2A>方法。 但是，如果您熟悉这些方法，下面是一个视觉对象C++终结器和析构函数调用终结器将映射到<xref:System.IDisposable.Dispose%2A>模式：
 
 ```cpp
 // Visual C++ code
@@ -757,7 +757,7 @@ void Dispose(bool disposing) {
 
 托管的类型还可以使用您希望具有确定性，发布，而不将留给垃圾回收器不再需要对象后，系统不确定地释放在某个时间点的托管的资源。 资源的确定性释放可以显著提高性能。
 
-视觉对象C++编译器使您能够以明确地清理对象的析构函数的定义。 使用析构函数释放要明确地释放的所有资源。  如果存在一个终结器，则请从析构函数，以避免代码重复调用它。
+MicrosoftC++编译器使您能够以明确地清理对象的析构函数的定义。 使用析构函数释放要明确地释放的所有资源。  如果存在一个终结器，则请从析构函数，以避免代码重复调用它。
 
 ```cpp
 // compile with: /clr /c

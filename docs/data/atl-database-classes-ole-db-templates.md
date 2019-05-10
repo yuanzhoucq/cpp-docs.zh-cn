@@ -1,21 +1,21 @@
 ---
 title: ATL 数据库类（OLE DB 模板）
-ms.date: 11/04/2016
+ms.date: 05/02/2019
 helpviewer_keywords:
 - OLE DB templates [C++], ATL database classes
 - database classes [C++], OLE DB
 - database classes [C++], ATL
 ms.assetid: 219766aa-e18a-405f-9e36-d7a0fdb31b2b
-ms.openlocfilehash: 2ecde060f10a7c2a056869525f58d0bb4da67963
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: dc016a5e1e1d9652f6a69f73b5760f42dec5e889
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393813"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222568"
 ---
 # <a name="atl-database-classes-ole-db-templates"></a>ATL 数据库类（OLE DB 模板）
 
-Microsoft 提供了几个 OLE DB，一组提供对各种信息源和格式中的数据的统一访问的 COM 接口的实现。  OLE DB 正式不推荐使用;本文档适用于开发人员要保留旧代码。 新的应用程序应使用 ODBC 连接到 SQL 数据源。
+Microsoft 提供了几个 OLE DB，一组提供对各种信息源和格式中的数据的统一访问的 COM 接口的实现。
 
 OLE DB 模板是C++使 OLE DB 数据库技术更易于使用，从而实现许多常用 OLE DB 接口的类在 ATL 中的模板。
 

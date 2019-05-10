@@ -1,21 +1,21 @@
 ---
 title: 如何：将 C 清单嵌入 /C++应用程序
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - manifests [C++]
 - embedding manifests
 - makefiles, updating to embed manifest
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
-ms.openlocfilehash: 332d6d75080be3fdde6b8238ab79b8e5b1d1121e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: ee60620f2815bb20e2d0f3ecec768d99533437a9
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274377"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220700"
 ---
 # <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>如何：将 C 清单嵌入 /C++应用程序
 
-建议 C /C++应用程序 （或库） 将其清单嵌入到最终二进制文件，因为这可保证正确的运行时行为在大多数情况下。 默认情况下，Visual Studio 尝试生成源代码文件; 一个项目时嵌入清单请参阅[Visual Studio 中的清单生成](manifest-generation-in-visual-studio.md)有关详细信息。 但是，如果使用 nmake 生成应用程序，则需要对现有生成文件进行一些更改。 本部分演示如何更改现有生成文件将自动嵌入最终二进制文件中的清单。
+我们建议嵌入应用程序或库，最终二进制文件的清单，因为这可保证在大多数情况下正确运行时行为。 默认情况下，Visual Studio 尝试生成项目时嵌入清单。 有关详细信息，请参阅[Visual Studio 中的清单生成](manifest-generation-in-visual-studio.md)。 但是，如果使用 nmake 生成你的应用程序，您必须对生成文件进行一些更改。 本部分演示如何更改生成文件，以便自动将嵌入最终二进制文件中的清单。
 
 ## <a name="two-approaches"></a>两种方法
 
@@ -23,15 +23,19 @@ ms.locfileid: "62274377"
 
 - 如果不执行增量生成可以直接将嵌入的清单作为后期生成步骤中使用命令行如下所示：
 
-   **mt.exe -manifest MyApp.exe.manifest -outputresource:MyApp.exe;1**
+   ```cmd
+   mt.exe -manifest MyApp.exe.manifest -outputresource:MyApp.exe;1
+   ```
 
    或
 
-   **mt.exe -manifest MyLibrary.dll.manifest -outputresource:MyLibrary.dll;2**
+   ```cmd
+   mt.exe -manifest MyLibrary.dll.manifest -outputresource:MyLibrary.dll;2
+   ```
 
-   (EXE、 dll 2 1)。
+   用于 1 EXE 和 2 的 DLL。
 
-- 如果正在执行增量生成，直接编辑该资源，如下所示将禁用增量生成，并导致完全重新生成;因此，应采取不同的方法：
+- 如果你正在执行增量生成，使用以下步骤：
 
    - 链接生成 MyApp.exe.manifest 文件的二进制文件。
 
@@ -63,7 +67,7 @@ clean :
     del MyApp.obj MyApp.exe
 ```
 
-如果运行此脚本保持不变通过视觉对象C++，它已成功创建 MyApp.exe。 它还会创建由操作系统加载依赖程序集在运行时使用的外部清单文件 MyApp.exe.manifest。
+如果运行此脚本使用 Visual Studio 不变，它已成功创建 MyApp.exe。 它还会创建由操作系统加载依赖程序集在运行时使用的外部清单文件 MyApp.exe.manifest。
 
 MyLibrary.dll nmake 脚本看起来非常类似：
 
@@ -226,7 +230,7 @@ _VC_MANIFEST_CLEAN=
 ####################################################
 ```
 
-现在创建 makefile.targ.inc 并将以下内容复制到其中：
+现在，创建**makefile.targ.inc**并将以下内容复制到其中：
 
 ```
 # makefile.targ.inc - include this at the very bottom of the existing makefile

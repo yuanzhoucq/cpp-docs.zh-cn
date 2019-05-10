@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Concurrency Runtime, migrating from OpenMP
 - OpenMP, migrating to the Concurrency Runtime
 ms.assetid: 9bab7bb1-e45d-44b2-8509-3b226be2c93b
-ms.openlocfilehash: 16b0f175867e18e127997749098cce998674b3d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba2b413d40da601029f5c4e1d861576212c10494
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412665"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448421"
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>从 OpenMP 迁移至并发运行时
 
 并发运行时支持各种编程模型。 这些模型可能会与其他库的模型重叠或对其进行补充。 在此文档部分比较[OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)到并发运行时并提供了有关如何迁移现有 OpenMP 代码以使用并发运行时的示例。
 
-OpenMP 编程模型由开放标准定义，具有与 Fortran 和 C/C++ 编程语言定义完善的绑定。 OpenMP 2.0 版和 2.5，视觉对象支持C++编译器、 是否非常适用于并行算法的迭代。也就是说，它们的数据数组上执行并行迭代。 OpenMP 3.0 支持非迭代任务和迭代的任务。
+OpenMP 编程模型由开放标准定义，具有与 Fortran 和 C/C++ 编程语言定义完善的绑定。 OpenMP 2.0 版和 2.5，由 Microsoft 支持C++编译器、 是否非常适用于并行算法的迭代。也就是说，它们的数据数组上执行并行迭代。 OpenMP 3.0 支持非迭代任务和迭代的任务。
 
 当预设了并行度，并匹配了系统上的可用资源时，OpenMP 的效率最高。 OpenMP 模型是特别适合于高性能计算，其中将大量运算问题分布在一台计算机的处理资源。 在此方案中，硬件环境通常固定的开发人员可以合理期望执行该算法时具有对所有计算资源的独占访问权限。
 

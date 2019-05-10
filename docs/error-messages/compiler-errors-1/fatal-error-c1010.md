@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C1010
 ms.assetid: dfd035f1-a7a2-40bc-bc92-dc4d7f456767
-ms.openlocfilehash: 6974f0d82653203973be50b5ea709bd9487a215f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 204c7ef94d82513338f6635ec9eb22f26fc090a7
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363968"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448017"
 ---
 # <a name="fatal-error-c1010"></a>错误 C1010
 
 查找预编译头时意外的文件尾。 是否忘记添加 #include 名称到您的源？
 
-使用指定的包含文件[/Yu](../../build/reference/yu-use-precompiled-header-file.md)源文件中未列出。  在大多数的视觉对象默认情况下启用此选项C++项目类型和"stdafx.h"是默认值包括此选项指定的文件。
+使用指定的包含文件[/Yu](../../build/reference/yu-use-precompiled-header-file.md)源文件中未列出。  在大多数 Visual Studio 中默认情况下启用此选项C++项目类型和"stdafx.h"是默认值包括此选项指定的文件。
 
 在 Visual Studio 环境中，使用以下方法之一来解决此错误：
 

@@ -1,14 +1,14 @@
 ---
 title: 按字母顺序列出的编译器选项
-ms.date: 04/08/2019
+ms.date: 05/06/2019
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: d8ab1cbac7ad8eb44f16c7829ccac20a6d3e73ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: ba4357f4c14e5cca9363ad2029374ede93529a2a
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272329"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221773"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>按字母顺序列出的编译器选项
 
@@ -34,7 +34,7 @@ ms.locfileid: "62272329"
 |[/E](e-preprocess-to-stdout.md)|将预处理器输出复制到标准输出。|
 |[/EH](eh-exception-handling-model.md)|指定异常处理模型。|
 |[/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|将预处理器输出复制到标准输出。|
-|[/errorReport](errorreport-report-internal-compiler-errors.md)|允许您直接向 Visual C++ 团队提供内部编译器错误(ICE)信息。|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)|允许您直接向 Microsoft 提供内部编译器错误 (ICE) 信息C++团队。|
 |[/execution-charset](execution-charset-set-execution-character-set.md)|设置执行字符集。|
 |[/F](f-set-stack-size.md)|设置堆栈大小。|
 |[/favor](favor-optimize-for-architecture-specifics.md)|生成代码适用于特定 x64 体系结构或 AMD64 和扩展内存 64 技术 (EM64T) 体系结构中的微体系结构的具体情况。|
@@ -153,7 +153,7 @@ ms.locfileid: "62272329"
 |[/Zc](zc-conformance.md)|指定下的标准行为[/Ze](za-ze-disable-language-extensions.md)。[/Za、 /Ze （禁用语言扩展）](za-ze-disable-language-extensions.md)|
 |[/Ze](za-ze-disable-language-extensions.md)|已否决。 启用语言扩展。|
 |[/Zf](zf.md)|改进了 PDB 中并行生成的生成时间。|
-|[/Zg](zg-generate-function-prototypes.md)|已在 Visual C++ 2015 中删除。 生成函数原型。|
+|[/Zg](zg-generate-function-prototypes.md)|在 Visual Studio 2015 中删除。 生成函数原型。|
 |[/ZI](z7-zi-zi-debug-information-format.md)|将调试信息包含在与“编辑并继续”兼容的程序数据库中。|
 |[/Zi](z7-zi-zi-debug-information-format.md)|生成完整的调试信息。|
 |[/Zl](zl-omit-default-library-name.md)|从 .obj 文件中移除默认库名（仅限 x86）。|

@@ -1,16 +1,16 @@
 ---
 title: 演练：从用户界面线程中删除工作
-ms.date: 11/19/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - user-interface threads, removing work from [Concurrency Runtime]
 - removing work from user-interface threads [Concurrency Runtime]
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
-ms.openlocfilehash: 1838ad0d6adb146adacb8b3a395f44f76e2a8d3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 3bd41b1815737730067929c4728b32181cb2fc03
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407795"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857005"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>演练：从用户界面线程中删除工作
 
@@ -54,9 +54,9 @@ ms.locfileid: "62407795"
 
 ### <a name="to-create-a-visual-c-mfc-application"></a>若要创建视觉对象C++的 MFC 应用程序
 
-1. 在 **“文件”** 菜单上，单击 **“新建”**，然后单击 **“项目”**。
+1. 使用**MFC 应用程序向导**使用所有默认设置创建 MFC 应用程序。 请参阅[演练：使用新的 MFC Shell 控件](../../mfc/walkthrough-using-the-new-mfc-shell-controls.md)有关如何打开你的 Visual Studio 版本的向导的说明。
 
-1. 在**新的项目**对话框中**已安装的模板**窗格中，选择**Visual C++** ，然后在**模板**窗格中，选择**MFC 应用程序**。 例如，键入项目的名称`Mandelbrot`，然后单击**确定**以显示**MFC 应用程序向导**。
+1. 例如，键入项目的名称`Mandelbrot`，然后单击**确定**以显示**MFC 应用程序向导**。
 
 1. 在中**应用程序类型**窗格中，选择**单个文档**。 絋粄**文档/视图体系结构支持**清除复选框。
 

@@ -6,12 +6,12 @@ f1_keywords:
 - -std
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-ms.openlocfilehash: 32c63240f578b6170ae351cdf0cd1628167464b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: de3389a52781f541143268e3ede79eae375ff1d3
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317882"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446224"
 ---
 # <a name="std-specify-language-standard-version"></a>/std （指定语言标准版本）
 
@@ -48,10 +48,10 @@ ms.locfileid: "62317882"
 
 **/Std**期间有效选项C++可以通过使用检测到编译[ \_MSVC\_LANG](../../preprocessor/predefined-macros.md)预处理器宏。 有关详细信息，请参阅[预处理器宏](../../preprocessor/predefined-macros.md)。
 
-**/Std: c + + 14**并 **/std: c + + 最新**选项为视觉对象中的开始提供C++2015年更新 3。 **/Std: c + + 17**选项是视觉对象中的开始提供C++2017年版本 15.3。 如上所述，某些 c++17 标准情况下启用行为 **/std: c + + 14**选项，但所有其他 C + + 17 功能情况下会启用 **/std: c + + 17**。
+**/Std: c + + 14**并 **/std: c + + 最新**选项是在 Visual Studio 2015 Update 3 开始提供。 **/Std: c + + 17**选项是在 Visual Studio 2017 版本 15.3 开始提供。 如上所述，某些 c++17 标准情况下启用行为 **/std: c + + 14**选项，但所有其他 C + + 17 功能情况下会启用 **/std: c + + 17**。
 
 > [!NOTE]
-> 根据 MSVC 编译器版本或更新级别，某些 C + + 14 或 C + + 17 功能可能未完全实现或完全符合的指定时 **/std: c + + 14**或 **/std: c + + 17**选项。 例如，视觉对象C++2017 RTM 编译器不完全支持 C + + 符合的 14 `constexpr`，表达式 SFINAE 或 2 阶段名称查找。 有关的概述C++视觉对象中的语言一致性C++的发行版本中，请参阅[VisualC++语言一致性](../../overview/visual-cpp-language-conformance.md)。
+> 根据 MSVC 编译器版本或更新级别，某些 C + + 14 或 C + + 17 功能可能未完全实现或完全符合的指定时 **/std: c + + 14**或 **/std: c + + 17**选项。 例如，Visual Studio 2017 RTM 编译器不完全支持 C + + 14 符合`constexpr`，表达式 SFINAE 或 2 阶段名称查找。 有关的概述C++视觉对象中的语言一致性C++的发行版本中，请参阅[VisualC++语言一致性](../../overview/visual-cpp-language-conformance.md)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 

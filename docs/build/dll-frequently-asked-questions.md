@@ -1,17 +1,17 @@
 ---
 title: MFC DLL 常见问题
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - troubleshooting [C++], DLLs
 - DLLs [C++], frequently asked questions
 - FAQs [C++], DLLs
 ms.assetid: 09dd068e-fc33-414e-82f7-289c70680256
-ms.openlocfilehash: 33a0c9dd1abbfb9375ce1aef53fd152a521ac97d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 9108aaf3fcface847b0391455a2aecd4d45658c4
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274113"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220933"
 ---
 # <a name="dll-frequently-asked-questions"></a>DLL 常见问题
 
@@ -41,11 +41,7 @@ ms.locfileid: "62274113"
 
 ## <a name="mfc_multithreaded_2"></a> 多线程应用程序可以访问在不同线程中非 MFC DLL？
 
-多线程应用程序可以访问来自不同线程动态链接到 MFC 的规则 MFC Dll 和 MFC 扩展 Dll。 截止到视觉对象C++版本 4.2，应用程序可以访问从应用程序中创建的多个线程，静态链接到 MFC 的规则 MFC Dll。
-
-之前的版本 4.2，只有一个外部线程可以将附加到静态链接到 MFC 的规则 MFC DLL。
-
-请注意，在视觉对象中不再使用的术语 USRDLLC++文档。 静态链接到 MFC 的规则 MFC DLL 具有 usrdll 相同的特性。
+多线程应用程序可以访问来自不同线程动态链接到 MFC 的规则 MFC Dll 和 MFC 扩展 Dll。 应用程序可以访问从应用程序中创建的多个线程，静态链接到 MFC 的规则 MFC Dll。
 
 ## <a name="mfc_prohibited_classes"></a> 是否有任何 MFC 类或函数不能用于非 MFC DLL？
 
@@ -69,4 +65,4 @@ ms.locfileid: "62274113"
 
 ## <a name="see-also"></a>请参阅
 
-[Visual C++ 中的 DLL](dlls-in-visual-cpp.md)
+[创建 C /C++ Visual Studio 中的 Dll](dlls-in-visual-cpp.md)

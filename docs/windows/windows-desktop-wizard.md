@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Desktop Wizard
 - Win32 Project Wizard
 ms.assetid: 5d7b3a5e-8461-479a-969a-67b7883725b9
-ms.openlocfilehash: 43a47366475b227ccfc5918b07760cc582326e82
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b86536cb6177390ab89d235ecb8e093006dd8cff
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387720"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448563"
 ---
 # <a name="windows-desktop-wizard"></a>Windows 桌面向导
 
@@ -83,8 +83,8 @@ Windows 桌面向导取代 Win32 应用程序向导中，在 Visual Studio 2017 
 > [!NOTE]
 > 不能添加 ATL 类，只能向支持 MFC 的 Windows 桌面应用程序类型添加 MFC 类（请参阅上表）。
 
-可在 **解决方案资源管理器**中查看你通过向导为项目创建的文件。 向导将创建为你的项目文件的详细信息，请参阅项目生成的文件， `ReadMe.txt`。 有关文件类型的更多信息，请参见 [为 Visual C++ 项目创建的文件类型](../build/reference/file-types-created-for-visual-cpp-projects.md)。
+可在 **解决方案资源管理器**中查看你通过向导为项目创建的文件。 向导将创建为你的项目文件的详细信息，请参阅项目生成的文件， `ReadMe.txt`。 有关详细信息的文件类型，[视觉对象创建的文件类型C++项目](../build/reference/file-types-created-for-visual-cpp-projects.md)。
 
 ## <a name="see-also"></a>请参阅
 
-[Visual C++ 项目类型](../build/reference/visual-cpp-project-types.md)
+[C++在 Visual Studio 中的项目类型](../build/reference/visual-cpp-project-types.md)

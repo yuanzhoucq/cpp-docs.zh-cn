@@ -1,17 +1,17 @@
 ---
 title: auto 关键字
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 ms.assetid: 744a41c0-2510-4140-a1be-96257e722908
-ms.openlocfilehash: 3477bd5033fac5b69733db5d6095c1317aac42ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a695c33ab55601bb8d81b00f963646f6a48f09d5
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62284718"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222249"
 ---
 # <a name="auto-keyword"></a>auto 关键字
 
-**自动**关键字是声明说明符。 但是，C++ 标准为此关键字定义了初始和修订的含义。 视觉对象之前C++2010 中，**自动**关键字声明中的变量*自动*存储类; 即，具有本地生存期的变量。 从视觉对象C++2010 中，**自动**关键字声明其类型从其声明中的初始化表达式推导出的变量。 [/Zc: auto&#91;-&#93; ](../build/reference/zc-auto-deduce-variable-type.md)编译器选项控制的含义**自动**关键字。
+**自动**关键字是声明说明符。 但是，C++ 标准为此关键字定义了初始和修订的含义。 Visual Studio 2010 之前,**自动**关键字声明中的变量*自动*存储类; 即，具有本地生存期的变量。 从 Visual Studio 2010，开始**自动**关键字声明其类型从其声明中的初始化表达式推导出的变量。 [/Zc: auto&#91;-&#93; ](../build/reference/zc-auto-deduce-variable-type.md)编译器选项控制的含义**自动**关键字。
 
 ## <a name="syntax"></a>语法
 

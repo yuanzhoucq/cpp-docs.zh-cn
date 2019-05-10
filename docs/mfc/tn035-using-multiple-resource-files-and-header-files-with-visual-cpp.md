@@ -7,12 +7,12 @@ helpviewer_keywords:
 - resource files, multiple
 - TN035
 ms.assetid: 1f08ce5e-a912-44cc-ac56-7dd93ad73fb6
-ms.openlocfilehash: 0493dd45caf5eb78da435987a4590442a908a5a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ce38c2f3f4effa993dfa32221d82bece65096dd
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62305510"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448546"
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035:视觉对象使用多个资源文件和头文件C++
 
@@ -204,7 +204,7 @@ RESOURCE.H     AFXRES.H
     AFXPRINT.RC
 ```
 
-使用编译时指令时，可以将 Visual C++ 可编辑和不可编辑的资源组织到多个 .RC 文件中，其中，“主”MYAPP.RC 不执行任何操作，但会通过 #include 指令包括其他 .RC 文件。 如果使用 Visual C++ 项目 .MAK 文件，则应包括项目中的“主”.RC 文件，以便所有通过 #include 指令包括的资源随应用程序一起编译。
+使用编译时指令时，可以将 Visual C++ 可编辑和不可编辑的资源组织到多个 .RC 文件中，其中，“主”MYAPP.RC 不执行任何操作，但会通过 #include 指令包括其他 .RC 文件。 如果使用的 Visual StudioC++项目。MAK 文件，则你应包括"master"。RC 文件在项目中因此所有 # include 指令包括的资源将编译与应用程序。
 
 **强制实施视觉对象的C++文件**
 

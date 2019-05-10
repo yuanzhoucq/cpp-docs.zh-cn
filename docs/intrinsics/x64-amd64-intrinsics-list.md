@@ -5,16 +5,16 @@ helpviewer_keywords:
 - cl-exe compiler, intrinsics
 - intrinsics, x64
 - intrinsics, amd64
-ms.openlocfilehash: 141ffa24a87d7794815c10f407ee23718071dacf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b1a0b664d0b67925cd6a2ed01e128741e641b48
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389653"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448578"
 ---
 # <a name="x64-amd64-intrinsics-list"></a>x64 (amd64) 内部函数列表
 
-本文档列出了 Visual C++ 编译器在面向 x64（也称为 amd64）时支持的内部函数。
+本文档列出了内部函数的 MicrosoftC++编译器在面向 x64 （也称为 amd64） 时支持。
 
 有关各个内部函数的信息，请参见适用于你面向的处理器的资源：
 

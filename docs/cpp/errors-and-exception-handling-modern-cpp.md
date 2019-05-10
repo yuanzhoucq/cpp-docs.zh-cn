@@ -1,14 +1,14 @@
 ---
 title: 错误和异常处理（现代 C++）
-ms.date: 09/17/2018
+ms.date: 05/07/2019
 ms.topic: conceptual
 ms.assetid: a6c111d0-24f9-4bbb-997d-3db4569761b7
-ms.openlocfilehash: c3def77d8b7a22be05259784e3b80562c8728c15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: bb27a92347b327e22afc4f6bb2fb248c12290cae
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398909"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222143"
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>错误和异常处理（现代 C++）
 
@@ -90,13 +90,13 @@ int main()
 
 ## <a name="c-exceptions-versus-windows-seh-exceptions"></a>与 Windows SEH 异常的 C++ 异常
 
-C 和 C++ 程序可使用结构化的异常处理 (SEH) 机制在 Windows 操作系统中。 Seh 的概念类似于C++异常，但该 SEH 使用 **__try**， **__except**，并 **__finally**构造而不是**尝试**并**捕获**。 在 Visual C++，是为 SEH 实现 C++ 异常。 但是，当你编写 C++ 代码，使用 C++ 异常语法。
+C 和 C++ 程序可使用结构化的异常处理 (SEH) 机制在 Windows 操作系统中。 Seh 的概念类似于C++异常，但该 SEH 使用 **__try**， **__except**，并 **__finally**构造而不是**尝试**并**捕获**。 在 microsoftC++编译器 (MSVC)C++为 SEH 实现异常。 但是，当你编写 C++ 代码，使用 C++ 异常语法。
 
 有关 SEH 的详细信息，请参阅[结构化异常处理 （C/C++）](../cpp/structured-exception-handling-c-cpp.md)。
 
 ## <a name="exception-specifications-and-noexcept"></a>异常规范和 noexcept
 
-异常规范的引入了 C++ 中作为一种方式指定函数可能引发的异常。 但是，异常规范事实证明，在实践中，有问题，以及 C++ 11 草稿标准中已弃用。 我们建议你不要使用异常规范除`throw()`，指示的函数使没有异常进行转义。 如果必须使用的类型的异常规范`throw(`*类型*`)`，请注意 Visual C++ 偏离以某些方式的标准。 有关详细信息，请参阅[异常规范 (throw)](../cpp/exception-specifications-throw-cpp.md)。 `noexcept`说明符在 C++ 11 中引入的首选替代作为`throw()`。
+异常规范的引入了 C++ 中作为一种方式指定函数可能引发的异常。 但是，异常规范事实证明，在实践中，有问题，以及 C++ 11 草稿标准中已弃用。 我们建议你不要使用异常规范除`throw()`，指示的函数使没有异常进行转义。 如果必须使用类型的异常规范`throw(`*类型*`)`，注意 MSVC 偏离以某些方式的标准。 有关详细信息，请参阅[异常规范 (throw)](../cpp/exception-specifications-throw-cpp.md)。 `noexcept`说明符在 C++ 11 中引入的首选替代作为`throw()`。
 
 ## <a name="see-also"></a>请参阅
 

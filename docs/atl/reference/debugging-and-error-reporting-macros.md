@@ -1,6 +1,6 @@
 ---
 title: 调试和错误报告宏
-ms.date: 03/27/2019
+ms.date: 05/06/2019
 f1_keywords:
 - atldef/ATL::_ATL_DEBUG_INTERFACES
 - atldef/ATL::_ATL_DEBUG_QI
@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 0d5010f913521848675987b145a1277c7b00decf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a243351ff337cb517f8a8231c18c495c8d2ca302
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276622"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221079"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>调试和错误报告宏
 
@@ -176,7 +176,7 @@ ATLTRACE(
 ### <a name="parameters"></a>参数
 
 *exp*<br/>
-[in]字符串和要发送到视觉对象的变量C++输出窗口或捕获这些消息的任何应用程序。
+[in]字符串和要发送到输出窗口或捕获这些消息的任何应用程序的变量。
 
 *category*<br/>
 [in]事件或在其上报告的方法的类型。 请参阅备注类别的列表。
@@ -207,7 +207,7 @@ ATLTRACE2(
 ### <a name="parameters"></a>参数
 
 *exp*<br/>
-[in]要发送到视觉对象的字符串C++输出窗口或捕获这些消息的任何应用程序。
+[in]要将发送到输出窗口或捕获这些消息的任何应用程序的字符串。
 
 *category*<br/>
 [in]事件或在其上报告的方法的类型。 请参阅备注类别的列表。

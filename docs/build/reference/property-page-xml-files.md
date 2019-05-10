@@ -1,15 +1,15 @@
 ---
 title: 属性页 XML 规则文件
-ms.date: 04/27/2017
+ms.date: 05/06/2019
 helpviewer_keywords:
 - property page XML files
 ms.assetid: dd9d9734-4387-4098-8ba6-85b93507731d
-ms.openlocfilehash: 17b89f00b2e51c960ed7d3219427b56d92851b81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 610dc7341a35845b35d8ed80f52b421d1c2fb5d1
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319459"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217722"
 ---
 # <a name="property-page-xml-rule-files"></a>属性页 XML 规则文件
 
@@ -19,7 +19,7 @@ IDE 中的项目属性页是由 VCTargets 文件夹中的 XML 文件配置的。
 
 首先，打开项目的属性页（右键单击“解决方案资源管理器”中的项目节点，并选择“属性”）：
 
-![Visual C++ 项目属性](../media/cpp-property-page-2017.png)
+![Visual StudioC++项目属性](../media/cpp-property-page-2017.png)
 
 “配置属性”下的每个节点都称为一个“规则”。 规则有时表示编译器之类的单个工具，但该术语通常是指具有属性的事物，可执行和生成某些输出。 每个规则都使用 VCTargets 文件夹中的 xml 文件填充。 例如，上面显示的 C/C++ 规则由“cl.xml”填充。
 

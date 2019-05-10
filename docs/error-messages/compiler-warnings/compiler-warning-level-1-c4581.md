@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4581
 ms.assetid: 598bcd87-257d-4eb3-94e4-15bb31aadc99
-ms.openlocfilehash: 9e370bcff0c30fb508ebc22aaff1f6a56dd420a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9868d33538a1f56906455f2b1772b53eb3a7734d
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397269"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447099"
 ---
 # <a name="compiler-warning-level-1-c4581"></a>编译器警告（等级 1）C4581
 
 已否决的行为:"string1"替换为 string2 进程属性
 
-视觉对象执行的编译器一致性工作可以导致此错误C++2005年： 参数检查视觉对象C++属性。
+为 Visual Studio 2005 执行的编译器一致性工作可以生成此错误： 参数检查视觉对象C++属性。
 
 在上一版本中，属性值已被接受，指示已用引号引起来。 如果值是一个枚举，它必须不括在引号中。
 

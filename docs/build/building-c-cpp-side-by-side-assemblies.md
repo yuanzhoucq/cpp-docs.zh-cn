@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - side-by-side applications [C++]
 ms.assetid: 7fa20b16-3737-4f76-a0b5-1dacea19a1e8
-ms.openlocfilehash: 037fde58366ea4548ce3c7ff56c38cfc1a58aa17
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: d5d7652b6424177191275f8f80d7b1f6cf02b261
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195139"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221126"
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>生成 C/C++ 并行程序集
 
 一个[-并行程序集](/windows/desktop/SbsCs/about-side-by-side-assemblies-)是一系列资源-一组 Dll、 windows 类、 COM 服务器、 类型库或接口 — 可用于应用程序在运行时使用。 将 Dll 重新打包程序集的主要优点是，在同一时间的应用程序可以使用多个版本的程序集，并且可能对发生的更新版本时的当前安装的服务程序集。
 
-视觉对象C++应用程序可以使用该应用程序的不同部分中的一个或多个 Dll。 在运行时，Dll 加载到主进程并执行所需的代码。 应用程序依赖于操作系统，可以找到所需的 Dll，请了解其他的依赖 Dll 已加载，然后连同请求 DLL 加载它们。 在 Windows 操作系统版本早于 Windows XP、 Windows Server 2003 和 Windows Vista 操作系统加载程序搜索应用程序的本地文件夹或指定的系统路径上的另一个文件夹中的依赖 Dll。 在 Windows XP、 Windows Server 2003 和 Windows Vista 上，操作系统加载程序还可以搜索使用的依赖 Dll[清单](/windows/desktop/sbscs/manifests)文件并搜索包含这些 Dll 的并行程序集。
+一个C++应用程序可以使用该应用程序的不同部分中的一个或多个 Dll。 在运行时，Dll 加载到主进程并执行所需的代码。 应用程序依赖于操作系统，可以找到所需的 Dll，请了解其他的依赖 Dll 已加载，然后连同请求 DLL 加载它们。 在 Windows 操作系统版本早于 Windows XP、 Windows Server 2003 和 Windows Vista 操作系统加载程序搜索应用程序的本地文件夹或指定的系统路径上的另一个文件夹中的依赖 Dll。 在 Windows XP、 Windows Server 2003 和 Windows Vista 上，操作系统加载程序还可以搜索使用的依赖 Dll[清单](/windows/desktop/sbscs/manifests)文件并搜索包含这些 Dll 的并行程序集。
 
 默认情况下，如果 DLL 使用 Visual Studio 中，生成它具有[应用程序清单](/windows/desktop/SbsCs/application-manifests)id 等于 2 作为 RT_MANIFEST 资源嵌入。 就像一个可执行文件，此清单上的其他程序集描述此 DLL 的依赖项。 这假定 DLL 不是通过并行程序集的一部分，并依赖于此 DLL 的应用程序不会使用应用程序清单来加载它，而是依靠操作系统加载程序的系统路径上找到此 DLL。
 

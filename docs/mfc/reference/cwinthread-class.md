@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pActiveWnd
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
-ms.openlocfilehash: 0e02f123580696519e59d828ec590456cbd2a81c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f17561941d785e5eb7b5fd8c52ab452aa6369e7
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323276"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220418"
 ---
 # <a name="cwinthread-class"></a>CWinThread 类
 
@@ -311,7 +311,7 @@ BOOL m_bAutoDelete;
 
 `m_bAutoDelete`数据成员是类型 BOOL 的公共变量。
 
-`m_bAutoDelete` 的值不影响关闭基础线程句柄的方式。 在销毁 `CWinThread` 对象时，始终关闭线程句柄。
+值`m_bAutoDelete`不会影响如何关闭基础线程句柄，但会影响关闭句柄的时间。 在销毁 `CWinThread` 对象时，始终关闭线程句柄。
 
 ##  <a name="m_hthread"></a>  CWinThread::m_hThread
 
@@ -323,7 +323,9 @@ HANDLE m_hThread;
 
 ### <a name="remarks"></a>备注
 
-`m_hThread`数据成员是公共类型的变量的句柄。 如果当前基础线程存在，才有效。
+`m_hThread`数据成员是公共类型的变量的句柄。 如果当前存在基础内核线程对象，并且尚未尚未关闭句柄，才有效。
+
+CWinThread 析构函数在调用 CloseHandle `m_hThread`。 如果[m_bAutoDelete](#m_bautodelete)是 TRUE 时的线程终止、 CWinThread 对象被销毁，这使任何指向 CWinThread 对象和其成员变量。 可能需要`m_hThread`成员来查看线程退出值，或者等待信号。 若要保留 CWinThread 对象并将其`m_hThread`线程执行期间和之后终止，成员设置`m_bAutoDelete`为 FALSE 之前允许线程执行，以继续。 否则为线程可能会终止、 销毁 CWinThread 对象，并关闭句柄，再尝试使用它。 如果使用此方法，您负责删除 CWinThread 对象。
 
 ##  <a name="m_nthreadid"></a>  CWinThread::m_nThreadID
 
@@ -335,7 +337,8 @@ DWORD m_nThreadID;
 
 ### <a name="remarks"></a>备注
 
-`m_nThreadID`数据成员是类型为 DWORD 的公共变量。 如果当前基础线程存在，才有效。
+`m_nThreadID`数据成员是类型为 DWORD 的公共变量。 如果当前存在于基础内核线程对象，才有效。
+另请参阅备注， [m_hThread](#m_hthread)生存期。
 
 ### <a name="example"></a>示例
 

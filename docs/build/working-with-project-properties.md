@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-ms.openlocfilehash: ab5456bfc8a1b8305813f4ee4a4399091de15aee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a8c15de43a3843b8ff12cb4ad3d951d76b90c039
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314045"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446192"
 ---
 # <a name="set-compiler-and-build-properties"></a>设置编译器和生成属性
 
@@ -23,7 +23,7 @@ ms.locfileid: "62314045"
 
 创建项目时，系统分配各种属性的值。 根据项目类型和在应用向导中所选的选项类型，默认值会有所不同。 例如，ATL 项目具有与 MIDL 文件相关的属性，但这些属性在基本控制台应用程序中都不存在。 默认属性在属性页的“常规”窗格中显示：
 
-![Visual C&#43;&#43;项目默认值](media/visual-c---project-defaults.png "Visual C++ 项目默认值")
+![Visual C&#43; &#43;项目默认值](media/visual-c---project-defaults.png "VisualC++项目默认值")
 
 ## <a name="applying-properties-to-build-configurations-and-target-platforms"></a>将属性的配置和目标平台生成应用
 
@@ -61,7 +61,7 @@ C++编译器和链接器选项位于**C /C++** 并**链接器**下的左窗格�
 
 MSBuild 支持使用称为"宏"某些字符串值包括目录和路径的编译时常量。 它们在属性页中，可以在此引用，并使用修改[属性编辑器](#property_editor)。 
 
-下图显示了 Visual C++ 项目的属性页。 在左窗格中，选中“VC++ 目录”规则，右窗格中即会列出与该规则关联的属性。 `$(...)`值称为*宏*。 宏是编译时常量，是指由 Visual Studio 或 MSBuild 系统定义的值，或是由用户定义的值。 通过而不硬编码值，例如目录路径中使用宏，可以更轻松地共享计算机之间和 Visual Studio 版本之间的属性设置，可以更好地确保项目设置中正确地参与[属性继承](project-property-inheritance.md)。 
+下图显示的属性页的 Visual StudioC++项目。 在左窗格中，选中“VC++ 目录”规则，右窗格中即会列出与该规则关联的属性。 `$(...)`值称为*宏*。 宏是编译时常量，是指由 Visual Studio 或 MSBuild 系统定义的值，或是由用户定义的值。 通过而不硬编码值，例如目录路径中使用宏，可以更轻松地共享计算机之间和 Visual Studio 版本之间的属性设置，可以更好地确保项目设置中正确地参与[属性继承](project-property-inheritance.md)。 
 
 ![项目属性页](media/project_property_pages_vc.png "Project_Property_Pages_VC")
 

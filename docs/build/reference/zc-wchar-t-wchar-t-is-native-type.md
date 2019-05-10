@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: b0de5a84-da72-4e5a-9a4e-541099f939e0
-ms.openlocfilehash: b2563ba0ae2a07bc9f9d81128745ed4b9651fb6c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 962bb2aaa2f05ad0dc4c9c86cd5cc9694cfad98b
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315633"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446158"
 ---
 # <a name="zcwchart-wchart-is-native-type"></a>/Zc:wchar_t（wchar_t 是本机类型）
 
@@ -31,7 +31,7 @@ ms.locfileid: "62315633"
 
 如果 **/zc: wchar_t**为 on 时，`wchar_t`是编译为代码中的内置整型类型的关键字C++。 如果 **/zc: wchar_t-** （带有一个减号） 指定，或在代码中作为 C 编译，`wchar_t`不是内置类型。 相反，`wchar_t`指`typedef`为`unsigned short`规范标头 stddef.h 中。 （Microsoft 实现将其定义中包含通过 stddef.h 的另一个标头和其他标准标头。）
 
-我们不建议 **/zc: wchar_t-** 由于C++标准要求`wchar_t`是内置类型。 使用 `typedef` 版本可能导致可移植性问题。 如果从视觉对象的早期版本升级C++并遇到编译器错误[C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md)因为代码尝试将隐式转换`wchar_t`到`unsigned short`，我们建议更改代码以修复此错误，而不是设置 **/zc: wchar_t-**。
+我们不建议 **/zc: wchar_t-** 由于C++标准要求`wchar_t`是内置类型。 使用 `typedef` 版本可能导致可移植性问题。 如果从 Visual Studio 的早期版本升级并遇到编译器错误[C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md)因为代码尝试将隐式转换`wchar_t`到`unsigned short`，我们建议更改代码以修复此错误，而不是设置 **/zc: wchar_t-**。
 
 **/Zc: wchar_t**选项在默认情况下位于C++编译，并且将忽略在 C 编译中。 [触发-](permissive-standards-conformance.md)选项不会影响 **/zc: wchar_t**。
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Managed Extensions for C++, compiling
 - common language runtime, /clr compiler option
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
-ms.openlocfilehash: 1946fdabe66934e64cf95d3c3f12e16bc98ba664
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: ea4a878afea4453796277486da88b85e7f74883c
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272541"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446520"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr（公共语言运行时编译）
 
@@ -53,7 +53,7 @@ ms.locfileid: "62272541"
 
    清单中不具有程序集元数据的托管程序称为 *“模块”*。 **noAssembly** 选项只能用于生成模块。 如果使用 [/c](c-compile-without-linking.md) 和 **/clr:noAssembly**进行编译，请在创建模块的链接器阶段指定 [/NOASSEMBLY](noassembly-create-a-msil-module.md) 选项。
 
-   在低于 Visual C++ 2005 的版本中， **/clr:noAssembly** 需要 **/LD**。 现在，指定 **/LD** 时即暗含 **/LD**。
+   在 Visual Studio 2005 之前, **/clr:noAssembly**必需 **/LD**。 现在，指定 **/LD** 时即暗含 **/LD**。
 
 - **initialAppDomain**
 

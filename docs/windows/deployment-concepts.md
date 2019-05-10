@@ -8,12 +8,12 @@ helpviewer_keywords:
 - deploying applications [C++], about deploying applications
 - libraries [C++], application deployment issues
 ms.assetid: ebd7f246-ab54-40e8-87fa-dac02c0047b3
-ms.openlocfilehash: ec472e506e78a57b65186bf6a5b801419fb141fb
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: ac3565b4ec465ec60672d2238fbe81b71613a6c1
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346407"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449043"
 ---
 # <a name="deployment-concepts"></a>部署概念
 
@@ -21,7 +21,7 @@ ms.locfileid: "64346407"
 
 ## <a name="windows-installer-deployment-in-c"></a>C++ 中的 Windows Installer 部署
 
-Visual C++ 项目通常使用传统的 Windows Installer 安装程序进行部署。 要准备 Windows Installer 部署，请将应用程序打包为 setup.exe 文件，并将其与安装程序包 (.msi) 一起分发。 用户然后便可运行 setup.exe 来安装应用程序。
+Visual StudioC++项目通常使用传统的 Windows 安装程序安装进行部署。 要准备 Windows Installer 部署，请将应用程序打包为 setup.exe 文件，并将其与安装程序包 (.msi) 一起分发。 用户然后便可运行 setup.exe 来安装应用程序。
 
 通过将安装项目添加到解决方案中来打包应用程序；生成时，它将创建分发给用户的安装和安装程序包文件。 有关详细信息，请参阅[选择部署方法](choosing-a-deployment-method.md)。
 

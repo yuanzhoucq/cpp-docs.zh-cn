@@ -1,6 +1,6 @@
 ---
 title: CComSafeArray 类
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - CComSafeArray
 - ATLSAFE/ATL::CComSafeArray
@@ -28,12 +28,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeArray class
 ms.assetid: ee349aef-33db-4c85-bd08-5d86a3c9d53a
-ms.openlocfilehash: 0262764c950b01acdb610873a995a9a6fd912997
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: dec6bbad0aa4a8409b9f3d24476dcc94b8eaefe3
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259438"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221154"
 ---
 # <a name="ccomsafearray-class"></a>CComSafeArray 类
 
@@ -318,7 +318,7 @@ HRESULT Create(ULONG ulCount = 0, LONG lLBound = 0);
 
 ### <a name="remarks"></a>备注
 
-一个`CComSafeArray`对象可以创建从现有`SAFEARRAYBOUND`结构和数字的维度，或通过数组和更低绑定中指定的元素数。 如果数组为视觉对象从访问C++，下限应为 0。 其他语言可能会允许其他值下限 （例如，-10 到 10 的范围的元素与 Visual 基本支持数组）。
+一个`CComSafeArray`对象可以创建从现有`SAFEARRAYBOUND`结构和数字的维度，或通过数组和更低绑定中指定的元素数。 如果数组为从访问C++，下限应为 0。 其他语言可能会允许其他值下限 （例如，-10 到 10 的范围的元素与 Visual 基本支持数组）。
 
 ##  <a name="destroy"></a>  CComSafeArray::Destroy
 

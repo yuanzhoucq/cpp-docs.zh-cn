@@ -11,12 +11,12 @@ helpviewer_keywords:
 - executable files [C++], linking to DLLs
 - loading DLLs [C++]
 ms.assetid: 7592e276-dd6e-4a74-90c8-e1ee35598ea3
-ms.openlocfilehash: fc7a676059af17e7a42189c7c15ca157a081e08a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: b0a3a0acd9fe0270416745696079e382c35ec32d
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188749"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220655"
 ---
 # <a name="link-an-executable-to-a-dll"></a>链接到 DLL 的可执行文件
 
@@ -145,4 +145,4 @@ HRESULT LoadAndCallSomeFunction(DWORD dwParam1, UINT * puParam2)
 
 ## <a name="see-also"></a>请参阅
 
-[Visual C++ 中的 DLL](dlls-in-visual-cpp.md)
+[创建 C /C++ Visual Studio 中的 Dll](dlls-in-visual-cpp.md)

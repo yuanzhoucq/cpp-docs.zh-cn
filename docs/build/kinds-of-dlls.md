@@ -1,17 +1,17 @@
 ---
 title: DLL 类型
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - MFC DLLs [C++], types
 - DLLs [C++], types
 - DLLs [C++], MFC
 ms.assetid: f6a30db9-6138-4b2c-90cc-a17855e499a6
-ms.openlocfilehash: f4aa8b1be7cd9ad32b10f12c5d1dfd3ae86adc1d
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
-ms.translationtype: MT
+ms.openlocfilehash: 9e66fa1c24ea00961d99eef02c15526eff4eb533
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341780"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221488"
 ---
 # <a name="kinds-of-dlls"></a>DLL 类型
 
@@ -19,9 +19,9 @@ ms.locfileid: "64341780"
 
 ##  <a name="_core_the_different_kinds_of_dlls_available_with_visual_c.2b2b"></a> 不同类型的 Dll 可用
 
-使用视觉对象C++，您可以构建在 C 中的 Win32 Dll 或C++，不使用 Microsoft 基础类 (MFC) 库。 可以使用 Win32 应用程序向导创建非 MFC DLL 项目。
+使用 Visual Studio，您可以构建在 C 中的 Win32 Dll 或C++，不使用 Microsoft 基础类 (MFC) 库。 可以使用 Win32 应用程序向导创建非 MFC DLL 项目。
 
-MFC 库本身不可用，在任一静态链接库或若干 Dll，使用 MFC DLL 向导中。 如果 DLL 使用的 MFC，视觉对象C++支持三种不同的 DLL 开发方案：
+MFC 库本身不可用，在任一静态链接库或若干 Dll，使用 MFC DLL 向导中。 如果 DLL 使用的 MFC，Visual Studio 支持三种不同的 DLL 开发方案：
 
 - 生成一个常规 MFC DLL 的静态链接 MFC
 
@@ -43,7 +43,7 @@ MFC 库本身不可用，在任一静态链接库或若干 Dll，使用 MFC DLL 
 
 ##  <a name="_core_which_kind_of_dll_to_use"></a> 决定哪种类型使用的 DLL
 
-如果您的 DLL 不使用 MFC，使用视觉对象C++若要生成非 MFC Win32 DLL。 （静态或动态） 链接到 MFC 的 DLL 将占用大量磁盘空间和内存。 除非 DLL 确实使用 MFC，不应链接到 MFC。
+如果您的 DLL 不使用 MFC，使用 Visual Studio 生成非 MFC Win32 DLL。 （静态或动态） 链接到 MFC 的 DLL 将占用大量磁盘空间和内存。 除非 DLL 确实使用 MFC，不应链接到 MFC。
 
 如果您的 DLL 将使用 MFC，并且将由 MFC 或非 MFC 应用程序，必须生成静态链接到 MFC 的规则 MFC DLL 或动态链接到 MFC 的规则 MFC DLL。 在大多数情况下，你可能想要使用动态链接到 MFC，因为该 DLL 的文件大小要小得多，且会在内存中使用共享的版本的 MFC 节省大量的规则 MFC DLL。 如果以静态方式链接到 MFC，您的 DLL 的文件大小将变大并可能占用额外内存，因为它会加载其自己的 MFC 库代码的私有副本。
 
@@ -54,8 +54,6 @@ MFC 库本身不可用，在任一静态链接库或若干 Dll，使用 MFC DLL 
 如果 DLL 仅将由 MFC 可执行文件，则必须选择生成规则 MFC DLL 或 MFC 扩展 DLL。 如果您的 DLL 实现从现有的 MFC 类派生的可重用类，或者需要将应用程序和 DLL 之间传递 MFC 派生的对象，则必须生成 MFC 扩展 DLL。
 
 如果 DLL 动态链接到 MFC，可能与您的 DLL 重新分发 MFC Dll。 此体系结构是对共享类库以节省磁盘空间和最大程度减少内存使用情况的多个可执行文件之间特别有用。
-
-之前的版本 4.0 中，视觉对象C++仅支持两种类型的使用 MFC 的 Dll:Usrdll 和 Afxdll。 静态链接到 MFC 的规则 MFC Dll 具有 usrdll 相同的特性。 MFC 扩展 Dll 具有 Afxdll 相同的特性。
 
 ### <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？
 
@@ -69,4 +67,4 @@ MFC 库本身不可用，在任一静态链接库或若干 Dll，使用 MFC DLL 
 
 ## <a name="see-also"></a>请参阅
 
-[Visual C++ 中的 DLL](dlls-in-visual-cpp.md)
+[创建 C /C++ Visual Studio 中的 Dll](dlls-in-visual-cpp.md)

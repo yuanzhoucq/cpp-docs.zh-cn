@@ -6,12 +6,12 @@ helpviewer_keywords:
 - application deployment [C++], ClickOnce
 - ClickOnce deployment [C++], C++ applications
 ms.assetid: 9988c546-0936-452c-932f-9c76daa42157
-ms.openlocfilehash: 83ee85dbf952fd78a1cd1b8d0c932b9dcd02682d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f78aca6621462ccbd86cfe09ae71b715b5e56f09
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407076"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448457"
 ---
 # <a name="clickonce-deployment-for-visual-c-applications"></a>Visual C++ 应用程序的 ClickOnce 部署
 
@@ -19,10 +19,10 @@ Visual Studio 提供了两种不同的方法来部署 Windows 应用程序：Cli
 
 ## <a name="clickonce-deployment-in-c"></a>C++ 中的 ClickOnce 部署
 
-Visual C++ 部署环境不直接支持使用 ClickOnce 部署 Visual C++ 项目，但提供了使用它的工具。
+视觉对象C++开发环境不直接支持 Visual Studio 的部署C++使用 ClickOnce，但工具的项目都可使用它。
 
 > [!NOTE]
->  Visual Studio 支持在 Visual C# 和 Visual Basic 开发环境中使用 ClickOnce。 如果 Visual C++ 项目是 Visual C# 项目的依赖项，则可通过 Visual C# 开发环境使用 ClickOnce 部署发布应用程序（及其依赖项）。
+>  Visual Studio 支持在 Visual C# 和 Visual Basic 开发环境中使用 ClickOnce。 如果您的 Visual StudioC++项目是一个视觉对象的依赖项C#项目中，您可以发布应用程序 （包括其依赖项） 使用视觉对象中的 ClickOnce 部署C#开发环境。
 
 要使用 ClickOnce 部署 Visual C++ 应用程序，首先必须使用 [Mage.exe（清单生成和编辑工具）](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)或其图形用户界面版本生成 [ClickOnce 应用程序清单](/visualstudio/deployment/clickonce-application-manifest)和 [ClickOnce 部署清单](/visualstudio/deployment/clickonce-deployment-manifest)。相关信息请参阅 [MageUI.exe（图形客户端中的清单生成和编辑工具）](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)。
 

@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - value_type typedef
 ms.assetid: e89d5a71-b48c-47fa-aa78-682243e6e97f
-ms.openlocfilehash: 195cd6c72f392dc9308971bb4adb4b0a79ff9370
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bba94e290e691c807d9db7f40f2fa6f0d3c7965b
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210783"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221354"
 ---
 # <a name="container-classvaluetype"></a>Container Class::value_type
 
 > [!NOTE]
-> 本主题位于 Visual C++ 文档内，作为在 C++ 标准库内使用的容器的非功能性示例。 有关详细信息，请参阅 [C++ 标准库容器](../standard-library/stl-containers.md)。
+> 本主题是在 microsoftC++作为容器中使用的非功能性示例文档C++标准库。 有关详细信息，请参阅 [C++ 标准库容器](../standard-library/stl-containers.md)。
 
 可用作模板参数 *Ty* 的同义词。
 

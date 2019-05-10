@@ -11,16 +11,16 @@ helpviewer_keywords:
 - -ZW
 - Windows Runtime compiler option
 ms.assetid: 0fe362b0-9526-498b-96e0-00d7a965a248
-ms.openlocfilehash: 73295866004fd506fd5f06ff25c048d14b821016
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 0808f66c4d4c4e99b3038ea18a1f71f4ebaca89a
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315308"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446174"
 ---
 # <a name="zw-windows-runtime-compilation"></a>/ZW（Windows 运行时编译）
 
-编译源代码以支持 VisualC++组件扩展C++创建通用 Windows 平台 (UWP) 应用程序的 /CX。
+编译源代码以支持 MicrosoftC++组件扩展C++创建通用 Windows 平台 (UWP) 应用程序的 /CX。
 
 当你使用 **/ZW**进行编译，始终指定 **/EHsc**也。
 

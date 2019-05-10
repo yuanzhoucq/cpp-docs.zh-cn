@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - ActiveX controls [MFC], creating
 ms.assetid: 8bd5a93c-d04d-414e-bb28-163fdc1c0dd5
-ms.openlocfilehash: b2dc48e2568e180820f8bca008c66878af4b575e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 27b82fb7a688c8cc7a3df734a7e60a17f7ffa184
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372291"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446766"
 ---
 # <a name="creating-an-mfc-activex-control"></a>创建 MFC ActiveX 控件
 
