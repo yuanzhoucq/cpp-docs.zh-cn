@@ -1,19 +1,19 @@
 ---
-title: 如何：配置 VisualC++项目面向 64 位 x64 平台
+title: 如何：配置 Visual StudioC++项目迁移至目标 64 位 x64 平台
 ms.date: 11/04/2016
 helpviewer_keywords:
 - platforms [C++], 64-bit
 - 64-bit programming [C++], configuring projects
 - project configurations [C++]
 ms.assetid: 2b9ae001-df36-4750-83b2-982145d632ad
-ms.openlocfilehash: 21c812efd101c64e250a545d2a40df6adc31c414
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a063c2f333a755ab86a4f91c9d14d0c65a6d1414
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274468"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446393"
 ---
-# <a name="how-to-configure-visual-c-projects-to-target-64-bit-x64-platforms"></a>如何：配置 VisualC++项目面向 64 位 x64 平台
+# <a name="how-to-configure-visual-studio-c-projects-to-target-64-bit-x64-platforms"></a>如何：配置 Visual StudioC++项目迁移至目标 64 位 x64 平台
 
 可以使用 Visual Studio IDE 中的项目配置设置C++应用程序以面向 64 位 x64 平台。 还可以将 Win32 项目设置迁移到 64 位项目配置。
 

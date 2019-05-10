@@ -12,12 +12,12 @@ helpviewer_keywords:
 - mixed assemblies [C++]
 - native code [C++], .NET interoperatibility
 ms.assetid: 4299dfce-392f-4933-8bf0-5da2f0d1c282
-ms.openlocfilehash: 78e95177282804369bac2065582a06b8acbc975b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 043390a2ebefcadac300b7fb0b05ae7f5ed411f3
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384850"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447272"
 ---
 # <a name="mixed-native-and-managed-assemblies"></a>混合 （本机和托管） 程序集
 
@@ -27,7 +27,7 @@ ms.locfileid: "62384850"
 
 VisualC++使用仅支持混合的托管程序集的新一代 **/clr**编译器选项。 **/Clr: pure**并 **/clr: safe**编译器选项在 Visual Studio 2015 中弃用，在 Visual Studio 2017 中不受支持。 如果您需要纯或可验证的托管程序集，我们建议使用 C# 创建它们。
 
-早期版本的视觉对象C++编译器工具集支持的三种不同类型的托管程序集生成： 混合、 纯代码和可验证。 后一种两个中讨论[纯代码和可验证代码 (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)。
+早期版本的 MicrosoftC++编译器工具集支持的三种不同类型的托管程序集生成： 混合、 纯代码和可验证。 后一种两个中讨论[纯代码和可验证代码 (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)。
 
 ## <a name="in-this-section"></a>本节内容
 

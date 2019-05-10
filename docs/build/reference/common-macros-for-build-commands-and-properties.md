@@ -93,12 +93,12 @@ helpviewer_keywords:
 - $(PlatformShortName) macro
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
-ms.openlocfilehash: 46fdd5e356ded96388a154ff459ef4cc3c02267f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: abb42db6a44f1c48d120eff1f117e06c970b6b44
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294433"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221780"
 ---
 # <a name="common-macros-for-msbuild-commands-and-properties"></a>有关 MSBuild 命令和属性的常用宏
 
@@ -121,7 +121,7 @@ ms.locfileid: "62294433"
 |**$(FrameworkDir)**|在其中安装了 .NET Framework 的目录。|
 |**$(FrameworkSDKDir)**|在其中安装了 .NET Framework 的目录。 .NET Framework 可能已作为 Visual Studio 的一部分安装或单独安装。|
 |**$(FrameworkVersion)**|Visual Studio 使用的.NET framework 版本。 结合 **$(FrameworkDir)**，Visual Studio 使用的.NET Framework 版本的完整路径。|
-|**$(FxCopDir)**|fxcop.cmd 文件的路径。 fxcop.cmd 文件不随所有 Visual C++ 版本安装。|
+|**$(FxCopDir)**|fxcop.cmd 文件的路径。 Fxcop.cmd 文件不随所有 Visual Studio 版本安装。|
 |**$(IntDir)**|为中间文件指定的目录路径。 如果这是一个相对路径，则中间文件将转到追加到项目目录的此路径。 此路径应具有尾随斜杠。 这将解析为 **Intermediate Directory** 属性的值。 请勿使用 **$(OutDir)** 定义此属性。|
 |**$(OutDir)**|输出文件目录的路径。 如果这是一个相对路径，则输出文件将转到追加到项目目录中的此路径。 此路径应具有尾随斜杠。 这将解析为 **Output Directory** 属性的值。 请勿使用 **$(IntDir)** 定义此属性。|
 |**$(Platform)**|当前项目平台的名称（例如“Win32”）。|
@@ -143,7 +143,7 @@ ms.locfileid: "62294433"
 |**$(TargetFileName)**|生成的主输出文件的文件名称（定义为基名称 + 文件扩展名）。|
 |**$(TargetName)**|生成的主输出文件的基名称。|
 |**$(TargetPath)**|生成的主输出文件的绝对路径名称（定义为驱动器 + 路径 + 基名称 + 文件扩展名）。|
-|**$(VCInstallDir)**|包含 Visual Studio 安装的 C++ 内容的目录。 此属性包含目标 Visual C++ 工具集的版本，它可能与主机 Visual Studio 不同。 例如，当使用 `$(PlatformToolset) = v140` 进行生成时，$(VCInstallDir) 包含 Visual C++ 2015 安装的路径。|
+|**$(VCInstallDir)**|包含 Visual Studio 安装的 C++ 内容的目录。 此属性包含的目标 Microsoft 版本C++(MSVC) 工具集，它可能不同，与主机 Visual Studio。 例如，使用生成时`$(PlatformToolset) = v140`， **$ （vcinstalldir)** 包含 Visual Studio 2015 安装的路径。|
 |**$(VSInstallDir)**|在其中安装了 Visual Studio 的目录。 此属性包含目标 Visual Studio 工具集的版本，它可能与主机 Visual Studio 不同。 例如，当使用 `$(PlatformToolset) = v110`进行生成时， **$(VSInstallDir)** 包含 Visual Studio 2012 安装的路径。|
 |**$(WebDeployPath)**|从 Web 部署根到项目输出位置的相对路径。 返回与 <xref:Microsoft.VisualStudio.VCProjectEngine.VCWebDeploymentTool.RelativePath%2A>相同的值。|
 |**$(WebDeployRoot)**|\<localhost> 的位置的绝对路径。 例如，c:\inetpub\wwwroot。|

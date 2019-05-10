@@ -1,14 +1,14 @@
 ---
 title: 类型转换和类型安全（现代 C++）
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 ms.topic: conceptual
 ms.assetid: 629b361a-2ce1-4700-8b5d-ab4f57b245d5
-ms.openlocfilehash: 79285e4870b73ff01ed3b230a0162f87c0400aa8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e06ea3f9c3ea427f205764c35988ea3316c3794a
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404684"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221861"
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>类型转换和类型安全（现代 C++）
 
@@ -84,7 +84,7 @@ cout << u3 << endl; // prints 4294967295
 
 ### <a name="pointer-conversions"></a>指针转换
 
-在很多表达式中，C 样式数组将隐式转换为指向该数组中的第一个元素的指针，并且可能在没有提示的情况下进行常量转换。 尽管此方法很方便，但它也可能容易出错。 例如，以下设计得不合理的代码示例似乎没有意义，但它会在 Visual C++ 中编译并生成结果“p”。 首先，“Help”字符串常量将转换为指向数组的第一个元素的 `char*`；该指针随后递增 3 个元素，以便现在能够指向最后一个元素“p”。
+在很多表达式中，C 样式数组将隐式转换为指向该数组中的第一个元素的指针，并且可能在没有提示的情况下进行常量转换。 尽管此方法很方便，但它也可能容易出错。 例如，下面的设计不良的代码示例似乎没有意义，并且尚未将编译和生成结果 p。 首先，“Help”字符串常量将转换为指向数组的第一个元素的 `char*`；该指针随后递增 3 个元素，以便现在能够指向最后一个元素“p”。
 
 ```cpp
 char* s = "Help" + 3;

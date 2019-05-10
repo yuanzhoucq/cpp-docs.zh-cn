@@ -1931,24 +1931,24 @@ helpviewer_keywords:
 - cl.exe compiler, intrinsics
 - intrinsics, ARM
 ms.assetid: d3d7dadd-7bd5-4508-8bff-371a66913e20
-ms.openlocfilehash: 47fd2f449568494bafde993e035d3ec37c44f6fe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8590f6ac056bf561960f9c02ff4a4cc6a4d3bfa0
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264291"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447719"
 ---
 # <a name="arm-intrinsics"></a>ARM 内部函数
 
-Visual C++ 编译器使下面的内部函数在 ARM 架构上可用。 有关 ARM 的详细信息，请参阅[ARM 体系结构参考手册](http://go.microsoft.com/fwlink/p/?LinkId=522049)并[ARM 汇编程序工具指南](http://go.microsoft.com/fwlink/p/?LinkId=246102)ARM 信息中心网站上。
+MicrosoftC++编译器 (MSVC) 提供的以下内部函数在 ARM 体系结构上。 有关 ARM 的详细信息，请参阅[ARM 体系结构参考手册](http://go.microsoft.com/fwlink/p/?LinkId=522049)并[ARM 汇编程序工具指南](http://go.microsoft.com/fwlink/p/?LinkId=246102)ARM 信息中心网站上。
 
 ##  <a name="top"></a> NEON
 
 ARM 的霓虹灯矢量指令设置扩展提供了单指令多数据 (SIMD) 功能，这些功能类似于 x86 和 x64 架构处理器通用的 MMX 和 SSE 矢量指令中的功能。
 
-根据头文件 `arm_neon.h`，霓虹灯内部函数受到支持。 视觉对象C++编译器对霓虹灯内部函数支持类似于 ARM 编译器，详见附录 G [ARM 编译器工具链、 版本 4.1 编译器参考](http://go.microsoft.com/fwlink/p/?LinkId=251083)ARM 信息中心网站上。
+根据头文件 `arm_neon.h`，霓虹灯内部函数受到支持。 霓虹灯内部函数的 MSVC 支持类似于 ARM 编译器，详见附录 G [ARM 编译器工具链、 版本 4.1 编译器参考](http://go.microsoft.com/fwlink/p/?LinkId=251083)ARM 信息中心网站上。
 
-Visual C++ 编译器和 ARM 编译器之间的主要差别在于 Visual C++ 编译器添加了 `_ex` 的 `vldX` 变量和 `vstX` 矢量加载和存储指令。 `_ex` 变量采用附加参数，该参数指定指针参数的对齐情况但在其他方面与其非 `_ex` 对应项相同。
+MSVC 和 ARM 编译器之间的主要区别是，将会添加 MSVC`_ex`的变体`vldX`和`vstX`矢量加载和存储的说明。 `_ex` 变量采用附加参数，该参数指定指针参数的对齐情况但在其他方面与其非 `_ex` 对应项相同。
 
 ##  <a name="A"></a> 特定于 ARM 的内部函数列表
 

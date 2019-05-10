@@ -5,12 +5,12 @@ f1_keywords:
 - LNK2038
 helpviewer_keywords:
 - LNK2038
-ms.openlocfilehash: a22b31f1ac3226271ed7ff03b5be7dad7fff6b93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2839494232e7b57325b6f7abb960a258ba13078
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298862"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446951"
 ---
 # <a name="linker-tools-error-lnk2038"></a>链接器工具错误 LNK2038
 
@@ -24,9 +24,9 @@ ms.locfileid: "62298862"
 
 Visual Studio 定义以下符号以防止链接不兼容的代码，这种代码可能导致运行时错误或其他意外行为。
 
-- `_MSC_VER` 指示该视觉对象的主版本号和次版本号C++用于生成应用或库的编译器。 使用 Visual C++ 编译器编译的代码与使用具有不同的主版本号和次版本号的版本编译的代码不兼容。 有关详细信息，请参阅`_MSC_VER`中[预定义宏](../../preprocessor/predefined-macros.md)。
+- `_MSC_VER` 指示在 Microsoft 的主版本号和次版本号C++编译器 （msvc） 编写的用于生成应用或库。 通过使用一个版本的 MSVC 已编译的代码是通过使用具有不同主版本号和次版本号的版本编译的代码与不兼容。 有关详细信息，请参阅`_MSC_VER`中[预定义宏](../../preprocessor/predefined-macros.md)。
 
-   如果要链接到不兼容版本的视觉对象库C++使用的，以及不能获取或生成库的兼容版本的编译器，您可以使用早期版本的编译器生成项目： 更改**平台工具集**早期工具集的项目的属性。 有关详细信息，请参阅[如何：修改目标框架和平台工具集](../../build/how-to-modify-the-target-framework-and-platform-toolset.md)。
+   如果要链接到与 MSVC 的使用，并且无法获取或生成兼容版本的库的版本不兼容的库，可以使用早期版本的编译器生成项目： 更改**平台工具集**早期工具集的项目的属性。 有关详细信息，请参阅[如何：修改目标框架和平台工具集](../../build/how-to-modify-the-target-framework-and-platform-toolset.md)。
 
 - `_ITERATOR_DEBUG_LEVEL` 指示级别的安全和调试功能在中启用的C++标准库。 这些功能可更改某些 C++ 标准库对象的表示方式，从而使它们与使用不同的安全和调试功能的 C++ 标准库对象不兼容。 有关详细信息，请参阅 [_ITERATOR_DEBUG_LEVEL](../../standard-library/iterator-debug-level.md)。
 

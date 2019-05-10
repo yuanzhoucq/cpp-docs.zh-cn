@@ -30,12 +30,12 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 6b9499fbd806c04774d12750c70816d0312a4e3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28678b560387fa6b111d60a7487ed44f9244a821
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345261"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449057"
 ---
 # <a name="how-to-manage-resources-c"></a>如何：管理资源 (C++)
 
@@ -100,7 +100,7 @@ IDD_AboutBox (Finnish - XX33)
 
 ## <a name="import-and-export-resources"></a>导入和导出资源
 
-可以导入图形资源（位图、图标、光标和工具栏）、HTML 文件和自定义资源以便在 Visual C++ 中使用。 可以从 Visual C++ 项目导出相同类型的文件以分隔可以在开发环境外部使用的文件。
+可以导入图形资源（位图、图标、光标和工具栏）、HTML 文件和自定义资源以便在 Visual C++ 中使用。 你可以从 Visual Studio 导出相同类型的文件C++项目以单独的文件可以在开发环境外部使用。
 
 > [!NOTE]
 > 无法导入或导出，因为它们不是独立的文件类型的资源类型，如加速器、 对话框和字符串表。

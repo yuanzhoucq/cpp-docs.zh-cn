@@ -2,12 +2,12 @@
 title: 配置 Windows XP 的程序
 ms.date: 02/02/2018
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
-ms.openlocfilehash: 989a4e2c7e91c05498902bf1c5cb9d838ee47c3b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: f27921e062fd8abb7bc9b63bfbb9b050f25ee54b
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273797"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446375"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>配置 Windows XP 的程序
 
@@ -25,7 +25,7 @@ ms.locfileid: "62273797"
 
 1. 在“解决方案资源管理器”中，打开项目的快捷菜单，然后选择“属性”。
 
-1. 在中**属性页**对话框中的项目，在**配置属性** > **常规**，将**平台工具集**属性设置为所需的 Windows XP 工具集。 例如，选择**Visual Studio 2017 的 Windows XP (v141_xp)** 若要使用 Microsoft Visual 适用于 Windows XP 和 Windows Server 2003 中创建的代码C++2017年编译器。
+1. 在中**属性页**对话框中的项目，在**配置属性** > **常规**，将**平台工具集**属性设置为所需的 Windows XP 工具集。 例如，选择**Visual Studio 2017 的 Windows XP (v141_xp)** 若要使用 Microsoft Windows XP 和 Windows Server 2003 中创建代码C++Visual Studio 2017 中的编译器。
 
 ### <a name="c-runtime-support"></a>C++ 运行时支持
 

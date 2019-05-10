@@ -1,6 +1,6 @@
 ---
 title: char_traits 结构
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 f1_keywords:
 - iosfwd/std::char_traits
 - iosfwd/std::char_traits::char_type
@@ -27,12 +27,12 @@ helpviewer_keywords:
 - char_traits struct
 - char_traits class
 ms.assetid: 568e59f0-4521-4207-9223-9dcf6a16d620
-ms.openlocfilehash: 2975c839e07093a22d910f295be730fdd68839cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 541f468071e315b205abb8f7b9c865f045c510fe
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379436"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220519"
 ---
 # <a name="chartraits-struct"></a>char_traits 结构
 
@@ -384,7 +384,7 @@ EOF 字符。
 
 一个值，表示文件结尾 （例如 EOF 或 WEOF）。
 
-C++ 标准声明此值不能对应于有效的 `char_type` 值。 视觉对象C++编译器可强制此约束的类型**char**，而不是类型**wchar_t**。 下面的示例将说明这一点。
+C++ 标准声明此值不能对应于有效的 `char_type` 值。 MicrosoftC++编译器可强制此约束的类型**char**，而不是类型**wchar_t**。 下面的示例将说明这一点。
 
 ### <a name="example"></a>示例
 

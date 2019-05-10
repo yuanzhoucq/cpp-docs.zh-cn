@@ -2,7 +2,7 @@
 title: 使用命令行-Visual Studio 中的 MSVC 工具集
 description: 使用 MicrosoftC++从 Visual Studio IDE 外部命令行编译器工具链 （msvc） 编写。
 ms.custom: conceptual
-ms.date: 12/10/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - command-line builds [C++]
 - compiling source code [C++], command line
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-ms.openlocfilehash: 21d1c9063a1d6dd154de8d2caca913ea3fd0ce37
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 5f9ac1e4753fdba412af26bcc45022dee354cacf
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342158"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877138"
 ---
 # <a name="use-the-msvc-toolset-from-the-command-line"></a>使用命令行中的 MSVC 工具集
 
-您可以生成 C 和C++使用 Visual Studio 中包含的工具在命令行上的应用程序。 此外可以将其作为独立包从下载的编译器工具集[Visual Studio 2017 生成工具](https://go.microsoft.com/fwlink/p/?linkid=875721)。
+您可以生成 C 和C++使用 Visual Studio 中包含的工具在命令行上的应用程序。 此外可以将其作为独立包从下载的编译器工具集[Visual Studio 下载](https://visualstudio.microsoft.com/downloads/)页。 它属于**用于 Visual Studio 生成工具**打包; 您可以选择下载所需的工具C++开发。
 
 ## <a name="how-to-use-the-command-line-tools"></a>如何使用命令行工具
 
@@ -43,13 +43,11 @@ ms.locfileid: "64342158"
 - **x86_x64 兼容工具命令提示**-设置要使用 32 位、 x86 本机工具来生成 64 位，x64 本机代码的环境。
 - **x64_x86 交叉工具命令提示**-设置要使用 64 位 x64 本机工具来生成 32 位、 x86 本机代码的环境。
 
-如果你设置一个，具体取决于已安装的 Visual Studio 的版本和安装昵称会有所不同实际的开始菜单文件夹和快捷方式名称。 例如，如果已安装，Visual Studio 2017 并且您已给定其安装别名的*预览版*，名为开发人员命令提示符快捷方式**VS 2017 （预览版）的开发人员命令提示**，在名为的文件夹中**Visual Studio 2017**。
-
-如果已安装[Visual Studio 2017 生成工具](https://go.microsoft.com/fwlink/p/?linkid=875721)（还包括 Visual Studio 2015 Update 3 编译器工具集） 时，只有特定于体系结构的本机或跨工具开发人员命令提示安装选项以及不常规**开发人员命令提示**快捷方式。
+如果你设置一个，具体取决于已安装的 Visual Studio 的版本和安装昵称会有所不同实际的开始菜单文件夹和快捷方式名称。 例如，如果已安装，Visual Studio 2017 并且您已给定其安装别名的*预览版*，名为开发人员命令提示符快捷方式**VS 2019 的开发人员命令提示**中名为的文件夹**Visual Studio 2019**。
 
 ## <a name="developer_command_prompt"></a> 若要打开开发人员命令提示窗口
 
-1. 在桌面上，打开 Windows**启动**菜单上，，然后进行滚动以查找并打开你的 Visual Studio 版本的文件夹，如**Visual Studio 2017**。 在某些较旧版本的 Visual Studio 中，快捷方式位于名为的子文件夹**Visual Studio Tools**。
+1. 在桌面上，打开 Windows**启动**菜单上，，然后进行滚动以查找并打开你的 Visual Studio 版本的文件夹，如**Visual Studio 2019**。 在某些较旧版本的 Visual Studio 中，快捷方式位于名为的子文件夹**Visual Studio Tools**。
 
 1. 在文件夹中，选择**开发人员命令提示**你的 Visual Studio 版本。 此快捷方式启动使用默认的生成体系结构的 32 位、 x86 本机工具来生成 32 位、 x86 本机代码的开发人员命令提示符窗口。 如果需要非默认的生成体系结构，选择一个本机或跨工具命令提示指定的主机和目标体系结构。
 
@@ -57,11 +55,11 @@ ms.locfileid: "64342158"
 
 ## <a name="developer_command_file_locations"></a> 开发人员命令文件位置
 
-如果想要在现有的命令提示符窗口中设置生成体系结构环境，可以使用安装程序创建命令文件 （批处理文件） 的一个设置所需的环境。 我们仅建议您执行此操作在新的命令提示符窗口中，并且我们不建议你在相同的命令窗口中的更高版本切换环境。 这些文件的位置取决于已安装的 Visual Studio 的版本和位置和命名在安装过程中所做的选择。 对于 Visual Studio 2017 中，在 64 位计算机上的典型安装位置位于 \Program 文件 (x86) \Microsoft Visual Studio\2017\\*edition*，其中*edition*可能是社区，专业版、 企业版、 BuildTools 或所提供的另一个名称。 对于 Visual Studio 2015，典型的安装位置是 \Program 文件 (x86) \Microsoft Visual Studio 14.0。
+如果想要在现有的命令提示符窗口中设置生成体系结构环境，可以使用安装程序创建命令文件 （批处理文件） 的一个设置所需的环境。 我们仅建议您执行此操作在新的命令提示符窗口中，并且我们不建议你在相同的命令窗口中的更高版本切换环境。 这些文件的位置取决于已安装的 Visual Studio 的版本和位置和命名在安装过程中所做的选择。 对于 Visual Studio 2019，64 位计算机上的典型安装位置位于 \Program 文件 (x86) \Microsoft Visual Studio\2019\\*edition*，其中*edition*可能是社区，专业版、 企业版、 BuildTools 或所提供的另一个名称。 Visual Studio 2017 位置是类似的。 对于 Visual Studio 2015，典型的安装位置是 \Program 文件 (x86) \Microsoft Visual Studio 14.0。
 
 主要开发人员命令提示符的命令文件 VsDevCmd.bat，位于安装目录的 Common7\Tools 子目录中。 当未指定任何参数，这将设置环境和主机和目标构建体系结构使用 32 位 x86 本机工具来生成 32 位 x86 代码。
 
-其他命令文件是可用于设置特定的生成体系结构，具体取决于处理器体系结构的 Visual Studio 工作负载和已安装的选项。 在 Visual Studio 2017 中，这些磁盘位于 Visual Studio 安装目录的 VC\Auxiliary\Build 子目录中。 在 Visual Studio 2015 中，这些建议位于 VC、 VC\bin 或 VC\bin\\*体系结构*子目录的安装目录，其中*体系结构*是一个本机或跨编译器选项。 这些命令文件设置默认参数，并调用 VsDevCmd.bat 设置指定的生成体系结构环境。 典型安装可能会包括这些命令的文件：
+其他命令文件是可用于设置特定的生成体系结构，具体取决于处理器体系结构的 Visual Studio 工作负载和已安装的选项。 在 Visual Studio 2017 和 Visual Studio 2019，这些磁盘位于 Visual Studio 安装目录的 VC\Auxiliary\Build 子目录中。 在 Visual Studio 2015 中，这些建议位于 VC、 VC\bin 或 VC\bin\\*体系结构*子目录的安装目录，其中*体系结构*是一个本机或跨编译器选项。 这些命令文件设置默认参数，并调用 VsDevCmd.bat 设置指定的生成体系结构环境。 典型安装可能会包括这些命令的文件：
 
 |命令文件|主机和目标体系结构|
 |---|---|
@@ -107,28 +105,28 @@ ms.locfileid: "64342158"
 （可选） 指定要使用的 Windows SDK 的版本。 默认情况下，使用最新安装的 Windows SDK。 若要指定的 Windows SDK 版本，可以使用完整的 Windows 10 SDK 数字，如**10.0.10240.0**，或指定**8.1**若要使用 Windows 8.1 SDK。
 
 *vcversion*<br/>
-（可选） 指定要使用的 Visual Studio 编译器工具集。 默认情况下，环境设置为使用当前的 Visual Studio 2017 编译器工具集。 使用 **-vcvars_ver = 14.0**指定 Visual Studio 2015 编译器工具集。
+（可选） 指定要使用的 Visual Studio 编译器工具集。 默认情况下，环境设置为使用当前的 Visual Studio 编译器工具集。 使用 **-vcvars_ver = 14.0**来指定 Visual Studio 2015 编译器工具集或 **-vcvars_ver = 15.0**指定 Visual Studio 2017 编译器工具集。
 
 <a name="vcvarsall"></a>
 #### <a name="to-set-up-the-build-environment-in-an-existing-command-prompt-window"></a>若要将现有的命令提示符窗口中的生成环境设置
 
-1. 在命令提示符下，使用 CD 命令切换到 Visual Studio 安装目录。 然后，再次使用 CD 将更改为包含特定于配置的命令文件的子目录。 对于 Visual Studio 2017，这是 VC\Auxiliary\Build 子目录。 对于 Visual Studio 2015 中，使用 VC 子目录。
+1. 在命令提示符下，使用 CD 命令切换到 Visual Studio 安装目录。 然后，再次使用 CD 将更改为包含特定于配置的命令文件的子目录。 有关 Visual Studio 2017 和 2019年，这是 VC\Auxiliary\Build 子目录。 对于 Visual Studio 2015 中，使用 VC 子目录。
 
-1. 适用于你首选的开发人员环境输入命令。 例如，若要使用最新的 Windows SDK 和 Visual Studio 2017 RTM 编译器工具集生成适用于 UWP 的 64 位平台上 ARM 代码，请使用此命令行：
+1. 适用于你首选的开发人员环境输入命令。 例如，若要使用最新的 Windows SDK 和 Visual Studio 2019 编译器工具集生成适用于 UWP 的 64 位平台上 ARM 代码，请使用此命令行：
 
-   `vcvarsall.bat amd64_arm uwp -vcvars_ver=14.10`
+   `vcvarsall.bat amd64_arm uwp`
 
 ## <a name="create-your-own-command-prompt-shortcut"></a>创建你自己的命令提示符快捷方式
 
-如果您打开一个现有的开发人员命令提示符快捷方式属性对话框，您可以看到使用的命令目标。 例如，为目标**x64 本机工具命令提示 VS 2017**快捷方式是类似的内容：
+如果您打开一个现有的开发人员命令提示符快捷方式属性对话框，您可以看到使用的命令目标。 例如，为目标**x64 本机工具命令提示符的 VS 2019**快捷方式是类似的内容：
 
-`%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat"`
+`%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat"`
 
-特定于体系结构的批处理文件集*体系结构*参数并调用 vcvarsall.bat。 要传递给 vcvarsall.bat，或只是可以直接调用 vcvarsall.bat，可以将相同的其他选项传递到这些批处理文件。 若要指定参数的命令快捷方式，将其添加到双引号中的命令的末尾。 例如，若要设置生成 ARM 代码适用于 UWP 的 64 位平台上使用最新的 Windows SDK 和 Visual Studio 2017 RTM 编译器工具集的一种快捷方式，使用类似此命令目标中您的快捷方式：
+特定于体系结构的批处理文件集*体系结构*参数并调用 vcvarsall.bat。 要传递给 vcvarsall.bat，或只是可以直接调用 vcvarsall.bat，可以将相同的其他选项传递到这些批处理文件。 若要指定参数的命令快捷方式，将其添加到双引号中的命令的末尾。 例如，若要设置生成 ARM 代码适用于 UWP 的 64 位平台上使用最新的 Windows SDK 和早于当前版本的编译器工具集的一种快捷方式，您需要指定的版本号。 在您的快捷方式中使用类似于此命令目标的内容：
 
-`%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat amd64_arm uwp -vcvars_ver=14.10"`
+`%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvarsall.bat amd64_arm uwp -vcvars_ver=15.0"`
 
-必须调整以反映你的 Visual Studio 安装目录的路径。
+必须调整以反映你的 Visual Studio 安装目录的路径。 Vcvarsall.bat 文件具有特定的版本号的附加信息。
 
 ## <a name="command-line-tools"></a>命令行工具
 

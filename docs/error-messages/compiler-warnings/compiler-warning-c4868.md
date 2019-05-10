@@ -4,12 +4,12 @@ ms.date: 10/26/2017
 f1_keywords:
 - C4868
 ms.assetid: fc6aa7e5-34dd-4ec2-88bd-16e430361dc7
-ms.openlocfilehash: d0bc8716e53e71c52f6a31036a95d0b4cefedd79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72700091fcd22271e6913228a1206b3d5efcbdef
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388704"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447179"
 ---
 # <a name="compiler-warning-level-4-c4868"></a>编译器警告 （等级 C4868
 
@@ -17,7 +17,7 @@ ms.locfileid: "62388704"
 
 大括号内的初始值设定项列表的元素将按从左到右顺序计算。 有两种情况下，在其中，编译器不能以保证此顺序： 第一个是对象的值; 传递时的一些元素第二个是编译时`/clr`和的某些元素是字段的对象或数组元素。 当编译器无法保证从左到右评估时它会发出警告 C4868。
 
-视觉对象执行的编译器一致性工作可以生成此警告C++2015年更新 2。 在视觉对象之前已编译的代码C++2015 Update 2 现在可以生成 C4868。
+已经为 Visual Studio 2015 Update 2 的编译器一致性工作可以生成此警告。 在 Visual Studio 2015 Update 2 之前已编译的代码现在可以生成 C4868。
 
 默认情况下，此警告处于关闭状态。 使用`/Wall`来激活此警告。
 
