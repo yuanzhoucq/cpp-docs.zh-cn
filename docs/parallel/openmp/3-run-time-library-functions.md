@@ -1,13 +1,13 @@
 ---
 title: 3. 运行时库函数
-ms.date: 01/17/2019
+ms.date: 05/13/2019
 ms.assetid: b226e512-6822-4cbe-a2ca-74cc2bb7e880
-ms.openlocfilehash: 3eb6dc4110145a6c45dbdd772deaee3023e68e9d
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 7ecb2a79ad61169cdeabc9bd4893147a5de6a210
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525036"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611184"
 ---
 # <a name="3-run-time-library-functions"></a>3.运行时库函数
 
@@ -55,6 +55,8 @@ void omp_set_num_threads(int num_threads);
 
 此调用的优先级高于`OMP_NUM_THREADS`环境变量。 可能由调用的线程数的默认值`omp_set_num_threads`或通过设置`OMP_NUM_THREADS`环境变量，可以显式重写的单个`parallel`指令通过指定`num_threads`子句。
 
+有关详细信息，请参阅[omp_set_dynamic](#317-omp_set_dynamic-function)。
+
 #### <a name="cross-references"></a>交叉引用
 
 - [omp_set_dynamic](#317-omp_set_dynamic-function) function
@@ -74,6 +76,8 @@ int omp_get_num_threads(void);
 `num_threads`子句中，`omp_set_num_threads`函数，和`OMP_NUM_THREADS`环境变量控制团队中的线程数。
 
 如果用户未显式设置的线程数，默认值是实现定义的。 此函数将绑定到最接近封闭`parallel`指令。 如果从串行一部分的程序，或从序列化的嵌套并行区域调用，此函数将返回 1。
+
+有关详细信息，请参阅[omp_set_dynamic](#317-omp_set_dynamic-function)。
 
 #### <a name="cross-references"></a>交叉引用
 
@@ -165,6 +169,12 @@ void omp_set_dynamic(int dynamic_threads);
 
 指动态调整的线程的默认值是实现定义的。 因此，依赖于特定数量的线程的正确执行用户代码应显式禁用动态线程。 实现不一定要提供的功能可以动态调整线程数，但会要求他们提供接口以支持跨所有平台的可移植性。
 
+#### <a name="microsoft-specific"></a>Microsoft 专用
+
+当前支持`omp_get_dynamic`和`omp_set_dynamic`如下所示： 
+
+输入的参数`omp_set_dynamic`不会影响线程处理策略并不会更改线程数。 `omp_get_num_threads` 始终返回用户定义的数字，如果设置的或默认线程数。 在当前的 Microsoft 实现中，`omp_set_dynamic(0)`关闭动态线程处理，以便可以针对以下并行区域重用现有的线程集合。 `omp_set_dynamic(1)` 打开动态线程处理，通过放弃现有的线程集合并创建一组新的即将推出的并行区域。 新组中的线程数等同于旧的组，并为基础的返回值`omp_get_num_threads`。 因此，为了获得最佳性能，使用`omp_set_dynamic(0)`重复使用现有的线程。
+
 #### <a name="cross-references"></a>交叉引用
 
 - [omp_get_num_threads](#312-omp_get_num_threads-function)
@@ -180,7 +190,7 @@ void omp_set_dynamic(int dynamic_threads);
 int omp_get_dynamic(void);
 ```
 
-如果实现未执行动态调整线程数，此函数始终返回 0。
+如果实现未执行动态调整线程数，此函数始终返回 0。 有关详细信息，请参阅[omp_set_dynamic](#317-omp_set_dynamic-function)。
 
 #### <a name="cross-references"></a>交叉引用
 

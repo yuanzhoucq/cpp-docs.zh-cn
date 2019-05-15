@@ -1,18 +1,16 @@
 ---
 title: Internet URL 分析全局函数和帮助程序
 ms.date: 04/03/2017
-f1_keywords:
-- vc.mfc.macros.isapi
 helpviewer_keywords:
 - parsing, URLs
 - URLs, parsing
 ms.assetid: 46c6384f-e4a6-4dbd-9196-219c19040ec5
-ms.openlocfilehash: 0831d94f1a6f0293d3605a5e2e9ebde0564baf24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 310e4ffb3fc207d874e97ba1fac65f6f8cb41a31
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321996"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611028"
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>Internet URL 分析全局函数和帮助程序
 
@@ -189,7 +187,7 @@ URL 引用的对象 （可能为空）。
 *dwFlags*<br/>
 控制如何分析的 URL 的标志。 可以是以下值的组合：
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |ICU_DECODE|将 %xx 转义序列转换为字符。|
 |ICU_NO_ENCODE|不会转换不安全字符进行转义序列。|

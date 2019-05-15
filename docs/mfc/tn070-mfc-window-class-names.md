@@ -1,18 +1,16 @@
 ---
 title: TN070:MFC 窗口类名称
 ms.date: 11/04/2016
-f1_keywords:
-- vc.mfc.classes
 helpviewer_keywords:
 - window class names [MFC]
 - TN070 [MFC]
 ms.assetid: 90617912-dd58-4a7c-9082-ced71736d7cd
-ms.openlocfilehash: 8b06f7b3656284de18632185877fdbe382343f95
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e2818104c59a94b0e1239abc614a83dea8c3de08
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62168032"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611208"
 ---
 # <a name="tn070-mfc-window-class-names"></a>TN070:MFC 窗口类名称
 
@@ -46,4 +44,4 @@ Afx:%x:%x:%x:%x:%x
 
 [按编号列出的技术说明](../mfc/technical-notes-by-number.md)<br/>
 [按类别列出的技术说明](../mfc/technical-notes-by-category.md)<br/>
-[TN020:ID 命名和编号约定](../mfc/tn020-id-naming-and-numbering-conventions.md)
+[TN020：ID 命名和编号约定](../mfc/tn020-id-naming-and-numbering-conventions.md)
