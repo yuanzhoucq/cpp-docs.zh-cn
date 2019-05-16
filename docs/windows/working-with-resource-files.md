@@ -6,12 +6,12 @@ helpviewer_keywords:
 - resources [C++], about resource files
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-ms.openlocfilehash: a08c7ecb153b790f06da386ac93d1f05f5981e61
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 44b744ec18ef46df366547bf03e980b3e7032b09
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387651"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707350"
 ---
 # <a name="working-with-resource-files"></a>使用资源文件
 
@@ -49,7 +49,7 @@ ms.locfileid: "62387651"
 
 ## <a name="related-sections"></a>相关章节
 
-[Visual C++](../overview/visual-cpp-in-visual-studio.md)<br/>
+[Visual Studio 中的 C++](../overview/visual-cpp-in-visual-studio.md)<br/>
 提供 Visual C++ 文档的链接。
 
 [与我们交流](/visualstudio/ide/talk-to-us)<br/>

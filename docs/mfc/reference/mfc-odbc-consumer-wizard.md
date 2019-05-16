@@ -1,23 +1,25 @@
 ---
 title: MFC ODBC 使用者向导
-ms.date: 10/03/2018
-f1_keywords:
-- vc.codewiz.class.mfc.consumer.overview
+ms.date: 05/09/2019
 helpviewer_keywords:
-- MFC ODBC Consumer Wizard
 - wizards [MFC]
 ms.assetid: f64a890b-a252-4887-88a1-782a7cd4ff3d
-ms.openlocfilehash: b6009a1e6b6100eabaa2ed05404217c0d2906be0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e8741677031ff9b12989d75243a13550d74b608
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310302"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707388"
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>MFC ODBC 使用者向导
 
-> [!WARNING]
-> 在 Visual Studio 2017 版本 15.9 中，此代码向导已弃用，并将从 Visual Studio 的将来版本中删除。 很少用到此向导。 对 ATL 和 MFC 的常规支持不会受到删除此向导的影响。 如果你想要共享对此弃用的反馈，请完成[此调查](https://www.surveymonkey.com/r/QDWKKCN)。 你的反馈对我们很重要。
+::: moniker range="vs-2019"
+
+此向导不是可在 Visual Studio 2019 及更高版本。
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
 
 此向导设置了 ODBC 记录集类和数据绑定访问指定的数据源所需。
 
@@ -73,6 +75,8 @@ ms.locfileid: "62310302"
 - **绑定所有列**
 
    指定是否绑定中所选表的所有列。 如果选中此框 （默认值），绑定所有列;如果不选择此框，没有列被绑定，并且必须手动在记录集类中绑定。
+
+::: moniker-end
 
 ## <a name="see-also"></a>请参阅
 

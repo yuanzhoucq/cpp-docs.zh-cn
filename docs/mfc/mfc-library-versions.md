@@ -1,6 +1,6 @@
 ---
 title: MFC 库版本
-ms.date: 1/09/2018
+ms.date: 05/08/2019
 helpviewer_keywords:
 - class libraries [MFC], building versions
 - version information [MFC], MFC library
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC libraries
 - MFC, library versions
 - libraries [MFC], versions
-ms.openlocfilehash: c0dc724566063066175ea54e2b7734892e3c6e05
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8e32366d9ff43bd6e5770f64f0ba9d8bf6e56ab
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62238490"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524786"
 ---
 # <a name="mfc-library-versions"></a>MFC 库版本
 
@@ -129,7 +129,7 @@ MFC Dll 已*版本*指示二进制文件兼容性的数字。 使用 MFC Dll 具
 
 如果您要动态链接到共享的 DLL 版本的 MFC，，是否从应用程序或从 MFC 扩展 DLL，则必须包含匹配的 MFC*版本*。DLL 或 MFC*版本*U.DLL 时部署您的产品。
 
-有关视觉对象的列表C++Dll 可以随您的应用程序分发，请参阅[Microsoft Visual Studio 2017 和 Microsoft Visual Studio 2017 SDK （包括实用程序和 BuildServer 文件） 的可分发代码](http://go.microsoft.com/fwlink/p/?LinkId=823098)。
+有关视觉对象的列表C++Dll 可以随您的应用程序分发，请参阅[Microsoft Visual Studio 2017 和 Microsoft Visual Studio 2017 SDK （包括实用程序和 BuildServer 文件） 的可分发代码](/visualstudio/productinfo/2017-redistribution-vs)或[可分发代码 Visual Studio 2019](/visualstudio/releases/2019/redistribution)。
 
 MFC 中的 MBCS 和 Unicode 支持的详细信息，请参阅[Unicode 和多字节字符集 (MBCS) 支持](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)。
 

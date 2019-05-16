@@ -4,16 +4,16 @@ ms.date: 06/21/2018
 ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 266ea37510b636cd1dc1cfa5909552ace50df1bc
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 21931fc4976c909c77120e696f25f93c0a0fda0b
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58782148"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446770"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>如何使用 Visual C++ 工具集或文档报告问题
 
-使用 Microsoft Visual C++ 编译器、链接器或其他工具和库时如果遇到问题，请告知我们。 如果文档中存在问题，我们也想要了解。
+如果遇到 Microsoft C++ 编译器、链接器或其他工具和库的问题，请告诉我们。 如果文档中存在问题，我们也想要了解。
 
 ## <a name="how-to-report-a-c-toolset-issue"></a>如何报告 C++ 工具集问题
 

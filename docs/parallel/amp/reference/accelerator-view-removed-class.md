@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - AMPRT/Concurrency::accelerator_view_removed::accelerator_view_removed Class
 ms.assetid: 262446de-311c-454e-a5ed-e2aaced0d88a
-ms.openlocfilehash: 09f534a90f3191025c3ce99d07a462908387c676
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eddcf44966d197068113c5e7817dad37841261a3
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405646"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524847"
 ---
 # <a name="acceleratorviewremoved-class"></a>accelerator_view_removed 类
 
@@ -81,7 +81,7 @@ explicit accelerator_view_removed(
 
 `accelerator_view_removed` 类的新实例。
 
-## <a name="getviewremovedreason"></a>get_view_removed_reason
+## <a name="get_view_removed_reason"></a> get_view_removed_reason
 
 返回一个 HRESULT 错误代码，指示移除 `accelerator_view` 对象的原因。
 
