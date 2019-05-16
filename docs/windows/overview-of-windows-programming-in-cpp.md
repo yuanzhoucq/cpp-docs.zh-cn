@@ -2,12 +2,12 @@
 title: C++ 中 Windows 编程概述
 ms.date: 05/06/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 40028794a6df30db619965181f2e31d7c9a2745c
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: f2cdb0d0225b47391ee18c398b7789ab42ca8f40
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221324"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708212"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>C++ 中 Windows 编程概述
 
@@ -116,7 +116,7 @@ Visual Studio 包含一个功能强大的本机代码调试器、静态分析工
 
 |标题|描述|
 |-----------|-----------------|
-|[Visual C++](../overview/visual-cpp-in-visual-studio.md)|视觉对象的父主题C++开发人员内容。|
+|[Visual Studio 中的 C++](../overview/visual-cpp-in-visual-studio.md)|视觉对象的父主题C++开发人员内容。|
 [使用 C++/CLI 的 .NET开发](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|创建包装的本机C++库，使其能够使用.NET 应用程序和组件进行通信。|
 |[ .NET 和 UWP 的组件扩展](../extensions/component-extensions-for-runtime-platforms.md)|共享的语法元素的引用C++/CX 和C++/CLI。|
 |[通用 Windows 应用 (C++)](universal-windows-apps-cpp.md)|编写 UWP 应用程序使用C++/CX 或 Windows 运行时模板库 (WRL)。|
