@@ -164,12 +164,12 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnScrollBy
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
-ms.openlocfilehash: 2687dfc9941a512523a7cb771cb872c78b97ce2d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd04b2aa6dd1d539e357a69666bafc80e3ea5eba
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152163"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708158"
 ---
 # <a name="coleclientitem-class"></a>COleClientItem 类
 
@@ -322,7 +322,7 @@ void Activate(
 *nVerb*<br/>
 指定要执行的谓词。 它可以是以下值之一：
 
-|“值”|含义|符号|
+|值|含义|符号|
 |-----------|-------------|------------|
 |- 0|主谓词|OLEIVERB_PRIMARY|
 |- 1|辅助谓词|（无）|
@@ -1045,7 +1045,7 @@ virtual BOOL DoVerb(
 *nVerb*<br/>
 指定要执行的谓词。 它可以包括以下项之一：
 
-|“值”|含义|符号|
+|值|含义|符号|
 |-----------|-------------|------------|
 |- 0|主谓词|OLEIVERB_PRIMARY|
 |- 1|辅助谓词|（无）|
@@ -2151,7 +2151,7 @@ BOOL SetPrintDevice(const PRINTDLG* ppd);
 指向[DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice)数据结构，其中包含有关新的打印目标设备的信息。 可以为 NULL。
 
 *ppd*<br/>
-指向[PRINTDLG](https://msdn.microsoft.com/library/windows/desktop/ms646940)数据结构，其中包含有关新的打印目标设备的信息。 可以为 NULL。
+指向[PRINTDLG](/windows/desktop/ms646940)数据结构，其中包含有关新的打印目标设备的信息。 可以为 NULL。
 
 ### <a name="return-value"></a>返回值
 

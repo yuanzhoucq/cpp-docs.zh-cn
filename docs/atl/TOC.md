@@ -95,7 +95,7 @@
 ## [ATL 集合类](atl-collection-classes.md)
 ## [ATL 注册表组件（注册器）](atl-registry-component-registrar.md)
 ### [创建注册器脚本](creating-registrar-scripts.md)
-#### [了解巴科斯范式 (BNF) 语法](understanding-backus-nauer-form-bnf-syntax.md)
+#### [了解巴科斯范式 (BNF) 语法](understanding-backus-naur-form-bnf-syntax.md)
 #### [了解分析树](understanding-parse-trees.md)
 #### [注册表脚本示例](registry-scripting-examples.md)
 #### [使用可替换参数（注册器预处理器）](using-replaceable-parameters-the-registrar-s-preprocessor.md)

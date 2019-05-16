@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - static libraries, MFC
 ms.assetid: c3f62b0e-3f13-42c5-9859-d3890d0c3e1d
-ms.openlocfilehash: 2c7fc8c1d04105bbdf2fe05ff65283e1beeda810
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: c6d8a57c577dad20ac7bb8f579220a77d2a34850
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446432"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708269"
 ---
 # <a name="application-type-mfc-application-wizard"></a>MFC 应用程序向导的应用程序类型
 
@@ -101,4 +101,4 @@ ms.locfileid: "65446432"
 ## <a name="see-also"></a>请参阅
 
 [MFC 应用程序向导](../../mfc/reference/mfc-application-wizard.md)<br/>
-[视觉对象文件类型创建C++项目](../../build/reference/file-types-created-for-visual-cpp-projects.md)
+[Visual Studio 文件类型创建C++项目](../../build/reference/file-types-created-for-visual-cpp-projects.md)
