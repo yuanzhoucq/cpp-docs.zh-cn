@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: af8edc41f6c2036d231eb7e922a631628294645a
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857739"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837588"
 ---
 > [!IMPORTANT]
 > Visual Studio 编译器和生成工具可报告多种类型的错误和警告。 找到错误或警告后，生成工具可能会做出有关代码意图的假设并尝试继续运行，以便可以在同一时间报告更多的问题。 如果工具做出错误假设，则后续错误或警告可能不适于你的项目。 纠正项目中的问题时，请始终先纠正报告的第一个错误或警告，然后在通常情况下重新生成。 一个修补程序可能会使许多后续错误消失。
