@@ -4,12 +4,12 @@ title: Visual C++ 文档
 description: 了解如何使用 C++ 针对平台和设备开发应用程序、服务和工具。
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: f402087b101487a444996e7e27b186382c4874fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5db891bd1ed7a51a623dadfd5cc4e40a081cf0e7
+ms.sourcegitcommit: bc1b14f29a02685f97c7ef5c098d16db6eaf369f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264434"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65789019"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -423,7 +423,7 @@ ms.locfileid: "62264434"
                                 </a>
                             </li>
                             <li>
-                                <a href="https://github.com/Microsoft/cpprestsdk">
+                                <a href="/cpp/cloud/cloud-and-web-programming-in-visual-cpp">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -433,8 +433,8 @@ ms.locfileid: "62264434"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>网络库</h3>
-                                                    <p>用于 Web 编程的 C++ REST SDK（代码名为 Casablanca）开源库。</p>
+                                                    <h3>云和网络库</h3>
+                                                    <p>使用适合 IoT 和存储等的 Microsoft Azure C/C++ SDK，还有用于 Web 编程的 C++ REST SDK 开源库。</p>
                                                 </div>
                                             </div>
                                         </div>
