@@ -12,7 +12,7 @@ ms.locfileid: "62266915"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>字符串和 I/O 格式化（现代 C++）
 
-C++ [iostreams](../standard-library/iostream.md)。 例如，下面的代码演示如何设置 cout 若要设置格式的整数输出以十六进制表示，第一次关闭的当前状态保存和重新之后，设置，因为后状态格式传递给 cout 时，它始终处于这种方式更改，而不仅仅是为一个行之前代码。 
+C++ [iostreams](../standard-library/iostream.md)完全有能力格式化字符I/O。 例如，下面的代码演示如何设置 cout 来设置字符输出为十六进制，首先保存关闭的当前状态和然后重新设置，因为一旦状态格式传递给 cout 后，它将始终处于这种方式直到被更改，而不仅仅是为接下来的一行代码。 
 
 ```cpp
 #include <iostream>
@@ -38,7 +38,7 @@ int main()
 }
 ```
 
-这可以是完全在许多情况下非常麻烦。 作为替代方法，你可以从提升 C++ 库中，使用 Boost.Format 即使使用了非标准。 你可以下载从任何 Boost 库[Boost](http://www.boost.org/)网站。 
+这在许多情况下是非常麻烦的。 作为替代方法，你可以从Boost C++ 库中，使用 Boost.Format, 即使这是非标准方法。你可以从[Boost](http://www.boost.org/)网站下载任何 Boost 库。 
 
 Boost.Format 的一些优点包括：
 
@@ -48,9 +48,9 @@ Boost.Format 的一些优点包括：
 
 - 方便：标准 Posix 以及类似的格式字符串。
 
-虽然 C++ 生成 Boost.Format [iostreams](../standard-library/iostream-programming.md)，它们是安全且可扩展，它们不性能优化。 当需要性能优化时，请考虑 C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)和[sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)，这是快速且易于使用。  但是，它们不是扩展，也不安全漏洞。 （安全的版本存在，但它们会产生导致性能略微下降。  有关详细信息，请参阅[printf_s、 _printf_s_l、 wprintf_s、 _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)和[sprintf_s、 _sprintf_s_l、 swprintf_s、 _swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)。
+虽然 Boost.Format 基于 [iostreams](../standard-library/iostream-programming.md)，并且它们是安全且可扩展的，但它们不是性能优化的。 当需要性能优化时，请考虑 C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)和[sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)，它们是快速且易于使用的。但是，它们不是可扩展的，也不是漏洞安全的（存在安全的版本，但它们会产生导致性能略微下降。有关详细信息，请参阅[printf_s、 _printf_s_l、 wprintf_s、 _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)和[sprintf_s、 _sprintf_s_l、 swprintf_s、 _swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)。
 
-以下代码演示了某些 Boost 格式设置功能。
+以下代码演示了某些 Boost 格式功能特点。
 
 ```cpp
     string s = str( format("%2% %2% %1%\n") % "world" % "hello" );
