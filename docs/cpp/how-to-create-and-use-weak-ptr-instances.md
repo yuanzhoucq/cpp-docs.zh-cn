@@ -12,10 +12,9 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "62184696"
 ---
 # <a name="how-to-create-and-use-weakptr-instances"></a>如何：创建和使用共享 weak_ptr 实例
+有时对象必须存储`shared_ptr`类型的基础对象，而不导致其引用基数递增。通常情况下，当你使用`shared_ptr`实例时，且存在循环引用时，就会出现这种情况。
 
-有时对象必须存储一种方法访问的基础对象`shared_ptr`而不会导致引用计数会递增。 当你具有之间进行循环引用时，通常情况下，出现这种情况`shared_ptr`实例。
-
-最佳的设计是为了避免共享的所有权的指针，在可能的情况。 但是，如果您必须具有共享所有权的`shared_ptr`情况下，避免之间进行循环引用。 当循环引用不可避免的或甚至更可取出于某种原因，请使用`weak_ptr`为一个或多个所有者提供对另一个的弱引用`shared_ptr`。 通过使用`weak_ptr`，可以创建`shared_ptr`，可以将其联接到一组现有的相关实例，但仅基础内存资源是否仍有效。 一个`weak_ptr`本身不参与引用计数，并因此，它无法阻止引用计数转到为零。 但是，可以使用`weak_ptr`来尝试获取的新副本`shared_ptr`与它已初始化。 如果内存已被删除，`bad_weak_ptr`引发异常。 如果内存仍有效，新的共享的指针递增引用计数，并保证内存将生效，只要`shared_ptr`变量保持在范围内。
+最佳的设计是尽可能避免共享所有权的指针。 但是，如果您必须具有共享所有权的`shared_ptr`，请避免它们之间进行循环引用。 当循环引用不可避免或者甚至出于某种原因而更合适时，请使用`weak_ptr`为一个或多个所有者提供对另一个`shared_ptr`的弱引用。 通过使用`weak_ptr`，可以创建`shared_ptr`，可以将其联接到一组现有的相关实例，但仅当基础内存资源仍有效。 一个`weak_ptr`本身不参与引用计数，并因此，它无法阻止引用计数转到为零。 但是，可以使用`weak_ptr`来尝试获取已初始化的`shared_ptr`的新副本。 如果内存已被删除，会引发`bad_weak_ptr`异常。 如果内存仍有效，新的共享的指针递增引用计数，并保证内存将生效，只要`shared_ptr`变量保持在范围内。
 
 ## <a name="example"></a>示例
 
@@ -82,7 +81,7 @@ Destroying Controller4
 Press any key
 ```
 
-试验一下，修改向量`others`要`vector<shared_ptr<Controller>>`，然后在输出中，请注意，在不析构函数进行调用时`TestRun`返回。
+试验一下，修改向量`others`的类型为`vector<shared_ptr<Controller>>`，然后在输出中，请注意，当`TestRun`返回时，没有析构函数被调用。
 
 ## <a name="see-also"></a>请参阅
 
