@@ -5,7 +5,7 @@ ms.topic: conceptual
 ms.assetid: 909ef870-904c-49b6-b8cd-e9d0b7dc9435
 ms.openlocfilehash: c976f9ec72929f2c8ff91fb9f9594d91c7457365
 ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62331020"
