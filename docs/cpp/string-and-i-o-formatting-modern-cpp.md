@@ -12,7 +12,7 @@ ms.locfileid: "62266915"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>字符串和 I/O 格式化（现代 C++）
 
-C++ [iostreams](../standard-library/iostream.md)完全有能力格式化字符I/O。 例如，下面的代码演示如何设置 cout 来设置字符输出为十六进制，首先保存关闭的当前状态和然后重新设置，因为一旦状态格式传递给 cout 后，它将始终处于这种方式直到被更改，而不仅仅是为接下来的一行代码。 
+C++ [iostreams](../standard-library/iostream.md)完全有能力格式化字符I/O。 例如，下面的代码演示如何设置 cout 来设置字符输出为十六进制，首先保存关闭当前状态然后重新设置，因为一旦状态格式传递给 cout 后，它将始终处于这种方式直到被更改，而不仅仅是为接下来的一行代码。 
 
 ```cpp
 #include <iostream>
