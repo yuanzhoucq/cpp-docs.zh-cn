@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - ASP components, creating in ATL
 ms.assetid: 5a5cb904-dbbf-44ea-ad3d-2ddd14c1d3c5
-ms.openlocfilehash: d2f47176fb25b050e4b1f72053e4cbaaf89f569e
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: a78beeab663ef1b467cdec32ca51132e8134a9b2
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524594"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707042"
 ---
 # <a name="atl-active-server-page-component-wizard"></a>ATL Active Server Page 组件向导
 
@@ -19,7 +19,7 @@ ms.locfileid: "65524594"
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 此向导将 Active Server Pages (ASP) 组件插入项目中。 Microsoft Internet Information Services (IIS) 将 ASP 组件用作增强型网页开发体系结构的一部分。
 

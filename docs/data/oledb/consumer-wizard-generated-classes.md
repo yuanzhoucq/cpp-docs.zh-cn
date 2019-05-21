@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - user record classes in OLE DB consumer
 ms.assetid: dba0538f-2afe-4354-8cbb-f202ea8ade5a
-ms.openlocfilehash: f172da3aefb3f2440ddb4bba41dc549b0bf4a926
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 3442ff484876aec9b2cd3fa93e95c4d503649ee9
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525124"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707754"
 ---
 # <a name="consumer-wizard-generated-classes"></a>使用者向导生成的类
 
@@ -20,7 +20,7 @@ ATL OLE DB 使用者向导不适用于 Visual Studio 2019 及更高版本。 但
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 使用 ATL OLE DB 使用者向导生成使用者时，可以选择是使用 OLE DB 模板，还是使用 OLE DB 特性。 在这两种情况下，向导将分别生成命令类和用户记录类。 命令类包含用于打开在向导中指定的数据源和行集的代码。 用户记录类包含选定数据库表的列映射。 但是，这两种情况下生成的代码各不相同：
 

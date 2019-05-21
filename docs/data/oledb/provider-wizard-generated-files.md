@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 ms.assetid: 6e1ac94b-eb90-4abf-82b3-06944b947ebc
-ms.openlocfilehash: de5c9056402cb1db25240772eb3c592523daafae
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 0638680482546f56f26b70660ab43bd9848438a3
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525323"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707478"
 ---
 # <a name="provider-wizard-generated-files"></a>提供程序向导生成的文件
 
@@ -19,7 +19,7 @@ ATL OLE DB 提供程序向导不适用于 Visual Studio 2019 及更高版本。
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 ATL OLE DB 提供程序向导生成以下文件。 下面的主题使用短名称“Custom”，但确切文件名具体视你在创建提供程序时所做的选择而定。
 
