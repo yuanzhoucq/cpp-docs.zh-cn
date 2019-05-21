@@ -1,23 +1,23 @@
 ---
 title: 不使用向导创建使用者
-ms.date: 10/12/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: e8241cfe-5faf-48f8-9de3-241203de020b
-ms.openlocfilehash: 029fe6866df81d366cc3bc15096f638791faa413
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 421723ed561e8ed986a64024c4c5d29c9fba6110
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362499"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525122"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>不使用向导创建使用者
 
-下面的示例假定您要将 OLE DB 使用者支持添加到现有的 ATL 项目。 如果你想要将 OLE DB 使用者支持添加到 MFC 应用程序，则应运行**MFC 应用程序向导**，这将创建所有支持必要然后调用执行应用程序所需的 MFC 例程。
+下面的示例假定要向现有 ATL 项目添加 OLE DB 使用者支持。 若要向 MFC 应用程序添加 OLE DB 使用者支持，应运行 MFC 应用程序向导，这会创建所有必要的支持，并调用执行应用程序所需的 MFC 例程。
 
-若要添加的 OLE DB 使用者支持而无需使用**ATL OLE DB 使用者向导**:
+若要在不使用 ATL OLE DB 使用者向导的情况下添加 OLE DB 使用者支持，请执行以下操作：
 
-- 在 pch.h 文件中，追加以下`#include`语句：
+- 在 pch.h 文件中，追加以下 `#include` 语句：
 
     ```cpp
     #include <atlbase.h>
@@ -25,14 +25,14 @@ ms.locfileid: "62362499"
     #include <atldbsch.h> // if you are using schema templates
     ```
 
-以编程方式，使用者通常执行以下一系列操作：
+使用者通常以编程方式执行以下一系列操作：
 
-1. 创建将列绑定到本地变量的用户记录类。 在此示例中，`CMyTableNameAccessor`是用户记录类 (请参阅[用户记录](../../data/oledb/user-records.md))。 此类包含的列映射和参数映射。 声明中指定列映射; 中的每个字段的用户记录类的数据成员对于每个这些成员，还声明状态数据成员和长度数据成员。 有关详细信息，请参阅[向导生成的取值函数中的字段状态数据成员](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)。
+1. 创建将列绑定到本地变量的用户记录类。 在此示例中，`CMyTableNameAccessor` 是用户记录类（请参阅[用户记录](../../data/oledb/user-records.md)）。 此类包含列映射和参数映射。 在用户记录类中为你在列映射中指定的每个字段声明数据成员；对于每个数据成员，还声明状态数据成员和长度数据成员。 有关详细信息，请参阅[向导生成的取值函数中的字段状态数据成员](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)。
 
     > [!NOTE]
-    > 如果您编写自己的使用者，则数据变量必须在状态和长度变量之前。
+    > 如果你编写自己的使用者，数据变量必须位于状态变量和长度变量前面。
 
-- 实例化的数据源和会话。 决定哪种类型的访问器和行集使用，然后实例化行集使用[CCommand](../../data/oledb/ccommand-class.md)或[CTable](../../data/oledb/ctable-class.md):
+- 实例化数据源和会话。 确定要使用什么类型的取值函数和行集，然后使用 [CCommand](../../data/oledb/ccommand-class.md) 或 [CTable](../../data/oledb/ctable-class.md) 实例化行集：
 
     ```cpp
     CDataSource ds;
@@ -40,15 +40,15 @@ ms.locfileid: "62362499"
     class CMyTableName : public CCommand<CAccessor<CMyTableNameAccessor>>
     ```
 
-- 调用`CoInitialize`初始化 com。 这称为主代码中。 例如：
+- 调用 `CoInitialize` 来初始化 COM。 调用是在主代码中进行。 例如:
 
     ```cpp
     HRESULT hr = CoInitialize(NULL);
     ```
 
-- 调用[cdatasource:: Open](../../data/oledb/cdatasource-open.md)或其中一个及其变体。
+- 调用 [CDataSource::Open](../../data/oledb/cdatasource-open.md) 或其变体之一。
 
-- 打开与数据源的连接、 打开会话，并打开和初始化行集 （和如果一个命令，还执行它）：
+- 打开与数据源的连接，打开会话，然后打开并初始化行集（如果是命令的话，还要执行它）：
 
     ```cpp
     hr = ds.Open();
@@ -56,11 +56,11 @@ ms.locfileid: "62362499"
     hr = rs.Open();            // (Open also executes the command)
     ```
 
-- 使用的 （可选） 设置行集属性`CDBPropSet::AddProperty`并将它们作为参数传递`rs.Open`。 有关如何完成此操作的示例，请参阅`GetRowsetProperties`中[使用者向导生成方法](../../data/oledb/consumer-wizard-generated-methods.md)。
+- （可选）使用 `CDBPropSet::AddProperty` 设置行集属性，并将它们作为参数传递给 `rs.Open`。 有关如何完成此操作的示例，请参阅[使用者向导生成的方法](../../data/oledb/consumer-wizard-generated-methods.md)中的“`GetRowsetProperties`”。
 
-- 现在可以使用行集来检索/操作数据。
+- 现在可以使用行集来检索/控制数据了。
 
-- 完成你的应用程序后，关闭连接、 会话和行集：
+- 完成应用程序后，关闭连接、会话和行集：
 
     ```cpp
     rs.Close();
@@ -68,9 +68,9 @@ ms.locfileid: "62362499"
     ds.Close();
     ```
 
-   如果使用的命令，你可能想要调用`ReleaseCommand`后`Close`。 中的代码示例[ccommand:: Close](../../data/oledb/ccommand-close.md)演示了如何调用`Close`和`ReleaseCommand`。
+   如果使用的是命令，建议在 `Close` 后面调用 `ReleaseCommand`。 [CCommand::Close](../../data/oledb/ccommand-close.md) 中的代码示例展示了如何调用 `Close` 和 `ReleaseCommand`。
 
-- 调用`CoUnInitialize`取消初始化 com。 这称为主代码中。
+- 调用 `CoUnInitialize` 来取消初始化 COM。 调用是在主代码中进行。
 
     ```cpp
     CoUninitialize();

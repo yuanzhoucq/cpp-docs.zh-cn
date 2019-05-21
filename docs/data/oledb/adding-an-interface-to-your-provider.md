@@ -1,21 +1,24 @@
 ---
 title: 将接口添加到提供程序
-ms.date: 10/29/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB provider templates, object interfaces
 ms.assetid: b0fc7cf8-428a-4584-9d64-ce9074d0eb66
-ms.openlocfilehash: c0452ca74509b65de3787af93bff41b3cb399c99
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a1d219568c1787558674c47edd55436b8690a61c
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384967"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524809"
 ---
 # <a name="adding-an-interface-to-your-provider"></a>将接口添加到提供程序
 
-确定你想要添加到接口的对象 (通常由创建数据源、 行集、 命令或会话对象**OLE DB 提供程序向导**)。 可能需要将添加到接口的对象是一个您的提供程序当前不支持它。 在这种情况下，运行**ATL OLE DB 提供程序向导**来创建对象。 右键单击该项目中的**类视图**，单击**添加** > **新项**从菜单中选择**已安装** > **可视化C++**   >  **ATL**，然后单击**ATL OLEDB 提供程序**。 你可能想要将接口代码放在一个单独的目录，然后将文件复制到你提供程序的项目。
+> [!NOTE]
+> ATL OLE DB 提供程序向导不适用于 Visual Studio 2019 及更高版本。
 
-如果你创建一个新类来支持接口，请从类中继承的对象。 例如，可能会将类添加`IRowsetIndexImpl`到行集对象：
+确定要将接口添加到哪个对象中（通常是 OLE DB 提供程序向导创建的数据源、行集、命令或会话对象）。 需要将接口添加到的对象可以是提供程序暂不支持的对象。 在这种情况下，运行 ATL OLE DB 提供程序向导来创建对象。 右键单击“类视图”中的项目，依次单击菜单中的“添加” > “新项”，依次选择“已安装” > “Visual C++” > “ATL”，再单击“ATL OLEDB 提供程序”。 建议将接口代码置于独立目录中，然后将文件复制到提供程序项目。
+
+如果已新建类来支持接口，请让对象继承自相应类。 例如，可以将类 `IRowsetIndexImpl` 添加到行集对象：
 
 ```cpp
 template <class Creator>
@@ -24,7 +27,7 @@ class CCustomRowset :
     public IRowsetIndexImpl< ... >
 ```
 
-将接口添加到 COM_MAP 中，使用 COM_INTERFACE_ENTRY 宏的对象中。 如果没有映射，创建一个。 例如：
+使用 COM_INTERFACE_ENTRY 宏将接口添加到对象中的 COM_MAP。 如果没有映射，请创建一个。 例如:
 
 ```cpp
 BEGIN_COM_MAP(CCustomRowset)
@@ -32,7 +35,7 @@ BEGIN_COM_MAP(CCustomRowset)
 END_COM_MAP()
 ```
 
-行集对象链的映射其父对象，以便对象可以委托给的父类。 在此示例中，将添加到地图的 COM_INTERFACE_ENTRY_CHAIN 宏：
+对于行集对象，链接它的父对象的映射，这样就能将对象委托给父类。 在此示例中，将 COM_INTERFACE_ENTRY_CHAIN 宏添加到映射中：
 
 ```cpp
 BEGIN_COM_MAP(CCustomRowset)
