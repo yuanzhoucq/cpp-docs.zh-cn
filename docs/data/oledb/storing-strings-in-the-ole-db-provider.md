@@ -1,19 +1,23 @@
 ---
 title: 将字符串存储在 OLE DB 提供程序中
-ms.date: 10/26/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - user records, editing
 ms.assetid: 36cb9635-067c-4cad-8f85-962f28026f6a
-ms.openlocfilehash: 5dce7dac84ef69da17baac135a68bd78698c4456
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
-ms.translationtype: MT
+ms.openlocfilehash: f0ae4a3718858c4de5417aaf5a4f9bc0c0ba9984
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344976"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525357"
 ---
 # <a name="storing-strings-in-the-ole-db-provider"></a>将字符串存储在 OLE DB 提供程序中
 
-在中*自定义*RS.h， **ATL OLE DB 提供程序向导**创建默认的用户记录调用`CWindowsFile`。 若要处理两个字符串，修改`CWindowsFile`如下面的代码中所示：
+> [!NOTE] 
+> ATL OLE DB 提供程序向导不适用于 Visual Studio 2019 及更高版本。
+
+
+在 CustomRS.h 中，ATL OLE DB 提供程序向导创建默认用户记录（称为“`CWindowsFile`”）。 若要处理两个字符串，请修改 `CWindowsFile`，如下面的代码所示：
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -48,9 +52,9 @@ END_PROVIDER_COLUMN_MAP()
 };
 ```
 
-数据成员`szCommand`并`szText`表示两个字符串，并将`szCommand2`和`szText2`具有必要的其他列。 数据成员`dwBookmark`的此简单的只读提供程序不需要但更高版本用于添加`IRowsetLocate`接口; 请参阅[增强简单读取仅提供程序](../../data/oledb/enhancing-the-simple-read-only-provider.md)。 `==`实例进行比较的运算符 （实现此运算符是可选的）。
+数据成员 `szCommand` 和 `szText` 表示两个字符串，`szCommand2` 和 `szText2` 根据需要包含其他列。 这一简单的只读提供程序不需要数据成员 `dwBookmark`，但稍后用它来添加 `IRowsetLocate` 接口；请参阅[增强简单的只读提供程序](../../data/oledb/enhancing-the-simple-read-only-provider.md)。 `==` 运算符比较实例（可视需要实现此运算符）。
 
-完成此操作后，您可以添加的功能[将字符串读入 OLE DB 访问接口](../../data/oledb/reading-strings-into-the-ole-db-provider.md)。
+完成后，可以添加[将字符串读入 OLE DB 提供程序](../../data/oledb/reading-strings-into-the-ole-db-provider.md)这一功能。
 
 ## <a name="see-also"></a>请参阅
 

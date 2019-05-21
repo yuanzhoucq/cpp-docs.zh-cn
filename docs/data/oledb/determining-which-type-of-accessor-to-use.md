@@ -1,35 +1,35 @@
 ---
 title: 确定要使用的访问器类型
-ms.date: 10/24/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - rowsets [C++], data types
 - accessors [C++], types
 ms.assetid: 22483dd2-f4e0-4dcb-8e4d-cd43a9c1a3db
-ms.openlocfilehash: 98234852d0577e581135980d6b8e525aeead5dc2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: f32b3375a517c8716324a2d5b35ec16826605f8e
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175363"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525094"
 ---
 # <a name="determining-which-type-of-accessor-to-use"></a>确定要使用的访问器类型
 
-在编译时或在运行时，您可以确定行集上的数据类型。
+可以在编译时或运行时确定行集的数据类型。
 
-如果您需要在编译时确定数据类型，使用静态访问器 (如`CAccessor`)。 您可以手动或使用确定的数据类型**ATL OLE DB 使用者向导**。
+如果需要在编译时确定数据类型，请使用静态取值函数（如 `CAccessor`）。 
 
-如果您需要在运行时确定的数据类型，使用动态 (`CDynamicAccessor`或其子级) 或手动访问器 (`CManualAccessor`)。 在这些情况下，您可以调用`GetColumnInfo`上要返回的列绑定信息，您可以确定类型的行集。
+如果需要在运行时确定数据类型，请使用动态取值函数（`CDynamicAccessor` 或其子级）或手动取值函数 (`CManualAccessor`)。 在这种情况下，可以对行集调用 `GetColumnInfo`，以返回从中能确定类型的列绑定信息。
 
-下表列出了使用者模板中提供的访问器的类型。 每个访问器都有优点和缺点。 具体取决于您的具体情况，一个取值函数类型应满足你的需求。
+下表列出了使用者模板中提供的取值函数类型。 每种取值函数都有各自的优点和缺点。 应有一种取值函数类型能够满足你的需求，具体视情况而定。
 
-|访问器类|绑定|参数|注释|
+|取值函数类|绑定|参数|注释|
 |--------------------|-------------|---------------|-------------|
-|`CAccessor`|COLUMN_ENTRY 宏创建的用户记录。 宏将该记录中的数据成员绑定到的访问器。 创建行集时，不能为未绑定列。|是的通过使用 PARAM_MAP 宏项。 绑定后，参数不能为未绑定。|由于少量的代码的最快访问器。|
-|`CDynamicAccessor`|自动。|不是。|如果不知道的行集中的数据类型，这很有用。|
-|`CDynamicParameterAccessor`|自动进行的但可以是[重写](../../data/oledb/overriding-a-dynamic-accessor.md)。|是的如果提供程序支持`ICommandWithParameters`。 自动绑定参数。|低于`CDynamicAccessor`但可用于调用泛型存储的过程。|
-|`CDynamicStringAccessor[A,W]`|自动。|不是。|检索从字符串数据作为数据存储区访问的数据。|
-|`CManualAccessor`|手动使用`AddBindEntry`。|使用手动`AddParameterEntry`。|快速;参数和列绑定仅一次。 确定要使用数据的类型。 (请参阅[DBVIEWER](https://github.com/Microsoft/VCSamples)示例有关的示例。)需要更多代码`CDynamicAccessor`或`CAccessor`。 而是要直接调用 OLE DB。|
-|`CXMLAccessor`|自动。|不是。|检索从字符串数据作为数据存储区访问的数据，并将其格式化为 XML 标记数据。|
+|`CAccessor`|使用 COLUMN_ENTRY 宏创建用户记录。 宏将此记录中的数据成员绑定到取值函数。 在行集创建后，就无法解除绑定列。|是，通过使用 PARAM_MAP 宏条目。 一旦绑定，就无法解除绑定参数。|最快的取值函数，因为只有少量代码。|
+|`CDynamicAccessor`|自动。|不是。|如果不知道行集的数据类型，便会发现此取值函数很有用。|
+|`CDynamicParameterAccessor`|自动，但可以[重写](../../data/oledb/overriding-a-dynamic-accessor.md)。|是，前提是提供程序支持 `ICommandWithParameters`。 参数自动绑定。|比 `CDynamicAccessor` 慢，但对调用泛型存储过程很有用。|
+|`CDynamicStringAccessor[A,W]`|自动。|不是。|将从数据存储中取值的数据作为字符串数据进行检索。|
+|`CManualAccessor`|手动使用 `AddBindEntry`。|手动使用 `AddParameterEntry`。|快速；参数和列仅绑定一次。 你确定要使用的数据类型。 （有关示例，请参阅 [DBVIEWER](https://github.com/Microsoft/VCSamples) 示例。）需要的代码比 `CDynamicAccessor` 或 `CAccessor` 多。 这更像是直接调用 OLE DB。|
+|`CXMLAccessor`|自动。|不是。|将从数据存储中取值的数据作为字符串数据进行检索，并将它格式化为 XML 标记的数据。|
 
 ## <a name="see-also"></a>请参阅
 

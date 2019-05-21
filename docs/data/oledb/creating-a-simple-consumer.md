@@ -1,102 +1,112 @@
 ---
 title: 创建简单使用者
-ms.date: 11/06/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: ae32d657-72ea-4db8-9839-75cb5cff68ae
-ms.openlocfilehash: 060a39a8436ff73900ebfaea7d1c882b9862ee7e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: f72363478696baccb0473e37104427b1516b39c3
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62361945"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524998"
 ---
 # <a name="creating-a-simple-consumer"></a>创建简单使用者
 
-使用**ATL 项目向导**并**ATL OLE DB 使用者向导**生成的 OLE DB 模板使用者。
+::: moniker range="vs-2019"
 
-## <a name="to-create-a-console-application-for-an-ole-db-consumer"></a>若要为 OLE DB 使用者创建一个控制台应用程序
+ATL OLE DB 使用者向导不适用于 Visual Studio 2019 及更高版本。 但仍可以手动添加此功能。 有关详细信息，请参阅[不使用向导创建使用者](creating-a-consumer-without-using-a-wizard.md)。
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+ATL 项目向导和 ATL OLE DB 使用者向导可用于生成 OLE DB 模板使用者。
+
+## <a name="to-create-a-console-application-for-an-ole-db-consumer"></a>为 OLE DB 使用者创建控制台应用程序的具体步骤
 
 1. 在 **“文件”** 菜单上，单击 **“新建”**，然后单击 **“项目”**。
 
    此时将出现“新建项目”对话框。
 
-1. 在中**项目类型**窗格中，单击**已安装** > **Visual C++**   >  **Windows 桌面**文件夹，，然后单击**Windows 桌面向导**中的图标**模板**窗格。 在中**名称**框中，例如，输入你的项目名称*MyCons*。
+1. 在“项目类型”窗格中，依次单击“已安装” > “Visual C++” > “Windows 桌面”文件夹，再单击“模板”窗格中的“Windows 桌面向导”图标。 在“名称”框中，输入项目名称（例如“MyCons”）。
 
 1. 单击 **“确定”**。
 
-   **Windows 桌面项目**向导显示。
+   此时，“Windows 桌面项目”向导显示。
 
-1. 上**应用程序设置**页上，选择**控制台应用程序**，然后选择**为 ATL 添加常用标头文件**。
+1. 在“应用程序设置”页上，依次选择“控制台应用程序”和“添加 ATL 的常用头文件”。
 
-1. 单击**确定**若要关闭向导并生成该项目。
+1. 单击“确定”，以关闭向导并生成项目。
 
-接下来，使用**ATL OLE DB 使用者向导**添加 OLE DB 使用者对象。
+接下来，使用 ATL OLE DB 使用者向导来添加 OLE DB 使用者对象。
 
-## <a name="to-create-a-consumer-with-the-atl-ole-db-consumer-wizard"></a>若要创建使用者使用 ATL OLE DB 使用者向导
+## <a name="to-create-a-consumer-with-the-atl-ole-db-consumer-wizard"></a>使用 ATL OLE DB 使用者向导来创建使用者的具体步骤
 
-1. 在中**解决方案资源管理器**，右键单击`MyCons`项目。
+1. 在“解决方案资源管理器”中，右键单击“`MyCons`”项目。
 
-1. 在快捷菜单上，单击**外**，然后单击**新项**。
+1. 在快捷菜单中，依次单击“添加”和“新项”。
 
    “添加新项”对话框随即出现。
 
-1. 在中**类别**窗格中，单击**已安装** > **Visual C++**   >  **ATL**，单击**ATL OLEDB 使用者**中的图标**模板**窗格中，，然后单击**添加**。
+1. 在“类别”窗格中，依次单击“已安装”>“Visual C++”>“ATL”，再依次单击“模板”窗格中的“ATL OLEDB 使用者”图标和“添加”。
 
-   **ATL OLEDB 使用者向导**出现。
+   此时，ATL OLEDB 使用者向导显示。
 
-1. 单击**数据源**按钮。
+1. 单击“数据源”按钮。
 
-   **数据链接属性**对话框随即出现。
+   此时，“数据链接属性”对话框显示。
 
-1. 在中**数据链接属性**对话框框中，执行以下操作：
+1. 在“数据链接属性”对话框框中，执行以下操作：
 
-   1. 上**提供程序**选项卡上，指定 OLE DB 访问接口。
+   1. 在“提供程序”选项卡上，指定 OLE DB 提供程序。
 
-   1. 上**连接**选项卡上，在服务器上指定所需的信息，例如服务器名称、 登录 ID 和数据源和数据库的密码。
-
-      > [!NOTE]
-      > 安全问题**允许保存密码**的功能**数据链接属性**对话框。 在中**输入登录到服务器上的信息**，有两个单选按钮：**使用 Windows NT 集成安全性**并**使用特定用户名和密码**。
+   1. 在“连接”选项卡上，指定数据源和服务器上的数据库的必需信息（如服务器名称、登录 ID 和密码）。
 
       > [!NOTE]
-      > 如果选择**使用特定用户名和密码**，可以选择保存密码 (使用**允许保存密码**复选框); 但是，此选项是不安全。 我们建议您选择**使用 Windows NT 集成安全性**; 此选项使用 Windows NT 身份验证。
+      > “数据链接属性”对话框的“允许保存密码”功能存在安全问题。 在“输入登录服务器所需的信息”中，有两个单选按钮：“使用 Windows NT 集成安全性”和“使用特定的用户名和密码”。
 
       > [!NOTE]
-      > 如果无法使用 Windows NT 集成安全性，应使用的中间层应用程序提示用户输入密码或者与安全机制来帮助保护其将密码存储在一个位置 (而不是在源代码中)。
+      > 如果选中“使用特定的用户名和密码”，可以视需要保存密码（使用“允许保存密码”复选框），但这样做并不安全。 建议选中“使用 Windows NT 集成安全性”；此选项使用 Windows NT 来验证身份。
 
-   1. 选择您的提供程序和其他设置后，单击**测试连接**验证在前面的对话框页上所做的选择。 如果**结果**框报表`Test connection succeeded`，单击**确定**若要创建数据链接。
+      > [!NOTE]
+      > 如果无法使用 Windows NT 集成安全性，应使用中间层应用程序来提示用户输入密码，或将密码存储在有安全机制的位置上来保护它（而不是存储在源代码中）。
 
-   **选择数据库对象**对话框随即出现。
+   1. 选择提供程序和其他设置后，单击“测试连接”，以验证在前几个对话框页上所做的选择。 如果“结果”框报告“`Test connection succeeded`”，单击“确定”来创建数据链接。
 
-1. 使用树控件选择表、 视图或存储的过程。 对于此示例中，选择`Products`表从`Northwind`数据库。
+   此时，“选择数据库对象”对话框显示。
 
-1. 单击 **“确定”**。 你将返回到**ATL OLE DB 使用者向导**。
+1. 使用树控件来选择表、视图或存储过程。 在此示例中，从“`Northwind`”数据库中选择“`Products`”表。
 
-1. 在向导完成的名称`Class`并 **.h 文件**基于名称的表、 视图或存储所选的过程。 如果需要，可以编辑这些名称。
+1. 单击 **“确定”**。 这样，你会返回到 ATL OLE DB 使用者向导。
 
-1. 清除**特性化**复选框，以便该向导将创建使用者代码使用[OLE DB 模板类](../../data/oledb/ole-db-consumer-templates-reference.md)而不是默认[OLE DB 使用者特性](../../windows/ole-db-consumer-attributes.md)。
+1. 向导根据你选择的表、视图或存储过程的名称，填写“`Class`”和“.h 文件”名称。 如果需要，可以编辑这些名称。
 
-1. 下**类型**，选择**命令**。
+1. 取消选中“特性化”复选框，这样向导就能使用 [OLE DB 模板类](../../data/oledb/ole-db-consumer-templates-reference.md)（而不是默认 [OLE DB 使用者特性](../../windows/ole-db-consumer-attributes.md)）来创建使用者代码。
 
-   该向导将创建[CCommand](../../data/oledb/ccommand-class.md)-如果选择基于使用者**命令**或[CTable](../../data/oledb/ctable-class.md)-如果选择基于使用者**表**。 表或命令类命名所选对象，但您可以编辑该名称。
+1. 在“类型”下，选择“命令”。
 
-1. 下**支持**，将保留**更改**，**插入**，以及**删除**框被清除。
+   如果你选择“命令”，向导创建基于 [CCommand](../../data/oledb/ccommand-class.md) 的使用者；如果你选择“表”，向导创建基于 [CTable](../../data/oledb/ctable-class.md) 的使用者。 虽然表或命令类是以选定对象命名，但你可以编辑名称。
 
-   选择**更改**，**插入**，并**删除**复选框，以支持更改、 插入和删除行集中的记录。 详细了解数据写入数据存储，请参阅[更新行集](../../data/oledb/updating-rowsets.md)。
+1. 在“支持”下，取消选中“更改”、“插入”和“删除”框。
 
-1. 单击**完成**若要创建使用者。
+   选中“更改”、“插入”和“删除”复选框，可以支持更改、插入和删除行集中的记录。 若要详细了解如何将数据写入数据存储，请参阅[更新行集](../../data/oledb/updating-rowsets.md)。
 
-该向导生成命令类和用户记录类，如中所示[使用者向导生成的类](../../data/oledb/consumer-wizard-generated-classes.md)。 命令类将具有你在中输入的名称`Class`向导中框 (在这种情况下， `CProducts`)，用户记录类将具有窗体的名称"*ClassName*访问器"(在这种情况下， `CProductsAccessor`)。
+1. 单击“完成”，以创建使用者。
+
+此时，向导生成命令类和用户记录类，如[使用者向导生成的类](../../data/oledb/consumer-wizard-generated-classes.md)中所述。 命令类以你在向导的“`Class`”框中输入的名称命名（在此示例中为 `CProducts`），用户记录类采用“ClassNameAccessor”格式的名称（在此示例中为 `CProductsAccessor`）。
 
 > [!NOTE]
-> 该向导将放到以下行`Products.h`:
+> 向导将下面的代码行添加到 `Products.h` 中：
 
 ```cpp
 #error Security Issue: The connection string may contain a password
 ```
 
 > [!NOTE]
-> 此行会阻止使用者应用程序进行编译，并提醒您检查您的连接字符串的硬编码的密码。 在检查你的连接字符串之后, 可以删除这行代码。
+> 此代码行会阻止使用者应用程序进行编译，并提醒你检查连接字符串中是否有硬编码密码。 检查连接字符串后，可以删除此代码行。
+
+::: moniker-end
 
 ## <a name="see-also"></a>请参阅
 
