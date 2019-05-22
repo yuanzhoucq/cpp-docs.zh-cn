@@ -1,38 +1,44 @@
 ---
 title: 添加 ATL Active Server Page 组件
-ms.date: 11/04/2016
-helpviewer_keywords:
-- ASP components, adding
-- ASP components
-- ATL, ASP components
-- ATL ASP components
+ms.date: 05/09/2019
 ms.assetid: 7be2204c-6e58-4099-8892-001b848c8987
-ms.openlocfilehash: 2f7ad08cb514e33224c877bcbf1c5e8128e26185
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: b6c1d23efdff6885cc8ab900aaf552db39631e6e
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261307"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706932"
 ---
 # <a name="adding-an-atl-active-server-page-component"></a>添加 ATL Active Server Page 组件
 
-若要添加到你的项目的活动模板库 (ATL) 对象，你的项目必须已创建作为 ATL COM 应用程序或包含 ATL 支持的 MFC 应用程序。 可以使用[ATL 项目向导](../../atl/reference/atl-project-wizard.md)若要创建 ATL 应用程序，可以选择**向 MFC 添加 ATL 支持**从[添加类对话框](../../ide/add-class-dialog-box.md)对话框中，或者也可以[MFC 应用程序中添加的 ATL 对象](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)实现为 MFC 应用程序的 ATL 支持。
 
-Active Server Pages 组件是 Internet 信息服务体系结构，它提供以下高级的 Web 开发功能的一部分：
+::: moniker range="vs-2019"
 
-- 可以将 ASP 组件嵌入到 HTML 页中以创建动态、 独立于浏览器的内容。
+ATL Active Server Page 组件向导在 Visual Studio 2019 及更高版本中不可用。
 
-- ASP 页可用于提供基于标准的数据库连接。
+::: moniker-end
 
-- 为基于 Web 的应用程序，可以使用 ASP 错误处理功能。
+::: moniker range="<=vs-2017"
 
-## <a name="to-add-an-atl-active-server-pages-component-to-your-project"></a>若要向项目添加 ATL Active Server Pages 组件
+若要将活动模板库 (ATL) 对象添加到项目中，项目则必须已创建为 ATL COM 应用程序或者是包含 ATL 支持的 MFC 应用程序。 可以使用 [ATL 项目向导](../../atl/reference/atl-project-wizard.md)创建 ATL 应用程序，可以从[“添加类对话框”](../../ide/add-class-dialog-box.md)对话框中选择“向 MFC 添加 ATL 支持”，或者可以[将 ATL 对象添加到 MFC 应用程序](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)来实现对 MFC 应用程序的 ATL 支持。
 
-1. 在中**解决方案资源管理器**右键单击你想要添加的 ATL Active Server Pages 组件的项目的名称。
+Active Server Pages 组件是 Internet Information Services 体系结构的一部分，此体系结构提供以下高级 Web 开发功能：
+
+- 可以将 ASP 组件嵌入 HTML 页面中以创建独立于浏览器的动态内容。
+
+- 可以使用 ASP 页面提供基于标准的数据库连接。
+
+- 可以为基于 Web 的应用程序使用 ASP 错误处理功能。
+
+## <a name="to-add-an-atl-active-server-pages-component-to-your-project"></a>将 ATL Active Server Pages 组件添加到项目中
+
+1. 在“解决方案资源管理器”中，右键单击要向其添加 ATL Active Server Pages 组件的项目的名称。
 
 1. 从快捷菜单中，单击“添加”，然后单击“添加类”。
 
-1. 在中[添加类](../../ide/add-class-dialog-box.md)对话框中**模板**窗格中，单击**ATL Active Server Page 组件**，然后单击**打开**显示[ATL Active Server Page 组件向导](../../atl/reference/atl-active-server-page-component-wizard.md)。
+1. 在[“添加类”](../../ide/add-class-dialog-box.md)对话框的“模板”窗格中，单击“ATL Active Server Page 组件”，然后单击“打开”以显示 [ATL Active Server Page 组件向导](../../atl/reference/atl-active-server-page-component-wizard.md)。
+
+::: moniker-end
 
 ## <a name="see-also"></a>请参阅
 

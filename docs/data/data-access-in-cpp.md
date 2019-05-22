@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: 95da6237-bbe2-480a-ae50-3a520051ceff
-ms.openlocfilehash: a68c4a9df3b439ae641c5e4cbe6f3fbc8b8e6355
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: e9222f16ef6356c2d89401690bda7e6d27f8aba6
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222530"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708032"
 ---
 # <a name="data-access-in-visual-c"></a>Visual C++ 中的数据访问
 
@@ -30,31 +30,31 @@ ms.locfileid: "65222530"
 Microsoft 基础类 (MFC) 库提供使用开放式数据库连接 (ODBC) 进行编程时所需的类。
 
 [OLE DB 编程](oledb/ole-db-programming.md)<br/>
-一个主要旧接口，仍然需要在某些情况下，特别是，当对链接服务器进行编程。
+在某些情况下，尤其是在针对链接服务器进行编程时，仍然需要旧版接口。
 
 ## <a name="related-topics"></a>相关主题
 
-[连接到 SQL 数据库使用 C 和C++](/azure/sql-database/sql-database-develop-cplusplus-simple)<br/>
-从 C 连接到 Azure SQL 数据库或C++应用程序。
+[使用 C 和 C++连接到 SQL 数据库](/azure/sql-database/sql-database-develop-cplusplus-simple)<br/>
+从 C 或 C++ 应用程序连接到 Azure SQL 数据库。
 
-[用于 Microsoft Azure 存储客户端库C++](https://github.com/Azure/azure-storage-cpp)<br/>
+[用于 C++ 的 Microsoft Azure 存储客户端库](https://github.com/Azure/azure-storage-cpp)<br/>
 [Azure 存储](/azure/storage/storage-introduction)是一种云存储解决方案，用于依赖于持久性、可用性和可扩展性来满足其客户需求的现代应用程序。 使用适用于 C++ 的 Azure 存储客户端库，从 C++ 连接到 Azure 存储。
 
-[适用于 SQL Server 的 ODBC 驱动程序](/sql/connect/odbc/microsoft-odbc-driver-for-sql-server)<br/>
-最新的 ODBC 驱动程序提供对 Microsoft SQL Server 和 Microsoft Azure SQL 数据库于 c 语言的可靠数据访问 /C++基于应用程序。 提供始终加密功能，包括支持、 Azure Active Directory 和 AlwaysOn 可用性组。 此外，还可用于 MacOS 和 Linux。
+[ODBC Driver for SQL Server](/sql/connect/odbc/microsoft-odbc-driver-for-sql-server)<br/>
+最新的 ODBC 驱动程序为基于 C/C++ 的应用程序提供了对 Microsoft SQL Server 和 Microsoft Azure SQL 数据库的可靠数据访问。 提供对包括始终加密、Azure Active Directory 和 AlwaysOn 可用性组在内等功能的支持。 此外，还可用于 MacOS 和 Linux。
 
-[适用于 SQL Server 的 OLE DB 驱动程序](/sql/connect/oledb/oledb-driver-for-sql-server)<br/>
-最新的 OLE DB 驱动程序是独立的数据访问应用程序编程接口 (API) 支持 Microsoft SQL Server 和 Microsoft Azure SQL 数据库。
+[OLE DB Driver for SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server)<br/>
+最新的 OLE DB 驱动程序是一个独立的数据访问应用程序编程接口 (API)，支持 Microsoft SQL Server 和 Microsoft Azure SQL 数据库。
 
-[Microsoft Azure C 和C++开发人员中心](https://azure.microsoft.com/develop/cpp/)<br/>
+[Microsoft Azure C 和 C++ 开发人员中心](https://azure.microsoft.com/develop/cpp/)<br/>
 通过 Azure，用户可以使用喜欢的工具轻松生成更具灵活性、可扩展性和可靠性的 C++ 应用程序。
 
-[如何通过使用 Blob 存储C++](https://docs.microsoft.com/azure/storage/storage-c-plus-plus-how-to-use-blobs)<br/>
+[如何从 C++ 使用 Blob 存储](https://docs.microsoft.com/azure/storage/storage-c-plus-plus-how-to-use-blobs)<br/>
 Azure Blob 存储是将非结构化数据作为对象/blob 存储在云中的服务。 Blob 存储可以存储任何类型的文本或二进制数据（如文档、媒体文件或应用程序安装程序）。 Blob 存储也称为对象存储。
 
-[ ODBC 程序员参考](https://docs.microsoft.com/sql/odbc/reference/odbc-programmer-s-reference)<br/>
-ODBC 接口用于与 C 编程语言一起使用。 ODBC 接口的使用涉及三大块：SQL 语句，ODBC 函数调用，以及 C 编程。
+[ODBC 程序员参考](https://docs.microsoft.com/sql/odbc/reference/odbc-programmer-s-reference)<br/>
+ODBC 接口用于与 C 编程语言一起使用。 ODBC 接口的使用涉及三个领域：SQL 语句、ODBC 函数调用和 C 编程。
 
 ## <a name="see-also"></a>请参阅
 
-[Visual C++](../overview/visual-cpp-in-visual-studio.md)
+[Visual Studio 中的 C++](../overview/visual-cpp-in-visual-studio.md)
