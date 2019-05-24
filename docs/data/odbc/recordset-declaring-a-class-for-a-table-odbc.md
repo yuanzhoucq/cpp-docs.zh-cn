@@ -1,22 +1,25 @@
 ---
-title: 记录集：声明一个类 (ODBC) 的表
-ms.date: 11/04/2016
+title: 记录集：声明表的类 (ODBC)
+ms.date: 05/09/2019
 helpviewer_keywords:
 - ODBC recordsets, declaring class for tables
 - recordsets, declaring classes for tables
 ms.assetid: 3fe286c2-3f3d-493d-9d8c-762310939d08
-ms.openlocfilehash: 17adc6e26dcbb39453d9009d82843d213271cc78
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: ea17f131552fe7f71d9106a8979bb661955fe850
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397869"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707950"
 ---
-# <a name="recordset-declaring-a-class-for-a-table-odbc"></a>记录集：声明一个类 (ODBC) 的表
+# <a name="recordset-declaring-a-class-for-a-table-odbc"></a>记录集：声明表的类 (ODBC)
+
+> [!NOTE] 
+> MFC ODBC 使用者向导在 Visual Studio 2019 及更高版本中不可用。 你仍可以手动创建使用者。
 
 本主题适用于 MFC ODBC 类。
 
-最常见的记录集类打开单个表。 若要声明单个表的记录集类，请使用[MFC ODBC 使用者向导](../../mfc/reference/adding-an-mfc-odbc-consumer.md)从**添加类**并选择所需的命名对应的记录集字段数据成员的每个列。
+最常见的记录集类将打开单个表。 若要为单个表声明记录集类，请使用“添加类”中的 [MFC ODBC 使用者向导](../../mfc/reference/adding-an-mfc-odbc-consumer.md)，并通过命名相应的记录集字段数据成员来选择所需的每个列。
 
 记录集的其他用途包括：
 

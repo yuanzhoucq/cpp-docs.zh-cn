@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - .MODEL directive
 ms.assetid: 057f00df-1515-4c55-852a-d936c8a34b53
-ms.openlocfilehash: c3917fea0f13e54d5f8f73599a2d28482bb6d259
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: c409bf10a2f863c380cda6b4822583ffb3787da6
+ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62204092"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934100"
 ---
 # <a name="model"></a>.MODEL
 
@@ -19,40 +19,40 @@ ms.locfileid: "62204092"
 
 ## <a name="syntax"></a>语法
 
-> .模型 memorymodel [[，langtype]] [[，stackoption]]
+> .MODEL memorymodel [[, langtype]] [[, stackoption]]
 
 ### <a name="parameters"></a>参数
 
-*memorymodel*<br/>
-必需的参数，它确定的代码和数据的指针的大小。
+memorymodel<br/>
+必需参数，确定代码和数据指针的大小。
 
-*langtype*<br/>
-设置过程和公共符号的调用和命名约定的可选参数。
+langtype<br/>
+可选参数，设置过程和公共符号的调用和命名约定。
 
-*stackoption*<br/>
+stackoption<br/>
 可选参数。
 
-*stackoption*如果不使用*memorymodel*是`FLAT`。
+如果 memorymodel 为 `FLAT`，则不使用 stackoption。
 
-指定`NEARSTACK`组合到单个物理网段堆栈段 (`DGROUP`) 以及数据。 堆栈段寄存器 (`SS`) 假定用于保存数据段注册相同的地址 (`DS`)。 `FARSTACK` 非组与堆栈`DGROUP`; 因此`SS`不等于`DS`。
+指定 `NEARSTACK` 将堆栈段以及数据组合至单个物理段 (`DGROUP`)。 假定堆栈段寄存器 (`SS`) 与数据段寄存器 (`DS`) 保留相同的地址。 `FARSTACK` 不会将堆栈与 `DGROUP` 组合；因此，`SS` 不等于 `DS`。
 
 ## <a name="remarks"></a>备注
 
-.`MODEL` 中不使用[MASM 的 x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)。
+.`MODEL` 不在 [x64 的 MASM (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md) 中使用。
 
-面向 16 位和 32 位平台时下, 表列出了每个参数的可能值：
+下表列出了在面向 16 位和 32 位平台时每个参数的可能的值：
 
-|参数|32 位值|16 位值 （支持早期的 16 位开发）|
+|参数|32 位值|16 位值（支持早期的 16 位开发）|
 |---------------|--------------------|----------------------------------------------------------------|
-|*memorymodel*|`FLAT`|`TINY`, `SMALL`, `COMPACT`, `MEDIUM`, `LARGE`, `HUGE`, `FLAT`|
-|*langtype*|`C`， `STDCALL`|`C`, `BASIC`, `FORTRAN`, `PASCAL`, `SYSCALL`, `STDCALL`|
-|*stackoption*|未使用|`NEARSTACK`， `FARSTACK`|
+|memorymodel|`FLAT`|`TINY`, `SMALL`, `COMPACT`, `MEDIUM`, `LARGE`, `HUGE`, `FLAT`|
+|langtype|`C`， `STDCALL`|`C`, `BASIC`, `FORTRAN`, `PASCAL`, `SYSCALL`, `STDCALL`|
+|stackoption|未使用|`NEARSTACK`， `FARSTACK`|
 
 ## <a name="code"></a>代码
 
-MASM 相关的示例，用于下载从编译器示例[可视化C++示例和相关文档的 Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=178749)。
+对于 MASM 的相关示例，可从 [Visual Studio 2010 的 Visual C++ 示例和相关文档](https://go.microsoft.com/fwlink/p/?linkid=178749)下载编译器示例。
 
-下面的示例演示如何将`.MODEL`指令。
+下面的示例演示 `.MODEL` 指令的用法。
 
 ## <a name="example"></a>示例
 

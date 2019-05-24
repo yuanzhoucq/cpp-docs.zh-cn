@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ATL projects, adding ATL OLE DB providers
 - ATL OLE DB providers
 ms.assetid: 26fba1e3-880f-4bc6-90e5-2096a48a3a6c
-ms.openlocfilehash: 78f26f43d11471c83bf9efcfc3aa55a23f0fbf3e
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 36c07da6249a106836433e127f95258d4ed5b509
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524614"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706947"
 ---
 # <a name="adding-an-atl-ole-db-provider"></a>添加 ATL OLE DB 提供程序
 
@@ -21,7 +21,7 @@ ATL OLE DB 提供程序向导不适用于 Visual Studio 2019 及更高版本。
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 此向导可用于将 ATL OLE DB 提供程序添加到项目中。 ATL OLE DB 提供程序由数据源、会话、命令和行集类组成。 项目必须已创建为 ATL COM 应用程序。
 

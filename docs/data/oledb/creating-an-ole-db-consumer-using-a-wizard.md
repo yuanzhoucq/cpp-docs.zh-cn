@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: efefd4c0-4491-4072-aa9b-59545641efb3
-ms.openlocfilehash: a07c52d4fdf3b1820e601ae1f132237e1e32f86f
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: dd731862adb741db068fc3465acb64b42e673522
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525051"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707608"
 ---
 # <a name="creating-an-ole-db-consumer-using-a-wizard"></a>使用向导创建 OLE DB 使用者
 
@@ -19,7 +19,7 @@ ATL OLE DB 使用者向导不适用于 Visual Studio 2019 及更高版本。 但
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 此过程展示了如何使用 ATL 项目向导和 ATL OLE DB 使用者向导生成 OLE DB 模板使用者，然后将控制台应用程序的主代码修改为检索和显示数据库表中的数据。
 

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - file types [C++], ATL source and headers
 ms.assetid: cb65372f-4880-4007-b582-a52eaa568fd1
-ms.openlocfilehash: 15d49cf984e45feeaad454de13c4ab37622000a4
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 5c1e5fc111b38fc9e4173598f11fbad7a658d755
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446580"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707506"
 ---
 # <a name="atl-program-or-control-source-and-header-files"></a>ATL 程序或控件的源文件和头文件
 
@@ -17,7 +17,7 @@ ms.locfileid: "65446580"
 
 所有这些文件都位于 Projname 目录中，并位于解决方案资源管理器中的头文件（.h 文件）文件夹或源文件（.cpp 文件）文件夹中。
 
-|文件名|描述|
+|文件名|说明|
 |---------------|-----------------|
 |projname.h|主包含文件，其中包含 C++ 接口定义和在 ATLSample.idl 中定义的项的 GUID 声明。 它是由 MIDL 在编译期间重新生成的。|
 |Projname.cpp|主程序源文件。 它包含实现进程内服务器的 DLL 的导出和实现本地服务器的 `WinMain`。 对于服务，它还实现所有服务管理函数。|
@@ -27,6 +27,6 @@ ms.locfileid: "65446580"
 
 ## <a name="see-also"></a>请参阅
 
-[视觉对象文件类型创建C++项目](file-types-created-for-visual-cpp-projects.md)<br>
+[为 Visual Studio C++ 项目创建的文件类型](file-types-created-for-visual-cpp-projects.md)<br>
 [MFC 程序或控件的源文件和头文件](mfc-program-or-control-source-and-header-files.md)<br>
 [CLR 项目](files-created-for-clr-projects.md)

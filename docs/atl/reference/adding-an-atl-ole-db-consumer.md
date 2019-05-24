@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - ATL OLE DB consumers
 ms.assetid: f940a513-4e42-4148-b521-dd0d7dc89fa2
-ms.openlocfilehash: 7925063e03522c96d251748b23b6b929733999a1
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 1e384a283a2a149faa5b8d6e0817eac3cacfeff9
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524640"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706900"
 ---
 # <a name="adding-an-atl-ole-db-consumer"></a>添加 ATL OLE DB 使用者
 
@@ -19,7 +19,7 @@ ATL OLE DB 使用者向导不适用于 Visual Studio 2019 及更高版本。 但
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 此向导可用于将 ATL OLE DB 使用者添加到项目中。 ATL OLE DB 使用者由访问数据源所需的 OLE DB 取值函数类和数据绑定组成。 项目必须已创建为 ATL COM 应用程序，或支持 ATL（ATL OLE DB 使用者向导自动添加此支持）的 MFC 或 Win32 应用程序。
 
