@@ -12,11 +12,11 @@ ms.locfileid: "62396101"
 ---
 # <a name="pimpl-for-compile-time-encapsulation-modern-c"></a>用于编译时封装的 Pimpl（现代 C++）
 
-*Pimpl 惯用语法*现代的 C++ 技术，可隐藏实现，以便最大程度减少耦合，从而单独的接口。 Pimpl 是短的"指向的实现。" 你已可能熟悉的概念，但是知道它通过类似 Cheshire Cat 或编译器防火墙惯用语法其他名称。
+*Pimpl 惯用语法*是新式 C++ 技术，可隐藏实现，以最大程度减少耦合，并分离出接口。 Pimpl 是"pointer to implementation"的缩写。你可能已通过 Cheshire Cat 或 Compiler Firewall 惯用语法等名称了解了这一概念。
 
-## <a name="why-use-pimpl"></a>为什么要使用的 pimpl？
+## <a name="why-use-pimpl"></a>为什么要使用 pimpl？
 
-下面是 pimpl 惯用语法可以如何改进软件开发生命周期：
+下面是 pimpl 惯用语法优化软件开发生命周期的方式：
 
 - 编译依赖项的最小化。
 
@@ -24,7 +24,7 @@ ms.locfileid: "62396101"
 
 - 可移植性。
 
-## <a name="pimpl-header"></a>Pimpl 标头
+## <a name="pimpl-header"></a>Pimpl 头文件
 
 ```cpp
 // my_class.h
@@ -35,7 +35,7 @@ private:
 };
 ```
 
-重新生成级联和脆弱的对象布局，可避免 pimpl 惯用语法。 它非常适合用于 （间接） 受欢迎的类型。
+pimpl 可避免重新生成级联和脆弱的对象布局。它非常适合（以及物方式）用于常见类型。
 
 ## <a name="pimpl-implementation"></a>Pimpl 实现
 
