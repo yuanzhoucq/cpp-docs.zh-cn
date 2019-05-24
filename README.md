@@ -1,10 +1,18 @@
-﻿# <a name="visual-studio-2017-documentation-for-visual-c"></a>有关 Visual C++ 的 Visual Studio 2017 文档
+﻿---
+ms.openlocfilehash: 279d5c5cbc86297df51ad3862a2e32d5e7bae5d2
+ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934197"
+---
+# <a name="visual-studio-2017-documentation-for-visual-c"></a>有关 Visual C++ 的 Visual Studio 2017 文档
 
 欢迎访问! 此存储库包含正在完善的 Visual C++ 技术文档的相关源文件。 主题发布在 [Visual C++ 文档站点](https://docs.microsoft.com/cpp)上。
 
 此存储库已于 2017 年 6 月 23 日从 Microsoft/vcppdocs 移至 MicrosoftDocs/cpp-docs-pr。
 
-Visual Basic 和 Visual C# 文档位于 [http://github.com/dotnet/core-docs](http://github.com/dotnet/core-docs) 上的单独存储库中，而 Visual Studio 2017 文档则位于 [http://github.com/Microsoft/visualstudio-docs](http://github.com/Microsoft/visualstudio-docs) 上的存储库中。
+Visual Basic 和 Visual C# 文档位于 [https://github.com/dotnet/core-docs](https://github.com/dotnet/core-docs) 上的单独存储库中，而 Visual Studio 2017 文档则位于 [https://github.com/Microsoft/visualstudio-docs](https://github.com/Microsoft/visualstudio-docs) 上的存储库中。
 
 ## <a name="contributing-to-the-documentation"></a>参与文档
 

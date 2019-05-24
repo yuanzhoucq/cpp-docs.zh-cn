@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, implementing
 ms.assetid: 13828167-23a4-4e94-8b6c-878262fda464
-ms.openlocfilehash: 592a51dd77f7a2e115ee67a481e56dc558209253
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 67bce55a19a2aaaf3a8cbb62d7db228513e93c91
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525078"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707530"
 ---
 # <a name="implementing-a-simple-consumer"></a>实现简单使用者
 
@@ -19,7 +19,7 @@ ATL OLE DB 使用者向导不适用于 Visual Studio 2019 及更高版本。 但
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 下面各主题介绍了如何通过编辑 MFC 应用程序向导和 ATL OLE DB 使用者向导创建的文件来创建简单使用者。 此示例包含以下部分：
 

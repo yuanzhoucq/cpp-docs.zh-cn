@@ -6,12 +6,12 @@ helpviewer_keywords:
 - IPropertyPage class
 - property pages, implementing
 ms.assetid: 62f29440-33a7-40eb-a1ef-3634c95f640c
-ms.openlocfilehash: c4ba69d8421a76a94e4a676cb62ee53936d77da3
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 49058fe13457c2d0050452cbc0015575371e4043
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524586"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706907"
 ---
 # <a name="implementing-property-pages"></a>实现属性页
 
@@ -21,7 +21,7 @@ ATL 属性页向导不适用于 Visual Studio 2019 及更高版本。
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 属性页是实现 `IPropertyPage` 或 `IPropertyPage2` 接口的 COM 对象。 ATL 支持通过 [ATL 属性页向导](../atl/reference/atl-property-page-wizard.md)中的[“添加类”对话框](../ide/add-class-dialog-box.md)实现属性页。
 
