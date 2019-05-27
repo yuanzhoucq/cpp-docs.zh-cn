@@ -1,4 +1,4 @@
----
+﻿---
 title: 容器（现代 C++）
 ms.date: 1/18/2018
 ms.topic: conceptual
@@ -18,7 +18,7 @@ vector<string> apples;
 apples.push_back("Granny Smith");
 ```
 
-使用[map](../standard-library/map-class.md)（而不是`unordered_map`）作为默认关联容器。对于 degenerate 和 multi 的情况，使用[set](../standard-library/set-class.md)，[multimap](../standard-library/multimap-class.md)和[multiset](../standard-library/multiset-class.md)。
+使用[map](../standard-library/map-class.md)（而不是`unordered_map`）作为默认关联容器。 对于 degenerate 和 multi 的情况，使用[set](../standard-library/set-class.md)，[multimap](../standard-library/multimap-class.md)和[multiset](../standard-library/multiset-class.md)。
 
 ```cpp
 map<string, string> apple_color;

@@ -3,7 +3,7 @@
 # [演练：创建 Windows 桌面应用程序](walkthrough-creating-windows-desktop-applications-cpp.md)
 # [Windows 桌面向导](win32-application-wizard.md)
 # [活动模板库 (ATL)](../atl/atl-com-desktop-components.md)
-# [Microsoft 基础类 (MFC)](../mfc/TOC.md)
+# [Microsoft 基础类 (MFC)](../mfc/mfc-desktop-applications.md)
 # [ATL 和 MFC 共享类](../atl-mfc-shared/TOC.md)
 # [数据访问](../data/data-access-in-cpp.md)
 # [文本和字符串](../text/text-and-strings-in-visual-cpp.md)

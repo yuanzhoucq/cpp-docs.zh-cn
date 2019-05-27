@@ -1,25 +1,21 @@
 ---
 title: Visual C++ 中的云和 Web 编程
-ms.date: 11/04/2016
+ms.date: 05/14/2019
 ms.assetid: b63611f1-9723-44d0-ba7f-c3ebef341313
-ms.openlocfilehash: 3d71e36b6209c693940f2ebe6b5e9c73bc0c9d9d
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 677e9da18e8d171f523994d21bfbd0411270e3c8
+ms.sourcegitcommit: bc1b14f29a02685f97c7ef5c098d16db6eaf369f
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708040"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65790364"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Visual C++ 中的云和 Web 编程
 
 C++ 中有多种选项可使你连接到 Web 和云。
 
-## <a name="cloud-programming-options"></a>云编程选项
+## <a name="microsoft-azure-sdks-and-rest-services"></a>Microsoft Azure SDK 和 REST 服务
 
-- [Microsoft Azure 移动服务](http://www.windowsazure.com/develop/mobile/)
-
-  提供可在通用 Windows 平台 (UWP) 应用或 Windows 桌面应用中使用的本机 API，用于连接到 Microsoft Azure 移动服务。 虽然该网站上的大部分示例采用 C# 编写，但也可以使用 C++。 有关详细信息，请参阅[快速入门：使用 C++ 添加移动服务](https://msdn.microsoft.com/library/windows/apps/dn263181.aspx)。
-
-- [用于 C++ 的 Microsoft Azure 存储客户端库](https://blogs.msdn.microsoft.com/windowsazurestorage/2015/04/29/microsoft-azure-storage-client-library-for-c-v1-0-0-general-availability/)
+- [用于 C++ 的 Microsoft Azure 存储客户端库](https://azure.github.io/azure-storage-cpp/)
 
   用于 C++ 的 Azure 存储客户端库提供了一个用于处理 Azure 存储的综合 API，此 API 包括但不限于以下功能：
 
@@ -29,18 +25,22 @@ C++ 中有多种选项可使你连接到 Web 和云。
   - 在 Azure 队列中对消息进行排队和取消排队。
   - 延迟列出容器、Blob、表和队列，并延迟查询实体
 
-- [OneDrive API](https://dev.onedrive.com/README.htm)
+- 用于物联网的 ANSI C99 [Azure IoT 中心 SDK](/azure/iot-hub/iot-hub-devguide-sdks) 使 IoT 应用程序能够在设备或后端运行。
+
+- [Microsoft Graph 中的 OneDrive 和 SharePoint](https://dev.onedrive.com/README.htm)
 
   OneDrive API 提供了一组 HTTP 服务，用于将应用程序连接到 Office 365 和 SharePoint Server 2016 中的文件和文件夹。
 
-- [C++ REST SDK (Codename "Casablanca")](https://github.com/Microsoft/cpprestsdk)
+## <a name="windows-and-cross-platform-networking-apis"></a>Windows 和跨平台网络 API
+
+- [C++ REST SDK（代码名称“Casablanca”）](https://github.com/Microsoft/cpprestsdk)
 
   提供现代的跨平台异步 API，用于与 REST 服务进行交互。
 
   - 对任何 HTTP 服务器执行 REST 调用，内置有对 JSON 文档分析和序列化的支持
   - 支持 OAuth 1 和 2，包括本地重定向侦听器
   - 使 Websocket 连接到远程服务
-  - 基于 PPL 的一个完全异步任务 API，包含内置线程池
+  - 基于 PPL 的完全异步任务 API，包含内置线程池
 
   支持 Windows 桌面 (7+)、Windows Server (2012+)、通用 Windows 平台、Linux、OSX、Android 和 iOS。
 
@@ -59,4 +59,5 @@ C++ 中有多种选项可使你连接到 Web 和云。
 ## <a name="see-also"></a>请参阅
 
 [Visual Studio 中的 C++](../overview/visual-cpp-in-visual-studio.md) <br/>
-[网络和 Web 服务](/windows/uwp/networking/)
+[Microsoft Azure C 和 C++ 开发人员中心](https://azure.microsoft.com/develop/cpp/) <br/>
+[网络和 Web 服务 (UWP)](/windows/uwp/networking/)

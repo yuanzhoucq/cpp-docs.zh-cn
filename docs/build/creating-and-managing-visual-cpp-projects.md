@@ -1,5 +1,5 @@
 ---
-title: Visual Studio 项目的C++
+title: Visual Studio Projects - C++
 ms.date: 12/12/2018
 helpviewer_keywords:
 - ATL projects, creating
@@ -8,69 +8,81 @@ helpviewer_keywords:
 - Visual Studio C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-ms.openlocfilehash: 15adae6cb9908f74d62709622ca3302fd35faa46
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 30d3b13ba4d392cdc5d1c7c611b61066503647a2
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446359"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837054"
 ---
-# <a name="visual-studio-projects---c"></a>Visual Studio 项目的C++
+# <a name="visual-studio-projects---c"></a>Visual Studio projects - C++
 
-一个*Visual Studio 项目*项目基于 MSBuild 生成系统。 MSBuild 是 Visual Studio 的本机生成系统，并通常是最佳的生成系统用于 UWP 应用，以及使用 MFC 或 ATL 库、 COM 组件和其他特定于 Windows 的程序的桌面应用程序。 MSBuild 与 Visual Studio 中，紧密集成，但你也可以从命令行使用它。 
+Visual Studio 项目是基于 MSBuild 生成系统的项目。 MSBuild 是 Visual Studio 的本机生成系统，通常非常适合用于 UWP 应用以及使用 MFC 或 ATL 库、COM 组件和其他 Windows 特定程序的桌面应用程序。 MSBuild 与 Visual Studio 紧密集成，但也可从命令行使用它。 
 
 ## <a name="create-a-project"></a>创建项目
 
-您可以创建C++通过选择项目**文件&#124;新建&#124;项目**，然后选择视觉对象C++的左窗格中。 在中心窗格中可以看到项目模板的列表： 
+::: moniker range="vs-2019"
+
+可通过选择“文件” > “新建” > “项目”，然后将“语言”设为 C++，创建 C++ 项目。 在结果列表中，可看到项目模板列表，可通过设置“平台”或“项目类型”以及通过在搜索框中键入关键字进行筛选。 
+
+   ![Visual Studio 2019 项目模板](../build/media/vs2019-choose-console-app.png "Visual Studio 2019 新建项目对话框")
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+可通过选择“文件” > “新建” > “项目”，然后选择左侧窗格中的 C++，创建 C++ 项目。 可在中心窗格中看到项目模板列表：
 
    ![项目模板](../overview/media/vs2017-new-project.png "Visual Studio 2017 新建项目对话框")
 
-有关 Visual Studio 中包含的所有默认项目模板的详细信息，请参阅[C++项目模板在 Visual Studio](reference/visual-cpp-project-types.md)。 可以创建自己的项目模板。 有关详细信息，请参阅[如何：创建项目模板](/visualstudio/ide/how-to-create-project-templates)。
+::: moniker-end
 
-创建项目后，它将出现在[解决方案资源管理器](/visualstudio/ide/solutions-and-projects-in-visual-studio)窗口：
+有关 Visual Studio 中包含的所有默认项目模板的详细信息，请参阅 [Visual Studio 中的 C++ 项目模板](reference/visual-cpp-project-types.md)。 可以创建自己的项目模板。 有关详细信息，请参阅[如何：创建项目模板](/visualstudio/ide/how-to-create-project-templates)。
+
+创建项目后，它会显示在[解决方案资源管理器](/visualstudio/ide/solutions-and-projects-in-visual-studio)窗口中：
 
    ![“解决方案资源管理器”](media/mathlibrary-solution-explorer-153.png)
 
-时创建新项目时，将创建解决方案文件 (.sln)。 可以通过右键单击它中向解决方案中添加其他项目**解决方案资源管理器**。 解决方案文件用于协调生成依赖项时有多个相关的项目，但不会完成比这更多。 在项目级别来设置所有编译器选项。
+创建新项目时，还会创建解决方案文件 (.sln)。 可通过在“解决方案资源管理器”中右键单击该解决方案，将其他项目添加到该解决方案。 具有多个相关项目时，解决方案文件用于协调生成依赖项，但除此之外不执行任何操作。 所有编译器选项都在项目级别进行设置。
 
 ## <a name="add-items"></a>添加项
 
-右键单击项目中添加到项目的源代码文件、 图标或任何其他项**解决方案资源管理器**，然后选择**添加 > 新建**或**添加 > 现有**。
+通过右键单击“解决方案资源管理器”中的项目并选择“添加”>“新建”或“添加”>“现有”，将源代码文件、图标或任何其他项添加到项目中。
 
 ## <a name="add-third-party-libraries"></a>添加第三方库
 
-若要添加第三方库，请使用[vcpkg](vcpkg.md)包管理器。 运行 Visual Studio 集成步骤，若要从任何 Visual Studio 项目引用时设置此库的路径。 
+若要添加第三方库，请使用 [vcpkg](vcpkg.md) 包管理器。 运行 Visual Studio 集成步骤，以设置从任何 Visual Studio 项目引用该库时，该库的路径。 
 
 ## <a name="set-compiler-options-and-other-build-properties"></a>设置编译器选项和其他生成属性
 
-若要配置项目的生成设置，请右键单击中的项目**解决方案资源管理器**，然后选择**属性**。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](working-with-project-properties.md)。
+若要配置项目的生成设置，请右键单击“解决方案资源管理器”中的项目，然后选择“属性”。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](working-with-project-properties.md)。
 
-## <a name="compile-and-run"></a>编译并运行
+## <a name="compile-and-run"></a>编译和运行
 
-若要编译并运行新的项目，按**F5**或单击*调试下拉列表中*与主工具栏上的绿色箭头。 *配置下拉列表中*是你在其中选择是否执行*调试*或*发行*生成 （或某些其他自定义配置）。
+若要编译和运行新项目，请按 F5 或在主工具栏上单击带有绿色箭头的“调试下拉列表”。 请在“配置下拉列表”中选择是执行“调试”还是“发布”（或一些其他自定义配置）生成。
 
-新的项目编译时没有错误。 在添加你自己的代码时，你偶尔可能会引入错误或触发警告。 错误导致生成无法完成;警告却没有。 所有错误和警告时将都显示在输出窗口和错误列表中生成项目。 
+编译新项目时未发生错误。 添加自己的代码时，可能有时会引发错误或触发警告。 错误会导致无法完成生成；警告不会。 生成项目时，所有错误和警告会显示在“输出窗口”和“错误列表”中。 
 
    ![输出窗口和错误列表](../overview/media/vs2017-output-error-list.png)
 
-在错误列表可以按**F1**突出显示错误时要转到其文档主题。
+在“错误列表”中，可以按突出显示的错误上的 F1，以转到其文档主题。
 
 ## <a name="in-this-section"></a>本节内容
 
-[在 Visual Studio 中设置 C++ 编译器并生成属性](working-with-project-properties.md)<br/>
+[在 Visual Studio 中设置 C++ 编译器和生成属性](working-with-project-properties.md)<br/>
 如何使用属性页和属性表来指定项目设置。
 
 [在生成时引用库和组件](adding-references-in-visual-cpp-projects.md)<br/>
-如何在项目中包括库、 Dll、 COM 和.NET 组件。
+如何在项目中包含库、DLL、COM 和 .NET 组件。
  
 [整理项目输出文件](how-to-organize-project-output-files-for-builds.md)<br/>
 如何自定义生成过程中创建的可执行文件的位置。
 
 [自定义生成步骤和生成事件](understanding-custom-build-steps-and-build-events.md)<br/>
-如何将任何命令添加到生成过程在指定的点。
+如何在指定点将任意命令添加到生成过程。
 
 [通过现有代码创建项目](how-to-create-a-cpp-project-from-existing-code.md)<br/>
-如何从一系列松散源文件创建新的 Visual Studio 项目。
+如何从松散的源文件集合中创建新的 Visual Studio 项目。
 
 ## <a name="see-also"></a>请参阅
 

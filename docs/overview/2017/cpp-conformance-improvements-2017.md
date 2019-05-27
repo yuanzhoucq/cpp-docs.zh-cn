@@ -5,16 +5,16 @@ ms.technology: cpp-language
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 6a0e296e4a5542c1aad848c55d35d3e40244478d
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.openlocfilehash: 726d9f6573b4a3457205001875dac80b3a2997d7
+ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58899443"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934159"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158-159improvements159"></a>Visual Studio 2017 版本 15.0、[15.3](#improvements_153)、[15.5](#improvements_155)、[15.6](#improvements_156)、[15.7](#improvements_157)、[15.8](#update_158)、[15.9](#improvements_159) 中 C++ 的符合性改进
 
-Microsoft Visual C++ 编译器支持通用 constexpr 和用于聚合的 NSDMI，现具有 C++14 标准版中的全部新增功能。 请注意，编译器仍缺少 C++11 和 C++98 标准版中的一些功能。 请参阅 [Visual C++ 语言合规性](../visual-cpp-language-conformance.md)中显示编译器当前状态的表。
+Microsoft C++ 编译器支持通用 constexpr 和用于聚合的 NSDMI，现具有 C++14 标准草案中的全部新增功能。 请注意，编译器仍缺少 C++11 和 C++98 标准版中的一些功能。 请参阅 [Visual C++ 语言合规性](../visual-cpp-language-conformance.md)中显示编译器当前状态的表。
 
 ## <a name="c11"></a>C++11
 
@@ -70,7 +70,7 @@ static_assert 的消息参数是可选的。 有关详细信息，请参阅 [Ext
 
 ### <a name="structured-bindings"></a>结构化绑定
 
-现在可以在单个声明中存储具有其各组件名称的值，前提是该值是数组、std::tuple 或 std::pair 或者具有所有公共的非静态数据成员。 有关详细信息，请参阅[结构化绑定](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf)和[从一个函数返回多个值](../../cpp/functions-cpp.md#multi_val)。
+现在可以在一个声明中存储包含组件的各个名称的值，前提是值为数组、`std::tuple`/`std::pair` 或包含所有公共非静态数据成员。 有关详细信息，请参阅[结构化绑定](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf)和[从一个函数返回多个值](../../cpp/functions-cpp.md#multi_val)。
 
 ### <a name="construction-rules-for-enum-class-values"></a>枚举类值的构造规则
 
@@ -82,7 +82,7 @@ Lambda 表达式中的 `*this` 对象现在可按值捕获。 这样可以在并
 
 ### <a name="removing-operator-for-bool"></a>删除 bool 的 operator++
 
-`operator++` 在 `bool` 类型上不再受支持。 有关详细信息，请参阅[删除弃用的 operator++(bool)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0002r1.html)。
+`bool` 类型上不再支持 `operator++`。 有关详细信息，请参阅[删除弃用的 operator++(bool)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0002r1.html)。
 
 ### <a name="removing-deprecated-register-keyword"></a>删除弃用的“register”关键字
 
@@ -955,7 +955,7 @@ C;      // warning C4091 : '' : ignored on left of 'C' when no variable is decla
 
 ### <a name="stdisconvertible-for-array-types"></a>std::is_convertible 用于数组类型
 
-早期版本的编译器为数组类型提供了不正确的 [std::is_convertible](../../standard-library/is-convertible-class.md) 结果。 这要求库编写者在使用 `std::is_convertible<...>` 类型特征时，要特殊处理 Microsoft Visual C++ 编译器。 在以下示例中，静态断言在早期版本的 Visual Studio 中是通过的，但在 Visual Studio 2017 版本 15.3 中不通过：
+早期版本的编译器为数组类型提供了不正确的 [std::is_convertible](../../standard-library/is-convertible-class.md) 结果。 这要求库编写者在使用 `std::is_convertible<...>` 类型特征时，将 Microsoft C++ 编译器作为特例处理。 在以下示例中，静态断言在早期版本的 Visual Studio 中是通过的，但在 Visual Studio 2017 版本 15.3 中不通过：
 
 ```cpp
 #include <type_traits>
@@ -1570,7 +1570,7 @@ struct D : B<T*> {
 };
 ```
 
-Visual Studio 2017 版本 15.7 为 /std:c++17 模式，需要 D 中 `using` 语句中的 `typename` 关键字。如果没有 `typename`编译器会引发警告 C4346（B<T>::type”：依赖项名称不是类型）和错误 C2061（语法错误：标识符“type”）*\**：
+Visual Studio 2017 版本 15.7 为 /std:c++17 模式，需要 D 中 `using` 语句中的 `typename` 关键字。如果没有 `typename`编译器会引发警告 C4346（B<T>::type”：依赖项名称不是类型）和错误 C2061（语法错误：标识符“type”） *\** ：
 
 ```cpp
 template<typename T>
@@ -2039,4 +2039,4 @@ constexpr void S<int>::f()
 
 ## <a name="see-also"></a>请参阅
 
-[Visual C++ 语言一致性](../visual-cpp-language-conformance.md)
+[Visual C/C++ 语言一致性](../visual-cpp-language-conformance.md)

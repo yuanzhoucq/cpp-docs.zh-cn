@@ -1,4 +1,4 @@
----
+﻿---
 title: 字符串和 I-O 格式化 (现代C++)
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,7 +12,7 @@ ms.locfileid: "62266915"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>字符串和 I/O 格式化（现代 C++）
 
-C++ [iostreams](../standard-library/iostream.md)善于处理格式化字符串 I/O。例如，下面的代码演示如何设置 cout 来格式化一个整数，使其输出为十六进制数，先保存当前状态，再在以后重新设置，因为一旦状态格式传递给 cout，它将始终处于这种状态，直到被更改为止，而不是仅应用于那一行代码。 
+C++ [iostreams](../standard-library/iostream.md)善于处理格式化字符串 I/O。 例如，下面的代码演示如何设置 cout 来格式化一个整数，使其输出为十六进制数，先保存当前状态，再在以后重新设置，因为一旦状态格式传递给 cout，它将始终处于这种状态，直到被更改为止，而不是仅应用于那一行代码。
 
 ```cpp
 #include <iostream>
@@ -38,7 +38,7 @@ int main()
 }
 ```
 
-这在许多情况下是非常麻烦的。作为替代方法，可以从Boost C++ 库中，使用 Boost.Format, 尽管这并非标准方法。可以从[Boost](http://www.boost.org/)网站下载任何 Boost 库。 
+这在许多情况下是非常麻烦的。 作为替代方法，可以从Boost C++ 库中，使用 Boost.Format, 尽管这并非标准方法。 可以从[Boost](http://www.boost.org/)网站下载任何 Boost 库。
 
 Boost.Format 的一些优点包括：
 
@@ -48,7 +48,7 @@ Boost.Format 的一些优点包括：
 
 - 方便：标准 Posix 以及类似的格式字符串。
 
-虽然 Boost.Format 基于 C++ [iostreams](../standard-library/iostream-programming.md)，并且它们是安全且可扩展的，但它们不能优化性能。当需要优化性能时，请考虑使用 C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)和[sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)，它们高效且易于使用。但它们不可扩展，也无法抵御漏洞（存在安全版本，但会导致性能略微下降。有关详细信息，请参阅[printf_s、 _printf_s_l、 wprintf_s、 _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)和[sprintf_s、 _sprintf_s_l、 swprintf_s、 _swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)。
+虽然 Boost.Format 基于 C++ [iostreams](../standard-library/iostream-programming.md)，并且它们是安全且可扩展的，但它们不能优化性能。 当需要优化性能时，请考虑使用 C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)和[sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)，它们高效且易于使用。 但它们不可扩展，也无法抵御漏洞 （存在安全版本，但会导致性能略微下降。 有关详细信息，请参阅[printf_s、 _printf_s_l、 wprintf_s、 _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)和[sprintf_s、 _sprintf_s_l、 swprintf_s、 _swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)。
 
 以下代码演示了某些 Boost 格式功能特点。
 
