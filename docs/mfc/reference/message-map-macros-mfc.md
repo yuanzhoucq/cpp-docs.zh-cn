@@ -28,12 +28,12 @@ helpviewer_keywords:
 - ranges, message map
 - message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
-ms.openlocfilehash: b1cc721ed994ae1c6704011199ac635ee462ded8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec6e638a1099db8baeefe220215485b6480c30e4
+ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412821"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66174759"
 ---
 # <a name="message-map-macros-mfc"></a>消息映射宏 (MFC)
 
@@ -108,7 +108,7 @@ END_MESSAGE_MAP()
 
 **标头:** afxwin.h
 
-## <a name="begintemplatemessagemap"></a>BEGIN_TEMPLATE_MESSAGE_MAP
+## <a name="begin_template_message_map"></a> BEGIN_TEMPLATE_MESSAGE_MAP
 
 开始消息映射包含单个模板参数的类类型的定义。
 

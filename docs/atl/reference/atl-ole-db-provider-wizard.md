@@ -1,90 +1,92 @@
 ---
 title: ATL OLE DB 提供程序向导
-ms.date: 10/03/2018
-f1_keywords:
-- vc.codewiz.class.atl.provider.overview
+ms.date: 05/09/2019
 helpviewer_keywords:
-- ATL OLE DB Provider Wizard
 - ATL projects, adding ATL OLE DB providers
 ms.assetid: cf91ba78-01d1-4d12-b673-e95d96bfbebe
-ms.openlocfilehash: 3f8ff69fd80056bc2ac5a52cf3f42c69f8e8c543
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 91384d6c61368ee56ed303622e5c1bdfad09bd8a
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62248258"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706966"
 ---
 # <a name="atl-ole-db-provider-wizard"></a>ATL OLE DB 提供程序向导
 
-此向导将创建构成的 OLE DB 访问接口的类。
+::: moniker range="vs-2019"
 
-> [!WARNING]
-> 在 Visual Studio 2017 版本 15.9 中，此代码向导已弃用，并将从 Visual Studio 的将来版本中删除。 很少用到此向导。 对 ATL 和 MFC 的常规支持不会受到删除此向导的影响。 如果你想要共享对此弃用的反馈，请完成[此调查](https://www.surveymonkey.com/r/QDWKKCN)。 你的反馈对我们很重要。
+此向导不适用于 Visual Studio 2019 及更高版本。
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
 
 ## <a name="remarks"></a>备注
 
-从 Visual Studio 2008 开始，此向导生成的注册脚本将注册其 COM 组件**HKEY_CURRENT_USER**而不是**HKEY_LOCAL_MACHINE**。 若要修改此行为，请设置**的所有用户注册组件**ATL 向导的选项。
+自 Visual Studio 2008 起，此向导生成的注册脚本在 HKEY_CURRENT_USER（而不是 HKEY_LOCAL_MACHINE）下注册它的 COM 组件。 若要修改此行为，请设置 ATL 向导的“为所有用户注册组件”选项。
 
-下表描述了在 ATL OLE DB 提供程序向导的选项：
+下面列出并介绍了 ATL OLE DB 提供程序向导的选项：
 
 - **短名称**
 
-   键入要创建的提供程序的短名称。 自动填充向导中的其他编辑框，将基于此处键入的内容。 如果需要，可以编辑其他名称框。
+   键入要创建的提供程序的短名称。 向导中的其他编辑框会根据你在此处键入的内容自动填充。 如果需要，可以编辑其他名称框。
 
 - **组件类**
 
-   组件类的名称。 ProgID 名称将更改以匹配此名称。
+   组件类的名称。 “编程 ID”名称会更改来与此名称匹配。
 
 - **特性化**
 
-   此选项指定向导是否将创建使用属性或模板声明提供程序类。 在选择此选项，该向导使用特性而不是模板声明 （如果创建特性化的项目，这是默认选项）。 当清除此选项时，向导使用模板声明而不是属性 （如果您创建了非特性化项目，这是默认选项）。
+   此选项指定向导是使用特性还是使用模板声明来创建提供程序类。 如果你选中此选项，向导使用的是特性，而不是模板声明（这是在创建了特性化项目时的默认选项）。 如果你取消选中此选项，向导使用的是模板声明，而不是特性（这是在创建了非特性化项目时的默认选项）。
 
-   如果创建非特性化项目时选择此选项，向导将警告您项目将被转换为特性化项目，并询问您是否继续与否。
+   如果你在创建了非特性化项目时选中此选项，向导警告你项目会转换为特性化项目，并询问你是否继续。
 
-- **ProgID**
+- **编程 ID**
 
-   ProgID 或编程标识符是你的应用程序可以使用而不是一个 GUID 的文本字符串。 ProgID 的名称采用以下格式*为 Projectname.Coclassname*。
+   编程 ID（或编程标识符）是应用程序可用来代替 GUID 的文本字符串。 “编程 ID”名称采用 Projectname.Coclassname 形式。
 
 - **Version**
 
-   您的提供程序的版本号。 默认值为 1。
+   提供程序的版本号。 默认值为 1。
 
 - **数据源类**
 
-   数据源类，窗体 C 的名称*短名称*源。
+   数据源类的名称，采用 CShortnameSource形式。
 
-- **数据源.h 文件**
+- **数据源 .h 文件**
 
-   数据源类的标头文件。 可以编辑此文件的名称，或选择现有的头文件。
+   数据源类的头文件。 可以编辑此文件名，也可以选择现有头文件。
 
 - **会话类**
 
-   窗体 C 的会话类的名称*短名称*会话。
+   会话类的名称，采用 CShortnameSession 形式。
 
-- **会话.h 文件**
+- **会话 .h 文件**
 
-   会话类的标头文件。 可以编辑此文件的名称，或选择现有的头文件。
+   会话类的头文件。 可以编辑此文件名，也可以选择现有头文件。
 
 - **命令类**
 
-   命令类，窗体 C 的名称*短名称*命令。
+   命令类的名称，采用 CShortnameCommand 形式。
 
-- **命令.h 文件**
+- **命令 .h 文件**
 
-   命令类的标头文件。 此名称不能进行编辑，取决于行集标头文件的名称。
+   命令类的头文件。 此名称无法编辑，它依赖行集头文件的名称。
 
 - **行集类**
 
-   窗体 C 的行集类的名称*短名称*行集。
+   行集类的名称，采用 CShortnameRowset 形式。
 
-- **行集.h 文件**
+- **行集 .h 文件**
 
-   行集类的标头文件。 可以编辑此文件的名称，或选择现有的头文件。
+   行集类的头文件。 可以编辑此文件名，也可以选择现有头文件。
 
-- **行集.cpp 文件**
+- **行集 .cpp 文件**
 
-   提供程序的实现文件。 可以编辑此文件的名称，或选择现有的实现文件。
+   提供程序的实现文件。 可以编辑此文件名，也可以选择现有实现文件。
+
+::: moniker-end
 
 ## <a name="see-also"></a>请参阅
 
-[ATL OLE DB 访问接口](../../atl/reference/adding-an-atl-ole-db-provider.md)
+[ATL OLE DB 提供程序](../../atl/reference/adding-an-atl-ole-db-provider.md)

@@ -1,14 +1,14 @@
 ---
 title: CppProperties.json 架构引用
-ms.date: 03/21/2019
+ms.date: 05/16/2019
 helpviewer_keywords:
 - CMake in Visual Studio
-ms.openlocfilehash: 05bb92b0fe791ad8b0037665c2db32a08fa52d7c
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: e80f4e8a189510a9a3e8860609d74121b7cbb0ef
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220850"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837043"
 ---
 # <a name="cpppropertiesjson-schema-reference"></a>CppProperties.json 架构引用
 
@@ -117,7 +117,7 @@ Visual Studio 预定义的配置为 x86 和 x64 的 Debug 和 Release。 默认�
 |`undefines`|未定义的宏的列表（对于 MSVC，映射到 /U）|
 |`intelliSenseMode`|要使用的 IntelliSense 引擎。 你可以为 MSVC、gcc 或 Clang 指定体系结构特定的变量：<br/><br/>- windows-msvc-x86 (default)<br/>- windows-msvc-x64<br/>- msvc-arm<br/>- windows-clang-x86<br/>- windows-clang-x64<br/>- windows-clang-arm<br/>- Linux-x64<br/>- Linux-x86<br/>- Linux-arm<br/>- gccarm|
 
-注意:值`msvc-x86`和`msvc-x64`支持仅由于历史原因。 请使用`windows-msvc*`变体。
+注意:仅出于遗留原因支持 `msvc-x86` 和 `msvc-x64` 值。 请使用 `windows-msvc*` 变量。
 
 ## <a name="custom-configurations"></a>自定义配置
 
@@ -143,7 +143,7 @@ Visual Studio 预定义的配置为 x86 和 x64 的 Debug 和 Release。 默认�
 
  `CppProperties.json` 支持用于包含路径和其他属性值的系统环境变量扩展。 语法为 `${env.FOODIR}`，用于扩展环境变量 `%FOODIR%`。 还支持下列系统定义的变量：
 
-|变量名|描述|
+|变量名|说明|
 |-----------|-----------------|
 |vsdev|默认的 Visual Studio 环境|
 |msvc_x86|使用 x86 工具为 x86 编译|
@@ -156,7 +156,7 @@ Visual Studio 预定义的配置为 x86 和 x64 的 Debug 和 Release。 默认�
 
 安装 Linux 工作负载后，可使用以下环境变量远程定向到 Linux 和 WSL：
 
-|变量名|描述|
+|变量名|说明|
 |-----------|-----------------|
 |linux_x86|远程将 x86 Linux 设为目标|
 |linux_x64|远程将 x64 Linux 设为目标|
@@ -264,7 +264,7 @@ Visual Studio 预定义的配置为 x86 和 x64 的 Debug 和 Release。 默认�
 |-|-|
 |`${workspaceRoot}`| 工作区文件夹的完整路径|
 |`${projectRoot}`| `CppProperties.json` 所在文件夹的完整路径|
-|`${vsInstallDir}`| 安装 VS 2017 的运行示例的文件夹的完整路径|
+|`${vsInstallDir}`| 安装 Visual Studio 的运行示例的文件夹的完整路径|
 
 例如，如果项目具备包含文件夹并包含 windows.h 和 Windows SDK 中的其他通用标头，可能需要更新 `CppProperties.json` 配置文件，使其带有以下包含内容：
 
@@ -289,7 +289,7 @@ Visual Studio 预定义的配置为 x86 和 x64 的 Debug 和 Release。 默认�
 ```
 
 > [!Note]
-> `%WindowsSdkDir%` 和 `%VCToolsInstallDir%` 并不是作为全局环境变量设置的，所以请确保从定义这些变量的“适用于 VS 2017 的开发人员命令提示”启动 devenv.exe。
+> `%WindowsSdkDir%` 和 `%VCToolsInstallDir%` 并不是作为全局环境变量设置的，请确保从定义这些变量的开发人员命令提示符启动 devenv.exe。 （在 Windows“开始”菜单中键入“developer”。）
 
 ## <a name="troubleshoot-intellisense-errors"></a>对 IntelliSense 错误进行故障排除
 

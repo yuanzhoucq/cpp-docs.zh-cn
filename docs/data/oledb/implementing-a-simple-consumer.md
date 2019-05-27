@@ -1,36 +1,43 @@
 ---
 title: 实现简单使用者
-ms.date: 10/12/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
-- clients, creating
 - OLE DB consumers, implementing
 ms.assetid: 13828167-23a4-4e94-8b6c-878262fda464
-ms.openlocfilehash: 9067e8645fac9a06bd85ca5ef18fbaff45d16aae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 67bce55a19a2aaaf3a8cbb62d7db228513e93c91
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390797"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707530"
 ---
 # <a name="implementing-a-simple-consumer"></a>实现简单使用者
 
-以下主题说明如何编辑创建的文件**MFC 应用程序向导**并**ATL OLE DB 使用者向导**创建简单使用者。 此示例包含以下部分：
+::: moniker range="vs-2019"
 
-- [使用者检索数据](#retrieve)演示如何从数据库表中读取所有数据，表中的使用者中实现代码。
+ATL OLE DB 使用者向导不适用于 Visual Studio 2019 及更高版本。 但仍可以手动添加此功能。 有关详细信息，请参阅[不使用向导创建使用者](creating-a-consumer-without-using-a-wizard.md)。
 
-- [向使用者添加书签支持](#bookmark)演示如何向使用者添加书签支持。
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+下面各主题介绍了如何通过编辑 MFC 应用程序向导和 ATL OLE DB 使用者向导创建的文件来创建简单使用者。 此示例包含以下部分：
+
+- [通过使用者检索数据](#retrieve)展示了如何在使用者中实现从数据库表中逐行读取所有数据的代码。
+
+- [向使用者添加书签支持](#bookmark)展示了如何向使用者添加书签支持。
 
 > [!NOTE]
-> 可以使用在本部分中描述的使用者应用程序来测试`MyProv`和`Provider`示例提供程序。
+> 可以使用此部分中描述的使用者应用程序来测试 `MyProv` 和 `Provider` 示例提供程序。
 
 > [!NOTE]
-> 若要生成使用者应用程序来测试`MyProv`(相同的提供程序中所述[增强简单的只读提供程序](../../data/oledb/enhancing-the-simple-read-only-provider.md))，如中所述，必须包含书签支持[到添加书签支持使用者](#bookmark)。
+> 若要生成使用者应用程序来测试 `MyProv`（[增强简单只读提供程序](../../data/oledb/enhancing-the-simple-read-only-provider.md)中所述的相同提供程序），必须添加书签支持，如[向使用者添加书签支持](#bookmark)中所述。
 
-## <a name="retrieve" ></a> 使用者检索数据
+## <a name="retrieve" ></a> 通过使用者检索数据
 
-### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>若要修改控制台应用程序使用 OLE DB 使用者
+### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>将控制台应用程序修改为使用 OLE DB 使用者的具体步骤
 
-1. 在`MyCons.cpp`，更改主代码的方法是插入的粗体文本，如下所示：
+1. 在 `MyCons.cpp` 中，通过插入如下粗体文本来更改主代码：
 
     ```cpp
     // MyCons.cpp : Defines the entry point for the console application.
@@ -59,30 +66,30 @@ ms.locfileid: "62390797"
 
 ## <a name="bookmark" ></a> 向使用者添加书签支持
 
-书签是唯一标识表中的行的列。 通常它是键列，但并不总是;它是特定于提供程序。 本部分演示如何添加书签支持。 若要执行此操作，需要执行以下步骤在用户记录类：
+书签是唯一标识表中行的列。 它通常是键列，但并不总是这样；它是提供程序专用列。 此部分介绍了如何添加书签支持。 为此，需要在用户记录类中执行以下步骤：
 
-- 实例化的书签。 这些是类型的对象[CBookmark](../../data/oledb/cbookmark-class.md)。
+- 实例化书签。 这些是 [CBookmark](../../data/oledb/cbookmark-class.md) 类型的对象。
 
-- 通过设置商请求书签列`DBPROP_IRowsetLocate`属性。
+- 通过设置 `DBPROP_IRowsetLocate` 属性，从提供程序请求获取书签列。
 
-- 通过使用列映射到添加书签条目[BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md)宏。
+- 使用 [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md) 宏将书签条目添加到列映射中。
 
-前面的步骤为您提供书签支持和书签对象可处理的。 此代码示例演示一个书签，如下所示：
+执行上面的步骤可以获取书签支持，以及要处理的书签对象。 此代码示例展示了书签，如下所示：
 
-- 打开文件进行写入。
+- 打开文件以写入内容。
 
-- 输出文件的行集数据行的行。
+- 将行集数据逐行输出到文件行。
 
-- 通过调用移到书签的行集游标[MoveToBookmark](../../data/oledb/crowset-movetobookmark.md)。
+- 通过调用 [MoveToBookmark](../../data/oledb/crowset-movetobookmark.md)，将行集光标移到书签。
 
-- 书签的行，将其追加到文件末尾的输出。
+- 输出已添加书签的行，同时将它追加到文件末尾。
 
 > [!NOTE]
-> 如果您使用此使用者应用程序来测试`Provider`示例提供程序应用程序，在本部分中所述的书签支持。
+> 如果使用此使用者应用程序来测试 `Provider` 示例提供程序应用程序，请忽略此部分中介绍的书签支持。
 
-### <a name="to-instantiate-the-bookmark"></a>若要实例化该书签
+### <a name="to-instantiate-the-bookmark"></a>实例化书签的具体步骤
 
-1. 访问器需要保留类型的对象[CBookmark](../../data/oledb/cbookmark-class.md)。 *NSize*参数指定书签缓冲区的大小以字节为单位 (通常为 32 位平台，4) 和 64 位平台为 8。 将以下声明添加到用户记录类中的列数据成员：
+1. 取值函数需要保留 [CBookmark](../../data/oledb/cbookmark-class.md) 类型的对象。 nSize 参数以字节为单位指定书签缓冲区的大小（对于 32 位平台，通常为 4 字节；对于 64 位平台，通常为 8 字节）。 将以下声明添加到用户记录类中的列数据成员：
 
     ```cpp
     //////////////////////////////////////////////////////////////////////
@@ -95,9 +102,9 @@ ms.locfileid: "62390797"
        ...
     ```
 
-### <a name="to-request-a-bookmark-column-from-the-provider"></a>若要从提供程序请求书签列
+### <a name="to-request-a-bookmark-column-from-the-provider"></a>从提供程序请求获取书签列的具体步骤
 
-1. 中的以下代码添加`GetRowsetProperties`中用户记录类的方法：
+1. 在用户记录类的 `GetRowsetProperties` 方法中添加以下代码：
 
     ```cpp
     // Set the DBPROP_IRowsetLocate property.
@@ -109,9 +116,9 @@ ms.locfileid: "62390797"
     }
     ```
 
-### <a name="to-add-a-bookmark-entry-to-the-column-map"></a>若要将书签项添加到列映射
+### <a name="to-add-a-bookmark-entry-to-the-column-map"></a>将书签条目添加到列映射中的具体步骤
 
-1. 将以下条目添加到用户记录类中的列映射：
+1. 将以下条目添加到用户记录类的列映射中：
 
     ```cpp
     // Set a bookmark entry in the column map.
@@ -123,9 +130,9 @@ ms.locfileid: "62390797"
     END_COLUMN_MAP()
     ```
 
-### <a name="to-use-a-bookmark-in-your-main-code"></a>若要在主代码中使用书签
+### <a name="to-use-a-bookmark-in-your-main-code"></a>在主代码中使用书签的具体步骤
 
-1. 在`MyCons.cpp`文件从以前创建的更改用于读取，如下所示的主要代码的控制台应用程序。 若要使用书签，主代码需要实例化它自己的书签对象 (`myBookmark`); 这是从访问器中的一个不同书签 (`m_bookmark`)。
+1. 在之前创建的控制台应用程序的 `MyCons.cpp` 文件中，将主代码更改为如下所示。 若要使用书签，主代码必须实例化它自己的书签对象 (`myBookmark`)；此书签不同于取值函数中的书签 (`m_bookmark`)。
 
     ```cpp
     ///////////////////////////////////////////////////////////////////////
@@ -194,7 +201,9 @@ ms.locfileid: "62390797"
     }
     ```
 
-有关书签的详细信息，请参阅[使用书签](../../data/oledb/using-bookmarks.md)。 中显示了示例的书签[更新行集](../../data/oledb/updating-rowsets.md)。
+若要详细了解书签，请参阅[使用书签](../../data/oledb/using-bookmarks.md)。 [更新行集](../../data/oledb/updating-rowsets.md)中还收录了书签示例。
+
+::: moniker-end
 
 ## <a name="see-also"></a>请参阅
 

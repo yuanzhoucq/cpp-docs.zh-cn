@@ -1,6 +1,6 @@
 ---
-title: 创建 ATL 注册器脚本
-ms.date: 11/04/2016
+title: 为 ATL 注册器创建脚本
+ms.date: 05/14/2014
 helpviewer_keywords:
 - scripting, registry scripting
 - ATL, registry
@@ -8,24 +8,24 @@ helpviewer_keywords:
 - scripts, Registrar scripts
 - scripts, creating
 ms.assetid: cbd5024b-8061-4a71-be65-7fee90374a35
-ms.openlocfilehash: e1a0b66e673fcefd0b75683ef75247a388217361
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: f32606701ea08736985f0b0dd2ed82712040a049
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250837"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707062"
 ---
-# <a name="creating-registrar-scripts"></a>Creating Registrar Scripts
+# <a name="creating-registrar-scripts"></a>创建注册器脚本
 
-注册器脚本提供数据驱动的而不是 API 驱动，访问系统注册表。 数据驱动的访问是通常效率更高，因为它需要向注册表添加项的脚本中只能将一个或两个行。
+注册器脚本提供对系统注册表的数据驱动的访问，而非 API 驱动的访问。 数据驱动的访问通常更有效，因为它只需使用脚本中的一两行即可向注册表添加项。
 
-[ATL 控件向导](../atl/reference/atl-control-wizard.md)自动生成您的 COM 服务器的注册器脚本。 可以在与您的对象关联的.rgs 文件中找到此脚本。
+[ATL 控件向导](../atl/reference/atl-control-wizard.md)会自动为你的 COM 服务器生成注册器脚本。 可以在与你的对象关联的 .rgs 文件中找到此脚本。
 
-ATL 注册器脚本引擎在运行时处理注册器脚本。 ATL server 安装过程会自动调用脚本引擎。
+ATL 注册器的脚本引擎会在运行时处理你的注册器脚本。 ATL 会在服务器设置期间自动调用脚本引擎。
 
-本文介绍如何注册器脚本与相关的以下主题：
+本文介绍了与注册器脚本相关的以下主题：
 
-- [了解巴科斯范式 (BNF) 语法](../atl/understanding-backus-nauer-form-bnf-syntax.md)
+- [了解巴科斯-诺尔范式 (BNF) 语法](../atl/understanding-backus-naur-form-bnf-syntax.md)
 
 - [了解分析树](../atl/understanding-parse-trees.md)
 
@@ -37,4 +37,4 @@ ATL 注册器脚本引擎在运行时处理注册器脚本。 ATL server 安装�
 
 ## <a name="see-also"></a>请参阅
 
-[注册表组件 （注册器）](../atl/atl-registry-component-registrar.md)
+[注册表组件（注册器）](../atl/atl-registry-component-registrar.md)

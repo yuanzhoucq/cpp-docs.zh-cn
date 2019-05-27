@@ -1,19 +1,19 @@
 ---
 title: .vcxproj 和 .props 文件结构
-ms.date: 09/18/2018
+ms.date: 05/16/2019
 helpviewer_keywords:
 - .vcxproj file structure
 ms.assetid: 14d0c552-29db-480e-80c1-7ea89d6d8e9c
-ms.openlocfilehash: a1052d0a0eeeff177f0a22883fe06cd07d7b03f6
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 86c393796b1ce3efdb92d8aefd1f653390619ea4
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446500"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837520"
 ---
 # <a name="vcxproj-and-props-file-structure"></a>.vcxproj 和 .props 文件结构
 
-[MSBuild](../msbuild-visual-cpp.md) 是 Visual Studio 中默认的项目系统；在 Visual C++ 中选择“文件” > “新建项目”会创建一个 MSBuild 项目，其设置存储于扩展名为 `.vcxproj` 的 XML 项目文件中。 项目文件还可以导入 .props 文件和 .targets 文件，这两种文件能存储设置。 在大多数情况下，从不需要手动编辑项目文件，而且其实也不应手动编辑它，除非你对 MSBuild 非常了解。 只要有可能应使用 Visual Studio 属性页来修改项目设置 (请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。 但在某些情况下，可能需要手动修改项目文件或属性表。 针对这类情况，本文包含与文件结构相关的基本信息。
+[MSBuild](../msbuild-visual-cpp.md) 是 Visual Studio 中默认的项目系统；在 Visual C++ 中选择“文件” > “新建项目”会创建一个 MSBuild 项目，其设置存储于扩展名为 `.vcxproj` 的 XML 项目文件中。 项目文件还可以导入 .props 文件和 .targets 文件，这两种文件能存储设置。 在大多数情况下，从不需要手动编辑项目文件，而且其实也不应手动编辑它，除非你对 MSBuild 非常了解。 应尽可能地使用 Visual Studio 属性页来修改项目设置（请参阅请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。）。 但在某些情况下，可能需要手动修改项目文件或属性表。 针对这类情况，本文包含与文件结构相关的基本信息。
 
 **重要提示：**
 
@@ -21,13 +21,13 @@ ms.locfileid: "65446500"
 
 1. 文件结构必须遵循本文中所述的规定形式。
 
-1. Visual StudioC++项目系统目前不支持通配符项目项中。 例如，不支持此内容：
+1. Visual Studio C++ 项目系统目前不支持在项目项中使用通配符。 例如，不支持此内容：
 
    ```xml
    <ClCompile Include="*.cpp"/>
    ```
 
-1. Visual StudioC++项目系统目前不支持宏项目项路径中。 例如，不支持此内容：
+1. Visual Studio C++ 项目系统目前不支持在项目项路径中使用宏。 例如，不支持此内容：
 
    ```xml
    <ClCompile Include="$(IntDir)\generated.cpp"/>
@@ -47,7 +47,7 @@ ms.locfileid: "65446500"
 
 可以通过使用任何文本或 XML 编辑器来检查.vcxproj 文件的内容。 若要在 Visual Studio 中进行查看，请在解决方案资源管理器中右键单击项目，选择“卸载项目”，再选择“编辑 Foo.vcxproj”。
 
-要注意的第一点是顶级元素按特定顺序显示。 例如：
+要注意的第一点是顶级元素按特定顺序显示。 例如:
 
 - 大多数的属性组和项定义组都在导入 Microsoft.Cpp.Default.props 后出现。
 
@@ -213,7 +213,7 @@ PropertyGroup 必须位于 `<Import Project="$(VCTargetsPath)\Microsoft.Cpp.prop
 
 包含项目中的项（源文件等）。 不支持对项目项（也就是根据规则定义被视为项目项的项类型）使用条件。
 
-元数据应具备每个配置的配置条件，即使它们都是一样的。 例如：
+元数据应具备每个配置的配置条件，即使它们都是一样的。 例如:
 
 ```xml
 <ItemGroup>
@@ -224,7 +224,7 @@ PropertyGroup 必须位于 `<Import Project="$(VCTargetsPath)\Microsoft.Cpp.prop
 </ItemGroup>
 ```
 
-Visual StudioC++项目系统目前不支持通配符项目项中。
+Visual Studio C++ 项目系统目前不支持在项目项中使用通配符。
 
 ```xml
 <ItemGroup>
@@ -232,7 +232,7 @@ Visual StudioC++项目系统目前不支持通配符项目项中。
 </ItemGroup>
 ```
 
-Visual StudioC++项目系统目前不支持宏项目项中。
+Visual Studio C++ 项目系统目前不支持在项目项中使用宏。
 
 ```xml
 <ItemGroup>
@@ -272,7 +272,7 @@ Visual Studio IDE 依赖于按上述顺序排列的项目文件。 例如，当�
 
 ## <a name="how-the-ide-uses-element-labels"></a>IDE 如何使用元素标签
 
-在 IDE 中，设置常规属性页中的 UseOfAtl 属性时，会将其写入项目文件中的 Configuration 属性组，但是同一属性页中的 TargetName 属性会写入无标签的按配置属性组。 Visual Studio 会在属性页的 xml 文件中查找关于属性写入位置的信息。 对于 General 属性页（假设你有英文版的 Visual Studio Enterprise Edition），该文件为 `%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\1033\general.xml`。 属性页 XML 规则文件定义关于 Rule 及其所有属性的静态信息。 这类信息之一就是 Rule 属性在目标文件（也就是将要写入值的文件）中的首选位置。 首选位置由项目文件元素上的 Label 特性指定。
+在 IDE 中，设置常规属性页中的 UseOfAtl 属性时，会将其写入项目文件中的 Configuration 属性组，但是同一属性页中的 TargetName 属性会写入无标签的按配置属性组。 Visual Studio 会在属性页的 xml 文件中查找关于属性写入位置的信息。 对于常规属性页（假设你有英文版的 Visual Studio 2019 Enterprise Edition），该文件则为 `%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\VC\VCTargets\1033\general.xml`。 属性页 XML 规则文件定义关于 Rule 及其所有属性的静态信息。 这类信息之一就是 Rule 属性在目标文件（也就是将要写入值的文件）中的首选位置。 首选位置由项目文件元素上的 Label 特性指定。
 
 ## <a name="property-sheet-layout"></a>属性表布局
 
@@ -288,9 +288,9 @@ Visual Studio IDE 依赖于按上述顺序排列的项目文件。 例如，当�
 </Project>
 ```
 
-若要制作自己的属性表，请复制 VCTargets 文件夹中的某个 .props 文件，并根据需要对它进行修改。 对于 Visual Studio 2017 Enterprise Edition，默认的 VCTargets 路径为 `%ProgramFiles%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets`。
+若要制作自己的属性表，请复制 VCTargets 文件夹中的某个 .props 文件，并根据需要对它进行修改。 对于 Visual Studio 2019 Enterprise Edition，默认的 VCTargets 路径为 `%ProgramFiles%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\VC\VCTargets`。
 
 ## <a name="see-also"></a>请参阅
 
-[在 Visual Studio 中设置 C++ 编译器并生成属性](../working-with-project-properties.md)<br/>
+[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)<br/>
 [属性页 XML 文件](property-page-xml-files.md)

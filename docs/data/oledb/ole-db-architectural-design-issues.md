@@ -1,37 +1,40 @@
 ---
 title: OLE DB 结构设计问题
-ms.date: 10/22/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB, application design considerations
 ms.assetid: 8caa7d99-d2bb-42c9-8884-74f228bb6ecc
-ms.openlocfilehash: 2f0a7a114c671e17d8f95280ab00ed93570e8609
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: ef2837ea80c61f074cf567ee1fe61fa2cfa0ae73
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395555"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525308"
 ---
 # <a name="ole-db-architectural-design-issues"></a>OLE DB 结构设计问题
 
-启动 OLE DB 应用程序之前，请考虑以下问题：
+> [!NOTE]
+> ATL OLE DB 使用者向导不适用于 Visual Studio 2019 及更高版本。 但仍可以手动添加此功能。 有关详细信息，请参阅[不使用向导创建使用者](creating-a-consumer-without-using-a-wizard.md)。
 
-## <a name="what-programming-implementation-will-you-use-to-write-your-ole-db-application"></a>您将使用哪些编程实现来编写 OLE DB 应用程序？
+开始创建 OLE DB 应用程序前，请先考虑以下问题：
 
-Microsoft 还提供了几个库来完成此任务： OLE DB 模板库、 OLE DB 属性和 OLE DB SDK 中的原始 OLE DB 接口。 此外，还有一些向导，可帮助您编写您的程序。 这些实现中所述[OLE DB 模板、 特性和其他实现](../../data/oledb/ole-db-templates-attributes-and-other-implementations.md)。
+## <a name="what-programming-implementation-will-you-use-to-write-your-ole-db-application"></a>将使用什么编程实现来编写 OLE DB 应用程序？
 
-## <a name="do-you-need-to-write-your-own-provider"></a>若要编写自己的提供程序需要吗？
+Microsoft 提供了多个可完成此任务的库：OLE DB 模板库、OLE DB 特性和 OLE DB SDK 中的原始 OLE DB 接口。 此外，还有一些向导可帮助你编写程序。 [OLE DB 模板、特性和其他实现](../../data/oledb/ole-db-templates-attributes-and-other-implementations.md)中介绍了这些实现。
 
-大多数开发人员无需编写自己的提供程序。 Microsoft 提供了多个提供商。 每当创建的数据连接 (例如，当您添加使用者到你的项目使用**ATL OLE DB 使用者向导**)，则**数据链接属性**对话框会列出所有可用的提供程序在您的系统上注册。 如果提供程序之一适用于你自己的数据存储和数据访问应用程序，最简单的办法就是使用其中一种。 但是，如果数据存储区不适合以下类别之一，您必须创建自己的提供程序。 有关创建提供程序的信息，请参阅[OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)。
+## <a name="do-you-need-to-write-your-own-provider"></a>是否需要编写你自己的提供程序？
 
-## <a name="what-level-of-support-do-you-need-for-your-consumer"></a>您需要为使用者的支持级别？
+大多数开发人员无需编写自己的提供程序。 Microsoft 提供了多个提供程序。 每当你创建数据连接时（例如，当你使用 ATL OLE DB 使用者向导将使用者添加到项目时），“数据链接属性”对话框都会列出系统中的所有已注册提供程序。 如果其中一个提供程序适用于你自己的数据存储和数据访问应用程序，最简单的办法就是使用其中一个。 不过，如果数据存储不适合这些类别之一，就必须创建你自己的提供程序。 若要了解如何创建提供程序，请参阅 [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)。
 
-某些使用者可以是基本;而其他人可能很复杂。 由属性指定的 OLE DB 对象的功能。 当你使用**ATL OLE DB 使用者向导**若要创建使用者或**数据库提供程序向导**创建提供程序，它设置为您为您提供一组标准的合适的对象属性功能。 但是，如果向导生成的使用者或提供程序类不支持所需其执行的操作的一切，您需要引用这些类在接口[OLE DB 模板库](../../data/oledb/ole-db-templates.md)。 这些接口将包装原始提供额外的实现来使用它们更轻松地进行您的 OLE DB 接口。
+## <a name="what-level-of-support-do-you-need-for-your-consumer"></a>需要对使用者使用何种支持级别？
 
-例如，如果您想要更新行集中的数据，但忘记指定这使用向导创建使用者时，您可以指定的功能在事后通过设置`DBPROP_IRowsetChange`和`DBPROP_UPDATABILITY`命令对象上的属性。 然后，创建行集时，它具有`IRowsetChange`接口。
+一些使用者可能是基本的，而另一些使用者则可能是复杂的。 OLE DB 对象的功能由属性指定。 如果你使用 ATL OLE DB 使用者向导创建使用者，或使用数据库提供程序向导创建提供程序，它会为你设置适当的对象属性，以提供一组标准功能。 不过，如果向导生成的使用者类或提供程序类不支持你需要它们执行的任何操作，必须引用 [OLE DB 模板库](../../data/oledb/ole-db-templates.md)中这些类的接口。 这些接口包装原始 OLE DB 接口，提供额外实现来让它们更易于使用。
 
-## <a name="do-you-have-older-code-using-another-data-access-technology-ado-odbc-or-dao"></a>你是否使用另一种数据访问技术 （ADO、 ODBC 或 DAO） 的较旧代码？
+例如，若要更新行集中的数据，但在使用向导创建使用者时忘记了指定这样做，可以通过对命令对象设置 `DBPROP_IRowsetChange` 和 `DBPROP_UPDATABILITY` 属性，在事后指定功能。 然后，创建的行集就包含 `IRowsetChange` 接口了。
 
-给定技术 （如 ADO 组件使用 OLE DB 组件并将 ODBC 代码迁移到 OLE DB） 的可能组合，涵盖所有情况下不在视觉对象的范围内C++文档。 但是，涉及各种方案的许多文章都可在以下 Microsoft 网站上：
+## <a name="do-you-have-older-code-using-another-data-access-technology-ado-odbc-or-dao"></a>你是否有使用其他数据访问技术（ADO、ODBC 或 DAO）的旧代码？
+
+鉴于可能的技术组合（如结合使用 ADO 组件与 OLE DB 组件，以及将 ODBC 代码迁移到 OLE DB），涵盖所有情况超出了 Visual C++ 文档的范围。 不过，以下 Microsoft 网站提供了许多涵盖各种情况的文章：
 
 - [Microsoft 帮助和支持](https://support.microsoft.com/)
 

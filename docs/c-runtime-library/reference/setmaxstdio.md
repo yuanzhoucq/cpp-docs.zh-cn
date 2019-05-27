@@ -1,6 +1,6 @@
 ---
 title: _setmaxstdio
-ms.date: 11/04/2016
+ms.date: 05/21/2019
 apiname:
 - _setmaxstdio
 apilocation:
@@ -25,45 +25,45 @@ helpviewer_keywords:
 - setmaxstdio function
 - open files, maximum
 ms.assetid: 9e966875-9ff5-47c4-9b5f-e79e83b70249
-ms.openlocfilehash: 58cffedf673e23a69c2d8040071b2e3353ff4502
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94b768d920ffd86a5bd762f8994244dda67fb15f
+ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356337"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66174820"
 ---
 # <a name="setmaxstdio"></a>_setmaxstdio
 
-设置位置的同时打开文件数的最大**stdio**级别。
+设置在流 I/O 级别同时打开的最大文件数。
 
 ## <a name="syntax"></a>语法
 
 ```C
 int _setmaxstdio(
-   int newmax
+   int new_max
 );
 ```
 
 ### <a name="parameters"></a>参数
 
-*newmax*<br/>
-新的位置的同时打开文件数的最大**stdio**级别。
+*new_max*<br/>
+在流 I/O 级别同时打开的新的最大文件数。
 
 ## <a name="return-value"></a>返回值
 
-返回*newmax*如果成功; 否则为-1。
+如果成功，返回 new_max；否则，返回 -1。
 
-如果*newmax*是小于 **_IOB_ENTRIES**或更高，则调用句柄操作系统，无效参数处理程序中可用的最大数量，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则此函数将返回-1 并设置**errno**到**EINVAL**。
+如果 new_max 小于 _IOB_ENTRIES 或大于操作系统中可用的句柄的最大数量，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数将返回 -1 并将 errno 设置为 EINVAL。
 
 有关这些及其他错误代码的信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**_Setmaxstdio**函数将更改可能是在同时打开的文件数的最大值**stdio**级别。
+**_setmaxstdio** 函数更改可在流 I/O 级别同时打开的文件数的最大值。
 
-相比早期版本，现在 C 运行时 I/O 在 Win32 平台上支持更多的打开文件。 2,048 文件最多可同时打开[lowio 级别](../../c-runtime-library/low-level-i-o.md)(即，打开和访问通过 **_open**， **_read**， **_write**、 I/O 函数系列，等等)。 最多 512 个文件可同时打开[stdio 级别](../../c-runtime-library/stream-i-o.md)(即，打开和访问通过**fopen**， **fgetc**， **fputc**依次类推系列函数)。 在 512 个打开的文件的限制**stdio**可以增加最多 2,048 通过 **_setmaxstdio**函数。
+C 运行时 I/O 现在支持在[低 I/O 级别](../../c-runtime-library/low-level-i-o.md)同时打开最多 8,192 个文件。 此级别包括使用 I/O 函数的 _open、_read 和 _write 系列打开和访问的文件。 默认情况下，在[流 I/O 级别](../../c-runtime-library/stream-i-o.md)可以同时打开最多 512 个文件。 此级别包括使用函数的 fopen、fgetc 和 fputc 系列打开和访问的文件。 使用 _setmaxstdio 函数可以将在流 I/O 级别最多打开 512 个文件的限制增加到最多 8,192 个文件。
 
-因为**stdio**-级别函数，如**fopen**，构建的**lowio**功能，最多 2,048 时数的硬上限同时打开通过 C 运行时库访问的文件。
+因为 fopen 等流 I/O 级别函数是基于低 I/O 级别函数生成的，8,192 的最大值是通过 C 运行时库访问的同时打开文件数的硬上限。
 
 > [!NOTE]
 > 此上限可能会超过特定 Win32 平台和配置所支持的文件数。
@@ -78,7 +78,7 @@ int _setmaxstdio(
 
 ## <a name="example"></a>示例
 
-请参阅[_getmaxstdio](getmaxstdio.md)有关的使用示例 **_setmaxstdio**。
+请参阅 [_getmaxstdio](getmaxstdio.md)，获取使用 **_setmaxstdio** 的示例。
 
 ## <a name="see-also"></a>请参阅
 

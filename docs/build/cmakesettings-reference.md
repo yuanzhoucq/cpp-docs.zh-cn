@@ -1,34 +1,34 @@
 ---
 title: CMakeSettings.json 架构引用
-ms.date: 04/25/2019
+ms.date: 05/16/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 80392eedd5ef50ddd9c9bcb81c1605a534088133
-ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
-ms.translationtype: HT
+ms.openlocfilehash: 018a755aa4f3acde44fe1dbb33b07b49c8d1c223
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877108"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837256"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>CMakeSettings.json 架构引用
 
-**Cmakesettings.json**文件包含用于指定 Visual Studio 应该如何与 CMake 以生成用于指定平台的项目交互的信息。 该文件存储信息，例如环境变量或 cmake.exe 环境的自变量。 可以直接编辑，也可以使用**CMake 设置编辑器**。 请参阅[自定义 CMake 生成 Visual Studio 中的设置](customize-cmake-settings.md)有关编辑器的详细信息。
+Cmakesettings.json 文件提供用于指定 Visual Studio 应如何与 CMake 交互以为指定平台生成项目的信息。 此文件存储 cmake.exe 环境的环境变量或参数等信息。 可以直接进行编辑，或者使用 CMake 设置编辑器（Visual Studio 2019 及更高版本）。 有关编辑器的详细信息，请参阅[在 Visual Studio 中自定义 CMake 生成设置](customize-cmake-settings.md)。
 
 ## <a name="environments"></a>环境
 
-`environments`数组包含一系列`items`类型的`object`用于定义应用程序的编译器工具集"环境"。 环境可用于将一组变量应用到 `configuration`。 `environments` 数组中的每一项都包含以下内容：
+`environments` 数组包含 `object` 类型的 `items` 列表，该类型用于定义编译器工具集“环境”。 环境可用于将一组变量应用到 `configuration`。 `environments` 数组中的每一项都包含以下内容：
 
 - `namespace`：为环境命令，以便可从窗体 `namespace.variable` 中的配置中引用其变量。 默认环境对象称为 `env` 并由某种包括 `%USERPROFILE%` 的系统环境变量填充。
 - `environment`：唯一标识此组变量。 允许稍后在 `inheritEnvironments` 输入中继承该组。
 - `groupPriority`：评估变量时指定这些变量的优先级的整数。 优先评估数字较大的项。
-- `inheritEnvironments`：指定由该组继承的一组环境的数组值。 此功能，可继承默认环境并创建自定义环境变量在运行时传递给 CMake.exe。
+- `inheritEnvironments`：指定由该组继承的一组环境的数组值。 使用该功能可以继承默认环境，以及创建在运行时传递给 CMake.exe 的自定义环境变量。
 
    ```json
    "inheritEnvironments": [ "msvc_x64_x64" ]
    ```
 
-   上面的示例与运行带有“-arch=amd64 -host_arch=amd64”参数的“适用于 VS 2017 的开发人员命令提示”一样。 可使用的任何自定义环境，或者这些预定义环境：
+   上面的示例与运行带有“-arch=amd64 -host_arch=amd64”参数的“适用于 VS 2017 的开发人员命令提示”或“适用于 VS 2019 的开发人员命令提示”一样。 可使用的任何自定义环境，或者这些预定义环境：
  
   - linux_arm：远程将 ARM Linux 设为目标。
   - linux_x64：远程将 x64 Linux 设为目标。
@@ -50,7 +50,13 @@ ms.locfileid: "64877108"
 - `name`：为配置命名。
 - `description`：将在菜单中显示的此配置的说明。
 - `generator`：指定将在此配置中使用的 CMake 生成器。 可能是以下其中之一：
+  
+  **仅限 Visual Studio 2019：**
+  - Visual Studio 16 2019
+  - Visual Studio 16 2019 Win64
+  - Visual Studio 16 2019 ARM
 
+  **Visual Studio 2017 及更高版本：**
   - Visual Studio 15 2017
   - Visual Studio 15 2017 Win64
   - Visual Studio 15 2017 ARM
@@ -62,7 +68,9 @@ ms.locfileid: "64877108"
 
 由于 Ninja 旨在加快生成速度，而不是为了提高灵活性和功能，因此它被设为默认生成器。 但是，某些 CMake 项目可能无法使用 Ninja 正确地进行生成。 如果发生这种情况，可以指示 CMake 改为生成 Visual Studio 项目。
 
-要指定一个 Visual Studio 生成器，请通过选择“CMake”|“更改 CMake 设置”，从主菜单打开 `CMakeSettings.json`。 删除“Ninja”并键入“V”。 这可激活 IntelliSense，从而可让用户选择所需生成器。
+要指定 Visual Studio 2017 中的 Visual Studio 生成器，请通过选择“CMake”|“更改 CMake 设置”，从主菜单打开 `CMakeSettings.json`。 删除“Ninja”并键入“V”。 这可激活 IntelliSense，从而可让用户选择所需生成器。
+
+要指定 Visual Studio 2019 中的 Visual Studio 生成器，请右键单击解决方案资源管理器中的 CMakeLists.txt 文件，并选择“项目的 CMake 设置” > “显示高级设置” > “CMake 生成器”。
 
 当活动配置指定一个 Visual Studio 生成器时，默认情况下使用 `-m -v:minimal` 参数调用 MSBuild.exe。 要自定义生成，可在 `CMakeSettings.json` 文件中指定要通过 `buildCommandArgs` 属性传递到生成系统的其他 [MSBuild 命令行参数](../build/reference/msbuild-visual-cpp-overview.md)：
 
@@ -77,12 +85,12 @@ ms.locfileid: "64877108"
   - MinSizeRel
   - RelWithDebInfo
  
-- `inheritEnvironments`： 指定此配置依赖的一个或多个编译器环境。 可以是任何自定义环境或其中一个预定义的环境。
-- `buildRoot`： 指定在其中 CMake 生成为选定生成器生成脚本的目录。  映射到 **-DCMAKE_BINARY_DIR**切换并指定将在其中创建 CMake 缓存。 如果文件夹不存在，则创建它。受支持的宏包括`${workspaceRoot}`， `${workspaceHash}`， `${projectFile}`， `${projectDir}`， `${thisFile}`， `${thisFileDir}`， `${name}`， `${generator}`， `${env.VARIABLE}`。
+- `inheritEnvironments`：指定此配置依赖的一个或多个编译器环境。 可以是任何自定义环境或预定义环境之一。
+- `buildRoot`：指定 CMake 生成器要在其中为所选生成器生成脚本的目录。  映射到“-DCMAKE_BINARY_DIR”开关，并指定要创建 CMake 缓存的位置。 如果文件夹不存在，则会创建该文件夹。支持的宏包括 `${workspaceRoot}`、`${workspaceHash}`、`${projectFile}`、`${projectDir}`、`${thisFile}`、`${thisFileDir}`、`${name}`、`${generator}` 和 `${env.VARIABLE}`。
 - `installRoot`：指定 CMake 生成器要在其中为所选生成器安装目标的目录。 支持的宏包括 `${workspaceRoot}`、`${workspaceHash}`、`${projectFile}`、`${projectDir}`、`${thisFile}`、`${thisFileDir}`、`${name}`、`${generator}`、`${env.VARIABLE}`。
-- `cmakeCommandArgs`： 指定其他命令行选项传递给 CMake 调用时生成缓存。
+- `cmakeCommandArgs`：指定为生成缓存而调用时传递给 CMake 的附加命令行选项。
 - `cmakeToolchain`：指定工具链文件。 这通过 -DCMAKE_TOOLCHAIN_FILE 传递到 CMake。
-- `buildCommandArgs`： 指定-生成-后传递给 CMake 的本机生成开关。 例如，使用 Ninja 生成器强制输出命令行使用 Ninja 时，传递 -v。 请参阅[Ninja 命令行参数](#ninja)的 Ninja 命令的详细信息。
+- `buildCommandArgs`：指定在“生成”后传递给 CMake 的本机生成开关。 例如，使用 Ninja 生成器强制输出命令行使用 Ninja 时，传递 -v。 请参阅 [Ninja 命令行参数](#ninja)，详细了解 Ninja 命令。
 - `ctestCommandArgs`：指定运行测试时传递给 CTest 的其他命令行选项。
 - `codeAnalysisRuleset`：指定运行代码分析时要使用的规则集。 这可以是完整路径或由 Visual Studio 安装的规则集文件的文件名。
 - `intelliSenseMode`：指定用于计算 IntelliSense 信息的模式。 可能是以下其中之一：
@@ -109,7 +117,7 @@ ms.locfileid: "64877108"
 
 - `cacheRoot`：指定 CMake 缓存的路径。 此目录应包含现有 CMakeCache.txt 文件。
 
-### <a name="additional-settings-for-cmake-linux-projects"></a>有关 CMake Linux 项目的其他设置。 
+### <a name="additional-settings-for-cmake-linux-projects"></a>适用于 CMake Linux 项目的其他设置。 
 
 - `remoteMachineName`：指定托管 CMake、生成和调试程序的远程 Linux 计算机的名称。 使用连接管理器添加新的 Linux 计算机。 支持的宏包括 `${defaultRemoteMachineName}`。
 - `remoteCopySourcesOutputVerbosity`：指定将源复制到远程计算机的操作的详细级别。 可以是“常规”、“详细”或“诊断”其中之一。
@@ -126,7 +134,7 @@ ms.locfileid: "64877108"
 - `remotePreGenerateCommand`：指定在运行 CMake 以分析 CMakeLists.txt 文件之前要运行的命令。
 - `remotePrebuildCommand`：指定生成前要在远程计算机上运行的命令。
 - `remotePostbuildCommand`：指定生成后要在远程计算机上运行的命令。
-- `variables`： 包含将为传入的 CMake 变量的名称-值对 **-D** *_名称_=_值_* 给 CMake。 如果 CMake 项目生成指令指定将任何变量直接添加到 CMake 缓存文件，那么建议改为在这里添加它们。 下面的示例演示如何为 14.14.26428 MSVC 工具集指定名称/值对：
+- `variables`：包含将作为 -D name=value 传递到 CMake 的 CMake 变量的名称/值对。 如果 CMake 项目生成指令指定将任何变量直接添加到 CMake 缓存文件，那么建议改为在这里添加它们。 下面的示例演示如何为 14.14.26428 MSVC 工具集指定名称/值对：
 
 ```json
 "variables": [
@@ -143,11 +151,11 @@ ms.locfileid: "64877108"
   ]
 ```
 
-请注意，如果未定义`"type"`，将默认采用"STRING"类型。
+请注意，如果未定义 `"type"`，则默认采用“STRING”类型。
 
 ## <a name="environment-variables"></a>环境变量
 
-`CMakeSettings.json` 此外支持使用环境变量中的任何上述其属性。 所使用的语法为 `${env.FOO}`，用于展开环境变量 %FOO%。
+`CMakeSettings.json` 还支持使用上述其任何属性中的环境变量。 所使用的语法为 `${env.FOO}`，用于展开环境变量 %FOO%。
 
 此外，还可以使用此文件中内置的宏：
 
@@ -240,7 +248,7 @@ ms.locfileid: "64877108"
 
 ## <a name="ninja"></a> Ninja 命令行参数
 
-如果未指定目标，生成的 default 目标。
+如果未指定目标，则生成“默认”目标。
 
 ```cmd
 C:\Program Files (x86)\Microsoft Visual Studio\Preview\Enterprise>ninja -?
@@ -248,7 +256,7 @@ ninja: invalid option -- `-?'
 usage: ninja [options] [targets...]
 ```
 
-|选项|描述|
+|选项|说明|
 |--------------|------------|
 | --version  | 打印 ninja 版本（“1.7.1”）|
 |   -C DIR   | 在执行任何其他操作前更改为 DIR|
@@ -259,7 +267,7 @@ usage: ninja [options] [targets...]
 |   -n       | 试运行（不运行命令但像命令行运行成功了一样操作）|
 |   -v       | 在生成过程中显示所有命令行|
 |   -d MODE  | 启用调试（使用 -d 列表列出模式）|
-|   -t TOOL  | 运行次级工具（使用 -t 列表列出次级工具）。 终止顶级选项;进一步将标志传递给工具|
+|   -t TOOL  | 运行次级工具（使用 -t 列表列出次级工具）。 终止顶级选项；有更多标志传递给工具|
 |   -w FLAG  | 调整警告（使用-w 列表列出警告）|
 
 

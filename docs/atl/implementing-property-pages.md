@@ -1,49 +1,59 @@
 ---
-title: 属性页
+title: 实现属性页
 ms.date: 11/04/2016
 helpviewer_keywords:
 - IPropertyPage2 class
 - IPropertyPage class
 - property pages, implementing
 ms.assetid: 62f29440-33a7-40eb-a1ef-3634c95f640c
-ms.openlocfilehash: 8999f6469e420fa86cb1267675f10dc173d45ff0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 49058fe13457c2d0050452cbc0015575371e4043
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250429"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706907"
 ---
-# <a name="implementing-property-pages"></a>属性页
+# <a name="implementing-property-pages"></a>实现属性页
 
-属性页是 COM 对象实现`IPropertyPage`或`IPropertyPage2`接口。 ATL 提供支持，用于实现通过属性页[ATL 属性页向导](../atl/reference/atl-property-page-wizard.md)中[添加类对话框](../ide/add-class-dialog-box.md)。
+::: moniker range="vs-2019"
 
-若要创建使用 ATL 属性页：
+ATL 属性页向导不适用于 Visual Studio 2019 及更高版本。
 
-- 创建或打开一个 ATL 动态链接库 (DLL) 的服务器项目。
+::: moniker-end
 
-- 打开[添加类对话框](../ide/add-class-dialog-box.md)，然后选择**ATL 属性页**。
+::: moniker range="<=vs-2017"
 
-- 请确保在属性页是单元线程 （因为它有一个用户界面）。
+属性页是实现 `IPropertyPage` 或 `IPropertyPage2` 接口的 COM 对象。 ATL 支持通过 [ATL 属性页向导](../atl/reference/atl-property-page-wizard.md)中的[“添加类”对话框](../ide/add-class-dialog-box.md)实现属性页。
 
-- 设置标题、 说明 （Doc 字符串） 和要与你的页面相关联的帮助文件。
+若要使用 ATL 创建属性页，请执行以下操作：
 
-- 将控件添加到生成的对话框资源，使其作为属性页的用户界面。
+- 创建或打开 ATL 动态链接库 (DLL) 服务器项目。
 
-- 响应中页面的用户界面来执行验证、 更新页站点，或更新与你的页面相关联的对象的更改。 具体而言，调用[IPropertyPageImpl::SetDirty](../atl/reference/ipropertypageimpl-class.md#setdirty)当用户在属性页中进行了更改。
+- 打开[“添加类”对话框](../ide/add-class-dialog-box.md)，并选择“ATL 属性页”。
 
-- 选择重写`IPropertyPageImpl`方法使用以下指导原则。
+- 请确保属性页已单元线程化（因为它有用户界面）。
 
-   |IPropertyPageImpl 方法|重写时要...|说明|
+- 设置要与属性页关联的标题、说明（文档字符串）和帮助文件。
+
+- 将控件添加到生成的对话框资源中，以用作属性页的用户界面。
+
+- 响应属性页中用户界面的更改，以执行验证、更新属性页网站或更新与属性页关联的对象。 特别是，当用户更改属性页时，调用 [IPropertyPageImpl::SetDirty](../atl/reference/ipropertypageimpl-class.md#setdirty)。
+
+- （可选）遵循以下指导原则来重写 `IPropertyPageImpl` 方法。
+
+   |IPropertyPageImpl 方法|需要执行以下操作时重写...|说明|
    |------------------------------|----------------------------------|-----------|
-   |[SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects)|执行基本的完整性检查的对象传递给您的页面和它们支持的接口数量。|在调用基类实现之前执行你自己的代码。 如果要设置的对象不符合预期，应尽可能快地失败调用。|
-   |[Activate](../atl/reference/ipropertypageimpl-class.md#activate)|初始化页面的用户界面 （例如，从对象中设置的当前属性值的对话框控件、 控件动态创建，或执行其他初始化）。|调用基类实现您的代码之前，因此，基本类有机会创建对话框窗口及其所有控件，然后再尝试将其更新。|
-   |[Apply](../atl/reference/ipropertypageimpl-class.md#apply)|验证属性设置和更新的对象。|没有无需调用基类实现，因为它执行任何只跟踪调用。|
-   |[停用](../atl/reference/ipropertypageimpl-class.md#deactivate)|清除与窗口相关的项。|基类实现都会破坏表示的属性页对话框。 如果需要清理销毁对话框之前，应调用基类之前添加代码。|
+   |[SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects)|对要传递到属性页及其支持接口的对象数量执行基本的完整性检查。|在调用基类实现前执行你自己的代码。 如果要设置的对象不符合预期，应尽快让调用失效。|
+   |[Activate](../atl/reference/ipropertypageimpl-class.md#activate)|初始化属性页的用户界面（例如，使用对象中的当前属性值来设置对话框控件、动态创建控件或执行其他初始化）。|在执行代码前调用基类实现，这样基类就有机会在你尝试更新前创建对话框窗口和所有控件。|
+   |[Apply](../atl/reference/ipropertypageimpl-class.md#apply)|验证属性设置，并更新对象。|无需调用基类实现，因为它除了跟踪调用之外什么都不做。|
+   |[Deactivate](../atl/reference/ipropertypageimpl-class.md#deactivate)|清理与窗口相关的项。|基类实现销毁表示属性页的对话框。 如果需要在销毁对话框前先进行清理，应在调用基类前添加代码。|
 
-示例属性页的实现，请参阅[示例：实现属性页](../atl/example-implementing-a-property-page.md)。
+有关示例属性页实现，请参阅[示例：实现属性页](../atl/example-implementing-a-property-page.md)。
 
 > [!NOTE]
-> 如果想要承载 ActiveX 控件属性页中，您需要更改您向导生成的类的派生。 替换**CDialogImpl\<CYourClass >** 与**CAxDialogImpl\<CYourClass >** 在基类列表中。
+> 若要在属性页中托管 ActiveX 控件，需要更改向导生成的类的派生内容。 在基类列表中，将 CDialogImpl\<CYourClass> 替换为 CAxDialogImpl\<CYourClass>。
+
+::: moniker-end
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,6 +1,6 @@
 ---
-title: /CLRUNMANAGEDCODECHECK (Remove SuppressUnmanagedCodeSecurityAttribute)
-ms.date: 09/27/2018
+title: /CLRUNMANAGEDCODECHECK（删除 SuppressUnmanagedCodeSecurityAttribute）
+ms.date: 05/16/2019
 ms.topic: reference
 f1_keywords:
 - /CLRUNMANAGEDCODECHECK
@@ -10,44 +10,44 @@ helpviewer_keywords:
 ms.assetid: 73abc426-dab0-45e2-be85-0f9a14206cc2
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: cb23106648e3325755a857d0b962112e9bdcfac4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ecc560673a8e98752289ef0e0f89d3abfc1938e4
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294416"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837239"
 ---
-# <a name="clrunmanagedcodecheck-remove-suppressunmanagedcodesecurityattribute"></a>/CLRUNMANAGEDCODECHECK (Remove SuppressUnmanagedCodeSecurityAttribute)
+# <a name="clrunmanagedcodecheck-remove-suppressunmanagedcodesecurityattribute"></a>/CLRUNMANAGEDCODECHECK（删除 SuppressUnmanagedCodeSecurityAttribute）
 
-**/CLRUNMANAGEDCODECHECK**指定链接器不适用于<xref:System.Security.SuppressUnmanagedCodeSecurityAttribute>到链接器生成`PInvoke`从托管代码到本机 Dll 的调用。
+“/CLRUNMANAGEDCODECHECK”指定链接器不将 <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> 应用于从托管代码到本机 DLL 的链接器生成的 `PInvoke` 调用。
 
 ## <a name="syntax"></a>语法
 
-> **/CLRUNMANAGEDCODECHECK**[**:NO**]
+> **/CLRUNMANAGEDCODECHECK**[ **:NO**]
 
 ## <a name="remarks"></a>备注
 
-默认情况下，链接器适用**SuppressUnmanagedCodeSecurityAttribute**到链接器生成`PInvoke`调用。 当 **/clrunmanagedcodecheck 有效，则**有效时， **SuppressUnmanagedCodeSecurityAttribute**中删除。 若要显式应用**SuppressUnmanagedCodeSecurityAttribute**到链接器生成`PInvoke`调用，可以使用 **/CLRUNMANAGEDCODECHECK:NO**。
+默认情况下，链接器将“SuppressUnmanagedCodeSecurityAttribute”应用于链接器生成的 `PInvoke` 调用。 当“/CLRUNMANAGEDCODECHECK”生效时，将删除“SuppressUnmanagedCodeSecurityAttribute”。 若要将“SuppressUnmanagedCodeSecurityAttribute”显式应用于链接器生成的 `PInvoke` 调用，可以使用“/CLRUNMANAGEDCODECHECK:NO”。
 
-链接器仅将属性添加到使用编译的对象 **/clr**或 **/clr: pure**。 但是， **/clr: pure**编译器选项在 Visual Studio 2015 中弃用并在 Visual Studio 2017 中不受支持。
+链接器仅将属性添加到使用“/clr”或“/clr:pure”编译的对象。 但是，“/clr:pure”编译器选项在 Visual Studio 2015 中已弃用，在 Visual Studio 2017 及更高版本中不受支持。
 
-一个`PInvoke`链接器找不到一个托管的符号来满足托管调用方的引用，但可以找到本机符号来满足该引用时，链接器将生成调用。 有关详细信息`PInvoke`，请参阅[从托管代码调用本机函数](../../dotnet/calling-native-functions-from-managed-code.md)。
+如果链接器找不到托管符号，无法满足来自托管调用方的引用，但可找到满足该引用的本机符号，链接器将生成 `PInvoke` 调用。 有关 `PInvoke` 的更多信息，请参阅[从托管代码调用本机函数](../../dotnet/calling-native-functions-from-managed-code.md)。
 
-请注意，如果您使用<xref:System.Security.AllowPartiallyTrustedCallersAttribute>在代码中，您应显式设置 **/clrunmanagedcodecheck 有效，则**若要删除**SuppressUnmanagedCodeSecurity**属性。 如果映像包含是潜在的安全漏洞**SuppressUnmanagedCodeSecurity**并**AllowPartiallyTrustedCallers**属性。
+请注意，如果在代码中使用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute>，则应显式设置“/CLRUNMANAGEDCODECHECK”以删除“SuppressUnmanagedCodeSecurity”属性。 如果映像包含“SuppressUnmanagedCodeSecurity”和“AllowPartiallyTrustedCallers”属性，则这是一个潜在的安全漏洞。
 
-请参阅[用于非托管代码安全编码准则](/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code)有关详细信息的使用含义**SuppressUnmanagedCodeSecurityAttribute**。
+有关使用“SuppressUnmanagedCodeSecurityAttribute”的含义的更多信息，请参阅[非托管代码的安全编码指南](/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code)。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 展开“配置属性”节点。
 
-1. 展开**链接器**节点。
+1. 展开“链接器”节点。
 
-1. 选择**高级**属性页。
+1. 选择“高级”属性页。
 
-1. 修改**CLR 非托管代码检查**属性。
+1. 修改“CLR 非托管代码检查”属性。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项
 

@@ -5,12 +5,12 @@ ms.technology: cpp-ide
 ms.assetid: 6bc23c18-fcd9-47bc-bff2-17537700be4a
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 8fdd48c026485e55db01f6f70b0dde3c1e68d847
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: a897f3b6154368c7381f1cac8e51ed5acfac5d32
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58782090"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708171"
 ---
 # <a name="visual-c-help-and-community"></a>Visual C++ 帮助和社区
 
@@ -26,7 +26,7 @@ ms.locfileid: "58782090"
 
 |Title|说明|
 |-----------|-----------------|
-|[Visual C++](visual-cpp-in-visual-studio.md)|包含有关 Visual C++ 的引用和概念文档。 MSDN 库的一部分。|
+|[Visual Studio 中的 C++](visual-cpp-in-visual-studio.md)|包含有关 Visual C++ 的引用和概念文档。 MSDN 库的一部分。|
 |[Windows 开发人员中心](https://developer.microsoft.com/windows/)|包含有关如何使用 C++ 和其他语言来开发面向 Windows 10 的应用的信息。 Windows 开发人员中心的一部分, C++ 内容在“文档 > 语言参考”节点下。|
 
 ### <a name="online-and-offline-documentation"></a>联机和脱机文档

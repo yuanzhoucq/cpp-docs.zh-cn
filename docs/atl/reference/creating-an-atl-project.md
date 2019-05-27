@@ -9,31 +9,31 @@ helpviewer_keywords:
 - _ATL_MIN_CRT macro
 - distributing files with ATL components
 ms.assetid: 061d5f98-f669-440e-9380-42f017a0f9e8
-ms.openlocfilehash: c36200d7f0d41aa4f116fdee3f5d95ff1e80e839
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 971d6c05ad4669f32e3b232d5e91c501e197be30
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65445992"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707428"
 ---
 # <a name="creating-an-atl-project"></a>创建 ATL 项目
 
-创建 ATL 项目的最简单方法是使用 ATL 项目向导中，位于**Win32 项目**的文件夹**新项目**对话框。
+创建 ATL 项目最简单的方法是使用位于“新建项目”对话框的“Win32 Projects”文件夹中的 ATL 项目向导。
 
-## <a name="to-create-an-atl-project-using-the-atl-project-wizard"></a>若要创建使用 ATL 项目向导的 ATL 项目
+## <a name="to-create-an-atl-project-using-the-atl-project-wizard"></a>使用 ATL 项目向导创建 ATL 项目
 
-1. 在 Visual Studio 中，选择**文件 > 新建 > 项目**从主菜单。
+1. 在 Visual Studio 中，从主菜单选择“文件”>“新建”>“项目”。
 
-1. 选择**ATL 项目**中的图标**模板**窗格，以打开**ATL 项目向导**。
+1. 在“模板”窗格中选择“ATL 项目”图标以打开“ATL 项目向导”。
 
-1. 定义使用应用程序设置[应用程序设置](../../atl/reference/application-settings-atl-project-wizard.md)页**ATL 项目向导**。
+1. 使用“ATL 项目向导”的[应用程序设置](../../atl/reference/application-settings-atl-project-wizard.md)页面来定义你的应用程序设置。
 
    > [!NOTE]
    > 跳过此步骤可保留向导的默认设置。
 
-1. 单击**完成**关闭向导并在开发环境中打开新项目。
+1. 单击“完成”关闭向导并在开发环境中打开新项目。
 
-你的项目创建后，可以查看中创建的文件**解决方案资源管理器**。 有关向导为项目创建的文件的更多信息，请参见项目生成的文件 ReadMe.txt。 有关文件类型的详细信息，请参阅[视觉对象创建的文件类型C++项目](../../build/reference/file-types-created-for-visual-cpp-projects.md)。 有关新的 ATL 项目中，以及如何更改它们的配置详细信息，请参阅[默认 ATL 项目配置](../../atl/reference/default-atl-project-configurations.md)。
+创建项目后，可以在“解决方案资源管理器”中查看创建的文件。 有关向导为项目创建的文件的更多信息，请参见项目生成的文件 ReadMe.txt。 有关文件类型的详细信息，请参阅[为 Visual Studio C++ 项目创建的文件类型](../../build/reference/file-types-created-for-visual-cpp-projects.md)。 有关新 ATL 项目的配置以及如何更改这些配置的详细信息，请参阅[默认 ATL 项目配置](../../atl/reference/default-atl-project-configurations.md)。
 
 ## <a name="see-also"></a>请参阅
 

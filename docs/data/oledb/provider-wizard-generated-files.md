@@ -1,27 +1,37 @@
 ---
 title: 提供程序向导生成的文件
-ms.date: 10/18/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 ms.assetid: 6e1ac94b-eb90-4abf-82b3-06944b947ebc
-ms.openlocfilehash: a9a706463326249135a55bc907cb8a664a3ca808
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 0638680482546f56f26b70660ab43bd9848438a3
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282957"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707478"
 ---
 # <a name="provider-wizard-generated-files"></a>提供程序向导生成的文件
 
-**ATL OLE DB 提供程序向导**生成以下文件。 下面的主题使用短名称*自定义*，但确切的文件名取决于创建提供程序时所做的选择。
+::: moniker range="vs-2019"
 
-|文件名|描述|
+ATL OLE DB 提供程序向导不适用于 Visual Studio 2019 及更高版本。
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+ATL OLE DB 提供程序向导生成以下文件。 下面的主题使用短名称“Custom”，但确切文件名具体视你在创建提供程序时所做的选择而定。
+
+|文件名|说明|
 |---------------|-----------------|
-|*Custom*RS.cpp|包含命令帮助程序`Execute`方法和提供程序列映射。|
-|*自定义*DS.h|实现数据源对象。 此标头文件包含数据源属性的属性映射。|
-|*Custom*RS.h|实现的命令和行集对象。 此标头文件包含行集和命令属性的属性映射。|
-|*自定义*Sess.h|实现会话对象。 此标头文件包含的会话属性的属性映射。|
-|*自定义*.rgs|包含已注册的对象生成**OLE DB 提供程序向导**。|
+|CustomRS.cpp|包含命令帮助程序 `Execute` 方法和提供程序列映射。|
+|CustomDS.h|实现数据源对象。 此头文件包含数据源属性的属性映射。|
+|CustomRS.h|实现命令和行集对象。 此头文件包含行集和命令属性的属性映射。|
+|CustomSess.h|实现会话对象。 此头文件包含会话属性的属性映射。|
+|Custom.rgs|包含 OLE DB 提供程序向导生成的已注册对象。|
+
+::: moniker-end
 
 ## <a name="see-also"></a>请参阅
 

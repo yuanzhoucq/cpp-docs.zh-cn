@@ -1,31 +1,34 @@
 ---
 title: 使用者向导生成的类
-ms.date: 10/17/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
-- attribute-injected classes and methods
-- wizard-generated classes and methods
-- OLE DB consumers, wizard-generated classes and methods
-- command classes in OLE DB consumer
-- classes [C++], OLE DB Consumer Wizard-generated
-- consumer wizard-generated classes and methods
 - user record classes in OLE DB consumer
 ms.assetid: dba0538f-2afe-4354-8cbb-f202ea8ade5a
-ms.openlocfilehash: 7cd1fbe69186a2fcdbf25f1b2aa12727c98065da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 3442ff484876aec9b2cd3fa93e95c4d503649ee9
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362220"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707754"
 ---
 # <a name="consumer-wizard-generated-classes"></a>使用者向导生成的类
 
-当你使用**ATL OLE DB 使用者向导**生成一个使用者，您可以使用 OLE DB 模板或 OLE DB 属性的选择。 在这两种情况下，向导将分别生成命令类和用户记录类。 命令类包含用于打开在向导中指定的数据源和行集的代码。 用户记录类包含选定数据库表的列映射。 但是，这两种情况下生成的代码各不相同：
 
-- 如果选择模板化使用者，则向导将生成命令类和用户记录类。 命令类将具有名称中输入**类**框在向导中 (例如， `CProducts`)，用户记录类将具有窗体的名称"*ClassName*访问器"（例如，`CProductsAccessor`). 这两个类都位于使用者的头文件中。
+::: moniker range="vs-2019"
 
-- 如果选择属性化使用者，则用户记录类将具有“_*类名*Accessor”格式的名称，并将插入。 也就是说，您将能够在文本编辑器中查看仅命令类只能为插入的代码查看用户记录类。 有关查看插入代码的信息，请参阅 [调试插入代码](/visualstudio/debugger/how-to-debug-injected-code)。
+ATL OLE DB 使用者向导不适用于 Visual Studio 2019 及更高版本。 但仍可以手动添加此功能。
 
-下面的示例使用上创建的命令类`Products`表的`Northwind`数据库来演示向导生成的使用者代码的命令类和用户记录类。
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+使用 ATL OLE DB 使用者向导生成使用者时，可以选择是使用 OLE DB 模板，还是使用 OLE DB 特性。 在这两种情况下，向导将分别生成命令类和用户记录类。 命令类包含用于打开在向导中指定的数据源和行集的代码。 用户记录类包含选定数据库表的列映射。 但是，这两种情况下生成的代码各不相同：
+
+- 如果选择模板化使用者，则向导将生成命令类和用户记录类。 命令类以你在向导的“类”框中输入的名称命名（例如，`CProducts`），用户记录类采用“ClassNameAccessor”格式的名称（例如，`CProductsAccessor`）。 这两个类都位于使用者的头文件中。
+
+- 如果选择属性化使用者，则用户记录类将具有“_*类名*Accessor”格式的名称，并将插入。 也就是说，只能在文本编辑器中查看命令类，并只能以插入代码的形式查看用户记录类。 有关查看插入代码的信息，请参阅 [调试插入代码](/visualstudio/debugger/how-to-debug-injected-code)。
+
+下面的示例使用对 `Northwind` 数据库的 `Products` 表创建的命令类，展示了用于命令类和用户记录类的向导生成的使用者代码。
 
 ## <a name="templated-user-record-classes"></a>模板化用户记录类
 
@@ -39,7 +42,7 @@ ms.locfileid: "62362220"
 > 如果修改用户记录类或编写自己的使用者，则数据变量必须在状态和长度变量之前出现。
 
 > [!NOTE]
-> ATL OLE DB 使用者向导使用`DB_NUMERIC`类型来绑定数值数据类型。 它之前使用`DBTYPE_VARNUMERIC`(由描述的格式`DB_VARNUMERIC`类型; 请参阅 Oledb.h)。 如果不使用向导来创建使用者，建议你使用`DB_NUMERIC`。
+> ATL OLE DB 使用者向导使用 `DB_NUMERIC` 类型来绑定数值数据类型。 它之前使用的是 `DBTYPE_VARNUMERIC`（格式由 `DB_VARNUMERIC` 类型所描述；请参阅 Oledb.h）。 如果不使用向导来创建使用者，建议使用 `DB_NUMERIC`。
 
 ```cpp
 // Products.H : Declaration of the CProducts class
@@ -148,11 +151,11 @@ class CProducts : public CCommand<CAccessor<CProductsAccessor>>
 
 ## <a name="attribute-injected-user-record-classes"></a>属性插入的用户记录类
 
-如果使用数据库属性（[db_command](../../windows/db-command.md) 或 [db_table](../../windows/db-table.md)）创建 OLE DB 使用者，属性将插入一个名称为“_*类名*Accessor”格式的用户记录类。 例如，如果将命令类命名为 `COrders`，用户记录类将为 `_COrdersAccessor`。 虽然用户记录类将出现在**类视图**，双击它改为导航到标头文件中的命令或表类。 在这些情况下，只能通过查看属性插入的代码来查看用户记录类的实际声明。
+如果使用数据库属性（[db_command](../../windows/db-command.md) 或 [db_table](../../windows/db-table.md)）创建 OLE DB 使用者，属性将插入一个名称为“_*类名*Accessor”格式的用户记录类。 例如，如果将命令类命名为 `COrders`，用户记录类将为 `_COrdersAccessor`。 虽然用户记录类显示在“类视图”中，但双击它会改为转到头文件中的命令类或表类。 在这些情况下，只能通过查看属性插入的代码来查看用户记录类的实际声明。
 
-如果在属性化使用者中添加或重写方法，可能会出现问题。 例如，可以将 `_COrdersAccessor` 构造函数添加到 `COrders` 声明中，但请注意，实际上这一操作将构造函数添加到了插入的 `COrdersAccessor` 类中。 此类构造函数可以初始化列/参数，但不是能创建一个复制构造函数这种方式，因为它不能直接实例化`COrdersAccessor`对象。 如果直接在上需要一个构造函数 （或其他方法）`COrders`类，建议您定义新类派生自`COrders`并添加那里必需的方法。
+如果在属性化使用者中添加或重写方法，可能会出现问题。 例如，可以将 `_COrdersAccessor` 构造函数添加到 `COrders` 声明中，但请注意，实际上这一操作将构造函数添加到了插入的 `COrdersAccessor` 类中。 此类构造函数可以初始化列/参数，但你无法通过这种方式创建复制构造函数，因为它无法直接实例化 `COrdersAccessor` 对象。 如果需要直接位于 `COrders` 类上的构造函数（或其他方法），建议定义派生自 `COrders` 的新类，并将所需的方法添加到其中。
 
-以下示例中，向导将生成的类声明`COrders`，但用户记录类`COrdersAccessor`未显示，因为属性将插入它。
+在下面的示例中，向导为 `COrders` 类生成声明，但用户记录类 `COrdersAccessor` 不显示，因为特性会将它插入。
 
 ```cpp
 #define _ATL_ATTRIBUTES
@@ -183,6 +186,8 @@ class CProducts : public CCommand<CAccessor<_CProductsAccessor>>
 大部分插入的代码均与模板化版本相同或相似。 主要区别在于插入的方法，这在 [使用者向导生成的方法](../../data/oledb/consumer-wizard-generated-methods.md)中介绍。
 
 有关查看插入代码的信息，请参阅 [调试插入代码](/visualstudio/debugger/how-to-debug-injected-code)。
+
+::: moniker-end
 
 ## <a name="see-also"></a>请参阅
 
