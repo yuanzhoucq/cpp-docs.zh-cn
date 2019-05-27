@@ -1,30 +1,34 @@
 ---
-title: IFIDN]
-ms.date: 08/30/2018
+title: IFIDN IFIDNI
+ms.date: 05/23/2019
 f1_keywords:
 - IFIDN[[I]]
+- IFIDN
+- IFIDNI
 helpviewer_keywords:
 - IFIDN[[I]] directive
+- IFIDN directive
+- IFIDNI directive
 ms.assetid: 957893b1-1a30-4ffd-96f2-6663604a5058
-ms.openlocfilehash: d727c47d5c92d3c8b12c2701bdd8264db4fd5abc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9dab7771e96848fd77aec7e601b9da2f1bc8610d
+ms.sourcegitcommit: 79e985d3c6e8ccaf94f6e641972887cae8c6eeb0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62202877"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66197659"
 ---
-# <a name="ifidn"></a>IFIDN]
+# <a name="ifidn-ifidni"></a>IFIDN IFIDNI
 
 如果文本项相同的授予集。
 
 ## <a name="syntax"></a>语法
 
-> IFIDN [[I]] textitem1 textitem2
+> **IFIDN**\[**I**] *textitem1* __,__ *textitem2*
 
 ## <a name="remarks"></a>备注
 
-如果**我**是给定，比较不区分大小写。 请参阅[如果](../../assembler/masm/if-masm.md)有关完整语法。
+如果**IFIDNI**是给定，比较不区分大小写。 请参阅[如果](../../assembler/masm/if-masm.md)有关完整语法。
 
 ## <a name="see-also"></a>请参阅
 
-[指令参考](../../assembler/masm/directives-reference.md)<br/>
+[指令参考](../../assembler/masm/directives-reference.md)

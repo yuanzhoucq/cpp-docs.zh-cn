@@ -2,12 +2,12 @@
 title: C++ 中 Windows 编程概述
 ms.date: 05/06/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 036da87c24eef38f3c88bb5f73808a434b9da6a1
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 957e3565ad4caa12da5e7d10915ca159d00954b8
+ms.sourcegitcommit: 79e985d3c6e8ccaf94f6e641972887cae8c6eeb0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837565"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66197737"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>C++ 中 Windows 编程概述
 
@@ -100,7 +100,7 @@ Visual Studio 包含一个功能强大的本机代码调试器、静态分析工
 |[演练：创建 Windows 桌面应用程序 (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|创建本机 Windows 桌面应用程序。|
 |[Windows 桌面向导](windows-desktop-wizard.md)|使用向导来创建新的 Windows 项目。|
 |[活动模板库 (ATL)](../atl/atl-com-desktop-components.md)|使用 ATL 库创建的 COM 组件C++。|
-|[Microsoft 基础类 (MFC)](../mfc/TOC.md)|使用 MFC 创建大或小 Windows 应用程序使用对话框和控件|
+|[Microsoft 基础类 (MFC)](../mfc/mfc-desktop-applications.md)|使用 MFC 创建大或小 Windows 应用程序使用对话框和控件|
 |[ATL 和 MFC 共享类](../atl-mfc-shared/TOC.md)|使用 ATL 和 MFC 中的共享如 CString 类。|
 |[数据访问](../data/data-access-in-cpp.md)| OLE DB 和 ODBC|
 |[文本和字符串](../text/text-and-strings-in-visual-cpp.md)|在 Windows 上的各种字符串类型。|

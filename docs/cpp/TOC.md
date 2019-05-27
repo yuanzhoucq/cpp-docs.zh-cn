@@ -3,7 +3,7 @@
 ### [类型系统（现代 C++）](cpp-type-system-modern-cpp.md)
 #### [值类型（现代 C++）](value-types-modern-cpp.md)
 #### [类型转换和类型安全（现代 C++）](type-conversions-and-type-safety-modern-cpp.md)
-### [统一安装和委派构造函数](uniform-initialization-and-delegating-constructors.md)
+### [一致的初始化和委派构造函数](uniform-initialization-and-delegating-constructors.md)
 ### [对象生存期和资源管理（现代 C++）](object-lifetime-and-resource-management-modern-cpp.md)
 ### [对象所有资源 (RAII)](objects-own-resources-raii.md)
 ### [智能指针（现代 C++）](smart-pointers-modern-cpp.md)
