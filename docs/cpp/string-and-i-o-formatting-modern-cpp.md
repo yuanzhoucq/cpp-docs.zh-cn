@@ -1,4 +1,4 @@
----
+﻿---
 title: 字符串和 I-O 格式化 (现代C++)
 ms.date: 11/04/2016
 ms.topic: conceptual
