@@ -1,17 +1,17 @@
 ---
 title: 演练：测试项目 (C++)
-ms.date: 09/14/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - project testing [C++]
 - testing projects
 - projects [C++], testing
 ms.assetid: 88cdd377-c5c8-4201-889d-32f5653ebead
-ms.openlocfilehash: aa1af9cd355265214827527b986b8602a25e93f3
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
+ms.openlocfilehash: 5ced3c4267f2c33869e18373c11ebf5e237d9485
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57808269"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857659"
 ---
 # <a name="walkthrough-testing-a-project-c"></a>演练：测试项目 (C++)
 
@@ -33,32 +33,32 @@ ms.locfileid: "57808269"
 
    `Cardgame.solitaire(1);`
 
-1. 要在该行上设置断点，请在菜单栏上选择“调试” > “切换断点”，或选择 F9 键。 行的左侧出现一个红色圆圈，它表示已设置断点。 要删除断点，可再次选择菜单命令或 F9 键。
+1. 要在该行上设置断点，请在菜单栏上选择“调试”   > “切换断点”  ，或选择 F9  键。 行的左侧出现一个红色圆圈，它表示已设置断点。 要删除断点，可再次选择菜单命令或 F9  键。
 
    如果使用鼠标，也可通过单击左边距来设置或删除断点。
 
-1. 在菜单栏上，依次选择“调试” > “启动调试”，或选择 F5 键。
+1. 在菜单栏上，依次选择“调试”   > “启动调试”  ，或选择 F5  键。
 
    程序到达具有断点的行时，暂时停止执行，因为程序处于中断模式。 代码行左侧的黄色箭头表示它是要执行的下一行。
 
-1. 要检查变量 `Cardgame::totalParticipants` 的值，请将指针移到 `Cardgame` 上，然后将其移到工具提示窗口左侧的扩展控件上。 显示变量名称 `totalParticipants` 及其值 12。
+1. 要检查变量 `Cardgame::totalParticipants` 的值，请将指针移到 `Cardgame` 上，然后将其移到工具提示窗口左侧的扩展控件上。 显示变量名称 `totalParticipants` 及其值 12  。
 
-   打开变量 `Cardgame::totalParticipants` 的快捷菜单，然后选择“添加监视”以在“监视 1”窗口中显示该变量。 也可突出显示一个变量并将其拖动到“监视 1”窗口。
+   打开变量 `Cardgame::totalParticipants` 的快捷菜单，然后选择“添加监视”以在“监视 1”窗口中显示该变量   。 也可突出显示一个变量并将其拖动到“监视 1”  窗口。
 
-1. 要转到下一代码行，请在菜单栏上依次选择“调试” > “逐过程执行”或选择 F10 键。
+1. 要转到下一代码行，请在菜单栏上依次选择“调试”   > “逐过程执行”  或选择 F10  键。
 
-   “监视 1”窗口中 `Cardgame::totalParticipants` 的值现在显示为 13。
+   “监视 1”  窗口中 `Cardgame::totalParticipants` 的值现在显示为 13  。
 
-1. 打开 `return 0;` 语句的快捷菜单，然后选择“运行到光标处”。 代码左侧的黄色箭头指向要执行的下一语句。
+1. 打开 `return 0;` 语句的快捷菜单，然后选择“运行到光标处”  。 代码左侧的黄色箭头指向要执行的下一语句。
 
-1. `Cardgame` 终止时，`Cardgame::totalParticipants` 数应减少。 此时，`Cardgame::totalParticipants` 应等于 0，因为已删除所有 `Cardgame` 实例，但“监视 1”窗口指示 `Cardgame::totalparticipants` 等于 18。 此差异表明代码中存在 bug，可通过完成下一个演练来检测和修复，[演练：调试项目 (C++)](../ide/walkthrough-debugging-a-project-cpp.md)。
+1. `Cardgame` 终止时，`Cardgame::totalParticipants` 数应减少。 此时，`Cardgame::totalParticipants` 应等于 0，因为已删除所有 `Cardgame` 实例，但“监视 1”  窗口指示 `Cardgame::totalparticipants` 等于 18  。 此差异表明代码中存在 bug，可通过完成下一个演练来检测和修复，[演练：调试项目 (C++)](../ide/walkthrough-debugging-a-project-cpp.md)。
 
-1. 要停止该程序，请在菜单栏上选择“调试” > “停止调试”或选择 Shift+F5 键盘快捷方式。
+1. 要停止该程序，请在菜单栏上选择“调试”   > “停止调试”  或选择 Shift  +F5  键盘快捷方式。
 
 ## <a name="next-steps"></a>后续步骤
 
-上一步：[演练：生成项目 (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
-**下一篇：**[演练：调试项目 (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
+上一步：  [演练：生成项目 (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
+**下一篇：** [演练：调试项目 (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
 
 ## <a name="see-also"></a>请参阅
 
