@@ -1,0 +1,2945 @@
+- name: MFC 桌面应用程序
+  href: mfc-desktop-applications.md
+- name: MFC 概念
+  expanded: false
+  items:
+    - name: MFC 概念
+      href: mfc-concepts.md
+    - name: 常规 MFC 主题
+      expanded: false
+      items:
+        - name: 常规 MFC 主题
+          href: general-mfc-topics.md
+        - name: 使用 MFC 源文件
+          expanded: false
+          items:
+            - name: 使用 MFC 源文件
+              href: using-the-mfc-source-files.md
+            - name: 注释示例
+              href: an-example-of-the-comments.md
+            - name: '-- Implementation 注释'
+              href: decrement-implementation-comment.md
+            - name: '-- Constructors 注释'
+              href: decrement-constructors-comment.md
+            - name: '-- Attributes 注释'
+              href: decrement-attributes-comment.md
+            - name: '-- Operations 注释'
+              href: decrement-operations-comment.md
+            - name: '-- Overridables 注释'
+              href: decrement-overridables-comment.md
+        - name: MFC 库版本
+          expanded: false
+          items:
+            - name: MFC 库版本
+              href: mfc-library-versions.md
+            - name: MFC MBCS DLL 加载项
+              href: mfc-mbcs-dll-add-on.md
+        - name: 使用类编写 Windows 应用程序
+          expanded: false
+          items:
+            - name: 使用类编写 Windows 应用程序
+              href: using-the-classes-to-write-applications-for-windows.md
+            - name: 框架 (MFC)
+              href: framework-mfc.md
+            - name: SDI 和 MDI
+              href: sdi-and-mdi.md
+            - name: 文档、视图和框架
+              href: documents-views-and-the-framework.md
+            - name: 向导和资源编辑器
+              href: wizards-and-the-resource-editors.md
+        - name: 在框架的基础之上生成
+          expanded: false
+          items:
+            - name: 在框架的基础之上生成
+              href: building-on-the-framework.md
+            - name: 生成 MFC 应用程序的操作顺序
+              href: sequence-of-operations-for-building-mfc-applications.md
+            - name: 创建 OLE 应用程序的操作顺序
+              href: sequence-of-operations-for-creating-ole-applications.md
+            - name: 创建 ActiveX 控件的操作顺序
+              href: sequence-of-operations-for-creating-activex-controls.md
+            - name: 创建数据库应用程序的操作顺序
+              href: sequence-of-operations-for-creating-database-applications.md
+            - name: 框架如何调用代码
+              href: how-the-framework-calls-your-code.md
+        - name: CWinApp：应用程序类
+          expanded: false
+          items:
+            - name: CWinApp：应用程序类
+              href: cwinapp-the-application-class.md
+            - name: CWinApp 和 MFC 应用程序向导
+              href: cwinapp-and-the-mfc-application-wizard.md
+            - name: 可重写 CWinApp 成员函数
+              href: overridable-cwinapp-member-functions.md
+            - name: InitInstance 成员函数
+              href: initinstance-member-function.md
+            - name: Run 成员函数
+              href: run-member-function.md
+            - name: ExitInstance 成员函数
+              href: exitinstance-member-function.md
+            - name: OnIdle 成员函数
+              href: onidle-member-function.md
+            - name: 特殊 CWinApp 服务
+              href: special-cwinapp-services.md
+        - name: 文档模板和文档/视图创建过程
+          expanded: false
+          items:
+            - name: 文档模板和文档/视图创建过程
+              href: document-templates-and-the-document-view-creation-process.md
+            - name: 文档模板创建
+              href: document-template-creation.md
+            - name: 文档/视图创建
+              href: document-view-creation.md
+            - name: MFC 对象之间的关系
+              href: relationships-among-mfc-objects.md
+            - name: 新建文档、窗口和视图
+              href: creating-new-documents-windows-and-views.md
+        - name: 管理 MFC 模块的状态数据
+          expanded: false
+          items:
+            - name: 管理 MFC 模块的状态数据
+              href: managing-the-state-data-of-mfc-modules.md
+            - name: 导出的 DLL 函数入口点
+              href: exported-dll-function-entry-points.md
+            - name: COM 接口入口点
+              href: com-interface-entry-points.md
+            - name: 窗口过程入口点
+              href: window-procedure-entry-points.md
+        - name: 空闲循环处理
+          href: idle-loop-processing.md
+        - name: 支持 MFC 模块状态中的激活上下文
+          href: support-for-activation-contexts-in-the-mfc-module-state.md
+        - name: 隔离 MFC 公共控件库
+          href: isolation-of-the-mfc-common-controls-library.md
+        - name: Windows Vista 公共控件的生成要求
+          expanded: false
+          items:
+            - name: Windows Vista 公共控件的生成要求
+              href: build-requirements-for-windows-vista-common-controls.md
+            - name: 弃用的 ANSI API
+              href: deprecated-ansi-apis.md
+        - name: 如何：添加重启管理器支持
+          href: how-to-add-restart-manager-support.md
+        - name: 动态布局
+          href: dynamic-layout.md
+    - name: 使用 CObject
+      expanded: false
+      items:
+        - name: 使用 CObject
+          href: using-cobject.md
+        - name: 从 CObject 派生类
+          expanded: false
+          items:
+            - name: 从 CObject 派生类
+              href: deriving-a-class-from-cobject.md
+            - name: 指定功能级别
+              href: specifying-levels-of-functionality.md
+        - name: 访问运行时类信息
+          href: accessing-run-time-class-information.md
+        - name: 动态对象创建
+          href: dynamic-object-creation.md
+        - name: CObject 类：常见问题
+          expanded: false
+          items:
+            - name: CObject 类：常见问题
+              href: cobject-class-frequently-asked-questions.md
+            - name: 我是否必须从 CObject 派生新类？
+              href: do-i-have-to-derive-new-classes-from-cobject-q.md
+            - name: 从 CObject 派生类的费用是多少？
+              href: what-does-it-cost-me-to-derive-a-class-from-cobject-q.md
+    - name: 集合
+      expanded: false
+      items:
+        - name: 集合
+          href: collections.md
+        - name: 关于选择集合类的建议
+          href: recommendations-for-choosing-a-collection-class.md
+        - name: 基于模板的类
+          href: template-based-classes.md
+        - name: 如何：生成类型安全集合
+          href: how-to-make-a-type-safe-collection.md
+        - name: 访问集合的所有成员
+          expanded: false
+          items:
+            - name: 访问集合的所有成员
+              href: accessing-all-members-of-a-collection.md
+            - name: 删除 CObject 集合中的所有对象
+              href: deleting-all-objects-in-a-cobject-collection.md
+        - name: 创建堆栈和队列集合
+          href: creating-stack-and-queue-collections.md
+    - name: MFC 中的异常处理
+      expanded: false
+      items:
+        - name: MFC 中的异常处理
+          href: exception-handling-in-mfc.md
+        - name: 异常：版本 3.0 中的异常宏变化
+          href: exceptions-changes-to-exception-macros-in-version-3-0.md
+        - name: 异常：捕获和删除异常
+          href: exceptions-catching-and-deleting-exceptions.md
+        - name: 异常：从 MFC 异常宏转换
+          href: exceptions-converting-from-mfc-exception-macros.md
+        - name: 异常：使用 MFC 宏和 C++ 异常
+          href: exceptions-using-mfc-macros-and-cpp-exceptions.md
+        - name: 异常：检查异常内容
+          href: exceptions-examining-exception-contents.md
+        - name: 异常：释放异常中的对象
+          href: exceptions-freeing-objects-in-exceptions.md
+        - name: 异常：从你自己的函数中抛出异常
+          href: exceptions-throwing-exceptions-from-your-own-functions.md
+        - name: 异常：构造函数中的异常
+          href: exceptions-exceptions-in-constructors.md
+        - name: 异常：数据库异常
+          href: exceptions-database-exceptions.md
+        - name: 异常：OLE 异常
+          href: exceptions-ole-exceptions.md
+    - name: MFC 中的文件
+      expanded: false
+      items:
+        - name: MFC 中的文件
+          href: files-in-mfc.md
+        - name: 打开文件
+          href: opening-files.md
+        - name: 读取和写入文件
+          href: reading-and-writing-files.md
+        - name: 关闭文件
+          href: closing-files.md
+        - name: 访问文件状态
+          href: accessing-file-status.md
+    - name: 界面元素
+      href: interface-elements.md
+    - name: MAPI
+      expanded: false
+      items:
+        - name: MAPI
+          href: mapi.md
+        - name: MFC 中的 MAPI 支持
+          href: mapi-support-in-mfc.md
+        - name: MAPI 示例
+          href: mapi-samples.md
+    - name: 内存管理
+      expanded: false
+      items:
+        - name: 内存管理
+          href: memory-management.md
+        - name: 内存管理：帧分配
+          href: memory-management-frame-allocation.md
+        - name: 内存管理：堆分配
+          expanded: false
+          items:
+            - name: 内存管理：堆分配
+              href: memory-management-heap-allocation.md
+            - name: 内存管理：示例
+              href: memory-management-examples.md
+            - name: 内存管理：可调整大小的内存块
+              href: memory-management-resizable-memory-blocks.md
+    - name: 消息处理和映射
+      expanded: false
+      items:
+        - name: 消息处理和映射
+          href: message-handling-and-mapping.md
+        - name: 框架中的消息和命令
+          expanded: false
+          items:
+            - name: 框架中的消息和命令
+              href: messages-and-commands-in-the-framework.md
+            - name: 消息
+              href: messages.md
+            - name: 消息处理程序
+              href: message-handlers.md
+            - name: 消息类别
+              href: message-categories.md
+            - name: 映射消息
+              href: mapping-messages.md
+            - name: 用户界面对象和命令 ID
+              expanded: false
+              items:
+                - name: 用户界面对象和命令 ID
+                  href: user-interface-objects-and-command-ids.md
+                - name: 命令 ID
+                  href: command-ids.md
+                - name: 标准命令
+                  href: standard-commands.md
+            - name: 命令目标
+              href: command-targets.md
+        - name: 框架如何调用处理程序
+          expanded: false
+          items:
+            - name: 框架如何调用处理程序
+              href: how-the-framework-calls-a-handler.md
+            - name: 消息发送和接收
+              href: message-sending-and-receiving.md
+            - name: 非命令消息如何到达处理程序
+              href: how-noncommand-messages-reach-their-handlers.md
+            - name: 命令路由
+              href: command-routing.md
+            - name: 命令路由示例
+              href: command-routing-illustration.md
+            - name: OnCmdMsg 处理程序
+              href: oncmdmsg-handler.md
+            - name: 重写标准命令路由
+              href: overriding-the-standard-command-routing.md
+        - name: 框架如何搜索消息映射
+          expanded: false
+          items:
+            - name: 框架如何搜索消息映射
+              href: how-the-framework-searches-message-maps.md
+            - name: 在哪里可以找到消息映射
+              href: where-to-find-message-maps.md
+            - name: 派生的消息映射
+              href: derived-message-maps.md
+        - name: 声明消息处理程序函数
+          expanded: false
+          items:
+            - name: 声明消息处理程序函数
+              href: declaring-message-handler-functions.md
+            - name: 标准 Windows 消息的处理程序
+              href: handlers-for-standard-windows-messages.md
+            - name: 命令和控件通知的处理程序
+              href: handlers-for-commands-and-control-notifications.md
+            - name: 消息映射范围的处理程序
+              href: handlers-for-message-map-ranges.md
+            - name: 处理反射的消息
+              href: handling-reflected-messages.md
+        - name: 如何：在状态栏中显示命令信息
+          href: how-to-display-command-information-in-the-status-bar.md
+        - name: 如何：创建模板类的消息映射
+          href: how-to-create-a-message-map-for-a-template-class.md
+    - name: MFC COM
+      expanded: false
+      items:
+        - name: MFC COM
+          href: mfc-com.md
+        - name: 活动文档包含
+          expanded: false
+          items:
+            - name: 活动文档包含
+              href: active-document-containment.md
+            - name: 活动文档包含示例：Office 绑定器
+              href: example-of-active-document-containment-office-binder.md
+            - name: 创建活动文档容器应用程序
+              href: creating-an-active-document-container-application.md
+            - name: 活动文档容器
+              expanded: false
+              items:
+                - name: 活动文档容器
+                  href: active-document-containers.md
+                - name: 帮助菜单合并
+                  href: help-menu-merging.md
+                - name: 以编程方式打印
+                  href: programmatic-printing.md
+                - name: 消息处理和命令目标
+                  href: message-handling-and-command-targets.md
+            - name: 活动文档服务器
+              href: active-document-servers.md
+            - name: 活动文档
+              href: active-documents.md
+        - name: 自动化
+          expanded: false
+          items:
+            - name: 自动化
+              href: automation.md
+            - name: 自动化客户端
+              expanded: false
+              items:
+                - name: 自动化客户端
+                  href: automation-clients.md
+                - name: 自动化客户端：使用类型库
+                  href: automation-clients-using-type-libraries.md
+            - name: 自动化服务器
+              expanded: false
+              items:
+                - name: 自动化服务器
+                  href: automation-servers.md
+                - name: 自动化服务器：对象生存期问题
+                  href: automation-servers-object-lifetime-issues.md
+        - name: 连接点
+          href: connection-points.md
+    - name: MFC Internet 编程基础知识
+      expanded: false
+      items:
+        - name: MFC Internet 编程基础知识
+          href: mfc-internet-programming-basics.md
+        - name: 与 Internet 相关的 MFC 类
+          href: internet-related-mfc-classes.md
+        - name: 按主题划分的 Internet 信息
+          href: internet-information-by-topic.md
+        - name: 按任务划分的 Internet 信息
+          href: internet-information-by-task.md
+        - name: Internet 上的 Active 技术
+          href: active-technology-on-the-internet.md
+        - name: WinInet 基础知识
+          href: wininet-basics.md
+        - name: HTML 基础知识
+          href: html-basics.md
+    - name: MFC Internet 编程任务
+      expanded: false
+      items:
+        - name: MFC Internet 编程任务
+          href: mfc-internet-programming-tasks.md
+        - name: 应用程序设计选择
+          href: application-design-choices.md
+        - name: 编写 MFC 应用程序
+          href: writing-mfc-applications.md
+        - name: Internet 上的 ActiveX 控件
+          href: activex-controls-on-the-internet.md
+        - name: 升级现有 ActiveX 控件
+          href: upgrading-an-existing-activex-control.md
+        - name: Internet 上的异步名字对象
+          href: asynchronous-monikers-on-the-internet.md
+        - name: 测试 Internet 应用程序
+          href: testing-internet-applications.md
+        - name: Internet 安全性 (C++)
+          href: internet-security-cpp.md
+    - name: MFC 中的 OLE
+      expanded: false
+      items:
+        - name: MFC 中的 OLE
+          href: ole-in-mfc.md
+        - name: OLE 后台
+          expanded: false
+          items:
+            - name: OLE 后台
+              href: ole-background.md
+            - name: OLE 后台：链接和嵌入
+              href: ole-background-linking-and-embedding.md
+            - name: OLE 后台：容器和服务器
+              href: ole-background-containers-and-servers.md
+            - name: OLE 后台：实现策略
+              href: ole-background-implementation-strategies.md
+            - name: OLE 后台：MFC 实现
+              href: ole-background-mfc-implementation.md
+        - name: Activation (C++)
+          expanded: false
+          items:
+            - name: Activation (C++)
+              href: activation-cpp.md
+            - name: 激活：谓词
+              href: activation-verbs.md
+        - name: 容器
+          expanded: false
+          items:
+            - name: 容器
+              href: containers.md
+            - name: 容器：实现容器
+              href: containers-implementing-a-container.md
+            - name: 容器：客户端项
+              href: containers-client-items.md
+            - name: 容器：客户端项通知
+              href: containers-client-item-notifications.md
+            - name: 容器：客户端项状态
+              href: containers-client-item-states.md
+            - name: 容器：复合文件
+              href: containers-compound-files.md
+            - name: 容器：用户界面问题
+              href: containers-user-interface-issues.md
+            - name: 容器：高级功能
+              href: containers-advanced-features.md
+        - name: 数据对象和数据源 (OLE)
+          expanded: false
+          items:
+            - name: 数据对象和数据源 (OLE)
+              href: data-objects-and-data-sources-ole.md
+            - name: 数据对象和数据源：创建和销毁
+              href: data-objects-and-data-sources-creation-and-destruction.md
+            - name: 数据对象和数据源：操作
+              href: data-objects-and-data-sources-manipulation.md
+        - name: 拖放 (OLE)
+          expanded: false
+          items:
+            - name: 拖放 (OLE)
+              href: drag-and-drop-ole.md
+            - name: 拖放：实现放置源
+              href: drag-and-drop-implementing-a-drop-source.md
+            - name: 拖放：实现放置目标
+              href: drag-and-drop-implementing-a-drop-target.md
+            - name: 拖放：自定义
+              href: drag-and-drop-customizing.md
+        - name: 菜单和资源 (OLE)
+          expanded: false
+          items:
+            - name: 菜单和资源 (OLE)
+              href: menus-and-resources-ole.md
+            - name: 菜单和资源：容器添加项
+              href: menus-and-resources-container-additions.md
+            - name: 菜单和资源：服务器添加项
+              href: menus-and-resources-server-additions.md
+            - name: 菜单和资源：菜单合并
+              href: menus-and-resources-menu-merging.md
+        - name: 注册
+          href: registration.md
+        - name: 服务器
+          expanded: false
+          items:
+            - name: 服务器
+              href: servers.md
+            - name: 服务器：实现服务器
+              href: servers-implementing-a-server.md
+            - name: 服务器：实现服务器文档
+              href: servers-implementing-server-documents.md
+            - name: 服务器：实现就地框架窗口
+              href: servers-implementing-in-place-frame-windows.md
+            - name: 服务器：服务器项
+              href: servers-server-items.md
+            - name: 服务器：用户界面问题
+              href: servers-user-interface-issues.md
+        - name: 跟踪器
+          expanded: false
+          items:
+            - name: 跟踪器
+              href: trackers.md
+            - name: 跟踪器：在 OLE 应用程序中实现跟踪器
+              expanded: false
+              items:
+                - name: 跟踪器：在 OLE 应用程序中实现跟踪器
+                  href: trackers-implementing-trackers-in-your-ole-application.md
+                - name: 如何：在代码中实现跟踪
+                  href: how-to-implement-tracking-in-your-code.md
+                - name: 橡皮筋和跟踪器
+                  href: rubber-banding-and-trackers.md
+    - name: MFC 中的序列化
+      expanded: false
+      items:
+        - name: MFC 中的序列化
+          href: serialization-in-mfc.md
+        - name: 序列化：创建可序列化类
+          href: serialization-making-a-serializable-class.md
+        - name: 序列化：序列化对象
+          expanded: false
+          items:
+            - name: 序列化：序列化对象
+              href: serialization-serializing-an-object.md
+            - name: 什么是 CArchive 对象
+              href: what-is-a-carchive-object.md
+            - name: 创建 CArchive 对象的两种方法
+              href: two-ways-to-create-a-carchive-object.md
+            - name: 使用 CArchive << 和 >> 运算符
+              href: using-the-carchive-output-and-input-operators.md
+            - name: 通过存档存储和加载 CObject
+              href: storing-and-loading-cobjects-via-an-archive.md
+        - name: 序列化：序列化与数据库输入输出
+          expanded: false
+          items:
+            - name: 序列化：序列化与数据库输入输出
+              href: serialization-serialization-vs-database-input-output.md
+            - name: 关于处理输入输出的建议
+              href: recommendations-for-handling-input-output.md
+            - name: MFC 数据库应用程序中的“文件”菜单
+              href: file-menu-in-an-mfc-database-application.md
+    - name: 用户界面元素 (MFC)
+      expanded: false
+      items:
+        - name: 用户界面元素 (MFC)
+          href: user-interface-elements-mfc.md
+        - name: ActiveX 控件
+          expanded: false
+          items:
+            - name: ActiveX 控件
+              href: activex-controls.md
+            - name: MFC ActiveX 控件
+              expanded: false
+              items:
+                - name: MFC ActiveX 控件
+                  href: mfc-activex-controls.md
+                - name: MFC ActiveX 控件：优化
+                  expanded: false
+                  items:
+                    - name: MFC ActiveX 控件：优化
+                      href: mfc-activex-controls-optimization.md
+                    - name: 优化暂留和初始化
+                      href: optimizing-persistence-and-initialization.md
+                    - name: 提供无窗口激活
+                      href: providing-windowless-activation.md
+                    - name: 禁用“可见时激活”选项
+                      href: turning-off-the-activate-when-visible-option.md
+                    - name: 不活动时提供鼠标交互
+                      href: providing-mouse-interaction-while-inactive.md
+                    - name: 提供无闪烁激活
+                      href: providing-flicker-free-activation.md
+                    - name: 使用未剪辑的设备上下文
+                      href: using-an-unclipped-device-context.md
+                    - name: 优化控件绘制
+                      href: optimizing-control-drawing.md
+                - name: MFC ActiveX 控件：绘制 ActiveX 控件
+                  href: mfc-activex-controls-painting-an-activex-control.md
+                - name: MFC ActiveX 控件：事件
+                  href: mfc-activex-controls-events.md
+                - name: MFC ActiveX 控件：向 ActiveX 控件添加常备事件
+                  href: mfc-activex-controls-adding-stock-events-to-an-activex-control.md
+                - name: MFC ActiveX 控件：添加自定义事件
+                  href: mfc-activex-controls-adding-custom-events.md
+                - name: MFC ActiveX 控件：方法
+                  href: mfc-activex-controls-methods.md
+                - name: MFC ActiveX 控件：添加常备方法
+                  href: mfc-activex-controls-adding-stock-methods.md
+                - name: MFC ActiveX 控件：添加自定义方法
+                  href: mfc-activex-controls-adding-custom-methods.md
+                - name: MFC ActiveX 控件：从方法返回错误代码
+                  href: mfc-activex-controls-returning-error-codes-from-a-method.md
+                - name: MFC ActiveX 控件：属性
+                  href: mfc-activex-controls-properties.md
+                - name: MFC ActiveX 控件：添加常备属性
+                  href: mfc-activex-controls-adding-stock-properties.md
+                - name: MFC ActiveX 控件：添加自定义属性
+                  href: mfc-activex-controls-adding-custom-properties.md
+                - name: MFC ActiveX 控件：高级属性实现
+                  href: mfc-activex-controls-advanced-property-implementation.md
+                - name: MFC ActiveX 控件：访问环境属性
+                  href: mfc-activex-controls-accessing-ambient-properties.md
+                - name: MFC ActiveX 控件：属性页
+                  href: mfc-activex-controls-property-pages.md
+                - name: MFC ActiveX 控件：添加另一个自定义属性页
+                  href: mfc-activex-controls-adding-another-custom-property-page.md
+                - name: MFC ActiveX 控件：使用常备属性页
+                  href: mfc-activex-controls-using-stock-property-pages.md
+                - name: MFC ActiveX 控件：创建自动化服务器
+                  href: mfc-activex-controls-creating-an-automation-server.md
+                - name: MFC ActiveX 控件：使用字体
+                  href: mfc-activex-controls-using-fonts.md
+                - name: MFC ActiveX 控件：在 ActiveX 控件中使用图片
+                  href: mfc-activex-controls-using-pictures-in-an-activex-control.md
+                - name: MFC ActiveX 控件：高级主题
+                  href: mfc-activex-controls-advanced-topics.md
+                - name: MFC ActiveX 控件：分发 ActiveX 控件
+                  href: mfc-activex-controls-distributing-activex-controls.md
+                - name: MFC ActiveX 控件：许可 ActiveX 控件
+                  href: mfc-activex-controls-licensing-an-activex-control.md
+                - name: MFC ActiveX 控件：本地化 ActiveX 控件
+                  href: mfc-activex-controls-localizing-an-activex-control.md
+                - name: MFC ActiveX 控件：序列化
+                  href: mfc-activex-controls-serializing.md
+                - name: MFC ActiveX 控件：子类化 Windows 控件
+                  expanded: false
+                  items:
+                    - name: MFC ActiveX 控件：子类化 Windows 控件
+                      href: mfc-activex-controls-subclassing-a-windows-control.md
+                    - name: 反射的窗口消息 ID
+                      href: reflected-window-message-ids.md
+                - name: MFC ActiveX 控件：在 ActiveX 控件中使用数据绑定
+                  href: mfc-activex-controls-using-data-binding-in-an-activex-control.md
+            - name: ActiveX 控件容器
+              expanded: false
+              items:
+                - name: ActiveX 控件容器
+                  href: activex-control-containers.md
+                - name: ActiveX 控件容器
+                  href: containers-for-activex-controls.md
+                - name: ActiveX 控件容器：手动启用 ActiveX 控件包含
+                  href: activex-control-containers-manually-enabling-activex-control-containment.md
+                - name: ActiveX 控件容器：将控件插入控件容器应用程序
+                  href: inserting-a-control-into-a-control-container-application.md
+                - name: ActiveX 控件容器：将 ActiveX 控件连接到成员变量
+                  href: activex-control-containers-connecting-an-activex-control-to-a-member-variable.md
+                - name: ActiveX 控件容器：从 ActiveX 控件处理事件
+                  href: activex-control-containers-handling-events-from-an-activex-control.md
+                - name: ActiveX 控件容器：查看和修改控件属性
+                  href: activex-control-containers-viewing-and-modifying-control-properties.md
+                - name: ActiveX 控件容器：对 ActiveX 控件容器中的 ActiveX 控件编程
+                  href: programming-activex-controls-in-a-activex-control-container.md
+                - name: ActiveX 控件容器：在非对话框容器中使用控件
+                  href: activex-control-containers-using-controls-in-a-non-dialog-container.md
+            - name: 使用测试容器来测试属性和事件
+              href: testing-properties-and-events-with-test-container.md
+        - name: 剪贴板
+          expanded: false
+          items:
+            - name: 剪贴板
+              href: clipboard.md
+            - name: 剪贴板：何时使用各个剪贴板机制
+              href: clipboard-when-to-use-each-clipboard-mechanism.md
+            - name: 剪贴板：使用 Windows 剪贴板
+              href: clipboard-using-the-windows-clipboard.md
+            - name: 剪贴板：使用 OLE 剪贴板机制
+              expanded: false
+              items:
+                - name: 剪贴板：使用 OLE 剪贴板机制
+                  href: clipboard-using-the-ole-clipboard-mechanism.md
+                - name: 剪贴板：复制和粘贴数据
+                  href: clipboard-copying-and-pasting-data.md
+                - name: 剪贴板：添加其他格式
+                  href: clipboard-adding-other-formats.md
+        - name: 控件 (MFC)
+          expanded: false
+          items:
+            - name: 控件 (MFC)
+              href: controls-mfc.md
+            - name: 公共控件示例列表
+              href: common-control-sample-list.md
+            - name: 创建和使用控件
+              expanded: false
+              items:
+                - name: 创建和使用控件
+                  href: making-and-using-controls.md
+                - name: 在对话框中使用公共控件
+                  href: using-common-controls-in-a-dialog-box.md
+                - name: 使用对话框编辑器添加控件
+                  href: using-the-dialog-editor-to-add-controls.md
+                - name: 手动添加控件
+                  href: adding-controls-by-hand.md
+                - name: 从标准控件派生控件
+                  href: deriving-controls-from-a-standard-control.md
+                - name: 将公共控件用作子窗口
+                  href: using-a-common-control-as-a-child-window.md
+                - name: 从公共控件接收通知
+                  href: receiving-notification-from-common-controls.md
+            - name: 使用 CAnimateCtrl
+              expanded: false
+              items:
+                - name: 使用 CAnimateCtrl
+                  href: using-canimatectrl.md
+                - name: 使用动画控件
+                  href: using-an-animation-control.md
+                - name: 动画控件发送的通知
+                  href: notifications-sent-by-animation-controls.md
+            - name: 使用 CDateTimeCtrl
+              expanded: false
+              items:
+                - name: 使用 CDateTimeCtrl
+                  href: using-cdatetimectrl.md
+                - name: 创建日期和时间选择器控件
+                  href: creating-the-date-and-time-picker-control.md
+                - name: 日期和时间选择器控件示例
+                  href: date-and-time-picker-control-examples.md
+                - name: 访问嵌入的月历控件
+                  href: accessing-the-embedded-month-calendar-control.md
+                - name: 在日期和时间选取器控件中使用自定义格式字符串
+                  href: using-custom-format-strings-in-a-date-and-time-picker-control.md
+                - name: 在日期和时间选取器控件中使用回调字段
+                  href: using-callback-fields-in-a-date-and-time-picker-control.md
+                - name: 处理日期和时间选取器控件中的通知消息
+                  href: processing-notification-messages-in-date-and-time-picker-controls.md
+            - name: 使用 CComboBoxEx
+              expanded: false
+              items:
+                - name: 使用 CComboBoxEx
+                  href: using-ccomboboxex.md
+                - name: 创建扩展组合框控件
+                  href: creating-an-extended-combo-box-control.md
+                - name: 在扩展组合框控件中使用图像列表
+                  href: using-image-lists-in-an-extended-combo-box-control.md
+                - name: 设置各个项的图像
+                  href: setting-the-images-for-an-individual-item.md
+                - name: 处理扩展组合框控件中的通知消息
+                  href: processing-notification-messages-in-extended-combo-box-controls.md
+            - name: 使用 CHeaderCtrl
+              expanded: false
+              items:
+                - name: 使用 CHeaderCtrl
+                  href: using-cheaderctrl.md
+                - name: 标题控件和列表控件
+                  href: header-control-and-list-control.md
+                - name: 标题控件示例
+                  href: header-control-examples.md
+                - name: 标题控件中的标题项
+                  href: header-items-in-a-header-control.md
+                - name: 自定义标题项的外观
+                  href: customizing-the-header-item-s-appearance.md
+                - name: 为标题项提供拖放支持
+                  href: providing-drag-and-drop-support-for-header-items.md
+                - name: 对标题控件使用图像列表
+                  href: using-image-lists-with-header-controls.md
+                - name: 生成所有者绘制的标题控件
+                  href: making-owner-drawn-header-controls.md
+                - name: 使用标题控件
+                  href: working-with-a-header-control.md
+                - name: 创建标题控件
+                  href: creating-the-header-control.md
+                - name: 向标题控件添加项
+                  href: adding-items-to-the-header-control.md
+                - name: 对标题控件中的项排序
+                  href: ordering-items-in-the-header-control.md
+                - name: 处理标题控件通知
+                  href: processing-header-control-notifications.md
+            - name: 使用 CHotKeyCtrl
+              expanded: false
+              items:
+                - name: 使用 CHotKeyCtrl
+                  href: using-chotkeyctrl.md
+                - name: 使用热键控件
+                  href: using-a-hot-key-control.md
+                - name: 设置热键
+                  href: setting-a-hot-key.md
+                - name: 全局热键
+                  href: global-hot-keys.md
+                - name: 线程专用热键
+                  href: thread-specific-hot-keys.md
+            - name: 使用 CImageList
+              expanded: false
+              items:
+                - name: 使用 CImageList
+                  href: using-cimagelist.md
+                - name: 图像列表类型
+                  href: types-of-image-lists.md
+                - name: 使用图像列表
+                  href: using-an-image-list.md
+                - name: 操作图像列表
+                  href: manipulating-image-lists.md
+                - name: 从图像列表绘制图像
+                  href: drawing-images-from-an-image-list.md
+                - name: 图像列表中的图像覆盖
+                  href: image-overlays-in-image-lists.md
+                - name: 从图像列表拖动图像
+                  href: dragging-images-from-an-image-list.md
+                - name: 图像列表中的图像信息
+                  href: image-information-in-image-lists.md
+            - name: 使用 CListCtrl
+              expanded: false
+              items:
+                - name: 使用 CListCtrl
+                  href: using-clistctrl.md
+                - name: 列表控件和列表视图
+                  href: list-control-and-list-view.md
+                - name: 列表项和图像列表
+                  href: list-items-and-image-lists.md
+                - name: 回调项和回调掩码
+                  href: callback-items-and-the-callback-mask.md
+                - name: 创建列表控件
+                  href: creating-the-list-control.md
+                - name: 创建图像列表
+                  href: creating-the-image-lists.md
+                - name: 向控件添加列（报表视图）
+                  href: adding-columns-to-the-control-report-view.md
+                - name: 向控件添加项
+                  href: adding-items-to-the-control.md
+                - name: 在列表控件中滚动、排列、排序和查找
+                  href: scrolling-arranging-sorting-and-finding-in-list-controls.md
+                - name: 实现列表控件中的工作区域
+                  href: implementing-working-areas-in-list-controls.md
+                - name: 处理列表控件中的通知消息
+                  href: processing-notification-messages-in-list-controls.md
+                - name: 更改列表控件样式
+                  href: changing-list-control-styles.md
+                - name: 虚拟列表控件
+                  href: virtual-list-controls.md
+                - name: 销毁列表控件
+                  href: destroying-the-list-control.md
+            - name: 使用 CMonthCalCtrl
+              expanded: false
+              items:
+                - name: 使用 CMonthCalCtrl
+                  href: using-cmonthcalctrl.md
+                - name: 创建月历控件
+                  href: creating-the-month-calendar-control.md
+                - name: 月历控件示例
+                  href: month-calendar-control-examples.md
+                - name: 处理月历控件中的通知消息
+                  href: processing-notification-messages-in-month-calendar-controls.md
+                - name: 设置月历控件的日状态
+                  href: setting-the-day-state-of-a-month-calendar-control.md
+            - name: 使用 CProgressCtrl
+              expanded: false
+              items:
+                - name: 使用 CProgressCtrl
+                  href: using-cprogressctrl.md
+                - name: 进度控件的样式
+                  href: styles-for-the-progress-control.md
+                - name: 进度控件的设置
+                  href: settings-for-the-progress-control.md
+                - name: 操作进度控件
+                  href: manipulating-the-progress-control.md
+            - name: 使用 CReBarCtrl
+              expanded: false
+              items:
+                - name: 使用 CReBarCtrl
+                  href: using-crebarctrl.md
+                - name: CReBar 与CReBarCtrl
+                  href: crebar-vs-crebarctrl.md
+                - name: 创建 rebar 控件
+                  href: creating-a-rebar-control.md
+                - name: rebar 控件和带区
+                  href: rebar-controls-and-bands.md
+                - name: 对 rebar 控件使用图像列表
+                  href: using-an-image-list-with-a-rebar-control.md
+                - name: 对 rebar 控件使用对话栏
+                  href: using-a-dialog-bar-with-a-rebar-control.md
+                - name: 处理 rebar 控件中的通知消息
+                  href: processing-notification-messages-in-a-rebar-control.md
+            - name: 使用 CRichEditCtrl
+              expanded: false
+              items:
+                - name: 使用 CRichEditCtrl
+                  href: using-cricheditctrl.md
+                - name: Rich Edit 控件概述
+                  href: overview-of-the-rich-edit-control.md
+                - name: 与 Rich Edit 控件相关的类
+                  href: classes-related-to-rich-edit-controls.md
+                - name: Rich Edit 控件示例
+                  href: rich-edit-control-examples.md
+                - name: Rich Edit 控件中的字符格式设置
+                  href: character-formatting-in-rich-edit-controls.md
+                - name: Rich Edit 控件中的段落格式设置
+                  href: paragraph-formatting-in-rich-edit-controls.md
+                - name: Rich Edit 控件中的当前选定内容
+                  href: current-selection-in-a-rich-edit-control.md
+                - name: Rich Edit 控件中的断字
+                  href: word-breaks-in-rich-edit-controls.md
+                - name: Rich Edit 控件中的剪贴板操作
+                  href: clipboard-operations-in-rich-edit-controls.md
+                - name: Rich Edit 控件中的流操作
+                  href: stream-operations-in-rich-edit-controls.md
+                - name: 在 Rich Edit 控件中打印
+                  href: printing-in-rich-edit-controls.md
+                - name: 无界限 Rich Edit 控件
+                  href: bottomless-rich-edit-controls.md
+                - name: 来自 Rich Edit 控件的通知
+                  href: notifications-from-a-rich-edit-control.md
+            - name: 使用 CSliderCtrl
+              expanded: false
+              items:
+                - name: 使用 CSliderCtrl
+                  href: using-csliderctrl.md
+                - name: 使用滑块控件
+                  href: using-slider-controls.md
+                - name: 滑块控件样式
+                  href: slider-control-styles.md
+                - name: 滑块控件成员函数
+                  href: slider-control-member-functions.md
+                - name: 滑块通知消息
+                  href: slider-notification-messages.md
+            - name: 使用 CSpinButtonCtrl
+              expanded: false
+              items:
+                - name: 使用 CSpinButtonCtrl
+                  href: using-cspinbuttonctrl.md
+                - name: 调节按钮样式
+                  href: spin-button-styles.md
+                - name: 调节按钮成员函数
+                  href: spin-button-member-functions.md
+            - name: 使用 CStatusBarCtrl
+              expanded: false
+              items:
+                - name: 使用 CStatusBarCtrl
+                  href: using-cstatusbarctrl.md
+                - name: 创建状态栏的方法
+                  href: methods-of-creating-a-status-bar.md
+                - name: CStatusBarCtrl 的设置
+                  href: settings-for-the-cstatusbarctrl.md
+                - name: 使用 CStatusBarCtrl 创建 CStatusBarCtrl 对象
+                  href: using-cstatusbarctrl-to-create-a-cstatusbarctrl-object.md
+                - name: 设置 CStatusBarCtrl 对象的模式
+                  href: setting-the-mode-of-a-cstatusbarctrl-object.md
+                - name: 初始化 CStatusBarCtrl 对象的组成部分
+                  href: initializing-the-parts-of-a-cstatusbarctrl-object.md
+                - name: 在 CStatusBarCtrl 对象中使用工具提示
+                  href: using-tooltips-in-a-cstatusbarctrl-object.md
+            - name: 使用 CTabCtrl
+              expanded: false
+              items:
+                - name: 使用 CTabCtrl
+                  href: using-ctabctrl.md
+                - name: 选项卡控件和属性表
+                  href: tab-controls-and-property-sheets.md
+                - name: 选项卡和选项卡控件属性
+                  href: tabs-and-tab-control-attributes.md
+                - name: 生成所有者绘制的选项卡
+                  href: making-owner-drawn-tabs.md
+                - name: 使用选项卡控件
+                  href: working-with-a-tab-control.md
+                - name: 创建选项卡控件
+                  href: creating-the-tab-control.md
+                - name: 向选项卡控件添加选项卡
+                  href: adding-tabs-to-a-tab-control.md
+                - name: 处理选项卡控件通知消息
+                  href: processing-tab-control-notification-messages.md
+            - name: 使用 CToolBarCtrl
+              expanded: false
+              items:
+                - name: 使用 CToolBarCtrl
+                  href: using-ctoolbarctrl.md
+                - name: 创建工具栏的方法
+                  href: methods-of-creating-a-toolbar.md
+                - name: 工具栏控件的设置
+                  href: settings-for-the-toolbar-control.md
+                - name: 创建 CToolBarCtrl 对象
+                  href: creating-a-ctoolbarctrl-object.md
+                - name: 在工具栏控件中使用图像列表
+                  href: using-image-lists-in-a-toolbar-control.md
+                - name: 在工具栏控件中使用下拉按钮
+                  href: using-drop-down-buttons-in-a-toolbar-control.md
+                - name: 自定义工具栏控件的外观
+                  href: customizing-the-appearance-of-a-toolbar-control.md
+                - name: 处理工具提示通知
+                  href: handling-tool-tip-notifications.md
+                - name: 处理自定义通知
+                  href: handling-customization-notifications.md
+            - name: 使用 CToolTipCtrl
+              expanded: false
+              items:
+                - name: 使用 CToolTipCtrl
+                  href: using-ctooltipctrl.md
+                - name: 创建工具提示的方法
+                  href: methods-of-creating-tool-tips.md
+                - name: 工具提示控件的设置
+                  href: settings-for-the-tool-tip-control.md
+                - name: 使用 CToolTipCtrl 创建和操作 CToolTipCtrl 对象
+                  href: using-ctooltipctrl-to-create-and-manipulate-a-ctooltipctrl-object.md
+                - name: 操作工具提示控件
+                  href: manipulating-the-tool-tip-control.md
+            - name: 使用 CTreeCtrl
+              expanded: false
+              items:
+                - name: 使用 CTreeCtrl
+                  href: using-ctreectrl.md
+                - name: CTreeCtrl 与CTreeView
+                  href: ctreectrl-vs-ctreeview.md
+                - name: 使用树控件
+                  href: using-tree-controls.md
+                - name: 与树控件通信
+                  href: communicating-with-a-tree-control.md
+                - name: 树控件样式
+                  href: tree-control-styles.md
+                - name: 树控件父项和子项
+                  href: tree-control-parent-and-child-items.md
+                - name: 树控件项位置
+                  href: tree-control-item-position.md
+                - name: 树控件项标签
+                  href: tree-control-item-labels.md
+                - name: 树控件标签编辑
+                  href: tree-control-label-editing.md
+                - name: 树控件项状态概述
+                  href: tree-control-item-states-overview.md
+                - name: 树控件图像列表
+                  href: tree-control-image-lists.md
+                - name: 树控件项选择
+                  href: tree-control-item-selection.md
+                - name: 树控件拖放操作
+                  href: tree-control-drag-and-drop-operations.md
+                - name: 树控件项信息
+                  href: tree-control-item-information.md
+                - name: 树控件通知消息
+                  href: tree-control-notification-messages.md
+        - name: 控件条
+          href: control-bars.md
+        - name: 对话栏
+          href: dialog-bars.md
+        - name: 对话框
+          expanded: false
+          items:
+            - name: 对话框
+              href: dialog-boxes.md
+            - name: '示例:通过菜单命令显示对话框'
+              href: example-displaying-a-dialog-box-via-a-menu-command.md
+            - name: 对话框示例列表
+              href: dialog-sample-list.md
+            - name: 框架中的对话框组件
+              href: dialog-box-components-in-the-framework.md
+            - name: 模式和非模式对话框
+              href: modal-and-modeless-dialog-boxes.md
+            - name: 属性表和属性页 (MFC)
+              href: property-sheets-and-property-pages-mfc.md
+            - name: 创建对话框资源
+              href: creating-the-dialog-resource.md
+            - name: 使用代码向导创建对话框类
+              expanded: false
+              items:
+                - name: 使用代码向导创建对话框类
+                  href: creating-a-dialog-class-with-code-wizards.md
+                - name: 创建对话框类
+                  href: creating-your-dialog-class.md
+            - name: 对话框的生命周期
+              expanded: false
+              items:
+                - name: 对话框的生命周期
+                  href: life-cycle-of-a-dialog-box.md
+                - name: 创建并显示对话框
+                  href: creating-and-displaying-dialog-boxes.md
+                - name: 创建模式对话框
+                  href: creating-modal-dialog-boxes.md
+                - name: 创建非模式对话框
+                  href: creating-modeless-dialog-boxes.md
+                - name: 在内存中使用对话框模板
+                  href: using-a-dialog-template-in-memory.md
+                - name: 设置对话框的背景色
+                  href: setting-the-dialog-boxs-background-color.md
+                - name: 初始化对话框
+                  href: initializing-the-dialog-box.md
+                - name: 处理对话框中的 Windows 消息
+                  href: handling-windows-messages-in-your-dialog-box.md
+                - name: 从对话框对象检索数据
+                  href: retrieving-data-from-the-dialog-object.md
+                - name: 关闭对话框
+                  href: closing-the-dialog-box.md
+                - name: 销毁对话框
+                  href: destroying-the-dialog-box.md
+            - name: 对话框数据交换和验证
+              expanded: false
+              items:
+                - name: 对话框数据交换和验证
+                  href: dialog-data-exchange-and-validation.md
+                - name: 对话框数据交换
+                  href: dialog-data-exchange.md
+                - name: 对话框数据验证
+                  href: dialog-data-validation.md
+            - name: 对对话框中的控件进行类型安全的访问
+              expanded: false
+              items:
+                - name: 对对话框中的控件进行类型安全的访问
+                  href: type-safe-access-to-controls-in-a-dialog-box.md
+                - name: 不使用代码向导对控件进行类型安全的访问
+                  href: type-safe-access-to-controls-without-code-wizards.md
+                - name: 使用代码向导对控件进行类型安全的访问
+                  href: type-safe-access-to-controls-with-code-wizards.md
+            - name: 将 Windows 消息映射到类
+              href: mapping-windows-messages-to-your-class.md
+            - name: 经常重写的成员函数
+              href: commonly-overridden-member-functions.md
+            - name: 经常添加的成员函数
+              href: commonly-added-member-functions.md
+            - name: 通用对话框类
+              href: common-dialog-classes.md
+            - name: OLE 中的对话框
+              href: dialog-boxes-in-ole.md
+            - name: 演练：将 CTaskDialog 添加到应用程序
+              href: walkthrough-adding-a-ctaskdialog-to-an-application.md
+        - name: 文档/视图体系结构
+          expanded: false
+          items:
+            - name: 文档/视图体系结构
+              href: document-view-architecture.md
+            - name: 文档/视图示例列表
+              href: document-view-sample-list.md
+            - name: 文档/视图体系结构的纵览
+              href: a-portrait-of-the-document-view-architecture.md
+            - name: 文档/视图体系结构的优点
+              href: advantages-of-the-document-view-architecture.md
+            - name: MFC 应用程序向导创建的文档和视图类
+              href: document-and-view-classes-created-by-the-mfc-application-wizard.md
+            - name: 文档/视图体系结构的替换选项
+              href: alternatives-to-the-document-view-architecture.md
+            - name: 使用文档
+              expanded: false
+              items:
+                - name: 使用文档
+                  href: using-documents.md
+                - name: 从 CDocument 派生文档类
+                  href: deriving-a-document-class-from-cdocument.md
+                - name: 使用文档数据变量管理数据
+                  href: managing-data-with-document-data-variables.md
+                - name: 序列化传入和传出文件的数据
+                  href: serializing-data-to-and-from-files.md
+                - name: 跳过序列化机制
+                  href: bypassing-the-serialization-mechanism.md
+                - name: 处理文档中的命令
+                  href: handling-commands-in-the-document.md
+            - name: 使用视图
+              expanded: false
+              items:
+                - name: 使用视图
+                  href: using-views.md
+                - name: MFC 中可用的派生视图类
+                  href: derived-view-classes-available-in-mfc.md
+                - name: 在视图中绘制
+                  href: drawing-in-a-view.md
+                - name: 通过视图解释用户输入
+                  href: interpreting-user-input-through-a-view.md
+                - name: 视图在打印中的作用
+                  href: role-of-the-view-in-printing.md
+                - name: 滚动和缩放视图
+                  href: scrolling-and-scaling-views.md
+            - name: 多文档类型、视图和框架窗口
+              href: multiple-document-types-views-and-frame-windows.md
+            - name: 初始化和清理文档和视图
+              expanded: false
+              items:
+                - name: 初始化和清理文档和视图
+                  href: initializing-and-cleaning-up-documents-and-views.md
+                - name: 初始化文档和视图
+                  href: initializing-documents-and-views.md
+                - name: 清理文档和视图
+                  href: cleaning-up-documents-and-views.md
+            - name: 向一个文档添加多个视图
+              href: adding-multiple-views-to-a-single-document.md
+        - name: 窗体视图 (MFC)
+          expanded: false
+          items:
+            - name: 窗体视图 (MFC)
+              href: form-views-mfc.md
+            - name: 在项目中插入窗体
+              href: inserting-a-form-into-a-project.md
+        - name: HTML 帮助：程序的上下文相关帮助
+          href: html-help-context-sensitive-help-for-your-programs.md
+        - name: MDI 制表符分隔的组
+          href: mdi-tabbed-groups.md
+        - name: 菜单 (MFC)
+          expanded: false
+          items:
+            - name: 菜单 (MFC)
+              href: menus-mfc.md
+            - name: 菜单示例列表
+              href: menu-sample-list.md
+            - name: 在程序执行过程中操作菜单
+              href: manipulating-menus-during-program-execution.md
+            - name: 如何：更新用户界面对象
+              expanded: false
+              items:
+                - name: 如何：更新用户界面对象
+                  href: how-to-update-user-interface-objects.md
+                - name: 何时调用更新处理程序
+                  href: when-update-handlers-are-called.md
+                - name: ON_UPDATE_COMMAND_UI 宏
+                  href: on-update-command-ui-macro.md
+                - name: CCmdUI 类
+                  href: the-ccmdui-class.md
+        - name: OLE (MFC)
+          href: ole-mfc.md
+        - name: 打印和打印预览
+          expanded: false
+          items:
+            - name: 打印和打印预览
+              href: printing-and-print-preview.md
+            - name: 打印
+              expanded: false
+              items:
+                - name: 打印
+                  href: printing.md
+                - name: 如何完成默认打印
+                  href: how-default-printing-is-done.md
+                - name: 多页文档
+                  href: multipage-documents.md
+                - name: 页眉和页脚
+                  href: headers-and-footers.md
+                - name: 分配 GDI 资源
+                  href: allocating-gdi-resources.md
+            - name: 打印预览体系结构
+              href: print-preview-architecture.md
+        - name: 属性表 (MFC)
+          expanded: false
+          items:
+            - name: 属性表 (MFC)
+              href: property-sheets-mfc.md
+            - name: MFC 中的属性表和属性页
+              href: property-sheets-and-property-pages-in-mfc.md
+            - name: 在应用程序中使用属性表
+              href: using-property-sheets-in-your-application.md
+            - name: 将控件添加到属性表
+              href: adding-controls-to-a-property-sheet.md
+            - name: 交换数据
+              href: exchanging-data.md
+            - name: 创建非模式属性表
+              href: creating-a-modeless-property-sheet.md
+            - name: 处理“应用”按钮
+              href: handling-the-apply-button.md
+            - name: 向导型属性表
+              href: property-sheets-as-wizards.md
+        - name: 功能区设计器 (MFC)
+          expanded: false
+          items:
+            - name: 功能区设计器 (MFC)
+              href: ribbon-designer-mfc.md
+            - name: 如何：将现有 MFC 功能区转换为功能区资源
+              href: how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md
+            - name: 如何：自定义应用程序按钮
+              href: how-to-customize-the-application-button.md
+            - name: 如何：自定义快速访问工具栏
+              href: how-to-customize-the-quick-access-toolbar.md
+            - name: 如何：添加功能区控件和事件处理程序
+              href: how-to-add-ribbon-controls-and-event-handlers.md
+            - name: 如何：从 MFC 应用程序中加载功能区资源
+              href: how-to-load-a-ribbon-resource-from-an-mfc-application.md
+            - name: 演练：使用 MFC 创建功能区应用程序
+              href: walkthrough-creating-a-ribbon-application-by-using-mfc.md
+            - name: 演练：更新 MFC 自由曲线应用程序（第 1 部分）
+              href: walkthrough-updating-the-mfc-scribble-application-part-1.md
+            - name: 演练：更新 MFC 自由曲线应用程序（第 2 部分）
+              href: walkthrough-updating-the-mfc-scribble-application-part-2.md
+        - name: 状态栏
+          expanded: false
+          items:
+            - name: 状态栏
+              href: status-bars.md
+            - name: MFC 中的状态栏实现
+              expanded: false
+              items:
+                - name: MFC 中的状态栏实现
+                  href: status-bar-implementation-in-mfc.md
+                - name: 更新状态栏窗格的文本
+                  href: updating-the-text-of-a-status-bar-pane.md
+        - name: 工具提示
+          expanded: false
+          items:
+            - name: 工具提示
+              href: tool-tips.md
+            - name: Windows 中不是从 CFrameWnd 派生的工具提示
+              expanded: false
+              items:
+                - name: Windows 中不是从 CFrameWnd 派生的工具提示
+                  href: tool-tips-in-windows-not-derived-from-cframewnd.md
+                - name: 启用工具提示
+                  href: enabling-tool-tips.md
+                - name: 处理工具提示的 TTN_NEEDTEXT 通知
+                  href: handling-ttn-needtext-notification-for-tool-tips.md
+                - name: TOOLTIPTEXT 结构
+                  href: tooltiptext-structure.md
+        - name: 工具栏
+          expanded: false
+          items:
+            - name: 工具栏
+              href: toolbars.md
+            - name: 工具栏示例列表
+              href: toolbar-sample-list.md
+            - name: MFC 工具栏实现
+              expanded: false
+              items:
+                - name: MFC 工具栏实现
+                  href: mfc-toolbar-implementation.md
+                - name: 工具栏基础知识
+                  href: toolbar-fundamentals.md
+                - name: 停靠和浮动工具栏
+                  href: docking-and-floating-toolbars.md
+                - name: 工具栏工具提示
+                  href: toolbar-tool-tips.md
+                - name: 使用工具栏控件
+                  href: working-with-the-toolbar-control.md
+                - name: 使用旧工具栏
+                  href: using-your-old-toolbars.md
+        - name: 可视化效果管理器
+          href: visualization-manager.md
+        - name: Windows
+          expanded: false
+          items:
+            - name: Windows
+              href: windows.md
+            - name: 窗口对象
+              expanded: false
+              items:
+                - name: 窗口对象
+                  href: window-objects.md
+                - name: C++ 窗口对象与 HWND 之间的关系
+                  href: relationship-between-a-cpp-window-object-and-an-hwnd.md
+                - name: 派生的窗口类
+                  href: derived-window-classes.md
+                - name: 创建窗口
+                  expanded: false
+                  items:
+                    - name: 创建窗口
+                      href: creating-windows.md
+                    - name: 注册窗口类
+                      href: registering-window-classes.md
+                    - name: 常规窗口创建序列
+                      href: general-window-creation-sequence.md
+                - name: 销毁窗口对象
+                  expanded: false
+                  items:
+                    - name: 销毁窗口对象
+                      href: destroying-window-objects.md
+                    - name: 窗口销毁序列
+                      href: window-destruction-sequence.md
+                    - name: 分配和取消分配窗口内存
+                      href: allocating-and-deallocating-window-memory.md
+                - name: 将 CWnd 从 HWND 中分离出来
+                  href: detaching-a-cwnd-from-its-hwnd.md
+                - name: 使用窗口对象
+                  href: working-with-window-objects.md
+                - name: 设备上下文
+                  href: device-contexts.md
+                - name: 图形对象
+                  expanded: false
+                  items:
+                    - name: 图形对象
+                      href: graphic-objects.md
+                    - name: 对象的一阶段和两阶段构建
+                      href: one-stage-and-two-stage-construction-of-objects.md
+                    - name: 将图形对象选入设备上下文
+                      href: selecting-a-graphic-object-into-a-device-context.md
+            - name: 框架窗口
+              expanded: false
+              items:
+                - name: 框架窗口
+                  href: frame-windows.md
+                - name: 框架窗口类
+                  expanded: false
+                  items:
+                    - name: 框架窗口类
+                      href: frame-window-classes.md
+                    - name: 应用程序向导创建的框架窗口类
+                      href: frame-window-classes-created-by-the-application-wizard.md
+                - name: 框架窗口样式 (C++)
+                  expanded: false
+                  items:
+                    - name: 框架窗口样式 (C++)
+                      href: frame-window-styles-cpp.md
+                    - name: 更改 MFC 创建的窗口的样式
+                      href: changing-the-styles-of-a-window-created-by-mfc.md
+                - name: 框架窗口的作用
+                  href: what-frame-windows-do.md
+                - name: 使用框架窗口
+                  expanded: false
+                  items:
+                    - name: 使用框架窗口
+                      href: using-frame-windows.md
+                    - name: 创建文档框架窗口
+                      href: creating-document-frame-windows.md
+                    - name: 何时初始化 CWnd 对象
+                      href: when-to-initialize-cwnd-objects.md
+                    - name: 销毁框架窗口
+                      href: destroying-frame-windows.md
+                    - name: 管理 MDI 子窗口
+                      href: managing-mdi-child-windows.md
+                    - name: 管理当前视图
+                      href: managing-the-current-view.md
+                    - name: 管理菜单、控件条和快捷键
+                      href: managing-menus-control-bars-and-accelerators.md
+                    - name: 拖放框架窗口中的文件
+                      href: dragging-and-dropping-files-in-a-frame-window.md
+                    - name: 响应动态数据交换 (DDE)
+                      href: responding-to-dynamic-data-exchange-dde.md
+                    - name: 协调其他窗口操作
+                      href: orchestrating-other-window-actions.md
+    - name: Windows 套接字
+      expanded: false
+      items:
+        - name: Windows 套接字
+          href: windows-sockets.md
+        - name: MFC 中的 Windows 套接字
+          expanded: false
+          items:
+            - name: MFC 中的 Windows 套接字
+              href: windows-sockets-in-mfc.md
+            - name: Windows 套接字：背景
+              href: windows-sockets-background.md
+            - name: Windows 套接字：流套接字
+              href: windows-sockets-stream-sockets.md
+            - name: Windows 套接字：数据报套接字
+              href: windows-sockets-datagram-sockets.md
+            - name: Windows 套接字：结合使用套接字和存档
+              href: windows-sockets-using-sockets-with-archives.md
+            - name: Windows 套接字：操作顺序
+              href: windows-sockets-sequence-of-operations.md
+            - name: Windows 套接字：使用存档的套接字示例
+              href: windows-sockets-example-of-sockets-using-archives.md
+            - name: Windows 套接字：使用存档的套接字的工作原理
+              href: windows-sockets-how-sockets-with-archives-work.md
+            - name: Windows 套接字：使用类 CAsyncSocket
+              href: windows-sockets-using-class-casyncsocket.md
+            - name: Windows 套接字：从套接字类派生
+              href: windows-sockets-deriving-from-socket-classes.md
+            - name: Windows 套接字：套接字通知
+              href: windows-sockets-socket-notifications.md
+            - name: Windows 套接字：锁定
+              href: windows-sockets-blocking.md
+            - name: Windows 套接字：字节排序
+              href: windows-sockets-byte-ordering.md
+            - name: Windows 套接字：转换字符串
+              href: windows-sockets-converting-strings.md
+            - name: Windows 套接字：端口和套接字地址
+              href: windows-sockets-ports-and-socket-addresses.md
+    - name: Win32 Internet 扩展 (WinInet)
+      expanded: false
+      items:
+        - name: Win32 Internet 扩展 (WinInet)
+          href: win32-internet-extensions-wininet.md
+        - name: WinInet 如何简化 Internet 客户端应用程序的创建
+          href: how-wininet-makes-it-easier-to-create-internet-client-applications.md
+        - name: MFC 如何简化 Internet 客户端应用程序的创建
+          href: how-mfc-makes-it-easier-to-create-internet-client-applications.md
+        - name: 用于创建 Internet 客户端应用程序的 MFC 类
+          href: mfc-classes-for-creating-internet-client-applications.md
+        - name: Internet 客户端类的先决条件
+          href: prerequisites-for-internet-client-classes.md
+        - name: 使用 MFC WinInet 类编写 Internet 客户端应用程序
+          href: writing-an-internet-client-application-using-mfc-wininet-classes.md
+        - name: 典型 Internet 客户端应用程序中的步骤
+          href: steps-in-a-typical-internet-client-application.md
+        - name: 典型 FTP 客户端应用程序中的步骤
+          href: steps-in-a-typical-ftp-client-application.md
+        - name: 典型 FTP 客户端应用程序中用于删除文件的步骤
+          href: steps-in-a-typical-ftp-client-application-to-delete-a-file.md
+        - name: 典型 Gopher 客户端应用程序中的步骤
+          href: steps-in-a-typical-gopher-client-application.md
+        - name: 典型 HTTP 客户端应用程序中的步骤
+          href: steps-in-a-typical-http-client-application.md
+- name: 层次结构图
+  expanded: false
+  items:
+    - name: 层次结构图
+      href: hierarchy-chart.md
+    - name: 层次结构图类别
+      href: hierarchy-chart-categories.md
+- name: MFC 自定义
+  expanded: false
+  items:
+    - name: MFC 自定义
+      href: customization-for-mfc.md
+    - name: 键盘和鼠标自定义
+      href: keyboard-and-mouse-customization.md
+    - name: 用户定义的工具
+      href: user-defined-tools.md
+    - name: 自定义对安全有何影响
+      href: security-implications-of-customization.md
+- name: MFC 技术说明
+  expanded: false
+  items:
+    - name: MFC 技术说明
+      href: mfc-technical-notes.md
+    - name: 按类别列出的技术说明
+      href: technical-notes-by-category.md
+    - name: 按编号列出的技术说明
+      href: technical-notes-by-number.md
+    - name: TN001：窗口类注册
+      href: tn001-window-class-registration.md
+    - name: TN002：永久性对象数据格式
+      href: tn002-persistent-object-data-format.md
+    - name: TN003：将 Windows 句柄映射到对象
+      href: tn003-mapping-of-windows-handles-to-objects.md
+    - name: TN006：消息映射
+      href: tn006-message-maps.md
+    - name: TN011：将 MFC 用作 DLL 的一部分
+      href: tn011-using-mfc-as-part-of-a-dll.md
+    - name: TN014：自定义控件
+      href: tn014-custom-controls.md
+    - name: TN016：结合使用 C++ 多重继承和 MFC
+      href: tn016-using-cpp-multiple-inheritance-with-mfc.md
+    - name: TN017：销毁窗口对象
+      href: tn017-destroying-window-objects.md
+    - name: TN020：ID 命名和编号约定
+      href: tn020-id-naming-and-numbering-conventions.md
+    - name: TN021：命令和消息路由
+      href: tn021-command-and-message-routing.md
+    - name: TN022：标准命令实现
+      href: tn022-standard-commands-implementation.md
+    - name: TN023：标准 MFC 资源
+      href: tn023-standard-mfc-resources.md
+    - name: TN024：MFC 定义的消息和资源
+      href: tn024-mfc-defined-messages-and-resources.md
+    - name: TN025：文档、视图和框架创建
+      href: tn025-document-view-and-frame-creation.md
+    - name: TN026：DDX 和 DDV 例程
+      href: tn026-ddx-and-ddv-routines.md
+    - name: TN028：上下文相关帮助支持
+      href: tn028-context-sensitive-help-support.md
+    - name: TN029：拆分窗口
+      href: tn029-splitter-windows.md
+    - name: TN030：自定义打印和打印预览
+      href: tn030-customizing-printing-and-print-preview.md
+    - name: TN031：控件条
+      href: tn031-control-bars.md
+    - name: TN032：MFC 异常机制
+      href: tn032-mfc-exception-mechanism.md
+    - name: TN033：MFC 的 DLL 版本
+      href: tn033-dll-version-of-mfc.md
+    - name: TN035：在 Visual C++ 中使用多个资源文件和头文件
+      href: tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md
+    - name: TN036：将 CFormView 与 AppWizard 和 ClassWizard 结合使用
+      href: tn036-using-cformview-with-appwizard-and-classwizard.md
+    - name: TN037：多线程 MFC 2.1 应用程序
+      href: tn037-multithreaded-mfc-2-1-applications.md
+    - name: TN038：MFC-OLE IUnknown 实现
+      href: tn038-mfc-ole-iunknown-implementation.md
+    - name: TN039：MFC-OLE 自动化实现
+      href: tn039-mfc-ole-automation-implementation.md
+    - name: TN040：MFC-OLE 就地调整大小和缩放
+      href: tn040-mfc-ole-in-place-resizing-and-zooming.md
+    - name: TN041：MFC-OLE1 迁移到 MFC-OLE 2
+      href: tn041-mfc-ole1-migration-to-mfc-ole-2.md
+    - name: TN042：ODBC 驱动程序开发人员建议
+      href: tn042-odbc-driver-developer-recommendations.md
+    - name: TN043：RFX 例程
+      href: tn043-rfx-routines.md
+    - name: TN044：针对 DBCS 的 MFC 支持
+      href: tn044-mfc-support-for-dbcs.md
+    - name: TN045：针对 Long Varchar-Varbinary 的 MFC-数据库支持
+      href: tn045-mfc-database-support-for-long-varchar-varbinary.md
+    - name: TN046：MFC 类的注释约定
+      href: tn046-commenting-conventions-for-the-mfc-classes.md
+    - name: TN047：放宽数据库事务要求
+      href: tn047-relaxing-database-transaction-requirements.md
+    - name: TN048：编写 MFC 数据库应用程序的 ODBC 安装程序和管理程序
+      href: tn048-writing-odbc-setup-and-administration-programs.md
+    - name: TN049：MFC-OLE MBCS 到 Unicode 转换层 (MFCANS32)
+      href: tn049-mfc-ole-mbcs-to-unicode-translation-layer-mfcans32.md
+    - name: TN050：MFC-OLE 通用对话框 (MFCUIx32)
+      href: tn050-mfc-ole-common-dialogs-mfcuix32.md
+    - name: TN051：现在和将来使用 CTL3D
+      href: tn051-using-ctl3d-now-and-in-the-future.md
+    - name: TN053：DAO 数据库类的自定义 DFX 例程
+      href: tn053-custom-dfx-routines-for-dao-database-classes.md
+    - name: TN054：使用 MFC DAO 类时直接调用 DAO
+      href: tn054-calling-dao-directly-while-using-mfc-dao-classes.md
+    - name: TN055：将 MFC ODBC 数据库类应用程序迁移到 MFC DAO 类
+      href: tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes.md
+    - name: TN056：安装本地化的 MFC 组件
+      href: tn056-installation-of-localized-mfc-components.md
+    - name: TN057：MFC 组件本地化
+      href: tn057-localization-of-mfc-components.md
+    - name: TN058：MFC 模块状态实现
+      href: tn058-mfc-module-state-implementation.md
+    - name: TN059：使用 MFC MBCS-Unicode 转换宏
+      href: tn059-using-mfc-mbcs-unicode-conversion-macros.md
+    - name: TN060：新 Windows 公共控件
+      href: tn060-the-new-windows-common-controls.md
+    - name: TN061：ON_NOTIFY 和 WM_NOTIFY 消息
+      href: tn061-on-notify-and-wm-notify-messages.md
+    - name: TN062：Windows 控件的消息反射
+      href: tn062-message-reflection-for-windows-controls.md
+    - name: TN063：调试 Internet MFC 扩展 DLL
+      href: tn063-debugging-internet-extension-dlls.md
+    - name: TN064：ActiveX 控件中的单元模型线程
+      href: tn064-apartment-model-threading-in-activex-controls.md
+    - name: TN065：针对 OLE 自动化服务器的双重接口支持
+      href: tn065-dual-interface-support-for-ole-automation-servers.md
+    - name: TN066：从 MFC 3.x 到 4.0 的常见移植问题
+      href: tn066-common-mfc-3-x-to-4-0-porting-issues.md
+    - name: TN068：使用 Microsoft Access 7 ODBC 驱动程序执行事务
+      href: tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver.md
+    - name: TN070：MFC 窗口类名
+      href: tn070-mfc-window-class-names.md
+    - name: TN071：MFC IOleCommandTarget 实现
+      href: tn071-mfc-iolecommandtarget-implementation.md
+- name: 类库概述
+  expanded: false
+  items:
+    - name: 类库概述
+      href: class-library-overview.md
+    - name: 常规类设计理念
+      expanded: false
+      items:
+        - name: 常规类设计理念
+          href: general-class-design-philosophy.md
+        - name: 应用程序框架
+          href: application-framework.md
+        - name: 与 C 语言 API 的关系
+          href: relationship-to-the-c-language-api.md
+    - name: 根类：CObject
+      href: root-class-cobject.md
+    - name: MFC 应用程序体系结构类
+      expanded: false
+      items:
+        - name: MFC 应用程序体系结构类
+          href: mfc-application-architecture-classes.md
+        - name: 应用程序和线程支持类
+          href: application-and-thread-support-classes.md
+        - name: 命令路由类
+          href: command-routing-classes.md
+        - name: 文档类
+          href: document-classes.md
+        - name: 视图类（体系结构）
+          href: view-classes-architecture.md
+        - name: 框架窗口类（体系结构）
+          href: frame-window-classes-architecture.md
+        - name: 文档模板类
+          href: document-template-classes.md
+    - name: 窗口、对话框和控件类
+      expanded: false
+      items:
+        - name: 窗口、对话框和控件类
+          href: window-dialog-and-control-classes.md
+        - name: 框架窗口类 (Windows)
+          href: frame-window-classes-windows.md
+        - name: 视图类 (Windows)
+          href: view-classes-windows.md
+        - name: 对话框类
+          href: dialog-box-classes.md
+        - name: 控件类
+          href: control-classes.md
+        - name: 控件条类
+          href: control-bar-classes.md
+    - name: 绘制和打印类
+      expanded: false
+      items:
+        - name: 绘制和打印类
+          href: drawing-and-printing-classes.md
+        - name: 输出（设备上下文）类
+          href: output-device-context-classes.md
+        - name: 绘图工具类
+          href: drawing-tool-classes.md
+    - name: 简单数据类型类
+      href: simple-data-type-classes.md
+    - name: 数组、列表和映射类
+      expanded: false
+      items:
+        - name: 数组、列表和映射类
+          href: array-list-and-map-classes.md
+        - name: 数组、列表和映射的模板类
+          href: template-classes-for-arrays-lists-and-maps.md
+        - name: 随时可用的数组类
+          href: ready-to-use-array-classes.md
+        - name: 随时可用的列表类
+          href: ready-to-use-list-classes.md
+        - name: 随时可用的映射类
+          href: ready-to-use-map-classes.md
+    - name: 文件和数据库类
+      expanded: false
+      items:
+        - name: 文件和数据库类
+          href: file-and-database-classes.md
+        - name: 文件 I-O 类
+          href: file-i-o-classes.md
+        - name: OLE DB 类
+          href: ole-db-classes.md
+        - name: DAO 类
+          href: dao-classes.md
+        - name: ODBC 类
+          href: odbc-classes.md
+    - name: Internet 和网络类
+      expanded: false
+      items:
+        - name: Internet 和网络类
+          href: internet-and-networking-classes.md
+        - name: Windows 套接字类
+          href: windows-sockets-classes.md
+        - name: Win32 Internet 类
+          href: win32-internet-classes.md
+    - name: OLE 类
+      expanded: false
+      items:
+        - name: OLE 类
+          href: ole-classes.md
+        - name: OLE 容器类
+          href: ole-container-classes.md
+        - name: OLE 服务器类
+          href: ole-server-classes.md
+        - name: OLE 拖放和数据传输类
+          href: ole-drag-and-drop-and-data-transfer-classes.md
+        - name: OLE 通用对话框类
+          href: ole-common-dialog-classes.md
+        - name: OLE 自动化类
+          href: ole-automation-classes.md
+        - name: OLE 控件类
+          href: ole-control-classes.md
+        - name: 活动文档类
+          href: active-document-classes.md
+        - name: OLE 相关类
+          href: ole-related-classes.md
+    - name: 调试和异常类
+      expanded: false
+      items:
+        - name: 调试和异常类
+          href: debugging-and-exception-classes.md
+        - name: 调试支持类
+          href: debugging-support-classes.md
+        - name: 异常类
+          href: exception-classes.md
+- name: 演练 (MFC)
+  expanded: false
+  items:
+    - name: 演练 (MFC)
+      href: walkthroughs-mfc.md
+    - name: 演练：使用新 MFC Shell 控件
+      href: walkthrough-using-the-new-mfc-shell-controls.md
+    - name: 演练：将控件添加到工具栏
+      href: walkthrough-putting-controls-on-toolbars.md
+    - name: 演练：向 MFC 项目添加 D2D 对象
+      href: walkthrough-adding-a-d2d-object-to-an-mfc-project.md
+    - name: 演练：向 MFC 项目添加动画
+      href: walkthrough-adding-animation-to-an-mfc-project.md
+- name: MFC API 参考
+  items:
+    - name: MFC 类
+      expanded: false
+      items:
+        - name: MFC 类
+          href: reference/mfc-classes.md
+        - name: CAccelerateDecelerateTransition 类
+          href: reference/cacceleratedeceleratetransition-class.md
+        - name: CAnimateCtrl 类
+          href: reference/canimatectrl-class.md
+        - name: CAnimationBaseObject 类
+          href: reference/canimationbaseobject-class.md
+        - name: CAnimationColor 类
+          href: reference/canimationcolor-class.md
+        - name: CAnimationController 类
+          href: reference/canimationcontroller-class.md
+        - name: CAnimationGroup 类
+          href: reference/canimationgroup-class.md
+        - name: CAnimationManagerEventHandler 类
+          href: reference/canimationmanagereventhandler-class.md
+        - name: CAnimationPoint 类
+          href: reference/canimationpoint-class.md
+        - name: CAnimationRect 类
+          href: reference/canimationrect-class.md
+        - name: CAnimationSize 类
+          href: reference/canimationsize-class.md
+        - name: CAnimationStoryboardEventHandler 类
+          href: reference/canimationstoryboardeventhandler-class.md
+        - name: CAnimationTimerEventHandler 类
+          href: reference/canimationtimereventhandler-class.md
+        - name: CAnimationValue 类
+          href: reference/canimationvalue-class.md
+        - name: CAnimationVariable 类
+          href: reference/canimationvariable-class.md
+        - name: CAnimationVariableChangeHandler 类
+          href: reference/canimationvariablechangehandler-class.md
+        - name: CAnimationVariableIntegerChangeHandler 类
+          href: reference/canimationvariableintegerchangehandler-class.md
+        - name: CArchive 类
+          href: reference/carchive-class.md
+        - name: CArchiveException 类
+          href: reference/carchiveexception-class.md
+        - name: CArray 类
+          href: reference/carray-class.md
+        - name: CAsyncMonikerFile 类
+          href: reference/casyncmonikerfile-class.md
+        - name: CAsyncSocket 类
+          href: reference/casyncsocket-class.md
+        - name: CAutoHideDockSite 类
+          href: reference/cautohidedocksite-class.md
+        - name: CBaseKeyFrame 类
+          href: reference/cbasekeyframe-class.md
+        - name: CBasePane 类
+          href: reference/cbasepane-class.md
+        - name: CBaseTabbedPane 类
+          href: reference/cbasetabbedpane-class.md
+        - name: CBaseTransition 类
+          href: reference/cbasetransition-class.md
+        - name: CBitmap 类
+          href: reference/cbitmap-class.md
+        - name: CBitmapButton 类
+          href: reference/cbitmapbutton-class.md
+        - name: CBitmapRenderTarget 类
+          href: reference/cbitmaprendertarget-class.md
+        - name: CBrush 类
+          href: reference/cbrush-class.md
+        - name: CButton 类
+          href: reference/cbutton-class.md
+        - name: CByteArray 类
+          href: reference/cbytearray-class.md
+        - name: CCachedDataPathProperty 类
+          href: reference/ccacheddatapathproperty-class.md
+        - name: CCheckListBox 类
+          href: reference/cchecklistbox-class.md
+        - name: CClientDC 类
+          href: reference/cclientdc-class.md
+        - name: CCmdTarget 类
+          href: reference/ccmdtarget-class.md
+        - name: CCmdUI 类
+          href: reference/ccmdui-class.md
+        - name: CColorDialog 类
+          href: reference/ccolordialog-class.md
+        - name: CComboBox 类
+          href: reference/ccombobox-class.md
+        - name: CComboBoxEx 类
+          href: reference/ccomboboxex-class.md
+        - name: CCommandLineInfo 类
+          href: reference/ccommandlineinfo-class.md
+        - name: CCommonDialog 类
+          href: reference/ccommondialog-class.md
+        - name: CConnectionPoint 类
+          href: reference/cconnectionpoint-class.md
+        - name: CConstantTransition 类
+          href: reference/cconstanttransition-class.md
+        - name: CContextMenuManager 类
+          href: reference/ccontextmenumanager-class.md
+        - name: CControlBar 类
+          href: reference/ccontrolbar-class.md
+        - name: CCreateContext 结构
+          href: reference/ccreatecontext-structure.md
+        - name: CCriticalSection 类
+          href: reference/ccriticalsection-class.md
+        - name: CCtrlView 类
+          href: reference/cctrlview-class.md
+        - name: CCubicTransition 类
+          href: reference/ccubictransition-class.md
+        - name: CCustomInterpolator 类
+          href: reference/ccustominterpolator-class.md
+        - name: CCustomTransition 类
+          href: reference/ccustomtransition-class.md
+        - name: CD2DBitmap 类
+          href: reference/cd2dbitmap-class.md
+        - name: CD2DBitmapBrush 类
+          href: reference/cd2dbitmapbrush-class.md
+        - name: CD2DBrush 类
+          href: reference/cd2dbrush-class.md
+        - name: CD2DBrushProperties 类
+          href: reference/cd2dbrushproperties-class.md
+        - name: CD2DEllipse 类
+          href: reference/cd2dellipse-class.md
+        - name: CD2DGeometry 类
+          href: reference/cd2dgeometry-class.md
+        - name: CD2DGeometrySink 类
+          href: reference/cd2dgeometrysink-class.md
+        - name: CD2DGradientBrush 类
+          href: reference/cd2dgradientbrush-class.md
+        - name: CD2DLayer 类
+          href: reference/cd2dlayer-class.md
+        - name: CD2DLinearGradientBrush 类
+          href: reference/cd2dlineargradientbrush-class.md
+        - name: CD2DMesh 类
+          href: reference/cd2dmesh-class.md
+        - name: CD2DPathGeometry 类
+          href: reference/cd2dpathgeometry-class.md
+        - name: CD2DPointF 类
+          href: reference/cd2dpointf-class.md
+        - name: CD2DPointU 类
+          href: reference/cd2dpointu-class.md
+        - name: CD2DRadialGradientBrush 类
+          href: reference/cd2dradialgradientbrush-class.md
+        - name: CD2DRectF 类
+          href: reference/cd2drectf-class.md
+        - name: CD2DRectU 类
+          href: reference/cd2drectu-class.md
+        - name: CD2DResource 类
+          href: reference/cd2dresource-class.md
+        - name: CD2DRoundedRect 类
+          href: reference/cd2droundedrect-class.md
+        - name: CD2DSizeF 类
+          href: reference/cd2dsizef-class.md
+        - name: CD2DSizeU 类
+          href: reference/cd2dsizeu-class.md
+        - name: CD2DSolidColorBrush 类
+          href: reference/cd2dsolidcolorbrush-class.md
+        - name: CD2DTextFormat 类
+          href: reference/cd2dtextformat-class.md
+        - name: CD2DTextLayout 类
+          href: reference/cd2dtextlayout-class.md
+        - name: CDaoDatabase 类
+          href: reference/cdaodatabase-class.md
+        - name: CDaoException 类
+          href: reference/cdaoexception-class.md
+        - name: CDaoFieldExchange 类
+          href: reference/cdaofieldexchange-class.md
+        - name: CDaoQueryDef 类
+          href: reference/cdaoquerydef-class.md
+        - name: CDaoRecordset 类
+          href: reference/cdaorecordset-class.md
+        - name: CDaoRecordView 类
+          href: reference/cdaorecordview-class.md
+        - name: CDaoTableDef 类
+          href: reference/cdaotabledef-class.md
+        - name: CDaoWorkspace 类
+          href: reference/cdaoworkspace-class.md
+        - name: CDatabase 类
+          href: reference/cdatabase-class.md
+        - name: CDataExchange 类
+          href: reference/cdataexchange-class.md
+        - name: CDataPathProperty 类
+          href: reference/cdatapathproperty-class.md
+        - name: CDataRecoveryHandler 类
+          href: reference/cdatarecoveryhandler-class.md
+        - name: CDateTimeCtrl 类
+          href: reference/cdatetimectrl-class.md
+        - name: CDBException 类
+          href: reference/cdbexception-class.md
+        - name: CDBVariant 类
+          href: reference/cdbvariant-class.md
+        - name: CDC 类
+          href: reference/cdc-class.md
+        - name: CDCRenderTarget 类
+          href: reference/cdcrendertarget-class.md
+        - name: CDHtmlDialog 类
+          expanded: false
+          items:
+            - name: CDHtmlDialog 类
+              href: reference/cdhtmldialog-class.md
+            - name: DDX_DHtml 帮助程序宏
+              href: reference/ddx-dhtml-helper-macros.md
+        - name: CDialog 类
+          href: reference/cdialog-class.md
+        - name: CDialogBar 类
+          href: reference/cdialogbar-class.md
+        - name: CDialogEx 类
+          href: reference/cdialogex-class.md
+        - name: CDiscreteTransition 类
+          href: reference/cdiscretetransition-class.md
+        - name: CDocItem 类
+          href: reference/cdocitem-class.md
+        - name: CDockablePane 类
+          href: reference/cdockablepane-class.md
+        - name: CDockablePaneAdapter 类
+          href: reference/cdockablepaneadapter-class.md
+        - name: CDockingManager 类
+          href: reference/cdockingmanager-class.md
+        - name: CDockingPanesRow 类
+          href: reference/cdockingpanesrow-class.md
+        - name: CDockSite 类
+          href: reference/cdocksite-class.md
+        - name: CDockState 类
+          href: reference/cdockstate-class.md
+        - name: CDocObjectServer 类
+          href: reference/cdocobjectserver-class.md
+        - name: CDocObjectServerItem 类
+          href: reference/cdocobjectserveritem-class.md
+        - name: CDocTemplate 类
+          href: reference/cdoctemplate-class.md
+        - name: CDocument 类
+          href: reference/cdocument-class.md
+        - name: CDragListBox 类
+          href: reference/cdraglistbox-class.md
+        - name: CDrawingManager 类
+          href: reference/cdrawingmanager-class.md
+        - name: CDumpContext 类
+          href: reference/cdumpcontext-class.md
+        - name: CDWordArray 类
+          href: reference/cdwordarray-class.md
+        - name: CEdit 类
+          href: reference/cedit-class.md
+        - name: CEditView 类
+          href: reference/ceditview-class.md
+        - name: CEvent 类
+          href: reference/cevent-class.md
+        - name: CException 类
+          href: reference/cexception-class.md
+        - name: CFieldExchange 类
+          href: reference/cfieldexchange-class.md
+        - name: CFile 类
+          href: reference/cfile-class.md
+        - name: CFileDialog 类
+          href: reference/cfiledialog-class.md
+        - name: CFileException 类
+          href: reference/cfileexception-class.md
+        - name: CFileFind 类
+          href: reference/cfilefind-class.md
+        - name: CFindReplaceDialog 类
+          href: reference/cfindreplacedialog-class.md
+        - name: CFolderPickerDialog 类
+          href: reference/cfolderpickerdialog-class.md
+        - name: CFont 类
+          href: reference/cfont-class.md
+        - name: CFontDialog 类
+          href: reference/cfontdialog-class.md
+        - name: CFontHolder 类
+          href: reference/cfontholder-class.md
+        - name: CFormView 类
+          href: reference/cformview-class.md
+        - name: CFrameWnd 类
+          href: reference/cframewnd-class.md
+        - name: CFrameWndEx 类
+          href: reference/cframewndex-class.md
+        - name: CFtpConnection 类
+          href: reference/cftpconnection-class.md
+        - name: CFtpFileFind 类
+          href: reference/cftpfilefind-class.md
+        - name: CGdiObject 类
+          href: reference/cgdiobject-class.md
+        - name: CGlobalUtils 类
+          href: reference/cglobalutils-class.md
+        - name: CGopherConnection 类
+          href: reference/cgopherconnection-class.md
+        - name: CGopherFile 类
+          href: reference/cgopherfile-class.md
+        - name: CGopherFileFind 类
+          href: reference/cgopherfilefind-class.md
+        - name: CGopherLocator 类
+          href: reference/cgopherlocator-class.md
+        - name: CHeaderCtrl 类
+          href: reference/cheaderctrl-class.md
+        - name: CHotKeyCtrl 类
+          href: reference/chotkeyctrl-class.md
+        - name: CHtmlEditCtrl 类
+          href: reference/chtmleditctrl-class.md
+        - name: CHtmlEditCtrlBase 类
+          href: reference/chtmleditctrlbase-class.md
+        - name: CHtmlEditDoc 类
+          href: reference/chtmleditdoc-class.md
+        - name: CHtmlEditView 类
+          href: reference/chtmleditview-class.md
+        - name: CHtmlView 类
+          href: reference/chtmlview-class.md
+        - name: CHttpConnection 类
+          href: reference/chttpconnection-class.md
+        - name: CHttpFile 类
+          href: reference/chttpfile-class.md
+        - name: CHwndRenderTarget 类
+          href: reference/chwndrendertarget-class.md
+        - name: CImageList 类
+          href: reference/cimagelist-class.md
+        - name: CInstantaneousTransition 类
+          href: reference/cinstantaneoustransition-class.md
+        - name: CInternetConnection 类
+          href: reference/cinternetconnection-class.md
+        - name: CInternetException 类
+          href: reference/cinternetexception-class.md
+        - name: CInternetFile 类
+          href: reference/cinternetfile-class.md
+        - name: CInternetSession 类
+          href: reference/cinternetsession-class.md
+        - name: CInterpolatorBase 类
+          href: reference/cinterpolatorbase-class.md
+        - name: CInvalidArgException 类
+          href: reference/cinvalidargexception-class.md
+        - name: CIPAddressCtrl 类
+          href: reference/cipaddressctrl-class.md
+        - name: CJumpList 类
+          href: reference/cjumplist-class.md
+        - name: CKeyboardManager 类
+          href: reference/ckeyboardmanager-class.md
+        - name: CKeyFrame 类
+          href: reference/ckeyframe-class.md
+        - name: CLinearTransition 类
+          href: reference/clineartransition-class.md
+        - name: CLinearTransitionFromSpeed 类
+          href: reference/clineartransitionfromspeed-class.md
+        - name: CLinkCtrl 类
+          href: reference/clinkctrl-class.md
+        - name: CList 类
+          href: reference/clist-class.md
+        - name: CListBox 类
+          href: reference/clistbox-class.md
+        - name: CListCtrl 类
+          href: reference/clistctrl-class.md
+        - name: CListView 类
+          href: reference/clistview-class.md
+        - name: CLongBinary 类
+          href: reference/clongbinary-class.md
+        - name: CMap 类
+          href: reference/cmap-class.md
+        - name: CMapPtrToPtr 类
+          href: reference/cmapptrtoptr-class.md
+        - name: CMapPtrToWord 类
+          href: reference/cmapptrtoword-class.md
+        - name: CMapStringToOb 类
+          href: reference/cmapstringtoob-class.md
+        - name: CMapStringToPtr 类
+          href: reference/cmapstringtoptr-class.md
+        - name: CMapStringToString 类
+          href: reference/cmapstringtostring-class.md
+        - name: CMapWordToOb 类
+          href: reference/cmapwordtoob-class.md
+        - name: CMapWordToPtr 类
+          href: reference/cmapwordtoptr-class.md
+        - name: CMDIChildWnd 类
+          href: reference/cmdichildwnd-class.md
+        - name: CMDIChildWndEx 类
+          href: reference/cmdichildwndex-class.md
+        - name: CMDIFrameWnd 类
+          href: reference/cmdiframewnd-class.md
+        - name: CMDIFrameWndEx 类
+          href: reference/cmdiframewndex-class.md
+        - name: CMDITabInfo 类
+          href: reference/cmditabinfo-class.md
+        - name: CMemFile 类
+          href: reference/cmemfile-class.md
+        - name: CMemoryException 类
+          href: reference/cmemoryexception-class.md
+        - name: CMemoryState 结构
+          href: reference/cmemorystate-structure.md
+        - name: CMenu 类
+          href: reference/cmenu-class.md
+        - name: CMenuTearOffManager 类
+          href: reference/cmenutearoffmanager-class.md
+        - name: CMetaFileDC 类
+          href: reference/cmetafiledc-class.md
+        - name: CMFCAcceleratorKey 类
+          href: reference/cmfcacceleratorkey-class.md
+        - name: CMFCAcceleratorKeyAssignCtrl 类
+          href: reference/cmfcacceleratorkeyassignctrl-class.md
+        - name: CMFCAutoHideBar 类
+          href: reference/cmfcautohidebar-class.md
+        - name: CMFCAutoHideButton 类
+          href: reference/cmfcautohidebutton-class.md
+        - name: CMFCBaseTabCtrl 类
+          href: reference/cmfcbasetabctrl-class.md
+        - name: CMFCBaseToolBar 类
+          href: reference/cmfcbasetoolbar-class.md
+        - name: CMFCBaseVisualManager 类
+          href: reference/cmfcbasevisualmanager-class.md
+        - name: CMFCButton 类
+          href: reference/cmfcbutton-class.md
+        - name: CMFCCaptionBar 类
+          href: reference/cmfccaptionbar-class.md
+        - name: CMFCCaptionButton 类
+          href: reference/cmfccaptionbutton-class.md
+        - name: CMFCCmdUsageCount 类
+          href: reference/cmfccmdusagecount-class.md
+        - name: CMFCColorBar 类
+          href: reference/cmfccolorbar-class.md
+        - name: CMFCColorButton 类
+          href: reference/cmfccolorbutton-class.md
+        - name: CMFCColorDialog 类
+          href: reference/cmfccolordialog-class.md
+        - name: CMFCColorMenuButton 类
+          href: reference/cmfccolormenubutton-class.md
+        - name: CMFCColorPickerCtrl 类
+          href: reference/cmfccolorpickerctrl-class.md
+        - name: CMFCColorPopupMenu 类
+          href: reference/cmfccolorpopupmenu-class.md
+        - name: CMFCCustomColorsPropertyPage 类
+          href: reference/cmfccustomcolorspropertypage-class.md
+        - name: CMFCDesktopAlertDialog 类
+          href: reference/cmfcdesktopalertdialog-class.md
+        - name: CMFCDesktopAlertWnd 类
+          href: reference/cmfcdesktopalertwnd-class.md
+        - name: CMFCDesktopAlertWndButton 类
+          href: reference/cmfcdesktopalertwndbutton-class.md
+        - name: CMFCDesktopAlertWndInfo 类
+          href: reference/cmfcdesktopalertwndinfo-class.md
+        - name: CMFCDisableMenuAnimation 类
+          href: reference/cmfcdisablemenuanimation-class.md
+        - name: CMFCDragFrameImpl 类
+          href: reference/cmfcdragframeimpl-class.md
+        - name: CMFCDropDownFrame 类
+          href: reference/cmfcdropdownframe-class.md
+        - name: CMFCDropDownToolBar 类
+          href: reference/cmfcdropdowntoolbar-class.md
+        - name: CMFCDropDownToolbarButton 类
+          href: reference/cmfcdropdowntoolbarbutton-class.md
+        - name: CMFCDynamicLayout 类
+          href: reference/cmfcdynamiclayout-class.md
+        - name: CMFCEditBrowseCtrl 类
+          href: reference/cmfceditbrowsectrl-class.md
+        - name: CMFCFilterChunkValueImpl 类
+          href: reference/cmfcfilterchunkvalueimpl-class.md
+        - name: CMFCFontComboBox 类
+          href: reference/cmfcfontcombobox-class.md
+        - name: CMFCFontInfo 类
+          href: reference/cmfcfontinfo-class.md
+        - name: CMFCHeaderCtrl 类
+          href: reference/cmfcheaderctrl-class.md
+        - name: CMFCImageEditorDialog 类
+          href: reference/cmfcimageeditordialog-class.md
+        - name: CMFCImageEditorPaletteBar 类
+          href: reference/cmfcimageeditorpalettebar-class.md
+        - name: CMFCImagePaintArea 类
+          href: reference/cmfcimagepaintarea-class.md
+        - name: CMFCKeyMapDialog 类
+          href: reference/cmfckeymapdialog-class.md
+        - name: CMFCLinkCtrl 类
+          href: reference/cmfclinkctrl-class.md
+        - name: CMFCListCtrl 类
+          href: reference/cmfclistctrl-class.md
+        - name: CMFCMaskedEdit 类
+          href: reference/cmfcmaskededit-class.md
+        - name: CMFCMenuBar 类
+          href: reference/cmfcmenubar-class.md
+        - name: CMFCMenuButton 类
+          href: reference/cmfcmenubutton-class.md
+        - name: CMFCOutlookBar 类
+          href: reference/cmfcoutlookbar-class.md
+        - name: CMFCOutlookBarPane 类
+          href: reference/cmfcoutlookbarpane-class.md
+        - name: CMFCOutlookBarTabCtrl 类
+          href: reference/cmfcoutlookbartabctrl-class.md
+        - name: CMFCPopupMenu 类
+          href: reference/cmfcpopupmenu-class.md
+        - name: CMFCPopupMenuBar 类
+          href: reference/cmfcpopupmenubar-class.md
+        - name: CMFCPreviewCtrlImpl 类
+          href: reference/cmfcpreviewctrlimpl-class.md
+        - name: CMFCPrintPreviewToolBar 类
+          href: reference/cmfcprintpreviewtoolbar-class.md
+        - name: CMFCPropertyGridColorProperty 类
+          href: reference/cmfcpropertygridcolorproperty-class.md
+        - name: CMFCPropertyGridCtrl 类
+          href: reference/cmfcpropertygridctrl-class.md
+        - name: CMFCPropertyGridFileProperty 类
+          href: reference/cmfcpropertygridfileproperty-class.md
+        - name: CMFCPropertyGridFontProperty 类
+          href: reference/cmfcpropertygridfontproperty-class.md
+        - name: CMFCPropertyGridProperty 类
+          href: reference/cmfcpropertygridproperty-class.md
+        - name: CMFCPropertyGridToolTipCtrl 类
+          href: reference/cmfcpropertygridtooltipctrl-class.md
+        - name: CMFCPropertyPage 类
+          href: reference/cmfcpropertypage-class.md
+        - name: CMFCPropertySheet 类
+          href: reference/cmfcpropertysheet-class.md
+        - name: CMFCReBar 类
+          href: reference/cmfcrebar-class.md
+        - name: CMFCRibbonApplicationButton 类
+          href: reference/cmfcribbonapplicationbutton-class.md
+        - name: CMFCRibbonBar 类
+          href: reference/cmfcribbonbar-class.md
+        - name: CMFCRibbonBaseElement 类
+          href: reference/cmfcribbonbaseelement-class.md
+        - name: CMFCRibbonButton 类
+          href: reference/cmfcribbonbutton-class.md
+        - name: CMFCRibbonButtonsGroup 类
+          href: reference/cmfcribbonbuttonsgroup-class.md
+        - name: CMFCRibbonCategory 类
+          href: reference/cmfcribboncategory-class.md
+        - name: CMFCRibbonCheckBox 类
+          href: reference/cmfcribboncheckbox-class.md
+        - name: CMFCRibbonColorButton 类
+          href: reference/cmfcribboncolorbutton-class.md
+        - name: CMFCRibbonComboBox 类
+          href: reference/cmfcribboncombobox-class.md
+        - name: CMFCRibbonContextCaption 类
+          href: reference/cmfcribboncontextcaption-class.md
+        - name: CMFCRibbonCustomizeDialog 类
+          href: reference/cmfcribboncustomizedialog-class.md
+        - name: CMFCRibbonCustomizePropertyPage 类
+          href: reference/cmfcribboncustomizepropertypage-class.md
+        - name: CMFCRibbonEdit 类
+          href: reference/cmfcribbonedit-class.md
+        - name: CMFCRibbonFontComboBox 类
+          href: reference/cmfcribbonfontcombobox-class.md
+        - name: CMFCRibbonGallery 类
+          href: reference/cmfcribbongallery-class.md
+        - name: CMFCRibbonGalleryMenuButton 类
+          href: reference/cmfcribbongallerymenubutton-class.md
+        - name: CMFCRibbonLabel 类
+          href: reference/cmfcribbonlabel-class.md
+        - name: CMFCRibbonLinkCtrl 类
+          href: reference/cmfcribbonlinkctrl-class.md
+        - name: CMFCRibbonMainPanel 类
+          href: reference/cmfcribbonmainpanel-class.md
+        - name: CMFCRibbonMiniToolBar 类
+          href: reference/cmfcribbonminitoolbar-class.md
+        - name: CMFCRibbonPanel 类
+          href: reference/cmfcribbonpanel-class.md
+        - name: CMFCRibbonProgressBar 类
+          href: reference/cmfcribbonprogressbar-class.md
+        - name: CMFCRibbonQuickAccessToolBarDefaultState 类
+          href: reference/cmfcribbonquickaccesstoolbardefaultstate-class.md
+        - name: CMFCRibbonSeparator 类
+          href: reference/cmfcribbonseparator-class.md
+        - name: CMFCRibbonSlider 类
+          href: reference/cmfcribbonslider-class.md
+        - name: CMFCRibbonStatusBar 类
+          href: reference/cmfcribbonstatusbar-class.md
+        - name: CMFCRibbonStatusBarPane 类
+          href: reference/cmfcribbonstatusbarpane-class.md
+        - name: CMFCRibbonUndoButton 类
+          href: reference/cmfcribbonundobutton-class.md
+        - name: CMFCShellListCtrl 类
+          href: reference/cmfcshelllistctrl-class.md
+        - name: CMFCShellTreeCtrl 类
+          href: reference/cmfcshelltreectrl-class.md
+        - name: CMFCSpinButtonCtrl 类
+          href: reference/cmfcspinbuttonctrl-class.md
+        - name: CMFCStandardColorsPropertyPage 类
+          href: reference/cmfcstandardcolorspropertypage-class.md
+        - name: CMFCStatusBar 类
+          href: reference/cmfcstatusbar-class.md
+        - name: CMFCTabCtrl 类
+          href: reference/cmfctabctrl-class.md
+        - name: CMFCTabDropTarget 类
+          href: reference/cmfctabdroptarget-class.md
+        - name: CMFCTabToolTipInfo 结构
+          href: reference/cmfctabtooltipinfo-structure.md
+        - name: CMFCTasksPane 类
+          href: reference/cmfctaskspane-class.md
+        - name: CMFCTasksPaneTask 类
+          href: reference/cmfctaskspanetask-class.md
+        - name: CMFCTasksPaneTaskGroup 类
+          href: reference/cmfctaskspanetaskgroup-class.md
+        - name: CMFCToolBar 类
+          href: reference/cmfctoolbar-class.md
+        - name: CMFCToolBarButton 类
+          href: reference/cmfctoolbarbutton-class.md
+        - name: CMFCToolBarComboBoxButton 类
+          href: reference/cmfctoolbarcomboboxbutton-class.md
+        - name: CMFCToolBarComboBoxEdit 类
+          href: reference/cmfctoolbarcomboboxedit-class.md
+        - name: CMFCToolBarDateTimeCtrl 类
+          href: reference/cmfctoolbardatetimectrl-class.md
+        - name: CMFCToolBarEditBoxButton 类
+          href: reference/cmfctoolbareditboxbutton-class.md
+        - name: CMFCToolBarFontComboBox 类
+          href: reference/cmfctoolbarfontcombobox-class.md
+        - name: CMFCToolBarFontSizeComboBox 类
+          href: reference/cmfctoolbarfontsizecombobox-class.md
+        - name: CMFCToolBarImages 类
+          href: reference/cmfctoolbarimages-class.md
+        - name: CMFCToolBarMenuButton 类
+          href: reference/cmfctoolbarmenubutton-class.md
+        - name: CMFCToolBarInfo 类
+          href: reference/cmfctoolbarinfo-class.md
+        - name: CMFCToolBarsCustomizeDialog 类
+          href: reference/cmfctoolbarscustomizedialog-class.md
+        - name: CMFCToolTipCtrl 类
+          href: reference/cmfctooltipctrl-class.md
+        - name: CMFCToolTipInfo 类
+          href: reference/cmfctooltipinfo-class.md
+        - name: CMFCVisualManager 类
+          href: reference/cmfcvisualmanager-class.md
+        - name: CMFCVisualManagerOffice2003 类
+          href: reference/cmfcvisualmanageroffice2003-class.md
+        - name: CMFCVisualManagerOffice2007 类
+          href: reference/cmfcvisualmanageroffice2007-class.md
+        - name: CMFCVisualManagerOfficeXP 类
+          href: reference/cmfcvisualmanagerofficexp-class.md
+        - name: CMFCVisualManagerVS2005 类
+          href: reference/cmfcvisualmanagervs2005-class.md
+        - name: CMFCVisualManagerWindows 类
+          href: reference/cmfcvisualmanagerwindows-class.md
+        - name: CMFCVisualManagerWindows7 类
+          href: reference/cmfcvisualmanagerwindows7-class.md
+        - name: CMFCWindowsManagerDialog 类
+          href: reference/cmfcwindowsmanagerdialog-class.md
+        - name: CMiniFrameWnd 类
+          href: reference/cminiframewnd-class.md
+        - name: CMonikerFile 类
+          href: reference/cmonikerfile-class.md
+        - name: CMonthCalCtrl 类
+          href: reference/cmonthcalctrl-class.md
+        - name: CMouseManager 类
+          href: reference/cmousemanager-class.md
+        - name: CMultiDocTemplate 类
+          href: reference/cmultidoctemplate-class.md
+        - name: CMultiLock 类
+          href: reference/cmultilock-class.md
+        - name: CMultiPageDHtmlDialog 类
+          href: reference/cmultipagedhtmldialog-class.md
+        - name: CMultiPaneFrameWnd 类
+          href: reference/cmultipaneframewnd-class.md
+        - name: CMutex 类
+          href: reference/cmutex-class.md
+        - name: CNetAddressCtrl 类
+          href: reference/cnetaddressctrl-class.md
+        - name: CNotSupportedException 类
+          href: reference/cnotsupportedexception-class.md
+        - name: CObArray 类
+          href: reference/cobarray-class.md
+        - name: CObject 类
+          href: reference/cobject-class.md
+        - name: CObList 类
+          href: reference/coblist-class.md
+        - name: COccManager 类
+          href: reference/coccmanager-class.md
+        - name: COleBusyDialog 类
+          href: reference/colebusydialog-class.md
+        - name: COleChangeIconDialog 类
+          href: reference/colechangeicondialog-class.md
+        - name: COleChangeSourceDialog 类
+          href: reference/colechangesourcedialog-class.md
+        - name: COleClientItem 类
+          href: reference/coleclientitem-class.md
+        - name: COleCmdUI 类
+          href: reference/colecmdui-class.md
+        - name: COleControl 类
+          href: reference/colecontrol-class.md
+        - name: COleControlContainer 类
+          href: reference/colecontrolcontainer-class.md
+        - name: COleControlModule 类
+          href: reference/colecontrolmodule-class.md
+        - name: COleControlSite 类
+          href: reference/colecontrolsite-class.md
+        - name: COleConvertDialog 类
+          href: reference/coleconvertdialog-class.md
+        - name: COleCurrency 类
+          href: reference/colecurrency-class.md
+        - name: COleDataObject 类
+          href: reference/coledataobject-class.md
+        - name: COleDataSource 类
+          href: reference/coledatasource-class.md
+        - name: COleDBRecordView 类
+          href: reference/coledbrecordview-class.md
+        - name: COleDialog 类
+          href: reference/coledialog-class.md
+        - name: COleDispatchDriver 类
+          href: reference/coledispatchdriver-class.md
+        - name: COleDispatchException 类
+          href: reference/coledispatchexception-class.md
+        - name: COleDocObjectItem 类
+          href: reference/coledocobjectitem-class.md
+        - name: COleDocument 类
+          href: reference/coledocument-class.md
+        - name: COleDropSource 类
+          href: reference/coledropsource-class.md
+        - name: COleDropTarget 类
+          href: reference/coledroptarget-class.md
+        - name: COleException 类
+          href: reference/coleexception-class.md
+        - name: COleInsertDialog 类
+          href: reference/coleinsertdialog-class.md
+        - name: COleIPFrameWnd 类
+          href: reference/coleipframewnd-class.md
+        - name: COleIPFrameWndEx 类
+          href: reference/coleipframewndex-class.md
+        - name: COleLinkingDoc 类
+          href: reference/colelinkingdoc-class.md
+        - name: COleLinksDialog 类
+          href: reference/colelinksdialog-class.md
+        - name: COleMessageFilter 类
+          href: reference/colemessagefilter-class.md
+        - name: COleObjectFactory 类
+          href: reference/coleobjectfactory-class.md
+        - name: COlePasteSpecialDialog 类
+          href: reference/colepastespecialdialog-class.md
+        - name: COlePropertiesDialog 类
+          href: reference/colepropertiesdialog-class.md
+        - name: COlePropertyPage 类
+          href: reference/colepropertypage-class.md
+        - name: COleResizeBar 类
+          href: reference/coleresizebar-class.md
+        - name: COleSafeArray 类
+          href: reference/colesafearray-class.md
+        - name: COleServerDoc 类
+          href: reference/coleserverdoc-class.md
+        - name: COleServerItem 类
+          href: reference/coleserveritem-class.md
+        - name: COleStreamFile 类
+          href: reference/colestreamfile-class.md
+        - name: COleTemplateServer 类
+          href: reference/coletemplateserver-class.md
+        - name: COleUpdateDialog 类
+          href: reference/coleupdatedialog-class.md
+        - name: COleVariant 类
+          href: reference/colevariant-class.md
+        - name: CPagerCtrl 类
+          href: reference/cpagerctrl-class.md
+        - name: CPageSetupDialog 类
+          href: reference/cpagesetupdialog-class.md
+        - name: CPaintDC 类
+          href: reference/cpaintdc-class.md
+        - name: CPalette 类
+          href: reference/cpalette-class.md
+        - name: CPane 类
+          href: reference/cpane-class.md
+        - name: CPaneContainer 类
+          href: reference/cpanecontainer-class.md
+        - name: CPaneContainerManager 类
+          href: reference/cpanecontainermanager-class.md
+        - name: CPaneDialog 类
+          href: reference/cpanedialog-class.md
+        - name: CPaneDivider 类
+          href: reference/cpanedivider-class.md
+        - name: CPaneFrameWnd 类
+          href: reference/cpaneframewnd-class.md
+        - name: CParabolicTransitionFromAcceleration 类
+          href: reference/cparabolictransitionfromacceleration-class.md
+        - name: CPen 类
+          href: reference/cpen-class.md
+        - name: CPictureHolder 类
+          href: reference/cpictureholder-class.md
+        - name: CPrintDialog 类
+          href: reference/cprintdialog-class.md
+        - name: CPrintDialogEx 类
+          href: reference/cprintdialogex-class.md
+        - name: CPrintInfo 结构
+          href: reference/cprintinfo-structure.md
+        - name: CProgressCtrl 类
+          href: reference/cprogressctrl-class.md
+        - name: CPropertyPage 类
+          href: reference/cpropertypage-class.md
+        - name: CPropertySheet 类
+          href: reference/cpropertysheet-class.md
+        - name: CPropExchange 类
+          href: reference/cpropexchange-class.md
+        - name: CPtrArray 类
+          href: reference/cptrarray-class.md
+        - name: CPtrList 类
+          href: reference/cptrlist-class.md
+        - name: CReBar 类
+          href: reference/crebar-class.md
+        - name: CReBarCtrl 类
+          href: reference/crebarctrl-class.md
+        - name: CRecentDockSiteInfo 类
+          href: reference/crecentdocksiteinfo-class.md
+        - name: CRecentFileList 类
+          href: reference/crecentfilelist-class.md
+        - name: CRecordset 类
+          href: reference/crecordset-class.md
+        - name: CRecordView 类
+          href: reference/crecordview-class.md
+        - name: CRectTracker 类
+          href: reference/crecttracker-class.md
+        - name: CRenderTarget 类
+          href: reference/crendertarget-class.md
+        - name: CResourceException 类
+          href: reference/cresourceexception-class.md
+        - name: CReversalTransition 类
+          href: reference/creversaltransition-class.md
+        - name: CRgn 类
+          href: reference/crgn-class.md
+        - name: CRichEditCntrItem 类
+          href: reference/cricheditcntritem-class.md
+        - name: CRichEditCtrl 类
+          href: reference/cricheditctrl-class.md
+        - name: CRichEditDoc 类
+          href: reference/cricheditdoc-class.md
+        - name: CRichEditView 类
+          href: reference/cricheditview-class.md
+        - name: CRuntimeClass 结构
+          href: reference/cruntimeclass-structure.md
+        - name: CScrollBar 类
+          href: reference/cscrollbar-class.md
+        - name: CScrollView 类
+          href: reference/cscrollview-class.md
+        - name: CSemaphore 类
+          href: reference/csemaphore-class.md
+        - name: CSettingsStore 类
+          href: reference/csettingsstore-class.md
+        - name: CSettingsStoreSP 类
+          href: reference/csettingsstoresp-class.md
+        - name: CSharedFile 类
+          href: reference/csharedfile-class.md
+        - name: CShellManager 类
+          href: reference/cshellmanager-class.md
+        - name: CSimpleException 类
+          href: reference/csimpleexception-class.md
+        - name: CSingleDocTemplate 类
+          href: reference/csingledoctemplate-class.md
+        - name: CSingleLock 类
+          href: reference/csinglelock-class.md
+        - name: CSinusoidalTransitionFromRange 类
+          href: reference/csinusoidaltransitionfromrange-class.md
+        - name: CSinusoidalTransitionFromVelocity 类
+          href: reference/csinusoidaltransitionfromvelocity-class.md
+        - name: CSliderCtrl 类
+          href: reference/csliderctrl-class.md
+        - name: CSmartDockingInfo 类
+          href: reference/csmartdockinginfo-class.md
+        - name: CSmoothStopTransition 类
+          href: reference/csmoothstoptransition-class.md
+        - name: CSocket 类
+          href: reference/csocket-class.md
+        - name: CSocketFile 类
+          href: reference/csocketfile-class.md
+        - name: CSpinButtonCtrl 类
+          href: reference/cspinbuttonctrl-class.md
+        - name: CSplitButton 类
+          href: reference/csplitbutton-class.md
+        - name: CSplitterWnd 类
+          href: reference/csplitterwnd-class.md
+        - name: CSplitterWndEx 类
+          href: reference/csplitterwndex-class.md
+        - name: CStatic 类
+          href: reference/cstatic-class.md
+        - name: CStatusBar 类
+          href: reference/cstatusbar-class.md
+        - name: CStatusBarCtrl 类
+          href: reference/cstatusbarctrl-class.md
+        - name: CStdioFile 类
+          href: reference/cstdiofile-class.md
+        - name: CStringArray 类
+          href: reference/cstringarray-class.md
+        - name: CStringList 类
+          href: reference/cstringlist-class.md
+        - name: CSyncObject 类
+          href: reference/csyncobject-class.md
+        - name: CTabCtrl 类
+          href: reference/ctabctrl-class.md
+        - name: CTabbedPane 类
+          href: reference/ctabbedpane-class.md
+        - name: CTabView 类
+          href: reference/ctabview-class.md
+        - name: CTaskDialog 类
+          href: reference/ctaskdialog-class.md
+        - name: CToolBar 类
+          href: reference/ctoolbar-class.md
+        - name: CToolBarCtrl 类
+          href: reference/ctoolbarctrl-class.md
+        - name: CToolTipCtrl 类
+          href: reference/ctooltipctrl-class.md
+        - name: CTooltipManager 类
+          href: reference/ctooltipmanager-class.md
+        - name: CTreeCtrl 类
+          href: reference/ctreectrl-class.md
+        - name: CTreeView 类
+          href: reference/ctreeview-class.md
+        - name: CTypedPtrArray 类
+          href: reference/ctypedptrarray-class.md
+        - name: CTypedPtrList 类
+          href: reference/ctypedptrlist-class.md
+        - name: CTypedPtrMap 类
+          href: reference/ctypedptrmap-class.md
+        - name: CUIntArray 类
+          href: reference/cuintarray-class.md
+        - name: CUserException 类
+          href: reference/cuserexception-class.md
+        - name: CUserTool 类
+          href: reference/cusertool-class.md
+        - name: CUserToolsManager 类
+          href: reference/cusertoolsmanager-class.md
+        - name: CView 类
+          href: reference/cview-class.md
+        - name: CVSListBox 类
+          href: reference/cvslistbox-class.md
+        - name: CWaitCursor 类
+          href: reference/cwaitcursor-class.md
+        - name: CWinApp 类
+          href: reference/cwinapp-class.md
+        - name: CWinAppEx 类
+          href: reference/cwinappex-class.md
+        - name: CWindowDC 类
+          href: reference/cwindowdc-class.md
+        - name: CWinFormsControl 类
+          href: reference/cwinformscontrol-class.md
+        - name: CWinFormsDialog 类
+          href: reference/cwinformsdialog-class.md
+        - name: CWinFormsView 类
+          href: reference/cwinformsview-class.md
+        - name: CWinThread 类
+          href: reference/cwinthread-class.md
+        - name: CWnd 类
+          href: reference/cwnd-class.md
+        - name: CWordArray 类
+          href: reference/cwordarray-class.md
+        - name: ICommandSource 接口
+          href: reference/icommandsource-interface.md
+        - name: ICommandTarget 接口
+          href: reference/icommandtarget-interface.md
+        - name: ICommandUI 接口
+          href: reference/icommandui-interface.md
+        - name: IView 接口
+          href: reference/iview-interface.md
+    - name: 内部类
+      href: reference/internal-classes.md
+    - name: MFC 宏和全局函数
+      expanded: false
+      items:
+        - name: MFC 宏和全局函数
+          href: reference/mfc-macros-and-globals.md
+        - name: 数据类型 (MFC)
+          href: reference/data-types-mfc.md
+        - name: MFC 类对象的类型强制转换
+          href: reference/type-casting-of-mfc-class-objects.md
+        - name: 运行时对象模型服务
+          href: reference/run-time-object-model-services.md
+        - name: 诊断服务
+          href: reference/diagnostic-services.md
+        - name: 模块和 DLL
+          href: reference/extension-dll-macros.md
+        - name: 异常处理
+          href: reference/exception-processing.md
+        - name: CString 格式设置和消息框显示
+          href: reference/cstring-formatting-and-message-box-display.md
+        - name: 应用程序信息和管理
+          href: reference/application-information-and-management.md
+        - name: 标准命令和窗口 ID
+          href: reference/standard-command-and-window-ids.md
+        - name: 集合类帮助程序
+          href: reference/collection-class-helpers.md
+        - name: 灰色和抖色位图函数
+          href: reference/gray-and-dithered-bitmap-functions.md
+        - name: 记录字段交换函数
+          href: reference/record-field-exchange-functions.md
+        - name: CRecordView 和 CDaoRecordView 的对话框数据交换函数
+          href: reference/dialog-data-exchange-functions-for-crecordview-and-cdaorecordview.md
+        - name: OLE 控件的对话框数据交换函数
+          href: reference/dialog-data-exchange-functions-for-ole-controls.md
+        - name: 数据库宏和全局函数
+          href: reference/database-macros-and-globals.md
+        - name: DAO 数据库引擎初始化和终止
+          href: reference/dao-database-engine-initialization-and-termination.md
+        - name: OLE 初始化
+          href: reference/ole-initialization.md
+        - name: 应用程序控件
+          href: reference/application-control.md
+        - name: 调度映射
+          href: reference/dispatch-maps.md
+        - name: 变量参数类型常量
+          href: reference/variant-parameter-type-constants.md
+        - name: 类型库访问
+          href: reference/type-library-access.md
+        - name: 属性页 (MFC)
+          href: reference/property-pages-mfc.md
+        - name: 事件映射
+          href: reference/event-maps.md
+        - name: 事件接收器映射
+          href: reference/event-sink-maps.md
+        - name: 连接映射
+          href: reference/connection-maps.md
+        - name: 注册 OLE 控件
+          href: reference/registering-ole-controls.md
+        - name: 类工厂和许可
+          href: reference/class-factories-and-licensing.md
+        - name: 暂留 OLE 控件
+          href: reference/persistence-of-ole-controls.md
+        - name: Internet URL 分析全局函数
+          href: reference/internet-url-parsing-globals.md
+        - name: DHTML 事件映射
+          href: reference/dhtml-event-maps.md
+        - name: DHTML 编辑命令映射
+          href: reference/dhtml-editing-command-maps.md
+        - name: 标准对话框数据交换例程
+          href: reference/standard-dialog-data-exchange-routines.md
+        - name: 标准对话框数据验证例程
+          href: reference/standard-dialog-data-validation-routines.md
+        - name: AFX 消息
+          href: reference/afx-messages.md
+        - name: 工具栏控件样式
+          href: reference/toolbar-control-styles.md
+        - name: 'CMFCImagePaintArea::IMAGE_EDIT_MODE 枚举'
+          href: reference/cmfcimagepaintarea-image-edit-mode-enumeration.md
+        - name: UICheckState 枚举
+          href: reference/uicheckstate-enumeration.md
+    - name: 结构、样式、回调和消息映射
+      expanded: false
+      items:
+        - name: 结构、样式、回调和消息映射
+          href: reference/structures-styles-callbacks-and-message-maps.md
+        - name: MFC 使用的结构
+          expanded: false
+          items:
+            - name: MFC 使用的结构
+              href: reference/structures-used-by-mfc.md
+            - name: AFX_EXTENSION_MODULE 结构
+              href: reference/afx-extension-module-structure.md
+            - name: AFX_GLOBAL_DATA 结构
+              href: reference/afx-global-data-structure.md
+            - name: CDaoDatabaseInfo 结构
+              href: reference/cdaodatabaseinfo-structure.md
+            - name: CDaoErrorInfo 结构
+              href: reference/cdaoerrorinfo-structure.md
+            - name: CDaoFieldInfo 结构
+              href: reference/cdaofieldinfo-structure.md
+            - name: CDaoIndexInfo 结构
+              href: reference/cdaoindexinfo-structure.md
+            - name: CDaoIndexFieldInfo 结构
+              href: reference/cdaoindexfieldinfo-structure.md
+            - name: CDaoParameterInfo 结构
+              href: reference/cdaoparameterinfo-structure.md
+            - name: CDaoQueryDefInfo 结构
+              href: reference/cdaoquerydefinfo-structure.md
+            - name: CDaoRelationInfo 结构
+              href: reference/cdaorelationinfo-structure.md
+            - name: CDaoRelationFieldInfo 结构
+              href: reference/cdaorelationfieldinfo-structure.md
+            - name: CDaoTableDefInfo 结构
+              href: reference/cdaotabledefinfo-structure.md
+            - name: CDaoWorkspaceInfo 结构
+              href: reference/cdaoworkspaceinfo-structure.md
+            - name: CODBCFieldInfo 结构
+              href: reference/codbcfieldinfo-structure.md
+            - name: DHtmlUrlEventMapEntry 结构
+              href: reference/dhtmlurleventmapentry-structure.md
+            - name: HSE_VERSION_INFO 结构
+              href: reference/hse-version-info-structure.md
+        - name: MFC 使用的样式
+          href: reference/styles-used-by-mfc.md
+        - name: MFC 使用的回调函数
+          href: reference/callback-functions-used-by-mfc.md
+        - name: 消息映射 (MFC)
+          expanded: false
+          items:
+            - name: 消息映射 (MFC)
+              href: reference/message-maps-mfc.md
+            - name: 消息映射宏 (MFC)
+              href: reference/message-map-macros-mfc.md
+            - name: 委托和接口映射宏
+              href: reference/delegate-and-interface-maps.md
+            - name: 如何：使用消息映射交叉引用
+              href: reference/how-to-use-the-message-map-cross-reference.md
+            - name: 子窗口通知消息处理程序
+              href: reference/child-window-notification-message-handlers.md
+            - name: 通用控件处理程序
+              href: reference/generic-control-handler.md
+            - name: 用户按钮处理程序
+              href: reference/user-button-handlers.md
+            - name: 组合框处理程序
+              href: reference/combo-box-handlers.md
+            - name: 编辑控件处理程序
+              href: reference/edit-control-handlers.md
+            - name: 列表框处理程序
+              href: reference/list-box-handlers.md
+            - name: WM_ 消息处理程序
+              href: reference/handlers-for-wm-messages.md
+            - name: WM_ 消息处理程序：A - C
+              href: reference/wm-message-handlers-a-c.md
+            - name: WM_ 消息处理程序：D - E
+              href: reference/wm-message-handlers-d-e.md
+            - name: WM_ 消息处理程序：F - K
+              href: reference/wm-message-handlers-f-k.md
+            - name: WM_ 消息处理程序：L - M
+              href: reference/wm-message-handlers-l-m.md
+            - name: WM_ 消息处理程序：N - O
+              href: reference/wm-message-handlers-n-o.md
+            - name: WM_ 消息：P - R
+              href: reference/wm-messages-p-r.md
+            - name: WM_ 消息：S
+              href: reference/wm-messages-s.md
+            - name: WM_ 消息：T - Z
+              href: reference/wm-messages-t-z.md
+            - name: 用户定义的处理程序
+              href: reference/user-defined-handlers.md
+- name: MFC 向导和对话框
+  expanded: false
+  items:
+    - name: MFC 向导和对话框
+      href: reference/mfc-wizards-and-dialog-boxes.md
+    - name: 创建 MFC DLL 项目
+      expanded: false
+      items:
+        - name: 创建 MFC DLL 项目
+          href: reference/creating-an-mfc-dll-project.md
+        - name: MFC DLL 向导
+          expanded: false
+          items:
+            - name: MFC DLL 向导
+              href: reference/mfc-dll-wizard.md
+            - name: MFC DLL 向导的应用程序设置
+              href: reference/application-settings-mfc-dll-wizard.md
+        - name: MFC DLL 向导生成的类和函数
+          href: reference/classes-and-functions-generated-by-the-mfc-dll-wizard.md
+    - name: 创建 MFC 应用程序
+      expanded: false
+      items:
+        - name: 创建 MFC 应用程序
+          href: reference/creating-an-mfc-application.md
+        - name: MFC 应用程序向导
+          expanded: false
+          items:
+            - name: MFC 应用程序向导
+              href: reference/mfc-application-wizard.md
+            - name: MFC 应用程序向导的应用程序类型
+              href: reference/application-type-mfc-application-wizard.md
+            - name: MFC 应用程序向导的复合文档支持
+              href: reference/compound-document-support-mfc-application-wizard.md
+            - name: MFC 应用程序向导的文档模板字符串
+              href: reference/document-template-strings-mfc-application-wizard.md
+            - name: MFC 应用程序向导的数据库支持
+              href: reference/database-support-mfc-application-wizard.md
+            - name: MFC 应用程序向导的用户界面功能
+              href: reference/user-interface-features-mfc-application-wizard.md
+            - name: MFC 应用程序向导的高级功能
+              href: reference/advanced-features-mfc-application-wizard.md
+            - name: MFC 应用程序向导的已生成类
+              href: reference/generated-classes-mfc-application-wizard.md
+        - name: 创建基于窗体的 MFC 应用程序
+          href: reference/creating-a-forms-based-mfc-application.md
+        - name: 创建文件资源管理器样式的 MFC 应用程序
+          href: reference/creating-a-file-explorer-style-mfc-application.md
+        - name: 创建 Web 浏览器样式的 MFC 应用程序
+          href: reference/creating-a-web-browser-style-mfc-application.md
+    - name: 创建 MFC ActiveX 控件容器
+      href: reference/creating-an-mfc-activex-control-container.md
+    - name: 创建 MFC ActiveX 控件
+      expanded: false
+      items:
+        - name: 创建 MFC ActiveX 控件
+          href: reference/creating-an-mfc-activex-control.md
+        - name: MFC ActiveX 控件向导
+          expanded: false
+          items:
+            - name: MFC ActiveX 控件向导
+              href: reference/mfc-activex-control-wizard.md
+            - name: MFC ActiveX 控件向导的应用程序设置
+              href: reference/application-settings-mfc-activex-control-wizard.md
+            - name: MFC ActiveX 控件向导的控件名称
+              href: reference/control-names-mfc-activex-control-wizard.md
+            - name: MFC ActiveX 控件向导的控件设置
+              href: reference/control-settings-mfc-activex-control-wizard.md
+    - name: 添加 MFC 类
+      expanded: false
+      items:
+        - name: 添加 MFC 类
+          href: reference/adding-an-mfc-class.md
+        - name: MFC 添加类向导
+          expanded: false
+          items:
+            - name: MFC 添加类向导
+              href: reference/mfc-add-class-wizard.md
+            - name: MFC 添加类向导的文档模板字符串
+              href: reference/document-template-strings-mfc-add-class-wizard.md
+    - name: 从类型库添加 MFC 类
+      expanded: false
+      items:
+        - name: 从类型库添加 MFC 类
+          href: reference/adding-an-mfc-class-from-a-type-library.md
+        - name: 从类型库添加类向导
+          href: reference/add-class-from-typelib-wizard.md
+    - name: 添加 MFC 消息处理程序
+      expanded: false
+      items:
+        - name: 添加 MFC 消息处理程序
+          href: reference/adding-an-mfc-message-handler.md
+        - name: 将消息映射到函数
+          expanded: false
+          items:
+            - name: 将消息映射到函数
+              href: reference/mapping-messages-to-functions.md
+            - name: 与用户界面对象关联的消息类型
+              href: reference/message-types-associated-with-user-interface-objects.md
+            - name: 编辑消息处理程序
+              href: reference/editing-a-message-handler.md
+            - name: 为反射的消息定义消息处理程序
+              href: reference/defining-a-message-handler-for-a-reflected-message.md
+            - name: 声明基于新控件类的变量
+              href: reference/declaring-a-variable-based-on-your-new-control-class.md
+    - name: 添加 MFC ODBC 使用者
+      expanded: false
+      items:
+        - name: 添加 MFC ODBC 使用者
+          href: reference/adding-an-mfc-odbc-consumer.md
+        - name: MFC ODBC 使用者向导
+          href: reference/mfc-odbc-consumer-wizard.md
+    - name: 向 MFC 项目添加 ATL 支持
+      expanded: false
+      items:
+        - name: 向 MFC 项目添加 ATL 支持
+          href: reference/adding-atl-support-to-your-mfc-project.md
+        - name: ATL 向导添加的 ATL 支持的详细信息
+          href: reference/details-of-atl-support-added-by-the-atl-wizard.md
+    - name: MFC 类向导
+      href: reference/mfc-class-wizard.md
