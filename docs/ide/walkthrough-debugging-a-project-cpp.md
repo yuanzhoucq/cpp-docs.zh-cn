@@ -1,17 +1,17 @@
 ---
 title: 演练：调试项目 (C++)
-ms.date: 09/14/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - projects [C++], debugging
 - project debugging [C++]
 - debugging projects
 ms.assetid: a5cade77-ba51-4b03-a7a0-6897e3cd6a59
-ms.openlocfilehash: 0a1ceddca3234ead7d10cc839d41a6d644ec1866
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
+ms.openlocfilehash: 55124bc2f240499cc163fca6d0004a79047060a4
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57812026"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857252"
 ---
 # <a name="walkthrough-debugging-a-project-c"></a>演练：调试项目 (C++)
 
@@ -27,11 +27,11 @@ ms.locfileid: "57812026"
 
 1. 若要查看销毁 `Cardgame` 对象时发生的情况，请查看 `Cardgame` 类的析构函数。
 
-   在菜单栏上，选择“视图” > “类视图”。
+   在菜单栏上，选择“视图”   > “类视图”  。
 
-   在“类视图”窗口中，展开“游戏”项目树并选择“Cardgame”类来显示类成员和方法。
+   在“类视图”窗口中，展开“游戏”项目树并选择“Cardgame”类来显示类成员和方法    。
 
-   打开“~Cardgame(void)”析构函数的快捷菜单，然后选择“转到定义”。
+   打开“~Cardgame(void)”析构函数的快捷菜单，然后选择“转到定义”   。
 
 1. 若要在 Cardgame 终止时减少 `totalParticipants`，请在 `Cardgame::~Cardgame` 析构函数的左大括号和右大括号之间键入以下代码。
 
@@ -41,20 +41,20 @@ ms.locfileid: "57812026"
 
    [!code-cpp[NVC_Walkthrough_Debugging_A_Project#111](../ide/codesnippet/CPP/walkthrough-debugging-a-project-cpp_2.cpp)]
 
-1. 在菜单栏上，依次选择“生成” > “生成解决方案”。
+1. 在菜单栏上，依次选择“生成” > “生成解决方案”   。
 
-1. 生成完成后，可以通过选择菜单栏上的“调试” > “启动调试”或选择 F5 键在调试模式下运行此解决方案。 程序在第一个断点处暂停程序。
+1. 生成完成后，可以通过选择菜单栏上的“调试”   > “启动调试”  或选择 F5  键在调试模式下运行此解决方案。 程序在第一个断点处暂停程序。
 
-1. 若要逐步执行此程序，请在菜单栏上，选择“调试” > “逐过程执行”或选择 F10 键。
+1. 若要逐步执行此程序，请在菜单栏上，选择“调试”   > “逐过程执行”  或选择 F10  键。
 
    请注意，执行每个 `Cardgame` 构造函数后，`totalParticipants` 的值会增大。 在 `PlayGames` 函数返回时，由于每个 `Cardgame` 实例都超出范围且被删除（并且调用析构函数），因此 `totalParticipants` 会减小。 在刚要执行 `return` 语句前，`totalParticipants` 等于 0。
 
-1. 继续逐步执行此程序直到其退出，或通过在菜单栏上选择“调试” > “运行”或选择 F5 键来使其运行。
+1. 继续逐步执行此程序直到其退出，或通过在菜单栏上选择“调试”   > “运行”  或选择 F5  键来使其运行。
 
 ## <a name="next-steps"></a>后续步骤
 
-上一步：[演练：测试项目 (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
-**下一篇：**[演练：部署程序 (C++)](../ide/walkthrough-deploying-your-program-cpp.md)<br/>
+上一步：  [演练：测试项目 (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
+**下一篇：** [演练：部署程序 (C++)](../ide/walkthrough-deploying-your-program-cpp.md)<br/>
 
 ## <a name="see-also"></a>请参阅
 
