@@ -2,12 +2,12 @@
 title: C++ 中 Windows 编程概述
 ms.date: 05/06/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 957e3565ad4caa12da5e7d10915ca159d00954b8
-ms.sourcegitcommit: 79e985d3c6e8ccaf94f6e641972887cae8c6eeb0
+ms.openlocfilehash: 585fda614acce85e286e25b807d0fda57d03758b
+ms.sourcegitcommit: af580f3a11b19d22288424eac7ceae1bc24ab312
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66197737"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66355563"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>C++ 中 Windows 编程概述
 
@@ -101,7 +101,7 @@ Visual Studio 包含一个功能强大的本机代码调试器、静态分析工
 |[Windows 桌面向导](windows-desktop-wizard.md)|使用向导来创建新的 Windows 项目。|
 |[活动模板库 (ATL)](../atl/atl-com-desktop-components.md)|使用 ATL 库创建的 COM 组件C++。|
 |[Microsoft 基础类 (MFC)](../mfc/mfc-desktop-applications.md)|使用 MFC 创建大或小 Windows 应用程序使用对话框和控件|
-|[ATL 和 MFC 共享类](../atl-mfc-shared/TOC.md)|使用 ATL 和 MFC 中的共享如 CString 类。|
+|[ATL 和 MFC 共享类](../atl-mfc-shared/atl-mfc-shared-classes.md)|使用 ATL 和 MFC 中的共享如 CString 类。|
 |[数据访问](../data/data-access-in-cpp.md)| OLE DB 和 ODBC|
 |[文本和字符串](../text/text-and-strings-in-visual-cpp.md)|在 Windows 上的各种字符串类型。|
 |[有关使用 DirectX 创建游戏的资源](resources-for-creating-a-game-using-directx.md)
