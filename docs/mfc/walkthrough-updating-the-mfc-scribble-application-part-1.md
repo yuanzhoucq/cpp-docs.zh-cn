@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-ms.openlocfilehash: cba28039cb7755149b35a47ddee82b6274fe4c72
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: a12c2bd2c1c1963630a1bd74b56f2c832573cc94
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64558220"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450509"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>演练：正在更新 MFC 随意画图应用程序 （第 1 部分）
 
@@ -24,7 +24,7 @@ ms.locfileid: "64558220"
 
 ## <a name="prerequisites"></a>系统必备
 
-[Scribble 1.0 MFC 示例](http://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe)。 有关转换到 Visual Studio 2017 或更高版本的帮助，请参阅[移植指南：MFC Scribble](../porting/porting-guide-mfc-scribble.md)。
+[Scribble 1.0 MFC 示例](https://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe)。 有关转换到 Visual Studio 2017 或更高版本的帮助，请参阅[移植指南：MFC Scribble](../porting/porting-guide-mfc-scribble.md)。
 
 ##  <a name="top"></a> 部分
 
@@ -171,7 +171,7 @@ ms.locfileid: "64558220"
 
 1. 在设计视图中，单击**应用程序**按钮以显示其属性。 按如下所示更改属性值：**图像**到`IDB_RIBBON_MAIN`，**提示**到`File`，**密钥**到`f`，**大图像**到`IDB_RIBBON_FILELARGE`，和**较小的图像**到`IDB_RIBBON_FILESMALL`。
 
-1. 以下修改创建用户单击时显示的菜单**应用程序**按钮。 单击省略号 (**...**) 旁边**Main 项**以打开**项编辑器**。
+1. 以下修改创建用户单击时显示的菜单**应用程序**按钮。 单击省略号 ( **...** ) 旁边**Main 项**以打开**项编辑器**。
 
    1. 与**项**类型**按钮**选中状态，单击**添加**添加一个按钮。 更改**标题**到`&New`， **ID**到`ID_FILE_NEW`，**映像**到`0`，**大型图像**到`0`.
 
@@ -199,7 +199,7 @@ ms.locfileid: "64558220"
 
 1. 以下修改创建的底部将显示一个退出按钮**应用程序**按钮菜单。
 
-   1. 在中**属性**窗口中，单击省略号 (**...**) 旁边**按钮**以打开**项编辑器**。
+   1. 在中**属性**窗口中，单击省略号 ( **...** ) 旁边**按钮**以打开**项编辑器**。
 
    1. 与**项**类型**按钮**选中状态，单击**添加**添加一个按钮。 更改**标题**到`E&xit`， **ID**到`ID_APP_EXIT`，**映像**到`8`。
 

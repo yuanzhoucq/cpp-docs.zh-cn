@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: e88c375560c617e970c70adda245125ac8242ae4
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: fc92497c4d43238f9cf6aea7132afb8c8dc27fbd
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220352"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451228"
 ---
 # <a name="cwnd-class"></a>CWnd 类
 
@@ -1652,7 +1652,7 @@ void BringWindowToTop();
 
 此外，`BringWindowToTop` 将激活弹出的、顶层和 MDI 子窗口。 `BringWindowToTop` 成员函数应用于显露被任何重叠窗口部分或完全遮盖的任意窗口。
 
-此函数只调用 Win32 [BringWindowToTop](/windows/desktop/api/winuser/nf-winuser-bringwindowtotop)函数。 调用[SetWindowPos](#setwindowpos)函数来更改窗口的 Z 顺序中的位置。 `BringWindowToTop` 函数不更改窗口样式，即可使其成为顶层窗口。 有关详细信息，请参阅[HWND_TOP 与 HWND_TOPMOST 之间的区别是什么](http://blogs.msdn.com/b/oldnewthing/archive/2005/11/21/495246.aspx)
+此函数只调用 Win32 [BringWindowToTop](/windows/desktop/api/winuser/nf-winuser-bringwindowtotop)函数。 调用[SetWindowPos](#setwindowpos)函数来更改窗口的 Z 顺序中的位置。 `BringWindowToTop` 函数不更改窗口样式，即可使其成为顶层窗口。 有关详细信息，请参阅[HWND_TOP 与 HWND_TOPMOST 之间的区别是什么](https://devblogs.microsoft.com/oldnewthing/?p=33263)
 
 ### <a name="example"></a>示例
 
@@ -2455,7 +2455,7 @@ int DlgDirList(
 
 `[drive:] [ [\u]directory[\idirectory]...\u] [filename]`
 
-在此示例中，*驱动器*是驱动器号， *directory*是一个有效的目录名称，并*文件名*是有效的文件名必须包含至少一个通配符。 通配符为一个问号 (**？**)，这意味着匹配任何字符和一个星号 (<strong>\*</strong>)，这意味着匹配任意数量的字符。
+在此示例中，*驱动器*是驱动器号， *directory*是一个有效的目录名称，并*文件名*是有效的文件名必须包含至少一个通配符。 通配符为一个问号 ( **？** )，这意味着匹配任何字符和一个星号 (<strong>\*</strong>)，这意味着匹配任意数量的字符。
 
 如果指定 0 长度字符串*lpPathSpec*，或如果指定目录名称，但不是包含任何文件规范，该字符串将更改为"\*。\*"。
 
@@ -2523,7 +2523,7 @@ int DlgDirListComboBox(
 
 `[drive:] [ [\u]directory[\idirectory]...\u] [filename]`
 
-在此示例中，*驱动器*是驱动器号， *directory*是一个有效的目录名称，并*文件名*是有效的文件名必须包含至少一个通配符。 通配符为一个问号 (**？**)，这意味着匹配任何字符和一个星号 (<strong>\*</strong>)，这意味着匹配任意数量的字符。
+在此示例中，*驱动器*是驱动器号， *directory*是一个有效的目录名称，并*文件名*是有效的文件名必须包含至少一个通配符。 通配符为一个问号 ( **？** )，这意味着匹配任何字符和一个星号 (<strong>\*</strong>)，这意味着匹配任意数量的字符。
 
 如果指定的长度为零的字符串*lpPathSpec*，将使用当前目录并*lpPathSpec*不会被修改。 如果指定目录名称，但不是包含任何文件规范，该字符串将更改为"\*"。
 
