@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-ms.openlocfilehash: 5b246be02c860ede6691db1c4d21af7e6b4da26a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3fd6272ebcb58d48cc943541f32d1195c3fab498
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369797"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450803"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
@@ -49,7 +49,7 @@ ms.locfileid: "62369797"
 
 - 对于大多数应用程序而言，最有用的配对是 `mt19937` 引擎和 `uniform_int_distribution`，如本文后面的[代码示例](#code)中所示。
 
-有许多选项可供选择在\<随机 > 标头，并且其中任何一个优于过时的 C 运行时函数`rand()`。 有关什么是不妥`rand()`以及如何\<随机 > 处理这些不足，请参阅[此视频](http://go.microsoft.com/fwlink/p/?linkid=397615)。
+有许多选项可供选择在\<随机 > 标头，并且其中任何一个优于过时的 C 运行时函数`rand()`。 有关什么是不妥`rand()`以及如何\<随机 > 处理这些不足，请参阅[此视频](https://go.microsoft.com/fwlink/p/?linkid=397615)。
 
 ## <a name="code"></a>示例
 
@@ -500,7 +500,7 @@ Visual Studio 中存在两个非常有用的 URNG（`mt19937` 和 `random_device
 
 <sup>* 在提供了已知种子的情况下。</sup>
 
-虽然 ISO C++ 标准不需要对 `random_device` 进行安全加密，但是在 Visual Studio 中，会对其实现安全加密。 （术语“安全加密”并不暗示保证，但是表示给定随机化算法提供的熵的最低级别，因此也是可预测级别。 有关详细信息，请参阅 Wikipedia 文章[安全加密的伪随机数生成器](http://go.microsoft.com/fwlink/p/?linkid=398017)。）因为 ISO C++ 标准不需要它，所以其他平台可能会将 `random_device` 实现为简单的伪随机数生成器（非安全加密），并且可能仅适合用作另一个生成器的种子源。 在跨平台代码中使用 `random_device` 时，请查看适用于这些平台的文档。
+虽然 ISO C++ 标准不需要对 `random_device` 进行安全加密，但是在 Visual Studio 中，会对其实现安全加密。 （术语“安全加密”并不暗示保证，但是表示给定随机化算法提供的熵的最低级别，因此也是可预测级别。 有关详细信息，请参阅 Wikipedia 文章[安全加密的伪随机数生成器](https://go.microsoft.com/fwlink/p/?linkid=398017)。）因为 ISO C++ 标准不需要它，所以其他平台可能会将 `random_device` 实现为简单的伪随机数生成器（非安全加密），并且可能仅适合用作另一个生成器的种子源。 在跨平台代码中使用 `random_device` 时，请查看适用于这些平台的文档。
 
 根据定义，`random_device` 结果是不可复制的，而且副作用是，它的运行速度可能会显著慢于其他 URNG。 虽然你可能希望通过对 `random_device` 的调用来为应用程序设定种子，但大多数不需要进行安全加密的应用程序都使用 `mt19937` 或类似引擎，如[代码示例](#code)中所示。
 

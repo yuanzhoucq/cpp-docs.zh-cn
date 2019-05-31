@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, control settings
 ms.assetid: 2ccaa4fc-0d52-413e-afa3-ecd474c3f6f0
-ms.openlocfilehash: 34cc49fff88399a6c3cf5f7db71410c88e5c9bab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d7653e61e6aada9205f599cf7a7ca6187dd139d
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373272"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450556"
 ---
 # <a name="control-settings-mfc-activex-control-wizard"></a>MFC ActiveX 控件向导控件设置
 
@@ -57,7 +57,7 @@ ms.locfileid: "62373272"
    指定控件具有标准 Windows**有关**对话框中，后者将显示版本号和版权信息。
 
    > [!NOTE]
-   > 用户如何访问控件的帮助取决于帮助的实现方式以及是否有与容器帮助集成控制帮助。 有关如何集成帮助，在详细信息[MSDN 库](http://go.microsoft.com/fwlink/p/?linkid=150542)网站中，搜索"将上下文相关帮助添加到 MFC ActiveX 控件"。
+   > 用户如何访问控件的帮助取决于帮助的实现方式以及是否有与容器帮助集成控制帮助。 有关如何集成帮助，在详细信息[MSDN 库](https://go.microsoft.com/fwlink/p/?linkid=150542)网站中，搜索"将上下文相关帮助添加到 MFC ActiveX 控件"。
 
    当选择此选项时，它将插入`AboutBox`控制方法在项目控件类 (C*ProjName*Ctrl.cpp) 并将 AboutBox 添加到项目调度映射。 默认情况下，该选项是选中的。
 
@@ -87,7 +87,7 @@ ms.locfileid: "62373272"
 
 - **可作为简单框架控件**
 
-   指定的控件是通过设置控件位 OLEMISC_SIMPLEFRAME 其他控件的容器。 有关详细信息，在[MSDN 库](http://go.microsoft.com/fwlink/p/?linkid=150542)网站中，搜索"简单的框架站点包容"。
+   指定的控件是通过设置控件位 OLEMISC_SIMPLEFRAME 其他控件的容器。 有关详细信息，在[MSDN 库](https://go.microsoft.com/fwlink/p/?linkid=150542)网站中，搜索"简单的框架站点包容"。
 
 - **以异步方式加载属性**
 

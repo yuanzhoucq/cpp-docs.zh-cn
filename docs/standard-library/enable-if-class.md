@@ -7,12 +7,12 @@ helpviewer_keywords:
 - enable_if class
 - enable_if
 ms.assetid: c6b8d41c-a18f-4e30-a39e-b3aa0e8fd926
-ms.openlocfilehash: b6990dba20643b35dde36a492d40c3e3e76ae0b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 450664f71851778cc40160e55cbb80bcb51330d5
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413757"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451254"
 ---
 # <a name="enableif-class"></a>enable_if 类
 
@@ -46,7 +46,7 @@ template <bool B, class T = void>
 using enable_if_t = typename enable_if<B,T>::type;
 ```
 
-在 C++ 中，模板参数的替换失败不是其本身的错误，这称为 *SFINAE*（替换失败不是错误）。 通常，`enable_if` 用于从重载决策中删除候选项（即剔除重载集），以便为了支持一个定义而拒绝另一个定义。 这符合 SFINAE 行为。 有关 SFINAE 的详细信息，请参阅 Wikipedia 上的[替换失败不是错误](http://go.microsoft.com/fwlink/p/?linkid=394798)。
+在 C++ 中，模板参数的替换失败不是其本身的错误，这称为 *SFINAE*（替换失败不是错误）。 通常，`enable_if` 用于从重载决策中删除候选项（即剔除重载集），以便为了支持一个定义而拒绝另一个定义。 这符合 SFINAE 行为。 有关 SFINAE 的详细信息，请参阅 Wikipedia 上的[替换失败不是错误](https://go.microsoft.com/fwlink/p/?linkid=394798)。
 
 以下是四种示例方案：
 
@@ -133,7 +133,7 @@ C++11 通过使用 `enable_if` 确保**仅**当 `const X&` 可隐式转换为 `A
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<type_traits>
+**标头：** \<type_traits>
 
 **命名空间：** std
 

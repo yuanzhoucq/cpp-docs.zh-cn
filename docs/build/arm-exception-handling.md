@@ -2,12 +2,12 @@
 title: ARM 异常处理
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: 8a2bae8e42ac6a624bebe7c185ac7e0ade8d5491
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4e56284ce8db18ec76b0143253ee1e25f3fd82c
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195350"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450490"
 ---
 # <a name="arm-exception-handling"></a>ARM 异常处理
 
@@ -21,7 +21,7 @@ ARM EABI（嵌入应用程序二进制接口）指定使用展开代码的异常
 
 ### <a name="assumptions"></a>假设
 
-ARM 上的 Windows 的可执行映像采用可移植可执行 (PE) 格式。 有关详细信息，请参阅[Microsoft PE 和 COFF 规范](http://go.microsoft.com/fwlink/p/?linkid=84140)。 异常处理信息存储在映像的 .pdata 和 .xdata 部分中。
+ARM 上的 Windows 的可执行映像采用可移植可执行 (PE) 格式。 有关详细信息，请参阅[Microsoft PE 和 COFF 规范](https://go.microsoft.com/fwlink/p/?linkid=84140)。 异常处理信息存储在映像的 .pdata 和 .xdata 部分中。
 
 异常处理机制对遵循 ARM 上 Windows 的 ABI 的代码做出了一些假设：
 
