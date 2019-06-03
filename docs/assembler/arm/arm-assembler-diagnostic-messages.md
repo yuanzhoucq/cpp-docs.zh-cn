@@ -20,12 +20,12 @@ helpviewer_keywords:
 - A4508
 - A4509
 ms.assetid: 52b38267-6023-4bdc-a0ef-863362f48eec
-ms.openlocfilehash: 867ef50065c6ed63a4da6d37523bd5a1f3cbadba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72c1ea64501ef8104fee9bdf914a1464c07c3b76
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167838"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449222"
 ---
 # <a name="arm-assembler-diagnostic-messages"></a>ARM 汇编程序诊断消息
 
@@ -33,13 +33,13 @@ Microsoft ARM 汇编程序 (*armasm*) 遇到它们时发出诊断警告和错误
 
 ## <a name="syntax"></a>语法
 
-> <em>文件名</em>**(**<em>行号</em>**):** \[**错误**|**警告**] **A**<em>数</em>**:** *消息*
+> <em>文件名</em> **(** <em>行号</em> **):** \[**错误**|**警告**] **A**<em>数</em> **:** *消息*
 
 ## <a name="diagnostic-messages---errors"></a>诊断消息的错误
 
 > A2193： 此指令生成不可预知的行为
 
-ARM 体系结构不能保证在执行此指令时，会发生什么情况。  有关此指令的定义完善的窗体的详细信息，请查阅[ARM 体系结构参考手册](http://go.microsoft.com/fwlink/p/?linkid=246464)。
+ARM 体系结构不能保证在执行此指令时，会发生什么情况。  有关此指令的定义完善的窗体的详细信息，请查阅[ARM 体系结构参考手册](https://go.microsoft.com/fwlink/p/?linkid=246464)。
 
 ```asm
     ADD r0, r8, pc         ; A2193: this instruction generates unpredictable behavior
@@ -115,7 +115,7 @@ ALIGN 8           ; OK
 
 > A4509:这种形式的条件指令已弃用
 
-通过 ARM ARMv8 体系结构中已弃用这种形式的条件指令。 我们建议更改代码以使用的条件分支。 若要查看仍受支持的条件说明，请查阅[ARM 体系结构参考手册](http://go.microsoft.com/fwlink/p/?linkid=246464)。
+通过 ARM ARMv8 体系结构中已弃用这种形式的条件指令。 我们建议更改代码以使用的条件分支。 若要查看仍受支持的条件说明，请查阅[ARM 体系结构参考手册](https://go.microsoft.com/fwlink/p/?linkid=246464)。
 
 此警告不是时发出 **-oldit**使用命令行开关。
 

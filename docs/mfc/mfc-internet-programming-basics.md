@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Internet content [MFC]
 - WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
-ms.openlocfilehash: 814e63272058200850424e9d5355637111527e1c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eee045e198f61c088e302c40deb2de406adab428
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62239124"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449712"
 ---
 # <a name="mfc-internet-programming-basics"></a>MFC Internet 编程基础知识
 
@@ -70,11 +70,11 @@ MFC 提供了支持 Internet 编程的类。 可以使用[COleControl](../mfc/re
 
 ##  <a name="_core_web_sites_for_more_information"></a> 有关详细信息的网站
 
-有关 Microsoft Internet 技术的其他信息，请参阅[Microsoft Developer Network (MSDN)](http://go.microsoft.com/fwlink/p/?linkid=56322) Web 站点。 （链接更改，恕不另行通知。）
+有关 Microsoft Internet 技术的其他信息，请参阅[Microsoft Developer Network (MSDN)](https://go.microsoft.com/fwlink/p/?linkid=56322) Web 站点。 （链接更改，恕不另行通知。）
 
 此网站的开发人员包含有关使用 Microsoft 开发工具和技术，以及有关最新和近期会议的热门事件信息。 在此页中，你可以跳转到多个相关开发人员网站，包括.NET 和 XML 开发人员中心。 此外可以下载测试版 Sdk 和示例。
 
-[World Wide Web 联合会 (W3C)](http://go.microsoft.com/fwlink/p/?linkid=37125)发布的 HTML、 HTTP、 CGI 和其他 Web 技术规范。
+[World Wide Web 联合会 (W3C)](https://go.microsoft.com/fwlink/p/?linkid=37125)发布的 HTML、 HTTP、 CGI 和其他 Web 技术规范。
 
 ##  <a name="_core_more_internet_help"></a> Internet 的更多帮助
 

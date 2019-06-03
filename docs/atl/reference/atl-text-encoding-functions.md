@@ -25,12 +25,12 @@ f1_keywords:
 - atlenc/ATL::UUEncode
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
-ms.openlocfilehash: 13c521bae6790a030212c4a8edac460c960ecfc0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e3e44e99e6f3a53a930ed5b3ac1f7cd5ae23063
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62247859"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449560"
 ---
 # <a name="atl-text-encoding-functions"></a>ATL 文本编码函数
 
@@ -295,7 +295,7 @@ inline BOOL BEncode(
 
 ### <a name="remarks"></a>备注
 
-"B"编码方案在 RFC 最多允许 2047年中所述 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt))。
+"B"编码方案在 RFC 最多允许 2047年中所述 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt))。
 
 ## <a name="bencodegetrequiredlength"></a> BEncodeGetRequiredLength
 
@@ -319,7 +319,7 @@ inline int BEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 
 ### <a name="remarks"></a>备注
 
-"B"编码方案在 RFC 最多允许 2047年中所述 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt))。
+"B"编码方案在 RFC 最多允许 2047年中所述 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt))。
 
 ## <a name="escapexml"></a> EscapeXML
 
@@ -447,7 +447,7 @@ inline BOOL QEncode(
 
 ### <a name="remarks"></a>备注
 
-"Q"编码方案在 RFC 最多允许 2047年中所述 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt))。
+"Q"编码方案在 RFC 最多允许 2047年中所述 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt))。
 
 ## <a name="qencodegetrequiredlength"></a> QEncodeGetRequiredLength
 
@@ -471,7 +471,7 @@ inline int QEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 
 ### <a name="remarks"></a>备注
 
-"Q"编码方案在 RFC 最多允许 2047年中所述 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt))。
+"Q"编码方案在 RFC 最多允许 2047年中所述 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt))。
 
 ## <a name="qpdecode"></a> QPDecode
 
@@ -509,7 +509,7 @@ inline BOOL QPDecode(
 
 ### <a name="remarks"></a>备注
 
-RFC 2045 中描述的 quoted printable 编码方案 ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt))。
+RFC 2045 中描述的 quoted printable 编码方案 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt))。
 
 ## <a name="qpdecodegetrequiredlength"></a> QPDecodeGetRequiredLength
 
@@ -530,7 +530,7 @@ inline int QPDecodeGetRequiredLength(int nSrcLen) throw();
 
 ### <a name="remarks"></a>备注
 
-RFC 2045 中描述的 quoted printable 编码方案 ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt))。
+RFC 2045 中描述的 quoted printable 编码方案 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt))。
 
 ## <a name="qpencode"></a> QPEncode
 
@@ -566,7 +566,7 @@ inline BOOL QPEncode(
 
 - ATLSMTP_QPENCODE_TRAILING_SOFT 追加`=\r\n`到编码的字符串。
 
-Quoted printable 编码方案中所述[RFC 2045](http://www.ietf.org/rfc/rfc2045.txt)。
+Quoted printable 编码方案中所述[RFC 2045](https://www.ietf.org/rfc/rfc2045.txt)。
 
 ### <a name="return-value"></a>返回值
 
@@ -574,7 +574,7 @@ Quoted printable 编码方案中所述[RFC 2045](http://www.ietf.org/rfc/rfc2045
 
 ### <a name="remarks"></a>备注
 
-RFC 2045 中描述的 quoted printable 编码方案 ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt))。
+RFC 2045 中描述的 quoted printable 编码方案 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt))。
 
 ## <a name="qpencodegetrequiredlength"></a> QPEncodeGetRequiredLength
 
@@ -595,7 +595,7 @@ inline int QPEncodeGetRequiredLength(int nSrcLen) throw ();
 
 ### <a name="remarks"></a>备注
 
-RFC 2045 中描述的 quoted printable 编码方案 ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt))。
+RFC 2045 中描述的 quoted printable 编码方案 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt))。
 
 ## <a name="uudecode"></a> 取消解码
 

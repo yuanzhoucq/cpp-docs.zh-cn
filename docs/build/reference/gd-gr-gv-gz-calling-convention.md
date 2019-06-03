@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Gv compiler option [C++]
 - /Gr compiler option [C++]
 ms.assetid: fd3110cb-2d77-49f2-99cf-a03f9ead00a3
-ms.openlocfilehash: 4e3da750b174fa92e28c1d0d5a8cbc035738ee51
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 72d65ce7471ed047ab8347a45c58a6b8a9f39a7a
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837280"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450843"
 ---
 # <a name="gd-gr-gv-gz-calling-convention"></a>/Gd、/Gr、/Gv、/Gz（调用约定）
 
@@ -41,17 +41,17 @@ ms.locfileid: "65837280"
 
 ## <a name="remarks"></a>备注
 
-默认设置“/Gd”为除 C++ 成员函数和标记为 [__stdcall](../../cpp/stdcall.md)、[__fastcall](../../cpp/fastcall.md) 或 [__vectorcall](../../cpp/vectorcall.md) 的函数之外的所有函数指定 [__cdecl](../../cpp/cdecl.md) 调用约定。
+默认设置“/Gd”为除 C++ 成员函数和标记为 [__stdcall](../../cpp/stdcall.md)、[__fastcall](../../cpp/fastcall.md) 或 [__vectorcall](../../cpp/vectorcall.md) 的函数之外的所有函数指定 [__cdecl](../../cpp/cdecl.md) 调用约定  。
 
-“/Gr”为除 C++ 成员函数、名为 `main` 的函数以及标记为 `__cdecl`、`__stdcall` 或 `__vectorcall` 的函数之外的所有函数指定 `__fastcall` 调用约定。 所有 `__fastcall` 函数都必须有原型。 此调用约定仅在面向 x86 的编译器中可用，在面向其他体系结构的编译器中被忽略。
+“/Gr”为除 C++ 成员函数、名为 `main` 的函数以及标记为 `__cdecl`、`__stdcall` 或 `__vectorcall` 的函数之外的所有函数指定 `__fastcall` 调用约定  。 所有 `__fastcall` 函数都必须有原型。 此调用约定仅在面向 x86 的编译器中可用，在面向其他体系结构的编译器中被忽略。
 
-“/Gz”为除 C++ 成员函数、名为 `main` 的函数以及标记为 `__cdecl`、`__fastcall` 或 `__vectorcall` 的函数之外的所有函数指定 `__stdcall` 调用约定。 所有 `__stdcall` 函数都必须有原型。 此调用约定仅在面向 x86 的编译器中可用，在面向其他体系结构的编译器中被忽略。
+“/Gz”为除 C++ 成员函数、名为 `main` 的函数以及标记为 `__cdecl`、`__fastcall` 或 `__vectorcall` 的函数之外的所有函数指定 `__stdcall` 调用约定  。 所有 `__stdcall` 函数都必须有原型。 此调用约定仅在面向 x86 的编译器中可用，在面向其他体系结构的编译器中被忽略。
 
-“/Gv”为除 C++ 成员函数、名为 main 的函数、带有 `vararg` 变量参数列表的函数，或使用存在冲突的 `__cdecl`、`__stdcall` 或 `__fastcall` 属性标记的函数之外的所有函数指定 `__vectorcall` 调用约定。 此调用约定仅在支持 /arch:SSE2 及更高版本的 x86 和 x64 体系结构上可用，并且被面向 ARM 架构的编译器忽略。
+**/Gv**指定`__vectorcall`除以外的所有函数的调用约定C++成员函数、 函数名为`main`，函数与`vararg`变量自变量列表中或标记有冲突的函数`__cdecl`， `__stdcall`，或`__fastcall`属性。 此调用约定仅在支持 /arch:SSE2 及更高版本的 x86 和 x64 体系结构上可用，并且被面向 ARM 架构的编译器忽略。
 
 采用可变数量参数的函数必须标记为 `__cdecl`。
 
-/Gd、/Gr、/Gv 和 /Gz 与 [/clr:safe](clr-common-language-runtime-compilation.md) 或 **/clr:pure** 不兼容。 “/clr:pure”和“/clr:safe”编译器选项在 Visual Studio 2015 中已弃用，并且在 Visual Studio 2017 和更高版本中不受支持。
+/Gd、/Gr、/Gv 和 /Gz 与 [/clr:safe](clr-common-language-runtime-compilation.md) 或 **/clr:pure** 不兼容     。 “/clr:pure”和“/clr:safe”编译器选项在 Visual Studio 2015 中已弃用，并且在 Visual Studio 2017 和更高版本中不受支持   。
 
 > [!NOTE]
 > 默认情况下，对于 x86 处理器，C++ 成员函数使用 [__thiscall](../../cpp/thiscall.md)。
@@ -70,12 +70,12 @@ ms.locfileid: "65837280"
 
 ## <a name="fastcall-specifics"></a>__fastcall 详细信息
 
-`__fastcall` 函数的某些参数在寄存器中传递（针对 x86 处理器、ECX 和 EDX），其余参数从右向左推送到堆栈上。 所调用的例程在返回之前从堆栈中弹出这些参数。 通常情况下，/Gr 可减少执行时间。
+`__fastcall` 函数的某些参数在寄存器中传递（针对 x86 处理器、ECX 和 EDX），其余参数从右向左推送到堆栈上。 所调用的例程在返回之前从堆栈中弹出这些参数。 通常情况下，/Gr 可减少执行时间  。
 
 > [!NOTE]
 > 为采用内联程序集语言编写的任何函数使用 `__fastcall` 调用约定时，请务必小心。 使用寄存器可能与使用编译器产生冲突。
 
-对于 C，`__fastcall` 命名约定使用以 \@ 符号开头、后跟函数参数大小（字节）的函数名称。 不执行任何大小写转换。 编译器将此模板用于命名约定：
+对于 C，`__fastcall` 命名约定使用以 \@ 符号开头、后跟函数参数大小（字节）的函数名称  。 不执行任何大小写转换。 编译器将此模板用于命名约定：
 
 `@function_name@number`
 
@@ -85,7 +85,7 @@ ms.locfileid: "65837280"
 
 `__stdcall` 函数的参数从右向左推送到堆栈上，所调用的函数在返回之前从堆栈中弹出这些参数。
 
-对于 C，`__stdcall` 命名约定使用以下划线 (\_) 开头、后跟 \@ 符号和函数参数大小（字节）的函数名称。 不执行任何大小写转换。 编译器将此模板用于命名约定：
+对于 C，`__stdcall` 命名约定使用以下划线 (\_) 开头、后跟 \@ 符号和函数参数大小（字节）的函数名称   。 不执行任何大小写转换。 编译器将此模板用于命名约定：
 
 `_functionname@number`
 
@@ -93,7 +93,7 @@ ms.locfileid: "65837280"
 
 `__vectorcall` 函数的整数参数通过值传递，最多使用两个（在 x86 上）或四个（在 x64 上）整数寄存器，最多将六个 XMM 寄存器用于浮点和向量值，其余的参数从右向左传递到堆栈上。 被调用的函数在返回之前清除堆栈。 向量和浮点返回值在 XMM0 中返回。
 
-对于 C，`__vectorcall` 命名约定使用后跟两个 \@\@ 符号和函数参数大小（字节）的函数名称。 不执行任何大小写转换。 编译器将此模板用于命名约定：
+对于 C，`__vectorcall` 命名约定使用后跟两个 \@\@ 符号和函数参数大小（字节）的函数名称  。 不执行任何大小写转换。 编译器将此模板用于命名约定：
 
 `functionname@@number`
 
@@ -101,9 +101,9 @@ ms.locfileid: "65837280"
 
 1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择“C/C++” > “高级”属性页。
+1. 选择“C/C++” > “高级”属性页   。
 
-1. 修改“调用约定”属性。
+1. 修改“调用约定”属性  。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
 

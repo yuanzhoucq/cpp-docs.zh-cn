@@ -12,12 +12,12 @@ helpviewer_keywords:
 - upgrading ActiveX controls
 - licensing ActiveX controls
 ms.assetid: 4d12ddfa-b491-4f9f-a0b7-b51458e05651
-ms.openlocfilehash: fc7313c862d3536326894c947fa371d833e8fab8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57d94a51d9dfb78dfaf3a690c43c74a2d6ab6db3
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180754"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450612"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>升级现有 ActiveX 控件
 
@@ -181,7 +181,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
 
 - Codebase 参数的使用
 
-若要在未授权的计算机上在 HTML 页中使用授权控件，则必须生成许可协议包文件 (LPK)。 LPK 文件将授权控件的运行时许可证包含在 HTML 页中。 此文件通过 ActiveX SDK 附带的 LPK_TOOL.EXE 的生成。 有关详细信息，请参阅 MSDN 网站上的[ http://msdn.microsoft.com ](http://msdn.microsoft.com)。
+若要在未授权的计算机上在 HTML 页中使用授权控件，则必须生成许可协议包文件 (LPK)。 LPK 文件将授权控件的运行时许可证包含在 HTML 页中。 此文件通过 ActiveX SDK 附带的 LPK_TOOL.EXE 的生成。 有关详细信息，请参阅 MSDN 网站上的[ https://msdn.microsoft.com ](https://msdn.microsoft.com)。
 
 #### <a name="to-create-an-lpk-file"></a>若要创建 LPK 文件
 

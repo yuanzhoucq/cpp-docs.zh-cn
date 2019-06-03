@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: 8815861e525a2824bb1bc7a7d0e40f96b053c6a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92226d8db9fa87ce829ae96b4802ad2f45bc3e54
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413968"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450184"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>创建异步操作在C++适用于 UWP 应用
 
@@ -126,7 +126,7 @@ Windows 运行时是一个编程接口，可用于创建仅在特殊操作系统
 
 ![Windows 运行时 Primes 应用程序](../../parallel/concrt/media/concrt_windows_primes.png "Windows 运行时 Primes 应用程序")
 
-有关使用 `create_async` 创建可供其他语言使用的异步任务的示例，请参阅 [在 Bing 地图行程优化器示例中使用 C++](https://msdn.microsoft.com/library/windows/apps/hh699891.aspx) 和 [在 C++ 中使用 PPL 的 Windows 8 异步操作](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d)。
+有关使用 `create_async` 创建可供其他语言使用的异步任务的示例，请参阅 [在 Bing 地图行程优化器示例中使用 C++](https://msdn.microsoft.com/library/windows/apps/hh699891.aspx) 和 [在 C++ 中使用 PPL 的 Windows 8 异步操作](https://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d)。
 
 ##  <a name="exethread"></a> 控制执行线程
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - nochkclr.obj
 - LNK2019
 - _check_commonlanguageruntime_version
-ms.openlocfilehash: 0ef0bfd565b8c76816cc1f8a20b1521da238cdfc
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: eb28ff3673c054b8ac1876d8ba736ceddfa5fd1a
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447709"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449609"
 ---
 # <a name="linker-tools-error-lnk2019"></a>链接器工具错误 LNK2019
 
@@ -213,9 +213,9 @@ int main() {
 }
 ```
 
-若要解决此错误，请更改`unsigned short`到`wchar_t`或`WCHAR`，或使用编译 LNK2019g.cpp **/zc: wchar_t-**。
+若要解决此错误，请更改`unsigned short`到`wchar_t`或`WCHAR`，或使用编译 LNK2019g.cpp **/zc: wchar_t-** 。
 
 ## <a name="additional-resources"></a>其他资源
 
-LNK2001 可能的原因和解决方案的详细信息，请参阅堆栈溢出问题[什么是未定义引用/未解析的外部符号错误以及如何修复此错误？](http://stackoverflow.com/q/12573816/2002113)。
+LNK2001 可能的原因和解决方案的详细信息，请参阅堆栈溢出问题[什么是未定义引用/未解析的外部符号错误以及如何修复此错误？](https://stackoverflow.com/q/12573816/2002113)。
 

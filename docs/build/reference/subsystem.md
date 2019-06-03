@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -SUBSYSTEM editbin option
 - SUBSYSTEM editbin option
 ms.assetid: 515e4cdf-3cc4-4659-8764-1f2757b49215
-ms.openlocfilehash: b13313d57226719086cb73584543488f842057c1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e67ec57c3a8d74fdd97a94ed04c29cad53af1ea5
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317713"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450725"
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 
@@ -43,7 +43,7 @@ Windows 字符模式应用程序。 操作系统提供为控制台应用程序�
 **EFI_RUNTIME_DRIVER**<br/>
 可扩展固件接口 (EFI) 映像
 
-EFI 子系统选项描述在可扩展固件接口环境中运行的可执行映像。 此环境通常随硬件一起提供，在加载操作系统之前执行。 EFI 映像类型之间的主要区别在于映像加载到的内存位置以及在映像调用返回时执行的操作。 当控制权返回时，会卸载 EFI_APPLICATION 映像。 仅当控制权返回时带有错误代码时，才会卸载 EFI_BOOT_SERVICE_DRIVER 或 EFI_RUNTIME_DRIVER。 EFI_ROM 映像从 ROM 执行。 有关详细信息，请参阅 》 上的规范[统一 EFI 论坛](http://www.uefi.org/)网站。
+EFI 子系统选项描述在可扩展固件接口环境中运行的可执行映像。 此环境通常随硬件一起提供，在加载操作系统之前执行。 EFI 映像类型之间的主要区别在于映像加载到的内存位置以及在映像调用返回时执行的操作。 当控制权返回时，会卸载 EFI_APPLICATION 映像。 仅当控制权返回时带有错误代码时，才会卸载 EFI_BOOT_SERVICE_DRIVER 或 EFI_RUNTIME_DRIVER。 EFI_ROM 映像从 ROM 执行。 有关详细信息，请参阅 》 上的规范[统一 EFI 论坛](https://www.uefi.org/)网站。
 
 **NATIVE**<br/>
 在没有子系统环境的情况下运行的代码（例如，内核模式设备驱动程序和本机系统进程）。 此选项通常为 Windows 系统功能而保留。

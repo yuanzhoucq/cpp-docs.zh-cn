@@ -14,12 +14,12 @@ helpviewer_keywords:
 - GF compiler option [C++]
 - strings [C++], pooling
 ms.assetid: bb7b5d1c-8e1f-453b-9298-8fcebf37d16c
-ms.openlocfilehash: 2f2bec446fcec522857b4c05a34311e6c26c9b75
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90d3fb5c601d9534215a46594884be5d168fe0aa
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270882"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449540"
 ---
 # <a name="gf-eliminate-duplicate-strings"></a>/GF（消除重复的字符串）
 
@@ -50,11 +50,11 @@ char *t = "This is a character buffer";
 > [!NOTE]
 >  **/GF**编译器选项会创建每个唯一字符串的可寻址节。 并且默认情况下的对象文件可以包含最多 65536 可寻址节。 如果您的程序包含多个 65,536 字符串，使用[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)编译器选项来创建更多部分。
 
-**/GF**是在时生效[/o1](o1-o2-minimize-size-maximize-speed.md)或 **/o2**使用。
+**/GF**是在时生效[/o1](o1-o2-minimize-size-maximize-speed.md)或[/o2](o1-o2-minimize-size-maximize-speed.md)使用。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 单击 **“C/C++”** 文件夹。
 
