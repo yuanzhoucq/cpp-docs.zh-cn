@@ -3,12 +3,12 @@ title: 演练：创建 UWP 应用使用 WRL 和媒体基础
 ms.date: 04/23/2019
 ms.topic: reference
 ms.assetid: 0336c550-fbeb-4dc4-aa9b-660f9fc45382
-ms.openlocfilehash: 28e8d4b2871dbd3bef0f30bae5480d346af50706
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
-ms.translationtype: HT
+ms.openlocfilehash: 1eee353bb13a3fa03fda42c3d0f7a4103dc5ad13
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64558268"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450155"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>演练：创建 UWP 应用使用 WRL 和媒体基础
 
@@ -25,7 +25,7 @@ ms.locfileid: "64558268"
 在大多数情况下，可以使用C++/CX 创建 Windows 运行时。 但是，有时您必须使用 WRL。 例如，为 Microsoft 媒体基础创建媒体扩展时，必须创建实现 COM 和 Windows 运行时接口的组件。 因为C++/CX 仅可以创建 Windows 运行时对象，若要创建媒体扩展必须使用 WRL，因为它可以使 COM 和 Windows 运行时接口的实现。
 
 > [!NOTE]
-> 尽管此代码示例很长，但它演示了创建有用的媒体基础转换所需的最低要求。 你可以将它作为自己的自定义转换的起点。 此示例是改编[媒体扩展示例](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)，后者使用媒体扩展应用到视频效果、 视频解码，并创建生成媒体流的方案处理程序。
+> 尽管此代码示例很长，但它演示了创建有用的媒体基础转换所需的最低要求。 你可以将它作为自己的自定义转换的起点。 此示例是改编[媒体扩展示例](https://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)，后者使用媒体扩展应用到视频效果、 视频解码，并创建生成媒体流的方案处理程序。
 
 ## <a name="prerequisites"></a>系统必备
 
@@ -98,7 +98,7 @@ ms.locfileid: "64558268"
 
    1. 此外，在**输入**，添加`runtimeobject.lib`， `mfuuid.lib`，并`mfplat.lib`到**附加依赖项**属性。
 
-   1. 下**Windows 元数据**，请设置**生成 Windows 元数据**到**是 (/ WINMD)**。
+   1. 下**Windows 元数据**，请设置**生成 Windows 元数据**到**是 (/ WINMD)** 。
 
 ### <a name="to-use-the-wrl-the-custom-media-foundation-component-from-a-c-app"></a>若要使用 WRL 从 C# 应用程序的自定义媒体基础组件
 
@@ -122,10 +122,10 @@ ms.locfileid: "64558268"
 
 ## <a name="next-steps"></a>后续步骤
 
-该示例演示如何从默认网络摄像头逐张捕捉照片。 [媒体扩展示例](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)执行更多。 它演示如何枚举网络摄像头设备和使用本地方案处理程序，并演示对单张照片和视频流都产生影响的其他媒体效果。
+该示例演示如何从默认网络摄像头逐张捕捉照片。 [媒体扩展示例](https://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)执行更多。 它演示如何枚举网络摄像头设备和使用本地方案处理程序，并演示对单张照片和视频流都产生影响的其他媒体效果。
 
 ## <a name="see-also"></a>请参阅
 
 [Windows 运行时 C++ 模板库 (WRL)](windows-runtime-cpp-template-library-wrl.md)<br/>
 [Microsoft 媒体基础](/windows/desktop/medfound/microsoft-media-foundation-sdk)<br/>
-[媒体扩展示例](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)
+[媒体扩展示例](https://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)

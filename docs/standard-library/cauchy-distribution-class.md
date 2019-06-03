@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::cauchy_distribution [C++], param_type
 - std::cauchy_distribution [C++], param_type
 ms.assetid: 21522351-f2f1-46d9-97f0-d358c932356c
-ms.openlocfilehash: 2aeb45054a06446c1fae092d4c07f297580684ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 680ceb29514265ff77be6f6ae708fea0a8e769af
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351230"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450224"
 ---
 # <a name="cauchydistribution-class"></a>cauchy_distribution 类
 
@@ -97,7 +97,7 @@ public:
 
 若要深入了解分布类及其成员，请参阅 [\<random>](../standard-library/random.md)。
 
-有关柯西分布的详细信息，请参阅 Wolfram MathWorld 文章[柯西分布](http://go.microsoft.com/fwlink/p/?linkid=400523)。
+有关柯西分布的详细信息，请参阅 Wolfram MathWorld 文章[柯西分布](https://go.microsoft.com/fwlink/p/?linkid=400523)。
 
 ## <a name="example"></a>示例
 
@@ -236,7 +236,7 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<random>
+**标头：** \<random>
 
 **命名空间：** std
 
@@ -262,11 +262,11 @@ explicit cauchy_distribution(const param_type& parm);
 
 ### <a name="remarks"></a>备注
 
-**前置条件：**`0.0 < b`
+**前置条件：** `0.0 < b`
 
-第一个构造函数将构造一个对象，该对象存储的 `a` 值保留值 a，并且存储的 `b` 值保留值 b。
+第一个构造函数将构造一个对象，该对象存储的 `a` 值保留值 a  ，并且存储的 `b` 值保留值 b  。
 
-第二个构造函数将构造一个从 parm 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
+第二个构造函数将构造一个从 parm  初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
 
 ## <a name="param_type"></a>  cauchy_distribution::param_type
 
@@ -297,7 +297,7 @@ struct param_type {
 
 ### <a name="remarks"></a>备注
 
-**前置条件：**`0.0 < b`
+**前置条件：** `0.0 < b`
 
 在实例化时，可将此结构传递给分布的类构造函数、传递给 `param()` 成员函数以设置现有分布的存储参数，并传递给 `operator()` 以代替存储参数使用。
 

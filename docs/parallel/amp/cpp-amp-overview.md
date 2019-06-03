@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 258266768d3f456fb761a9d5a403a92c502dbe32
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4098a1467b0f81b5f66a2e45a4bb2138e8c1c262
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349892"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449951"
 ---
 # <a name="c-amp-overview"></a>C++ AMP 概述
 
@@ -431,7 +431,7 @@ for (int i = 0; i <4; i++) {
 
 ## <a name="math-libraries"></a>数学库
 
-C++AMP 包括两个数学库。 中的双精度库[concurrency:: precise_math Namespace](../../parallel/amp/reference/concurrency-precise-math-namespace.md)为双精度函数提供支持。 它还支持单精度功能，尽管仍需要的硬件上的双精度支持。 其遵守[C99 规范 (ISO/IEC 9899)](http://go.microsoft.com/fwlink/p/?linkid=225887)。 快捷键必须支持完全双精度。 您可以确定它是否是通过检查的值[accelerator:: supports_double_precision 数据成员](reference/accelerator-class.md#supports_double_precision)。 快速数学库，请在[concurrency:: fast_math Namespace](../../parallel/amp/reference/concurrency-fast-math-namespace.md)，包含另一组数学函数。 这些函数，仅支持`float`操作数，更快地执行，但精确度不如双精度数学库中。 函数包含在\<amp_math.h > 标头文件和所有声明与`restrict(amp)`。 中的函数\<cmath > 标头文件导入这两`fast_math`和`precise_math`命名空间。 **限制**关键字用于区分\<cmath > 版本和C++AMP 版本。 以下代码计算使用快速方法，每个值的计算域中的以 10 为基数的对数。
+C++AMP 包括两个数学库。 中的双精度库[concurrency:: precise_math Namespace](../../parallel/amp/reference/concurrency-precise-math-namespace.md)为双精度函数提供支持。 它还支持单精度功能，尽管仍需要的硬件上的双精度支持。 其遵守[C99 规范 (ISO/IEC 9899)](https://go.microsoft.com/fwlink/p/?linkid=225887)。 快捷键必须支持完全双精度。 您可以确定它是否是通过检查的值[accelerator:: supports_double_precision 数据成员](reference/accelerator-class.md#supports_double_precision)。 快速数学库，请在[concurrency:: fast_math Namespace](../../parallel/amp/reference/concurrency-fast-math-namespace.md)，包含另一组数学函数。 这些函数，仅支持`float`操作数，更快地执行，但精确度不如双精度数学库中。 函数包含在\<amp_math.h > 标头文件和所有声明与`restrict(amp)`。 中的函数\<cmath > 标头文件导入这两`fast_math`和`precise_math`命名空间。 **限制**关键字用于区分\<cmath > 版本和C++AMP 版本。 以下代码计算使用快速方法，每个值的计算域中的以 10 为基数的对数。
 
 ```cpp
 #include <amp.h>
@@ -473,13 +473,13 @@ C++AMP 包括为加速的图形编程设计的图形库。 仅在支持本地图
 
 - [在 UWP 应用中使用 C++ AMP](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)
 
-- [演练：创建基本 Windows 运行时组件中的C++并从 JavaScript 调用它](http://go.microsoft.com/fwlink/p/?linkid=249077)
+- [演练：创建基本 Windows 运行时组件中的C++并从 JavaScript 调用它](https://go.microsoft.com/fwlink/p/?linkid=249077)
 
-- [必应地图行程优化器，在 JavaScript 中的 Windows 应用商店应用和C++](http://go.microsoft.com/fwlink/p/?linkid=249078)
+- [必应地图行程优化器，在 JavaScript 中的 Windows 应用商店应用和C++](https://go.microsoft.com/fwlink/p/?linkid=249078)
 
-- [如何使用C++中的 AMPC#使用 Windows 运行时](http://go.microsoft.com/fwlink/p/?linkid=249080)
+- [如何使用C++中的 AMPC#使用 Windows 运行时](https://go.microsoft.com/fwlink/p/?linkid=249080)
 
-- [如何使用C++中的 AMPC#](http://go.microsoft.com/fwlink/p/?linkid=249081)
+- [如何使用C++中的 AMPC#](https://go.microsoft.com/fwlink/p/?linkid=249081)
 
 - [从托管代码调用本机函数](../../dotnet/calling-native-functions-from-managed-code.md)
 
@@ -508,4 +508,4 @@ C++AMP 包括为加速的图形编程设计的图形库。 仅在支持本地图
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [Lambda 表达式语法](../../cpp/lambda-expression-syntax.md)<br/>
 [参考 (C++ AMP)](../../parallel/amp/reference/reference-cpp-amp.md)<br/>
-[本机代码博客中的并行编程](http://go.microsoft.com/fwlink/p/?linkid=238472)
+[本机代码博客中的并行编程](https://go.microsoft.com/fwlink/p/?linkid=238472)

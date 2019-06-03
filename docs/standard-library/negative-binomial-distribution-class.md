@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::negative_binomial_distribution [C++], param_type
 - std::negative_binomial_distribution [C++], param_type
 ms.assetid: 7f5f0967-7fdd-4578-99d4-88f292b4fe9c
-ms.openlocfilehash: a2cc6479c9da3b51c28e5408eb44ff1d02b97023
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f6552d9f9b0b34b1cb721e726c95845210c8bb9
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223670"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449264"
 ---
 # <a name="negativebinomialdistribution-class"></a>negative_binomial_distribution 类
 
@@ -95,7 +95,7 @@ public:
 
 若要深入了解分布类及其成员，请参阅 [\<random>](../standard-library/random.md)。
 
-有关负二项式分布离散型概率函数的详细信息，请参阅 Wolfram MathWorld 文章[负二项分布](http://go.microsoft.com/fwlink/p/?linkid=400516)。
+有关负二项式分布离散型概率函数的详细信息，请参阅 Wolfram MathWorld 文章[负二项分布](https://go.microsoft.com/fwlink/p/?linkid=400516)。
 
 ## <a name="example"></a>示例
 
@@ -217,7 +217,7 @@ Histogram for 100 samples:
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<random>
+**标头：** \<random>
 
 **命名空间：** std
 
@@ -243,11 +243,11 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 ### <a name="remarks"></a>备注
 
-**前置条件：**`0.0 < k` 和 `0.0 < p ≤ 1.0`
+**前置条件：** `0.0 < k` 和 `0.0 < p ≤ 1.0`
 
 第一个构造函数将构造一个对象，该对象存储的 `p` 值保留值 *p*，并且该对象存储的 `k` 值保留值 *k*。
 
-第二个构造函数将构造一个从 parm 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
+第二个构造函数将构造一个从 parm  初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
 
 ## <a name="param_type"></a>  negative_binomial_distribution::param_type
 
@@ -270,7 +270,7 @@ struct param_type { typedef negative_binomial_distribution`<`result_type> distri
 
 ### <a name="remarks"></a>备注
 
-**前置条件：**`0.0 < k` 和 `0.0 < p ≤ 1.0`
+**前置条件：** `0.0 < k` 和 `0.0 < p ≤ 1.0`
 
 在实例化时，可将此结构传递给分布的类构造函数、传递给 `param()` 成员函数以设置现有分布的存储参数，并传递给 `operator()` 以代替存储参数使用。
 

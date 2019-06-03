@@ -9,18 +9,18 @@ helpviewer_keywords:
 - background colors, dialog boxes
 - MFC dialog boxes [MFC], colors
 ms.assetid: 05ee28a4-f3ae-4203-84ac-022f266ff2ab
-ms.openlocfilehash: 495ab827d6185826cc4d261a6a990f751e525d22
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3fcbeea5dc6137d7b7f0f2f6c1e0d034e6111b9a
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62307739"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449656"
 ---
 # <a name="setting-the-dialog-boxs-background-color"></a>设置对话框的背景色
 
 可以通过处理对话框窗口的 WM_CTLCOLOR 消息设置对话框的背景色。 您设置的颜色仅用于指定的对话框。
 
-请参阅[codexpert 博客](http://codexpert.ro/blog/2013/03/13/painting-the-dialog-backround/)有关的示例。
+请参阅[codexpert 博客](https://codexpert.ro/blog/2013/03/13/painting-the-dialog-backround/)有关的示例。
 
 ## <a name="see-also"></a>请参阅
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-ms.openlocfilehash: 6f7b70dcbee639bdd44a195709bddde9e06dee21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fa64e2536fd1697e839f1b4921a290e1b7a30a35
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62414004"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449691"
 ---
 # <a name="concurrency-runtime"></a>并发运行时
 
@@ -63,7 +63,7 @@ ms.locfileid: "62414004"
 |-|-|
 |[用 C++ 为 UWP 应用创建异步操作](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|介绍了一些使用并发运行时生成 UWP 应用中的异步操作时，需要注意的关键点。|
 |[演练：使用任务和 XML HTTP 请求进行连接](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|演示如何组合使用 PPL 任务`IXMLHTTPRequest2`和`IXMLHTTPRequest2Callback`接口将 HTTP GET 和 POST 请求发送到 UWP 应用中的 web 服务。|
-|[Windows 运行时应用示例](http://code.msdn.microsoft.com/windowsapps)|包含可下载的代码示例和演示适用于 Windows 的应用 8.x。 C++ 示例使用 PPL 任务等并发运行时功能在后台处理数据，以保持 UX 随时响应。|
+|[Windows 运行时应用示例](https://code.msdn.microsoft.com/windowsapps)|包含可下载的代码示例和演示适用于 Windows 的应用 8.x。 C++ 示例使用 PPL 任务等并发运行时功能在后台处理数据，以保持 UX 随时响应。|
 
 ## <a name="dataflow-programming-in-the-asynchronous-agents-library"></a>异步代理库中的数据流编程
 
@@ -99,8 +99,8 @@ ms.locfileid: "62414004"
 |||
 |-|-|
 |[Hilo（使用 C++ 和 XAML 的 Windows 应用商店应用）中的异步编程模式和提示](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|了解我们如何使用并发运行时在 Hilo，实现异步操作 Windows 运行时应用使用C++和 XAML。|
-|[本机代码中的并行编程博客](http://go.microsoft.com/fwlink/p/?linkid=183873)|提供有关并发运行时中的并行编程的其他深度博客文章。|
-|[C++ 和本机代码中的并行计算论坛](http://go.microsoft.com/fwlink/p/?linkid=183874)|使你能够参与关于并发运行时的社区讨论。|
+|[本机代码中的并行编程博客](https://go.microsoft.com/fwlink/p/?linkid=183873)|提供有关并发运行时中的并行编程的其他深度博客文章。|
+|[C++ 和本机代码中的并行计算论坛](https://go.microsoft.com/fwlink/p/?linkid=183874)|使你能够参与关于并发运行时的社区讨论。|
 |[并行编程](/dotnet/standard/parallel-programming/index)|介绍了有关在.NET Framework 中可用的并行编程模型。|
 
 ## <a name="see-also"></a>请参阅

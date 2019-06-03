@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::fisher_f_distribution [C++], param_type
 - std::fisher_f_distribution [C++], param_type
 ms.assetid: 9513b6ce-3309-4be1-829b-f504bca35bbf
-ms.openlocfilehash: cff7883c0b563e7d6a377bffcd0e48192dc01071
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 643c564d7407a79bd9e2e776946c4b8df37a2974
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159803"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449917"
 ---
 # <a name="fisherfdistribution-class"></a>fisher_f_distribution 类
 
@@ -96,7 +96,7 @@ public:
 
 若要深入了解分布类及其成员，请参阅 [\<random>](../standard-library/random.md)。
 
-有关 F-分布的详细信息，请参阅 Wolfram MathWorld 文章 [F-分布](http://go.microsoft.com/fwlink/p/?linkid=400899)。
+有关 F-分布的详细信息，请参阅 Wolfram MathWorld 文章 [F-分布](https://go.microsoft.com/fwlink/p/?linkid=400899)。
 
 ## <a name="example"></a>示例
 
@@ -233,7 +233,7 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<random>
+**标头：** \<random>
 
 **命名空间：** std
 
@@ -259,11 +259,11 @@ explicit fisher_f_distribution(const param_type& parm);
 
 ### <a name="remarks"></a>备注
 
-**前置条件：**`0.0 < m` 和 `0.0 < n`
+**前置条件：** `0.0 < m` 和 `0.0 < n`
 
 第一个构造函数将构造一个其存储的 `m` 值保留值 *m*，而其存储的 `n` 值保留值 *n* 的对象。
 
-第二个构造函数将构造一个从 parm 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
+第二个构造函数将构造一个从 parm  初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
 
 ## <a name="param_type"></a>  fisher_f_distribution::param_type
 
@@ -294,7 +294,7 @@ struct param_type {
 
 ### <a name="remarks"></a>备注
 
-**前置条件：**`0.0 < m` 和 `0.0 < n`
+**前置条件：** `0.0 < m` 和 `0.0 < n`
 
 在实例化时，可将此结构传递给分布的类构造函数、传递给 `param()` 成员函数以设置现有分布的存储参数，并传递给 `operator()` 以代替存储参数使用。
 

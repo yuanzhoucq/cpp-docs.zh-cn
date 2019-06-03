@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: 3819e861b7a5e6ff27fe632a33413b588a5a4835
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2428c94eaa5dd371d58680f6317173709f684507
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323630"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449577"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -375,7 +375,7 @@ virtual BOOL CreateEx(
 
 ### <a name="remarks"></a>备注
 
-使用`CreateEx`而不是[创建](#create)若要将应用扩展的 Windows 样式，指定的 Windows 扩展的样式加**WS_EX_**。
+使用`CreateEx`而不是[创建](#create)若要将应用扩展的 Windows 样式，指定的 Windows 扩展的样式加**WS_EX_** 。
 
 ##  <a name="createdragimage"></a>  CTreeCtrl::CreateDragImage
 
@@ -1366,7 +1366,7 @@ HTREEITEM HitTest(TVHITTESTINFO* pHitTestInfo) const;
 
 |||
 |-|-|
-|“值”|含义|
+|值|含义|
 |TVHT_ABOVE|客户端区域的上方。|
 |TVHT_BELOW|下面的工作区。|
 |TVHT_NOWHERE|在客户端区域中，但最后一项之下。|
@@ -1505,7 +1505,7 @@ HTREEITEM MapAccIdToItem(UINT uAccId) const;
 
 ### <a name="remarks"></a>备注
 
-辅助工具是帮助残障的应用程序使用的计算机。 通过使用可访问性标识符`IAccessible`接口来唯一地在窗口中指定的元素。 有关辅助功能标识符的详细信息，搜索上的"有关 Active Accessibility 的支持"主题[Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322)。
+辅助工具是帮助残障的应用程序使用的计算机。 通过使用可访问性标识符`IAccessible`接口来唯一地在窗口中指定的元素。 有关辅助功能标识符的详细信息，搜索上的"有关 Active Accessibility 的支持"主题[Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322)。
 
 此方法将发送[TVM_MAPACCIDTOHTREEITEM](/windows/desktop/Controls/tvm-mapaccidtohtreeitem)消息，Windows SDK 中所述。
 
@@ -1541,7 +1541,7 @@ UINT MapItemToAccID(HTREEITEM hItem) const;
 
 ### <a name="remarks"></a>备注
 
-辅助工具是帮助残障的应用程序使用的计算机。 通过使用可访问性标识符`IAccessible`接口来唯一地在窗口中指定的元素。 有关辅助功能标识符的详细信息，搜索上的"有关 Active Accessibility 的支持"主题[Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322)。
+辅助工具是帮助残障的应用程序使用的计算机。 通过使用可访问性标识符`IAccessible`接口来唯一地在窗口中指定的元素。 有关辅助功能标识符的详细信息，搜索上的"有关 Active Accessibility 的支持"主题[Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322)。
 
 此方法将发送[TVM_MAPHTREEITEMTOACCID](/windows/desktop/Controls/tvm-maphtreeitemtoaccid)消息，Windows SDK 中所述。
 
@@ -2281,7 +2281,7 @@ void ShowInfoTip(HTREEITEM hItem);
 
 ### <a name="remarks"></a>备注
 
-有关工具提示和信息提示之间的差异的详细信息，搜索上的"工具提示和信息提示"主题[Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322)。
+有关工具提示和信息提示之间的差异的详细信息，搜索上的"工具提示和信息提示"主题[Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322)。
 
 此方法将发送[TVM_SHOWINFOTIP](/windows/desktop/Controls/tvm-showinfotip)消息，Windows SDK 中所述。
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CException [MFC], Delete
 - CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
-ms.openlocfilehash: 689afa2ffbc27feec6f9e1704a6b295d5eabfaee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5942e636809e3758f34d209a3da80f0d903ab708
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62163995"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450358"
 ---
 # <a name="cexception-class"></a>CException 类
 
@@ -231,4 +231,4 @@ else
 [CObject 类](cobject-class.md)<br/>
 [层次结构图](../hierarchy-chart.md)<br/>
 [异常处理](exception-processing.md)<br/>
-[如何实现:创建我自己的自定义异常类](http://go.microsoft.com/fwlink/p/?linkid=128045)
+[如何实现:创建我自己的自定义异常类](https://go.microsoft.com/fwlink/p/?linkid=128045)
