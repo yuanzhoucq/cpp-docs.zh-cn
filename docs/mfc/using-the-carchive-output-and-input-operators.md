@@ -41,7 +41,7 @@ ms.locfileid: "62411495"
 
 [!code-cpp[NVC_MFCSerialization#10](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_4.cpp)]
 
-库定义了**< \<** 并**>>** 运算符`CArchive`作为第一个操作数的以下数据类型和类类型作为第二个操作数:
+库定义了 **< \<** 并 **>>** 运算符`CArchive`作为第一个操作数的以下数据类型和类类型作为第二个操作数:
 
 ||||
 |-|-|-|
@@ -55,7 +55,7 @@ ms.locfileid: "62411495"
 > [!NOTE]
 >  存储和加载`CObject`s 通过存档需要额外的注意事项。 有关详细信息，请参阅[存储和加载 Cobject 通过存档](../mfc/storing-and-loading-cobjects-via-an-archive.md)。
 
-**CArchive <\<** 并**>>** 运算符始终返回对引用`CArchive`对象，它是第一个操作数。 这使您可以链接运算符，如下图所示：
+**CArchive <\<** 并 **>>** 运算符始终返回对引用`CArchive`对象，它是第一个操作数。 这使您可以链接运算符，如下图所示：
 
 [!code-cpp[NVC_MFCSerialization#11](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_5.cpp)]
 

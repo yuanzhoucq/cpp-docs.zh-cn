@@ -73,7 +73,7 @@ static bool CompareElements(const T& element1, const T& element2);
 
 ### <a name="remarks"></a>备注
 
-此函数的默认实现是等号 (**==**) 运算符。 对于不属于简单的数据类型的对象，此函数可能需要重写。
+此函数的默认实现是等号 ( **==** ) 运算符。 对于不属于简单的数据类型的对象，此函数可能需要重写。
 
 ##  <a name="compareelementsordered"></a>  CDefaultCompareTraits::CompareElementsOrdered
 
@@ -103,7 +103,7 @@ static int CompareElementsOrdered(const T& element1, const T& element2);
 
 ### <a name="remarks"></a>备注
 
-此函数的默认实现使用**==**， **\<**，以及**>** 运算符。 对于不属于简单的数据类型的对象，此函数可能需要重写。
+此函数的默认实现使用 **==** ， **\<** ，以及 **>** 运算符。 对于不属于简单的数据类型的对象，此函数可能需要重写。
 
 ## <a name="see-also"></a>请参阅
 

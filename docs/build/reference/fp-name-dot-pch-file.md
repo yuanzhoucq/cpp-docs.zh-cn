@@ -1,6 +1,7 @@
 ---
-title: /Fp（命名 .Pch 文件）
-ms.date: 11/04/2016
+title: /Fp (名称&period;pch 文件)
+description: /Fp 编译器选项用于指定预编译标头文件的名称。
+ms.date: 05/31/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.PrecompiledHeaderFile
 - /fp
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - precompiled header files, naming
 - /Fp compiler option [C++]
 ms.assetid: 0fcd9cbd-e09f-44d3-9715-b41efb5d0be2
-ms.openlocfilehash: 95506e17dff47e51cb7a3d83b629880f63422d26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e7faa934d14acb5d129173c5e0c7ee67d6caf2b
+ms.sourcegitcommit: 540fa2f5015de1adfa7b6bf823f6eb4ed5a6a4bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270987"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66460875"
 ---
-# <a name="fp-name-pch-file"></a>/Fp（命名 .Pch 文件）
+# <a name="fp-name-periodpch-file"></a>/Fp (名称&period;pch 文件)
 
 提供的预编译标头而不是使用默认路径名称的路径名称。
 
@@ -32,39 +33,33 @@ ms.locfileid: "62270987"
 
 ## <a name="remarks"></a>备注
 
-使用此选项与[/Yc （创建预编译标头文件）](yc-create-precompiled-header-file.md)或[/Yu （使用预编译标头文件）](yu-use-precompiled-header-file.md)提供而不是使用默认路径名称的预编译标头的路径名称。 此外可以使用 **/Fp**与 **/Yc**若要指定不同于预编译的头文件使用 **/Yc**<em>文件名</em>参数和从源代码文件的基名称。
+使用 **/Fp**选项与[/Yc （创建预编译标头文件）](yc-create-precompiled-header-file.md)或[/Yu （使用预编译标头文件）](yu-use-precompiled-header-file.md)指定预编译标头 (PCH) 的路径和文件名称文件。 默认情况下 **/Yc**选项通过使用源文件的基名称来创建 PCH 文件名称和一个*pch*扩展。
 
-如果未指定扩展的路径名称的一部分，则假定.pch 的扩展名。 如果指定的目录不包含文件名称，默认文件名称是 VC*x*0.pch，其中*x*是视觉对象的主要版本C++中使用。
-
-此外可以使用 **/Fp**选项与 **/Yu**。
+如果未指定扩展的一部分*pathname*的扩展*pch*假定。 当通过使用正斜杠指定目录名称 ( **/** ) 的末尾*pathname*，默认文件名为 vc*版本*0.pch，其中*版本*是 Visual Studio 工具集的主要版本。 此目录必须存在，或者会生成 C1083 错误。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
-1. 单击 **“C/C++”** 文件夹。
+1. 打开**配置属性** > **C /C++**  > **预编译标头**属性页。
 
-1. 单击**预编译标头**属性页。
-
-1. 修改**预编译头文件**属性。
+1. 修改**预编译头输出文件**属性。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
 
-- 请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PrecompiledHeaderFile%2A>。
+- 请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。
 
-## <a name="example"></a>示例
+## <a name="examples"></a>示例
 
-如果你想要创建您的程序的调试版本的预编译标头文件和标头文件和源代码进行编译，可以如指定的命令：
+若要创建单独的命名版本程序的调试版本的预编译标头文件，可以如指定的命令：
 
-```
+```CMD
 CL /DDEBUG /Zi /Yc /FpDPROG.PCH PROG.CPP
 ```
 
-## <a name="example"></a>示例
+以下命令指定使用名为 MYPCH.pch 的预编译标头文件。 编译器预编译到 MYAPP.h，PROG.cpp 中的源代码，并将预编译的代码放入 MYPCH.pch。 然后使用 MYPCH.pch 的内容，并将编译 PROG.cpp 创建的.obj 文件的其余部分。 此示例的输出是名为 PROG.exe 的文件。
 
-以下命令指定使用名为 MYPCH.pch 的预编译标头文件。 编译器将假定已预 PROG.cpp 中的源代码编译通过 MYAPP.h 和预编译的代码位于 MYPCH.pch。 它使用 MYPCH.pch 的内容，并将编译 PROG.cpp 创建的.obj 文件的其余部分。 此示例的输出是名为 PROG.exe 的文件。
-
-```
+```CMD
 CL /YuMYAPP.H /FpMYPCH.PCH PROG.CPP
 ```
 
