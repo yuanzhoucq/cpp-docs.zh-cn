@@ -2,12 +2,12 @@
 title: 图形 (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-ms.openlocfilehash: 4a40575d84c9a0efedcb3c7c9717fc310870b530
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e21c5af094ce90c8e4365ed4263198422ad1905
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405659"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449866"
 ---
 # <a name="graphics-c-amp"></a>图形 (C++ AMP)
 
@@ -25,7 +25,7 @@ C++AMP 中包含一些 Api [concurrency:: graphics](../../parallel/amp/reference
 
 ## <a name="short-vector-library"></a>短矢量库
 
-短矢量库提供的功能的某些[矢量类型](http://go.microsoft.com/fwlink/p/?linkid=248500)的 HLSL 中定义，通常用于定义纹素。 短矢量是一种可保留 1-4 个相同类型值的数据结构。 支持的类型为**双**， **float**， **int**， `norm`， `uint`，和`unorm`。 下表中显示了这些类型名称。 对于每种类型，没有也相应**typedef** ，没有下划线在名称中。 具有下划线的类型[concurrency:: graphics Namespace](../../parallel/amp/reference/concurrency-graphics-namespace.md)。 没有下划线的类型[Concurrency::graphics::direct3d Namespace](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) ，以便它们明确区分的命名方式类似的基础类型如 **__int8**并 **__int16**。
+短矢量库提供的功能的某些[矢量类型](https://go.microsoft.com/fwlink/p/?linkid=248500)的 HLSL 中定义，通常用于定义纹素。 短矢量是一种可保留 1-4 个相同类型值的数据结构。 支持的类型为**双**， **float**， **int**， `norm`， `uint`，和`unorm`。 下表中显示了这些类型名称。 对于每种类型，没有也相应**typedef** ，没有下划线在名称中。 具有下划线的类型[concurrency:: graphics Namespace](../../parallel/amp/reference/concurrency-graphics-namespace.md)。 没有下划线的类型[Concurrency::graphics::direct3d Namespace](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) ，以便它们明确区分的命名方式类似的基础类型如 **__int8**并 **__int16**。
 
 ||长度 2|长度为 3|长度为 4|
 |-|--------------|--------------|--------------|
@@ -67,7 +67,7 @@ C++AMP 中包含一些 Api [concurrency:: graphics](../../parallel/amp/reference
 
 - 具有两个或四个组件的短矢量。 唯一的例外是 `double_4`，不允许使用此短矢量。
 
-`texture` 对象的秩可以是 1、2 或 3。 在 `texture` 调用的 lambda 中，`parallel_for_each` 对象只能通过引用来捕获。 纹理存储作为 Direct3D 纹理对象存储在 GPU 中。 有关纹理和纹素在 Direct3D 中的详细信息，请参阅[Direct3D 11 中的纹理简介](http://go.microsoft.com/fwlink/p/?linkid=248502)。
+`texture` 对象的秩可以是 1、2 或 3。 在 `texture` 调用的 lambda 中，`parallel_for_each` 对象只能通过引用来捕获。 纹理存储作为 Direct3D 纹理对象存储在 GPU 中。 有关纹理和纹素在 Direct3D 中的详细信息，请参阅[Direct3D 11 中的纹理简介](https://go.microsoft.com/fwlink/p/?linkid=248502)。
 
 你所使用的纹素类型可以是图形编程中使用的众多纹理格式中的一种。 例如，RGBA 格式可以使用 32 位，其中，R、G、B 和 A 标量元素各 8 位。 图形卡的纹理硬件可以访问基于格式的各个元素。 例如，如果你使用的是 RGBA 格式，则纹理硬件可以提取每个 8 位组件形成 32 位窗体。 在 C++ AMP 中，你可以设置每个纹理标量元素的位数，以便自动访问代码中的各个标量元素，而不必进行移位。
 
@@ -307,7 +307,7 @@ void write2ComponentTexture() {
 
 你可以看到，如果只是写入主 mipmap 级别，则两个代码示例几乎完全相同。 如果已在现有代码中使用 `writeonly_texture_view` 并且不打算改进该代码，则不必进行更改。 但是，如果你考虑改进该代码，则我们建议你重写代码以便使用 `texture_view`，因为它的一些改进支持一些新硬件纹理功能。 有关这些新功能的更多信息，请阅读下文。
 
-有关不推荐使用的详细信息`writeonly_texture_view`，请参阅[中的纹理视图设计概述C++a m P](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/25/overview-of-the-texture-view-design-in-c-amp.aspx)本机代码博客中的并行编程。
+有关不推荐使用的详细信息`writeonly_texture_view`，请参阅[中的纹理视图设计概述C++a m P](https://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/25/overview-of-the-texture-view-design-in-c-amp.aspx)本机代码博客中的并行编程。
 
 ### <a name="instantiating-texture-view-objects"></a>实例化纹理视图对象
 
@@ -379,9 +379,9 @@ void write2ComponentTexture() {
 
 元素基于浮点类型（例如，float、float_2 或 float_4）的纹理视图也可以使用纹理采样来读取，以便利用对各种筛选模式和寻址模式的硬件支持。 C++ AMP 支持计算情景下两种最常见的筛选模式，即点筛选（最近邻域）和线性筛选（加权平均），同时支持四种寻址模式，即重叠寻址、镜像寻址、钳位寻址和边框寻址。 有关寻址模式的详细信息，请参阅[address_mode 枚举](reference/concurrency-graphics-namespace-enums.md#address_mode)。
 
-除了 C++ AMP 直接支持的模式外，你还可以访问底层平台的其他筛选模式和寻址模式，方法是使用互操作 API 采用通过平台 API 直接创建的纹理采样器。 例如，Direct3D 支持各向异性筛选等其他筛选模式，并可以对纹理的各个维度应用不同的寻址模式。 通过使用 Direct3D API，你可以创建一个坐标为纵向重叠、横向镜像并进行各向异性筛选采样的纹理采样器，然后通过 `make_sampler` 互操作 API 利用 C++ AMP 代码中的采样器。 有关详细信息请参阅[中的纹理采样C++AMP](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/18/texture-sampling-in-c-amp.aspx)本机代码博客中的并行编程。
+除了 C++ AMP 直接支持的模式外，你还可以访问底层平台的其他筛选模式和寻址模式，方法是使用互操作 API 采用通过平台 API 直接创建的纹理采样器。 例如，Direct3D 支持各向异性筛选等其他筛选模式，并可以对纹理的各个维度应用不同的寻址模式。 通过使用 Direct3D API，你可以创建一个坐标为纵向重叠、横向镜像并进行各向异性筛选采样的纹理采样器，然后通过 `make_sampler` 互操作 API 利用 C++ AMP 代码中的采样器。 有关详细信息请参阅[中的纹理采样C++AMP](https://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/18/texture-sampling-in-c-amp.aspx)本机代码博客中的并行编程。
 
-纹理视图还支持读取 mipmap。 只读纹理视图（具有常量元素类型的视图）可以提供最大的灵活性，原因在于可对实例化时确定的一系列 mip 级别进行动态采样，而且支持具有 1、2 或 4 个组件的元素。 元素仅具有一个组件的读写纹理视图也支持 mipmap，但仅限实例化时确定的一个 mipmap 级别。 有关详细信息，请参阅[具有 Mipmap 的纹理](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/08/22/texture-with-mipmaps.aspx)本机代码博客中的并行编程。
+纹理视图还支持读取 mipmap。 只读纹理视图（具有常量元素类型的视图）可以提供最大的灵活性，原因在于可对实例化时确定的一系列 mip 级别进行动态采样，而且支持具有 1、2 或 4 个组件的元素。 元素仅具有一个组件的读写纹理视图也支持 mipmap，但仅限实例化时确定的一个 mipmap 级别。 有关详细信息，请参阅[具有 Mipmap 的纹理](https://blogs.msdn.com/b/nativeconcurrency/archive/2013/08/22/texture-with-mipmaps.aspx)本机代码博客中的并行编程。
 
 ### <a name="writing-to-texture-view-objects"></a>写入纹理视图对象
 
@@ -404,7 +404,7 @@ parallel_for_each(w_view.extent, [=](index<2> idx) restrict(amp)
 
 ## <a name="interoperability"></a>互操作性
 
-C++ AMP 运行时支持之间的互操作性`texture<T,1>`并[ID3D11Texture1D 接口](http://go.microsoft.com/fwlink/p/?linkId=248503)之间`texture<T,2>`并[ID3D11Texture2D 接口](http://go.microsoft.com/fwlink/p/?linkId=255317)，之间以及`texture<T,3>`并[ID3D11Texture3D 接口](http://go.microsoft.com/fwlink/p/?linkId=255377)。 [Get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture)方法采用`texture`对象，并返回`IUnknown`接口。 [Make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture)方法采用`IUnknown`接口和一个`accelerator_view`对象，并返回`texture`对象。
+C++ AMP 运行时支持之间的互操作性`texture<T,1>`并[ID3D11Texture1D 接口](https://go.microsoft.com/fwlink/p/?linkId=248503)之间`texture<T,2>`并[ID3D11Texture2D 接口](https://go.microsoft.com/fwlink/p/?linkId=255317)，之间以及`texture<T,3>`并[ID3D11Texture3D 接口](https://go.microsoft.com/fwlink/p/?linkId=255377)。 [Get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture)方法采用`texture`对象，并返回`IUnknown`接口。 [Make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture)方法采用`IUnknown`接口和一个`accelerator_view`对象，并返回`texture`对象。
 
 ## <a name="see-also"></a>请参阅
 

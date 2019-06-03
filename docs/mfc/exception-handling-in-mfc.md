@@ -33,12 +33,12 @@ helpviewer_keywords:
 - function calls [MFC], results
 - out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
-ms.openlocfilehash: afa49a4d54397cf79a3bd0af28e4a0f0a4c7639e
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 69bb5a9478120db322b5727af491be7943f44cbe
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346054"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449726"
 ---
 # <a name="exception-handling-in-mfc"></a>MFC 中的异常处理
 
@@ -132,4 +132,4 @@ ms.locfileid: "64346054"
 ## <a name="see-also"></a>请参阅
 
 [C++ 异常处理](../cpp/cpp-exception-handling.md)<br/>
-[如何实现:创建我自己的自定义异常类](http://go.microsoft.com/fwlink/p/?linkid=128045)
+[如何实现:创建我自己的自定义异常类](https://go.microsoft.com/fwlink/p/?linkid=128045)

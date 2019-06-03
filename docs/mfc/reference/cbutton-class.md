@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: b1a02d995594f5e079359151167ac970a3d1ab37
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3283e974dc2b933049599fba0b6cf51c32a18ef3
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348687"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450833"
 ---
 # <a name="cbutton-class"></a>CButton 类
 
@@ -153,7 +153,7 @@ class CButton : public CWnd
 
 每个消息映射条目采用以下形式：
 
-**ON\_**_通知_ **(** _id_， _memberFxn_ **)**
+**ON\_** _通知_ **(** _id_， _memberFxn_ **)**
 
 其中*id*指定将通知发送到该控件的子窗口 ID 并*memberFxn*是您编写以处理通知的父成员函数的名称。
 
@@ -321,7 +321,7 @@ int GetCheck() const;
 
 使用 BS_AUTOCHECKBOX、 BS_AUTORADIOBUTTON、 BS_AUTO3STATE、 BS_CHECKBOX、 BS_RADIOBUTTON，创建一个按钮控件的返回值或 BS_3STATE 样式是以下值之一：
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |BST_UNCHECKED|按钮状态为未选中状态。|
 |BST_CHECKED|按钮状态进行检查。|
@@ -578,7 +578,7 @@ UINT GetState() const;
 
 一个位字段，包含指示按钮控件的当前状态的值的组合。 下表列出了可能的值。
 
-|按钮状态|“值”|描述|
+|按钮状态|值|描述|
 |------------------|-----------|-----------------|
 |BST_UNCHECKED|0x0000|初始状态。|
 |BST_CHECKED|0x0001|按钮控件处于选中状态。|
@@ -699,7 +699,7 @@ void SetCheck(int nCheck);
 *nCheck*<br/>
 指定的检查状态。 此参数可以是以下值之一：
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |BST_UNCHECKED|按钮状态设置为未选中状态。|
 |BST_CHECKED|设置按钮的状态检查。|
@@ -808,7 +808,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
 
 ### <a name="remarks"></a>备注
 
-如果按钮或命令链接控件需要提升的安全权限以执行操作，将控件设置为`elevation required`状态。 随后，Windows 会在控件上显示用户帐户控制 (UAC) 防火墙图标。 有关详细信息，查看"用户帐户控制" [MSDN](http://go.microsoft.com/fwlink/p/?linkid=18507)。
+如果按钮或命令链接控件需要提升的安全权限以执行操作，将控件设置为`elevation required`状态。 随后，Windows 会在控件上显示用户帐户控制 (UAC) 防火墙图标。 有关详细信息，查看"用户帐户控制" [MSDN](https://go.microsoft.com/fwlink/p/?linkid=18507)。
 
 此方法将发送[BCM_SETSHIELD](/windows/desktop/Controls/bcm-setshield)消息，Windows SDK 中所述。
 

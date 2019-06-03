@@ -200,12 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: 260b2ee780956550678fcb01b3a018a60fb58deb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b914b3d2ed61c81629c06739eac86692d1444e58
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411161"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450415"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 函数
 
@@ -1284,7 +1284,7 @@ OutputIterator fill_n(
 *第一个*<br/>
 发现范围中的第一个元素位置的输出迭代器值分配给*Val*。
 
-“计数”<br/>
+“计数” <br/>
 指定要分配该值的元素数目的有符号或无符号整数类型。
 
 *Val*<br/>
@@ -2058,7 +2058,7 @@ void generate_n(
 *第一个*<br/>
 寻址要分配值的范围中的第一个元素位置的输出迭代器。
 
-“计数”<br/>
+“计数” <br/>
 指定生成器函数要将值分配到的元素数的有符号或无符号整型。
 
 *Gen*<br/>
@@ -5561,7 +5561,7 @@ int main() {
 
 ## <a name="random_shuffle"></a>  random_shuffle
 
-Std::random_shuffle() 函数已弃用，替换为[std:: shuffle](../standard-library/algorithm-functions.md#shuffle)。 有关代码示例和详细信息，请参阅[\<随机 >](../standard-library/random.md)和堆栈溢出文章[为什么 std:: random_shuffle 方法弃用 C + + 14 中？](http://go.microsoft.com/fwlink/p/?linkid=397954)。
+Std::random_shuffle() 函数已弃用，替换为[std:: shuffle](../standard-library/algorithm-functions.md#shuffle)。 有关代码示例和详细信息，请参阅[\<随机 >](../standard-library/random.md)和堆栈溢出文章[为什么 std:: random_shuffle 方法弃用 C + + 14 中？](https://go.microsoft.com/fwlink/p/?linkid=397954)。
 
 ## <a name="remove"></a>  remove
 

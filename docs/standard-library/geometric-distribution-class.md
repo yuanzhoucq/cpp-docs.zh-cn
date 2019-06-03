@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::geometric_distribution [C++], param_type
 - std::geometric_distribution [C++], param_type
 ms.assetid: 38f933af-3b49-492e-9d26-b6b272a60013
-ms.openlocfilehash: 600459784b4db620b6b717b5ffdfaf24d1ceb757
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 115d1c6f3298ea08b7c97061d37d4e27829247ea
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159309"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450673"
 ---
 # <a name="geometricdistribution-class"></a>geometric_distribution 类
 
@@ -93,7 +93,7 @@ public:
 
 若要深入了解分布类及其成员，请参阅 [\<random>](../standard-library/random.md)。
 
-有关卡方分布的详细信息，请参阅 Wolfram MathWorld 文章[几何分布](http://go.microsoft.com/fwlink/p/?linkid=400529)。
+有关卡方分布的详细信息，请参阅 Wolfram MathWorld 文章[几何分布](https://go.microsoft.com/fwlink/p/?linkid=400529)。
 
 ## <a name="example"></a>示例
 
@@ -205,7 +205,7 @@ Distribution for 100 samples:
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<random>
+**标头：** \<random>
 
 **命名空间：** std
 
@@ -220,7 +220,7 @@ explicit geometric_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-p<br/>
+p <br/>
 `p` 分布参数。
 
 *parm*<br/>
@@ -228,11 +228,11 @@ p<br/>
 
 ### <a name="remarks"></a>备注
 
-**前置条件：**`0.0 < p && p < 1.0`
+**前置条件：** `0.0 < p && p < 1.0`
 
 第一个构造函数将构造一个其存储的 `p` 值保留值 *p* 的对象。
 
-第二个构造函数将构造一个从 parm 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
+第二个构造函数将构造一个从 parm  初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
 
 ## <a name="param_type"></a>geometric_distribution::param_type
 
@@ -251,15 +251,15 @@ struct param_type {
 
 ### <a name="parameters"></a>参数
 
-p<br/>
+p <br/>
 `p` 分布参数。
 
-right<br/>
+right <br/>
 与此比较的 `param_type` 实例。
 
 ### <a name="remarks"></a>备注
 
-**前置条件：**`0.0 < p && p < 1.0`
+**前置条件：** `0.0 < p && p < 1.0`
 
 在实例化时，可将此结构传递给分布的类构造函数、传递给 `param()` 成员函数以设置现有分布的存储参数，并传递给 `operator()` 以代替存储参数使用。
 

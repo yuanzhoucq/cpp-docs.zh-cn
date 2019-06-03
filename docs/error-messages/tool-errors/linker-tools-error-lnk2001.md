@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2001
 ms.assetid: dc1cf267-c984-486c-abd2-fd07c799f7ef
-ms.openlocfilehash: 824fa9108e6322b1bcf77d6c28c7fb843b743833
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 916c37e3283f40ff5ded865a573ff45839de6e2a
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161012"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449618"
 ---
 # <a name="linker-tools-error-lnk2001"></a>链接器工具错误 LNK2001
 
@@ -71,7 +71,7 @@ ms.locfileid: "62161012"
 
 目前没有标准[C++命名](../../error-messages/tool-errors/name-decoration.md)编译器供应商之间、 甚至之间不同版本的编译器。 因此，链接用其他编译器编译对象文件可能不生成相同的命名方案，并因此导致错误 LNK2001。
 
-[混合内联和非内联编译选项](../../error-messages/tool-errors/function-inlining-problems.md)上不同的模块会导致 LNK2001。 如果C++库创建了函数内联开启 (**/ob1**或 **/ob2**)，但相应的头文件描述函数具有内联处于关闭状态 (没有`inline`关键字)，发生此错误。 若要解决此问题，定义的函数`inline`在其他源文件中包含的标头文件中。
+[混合内联和非内联编译选项](../../error-messages/tool-errors/function-inlining-problems.md)上不同的模块会导致 LNK2001。 如果C++库创建了函数内联开启 ( **/ob1**或 **/ob2**)，但相应的头文件描述函数具有内联处于关闭状态 (没有`inline`关键字)，发生此错误。 若要解决此问题，定义的函数`inline`在其他源文件中包含的标头文件中。
 
 如果您使用`#pragma inline_depth`编译器指令，请确保你已[设置了 2 个或更高版本的值](../../error-messages/tool-errors/function-inlining-problems.md)，并确保也使用[/ob1](../../build/reference/ob-inline-function-expansion.md)或[/ob2](../../build/reference/ob-inline-function-expansion.md)编译器选项。
 
@@ -101,5 +101,5 @@ C++编译器和链接器使用[名称修饰](../../error-messages/tool-errors/na
 
 ## <a name="additional-resources"></a>其他资源
 
-LNK2001 可能的原因和解决方案的详细信息，请参阅堆栈溢出问题[什么是未定义引用/未解析的外部符号错误以及如何修复此错误？](http://stackoverflow.com/q/12573816/2002113)。
+LNK2001 可能的原因和解决方案的详细信息，请参阅堆栈溢出问题[什么是未定义引用/未解析的外部符号错误以及如何修复此错误？](https://stackoverflow.com/q/12573816/2002113)。
 

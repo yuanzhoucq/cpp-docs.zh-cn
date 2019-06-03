@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cpuid instruction
 - cpuid intrinsic
 ms.assetid: f8c344d3-91bf-405f-8622-cb0e337a6bdc
-ms.openlocfilehash: 30b66c78c6c3477c4da634901058d77d0e362101
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c66a3fe7b923b214c4cf2bd84fc03f535d5f4973
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349077"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449995"
 ---
 # <a name="cpuid-cpuidex"></a>__cpuid、__cpuidex
 
@@ -63,9 +63,9 @@ void __cpuidex(
 
 `__cpuid` 内部函数将在调用 `cpuid` 指令前清除 ECX 寄存器。 `__cpuidex`内部函数设置的值为 ECX 寄存器*subfunction_id*它生成之前`cpuid`指令。 这使你能够收集有关该处理器的其他信息。
 
-有关使用和 Intel 处理器上这些内部函数所返回的值的特定参数的详细信息，请参阅的文档`cpuid`中的指令[Intel 64 和 IA-32 体系结构软件开发人员手册第 2 卷：指令设置参考](http://go.microsoft.com/fwlink/p/?LinkID=510021)并[Intel 体系架构指令集扩展编程参考](http://go.microsoft.com/fwlink/p/?LinkID=506627)。 Intel 文档将使用术语"leaf"和"subleaf"对于*function_id*并*subfunction_id*在 EAX 和 ECX 中传递的参数。
+有关使用和 Intel 处理器上这些内部函数所返回的值的特定参数的详细信息，请参阅的文档`cpuid`中的指令[Intel 64 和 IA-32 体系结构软件开发人员手册第 2 卷：指令设置参考](https://go.microsoft.com/fwlink/p/?LinkID=510021)并[Intel 体系架构指令集扩展编程参考](https://go.microsoft.com/fwlink/p/?LinkID=506627)。 Intel 文档将使用术语"leaf"和"subleaf"对于*function_id*并*subfunction_id*在 EAX 和 ECX 中传递的参数。
 
-有关使用和 AMD 处理器上这些内部函数所返回的值的特定参数的详细信息，请参阅的文档`cpuid`指令在 AMD64 体系结构编程人员手册第 3 卷：通用和系统指令和特定处理器系列的修订版本指南中。 这些文档和其他信息的链接，请参阅 AMD[开发人员指南、 手册和 ISA 文档](http://go.microsoft.com/fwlink/p/?LinkId=510023)页。 AMD 文档将使用术语"function number"和"subfunction number"对于*function_id*并*subfunction_id*在 EAX 和 ECX 中传递的参数。
+有关使用和 AMD 处理器上这些内部函数所返回的值的特定参数的详细信息，请参阅的文档`cpuid`指令在 AMD64 体系结构编程人员手册第 3 卷：通用和系统指令和特定处理器系列的修订版本指南中。 这些文档和其他信息的链接，请参阅 AMD[开发人员指南、 手册和 ISA 文档](https://go.microsoft.com/fwlink/p/?LinkId=510023)页。 AMD 文档将使用术语"function number"和"subfunction number"对于*function_id*并*subfunction_id*在 EAX 和 ECX 中传递的参数。
 
 当*function_id*自变量为 0， *cpuInfo*[0] 返回的最高可用非扩展*function_id*处理器支持的值。 在编码处理器制造商*cpuInfo*[1] *cpuInfo*[2] 和*cpuInfo*[3]。
 
