@@ -19,9 +19,9 @@ ms.locfileid: "62306764"
 ---
 # <a name="storing-and-loading-cobjects-via-an-archive"></a>通过存档存储和加载 CObject
 
-存储和加载`CObject`s 通过存档需要额外的注意事项。 在某些情况下，应调用`Serialize`函数的对象，其中`CArchive`对象为的参数`Serialize`调用，而不是使用**< \<** 或**>>** 运算符的`CArchive`。 要记住的重要事实是， `CArchive` **>>** 运算符构造`CObject`基于内存中`CRuntimeClass`以前由存储存档写入到文件的信息。
+存储和加载`CObject`s 通过存档需要额外的注意事项。 在某些情况下，应调用`Serialize`函数的对象，其中`CArchive`对象为的参数`Serialize`调用，而不是使用 **< \<** 或 **>>** 运算符的`CArchive`。 要记住的重要事实是， `CArchive` **>>** 运算符构造`CObject`基于内存中`CRuntimeClass`以前由存储存档写入到文件的信息。
 
-因此，是否使用`CArchive` **< \<** 并**>>** 运算符，而不是调用`Serialize`，取决于是否您*需要*加载存档动态地重新构造该对象基于以前存储`CRuntimeClass`信息。 使用`Serialize`函数在以下情况下：
+因此，是否使用`CArchive` **< \<** 并 **>>** 运算符，而不是调用`Serialize`，取决于是否您*需要*加载存档动态地重新构造该对象基于以前存储`CRuntimeClass`信息。 使用`Serialize`函数在以下情况下：
 
 - 当反序列化对象，您预先知道对象的具体类。
 
