@@ -52,12 +52,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-ms.openlocfilehash: 0b98df740b751d019c9b2852d682f61a51384818
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce5c29c2399fd47bdb1ad0135257b41617094aa9
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260722"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503381"
 ---
 # <a name="caccesstoken-class"></a>CAccessToken 类
 
@@ -246,7 +246,7 @@ bool CreatePrimaryToken(
 指定新的令牌的请求的访问权限。 默认情况下，MAXIMUM_ALLOWED，请求有效的调用方的所有访问权限。 请参阅[的访问权限和访问掩码](/windows/desktop/SecAuthZ/access-rights-and-access-masks)的多个打开的访问权限。
 
 *pTokenAttributes*<br/>
-指向[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)结构，它指定新的令牌的安全描述符，并确定是否子进程可以继承标记。 如果*pTokenAttributes*为 NULL，该令牌获取的默认安全描述符，不能继承句柄。
+指向[SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))结构，它指定新的令牌的安全描述符，并确定是否子进程可以继承标记。 如果*pTokenAttributes*为 NULL，该令牌获取的默认安全描述符，不能继承句柄。
 
 ### <a name="return-value"></a>返回值
 
@@ -295,10 +295,10 @@ bool CreateProcessAsUser(
 如果为 TRUE，加载用户的配置文件[LoadUserProfile](/windows/desktop/api/userenv/nf-userenv-loaduserprofilea)。
 
 *pProcessAttributes*<br/>
-指向[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)结构，它指定新的进程的安全描述符，并确定是否子进程可以继承返回的句柄。 如果*pProcessAttributes*为 NULL，该过程获取的默认安全描述符，不能继承句柄。
+指向[SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))结构，它指定新的进程的安全描述符，并确定是否子进程可以继承返回的句柄。 如果*pProcessAttributes*为 NULL，该过程获取的默认安全描述符，不能继承句柄。
 
 *pThreadAttributes*<br/>
-指向[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)结构，它指定新线程的安全描述符，并确定是否子进程可以继承返回的句柄。 如果*pThreadAttributes*为 NULL，该线程将获取的默认安全描述符，不能继承句柄。
+指向[SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))结构，它指定新线程的安全描述符，并确定是否子进程可以继承返回的句柄。 如果*pThreadAttributes*为 NULL，该线程将获取的默认安全描述符，不能继承句柄。
 
 *bInherit*<br/>
 指示新进程是否继承自调用进程句柄。 如果为 TRUE，由新进程继承调用进程中的每个可继承打开句柄。 继承句柄具有相同的值和访问权限的原始句柄。

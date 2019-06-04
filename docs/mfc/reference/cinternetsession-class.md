@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetSession [MFC], SetCookie
 - CInternetSession [MFC], SetOption
 ms.assetid: ef54feb4-9d0f-4e65-a45d-7a4cf6c40e51
-ms.openlocfilehash: 5ad1a1a0dde32358828d58a8f237337c4f62f3e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3d6d319a963fbc24e89bf8c4c0858cd80ec5a9d
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345586"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503461"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession 类
 
@@ -156,7 +156,7 @@ CInternetSession(
 
 - INTERNET_FLAG_DONT_CACHE 不缓存数据，在本地或任何网关服务器中。
 
-- 通过持久缓存满足 INTERNET_FLAG_OFFLINE 下载操作。 如果在缓存中不存在项，则返回相应的错误代码。 此标志可以与按位组合**或者**( **&#124;**) 运算符。
+- 通过持久缓存满足 INTERNET_FLAG_OFFLINE 下载操作。 如果在缓存中不存在项，则返回相应的错误代码。 此标志可以与按位组合**或者**( **&#124;** ) 运算符。
 
 ### <a name="remarks"></a>备注
 
@@ -258,7 +258,7 @@ static BOOL GetCookie(
 
 ### <a name="return-value"></a>返回值
 
-否则返回如果成功，则为 TRUE 或 FALSE。 如果调用失败，调用 Win32 函数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)以确定错误的原因。 应用以下的错误值：
+否则返回如果成功，则为 TRUE 或 FALSE。 如果调用失败，调用 Win32 函数[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)以确定错误的原因。 应用以下的错误值：
 
 - ERROR_NO_MORE_ITEMS 没有任何 cookie 为指定的 URL 和其父项。
 
@@ -453,7 +453,7 @@ virtual void OnStatusCallback(
 
 *DwInternetStatus*参数指示正在执行的操作，并确定的内容*lpvStatusInformation*将为。 *dwStatusInformationLength*指示中包含的数据的长度*lpvStatusInformation*。 以下状态的值*dwInternetStatus*定义，如下所示：
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |INTERNET_STATUS_RESOLVING_NAME|查找名称中包含的 IP 地址*lpvStatusInformation*。|
 |INTERNET_STATUS_NAME_RESOLVED|已成功找到名称中包含的 IP 地址*lpvStatusInformation*。|
@@ -536,7 +536,7 @@ CStdioFile* OpenURL(
 
 ### <a name="remarks"></a>备注
 
-将参数*dwFlags*必须包括 INTERNET_FLAG_TRANSFER_ASCII 或 INTERNET_FLAG_TRANSFER_BINARY，但不可同时使用两者。 可以使用按位组合剩余标志**或者**运算符 ( **&#124;**)。
+将参数*dwFlags*必须包括 INTERNET_FLAG_TRANSFER_ASCII 或 INTERNET_FLAG_TRANSFER_BINARY，但不可同时使用两者。 可以使用按位组合剩余标志**或者**运算符 ( **&#124;** )。
 
 `OpenURL`其包装 Win32 函数`InternetOpenURL`，允许仅下载、 检索和从 Internet 服务器读取的数据。 `OpenURL` 允许在远程位置中的没有文件处理，因此不需要它[CInternetConnection](../../mfc/reference/cinternetconnection-class.md)对象。
 
@@ -616,11 +616,11 @@ BOOL SetOption(
 
 - INTERNET_FLAG_DONT_CACHE 不缓存数据，在本地或任何网关服务器中。
 
-- 通过持久缓存满足 INTERNET_FLAG_OFFLINE 下载操作。 如果在缓存中不存在项，则返回相应的错误代码。 此标志可以与按位组合**或者**( **&#124;**) 运算符。
+- 通过持久缓存满足 INTERNET_FLAG_OFFLINE 下载操作。 如果在缓存中不存在项，则返回相应的错误代码。 此标志可以与按位组合**或者**( **&#124;** ) 运算符。
 
 ### <a name="return-value"></a>返回值
 
-如果操作成功，则返回值为 TRUE。 如果遇到错误，则返回值为 FALSE。 如果调用失败，Win32 函数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)可能调用以确定错误的原因。
+如果操作成功，则返回值为 TRUE。 如果遇到错误，则返回值为 FALSE。 如果调用失败，Win32 函数[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)可能调用以确定错误的原因。
 
 ## <a name="see-also"></a>请参阅
 

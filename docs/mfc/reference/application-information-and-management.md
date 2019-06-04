@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: 84d11b5c2d456a55e09b8512a3c0af06409939e8
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: b106a8874d1b0243f408a6c6c7311a9ce791e019
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65612283"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504499"
 ---
 # <a name="application-information-and-management"></a>应用程序信息和管理
 
@@ -98,7 +98,7 @@ CWinThread* AfxBeginThread(
 - **0**创建后立即启动线程。
 
 *lpSecurityAttrs*<br/>
-指向[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)结构，它指定线程的安全属性。 如果为 NULL，则将使用与创建线程相同的安全属性。 此结构的详细信息，请参阅 Windows SDK。
+指向[SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))结构，它指定线程的安全属性。 如果为 NULL，则将使用与创建线程相同的安全属性。 此结构的详细信息，请参阅 Windows SDK。
 
 ### <a name="return-value"></a>返回值
 
@@ -648,7 +648,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
 ### <a name="parameters"></a>参数
 
 *nClassStyle*<br/>
-指定的 Windows 类样式或样式，使用按位或创建的组合 ( **&#124;**) 运算符，窗口类。 有关类样式的列表，请参阅[WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) Windows SDK 中的结构。 如果为 NULL，则将按如下所示设置默认值：
+指定的 Windows 类样式或样式，使用按位或创建的组合 ( **&#124;** ) 运算符，窗口类。 有关类样式的列表，请参阅[WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) Windows SDK 中的结构。 如果为 NULL，则将按如下所示设置默认值：
 
 - 将鼠标样式设置为 CS_DBLCLKS，它会将双击消息到窗口过程当用户双击鼠标。
 

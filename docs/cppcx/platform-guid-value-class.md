@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Guid Struct
 ms.assetid: 25c0bfb2-7f93-44d8-bdf4-ef4fbac3424a
-ms.openlocfilehash: 64c70b619380d7c2ed4aaaecad3ee01a1d0f79c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d6c71028e4f93064c7b4df978678b5f7c26d6bc
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383316"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504523"
 ---
 # <a name="platformguid-value-class"></a>Platform::Guid 值类
 
-代表 Windows 运行时类型系统中的 [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931) 类型。
+代表 Windows 运行时类型系统中的 [GUID](/previous-versions/aa373931\(v=vs.80\)) 类型。
 
 ## <a name="syntax"></a>语法
 
@@ -46,7 +46,7 @@ public value struct Guid
 
 **支持的最低服务器：** Windows Server 2012
 
-**命名空间：** Platform
+**命名空间：** 平台
 
 **元数据：** platform.winmd
 
@@ -115,7 +115,7 @@ Guid(
 下一个字节`GUID`。
 
 *m*<br/>
-一个`GUID`形式[GUID 结构](https://msdn.microsoft.com/library/windows/desktop/aa373931)。
+一个`GUID`形式[GUID 结构](/previous-versions/aa373931\(v=vs.80\))。
 
 *n*<br/>
 其余 8 个字节`GUID`。
@@ -194,7 +194,7 @@ static bool Platform::Guid::operator<(Platform::Guid guid1, Platform::Guid guid2
 
 ## <a name="operator-call"></a> Guid::operator() 运算符
 
-将隐式转换`Platform::Guid`到[GUID 结构](https://msdn.microsoft.com/library/windows/desktop/aa373931)。
+将隐式转换`Platform::Guid`到[GUID 结构](/previous-versions/aa373931\(v=vs.80\))。
 
 ### <a name="syntax"></a>语法
 
@@ -204,7 +204,7 @@ const GUID& Platform::Guid::operator();
 
 ### <a name="return-value"></a>返回值
 
-一个[GUID 结构](https://msdn.microsoft.com/library/windows/desktop/aa373931)。
+一个[GUID 结构](/previous-versions/aa373931\(v=vs.80\))。
 
 ## <a name="see-also"></a>请参阅
 

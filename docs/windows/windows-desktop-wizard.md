@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Desktop Wizard
 - Win32 Project Wizard
 ms.assetid: 5d7b3a5e-8461-479a-969a-67b7883725b9
-ms.openlocfilehash: a434a329febc38d6a46881dcabba6b05a402fbca
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 2f9ac262cc564c39d30ddfae7f70ea92e92081a8
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708057"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503799"
 ---
 # <a name="windows-desktop-wizard"></a>Windows 桌面向导
 
@@ -51,7 +51,7 @@ Windows 桌面向导取代 Win32 应用程序向导中，在 Visual Studio 2017 
 
 |选项|描述|
 |------------|-----------------|
-|**控制台应用程序**|创建控制台应用程序。 控制台程序开发与[控制台函数](https://msdn.microsoft.com/library/ms813137.aspx)，它提供的信息在控制台窗口中的字符模式支持。 视觉对象C++[运行时库](../c-runtime-library/c-run-time-library-reference.md)还提供输出和输入从控制台窗口与标准 I/O 函数，如`printf_s()`并`scanf_s()`。 控制台应用程序没有图形用户界面。 它将编译为.exe 文件，并可作为独立的应用程序从命令行运行。<br /><br /> 您可以将 MFC 和 ATL 支持添加到控制台应用程序。|
+|**控制台应用程序**|创建控制台应用程序。 视觉对象C++[运行时库](../c-runtime-library/c-run-time-library-reference.md)还提供输出和输入从控制台窗口与标准 I/O 函数，如`printf_s()`并`scanf_s()`。 控制台应用程序没有图形用户界面。 它将编译为.exe 文件，并可作为独立的应用程序从命令行运行。<br /><br /> 您可以将 MFC 和 ATL 支持添加到控制台应用程序。|
 |**Windows 应用程序**|创建 Win32 程序。 Win32 程序是用 C 编写的应用可执行程序 (EXE) 或C++，使用对 Win32 API 的调用创建的图形用户界面。<br /><br /> 不能添加 MFC 或 ATL 支持添加到 Windows 应用程序。|
 |**动态链接库**|创建 Win32 动态链接库 (DLL)。 Win32 DLL 是用 C 编写的二进制文件或C++，使用调用 Win32 API，而不是 MFC 类，以及作为共享库的多个应用程序可同时使用的函数中。<br /><br /> 无法将 MFC 或 ATL 支持添加到使用此向导中，创建一个 DLL 应用程序，但您可以创建非 MFC DLL 通过选择**新建 > 项目 > MFC DLL**。|
 |**静态库**|创建静态库。 静态库是一个包含对象及其函数和生成可执行文件时链接到你的程序的数据文件。 本主题说明如何创建的初学者文件和[项目属性](../build/reference/property-pages-visual-cpp.md)静态库。 静态库文件提供以下优势：<br /><br />-A Win32 静态库是如果您正在使用的应用程序执行调用 Win32 API，而不是 MFC 类很有用。<br />-链接的过程是相同的以 C 编写的 Windows 应用程序其余部分还是在C++。<br />-你可以将静态库链接到一个基于 MFC 的程序或非 MFC 程序。|
@@ -87,4 +87,4 @@ Windows 桌面向导取代 Win32 应用程序向导中，在 Visual Studio 2017 
 
 ## <a name="see-also"></a>请参阅
 
-[C++在 Visual Studio 中的项目类型](../build/reference/visual-cpp-project-types.md)
+[Visual Studio 中的 C++ 项目类型](../build/reference/visual-cpp-project-types.md)

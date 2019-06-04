@@ -39,12 +39,12 @@ helpviewer_keywords:
 - commands [C++], deleting from menus
 - menus [C++], deleting
 ms.assetid: 421fb215-6e12-4ec9-a3af-82d77f87bfa6
-ms.openlocfilehash: b5d809fa4e0f608d4c0e6cbdaf8697688c6d3f9c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09d385404edbc33883d2d2add2328b33876d23ae
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376758"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504639"
 ---
 # <a name="menu-editor-c"></a>菜单编辑器 (C++)
 
@@ -143,7 +143,7 @@ ms.locfileid: "62376758"
 
    1. 选择要将菜单或菜单命令移动或复制到的位置。
 
-   1. 从快捷菜单中选择 **“粘贴”**。 被移动或复制的项放在选定项的前面。
+   1. 从快捷菜单中选择 **“粘贴”** 。 被移动或复制的项放在选定项的前面。
 
 > [!NOTE]
 > 还可以拖动、复制和粘贴到其他菜单窗口中的其他菜单中。
@@ -198,8 +198,6 @@ Win32
 
 [资源编辑器](../windows/resource-editors.md)<br/>
 [菜单命令](../windows/menu-command-properties.md)<br/>
-
-<!--
-[User-Interface Objects and Command IDs](../mfc/user-interface-objects-and-command-ids.md)<br/>
-[Menus](../mfc/menus-mfc.md)<br/>
-[Menus](https://msdn.microsoft.com/library/windows/desktop/ms646977.aspx)-->
+[用户界面对象和命令 ID](../mfc/user-interface-objects-and-command-ids.md)<br/>
+[菜单](../mfc/menus-mfc.md)<br/>
+[菜单](/windows/desktop/menurc/menus)

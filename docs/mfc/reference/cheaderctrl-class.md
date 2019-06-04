@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-ms.openlocfilehash: 51cdfb481892ba5057d4ca26ff4d6e51665557e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5268a5ae336b0f96dfd6c0bd348a883e85ac32e6
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160193"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503545"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl 类
 
@@ -315,7 +315,7 @@ virtual BOOL CreateEx(
 
 ### <a name="remarks"></a>备注
 
-使用`CreateEx`而不是`Create`若要将应用扩展的 Windows 样式，指定的 Windows 扩展的样式加**WS_EX_**。
+使用`CreateEx`而不是`Create`若要将应用扩展的 Windows 样式，指定的 Windows 扩展的样式加**WS_EX_** 。
 
 ##  <a name="createdragimage"></a>  CHeaderCtrl::CreateDragImage
 
@@ -761,7 +761,7 @@ int OrderToIndex(int nOrder) const;
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 宏的行为[HDM_ORDERTOINDEX](https://msdn.microsoft.com/library/windows/desktop/bb775355)，如 Windows SDK 中所述。 它旨在支持标头项排序。
+此成员函数实现 Win32 宏的行为[HDM_ORDERTOINDEX](/windows/desktop/controls/hdm-ordertoindex)，如 Windows SDK 中所述。 它旨在支持标头项排序。
 
 ##  <a name="setbitmapmargin"></a>  CHeaderCtrl::SetBitmapMargin
 

@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: fc92497c4d43238f9cf6aea7132afb8c8dc27fbd
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 50558e6959789dddc8223804394a0b242f793de5
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451228"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504259"
 ---
 # <a name="cwnd-class"></a>CWnd 类
 
@@ -5607,7 +5607,7 @@ BOOL LockWindowUpdate();
 
 无法移动已锁定的窗口。 可以一次锁定只能有一个窗口。 若要解锁使用锁定的窗口`LockWindowUpdate`，调用[UnlockWindowUpdate](#unlockwindowupdate)。
 
-如果使用锁定的窗口 （或任何锁定的子窗口） 的应用程序调用[GetDC，](https://msdn.microsoft.com/library/windows/desktop/dd144871) [GetDCEx，](https://msdn.microsoft.com/library/windows/desktop/dd144873)或[BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint) Windows 函数调用的函数返回设备上下文的可见区域为空。 应用程序通过调用解锁窗口之前，会发生此情况`UnlockWindowUpdate`成员函数。
+如果使用锁定的窗口 （或任何锁定的子窗口） 的应用程序调用[GetDC，](/windows/desktop/api/winuser/nf-winuser-getdc) [GetDCEx，](/windows/desktop/api/winuser/nf-winuser-getdcex)或[BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint) Windows 函数调用的函数返回设备上下文的可见区域为空。 应用程序通过调用解锁窗口之前，会发生此情况`UnlockWindowUpdate`成员函数。
 
 当窗口更新将被锁定时，系统将记录的设备上下文与锁定窗口关联到任意绘制操作的绑定矩形。 此边框时重新绘制，在锁定的窗口及其子窗口以强制最终中失效[WM_PAINT](/windows/desktop/gdi/wm-paint)消息更新屏幕。 如果不发生任何绘图窗口更新已锁定时，没有区域会失效。
 
@@ -10038,7 +10038,7 @@ afx_msg void OnUserChanged();
 
 ### <a name="remarks"></a>备注
 
-此方法接收[WM_USERCHANGED](https://msdn.microsoft.com/library/windows/desktop/ms632651)通知消息时，Windows SDK 中所述。 当用户登录和注销时，操作系统更新特定于用户的设置。 系统更新的设置后立即发送此消息。
+此方法接收[WM_USERCHANGED](/windows/desktop/winmsg/wm-userchanged)通知消息时，Windows SDK 中所述。 当用户登录和注销时，操作系统更新特定于用户的设置。 系统更新的设置后立即发送此消息。
 
 > [!NOTE]
 > 框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。

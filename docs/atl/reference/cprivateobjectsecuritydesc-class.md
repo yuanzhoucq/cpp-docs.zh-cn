@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPrivateObjectSecurityDesc class
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
-ms.openlocfilehash: 99b47c15af4cdb87fb35d5c7342ea2719d341868
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cc726892515ea38a559bdf182affa96f84be3449
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278145"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503306"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>CPrivateObjectSecurityDesc 类
 
@@ -173,7 +173,7 @@ bool Create(
 指定新的对象是否可以包含其他对象。 值为 true 指示新对象是一个容器。 如果值为 false 指示新的对象不是容器。
 
 *AutoInheritFlags*<br/>
-一组位标志，用于控制如何将访问控制项 (Ace) 继承自*pParent*。 请参阅[CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581)的更多详细信息。
+一组位标志，用于控制如何将访问控制项 (Ace) 继承自*pParent*。 请参阅[CreatePrivateObjectSecurityEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex)的更多详细信息。
 
 ### <a name="return-value"></a>返回值
 
@@ -181,7 +181,7 @@ bool Create(
 
 ### <a name="remarks"></a>备注
 
-此方法调用[CreatePrivateObjectSercurity](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurity)或[CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581)。
+此方法调用[CreatePrivateObjectSercurity](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurity)或[CreatePrivateObjectSecurityEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex)。
 
 第二种方法允许指定新的对象的对象类型的 GUID 或控制如何继承 Ace。
 
@@ -224,7 +224,7 @@ CPrivateObjectSecurityDesc& operator= (const CPrivateObjectSecurityDesc& rhs) th
 
 ### <a name="parameters"></a>参数
 
-*rhs*<br/>
+rhs <br/>
 `CPrivateObjectSecurityDesc`要分配给当前对象的对象。
 
 ### <a name="return-value"></a>返回值
@@ -265,7 +265,7 @@ bool Set(
 引用[CAccessToken](../../atl/reference/caccesstoken-class.md)以其名义创建对象的客户端进程的对象。
 
 *AutoInheritFlags*<br/>
-一组位标志，用于控制如何将访问控制项 (Ace) 继承自*pParent*。 请参阅[CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581)的更多详细信息。
+一组位标志，用于控制如何将访问控制项 (Ace) 继承自*pParent*。 请参阅[CreatePrivateObjectSecurityEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex)的更多详细信息。
 
 ### <a name="return-value"></a>返回值
 

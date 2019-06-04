@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMutex [MFC], CMutex
 ms.assetid: 6330c050-4f01-4195-a099-2029b92f8cf1
-ms.openlocfilehash: f85e562af9d048503be20d1ab5d219fe8d2d039f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c55da8a7692982fc18589fa69e9e2b0749cb6eb
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373625"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504191"
 ---
 # <a name="cmutex-class"></a>CMutex 类
 
@@ -77,14 +77,14 @@ CMutex(
 `CMutex` 对象的名称。 如果存在具有相同名称的另一个互斥体，则*lpszName*如果跨进程边界，将使用的对象必须提供。 如果**NULL**，将是未命名的互斥体。 如果名称匹配现有 mutex，构造函数将生成新`CMutex`对象引用该名称的互斥体。 如果名称匹配一个现有的同步对象，它不 mutex，构造将失败。
 
 *lpsaAttribute*<br/>
-Mutex 对象的安全特性。 此结构的完整说明，请参阅[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK 中。
+Mutex 对象的安全特性。 此结构的完整说明，请参阅[SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) Windows SDK 中。
 
 ### <a name="remarks"></a>备注
 
 访问或释放`CMutex`对象，请创建[CMultiLock](../../mfc/reference/cmultilock-class.md)或[CSingleLock](../../mfc/reference/csinglelock-class.md)对象，并调用其[锁](../../mfc/reference/csinglelock-class.md#lock)并[解锁](../../mfc/reference/csinglelock-class.md#unlock)成员函数。 如果`CMutex`正在独立使用对象，调用其`Unlock`成员函数以将其释放。
 
 > [!IMPORTANT]
->  在创建后`CMutex`对象，请使用[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)以确保该互斥体已不存在。 如果该互斥体未意外存在，则可能表示一个恶意进程是占用并可能想要出于恶意使用互斥体。 在这种情况下，建议的注重安全的过程是关闭句柄并继续执行，如同创建对象时出错。
+>  在创建后`CMutex`对象，请使用[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)以确保该互斥体已不存在。 如果该互斥体未意外存在，则可能表示一个恶意进程是占用并可能想要出于恶意使用互斥体。 在这种情况下，建议的注重安全的过程是关闭句柄并继续执行，如同创建对象时出错。
 
 ## <a name="see-also"></a>请参阅
 

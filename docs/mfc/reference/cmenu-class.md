@@ -84,12 +84,12 @@ helpviewer_keywords:
 - CMenu [MFC], TrackPopupMenuEx
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
-ms.openlocfilehash: 464b59f7e598ea1901cf88c47c5887cbbf308607
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5df6515573cfca784d1e59f34342466dde2e42e4
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375790"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504847"
 ---
 # <a name="cmenu-class"></a>CMenu 类
 
@@ -651,7 +651,7 @@ UINT GetDefaultItem(
 *gmdiFlags*<br/>
 值，该值指定该函数搜索菜单项的方式。 此参数可以是 none、 一个，或以下值的组合：
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |GMDI_GOINTOPOPUPS|指定，是否默认项是指打开子菜单，该函数将在相应的子菜单以递归方式搜索。 如果子菜单中没有默认项，则返回值标识用于打开子菜单项。<br /><br /> 默认情况下，该函数返回在指定的菜单中，而不管它是用于打开子菜单项的第一个默认项。|
 |GMDI_USEDISABLED|指定该函数将返回默认项，即使它处于禁用状态。<br /><br /> 默认情况下，该函数将跳过已禁用或灰项。|
@@ -769,7 +769,7 @@ BOOL GetMenuItemInfo(
 
 ### <a name="return-value"></a>返回值
 
-如果函数成功，则返回值为非零值。 如果函数失败，则返回值为零。 若要获得扩展错误信息，请使用 Win32 函数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)，如 Windows SDK 中所述。
+如果函数成功，则返回值为非零值。 如果函数失败，则返回值为零。 若要获得扩展错误信息，请使用 Win32 函数[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)，如 Windows SDK 中所述。
 
 ### <a name="remarks"></a>备注
 
@@ -1267,7 +1267,7 @@ BOOL SetDefaultItem(
 
 ### <a name="return-value"></a>返回值
 
-如果函数成功，则返回值为非零值。 如果函数失败，则返回值为零。 若要获得扩展错误信息，请使用 Win32 函数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)，如 Windows SDK 中所述。
+如果函数成功，则返回值为非零值。 如果函数失败，则返回值为零。 若要获得扩展错误信息，请使用 Win32 函数[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)，如 Windows SDK 中所述。
 
 ### <a name="remarks"></a>备注
 
@@ -1476,7 +1476,7 @@ BOOL TrackPopupMenuEx(
 
 如果指定在 TPM_RETURNCMD *fuFlags*参数，则返回值是用户选择的项的菜单项标识符。 如果用户取消菜单不做任何选择，或如果出错，则返回值为 0。
 
-如果未指定在 TPM_RETURNCMD *fuFlags*参数，返回值为非零，如果函数成功，0 失败。 若要获得扩展错误信息，请调用[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)。
+如果未指定在 TPM_RETURNCMD *fuFlags*参数，返回值为非零，如果函数成功，0 失败。 若要获得扩展错误信息，请调用[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
 
 ### <a name="remarks"></a>备注
 

@@ -42,12 +42,12 @@ helpviewer_keywords:
 - Image editor [C++], grid settings
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-ms.openlocfilehash: dd7da76d3df68fa63c87f64610524accfd4302ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c411c4b95fcd3866c897f04b70da7cbb2b48ba28
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351600"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504311"
 ---
 # <a name="image-editor-for-icons-c"></a>图标的图像编辑器 (C++)
 
@@ -171,7 +171,7 @@ ms.locfileid: "62351600"
 
    - 选择**10**从列表中的可用点中列出的大小**大小**列表框。
 
-   - 选择 **“确定”**。 **文本工具字体**对话框将关闭，并且新的字体设置将应用于您的文本。
+   - 选择 **“确定”** 。 **文本工具字体**对话框将关闭，并且新的字体设置将应用于您的文本。
 
 1. 选择**关闭**上**文本工具**对话框。 在文本周围的调整大小框将不会出现**的图像编辑器**。
 
@@ -220,5 +220,4 @@ None
 ## <a name="see-also"></a>请参阅
 
 [资源编辑器](../windows/resource-editors.md)<br/>
-
-<!--[Icons](https://msdn.microsoft.com/library/windows/desktop/ms646973.aspx)-->
+[图标](/windows/desktop/menurc/icons)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Web browsers
 - Web applications [MFC], creating
 ms.assetid: 257f8c03-33c3-428c-832e-0b70aff6168d
-ms.openlocfilehash: 12df36188bd858f73ff4834236a19583023e5f93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d249c7effc2c78e319207d82c9a963d7a61a67c
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372226"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504767"
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>创建 Web 浏览器样式的 MFC 应用程序
 
@@ -30,7 +30,7 @@ ms.locfileid: "62372226"
 
 1. 选择任何其他所需的选项内置主干应用程序。
 
-1. 单击 **“完成”**。
+1. 单击 **“完成”** 。
 
 WebBrowser 控件支持的 Web 浏览通过超链接和统一资源定位器 (URL) 导航。 控件维护历史记录列表，从而允许用户浏览向前和向后移动之前浏览站点、 文件夹和文档。 该控件直接处理导航、 超链接、 历史记录列表、 收藏夹以及安全性。 应用程序可以使用 web 浏览器控件作为活动文档容器到主机活动文档。 因此，具有丰富格式的文档，例如 Microsoft Excel 电子表格或 Word 文档可以打开和就地编辑从 web 浏览器控件中。 WebBrowser 控件也是可以托管任何 ActiveX 控件的 ActiveX 控件容器。
 
@@ -48,7 +48,7 @@ void CWebView::OnInitialUpdate()
 
     // TODO: This code navigates to a popular spot on the web.
     // Change the code to go where you'd like.
-    Navigate2(_T("http://www.msdn.microsoft.com/vstudio/"),
+    Navigate2(_T("http://www.docs.microsoft.com/"),
         NULL,
         NULL);
 }

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CWinFormsControl [MFC], GetControl
 - CWinFormsControl [MFC], GetControlHandle
 ms.assetid: 6406dd7b-fb89-4a18-ac3a-c010d6b6289a
-ms.openlocfilehash: 91691203f88f07f597aaad6a5db32b03e7ad11c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1c7a394317fefba7911e9500126919e83389f20
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323291"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504668"
 ---
 # <a name="cwinformscontrol-class"></a>CWinFormsControl 类
 
@@ -108,7 +108,7 @@ inline BOOL CreateManagedControl(
 ### <a name="parameters"></a>参数
 
 *pType*<br/>
-要创建的控件的数据类型。 必须是[类型](https://msdn.microsoft.com/library/system.type)数据类型。
+要创建的控件的数据类型。 必须是[类型](/dotnet/api/system.type)数据类型。
 
 *dwStyle*<br/>
 要应用于控件的窗口样式。 指定的组合[的窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。 目前，支持仅以下样式：WS_TABSTOP、 WS_VISIBLE、 WS_DISABLED 和 WS_GROUP。
@@ -136,7 +136,7 @@ inline BOOL CreateManagedControl(
 
 此方法实例化 MFC 容器中的.NET Framework Windows 窗体控件。
 
-该方法的第一个重载接受.NET Framework 数据类型*pType*以便 MFC 可以实例化此类型的新对象。 *pType*必须是[类型](https://msdn.microsoft.com/library/system.type)数据类型。
+该方法的第一个重载接受.NET Framework 数据类型*pType*以便 MFC 可以实例化此类型的新对象。 *pType*必须是[类型](/dotnet/api/system.type)数据类型。
 
 该方法的第二个重载创建基于的 Windows 窗体控件`TManagedControl`的模板参数`CWinFormsControl`类。 大小和位置的控件基于`RECT`结构传递给该方法。 仅*dwStyle*样式非常重要。
 

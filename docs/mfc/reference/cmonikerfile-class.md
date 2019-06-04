@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CMonikerFile [MFC], Open
 - CMonikerFile [MFC], CreateBindContext
 ms.assetid: 87be5966-f4f7-4235-bce2-1fa39e9417de
-ms.openlocfilehash: ecffdb3a6f44f60004cf4f039bdab9c98e212ce1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7fb0ad3eef781be1b5ca358e825c09a88c0109e3
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338033"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503828"
 ---
 # <a name="cmonikerfile-class"></a>CMonikerFile 类
 
@@ -117,7 +117,7 @@ IBindCtx* CreateBindContext(CFileException* pError);
 
 ### <a name="return-value"></a>返回值
 
-绑定上下文的指针[IBindCtx](/windows/desktop/api/objidl/nn-objidl-ibindctx)要与绑定，如果成功，否则该值为 NULL。 如果通过打开的实例`IBindHost`接口，从检索的绑定上下文`IBindHost`。 如果没有任何`IBindHost`接口未能返回绑定上下文、 绑定上下文创建。 有关的说明[IBindHost](https://msdn.microsoft.com/library/ie/ms775076)接口，请参阅 Windows SDK。
+绑定上下文的指针[IBindCtx](/windows/desktop/api/objidl/nn-objidl-ibindctx)要与绑定，如果成功，否则该值为 NULL。 如果通过打开的实例`IBindHost`接口，从检索的绑定上下文`IBindHost`。 如果没有任何`IBindHost`接口未能返回绑定上下文、 绑定上下文创建。 有关的说明[IBindHost](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775076\(v=vs.85\))接口，请参阅 Windows SDK。
 
 ### <a name="remarks"></a>备注
 

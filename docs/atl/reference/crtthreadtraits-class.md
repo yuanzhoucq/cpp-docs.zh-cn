@@ -10,12 +10,12 @@ helpviewer_keywords:
 - threading [ATL], creation functions
 - threading [ATL], CRT threads
 ms.assetid: eb6e20b0-c2aa-4170-8e34-aaeeacc86343
-ms.openlocfilehash: e5e13bad907e76968c4d4343e6617903e309e40f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5fa9273e3d24f5c912ebe30fab93baa6c9ff5c1
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278042"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503158"
 ---
 # <a name="crtthreadtraits-class"></a>CRTThreadTraits 类
 
@@ -90,7 +90,7 @@ static HANDLE CreateThread(
 
 ### <a name="return-value"></a>返回值
 
-在失败时返回的新创建的线程或为 NULL 的图柄。 调用[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)若要获得扩展错误信息。
+在失败时返回的新创建的线程或为 NULL 的图柄。 调用[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)若要获得扩展错误信息。
 
 ### <a name="remarks"></a>备注
 

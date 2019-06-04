@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CEvent [MFC], SetEvent
 - CEvent [MFC], Unlock
 ms.assetid: df676042-ce27-4702-800a-e73ff4f44395
-ms.openlocfilehash: d7731c87c6d6b0ebdec9a0c72c24b04334aa0662
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 54501e5ff690b855ca65652e76d45b9c6cfb6259
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62206038"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503722"
 ---
 # <a name="cevent-class"></a>CEvent 类
 
@@ -110,7 +110,7 @@ CEvent(
 `CEvent` 对象的名称。 如果将跨进程边界使用的对象必须提供。 如果名称匹配的现有事件，构造函数将生成新`CEvent`对象引用该名称的事件。 如果名称与现有同步对象的不是事件相匹配，则构造将失败。 如果为 NULL，则名称将为 null。
 
 *lpsaAttribute*<br/>
-事件对象的安全特性。 此结构的完整说明，请参阅[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK 中。
+事件对象的安全特性。 此结构的完整说明，请参阅[SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) Windows SDK 中。
 
 ### <a name="remarks"></a>备注
 
@@ -119,7 +119,7 @@ CEvent(
 若要更改的状态`CEvent`对象为终止状态 （线程不必等待），调用[SetEvent](#setevent)或[PulseEvent](#pulseevent)。 若要设置的状态`CEvent`为非终止的对象 （线程必须等待），调用[ResetEvent](#resetevent)。
 
 > [!IMPORTANT]
->  在创建后`CEvent`对象，请使用[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)以确保该互斥体的位置不存在。 如果该互斥体未意外存在，则可能表示一个恶意进程是占用并可能想要出于恶意使用互斥体。 在这种情况下，建议的注重安全的过程是关闭句柄并继续执行，如同创建对象时出错。
+>  在创建后`CEvent`对象，请使用[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)以确保该互斥体的位置不存在。 如果该互斥体未意外存在，则可能表示一个恶意进程是占用并可能想要出于恶意使用互斥体。 在这种情况下，建议的注重安全的过程是关闭句柄并继续执行，如同创建对象时出错。
 
 ##  <a name="pulseevent"></a>  CEvent::PulseEvent
 
