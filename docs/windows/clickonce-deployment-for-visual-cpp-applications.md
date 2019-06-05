@@ -6,12 +6,12 @@ helpviewer_keywords:
 - application deployment [C++], ClickOnce
 - ClickOnce deployment [C++], C++ applications
 ms.assetid: 9988c546-0936-452c-932f-9c76daa42157
-ms.openlocfilehash: f78aca6621462ccbd86cfe09ae71b715b5e56f09
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: a7b738c2deb909d2a8f222bf7f62dc80cf8eeb8b
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448457"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504787"
 ---
 # <a name="clickonce-deployment-for-visual-c-applications"></a>Visual C++ 应用程序的 ClickOnce 部署
 
@@ -28,7 +28,7 @@ Visual Studio 提供了两种不同的方法来部署 Windows 应用程序：Cli
 
 首先使用 Mage.exe 生成应用程序清单；其结果文件具有扩展名 .manifest。 然后使用 Mage.exe 生成部署清单；其结果文件具有扩展名 .application。 然后对清单签名。
 
-应用程序清单必须指定目标处理器（x86、x64 或 ARM）。 若要了解这些选项，请参阅[部署 64 位应用程序的必备组件](/visualstudio/deployment/deploying-prerequisites-for-64-bit-applications)。
+应用程序清单必须指定目标处理器（x86、x64 或 ARM）    。 若要了解这些选项，请参阅[部署 64 位应用程序的必备组件](/visualstudio/deployment/deploying-prerequisites-for-64-bit-applications)。
 
 此外，应用程序和部署清单的名称必须不同于 C++ 应用程序的名称。 这样可避免由 Mage.exe 创建的应用程序清单与作为 C++ 应用程序一部分的外部清单之间发生冲突。
 
@@ -42,7 +42,7 @@ Visual Studio 提供了两种不同的方法来部署 Windows 应用程序：Cli
 
 [Mage.exe（清单生成和编辑工具）](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)<br>
 [MageUI.exe（图形化客户端中的清单生成和编辑工具）](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)<br>
-[Makecert.exe（证书创建工具）](https://msdn.microsoft.com/library/windows/desktop/aa386968)<br>
+[Makecert.exe（证书创建工具）](/windows/desktop/SecCrypto/makecert)<br>
 [部署桌面应用程序](deploying-native-desktop-applications-visual-cpp.md)<br>
 [部署应用程序、服务和组件](/visualstudio/deployment/deploying-applications-services-and-components)<br>
 [ClickOnce 安全和部署](/visualstudio/deployment/clickonce-security-and-deployment)<br>
