@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: 17979dce7899820db3da3c24968385914c3a57e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5ea7b59ccb95078324ae85bbf04c11c537f0f525
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337890"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503568"
 ---
 # <a name="chtmlview-class"></a>CHtmlView 类
 
@@ -493,7 +493,7 @@ void ExecWB(
 
 ### <a name="remarks"></a>备注
 
-请参阅[IWebBrowser2::ExecWB](https://msdn.microsoft.com/library/aa752117.aspx) Windows SDK 中。
+请参阅[IWebBrowser2::ExecWB](/previous-versions//aa752117\(v=vs.85\)) Windows SDK 中。
 
 ##  <a name="getaddressbar"></a>  CHtmlView::GetAddressBar
 
@@ -759,7 +759,7 @@ READYSTATE GetReadyState() const;
 
 ### <a name="return-value"></a>返回值
 
-一个[READYSTATE](https://msdn.microsoft.com/library/aa768362.aspx)值，如 Windows SDK 中所述。
+一个[READYSTATE](/previous-versions//aa768362\(v=vs.85\))值，如 Windows SDK 中所述。
 
 ### <a name="remarks"></a>备注
 
@@ -1307,7 +1307,7 @@ virtual HRESULT OnFrameWindowActivate(BOOL fActivate);
 
 ##  <a name="onfullscreen"></a>  CHtmlView::OnFullScreen
 
-由框架调用此成员函数时[全屏](https://msdn.microsoft.com/library/aa752119.aspx)属性已更改。
+由框架调用此成员函数时[全屏](/previous-versions/aa752119\(v=vs.85\))属性已更改。
 
 ```
 virtual void OnFullScreen(BOOL bFullScreen);
@@ -1430,7 +1430,7 @@ virtual HRESULT OnHideUI();
 
 ##  <a name="onmenubar"></a>  CHtmlView::OnMenuBar
 
-由框架调用此成员函数时[菜单栏](https://msdn.microsoft.com/library/aa752131.aspx)属性已更改。
+由框架调用此成员函数时[菜单栏](/previous-versions/aa752131\(v=vs.85\))属性已更改。
 
 ```
 virtual void OnMenuBar(BOOL bMenuBar);
@@ -1481,7 +1481,7 @@ URL 为其导航失败。
 框架资源将会显示，或者，如果没有命名的帧的目标资源的名称。
 
 *dwError*<br/>
-错误状态代码，如果可用。 有关可能的 HRESULT 和 HTTP 状态代码的列表，请参阅[如何事件状态代码。](https://msdn.microsoft.com/library/aa768365.aspx)
+错误状态代码，如果可用。 有关可能的 HRESULT 和 HTTP 状态代码的列表，请参阅[如何事件状态代码](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768365\(v=vs.85\))。
 
 *pbCancel*<br/>
 指定是否取消导航到错误页或任何进一步的自动搜索。 如果 TRUE （默认值），请继续导航到错误页或自动搜索;如果为 FALSE，则取消导航到错误页或自动搜索。
@@ -1490,7 +1490,7 @@ URL 为其导航失败。
 
 重写此方法以提供自定义导航的错误处理。
 
-有关详细信息，请参阅[DWebBrowserEvents2::NavigateError](https://msdn.microsoft.com/library/aa768286.aspx)
+有关详细信息，请参阅[DWebBrowserEvents2::NavigateError](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768286\(v=vs.85\))
 
 ##  <a name="onnewwindow2"></a>  CHtmlView::OnNewWindow2
 
@@ -1661,7 +1661,7 @@ virtual HRESULT OnShowUI(
 
 ##  <a name="onstatusbar"></a>  CHtmlView::OnStatusBar
 
-由框架调用此成员函数时[StatusBar](https://msdn.microsoft.com/library/aa768270.aspx)属性已更改。
+由框架调用此成员函数时[StatusBar](/previous-versions//aa768270\(v=vs.85\))属性已更改。
 
 ```
 virtual void OnStatusBar(BOOL bStatusBar);
@@ -1687,7 +1687,7 @@ virtual void OnStatusTextChange(LPCTSTR lpszText);
 
 ##  <a name="ontheatermode"></a>  CHtmlView::OnTheaterMode
 
-由框架调用此成员函数时[TheaterMode](https://msdn.microsoft.com/library/aa768273.aspx)属性已更改。
+由框架调用此成员函数时[TheaterMode](/previous-versions/aa768273\(v=vs.85\))属性已更改。
 
 ```
 virtual void OnTheaterMode(BOOL bTheaterMode);
@@ -1717,7 +1717,7 @@ virtual void OnTitleChange(LPCTSTR lpszText);
 
 ##  <a name="ontoolbar"></a>  CHtmlView::OnToolBar
 
-由框架调用此成员函数时[工具栏](https://msdn.microsoft.com/library/aa768274.aspx)属性已更改。
+由框架调用此成员函数时[工具栏](/previous-versions/aa768274\(v=vs.85\))属性已更改。
 
 ```
 virtual void OnToolBar(BOOL bToolBar);
@@ -1956,7 +1956,7 @@ void Refresh2(int nLevel);
 ### <a name="parameters"></a>参数
 
 *nLevel*<br/>
-指定刷新级别变量的地址。 可能的变量中定义[RefreshConstants](https://msdn.microsoft.com/library/aa768363.aspx)，Windows SDK 中。
+指定刷新级别变量的地址。 可能的变量中定义[RefreshConstants](/previous-versions/aa768363\(v=vs.85\))，Windows SDK 中。
 
 ### <a name="remarks"></a>备注
 
