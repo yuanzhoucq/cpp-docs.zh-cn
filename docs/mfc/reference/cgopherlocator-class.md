@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CGopherLocator [MFC], CGopherLocator
 - CGopherLocator [MFC], GetLocatorType
 ms.assetid: 6fcc015f-5ae6-4959-b936-858634c71019
-ms.openlocfilehash: 79adbf126438c7d9f2884987c53b573991f92cf1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f25273f1d982092adc8b8010cc60818e7c0e24a2
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62205978"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503668"
 ---
 # <a name="cgopherlocator-class"></a>CGopherLocator 类
 
@@ -102,13 +102,13 @@ BOOL GetLocatorType(DWORD& dwRef) const;
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)可能调用以确定错误的原因。
+如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)可能调用以确定错误的原因。
 
 ### <a name="remarks"></a>备注
 
 可能的类型如下所示：
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |GOPHER_TYPE_TEXT_FILE|ASCII 文本文件。|
 |GOPHER_TYPE_DIRECTORY|其他 Gopher 项目的目录。|

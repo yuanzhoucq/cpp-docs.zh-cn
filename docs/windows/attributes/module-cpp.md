@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
-ms.openlocfilehash: 5c69e0aa9e3444ec9b43470f8feb4d1f870dc9c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8348a56171836642db5c44cd5d075ba9d2c33769
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409182"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503842"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -43,7 +43,7 @@ ms.locfileid: "62409182"
 （可选）你想要分配到的库块的版本号。 默认值为 1.0。
 
 *uuid*<br/>
-库的唯一 ID。 如果省略此参数，ID 将自动为库生成参数。 可能需要检索*uuid*库块，您可以通过使用标识符来执行此操作 **__uuidof (** *libraryname* **)**。
+库的唯一 ID。 如果省略此参数，ID 将自动为库生成参数。 可能需要检索*uuid*库块，您可以通过使用标识符来执行此操作 **__uuidof (** *libraryname* **)** 。
 
 *lcid*<br/>
 本地化参数。 有关详细信息，请参阅 [lcid](/windows/desktop/Midl/lcid) 。
@@ -97,7 +97,7 @@ ms.locfileid: "62409182"
 
 - `type` = **dll**
 
-   [CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md) 用作基类，并使用需要 COM 服务器的标准 DLL 入口点。 这些入口点为 [DllMain](/windows/desktop/Dlls/dllmain)、 [DllRegisterServer](/windows/desktop/api/olectl/nf-olectl-dllregisterserver)、 [DllUnRegisterServer](/windows/desktop/api/olectl/nf-olectl-dllunregisterserver)/ [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow)和 [DllGetClassObject](https://msdn.microsoft.com/library/windows/desktop/dd797891)。
+   [CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md) 用作基类，并使用需要 COM 服务器的标准 DLL 入口点。 这些入口点为 [DllMain](/windows/desktop/Dlls/dllmain)、 [DllRegisterServer](/windows/desktop/api/olectl/nf-olectl-dllregisterserver)、 [DllUnRegisterServer](/windows/desktop/api/olectl/nf-olectl-dllunregisterserver)/ [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow)和 [DllGetClassObject](/previous-versions//dd797891\(v=vs.85\))。
 
 - `type` = **exe**
 

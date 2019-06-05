@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-ms.openlocfilehash: ec4d7aa6f2a1061e632b81a27a0233cf5fdd1c63
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23160c51466ce1a2857d3648dd5f4970dfe172f7
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373803"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504221"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl 类
 
@@ -74,7 +74,7 @@ class CNetAddressCtrl : public CEdit
 
 ## <a name="example"></a>示例
 
-下面的代码示例对话框标头文件中定义[NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address)并[NET_ADDRESS_INFO](https://msdn.microsoft.com/library/windows/desktop/bb773346)变量所需的[CNetAddressCtrl::GetAddress](#getaddress)方法。
+下面的代码示例对话框标头文件中定义[NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address)并[NET_ADDRESS_INFO](/windows/desktop/shell/hkey-type)变量所需的[CNetAddressCtrl::GetAddress](#getaddress)方法。
 
 [!code-cpp[NVC_MFC_CNetAddressCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cnetaddressctrl-class_2.h)]
 
@@ -191,7 +191,7 @@ HRESULT GetAddress(PNC_ADDRESS pAddress) const;
 ### <a name="parameters"></a>参数
 
 *pAddress*<br/>
-[in、 out]指向[NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address)结构。  设置*pAddrInfo*到的地址的此结构的成员[NET_ADDRESS_INFO](https://msdn.microsoft.com/library/windows/desktop/bb773346)结构，然后再 GetAddress 方法调用。
+[in、 out]指向[NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address)结构。  设置*pAddrInfo*到的地址的此结构的成员[NET_ADDRESS_INFO](/windows/desktop/shell/hkey-type)结构，然后再 GetAddress 方法调用。
 
 ### <a name="return-value"></a>返回值
 
@@ -199,7 +199,7 @@ HRESULT GetAddress(PNC_ADDRESS pAddress) const;
 
 ### <a name="remarks"></a>备注
 
-如果此方法成功， [NET_ADDRESS_INFO](https://msdn.microsoft.com/library/windows/desktop/bb773346)结构包含有关网络地址的其他信息。
+如果此方法成功， [NET_ADDRESS_INFO](/windows/desktop/shell/hkey-type)结构包含有关网络地址的其他信息。
 
 使用[CNetAddressCtrl::SetAllowType](#setallowtype)方法，以指定类型的当前网络地址控件可以支持的地址。 使用[CNetAddressCtrl::GetAddress](#getaddress)方法来验证和分析用户输入的网络地址。 使用[CNetAddressCtrl::DisplayErrorTip](#displayerrortip)方法来显示错误消息信息提示，如果[CNetAddressCtrl::GetAddress](#getaddress)方法未成功。
 
@@ -215,7 +215,7 @@ DWORD GetAllowType() const;
 
 ### <a name="return-value"></a>返回值
 
-网络地址控件可以支持的按位组合 (OR) 的标志，指定类型的地址。 有关详细信息，请参阅[NET_STRING](https://msdn.microsoft.com/library/windows/desktop/bb762586)。
+网络地址控件可以支持的按位组合 (OR) 的标志，指定类型的地址。 有关详细信息，请参阅[NET_STRING](/windows/desktop/shell/net-string)。
 
 ### <a name="remarks"></a>备注
 
@@ -233,7 +233,7 @@ HRESULT SetAllowType(DWORD dwAddrMask);
 
 |参数|描述|
 |---------------|-----------------|
-|*dwAddrMask*|[in]网络地址控件可以支持的按位组合 (OR) 的标志，指定类型的地址。 有关详细信息，请参阅[NET_STRING](https://msdn.microsoft.com/library/windows/desktop/bb762586)。|
+|*dwAddrMask*|[in]网络地址控件可以支持的按位组合 (OR) 的标志，指定类型的地址。 有关详细信息，请参阅[NET_STRING](/windows/desktop/shell/net-string)。|
 
 ### <a name="return-value"></a>返回值
 

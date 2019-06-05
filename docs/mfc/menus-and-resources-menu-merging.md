@@ -10,12 +10,12 @@ helpviewer_keywords:
 - merging toolbar and status bar [MFC]
 - menus [MFC], OLE document applications
 ms.assetid: 80b6bb17-d830-4122-83f0-651fc112d4d1
-ms.openlocfilehash: e00464e59de5e20627fd2423c101c23629d7c4d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f7af7007e72cb8e01022c81a244fc70ba52a5cc
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62225528"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504826"
 ---
 # <a name="menus-and-resources-menu-merging"></a>菜单和资源：菜单合并
 
@@ -29,9 +29,7 @@ ms.locfileid: "62225528"
 
 ##  <a name="_core_menu_layouts"></a> 菜单布局
 
-第一步是协调菜单布局。 有关详细信息，请参阅**菜单上创建**主题中[菜单编程注意事项](https://msdn.microsoft.com/library/ms647557.aspx)Windows SDK 中。
-
-容器应用程序应创建一个新的菜单仅在就地激活嵌入的项时要使用。 最小值，此菜单应包含以下内容，按所列顺序：
+第一步是协调菜单布局。 容器应用程序应创建一个新的菜单仅在就地激活嵌入的项时要使用。 最小值，此菜单应包含以下内容，按所列顺序：
 
 1. 文件菜单等同于打开文件时使用的代码。 （通常没有任何其他菜单项的放置在下一项之前。）
 

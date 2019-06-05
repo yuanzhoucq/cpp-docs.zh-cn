@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 30d73d546ee68a25f1e59776020477d038da65e8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: edad2ca391639868e7af1db6e13aaec66733f383
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160310"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503863"
 ---
 # <a name="colecontrol-class"></a>COleControl 类
 
@@ -1184,7 +1184,7 @@ void AFX_CDECL FireEvent(
 
 通常应不直接调用此函数。 而是将事件映射部分中的控件的类声明中调用事件触发函数。
 
-*PbParams*参数是以空格分隔的列表**VTS_**。 其中一个或多个值（由空格（而不是逗号）分隔）指定函数的参数列表。 可能的值如下：
+*PbParams*参数是以空格分隔的列表**VTS_** 。 其中一个或多个值（由空格（而不是逗号）分隔）指定函数的参数列表。 可能的值如下：
 
 |符号|参数类型|
 |------------|--------------------|
@@ -2811,7 +2811,7 @@ virtual BOOL OnGetViewRect(DWORD dwAspect, LPRECTL pRect);
 - 覆盖透明或不定期各个 DVASPECT_TRANSPARENT 矩形。
 
 *pRect*<br/>
-指向[RECTL](https://msdn.microsoft.com/library/windows/desktop/dd162907)结构，它指定应在其中绘制该对象的矩形。 此参数控制的定位和拉伸的对象。
+指向[RECTL](/previous-versions/dd162907\(v=vs.85\))结构，它指定应在其中绘制该对象的矩形。 此参数控制的定位和拉伸的对象。
 
 ### <a name="return-value"></a>返回值
 

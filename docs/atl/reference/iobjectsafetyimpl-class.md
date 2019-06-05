@@ -13,12 +13,12 @@ helpviewer_keywords:
 - IObjectSafety, ATL implementation
 - IObjectSafetyImpl class
 ms.assetid: 64e32082-d910-4a8a-a5bf-ebed9145359d
-ms.openlocfilehash: e75c52b016fff5bf04fefc86d4289021efc4db8e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 17a1b362f2cfe40be99c10298a780a6bf4f6419f
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277019"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503127"
 ---
 # <a name="iobjectsafetyimpl-class"></a>IObjectSafetyImpl 类
 
@@ -97,7 +97,7 @@ HRESULT GetInterfaceSafetyOptions(
 > [!IMPORTANT]
 >  支持的任何对象`IObjectSafety`负责其自身的安全，并且它将委托的任何对象。 程序员必须考虑到帐户中用户的上下文中运行代码出现的问题、 跨站点脚本和执行适合区域检查。
 
-请参阅[IObjectSafety::GetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768223.aspx) Windows SDK 中。
+请参阅[IObjectSafety::GetInterfaceSafetyOptions](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768223\(v=vs.85\)) Windows SDK 中。
 
 ##  <a name="m_dwcurrentsafety"></a>  IObjectSafetyImpl::m_dwCurrentSafety
 
@@ -125,9 +125,9 @@ HRESULT SetInterfaceSafetyOptions(
 > [!IMPORTANT]
 >  支持的任何对象`IObjectSafety`负责其自身的安全，并且它将委托的任何对象。 程序员必须考虑到帐户中用户的上下文中运行代码出现的问题、 跨站点脚本和执行适合区域检查。
 
-请参阅[IObjectSafety::SetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768225.aspx) Windows SDK 中。
+请参阅[IObjectSafety::SetInterfaceSafetyOptions](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768225\(v=vs.85\)) Windows SDK 中。
 
 ## <a name="see-also"></a>请参阅
 
-[IObjectSafety 接口](https://msdn.microsoft.com/library/aa768224.aspx)<br/>
+[IObjectSafety 接口](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768224\(v=vs.85\))<br/>
 [类概述](../../atl/atl-class-overview.md)

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSemaphore [MFC], CSemaphore
 ms.assetid: 385fc7e4-8f86-4be2-85e1-d23b38c12f7f
-ms.openlocfilehash: f2a05963f39393bcc73650beb44c5dbb8e5535ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c518b6a9ad0fe857b0878bcecd3020ba97174e6
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324202"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504714"
 ---
 # <a name="csemaphore-class"></a>CSemaphore 类
 
@@ -83,14 +83,14 @@ CSemaphore(
 信号量的名称。 将跨进程边界访问信号量时，必须提供。 如果`NULL`，该对象将是未命名。 如果名称与现有的信号量相匹配，构造函数将生成新`CSemaphore`对象引用该名称的信号量。 如果名称与现有同步对象不是一个信号量相匹配，构造将失败。
 
 *lpsaAttributes*<br/>
-信号量对象的安全特性。 此结构的完整说明，请参阅[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK 中。
+信号量对象的安全特性。 此结构的完整说明，请参阅[SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) Windows SDK 中。
 
 ### <a name="remarks"></a>备注
 
 访问或释放`CSemaphore`对象，请创建[CMultiLock](../../mfc/reference/cmultilock-class.md)或[CSingleLock](../../mfc/reference/csinglelock-class.md)对象，并调用其[锁](../../mfc/reference/csinglelock-class.md#lock)并[解锁](../../mfc/reference/csinglelock-class.md#unlock)成员函数。
 
 > [!IMPORTANT]
->  在创建后`CSemaphore`对象，请使用[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)以确保该互斥体已不存在。 如果该互斥体未意外存在，则可能表示一个恶意进程是占用并可能想要出于恶意使用互斥体。 在这种情况下，建议的注重安全的过程是关闭句柄并继续执行，如同创建对象时出错。
+>  在创建后`CSemaphore`对象，请使用[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)以确保该互斥体已不存在。 如果该互斥体未意外存在，则可能表示一个恶意进程是占用并可能想要出于恶意使用互斥体。 在这种情况下，建议的注重安全的过程是关闭句柄并继续执行，如同创建对象时出错。
 
 ## <a name="see-also"></a>请参阅
 

@@ -50,12 +50,12 @@ helpviewer_keywords:
 - buttons [C++], tool tips
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-ms.openlocfilehash: 9d50561c598f17e251425972590c0663efe6e832
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0faa93cd4ea1fdc2fad90a5d4d47f2feeef65e6
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387889"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504228"
 ---
 # <a name="toolbar-editor-c"></a>工具栏编辑器 (C++)
 
@@ -107,7 +107,7 @@ ms.locfileid: "62387889"
 
 1. 在中**添加资源**对话框中，选择**工具栏**中**资源类型**列表，然后选择**新建**。
 
-   如果一个加号 (**+**) 的旁边将出现**工具栏**资源类型，这意味着工具栏模板都可用。 选择加号以展开模板列表中的，选择一个模板，然后选择**新建**。
+   如果一个加号 ( **+** ) 的旁边将出现**工具栏**资源类型，这意味着工具栏模板都可用。 选择加号以展开模板列表中的，选择一个模板，然后选择**新建**。
 
 ### <a name="to-convert-bitmaps-to-toolbar-resources"></a>若要将位图转换为工具栏资源
 
@@ -204,6 +204,5 @@ MFC 或 ATL
 ## <a name="see-also"></a>请参阅
 
 [资源编辑器](../windows/resource-editors.md)
-<!--
-[Menus and Other Resources](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)<br/>
-[Toolbar Button Properties](../windows/toolbar-button-properties.md)<br/>-->
+[菜单和其他资源](/windows/desktop/menurc/resources)<br/>
+[工具栏按钮属性](../windows/toolbar-button-properties.md)<br/>

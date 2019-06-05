@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: 2ff6cd6e0817f74c7688fc573d4b98f70704f96c
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: a6b6c872963dbbdf991d013cceba66ffd20bac5c
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222573"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504388"
 ---
 # <a name="cdc-class"></a>CDC 类
 
@@ -3220,7 +3220,7 @@ int GetGraphicsMode() const;
 
 在失败时返回 0。
 
-若要获得扩展错误信息，请调用[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)。
+若要获得扩展错误信息，请调用[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
 
 ### <a name="remarks"></a>备注
 
@@ -3276,7 +3276,7 @@ DWORD GetLayout() const;
 
 ### <a name="return-value"></a>返回值
 
-如果成功，布局会标记为当前的设备上下文。 否则为 GDI_ERROR。 对于扩展的错误的信息，请调用[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)。 布局标志的列表，请参阅[CDC::SetLayout](#setlayout)。
+如果成功，布局会标记为当前的设备上下文。 否则为 GDI_ERROR。 对于扩展的错误的信息，请调用[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。 布局标志的列表，请参阅[CDC::SetLayout](#setlayout)。
 
 ### <a name="remarks"></a>备注
 
@@ -4012,7 +4012,7 @@ BOOL GetWorldTransform(XFORM& rXform) const;
 
 在失败时返回 0。
 
-若要获得扩展错误信息，请调用[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)。
+若要获得扩展错误信息，请调用[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
 
 ### <a name="remarks"></a>备注
 
@@ -4459,7 +4459,7 @@ BOOL ModifyWorldTransform(
 
 在失败时返回 0。
 
-若要获得扩展错误信息，请调用[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)。
+若要获得扩展错误信息，请调用[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
 
 ### <a name="remarks"></a>备注
 
@@ -6003,7 +6003,7 @@ int SetGraphicsMode(int iMode);
 
 成功后返回旧图形模式。
 
-在失败时返回 0。 若要获得扩展错误信息，请调用[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)。
+在失败时返回 0。 若要获得扩展错误信息，请调用[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
 
 ### <a name="remarks"></a>备注
 
@@ -6032,7 +6032,7 @@ DWORD SetLayout(DWORD dwLayout);
 
 如果成功，设备上下文的上一个布局。
 
-如果不成功，GDI_ERROR。 若要获得扩展错误信息，请调用[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)。
+如果不成功，GDI_ERROR。 若要获得扩展错误信息，请调用[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
 
 ### <a name="remarks"></a>备注
 
@@ -6657,7 +6657,7 @@ BOOL SetWorldTransform(const XFORM& rXform);
 
 在失败时返回 0。
 
-若要获得扩展错误信息，请调用[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)。
+若要获得扩展错误信息，请调用[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
 
 ### <a name="remarks"></a>备注
 

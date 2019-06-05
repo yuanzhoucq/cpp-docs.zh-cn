@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: eea37d03ca5a4fab450fbca0c4c3f6c76fefb407
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1cdc4bfacee4913d3a38aaa45aadf0a430e547ab
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62225240"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503443"
 ---
 # <a name="clistctrl-class"></a>CListCtrl 类
 
@@ -681,7 +681,7 @@ virtual BOOL CreateEx(
 
 ### <a name="remarks"></a>备注
 
-使用`CreateEx`而不是[创建](#create)若要将应用扩展的 Windows 样式，指定的 Windows 扩展的样式加**WS_EX_**。
+使用`CreateEx`而不是[创建](#create)若要将应用扩展的 Windows 样式，指定的 Windows 扩展的样式加**WS_EX_** 。
 
 `CreateEx` 创建使用指定的扩展 Windows 样式的控件*dwExStyle*。 若要设置特定于控件的扩展的样式，请调用[SetExtendedStyle](#setextendedstyle)。 例如，使用`CreateEx`来将此类样式设置为 WS_EX_CONTEXTHELP，但使用`SetExtendedStyle`若要将此类样式设置为 LVS_EX_FULLROWSELECT。 有关详细信息，请参阅本主题中所述的样式[扩展列表视图样式](/windows/desktop/Controls/extended-list-view-styles)Windows SDK 中。
 
@@ -1367,7 +1367,7 @@ BOOL GetGroupInfoByIndex(
 
 ### <a name="remarks"></a>备注
 
-此方法将发送[LVM_GETGROUPINFOBYINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774933) --> 消息，Windows SDK 中所述。
+此方法将发送[LVM_GETGROUPINFOBYINDEX](/windows/desktop/controls/lvm-getgroupinfobyindex) --> 消息，Windows SDK 中所述。
 
 ### <a name="example"></a>示例
 
@@ -1787,7 +1787,7 @@ BOOL GetItemIndexRect(
 
 |参数|描述|
 |---------------|-----------------|
-|*pItemIndex*|[in]指向[LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762)子项的父项的结构。<br /><br /> 调用方负责分配和设置的成员[LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762)结构。 此参数不能为 NULL。|
+|*pItemIndex*|[in]指向[LVITEMINDEX](/windows/desktop/api/commctrl/ns-commctrl-lvitemindex)子项的父项的结构。<br /><br /> 调用方负责分配和设置的成员[LVITEMINDEX](/windows/desktop/api/commctrl/ns-commctrl-lvitemindex)结构。 此参数不能为 NULL。|
 |*iColumn*|[in]在控件中列的从零开始的索引。|
 |*rectType*|[in]为其检索边框的列表视图子项的部分。 指定下列值之一：<br /><br /> LVIR_BOUNDS-返回整个子项，包括图标和标签的边框。<br /><br /> LVIR_ICON-返回的图标或小图标的子项的边框。<br /><br /> LVIR_LABEL-返回子项文本的边框。|
 |*pRect*|[out]指向[RECT](/previous-versions/dd162897\(v=vs.85\))接收该子项的边框的相关信息的结构。<br /><br /> 调用方负责分配[RECT](/previous-versions/dd162897\(v=vs.85\))结构。 此参数不能为 NULL。|
@@ -2093,8 +2093,8 @@ BOOL GetNextItemIndex(
 
 |参数|描述|
 |---------------|-----------------|
-|*pItemIndex*|[in、 out]指向[LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762)结构，它描述的项开始执行搜索，则为-1 以查找匹配中的标志的第一项*nFlags*参数。<br /><br /> 如果此方法成功，`LVITEMINDEX`结构描述通过搜索找到的项。|
-|*nFlags*|[in]按位组合 (OR) 标志，用于指定如何执行搜索。<br /><br /> 搜索可以依赖索引、 状态或目标项的外观或由指定的目标项的物理位置相对于项*pItemIndex*参数。 有关详细信息，请参阅*标志*中的参数[LVM_GETNEXTITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761059)消息。|
+|*pItemIndex*|[in、 out]指向[LVITEMINDEX](/windows/desktop/api/commctrl/ns-commctrl-lvitemindex)结构，它描述的项开始执行搜索，则为-1 以查找匹配中的标志的第一项*nFlags*参数。<br /><br /> 如果此方法成功，`LVITEMINDEX`结构描述通过搜索找到的项。|
+|*nFlags*|[in]按位组合 (OR) 标志，用于指定如何执行搜索。<br /><br /> 搜索可以依赖索引、 状态或目标项的外观或由指定的目标项的物理位置相对于项*pItemIndex*参数。 有关详细信息，请参阅*标志*中的参数[LVM_GETNEXTITEMINDEX](/windows/desktop/controls/lvm-getnextitemindex)消息。|
 
 ### <a name="return-value"></a>返回值
 
@@ -2104,7 +2104,7 @@ BOOL GetNextItemIndex(
 
 调用方负责分配和设置的成员`LVITEMINDEX`指向结构*pItemIndex*参数。
 
-此方法将发送[LVM_GETNEXTITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761059)消息，Windows SDK 中所述。
+此方法将发送[LVM_GETNEXTITEMINDEX](/windows/desktop/controls/lvm-getnextitemindex)消息，Windows SDK 中所述。
 
 ## <a name="getnextselecteditem"></a>  CListCtrl::GetNextSelectedItem
 
@@ -2909,7 +2909,7 @@ UINT MapIDToIndex(UINT id) const;
 
 请注意在多线程环境中保证的索引是仅在承载列表视图控件，不在后台线程的线程上。
 
-此方法将发送[LVM_MAPIDTOINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761137)消息，Windows SDK 中所述。
+此方法将发送[LVM_MAPIDTOINDEX](/windows/desktop/controls/lvm-mapidtoindex)消息，Windows SDK 中所述。
 
 ## <a name="mapindextoid"></a>  CListCtrl::MapIndexToID
 
@@ -3822,7 +3822,7 @@ BOOL SetItemIndexState(
 
 |参数|描述|
 |---------------|-----------------|
-|*pItemIndex*|[in]指向[LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762)描述项的结构。 调用方负责分配此结构并设置其成员。|
+|*pItemIndex*|[in]指向[LVITEMINDEX](/windows/desktop/api/commctrl/ns-commctrl-lvitemindex)描述项的结构。 调用方负责分配此结构并设置其成员。|
 |*dwState*|[in]要设置的项的状态即的按位组合[列表视图项状态](/windows/desktop/Controls/list-view-item-states)。 指定零到重置，或另一个用于设置状态。|
 |*dwMask*|[in]指定的状态的有效位掩码*dwState*参数。 指定的按位组合 (OR)[列表视图项状态](/windows/desktop/Controls/list-view-item-states)。|
 

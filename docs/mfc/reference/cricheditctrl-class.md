@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: 5517efca66744c43eeccd3fb91b97a6fedc8180e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bcb2f354314a0b0d1220a1ecb1c0fa2b8a913d5e
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372096"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504734"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl 类
 
@@ -503,7 +503,7 @@ virtual BOOL CreateEx(
 
 ### <a name="remarks"></a>备注
 
-使用`CreateEx`而不是`Create`若要将应用扩展的 Windows 样式，指定的 Windows 扩展的样式加**WS_EX_**。
+使用`CreateEx`而不是`Create`若要将应用扩展的 Windows 样式，指定的 Windows 扩展的样式加**WS_EX_** 。
 
 ##  <a name="cricheditctrl"></a>  CRichEditCtrl::CRichEditCtrl
 
@@ -1122,7 +1122,7 @@ long GetSelText(LPSTR lpBuf) const;  CString GetSelText() const;
 
 ### <a name="remarks"></a>备注
 
-如果使用第一个窗体**GetSelText (** `lpBuf` **)**，您必须确保缓冲区足够大，它将接收的文本。 调用[GetSel](#getsel)来确定当前所选内容中的字符数。
+如果使用第一个窗体**GetSelText (** `lpBuf` **)** ，您必须确保缓冲区足够大，它将接收的文本。 调用[GetSel](#getsel)来确定当前所选内容中的字符数。
 
 有关详细信息，请参阅[EM_GETSELTEXT](/windows/desktop/Controls/em-getseltext) Windows SDK 中。
 
@@ -1354,7 +1354,7 @@ int LineIndex(int nLine = -1) const;
 
 字符索引是从 rich edit 控件的开头到指定的行的字符数。
 
-有关详细信息，请参阅[EM_LINEINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761611) Windows SDK 中。
+有关详细信息，请参阅[EM_LINEINDEX](/windows/desktop/controls/em-lineindex) Windows SDK 中。
 
 ### <a name="example"></a>示例
 

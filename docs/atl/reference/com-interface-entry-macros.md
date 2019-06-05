@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - COM interfaces, COM interface entry macros
 ms.assetid: 19dcb768-2e1f-4b8d-a618-453a01a4bd00
-ms.openlocfilehash: ed2b8445a0f13b82338d2904d43fd17688d05b9e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8439e973c935108d645076bb7e2bfae7207e65d
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245577"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503347"
 ---
 # <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY 宏
 
@@ -39,7 +39,7 @@ ms.locfileid: "62245577"
 |[COM_INTERFACE_ENTRY_AGGREGATE_BLIND](#com_interface_entry_aggregate_blind)|与相同[COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)，只不过查询任何 IID 导致转发到查询*punk*。|
 |[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)|与相同[COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)，除非*punk*为 NULL，它会自动创建所描述的聚合*clsid*。|
 |[COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](#com_interface_entry_autoaggregate_blind)|与相同[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)，只不过查询任何 IID 导致转发到查询*punk*，并且如果*punk*为 NULL，会自动创建所描述的聚合*clsid*。|
-|[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|导致你的程序来调用[DebugBreak](https://msdn.microsoft.com/library/windows/desktop/ms679297)时为查询指定的接口。|
+|[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|导致你的程序来调用[DebugBreak](/windows/desktop/api/debugapi/nf-debugapi-debugbreak)时为查询指定的接口。|
 |[COM_INTERFACE_ENTRY_CACHED_TEAR_OFF](#com_interface_entry_cached_tear_off)|将保存每个实例的特定于接口的数据。|
 |[COM_INTERFACE_ENTRY_TEAR_OFF](#com_interface_entry_tear_off)|公开您分离式接口。|
 |[COM_INTERFACE_ENTRY_CHAIN](#com_interface_entry_chain)|当处理到达的 COM 映射中的此条目时处理的基类的 COM 映射。|
@@ -243,7 +243,7 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
 
 ##  <a name="com_interface_entry_break"></a>  COM_INTERFACE_ENTRY_BREAK
 
-导致你的程序来调用[DebugBreak](https://msdn.microsoft.com/library/windows/desktop/ms679297)时为查询指定的接口。
+导致你的程序来调用[DebugBreak](/windows/desktop/api/debugapi/nf-debugapi-debugbreak)时为查询指定的接口。
 
 ```
 COM_INTERFACE_ENTRY_BREAK(x)
@@ -319,7 +319,7 @@ COM_INTERFACE_ENTRY_CHAIN(classname)
 
 ### <a name="parameters"></a>参数
 
-classname<br/>
+classname <br/>
 [in]当前对象的基类。
 
 ### <a name="remarks"></a>备注
@@ -328,7 +328,7 @@ classname<br/>
 
 [!code-cpp[NVC_ATL_Windowing#116](../../atl/codesnippet/cpp/com-map-macros_9.h)]
 
-请注意，COM 映射中的第一个条目必须包含 COM 映射的对象上的接口。 因此，不能将您的 COM 映射项开头 COM_INTERFACE_ENTRY_CHAIN，这会导致不同的对象要在其中搜索点的 COM 映射其中**COM_INTERFACE_ENTRY_CHAIN (**`COtherObject`**)** 对象的 COM 映射中显示。 如果你想要首先搜索另一个对象的 COM 映射，将添加的接口条目`IUnknown`到 COM 映射，然后链接对象的 COM 映射。 例如：
+请注意，COM 映射中的第一个条目必须包含 COM 映射的对象上的接口。 因此，不能将您的 COM 映射项开头 COM_INTERFACE_ENTRY_CHAIN，这会导致不同的对象要在其中搜索点的 COM 映射其中**COM_INTERFACE_ENTRY_CHAIN (** `COtherObject` **)** 对象的 COM 映射中显示。 如果你想要首先搜索另一个对象的 COM 映射，将添加的接口条目`IUnknown`到 COM 映射，然后链接对象的 COM 映射。 例如：
 
 [!code-cpp[NVC_ATL_Windowing#111](../../atl/codesnippet/cpp/com-map-macros_10.h)]
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DHTML controls
 - DHTML controls, modifying
 ms.assetid: c053f35f-8629-4600-9595-721f5956777a
-ms.openlocfilehash: 6c8976c013d0114a3115d3b0bc38fa4bc6acb5b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e594360cc6752a60bf2e07a1fb1d02041604d959
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261652"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503006"
 ---
 # <a name="modifying-the-atl-dhtml-control"></a>修改 ATL DHTML 控件
 
@@ -35,7 +35,7 @@ ATL 控件向导提供了起始代码，这样可以生成并运行该控件，�
 
    [!code-cpp[NVC_ATL_COM#6](../atl/codesnippet/cpp/modifying-the-atl-dhtml-control_2.cpp)]
 
-1. 添加第三种方法， `GoToURL`，到不是以"UI。"结尾的接口 实现此方法通过调用[IWebBrowser2::Navigate](https://msdn.microsoft.com/library/aa752133.aspx)，按如下所示：
+1. 添加第三种方法， `GoToURL`，到不是以"UI。"结尾的接口 实现此方法通过调用[IWebBrowser2::Navigate](/previous-versions//aa752133\(v=vs.85\))，按如下所示：
 
    [!code-cpp[NVC_ATL_COM#7](../atl/codesnippet/cpp/modifying-the-atl-dhtml-control_3.cpp)]
 

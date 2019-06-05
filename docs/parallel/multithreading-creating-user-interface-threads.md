@@ -11,12 +11,12 @@ helpviewer_keywords:
 - user interface threads [C++]
 - threading [MFC], user interface threads
 ms.assetid: 446925c1-db59-46ea-ae5b-d5ae5d5b91d8
-ms.openlocfilehash: ac22fad95041b07e132d31a2d246e58c3b40d30c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2fb23bd502de87aefe01d91e2b0640ee3137b00
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212904"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504588"
 ---
 # <a name="multithreading-creating-mfc-user-interface-threads"></a>多线程处理：创建 MFC 用户界面线程
 
@@ -45,7 +45,7 @@ MFC 通过参数重载提供两个版本的 `AfxBeginThread`：一个只能创�
 
 - （可选）如果你想要创建一个处于挂起状态的线程，CREATE_SUSPENDED。 默认值为 0，或正常启动线程。
 
-- （可选）所需的安全属性。 默认值为与父线程相同的访问权限。 有关此安全信息的格式的详细信息，请参阅[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK 中。
+- （可选）所需的安全属性。 默认值为与父线程相同的访问权限。 有关此安全信息的格式的详细信息，请参阅[SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) Windows SDK 中。
 
 `AfxBeginThread` 为您完成大部分工作。 它创建您的类的新对象，使用你提供的信息，并调用其进行初始化[CWinThread::CreateThread](../mfc/reference/cwinthread-class.md#createthread)开始执行线程。 整个过程进行检查以确保所有对象都都已解除分配正确应创建的任何部分出现故障。
 

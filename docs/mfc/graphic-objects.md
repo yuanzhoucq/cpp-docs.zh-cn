@@ -41,19 +41,19 @@ helpviewer_keywords:
 - painting and device context [MFC]
 - CPalette class [MFC], HPALETTE handle type
 ms.assetid: 41963b25-34b7-4343-8446-34ba516b83ca
-ms.openlocfilehash: 58ecf680d64f39ab61589a0ad668c15d1a9cd68c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3058bc5793a7766b0a6849ba77f0533f0bbbcef6
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359055"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503808"
 ---
 # <a name="graphic-objects"></a>图形对象
 
 Windows 提供了各种可在设备上下文中使用的绘图工具。 它提供了用于绘制线条的笔、用于填充内部的画笔以及用于绘制文本的字体。 MFC 提供等效于 Windows 中的绘图工具的图形对象类。 下表显示可用类以及等效的 Windows 图形设备接口 (GDI) 句柄类型。
 
 > [!NOTE]
->  有关详细信息，请参阅上的 GDI + SDK 文档： [ https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp ](https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp)。
+>  有关详细信息，请参阅[GDI + SDK 文档](/windows/desktop/gdiplus/-gdiplus-gdi-start)。
 
 本文说明了这些图形对象类的用法：
 

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CPalette [MFC], ResizePalette
 - CPalette [MFC], SetPaletteEntries
 ms.assetid: 8cd95498-53ed-4852-85e1-70e522541114
-ms.openlocfilehash: f0105a8ee33a57f7431a9c6a97b4b132f291f42a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1dc29a675f6ab3883683b3afae7e22e7ed0f1cc3
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373175"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504772"
 ---
 # <a name="cpalette-class"></a>CPalette 类
 
@@ -111,7 +111,7 @@ void AnimatePalette(
 指定要进行动画处理的调色板中的条目数。
 
 *lpPaletteColors*<br/>
-指向数组的第一个成员[PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769)结构，以替换由标识调色板条目*nStartIndex*并*nNumEntries*。
+指向数组的第一个成员[PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\))结构，以替换由标识调色板条目*nStartIndex*并*nNumEntries*。
 
 ### <a name="remarks"></a>备注
 
@@ -245,7 +245,7 @@ UINT GetPaletteEntries(
 指定要检索的逻辑调色板中的条目数。
 
 *lpPaletteColors*<br/>
-指向数组[PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769)数据结构，以接收调色板条目。 该数组必须包含至少多少数据结构由指定*nNumEntries*。
+指向数组[PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\))数据结构，以接收调色板条目。 该数组必须包含至少多少数据结构由指定*nNumEntries*。
 
 ### <a name="return-value"></a>返回值
 
@@ -312,7 +312,7 @@ UINT SetPaletteEntries(
 指定要设置的逻辑调色板中的条目数。
 
 *lpPaletteColors*<br/>
-指向数组[PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769)数据结构，以接收调色板条目。 该数组必须包含至少多少数据结构由指定*nNumEntries*。
+指向数组[PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\))数据结构，以接收调色板条目。 该数组必须包含至少多少数据结构由指定*nNumEntries*。
 
 ### <a name="return-value"></a>返回值
 
@@ -322,7 +322,7 @@ UINT SetPaletteEntries(
 
 如果逻辑调色板选入设备上下文中，当应用程序调用`SetPaletteEntries`，所做的更改不会影响应用程序调用直到[CDC::RealizePalette](../../mfc/reference/cdc-class.md#realizepalette)。
 
-有关详细信息的 Windows 结构`PALETTEENTRY`，请参阅[PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769) Windows SDK 中。
+有关详细信息，请参阅[PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\)) Windows SDK 中。
 
 ## <a name="see-also"></a>请参阅
 

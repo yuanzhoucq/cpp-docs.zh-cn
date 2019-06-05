@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDialog [MFC], OnCancel
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
-ms.openlocfilehash: 9918b1ae38caacf2b2355ace6337e8e5e6260605
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23d170cf023374fe61e13d907e3c3466c0352fe6
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62168318"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504446"
 ---
 # <a name="cdialog-class"></a>CDialog 类
 
@@ -276,7 +276,7 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>返回值
 
-**Int**值，该值指定的值*n 结果*参数传递给[CDialog::EndDialog](#enddialog)成员函数，用于关闭对话框。 返回值为-1，如果发生某些其他错误，在这种情况下，输出窗口将包含错误信息从函数无法创建对话框中或 IDABORT [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)。
+**Int**值，该值指定的值*n 结果*参数传递给[CDialog::EndDialog](#enddialog)成员函数，用于关闭对话框。 返回值为-1，如果发生某些其他错误，在这种情况下，输出窗口将包含错误信息从函数无法创建对话框中或 IDABORT [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
 
 ### <a name="remarks"></a>备注
 
