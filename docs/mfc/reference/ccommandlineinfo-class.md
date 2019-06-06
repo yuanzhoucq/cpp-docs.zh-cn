@@ -298,7 +298,7 @@ virtual void ParseParam(
 
 ### <a name="remarks"></a>备注
 
-[CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline)调用`ParseParam`一次为每个参数或在命令行上的标志，传递的参数*pszParam*。 如果该参数的第一个字符是 **-** 或**/**，则会将删除并*bFlag*设置为 TRUE。 分析最后一个参数时*冲击*设置为 TRUE。
+[CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline)调用`ParseParam`一次为每个参数或在命令行上的标志，传递的参数*pszParam*。 如果该参数的第一个字符是 **-** 或 **/** ，则会将删除并*bFlag*设置为 TRUE。 分析最后一个参数时*冲击*设置为 TRUE。
 
 此函数的默认实现可以识别以下标志： `/p`， `/pt`， `/dde`， `/Automation`，和`/Embedding`下, 表中所示：
 
@@ -314,7 +314,7 @@ virtual void ParseParam(
 |*app* `/Register`<br /><br /> *app* `/Regserver`|通知应用程序执行注册的任何任务。|
 |*app* `/Unregister`<br /><br /> *app* `/Unregserver`|通知应用程序执行任何取消注册的任务。|
 
-此信息存储在[m_bRunAutomated](#m_brunautomated)， [m_bRunEmbedded](#m_brunembedded)，并[m_nShellCommand](#m_nshellcommand)。 标志标记由正斜杠 '  **/** 或连字符**-**。
+此信息存储在[m_bRunAutomated](#m_brunautomated)， [m_bRunEmbedded](#m_brunembedded)，并[m_nShellCommand](#m_nshellcommand)。 标志标记由正斜杠 '  **/** 或连字符 **-** 。
 
 默认实现将放到第一个非标志参数[m_strFileName](#m_strfilename)。 情况下`/pt`标志的默认实现将第二个，放到第三个和第四个非标志参数[m_strPrinterName](#m_strprintername)， [m_strDriverName](#m_strdrivername)，并[m_strPortName](#m_strportname)分别。
 
