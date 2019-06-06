@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC, ATL support
 - ATL, MFC projects
 ms.assetid: b5fe15d6-7752-4818-b9f9-62482ad35c95
-ms.openlocfilehash: 2870bf70492dc09d1a0af3664d1a819aec354b92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0f75ffd09da1502e5f1488dbce0d8d2b9623d396
+ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296704"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741731"
 ---
 # <a name="adding-atl-support-to-your-mfc-project"></a>向 MFC 项目添加 ATL 支持
 
@@ -28,7 +28,7 @@ ms.locfileid: "62296704"
 
 1. 在解决方案资源管理器，右键单击你想要添加 ATL 支持的项目。
 
-1. 在快捷菜单上，单击**外**，然后单击**添加类**。
+1. 在快捷菜单中，依次单击“添加”  和“添加类”  。
 
 1. 选择**向 MFC 项目添加 ATL 支持**图标。
 
@@ -47,4 +47,4 @@ ms.locfileid: "62296704"
 [添加成员变量](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
 [重写虚函数](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [MFC 消息处理程序](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
-[导航类结构](../../ide/navigating-the-class-structure-visual-cpp.md)
+[导航类结构](../../ide/navigate-code-cpp.md)
