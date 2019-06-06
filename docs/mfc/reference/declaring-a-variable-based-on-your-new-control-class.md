@@ -8,12 +8,12 @@ helpviewer_keywords:
 - control classes [MFC], variables
 - classes [MFC], declaring variables based on
 ms.assetid: 5722dc38-c0eb-40bd-93da-67a808140d03
-ms.openlocfilehash: b3b1a168619c1c111db3e71e1a9562d441cc710d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d550b80beb124f3d8ec36ba81dad1a9ca7e9fa15
+ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323003"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741609"
 ---
 # <a name="declaring-a-variable-based-on-your-new-control-class"></a>声明基于新控件类的变量
 
@@ -41,7 +41,7 @@ ms.locfileid: "62323003"
 
 9. 在中**注释**框中，添加你想要显示在代码中的注释。
 
-10. 单击 **“确定”**。
+10. 单击 **“确定”** 。
 
 ## <a name="see-also"></a>请参阅
 
@@ -52,4 +52,4 @@ ms.locfileid: "62323003"
 [添加成员变量](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
 [重写虚函数](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [MFC 消息处理程序](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
-[导航类结构](../../ide/navigating-the-class-structure-visual-cpp.md)
+[导航类结构](../../ide/navigate-code-cpp.md)
