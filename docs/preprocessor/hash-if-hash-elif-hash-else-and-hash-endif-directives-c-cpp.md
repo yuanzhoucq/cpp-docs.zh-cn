@@ -41,25 +41,25 @@ ms.locfileid: "62409884"
 &nbsp;&nbsp;&nbsp;&nbsp;*如果行文本*
 
 *如果行*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#if**  *constant-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef**  *identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef**  *identifier*
+&nbsp;&nbsp;&nbsp;&nbsp; **#if**  *constant-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifdef**  *identifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifndef**  *identifier*
 
 *命令部件*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*命令行文本*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*命令部件命令行文本*
 
 *命令行*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#elif**  *constant-expression*
+&nbsp;&nbsp;&nbsp;&nbsp; **#elif**  *constant-expression*
 
 *其他部件*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*其他行文本*
 
 *其他行*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#else**
+&nbsp;&nbsp;&nbsp;&nbsp; **#else**
 
 *endif 行*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#endif**
+&nbsp;&nbsp;&nbsp;&nbsp; **#endif**
 
 每个 **#if**源文件中的指令必须匹配的右 **#endif**指令。 任意数量的 **#elif**指令可以出现在之间 **#if**并 **#endif**指令，但最多一个 **#else**允许指令。 **#Else**指令，如果存在，必须在之前的最后一个指令 **#endif**。
 
@@ -73,7 +73,7 @@ ms.locfileid: "62409884"
 
 预处理器处理选定*文本*并将其传递给编译器。 如果*文本*包含预处理器指令，预处理器将执行这些指令。 仅编译预处理器所选的文本块。
 
-预处理器选择单个*文本*通过以下每个常量表达式求值的项 **#if**或 **#elif**指令直到找到，则返回 true （非零） 常量表达式。 它将选择所有文本 (包括从其他预处理器指令**#**) 直到其关联 **#elif**， **#else**，或 **#endif**.
+预处理器选择单个*文本*通过以下每个常量表达式求值的项 **#if**或 **#elif**指令直到找到，则返回 true （非零） 常量表达式。 它将选择所有文本 (包括从其他预处理器指令 **#** ) 直到其关联 **#elif**， **#else**，或 **#endif**.
 
 如果出现的所有*常数表达式*都为 false，或如果没有 **#elif**指令出现，则预处理器选择后的文本块 **#else**子句。 如果 **#else**省略子句和的所有实例*常数表达式*中 **#if**块都为 false，不选择任何文本块。
 

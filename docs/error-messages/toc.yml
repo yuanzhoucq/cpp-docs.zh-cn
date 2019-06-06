@@ -4246,6 +4246,8 @@
           href: compiler-warnings/c5046.md
 - name: 因编译器版本生成的编译器警告
   href: compiler-warnings/compiler-warnings-by-compiler-version.md
+- name: 默认关闭的编译器警告
+  href: ../preprocessor/compiler-warnings-that-are-off-by-default.md
 - name: C 运行时错误
   expanded: false
   items:
