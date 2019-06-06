@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: b8cabe9b-9e12-4d73-ae36-7cb12dee3213
 ms.openlocfilehash: 33269b65835812a6e1a03e091833831781d97b6d
 ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62395920"
@@ -94,9 +94,9 @@ BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCST
 
    - 适用于 32 位，找不到该项**HKEY_CURRENT_USER\Software\ODBC\ODBC。INI\ODBC 数据源**的左窗格中。
 
-      右窗格中列出了项的窗体:"pub:REG_SZ:*<data source name>*"，其中*<data source name>* 是已与你想要使用的驱动程序所需的设置配置的数据源。 选择所需的数据源，如 SQL Server。 字符串后面的项"pub:"是，在顺序中，键名和值要在中使用你*lpszAttributes*参数。
+      右窗格中列出了项的窗体:"pub:REG_SZ: *<data source name>* "，其中 *<data source name>* 是已与你想要使用的驱动程序所需的设置配置的数据源。 选择所需的数据源，如 SQL Server。 字符串后面的项"pub:"是，在顺序中，键名和值要在中使用你*lpszAttributes*参数。
 
-   - 对于 16 位，由标记 Odbc.ini 文件中找到的部分 [*\<数据源名称 >*]。
+   - 对于 16 位，由标记 Odbc.ini 文件中找到的部分 [ *\<数据源名称 >* ]。
 
       该行之后的行是窗体的"键名 = 值"。 这些是完全使用中的条目你*lpszAttributes*参数。
 
@@ -110,7 +110,7 @@ BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCST
 
 1. 选择驱动程序名称。
 
-1. 单击 **“确定”**。
+1. 单击 **“确定”** 。
 
 当 ODBC 管理器显示用于创建该特定驱动程序的新数据源的信息时，请单击**帮助**。 这将打开该特定驱动程序，其中通常包含有关该驱动程序使用的重要信息的帮助文件。
 
