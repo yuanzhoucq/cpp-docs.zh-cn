@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - CRT initialization [C++]
 ms.assetid: e7979813-1856-4848-9639-f29c86b74ad7
-ms.openlocfilehash: 980d94b29d31d8eea910fbdb171a0ae8df1dccca
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 03126b8fdf1c3824b114d822c269655c22e5ee9f
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750031"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446681"
 ---
 # <a name="crt-initialization"></a>CRT 初始化
 
@@ -41,7 +41,7 @@ int main()
 
 在堆栈上浏览函数时，您将发现 CRT 正在循环访问函数指针的列表并在遇到每个指针时对其进行调用。 这些函数类似于 `func()` 或类实例的构造函数。
 
-CRT 从 Visual C++ 编译器中获取函数指针的列表。 当编译器发现全局初始值时，它将在 `.CRT$XCU` 部分（其中，`CRT` 是部分名称，`XCU` 是组名称）中生成一个动态初始值设定项。 若要获取这些动态初始值设定项的列表，请运行命令 dumpbin /all main.obj，然后搜索 `.CRT$XCU` 部分（在将 main.cpp 作为 C++ 文件而不是 C 文件编译时）。 它将类似于以下内容：
+CRT 从 Microsoft C++ 编译器中获取函数指针的列表。 当编译器发现全局初始值时，它将在 `.CRT$XCU` 部分（其中，`CRT` 是部分名称，`XCU` 是组名称）中生成一个动态初始值设定项。 若要获取这些动态初始值设定项的列表，请运行命令 dumpbin /all main.obj  ，然后搜索 `.CRT$XCU` 部分（在将 main.cpp 作为 C++ 文件而不是 C 文件编译时）。 它将类似于以下内容：
 
 ```
 SECTION HEADER #6
@@ -73,11 +73,11 @@ CRT 定义两个指针：
 
 - `__xc_a`中的`.CRT$XCA`
 
-- `__xc_z`中的`.CRT$XCZ`
+- `.CRT$XCZ` 中的 `__xc_z`
 
 除了 `__xc_a` 和 `__xc_z` 之外，两个组未定义任何其他符号。
 
-现在，当链接器读取各种 `.CRT` 组时，它会将这些组合并在一个部分中并按字母顺序对其进行排序。 这表示用户定义的全局初始值设定项（Visual C++ 编译器将其置于 `.CRT$XCU` 中）将始终出现在 `.CRT$XCA` 之后和 `.CRT$XCZ` 之前。
+现在，当链接器读取各种 `.CRT` 组时，它会将这些组合并在一个部分中并按字母顺序对其进行排序。 这表示用户定义的全局初始值设定项（Microsoft C++ 编译器将其置于 `.CRT$XCU` 中）将始终出现在 `.CRT$XCA` 之后和 `.CRT$XCZ` 之前。
 
 此部分类似于以下内容：
 

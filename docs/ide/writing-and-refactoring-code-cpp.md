@@ -1,27 +1,28 @@
 ---
 title: 编写和重构代码 (C++)
-ms.date: 04/30/2018
+description: 使用 Visual Studio 中的 C++ 代码编辑器来设置代码格式以及导航、理解和重构代码。
+ms.date: 05/14/2019
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
-ms.openlocfilehash: bc839a759d2ff3f403ca001ab32702d3fe27833e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 04f738cd6fdd456c432c334df42f37339e7fa49e
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570425"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "66182627"
 ---
 # <a name="writing-and-refactoring-code-c"></a>编写和重构代码 (C++)
 
-Visual C++ 代码编辑器和 IDE 提供许多编码帮助。 有些为 C++ 所独有，有些实质上对于所有 Visual Studio 语言均相同。 有关共享功能的详细信息，请参阅[在代码和文本编辑器中编写代码](/visualstudio/ide/writing-code-in-the-code-and-text-editor)。 启用和配置 C++ 特定功能的选项位于“工具”&#124;“选项”&#124;“文本编辑器”&#124;“C/C++”下。 选择想要设置的选项之后，在焦点位于对话框上时按 F1 可获取更多帮助。 如需通用代码格式选项，请在“快速启动”中键入 `Editor C++`。
+C++ 代码编辑器和 Visual Studio IDE 提供许多编码帮助。 有些为 C++ 所独有，有些实质上对于所有 Visual Studio 语言均相同。 有关共享功能的详细信息，请参阅[在代码和文本编辑器中编写代码](/visualstudio/ide/writing-code-in-the-code-and-text-editor)。 启用和配置 C++ 特定功能的选项位于“工具”&#124;“选项”&#124;“文本编辑器”&#124;“C/C++”下  。 选择想要设置的选项之后，在焦点位于对话框上时按 F1 可获取更多帮助  。 如需通用代码格式选项，请在“快速启动”中键入 `Editor C++`  。
 
-在[文本编辑器 C++ 实验](/visualstudio/ide/reference/options-text-editor-c-cpp-experimental)对话框中可找到实验性功能，未来版本的 Visual Studio 中不一定包含这些功能。 在 Visual Studio 2017 中，可在此对话框中启用预测 IntelliSense。
+在[文本编辑器 C++ 实验](/visualstudio/ide/reference/options-text-editor-c-cpp-experimental)对话框中可找到实验性功能，未来版本的 Visual Studio 中不一定包含这些功能。 在 Visual Studio 2017 中，可在此对话框中启用预测 IntelliSense  。
 
 ## <a name="adding-new-files"></a>添加新文件
 
-若要将新文件添加到项目，请右键单击解决方案资源管理器中的项目节点，然后选择“添加”&#124;“新建”。
+若要将新文件添加到项目，请右键单击解决方案资源管理器中的项目节点，然后选择“添加”&#124;“新建”  。
 
 ## <a name="formatting-options"></a>格式设置选项
 
-若要设置缩进、括号补全和着色等格式选项，请在“快速启动”窗口中键入“C++ 格式设置”。 Visual Studio 2017 版本 15.7 和更高版本支持 ClangFormat。 可在“工具”&#124;“选项”&#124;“文本编辑器”&#124;“C/C++”&#124;“格式”下的 [C/C++ 格式设置属性页](/visualstudio/ide/reference/options-text-editor-c-cpp-formatting)中配置对其进行配置。
+若要设置缩进、括号补全和着色等格式选项，请在“快速启动”窗口中键入“C++ 格式设置”  。 Visual Studio 2017 版本 15.7 和更高版本支持 ClangFormat。 可在“工具”&#124;“选项”&#124;“文本编辑器”&#124;“C/C++”&#124;“格式”下的 [C/C++ 格式设置属性页](/visualstudio/ide/reference/options-text-editor-c-cpp-formatting)中配置对其进行配置  。
 
 ![C++ 格式设置选项](media/cpp-formatting-options.png)
 
@@ -41,7 +42,7 @@ IntelliSense 是一组提供有关成员、类型和函数重载的内联信息�
 
 ## <a name="add-class"></a>添加类
 
-使用类向导从“项目”菜单添加新类。
+使用类向导从“项目”菜单添加新类  。
 
 ![在 Visual C&#43;&#43; 中添加新类](../ide/media/vs2015_cpp_add_class.png "vs2015_cpp_add_class")
 
@@ -53,7 +54,7 @@ IntelliSense 是一组提供有关成员、类型和函数重载的内联信息�
 
 ## <a name="refactoring"></a>重构
 
-可在“快速操作”上下文菜单下，或者通过单击编辑器中的[灯泡](/visualstudio/ide/perform-quick-actions-with-light-bulbs)使用重构。  有的也可从“编辑”>“重构”菜单访问。  这些功能包括：
+可在“快速操作”上下文菜单下，或者通过单击编辑器中的[灯泡](/visualstudio/ide/perform-quick-actions-with-light-bulbs)使用重构。  有的也可从“编辑”>“重构”菜单访问  。  这些功能包括：
 
 * [重命名](refactoring/rename.md)
 * [提取函数](refactoring/extract-function.md)
@@ -81,13 +82,13 @@ Visual C++ 与其他语言共享许多代码导航功能。 有关详细信息�
 
 ## <a name="peek-definition"></a>查看定义
 
-将鼠标悬停在变量或函数声明上，右键单击，然后选择“查看定义”以查看其定义的内联视图。 有关详细信息，请参阅[查看定义 (Alt+F12)](/visualstudio/ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12)。
+将鼠标悬停在变量或函数声明上，右键单击，然后选择“查看定义”以查看其定义的内联视图  。 有关详细信息，请参阅[查看定义 (Alt+F12)](/visualstudio/ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12)。
 
 ![Visual C&#43;&#43; 查看定义](../ide/media/vs2015_cpp_peek_definition.png "vs2015_cpp_peek_definition")
 
 ## <a name="go-to-definition"></a>转到定义
 
-将鼠标悬停在变量或函数声明上，右键单击，然后选择“转到定义”以打开定义对象的文档。
+将鼠标悬停在变量或函数声明上，右键单击，然后选择“转到定义”以打开定义对象的文档  。
 
 ## <a name="view-call-hierarchy"></a>查看调用层次结构
 
@@ -97,11 +98,11 @@ Visual C++ 与其他语言共享许多代码导航功能。 有关详细信息�
 
 ## <a name="toggle-header--code-file"></a>切换标题/代码文件
 
-右键单击并选择“切换标头/代码文件”，以便在头文件及其关联代码文件之间来回切换。
+右键单击并选择“切换标头/代码文件”，以便在头文件及其关联代码文件之间来回切换  。
 
 ## <a name="outlining"></a>大纲显示
 
-右键单击源代码文件中的任意位置，然后选择“大纲”以折叠或展开定义和/或自定义区域，以便更轻松地仅浏览你感兴趣的部分。 有关详细信息，请参阅[大纲显示](/visualstudio/ide/outlining)。
+右键单击源代码文件中的任意位置，然后选择“大纲”以折叠或展开定义和/或自定义区域，以便更轻松地仅浏览你感兴趣的部分  。 有关详细信息，请参阅[大纲显示](/visualstudio/ide/outlining)。
 
 ![Visual C&#43;&#43; 大纲](../ide/media/vs2015_cpp_outlining.png "vs2015_cpp_outlining")
 
@@ -113,7 +114,7 @@ Visual C++ 与其他语言共享许多代码导航功能。 有关详细信息�
 
 ## <a name="generate-graph-of-include-files"></a>生成包含文件的关系图
 
-右键单击项目中的代码文件，然后选择“生成包含文件的关系图”以查看其他文件包含哪些文件的关系图。
+右键单击项目中的代码文件，然后选择“生成包含文件的关系图”以查看其他文件包含哪些文件的关系图  。
 
 ![Visual C&#43;&#43; 包含文件的关系图](../ide/media/vs2015_cpp_include_graph.png "vs2015_cpp_include_graph")
 

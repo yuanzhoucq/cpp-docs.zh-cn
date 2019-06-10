@@ -1,21 +1,21 @@
 ---
 title: 演练：生成项目 (C++)
-ms.date: 09/14/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - building projects [C++]
 - projects [C++], building
 - project building [C++]
 ms.assetid: d459bc03-88ef-48d0-9f9a-82d17f0b6a4d
-ms.openlocfilehash: 8aadb6983cc096ff75785c6bab7ace6bd5f0c632
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
+ms.openlocfilehash: ea477e7b2f5435e049b242e68d151cc1f2d20624
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57808998"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "66182687"
 ---
 # <a name="walkthrough-building-a-project-c"></a>演练：生成项目 (C++)
 
-在本演练中，你故意在代码中引入一个 Visual C++ 语法错误，来了解什么是编译错误，以及如何修复。 编译项目时，会显示错误消息以指示所发生的问题的性质和位置。
+在本演练中，特意在代码中引入 C++ 语法错误来了解什么是编译错误，以及如何修复。 编译项目时，会显示错误消息以指示所发生的问题的性质和位置。
 
 ## <a name="prerequisites"></a>系统必备
 
@@ -29,21 +29,21 @@ ms.locfileid: "57808998"
 
    `return 0`
 
-1. 在菜单栏上，依次选择“生成” > “生成解决方案”。
+1. 在菜单栏上，依次选择“生成” > “生成解决方案”   。
 
-1. “错误列表”窗口中的消息指示生成项目过程中出现了错误。 该声明类似于以下错误消息：
+1. “错误列表”窗口中的消息指示生成项目过程中出现了错误  。 该声明类似于以下错误消息：
 
    `error C2143: syntax error: missing ';' before '}'`
 
-   若要查看有关此错误的帮助信息，请在“错误列表”窗口中将其突出显示，然后选择 F1 键。
+   若要查看有关此错误的帮助信息，请在“错误列表”  窗口中将其突出显示，然后选择 F1  键。
 
 1. 将分号重新添加到导致语法错误的行的末尾：
 
    `return 0;`
 
-1. 在菜单栏上，依次选择“生成” > “生成解决方案”。
+1. 在菜单栏上，依次选择“生成” > “生成解决方案”   。
 
-   “输出”窗口中的消息指示项目已成功编译。
+   “输出”窗口中的消息指示项目已成功编译  。
 
     ```Output
     1>------ Build started: Project: Game, Configuration: Debug Win32 ------
@@ -54,8 +54,8 @@ ms.locfileid: "57808998"
 
 ## <a name="next-steps"></a>后续步骤
 
-上一步：[演练：使用项目和解决方案 (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)<br/>
-**下一篇：**[演练：测试项目 (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
+上一步：  [演练：使用项目和解决方案 (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)<br/>
+**下一篇：** [演练：测试项目 (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
 
 ## <a name="see-also"></a>请参阅
 
