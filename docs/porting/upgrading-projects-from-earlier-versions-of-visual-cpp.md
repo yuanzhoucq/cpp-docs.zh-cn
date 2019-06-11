@@ -1,16 +1,17 @@
 ---
 title: 从 Visual C++ 早期版本升级项目
-ms.date: 11/04/2016
+description: 如何从旧版本的 Visual Studio 升级 Microsoft C++ 项目。
+ms.date: 05/03/2019
 helpviewer_keywords:
 - 32-bit code porting
 - upgrading Visual C++ applications, 32-bit code
 ms.assetid: 18cdacaa-4742-43db-9e4c-2d9e73d8cc84
-ms.openlocfilehash: 41cac1b23d5ab16825891ef654341016958ab826
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: fca4a87310f7ba0c21a6a7512dd93dce0f915f6b
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59034908"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220387"
 ---
 # <a name="upgrading-projects-from-earlier-versions-of-visual-c"></a>从 Visual C++ 早期版本升级项目
 
@@ -25,7 +26,7 @@ ms.locfileid: "59034908"
 
 2. 在 Visual Studio 的当前版本中，打开（并因此升级）项目或解决方案的副本并保存。
 
-3. 对于每个转换的项目，打开快捷菜单并选择 **“属性”**。 在 **“配置属性”** 下，选择 **“常规”** ，然后为 **“平台工具集”** 选择当前版本。 （例如，为 Visual Studio 2017 选择 v141。）
+3. 对于每个转换的项目，打开快捷菜单并选择 **“属性”** 。 在 **“配置属性”** 下，选择 **“常规”** ，然后为 **“平台工具集”** 选择当前版本。 （例如，为 Visual Studio 2017 选择 v141。  ）
 
 4. 生成解决方案。 如果生成失败，请修改设置并重新生成。
 
@@ -45,6 +46,6 @@ ms.locfileid: "59034908"
 
 ## <a name="see-also"></a>请参阅
 
-[Visual Studio 2017 中 Visual C++ 的新增功能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
+[Visual Studio 中 Visual C++ 的新增功能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
 [Visual C++ 更改历史记录（2003 - 2015）](../porting/visual-cpp-change-history-2003-2015.md)<br/>
 [非标准行为](../cpp/nonstandard-behavior.md)

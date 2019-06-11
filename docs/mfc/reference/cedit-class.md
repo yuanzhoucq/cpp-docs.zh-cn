@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: 45c03d142c34186660aa2715081ffb0f45e85ccc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 295a58a86f35fca3b8d25706857162facc9cb3ea
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164067"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503748"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -181,7 +181,7 @@ class CEdit : public CWnd
 
 每个消息映射条目采用以下形式：
 
-  **ON_**_NOTIFICATION_**(** _id_**,** _memberFxn_ **)**
+  **ON_** _NOTIFICATION_ **(** _id_ **,** _memberFxn_ **)**
 
 其中`id`指定发送通知的编辑控件的子窗口 ID 和`memberFxn`是您编写以处理通知的父成员函数的名称。
 
@@ -708,7 +708,7 @@ TCHAR GetPasswordChar() const;
 
 ### <a name="remarks"></a>备注
 
-如果使用 ES_PASSWORD 样式创建编辑控件，支持控件的 DLL 将确定默认密码字符。 清单或[InitCommonControlsEx](/windows/desktop/api/commctrl/nf-commctrl-initcommoncontrolsex)方法确定将哪个 DLL 支持编辑控件。 如果 user32.dll 支持编辑控件，默认密码字符是星号 (*，U + 002A)。 如果 comctl32.dll 版本 6 支持编辑控件的默认字符是黑色圆圈 （U + 25CF ●）。 详细了解哪些 DLL 和版本支持的公共控件，请参阅[Shell 和公共控件版本](https://msdn.microsoft.com/library/windows/desktop/bb776779)。
+如果使用 ES_PASSWORD 样式创建编辑控件，支持控件的 DLL 将确定默认密码字符。 清单或[InitCommonControlsEx](/windows/desktop/api/commctrl/nf-commctrl-initcommoncontrolsex)方法确定将哪个 DLL 支持编辑控件。 如果 user32.dll 支持编辑控件，默认密码字符是星号 (*，U + 002A)。 如果 comctl32.dll 版本 6 支持编辑控件的默认字符是黑色圆圈 （U + 25CF ●）。 详细了解哪些 DLL 和版本支持的公共控件，请参阅[Shell 和公共控件版本](/previous-versions/windows/desktop/legacy/bb776779\(v=vs.85\))。
 
 此方法将发送[EM_GETPASSWORDCHAR](/windows/desktop/Controls/em-getpasswordchar)消息，Windows SDK 中所述。
 
@@ -867,7 +867,7 @@ int LineIndex(int nLine = -1) const;
 
 此成员函数仅由多行编辑控件处理。
 
-有关详细信息，请参阅[EM_LINEINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761611) Windows SDK 中。
+有关详细信息，请参阅[EM_LINEINDEX](/windows/desktop/controls/em-lineindex) Windows SDK 中。
 
 ### <a name="example"></a>示例
 

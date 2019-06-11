@@ -2,12 +2,12 @@
 title: 将代码升级到通用 CRT
 ms.date: 03/31/2017
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
-ms.openlocfilehash: bdf1615d47361654e9690977520d01c332098438
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 68edcd57ee03ac861a6d2105456f4dbf699c1210
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58898760"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448996"
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>将代码升级到通用 CRT
 
@@ -19,17 +19,17 @@ UCRT 现为 Windows 组件，并作为 Windows 10 的一部分提供。 UCRT 支
 
 ## <a name="where-to-find-the-universal-crt-files"></a>在哪里可以找到通用 CRT 文件
 
-作为 Windows 组件，UCRT 库文件和标头现在是 Windows 软件开发工具包 (SDK) 的一部分。 安装 Visual Studio 时，会同时安装使用 UCRT 时所需的 Windows SDK 的部件。 Visual Studio 安装程序将 UCRT 头、库和 DLL 文件的位置添加到 Visual Studio 项目生成系统所使用的默认路径。 当更新 Visual C++ 项目时，如果它们使用默认项目设置，IDE 将自动为头文件查找新位置，并且链接器会自动使用新的默认 UCRT 和 vcruntime 库。 同样，如果使用开发人员命令提示执行命令行生成，则包含头和库路径的环境变量也会更新并自动工作。
+作为 Windows 组件，UCRT 库文件和标头现在是 Windows 软件开发工具包 (SDK) 的一部分。 安装 Visual Studio 时，会同时安装使用 UCRT 时所需的 Windows SDK 的部件。 Visual Studio 安装程序将 UCRT 头、库和 DLL 文件的位置添加到 Visual Studio 项目生成系统所使用的默认路径。 更新 Visual Studio C++ 项目时，如果它们使用默认项目设置，IDE 会自动为头文件查找新位置，并且链接器会自动使用新的默认 UCRT 和 vcruntime 库。 同样，如果使用开发人员命令提示执行命令行生成，则包含头和库路径的环境变量也会更新并自动工作。
 
 标准 C 库头文件现可在 Windows SDK 中找到，其位于特定于 SDK 版本的目录的包含文件夹中。 头文件的常规位置在 Windows Kits\\10\\Include\\_sdk-version_\\ucrt 下的 Program Files 或 Program Files (x86) 目录中，其中 _sdk-version_ 对应于 Windows 版本或更新，例如，用于 Windows 10 周年更新的 10.0.14393.0。
 
 UCRT 静态库和动态链接存根库位于 Windows Kits\\10\\Lib\\_sdk-version_\\ucrt\\_architecture_ 下的 Program Files 或 Program Files (x86) 目录下，其中 _architecture_ 是 ARM、x86 或 X64。 零售和调试静态库分别是 libucrt.lib 和 libucrtd.lib，用于 UCRT DLL 的库是 ucrt.lib 和 ucrtd.lib。
 
-零售和调试 UCRT DLL 位于不同的位置。 零售 DLL 可再发行，可以在 Program Files 或 Program Files (x86) 目录的 Windows Kits\\10\\Redist\\ucrt\\DLLs\\architecture\. 中找到 调试 UCRT 库不可再发行，可以在 Program Files 或 Program Files (x86) 目录的 Windows Kits\\10\\bin\\architecture\\ucrt 文件夹中找到。
+零售和调试 UCRT DLL 位于不同的位置。 零售 DLL 可再发行，可以在 Program Files 或 Program Files (x86) 目录的 Windows Kits\\10\\Redist\\ucrt\\DLLs\\architecture  \. 中找到 调试 UCRT 库不可再发行，可以在 Program Files 或 Program Files (x86) 目录的 Windows Kits\\10\\bin\\architecture  \\ucrt 文件夹中找到。
 
 C 和 C++ 编译器特定的运行时支持库 **vcruntime**，包含支持程序启动所需的代码以及异常处理和内部函数等功能。 库及其头文件仍位于 Program Files 或 Program files (x86) 目录中特定于版本的 Microsoft Visual Studio 文件夹中。 在 Visual Studio 2017 中，标头位于 Microsoft Visual Studio\\2017\\_edition_\\VC\\Tools\\MSVC\\_lib-version_\\include 中，链接库位于 Microsoft Visual Studio\\2017\\_edition_\\VC\\Tools\\MSVC\\_lib-version_\\lib\\_architecture_ 中，其中 _edition_ 是安装的 Visual Studio 版本，_lib-version_ 是库的版本，而 _architecture_ 是处理器体系结构。 OneCore 和 Store 的链接库也位于库文件夹中。 静态库的零售和调试版本分别是 libvcruntime.lib 和 libvcruntimed.lib。 动态链接零售和调试存根库分别是 vcruntime.lib 和 vcruntimed.lib。
 
-更新 Visual C++ 项目时，如果将项目的链接器属性“忽略所有默认库”设置为“是”，或在命令行上使用 `/NODEFAULTLIB` 链接器选项，则必须更新库的列表，使其包含新的重构库。 将旧的 CRT 库（例如 libcmt.lib、libcmtd.lib、msvcrt.lib 或 msvcrtd.lib）替换为等效的重构库。 有关要使用的特定库的信息，请参阅 [CRT 库的功能](../c-runtime-library/crt-library-features.md)。
+更新 Visual Studio C++ 项目时，如果将项目的“链接器”属性“忽略所有默认库”设置为“是”，或在命令行上使用 `/NODEFAULTLIB` 链接器选项，则必须更新库的列表，使其包含新的重构库    。 将旧的 CRT 库（例如 libcmt.lib、libcmtd.lib、msvcrt.lib 或 msvcrtd.lib）替换为等效的重构库。 有关要使用的特定库的信息，请参阅 [CRT 库的功能](../c-runtime-library/crt-library-features.md)。
 
 ## <a name="deployment-and-redistribution-of-the-universal-crt"></a>通用 CRT 的部署和重新分发
 

@@ -72,12 +72,12 @@ helpviewer_keywords:
 - COleControlContainer [MFC], m_pWnd
 - COleControlContainer [MFC], m_siteMap
 ms.assetid: f7ce9246-0fb7-4f07-a83a-6c2390d0fdf8
-ms.openlocfilehash: 6e97f7ceafb92098d701cba64b4ec01d26d3991a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d386072b67568ecf58afd0853df2d7fbaeac68d
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310430"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504568"
 ---
 # <a name="colecontrolcontainer-class"></a>COleControlContainer 类
 
@@ -473,7 +473,7 @@ virtual UINT GetDlgItemInt(
 指向布尔变量来接收函数成功/失败值 （TRUE 表示成功，FALSE 表示失败）。
 
 *bSigned*<br/>
-指定函数是否应检查负号开头的文本并返回一个有符号的整数值，如果它找到一个。 如果*bSigned*参数为 TRUE 时，指定要检索的值一个有符号的整数值，将返回值强制转换**int**类型。 若要获得扩展错误信息，请调用[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)。
+指定函数是否应检查负号开头的文本并返回一个有符号的整数值，如果它找到一个。 如果*bSigned*参数为 TRUE 时，指定要检索的值一个有符号的整数值，将返回值强制转换**int**类型。 若要获得扩展错误信息，请调用[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
 
 ### <a name="return-value"></a>返回值
 
@@ -515,7 +515,7 @@ virtual int GetDlgItemText(
 
 如果函数成功，返回的值指定字符复制到缓冲区，不包括终止 null 字符的数。
 
-如果函数失败，则返回值为零。 若要获得扩展错误信息，请调用[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)。
+如果函数失败，则返回值为零。 若要获得扩展错误信息，请调用[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
 
 ##  <a name="handlesetfocus"></a>  COleControlContainer::HandleSetFocus
 

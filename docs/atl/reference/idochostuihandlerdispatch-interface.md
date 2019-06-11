@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - IDocHostUIHandlerDispatch interface
 ms.assetid: 6963a301-601a-4ac3-8bef-f7b252ea2fc6
-ms.openlocfilehash: 6ce3532e99dc1d0ff0151285766aa5d78c2b9e9d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4f5024e282885797858c800640bc5651819ca20
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275303"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503073"
 ---
 # <a name="idochostuihandlerdispatch-interface"></a>IDocHostUIHandlerDispatch 接口
 
@@ -32,7 +32,7 @@ interface IDocHostUIHandlerDispatch : IDispatch
 ### <a name="public-methods"></a>公共方法
 
 > [!NOTE]
->  下表中的链接将指向的成员的 INet SDK 参考主题[IDocUIHostHandler](https://msdn.microsoft.com/library/aa753260.aspx)接口。 `IDocHostUIHandlerDispatch` 具有相同的功能`IDocUIHostHandler`，使用不同的是，`IDocHostUIHandlerDispatch`是调度接口，而`IDocUIHostHandler`是自定义的接口。
+>  下表中的链接将指向的成员的 INet SDK 参考主题[IDocUIHostHandler](/windows/internet-explorer/ie-developer/platform-apis/aa753260\(v=vs.85\))接口。 `IDocHostUIHandlerDispatch` 具有相同的功能`IDocUIHostHandler`，使用不同的是，`IDocHostUIHandlerDispatch`是调度接口，而`IDocUIHostHandler`是自定义的接口。
 
 |||
 |-|-|
@@ -67,4 +67,4 @@ interface IDocHostUIHandlerDispatch : IDispatch
 
 ## <a name="see-also"></a>请参阅
 
-[IDocUIHostHandler](https://msdn.microsoft.com/library/aa753260.aspx)
+[IDocUIHostHandler](/windows/internet-explorer/ie-developer/platform-apis/aa753260\(v=vs.85\))

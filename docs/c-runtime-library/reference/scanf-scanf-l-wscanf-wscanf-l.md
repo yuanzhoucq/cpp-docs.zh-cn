@@ -98,7 +98,7 @@ int _wscanf_l(
 **Scanf**函数从标准输入流中读取数据**stdin**并将数据写入到指定的位置*参数*。 每个*自变量*必须是指向类型中的类型说明符相对应的变量的指针*格式*。 如果复制出现在重叠的字符串之间，则该行为不确定。
 
 > [!IMPORTANT]
-> 读取的字符串时**scanf**，始终指定的宽度 **%s**格式 (例如， **"%32 秒"** 而不是 **"%s"**); 否则为输入格式不正确很容易导致缓冲区溢出。 或者，可以考虑使用 [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) 或 [fgets](fgets-fgetws.md)。
+> 读取的字符串时**scanf**，始终指定的宽度 **%s**格式 (例如， **"%32s"** 而不是 **"%s"** ); 否则为输入格式不正确很容易导致缓冲区溢出。 或者，可以考虑使用 [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) 或 [fgets](fgets-fgetws.md)。
 
 **wscanf**是宽字符版本**scanf**;*格式*参数**wscanf**是宽字符字符串。 **wscanf**并**scanf**如果在 ANSI 模式下打开流，则行为相同。 **scanf**当前不支持 UNICODE 流的输入。
 

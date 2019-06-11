@@ -54,12 +54,12 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-ms.openlocfilehash: 14a4691e0c1f25a8f9e8b2b652c6e582f51c954a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b61d38d141392dc85a150ddd2caf50b28146ae7
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62235115"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503171"
 ---
 # <a name="cimage-class"></a>CImage 类
 
@@ -158,7 +158,7 @@ class CImage
 > [!NOTE]
 > 使用全局`CImage`不建议在 DLL 中的对象。 如果你需要使用全局`CImage`对象中的 DLL，调用[CImage::ReleaseGDIPlus](#releasegdiplus)来显式释放资源使用的 GDI +。
 
-`CImage` 不能选择到新[CDC](../../mfc/reference/cdc-class.md)。 `CImage` 创建其自己 HDC 的图像。 由于一次仅为一个 HDC 选择 HBITMAP，与关联 HBITMAP`CImage`不能选择到另一个 HDC。 如果您需要 CDC，检索从 HDC`CImage`并将其交给 [CDC::FromHandle] (../../mfc/reference/cdc-class.md#cdc__fromhandle。
+`CImage` 不能选择到新[CDC](../../mfc/reference/cdc-class.md)。 `CImage` 创建其自己 HDC 的图像。 由于一次仅为一个 HDC 选择 HBITMAP，与关联 HBITMAP`CImage`不能选择到另一个 HDC。 如果您需要 CDC，检索从 HDC `CImage` ，并为其提供[CDC::FromHandle](../../mfc/reference/cdc-class.md#fromhandle)。
 
 ## <a name="example"></a>示例
 
@@ -480,7 +480,7 @@ BOOL CreateEx(
 - 未压缩 BI_BITFIELDS 格式和颜色表包含三个 DWORD 颜色掩码，每个像素分别指定红色、 绿色和蓝色组件。 此值与 16 和 32 bpp 位图一起使用时有效。
 
 *pdwBitfields*<br/>
-仅当使用*eCompression*设置到 BI_BITFIELDS，否则它必须为 NULL。 指向的三个 DWORD 位掩码，指定颜色的红色、 绿色和蓝色组件分别使用每个像素的位数组的指针。 有关限制的位域的信息，请参阅[BITMAPINFOHEADER](https://msdn.microsoft.com/library/windows/desktop/dd183376) Windows SDK 中。
+仅当使用*eCompression*设置到 BI_BITFIELDS，否则它必须为 NULL。 指向的三个 DWORD 位掩码，指定颜色的红色、 绿色和蓝色组件分别使用每个像素的位数组的指针。 有关限制的位域的信息，请参阅[BITMAPINFOHEADER](/previous-versions//dd183376\(v=vs.85\)) Windows SDK 中。
 
 *dwFlags*<br/>
 指定位图对象是否具有 alpha 通道。 可以是零个或多个以下值的组合：
@@ -648,7 +648,7 @@ int GetBPP() const throw();
 
 此值确定的定义每个像素的位数和颜色位图中的最大数目。
 
-1、 4、 8、 16、 24、 或 32，通常是每个像素的位数。 请参阅`biBitCount`的成员[BITMAPINFOHEADER](https://msdn.microsoft.com/library/windows/desktop/dd183376)适用于此值有关的详细信息的 Windows SDK 中。
+1、 4、 8、 16、 24、 或 32，通常是每个像素的位数。 请参阅`biBitCount`的成员[BITMAPINFOHEADER](/previous-versions//dd183376\(v=vs.85\))适用于此值有关的详细信息的 Windows SDK 中。
 
 ##  <a name="getcolortable"></a>  CImage::GetColorTable
 

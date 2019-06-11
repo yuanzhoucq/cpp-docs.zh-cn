@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-ms.openlocfilehash: f74d883fa0dcdce025345848caf49069736ee0fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe4994b91813e2965972b47c838ddaf5333cc5f0
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385360"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503752"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog 类
 
@@ -512,7 +512,7 @@ void ApplyOFNToShellDialog();
 
 ### <a name="remarks"></a>备注
 
-在 Windows Vista，该成员之前的 Windows 版本[OPENFILENAME](https://msdn.microsoft.com/library/ms911906.aspx)持续的状态同步数据结构`CFileDialog`。 对任何更改[m_ofn](#m_ofn)成员变量都立即反映在对话框中的状态。 此外，对对话框的状态的任何更改立即更新`m_ofn`成员变量。
+在 Windows Vista，该成员之前的 Windows 版本[OPENFILENAME](/previous-versions/windows/embedded/ms911906\(v=msdn.10\))持续的状态同步数据结构`CFileDialog`。 对任何更改[m_ofn](#m_ofn)成员变量都立即反映在对话框中的状态。 此外，对对话框的状态的任何更改立即更新`m_ofn`成员变量。
 
 在 Windows Vista 或更高版本中的值`m_ofn`成员变量和状态`CFileDialog`不保证能够同步。 此函数会强制状态`CFileDialog`若要更新以匹配`m_ofn`结构。 Windows 将调用此函数过程中自动[CFileDialog::DoModal](#domodal)。
 
@@ -1626,7 +1626,7 @@ void UpdateOFNFromShellDialog();
 
 ### <a name="remarks"></a>备注
 
-在 Windows Vista，该成员之前的 Windows 版本[OPENFILENAME](https://msdn.microsoft.com/library/ms911906.aspx)持续的状态同步数据结构`CFileDialog`。 对任何更改[m_ofn](#m_ofn)成员变量直接影响对话框的状态。 此外，对对话框中的状态的任何更改立即更新 m_ofn 成员变量。
+在 Windows Vista，该成员之前的 Windows 版本[OPENFILENAME](/previous-versions/windows/embedded/ms911906\(v=msdn.10\))持续的状态同步数据结构`CFileDialog`。 对任何更改[m_ofn](#m_ofn)成员变量直接影响对话框的状态。 此外，对对话框中的状态的任何更改立即更新 m_ofn 成员变量。
 
 在 Windows Vista 或更高版本，`m_ofn`数据结构不会自动更新。 若要保证中的数据的准确性`m_ofn`成员变量，则应调用`UpdateOFNFromShellDialog`之前访问的数据的函数。 Windows 将调用此函数会自动处理期间[IFileDialog::OnFileOK](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ifiledialogevents-onfileok)。
 

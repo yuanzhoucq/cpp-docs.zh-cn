@@ -34,12 +34,12 @@ helpviewer_keywords:
 - dates, handling in MFC
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
-ms.openlocfilehash: 46b5f15a2f6048745a12b8c3a8c8a63404f71aa2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 63c2971f5d55cb5198925650bcf90b2f1a8b0958
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252696"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503219"
 ---
 # <a name="coledatetime-class"></a>COleDateTime 类
 
@@ -108,7 +108,7 @@ class COleDateTime
 
 `DATE`类型作为浮点值。 天是从 1899 年 12 月 30 日，在午夜测量的。 下表显示了某些日期和相关联的值：
 
-|日期|“值”|
+|日期|值|
 |----------|-----------|
 |1899 年 12 月 29日日午夜|-1.0|
 |1899 年 12 月 29日日，6 点|-1.25|
@@ -169,7 +169,7 @@ bool operator>=(const COleDateTime& date) const throw();
 
 ### <a name="example"></a>示例
 
-运算符 **>=**， **\<=**， **>**，和 **<**，如果将断言`COleDateTime`对象设置为 null。
+运算符 **>=** ， **\<=** ， **>** ，和 **<** ，如果将断言`COleDateTime`对象设置为 null。
 
 [!code-cpp[NVC_ATLMFC_Utilities#170](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_3.cpp)]
 
@@ -225,7 +225,7 @@ COleDateTime(const DBTIMESTAMP& timeStamp) throw();
 MS-DOS 日期和时间值转换为日期/时间值并复制到新`COleDateTime`对象。
 
 *timeStamp*<br/>
-对引用[DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype)结构，它包含当前本地时间。
+对引用[DBTimeStamp](/dotnet/api/system.data.oledb.oledbtype)结构，它包含当前本地时间。
 
 ### <a name="remarks"></a>备注
 
@@ -347,7 +347,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& timeStamp) const throw();
 ### <a name="parameters"></a>参数
 
 *timeStamp*<br/>
-对引用[DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype)结构。
+对引用[DBTimeStamp](/dotnet/api/system.data.oledb.oledbtype)结构。
 
 ### <a name="return-value"></a>返回值
 
@@ -868,7 +868,7 @@ COleDateTimeSpan operator-(const COleDateTime& date) const throw();
 
 如果任一操作数无效且不为 null，其他的生成状态`COleDateTime`值无效。
 
-**+** 并**-** 运算符将断言如果`COleDateTime`对象设置为 null。 请参阅[COleDateTime 关系运算符](#coledatetime_relational_operators)有关的示例。
+**+** 并 **-** 运算符将断言如果`COleDateTime`对象设置为 null。 请参阅[COleDateTime 关系运算符](#coledatetime_relational_operators)有关的示例。
 
 有关有效、 无效和 null 的状态值的详细信息，请参阅[m_status](#m_status)成员变量。
 
@@ -897,7 +897,7 @@ COleDateTime& operator-=(COleDateTimeSpan dateSpan) throw();
 
 有关有效、 无效和 null 的状态值的详细信息，请参阅[m_status](#m_status)成员变量。
 
-**+=** 并**-=** 运算符将断言如果`COleDateTime`对象设置为 null。 请参阅[COleDateTime 关系运算符](#coledatetime_relational_operators)有关的示例。
+**+=** 并 **-=** 运算符将断言如果`COleDateTime`对象设置为 null。 请参阅[COleDateTime 关系运算符](#coledatetime_relational_operators)有关的示例。
 
 有关更多信息的边界`COleDateTime`值，请参阅文章[日期和时间：自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
 
@@ -1014,7 +1014,7 @@ int SetDate(
 
 下面是日期值的一些示例：
 
-|*nYear*|*nMonth*|*nDay*|“值”|
+|*nYear*|*nMonth*|*nDay*|值|
 |-------------|--------------|------------|-----------|
 |2000|2|29|29 2000 年 2 月|
 |1776|7|4|4 年 7 月圣瓦伦丁节|
@@ -1089,7 +1089,7 @@ int SetDateTime(
 
 下面是时间值的一些示例：
 
-|*nHour*|*nMin*|*nSec*|“值”|
+|*nHour*|*nMin*|*nSec*|值|
 |-------------|------------|------------|-----------|
 |1|3|3|01:03:03|
 |23|45|0|23:45:00|
@@ -1098,7 +1098,7 @@ int SetDateTime(
 
 下面是日期值的一些示例：
 
-|*nYear*|*nMonth*|*nDay*|“值”|
+|*nYear*|*nMonth*|*nDay*|值|
 |-------------|--------------|------------|-----------|
 |1995|4|15|1995 年 4 月 15日|
 |1789|7|14|17 年 7 月版|
@@ -1191,7 +1191,7 @@ int SetTime(
 
 下面是时间值的一些示例：
 
-|*nHour*|*nMin*|*nSec*|“值”|
+|*nHour*|*nMin*|*nSec*|值|
 |-------------|------------|------------|-----------|
 |1|3|3|01:03:03|
 |23|45|0|23:45:00|

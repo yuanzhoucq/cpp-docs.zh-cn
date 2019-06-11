@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL_DRAWINFO structure
 ms.assetid: dd2e2aa8-e8c5-403b-b4df-35c0f6f57fb7
-ms.openlocfilehash: 70329d3b2c18c8cd8e94854f40ff971c0b39a8f4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77ef56f73be1ed9ddfc63c459b6bab3ad4decb3f
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261060"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503418"
 ---
 # <a name="atldrawinfo-structure"></a>ATL_DRAWINFO 结构
 
@@ -60,7 +60,7 @@ struct ATL_DRAWINFO {
 在其上绘制的设备上下文。 对于无窗口的对象，`hdcDraw`成员是在`MM_TEXT`其逻辑坐标为匹配包含窗口的工作区映射模式。 此外，设备上下文应处于相同状态通常通过传递一个`WM_PAINT`消息。
 
 `prcBounds`<br/>
-指向[RECTL](https://msdn.microsoft.com/library/windows/desktop/dd162907)结构，它在指定矩形`hdcDraw`和在绘制该对象。 此成员控制的定位和拉伸的对象。 此成员应为 NULL，以绘制无窗口的就地活动对象。 在每个其他情况下，NULL 不是合法的值，并应导致`E_INVALIDARG`错误代码。 如果该容器将非 NULL 值传递给无窗口对象，该对象应呈现到指定的设备上下文和矩形请求的方面。 容器应用程序可以请求从无窗口对象来呈现该对象的第二个、 非活动视图或打印对象。
+指向[RECTL](/previous-versions//dd162907\(v=vs.85\))结构，它在指定矩形`hdcDraw`和在绘制该对象。 此成员控制的定位和拉伸的对象。 此成员应为 NULL，以绘制无窗口的就地活动对象。 在每个其他情况下，NULL 不是合法的值，并应导致`E_INVALIDARG`错误代码。 如果该容器将非 NULL 值传递给无窗口对象，该对象应呈现到指定的设备上下文和矩形请求的方面。 容器应用程序可以请求从无窗口对象来呈现该对象的第二个、 非活动视图或打印对象。
 
 `prcWBounds`<br/>
 如果`hdcDraw`是图元文件设备上下文 (请参阅[GetDeviceCaps](/windows/desktop/api/wingdi/nf-wingdi-getdevicecaps) Windows SDK 中)，这是一个指向`RECTL`结构，它的基础元文件中指定的边框。 该矩形结构包含的窗口区和窗口来源。 这些值可用于绘制图元文件。 指示矩形`prcBounds`嵌套在此`prcWBounds`矩形; 它们处于相同的坐标空间。

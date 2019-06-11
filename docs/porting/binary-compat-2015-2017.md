@@ -1,25 +1,25 @@
 ---
-title: Visual Studio 2015 和 Visual Studio 2017 之间的 C++ 二进制兼容性
-ms.date: 09/24/2018
+title: Visual Studio 2015 和 Visual Studio 2019 之间的 C++ 二进制兼容性
+ms.date: 05/03/2019
 helpviewer_keywords:
 - binary compatibility, Visual C++
 ms.assetid: 591580f6-3181-4bbe-8ac3-f4fbaca949e6
-ms.openlocfilehash: d0291ef75bda2e4da994e40ad55d94ae1042e57e
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 052874eb9273ee9a9ce1695ffdadedd9911673e1
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740505"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449048"
 ---
-# <a name="c-binary-compatibility-between-visual-studio-2015-and-visual-studio-2017"></a>Visual Studio 2015 和 Visual Studio 2017 之间的 C++ 二进制兼容性
+# <a name="c-binary-compatibility-between-visual-studio-2015-and-visual-studio-2019"></a>Visual Studio 2015 和 Visual Studio 2019 之间的 C++ 二进制兼容性
 
-在 Visual Studio 以前的版本中，不能保证使用不同编译器工具集和运行时库生成的对象文件 (OBJ)、静态库 (LIB)、动态库 (DLL) 和可执行文件 (EXE) 之间的二进制兼容性。 这在 Visual Studio 2017 中发生了改变。 在 Visual Studio 2015 和 Visual Studio 2017 中，C++ 工具集的主版本号是 14（Visual Studio 2015 是 v140，Visual Studio 2017 是 v141）。 这反映了这样的事实：使用这两个版本之一的编译器编译的运行时库和应用程序在大多数情况下都是二进制兼容的。 这意味着，如果 Visual Studio 2015 中有 DLL，则无需对其进行重新编译即可从使用 Visual Studio 2017 生成的应用程序使用该 DLL。
+在 Visual Studio 2013 及更低版本中，不能保证使用不同编译器工具集和运行时库版本生成的对象文件 (OBJ)、静态库 (LIB)、动态库 (DLL) 和可执行文件 (EXE) 之间的二进制兼容性。 
 
-以下为此规则的两种例外情况。 在以下情况中不能保证二进制兼容性：
+在 Visual Studio 2015 及更高版本中，C++ 工具集的主版本号是 14（Visual Studio 2015 是 v140，Visual Studio 2017 是 v141，Visual Studio 2019 是 v142）。 这反映了这样的事实：使用这两个版本之一的编译器编译的运行时库和应用程序是二进制兼容的。 这意味着，如果拥有使用 Visual Studio 2015 生成的第三方库，则无需对其进行重新编译即可通过使用 Visual Studio 2017 或 Visual Studio 2019 生成的应用程序使用该库。
 
-1. 静态库或对象文件是使用 `/GL` 编译器开关编译的。
+此规则的唯一例外是，使用 `/GL` 编译器开关编译的静态库或对象文件不是二进制兼容的。 
 
-2. 构建当前使用的库时所用的工具集的版本高于编译和链接应用程序时使用的工具集。 例如，通过编译器版本 19.12 编译和链接的程序可以使用通过编译器 19.0 到 19.12 编译的库。 此外，二进制兼容性仅存在于 Visual Studio 2015 与 Visual Studio 2017 之间；不支持将 19.x 程序与使用 Visual Studio 2013 或更早版本生成的库进行链接。
+混合使用通过 MSVC 工具集的不同受支持版本生成的二进制文件时，应用程序在其上运行的 Visual C++ 可再发行组件的版本不能低于用于生成应用或其使用的任何库的任何工具集版本。 
 
 ## <a name="see-also"></a>请参阅
 

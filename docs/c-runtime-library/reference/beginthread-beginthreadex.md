@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-ms.openlocfilehash: d70d2fb0ecb647d4854a6277d6c69cd9886e072f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f64fd7b945fc8ea2e5c111d300266e07faade0e7
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349259"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504536"
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread、_beginthreadex
 
@@ -83,7 +83,7 @@ uintptr_t _beginthreadex( // MANAGED CODE
 要传递给一个新线程，参数列表或**NULL**。
 
 *安全性*<br/>
-指向 [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) 结构的指针，此结构确定返回的句柄是否由子进程继承。 如果*安全*是**NULL**，不能继承句柄。 必须是**NULL** Windows 95 应用程序。
+指向 [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) 结构的指针，此结构确定返回的句柄是否由子进程继承。 如果*安全*是**NULL**，不能继承句柄。 必须是**NULL** Windows 95 应用程序。
 
 *initflag*<br/>
 控制新线程的初始状态的标志。 设置*initflag*为 0 以立即运行，或**CREATE_SUSPENDED**创建的线程处于挂起状态; 使用[ResumeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-resumethread)来执行此线程。 设置*initflag*到**STACK_SIZE_PARAM_IS_A_RESERVATION**若要使用的标志*stack_size*如初始保留以字节为单位的堆栈大小; 如果此标志为未指定， *stack_size*指定提交大小。

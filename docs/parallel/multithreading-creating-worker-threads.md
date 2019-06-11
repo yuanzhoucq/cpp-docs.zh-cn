@@ -10,12 +10,12 @@ helpviewer_keywords:
 - threading [MFC], worker threads
 - threading [C++], user input not required
 ms.assetid: 670adbfe-041c-4450-a3ed-be14aab15234
-ms.openlocfilehash: f36e02d1ba6074a7ec8203bea761b3528a120162
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38757337b1bfe5c7994f9a9f26aad2526aa0279c
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212822"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504580"
 ---
 # <a name="multithreading-creating-worker-threads-in-mfc"></a>多线程处理：在 MFC 中创建工作线程数
 
@@ -43,7 +43,7 @@ ms.locfileid: "62212822"
 
 - （可选）如果你想要创建一个处于挂起状态的线程，CREATE_SUSPENDED。 默认值为 0，或正常启动线程。
 
-- （可选）所需的安全属性。 默认值为与父线程相同的访问权限。 有关此安全信息的格式的详细信息，请参阅[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK 中。
+- （可选）所需的安全属性。 默认值为与父线程相同的访问权限。 有关此安全信息的格式的详细信息，请参阅[SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) Windows SDK 中。
 
 `AfxBeginThread` 创建并初始化`CWinThread`对象，启动它，并返回其地址，因此可以对其进行引用更高版本。 整个过程进行检查以确保所有对象都都已解除分配正确应创建的任何部分出现故障。
 

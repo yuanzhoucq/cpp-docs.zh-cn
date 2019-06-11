@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CGopherFileFind [MFC], GetScreenName
 - CGopherFileFind [MFC], IsDots
 ms.assetid: 8465a979-6323-496d-ab4b-e81383fb999d
-ms.openlocfilehash: c1157b3583e266a09840f710b46766ffc4f31b5e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bced5a95f65713915a1f06094bfe059db79aab2d
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345755"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503645"
 ---
 # <a name="cgopherfilefind-class"></a>CGopherFileFind 类
 
@@ -161,7 +161,7 @@ virtual BOOL FindFile(
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则不为 0；否则为 0。 若要获得扩展错误信息，请调用 Win32 函数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)。
+如果成功，则不为 0；否则为 0。 若要获得扩展错误信息，请调用 Win32 函数[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
 
 ### <a name="remarks"></a>备注
 
@@ -177,7 +177,7 @@ virtual BOOL FindNextFile();
 
 ### <a name="return-value"></a>返回值
 
-非零，如果有多个文件;如果找到该文件是在目录中的最后一个，或如果出错，则为零。 若要获得扩展错误信息，请调用 Win32 函数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)。 如果找到该文件是在目录中的最后一个文件，或者如果没有匹配的可以找到文件，`GetLastError`函数返回 ERROR_NO_MORE_FILES。
+非零，如果有多个文件;如果找到该文件是在目录中的最后一个，或如果出错，则为零。 若要获得扩展错误信息，请调用 Win32 函数[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。 如果找到该文件是在目录中的最后一个文件，或者如果没有匹配的可以找到文件，`GetLastError`函数返回 ERROR_NO_MORE_FILES。
 
 ##  <a name="getcreationtime"></a>  CGopherFileFind::GetCreationTime
 

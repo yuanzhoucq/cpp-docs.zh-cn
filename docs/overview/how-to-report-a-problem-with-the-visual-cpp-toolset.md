@@ -4,12 +4,12 @@ ms.date: 06/21/2018
 ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 21931fc4976c909c77120e696f25f93c0a0fda0b
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: da703d6649cb430b572d4d0db44adcfdef8ed8c4
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446770"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451161"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>如何使用 Visual C++ 工具集或文档报告问题
 
@@ -17,7 +17,7 @@ ms.locfileid: "65446770"
 
 ## <a name="how-to-report-a-c-toolset-issue"></a>如何报告 C++ 工具集问题
 
-最好是向我们发送报告，在报告中说明你所遇到的问题、如何生成程序的详细信息，以及重现（我们可用于在自己的计算机上重现该问题的完整测试用例）。 通过这些信息，我们可以快速验证问题是存在于我们的代码中还是你的本地环境中，判断它是否会影响其他版本的编译器，并诊断其原因。
+最好是向我们发送报告，在报告中说明你所遇到的问题、如何生成程序的详细信息，以及重现（我们可用于在自己的计算机上重现该问题的完整测试用例）  。 通过这些信息，我们可以快速验证问题是存在于我们的代码中还是你的本地环境中，判断它是否会影响其他版本的编译器，并诊断其原因。
 
 在本部分中，可了解好的报告所包含的内容、如何生成所发现问题类型的报告，以及如何将报告发送给产品团队。 无论对我们，还是对和你一样的其他开发者而言，你的报告都十分重要。 谢谢你帮助我们改进 Visual C++！
 
@@ -43,9 +43,9 @@ ms.locfileid: "65446770"
 
 #### <a name="to-report-the-full-version-of-the-compiler-youre-using"></a>报告你正在使用的编译器的完整版本
 
-1. 打开与用于生成项目的 Visual Studio 版本和配置体系结构匹配的“开发人员命令提示”。 例如，如果在 x64 上使用 Visual Studio 2017 生成面向 x64 的项目，请选择“适用于 VS 2017 的 x64 本机工具命令提示”。 有关详细信息，请参阅[开发人员命令提示快捷方式](../build/building-on-the-command-line.md#developer_command_prompt_shortcuts)。
+1. 打开与用于生成项目的 Visual Studio 版本和配置体系结构匹配的“开发人员命令提示”  。 例如，如果在 x64 上使用 Visual Studio 2017 生成面向 x64 的项目，请选择“适用于 VS 2017 的 x64 本机工具命令提示”  。 有关详细信息，请参阅[开发人员命令提示快捷方式](../build/building-on-the-command-line.md#developer_command_prompt_shortcuts)。
 
-1. 在“开发人员命令提示”控制台窗口中，输入命令 cl/Bv。
+1. 在“开发人员命令提示”控制台窗口中，输入命令 cl/Bv  。
 
 该输出应与以下类似：
 
@@ -76,7 +76,7 @@ cl : Command line error D8003 : missing source filename
 
 #### <a name="to-report-the-contents-of-the-command-line"></a>报告命令行的内容
 
-1. 找到并打开 **CL.command.1.tlog** 文件。 默认情况下，此文件位于“文档”文件夹下的 \\Visual Studio version\\Projects\\SolutionName\\ProjectName\\Configuration\\ProjectName.tlog\\CL.command.1.tlog 或“用户”文件夹下的 \\Source\\Repos\\SolutionName\\ProjectName\\Configuration\\ProjectName.tlog\\CL.command.1.tlog 中。 如果使用其他生成系统，或更改了项目的默认位置，则该文件可能位于其他位置。
+1. 找到并打开 **CL.command.1.tlog** 文件。 默认情况下，此文件位于“文档”文件夹下的 \\Visual Studio version\\Projects\\SolutionName\\ProjectName\\Configuration\\ProjectName.tlog\\CL.command.1.tlog 或“用户”文件夹下的 \\Source\\Repos\\SolutionName\\ProjectName\\Configuration\\ProjectName.tlog\\CL.command.1.tlog          中。 如果使用其他生成系统，或更改了项目的默认位置，则该文件可能位于其他位置。
 
    可在此文件中找到源代码文件的名称，其后是用于编译它们的命令行参数（每个分占一行）。
 
@@ -88,11 +88,11 @@ cl : Command line error D8003 : missing source filename
 
 我们需要一份有关你所遇到问题的详细说明，以验证是否可以在我们的计算机上观察到相同的效果；有时，它还有助于使我们了解你所尝试完成的内容，以及你希望看到的结果。
 
-请提供工具集给出的确切错误消息，或者看到的确切运行时行为。 我们需要此信息来验证是否已正确重现问题。 请提供所有编译器输出，而不仅仅是最后一个错误消息。 我们需要查看与所报告问题相关的所有信息。 如果可以使用命令行编译器来复制问题，则首选编译器输出；IDE 和其他生成系统可能会筛选你看到的错误消息，或者仅捕获错误消息的第一行。
+请提供工具集给出的确切错误消息，或者看到的确切运行时行为  。 我们需要此信息来验证是否已正确重现问题。 请提供所有编译器输出，而不仅仅是最后一个错误消息  。 我们需要查看与所报告问题相关的所有信息。 如果可以使用命令行编译器来复制问题，则首选编译器输出；IDE 和其他生成系统可能会筛选你看到的错误消息，或者仅捕获错误消息的第一行。
 
 如果问题是编译器接受无效的代码并且未生成诊断，请在报告中注明。
 
-若要报告运行时行为问题，请提供该程序输出内容的原样副本，和你想要看到的内容。 理想情况下，它嵌入在输出语句本身中，例如，`printf("This should be 5: %d\n", actual_result);`。 如果程序崩溃或挂起，也请提到这一点。
+若要报告运行时行为问题，请提供该程序输出内容的原样副本，和你想要看到的内容  。 理想情况下，它嵌入在输出语句本身中，例如，`printf("This should be 5: %d\n", actual_result);`。 如果程序崩溃或挂起，也请提到这一点。
 
 添加任何其他可能有助于我们诊断你遇到的问题的详细信息，例如，你可能已发现的任何变通方法。 避免在报表的其他部分出现重复信息。
 
@@ -112,7 +112,7 @@ cl : Command line error D8003 : missing source filename
 
 - **针对其他编译器进行检查**（如果相关）。 在可能的情况下，涉及可移植 C++ 代码的重现，应在其他编译器中验证行为。 程序的正确性最终由标准来决定，没有完美的编译器，但如果 Clang 和 GCC 接受了代码并且没有诊断，而 MSVC 拒绝，那么我们的编译器可能存在 Bug。 （其他可能性包括 Unix 和 Windows 行为的差异，或者 C++ 标准实现的级别不同等。）另一方面，如果所有编译器都拒绝代码，则可能是代码不正确。 查看不同的错误消息可能有助于自行诊断问题。
 
-   你可以在 ISO C++ 网站上的[在线C++编译器](https://isocpp.org/blog/2013/01/online-c-compilers)中找到在线编译器列表，或查看 GitHub 上的[在线C ++ 编译器列表](https://arnemertz.github.io/online-compilers/)，针对这些编译器来测试代码。 一些具体示例包括 [Wandbox](https://wandbox.org/)、[Compiler Explorer](https://godbolt.org/) 和 [Coliru](http://coliru.stacked-crooked.com/)。
+   你可以在 ISO C++ 网站上的[在线C++编译器](https://isocpp.org/blog/2013/01/online-c-compilers)中找到在线编译器列表，或查看 GitHub 上的[在线C ++ 编译器列表](https://arnemertz.github.io/online-compilers/)，针对这些编译器来测试代码。 一些具体示例包括 [Wandbox](https://wandbox.org/)、[Compiler Explorer](https://godbolt.org/) 和 [Coliru](https://coliru.stacked-crooked.com/)。
 
    > [!NOTE]
    > 在线编译器网站不隶属于 Microsoft。 许多在线编译器网站都是作为个人项目运行的，在读到本文时，其中某些网站可能已失效，但通过搜索应该能找到其他可用网站。
@@ -150,7 +150,7 @@ INTERNAL COMPILER ERROR in 'd:\o\dev\otools\bin\x64\cl.exe'
 
 后端故障发生在编译器的代码生成阶段。 通常情况下，编译器会发出[错误 C1001](../error-messages/compiler-errors-1/fatal-error-c1001.md)，并且可能不会引用与问题相关的源代码文件和行号；它通常会提及文件 compiler\\utc\\src\\p2\\main.c，你可以忽略此详细信息。
 
-对于这种类型的故障，如果使用通过 cl.exe 的 /GL 命令行参数启用的链接时间代码生成 (LTCG)，请提供[链接重现](#link-repros)。 如果未使用，请提供[预处理过的重现](#preprocessed-repros)。
+对于这种类型的故障，如果使用通过 cl.exe 的 /GL 命令行参数启用的链接时间代码生成 (LTCG)，请提供[链接重现](#link-repros)  。 如果未使用，请提供[预处理过的重现](#preprocessed-repros)。
 
 下面是后端故障的示例编译器输出，其中未使用 LTCG。 如果编译器输出与此类似，请提供[预处理过的重现](#preprocessed-repros)。
 
@@ -169,7 +169,7 @@ INTERNAL COMPILER ERROR in
     Help menu, or open the Technical Support help file for more information
 ```
 
-如果以**内部编译器错误**开头的行提及 link.exe，而不是 cl.exe 并且已启用 LTCG，请提供[链接重现](#link-repros)。 如果不清楚是否因编译器错误消息而启用了 LTCG，可能需要检查你在 /GL 命令行参数的上一步中，从生成日志复制的命令行参数。
+如果以**内部编译器错误**开头的行提及 link.exe，而不是 cl.exe 并且已启用 LTCG，请提供[链接重现](#link-repros)。 如果不清楚是否因编译器错误消息而启用了 LTCG，可能需要检查你在 /GL 命令行参数的上一步中，从生成日志复制的命令行参数  。
 
 #### <a name="linker-crash"></a>链接器故障
 
@@ -220,7 +220,7 @@ CONTEXT:
 
 错误代码生成很少发生，但当编译器错误地生成不正确的代码时，它将发生，并造成应用程序在运行时（而非在编译时检测此问题时）出现故障。 如果你认为所遇到的问题会导致错误代码生成，请将报告同样视为[后端（代码生成）故障](#backend-code-generation-crash)。
 
-对于这种类型的故障，如果使用通过 cl.exe 的 /GL 命令行参数启用的链接时间代码生成 (LTCG)，请提供[链接重现](#link-repros)。 如果未使用，请提供[预处理过的重现](#preprocessed-repros)。
+对于这种类型的故障，如果使用通过 cl.exe 的 /GL 命令行参数启用的链接时间代码生成 (LTCG)，请提供[链接重现](#link-repros)  。 如果未使用，请提供[预处理过的重现](#preprocessed-repros)。
 
 ## <a name="how-to-generate-a-repro"></a>如何生成重现
 
@@ -230,7 +230,7 @@ CONTEXT:
 
 ### <a name="preprocessed-repros"></a>预处理过的重现
 
-预处理过的重现是用于说明问题的单个源文件，通过在原始重现源文件中使用 /P 编译器选项，基于 C 预处理器的输出生成。 此内联包含标头，以删除其他源和头文件中的依赖项、宏、#ifdefs 以及其他可能依赖本地化环境的预处理器命令。
+预处理过的重现是用于说明问题的单个源文件，通过在原始重现源文件中使用 /P 编译器选项，基于 C 预处理器的输出生成   。 此内联包含标头，以删除其他源和头文件中的依赖项、宏、#ifdefs 以及其他可能依赖本地化环境的预处理器命令。
 
 > [!NOTE]
 > 对于在标准库实现中可能导致 Bug 的问题，预处理过的重现可能不是很有用，因为我们经常会替换正在进行的最新实现，以确定我们是否已修复问题。 在这种情况下，请勿预处理重现，此外，如果无法将问题减少为单个源文件，请将代码打包为 .zip 文件或类似文件，或考虑使用 IDE 项目重现。 有关详细信息，请参阅[其他重现](#other-repros)。
@@ -239,11 +239,11 @@ CONTEXT:
 
 1. 捕获用于生成重现的命令行参数，如[报告命令行的内容](#to-report-the-contents-of-the-command-line)中所述。
 
-1. 打开与用于生成项目的 Visual Studio 版本和配置体系结构匹配的“开发人员命令提示”。
+1. 打开与用于生成项目的 Visual Studio 版本和配置体系结构匹配的“开发人员命令提示”  。
 
 1. 转到包含重现项目的目录。
 
-1. 在开发人员命令提示控制台窗口中，输入命令 cl /P arguments filename.cpp，其中 arguments 是前面捕获的参数列表，filename.cpp 是重现源文件的名称。 此命令复制用于重现的命令行，但在预处理器传递后停止编译，并将预处理过的源代码输出到 filename.i。
+1. 在开发人员命令提示控制台窗口中，输入命令 cl /P arguments filename.cpp，其中 arguments 是前面捕获的参数列表，filename.cpp 是重现源文件的名称      。 此命令复制用于重现的命令行，但在预处理器传递后停止编译，并将预处理过的源代码输出到 filename.i  。
 
 如果正在预处理 C++/CX 源代码文件，或正在使用 C++ 模块功能，则需执行一些额外步骤。 有关详细信息，请参见下方内容。
 
@@ -251,11 +251,11 @@ CONTEXT:
 
 #### <a name="to-confirm-that-the-error-still-repros-with-the-preprocessed-file"></a>确认仍可以通过预处理过的文件来重现错误
 
-1. 在“开发人员命令提示”控制台窗口中，输入命令 cl arguments /TP filename.i，告知 cl.exe 将预处理过的文件编译为 C++ 源文件，其中 arguments 是前面捕获的参数列表，但删除了 /D 和 /I 参数（因为它们已包含在预处理过的文件中）；filename.i 是预处理过的文件的名称。
+1. 在“开发人员命令提示”控制台窗口中，输入命令 cl arguments /TP filename.i，告知 cl.exe 将预处理过的文件编译为 C++ 源文件，其中 arguments 是前面捕获的参数列表，但删除了 /D 和 /I 参数（因为它们已包含在预处理过的文件中）；filename.i 是预处理过的文件的名称         。
 
 1. 确认该问题可被重现。
 
-最后，将预处理过的重现 filename.i 附加到报告中。
+最后，将预处理过的重现 filename.i 附加到报告中  。
 
 ### <a name="preprocessed-ccx-winrtuwp-code-repros"></a>预处理过的 C++/CX WinRT/UWP 代码重现
 
@@ -265,7 +265,7 @@ CONTEXT:
 
 1. 按[预处理源代码文件](#to-preprocess-a-source-code-file)的介绍创建一个预处理过的源代码文件。
 
-1. 在生成的 _filename_.i 文件中搜索 #using 指令。
+1. 在生成的 _filename_.i 文件中搜索 #using 指令  。
 
 1. 列出所有参考文件。 省去所有 Windows\*.winmd 文件、platform.winmd 文件和 mscorlib.dll。
 
@@ -273,11 +273,11 @@ CONTEXT:
 
 1. 为预处理过的文件创建一个新目录并将其复制到新目录。
 
-1. 将 #using 列表中的 .winmd 文件复制到新目录。
+1. 将 #using 列表中的 .winmd 文件复制到新目录  。
 
 1. 在新目录中创建一个空 vccorlib.h 文件。
 
-1. 编辑预处理过的文件，删除 mscorlib.dll 的所有 #using 指令。
+1. 编辑预处理过的文件，删除 mscorlib.dll 的所有 #using 指令  。
 
 1. 编辑预处理过的文件，将所有绝对路径更改为复制的 .winmd 文件的文件名。
 
@@ -291,17 +291,17 @@ CONTEXT:
 
 1. 捕获用于生成重现的命令行参数，如[报告命令行的内容](#to-report-the-contents-of-the-command-line)中所述。
 
-1. 打开与用于生成项目的 Visual Studio 版本和配置体系结构匹配的“开发人员命令提示”。
+1. 打开与用于生成项目的 Visual Studio 版本和配置体系结构匹配的“开发人员命令提示”  。
 
 1. 转到包含重现项目的目录。
 
-1. 在“开发人员命令提示”控制台窗口中，输入命令 cl /P arguments filename.cpp，其中 arguments 是前面捕获的参数列表，filename.cpp 是使用模块的源文件的名称。
+1. 在“开发人员命令提示”控制台窗口中，输入命令 cl /P arguments filename.cpp，其中 arguments 是前面捕获的参数列表，filename.cpp 是使用模块的源文件的名称      。
 
 1. 更改为包含用于生成模块接口（.ifc 输出）的重现项目的目录。
 
 1. 捕获用于生成模块接口的命令行参数。
 
-1. 在“开发人员命令提示”控制台窗口中，输入命令 cl /P arguments modulename.ixx，其中 arguments 是前面捕获的参数列表，modulename.ixx 是创建模块接口的文件的名称。
+1. 在“开发人员命令提示”控制台窗口中，输入命令 cl /P arguments modulename.ixx，其中 arguments 是前面捕获的参数列表，modulename.ixx 是创建模块接口的文件的名称      。
 
 如果已生成了预处理过的文件，最好确保仍可使用该预处理过的文件来重现问题。
 
@@ -309,35 +309,35 @@ CONTEXT:
 
 1. 在开发人员控制台窗口中，转回包含重现项目的目录。
 
-1. 输入上述命令 cl arguments /TP filename.i，将预处理过的文件视为 C++ 源文件进行编译。
+1. 输入上述命令 cl arguments /TP filename.i，将预处理过的文件视为 C++ 源文件进行编译     。
 
 1. 确认预处理过的文件是否仍然会出现该问题。
 
-最后，将预处理过的重现文件（filename.i 和 modulename.i）与 .ifc 输出一起附加到报告中。
+最后，将预处理过的重现文件（filename.i 和 modulename.i）与 .ifc 输出一起附加到报告中   。
 
 ### <a name="link-repros"></a>链接重现
 
-*链接重现*是链接器生成的内容，该内容是 link\_repro 环境变量指定的目录的内容。 它包含一些生成项目，这些项目共同说明链接时出现的问题，例如涉及链接时间代码生成 (LTCG) 的后端故障或链接器故障。 需要将这些生成项目用作链接器输入，以便重现问题。 通过使用此环境变量实现链接器的内置重现生成功能，可以轻松创建链接重现。
+*链接重现*是链接器生成的内容，该内容是 link\_repro 环境变量指定的目录的内容  。 它包含一些生成项目，这些项目共同说明链接时出现的问题，例如涉及链接时间代码生成 (LTCG) 的后端故障或链接器故障。 需要将这些生成项目用作链接器输入，以便重现问题。 通过使用此环境变量实现链接器的内置重现生成功能，可以轻松创建链接重现。
 
 #### <a name="to-generate-a-link-repro"></a>生成链接重现
 
 1. 捕获用于生成重现的命令行参数，如[报告命令行的内容](#to-report-the-contents-of-the-command-line)中所述。
 
-1. 打开与用于生成项目的 Visual Studio 版本和配置体系结构匹配的“开发人员命令提示”。
+1. 打开与用于生成项目的 Visual Studio 版本和配置体系结构匹配的“开发人员命令提示”  。
 
 1. 在开发人员命令提示控制台窗口中，转到包含重现项目的目录。
 
-1. 输入 mkdir linkrepro，创建链接重现的目录。
+1. 输入 mkdir linkrepro，创建链接重现的目录  。
 
-1. 输入命令 set link\_repro=linkrepro，将 link\_repro 环境变量设置为刚刚创建的目录。 如果生成从其他目录中运行（更加复杂的项目通常如此），则转而将 ink\_repro 设置为 linkrepro 目录的完整路径。
+1. 输入命令 set link\_repro=linkrepro，将 link\_repro 环境变量设置为刚刚创建的目录   。 如果生成从其他目录中运行（更加复杂的项目通常如此），则转而将 ink\_repro 设置为 linkrepro 目录的完整路径  。
 
-1. 要在 Visual Studio 中生成重现项目，请在开发人员命令提示控制台窗口中输入命令 devenv。 这可确保 link\_repro 环境变量的值对 Visual Studio 可见。 要在命令行生成项目，请使用前面捕获的命令行参数来复制重现生成。
+1. 要在 Visual Studio 中生成重现项目，请在开发人员命令提示控制台窗口中输入命令 devenv  。 这可确保 link\_repro 环境变量的值对 Visual Studio 可见  。 要在命令行生成项目，请使用前面捕获的命令行参数来复制重现生成。
 
 1. 生成重现项目，并确认预期问题已发生。
 
 1. 如果使用了 Visual Studio 执行生成，请将其关闭。
 
-1. 在开发人员命令提示控制台窗口中，输入命令 set link\_repro=，清除 link\_repro 环境变量。
+1. 在开发人员命令提示控制台窗口中，输入命令 set link\_repro=，清除 link\_repro 环境变量   。
 
 最后，通过将整个 linkrepro 目录压缩为 .zip 文件或类似的文件来打包重现，并将其附加到报告中。
 
@@ -349,43 +349,43 @@ CONTEXT:
 
 ## <a name="ways-to-send-your-report"></a>发送报告的方式
 
-可通过多种方式向我们提交报表。 可使用 Visual Studio 的内置[“报告问题”工具](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)或 [Visual Studio 开发者社区](https://developercommunity.visualstudio.com/)页面。 还可通过选择此页底部的“产品反馈”按钮直接进入开发人员社区页面。 此选择取决于你是想使用 IDE 中的内置工具来捕获屏幕截图和组织报告以在开发人员社区页中进行发布，还是想直接使用网页。
+可通过多种方式向我们提交报表。 可使用 Visual Studio 的内置[“报告问题”工具](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)或 [Visual Studio 开发者社区](https://developercommunity.visualstudio.com/)页面。 还可通过选择此页底部的“产品反馈”按钮直接进入开发人员社区页面  。 此选择取决于你是想使用 IDE 中的内置工具来捕获屏幕截图和组织报告以在开发人员社区页中进行发布，还是想直接使用网页。
 
 > [!NOTE]
 > 无论以何种方式提交报告，Microsoft 都尊重你的隐私。 Microsoft 致力于遵守所有数据隐私法律和法规。 有关我们如何处理你发送给我们的数据的信息，请参阅 [Microsoft 隐私声明](https://privacy.microsoft.com/privacystatement)。
 
 ### <a name="use-the-report-a-problem-tool"></a>使用“报告问题”工具
 
-Visual Studio 用户可使用 Visual Studio 中的“报告问题”工具报告各种问题，单击几下即可完成。 该工具提供了一个简单的表单，你可以使用它来指定所遇问题的详细信息，然后在不离开 IED 的情况下提交报告。
+Visual Studio 用户可使用 Visual Studio 中的“报告问题”工具报告各种问题，单击几下即可完成  。 该工具提供了一个简单的表单，你可以使用它来指定所遇问题的详细信息，然后在不离开 IED 的情况下提交报告。
 
-可在 IDE 中使用“报告问题”工具快速而轻松地报告问题。 可选择“快速启动”搜索框旁边的“发送反馈”图标，从标题栏中进行访问，也可通过“帮助” > “发送反馈” > “报告问题”在菜单栏上找到它。
+可在 IDE 中使用“报告问题”工具快速而轻松地报告问题  。 可选择“快速启动”搜索框旁边的“发送反馈”图标，从标题栏中进行访问，也可通过“帮助” > “发送反馈” > “报告问题”在菜单栏上找到它      。
 
-选择报告问题时，请首先在开发者社区中搜索是否有类似的问题。 如果有人之前已报告过你的问题，可投票赞成该主题并添加其他细节评论。 如果找不到类似问题，请在“Visual Studio 反馈”对话框底部选择“报告新问题”按钮，再按照步骤报告你的问题。
+选择报告问题时，请首先在开发者社区中搜索是否有类似的问题。 如果有人之前已报告过你的问题，可投票赞成该主题并添加其他细节评论。 如果找不到类似问题，请在“Visual Studio 反馈”对话框底部选择“报告新问题”按钮，再按照步骤报告你的问题  。
 
 ### <a name="use-the-visual-studio-developer-community-pages"></a>使用“Visual Studio 开发者社区”页面
 
 还可使用“Visual Studio 开发者社区”页面轻松报告问题并查找有关 Visual Studio 以及 C++ 编译器、工具和库的解决方案。 有针对 [Visual Studio](https://developercommunity.visualstudio.com/spaces/8/index.html)、[Visual Studio for Mac](https://developercommunity.visualstudio.com/spaces/41/index.html)、[.NET](https://developercommunity.visualstudio.com/spaces/61/index.html)、[C++](https://developercommunity.visualstudio.com/spaces/62/index.html)、[Azure DevOps](https://developercommunity.visualstudio.com/spaces/21/index.html) 和 [TFS](https://developercommunity.visualstudio.com/spaces/22/index.html) 的特定开发者社区页。 在这些选项卡下，在每页顶部附近，有一个搜索框，可用于查找报告的问题与你的问题相似的帖子或主题。 你可能发现你的问题已经有解决方案或相关的其他有用信息。 如果有人之前已报告过相同问题，请投票赞成该主题并进行评论，而不是创建新的问题报告。 若要评论、投票或报告新问题，系统可能要求你登录 Visual Studio 帐户并同意开发者社区应用访问你的个人资料。
 
-有关 C++ 编译器、链接器及其他工具和库的相关问题，请使用 [C++](https://developercommunity.visualstudio.com/spaces/62/index.html) 页面。 如果搜索你的问题后发现之前无人报告该问题，请选择页面顶部的搜索框附近的“报告问题”按钮。 可附上重现代码和命令行、屏幕截图、相关讨论的链接，以及你认为相关和有用的任何其他信息。
+有关 C++ 编译器、链接器及其他工具和库的相关问题，请使用 [C++](https://developercommunity.visualstudio.com/spaces/62/index.html) 页面。 如果搜索你的问题后发现之前无人报告该问题，请选择页面顶部的搜索框附近的“报告问题”  按钮。 可附上重现代码和命令行、屏幕截图、相关讨论的链接，以及你认为相关和有用的任何其他信息。
 
 > [!TIP]
-> 对于可能会在 Visual Studio 中遇到的与 C++ 工具集无关的其他类型问题（例如，UI 问题、IDE 功能损坏或常规故障），请使用 IDE 中的“报告问题”工具。 这是最佳选择，因为该工具具备屏幕截图功能，并且可以记录导致你所遇到的问题的 UI 操作。 还可在[开发者社区](https://developercommunity.visualstudio.com/)站点查找这些错误。 有关详细信息，请参阅[如何报告 Visual Studio 的问题](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)。
+> 对于可能会在 Visual Studio 中遇到的与 C++ 工具集无关的其他类型问题（例如，UI 问题、IDE 功能损坏或常规故障），请使用 IDE 中的“报告问题”  工具。 这是最佳选择，因为该工具具备屏幕截图功能，并且可以记录导致你所遇到的问题的 UI 操作。 还可在[开发者社区](https://developercommunity.visualstudio.com/)站点查找这些错误。 有关详细信息，请参阅[如何报告 Visual Studio 的问题](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)。
 
 ### <a name="reports-and-privacy"></a>报表和隐私
 
-默认情况下，报告中的所有信息、评论和回复都是公开可见的。 一般来说，这是有好处的，因为这样整个社区都能看到其他用户发现的问题、解决方案和解决方法。 但是，如果担心数据或身份公开后会出现隐私或知识产权问题，则可另作选择。
+默认情况下，报告中的所有信息、评论和回复都是公开可见的  。 一般来说，这是有好处的，因为这样整个社区都能看到其他用户发现的问题、解决方案和解决方法。 但是，如果担心数据或身份公开后会出现隐私或知识产权问题，则可另作选择。
 
 如果担心身份泄露，请[创建一个新 Microsoft 帐户](https://signup.live.com/)，该帐户不会透露任何详细信息。 使用此帐户来创建报表。
 
-不要在初始报表标题或内容中添加任何想要保密的内容，因为这会被公开。 相反，请注意，将通过单独的评注以私密方式发送详细信息。 为确保报表发送给正确的人员，请在问题报表的主题列表中加入 cppcompiler。 创建问题报表后便可指定谁可以查看回复和附件。
+不要在初始报表标题或内容中添加任何想要保密的内容，因为这会被公开。  相反，请注意，将通过单独的评注以私密方式发送详细信息。 为确保报表发送给正确的人员，请在问题报表的主题列表中加入 cppcompiler  。 创建问题报表后便可指定谁可以查看回复和附件。
 
 #### <a name="to-create-a-problem-report-for-private-information"></a>创建私人信息问题报表
 
-1. 在创建的报表中，选择“添加注释”，创建对问题的私人说明。
+1. 在创建的报表中，选择“添加注释”，创建对问题的私人说明  。
 
-1. 在回复编辑器中，使用“提交”和“取消”按钮下的下拉控件，指定可查看回复的群体。 只有指定的人员能看到这些私人回复以及其中的图像、链接或代码。 选择“版主和贴主可见”，可仅允许 Microsoft 员工和自己查看。
+1. 在回复编辑器中，使用“提交”和“取消”按钮下的下拉控件，指定可查看回复的群体   。 只有指定的人员能看到这些私人回复以及其中的图像、链接或代码。 选择“版主和贴主可见”，可仅允许 Microsoft 员工和自己查看  。
 
-1. 添加重现所需的说明和所有其他信息、图像和文件附件。 选择“提交”按钮将私下发送此信息。
+1. 添加重现所需的说明和所有其他信息、图像和文件附件。 选择“提交”按钮将私下发送此信息  。
 
    请注意，附件大小不得超过 2GB，最多可附加 10 个文件。 若要上传更大容量的内容，请在私人评论中申请获取上传网址。
 
@@ -395,6 +395,6 @@ Visual Studio 用户可使用 Visual Studio 中的“报告问题”工具报告
 
 ## <a name="how-to-report-a-c-documentation-issue"></a>如何报告 C++ 文档问题
 
-我们使用 GitHub 问题来跟踪文档中报告的问题。 现在可直接从内容页创建 GitHub 问题，这可帮助用户以更丰富的方式与文档作者和产品团队进行互动。 如果发现文档存在问题、错误代码示例、令人困惑的说明、关键信息的遗漏，甚至只是一个拼写错误，都请与我们联系。 滚动至本页底部，然后选择“登录以提供文档反馈”。 如果现在没有 GitHub 帐户，则需要创建一个，创建帐户后，可以看到所有文档问题及其状态，还可在报告的问题有了变化时收到通知。 有关详细信息，请参阅 [docs.microsoft.com 中即将推出的新反馈系统](/teamblog/a-new-feedback-system-is-coming-to-docs)。
+我们使用 GitHub 问题来跟踪文档中报告的问题。 现在可直接从内容页创建 GitHub 问题，这可帮助用户以更丰富的方式与文档作者和产品团队进行互动。 如果发现文档存在问题、错误代码示例、令人困惑的说明、关键信息的遗漏，甚至只是一个拼写错误，都请与我们联系。 滚动至本页底部，然后选择“登录以提供文档反馈”  。 如果现在没有 GitHub 帐户，则需要创建一个，创建帐户后，可以看到所有文档问题及其状态，还可在报告的问题有了变化时收到通知。 有关详细信息，请参阅 [docs.microsoft.com 中即将推出的新反馈系统](/teamblog/a-new-feedback-system-is-coming-to-docs)。
 
 使用文档反馈按钮在 GitHub 上创建文档问题时，创建问题的页面的相关信息会自动填写到该问题中，这样我们就可了解问题出现的位置。 请不要编辑该信息。 只需要追加错误的详细信息和建议的修复方法（如果愿意）。 [文档为开放源](https://github.com/MicrosoftDocs/cpp-docs/)，如果想要自己对其进行实际修复和提出建议，可直接进行。 有关帮助改进文档的方式的详细信息，请参阅 GitHub 上的[帮助指南](https://github.com/MicrosoftDocs/cpp-docs/blob/master/CONTRIBUTING.md)。

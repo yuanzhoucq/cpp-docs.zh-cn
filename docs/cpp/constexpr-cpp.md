@@ -21,9 +21,9 @@ ms.locfileid: "62399091"
 
 ## <a name="syntax"></a>语法
 
-> **constexpr** *文本类型* *标识符* **=** *常量表达式* **;**
->  **constexpr** *文本类型* *标识符* **{** *常量表达式* **}** **;**
->  **constexpr** *文本类型* *标识符* **(** *params* **)** **;**
+> **constexpr** *文本类型* *标识符* **=** *常量表达式* **;** 
+>  **constexpr** *文本类型* *标识符* **{** *常量表达式* **}** **;** 
+>  **constexpr** *文本类型* *标识符* **(** *params* **)** **;** 
 >  **constexpr** *ctor* **(** *params* **)** **;**
 
 ## <a name="parameters"></a>参数

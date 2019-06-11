@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - IPersistPropertyBagImpl class
 ms.assetid: 712af24d-99f8-40f2-9811-53b3ff6e5b19
-ms.openlocfilehash: 800c38c15e4ec8028fba9188d75e49be7ca51146
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 569a24fd08801de952e998f772afbc3478096628
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274888"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503151"
 ---
 # <a name="ipersistpropertybagimpl-class"></a>IPersistPropertyBagImpl 类
 
@@ -50,9 +50,9 @@ class ATL_NO_VTABLE IPersistPropertyBagImpl : public IPersistPropertyBag
 
 ## <a name="remarks"></a>备注
 
-[IPersistPropertyBag](https://msdn.microsoft.com/library/aa768205.aspx)接口允许对象将其属性保存到客户端提供的属性包。 类`IPersistPropertyBagImpl`提供默认实现此接口并实现`IUnknown`信息发送给转储调试中的设备生成。
+[IPersistPropertyBag](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768205\(v=vs.85\))接口允许对象将其属性保存到客户端提供的属性包。 类`IPersistPropertyBagImpl`提供默认实现此接口并实现`IUnknown`信息发送给转储调试中的设备生成。
 
-`IPersistPropertyBag` 结合工作[IPropertyBag](https://msdn.microsoft.com/library/aa768196.aspx)并[IErrorLog](https://msdn.microsoft.com/library/aa768231.aspx)。 这后一种两个接口必须由客户端实现。 通过`IPropertyBag`，客户端将保存并加载该对象的各个属性。 通过`IErrorLog`，该对象和客户端可以报告遇到的任何错误。
+`IPersistPropertyBag` 结合工作[IPropertyBag](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768196\(v=vs.85\))并[IErrorLog](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768231\(v=vs.85\))。 这后一种两个接口必须由客户端实现。 通过`IPropertyBag`，客户端将保存并加载该对象的各个属性。 通过`IErrorLog`，该对象和客户端可以报告遇到的任何错误。
 
 **相关文章** [ATL 教程](../../atl/active-template-library-atl-tutorial.md)，[创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)
 
@@ -92,7 +92,7 @@ STDMETHOD(InitNew)();
 
 ### <a name="remarks"></a>备注
 
-请参阅[IPersistPropertyBag::InitNew](https://msdn.microsoft.com/library/aa768204.aspx) Windows SDK 中。
+请参阅[IPersistPropertyBag::InitNew](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768204\(v=vs.85\)) Windows SDK 中。
 
 ##  <a name="load"></a>  IPersistPropertyBagImpl::Load
 
@@ -106,7 +106,7 @@ STDMETHOD(Load)(LPPROPERTYBAG pPropBag, LPERRORLOG pErrorLog);
 
 ATL 使用对象的属性映射来检索此信息。
 
-请参阅[IPersistPropertyBag::Load](https://msdn.microsoft.com/library/aa768206.aspx) Windows SDK 中。
+请参阅[IPersistPropertyBag::Load](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768206\(v=vs.85\)) Windows SDK 中。
 
 ##  <a name="save"></a>  IPersistPropertyBagImpl::Save
 
@@ -123,7 +123,7 @@ STDMETHOD(Save)(
 
 ATL 使用对象的属性映射来存储此信息。 默认情况下，此方法将保存所有属性，而不考虑的值*fSaveAllProperties*。
 
-请参阅[IPersistPropertyBag::Save](https://msdn.microsoft.com/library/aa768207.aspx) Windows SDK 中。
+请参阅[IPersistPropertyBag::Save](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768207\(v=vs.85\)) Windows SDK 中。
 
 ## <a name="see-also"></a>请参阅
 
