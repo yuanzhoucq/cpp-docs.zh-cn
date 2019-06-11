@@ -67,7 +67,7 @@ class raw_storage_iterator
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<memory>
+**标头：** \<memory>
 
 **命名空间：** std
 
@@ -109,7 +109,7 @@ raw_storage_iterator<ForwardIterator, Type>& operator*();
 
 ### <a name="remarks"></a>备注
 
-要求`ForwardIterator`是原始存储迭代器必须满足仅要求表达式\* *ii* = *t*是有效，并且它本身未提及**运算符**或`operator=`靠自己。 在此实现中的成员运算符返回**\*这**，以便[运算符 =](#op_eq)(**constType**&) 可以在表达式中，执行实际的存储如\* *ptr* = `val`。
+要求`ForwardIterator`是原始存储迭代器必须满足仅要求表达式\* *ii* = *t*是有效，并且它本身未提及**运算符**或`operator=`靠自己。 在此实现中的成员运算符返回 **\*这**，以便[运算符 =](#op_eq)(**constType**&) 可以在表达式中，执行实际的存储如\* *ptr* = `val`。
 
 ### <a name="example"></a>示例
 

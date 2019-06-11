@@ -155,13 +155,13 @@ ms.locfileid: "62376820"
 > [!NOTE]
 > 将特定于语言的模板文件放在主模板目录的子目录中。 例如，仅限英语的模板文件进入 *...\\< 资源模板目录\>\1033*。
 >
-> Visual Studio 中的新.rct 文件搜索*\Program Files\Microsoft Visual Studio\<版本\>\VC\VCResourceTemplates*， *\Program Files\Microsoft Visual Studio \<版本 > \VC\VCResourceTemplates\\< LCID\>*  （例如 1033 为英语的 LCID)，或在任何位置[包括路径](../windows/how-to-specify-include-directories-for-resources.md)。 如果想要将.rct 文件存储在另一个位置，你必须将位置添加到包含路径。
+> Visual Studio 中的新.rct 文件搜索 *\Program Files\Microsoft Visual Studio\<版本\>\VC\VCResourceTemplates*， *\Program Files\Microsoft Visual Studio \<版本 > \VC\VCResourceTemplates\\< LCID\>*  （例如 1033 为英语的 LCID)，或在任何位置[包括路径](../windows/how-to-specify-include-directories-for-resources.md)。 如果想要将.rct 文件存储在另一个位置，你必须将位置添加到包含路径。
 
 ### <a name="to-create-and-use-a-resource-template"></a>若要创建和使用资源模板
 
 1. 在中**解决方案资源管理器**，右键单击项目并选择**添加** > **添加新项**。
 
-1. 在中**模板：** 窗格中，选择**资源模板文件 (.rct)**。
+1. 在中**模板：** 窗格中，选择**资源模板文件 (.rct)** 。
 
 1. 为新提供的名称和位置 *.rct*文件，然后选择**打开**。
 
@@ -173,7 +173,7 @@ ms.locfileid: "62376820"
 
 1. 在中**资源视图**窗格中，右键单击 *.rc*文件，然后选择**添加资源**。
 
-1. 选择加号 (**+**) 旁边的展开资源节点并查看可用于该资源的模板的资源。
+1. 选择加号 ( **+** ) 旁边的展开资源节点并查看可用于该资源的模板的资源。
 
 1. 双击要使用的模板。
 
