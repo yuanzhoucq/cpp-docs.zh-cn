@@ -25,7 +25,7 @@ struct steady_clock;
 
 在 Windows 中，`steady_clock`包装`QueryPerformanceCounter`函数。
 
-如果首次调用 `now` 返回的值始终小于或等于后续调用 `now` 返回的值，则为单调时钟。 如果它是*单调*时钟并且时钟计时周期之间的时间是常量，则为稳定时钟。
+如果首次调用 `now` 返回的值始终小于或等于后续调用 `now` 返回的值，则为单调  时钟。 如果它是*单调*时钟并且时钟计时周期之间的时间是常量，则为稳定  时钟。
 
 `high_resolution_clock` 是的 typedef `steady_clock`。
 
@@ -35,7 +35,7 @@ struct steady_clock;
 |----------|-----------------|
 |`steady_clock::duration`|同义词`nanoseconds`中定义\<chrono >。|
 |`steady_clock::period`|同义词`nano`中定义\<比率 >。|
-|`steady_clock::rep`|同义词**长****长**，用于表示中包含的实例化的时钟计时周期数的类型`duration`。|
+|`steady_clock::rep`|同义词**长** **长**，用于表示中包含的实例化的时钟计时周期数的类型`duration`。|
 |`steady_clock::time_point`|`chrono::time_point<steady_clock>` 的同义词。|
 
 ## <a name="public-functions"></a>公共函数
