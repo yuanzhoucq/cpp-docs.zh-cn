@@ -2,12 +2,12 @@
 title: Visual C++ 移植和升级指南
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-ms.openlocfilehash: 8798d8b3da5a91adfc6f77912d4f34bf62549f54
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 5659ca362204c62ab8fb21a74dccf8e29f33912c
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58898786"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450377"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++ 移植和升级指南
 
@@ -53,7 +53,7 @@ Visual Studio 中的生成系统和项目文件格式从 Visual Studio 2008 及�
 
 8. 行为更改所导致的运行时错误或意外结果
 
-9. 由于这些工具中引入的错误而导致的错误。 如果遇到问题，请通过正常支持渠道或通过使用 [Visual Studio 反馈中心](http://connect.microsoft.com/VisualStudio/Feedback)将其报告给 Visual C++ 团队。
+9. 由于这些工具中引入的错误而导致的错误。 如果遇到问题，请通过正常支持渠道或通过使用 [Visual Studio C++ 开发人员社区](https://developercommunity.visualstudio.com/spaces/62/index.html)页面将其报告给 Visual C++ 团队。
 
 除了由于编译器错误所导致的无法避免的更改，某些更改在升级过程中是可选的，如：
 
@@ -75,7 +75,7 @@ Visual Studio 中的生成系统和项目文件格式从 Visual Studio 2008 及�
 
 |Title|说明|
 |-----------|-----------------|
-|[从 Visual C++ 早期版本升级项目](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|讨论如何使用在早期版本的 Visual C++ 中创建的项目。|
+|[从 Visual C++ 早期版本升级项目](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|讨论如何使用在早期版本的 Visual Studio 中创建的项目。|
 |[Visual Studio 中的 C++ 编译器新变化](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)|当前版本 Visual Studio 的 IDE 和工具更改|
 |[Visual Studio 中的 C++ 符合性改进](../overview/cpp-conformance-improvements.md)|从 Visual Studio 2015 到 Visual Studio 的标准符合性改进|
 |[Visual C++ 更改历史记录（2003 - 2015）](visual-cpp-change-history-2003-2015.md)|导致代码可能需要更改的 Visual C++ 库和生成工具中的所有更改的列表（从 Visual Studio 2003 到 Visual Studio 2015）。|
@@ -88,4 +88,4 @@ Visual Studio 中的生成系统和项目文件格式从 Visual Studio 2008 及�
 
 ## <a name="see-also"></a>请参阅
 
-[Visual C++](../overview/visual-cpp-in-visual-studio.md)
+[Visual Studio 中的 C++](../overview/visual-cpp-in-visual-studio.md)

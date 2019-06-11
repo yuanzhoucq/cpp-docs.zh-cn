@@ -1,25 +1,25 @@
 ---
 title: Visual Studio 中的 C++
 description: Visual C++ 是 Microsoft C++ 编译器、代码编辑器和 Visual Studio IDE 中相关工具的名称。 使用 Visual C++ 开发面向 Windows、Linux、Android 和 iOS 的程序。
-ms.date: 05/13/2019
+ms.date: 05/14/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 2706d232dba2a7971edd8d84da2b1d1399ed6e25
-ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
+ms.openlocfilehash: c2a38d13cd7b34880b64521af99103ed8192bfd0
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934147"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451201"
 ---
 # <a name="c-in-visual-studio"></a>Visual Studio 中的 C++
 
 > [!NOTE]
 > 此开发人员文档适用于 Visual Studio 2015 及更高版本。 请使用页面左上角的版本选择器来匹配你的 Visual Studio 版本。
 >
-> 如果要查找 Visual C++ 可再发行包以便运行程序，请转到 [Microsoft 下载中心](http://www.microsoft.com/download/) ，并在搜索框中输入“Visual C++”。
+> 如果要查找 Visual C++ 可再发行包以便运行程序，请转到 [Microsoft 下载中心](https://www.microsoft.com/download/) ，并在搜索框中输入“Visual C++”  。
 
 Microsoft Visual C++（通常缩写为 Visual C++ 或 MSVC）是 Windows Visual Studio 的一部分，指 C++、C 和汇编语言开发的工具和库。 这些工具和库可用于创建通用 Windows 平台 (UWP) 应用、本机桌面和服务器应用程序、在 Windows、Linux、Android 和 iOS 上运行的跨平台库和应用以及使用 .NET Framework 的托管应用。 从 Windows 桌面的简单控制台应用到最复杂的应用，从移动设备的设备驱动程序和操作系统组件到跨平台游戏，再从 Azure 云中的最小 IoT 设备到多服务器的高性能计算等所有内容都可以使用 Visual C++ 编写。
 
@@ -45,10 +45,10 @@ MSVC C++ 编译器中按功能列出的符合性状态列表。
 ## <a name="install-visual-studio-and-upgrade-from-earlier-versions"></a>安装 Visual Studio 并从早期版本升级
 
 [在 Visual Studio 中安装 C++ 支持](../build/vscpp-step-0-installation.md)<br/>
-下载 Visual Studio 2015 或 Visual Studio 2017 并安装 Visual C++ 工具集。
+下载 Visual Studio 2017 或 Visual Studio 2019 并安装 Visual C++ 工具集。
 
 [Visual C++ 移植和升级指南](../porting/visual-cpp-porting-and-upgrading-guide.md)<br/>
-有关在 Visual Studio 2017 中移植代码并将项目升级到 Visual Studio 2015 的指南，其中包括将 C++ 代码移植到 Windows 10 和通用 Windows 平台。
+移植代码并将项目升级到 Visual Studio 2015 或更高版本的指南，以利用更高的编译器 C++ 标准符合性，以及大幅改进的编译时间和安全功能（例如 Spectre 缓解）。
 
 [Visual Studio 版本中的 Visual C++ 工具和功能](visual-cpp-tools-and-features-in-visual-studio-editions.md)<br/>
 查明不同的 Visual Studio 版本。
@@ -59,9 +59,9 @@ MSVC C++ 编译器中按功能列出的符合性状态列表。
 ## <a name="learn-c"></a>了解 C++
 
 [欢迎回到 C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
-基于可使你快速、安全地编写代码并避免 C 样式编程的多个缺陷的 C++11 和 C++14，了解有关现代 C++ 编程技术的详细信息。
+基于可使你快速、安全地编写代码并避免 C 样式编程的多个缺陷的 C++11 及更高版本，了解有关现代 C++ 编程技术的详细信息。
 
-[标准 C++](http://isocpp.org/)<br/>
+[标准 C++](https://isocpp.org/)<br/>
 了解 C++、获取现代 C++ 的概述，并查找各种书籍、文章、谈话和会议的链接
 
 [学习 Visual C++](../build/vscpp-step-1-create.md)<br/>
@@ -79,7 +79,7 @@ MSVC C++ 编译器中按功能列出的符合性状态列表。
 如何使用 MSVC 编译器和链接器选项创建和配置 Visual Studio C ++ 项目、CMake 项目和其他类型的项目。
 
 [编写和重构 C++ 代码](../ide/writing-and-refactoring-code-cpp.md)<br/>
-如何使用 C++ 编辑器中的高效工作功能来重构、导航和编写代码。
+如何使用 C++ 编辑器中的高效工作功能来重构、导航、理解和编写代码。
 
 [调试本机代码](/visualstudio/debugger/debugging-native-code)<br/>
 在 C++ 项目中使用 Visual Studio 调试器。
@@ -117,7 +117,7 @@ MSVC C++ 编译器中按功能列出的符合性状态列表。
 C++ 中有多种选项可使你连接到 Web 和云。
 
 [数据访问](../data/data-access-in-cpp.md)<br/>
-使用 ODBC 和其他数据库访问技术连接到数据库。
+使用 ODBC 和 OLE DB 连接到数据库。
 
 [文本和字符串](../text/text-and-strings-in-visual-cpp.md)<br/>
 了解有关处理不同的文本和字符串格式以及针对本地和国际开发编码的信息。
@@ -162,7 +162,7 @@ C++ 标准库。
 
 ## <a name="third-party-open-source-c-libraries"></a>第三方开源 C++ 库
 
-跨平台 vcpkg 命令行工具，可以显著简化 900 多个 C++ 开源库的发现和安装操作。 请参阅 [vcpkg：用于 Windows 的 C++ 程序包管理器](../build/vcpkg.md)。
+跨平台 vcpkg  命令行工具，可以显著简化 900 多个 C++ 开源库的发现和安装操作。 请参阅 [vcpkg：用于 Windows 的 C++ 程序包管理器](../build/vcpkg.md)。
 
 ## <a name="feedback-and-community"></a>反馈和社区
 

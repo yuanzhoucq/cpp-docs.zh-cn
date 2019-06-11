@@ -2,16 +2,16 @@
 title: Visual C++ 新增功能（2003 - 2015）
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: 773500b32b1a80a6a7b1d1f2431b036f7ad3bd63
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: MT
+ms.openlocfilehash: 4bcf661284d447b18542bb158940d539ef9c0686
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448871"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449804"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ 新增功能（2003 - 2015）
 
-本页面包括从 Visual Studio 2003 到 Visual Studio 2015 的所有 Visual C++ 版本的“新增功能”页。 在从 Visual Studio 的早期版本升级时可能有用的情况下，为方便起见提供此信息。
+本页面包括从 Visual Studio 2003 到 Visual Studio 2015 的所有 Visual C++ 版本的“新增功能”页。 提供这些信息的目的是方便用户从早期版本的 Visual Studio 进行升级。
 
 > [!NOTE]
 > 有关当前版本的 Visual Studio 的信息，请参阅 [Visual Studio 中 Visual C++ 的新增功能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)和 [Visual Studio 中 Visual C++ 的符合性改进](../overview/cpp-conformance-improvements.md)。
@@ -75,7 +75,7 @@ ms.locfileid: "65448871"
     };
    ```
 
-   以前版本的 MicrosoftC++编译器接受此代码，但现在编译器则报告以下错误：
+   早期版本的 Microsoft C++ 编译器接受此代码，但编译器现在会报告以下错误：
 
    ```Output
     error C2071: 'S::r': illegal storage class
@@ -253,7 +253,7 @@ ms.locfileid: "65448871"
 
 - **placement new 和 placement delete**
 
-   对 delete 运算符做出更改以使其符合 C++14 标准  。 标准更改的详细信息位于 [C++ 调整了大小的释放](http://isocpp.org/files/papers/n3778.html)。 这些更改将添加采用大小参数的全局 delete 运算符的形式  。 重大更改为，如果你之前使用的是具有相同签名的运算符 delete（以与 placement new 运算符对应），你将收到编译器错误（C2956，在使用 placement new 的点位置出现，因为在代码中的该位置，编译器会尝试标识适当匹配的 delete 运算符）     。
+   对 delete 运算符做出更改以使其符合 C++14 标准  。 标准更改的详细信息位于 [C++ 调整了大小的释放](https://isocpp.org/files/papers/n3778.html)。 这些更改将添加采用大小参数的全局 delete 运算符的形式  。 重大更改为，如果你之前使用的是具有相同签名的运算符 delete（以与 placement new 运算符对应），你将收到编译器错误（C2956，在使用 placement new 的点位置出现，因为在代码中的该位置，编译器会尝试标识适当匹配的 delete 运算符）     。
 
    函数 `void operator delete(void *, size_t)` 是与 C++11 中的 placement new 函数 `void * operator new(size_t, size_t)` 对应的 placement delete 运算符   。 使用 C++14 调整了大小的释放，此 delete 函数现在是常用释放函数 （全局 delete 运算符）    。 标准要求，如果使用 placement new 查找相应的 delete 函数和常用释放函数，则程序会出现格式错误   。
 
@@ -1516,7 +1516,7 @@ ms.locfileid: "65448871"
 
 #### <a name="compiler"></a>编译器
 
-MSVC 支持以下 ISO C + + 11 语言功能：
+MSVC 支持以下 ISO C++11 语言功能：
 
 - 函数模板的默认模板参数。
 - 委托构造函数
@@ -1696,7 +1696,7 @@ MSVC 支持以下 ISO C + + 11 语言功能：
 ### <a name="new-in-visual-studio-2012-update-1"></a>Visual Studio 2012 Update 1 中的新功能
 
 在生成 C++ 代码时锁定 Windows XP。
-您可以使用 MicrosoftC++编译器和库，再到目标 Windows XP 和 Windows Server 2003。
+可以使用 Microsoft C++ 编译器和库来锁定 Windows XP 和 Windows Server 2003。
 
 #### <a name="parallel-programming-support"></a>并行编程的支持
 
@@ -1787,7 +1787,7 @@ Visual Studio 2012 的大部分版本都包含代码分析。 Professional 版�
 
 **static_assert 声明。** static_assert 声明在编译时测试软件断言，这与在运行时进行测试的其他断言机制不同  。 如果断言失败，则编译将失败，并且会发出特定的错误消息。
 
-**nullptr 和 __nullptr 关键字。** MSVC 使您可以使用**nullptr**关键字与本机代码或托管代码。 nullptr 关键字指示对象句柄、内部指针或本机指针类型不指向对象  。 如果使用 `/clr` 编译器选项，编译器会将 nullptr 解释为托管代码；如果不使用 `/clr` 选项，则解释为本机代码  。
+**nullptr 和 __nullptr 关键字。** 借助 MSVC，可以对本机代码或托管代码使用 **nullptr** 关键字。 nullptr 关键字指示对象句柄、内部指针或本机指针类型不指向对象  。 如果使用 `/clr` 编译器选项，编译器会将 nullptr 解释为托管代码；如果不使用 `/clr` 选项，则解释为本机代码  。
 Microsoft 特定的 __nullptr 关键字与 nullptr 的含义相同，但前者仅适用于本机代码   。 如果使用 `/clr` 编译器选项编译本机 C/C++ 代码，则编译器无法确定 nullptr 关键字是本机项还是托管项  。 若要使编译器清楚地了解你的意图，请使用 nullptr 关键字指定托管项，使用 __nullptr 指定本机项  。
 
 **/Zc: trigraphs 编译器选项。** 默认情况下，禁用对三元组的支持。 使用 `/Zc:trigraphs` 编译器选项实现三字符组支持。
@@ -1801,9 +1801,9 @@ Microsoft 特定的 __nullptr 关键字与 nullptr 的含义相同，但前者�
 
 **XOP 内部函数、FMA4 内部函数和 LWP 内部函数。** 添加了新的内部函数来支持针对 Visual Studio 2010 SP1 添加的 XOP 内部函数、针对 Visual Studio 2010 SP1 添加的 FMA4 内部函数和针对 Visual Studio 2010 SP1 处理器技术添加的 LWP 内部函数。 使用 __cpuid、__cpuidex 可确定特定计算机上支持的处理器技术。
 
-### <a name="visual-studio-c-projects-and-the-build-system"></a>Visual StudioC++项目和生成系统
+### <a name="visual-studio-c-projects-and-the-build-system"></a>Visual Studio C++ 项目和生成系统
 
-**。** Visual C++ 解决方案和项目现在使用 MSBuild.exe（取代了 VCBuild.exe）生成。 MSBuild 同样是基于 XML 的、灵活的、可扩展的生成工具，可由其他 Visual Studio 语言和项目类型使用。 由于此更改，Visual StudioC++项目文件现在使用 XML 文件格式和.vcxproj 文件扩展名。 Visual Studio C++ Visual Studio 的早期版本的项目文件自动转换为新的文件格式。
+**。** Visual C++ 解决方案和项目现在使用 MSBuild.exe（取代了 VCBuild.exe）生成。 MSBuild 同样是基于 XML 的、灵活的、可扩展的生成工具，可由其他 Visual Studio 语言和项目类型使用。 由于此更改，Visual Studio C++ 项目文件现在使用 XML 文件格式并具有文件扩展名 .vcxproj。 Visual Studio 早期版本的 Visual Studio C++ 项目文件会自动转换为新文件格式。
 
 **VC++ 目录。** VC++ 目录设置现在位于两个位置。 使用项目属性页可为 VC++ 目录设置每个项目的值。 使用“属性管理器”和属性表可为 VC++ 目录设置每个配置的全局值  。
 
@@ -1878,7 +1878,7 @@ MFC 现在支持动画和 Direct2D 图形。 MFC 库中新增了一些 MFC 类�
 
 **MFC 类向导。** Visual C++ 2010 恢复了备受好评的 MFC 类向导工具。 通过使用 MFC 类向导，可以很方便地向项目中添加类、消息和变量，而不必手动修改源文件集。
 
-**ATL 控件向导。** ATL 控件向导不再自动填充 `ProgID` 字段。 如果某个 ATL 控件没有 `ProgID`，则其他工具可能无法使用该控件。 例如，“插入活动控件”对话框需要控件具有 `ProgID`  。 有关此对话框的更多信息，请参阅**插入 ActiveX 控件对话框**。
+**ATL 控件向导。** ATL 控件向导不再自动填充 `ProgID` 字段。 如果某个 ATL 控件没有 `ProgID`，则其他工具可能无法使用该控件。 例如，“插入活动控件”对话框需要控件具有 `ProgID`  。 有关此对话框的更多信息，请参阅“插入 ActiveX 控件对话框”  。
 
 ### <a name="microsoft-macro-assembler-reference"></a>Microsoft 宏汇编程序参考
 
@@ -1934,7 +1934,7 @@ MFC 现在支持动画和 Direct2D 图形。 MFC 库中新增了一些 MFC 类�
 - 内部函数支持更新的 AMD 和 Intel 处理器。 多条新的内部函数指令在新型 AMD 和 Intel 处理器中提供更强大的功能。 有关新增内部函数的更多信息，请参阅“流式处理 SIMD 扩展 3 的补充指令”、“流式处理 SIMD 扩展 4 的指令”、“SSE4A 和高级位操作内部函数”、“AES 内部函数”、“_mm_clmulepi64_si128”和“__rdtscp”       。
 - `__cpuid` 函数已更新。 `__cpuid` 和 `__cpuidex` 函数现支持最新修订版的 AMD 和 Intel 处理器的多项新功能。 `__cpuidex` 内部函数是新增的，它能从最新处理器收集更多信息。
 - `/MP` 编译器选项缩短了总生成时间。 `/MP` 选项通过创建多个同时编译文件的进程，显著减少了编译多个源文件需要的总时间。 此选项在支持超线程、多处理器或多内核的计算机上尤其有用。
-- `/Wp64` 编译器选项和 __w64 关键字已弃用  。 `/Wp64` 编译器选项和 __w64 关键字（用于检测 64 位可移植性问题）已弃用，并将从未来版本的编译器中删除  。 而不是此编译器选项和关键字，使用面向 64 位平台 MSVC。
+- `/Wp64` 编译器选项和 __w64 关键字已弃用  。 `/Wp64` 编译器选项和 __w64 关键字（用于检测 64 位可移植性问题）已弃用，并将从未来版本的编译器中删除  。 请改用面向 64 位平台的 MSVC 来代替此编译器选项和关键字。
 - `/Qfast_transcendentals` 生成先验函数的内联代码。
 - `/Qimprecise_fwaits` 在使用 `/fp:except` 编译器选项时删除 try 块内部的 fwait 命令。
 

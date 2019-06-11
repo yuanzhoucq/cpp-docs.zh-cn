@@ -1531,14 +1531,20 @@
               href: build/reference/dot-xml-file-processing.md
             - name: 用于 C++ 文档标记的分隔符
               href: build/reference/delimiters-for-visual-cpp-documentation-tags.md
-- name: 编写和重构代码
+- name: 读取和写入代码
   expanded: false
   items:
-    - name: 编写和重构代码
+    - name: 读取和写入代码
       expanded: false
       items:
-        - name: 编写和重构代码
+        - name: 读取并理解 C++ 代码
+          href: ide/read-and-understand-code-cpp.md
+        - name: 编辑和重构 C++ 代码
           href: ide/writing-and-refactoring-code-cpp.md
+        - name: 导航 C++ 代码
+          href: ide/navigate-code-cpp.md
+        - name: 使用用于 C++ 的 Live Share 协作
+          href: ide/live-share-cpp.md
         - name: 更改签名
           href: ide/refactoring/change-signature.md
         - name: 转换为原始字符串文本
@@ -1597,8 +1603,6 @@
           href: ide/implementing-a-connection-point-visual-cpp.md
         - name: 实现接口
           href: ide/implementing-an-interface-visual-cpp.md
-        - name: 导航类结构
-          href: ide/navigating-the-class-structure-visual-cpp.md
         - name: 替代虚函数
           href: ide/overriding-a-virtual-function-visual-cpp.md
 - name: Windows 桌面开发
@@ -4126,7 +4130,7 @@
                   href: cpp/binary-operators.md
                 - name: 赋值
                   href: cpp/assignment.md
-                - name: 函数调用
+                - name: '函数调用 '
                   href: cpp/function-call-cpp.md
                 - name: 下标
                   href: cpp/subscripting.md

@@ -4,12 +4,12 @@ ms.custom: how-to
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-ms.openlocfilehash: 4e7d63840f60c00f97b02825965cc247cddc38fd
-ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
+ms.openlocfilehash: ac6db74122383ef8adb0f208860a6f6fba02dcc7
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66174811"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821684"
 ---
 # <a name="how-to-create-and-use-sharedptr-instances"></a>如何：创建和使用 shared_ptr 实例
 
@@ -108,7 +108,7 @@ int main()
 
 - 如果必须为帮助器函数提供对基础指针的访问权限，并且你知道帮助器函数将使用该指针并且将在调用函数返回前返回，则该函数不必共享基础指针的所有权。 它只需在调用方的 `shared_ptr` 的生存期内访问指针即可。 在这种情况下，按引用传递 `shared_ptr` 或传递原始指针或对基础对象的引用是安全的。 通过此方式传递将提供一个小的性能好处，并且还有助于您表达编程意图。
 
-- 有时，例如，在一个 `std:vector<shared_ptr<T>>` 中，您可能必须将每个 `shared_ptr` 传递给 lambda 表达式主体或命名函数对象。 如果 lambda 或函数没有存储指针，则将按引用传递 `shared_ptr` 以避免调用每个元素的复制构造函数。
+- 有时，例如，在一个 `std::vector<shared_ptr<T>>` 中，您可能必须将每个 `shared_ptr` 传递给 lambda 表达式主体或命名函数对象。 如果 lambda 或函数没有存储指针，则将按引用传递 `shared_ptr` 以避免调用每个元素的复制构造函数。
 
 ## <a name="example-6"></a>示例 6
 
