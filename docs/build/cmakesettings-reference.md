@@ -4,16 +4,16 @@ ms.date: 05/16/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 018a755aa4f3acde44fe1dbb33b07b49c8d1c223
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 0dcd05833af005807d874d71e8f6a07d4e738e8c
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837256"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042593"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>CMakeSettings.json 架构引用
 
-Cmakesettings.json 文件提供用于指定 Visual Studio 应如何与 CMake 交互以为指定平台生成项目的信息。 此文件存储 cmake.exe 环境的环境变量或参数等信息。 可以直接进行编辑，或者使用 CMake 设置编辑器（Visual Studio 2019 及更高版本）。 有关编辑器的详细信息，请参阅[在 Visual Studio 中自定义 CMake 生成设置](customize-cmake-settings.md)。
+Cmakesettings.json 文件提供用于指定 Visual Studio 应如何与 CMake 交互以为指定平台生成项目的信息  。 此文件存储 cmake.exe 环境的环境变量或参数等信息。 可以直接进行编辑，或者使用 CMake 设置编辑器（Visual Studio 2019 及更高版本）  。 有关编辑器的详细信息，请参阅[在 Visual Studio 中自定义 CMake 生成设置](customize-cmake-settings.md)。
 
 ## <a name="environments"></a>环境
 
@@ -28,7 +28,7 @@ Cmakesettings.json 文件提供用于指定 Visual Studio 应如何与 CMake 交
    "inheritEnvironments": [ "msvc_x64_x64" ]
    ```
 
-   上面的示例与运行带有“-arch=amd64 -host_arch=amd64”参数的“适用于 VS 2017 的开发人员命令提示”或“适用于 VS 2019 的开发人员命令提示”一样。 可使用的任何自定义环境，或者这些预定义环境：
+   上面的示例与运行带有“-arch=amd64 -host_arch=amd64”参数的“适用于 VS 2017 的开发人员命令提示”或“适用于 VS 2019 的开发人员命令提示”一样    。 可使用的任何自定义环境，或者这些预定义环境：
  
   - linux_arm：远程将 ARM Linux 设为目标。
   - linux_x64：远程将 x64 Linux 设为目标。
@@ -68,9 +68,9 @@ Cmakesettings.json 文件提供用于指定 Visual Studio 应如何与 CMake 交
 
 由于 Ninja 旨在加快生成速度，而不是为了提高灵活性和功能，因此它被设为默认生成器。 但是，某些 CMake 项目可能无法使用 Ninja 正确地进行生成。 如果发生这种情况，可以指示 CMake 改为生成 Visual Studio 项目。
 
-要指定 Visual Studio 2017 中的 Visual Studio 生成器，请通过选择“CMake”|“更改 CMake 设置”，从主菜单打开 `CMakeSettings.json`。 删除“Ninja”并键入“V”。 这可激活 IntelliSense，从而可让用户选择所需生成器。
+要指定 Visual Studio 2017 中的 Visual Studio 生成器，请通过选择“CMake”|“更改 CMake 设置”，从主菜单打开 `CMakeSettings.json`  。 删除“Ninja”并键入“V”。 这可激活 IntelliSense，从而可让用户选择所需生成器。
 
-要指定 Visual Studio 2019 中的 Visual Studio 生成器，请右键单击解决方案资源管理器中的 CMakeLists.txt 文件，并选择“项目的 CMake 设置” > “显示高级设置” > “CMake 生成器”。
+要指定 Visual Studio 2019 中的 Visual Studio 生成器，请右键单击解决方案资源管理器中的 CMakeLists.txt 文件，并选择“项目的 CMake 设置” > “显示高级设置” > “CMake 生成器”     。
 
 当活动配置指定一个 Visual Studio 生成器时，默认情况下使用 `-m -v:minimal` 参数调用 MSBuild.exe。 要自定义生成，可在 `CMakeSettings.json` 文件中指定要通过 `buildCommandArgs` 属性传递到生成系统的其他 [MSBuild 命令行参数](../build/reference/msbuild-visual-cpp-overview.md)：
 
@@ -86,7 +86,7 @@ Cmakesettings.json 文件提供用于指定 Visual Studio 应如何与 CMake 交
   - RelWithDebInfo
  
 - `inheritEnvironments`：指定此配置依赖的一个或多个编译器环境。 可以是任何自定义环境或预定义环境之一。
-- `buildRoot`：指定 CMake 生成器要在其中为所选生成器生成脚本的目录。  映射到“-DCMAKE_BINARY_DIR”开关，并指定要创建 CMake 缓存的位置。 如果文件夹不存在，则会创建该文件夹。支持的宏包括 `${workspaceRoot}`、`${workspaceHash}`、`${projectFile}`、`${projectDir}`、`${thisFile}`、`${thisFileDir}`、`${name}`、`${generator}` 和 `${env.VARIABLE}`。
+- `buildRoot`：指定 CMake 生成器要在其中为所选生成器生成脚本的目录。  映射到“-DCMAKE_BINARY_DIR”开关，并指定要创建 CMake 缓存的位置  。 如果文件夹不存在，则会创建该文件夹。支持的宏包括 `${workspaceRoot}`、`${workspaceHash}`、`${projectFile}`、`${projectDir}`、`${thisFile}`、`${thisFileDir}`、`${name}`、`${generator}` 和 `${env.VARIABLE}`。
 - `installRoot`：指定 CMake 生成器要在其中为所选生成器安装目标的目录。 支持的宏包括 `${workspaceRoot}`、`${workspaceHash}`、`${projectFile}`、`${projectDir}`、`${thisFile}`、`${thisFileDir}`、`${name}`、`${generator}`、`${env.VARIABLE}`。
 - `cmakeCommandArgs`：指定为生成缓存而调用时传递给 CMake 的附加命令行选项。
 - `cmakeToolchain`：指定工具链文件。 这通过 -DCMAKE_TOOLCHAIN_FILE 传递到 CMake。
@@ -121,7 +121,7 @@ Cmakesettings.json 文件提供用于指定 Visual Studio 应如何与 CMake 交
 
 - `remoteMachineName`：指定托管 CMake、生成和调试程序的远程 Linux 计算机的名称。 使用连接管理器添加新的 Linux 计算机。 支持的宏包括 `${defaultRemoteMachineName}`。
 - `remoteCopySourcesOutputVerbosity`：指定将源复制到远程计算机的操作的详细级别。 可以是“常规”、“详细”或“诊断”其中之一。
-- `remoteCopySourcesConcurrentCopies`：指定将源同步到远程计算机时使用的并发副本数。
+- `remoteCopySourcesConcurrentCopies`： 指定在远程计算机 (仅 sftp) 到源的同步过程中使用的并发副本数。
 - `remoteCopySourcesMethod`：指定将文件复制到远程计算机的方法。 可以是“rsync”或“sftp”。
 - `remoteCMakeListsRoot`：指定包含 CMake 项目的远程计算机上的目录。 支持的宏包括 `${workspaceRoot}`、`${workspaceHash}`、`${projectFile}`、`${projectDir}`、`${thisFile}`、`${thisFileDir}`、`${name}`、`${generator}`、`${env.VARIABLE}`。
 - `remoteBuildRoot`：指定 CMake 生成器要在其中为所选生成器生成脚本的远程计算机上的目录。 支持的宏包括 `${workspaceRoot}`、`${workspaceHash}`、`${projectFile}`、`${projectDir}`、`${thisFile}`、`${thisFileDir}`、`${name}`、`${generator}`、`${env.VARIABLE}`。
@@ -134,7 +134,7 @@ Cmakesettings.json 文件提供用于指定 Visual Studio 应如何与 CMake 交
 - `remotePreGenerateCommand`：指定在运行 CMake 以分析 CMakeLists.txt 文件之前要运行的命令。
 - `remotePrebuildCommand`：指定生成前要在远程计算机上运行的命令。
 - `remotePostbuildCommand`：指定生成后要在远程计算机上运行的命令。
-- `variables`：包含将作为 -D name=value 传递到 CMake 的 CMake 变量的名称/值对。 如果 CMake 项目生成指令指定将任何变量直接添加到 CMake 缓存文件，那么建议改为在这里添加它们。 下面的示例演示如何为 14.14.26428 MSVC 工具集指定名称/值对：
+- `variables`：包含将作为 -D name=value 传递到 CMake 的 CMake 变量的名称/值对    。 如果 CMake 项目生成指令指定将任何变量直接添加到 CMake 缓存文件，那么建议改为在这里添加它们。 下面的示例演示如何为 14.14.26428 MSVC 工具集指定名称/值对：
 
 ```json
 "variables": [
@@ -170,7 +170,7 @@ Cmakesettings.json 文件提供用于指定 Visual Studio 应如何与 CMake 交
 
 ### <a name="custom-environment-variables"></a>自定义环境变量
 
-在 `CMakeSettings.json` 中，可在“环境”属性中以全局形式或按配置自定义环境变量。 下面的示例定义一个全局变量“BuildDir”，该变量在 x86-Debug 和 x64-Debug 配置中继承。 每个配置都使用该变量来指定配置的“buildRoot”属性值。 也请注意每个配置如何使用“inheritEnvironments”属性来指定仅应用于该配置的值。
+在 `CMakeSettings.json` 中，可在“环境”属性中以全局形式或按配置自定义环境变量  。 下面的示例定义一个全局变量“BuildDir”，该变量在 x86-Debug 和 x64-Debug 配置中继承  。 每个配置都使用该变量来指定配置的“buildRoot”属性值  。 也请注意每个配置如何使用“inheritEnvironments”属性来指定仅应用于该配置的值  。
 
 ```json
 {
@@ -202,7 +202,7 @@ Cmakesettings.json 文件提供用于指定 Visual Studio 应如何与 CMake 交
 }
 ```
 
-在下一个示例中，x86-Debug 配置为 BuildDir 属性定义其自己的值。 此值替代由全局 BuildDir 属性设置的值，以便 BuildRoot 评估为 `D:\custom-builddir\x86-Debug`。
+在下一个示例中，x86-Debug 配置为 BuildDir 属性定义其自己的值  。 此值替代由全局 BuildDir 属性设置的值，以便 BuildRoot 评估为 `D:\custom-builddir\x86-Debug`   。
 
 ```json
 {
@@ -256,7 +256,7 @@ ninja: invalid option -- `-?'
 usage: ninja [options] [targets...]
 ```
 
-|选项|说明|
+|选项|描述|
 |--------------|------------|
 | --version  | 打印 ninja 版本（“1.7.1”）|
 |   -C DIR   | 在执行任何其他操作前更改为 DIR|
