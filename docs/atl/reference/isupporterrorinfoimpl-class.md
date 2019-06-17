@@ -1,6 +1,6 @@
 ---
 title: ISupportErrorInfoImpl 类
-ms.date: 11/04/2016
+ms.date: 06/13/2019
 f1_keywords:
 - ISupportErrorInfoImpl
 - ATLCOM/ATL::ISupportErrorInfoImpl
@@ -10,29 +10,29 @@ helpviewer_keywords:
 - ISupportErrorInfoImpl class
 - error information, ATL
 ms.assetid: e33a4b11-a123-41cf-bcea-7b19743902af
-ms.openlocfilehash: f7e300e30ff0f14b56d2a1bae86b00e090674679
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 650d90c9ec98754e11586f63e0871b70ebbe34f3
+ms.sourcegitcommit: e79188287189b76b34eb7e8fb1bfe646bdb586bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274758"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67141708"
 ---
 # <a name="isupporterrorinfoimpl-class"></a>ISupportErrorInfoImpl 类
 
 此类提供的默认实现[ISupportErrorInfo 接口](/windows/desktop/api/oaidl/nn-oaidl-isupporterrorinfo)和单个接口在生成对象上的错误时，可以使用。
 
 > [!IMPORTANT]
->  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
+> 不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 template<const IID* piid>
 class ATL_NO_VTABLE ISupportErrorInfoImpl
    : public ISupportErrorInfo
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
 *piid*<br/>
 指向支持的接口的 IID [IErrorInfo](/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo)。
@@ -67,101 +67,13 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl
 
 指示标识接口是否`riid`支持[IErrorInfo](/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo)接口。
 
-```
+```cpp
 STDMETHOD(InterfaceSupportsErrorInfo)(REFIID riid);
 ```
 
 ### <a name="remarks"></a>备注
 
 请参阅[ISupportErrorInfo::InterfaceSupportsErrorInfo](/windows/desktop/api/oaidl/nf-oaidl-isupporterrorinfo-interfacesupportserrorinfo) Windows SDK 中。
-
-##  <a name="getsize"></a>  IThreadPoolConfig::GetSize
-
-调用此方法以获取池中的线程数。
-
-```
-STDMETHOD(GetSize)(int* pnNumThreads);
-```
-
-### <a name="parameters"></a>参数
-
-*pnNumThreads*<br/>
-[out]，如果成功，接收变量的线程数在池中的地址。
-
-### <a name="return-value"></a>返回值
-
-返回成功，则为 S_OK 或失败时的错误 HRESULT。
-
-### <a name="example"></a>示例
-
-[!code-cpp[NVC_ATL_Utilities#134](../../atl/codesnippet/cpp/isupporterrorinfoimpl-class_2.cpp)]
-
-##  <a name="gettimeout"></a>  IThreadPoolConfig::GetTimeout
-
-调用此方法以获取最长时间以毫秒为单位，线程池将等待一个线程来关闭的情况下。
-
-```
-STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
-```
-
-### <a name="parameters"></a>参数
-
-*pdwMaxWait*<br/>
-[out]成功后，接收的最长时间以毫秒为单位，线程池将等待一个线程来关闭的情况下的变量的地址。
-
-### <a name="return-value"></a>返回值
-
-返回成功，则为 S_OK 或失败时的错误 HRESULT。
-
-### <a name="example"></a>示例
-
-请参阅[IThreadPoolConfig::GetSize](#getsize)。
-
-##  <a name="setsize"></a>  IThreadPoolConfig::SetSize
-
-调用此方法以设置在池中的线程数。
-
-```
-STDMETHOD(SetSize)int nNumThreads);
-```
-
-### <a name="parameters"></a>参数
-
-*nNumThreads*<br/>
-请求的池中的线程数。
-
-如果*nNumThreads*是负数，其绝对值的数值将乘以中要获取的线程总数的计算机的处理器数。
-
-如果*nNumThreads*为零，ATLS_DEFAULT_THREADSPERPROC 将乘以中要获取的线程总数的计算机的处理器数。
-
-### <a name="return-value"></a>返回值
-
-返回成功，则为 S_OK 或失败时的错误 HRESULT。
-
-### <a name="example"></a>示例
-
-请参阅[IThreadPoolConfig::GetSize](#getsize)。
-
-##  <a name="settimeout"></a>  IThreadPoolConfig::SetTimeout
-
-调用此方法，以毫秒为单位，线程池将等待一个线程来关闭的情况下设置最长的时间。
-
-```
-STDMETHOD(SetTimeout)(DWORD dwMaxWait);
-```
-
-### <a name="parameters"></a>参数
-
-*dwMaxWait*<br/>
-以毫秒为单位，线程池将等待一个线程来关闭请求的最大时间。
-
-### <a name="return-value"></a>返回值
-
-返回成功，则为 S_OK 或失败时的错误 HRESULT。
-
-### <a name="example"></a>示例
-
-请参阅[IThreadPoolConfig::GetSize](#getsize)。
 
 ## <a name="see-also"></a>请参阅
 

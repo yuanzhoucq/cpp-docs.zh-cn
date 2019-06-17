@@ -1,23 +1,31 @@
 ---
 title: 链接器属性 (Linux C++)
-ms.date: 9/26/2017
+ms.date: 06/07/2019
 ms.assetid: a0243a94-8164-425b-b2fe-b84ff363d546
-ms.openlocfilehash: 2e5c3446d8daeeb052937b5e172fc9fa4b6ad302
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.openlocfilehash: 01e8a9e45272ff55db6bbf738b48c75f4e1f6c48
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678335"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821291"
 ---
 # <a name="linker-properties-linux-c"></a>链接器属性 (Linux C++)
 
+::: moniker range="vs-2015"
+
+Linux 支持在 Visual Studio 2017 及更高版本中提供。
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
+
 ## <a name="general"></a>常规
 
-属性 | 描述 | 选项
+Property | 说明 | 选项
 --- | ---| ---
 输出文件 | 该选项可重写链接器创建的程序的默认名称和位置。 (-o)
 显示进度 | 打印链接器进度消息。
-版本 | -version 选项让链接器将版本号置于可执行文件的标头中。
+Version | -version 选项让链接器将版本号置于可执行文件的标头中。
 启用详细输出 | -verbose 选项通知链接器输出调试的详细消息。
 跟踪 | --trace 选项通知链接器输出被处理的输入文件。
 跟踪符号 | 打印显示有符号的文件列表。 (--trace-symbol=symbol)
@@ -32,7 +40,7 @@ ms.locfileid: "51678335"
 
 ## <a name="input"></a>输入
 
-属性 | 描述 | 选项
+Property | 说明 | 选项
 --- | ---| ---
 忽略特定默认库 | 指定一个或多个要忽略的默认库的名称。 （--exclude-libs lib、lib）
 忽略默认库 | 忽略默认库，仅搜索明确指定的库。
@@ -42,16 +50,18 @@ ms.locfileid: "51678335"
 
 ## <a name="debugging"></a>调试
 
-属性 | 描述 | 选项
+Property | 说明 | 选项
 --- | ---| ---
-调试程序符号信息 | 输出文件中的调试程序符号信息。 | 全部包含<br>仅忽略调试程序符号信息<br>忽略所有符号信息<br>
+调试程序符号信息 | 输出文件中的调试程序符号信息。 | 全部包含 <br>仅忽略调试程序符号信息 <br>忽略所有符号信息 <br>
 映射文件名 | “映射”选项通知链接器使用用户指定的名称创建映射文件。 (-Map=)
 
 ## <a name="advanced"></a>高级
 
-属性 | 描述 | 选项
+Property | 说明 | 选项
 --- | ---| ---
 重定位之后将变量标记为只读 | 此选项在重定位之后将变量标记为只读。
 启用即时函数绑定 | 此选项标记用于即时函数绑定的对象。
 不需要可执行堆栈 | 此选项将输出标记为不需要可执行堆栈。
 整个存档 | 整个存档使用来自源和其他依赖项的所有代码。
+
+::: moniker-end
