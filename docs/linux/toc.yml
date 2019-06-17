@@ -2,14 +2,14 @@
   href: index.md
 - name: 下载、安装和设置 Linux 开发工作负载
   href: download-install-and-setup-the-linux-development-workload.md
-- name: 配置 Linux 项目
-  href: configure-a-linux-project.md
-- name: 配置 Linux CMake 项目
-  href: cmake-linux-project.md
-- name: 新建 Linux 项目
-  href: create-a-new-linux-project.md
 - name: 连接到远程 Linux 计算机
   href: connect-to-your-remote-linux-computer.md
+- name: 新建 Linux 项目
+  href: create-a-new-linux-project.md
+- name: 配置 Linux 项目
+  href: configure-a-linux-project.md
+- name: 创建和配置 Linux CMake 项目
+  href: cmake-linux-project.md
 - name: 配置 Linux 项目以使用地址擦除器
   href: linux-asan-configuration.md
 - name: 部署、运行和调试 Linux 项目

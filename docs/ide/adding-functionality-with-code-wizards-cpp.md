@@ -4,12 +4,12 @@ ms.date: 05/14/2019
 helpviewer_keywords:
 - code wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
-ms.openlocfilehash: 8c88936edcb9110fe7482281f483f11c542b83c1
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: efced3be3a0bcc7efe16aef1061c4cd9ec1ed21c
+ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "66182647"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741643"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>用代码向导添加功能 (C++)
 
@@ -76,6 +76,6 @@ ms.locfileid: "66182647"
 ## <a name="see-also"></a>请参阅
 
 [重写虚函数](../ide/overriding-a-virtual-function-visual-cpp.md)<br>
-[导航类结构](../ide/navigating-the-class-structure-visual-cpp.md)<br>
+[在 Visual Studio 中导航 C++ 代码库](../ide/navigate-code-cpp.md)<br>
 [Visual Studio 中的 C++ 项目类型](../build/reference/visual-cpp-project-types.md)<br>
 [为 Visual Studio C++ 项目创建的文件类型](../build/reference/file-types-created-for-visual-cpp-projects.md)
