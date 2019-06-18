@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -link compiler option [C++]
 - cl.exe compiler [C++], passing options to linker
 ms.assetid: 16902a94-c094-4328-841f-3ac94ca04848
-ms.openlocfilehash: ef81a6617df811660506c08434f3b65e29155794
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37743e855c933b6236b5e7a837db257f332a3037
+ms.sourcegitcommit: bbaf65f8ed1af12828b38f8eacd24f934ac0e538
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62290673"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67155781"
 ---
 # <a name="link-pass-options-to-linker"></a>/link（将选项传递到链接器）
 
@@ -33,7 +33,7 @@ ms.locfileid: "62290673"
 
 ## <a name="remarks"></a>备注
 
-**/Link**选项以及与之链接器选项必须出现在任何文件的名称和 CL 选项之后。 是之间需要空格 **/link**和`linkeroptions`。 有关详细信息，请参阅[MSVC 链接器引用](linking.md)。
+**/Link**选项以及与之链接器选项必须出现在任何文件的名称和 CL 选项之后。 是之间需要空格 **/link**和任何链接器选项。 有关详细信息，请参阅[MSVC 链接器引用](linking.md)。
 
 ## <a name="example"></a>示例
 
@@ -45,11 +45,11 @@ ms.locfileid: "62290673"
 
 通常情况下，IDE 将发送单独的命令来编译和链接你的代码。 在项目属性页中，可以设置链接器选项。
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 选择**配置属性** > **链接器**文件夹。
 
-1. 修改一个或多个属性。 选择“确定”以保存更改。
+1. 修改一个或多个属性。 选择“确定”以保存更改  。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
 
