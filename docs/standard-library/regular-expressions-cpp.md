@@ -5,10 +5,10 @@ helpviewer_keywords:
 - regular expressions [C++]
 ms.assetid: aafe202a-1d96-4b36-a270-d676dfd3c51c
 ms.openlocfilehash: 291b25959f790db328080aa74a6320775a33e981
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.sourcegitcommit: 0ad35b26e405bbde17dc0bd0141e72f78f0a38fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/20/2019
 ms.locfileid: "65220313"
 ---
 # <a name="regular-expressions-c"></a>正则表达式 (C++)
@@ -209,7 +209,7 @@ C++标准库支持多个正则表达式语法。 使用正则表达式时，本�
 
 ### <a name="back-reference"></a>后向引用
 
-向后引用是一个反斜杠，后跟十进制值 N。它与第 n 个捕获组的内容匹配。 N 的值不得超过反斜杠之前的捕获组数量。 在 `basic` 和 `grep` 中，N 的值由反斜杠之后的十进制数字决定。 在 `ECMAScript` 中，N 的值由紧跟在反斜杠之后的所有十进制数字决定。 因此，在 `basic` 和 `grep` 中，N 的值绝不会超过 9（即使正则表达式具有九个以上捕获组）。 在 `ECMAScript` 中，N 的值是无限的。
+向后引用是一个反斜杠，后跟十进制值 N。它与第 n 个捕获组  的内容匹配。 N 的值不得超过反斜杠之前的捕获组数量。 在 `basic` 和 `grep` 中，N 的值由反斜杠之后的十进制数字决定。 在 `ECMAScript` 中，N 的值由紧跟在反斜杠之后的所有十进制数字决定。 因此，在 `basic` 和 `grep` 中，N 的值绝不会超过 9（即使正则表达式具有九个以上捕获组）。 在 `ECMAScript` 中，N 的值是无限的。
 
 示例：
 
@@ -478,7 +478,7 @@ Unicode 转义序列包含一个反斜杠，后跟字母“u”，然后再跟�
 |“$&”|"&"|与整个正则表达式相匹配的字符序列 (`[match[0].first, match[0].second)`)|
 |"$$"||"$"|
 ||"\\&"|"&"|
-|"$\`"（美元符号后跟反引号） | |与正则表达式匹配的子序列之前的字符序列 (`[match.prefix().first, match.prefix().second)`)|
+|"$\`"（美元符号后跟反引号）||与正则表达式相匹配的子序列之前的字符序列 (`[match.prefix().first, match.prefix().second)`)|
 |“$'”（美元符号后跟正撇号）||与正则表达式相匹配的子序列之后的字符序列 (`[match.suffix().first, match.suffix().second)`)|
 |“$n”|“\n”|与位置处的捕获组匹配的字符序列`n`，其中`n`是介于 0 到 9 之间的数字 (`[match[n].first, match[n].second)`)|
 ||"\\\n"|“\n”|
