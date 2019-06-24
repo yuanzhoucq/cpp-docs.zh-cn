@@ -60,12 +60,12 @@ helpviewer_keywords:
 - CFile [MFC], m_hFile
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
-ms.openlocfilehash: db499ffa5f1d82b6e3622287f86132930a929102
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dcfe2fb30269f3f3a4c14664d9f57f5b937c8c6d
+ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385305"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344433"
 ---
 # <a name="cfile-class"></a>CFile 类
 
@@ -138,7 +138,7 @@ class CFile : public CObject
 
 此类与它的派生的类之间的分层关系允许你通过多态的所有文件对象上运行的程序`CFile`接口。 内存文件，例如，类似于磁盘文件的行为。
 
-使用`CFile`通用磁盘 I/O 及其派生类。 使用`ofstream`或用于格式化文本发送到磁盘文件的其他 Microsoft iostream 类。
+使用`CFile`通用磁盘 I/O 及其派生类。 使用`ofstream`或其他 Microsoft`iostream`用于发送到磁盘文件的格式化文本的类。
 
 通常情况下上自动, 打开磁盘文件`CFile`构造和析构上已关闭。 静态成员函数允许您询问而无需打开该文件的文件的状态。
 
@@ -164,9 +164,9 @@ virtual void Abort();
 
 ### <a name="remarks"></a>备注
 
-如果您未销毁对象之前关闭该文件，析构函数将关闭它。
+如果尚未在销毁的对象之前关闭该文件，析构函数将关闭它。
 
-在处理异常时,`CFile::Abort`不同于`CFile::Close`在两个重要方面。 首先，`Abort`函数将不引发异常，故障因为故障，将忽略`Abort`。 第二个，`Abort`将不会**ASSERT**如果文件未打开或以前已关闭。
+在处理异常时,`CFile::Abort`不同于`CFile::Close`在两个重要方面。 首先，`Abort`函数不会引发异常，在失败，因为故障，将忽略`Abort`。 第二个，`Abort`不会**ASSERT**如果文件尚未打开，或以前已关闭。
 
 如果您使用了**新**分配`CFile`对象在堆上，则必须关闭文件后删除它。 `Abort` 设置`m_hFile`到`CFile::hFileNull`。
 
@@ -213,7 +213,7 @@ CAtlTransactionManager* pTM);
 
 仅选择下列文件访问模式选项之一。 默认文件访问模式为 `CFile::modeRead`，该模式为只读模式。
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
 |`CFile::modeRead`|只请求读取访问权限。|
 |`CFile::modeWrite`|只请求写入访问权限。|
@@ -221,7 +221,7 @@ CAtlTransactionManager* pTM);
 
 选择以下字符模式选项之一。
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
 |`CFile::typeBinary`|设置二元模式（仅在派生类中使用）。|
 |`CFile::typeText`|设置文本模式进行特殊处理，回车-换行对 （在仅派生类中使用）。|
@@ -229,7 +229,7 @@ CAtlTransactionManager* pTM);
 
 仅选择下列文件共享模式选项之一。 默认文件共享模式为 `CFile::shareExclusive`，该模式是独占模式。
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
 |`CFile::shareDenyNone`|没有任何共享限制。|
 |`CFile::shareDenyRead`|拒绝向所有其他用户提供读取访问权限。|
@@ -238,33 +238,33 @@ CAtlTransactionManager* pTM);
 
 选择下面的第一个（或全选）文件创建模式选项。 默认创建模式为 `CFile::modeNoTruncate`，该模式当前处于打开状态。
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
-|`CFile::modeCreate`|如果文件不存在，请创建一个新文件。 如果该文件已存在，它是被覆盖，并最初设置为长度为零。|
-|`CFile::modeNoTruncate`|若文件不存在，则创建新文件；否则，如果该文件已存在，则将其附加到 `CFile` 对象。|
+|`CFile::modeCreate`|如果文件不存在，请创建一个新文件。 如果该文件已存在，它被覆盖并最初设置为长度为零。|
+|`CFile::modeNoTruncate`|如果文件不存在; 将创建一个新的文件否则，如果该文件已存在，它已附加到`CFile`对象。|
 
-按照描述选择以下文件缓存选项。 默认情况下，系统将使用通用的缓存方案，该方案不可用作选项。
+按照描述选择以下文件缓存选项。 默认情况下，系统使用常规用途的缓存方案，不可用作一个选项。
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
-|`CFile::osNoBuffer`|系统没有为文件使用中间缓存。 此选项取消以下 2 个选项。|
+|`CFile::osNoBuffer`|系统不会为该文件使用中间缓存。 此选项取消以下 2 个选项。|
 |`CFile::osRandomAccess`|文件缓存针对随机访问进行了优化。 不要使用此选项和顺序扫描选项。|
 |`CFile::osSequentialScan`|文件缓存针对顺序访问进行了优化。 不要使用此选项和随机访问选项。|
-|`CFile::osWriteThrough`|立即执行写入操作。|
+|`CFile::osWriteThrough`|编写不使用延迟的操作。|
 
 选择下列安全选项以防止继承文件句柄。 默认情况下，所有新的子进程都可以使用文件句柄。
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
 |`CFile::modeNoInherit`|阻止任何子进程使用文件句柄。|
 
-默认构造函数将初始化成员，但不会将文件附加到 `CFile` 对象。 在使用此构造函数之后, 使用[CFile::Open](#open)方法来打开文件并将其附加到`CFile`对象。
+默认构造函数初始化成员，但不会附加到一个文件`CFile`对象。 在使用此构造函数之后, 使用[CFile::Open](#open)方法来打开文件并将其附加到`CFile`对象。
 
 带有一个参数的构造函数将初始化成员，并且将现有文件附加到 `CFile` 对象。
 
 带有两个参数的构造函数将初始化成员并尝试打开指定文件。 若此构造函数成功打开指定文件，则该文件将附加到 `CFile` 对象；否则，此构造函数将引发指向 `CInvalidArgException` 对象的指针。 有关如何处理异常的详细信息，请参阅[异常](../../mfc/exception-handling-in-mfc.md)。
 
-如果 `CFile` 对象成功打开指定文件，则它将在 `CFile` 对象被销毁时自动关闭该文件；否则，你必须在不再将其附加到 `CFile` 对象之后显式关闭该文件。
+如果`CFile`对象已成功打开指定的文件时，它将自动关闭该文件时`CFile`销毁对象; 否则，您必须显式关闭该文件后无法再将其附加到`CFile`对象。
 
 ### <a name="example"></a>示例
 
@@ -282,7 +282,7 @@ virtual void Close();
 
 ### <a name="remarks"></a>备注
 
-如果您未销毁对象之前关闭该文件，析构函数将关闭它。
+如果尚未在销毁的对象之前关闭该文件，析构函数将关闭它。
 
 如果您使用了**新**分配`CFile`对象在堆上，则必须关闭文件后删除它。 `Close` 设置`m_hFile`到`CFile::hFileNull`。
 
@@ -304,7 +304,7 @@ virtual CFile* Duplicate() const;
 
 ### <a name="remarks"></a>备注
 
-这相当于 C 运行时函数`_dup`。
+此函数等同于 C 运行时函数`_dup`。
 
 ##  <a name="flush"></a>  CFile::Flush
 
@@ -316,7 +316,7 @@ virtual void Flush();
 
 ### <a name="remarks"></a>备注
 
-利用`Flush`不能保证刷新`CArchive`缓冲区。 如果使用的存档，调用[CArchive::Flush](../../mfc/reference/carchive-class.md#flush)第一个。
+利用`Flush`并不能保证刷新`CArchive`缓冲区。 如果您使用的存档，调用[CArchive::Flush](../../mfc/reference/carchive-class.md#flush)第一个。
 
 ### <a name="example"></a>示例
 
@@ -382,7 +382,7 @@ virtual CString GetFileTitle() const;
 
 ### <a name="remarks"></a>备注
 
-此方法调用[GetFileTitle](/windows/desktop/api/commdlg/nf-commdlg-getfiletitlea)检索文件的标题。 如果成功，该方法将返回系统将使用要向用户显示的文件的名称的字符串。 否则，该方法会调用[PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea)检索基础文件的文件名称 （包括文件扩展名）。 因此，文件扩展名将始终是字符串中未包含返回的文件标题。 有关详细信息，请参阅[GetFileTitle](/windows/desktop/api/commdlg/nf-commdlg-getfiletitlea)并[PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea) Windows SDK 中。
+此方法调用[GetFileTitle](/windows/desktop/api/commdlg/nf-commdlg-getfiletitlea)检索文件的标题。 如果成功，该方法将返回系统将使用要向用户显示的文件的名称的字符串。 否则，该方法会调用[PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea)检索基础文件的文件名称 （包括文件扩展名）。 这意味着文件扩展名不始终包括在返回的文件的标题字符串。 有关详细信息，请参阅[GetFileTitle](/windows/desktop/api/commdlg/nf-commdlg-getfiletitlea)并[PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea) Windows SDK 中。
 
 若要返回整个文件的路径，包括名称、 调用[GetFilePath](#getfilepath)。 若要返回只是文件的名称，请调用[GetFileName](#getfilename)。
 
@@ -408,7 +408,7 @@ virtual ULONGLONG GetLength() const;
 
 ##  <a name="getposition"></a>  CFile::GetPosition
 
-获取文件指针，它可以对后续调用中使用的当前值`Seek`。
+获取文件指针，它可以用于更高版本调用的当前值`Seek`。
 
 ```
 virtual ULONGLONG GetPosition() const;
@@ -464,7 +464,7 @@ static BOOL PASCAL GetStatus(
 
 ### <a name="remarks"></a>备注
 
-非静态新版`GetStatus`打开的文件与相关联的状态信息中检索给定`CFile`对象。  静态版本`GetStatus`从给定的文件路径获取文件状态，而无需实际打开该文件。 这是用于测试的文件存在和访问权限。
+非静态新版`GetStatus`打开的文件与相关联的状态信息中检索给定`CFile`对象。  静态版本`GetStatus`从给定的文件路径获取文件状态，而无需实际打开该文件。 此版本可用于测试的文件存在和访问权限。
 
 `m_attribute`的成员`CFileStatus`结构引用的文件属性集。 `CFile`类提供了**属性**枚举类型，因此可以种指定文件属性：
 
@@ -522,7 +522,7 @@ virtual void LockRange(
 
 锁定文件中的字节将阻止其他进程访问这些字节。 可锁定多个区域文件，但允许使用任何重叠区域。
 
-如果解除锁定区域，使用`UnlockRange`成员函数的字节范围必须对应完全以前锁定的区域。 `LockRange`函数不会合并相邻区域; 如果有两种锁定的区域相邻，必须单独解锁每个区域。
+当你解锁区域使用`UnlockRange`成员函数的字节范围必须对应完全以前锁定的区域。 `LockRange`函数不会合并相邻区域。 如果有两种锁定的区域相邻，必须单独解锁每个区域。
 
 > [!NOTE]
 >  此函数不可用于`CMemFile`-派生的类。
@@ -541,9 +541,9 @@ HANDLE m_hFile;
 
 ### <a name="remarks"></a>备注
 
-`m_hFile` 是类型为 UINT 的公共变量。 它包含`CFile::hFileNull`（独立于操作系统的空文件指标） 如果尚未分配句柄。
+`m_hFile` 是类型为 UINT 的公共变量。 它包含`CFile::hFileNull`，独立于操作系统的空文件指示符，如果尚未分配句柄。
 
-使用`m_hFile`不建议，因为该成员的含义取决于派生的类。 `m_hFile` 将成为公共成员，为方便起见，在支持非多态类的使用。
+使用`m_hFile`不建议使用，因为该成员的含义取决于派生的类。 `m_hFile` 将成为公共成员，为方便起见，在支持非多态类的使用。
 
 ##  <a name="m_ptm"></a>  CFile::m_pTM
 
@@ -575,7 +575,7 @@ virtual BOOL Open(
 ### <a name="parameters"></a>参数
 
 *lpszFileName*<br/>
-一个字符串，是所需的文件的路径。 路径可以是相对、 绝对路径或网络名称 (UNC)。
+一个字符串，包含所需的文件的路径。 路径可以是相对、 绝对路径或网络名称 (UNC)。
 
 *nOpenFlags*<br/>
 UINT，用于定义文件的共享和访问模式。 它指定打开文件时采取的操作。 可以通过使用按位 OR 组合选项 ( **&#124;** ) 运算符。 一个访问权限和一个共享选项是必需的;`modeCreate`和`modeNoInherit`模式是可选的。 请参阅[CFile](#cfile)构造函数模式选项的列表。
@@ -592,9 +592,9 @@ UINT，用于定义文件的共享和访问模式。 它指定打开文件时采
 
 ### <a name="remarks"></a>备注
 
-两个函数窗体"安全"方法来打开一个文件，其中失败是正常的预期条件。
+这两个`Open`函数是用于打开的文件，其中失败是正常的预期条件的"安全"方法。
 
-虽然`CFile`构造函数将引发异常错误条件中`Open`将对错误条件返回 FALSE。 `Open` 仍可以初始化[CFileException](../../mfc/reference/cfileexception-class.md)对象，用于描述该错误，但是。 如果未提供*pError*参数，或如果您为传递 NULL *pError*，`Open`将返回 FALSE，因此不会引发`CFileException`。 如果将指针传递到的现有`CFileException`，和`Open`遇到的错误，该函数将填充描述该错误的信息。 中都不写将`Open`引发异常。
+虽然`CFile`构造函数中出现错误，则引发一个异常`Open`对错误条件返回 FALSE。 `Open` 仍可以初始化[CFileException](../../mfc/reference/cfileexception-class.md)对象，用于描述该错误，但是。 如果未提供*pError*参数，或如果您为传递 NULL *pError*，`Open`返回 FALSE，并且不会引发`CFileException`。 如果将指针传递到的现有`CFileException`，和`Open`遇到的错误，该函数将其填充描述该错误的信息。 `Open` 在任一情况下不会引发异常。
 
 下表描述了可能的结果`Open`。
 
@@ -639,13 +639,13 @@ virtual UINT Read(
 
 ### <a name="return-value"></a>返回值
 
-传输到缓冲区的字节数。 请注意，对于所有`CFile`类，则返回值可能小于*nCount*如果已达到文件结尾。
+传输到缓冲区的字节数。 为所有`CFile`类，则返回值可能小于*nCount*如果已达到文件结尾。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFCFiles#15](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_11.cpp)]
 
-另一个示例，请参阅[CFile::Open](#open)。
+有关其他示例，请参阅[CFile::Open](#open)。
 
 ##  <a name="remove"></a>  CFile::Remove
 
@@ -667,9 +667,9 @@ static void PASCAL Remove(
 
 ### <a name="remarks"></a>备注
 
-它不会删除一个目录。
+`Remove` 不会删除一个目录。
 
-`Remove`成员函数将引发异常，如果已连接的文件处于打开状态，或不能删除该文件。 这相当于 DEL 命令。
+`Remove`成员函数将引发异常，如果已连接的文件处于打开状态，或不能删除该文件。 此函数相当于 DEL 命令。
 
 ### <a name="example"></a>示例
 
@@ -699,7 +699,7 @@ static void PASCAL Rename(
 
 ### <a name="remarks"></a>备注
 
-不能重命名目录。 这相当于 REN 命令。
+不能重命名目录。 此函数相当于 REN 命令。
 
 ### <a name="example"></a>示例
 
@@ -731,7 +731,7 @@ UINT nFrom);
 
 下表列出了可能值*nFrom*参数。
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
 |`CFile::begin`|从文件开头向搜索。|
 |`CFile::current`|从文件指针的当前位置向搜索。|
@@ -739,7 +739,7 @@ UINT nFrom);
 
 当打开文件时，文件指针位于保持为 0，文件开头。
 
-您可以将文件指针设置到超出文件末尾的位置。 如果这样做，文件的大小不会增加之前写入到文件。
+您可以将文件指针设置到超出文件末尾的位置。 如果这样做，写入到文件之前不会增加文件的大小。
 
 处理异常后，此方法的异常处理程序必须删除异常对象。
 
@@ -785,7 +785,7 @@ ULONGLONG SeekToEnd();
 
 ##  <a name="setfilepath"></a>  CFile::SetFilePath
 
-调用此函数可指定在文件的路径例如，如果文件的路径不可用[CFile](../../mfc/reference/cfile-class.md)构造对象，请调用`SetFilePath`提供它。
+调用此函数可指定文件的路径。 例如，如果不，是可用的文件路径[CFile](../../mfc/reference/cfile-class.md)构造对象，请调用`SetFilePath`提供它。
 
 ```
 virtual void SetFilePath(LPCTSTR lpszNewName);
@@ -844,7 +844,7 @@ static void PASCAL SetStatus(
 一个字符串，是所需的文件的路径。 路径可以是相对或绝对的并且可以包含网络名称。
 
 *status*<br/>
-包含新的状态信息的缓冲区。 调用`GetStatus`成员函数，以预填充`CFileStatus`结构的当前值，然后根据需要进行更改。 如果值为 0，则不更新相应的状态项。 请参阅[GetStatus](#getstatus)成员函数的说明`CFileStatus`结构。
+包含新的状态信息的缓冲区。 调用`GetStatus`成员函数，以预填充`CFileStatus`结构的当前值，然后根据需要进行更改。 如果值为 0，不会更新相应的状态项。 请参阅[GetStatus](#getstatus)成员函数的说明`CFileStatus`结构。
 
 *pTM*<br/>
 指向 CAtlTransactionManager 对象的指针
@@ -853,7 +853,7 @@ static void PASCAL SetStatus(
 
 若要设置的时间，修改`m_mtime`字段*状态*。
 
-请注意，当您调用`SetStatus`在尝试更改文件属性和`m_mtime`文件状态结构中的成员为非零值、 属性可能也会受到影响 （更改的时间戳可能会对产生负面影响属性）。 如果你想要仅更改文件的属性，首先设置`m_mtime`的文件状态结构的成员为零，然后再调用`SetStatus`。
+进行调用时`SetStatus`在尝试更改文件属性和`m_mtime`文件状态结构中的成员为非零值、 属性可能也会受到影响 （更改的时间戳可能会产生负面影响的属性）。 如果你想要仅更改文件的属性，首先设置`m_mtime`的文件状态结构的成员为零，然后再调用`SetStatus`。
 
 ### <a name="example"></a>示例
 
@@ -914,7 +914,7 @@ virtual void Write(
 
 [!code-cpp[NVC_MFCFiles#16](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_19.cpp)]
 
-此外，请参阅有关[CFile::CFile](#cfile)并[CFile::Open](#open)。
+此外，请参阅示例[CFile::CFile](#cfile)并[CFile::Open](#open)。
 
 ## <a name="see-also"></a>请参阅
 

@@ -43,12 +43,12 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: 2e3e671cd92313ad120d2cd6aae3f7e815e09e65
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 01116116ad6bb455d3b0fd8966e65b2fec4c5a35
+ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390979"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344369"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>如何：添加、 编辑或删除控件 (C++)
 
@@ -69,9 +69,9 @@ ms.locfileid: "62390979"
 
    - 选择在你想要放置控件和控件将显示其中所选的位置的对话框。
 
-   - 拖放到该控件从**工具箱**窗口的位置上，在对话框中，并且可以然后移动控件或更改其大小和形状。
+   - 拖放到该控件从**工具箱**窗口到您的对话框上的位置。 然后可以移动控件，或更改其大小和形状。
 
-   - 双击该控件中的**工具箱**窗口中，且将出现在对话框中，然后重新控件定位到所需的位置。
+   - 双击该控件中的**工具箱**窗口中，且显示在对话框中。 到所需的位置重新定位控件。
 
 ### <a name="to-add-multiple-controls"></a>若要添加多个控件
 
@@ -87,7 +87,7 @@ ms.locfileid: "62390979"
 
 1. 将显示为十字线，想要在对话框中，新的控件的左上角的光标。
 
-1. 选择并按住鼠标按钮，若要定位到对话框的上的控件的左上角，然后拖动光标向右和向下直到控件所需的大小。
+1. 选择并按住鼠标按钮，若要定位到对话框的上的控件的左上角。 将光标拖到右和向下直到控件所需的大小。
 
    > [!NOTE]
    > 您可以定位任何要绘制的控件的四个角。 此过程作为示例使用左上角。
@@ -99,7 +99,7 @@ ms.locfileid: "62390979"
 
 ### <a name="to-add-a-custom-control"></a>添加自定义控件
 
-可以通过选择向对话框添加自定义控件**自定义控件**中的图标**工具箱**并将其拖到您的对话框。 若要添加**Syslink**控制，添加自定义控件，然后更改控件的**类**属性设置为**Syslink**。 此操作将导致属性刷新并显示**Syslink**控件属性。 有关 MFC 包装类的信息，请参阅[CLinkCtrl](../mfc/reference/clinkctrl-class.md)。
+可以将自定义控件添加到对话框中。 选择**自定义控件**中的图标**工具箱**并将其拖到您的对话框。 若要添加`Syslink`控制，添加自定义控件，然后更改控件的**类**属性设置为`Syslink`。 此操作将导致属性刷新并显示`Syslink`控件属性。 有关 MFC 包装类的信息，请参阅[CLinkCtrl](../mfc/reference/clinkctrl-class.md)。
 
 ## <a name="edit-controls"></a>编辑控件
 
@@ -139,7 +139,7 @@ ms.locfileid: "62390979"
 > [!TIP]
 > 若要从任何对话框控件跳转到其现有的处理程序，请双击该控件。
 
-此外可以使用**成员变量**选项卡[MFC 类向导](../mfc/reference/mfc-class-wizard.md)添加为指定类的新成员变量并查看已定义的成员变量。
+此外可以使用**成员变量**选项卡[MFC 类向导](../mfc/reference/mfc-class-wizard.md)添加为指定类的新成员变量以及查看已定义的成员变量。
 
 ## <a name="delete-controls"></a>删除控件
 
@@ -149,7 +149,7 @@ ms.locfileid: "62390979"
 
 ### <a name="troubleshooting"></a>疑难解答
 
-将公共控件或 rich edit 控件添加到对话框中之后, 它不会出现时测试对话框的或对话框中本身不会显示，例如：
+将公共控件或 rich edit 控件添加到对话框后，它会出现在测试对话框中时。 或者，不会显示对话框本身。 例如：
 
 1. 创建 Win32 项目，修改应用程序设置，因此创建 Windows 应用程序 （不是一个控制台应用程序）。
 
@@ -196,7 +196,7 @@ Visual Studio 使你可以将 ActiveX 控件插入对话框中。 有关详细�
 |**路径**|显示在其中找到 ActiveX 控件的文件。|
 
 > [!CAUTION]
-> 分发系统上的每个 ActiveX 控件可能并非都是合法的。 请参阅安装了控件的软件的许可协议，或与软件公司联系。
+> 分发系统上的每个 ActiveX 控件可能并非都是合法的。 请参阅安装了该控件的软件的许可协议或与软件公司联系。
 
 #### <a name="to-add-an-activex-control"></a>若要添加的 ActiveX 控件
 
@@ -215,7 +215,7 @@ Visual Studio 使你可以将 ActiveX 控件插入对话框中。 有关详细�
 
 #### <a name="to-edit-properties-for-an-activex-control"></a>若要编辑的 ActiveX 控件的属性
 
-提供独立供应商的 ActiveX 控件可能都配备有其自己的属性和特征。 这些属性显示在**属性**窗口，其中包括所创建的 ActiveX 控件的编写器页中显示的任何属性**属性页**对话框 （可以查看**属性页**对于特定的 ActiveX 控件，选择**属性页**按钮[属性窗口](/visualstudio/ide/reference/properties-window))。
+提供独立供应商的 ActiveX 控件可能都配备有其自己的属性和特征。 这些属性显示在**属性**窗口。 创建 ActiveX 控件的编写器的任何属性页中显示**属性页**对话框。 (若要查看**属性页**特定的 ActiveX 控件，选择**属性页**按钮[属性窗口](/visualstudio/ide/reference/properties-window))。
 
 - 选择**ActiveX**控制，并转到菜单**视图** > **属性页**查看的属性。 根据需要在属性页中进行更改。
 

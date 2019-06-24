@@ -48,18 +48,18 @@ helpviewer_keywords:
 - InterlockedCompareExchange64_rel intrinsic
 - _InterlockedCompareExchange64_rel intrinsic
 ms.assetid: c3ad79c0-a523-4930-a3a4-69a65d7d5c81
-ms.openlocfilehash: 6c0fabe7cbada87253960faca8e207bb10dd07bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ac3ea1c97fe78cf2a145cd2ce62f7b3f198ab3c
+ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263732"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344443"
 ---
 # <a name="interlockedcompareexchange-intrinsic-functions"></a>_InterlockedCompareExchange 内部函数
 
 **Microsoft 专用**
 
-执行联锁比较和交换。
+没有联锁比较和交换。
 
 ## <a name="syntax"></a>语法
 
@@ -202,25 +202,25 @@ __int64 _InterlockedCompareExchange64_rel(
 
 ## <a name="remarks"></a>备注
 
-`_InterlockedCompareExchange` 可执行 `Destination` 值与 `Comparand` 值之间的原子比较。 如果 `Destination` 值等于 `Comparand` 值，`Exchange` 值将存储在由 `Destination` 指定的地址。 否则，不会执行任何操作。
+`_InterlockedCompareExchange` 执行的原子比较`Destination`值替换`Comparand`值。 如果 `Destination` 值等于 `Comparand` 值，`Exchange` 值将存储在由 `Destination` 指定的地址。 否则，执行任何操作。
 
 `_InterlockedCompareExchange` 提供了编译器内部函数支持 Win32 Windows SDK [3&gt;interlockedcompareexchange&lt;3}](/windows/desktop/api/winnt/nf-winnt-interlockedcompareexchange)函数。
 
-`_InterlockedCompareExchange` 存在几种变体，这些变体根据其涉及的数据类型和是否使用特定于处理器获取或发布语义而有所不同。
+上有几种变体`_InterlockedCompareExchange`的差异取决于它们涉及的数据类型和是否特定于处理器获取或使用 release 语义。
 
-当 `_InterlockedCompareExchange` 函数对长整型数值操作时，`_InterlockedCompareExchange8` 对 8 位整数值操作，`_InterlockedCompareExchange16` 对短整型数值操作，`_InterlockedCompareExchange64` 对 64 位整数值操作。
+虽然`_InterlockedCompareExchange`函数对长整型值`_InterlockedCompareExchange8`对 8 位整数值操作`_InterlockedCompareExchange16`对短整型值和`_InterlockedCompareExchange64`对 64 位整数值。
 
-在 ARM 平台上，可以使用带 `_acq` 和 `_rel` 后缀的内部函数获取和发布语义，例如在临界区的起始位置。 带 `_nf`（“无围墙”）后缀的 ARM 内部函数不能充当内存屏障。
+在 ARM 平台上，可以使用带 `_acq` 和 `_rel` 后缀的内部函数获取和发布语义，例如在临界区的起始位置。 使用 ARM 内部函数`_nf`（"无围墙"） 后缀不充当内存屏障。
 
 带 `_np`（“无预取”）后缀的函数可以阻止编译器插入可能的预取操作。
 
-在支持硬件锁省略 (HLE) 指令的 Intel 平台，带 `_HLEAcquire` 和 `_HLERelease` 后缀的内部函数包括一个发送到处理器的提示，可以通过消除硬件中的锁写步骤来提升速度。 如果在不支持 HLE 的平台上调用这些函数，则忽略此提示。
+在支持硬件锁省略 (HLE) 指令的 Intel 平台，带 `_HLEAcquire` 和 `_HLERelease` 后缀的内部函数包括一个发送到处理器的提示，可以通过消除硬件中的锁写步骤来提升速度。 如果不支持 HLE 的平台上调用这些函数，被忽略此提示。
 
 这些例程只能用作内部函数。
 
 ## <a name="example"></a>示例
 
-在以下示例中，`_InterlockedCompareExchange` 用于简单的低等级线程同步。 此方法作为多线程编程基础时有其自身的局限性；介绍此方法旨在说明联锁内部函数的典型用法。 要得到最佳结果，请使用 Windows API。 有关多线程编程的详细信息，请参阅[编写多线程 Win32 程序](../parallel/writing-a-multithreaded-win32-program.md)。
+在以下示例中，`_InterlockedCompareExchange` 用于简单的低等级线程同步。 方法作为基础的多线程编程; 具有其自身的局限性它显示举例说明互锁内部函数的典型用法。 要得到最佳结果，请使用 Windows API。 有关多线程编程的详细信息，请参阅[编写多线程 Win32 程序](../parallel/writing-a-multithreaded-win32-program.md)。
 
 ```
 // intrinExample.cpp
@@ -248,7 +248,7 @@ using namespace std;
 //#define SKIP_LOCKING
 
 // A common way of locking using _InterlockedCompareExchange.
-// Please refer to other sources for a discussion of the many issues
+// Refer to other sources for a discussion of the many issues
 // involved. For example, this particular locking scheme performs well
 // when lock contention is low, as the while loop overhead is small and
 // locks are acquired very quickly, but degrades as many callers want
