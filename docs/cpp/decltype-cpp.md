@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
 ms.openlocfilehash: 0a4e9eb015df056dfe2a35da18cfa50875ced432
 ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2019
 ms.locfileid: "65222453"
@@ -81,7 +81,7 @@ UNKNOWN func(T&& t, U&& u){ return t + u; };
 
 以下原型阐述一个替代函数声明的语法。 请注意， **const**并**易失性**限定符，并且**引发**[异常规范](../cpp/exception-specifications-throw-cpp.md)都是可选的。 *Function_body*占位符表示指定函数作用的复合语句。 作为最佳编码做法，*表达式*中的占位符**decltype**语句与指定的表达式应匹配**返回**语句，如果有，在*function_body*。
 
-**自动** *function_name* **(** *参数*<sub>选择</sub> **)** **const**<sub>opt</sub> **易失性**<sub>opt</sub> **->** **decltype (***表达式* **)** **引发**<sub>选择</sub> **{** *function_body***};**
+**自动** *function_name* **(** *参数*<sub>选择</sub> **)** **const**<sub>opt</sub> **易失性**<sub>opt</sub> **->** **decltype (** *表达式* **)** **引发**<sub>选择</sub> **{** *function_body* **};**
 
 在下面的代码示例中，`myFunc` 模板函数的后指定返回类型取决于 `t` 和 `u` 模板参数的类型。 作为最佳编码做法，此代码示例还使用右值引用和`forward`函数模板来支持*完美转发*。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 

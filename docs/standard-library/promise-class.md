@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::promise [C++], set_value
 - std::promise [C++], set_value_at_thread_exit
 - std::promise [C++], swap
-ms.openlocfilehash: 101c9939f1636d87780aa15aea9459ebb927684d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 991df549168456112afe27bed6f4991a7ccfb88e
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369951"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400874"
 ---
 # <a name="promise-class"></a>promise 类
 
@@ -65,7 +65,7 @@ class promise;
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
-*promise*<br/>
+*promise*
 
 ## <a name="requirements"></a>要求
 
@@ -137,7 +137,7 @@ promise(promise&& Other) noexcept;
 
 ## <a name="set_exception"></a>promise::set_exception
 
-以原子方式将异常存储为此 `promise` 对象的结果，并将“关联的异步状态”设置为“就绪”。
+以原子方式将异常存储为此 `promise` 对象的结果，并将“关联的异步状态”  设置为“就绪”  。
 
 ```cpp
 void set_exception(exception_ptr Exc);
@@ -171,7 +171,7 @@ void set_exception_at_thread_exit(exception_ptr Exc);
 
 ### <a name="remarks"></a>备注
 
-如果 promise 对象没有关联的异步状态，则此方法将引发具有错误代码 `no_state` 的 [future_error](../standard-library/future-error-class.md)。
+如果 promise 对象没有关联的异步状态  ，则此方法将引发具有错误代码 `no_state` 的 [future_error](../standard-library/future-error-class.md)。
 
 如果已为具有相同的关联异步状态的 `promise` 对象调用 [set_exception](#set_exception)、`set_exception_at_thread_exit`、[set_value](#set_value) 或 [set_value_at_thread_exit](#set_value_at_thread_exit)，则此方法将引发具有错误代码 `promise_already_satisfied` 的 `future_error`。
 
@@ -179,7 +179,7 @@ void set_exception_at_thread_exit(exception_ptr Exc);
 
 ## <a name="set_value"></a>promise::set_value
 
-以原子方式将值存储为此 `promise` 对象的结果，并将“关联的异步状态”设置为“就绪”。
+以原子方式将值存储为此 `promise` 对象的结果，并将“关联的异步状态”  设置为“就绪”  。
 
 ```cpp
 void promise::set_value(const Ty& Val);
@@ -227,7 +227,7 @@ void promise<void>::set_value_at_thread_exit();
 
 ### <a name="remarks"></a>备注
 
-如果 promise 对象没有关联的异步状态，则此方法将引发具有错误代码 `no_state` 的 [future_error](../standard-library/future-error-class.md)。
+如果 promise 对象没有关联的异步状态  ，则此方法将引发具有错误代码 `no_state` 的 [future_error](../standard-library/future-error-class.md)。
 
 如果已为具有相同的关联异步状态的 `promise` 对象调用 [set_exception](#set_exception)、[set_exception_at_thread_exit](#set_exception_at_thread_exit)、[set_value](#set_value) 或 `set_value_at_thread_exit`，则此方法将引发具有错误代码 `promise_already_satisfied` 的 `future_error`。
 

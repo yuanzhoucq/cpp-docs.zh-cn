@@ -102,7 +102,7 @@ return (*this);
 
 两组函数调用[setstate](../standard-library/basic-ios-class.md#setstate)(**badbit**) 如果它们在插入元素时遭遇失败。
 
-类 basic_istream\< **Elem**, **Tr**> 的对象仅存储类 [basic_ios](../standard-library/basic-ios-class.md)**\<Elem**, **Tr>** 的虚拟公共基对象。
+类 basic_istream\< **Elem**, **Tr**> 的对象仅存储类 [basic_ios](../standard-library/basic-ios-class.md) **\<Elem**, **Tr>** 的虚拟公共基对象。
 
 ## <a name="example"></a>示例
 
@@ -135,7 +135,7 @@ return (*this);
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<ostream>
+**标头：** \<ostream>
 
 **命名空间：** std
 
@@ -184,7 +184,7 @@ basic_ostream<Elem, Tr>& flush();
 
 ### <a name="remarks"></a>备注
 
-如果 [rdbuf](../standard-library/basic-ios-class.md#rdbuf) 不是空指针，则函数将调用 **rdbuf->**[pubsync](../standard-library/basic-streambuf-class.md#pubsync)。 如果返回 -1，则该函数将调用 [setstate](../standard-library/basic-ios-class.md#setstate)(**badbit**)。 它将返回 **\*this**。
+如果 [rdbuf](../standard-library/basic-ios-class.md#rdbuf) 不是空指针，则函数将调用 **rdbuf->** [pubsync](../standard-library/basic-streambuf-class.md#pubsync)。 如果返回 -1，则该函数将调用 [setstate](../standard-library/basic-ios-class.md#setstate)(**badbit**)。 它将返回 **\*this**。
 
 ### <a name="example"></a>示例
 
@@ -254,7 +254,7 @@ basic_ostream<Elem, Tr>& operator<<(const void* val);
 
 \<Ostream > 标头还定义多个全局插入运算符。 有关详细信息，请参阅[运算符 <<](../standard-library/ostream-operators.md#op_lt_lt)。
 
-第一个成员函数确保形式的表达式`ostr << endl`调用[endl](../standard-library/ostream-functions.md#endl)**(ostr)**，然后返回**\*这**。 第二个和第三个函数确保其他操控器（如 [hex ](../standard-library/ios-functions.md#hex)）表现相似。 其余函数均是格式化的输出函数。
+第一个成员函数确保形式的表达式`ostr << endl`调用[endl](../standard-library/ostream-functions.md#endl) **(ostr)** ，然后返回 **\*这**。 第二个和第三个函数确保其他操控器（如 [hex ](../standard-library/ios-functions.md#hex)）表现相似。 其余函数均是格式化的输出函数。
 
 函数
 
@@ -270,7 +270,7 @@ basic_ostream<Elem, Tr>& operator<<(basic_streambuf<Elem, Tr>* strbuf);
 basic_ostream<Elem, Tr>& operator<<(bool val);
 ```
 
-将转换`_Val`转换为布尔型字段，并将其插入通过调用[use_facet](../standard-library/basic-filebuf-class.md#open)**< num_put\<Elem，OutIt >**`(`[getloc](../standard-library/ios-base-class.md#getloc))。 [put](#put)(**OutIt**([rdbuf](../standard-library/basic-ios-class.md#rdbuf)), **\*this**, `getloc`, **val**) 插入它。 在这里，`OutIt`指[ostreambuf_iterator](../standard-library/ostreambuf-iterator-class.md)**\<Elem，Tr >**。 该函数返回 **\*this**。
+将转换`_Val`转换为布尔型字段，并将其插入通过调用[use_facet](../standard-library/basic-filebuf-class.md#open) **< num_put\<Elem，OutIt >** `(`[getloc](../standard-library/ios-base-class.md#getloc))。 [put](#put)(**OutIt**([rdbuf](../standard-library/basic-ios-class.md#rdbuf)), **\*this**, `getloc`, **val**) 插入它。 在这里，`OutIt`指[ostreambuf_iterator](../standard-library/ostreambuf-iterator-class.md) **\<Elem，Tr >** 。 该函数返回 **\*this**。
 
 函数
 
@@ -286,7 +286,7 @@ basic_ostream<Elem, Tr>& operator<<(unsigned long long val);
 basic_ostream<Elem, Tr>& operator<<(const void* val);
 ```
 
-每个转换*val*为数字字段并将其插入通过调用**use_facet < num_put\<Elem，OutIt >**(`getloc`)。 **put**(**OutIt**(`rdbuf`), **\*this**, `getloc`, **val**) 插入它。 此处，将 **OutIt** 定义为 **ostreambuf_iterator\<Elem, Tr>**。 该函数返回 **\*this**。
+每个转换*val*为数字字段并将其插入通过调用**use_facet < num_put\<Elem，OutIt >** (`getloc`)。 **put**(**OutIt**(`rdbuf`), **\*this**, `getloc`, **val**) 插入它。 此处，将 **OutIt** 定义为 **ostreambuf_iterator\<Elem, Tr>** 。 该函数返回 **\*this**。
 
 函数
 
@@ -296,7 +296,7 @@ basic_ostream<Elem, Tr>& operator<<(double val);
 basic_ostream<Elem, Tr>& operator<<(long double val);
 ```
 
-每个转换*val*为数字字段并将其插入通过调用**use_facet < num_put\<Elem，OutIt >**(`getloc`)**。 放置**(**OutIt**(`rdbuf`)， **\*这**， `getloc`， **val**)。 此处，将 **OutIt** 定义为 **ostreambuf_iterator\<Elem, Tr>**。 该函数返回 **\*this**。
+每个转换*val*为数字字段并将其插入通过调用**use_facet < num_put\<Elem，OutIt >** (`getloc`) **。 放置**(**OutIt**(`rdbuf`)， **\*这**， `getloc`， **val**)。 此处，将 **OutIt** 定义为 **ostreambuf_iterator\<Elem, Tr>** 。 该函数返回 **\*this**。
 
 ### <a name="example"></a>示例
 
@@ -434,7 +434,7 @@ basic_ostream<Elem, Tr>& seekp(off_type _Off, ios_base::seekdir _Way);
 
 ### <a name="remarks"></a>备注
 
-如果[失败](../standard-library/basic-ios-class.md#fail)是**false**，第一个成员函数调用**newpos =** [rdbuf](../standard-library/basic-ios-class.md#rdbuf) **->**[pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos)(*_Pos*)，对于某些`pos_type`临时对象`newpos`。 如果`fail`为 false，则第二个函数调用**newpos = rdbuf->** [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)(*_Off，_Way*)。 在任一情况下，如果 (`off_type`)**newpos ==** (`off_type`)(-1)（定位操作失败），则函数调用 **istr.**[setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**)。 两个函数均返回 **\*this**。
+如果[失败](../standard-library/basic-ios-class.md#fail)是**false**，第一个成员函数调用**newpos =** [rdbuf](../standard-library/basic-ios-class.md#rdbuf) **->** [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos)( *_Pos*)，对于某些`pos_type`临时对象`newpos`。 如果`fail`为 false，则第二个函数调用**newpos = rdbuf->** [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)( *_Off，_Way*)。 在任一情况下，如果 (`off_type`)**newpos ==** (`off_type`)(-1)（定位操作失败），则函数调用 **istr.** [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**)。 两个函数均返回 **\*this**。
 
 ### <a name="example"></a>示例
 
@@ -474,7 +474,7 @@ int main()
 
 ### <a name="remarks"></a>备注
 
-嵌套的类描述一个对象，该对象的声明构造格式化的输出函数和未格式化的输出函数。 如果 **ostr.**[good](../standard-library/basic-ios-class.md#good) 为 **true** 且 **ostr.**[tie](../standard-library/basic-ios-class.md#tie) 不是空指针，则构造函数调用 **ostr.tie->**[flush](#flush)。 构造函数，然后将返回的值`ostr.good`在`status`。 更高版本调用`operator bool`提供此存储的值。
+嵌套的类描述一个对象，该对象的声明构造格式化的输出函数和未格式化的输出函数。 如果 **ostr.** [good](../standard-library/basic-ios-class.md#good) 为 **true** 且 **ostr.** [tie](../standard-library/basic-ios-class.md#tie) 不是空指针，则构造函数调用 **ostr.tie->** [flush](#flush)。 构造函数，然后将返回的值`ostr.good`在`status`。 更高版本调用`operator bool`提供此存储的值。
 
 如果 `uncaught_exception` 返回 **false**并且 [flags](../standard-library/ios-base-class.md#flags) **&** [unitbuf](../standard-library/ios-functions.md#unitbuf) 为非零，则析构函数调用 [flush](#flush)。
 
@@ -509,7 +509,7 @@ pos_type tellp();
 
 ### <a name="remarks"></a>备注
 
-如果 [fail](../standard-library/basic-ios-class.md#fail) 为 **false**，则成员函数返回 [rdbuf](../standard-library/basic-ios-class.md#rdbuf)**->** [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)(0, `cur`, **in**)。 否则，将返回 `pos_type`(-1)。
+如果 [fail](../standard-library/basic-ios-class.md#fail) 为 **false**，则成员函数返回 [rdbuf](../standard-library/basic-ios-class.md#rdbuf) **->** [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)(0, `cur`, **in**)。 否则，将返回 `pos_type`(-1)。
 
 ### <a name="example"></a>示例
 

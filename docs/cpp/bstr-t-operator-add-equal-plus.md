@@ -45,13 +45,13 @@ friend _bstr_t operator+( const wchar_t* s3, const _bstr_t& s1);
 
 以下运算符将执行字符串串联：
 
-- **operator + = (***s1***)** 中封装的字符追加`BSTR`的*s1*到此对象封装末尾`BSTR`.
+- **operator + = (** *s1* **)** 中封装的字符追加`BSTR`的*s1*到此对象封装末尾`BSTR`.
 
-- **operator + (***s1***)** 返回新`_bstr_t`此对象的连接在一起构成`BSTR`与*s1*。
+- **operator + (** *s1* **)** 返回新`_bstr_t`此对象的连接在一起构成`BSTR`与*s1*。
 
-- **operator + (***s2***&#124;***s1***)** 返回一个新`_bstr_t`通过串联构成多字节字符串*s2*，已转换为 Unicode，与`BSTR`封装在*s1*。
+- **operator + (** *s2* **&#124;** *s1* **)** 返回一个新`_bstr_t`通过串联构成多字节字符串*s2*，已转换为 Unicode，与`BSTR`封装在*s1*。
 
-- **operator + (***s3* **，***s1***)** 返回一个新`_bstr_t`通过将 Unicode 字符串构成*s3*与`BSTR`封装在*s1*。
+- **operator + (** *s3* **，** *s1* **)** 返回一个新`_bstr_t`通过将 Unicode 字符串构成*s3*与`BSTR`封装在*s1*。
 
 **结束 Microsoft 专用**
 
