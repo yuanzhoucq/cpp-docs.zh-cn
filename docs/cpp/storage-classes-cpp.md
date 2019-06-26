@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
 ms.openlocfilehash: 92435b2bab670dd366f26c981443e98e4a4e3c29
 ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2019
 ms.locfileid: "65221996"
@@ -24,7 +24,7 @@ A*存储类*在上下文中的 C++ 变量声明是控制对象的生存期、 �
 
 1. [可变](../cpp/mutable-data-members-cpp.md)关键字视为存储类说明符。 但是，它只存在于类定义的成员列表中。
 
-1. **Visual Studio 2010 和更高版本：****自动**关键字不再是C++存储类说明符，并**注册**关键字被弃用。 **Visual Studio 2017 版本 15.7 及更高版本：** (适用于[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):**注册**关键字已从C++语言。
+1. **Visual Studio 2010 和更高版本：** **自动**关键字不再是C++存储类说明符，并**注册**关键字被弃用。 **Visual Studio 2017 版本 15.7 及更高版本：** (适用于[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):**注册**关键字已从C++语言。
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class

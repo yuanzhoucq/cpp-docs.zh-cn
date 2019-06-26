@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - mutex/std::unique_lock
 ms.assetid: f4ed8ba9-c8af-446f-8ef0-0b356bad14bd
-ms.openlocfilehash: 784969bea25bfff49a21c23b350afbfc8bdab59a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 235307a09796b21979c33ded18f8ce69414c0c3f
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383511"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400412"
 ---
 # <a name="uniquelock-class"></a>unique_lock 类
 
@@ -24,7 +24,7 @@ class unique_lock;
 
 ## <a name="remarks"></a>备注
 
-模板参数 `Mutex` 必须命名为 mutex 类型。
+模板参数 `Mutex` 必须命名为 mutex 类型  。
 
 在内部，`unique_lock`存储一个指向一个关联`mutex`对象和一个**bool** ，该值指示当前线程是否拥有`mutex`。
 
@@ -66,7 +66,7 @@ class unique_lock;
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
-*unique_lock*<br/>
+*unique_lock*
 
 ## <a name="requirements"></a>要求
 

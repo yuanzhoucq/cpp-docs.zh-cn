@@ -110,7 +110,7 @@ long double scalblnl(
 
 **FLT_RADIX**中定义\<float.h > 为本机浮点基数; 在二进制系统上，它具有值 2，并**scalbn**等效于[ldexp](ldexp.md)。
 
-因为C++允许重载，可以调用的重载**scalbn**并**scalbln**采用并返回**float**或**长****double**类型。 在 C 程序中， **scalbn**始终采用**double**和一个**int** ，并返回**double**，和**scalbln**始终采用**双精度**和一个**长**，并返回**double**。
+因为C++允许重载，可以调用的重载**scalbn**并**scalbln**采用并返回**float**或**长** **double**类型。 在 C 程序中， **scalbn**始终采用**double**和一个**int** ，并返回**double**，和**scalbln**始终采用**双精度**和一个**长**，并返回**double**。
 
 ## <a name="requirements"></a>要求
 

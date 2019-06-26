@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 15bf52d4-91cf-4b1d-8b37-87c3ae70123a
 ms.openlocfilehash: ab9946609fa20c4644873a684a754cbc8a41742f
 ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62396010"
@@ -30,7 +30,7 @@ ms.locfileid: "62396010"
 
 - [不需要使用文档](#_core_when_you_don.92.t_need_documents)如文档序列化。
 
-- [应用程序向导选项](#_core_appwizard_options_for_documents_and_views)以支持应用程序而不需要序列化并与文档相关**文件**菜单命令，如**新建**，**打开****保存**，并**另存为**。
+- [应用程序向导选项](#_core_appwizard_options_for_documents_and_views)以支持应用程序而不需要序列化并与文档相关**文件**菜单命令，如**新建**，**打开** **保存**，并**另存为**。
 
 - [如何使用最小的文档的应用程序使用](#_core_applications_with_minimal_documents)。
 
