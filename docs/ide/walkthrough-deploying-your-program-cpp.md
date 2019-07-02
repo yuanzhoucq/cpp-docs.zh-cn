@@ -9,12 +9,12 @@ helpviewer_keywords:
 - projects [C++], deploying programs
 - application deployment [C++], walkthroughs
 ms.assetid: 79e6cc4e-dced-419d-aaf7-d62d1367603f
-ms.openlocfilehash: 4232edd10b71c70097002511ef4ee663e67d6598
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 5cc4ead7aaef2ffa56870a374b0b73d16eb31521
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "66182657"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400959"
 ---
 # <a name="walkthrough-deploying-your-program-c"></a>演练：部署程序 (C++)
 
@@ -110,7 +110,7 @@ ms.locfileid: "66182657"
 
 ## <a name="next-steps"></a>后续步骤
 
-上一步：  [演练：调试项目 (C++)](walkthrough-debugging-a-project-cpp.md)<br/>
+上一步：  [演练：调试项目 (C++)](walkthrough-debugging-a-project-cpp.md)
 
 ## <a name="see-also"></a>请参阅
 

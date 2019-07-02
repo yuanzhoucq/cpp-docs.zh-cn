@@ -7,12 +7,12 @@ helpviewer_keywords:
 - projects [C++]
 - solutions [C++], about solutions
 ms.assetid: 93a3f290-e294-46e3-876e-e3084d9ae833
-ms.openlocfilehash: 6dfee695092a69252069dbfc73b6260bd65245e2
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: ae2830d58bb992a4ff065aa0e53085a490eb90d7
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "66182637"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400956"
 ---
 # <a name="walkthrough-working-with-projects-and-solutions-c"></a>演练：使用项目和解决方案 (C++)
 
@@ -261,7 +261,7 @@ ms.locfileid: "66182637"
 ## <a name="next-steps"></a>后续步骤
 
 上一步：  [使用 Visual Studio IDE 进行 C++ 桌面开发](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)<br/>
-**下一篇：** [演练：生成项目 (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
+**下一篇：** [演练：生成项目 (C++)](../ide/walkthrough-building-a-project-cpp.md)
 
 ## <a name="see-also"></a>请参阅
 
