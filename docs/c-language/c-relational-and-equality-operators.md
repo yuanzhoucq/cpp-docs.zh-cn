@@ -8,12 +8,12 @@ helpviewer_keywords:
 - equality operator, syntax
 - operators [C], relational
 ms.assetid: c89a3815-a65e-4e0d-8333-0e8dc7fdb30b
-ms.openlocfilehash: 78dfd9f208b4c5cf484f0ff43c5e07ce1aadec35
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: 25e9bb65492e0c4b100ecd7a800491d238b1dd38
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149643"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400534"
 ---
 # <a name="c-relational-and-equality-operators"></a>C 关系和相等运算符
 
@@ -26,7 +26,7 @@ ms.locfileid: "56149643"
 &nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **&lt;** *shift-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **>** *shift-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **&lt;=** *shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **>=** *shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **>=** *shift-expression*
 
 *equality-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*<br/>
@@ -48,7 +48,7 @@ ms.locfileid: "56149643"
 
 操作数可以具有整型、浮点型或指针类型。 操作数的类型可以不同。 关系运算符对整型和浮点型的操作数执行常用算术转换。 此外，您可以使用以下操作数类型与关系运算符和相等运算符的组合：
 
-- 任意关系运算符或相等运算符的操作数可以是指向同一类型的指针。 对于相等 (`==`) 运算符和不相等（`!=`）运算符，比较的结果指示两个指针是否对相同的内存位置寻址。 对于其他关系运算符（\<、>、\<= 和 >=），比较的结果指示所指向的对象的两个内存地址的相对位置。 关系运算符仅比较偏移量。
+- 任意关系运算符或相等运算符的操作数可以是指向同一类型的指针。 对于相等 (`==`) 运算符和不相等（`!=`）运算符，比较的结果指示两个指针是否对相同的内存位置寻址。 对于其他关系运算符（\<  、>  、\<  = 和 >  =），比较的结果指示所指向的对象的两个内存地址的相对位置。 关系运算符仅比较偏移量。
 
    仅为同一个对象的部分定义指针比较。 如果指针引用数组的成员，则比较与相应下标的比较是等效的。 第一个数组元素的地址“少于”最后一个元素的地址。 对于结构，指向稍后声明的结构成员的指针“大于”指向之前在结构中声明的成员的指针。 指向同一联合的成员的指针是相等的。
 
@@ -88,7 +88,7 @@ enum color { red, white, green } col;
    .
 ```
 
-这些语句声明带标记 `col` 的名为 `color` 的枚举变量。 在任何时候，变量可以包含整数值 0、1 或 2，这表示枚举集 `color` 的某个元素：分别为红色、白色或绿色。 如果在执行 if 语句时，`col` 包含 0，则将执行任何依赖 if 的语句。
+这些语句声明带标记 `col` 的名为 `color` 的枚举变量。 在任何时候，变量可以包含整数值 0、1 或 2，这表示枚举集 `color` 的某个元素：分别为红色、白色或绿色。 如果在执行 if  语句时，`col` 包含 0，则将执行任何依赖 if  的语句。
 
 ## <a name="see-also"></a>请参阅
 
