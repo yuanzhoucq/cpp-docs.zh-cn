@@ -3,12 +3,12 @@ title: CppProperties.json 架构引用
 ms.date: 05/16/2019
 helpviewer_keywords:
 - CMake in Visual Studio
-ms.openlocfilehash: 8432b72deaef99ee20147505030cbc8a9a270869
-ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
+ms.openlocfilehash: cf5cd964068ad2e3aeeaf1e057c9bf407f4985f5
+ms.sourcegitcommit: b233f05adae607f75815111006a771c432df5a9d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67344405"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67516372"
 ---
 # <a name="cpppropertiesjson-schema-reference"></a>CppProperties.json 架构引用
 
@@ -264,7 +264,7 @@ Visual Studio 预定义的配置为 x86 和 x64 的 Debug 和 Release。 默认�
 |-|-|
 |`${workspaceRoot}`| 工作区文件夹的完整路径|
 |`${projectRoot}`| `CppProperties.json` 所在文件夹的完整路径|
-|`${vsInstallDir}`| 安装 Visual Studio 的运行示例的文件夹的完整路径|
+|`${env.vsInstallDir}`| 安装 Visual Studio 的运行示例的文件夹的完整路径|
 
 例如，如果你的项目具有的包含文件夹，并且还包括 windows.h 和 Windows SDK 中的其他常见标头，您可能想要更新你`CppProperties.json`以下配置文件包括：
 
