@@ -1,20 +1,20 @@
 ---
 title: PgoAutoSweep
-ms.date: 03/14/2018
+ms.date: 07/02/2019
 f1_keywords:
 - PgoAutoSweep
 - PogoAutoSweepA
 - PogoAutoSweepW
-ms.openlocfilehash: 2d9804e5ce90663d44ac389ab4f71d10290e6470
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57bcd1b2e9f0a3312867c4373fd1e50bcf91576e
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295319"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552246"
 ---
 # <a name="pgoautosweep"></a>PgoAutoSweep
 
-`PgoAutoSweep` 将当前的配置文件计数器信息保存到一个文件，然后将重置计数器。 在培训，以将所有配置文件数据从正在运行的程序写入到在优化生成中的更高版本使用的.pgc 文件按配置优化过程中使用该函数。
+`PgoAutoSweep` 将当前的配置文件计数器信息保存到一个文件，然后将重置计数器。 在培训，以从到正在运行的程序编写所有配置文件数据的按配置优化期间使用函数`.pgc`以便以后用于优化生成的文件。
 
 ## <a name="syntax"></a>语法
 
@@ -26,7 +26,7 @@ void PgoAutoSweep(const wchar_t* name); // UNICODE
 ### <a name="parameters"></a>参数
 
 *name*<br/>
-已保存的.pgc 文件标识字符串。
+已保存的标识字符串`.pgc`文件。
 
 ## <a name="remarks"></a>备注
 
@@ -34,11 +34,11 @@ void PgoAutoSweep(const wchar_t* name); // UNICODE
 
 保存的配置文件计数器数据放置在名为的文件中*base_name*-*名称*！*值*.pgc，其中*base_name*是可执行文件的基名称*名称*参数传递给`PgoAutoSweep`，以及*值*是唯一的值，通常单调递增的数字，以避免文件名称冲突。
 
-创建的.pgc 文件`PgoAutoSweep`必须合并到要用于创建优化的可执行文件的.pgd 文件。 可以使用[pgomgr](pgomgr.md)命令来执行合并。
+`.pgc`创建的文件`PgoAutoSweep`必须合并到`.pgd`文件以用于创建优化的可执行文件。 可以使用[pgomgr](pgomgr.md)命令来执行合并。
 
-您可以合并的.pgd 文件的名称使用传递到链接器优化生成期间**PGD =**_filename_参数[/USEPROFILE](reference/useprofile.md)链接器选项，或通过使用已弃用 **/PGD**链接器选项。 如果你合并的.pgc 文件到名为的文件*base_name*.pgd，您不必在命令行上指定文件名因为链接器默认情况下选取此文件的名称。
+可以将传递的合并名称`.pgd`文件到链接器优化生成使用期间**PGD =** _filename_参数[/USEPROFILE](reference/useprofile.md)链接器选项，或通过使用已弃用 **/PGD**链接器选项。 如果你合并`.pgc`到名为的文件的文件*base_name*.pgd，您不必在命令行上指定文件名因为链接器默认情况下选取此文件的名称。
 
-`PgoAutoSweep`函数维护创建检测的生成时指定的线程安全设置。 如果使用默认设置或指定了**NOEXACT**自变量[/GENPROFILE 或 /FASTGENPROFILE]()链接器选项，调用`PgoAutoSweep`不是线程安全。 **EXACT**参数创建一个线程安全、 更准确，但速度较慢且经过检测的可执行文件。
+`PgoAutoSweep`函数维护创建检测的生成时指定的线程安全设置。 如果使用默认设置或指定了**NOEXACT**自变量[/GENPROFILE 或 /FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md)链接器选项，调用`PgoAutoSweep`不是线程安全。 **EXACT**参数创建一个线程安全、 更准确，但速度较慢且经过检测的可执行文件。
 
 ## <a name="requirements"></a>要求
 
@@ -50,7 +50,7 @@ void PgoAutoSweep(const wchar_t* name); // UNICODE
 
 ## <a name="example"></a>示例
 
-下面的示例使用`PgoAutoSweep`创建两个。在执行期间不同点的 PGC 文件。 第一个包含数据，用于描述直到运行时行为`count`等于 3，并且第二个包含之前只是应用程序终止前此点后收集的数据。
+下面的示例使用`PgoAutoSweep`以创建两个`.pgc`文件在执行期间不同点。 第一个包含数据，用于描述直到运行时行为`count`等于 3，并且第二个包含之前只是应用程序终止前此点后收集的数据。
 
 ```cpp
 // pgoautosweep.cpp

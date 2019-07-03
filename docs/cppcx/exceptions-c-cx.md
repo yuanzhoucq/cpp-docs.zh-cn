@@ -1,13 +1,13 @@
 ---
 title: 异常 (C++/CX)
-ms.date: 01/18/2018
+ms.date: 07/02/2019
 ms.assetid: 6cbdc1f1-e4d7-4707-a670-86365146432f
-ms.openlocfilehash: 7134cbb9e90f0355a3b2a912330027cf73876443
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93a3c096c79140787a46dcbd0ae6ec7edc0bf2e4
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301521"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552184"
 ---
 # <a name="exceptions-ccx"></a>异常 (C++/CX)
 
@@ -63,7 +63,7 @@ C++/CX 支持一组表示典型 HRESULT 错误的标准异常。 每个标准异
 
 ## <a name="unhandlederrordetected-event"></a>UnhandledErrorDetected 事件
 
-在 Windows 8.1 可订阅[Windows::ApplicationModel::Core::CoreApplication::UnhandledErrorDetected](/uwp/api/windows.applicationmodel.core.icoreapplicationunhandlederror#Windows_ApplicationModel_Core_ICoreApplicationUnhandledError_UnhandledErrorDetected)静态事件，可访问即将关闭进程的未处理的错误事件。 无论错误源于何处，它都作为与事件参数一起传入的 [Windows::ApplicationModel::Core::UnhandledError](/uwp/api/windows.applicationmodel.core.unhandlederror) 对象到达此处理程序。 对该对象调用 `Propagate` 时，它根据错误代码创建并引发相应类型的 `Platform::*Exception` 。 在 catch 块内，可根据需要保存用户状态，然后通过调用 `throw`让进程终止，或者执行其他操作让程序返回已知的状态。 下面的示例演示了基本模式：
+在 Windows 8.1 可订阅[Windows::ApplicationModel::Core::CoreApplication::UnhandledErrorDetected](/uwp/api/windows.applicationmodel.core.icoreapplicationunhandlederror.unhandlederrordetected)静态事件，可访问即将关闭进程的未处理的错误事件。 无论错误源于何处，它都作为与事件参数一起传入的 [Windows::ApplicationModel::Core::UnhandledError](/uwp/api/windows.applicationmodel.core.unhandlederror) 对象到达此处理程序。 对该对象调用 `Propagate` 时，它根据错误代码创建并引发相应类型的 `Platform::*Exception` 。 在 catch 块内，可根据需要保存用户状态，然后通过调用 `throw`让进程终止，或者执行其他操作让程序返回已知的状态。 下面的示例演示了基本模式：
 
 在 app.xaml.h:
 

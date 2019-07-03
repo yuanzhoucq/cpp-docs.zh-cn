@@ -1,6 +1,6 @@
 ---
 title: CAccessToken 类
-ms.date: 11/04/2016
+ms.date: 07/02/2019
 f1_keywords:
 - CAccessToken
 - ATLSECURITY/ATL::CAccessToken
@@ -52,12 +52,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-ms.openlocfilehash: ce5c29c2399fd47bdb1ad0135257b41617094aa9
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: d66b126ce5fd6c3da80d2bb4e6322f8180f0b8cf
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503381"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552192"
 ---
 # <a name="caccesstoken-class"></a>CAccessToken 类
 
@@ -283,7 +283,7 @@ bool CreateProcessAsUser(
 指向一个以 null 结尾的字符串，指定要执行的命令行。
 
 *pProcessInformation*<br/>
-指向[PROCESS_INFORMATION](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-_process_information)接收有关新进程的标识信息的结构。
+指向[PROCESS_INFORMATION 结构](/windows/win32/api/processthreadsapi/ns-processthreadsapi-process_information)用于接收有关新进程的标识信息。
 
 *pStartupInfo*<br/>
 指向[STARTUPINFO](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-_startupinfoa)结构，它指定新的进程的主窗口应如何显示。
