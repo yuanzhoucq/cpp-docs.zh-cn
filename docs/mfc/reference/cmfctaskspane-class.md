@@ -1,6 +1,6 @@
 ---
 title: CMFCTasksPane 类
-ms.date: 11/19/2018
+ms.date: 07/02/2019
 f1_keywords:
 - CMFCTasksPane
 - AFXTASKSPANE/CMFCTasksPane
@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CMFCTasksPane [MFC], Update
 - CMFCTasksPane [MFC], OnActivateTasksPanePage
 ms.assetid: b456328e-2525-4642-b78b-9edd1a1a7d3f
-ms.openlocfilehash: 137f30262ce01ad82c075302b6e85bf67ae7b9be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eeb24a0a02d1a084c83e280705344a9e5c505724
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62218649"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552288"
 ---
 # <a name="cmfctaskspane-class"></a>CMFCTasksPane 类
 
@@ -294,7 +294,7 @@ class CMFCTasksPane : public CDockablePane
 |[CMFCTasksPane::RemovePage](#removepage)|从任务窗格删除指定页。|
 |[CMFCTasksPane::RemoveTask](#removetask)|从任务组删除任务。|
 |[CMFCTasksPane::SaveState](#savestate)|(重写[cdockablepane:: Savestate](cdockablepane-class.md)。)|
-|[CMFCTasksPane::Serialize](#serialize)|(重写[cdockablepane:: Serialize]()。)|
+|[CMFCTasksPane::Serialize](#serialize)|(重写[cdockablepane:: Serialize](cdockablepane-class.md)。)|
 |[CMFCTasksPane::SetActivePage](#setactivepage)|在任务窗格中激活指定页。|
 |[CMFCTasksPane::SetCaption](#setcaption)|设置任务窗格的标题名称。|
 |[CMFCTasksPane::SetGroupCaptionHeight](#setgroupcaptionheight)|设置组标题的高度。|
