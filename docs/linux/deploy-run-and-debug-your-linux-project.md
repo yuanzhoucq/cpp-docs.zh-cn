@@ -3,12 +3,12 @@ title: 在 Visual Studio 中部署、运行和调试 C++ Linux 项目
 description: 介绍如何从 Visual Studio 中的 C++ Linux 项目内针对远程目标编译、执行和调试代码。
 ms.date: 06/07/2019
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: 707915a502aafefee47af7e84b534e06ba678b3d
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: 70770385bde859d47532b130463a1cc54e32a570
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821616"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042760"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>部署、运行和调试 Linux 项目
 
@@ -22,7 +22,7 @@ Linux 支持在 Visual Studio 2017 及更高版本中提供。
 
 ::: moniker range="vs-2019"
 
-Visual Studio 2019 版本 16.1：可以面向不同 Linux 系统进行调试和生成  。 在“常规”属性页上指定生成计算机，在“调试”属性页上指定调试计算机   。
+Visual Studio 2019 版本 16.1：可以面向不同 Linux 系统进行调试和生成  。 例如，可以在 x64 系统上进行交叉编译，并在定位 IoT 方案时部署到 ARM 设备。 有关详细信息，请参阅本文后面的[指定用于生成和调试的不同计算机](#separate_build_debug)。
 
 ::: moniker-end
 
@@ -35,8 +35,6 @@ Visual Studio 2019 版本 16.1：可以面向不同 Linux 系统进行调试和�
 ## <a name="debug-your-linux-project"></a>调试 Linux 项目
 
 1. 在“调试”属性页中选择调试模式  。
-
-   
    
    ::: moniker range="vs-2019"
 
@@ -94,15 +92,19 @@ Visual Studio 2019 版本 16.1：可以面向不同 Linux 系统进行调试和�
 
    ![Linux 控制台窗口](media/consolewindow.png)
 
-## <a name="configure-other-debugging-options"></a>配置其他调试选项
+## <a name="configure-other-debugging-options-msbuild-based-projects"></a>配置其他调试选项（基于 MSBuild 的项目）
 
 - 可以使用项目“调试”属性页中的“程序参数”项将命令行参数传递给可执行文件   。
 
    ![程序参数](media/settings_programarguments.png)
 
-- 可使用“**其他调试程序命令**”条目将特定调试程序选项传递到 GDB。  例如，你可能需要忽略 SIGILL（非法指令）信号。  那么，可以使用“**句柄**”命令来实现此目的，方法是：  将以下命令添加到如上图中所示的“**其他调试程序命令**”条目：
+- 可使用“**其他调试程序命令**”条目将特定调试程序选项传递到 GDB。  例如，你可能需要忽略 SIGILL（非法指令）信号。  可以使用 handle  命令实现此目的，方法是将以下命令添加到上图所示的“其他调试程序命令”  条目：
 
    `handle SIGILL nostop noprint`
+
+## <a name="configure-other-debugging-options-cmake-projects"></a>配置其他调试选项（CMake 项目）
+
+可以在 launch.vs.json 文件中为 CMake 项目指定其他命令行参数。 有关详细信息，请参阅[调试 CMake 项目](cmake-linux-project.md#debug_cmake_project)
 
 ## <a name="debug-with-attach-to-process"></a>使用“附加到进程”进行调试
 
@@ -124,6 +126,72 @@ ExePath="C:\temp\ConsoleApplication17\ConsoleApplication17\bin\x64\Debug\Console
 ```
 
 AttachOptionsForConnection 具有你可能需要的大多数属性  。 上述示例展示了如何指定搜索其他 .so 库的位置。 子元素 ServerOptions 允许改为使用 gdbserver 附加到远程进程  。 若要执行此操作，需要指定本地 gdb 客户端（Visual Studio 2017 中附带的客户端如上所示）和带符号的二进制文件的本地副本。 SetupCommands 元素允许将命令直接传递给 gdb  。 可以在 GitHub 上找到 [LaunchOptions.xsd 架构](https://github.com/Microsoft/MIEngine/blob/master/src/MICore/LaunchOptions.xsd)中提供的所有选项。
+
+::: moniker range="vs-2019"
+
+## <a name="separate_build_debug"></a>指定用于生成和调试的不同计算机
+
+在 Visual Studio 2019 版本 16.1 中，可以将远程生成计算机与远程调试计算机分开，以便处理基于 MSBuild 的 Linux 项目和面向远程 Linux 计算机的 CMake 项目。 例如，现在可以在 x64 系统上进行交叉编译，并在定位 IoT 方案时部署到 ARM 设备。
+
+### <a name="msbuild-based-projects"></a>基于 MSBuild 的项目
+
+默认情况下，远程调试计算机与远程生成计算机相同（“配置属性”   > “常规”   > “远程生成计算机”  ）。 若要指定新的远程调试计算机，请在解决方案资源管理器中右键单击该项目，然后转到“配置属性” > “调试” > “远程调试计算机”     。  
+
+![Linux 远程调试计算机](media/linux-remote-debug-machine.png)
+
+“远程调试计算机”的下拉菜单中填充了所有已建立的远程连接  。 若要添加新的远程连接，请导航到“工具” > “选项” > “跨平台” > “连接管理器”，或者在“快速启动”中搜索“连接管理器”      。 另外，还可以在项目的“属性页”（“配置属性” > “常规” > “远程部署目录”    ）中指定新的远程部署目录。
+
+默认情况下，只会将调试过程所需的文件部署到远程调试计算机。 可以使用解决方案资源管理器  配置将部署到远程调试计算机的源文件。 单击源文件时，可以在解决方案资源管理器的正下方看到其文件属性的预览。
+
+![Linux 可部署文件](media/linux-deployable-content.png)
+
+“内容”  属性指定是否将文件部署到远程调试计算机。 可以导航到“属性页” > “配置管理器”并取消选中“部署”以获取所需配置，通过这种方式完全禁用部署    。
+
+在某些情况下，可能需要对项目的部署进行更多控制。 例如，你要部署的某些文件可能超出解决方案的范围，或者你需要为每个文件或目录自定义远程部署目录。 在这些情况下，将以下代码块附加到 .vcxproj 文件，并将“example.cpp”替换为实际文件名：
+
+```xml
+
+<ItemGroup>
+   <RemoteDeploy Include="__example.cpp">
+<!-- This is the source Linux machine, can be empty if DeploymentType is LocalRemote -->
+      <SourceMachine>$(RemoteTarget)</SourceMachine>
+      <TargetMachine>$(RemoteDebuggingTarget)</TargetMachine>
+      <SourcePath>~/example.cpp</SourcePath>
+      <TargetPath>~/example.cpp</TargetPath>
+<!-- DeploymentType can be LocalRemote, in which case SourceMachine will be empty and SourcePath is a local file on Windows -->
+      <DeploymentType>RemoteRemote</DeploymentType>
+<!-- Indicates whether the deployment contains executables -->
+      <Executable>true</Executable>
+   </RemoteDeploy>
+</ItemGroup>
+```
+
+### <a name="cmake-projects"></a>CMake 项目
+
+对于面向远程 Linux 计算机的 CMake 项目，可以在 launch.vs.json 中指定新的远程调试计算机。 默认情况下，“remoteMachineName”的值与 CMakeSettings.json 中的“remoteMachineName”属性同步，该属性对应于远程生成计算机。 这些属性不再需要匹配，launch.vs.json 中“remoteMachineName”的值将指示将哪台远程计算机用于部署和调试。
+
+![CMake 远程调试计算机](media/cmake-remote-debug-machine.png)
+
+IntelliSense 将建议使用包含所有已建立的远程连接的列表。 可以导航到“工具” > “选项” > “跨平台” > “连接管理器”，或者在“快速启动”中搜索“连接管理器”，以便添加新的远程连接      。
+
+如果要完全控制部署，可以将以下代码块附加到 launch.vs.json 文件。 请务必将占位符值替换为实际值：
+
+```json
+
+"disableDeploy": false,
+"deployDirectory": "~\foo",
+"deploy" : [
+   {
+      "sourceMachine": "127.0.0.1 (username=example1, port=22, authentication=Password)",
+      "targetMachine": "192.0.0.1 (username=example2, port=22, authentication=Password)",
+      "sourcePath": "~/example.cpp",
+      "targetPath": "~/example.cpp",
+      "executable": "false"
+   }
+]
+
+```
+::: moniker-end
 
 ## <a name="next-steps"></a>后续步骤
 
