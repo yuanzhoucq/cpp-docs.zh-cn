@@ -1,13 +1,13 @@
 ---
 title: 在 Visual Studio 中配置 C++ Linux 项目
-ms.date: 06/07/2019
+ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 5acd9edeef8f09f86c394c39939d8408821dd691
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: a4e20222cc0b04f496989bf2d51fc12c85f5d162
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821565"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042630"
 ---
 # <a name="configure-a-linux-project"></a>配置 Linux 项目
 
@@ -37,7 +37,7 @@ Visual Studio 2019 版本 16.1：
 
 ![常规配置](media/settings_general.png)
 
-默认情况下，可执行文件 (.out) 是使用该工具生成的。 若要生成静态或动态库，或使用现有生成文件，请使用“配置类型”设置  。
+默认情况下，生成可执行文件 (.out)。 若要生成静态或动态库，或使用现有生成文件，请使用“配置类型”设置  。
 
 有关属性页中设置的详细信息，请参阅 [Linux 项目属性页参考](prop-pages-linux.md)。
 
@@ -105,7 +105,7 @@ Visual Studio 2019 版本 16.1：
 此功能取决于 Linux 计算机是否安装了 zip。 可使用此 apt-get 命令安装 zip：
 
 ```cmd
-apt install zip
+sudo apt install zip
 ```
 
 若要管理标头缓存，导航到“工具”>“选项”，依次选择“跨平台”>“连接管理器”>“远程标头 IntelliSense 管理器”  。 若要在更改 Linux 计算机后更新标头缓存，请选择远程连接，然后选择“更新”  。 选择“删除”，来删除标头但不删除连接本身  。 选择“浏览”，打开“文件资源管理器”中的本地目录   。 将此文件夹视为只读文件夹。 要下载在 Visual Studio 2017 版本 15.3 之前创建的现有连接的标头，请选择该连接，然后选择“下载”  。

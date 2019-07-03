@@ -1,17 +1,22 @@
 ---
 title: 在 Visual Studio 中安装 C++ Linux 工作负载
 description: 介绍如何在 Visual Studio 中下载、安装和设置用于 C++ 的 Linux 工作负荷。
-ms.date: 06/07/2019
+ms.date: 06/11/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: af4e3ec0ac21951163e92786555559cd02e8148f
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: d5c099794f781fa9e6217f3796d24d1a63fd7b53
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821581"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042746"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>下载、安装和设置 Linux 工作负载
 
+::: moniker range="vs-2015"
+
+Visual Studio 2017 及更高版本支持 Linux 项目。
+
+::: moniker-end
 
 ::: moniker range=">=vs-2017"
 
@@ -35,7 +40,10 @@ ms.locfileid: "66821581"
 
 ## <a name="visual-studio-setup"></a>Visual Studio 安装程序
 
-1. 在 Windows 搜索框中键入“Visual Studio 安装程序”：![Windows 搜索框](media/visual-studio-installer-search.png)
+1. 在 Windows 搜索框中键入“Visual Studio 安装程序”：
+
+   ![Windows 搜索框](media/visual-studio-installer-search.png)
+
 2. 在“应用”结果下寻找安装程序并双击它  。 打开该安装程序后，选择“修改”  ，然后单击“工作负荷”  选项卡。向下滚动到“其他工具集”  ，然后选择  “使用 C++ 的 Linux 开发”工作负荷。
 
    ![适用于 Linux 开发的 Visual C++ 工作负荷](media/linuxworkload.png)
@@ -56,10 +64,10 @@ ms.locfileid: "66821581"
 
 ## <a name="linux-setup-ubuntu-on-wsl"></a>Linux 安装程序：WSL 上的 Ubuntu
 
-WSL 上无需任何远程连接。 使用 Visual Studio for Intellisense 支持自动同步 Linux 标头需要 zip 和 rsync   。 如果所需应用程序尚不存在，则可以按如下所述进行安装：
+以 WSL 为目标时，无需添加远程连接或配置 SSH 即可进行生成和调试。 使用 Visual Studio for Intellisense 支持自动同步 Linux 标头需要 zip 和 rsync   。 如果所需应用程序尚不存在，则可以按如下所述进行安装：
 
 ```bash
-sudo g++ gdb make rsync zip
+sudo apt-get install g++ gdb make rsync zip
 ```
 ::: moniker-end
 
