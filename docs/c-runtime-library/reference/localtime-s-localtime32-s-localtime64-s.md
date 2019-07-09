@@ -1,6 +1,6 @@
 ---
 title: localtime_s, _localtime32_s, _localtime64_s
-ms.date: 11/04/2016
+ms.date: 07/09/2019
 apiname:
 - _localtime64_s
 - _localtime32_s
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - time, converting values
 - localtime_s function
 ms.assetid: 842d1dc7-d6f8-41d3-b340-108d4b90df54
-ms.openlocfilehash: 44b2eb2515035d56143a2aab251437a92515e652
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 454ab492fbe8a31b9ceeca518fa5e590271dbf06
+ms.sourcegitcommit: 07b34ca1c1fecced9fadc95de15dc5fee4f31e5a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157263"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67693415"
 ---
 # <a name="localtimes-localtime32s-localtime64s"></a>localtime_s, _localtime32_s, _localtime64_s
 
@@ -84,9 +84,9 @@ errno_t _localtime64_s(
 
 ## <a name="remarks"></a>备注
 
-**_Localtime32_s**函数将存储为时间转换[time_t](../../c-runtime-library/standard-types.md)值并将结果存储在类型的结构[tm](../../c-runtime-library/standard-types.md)。 **长**值*sourceTime*表示自午夜以来经过的秒 (00: 00:00) 自 1970 年 1 月 1 日，UTC。 此值通常从获取[时间](time-time32-time64.md)函数。
+**Localtime_s**函数将存储为时间转换[time_t](../../c-runtime-library/standard-types.md)值并将结果存储在类型的结构[tm](../../c-runtime-library/standard-types.md)。 **Time_t**值*sourceTime*表示自午夜以来经过的秒 (00: 00:00) 自 1970 年 1 月 1 日，UTC。 此值通常从获取[时间](time-time32-time64.md)函数。
 
-**_localtime32_s**如果用户首次设置全局环境变量更正本地时区**TZ**。 当**TZ**设置，其他三个环境变量 (**_timezone**， **_daylight**，并 **_tzname**) 也将自动设置。 如果**TZ**未设置变量，则**localtime32_s**尝试使用控制面板中的日期/时间应用程序中指定的时区信息。 如果无法获取此信息，则它默认使用代表太平洋时区的 PST8PDT。 有关这些变量的说明，请参阅 [_tzset](tzset.md)。 **TZ**是 Microsoft 扩展并不是 ANSI 标准定义的一部分**localtime**。
+**localtime_s**如果用户首次设置全局环境变量更正本地时区**TZ**。 当**TZ**设置，其他三个环境变量 ( **_timezone**， **_daylight**，并 **_tzname**) 也将自动设置。 如果**TZ**未设置变量，则**localtime_s**尝试使用控制面板中的日期/时间应用程序中指定的时区信息。 如果无法获取此信息，则它默认使用代表太平洋时区的 PST8PDT。 有关这些变量的说明，请参阅 [_tzset](tzset.md)。 **TZ**是 Microsoft 扩展并不是 ANSI 标准定义的一部分**localtime**。
 
 > [!NOTE]
 > 目标环境应尝试确定夏令时是否生效。
