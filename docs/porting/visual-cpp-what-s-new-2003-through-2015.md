@@ -1,13 +1,13 @@
 ---
 title: Visual C++ 新增功能（2003 - 2015）
-ms.date: 11/04/2016
+ms.date: 07/02/2019
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: 4bcf661284d447b18542bb158940d539ef9c0686
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 1aff65ff998d9b3bb86fbf7288850287f4445275
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449804"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552200"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ 新增功能（2003 - 2015）
 
@@ -1682,7 +1682,7 @@ MSVC 支持以下 ISO C++11 语言功能：
 ### <a name="windows-runtime-app-development-support"></a>Windows 运行时应用开发支持
 
 - **基于本机 XAML 的 UI 模型**。 可将新的基于本机 XAML 的 UI 模型用于 Windows 运行时应用。
-- **Visual C++ 组件扩展**。 这些扩展减少了 Windows 运行时对象的使用，是 Windows 运行时应用不可缺少的部分。 有关详细信息，请参阅[使用 C++ 的 Windows 运行时应用产品指南](../windows/universal-windows-apps-cpp.md)和 [Visual C++ 语言参考 (C++/CX)](../cppcx/visual-c-language-reference-c-cx.md)
+- **Visual C++ 组件扩展**。 这些扩展减少了 Windows 运行时对象的使用，是 Windows 运行时应用不可缺少的部分。 有关详细信息，请参阅[使用 C++ 的 Windows 运行时应用产品指南](../cppcx/universal-windows-apps-cpp.md)和 [Visual C++ 语言参考 (C++/CX)](../cppcx/visual-c-language-reference-c-cx.md)
 - **DirectX 游戏**。 可以利用 Windows 运行时应用的新的 DirectX 支持来开发有趣的游戏。
 - **XAML/DirectX 交互**。 使用 XAML 和 DirectX 的 Windows 运行时应用现可有效进行交互。
 - **Windows 运行时组件 DLL 的开发**。 组件 DLL 的开发使 Windows 运行时环境能够扩展。

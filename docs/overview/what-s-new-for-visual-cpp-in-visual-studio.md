@@ -1,22 +1,22 @@
 ---
 title: Visual Studio 中的 C++ 新变化
-ms.date: 06/17/2019
+ms.date: 07/02/2019
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: b408036fdee3d8163ef48cdbdab6e0f0a9c939ab
-ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
+ms.openlocfilehash: f02c5878f5f741c216499f619bfd1392483bfa86
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67344187"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552347"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Visual Studio 中的 C++ 新变化
 
 ::: moniker range=">=vs-2019"
 
-Visual Studio 2019 向 Microsoft C++ 环境引入了许多更新和修补程序。 我们修复了编译器和工具中存在的许多 bug 和问题。 其中许多问题是客户通过“发送反馈”  下的[报告问题](/visualstudio/how-to-report-a-problem-with-visual-studio-2017)和[提供建议](https://developercommunity.visualstudio.com/spaces/62/index.html)选项提交的。 感谢你报告 bug！ 有关所有 Visual Studio 中新增功能的详细信息，请访问 [Visual Studio 2019 中的新增功能](/visualstudio/ide/whats-new-visual-studio-2019)。 有关 Visual Studio 2017 中 C++ 新增功能的信息，请参阅 [Visual Studio 2017 中 C++ 的新增功能](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2017)。 有关 Visual Studio 2015 及更低版本中 C++ 新增功能的信息，请参阅 [Visual C++ 新增功能 (2003 - 2015)](/cpp/porting/visual-cpp-what-s-new-2003-through-2015)。
+Visual Studio 2019 向 Microsoft C++ 环境引入了许多更新和修补程序。 我们修复了编译器和工具中存在的许多 bug 和问题。 其中许多问题是客户通过“发送反馈”  下的[报告问题](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2019)和[提供建议](https://developercommunity.visualstudio.com/spaces/62/index.html)选项提交的。 感谢你报告 bug！ 有关所有 Visual Studio 中新增功能的详细信息，请访问 [Visual Studio 2019 中的新增功能](/visualstudio/ide/whats-new-visual-studio-2019)。 有关 Visual Studio 2017 中 C++ 新增功能的信息，请参阅 [Visual Studio 2017 中 C++ 的新增功能](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2017)。 有关 Visual Studio 2015 及更低版本中 C++ 新增功能的信息，请参阅 [Visual C++ 新增功能 (2003 - 2015)](/cpp/porting/visual-cpp-what-s-new-2003-through-2015)。
 
 ## <a name="c-compiler"></a>C++ 编译器
 
@@ -241,7 +241,7 @@ IncrediBuild 现在添加为“使用 C++ 的桌面开发”  工作负荷中的
 
 ::: moniker range="=vs-2017"
 
-Visual Studio 2017 向 C++ 环境引入了许多更新和修补程序。 我们修复了编译器和工具方面超过 250 个 bug 及所报告的问题，其中某些问题是客户通过“发送反馈”下的[报告问题和提供建议](/visualstudio/how-to-report-a-problem-with-visual-studio-2017)提交的  。 感谢你报告 bug！ 有关整个 Visual Studio 中新增功能的详细信息，请参阅 [Visual Studio 2017 中的新增功能](/visualstudio/ide/whats-new-visual-studio-2017?view=vs-2017)。 有关 Visual Studio 2019 中 C++ 新增功能的信息，请参阅 [Visual Studio 中 C++ 的新增功能](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2019)。 有关 Visual Studio 2015 及更低版本中 C++ 新增功能的信息，请参阅 [Visual C++ 新增功能 (2003 - 2015)](/cpp/porting/visual-cpp-what-s-new-2003-through-2015)。
+Visual Studio 2017 向 C++ 环境引入了许多更新和修补程序。 我们修复了编译器和工具方面超过 250 个 bug 及所报告的问题，其中某些问题是客户通过“发送反馈”下的[报告问题和提供建议](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2017)提交的  。 感谢你报告 bug！ 有关整个 Visual Studio 中新增功能的详细信息，请参阅 [Visual Studio 2017 中的新增功能](/visualstudio/ide/whats-new-visual-studio-2017?view=vs-2017)。 有关 Visual Studio 2019 中 C++ 新增功能的信息，请参阅 [Visual Studio 中 C++ 的新增功能](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2019)。 有关 Visual Studio 2015 及更低版本中 C++ 新增功能的信息，请参阅 [Visual C++ 新增功能 (2003 - 2015)](/cpp/porting/visual-cpp-what-s-new-2003-through-2015)。
 
 ## <a name="c-compiler"></a>C++ 编译器
 
