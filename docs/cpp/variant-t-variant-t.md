@@ -208,7 +208,7 @@ _variant_t(
 
 - **_variant_t (VARIANT &** *varSrc* **，bool**`fCopy` **)** 构造`_variant_t`从现有对象`VARIANT`对象。 如果*fCopy*是**false**，则**变体**对象附加到新对象，而无需进行复制。
 
-- **_variant_t (short***sSrc* **，VARTYPE**`vtSrc` **= VT_I2)** 构造`_variant_t`从VT_I2或VT_BOOL类型的对象**短**整数值。 任何其他`VARTYPE`导致 E_INVALIDARG 错误。
+- **_variant_t (short**  *sSrc* **，VARTYPE**  `vtSrc`  **= VT_I2)** 构造`_variant_t`从VT_I2或VT_BOOL类型的对象**短**整数值。 任何其他`VARTYPE`导致 E_INVALIDARG 错误。
 
 - **_variant_t (long** `lSrc` **，VARTYPE**`vtSrc` **= VT_I4)** 构造`_variant_t`对象的类型为 VT_I4、 VT_BOOL 或从 VT_ERROR**长**整数值。 任何其他`VARTYPE`导致 E_INVALIDARG 错误。
 
