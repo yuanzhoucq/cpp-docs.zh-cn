@@ -1,6 +1,6 @@
 ---
 title: 确定要重新分发的 DLL
-ms.date: 03/25/2019
+ms.date: 07/15/2019
 helpviewer_keywords:
 - redistributing DLLs
 - DLLs [C++], redistributing
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - application deployment [C++], DLL redistribution
 - deploying applications [C++], DLL redistribution
 ms.assetid: f7a2cb42-fb48-42ab-abd2-b35e2fd5601a
-ms.openlocfilehash: 4e4b53745c76a8e5b630bdd92633779e84262188
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 82fb582cae129b517a96deb3d4a9572ef8370a9d
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451267"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894485"
 ---
 # <a name="determining-which-dlls-to-redistribute"></a>确定要重新分发的 DLL
 
 在生成使用由 Visual Studio 提供的库 DLL 的应用程序时，应用程序的用户也必须在运行该应用程序的计算机上安装这些 DLL。 由于大多数用户可能没有安装 Visual Studio，因此你必须为他们提供这些 DLL。 Visual Studio 以可再发行文件的形式提供这些 DLL，可以将其包含到应用程序的安装程序中  。
 
-若要更轻松地将可再发行 DLL 包含到你的安装程序，能以独立可再发行组件包的形式获得它们  。 这些是特定于体系结构的可执行文件，它们使用集中部署将可再发行文件安装在用户的计算机上。 例如，vcredist\_x86.exe 安装 x86 的 32 位库计算机、 vcredist\_x64.exe 安装适用于 x64 的 64 位库计算机和 vcredist\_ARM.exe 安装适用于 ARM 的计算机的库。 建议采用集中部署，因为 Microsoft 可以使用 Windows 更新服务来分别更新这些库。 除了 Visual Studio 安装中的副本，还可下载当前可再发行组件包。 若要查看当前和较旧版本工具集支持的最新可再发行组件包的链接，请参阅[最新支持的 Visual C++ 下载](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)。 通过在 [Microsoft 下载中心](https://go.microsoft.com/fwlink/p/?LinkId=158431)中搜索“Visual C++ 可再发行组件包”，也许能找到特定较早版本的可再发行组件包。
+若要更轻松地将可再发行 DLL 包含到你的安装程序，能以独立可再发行组件包的形式获得它们  。 这些是特定于体系结构的可执行文件，它们使用集中部署将可再发行文件安装在用户的计算机上。 例如，vcredist\_x86.exe 安装 32 位库，对于 x86 和 x64 的计算机，vcredist\_x64.exe 安装适用于 x64 的 64 位库计算机和 vcredist\_ARM.exe 为 ARM 将安装库计算机。 建议采用集中部署，因为 Microsoft 可以使用 Windows 更新服务来分别更新这些库。 除了 Visual Studio 安装中的副本，还可下载当前可再发行组件包。 若要查看当前和较旧版本工具集支持的最新可再发行组件包的链接，请参阅[最新支持的 Visual C++ 下载](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)。 通过在 [Microsoft 下载中心](https://go.microsoft.com/fwlink/p/?LinkId=158431)中搜索“Visual C++ 可再发行组件包”，也许能找到特定较早版本的可再发行组件包。
 
 所部署的可再发行组件包的主版本号必须与创建应用程序的 Visual Studio 工具集的版本相匹配，并且次版本必须为相同版本或更高版本。 Visual Studio 2017 和 Visual Studio 2015 的工具集版本号是兼容的，也就是说通过使用 2015 版工具集生成的应用可能会使用 Visual Studio 2017 可再发行文件。 尽管它们可能是兼容的，我们还是不支持在使用 2017 版工具集生成的应用中使用 2015 版可再发行文件。 仅支持使用与工具集相同或更高版本的可再发行组件包。
 
