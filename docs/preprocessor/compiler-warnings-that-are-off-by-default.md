@@ -5,14 +5,14 @@ helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: ee2b6097a62a8f1030dc631354f96ec7a33d2f11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0f306ef11b17ac94281dc9a5fdba55a34d236eb1
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62236545"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400927"
 ---
-# <a name="compiler-warnings-that-are-off-by-default"></a>默认情况下处于关闭状态的编译器警告
+# <a name="compiler-warnings-that-are-off-by-default"></a>默认关闭的编译器警告
 
 编译器支持默认情况下，关闭的警告，因为大多数开发人员不发现它们很有用。 在某些情况下，它们发出警告有关样式的选择，或在较旧代码中常见的惯用语言。 有关使用语言的 Microsoft 扩展的其他警告。 在其他情况下，它们指示程序员经常做出错误的假设，这可能会导致意外的或未定义行为的区域。 如果启用，有些警告可能会很多时候显示库标头中。 C 运行时库和C++标准库旨在不发出任何警告仅在警告级别[/w4](../build/reference/compiler-option-warning-level.md)。
 
@@ -159,7 +159,7 @@ ms.locfileid: "62236545"
 ::: moniker range=">= vs-2019"
 <sup>16.0</sup>此警告是从开始在 Visual Studio 2019 RTM 中提供。<br/>
 ::: moniker-end
-<sup>为永久</sup>此警告处于关闭状态，除非[触发-](../build/reference/permissive-standards-conformance.md)设置编译器选项。<br/>
+<sup>为永久</sup>此警告处于关闭状态，除非[触发-](../build/reference/permissive-standards-conformance.md)设置编译器选项。
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>在早期版本中默认情况下关闭的警告
 

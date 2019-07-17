@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Standard Library, algorithms
 - <algorithm> header
 ms.assetid: 19f97711-7a67-4a65-8fd1-9a2bd3ca327d
-ms.openlocfilehash: 042523cddf640e7cf6fd7f9a1dac9f3adbc360b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36dfca8418cbbabd7dcfb30b2cece483406a5667
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411144"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245960"
 ---
 # <a name="ltalgorithmgt"></a>&lt;算法&gt;
 
@@ -24,6 +24,9 @@ ms.locfileid: "62411144"
 ```cpp
 (see relevant links below for specific algorithm syntax)
 ```
+
+> [!NOTE]
+> \<算法 > 库还使用`#include <initializer_list>`语句。
 
 ## <a name="remarks"></a>备注
 
@@ -43,17 +46,18 @@ C++ 标准库算法通常会按照其目的或需求相关指示信息进行分�
 
 ### <a name="function-templates"></a>函数模板
 
-|函数模板|描述|
+|||
 |-|-|
 |[adjacent_find](../standard-library/algorithm-functions.md#adjacent_find)|搜索相等或满足指定条件的两个相邻元素。|
 |[all_of](../standard-library/algorithm-functions.md#all_of)|返回 **，则返回 true**位于给定范围中的每个元素满足条件时。|
 |[any_of](../standard-library/algorithm-functions.md#any_of)|返回 **，则返回 true**满足条件时指定的元素范围中的至少一次。|
 |[binary_search](../standard-library/algorithm-functions.md#binary_search)|测试已排序的范围中是否有等于指定值的元素，或在二元谓词指定的意义上与指定值等效的元素。|
+|[clamp](../standard-library/algorithm-functions.md#clamp)||
 |[copy](../standard-library/algorithm-functions.md#copy)|将一个源范围中的元素值分配到目标范围，循环访问元素的源序列并将它们分配在一个向前方向的新位置。|
 |[copy_backward](../standard-library/algorithm-functions.md#copy_backward)|将一个源范围中的元素值分配到目标范围，循环访问元素的源序列并将它们分配在一个向后方向的新位置。|
 |[copy_if](../standard-library/algorithm-functions.md#copy_if)|测试某个给定范围内复制所有元素 **，则返回 true**针对指定的条件|
 |[copy_n](../standard-library/algorithm-functions.md#copy_n)|复制指定数量的元素。|
-|[count](../standard-library/algorithm-functions.md#count)|返回范围中其值与指定值匹配的元素的数量。|
+|[计数](../standard-library/algorithm-functions.md#count)|返回范围中其值与指定值匹配的元素的数量。|
 |[count_if](../standard-library/algorithm-functions.md#count_if)|返回范围中其值与指定条件匹配的元素的数量。|
 |[equal](../standard-library/algorithm-functions.md#equal)|逐个元素比较两个范围是否相等或是否在二元谓词指定的意义上等效。|
 |[equal_range](../standard-library/algorithm-functions.md#equal_range)|在排序的范围中查找符合以下条件的位置对：第一个位置小于或等效于指定元素的位置，第二个位置大于此元素位置，等效意义或用于在序列中建立位置的排序可通过二元谓词指定。|
@@ -65,6 +69,7 @@ C++ 标准库算法通常会按照其目的或需求相关指示信息进行分�
 |[find_if](../standard-library/algorithm-functions.md#find_if)|在范围中找到满足指定条件的元素的第一个匹配项位置。|
 |[find_if_not](../standard-library/algorithm-functions.md#find_if_not)|返回指示的范围中不满足条件的第一个元素。|
 |[for_each](../standard-library/algorithm-functions.md#for_each)|将指定的函数对象按向前顺序应用于范围中的每个元素并返回此函数对象。|
+|[for_each_n](../standard-library/algorithm-functions.md#for_each_n)||
 |[generate](../standard-library/algorithm-functions.md#generate)|将函数对象生成的值分配给范围中的每个元素。|
 |[generate_n](../standard-library/algorithm-functions.md#generate_n)|将函数对象生成的值分配给范围中指定数量的元素，并返回到超出最后一个分配值的下一位置。|
 |[includes](../standard-library/algorithm-functions.md#includes)|测试一个排序的范围是否包含另一排序范围中的所有元素，其中元素之间的排序或等效条件可通过二元谓词指定。|
@@ -113,6 +118,7 @@ C++ 标准库算法通常会按照其目的或需求相关指示信息进行分�
 |[reverse_copy](../standard-library/algorithm-functions.md#reverse_copy)|反转源范围中元素的顺序，同时将这些元素复制到目标范围|
 |[rotate](../standard-library/algorithm-functions.md#rotate)|交换两个相邻范围中的元素。|
 |[rotate_copy](../standard-library/algorithm-functions.md#rotate_copy)|交换源范围中两个相邻范围内的元素，并将结果复制到目标范围。|
+|[sample](../standard-library/algorithm-functions.md#sample)||
 |[search](../standard-library/algorithm-functions.md#search)|在目标范围中搜索其元素与给定序列中的元素相等或在二元谓词指定的意义上等效于给定序列中的元素的序列的第一个匹配项。|
 |[search_n](../standard-library/algorithm-functions.md#search_n)|在范围中搜索具有特定值或按二元谓词的指定与此值相关的指定数量的元素。|
 |[set_difference](../standard-library/algorithm-functions.md#set_difference)|将属于一个排序的源范围、但不属于另一排序的源范围的所有元素相并到一个排序的目标范围，其中排序条件可通过二元谓词指定。|

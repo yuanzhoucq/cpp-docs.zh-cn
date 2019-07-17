@@ -20,12 +20,12 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-ms.openlocfilehash: d2a1c63f686b46aad4e174c86895f6f9fc00d260
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c52921d2e9c4265d42b3e0187af1396ff8946bde
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404714"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400805"
 ---
 # <a name="try-finally-statement"></a>try-finally 语句
 
@@ -40,11 +40,11 @@ ms.locfileid: "62404714"
 > **\_\_finally**<br/>
 > {<br/>
 > &nbsp;&nbsp;&nbsp;&nbsp;终止代码<br/>
-> }<br/>
+> }
 
 ## <a name="grammar"></a>语法
 
-try-finally-statement:<br/>
+try-finally-statement  :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; **\_\_请尝试** *复合语句* **\_\_最后** *复合语句*
 
 **的 try-finally**语句是 C 的 Microsoft 扩展和C++可使代码块的执行被中断时保证清理代码的执行目标应用程序的语言。 清理包括多个任务，如释放内存、关闭文件和释放文件句柄。 **的 try-finally**语句一点尤其适用于具有多个位置，则进行检查错误的可能会导致过早的例程将返回例程。

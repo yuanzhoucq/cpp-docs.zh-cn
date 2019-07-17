@@ -6,22 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-ms.openlocfilehash: 3fd6272ebcb58d48cc943541f32d1195c3fab498
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 1448ad2b703aa6dcf26fad2e4adcbeb2aec2c956
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450803"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240422"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
 定义随机数生成设备，从而允许创建均匀分布的随机数。
 
-## <a name="syntax"></a>语法
+## <a name="requirements"></a>要求
 
-```cpp
-#include <random>
-```
+**标头**:\<随机 >
+
+**命名空间：** std
+
+> [!NOTE]
+> \<随机 > 库使用 #include < initializer_list > 语句。
 
 ## <a name="summary"></a>总结
 
@@ -51,7 +54,7 @@ ms.locfileid: "66450803"
 
 有许多选项可供选择在\<随机 > 标头，并且其中任何一个优于过时的 C 运行时函数`rand()`。 有关什么是不妥`rand()`以及如何\<随机 > 处理这些不足，请参阅[此视频](https://go.microsoft.com/fwlink/p/?linkid=397615)。
 
-## <a name="code"></a>示例
+## <a name="code"></a> 示例
 
 以下代码示例显示如何生成一些随机数字，本例中有 5 个是使用生成器用非确定性种子生成的。
 
@@ -496,7 +499,7 @@ Visual Studio 中存在两个非常有用的 URNG（`mt19937` 和 `random_device
 |URNG|快速|安全加密|可设定种子|Deterministic|
 |----------|-----------|---------------------|---------------|--------------------|
 |`mt19937`|是|No|是|是<sup>*</sup>|
-|`random_device`|否|是|否|否|
+|`random_device`|No|是|No|No|
 
 <sup>* 在提供了已知种子的情况下。</sup>
 

@@ -5,20 +5,16 @@ f1_keywords:
 - unordered_set/std::swap (set)
 - unordered_set/std::swap (unordered_multiset)
 ms.assetid: 66b35671-4023-4411-ad50-83786580d8ee
-ms.openlocfilehash: a6e005918730a2ca1f52469130e2ea2cf1547fc8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f34d818c1829baba1740bf2776b2d47a8808bf68
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376989"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243432"
 ---
 # <a name="ltunorderedsetgt-functions"></a>&lt;unordered_set&gt; 函数
 
-|||
-|-|-|
-|[swap (set)](#swap)|[swap (unordered_multiset)](#swap_unordered_multiset)|
-
-## <a name="swap"></a>  swap (unordered_set)
+## <a name="swap"></a> 交换 (unordered_set)
 
 交换两个容器的内容。
 
@@ -32,22 +28,22 @@ void swap(
 
 ### <a name="parameters"></a>参数
 
-*Key*<br/>
+*密钥*\
 密钥类型。
 
-*哈希*<br/>
+*哈希*\
 哈希函数对象类型。
 
-*Pred*<br/>
+*Pred*\
 相等比较函数对象类型。
 
-*Alloc*<br/>
+*分配*\
 allocator 类。
 
-*left*<br/>
+*左侧*\
 第一个要交换的容器。
 
-*right*<br/>
+*右侧*\
 第二个要交换的容器。
 
 ### <a name="remarks"></a>备注
@@ -102,18 +98,16 @@ return (0);
 ```
 
 ```Output
-
 [c] [b] [a]
 [f] [e] [d]
 [c] [b] [a]
 ```
 
-## <a name="swap_unordered_multiset"></a>  swap (unordered_multiset)
+## <a name="swap_unordered_multiset"></a> 交换 (unordered_multiset)
 
 交换两个容器的内容。
 
 ```
-
 template <class Key, class Hash, class Pred, class Alloc>
 void swap(
    unordered_multiset <Key, Hash, Pred, Alloc>& left,
@@ -122,22 +116,22 @@ void swap(
 
 ### <a name="parameters"></a>参数
 
-*Key*<br/>
+*密钥*\
 密钥类型。
 
-*哈希*<br/>
+*哈希*\
 哈希函数对象类型。
 
-*Pred*<br/>
+*Pred*\
 相等比较函数对象类型。
 
-*Alloc*<br/>
+*分配*\
 allocator 类。
 
-*left*<br/>
+*左侧*\
 第一个要交换的容器。
 
-*right*<br/>
+*右侧*\
 第二个要交换的容器。
 
 ### <a name="remarks"></a>备注
@@ -194,12 +188,7 @@ int main()
 ```
 
 ```Output
-
 [c] [b] [a]
 [f] [e] [d]
 [c] [b] [a]
 ```
-
-## <a name="see-also"></a>请参阅
-
-[<unordered_set>](../standard-library/unordered-set.md)<br/>

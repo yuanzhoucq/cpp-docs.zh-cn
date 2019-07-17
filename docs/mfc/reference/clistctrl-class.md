@@ -1,6 +1,6 @@
 ---
 title: CListCtrl 类
-ms.date: 11/04/2016
+ms.date: 06/13/2019
 f1_keywords:
 - CListCtrl
 - AFXCMN/CListCtrl
@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: 1cdc4bfacee4913d3a38aaa45aadf0a430e547ab
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 63668de8134267880b48a3406c552d06376ea4f7
+ms.sourcegitcommit: e79188287189b76b34eb7e8fb1bfe646bdb586bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503443"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67141677"
 ---
 # <a name="clistctrl-class"></a>CListCtrl 类
 
@@ -522,8 +522,7 @@ class CListCtrl : public CWnd
 
 ```
 CSize ApproximateViewRect(
-    CSize sz = CSize(-1,
--1),
+    CSize sz = CSize(-1, -1),
     int iCount = -1) const;
 ```
 
@@ -683,7 +682,7 @@ virtual BOOL CreateEx(
 
 使用`CreateEx`而不是[创建](#create)若要将应用扩展的 Windows 样式，指定的 Windows 扩展的样式加**WS_EX_** 。
 
-`CreateEx` 创建使用指定的扩展 Windows 样式的控件*dwExStyle*。 若要设置特定于控件的扩展的样式，请调用[SetExtendedStyle](#setextendedstyle)。 例如，使用`CreateEx`来将此类样式设置为 WS_EX_CONTEXTHELP，但使用`SetExtendedStyle`若要将此类样式设置为 LVS_EX_FULLROWSELECT。 有关详细信息，请参阅本主题中所述的样式[扩展列表视图样式](/windows/desktop/Controls/extended-list-view-styles)Windows SDK 中。
+`CreateEx` 创建使用指定的扩展 Windows 样式的控件*dwExStyle*。 若要设置特定于控件的扩展的样式，请调用[SetExtendedStyle](#setextendedstyle)。 例如，使用`CreateEx`来将此类样式设置为 WS_EX_CONTEXTHELP，但使用`SetExtendedStyle`若要将此类样式设置为 LVS_EX_FULLROWSELECT。 有关详细信息，请参阅本文所述的样式[扩展列表视图样式](/windows/desktop/Controls/extended-list-view-styles)Windows SDK 中。
 
 ## <a name="createdragimage"></a>  CListCtrl::CreateDragImage
 
@@ -971,7 +970,7 @@ COLORREF GetBkColor() const;
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CListCtrl::SetBkColor](#setbkcolor)。
+有关示例，请参阅[CListCtrl::SetBkColor](#setbkcolor)。
 
 ## <a name="getbkimage"></a>  CListCtrl::GetBkImage
 
@@ -1027,7 +1026,7 @@ UINT GetCallbackMask() const;
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[clistctrl:: Setcallbackmask](#setcallbackmask)。
+有关示例，请参阅[clistctrl:: Setcallbackmask](#setcallbackmask)。
 
 ## <a name="getcheck"></a>  CListCtrl::GetCheck
 
@@ -1052,7 +1051,7 @@ BOOL GetCheck(int nItem) const;
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CListCtrl::SetCheck](#setcheck)。
+有关示例，请参阅[CListCtrl::SetCheck](#setcheck)。
 
 ## <a name="getcolumn"></a>  CListCtrl::GetColumn
 
@@ -1134,7 +1133,7 @@ BOOL GetColumnOrderArray(
             int  nColumnCount = pHeaderCtrl->GetItemCount();
             LPINT pnOrder = (LPINT) malloc(nColumnCount*sizeof(int));
             ASSERT(pnOrder != NULL);
-m_myListCtrl.GetColumnOrderArray(pnOrder, nColumnCount);
+            m_myListCtrl.GetColumnOrderArray(pnOrder, nColumnCount);
 
             int i, j, nTemp;
             for (i = 0, j = nColumnCount-1; i < j; i++, j--)
@@ -1188,7 +1187,7 @@ int GetCountPerPage() const;
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CListCtrl::GetTopIndex](#gettopindex)。
+有关示例，请参阅[CListCtrl::GetTopIndex](#gettopindex)。
 
 ## <a name="geteditcontrol"></a>  CListCtrl::GetEditControl
 
@@ -1243,7 +1242,7 @@ DWORD GetExtendedStyle();
 
 ### <a name="return-value"></a>返回值
 
-当前正在使用列表的扩展样式的组合视图控件。 有关这些扩展样式的描述性列表，请参阅[扩展的列表视图样式](/windows/desktop/Controls/extended-list-view-styles)Windows SDK 中的主题。
+当前正在使用列表的扩展样式的组合视图控件。 有关这些扩展样式的描述性列表，请参阅[扩展的列表视图样式](/windows/desktop/Controls/extended-list-view-styles)Windows SDK 中的文章。
 
 ### <a name="remarks"></a>备注
 
@@ -1251,7 +1250,7 @@ DWORD GetExtendedStyle();
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CListCtrl::SetExtendedStyle](#setextendedstyle)。
+有关示例，请参阅[CListCtrl::SetExtendedStyle](#setextendedstyle)。
 
 ## <a name="getfirstselecteditemposition"></a>  CListCtrl::GetFirstSelectedItemPosition
 
@@ -1381,7 +1380,7 @@ public:
 
 ### <a name="example"></a>示例
 
-下面的代码示例演示了`GetGroupInfoByIndex`方法。 在此代码的前面部分中我们创建的列表视图控件的示例显示两个列标题"ClientID"和"等级"为报告视图中。 下面的代码示例检索有关其索引为 0，组的信息，如果存在此类的组。
+下面的代码示例演示了`GetGroupInfoByIndex`方法。 此代码示例的前面部分，我们将创建显示标题"ClientID"和"等级"为报告视图中的两个列的列表视图控件。 下面的代码示例检索有关其索引为 0，组的信息，如果存在此类的组。
 ```cpp
     // GetGroupInfoByIndex
     const int GROUP_HEADER_BUFFER_SIZE = 40;
@@ -1528,7 +1527,7 @@ CHeaderCtrl* GetHeaderCtrl();
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CListCtrl::GetColumnOrderArray](#getcolumnorderarray)。
+有关示例，请参阅[CListCtrl::GetColumnOrderArray](#getcolumnorderarray)。
 
 ## <a name="gethotcursor"></a>  CListCtrl::GetHotCursor
 
@@ -1634,7 +1633,7 @@ CImageList* GetImageList(int nImageList) const;
 
 ```cpp
         ASSERT(m_myListCtrl.GetImageList(LVSIL_NORMAL) == NULL);
-m_myListCtrl.SetImageList(&m_lcImageList, LVSIL_NORMAL);
+        m_myListCtrl.SetImageList(&m_lcImageList, LVSIL_NORMAL);
         ASSERT(m_myListCtrl.GetImageList(LVSIL_NORMAL) == &m_lcImageList);
 ```
 
@@ -1643,12 +1642,12 @@ m_myListCtrl.SetImageList(&m_lcImageList, LVSIL_NORMAL);
 检索插入标记的当前位置。
 
 ```
-BOOL GetInsertMark(LPLVINSERTMARK lvim) const;
+BOOL GetInsertMark(LPLVINSERTMARK plvim) const;
 ```
 
 ### <a name="parameters"></a>参数
 
-*lvim*<br/>
+*plvim*<br/>
 一个指向[LVINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-lvinsertmark)结构，它包含插入标记的信息。
 
 ### <a name="return-value"></a>返回值
@@ -1735,7 +1734,7 @@ int GetItemCount() const;
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CListCtrl::DeleteItem](#deleteitem)。
+有关示例，请参阅[CListCtrl::DeleteItem](#deleteitem)。
 
 ## <a name="getitemdata"></a>  CListCtrl::GetItemData
 
@@ -1905,7 +1904,7 @@ BOOL GetItemRect(
 void CListCtrlDlg::OnClick(NMHDR* pNMHDR, LRESULT* pResult)
 {
     UNREFERENCED_PARAMETER(pResult);
-LPNMITEMACTIVATE pia = (LPNMITEMACTIVATE)pNMHDR;
+    LPNMITEMACTIVATE pia = (LPNMITEMACTIVATE)pNMHDR;
 
     // Get the current mouse location and convert it to client
     // coordinates.
@@ -1995,7 +1994,7 @@ UINT GetItemState(
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CListCtrl::GetTopIndex](#gettopindex)。
+有关示例，请参阅[CListCtrl::GetTopIndex](#gettopindex)。
 
 ## <a name="getitemtext"></a>  CListCtrl::GetItemText
 
@@ -2228,7 +2227,7 @@ BOOL GetOrigin(LPPOINT lpPoint) const;
 
 ## <a name="getselectedcolumn"></a>  CListCtrl::GetSelectedColumn
 
-检索列表控件中当前所选列的索引。
+检索列表控件中的当前所选列的索引。
 
 ```
 UINT GetSelectedColumn() const;
@@ -2388,7 +2387,7 @@ COLORREF GetTextBkColor() const;
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CListCtrl::SetTextBkColor](#settextbkcolor)。
+有关示例，请参阅[CListCtrl::SetTextBkColor](#settextbkcolor)。
 
 ## <a name="gettextcolor"></a>  CListCtrl::GetTextColor
 
@@ -2404,19 +2403,19 @@ COLORREF GetTextColor() const;
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CListCtrl::SetTextColor](#settextcolor)。
+有关示例，请参阅[CListCtrl::SetTextColor](#settextcolor)。
 
 ## <a name="gettileinfo"></a>  CListCtrl::GetTileInfo
 
 检索有关列表视图控件中的磁贴的信息。
 
 ```
-BOOL GetTileInfo(PLVTILEINFO pti) const;
+BOOL GetTileInfo(PLVTILEINFO plvti) const;
 ```
 
 ### <a name="parameters"></a>参数
 
-*pti*<br/>
+*plvti*<br/>
 一个指向[LVTILEINFO](/windows/desktop/api/commctrl/ns-commctrl-taglvtileinfo)接收磁贴信息的结构。
 
 ### <a name="return-value"></a>返回值
@@ -2548,15 +2547,15 @@ BOOL GetViewRect(LPRECT lpRect) const;
 ```
 void GetWorkAreas(
     int nWorkAreas,
-    LPRECT prc) const;
+    LPRECT pRect) const;
 ```
 
 ### <a name="parameters"></a>参数
 
 *nWorkAreas*<br/>
-数`RECT`结构中包含*中国*数组。
+数`RECT`结构中包含*pRect*数组。
 
-*prc*<br/>
+*pRect*<br/>
 指向数组的指针`RECT`结构 (或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象) 的接收工作区域的列表视图控件。 这些结构中的值是在工作区坐标。
 
 ### <a name="remarks"></a>备注
@@ -2565,7 +2564,7 @@ void GetWorkAreas(
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CListCtrl::GetNumberOfWorkAreas](#getnumberofworkareas)。
+有关示例，请参阅[CListCtrl::GetNumberOfWorkAreas](#getnumberofworkareas)。
 
 ## <a name="hasgroup"></a>  CListCtrl::HasGroup
 
@@ -2781,10 +2780,10 @@ int InsertItem(
 *NMask*参数指定哪一项作为参数传递的属性都有效。 它可以是一个或多个掩码值中所述[LVITEM 结构](/windows/desktop/api/commctrl/ns-commctrl-taglvitema)Windows SDK 中。 可以使用按位 OR 运算符组合的有效值。
 
 *nState*<br/>
-指示项的状态、 状态图像和覆盖图像。 请参阅 Windows SDK 主题[LVITEM 结构](/windows/desktop/api/commctrl/ns-commctrl-taglvitema)有关详细信息和[列表视图项状态](/windows/desktop/Controls/list-view-item-states)有关有效的标志的列表。
+指示项的状态、 状态图像和覆盖图像。 有关详细信息，请参阅 Windows SDK 主题[LVITEM 结构](/windows/desktop/api/commctrl/ns-commctrl-taglvitema)并[列表视图项状态](/windows/desktop/Controls/list-view-item-states)有关有效的标志的列表。
 
 *nStateMask*<br/>
-指示将检索或修改状态成员的哪些位。 请参阅[LVITEM 结构](/windows/desktop/api/commctrl/ns-commctrl-taglvitema)Windows SDK for 的详细信息中。
+指示将检索或修改状态成员的哪些位。 有关详细信息，请参阅[LVITEM 结构](/windows/desktop/api/commctrl/ns-commctrl-taglvitema)Windows SDK 中。
 
 *lParam*<br/>
 与项关联一个 32 位应用程序特定值。 如果指定此参数，则必须设置*nMask*属性 LVIF_PARAM。
@@ -2828,7 +2827,7 @@ int InsertItem(
 ```
 int InsertMarkHitTest(
     LPPOINT pPoint,
-    LPLVINSERTMARK lvim) const;
+    LPLVINSERTMARK plvim) const;
 ```
 
 ### <a name="parameters"></a>参数
@@ -2836,7 +2835,7 @@ int InsertMarkHitTest(
 *pPoint*<br/>
 一个指向[点](/previous-versions/dd162805\(v=vs.85\))结构，其中包含了点击的测试协调，相对于列表控件的客户端区域。
 
-*lvim*<br/>
+*plvim*<br/>
 一个指向[LVINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-lvinsertmark)结构，它指定为坐标点参数定义的最近的插入点。
 
 ### <a name="return-value"></a>返回值
@@ -2879,7 +2878,7 @@ BOOL IsItemVisible(int index) const;
 
 ### <a name="return-value"></a>返回值
 
-如果指定的项为可见; 否则为 FALSE，则为 TRUE。
+如果指定的项可见，则为 TRUE否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
@@ -3138,7 +3137,7 @@ BOOL SetBkColor(COLORREF cr);
 BOOL SetBkImage(LVBKIMAGE* plvbkImage);
 
 BOOL SetBkImage(
-    HBITMAP hbm,
+    HBITMAP hBitmap,
     BOOL fTile = TRUE,
     int xOffsetPercent = 0,
     int yOffsetPercent = 0);
@@ -3155,7 +3154,7 @@ BOOL SetBkImage(
 *plvbkImage*<br/>
 地址`LVBKIMAGE`包含新的背景图像信息的结构。
 
-*hbm*<br/>
+*hBitmap*<br/>
 位图的句柄。
 
 *pszUrl*<br/>
@@ -3181,7 +3180,7 @@ BOOL SetBkImage(
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CListCtrl::GetBkImage](#getbkimage)。
+有关示例，请参阅[CListCtrl::GetBkImage](#getbkimage)。
 
 ## <a name="setcallbackmask"></a>  CListCtrl::SetCallbackMask
 
@@ -3273,7 +3272,7 @@ BOOL SetColumn(
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CListCtrl::GetColumn](#getcolumn)。
+有关示例，请参阅[CListCtrl::GetColumn](#getcolumn)。
 
 ## <a name="setcolumnorderarray"></a>  CListCtrl::SetColumnOrderArray
 
@@ -3303,7 +3302,7 @@ BOOL SetColumnOrderArray(
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CListCtrl::GetColumnOrderArray](#getcolumnorderarray)。
+有关示例，请参阅[CListCtrl::GetColumnOrderArray](#getcolumnorderarray)。
 
 ## <a name="setcolumnwidth"></a>  CListCtrl::SetColumnWidth
 
@@ -3424,7 +3423,7 @@ HCURSOR SetHotCursor(HCURSOR hc);
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CListCtrl::GetHotCursor](#gethotcursor)。
+有关示例，请参阅[CListCtrl::GetHotCursor](#gethotcursor)。
 
 ## <a name="sethotitem"></a>  CListCtrl::SetHotItem
 
@@ -3449,7 +3448,7 @@ int SetHotItem(int iIndex);
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CListCtrl::GetHotItem](#gethotitem)。
+有关示例，请参阅[CListCtrl::GetHotItem](#gethotitem)。
 
 ## <a name="sethovertime"></a>  CListCtrl::SetHoverTime
 
@@ -3474,7 +3473,7 @@ DWORD SetHoverTime(DWORD dwHoverTime = (DWORD)-1);
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CListCtrl::GetHoverTime](#gethovertime)。
+有关示例，请参阅[CListCtrl::GetHoverTime](#gethovertime)。
 
 ## <a name="seticonspacing"></a>  CListCtrl::SetIconSpacing
 
@@ -3544,7 +3543,7 @@ CImageList* SetImageList(
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CListCtrl::GetImageList](#getimagelist)。
+有关示例，请参阅[CListCtrl::GetImageList](#getimagelist)。
 
 ## <a name="setinfotip"></a>  CListCtrl::SetInfoTip
 
@@ -3572,12 +3571,12 @@ BOOL SetInfoTip(PLVSETINFOTIP plvInfoTip);
 将插入点设置为定义的位置。
 
 ```
-BOOL SetInsertMark(LPLVINSERTMARK lvim);
+BOOL SetInsertMark(LPLVINSERTMARK plvim);
 ```
 
 ### <a name="parameters"></a>参数
 
-*lvim*<br/>
+*plvim*<br/>
 一个指向[LVINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-lvinsertmark)结构，它指定在何处设置插入点。
 
 ### <a name="return-value"></a>返回值
@@ -3686,7 +3685,7 @@ BOOL SetItem(
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CListCtrl::HitTest](#hittest)。
+有关示例，请参阅[CListCtrl::HitTest](#hittest)。
 
 ## <a name="setitemcount"></a>  CListCtrl::SetItemCount
 
@@ -3868,7 +3867,7 @@ BOOL SetItemPosition(
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CListCtrl::GetItemPosition](#getitemposition)。
+有关示例，请参阅[CListCtrl::GetItemPosition](#getitemposition)。
 
 ## <a name="setitemstate"></a>  CListCtrl::SetItemState
 
@@ -3909,7 +3908,7 @@ BOOL SetItemState(
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CListCtrl::GetTopIndex](#gettopindex)。
+有关示例，请参阅[CListCtrl::GetTopIndex](#gettopindex)。
 
 ## <a name="setitemtext"></a>  CListCtrl::SetItemText
 
@@ -3943,7 +3942,7 @@ BOOL SetItemText(
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CListCtrl::InsertItem](#insertitem)。
+有关示例，请参阅[CListCtrl::InsertItem](#insertitem)。
 
 ## <a name="setoutlinecolor"></a>  CListCtrl::SetOutlineColor
 
@@ -4010,7 +4009,7 @@ int SetSelectionMark(int iIndex);
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CListCtrl::GetSelectionMark](#getselectionmark)。
+有关示例，请参阅[CListCtrl::GetSelectionMark](#getselectionmark)。
 
 ## <a name="settextbkcolor"></a>  CListCtrl::SetTextBkColor
 
@@ -4070,12 +4069,12 @@ BOOL SetTextColor(COLORREF cr);
 设置磁贴的列表视图控件的信息。
 
 ```
-BOOL SetTileInfo(PLVTILEINFO pti);
+BOOL SetTileInfo(PLVTILEINFO pTileInfo);
 ```
 
 ### <a name="parameters"></a>参数
 
-*pti*<br/>
+*pTileInfo*<br/>
 一个指向[LVTILEINFO](/windows/desktop/api/commctrl/ns-commctrl-taglvtileinfo)结构，它包含要设置的信息。
 
 ### <a name="return-value"></a>返回值
@@ -4257,7 +4256,7 @@ int CALLBACK CListCtrlDlg::MyCompareProc(LPARAM lParam1, LPARAM lParam2,
     LPARAM lParamSort)
 {
     UNREFERENCED_PARAMETER(lParamSort);
-return (int)(lParam1 - lParam2);
+    return (int)(lParam1 - lParam2);
 }
 ```
 
@@ -4381,7 +4380,7 @@ int SubItemHitTest(LPLVHITTESTINFO pInfo);
 void CListCtrlDlg::OnDblClk(NMHDR* pNMHDR, LRESULT* pResult)
 {
     UNREFERENCED_PARAMETER(pResult);
-LPNMITEMACTIVATE pia = (LPNMITEMACTIVATE)pNMHDR;
+    LPNMITEMACTIVATE pia = (LPNMITEMACTIVATE)pNMHDR;
     LVHITTESTINFO lvhti;
 
     // Clear the subitem text the user clicked on.
@@ -4418,7 +4417,7 @@ BOOL Update(int nItem);
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CListCtrl::GetSelectedCount](#getselectedcount)。
+有关示例，请参阅[CListCtrl::GetSelectedCount](#getselectedcount)。
 
 ## <a name="see-also"></a>请参阅
 

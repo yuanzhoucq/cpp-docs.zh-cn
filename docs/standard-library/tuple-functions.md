@@ -13,20 +13,41 @@ helpviewer_keywords:
 - std::get [C++]
 - std::make_tuple [C++]
 - std::tie [C++]
-ms.openlocfilehash: 93c11a89f7cdfa3949be2d97e401fad199a17d97
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 46c386ecffb8fbbf7c07d40b334afd91d261ebcf
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278952"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68241673"
 ---
 # <a name="lttuplegt-functions"></a>&lt;tuple&gt; 函数
 
-||||
-|-|-|-|
-|[get](#get)|[make_tuple](#make_tuple)|[tie](#tie)|
+## <a name="apply"></a> 应用
 
-## <a name="get"></a>  get
+```cpp
+template <class F, class Tuple> constexpr decltype(auto) apply(F&& f, Tuple&& t);
+```
+
+### <a name="remarks"></a>备注
+
+调用函数*F*使用元组*t*。
+
+## <a name="forward"></a> forward_as_tuple
+
+```cpp
+template <class... TTypes>
+    constexpr tuple<TTypes&&...> forward_as_tuple(TTypes&&...) noexcept;
+```
+
+### <a name="return-value"></a>返回值
+
+返回 `tuple<TTypes&&...>(std::forward<TTypes>(t)...)`。
+
+### <a name="remarks"></a>备注
+
+构造对中的自变量的引用的元组*t*适用于作为函数的自变量转发。
+
+## <a name="get"></a> 获取
 
 按索引或类型（在 C++14 中）从 `tuple` 对象获取元素。
 
@@ -60,17 +81,17 @@ template <class T, class... Types>
 
 ### <a name="parameters"></a>参数
 
-*Tuple*<br/>
+*索引*\
 要获取的元素的索引。
 
-*类型*<br/>
+*类型*\
 元组中声明的序列顺序，按声明顺序排列。
 
-*T*<br/>
+*T*\
 要获取的元素的类型。
 
-*Tuple*<br/>
-包含任意数目元素的 std::tuple。
+*元组*\
+一个`std::tuple`，其中包含任意数量的元素。
 
 ### <a name="remarks"></a>备注
 
@@ -107,7 +128,17 @@ int main() {
 0 1.42 Call me Tuple
 ```
 
-## <a name="make_tuple"></a>  make_tuple
+## <a name="make_from_tuple"></a> make_from_tuple
+
+```cpp
+template <class T, class Tuple> constexpr T make_from_tuple(Tuple&& t);
+```
+
+### <a name="remarks"></a>备注
+
+与 `return make_from_tuple_impl<T>(forward<Tuple>(t), make_index_sequence<tuple_size_v<decay_t<Tuple>>>{})` 相同。
+
+## <a name="make_tuple"></a> make_tuple
 
 从元素值中生成一个 `tuple`。
 
@@ -118,10 +149,10 @@ template <class T1, class T2, ..., class TN>
 
 ### <a name="parameters"></a>参数
 
-*TN*<br/>
+*TN*\
 第 N 个函数参数的类型。
 
-*tN*<br/>
+*TN*\
 第 N 个函数参数的值。
 
 ### <a name="remarks"></a>备注
@@ -165,7 +196,14 @@ int main() {
 4 5 6 7
 ```
 
-## <a name="tie"></a>  tie
+## <a name="swap"></a> 交换
+
+```cpp
+template <class... Types>
+    void swap(tuple<Types...>& x, tuple<Types...>& y) noexcept(see below );
+```
+
+## <a name="tie"></a> 将绑定
 
 从元素引用中生成一个 `tuple`。
 
@@ -176,7 +214,7 @@ tuple<T1&, T2&, ..., TN&> tie(T1& t1, T2& t2, ..., TN& tN);
 
 ### <a name="parameters"></a>参数
 
-*TN*<br/>
+*TN*\
 第 N 个元组元素的基类型。
 
 ### <a name="remarks"></a>备注
@@ -224,6 +262,26 @@ int main() {
 0 1 2 3
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="tuple_cat"></a> tuple_cat
 
-[\<tuple>](../standard-library/tuple.md)<br/>
+```cpp
+template <class... Tuples> constexpr tuple<CTypes...> tuple_cat(Tuples&&...);
+```
+
+### <a name="return-value"></a>返回值
+
+通过初始化每个类型元素构造元组对象。
+
+## <a name="tuple_element_t"></a> tuple_element_t
+
+```cpp
+template <size_t I, class T>
+    using tuple_element_t = typename tuple_element<I, T>::type;
+```
+
+## <a name="tuple_size_v"></a> tuple_size_v
+
+```cpp
+template <class T>
+    inline constexpr size_t tuple_size_v = tuple_size<T>::value;
+```

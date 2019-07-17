@@ -108,12 +108,12 @@ helpviewer_keywords:
 - std::ios_base [C++], width
 - std::ios_base [C++], xalloc
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
-ms.openlocfilehash: 8911c3763e6a0c861c162611e1b2617ec26f0cf9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0aa79d458c964bf3e8bdd34e564bba4965546930
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62158586"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245300"
 ---
 # <a name="iosbase-class"></a>ios_base 类
 
@@ -135,15 +135,17 @@ Ios_base 类的对象存储格式设置信息，其中包括：
 
 Ios_base 类的对象还将流状态信息存储在 [iostate](#iostate) 类型的对象和回调堆栈中。
 
+## <a name="members"></a>成员
+
 ### <a name="constructors"></a>构造函数
 
-|构造函数|描述|
+|||
 |-|-|
 |[ios_base](#ios_base)|构造 `ios_base` 对象。|
 
 ### <a name="typedefs"></a>Typedef
 
-|类型名称|描述|
+|||
 |-|-|
 |[event_callback](#event_callback)|描述传递到 [register_call](#register_callback) 的函数。|
 |[fmtflags](#fmtflags)|用于指定输出外观的常数。|
@@ -193,9 +195,9 @@ Ios_base 类的对象还将流状态信息存储在 [iostate](#iostate) 类型�
 |[unitbuf](#fmtflags)|将导致输出在每次插入后进行刷新。|
 |[uppercase](#fmtflags)|指定在某些插入操作中插入小写字母的大写等效项。|
 
-### <a name="member-functions"></a>成员函数
+### <a name="functions"></a>函数
 
-|成员函数|描述|
+|||
 |-|-|
 |[failure](#failure)|成员类用作 [basic_ios](../standard-library/basic-ios-class.md) 模板类中的 [clear](../standard-library/basic-ios-class.md#clear) 成员函数引发的所有异常的基类。|
 |[flags](#flags)|设置或返回当前的标志设置。|
@@ -214,17 +216,17 @@ Ios_base 类的对象还将流状态信息存储在 [iostate](#iostate) 类型�
 
 ### <a name="operators"></a>运算符
 
-|运算符|描述|
+|||
 |-|-|
 |[operator=](#op_eq)|`ios_base` 对象的赋值运算符。|
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<ios>
+**标头：** \<ios>
 
 **命名空间：** std
 
-## <a name="event"></a>ios_base::event
+## <a name="event"></a> 事件
 
 指定事件类型。
 
@@ -249,7 +251,7 @@ enum event {
 
 有关示例，请参阅 [register_callback](#register_callback)。
 
-## <a name="event_callback"></a>ios_base::event_callback
+## <a name="event_callback"></a> event_callback
 
 描述传递到 [register_call](#register_callback) 的函数。
 
@@ -262,13 +264,13 @@ typedef void (__cdecl *event_callback)(
 
 ### <a name="parameters"></a>参数
 
-*_E*<br/>
+*（_E)* \
 [事件](#event)。
 
-*_Base*<br/>
+*（_b)* \
 其中调用了事件的流。
 
-*_I*<br/>
+*（_I)* \
 用户定义的数字。
 
 ### <a name="remarks"></a>备注
@@ -279,7 +281,7 @@ typedef void (__cdecl *event_callback)(
 
 有关使用 `event_callback` 的示例，请参阅 [register_call](#register_callback)。
 
-## <a name="failure"></a>ios_base::failure
+## <a name="failure"></a> 失败
 
 根据 `iostreams` 库中的函数，类 `failure` 将引发的所有对象类型的基类定义为异常，以在流缓冲操作期间报告错误。
 
@@ -331,7 +333,7 @@ int main ( )
 Caught an exception: ios_base::failbit set
 ```
 
-## <a name="flags"></a>ios_base::flags
+## <a name="flags"></a> 标志
 
 设置或返回当前的标志设置。
 
@@ -342,7 +344,7 @@ fmtflags flags(fmtflags fmtfl);
 
 ### <a name="parameters"></a>参数
 
-*fmtfl*<br/>
+*fmtfl*\
 新的 `fmtflags` 设置。
 
 ### <a name="return-value"></a>返回值
@@ -377,7 +379,7 @@ int main ( )
 16896
 ```
 
-## <a name="fmtflags"></a>ios_base::fmtflags
+## <a name="fmtflags"></a> fmtflags
 
 用于指定输出外观的常数。
 
@@ -453,7 +455,7 @@ public:
 
 有关修改这些格式标志的函数的示例，请参阅 [\<iomanip>](../standard-library/iomanip.md)。
 
-## <a name="getloc"></a>ios_base::getloc
+## <a name="getloc"></a> getloc
 
 返回存储的区域设置对象。
 
@@ -483,7 +485,7 @@ int main( )
 C
 ```
 
-## <a name="imbue"></a>ios_base::imbue
+## <a name="imbue"></a> imbue
 
 更改区域设置。
 
@@ -493,7 +495,7 @@ locale imbue(const locale& _Loc);
 
 ### <a name="parameters"></a>参数
 
-*_Loc*<br/>
+*_Loc*\
 新的区域设置。
 
 ### <a name="return-value"></a>返回值
@@ -508,7 +510,7 @@ locale imbue(const locale& _Loc);
 
 有关示例，请参阅 [basic_ios::imbue](../standard-library/basic-ios-class.md#imbue)。
 
-## <a name="init"></a>ios_base::Init
+## <a name="init"></a> Init
 
 在构造时创建标准 iostream 对象。
 
@@ -520,7 +522,7 @@ class Init { };
 
 此嵌套类描述一个对象，该对象的构造可确保即使在执行任意静态对象的构造函数前也可正确构造标准 iostreams 对象。
 
-## <a name="ios_base"></a>ios_base::ios_base
+## <a name="ios_base"></a> ios_base
 
 构造 ios_base 对象。
 
@@ -530,9 +532,9 @@ ios_base();
 
 ### <a name="remarks"></a>备注
 
-此（受保护）构造函数不会执行任何操作。 稍后对 **basic_ios::**[init](../standard-library/basic-ios-class.md#init) 的调用必须先初始化此对象，然后才可被安全销毁。 因此，类 ios_base 的唯一安全用途是作为模板类 [basic_ios](../standard-library/basic-ios-class.md) 的基类。
+此（受保护）构造函数不会执行任何操作。 稍后对 **basic_ios::** [init](../standard-library/basic-ios-class.md#init) 的调用必须先初始化此对象，然后才可被安全销毁。 因此，类 ios_base 的唯一安全用途是作为模板类 [basic_ios](../standard-library/basic-ios-class.md) 的基类。
 
-## <a name="iostate"></a>ios_base::iostate
+## <a name="iostate"></a> iostate
 
 描述流状态的常量的类型。
 
@@ -560,7 +562,7 @@ public:
 
 此外，有用的值是`goodbit`，则无前面提到的 bits 设置 (`goodbit`保证为零)。
 
-## <a name="iword"></a>ios_base::iword
+## <a name="iword"></a> iword
 
 分配将存储为 `iword` 的值。
 
@@ -570,14 +572,14 @@ long& iword(int idx);
 
 ### <a name="parameters"></a>参数
 
-*idx*<br/>
+*idx*\
 要存储为 `iword` 的值的索引。
 
 ### <a name="remarks"></a>备注
 
-成员函数将返回元素的引用*idx*类型的元素的可扩展数组**长**。 所有元素均有效存在，且起初会存储值 0。 下次调用此对象的 `iword` 后、对象由对 **basic_ios::**[copyfmt](../standard-library/basic-ios-class.md#copyfmt) 的调用更改后或者对象被销毁后，该返回引用将无效。
+成员函数将返回元素的引用*idx*类型的元素的可扩展数组**长**。 所有元素均有效存在，且起初会存储值 0。 下次调用此对象的 `iword` 后、对象由对 **basic_ios::** [copyfmt](../standard-library/basic-ios-class.md#copyfmt) 的调用更改后或者对象被销毁后，该返回引用将无效。
 
-如果*idx*为负或唯一的存储的元素不可用，如果该函数将调用[setstate](../standard-library/basic-ios-class.md#setstate)**(badbit)** 并返回可能不是唯一的引用。
+如果*idx*为负或唯一的存储的元素不可用，如果该函数将调用[setstate](../standard-library/basic-ios-class.md#setstate) **(badbit)** 并返回可能不是唯一的引用。
 
 若要获取唯一索引以用于类型 `ios_base` 的所有对象，请调用 [xalloc](#xalloc)。
 
@@ -585,7 +587,7 @@ long& iword(int idx);
 
 有关如何使用 `iword` 的示例，请参阅 [xalloc](#xalloc)。
 
-## <a name="openmode"></a>ios_base::openmode
+## <a name="openmode"></a> 文件的连接
 
 介绍如何与流进行交互。
 
@@ -635,7 +637,7 @@ int main ( )
 }
 ```
 
-## <a name="op_eq"></a>ios_base::operator=
+## <a name="op_eq"></a> 运算符 =
 
 ios_base 对象的赋值运算符。
 
@@ -645,7 +647,7 @@ ios_base& operator=(const ios_base& right);
 
 ### <a name="parameters"></a>参数
 
-*right*<br/>
+*右侧*\
 一个 `ios_base` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -658,7 +660,7 @@ ios_base& operator=(const ios_base& right);
 
 此运算符仅由派生自 `ios_base` 的类使用。
 
-## <a name="precision"></a>ios_base::precision
+## <a name="precision"></a> 精度
 
 指定浮点数中显示的位数。
 
@@ -669,7 +671,7 @@ streamsize precision(streamsize _Prec);
 
 ### <a name="parameters"></a>参数
 
-*_Prec*<br/>
+*_Prec*\
 要显示的有效位的数目或固定表示法中小数点后的位数。
 
 ### <a name="return-value"></a>返回值
@@ -704,7 +706,7 @@ int main( )
 31.312
 ```
 
-## <a name="pword"></a>ios_base::pword
+## <a name="pword"></a> pword
 
 分配将存储为 `pword` 的值。
 
@@ -714,14 +716,14 @@ void *& pword(int _Idx);
 
 ### <a name="parameters"></a>参数
 
-*_Idx*<br/>
+*上 _Idx*\
 要存储为 `pword` 的值的索引。
 
 ### <a name="remarks"></a>备注
 
-成员函数返回的引用元素 _ *Idx*类型的元素的可扩展数组**void**指针。 所有元素均有效存在，且起初会存储空指针。 下次调用此对象的 `pword` 后、对象由对 **basic_ios::**[copyfmt](../standard-library/basic-ios-class.md#copyfmt) 的调用更改后或者对象被销毁后，该返回引用将无效。
+成员函数返回的引用元素 _ *Idx*类型的元素的可扩展数组**void**指针。 所有元素均有效存在，且起初会存储空指针。 下次调用此对象的 `pword` 后、对象由对 **basic_ios::** [copyfmt](../standard-library/basic-ios-class.md#copyfmt) 的调用更改后或者对象被销毁后，该返回引用将无效。
 
-如果 _ *Idx* 为负或唯一存储对该元素不可用，则此函数会调用 [setstate](../standard-library/basic-ios-class.md#setstate)**(badbit)** 并返回一个可能并不唯一的引用。
+如果 _ *Idx* 为负或唯一存储对该元素不可用，则此函数会调用 [setstate](../standard-library/basic-ios-class.md#setstate) **(badbit)** 并返回一个可能并不唯一的引用。
 
 若要获取唯一索引以用于类型 `ios_base` 的所有对象，请调用 [xalloc](#xalloc)。
 
@@ -729,7 +731,7 @@ void *& pword(int _Idx);
 
 有关使用 `pword` 的示例，请参考 [xalloc](#xalloc)。
 
-## <a name="register_callback"></a>ios_base::register_callback
+## <a name="register_callback"></a> register_callback
 
 指定一个回调函数。
 
@@ -740,10 +742,10 @@ void register_callback(
 
 ### <a name="parameters"></a>参数
 
-*pfn*<br/>
+*pfn*\
 回调函数的指针。
 
-*idx*<br/>
+*idx*\
 用户定义的数字。
 
 ### <a name="remarks"></a>备注
@@ -837,7 +839,7 @@ in callback2
 an erase event
 ```
 
-## <a name="seekdir"></a>ios_base::seekdir
+## <a name="seekdir"></a> seekdir
 
 指定偏移操作的起始点。
 
@@ -886,7 +888,7 @@ int main ( )
 }
 ```
 
-## <a name="setf"></a>ios_base::setf
+## <a name="setf"></a> setf
 
 设置指定标志。
 
@@ -902,10 +904,10 @@ fmtflags setf(
 
 ### <a name="parameters"></a>参数
 
-*_Mask*<br/>
+*掩码 （_m)* \
 要打开的标志。
 
-*_Unset*<br/>
+*_Unset*\
 要关闭的标志。
 
 ### <a name="return-value"></a>返回值
@@ -940,7 +942,7 @@ int main( )
 }
 ```
 
-## <a name="sync_with_stdio"></a>ios_base::sync_with_stdio
+## <a name="sync_with_stdio"></a> sync_with_stdio
 
 确保 iostream 和 C 运行时库操作按照它们在源代码中出现的顺序发生。
 
@@ -952,7 +954,7 @@ static bool sync_with_stdio(
 
 ### <a name="parameters"></a>参数
 
-*_Sync*<br/>
+*_Sync*\
 所有流都是否与同步`stdio`。
 
 ### <a name="return-value"></a>返回值
@@ -963,7 +965,7 @@ static bool sync_with_stdio(
 
 静态成员函数存储`stdio`同步标志，它最初是**true**。 当 **，则返回 true**，此标志可确保对同一文件的操作都正确同步之间[iostreams](../standard-library/iostreams-conventions.md)函数和定义中的C++标准库。 否则为同步可能会或可能不保证，但可能会提高性能。 函数存储 *_Sync*中`stdio`同步标志，并返回其先前的存储的值。 您可以调用它可靠地仅在执行对标准流的任何操作之前。
 
-## <a name="unsetf"></a>ios_base::unsetf
+## <a name="unsetf"></a> unsetf
 
 将导致指定的标志处于关闭状态。
 
@@ -975,18 +977,18 @@ void unsetf(
 
 ### <a name="parameters"></a>参数
 
-*_Mask*<br/>
+*掩码 （_m)* \
 要关闭的标志。
 
 ### <a name="remarks"></a>备注
 
-成员函数有效地调用[标志](#flags)(`~`*_Mask* **& 标志**) （清除所选的位）。
+成员函数有效地调用[标志](#flags)(`~` *_Mask* **& 标志**) （清除所选的位）。
 
 ### <a name="example"></a>示例
 
 请参阅[ios_base:: setf](#setf)有关的使用示例`unsetf`。
 
-## <a name="width"></a>ios_base::width
+## <a name="width"></a> 宽度
 
 设置输出流的长度。
 
@@ -999,7 +1001,7 @@ streamsize width(
 
 ### <a name="parameters"></a>参数
 
-*_Wide*<br/>
+*_Wide*\
 所需的输出流大小。
 
 ### <a name="return-value"></a>返回值
@@ -1031,7 +1033,7 @@ int main( ) {
 0
 ```
 
-## <a name="xalloc"></a>ios_base::xalloc
+## <a name="xalloc"></a> xalloc
 
 指定一个变量是流的一部分。
 

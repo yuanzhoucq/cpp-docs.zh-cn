@@ -2,23 +2,64 @@
 title: '&lt;new&gt; 函数'
 ms.date: 11/04/2016
 f1_keywords:
+- new/std::get_new_handler
 - new/std::nothrow
 - new/std::set_new_handler
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
-ms.openlocfilehash: b5803b5fdf44392b6096f9c9a5ebdde7f94eae59
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c912e5be07ea0ebdd3148d30c80c39a5f8cfa1a5
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223725"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243664"
 ---
 # <a name="ltnewgt-functions"></a>&lt;new&gt; 函数
 
-|||
-|-|-|
-|[nothrow](#nothrow)|[set_new_handler](#set_new_handler)|
+## <a name="get_new_handler"></a> get_new_handler
 
-## <a name="nothrow"></a>  nothrow
+```cpp
+new_handler get_new_handler() noexcept;
+```
+
+### <a name="remarks"></a>备注
+
+返回当前`new_handler`。
+
+## <a name="launder"></a> launder
+
+```cpp
+template <class T>
+    constexpr T* launder(T* ptr) noexcept;
+```
+
+### <a name="parameters"></a>参数
+
+*ptr*\
+中包含其类型的对象的内存字节的地址是类似于*T*。
+
+### <a name="return-value"></a>返回值
+
+类型的值*T\** 指向 X。
+
+### <a name="remarks"></a>备注
+
+也称为指针优化屏障。
+
+可能的常量表达式中使用其自变量的值时，使用作为常量表达式。 如果在另一个对象，具有类似指针的对象占用的存储指向对象的指针值通过访问字节的存储空间。
+
+### <a name="example"></a>示例
+
+```cpp
+struct X { const int n; };
+
+X *p = new X{3};
+const int a = p->n;
+new (p) X{5}; // p does not point to new object because X::n is const
+const int b = p->n; // undefined behavior
+const int c = std::launder(p)->n; // OK
+```
+
+## <a name="nothrow"></a> nothrow
 
 提供一个对象，用作自变量**nothrow**新版**新**并**删除**。
 
@@ -34,7 +75,7 @@ extern const std::nothrow_t nothrow;
 
 有关如何将 `std::nothrow_t` 用作函数参数的示例，请参阅[运算符 new](../standard-library/new-operators.md#op_new) 和[运算符 new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)。
 
-## <a name="set_new_handler"></a>  set_new_handler
+## <a name="set_new_handler"></a> set_new_handler
 
 安装时要调用的用户函数**运算符 new**中尝试分配内存失败。
 
@@ -44,7 +85,7 @@ new_handler set_new_handler(new_handler Pnew) throw();
 
 ### <a name="parameters"></a>参数
 
-*Pnew*<br/>
+*Pnew*\
 `new_handler`安装。
 
 ### <a name="return-value"></a>返回值
@@ -117,7 +158,3 @@ Allocating 5000000 ints.
 The new_handler is called:
 bad allocation
 ```
-
-## <a name="see-also"></a>请参阅
-
-[\<new>](../standard-library/new.md)<br/>

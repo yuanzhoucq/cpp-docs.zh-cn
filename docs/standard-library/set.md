@@ -6,29 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - set header
 ms.assetid: 43cb1ab2-6383-48cf-8bdc-2b96d7203596
-ms.openlocfilehash: 633571f00cfe761b687e9b76624029f57ab6043e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1bf5663d3e6891d45e2139c612d8e16860b6cace
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412574"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246387"
 ---
 # <a name="ltsetgt"></a>&lt;set&gt;
 
 定义容器模板类 set 和 multiset 及其支持的模板。
 
-## <a name="syntax"></a>语法
+## <a name="requirements"></a>要求
 
-```cpp
-#include <set>
-```
+**标头：** \<set>
+
+**命名空间：** std
+
+> [!NOTE]
+> \<设置 > 库还使用`#include <initializer_list>`语句。
 
 ## <a name="members"></a>成员
 
 ### <a name="operators"></a>运算符
 
 |Set 版本|Multiset 版本|描述|
-|-----------------|----------------------|-----------------|
+|-|-|-|
 |[operator!= (set)](../standard-library/set-operators.md#op_neq)|[operator!= (multiset)](../standard-library/set-operators.md#op_neq)|测试运算符左侧的 set 或 multiset 对象是否不等于右侧的 set 或 multiset 对象。|
 |[operator< (set)](../standard-library/set-operators.md#op_lt)|[operator< (multiset)](../standard-library/set-operators.md#op_lt_multiset)|测试运算符左侧的 set 或 multiset 对象是否小于右侧的 set 或 multiset 对象。|
 |[operator<= (set)](../standard-library/set-operators.md#op_lt_eq)|[operator\<= (multiset)](../standard-library/set-operators.md#op_lt_eq_multiset)|测试运算符左侧的 set 或 multiset 对象是否小于或等于右侧的 set 或 multiset 对象。|
@@ -39,12 +42,12 @@ ms.locfileid: "62412574"
 ### <a name="specialized-template-functions"></a>专用化模板函数
 
 |Set 版本|Multiset 版本|描述|
-|-----------------|----------------------|-----------------|
+|-|-|-|
 |[swap](../standard-library/set-functions.md#swap)|[swap (multiset)](../standard-library/set-functions.md#swap_multiset)|交换两个集或多个集的元素。|
 
 ### <a name="classes"></a>类
 
-|类|描述|
+|||
 |-|-|
 |[set 类](../standard-library/set-class.md)|用于存储和检索集合中的数据，此集合中包含的元素值是唯一的，并且用作数据自动排序所依据的关键字值。|
 |[multiset 类](../standard-library/multiset-class.md)|用于存储和检索集合中的数据，此集合中包含的元素值不必是唯一的，并且可用作数据自动排序所依据的关键字值。|

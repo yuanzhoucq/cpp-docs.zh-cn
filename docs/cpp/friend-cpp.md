@@ -1,6 +1,6 @@
 ---
 title: 友元 (C++)
-ms.date: 11/19/2018
+ms.date: 07/15/2019
 f1_keywords:
 - friend_cpp
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - friend classes [C++]
 - friend keyword [C++]
 ms.assetid: 8fe9ee55-d56f-40cd-9075-d9fb1375aff4
-ms.openlocfilehash: 769720877cc58de530791b268811d7d01adad3e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03b6cb7f856ec59c10f5e410c947f74d17ec4e46
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154476"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894421"
 ---
 # <a name="friend-c"></a>友元 (C++)
 
@@ -119,7 +119,7 @@ class G
 
 ## <a name="friend-functions"></a>友元函数
 
-一个**友元**函数是不是类的成员，但有权访问类的私有和受保护成员的函数。 友元函数不被视为类成员；它们是获得了特殊访问权限的普通外部函数。 友元不在类的范围内，并且它们的调用使用成员选择运算符 (**。** 和-**>**) 除非它们是另一个类的成员。 一个**友元**授予访问权限的类来声明函数。 **友元**声明任意位置可以放置在类声明中。 它不受访问控制关键字的影响。
+一个**友元**函数是不是类的成员，但有权访问类的私有和受保护成员的函数。 友元函数不被视为类成员；它们是获得了特殊访问权限的普通外部函数。 友元不在类的范围内，并且它们的调用使用成员选择运算符 ( **。** 和- **>** ) 除非它们是另一个类的成员。 一个**友元**授予访问权限的类来声明函数。 **友元**声明任意位置可以放置在类声明中。 它不受访问控制关键字的影响。
 
 以下示例显示 `Point` 类和友元函数 `ChangePrivate`。 **友元**函数有权访问的私有数据成员的`Point`对象作为参数接收。
 
@@ -224,7 +224,7 @@ int main() {
 
 友元关系不是相互的，除非如此显式指定。 在上面的示例中，`YourClass` 的成员函数无法访问 `YourOtherClass` 的私有成员。
 
-托管类型不能具有任何友元函数、友元类或友元接口。
+托管的类型 (在C++/CLI) 不能具有任何友元函数、 友元类或友元接口。
 
 友元关系不能继承，这意味着从 `YourOtherClass` 派生的类不能访问 `YourClass` 的私有成员。 友元关系不可传递，因此 `YourOtherClass` 的友元类无法访问 `YourClass` 的私有成员。
 
@@ -235,9 +235,7 @@ int main() {
 
 ## <a name="inline-friend-definitions"></a>内联友元定义
 
-可以在类声明中定义友元函数。 这些函数是内联函数，类似于成员内联函数，其行为就像它们在所有类成员显示后但在类范围关闭前（类声明的结尾）被定义时的行为一样。
-
-类声明中定义的友元函数不被认为在封闭类的范围内；它们在文件范围内。
+在类声明中将友元函数定义 （给定的函数体）。 这些函数是内联函数，类似于成员内联函数，其行为就像它们在所有类成员显示后但在类范围关闭前（类声明的结尾）被定义时的行为一样。 类声明中定义的友元函数是在封闭类的作用域中。
 
 ## <a name="see-also"></a>请参阅
 

@@ -143,12 +143,12 @@ helpviewer_keywords:
 - _WINRT_DLL macro
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
-ms.openlocfilehash: dedcab9b0addd3696749b50fef92b70081981c03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf74bc3b5293cba018c07b6b5c56c85695db7635
+ms.sourcegitcommit: 6cb0670ca7d40e8ec55f162b8ce2847f5ae15f5c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179901"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67787366"
 ---
 # <a name="predefined-macros"></a>预定义的宏
 
@@ -381,6 +381,9 @@ MSVC 支持这些其他预定义的宏。
    |Visual Studio 2017 版本 15.8|1915|
    |Visual Studio 2017 版本 15.9|1916|
    |Visual Studio 2019 RTW (16.0)|1920|
+   |Visual Studio 2019 版本 16.1|1921|
+   |Visual Studio 2019 版本 16.2|1922|
+   |Visual Studio 2019 版本 16.3|1923|
 
    若要测试的编译器版本或更新的 Visual Studio 或之后的给定版本中，使用 **>=** 运算符。 您可以使用它在条件指令中要比较 **&#95;MSC&#95;VER**针对该已知版本。 如果有多个互斥的版本进行比较，进行排序以降序版本号比较。 例如，此代码将检查发布 Visual Studio 2017 及更高版本的编译器。 接下来，它检查编译器中或 Visual Studio 2015 发布。 然后它会检查所有的编译器 Visual Studio 2015 之前发布：
 

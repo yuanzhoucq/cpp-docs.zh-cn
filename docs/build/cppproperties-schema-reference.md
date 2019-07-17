@@ -3,12 +3,12 @@ title: CppProperties.json 架构引用
 ms.date: 05/16/2019
 helpviewer_keywords:
 - CMake in Visual Studio
-ms.openlocfilehash: e80f4e8a189510a9a3e8860609d74121b7cbb0ef
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: cf5cd964068ad2e3aeeaf1e057c9bf407f4985f5
+ms.sourcegitcommit: b233f05adae607f75815111006a771c432df5a9d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837043"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67516372"
 ---
 # <a name="cpppropertiesjson-schema-reference"></a>CppProperties.json 架构引用
 
@@ -17,9 +17,9 @@ ms.locfileid: "65837043"
 
 ## <a name="default-configurations"></a>默认配置
 
-Visual Studio 预定义的配置为 x86 和 x64 的 Debug 和 Release。 默认情况下，项目在 `CppProperties.json` 中为 x86-Debug 配置。 若要添加新的配置，请右键单击“解决方案资源管理器”中的 `CppProperties.json` 文件，然后选择“添加配置”：
+Visual Studio 预定义的配置为 x86 和 x64 的 Debug 和 Release。 默认情况下，项目在 `CppProperties.json` 中为 x86-Debug 配置。 若要添加新的配置，请右键单击`CppProperties.json`文件中**解决方案资源管理器**，然后选择**添加配置**:
 
-![“打开文件夹”的添加配置](media/open-folder-add-config.png "Open Folder add new configuration")
+![打开文件夹-添加新的配置](media/open-folder-add-config.png "打开文件夹添加新的配置")
 
 默认配置如下所示：
 
@@ -115,9 +115,9 @@ Visual Studio 预定义的配置为 x86 和 x64 的 Debug 和 Release。 默认�
 |`compilerSwitches`|可以影响 IntelliSense 行为的一个或多个附加开关|
 |`forcedInclude`|会自动包含在每个编译单元的标头（对于 MSVC，映射到 /FI；对于 clang，映射到 -include）|
 |`undefines`|未定义的宏的列表（对于 MSVC，映射到 /U）|
-|`intelliSenseMode`|要使用的 IntelliSense 引擎。 你可以为 MSVC、gcc 或 Clang 指定体系结构特定的变量：<br/><br/>- windows-msvc-x86 (default)<br/>- windows-msvc-x64<br/>- msvc-arm<br/>- windows-clang-x86<br/>- windows-clang-x64<br/>- windows-clang-arm<br/>- Linux-x64<br/>- Linux-x86<br/>- Linux-arm<br/>- gccarm|
+|`intelliSenseMode`|要使用的 IntelliSense 引擎。 MSVC、 gcc 高级版，或 Clang，可以指定特定于体系结构的变体：<br/><br/>- windows-msvc-x86 (default)<br/>- windows-msvc-x64<br/>- msvc-arm<br/>- windows-clang-x86<br/>- windows-clang-x64<br/>- windows-clang-arm<br/>- Linux-x64<br/>- Linux-x86<br/>- Linux-arm<br/>- gccarm|
 
-注意:仅出于遗留原因支持 `msvc-x86` 和 `msvc-x64` 值。 请使用 `windows-msvc*` 变量。
+注意:仅出于遗留原因支持 `msvc-x86` 和 `msvc-x64` 值。 使用`windows-msvc-*`变体相反。
 
 ## <a name="custom-configurations"></a>自定义配置
 
@@ -143,7 +143,7 @@ Visual Studio 预定义的配置为 x86 和 x64 的 Debug 和 Release。 默认�
 
  `CppProperties.json` 支持用于包含路径和其他属性值的系统环境变量扩展。 语法为 `${env.FOODIR}`，用于扩展环境变量 `%FOODIR%`。 还支持下列系统定义的变量：
 
-|变量名|说明|
+|变量名|描述|
 |-----------|-----------------|
 |vsdev|默认的 Visual Studio 环境|
 |msvc_x86|使用 x86 工具为 x86 编译|
@@ -156,7 +156,7 @@ Visual Studio 预定义的配置为 x86 和 x64 的 Debug 和 Release。 默认�
 
 安装 Linux 工作负载后，可使用以下环境变量远程定向到 Linux 和 WSL：
 
-|变量名|说明|
+|变量名|描述|
 |-----------|-----------------|
 |linux_x86|远程将 x86 Linux 设为目标|
 |linux_x64|远程将 x64 Linux 设为目标|
@@ -164,7 +164,7 @@ Visual Studio 预定义的配置为 x86 和 x64 的 Debug 和 Release。 默认�
 
 ## <a name="custom-environment-variables"></a>自定义环境变量
 
-可在 `CppProperties.json` 中以全局形式或按配置定义自定义环境变量。 下面的示例演示如何声明并使用默认和自定义的环境变量。 全局 environments 属性声明名为 INCLUDE 的变量，此变量可用于任何配置：
+可在 `CppProperties.json` 中以全局形式或按配置定义自定义环境变量。 下面的示例演示如何声明并使用默认和自定义的环境变量。 全局 environments 属性声明名为 INCLUDE 的变量，此变量可用于任何配置   ：
 
 ```json
 {
@@ -208,7 +208,7 @@ Visual Studio 预定义的配置为 x86 和 x64 的 Debug 和 Release。 默认�
 ```
 ## <a name="per-configuration-environment-variables"></a>预配置环境变量
 
-还可在某个配置内定义 environments 属性，让它只应用于该配置，并覆盖所有同名的全局变量。 在下面的示例中，x64 配置定义了一个会覆盖全局值的本地 INCLUDE 变量：
+您还可以定义**环境**在配置的属性。 它仅适用于该配置，并将覆盖具有相同名称的任何全局变量。 在下面的示例中，x64 配置定义了一个会覆盖全局值的本地 INCLUDE 变量  ：
 
 ```json
 {
@@ -264,9 +264,9 @@ Visual Studio 预定义的配置为 x86 和 x64 的 Debug 和 Release。 默认�
 |-|-|
 |`${workspaceRoot}`| 工作区文件夹的完整路径|
 |`${projectRoot}`| `CppProperties.json` 所在文件夹的完整路径|
-|`${vsInstallDir}`| 安装 Visual Studio 的运行示例的文件夹的完整路径|
+|`${env.vsInstallDir}`| 安装 Visual Studio 的运行示例的文件夹的完整路径|
 
-例如，如果项目具备包含文件夹并包含 windows.h 和 Windows SDK 中的其他通用标头，可能需要更新 `CppProperties.json` 配置文件，使其带有以下包含内容：
+例如，如果你的项目具有的包含文件夹，并且还包括 windows.h 和 Windows SDK 中的其他常见标头，您可能想要更新你`CppProperties.json`以下配置文件包括：
 
 ```json
 {
@@ -293,7 +293,4 @@ Visual Studio 预定义的配置为 x86 和 x64 的 Debug 和 Release。 默认�
 
 ## <a name="troubleshoot-intellisense-errors"></a>对 IntelliSense 错误进行故障排除
 
-若要对缺少包含路径引起的 IntelliSense 错误进行故障排除，请打开“错误列表”，筛选出“仅限 IntelliSense”和错误代码 E1696“无法打开源文件...”的结果。
-
-
-
+若要对缺少包含路径引起的 IntelliSense 错误进行故障排除，请打开“错误列表”，筛选出“仅限 IntelliSense”和错误代码 E1696“无法打开源文件...”的结果  。

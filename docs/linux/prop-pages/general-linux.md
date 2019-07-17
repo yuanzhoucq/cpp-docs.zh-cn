@@ -1,17 +1,25 @@
 ---
 title: 常规属性（Linux C++ 项目）| Microsoft Docs
-ms.date: 9/26/2017
+ms.date: 06/07/2019
 ms.assetid: 56c800a9-3df9-4196-87b2-81adb00e4767
-ms.openlocfilehash: bc4eb39d2d735f8f7f782d2827bf2b938c5c2457
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ce3683f11d80c253195b751b5eed364fbc04b68a
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461329"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821281"
 ---
 # <a name="general-properties-linux-c"></a>常规属性 (Linux C++)
 
-属性 | 描述 | 选项
+::: moniker range="vs-2015"
+
+Linux 支持在 Visual Studio 2017 及更高版本中提供。
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
+
+Property | 说明 | 选项
 --- | ---| ---
 输出目录 | 指定输出文件目录的相对路径；可以包含环境变量。
 中间目录 | 指定中间文件目录的相对路径；可以包含环境变量。
@@ -20,8 +28,11 @@ Target Name | 指定此项目将生成的文件名。
 清除时要删除的扩展名 | 分号分隔的通配符规范，指定在清除或重新生成时要删除中间目录中的哪些文件。
 生成日志文件 | 指定启用生成日志时要写入的生成日志文件。
 平台工具集 | 指定用于生成当前配置的工具集；如果未设置，则将使用默认工具集
-远程生成计算机 | 要用于远程生成、部署和调试的目标计算机或设备。
+远程生成计算机 | 要用于远程生成、部署和调试的目标计算机或设备。 Visual Studio 2019 版本 16.1：可以在[调试](debugging-linux.md)页中指定用于调试的其他计算机  。
 远程生成根目录 | 指定远程计算机或设备上目录的路径。
 远程生成项目目录 | 指定远程计算机或设备上项目的目录路径。
-配置类型 | 指定此配置生成的输出类型。 | 动态库 (.so) - 动态库 (.so)<br>静态库 (.a) - 静态库 (.a)<br>应用程序 (.out) - 应用程序 (.out)<br>**生成文件** - 生成文件<br>
+配置类型 | 指定此配置生成的输出类型。 | 动态库 (.so) - 动态库 (.so) <br>静态库 (.a) - 静态库 (.a) <br>应用程序 (.out) - 应用程序 (.out) <br>**生成文件** - 生成文件<br>
 STL 的使用 | 指定要用于此配置的 C++ 标准库。 | **共享 GNU 标准 C++ 库**<br>**静态 GNU 标准 C++ 库 (-static)**<br>
+
+::: moniker-end
+

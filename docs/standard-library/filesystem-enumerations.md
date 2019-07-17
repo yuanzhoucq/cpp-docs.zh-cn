@@ -11,12 +11,12 @@ f1_keywords:
 - filesystem/std::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
-ms.openlocfilehash: 9c4efa145455240c4420a51c4a01662a30dc0761
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9bf5f0231fbc5b694c1f4ae507feb82b0d19d600
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405126"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240748"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt; 枚举
 
@@ -24,7 +24,7 @@ ms.locfileid: "62405126"
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<experimental/filesystem>
+**标头：** \<experimental/filesystem>
 
 **命名空间：** std::experimental::filesystem
 
@@ -107,7 +107,7 @@ enum class file_type {
 
 ### <a name="values"></a>值
 
-|名称|“值”|描述|
+|名称|值|描述|
 |----------|-----------|-----------------|
 |`not_found`|-1|表示一个不存在的文件。|
 |`none`|0|表示一个不具有类型特性的文件。 （不支持。）|
@@ -119,6 +119,14 @@ enum class file_type {
 |`fifo`|6|表示基于 UNIX 的系统上的 FIFO 文件。 （不支持。）|
 |`socket`|7|表示基于 UNIX 的系统上的套接字。 （不支持。）|
 |`unknown`|8|表示状态无法确定的文件。|
+
+## <a name="perm_options"></a>  perm_options
+
+包含值`replace`， `add`， `remove`，和`nofollow`。
+
+```cpp
+enum class perm_options;
+```
 
 ## <a name="perms"></a>  perms
 

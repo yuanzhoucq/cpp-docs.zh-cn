@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::scoped_allocator_adaptor::outer_allocator
 - std::scoped_allocator_adaptor::select_on_container_copy_construction
 ms.assetid: 0d9b06a1-9a4a-4669-9470-8805cae48e89
-ms.openlocfilehash: c02f5171fac862b6f79e194f5940b0adeb2e93e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5101f5c7b6ae1a032df94b912252c24f2c2853bf
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348206"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245594"
 ---
 # <a name="scopedallocatoradaptor-class"></a>scoped_allocator_adaptor 类
 
@@ -49,7 +49,7 @@ class scoped_allocator_adaptor;
 
 嵌套的表现行为好像可以具有任意深度，可根据需要复制其最里层的封装分配器。
 
-可借助界面中不可见的几个概念来帮助理解此模板类的行为。 最外层分配器，可协调对构造和销毁方法的所有调用。 它实际上是由递归函数 `OUTERMOST(X)` 定义的，其中 `OUTERMOST(X)` 是以下项之一。
+可借助界面中不可见的几个概念来帮助理解此模板类的行为。 最外层分配器  ，可协调对构造和销毁方法的所有调用。 它实际上是由递归函数 `OUTERMOST(X)` 定义的，其中 `OUTERMOST(X)` 是以下项之一。
 
 - 如果 `X.outer_allocator()` 的格式正确，则 `OUTERMOST(X)` 为 `OUTERMOST(X.outer_allocator())`。
 
@@ -105,6 +105,14 @@ class scoped_allocator_adaptor;
 |[outer_allocator](#outer_allocator)|检索对类型为 `outer_allocator_type` 的存储对象的引用。|
 |[select_on_container_copy_construction](#select_on_container_copy_construction)|创建一个新的 `scoped_allocator_adaptor` 对象，其中每个存储分配器对象都可通过调用每个相应分配器的 `select_on_container_copy_construction` 进行初始化。|
 
+### <a name="operators"></a>运算符
+
+|运算符|描述|
+|-|-|
+|[operator=](#op_as)||
+|[operator==](#op_eq_eq)||
+|[operator!=](#op_noeq)||
+
 ## <a name="requirements"></a>要求
 
 **标头：** \<scoped_allocator 1>
@@ -121,10 +129,10 @@ pointer allocate(size_type count);pointer allocate(size_type count, const_void_p
 
 ### <a name="parameters"></a>参数
 
-*count*<br/>
+*计数*<br/>
 要分配足够大的存储空间的元素数。
 
-*hint*<br/>
+*提示*<br/>
 通过定位在请求之前分配的对象地址，指针可能对分配器对象有所帮助。
 
 ### <a name="return-value"></a>返回值
@@ -163,7 +171,7 @@ void construct(pair<Ty1, Ty2>* ptr, pair<Uy1, Uy2>&& right);
 *ptr*<br/>
 指向要构造对象的内存位置的指针。
 
-*args*<br/>
+*参数*<br/>
 参数列表。
 
 *first*<br/>
@@ -208,7 +216,7 @@ void deallocate(pointer ptr, size_type count);
 *ptr*<br/>
 指向要释放对象的起始位置的指针。
 
-*count*<br/>
+*计数*<br/>
 要释放的对象数。
 
 ## <a name="destroy"></a>  scoped_allocator_adaptor::destroy
@@ -254,6 +262,29 @@ size_type max_size();
 
 `Outer_traits::max_size(outer_allocator())`
 
+## <a name="a-nameopas--scopedallocatoradaptoroperator"></a><a name="op_as">  scoped_allocator_adaptor::operator =
+
+```cpp
+scoped_allocator_adaptor& operator=(const scoped_allocator_adaptor&) = default;
+scoped_allocator_adaptor& operator=(scoped_allocator_adaptor&&) = default;
+```
+
+## <a name="a-nameopeqeq--scopedallocatoradaptoroperator"></a><a name="op_eq_eq">  scoped_allocator_adaptor::operator = =
+
+```cpp
+template <class OuterA1, class OuterA2, class... InnerAllocs>
+bool operator==(const scoped_allocator_adaptor<OuterA1, InnerAllocs...>& a,
+const scoped_allocator_adaptor<OuterA2, InnerAllocs...>& b) noexcept;
+```
+
+## <a name="a-nameopnoeq--scopedallocatoradaptoroperator"></a><a name="op_noeq">  scoped_allocator_adaptor::operator ！ =
+
+```cpp
+template <class OuterA1, class OuterA2, class... InnerAllocs>
+bool operator!=(const scoped_allocator_adaptor<OuterA1, InnerAllocs...>& a,
+const scoped_allocator_adaptor<OuterA2, InnerAllocs...>& b) noexcept;
+```
+
 ## <a name="outer_allocator"></a>  scoped_allocator_adaptor::outer_allocator
 
 检索对类型为 `outer_allocator_type` 的存储对象的引用。
@@ -275,7 +306,7 @@ const outer_allocator_type& outer_allocator() const noexcept;
 
 ## <a name="scoped_allocator_adaptor"></a>  scoped_allocator_adaptor::scoped_allocator_adaptor 构造函数
 
-构造 `scoped_allocator_adaptor` 对象。
+构造 `scoped_allocator_adaptor` 对象。 此外包括析构函数。
 
 ```cpp
 scoped_allocator_adaptor();
@@ -290,6 +321,8 @@ scoped_allocator_adaptor<Outer2, Inner...>&& right) noexcept;
 template <class Outer2>
 scoped_allocator_adaptor(Outer2&& al,
     const Inner&... rest) noexcept;
+
+~scoped_allocator_adaptor();
 ```
 
 ### <a name="parameters"></a>参数

@@ -89,7 +89,7 @@ long long llroundl(
 
 ## <a name="return-value"></a>返回值
 
-**Lround**并**llround**函数返回最接近**长**或**长****长**到整数*x*。 中间值从零舍入，这与浮点舍入模式的设置无关。 无错误返回。
+**Lround**并**llround**函数返回最接近**长**或**长** **长**到整数*x*。 中间值从零舍入，这与浮点舍入模式的设置无关。 无错误返回。
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
@@ -97,7 +97,7 @@ long long llroundl(
 
 ## <a name="remarks"></a>备注
 
-因为C++允许重载，可以调用的重载**lround**或**llround**采用并返回**float**并**长****double**值。 在 C 程序中， **lround**并**llround**始终采用并返回**double**。
+因为C++允许重载，可以调用的重载**lround**或**llround**采用并返回**float**并**长** **double**值。 在 C 程序中， **lround**并**llround**始终采用并返回**double**。
 
 ## <a name="requirements"></a>要求
 

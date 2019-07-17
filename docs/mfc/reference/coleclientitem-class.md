@@ -1,6 +1,6 @@
 ---
 title: COleClientItem 类
-ms.date: 11/04/2016
+ms.date: 07/02/2019
 f1_keywords:
 - COleClientItem
 - AFXOLE/COleClientItem
@@ -164,12 +164,12 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnScrollBy
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
-ms.openlocfilehash: cd04b2aa6dd1d539e357a69666bafc80e3ea5eba
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 6c370271f1508f79ea20cdf84b38b1f3dc2df023
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708158"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552270"
 ---
 # <a name="coleclientitem-class"></a>COleClientItem 类
 
@@ -2151,7 +2151,7 @@ BOOL SetPrintDevice(const PRINTDLG* ppd);
 指向[DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice)数据结构，其中包含有关新的打印目标设备的信息。 可以为 NULL。
 
 *ppd*<br/>
-指向[PRINTDLG](/windows/desktop/ms646940)数据结构，其中包含有关新的打印目标设备的信息。 可以为 NULL。
+指向[PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda)数据结构，其中包含有关新的打印目标设备的信息。 可以为 NULL。
 
 ### <a name="return-value"></a>返回值
 

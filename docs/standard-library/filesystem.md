@@ -9,12 +9,12 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-ms.openlocfilehash: 0f397d8b0c39769fde20b6aa50412c979237f70a
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: a44fc3c6c6a37c20e1e1c294929ae3cb15cece58
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220373"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240698"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -89,10 +89,12 @@ using namespace std::experimental::filesystem::v1;
 
 有关详细信息和代码示例，请参阅[文件系统导航 (C++)](../standard-library/file-system-navigation.md)。
 
-## <a name="classes"></a>类
+## <a name="members"></a>成员
 
-|名称|描述|
-|----------|-----------------|
+### <a name="classes"></a>类
+
+|||
+|-|-|
 |[directory_entry 类](../standard-library/directory-entry-class.md)|描述 `directory_iterator` 或 `recursive_directory_iterator` 返回的对象，并包含路径。|
 |[directory_iterator 类](../standard-library/directory-iterator-class.md)|描述通过文件系统目录中的文件名排序的输入迭代器。|
 |[filesystem_error 类](../standard-library/filesystem-error-class.md)|所引发以报告低级系统溢出的异常的基类。|
@@ -100,10 +102,10 @@ using namespace std::experimental::filesystem::v1;
 |[recursive_directory_iterator 类](../standard-library/recursive-directory-iterator-class.md)|描述通过文件系统目录中的文件名排序的输入迭代器。 迭代器还可以降到子目录中。|
 |[file_status 类](../standard-library/file-status-class.md)|包装 `file_type`。|
 
-## <a name="structs"></a>结构
+### <a name="structs"></a>结构
 
-|名称|描述|
-|----------|-----------------|
+|||
+|-|-|
 |[space_info 结构](../standard-library/space-info-structure.md)|保存有关卷的信息。|
 
 ## <a name="functions"></a>函数
@@ -116,12 +118,13 @@ using namespace std::experimental::filesystem::v1;
 
 ## <a name="enumerations"></a>枚举
 
-|名称|描述|
-|----------|-----------------|
+|||
+|-|-|
 |[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|如果目标文件已存在，则与 [copy_file](../standard-library/filesystem-functions.md#copy_file) 一起使用的枚举将决定行为。|
 |[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|如果目标文件已存在，则与 [copy_file](../standard-library/filesystem-functions.md#copy_file) 一起使用的枚举将决定行为。|
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|为目录迭代器指定选项的枚举。|
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|文件类型的枚举。|
+|[perm_options](../standard-library/filesystem-enumerations.md#perm_options)||
 |[perms](../standard-library/filesystem-enumerations.md#perms)|用于传达权限和权限选项的位掩码类型|
 
 ## <a name="see-also"></a>请参阅

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - identity class
 - identity structure
 ms.assetid: 990756fd-7969-4b39-ad7e-0878e8dac8fd
-ms.openlocfilehash: 722eb9c0579d0c07765434127d0a7c43718fbc37
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 49b2c1eb3ca03f9bf9199bdbca49348866ff0a7e
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404989"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246168"
 ---
 # <a name="identity-structure"></a>identity 结构
 
@@ -24,27 +24,16 @@ ms.locfileid: "62404989"
 struct identity {
    typedef Type type;
    Type operator()(const Type& left) const;
-   };
+};
 ```
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
-|---------------|-----------------|
-|*left*|要识别的值。|
+*左侧*\
+要识别的值。
 
 ## <a name="remarks"></a>备注
 
 此类包含公共类型定义 `type`，其与模板参数 Type 相同。 它与模板函数 [forward](../standard-library/utility-functions.md#forward) 结合使用，从而确保函数参数具有所需的类型。
 
 为了与较旧的代码兼容，该类还定义了 identity 函数`operator()`这会返回其自变量*左*。
-
-## <a name="requirements"></a>要求
-
-**标头：**\<utility>
-
-**命名空间：** std
-
-## <a name="see-also"></a>请参阅
-
-[\<utility>](../standard-library/utility.md)<br/>

@@ -3,12 +3,12 @@ title: 创建项目（ATL 教程，第 1 部分）
 ms.custom: get-started-article
 ms.date: 05/06/2019
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-ms.openlocfilehash: 292faf1769baa2e1c3fc6e52ba6df065cf08766e
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 0df793b23aaec57835774252eeac21b092f8a9e9
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221401"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861025"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>创建项目（ATL 教程，第 1 部分）
 
@@ -44,15 +44,10 @@ ms.locfileid: "65221401"
 
     源代码的位置将通常默认为 \Users\\\<用户名 > 将自动创建 \source\repos 和一个新的文件夹。
 
-1. 单击**确定**并**ATL 项目**向导随即打开。
+1. 在 Visual Studio 2019，接受默认值，然后单击**确定**。 
+   在 Visual Studio 2017 中，单击**确定**以打开**ATL 项目**向导。 单击**应用程序设置**若要查看可用的选项。 由于此项目将创建一个控件，并且必须是进程内服务器，将保留**应用程序类型**作为 DLL。 单击 **“确定”** 。
 
-1. 单击**应用程序设置**若要查看可用的选项。
-
-1. 如要创建一个控件，并且必须是进程内服务器，将保留**应用程序类型**作为 DLL。
-
-1. 将其他选项保留其默认值，然后单击**确定**。
-
-**ATL 项目向导**将通过生成多个文件来创建项目。 您可以查看这些文件置于**解决方案资源管理器**展开`Polygon`对象。 下面列出的文件。
+Visual Studio 将通过生成多个文件创建项目。 您可以查看这些文件置于**解决方案资源管理器**展开`Polygon`对象。 下面列出的文件。
 
 |文件|描述|
 |----------|-----------------|
@@ -66,13 +61,13 @@ ms.locfileid: "65221401"
 |stdafx.cpp|将该文件`#include`ATL 实现文件。|
 |stdafx.h|将该文件`#include`ATL 标头文件。|
 
-1. 在中**解决方案资源管理器**，右键单击`Polygon`项目。
+1. 在“解决方案资源管理器”  中，右键单击“`Polygon`”项目。
 
 1. 在快捷菜单上，单击**属性**。
 
 1. 单击**链接器**。 更改**每个 UserRedirection**选项设为**是**。
 
-1. 单击 **“确定”**。
+1. 单击 **“确定”** 。
 
 在下一步中，将将控件添加到你的项目。
 

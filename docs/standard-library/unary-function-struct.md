@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - unary_function class
 ms.assetid: 04c2fbdc-c1f6-48ed-b6cc-292a6d484627
-ms.openlocfilehash: aaca8d48171ebb4043e9c8f0ea66316feb73d39c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: deb142bb263af51bee515e445ea705bf248461b5
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399390"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243490"
 ---
 # <a name="unaryfunction-struct"></a>unary_function 结构
 
@@ -29,7 +29,7 @@ struct unary_function
 
 ## <a name="remarks"></a>备注
 
-模板结构可作为一些类的基础，这些类可定义 **result_type**`operator()`( **constargument_type&**) **const** 窗体的成员函数。
+模板结构可作为一些类的基础，这些类可定义 **result_type**`operator()`( **constargument_type&** ) **const** 窗体的成员函数。
 
 所有这些派生的一元函数都可将其唯一参数类型引用为 **argument_type**，将其返回类型引用为 **result_type**。
 
@@ -77,19 +77,9 @@ int main()
     cout << "The number of elements in v1 greater than 10 is: "
          << result1 << "." << endl;
 }
-/* Output:
-The vector v1 = ( 0 5 10 15 20 25 )
-The number of elements in v1 greater than 10 is: 3.
-*/
 ```
 
-## <a name="requirements"></a>要求
-
-**标头：**\<functional>
-
-**命名空间：** std
-
-## <a name="see-also"></a>请参阅
-
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)<br/>
+```Output
+The vector v1 = ( 0 5 10 15 20 25 )
+The number of elements in v1 greater than 10 is: 3.
+```

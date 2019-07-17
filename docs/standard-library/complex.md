@@ -7,30 +7,30 @@ f1_keywords:
 helpviewer_keywords:
 - complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
-ms.openlocfilehash: afcdb1246d9c02f83dbc8708326d10e802ad2779
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3d4330f8b0fcbce940f6647ebb8920f0b1969b6
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212087"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244674"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
 定义容器模板类`complex`和其支持的模板。
 
-## <a name="syntax"></a>语法
+## <a name="requirements"></a>要求
 
-```cpp
-#include <complex>
-```
+**标头**：\<complex>
+
+**命名空间：** std
 
 ## <a name="remarks"></a>备注
 
 一个复数是有序的实数对。 在纯粹几何术语中，复平面是真实的二维平面。 将复平面与实平面区分开来的特质在于它具有其他代数结构。 这种代数结构有两个基本操作：
 
-- 加法，其定义为 (， *b*) + (*c*， *d*) = ( + *c*， *b* + *d*)
+- 加法，其定义为 (  ， *b*) + (*c*， *d*) = (   + *c*， *b* + *d*)
 
-- 乘法，其定义为 (， *b*) \* (*c*， *d*) = (*ac*  -  *bd*， *ad* + *bc*)
+- 乘法，其定义为 (  ， *b*) \* (*c*， *d*) = (*ac*  -  *bd*， *ad* + *bc*)
 
 带复数加法和复数乘法操作的复数集在标准代数意义上为域：
 
@@ -38,19 +38,19 @@ ms.locfileid: "62212087"
 
 - 复杂的数字 （0，0） 是加法恒和 （1，0） 是乘法恒等元。
 
-- 复数加法逆元 (， *b*) 是 (-、-*b*)，所有此类复数的乘法逆除 （0，0） 是
+- 复数加法逆元 (  ， *b*) 是 (-  、-*b*)，所有此类复数的乘法逆除 （0，0） 是
 
    (*a*/(*a*<sup>2</sup> + *b*<sup>2</sup>), -*b*/(*a*<sup>2</sup> + *b*<sup>2</sup>))
 
-通过表示复数*z* = (， *b*) 的形式*z* =   + *bi*，其中*我*<sup>2</sup> =-1，规则的实数集的代数可应用于复数集以及其组件。 例如：
+通过表示复数*z* = (  ， *b*) 的形式*z* =    + *bi*，其中*我*<sup>2</sup> =-1，规则的实数集的代数可应用于复数集以及其组件。 例如：
 
-   (1 + 2*i*) \* (2 + 3*i*) = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*) = (2 + 3*i*) + (4*i* + 6*i*<sup>2</sup>) = (2 - 6) + (3 + 4)*i* = -4 + 7*i*
+   (1 + 2*我*) \* (2 + 3*我*) = 1 \* (2 + 3*我*) + 2*我* \* (2 + 3*i*)= (2 + 3*我*) + (4*我*+ 6*我*<sup>2</sup>) = (2-6) + （3 + 4）*我*=-4 + 7*我*
 
 复数的系统是一个域，但它不是一个有序域。 任何排序的复杂数字没有表示的字段的实数值和其子集，因此能应用于复杂数字不相等，因为它们是为实数。
 
 表示复数 *z* 有三种常见形式：
 
-- 笛卡尔坐标： *z* =  + *bi*
+- 笛卡尔坐标： *z* =    + *bi*
 
 - 极坐标： *z* = *r* (cos *p* + *我*sin *p*)
 
@@ -68,12 +68,20 @@ ms.locfileid: "62212087"
 
 除非另行指定，可以返回多个值的函数所需返回其参数的主值，因此-π 大于且小于于或等于 + π 以使其保持单值。 所有的角度必须以弧度为单位，表示在一个圆周中有 2 π 弧度 （360 度）。
 
+## <a name="members"></a>成员
+
 ### <a name="functions"></a>函数
 
-|函数|描述|
+|||
 |-|-|
 |[abs](../standard-library/complex-functions.md#abs)|计算复数的模数。|
+|[acos](../standard-library/complex-functions.md#acos)||
+|[acosh](../standard-library/complex-functions.md#acosh)||
 |[arg](../standard-library/complex-functions.md#arg)|从复数中提取自变量。|
+|[asin](../standard-library/complex-functions.md#asin)||
+|[asinh](../standard-library/complex-functions.md#asinh)||
+|[atan](../standard-library/complex-functions.md#atan)||
+|[atanh](../standard-library/complex-functions.md#atanh)||
 |[conj](../standard-library/complex-functions.md#conj)|返回复数的复数共轭。|
 |[cos](../standard-library/complex-functions.md#cos)|返回复数的余弦值。|
 |[cosh](../standard-library/complex-functions.md#cosh)|返回复数的双曲余弦值。|
@@ -84,6 +92,7 @@ ms.locfileid: "62212087"
 |[norm](../standard-library/complex-functions.md#norm)|提取复数的范数。|
 |[polar](../standard-library/complex-functions.md#polar)|返回以笛卡尔坐标形式表示的，对应于指定模数和自变量的复数。|
 |[pow](../standard-library/complex-functions.md#pow)|计算通过进行底数为复数的另一个复数次幂运算获得的复数。|
+|[proj](../standard-library/complex-functions.md#proj)||
 |[real](../standard-library/complex-functions.md#real)|提取复数的实分量。|
 |[sin](../standard-library/complex-functions.md#sin)|返回复数的正弦值。|
 |[sinh](../standard-library/complex-functions.md#sinh)|返回复数的双曲正弦值。|
@@ -93,7 +102,7 @@ ms.locfileid: "62212087"
 
 ### <a name="operators"></a>运算符
 
-|运算符|描述|
+|||
 |-|-|
 |[operator!=](../standard-library/complex-operators.md#op_neq)|测试两个复数是否不相等，这两个复数或其中一个可能属于其类型与实部和虚部的类型相同的子集。|
 |[operator*](../standard-library/complex-operators.md#op_star)|将两个复数相乘，这两个复数或其中一个可能属于其类型与实部和虚部的类型相同的子集。|
@@ -106,7 +115,7 @@ ms.locfileid: "62212087"
 
 ### <a name="classes"></a>类
 
-|类|描述|
+|||
 |-|-|
 |[complex\<double>](../standard-library/complex-double.md)|显式专用化的模板类描述一个对象，用于存储对象，这两个类型的有序的对**double**，其中第一个表示复数的实部，第二个表示虚数部分。|
 |[complex\<float>](../standard-library/complex-float.md)|显式专用化的模板类描述一个对象，用于存储对象，这两个类型的有序的对**float**，其中第一个表示复数的实部，第二个表示虚数部分。|

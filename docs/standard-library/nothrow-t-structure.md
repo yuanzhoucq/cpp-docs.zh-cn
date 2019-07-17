@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - nothrow_t class
 ms.assetid: dc7d5d42-ed5a-4919-88fe-bbad519b7a1d
-ms.openlocfilehash: 2313c436a1fd25149fa7ea72f122a6f323b40028
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd65b5006326850522a251cbcf7d655133a1aa8a
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223618"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245581"
 ---
 # <a name="nothrowt-structure"></a>nothrow_t 结构
 
@@ -30,13 +30,3 @@ struct std::nothrow_t {};
 ## <a name="example"></a>示例
 
 有关如何将 `std::nothrow_t` 用作函数参数的示例，请参阅[运算符 new](../standard-library/new-operators.md#op_new) 和[运算符 new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)。
-
-## <a name="requirements"></a>要求
-
-**标头：**\<new>
-
-**命名空间：** std
-
-## <a name="see-also"></a>请参阅
-
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

@@ -1,13 +1,13 @@
 ---
 title: 事件 (C++/CX)
-ms.date: 01/22/2017
+ms.date: 07/15/2019
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
-ms.openlocfilehash: 8e7e8616831e66a7f59ed849fc92ef2553aadb5b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0a3ab01628487dcca081eb300470cbd1bf3bb83
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301534"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894454"
 ---
 # <a name="events-ccx"></a>事件 (C++/CX)
 
@@ -15,7 +15,7 @@ Windows 运行时类型可声明 （即，发布） 事件和客户端代码在�
 
 ## <a name="consuming-events-in-windows-components"></a>使用 Windows 组件中的事件
 
-Windows 运行时中的许多组件公开的事件。 例如，当传感器报告新的发光值时，LightSensor 对象触发 ReadingChanged 事件。 在程序中使用 LightSensor 对象时，可定义一个在激发 ReadingChanged 事件时调用的方法。 该方法可以执行任何您想要执行的操作;唯一要求是其签名必须与匹配的是有关如何创建委托事件处理程序并订阅事件，请参阅详细信息的委托签名[委托](../cppcx/delegates-c-cx.md)。
+Windows 运行时中的许多组件公开的事件。 例如，当传感器报告新的发光值时，LightSensor 对象触发 ReadingChanged 事件。 在程序中使用 LightSensor 对象时，可定义一个在激发 ReadingChanged 事件时调用的方法。 该方法可以执行任何您想要执行的操作;唯一要求是委托的其签名必须与调用的签名匹配。 有关如何创建委托事件处理程序并订阅事件的详细信息，请参阅[委托](../cppcx/delegates-c-cx.md)。
 
 ## <a name="creating-custom-events"></a>创建自定义事件
 

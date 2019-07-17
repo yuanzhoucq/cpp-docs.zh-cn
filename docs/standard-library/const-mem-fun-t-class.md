@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - const_mem_fun_t class
 ms.assetid: f169d381-019b-4a0e-a9a3-54da6d948270
-ms.openlocfilehash: 10a39d4b7871e08a5bf3ec56f6d11df5ad8b646c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0bdfdbac7a23a4b0e3b830b05990bf028c7bb316
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212022"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244551"
 ---
 # <a name="constmemfunt-class"></a>const_mem_fun_t 类
 
@@ -30,10 +30,10 @@ class const_mem_fun_t : public unary_function <Type *, Result>
 
 ### <a name="parameters"></a>参数
 
-*Pm*<br/>
+*Pm*\
 一个指针，指向要转换为函数对象的 `Type` 类成员函数。
 
-*Pleft*<br/>
+*Pleft*\
 该对象的*Pm*上调用成员函数。
 
 ## <a name="return-value"></a>返回值
@@ -42,19 +42,8 @@ class const_mem_fun_t : public unary_function <Type *, Result>
 
 ## <a name="remarks"></a>备注
 
-此模板类存储一份*Pm*，它必须是指向类的成员函数的指针`Type`，私有成员对象中。 它将其成员函数 `operator()` 定义为返回 ( `Pleft`->\* `Pm`)() **const**。
+此模板类存储一份*Pm*，它必须是指向类的成员函数的指针`Type`，私有成员对象中。 它定义其成员函数`operator()`为返回 (`Pleft` -> \* `Pm`) （) **const**。
 
 ## <a name="example"></a>示例
 
 通常不直接使用 `const_mem_fun_t` 的构造函数；helper 函数 `mem_fun` 用于调整成员函数。 有关如何使用成员函数适配器的示例，请参阅 [mem_fun](../standard-library/functional-functions.md#mem_fun)。
-
-## <a name="requirements"></a>要求
-
-**标头：**\<functional>
-
-**命名空间：** std
-
-## <a name="see-also"></a>请参阅
-
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)<br/>

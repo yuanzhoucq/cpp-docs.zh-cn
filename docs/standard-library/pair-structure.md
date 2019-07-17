@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - pair class
 ms.assetid: 539d3d67-80a2-4170-b347-783495d42109
-ms.openlocfilehash: 2b7f2b736d24961376db4317d6d53e06153283c2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f372ae036ff4843532efa18c3d518820b5f06111
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370640"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244416"
 ---
 # <a name="pair-structure"></a>pair 结构
 
@@ -27,6 +27,8 @@ struct pair
     T1 first;
     T2 second;
     constexpr pair();
+    pair(const pair&) = default;
+    pair(pair&&) = default;
     constexpr pair(
         const T1& Val1,
         const T2& Val2);
@@ -39,18 +41,31 @@ struct pair
 
     template <class Other1, class Other2>
     constexpr pair(Other1&& Val1, Other2&& Val2);
+
+    template <class... Args1, class... Args2>
+    pair(piecewise_construct_t, tuple<Args1...> first_args, tuple<Args2...> second_args);
+
+    pair& operator=(const pair& p);
+    template<class U1, class U2> pair& operator=(const pair<U1, U2>& p);
+    pair& operator=(pair&& p) noexcept(see below );
+    template<class U1, class U2> pair& operator=(pair<U1, U2>&& p);
+
+    void swap(pair& p) noexcept(see below );
 };
+
+template<class T1, class T2>
+    pair(T1, T2) -> pair<T1, T2>;
 ```
 
 ### <a name="parameters"></a>参数
 
-*Val1*<br/>
+*Val1*\
 初始化 `pair` 的第一个元素的值。
 
-*Val2*<br/>
+*Val2*\
 初始化 `pair` 的第二个元素的值。
 
-右侧<br/>
+*右侧*\
 一个对，其值将用于初始化另一对的元素。
 
 ## <a name="return-value"></a>返回值
@@ -144,7 +159,9 @@ int main( )
            << " is already in m1,\n so the insertion failed." << endl;
    }
 }
-/* Output:
+```
+
+```Output
 The pair p1 is: ( 10, 0.011 ).
 The pair p2 is: ( 10, 0.222 ).
 The pair p3 is: ( 10, 0.011 ).
@@ -153,15 +170,4 @@ The element (4,40) was inserted successfully in m1.
 The element with a key value of
 ( (pr2.first) -> first ) = 1 is already in m1,
 so the insertion failed.
-*/
 ```
-
-## <a name="requirements"></a>要求
-
-**标头：**\<utility>
-
-**命名空间：** std
-
-## <a name="see-also"></a>请参阅
-
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

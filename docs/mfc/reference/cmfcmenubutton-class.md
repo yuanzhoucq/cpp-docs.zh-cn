@@ -1,6 +1,6 @@
 ---
 title: CMFCMenuButton 类
-ms.date: 11/04/2016
+ms.date: 07/15/2019
 f1_keywords:
 - CMFCMenuButton
 - AFXMENUBUTTON/CMFCMenuButton
@@ -12,6 +12,7 @@ f1_keywords:
 - AFXMENUBUTTON/CMFCMenuButton::m_bStayPressed
 - AFXMENUBUTTON/CMFCMenuButton::m_hMenu
 - AFXMENUBUTTON/CMFCMenuButton::m_nMenuResult
+- AFXMENUBUTTON/CMFCMenuButton::m_bDefaultClick
 helpviewer_keywords:
 - CMFCMenuButton [MFC], CMFCMenuButton
 - CMFCMenuButton [MFC], PreTranslateMessage
@@ -21,13 +22,14 @@ helpviewer_keywords:
 - CMFCMenuButton [MFC], m_bStayPressed
 - CMFCMenuButton [MFC], m_hMenu
 - CMFCMenuButton [MFC], m_nMenuResult
+- CMFCMenuButton [MFC], m_bDefaultClick
 ms.assetid: 53d3d459-1e5a-47c5-8b7f-2e61f6af5187
-ms.openlocfilehash: cbdf4005ee1a0249e7ed2b5f1d50621fb951f64f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71d239c9d1084c69ab2e159a479e66f0cbe66d7a
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388418"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894424"
 ---
 # <a name="cmfcmenubutton-class"></a>CMFCMenuButton 类
 
@@ -63,6 +65,7 @@ class CMFCMenuButton : public CMFCButton
 |[CMFCMenuButton::m_bStayPressed](#m_bstaypressed)|指定后用户释放按钮的菜单按钮是否更改其状态。|
 |[CMFCMenuButton::m_hMenu](#m_hmenu)|附加的 Windows 菜单句柄。|
 |[CMFCMenuButton::m_nMenuResult](#m_nmenuresult)|指示哪一项的标识符用户从弹出菜单中选择。|
+|[CMFCMenuButton::m_bDefaultClick](#m_bdefaultclick)| 允许 （上按钮文本/图像） 的默认处理。|
 
 ## <a name="remarks"></a>备注
 
@@ -164,6 +167,28 @@ int m_nMenuResult;
 ### <a name="remarks"></a>备注
 
 此成员变量的值为零，如果用户取消菜单不做任何选择，或发生错误。
+
+##  <a name="m_bdefaultclick"></a>  CMFCMenuButton::m_bDefaultClick
+
+允许的按钮的文本或图像的默认处理。
+
+```
+BOOL  m_bDefaultClick;
+```
+
+### <a name="remarks"></a>备注
+
+设置为 false 的 m_bDefaultClick 会导致该按钮以显示菜单时单击该按钮上的任意位置。
+
+##  <a name="m_nmenuresult"></a>  CMFCMenuButton::m_nMenuResult
+
+一个整数，指示哪一项用户从弹出菜单中选择。
+
+```
+int m_nMenuResult;
+```
+
+### <a name="remarks"></a>备注
 
 ##  <a name="pretranslatemessage"></a>  CMFCMenuButton::PreTranslateMessage
 

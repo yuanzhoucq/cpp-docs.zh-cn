@@ -1,18 +1,18 @@
 ---
 title: Visual Studio 中的 C++
 description: Visual C++ 是 Microsoft C++ 编译器、代码编辑器和 Visual Studio IDE 中相关工具的名称。 使用 Visual C++ 开发面向 Windows、Linux、Android 和 iOS 的程序。
-ms.date: 05/14/2019
+ms.date: 07/02/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: c2a38d13cd7b34880b64521af99103ed8192bfd0
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 67bed9a8ce9b5cfbe11a5383d2f67ea6c02d1106
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451201"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552376"
 ---
 # <a name="c-in-visual-studio"></a>Visual Studio 中的 C++
 
@@ -92,7 +92,7 @@ MSVC C++ 编译器中按功能列出的符合性状态列表。
 
 ## <a name="write-applications-in-c"></a>使用 C++ 编写应用程序
 
-[通用 Windows 应用](../windows/universal-windows-apps-cpp.md)<br/>
+[通用 Windows 应用 (C++)](../cppcx/universal-windows-apps-cpp.md)<br/>
 在 Windows 开发人员中心查找指南和参考内容。 有关开发 UWP 应用的信息，请参阅[通用 Windows 平台简介](/windows/uwp/get-started/universal-application-platform-guide)和[使用 C++ 创建第一个 UWP 应用](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)。
 
 [桌面应用程序 (C++)](../windows/desktop-applications-visual-cpp.md)<br/>

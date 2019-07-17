@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 50558e6959789dddc8223804394a0b242f793de5
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: b846a065b02a73bfca8f548097101f73008b33d3
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504259"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861065"
 ---
 # <a name="cwnd-class"></a>CWnd 类
 
@@ -1606,9 +1606,7 @@ void BindDefaultProperty(
 
 `BindDefaultProperty` 可能在以下上下文中使用：
 
-[!code-cpp[NVC_MFC_AxDataBinding#1](../../mfc/reference/codesnippet/cpp/cwnd-class_6.cpp)]
 [!code-cpp[NVC_MFC_AxDataBinding#2](../../mfc/reference/codesnippet/cpp/cwnd-class_7.cpp)]
-[!code-cpp[NVC_MFC_AxDataBinding#3](../../mfc/reference/codesnippet/cpp/cwnd-class_8.cpp)]
 
 ##  <a name="bindproperty"></a>  CWnd::BindProperty
 
@@ -1636,9 +1634,7 @@ void BindProperty(
 
 `BindProperty` 可能在以下上下文中使用：
 
-[!code-cpp[NVC_MFC_AxDataBinding#1](../../mfc/reference/codesnippet/cpp/cwnd-class_6.cpp)]
 [!code-cpp[NVC_MFC_AxDataBinding#4](../../mfc/reference/codesnippet/cpp/cwnd-class_9.cpp)]
-[!code-cpp[NVC_MFC_AxDataBinding#3](../../mfc/reference/codesnippet/cpp/cwnd-class_8.cpp)]
 
 ##  <a name="bringwindowtotop"></a>  CWnd::BringWindowToTop
 
@@ -2320,7 +2316,7 @@ virtual LRESULT DefWindowProc(
 
 ### <a name="parameters"></a>参数
 
-*message*<br/>
+message <br/>
 指定要处理的 Windows 消息。
 
 *wParam*<br/>
@@ -4065,9 +4061,7 @@ IUnknown* GetDSCCursor();
 
 ### <a name="example"></a>示例
 
-[!code-cpp[NVC_MFC_AxDataBinding#1](../../mfc/reference/codesnippet/cpp/cwnd-class_6.cpp)]
 [!code-cpp[NVC_MFC_AxDataBinding#5](../../mfc/reference/codesnippet/cpp/cwnd-class_37.cpp)]
-[!code-cpp[NVC_MFC_AxDataBinding#3](../../mfc/reference/codesnippet/cpp/cwnd-class_8.cpp)]
 
 ##  <a name="getdynamiclayout"></a>  CWnd::GetDynamicLayout
 
@@ -6201,7 +6195,7 @@ virtual BOOL OnChildNotify(
 
 ### <a name="parameters"></a>参数
 
-*message*<br/>
+message <br/>
 向父窗口发送一个 Windows 消息号。
 
 *wParam*<br/>
@@ -7921,7 +7915,7 @@ afx_msg int OnMouseActivate(
 *nHitTest*<br/>
 指定[命中测试](#onnchittest)区域代码。 命中的测试是一个测试，以便确定光标的位置。
 
-*message*<br/>
+message <br/>
 指定鼠标消息号。
 
 ### <a name="return-value"></a>返回值
@@ -8855,7 +8849,7 @@ afx_msg void OnParentNotify(
 
 ### <a name="parameters"></a>参数
 
-*message*<br/>
+message <br/>
 指定的事件的程序通知其父和子窗口的标识符。 该事件是低序位字*消息*。 如果事件是 WM_CREATE 或 WM_DESTROY 的高序位字*消息*的标识符的子窗口; 否则，高序位字是不确定。 事件 (低序位字*消息*) 可以是任何这些值：
 
 - 正在创建 WM_CREATE 子窗口。
@@ -9225,7 +9219,7 @@ afx_msg BOOL OnSetCursor(
 *nHitTest*<br/>
 指定[命中测试](#onnchittest)区域代码。 命中的测试确定游标的位置。
 
-*message*<br/>
+message <br/>
 指定鼠标消息号。
 
 ### <a name="return-value"></a>返回值
@@ -10273,7 +10267,7 @@ virtual BOOL OnWndMsg(
 
 ### <a name="parameters"></a>参数
 
-*message*<br/>
+message <br/>
 指定要发送的消息。
 
 *wParam*<br/>
@@ -10503,7 +10497,7 @@ BOOL PostMessage(
 
 ### <a name="parameters"></a>参数
 
-*message*<br/>
+message <br/>
 指定要发布的消息。
 
 *wParam*<br/>
@@ -10779,7 +10773,7 @@ BOOL ReflectChildNotify(
 
 ### <a name="parameters"></a>参数
 
-*message*<br/>
+message <br/>
 指定的消息才会反映。
 
 *wParam*<br/>
@@ -11088,7 +11082,7 @@ LRESULT SendDlgItemMessage(
 *nID*<br/>
 指定将接收该消息的对话框控件的标识符。
 
-*message*<br/>
+message <br/>
 指定要发送的消息。
 
 *wParam*<br/>
@@ -11124,7 +11118,7 @@ LRESULT SendMessage(
 
 ### <a name="parameters"></a>参数
 
-*message*<br/>
+message <br/>
 指定要发送的消息。
 
 *wParam*<br/>
@@ -11160,7 +11154,7 @@ void SendMessageToDescendants(
 
 ### <a name="parameters"></a>参数
 
-*message*<br/>
+message <br/>
 指定要发送的消息。
 
 *wParam*<br/>
@@ -11198,7 +11192,7 @@ BOOL SendNotifyMessage(
 
 ### <a name="parameters"></a>参数
 
-*message*<br/>
+message <br/>
 指定要发送的消息。
 
 *wParam*<br/>
@@ -12365,7 +12359,7 @@ virtual LRESULT WindowProc(
 
 ### <a name="parameters"></a>参数
 
-*message*<br/>
+message <br/>
 指定要处理的 Windows 消息。
 
 *wParam*<br/>

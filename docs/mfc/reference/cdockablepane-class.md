@@ -1,6 +1,6 @@
 ---
 title: CDockablePane Class
-ms.date: 10/18/2018
+ms.date: 07/02/2019
 f1_keywords:
 - CDockablePane
 - AFXDOCKABLEPANE/CDockablePane
@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CDockablePane [MFC], m_bHideInAutoHideMode
 - CDockablePane [MFC], m_nSlideSteps
 ms.assetid: e2495f4c-765f-48f9-a2e2-e45e47608d91
-ms.openlocfilehash: a9d7c4ea941884435c9ecfac54a1d42649c6dbd5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9ba5cfa2fc30c19cabc3f9f45a10f2c23e7d4269
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391200"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552326"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 
@@ -664,7 +664,7 @@ static CPaneDivider* __stdcall CreateDefaultPaneDivider(
 
 *dwAlignment*可以是任何以下值：
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
 |CBRS_ALIGN_TOP|框架窗口的工作区的顶部停靠窗格。|
 |CBRS_ALIGN_BOTTOM|框架窗口的工作区的底部停靠窗格。|
@@ -783,7 +783,7 @@ virtual BOOL DockPaneContainer(
 
 *dwAlignment*可以是任何以下值：
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
 |CBRS_ALIGN_TOP|顶部窗格的停靠容器。|
 |CBRS_ALIGN_BOTTOM|底部窗格的停靠容器。|

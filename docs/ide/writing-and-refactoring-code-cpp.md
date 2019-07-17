@@ -1,58 +1,137 @@
 ---
-title: 编写和重构代码 (C++)
+title: 在 Visual Studio 中编辑和重构 C++ 代码
 description: 使用 Visual Studio 中的 C++ 代码编辑器来设置代码格式以及导航、理解和重构代码。
-ms.date: 05/14/2019
+ms.date: 05/31/2019
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
-ms.openlocfilehash: 04f738cd6fdd456c432c334df42f37339e7fa49e
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: d4a74608a95df0fdd461f55d26fee97332a66aa8
+ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "66182627"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741631"
 ---
-# <a name="writing-and-refactoring-code-c"></a>编写和重构代码 (C++)
+# <a name="edit-and-refactor-c-code-in-visual-studio"></a>在 Visual Studio 中编辑和重构 C++ 代码
 
-C++ 代码编辑器和 Visual Studio IDE 提供许多编码帮助。 有些为 C++ 所独有，有些实质上对于所有 Visual Studio 语言均相同。 有关共享功能的详细信息，请参阅[在代码和文本编辑器中编写代码](/visualstudio/ide/writing-code-in-the-code-and-text-editor)。 启用和配置 C++ 特定功能的选项位于“工具”&#124;“选项”&#124;“文本编辑器”&#124;“C/C++”下  。 选择想要设置的选项之后，在焦点位于对话框上时按 F1 可获取更多帮助  。 如需通用代码格式选项，请在“快速启动”中键入 `Editor C++`  。
+Visual Studio 提供了多种用于帮助编写、编辑和重构代码的工具。
 
-在[文本编辑器 C++ 实验](/visualstudio/ide/reference/options-text-editor-c-cpp-experimental)对话框中可找到实验性功能，未来版本的 Visual Studio 中不一定包含这些功能。 在 Visual Studio 2017 中，可在此对话框中启用预测 IntelliSense  。
+##  <a name="intellisense"></a>IntelliSense
 
-## <a name="adding-new-files"></a>添加新文件
+IntelliSense 是一款功能强大的代码完成工具，可在键入时建议符号和代码片段。 Visual Studio 中的 C++ IntelliSense 实时运行，并且会在更新代码库时对其进行分析并提供建议。 在键入更多字符时，推荐结果列表会缩小。
 
-若要将新文件添加到项目，请右键单击解决方案资源管理器中的项目节点，然后选择“添加”&#124;“新建”  。
+![C&#43;&#43; 成员下拉列表](../ide/media/cpp-statement-completion.png)
 
-## <a name="formatting-options"></a>格式设置选项
+一些符号会自动省略，帮助减少结果。 例如，在从类外部访问类对象的成员时，默认情况下无法看到私有成员，或者受保护成员（如果不位于子类的上下文中）。 可使用底部的按钮调整筛选。
 
-若要设置缩进、括号补全和着色等格式选项，请在“快速启动”窗口中键入“C++ 格式设置”  。 Visual Studio 2017 版本 15.7 和更高版本支持 ClangFormat。 可在“工具”&#124;“选项”&#124;“文本编辑器”&#124;“C/C++”&#124;“格式”下的 [C/C++ 格式设置属性页](/visualstudio/ide/reference/options-text-editor-c-cpp-formatting)中配置对其进行配置  。
+从下拉列表中选择符号后，可使用 Tab、Enter 或其他某个提交字符（默认情况下：{}[]().,:;+-*/%&|^!=?@#\)）自动完成   。 要在此列表中添加或删除字符，请在“快速启动”（Ctrl + Q）中搜索“IntelliSense”，然后选择“文本编辑器”>“C/C++”>“高级”选项   。 “成员列表提交字符”选项允许使用所需更改自定义列表  。
 
-![C++ 格式设置选项](media/cpp-formatting-options.png)
+“成员列表筛选模式”选项控制显示的 IntelliSense 自动完成建议的类型  。 默认情况下，它设置为“模糊”  。 在模糊搜索中，如果你有名为 MyAwesomeClass 的符号，则可以键入“MAC”并在自动完成建议中查找该类  。 模糊算法设置了符号要显示在列表中所必须满足的最小阈值。 智能筛选显示包含与键入的内容匹配的 substring 的所有符号  。 前缀筛选搜索以键入的内容开头的字符串  。
 
-## <a name="intellisense"></a>IntelliSense
+有关 C++ IntelliSense 的详细信息，请参阅 [Visual C++ IntelliSense](/visualstudio/ide/visual-cpp-intellisense) 和[配置用于 IntelliSense 的 C++ 项目](/visualstudio/ide/visual-cpp-intellisense-configuration)。
 
-IntelliSense 是一组提供有关成员、类型和函数重载的内联信息的功能的名称。 下图显示在你键入时出现的成员下拉列表。 可以按 tab 键将选定的项文本键入代码文件中。
+## <a name="intellicode"></a>IntelliCode
 
-![C&#43;&#43; 成员列表下拉列表](../ide/media/vs2015_cpp_statement_completion.png "vs2015_cpp_statement_completion")
+IntelliCode 是 AI 辅助的 IntelliSense。 它将最有可能的候选项置于完成列表的顶部。 IntelliCode 建议基于 GitHub 上的数千个开放源代码项目，其中每个项目都有 100 多个星级。 在与代码的上下文相结合时，将定制完成列表以推荐常见做法。
 
-有关完整信息，请参阅 [Visual C++ IntelliSense](/visualstudio/ide/visual-cpp-intellisense)。
+在编写 C++ 时，IntelliCode 可在使用 C++ 标准库等热门库时提供协助。 代码的上下文用于首先提供最有用的建议。 在以下示例中，`size` 成员函数通常与 `sort` 函数一起使用，因此它显示在结果列表的顶部。
 
-## <a name="insert-snippets"></a>插入代码片段
+![C&#43;&#43; IntelliCode](../ide/media/intellicode-cpp.png "C++ IntelliCode")
+
+::: moniker range="vs-2019"
+
+在 Visual Studio 2019 中，IntelliCode 可用作 C++ 桌面开发工作负载中的可选组件  。 要确保 IntelliCode 对 C++ 可用，请转到“工具” > “选项” > “IntelliCode” > “常规”并将“C++ 基础模型”设置为“启用”       。
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+在 Visual Studio 2017 中，IntelliCode 可用作 Visual Studio Marketplace 中的扩展。
+
+::: moniker-end
+
+## <a name="predictive-intellisense-experimental"></a>预测 IntelliSense（试验性）
+
+“预测 IntelliSense”是一项试验性功能，它使用上下文感知来限制 IntelliSense 下拉列表中显示的结果数  。 该算法会应用类型匹配，以便仅显示与预期类型匹配的结果。 在最简单的情况下，如果键入 `int x =` 并调用 IntelliSense 下拉列表，则只会看到整数或返回整数的函数。 默认情况下，此功能处于关闭状态，因为它仍处于开发阶段。 它最适合用于全局符号；尚不支持成员函数。 可以通过在“快速启动”中键入“预测”或转到“工具” > “选项” > ”文本编辑器” > ”C/C++” > “试验性” > “启用预测 IntelliSense”来将其打开        。
+
+要替代“预测 IntelliSense”并显示较长的列表，请按 Ctrl + J   。如果已启用“预测 IntelliSense”，则调用 Ctrl + J 将删除预测筛选器   。 再次按 Ctrl + J 会从相关成员列表结果中删除辅助功能筛选器  。 IntelliSense 下拉列表下的 ([+]) 按钮与 Ctrl + J 具有相同功能  。将鼠标悬停在该按钮上，可查看有关要显示的内容的工具提示信息。
+
+![C&#43;&#43; 预测 IntelliSense](../ide/media/predictive-intellisense-cpp.png "预测 IntelliSense")
+
+上面的屏幕截图显示了下拉列表下的几个按钮。 它们为不同类型的结果启用了 IntelliSense 筛选器：
+
+- 变量和常量
+- 函数
+- 类型
+- 宏
+- 枚举
+- 命名空间
+
+仅当某一按钮与当前 IntelliSense 会话相关时，才会显示该按钮。 通常不会同时看到所有按钮。
+
+## <a name="template-intellisense"></a>模板 IntelliSense
+
+当脱字号位于模板定义中时，系统会显示“模板栏”，让你能够为 IntelliSense 提供示例模板参数  。 
+
+![C&#43;&#43; 模板 IntelliSense 显示现有实例化](../ide/media/template-intellisense-cpp-1.png "模板 IntelliSense 显示现有实例化")
+
+单击 <T> 图标，展开/折叠“模板栏”   。 单击铅笔图标或双击“模板栏”，打开“编辑”窗口   。 
+
+![C&#43;&#43; 模板 IntelliSense](../ide/media/template-intellisense-cpp-3.png "模板 IntelliSense")
+
+在窗口中进行的编辑将直接应用于源代码，以便可以实时查看效果。 
+
+模板栏可以根据代码中的实例化自动填充候选项。 单击“添加所有现有实例化”，查看已用于在整个代码库中实例化模板的所有实际参数的列表  。
+
+![C&#43;&#43; 模板 IntelliSense 结果列表](../ide/media/template-intellisense-cpp-2.png "模板 IntelliSense 结果列表")
+
+编辑器底部的窗口显示了每个实例化的位置及其参数。
+
+![C&#43;&#43; 模板 IntelliSense 实例化映射](../ide/media/template-intellisense-cpp-4.png "模板 IntelliSense 实例化映射")
+
+“模板栏”信息被视为特定于用户  。 该信息存储在 .vs 文件夹中，并且不提交给源代码管理。
+
+##  <a name="error-squiggles-and-quick-fixes"></a>错误波浪线和快速修复
+
+如果编辑器检测到代码出现问题，它将在问题下方添加彩色波浪线。 红色波浪线表示无法编译的代码。 绿色波浪线表示仍可能很严重的其他类型的问题。 可以打开“错误列表”窗口，获取有关问题的详细信息  。
+
+对于某些类型的错误以及常见的编码模式，编辑器将以灯泡（在将鼠标悬停在波浪线上时出现）的形式提供“快速修复”  。 单击向下箭头查看建议。 
+
+以下示例中声明了 `vector` 但未找到定义，因此编辑器会包含必需的头文件：
+
+![C&#43;&#43; 快速修复](../ide/media/quick-fix-for-header-cpp.png "C++ 快速修复")
+
+编辑器还提供了快速修复，以获得一些重构机会。 例如，如果在头文件中声明一个类，Visual Studio 将会在单独的 .cpp 文件中为其创建定义。 
+
+![C&#43;&#43; 快速修复](../ide/media/quick-fix.png "C++ 快速修复")
+
+## <a name="change-tracking"></a>Change tracking
+
+每次对文件进行更改时，左侧都将出现一个黄色栏，表示所做的更改未保存。 保存文件时，该栏将变为绿色。 只要文档在编辑器中打开，就会保留绿色和黄色栏。 它们代表自上次打开文档以来所做的更改。
+
+![C&#43;&#43; 更改跟踪](../ide/media/change-tracking-cpp.png "更改跟踪")
+
+## <a name="move-code"></a>移动代码
+
+可以通过选中代码，按住 Alt 并按向上/向下箭头键来上下移动代码行  。
+
+##  <a name="insert-snippets"></a>插入代码片段
 
 代码片段是一段预定义的源代码。 在单个点上或在选定文本上右键单击以插入代码片段或用代码片段环绕选定文本。 下图显示用 for 循环环绕选定语句的三个步骤。 最终图像中的黄色突出显示是使用 tab 键访问的可编辑字段。 有关详细信息，请参阅[代码片段](/visualstudio/ide/code-snippets)。
 
-![Visual C&#43;&#43; 插入代码片段下拉列表](../ide/media/vs2015_cpp_surround_with.png "vs2015_cpp_surround_with")
+![C&#43;&#43; 插入代码片段下拉列表](../ide/media/vs2015_cpp_surround_with.png "vs2015_cpp_surround_with")
 
-## <a name="add-class"></a>添加类
+##  <a name="add-class"></a>添加类
 
-使用类向导从“项目”菜单添加新类  。
+在“项目”菜单或“解决方案资源管理器”的上下文菜单中添加新类   ：
 
-![在 Visual C&#43;&#43; 中添加新类](../ide/media/vs2015_cpp_add_class.png "vs2015_cpp_add_class")
+![在 C&#43;&#43; 中添加新类](../ide/media/vs2017-add-class.png "vs2015_cpp_add_class")
 
 也可使用类向导来修改或检查现有类。
 
-![Visual C&#43;&#43; 类向导](../ide/media/vs2015_cpp_class_wizard.png "vs2015_cpp_class_wizard")
+![C&#43;&#43; 类向导](../ide/media/vs2017-class-wizard.png)
 
 有关详细信息，请参阅[用代码向导添加功能 (C++)](../ide/adding-functionality-with-code-wizards-cpp.md)。
 
-## <a name="refactoring"></a>重构
+##  <a name="refactoring"></a>重构
 
 可在“快速操作”上下文菜单下，或者通过单击编辑器中的[灯泡](/visualstudio/ide/perform-quick-actions-with-light-bulbs)使用重构。  有的也可从“编辑”>“重构”菜单访问  。  这些功能包括：
 
@@ -64,66 +143,47 @@ IntelliSense 是一组提供有关成员、类型和函数重载的内联信息�
 * [转换为原始字符串文本](refactoring/convert-to-raw-string-literal.md)
 * [更改签名](refactoring/change-signature.md)
 
-## <a name="navigate-and-understand"></a>导航和了解
+## <a name="code-style-enforcement-with-clangformat-and-editorconfig"></a>使用 ClangFormat 和 EditorConfig 强制执行代码样式
 
-Visual C++ 与其他语言共享许多代码导航功能。 有关详细信息，请参阅[导航代码](/visualstudio/ide/navigating-code)和[查看代码的结构](/visualstudio/ide/viewing-the-structure-of-code)。
+Visual Studio 2017 及更高版本附带对 [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html)（一种基于 Clang/LLVM 的常用 C++ 代码格式化实用工具）的内置支持。 在[快速启动](/visualstudio/ide/reference/quick-launch-environment-options-dialog-box)中键入“ClangFormat”，将其设置为使用以下某种常用格式：
 
-## <a name="quickinfo"></a>QuickInfo
+- LLVM
+- Google
+- Chromium
+- Mozilla
+- WebKit
+- Visual Studio
 
-将鼠标悬停在变量上以查看其类型信息。
+还可以提供自己的 .clang 格式或 _clang 格式文件，以将自定义规则应用于同一级别或更低级别的所有代码文件。
 
-![Visual C++ 快速信息](../ide/media/vs2015_cpp_quickinfo.png "vs2015_cpp_quickInfo")
+这些文件可以通过源代码管理轻松共享，因此可以在整个开发团队中强制执行编码约定。
 
-## <a name="open-document-navigate-to-header"></a>打开文档（导航至标头）
+![C&#43;&#43; Clang 格式](../ide/media/clang-format-cpp.png "Clang 格式")
 
-右键单击 `#include` 指令中的标头名称，然后打开头文件。
+Visual Studio 2017 及更高版本还支持工作方式类似的 [EditorConfig](https://editorconfig.org/)。 但是，ClangFormat 的样式选项比 EditorConfig 要多，包括特定于 C++ 的规则。 使用 EditorConfig 创建 .editorconfig 文件，并将其置于代码库的不同文件夹中，以指定这些文件夹及其子文件夹的代码样式   。 .editorconfig 文件会取代父文件夹中的任何其他 .editorconfig 文件，并覆盖通过“工具” > “选项”配置的任何格式设置     。 可以为制表符和空格、缩进大小等设置规则。 有关详细信息，请参阅[使用 EditorConfig 创建可移植的自定义编辑器设置](/visualstudio/ide/create-portable-custom-editor-options)。
 
-![Visual C&#43;&#43;“打开文档”菜单选项](../ide/media/vs2015_cpp_open_document.png "vs2015_cpp_open_document")
+## <a name="other-formatting-options"></a>其他格式设置选项
 
-## <a name="peek-definition"></a>查看定义
+“快速启动”搜索框中提供了用于查找设置或工具的最快方式  。 它位于主菜单上。 只需开始键入，自动完成列表即可筛选结果。
 
-将鼠标悬停在变量或函数声明上，右键单击，然后选择“查看定义”以查看其定义的内联视图  。 有关详细信息，请参阅[查看定义 (Alt+F12)](/visualstudio/ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12)。
+![Visual Studio 快速启动](../ide/media/vs2015_cpp_quick_launch.png "快速启动")
 
-![Visual C&#43;&#43; 查看定义](../ide/media/vs2015_cpp_peek_definition.png "vs2015_cpp_peek_definition")
+若要设置缩进、括号补全和着色等格式设置选项，请在“快速启动”窗口中键入“C++ 格式设置”  。
 
-## <a name="go-to-definition"></a>转到定义
+![C++ 格式设置选项](media/cpp-formatting-options.png)
 
-将鼠标悬停在变量或函数声明上，右键单击，然后选择“转到定义”以打开定义对象的文档  。
+其他格式设置选项位于主菜单中的“编辑” > “高级”下   。
 
-## <a name="view-call-hierarchy"></a>查看调用层次结构
+![C++ 高级编辑选项](media/edit-advanced-cpp.png)
 
-右键单击任意函数调用并查看它调用的所有函数和所有调用它的函数的递归列表。 列表中的每个函数都能以相同方式展开。 有关详细信息，请参阅[调用层次结构](/visualstudio/ide/reference/call-hierarchy)。
+启用和配置 C++ 特定编辑功能的选项位于“工具” > “选项” > “文本编辑器” > “C/C++”下     。 选择想要设置的选项之后，在焦点位于对话框上时按 F1 可获取更多帮助  。 如需通用代码格式设置选项，请在“快速启动”中键入 `Editor C++`  。
 
-![Visual C&#43;&#43; 调用层次结构](../ide/media/vs2015_cpp_call_hierarchy.png "vs2015_cpp_call_hierarchy")
+![Visual Studio Tools > 选项](../ide/media/tools-options.png "编辑器选项")
 
-## <a name="toggle-header--code-file"></a>切换标题/代码文件
+在[文本编辑器 C++ 实验](/visualstudio/ide/reference/options-text-editor-c-cpp-experimental)对话框中可找到实验性功能，未来版本的 Visual Studio 中不一定包含这些功能。 在 Visual Studio 2017 及更高版本中，可在此对话框中启用“预测 IntelliSense”  。
 
-右键单击并选择“切换标头/代码文件”，以便在头文件及其关联代码文件之间来回切换  。
+## <a name="see-also"></a>请参阅
 
-## <a name="outlining"></a>大纲显示
-
-右键单击源代码文件中的任意位置，然后选择“大纲”以折叠或展开定义和/或自定义区域，以便更轻松地仅浏览你感兴趣的部分  。 有关详细信息，请参阅[大纲显示](/visualstudio/ide/outlining)。
-
-![Visual C&#43;&#43; 大纲](../ide/media/vs2015_cpp_outlining.png "vs2015_cpp_outlining")
-
-## <a name="scrollbar-map-mode"></a>滚动条映射模式
-
-滚动条映射模式使你能快速滚动和浏览整个代码文件，而无需实际离开当前位置。 或者单击代码图上的任意位置，以直接转至该位置。 有关详细信息，请参阅[如何：通过自定义滚动条来跟踪代码](/visualstudio/ide/how-to-track-your-code-by-customizing-the-scrollbar)。
-
-![Visual C&#43;&#43; 中的代码图](../ide/media/vs2015_cpp_code_map.png "vs2015_cpp_code_map")
-
-## <a name="generate-graph-of-include-files"></a>生成包含文件的关系图
-
-右键单击项目中的代码文件，然后选择“生成包含文件的关系图”以查看其他文件包含哪些文件的关系图  。
-
-![Visual C&#43;&#43; 包含文件的关系图](../ide/media/vs2015_cpp_include_graph.png "vs2015_cpp_include_graph")
-
-## <a name="f1-help"></a>F1 帮助
-
-将光标置于任意类型、关键字或函数的上方或后面，然后按 F1，以便直接转到 docs.microsoft.com 上相关的参考主题。 F1 也适用于错误列表和许多对话框中的项。
-
-## <a name="quick-launch"></a>快速启动
-
-若要轻松地导航至 Visual Studio 中的任意窗口或工具，只需在 UI 右上角的“快速启动”窗口中键入其名称即可。 “自动完成”列表将在你键入时进行筛选。
-
-![Visual Studio 快速启动](../ide/media/vs2015_cpp_quick_launch.png "vs2015_cpp_quick_launch")
+[阅读并理解 C++ 代码](read-and-understand-code-cpp.md)</br>
+[在 Visual Studio 中导航 C++ 代码库](navigate-code-cpp.md)</br>
+[使用适用于 C++ 的 Live Share 进行协作](live-share-cpp.md)

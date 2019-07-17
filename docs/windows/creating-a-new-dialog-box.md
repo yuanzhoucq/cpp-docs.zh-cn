@@ -14,19 +14,19 @@ helpviewer_keywords:
 - dialog boxes [C++], size
 - dialog boxes [C++], positioning
 ms.assetid: 303de801-c4f8-42e1-b622-353f6423f688
-ms.openlocfilehash: c5f026683881ba8e608bd00089879e0e2a7b4af2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28ed6c8be262e0446b828cfa3e6e9fe2ba53672a
+ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223566"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344211"
 ---
 # <a name="how-to-create-a-dialog-box-c"></a>如何：创建一个对话框 (C++)
 
 位置和大小的C++对话框的的位置和大小的控件，以对话框单元为单位。 当选择 Visual Studio 状态栏的右下角显示各个控件和对话框中的值。
 
 > [!NOTE]
-> 如果你的项目尚未包含 .rc 文件，请参阅 [创建新的资源脚本文件](../windows/how-to-create-a-resource-script-file.md)。
+> 如果你的项目尚未包含.rc 文件，请参阅[创建新的资源脚本文件](../windows/how-to-create-a-resource-script-file.md)。
 
 ## <a name="how-to"></a>操作说明
 
@@ -38,7 +38,7 @@ ms.locfileid: "62223566"
 
 1. 在中**添加资源**对话框中，选择**对话框**中**资源类型**列表，然后选择**新建**。
 
-   如果一个加号 (**+**) 的旁边将出现**对话框**资源类型，这意味着对话框模板都可用。 选择加号以展开模板列表中的，选择一个模板，然后选择**新建**。
+   如果一个加号 ( **+** ) 的旁边将出现**对话框**资源类型，这意味着对话框模板都可用。 选择加号以展开模板列表中的，选择一个模板，然后选择**新建**。
 
    在中打开新建对话框**对话框编辑器**。
 
@@ -48,7 +48,7 @@ ms.locfileid: "62223566"
 
 可以创建用户无法退出的运行时对话框。 这种类型的对话框对于登录、应用程序或文档锁定非常有用。
 
-1. 在对话框的“属性”  窗格中，将“系统菜单”  属性设置为“false” 。
+1. 在对话框的“属性”  窗格中，将“系统菜单”  属性设置为“false”  。
 
    此设置将禁用对话框系统菜单并**关闭**按钮。
 

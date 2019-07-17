@@ -1,6 +1,6 @@
 ---
 title: __rdtscp
-ms.date: 11/04/2016
+ms.date: 07/11/2019
 f1_keywords:
 - __rdtscp
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __rdtscp intrinsic
 - rdtscp instruction
 ms.assetid: f17d9a9c-88bb-44e0-b69d-d516bc1c93ee
-ms.openlocfilehash: b28052fbe0a1ab0e1a6f037ce61f43abea5cf771
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8a31c6d19cd171cbe909c75a27c2389866bd578
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263056"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861113"
 ---
 # <a name="rdtscp"></a>__rdtscp
 
@@ -42,7 +42,7 @@ unsigned __int64 __rdtscp(
 
 |内部函数|体系结构|
 |---------------|------------------|
-|`__rdtscp`|AMD NPT 系列 0Fh 或更高版本|
+|`__rdtscp`|x86、x64|
 
 **标头文件** \<intrin.h >
 
@@ -50,25 +50,22 @@ unsigned __int64 __rdtscp(
 
 此内部函数生成`rdtscp`指令。 若要确定此指令的硬件支持，请调用`__cpuid`与内部`InfoType=0x80000001`，并检查的 27 位`CPUInfo[3] (EDX)`。 此位为否则如果支持该指令，则为 1 和 0。  如果你运行代码，使用此内部函数不支持的硬件上`rdtscp`指令，则结果不可预知。
 
-> [!CAUTION]
->  与不同`rdtsc`，`rdtscp`是序列化的说明; 不过，编译器可以将解决此问题的代码移动内部函数。
-
-在这一代硬件 TSC 值的解释不同于在早期版本的 x64。  请参阅硬件手册，以获得详细信息。
+此指令等待，直到已执行所有前面的说明和所有以前加载都是全局可见。 但是，它不是序列化的指令。 请参阅 Intel 和 AMD 手册，以获得详细信息。
 
 中的值的含义`TSC_AUX[31:0]`取决于操作系统。
 
 ## <a name="example"></a>示例
 
-```
+```cpp
 #include <intrin.h>
 #include <stdio.h>
 int main()
 {
-unsigned __int64 i;
-unsigned int ui;
-i = __rdtscp(&ui);
-printf_s("%I64d ticks\n", i);
-printf_s("TSC_AUX was %x\n", ui);
+    unsigned __int64 i;
+    unsigned int ui;
+    i = __rdtscp(&ui);
+    printf_s("%I64d ticks\n", i);
+    printf_s("TSC_AUX was %x\n", ui);
 }
 ```
 
@@ -79,7 +76,6 @@ TSC_AUX was 0
 
 **结束 Microsoft 专用**
 
-高级微设备，inc.版权所有 2007保留所有权利。 重新生成具有高级微设备，inc.的权限
 
 ## <a name="see-also"></a>请参阅
 

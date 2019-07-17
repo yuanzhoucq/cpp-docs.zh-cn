@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::unique_ptr [C++], reset
 - std::unique_ptr [C++], swap
 ms.assetid: acdf046b-831e-4a4a-83aa-6d4ee467db9a
-ms.openlocfilehash: b0751d7716e2f8587ab410e57c2bea17c5dd3e21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3aff30e2e23feb85c6b93d79ddd4552849d3ba05
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295456"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243476"
 ---
 # <a name="uniqueptr-class"></a>unique_ptr 类
 
@@ -93,16 +93,16 @@ public:
 
 ### <a name="parameters"></a>参数
 
-右侧<br/>
+*右侧*\
 `unique_ptr`。
 
-*Nptr*<br/>
+*Nptr*\
 类型为 `rvalue` 的 `std::nullptr_t`。
 
-*Ptr*<br/>
+*ptr*\
 `pointer`。
 
-*Deleter*<br/>
+*删除器*\
 绑定到 `deleter` 的 `unique_ptr` 函数。
 
 ## <a name="exceptions"></a>异常
@@ -125,21 +125,21 @@ public:
 
 ### <a name="constructors"></a>构造函数
 
-|构造函数|描述|
+|||
 |-|-|
 |[unique_ptr](#unique_ptr)|`unique_ptr` 有七个构造函数。|
 
 ### <a name="typedefs"></a>Typedef
 
-|类型名称|描述|
+|||
 |-|-|
 |[deleter_type](#deleter_type)|模板参数 `Del` 的同义词。|
 |[element_type](#element_type)|模板参数 `T` 的同义词。|
 |[pointer](#pointer)|如果已定义，为 `Del::pointer` 的同义词，否则为 `T *` 的同义词。|
 
-### <a name="member-functions"></a>成员函数
+### <a name="functions"></a>函数
 
-|成员函数|描述|
+|||
 |-|-|
 |[get](#get)|返回 `stored_ptr`。|
 |[get_deleter](#get_deleter)|返回对 `stored_deleter` 的引用。|
@@ -149,20 +149,14 @@ public:
 
 ### <a name="operators"></a>运算符
 
-|运算符|描述|
+|||
 |-|-|
 |**operator bool**|该运算符返回可转换为类型的值**bool**。 为转换的结果**bool**是**true**时`get() != pointer()`; 否则为**false**。|
 |`operator->`|成员函数返回 `stored_ptr`。|
 |`operator*`|成员函数返回 `*stored_ptr`。|
-|[unique_ptr operator=](#unique_ptr_operator_eq)|将 `unique_ptr`（或 `pointer-type`）的值分配给当前 `unique_ptr`。|
+|[operator=](#unique_ptr_operator_eq)|将 `unique_ptr`（或 `pointer-type`）的值分配给当前 `unique_ptr`。|
 
-## <a name="requirements"></a>要求
-
-**标头：**\<memory>
-
-**命名空间：** std
-
-## <a name="deleter_type"></a>deleter_type
+### <a name="deleter_type"></a> deleter_type
 
 该类型是模板参数 `Del` 的同义词。
 
@@ -170,11 +164,11 @@ public:
 typedef Del deleter_type;
 ```
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 该类型是模板参数 `Del` 的同义词。
 
-## <a name="element_type"></a>element_type
+### <a name="element_type"></a> element_type
 
 该类型是模板参数 `Type` 的同义词。
 
@@ -182,11 +176,11 @@ typedef Del deleter_type;
 typedef Type element_type;
 ```
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 该类型是模板参数 `Ty` 的同义词。
 
-## <a name="get"></a>unique_ptr::get
+### <a name="get"></a> 获取
 
 返回 `stored_ptr`。
 
@@ -194,11 +188,11 @@ typedef Type element_type;
 pointer get() const;
 ```
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 成员函数返回 `stored_ptr`。
 
-## <a name="get_deleter"></a>unique_ptr::get_deleter
+### <a name="get_deleter"></a> get_deleter
 
 返回对 `stored_deleter` 的引用。
 
@@ -208,11 +202,11 @@ Del& get_deleter();
 const Del& get_deleter() const;
 ```
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 成员函数返回对 `stored_deleter` 的引用。
 
-## <a name="unique_ptr_operator_eq"></a>unique_ptr operator=
+### <a name="unique_ptr_operator_eq"></a> 运算符 =
 
 将提供的 `unique_ptr` 的地址分配给当前地址。
 
@@ -223,15 +217,15 @@ unique_ptr& operator=(unique_ptr<Type, Del>&& right);
 unique_ptr& operator=(pointer-type);
 ```
 
-### <a name="parameters"></a>参数
+#### <a name="parameters"></a>参数
 
 一个 `unique_ptr` 引用，用于将值 of 分配给当前 `unique_ptr`。
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 成员函数会调用 `reset(right.release())` 并将 `right.stored_deleter` 移动到 `stored_deleter`，然后返回 `*this`。
 
-## <a name="pointer"></a>  pointer
+### <a name="pointer"></a> 指针
 
 如果已定义，为 `Del::pointer` 的同义词，否则为 `Type *` 的同义词。
 
@@ -239,11 +233,11 @@ unique_ptr& operator=(pointer-type);
 typedef T1 pointer;
 ```
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 如果已定义，则此类型为 `Del::pointer` 的同义词，否则为 `Type *` 的同义词。
 
-## <a name="release"></a>  unique_ptr::release
+### <a name="release"></a> 版本
 
 释放给调用方返回存储的指针的所有权并存储的指针值设置为**nullptr**。
 
@@ -251,11 +245,11 @@ typedef T1 pointer;
 pointer release();
 ```
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 使用 `release`接管`unique_ptr`存储的原始指针的所有权。 调用方负责返回的指针的删除。 `unique-ptr`设置为空的默认构造状态。 在调用到`unique_ptr`后，您可以将兼容类型的另一个指针分配到`release`。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 此示例显示发布的调用方如何负责返回的对象：
 
@@ -296,8 +290,6 @@ int main() {
 }
 ```
 
-计算机输出：
-
 ```Output
 Constructing Sample(3)
 Constructing Sample(42)
@@ -305,7 +297,7 @@ Deleting Sample(42)
 Deleting Sample(3)
 ```
 
-## <a name="reset"></a>  unique_ptr::reset
+### <a name="reset"></a> 重置
 
 取得指针参数的所有权，然后删除原始存储的指针。 如果新指针与原始存储指针，相同`reset`删除指针并将存储的指针设置为**nullptr**。
 
@@ -314,19 +306,18 @@ void reset(pointer ptr = pointer());
 void reset(nullptr_t ptr);
 ```
 
-### <a name="parameters"></a>参数
+#### <a name="parameters"></a>参数
 
-|参数|描述|
-|---------------|-----------------|
-|*ptr*|指向要取得所有权的资源的指针。|
+*ptr*\
+指向要取得所有权的资源的指针。
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 使用`reset`若要更改存储[指针](#pointer)归`unique_ptr`到*ptr* ，然后删除原始存储的指针。 如果 `unique_ptr` 不为空，`reset` 将调用原始存储指针上的 [get_deleter](#get_deleter) 返回的删除器函数。
 
 因为`reset`首先将存储新指针*ptr*，然后删除原始存储的指针，很可能`reset`若要立即删除*ptr*如果它是与原始相同存储的指针。
 
-## <a name="swap"></a>  unique_ptr::swap
+### <a name="swap"></a> 交换
 
 交换两个 `unique_ptr` 对象之间的指针。
 
@@ -334,16 +325,16 @@ void reset(nullptr_t ptr);
 void swap(unique_ptr& right);
 ```
 
-### <a name="parameters"></a>参数
+#### <a name="parameters"></a>参数
 
-*right*<br/>
+*右侧*\
 用于交换指针的 `unique_ptr`。
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 成员函数将 `stored_ptr` 与 `right.stored_ptr`、`stored_deleter` 与 `right.stored_deleter` 进行交换。
 
-## <a name="unique_ptr"></a>  unique_ptr::unique_ptr
+### <a name="unique_ptr"></a> unique_ptr
 
 `unique_ptr` 有七个构造函数。
 
@@ -363,24 +354,27 @@ unique_ptr(
 unique_ptr(pointer ptr, typename remove_reference<Del>::type&& _Deleter);
 unique_ptr(unique_ptr&& right);
 template <class Ty2, Class Del2>
-unique_ptr(unique_ptr<Ty2, Del2>&& right);
+    unique_ptr(unique_ptr<Ty2, Del2>&& right);
 ```
 
-### <a name="parameters"></a>参数
+#### <a name="parameters"></a>参数
 
-|参数|描述|
-|---------------|-----------------|
-|*ptr*|指向要分配给 `unique_ptr.` 的资源的指针|
-|*_Deleter*|要分配给 `unique_ptr` 的 `deleter`。|
-|*right*|`unique_ptr` 的 `rvalue reference`，其中 `unique_ptr` 字段为分配给最近构造的 `unique_ptr` 的移动。|
+*ptr*\
+指向要分配给的资源的`unique_ptr`。
 
-### <a name="remarks"></a>备注
+*_Deleter*\
+要分配给 `unique_ptr` 的 `deleter`。
+
+*右侧*\
+`unique_ptr` 的 `rvalue reference`，其中 `unique_ptr` 字段为分配给最近构造的 `unique_ptr` 的移动。
+
+#### <a name="remarks"></a>备注
 
 前两个构造函数用于构造不管理任何资源的对象。 第三个构造函数存储*ptr*中`stored_ptr`。 第四个构造函数存储*ptr*中`stored_ptr`并`deleter`中`stored_deleter`。
 
 第五个构造函数存储*ptr*中`stored_ptr`，并将移动`deleter`到`stored_deleter`。 第六和第七个构造函数用于将 `right.release()` 存储到 `stored_ptr` 中和将 `right.get_deleter()` 移动到 `stored_deleter` 中。
 
-## <a name="dtorunique_ptr"></a>  unique_ptr ~unique_ptr
+### <a name="dtorunique_ptr"></a> ~ unique_ptr
 
 `unique_ptr` 的析构函数销毁 `unique_ptr` 对象。
 
@@ -388,10 +382,6 @@ unique_ptr(unique_ptr<Ty2, Del2>&& right);
 ~unique_ptr();
 ```
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 析构函数调用 `get_deleter()(stored_ptr)`。
-
-## <a name="see-also"></a>请参阅
-
-[\<memory>](../standard-library/memory.md)<br/>

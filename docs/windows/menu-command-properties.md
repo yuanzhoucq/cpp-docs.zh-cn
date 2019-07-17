@@ -17,12 +17,12 @@ helpviewer_keywords:
 - mnemonics [C++], uniqueness checking
 - Check Mnemonics command
 ms.assetid: 6d308205-3c9e-42f2-ab42-45e656940e45
-ms.openlocfilehash: c9abf46907c473d4cf6d9e945038f70aa75bfc48
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1010e4d1c11c9408ef73f4db0a449314b36059a7
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376713"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400771"
 ---
 # <a name="menu-commands-c"></a>菜单命令 (C++)
 
@@ -55,7 +55,7 @@ ms.locfileid: "62376713"
 
    - 在菜单标题后面，输入制表符 (\t) 的转义序列，以使所有菜单的快捷键都左对齐。
 
-   - 键入的修改键名称 (**Ctrl**， **Alt**，或**Shift**) 后跟一个加号 (**+**) 和名称、 字母，或其他键的符号。
+   - 键入的修改键名称 (**Ctrl**， **Alt**，或**Shift**) 后跟一个加号 ( **+** ) 和名称、 字母，或其他键的符号。
 
    例如，若要将分配**Ctrl**+**O**到**打开**命令**文件**菜单中，修改的菜单命令**标题**，使其类似于以下文本：
 
@@ -88,7 +88,7 @@ Win32
 
 ## <a name="see-also"></a>请参阅
 
-[菜单编辑器](../windows/menu-editor.md)<br/>
+[菜单编辑器](../windows/menu-editor.md)
 
 <!--
 [Strings (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>-->

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - build steps [C++], build events
 - builds [C++], custom build steps
 ms.assetid: beb2f017-3e9f-4b2c-9b57-2572fd2628e4
-ms.openlocfilehash: fc12689148e3bf23c233e4656249625d1156f9a7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93a1c787a863c2c52986a00fdeabbc4d44b0fcce
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314671"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400447"
 ---
 # <a name="understanding-custom-build-steps-and-build-events"></a>了解自定义生成步骤和生成事件
 
@@ -32,7 +32,7 @@ ms.locfileid: "62314671"
 
 - **生成事件**
 
-   生成事件可用于自定义项目的生成。 有三种生成事件：预先生成、预链接和后期生成。 通过生成事件，可以指定在生成过程中的特定时间发生的操作。 例如，可以使用生成事件在项目完成生成后通过 regsvr32.exe 注册文件。 有关详细信息，请参阅[指定生成事件](specifying-build-events.md)。
+   生成事件可用于自定义项目的生成。 有三种生成事件：预先生成、预链接和后期生成    。 通过生成事件，可以指定在生成过程中的特定时间发生的操作。 例如，可以使用生成事件在项目完成生成后通过 regsvr32.exe 注册文件  。 有关详细信息，请参阅[指定生成事件](specifying-build-events.md)。
 
 [生成自定义项疑难解答](troubleshooting-build-customizations.md)可帮助确保自定义生成步骤和生成事件按预期运行。
 
@@ -69,7 +69,7 @@ ms.locfileid: "62314671"
 [指定自定义生成工具](specifying-custom-build-tools.md)<br/>
 [指定生成事件](specifying-build-events.md)<br/>
 [排除生成自定义项故障](troubleshooting-build-customizations.md)<br/>
-[设置自定义生成步骤或生成事件的输出格式](formatting-the-output-of-a-custom-build-step-or-build-event.md)<br/>
+[设置自定义生成步骤或生成事件的输出格式](formatting-the-output-of-a-custom-build-step-or-build-event.md)
 
 ## <a name="see-also"></a>请参阅
 

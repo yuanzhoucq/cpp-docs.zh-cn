@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - allocator<void> class
 ms.assetid: abfb40f5-c600-46a6-b130-f42c6535b2bd
-ms.openlocfilehash: 5591570527946895d1e0456b23327d7fabc4bef5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7ac7fbaa8c50eb13457271cf96ddc3412733c833
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377915"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245872"
 ---
 # <a name="allocatorltvoidgt-class"></a>allocator&lt;void&gt; 类
 
@@ -50,13 +50,3 @@ class allocator<void> {
 - [value_type](../standard-library/allocator-class.md#value_type)。
 
 - [rebind](../standard-library/allocator-class.md#rebind), a nested template class.
-
-## <a name="requirements"></a>要求
-
-**标头：**\<memory>
-
-**命名空间：** std
-
-## <a name="see-also"></a>请参阅
-
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

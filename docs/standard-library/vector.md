@@ -6,18 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - vector header
 ms.assetid: c1431ad8-c0b6-4dbb-89c4-5f651e432d7f
-ms.openlocfilehash: 348b5c53ecd3fb7900d03fed7c1209a2c94eeb4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 96f329bfdcc13bb557ef0cc487a1f414612e96c5
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410847"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240966"
 ---
 # <a name="ltvectorgt"></a>&lt;vector&gt;
 
 定义容器模板类矢量和几个支持模板。
 
 `vector` 是将给定类型的元素组织到线性序列中的容器。 它使用户可以快速随机访问任何元素，并动态添加到序列和动态从序列中删除。 `vector` 是随机访问性能超出限制时的首选序列容器。
+
+> [!NOTE]
+> \<向量 > 库还使用`#include <initializer_list>`语句。
 
 有关类 `vector` 的详细信息，请参阅 [vector 类](../standard-library/vector-class.md)。 有关专业化 `vector<bool>` 的信息，请参阅 [vector\<bool> 类](../standard-library/vector-bool-class.md)。
 
@@ -74,21 +77,23 @@ void swap (
 
 ### <a name="parameters"></a>参数
 
-*Type*<br/>
+*类型*\
 向量中所存储的数据类型的模板参数。
 
-*Allocator*<br/>
+*分配器*\
 负责分配和释放内存的已存储分配器对象的模板参数。
 
-*left*<br/>
+*左侧*\
 比较操作中的第一个（左）向量
 
-*right*<br/>
+*右侧*\
 比较操作中的第二个（右）向量。
+
+## <a name="members"></a>成员
 
 ### <a name="operators"></a>运算符
 
-|运算符|描述|
+|||
 |-|-|
 |[operator! =](../standard-library/vector-operators.md#op_neq)|测试运算符左侧的向量对象是否等于右侧的向量对象。|
 |[operator<](../standard-library/vector-operators.md#op_lt)|测试运算符左侧的向量对象是否小于右侧的向量对象。|
@@ -99,7 +104,7 @@ void swap (
 
 ### <a name="classes"></a>类
 
-|类|描述|
+|||
 |-|-|
 |[vector 类](../standard-library/vector-class.md)|序列容器的一个模板类，这些容器按线性排列方式来排列给定类型的元素，并且允许快速随机访问任何元素。|
 
@@ -107,11 +112,12 @@ void swap (
 
 |||
 |-|-|
+|[hash]()||
 |[vector\<bool> 类](../standard-library/vector-bool-class.md)|模板类向量的一个完全专有化，针对类型 `bool` 的元素，且带有专有化所使用的基本类型的分配器。|
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<vector>
+**标头：** \<vector>
 
 **命名空间：** std
 

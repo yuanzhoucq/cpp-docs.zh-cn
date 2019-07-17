@@ -102,7 +102,7 @@ atomic<int> ai1(0);
 
 ## <a name="op_ty"></a> atomic:: operator *Ty*
 
-指定到模板，原子类型的运算符\<*Ty*>。 检索中存储的值**\*这**。
+指定到模板，原子类型的运算符\<*Ty*>。 检索中存储的值 **\*这**。
 
 ```cpp
 atomic<Ty>::operator Ty() const volatile noexcept;
@@ -219,7 +219,7 @@ Ty atomic<Ty>::operator-=(
 
 ## <a name="op_and_eq"></a> atomic::operator&=
 
-执行按位并在指定的值和存储的值**\*这**。 仅由整型专用化使用。
+执行按位并在指定的值和存储的值 **\*这**。 仅由整型专用化使用。
 
 ```cpp
 atomic<Ty>::operator&= (
@@ -241,11 +241,11 @@ atomic<Ty>::operator&= (
 
 ### <a name="remarks"></a>备注
 
-此运算符执行读取-修改-写入操作的存储的值替换**\*这**的按位和的*值*中存储的当前值和 **\*这**的约束内`memory_order_seq_cst` [memory_order](atomic-enums.md)。
+此运算符执行读取-修改-写入操作的存储的值替换 **\*这**的按位和的*值*中存储的当前值和 **\*这**的约束内`memory_order_seq_cst` [memory_order](atomic-enums.md)。
 
 ## <a name="op_or_eq"></a> atomic::operator&#124;=
 
-执行按位或上指定的值和存储的值**\*这**。 仅由整型专用化使用。
+执行按位或上指定的值和存储的值 **\*这**。 仅由整型专用化使用。
 
 ```cpp
 atomic<Ty>::operator|= (
@@ -267,11 +267,11 @@ atomic<Ty>::operator|= (
 
 ### <a name="remarks"></a>备注
 
-此运算符执行读取-修改-写入操作的存储的值替换**\*这**的按位或的*值*中存储的当前值和 **\*这**的约束内`memory_order_seq_cst` [memory_order](atomic-enums.md)约束。
+此运算符执行读取-修改-写入操作的存储的值替换 **\*这**的按位或的*值*中存储的当前值和 **\*这**的约束内`memory_order_seq_cst` [memory_order](atomic-enums.md)约束。
 
 ## <a name="op_xor_eq"></a> atomic:: operator ^ =
 
-执行按位异或上指定的值和存储的值**\*这**。 仅由整型专用化使用。
+执行按位异或上指定的值和存储的值 **\*这**。 仅由整型专用化使用。
 
 ```cpp
 atomic<Ty>::operator^= (
@@ -293,11 +293,11 @@ atomic<Ty>::operator^= (
 
 ### <a name="remarks"></a>备注
 
-此运算符执行读取-修改-写入操作的存储的值替换**\*这**与按位异或的*值*中存储的当前值和**\*这**的约束内`memory_order_seq_cst` [memory_order](atomic-enums.md)约束。
+此运算符执行读取-修改-写入操作的存储的值替换 **\*这**与按位异或的*值*中存储的当前值和 **\*这**的约束内`memory_order_seq_cst` [memory_order](atomic-enums.md)约束。
 
 ## <a name="compare_exchange_strong"></a> atomic::compare_exchange_strong
 
-在执行原子比较和交换操作**\*这**。
+在执行原子比较和交换操作 **\*这**。
 
 ```cpp
 bool compare_exchange_strong(
@@ -344,7 +344,7 @@ bool compare_exchange_strong(
 
 ### <a name="remarks"></a>备注
 
-此原子比较和交换操作中存储的值进行比较**\*这**与*Exp*。如果值相等，该操作将替换中存储的值**\*这**与*值*通过使用读取-修改-写入操作和应用的内存顺序约束的通过指定*顺序排列 1*。 如果值不相等，操作将使用存储中的值**\*这**替换*Exp* ，并应用指定的内存顺序约束*Order2*.
+此原子比较和交换操作中存储的值进行比较 **\*这**与*Exp*。如果值相等，该操作将替换中存储的值 **\*这**与*值*通过使用读取-修改-写入操作和应用的内存顺序约束的通过指定*顺序排列 1*。 如果值不相等，操作将使用存储中的值 **\*这**替换*Exp* ，并应用指定的内存顺序约束*Order2*.
 
 不具有第二个重载`memory_order`使用隐式*Order2*基于的值*顺序排列 1*。 如果*顺序排列 1*是`memory_order_acq_rel`， *Order2*是`memory_order_acquire`。 如果*顺序排列 1*是`memory_order_release`， *Order2*是`memory_order_relaxed`。 在所有其他情况下， *Order2*等于*顺序排列 1*。
 
@@ -352,7 +352,7 @@ bool compare_exchange_strong(
 
 ## <a name="compare_exchange_weak"></a> atomic:: compare_exchange_weak
 
-对执行弱原子比较和交换操作**\*这**。
+对执行弱原子比较和交换操作 **\*这**。
 
 ```cpp
 bool compare_exchange_weak(
@@ -399,7 +399,7 @@ bool compare_exchange_weak(
 
 ### <a name="remarks"></a>备注
 
-此原子比较和交换操作中存储的值进行比较**\*这**与*Exp*。如果值相等，该操作将替换中存储的值**\*这**与*值*通过使用读取-修改-写入操作和应用的内存顺序约束的通过指定*顺序排列 1*。 如果值不相等，操作将使用存储中的值**\*这**替换*Exp* ，并应用指定的内存顺序约束*Order2*.
+此原子比较和交换操作中存储的值进行比较 **\*这**与*Exp*。如果值相等，该操作将替换中存储的值 **\*这**与*值*通过使用读取-修改-写入操作和应用的内存顺序约束的通过指定*顺序排列 1*。 如果值不相等，操作将使用存储中的值 **\*这**替换*Exp* ，并应用指定的内存顺序约束*Order2*.
 
 弱原子比较和交换操作执行交换，如果所比较的值相等。 如果值是否不相等，则不保证该操作执行交换。
 
@@ -409,7 +409,7 @@ bool compare_exchange_weak(
 
 ## <a name="exchange"></a> atomic::exchange
 
-使用指定的值的存储的值替换**\*这**。
+使用指定的值的存储的值替换 **\*这**。
 
 ```cpp
 Ty atomic<Ty>::exchange(
@@ -432,15 +432,15 @@ Ty atomic<Ty>::exchange(
 
 ### <a name="return-value"></a>返回值
 
-存储的值**\*这**交换前。
+存储的值 **\*这**交换前。
 
 ### <a name="remarks"></a>备注
 
-此操作执行读取-修改-写入操作以使用*值*中存储的值替换**\*这**，由指定的内存约束内*顺序*。
+此操作执行读取-修改-写入操作以使用*值*中存储的值替换 **\*这**，由指定的内存约束内*顺序*。
 
 ## <a name="fetch_add"></a> atomic::fetch_add
 
-提取中存储的值**\*这**，然后将指定的值添加到存储的值。
+提取中存储的值 **\*这**，然后将指定的值添加到存储的值。
 
 ```cpp
 Ty atomic<Ty>::fetch_add (
@@ -463,15 +463,15 @@ Ty atomic<Ty>::fetch_add (
 
 ### <a name="return-value"></a>返回值
 
-一个*Ty*对象，其中包含中存储的值**\*这**之前添加。
+一个*Ty*对象，其中包含中存储的值 **\*这**之前添加。
 
 ### <a name="remarks"></a>备注
 
-`fetch_add`方法执行的读取-修改-写入操作以原子方式添加*值*中存储的值为**\*这**，并应用指定的内存约束*顺序*。
+`fetch_add`方法执行的读取-修改-写入操作以原子方式添加*值*中存储的值为 **\*这**，并应用指定的内存约束*顺序*。
 
 ## <a name="fetch_and"></a> atomic::fetch_and
 
-执行按位并对值和存储中的现有值**\*这**。
+执行按位并对值和存储中的现有值 **\*这**。
 
 ```cpp
 Ty atomic<Ty>::fetch_and (
@@ -498,11 +498,11 @@ Ty atomic<Ty>::fetch_and (
 
 ### <a name="remarks"></a>备注
 
-`fetch_and`方法执行的读取-修改-写入操作的存储的值替换**\*这**的按位和*值*中存储的当前值和**\*这**，由指定的内存约束内*顺序*。
+`fetch_and`方法执行的读取-修改-写入操作的存储的值替换 **\*这**的按位和*值*中存储的当前值和 **\*这**，由指定的内存约束内*顺序*。
 
 ## <a name="fetch_or"></a> atomic:: fetch_or
 
-执行按位或对值和存储中的现有值**\*这**。
+执行按位或对值和存储中的现有值 **\*这**。
 
 ```cpp
 Ty atomic<Ty>::fetch_or (
@@ -529,7 +529,7 @@ Ty atomic<Ty>::fetch_or (
 
 ### <a name="remarks"></a>备注
 
-`fetch_or`方法执行的读取-修改-写入操作的存储的值替换**\*这**的按位或的*值*中存储的当前值和**\*这**，由指定的内存约束内*顺序*。
+`fetch_or`方法执行的读取-修改-写入操作的存储的值替换 **\*这**的按位或的*值*中存储的当前值和 **\*这**，由指定的内存约束内*顺序*。
 
 ## <a name="fetch_sub"></a> atomic::fetch_sub
 
@@ -560,11 +560,11 @@ Ty atomic<Ty>::fetch_sub (
 
 ### <a name="remarks"></a>备注
 
-`fetch_sub`方法执行的读取-修改-写入操作以原子方式减去*值*中存储的值从**\*这**，由指定的内存约束内*顺序*。
+`fetch_sub`方法执行的读取-修改-写入操作以原子方式减去*值*中存储的值从 **\*这**，由指定的内存约束内*顺序*。
 
 ## <a name="fetch_xor"></a> atomic:: fetch_xor
 
-执行按位异或对值和存储中的现有值**\*这**。
+执行按位异或对值和存储中的现有值 **\*这**。
 
 ```cpp
 Ty atomic<Ty>::fetch_xor (
@@ -591,11 +591,11 @@ Ty atomic<Ty>::fetch_xor (
 
 ### <a name="remarks"></a>备注
 
-`fetch_xor`方法执行的读取-修改-写入操作的存储的值替换**\*这**与按位异或的*值*和存储中的当前值**\*这**，并应用指定的内存约束*顺序*。
+`fetch_xor`方法执行的读取-修改-写入操作的存储的值替换 **\*这**与按位异或的*值*和存储中的当前值 **\*这**，并应用指定的内存约束*顺序*。
 
 ## <a name="is_lock_free"></a> atomic:: is_lock_free
 
-指定是否对原子操作**\*这**是无锁。
+指定是否对原子操作 **\*这**是无锁。
 
 ```cpp
 bool is_lock_free() const volatile noexcept;
@@ -603,7 +603,7 @@ bool is_lock_free() const volatile noexcept;
 
 ### <a name="return-value"></a>返回值
 
-如果原子操作**\*这**是锁可用; 否则为 false。
+如果原子操作 **\*这**是锁可用; 否则为 false。
 
 ### <a name="remarks"></a>备注
 
@@ -611,7 +611,7 @@ bool is_lock_free() const volatile noexcept;
 
 ## <a name="load"></a> atomic:: load
 
-检索中存储的值**\*这**，指定的内存约束内。
+检索中存储的值 **\*这**，指定的内存约束内。
 
 ```cpp
 Ty atomic::load(
@@ -629,7 +629,7 @@ Ty atomic::load(
 
 ### <a name="return-value"></a>返回值
 
-检索到的值存储在**\*这**。
+检索到的值存储在 **\*这**。
 
 ## <a name="store"></a> atomic:: store
 

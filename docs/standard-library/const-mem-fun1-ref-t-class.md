@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - const_mem_fun1_ref_t class
 ms.assetid: 8220d373-fa1c-44be-a21d-96d49b3ea6bb
-ms.openlocfilehash: 21d53178bf7ed80b5e0b170619e6221826393dab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59790b5791dc50d217053dc7a13856d436101020
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212009"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244537"
 ---
 # <a name="constmemfun1reft-class"></a>const_mem_fun1_ref_t 类
 
@@ -21,8 +21,8 @@ ms.locfileid: "62212009"
 
 ```cpp
 template <class Result, class Type, class Arg>
-class const_mem_fun1_ref_t
-: public binary_function<Type, Arg, Result>
+    class const_mem_fun1_ref_t
+        : public binary_function<Type, Arg, Result>
 {
     explicit const_mem_fun1_ref_t(Result (Type::* Pm)(Arg) const);
     Result operator()(const Type& left, Arg right) const;
@@ -31,13 +31,13 @@ class const_mem_fun1_ref_t
 
 ### <a name="parameters"></a>参数
 
-*Pm*<br/>
+*Pm*\
 一个指针，指向要转换为函数对象的 `Type` 类成员函数。
 
-*left*<br/>
+*左侧*\
 **Const**对象的*Pm*上调用成员函数。
 
-*right*<br/>
+*右侧*\
 为指定的参数*Pm*。
 
 ## <a name="return-value"></a>返回值
@@ -46,19 +46,8 @@ class const_mem_fun1_ref_t
 
 ## <a name="remarks"></a>备注
 
-此模板类存储一份*Pm*，它必须是指向类的成员函数的指针`Type`，私有成员对象中。 它将其成员函数 `operator()` 定义为返回 ( `left`.\**Pm*)( `right`) **const**。
+此模板类存储一份*Pm*，它必须是指向类的成员函数的指针`Type`，私有成员对象中。 它定义其成员函数`operator()`为返回 (`left`。\**Pm*) (`right`) **const**。
 
 ## <a name="example"></a>示例
 
 通常不直接使用 `const_mem_fun1_ref_t` 的构造函数；helper 函数 `mem_fun_ref` 用于调整成员函数。 有关如何使用成员函数适配器的示例，请参阅 [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref)。
-
-## <a name="requirements"></a>要求
-
-**标头：**\<functional>
-
-**命名空间：** std
-
-## <a name="see-also"></a>请参阅
-
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)<br/>
