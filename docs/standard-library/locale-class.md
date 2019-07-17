@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: a1f5ace58af427645a0ad4eb8706506cc52ab08c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dedc1b5812357c84944654d1c352be2a51e9393c
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413172"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245411"
 ---
 # <a name="locale-class"></a>locale 类
 
@@ -112,7 +112,7 @@ messages<wchar_t>
 
 其中某些预定义的 facet 由 iostreams 类使用，用来控制数值与文本序列的相互转换。
 
-locale 类的对象还将区域设置名称存储为[字符串](../standard-library/string-typedefs.md#string)类的对象。 若使用无效区域设置名称构造区域设置 facet 或区域设置对象，将引发 [runtime_error](../standard-library/runtime-error-class.md) 类的对象。 如果区域设置对象无法确定 C 样式区域设置与此对象表示的区域设置完全对应，则存储的区域设置名称为 `"*"`。 如果能够确定，可以在标准 C 库中 `Loc`通过调用 `setlocale`(LC_ALL `,` `Loc`. [名称](#name)`().c_str()`).
+locale 类的对象还将区域设置名称存储为[字符串](../standard-library/string-typedefs.md#string)类的对象。 若使用无效区域设置名称构造区域设置 facet 或区域设置对象，将引发 [runtime_error](../standard-library/runtime-error-class.md) 类的对象。 如果区域设置对象无法确定 C 样式区域设置与此对象表示的区域设置完全对应，则存储的区域设置名称为 `"*"`。 如果能够确定，可以在标准 C 库中 `Loc`通过调用 `setlocale`(LC_ALL `,` `Loc`. [name](#name)`().c_str()`) 为区域设置对象建立匹配的区域设置。
 
 在此实现中，还可以调用静态成员函数：
 
@@ -155,7 +155,7 @@ cout.imbue(loc);
 |成员函数|描述|
 |-|-|
 |[combine](#combine)|将指定区域设置中的 facet 插入到目标区域设置。|
-|[name](#name)|返回存储的区域设置名称。|
+|[名称](#name)|返回存储的区域设置名称。|
 
 ### <a name="static-functions"></a>静态函数
 
@@ -168,6 +168,7 @@ cout.imbue(loc);
 
 |运算符|描述|
 |-|-|
+|[operator=](#op_eq)|将分配设置的区域设置。|
 |[operator!=](#op_neq)|测试两个区域设置是否不相等。|
 |[operator( )](#op_call)|比较两个 `basic_string` 对象。|
 |[operator==](#op_eq_eq)|测试两个区域设置是否相等。|
@@ -417,7 +418,7 @@ class id
 
 ## <a name="locale"></a>locale::locale
 
-创建区域设置、区域设置副本，或其中的 facet 或类别替换为其他区域设置中的 facet 类别的区域设置副本。
+创建区域设置、区域设置副本，或其中的 facet 或类别替换为其他区域设置中的 facet 类别的区域设置副本。 此外包括析构函数。
 
 ```cpp
 locale();
@@ -430,6 +431,8 @@ locale(const locale& Loc, const char* Locname, category Cat);
 
 template <class Facet>
 locale(const locale& Loc, const Facet* Fac);
+
+~locale();
 ```
 
 ### <a name="parameters"></a>参数
@@ -546,6 +549,14 @@ int main( )
 ```Output
 The name of the previous locale is: C.
 The name of the current locale is: German_Germany.1252.
+```
+
+## <a name="op_eq"></a>  locale:: operator =
+
+将分配设置的区域设置。
+
+```cpp
+const locale& operator=(const locale& other) noexcept;
 ```
 
 ## <a name="op_neq"></a>locale::operator!=

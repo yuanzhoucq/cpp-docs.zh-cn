@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::queue [C++], push
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
-ms.openlocfilehash: 2b82e4237a525b09758323ae2483d8818fc938af
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78479a05f8957aea5ca0f78fd3a086a49b9ef009
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369938"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240404"
 ---
 # <a name="queue-class"></a>queue 类
 
@@ -42,10 +42,10 @@ class queue
 
 ### <a name="parameters"></a>参数
 
-*Type*<br/>
+*类型*\
 要存储在队列中的元素数据类型
 
-*Container*<br/>
+*容器*\
 用来实现队列的基础容器的类型。
 
 ## <a name="remarks"></a>备注
@@ -64,38 +64,34 @@ C++ 标准库定义了三种类型的容器适配器：stack、queue 和 priorit
 
 - [priority_queue 类](../standard-library/priority-queue-class.md)将对其元素进行排序，以便最大的元素始终位于顶部位置。 它支持元素的插入以及顶部元素的检查和删除。 可以在脑海中将其类比为按年龄、身高或其他标准排队的人。
 
+## <a name="members"></a>成员
+
 ### <a name="constructors"></a>构造函数
 
-|构造函数|描述|
+|||
 |-|-|
 |[queue](#queue)|构造一个空的或者是基容器对象副本的 `queue`。|
 
 ### <a name="typedefs"></a>Typedef
 
-|类型名称|描述|
+|||
 |-|-|
 |[container_type](#container_type)|一种类型，它提供将由 `queue` 采用的基容器。|
 |[size_type](#size_type)|可表示 `queue` 中元素数量的无符号整数类型。|
 |[value_type](#value_type)|一种类型，它表示存储为 `queue` 中元素的对象的类型。|
 
-### <a name="member-functions"></a>成员函数
+### <a name="functions"></a>函数
 
-|成员函数|描述|
+|||
 |-|-|
 |[back](#back)|返回对在 `queue` 后部最近添加的最后一个元素的引用。|
 |[empty](#empty)|测试 `queue` 是否为空。|
 |[front](#front)|返回对 `queue` 前部的第一个元素的引用。|
 |[pop](#pop)|从 `queue` 前端移除一个元素。|
 |[push](#push)|将元素添加到 `queue` 的后部。|
-|[size](#size)|返回 `queue` 中的元素数量。|
+|size[](#size)|返回 `queue` 中的元素数量。|
 
-## <a name="requirements"></a>要求
-
-**标头：**\<queue>
-
-**命名空间：** std
-
-## <a name="back"></a>queue::back
+## <a name="back"></a> 返回
 
 返回对在队列后部最近添加的最后一个元素的引用。
 
@@ -141,7 +137,7 @@ int main( )
 }
 ```
 
-## <a name="container_type"></a>queue::container_type
+## <a name="container_type"></a> container_type
 
 一种类型，它提供将调整的基容器。
 
@@ -159,7 +155,7 @@ typedef Container container_type;
 
 有关如何声明和使用 `container_type` 的示例，请参阅 [queue](#queue) 的示例。
 
-## <a name="empty"></a>queue::empty
+## <a name="empty"></a> 为空
 
 测试队列是否为空。
 
@@ -205,7 +201,7 @@ The queue q1 is not empty.
 The queue q2 is empty.
 ```
 
-## <a name="front"></a>queue::front
+## <a name="front"></a> 前端
 
 返回对队列前部的第一个元素的引用。
 
@@ -257,7 +253,7 @@ int main() {
 }
 ```
 
-## <a name="pop"></a>queue::pop
+## <a name="pop"></a> pop
 
 从队列的前部移除元素。
 
@@ -313,7 +309,7 @@ After a pop the queue length is 2.
 After a pop, the element at the front of the queue is 20.
 ```
 
-## <a name="push"></a>queue::push
+## <a name="push"></a> 推送
 
 将元素添加到队列的后部。
 
@@ -323,7 +319,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>参数
 
-*val*<br/>
+*val*\
 添加到队列后部的元素。
 
 ### <a name="remarks"></a>备注
@@ -362,7 +358,7 @@ The queue length is 3.
 The element at the front of the queue is 10.
 ```
 
-## <a name="queue"></a>queue::queue
+## <a name="queue"></a> 队列
 
 构造一个空的或者是基容器对象副本的队列。
 
@@ -374,7 +370,7 @@ explicit queue(const container_type& right);
 
 ### <a name="parameters"></a>参数
 
-*right*<br/>
+*右侧*\
 要以构造的队列为副本的 **const** 容器。
 
 ### <a name="remarks"></a>备注
@@ -429,7 +425,7 @@ The element at the front of queue q5 is 1.
 The element at the back of queue q5 is 2.
 ```
 
-## <a name="size"></a>queue::size
+## <a name="size"></a> 大小
 
 返回队列中的元素数目。
 
@@ -470,7 +466,7 @@ The queue length is 1.
 The queue length is now 2.
 ```
 
-## <a name="size_type"></a>queue::size_type
+## <a name="size_type"></a> size_type
 
 一种无符号整数类型，此类型可表示队列中的元素数量。
 
@@ -486,7 +482,7 @@ typedef typename Container::size_type size_type;
 
 有关如何声明和使用 `size_type` 的示例，请参阅 [queue::front](#front) 的示例。
 
-## <a name="value_type"></a>queue::value_type
+## <a name="value_type"></a> value_type
 
 一种类型，它表示存储为队列中元素的对象的类型。
 
