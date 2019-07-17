@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::condition_variable::wait
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
-ms.openlocfilehash: 52e64df7522c5e58fa64398f599bffa4614a2684
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 69f356301ce5b546c8bebe9429ca64fa61eff404
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212374"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244627"
 ---
 # <a name="conditionvariable-class"></a>condition_variable 类
 
@@ -39,30 +39,24 @@ class condition_variable;
 
 ## <a name="members"></a>成员
 
-### <a name="public-constructors"></a>公共构造函数
+### <a name="constructors"></a>构造函数
 
-|名称|描述|
-|----------|-----------------|
+|||
+|-|-|
 |[condition_variable](#condition_variable)|构造 `condition_variable` 对象。|
 
-### <a name="public-methods"></a>公共方法
+### <a name="functions"></a>函数
 
-|名称|描述|
-|----------|-----------------|
+|||
+|-|-|
 |[native_handle](#native_handle)|返回表示 condition_variable 句柄的特定于实现的类型。|
 |[notify_all](#notify_all)|取消阻止正在等待 `condition_variable` 对象的所有线程。|
 |[notify_one](#notify_one)|取消阻止正在等待 `condition_variable` 对象的某个线程。|
-|[wait](#wait)|阻止线程。|
+|[等待](#wait)|阻止线程。|
 |[wait_for](#wait_for)|阻止某个线程，并设置线程阻止的时间间隔。|
 |[wait_until](#wait_until)|阻止某个线程，并设置线程阻止的最大时间点。|
 
-## <a name="requirements"></a>要求
-
-**标头：** \<condition_variable >
-
-**命名空间：** std
-
-## <a name="condition_variable"></a>  condition_variable::condition_variable 构造函数
+## <a name="condition_variable"></a> condition_variable
 
 构造 `condition_variable` 对象。
 
@@ -74,7 +68,7 @@ condition_variable();
 
 如果没有足够的内存，构造函数将抛出包含 `not_enough_memory` 错误代码的 [system_error](../standard-library/system-error-class.md) 对象。 如果由于某些其他资源不可用导致无法构造该对象，则构造函数将抛出包含 `resource_unavailable_try_again` 错误代码的 `system_error` 对象。
 
-## <a name="native_handle"></a>  condition_variable::native_handle
+## <a name="native_handle"></a> native_handle
 
 返回表示 condition_variable 句柄的特定于实现的类型。
 
@@ -86,7 +80,7 @@ native_handle_type native_handle();
 
 `native_handle_type` 被定义为指向并发运行时内部数据结构的指针。
 
-## <a name="notify_all"></a>  condition_variable::notify_all
+## <a name="notify_all"></a> notify_all
 
 取消阻止正在等待 `condition_variable` 对象的所有线程。
 
@@ -94,7 +88,7 @@ native_handle_type native_handle();
 void notify_all() noexcept;
 ```
 
-## <a name="notify_one"></a>  condition_variable::notify_one
+## <a name="notify_one"></a> notify_one
 
 取消阻止正在 `condition_variable` 对象上等待的某个线程。
 
@@ -102,7 +96,7 @@ void notify_all() noexcept;
 void notify_one() noexcept;
 ```
 
-## <a name="wait"></a>  condition_variable::wait
+## <a name="wait"></a> 等待
 
 阻止线程。
 
@@ -115,10 +109,10 @@ void wait(unique_lock<mutex>& Lck, Predicate Pred);
 
 ### <a name="parameters"></a>参数
 
-*Lck*<br/>
+*一个 Lck*\
 [unique_lock\<mutex>](../standard-library/unique-lock-class.md) 对象。
 
-*Pred*<br/>
+*Pred*\
 任何返回的表达式 **，则返回 true**或**false**。
 
 ### <a name="remarks"></a>备注
@@ -132,7 +126,7 @@ while(!Pred())
     wait(Lck);
 ```
 
-## <a name="wait_for"></a>  condition_variable::wait_for
+## <a name="wait_for"></a> wait_for
 
 阻止某个线程，并设置线程阻止的时间间隔。
 
@@ -151,13 +145,13 @@ bool wait_for(
 
 ### <a name="parameters"></a>参数
 
-*Lck*<br/>
+*一个 Lck*\
 [unique_lock\<mutex>](../standard-library/unique-lock-class.md) 对象。
 
-*Rel_time*<br/>
+*Rel_time*\
 `chrono::duration` 对象指定线程唤醒前的时间。
 
-*Pred*<br/>
+*Pred*\
 任何返回的表达式 **，则返回 true**或**false**。
 
 ### <a name="return-value"></a>返回值
@@ -180,7 +174,7 @@ while(!Pred())
 return true;
 ```
 
-## <a name="wait_until"></a>  condition_variable::wait_until
+## <a name="wait_until"></a> wait_until
 
 阻止某个线程，并设置线程阻止的最大时间点。
 
@@ -209,13 +203,13 @@ bool wait_until(
 
 ### <a name="parameters"></a>参数
 
-*Lck*<br/>
+*一个 Lck*\
 [unique_lock\<mutex>](../standard-library/unique-lock-class.md) 对象。
 
-*Abs_time*<br/>
+*Abs_time*\
 [chrono::time_point](../standard-library/time-point-class.md) 对象。
 
-*Pred*<br/>
+*Pred*\
 任何返回的表达式 **，则返回 true**或**false**。
 
 ### <a name="return-value"></a>返回值

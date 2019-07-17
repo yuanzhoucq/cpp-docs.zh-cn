@@ -3,12 +3,12 @@ title: x64 调用约定
 description: 默认的 x64 ABI 调用约定的详细信息。
 ms.date: 12/17/2018
 ms.assetid: 41ca3554-b2e3-4868-9a84-f1b46e6e21d9
-ms.openlocfilehash: 02bf4719766366049b600b148ad88fc238f4e54e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2cad00ac7f2cb5fe086fa262a0f512330997391f
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313606"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861168"
 ---
 # <a name="x64-calling-convention"></a>x64 调用约定
 
@@ -142,12 +142,12 @@ Struct2 func4(int a, double b, int c, float d);
 
 ## <a name="callercallee-saved-registers"></a>调用方/被调用方保存的寄存器
 
-注册到 RAX、 RCX、 RDX、 R8，R9、 R10、 R11 被视为易失性并必须考虑销毁函数调用上 (除非否则为安全-进行可证明以通过分析如全程序优化)。
+注册到 RAX、 RCX、 RDX、 R8，R9、 R10、 R11、 XMM0 5 和 YMM0 15 和 ZMM0 15 的上半部分被视为易失性并必须考虑销毁函数调用上 (除非否则为安全-进行可证明以通过分析如全程序优化)。 在 AVX512VL，ZMM、 YMM 和 XMM 寄存器 16-31 是可变的。
 
-注册 RBX、 RBP、 RDI、 RSI、 RSP、 R12、 R13、 R14，并 R15 被视为非易失性，必须保存并还原函数使用它们。
+寄存器 RBX、 RBP、 RDI、 RSI、 RSP、 R12、 R13、 R14、 R15 和 XMM6 15 被视为非易失性，必须保存并还原函数使用它们。
 
 ## <a name="function-pointers"></a>函数指针
-
+ 
 函数指针是函数的只需指向相应的标签。 有函数指针的目录 (TOC) 要求没有表。
 
 ## <a name="floating-point-support-for-older-code"></a>针对旧代码的浮点支持

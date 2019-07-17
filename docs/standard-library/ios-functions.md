@@ -32,8 +32,14 @@ helpviewer_keywords:
 - std::dec [C++]
 - std::fixed [C++]
 - std::hex [C++]
+- std::hexfloat [C++]
+- std::io_errc [C++]
 - std::internal [C++]
+- std::iostream_category [C++]
+- std::is_error_code_enum [C++]
 - std::left [C++]
+- std::make_error_code [C++]
+- std::make_error_condition [C++]
 - std::noboolalpha [C++]
 - std::noshowbase [C++]
 - std::noshowpoint [C++]
@@ -50,27 +56,16 @@ helpviewer_keywords:
 - std::skipws [C++]
 - std::unitbuf [C++]
 - std::uppercase [C++]
-ms.openlocfilehash: 18f42f8e5bcd69872e4300d154eb72f489015e36
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a08c039322c49f33ae4441851c96aa56e62fcb84
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404881"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245290"
 ---
 # <a name="ltiosgt-functions"></a>&lt;ios&gt; 函数
 
-||||
-|-|-|-|
-|[defaultfloat](#ios_defaultfloat)|[boolalpha](#boolalpha)|[dec](#dec)|
-|[fixed](#fixed)|[hex](#hex)|[internal](#internal)|
-|[left](#left)|[noboolalpha](#noboolalpha)|[noshowbase](#noshowbase)|
-|[noshowpoint](#noshowpoint)|[noshowpos](#noshowpos)|[noskipws](#noskipws)|
-|[nounitbuf](#nounitbuf)|[nouppercase](#nouppercase)|[oct](#oct)|
-|[right](#right)|[scientific](#scientific)|[showbase](#showbase)|
-|[showpoint](#showpoint)|[showpos](#showpos)|[skipws](#skipws)|
-|[unitbuf](#unitbuf)|[uppercase](#uppercase)|
-
-## <a name="boolalpha"></a>  boolalpha
+## <a name="boolalpha"></a> boolalpha
 
 指定类型为 [bool](../cpp/bool-cpp.md) 的变量在流中显示为 **true** 或 **false**。
 
@@ -80,7 +75,7 @@ ios_base& boolalpha(ios_base& str);
 
 ### <a name="parameters"></a>参数
 
-*str*<br/>
+*str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
 
 ### <a name="return-value"></a>返回值
@@ -122,7 +117,7 @@ true
 true
 ```
 
-## <a name="dec"></a>dec
+## <a name="dec"></a> dec
 
 指定以十进制计数法形式显示整数变量。
 
@@ -132,7 +127,7 @@ ios_base& dec(ios_base& str);
 
 ### <a name="parameters"></a>参数
 
-*str*<br/>
+*str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
 
 ### <a name="return-value"></a>返回值
@@ -175,7 +170,7 @@ int main( )
 100
 ```
 
-## <a name="ios_defaultfloat"></a>&lt;ios&gt; defaultfloat
+## <a name="ios_defaultfloat"></a> &lt;ios&gt; defaultfloat
 
 配置 `ios_base` 对象的标记以使用浮点值的默认显示格式。
 
@@ -185,14 +180,14 @@ ios_base& defaultfloat(ios_base& _Iosbase);
 
 ### <a name="parameters"></a>参数
 
-*_Iosbase*<br/>
+*_Iosbase*\
 一个 `ios_base` 对象。
 
 ### <a name="remarks"></a>备注
 
 此操控器会有效调用 _I `osbase.`[ios_base::unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::floatfield)`，然后返回 _I `osbase`。
 
-## <a name="fixed"></a>fixed
+## <a name="fixed"></a> 已修复
 
 指定浮点数以自动设置小数点表示法显示。
 
@@ -202,7 +197,7 @@ ios_base& fixed(ios_base& str);
 
 ### <a name="parameters"></a>参数
 
-*str*<br/>
+*str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
 
 ### <a name="return-value"></a>返回值
@@ -240,7 +235,7 @@ int main( )
 1.1
 ```
 
-## <a name="hex"></a>hex
+## <a name="hex"></a> 十六进制
 
 指定以十六进制计数法形式显示整型变量。
 
@@ -250,7 +245,7 @@ ios_base& hex(ios_base& str);
 
 ### <a name="parameters"></a>参数
 
-*str*<br/>
+*str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
 
 ### <a name="return-value"></a>返回值
@@ -261,13 +256,27 @@ ios_base& hex(ios_base& str);
 
 默认情况下，整型变量以十进制计数法显示。 [dec](../standard-library/ios-functions.md#dec) 和 [oct](../standard-library/ios-functions.md#oct) 也会改变整型变量显示的方式。
 
-此操控器有效调用`str` **。**[setf](../standard-library/ios-base-class.md#setf)( `ios_base::hex`， `ios_base::basefield`)，然后返回*str*。
+此操控器有效调用`str` **。** [setf](../standard-library/ios-base-class.md#setf)( `ios_base::hex`， `ios_base::basefield`)，然后返回*str*。
 
 ### <a name="example"></a>示例
 
 请参阅[dec](../standard-library/ios-functions.md#dec)以举例说明如何使用`hex`。
 
-## <a name="internal"></a>internal
+## <a name="hexfloat"></a> hexfloat
+
+```cpp
+ios_base& hexfloat (ios_base& str);
+```
+
+## <a name="io_errc"></a> io_errc
+
+```cpp
+enum class io_errc {
+    stream = 1
+};
+```
+
+## <a name="internal"></a> 内部
 
 导致数字的符号左对齐，数字右对齐。
 
@@ -277,7 +286,7 @@ ios_base& internal(ios_base& str);
 
 ### <a name="parameters"></a>参数
 
-*str*<br/>
+*str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
 
 ### <a name="return-value"></a>返回值
@@ -313,7 +322,19 @@ int main( void )
 -..123.456
 ```
 
-## <a name="left"></a>left
+## <a name="is_error_code_enum"></a> is_error_code_enum
+
+```cpp
+template <> struct is_error_code_enum<io_errc> : public true_type { };
+```
+
+## <a name="iostream_category"></a> iostream_category
+
+```cpp
+const error_category& iostream_category() noexcept;
+```
+
+## <a name="left"></a> 左侧
 
 导致宽度比输出宽度短的文本在流刷新过程中显示时带有左边距。
 
@@ -323,7 +344,7 @@ ios_base& left(ios_base& str);
 
 ### <a name="parameters"></a>参数
 
-*str*<br/>
+*str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
 
 ### <a name="return-value"></a>返回值
@@ -352,11 +373,23 @@ int main( )
 ```
 
 ```Output
-                   5
 5
+        5
 ```
 
-## <a name="noboolalpha"></a>noboolalpha
+## <a name="make_error_code"></a> make_error_code
+
+```cpp
+error_code make_error_code(io_errc e) noexcept;
+```
+
+## <a name="make_error_condition"></a> make_error_condition
+
+```cpp
+error_condition make_error_condition(io_errc e) noexcept;
+```
+
+## <a name="noboolalpha"></a> noboolalpha
 
 指定类型为 [bool](../cpp/bool-cpp.md) 的变量在流中显示为 1 或 0。
 
@@ -366,7 +399,7 @@ ios_base& noboolalpha(ios_base& str);
 
 ### <a name="parameters"></a>参数
 
-*str*<br/>
+*str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
 
 ### <a name="return-value"></a>返回值
@@ -385,7 +418,7 @@ ios_base& noboolalpha(ios_base& str);
 
 有关使用 `noboolalpha` 的示例，请参阅 [boolalpha](../standard-library/ios-functions.md#boolalpha)。
 
-## <a name="noshowbase"></a>noshowbase
+## <a name="noshowbase"></a> noshowbase
 
 关闭显示数字所采用的进制的指示。
 
@@ -395,7 +428,7 @@ ios_base& noshowbase(ios_base& str);
 
 ### <a name="parameters"></a>参数
 
-*str*<br/>
+*str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
 
 ### <a name="return-value"></a>返回值
@@ -412,7 +445,7 @@ ios_base& noshowbase(ios_base& str);
 
 有关如何使用 `noshowbase` 的示例，请参阅 [showbase](../standard-library/ios-functions.md#showbase)。
 
-## <a name="noshowpoint"></a>noshowpoint
+## <a name="noshowpoint"></a> noshowpoint
 
 仅显示浮点数（其小数部分为零）的整数部分。
 
@@ -422,7 +455,7 @@ ios_base& noshowpoint(ios_base& str);
 
 ### <a name="parameters"></a>参数
 
-*str*<br/>
+*str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
 
 ### <a name="return-value"></a>返回值
@@ -459,7 +492,7 @@ int main( )
 5
 ```
 
-## <a name="noshowpos"></a>noshowpos
+## <a name="noshowpos"></a> noshowpos
 
 导致正数不显式带有符号。
 
@@ -469,7 +502,7 @@ ios_base& noshowpos(ios_base& str);
 
 ### <a name="parameters"></a>参数
 
-*str*<br/>
+*str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
 
 ### <a name="return-value"></a>返回值
@@ -486,7 +519,7 @@ ios_base& noshowpos(ios_base& str);
 
 有关使用 `noshowpos` 的示例，请参阅 [showpos](../standard-library/ios-functions.md#showpos)。
 
-## <a name="noskipws"></a>noskipws
+## <a name="noskipws"></a> noskipws
 
 导致输入流读取空格。
 
@@ -496,7 +529,7 @@ ios_base& noskipws(ios_base& str);
 
 ### <a name="parameters"></a>参数
 
-*str*<br/>
+*str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
 
 ### <a name="return-value"></a>返回值
@@ -528,7 +561,7 @@ int main() {
 }
 ```
 
-## <a name="nounitbuf"></a>nounitbuf
+## <a name="nounitbuf"></a> nounitbuf
 
 导致缓冲区已满时缓冲和处理输出。
 
@@ -538,7 +571,7 @@ ios_base& nounitbuf(ios_base& str);
 
 ### <a name="parameters"></a>参数
 
-*str*<br/>
+*str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
 
 ### <a name="return-value"></a>返回值
@@ -551,7 +584,7 @@ ios_base& nounitbuf(ios_base& str);
 
 此操控器有效调用`str`。[unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::unitbuf`)，然后返回*str*。
 
-## <a name="nouppercase"></a>nouppercase
+## <a name="nouppercase"></a> nouppercase
 
 指定十六进制数字和科学计数法形式的指数以小写形式显示。
 
@@ -561,7 +594,7 @@ ios_base& nouppercase(ios_base& str);
 
 ### <a name="parameters"></a>参数
 
-*str*<br/>
+*str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
 
 ### <a name="return-value"></a>返回值
@@ -576,7 +609,7 @@ ios_base& nouppercase(ios_base& str);
 
 有关使用 `nouppercase` 的示例，请参阅 [uppercase](../standard-library/ios-functions.md#uppercase)。
 
-## <a name="oct"></a>oct
+## <a name="oct"></a> 年 10 月
 
 指定以八进制计数法形式显示整数变量。
 
@@ -586,7 +619,7 @@ ios_base& oct(ios_base& str);
 
 ### <a name="parameters"></a>参数
 
-*str*<br/>
+*str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
 
 ### <a name="return-value"></a>返回值
@@ -603,7 +636,7 @@ ios_base& oct(ios_base& str);
 
 请参阅[dec](../standard-library/ios-functions.md#dec)以举例说明如何使用`oct`。
 
-## <a name="right"></a>right
+## <a name="right"></a> 右侧
 
 导致宽度比输出宽度短的文本在流刷新过程中显示时带有右边距。
 
@@ -613,7 +646,7 @@ ios_base& right(ios_base& str);
 
 ### <a name="parameters"></a>参数
 
-*str*<br/>
+*str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
 
 ### <a name="return-value"></a>返回值
@@ -660,7 +693,7 @@ int main( )
                    5
 ```
 
-## <a name="scientific"></a>scientific
+## <a name="scientific"></a> 科学记数法
 
 导致使用科学记数法显示浮点数。
 
@@ -670,7 +703,7 @@ ios_base& scientific(ios_base& str);
 
 ### <a name="parameters"></a>参数
 
-*str*<br/>
+*str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
 
 ### <a name="return-value"></a>返回值
@@ -705,7 +738,7 @@ int main( )
 1.002300e+002
 ```
 
-## <a name="showbase"></a>showbase
+## <a name="showbase"></a> showbase
 
 指示显示数字所采用的进制。
 
@@ -715,7 +748,7 @@ ios_base& showbase(ios_base& str);
 
 ### <a name="parameters"></a>参数
 
-*str*<br/>
+*str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
 
 ### <a name="return-value"></a>返回值
@@ -759,7 +792,7 @@ int main( )
 144
 ```
 
-## <a name="showpoint"></a>showpoint
+## <a name="showpoint"></a> showpoint
 
 显示浮点数的整数部分和小数点右侧的数字，即使小数部分为零。
 
@@ -769,7 +802,7 @@ ios_base& showpoint(ios_base& str);
 
 ### <a name="parameters"></a>参数
 
-*str*<br/>
+*str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
 
 ### <a name="return-value"></a>返回值
@@ -786,7 +819,7 @@ ios_base& showpoint(ios_base& str);
 
 有关使用 `showpoint` 的示例，请参阅 [noshowpoint](../standard-library/ios-functions.md#noshowpoint)。
 
-## <a name="showpos"></a>showpos
+## <a name="showpos"></a> showpos
 
 导致正数显式带有符号。
 
@@ -796,7 +829,7 @@ ios_base& showpos(ios_base& str);
 
 ### <a name="parameters"></a>参数
 
-*str*<br/>
+*str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
 
 ### <a name="return-value"></a>返回值
@@ -831,7 +864,7 @@ int main( )
 +1
 ```
 
-## <a name="skipws"></a>skipws
+## <a name="skipws"></a> skipws
 
 导致输入流不读取空格。
 
@@ -841,7 +874,7 @@ ios_base& skipws(ios_base& str);
 
 ### <a name="parameters"></a>参数
 
-*str*<br/>
+*str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
 
 ### <a name="return-value"></a>返回值
@@ -883,7 +916,7 @@ Enter three characters: 1 2 3
 .3.
 ```
 
-## <a name="unitbuf"></a>unitbuf
+## <a name="unitbuf"></a> unitbuf
 
 导致在缓冲区未满时处理输出。
 
@@ -893,7 +926,7 @@ ios_base& unitbuf(ios_base& str);
 
 ### <a name="parameters"></a>参数
 
-*str*<br/>
+*str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
 
 ### <a name="return-value"></a>返回值
@@ -918,7 +951,7 @@ ios_base& uppercase(ios_base& str);
 
 ### <a name="parameters"></a>参数
 
-*str*<br/>
+*str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
 
 ### <a name="return-value"></a>返回值
@@ -958,7 +991,3 @@ int main( void )
 a
 A
 ```
-
-## <a name="see-also"></a>请参阅
-
-[\<ios>](../standard-library/ios.md)<br/>

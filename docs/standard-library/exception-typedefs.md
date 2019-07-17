@@ -6,18 +6,14 @@ f1_keywords:
 - exception/std::terminate_handler
 - exception/std::unexpected_handler
 ms.assetid: 2a338480-35e2-46f7-b223-52d4e84a5768
-ms.openlocfilehash: 98a7e8197a0d729ab3a4e9ec0daf55a28cdaeb2d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3904393096422a8986414a253d515342c7382f0
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412639"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246042"
 ---
 # <a name="ltexceptiongt-typedefs"></a>&lt;exception&gt; typedefs
-
-||||
-|-|-|-|
-|[exception_ptr](#exception_ptr)|[terminate_handler](#terminate_handler)|[unexpected_handler](#unexpected_handler)|
 
 ## <a name="exception_ptr"></a>  exception_ptr
 
@@ -43,7 +39,7 @@ typedef unspecified exception_ptr;
 
 可以使用相等 ( `==`) 和不相等 ( `!=`) 运算符比较两个 `exception_ptr` 对象。 这两个运算符不比较表示异常的 `EXCEPTION_RECORD` 结构的二进制值（位模式）， 而是比较 `exception_ptr` 对象的异常引用字段中的地址。 因此，null `exception_ptr` 和 NULL 值的比较结果为相等。
 
-## <a name="terminate_handler"></a>  terminate_handler
+## <a name="terminate_handler"></a> terminate_handler
 
 此类型描述适合用作 `terminate_handler` 的函数指针。
 
@@ -59,7 +55,7 @@ typedef void (*terminate_handler)();
 
 有关 `terminate_handler` 的使用示例，请参阅 [set_terminate](../standard-library/exception-functions.md#set_terminate)。
 
-## <a name="unexpected_handler"></a>  unexpected_handler
+## <a name="unexpected_handler"></a> unexpected_handler
 
 该类型描述适合用作 `unexpected_handler` 的函数指针。
 
@@ -70,7 +66,3 @@ typedef void (*unexpected_handler)();
 ### <a name="example"></a>示例
 
 有关 `unexpected_handler` 的使用示例，请参阅 [set_unexpected](../standard-library/exception-functions.md#set_unexpected)。
-
-## <a name="see-also"></a>请参阅
-
-[\<exception>](../standard-library/exception.md)<br/>

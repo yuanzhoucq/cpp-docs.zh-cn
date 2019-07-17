@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - list header
 ms.assetid: 2345823b-5612-44d8-95d3-aa96ed076d17
-ms.openlocfilehash: cfe6e8b4f75a3dbf824574654bfba83dcbbd8ba6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2c04bb73bfa379ea87ba4c950bf805931c16ba1
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413198"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245562"
 ---
 # <a name="ltlistgt"></a>&lt;list&gt;
 
@@ -24,9 +24,14 @@ ms.locfileid: "62413198"
 #include <list>
 ```
 
+> [!NOTE]
+> \<列表 > 库还使用`#include <initializer_list>`语句。
+
+## <a name="members"></a>成员
+
 ### <a name="operators"></a>运算符
 
-|运算符|描述|
+|||
 |-|-|
 |[operator!=](../standard-library/list-operators.md#op_neq)|测试运算符左侧的列表对象是否不等于右侧的列表对象。|
 |[operator<](../standard-library/list-operators.md#op_lt)|测试运算符左侧的列表对象是否小于右侧的列表对象。|
@@ -35,9 +40,15 @@ ms.locfileid: "62413198"
 |[operator>](../standard-library/list-operators.md#op_gt)|测试运算符左侧的列表对象是否大于右侧的列表对象。|
 |[operator>=](../standard-library/list-operators.md#op_gt_eq)|测试运算符左侧的列表对象是否大于或等于右侧的列表对象。|
 
+### <a name="functions"></a>函数
+
+|||
+|-|-|
+|[swap](../standard-library/list-functions.md#swap)|交换两个列表的元素。|
+
 ### <a name="classes"></a>类
 
-|类|描述|
+|||
 |-|-|
 |[list 类](../standard-library/list-class.md)|用于保持其元素为线性排列并允许在序列内任何位置上的高效插入和删除的序列容器的模板类。|
 

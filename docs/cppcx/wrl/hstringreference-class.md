@@ -1,11 +1,12 @@
 ---
 title: HStringReference 类
-ms.date: 09/25/2018
+ms.date: 07/15/2019
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference::CopyTo
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference::Get
+- corewrappers/Microsoft::WRL::Wrappers::GetRawBuffer
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference::HStringReference
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference::operator=
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference::operator==
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HStringReference::operator!= operator
 - Microsoft::WRL::Wrappers::HStringReference::operator< operator
 ms.assetid: 9bf823b1-17eb-4ac4-8c5d-27d27c7a4150
-ms.openlocfilehash: b9d2e49d0a7e1321e2259c06e1313a90d55dc90e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c17a9df8fcc7d849bbbd4f613bf5dce6dae8983
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398272"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894392"
 ---
 # <a name="hstringreference-class"></a>HStringReference 类
 
@@ -56,6 +57,7 @@ class HStringReference;
 ----------------------------------- | ------------------------------------------------------------------
 [HStringReference::CopyTo](#copyto) | 复制当前`HStringReference`到 HSTRING 对象的对象。
 [HStringReference::Get](#get)       | 检索基础 HSTRING 句柄的值。
+[HStringReference::GetRawBuffer](#getrawbuffer) | 检索指向基础字符串数据。
 
 ### <a name="public-operators"></a>公共运算符
 
@@ -107,6 +109,21 @@ HSTRING Get() const throw()
 
 基础 HSTRING 句柄的值。
 
+## <a name="getrawbuffer"></a>HStringReference::GetRawBuffer
+
+检索指向基础字符串数据。
+
+```cpp
+const wchar_t* GetRawBuffer(unsigned int* length) const;
+```
+### <a name="parameters"></a>参数
+
+*长度*指针，指向**int**变量来接收数据的长度。
+
+### <a name="return-value"></a>返回值
+
+一个**const**基础字符串数据的指针。
+
 ## <a name="hstringreference"></a>Hstringreference:: Hstringreference
 
 初始化 `HStringReference` 类的新实例。
@@ -130,7 +147,7 @@ HStringReference(HStringReference&& other) throw();
 *str*<br/>
 对宽字符串的引用。
 
-len<br/>
+len <br/>
 最大长度*str*要在此操作中使用的参数缓冲区。 如果*len*参数未指定，整个*str*使用参数。 如果*len*大于*sizeDest*， *len*设置为*sizeDest*-1。
 
 *other*<br/>
@@ -184,7 +201,7 @@ inline bool operator==(
 *lhs*<br/>
 要比较的第一个参数。 *lhs*可以是`HStringReference`对象或 HSTRING 句柄。
 
-*rhs*<br/>
+rhs <br/>
 要比较的第二个参数。  *rhs*可以是`HStringReference`对象或 HSTRING 句柄。
 
 ### <a name="return-value"></a>返回值
@@ -214,7 +231,7 @@ inline bool operator!=(
 *lhs*<br/>
 要比较的第一个参数。 *lhs*可以是`HStringReference`对象或 HSTRING 句柄。
 
-*rhs*<br/>
+rhs <br/>
 要比较的第二个参数。  *rhs*可以是`HStringReference`对象或 HSTRING 句柄。
 
 ### <a name="return-value"></a>返回值
@@ -236,7 +253,7 @@ inline bool operator<(
 *lhs*<br/>
 要比较的第一个参数。 *lhs*可以是对引用`HStringReference`。
 
-*rhs*<br/>
+rhs <br/>
 要比较的第二个参数。  *rhs*可以是对引用`HStringReference`。
 
 ### <a name="return-value"></a>返回值

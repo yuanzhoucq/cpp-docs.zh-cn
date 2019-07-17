@@ -70,12 +70,12 @@ helpviewer_keywords:
 - std::numeric_limits [C++], tinyness_before
 - std::numeric_limits [C++], traps
 ms.assetid: 9e817177-0e91-48e6-b680-0531c4b26625
-ms.openlocfilehash: 861850f192281d64ef02ec4a241315c05cd3318f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc9f9bd1157af96ced3c901309f19dcaa5dadab3
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371511"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246707"
 ---
 # <a name="numericlimits-class"></a>numeric_limits 类
 
@@ -85,13 +85,13 @@ ms.locfileid: "62371511"
 
 ```cpp
 template <class Type>
-class numeric_limits
+    class numeric_limits
 ```
 
 ### <a name="parameters"></a>参数
 
-*Type*<br/>
-正在测试、查询或设置其属性的基础元素数据类型。
+*类型*\
+正在测试、查询或设置其属性的基础元素数据类型。 *类型*也可以声明**const**，**易失性**，或**const 易失性**。
 
 ## <a name="remarks"></a>备注
 
@@ -99,7 +99,7 @@ class numeric_limits
 
 对于任意专用化，所有成员均无有意义的值。 不具有有意义的值的成员对象将存储零 (或**false**)，并不返回有意义的值的成员函数返回`Type(0)`。
 
-### <a name="static-functions-and-constants"></a>静态函数和常数
+## <a name="static-functions-and-constants"></a>静态函数和常数
 
 |||
 |-|-|
@@ -110,7 +110,7 @@ class numeric_limits
 |[has_denorm](#has_denorm)|测试类型是否允许非规范化值。|
 |[has_denorm_loss](#has_denorm_loss)|测试是否将准确度降低检测为非规范化损失，而不是不准确结果。|
 |[has_infinity](#has_infinity)|测试某一类型是否能够表示正无穷。|
-|[has_quiet_NaN](#has_quiet_nan)|测试某一类型是否能表示非信号性沉寂非数值 (NAN)。|
+|[has_quiet_NaN](#has_quiet_nan)|测试类型是否具有实现无提示的表示形式不是数字 (NAN)，这非信号。|
 |[has_signaling_NaN](#has_signaling_nan)|测试某一类型是否能表示信号性沉寂非数值 (NAN)。|
 |[infinity](#infinity)|某一类型用于表示正无穷的值（若适用）。|
 |[is_bounded](#is_bounded)|测试某一类型可表示的值设置是否为有限。|
@@ -136,13 +136,7 @@ class numeric_limits
 |[tinyness_before](#tinyness_before)|测试某个类型是否可在舍入某个值之前确定该值太小而无法表示为规范化值。|
 |[traps](#traps)|测试是否为某个类型实现了报告算术异常的捕获。|
 
-## <a name="requirements"></a>要求
-
-**标头：**\<limits>
-
-**命名空间：** std
-
-## <a name="denorm_min"></a>  numeric_limits::denorm_min
+### <a name="denorm_min"></a> denorm_min
 
 返回最小的非规范化非零值。
 
@@ -150,17 +144,17 @@ class numeric_limits
 static constexpr Type denorm_min() throw();
 ```
 
-### <a name="return-value"></a>返回值
+#### <a name="return-value"></a>返回值
 
 最小的非规范化非零值。
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 **长双精度**等同于**双**为C++编译器。
 
 该函数返回类型，这是相同的最小值作为[最小](#min)如果[has_denorm](#has_denorm)是否不等于`denorm_present`。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // numeric_limits_denorm_min.cpp
@@ -201,7 +195,7 @@ for long double objects is: 4.94066e-324
 0
 ```
 
-## <a name="digits"></a>  numeric_limits::digits
+### <a name="digits"></a> 数字
 
 返回类型可以表示而不会降低精度的基数数字的位数。
 
@@ -209,15 +203,15 @@ for long double objects is: 4.94066e-324
 static constexpr int digits = 0;
 ```
 
-### <a name="return-value"></a>返回值
+#### <a name="return-value"></a>返回值
 
 该类型可以表示且不会降低精度的基数数字的位数。
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 该成员存储该类型可以表示且无需更改的基数数字的位数，这是预定义的整数类型的任何符号位以外的比特数或预定义的浮点类型的尾数的位数。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // numeric_limits_digits_min.cpp
@@ -245,7 +239,7 @@ int main( )
 63
 ```
 
-## <a name="digits10"></a>  numeric_limits::digits10
+### <a name="digits10"></a> digits10
 
 返回类型可以表示而不会降低精度的十进制数字的位数。
 
@@ -253,11 +247,11 @@ int main( )
 static constexpr int digits10 = 0;
 ```
 
-### <a name="return-value"></a>返回值
+#### <a name="return-value"></a>返回值
 
 该类型可以表示且不会降低精度的十进制数字的位数。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // numeric_limits_digits10.cpp
@@ -289,7 +283,7 @@ int main( )
 The float is; 100000000
 ```
 
-## <a name="epsilon"></a>  numeric_limits::epsilon
+### <a name="epsilon"></a> epsilon
 
 该函数返回数据类型可以表示的 1 与大于 1 的最小值之间的差值。
 
@@ -297,15 +291,15 @@ The float is; 100000000
 static constexpr Type epsilon() throw();
 ```
 
-### <a name="return-value"></a>返回值
+#### <a name="return-value"></a>返回值
 
 数据类型可以表示的 1 与大于 1 的最小值之间的差值。
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 类型 **float** 的值为 FLT_EPSILON。 一个类型的 `epsilon` 为最小的正浮点数 *N*，以便可表示 *N* + `epsilon` + *N*。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // numeric_limits_epsilon.cpp
@@ -341,7 +335,7 @@ The difference between 1 and the smallest value greater than 1
 for long double objects is: 2.22045e-016
 ```
 
-## <a name="has_denorm"></a>  numeric_limits::has_denorm
+### <a name="has_denorm"></a> has_denorm
 
 测试类型是否允许非规范化值。
 
@@ -349,15 +343,15 @@ for long double objects is: 2.22045e-016
 static constexpr float_denorm_style has_denorm = denorm_absent;
 ```
 
-### <a name="return-value"></a>返回值
+#### <a name="return-value"></a>返回值
 
 **const**`float_denorm_style` 类型的枚举值，指示该类型是否允许非规范化的值。
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 此成员存储`denorm_present`的浮点类型具有非规范化的值有效地指数位的可变数量。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // numeric_limits_has_denorm.cpp
@@ -387,7 +381,7 @@ Whether double objects allow denormalized values: 1
 Whether long int objects allow denormalized values: 0
 ```
 
-## <a name="has_denorm_loss"></a>  numeric_limits::has_denorm_loss
+### <a name="has_denorm_loss"></a> has_denorm_loss
 
 测试是否将准确度降低检测为非规范化损失，而不是不准确结果。
 
@@ -395,15 +389,15 @@ Whether long int objects allow denormalized values: 0
 static constexpr bool has_denorm_loss = false;
 ```
 
-### <a name="return-value"></a>返回值
+#### <a name="return-value"></a>返回值
 
 如果将准确度损失检测为非规范化损失，则为 **true**；反之则为 **false**。
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 该成员将确定值是否已损失准确性的类型存储为 true，因为将该值作为非规范化结果传递（该值太小，从而无法表示为规范化的值）或者因为该值不精确（与不受指数范围和精度限制的结果不同），具有 IEC 559 浮点表示形式的选项可能会影响某些结果。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // numeric_limits_has_denorm_loss.cpp
@@ -433,7 +427,7 @@ Whether double objects can detect denormalized loss: 1
 Whether long int objects can detect denormalized loss: 0
 ```
 
-## <a name="has_infinity"></a>  numeric_limits::has_infinity
+### <a name="has_infinity"></a> has_infinity
 
 测试某一类型是否能够表示正无穷。
 
@@ -441,15 +435,15 @@ Whether long int objects can detect denormalized loss: 0
 static constexpr bool has_infinity = false;
 ```
 
-### <a name="return-value"></a>返回值
+#### <a name="return-value"></a>返回值
 
 如果该类型能够表示正无穷，则为 **true**；反之则为 **false**。
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 如果 [is_iec559](#is_iec559) 为 **true**，则该成员返回 **true**。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // numeric_limits_has_infinity.cpp
@@ -479,7 +473,7 @@ Whether double objects have infinity: 1
 Whether long int objects have infinity: 0
 ```
 
-## <a name="has_quiet_nan"></a>  numeric_limits::has_quiet_NaN
+### <a name="has_quiet_nan"></a> has_quiet_NaN
 
 测试某一类型是否能表示非信号性沉寂非数值 (NAN)。
 
@@ -487,15 +481,15 @@ Whether long int objects have infinity: 0
 static constexpr bool has_quiet_NaN = false;
 ```
 
-### <a name="return-value"></a>返回值
+#### <a name="return-value"></a>返回值
 
 如果该**类型**能够表示静默 NAN，则为 **true**；反之则为 **false**。
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 静默 NAN 为非数值的编码，不表示其在表达式中的存在。 如果 [is_iec559](#is_iec559) 为 true，则返回值为 **true**。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // numeric_limits_has_quiet_nan.cpp
@@ -525,7 +519,7 @@ Whether double objects have quiet_NaN: 1
 Whether long int objects have quiet_NaN: 0
 ```
 
-## <a name="has_signaling_nan"></a>  numeric_limits::has_signaling_NaN
+### <a name="has_signaling_nan"></a> has_signaling_NaN
 
 测试某一类型是否能表示信号性沉寂非数值 (NAN)。
 
@@ -533,15 +527,15 @@ Whether long int objects have quiet_NaN: 0
 static constexpr bool has_signaling_NaN = false;
 ```
 
-### <a name="return-value"></a>返回值
+#### <a name="return-value"></a>返回值
 
 如果该类型能够表示信号 NAN，则为 **true**；反之则为 **false**。
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 信号 NAN为非数值的编码，表示其在表达式中的存在。 如果 [is_iec559](#is_iec559) 为 true，则返回值为 **true**。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // numeric_limits_has_signaling_nan.cpp
@@ -571,7 +565,7 @@ Whether double objects have a signaling_NaN: 1
 Whether long int objects have a signaling_NaN: 0
 ```
 
-## <a name="infinity"></a>  numeric_limits::infinity
+### <a name="infinity"></a> 无穷大
 
 用于表示某一类型的正无穷的值（若适用）。
 
@@ -579,15 +573,15 @@ Whether long int objects have a signaling_NaN: 0
 static constexpr Type infinity() throw();
 ```
 
-### <a name="return-value"></a>返回值
+#### <a name="return-value"></a>返回值
 
 用于表示某一类型的正无穷的值（若适用）。
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 只有 [has_infinity](#has_infinity) 为 **true**，返回值才有意义。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // numeric_limits_infinity.cpp
@@ -625,7 +619,7 @@ The representation of infinity for type double is: inf
 The representation of infinity for type long double is: inf
 ```
 
-## <a name="is_bounded"></a>  numeric_limits::is_bounded
+### <a name="is_bounded"></a> is_bounded
 
 测试某一类型可表示的值设置是否为有限。
 
@@ -633,15 +627,15 @@ The representation of infinity for type long double is: inf
 static constexpr bool is_bounded = false;
 ```
 
-### <a name="return-value"></a>返回值
+#### <a name="return-value"></a>返回值
 
 如果该类型具有有限的可表示的值，则为 **true**；反之则为 **false**。
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 所有预定义的类型都具有有限的可表示的值，并且返回 **true**。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // numeric_limits_is_bounded.cpp
@@ -679,7 +673,7 @@ Whether long int objects have bounded set of representable values: 1
 Whether unsigned char objects have bounded set of representable values: 1
 ```
 
-## <a name="is_exact"></a>  numeric_limits::is_exact
+### <a name="is_exact"></a> is_exact
 
 测试针对某一类型进行的计算是否不产生舍入错误。
 
@@ -687,15 +681,15 @@ Whether unsigned char objects have bounded set of representable values: 1
 static constexpr bool is_exact = false;
 ```
 
-### <a name="return-value"></a>返回值
+#### <a name="return-value"></a>返回值
 
 如果计算不产生舍入错误，则为 **true**；反之则为 **false**。
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 所有预定义的整数类型都具有其值的精确表示形式，并且返回 **false**。 定点的或合理的表示形式也被视为准确的表示形式，但浮点表示形式不是。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // numeric_limits_is_exact.cpp
@@ -733,7 +727,7 @@ Whether long int objects have calculations free of rounding errors: 1
 Whether unsigned char objects have calculations free of rounding errors: 1
 ```
 
-## <a name="is_iec559"></a>  numeric_limits::is_iec559
+### <a name="is_iec559"></a> is_iec559
 
 测试某一类型是否符合 IEC 559 标准。
 
@@ -741,15 +735,15 @@ Whether unsigned char objects have calculations free of rounding errors: 1
 static constexpr bool is_iec559 = false;
 ```
 
-### <a name="return-value"></a>返回值
+#### <a name="return-value"></a>返回值
 
 如果该类型符合 IEC 559 标准，则为 **true**；反之则为 **false**。
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 IEC 559 是一个国际标准，用于表示浮点值，在美国也称为 IEEE 754。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // numeric_limits_is_iec559.cpp
@@ -783,7 +777,7 @@ Whether int objects conform to iec559 standards: 0
 Whether unsigned char objects conform to iec559 standards: 0
 ```
 
-## <a name="is_integer"></a>  numeric_limits::is_integer
+### <a name="is_integer"></a> is_integer
 
 测试某一类型是否具有具有整数表示形式。
 
@@ -791,15 +785,15 @@ Whether unsigned char objects conform to iec559 standards: 0
 static constexpr bool is_integer = false;
 ```
 
-### <a name="return-value"></a>返回值
+#### <a name="return-value"></a>返回值
 
 如果该类型具有整数表示形式，则为 **true**；反之则为 **false**。
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 所有预定义的整数类型都有整数表示形式。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // numeric_limits_is_integer.cpp
@@ -833,7 +827,7 @@ Whether int objects have an integral representation: 1
 Whether unsigned char objects have an integral representation: 1
 ```
 
-## <a name="is_modulo"></a>  numeric_limits::is_modulo
+### <a name="is_modulo"></a> is_modulo
 
 测试某一**类型**是否具有取模表示形式。
 
@@ -841,15 +835,15 @@ Whether unsigned char objects have an integral representation: 1
 static constexpr bool is_modulo = false;
 ```
 
-### <a name="return-value"></a>返回值
+#### <a name="return-value"></a>返回值
 
 如果该类型具有取模表示形式，则为 **true**；反之则为 **false**。
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 取模表示形式是一种将所有结果减去某些值的取模结果的表示形式。 所有预定义的无符号整数类型都有取模表示形式。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // numeric_limits_is_modulo.cpp
@@ -883,7 +877,7 @@ Whether signed char objects have a modulo representation: 1
 Whether unsigned char objects have a modulo representation: 1
 ```
 
-## <a name="is_signed"></a>  numeric_limits::is_signed
+### <a name="is_signed"></a> is_signed
 
 测试某一类型是否具有带符号的表示形式。
 
@@ -891,15 +885,15 @@ Whether unsigned char objects have a modulo representation: 1
 static constexpr bool is_signed = false;
 ```
 
-### <a name="return-value"></a>返回值
+#### <a name="return-value"></a>返回值
 
 如果该类型具有带符号的表示形式，则为 **true**；反之则为 **false**。
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 该成员将具有带符号的表示形式的类型存储为 true，这种情况适用于所有预定义的浮点类型和带符号的整数类型。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // numeric_limits_is_signaled.cpp
@@ -933,7 +927,7 @@ Whether signed char objects have a signed representation: 1
 Whether unsigned char objects have a signed representation: 0
 ```
 
-## <a name="is_specialized"></a>  numeric_limits::is_specialized
+### <a name="is_specialized"></a> is_specialized
 
 测试某一类型是否具有在模板类 `numeric_limits`中定义的显式专用化。
 
@@ -941,15 +935,15 @@ Whether unsigned char objects have a signed representation: 0
 static constexpr bool is_specialized = false;
 ```
 
-### <a name="return-value"></a>返回值
+#### <a name="return-value"></a>返回值
 
 如果该类型具有在模板类中定义的显式专用化，则为 **true**；反之则为 **false**。
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 指针以外的所有标量类型都具有为模板类 `numeric_limits` 定义的显式专用化。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // numeric_limits_is_specialized.cpp
@@ -987,7 +981,7 @@ Whether int objects have an explicit specialization in the class: 1
 Whether int* objects have an explicit specialization in the class: 0
 ```
 
-## <a name="lowest"></a>  numeric_limits::lowest
+### <a name="lowest"></a> 最低
 
 返回最小的负有限值。
 
@@ -995,15 +989,15 @@ Whether int* objects have an explicit specialization in the class: 0
 static constexpr Type lowest() throw();
 ```
 
-### <a name="return-value"></a>返回值
+#### <a name="return-value"></a>返回值
 
 返回最小的负有限值。
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 返回最小的类型的有限值 (通常是`min()`为整数类型和`-max()`对浮点类型)。 返回值有意义如果`is_bounded`是**true**。
 
-## <a name="max"></a>  numeric_limits::max
+### <a name="max"></a> 最大值
 
 返回某个类型的最大有限值。
 
@@ -1011,15 +1005,15 @@ static constexpr Type lowest() throw();
 static constexpr Type max() throw();
 ```
 
-### <a name="return-value"></a>返回值
+#### <a name="return-value"></a>返回值
 
 某个类型的最大有限值。
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 最大有限值为类型为 INT_MAX **int** flt_max **float**。 当 [is_bounded](#is_bounded) 为 **true** 时，返回值有意义。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // numeric_limits_max.cpp
@@ -1045,7 +1039,7 @@ int main() {
 }
 ```
 
-## <a name="max_digits10"></a>  numeric_limits::max_digits10
+### <a name="max_digits10"></a> max_digits10
 
 返回所需的十进制数字的位数以确保类型的两个非重复值具有不同的十进制表示形式。
 
@@ -1053,15 +1047,15 @@ int main() {
 static constexpr int max_digits10 = 0;
 ```
 
-### <a name="return-value"></a>返回值
+#### <a name="return-value"></a>返回值
 
 返回所需的十进制数字的位数以确保类型的两个非重复值具有不同的十进制表示形式。
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 成员存储所需的十进制数字的位数以确保类型的两个非重复值具有不同的十进制表示形式。
 
-## <a name="max_exponent"></a>  numeric_limits::max_exponent
+### <a name="max_exponent"></a> max_exponent
 
 返回最大正整数指数，当计算基数的该指数次幂时，浮点类型可将其表示为有限值。
 
@@ -1069,15 +1063,15 @@ static constexpr int max_digits10 = 0;
 static constexpr int max_exponent = 0;
 ```
 
-### <a name="return-value"></a>返回值
+#### <a name="return-value"></a>返回值
 
 可由该类型表示的以整型基数为底数的最大指数。
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 成员函数返回仅对浮点类型有意义。 `max_exponent` 是类型 **float** 的值 FLT_MAX_EXP。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // numeric_limits_max_exponent.cpp
@@ -1107,7 +1101,7 @@ The maximum radix-based exponent for type double is:  1024
 The maximum radix-based exponent for type long double is:  1024
 ```
 
-## <a name="max_exponent10"></a>  numeric_limits::max_exponent10
+### <a name="max_exponent10"></a> max_exponent10
 
 返回最大正整数指数，当计算 10 的该指数次幂时，浮点类型可将其表示为有限值。
 
@@ -1115,15 +1109,15 @@ The maximum radix-based exponent for type long double is:  1024
 static constexpr int max_exponent10 = 0;
 ```
 
-### <a name="return-value"></a>返回值
+#### <a name="return-value"></a>返回值
 
 可由该类型表示的以整型基数 10 为底数的最大指数。
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 成员函数返回仅对浮点类型有意义。 `max_exponent` 是类型 **float** 的值 FLT_MAX_10。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // numeric_limits_max_exponent10.cpp
@@ -1153,7 +1147,7 @@ The maximum base 10 exponent for type double is:  308
 The maximum base 10 exponent for type long double is:  308
 ```
 
-## <a name="min"></a>  numeric_limits::min
+### <a name="min"></a> 最小值
 
 返回某个类型的最小规范化值。
 
@@ -1161,15 +1155,15 @@ The maximum base 10 exponent for type long double is:  308
 static constexpr Type min() throw();
 ```
 
-### <a name="return-value"></a>返回值
+#### <a name="return-value"></a>返回值
 
 该类型的最小规范化值。
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 最小规范化的值为类型 INT_MIN **int**类型为 flt_min **float**。 返回值有意义如果[is_bounded](#is_bounded)是**true**或者，如果[is_signed](#is_signed)是**false**。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // numeric_limits_min.cpp
@@ -1203,7 +1197,7 @@ The minimum value for type int is:  -2147483648
 The minimum value for type short int is:  -32768
 ```
 
-## <a name="min_exponent"></a>  numeric_limits::min_exponent
+### <a name="min_exponent"></a> min_exponent
 
 返回最大负整数指数，当计算基数的该指数次幂时，浮点类型可将其表示为有限值。
 
@@ -1211,15 +1205,15 @@ The minimum value for type short int is:  -32768
 static constexpr int min_exponent = 0;
 ```
 
-### <a name="return-value"></a>返回值
+#### <a name="return-value"></a>返回值
 
 可由该类型表示的以整型基数为底数的最小指数。
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 成员函数仅对浮点类型有意义。 `min_exponent` 是类型 **float** 的值 FLT_MIN_EXP。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // numeric_limits_min_exponent.cpp
@@ -1249,7 +1243,7 @@ The minimum radix-based exponent for type double is:  -1021
 The minimum radix-based exponent for type long double is:  -1021
 ```
 
-## <a name="min_exponent10"></a>  numeric_limits::min_exponent10
+### <a name="min_exponent10"></a> min_exponent10
 
 返回最大负整数指数，当计算 10 的该指数次幂时，浮点类型可将其表示为有限值。
 
@@ -1257,15 +1251,15 @@ The minimum radix-based exponent for type long double is:  -1021
 static constexpr int min_exponent10 = 0;
 ```
 
-### <a name="return-value"></a>返回值
+#### <a name="return-value"></a>返回值
 
 可由该类型表示的以整型基数 10 为底数的最小指数。
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 成员函数仅对浮点类型有意义。 `min_exponent10` 是类型 **float** 的值 FLT_MIN_10_EXP。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // numeric_limits_min_exponent10.cpp
@@ -1295,7 +1289,7 @@ The minimum base 10 exponent for type double is:  -307
 The minimum base 10 exponent for type long double is:  -307
 ```
 
-## <a name="quiet_nan"></a>  numeric_limits::quiet_NaN
+### <a name="quiet_nan"></a> quiet_NaN
 
 返回类型的静默非数值 (NAN) 表示形式。
 
@@ -1303,15 +1297,15 @@ The minimum base 10 exponent for type long double is:  -307
 static constexpr Type quiet_NaN() throw();
 ```
 
-### <a name="return-value"></a>返回值
+#### <a name="return-value"></a>返回值
 
 该类型的静默 NAN 的表示形式。
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 只有 [has_quiet_NaN](#has_quiet_nan) 为 **true**，返回值才有意义。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // numeric_limits_quiet_nan.cpp
@@ -1341,7 +1335,7 @@ The quiet NaN for type int is:  0
 The quiet NaN for type long double is:  1.#QNAN
 ```
 
-## <a name="radix"></a>  numeric_limits::radix
+### <a name="radix"></a> 基数
 
 返回用于表示类型的整数底数（称为基数）。
 
@@ -1349,15 +1343,15 @@ The quiet NaN for type long double is:  1.#QNAN
 static constexpr int radix = 0;
 ```
 
-### <a name="return-value"></a>返回值
+#### <a name="return-value"></a>返回值
 
 表示该类型的整型底数。
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 对于预定义的整数类型，底数为 2，并且计算了该底数的指数；对于预定义的浮点类型，则为 FLT_RADIX。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // numeric_limits_radix.cpp
@@ -1387,7 +1381,7 @@ The base for type int is:  2
 The base for type long double is:  2
 ```
 
-## <a name="round_error"></a>  numeric_limits::round_error
+### <a name="round_error"></a> round_error
 
 返回类型的最大舍入误差值。
 
@@ -1395,11 +1389,11 @@ The base for type long double is:  2
 static constexpr Type round_error() throw();
 ```
 
-### <a name="return-value"></a>返回值
+#### <a name="return-value"></a>返回值
 
 该类型的最大舍入误差值。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // numeric_limits_round_error.cpp
@@ -1429,7 +1423,7 @@ The maximum rounding error for type int is:  0
 The maximum rounding error for type long double is:  0.5
 ```
 
-## <a name="round_style"></a>  numeric_limits::round_style
+### <a name="round_style"></a> round_style
 
 返回一个值，该值描述可供实现选择用于将浮点值舍入为整数值的各种方法。
 
@@ -1437,17 +1431,17 @@ The maximum rounding error for type long double is:  0.5
 static constexpr float_round_style round_style = round_toward_zero;
 ```
 
-### <a name="return-value"></a>返回值
+#### <a name="return-value"></a>返回值
 
 用于描述舍入样式的 `float_round_style` 枚举中的值。
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 该成员存储一个值，以描述可供实现选择用于将浮点值舍入为整数值的各种方法。
 
 在此实现中对舍入样式进行硬编码，因此，即使通过不同的舍入模式启动该程序，也不会更改该值。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // numeric_limits_round_style.cpp
@@ -1476,7 +1470,7 @@ The rounding style for a double type is now: 1
 The rounding style for an int type is: 0
 ```
 
-## <a name="signaling_nan"></a>  numeric_limits::signaling_NaN
+### <a name="signaling_nan"></a> signaling_NaN
 
 返回类型的信令非数值 (NAN) 表示形式。
 
@@ -1484,15 +1478,15 @@ The rounding style for an int type is: 0
 static constexpr Type signaling_NaN() throw();
 ```
 
-### <a name="return-value"></a>返回值
+#### <a name="return-value"></a>返回值
 
 该类型的信号 NAN 的表示形式。
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 只有 [has_signaling_NaN](#has_signaling_nan) 为 **true**，返回值才有意义。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // numeric_limits_signaling_nan.cpp
@@ -1516,7 +1510,7 @@ int main( )
 }
 ```
 
-## <a name="tinyness_before"></a>  numeric_limits::tinyness_before
+### <a name="tinyness_before"></a> tinyness_before
 
 测试某个类型是否可在舍入某个值之前确定该值太小而无法表示为规范化值。
 
@@ -1524,15 +1518,15 @@ int main( )
 static constexpr bool tinyness_before = false;
 ```
 
-### <a name="return-value"></a>返回值
+#### <a name="return-value"></a>返回值
 
 **true**如果类型可以在舍入; 之前检测微小的值**false**如果不能。
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 将可以检测到微小值的类型包含为具有 IEC 559 浮点表示形式的选项，并且其实现可能会影响某些结果。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // numeric_limits_tinyness_before.cpp
@@ -1566,7 +1560,7 @@ Whether long int types can detect tinyness before rounding: 0
 Whether unsigned char types can detect tinyness before rounding: 0
 ```
 
-## <a name="traps"></a>  numeric_limits::traps
+### <a name="traps"></a> 陷阱
 
 测试是否为某个类型实现了报告算术异常的捕获。
 
@@ -1574,11 +1568,11 @@ Whether unsigned char types can detect tinyness before rounding: 0
 static constexpr bool traps = false;
 ```
 
-### <a name="return-value"></a>返回值
+#### <a name="return-value"></a>返回值
 
 如果已实现该类型的捕获，则为 **true**；反之则为 **false**。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // numeric_limits_traps.cpp
@@ -1611,7 +1605,3 @@ Whether double types have implemented trapping: 1
 Whether long int types have implemented trapping: 0
 Whether unsigned char types have implemented trapping: 0
 ```
-
-## <a name="see-also"></a>请参阅
-
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

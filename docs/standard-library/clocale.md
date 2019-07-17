@@ -6,26 +6,51 @@ f1_keywords:
 helpviewer_keywords:
 - clocale header
 ms.assetid: 5bde3e01-cf67-4f1f-a383-447ec814d00e
-ms.openlocfilehash: 5ca899282891f26221ca5b786debfcaee114d0b2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 624a1afdbe0e73c81a324273836eff6b89705236
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386208"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244758"
 ---
 # <a name="ltclocalegt"></a>&lt;clocale&gt;
 
 包含标准 C 库标头 \<locale.h> 并将关联名称添加到 `std` 命名空间。
 
-## <a name="syntax"></a>语法
+## <a name="requirements"></a>要求
 
-```cpp
-#include <clocale>
-```
+**标头：** \<clocale >
+
+**命名空间：** std
 
 ## <a name="remarks"></a>备注
 
 包含该标头还将确保使用标准 C 库标头中的外部链接声明的名称在 `std` 命名空间中声明。
+
+## <a name="constants"></a>常量
+
+```cpp
+#define NULL see below
+#define LC_ALL see below
+#define LC_COLLATE see below
+#define LC_CTYPE see below
+#define LC_MONETARY see below
+#define LC_NUMERIC see below
+#define LC_TIME see below
+```
+
+## <a name="structures"></a>结构
+
+```cpp
+struct lconv;
+```
+
+## <a name="functions"></a>函数
+
+```cpp
+char* setlocale(int category, const char* locale);
+lconv* localeconv();
+```
 
 ## <a name="see-also"></a>请参阅
 

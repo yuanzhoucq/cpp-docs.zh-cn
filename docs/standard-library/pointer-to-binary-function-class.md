@@ -7,12 +7,12 @@ helpviewer_keywords:
 - pointer_to_binary_function function
 - pointer_to_binary_function class
 ms.assetid: fb50599f-bcb3-4076-a669-6dcc3eb189a5
-ms.openlocfilehash: 88d38be258c6ceb1054e0d31cc52e4d8d25186ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fcc643d7569bd4f71b11249babdb49ef1362dc8b
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370308"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240496"
 ---
 # <a name="pointertobinaryfunction-class"></a>pointer_to_binary_function 类
 
@@ -25,7 +25,6 @@ template <class Arg1, class Arg2, class Result>
 class pointer_to_binary_function
     : public binary_function <Arg1, Arg2, Result>
 {
-public:
     explicit pointer_to_binary_function(
         Result(*pfunc)(Arg1, Arg2));
     Result operator()(Arg1 left, Arg2 right) const;
@@ -34,13 +33,13 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*pfunc*<br/>
+*pfunc*\
 要转换的二元函数。
 
-*left*<br/>
+*左侧*\
 对其调用 *\*pfunc* 的左侧对象。
 
-*right*<br/>
+*右侧*\
 对其调用 *\*pfunc* 的右侧对象。
 
 ## <a name="return-value"></a>返回值
@@ -54,13 +53,3 @@ public:
 ## <a name="example"></a>示例
 
 很少直接使用 `pointer_to_binary_function` 的构造函数。 有关如何声明和使用 `pointer_to_binary_function` 适配器谓词的示例，请参阅帮助程序函数 [ptr_fun](../standard-library/functional-functions.md#ptr_fun)。
-
-## <a name="requirements"></a>要求
-
-**标头：**\<functional>
-
-**命名空间：** std
-
-## <a name="see-also"></a>请参阅
-
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)<br/>

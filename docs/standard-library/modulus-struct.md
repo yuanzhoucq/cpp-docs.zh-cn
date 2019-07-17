@@ -7,12 +7,12 @@ helpviewer_keywords:
 - modulus class
 - modulus struct
 ms.assetid: 86d342f7-b7b1-46a4-b0bb-6b7ae827369b
-ms.openlocfilehash: 5b0488fbd6d943281de9eafdd33accf0375be17d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 20f2070c5b835d67e06d64a0a1b05141f08cf373
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371628"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246796"
 ---
 # <a name="modulus-struct"></a>modulus 结构
 
@@ -39,12 +39,13 @@ struct modulus<void>
 
 ### <a name="parameters"></a>参数
 
-*类型*， *T*， *U*支持任何类型`operator%`接受指定或推断类型的操作数。
+*类型*， *T*， *U*\
+支持 `operator%` 接受指定或推断类型的操作数的任何类型。
 
-左侧<br/>
+*左侧*\
 取模运算的左操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*T*。
 
-右侧<br/>
+*右侧*\
 取模运算的右操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*U*。
 
 ## <a name="return-value"></a>返回值
@@ -103,21 +104,11 @@ int main( )
       cout << *Iter3 << " ";
    cout << ")" << endl;
 }
-/* Output:
+```
+
+```Output
 The vector v1 = ( 5 10 15 20 25 30 )
 The vector v2 = ( 3 6 9 12 15 18 )
 The element-wise remainders of the modular division
 are: ( 2 4 6 8 10 12 )
-*/
 ```
-
-## <a name="requirements"></a>要求
-
-**标头：**\<functional>
-
-**命名空间：** std
-
-## <a name="see-also"></a>请参阅
-
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)<br/>

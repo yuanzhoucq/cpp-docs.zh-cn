@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - cwctype header
 ms.assetid: 46476f95-b8c3-4ab2-a172-9a1be91124b7
-ms.openlocfilehash: 8478b839bb2fbe7f9780025b44c4bf14f7c357f4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f6a754a96200e235cfc278746b1f0e5fc4ce018d
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394073"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243622"
 ---
 # <a name="ltcwctypegt"></a>&lt;cwctype&gt;
 
@@ -26,6 +26,41 @@ ms.locfileid: "62394073"
 ## <a name="remarks"></a>备注
 
 包含该标头还将确保使用标准 C 库标头中的外部链接声明的名称在 `std` 命名空间中声明。
+
+## <a name="constants"></a>常量
+
+```cpp
+namespace std {
+    using wint_t = see below ;
+    using wctrans_t = see below ;
+    using wctype_t = see below ;
+}
+
+#define WEOF see below
+```
+
+## <a name="functions"></a>函数
+
+```cpp
+int iswalnum(wint_t wc);
+int iswalpha(wint_t wc);
+int iswblank(wint_t wc);
+int iswcntrl(wint_t wc);
+int iswdigit(wint_t wc);
+int iswgraph(wint_t wc);
+int iswlower(wint_t wc);
+int iswprint(wint_t wc);
+int iswpunct(wint_t wc);
+int iswspace(wint_t wc);
+int iswupper(wint_t wc);
+int iswxdigit(wint_t wc);
+int iswctype(wint_t wc, wctype_t desc);
+wctype_t wctype(const char* property);
+wint_t towlower(wint_t wc);
+wint_t towupper(wint_t wc);
+wint_t towctrans(wint_t wc, wctrans_t desc);
+wctrans_t wctrans(const char* property);
+```
 
 ## <a name="see-also"></a>请参阅
 

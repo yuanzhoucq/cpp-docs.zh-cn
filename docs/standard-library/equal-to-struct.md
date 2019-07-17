@@ -7,12 +7,12 @@ helpviewer_keywords:
 - equal_to function
 - equal_to struct
 ms.assetid: 8e4f2b50-b2db-48e3-b4cc-6cc03362c2a6
-ms.openlocfilehash: 9dc388c5e4248b6d0cd6ad4842be7252601dec13
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ac7c5a3ed8d85e6ea3ad46ec61c7968bc19cd15e
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413731"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245838"
 ---
 # <a name="equalto-struct"></a>equal_to 结构
 
@@ -39,12 +39,13 @@ struct equal_to<void>
 
 ### <a name="parameters"></a>参数
 
-*类型*， *T*， *U*支持任何类型`operator==`接受指定或推断类型的操作数。
+*类型*， *T*， *U*\
+支持 `operator==` 接受指定或推断类型的操作数的任何类型。
 
-左侧<br/>
+*左侧*\
 相等运算的左操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*T*。
 
-右侧<br/>
+*右侧*\
 相等运算的右操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*U*。
 
 ## <a name="return-value"></a>返回值

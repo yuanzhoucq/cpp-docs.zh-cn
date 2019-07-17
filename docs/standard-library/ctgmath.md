@@ -2,26 +2,26 @@
 title: '&lt;ctgmath&gt;'
 ms.date: 11/04/2016
 ms.assetid: ff521893-f445-4dc8-a2f6-699185bb7024
-ms.openlocfilehash: 64d72bb643e792fe39978d5c2e92e1bcf23cfc4f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 85099f3cb206dd791aade59bf9a531a714e68ac3
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394190"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246608"
 ---
 # <a name="ltctgmathgt"></a>&lt;ctgmath&gt;
 
-实际上包括 C++ 标准库标头 \<ccomplex> 和 \<cmath>，用于提供等同于 \<tgmath.h> 的泛型类型算术宏。
+实际上，包括C++标准库标头\<复杂 > 和\<cmath >，其中提供的泛型类型算术宏等效于\<tgmath.h >。
 
-## <a name="syntax"></a>语法
+## <a name="requirements"></a>要求
 
-```cpp
-#include <ctgmath>
-```
+**标头：** \<ctgmath >
+
+**命名空间：** std
 
 ## <a name="remarks"></a>备注
 
-标准 C 库标头 \<tgmath.h> 的功能通过 \<ccomplex> 和 \<cmath> 中的重载来提供。
+标准 C 库标头的功能\<tgmath.h > 中的重载提供\<复杂 > 和\<cmath >。
 
 包含该标头还将确保使用标准 C 库标头中的外部链接声明的名称在 `std` 命名空间中声明。
 

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - tuple class
 ms.assetid: c38749be-ae4d-41f3-98ea-6aa3250de9a3
-ms.openlocfilehash: 7e85ad445743cc02ba078eb3c09342f69915c09c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aca5cc90566fb1fa602b96568d4cda9dd5ab26b9
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279044"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68241826"
 ---
 # <a name="tuple-class"></a>tuple 类
 
@@ -22,7 +22,6 @@ ms.locfileid: "62279044"
 
 ```
 class tuple {
-public:
    tuple();
    explicit tuple(P1, P2, ..., PN); // 0 < N
    tuple(const tuple&);
@@ -37,12 +36,12 @@ public:
       tuple& operator=(const tuple<U1, U2, ..., UN>&);
    template <class U1, class U2>
       tuple& operator=(const pair<U1, U2>&); // N == 2
-   };
+};
 ```
 
 ### <a name="parameters"></a>参数
 
-*TN*<br/>
+*TN*\
 第 N 个元组元素的类型。
 
 ## <a name="remarks"></a>备注
@@ -117,13 +116,7 @@ The tuples in the vector are
 ( 3, 0.033, three ).
 ```
 
-## <a name="requirements"></a>要求
-
-**标头：**\<tuple>
-
-**命名空间：** std
-
-## <a name="op_eq"></a>tuple::operator=
+## <a name="op_eq"></a> 运算符 =
 
 分配一个 `tuple` 对象。
 
@@ -144,10 +137,10 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>参数
 
-*UN*<br/>
+*取消*\
 第 N 个复制的元组元素的类型。
 
-*right*<br/>
+*右侧*\
 要从其进行复制的元组。
 
 ### <a name="remarks"></a>备注
@@ -196,7 +189,7 @@ int main()
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -205,7 +198,7 @@ int main()
 x 4
 ```
 
-## <a name="tuple_swap"></a>tuple:swap
+## <a name="tuple_swap"></a> 交换
 
 交换两个元组的元素。
 
@@ -216,16 +209,17 @@ template <class... Types>
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
-|---------------|-----------------|
-|*left*|其元素将要进行交换与元组的元组*右*。|
-|*right*|其元素将要进行交换与元组的元组*左*。|
+*左侧*\
+其元素将要进行交换与元组的元组*右*。
+
+*右侧*\
+其元素将要进行交换与元组的元组*左*。
 
 ### <a name="remarks"></a>备注
 
 函数执行 `left.swap(right)`。
 
-## <a name="tuple"></a>tuple::tuple
+## <a name="tuple"></a> 元组
 
 构造 `tuple` 对象。
 
@@ -252,10 +246,10 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>参数
 
-*UN*<br/>
+*取消*\
 第 N 个复制的元组元素的类型。
 
-*right*<br/>
+*右侧*\
 要从其进行复制的元组。
 
 ### <a name="remarks"></a>备注
@@ -338,8 +332,3 @@ x 4
 0 1 2 3
 4 5 6 7
 ```
-
-## <a name="see-also"></a>请参阅
-
-[\<tuple>](../standard-library/tuple.md)<br/>
-[make_tuple](../standard-library/tuple-functions.md#make_tuple)<br/>

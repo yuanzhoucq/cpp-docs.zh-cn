@@ -1,6 +1,6 @@
 ---
 title: HString 类
-ms.date: 09/24/2018
+ms.date: 07/15/2019
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HString
@@ -8,6 +8,7 @@ f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HString::CopyTo
 - corewrappers/Microsoft::WRL::Wrappers::HString::Detach
 - corewrappers/Microsoft::WRL::Wrappers::HString::Get
+- corewrappers/Microsoft::WRL::Wrappers::HString::GetRawBuffer
 - corewrappers/Microsoft::WRL::Wrappers::HString::GetAddressOf
 - corewrappers/Microsoft::WRL::Wrappers::HString::HString
 - corewrappers/Microsoft::WRL::Wrappers::HString::IsValid
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HString::Set method
 - Microsoft::WRL::Wrappers::HString::~HString, destructor
 ms.assetid: 6709dd2e-8d72-4675-8ec7-1baa7d71854d
-ms.openlocfilehash: 19ef11a5d33e69bb77049e450df1b386528b7f7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 884efb2a69b05589ad9458148409533880073878
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398285"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894406"
 ---
 # <a name="hstring-class"></a>HString 类
 
@@ -76,6 +77,7 @@ Windows 运行时提供通过字符串的访问权限[HSTRING](/windows/desktop/
 [HString::Detach](#detach)               | 取消关联指定`HString`从其基础值的对象。
 [HString::Get](#get)                     | 检索基础 HSTRING 句柄的值。
 [HString::GetAddressOf](#getaddressof)   | 检索指向基础 HSTRING 句柄。
+[HString::GetRawBuffer](#getrawbuffer)   | 检索指向基础字符串数据。
 [HString::IsValid](#isvalid)             | 指示是否当前`HString`对象是否有效。
 [HString::MakeReference](#makereference) | 创建`HStringReference`从指定的字符串参数的对象。
 [HString::Release](#release)             | 删除基础字符串值，并初始化当前`HString`对象为空值。
@@ -182,6 +184,22 @@ HSTRING* GetAddressOf() throw()
 
 此操作后，将销毁基础 HSTRING 句柄的字符串值。
 
+## <a name="getrawbuffer"></a>HString::GetRawBuffer
+
+检索指向基础字符串数据。
+
+```cpp
+const wchar_t* GetRawBuffer(unsigned int* length) const;
+```
+### <a name="parameters"></a>参数
+
+*长度*指针，指向**int**变量来接收数据的长度。
+
+### <a name="return-value"></a>返回值
+
+一个**const**基础字符串数据的指针。
+
+
 ## <a name="hstring"></a>HString::HString
 
 初始化 `HString` 类的新实例。
@@ -240,7 +258,7 @@ template<unsigned int sizeDest>
 *str*<br/>
 对宽字符串的引用。
 
-len<br/>
+len <br/>
 最大长度*str*要在此操作中使用的参数缓冲区。 如果*len*参数未指定，整个*str*使用参数。
 
 ### <a name="return-value"></a>返回值
@@ -295,7 +313,7 @@ inline bool operator==(
 *lhs*<br/>
 要比较的第一个参数。 *lhs*可以是`HString`或`HStringReference`对象或 HSTRING 句柄。
 
-*rhs*<br/>
+rhs <br/>
 要比较的第二个参数。*rhs*可以是`HString`或`HStringReference`对象或 HSTRING 句柄。
 
 ### <a name="return-value"></a>返回值
@@ -328,7 +346,7 @@ inline bool operator!=( const HString& lhs,
 *lhs*<br/>
 要比较的第一个参数。 *lhs*可以是`HString`或`HStringReference`对象或 HSTRING 句柄。
 
-*rhs*<br/>
+rhs <br/>
 要比较的第二个参数。*rhs*可以是`HString`或`HStringReference`对象或 HSTRING 句柄。
 
 ### <a name="return-value"></a>返回值
@@ -350,7 +368,7 @@ inline bool operator<(
 *lhs*<br/>
 要比较的第一个参数。 *lhs*可以是对引用`HString`。
 
-*rhs*<br/>
+rhs <br/>
 要比较的第二个参数。 *rhs*可以是对引用`HString`。
 
 ### <a name="return-value"></a>返回值
@@ -386,7 +404,7 @@ HRESULT Set(
 *str*<br/>
 宽字符字符串。
 
-len<br/>
+len <br/>
 最大长度*str*分配给当前的参数`HString`对象。
 
 *hstr*<br/>

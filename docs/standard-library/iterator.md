@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - iterator header
 ms.assetid: c61a3962-f3ed-411a-b5a3-e8b3c2b500bd
-ms.openlocfilehash: 1b0d3282075246f3b217f0c8acac19ed8ece79cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f859c2e11d8a800c44b93e69e4b862300c6d3a13
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224085"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245767"
 ---
 # <a name="ltiteratorgt"></a>&lt;Iterator&gt;
 
 定义迭代器基元、预定义的迭代器和流迭代器，以及一些支持模板。 预定义的迭代器包含插入及反向适配器。 插入迭代器适配器包括三类：前向、后向和常规。 它们提供的是插入语义而不是容器成员函数迭代器所提供的覆盖语义。
 
-## <a name="syntax"></a>语法
+## <a name="requirements"></a>要求
 
-```cpp
-#include <iterator>
-```
+**标头：** \<iterator>
+
+**命名空间：** std
 
 ## <a name="remarks"></a>备注
 
@@ -42,17 +42,23 @@ ms.locfileid: "62224085"
 
 Visual Studio 为 C++ 标准库迭代器增加了一些扩展，以便支持多种检查迭代器和未检查迭代器的调试模式情形。 有关详细信息，请参阅[安全库：C++标准库](../standard-library/safe-libraries-cpp-standard-library.md)。
 
+## <a name="members"></a>成员
+
 ### <a name="functions"></a>函数
 
-|函数|描述|
+|||
 |-|-|
 |[advance](../standard-library/iterator-functions.md#advance)|使迭代器递增指定数量的位置。|
 |[back_inserter](../standard-library/iterator-functions.md#back_inserter)|创建一个可以在指定容器的后面插入元素的迭代器。|
 |[begin](../standard-library/iterator-functions.md#begin)|检索一个指向指定容器中第一个元素的迭代器。|
 |[cbegin](../standard-library/iterator-functions.md#cbegin)|检索一个指向指定容器中第一个元素的常量迭代器。|
 |[cend](../standard-library/iterator-functions.md#cend)|检索一个指向指定容器中最后元素之后的元素的常量迭代器。|
+|[crbegin](../standard-library/iterator-functions.md#crbegin)||
+|[crend](../standard-library/iterator-functions.md#crend)||
+|[data](../standard-library/iterator-functions.md#data)||
 |[distance](../standard-library/iterator-functions.md#distance)|确定两个迭代器定址位置之间的增量数。|
 |[end](../standard-library/iterator-functions.md#end)|检索指向指定容器中最后一个元素之后的元素的迭代器。|
+|[empty](../standard-library/iterator-functions.md#empty)||
 |[front_inserter](../standard-library/iterator-functions.md#front_inserter)|创建一个可以在指定容器前面插入元素的迭代器。|
 |[inserter](../standard-library/iterator-functions.md#inserter)|一个可以在指定插入点向容器添加新元素的迭代器适配器。|
 |[make_checked_array_iterator](../standard-library/iterator-functions.md#make_checked_array_iterator)|创建可由其他算法使用的 [checked_array_iterator](../standard-library/checked-array-iterator-class.md)。 **注意：** 该函数是 C++ 标准库的 Microsoft 扩展。 使用该函数实现的代码不可移植到不支持该 Microsoft 扩展的 C++ 标准生成环境中。|
@@ -60,10 +66,13 @@ Visual Studio 为 C++ 标准库迭代器增加了一些扩展，以便支持多�
 |[make_unchecked_array_iterator](../standard-library/iterator-functions.md#make_unchecked_array_iterator)|创建可由其他算法使用的 [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)。 **注意：** 该函数是 C++ 标准库的 Microsoft 扩展。 使用该函数实现的代码不可移植到不支持该 Microsoft 扩展的 C++ 标准生成环境中。|
 |[next](../standard-library/iterator-functions.md#next)|迭代指定的次数并返回新的迭代器位置。|
 |[prev](../standard-library/iterator-functions.md#prev)|反向迭代指定的次数并返回新的迭代器位置。|
+|[rbegin](../standard-library/iterator-functions.md#rbegin)||
+|[rend](../standard-library/iterator-functions.md#rend)||
+|size[](../standard-library/iterator-functions.md#size)||
 
 ### <a name="operators"></a>运算符
 
-|运算符|描述|
+|||
 |-|-|
 |[operator!=](../standard-library/iterator-operators.md#op_neq)|测试运算符左侧的迭代器对象是否不等于右侧的迭代器对象。|
 |[operator==](../standard-library/iterator-operators.md#op_eq_eq)|测试运算符左侧的迭代器对象是否等于右侧的迭代器对象。|
@@ -76,7 +85,7 @@ Visual Studio 为 C++ 标准库迭代器增加了一些扩展，以便支持多�
 
 ### <a name="classes"></a>类
 
-|类|描述|
+|||
 |-|-|
 |[back_insert_iterator](../standard-library/back-insert-iterator-class.md)|此模板类描述输出迭代器对象。 它将元素插入到类型的容器`Container`，通过受保护访问`pointer`对象将存储在名为容器。|
 |[bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)|一个类，提供返回类型的`iterator_category`表示双向迭代器函数。|

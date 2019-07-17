@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - std::tuple_size
 ms.assetid: 73852fc5-eb68-41f1-8379-465cedc2314a
-ms.openlocfilehash: 1a069bcf5385a014438e36983e455ec3761ce727
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c03c02dde3178a257a83720ff437f7981f5f7ed
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278938"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68241557"
 ---
 # <a name="tuplesize-class"></a>tuple_size 类
 
@@ -54,24 +54,28 @@ template <class Tuple>
    struct tuple_size<const volatile Tuple>;
 ```
 
+```cpp
+template <class T> inline constexpr size_t tuple_size_v = tuple_size<T>::value;
+```
+
 ### <a name="parameters"></a>参数
 
-*Tuple*<br/>
+*元组*\
 元组的类型。
 
-*Elem*<br/>
+*Elem*\
 数组元素的类型。
 
-*Size*<br/>
+*大小*\
 数组大小。
 
-T1<br/>
+*T1*\
 对的第一个成员的类型。
 
-T2<br/>
+*T2*\
 对的第二个成员的类型。
 
-*类型*<br/>
+*类型*\
 元组元素的类型。
 
 ## <a name="remarks"></a>备注
@@ -113,16 +117,10 @@ int main()
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<tuple>
+**标头：** \<tuple>
 
-**标头：**\<array>（适用于数组专用化）
+**标头：** \<array>（适用于数组专用化）
 
-**标头：**\<utility>（适用于对专用化）
+**标头：** \<utility>（适用于对专用化）
 
 **命名空间：** std
-
-## <a name="see-also"></a>请参阅
-
-[\<tuple>](../standard-library/tuple.md)<br/>
-[tuple](../standard-library/tuple-class.md)<br/>
-[tuple_element 类](../standard-library/tuple-element-class-tuple.md)<br/>

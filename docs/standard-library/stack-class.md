@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::stack [C++], size
 - std::stack [C++], top
 ms.assetid: 02151c1e-eab0-41b8-be94-a839ead78ecf
-ms.openlocfilehash: cc18a62db3f39bc85c0a3bb7e84e6a27011c2b5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36074f75830f92ba3fb9e5edb4e1507aa5ae1407
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412431"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68241067"
 ---
 # <a name="stack-class"></a>stack 类
 
@@ -40,11 +40,11 @@ class stack
 
 ### <a name="parameters"></a>参数
 
-*Type*<br/>
+*类型*\
 要存储在堆栈中的元素数据类型。
 
-*Container*<br/>
-用来实现堆栈的基础容器的类型。 默认值为 `deque`*\<Type>* 类。
+*容器*\
+用来实现堆栈的基础容器的类型。 默认值为 `deque` *\<Type>* 类。
 
 ## <a name="remarks"></a>备注
 
@@ -60,23 +60,25 @@ class stack
 
 - [priority_queue 类](../standard-library/priority-queue-class.md)将对其元素进行排序，以便最大的元素始终位于顶部位置。 它支持元素的插入以及顶部元素的检查和删除。 可以在脑海中将其类比为按年龄、身高或其他标准排队的人。
 
+## <a name="members"></a>成员
+
 ### <a name="constructors"></a>构造函数
 
-|构造函数|描述|
+|||
 |-|-|
 |[stack](#stack)|构造一个空的或者是基容器对象副本的 `stack`。|
 
 ### <a name="typedefs"></a>Typedef
 
-|类型名称|描述|
+|||
 |-|-|
 |[container_type](#container_type)|一种类型，它提供将由 `stack` 采用的基容器。|
 |[size_type](#size_type)|可表示 `stack` 中元素数量的无符号整数类型。|
 |[value_type](#value_type)|一种类型，它表示存储为 `stack` 中元素的对象的类型。|
 
-### <a name="member-functions"></a>成员函数
+### <a name="functions"></a>函数
 
-|成员函数|描述|
+|||
 |-|-|
 |[empty](#empty)|测试 `stack` 是否为空。|
 |[pop](#pop)|从 `stack` 的顶部删除元素。|
@@ -84,13 +86,7 @@ class stack
 |[size](#size)|返回 `stack` 中的元素数量。|
 |[top](#top)|返回对 `stack` 顶部元素的引用。|
 
-## <a name="requirements"></a>要求
-
-**标头：** \<堆栈>
-
-**命名空间：** std
-
-## <a name="container_type"></a>  stack::container_type
+## <a name="container_type"></a> container_type
 
 一种类型，它提供将调整的基容器。
 
@@ -108,7 +104,7 @@ typedef Container container_type;
 
 有关如何声明和使用 `container_type` 的示例，请参阅 [stack::stack](#stack) 的示例。
 
-## <a name="empty"></a>  stack::empty
+## <a name="empty"></a> 为空
 
 测试堆栈是否为空。
 
@@ -153,7 +149,7 @@ The stack s1 is not empty.
 The stack s2 is empty.
 ```
 
-## <a name="pop"></a>  stack::pop
+## <a name="pop"></a> pop
 
 从堆栈的顶部删除元素。
 
@@ -209,7 +205,7 @@ After a pop, the stack length is 2.
 After a pop, the element at the top of the stack is 20.
 ```
 
-## <a name="push"></a>  stack::push
+## <a name="push"></a> 推送
 
 将元素添加到堆栈的顶部。
 
@@ -219,7 +215,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>参数
 
-*val*<br/>
+*val*\
 添加到堆栈顶部的元素。
 
 ### <a name="remarks"></a>备注
@@ -258,7 +254,7 @@ The stack length is 3.
 The element at the top of the stack is 30.
 ```
 
-## <a name="size"></a>  stack::size
+## <a name="size"></a> 大小
 
 返回堆栈中元素数。
 
@@ -299,7 +295,7 @@ The stack length is 1.
 The stack length is now 2.
 ```
 
-## <a name="size_type"></a>  stack::size_type
+## <a name="size_type"></a> size_type
 
 一种无符号整数类型，此类型可表示堆栈中的元素数。
 
@@ -315,7 +311,7 @@ typedef typename Container::size_type size_type;
 
 有关如何声明和使用 `size_type` 的示例，请参阅 [size](#size) 的示例。
 
-## <a name="stack"></a>  stack::stack
+## <a name="stack"></a> 堆栈
 
 构造一个空的堆栈或者是基容器类副本的堆栈。
 
@@ -327,7 +323,7 @@ explicit stack(const container_type& right);
 
 ### <a name="parameters"></a>参数
 
-*right*<br/>
+*右侧*\
 所构造堆栈要成为其副本的矢量。
 
 ### <a name="example"></a>示例
@@ -369,7 +365,7 @@ int main( )
 The element at the top of stack vsi2 is 1.
 ```
 
-## <a name="top"></a>  stack::top
+## <a name="top"></a> 返回页首
 
 返回对堆栈顶部元素的引用。
 
@@ -420,7 +416,7 @@ The top integer of the stack s1 is 2.
 The next integer down is 1.
 ```
 
-## <a name="value_type"></a>  stack::value_type
+## <a name="value_type"></a> value_type
 
 一种类型，它表示存储为堆栈中元素的对象类型。
 

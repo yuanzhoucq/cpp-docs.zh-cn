@@ -7,14 +7,17 @@ helpviewer_keywords:
 - class types [C++], unions as
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
-ms.openlocfilehash: 58f4940d209b783b00c7167265ff1a2a733c947c
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: c15ec782d16aebab85d57de2dea1e91b91620c74
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222341"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894474"
 ---
 # <a name="unions"></a>Unions
+
+> [!NOTE]
+> 在 C + + 17 中及更高版本， **std::variant**类是联合的类型安全的替代方法。
 
 一个**union**是用户定义的类型中的所有成员都共享相同的内存位置。 这意味着在任何给定时间，联合都不能包含来自其成员列表的多个对象。 这还意味着无论联合具有多少成员，它始终仅使用足以存储最大成员的内存。
 
@@ -28,7 +31,7 @@ union [name]  { member-list };
 
 ### <a name="parameters"></a>参数
 
-*name*<br/>
+*名称*<br/>
 为联合提供的类型名称。
 
 *member-list*<br/>

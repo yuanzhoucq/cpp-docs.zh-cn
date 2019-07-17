@@ -26,8 +26,10 @@ helpviewer_keywords:
 - std::asin [C++]
 - std::atan [C++]
 - std::atan2
+- std::begin [C++]
 - std::cos [C++]
 - std::cosh [C++]
+- std::end [C++]
 - std::exp [C++]
 - std::log [C++]
 - std::log10
@@ -38,25 +40,16 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::tan [C++]
 - std::tanh [C++]
-ms.openlocfilehash: c4e5873e9a511311d2c49b34791df82038fe9f9b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 12275f93c751b4d9ffafcae62621b251a8bc9bfc
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365179"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246678"
 ---
 # <a name="ltvalarraygt-functions"></a>&lt;valarray&gt; 函数
 
-||||
-|-|-|-|
-|[abs](#abs)|[acos](#acos)|[asin](#asin)|
-|[atan](#atan)|[atan2](#atan2)|[cos](#cos)|
-|[cosh](#cosh)|[exp](#exp)|[log](#log)|
-|[log10](#log10)|[pow](#pow)|[sin](#sin)|
-|[sinh](#sinh)|[sqrt](#sqrt)|[swap](#swap)|
-|[tan](#tan)|[tanh](#tanh)|
-
-## <a name="abs"></a>abs
+## <a name="abs"></a> abs
 
 对输入 valarray 的元素进行操作，返回的 valarray 的元素等于输入 valarray 的元素的绝对值。
 
@@ -67,7 +60,7 @@ valarray<Type> abs(const valarray<Type>& left);
 
 ### <a name="parameters"></a>参数
 
-*left*<br/>
+*左侧*\
 输入 valarray，它的元素通过成员函数进行操作。
 
 ### <a name="return-value"></a>返回值
@@ -111,7 +104,7 @@ The initial valarray is: 0 -1 -2 -3 4 5 6 7 8 .
 The absolute value of the initial valarray is: 0 1 2 3 4 5 6 7 8 .
 ```
 
-## <a name="acos"></a>acos
+## <a name="acos"></a> acos
 
 对输入 valarray 的元素进行操作，返回的 valarray 的元素等于输入 valarray 的元素的反余弦值。
 
@@ -122,7 +115,7 @@ valarray<Type> acos(const valarray<Type>& left);
 
 ### <a name="parameters"></a>参数
 
-*left*<br/>
+*左侧*\
 输入 valarray，它的元素通过成员函数进行操作。
 
 ### <a name="return-value"></a>返回值
@@ -184,7 +177,7 @@ The arccosine of the initial valarray is:
          0  radians, which is            0  degrees
 ```
 
-## <a name="asin"></a>  asin
+## <a name="asin"></a> asin
 
 对输入 valarray 的元素进行操作，返回的 valarray 的元素等于输入 valarray 的元素的反正弦值。
 
@@ -195,7 +188,7 @@ valarray<Type> asin(const valarray<Type>& left);
 
 ### <a name="parameters"></a>参数
 
-*left*<br/>
+*左侧*\
 输入 valarray，它的元素通过成员函数进行操作。
 
 ### <a name="return-value"></a>返回值
@@ -257,7 +250,7 @@ The arcsine of the initial valarray is:
     1.5708  radians, which is           90  degrees
 ```
 
-## <a name="atan"></a>  atan
+## <a name="atan"></a> atan
 
 对输入 valarray 的元素进行操作，返回的 valarray 的元素等于输入 valarray 的元素的反正切主值。
 
@@ -268,7 +261,7 @@ valarray<Type> atan(const valarray<Type>& left);
 
 ### <a name="parameters"></a>参数
 
-*left*<br/>
+*左侧*\
 输入 valarray，它的元素通过成员函数进行操作。
 
 ### <a name="return-value"></a>返回值
@@ -333,7 +326,7 @@ The arcsine of the initial valarray is:
     1.5608  radians, which is      89.4271  degrees
 ```
 
-## <a name="atan2"></a>  atan2
+## <a name="atan2"></a> atan2
 
 返回的 valarrays 的元素等于由 valarray 常量和元素的组合指定的笛卡尔组件的反正切值。
 
@@ -350,10 +343,10 @@ valarray<Type> atan2(const Type& left, const valarray<Type>& right);
 
 ### <a name="parameters"></a>参数
 
-*left*<br/>
+*左侧*\
 常量数值数据类型或输入 valarray，它的元素为反正切值参数的 y 轴提供值。
 
-*right*<br/>
+*右侧*\
 常量数值数据类型或输入 valarray，它的元素为反正切值参数的 x 轴提供值。
 
 ### <a name="return-value"></a>返回值
@@ -427,7 +420,14 @@ The atan2 ( y / x ) of the initial valarrays is:
  -0.785398  radians, which is          -45degrees
 ```
 
-## <a name="cos"></a>  cos
+## <a name="begin"></a> 开始
+
+```cpp
+template <class T> unspecified 1 begin(valarray<T>& v);
+template <class T> unspecified 2 begin(const valarray<T>& v);
+```
+
+## <a name="cos"></a> cos
 
 对输入 valarray 的元素进行操作，返回的 valarray 的元素等于输入 valarray 的元素的余弦值。
 
@@ -438,7 +438,7 @@ valarray<Type> cos(const valarray<Type>& left);
 
 ### <a name="parameters"></a>参数
 
-*left*<br/>
+*左侧*\
 输入 valarray，它的元素通过成员函数进行操作。
 
 ### <a name="return-value"></a>返回值
@@ -504,7 +504,7 @@ The cosine of the initial valarray is:
 -1
 ```
 
-## <a name="cosh"></a>  cosh
+## <a name="cosh"></a> cosh
 
 对输入 valarray 的元素进行操作，返回的 valarray 的元素等于输入 valarray 的元素的双曲余弦值。
 
@@ -515,7 +515,7 @@ valarray<Type> cosh(const valarray<Type>& left);
 
 ### <a name="parameters"></a>参数
 
-*left*<br/>
+*左侧*\
 输入 valarray，它的元素通过成员函数进行操作。
 
 ### <a name="return-value"></a>返回值
@@ -587,7 +587,14 @@ The hyperbolic cosine of the initial valarray is:
 11.592
 ```
 
-## <a name="exp"></a>  exp
+## <a name="end"></a> 结束
+
+```cpp
+template <class T> unspecified 1 end(valarray<T>& v);
+template <class T> unspecified 2 end(const valarray<T>& v);
+```
+
+## <a name="exp"></a> exp
 
 对输入 valarray 的元素进行操作，返回的 valarray 的元素等于输入 valarray 的元素的自然指数。
 
@@ -598,7 +605,7 @@ valarray<Type> exp(const valarray<Type>& left);
 
 ### <a name="parameters"></a>参数
 
-*left*<br/>
+*左侧*\
 输入 valarray，它的元素通过成员函数进行操作。
 
 ### <a name="return-value"></a>返回值
@@ -650,7 +657,7 @@ The natural exponential of the initial valarray is:
 22026.5
 ```
 
-## <a name="log"></a>  log
+## <a name="log"></a> 日志
 
 对输入 valarray 的元素进行操作，返回的 valarray 的元素等于输入 valarray 的元素的自然对数。
 
@@ -661,7 +668,7 @@ valarray<Type> log(const valarray<Type>& left);
 
 ### <a name="parameters"></a>参数
 
-*left*<br/>
+*左侧*\
 输入 valarray，它的元素通过成员函数进行操作。
 
 ### <a name="return-value"></a>返回值
@@ -713,7 +720,7 @@ The natural logarithm of the initial valarray is:
 4.38203
 ```
 
-## <a name="log10"></a>  log10
+## <a name="log10"></a> log10
 
 对输入 valarray 的元素进行操作，返回的 valarray 的元素等于输入 valarray 的元素的以 10 为底的对数或常用对数。
 
@@ -724,7 +731,7 @@ valarray<Type> log10(const valarray<Type>& left);
 
 ### <a name="parameters"></a>参数
 
-*left*<br/>
+*左侧*\
 输入 valarray，它的元素通过成员函数进行操作。
 
 ### <a name="return-value"></a>返回值
@@ -778,7 +785,7 @@ The common logarithm of the initial valarray is:
 2
 ```
 
-## <a name="pow"></a>  pow
+## <a name="pow"></a> pow
 
 对输入 valarray 的元素和常数进行操作，返回的 valarray 的元素等于由输入 valarray 的元素所指定的基数，或者等于具有一定指数的常数所指定的基数，该指数由输入 valarray 的元素或常数指定。
 
@@ -804,10 +811,10 @@ pow(
 
 ### <a name="parameters"></a>参数
 
-*left*<br/>
+*左侧*\
 输入 valarray，它的元素为每个要指数化的元素提供基数。
 
-*right*<br/>
+*右侧*\
 输入 valarray，它的元素为每个要指数化的元素提供幂。
 
 ### <a name="return-value"></a>返回值
@@ -875,7 +882,7 @@ n = 4   gives 256
 n = 5   gives 1024
 ```
 
-## <a name="sin"></a>  sin
+## <a name="sin"></a> sin
 
 对输入 valarray 的元素进行操作，返回的 valarray 的元素等于输入 valarray 的元素的正弦值。
 
@@ -886,7 +893,7 @@ valarray<Type> sin(const valarray<Type>& left);
 
 ### <a name="parameters"></a>参数
 
-*left*<br/>
+*左侧*\
 输入 valarray，它的元素通过成员函数进行操作。
 
 ### <a name="return-value"></a>返回值
@@ -952,7 +959,7 @@ The sine of the initial valarray is:
 -2.06823e-013
 ```
 
-## <a name="sinh"></a>  sinh
+## <a name="sinh"></a> sinh
 
 对输入 valarray 的元素进行操作，返回的 valarray 的元素等于输入 valarray 的元素的双曲正弦值。
 
@@ -963,7 +970,7 @@ valarray<Type> sinh(const valarray<Type>& left);
 
 ### <a name="parameters"></a>参数
 
-*left*<br/>
+*左侧*\
 输入 valarray，它的元素通过成员函数进行操作。
 
 ### <a name="return-value"></a>返回值
@@ -974,7 +981,7 @@ valarray<Type> sinh(const valarray<Type>& left);
 
 定义指数函数的双曲正弦值的标识：
 
-sinh ( *z* ) = ( exp ( *z* ) - exp ( - *z* ) ) / 2
+sinh ( *z* ) = (exp ( *z* )-exp (- *z* )) / 2
 
 ### <a name="example"></a>示例
 
@@ -1035,7 +1042,7 @@ The hyperbolic sine of the initial valarray is:
 11.5487
 ```
 
-## <a name="sqrt"></a>  sqrt
+## <a name="sqrt"></a> sqrt
 
 对输入 valarray 的元素进行操作，返回的 valarray 的元素等于输入 valarray 的元素的平方根。
 
@@ -1046,7 +1053,7 @@ valarray<Type> sqrt(const valarray<Type>& left);
 
 ### <a name="parameters"></a>参数
 
-*left*<br/>
+*左侧*\
 输入 valarray，它的元素通过成员函数进行操作。
 
 ### <a name="return-value"></a>返回值
@@ -1089,7 +1096,7 @@ The initial valarray is: ( 0 1 4 9 16 ).
 The square root of the initial valarray is: ( 0 1 2 3 4 ).
 ```
 
-## <a name="swap"></a>  swap
+## <a name="swap"></a> 交换
 
 交换两个 valarray 的元素。
 
@@ -1102,16 +1109,17 @@ void swap(
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
-|---------------|-----------------|
-|*left*|一个 `valarray` 类型的对象。|
-|*right*|一个 `valarray` 类型的对象。|
+*左侧*\
+一个 `valarray` 类型的对象。
+
+*右侧*\
+一个 `valarray` 类型的对象。
 
 ### <a name="remarks"></a>备注
 
-该模板函数执行 ` left.swap( right)`。
+该模板函数执行 `left.swap(right)`。
 
-## <a name="tan"></a>  tan
+## <a name="tan"></a> tan
 
 对输入 valarray 的元素进行操作，返回的 valarray 的元素等于输入 valarray 的元素的正切值。
 
@@ -1122,7 +1130,7 @@ valarray<Type> tan(const valarray<Type>& left);
 
 ### <a name="parameters"></a>参数
 
-*left*<br/>
+*左侧*\
 输入 valarray，它的元素通过成员函数进行操作。
 
 ### <a name="return-value"></a>返回值
@@ -1188,7 +1196,7 @@ The tangent of the initial valarray is:
 -9.6701e+012
 ```
 
-## <a name="tanh"></a>  tanh
+## <a name="tanh"></a> tanh
 
 对输入 valarray 的元素进行操作，返回的 valarray 的元素等于输入 valarray 的元素的双曲正切值。
 
@@ -1199,7 +1207,7 @@ valarray<Type> tanh(const valarray<Type>& left);
 
 ### <a name="parameters"></a>参数
 
-*left*<br/>
+*左侧*\
 输入 valarray，它的元素通过成员函数进行操作。
 
 ### <a name="return-value"></a>返回值
@@ -1210,7 +1218,7 @@ valarray<Type> tanh(const valarray<Type>& left);
 
 定义指数函数的双曲正切值的标识：
 
-tanh ( *z* ) = sinh ( *z* ) / cosh ( *z* ) = ( exp ( *z* ) - exp ( - *z* ) ) / ( exp ( *z* ) + exp ( - *z* ) )
+tanh ( *z* ) = sinh ( *z* ) / cosh ( *z* ) = (exp ( *z* )-exp (- *z* )) / (exp ( *z* )+ exp (- *z* ))
 
 ### <a name="example"></a>示例
 
@@ -1270,7 +1278,3 @@ The hyperbolic tangent of the initial valarray is:
 0.982193
 0.996272
 ```
-
-## <a name="see-also"></a>请参阅
-
-[\<valarray>](../standard-library/valarray.md)<br/>

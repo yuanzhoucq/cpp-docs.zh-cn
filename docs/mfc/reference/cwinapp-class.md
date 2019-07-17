@@ -1,6 +1,6 @@
 ---
 title: CWinApp 类
-ms.date: 11/04/2016
+ms.date: 07/15/2019
 f1_keywords:
 - CWinApp
 - AFXWIN/CWinApp
@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: 6366638ebfd5e78ad517a8913e4276d5cd820670
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a4ec6c976b6611563eb95cce1173d7c77c3b5ef0
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323354"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894494"
 ---
 # <a name="cwinapp-class"></a>CWinApp 类
 
@@ -899,7 +899,7 @@ BOOL GetProfileBinary(
 此成员函数不区分大小写，因此中的字符串*lpszSection*并*lpszEntry*写可能不同的参数。
 
 > [!NOTE]
-> `GetProfileBinary` 分配一个缓冲区，并返回其地址中的\* *ppData*。 调用方负责释放缓冲区使用**delete []**。
+> `GetProfileBinary` 分配一个缓冲区，并返回其地址中的\* *ppData*。 调用方负责释放缓冲区使用**delete []** 。
 
 > [!IMPORTANT]
 > 此函数返回的数据不一定是以 NULL 结尾的，并且调用方必须执行验证。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
@@ -1033,10 +1033,10 @@ virtual void HtmlHelp(
 ### <a name="parameters"></a>参数
 
 *dwData*<br/>
-指定其他数据。 使用的值取决于的值*nCmd*参数。
+指定其他数据。 使用的值取决于的值*nCmd*参数。 默认情况下`0x000F`这意味着[HH_HELP_CONTEXT](/previous-versions/windows/desktop/htmlhelp/hh-help-context-command)。
 
 *nCmd*<br/>
-指定请求的帮助的类型。 有关一系列可能的值以及它们如何影响*dwData*参数，请参阅*uCommand*有关 HTMLHelp API 函数 Windows SDK 中所述的参数。
+指定请求的帮助的类型。 有关一系列可能的值以及它们如何影响*dwData*参数，请参阅*uCommand*参数中所述[HtmlHelpW](/windows/desktop/api/htmlhelp/nf-htmlhelp-htmlhelpw)或[HtmlHelpA](/windows/desktop/api/htmlhelp/nf-htmlhelp-htmlhelpa)Windows SDK 中的 API 函数。  
 
 ### <a name="remarks"></a>备注
 
@@ -1437,7 +1437,7 @@ LPCTSTR m_pszAppName;
 全局函数返回[AfxGetAppName](application-information-and-management.md#afxgetappname)。 `m_pszAppName` 是类型的公共变量**const char**<strong>\*</strong>。
 
 > [!NOTE]
-> 如果你将值赋给`m_pszAppName`，它必须动态分配堆上。 `CWinApp`析构函数调用**免费**（与此指针)。 很多想要使用`_tcsdup`（） 运行时库函数来执行分配。 此外，释放分配新值之前将其与当前指针相关联的内存。 例如：
+> 如果你将值赋给`m_pszAppName`，它必须动态分配堆上。 `CWinApp`析构函数调用**免费**（与此指针)。 很多想要使用`_tcsdup`（） 运行时库函数来执行分配。 此外，释放分配新值之前将其与当前指针相关联的内存。 例如:
 
 [!code-cpp[NVC_MFCWindowing#57](../../mfc/reference/codesnippet/cpp/cwinapp-class_18.cpp)]
 
@@ -1475,7 +1475,7 @@ LPCTSTR m_pszHelpFilePath;
 默认情况下，框架初始化`m_pszHelpFilePath`到与应用程序的名称"。HLP"追加。 若要更改的帮助文件的名称，设置`m_pszHelpFilePath`以指向包含所需的帮助文件的完整名称的字符串。 若要执行此操作方便位置是在应用程序的[InitInstance](#initinstance)函数。 `m_pszHelpFilePath` 是类型的公共变量**const char**<strong>\*</strong>。
 
 > [!NOTE]
-> 如果你将值赋给`m_pszHelpFilePath`，它必须动态分配堆上。 `CWinApp`析构函数调用**免费**（与此指针)。 很多想要使用`_tcsdup`（） 运行时库函数来执行分配。 此外，释放分配新值之前将其与当前指针相关联的内存。 例如：
+> 如果你将值赋给`m_pszHelpFilePath`，它必须动态分配堆上。 `CWinApp`析构函数调用**免费**（与此指针)。 很多想要使用`_tcsdup`（） 运行时库函数来执行分配。 此外，释放分配新值之前将其与当前指针相关联的内存。 例如:
 
 [!code-cpp[NVC_MFCWindowing#59](../../mfc/reference/codesnippet/cpp/cwinapp-class_21.cpp)]
 
@@ -1492,7 +1492,7 @@ LPCTSTR m_pszProfileName;
 `m_pszProfileName` 是类型的公共变量**const char**<strong>\*</strong>。
 
 > [!NOTE]
-> 如果你将值赋给`m_pszProfileName`，它必须动态分配堆上。 `CWinApp`析构函数调用**免费**（与此指针)。 很多想要使用`_tcsdup`（） 运行时库函数来执行分配。 此外，释放分配新值之前将其与当前指针相关联的内存。 例如：
+> 如果你将值赋给`m_pszProfileName`，它必须动态分配堆上。 `CWinApp`析构函数调用**免费**（与此指针)。 很多想要使用`_tcsdup`（） 运行时库函数来执行分配。 此外，释放分配新值之前将其与当前指针相关联的内存。 例如:
 
 [!code-cpp[NVC_MFCWindowing#60](../../mfc/reference/codesnippet/cpp/cwinapp-class_22.cpp)]
 

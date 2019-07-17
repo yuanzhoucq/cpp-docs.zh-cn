@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::complex [C++], imag
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
-ms.openlocfilehash: 2ebaee81b792f9acc475fe25ac1ef7cc7a78a0de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: db04569d3938c673653ac36eeebdabc9cb725c1e
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376154"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244732"
 ---
 # <a name="complex-class"></a>complex 类
 
@@ -42,28 +42,30 @@ class complex
 
 对三个浮点类型的模板类复杂存在的显式专用化。 在此实现中，任何其他类型的值`Type`类型转换为**双**进行实际计算，使用**double**结果返回到的存储对象的类型分配`Type`。
 
+## <a name="members"></a>成员
+
 ### <a name="constructors"></a>构造函数
 
-|构造函数|描述|
+|||
 |-|-|
 |[complex](#complex)|构造一个具有指定实部和虚部的复数，或作为某些其他复数的副本的复数。|
 
 ### <a name="typedefs"></a>Typedef
 
-|类型名称|描述|
+|||
 |-|-|
 |[value_type](#value_type)|该类型代表用于表示复数的实部和虚部的数据类型。|
 
-### <a name="member-functions"></a>成员函数
+### <a name="functions"></a>函数
 
-|成员函数|描述|
+|||
 |-|-|
 |[imag](#imag)|提取复数的虚分量。|
 |[real](#real)|提取复数的实分量。|
 
 ### <a name="operators"></a>运算符
 
-|运算符|描述|
+|||
 |-|-|
 |[operator*=](#op_star_eq)|用一个系数乘以目标复数，这可能是复数或与复数的实部和虚部相同的类型。|
 |[operator+=](#op_add_eq)|向目标复数添加一个数，其中所添加的数可能是复数或与所添加的复数的实部和虚部相同的类型。|
@@ -71,13 +73,9 @@ class complex
 |[operator/=](#op_div_eq)|用一个除数除以目标复数，这可能是复数或与复数的实部和虚部相同的类型。|
 |[operator=](#op_eq)|向目标复数分配一个数，其中所分配的数可能是复数或与所分配的复数的实部和虚部相同的类型。|
 
-## <a name="requirements"></a>要求
 
-**标头**：\<complex>
 
-**命名空间：** std
-
-## <a name="complex"></a>  complex::complex
+## <a name="complex"></a> 复杂
 
 构造一个具有指定实部和虚部的复数，或作为某些其他复数的副本的复数。
 
@@ -93,13 +91,13 @@ constexpr complex(
 
 ### <a name="parameters"></a>参数
 
-*_RealVal*<br/>
+*_RealVal*\
 用于初始化正在构造的复数的实部值。
 
-*_ImagVal*<br/>
+*_ImagVal*\
 用于初始化正在构造的复数的虚部值。
 
-*complexNum*<br/>
+*complexNum*\
 一个复数，其实部和虚部用于初始化正在构造的复数。
 
 ### <a name="remarks"></a>备注
@@ -161,7 +159,7 @@ int main( )
 }
 ```
 
-## <a name="imag"></a>  complex::imag
+## <a name="imag"></a> imag
 
 提取复数的虚分量。
 
@@ -173,7 +171,7 @@ T imag(const T& right);
 
 ### <a name="parameters"></a>参数
 
-*right*<br/>
+*右侧*\
 要提取其虚数值的复数。
 
 ### <a name="return-value"></a>返回值
@@ -215,7 +213,7 @@ The real part of c1 is c1.real() = 4.
 The imaginary part of c1 is c1.imag() = 3.
 ```
 
-## <a name="op_star_eq"></a>  complex::operator*=
+## <a name="op_star_eq"></a> 运算符 * =
 
 用一个系数乘以目标复数，这可能是复数或与复数的实部和虚部相同的类型。
 
@@ -230,7 +228,7 @@ complex<Type>& operator*=(const complex<Type>& right);
 
 ### <a name="parameters"></a>参数
 
-*right*<br/>
+*右侧*\
 复数或与目标复数的参数具有相同类型的数。
 
 ### <a name="return-value"></a>返回值
@@ -300,7 +298,7 @@ int main()
 }
 ```
 
-## <a name="op_add_eq"></a>  complex::operator+=
+## <a name="op_add_eq"></a> operator + =
 
 向目标复数添加一个数，其中所添加的数可能是复数或与所添加的复数的实部和虚部相同的类型。
 
@@ -315,7 +313,7 @@ complex<Type>& operator+=(const complex<Type>& right);
 
 ### <a name="parameters"></a>参数
 
-*right*<br/>
+*右侧*\
 复数或与目标复数的参数具有相同类型的数。
 
 ### <a name="return-value"></a>返回值
@@ -403,7 +401,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 0.927295 radians, which is 53.1301 degrees.
 ```
 
-## <a name="operator-_eq"></a>  complex::operator-=
+## <a name="operator-_eq"></a> 运算符 =
 
 从目标复数减去一个数，其中所减去的数可能是复数或与所添加的复数的实部和虚部相同的类型。
 
@@ -418,10 +416,10 @@ complex<Type>& operator-=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>参数
 
-*complexNum*<br/>
+*complexNum*\
 要从目标复数减去的复数。
 
-*_RealPart*<br/>
+*_RealPart*\
 要从目标复数减去的实数。
 
 ### <a name="return-value"></a>返回值
@@ -511,7 +509,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 2.2143 radians, which is 126.87 degrees.
 ```
 
-## <a name="op_div_eq"></a>  complex::operator/=
+## <a name="op_div_eq"></a> / = 运算符
 
 用一个除数除以目标复数，这可能是复数或与复数的实部和虚部相同的类型。
 
@@ -526,10 +524,10 @@ complex<Type>& operator/=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>参数
 
-*complexNum*<br/>
+*complexNum*\
 要从目标复数减去的复数。
 
-*_RealPart*<br/>
+*_RealPart*\
 要从目标复数减去的实数。
 
 ### <a name="return-value"></a>返回值
@@ -615,7 +613,7 @@ The modulus of cl2 is: 0.6
 The argument of cl2 is: 0.523599 radians, which is 30 degrees.
 ```
 
-## <a name="op_eq"></a>  complex::operator=
+## <a name="op_eq"></a> 运算符 =
 
 向目标复数分配一个数，其中所分配的数可能是复数或与所分配的复数的实部和虚部相同的类型。
 
@@ -628,7 +626,7 @@ complex<Type>& operator=(const Type& right);
 
 ### <a name="parameters"></a>参数
 
-*right*<br/>
+*右侧*\
 复数或与目标复数的参数具有相同类型的数。
 
 ### <a name="return-value"></a>返回值
@@ -693,7 +691,7 @@ The complex number (3, 4) assigned to the complex number cl2 is:
 cl2 = (3,4)
 ```
 
-## <a name="real"></a>  complex::real
+## <a name="real"></a> 真正
 
 获取或设置复数的实分量。
 
@@ -705,7 +703,7 @@ T real(const T& right);
 
 ### <a name="parameters"></a>参数
 
-*right*<br/>
+*右侧*\
 要提取其实数值的复数。
 
 ### <a name="return-value"></a>返回值
@@ -714,7 +712,7 @@ T real(const T& right);
 
 ### <a name="remarks"></a>备注
 
-对于复数*a + bi*，实部或组件*Re(a + bi) =*。
+对于复数*a + bi*，实部或组件*Re(a + bi) =* 。
 
 ### <a name="example"></a>示例
 
@@ -747,7 +745,7 @@ The real part of c1 is c1.real() = 4.
 The imaginary part of c1 is c1.imag() = 3.
 ```
 
-## <a name="value_type"></a>  complex::value_type
+## <a name="value_type"></a> value_type
 
 该类型代表用于表示复数的实部和虚部的数据类型。
 

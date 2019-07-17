@@ -10,22 +10,16 @@ f1_keywords:
 - memory/std::operator<<
 - memory/std::operator==
 ms.assetid: 257e3ba9-c4c2-4ae8-9b11-b156ba9c28de
-ms.openlocfilehash: ca1412efb4d095ef9a371b3739d4c282683821dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 661f1bb4c0f5734d88dd23f73c69b362f59a76c2
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348453"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243823"
 ---
 # <a name="ltmemorygt-operators"></a>&lt;memory&gt; 运算符
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|
-|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a>operator!=
+## <a name="op_neq"></a> 运算符 ！ =
 
 测试各对象之间是否不相等。
 
@@ -48,16 +42,16 @@ bool operator!=(
 
 ### <a name="parameters"></a>参数
 
-*left*<br/>
+*左侧*\
 要测试不相等的对象之一。
 
-*right*<br/>
+*右侧*\
 要测试不相等的对象之一。
 
-*Ty1*<br/>
+*Ty1*\
 由左侧共享指针控制的类型。
 
-*Ty2*<br/>
+*Ty2*\
 由右侧共享指针控制的类型。
 
 ### <a name="return-value"></a>返回值
@@ -126,7 +120,7 @@ sp0 != sp0 == false
 sp0 != sp1 == true
 ```
 
-## <a name="op_eq_eq"></a>operator==
+## <a name="op_eq_eq"></a> 运算符 = =
 
 测试两个对象是否相等。
 
@@ -149,16 +143,16 @@ bool operator==(
 
 ### <a name="parameters"></a>参数
 
-*left*<br/>
+*左侧*\
 要测试是否相等的其中一个对象。
 
-*right*<br/>
+*右侧*\
 要测试是否相等的其中一个对象。
 
-*Ty1*<br/>
+*Ty1*\
 由左侧共享指针控制的类型。
 
-*Ty2*<br/>
+*Ty2*\
 由右侧共享指针控制的类型。
 
 ### <a name="return-value"></a>返回值
@@ -238,7 +232,7 @@ sp0 == sp0 == true
 sp0 == sp1 == false
 ```
 
-## <a name="op_gt_eq"></a>  operator&gt;=
+## <a name="op_gt_eq"></a> 运算符&gt;=
 
 测试一个对象是否大于或等于另一个对象。
 
@@ -256,23 +250,23 @@ bool operator>=(
 
 ### <a name="parameters"></a>参数
 
-*left*<br/>
+*左侧*\
 要比较的对象之一。
 
-*right*<br/>
+*右侧*\
 要比较的对象之一。
 
-*Ty1*<br/>
+*Ty1*\
 由左侧共享指针控制的类型。
 
-*Ty2*<br/>
+*Ty2*\
 由右侧共享指针控制的类型。
 
 ### <a name="remarks"></a>备注
 
 模板运算符返回`left.get() >= right.get()`。
 
-## <a name="op_lt"></a>operator&lt;
+## <a name="op_lt"></a> 运算符&lt;
 
 测试某一对象是否小于另一对象。
 
@@ -290,19 +284,19 @@ bool operator<(
 
 ### <a name="parameters"></a>参数
 
-*left*<br/>
+*左侧*\
 要比较的对象之一。
 
-*right*<br/>
+*右侧*\
 要比较的对象之一。
 
-*Ty1*<br/>
+*Ty1*\
 由左侧指针控制的类型。
 
-*Ty2*<br/>
+*Ty2*\
 由右侧指针控制的类型。
 
-## <a name="op_lt_eq"></a>  operator&lt;=
+## <a name="op_lt_eq"></a> 运算符&lt;=
 
 测试某一对象是否小于或等于另一个对象。
 
@@ -320,23 +314,23 @@ bool operator<=(
 
 ### <a name="parameters"></a>参数
 
-*left*<br/>
+*左侧*\
 要比较的对象之一。
 
-*right*<br/>
+*右侧*\
 要比较的对象之一。
 
-*Ty1*<br/>
+*Ty1*\
 由左侧共享指针控制的类型。
 
-*Ty2*<br/>
+*Ty2*\
 由右侧共享指针控制的类型。
 
 ### <a name="remarks"></a>备注
 
 模板运算符返回 `left.get() <= right.get()`
 
-## <a name="op_gt"></a>operator&gt;
+## <a name="op_gt"></a> 运算符&gt;
 
 测试一个对象是否大于或等于第二个对象。
 
@@ -354,19 +348,19 @@ bool operator>(
 
 ### <a name="parameters"></a>参数
 
-*left*<br/>
+*左侧*\
 要比较的对象之一。
 
-*right*<br/>
+*右侧*\
 要比较的对象之一。
 
-*Ty1*<br/>
+*Ty1*\
 由左侧共享指针控制的类型。
 
-*Ty2*<br/>
+*Ty2*\
 由右侧共享指针控制的类型。
 
-## <a name="op_lt_lt"></a>  operator&lt;&lt;
+## <a name="op_lt_lt"></a> 运算符&lt;&lt;
 
 将共享指针写入该流。
 
@@ -378,19 +372,19 @@ std::basic_ostream<Elem, Tr>& operator<<(std::basic_ostream<Elem, Tr>& out,
 
 ### <a name="parameters"></a>参数
 
-*Elem*<br/>
+*Elem*\
 流元素的类型。
 
-*Tr*<br/>
+*tr*\
 流元素特征的类型。
 
-*Ty*<br/>
+*Ty*\
 由共享指针控制的类型。
 
-*out*<br/>
+*out*\
 输出流。
 
-*sp*<br/>
+*sp*\
 共享的指针。
 
 ### <a name="remarks"></a>备注
@@ -418,7 +412,3 @@ int main()
 ```Output
 sp0 == 3f3040 (varies)
 ```
-
-## <a name="see-also"></a>请参阅
-
-[\<memory>](../standard-library/memory.md)<br/>

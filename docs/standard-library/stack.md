@@ -7,26 +7,31 @@ helpviewer_keywords:
 - stack, stack header
 - stack header
 ms.assetid: 89d8999e-c773-46f2-86c1-4b3b5aedb1c1
-ms.openlocfilehash: b8f2bb6cf74d0607bd3105196336a515adcade9e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65f2197a4a9ac37ad5910bfa8dbef457fda5f611
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412457"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244116"
 ---
 # <a name="ltstackgt"></a>&lt;stack&gt;
 
 定义模板类堆栈和两个支持模板。
 
-## <a name="syntax"></a>语法
+## <a name="requirements"></a>要求
 
-```cpp
-#include <stack>
-```
+**标头：** \<堆栈>
+
+**命名空间：** std
+
+> [!NOTE]
+> \<堆栈 > 库还使用`#include <initializer_list>`语句。
+
+## <a name="members"></a>成员
 
 ### <a name="operators"></a>运算符
 
-|运算符|描述|
+|||
 |-|-|
 |[operator!=](../standard-library/stack-operators.md#op_neq)|测试运算符左侧的堆栈对象是否不等于右侧的堆栈对象。|
 |[operator<](../standard-library/stack-operators.md#op_lt)|测试运算符左侧的堆栈对象是否小于右侧的堆栈对象。|
@@ -35,9 +40,15 @@ ms.locfileid: "62412457"
 |[operator>](../standard-library/stack-operators.md#op_gt)|测试运算符左侧的堆栈对象是否大于右侧的堆栈对象。|
 |[operator>=](../standard-library/stack-operators.md#op_gt_eq)|测试运算符左侧的堆栈对象是否大于或等于右侧的堆栈对象。|
 
+### <a name="functions"></a>函数
+
+|||
+|-|-|
+|[swap]()||
+
 ### <a name="classes"></a>类
 
-|类|描述|
+|||
 |-|-|
 |[stack 类](../standard-library/stack-class.md)|一种模板容器适配器类，它提供了功能的限制，限制对最近添加到某些基础容器类型的元素的访问。|
 
