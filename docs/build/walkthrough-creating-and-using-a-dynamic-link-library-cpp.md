@@ -2,17 +2,17 @@
 title: 演练：创建和使用自己的动态链接库 (C++)
 description: 使用 C++ 在 Visual Studio 中创建 Windows 动态链接库 (DLL)。
 ms.custom: conceptual
-ms.date: 07/14/2019
+ms.date: 07/17/2019
 helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: 5db16c834f3e42aee0cc558ab1ea18bcb2a35063
-ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
+ms.openlocfilehash: 8ca89471177ba2d1fa98bfaf51b86ed15dcd6d2f
+ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67894374"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68299805"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>演练：创建和使用自己的动态链接库 (C++)
 
@@ -34,7 +34,7 @@ ms.locfileid: "67894374"
 
 本演练将创建两个 Visual Studio 解决方案；一个生成 DLL，另一个生成客户端应用。 DLL 使用 C 调用约定，因此只要平台与调用和链接约定匹配，即可从使用其他语言生成的应用调用它。 客户端应用使用隐式链接  ，其中 Windows 在加载时将应用链接到 DLL。 此链接允许应用调用 DLL 提供的函数，就像调用静态链接库中的函数一样。
 
-本演练并不涵盖一些常见的情况。 它不会演示其他编程语言对 C++ DLL 的使用。 它不会演示如何创建纯资源 DLL。 它也不会演示使用显式链接在运行时（而不是在加载时）加载 DLL。 请放心，你可以使用 Visual Studio 执行所有这些操作。 有关 DLL 的详细信息的链接，请参阅[在 Visual Studio 中创建 C/C++ DLL](dlls-in-visual-cpp.md)。 有关隐式链接和显式链接的详细信息，请参阅[确定要使用的链接方法](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)。 有关创建用于使用 C 语言链接约定的编程语言的 C++ DLL 的信息，请参阅[导出 C++ 函数以用于 C 语言可执行文件](exporting-cpp-functions-for-use-in-c-language-executables.md)。 有关如何创建用于 .NET 语言的 DLL 的信息，请参阅[从 Visual Basic 应用程序调用 DLL 函数](calling-dll-functions-from-visual-basic-applications.md)。
+本演练并不涵盖一些常见的情况。 它不会演示其他编程语言对 C++ DLL 的使用。 它不会演示如何创建纯资源 DLL。 它也不会演示使用显式链接在运行时（而不是在加载时）加载 DLL。 请注意, 可以使用 Visual Studio 来执行所有这些操作。 有关 DLL 的详细信息的链接，请参阅[在 Visual Studio 中创建 C/C++ DLL](dlls-in-visual-cpp.md)。 有关隐式链接和显式链接的详细信息，请参阅[确定要使用的链接方法](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)。 有关创建用于使用 C 语言链接约定的编程语言的 C++ DLL 的信息，请参阅[导出 C++ 函数以用于 C 语言可执行文件](exporting-cpp-functions-for-use-in-c-language-executables.md)。 有关如何创建用于 .NET 语言的 DLL 的信息，请参阅[从 Visual Basic 应用程序调用 DLL 函数](calling-dll-functions-from-visual-basic-applications.md)。
 
 ## <a name="prerequisites"></a>系统必备
 
@@ -267,7 +267,7 @@ ms.locfileid: "67894374"
    }
    ```
 
-若要验证到目前为止是否一切正常，请编译动态链接库。 若要编译，请在菜单栏上选择“生成” > “生成解决方案”   。 输出应该类似于以下内容：
+若要验证到目前为止是否一切正常，请编译动态链接库。 若要编译，请在菜单栏上选择“生成” > “生成解决方案”   。 输出应如下所示。 请注意, DLL 可执行文件和相关编译器输出放置在一个名为 "*调试*" 的文件夹中, 直接位于解决方案文件夹下。 如果创建发布版本, 则会将输出放入名为*Release*的文件夹中:
 
 ```Output
 1>------ Build started: Project: MathLibrary, Configuration: Debug Win32 ------
@@ -280,7 +280,7 @@ ms.locfileid: "67894374"
 ========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
 ```
 
-恭喜，现已创建使用 Visual Studio 的 DLL ！ 接下来，将创建一个使用 DLL 导出的函数的客户端应用。
+恭喜, 你已使用 Visual Studio 创建了一个 DLL! 接下来，将创建一个使用 DLL 导出的函数的客户端应用。
 
 ## <a name="create-a-client-app-that-uses-the-dll"></a>创建可使用 DLL 的客户端应用
 
@@ -354,17 +354,17 @@ ms.locfileid: "67894374"
 
 1. 在“附加包含目录”  对话框的顶部窗格中双击以启用编辑控件。
 
-1. 在编辑控件中，指定指向 MathLibrary.h  头文件的位置的路径。 单击向下箭头，然后选择 **\<编辑 >** 。 你可以单击文件夹图标，然后旁边的省略号 ( **...** ) 以浏览到正确的文件夹。
+1. 在编辑控件中，指定指向 MathLibrary.h  头文件的位置的路径。 单击向下箭头, 然后选择 **\<"编辑 >** "。 您可以单击文件夹图标, 然后单击省略号 ( **...** ) 以浏览到正确的文件夹。
  
-   您还可以这种情况下，您可以键入包含客户端项目包含在 DLL 项目中的.h 文件的文件夹中的.cpp 文件的文件夹中的相对路径。 如果客户端项目位于与 DLL 解决方案相同的文件夹中的单独解决方案中，则相对路径应如下所示：
+   您也可以在这种情况下, 将客户端项目中包含 .cpp 文件的文件夹的相对路径键入到 DLL 项目中包含 .h 文件的文件夹中。 如果客户端项目位于与 DLL 解决方案相同的文件夹中的单独解决方案中，则相对路径应如下所示：
 
    `..\MathLibrary\MathLibrary`
 
-   如果 DLL 和客户端项目都在同一解决方案中，或解决方案位于不同的文件夹中，然后你必须相应地调整相对路径，否则浏览使用前面所述的方法的文件夹。
+   如果 DLL 和客户端项目位于同一解决方案中, 或者解决方案位于不同文件夹中, 则必须相应地调整相对路径, 或者使用前面所述的方法浏览文件夹。
 
    ![将标头位置添加到“附加包含目录”属性](media/mathclient-additional-include-directories.png "将标头位置添加到“附加包含目录”属性")
 
-1. 到标头文件中输入路径后**附加包含目录**对话框框中，选择**确定**按钮以返回到**属性页**对话框中，然后选择**确定**按钮以保存所做的更改。
+1. 在 "**附加包含目录**" 对话框中输入头文件的路径后, 请选择 "**确定"** 按钮返回到 "**属性页**" 对话框, 然后选择 "**确定"** 按钮保存所做的更改。
 
 现在可以包括 MathLibrary.h  文件，并使用它在客户端应用程序中声明的函数。 使用以下代码替换 MathClient.cpp  的内容：
 
@@ -412,16 +412,16 @@ int main()
 
    ![编辑“附加库目录”属性](media/mathclient-additional-library-directories-property.png "编辑“附加库目录”属性")
 
-1. 在“附加库目录”  对话框的顶部窗格中双击以启用编辑控件。 在编辑控件中，指定指向 MathLibrary.lib  文件位置的路径。 输入此值可使用同时适用于“调试”和“发布”版本的宏：
+1. 在“附加库目录”  对话框的顶部窗格中双击以启用编辑控件。 在编辑控件中，指定指向 MathLibrary.lib  文件位置的路径。 它位于解决方案文件夹下直接`Debug`名为的文件夹中。 如果创建发布版本, 则会将输出放入名`Release`为的文件夹中。 您可以使用下面的宏, 使链接器可以查找您的 DLL, 而不管您创建哪种类型的生成:
 
    **Visual Studio 2019:**
 
    `..\MathLibrary\$(IntDir)`
 
-   **Visual Studio 2017 及更早版本：**
+   **Visual Studio 2017 及更早版本:**
 
    `..\..\MathLibrary\$(IntDir)`
- 
+
    ![添加库目录](media/mathclient-additional-library-directories.png "添加库目录")
 
 1. 在“附加库目录”对话框中输入指向库文件的路径后，选择“确定”按钮返回到“属性页”对话框    。
@@ -442,7 +442,7 @@ int main()
 
    `xcopy /y /d "..\MathLibrary\$(IntDir)MathLibrary.dll" "$(OutDir)"`
 
-    **Visual Studio 2017 及更早版本：**
+    **Visual Studio 2017 及更早版本:**
 
    `xcopy /y /d "..\..\MathLibrary\$(IntDir)MathLibrary.dll" "$(OutDir)"`
 
@@ -450,7 +450,7 @@ int main()
 
 1. 选择“确定”  按钮以保存对项目属性所做的更改。
 
-现在，客户端应用具备生成和运行所需的全部条件。 通过在菜单栏上选择“生成” > “生成解决方案”来生成应用程序   。 **输出**Visual Studio 窗口中的应看到如下的内容具体取决于你的 Visual Studio 版本：
+现在，客户端应用具备生成和运行所需的全部条件。 通过在菜单栏上选择“生成” > “生成解决方案”来生成应用程序   。 Visual Studio 中的 "**输出**" 窗口应包含类似于以下示例的内容, 具体取决于你的 Visual studio 版本:
 
 ```Output
 1>------ Build started: Project: MathClient, Configuration: Debug Win32 ------

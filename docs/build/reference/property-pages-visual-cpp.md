@@ -1,6 +1,6 @@
 ---
 title: C++项目属性页引用-Visual Studio
-ms.date: 05/06/2019
+ms.date: 07/16/2019
 f1_keywords:
 - VC.Project.NotAProp.Edit
 helpviewer_keywords:
@@ -14,22 +14,30 @@ helpviewer_keywords:
 - build macro
 - user-defined macros
 ms.assetid: 13ffe3ea-1bc3-4bee-be5e-053a8a99cce4
-ms.openlocfilehash: 7b10e3c7eef846d72220545b89a217da7a4bb9a1
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 164a8e8aff5428be36c5d921bc8078ab352f51c0
+ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65217782"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68299730"
 ---
 # <a name="c-project-property-page-reference"></a>C++项目属性页引用
 
-通过使用属性页，可以指定 Visual Studio 项目的设置。 要打开 Visual Studio 项目的“属性页”对话框，请在“项目”菜单上选择“属性”。 有关项目属性的详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
+在 Visual Studio 中, 通过项目的属性页指定编译器和链接器选项、文件路径和其他生成设置。 若要打开**属性页**, 请从主菜单中选择 "**项目** > **属性**", 或右键单击 "**解决方案资源管理器**中的项目节点, 然后选择"**属性**"。 有关项目属性的详细信息, 请[参阅C++在 Visual Studio 中设置编译器和生成属性](../working-with-project-properties.md)。
 
-在非 Windows 项目中的属性页，请参阅[LinuxC++属性页引用](../../linux/prop-pages-linux.md)。
+对于 Linux 项目中的属性页, 请参阅[linux C++属性页引用](../../linux/prop-pages-linux.md)。
 
 ## <a name="in-this-section"></a>本节内容
 
-[“\<项目名> 属性页”对话框 ->“配置属性”->“清单工具”->“高级”](advanced-manifest-tool.md)
+[常规属性页（项目）](general-property-page-project.md)
+
+[“VC++ 目录”属性页](vcpp-directories-property-page.md)
+
+[清单工具, 常规](general-manifest-tool-configuration-properties.md)
+[清单工具, 输入和输出](input-and-output-manifest-tool.md)
+[清单工具, 独立 COM](isolated-com-manifest-tool.md)
+[清单工具, 高级](advanced-manifest-tool.md)
+
 
 [“命令行”属性页](command-line-property-pages.md)
 
@@ -39,9 +47,9 @@ ms.locfileid: "65217782"
 
 [“常规”属性页（文件）](general-property-page-file.md)
 
-[常规属性页（项目）](general-property-page-project.md)
 
-[“\<项目名> 属性页”对话框 ->“配置属性”->“清单工具”->“常规”](general-manifest-tool-configuration-properties.md)
+
+
 
 [“HLSL”属性页](hlsl-property-pages.md)
 
@@ -51,9 +59,9 @@ ms.locfileid: "65217782"
 
 [“HLSL”属性页：输出文件](hlsl-property-pages-output-files.md)
 
-[“\<项目名> 属性页”对话框 ->“配置属性”->“清单工具”->“输入和输出”](input-and-output-manifest-tool.md)
 
-[“\<项目名> 属性页”对话框 ->“配置属性”->“清单工具”->“独立 COM”](isolated-com-manifest-tool.md)
+
+
 
 [“链接器”属性页](linker-property-pages.md)
 
@@ -73,7 +81,7 @@ ms.locfileid: "65217782"
 
 [“资源”属性页](resources-property-pages.md)
 
-[“VC++ 目录”属性页](vcpp-directories-property-page.md)
+
 
 [“Web 引用”属性页](web-references-property-page.md)
 
