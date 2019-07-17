@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::allocator [C++], max_size
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
-ms.openlocfilehash: 40e99901d4d4105902010a9e5b71ed3edf7d00db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a0c8a04dda6c396b4f56d0939838fb6cb8e7455
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411040"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245923"
 ---
 # <a name="allocator-class"></a>allocator 类
 
@@ -83,13 +83,13 @@ class allocator
 
 ### <a name="constructors"></a>构造函数
 
-|构造函数|描述|
+|||
 |-|-|
 |[allocator](#allocator)|用于创建 `allocator` 对象的构造函数。|
 
 ### <a name="typedefs"></a>Typedef
 
-|类型名称|描述|
+|||
 |-|-|
 |[const_pointer](#const_pointer)|提供指向由分配器管理的对象类型的常量指针的类型。|
 |[const_reference](#const_reference)|提供对由分配器管理的对象类型的常量引用的类型。|
@@ -99,9 +99,9 @@ class allocator
 |[size_type](#size_type)|无符号整型，可以表示模板类 `allocator` 的对象可以分配的任何序列的长度。|
 |[value_type](#value_type)|由分配器管理的类型。|
 
-### <a name="member-functions"></a>成员函数
+### <a name="functions"></a>函数
 
-|成员函数|描述|
+|||
 |-|-|
 |[address](#address)|查找指定了其值的对象的地址。|
 |[allocate](#allocate)|分配大小足以存储至少某个指定数量的元素的内存块。|
@@ -113,17 +113,11 @@ class allocator
 
 ### <a name="operators"></a>运算符
 
-|运算符|描述|
+|||
 |-|-|
 |[operator=](#op_eq)|将一个 `allocator` 对象分配给另一个 `allocator` 对象。|
 
-## <a name="requirements"></a>要求
-
-**标头：**\<memory>
-
-**命名空间：** std
-
-## <a name="address"></a>  allocator::address
+### <a name="address"></a> 地址
 
 查找指定了其值的对象的地址。
 
@@ -132,20 +126,20 @@ pointer address(reference val) const;
 const_pointer address(const_reference val) const;
 ```
 
-### <a name="parameters"></a>参数
+#### <a name="parameters"></a>参数
 
-*val*<br/>
+*val*\
 要搜索其地址的对象的常量或非常量值。
 
-### <a name="return-value"></a>返回值
+#### <a name="return-value"></a>返回值
 
 指向所找到的各自常量或非常量值的对象的常量或非常量指针。
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 成员函数返回的地址*val*中的窗体的指针必须采取的分配的元素。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // allocator_address.cpp
@@ -189,7 +183,7 @@ The original vector v1 is:
 The integer addressed by v1Ptr has a value of: *v1Ptr = 8.
 ```
 
-## <a name="allocate"></a>  allocator::allocate
+### <a name="allocate"></a> 分配
 
 分配大小足以存储至少某个指定数量的元素的内存块。
 
@@ -197,23 +191,23 @@ The integer addressed by v1Ptr has a value of: *v1Ptr = 8.
 pointer allocate(size_type count, const void* _Hint);
 ```
 
-### <a name="parameters"></a>参数
+#### <a name="parameters"></a>参数
 
-*count*<br/>
+*计数*\
 要分配足够大的存储空间的元素数。
 
-*_Hint*<br/>
+*_Hint*\
 通过定位在请求之前分配的对象的地址，常量指针可能帮助分配器对象满足存储请求。
 
-### <a name="return-value"></a>返回值
+#### <a name="return-value"></a>返回值
 
 如果未分配内存，则指向分配的对象的指针或为 null。
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 成员函数的类型的计数元素数组分配存储`Type`，通过调用运算符 new (*计数*)。 它返回指向已分配对象的指针。 提示参数帮助某些分配器改进引用区域；有效的选择是由同一分配器对象较早分配且尚未被释放的对象的地址。 若不提供提示，请改用 null 指针参数。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // allocator_allocate.cpp
@@ -249,7 +243,7 @@ int main( )
 0 1 2 3 4 5 6 7 8 9
 ```
 
-## <a name="allocator"></a>  allocator::allocator
+### <a name="allocator"></a> 分配器
 
 用于创建分配器对象的构造函数。
 
@@ -257,19 +251,19 @@ int main( )
 allocator();
 allocator(const allocator<Type>& right);
 template <class Other>
-allocator(const allocator<Other>& right);
+    allocator(const allocator<Other>& right);
 ```
 
-### <a name="parameters"></a>参数
+#### <a name="parameters"></a>参数
 
-*right*<br/>
+*右侧*\
 要复制的分配器对象。
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 构造函数不执行任何操作。 但是，一般情况下，从另一个分配器对象构造的分配器对象与之比较应相等，并允许在两个分配器对象间混合对象分配和释放。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // allocator_allocator.cpp
@@ -332,7 +326,7 @@ The allocator objects cv1Alloc & v1Alloc are equal.
 The allocator objects cAlloc & Alloc are equal.
 ```
 
-## <a name="const_pointer"></a>  allocator::const_pointer
+### <a name="const_pointer"></a> const_pointer
 
 提供指向由分配器管理的对象类型的常量指针的类型。
 
@@ -340,11 +334,11 @@ The allocator objects cAlloc & Alloc are equal.
 typedef const value_type *const_pointer;
 ```
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 指针类型描述一个对象`ptr`，可以指定，通过表达式`*ptr`，模板类分配器对象可以分配的任何常量对象。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // allocator_const_ptr.cpp
@@ -387,7 +381,7 @@ The original vector v1 is:
 The integer's address found has a value of: 10.
 ```
 
-## <a name="const_reference"></a>  allocator::const_reference
+### <a name="const_reference"></a> const_reference
 
 提供对由分配器管理的对象类型的常量引用的类型。
 
@@ -395,11 +389,11 @@ The integer's address found has a value of: 10.
 typedef const value_type& const_reference;
 ```
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 引用类型描述一个对象，可以指定模板类分配器对象可以分配的任何常量对象。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // allocator_const_ref.cpp
@@ -453,7 +447,7 @@ The value of the element referred to by vcref,
 after nofication through its nonconst iterator, is: 175.
 ```
 
-## <a name="construct"></a>  allocator::construct
+### <a name="construct"></a> 构造
 
 在使用指定值初始化的指定地址处构造特定类型的对象。
 
@@ -461,22 +455,22 @@ after nofication through its nonconst iterator, is: 175.
 void construct(pointer ptr, const Type& val);
 void construct(pointer ptr, Type&& val);
 template <class _Other>
-void construct(pointer ptr, _Other&&...   val);
+    void construct(pointer ptr, _Other&&... val);
 ```
 
-### <a name="parameters"></a>参数
+#### <a name="parameters"></a>参数
 
-*ptr*<br/>
+*ptr*\
 指向要构造对象的位置的指针。
 
-*val*<br/>
+*val*\
 要进行初始化的要构造的对象的值。
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
-第一个成员函数等于 **new** ( ( `void` \*) `ptr` ) **Type** ( `val` )。
+第一个成员函数等效于**新**((`void` \*) `ptr`)**类型**(`val`)。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // allocator_construct.cpp
@@ -525,7 +519,7 @@ The modified vector v1 is:
 ( 3 7 9 12 15 18 21 ).
 ```
 
-## <a name="deallocate"></a>  allocator::deallocate
+### <a name="deallocate"></a> 解除分配
 
 从指定位置开始从存储中释放指定数量的的对象。
 
@@ -533,23 +527,23 @@ The modified vector v1 is:
 void deallocate(pointer ptr, size_type count);
 ```
 
-### <a name="parameters"></a>参数
+#### <a name="parameters"></a>参数
 
-*ptr*<br/>
+*ptr*\
 指向要从存储中释放的第一个对象的指针。
 
-*count*<br/>
+*计数*\
 要从存储中释放的对象数量。
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 成员函数释放存储类型的计数对象的数组`Type`开始*ptr*，通过调用`operator delete(ptr)`。 指针*ptr*必须较早返回通过调用[分配](#allocate)相等的分配器对象 **\*这** ，分配一个数组相同的大小和类型的对象。 `deallocate` 绝不会引发异常。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 有关使用 member 函数的示例，请参阅 [allocator::allocate](#allocate)
 
-## <a name="destroy"></a>  allocator::destroy
+### <a name="destroy"></a> 销毁
 
 调用对象析构函数而不释放存储对象的内存。
 
@@ -557,16 +551,16 @@ void deallocate(pointer ptr, size_type count);
 void destroy(pointer ptr);
 ```
 
-### <a name="parameters"></a>参数
+#### <a name="parameters"></a>参数
 
-*ptr*<br/>
+*ptr*\
 指定要销毁的对象的地址的指针。
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
-成员函数会销毁指定的对象*ptr*，通过调用析构函数`ptr->`**类型**::**~ 类型**。
+成员函数会销毁指定的对象*ptr*，通过调用析构函数`ptr->`**类型**:: **~ 类型**。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // allocator_destroy.cpp
@@ -615,7 +609,7 @@ The modified vector v1 is:
 ( 2 4 6 8 10 -99 14 ).
 ```
 
-## <a name="difference_type"></a>  allocator::difference_type
+### <a name="difference_type"></a> difference_type
 
 有符号的整型，可以表示指向由分配器管理的对象类型的指针值之间的差异。
 
@@ -623,11 +617,11 @@ The modified vector v1 is:
 typedef ptrdiff_t difference_type;
 ```
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 带符号的整数类型描述一个可表示模板类分配器对象可以分配的序列中任意两个元素的地址之间的差异的对象。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // allocator_diff_type.cpp
@@ -676,7 +670,7 @@ Pointer v1PtrB addresses 12.
 The difference between the integer's addresses is: 8.
 ```
 
-## <a name="max_size"></a>  allocator::max_size
+### <a name="max_size"></a> max_size
 
 在可用内存用完之前，返回可以由类分配器的对象分配的类型 `Type` 的元素数。
 
@@ -684,11 +678,11 @@ The difference between the integer's addresses is: 8.
 size_type max_size() const;
 ```
 
-### <a name="return-value"></a>返回值
+#### <a name="return-value"></a>返回值
 
 可分配的元素数量。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // allocator_max_size.cpp
@@ -745,29 +739,29 @@ int main( )
 }
 ```
 
-## <a name="op_eq"></a>  allocator::operator=
+### <a name="op_eq"></a> 运算符 =
 
 将一个分配器对象分配到另一个分配器对象。
 
 ```cpp
 template <class Other>
-allocator<Type>& operator=(const allocator<Other>& right);
+    allocator<Type>& operator=(const allocator<Other>& right);
 ```
 
-### <a name="parameters"></a>参数
+#### <a name="parameters"></a>参数
 
-*right*<br/>
+*右侧*\
 要分配到另一个对象的分配器对象。
 
-### <a name="return-value"></a>返回值
+#### <a name="return-value"></a>返回值
 
 分配器对象的引用
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 模板赋值运算符没有任何影响。 但是，一般情况下，分配到另一个分配器对象的分配器对象与之比较应相等，并允许在两个分配器对象间混合对象分配和释放。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // allocator_op_assign.cpp
@@ -808,7 +802,7 @@ int main( )
 }
 ```
 
-## <a name="pointer"></a>  allocator::pointer
+### <a name="pointer"></a> 指针
 
 提供指向由分配器管理的对象类型的指针的类型。
 
@@ -816,11 +810,11 @@ int main( )
 typedef value_type *pointer;
 ```
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 指针类型描述一个对象`ptr`，可以指定，通过表达式 **\*ptr**，模板类分配器对象可以分配任何对象。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // allocator_ptr.cpp
@@ -863,19 +857,20 @@ The original vector v1 is:
 The integer addressed by v1Ptr has a value of: *v1Ptr = 12.
 ```
 
-## <a name="rebind"></a>  allocator::rebind
+### <a name="rebind"></a> 重新绑定
 
 使得一种类型的对象分配器可以为另一种类型的对象分配存储的结构。
+
 ```cpp
-struct rebind {    typedef allocator<_Other> other ;    };
+struct rebind { typedef allocator<_Other> other; };
 ```
 
-### <a name="parameters"></a>参数
+#### <a name="parameters"></a>参数
 
-*other*<br/>
+*其他*\
 所分配内存的元素的类型。
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 此结构可用于为与所实现的容器的元素类型不同的类型分配内存。
 
@@ -893,7 +888,7 @@ A::rebind<Other>::other(al).allocate(1, (Other *)0)
 A::rebind<Other>::other::pointer
 ```
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // allocator_rebind.cpp
@@ -918,7 +913,7 @@ int main( )
 }
 ```
 
-## <a name="reference"></a>  allocator::reference
+### <a name="reference"></a> 引用
 
 提供指向对分配器管理的对象类型的引用的类型。
 
@@ -926,11 +921,11 @@ int main( )
 typedef value_type& reference;
 ```
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 引用类型描述一个对象，可以指定模板类分配器的对象可以分配的任何对象。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // allocator_reference.cpp
@@ -978,7 +973,7 @@ the first element in the vector.
 The element referred to by vref after being modified is: 150.
 ```
 
-## <a name="size_type"></a>  allocator::size_type
+### <a name="size_type"></a> size_type
 
 无符号整型，可以表示模板类分配器的对象可以分配的任何序列的长度。
 
@@ -986,7 +981,7 @@ The element referred to by vref after being modified is: 150.
 typedef size_t size_type;
 ```
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // allocator_size_type.cpp
@@ -1023,7 +1018,7 @@ int main( )
 }
 ```
 
-## <a name="value_type"></a>  allocator::value_type
+### <a name="value_type"></a> value_type
 
 由分配器管理的类型。
 
@@ -1031,11 +1026,11 @@ int main( )
 typedef Type value_type;
 ```
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 该类型是模板参数 `Type` 的同义词。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // allocator_value_type.cpp
@@ -1084,6 +1079,17 @@ The modified vector v is:
 ( 150 200 300 400 500 600 700 ).
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="helpers"></a>Helpers
 
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+### <a name="allocator_arg_t"></a> allocator_arg_t
+
+```cpp
+struct allocator_arg_t { explicit allocator_arg_t() = default; };
+inline constexpr allocator_arg_t allocator_arg{};
+```
+
+### <a name="uses_allocator"></a> uses_allocator
+
+```cpp
+template <class T, class Alloc> struct uses_allocator;
+```

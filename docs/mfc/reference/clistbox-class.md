@@ -102,12 +102,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: b448f725bac68c2b67dc44d660c664c075aa86da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f7b62ecf64c70c554fe14883c45d6b7936c668d7
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62225264"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243571"
 ---
 # <a name="clistbox-class"></a>CListBox 类
 
@@ -146,7 +146,7 @@ class CListBox : public CWnd
 |[CListBox::GetCount](#getcount)|在列表框中返回的字符串的数目。|
 |[CListBox::GetCurSel](#getcursel)|返回列表框中当前所选字符串的从零开始的索引。|
 |[CListBox::GetHorizontalExtent](#gethorizontalextent)|返回以像素为单位可以水平滚动列表框的宽度。|
-|[CListBox::GetItemData](#getitemdata)|返回与列表框项关联的 32 位值。|
+|[CListBox::GetItemData](#getitemdata)|返回与列表框项相关联的值。|
 |[CListBox::GetItemDataPtr](#getitemdataptr)|返回到列表框项的指针。|
 |[CListBox::GetItemHeight](#getitemheight)|确定列表框中项的高度。|
 |[CListBox::GetItemRect](#getitemrect)|返回当前显示的列表框项的边框。|
@@ -170,7 +170,7 @@ class CListBox : public CWnd
 |[CListBox::SetColumnWidth](#setcolumnwidth)|设置多列列表框中的列宽度。|
 |[CListBox::SetCurSel](#setcursel)|选择一个列表框的字符串。|
 |[CListBox::SetHorizontalExtent](#sethorizontalextent)|设置以像素为单位可以水平滚动列表框的宽度。|
-|[CListBox::SetItemData](#setitemdata)|设置与列表框项关联的 32 位值。|
+|[CListBox::SetItemData](#setitemdata)|设置与列表框项相关联的值。|
 |[CListBox::SetItemDataPtr](#setitemdataptr)|将指针设置为列表框项。|
 |[CListBox::SetItemHeight](#setitemheight)|在列表框中设置项的高度。|
 |[CListBox::SetLocale](#setlocale)|设置的列表框的区域设置标识符。|
@@ -341,7 +341,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 
 指示中所述的两个项目的相对位置[COMPAREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct)结构。 它可能是以下值之一：
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |-1|第 1 项进行排序项 2 之前。|
 |0|第 1 项和项 2 排序相同。|
@@ -478,7 +478,7 @@ int Dir(
 *attr*<br/>
 可以是任何组合**enum**值中所述`CFile::GetStatu` [s](../../mfc/reference/cfile-class.md#getstatus)，或以下值的任意组合：
 
-|“值”|含义|
+|值|含义|
 |-----------|-------------|
 |0x0000|可以读取或写入到文件。|
 |0x0001|可以从读取但不是会写入到文件。|
@@ -525,7 +525,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 
 [!code-cpp[NVC_MFC_CListBox#9](../../mfc/codesnippet/cpp/clistbox-class_9.cpp)]
 
-##  <a name="findstring"></a>  CListBox::FindString
+##  <a name="findstring"></a>  Clistbox:: Findstring
 
 查找包含指定的前缀，而无需更改的列表框中选择的列表框中的第一个字符串。
 
@@ -702,7 +702,7 @@ DWORD_PTR GetItemData(int nIndex) const;
 
 ### <a name="return-value"></a>返回值
 
-如果发生错误的项或 LB_ERR 与关联的 32 位值。
+如果发生错误的项或 LB_ERR 与关联的值。
 
 ### <a name="remarks"></a>备注
 
@@ -1288,7 +1288,7 @@ void SetHorizontalExtent(int cxExtent);
 
 ##  <a name="setitemdata"></a>  CListBox::SetItemData
 
-设置与列表框中指定的项关联的 32 位值。
+设置与列表框中指定的项相关联的值。
 
 ```
 int SetItemData(

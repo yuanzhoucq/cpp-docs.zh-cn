@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - mem_fun1_ref_t class
 ms.assetid: 7d6742f6-19ba-4523-b3c8-0e5b8f11464f
-ms.openlocfilehash: d4f0f2064ac6771e2c351b70097137fed12c8262
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88ab2c436b3dd3b5a289124e73b6f1b5d21f96a5
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412873"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243857"
 ---
 # <a name="memfun1reft-class"></a>mem_fun1_ref_t 类
 
@@ -28,19 +28,18 @@ class mem_fun1_ref_t : public binary_function<Type, Arg, Result> {
     Result operator()(
     Type& left,
     Arg right) const;
-
 };
 ```
 
 ### <a name="parameters"></a>参数
 
-*_Pm*<br/>
+*_Pm*\
 一个指针，指向要转换为函数对象的 `Type` 类成员函数。
 
-*left*<br/>
+*左侧*\
 该对象的 *_Pm*上调用成员函数。
 
-*right*<br/>
+*右侧*\
 为指定的参数 *_Pm*。
 
 ## <a name="return-value"></a>返回值
@@ -54,14 +53,3 @@ class mem_fun1_ref_t : public binary_function<Type, Arg, Result> {
 ## <a name="example"></a>示例
 
 通常不直接使用 `mem_fun1_ref_t` 的构造函数；helper 函数 `mem_fun_ref` 用于调整成员函数。 有关如何使用成员函数适配器的示例，请参阅 [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref)。
-
-## <a name="requirements"></a>要求
-
-**标头：**\<functional>
-
-**命名空间：** std
-
-## <a name="see-also"></a>请参阅
-
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)<br/>

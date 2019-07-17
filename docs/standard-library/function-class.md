@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::function [C++], target
 - std::function [C++], target_type
 ms.assetid: 7b5ca76b-9ca3-4d89-8fcf-cad70a4aeae6
-ms.openlocfilehash: 44c7691cc967b13b4fa94a7c51da57b7bf4d511f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d775af68b8238093c794a0f78d7e24f2a515ee56
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159712"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243795"
 ---
 # <a name="function-class"></a>function 类
 
@@ -79,10 +79,10 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*Fty*<br/>
+*Fty*\
 要包装的函数类型。
 
-*Ax*<br/>
+*Ax*\
 allocator 函数。
 
 ## <a name="remarks"></a>备注
@@ -103,21 +103,23 @@ allocator 函数。
 
 空 `function` 对象不包含可调用对象或对可调用对象的引用。
 
+## <a name="members"></a>成员
+
 ### <a name="constructors"></a>构造函数
 
-|构造函数|描述|
+|||
 |-|-|
-|[function](#function)|构造一个包装器，该包装器或者为空，或者存储具有固定签名的任意类型的可调用对象。|
+|[函数](#function)|构造一个包装器，该包装器或者为空，或者存储具有固定签名的任意类型的可调用对象。|
 
 ### <a name="typedefs"></a>Typedef
 
-|类型名称|描述|
+|||
 |-|-|
 |[result_type](#result_type)|存储的可调对象的返回类型。|
 
-### <a name="member-functions"></a>成员函数
+### <a name="functions"></a>函数
 
-|成员函数|描述|
+|||
 |-|-|
 |[assign](#assign)|将可调用对象分配给此函数对象。|
 |[swap](#swap)|交换两个可调用对象。|
@@ -126,19 +128,13 @@ allocator 函数。
 
 ### <a name="operators"></a>运算符
 
-|运算符|描述|
+|||
 |-|-|
-|[function::operator 未指定](#op_unspecified)|测试存储的可调用对象是否存在。|
-|[function::operator()](#op_call)|调用可调用的对象。|
-|[function::operator=](#op_eq)|替换存储的可调用对象。|
+|[未指定的运算符](#op_unspecified)|测试存储的可调用对象是否存在。|
+|[operator()](#op_call)|调用可调用的对象。|
+|[operator=](#op_eq)|替换存储的可调用对象。|
 
-## <a name="requirements"></a>要求
-
-**标头：**\<functional>
-
-**命名空间：** std
-
-## <a name="assign"></a>  function::assign
+## <a name="assign"></a> 分配
 
 将可调用对象分配给此函数对象。
 
@@ -156,20 +152,20 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>参数
 
-*_Func*<br/>
+*_Func*\
 可调用的对象。
 
-*_Fnref*<br/>
+*_Fnref*\
 包含可调用对象的引用包装器。
 
-*Ax*<br/>
+*Ax*\
 分配器对象。
 
 ### <a name="remarks"></a>备注
 
 每个成员函数使用作为 `operand` 传递的可调用对象替换由 `*this` 保留的`callable object`。 同时分配与分配器对象的存储空间*Ax*。
 
-## <a name="function"></a>  function::function
+## <a name="function"></a> 函数
 
 构造一个包装器，该包装器或者为空，或者存储具有固定签名的任意类型的可调用对象。
 
@@ -194,22 +190,22 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>参数
 
-*right*<br/>
+*右侧*\
 要复制的函数对象。
 
-*Fx*<br/>
+*Fx*\
 可调用对象的类型。
 
-*_Func*<br/>
+*_Func*\
 要包装的可调用对象。
 
-*Alloc*<br/>
+*分配*\
 分配器类型。
 
-*Ax*<br/>
+*Ax*\
 分配器。
 
-*_Fnref*<br/>
+*_Fnref*\
 要包装的可调用对象引用。
 
 ### <a name="remarks"></a>备注
@@ -286,7 +282,7 @@ f is non-empty (correct).
 g is empty (correct).
 ```
 
-## <a name="op_unspecified"></a>  function::operator 未指定
+## <a name="op_unspecified"></a> 未指定的运算符
 
 测试存储的可调用对象是否存在。
 
@@ -328,7 +324,7 @@ not empty == false
 not empty == true
 ```
 
-## <a name="op_call"></a>  function::operator()
+## <a name="op_call"></a> operator()
 
 调用可调用的对象。
 
@@ -341,10 +337,10 @@ result_type operator()(
 
 ### <a name="parameters"></a>参数
 
-*TN*<br/>
+*TN*\
 第 N 个调用参数的类型。
 
-*tN*<br/>
+*TN*\
 第 N 个调用参数。
 
 ### <a name="remarks"></a>备注
@@ -379,7 +375,7 @@ empty == false
 val == -3
 ```
 
-## <a name="op_eq"></a>  function::operator=
+## <a name="op_eq"></a> 运算符 =
 
 替换存储的可调用对象。
 
@@ -394,16 +390,16 @@ template <class Fty>
 
 ### <a name="parameters"></a>参数
 
-*npc*<br/>
+*npc*\
 空指针常量。
 
-*right*<br/>
+*右侧*\
 要复制的函数对象。
 
-*fn*<br/>
+*fn*\
 要包装的可调用对象。
 
-*fnref*<br/>
+*fnref*\
 要包装的可调用对象引用。
 
 ### <a name="remarks"></a>备注
@@ -461,7 +457,7 @@ empty == false
 val == -3
 ```
 
-## <a name="result_type"></a>  function::result_type
+## <a name="result_type"></a> result_type
 
 存储的可调对象的返回类型。
 
@@ -503,7 +499,7 @@ empty == false
 val == -3
 ```
 
-## <a name="swap"></a>  function::swap
+## <a name="swap"></a> 交换
 
 交换两个可调用对象。
 
@@ -513,7 +509,7 @@ void swap(function& right);
 
 ### <a name="parameters"></a>参数
 
-*right*<br/>
+*右侧*\
 要进行交换的函数对象。
 
 ### <a name="remarks"></a>备注
@@ -562,7 +558,7 @@ empty == false
 val == -3
 ```
 
-## <a name="target"></a>  function::target
+## <a name="target"></a> 目标
 
 测试存储的可调用对象是否可按指定方式调用。
 
@@ -575,7 +571,7 @@ template <class Fty2>
 
 ### <a name="parameters"></a>参数
 
-*Fty2*<br/>
+*Fty2*\
 要测试的目标可调用对象类型。
 
 ### <a name="remarks"></a>备注
@@ -623,7 +619,7 @@ empty == true
 no target == true
 ```
 
-## <a name="target_type"></a>  function::target_type
+## <a name="target_type"></a> target_type
 
 获取有关可调用对象的类型信息。
 
@@ -668,8 +664,3 @@ type == int (__cdecl*)(int)
 empty == true
 type == void
 ```
-
-## <a name="see-also"></a>请参阅
-
-[mem_fn](../standard-library/functional-functions.md#mem_fn)<br/>
-[reference_wrapper 类](../standard-library/reference-wrapper-class.md)<br/>

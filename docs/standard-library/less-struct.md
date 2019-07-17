@@ -7,12 +7,12 @@ helpviewer_keywords:
 - less struct
 - less function
 ms.assetid: 39349da3-11cd-4774-b2cc-b46af5aae5d7
-ms.openlocfilehash: e24c7fb238c9c05d91cbdba7fab277878e6f5e24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 13aef35856066f9c1897c3d8855c5ff537aa3567
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224045"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245337"
 ---
 # <a name="less-struct"></a>less 结构
 
@@ -39,12 +39,13 @@ struct less<void>
 
 ### <a name="parameters"></a>参数
 
-*类型*， *T*， *U*支持任何类型`operator<`接受指定或推断类型的操作数。
+*类型*， *T*， *U*\
+支持 `operator<` 接受指定或推断类型的操作数的任何类型。
 
-左侧<br/>
+*左侧*\
 小于运算的左操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*T*。
 
-右侧<br/>
+*右侧*\
 小于运算的右操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*U*。
 
 ## <a name="return-value"></a>返回值
@@ -53,7 +54,7 @@ struct less<void>
 
 ## <a name="remarks"></a>备注
 
-二元谓词`less` <  `Type`> 提供严格弱排序的一组类型的元素值*类型*向等价类，当且仅当满足此类型的标准数学正在如此进行排序的要求。 任何指针类型的专用化都会产生元素的全序，所有不同值的元素都会相对于彼此进行排序。
+二元谓词`less` < `Type`> 提供严格弱排序的一组类型的元素值*类型*向等价类，当且仅当满足此类型的标准数学正在如此进行排序的要求。 任何指针类型的专用化都会产生元素的全序，所有不同值的元素都会相对于彼此进行排序。
 
 ## <a name="example"></a>示例
 
@@ -100,19 +101,7 @@ cout << Iter1->m_i << " ";
 }
 ```
 
-## <a name="output"></a>Output
-
 ```Output
 Original vector v1 = (41 18467 6334 26500 19169 15724 11478)
 Sorted vector v1 = (41 6334 11478 15724 18467 19169 26500)
 ```
-
-## <a name="requirements"></a>要求
-
-**标头：**\<functional>
-
-**命名空间：** std
-
-## <a name="see-also"></a>请参阅
-
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)<br/>

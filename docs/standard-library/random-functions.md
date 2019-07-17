@@ -6,16 +6,16 @@ f1_keywords:
 ms.assetid: 2ac9ec59-619b-4b85-a425-f729277c1bc8
 helpviewer_keywords:
 - std::generate_canonical
-ms.openlocfilehash: 80bdb1ca83be5fb390035d7f3b005793a2f03715
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 87b640d4f3aa3fbfa23ad5603d84102301e71ea4
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370341"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240387"
 ---
 # <a name="ltrandomgt-functions"></a>&lt;random&gt; 函数
 
-## <a name="generate_canonical"></a>generate_canonical
+## <a name="generate_canonical"></a> generate_canonical
 
 从随机序列返回浮点值。
 
@@ -29,19 +29,15 @@ RealType generate_canonical(Generator& Gen);
 
 ### <a name="parameters"></a>参数
 
-*RealType*<br/>
+*RealType*\
 浮点整型。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
-*Bits*<br/>
+*Bits*\
 随机数生成器。
 
-*Gen*<br/>
+*常规*\
 随机数生成器。
 
 ### <a name="remarks"></a>备注
 
 该模板函数将调用`operator()`的*代*重复和包返回的值转换为浮点值`x`类型的*RealType*直到它已收集指定的数量中的尾数位`x`。 指定的数字是较小的一个*Bits* （这必须为非零值） 和中的尾数位的全部数量*RealType*。 第一个调用提供最低序位。 该函数返回 `x`。
-
-## <a name="see-also"></a>请参阅
-
-[\<random>](../standard-library/random.md)<br/>

@@ -24,23 +24,16 @@ helpviewer_keywords:
 - std::terminate [C++]
 - std::uncaught_exception [C++]
 - std::unexpected [C++]
-ms.openlocfilehash: 22c5b34f1c87d10b48a797229bc987305fca8f9d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 34a34c48be8bb0e319a7d0eebeccba805cafbc1f
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412652"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246060"
 ---
 # <a name="ltexceptiongt-functions"></a>&lt;exception&gt; 函数
 
-||||
-|-|-|-|
-|[current_exception](#current_exception)|[get_terminate](#get_terminate)|[get_unexpected](#get_unexpected)|
-|[make_exception_ptr](#make_exception_ptr)|[rethrow_exception](#rethrow_exception)|[set_terminate](#set_terminate)|
-|[set_unexpected](#set_unexpected)|[terminate](#terminate)|[uncaught_exception](#uncaught_exception)|
-|[unexpected](#unexpected)|
-
-## <a name="current_exception"></a>  current_exception
+## <a name="current_exception"></a> current_exception
 
 获取指向当前异常的智能指针。
 
@@ -62,18 +55,18 @@ exception_ptr current_exception();
 
 对 `current_exception` 函数的相继调用将返回引用当前异常的不同副本的 `exception_ptr` 对象。 因此，由于对象引用不同的副本，即使副本具有相同的二进制值，其比较结果也是不相等。
 
-## <a name="make_exception_ptr"></a>  make_exception_ptr
+## <a name="make_exception_ptr"></a> make_exception_ptr
 
 创建保留异常副本的 [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) 对象。
 
 ```cpp
 template <class E>
-exception_ptr make_exception_ptr(E Except);
+    exception_ptr make_exception_ptr(E Except);
 ```
 
 ### <a name="parameters"></a>参数
 
-*Except*<br/>
+*除外*\
 具有要复制的异常的类。 通常，指定[异常类](../standard-library/exception-class.md)对象作为参数传递给 `make_exception_ptr` 函数，但任意类对象都可以是参数。
 
 ### <a name="return-value"></a>返回值
@@ -86,7 +79,7 @@ exception_ptr make_exception_ptr(E Except);
 
 应用程序通常不需要 `make_exception_ptr` 函数，因此，我们不建议使用此函数。
 
-## <a name="rethrow_exception"></a>  rethrow_exception
+## <a name="rethrow_exception"></a> rethrow_exception
 
 引发作为参数传递的异常。
 
@@ -96,14 +89,14 @@ void rethrow_exception(exception_ptr P);
 
 ### <a name="parameters"></a>参数
 
-*P*<br/>
+*P*\
 要再次引发的已捕获异常。 如果*P*为 null [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)，该函数将引发[std:: bad_exception](../standard-library/bad-exception-class.md)。
 
 ### <a name="remarks"></a>备注
 
 在 `exception_ptr` 对象中存储捕获的异常后，主线程便可以处理该对象。 在主线程中，调用 `rethrow_exception` 函数，将 `exception_ptr` 对象作为其参数。 `rethrow_exception` 函数从 `exception_ptr` 对象中提取异常，然后在主线程的上下文中引发异常。
 
-## <a name="get_terminate"></a>  get_terminate
+## <a name="get_terminate"></a> get_terminate
 
 获取当前的 `terminate_handler` 函数。
 
@@ -111,7 +104,7 @@ void rethrow_exception(exception_ptr P);
 terminate_handler get_terminate();
 ```
 
-## <a name="set_terminate"></a>  set_terminate
+## <a name="set_terminate"></a> set_terminate
 
 建立程序终止时要调用的新 `terminate_handler`。
 
@@ -121,7 +114,7 @@ terminate_handler set_terminate(terminate_handler fnew) throw();
 
 ### <a name="parameters"></a>参数
 
-*fnew*<br/>
+*fnew*\
 终止时要调用的函数。
 
 ### <a name="return-value"></a>返回值
@@ -160,7 +153,7 @@ int main()
 }
 ```
 
-## <a name="get_unexpected"></a>  get_unexpected
+## <a name="get_unexpected"></a> get_unexpected
 
 获取当前的 `unexpected_handler` 函数。
 
@@ -168,7 +161,18 @@ int main()
 unexpected_handler get_unexpected();
 ```
 
-## <a name="set_unexpected"></a>  set_unexpected
+## <a name="rethrow_if_nested"></a> rethrow_if_nested
+
+```cpp
+template <class E> 
+    void rethrow_if_nested(const E& e);
+```
+
+### <a name="remarks"></a>备注
+
+如果不是多态类类型，或者如果`nested_exception`无法访问或不明确的没有任何影响。 否则，执行动态强制转换。
+
+## <a name="set_unexpected"></a> set_unexpected
 
 建立遇到意外异常时要调用的新 `unexpected_handler`。
 
@@ -178,7 +182,7 @@ unexpected_handler set_unexpected(unexpected_handler fnew) throw();
 
 ### <a name="parameters"></a>参数
 
-*fnew*<br/>
+*fnew*\
 遇到意外异常时要调用的函数。
 
 ### <a name="return-value"></a>返回值
@@ -216,7 +220,7 @@ int main()
 }
 ```
 
-## <a name="terminate"></a>  terminate
+## <a name="terminate"></a> 终止
 
 调用终止处理程序。
 
@@ -234,7 +238,18 @@ void terminate();
 
 有关 `terminate` 的使用示例，请参阅 [set_unexpected](../standard-library/exception-functions.md#set_unexpected)。
 
-## <a name="uncaught_exception"></a>  uncaught_exception
+## <a name="throw_with_nested"></a> throw_with_nested
+
+```cpp
+template <class T> [[noreturn]]
+    void throw_with_nested(T&& t);
+```
+
+### <a name="remarks"></a>备注
+
+将引发嵌套异常的异常。
+
+## <a name="uncaught_exception"></a> uncaught_exception
 
 仅当引发的异常当前正在处理时返回 **true**。
 
@@ -299,7 +314,7 @@ In Test::~Test("outside try block")
         std::uncaught_exception( ) = 0
 ```
 
-## <a name="unexpected"></a>  unexpected
+## <a name="unexpected"></a> 意外
 
 调用意外处理程序。
 
@@ -326,7 +341,3 @@ C++ 标准要求在函数引发其引发列表中未包含的异常时调用 `un
 ### <a name="example"></a>示例
 
 有关 `unexpected` 的使用示例，请参阅 [set_unexpected](../standard-library/exception-functions.md#set_unexpected)。
-
-## <a name="see-also"></a>请参阅
-
-[\<exception>](../standard-library/exception.md)<br/>

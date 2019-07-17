@@ -6,26 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - array header
 ms.assetid: 084147c1-e805-478e-8201-76846020f187
-ms.openlocfilehash: 8915a652fe442af84f2582b9b9d47a243f416eeb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fce204e3873151eafa0c4fa9c2b1e0af9971cfae
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377239"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243887"
 ---
 # <a name="ltarraygt"></a>&lt;array&gt;
 
 定义容器模板类**数组**和几个支持模板。
 
-## <a name="syntax"></a>语法
+## <a name="requirements"></a>要求
 
-```cpp
-#include <array>
-```
+**Header:** \<array>
+
+**命名空间：** std
+
+> [!NOTE]
+> \<数组 > 库还使用`#include <initializer_list>`语句。
+
+## <a name="members"></a>成员
 
 ### <a name="classes"></a>类
 
-|类|描述|
+|||
 |-|-|
 |[array](../standard-library/array-class-stl.md)|存储元素的固定长度序列。|
 |[tuple_element](../standard-library/tuple-element-class-tuple.md)|包装数组元素的类型。|
@@ -33,7 +38,7 @@ ms.locfileid: "62377239"
 
 ### <a name="operators"></a>运算符
 
-|运算符|描述|
+|||
 |-|-|
 |[operator==](../standard-library/array-operators.md#op_eq_eq)|数组比较，等于|
 |[operator!=](../standard-library/array-operators.md#op_neq)|数组比较，不等于|
@@ -44,7 +49,7 @@ ms.locfileid: "62377239"
 
 ### <a name="functions"></a>函数
 
-|函数|描述|
+|||
 |-|-|
 |[get](../standard-library/array-functions.md#get)|获取指定的数组元素。|
 |[swap](../standard-library/array-functions.md#swap)|将一个数组的内容与另一个数组的内容进行交换。|

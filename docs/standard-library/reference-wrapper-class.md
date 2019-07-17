@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::reference_wrapper [C++], type
 - std::reference_wrapper [C++], get
 ms.assetid: 90b8ed62-e6f1-44ed-acc7-9619bd58865a
-ms.openlocfilehash: baf38dd637e31f6fabdf869a242f8f18e2812717
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 83b68d1fdf89519df0a26acd478467fddec8b662
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369585"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240271"
 ---
 # <a name="referencewrapper-class"></a>reference_wrapper 类
 
@@ -35,7 +35,6 @@ ms.locfileid: "62369585"
 template <class Ty>
 class reference_wrapper
 {
-public:
     typedef Ty type;
 
     reference_wrapper(Ty&) noexcept;
@@ -45,9 +44,6 @@ public:
     template <class... Types>
     auto operator()(Types&&... args) const ->
         decltype(std::invoke(get(), std::forward<Types>(args)...));
-
-private:
-    Ty *ptr; // exposition only
 };
 ```
 
@@ -59,39 +55,35 @@ private:
 
 帮助程序函数 [std::ref](functional-functions.md#ref) 和 [std::cref](functional-functions.md#cref) 可以用于创建 `reference_wrapper` 对象。
 
+## <a name="members"></a>成员
+
 ### <a name="constructors"></a>构造函数
 
-|构造函数|描述|
+|||
 |-|-|
 |[reference_wrapper](#reference_wrapper)|构造一个 `reference_wrapper`。|
 
 ### <a name="typedefs"></a>Typedef
 
-|类型名称|描述|
+|||
 |-|-|
 |[result_type](#result_type)|已包装引用的弱结果类型。|
 |[type](#type)|已包装引用的类型。|
 
-### <a name="member-functions"></a>成员函数
+### <a name="functions"></a>函数
 
-|成员函数|描述|
+|||
 |-|-|
 |[get](#get)|获取已包装的引用。|
 
 ### <a name="operators"></a>运算符
 
-|运算符|描述|
+|||
 |-|-|
-|[reference_wrapper::operator Ty&amp;](#op_ty_amp)|获取指向已包装引用的指针。|
-|[reference_wrapper::operator()](#op_call)|调用已包装的引用。|
+|[Ty 运算符&amp;](#op_ty_amp)|获取指向已包装引用的指针。|
+|[operator()](#op_call)|调用已包装的引用。|
 
-## <a name="requirements"></a>要求
-
-**标头：**\<functional>
-
-**命名空间：** std
-
-## <a name="get"></a>  reference_wrapper::get
+## <a name="get"></a> 获取
 
 获取已包装的引用。
 
@@ -130,7 +122,7 @@ rwi = 1
 i = -1
 ```
 
-## <a name="op_ty_amp"></a>reference_wrapper::operator Ty&amp;
+## <a name="op_ty_amp"></a> Ty 运算符&amp;
 
 获取已包装的引用。
 
@@ -166,7 +158,7 @@ i = 1
 (int)rwi = 1
 ```
 
-## <a name="op_call"></a>reference_wrapper::operator()
+## <a name="op_call"></a> operator()
 
 调用已包装的引用。
 
@@ -177,10 +169,10 @@ auto operator()(Types&&... args);
 
 ### <a name="parameters"></a>参数
 
-*类型*<br/>
+*类型*\
 参数列表类型。
 
-*args*<br/>
+*参数*\
 参数列表。
 
 ### <a name="remarks"></a>备注
@@ -212,7 +204,7 @@ int main() {
 rwi(3) = -3
 ```
 
-## <a name="reference_wrapper"></a>  reference_wrapper::reference_wrapper
+## <a name="reference_wrapper"></a> reference_wrapper
 
 构造一个 `reference_wrapper`。
 
@@ -222,10 +214,10 @@ reference_wrapper(Ty& val) noexcept;
 
 ### <a name="parameters"></a>参数
 
-*Ty*<br/>
+*Ty*\
 要包装的类型。
 
-*val*<br/>
+*val*\
 要包装的值。
 
 ### <a name="remarks"></a>备注
@@ -263,7 +255,7 @@ rwi = 1
 i = -1
 ```
 
-## <a name="result_type"></a>  reference_wrapper::result_type
+## <a name="result_type"></a> result_type
 
 已包装引用的弱结果类型。
 
@@ -302,7 +294,7 @@ int main() {
 val = -3
 ```
 
-## <a name="type"></a>  reference_wrapper::type
+## <a name="type"></a> 类型
 
 已包装引用的类型。
 
@@ -343,8 +335,3 @@ int main() {
 i = 1
 rwi = 1
 ```
-
-## <a name="see-also"></a>请参阅
-
-[cref](../standard-library/functional-functions.md#cref)<br/>
-[ref](../standard-library/functional-functions.md#ref)<br/>

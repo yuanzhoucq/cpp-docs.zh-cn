@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - const_mem_fun1_t class
 ms.assetid: 250fac30-9663-4133-9051-6303f76ea259
-ms.openlocfilehash: df984d90f8b632f8e3e3b183943343952d45b8be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ccd9d7e58b9cadec83b64df5553564db20a5745
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62211970"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244519"
 ---
 # <a name="constmemfun1t-class"></a>const_mem_fun1_t 类
 
@@ -30,13 +30,13 @@ class const_mem_fun1_t : public binary_function<const Type *, Arg, Result>
 
 ### <a name="parameters"></a>参数
 
-*member_ptr*<br/>
+*member_ptr*\
 一个指针，指向要转换为函数对象的 `Type` 类成员函数。
 
-*left*<br/>
+*左侧*\
 **Const**对象的*member_ptr*上调用成员函数。
 
-*right*<br/>
+*右侧*\
 为指定的参数*member_ptr*。
 
 ## <a name="return-value"></a>返回值
@@ -50,14 +50,3 @@ class const_mem_fun1_t : public binary_function<const Type *, Arg, Result>
 ## <a name="example"></a>示例
 
 很少直接使用 `const_mem_fun1_t` 的构造函数。 `mem_fn` 用于调整成员函数。 请参阅[mem_fn](../standard-library/functional-functions.md#mem_fn)有关如何使用成员函数适配器的示例。
-
-## <a name="requirements"></a>要求
-
-**标头：**\<functional>
-
-**命名空间：** std
-
-## <a name="see-also"></a>请参阅
-
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)<br/>

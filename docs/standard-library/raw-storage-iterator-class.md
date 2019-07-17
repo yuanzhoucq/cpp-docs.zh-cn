@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::raw_storage_iterator [C++], element_type
 - std::raw_storage_iterator [C++], iter_type
 ms.assetid: 6f033f15-f48e-452a-a326-647ea2cf346f
-ms.openlocfilehash: 8e13d03e577df4c64e85704993cfc0ff81af5f8f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eb32d1846c4e94fbd275dcc416de4f37d9bb53f1
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369756"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240375"
 ---
 # <a name="rawstorageiterator-class"></a>raw_storage_iterator 类
 
@@ -25,15 +25,15 @@ ms.locfileid: "62369756"
 
 ```cpp
 template <class OutputIterator, class Type>
-class raw_storage_iterator
+    class raw_storage_iterator
 ```
 
 ### <a name="parameters"></a>参数
 
-*OutputIterator*<br/>
+*OutputIterator*\
 为正被存储的对象指定输出迭代器。
 
-*Type*<br/>
+*类型*\
 正为其分配存储的对象的类型。
 
 ## <a name="remarks"></a>备注
@@ -46,32 +46,26 @@ class raw_storage_iterator
 
 ### <a name="constructors"></a>构造函数
 
-|构造函数|描述|
+|||
 |-|-|
 |[raw_storage_iterator](#raw_storage_iterator)|使用指定的基础输出迭代器构造原始存储迭代器。|
 
 ### <a name="typedefs"></a>Typedef
 
-|类型名称|描述|
+|||
 |-|-|
 |[element_type](#element_type)|提供一种类型，该类型描述要存储在原始存储迭代器中的元素。|
 |[iter_type](#iter_type)|提供了一种类型，该类型描述原始存储迭代器所基于的迭代器。|
 
 ### <a name="operators"></a>运算符
 
-|运算符|描述|
+|||
 |-|-|
 |[operator*](#op_star)|用于实现输出迭代器表达式的取消引用运算符\* `ii`  =  `x`。|
 |[operator=](#op_eq)|用于实现原始存储迭代器表达式是赋值运算符\* `i`  =  `x`在内存中存储的。|
 |[operator++](#op_add_add)|原始存储迭代器的前置递增和后置递增运算符。|
 
-## <a name="requirements"></a>要求
-
-**标头：** \<memory>
-
-**命名空间：** std
-
-## <a name="element_type"></a>raw_storage_iterator::element_type
+### <a name="element_type"></a> element_type
 
 提供一种类型，该类型描述要存储在原始存储迭代器中的元素。
 
@@ -79,11 +73,11 @@ class raw_storage_iterator
 typedef Type element_type;
 ```
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 该类型是 raw_storage_iterator 类模板参数的同义词`Type`。
 
-## <a name="iter_type"></a>raw_storage_iterator::iter_type
+### <a name="iter_type"></a> iter_type
 
 提供了一种类型，该类型描述原始存储迭代器所基于的迭代器。
 
@@ -91,11 +85,11 @@ typedef Type element_type;
 typedef ForwardIterator iter_type;
 ```
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 该类型是模板参数 `ForwardIterator` 的同义词。
 
-## <a name="op_star"></a>  raw_storage_iterator::operator\*
+### <a name="op_star"></a> 运算符\*
 
 用于实现原始存储迭代器表达式 \* *ii* = *x* 的取消引用运算符。
 
@@ -103,15 +97,15 @@ typedef ForwardIterator iter_type;
 raw_storage_iterator<ForwardIterator, Type>& operator*();
 ```
 
-### <a name="return-value"></a>返回值
+#### <a name="return-value"></a>返回值
 
 对原始存储迭代器的引用
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 要求`ForwardIterator`是原始存储迭代器必须满足仅要求表达式\* *ii* = *t*是有效，并且它本身未提及**运算符**或`operator=`靠自己。 在此实现中的成员运算符返回 **\*这**，以便[运算符 =](#op_eq)(**constType**&) 可以在表达式中，执行实际的存储如\* *ptr* = `val`。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // raw_storage_iterator_op_deref.cpp
@@ -155,14 +149,15 @@ int main( void)
    raw_storage_iterator< Int*, Int > it( pInt );
 *it = 5;
 }
-/* Output:
+```
+
+```Output
 Not constructed.
 Copying 5
 Constructing 5
-*/
 ```
 
-## <a name="op_eq"></a>raw_storage_iterator::operator=
+### <a name="op_eq"></a> 运算符 =
 
 用于实现原始存储迭代器表达式 \* *i* = *x* 以便在内存中进行存储的赋值运算符。
 
@@ -171,22 +166,22 @@ raw_storage_iterator<ForwardIterator, Type>& operator=(
     const Type& val);
 ```
 
-### <a name="parameters"></a>参数
+#### <a name="parameters"></a>参数
 
-*val*<br/>
+*val*\
 类型的对象的值`Type`要插入到内存。
 
-### <a name="return-value"></a>返回值
+#### <a name="return-value"></a>返回值
 
 运算符会将 `val` 插入到内存，然后向原始存储迭代器返回引用。
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 要求`ForwardIterator`状态的原始存储迭代器必须满足仅要求表达式\* *ii* = *t*是有效的并且它本身未提及**运算符**或`operator=`靠自己。 这些成员运算符返回 **\*this**。
 
 赋值运算符通过计算放置 new 表达式 **new** ( ( `void` \*)&\* **first**) **Type**( `val`)，首先使用存储的迭代器值在输出序列中构造下一个对象。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // raw_storage_iterator_op_assign.cpp
@@ -228,14 +223,15 @@ int main( void )
    raw_storage_iterator<Int*, Int> it( pInt );
 *it = 5;
 }
-/* Output:
+```
+
+```Output
 Not constructed.
 Copying 5
 Constructing 5
-*/
 ```
 
-## <a name="op_add_add"></a>raw_storage_iterator::operator++
+### <a name="op_add_add"></a> operator + +
 
 原始存储迭代器的前置递增和后置递增运算符。
 
@@ -245,11 +241,11 @@ raw_storage_iterator<ForwardIterator, Type>& operator++();
 raw_storage_iterator<ForwardIterator, Type> operator++(int);
 ```
 
-### <a name="return-value"></a>返回值
+#### <a name="return-value"></a>返回值
 
 原始存储迭代器或对原始存储迭代器的引用。
 
-### <a name="remarks"></a>备注
+#### <a name="remarks"></a>备注
 
 第一个运算符最终尝试提取和存储类型的对象`CharType`从关联的输入流。 第二个运算符生成对象的副本，递增对象，然后返回副本。
 
@@ -259,7 +255,7 @@ raw_storage_iterator<ForwardIterator, Type> operator++(int);
 
 构造函数存储`first`作为输出迭代器对象。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // raw_storage_iterator_op_incr.cpp
@@ -282,16 +278,17 @@ int main( void )
 
    delete[] pInt;
 }
-/* Output:
+```
+
+```Output
 array 0 = 0
 array 1 = 2
 array 2 = 4
 array 3 = 6
 array 4 = 8
-*/
 ```
 
-## <a name="raw_storage_iterator"></a>raw_storage_iterator::raw_storage_iterator
+### <a name="raw_storage_iterator"></a> raw_storage_iterator
 
 使用指定的基础输出迭代器构造原始存储迭代器。
 
@@ -299,12 +296,12 @@ array 4 = 8
 explicit raw_storage_iterator(ForwardIterator first);
 ```
 
-### <a name="parameters"></a>参数
+#### <a name="parameters"></a>参数
 
-*first*<br/>
+*第一个*\
 前向迭代器，是正在构造的 `raw_storage_iterator` 对象的基础。
 
-### <a name="example"></a>示例
+#### <a name="example"></a>示例
 
 ```cpp
 // raw_storage_iterator_ctor.cpp
@@ -360,7 +357,9 @@ int main( void )
 
    free(pInt);
 }
-/* Output:
+```
+
+```Output
 Error! I'm not constructed!
 Copying 1
 Error! I'm not constructed!
@@ -381,9 +380,4 @@ array 0 = 1
 array 1 = 2
 array 2 = 3
 array 3 = 4
-*/
 ```
-
-## <a name="see-also"></a>请参阅
-
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

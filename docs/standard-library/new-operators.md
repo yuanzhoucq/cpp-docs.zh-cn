@@ -1,41 +1,38 @@
 ---
-title: '&lt;new&gt; 运算符'
+title: '&lt;新&gt;运算符和枚举'
 ms.date: 11/04/2016
 f1_keywords:
 - new/std::operator delete
 - new/std::operator new
 ms.assetid: d1af4b56-9a95-4c65-ab01-bf43e982c7bd
-ms.openlocfilehash: 87f7b6cfd6a06ab03b27ebe6aa4dd41b0b900673
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a3fd5b825fe1eaf3a07d9d001f03b9d0c64ffa31
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223683"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243685"
 ---
-# <a name="ltnewgt-operators"></a>&lt;new&gt; 运算符
+# <a name="ltnewgt-operators-and-enums"></a>&lt;新&gt;运算符和枚举
 
-||||
-|-|-|-|
-|[运算符 delete](#op_delete)|[运算符 delete[]](#op_delete_arr)|[运算符 new](#op_new)|
-|[运算符 new[]](#op_new_arr)|
+## <a name="op_align_val_t"></a> 枚举 align_val_t
 
-## <a name="op_delete"></a>运算符 delete
+```cpp
+enum class align_val_t : size_t {};
+```
 
-由 delete 表达式调用来解除单个对象的存储空间分配的函数。
+## <a name="op_delete"></a> 运算符 delete
+
+由 delete 表达式来取消分配存储单个对象的调用的函数。
 
 ```cpp
 void operator delete(void* ptr) throw();
-
-void operator delete(void *,
-    void*) throw();
-
-void operator delete(void* ptr,
-    const std::nothrow_t&) throw();
+void operator delete(void *, void*) throw();
+void operator delete(void* ptr, const std::nothrow_t&) throw();
 ```
 
 ### <a name="parameters"></a>参数
 
-*ptr*<br/>
+*ptr*\
 其值由删除呈现为无效的指针。
 
 ### <a name="remarks"></a>备注
@@ -46,29 +43,25 @@ Null 值的默认行为*ptr*是不执行任何操作。 任何其他值*ptr*必�
 
 第二个函数由对应于 **new**( **std::size_t**) 形式的新表达式的 placement delete 表达式调用。 它不执行任何操作。
 
-第三个函数由对应于 **new**( **std::size_t**, **conststd::nothrow_t&**) 形式的新表达式的 placement delete 表达式调用。 该程序可以通过替换 C++ 标准库定义的默认版本的函数签名定义函数。 所需行为接受 `ptr` 的值，该值为 NULL 或由对 `operator new`(**size_t**) 的早期调用返回。 默认行为是评估**删除**(`ptr`)。
+第三个函数由对应于 **new**( **std::size_t**, **conststd::nothrow_t&** ) 形式的新表达式的 placement delete 表达式调用。 该程序可以通过替换 C++ 标准库定义的默认版本的函数签名定义函数。 所需行为接受 `ptr` 的值，该值为 NULL 或由对 `operator new`(**size_t**) 的早期调用返回。 默认行为是评估**删除**(`ptr`)。
 
 ### <a name="example"></a>示例
 
 请参阅[运算符 new](../standard-library/new-operators.md#op_new)有关的示例，使用**运算符 delete**。
 
-## <a name="op_delete_arr"></a>运算符 delete[]
+## <a name="op_delete_arr"></a> 运算符 delete]
 
 由 delete 表达式调用来解除对象数组的存储空间分配的函数。
 
 ```cpp
 void operator delete[](void* ptr) throw();
-
-void operator delete[](void *,
-    void*) throw();
-
-void operator delete[](void* ptr,
-    const std::nothrow_t&) throw();
+void operator delete[](void *, void*) throw();
+void operator delete[](void* ptr, const std::nothrow_t&) throw();
 ```
 
 ### <a name="parameters"></a>参数
 
-*ptr*<br/>
+*ptr*\
 其值由删除呈现为无效的指针。
 
 ### <a name="remarks"></a>备注
@@ -77,32 +70,28 @@ void operator delete[](void* ptr,
 
 第二个函数调用的 placement`delete[]`表达式对应于`new[]`形式的表达式`new[]`(**std:: size_t**)。 它不执行任何操作。
 
-第三个函数由对应于 `new[]`( **std::size_t**, **const std::nothrow_t&**) 形式的 `new[]` 表达式的 placement delete 表达式调用。 该程序可以通过替换 C++ 标准库定义的默认版本的函数签名定义函数。 所需的行为就是接受的值*ptr* ，它是运算符的早期调用返回 null 或`new[]`(**size_t**)。 默认行为是评估 `delete[]`( `ptr`)。
+第三个函数由对应于 `new[]`( **std::size_t**, **const std::nothrow_t&** ) 形式的 `new[]` 表达式的 placement delete 表达式调用。 该程序可以通过替换 C++ 标准库定义的默认版本的函数签名定义函数。 所需的行为就是接受的值*ptr* ，它是运算符的早期调用返回 null 或`new[]`(**size_t**)。 默认行为是评估 `delete[]`( `ptr`)。
 
 ### <a name="example"></a>示例
 
 有关 `operator delete[]` 的使用示例，请参阅[运算符 new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)。
 
-## <a name="op_new"></a>运算符 new
+## <a name="op_new"></a> new 运算符
 
 由 new 表达式调用来为单个对象分配存储空间的函数。
 
 ```cpp
 void* operator new(std::size_t count) throw(bad_alloc);
-
-void* operator new(std::size_t count,
-    const std::nothrow_t&) throw();
-
-void* operator new(std::size_t count,
-    void* ptr) throw();
+void* operator new(std::size_t count, const std::nothrow_t&) throw();
+void* operator new(std::size_t count, void* ptr) throw();
 ```
 
 ### <a name="parameters"></a>参数
 
-*count*<br/>
+*计数*\
 要分配的存储的字节数。
 
-*ptr*<br/>
+*ptr*\
 要返回的指针。
 
 ### <a name="return-value"></a>返回值
@@ -137,7 +126,7 @@ void* operator new(std::size_t count,
 
 若要释放分配的存储**运算符 new**，调用[运算符 delete](../standard-library/new-operators.md#op_delete)。
 
-有关 new 的引发或非引发行为的信息，请参阅 [new 和 delete 运算符](../cpp/new-and-delete-operators.md)。
+有关信息的引发或非引发行为的新，请参阅[新和 delete 运算符](../cpp/new-and-delete-operators.md)。
 
 ### <a name="example"></a>示例
 
@@ -182,26 +171,22 @@ int main( )
 }
 ```
 
-## <a name="op_new_arr"></a>operator new[]
+## <a name="op_new_arr"></a> 运算符 new]
 
 由 new 表达式调用来为对象数组分配存储空间的分配函数。
 
 ```cpp
 void* operator new[](std::size_t count) throw(std::bad_alloc);
-
-void* operator new[](std::size_t count,
-    const std::nothrow_t&) throw();
-
-void* operator new[](std::size_t count,
-    void* ptr) throw();
+void* operator new[](std::size_t count, const std::nothrow_t&) throw();
+void* operator new[](std::size_t count, void* ptr) throw();
 ```
 
 ### <a name="parameters"></a>参数
 
-*count*<br/>
+*计数*\
 要为数组对象分配的存储的字节数。
 
-*ptr*<br/>
+*ptr*\
 要返回的指针。
 
 ### <a name="return-value"></a>返回值
@@ -260,7 +245,3 @@ int main() {
    delete[ ] fPtr3;
 }
 ```
-
-## <a name="see-also"></a>请参阅
-
-[\<new>](../standard-library/new.md)<br/>

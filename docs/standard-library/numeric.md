@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - <numeric> header
 ms.assetid: 6d6ccb94-48cc-479b-b4a9-bd9c78d4896a
-ms.openlocfilehash: ee93d254dcf49b38cb817ba460060fa72b81e01f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce195742605c3dd2e127c84ac2f4e1e696c75bd0
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371446"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246701"
 ---
 # <a name="ltnumericgt"></a>&lt;数字&gt;
 
 定义执行数值处理算法的容器模板函数。
 
-## <a name="syntax"></a>语法
+## <a name="requirements"></a>要求
 
-```cpp
-#include <numeric>
-```
+**标头**:\<数字 >
+
+**命名空间：** std
 
 ## <a name="remarks"></a>备注
 
@@ -29,15 +29,25 @@ ms.locfileid: "62371446"
 
 这些算法可扩展每个 C++ 标准库容器的运算和成员函数支持的操作，并允许同时与不同类型的容器对象进行交互。
 
+## <a name="members"></a>成员
+
 ### <a name="functions"></a>函数
 
-|函数|描述|
+|||
 |-|-|
 |[accumulate](../standard-library/numeric-functions.md#accumulate)|通过计算连续的部分和来计算指定范围中所有元素的总和（包括初始值），或计算通过使用指定二元运算而非求和运算获得的连续部分结果的结果总和。|
 |[adjacent_difference](../standard-library/numeric-functions.md#adjacent_difference)|计算输入范围中每个元素与其前一元素之间的连续差值，并将结果输出到目标范围，或计算将差值运算替换为其他指定二元运算的一般化程序的结果。|
+|[exclusive_scan](../standard-library/numeric-functions.md#exclusive_scan)||
+|[gcd](../standard-library/numeric-functions.md#gcd)||
+|[inclusive_scan](../standard-library/numeric-functions.md#inclusive_scan)||
 |[inner_product](../standard-library/numeric-functions.md#inner_product)|计算两个范围的逐元素集乘积的总和并将总和添加到指定初始值，或计算将求和与乘积运算替换为其他指定二元运算的一般化程序的结果。|
 |[iota](../standard-library/numeric-functions.md#iota)|存储一个起始值，从第一个元素开始，在间隔 `value++` 内的每个元素中填充此值的连续递增值 (`[first, last)`)。|
+|[lcm](../standard-library/numeric-functions.md#lcm)||
 |[partial_sum](../standard-library/numeric-functions.md#partial_sum)|计算输入范围中从第一个元素到第 *i* 个元素的一系列总和，并在目标范围的第 *i* 个元素中存储每个总和的结果，或计算将求和运算替换为其他指定二元运算的一般化程序的结果。|
+|[减少](../standard-library/numeric-functions.md#reduce)||
+|[transform_exclusive_scan](../standard-library/numeric-functions.md#transform_exclusive_scan)||
+|[transform_inclusive_scan](../standard-library/numeric-functions.md#transform_inclusive_scan)||
+|[transform_reduce](../standard-library/numeric-functions.md#transform_reduce)||
 
 ## <a name="see-also"></a>请参阅
 

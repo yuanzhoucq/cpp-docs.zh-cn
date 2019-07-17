@@ -6,38 +6,45 @@ f1_keywords:
 helpviewer_keywords:
 - valarray header
 ms.assetid: 30835415-21c1-4801-8f24-6bbef7dd8ecd
-ms.openlocfilehash: 8b8118722d7219e3b30e11ad67411595c3dc36ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9154f15500863d815f56438090662416b9b6fe7f
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365411"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246654"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
 定义模板类 valarray 和大量支持模板类和函数。
 
-## <a name="syntax"></a>语法
+## <a name="requirements"></a>要求
 
-```cpp
-#include <valarray>
-```
+**标头：** \<valarray>
+
+**命名空间：** std
+
+> [!NOTE]
+> \<Valarray > 库使用 #include < initializer_list > 语句。
 
 ## <a name="remarks"></a>备注
 
 为了提高性能，允许这些模板类和函数有异常的纬度。 具体而言，任何函数返回类型`valarray<T1>`可能返回其他类型 T2 的对象。 在这种情况下，任何接受类型的一个或多个自变量函数`valarray<T2>`必须具有接受这些参数，每个替换为类型 T2 的自变量的任意组合的重载。
 
+## <a name="members"></a>成员
+
 ### <a name="functions"></a>函数
 
-|函数|描述|
+|||
 |-|-|
 |[abs](../standard-library/valarray-functions.md#abs)|对输入 valarray 的元素进行操作，返回的 valarray 的元素等于输入 valarray 的元素的绝对值。|
 |[acos](../standard-library/valarray-functions.md#acos)|对输入 valarray 的元素进行操作，返回的 valarray 的元素等于输入 valarray 的元素的反余弦值。|
 |[asin](../standard-library/valarray-functions.md#asin)|对输入 valarray 的元素进行操作，返回的 valarray 的元素等于输入 valarray 的元素的反正弦值。|
 |[atan](../standard-library/valarray-functions.md#atan)|对输入 valarray 的元素进行操作，返回的 valarray 的元素等于输入 valarray 的元素的反正切主值。|
 |[atan2](../standard-library/valarray-functions.md#atan2)|返回的 valarrays 的元素等于由 valarray 常量和元素的组合指定的笛卡尔组件的反正切值。|
+|[begin](../standard-library/valarray-functions.md#begin)||
 |[cos](../standard-library/valarray-functions.md#cos)|对输入 valarray 的元素进行操作，返回的 valarray 的元素等于输入 valarray 的元素的余弦值。|
 |[cosh](../standard-library/valarray-functions.md#cosh)|对输入 valarray 的元素进行操作，返回的 valarray 的元素等于输入 valarray 的元素的双曲余弦值。|
+|[end](../standard-library/valarray-functions.md#end)||
 |[exp](../standard-library/valarray-functions.md#exp)|对输入 valarray 的元素进行操作，返回的 valarray 的元素等于输入 valarray 的元素的自然指数。|
 |[log](../standard-library/valarray-functions.md#log)|对输入 valarray 的元素进行操作，返回的 valarray 的元素等于输入 valarray 的元素的自然对数。|
 |[log10](../standard-library/valarray-functions.md#log10)|对输入 valarray 的元素进行操作，返回的 valarray 的元素等于输入 valarray 的元素的以 10 为底的对数或常用对数。|
@@ -51,7 +58,7 @@ ms.locfileid: "62365411"
 
 ### <a name="operators"></a>运算符
 
-|运算符|描述|
+|||
 |-|-|
 |[operator!=](../standard-library/valarray-operators.md#op_neq)|测试两个相同大小的 valarray 的对应元素是否不相等或者 valarray 的所有元素是否都不等于 valarray 元素类型的指定值。|
 |[operator%](../standard-library/valarray-operators.md#op_mod)|获取 valarray 的元素类型的指定值除以两个大小相同的 valarray 的对应元素所得的余数或除以 valarray 所得的余数，或 valarray 除以指定值所得的余数。|
@@ -69,12 +76,12 @@ ms.locfileid: "62365411"
 |[operator/](../standard-library/valarray-operators.md#op_div)|获取两个大小相等的 valarray 的对应元素之间的或 valarray 和 valarray 元素类型的指定值之间的元素指向商。|
 |[operator==](../standard-library/valarray-operators.md#op_eq_eq)|测试两个相同大小的 valarray 的对应元素是否相等或者 valarray 的所有元素是否都等于 valarray 元素类型的指定值。|
 |[operator^](../standard-library/valarray-operators.md#op_xor)|获取两个大小相等的 valarray 的对应元素之间的或 valarray 和元素类型的指定值之间的按位异 `OR`。|
-|[operator&#124;](../standard-library/valarray-operators.md#op_or)|获取两个大小相等的 valarray 的对应元素之间的或 valarray 和元素类型的指定值之间的按位 `OR`。|
-|[operator&#124;&#124;](../standard-library/valarray-operators.md#op_lor)|获取两个大小相等的 valarray 的对应元素之间的或 valarray 和 valarray 元素类型的指定值之间的逻辑 `OR`。|
+|[operator|](../standard-library/valarray-operators.md#op_or)|获取两个大小相等的 valarray 的对应元素之间的或 valarray 和元素类型的指定值之间的按位 `OR`。|
+|[operator||](../standard-library/valarray-operators.md#op_lor)|获取两个大小相等的 valarray 的对应元素之间的或 valarray 和 valarray 元素类型的指定值之间的逻辑 `OR`。|
 
 ### <a name="classes"></a>类
 
-|类|描述|
+|||
 |-|-|
 |[gslice 类](../standard-library/gslice-class.md)|用于定义 valarray 多维切分的 valarray 实用程序类。|
 |[gslice_array 类](../standard-library/gslice-array-class.md)|一个内部的辅助模板类，该类通过提供由 valarray 的泛切分定义的子集阵列之间的操作来支持泛切分对象。|

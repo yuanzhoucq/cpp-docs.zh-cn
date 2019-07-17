@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - std::tuple_element
 ms.assetid: 4c51a6c1-ce81-462f-8c6c-291d69f2b77c
-ms.openlocfilehash: b8b50e04e530e2d21b7a4e042d9feb2984e639db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0836ed683b398981e95e401a73ded6367c7ab472
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411859"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68241808"
 ---
 # <a name="tupleelement-class"></a>tuple_element 类
 
@@ -56,22 +56,22 @@ template <class T1, class T2>
 
 ### <a name="parameters"></a>参数
 
-*Tuple*<br/>
+*索引*\
 指定元素的索引。
 
-*Tuple*<br/>
+*元组*\
 元组的类型。
 
-*Elem*<br/>
+*Elem*\
 数组元素的类型。
 
-*Size*<br/>
+*大小*\
 数组大小。
 
-T1<br/>
+*T1*\
 一对中的第一个元素的类型。
 
-T2<br/>
+*T2*\
 一对中第二个元素的类型。
 
 ## <a name="remarks"></a>备注
@@ -174,14 +174,10 @@ int main() {
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<tuple>
+**标头：** \<tuple>
 
-**标头：**\<array>（适用于数组专用化）
+**标头：** \<array>（适用于数组专用化）
 
 **标头：** \<实用程序 > （适用于对专用化）
 
 **命名空间：** std
-
-## <a name="see-also"></a>请参阅
-
-[tuple ](../standard-library/tuple-class.md)<br/>

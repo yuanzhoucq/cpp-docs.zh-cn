@@ -7,28 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
-ms.openlocfilehash: 1566f9105a61b1c037e86fd2e4b280ed6dd2020e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 013888a1ae11042645ef48c4fae15cbe6c2d939f
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385214"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245238"
 ---
 # <a name="ltiosgt"></a>&lt;ios&gt;
 
 定义作为 iostreams 操作的基础的多种类型和函数。 此标头通常包含在另一 iostream 标头中；很少会直接包含它。
 
-## <a name="syntax"></a>语法
+## <a name="requirements"></a>要求
 
-```cpp
-#include <ios>
-```
+**标头**: \<ios >
+
+**命名空间：** std
+
+> [!NOTE]
+> \<Ios > 库使用`#include <iosfwd>`语句。
 
 ## <a name="remarks"></a>备注
 
 一大组函数为操控器。 在 \<ios> 中声明的操控器可更改存储在其 [ios_base](../standard-library/ios-base-class.md) 类的自变量对象中的值。 其他操控器对由对象（其类型派生自此类）控制的流执行操作，如其中一个模板类 [basic_istream](../standard-library/basic-istream-class.md) 或 [basic_ostream](../standard-library/basic-ostream-class.md) 的专用化。 例如， [noskipws](../standard-library/ios-functions.md#noskipws)(**str**) 清除格式标志`ios_base::skipws`对象中`str`，它可以是以下类型之一。
 
-还可以通过将操控器插入到输出流中或从输入流提取操控器对其进行调用，原因是为派生自 `ios_base` 的类提供了专门的插入和提取操作。 例如：
+还可以通过将操控器插入到输出流中或从输入流提取操控器对其进行调用，原因是为派生自 `ios_base` 的类提供了专门的插入和提取操作。 例如:
 
 ```cpp
 istr>> noskipws;
@@ -36,9 +39,11 @@ istr>> noskipws;
 
 调用 [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**)。
 
+## <a name="members"></a>成员
+
 ### <a name="typedefs"></a>Typedef
 
-|类型名称|描述|
+|||
 |-|-|
 |[ios](../standard-library/ios-typedefs.md#ios)|支持旧 iostream 库中的 ios 类。|
 |[streamoff](../standard-library/ios-typedefs.md#streamoff)|支持内部操作。|
@@ -56,7 +61,8 @@ istr>> noskipws;
 |[defaultfloat](../standard-library/ios-functions.md#ios_defaultfloat)|配置 `ios_base` 对象的标记以使用浮点值的默认显示格式。|
 |[fixed](../standard-library/ios-functions.md#fixed)|指定浮点数以自动设置小数点表示法显示。|
 |[hex](../standard-library/ios-functions.md#hex)|指定以十六进制计数法形式显示整数变量。|
-|[内部](../standard-library/ios-functions.md#internal)|导致数字的符号左对齐，数字右对齐。|
+|[hexfloat](../standard-library/ios-functions.md#hexfloat)|
+|[internal](../standard-library/ios-functions.md#internal)|导致数字的符号左对齐，数字右对齐。|
 |[left](../standard-library/ios-functions.md#left)|导致宽度比输出宽度短的文本在流刷新过程中显示时带有左边距。|
 |[noboolalpha](../standard-library/ios-functions.md#noboolalpha)|指定类型为 [bool](../cpp/bool-cpp.md) 的变量在流中显示为 1 或 0。|
 |[noshowbase](../standard-library/ios-functions.md#noshowbase)|关闭显示数字所采用的进制的指示。|
@@ -75,9 +81,19 @@ istr>> noskipws;
 |[unitbuf](../standard-library/ios-functions.md#unitbuf)|导致在缓冲区未满时处理输出。|
 |[uppercase](../standard-library/ios-functions.md#uppercase)|指定十六进制数字和科学计数法形式的指数以大写形式显示。|
 
+### <a name="error-reporting"></a>错误报告
+
+|||
+|-|-|
+|[io_errc](../standard-library/ios-functions.md#io_errc)||
+|[is_error_code_enum](../standard-library/ios-functions.md#is_error_code_enum)||
+|[iostream_category](../standard-library/ios-functions.md#iostream_category)||
+|[make_error_code](../standard-library/ios-functions.md#make_error_code)||
+|[make_error_condition](../standard-library/ios-functions.md#make_error_condition)||
+
 ### <a name="classes"></a>类
 
-|类|描述|
+|||
 |-|-|
 |[basic_ios](../standard-library/basic-ios-class.md)|此模板类描述了依赖于模板参数的输入流（属于模板类 [basic_istream](../standard-library/basic-istream-class.md)）和输出流（属于模板类 [basic_ostream](../standard-library/basic-ostream-class.md)）通用的存储和成员函数。|
 |[fpos](../standard-library/fpos-class.md)|此模板类描述了一个对象，该对象可以存储还原任何流内的任意文件位置指示器所需的全部信息。|

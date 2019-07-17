@@ -6,22 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - map header
 ms.assetid: bbf76680-7362-456e-88fa-ecda93561b6a
-ms.openlocfilehash: 0ea47a28599df543987831ee13a2c645f72a0113
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 96ca19b2562c3f145555c3c1b1d8db4fc700ed91
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412990"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243311"
 ---
 # <a name="ltmapgt"></a>&lt;map&gt;
 
 定义容器模板类 map 和 multimap 及其支持的模板。
 
-## <a name="syntax"></a>语法
+## <a name="requirements"></a>要求
 
-```cpp
-#include <map>
-```
+**Header:** \<map>
+
+**命名空间：** std
+
+> [!NOTE]
+> \<映射 > 库还使用`#include <initializer_list>`语句。
 
 ## <a name="members"></a>成员
 
@@ -44,7 +47,7 @@ ms.locfileid: "62412990"
 
 ### <a name="classes"></a>类
 
-|类|描述|
+|||
 |-|-|
 |[value_compare 类](../standard-library/value-compare-class-map.md)|提供一个函数对象，它能通过比较其键的值来比较映射的元素，以确定其在映射中的相对顺序。|
 |[map 类](../standard-library/map-class.md)|用于存储和检索集合中的数据，此集合中每个元素都有用于自动排列数据的唯一键。|

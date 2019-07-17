@@ -2,12 +2,12 @@
 title: chrono 文本
 ms.date: 11/04/2016
 ms.assetid: 1a9e23b1-256f-4570-8226-5fa7364fb032
-ms.openlocfilehash: 838ae99f5a21660968e0215818aa959348f38305
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28ba8138d41cf1bd72911959f07b0d3c9e5fdc0e
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279133"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244905"
 ---
 # <a name="chrono-literals"></a>chrono 文本
 
@@ -71,13 +71,3 @@ constexpr auto day = 24h;
 constexpr auto week = 24h* 7;
 constexpr auto my_duration_unit = 108ms;
 ```
-
-## <a name="requirements"></a>要求
-
-**标头**：\<chrono>
-
-**命名空间**：std::literals::chrono_literals
-
-## <a name="see-also"></a>请参阅
-
-[\<chrono>](../standard-library/chrono.md)<br/>

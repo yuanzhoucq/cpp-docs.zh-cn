@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - cstdarg header
 ms.assetid: 639b4ef7-8408-4640-9343-41631f0ab663
-ms.openlocfilehash: 25a7cbdccf1287043659772b760a14fefd52e4ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8d2d3b886cfa46905e8f17f1e13b51881b80191
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394295"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244489"
 ---
 # <a name="ltcstdarggt"></a>&lt;cstdarg&gt;
 
-包含标准 C 库标头 \<stdarg.h> 并将关联名称添加到 `std` 命名空间。
+包含标准 C 库标头\<stdarg.h >，并将添加到关联的名称`std`命名空间。 包括此标头中声明标准 C 库标头中使用外部链接声明的名称将确保`std`命名空间。
 
 ## <a name="syntax"></a>语法
 
@@ -23,9 +23,18 @@ ms.locfileid: "62394295"
 #include <cstdarg>
 ```
 
-## <a name="remarks"></a>备注
+## <a name="namespace-and-macros"></a>Namespace 和宏
 
-包含该标头还将确保使用标准 C 库标头中的外部链接声明的名称在 `std` 命名空间中声明。
+```cpp
+namespace std {
+    using va_list = see below;
+}
+
+#define va_arg(V, P)
+#define va_copy(VDST, VSRC)
+#define va_end(V)
+#define va_start(V, P)
+```
 
 ## <a name="see-also"></a>请参阅
 
