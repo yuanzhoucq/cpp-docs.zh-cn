@@ -1,7 +1,7 @@
 ---
-title: C /C++的项目并构建 Visual Studio 中的系统
+title: Visual StudioC++中的 C/项目和生成系统
 ms.description: Use Visual Studio to compile and build C++ projects for Windows, ARM or Linux based on any project system.
-ms.date: 05/06/2019
+ms.date: 07/17/2019
 helpviewer_keywords:
 - builds [C++]
 - C++ projects, building
@@ -9,84 +9,84 @@ helpviewer_keywords:
 - builds [C++], options
 - C++, build options
 ms.assetid: fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008
-ms.openlocfilehash: b345517bb1202030c9d512d16e80484feb4ba737
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 672dea77c4165ddcd84d3253525dc8c2d8be3e7c
+ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220353"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68313173"
 ---
-# <a name="cc-projects-and-build-systems-in-visual-studio"></a>C /C++的项目并构建 Visual Studio 中的系统
+# <a name="cc-projects-and-build-systems-in-visual-studio"></a>Visual StudioC++中的 C/项目和生成系统
 
-Visual Studio 2017 可用于编辑、 编译和生成任何C++代码库，且无需将该代码转换到 Visual Studio 项目或使用 MSVC 工具集编译的完全 IntelliSense 支持。 例如，可以编辑跨平台的 CMake 项目在 Visual Studio 中的 Windows 计算机上，然后将其编译为在远程 Linux 计算机上使用 g + + 的 Linux。
+你可以使用 Visual Studio 来编辑、编译和生成任何C++具有完整 IntelliSense 支持的基本代码, 而无需将该代码转换为 Visual Studio 项目, 也无需使用 MSVC 工具集进行编译。 例如, 你可以在 Windows 计算机上的 Visual Studio 中编辑跨平台的 CMake 项目, 然后在远程 Linux 计算机上使用 g + + 为 Linux 编译该项目。
 
-## <a name="c-compilation"></a>C++编译
+## <a name="c-compilation"></a>C++汇编
 
-向*构建*C++程序意味着若要编译源代码从一个或多个文件，然后将这些文件链接到可执行文件 (.exe)、 动态加载库 (.dll) 或静态库 (.lib)。 
+若  要生成C++程序, 则意味着要从一个或多个文件编译源代码, 然后将这些文件链接到可执行文件 (.exe)、动态加载库 (.dll) 或静态库 (.lib)。 
 
-基本C++编译包括三个主要步骤：
+基本C++编译涉及三个主要步骤:
 
-- C++预处理器转换每个源代码文件中所有的 #directives 和宏的定义。 这将创建*翻译单元*。
-- C++编译器将编译对象文件 (.obj)，为每个翻译单元应用任何编译器选项已设置。
-- *链接器*将对象文件合并到单个的可执行文件，应用已设置链接器选项。 
+- C++预处理器会转换每个源文件中的所有 #directives 和宏定义。 这将创建一个*翻译单元*。
+- C++编译器将每个翻译单元编译为对象文件 (.obj), 并应用已设置的任何编译器选项。
+- *链接器*将对象文件合并为一个可执行文件, 并应用已设置的链接器选项。 
 
 ## <a name="the-msvc-toolset"></a>MSVC 工具集
 
-MicrosoftC++编译器、 链接、 标准库和相关的实用工具组成 MSVC 编译器工具集 （也称为工具链或"生成工具"）。 这些元素包含在 Visual Studio 中。 此外可以下载，并从免费作为独立程序包使用的工具集[Visual Studio 2017 生成工具下载位置](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017)。
+Microsoft C++编译器、链接器、标准库和相关的实用工具包含 MSVC 编译器工具集 (也称为工具链或 "生成工具")。 它们包含在 Visual Studio 中。 你还可以从[Visual Studio 2019 的生成工具下载位置](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019)免费下载并使用工具集作为独立包。
 
-可以通过调用 MSVC 编译器 (cl.exe) 直接从命令行构建简单的程序。 下面的命令接受单个源代码文件中，并调用生成名为可执行文件的 cl.exe *hello.exe*: 
+可以通过从命令行直接调用 MSVC 编译器 (cl) 来构建简单的程序。 以下命令接受单个源代码文件, 并调用 mage.exe 来生成名为 " *hello*" 的可执行文件: 
 
 ```cmd
 cl /EHsc hello.cpp
 ```
-请注意，此处编译器 (cl.exe) 会自动调用C++预处理器和链接器以生成最终输出文件。  有关详细信息，请参阅[命令行上生成](building-on-the-command-line.md)。
+请注意, 此时编译器 (cl) 会自动调用C++预处理器和链接器以生成最终的输出文件。  有关详细信息, 请参阅[在命令行上生成](building-on-the-command-line.md)。
 
 ## <a name="build-systems-and-projects"></a>生成系统和项目
 
-大多数实际程序中使用某些类型的*构建系统*来管理复杂的编译多个配置的多个源代码文件 （即发布与调试），多个平台 (x86、 x64、 ARM，等等)，自定义生成步骤，以及甚至多个必须以特定顺序编译的可执行文件。 在生成配置文件，请设置并生成系统接受该文件作为输入之前调用编译器。 调用的源代码文件和生成的可执行文件所需的生成配置文件集*项目*。 
+大多数实际程序使用某种类型的*生成系统*来管理编译多个配置的多个源文件 (即, 调试和发布)、多个平台 (x86、X64、ARM 等)、自定义生成步骤甚至多个必须按特定顺序编译的可执行文件。 您在生成配置文件中进行设置, 并且生成系统在调用编译器之前接受该文件作为输入。 生成可执行文件所需的一组源代码文件和生成配置文件称为 "*项目*"。 
 
-以下列表显示了各种选项为 Visual Studio 项目的C++:
+以下列表显示了 Visual Studio 项目的各种选项- C++:
 
-- 使用 Visual Studio IDE 创建 Visual Studio 项目并将其配置通过使用属性页。 Visual Studio 项目会生成在 Windows 运行的程序。 有关概述，请参阅[编译和生成](/visualstudio/ide/compiling-and-building-in-visual-studio)Visual Studio 文档中。
+- 使用 Visual Studio IDE 创建 Visual Studio 项目, 并使用属性页对其进行配置。 Visual Studio 项目生成在 Windows 上运行的程序。 有关概述, 请参阅 Visual Studio 文档中的[编译和生成](/visualstudio/ide/compiling-and-building-in-visual-studio)。
 
-- 打开包含 CMakeLists.txt 文件的文件夹。 CMake 支持已集成到 Visual Studio。 可以使用 IDE 来编辑、 测试和调试而无需修改任何方式中的 CMake 文件。 这使你能够在同一 CMake 项目中为其他人可能使用不同的编辑器。 CMake 是跨平台开发的推荐的方法。 有关详细信息，请参阅[CMake 项目](cmake-projects-in-visual-studio.md)。
+- 打开包含 Cmakelists.txt 文件的文件夹。 CMake 支持已集成到 Visual Studio 中。 您可以使用 IDE 进行编辑、测试和调试, 而无需以任何方式修改 CMake 文件。 这使您可以与可能使用不同编辑器的其他人一起使用同一 CMake 项目。 CMake 是用于跨平台开发的建议方法。 有关详细信息, 请参阅[CMake 项目](cmake-projects-in-visual-studio.md)。
  
-- 与任何项目文件来打开松散源文件的文件夹。 Visual Studio 将使用试探法来生成的文件。 这是编译并运行小型控制台应用程序的简单办法。 有关详细信息，请参阅[打开文件夹项目](open-folder-projects-cpp.md)。
+- 打开源文件的松散文件夹, 不包含任何项目文件。 Visual Studio 将使用试探法来生成文件。 这是一种简单的方法来编译和运行小型控制台应用程序。 有关详细信息, 请参阅[打开文件夹项目](open-folder-projects-cpp.md)。
 
-- 打开包含生成文件或任何其他生成系统配置文件的文件夹。 可以配置 Visual Studio 以调用任何任意的生成命令通过将 JSON 文件添加到的文件夹。 有关详细信息，请参阅[打开文件夹项目](open-folder-projects-cpp.md)。
+- 打开包含生成文件的文件夹或任何其他生成系统配置文件。 可以通过将 JSON 文件添加到文件夹中, 将 Visual Studio 配置为调用任意生成命令。 有关详细信息, 请参阅[打开文件夹项目](open-folder-projects-cpp.md)。
  
-- 在 Visual Studio 中打开 Windows 生成文件。 有关详细信息，请参阅[NMAKE 参考](reference/nmake-reference.md)。
+- 在 Visual Studio 中打开 Windows makefile。 有关详细信息, 请参阅[NMAKE 参考](reference/nmake-reference.md)。
 
-## <a name="msbuild-from-the-command-line"></a>MSBuild 从命令行 
+## <a name="msbuild-from-the-command-line"></a>命令行中的 MSBuild 
 
-通过将其传递以及命令行选项的.vcxproj 文件，你可以从命令行调用 MSBuild。 这种方法需要 MSBuild，更好地理解，建议仅在绝对必要时使用。 有关详细信息，请参阅 [MSBuild](msbuild-visual-cpp.md)。
+可以通过在命令行中传递 .vcxproj 文件和命令行选项来调用 MSBuild。 此方法需要充分了解 MSBuild, 建议仅在绝对必要时使用。 有关详细信息，请参阅 [MSBuild](msbuild-visual-cpp.md)。
 
 ## <a name="in-this-section"></a>本节内容
 
-[Visual Studio 项目](creating-and-managing-visual-cpp-projects.md)如何创建、 配置和生成C++在 Visual Studio 中使用其本机项目生成系统 (MSBuild)。
+[Visual Studio 项目](creating-and-managing-visual-cpp-projects.md)如何使用其本机生成系统 (MSBuild C++ ) 在 Visual Studio 中创建、配置和生成项目。
 
-[CMake 项目](cmake-projects-in-visual-studio.md)如何进行编码、 构建和部署 Visual Studio 中的 CMake 项目。
+[CMake 项目](cmake-projects-in-visual-studio.md)如何在 Visual Studio 中编码、生成和部署 CMake 项目。
 
-[打开文件夹项目](open-folder-projects-cpp.md)如何使用 Visual Studio 进行编码、 构建和部署C++基于任何任意的生成系统或没有项目生成系统。 完全。 
+[打开文件夹项目](open-folder-projects-cpp.md)如何使用 Visual Studio 来编码、生成和部署C++基于任意生成系统的项目, 或者不生成系统。 完全。 
 
-[发行版本](release-builds.md)如何创建和故障排除优化的发布版本以部署到最终用户。
+[发布](release-builds.md)版本如何创建优化的发布版本并对最终用户进行故障排除。
 
 [通过命令行使用 MSVC 工具集](building-on-the-command-line.md)<br/>
-讨论如何使用 C /C++直接从命令行，而无需使用 Visual Studio IDE 的编译器和生成工具。
+讨论如何直接从命令行使用C++ C/编译器和生成工具, 而不是使用 VISUAL Studio IDE。
 
-[构建 Visual Studio 中的 Dll](dlls-in-visual-cpp.md)如何创建、 调试和部署 C /C++ Visual Studio 中的 Dll （共享库）。
+[在 Visual Studio 中生成 dll](dlls-in-visual-cpp.md)如何在 Visual Studio 中创建、调试和C++部署 C/dll (共享库)。
 
-[演练：创建和使用静态库](walkthrough-creating-and-using-a-static-library-cpp.md)如何创建一个.lib 二进制文件。
+[演练：创建和使用静态库](walkthrough-creating-and-using-a-static-library-cpp.md)如何创建 .lib 二进制文件。
 
-[生成 C /C++独立应用程序和通过并行程序集](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)介绍了 Windows 桌面应用程序，其理论基础的独立应用程序和通过并行程序集的部署模型。
+[生成 C/C++独立应用程序和并行程序集](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)基于独立应用程序和并行程序集的概念描述 Windows 桌面应用程序的部署模型。
 
-[配置C++项目的 64 位 x64 目标](configuring-programs-for-64-bit-visual-cpp.md)如何面向 64 位 x64 硬件与 MSVC 构建工具。
+[为C++ 64 位、x64 目标配置项目](configuring-programs-for-64-bit-visual-cpp.md)如何将64位 x64 硬件用于 MSVC 生成工具。
 
-[配置C++项目类型提供的 ARM 处理器](configuring-programs-for-arm-processors-visual-cpp.md)如何使用 MSVC 生成工具面向 ARM 硬件。
+[配置C++ ARM 处理器的项目](configuring-programs-for-arm-processors-visual-cpp.md)如何使用 MSVC 生成工具来面向 ARM 硬件。
 
-[优化代码](optimizing-your-code.md)如何优化您的代码中包括程序按配置优化的各种方法。
+[优化代码](optimizing-your-code.md)如何以各种方式优化代码, 包括按计划优化。
 
-[配置适用于 Windows XP 的程序](configuring-programs-for-windows-xp.md)如何 MSVC Windows XP 生成工具的目标。
+[为 WINDOWS XP 配置程序](configuring-programs-for-windows-xp.md)如何将 Windows XP 与 MSVC 生成工具面向。
 
 [C/C++ 生成参考](reference/c-cpp-building-reference.md)<br/>
 提供指向有关使用 C++ 生成程序、编译器和链接器选项以及各种生成工具的参考文章的链接。
