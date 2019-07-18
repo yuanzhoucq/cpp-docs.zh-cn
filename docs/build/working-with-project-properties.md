@@ -1,23 +1,23 @@
 ---
 title: 在 Visual Studio 中设置 C++ 编译器并生成属性
 description: 使用 Visual Studio IDE 可以更改C++编译器和链接器选项以及其他生成设置。
-ms.date: 03/27/2019
+ms.date: 07/17/2019
 helpviewer_keywords:
 - project properties [C++], modifying
 - properties [C++]
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-ms.openlocfilehash: 896587aea65d7aec24d3a11ff7d3e757937c2632
-ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.openlocfilehash: 436c9c47d7e08176860144ce62cc874919351029
+ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299698"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68313448"
 ---
 # <a name="set-compiler-and-build-properties"></a>设置编译器和生成属性
 
-在 IDE 中，生成项目的需要的全部信息都公开为属性  。 此信息包括应用程序名称、扩展名（如 DLL、LIB、EXE）、编译器选项、链接器选项、调试器设置、自定义生成步骤和许多其他操作。 通常情况下，使用属性页（“项目”&#124;“属性”）来查看和修改这些属性   。 若要访问属性页, 请从主菜单中选择 "**项目 > \<项目名称" > "属性**", 或者右键单击**解决方案资源管理器**中的项目节点, 然后选择 "**属性**"。
+在 IDE 中，生成项目的需要的全部信息都公开为属性  。 此信息包括应用程序名称、扩展名（如 DLL、LIB、EXE）、编译器选项、链接器选项、调试器设置、自定义生成步骤和许多其他操作。 通常, 使用*属性页*可以查看和修改这些属性。 若要访问属性页, 请从主菜单中选择 "**项目** > 项目 **_名称_属性**", 或右键单击 "**解决方案资源管理器**中的项目节点, 然后选择"**属性**"。
 
 ## <a name="default-properties"></a>默认属性
 
@@ -82,7 +82,7 @@ MSBuild 支持对某些字符串值使用名为 "macros" 的编译时常量, 其
 
 #### <a name="to-create-a-user-defined-macro"></a>创建用户定义的宏
 
-1. 在“属性管理器”窗口中（在菜单栏上，依次选择“视图”、“属性管理器”），打开属性表的快捷菜单（名称以 .user 结尾），然后选择“属性”    。 此时将打开该属性表的“属性页”对话框  。
+1. 打开 "**属性管理器**" 窗口。 (在菜单栏上, 选择 "**视图** > "**属性管理器**或**查看** > **其他 Windows** > **属性管理器**。)打开属性表的快捷菜单 (名称以 "用户" 结尾), 然后选择 "**属性**"。 此时将打开该属性表的“属性页”对话框  。
 
 1. 在对话框的左窗格中，选择“用户宏”  。 在右窗格中，选择“添加宏”按钮，打开“添加用户宏”对话框   。
 
