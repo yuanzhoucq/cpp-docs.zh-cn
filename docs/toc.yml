@@ -414,6 +414,8 @@
                   href: build/reference/general-property-page-project.md
                 - name: “常规属性”页
                   href: build/reference/general-property-page-file.md
+                - name: “高级”属性页
+                  href: build/reference/advanced-property-page.md
                 - name: “VC++ 目录”属性页
                   href: build/reference/vcpp-directories-property-page.md
                 - name: “命令行”属性页
