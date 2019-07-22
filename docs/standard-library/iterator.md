@@ -68,7 +68,7 @@ Visual Studio 为 C++ 标准库迭代器增加了一些扩展，以便支持多�
 |[prev](../standard-library/iterator-functions.md#prev)|反向迭代指定的次数并返回新的迭代器位置。|
 |[rbegin](../standard-library/iterator-functions.md#rbegin)||
 |[rend](../standard-library/iterator-functions.md#rend)||
-|size[](../standard-library/iterator-functions.md#size)||
+|[size](../standard-library/iterator-functions.md#size)||
 
 ### <a name="operators"></a>运算符
 
