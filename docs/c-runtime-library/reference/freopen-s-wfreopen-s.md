@@ -29,12 +29,12 @@ helpviewer_keywords:
 - wfreopen_s function
 - freopen_s function
 ms.assetid: ad25a4da-6ad4-476b-a86d-660b221ca84d
-ms.openlocfilehash: 2cdc16f21882c32933868000c6fd1d66accc74b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6efe858713bf8c315536098f1b6dabdbcba01bfa
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332996"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376112"
 ---
 # <a name="freopens-wfreopens"></a>freopen_s、_wfreopen_s
 
@@ -77,9 +77,9 @@ errno_t _wfreopen(
 
 ## <a name="remarks"></a>备注
 
-**Freopen_s**函数将关闭当前与关联的文件*流*并将重新分配*流*到指定的文件*路径*. **_wfreopen_s**是宽字符版本 **_freopen_s**;*路径*并*模式*参数 **_wfreopen_s**是宽字符字符串。 **_wfreopen_s**并 **_freopen_s**行为相同。
+**Freopen_s**函数关闭当前与*stream*关联的文件, 并将*流*重新分配到*path*指定的文件。 **_wfreopen_s**是 **_freopen_s**的宽字符版本; **_wfreopen_s**的*路径*和*模式*参数是宽字符字符串。 否则, **_wfreopen_s**和 **_freopen_s**的行为相同。
 
-如果任一*pFile*，*路径*，*模式*，或者*流*是**NULL**，或者如果*路径*为空字符串，这些函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许继续执行，这些函数将设置**errno**到**EINVAL**并返回**EINVAL**。
+如果任何 *.pfile*、 *path*、 *mode*或*stream*为**NULL**, 或者如果*path*为空字符串, 则这些函数将调用无效参数处理程序, 如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续, 则这些函数会将**errno**设置为**EINVAL**并返回**EINVAL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -87,33 +87,33 @@ errno_t _wfreopen(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tfreopen_s**|**freopen_s**|**freopen_s**|**_wfreopen_s**|
 
-**freopen_s**通常用于将预先打开的文件重定向**stdin**， **stdout**，并且**stderr**由用户指定的文件。 与关联的新文件*流*以打开*模式*，这是一个字符串，指定类型的要求，如下所示的文件访问权限：
+**freopen_s**通常用于将预先打开的文件**stdin**、 **stdout**和**stderr**重定向到用户指定的文件。 与*stream*关联的新文件以模式打开, 该*模式*是指定文件请求的访问类型的字符串, 如下所示:
 
 |*模式*|Access|
 |-|-|
-| **“r”** | 打开以便读取。 如果文件不存在或无法找到**freopen_s**调用失败。 |
+| **“r”** | 打开以便读取。 如果文件不存在或找不到, 则**freopen_s**调用失败。 |
 | **“w”** | 打开用于写入的空文件。 如果给定文件存在，则其内容会被销毁。 |
 | **“a”** | 在文件末尾打开以进行写入（追加），在新数据写入到文件之前不移除文件末尾 (EOF) 标记。 创建文件（如果文件不存在）。 |
 | **“r+”** | 打开以便读取和写入。 文件必须存在。 |
 | **“w+”** | 打开用于读取和写入的空文件。 如果文件存在，则其内容会被销毁。 |
 | **“a+”** | 打开以进行读取和追加。 追加操作包括在新数据写入文件之前移除 EOF 标记。 写入完成后，EOF 标记不会还原。 创建文件（如果文件不存在）。 |
 
-使用 **"w"** 并 **"w +"** 类型时要小心，因为它们可能会破坏现有文件。
+使用 **"w"** 和 **"w +"** 类型时要小心, 因为它们可能会破坏现有文件。
 
-与打开文件时 **"a"** 或 **"a +"** 访问类型，所有写入操作均将在文件末尾。 尽管可以使用重新定位文件指针[fseek](fseek-fseeki64.md)或[rewind](rewind.md)，文件指针将始终被移回文件末尾任何写入操作执行前。因此，无法覆盖现有数据。
+使用 **"a"** 或 **"a +"** 访问类型打开文件时, 所有写入操作都将在文件末尾进行。 尽管可以使用[fseek](fseek-fseeki64.md)或[倒带](rewind.md)重定位文件指针, 但在执行任何写入操作前, 文件指针将始终被移回文件末尾。因此，无法覆盖现有数据。
 
-**"A"** 模式不会追加到文件之前移除 EOF 标记。 在追加后，MS-DOS TYPE 命令只显示原始 EOF 标记之前的数据，不显示追加到文件的任何数据。 **"A +"** 模式 does 追加到文件之前移除 EOF 标记。 在追加后，MS-DOS TYPE 命令显示文件中的所有数据。 **"A +"** 模式是所必需的追加到使用 CTRL + Z EOF 标记终止的流文件。
+**"A"** 模式不会在追加到文件之前删除 EOF 标记。 在追加后，MS-DOS TYPE 命令只显示原始 EOF 标记之前的数据，不显示追加到文件的任何数据。 **"A +"** 模式将在追加到文件之前删除 EOF 标记。 在追加后，MS-DOS TYPE 命令显示文件中的所有数据。 附加到使用 CTRL + Z EOF 标记终止的流文件需要 **"a +"** 模式。
 
-当 **"r +"**， **"w +"**，或 **"a +"** 指定访问类型时，允许读取和写入 （文件将状态以执行"更新"处于打开状态）。 但是，在读取与写入之间切换时，必须有干预性的 [fsetpos](fsetpos.md)、[fseek](fseek-fseeki64.md) 或 [rewind](rewind.md) 操作。 可以为指定当前位置[fsetpos](fsetpos.md)或[fseek](fseek-fseeki64.md)操作，如果所需的。 除了以上值之外的以下字符之一可能包括在*模式下*字符串，以指定换行符的转换模式。
+指定 **"r +"** 、 **"w +"** 或 **"a +"** 访问类型时, 允许读取和写入 (文件称为 "更新")。 但是，在读取与写入之间切换时，必须有干预性的 [fsetpos](fsetpos.md)、[fseek](fseek-fseeki64.md) 或 [rewind](rewind.md) 操作。 如果需要, 可以为[fsetpos](fsetpos.md)或[fseek](fseek-fseeki64.md)操作指定当前位置。 除了以上值之外,*模式*字符串中还可能会包含以下字符之一以指定新行的转换模式。
 
 |*模式*修饰符|转换模式|
 |-|-|
 | **t** | 在文本（转换）模式下打开。 |
-| **b** | 在二进制（未转换）模式下打开；不进行涉及回车和换行字符的转换。 |
+| **b** | 在二进制 (未转换) 模式下打开;将禁止涉及回车符和换行符的翻译。 |
 
-在文本 （转换） 模式下，回车符和换行符 (CR-LF) 组合将转换为单一的换行 (LF) 字符在输入;LF 字符将转换为 CR-LF 组合输出。 CTRL+Z 也将在输入时解释为文件尾字符。 在文件打开以进行读取或写入和读取与 **"a +"**，运行时库检查文件末尾的 CTRL + Z 并在可能的情况下将其移除。 这是因为使用[fseek](fseek-fseeki64.md)并[ftell](ftell-ftelli64.md)文件内移动可能会导致[fseek](fseek-fseeki64.md)文件末尾附近运行不当。 **T**选项是一个 Microsoft 扩展，不应在需要 ANSI 可移植性时使用。
+在文本 (已转换) 模式下, 回车换行符 (CR-LF) 组合将转换为输入的单行换行符 (LF) 字符;换行符在输出时转换为 CR-LF 组合。 CTRL+Z 也将在输入时解释为文件尾字符。 在打开以进行读取或使用 **"a +"** 进行读取和读取的文件中, 运行时库将检查文件末尾的 CTRL + Z 并将其删除 (如果可能)。 这样做的原因是, 使用[fseek](fseek-fseeki64.md)和[ftell](ftell-ftelli64.md)在文件中移动可能导致[fseek](fseek-fseeki64.md)在文件结尾附近出现错误。 **T**选项是一个 Microsoft 扩展, 不应在需要 ANSI 可移植性时使用。
 
-如果**t**或**b**中未给*模式*，则默认转换模式由全局变量[_fmode](../../c-runtime-library/fmode.md)。 如果**t**或**b**自变量、 函数将失败并返回到前缀**NULL**。
+如果在*mode*中未给出**t**或**b** , 则默认转换模式由全局变量[_fmode](../../c-runtime-library/fmode.md)定义。 如果**t**或**b**作为参数的前缀, 则函数将失败并返回**NULL**。
 
 有关文本模式和二进制模式的讨论，请参阅[文本和二进制模式文件 I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md)。
 
@@ -124,7 +124,7 @@ errno_t _wfreopen(
 |**freopen_s**|\<stdio.h>|
 |**_wfreopen_s**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台 (UWP) 应用中不支持控制台。 控制台中，与关联的标准流句柄**stdin**， **stdout**，并**stderr**，C 运行时函数可以在 UWP 应用中使用它们之前，必须重定向. 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台 (UWP) 应用中不支持控制台。 与控制台、 **stdin**、 **stdout**和**stderr**关联的标准流句柄必须重定向, 然后 C 运行时函数才能在 UWP 应用中使用它们。 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 

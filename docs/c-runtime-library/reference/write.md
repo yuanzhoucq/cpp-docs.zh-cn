@@ -23,12 +23,12 @@ helpviewer_keywords:
 - write function
 - files [C++], writing to
 ms.assetid: 7b868c33-766f-4e1a-95a7-e8d25f0604c4
-ms.openlocfilehash: b3fa53b21d4ea23c5f8e59de673f4074deedb505
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 032bf332caee09fbe17d58eeae16ab44b98402d3
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383407"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376293"
 ---
 # <a name="write"></a>_write
 
@@ -52,24 +52,24 @@ int _write(
 *buffer*<br/>
 要写入的数据。
 
-*count*<br/>
+*计数*<br/>
 字节数。
 
 ## <a name="return-value"></a>返回值
 
-如果成功， **_write**返回实际写入的字节数。 如果磁盘上剩余的实际空间小于函数尝试将写入到磁盘，缓冲区的大小 **_write**失败，并且不将任何缓冲区的内容刷新到磁盘。 返回值-1 指示错误。 如果传递的参数无效，则此函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，该函数返回-1 和**errno**设置为三个值之一：**EBADF**，这意味着文件描述符无效或不打开文件进行写入;**ENOSPC**，这意味着没有足够的空间保留在设备上为该操作; 或**EINVAL**，这意味着*缓冲区*是 null 指针，或为奇数*计数*的字节传递要写入到在 Unicode 模式下的文件。
+如果成功, 则 **_write**返回写入的字节数。 如果磁盘上剩余的实际空间小于函数尝试写入磁盘的缓冲区的大小, 则 **_write**将失败, 并且不会将任何缓冲区的内容刷新到磁盘。 返回值-1 表示错误。 如果传递的参数无效，则此函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续, 则该函数将返回-1, 并将**errno**设置为以下三个值之一:**Ebadf (** , 这意味着文件描述符无效或文件未打开以进行写入;**ENOSPC**, 这意味着设备上没有足够的空间用于操作;或**EINVAL**, 这意味着*缓冲区*为空指针, 或在 Unicode 模式下传递到文件的奇数字节*数*。
 
 有关这些代码及其他返回代码的详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-如果在文本模式下打开该文件，每个换行符字符替换为回车-换行对输出中。 此替换不会影响返回值。
+如果在文本模式下打开该文件, 则会在输出中将每个换行符替换为回车换行符。 此替换不会影响返回值。
 
-在 Unicode 转换模式下打开文件时 — 例如，如果*fd*使用打开 **_open**或 **_sopen**和包括的模式参数 **_O_WTEXT**， **_O_U16TEXT**，或 **_O_U8TEXT**，或如果使用打开**fopen**以及包含的模式参数**ccs =UNICODE**， **ccs = UTF 16LE**，或**ccs = utf-8**，或如果将模式更改为 Unicode 转换模式使用 **_setmode**—*缓冲区*被解释为指向数组的指针**wchar_t** ，其中包含**utf-16**数据。 尝试在此模式下写入奇数个字节会导致参数验证错误。
+在 Unicode 转换模式下打开该文件时 (例如, 如果使用 **_open**或 **_sopen**打开*Fd* , 并使用包含 **_O_WTEXT**、 **_O_U16TEXT**或 **_O_U8TEXT**的模式参数打开, 或者通过使用**fopen**和 mode 参数, 其中包括**ccs = UNICODE**、 **ccs = utf-utf-16le**或**ccs = utf-8**, 或者模式通过使用 **_setmode**更改为 UNICODE 转换模式时,*缓冲区*被解释为指向包含**utf-16**数据的**wchar_t**数组。 尝试在此模式下写入奇数个字节会导致参数验证错误。
 
 ## <a name="remarks"></a>备注
 
-**_Write**函数写入*计数*个字节从*缓冲区*到与关联的文件*fd*。 写入操作从与给定文件相关联的文件指针（如果有）的当前位置开始执行。 如果文件处于打开状态以供追加，则该操作从该文件的当前末尾位置开始执行。 执行写入操作后，文件指针以实际写入的字节数为增量进行递增。
+**_Write**函数将*缓冲区*中的*计数*字节写入与*fd*关联的文件中。 写入操作从与给定文件相关联的文件指针（如果有）的当前位置开始执行。 如果文件处于打开状态以供追加，则该操作从该文件的当前末尾位置开始执行。 写入操作完成后, 文件指针将按写入的字节数增加。
 
-写入到在文本模式下打开的文件时 **_write** CTRL + Z 字符视为逻辑的文件结束。 写入到设备，当 **_write**将 CTRL + Z 字符视为输出终止符缓冲区中。
+写入在文本模式下打开的文件时, **_write**会将 CTRL + Z 字符视为文件的逻辑端。 写入设备时, **_write**会将缓冲区中的 CTRL + Z 字符视为输出终止符。
 
 ## <a name="requirements"></a>要求
 
