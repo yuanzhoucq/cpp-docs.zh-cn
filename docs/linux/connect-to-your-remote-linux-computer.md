@@ -3,12 +3,12 @@ title: 在 Visual Studio 中连接到你的目标 Linux 系统
 description: 如何从 Visual Studio C++ 项目内连接到远程 Linux 计算机或 WSL。
 ms.date: 06/19/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: 00d7facca2857efb0b8b43b5aaf38edce348a511
-ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.openlocfilehash: cd107f096e4395f93775ee80b889cc0efd627166
+ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67861151"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68313440"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>在 Visual Studio 中连接到你的目标 Linux 系统
 
@@ -20,11 +20,11 @@ Linux 支持在 Visual Studio 2017 及更高版本中提供。
 
 ::: moniker range=">=vs-2017"
 
-可以将 Linux 项目配置为以远程计算机或适用于 Linux 的 Windows 子系统 (WSL) 为目标。 对于远程计算机，以及 Visual Studio 2017 上的 WSL，需要设置连接。 
+可以将 Linux 项目配置为以远程计算机或适用于 Linux 的 Windows 子系统 (WSL) 为目标。 对于远程计算机，以及 Visual Studio 2017 上的 WSL，需要设置远程连接。 
 
 ## <a name="connect-to-a-remote-linux-computer"></a>连接到远程 Linux 计算机
 
-在为远程 Linux 系统（VM 或物理计算机）生成 C++ Linux 项目时，将 Linux 代码复制到远程 Linux 计算机，然后基于 Visual Studio 设置进行编译。
+在为远程 Linux 系统（VM 或物理计算机）生成 C++ Linux 项目时，将 Linux 源代码复制到远程 Linux 计算机，然后基于 Visual Studio 设置进行编译。
 
 若要设置此远程连接，请执行以下操作：
 
@@ -92,15 +92,15 @@ Linux 支持在 Visual Studio 2017 及更高版本中提供。
 
 ::: moniker range="vs-2019"
 
-在 Visual Studio 2019 版本 16.1 中，在以 WSL 为目标时，无需再添加远程连接或配置 SSH。 在 Linux 系统上，只需要 gcc、gdb、make、rsync 和 zip。 Visual Studio 需要 rsync 和 zip 只是为了在从 WSL 实例第一次使用时将标头文件提取到 Windows 文件系统，以用于 IntelliSense。 在 Visual Studio 2019 版本 16.1 中，WSL 支持基于 Windows 版本 1809。 你可以运行更高版本的 Windows，但 Visual Studio 尚未利用新的 WSL 功能。
+对结合使用 C++ 与[适用于 Linux 的 Windows 子系统 (WSL)](https://docs.microsoft.com/windows/wsl/about)，Visual Studio 2019 版本 16.1 添加了本机支持。  这意味着在本地 WSL 安装上进行生成和调试不再需要添加远程连接或配置 SSH。 可在此处找到有关[如何安装 WSL](https://docs.microsoft.com/windows/wsl/install-win10)的详细信息。
 
-如果你的发行版支持 apt，可以使用以下命令安装所需的包：
+要将 WSL 安装配置为使用 Visual Studio，需要安装以下工具：gcc、gdb、make、rsync 和 zip。 可使用以下命令在使用 apt 的发行版上安装这些工具： 
 
 ```bash
 sudo apt install g++ gdb make rsync zip
 ```
 
-若要为 WSL 配置项目，请参阅[配置 Linux 项目](configure-a-linux-project.md)或[配置 Linux CMake 项目](cmake-linux-project.md)，具体取决于你的项目类型。
+若要为 WSL 配置项目，请参阅[配置 Linux 项目](configure-a-linux-project.md)或[配置 Linux CMake 项目](cmake-linux-project.md)，具体取决于你的项目类型。 要按照分步说明使用 WSL 创建简单的控制台应用程序，请参阅关于 [C++ with Visual Studio 2019 and the Windows Subsystem for Linux (WSL)](https://devblogs.microsoft.com/cppblog/c-with-visual-studio-2019-and-windows-subsystem-for-linux-wsl/)（结合使用 C++ 和 Visual Studio 2019 及适用于 Linux 的 Windows 子系统 (WSL)）的介绍性博客文章。
 
 ::: moniker-end
 
