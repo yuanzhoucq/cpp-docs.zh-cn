@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::future [C++], wait
 - std::future [C++], wait_for
 - std::future [C++], wait_until
-ms.openlocfilehash: 9ca18e62038d93a50b592868f71223962a22857d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1519fa105f2cd73c1165bb30264828aa987fbd35
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159322"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458455"
 ---
 # <a name="future-class"></a>future 类
 
@@ -57,7 +57,7 @@ class future;
 |[get](#get)|检索存储在关联异步状态中的结果。|
 |[share](#share)|将对象转换为 `shared_future`。|
 |[valid](#valid)|指定对象是否不为空。|
-|[wait](#wait)|阻止当前线程，直到关联异步状态为准备就绪。|
+|[再](#wait)|阻止当前线程，直到关联异步状态为准备就绪。|
 |[wait_for](#wait_for)|进行阻止，直到关联异步状态为准备就绪或已过指定时间。|
 |[wait_until](#wait_until)|进行阻止，直到关联异步状态为准备就绪或直到指定时间点。|
 
@@ -69,7 +69,7 @@ class future;
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<将来 >
+**标头:** \<未来 >
 
 **命名空间：** std
 
@@ -84,14 +84,14 @@ future(future&& Other) noexcept;
 
 ### <a name="parameters"></a>参数
 
-*其他*<br/>
+*以外*\
 一个 `future` 对象。
 
 ### <a name="remarks"></a>备注
 
 第一个构造函数构造没有关联异步状态的 `future` 对象。
 
-第二个构造函数构造`future`对象，并传输关联异步状态从*其他*。 *其他*不再具有关联异步状态。
+第二个构造函数`future`构造一个对象, 并将关联的异步状态从*另*一个传输。 *其他*不再具有关联的异步状态。
 
 ## <a name="get"></a>future::get
 
@@ -111,7 +111,7 @@ Ty get();
 
 对于部分专用化 `future<Ty&>`，存储值实际上是对已传递给异步提供程序作为返回值的对象的引用。
 
-因为对于专用化不存在任何存储的值`future<void>`，该方法将返回**void**。
+由于专用化`future<void>`不存在存储的值, 因此该方法返回**void**。
 
 在其他专用化中，此方法会从存储值移动其返回值。 因此，请仅调用此方法一次。
 
@@ -125,7 +125,7 @@ future& operator=(future&& Right) noexcept;
 
 ### <a name="parameters"></a>参数
 
-右侧<br/>
+*然后*\
 一个 `future` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -134,7 +134,7 @@ future& operator=(future&& Right) noexcept;
 
 ### <a name="remarks"></a>备注
 
-传输后，*右*不再具有关联异步状态。
+传输*后, 不再*具有关联的异步状态。
 
 ## <a name="share"></a>future::share
 
@@ -158,7 +158,7 @@ bool valid() noexcept;
 
 ### <a name="return-value"></a>返回值
 
-**true**如果该对象具有关联异步状态; 否则为**false**。
+如果对象有关联的异步状态,**则为 true** ;否则**为 false**。
 
 ## <a name="wait"></a>future::wait
 
@@ -183,7 +183,7 @@ future_status wait_for(const chrono::duration<Rep, Period>& Rel_time) const;
 
 ### <a name="parameters"></a>参数
 
-*Rel_time*<br/>
+*Rel_time*\
 一个 [chrono::duration](../standard-library/duration-class.md) 对象，指定线程阻止的最大时间间隔。
 
 ### <a name="return-value"></a>返回值
@@ -205,7 +205,7 @@ future_status wait_until(const chrono::time_point<Clock, Duration>& Abs_time) co
 
 ### <a name="parameters"></a>参数
 
-*Abs_time*<br/>
+*Abs_time*\
 一个 [chrono::time_point](../standard-library/time-point-class.md) 对象，指定在其后可取消阻止线程的时间。
 
 ### <a name="return-value"></a>返回值
@@ -218,5 +218,5 @@ future_status wait_until(const chrono::time_point<Clock, Duration>& Abs_time) co
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<future>](../standard-library/future.md)<br/>
+[头文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[\<future>](../standard-library/future.md)

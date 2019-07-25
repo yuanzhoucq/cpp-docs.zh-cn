@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - <future>
 ms.assetid: 2f5830fc-455d-44f9-9e3d-94ea051596a2
-ms.openlocfilehash: 189a9f16b65ae74fc2a86bee62bf8bd548c486aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d33b67ed17a95b6717878aaca2f61682b1807c15
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159855"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454005"
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
 
@@ -26,7 +26,7 @@ ms.locfileid: "62159855"
 ## <a name="remarks"></a>备注
 
 > [!NOTE]
-> 在使用已编译的代码 **/clr**，禁止使用此标头。
+> 在使用 **/clr**编译的代码中, 此标头被阻止。
 
 异步提供程序存储函数调用的结果。 异步返回对象用于检索函数调用的结果。 关联异步状态提供一个异步提供程序和一个或多个异步返回对象之间的通信。
 
@@ -38,15 +38,15 @@ ms.locfileid: "62159855"
 
 模板函数 `async` 以及模板类 `promise` 和 `packaged_task` 是异步提供程序。 模板类 `future` 和 `shared_future` 描述异步返回对象。
 
-每个模板类`promise`， `future`，并`shared_future`有类型专用化**void**和用于存储和检索一个值，通过引用的部分专用化。 这些专用化与主模板的唯一区别是用于存储和检索返回值的函数的签名和语义。
+每个模板`promise`类、 `future`和`shared_future`都具有类型**void**的专用化和按引用存储和检索值的部分专用化。 这些专用化与主模板的唯一区别是用于存储和检索返回值的函数的签名和语义。
 
-模板类`future`和`shared_future`永远不会阻止在其析构函数中，除在保留用于向后兼容的一种方案：与其他所有 future，对于`future`— 或最后一个`shared_future`— 附加到任务`std::async`、 析构函数块如果任务尚未完成; 也就是说，它将阻塞此线程尚未调用`.get()`或`.wait()`并且仍在运行任务。 以下可用性注释已添加到的说明`std::async`草稿标准中:"[注意：如果从 std::async 获取 future 移出本地作用域中，使用未来的其他代码必须了解未来的析构函数可能会阻止在共享状态变为准备就绪。 — 尾注]"在所有其他情况下，`future`和`shared_future`析构函数所需和保证永远不会阻止。
+模板类`future`和`shared_future`决不会在其析构函数中阻止, 只是为了向后兼容而保留的一种情况:与所有其他先期情况不同 ( `future`对于, 或最后`shared_future` `std::async`一个), 如果任务尚未完成, 则析构函数将阻塞; 即, 如果此线程尚未调用`.get()`或`.wait()`任务仍在运行。 以下可用性说明已添加到草案标准版`std::async`中的说明: "[备注:如果将来从 std:: async 获得的内容移到了本地范围外, 则使用将来的其他代码必须注意未来的析构函数可能会阻塞共享状态。在所有其他情况下, `future` `shared_future`析构函数是必需的, 并且保证永远不会阻止。
 
 ## <a name="members"></a>成员
 
 ### <a name="classes"></a>类
 
-|名称|描述|
+|name|描述|
 |----------|-----------------|
 |[future 类](../standard-library/future-class.md)|描述异步返回对象。|
 |[future_error 类](../standard-library/future-error-class.md)|描述可由管理 `future` 对象的类型方法引发的异常对象。|
@@ -77,8 +77,8 @@ ms.locfileid: "62159855"
 |----------|-----------------|
 |[future_errc](../standard-library/future-enums.md#future_errc)|为 `future_error` 类报告的错误提供符号名称。|
 |[future_status](../standard-library/future-enums.md#future_status)|为计时等待函数可返回的原因提供符号名称。|
-|[launch](../standard-library/future-enums.md#launch)|表示描述模板函数 `async` 的可能模式的位掩码类型。|
+|[开始](../standard-library/future-enums.md#launch)|表示描述模板函数 `async` 的可能模式的位掩码类型。|
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)<br/>
+[头文件引用](../standard-library/cpp-standard-library-header-files.md)

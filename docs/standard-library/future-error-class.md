@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - future/std::future_error
 ms.assetid: 6071c545-ac2a-49ef-9967-07b0125da861
-ms.openlocfilehash: 2b3f754c0ceb7384d99c6a657de214d30aca24b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed3f9d63c45d0e185e3e1476094736d132822173
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159751"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447351"
 ---
 # <a name="futureerror-class"></a>future_error 类
 
@@ -31,12 +31,12 @@ const char *what() const throw();
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<将来 >
+**标头:** \<未来 >
 
 **命名空间：** std
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)<br/>
-[logic_error 类](../standard-library/logic-error-class.md)<br/>
-[error_code 类](../standard-library/error-code-class.md)<br/>
+[头文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[logic_error 类](../standard-library/logic-error-class.md)\
+[error_code 类](../standard-library/error-code-class.md)

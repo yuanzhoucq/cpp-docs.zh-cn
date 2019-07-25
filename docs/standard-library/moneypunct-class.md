@@ -46,16 +46,16 @@ helpviewer_keywords:
 - std::moneypunct [C++], positive_sign
 - std::moneypunct [C++], thousands_sep
 ms.assetid: cf2650da-3e6f-491c-95d5-23e57f582ee6
-ms.openlocfilehash: 750b61100f7e3fe15851fffbedeb5b60d4d7034f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6cd2524f8ae010e81d06a30d9a001398a106622
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349116"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460193"
 ---
 # <a name="moneypunct-class"></a>moneypunct 类
 
-此模板类描述一个对象来充当区域设置 facet，以便描述类型的序列*CharType*用来表示货币输入的字段或货币输出字段。 如果模板参数*Intl*是*true*，则遵守国际约定。
+此模板类描述可用作区域设置 facet 的对象, 以描述用于表示货币输入字段或货币输出字段的*CharType*类型的序列。 如果模板参数*国际*为*true*, 则遵守国际约定。
 
 ## <a name="syntax"></a>语法
 
@@ -66,10 +66,10 @@ class moneypunct;
 
 ### <a name="parameters"></a>参数
 
-*CharType*<br/>
+*CharType*\
 在程序中用于对字符进行编码的类型。
 
-*Intl*<br/>
+*区号*\
 一种用于指定是否遵守国际约定的标志。
 
 ## <a name="remarks"></a>备注
@@ -277,7 +277,7 @@ virtual string do_grouping() const;
 
 ### <a name="example"></a>示例
 
-有关示例，请参阅[分组](#grouping)，其中虚拟成员函数由调用`grouping`。
+请参阅[分组](#grouping)的示例, 其中虚拟成员函数由`grouping`调用。
 
 ## <a name="do_neg_format"></a>  moneypunct::do_neg_format
 
@@ -289,19 +289,19 @@ virtual pattern do_neg_format() const;
 
 ### <a name="return-value"></a>返回值
 
-此受保护的虚拟成员函数可返回一个区域设置特定规则，用于确定生成负金额的货币输出字段的方式。 每个四个元素的`pattern::field`可以具有值：
+此受保护的虚拟成员函数可返回一个区域设置特定规则，用于确定生成负金额的货币输出字段的方式。 的四个元素`pattern::field`中的每一个都可以具有以下值:
 
-- `none` 若要匹配零个或多个空格，或不生成任何内容。
+- `none`匹配零个或多个空格, 或不生成任何内容。
 
-- `sign` 用于匹配或生成正负号。
+- `sign`匹配或生成正号或负号。
 
-- `space` 用于匹配零个或多个空格，或生成空格。
+- `space`匹配零个或多个空格或生成空格。
 
-- `symbol` 用于匹配或生成货币符号。
+- `symbol`匹配或生成货币符号。
 
-- `value` 用于匹配或生成货币值。
+- `value`若要匹配或生成货币值, 则为。
 
-生成货币输出字段组件和这些元素中出现的顺序匹配货币输入字段组件`pattern::field`。 每个值`sign`， `symbol`， `value`，并将`none`或`space`必须出现一次。 值`none`不能出现第一个。 值 **space** 不能第一个或最后一个出现。 如果`Intl`为 true，顺序`symbol`， `sign`， `none`，然后`value`。
+生成货币输出字段的组件, 并按这些元素出现`pattern::field`的顺序匹配货币输入字段的组成部分。 每`sign`个值 ( `value` 、和`none` ) 都必须仅出现一次。`space` `symbol` 该值`none`不能首先显示。 值 **space** 不能第一个或最后一个出现。 如果`Intl`为 true, 则顺序为`symbol`, `sign` `none`,, then `value`。
 
 `moneypunct`\< **CharType**, **Intl**> 的模板版本返回 `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`。
 
@@ -523,18 +523,18 @@ explicit moneypunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>参数
 
-*_Refs*<br/>
+*_Refs*\
 用于指定对象的内存管理类型的整数值。
 
 ### <a name="remarks"></a>备注
 
-可能的值 *_Refs*参数和其重要性：
+*_Refs*参数的可能值及其重要性为:
 
-- 0:对象的生存期由包含它的区域设置管理。
+- 0对象的生存期由包含该对象的区域设置管理。
 
-- 1:必须手动管理的对象的生存期。
+- 1:必须手动管理对象的生存期。
 
-- \> 1:未定义这些值。
+- \>2未定义这些值。
 
 由于该析构函数受到保护，可能没有直接的示例。
 
@@ -835,5 +835,5 @@ English_Canada.1252 domestic thousands separator: ,
 
 ## <a name="see-also"></a>请参阅
 
-[\<locale>](../standard-library/locale.md)<br/>
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

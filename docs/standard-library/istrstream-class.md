@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - istrstream class
 ms.assetid: c2d41c75-bd2c-4437-bd77-5939ce1b97af
-ms.openlocfilehash: 70e71ac5a6fd523f0b7589625f4e88fdb41ee0e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59b69d3f862715840e1557a10d6087350488a3c9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224267"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448076"
 ---
 # <a name="istrstream-class"></a>istrstream 类
 
@@ -46,7 +46,7 @@ class istrstream : public istream
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<strstream>
+**标头：** \<strstream>
 
 **命名空间：** std
 
@@ -72,15 +72,15 @@ istrstream(
 
 ### <a name="parameters"></a>参数
 
-*count*<br/>
+*计*\
 缓冲区的长度 (*ptr*)。
 
-*ptr*<br/>
+*ptr*\
 缓冲区初始化使用的内容。
 
 ### <a name="remarks"></a>备注
 
-所有构造函数通过调用初始化基类[istream](../standard-library/istream-typedefs.md#istream)(**sb**)，其中`sb`是类的存储的对象[strstreambuf](../standard-library/strstreambuf-class.md)。 前两个构造函数还初始化`sb`通过调用`strstreambuf`(( **const** `char` \*) `ptr`，0)。 剩余的两个构造函数则调用 `strstreambuf`( ( **const**`char` *) `ptr`, `count` )。
+所有构造函数通过调用[istream](../standard-library/istream-typedefs.md#istream)(**sb**) 来初始化基类, 其中`sb`是[strstreambuf](../standard-library/strstreambuf-class.md)类的存储对象。 前两个构造函数还`sb`通过调用`strstreambuf`(( **const** `char` \*) `ptr`, 0) 来初始化。 剩余的两个构造函数则调用 `strstreambuf`( ( **const**`char` *) `ptr`, `count` )。
 
 ## <a name="rdbuf"></a>istrstream::rdbuf
 
@@ -120,11 +120,11 @@ char *str();
 
 ### <a name="example"></a>示例
 
-请参阅[strstream:: str](../standard-library/strstreambuf-class.md#str)有关的示例，使用`str`。
+有关使用`str`的示例, 请参阅[strstream:: str](../standard-library/strstreambuf-class.md#str) 。
 
 ## <a name="see-also"></a>请参阅
 
-[istream](../standard-library/istream-typedefs.md#istream)<br/>
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream 编程](../standard-library/iostream-programming.md)<br/>
-[iostreams 约定](../standard-library/iostreams-conventions.md)<br/>
+[istream](../standard-library/istream-typedefs.md#istream)\
+[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream 编程](../standard-library/iostream-programming.md)\
+[iostreams 约定](../standard-library/iostreams-conventions.md)

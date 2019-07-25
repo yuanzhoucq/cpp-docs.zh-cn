@@ -5,12 +5,12 @@ f1_keywords:
 - mutex/std::lock_guard
 - mutex/std::lock_guard::lock_guard
 ms.assetid: 57121f0d-9c50-481c-b971-54e64df864e0
-ms.openlocfilehash: 45a01c5fdd431bcfad1eeb5ab0531c11c89e9767
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f59860c3aaa9ef7458fe5e30b85b119dede52c72
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413133"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453845"
 ---
 # <a name="lockguard-class"></a>lock_guard 类
 
@@ -44,7 +44,7 @@ class lock_guard;
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<互斥体 >
+**标头:** \<mutex >
 
 **命名空间：** std
 
@@ -60,14 +60,14 @@ lock_guard(mutex_type& Mtx, adopt_lock_t);
 
 ### <a name="parameters"></a>参数
 
-*Mtx*<br/>
+*Mtx.exe*\
 一个 mutex 类型对象。
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数将构造类型的对象`lock_guard`和锁*使用 Mtx*。 如果*使用 Mtx*不是递归互斥体，它必须在调用此构造函数时解锁。
+第一个构造函数构造一个类型`lock_guard`为的对象并锁定*mtx.exe*。 如果*mtx.exe*不是递归互斥体, 则在调用此构造函数时必须将其解除锁定。
 
-第二个构造函数不会锁定*使用 Mtx*。 *使用 Mtx*时调用此构造函数，必须锁定。 此构造函数不会引发异常。
+第二个构造函数不会锁定*mtx.exe*。 调用此构造函数时, 必须锁定*mtx.exe* 。 此构造函数不会引发异常。
 
 ## <a name="dtorlock_guard_destructor"></a>lock_guard::~lock_guard 析构函数
 
@@ -83,5 +83,5 @@ lock_guard(mutex_type& Mtx, adopt_lock_t);
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<mutex>](../standard-library/mutex.md)<br/>
+[头文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

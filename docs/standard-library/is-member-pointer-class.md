@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_member_pointer class
 - is_member_pointer
 ms.assetid: da07ff4e-9ee0-4baa-ad93-1741f10913d1
-ms.openlocfilehash: a02d8a156a861367f34ac0cda4744c3de9e43efe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f07e32c8ab1ea82a0c3616e96baca920a95e3042
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404775"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456137"
 ---
 # <a name="ismemberpointer-class"></a>is_member_pointer 类
 
@@ -27,12 +27,12 @@ struct is_member_pointer;
 
 ### <a name="parameters"></a>参数
 
-*Ty*<br/>
+*Ty*\
 要查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型谓词的实例将保留 true 类型*Ty*是指向成员函数的指针或指向成员对象的指针或`cv-qualified`窗体的其中之一，否则为 false。
+如果类型*Ty*是指向成员函数的指针或指向成员对象`cv-qualified`的指针, 则类型谓词的实例为 true; 否则为 false。
 
 ## <a name="example"></a>示例
 
@@ -79,13 +79,13 @@ is_member_pointer<int (functional::*)()> == true
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<type_traits>
+**标头：** \<type_traits>
 
 **命名空间：** std
 
 ## <a name="see-also"></a>请参阅
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_member_function_pointer 类](../standard-library/is-member-function-pointer-class.md)<br/>
-[is_member_object_pointer 类](../standard-library/is-member-object-pointer-class.md)<br/>
-[is_pointer 类](../standard-library/is-pointer-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_member_function_pointer 类](../standard-library/is-member-function-pointer-class.md)\
+[is_member_object_pointer 类](../standard-library/is-member-object-pointer-class.md)\
+[is_pointer 类](../standard-library/is-pointer-class.md)

@@ -28,32 +28,32 @@ helpviewer_keywords:
 - std::valarray [C++], sum
 - std::valarray [C++], swap
 ms.assetid: 19b862f9-5d09-4003-8844-6ddd02c1a3a7
-ms.openlocfilehash: 60e18ec68ebdd03a97933b222de00e20cd57f20f
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: f42a452613a76aacd98f7eaf395ce72f68dca7ff
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246144"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453247"
 ---
 # <a name="valarray-class"></a>valarray 类
 
-模板类描述一个对象，用于控制的类型的元素序列`Type`存储为数组，用于执行高速数学运算，并针对计算性能进行了优化。
+此模板类描述一个对象, 该对象控制类型`Type`的元素的序列, 这些元素存储为数组, 旨在执行高速数学运算, 并针对计算性能进行了优化。
 
 ## <a name="remarks"></a>备注
 
 此类是一组有序值的数学概念表示形式，元素从 0 开始按顺序编号。 此类描述为一个近容器，因为它支持一些（并非所有）第一类序列容器（如 [vector](../standard-library/vector-class.md)）支持的功能。 它在以下两个重要方面不同于模板类矢量：
 
-- 它定义的对应元素之间的大量算术运算`valarray<Type>`对象的相同类型和长度，如*xarr* = cos ( *yarr*) + sin ( *zarr*).
+- 它定义了相同类型和长度的对象`valarray<Type>`的相应元素之间的众多算术运算, 如*xarr* = cos ( *yarr*) + sin ( *zarr*)。
 
-- 它定义了各种下标的有趣方式`valarray<Type>`对象，通过重载[运算符&#91;&#93;](#op_at)。
+- 它通过重载`valarray<Type>` [运算符&#91;](#op_at)定义了用于将对象作为下标的各种有趣的方法。
 
-类的对象`Type`:
+类`Type`的对象:
 
 - 具有公共默认构造函数、析构函数、复制构造函数、赋值运算符和常规行为。
 
 - 根据需要，定义适用于浮点类型的算术运算符、数学函数和常规行为。
 
-具体而言，复制构造和后跟分配的默认构造之间可能不存在任何细微的差异。 所有类的对象上操作`Type`可能会引发异常。
+具体而言，复制构造和后跟分配的默认构造之间可能不存在任何细微的差异。 对类`Type`的对象的操作都不会引发异常。
 
 ## <a name="members"></a>成员
 
@@ -80,7 +80,7 @@ ms.locfileid: "68246144"
 |[min](#min)|查找 `valarray` 中的最小元素。|
 |[resize](#resize)|将 `valarray` 中元素的数量更改为指定数量，根据需要添加或删除元素。|
 |[shift](#shift)|将 `valarray` 的所有元素移动指定数目的位置。|
-|size[](#size)|查找 `valarray` 中的元素数目。|
+|[size](#size)|查找 `valarray` 中的元素数目。|
 |[sum](#sum)|确定长度不为零的 `valarray` 中的所有元素的总和。|
 |[swap](#swap)||
 
@@ -105,7 +105,7 @@ ms.locfileid: "68246144"
 |[operator|=](#op_or_eq)|获取数组中元素的按位 `OR`，该数组具有指定 `valarray` 中的对应元素或具有元素类型的值。|
 |[operator~](#op_dtor)|一个一元运算符，该运算符获取 `valarray` 中每个元素的按位 `NOT` 值。|
 
-## <a name="apply"></a> 应用
+## <a name="apply"></a>应用
 
 将指定函数应用到 valarray 的每个元素。
 
@@ -117,10 +117,10 @@ valarray<Type> apply(Type _Func(constType&)) const;
 
 ### <a name="parameters"></a>参数
 
-*_Func(Type)* \
+*_Func (类型)* \
 函数对象将应用于操作数 valarray 的每个元素。
 
-*_Func(const Type&)* \
+*_Func (const Type &)* \
 const 的函数对象将应用于操作数 valarray 的每个元素。
 
 ### <a name="return-value"></a>返回值
@@ -129,7 +129,7 @@ const 的函数对象将应用于操作数 valarray 的每个元素。
 
 ### <a name="remarks"></a>备注
 
-此成员函数返回类的对象[valarray](../standard-library/valarray-class.md) **\<类型 >** ，长度的[大小](#size)，每个元素*我*是`_Func((*this)[I])`。
+此成员函数返回[valarray](../standard-library/valarray-class.md) **\<类型**的对象, 该对象[的长度为](#size)> 类型, 每个类型*的元素都*是`_Func((*this)[I])`。
 
 ### <a name="example"></a>示例
 
@@ -181,7 +181,7 @@ The element-by-element result of applying MyApplyFunc to vaR is the
 valarray: (  0 0 -4 6 0 -10 12 0 -16 18 )
 ```
 
-## <a name="cshift"></a> cshift
+## <a name="cshift"></a>cshift
 
 将 valarray 中的所有元素以指定位数循环移动。
 
@@ -191,18 +191,18 @@ valarray<Type> cshift(int count) const;
 
 ### <a name="parameters"></a>参数
 
-*计数*\
+*计*\
 要向前移动元素的位数。
 
 ### <a name="return-value"></a>返回值
 
-一个新 valarray，其中所有元素具有移动*计数*循环方式向前面的 valarray，左侧对应它在操作数 valarray 中的位置的位置。
+一个新的 valarray, 其中所有元素都*已移动到*valarray 前面的位置循环, 相对于它们在操作数 valarray 中的位置。
 
 ### <a name="remarks"></a>备注
 
-正值*计数*元素向左移动*计数*放置。
+正值 of *count*将元素循环左*计数*位置。
 
-值为负*计数*元素向左移动*计数*放置。
+*计数*的负值会使元素循环右*计数*位置。
 
 ### <a name="example"></a>示例
 
@@ -259,7 +259,7 @@ The cyclically shifted valarray va2 is:
 va2.shift (-4) = ( 4 3 2 1 10 9 8 7 6 5)
 ```
 
-## <a name="free"></a> 免费
+## <a name="free"></a>忙
 
 释放 valarray 使用的内存。
 
@@ -269,7 +269,7 @@ void free();
 
 ### <a name="remarks"></a>备注
 
-此非标准函数等效于分配空 valarray。 例如：
+此非标准函数等效于分配空 valarray。 例如:
 
 ```cpp
 valarray<T> v;
@@ -278,7 +278,7 @@ v = valarray<T>();
 // equivalent to v.free()
 ```
 
-## <a name="max"></a> 最大值
+## <a name="max"></a>数量
 
 查找 valarray 中的最大元素。
 
@@ -292,7 +292,7 @@ Type max() const;
 
 ### <a name="remarks"></a>备注
 
-成员函数比较值： 应用**运算符\<** 或**运算符 >** 的类的元素对之间`Type`，对于哪些运算符必须提供的元素`Type`.
+成员函数通过在类`Type`的元素对之间应用 **\<运算符**或**运算符 >** 来比较值, 必须为元素`Type`提供运算符。
 
 ### <a name="example"></a>示例
 
@@ -331,7 +331,7 @@ The operand valarray is: ( 0 1 8 3 7 5 6 13 2 9 ).
 The largest element in the valarray is: 13.
 ```
 
-## <a name="min"></a> 最小值
+## <a name="min"></a>min
 
 查找 valarray 中的最小元素。
 
@@ -345,7 +345,7 @@ Type min() const;
 
 ### <a name="remarks"></a>备注
 
-成员函数比较值： 应用**运算符\<** 或**运算符 >** 的类的元素对之间`Type`，对于哪些运算符必须提供的元素`Type`.
+成员函数通过在类`Type`的元素对之间应用 **\<运算符**或**运算符 >** 来比较值, 必须为元素`Type`提供运算符。
 
 ### <a name="example"></a>示例
 
@@ -383,7 +383,7 @@ The smallest element in the valarray is: -9.
 */
 ```
 
-## <a name="op_not"></a> 运算符 ！
+## <a name="op_not"></a>操作员!
 
 一个一元运算符，该运算符获取 valarray 中每个元素的逻辑 **NOT** 值。
 
@@ -399,7 +399,7 @@ valarray<bool> operator!() const;
 
 逻辑运算 **NOT** 将对元素进行求反，因为它会将所有零值转换为一个整体，将所有非零值视为一个整体，然后将它们转换为零值。 布尔值的返回 valarray 的大小与操作数 valarray 相同。
 
-此外，还有的按位**不**[valarray:: operator ~](#op_dtor)的二进制表示形式中的单个位级别上进行的求反**char**和**int** valarray 的元素。
+还有一个按位**not**[valarray:: operator ~](#op_dtor)对 valarray 的**char**和**int**元素的二进制表示形式中的单个位进行求反。
 
 ### <a name="example"></a>示例
 
@@ -442,7 +442,7 @@ The element-by-element result of the logical NOT operator! is the
 valarray: ( 1 1 1 0 1 0 1 0 1 0 ).
 ```
 
-## <a name="op_mod_eq"></a> operator %=
+## <a name="op_mod_eq"></a>运算符% =
 
 获取用指定 valarray 或元素类型的值对数组元素进行点除所得的余数。
 
@@ -454,12 +454,12 @@ valarray<Type>& operator%=(const Type& right);
 
 ### <a name="parameters"></a>参数
 
-*右侧*\
+*然后*\
 valarray 或值与操作数 valarray 的 valarray 或值相同的元素类型，用于对操作数 valarray 进行点除。
 
 ### <a name="return-value"></a>返回值
 
-一个 valarray，其元素是操作数 valarray 进行点算合并除法运算的余数的*右*
+一个 valarray, 其元素是从操作数*的按 valarray*
 
 ### <a name="example"></a>示例
 
@@ -509,7 +509,7 @@ The remainders from the element-by-element division is the
 valarray: ( 0 -3 4 -7 1 -3 ).
 ```
 
-## <a name="op_and_eq"></a> 运算符&amp;=
+## <a name="op_and_eq"></a>操作员&amp;=
 
 获取数组中元素的按位 **AND**，该数组具有指定 valarray 中的对应元素或具有元素类型的值。
 
@@ -521,18 +521,18 @@ valarray<Type>& operator&=(const Type& right);
 
 ### <a name="parameters"></a>参数
 
-*右侧*\
-Valarray 或值的元素相同的类型是将合并操作数 valarray 进行点算合并，通过逻辑`AND`与操作数 valarray。
+*然后*\
+元素类型的 valarray 或值与操作数 valarray 的值相同, 后者是按逻辑`AND`与操作数 valarray 一起使用的。
 
 ### <a name="return-value"></a>返回值
 
-一个 valarray，它的元素的点算逻辑`AND`对操作数 valarray 的*右*
+一个 valarray, 其元素是操作数 valarray*右侧*的`AND`按元素逻辑
 
 ### <a name="remarks"></a>备注
 
-按位运算仅可用于操作中的位**char**并**int**数据类型和变体而不是在**float**， **double**， **longdouble**， **void**， **bool**，或其他更复杂的数据类型。
+按位运算只能用于处理**char**和**int**数据类型中的位和变体, 而不能使用**float**、 **double**、 **longdouble**、 **void**、 **bool**或其他更复杂的数据类型。
 
-按位 AND 具有与逻辑相同的事实表`AND`但适用于单个位级别上的数据类型。 假设有位*b*1 和*b*2 *b*1 `AND` *b*2 是**true**如果两个位都为 true;**false**如果至少一个为 false。
+按位 and 具有与逻辑`AND`相同的事实数据表, 但适用于单个位级别上的数据类型。 给定位*b*1 和*b*2, 如果两`AND`个位都为 true, 则 b 1 *b*2 为**true** ;如果至少有一个为 false, 则**为 false** 。
 
 ### <a name="example"></a>示例
 
@@ -582,7 +582,7 @@ The element-by-element result of the logical AND operator&= is the
 valarray: ( 0 0 0 2 0 4 0 6 0 8 ).
 ```
 
-## <a name="op_gt_gt_eq"></a> 运算符&gt;&gt;=
+## <a name="op_gt_gt_eq"></a>操作员&gt;&gt;=
 
 将 valarray 操作数的每个元素的位以指定数位向右移动，或按由第二个 valarray 指定的元素指向值向右移位。
 
@@ -594,12 +594,12 @@ valarray<Type>& operator>>=(const Type& right);
 
 ### <a name="parameters"></a>参数
 
-*右侧*\
+*然后*\
 指示右移位数或 valarray（其元素指示右移的元素指向值）。
 
 ### <a name="return-value"></a>返回值
 
-一个 valarray，它的元素向右位移中指定的数量*右*。
+一个 valarray, 其元素已移动到*右侧*指定的量。
 
 ### <a name="remarks"></a>备注
 
@@ -653,7 +653,7 @@ The element-by-element result of the right shift is the
 valarray: ( 64 -32 16 -8 4 -2 1 -1 ).
 ```
 
-## <a name="op_lt_lt_eq"></a> 运算符&lt;&lt;=
+## <a name="op_lt_lt_eq"></a>操作员&lt;&lt;=
 
 将 valarray 操作数的每个元素的位以指定数位向右移动，或按由第二个 valarray 指定的元素指向值向左移位。
 
@@ -665,12 +665,12 @@ valarray<Type>& operator<<=(const Type& right);
 
 ### <a name="parameters"></a>参数
 
-*右侧*\
+*然后*\
 指示左移位数或 valarray（其元素指示左移的元素指向值）。
 
 ### <a name="return-value"></a>返回值
 
-一个 valarray，它的元素具有已移动保留中指定的数量*右*。
+一个 valarray, 其元素已向左移动*右侧*指定的量。
 
 ### <a name="remarks"></a>备注
 
@@ -726,7 +726,7 @@ on the operand array is the valarray:
 ( 1 -2 4 -8 16 -32 64 -128 ).
 ```
 
-## <a name="op_star_eq"></a> 运算符 * =
+## <a name="op_star_eq"></a>运算符 * =
 
 将指定 valarray 的元素或元素类型的值与操作数 valarray 进行点乘。
 
@@ -738,12 +738,12 @@ valarray<Type>& operator*=(const Type& right);
 
 ### <a name="parameters"></a>参数
 
-*右侧*\
+*然后*\
 valarray 或值与操作数 valarray 的 valarray 或值相同的元素类型，用于对操作数 valarray 进行点乘。
 
 ### <a name="return-value"></a>返回值
 
-一个 valarray，其元素是操作数 valarray 的点积并*右*。
+一个 valarray, 其元素是操作数 valarray 和*right*的面向元素的积。
 
 ### <a name="example"></a>示例
 
@@ -792,7 +792,7 @@ valarray: ( 0 -1 4 -3 8 -5 12 -7 ).
 */
 ```
 
-## <a name="op_add"></a> operator +
+## <a name="op_add"></a>operator +
 
 一个一元运算符，该运算符将 valarray 中的所有元素相加。
 
@@ -845,7 +845,7 @@ The element-by-element result of the operator+ is the
 valarray: ( 0 0 -2 2 -4 4 -6 6 -8 8 ).
 ```
 
-## <a name="op_add_eq"></a> operator + =
+## <a name="op_add_eq"></a>运算符 + =
 
 将指定 valarray 的元素或元素类型的值与操作数 valarray 进行点加。
 
@@ -857,12 +857,12 @@ valarray<Type>& operator+=(const Type& right);
 
 ### <a name="parameters"></a>参数
 
-*右侧*\
+*然后*\
 valarray 或值与操作数 valarray 的 valarray 或值相同的元素类型，用于对操作数 valarray 进行点加。
 
 ### <a name="return-value"></a>返回值
 
-一个 valarray，其元素是操作数 valarray 的元素指向总和并*右*。
+一个 valarray, 其元素是操作数 valarray 和*right*的按元素的和。
 
 ### <a name="example"></a>示例
 
@@ -912,7 +912,7 @@ The element-by-element result of the sum is the
 valarray: ( 2 0 4 2 6 4 8 6 ).
 ```
 
-## <a name="operator-"></a> 运算符-
+## <a name="operator-"></a>操作员
 
 一个一元运算符，该运算符将 valarray 中的所有元素相减。
 
@@ -965,7 +965,7 @@ The element-by-element result of the operator+ is the
 valarray: ( 0 0 2 -2 4 -4 6 -6 8 -8 ).
 ```
 
-## <a name="operator-_eq"></a> 运算符 =
+## <a name="operator-_eq"></a>operator-=
 
 将指定 valarray 的元素或元素类型的值与操作数 valarray 进行点减。
 
@@ -977,12 +977,12 @@ valarray<Type>& operator-=(const Type& right);
 
 ### <a name="parameters"></a>参数
 
-*右侧*\
+*然后*\
 valarray 或值与操作数 valarray 的 valarray 或值相同的元素类型，用于对操作数 valarray 进行点减。
 
 ### <a name="return-value"></a>返回值
 
-一个 valarray，其元素是操作数 valarray 的点差和*右*。
+一个 valarray, 其元素是操作数 valarray 和*right*的按元素的差。
 
 ### <a name="example"></a>示例
 
@@ -1032,7 +1032,7 @@ The element-by-element result of the difference is the
 valarray: ( 10 -1 8 -3 6 -5 4 -7 ).
 ```
 
-## <a name="op_div_eq"></a> / = 运算符
+## <a name="op_div_eq"></a>operator/=
 
 将操作数 valarray 与指定 valarray 的元素或元素类型的值进行点除。
 
@@ -1044,12 +1044,12 @@ valarray<Type>& operator/=(const Type& right);
 
 ### <a name="parameters"></a>参数
 
-*右侧*\
+*然后*\
 valarray 或值与操作数 valarray 的 valarray 或值相同的元素类型，用于对操作数 valarray 进行点除。
 
 ### <a name="return-value"></a>返回值
 
-一个 valarray，其元素是操作数 valarray 的元素指向商除以*右*。
+一个 valarray, 其元素是操作数 valarray 的面向元素的*商。*
 
 ### <a name="example"></a>示例
 
@@ -1099,7 +1099,7 @@ The element-by-element result of the quotient is the
 valarray: ( inf -50 25 -16.6667 12.5 -10 ).
 ```
 
-## <a name="op_eq"></a> 运算符 =
+## <a name="op_eq"></a>operator =
 
 将元素分配给 valarray，其值可以直接指定，也可以作为一些其他 valarray 的一部分指定，或由 slice_array、gslice_array、mask_array 或 indirect_array 指定。
 
@@ -1121,10 +1121,10 @@ valarray<Type>& operator=(const indirect_array<Type>& _Indarray);
 
 ### <a name="parameters"></a>参数
 
-*右侧*\
+*然后*\
 要复制到操作数 valarray 中的 valarray。
 
-*val*\
+*初始值*\
 要分配给操作数 valarray 的元素的值。
 
 *_Slicearray*\
@@ -1141,11 +1141,11 @@ valarray<Type>& operator=(const indirect_array<Type>& _Indarray);
 
 ### <a name="return-value"></a>返回值
 
-第一个成员运算符使用的控制的序列的副本替换受控的序列*右*。
+第一个成员运算符将受控序列替换为由*right*控制的序列副本。
 
 第二个成员运算符与第一个成员运算符相同，但前者具有[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
-第三个成员运算符使用的副本替换受控序列的每个元素*val*。
+第三个成员运算符使用*val*的副本替换受控序列的每个元素。
 
 其余成员运算符将替换其参数选择的受控序列的元素，这些参数仅由 [operator[]](#op_at) 生成。
 
@@ -1209,7 +1209,7 @@ The reassigned valarray va is: 10 10 10 10 10 10 10 10 10 10
 
 ```
 
-## <a name="op_at"></a> operator]
+## <a name="op_at"></a>运算符 []
 
 返回对指定索引或指定子集处的元素或其值的引用。
 
@@ -1258,7 +1258,7 @@ valarray<Type> operator[](const valarray<size_t>& _Indarray) const;
 
 ### <a name="remarks"></a>备注
 
-成员运算符将重载以提供了多种方法中进行控制的元素的序列中进行选择<strong>\*这</strong>。 五个成员运算符中的第一组将配合 [operator=](#op_eq)（以及其他赋值运算符）的各种重载进行工作，从而允许受控序列的选择性替换（切片）。 所选的元素必须存在。
+重载成员运算符以提供多种方法来选择元素序列, 从此类 <strong>\*控制。</strong> 五个成员运算符中的第一组将配合 [operator=](#op_eq)（以及其他赋值运算符）的各种重载进行工作，从而允许受控序列的选择性替换（切片）。 所选的元素必须存在。
 
 当使用定义为 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 进行编译时，如果试图访问 valarray 的边界之外的元素，将发生运行时错误。  有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。
 
@@ -1266,7 +1266,7 @@ valarray<Type> operator[](const valarray<size_t>& _Indarray) const;
 
 有关如何声明和使用此运算符的示例，请参阅 [slice::slice](../standard-library/slice-class.md#slice) 和 [gslice::gslice](../standard-library/gslice-class.md#gslice) 的示例。
 
-## <a name="op_xor_eq"></a> 运算符 ^ =
+## <a name="op_xor_eq"></a>operator ^ =
 
 获取数组与指定 valarray 或元素类型的值进行的点排除逻辑或运算符 (**XOR**)。
 
@@ -1278,16 +1278,16 @@ valarray<Type>& operator|=(const Type& right);
 
 ### <a name="parameters"></a>参数
 
-*右侧*\
+*然后*\
 valarray 或值与操作数 valarray 的 valarray 或值相同的元素类型，用于通过排他逻辑 **XOR** 与操作数 valarray 进行点算合并。
 
 ### <a name="return-value"></a>返回值
 
-一个 valarray，它的元素进行点乘的排他逻辑**XOR**操作数 valarray 和*右*。
+一个 valarray, 其元素是操作数 valarray 和*right*的按元素、排他逻辑**XOR** 。
 
 ### <a name="remarks"></a>备注
 
-排他逻辑或，称为**XOR**，具有以下语义：给定元素*电子*1 和*e*2 *e*1 **XOR** *电子*2 是**true**如果元素中的为 true;**false**如果这两个元素都为 false，或如果这两个元素，则返回 true。
+独占逻辑 or (称为**XOR**) 具有以下语义:给定元素*e*1 和*e*2, 如果其中恰好有一个元素为 true, 则*e*1 **XOR** *e*2 为**true** ;如果这两个元素均为 false 或者两个元素都为 true, 则**为 false** 。
 
 ### <a name="example"></a>示例
 
@@ -1341,7 +1341,7 @@ The element-by-element result of the bitwise XOR operator^= is the
 valarray: ( 1 0 0 3 2 4 7 6 6 9 ).
 ```
 
-## <a name="op_or_eq"></a> 运算符&#124;=
+## <a name="op_or_eq"></a>operator&#124;=
 
 获取数组中元素的按位 `OR`，该数组具有指定 valarray 中的对应元素或具有元素类型的值。
 
@@ -1353,18 +1353,18 @@ valarray<Type>& operator|=(const Type& right);
 
 ### <a name="parameters"></a>参数
 
-*右侧*\
+*然后*\
 valarray 或值与操作数 valarray 的 valarray 或值相同的元素类型，用于通过按位 `OR` 与操作数 valarray 进行点算合并。
 
 ### <a name="return-value"></a>返回值
 
-一个 valarray，它的元素的点算按位`OR`通过为操作数 valarray*右*。
+一个 valarray, 其元素为操作数 valarray by `OR` *right*的按位。
 
 ### <a name="remarks"></a>备注
 
-按位运算仅可用于操作中的位**char**并**int**数据类型和变体而不是在**float**， **double**， **longdouble**， **void**， **bool**，或其他更复杂的数据类型。
+按位运算只能用于处理**char**和**int**数据类型中的位和变体, 而不能使用**float**、 **double**、 **longdouble**、 **void**、 **bool**或其他更复杂的数据类型。
 
-按位 `OR` 具有与逻辑 `OR` 相同的事实表，但是按位 OR 适用于单个位级别上的数据类型。 假设有位 b  1 和 b  2，如果至少有一个位为 true，则 b  1 `OR` b  2 为 **true**；如果两个位都为 false，则为 **false**。
+按位 `OR` 具有与逻辑 `OR` 相同的事实表，但是按位 OR 适用于单个位级别上的数据类型。 假设有位 b1 和 b2，如果至少有一个位为 true，则 b1 `OR` b2 为 **true**；如果两个位都为 false，则为 **false**。
 
 ### <a name="example"></a>示例
 
@@ -1424,9 +1424,9 @@ operator|= is the valarray:
 ( 1 0 1 3 3 4 7 6 7 9 ).
 ```
 
-## <a name="op_dtor"></a> 运算符 ~
+## <a name="op_dtor"></a>运算符 ~
 
-一元运算符获取的按位`NOT`valarray 中每个元素的值。
+一个一元运算符, 该运算符获取`NOT` valarray 中每个元素的按位值。
 
 ```cpp
 valarray<Type> operator~() const;
@@ -1434,13 +1434,13 @@ valarray<Type> operator~() const;
 
 ### <a name="return-value"></a>返回值
 
-按位的布尔值的 valarray`NOT`操作数 valarray 的元素值。
+布尔值的 valarray, 这些布尔值是`NOT`操作数 valarray 的元素值的按位。
 
 ### <a name="remarks"></a>备注
 
-按位运算仅可用于操作中的位**char**并**int**数据类型和变体而不是在**float**， **double**， **longdouble**， **void**， **bool**或其他更复杂的数据类型。
+按位运算只能用于处理**char**和**int**数据类型中的位和变体, 而不能使用**float**、 **double**、 **longdouble**、 **void**、 **bool**或其他更复杂的数据类型。
 
-按位 `NOT` 具有与逻辑 `NOT` 相同的事实表，但是按位 OR 适用于单个位级别上的数据类型。 假设有位 b  ，如果 b  为 false，则 ~ *b* 为 true；如果 b  为 true，则为 false。 逻辑 **NOT**[operator!](#op_not) 在元素级别上适用，将所有非零值视为 **true**，结果为布尔值的 valarray。 按位`NOToperator~`，与此相反，可产生 0 或 1，具体取决于按位运算的结果以外的值的 valarray。
+按位 `NOT` 具有与逻辑 `NOT` 相同的事实表，但是按位 OR 适用于单个位级别上的数据类型。 假设有位 b，如果 b 为 false，则 ~ *b* 为 true；如果 b 为 true，则为 false。 逻辑 **NOT**[operator!](#op_not) 在元素级别上适用，将所有非零值视为 **true**，结果为布尔值的 valarray。 与此`NOToperator~`相反, 按位 "与" 运算可能会产生0或1以外的值的 valarray, 具体取决于按位运算的结果。
 
 ### <a name="example"></a>示例
 
@@ -1523,7 +1523,7 @@ is the negative of the original elements the
 valarray: ( 0 2 -2 6 -4 10 -6 14 -8 18 ).
 ```
 
-## <a name="resize"></a> 重设大小
+## <a name="resize"></a>调节
 
 将 valarray 中的元素数更改为指定数量。
 
@@ -1541,7 +1541,7 @@ void resize(
 *_Newsize*\
 调整大小后的 valarray 中的元素数。
 
-*val*\
+*初始值*\
 要提供给调整大小后的 valarray 的元素的值。
 
 ### <a name="remarks"></a>备注
@@ -1599,7 +1599,7 @@ The valarray contains ( 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 ).
 The number of elements in the resized valarray is: 15.
 ```
 
-## <a name="shift"></a> shift
+## <a name="shift"></a>格
 
 将 valarray 中的所有元素按指定位数移动。
 
@@ -1609,18 +1609,18 @@ valarray<Type> shift(int count) const;
 
 ### <a name="parameters"></a>参数
 
-*计数*\
+*计*\
 要向前移动元素的位数。
 
 ### <a name="return-value"></a>返回值
 
-一个新 valarray，其中所有元素具有移动*计数*前侧 valarray，左侧对应它在操作数 valarray 中的位置的位置。
+新的 valarray, 其中所有元素都*已移动到*valarray 前面的位置, 相对于它们在操作数 valarray 中的位置。
 
 ### <a name="remarks"></a>备注
 
-正值*计数*剩余元素位移*计数*位置，用零填充。
+如果正值为*count* , 则将元素向左偏移*数*个位置, 并使用零填充。
 
-值为负*计数*将元素靠右*计数*位置，用零填充。
+如果负值为负值 , 则将元素右移*count*个位置, 并使用零填充。
 
 ### <a name="example"></a>示例
 
@@ -1674,7 +1674,7 @@ The operand valarray va2(10) is: ( 10 9 8 7 6 5 4 3 2 1 ).
 The shifted valarray va2 is: va2.shift (-4) = ( 0 0 0 0 10 9 8 7 6 5 ).
 ```
 
-## <a name="size"></a> 大小
+## <a name="size"></a>规格
 
 返回 valarray 中的元素数。
 
@@ -1751,7 +1751,7 @@ the operand valarray va2(12) is now: ( 0 1 2 3 4 5 6 7 8 9 10 11 ).
 The number of elements in the valarray va2 is still: 12.
 ```
 
-## <a name="sum"></a> Sum
+## <a name="sum"></a>长度
 
 确定长度不为零的 valarray 中的所有元素的总和。
 
@@ -1765,7 +1765,7 @@ Type sum() const;
 
 ### <a name="remarks"></a>备注
 
-如果长度大于 1，成员函数将值添加到总和通过应用`operator+=`的类的元素对之间`Type`，因此，需要为类型的元素提供运算符， `Type`。
+如果长度大于 1, 则成员函数将值添加到 sum, 方法是在类`operator+=` `Type`的一对元素之间应用, 因此需要为类型`Type`的元素提供运算符。
 
 ### <a name="example"></a>示例
 
@@ -1801,7 +1801,7 @@ The operand valarray va (10) is: ( 0 1 2 3 4 5 6 7 8 9 ).
 The sum of elements in the valarray is: 45.
 ```
 
-## <a name="swap"></a> 交换
+## <a name="swap"></a>购
 
 交换两个 `valarray` 的元素。
 
@@ -1811,14 +1811,14 @@ void swap(valarray& right);
 
 ### <a name="parameters"></a>参数
 
-*右侧*\
+*然后*\
 一个 `valarray`，提供要交换的元素。
 
 ### <a name="remarks"></a>备注
 
-成员函数交换之间的受控的序列`*this`并*右*。 它在固定时间内执行此操作，它不引发任何异常，不使任何引用、指针或指定两个受控序列中的元素的迭代器失效。
+成员函数交换和`*this` *右*之间的受控序列。 它在固定时间内执行此操作，它不引发任何异常，不使任何引用、指针或指定两个受控序列中的元素的迭代器失效。
 
-## <a name="valarray"></a> valarray
+## <a name="valarray"></a>valarray
 
 构造特定大小的数值数组、带特定值的元素的数值数组、作为另一个数值数组的副本或另一个数值数组的子集的数值数组。
 
@@ -1860,16 +1860,16 @@ valarray(
 
 ### <a name="parameters"></a>参数
 
-*计数*\
+*计*\
 数值数组要包含的元素的数目。
 
-*val*\
+*初始值*\
 要用于初始化数值数组中的元素的值。
 
-*ptr*\
+*Ptr*\
 指向要用于初始化数值数组中的元素的值的指针。
 
-*右侧*\
+*然后*\
 用于初始化新数值数组的现有数值数组。
 
 *SliceArray*\
@@ -1889,11 +1889,11 @@ valarray(
 
 ### <a name="remarks"></a>备注
 
-第一个（默认）构造函数将对象初始化为空数组。 接下来的三个构造函数初始化的对象的数组*计数*元素，如下所示：
+第一个（默认）构造函数将对象初始化为空数组。 接下来的三个构造函数将对象初始化为*Count*元素数组, 如下所示:
 
 - 对于显式 `valarray(size_t Count)`，使用默认构造函数初始化每个元素。
 
-- 有关`valarray(const Type& Val, Count)`，每个元素初始化*Val*。
+- 对于`valarray(const Type& Val, Count)`, 每个元素都是用*Val*初始化的。
 
 - 对于 `valarray(const Type* Ptr, Count)`，使用 `Ptr`[ `I`] 初始化位置 `I` 处的元素。
 
@@ -2010,4 +2010,4 @@ The resulting valarray is:  ( 0 -10 20 -10 40 -10 60 -10 80 -10 ).
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::normal_distribution [C++], param_type
 - std::normal_distribution [C++], param_type
 ms.assetid: bf92cdbd-bc72-4d4a-b588-173d748f0d7d
-ms.openlocfilehash: df30ddb910cf2fa266a603a3ab285379ea45ec7c
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: daf9ab6b91eb4af19fdd563937b626515c4bc99b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449851"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457666"
 ---
 # <a name="normaldistribution-class"></a>normal_distribution 类
 
@@ -71,19 +71,19 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*RealType*<br/>
-浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*RealType*\
+浮点结果类型, 默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
-此模板类将描述产生用户指定的整型值类型**double**如果未提供任何内容，普通分布根据分布。 下表链接到有关各个成员的文章。
+此模板类描述产生用户指定的整型值的分布, 或者 **, 如果未**提供任何值, 则根据正态分布分配值。 下表链接到有关各个成员的文章。
 
 ||||
 |-|-|-|
 |[normal_distribution](#normal_distribution)|`normal_distribution::mean`|`normal_distribution::param`|
 |`normal_distribution::operator()`|`normal_distribution::stddev`|[param_type](#param_type)|
 
-属性函数`mean()`并`stddev()`返回存储的分布参数的值*意味着*并*stddev*分别。
+属性函数`mean()`和`stddev()`分别返回存储的分布参数的值和 *stddev* 。
 
 属性成员 `param()` 将设置或返回 `param_type` 存储的分布参数包。
 
@@ -198,13 +198,13 @@ explicit normal_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-*mean*<br/>
+*格林威治时间*\
 `mean` 分布参数。
 
-*stddev*<br/>
+*stddev*\
 `stddev` 分布参数。
 
-*parm*<br/>
+*parm*\
 用于构造分布的参数结构。
 
 ### <a name="remarks"></a>备注
@@ -213,7 +213,7 @@ explicit normal_distribution(const param_type& parm);
 
 第一个构造函数将构造一个对象，该对象存储的 `mean` 值保留值 *mean*，并且该对象存储的 `stddev` 值保留值 *stddev*。
 
-第二个构造函数将构造一个从 parm  初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
+第二个构造函数将构造一个从 parm 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
 
 ## <a name="param_type"></a>  normal_distribution::param_type
 
@@ -233,13 +233,13 @@ struct param_type {
 
 ### <a name="parameters"></a>参数
 
-*mean*<br/>
+*格林威治时间*\
 `mean` 分布参数。
 
-*stddev*<br/>
+*stddev*\
 `stddev` 分布参数。
 
-*right*<br/>
+*然后*\
 用于比较的 `param_type` 结构。
 
 ### <a name="remarks"></a>备注
@@ -250,4 +250,4 @@ struct param_type {
 
 ## <a name="see-also"></a>请参阅
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

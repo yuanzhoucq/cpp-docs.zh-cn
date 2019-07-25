@@ -1,5 +1,5 @@
 ---
-title: 安全库：C++ 标准库
+title: 安全库:C++ 标准库
 ms.date: 11/04/2016
 f1_keywords:
 - _SCL_SECURE_NO_DEPRECATE
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Safe Libraries, C++ Standard Library
 - Safe C++ Standard Library
 ms.assetid: 3993340f-1f29-4d81-b3f5-52a52bc8e148
-ms.openlocfilehash: 0c8f2de77255015254eabe018399f913b4582b7c
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 782a3610909de01e1a1991dee3a74aee9a131da3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220472"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454551"
 ---
-# <a name="safe-libraries-c-standard-library"></a>安全库：C++ 标准库
+# <a name="safe-libraries-c-standard-library"></a>安全库:C++ 标准库
 
-对与 Microsoft 随附的库进行了多项增强功能C++，其中包括C++标准库，以使它们更加安全。
+已对 Microsoft C++随附的库进行了多项改进, 其中包括C++标准库, 以使它们更加安全。
 
 已将 C++ 标准库中的多个方法确定为具有潜在的不安全性，因为它们可能导致缓冲区溢出或其他代码缺陷。 建议不要使用这些方法，已创建了更安全的新方法来替代这些方法。 这些新方法均以 `_s`结尾。
 
@@ -46,4 +46,4 @@ ms.locfileid: "65220472"
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 标准库概述](../standard-library/cpp-standard-library-overview.md)<br/>
+[C++ 标准库概述](../standard-library/cpp-standard-library-overview.md)

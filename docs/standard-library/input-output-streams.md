@@ -1,16 +1,16 @@
 ---
-title: 输入 / 输出流
+title: 输入/输出流
 ms.date: 11/04/2016
 helpviewer_keywords:
 - I/O [C++], stream
 - stream I/O
 ms.assetid: 21a97566-91a7-42d6-b2f8-a4c16bc926f1
-ms.openlocfilehash: d426baacb52095ab2d933263fdac8e312fc29558
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d5344ede3a62375c4c8102d1fc39445518eb0c4
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159231"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455262"
 ---
 # <a name="inputoutput-streams"></a>输入/输出流
 
@@ -22,7 +22,7 @@ ms.locfileid: "62159231"
 
 类模板 `basic_fstream` 派生自 `basic_iostream`，用于向/从文件流式处理字符数据。
 
-其他一些 typedef 还可提供 `basic_fstream` 的特定于字符的专用化。 它们是`fstream`，这是基于的文件 I/O 流**char**，和`wfstream`，这是基于的文件 I/O 流**wchar_t**。 有关详细信息，请参阅 [basic_fstream 类](../standard-library/basic-fstream-class.md)、[fstream](../standard-library/basic-fstream-class.md) 和 [wfstream](../standard-library/basic-fstream-class.md)。 使用这些 typedef 要求包含头文件 \<fstream>。
+其他一些 typedef 还可提供 `basic_fstream` 的特定于字符的专用化。 它们是一个文件 i/o 流, 它基于**char** `wfstream`和, 后者是一个基于 wchar_t 的文件 i/o 流。  `fstream` 有关详细信息，请参阅 [basic_fstream 类](../standard-library/basic-fstream-class.md)、[fstream](../standard-library/basic-fstream-class.md) 和 [wfstream](../standard-library/basic-fstream-class.md)。 使用这些 typedef 要求包含头文件 \<fstream>。
 
 > [!NOTE]
 > 使用 `basic_fstream` 对象执行文件 I/O 时，尽管基础缓冲区包含为读取和写入单独指定的位置，但是当前输入和当前输出位置绑定在一起，因此，读取某些数据会移动输出位置。
@@ -31,8 +31,8 @@ ms.locfileid: "62159231"
 
 ## <a name="see-also"></a>请参阅
 
-[stringstream](../standard-library/basic-stringstream-class.md)<br/>
-[basic_stringstream 类](../standard-library/basic-stringstream-class.md)<br/>
-[\<sstream>](../standard-library/sstream.md)<br/>
-[iostream 编程](../standard-library/iostream-programming.md)<br/>
-[C++ 标准库](../standard-library/cpp-standard-library-reference.md)<br/>
+[stringstream](../standard-library/basic-stringstream-class.md)\
+[basic_stringstream Class](../standard-library/basic-stringstream-class.md)\
+[\<sstream>](../standard-library/sstream.md)\
+[iostream 编程](../standard-library/iostream-programming.md)\
+[C++ 标准库](../standard-library/cpp-standard-library-reference.md)

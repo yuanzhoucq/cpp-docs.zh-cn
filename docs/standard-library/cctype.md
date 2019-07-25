@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - cctype header
 ms.assetid: 3fd18bfd-c414-4def-bac1-c362e1fe8b71
-ms.openlocfilehash: 19431d02e0742d63df058ca743fc0560131805bd
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: d1d69b5fe125372c489965949b2b59c4012fdec9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244954"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449847"
 ---
 # <a name="ltcctypegt"></a>&lt;cctype&gt;
 
@@ -19,7 +19,7 @@ ms.locfileid: "68244954"
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<cctype >
+**标头:** \<cctype >
 
 **命名空间：** std
 
@@ -48,6 +48,6 @@ int toupper(int c);
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 标准库概述](../standard-library/cpp-standard-library-overview.md)<br/>
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[头文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 标准库概述](../standard-library/cpp-standard-library-overview.md)\
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

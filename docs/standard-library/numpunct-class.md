@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::numpunct [C++], thousands_sep
 - std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
-ms.openlocfilehash: 6084392c5cae151f6c7111fbe9fe7a45e103b74d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c23f23172894ce0b5adcbff1d2db58c78caf7a03
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371472"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454182"
 ---
 # <a name="numpunct-class"></a>numpunct 类
 
@@ -50,7 +50,7 @@ class numpunct : public locale::facet;
 
 ### <a name="parameters"></a>参数
 
-*CharType*<br/>
+*CharType*\
 在程序中用于对区域设置中的字符进行编码的类型。
 
 ## <a name="remarks"></a>备注
@@ -76,7 +76,7 @@ class numpunct : public locale::facet;
 |-|-|
 |[decimal_point](#decimal_point)|返回要用作小数点的区域设置特定元素。|
 |[do_decimal_point](#do_decimal_point)|一种受保护的虚拟成员函数，通过调用此函数可返回要用作小数点的区域设置特定元素。|
-|[do_falsename](#do_falsename)|一种受保护虚拟成员函数调用以返回要用作值的文本表示形式的字符串**false**。|
+|[do_falsename](#do_falsename)|一种受保护的虚拟成员函数, 通过调用此函数可返回要用作值**false**的文本表示形式的字符串。|
 |[do_grouping](#do_grouping)|一种受保护的虚拟成员函数，通过调用此函数可返回用于确定位数如何分组到任何小数点左边的区域设置特定规则。|
 |[do_thousands_sep](#do_thousands_sep)|一种受保护的虚拟成员函数，通过调用此函数可返回要用作千位分隔符的区域设置特定元素。|
 |[do_truename](#do_truename)|一种受保护的虚拟成员函数，通过调用此函数可返回要用作值 **true** 的文本表示形式的字符串。|
@@ -200,7 +200,7 @@ virtual string do_grouping() const;
 
 ### <a name="example"></a>示例
 
-有关示例，请参阅[分组](#grouping)，其中虚拟成员函数由调用`grouping`。
+请参阅[分组](#grouping)的示例, 其中虚拟成员函数由`grouping`调用。
 
 ## <a name="do_thousands_sep"></a>  numpunct::do_thousands_sep
 
@@ -216,7 +216,7 @@ virtual CharType do_thousands_sep() const;
 
 ### <a name="remarks"></a>备注
 
-受保护虚拟成员函数返回类型的区域设置特定元素`CharType`要用作任何小数点左侧的组分隔符。
+受保护的虚拟成员函数返回类型`CharType`的特定于区域设置的元素, 以用作任何小数点左侧的组分隔符。
 
 ### <a name="example"></a>示例
 
@@ -250,7 +250,7 @@ string_type falsename() const;
 
 ### <a name="return-value"></a>返回值
 
-一个包含一系列字符串`CharType`要用作值的文本表示形式**false**。
+一个字符串, 包含要用作`CharType`值**false**的文本表示形式的序列。
 
 ### <a name="remarks"></a>备注
 
@@ -345,22 +345,22 @@ explicit numpunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>参数
 
-*_Refs*<br/>
+*_Refs*\
 用于指定对象的内存管理类型的整数值。
 
 ### <a name="remarks"></a>备注
 
-可能的值 *_Refs*参数和其重要性：
+*_Refs*参数的可能值及其重要性为:
 
-- 0:对象的生存期由包含它的区域设置管理。
+- 0对象的生存期由包含该对象的区域设置管理。
 
-- 1:必须手动管理的对象的生存期。
+- 1:必须手动管理对象的生存期。
 
-- \> 1:未定义这些值。
+- \>2未定义这些值。
 
 由于该析构函数受到保护，可能没有直接的示例。
 
-构造函数初始化其基对象与**区域设置::**[方面](../standard-library/locale-class.md#facet_class)(`_Refs`)。
+构造函数通过**locale::** [facet](../standard-library/locale-class.md#facet_class)(`_Refs`) 初始化其基对象。
 
 ## <a name="string_type"></a>  numpunct::string_type
 
@@ -468,6 +468,6 @@ French_France.1252 falsename false
 
 ## <a name="see-also"></a>请参阅
 
-[\<locale>](../standard-library/locale.md)<br/>
-[facet 类](../standard-library/locale-class.md#facet_class)<br/>
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[facet 类](../standard-library/locale-class.md#facet_class)\
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

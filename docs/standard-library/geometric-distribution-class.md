@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::geometric_distribution [C++], param_type
 - std::geometric_distribution [C++], param_type
 ms.assetid: 38f933af-3b49-492e-9d26-b6b272a60013
-ms.openlocfilehash: 115d1c6f3298ea08b7c97061d37d4e27829247ea
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: ead6382e61066a72f97eacea91bba5b38aa00677
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450673"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453925"
 ---
 # <a name="geometricdistribution-class"></a>geometric_distribution 类
 
@@ -66,10 +66,10 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*IntType*<br/>
-整数结果类型，默认为**int**。有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*IntType*\
+整数结果类型, 默认为**int**。有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
-*URNG*<br/>
+*URNG*\
 统一随机数生成器引擎。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
@@ -220,10 +220,10 @@ explicit geometric_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-p <br/>
+*h-p*\
 `p` 分布参数。
 
-*parm*<br/>
+*parm*\
 用于构造分布的参数结构。
 
 ### <a name="remarks"></a>备注
@@ -232,7 +232,7 @@ p <br/>
 
 第一个构造函数将构造一个其存储的 `p` 值保留值 *p* 的对象。
 
-第二个构造函数将构造一个从 parm  初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
+第二个构造函数将构造一个从 parm 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
 
 ## <a name="param_type"></a>geometric_distribution::param_type
 
@@ -251,10 +251,10 @@ struct param_type {
 
 ### <a name="parameters"></a>参数
 
-p <br/>
+*h-p*\
 `p` 分布参数。
 
-right <br/>
+*然后*\
 与此比较的 `param_type` 实例。
 
 ### <a name="remarks"></a>备注
@@ -265,4 +265,4 @@ right <br/>
 
 ## <a name="see-also"></a>请参阅
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

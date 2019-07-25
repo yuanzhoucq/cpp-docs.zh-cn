@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::ostreambuf_iterator [C++], traits_type
 - std::ostreambuf_iterator [C++], failed
 ms.assetid: dad1e624-2f45-4e94-8887-a885e95f9071
-ms.openlocfilehash: 5114a658cfde965556f4663d2ba92c9ba4d1eaeb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 815647deb7c11f4d7be5650e0ec2e635338551ad
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370940"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448177"
 ---
 # <a name="ostreambufiterator-class"></a>ostreambuf_iterator 类
 
@@ -35,10 +35,10 @@ template <class CharType = char class Traits = char_traits <CharType>>
 
 ### <a name="parameters"></a>参数
 
-*CharType*<br/>
-表示 ostreambuf_iterator 字符类型的类型。 此参数是可选的默认值是**char**。
+*CharType*\
+表示 ostreambuf_iterator 字符类型的类型。 此参数是可选的, 默认值为**char**。
 
-*特征*<br/>
+*特征*\
 表示 ostreambuf_iterator 字符类型的类型。 此自变量是可选自变量，默认值为 `char_traits`\<*CharType>。*
 
 ## <a name="remarks"></a>备注
@@ -70,7 +70,7 @@ ostreambuf_iterator 类必须满足输出迭代器的需求。 可使用 `ostrea
 
 |运算符|描述|
 |-|-|
-|[operator*](#op_star)|取消引用运算符，用于实现输出迭代器表达式\* `i`  =  `x`。|
+|[operator*](#op_star)|用于实现\*输出迭代器表达式`i`  =  `x`的取消引用运算符。|
 |[operator++](#op_add_add)|一种非功能性递增运算符，可向调用该运算之前所处理的同一对象返回 `ostreambuf_iterator`。|
 |[operator=](#op_eq)|此运算符会将一个字符插入到关联的流缓冲区。|
 
@@ -181,7 +181,7 @@ No insertions failed.
 */
 ```
 
-## <a name="op_star"></a>  ostreambuf_iterator::operator\*
+## <a name="op_star"></a>ostreambuf_iterator:: operator\*
 
 用于实现输出迭代器表达式 \* *i* = *x* 的非功能性的取消引用运算符。
 
@@ -195,7 +195,7 @@ ostreambuf 迭代器对象。
 
 ### <a name="remarks"></a>备注
 
-此运算符函数仅存在于输出迭代器表达式 \* *i* = *x* 中，以便将字符输出到流缓冲区。 应用于 ostreambuf 迭代器，它将返回该迭代器；**\*iter** 返回 **iter**，
+此运算符函数仅存在于输出迭代器表达式 \* *i* = *x* 中，以便将字符输出到流缓冲区。 应用于 ostreambuf 迭代器，它将返回该迭代器； **\*iter** 返回 **iter**，
 
 ### <a name="example"></a>示例
 
@@ -286,7 +286,7 @@ ostreambuf_iterator<CharType, Traits>& operator=(CharType _Char);
 
 ### <a name="parameters"></a>参数
 
-*_Char*<br/>
+*_Char*\
 要插入到流缓冲区的字符。
 
 ### <a name="return-value"></a>返回值
@@ -339,15 +339,15 @@ ostreambuf_iterator(ostream_type& Ostr) throw();
 
 ### <a name="parameters"></a>参数
 
-*strbuf*<br/>
+*strbuf*\
 用于初始化输出流缓冲区指针的输出 streambuf 对象。
 
-*Ostr*<br/>
+*Ostr*\
 用于初始化输出流缓冲区指针的输出流对象。
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数初始化与输出流缓冲区指针*strbuf*。
+第一个构造函数通过*strbuf*初始化输出流缓冲区指针。
 
 第二个构造函数通过 `Ostr` 初始化输出流缓冲区指针。 `rdbuf`。 存储的指针不能为空指针。
 
@@ -410,7 +410,7 @@ typedef basic_streambuf<CharType, Traits> streambuf_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是同义词`basic_streambuf` \< **CharType**，**特征**>，将成为用于 I/O 缓冲区的流类`streambuf`当专用化为字符类型**char**。
+`basic_streambuf`该类型是**CharType**、**特征**> 的同义词`streambuf` \< , 它是专用于字符类型**char**时的 i/o 缓冲区的流类。
 
 ### <a name="example"></a>示例
 
@@ -468,6 +468,6 @@ by charOutBuf are: OUT.
 
 ## <a name="see-also"></a>请参阅
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

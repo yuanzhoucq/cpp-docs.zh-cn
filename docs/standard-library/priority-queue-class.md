@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::priority_queue [C++], size
 - std::priority_queue [C++], top
 ms.assetid: 69fca9cc-a449-4be4-97b7-02ca5db9cbb2
-ms.openlocfilehash: d8f2b4ab788c82e531d1121f04dd0d422efb17cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3591264efec87c2c3454d0f885c19b30b73ae51c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370005"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458431"
 ---
 # <a name="priorityqueue-class"></a>priority_queue 类
 
@@ -40,20 +40,20 @@ class priority_queue
 
 ### <a name="parameters"></a>参数
 
-*Type*<br/>
+*类别*\
 要存储在 priority_queue 中的元素数据类型。
 
-*Container*<br/>
+*容器*\
 用来实现 priority_queue 的基础容器的类型。
 
-*Compare*<br/>
+*并排*\
 一种提供函数对象的类型，该函数对象将两个元素值作为排序键进行比较，以确定其在 priority_queue 中的相对顺序。 此参数为可选自变量，默认值是二元谓词 `less<typename Container::value_type>`。
 
 ## <a name="remarks"></a>备注
 
-类的元素`Type`经过第一个模板中指定的队列对象的参数是使用同义词[value_type](#value_type) ，并且必须匹配的基础容器类中的元素类型`Container`规定的第二个模板参数。 `Type`必须是可赋值的以便它才能复制该类型的对象，并将值分配到该类型的变量。
+Queue 对象的第`Type`一个模板参数中的规定类的元素与[value_type](#value_type)同义, 并且必须与第二个模板的基础容器类`Container`规定中的元素类型相匹配参数. 必须`Type`是可赋值的, 以便可以复制该类型的对象并为该类型的变量赋值。
 
-Priority_queue 通过调用类的存储的函数对象控制的序列进行排序`Traits`。 通常，元素仅需小于比较元素即可建立此顺序；因此，给定任意两个元素，可以确定这两个元素等效（即两者均不小于对方）或其中一个小于另一个。 这将导致在非等效元素之间进行排序。 在技术性更强的说明中，比较函数是一个二元谓词，在标准数学的意义上引发严格弱排序。
+Priority_queue 通过调用类`Traits`的存储函数对象, 对它控制的序列进行排序。 通常，元素仅需小于比较元素即可建立此顺序；因此，给定任意两个元素，可以确定这两个元素等效（即两者均不小于对方）或其中一个小于另一个。 这将导致在非等效元素之间进行排序。 在技术性更强的说明中，比较函数是一个二元谓词，在标准数学的意义上引发严格弱排序。
 
 适用于 Priority_queue 的基础容器类包括 [deque 类](../standard-library/deque-class.md)和默认的 [vector 类](../standard-library/vector-class.md)，或任何支持 `front`、`push_back`、`pop_back` 的操作和随机访问迭代器的其他序列容器。 基础容器类封装在容器适配器中，容器适配器仅公开一组有限的序列容器成员函数为公共接口。
 
@@ -93,7 +93,7 @@ C++ 标准库定义了三种类型的容器适配器：stack、queue 和 priorit
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<queue>
+**标头：** \<queue>
 
 **命名空间：** std
 
@@ -242,28 +242,28 @@ priority_queue(InputIterator first, InputIterator last, const Traits& _comp, con
 
 ### <a name="parameters"></a>参数
 
-*_comp*<br/>
+*_comp*\
 **constTraits** 类型的比较函数用于对 priority_queue 中的元素进行排序，它默认为基容器的比较函数。
 
-*_Cont*<br/>
+*_Cont*\
 要以构造的 priority_queue 为副本的基容器。
 
-*right*<br/>
+*然后*\
 要以构造的集为副本的 priority_queue。
 
-*first*<br/>
+*1*\
 要复制的范围元素中的第一个元素的位置。
 
-*last*<br/>
+*时间*\
 要复制的元素范围以外的第一个元素的位置。
 
 ### <a name="remarks"></a>备注
 
-每个前三个构造函数指定空的初始 priority_queue，第二个指定的比较函数类型 (`comp`) 用于建立元素和第三个的顺序显式指定`container_type`(`_Cont`) 使用。 关键字 **explicit** 取消某些种类的自动类型转换。
+前三个构造函数中的每一个都指定一个空的初始 priority_queue, 第二个函数还`comp`指定用于建立元素顺序的比较函数 () 的类型, 第三个构造函数显式指定`container_type`要使用的。 `_Cont` 关键字 **explicit** 取消某些种类的自动类型转换。
 
-第四个构造函数指定 priority_queue 的副本*右*。
+第四个构造函数指定 priority_queue*权限*的副本。
 
-最后三个构造函数复制范围\[*第一个*，*最后一个*) 的某个容器，使用的值来初始化 priority_queue，其指定的类型比较函数的类`Traits`和`container_type`。
+最后三个构造函数复制某个\[容器的范围的*第一个*、*最后一个*), 并使用这些值在指定类`Traits`的比较函数类型和`container_type`.
 
 ### <a name="example"></a>示例
 
@@ -386,7 +386,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>参数
 
-*val*<br/>
+*初始值*\
 添加到 priority_queue 顶部的元素。
 
 ### <a name="remarks"></a>备注
@@ -492,7 +492,7 @@ const_reference top() const;
 
 ### <a name="return-value"></a>返回值
 
-对由确定的最大元素的引用`Traits`函数、 priority_queue 的对象。
+对最大元素的引用, 该元素由`Traits` priority_queue 的函数和对象确定。
 
 ### <a name="remarks"></a>备注
 
@@ -574,5 +574,5 @@ The element at the top of the priority_queue is 69.
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)<br/>
+[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

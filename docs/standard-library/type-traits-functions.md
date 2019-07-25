@@ -24,12 +24,12 @@ helpviewer_keywords:
 - std::is_trivially_copy_assignable
 - std::is_trivially_move_assignable
 - std::is_trivially_move_constructible
-ms.openlocfilehash: d607e68bd61a4f9aa6c00ab66c5ded3ecd508082
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 48ca51d56994f3d487af6744801acedf5c6cc79c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68241511"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447033"
 ---
 # <a name="lttypetraitsgt-functions"></a>&lt;type_traits&gt; 函数
 
@@ -43,7 +43,7 @@ ms.locfileid: "68241511"
 
 ## <a name="is_assignable"></a>is_assignable
 
-测试的值是否*从*类型可以分配给*到*类型。
+测试*从*类型的值是否可以分配*给类型。*
 
 ```cpp
 template <class To, class From>
@@ -52,15 +52,15 @@ struct is_assignable;
 
 ### <a name="parameters"></a>参数
 
-*若要*<br/>
+*自*\
 接收赋值的对象的类型。
 
-*From*<br/>
+*从*\
 提供值的对象的类型。
 
 ### <a name="remarks"></a>备注
 
-未计算的表达式 `declval<To>() = declval<From>()` 必须具有正确格式。 这两*从*并*到*必须是完整类型**void**，或具有未知边界的数组。
+未计算的表达式 `declval<To>() = declval<From>()` 必须具有正确格式。 *From*和*To*都必须是完整的类型、 **void**或未知绑定的数组。
 
 ## <a name="is_copy_assignable"></a>  is_copy_assignable
 
@@ -73,12 +73,12 @@ struct is_copy_assignable;
 
 ### <a name="parameters"></a>参数
 
-*Ty*<br/>
+*Ty*\
 要查询的类型。
 
 ### <a name="remarks"></a>备注
 
-如果类型谓词的实例将保留 true 类型*Ty*是具有复制赋值运算符，否则为 false 的类。 等效于 is_assignable\<Ty&, const Ty&>。
+如果类型*Ty*是具有复制赋值运算符的类, 则类型谓词的实例为 true; 否则为 false。 等效于 is_assignable\<Ty&, const Ty&>。
 
 ## <a name="is_copy_constructible"></a>  is_copy_constructible
 
@@ -91,12 +91,12 @@ struct is_copy_constructible;
 
 ### <a name="parameters"></a>参数
 
-*Ty*<br/>
+*Ty*\
 要查询的类型。
 
 ### <a name="remarks"></a>备注
 
-如果类型谓词的实例将保留 true 类型*Ty*是具有复制构造函数，否则为 false 的类。
+如果类型*Ty*是具有复制构造函数的类, 则类型谓词的实例为 true; 否则为 false。
 
 ### <a name="example"></a>示例
 
@@ -143,12 +143,12 @@ struct is_default_constructible;
 
 ### <a name="parameters"></a>参数
 
-*T*<br/>
+*关心*\
 要查询的类型。
 
 ### <a name="remarks"></a>备注
 
-如果类型谓词的实例将保留 true 类型*T*是具有默认构造函数，否则为 false 的类类型。 这等效于谓词 `is_constructible<T>`。 类型*T*必须是完整类型**void**，或未知边界的数组。
+如果类型*T*是具有默认构造函数的类类型, 则类型谓词的实例为 true; 否则为 false。 这等效于谓词 `is_constructible<T>`。 类型*T*必须是完整类型、**无效**或未知绑定的数组。
 
 ### <a name="example"></a>示例
 
@@ -195,7 +195,7 @@ struct is_move_assignable;
 
 ### <a name="parameters"></a>参数
 
-*T*<br/>
+*关心*\
 要查询的类型。
 
 ### <a name="remarks"></a>备注
@@ -213,12 +213,12 @@ struct is_move_constructible;
 
 ### <a name="parameters"></a>参数
 
-*T*<br/>
+*关心*\
 要计算的类型
 
 ### <a name="remarks"></a>备注
 
-类型谓词的计算结果为 true 的类型*T*可以通过使用移动操作构造。 此谓词等效于 `is_constructible<T, T&&>`。
+如果可以使用移动操作构造类型*T* , 则其计算结果为 true 的类型谓词。 此谓词等效于 `is_constructible<T, T&&>`。
 
 ## <a name="is_nothrow_move_assignable"></a>  is_nothrow_move_assignable
 
@@ -231,32 +231,32 @@ struct is_nothrow_move_assignable;
 
 ### <a name="parameters"></a>参数
 
-*Ty*<br/>
+*Ty*\
 要查询的类型。
 
 ### <a name="remarks"></a>备注
 
-如果类型谓词的实例将保留 true 类型*Ty*具有 nothrow 移动赋值运算符，否则为 false。
+如果类型*Ty*具有 nothrow 移动赋值运算符, 则类型谓词的实例为 true; 否则为 false。
 
-## <a name="is_nothrow_swappable"></a>  is_nothrow_swappable
+## <a name="is_nothrow_swappable"></a>is_nothrow_swappable
 
 ```cpp
 template <class T> struct is_nothrow_swappable;
 ```
 
-## <a name="is_nothrow_swappable_with"></a>  is_nothrow_swappable_with
+## <a name="is_nothrow_swappable_with"></a>is_nothrow_swappable_with
 
 ```cpp
 template <class T, class U> struct is_nothrow_swappable_with;
 ```
 
-## <a name="is_swappable"></a>  is_swappable
+## <a name="is_swappable"></a>is_swappable
 
 ```cpp
 template <class T> struct is_swappable;
 ```
 
-## <a name="is_swappable_with"></a>  is_swappable_with
+## <a name="is_swappable_with"></a>is_swappable_with
 
 ```cpp
 template <class T, class U> struct is_swappable_with;
@@ -273,14 +273,14 @@ struct is_trivially_copy_assignable;
 
 ### <a name="parameters"></a>参数
 
-*T*<br/>
+*关心*\
 要查询的类型。
 
 ### <a name="remarks"></a>备注
 
-如果类型谓词的实例将保留 true 类型*T*是具有普通复制赋值运算符，否则为 false 的类。
+如果类型*T*是具有普通复制赋值运算符的类, 则类型谓词的实例为 true; 否则为 false。
 
-一个类的赋值构造函数*T*并不重要，如果它隐式提供，该类*T*没有虚函数，类*T*没有虚拟基，类类类型的所有非静态数据成员具有普通赋值运算符和类的类型数组的所有非静态数据成员的类具有普通赋值运算符。
+如果类*t*的赋值构造函数是隐式提供的, 则该类没有虚函数, 类 t 没有虚函数, 类*t*没有虚拟基, 类类型的所有非静态数据成员的类具有普通赋值运算符以及类的类型数组的所有非静态数据成员的类具有普通赋值运算符。
 
 ## <a name="is_trivially_move_assignable"></a>  is_trivially_move_assignable
 
@@ -293,20 +293,20 @@ struct is_trivially_move_assignable;
 
 ### <a name="parameters"></a>参数
 
-*Ty*<br/>
+*Ty*\
 要查询的类型。
 
 ### <a name="remarks"></a>备注
 
-如果类型谓词的实例将保留 true 类型*Ty*是具有普通移动赋值运算符，否则为 false 的类。
+如果类型*Ty*是具有普通移动赋值运算符的类, 则类型谓词的实例为 true; 否则为 false。
 
-移动赋值运算符的类*Ty*并不重要如果：
+如果以下情况, *Ty*类的移动赋值运算符是普通运算符:
 
 它被隐式提供
 
-该类*Ty*不具有虚拟函数
+类*Ty*没有虚函数
 
-该类*Ty*不具有虚拟基
+类*Ty*没有虚拟基
 
 类类型的所有非静态数据成员的类具有普通移动赋值运算符
 
@@ -323,26 +323,26 @@ struct is_trivially_move_constructible;
 
 ### <a name="parameters"></a>参数
 
-*Ty*<br/>
+*Ty*\
 要查询的类型。
 
 ### <a name="remarks"></a>备注
 
-如果类型谓词的实例将保留 true 类型*Ty*是一个类具有普通移动构造函数，否则为 false。
+如果类型*Ty*是一个具有普通移动构造函数的类, 则类型谓词的实例为 true; 否则为 false。
 
-移动构造函数的类*Ty*并不重要如果：
+如果以下情况, *Ty*类的移动构造函数是普通的:
 
 它被隐式声明
 
 其参数类型等效于那些隐式声明的参数类型
 
-该类*Ty*不具有虚拟函数
+类*Ty*没有虚函数
 
-该类*Ty*不具有虚拟基
+类*Ty*没有虚拟基
 
 类没有任何不稳定的非静态数据成员
 
-类的所有直接都基均*Ty*具有普通移动构造函数
+类*Ty*的所有直接基都具有普通的移动构造函数
 
 类类型的所有非静态数据成员的类具有普通构造函数
 
@@ -350,4 +350,4 @@ struct is_trivially_move_constructible;
 
 ## <a name="see-also"></a>请参阅
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::negative_binomial_distribution [C++], param_type
 - std::negative_binomial_distribution [C++], param_type
 ms.assetid: 7f5f0967-7fdd-4578-99d4-88f292b4fe9c
-ms.openlocfilehash: 8f6552d9f9b0b34b1cb721e726c95845210c8bb9
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 11e705629675903803f7230d540417846417cc77
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449264"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456960"
 ---
 # <a name="negativebinomialdistribution-class"></a>negative_binomial_distribution 类
 
@@ -71,19 +71,19 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*IntType*<br/>
-整数结果类型，默认为**int**。有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*IntType*\
+整数结果类型, 默认为**int**。有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
-此模板类将描述产生用户指定的整型值类型**int**如果未提供任何内容根据负二项式分布离散型概率函数分布。 下表链接到有关各个成员的文章。
+此模板类描述产生用户指定的整型值的分布, 或者 **, 如果未**提供任何值, 则根据负二项式分布离散概率函数进行分布。 下表链接到有关各个成员的文章。
 
 ||||
 |-|-|-|
 |[negative_binomial_distribution](#negative_binomial_distribution)|`negative_binomial_distribution::k`|`negative_binomial_distribution::param`|
 |`negative_binomial_distribution::operator()`|`negative_binomial_distribution::p`|[param_type](#param_type)|
 
-属性成员`k()`并`p()`返回参数值的当前存储的分布*k*并*p*分别。
+属性成员`k()`和`p()`分别返回当前存储的分布参数值*k*和*p* 。
 
 属性成员 `param()` 将设置或返回 `param_type` 存储的分布参数包。
 
@@ -95,7 +95,7 @@ public:
 
 若要深入了解分布类及其成员，请参阅 [\<random>](../standard-library/random.md)。
 
-有关负二项式分布离散型概率函数的详细信息，请参阅 Wolfram MathWorld 文章[负二项分布](https://go.microsoft.com/fwlink/p/?linkid=400516)。
+有关负二项式分布离散概率函数的详细信息, 请参阅 Wolfram MathWorld 文章[否定二项式分布](https://go.microsoft.com/fwlink/p/?linkid=400516)。
 
 ## <a name="example"></a>示例
 
@@ -232,13 +232,13 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-*k*<br/>
+*温度*\
 `k` 分布参数。
 
-*p*<br/>
+*h-p*\
 `p` 分布参数。
 
-*parm*<br/>
+*parm*\
 用于构造分布的参数结构。
 
 ### <a name="remarks"></a>备注
@@ -247,7 +247,7 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 第一个构造函数将构造一个对象，该对象存储的 `p` 值保留值 *p*，并且该对象存储的 `k` 值保留值 *k*。
 
-第二个构造函数将构造一个从 parm  初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
+第二个构造函数将构造一个从 parm 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
 
 ## <a name="param_type"></a>  negative_binomial_distribution::param_type
 
@@ -259,13 +259,13 @@ struct param_type { typedef negative_binomial_distribution`<`result_type> distri
 
 ### <a name="parameters"></a>参数
 
-*k*<br/>
+*温度*\
 `k` 分布参数。
 
-*p*<br/>
+*h-p*\
 `p` 分布参数。
 
-*right*<br/>
+*然后*\
 用于比较的 `param_type` 结构。
 
 ### <a name="remarks"></a>备注
@@ -276,4 +276,4 @@ struct param_type { typedef negative_binomial_distribution`<`result_type> distri
 
 ## <a name="see-also"></a>请参阅
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

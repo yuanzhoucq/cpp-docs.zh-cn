@@ -1,19 +1,19 @@
 ---
-title: 输入 / 输出替换选项
+title: 输入/输出替代项
 ms.date: 05/07/2019
 helpviewer_keywords:
 - I/O [C++], alternatives
 ms.assetid: 9f8401c7-d90d-4285-8918-63573df74a80
-ms.openlocfilehash: 5fb98714a96dedf725ea17332d7c1627e3390896
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: b46ff242fc263be5069eb691dd0ea9e8fb00b0f9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221386"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455294"
 ---
 # <a name="inputoutput-alternatives"></a>输入/输出替换选项
 
-MicrosoftC++编译器为 I/O 编程提供了多种替代方法：
+Microsoft C++编译器为 i/o 编程提供了几种替代方法:
 
 - C 运行时库直接无缓冲 I/O。
 
@@ -31,4 +31,4 @@ iostream 类适用于缓冲的格式化文本 I/O。 如果需要 C++ 编程接�
 
 ## <a name="see-also"></a>请参阅
 
-[流的定义](../standard-library/what-a-stream-is.md)<br/>
+[流的定义](../standard-library/what-a-stream-is.md)

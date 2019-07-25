@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - discard_block_engine class
 ms.assetid: aa84808e-38fe-4fa0-9f73-d5b9a653345b
-ms.openlocfilehash: a0df754f53b52c134b9eb1126f90882ceaaf1e2f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 76a78a2f47bd160c6b2b981b1ccdda2ef3a90575
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386195"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454400"
 ---
 # <a name="discardblockengine-class"></a>discard_block_engine 类
 
@@ -26,14 +26,14 @@ class discard_block_engine;
 
 ### <a name="parameters"></a>参数
 
-*Engine*<br/>
+*搜索引擎优化*\
 基引擎类型。
 
-*P*<br/>
+*H-P*\
 **块大小**。 每个块中的值数。
 
-*R*<br/>
-**已使用的块**。 已使用的每个块中的值数。 丢弃剩余部分 (`P` - `R`)。 **前提条件**：`0 < R ≤ P`
+*R*\
+**已使用的块**。 已使用的每个块中的值数。 其余部分将被丢弃`P`( - `R`)。 **前提条件**：`0 < R ≤ P`
 
 ## <a name="members"></a>成员
 
@@ -50,10 +50,10 @@ class discard_block_engine;
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<random>
+**标头：** \<random>
 
 **命名空间：** std
 
 ## <a name="see-also"></a>请参阅
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

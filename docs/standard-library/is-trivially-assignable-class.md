@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_assignable
 ms.assetid: 1284a8f7-4093-426d-9c9a-dabb46f90d6d
-ms.openlocfilehash: eeef85a0b26c25eb745258c7e0e35394f0cab979
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 11aed7fbe2540984d8ed69f88b2a95649e8fee70
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413485"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457496"
 ---
 # <a name="istriviallyassignable-class"></a>is_trivially_assignable 类
 
@@ -26,22 +26,22 @@ struct is_trivially_assignable;
 
 ### <a name="parameters"></a>参数
 
-*若要*<br/>
+*自*\
 接收赋值的对象的类型。
 
-*From*<br/>
+*从*\
 提供值的对象的类型。
 
 ## <a name="remarks"></a>备注
 
-表达式 `declval<To>() = declval<From>()` 必须格式正确，且编译器必须已知其不需要任何重要操作。 这两`From`并`To`必须是完整类型**void**，或具有未知边界的数组。
+表达式 `declval<To>() = declval<From>()` 必须格式正确，且编译器必须已知其不需要任何重要操作。 和必须是完整的类型、void 或未知绑定的数组。  `From` `To`
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<type_traits>
+**标头：** \<type_traits>
 
 **命名空间：** std
 
 ## <a name="see-also"></a>请参阅
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

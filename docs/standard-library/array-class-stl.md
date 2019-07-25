@@ -96,12 +96,12 @@ helpviewer_keywords:
 - std::array [C++], size
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
-ms.openlocfilehash: fdc3705980ac8f763e0438f19920148437e7ed27
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aba7026fa60045720c893478c1ea637dbaa037c1
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377499"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456917"
 ---
 # <a name="array-class-c-standard-library"></a>array 类（C++ 标准库）
 
@@ -162,7 +162,7 @@ class array;
 |运算符|描述|
 |-|-|
 |[array::operator=](#op_eq)|替换受控序列。|
-|[array::operator\[\]](#op_at)|访问指定位置处的元素。|
+|[array:: operator\[\]](#op_at)|访问指定位置处的元素。|
 
 ## <a name="remarks"></a>备注
 
@@ -192,7 +192,7 @@ array(const array& right);
 
 ### <a name="parameters"></a>参数
 
-*right*<br/>
+*然后*\
 要插入的对象或范围。
 
 ### <a name="remarks"></a>备注
@@ -247,12 +247,12 @@ void assign(const Ty& val);
 
 ### <a name="parameters"></a>参数
 
-*val*<br/>
+*初始值*\
 要指派的值。
 
 ### <a name="remarks"></a>备注
 
-此成员函数将控制的序列`*this`的重复`N`值的元素*val*。
+成员函数将控制`*this`的序列替换为值*val*的`N`重复元素。
 
 ### <a name="example"></a>示例
 
@@ -303,12 +303,12 @@ constexpr const_reference at(size_type off) const;
 
 ### <a name="parameters"></a>参数
 
-*off*<br/>
+*非*\
 要访问的元素的位置。
 
 ### <a name="remarks"></a>备注
 
-成员函数返回对受控序列位置处的元素的引用*关闭*。 如果该位置无效，则该函数将引发 `out_of_range` 类的对象。
+成员函数将返回对受控序列中的元素的*引用。* 如果该位置无效，则该函数将引发 `out_of_range` 类的对象。
 
 ### <a name="example"></a>示例
 
@@ -432,7 +432,7 @@ int main()
 
 ## <a name="cbegin"></a>  array::cbegin
 
-返回**const**的范围中的第一个元素的迭代器。
+返回一个**常量**迭代器, 该迭代器用于寻址范围内的第一个元素。
 
 ```cpp
 const_iterator cbegin() const noexcept;
@@ -440,13 +440,13 @@ const_iterator cbegin() const noexcept;
 
 ### <a name="return-value"></a>返回值
 
-一个**const**指向的范围或刚超出空范围末尾的位置的第一个元素的随机访问迭代器 (对于空范围， `cbegin() == cend()`)。
+一个**常量**随机访问迭代器, 指向范围的第一个元素, 或刚超出空范围末尾的位置 (对于空范围, `cbegin() == cend()`)。
 
 ### <a name="remarks"></a>备注
 
 由于使用 `cbegin` 的返回值，因此不能修改范围中的元素。
 
-可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在示例中，请考虑`Container`的可修改 (非**const**) 的任何类型的支持的容器`begin()`和`cbegin()`。
+可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中, `Container`将视为支持`begin()`和`cbegin()`的任何类型的可修改 (非常**量**) 容器。
 
 ```cpp
 auto i1 = Container.begin();
@@ -458,7 +458,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a>  array::cend
 
-返回**const**刚超出范围中的最后一个元素的位置的迭代器。
+返回一个**常量**迭代器, 该迭代器用于寻址范围内最后一个元素之外的位置。
 
 ```cpp
 const_iterator cend() const noexcept;
@@ -472,7 +472,7 @@ const_iterator cend() const noexcept;
 
 `cend` 用于测试迭代器是否超过了其范围的末尾。
 
-可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在示例中，请考虑`Container`的可修改 (非**const**) 的任何类型的支持的容器`end()`和`cend()`。
+可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中, `Container`将视为支持`end()`和`cend()`的任何类型的可修改 (非常**量**) 容器。
 
 ```cpp
 auto i1 = Container.end();
@@ -1149,14 +1149,14 @@ constexpr const_reference operator[](size_type off) const;
 
 ### <a name="parameters"></a>参数
 
-*off*<br/>
+*非*\
 要访问的元素的位置。
 
 ### <a name="remarks"></a>备注
 
-成员函数返回对受控序列位置处的元素的引用*关闭*。 如果该位置无效，则该行为未定义。
+成员函数将返回对受控序列中的元素的*引用。* 如果该位置无效，则该行为未定义。
 
-此外没有非成员[获取](array-functions.md#get)函数可用于获取的元素的引用**数组**。
+还有一个非成员[get](array-functions.md#get)函数可用来获取对**数组**元素的引用。
 
 ### <a name="example"></a>示例
 
@@ -1201,12 +1201,12 @@ array<Value> operator=(array<Value> right);
 
 ### <a name="parameters"></a>参数
 
-*right*<br/>
+*然后*\
 用于复制的容器。
 
 ### <a name="remarks"></a>备注
 
-成员运算符将分配的每个元素*右*给相应受控序列的元素，然后返回`*this`。 用于替换受控的序列中的受控序列的副本*右*。
+成员运算符将*右*的每个元素分配给受控序列的相应元素, 然后返回`*this`。 用于将受控序列替换为*右侧*受控序列的副本。
 
 ### <a name="example"></a>示例
 
@@ -1571,14 +1571,14 @@ void swap(array& right);
 
 ### <a name="parameters"></a>参数
 
-*right*<br/>
+*然后*\
 要与其交换内容的数组。
 
 ### <a name="remarks"></a>备注
 
-成员函数交换之间的受控的序列`*this`并*右*。 它执行与 `N` 成正比的多个元素分配和构造函数调用。
+成员函数交换和`*this` *右*之间的受控序列。 它执行与 `N` 成正比的多个元素分配和构造函数调用。
 
-此外没有非成员[交换](array-functions.md#swap)函数提供交换两个**数组**实例。
+还有一个非成员[交换](array-functions.md#swap)函数可用于交换两个**数组**实例。
 
 ### <a name="example"></a>示例
 
@@ -1677,4 +1677,4 @@ int main()
 
 ## <a name="see-also"></a>请参阅
 
-[\<array>](../standard-library/array.md)<br/>
+[\<array>](../standard-library/array.md)

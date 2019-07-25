@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C++ Standard Library, function objects
 - function objects
 ms.assetid: 85f8a735-2c7b-4f10-9c4d-95c666ec4192
-ms.openlocfilehash: 310d846285612ad94ec9d66672fcb996557b07e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4df8096603b53d05e050750a860c76528a44b28c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159361"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454066"
 ---
 # <a name="function-objects-in-the-c-standard-library"></a>C++ 标准库中的函数对象
 
@@ -43,7 +43,7 @@ int main()
 }
 ```
 
-`main` 函数的最后一行显示了函数对象的调用方式。 此调用看起来像一个函数，但它的实际调用 operator （） 函子类型的调用。 调用函数对象和函数之间的相似性在于生成术语函数对象的方式。
+`main` 函数的最后一行显示了函数对象的调用方式。 此调用看起来像是对函数的调用, 但实际上它调用的是函子类型的 operator ()。 调用函数对象和函数之间的相似性在于生成术语函数对象的方式。
 
 ## <a name="function-objects-and-containers"></a>函数对象和容器
 
@@ -56,7 +56,7 @@ template <class Key,
 class set
 ```
 
-第二个模板函数是函数对象 `less`。 此函数对象返回 **，则返回 true**的第一个参数是否小于第二个参数。 因为某些容器对元素进行排序，容器需要一种方法比较两个元素。 通过使用函数对象进行比较。 你可以创建函数对象并在容器的模板列表中指定它，从而定义你自己的排序条件。
+第二个模板函数是函数对象 `less`。 如果第一个参数小于第二个参数, 则此函数对象返回**true** 。 因为某些容器对其元素进行排序, 所以容器需要一种方法来比较两个元素。 使用函数对象进行比较。 你可以创建函数对象并在容器的模板列表中指定它，从而定义你自己的排序条件。
 
 ## <a name="function-objects-and-algorithms"></a>函数对象和算法
 
@@ -70,8 +70,8 @@ ForwardIterator remove_if(
     Predicate pred);
 ```
 
-`remove_if` 的最后一个参数是返回布尔值（一个 *谓词*）的函数对象。 如果函数对象的结果为 **，则返回 true**，然后从正在访问由迭代器的容器中移除元素`first`和`last`。 你可以使用在 `pred` 参数的 [\<functional>](../standard-library/functional.md) 标头中声明的任何函数对象，也可以自行创建。
+`remove_if` 的最后一个参数是返回布尔值（一个 *谓词*）的函数对象。 如果函数对象的结果为**true**, 则将从迭代`first`器和`last`正在访问的容器中删除元素。 你可以使用在 `pred` 参数的 [\<functional>](../standard-library/functional.md) 标头中声明的任何函数对象，也可以自行创建。
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)<br/>
+[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

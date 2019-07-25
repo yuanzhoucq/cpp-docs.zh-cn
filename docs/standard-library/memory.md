@@ -7,12 +7,12 @@ f1_keywords:
 - std::<memory>
 helpviewer_keywords:
 - memory header
-ms.openlocfilehash: d2776e658b511208d9a295cd84a961d7691d29e0
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 7c30a44de70675af69648fdba79325a173ab62fc
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246813"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451892"
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
 
@@ -48,9 +48,9 @@ ms.locfileid: "68246813"
 |[declare_no_pointers](../standard-library/memory-functions.md#declare_no_pointers)|通知垃圾回收器：从指定地址开始且属于所指示块大小范围内的字符不包含可跟踪的指针。|
 |[declare_reachable](../standard-library/memory-functions.md#declare_reachable)|通知垃圾回收器：所指示的地址属于分配的存储并可到达。|
 |[default_delete](../standard-library/memory-functions.md#default_delete)|删除使用 `operator new` 分配的对象。 适合与 `unique_ptr` 一起使用。|
-|[destroy_at](../standard-library/memory-functions.md#destroy_at)|速记`destroy`方法。|
-|[destroy](../standard-library/memory-functions.md#destroy)|速记`destroy`方法。|
-|[destroy_n](../standard-library/memory-functions.md#destroy_n)|速记`destroy`方法。|
+|[destroy_at](../standard-library/memory-functions.md#destroy_at)|简写`destroy`方法。|
+|[destroy](../standard-library/memory-functions.md#destroy)|简写`destroy`方法。|
+|[destroy_n](../standard-library/memory-functions.md#destroy_n)|简写`destroy`方法。|
 |[dynamic_pointer_cast](../standard-library/memory-functions.md#dynamic_pointer_cast)|动态强制转换为 `shared_ptr`。|
 |[get_deleter](../standard-library/memory-functions.md#get_deleter)|从 `shared_ptr` 获取删除器。|
 |[get_pointer_safety](../standard-library/memory-functions.md#get_pointer_safety)|返回任意垃圾回收器所采用的指针安全类型。|
@@ -65,14 +65,14 @@ ms.locfileid: "68246813"
 |[undeclare_reachable](../standard-library/memory-functions.md#undeclare_reachable)|通知 `garbage_collector`：指定的内存位置无法达到。|
 |[uninitialized_copy](../standard-library/memory-functions.md#uninitialized_copy)|将来自指定输入范围的对象复制到未初始化的目标范围。|
 |[uninitialized_copy_n](../standard-library/memory-functions.md#uninitialized_copy_n)|创建来自输入迭代器的指定数量的元素的副本。 副本放置在向前迭代器中。|
-|[uninitialized_default_construct](../standard-library/memory-functions.md#uninitialized_default_construct)|速记`uninitialized_default_construct`方法。|
-|[uninitialized_default_construct_n](../standard-library/memory-functions.md#uninitialized_default_construct_n)|速记`uninitialized_construct`方法。|
+|[uninitialized_default_construct](../standard-library/memory-functions.md#uninitialized_default_construct)|简写`uninitialized_default_construct`方法。|
+|[uninitialized_default_construct_n](../standard-library/memory-functions.md#uninitialized_default_construct_n)|简写`uninitialized_construct`方法。|
 |[uninitialized_fill](../standard-library/memory-functions.md#uninitialized_fill)|将具有指定值的对象复制到未初始化的目标范围。|
 |[uninitialized_fill_n](../standard-library/memory-functions.md#uninitialized_fill_n)|将具有指定值的对象复制到未初始化目标范围的指定数量的元素。|
-|[uninitialized_move](../standard-library/memory-functions.md#uninitialized_move)|速记`uninitialized_move`方法。|
-|[uninitialized_move_n](../standard-library/memory-functions.md#uninitialized_move_n)|速记`uninitialized_move`方法。|
-|[uninitialized_value_construct](../standard-library/memory-functions.md#uninitialized_value_construct)|速记`uninitialized_value_construct`方法。|
-|[uninitialized_value_construct_n](../standard-library/memory-functions.md#uninitialized_value_construct_n)|速记`uninitialized_value_construct`方法。|
+|[uninitialized_move](../standard-library/memory-functions.md#uninitialized_move)|简写`uninitialized_move`方法。|
+|[uninitialized_move_n](../standard-library/memory-functions.md#uninitialized_move_n)|简写`uninitialized_move`方法。|
+|[uninitialized_value_construct](../standard-library/memory-functions.md#uninitialized_value_construct)|简写`uninitialized_value_construct`方法。|
+|[uninitialized_value_construct_n](../standard-library/memory-functions.md#uninitialized_value_construct_n)|简写`uninitialized_value_construct`方法。|
 |[uses_allocator_v](../standard-library/memory-functions.md#uses_allocator_v)||
 
 ### <a name="operators"></a>运算符
@@ -93,7 +93,7 @@ ms.locfileid: "68246813"
 |-|-|
 |[allocator](../standard-library/allocator-class.md)|此模板类描述一个对象，用于管理 **Type** 类对象数组的存储分配和释放。|
 |[allocator_traits](../standard-library/allocator-traits-class.md)|描述一个对象，用于确定支持分配器的容器所需要的全部信息。|
-|[auto_ptr](../standard-library/auto-ptr-class.md)|此模板类描述的对象将存储指向类型的已分配的对象的指针**类型** <strong>\*</strong>确保它点后，会删除它的封闭 auto_ptr 获取的对象销毁。|
+|[auto_ptr](../standard-library/auto-ptr-class.md)|此模板类描述一个对象, 该对象存储一个指向类型<strong>\*</strong>为 type 的已分配对象的指针, 该指针可确保当它的封闭 auto_ptr 被销毁时, 它指向的对象将被删除。|
 |[bad_weak_ptr](../standard-library/bad-weak-ptr-class.md)|报告不良的 weak_ptr 异常。|
 |[enabled_shared_from_this](../standard-library/enable-shared-from-this-class.md)|帮助生成一个 `shared_ptr`。|
 |[pointer_traits](../standard-library/pointer-traits-struct.md)|提供模板类 `allocator_traits` 对象所需信息，用于描述一个采用指针类型 `Ptr` 的分配器。|
@@ -120,5 +120,5 @@ ms.locfileid: "68246813"
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[头文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

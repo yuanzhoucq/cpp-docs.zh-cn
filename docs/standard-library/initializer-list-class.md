@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::initializer_list::begin
 - std::initializer_list::end
 - std::initializer_list::size
-ms.openlocfilehash: de925f73ac206113aafb8661a8d5b347503150c5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: acd11f3b3a3bf0ba17e34a802cc8988410e17b12
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159296"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455364"
 ---
 # <a name="initializerlist-class"></a>initializer_list 类
 
@@ -73,7 +73,7 @@ initializer_list<int> i1{ 1, 2, 3, 4 };
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<initializer_list>
+**标头：** \<initializer_list>
 
 **命名空间：** std
 
@@ -116,8 +116,8 @@ initializer_list(const InputIterator First, const InputIterator Last);
 
 |参数|描述|
 |---------------|-----------------|
-|*第一个*|要复制的范围元素中的第一个元素的位置。|
-|*最后一个*|要复制的元素范围以外的第一个元素的位置。|
+|*1*|要复制的范围元素中的第一个元素的位置。|
+|*时间*|要复制的元素范围以外的第一个元素的位置。|
 
 ### <a name="remarks"></a>备注
 
@@ -202,4 +202,4 @@ constexpr size_t size() const noexcept;
 
 ## <a name="see-also"></a>请参阅
 
-[<forward_list>](../standard-library/forward-list.md)<br/>
+[<forward_list>](../standard-library/forward-list.md)

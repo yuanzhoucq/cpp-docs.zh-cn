@@ -7,16 +7,16 @@ helpviewer_keywords:
 - enable_if class
 - enable_if
 ms.assetid: c6b8d41c-a18f-4e30-a39e-b3aa0e8fd926
-ms.openlocfilehash: 450664f71851778cc40160e55cbb80bcb51330d5
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 6e6b8a286dca8c451e6920e7f25f07829d3b453f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451254"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454213"
 ---
 # <a name="enableif-class"></a>enable_if 类
 
-有条件地为 SFINAE 重载决策设置类型的实例。 嵌套的 typedef`enable_if<Condition,Type>::type`存在，是的同义词`Type`— 当且仅当`Condition`是**true**。
+有条件地为 SFINAE 重载决策设置类型的实例。 当且仅`enable_if<Condition,Type>::type`当`Type` `Condition`为**true**时, 嵌套的 typedef 才存在 (并且是的同义词)。
 
 ## <a name="syntax"></a>语法
 
@@ -27,17 +27,17 @@ struct enable_if;
 
 ### <a name="parameters"></a>参数
 
-*B*<br/>
+*B*\
 确定存在产生的类型的值。
 
-*T*<br/>
-类型时要实例化*B*为 true。
+*关心*\
+*B*为 true 时要实例化的类型。
 
 ## <a name="remarks"></a>备注
 
-如果*B*为 true，`enable_if<B, T>`具有名为"type"是的同义词的嵌套的 typedef *T*。
+如果*B*为 true, `enable_if<B, T>`则具有名为 "type" 的嵌套 typedef, 它是*T*的同义词。
 
-如果*B*为 false，`enable_if<B, T>`不具有名为"type"的嵌套的 typedef。
+如果*B*为 false, `enable_if<B, T>`则不具有名为 "type" 的嵌套 typedef。
 
 提供此别名模板：
 
@@ -50,7 +50,7 @@ using enable_if_t = typename enable_if<B,T>::type;
 
 以下是四种示例方案：
 
-- 方案 1:包装一个函数的返回类型：
+- 方案 1:包装函数的返回类型:
 
 ```cpp
     template <your_stuff>
@@ -64,7 +64,7 @@ yourfunction(args) {// ...
 }
 ```
 
-- 方案 2:添加具有默认参数的函数参数：
+- 方案 2：添加具有默认参数的函数参数:
 
 ```cpp
     template <your_stuff>
@@ -73,14 +73,14 @@ your_return_type_if_present
 }
 ```
 
-- 方案 3:添加具有默认参数的模板参数：
+- 方案 3:添加具有默认参数的模板参数:
 
 ```cpp
     template <your_stuff, typename Dummy = enable_if_t<your_condition>>
 rest_of_function_declaration_goes_here
 ```
 
-- 方案 4:如果你的函数具有非模板化的参数，可以包装其类型：
+- 方案 4:如果函数具有非模板化的参数, 则可以包装其类型:
 
 ```cpp
     template <typename T>
@@ -92,7 +92,7 @@ s) {// ...
 
 方案 1 不能使用构造函数和转换运算符，因为它们没有返回类型。
 
-方案 2 可使参数处于未命名状态。 你可以假定 `::type Dummy = BAR`，但与名称 `Dummy` 无关，而且向其提供一个名称很可能会触发“未引用的参数”警告。 你必须选择 `FOO` 函数参数类型和 `BAR` 默认参数。  你可以假定**int**和`0`，但然后你代码的用户可能意外地将传递给该函数将被忽略的多余整数。 相反，我们建议你使用`void **`并将`0`或**nullptr**因为几乎都转换为`void **`:
+方案 2 可使参数处于未命名状态。 你可以假定 `::type Dummy = BAR`，但与名称 `Dummy` 无关，而且向其提供一个名称很可能会触发“未引用的参数”警告。 你必须选择 `FOO` 函数参数类型和 `BAR` 默认参数。  你可能会说 int `0`和, 但随后你的代码用户可能会意外地将忽略的额外整数传递给函数。 相反, 我们建议`void **`你使用`0`和或**nullptr** , 因为几乎没有任何内容可转换为`void **`:
 
 ```cpp
 template <your_stuff>
@@ -127,7 +127,7 @@ void func(const pair<string, string>&);
 func(make_pair("foo", "bar"));
 ```
 
-在本示例中，`make_pair("foo", "bar")` 将返回 `pair<const char *, const char *>`。 重载决策必须确定你想要的 `func()`。 `pair<A, B>` 具有 `pair<X, Y>` 中的隐式转换构造函数。  这不是新内容，它在 C++98 中出现过。 但是，在 C++98/03 中，隐式转换构造函数的签名始终存在，即使它是 `pair<int, int>(const pair<const char *, const char *>&)` 也是如此。  重载决策不介意因为，尝试实例化该构造函数爆炸归自己所有开来`const char *`不是隐式转换为**int**; 仅查看签名、 函数之前定义是实例化。  因此，示例代码是不明确的，因为存在可将 `pair<const char *, const char *>` 转换为 `pair<int, int>` 和 `pair<string, string>` 的签名。
+在本示例中，`make_pair("foo", "bar")` 将返回 `pair<const char *, const char *>`。 重载决策必须确定你想要的 `func()`。 `pair<A, B>` 具有 `pair<X, Y>` 中的隐式转换构造函数。  这不是新内容，它在 C++98 中出现过。 但是，在 C++98/03 中，隐式转换构造函数的签名始终存在，即使它是 `pair<int, int>(const pair<const char *, const char *>&)` 也是如此。  重载决策不会注意到, 尝试实例化该构造函数将`const char *`可怕, 因为它不能隐式转换为**int**; 它仅在对函数定义进行实例化之前查看签名。  因此，示例代码是不明确的，因为存在可将 `pair<const char *, const char *>` 转换为 `pair<int, int>` 和 `pair<string, string>` 的签名。
 
 C++11 通过使用 `enable_if` 确保**仅**当 `const X&` 可隐式转换为 `A` 且 `const Y&` 可隐式转换为 `B` 时 `pair<A, B>(const pair<X, Y>&)` 才存在，来解决此多义性问题。  这允许重载决策确定 `pair<const char *, const char *>` 不可转换为 `pair<int, int>`，以及采用 `pair<string, string>` 的重载可行。
 
@@ -139,4 +139,4 @@ C++11 通过使用 `enable_if` 确保**仅**当 `const X&` 可隐式转换为 `A
 
 ## <a name="see-also"></a>请参阅
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

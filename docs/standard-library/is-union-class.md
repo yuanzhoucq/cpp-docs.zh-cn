@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_union class
 - is_union
 ms.assetid: 80eda256-40b8-4db5-9ac1-d58bb8032a3e
-ms.openlocfilehash: 511dfba92629cfbf71c805a9ea50b8e27f775c54
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b4383fd96c359661d225433dbe9e7dd8b7f939f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413367"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458890"
 ---
 # <a name="isunion-class"></a>is_union 类
 
@@ -27,12 +27,12 @@ struct is_union;
 
 ### <a name="parameters"></a>参数
 
-*Ty*<br/>
+*Ty*\
 要查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型谓词的实例将保留 true 类型*Ty*是联合类型或`cv-qualified`形式的联合类型，否则为 false。
+如果类型*Ty*是联合类型或`cv-qualified`联合类型的形式, 则类型谓词的实例为 true; 否则为 false。
 
 ## <a name="example"></a>示例
 
@@ -74,11 +74,11 @@ is_union<ints> == true
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<type_traits>
+**标头：** \<type_traits>
 
 **命名空间：** std
 
 ## <a name="see-also"></a>请参阅
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_class 类](../standard-library/is-class-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_class 类](../standard-library/is-class-class.md)

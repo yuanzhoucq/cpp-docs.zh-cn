@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::make_error_code [C++]
 - std::make_error_condition [C++]
 - std::swap [C++]
-ms.openlocfilehash: 56ae0da7e86e092cee46d24d1a2a27d9d54709e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5435c3b9e10f151fc77c72b58c93510b6a867ce1
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159504"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447325"
 ---
 # <a name="ltfuturegt-functions"></a>&lt;future&gt; 函数
 
@@ -44,7 +44,7 @@ future<typename result_of<Fn(ArgTypes...)>::type>
 
 ### <a name="parameters"></a>参数
 
-*policy*<br/>
+*政策*\
 一个 [launch](../standard-library/future-enums.md#launch) 值。
 
 ### <a name="remarks"></a>备注
@@ -63,9 +63,9 @@ future<typename result_of<Fn(ArgTypes...)>::type>
 
 除非 `decay<Fn>::type` 是一种不同于 launch 的类型，否则第二个函数将不参与重载解析。
 
-C++标准声明策略是否 launch::async，该函数创建一个新线程。 但是 Microsoft 实现当前不符合要求。 它从 Windows 线程池，这在某些情况下可能会提供回收的线程而不是一个新获取其线程。 这意味着`launch::async`策略实际上作为`launch::async|launch::deferred`。  基于线程池的实现的另一个含义是不能保证线程完成时，将销毁线程本地变量。 如果线程是回收和提供的新调用`async`，仍存在旧的变量。 因此我们建议不使用线程本地变量`async`。
+C++标准状态: 如果 policy 为启动:: async, 则函数将创建一个新线程。 但是 Microsoft 实现当前不符合要求。 它从 Windows ThreadPool 获取其线程, 在某些情况下, 可能会提供回收的线程而不是新线程。 这意味着`launch::async`策略实际实现为`launch::async|launch::deferred`。  基于 ThreadPool 的实现的另一个含义是无法保证线程在线程完成时, 将销毁线程本地变量。 如果回收线程并将其提供给新调用`async`, 则旧变量仍存在。 因此, 建议不要将线程本地变量`async`用于。
 
-如果*策略*是`launch::deferred`，则函数会标记为包含其关联异步状态*延迟函数*，并返回。 对任何等待关联异步状态生效的非计时函数的第一次调用都将通过计算 `INVOKE(dfn, dargs..., Ty)` 来调用延迟函数。
+如果*策略*为`launch::deferred`, 则函数会将其关联异步状态标记为包含一个*延迟函数*并返回。 对任何等待关联异步状态生效的非计时函数的第一次调用都将通过计算 `INVOKE(dfn, dargs..., Ty)` 来调用延迟函数。
 
 任何情况下，在通过引发异常或正常返回完成 `INVOKE(dfn, dargs..., Ty)` 的计算之前，`future` 对象的关联异步状态不会设置为就绪。 如果引发了异常，则关联异步状态的结果为异常，否则为计算返回的任何值。
 
@@ -92,7 +92,7 @@ inline error_code make_error_code(future_errc Errno) noexcept;
 
 ### <a name="parameters"></a>参数
 
-*Errno*<br/>
+*Errno*\
 一个标识已报告错误的 [future_errc](../standard-library/future-enums.md#future_errc) 值。
 
 ### <a name="return-value"></a>返回值
@@ -109,7 +109,7 @@ inline error_condition make_error_condition(future_errc Errno) noexcept;
 
 ### <a name="parameters"></a>参数
 
-*Errno*<br/>
+*Errno*\
 一个标识已报告错误的 [future_errc](../standard-library/future-enums.md#future_errc) 值。
 
 ### <a name="return-value"></a>返回值
@@ -130,12 +130,12 @@ void swap(packaged_task<Ty(ArgTypes...)>& Left, packaged_task<Ty(ArgTypes...)>& 
 
 ### <a name="parameters"></a>参数
 
-左侧<br/>
+*左中*\
 左 `promise` 对象。
 
-右侧<br/>
+*然后*\
 正确的 `promise` 对象。
 
 ## <a name="see-also"></a>请参阅
 
-[\<future>](../standard-library/future.md)<br/>
+[\<future>](../standard-library/future.md)

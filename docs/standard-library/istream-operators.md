@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - istream/std::operator&gt;&gt;
 ms.assetid: 7174da41-f301-4a34-b631-0ab918b188d2
-ms.openlocfilehash: 05b10c27d8e0cf4c0300bb307d8b7ceda43ddb2f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c10692194c80051b10ecbe776c7d23a03860d508
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413302"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447789"
 ---
 # <a name="ltistreamgt-operators"></a>&lt;istream&gt; 运算符
 
@@ -56,16 +56,16 @@ basic_istream<Elem, Tr>& operator>>(
 
 ### <a name="parameters"></a>参数
 
-*Ch*<br/>
+*48*\
 一个字符。
 
-*Istr*<br/>
+*Istr*\
 一个流。
 
-*str*<br/>
+*字符串*\
 一个字符串。
 
-*val*<br/>
+*初始值*\
 一种类型。
 
 ### <a name="return-value"></a>返回值
@@ -84,9 +84,9 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem* str);
 ```
 
-提取多达 *N* - 1 个元素，并将其存储在以 _ *Str* 开始的数组中。 如果 `Istr`. [width](../standard-library/ios-base-class.md#width) 大于 0，则 *N* 为 `Istr`. **宽度**; 否则为它是最大数组大小`Elem`可以声明。 该函数始终将值存储`Elem()`任何提取的元素后。 遇到文件末尾、值为 **Elem**(0) 的字符（不会被提取）或会被 [ws](../standard-library/istream-functions.md#ws) 放弃的任何元素（不会被提取）时，提取会提前结束。 如果此函数没有提取任何元素，则会调用 `Istr`. [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**)。 在任何情况下，它调用 `Istr`. **宽度**(0)，并返回*Istr*。
+提取多达 *N* - 1 个元素，并将其存储在以 _ *Str* 开始的数组中。 如果 `Istr`. [width](../standard-library/ios-base-class.md#width) 大于 0，则 *N* 为 `Istr`. **width**;否则, 它是可声明`Elem`的最大数组的大小。 函数始终将值`Elem()`存储在它存储的任何提取的元素之后。 遇到文件末尾、值为 **Elem**(0) 的字符（不会被提取）或会被 [ws](../standard-library/istream-functions.md#ws) 放弃的任何元素（不会被提取）时，提取会提前结束。 如果此函数没有提取任何元素，则会调用 `Istr`. [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**)。 在任何情况下，它调用 `Istr`. **宽度**(0) 并返回*Istr*。
 
-**安全说明**正在从输入流提取的以 null 结尾的字符串不能超过目标缓冲区的大小*str*。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
+**安全说明**要从输入流中提取的以 null 结尾的字符串不得超过目标缓冲区*str*的大小。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
 模板函数：
 
@@ -96,7 +96,7 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem& Ch);
 ```
 
-如果它是可能的并将其存储在提取一个元素*Ch*。 否则，会调用 **is**. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**)。 在任何情况下，它将返回*Istr*。
+如果可能, 则提取一个元素, 并将其存储在*Ch*中。 否则，会调用 **is**. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**)。 在任何情况下, 它都将返回*Istr*。
 
 模板函数：
 
@@ -147,7 +147,7 @@ basic_istream<Elem, Tr>& operator>>(
     Type& val);
 ```
 
-返回`Istr >> val`(并将转换的右值引用`Istr`到进程中左值)。
+返回`Istr >> val` (并将右值`Istr`引用转换为进程中的左值)。
 
 ### <a name="example"></a>示例
 
@@ -170,4 +170,4 @@ int main( )
 
 ## <a name="see-also"></a>请参阅
 
-[\<istream>](../standard-library/istream.md)<br/>
+[\<istream>](../standard-library/istream.md)

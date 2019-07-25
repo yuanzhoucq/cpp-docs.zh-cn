@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::weibull_distribution [C++], param_type
 - std::weibull_distribution [C++], param_type
 ms.assetid: f20b49d3-1b9a-41af-8db4-baf800eaa02b
-ms.openlocfilehash: bbcfa23ae84d0a035d4b00d1c154da4b4281be32
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f3c5a2a3d8e4b5f2c8a13ef7525b29683b94acc4
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410832"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459615"
 ---
 # <a name="weibulldistribution-class"></a>weibull_distribution 类
 
@@ -70,12 +70,12 @@ class weibull_distribution
 
 ### <a name="parameters"></a>参数
 
-*RealType*<br/>
-浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*RealType*\
+浮点结果类型, 默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
-此模板类将描述产生用户指定的浮点数的值类型**double**如果未提供任何内容韦伯分布根据分布。 下表链接到有关各个成员的文章。
+此模板类描述了生成用户指定的浮点类型的值的分布, 或者 **, 如果未**提供任何值, 则根据韦伯分布来分布该类型。 下表链接到有关各个成员的文章。
 
 ||||
 |-|-|-|
@@ -209,7 +209,7 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<random>
+**标头：** \<random>
 
 **命名空间：** std
 
@@ -222,18 +222,18 @@ explicit weibull_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-*a*<br/>
+*的*\
 `a` 分布参数。
 
-*b*<br/>
+*b*\
 `b` 分布参数。
 
-*parm*<br/>
+*parm*\
 用于构造分布的 `param_type` 结构。
 
 ### <a name="remarks"></a>备注
 
-**前置条件：**`0.0 < a` 和 `0.0 < b`
+**前置条件：** `0.0 < a` 和 `0.0 < b`
 
 第一个构造函数将构造一个对象，该对象存储的 `a` 值保留值 a，并且存储的 `b` 值保留值 b。
 
@@ -257,21 +257,21 @@ struct param_type {
 
 ### <a name="parameters"></a>参数
 
-*a*<br/>
+*的*\
 `a` 分布参数。
 
-*b*<br/>
+*b*\
 `b` 分布参数。
 
-*right*<br/>
+*然后*\
 要与它进行比较的 `param_type` 对象。
 
 ### <a name="remarks"></a>备注
 
-**前置条件：**`0.0 < a` 和 `0.0 < b`
+**前置条件：** `0.0 < a` 和 `0.0 < b`
 
 在实例化时，可将此结构传递给分布的类构造函数、传递给 `param()` 成员函数以设置现有分布的存储参数，并传递给 `operator()` 以代替存储参数使用。
 
 ## <a name="see-also"></a>请参阅
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

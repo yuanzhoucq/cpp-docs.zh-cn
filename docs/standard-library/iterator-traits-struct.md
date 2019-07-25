@@ -7,12 +7,12 @@ helpviewer_keywords:
 - iterator_traits struct
 - iterator_traits class
 ms.assetid: 8b92c2c5-f658-402f-8ca1-e7ae301b8514
-ms.openlocfilehash: 6fe9e2d576afcacc7d014d4f5c920ecab3a83fc9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d2f9d79d200579f539f7d9edc49d4a907e6cdb2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224033"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455581"
 ---
 # <a name="iteratortraits-struct"></a>iterator_traits 结构
 
@@ -35,19 +35,19 @@ struct iterator_traits {
 
 此模板结构定义成员类型
 
-- `iterator_category`： 的同义词`Iterator::iterator_category`。
+- `iterator_category`: 的同义词`Iterator::iterator_category`。
 
-- `value_type`： 的同义词`Iterator::value_type`。
+- `value_type`: 的同义词`Iterator::value_type`。
 
-- `difference_type`： 的同义词`Iterator::difference_type`。
+- `difference_type`: 的同义词`Iterator::difference_type`。
 
-- `distance_type`： 的同义词 `Iterator::difference_type.`
+- `distance_type`: 一个同义词, 用于`Iterator::difference_type.`
 
-- `pointer`： 的同义词`Iterator::pointer`。
+- `pointer`: 的同义词`Iterator::pointer`。
 
-- `reference`： 的同义词`Iterator::reference`。
+- `reference`: 的同义词`Iterator::reference`。
 
-部分专用化决定与类型的对象指针相关联的关键类型**类型** <strong>\*</strong>或**const 类型** <strong>\*</strong>.
+部分专用化确定与类型为**类型** <strong>\*</strong>或**const 类型** <strong>\*</strong>的对象指针关联的关键类型。
 
 在此实现中，还可使用几个不会使用部分专用化的模板函数：
 
@@ -124,6 +124,6 @@ struct std::bidirectional_iterator_tag
 
 ## <a name="see-also"></a>请参阅
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

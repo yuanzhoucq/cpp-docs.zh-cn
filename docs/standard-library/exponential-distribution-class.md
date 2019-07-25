@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::exponential_distribution [C++], param_type
 - std::exponential_distribution [C++], param_type
 ms.assetid: d54f3126-a09b-45f9-a30b-0d94d03bcdc9
-ms.openlocfilehash: a8dd8168075a0fff3b61154098c0bee100961f98
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 8fd47b6acd4d991741f7ae45332d6cacc1903977
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451241"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457884"
 ---
 # <a name="exponentialdistribution-class"></a>exponential_distribution 类
 
@@ -67,15 +67,15 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*RealType*<br/>
-浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*RealType*\
+浮点结果类型, 默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
-*URNG*<br/>
+*URNG*\
 随机数生成器引擎。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
-此模板类将描述产生用户指定的整型值类型**double**如果未提供任何内容，指数分布根据分布。 下表链接到有关各个成员的文章。
+此模板类描述产生用户指定的整型值的分布, 或者 **, 如果未**提供任何值, 则根据指数分布进行分布。 下表链接到有关各个成员的文章。
 
 ||||
 |-|-|-|
@@ -182,10 +182,10 @@ explicit exponential_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-*lambda*<br/>
+*lambda*\
 `lambda` 分布参数。
 
-*parm*<br/>
+*parm*\
 用于构造分布的参数包。
 
 ### <a name="remarks"></a>备注
@@ -194,7 +194,7 @@ explicit exponential_distribution(const param_type& parm);
 
 第一个构造函数将构造一个其存储的 `lambda` 值保留值 *lambda* 的对象。
 
-第二个构造函数将构造一个从 parm  初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
+第二个构造函数将构造一个从 parm 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
 
 ## <a name="param_type"></a>  exponential_distribution::param_type
 
@@ -213,10 +213,10 @@ struct param_type {
 
 ### <a name="parameters"></a>参数
 
-*lambda*<br/>
+*lambda*\
 `lambda` 分布参数。
 
-*right*<br/>
+*然后*\
 要与它进行比较的 `param_type` 对象。
 
 ### <a name="remarks"></a>备注
@@ -227,4 +227,4 @@ struct param_type {
 
 ## <a name="see-also"></a>请参阅
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

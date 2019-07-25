@@ -7,16 +7,16 @@ helpviewer_keywords:
 - libraries, Standard C++
 - C++ Standard Library, headers
 ms.assetid: 7acb83a4-da73-4ad3-bc30-a71289db7f60
-ms.openlocfilehash: 57abafbcbd899d3eca7369205afba4ca262ad2c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b1e5226db751605d5352b1c5195759c34d080f5
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210796"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452441"
 ---
 # <a name="c-standard-library-overview"></a>C++ 标准库概述
 
-所有 C++ 库实体都在在一个或多个标准标头中声明或定义。 此实现包括两个额外标头\<hash_map > 和\<hash_set >，这不是必需的C++标准。 有关此实现支持的标头的完整列表，请参阅[头文件参考](../standard-library/cpp-standard-library-header-files.md)。
+所有 C++ 库实体都在在一个或多个标准标头中声明或定义。 此实现包括\< C++标准不需要的两个附加\<标头: hash_map > 和 hash_set >。 有关此实现支持的标头的完整列表，请参阅[头文件参考](../standard-library/cpp-standard-library-header-files.md)。
 
 C++ 库的独立式实现仅提供了这些标头的一个子集：
 
@@ -60,4 +60,4 @@ C++ 库标头有两个更广泛的细分：
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 标准库](../standard-library/cpp-standard-library-reference.md)<br/>
+[C++ 标准库](../standard-library/cpp-standard-library-reference.md)

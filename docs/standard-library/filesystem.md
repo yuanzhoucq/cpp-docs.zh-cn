@@ -9,12 +9,12 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-ms.openlocfilehash: a44fc3c6c6a37c20e1e1c294929ae3cb15cece58
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 6f97ad75dcf3f01406f305b713b9d14cbe527c52
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240698"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457023"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -29,9 +29,9 @@ using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> 版本的 Visual Studio 2017，截至\<文件系统 > 标头不是尚未C++标准。 C++在 Visual Studio 2017 (MSVC v141) 实现的最终稿标准，位于[ISO/IEC JTC 1/22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)。
+> 在 Visual Studio 2017 版本中, \<filesystem > 标头尚不是C++标准版本。 C++在 Visual Studio 2017 (MSVC v141) 中, 可实现在[ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)中找到的最终草案标准。
 
-此标头支持两大类主机操作系统之一的文件系统：Microsoft Windows 和 Posix。
+此标头支持两大种类的主机操作系统之一的文件系统:Microsoft Windows 和 Posix。
 
 虽然这两种操作系统的大多数功能均相同，但本文档将介绍它们之间存在的差异。 例如：
 
@@ -129,4 +129,4 @@ using namespace std::experimental::filesystem::v1;
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)<br/>
+[头文件引用](../standard-library/cpp-standard-library-header-files.md)

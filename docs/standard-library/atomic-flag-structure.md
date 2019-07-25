@@ -6,16 +6,16 @@ f1_keywords:
 - atomic/std::atomic_flag::clear
 - atomic/std::atomic_flag::test_and_set
 ms.assetid: 17f0c2f5-fd39-4a44-873a-b569720a670e
-ms.openlocfilehash: 13af0c26b765aa7ebbbd1ec22b5a0ed1b8cce0ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36944c3c3bdc58272d87bbcdfb119d1c52c43995
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377252"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447406"
 ---
 # <a name="atomicflag-structure"></a>atomic_flag 结构
 
-描述一个对象，以原子方式设置并清除**bool**标志。 对原子标志执行的操作始终是无锁的。
+描述一个对象, 该对象以原子方式设置并清除**布尔**型标志。 对原子标志执行的操作始终是无锁的。
 
 ## <a name="syntax"></a>语法
 
@@ -30,7 +30,7 @@ struct atomic_flag;
 |名称|描述|
 |----------|-----------------|
 |[clear](#clear)|将存储的标志设置为**false**。|
-|[test_and_set](#test_and_set)|将存储的标志设置为 **，则返回 true**并返回初始标志值。|
+|[test_and_set](#test_and_set)|将存储的标志设置为**true** , 并返回初始标志值。|
 
 ## <a name="remarks"></a>备注
 
@@ -38,13 +38,13 @@ struct atomic_flag;
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<原子 >
+**标头:** \<原子 >
 
 **命名空间：** std
 
 ## <a name="clear"></a>  atomic_flag::clear
 
-集**bool**中存储的标志`*this`到**false**，在指定[memory_order](../standard-library/atomic-enums.md#memory_order_enum)约束。
+在指定的[memory_order](../standard-library/atomic-enums.md#memory_order_enum)约束内, 将`*this`存储的**bool**标志设置为**false**。
 
 ```cpp
 void atomic_flag::clear(memory_order Order = memory_order_seq_cst) volatile noexcept;
@@ -53,12 +53,12 @@ void atomic_flag::clear(memory_order Order = memory_order_seq_cst) noexcept;
 
 ### <a name="parameters"></a>参数
 
-*Order*<br/>
+*为了*\
 [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
 
 ## <a name="test_and_set"></a>  atomic_flag::test_and_set
 
-集**bool**中存储的标志`*this`到**true**，在指定[memory_order](../standard-library/atomic-enums.md#memory_order_enum)约束。
+在指定的[memory_order](../standard-library/atomic-enums.md#memory_order_enum)约束内, 将`*this`存储在中的**bool**标志设置为**true**。
 
 ```cpp
 bool atomic_flag::test_and_set(memory_order Order = memory_order_seq_cst) volatile noexcept;
@@ -67,7 +67,7 @@ bool atomic_flag::test_and_set(memory_order Order = memory_order_seq_cst) noexce
 
 ### <a name="parameters"></a>参数
 
-*Order*<br/>
+*为了*\
 [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
 
 ### <a name="return-value"></a>返回值
@@ -76,4 +76,4 @@ bool atomic_flag::test_and_set(memory_order Order = memory_order_seq_cst) noexce
 
 ## <a name="see-also"></a>请参阅
 
-[\<atomic>](../standard-library/atomic.md)<br/>
+[\<atomic>](../standard-library/atomic.md)

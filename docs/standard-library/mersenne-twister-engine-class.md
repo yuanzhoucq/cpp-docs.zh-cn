@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - mersenne_twister_engine class
 ms.assetid: 7ee968fa-a1cc-450f-890f-7305de062685
-ms.openlocfilehash: 9949d1cab5a97b30df0b156289dff2dfbe15d851
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: ed5380e36e71d7366d2b4b84528bbd35b87cc775
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449676"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451860"
 ---
 # <a name="mersennetwisterengine-class"></a>mersenne_twister_engine 类
 
@@ -29,31 +29,31 @@ class mersenne_twister_engine;
 
 ### <a name="parameters"></a>参数
 
-*UIntType*<br/>
+*UIntType*\
 无符号的整数结果类型。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
-*W*<br/>
+*水平*\
 **字大小**。 状态序列的每个字的大小（以字节为单位）。 **前提条件**：`2u < W ≤ numeric_limits<UIntType>::digits`
 
-*N*<br/>
+*北*\
 **状态大小**。 状态序列中的元素（值）数量。
 
-*M*<br/>
+*年*\
 **移位大小**。 每次旋转过程中要跳过的元素数量。 **前提条件**：`0 < M ≤ N`
 
-*R*<br/>
+*R*\
 **掩码位**。 **前提条件**：`R ≤ W`
 
-*A*<br/>
+*的*\
 **XOR 掩码**。 **前提条件**：`A ≤ (1u<<W) - 1u`
 
-*U*， *S*， *T*， *L*<br/>
+*U*、 *S*、 *T*、 *L*\
 **调和移位参数**。 在混合（调和）过程中用作移位值。 前置条件：`U,S,T,L ≤ W`
 
-*D*， *B*， *C*<br/>
+*D*、 *B*、 *C*\
 **调和位掩码参数**。 在混合（调和）过程中用作位掩码值。 前置条件：`D,B,C ≤ (1u<<W) - 1u`
 
-*F*<br/>
+*果*\
 **初始化乘法器**。 用于帮助初始化序列。 前置条件：`F ≤ (1u<<W) - 1u`
 
 ## <a name="members"></a>Members
@@ -69,9 +69,9 @@ class mersenne_twister_engine;
 
 ## <a name="remarks"></a>备注
 
-此模板类描述了返回闭区间 [ `0`, `2`<sup>W</sup> - `1`] 上的值的随机数引擎。 它将保留 `W * (N - 1) + R` 位的较大整数值。 它提取*W*一次通过此较大的值，并且当它已使用的所有位的位它通过移位和混合位，以使其具有一组新的 bits 来提取从较大的值。 引擎的状态是最后`N``W`的位的值如果`operator()`至少已调用*N*次，否则`M` `W`-位的已使用的值和最后一个`N - M`种子的值。
+此模板类描述了返回闭区间 [ `0`, `2`<sup>W</sup> - `1`] 上的值的随机数引擎。 它将保留 `W * (N - 1) + R` 位的较大整数值。 它从这个大值中一次提取*W*位, 并且当它已使用所有位时, 通过移动并混合该位来旋转大值, 以便它具有一组要从中提取的新位。 `N`如果`W` `N - M` 调用至少`M` *N*次, 则引擎的状态是所使用的最后一个位的值, 否则是已使用的位值和最后一个值。`W` `operator()`种子.
 
-生成器扭转较大值，它包含通过使用移位值定义的旋转生成的反馈移位寄存器*N*并*M*，旋转值*R*，和一个条件的 XOR 掩码*A*。此外，原始移位寄存器的位混合 （调和） 根据由值定义的位混合矩阵*U*， *D*， *S*， *B*， *T*， *C*，并且*L*。
+生成器使用移位值*N*和*M*、一个扭转值*R*和一个条件 XOR 掩码*a*定义的旋转, 从而将它保留的大值。此外, 根据由值*U*、 *D*、 *S*、 *B*、 *T*、 *C*和*L*定义的位硬编码矩阵, 将原始移位寄存器的位打乱 (调和)。
 
 模板自变量 `UIntType` 必须大到足以保留最多 `2`<sup>W</sup> - `1` 个值。 其他模板参数的值必须满足以下要求：`2u < W, 0 < M, M ≤ N, R ≤ W, U ≤ W, S ≤ W, T ≤ W, L ≤ W, W ≤ numeric_limits<UIntType>::digits, A ≤ (1u<<W) - 1u, B ≤ (1u<<W) - 1u, C ≤ (1u<<W) - 1u, D ≤ (1u<<W) - 1u, and F ≤ (1u<<W) - 1u`。
 
@@ -113,4 +113,4 @@ typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,
 
 ## <a name="see-also"></a>请参阅
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

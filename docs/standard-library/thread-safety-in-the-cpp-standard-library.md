@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C++ Standard Library, thread safety
 - thread safety, C++ Standard Library
 ms.assetid: 9351c8fb-4539-4728-b0e9-226e2ac4284b
-ms.openlocfilehash: 27ac930e567521b12dfc35e2f8c4c389c35ae47d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4ac029a119a77fa87c6cd004fece9c4e6b382026
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412080"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460066"
 ---
 # <a name="thread-safety-in-the-c-standard-library"></a>C++ 标准库中的线程安全
 
@@ -36,4 +36,4 @@ ms.locfileid: "62412080"
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 标准库概述](../standard-library/cpp-standard-library-overview.md)<br/>
+[C++ 标准库概述](../standard-library/cpp-standard-library-overview.md)

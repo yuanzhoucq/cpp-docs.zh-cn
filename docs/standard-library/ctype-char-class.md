@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - ctype<char> class
 ms.assetid: ee30acb4-a743-405e-b3d4-13602092da84
-ms.openlocfilehash: adaad8f76de5b712aea13794ef2d7b9a096fb8ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7fe1eef32741d63e7b2e2c2320d18f445784c44f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394151"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455458"
 ---
 # <a name="ctypeltchargt-class"></a>ctype&lt;char&gt; 类
 
-此类是模板类的显式专用化`ctype\<CharType>`键入**char**，描述一个对象来充当区域设置 facet 以各种类型的字符属性特征化**char**.
+类是用于类型`ctype\<CharType>` **char**的模板类的显式专用化, 它描述可用作区域设置 facet 的对象, 以描述类型为**char**的字符的各种属性。
 
 ## <a name="syntax"></a>语法
 
@@ -108,15 +108,15 @@ protected:
 
 显式专用化与模板类存在以下几个方面的差异：
 
-- Ctype 类的对象 < `char`> 将存储到 ctype 掩码表的第一个元素，数组的 UCHAR_MAX + 1 个元素的类型的指针`ctype_base::mask`。 它还存储布尔对象，指明当 ctype\< **Elem**> 对象被销毁时是否应（使用 `operator delete[]`）删除数组。
+- 类 ctype < `char`的对象 > 存储指向 ctype 掩码表的第一个元素的指针, 这是类型`ctype_base::mask`为 UCHAR_MAX + 1 的元素的数组。 它还存储布尔对象，指明当 ctype\< **Elem**> 对象被销毁时是否应（使用 `operator delete[]`）删除数组。
 
-- 其唯一的公共构造函数允许您指定`tab`，ctype 掩码表，并`del`，如果应为数组，则为 true 的布尔对象时删除 ctype < `char`> 对象被销毁后，引用计数以及参数引用。
+- 它的唯一公共构造函数允许`tab`你指定、ctype 掩码表和`del`布尔对象, 如果应在 > 对象的 ctype < `char`被销毁时删除数组, 则为 true; 对于引用计数, 则为 true参数引用。
 
-- 受保护的成员函数`table`返回存储的 ctype 掩码表。
+- 受保护的成员`table`函数返回存储的 ctype 掩码表。
 
-- 静态成员对象`table_size`ctype 掩码表中指定元素的最小数目。
+- 静态成员对象`table_size`指定 ctype 掩码表中元素的最小数目。
 
-- 受保护的静态成员函数`classic_table`（返回适合于"C"区域设置的 ctype 掩码表。
+- 受保护的静态成员`classic_table`函数 (返回对应于 "C" 区域设置的 ctype 掩码表。
 
 - 没有受保护的虚拟成员函数 [do_is](../standard-library/ctype-class.md#do_is)、[do_scan_is](../standard-library/ctype-class.md#do_scan_is)，或 [do_scan_not](../standard-library/ctype-class.md#do_scan_not)。 相应的公共成员函数自身执行等效操作。
 
@@ -130,6 +130,6 @@ protected:
 
 ## <a name="see-also"></a>请参阅
 
-[facet 类](locale-class.md#facet_class)<br/>
-[ctype_base 类](../standard-library/ctype-base-class.md)<br/>
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[facet 类](locale-class.md#facet_class)\
+[ctype_base 类](../standard-library/ctype-base-class.md)\
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::packaged_task [C++], reset
 - std::packaged_task [C++], swap
 - std::packaged_task [C++], valid
-ms.openlocfilehash: e759b1bc8cb47c5c943f29545e3b03ee535f3df7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5bb04b84b723f239c338c02befa8cd3468cec3f2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370666"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450079"
 ---
 # <a name="packagedtask-class"></a>packaged_task 类
 
@@ -67,7 +67,7 @@ class packaged_task;
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<将来 >
+**标头:** \<未来 >
 
 **命名空间：** std
 
@@ -113,7 +113,7 @@ packaged_task& operator=(packaged_task&& Right);
 
 ### <a name="parameters"></a>参数
 
-右侧<br/>
+*然后*\
 一个 `packaged_task` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -122,7 +122,7 @@ packaged_task& operator=(packaged_task&& Right);
 
 ### <a name="remarks"></a>备注
 
-操作完成后，*右*不再具有关联异步状态。
+操作完成*后, 不再*具有关联的异步状态。
 
 ## <a name="op_call"></a>packaged_task::operator()
 
@@ -150,7 +150,7 @@ operator bool() const noexcept;
 
 ### <a name="return-value"></a>返回值
 
-**true**如果该对象具有关联异步状态; 否则为**false**。
+如果对象有关联的异步状态,**则为 true** ;否则**为 false**。
 
 ## <a name="packaged_task"></a>  packaged_task::packaged_task 构造函数
 
@@ -169,24 +169,24 @@ template <class Fn, class Alloc>
 
 ### <a name="parameters"></a>参数
 
-右侧<br/>
+*然后*\
 一个 `packaged_task` 对象。
 
-*alloc*<br/>
+*分配*\
 内存分配器。 有关详细信息，请参阅 [\<allocators>](../standard-library/allocators-header.md)。
 
-*fn*<br/>
+*fn*\
 一个函数对象。
 
 ### <a name="remarks"></a>备注
 
 第一个构造函数构造没有关联异步状态的 `packaged_task` 对象。
 
-第二个构造函数构造`packaged_task`对象，并传输关联异步状态从*右*。 操作完成后，*右*不再具有关联异步状态。
+第二个构造函数`packaged_task`构造一个对象, 并从*右侧*传输关联的异步状态。 操作完成*后, 不再*具有关联的异步状态。
 
-第三个构造函数构造`packaged_task`对象，它具有一份*fn*存储在其关联异步状态中。
+第三个构造函数`packaged_task`构造一个对象, 该对象在其关联的异步状态中存储了*fn*的副本。
 
-第四个构造函数构造`packaged_task`对象，它具有一份*fn*存储在其关联异步状态，并使用`alloc`内存分配。
+第四个构造函数`packaged_task`构造一个对象, 该对象在其关联的异步`alloc`状态中存储了*fn*的副本, 并用于内存分配。
 
 ## <a name="dtorpackaged_task_destructor"></a>  packaged_task::~packaged_task 析构函数
 
@@ -222,7 +222,7 @@ void swap(packaged_task& Right) noexcept;
 
 ### <a name="parameters"></a>参数
 
-右侧<br/>
+*然后*\
 一个 `packaged_task` 对象。
 
 ## <a name="valid"></a>  packaged_task::valid
@@ -235,9 +235,9 @@ bool valid() const;
 
 ### <a name="return-value"></a>返回值
 
-**true**如果该对象具有关联异步状态; 否则为**false**。
+如果对象有关联的异步状态,**则为 true** ;否则**为 false**。
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<future>](../standard-library/future.md)<br/>
+[头文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[\<future>](../standard-library/future.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::subtract_with_carry_engine [C++], max
 - std::subtract_with_carry_engine [C++], seed
 ms.assetid: 94a055f2-a620-4a22-ac34-c156924bab31
-ms.openlocfilehash: 76981df1f4a642cca1a57a9619f20aa4cebd63bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 17091e33c504df60c0b6b8e346d2a6fd3893679c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412184"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447415"
 ---
 # <a name="subtractwithcarryengine-class"></a>subtract_with_carry_engine 类
 
@@ -36,16 +36,16 @@ class subtract_with_carry_engine;
 
 ### <a name="parameters"></a>参数
 
-*UIntType*<br/>
+*UIntType*\
 无符号的整数结果类型。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
-*W*<br/>
+*水平*\
 **字大小**。 状态序列的每个字的大小（以字节为单位）。 **前提条件**：`0 < W ≤ numeric_limits<UIntType>::digits`
 
-*S*<br/>
+*些*\
 **短滞后**。 整数值数。 **前提条件**：`0 < S < R`
 
-*R*<br/>
+*R*\
 **长滞后**。 确定生成的系列中的重复。
 
 ## <a name="members"></a>成员
@@ -62,7 +62,7 @@ class subtract_with_carry_engine;
 
 `substract_with_carry_engine` 模板类是基于 [linear_congruential_engine](../standard-library/linear-congruential-engine-class.md) 的改进。 这两个引擎的速度和结果的质量都不如 [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md)。
 
-此引擎使用重复关系（*周期*）`x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`产生用户指定的无符号整型值，其中如果 `cy(i)`，则 `1` 包含值 `x(i - S) - x(i - R) - cy(i - 1) < 0`；如果 `0`，则 `M` 包含 `2`<sup>W</sup>。引擎的状态是进位指示器加上*R*值。 这些值包含的上一次*R*值返回的 if`operator()`至少已调用*R*次，否则`N`已返回的值和最后一个`R - N`种子值。
+此引擎使用重复关系（*周期*）`x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`产生用户指定的无符号整型值，其中如果 `cy(i)`，则 `1` 包含值 `x(i - S) - x(i - R) - cy(i - 1) < 0`；如果 `0`，则 `M` 包含 `2`<sup>W</sup>。引擎的状态为 "执行" 指示器和*R*值。 如果`R - N`  `operator()`至少调用*r 次*, 则这些值包含返回的最后一个 r 值, 否则包含已返回的值和种子的最后一个值。`N`
 
 模板参数 `UIntType` 必须大到足以保留最多 `M - 1` 个值。
 
@@ -78,10 +78,10 @@ class subtract_with_carry_engine;
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<random>
+**标头：** \<random>
 
 **命名空间：** std
 
 ## <a name="see-also"></a>请参阅
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

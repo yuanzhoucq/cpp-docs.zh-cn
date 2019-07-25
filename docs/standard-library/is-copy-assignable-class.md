@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_copy_assignable
 ms.assetid: 3ae6bca1-85fb-4829-9ee9-0183b081ff50
-ms.openlocfilehash: 75e0e8d995fbb3c6bfb1af3142a98651d7a29e96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5fedd32f026828e49ea29cb2975a2529ca28c862
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336746"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452839"
 ---
 # <a name="iscopyassignable-class"></a>is_copy_assignable 类
 
@@ -26,19 +26,19 @@ struct is_copy_assignable;
 
 ### <a name="parameters"></a>参数
 
-*Ty*<br/>
+*Ty*\
 要查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型谓词的实例将保留 true 类型*Ty*是具有复制赋值运算符，否则为 false 的类。 等效于 is_assignable\<Ty&, const Ty&>。
+如果类型*Ty*是具有复制赋值运算符的类, 则类型谓词的实例为 true; 否则为 false。 等效于 is_assignable\<Ty&, const Ty&>。
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<type_traits>
+**标头：** \<type_traits>
 
 **命名空间：** std
 
 ## <a name="see-also"></a>请参阅
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

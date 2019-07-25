@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::queue [C++], push
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
-ms.openlocfilehash: 78479a05f8957aea5ca0f78fd3a086a49b9ef009
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 512b9499e63933a71a27a87f91a3bef8a65339e1
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240404"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458346"
 ---
 # <a name="queue-class"></a>queue 类
 
@@ -42,7 +42,7 @@ class queue
 
 ### <a name="parameters"></a>参数
 
-*类型*\
+*类别*\
 要存储在队列中的元素数据类型
 
 *容器*\
@@ -50,11 +50,11 @@ class queue
 
 ## <a name="remarks"></a>备注
 
-类的元素`Type`经过第一个模板中指定的队列对象的参数是使用同义词[value_type](#value_type) ，并且必须匹配的基础容器类中的元素类型`Container`规定的第二个模板参数。 `Type`必须是可赋值的以便它才能复制该类型的对象，并将值分配到该类型的变量。
+Queue 对象的第`Type`一个模板参数中的规定类的元素与[value_type](#value_type)同义, 并且必须与第二个模板的基础容器类`Container`规定中的元素类型相匹配参数. 必须`Type`是可赋值的, 以便可以复制该类型的对象并为该类型的变量赋值。
 
-队列适合基础容器类包括[deque](../standard-library/deque-class.md)并[列表](../standard-library/list-class.md)，或支持的操作的任何其他序列容器`front`， `back`， `push_back`，和`pop_front`。 基础容器类封装在容器适配器中，容器适配器仅公开一组有限的序列容器成员函数为公共接口。
+适用于队列的适用的基础容器类包括[deque](../standard-library/deque-class.md)和[list](../standard-library/list-class.md), `front`或者支持、 `back`、 `push_back`和`pop_front`操作的任何其他序列容器。 基础容器类封装在容器适配器中，容器适配器仅公开一组有限的序列容器成员函数为公共接口。
 
-队列对象进行相等比较，当且仅当类的元素`Type`进行相等比较，，很少-比比较，当且仅当类的元素`Type`小于的比较。
+当且仅当类`Type`的元素具有相同的相等性时, 队列对象才可比较, 并且仅当类`Type`的元素小于可比较时, 它们才是可比较的。
 
 C++ 标准库定义了三种类型的容器适配器：stack、queue 和 priority_queue。 每种适配器都限制了一些基础容器类的功能，以便对标准数据结构提供精确控制的接口。
 
@@ -89,9 +89,9 @@ C++ 标准库定义了三种类型的容器适配器：stack、queue 和 priorit
 |[front](#front)|返回对 `queue` 前部的第一个元素的引用。|
 |[pop](#pop)|从 `queue` 前端移除一个元素。|
 |[push](#push)|将元素添加到 `queue` 的后部。|
-|size[](#size)|返回 `queue` 中的元素数量。|
+|[size](#size)|返回 `queue` 中的元素数量。|
 
-## <a name="back"></a> 返回
+## <a name="back"></a>返回
 
 返回对在队列后部最近添加的最后一个元素的引用。
 
@@ -107,7 +107,7 @@ Queue 的最后一个元素。 如果队列为空，则未定义返回值。
 
 ### <a name="remarks"></a>备注
 
-如果将 `back` 的返回值分配给 `const_reference`，则无法修改队列对象。 如果返回值`back`分配给`reference`，可以修改队列对象。
+如果将 `back` 的返回值分配给 `const_reference`，则无法修改队列对象。 如果将的`back`返回值分配`reference`给, 则可以修改队列对象。
 
 当使用定义为 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 进行编译时，如果试图访问空队列中的元素，则将发生运行时错误。  有关更多信息，请参见 [Checked Iterators](../standard-library/checked-iterators.md) 。
 
@@ -137,7 +137,7 @@ int main( )
 }
 ```
 
-## <a name="container_type"></a> container_type
+## <a name="container_type"></a>container_type
 
 一种类型，它提供将调整的基容器。
 
@@ -155,7 +155,7 @@ typedef Container container_type;
 
 有关如何声明和使用 `container_type` 的示例，请参阅 [queue](#queue) 的示例。
 
-## <a name="empty"></a> 为空
+## <a name="empty"></a>空白处
 
 测试队列是否为空。
 
@@ -201,7 +201,7 @@ The queue q1 is not empty.
 The queue q2 is empty.
 ```
 
-## <a name="front"></a> 前端
+## <a name="front"></a>主
 
 返回对队列前部的第一个元素的引用。
 
@@ -217,9 +217,9 @@ Queue 的第一个元素。 如果队列为空，则未定义返回值。
 
 ### <a name="remarks"></a>备注
 
-如果将 `front` 的返回值分配给 `const_reference`，则无法修改队列对象。 如果返回值`front`分配给`reference`，可以修改队列对象。
+如果将 `front` 的返回值分配给 `const_reference`，则无法修改队列对象。 如果将的`front`返回值分配`reference`给, 则可以修改队列对象。
 
-此成员函数返回`reference`到受控序列的第一个元素，其必须为非空。
+成员函数将返回`reference`到受控序列的第一个元素, 该元素必须为非空。
 
 当使用定义为 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 进行编译时，如果试图访问空队列中的元素，则将发生运行时错误。  有关更多信息，请参见 [Checked Iterators](../standard-library/checked-iterators.md) 。
 
@@ -253,7 +253,7 @@ int main() {
 }
 ```
 
-## <a name="pop"></a> pop
+## <a name="pop"></a>弹出
 
 从队列的前部移除元素。
 
@@ -309,7 +309,7 @@ After a pop the queue length is 2.
 After a pop, the element at the front of the queue is 20.
 ```
 
-## <a name="push"></a> 推送
+## <a name="push"></a>请求
 
 将元素添加到队列的后部。
 
@@ -319,7 +319,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>参数
 
-*val*\
+*初始值*\
 添加到队列后部的元素。
 
 ### <a name="remarks"></a>备注
@@ -358,7 +358,7 @@ The queue length is 3.
 The element at the front of the queue is 10.
 ```
 
-## <a name="queue"></a> 队列
+## <a name="queue"></a>使
 
 构造一个空的或者是基容器对象副本的队列。
 
@@ -370,7 +370,7 @@ explicit queue(const container_type& right);
 
 ### <a name="parameters"></a>参数
 
-*右侧*\
+*然后*\
 要以构造的队列为副本的 **const** 容器。
 
 ### <a name="remarks"></a>备注
@@ -425,7 +425,7 @@ The element at the front of queue q5 is 1.
 The element at the back of queue q5 is 2.
 ```
 
-## <a name="size"></a> 大小
+## <a name="size"></a>规格
 
 返回队列中的元素数目。
 
@@ -466,7 +466,7 @@ The queue length is 1.
 The queue length is now 2.
 ```
 
-## <a name="size_type"></a> size_type
+## <a name="size_type"></a>size_type
 
 一种无符号整数类型，此类型可表示队列中的元素数量。
 
@@ -526,5 +526,5 @@ The element at the front of the queue is 69.
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)<br/>
+[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

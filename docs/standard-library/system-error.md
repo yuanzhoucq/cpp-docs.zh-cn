@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - system_error header
 ms.assetid: 5e046c6e-48d9-4740-8c8a-05f3727c1215
-ms.openlocfilehash: 4365f0aaf8fdd4d43159b78acf6dcffa4fcbe428
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: e6eef7152e45e8177c451fc25592fab85c58ccb5
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246553"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449750"
 ---
 # <a name="ltsystemerrorgt"></a>&lt;system_error&gt;
 
-包括标头\<system_error > 定义异常类`system_error`和相关的模板来处理低级别系统错误。
+包括标头\<system_error > 以定义用于处理低`system_error`级别系统错误的异常类和相关模板。
 
 ## <a name="requirements"></a>要求
 
@@ -71,4 +71,4 @@ ms.locfileid: "68246553"
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)<br/>
+[头文件引用](../standard-library/cpp-standard-library-header-files.md)

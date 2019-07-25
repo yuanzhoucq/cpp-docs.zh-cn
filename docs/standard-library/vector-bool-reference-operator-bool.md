@@ -10,16 +10,16 @@ helpviewer_keywords:
 - BOOL operator
 - reference::operator bool
 ms.assetid: b0e57869-18cc-4296-9061-da502f30120d
-ms.openlocfilehash: 7fa95b3037538ccbbf27fa5b9749dc21f72670cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca2d21a7706248cd84ca3591eb717e4081972f9c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410910"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452124"
 ---
 # <a name="vectorltboolgtreferenceoperator-bool"></a>vector&lt;bool&gt;::reference::operator bool
 
-提供了隐式转换`vector<bool>::reference`到**bool**。
+提供从`vector<bool>::reference`到**bool**的隐式转换。
 
 ## <a name="syntax"></a>语法
 
@@ -37,11 +37,11 @@ operator bool() const;
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<vector>
+**标头：** \<vector>
 
 **命名空间：** std
 
 ## <a name="see-also"></a>请参阅
 
-[向量\<bool >:: reference 类](../standard-library/vector-bool-reference-class.md)<br/>
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)<br/>
+[vector\<bool>::reference 类](../standard-library/vector-bool-reference-class.md)\
+[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

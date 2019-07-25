@@ -10,12 +10,12 @@ helpviewer_keywords:
 - = operator, with specific C++ Standard Library objects
 - reference::operator=
 ms.assetid: eed20d81-36b9-40b2-a3b6-340ed0bb4f34
-ms.openlocfilehash: b829a0b6224ca93192f15b088fcb98155bc3963a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 738f86bd6163a827b43d78f29c6e3a7124400fb7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410923"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452165"
 ---
 # <a name="vectorltboolgtreferenceoperator"></a>vector&lt;bool&gt;::reference::operator=
 
@@ -31,10 +31,10 @@ reference& operator=(bool Val);
 
 ### <a name="parameters"></a>参数
 
-右侧<br/>
+*然后*\
 要将值赋给位的元素引用。
 
-*Val*<br/>
+*初始值*\
 要赋给位的布尔值。
 
 ## <a name="example"></a>示例
@@ -112,11 +112,11 @@ The original value of the 3rd element still stored in a bool: false
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<vector>
+**标头：** \<vector>
 
 **命名空间：** std
 
 ## <a name="see-also"></a>请参阅
 
-[向量\<bool >:: reference 类](../standard-library/vector-bool-reference-class.md)<br/>
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)<br/>
+[vector\<bool>::reference 类](../standard-library/vector-bool-reference-class.md)\
+[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

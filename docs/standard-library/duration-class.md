@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 06b863b3-65be-4ded-a72e-6e1eb1531077
 helpviewer_keywords:
 - std::chrono [C++], duration
-ms.openlocfilehash: 49c68b1650ced36ebcf949ae2594508480e15136
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c537b7dfdd23ba641438e0caf6306cf5549b2d7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413796"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454310"
 ---
 # <a name="duration-class"></a>duration 类
 
@@ -56,10 +56,10 @@ class duration <duration<Rep, Period1>, Period2>;
 
 |名称|描述|
 |----------|-----------------|
-|[count](#count)|返回时间间隔内的时钟计时周期数。|
+|[计数](#count)|返回时间间隔内的时钟计时周期数。|
 |[max](#max)|静态。 返回模板参数 `Ref` 的最大允许值。|
 |[min](#min)|静态。 返回模板参数 `Ref` 的最低允许值。|
-|[zero](#zero)|静态。 实际返回 `Rep`(0)。|
+|[无](#zero)|静态。 实际返回 `Rep`(0)。|
 
 ### <a name="public-operators"></a>公共运算符
 
@@ -77,7 +77,7 @@ class duration <duration<Rep, Period1>, Period2>;
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<chrono >
+**标头:** \<chrono >
 
 **命名空间：** std::chrono
 
@@ -109,29 +109,29 @@ constexpr duration(const duration<Rep2, Period2>& Dur);
 
 ### <a name="parameters"></a>参数
 
-*Rep2*<br/>
+*Rep2*\
 表示计时周期数的算术类型。
 
-*Period2*<br/>
+*Period2*\
 表示以秒为单位的计时周期时间段的 `std::ratio` 专用模板。
 
-*R*<br/>
+*R*\
 默认时间段的计时周期数。
 
-*Dur*<br/>
-指定的时间段的计时周期数*Period2*。
+*工期*\
+*Period2*指定的时间段的计时周期数。
 
 ### <a name="remarks"></a>备注
 
 默认构造函数构造未经初始化的对象。 通过使用空大括号进行的值初始化会初始化表示零个时钟计时周期的时间间隔的对象。
 
-第二个、 一个模板参数构造函数将构造一个对象，表示的时间间隔*R*时钟计时周期使用的默认时间段的`std::ratio<1>`。 若要避免舍的滴答计数，则返回错误，构造一个持续时间对象从一种表示类型*Rep2* ，可将其视为浮点类型`duration::rep`不能被视为浮点类型。
+第二, 一个模板参数构造函数构造一个对象, 该对象表示使用的默认时间段`std::ratio<1>`的 R 时钟计时周期的时间间隔。 若要避免刻度计数的舍入, 从表示类型*Rep2*构造持续时间对象的错误是错误的, 当不能将其视为浮点类型时`duration::rep` , 可以将该对象视为浮点类型。
 
-第三，两个模板参数构造函数将构造一个对象，表示时间间隔，其长度是由指定的时间间隔*Dur*。 若要避免计时周期计数截断，从另一个其类型与目标类型之间为*不可公度*的持续时间对象构造一个持续时间对象这一做法是错误的。
+第三, 两个模板参数构造函数构造一个对象, 该对象表示时间间隔, 其长度是由*工期*指定的时间间隔。 若要避免计时周期计数截断，从另一个其类型与目标类型之间为*不可公度*的持续时间对象构造一个持续时间对象这一做法是错误的。
 
 如果不能将 `D2` 视为浮点类型且 [ratio_divide\<D1::period, D2::period>::type::den](../standard-library/ratio.md) 不是 1，持续时间类型 `D1` 与其他持续时间类型 `D2` *不可公度*。
 
-除非*Rep2*隐式转换为`rep`并将`treat_as_floating_point<rep>`*如此*或`treat_as_floating_point<Rep2>` *false*，第二个构造函数不参与重载决策。 有关详细信息，请参阅 [<type_traits>](../standard-library/type-traits.md)。
+除非*Rep2*可隐式转换`rep`为且`treat_as_floating_point<rep>`为*true*或`treat_as_floating_point<Rep2>`*保留为 false*, 否则第二个构造函数不参与重载决策。 有关详细信息，请参阅 [<type_traits>](../standard-library/type-traits.md)。
 
 除非转换中没有引发溢出且 `treat_as_floating_point<rep>` *为 true*，或 `ratio_divide<Period2, period>::den` 等于 1 且 `treat_as_floating_point<Rep2>` *为 false*，否则第三个构造函数将不参与重载决策。 有关详细信息，请参阅 [<type_traits>](../standard-library/type-traits.md)。
 
@@ -195,8 +195,8 @@ duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>参数
 
-*Div*<br/>
-对于第一个方法，请*Div*表示的计时周期计数。 对于第二个方法，请*Div*是`duration`对象，其中包含的计时周期计数。
+*V*\
+对于第一种方法, *Div*表示滴答计数。 对于第二种方法, *Div*是`duration`包含滴答计数的对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -212,7 +212,7 @@ duration& operator*=(const rep& Mult);
 
 ### <a name="parameters"></a>参数
 
-*Mult*<br/>
+*Mult*\
 `duration::rep` 指定的类型的值。
 
 ### <a name="return-value"></a>返回值
@@ -229,7 +229,7 @@ duration& operator/=(const rep& Div);
 
 ### <a name="parameters"></a>参数
 
-*Div*<br/>
+*V*\
 `duration::rep` 指定的类型的值。
 
 ### <a name="return-value"></a>返回值
@@ -270,7 +270,7 @@ duration& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>参数
 
-*Dur*<br/>
+*工期*\
 一个 `duration` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -287,7 +287,7 @@ duration& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>参数
 
-*Dur*<br/>
+*工期*\
 一个 `duration` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -312,7 +312,7 @@ duration& operator%=(const rep& Div);duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>参数
 
-*Div*<br/>
+*V*\
 除数是表示滴答计数的 duration 对象或值。
 
 ### <a name="remarks"></a>备注
@@ -321,6 +321,6 @@ duration& operator%=(const rep& Div);duration& operator%=(const duration& Div);
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<chrono>](../standard-library/chrono.md)<br/>
-[duration_values 结构](../standard-library/duration-values-structure.md)<br/>
+[头文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[\<chrono>](../standard-library/chrono.md)\
+[duration_values 结构](../standard-library/duration-values-structure.md)

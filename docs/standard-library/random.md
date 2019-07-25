@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-ms.openlocfilehash: 1448ad2b703aa6dcf26fad2e4adcbeb2aec2c956
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 5738a1ea5ab950466f347090649e72471edf5608
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240422"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458291"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
@@ -19,12 +19,12 @@ ms.locfileid: "68240422"
 
 ## <a name="requirements"></a>要求
 
-**标头**:\<随机 >
+**标头**: \<随机 >
 
 **命名空间：** std
 
 > [!NOTE]
-> \<随机 > 库使用 #include < initializer_list > 语句。
+> \<随机 > 库使用 "#include < initializer_list >" 语句。
 
 ## <a name="summary"></a>总结
 
@@ -42,7 +42,7 @@ ms.locfileid: "68240422"
 
 ### <a name="quick-tips"></a>快速提示
 
-下面是使用时需要注意的一些提示\<随机 >:
+下面是使用\<随机 > 时需要注意的一些提示:
 
 - 在大多数情况下，URNG 将产生必须由分布形成的原始位。 （一个值得注意的例外是 [std::shuffle()](../standard-library/algorithm-functions.md#shuffle)，因为它直接使用 URNG。）
 
@@ -52,7 +52,7 @@ ms.locfileid: "68240422"
 
 - 对于大多数应用程序而言，最有用的配对是 `mt19937` 引擎和 `uniform_int_distribution`，如本文后面的[代码示例](#code)中所示。
 
-有许多选项可供选择在\<随机 > 标头，并且其中任何一个优于过时的 C 运行时函数`rand()`。 有关什么是不妥`rand()`以及如何\<随机 > 处理这些不足，请参阅[此视频](https://go.microsoft.com/fwlink/p/?linkid=397615)。
+有很多选项可在\<随机 > 标头中进行选择, 其中任何一个选项都优于过时的 C 运行时函数。 `rand()` 有关错误`rand()`以及随机 > 如何\<处理这些缺点的信息, 请观看[此视频](https://go.microsoft.com/fwlink/p/?linkid=397615)。
 
 ## <a name="code"></a> 示例
 
@@ -215,13 +215,13 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 通常根据这些属性来描述 URNG：
 
-1. **周期长度**:重复生成的数字序列所需的迭代数。 越长越好。
+1. **期间长度**:重复生成的数字序列所需的迭代数。 越长越好。
 
-2. **性能**:可以生成数字的速度和内存量所需。 越小越好。
+2. **性能**:生成数字的速度和所需的内存量。 越小越好。
 
-3. **质量**:与真正的随机数生成的序列的接近程度。 这通常称为“*随机性*”。
+3. **质量**:生成的序列接近于真实的随机数字。 这通常称为“*随机性*”。
 
-以下各节列出均匀随机数生成器 (Urng) 中提供\<随机 > 标头。
+以下部分列出了\<随机 > 标头中提供的均匀随机数生成器 (urng)。
 
 ####  <a name="rd"></a>非确定性生成器
 
@@ -281,7 +281,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
         43, 6364136223846793005ULL> mt19937_64;
     ```
 
-- `ranlux24` 24 位 RANLUX 引擎 （Martin Lüscher 和 Fred James，1994年）。
+- `ranlux24`24位 RANLUX 引擎 (圣马丁 Lüscher 和 Fred James, 1994)。
 
     ```cpp
     typedef discard_block_engine<ranlux24_base, 223, 23> ranlux24;
@@ -293,7 +293,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
     typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;
     ```
 
-- `ranlux48` 48 位 RANLUX 引擎 （Martin Lüscher 和 Fred James，1994年）。
+- `ranlux48`48位 RANLUX 引擎 (圣马丁 Lüscher 和 Fred James, 1994)。
 
     ```cpp
     typedef discard_block_engine<ranlux48_base, 389, 11> ranlux48;
@@ -329,7 +329,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 ###  <a name="distributions"></a>随机数分布
 
-以下各节列出的分发版中提供\<随机 > 标头。 这些分布是后处理机制，通常将 URNG 输出用作输入并通过定义的统计概率密度函数分布输出。 有关详细信息，请参阅[引擎和分布](#engdist)部分。
+以下部分列出了\<随机 > 标头中提供的分布。 这些分布是后处理机制，通常将 URNG 输出用作输入并通过定义的统计概率密度函数分布输出。 有关详细信息，请参阅[引擎和分布](#engdist)部分。
 
 #### <a name="uniform-distributions"></a>均匀分布
 
@@ -345,7 +345,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 |||
 |-|-|
-|[bernoulli_distribution 类](../standard-library/bernoulli-distribution-class.md)|产生的伯努利分布**bool**值。|
+|[bernoulli_distribution 类](../standard-library/bernoulli-distribution-class.md)|生成**布尔**值的伯努利分布。|
 |[binomial_distribution 类](../standard-library/binomial-distribution-class.md)|产生整数值的二项式分布。|
 |[geometric_distribution 类](../standard-library/geometric-distribution-class.md)|产生整数值的几何分布。|
 |[negative_binomial_distribution 类](../standard-library/negative-binomial-distribution-class.md)|产生整数值的负二项式分布。|
@@ -358,7 +358,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 |-|-|
 |[cauchy_distribution 类](../standard-library/cauchy-distribution-class.md)|产生真（浮点）值的柯西分布。|
 |[chi_squared_distribution 类](../standard-library/chi-squared-distribution-class.md)|产生真（浮点）值的卡方分布。|
-|[fisher_f_distribution 类](../standard-library/fisher-f-distribution-class.md)|产生的 F-分布 （也称为 Snedecor 的 F 分布或 Fisher Snedecor 分布） 的真 （浮点） 值。|
+|[fisher_f_distribution 类](../standard-library/fisher-f-distribution-class.md)|生成实 (浮点) 值的 F-分布 (也称为 Snedecor 的 F 分布或费舍尔-Snedecor 分布)。|
 |[lognormal_distribution 类](../standard-library/lognormal-distribution-class.md)|产生真（浮点）值的对数正态分布。|
 |[normal_distribution 类](../standard-library/normal-distribution-class.md)|产生真（浮点）值的正态（高斯）分布。|
 |[student_t_distribution 类](../standard-library/student-t-distribution-class.md)|产生真（浮点）值的学生 *t*-分布。|
@@ -389,7 +389,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 ### <a name="utility-functions"></a>实用函数
 
-本部分列出了中提供的一般实用函数\<随机 > 标头。
+本部分列出了\<随机 > 标头中提供的常规实用函数。
 
 |||
 |-|-|
@@ -397,7 +397,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 ### <a name="operators"></a>运算符
 
-本部分列出了中提供的运算符\<随机 > 标头。
+本部分列出了\<随机 > 标头中提供的运算符。
 
 |||
 |-|-|
@@ -408,13 +408,13 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 ## <a name="engdist"></a>引擎和分布
 
-以下各节，有关每个模板类类别中定义的信息，请参阅\<随机 >。 这两个模板类类别都采用类型作为参数，并使用共享模板参数名称来描述允许作为实际参数类型的类型的属性，如下所示：
+请参阅以下部分, 了解有关随机 > 中\<定义的每个模板类类别的信息。 这两个模板类类别都采用类型作为参数，并使用共享模板参数名称来描述允许作为实际参数类型的类型的属性，如下所示：
 
-- `IntType` 指示**短**， **int**，**长**，**超长**， **unsigned short**， **无符号的整型**，**无符号长**，或**无符号长长**。
+- `IntType`指示**short**、 **int**、 **long**、 **long**、无符号**短**、无符号**整数**、**无**符号长或**无符号长**长。
 
-- `UIntType` 指示**unsigned short**，**无符号的 int**，**无符号长**，或者**无符号长长**。
+- `UIntType`指示**无符号短**、无符号**整数**、**无**符号长或**无符号长**长。
 
-- `RealType` 指示**float**， **double**，或**长双精度型**。
+- `RealType`指示**float**、 **double**或**long double**。
 
 ### <a name="engines"></a>引擎
 
@@ -509,4 +509,4 @@ Visual Studio 中存在两个非常有用的 URNG（`mt19937` 和 `random_device
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)<br/>
+[头文件引用](../standard-library/cpp-standard-library-header-files.md)

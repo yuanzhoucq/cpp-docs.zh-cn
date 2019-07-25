@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - messages_byname class
 ms.assetid: c6c64841-3e80-43c8-b54c-fed41833ad6b
-ms.openlocfilehash: 7b341f3e1dbf76021911c70560b83932b5302191
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8fe1ab2db792819831f5c50aa99a02559f71cdd
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404788"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451808"
 ---
 # <a name="messagesbyname-class"></a>messages_byname 类
 
@@ -39,15 +39,15 @@ protected:
 
 ### <a name="parameters"></a>参数
 
-*_Locname*<br/>
+*_Locname*\
 已命名的区域设置。
 
-*_Refs*<br/>
+*_Refs*\
 初始引用计数。
 
 ## <a name="remarks"></a>备注
 
-其行为由命名的区域设置确定 *_Locname*。 每个构造函数通过 [messages](../standard-library/messages-class.md#messages)\<CharType>( `_Refs`) 初始化其基对象。
+其行为由已命名的区域设置 *_Locname*确定。 每个构造函数通过 [messages](../standard-library/messages-class.md#messages)\<CharType>( `_Refs`) 初始化其基对象。
 
 ## <a name="requirements"></a>要求
 
@@ -57,4 +57,4 @@ protected:
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

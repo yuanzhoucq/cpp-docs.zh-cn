@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - csignal header
 ms.assetid: d18bcf82-a89a-476c-a6bf-726af956f7c0
-ms.openlocfilehash: 298aa14c4e41f1473cac72fc79aa3e180dfe183f
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 2e82877a54c433b9db638b908be290535b1cc857
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243562"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452332"
 ---
 # <a name="ltcsignalgt"></a>&lt;csignal&gt;
 
-包含标准 C 库标头\<signal.h >，并将添加到关联的名称`std`命名空间。 包含该标头还将确保使用标准 C 库标头中的外部链接声明的名称在 `std` 命名空间中声明。
+包括 C 标准库标头\<信号 .h > 并将关联名称添加`std`到命名空间。 包含该标头还将确保使用标准 C 库标头中的外部链接声明的名称在 `std` 命名空间中声明。
 
 
 ## <a name="syntax"></a>语法
@@ -24,7 +24,7 @@ ms.locfileid: "68243562"
 #include <csignal>
 ```
 
-## <a name="namespace-and-macros"></a>Namespace 和宏
+## <a name="namespace-and-macros"></a>命名空间和宏
 
 ```cpp
 namespace std {
@@ -53,6 +53,6 @@ int raise(int sig);
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 标准库概述](../standard-library/cpp-standard-library-overview.md)<br/>
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[头文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 标准库概述](../standard-library/cpp-standard-library-overview.md)\
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

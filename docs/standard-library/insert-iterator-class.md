@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::insert_iterator [C++], container_type
 - std::insert_iterator [C++], reference
 ms.assetid: d5d86405-872e-4e3b-9e68-c69a2b7e8221
-ms.openlocfilehash: fb18c67b6e7949486c33e95c7daf6bc6868d0baa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 15041e21b53c29aedda831fd73b37a65e57a3680
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404879"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447667"
 ---
 # <a name="insertiterator-class"></a>insert_iterator 类
 
@@ -30,12 +30,12 @@ class insert_iterator;
 
 ### <a name="parameters"></a>参数
 
-*Container*<br/>
+*容器*\
 要通过 `insert_iterator` 将元素插入其中的容器类型。
 
 ## <a name="remarks"></a>备注
 
-类型的容器`Container`必须满足可变大小容器的要求，并具有两个自变量插入成员函数的类型参数的位置是`Container::iterator`并`Container::value_type`并返回类型`Container::iterator`。 C++ 标准库序列和排序关联容器符合这些需求，可以进行适配以便用于 `insert_iterator`。 对于关联容器，位置自变量将被当做提示来处理，有可能会提高或降低性能，具体取决于该提示的好坏。 `insert_iterator` 必须使用其容器进行初始化。
+类型`Container`的容器必须满足可变大小容器的要求, 并且具有两个参数的 insert 成员函数, 其中的参数类型`Container::iterator`为和`Container::value_type` , 并且返回一个类型`Container::iterator`。 C++ 标准库序列和排序关联容器符合这些需求，可以进行适配以便用于 `insert_iterator`。 对于关联容器，位置自变量将被当做提示来处理，有可能会提高或降低性能，具体取决于该提示的好坏。 `insert_iterator` 必须使用其容器进行初始化。
 
 ### <a name="constructors"></a>构造函数
 
@@ -116,10 +116,10 @@ insert_iterator(Container& _Cont, typename Container::iterator _It);
 
 ### <a name="parameters"></a>参数
 
-*_Cont*<br/>
+*_Cont*\
 `insert_iterator` 要将元素插入到其中的容器。
 
-*_It*<br/>
+*_It*\
 插入位置。
 
 ### <a name="remarks"></a>备注
@@ -186,7 +186,7 @@ insert_iterator<Container>& operator*();
 
 ### <a name="remarks"></a>备注
 
-用于实现输出迭代器表达式 **\*Iter** = **value**。 如果`Iter`是迭代器，然后在序列中，元素 **\*Iter** = **值**使用值替换该元素并不会更改的总数序列中的元素。
+用于实现输出迭代器表达式 **\*Iter** = **value**。 如果`Iter`是在序列中对元素进行寻址的迭代器, 则 **\*Iter** = **值**会将该元素替换为值, 而不会更改序列中的元素总数。
 
 ### <a name="example"></a>示例
 
@@ -310,7 +310,7 @@ insert_iterator<Container>& operator=(
 
 ### <a name="parameters"></a>参数
 
-*val*<br/>
+*初始值*\
 要赋给容器的值。
 
 ### <a name="return-value"></a>返回值
@@ -429,6 +429,6 @@ The first element in the list L is: 10.
 
 ## <a name="see-also"></a>请参阅
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

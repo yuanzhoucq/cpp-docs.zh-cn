@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_abstract class
 - is_abstract
 ms.assetid: 8867f660-3434-404c-ba90-c26607a5e0d2
-ms.openlocfilehash: 02863f5694f519e8cca54d07622a185f69de82d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57b2413e673f92e5258bee5711db2870e2b58a11
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404814"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448989"
 ---
 # <a name="isabstract-class"></a>is_abstract 类
 
@@ -27,12 +27,12 @@ struct is_abstract;
 
 ### <a name="parameters"></a>参数
 
-*Ty*<br/>
+*Ty*\
 要查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型谓词的实例将保留 true 类型*Ty*是具有至少一个纯虚拟函数，否则为 false 的类。
+如果类型*Ty*是至少具有一个纯虚函数的类, 则类型谓词的实例为 true; 否则为 false。
 
 ## <a name="example"></a>示例
 
@@ -70,11 +70,11 @@ is_abstract<abstract> == true
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<type_traits>
+**标头：** \<type_traits>
 
 **命名空间：** std
 
 ## <a name="see-also"></a>请参阅
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_polymorphic 类](../standard-library/is-polymorphic-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_polymorphic 类](../standard-library/is-polymorphic-class.md)

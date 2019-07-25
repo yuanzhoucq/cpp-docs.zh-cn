@@ -5,12 +5,12 @@ f1_keywords:
 - unordered_map/std::operator!=
 - unordered_map/std::operator==
 ms.assetid: 9d5add0b-84bd-4a79-bd82-3f58b55145ed
-ms.openlocfilehash: a27ef8e320f59464f15603c330346db86bc30aac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe4877bc5b371a2570c18950bac36a003078ccc7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62158442"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454767"
 ---
 # <a name="ltunorderedmapgt-operators"></a>&lt;unordered_map&gt; 运算符
 
@@ -28,15 +28,15 @@ bool operator!=(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### <a name="parameters"></a>参数
 
-*left*<br/>
+*左中*\
 一个 `unordered_map` 类型的对象。
 
-*right*<br/>
+*然后*\
 一个 `unordered_map` 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-**true**如果 unordered_map 不相等，则**false**如果它们相等。
+如果 unordered_maps 不相等, 则为**true** ;如果相等, 则**为 false** 。
 
 ### <a name="remarks"></a>备注
 
@@ -92,15 +92,15 @@ bool operator==(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### <a name="parameters"></a>参数
 
-*left*<br/>
+*左中*\
 一个 `unordered_map` 类型的对象。
 
-*right*<br/>
+*然后*\
 一个 `unordered_map` 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-**true**如果 unordered_map 相等，则**false**如果它们不相等。
+如果 unordered_maps 相等, 则为**true** ;如果不相等, 则**为 false** 。
 
 ### <a name="remarks"></a>备注
 
@@ -156,15 +156,15 @@ bool operator!=(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### <a name="parameters"></a>参数
 
-*left*<br/>
+*左中*\
 一个 `unordered_multimap` 类型的对象。
 
-*right*<br/>
+*然后*\
 一个 `unordered_multimap` 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-**true**如果 unordered_multimap 不相等，则**false**如果它们相等。
+如果 unordered_multimaps 不相等, 则为**true** ;如果相等, 则**为 false** 。
 
 ### <a name="remarks"></a>备注
 
@@ -221,15 +221,15 @@ bool operator==(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### <a name="parameters"></a>参数
 
-*left*<br/>
+*左中*\
 一个 `unordered_multimap` 类型的对象。
 
-*right*<br/>
+*然后*\
 一个 `unordered_multimap` 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-**true**如果 unordered_multimap 相等，则**false**如果它们不相等。
+如果 unordered_multimaps 相等, 则为**true** ;如果不相等, 则**为 false** 。
 
 ### <a name="remarks"></a>备注
 
@@ -278,4 +278,4 @@ int main( )
 
 ## <a name="see-also"></a>请参阅
 
-[<unordered_map>](../standard-library/unordered-map.md)<br/>
+[<unordered_map>](../standard-library/unordered-map.md)
