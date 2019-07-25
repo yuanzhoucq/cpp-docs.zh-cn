@@ -444,16 +444,7 @@
                 - name: “托管资源”属性页
                   href: build/reference/managed-resources-property-page.md
                 - name: “MIDL”属性页
-                  expanded: false
-                  items:
-                    - name: “MIDL”属性页
-                      href: build/reference/midl-property-pages.md
-                    - name: “MIDL”属性页：常规
-                      href: build/reference/midl-property-pages-general.md
-                    - name: “MIDL”属性页：Output
-                      href: build/reference/midl-property-pages-output.md
-                    - name: “MIDL”属性页：高级
-                      href: build/reference/midl-property-pages-advanced.md
+                  href: build/reference/midl-property-pages.md
                 - name: “Web 引用”属性页
                   href: build/reference/web-references-property-page.md
                 - name: “XML 数据生成器工具”属性页
