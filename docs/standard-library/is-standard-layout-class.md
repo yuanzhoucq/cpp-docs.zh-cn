@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_standard_layout class
 - is_standard_layout
 ms.assetid: 15ccf111-f537-45ef-b552-59152a7ba312
-ms.openlocfilehash: 75691c1b09b71580474cc22cdc8382bff55a5e29
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4f999eaa4a5c1ea7e9672a5efdc6000a4d3d9759
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413486"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457415"
 ---
 # <a name="isstandardlayout-class"></a>is_standard_layout 类
 
@@ -33,14 +33,14 @@ struct is_standard_layout;
 
 ## <a name="remarks"></a>备注
 
-此类型谓词的实例保留为 true 如果类型*Ty*是具有成员对象的标准布局在内存中，否则为 false 的类。
+如果类型*Ty*是具有内存中成员对象的标准布局的类, 则此类型谓词的实例为 true; 否则为 false。
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<type_traits>
+**标头：** \<type_traits>
 
 **命名空间：** std
 
 ## <a name="see-also"></a>请参阅
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

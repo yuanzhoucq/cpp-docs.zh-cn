@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - clocale header
 ms.assetid: 5bde3e01-cf67-4f1f-a383-447ec814d00e
-ms.openlocfilehash: 624a1afdbe0e73c81a324273836eff6b89705236
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 60d15795328de567a8ba626f5344b2fb08e57aa7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244758"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459351"
 ---
 # <a name="ltclocalegt"></a>&lt;clocale&gt;
 
@@ -19,7 +19,7 @@ ms.locfileid: "68244758"
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<clocale >
+**标头:** \<clocale >
 
 **命名空间：** std
 
@@ -54,6 +54,6 @@ lconv* localeconv();
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 标准库概述](../standard-library/cpp-standard-library-overview.md)<br/>
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[头文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 标准库概述](../standard-library/cpp-standard-library-overview.md)\
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

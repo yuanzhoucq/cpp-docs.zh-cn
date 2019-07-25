@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ Standard Library, template class containers
 - containers, C++ Standard Library
 ms.assetid: 8e915ca1-19ba-4f0d-93c8-e2c3bfd638eb
-ms.openlocfilehash: a6f4da35468143e6d7c3dda684ed93f33e29b21d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6077ff76e04e6f078946eed0856723e2a9998f58
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412405"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449600"
 ---
 # <a name="c-standard-library-containers"></a>C++ 标准库容器
 
@@ -166,11 +166,11 @@ int main()
 
 ### <a name="comparing-dissimilar-containers-c14"></a>比较不同的容器 (C++14)
 
-在 C + + 14 及更高版本，您可以通过使用其中一个比较不同的容器和/或不同的元素类型`std::equal`， `std::mismatch`，或`std::is_permutation`函数采用两个完整范围的重载。 这些重载使你能够比较具有不同长度的容器。 这些重载使用户非常不易遭受错误，并进行了优化，当比较不同长度的容器时会在固定时间内返回错误。 因此，我们建议使用这些重载，除非 (1) 有很明确的理由不这么做，或者 (2) 正在使用 [std::list](../standard-library/list-class.md) 容器，它不会从双范围优化中受益。
+在 c + + 14 及更高版本中, 可以通过使用`std::equal`、 `std::mismatch`或`std::is_permutation`函数重载之一来比较不同的容器和/或不同的元素类型, 这些重载采用两个完整范围。 这些重载使你能够比较具有不同长度的容器。 这些重载使用户非常不易遭受错误，并进行了优化，当比较不同长度的容器时会在固定时间内返回错误。 因此，我们建议使用这些重载，除非 (1) 有很明确的理由不这么做，或者 (2) 正在使用 [std::list](../standard-library/list-class.md) 容器，它不会从双范围优化中受益。
 
 ## <a name="see-also"></a>请参阅
 
-[容器](../cpp/containers-modern-cpp.md)<br/>
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)<br/>
-[\<sample container>](../standard-library/sample-container.md)<br/>
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[容器](../cpp/containers-modern-cpp.md)\
+[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)\
+[\<sample container>](../standard-library/sample-container.md)\
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

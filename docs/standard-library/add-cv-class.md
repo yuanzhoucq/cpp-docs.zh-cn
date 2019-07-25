@@ -7,16 +7,16 @@ helpviewer_keywords:
 - add_cv class
 - add_cv
 ms.assetid: a5572c78-a097-45d7-b476-ed4876889dea
-ms.openlocfilehash: 37001815710b197ec77ed0d45a16ea971ad1edce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0cc63558ea392976bd6a3c5a43735c592e4606b4
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411222"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456598"
 ---
 # <a name="addcv-class"></a>add_cv 类
 
-使**const 易失性**从类型的类型。
+从类型中进行**常量可变**类型。
 
 ## <a name="syntax"></a>语法
 
@@ -30,12 +30,12 @@ using add_cv_t = typename add_cv<T>::type;
 
 ### <a name="parameters"></a>参数
 
-*T*<br/>
+*关心*\
 要修改的类型。
 
 ## <a name="remarks"></a>备注
 
-修改后的类型的实例`add_cv<T>`已`type`成员**typedef**等效于*T*由[add_volatile](../standard-library/add-volatile-class.md)和[add_const](../standard-library/add-const-class.md)，除非*T*已具有 cv 限定符、 是引用，或未一个函数。
+修改后的类型`add_cv<T>`的实例具有与`type` [add_volatile](../standard-library/add-volatile-class.md)和[add_const](../standard-library/add-const-class.md)同时*修改的*等效的成员**typedef** , 除非已经有 cv 限定符, 是引用, 或者是才能.
 
 `add_cv_t<T>` 帮组程序类型是访问 `add_cv<T>` 成员 typedef `type` 的快捷方式。
 
@@ -86,12 +86,12 @@ invoked const volatile S.f()
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<type_traits>
+**标头：** \<type_traits>
 
 **命名空间：** std
 
 ## <a name="see-also"></a>请参阅
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[remove_const 类](../standard-library/remove-const-class.md)<br/>
-[remove_volatile 类](../standard-library/remove-volatile-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[remove_const 类](../standard-library/remove-const-class.md)\
+[remove_volatile 类](../standard-library/remove-volatile-class.md)

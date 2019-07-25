@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - vector<bool> reference class
 ms.assetid: f27854f9-0ef0-4e7e-ad2e-cd53b6cb3334
-ms.openlocfilehash: 7930c1cd93cd05a752d4997b9480c766ee26bd99
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65bfc91cf5dc79fb1e5151a6f62c394b4579883b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407713"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453212"
 ---
 # <a name="vectorltboolgtreference-class"></a>vector&lt;bool&gt;::reference 类
 
@@ -19,7 +19,7 @@ ms.locfileid: "62407713"
 
 ## <a name="remarks"></a>备注
 
-必须使用模拟引用，因为 C++ 不允许直接引用位。 `vector<bool>` 每个元素只使用一个位，这可以使用此代理类来引用。 但是，引用模拟不会完成，原因是某些赋值无效。 例如，因为地址`vector<bool>::reference`无法创建对象，将尝试使用以下代码`vector<bool>::operator&`不正确：
+必须使用模拟引用，因为 C++ 不允许直接引用位。 `vector<bool>` 每个元素只使用一个位，这可以使用此代理类来引用。 但是，引用模拟不会完成，原因是某些赋值无效。 例如, 由于无法采用`vector<bool>::reference`对象的地址, 因此以下尝试使用`vector<bool>::operator&`的代码不正确:
 
 ```cpp
 vector<bool> vb;
@@ -33,7 +33,7 @@ bool& refb = vb[1];   // conversion error - do not use
 |成员函数|描述|
 |-|-|
 |[flip](../standard-library/vector-bool-reference-flip.md)|反转向量元素的布尔值。|
-|[operator bool](../standard-library/vector-bool-reference-operator-bool.md)|提供了隐式转换`vector<bool>::reference`到**bool**。|
+|[operator bool](../standard-library/vector-bool-reference-operator-bool.md)|提供从`vector<bool>::reference`到**bool**的隐式转换。|
 |[operator=](../standard-library/vector-bool-reference-operator-assign.md)|将布尔值赋给一个位，或将引用的元素所保存的值赋给一个位。|
 
 ## <a name="requirements"></a>要求
@@ -44,6 +44,6 @@ bool& refb = vb[1];   // conversion error - do not use
 
 ## <a name="see-also"></a>请参阅
 
-[\<vector>](../standard-library/vector.md)<br/>
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<vector>](../standard-library/vector.md)\
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

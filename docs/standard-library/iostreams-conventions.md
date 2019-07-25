@@ -5,12 +5,12 @@ helpviewer_keywords:
 - iostream header
 - C++ Standard Library, iostreams
 ms.assetid: 9fe5ded0-37a1-48d1-9671-c81ffc4760ad
-ms.openlocfilehash: 52cdd06385994e49ff793e40318ca4cbbbcfcda0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 222a65f60b231ba4b3768131c15d6e0d736f211e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404827"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449017"
 ---
 # <a name="iostreams-conventions"></a>iostreams 约定
 
@@ -32,6 +32,6 @@ iostreams 最简单的用法仅要求包含标头 [\<iostream>](../standard-libr
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 标准库概述](../standard-library/cpp-standard-library-overview.md)<br/>
-[iostream 编程](../standard-library/iostream-programming.md)<br/>
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++ 标准库概述](../standard-library/cpp-standard-library-overview.md)\
+[iostream 编程](../standard-library/iostream-programming.md)\
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

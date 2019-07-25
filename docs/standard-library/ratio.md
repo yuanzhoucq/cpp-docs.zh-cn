@@ -31,12 +31,12 @@ f1_keywords:
 - ratio/std::deci
 - ratio/std::deca
 ms.assetid: 8543e912-2d84-45ea-b3c0-bd7bfacee405
-ms.openlocfilehash: 4279aa75bf4e9b8a0c7a86f102f70164bbb620e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f84bea2e3f4a01bb9428eddde3efbf53b73bc2f3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369626"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458170"
 ---
 # <a name="ltratiogt"></a>&lt;ratio&gt;
 
@@ -60,7 +60,7 @@ struct ratio // holds the ratio of Numerator to Denominator
 }
 ```
 
-该模板`ratio`定义的静态常量`num`并`den`以便`num`  /  `den` = = 分子 / 分母和`num`和`den`不具有常见因素。 `num` / `den` 是由模板类表示的值。 因此，`type`指定实例化`ratio<num, den>`。
+该模板`ratio`定义静态常量`num` , `den` `num` 并且不`den`包含任何共同因素。  /  `den` `num` `num` / `den`模板类所表示的值。 因此, `type`指定实例化`ratio<num, den>`。
 
 ### <a name="specializations"></a>专用化
 
@@ -70,7 +70,7 @@ struct ratio // holds the ratio of Numerator to Denominator
 
 每个专用化采用两个同时必须为 `ratio` 的专用化的模板参数。 `type` 的值由关联的逻辑操作确定。
 
-|名称|`type` 值|
+|name|`type` 值|
 |----------|------------------|
 |`ratio_add`|`R1 + R2`|
 |`ratio_divide`|`R1 / R2`|
@@ -85,7 +85,7 @@ struct ratio // holds the ratio of Numerator to Denominator
 
 ### <a name="typedefs"></a>typedefs
 
-为方便起见，标头定义的标准 SI 前缀的比率：
+为方便起见, 标头定义标准 SI 前缀的比率:
 
 ```cpp
 typedef ratio<1, 1000000000000000000> atto;
@@ -108,4 +108,4 @@ typedef ratio<1000000000000000000, 1> exa;
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)<br/>
+[头文件引用](../standard-library/cpp-standard-library-header-files.md)

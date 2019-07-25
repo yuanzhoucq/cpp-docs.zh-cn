@@ -38,12 +38,12 @@ helpviewer_keywords:
 - stdext::allocator_base [C++], destroy
 - stdext::allocator_base [C++], max_size
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
-ms.openlocfilehash: 59d5834b941791a659815ff0a03f1c68c8ce68bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 115f5ad4461b98f24e3aa6756e501b91ae3a1566
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411066"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456431"
 ---
 # <a name="allocatorbase-class"></a>allocator_base 类
 
@@ -61,7 +61,7 @@ class allocator_base
 |参数|描述|
 |---------------|-----------------|
 |*Type*|由分配器分配元素类型。|
-|*Sync*|分配器的同步策略有 [sync_none 类](../standard-library/sync-none-class.md)、[sync_per_container 类](../standard-library/sync-per-container-class.md)、[sync_per_thread 类](../standard-library/sync-per-thread-class.md)或 [sync_shared 类](../standard-library/sync-shared-class.md)。|
+|*同步*|分配器的同步策略有 [sync_none 类](../standard-library/sync-none-class.md)、[sync_per_container 类](../standard-library/sync-per-container-class.md)、[sync_per_thread 类](../standard-library/sync-per-thread-class.md)或 [sync_shared 类](../standard-library/sync-shared-class.md)。|
 
 ### <a name="constructors"></a>构造函数
 
@@ -85,8 +85,8 @@ class allocator_base
 
 |成员函数|描述|
 |-|-|
-|[_Charalloc](#charalloc)|为类型的数组分配存储**char**。|
-|[_Chardealloc](#chardealloc)|释放存储包含类型的元素的数组**char**。|
+|[_Charalloc](#charalloc)|为**char**类型的数组分配存储。|
+|[_Chardealloc](#chardealloc)|为包含**char**类型的元素的数组释放存储。|
 |[address](#address)|查找指定了其值的对象的地址。|
 |[allocate](#allocate)|分配大小足以存储至少某个指定数量的元素的内存块。|
 |[construct](#construct)|在使用指定值初始化的指定地址处构造特定类型的对象。|
@@ -96,13 +96,13 @@ class allocator_base
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<allocators>
+**标头：** \<allocators>
 
 **命名空间：** stdext
 
 ## <a name="charalloc"></a>  allocator_base::_Charalloc
 
-为类型的数组分配存储**char**。
+为**char**类型的数组分配存储。
 
 ```cpp
 char *_Charalloc(size_type count);
@@ -112,7 +112,7 @@ char *_Charalloc(size_type count);
 
 |参数|描述|
 |---------------|-----------------|
-|*count*|数组中要分配的元素数目。|
+|*计数*|数组中要分配的元素数目。|
 
 ### <a name="return-value"></a>返回值
 
@@ -124,7 +124,7 @@ char *_Charalloc(size_type count);
 
 ## <a name="chardealloc"></a>  allocator_base::_Chardealloc
 
-释放存储包含类型的元素的数组**char**。
+为包含**char**类型的元素的数组释放存储。
 
 ```cpp
 void _Chardealloc(void* ptr, size_type count);
@@ -135,7 +135,7 @@ void _Chardealloc(void* ptr, size_type count);
 |参数|描述|
 |---------------|-----------------|
 |*ptr*|指向要从存储中释放的第一个对象的指针。|
-|*count*|要从存储中释放的对象数量。|
+|*计数*|要从存储中释放的对象数量。|
 
 ### <a name="remarks"></a>备注
 
@@ -153,7 +153,7 @@ const_pointer address(const_reference val);
 
 ### <a name="parameters"></a>参数
 
-*val*<br/>
+*初始值*\
 要搜索其地址的对象的常量或非常量值。
 
 ### <a name="return-value"></a>返回值
@@ -341,4 +341,4 @@ typedef Type value_type;
 
 ## <a name="see-also"></a>请参阅
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

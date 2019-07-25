@@ -11,12 +11,12 @@ helpviewer_keywords:
 - incompatible iterators
 - debug iterator support
 ms.assetid: f3f5bd15-4be8-4d64-a4d0-8bc0761c68b6
-ms.openlocfilehash: 9042093bb073807e9bb1476ab514c82010aeab70
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3ccb618c9a3c6b21d6ffe3fbbce7b6c1140e0564
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394048"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450591"
 ---
 # <a name="debug-iterator-support"></a>Debug Iterator Support
 
@@ -28,7 +28,7 @@ C++ 标准描述了成员函数可能会如何导致一个容器的迭代器无�
 
 - 通过使用推送或插入增加[向量](../standard-library/vector.md)的大小会导致进入 `vector` 的迭代器无效。
 
-## <a name="invalid-iterators"></a>无效的迭代器
+## <a name="invalid-iterators"></a>迭代器无效
 
 如果在调试模式下编译此示例程序，则在运行时它将断言并终止。
 
@@ -87,7 +87,7 @@ int main() {
 -572662307
 ```
 
-## <a name="unitialized-iterators"></a>未初始化的迭代器
+## <a name="unitialized-iterators"></a>未初始化迭代器
 
 如果在初始化之前尝试使用迭代器，断言也会发生，如下所示：
 
@@ -104,7 +104,7 @@ int main() {
 }
 ```
 
-## <a name="incompatible-iterators"></a>不兼容的迭代器
+## <a name="incompatible-iterators"></a>迭代器不兼容
 
 下面的代码示例引发断言，因为指向 [for_each](../standard-library/algorithm-functions.md#for_each) 算法的两个迭代器不兼容。 算法会执行检查以确定提供给它们的迭代器是否引用相同的容器。
 
@@ -128,9 +128,9 @@ int main()
 
 请注意，本示例使用 lambda 表达式 `[] (int& elem) { elem *= 2; }` 而不是某个函数。 虽然此选项对于断言失败没有任何影响 - 类似函数会导致相同的故障，lambda 是完成 compact 函数对象任务非常有用的方式。 有关 lambda 表达式的详细信息，请参阅 [Lambda 表达式](../cpp/lambda-expressions-in-cpp.md)。
 
-## <a name="iterators-going-out-of-scope"></a>接下来超出范围的迭代器
+## <a name="iterators-going-out-of-scope"></a>迭代器超出范围
 
-调试迭代器检查也会导致中声明的迭代器变量**有关**循环，以采用正确的作用域时**为**循环作用域结束。
+调试迭代器检查还会导致在**for**循环中声明的迭代器变量在**for**循环范围结束时超出范围。
 
 ```cpp
 // iterator_debugging_4.cpp
@@ -148,7 +148,7 @@ int main() {
 
 ## <a name="destructors-for-debug-iterators"></a>调试迭代器的析构函数
 
-调试迭代器具有不平常的析构函数。 如果析构函数不会运行，但释放对象的内存，可能会出现访问冲突和数据损坏。 请看以下示例：
+调试迭代器具有不平常的析构函数。 如果析构函数未运行, 但对象的内存被释放, 则可能会发生访问冲突和数据损坏。 请看以下示例：
 
 ```cpp
 // iterator_debugging_5.cpp
@@ -175,4 +175,4 @@ struct derived : base {
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 标准库概述](../standard-library/cpp-standard-library-overview.md)<br/>
+[C++ 标准库概述](../standard-library/cpp-standard-library-overview.md)

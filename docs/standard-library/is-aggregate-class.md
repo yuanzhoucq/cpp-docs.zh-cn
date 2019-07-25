@@ -5,12 +5,12 @@ f1_keywords:
 - type_traits/std::is_aggregate
 helpviewer_keywords:
 - is_aggregate
-ms.openlocfilehash: 7d979d4e4019ada12b72fb563c0b969fffe2c12d
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 89749e2b4c0e6aaf00de074718cfb598333bc739
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268979"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456696"
 ---
 # <a name="isaggregate-class"></a>is_aggregate 类
 
@@ -25,12 +25,12 @@ struct is_aggregate;
 
 ### <a name="parameters"></a>参数
 
-*T*<br/>
+*关心*\
 要查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型谓词的实例将保留 true 类型*T*标记的类类型`aggregate`，否则为 false。 如果*T*是类类型，它必须是完整的类型。
+如果类型*T*是标记`aggregate`为的类类型, 则类型谓词的实例为 true; 否则为 false。 如果*T*是类类型, 则它必须是完整类型。
 
 ## <a name="requirements"></a>要求
 
@@ -40,4 +40,4 @@ struct is_aggregate;
 
 ## <a name="see-also"></a>请参阅
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

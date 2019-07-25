@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - underlying_type
 ms.assetid: 691ddce3-2677-4480-bd35-d933fab85d3e
-ms.openlocfilehash: 23e5e9bc5406265f49fca2ed220c597cb32e2a9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 465383357e6c0306c24fe8325327327c3a3b64c1
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399353"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454976"
 ---
 # <a name="underlyingtype-class"></a>underlying_type 类
 
@@ -26,19 +26,19 @@ struct underlying_type;
 
 ### <a name="parameters"></a>参数
 
-*T*<br/>
+*关心*\
 要修改的类型。
 
 ## <a name="remarks"></a>备注
 
-`type`模板类的成员 typedef 名称的基础整型类型*T*，当*T*是枚举类型，否则没有任何成员 typedef `type`。
+当 t 是枚举类型时, 模板类的 `type` 成员typedef命名t的基础整型类型,否则没有成员`type` typedef。
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<type_traits>
+**标头：** \<type_traits>
 
 **命名空间：** std
 
 ## <a name="see-also"></a>请参阅
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

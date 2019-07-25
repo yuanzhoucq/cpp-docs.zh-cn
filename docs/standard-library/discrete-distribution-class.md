@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::discrete_distribution [C++], param_type
 - std::discrete_distribution [C++], param_type
 ms.assetid: 8c8ba8f8-c06f-4f07-b354-f53950142fcf
-ms.openlocfilehash: 7ad375c14e9034a55d280a2927d6ef00f098ddbc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce668ebfdafc4a53bfc71ecf1f2fa76abb1c7532
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413835"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454386"
 ---
 # <a name="discretedistribution-class"></a>discrete_distribution 类
 
@@ -72,8 +72,8 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*IntType*<br/>
-整数结果类型，默认为**int**。有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*IntType*\
+整数结果类型, 默认为**int**。有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
@@ -171,7 +171,7 @@ Distribution for 100 samples:
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<random>
+**标头：** \<random>
 
 **命名空间：** std
 
@@ -200,28 +200,28 @@ explicit discrete_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-*firstW*<br/>
+*firstW*\
 从中构造分布的列表中的第一个迭代器。
 
-*lastW*<br/>
+*lastW*\
 从中构造分布的列表中的最后一个迭代器（不包含此迭代器，因为迭代器末尾使用空元素）。
 
-*weightlist*<br/>
+*weightlist*\
 从中构造分布的 [initializer_list](../cpp/initializers.md)。
 
-*count*<br/>
+*计*\
 分布范围中的元素数。 如果 `count==0`，则等效于默认构造函数（始终生成零）。
 
-*low*<br/>
+*低级*\
 分布范围中的最低值。
 
-*high*<br/>
+*严重*\
 分布范围中的最高值。
 
-*weightfunc*<br/>
-表示分布的概率函数的对象。 参数和返回值必须可转换为**double**。
+*weightfunc*\
+表示分布的概率函数的对象。 参数和返回值都必须可转换为**double**。
 
-*parm*<br/>
+*parm*\
 用于构造分布的 `param_type` 结构。
 
 ### <a name="remarks"></a>备注
@@ -230,12 +230,12 @@ explicit discrete_distribution(const param_type& parm);
 
 包含 *firstW* 和 *lastW* 参数的迭代器范围构造函数使用通过区间序列 [*firstW*, *lastW*) 的迭代器中获取的加权值构造分布对象。
 
-具有初始值设定项列表构造函数*weightlist*参数构造分布对象初始值设定项列表中的权重*weightlist*。
+具有*weightlist*参数的初始值设定项列表构造函数使用初始值设定项列表*weightlist*中的权重来构造分布对象。
 
 包含 *count*、*low*、*high*、和 *weightfunc* 参数的构造函数基于以下规则构造初始化的分布对象：
 
 - 如果 *count* < 1，则 **n** = 1，并且等效于默认构造函数（始终生成零）。
-- 如果 *count* > 0，则 **n** = *count*。 提供**d** = (*高* - *低*) / **n**大于零，使用**d**统一子范围，每个权重分配如下： `weight[k] = weightfunc(x)`，其中**x** = *低* + **k**  * **d** + **d** / 2，为**k** = 0，...， **n** -1。
+- 如果 *count* > 0，则 **n** = *count*。 如果提供的**d** = (*high* - *low*)/ **n**大于零, 则使用**d**均匀子范围, 每个权重都分配如下`weight[k] = weightfunc(x)`:, 其中**x** = *low*  +  **k**    d d/2, 表示 k = 0, ..., n-1。 +  * 
 
 包含 `param_type` 参数 *parm* 的构造函数将 *parm* 用作存储的参数结构来构造分布对象。
 
@@ -268,28 +268,28 @@ struct param_type {
 
 ### <a name="parameters"></a>参数
 
-*firstW*<br/>
+*firstW*\
 从中构造分布的列表中的第一个迭代器。
 
-*lastW*<br/>
+*lastW*\
 从中构造分布的列表中的最后一个迭代器（不包含此迭代器，因为迭代器末尾使用空元素）。
 
-*weightlist*<br/>
+*weightlist*\
 从中构造分布的 [initializer_list](../cpp/initializers.md)。
 
-*count*<br/>
+*计*\
 分布范围中的元素数。 如果 *count* 为 0，则等效于默认构造函数（始终生成零）。
 
-*low*<br/>
+*低级*\
 分布范围中的最低值。
 
-*high*<br/>
+*严重*\
 分布范围中的最高值。
 
-*weightfunc*<br/>
-表示分布的概率函数的对象。 参数和返回值必须可转换为**double**。
+*weightfunc*\
+表示分布的概率函数的对象。 参数和返回值都必须可转换为**double**。
 
-*right*<br/>
+*然后*\
 要与它进行比较的 `param_type` 对象。
 
 ### <a name="remarks"></a>备注
@@ -298,4 +298,4 @@ struct param_type {
 
 ## <a name="see-also"></a>请参阅
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

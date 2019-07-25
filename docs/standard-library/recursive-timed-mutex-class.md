@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::recursive_timed_mutex [C++], try_lock_for
 - std::recursive_timed_mutex [C++], try_lock_until
 - std::recursive_timed_mutex [C++], unlock
-ms.openlocfilehash: 2cb6fe8588f4b81ae5c67533c4b9124ae8c9b252
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ae61d17084cc744cac8819ac2c0ca48eb59add7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370068"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460122"
 ---
 # <a name="recursivetimedmutex-class"></a>recursive_timed_mutex 类
 
@@ -56,7 +56,7 @@ class recursive_timed_mutex;
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<互斥体 >
+**标头:** \<mutex >
 
 **命名空间：** std
 
@@ -102,11 +102,11 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>返回值
 
-**true**如果此方法成功获取的所有权`mutex`或如果调用线程已拥有`mutex`; 否则为**false**。
+如果方法成功获取的所有权`mutex` , 则**为 true** `mutex`; 否则为。如果调用线程已拥有, 则为 true; 否则为**false**。
 
 ### <a name="remarks"></a>备注
 
-如果调用线程已拥有`mutex`，该函数将立即返回**true**，和上一锁定保持有效。
+如果调用线程已拥有`mutex`, 则函数立即返回**true**, 而上一个锁仍有效。
 
 ## <a name="try_lock_for"></a>try_lock_for
 
@@ -119,16 +119,16 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>参数
 
-*Rel_time*<br/>
+*Rel_time*\
 一个 [chrono::duration](../standard-library/duration-class.md) 对象，指定此方法尝试获取 `mutex` 所有权的最大时间量。
 
 ### <a name="return-value"></a>返回值
 
-**true**如果此方法成功获取的所有权`mutex`或如果调用线程已拥有`mutex`; 否则为**false**。
+如果方法成功获取的所有权`mutex` , 或如果调用`mutex`线程已拥有, 则**为 true** ; 否则为**false**。
 
 ### <a name="remarks"></a>备注
 
-如果调用线程已拥有`mutex`，该方法立即返回**true**，和上一锁定保持有效。
+如果调用线程已拥有`mutex`, 则该方法会立即返回**true**, 而上一个锁仍有效。
 
 ## <a name="try_lock_until"></a>try_lock_until
 
@@ -143,16 +143,16 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="parameters"></a>参数
 
-*Abs_time*<br/>
+*Abs_time*\
 一个时间点，指定阈值，在此之后此方法不再尝试获取 `mutex` 所有权。
 
 ### <a name="return-value"></a>返回值
 
-**true**如果此方法成功获取的所有权`mutex`或如果调用线程已拥有`mutex`; 否则为**false**。
+如果方法成功获取的所有权`mutex` , 或如果调用`mutex`线程已拥有, 则**为 true** ; 否则为**false**。
 
 ### <a name="remarks"></a>备注
 
-如果调用线程已拥有`mutex`，该方法立即返回**true**，和上一锁定保持有效。
+如果调用线程已拥有`mutex`, 则该方法会立即返回**true**, 而上一个锁仍有效。
 
 ## <a name="unlock"></a>unlock
 
@@ -170,5 +170,5 @@ void unlock();
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<mutex>](../standard-library/mutex.md)<br/>
+[头文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

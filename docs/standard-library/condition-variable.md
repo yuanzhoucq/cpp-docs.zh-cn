@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - <condition_variable>
 ms.assetid: 8567f7cc-20bd-42a7-9137-87c46f878009
-ms.openlocfilehash: ed98966f651df76078fa47b05f5a2d8ae1b71d05
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: e63dc5a494f471997c28be8b2cd237aba45a6fd6
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244578"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457382"
 ---
 # <a name="ltconditionvariablegt"></a>&lt;condition_variable&gt;
 
@@ -19,12 +19,12 @@ ms.locfileid: "68244578"
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<condition_variable >
+**标头:** \<condition_variable >
 
 **命名空间：** std
 
 > [!NOTE]
-> 在使用已编译的代码 **/clr**，禁止使用此标头。
+> 在使用 **/clr**编译的代码中, 此标头被阻止。
 
 ### <a name="remarks"></a>备注
 
@@ -49,9 +49,9 @@ while (condition is false)
 
 - `wait_for` 等待指定的 `time interval`。
 
-这些方法各自拥有两个重载版本。 其中一个版本只需等待并可虚假唤醒。 而另一个版本使用其他模板参数定义谓词。 该方法不返回之前的谓词 **，则返回 true**。
+这些方法各自拥有两个重载版本。 其中一个版本只需等待并可虚假唤醒。 而另一个版本使用其他模板参数定义谓词。 此方法不返回, 直到该谓词为**true**。
 
-每个类还具有两个方法，用于通知其条件是一个条件变量 **，则返回 true**。
+每个类还具有两个方法, 这些方法用于通知条件变量其条件为**true**。
 
 - `notify_one` 唤醒等待条件变量的其中一个线程。
 
@@ -67,6 +67,6 @@ enum class cv_status { no_timeout, timeout };
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)<br/>
-[condition_variable 类](../standard-library/condition-variable-class.md)<br/>
-[condition_variable_any 类](../standard-library/condition-variable-any-class.md)<br/>
+[头文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[condition_variable 类](../standard-library/condition-variable-class.md)\
+[condition_variable_any 类](../standard-library/condition-variable-any-class.md)

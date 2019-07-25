@@ -5,12 +5,12 @@ f1_keywords:
 - iosfwd/std::streambuf
 - iosfwd/std::wstreambuf
 ms.assetid: 2678e18f-f0f0-4995-bc53-f1bc7dfc4ec6
-ms.openlocfilehash: 505739861771a05dd39741f432579a6e9b2d0c26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 178b489d92a4ed7340084490329fdf8fa16c2aa7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412379"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449592"
 ---
 # <a name="ltstreambufgt-typedefs"></a>&lt;streambuf&gt; typedef
 
@@ -20,7 +20,7 @@ ms.locfileid: "62412379"
 
 ## <a name="streambuf"></a>  streambuf
 
-专用化`basic_streambuf`，它使用**char**作为模板参数。
+使用 char 作为`basic_streambuf`模板参数的的专用化。
 
 ```cpp
 typedef basic_streambuf<char, char_traits<char>> streambuf;
@@ -28,11 +28,11 @@ typedef basic_streambuf<char, char_traits<char>> streambuf;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板类的同义词[basic_streambuf](../standard-library/basic-streambuf-class.md)，专用于类型的元素**char**具有默认字符特征。
+该类型是模板类[basic_streambuf](../standard-library/basic-streambuf-class.md)的同义词, 专用于具有默认字符特征的**char**类型的元素。
 
 ## <a name="wstreambuf"></a>  wstreambuf
 
-专用化`basic_streambuf`，它使用**wchar_t**作为模板参数。
+使用 wchar_t 作为`basic_streambuf`模板参数的的专用化。
 
 ```cpp
 typedef basic_streambuf<wchar_t, char_traits<wchar_t>> wstreambuf;
@@ -40,8 +40,8 @@ typedef basic_streambuf<wchar_t, char_traits<wchar_t>> wstreambuf;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板类的同义词[basic_streambuf](../standard-library/basic-streambuf-class.md)，专用于类型的元素**wchar_t**具有默认字符特征。
+该类型是模板类[basic_streambuf](../standard-library/basic-streambuf-class.md)的同义词, 专用于具有默认字符特征的**wchar_t**类型的元素。
 
 ## <a name="see-also"></a>请参阅
 
-[\<streambuf>](../standard-library/streambuf.md)<br/>
+[\<streambuf>](../standard-library/streambuf.md)

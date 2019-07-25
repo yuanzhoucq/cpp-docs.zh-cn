@@ -108,12 +108,12 @@ helpviewer_keywords:
 - std::ios_base [C++], width
 - std::ios_base [C++], xalloc
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
-ms.openlocfilehash: 0aa79d458c964bf3e8bdd34e564bba4965546930
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 056b7e47c474c64bf357523e2995ef49d456a9cd
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245300"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449187"
 ---
 # <a name="iosbase-class"></a>ios_base 类
 
@@ -125,13 +125,13 @@ Ios_base 类的对象存储格式设置信息，其中包括：
 
 - [iostate](#iostate) 类型的对象中的异常掩码。
 
-- 类型的对象中的字段宽度**int**。
+- 类型为**int**的对象中的字段宽度。
 
-- 类型的对象中的显示精度**int**。
+- 类型为**int**的对象中的显示精度。
 
-- 类型的对象中的区域设置对象`locale`。
+- 类型`locale`的对象中的区域设置对象。
 
-- 两个可扩展数组，包含类型的元素**长**并**void**指针。
+- 两个可扩展数组, 其元素类型为**long**和**void**指针。
 
 Ios_base 类的对象还将流状态信息存储在 [iostate](#iostate) 类型的对象和回调堆栈中。
 
@@ -170,7 +170,7 @@ Ios_base 类的对象还将流状态信息存储在 [iostate](#iostate) 类型�
 |[basefield](#fmtflags)|定义为 `dec` &#124; `hex` &#124; `oct` 的位掩码。|
 |[beg](#seekdir)|指定相对于序列的开头进行查找。|
 |[binary](#openmode)|指定文件应读取为二进制流，而不是文本流。|
-|[boolalpha](#fmtflags)|指定插入或提取类型的对象的**bool**作为名称 (如**true**并**false**) 而不是数值。|
+|[boolalpha](#fmtflags)|指定将**bool**类型的对象插入或提取为名称 (例如**true**和**false**), 而不是数值。|
 |[cur](#seekdir)|指定相对于序列中的当前位置进行查找。|
 |[dec](#fmtflags)|指定以十进制格式插入或提取整数值。|
 |[end](#seekdir)|指定相对于序列的末尾进行查找。|
@@ -226,7 +226,7 @@ Ios_base 类的对象还将流状态信息存储在 [iostate](#iostate) 类型�
 
 **命名空间：** std
 
-## <a name="event"></a> 事件
+## <a name="event"></a>引发
 
 指定事件类型。
 
@@ -241,17 +241,17 @@ enum event {
 
 此类型是枚举的类型，该类型描述的对象可将作为参数使用的回调事件存储到使用 [register_callback](#register_callback) 注册的函数中。 非重复的事件值为：
 
-- `copyfmt_event`标识调用末尾附近发生的回调[copyfmt](../standard-library/basic-ios-class.md#copyfmt)之前[异常掩码](../standard-library/ios-base-class.md)复制。
+- `copyfmt_event`, 用于标识在调用[copyfmt](../standard-library/basic-ios-class.md#copyfmt)的末尾附近发生的回调, 刚好在复制[异常掩码](../standard-library/ios-base-class.md)之前。
 
 - `erase_event`标识发生在调用开始时的回调[copyfmt](../standard-library/basic-ios-class.md#copyfmt)，或调用的析构函数的开头 **\*这**。
 
-- `imbue_event`标识发生在结束对的调用的回调[imbue](#imbue)，该函数返回之前。
+- `imbue_event`, 用于标识在调用[imbue](#imbue)时, 刚好在函数返回之前发生的回调。
 
 ### <a name="example"></a>示例
 
 有关示例，请参阅 [register_callback](#register_callback)。
 
-## <a name="event_callback"></a> event_callback
+## <a name="event_callback"></a>event_callback
 
 描述传递到 [register_call](#register_callback) 的函数。
 
@@ -264,13 +264,13 @@ typedef void (__cdecl *event_callback)(
 
 ### <a name="parameters"></a>参数
 
-*（_E)* \
+*_E*\
 [事件](#event)。
 
-*（_b)* \
+*_Base*\
 其中调用了事件的流。
 
-*（_I)* \
+*_I*\
 用户定义的数字。
 
 ### <a name="remarks"></a>备注
@@ -281,7 +281,7 @@ typedef void (__cdecl *event_callback)(
 
 有关使用 `event_callback` 的示例，请参阅 [register_call](#register_callback)。
 
-## <a name="failure"></a> 失败
+## <a name="failure"></a>否则
 
 根据 `iostreams` 库中的函数，类 `failure` 将引发的所有对象类型的基类定义为异常，以在流缓冲操作期间报告错误。
 
@@ -333,7 +333,7 @@ int main ( )
 Caught an exception: ios_base::failbit set
 ```
 
-## <a name="flags"></a> 标志
+## <a name="flags"></a>随意
 
 设置或返回当前的标志设置。
 
@@ -355,7 +355,7 @@ fmtflags flags(fmtflags fmtfl);
 
 有关标志列表，请参阅 [ios_base::fmtflags](#fmtflags)。
 
-第一个成员函数返回存储的格式标志。 第二个成员函数存储*fmtfl*在格式标志并返回其先前的存储值。
+第一个成员函数返回存储的格式标志。 第二个成员函数将*fmtfl*存储在格式标志中, 并返回其以前存储的值。
 
 ### <a name="example"></a>示例
 
@@ -379,7 +379,7 @@ int main ( )
 16896
 ```
 
-## <a name="fmtflags"></a> fmtflags
+## <a name="fmtflags"></a>fmtflags
 
 用于指定输出外观的常数。
 
@@ -429,7 +429,7 @@ public:
 
 - `right`，用于通过在已生成字段的开头插入填充字符（右对齐），来根据需要填充字段宽度。
 
-- `boolalpha`用于插入或提取类型的对象**bool**作为名称 (如**true**并**false**) 而不是数值。
+- `boolalpha`, 用于插入或提取**bool**类型的对象作为名称 (如**true**和**false**) 而不是数值。
 
 - `fixed`，用于以固定点格式（不带指数字段）插入浮点值。
 
@@ -455,7 +455,7 @@ public:
 
 有关修改这些格式标志的函数的示例，请参阅 [\<iomanip>](../standard-library/iomanip.md)。
 
-## <a name="getloc"></a> getloc
+## <a name="getloc"></a>getloc
 
 返回存储的区域设置对象。
 
@@ -485,7 +485,7 @@ int main( )
 C
 ```
 
-## <a name="imbue"></a> imbue
+## <a name="imbue"></a>imbue
 
 更改区域设置。
 
@@ -504,13 +504,13 @@ locale imbue(const locale& _Loc);
 
 ### <a name="remarks"></a>备注
 
-此成员函数存储 *_Loc*中的区域设置对象，然后报告回调事件和`imbue_event`。 它返回先前的存储值。
+该成员函数将 *_Loc*存储在区域设置对象中, 然后报告回调事件`imbue_event`和。 它返回先前的存储值。
 
 ### <a name="example"></a>示例
 
 有关示例，请参阅 [basic_ios::imbue](../standard-library/basic-ios-class.md#imbue)。
 
-## <a name="init"></a> Init
+## <a name="init"></a>Init
 
 在构造时创建标准 iostream 对象。
 
@@ -522,7 +522,7 @@ class Init { };
 
 此嵌套类描述一个对象，该对象的构造可确保即使在执行任意静态对象的构造函数前也可正确构造标准 iostreams 对象。
 
-## <a name="ios_base"></a> ios_base
+## <a name="ios_base"></a>ios_base
 
 构造 ios_base 对象。
 
@@ -534,7 +534,7 @@ ios_base();
 
 此（受保护）构造函数不会执行任何操作。 稍后对 **basic_ios::** [init](../standard-library/basic-ios-class.md#init) 的调用必须先初始化此对象，然后才可被安全销毁。 因此，类 ios_base 的唯一安全用途是作为模板类 [basic_ios](../standard-library/basic-ios-class.md) 的基类。
 
-## <a name="iostate"></a> iostate
+## <a name="iostate"></a>iostate
 
 描述流状态的常量的类型。
 
@@ -560,9 +560,9 @@ public:
 
 - `failbit`（用于记录一个从流中提取有效字段失败的操作）。
 
-此外，有用的值是`goodbit`，则无前面提到的 bits 设置 (`goodbit`保证为零)。
+此外, 有用的值为`goodbit`, 其中不会设置前面提到的任何位 (`goodbit`保证为零)。
 
-## <a name="iword"></a> iword
+## <a name="iword"></a>iword
 
 分配将存储为 `iword` 的值。
 
@@ -577,9 +577,9 @@ long& iword(int idx);
 
 ### <a name="remarks"></a>备注
 
-成员函数将返回元素的引用*idx*类型的元素的可扩展数组**长**。 所有元素均有效存在，且起初会存储值 0。 下次调用此对象的 `iword` 后、对象由对 **basic_ios::** [copyfmt](../standard-library/basic-ios-class.md#copyfmt) 的调用更改后或者对象被销毁后，该返回引用将无效。
+此成员函数返回一个对具有**long**类型的元素的可扩展数组的元素*idx*的引用。 所有元素均有效存在，且起初会存储值 0。 下次调用此对象的 `iword` 后、对象由对 **basic_ios::** [copyfmt](../standard-library/basic-ios-class.md#copyfmt) 的调用更改后或者对象被销毁后，该返回引用将无效。
 
-如果*idx*为负或唯一的存储的元素不可用，如果该函数将调用[setstate](../standard-library/basic-ios-class.md#setstate) **(badbit)** 并返回可能不是唯一的引用。
+如果*idx*为负数或唯一存储对该元素不可用, 则该函数将调用[setstate](../standard-library/basic-ios-class.md#setstate) **(badbit)** 并返回一个可能不唯一的引用。
 
 若要获取唯一索引以用于类型 `ios_base` 的所有对象，请调用 [xalloc](#xalloc)。
 
@@ -587,7 +587,7 @@ long& iword(int idx);
 
 有关如何使用 `iword` 的示例，请参阅 [xalloc](#xalloc)。
 
-## <a name="openmode"></a> 文件的连接
+## <a name="openmode"></a>openmode
 
 介绍如何与流进行交互。
 
@@ -607,17 +607,17 @@ public:
 
 此类型为 `bitmask type`，它描述的对象可存储多个 iostreams 对象的开放模式。 非重复的标志值（元素）为：
 
-- `app`若要查找每次插入前流的末尾。
+- `app`, 用于在每次插入之前查找到流的末尾。
 
-- `ate`首次创建其控制的对象时查找流末尾。
+- `ate`, 用于在首次创建其控制对象时查找到流的末尾。
 
-- `binary`用于读取文件作为二进制流，而不是文本流。
+- `binary`, 将文件读取为二进制流, 而不是文本流。
 
-- `in`以允许从流中的提取。
+- `in`, 用于允许从流中提取。
 
-- `out`以允许插入到流。
+- `out`, 用于允许插入到流。
 
-- `trunc`若要创建其控制的对象时删除现有文件的内容。
+- `trunc`, 用于在创建其控制对象时删除现有文件的内容。
 
 ### <a name="example"></a>示例
 
@@ -637,7 +637,7 @@ int main ( )
 }
 ```
 
-## <a name="op_eq"></a> 运算符 =
+## <a name="op_eq"></a>operator =
 
 ios_base 对象的赋值运算符。
 
@@ -647,7 +647,7 @@ ios_base& operator=(const ios_base& right);
 
 ### <a name="parameters"></a>参数
 
-*右侧*\
+*然后*\
 一个 `ios_base` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -660,7 +660,7 @@ ios_base& operator=(const ios_base& right);
 
 此运算符仅由派生自 `ios_base` 的类使用。
 
-## <a name="precision"></a> 精度
+## <a name="precision"></a>precision
 
 指定浮点数中显示的位数。
 
@@ -676,7 +676,7 @@ streamsize precision(streamsize _Prec);
 
 ### <a name="return-value"></a>返回值
 
-第一个成员函数返回存储的[显示精度](../standard-library/ios-base-class.md)。 第二个成员函数存储 *_Prec*在显示精度并返回其先前的存储值。
+第一个成员函数返回存储的[显示精度](../standard-library/ios-base-class.md)。 第二个成员函数在显示精度中存储 *_Prec* , 并返回其以前存储的值。
 
 ### <a name="remarks"></a>备注
 
@@ -706,7 +706,7 @@ int main( )
 31.312
 ```
 
-## <a name="pword"></a> pword
+## <a name="pword"></a>pword
 
 分配将存储为 `pword` 的值。
 
@@ -716,12 +716,12 @@ void *& pword(int _Idx);
 
 ### <a name="parameters"></a>参数
 
-*上 _Idx*\
+*_Idx*\
 要存储为 `pword` 的值的索引。
 
 ### <a name="remarks"></a>备注
 
-成员函数返回的引用元素 _ *Idx*类型的元素的可扩展数组**void**指针。 所有元素均有效存在，且起初会存储空指针。 下次调用此对象的 `pword` 后、对象由对 **basic_ios::** [copyfmt](../standard-library/basic-ios-class.md#copyfmt) 的调用更改后或者对象被销毁后，该返回引用将无效。
+成员函数返回对元素 _ *Idx*的引用, 该数组包含**void**指针类型的元素。 所有元素均有效存在，且起初会存储空指针。 下次调用此对象的 `pword` 后、对象由对 **basic_ios::** [copyfmt](../standard-library/basic-ios-class.md#copyfmt) 的调用更改后或者对象被销毁后，该返回引用将无效。
 
 如果 _ *Idx* 为负或唯一存储对该元素不可用，则此函数会调用 [setstate](../standard-library/basic-ios-class.md#setstate) **(badbit)** 并返回一个可能并不唯一的引用。
 
@@ -731,7 +731,7 @@ void *& pword(int _Idx);
 
 有关使用 `pword` 的示例，请参考 [xalloc](#xalloc)。
 
-## <a name="register_callback"></a> register_callback
+## <a name="register_callback"></a>register_callback
 
 指定一个回调函数。
 
@@ -750,7 +750,7 @@ void register_callback(
 
 ### <a name="remarks"></a>备注
 
-成员函数将对推送`{pfn, idx}`到存储的回调堆栈[回调堆栈](../standard-library/ios-base-class.md)。 当回调事件**ev**进行报告后，调用函数时，按相反的顺序的注册表中，由表达式`(*pfn)(ev, *this, idx)`。
+该成员函数将对`{pfn, idx}`推送到存储的回调堆栈[回调堆栈](../standard-library/ios-base-class.md)上。 报告回调事件**ev**后, 表达式`(*pfn)(ev, *this, idx)`将按注册表的反向顺序调用这些函数。
 
 ### <a name="example"></a>示例
 
@@ -839,7 +839,7 @@ in callback2
 an erase event
 ```
 
-## <a name="seekdir"></a> seekdir
+## <a name="seekdir"></a>seekdir
 
 指定偏移操作的起始点。
 
@@ -858,13 +858,13 @@ namespace std {
 
 ### <a name="remarks"></a>备注
 
-类型为描述一个对象，可以将存储作为若干 iostream 类的成员函数的参数所使用的搜索模式的枚举的类型。 非重复的标志值为：
+类型是一个枚举类型, 它描述一个对象, 该对象可将查找模式存储为多个 iostream 类的成员函数的自变量。 非重复的标志值为：
 
-- `beg`若要查找 （更改当前读取或写入位置） 相对于序列 （数组、 流或文件） 的开头。
+- `beg`, 用于相对于序列的开头 (数组、流或文件) 查找 (更改当前读取或写入位置)。
 
-- `cur`相对于序列中的当前位置进行查找。
+- `cur`, 用于相对于序列中的当前位置进行查找。
 
-- `end`相对于序列的末尾进行查找。
+- `end`, 用于相对于序列的末尾进行查找。
 
 ### <a name="example"></a>示例
 
@@ -888,7 +888,7 @@ int main ( )
 }
 ```
 
-## <a name="setf"></a> setf
+## <a name="setf"></a>setf
 
 设置指定标志。
 
@@ -904,11 +904,11 @@ fmtflags setf(
 
 ### <a name="parameters"></a>参数
 
-*掩码 （_m)* \
+*_Mask*\
 要打开的标志。
 
 *_Unset*\
-要关闭的标志。
+要禁用的标志。
 
 ### <a name="return-value"></a>返回值
 
@@ -916,7 +916,7 @@ fmtflags setf(
 
 ### <a name="remarks"></a>备注
 
-第一个成员函数有效地调用[标志](#flags)( *\_掩码* &#124; *\_标志*) （将所选的位设置），然后返回以前的格式标志。 第二个成员函数有效地调用`flags(_Mask & fmtfl, flags & ~_Mask)`（替换下一个掩码，所选的位），然后返回以前的格式标志。
+第一个成员函数有效地调用[标志](#flags)(  *\_掩码* &#124;  *\_标志*) (设置选定位), 然后返回前面的格式标志。 第二个成员函数有效`flags(_Mask & fmtfl, flags & ~_Mask)`调用 (替换掩码下所选的位), 然后返回前面的格式标志。
 
 ### <a name="example"></a>示例
 
@@ -942,7 +942,7 @@ int main( )
 }
 ```
 
-## <a name="sync_with_stdio"></a> sync_with_stdio
+## <a name="sync_with_stdio"></a>sync_with_stdio
 
 确保 iostream 和 C 运行时库操作按照它们在源代码中出现的顺序发生。
 
@@ -955,17 +955,17 @@ static bool sync_with_stdio(
 ### <a name="parameters"></a>参数
 
 *_Sync*\
-所有流都是否与同步`stdio`。
+所有流是否与`stdio`同步。
 
 ### <a name="return-value"></a>返回值
 
-此函数的以前的设置。
+此函数的上一个设置。
 
 ### <a name="remarks"></a>备注
 
-静态成员函数存储`stdio`同步标志，它最初是**true**。 当 **，则返回 true**，此标志可确保对同一文件的操作都正确同步之间[iostreams](../standard-library/iostreams-conventions.md)函数和定义中的C++标准库。 否则为同步可能会或可能不保证，但可能会提高性能。 函数存储 *_Sync*中`stdio`同步标志，并返回其先前的存储的值。 您可以调用它可靠地仅在执行对标准流的任何操作之前。
+静态成员函数存储`stdio`同步标志, 该标志最初为**true**。 如果**为 true, 则**此标志确保对同一文件的操作在[iostreams](../standard-library/iostreams-conventions.md)函数和C++标准库中定义的函数之间正确同步。 否则, 可能会或不保证同步, 但可能会提高性能。 函数将 *_Sync*存储在`stdio`同步标志中, 并返回其以前存储的值。 只有在对标准流执行任何操作之前, 才能可靠地调用此方法。
 
-## <a name="unsetf"></a> unsetf
+## <a name="unsetf"></a>unsetf
 
 将导致指定的标志处于关闭状态。
 
@@ -977,18 +977,18 @@ void unsetf(
 
 ### <a name="parameters"></a>参数
 
-*掩码 （_m)* \
+*_Mask*\
 要关闭的标志。
 
 ### <a name="remarks"></a>备注
 
-成员函数有效地调用[标志](#flags)(`~` *_Mask* **& 标志**) （清除所选的位）。
+成员函数有效地调用[标志](#flags)(`~` *_Mask* **& 标志**) (清除选定位)。
 
 ### <a name="example"></a>示例
 
-请参阅[ios_base:: setf](#setf)有关的使用示例`unsetf`。
+有关使用`unsetf`的示例, 请参阅[ios_base:: setf](#setf) 。
 
-## <a name="width"></a> 宽度
+## <a name="width"></a>宽度
 
 设置输出流的长度。
 
@@ -1006,11 +1006,11 @@ streamsize width(
 
 ### <a name="return-value"></a>返回值
 
-当前的宽度设置。
+当前宽度设置。
 
 ### <a name="remarks"></a>备注
 
-第一个成员函数返回存储的字段宽度。 第二个成员函数存储 *_Wide*字段宽度，并返回其先前的存储值。
+第一个成员函数返回存储的字段宽度。 第二个成员函数将 *_Wide*存储在字段宽度中, 并返回其以前存储的值。
 
 ### <a name="example"></a>示例
 
@@ -1033,9 +1033,9 @@ int main( ) {
 0
 ```
 
-## <a name="xalloc"></a> xalloc
+## <a name="xalloc"></a>xalloc
 
-指定一个变量是流的一部分。
+指定变量为流的一部分。
 
 ```cpp
 static int xalloc( );
@@ -1043,11 +1043,11 @@ static int xalloc( );
 
 ### <a name="return-value"></a>返回值
 
-静态成员函数返回存储的静态值，则在每次调用会递增。
+静态成员函数返回存储的静态值, 该值将在每次调用时递增。
 
 ### <a name="remarks"></a>备注
 
-调用该成员函数时，可以作为唯一索引参数使用返回值[iword](#iword)或[pword](#pword)。
+调用成员函数[iword](#iword)或[pword](#pword)时, 可以使用返回值作为唯一索引参数。
 
 ### <a name="example"></a>示例
 
@@ -1081,6 +1081,6 @@ testing
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream 编程](../standard-library/iostream-programming.md)<br/>
-[iostreams 约定](../standard-library/iostreams-conventions.md)<br/>
+[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream 编程](../standard-library/iostream-programming.md)\
+[iostreams 约定](../standard-library/iostreams-conventions.md)

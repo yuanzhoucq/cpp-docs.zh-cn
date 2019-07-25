@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_copy_assignable
 ms.assetid: baa8abd6-4f53-489f-abba-8d5d5c53bbbc
-ms.openlocfilehash: bb3aca47b61bdcc5b28eeedc1a6b4edefc303c4e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 330c97cd945e161d2bf47deb377dd732bf53b3c9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383589"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455977"
 ---
 # <a name="isnothrowcopyassignable-class"></a>is_nothrow_copy_assignable 类
 
@@ -26,20 +26,20 @@ struct is_nothrow_copy_assignable;
 
 ### <a name="parameters"></a>参数
 
-*T*<br/>
+*关心*\
 要查询的类型。
 
 ## <a name="remarks"></a>备注
 
-类型谓词的实例为 true 可引用类型*T*其中`is_nothrow_assignable<T&, const T&>`保存 true; 否则为 false。
+类型谓词的实例适用于可引用类型*T* , 其中`is_nothrow_assignable<T&, const T&>`保留为 true; 否则为 false。
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<type_traits>
+**标头：** \<type_traits>
 
 **命名空间：** std
 
 ## <a name="see-also"></a>请参阅
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_nothrow_assignable 类](../standard-library/is-nothrow-assignable-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_nothrow_assignable 类](../standard-library/is-nothrow-assignable-class.md)

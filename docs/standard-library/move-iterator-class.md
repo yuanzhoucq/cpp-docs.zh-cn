@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::move_iterator [C++], reference
 - std::move_iterator [C++], base
 ms.assetid: a5e5cdd8-a264-4c6b-9f9c-68b0e8edaab7
-ms.openlocfilehash: 3e2e62946325c082e761b6997ae584419175f8fe
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 4a173ea022f21c454d8edd66f94d2d9b14faa4e1
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346197"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460226"
 ---
 # <a name="moveiterator-class"></a>move_iterator 类
 
@@ -54,9 +54,9 @@ class move_iterator;
 |类型名称|描述|
 |-|-|
 |[iterator_type](#iterator_type)|模板参数 `RandomIterator` 的同义词。|
-|[iterator_category](#iterator_category)|较长的同义词**typename**具有相同名称的表达式`iterator_category`标识迭代器的常规功能。|
-|[value_type](#value_type)|较长的同义词**typename**具有相同名称的表达式`value_type`介绍了哪种类型的元素的迭代器。|
-|[difference_type](#difference_type)|较长的同义词**typename**具有相同名称的表达式`difference_type`描述所需的元素之间的快速差异值的整数类型。|
+|[iterator_category](#iterator_category)|同一名称`iterator_category`的较长**typename**表达式的同义词用于标识迭代器的常规功能。|
+|[value_type](#value_type)|具有相同名称的较长**typename**表达式的同义词, `value_type`用于描述迭代器元素的类型。|
+|[difference_type](#difference_type)|同一名称的较长**typename**表达式的同义词, `difference_type`描述了在元素间表达差异值所需的整型类型。|
 |[pointer](#pointer)|模板参数 `RandomIterator` 的同义词。|
 |[reference](#reference)|`rvalue` 引用 `value_type&&` 的同义词。|
 
@@ -147,7 +147,7 @@ move_iterator(const move_iterator<Type>& right);
 
 ### <a name="parameters"></a>参数
 
-*right*<br/>
+*然后*\
 将用作存储的迭代器的迭代器。
 
 ### <a name="remarks"></a>备注
@@ -164,7 +164,7 @@ move_iterator& operator+=(difference_type _Off);
 
 ### <a name="parameters"></a>参数
 
-*_Off*<br/>
+*_Off*\
 将偏移量添加到当前位置，以确定新的当前位置。
 
 ### <a name="return-value"></a>返回值
@@ -173,7 +173,7 @@ move_iterator& operator+=(difference_type _Off);
 
 ### <a name="remarks"></a>备注
 
-运算符将添加 *_Off*到存储的迭代器。 然后返回 `*this`。
+运算符将 *_Off*添加到存储的迭代器。 然后返回 `*this`。
 
 ## <a name="operator-_eq"></a>  move_iterator::operator-=
 
@@ -291,7 +291,7 @@ pointer operator->() const;
 
 ## <a name="pointer"></a>  move_iterator::pointer
 
-类型`pointer`是**typedef**基于随机迭代器`RandomIterator`为`move_iterator`，并且可以互换使用。
+类型`pointer`是基于的随机迭代器`RandomIterator` `move_iterator`的 typedef, 可互换使用。
 
 ```cpp
 typedef RandomIterator  pointer;
@@ -303,7 +303,7 @@ typedef RandomIterator  pointer;
 
 ## <a name="reference"></a>  move_iterator::reference
 
-类型`reference`是**typedef**基于`value_type&&`有关`move_iterator`，可以互换使用`value_type&&`。
+`reference`类型是基于`value_type&&` for 的`move_iterator`typedef, 可与`value_type&&`一起使用。
 
 ```cpp
 typedef value_type&& reference;
@@ -327,7 +327,7 @@ typedef typename iterator_traits<RandomIterator>::value_type   value_type;
 
 ## <a name="see-also"></a>请参阅
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[左值和右值](../cpp/lvalues-and-rvalues-visual-cpp.md)<br/>
-[移动构造函数和移动赋值运算符 (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md)<br/>
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[Lvalues 和 Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)\
+[移动构造函数和移动赋值运算符 (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md)\
+[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

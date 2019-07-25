@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - tuple header
 ms.assetid: e4ef5c2d-318b-44f6-8bce-fce4ecd796a3
-ms.openlocfilehash: ce6e005990d05676fb20752b5808d32ec88dd7b3
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: a391a77ea65a203a7eddde12046c5df89a77194a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68241540"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447149"
 ---
 # <a name="lttuplegt"></a>&lt;tuple&gt;
 
@@ -45,26 +45,26 @@ ms.locfileid: "68241540"
 
 |||
 |-|-|
-|[operator==](../standard-library/tuple-operators.md#op_eq_eq)|比较`tuple`对象是否相等。|
-|[operator!=](../standard-library/tuple-operators.md#op_neq)|比较`tuple`对象是否不相等。|
-|[operator<](../standard-library/tuple-operators.md#op_lt)|比较`tuple`对象，小于。|
-|[operator<=](../standard-library/tuple-operators.md#op_lt_eq)|比较`tuple`对象，小于或等于。|
-|[operator>](../standard-library/tuple-operators.md#op_gt)|比较`tuple`对象是否更大。|
-|[operator>=](../standard-library/tuple-operators.md#op_gt_eq)|比较`tuple`对象，大于或等于。|
+|[operator==](../standard-library/tuple-operators.md#op_eq_eq)|`tuple`比较对象是否相等。|
+|[operator!=](../standard-library/tuple-operators.md#op_neq)|比较对象`tuple` , 而不是。|
+|[operator<](../standard-library/tuple-operators.md#op_lt)|`tuple`比较对象, 小于。|
+|[operator<=](../standard-library/tuple-operators.md#op_lt_eq)|`tuple`比较对象, 小于或等于。|
+|[operator>](../standard-library/tuple-operators.md#op_gt)|`tuple`比较对象, 大于。|
+|[operator>=](../standard-library/tuple-operators.md#op_gt_eq)|对象的`tuple`比较, 大于或等于。|
 
 ### <a name="functions"></a>函数
 
 |||
 |-|-|
-|[apply](../standard-library/tuple-functions.md#apply)|调用函数的元组。|
-|[forward_as_tuple](../standard-library/tuple-functions.md#forward)|构造元组的引用。|
+|[apply](../standard-library/tuple-functions.md#apply)|使用元组调用函数。|
+|[forward_as_tuple](../standard-library/tuple-functions.md#forward)|构造一个引用元组。|
 |[get](../standard-library/tuple-functions.md#get)|从 `tuple` 对象获取一个元素。|
-|[make_from_tuple](../standard-library/tuple-functions.md#make_from_tuple)|简写形式，以使`tuple`。|
+|[make_from_tuple](../standard-library/tuple-functions.md#make_from_tuple)|要生成的`tuple`速记。|
 |[make_tuple](../standard-library/tuple-functions.md#make_tuple)|从元素值中生成一个 `tuple`。|
 |[swap](../standard-library/tuple-functions.md#swap)||
 |[tie](../standard-library/tuple-functions.md#tie)|从元素引用中生成一个 `tuple`。|
-|[tuple_cat](../standard-library/tuple-functions.md#tuple_cat)|构造具有一系列类型元素的元组对象。|
+|[tuple_cat](../standard-library/tuple-functions.md#tuple_cat)|使用一系列类型元素构造元组对象。|
 
 ## <a name="see-also"></a>请参阅
 
-[\<array>](../standard-library/array.md)<br/>
+[\<array>](../standard-library/array.md)

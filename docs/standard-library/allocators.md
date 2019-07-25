@@ -5,12 +5,12 @@ helpviewer_keywords:
 - allocators
 - C++ Standard Library, allocators
 ms.assetid: ac95023b-9e7d-49f5-861a-bf7a9a340746
-ms.openlocfilehash: 1f11d1b007a728b32d27afd733df271f361864e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cb1b0e0d1466d4af5ba255bdf3d00b11cd921fd6
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252722"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457548"
 ---
 # <a name="allocators"></a>Allocators
 
@@ -28,7 +28,7 @@ C++ 标准库提供分配器的默认实现。 在 C++11 及更高版本中，�
 
 ## <a name="writing-your-own-allocator-c11"></a>编写你自己的分配器 (C++11)
 
-默认分配器使用**新**并**删除**来分配和释放内存。 如果想使用内存分配的不同方法（例如，使用共享内存），则必须创建自己的分配器。 如果面向的 C++11，并且需要编写新的自定义分配器，如有可能，使其成为最小分配器。 即使已实现旧式分配器，也请考虑将其修改成*最小分配器*以利用更有效的 `construct()` 方法，后者将自动提供给你。
+默认分配器使用**new**和**delete**来分配和释放内存。 如果想使用内存分配的不同方法（例如，使用共享内存），则必须创建自己的分配器。 如果面向的 C++11，并且需要编写新的自定义分配器，如有可能，使其成为最小分配器。 即使已实现旧式分配器，也请考虑将其修改成*最小分配器*以利用更有效的 `construct()` 方法，后者将自动提供给你。
 
 最小分配器所需的样本要少得多，并使你能够将重点放在 `allocate` 和 `deallocate` 成员函数，它们可以执行所有工作。 创建最小分配器时，除以下示例中所示成员外，请勿实现其他任何成员：
 
@@ -123,4 +123,4 @@ void Mallocator<T>::deallocate(T * const p, size_t) const noexcept
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)<br/>
+[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

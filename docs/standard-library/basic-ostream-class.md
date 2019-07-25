@@ -20,16 +20,16 @@ helpviewer_keywords:
 - std::basic_ostream [C++], tellp
 - std::basic_ostream [C++], write
 ms.assetid: 5baadc65-b662-4fab-8c9f-94457c58cda1
-ms.openlocfilehash: 64a32513e9dc151e64fccdb0ef678a75588f0a41
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8715ae4816be9c8f1453b243d1c8d3574d8c97cf
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371643"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457871"
 ---
 # <a name="basicostream-class"></a>basic_ostream 类
 
-此模板类描述类型的元素的流缓冲区控制元素插入的对象和编码的对象`Elem`，也称为[char_type](../standard-library/basic-ios-class.md#char_type)，其字符特征由类`Tr`，也称为[traits_type](../standard-library/basic-ios-class.md#traits_type)。
+此模板类描述一个对象, 该对象可控制将元素和编码对象插入流缓冲区中的元素`Elem`, 该缓冲区包含类型为的元素, 也称为[char_type](../standard-library/basic-ios-class.md#char_type), 其`Tr`字符特征由类确定。称为[traits_type](../standard-library/basic-ios-class.md#traits_type)。
 
 ## <a name="syntax"></a>语法
 
@@ -40,10 +40,10 @@ class basic_ostream : virtual public basic_ios<Elem, Tr>
 
 ### <a name="parameters"></a>参数
 
-*Elem*<br/>
+*Elem*\
 `char_type`。
 
-*Tr*<br/>
+*Tr*\
 字符 `traits_type`。
 
 ## <a name="remarks"></a>备注
@@ -100,7 +100,7 @@ setstate(state);
 return (*this);
 ```
 
-两组函数调用[setstate](../standard-library/basic-ios-class.md#setstate)(**badbit**) 如果它们在插入元素时遭遇失败。
+如果两组函数在插入元素时遇到失败, 则会调用[setstate](../standard-library/basic-ios-class.md#setstate)(**badbit**)。
 
 类 basic_istream\< **Elem**, **Tr**> 的对象仅存储类 [basic_ios](../standard-library/basic-ios-class.md) **\<Elem**, **Tr>** 的虚拟公共基对象。
 
@@ -153,13 +153,13 @@ basic_ostream(basic_ostream&& right);
 
 ### <a name="parameters"></a>参数
 
-*strbuf*<br/>
+*strbuf*\
 类型 [basic_streambuf](../standard-library/basic-streambuf-class.md) 的对象。
 
-*_Isstd*<br/>
-**true**如果这是一个标准流; 否则为**false**。
+*_Isstd*\
+如果这是标准流,**则为 true** ;否则**为 false**。
 
-*right*<br/>
+*然后*\
 对 `basic_ostream` 类型的对象的右值引用。
 
 ### <a name="remarks"></a>备注
@@ -237,13 +237,13 @@ basic_ostream<Elem, Tr>& operator<<(const void* val);
 
 ### <a name="parameters"></a>参数
 
-*Pfn*<br/>
+*Pfn*\
 函数指针。
 
-*strbuf*<br/>
+*strbuf*\
 指向 `stream_buf` 对象的指针。
 
-*val*<br/>
+*初始值*\
 要写入到流的元素。
 
 ### <a name="return-value"></a>返回值
@@ -252,9 +252,9 @@ basic_ostream<Elem, Tr>& operator<<(const void* val);
 
 ### <a name="remarks"></a>备注
 
-\<Ostream > 标头还定义多个全局插入运算符。 有关详细信息，请参阅[运算符 <<](../standard-library/ostream-operators.md#op_lt_lt)。
+\<Ostream > 标头还定义了多个全局插入运算符。 有关详细信息, 请参阅[operator < <](../standard-library/ostream-operators.md#op_lt_lt)。
 
-第一个成员函数确保形式的表达式`ostr << endl`调用[endl](../standard-library/ostream-functions.md#endl) **(ostr)** ，然后返回 **\*这**。 第二个和第三个函数确保其他操控器（如 [hex ](../standard-library/ios-functions.md#hex)）表现相似。 其余函数均是格式化的输出函数。
+第一个成员`ostr << endl`函数确保窗体的表达式调用[endl](../standard-library/ostream-functions.md#endl) **(ostr)** , 然后返回 **\*this**。 第二个和第三个函数确保其他操控器（如 [hex ](../standard-library/ios-functions.md#hex)）表现相似。 其余函数均是格式化的输出函数。
 
 函数
 
@@ -262,7 +262,7 @@ basic_ostream<Elem, Tr>& operator<<(const void* val);
 basic_ostream<Elem, Tr>& operator<<(basic_streambuf<Elem, Tr>* strbuf);
 ```
 
-中的元素中提取*strbuf*，则*strbuf*不是 null 指针，并将其插入。 提取会在文件结尾停止，或者如果提取引发异常（为重新引发的异常），则提取也会停止。 如果插入失败，则也会在尚未提取所讨论元素的情况下导致提取停止。 如果该函数没有插入任何元素，或者如果提取引发异常，则函数调用 [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**)。 不管怎样，该函数均将返回 **\*this**。
+如果*strbuf*不是 null 指针, 则从*strbuf*中提取元素并插入它们。 提取会在文件结尾停止，或者如果提取引发异常（为重新引发的异常），则提取也会停止。 如果插入失败，则也会在尚未提取所讨论元素的情况下导致提取停止。 如果该函数没有插入任何元素，或者如果提取引发异常，则函数调用 [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**)。 不管怎样，该函数均将返回 **\*this**。
 
 函数
 
@@ -270,7 +270,7 @@ basic_ostream<Elem, Tr>& operator<<(basic_streambuf<Elem, Tr>* strbuf);
 basic_ostream<Elem, Tr>& operator<<(bool val);
 ```
 
-将转换`_Val`转换为布尔型字段，并将其插入通过调用[use_facet](../standard-library/basic-filebuf-class.md#open) **< num_put\<Elem，OutIt >** `(`[getloc](../standard-library/ios-base-class.md#getloc))。 [put](#put)(**OutIt**([rdbuf](../standard-library/basic-ios-class.md#rdbuf)), **\*this**, `getloc`, **val**) 插入它。 在这里，`OutIt`指[ostreambuf_iterator](../standard-library/ostreambuf-iterator-class.md) **\<Elem，Tr >** 。 该函数返回 **\*this**。
+转换`_Val`为布尔字段, 并通过调用[use_facet](../standard-library/basic-filebuf-class.md#open) **< num_put\<Elem, OutIt >** `(`[getloc](../standard-library/ios-base-class.md#getloc)) 将其插入。 [put](#put)(**OutIt**([rdbuf](../standard-library/basic-ios-class.md#rdbuf)), **\*this**, `getloc`, **val**) 插入它。 此处, `OutIt`定义为[ostreambuf_iterator](../standard-library/ostreambuf-iterator-class.md) **\<Elem, Tr >** 。 该函数返回 **\*this**。
 
 函数
 
@@ -286,7 +286,7 @@ basic_ostream<Elem, Tr>& operator<<(unsigned long long val);
 basic_ostream<Elem, Tr>& operator<<(const void* val);
 ```
 
-每个转换*val*为数字字段并将其插入通过调用**use_facet < num_put\<Elem，OutIt >** (`getloc`)。 **put**(**OutIt**(`rdbuf`), **\*this**, `getloc`, **val**) 插入它。 此处，将 **OutIt** 定义为 **ostreambuf_iterator\<Elem, Tr>** 。 该函数返回 **\*this**。
+每个将*val*转换为数值字段, 并通过调用**use_facet < num_put\<Elem, OutIt >** (`getloc`) 将其插入。 **put**(**OutIt**(`rdbuf`), **\*this**, `getloc`, **val**) 插入它。 此处，将 **OutIt** 定义为 **ostreambuf_iterator\<Elem, Tr>** 。 该函数返回 **\*this**。
 
 函数
 
@@ -296,7 +296,7 @@ basic_ostream<Elem, Tr>& operator<<(double val);
 basic_ostream<Elem, Tr>& operator<<(long double val);
 ```
 
-每个转换*val*为数字字段并将其插入通过调用**use_facet < num_put\<Elem，OutIt >** (`getloc`) **。 放置**(**OutIt**(`rdbuf`)， **\*这**， `getloc`， **val**)。 此处，将 **OutIt** 定义为 **ostreambuf_iterator\<Elem, Tr>** 。 该函数返回 **\*this**。
+每个将*val*转换为数值字段, 并通过调用**use_facet < num_put\<Elem, OutIt >** (`getloc`)**将其插入。 put**(**OutIt**(`rdbuf`),  **\*** `getloc`, **val**)。 此处，将 **OutIt** 定义为 **ostreambuf_iterator\<Elem, Tr>** 。 该函数返回 **\*this**。
 
 ### <a name="example"></a>示例
 
@@ -358,7 +358,7 @@ basic_ostream& operator=(basic_ostream&& right);
 
 ### <a name="parameters"></a>参数
 
-*right*<br/>
+*然后*\
 对 `basic_ostream` 对象的 `rvalue` 引用。
 
 ### <a name="remarks"></a>备注
@@ -375,7 +375,7 @@ basic_ostream<Elem, Tr>& put(char_type _Ch);
 
 ### <a name="parameters"></a>参数
 
-*_Ch*<br/>
+*_Ch*\
 一个字符。
 
 ### <a name="return-value"></a>返回值
@@ -384,7 +384,7 @@ basic_ostream<Elem, Tr>& put(char_type _Ch);
 
 ### <a name="remarks"></a>备注
 
-未格式化的输出函数将元素插入 *_Ch*。 它将返回 **\*this**。
+未格式化的输出函数插入元素 *_Ch*。 它将返回 **\*this**。
 
 ### <a name="example"></a>示例
 
@@ -419,13 +419,13 @@ basic_ostream<Elem, Tr>& seekp(off_type _Off, ios_base::seekdir _Way);
 
 ### <a name="parameters"></a>参数
 
-*_Pos*<br/>
+*_Pos*\
 流中的位置。
 
-*_Off*<br/>
-相对于的偏移量 *_Way*。
+*_Off*\
+相对于 *_Way*的偏移量。
 
-*_Way*<br/>
+*_Way*\
 其中一个 [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) 枚举。
 
 ### <a name="return-value"></a>返回值
@@ -434,7 +434,7 @@ basic_ostream<Elem, Tr>& seekp(off_type _Off, ios_base::seekdir _Way);
 
 ### <a name="remarks"></a>备注
 
-如果[失败](../standard-library/basic-ios-class.md#fail)是**false**，第一个成员函数调用**newpos =** [rdbuf](../standard-library/basic-ios-class.md#rdbuf) **->** [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos)( *_Pos*)，对于某些`pos_type`临时对象`newpos`。 如果`fail`为 false，则第二个函数调用**newpos = rdbuf->** [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)( *_Off，_Way*)。 在任一情况下，如果 (`off_type`)**newpos ==** (`off_type`)(-1)（定位操作失败），则函数调用 **istr.** [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**)。 两个函数均返回 **\*this**。
+如果[fail](../standard-library/basic-ios-class.md#fail)为**false**, 则第一个成员函数将调用**newpos =** [rdbuf](../standard-library/basic-ios-class.md#rdbuf) **->** [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos)( *_Pos*), `pos_type`以获取`newpos`一些临时对象。 如果`fail`为 false, 则第二个函数调用**newpos = > rdbuf** [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)( *_Off, _Way*)。 在任一情况下，如果 (`off_type`)**newpos ==** (`off_type`)(-1)（定位操作失败），则函数调用 **istr.** [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**)。 两个函数均返回 **\*this**。
 
 ### <a name="example"></a>示例
 
@@ -470,11 +470,11 @@ int main()
 
 嵌套的类描述一个对象，该对象的声明构造格式化的输出函数和未格式化的输出函数。
 
-类 sentry {public： 显式 sentry (basic_ostream\<Elem，Tr > & _Ostr); 运算符 bool （) const; ~ sentry();};
+类卫士 {public: explicit 卫士 (basic_ostream\<Elem, Tr > & _Ostr); operator bool () const; ~ sentry ();};
 
 ### <a name="remarks"></a>备注
 
-嵌套的类描述一个对象，该对象的声明构造格式化的输出函数和未格式化的输出函数。 如果 **ostr.** [good](../standard-library/basic-ios-class.md#good) 为 **true** 且 **ostr.** [tie](../standard-library/basic-ios-class.md#tie) 不是空指针，则构造函数调用 **ostr.tie->** [flush](#flush)。 构造函数，然后将返回的值`ostr.good`在`status`。 更高版本调用`operator bool`提供此存储的值。
+嵌套的类描述一个对象，该对象的声明构造格式化的输出函数和未格式化的输出函数。 如果 **ostr.** [good](../standard-library/basic-ios-class.md#good) 为 **true** 且 **ostr.** [tie](../standard-library/basic-ios-class.md#tie) 不是空指针，则构造函数调用 **ostr.tie->** [flush](#flush)。 然后, 构造函数将返回`ostr.good`的值存储在中。 `status` 稍后调用`operator bool`传递此存储的值。
 
 如果 `uncaught_exception` 返回 **false**并且 [flags](../standard-library/ios-base-class.md#flags) **&** [unitbuf](../standard-library/ios-functions.md#unitbuf) 为非零，则析构函数调用 [flush](#flush)。
 
@@ -488,12 +488,12 @@ void swap(basic_ostream& right);
 
 ### <a name="parameters"></a>参数
 
-*right*<br/>
+*然后*\
 对 `basic_ostream` 对象的引用。
 
 ### <a name="remarks"></a>备注
 
-此成员函数调用[basic_ios:: swap](../standard-library/basic-ios-class.md#swap) `(right)`交换内容的此对象的内容*右*。
+此成员函数调用[basic_ios:: swap](../standard-library/basic-ios-class.md#swap) `(right)` , 以将此对象的内容与*右侧*内容进行交换。
 
 ## <a name="tellp"></a>  basic_ostream::tellp
 
@@ -525,10 +525,10 @@ basic_ostream<Elem, Tr>& write(const char_type* str, streamsize count);
 
 ### <a name="parameters"></a>参数
 
-*count*<br/>
+*计*\
 要放入流中的字符计数。
 
-*str*<br/>
+*字符串*\
 要放入流中的字符。
 
 ### <a name="return-value"></a>返回值
@@ -537,7 +537,7 @@ basic_ostream<Elem, Tr>& write(const char_type* str, streamsize count);
 
 ### <a name="remarks"></a>备注
 
-[未格式化的输出函数](../standard-library/basic-ostream-class.md)插入的一系列*计数*开始元素*str*。
+未[格式化的输出函数](../standard-library/basic-ostream-class.md)插入从*str*开始的*计数*元素的序列。
 
 ### <a name="example"></a>示例
 
@@ -545,6 +545,6 @@ basic_ostream<Elem, Tr>& write(const char_type* str, streamsize count);
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream 编程](../standard-library/iostream-programming.md)<br/>
-[iostreams 约定](../standard-library/iostreams-conventions.md)<br/>
+[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream 编程](../standard-library/iostream-programming.md)\
+[iostreams 约定](../standard-library/iostreams-conventions.md)

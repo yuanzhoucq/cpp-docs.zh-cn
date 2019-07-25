@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - linear_congruential_engine class
 ms.assetid: 30e00ca6-1933-4701-9561-54f3e810a5a1
-ms.openlocfilehash: 41ce5590476a8327c9449ece5e3173146a04760f
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: f5b448fbf158cf9e9cfb8331c6ec7a228859fffc
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449891"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447585"
 ---
 # <a name="linearcongruentialengine-class"></a>linear_congruential_engine 类
 
@@ -45,17 +45,17 @@ class linear_congruential_engine{
 
 ### <a name="parameters"></a>参数
 
-*UIntType*<br/>
+*UIntType*\
 无符号的整数结果类型。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
-*A*<br/>
-**乘数**。 **不满足前提条件**:请参阅备注部分。
+*的*\
+**乘数**。 **前提条件**:请参阅备注部分。
 
-*C*<br/>
-**递增**。 **不满足前提条件**:请参阅备注部分。
+*ANSI-C*\
+**递增**。 **前提条件**:请参阅备注部分。
 
-*M*<br/>
-**取模**。 **不满足前提条件**:请参阅备注。
+*年*\
+**取模**。 **前提条件**:请参阅 "备注"。
 
 ## <a name="members"></a>成员
 
@@ -74,9 +74,9 @@ class linear_congruential_engine{
 
 此引擎使用重复关系( *period*) `x(i) = (A * x(i-1) + C) mod M` 产生用户指定的无符号整型值。
 
-如果*M*为零，用于此取模运算的值是`numeric_limits<result_type>::max() + 1`。 引擎的状态是返回的最后一个值，或是种子值（如果尚未对 `operator()` 进行调用）。
+如果*M*为零, 则用于此取模运算的值`numeric_limits<result_type>::max() + 1`是。 引擎的状态是返回的最后一个值，或是种子值（如果尚未对 `operator()` 进行调用）。
 
-如果*M*不为零，模板自变量的值*A*并*C*必须是小于*M*。
+如果*M*不为零, 则模板参数*A*和*C*的值必须小于*M*。
 
 虽然可以从此引擎直接构造生成器，但也可以使用其中一个预定义的 typedef。
 
@@ -102,4 +102,4 @@ typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_ra
 
 ## <a name="see-also"></a>请参阅
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

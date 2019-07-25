@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::strstream [C++], rdbuf
 - std::strstream [C++], str
 ms.assetid: 63f3be31-9e36-42b1-9715-a474a5997e2a
-ms.openlocfilehash: 9494f7ee2508df1971d56c94b929a7212bedb254
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 53baa350121796d5198211e1fdb08f4341df6b80
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412288"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459099"
 ---
 # <a name="strstream-class"></a>strstream 类
 
@@ -53,7 +53,7 @@ class strstream : public iostream
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<strstream>
+**标头：** \<strstream>
 
 **命名空间：** std
 
@@ -67,8 +67,8 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>参数
 
-*_Freezeit*<br/>
-一个**bool** ，该值指示是否要冻结的流。
+*_Freezeit*\
+一个**布尔**值, 指示是否要冻结流。
 
 ### <a name="remarks"></a>备注
 
@@ -76,7 +76,7 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="example"></a>示例
 
-请参阅[strstreambuf:: freeze](../standard-library/strstreambuf-class.md#freeze)有关的示例，使用`freeze`。
+有关使用`freeze`的示例, 请参阅[strstreambuf:: 冻结](../standard-library/strstreambuf-class.md#freeze)。
 
 ## <a name="pcount"></a>  strstream::pcount
 
@@ -112,7 +112,7 @@ strstreambuf *rdbuf() const
 
 ### <a name="remarks"></a>备注
 
-此成员函数返回类型的存储的流缓冲区的地址`pointer`到[strstreambuf](../standard-library/strstreambuf-class.md)。
+成员函数将类型`pointer`的已存储流缓冲区的地址返回到[strstreambuf](../standard-library/strstreambuf-class.md)。
 
 ### <a name="example"></a>示例
 
@@ -136,7 +136,7 @@ char *str();
 
 ### <a name="example"></a>示例
 
-请参阅[strstreambuf:: str](../standard-library/strstreambuf-class.md#str)有关的示例，使用`str`。
+有关使用`str`的示例, 请参阅[strstreambuf:: str](../standard-library/strstreambuf-class.md#str) 。
 
 ## <a name="strstream"></a>  strstream::strstream
 
@@ -152,26 +152,26 @@ strstream(char* ptr,
 
 ### <a name="parameters"></a>参数
 
-*count*<br/>
+*计*\
 缓冲区的大小。
 
-*_Mode*<br/>
+*_Mode*\
 缓冲区的输入和输出模式。 有关详细信息，请参阅 [ios_base::openmode](../standard-library/ios-base-class.md#openmode)。
 
-*ptr*<br/>
+*ptr*\
 缓冲区。
 
 ### <a name="remarks"></a>备注
 
-这两个构造函数通过调用初始化基类[streambuf](../standard-library/streambuf-typedefs.md#streambuf)( **sb**)，其中`sb`是类的存储的对象[strstreambuf](../standard-library/strstreambuf-class.md)。 第一个构造函数还可以初始化`sb`通过调用[strstreambuf](../standard-library/strstreambuf-class.md#strstreambuf)。 第二个构造函数以下列两种方式之一初始化基类：
+这两个构造函数通过调用[streambuf](../standard-library/streambuf-typedefs.md#streambuf)( **sb**) 来初始化基类`sb` , 其中是[strstreambuf](../standard-library/strstreambuf-class.md)类的存储对象。 第一个构造函数还`sb`通过调用[strstreambuf](../standard-library/strstreambuf-class.md#strstreambuf)进行初始化。 第二个构造函数以下列两种方式之一初始化基类：
 
-- 如果`_Mode`  &  **ios_base:: app**= = 0，然后*ptr*必须将指定的数组的第一个元素`count`元素以及构造函数调用`strstreambuf`( `ptr`, `count`, `ptr`).
+- 如果`_Mode` `strstreambuf` `ptr` `count` `count` `ptr`  ios_base:: app = = 0, 则 ptr 必须指定元素数组的第一个元素, 且构造函数调用 (,,)  & .
 
-- 否则为*ptr*必须指定的计数元素包含的数组的 C 字符串由指定的第一个元素的第一个元素*ptr*，并构造函数调用`strstreambuf`( `ptr`, `count`, `ptr` + `strlen`( `ptr`) ).
+- 否则, *ptr*必须指定 count 元素数组的第一个元素, 其中包含一个 C 字符串, 其中第一个元素由*ptr*指定, 并且构造函数调用`strstreambuf`( `ptr`, `count`, `ptr`  + `strlen`( `ptr`) ).
 
 ## <a name="see-also"></a>请参阅
 
-[iostream](../standard-library/istream-typedefs.md#iostream)<br/>
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream 编程](../standard-library/iostream-programming.md)<br/>
-[iostreams 约定](../standard-library/iostreams-conventions.md)<br/>
+[iostream](../standard-library/istream-typedefs.md#iostream)\
+[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream 编程](../standard-library/iostream-programming.md)\
+[iostreams 约定](../standard-library/iostreams-conventions.md)

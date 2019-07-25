@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::freelist [C++], pop
 - stdext::freelist [C++], push
 ms.assetid: 8ad7e35c-4c80-4479-8ede-1a2497b06d71
-ms.openlocfilehash: ef1f2e617e93869a1084dc030c6496c819f1ed96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a504f58f9f64aa8b0d26b17090387c5c2b5de21
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159387"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454131"
 ---
 # <a name="freelist-class"></a>freelist 类
 
@@ -37,7 +37,7 @@ class freelist : public Max
 
 ## <a name="remarks"></a>备注
 
-此模板类管理大小内存块的一系列*Sz*由中传递的 max 类的列表的最大长度*最大*。
+此模板类管理大小为*Sz*的内存块的列表, 该列表的最大长度由最大传入的 max 类*确定。*
 
 ### <a name="constructors"></a>构造函数
 
@@ -54,7 +54,7 @@ class freelist : public Max
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<allocators>
+**标头：** \<allocators>
 
 **命名空间：** stdext
 
@@ -82,7 +82,7 @@ void *pop();
 
 ### <a name="remarks"></a>备注
 
-如果列表为空，则成员函数返回 NULL。 否则，成员函数从列表中删除第一个内存块。
+如果列表为空, 则成员函数返回 NULL。 否则，成员函数从列表中删除第一个内存块。
 
 ## <a name="push"></a>  freelist::push
 
@@ -100,12 +100,12 @@ bool push(void* ptr);
 
 ### <a name="return-value"></a>返回值
 
-**true**如果`full`max 类的函数将返回**false**; 否则为`push`函数返回**false**。
+如果 max 类`full`的函数返回**false**, 则为**true** ; 否则该`push`函数返回**false**。
 
 ### <a name="remarks"></a>备注
 
-如果`full`max 类的函数将返回**false**，此成员函数将指向的内存块添加*ptr*到了列表的开头。
+如果 max `full`类的函数返回**false**, 此成员函数会将由*ptr*指向的内存块添加到列表的开头。
 
 ## <a name="see-also"></a>请参阅
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

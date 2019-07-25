@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_base class
 ms.assetid: 7e95c083-91b4-4b3f-8918-0d4ea244a040
-ms.openlocfilehash: 6f957c39f9c78fd182b7ba2a14bdab7f27db56ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a32ba5e583fdb20118a3397f1ddb326302f2de1
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405295"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459393"
 ---
 # <a name="codecvtbase-class"></a>codecvt_base 类
 
-用于定义枚举类型的 codecvt 类的基类称为`result`、 用作 facet 成员函数的返回类型以便指示转换的结果。
+用于定义称为`result`的枚举类型的 codecvt 类的基类, 用作 facet 成员函数的返回类型, 以指示转换的结果。
 
 ## <a name="syntax"></a>语法
 
@@ -40,11 +40,11 @@ protected:
 
 此类会描述常用于所有模板类 [codecvt](../standard-library/codecvt-class.md) 专用化的枚举。 枚举结果描述了来自 [do_in](../standard-library/codecvt-class.md#do_in) 或 [do_out](../standard-library/codecvt-class.md#do_out) 可能的返回值：
 
-- `ok` 如果内部和外部字符编码之间的转换会成功。
+- `ok`如果内部和外部字符编码之间的转换成功, 则为。
 
-- `partial` 如果目标是不足够大，以便使转换成功完成。
+- `partial`如果目标不够大, 则无法成功转换。
 
-- `error` 如果源序列格式不，正确。
+- `error`如果源序列的格式不正确, 则为。
 
 - 如果函数不执行任何转换，则为 `noconv`。
 
@@ -56,4 +56,4 @@ protected:
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

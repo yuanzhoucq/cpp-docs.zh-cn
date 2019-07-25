@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - match_results class
 ms.assetid: b504fdca-e5dd-429d-9960-6e27c9167fa6
-ms.openlocfilehash: 32a5f9d20999740d4368f7901c797d87acce0be9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72a948c7f8422b36b94a16cdb2c815bca92d20c7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412964"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456390"
 ---
 # <a name="matchresults-class"></a>match_results 类
 
@@ -26,10 +26,10 @@ class match_results
 
 ## <a name="parameters"></a>参数
 
-*BidIt*<br/>
+*BidIt*\
 子匹配项的迭代器类型。
 
-*Alloc*<br/>
+*分配*\
 用于管理存储的分配器的类型。
 
 ## <a name="remarks"></a>备注
@@ -68,7 +68,7 @@ class match_results
 |[get_allocator](#get_allocator)|返回存储的分配器。|
 |[length](#length)|返回子匹配项的长度。|
 |[max_size](#max_size)|获取子匹配项的最大数目。|
-|[position](#position)|获取子组的起始偏移量。|
+|[置于](#position)|获取子组的起始偏移量。|
 |[prefix](#prefix)|获取第一个子匹配项之前的序列。|
 |[size](#size)|计算子匹配项的数目。|
 |[str](#str)|返回子匹配项。|
@@ -84,7 +84,7 @@ class match_results
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<regex 1>
+**标头：** \<regex 1>
 
 **命名空间：** std
 
@@ -198,7 +198,7 @@ typedef Alloc allocator_type;
 
 ### <a name="remarks"></a>备注
 
-Typedef 是模板参数的同义词*Alloc*。
+Typedef 是模板参数*分配*的同义词。
 
 ## <a name="begin"></a>match_results::begin
 
@@ -298,21 +298,21 @@ string_type format(const string_type& fmt, match_flag_type flags = format_defaul
 
 ### <a name="parameters"></a>参数
 
-*OutIt*<br/>
+*OutIt*\
 输出迭代器类型。
 
-*out*<br/>
+*out*\
 要写入到的输出流。
 
-*fmt*<br/>
+*bcp.fmt*\
 格式字符串。
 
-*flags*<br/>
+*随意*\
 格式标志。
 
 ### <a name="remarks"></a>备注
 
-每个成员函数生成控制的格式的格式化的文本*fmt*。 第一个成员函数将带格式的文本写入到其自变量定义的序列*出*，并返回*出*。第二个成员函数返回保存了带格式文本的副本的字符串对象。
+每个成员函数在*bcp.fmt*格式的控制下生成格式化文本。 第一个成员函数将带格式的文本写入到*其参数定义*的序列, 并*返回。* 第二个成员函数返回保存了带格式文本的副本的字符串对象。
 
 生成格式化文本。 格式字符串中的文字文本通常会复制到目标序列。 格式字符串中的每个转义序列均由它表示的文本替换。 复制和替换的详细信息由传递到函数的格式标志控制。
 
@@ -350,7 +350,7 @@ difference_type length(size_type sub = 0) const;
 
 ### <a name="parameters"></a>参数
 
-*sub*<br/>
+*该子*\
 子匹配项的索引。
 
 ### <a name="remarks"></a>备注
@@ -369,15 +369,15 @@ match_results(const match_results& right);
 
 ### <a name="parameters"></a>参数
 
-*alloc*<br/>
+*分配*\
 要存储的分配器对象。
 
-*right*<br/>
+*然后*\
 要复制的 match_results 对象。
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数构造 `match_results` 对象，其中不包含子匹配项。 第二个构造函数构造`match_results`对象，它是一份*右*。
+第一个构造函数构造 `match_results` 对象，其中不包含子匹配项。 第二个构造函数`match_results`构造一个对象, 该对象是*权限*的副本。
 
 ## <a name="max_size"></a>match_results::max_size
 
@@ -401,12 +401,12 @@ match_results& operator=(const match_results& right);
 
 ### <a name="parameters"></a>参数
 
-*right*<br/>
+*然后*\
 要复制的 match_results 对象。
 
 ### <a name="remarks"></a>备注
 
-成员运算符会将控制的序列`*this`控制的序列的副本*右*。
+成员运算符将控制`*this`的序列替换为由*right*控制的序列副本。
 
 ## <a name="op_at"></a>match_results::operator[]
 
@@ -418,12 +418,12 @@ const_reference operator[](size_type n) const;
 
 ### <a name="parameters"></a>参数
 
-*n*<br/>
+*n*\
 子匹配项的索引。
 
 ### <a name="remarks"></a>备注
 
-成员函数将返回元素的引用*n*受控的序列，或为空引用`sub_match`对象如果`size() <= n`或者，如果捕获组*n*并不是匹配项的一部分。
+成员函数返回对受控序列的元素*n*的引用; 如果`size() <= n`或捕获组*n*不是匹配`sub_match`项的一部分, 则返回对空对象的引用。
 
 ## <a name="position"></a>match_results::position
 
@@ -435,7 +435,7 @@ difference_type position(size_type sub = 0) const;
 
 ### <a name="parameters"></a>参数
 
-*sub*<br/>
+*该子*\
 子匹配项的索引。
 
 ### <a name="remarks"></a>备注
@@ -500,7 +500,7 @@ string_type str(size_type sub = 0) const;
 
 ### <a name="parameters"></a>参数
 
-*sub*<br/>
+*该子*\
 子匹配项的索引。
 
 ### <a name="remarks"></a>备注
@@ -541,12 +541,12 @@ void swap(const match_results& right) throw();
 
 ### <a name="parameters"></a>参数
 
-*right*<br/>
+*然后*\
 要交换的 match_results 对象。
 
 ### <a name="remarks"></a>备注
 
-成员函数交换的内容`*this`并*右*在常量时间内，而不会引发异常。
+成员*函数在常量*时间内交换`*this`的内容, 不会引发异常。
 
 ## <a name="value_type"></a>match_results::value_type
 
@@ -562,4 +562,4 @@ typedef 是类型 `sub_match<BidIt>`的同义词。
 
 ## <a name="see-also"></a>请参阅
 
-[\<regex>](../standard-library/regex.md)<br/>
+[\<regex>](../standard-library/regex.md)

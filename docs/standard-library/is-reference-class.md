@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_reference class
 - is_reference
 ms.assetid: 3d9e631f-3092-430c-843e-e914ab58c257
-ms.openlocfilehash: 793a84f03dba762ff686627004ffe3830a5d98d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 99aae64bcaef1e17956c3b3001627d128f966352
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413562"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455682"
 ---
 # <a name="isreference-class"></a>is_reference 类
 
@@ -27,12 +27,12 @@ struct is_reference;
 
 ### <a name="parameters"></a>参数
 
-*Ty*<br/>
+*Ty*\
 要查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型谓词的实例将保留 true 类型*Ty*是对某个对象或函数，否则为 false 的引用。
+如果类型*Ty*是对对象或函数的引用, 则类型谓词的实例为 true; 否则为 false。
 
 ## <a name="example"></a>示例
 
@@ -71,11 +71,11 @@ is_reference<int(&)()> == true
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<type_traits>
+**标头：** \<type_traits>
 
 **命名空间：** std
 
 ## <a name="see-also"></a>请参阅
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_pointer 类](../standard-library/is-pointer-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_pointer 类](../standard-library/is-pointer-class.md)

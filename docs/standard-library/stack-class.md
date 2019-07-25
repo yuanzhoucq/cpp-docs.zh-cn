@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::stack [C++], size
 - std::stack [C++], top
 ms.assetid: 02151c1e-eab0-41b8-be94-a839ead78ecf
-ms.openlocfilehash: 36074f75830f92ba3fb9e5edb4e1507aa5ae1407
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: d282d3ea54528b422509f4259e2d9a191f88e091
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68241067"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453785"
 ---
 # <a name="stack-class"></a>stack 类
 
@@ -40,7 +40,7 @@ class stack
 
 ### <a name="parameters"></a>参数
 
-*类型*\
+*类别*\
 要存储在堆栈中的元素数据类型。
 
 *容器*\
@@ -48,11 +48,11 @@ class stack
 
 ## <a name="remarks"></a>备注
 
-类的元素`Type`中的第一个模板规定的堆栈对象的参数是使用同义词[value_type](#value_type) ，并且必须匹配的基础容器类中的元素类型`Container`规定的第二个模板参数。 `Type`必须是可赋值的以便它才能复制该类型的对象，并将值分配到该类型的变量。
+堆栈对象的第`Type`一个模板参数中的规定类的元素与[value_type](#value_type)同义, 并且必须与第二个模板的基础容器类`Container`规定中的元素类型相匹配参数. 必须`Type`是可赋值的, 以便可以复制该类型的对象并为该类型的变量赋值。
 
-堆栈适合基础容器类包括[deque](../standard-library/deque-class.md)， [list 类](../standard-library/list-class.md)，并[vector 类](../standard-library/vector-class.md)，或支持的操作的任何其他序列容器`back`， `push_back`，和`pop_back`。 基础容器类封装在容器适配器中，容器适配器仅公开一组有限的序列容器成员函数为公共接口。
+适合堆栈的基础容器类包括[deque](../standard-library/deque-class.md)、 [list 类](../standard-library/list-class.md)和[vector 类](../standard-library/vector-class.md), 或者支持`back`、 `push_back`和`pop_back`操作的任何其他序列容器。 基础容器类封装在容器适配器中，容器适配器仅公开一组有限的序列容器成员函数为公共接口。
 
-堆栈对象类的元素进行相等比较，当且仅当`Type`进行相等比较，很少-比比较，当且仅当类的元素`Type`小于的比较。
+当且仅当类`Type`的元素具有相等性时, 并且仅当类`Type`的元素小于可比较时, 堆栈对象才可进行相等比较。
 
 - 堆栈类支持后进先出 (LIFO) 数据结构。 可以在脑海中将其类比为一摞盘子。 元素（盘子）只能从堆栈顶部（基容器末尾的最后一个元素）插入、检查或删除。 限制仅访问顶部元素是使用堆栈类的原因。
 
@@ -86,7 +86,7 @@ class stack
 |[size](#size)|返回 `stack` 中的元素数量。|
 |[top](#top)|返回对 `stack` 顶部元素的引用。|
 
-## <a name="container_type"></a> container_type
+## <a name="container_type"></a>container_type
 
 一种类型，它提供将调整的基容器。
 
@@ -104,7 +104,7 @@ typedef Container container_type;
 
 有关如何声明和使用 `container_type` 的示例，请参阅 [stack::stack](#stack) 的示例。
 
-## <a name="empty"></a> 为空
+## <a name="empty"></a>空白处
 
 测试堆栈是否为空。
 
@@ -149,7 +149,7 @@ The stack s1 is not empty.
 The stack s2 is empty.
 ```
 
-## <a name="pop"></a> pop
+## <a name="pop"></a>弹出
 
 从堆栈的顶部删除元素。
 
@@ -205,9 +205,9 @@ After a pop, the stack length is 2.
 After a pop, the element at the top of the stack is 20.
 ```
 
-## <a name="push"></a> 推送
+## <a name="push"></a>请求
 
-将元素添加到堆栈的顶部。
+向堆栈顶部添加一个元素。
 
 ```cpp
 void push(const Type& val);
@@ -215,7 +215,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>参数
 
-*val*\
+*初始值*\
 添加到堆栈顶部的元素。
 
 ### <a name="remarks"></a>备注
@@ -254,7 +254,7 @@ The stack length is 3.
 The element at the top of the stack is 30.
 ```
 
-## <a name="size"></a> 大小
+## <a name="size"></a>规格
 
 返回堆栈中元素数。
 
@@ -295,7 +295,7 @@ The stack length is 1.
 The stack length is now 2.
 ```
 
-## <a name="size_type"></a> size_type
+## <a name="size_type"></a>size_type
 
 一种无符号整数类型，此类型可表示堆栈中的元素数。
 
@@ -311,7 +311,7 @@ typedef typename Container::size_type size_type;
 
 有关如何声明和使用 `size_type` 的示例，请参阅 [size](#size) 的示例。
 
-## <a name="stack"></a> 堆栈
+## <a name="stack"></a>重叠
 
 构造一个空的堆栈或者是基容器类副本的堆栈。
 
@@ -323,7 +323,7 @@ explicit stack(const container_type& right);
 
 ### <a name="parameters"></a>参数
 
-*右侧*\
+*然后*\
 所构造堆栈要成为其副本的矢量。
 
 ### <a name="example"></a>示例
@@ -365,7 +365,7 @@ int main( )
 The element at the top of stack vsi2 is 1.
 ```
 
-## <a name="top"></a> 返回页首
+## <a name="top"></a>返回页首
 
 返回对堆栈顶部元素的引用。
 
@@ -383,7 +383,7 @@ const_reference top() const;
 
 堆栈必须为非空才能应用成员函数。 堆栈顶部是最近添加的元素所占据的位置，并且是容器末尾处的最后一个元素。
 
-如果返回值`top`分配给`const_reference`，不能修改堆栈对象。 如果返回值`top`分配给`reference`，可以修改堆栈对象。
+如果将的`top`返回值分配`const_reference`给, 则无法修改堆栈对象。 如果将的`top`返回值分配`reference`给, 则可以修改堆栈对象。
 
 ### <a name="example"></a>示例
 
@@ -459,5 +459,5 @@ The element at the top of the stack is 69.
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)<br/>
+[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

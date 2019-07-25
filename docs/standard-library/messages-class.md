@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::messages [C++], get
 - std::messages [C++], open
 ms.assetid: c4c71f40-4f24-48ab-9f7c-daccd8d5bd83
-ms.openlocfilehash: 7a024a8cad8c536b25127d033468874de5ebd8af
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f417c33d5502f8e5bd247936c8a0f93007239924
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383576"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449943"
 ---
 # <a name="messages-class"></a>messages 类
 
@@ -44,7 +44,7 @@ class messages : public messages_base;
 
 ### <a name="parameters"></a>参数
 
-*CharType*<br/>
+*CharType*\
 在程序中用于对区域设置中的字符进行编码的类型。
 
 ## <a name="remarks"></a>备注
@@ -105,7 +105,7 @@ void close(catalog _Catval) const;
 
 ### <a name="parameters"></a>参数
 
-*_Catval*<br/>
+*_Catval*\
 要关闭的目录。
 
 ### <a name="remarks"></a>备注
@@ -122,12 +122,12 @@ virtual void do_close(catalog _Catval) const;
 
 ### <a name="parameters"></a>参数
 
-*_Catval*<br/>
+*_Catval*\
 要关闭的目录。
 
 ### <a name="remarks"></a>备注
 
-受保护的成员函数将关闭消息目录 *_Catval*，其必须具有到的早期调用打开[do_open](#do_open)。
+受保护的成员函数将关闭消息目录 *_Catval*, 此消息必须已由先前对[do_open](#do_open)的调用打开。
 
 必须从以前打开的且未关闭的目录获取 *_Catval*。
 
@@ -149,25 +149,25 @@ virtual string_type do_get(
 
 ### <a name="parameters"></a>参数
 
-*_Catval*<br/>
+*_Catval*\
 指定要搜索的消息目录的标识值。
 
-*_Set*<br/>
+*_ 设置*\
 用于在消息目录中查找消息的第一个标识。
 
-*_Message*<br/>
+*_Message*\
 用于在消息目录中查找消息的第二个标识。
 
-*_Dfault*<br/>
+*_Dfault*\
 失败时返回的字符串。
 
 ### <a name="return-value"></a>返回值
 
-它将返回一份 *_Dfault*失败。 否则，它返回指定的消息序列的副本。
+它在失败时返回 *_Dfault*的副本。 否则，它返回指定的消息序列的副本。
 
 ### <a name="remarks"></a>备注
 
-受保护的成员函数尝试从消息目录中获取消息序列 *_Catval*。 它可能会利用 *_ 设置*，*消息 （_m)*，并 *_Dfault*中执行此操作。
+受保护的成员函数尝试从消息目录 *_Catval*获取消息序列。 在此过程中, 它可以使用 *_ 设置*、 *_Message*和 *_Dfault* 。
 
 ### <a name="example"></a>示例
 
@@ -185,10 +185,10 @@ virtual catalog do_open(
 
 ### <a name="parameters"></a>参数
 
-*_Catname*<br/>
+*_Catname*\
 要搜索的目录的名称。
 
-*_Loc*<br/>
+*_Loc*\
 目录中要搜索的区域设置。
 
 ### <a name="return-value"></a>返回值
@@ -197,7 +197,7 @@ virtual catalog do_open(
 
 ### <a name="remarks"></a>备注
 
-受保护的成员函数尝试打开消息目录的名称是 *_Catname*。 它可能会使用区域设置 *_Loc*中执行此操作
+受保护的成员函数尝试打开名称为 *_Catname*的消息目录。 在此过程中, 它可能会使用区域设置 *_Loc*
 
 返回值应用作稍后对 [close](#close) 调用时的自变量。
 
@@ -219,21 +219,21 @@ string_type get(
 
 ### <a name="parameters"></a>参数
 
-*_Catval*<br/>
+*_Catval*\
 指定要搜索的消息目录的标识值。
 
-*_Set*<br/>
+*_ 设置*\
 用于在消息目录中查找消息的第一个标识。
 
-*_Message*<br/>
+*_Message*\
 用于在消息目录中查找消息的第二个标识。
 
-*_Dfault*<br/>
+*_Dfault*\
 失败时返回的字符串。
 
 ### <a name="return-value"></a>返回值
 
-它将返回一份 *_Dfault*失败。 否则，它返回指定的消息序列的副本。
+它在失败时返回 *_Dfault*的副本。 否则，它返回指定的消息序列的副本。
 
 ### <a name="remarks"></a>备注
 
@@ -254,25 +254,25 @@ protected: messages(
 
 ### <a name="parameters"></a>参数
 
-*_Refs*<br/>
+*_Refs*\
 用于指定对象的内存管理类型的整数值。
 
-*_Locname*<br/>
+*_Locname*\
 区域设置的名称。
 
 ### <a name="remarks"></a>备注
 
-可能的值 *_Refs*参数和其重要性：
+*_Refs*参数的可能值及其重要性为:
 
-- 0:对象的生存期由包含它的区域设置管理。
+- 0对象的生存期由包含该对象的区域设置管理。
 
-- 1:必须手动管理的对象的生存期。
+- 1:必须手动管理对象的生存期。
 
-- \> 1:未定义这些值。
+- \>2未定义这些值。
 
 由于该析构函数受到保护，可能没有直接的示例。
 
-构造函数通过 **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`) 初始化其基对象。
+构造函数通过 **locale::** [facet](../standard-library/locale-class.md#facet_class)( `_Refs`) 初始化其基对象。
 
 ## <a name="open"></a>messages::open
 
@@ -286,10 +286,10 @@ catalog open(
 
 ### <a name="parameters"></a>参数
 
-*_Catname*<br/>
+*_Catname*\
 要搜索的目录的名称。
 
-*_Loc*<br/>
+*_Loc*\
 目录中要搜索的区域设置。
 
 ### <a name="return-value"></a>返回值
@@ -314,6 +314,6 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ## <a name="see-also"></a>请参阅
 
-[\<locale>](../standard-library/locale.md)<br/>
-[messages_base 类](../standard-library/messages-base-class.md)<br/>
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[messages_base 类](../standard-library/messages-base-class.md)\
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
