@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - clear method
 ms.assetid: 725f2717-5dc2-428f-a19a-05f046aafb2b
-ms.openlocfilehash: c3579603b55ed3b0c00f5cd256fc71d4a20afd27
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 7d617a1eb83a96c5d219e2de28a1fa6d053e1253
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221719"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457237"
 ---
 # <a name="container-classclear"></a>Container Class::clear
 
 > [!NOTE]
-> 本主题是在 microsoftC++作为容器中使用的非功能性示例文档C++标准库。 有关详细信息，请参阅 [C++ 标准库容器](../standard-library/stl-containers.md)。
+> 本主题在 Microsoft C++文档中作为在C++标准库中使用的容器的非功能性示例。 有关详细信息，请参阅 [C++ 标准库容器](../standard-library/stl-containers.md)。
 
 调用 [erase](../standard-library/container-class-erase.md)（[begin](../standard-library/container-class-begin.md) 和 [end](../standard-library/container-class-end.md)）。
 
@@ -27,4 +27,4 @@ void clear();
 
 ## <a name="see-also"></a>请参阅
 
-[Sample Container 类](../standard-library/sample-container-class.md)<br/>
+[Sample Container 类](../standard-library/sample-container-class.md)

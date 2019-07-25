@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::basic_ostringstream [C++], rdbuf
 - std::basic_ostringstream [C++], str
 ms.assetid: aea699f7-350f-432a-acca-adbae7b483fb
-ms.openlocfilehash: 45a7eb1384c70b488e057fb9df8ad4c496272316
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa25c379e47bbe22efc78d65b3f6745e98098cbd
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62414134"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453512"
 ---
 # <a name="basicostringstream-class"></a>basic_ostringstream 类
 
@@ -32,18 +32,18 @@ class basic_ostringstream : public basic_ostream<Elem, Tr>
 
 ### <a name="parameters"></a>参数
 
-*Alloc*<br/>
+*分配*\
 allocator 类。
 
-*Elem*<br/>
+*Elem*\
 字符串的基本元素的类型。
 
-*Tr*<br/>
+*Tr*\
 字符串的基本元素上专用的字符特征。
 
 ## <a name="remarks"></a>备注
 
-此类的流缓冲区，类型的元素描述一个对象，控制插入的元素和编码的对象`Elem`，其字符特征由类`Tr`，和它的元素分配器的分配类`Alloc`。 该对象存储 basic_stringbuf< **Elem**, **Tr**, `Alloc`> 类的对象。
+此类描述一个对象, 该对象控制将元素和编码对象插入流缓冲区的对象, 其中的`Elem`元素类型为, 其字符特征由类`Tr`确定, 并且其元素由的分配器分配类`Alloc`。 该对象存储 basic_stringbuf< **Elem**, **Tr**, `Alloc`> 类的对象。
 
 ### <a name="constructors"></a>构造函数
 
@@ -55,7 +55,7 @@ allocator 类。
 
 |类型名称|描述|
 |-|-|
-|[allocator_type](#allocator_type)|该类型是模板参数的同义词*Alloc*。|
+|[allocator_type](#allocator_type)|该类型是模板参数*分配*的同义词。|
 
 ### <a name="member-functions"></a>成员函数
 
@@ -72,7 +72,7 @@ allocator 类。
 
 ## <a name="allocator_type"></a>  basic_ostringstream::allocator_type
 
-该类型是模板参数的同义词*Alloc*。
+该类型是模板参数*分配*的同义词。
 
 ```cpp
 typedef Alloc allocator_type;
@@ -90,21 +90,21 @@ explicit basic_ostringstream(const basic_string<Elem, Tr, Alloc>& str, ios_base:
 
 ### <a name="parameters"></a>参数
 
-*_Mode*<br/>
+*_Mode*\
 [ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的枚举之一。
 
-*str*<br/>
+*字符串*\
 一个 `basic_string` 类型的对象。
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数通过调用来初始化基类[basic_ostream](../standard-library/basic-ostream-class.md)( **sb**)，其中`sb`是类的存储的对象[basic_stringbuf](../standard-library/basic-stringbuf-class.md) < **Elem**， **Tr**， `Alloc`>。 通过调用 basic_stringbuf< **Elem**, **Tr**, `Alloc`>( `_Mode` &#124; `ios_base::out`)，它还可以初始化 **sb**。
+第一个构造函数通过调用[basic_ostream](../standard-library/basic-ostream-class.md)( **sb**) 来初始化基类, 其中`sb`是[basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`> 类的存储对象。 通过调用 basic_stringbuf< **Elem**, **Tr**, `Alloc`>( `_Mode` &#124; `ios_base::out`)，它还可以初始化 **sb**。
 
-第二个构造函数通过调用 basic_ostream( **sb**) 初始化基类。 它还可以初始化`sb`通过调用 basic_stringbuf < **Elem**， **Tr**， `Alloc`> (_ *Str*， `_Mode` &#124; `ios_base::out`).
+第二个构造函数通过调用 basic_ostream( **sb**) 初始化基类。 它还通过`sb`调用 basic_stringbuf < **Elem**, **Tr** `Alloc`, > (_ *Str* `_Mode` , &#124; `ios_base::out`) 来进行初始化。
 
 ## <a name="rdbuf"></a>  basic_ostringstream::rdbuf
 
-返回类型的存储的流缓冲区的地址`pointer`到[basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**， **Tr**， `Alloc`>。
+`pointer`将类型的已存储流缓冲区的地址返回到[basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>。
 
 ```cpp
 basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
@@ -112,11 +112,11 @@ basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
 
 ### <a name="return-value"></a>返回值
 
-类型的已存储的流缓冲区的地址`pointer`basic_stringbuf 到 < **Elem**， **Tr**， `Alloc`>。
+存储流缓冲区的地址`pointer` , 类型为 basic_stringbuf < **Elem**, **Tr**, `Alloc`>。
 
 ### <a name="remarks"></a>备注
 
-此成员函数返回类型的存储的流缓冲区的地址`pointer`basic_stringbuf 到 < **Elem**， **Tr**， `Alloc`>。
+成员函数`pointer`将类型的已存储流缓冲区的地址返回到 basic_stringbuf < **Elem**, **Tr**, `Alloc`>。
 
 ### <a name="example"></a>示例
 
@@ -135,7 +135,7 @@ void str(
 
 ### <a name="parameters"></a>参数
 
-*_Newstr*<br/>
+*_Newstr*\
 新字符串。
 
 ### <a name="return-value"></a>返回值
@@ -148,10 +148,10 @@ void str(
 
 ### <a name="example"></a>示例
 
-请参阅[basic_stringbuf:: str](../standard-library/basic-stringbuf-class.md#str)有关的示例，使用`str`。
+有关使用`str`的示例, 请参阅[basic_stringbuf:: str](../standard-library/basic-stringbuf-class.md#str) 。
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream 编程](../standard-library/iostream-programming.md)<br/>
-[iostreams 约定](../standard-library/iostreams-conventions.md)<br/>
+[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream 编程](../standard-library/iostream-programming.md)\
+[iostreams 约定](../standard-library/iostreams-conventions.md)

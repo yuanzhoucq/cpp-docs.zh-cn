@@ -5,12 +5,12 @@ f1_keywords:
 - hash_set/std::operator!=
 - hash_set/std::operator==
 ms.assetid: 403d8e4e-0b3f-43fb-bc5a-8100c4f331c5
-ms.openlocfilehash: 901070731d372904ae297a5360ec0da78d179468
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3900e9c6e4fb7f5a163279165a51b440d138a8e5
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405022"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452036"
 ---
 # <a name="lthashsetgt-operators"></a>&lt;hash_set&gt; 运算符
 
@@ -32,10 +32,10 @@ bool operator!=(const hash_set <Key, Traits, Allocator>& left, const hash_set <K
 
 ### <a name="parameters"></a>参数
 
-*left*<br/>
+*左中*\
 一个 `hash_set` 类型的对象。
 
-*right*<br/>
+*然后*\
 一个 `hash_set` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -46,7 +46,7 @@ bool operator!=(const hash_set <Key, Traits, Allocator>& left, const hash_set <K
 
 hash_set 对象之间的比较基于其元素的成对比较。 如果两个 hash_set 具有的元素数目相等且对应元素具有相同的值，则这两个 hash_set 相等。 否则，它们不相等。
 
-成员[< hash_map >](../standard-library/hash-map.md)并[< hash_set >](../standard-library/hash-set.md)标头文件位于[stdext Namespace](../standard-library/stdext-namespace.md)。
+[< Hash_map >](../standard-library/hash-map.md)和[< hash_set >](../standard-library/hash-set.md)标头文件的成员位于[stdext 命名空间](../standard-library/stdext-namespace.md)中。
 
 ### <a name="example"></a>示例
 
@@ -100,10 +100,10 @@ bool operator!==(const hash_set <Key, Traits, Allocator>& left, const hash_set <
 
 ### <a name="parameters"></a>参数
 
-*left*<br/>
+*左中*\
 一个 `hash_set` 类型的对象。
 
-*right*<br/>
+*然后*\
 一个 `hash_set` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -166,10 +166,10 @@ bool operator!=(const hash_multiset <Key, Traits, Allocator>& left, const hash_m
 
 ### <a name="parameters"></a>参数
 
-*left*<br/>
+*左中*\
 一个 `hash_multiset` 类型的对象。
 
-*right*<br/>
+*然后*\
 一个 `hash_multiset` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -232,10 +232,10 @@ bool operator!==(const hash_multiset <Key, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>参数
 
-*left*<br/>
+*左中*\
 一个 `hash_multiset` 类型的对象。
 
-*right*<br/>
+*然后*\
 一个 `hash_multiset` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -287,4 +287,4 @@ The hash_multisets s1 and s2 are equal.
 
 ## <a name="see-also"></a>请参阅
 
-[<hash_set>](../standard-library/hash-set.md)<br/>
+[<hash_set>](../standard-library/hash-set.md)

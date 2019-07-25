@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ostream header
 ms.assetid: 90c3b6fb-57cd-4ae7-99b8-8512f24a67d2
-ms.openlocfilehash: eb73c77f0e2658cf750cf17ca85549a09d1cbe51
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8de66718dab10b5c95e8c1ab7fd0bd17e9b4ee5e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370926"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448172"
 ---
 # <a name="ltostreamgt"></a>&lt;ostream&gt;
 
@@ -29,8 +29,8 @@ ms.locfileid: "62370926"
 
 |类型名称|描述|
 |-|-|
-|[ostream](../standard-library/ostream-typedefs.md#ostream)|创建从类型`basic_ostream`专用于**char**并`char_traits`专用于**char**。|
-|[wostream](../standard-library/ostream-typedefs.md#wostream)|创建从类型`basic_ostream`专用于**wchar_t**并`char_traits`专用于**wchar_t**。|
+|[ostream](../standard-library/ostream-typedefs.md#ostream)|创建一个类型`basic_ostream` , 该类型在**char**上专用`char_traits`化并专用于**字符**。|
+|[wostream](../standard-library/ostream-typedefs.md#wostream)|创建一个类型`basic_ostream` , 该类型在**wchar_t**上专用`char_traits`化并专用于**wchar_t**。|
 
 ### <a name="manipulators"></a>操控器
 
@@ -55,7 +55,7 @@ ms.locfileid: "62370926"
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream 编程](../standard-library/iostream-programming.md)<br/>
-[iostreams 约定](../standard-library/iostreams-conventions.md)<br/>
+[头文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream 编程](../standard-library/iostream-programming.md)\
+[iostreams 约定](../standard-library/iostreams-conventions.md)

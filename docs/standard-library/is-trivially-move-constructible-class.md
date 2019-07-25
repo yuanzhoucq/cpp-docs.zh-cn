@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_move_constructible
 ms.assetid: 740bdec7-65e5-47b3-b94f-a2479ceac3ec
-ms.openlocfilehash: a1aef356716fac903b4e44a358602c709572e8ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 279da956eaff21c39c6e5ca563f26989105f7e74
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413381"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448364"
 ---
 # <a name="istriviallymoveconstructible-class"></a>is_trivially_move_constructible 类
 
@@ -26,26 +26,26 @@ struct is_trivially_move_constructible;
 
 ### <a name="parameters"></a>参数
 
-*Ty*<br/>
+*Ty*\
 要查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型谓词的实例将保留 true 类型*Ty*是一个类具有普通移动构造函数，否则为 false。
+如果类型*Ty*是一个具有普通移动构造函数的类, 则类型谓词的实例为 true; 否则为 false。
 
-移动构造函数的类*Ty*并不重要如果：
+如果以下情况, *Ty*类的移动构造函数是普通的:
 
 它被隐式声明
 
 其参数类型等效于那些隐式声明的参数类型
 
-该类*Ty*不具有虚拟函数
+类*Ty*没有虚函数
 
-该类*Ty*不具有虚拟基
+类*Ty*没有虚拟基
 
 类没有任何不稳定的非静态数据成员
 
-类的所有直接都基均*Ty*具有普通移动构造函数
+类*Ty*的所有直接基都具有普通的移动构造函数
 
 类类型的所有非静态数据成员的类具有普通构造函数
 
@@ -53,10 +53,10 @@ struct is_trivially_move_constructible;
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<type_traits>
+**标头：** \<type_traits>
 
 **命名空间：** std
 
 ## <a name="see-also"></a>请参阅
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_move_constructible
 ms.assetid: becdf076-7419-488d-a335-78adf2478b9b
-ms.openlocfilehash: 1b1e450338a123c51b80f40f2369207c8b987cd6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c83ed4365fd0e73a7daa8b9894c5e85f20387a79
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383628"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456107"
 ---
 # <a name="ismoveconstructible-class"></a>is_move_constructible 类
 
@@ -26,19 +26,19 @@ struct is_move_constructible;
 
 ### <a name="parameters"></a>参数
 
-*T*<br/>
+*关心*\
 要计算的类型
 
 ## <a name="remarks"></a>备注
 
-类型谓词的计算结果为 true 的类型*T*可以通过使用移动操作构造。 此谓词等效于 `is_constructible<T, T&&>`。
+如果可以使用移动操作构造类型*T* , 则其计算结果为 true 的类型谓词。 此谓词等效于 `is_constructible<T, T&&>`。
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<type_traits>
+**标头：** \<type_traits>
 
 **命名空间：** std
 
 ## <a name="see-also"></a>请参阅
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

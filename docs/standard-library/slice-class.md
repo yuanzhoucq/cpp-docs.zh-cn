@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::slice [C++], start
 - std::slice [C++], stride
 ms.assetid: 00f0b03d-d657-4b81-ba53-5a9034bb2bf2
-ms.openlocfilehash: f2c054626b36083d67f9dbc4c87cf6283c12f001
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 830e345eb7522cef44dbf6e727a976fb79c1e081
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412522"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450347"
 ---
 # <a name="slice-class"></a>slice 类
 
@@ -25,7 +25,7 @@ valarray 的实用程序类，用于定义父级 valarray 的一维子集。 如
 
 ## <a name="remarks"></a>备注
 
-该类存储了将 [slice_array](../standard-library/slice-array-class.md) 类型的对象特征化的参数。当类切片显示为 [valarray](../standard-library/valarray-class.md#op_at)**\<Type** 类的对象的自变量时，会间接构造 valarray 的子集。 存储的值（用于指定从父级 valarray 选择的子集）包括：
+该类存储了将 [slice_array](../standard-library/slice-array-class.md) 类型的对象特征化的参数。当类切片显示为 [valarray](../standard-library/valarray-class.md#op_at) **\<Type** 类的对象的自变量时，会间接构造 valarray 的子集。 存储的值（用于指定从父级 valarray 选择的子集）包括：
 
 - valarray 中的起始索引。
 
@@ -53,7 +53,7 @@ valarray 的实用程序类，用于定义父级 valarray 的一维子集。 如
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<valarray>
+**标头：** \<valarray>
 
 **命名空间：** std
 
@@ -136,18 +136,18 @@ slice(
 
 ### <a name="parameters"></a>参数
 
-*_StartIndex*<br/>
+*_StartIndex*\
 子集中第一个元素的 valarray 索引。
 
-*_Len*<br/>
+*_Len*\
 子集中的元素数。
 
-*stride*<br/>
+*长足*\
 子集中元素间的距离。
 
 ### <a name="return-value"></a>返回值
 
-默认构造函数对于起始索引、总长度和 stride 都存储为零。 第二个构造函数存储 *_StartIndex*对于起始索引 *_Len*对于总长度，并*stride*对于跨距。
+默认构造函数对于起始索引、总长度和 stride 都存储为零。 第二个构造函数存储 *_StartIndex*的起始索引、 *_Len*的总*长度和跨距*。
 
 ### <a name="remarks"></a>备注
 
@@ -312,4 +312,4 @@ The stride of slice vaSlice is: 3.
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

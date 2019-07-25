@@ -7,12 +7,12 @@ helpviewer_keywords:
 - remove_all_extents class
 - remove_all_extents
 ms.assetid: 548dc536-82e7-423a-b8c1-443d66d9632e
-ms.openlocfilehash: 1c8972889272a4621d6357758cde6d174bb2abd7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0909da3f08cec62bcb915a65c353abdd33c96c9d
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368950"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451408"
 ---
 # <a name="removeallextents-class"></a>remove_all_extents 类
 
@@ -30,12 +30,12 @@ using remove_all_extents_t = typename remove_all_extents<T>::type;
 
 ### <a name="parameters"></a>参数
 
-*T*<br/>
+*关心*\
 要修改的类型。
 
 ## <a name="remarks"></a>备注
 
-实例`remove_all_extents<T>`保留修改的类型是数组类型的元素类型*T*与所有数组维度中删除，或*T*如果*T*不是数组类型。
+的`remove_all_extents<T>`实例保留修改后的类型, 即移除了所有数组维度的数组类型*T*的元素类型, 如果*t*不是数组类型, 则为*t* 。
 
 ## <a name="example"></a>示例
 
@@ -61,11 +61,11 @@ int main()
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<type_traits>
+**标头：** \<type_traits>
 
 **命名空间：** std
 
 ## <a name="see-also"></a>请参阅
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[remove_extent 类](../standard-library/remove-extent-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[remove_extent 类](../standard-library/remove-extent-class.md)

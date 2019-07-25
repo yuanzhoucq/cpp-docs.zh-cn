@@ -40,12 +40,12 @@ helpviewer_keywords:
 - std::codecvt [C++], out
 - std::codecvt [C++], unshift
 ms.assetid: 37d3efa1-2b7f-42b6-b04f-7a972c8c2c86
-ms.openlocfilehash: be1075da65284ac3f9672a839622b59c8926bfb9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 936b3ab63b454e8f7e0490c2d155356a7c3b240f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405230"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459835"
 ---
 # <a name="codecvt-class"></a>codecvt 类
 
@@ -60,20 +60,20 @@ class codecvt : public locale::facet, codecvt_base;
 
 ### <a name="parameters"></a>参数
 
-*CharType*<br/>
+*CharType*\
 在程序中用于对字符进行编码的类型。
 
-*Byte*<br/>
+*位*\
 用于对程序外的字符进行编码的类型。
 
-*StateType*<br/>
+*StateType*\
 一种类型，此类型可用于表示字符表示形式的内部和外部类型之间转换的中间状态。
 
 ## <a name="remarks"></a>备注
 
-此模板类描述一个对象来充当[区域设置 facet](../standard-library/locale-class.md#facet_class)，用于控制类型的值序列之间的转换*CharType*类型的值序列和*字节*. 该类*StateType*转换和类的对象的特点是*StateType*存储在转换过程的任何必要的状态信息。
+此模板类描述可用作[区域设置 facet](../standard-library/locale-class.md#facet_class)的对象, 用于控制*CharType*类型的值序列和类型为*Byte*的值序列之间的转换。 类*StateType*的特征是转换, *StateType*类的对象在转换过程中存储任何必需的状态信息。
 
-内部编码使用表示形式与固定数量的字节数，每个字符，通常可以键入**char**或键入**wchar_t**。
+内部编码使用每个字符的固定字节数的表示形式, 通常为**char**或类型**wchar_t**。
 
 对于任何区域设置 facet，静态对象 `id` 的初始存储值为零。 首次尝试访问其存储值后，将在 `id` 中存储唯一正值。
 
@@ -86,21 +86,21 @@ template<>
 codecvt<wchar_t, char, mbstate_t>
 ```
 
-之间进行转换**wchar_t**并**char**序列。
+在**wchar_t**和**char**序列之间转换。
 
 ```cpp
 template<>
 codecvt<char16_t, char, mbstate_t>
 ```
 
-之间进行转换`char16_t`序列编码为 utf-16 并**char**序列编码为 utf-8。
+在编码`char16_t`为 utf-16 的序列和编码为 utf-8 的**char**序列之间转换。
 
 ```cpp
 template<>
 codecvt<char32_t, char, mbstate_t>
 ```
 
-之间进行转换`char32_t`序列编码为 UTF-32 (ucs-4) 和**char**序列编码为 utf-8。
+在编码`char32_t`为 32 (UCS-4) 的序列和编码为 utf-8 的**char**序列之间转换。
 
 ### <a name="constructors"></a>构造函数
 
@@ -202,20 +202,20 @@ explicit codecvt(size_t _Refs = 0);
 
 ### <a name="parameters"></a>参数
 
-*_Refs*<br/>
+*_Refs*\
 用于指定对象的内存管理类型的整数值。
 
 ### <a name="remarks"></a>备注
 
-可能的值 *_Refs*参数和其重要性：
+*_Refs*参数的可能值及其重要性为:
 
-- 0:对象的生存期由包含它的区域设置管理。
+- 0对象的生存期由包含该对象的区域设置管理。
 
-- 1:必须手动管理的对象的生存期。
+- 1:必须手动管理对象的生存期。
 
 - 2:未定义这些值。
 
-构造函数初始化其`locale::facet`基对象**区域设置::**[方面](../standard-library/locale-class.md#facet_class)(`_Refs`)。
+构造函数通过`locale::facet` **locale::** [facet](../standard-library/locale-class.md#facet_class)(`_Refs`) 初始化其基对象。
 
 ## <a name="do_always_noconv"></a>  codecvt::do_always_noconv
 
@@ -227,7 +227,7 @@ virtual bool do_always_noconv() const throw();
 
 ### <a name="return-value"></a>返回值
 
-受保护虚拟成员函数将返回 **，则返回 true**仅当每个调用[do_in](#do_in)或[do_out](#do_out)返回`noconv`。
+仅当对[do_in](#do_in)或[do_out](#do_out)的每个调用返回`noconv`时, 受保护的虚拟成员函数才返回**true** 。
 
 模板版本始终返回 **true**。
 
@@ -237,7 +237,7 @@ virtual bool do_always_noconv() const throw();
 
 ## <a name="do_encoding"></a>  codecvt::do_encoding
 
-如果测试的虚拟函数的编码`Byte`流不依赖于状态、 是否之间的比率`Byte`使用和`CharType`生成是常数，并且如果是这样，确定此比率的值。
+一种虚拟函数, 用于测试`Byte`流的编码是否依赖于状态、使用的数和生成的`CharType`数`Byte`之间的比率是否是常量, 如果是, 则确定该比率的值。
 
 ```cpp
 virtual int do_encoding() const throw();
@@ -247,7 +247,7 @@ virtual int do_encoding() const throw();
 
 受保护的虚拟成员函数返回：
 
-- -1，如果类型的序列的编码`extern_type`为依赖状态。
+- 如果类型`extern_type`序列的编码依赖于状态, 则为-1。
 
 - 如果编码涉及不同长度的序列，则为 0。
 
@@ -259,7 +259,7 @@ virtual int do_encoding() const throw();
 
 ## <a name="do_in"></a>  codecvt::do_in
 
-调用虚拟函数，以将转换为外部`Byte`到一系列内部`CharType`s。
+一种虚拟函数, 通过调用此函数可`Byte`将一系列外部转换为`CharType`内部的序列。
 
 ```cpp
 virtual result do_in(
@@ -274,42 +274,42 @@ virtual result do_in(
 
 ### <a name="parameters"></a>参数
 
-*_State*<br/>
+*_State*\
 每次调用成员函数时保留的转换状态。
 
-*first1*<br/>
+*first1*\
 指向待转换序列开头的指针。
 
-*last1*<br/>
+*last1*\
 指向待转换序列末尾的指针。
 
-*next1*<br/>
+*next1*\
 指向超出已转换序列末尾到第一个未转换字符的指针。
 
-*first2*<br/>
+*first2*\
 指向已转换序列开头的指针。
 
-*last2*<br/>
+*last2*\
 指向已转换序列末尾的指针。
 
-*next2*<br/>
-指向`CharType`最后一个转换后都`CharType`，目标序列中的第一个未更改字符。
+*next2*\
+指向上次转换`CharType`后的, 指向目标序列中第一个未更改字符的指针。 `CharType`
 
 ### <a name="return-value"></a>返回值
 
 返回指示操作成功、部分成功或失败的值。 该函数返回：
 
-- `codecvt_base::error` 如果源序列格式不，正确。
+- `codecvt_base::error`如果源序列的格式不正确, 则为。
 
 - 如果函数不执行任何转换，则为 `codecvt_base::noconv`。
 
-- `codecvt_base::ok` 如果转换成功。
+- `codecvt_base::ok`如果转换成功, 则为。
 
-- `codecvt_base::partial` 如果源不足，或目标不是大小不足，使转换成功完成。
+- `codecvt_base::partial`如果源不足, 或者目标不够大, 则转换为成功。
 
 ### <a name="remarks"></a>备注
 
-*_State*必须代表新源序列开头初始转换状态。 此函数根据需要来更改其存储的值以反映成功转换的当前状态。 否则未指定其存储的值。
+*_State*必须表示新源序列开头的初始转换状态。 此函数根据需要来更改其存储的值以反映成功转换的当前状态。 否则未指定其存储的值。
 
 ### <a name="example"></a>示例
 
@@ -329,37 +329,37 @@ virtual int do_length(
 
 ### <a name="parameters"></a>参数
 
-*_State*<br/>
+*_State*\
 每次调用成员函数时保留的转换状态。
 
-*first1*<br/>
+*first1*\
 指向外部序列开头的指针。
 
-*last1*<br/>
+*last1*\
 指向外部序列末尾的指针。
 
-*_Len2*<br/>
-最大数目`Byte`可由成员函数返回的 s。
+*_Len2*\
+成员函数可返回`Byte`的最大数目。
 
 ### <a name="return-value"></a>返回值
 
-一个整数，表示转换，不能大于最大数目的计数 *_Len2*定义由外部源序列在 [ `first1`， `last1`)。
+一个整数, 表示在 [ `first1`, `last1`) 由外部源序列定义的最大转换数的计数, 不能大于 *_Len2*。
 
 ### <a name="remarks"></a>备注
 
-受保护虚拟成员函数有效地调用`do_in`( `_State`， `first1`， `last1`， `next1`， `_Buf`， `_Buf`  +  `_Len2`， `next2`) 为 *_State* （状态副本），一些缓冲区`_Buf`，和指针`next1`和`next2`。
+受保护的虚拟成员函数对`do_in`_ 有效调用 ( `next1` `last1` `_State` `_Buf` 、、`first1`、 `_Buf` 、`next2`、、)  +  `_Len2` *状态*(状态的副本)、某个缓冲区`_Buf`和指针`next1`和`next2`。
 
-然后，它返回`next2`  -  `buf`。 因此，它计算的转换，不能大于最大数目 *_Len2*定义由源序列在 [ `first1`， `last1`)。
+然后返回`next2`。  -  `buf` 因此, 它会计算在 [ `first1`, `last1`) 的源序列定义的最大转换数, 而不是大于 *_Len2*。
 
-模板版本始终返回较小的*last1* - *first1*并 *_Len2*。
+模板版本始终返回较小的*last1* - *first1*和 *_Len2*。
 
 ### <a name="example"></a>示例
 
-有关示例，请参阅[长度](#length)，它调用`do_length`。
+请参阅[length](#length)的示例, 它调用`do_length`。
 
 ## <a name="do_max_length"></a>  codecvt::do_max_length
 
-返回外部的最大数目的虚拟函数`Byte`需生成一个内部`CharType`。
+返回生成一个内部`Byte` `CharType`所需的最大外部数的虚函数。
 
 ```cpp
 virtual int do_max_length() const throw();
@@ -367,11 +367,11 @@ virtual int do_max_length() const throw();
 
 ### <a name="return-value"></a>返回值
 
-最大数目`Byte`需生成一个`CharType`。
+生成一个`Byte` `CharType`所需的最大数目。
 
 ### <a name="remarks"></a>备注
 
-受保护虚拟成员函数返回可由返回的最大允许值[do_length](#do_length)( `first1`， `last1`，1) 有关的任意有效值*first1*并*last1*。
+受保护的虚拟成员函数将返回[do_length](#do_length) `first1`( `last1`,, 1) 可为*first1*和*last1*的任意有效值返回的最大允许值。
 
 ### <a name="example"></a>示例
 
@@ -394,42 +394,42 @@ virtual result do_out(
 
 ### <a name="parameters"></a>参数
 
-*_State*<br/>
+*_State*\
 每次调用成员函数时保留的转换状态。
 
-*first1*<br/>
+*first1*\
 指向待转换序列开头的指针。
 
-*last1*<br/>
+*last1*\
 指向待转换序列末尾的指针。
 
-*next1*<br/>
-引用指向第一个已`CharType`，在最后一个`CharType`转换。
+*next1*\
+指向上次`CharType` `CharType`转换后转换后的第一个未转换的指针的引用。
 
-*first2*<br/>
+*first2*\
 指向已转换序列开头的指针。
 
-*last2*<br/>
+*last2*\
 指向已转换序列末尾的指针。
 
-*next2*<br/>
-引用指向第一个已`Byte`，在最后一个`Byte`转换。
+*next2*\
+指向上次`Byte` `Byte`转换后转换后的第一个未转换的指针的引用。
 
 ### <a name="return-value"></a>返回值
 
 该函数返回：
 
-- `codecvt_base::error` 如果源序列格式不，正确。
+- `codecvt_base::error`如果源序列的格式不正确, 则为。
 
 - 如果函数不执行任何转换，则为 `codecvt_base::noconv`。
 
-- `codecvt_base::ok` 如果转换成功。
+- `codecvt_base::ok`如果转换成功, 则为。
 
-- `codecvt_base::partial` 如果源不足，或目标不是大小不足以使转换成功完成。
+- `codecvt_base::partial`如果源不足, 或者目标不够大, 则无法成功转换。
 
 ### <a name="remarks"></a>备注
 
-*_State*必须代表新源序列开头初始转换状态。 此函数根据需要来更改其存储的值以反映成功转换的当前状态。 否则未指定其存储的值。
+*_State*必须表示新源序列开头的初始转换状态。 此函数根据需要来更改其存储的值以反映成功转换的当前状态。 否则未指定其存储的值。
 
 ### <a name="example"></a>示例
 
@@ -449,35 +449,35 @@ virtual result do_unshift(
 
 ### <a name="parameters"></a>参数
 
-*_State*<br/>
+*_State*\
 每次调用成员函数时保留的转换状态。
 
-*first2*<br/>
+*first2*\
 指向目标范围内第一个位置的指针。
 
-*last2*<br/>
+*last2*\
 指向目标范围内最后一个位置的指针。
 
-*next2*<br/>
+*next2*\
 指向目标序列中第一个未更改元素的指针。
 
 ### <a name="return-value"></a>返回值
 
 该函数返回：
 
-- `codecvt_base::error` 如果 _*状态*表示无效状态
+- `codecvt_base::error`如果 _*状态*表示无效状态
 
 - 如果该函数不执行任何转换，则为 `codecvt_base::noconv`
 
-- `codecvt_base::ok` 如果转换成功
+- `codecvt_base::ok`如果转换成功
 
-- `codecvt_base::partial` 如果目标是不足够大，以便使转换成功完成
+- `codecvt_base::partial`如果目标不够大, 转换成功
 
 ### <a name="remarks"></a>备注
 
-受保护虚拟成员函数尝试将转换源元素`CharType`(0) 到其存储在目标序列 [ `first2`， `last2`)，终止元素除外`Byte`(0)。 它始终存储在*next2*指向目标序列中的第一个未更改元素的指针。
+受保护的虚拟成员函数尝试`CharType`将源元素 (0) 转换为它在 [ `first2`, `last2`) 内存储的目标序列 (终止元素`Byte`除外, 0)。 它始终在*next2*中存储指向目标序列中第一个未更改元素的指针。
 
-_ *State* 必须代表新源序列开头的初始转换状态。 此函数根据需要来更改其存储的值以反映成功转换的当前状态。 通常情况下，将转换源元素`CharType`(0) 将使当前状态处于初始转换状态。
+_ *State* 必须代表新源序列开头的初始转换状态。 此函数根据需要来更改其存储的值以反映成功转换的当前状态。 通常, 转换源元素`CharType`(0) 会使当前状态成为初始转换状态。
 
 ### <a name="example"></a>示例
 
@@ -493,11 +493,11 @@ int encoding() const throw();
 
 ### <a name="return-value"></a>返回值
 
-如果返回值为正，则该值是固定数目的`Byte`以生成所需字符`CharType`字符。
+如果返回值为正, 则该值为`Byte` `CharType`生成字符所需的常量字符数。
 
 受保护的虚拟成员函数返回：
 
-- -1，如果类型的序列的编码`extern_type`为依赖状态。
+- 如果类型`extern_type`序列的编码依赖于状态, 则为-1。
 
 - 如果编码涉及不同长度的序列，则为 0。
 
@@ -563,42 +563,42 @@ result in(
 
 ### <a name="parameters"></a>参数
 
-*_State*<br/>
+*_State*\
 每次调用成员函数时保留的转换状态。
 
-*first1*<br/>
+*first1*\
 指向待转换序列开头的指针。
 
-*last1*<br/>
+*last1*\
 指向待转换序列末尾的指针。
 
-*next1*<br/>
+*next1*\
 指向超出已转换序列末尾到第一个未转换字符的指针。
 
-*first2*<br/>
+*first2*\
 指向已转换序列开头的指针。
 
-*last2*<br/>
+*last2*\
 指向已转换序列末尾的指针。
 
-*next2*<br/>
-指向`CharType`最后一个转换后都`Chartype`到目标序列中的第一个未更改字符。
+*next2*\
+指向`CharType`上次转换`Chartype`为目标序列中第一个未更改字符之后的。
 
 ### <a name="return-value"></a>返回值
 
 返回指示操作成功、部分成功或失败的值。 该函数返回：
 
-- `codecvt_base::error` 如果源序列格式不，正确。
+- `codecvt_base::error`如果源序列的格式不正确, 则为。
 
 - 如果函数不执行任何转换，则为 `codecvt_base::noconv`。
 
-- `codecvt_base::ok` 如果转换成功。
+- `codecvt_base::ok`如果转换成功, 则为。
 
-- `codecvt_base::partial` 如果源不足，或目标不是大小不足以使转换成功完成。
+- `codecvt_base::partial`如果源不足, 或者目标不够大, 则无法成功转换。
 
 ### <a name="remarks"></a>备注
 
-*_State*必须代表新源序列开头初始转换状态。 此函数根据需要来更改其存储的值以反映成功转换的当前状态。 部分转换后 *_State*必须设置以便允许新字符到达时继续转换。
+*_State*必须表示新源序列开头的初始转换状态。 此函数根据需要来更改其存储的值以反映成功转换的当前状态。 在部分转换后, 必须将 *_State*设置为, 以允许在新字符到达时恢复转换。
 
 成员函数将返回 [do_in](#do_in)( `_State`, _ *First1,  last1,  next1, First2, _Llast2,  next2*)。
 
@@ -665,21 +665,21 @@ int length(
 
 ### <a name="parameters"></a>参数
 
-*_State*<br/>
+*_State*\
 每次调用成员函数时保留的转换状态。
 
-*first1*<br/>
+*first1*\
 指向外部序列开头的指针。
 
-*last1*<br/>
+*last1*\
 指向外部序列末尾的指针。
 
-*_Len2*<br/>
+*_Len2*\
 可由成员函数返回的最大字节数。
 
 ### <a name="return-value"></a>返回值
 
-一个整数，表示转换，不能大于最大数目的计数 *_Len2*定义由外部源序列在 [ `first1`， `last1`)。
+一个整数, 表示在 [ `first1`, `last1`) 由外部源序列定义的最大转换数的计数, 不能大于 *_Len2*。
 
 ### <a name="remarks"></a>备注
 
@@ -724,7 +724,7 @@ int max_length() const throw();
 
 ### <a name="return-value"></a>返回值
 
-最大数目`Byte`需生成一个`CharType`。
+生成一个`Byte` `CharType`所需的最大数目。
 
 ### <a name="remarks"></a>备注
 
@@ -770,26 +770,26 @@ result out(
 
 ### <a name="parameters"></a>参数
 
-*_State*<br/>
+*_State*\
 每次调用成员函数时保留的转换状态。
 
-*first1*<br/>
+*first1*\
 指向待转换序列开头的指针。
 
-*last1*<br/>
+*last1*\
 指向待转换序列末尾的指针。
 
-*next1*<br/>
-引用指向第一个已`CharType`后的最后一个`CharType`转换。
+*next1*\
+引用指向上次`CharType` `CharType`转换后的第一个未转换的指针。
 
-*first2*<br/>
+*first2*\
 指向已转换序列开头的指针。
 
-*last2*<br/>
+*last2*\
 指向已转换序列末尾的指针。
 
-*next2*<br/>
-引用指向第一个已`Byte`最后一个转换后`Byte`。
+*next2*\
+引用指向上次转换`Byte` `Byte`后的第一个未转换的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -850,7 +850,7 @@ typedef StateType state_type;
 
 ## <a name="unshift"></a>  codecvt::unshift
 
-提供了`Byte`依赖于状态的转换中的需要以完成一系列中的最后一个字符`Byte`s。
+提供依赖`Byte`于状态的转换中需要的以完成`Byte`序列中的最后一个字符。
 
 ```cpp
 result unshift(
@@ -862,41 +862,41 @@ result unshift(
 
 ### <a name="parameters"></a>参数
 
-*_State*<br/>
+*_State*\
 每次调用成员函数时保留的转换状态。
 
-*first2*<br/>
+*first2*\
 指向目标范围内第一个位置的指针。
 
-*last2*<br/>
+*last2*\
 指向目标范围内最后一个位置的指针。
 
-*next2*<br/>
+*next2*\
 指向目标序列中第一个未更改元素的指针。
 
 ### <a name="return-value"></a>返回值
 
 该函数返回：
 
-- `codecvt_base::error` 如果状态表示无效状态。
+- `codecvt_base::error`如果 state 表示无效状态, 则为。
 
 - 如果函数不执行任何转换，则为 `codecvt_base::noconv`。
 
-- `codecvt_base::ok` 如果转换成功。
+- `codecvt_base::ok`如果转换成功, 则为。
 
-- `codecvt_base::partial` 如果目标是不足够大，以便使转换成功完成。
+- `codecvt_base::partial`如果目标不够大, 则无法成功转换。
 
 ### <a name="remarks"></a>备注
 
-受保护虚拟成员函数尝试将转换源元素`CharType`(0) 到其存储在目标序列 [ `first2`， `last2`)，终止元素除外`Byte`(0)。 它始终存储在*next2*指向目标序列中的第一个未更改元素的指针。
+受保护的虚拟成员函数尝试`CharType`将源元素 (0) 转换为它在 [ `first2`, `last2`) 内存储的目标序列 (终止元素`Byte`除外, 0)。 它始终在*next2*中存储指向目标序列中第一个未更改元素的指针。
 
-*_State*必须代表新源序列开头初始转换状态。 此函数根据需要来更改其存储的值以反映成功转换的当前状态。 通常情况下，将转换源元素`CharType`(0) 将使当前状态处于初始转换状态。
+*_State*必须表示新源序列开头的初始转换状态。 此函数根据需要来更改其存储的值以反映成功转换的当前状态。 通常, 转换源元素`CharType`(0) 会使当前状态成为初始转换状态。
 
 成员函数返回 [do_unshift](#do_unshift)( `_State`, `first2`, `last2`, `next2` )。
 
 ## <a name="see-also"></a>请参阅
 
-[\<locale>](../standard-library/locale.md)<br/>
-[代码页](../c-runtime-library/code-pages.md)<br/>
-[区域设置名称、语言和国家/地区字符串](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[代码页](../c-runtime-library/code-pages.md)\
+[区域设置名称、语言和国家/地区字符串](../c-runtime-library/locale-names-languages-and-country-region-strings.md)\
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

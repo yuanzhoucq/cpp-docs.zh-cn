@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_pointer class
 - is_pointer
 ms.assetid: 44e0a403-7241-4e0a-8922-32877bcb9a4c
-ms.openlocfilehash: 7e46d692f76f80302dcd181aa1cee2efd1b189d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d8b15f9eb5ef817f5576387b0d8119b86aa86af7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413601"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455734"
 ---
 # <a name="ispointer-class"></a>is_pointer 类
 
@@ -27,12 +27,12 @@ struct is_pointer;
 
 ### <a name="parameters"></a>参数
 
-*Ty*<br/>
+*Ty*\
 要查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型谓词的实例将保留 true 类型*Ty*指向的指针**void**、 一个指针指向的对象，或指向函数的指针或`cv-qualified`窗体的其中之一，否则为 false。 请注意，`is_pointer`持有 false if *Ty*是指向成员的指针或指向成员函数的指针。
+如果类型*Ty*是指向**void**的指针、指向对象的指针、指向函数的指针或`cv-qualified`其中之一的形式, 则类型谓词的实例将为 true; 否则为 false。 请注意`is_pointer` , 如果*Ty*是指向成员的指针或指向成员函数的指针, 则为 false。
 
 ## <a name="example"></a>示例
 
@@ -74,12 +74,12 @@ is_pointer<int *> == true
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<type_traits>
+**标头：** \<type_traits>
 
 **命名空间：** std
 
 ## <a name="see-also"></a>请参阅
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_member_pointer 类](../standard-library/is-member-pointer-class.md)<br/>
-[is_reference 类](../standard-library/is-reference-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_member_pointer 类](../standard-library/is-member-pointer-class.md)\
+[is_reference 类](../standard-library/is-reference-class.md)

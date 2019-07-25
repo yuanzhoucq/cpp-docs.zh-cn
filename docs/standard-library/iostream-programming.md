@@ -17,12 +17,12 @@ helpviewer_keywords:
 - programming [C++], iostream programming
 - text input [C++]
 ms.assetid: 1aa0a0be-4dd8-4dac-ac1f-d2afdaeab769
-ms.openlocfilehash: 56b6d2a69372c9c8232823feb085780c38c00f0e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 883050c8ad838d642156dc6dac4c779d2dd3420a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385149"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449069"
 ---
 # <a name="iostream-programming"></a>iostream 编程
 
@@ -44,5 +44,5 @@ ms.locfileid: "62385149"
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 标准库](../standard-library/cpp-standard-library-reference.md)<br/>
-[iostreams 约定](../standard-library/iostreams-conventions.md)<br/>
+[C++ 标准库](../standard-library/cpp-standard-library-reference.md)\
+[iostreams 约定](../standard-library/iostreams-conventions.md)

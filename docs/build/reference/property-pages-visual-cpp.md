@@ -14,12 +14,12 @@ helpviewer_keywords:
 - build macro
 - user-defined macros
 ms.assetid: 13ffe3ea-1bc3-4bee-be5e-053a8a99cce4
-ms.openlocfilehash: 164a8e8aff5428be36c5d921bc8078ab352f51c0
-ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.openlocfilehash: 9f0dbe31325ec894add3d2577eb977a0c6dd7c41
+ms.sourcegitcommit: ce3393846c86e7905ff0c86e4cd6610476809585
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299730"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68492137"
 ---
 # <a name="c-project-property-page-reference"></a>C++项目属性页引用
 
@@ -47,21 +47,7 @@ ms.locfileid: "68299730"
 
 [“常规”属性页（文件）](general-property-page-file.md)
 
-
-
-
-
 [“HLSL”属性页](hlsl-property-pages.md)
-
-[“HLSL”属性页：高级](hlsl-property-pages-advanced.md)
-
-[“HLSL”属性页：常规](hlsl-property-pages-general.md)
-
-[“HLSL”属性页：输出文件](hlsl-property-pages-output-files.md)
-
-
-
-
 
 [“链接器”属性页](linker-property-pages.md)
 
@@ -71,17 +57,9 @@ ms.locfileid: "68299730"
 
 [“MIDL”属性页](midl-property-pages.md)
 
-[“MIDL”属性页：高级](midl-property-pages-advanced.md)
-
-[“MIDL”属性页：常规](midl-property-pages-general.md)
-
-[“MIDL”属性页：输出](midl-property-pages-output.md)
-
 [“Nmake”属性页](nmake-property-page.md)
 
 [“资源”属性页](resources-property-pages.md)
-
-
 
 [“Web 引用”属性页](web-references-property-page.md)
 

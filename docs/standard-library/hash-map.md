@@ -6,17 +6,17 @@ f1_keywords:
 - std::<hash_map>
 helpviewer_keywords:
 - hash_map header
-ms.openlocfilehash: 5a7ea891a314d69b8bc3378edce9fa0de2d89ace
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cca38386892ce4df6bf9863e0cbac3dc16106d35
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159491"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448664"
 ---
 # <a name="lthashmapgt"></a>&lt;hash_map&gt;
 
 > [!NOTE]
-> 此标头已废弃不用。 替代方法是[ \<unordered_map >](unordered-map.md)。
+> 此标头已废弃不用。 替代项为[ \<unordered_map >](unordered-map.md)。
 
 定义容器模板类 hash_map 和 hash_multimap 及其支持的模板。
 
@@ -43,19 +43,19 @@ ms.locfileid: "62159491"
 
 |类|描述|
 |-|-|
-|[hash_compare 类](hash-compare-class.md)|描述一个对象，可以使用的哈希关联容器 — hash_map、 hash_multimap、 hash_set 或 hash_multiset — 默认情况下`Traits`参数对象以进行排序和哈希它们所包含的元素。|
+|[hash_compare 类](hash-compare-class.md)|描述一个对象, 任何哈希关联容器 (hash_map、hash_multimap、hash_set 或 hash_multiset) 都可将该对象用作默认`Traits`参数对象, 以对其所包含的元素进行排序和哈希处理。|
 |[value_compare 类](value-compare-class.md)|提供一个函数对象，该对象能通过比较 hash_map 元素的键值来比较这些元素，以确定其在 hash_map 中的相对顺序。|
 |[hash_map 类](hash-map-class.md)|用于存储和快速检索集合中的数据，集合中的每个元素都是具有排序键和关联数据值的元素对，而排序键的值是唯一的。|
 |[hash_multimap 类](hash-multimap-class.md)|用于存储和快速检索集合中的数据，集合中的每个元素都是具有排序键和关联数据值的元素对，而排序键的值不需要具有唯一性。|
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<hash_map>
+**标头：** \<hash_map>
 
 **命名空间：** stdext
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](cpp-standard-library-header-files.md)<br/>
-[C++ 标准库中的线程安全](thread-safety-in-the-cpp-standard-library.md)<br/>
+[头文件引用](cpp-standard-library-header-files.md)\
+[C++ 标准库中的线程安全性](thread-safety-in-the-cpp-standard-library.md)\
 [C++ 标准库参考](cpp-standard-library-reference.md)

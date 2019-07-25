@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - aligned_union
 ms.assetid: 9931a44d-3a67-4f29-a0f6-d47a7cf560ac
-ms.openlocfilehash: 1a26675879c50440a4955989aca178dbe5049fdf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b9ffb4aff4d4d5667ab8d626ea13a21da94ca0c1
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411105"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456465"
 ---
 # <a name="alignedunion-class"></a>aligned_union 类
 
@@ -29,15 +29,15 @@ using aligned_union_t = typename aligned_union<Len, Types...>::type;
 
 ### <a name="parameters"></a>参数
 
-*Len*<br/>
+*长度*\
 联合中的最大类型的对齐值。
 
-*类型*<br/>
+*类型*\
 基础联合中的不同类型。
 
 ## <a name="remarks"></a>备注
 
-使用此模板类来获取对齐方式和在未初始化的存储中存储一个联合所需的大小。 成员 typedef`type`适用于存储中列出的任何类型的 POD 名称，键入*类型*; 最小大小是*Len*。 静态成员`alignment_value`类型的`std::size_t`包含中列出的所有类型的所需的最严格的对齐方式*类型*。
+使用此模板类来获取对齐方式和在未初始化的存储中存储一个联合所需的大小。 成员 typedef `type`将 POD 类型命名为适用于*类型*中列出的任何类型的存储; 最小大小为*Len*。 类型`alignment_value` 的`std::size_t`静态成员包含*类型*中列出的所有类型所需的最严格对齐。
 
 ## <a name="example"></a>示例
 
@@ -79,11 +79,11 @@ value of u->i is 1065353216
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<type_traits>
+**标头：** \<type_traits>
 
 **命名空间：** std
 
 ## <a name="see-also"></a>请参阅
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[alignment_of 类](../standard-library/alignment-of-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[alignment_of Class](../standard-library/alignment-of-class.md)

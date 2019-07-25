@@ -16,12 +16,12 @@ helpviewer_keywords:
 - stdext::max_variable_size [C++], released
 - stdext::max_variable_size [C++], saved
 ms.assetid: 9f2e9df0-4148-4b37-bc30-f8eca0ef86ae
-ms.openlocfilehash: a7fde40352a878575ddce8b48b4c97093ae7a960
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8b3c61676f784bf9369c22b5db97d7b251f7ac6
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412925"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447285"
 ---
 # <a name="maxvariablesize-class"></a>max_variable_size 类
 
@@ -51,7 +51,7 @@ class max_variable_size
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<allocators>
+**标头：** \<allocators>
 
 **命名空间：** stdext
 
@@ -71,7 +71,7 @@ void allocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>备注
 
-此成员函数将添加 *_Nx*到存储值`_Nallocs`。 在每次调用成功后，调用此成员函数`cache_freelist::allocate`向操作员**新**。 自变量 *_Nx*是由运算符分配的区块中的内存块的数目**新**。
+此成员函数将 *_Nx*添加到存储值`_Nallocs`。 每次成功调用`cache_freelist::allocate`后, 将调用此成员函数以调用**new**运算符。 参数 *_Nx*是运算符**new**分配的区块中的内存块数。
 
 ## <a name="deallocated"></a>max_variable_size::deallocated
 
@@ -89,7 +89,7 @@ void deallocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>备注
 
-成员函数中减去 *_Nx*从存储值`_Nallocs`。 通过每次调用后调用此成员函数`cache_freelist::deallocate`向操作员**删除**。 自变量 *_Nx*是由运算符解除分配的区块中的内存块的数目**删除**。
+成员函数从存储的值`_Nallocs`中减去 _Nx。 每次调用`cache_freelist::deallocate`后, 都将调用此成员函数以进行运算符**delete**。 参数 *_Nx*是运算符**delete**释放的块区中的内存块数。
 
 ## <a name="full"></a>max_variable_size::full
 
@@ -101,11 +101,11 @@ bool full();
 
 ### <a name="return-value"></a>返回值
 
-**true**如果`_Nallocs / 16 + 16 <= _Nblocks`。
+如果`_Nallocs / 16 + 16 <= _Nblocks`**为, 则为 true** 。
 
 ### <a name="remarks"></a>备注
 
-此成员函数由 `cache_freelist::deallocate` 调用。 如果该调用将返回 **，则返回 true**，`deallocate`放入内存块释放列表; 如果它返回 false，`deallocate`调用运算符**删除**解除分配块。
+此成员函数由 `cache_freelist::deallocate` 调用。 如果调用返回**true** `deallocate` , 则将内存块置于可用列表中; 如果返回 false, `deallocate`则调用运算符**delete**来释放块。
 
 ## <a name="max_variable_size"></a>max_variable_size::max_variable_size
 
@@ -145,4 +145,4 @@ void saved();
 
 ## <a name="see-also"></a>请参阅
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

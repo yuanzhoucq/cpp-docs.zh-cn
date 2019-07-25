@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::cauchy_distribution [C++], param_type
 - std::cauchy_distribution [C++], param_type
 ms.assetid: 21522351-f2f1-46d9-97f0-d358c932356c
-ms.openlocfilehash: 680ceb29514265ff77be6f6ae708fea0a8e769af
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 628d79c8026c11c7583448ce021a6aaee4ace6d9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450224"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449865"
 ---
 # <a name="cauchydistribution-class"></a>cauchy_distribution 类
 
@@ -70,15 +70,15 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*RealType*<br/>
-浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*RealType*\
+浮点结果类型, 默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
-*URNG*<br/>
+*URNG*\
 统一随机数生成器引擎。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
-此模板类将描述产生的值的用户指定的浮点类型**double**如果未提供任何内容柯西分布根据分布。 下表链接到有关各个成员的文章。
+此模板类描述产生用户指定的浮点类型的值的分布, 或者 **, 如果未**提供任何值, 则根据柯西分布进行分布。 下表链接到有关各个成员的文章。
 
 ||||
 |-|-|-|
@@ -251,22 +251,22 @@ explicit cauchy_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-*a*<br/>
+*的*\
 `a` 分布参数。
 
-*b*<br/>
+*b*\
 `b` 分布参数。
 
-*parm*<br/>
+*parm*\
 用于构造分布的 `param_type` 结构。
 
 ### <a name="remarks"></a>备注
 
 **前置条件：** `0.0 < b`
 
-第一个构造函数将构造一个对象，该对象存储的 `a` 值保留值 a  ，并且存储的 `b` 值保留值 b  。
+第一个构造函数将构造一个对象，该对象存储的 `a` 值保留值 a，并且存储的 `b` 值保留值 b。
 
-第二个构造函数将构造一个从 parm  初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
+第二个构造函数将构造一个从 parm 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
 
 ## <a name="param_type"></a>  cauchy_distribution::param_type
 
@@ -286,13 +286,13 @@ struct param_type {
 
 ### <a name="parameters"></a>参数
 
-*a*<br/>
+*的*\
 `a` 分布参数。
 
-*b*<br/>
+*b*\
 `b` 分布参数。
 
-*right*<br/>
+*然后*\
 要与它进行比较的 `param_type` 对象。
 
 ### <a name="remarks"></a>备注
@@ -303,4 +303,4 @@ struct param_type {
 
 ## <a name="see-also"></a>请参阅
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

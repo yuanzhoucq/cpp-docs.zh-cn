@@ -1,7 +1,7 @@
 ---
 title: 为命令行生成设置路径和环境变量
 ms.custom: conceptual
-ms.date: 05/06/2019
+ms.date: 07/24/2019
 helpviewer_keywords:
 - environment variables [C++]
 - VCVARS32.bat file
@@ -14,23 +14,23 @@ helpviewer_keywords:
 - compiling source code [C++], from command line
 - environment variables [C++], CL compiler
 ms.assetid: 99389528-deb5-43b9-b99a-03c8773ebaf4
-ms.openlocfilehash: 30dadf365186ae74144a3225889c08eedfb89b47
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 6e7882b169805e3c62596341986a83d476ac5ec1
+ms.sourcegitcommit: ce3393846c86e7905ff0c86e4cd6610476809585
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65217606"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68492152"
 ---
 # <a name="set-the-path-and-environment-variables-for-command-line-builds"></a>为命令行生成设置路径和环境变量
 
-Microsoft C++ （msvc） 编写命令行生成工具需要你安装和生成的配置进行自定义的多个环境变量。 当C++工作负荷安装 Visual Studio 安装程序，它将创建自定义的命令文件或设置所需的环境变量的批处理文件。 安装程序然后使用这些命令文件创建的 Windows 开始菜单打开开发人员命令提示窗口快捷方式。 这些设置特定的环境变量的快捷方式生成配置。 当你想要使用命令行工具时，可以运行一个这些快捷方式，或可以打开纯命令提示符窗口并运行要自行设置生成配置环境的自定义命令文件之一。 有关详细信息，请参阅[使用命令行中的 MSVC 工具集](building-on-the-command-line.md)。
+Microsoft C++ (MSVC) 命令行生成工具需要为你的安装和生成配置自定义的多个环境变量。 当通过C++ Visual Studio 安装程序安装工作负荷时, 它会创建自定义的命令文件或批处理文件, 用于设置所需的环境变量。 然后, 安装程序将使用这些命令文件为 Windows "开始" 菜单创建快捷方式, 以打开 "开发人员命令提示" 窗口。 这些快捷方式为特定的生成配置设置环境变量。 如果要使用命令行工具, 你可以运行其中一个快捷方式, 也可以打开一个纯命令提示符窗口, 然后运行一个自定义命令文件来自行设置生成配置环境。 有关详细信息, 请参阅[从命令行使用 MSVC 工具集](building-on-the-command-line.md)。 若要将命令文件与纯命令提示符一起使用, 请参阅 "[开发人员命令文件位置](building-on-the-command-line.md#developer_command_file_locations)" 一节。
 
-MSVC 命令行工具使用 PATH、 TMP、 INCLUDE、 LIB 和 LIBPATH 环境变量，还使用其他环境变量特定于安装的工具、 平台和 Sdk。 甚至简单的 Visual Studio 安装可能会设置 20 个或多个环境变量。 因为这些环境变量的值是特定于您的安装和所选的生成配置，可以更改产品更新或升级，我们强烈建议使用开发人员命令提示符快捷方式或其中一个若要设置它们，而不是自行设置它们在 Windows 环境中的自定义的命令文件。
+MSVC 命令行工具使用 PATH、TMP、INCLUDE、LIB 和 LIBPATH 环境变量, 并使用特定于已安装的工具、平台和 Sdk 的其他环境变量。 即使是简单的 Visual Studio 安装, 也可以设置二十个或更多的环境变量。 由于这些环境变量的值特定于你的安装和你选择的生成配置, 并且可以通过产品更新或升级进行更改, 因此强烈建议你使用开发人员命令提示快捷方式或自定义的命令文件, 用于设置这些文件, 而不是自己在 Windows 环境中设置它们。
 
-若要查看哪些环境变量设置由开发人员命令提示符快捷方式，可以使用 SET 命令。 打开纯命令提示符窗口，并捕获的基线的 SET 命令的输出。 打开开发人员命令提示窗口，并捕获比较 SET 命令的输出。 例如 Visual Studio IDE 中内置的差异分析工具可用于比较的环境变量，并请参阅什么由开发人员命令提示设置。 有关使用编译器和链接器的特定环境变量的信息，请参阅[CL 环境变量](reference/cl-environment-variables.md)。
+若要查看由开发人员命令提示快捷方式设置的环境变量, 可以使用 SET 命令。 打开普通的命令提示符窗口, 并捕获基线的 SET 命令的输出。 打开 "开发人员命令提示" 窗口, 并捕获 SET 命令的输出以进行比较。 在 Visual Studio IDE 中内置的比较工具可用于比较环境变量并查看由开发人员命令提示设置的内容。 有关编译器和链接器使用的特定环境变量的信息, 请参阅[CL 环境变量](reference/cl-environment-variables.md)。
 
 > [!NOTE]
->  多个命令行工具或工具选项可能需要管理员权限。 如果使用它们时遇到权限问题，我们建议使用打开开发人员命令提示符窗口**以管理员身份运行**选项。 在 Windows 10 中，右键单击以打开命令提示符窗口的快捷菜单，然后选择**更多**，**以管理员身份运行**。
+>  几个命令行工具或工具选项可能需要管理员权限。 如果你在使用权限时遇到权限问题, 我们建议你使用 "以**管理员身份运行**" 选项打开 "开发人员命令提示" 窗口。 在 Windows 10 上, 右键单击以打开 "命令提示符" 窗口的快捷菜单, 然后选择 "**更多**, 以**管理员身份运行**"。
 
 ## <a name="see-also"></a>请参阅
 

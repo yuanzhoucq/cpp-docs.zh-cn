@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - input stream objects
 ms.assetid: ab94866e-6ffe-4f15-b4db-0bd23e636075
-ms.openlocfilehash: 89d681f1a092957bc966d2ec788a0f9aa2261ada
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c000a9e927169ef710554372217ba15089ee11b8
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62211983"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457294"
 ---
 # <a name="constructing-input-stream-objects"></a>构造输入流对象
 
@@ -23,7 +23,7 @@ ms.locfileid: "62211983"
 
 有两种创建输入文件流的方法：
 
-- 使用**void**参数的构造函数，然后调用`open`成员函数：
+- 使用**void**参数构造函数, 然后调用`open`成员函数:
 
    ```cpp
    ifstream myFile; // On the stack
@@ -55,4 +55,4 @@ myString>> amt; // amt contains 123.45
 
 ## <a name="see-also"></a>请参阅
 
-[输入流](../standard-library/input-streams.md)<br/>
+[输入流](../standard-library/input-streams.md)

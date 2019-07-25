@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::cache_freelist [C++], allocate
 - stdext::cache_freelist [C++], deallocate
 ms.assetid: 840694de-36ba-470f-8dae-2b723d5a8cd9
-ms.openlocfilehash: 56fdfb191f9208a5ffa692e1d599545ddeaeb36c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 05260d6800597b64908ff0aeffac47b09fed9a0e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352107"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449691"
 ---
 # <a name="cachefreelist-class"></a>cache_freelist 类
 
@@ -37,9 +37,9 @@ class cache_freelist
 
 ## <a name="remarks"></a>备注
 
-Cache_freelist 模板类维持大小的内存块释放列表*Sz*。 当释放列表已满时它使用**运算符 delete**释放内存块。 当释放列表为空时它使用**运算符 new**来分配新的内存块。 空闲列表的最大大小由传递的 max 类的类*最大*参数。
+Cache_freelist 模板类维护一个大小为*Sz*的内存块的免费列表。 当可用列表已满时, 它将使用**运算符 delete**来释放内存块。 当可用列表为空时, 它将使用**operator new**来分配新的内存块。 可用列表的最大大小由*最*大参数中传递的类 max 类确定。
 
-每个内存块保留*Sz*字节的可用内存和数据的**运算符 new**并**运算符 delete**要求。
+每个内存块都包含*Sz*字节的可用内存和**运算符 new**和**运算符 delete**需要的数据。
 
 ### <a name="constructors"></a>构造函数
 
@@ -56,7 +56,7 @@ Cache_freelist 模板类维持大小的内存块释放列表*Sz*。 当释放列
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<allocators>
+**标头：** \<allocators>
 
 **命名空间：** stdext
 
@@ -72,7 +72,7 @@ void *allocate(std::size_t count);
 
 |参数|描述|
 |---------------|-----------------|
-|*count*|数组中要分配的元素数目。|
+|*计数*|数组中要分配的元素数目。|
 
 ### <a name="return-value"></a>返回值
 
@@ -103,10 +103,10 @@ void deallocate(void* ptr, std::size_t count);
 |参数|描述|
 |---------------|-----------------|
 |*ptr*|指向要从存储中释放的第一个对象的指针。|
-|*count*|要从存储中释放的对象数量。|
+|*计数*|要从存储中释放的对象数量。|
 
 ### <a name="remarks"></a>备注
 
 ## <a name="see-also"></a>请参阅
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

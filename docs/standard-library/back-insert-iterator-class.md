@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::back_insert_iterator [C++], container_type
 - std::back_insert_iterator [C++], reference
 ms.assetid: a1ee07f2-cf9f-46a1-8608-cfaf207f9713
-ms.openlocfilehash: 2a0510b6df656b7925fd42a4c97d768336537424
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d8f48b1f714697aff63a4ee658a69fce6dab8041
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376440"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459530"
 ---
 # <a name="backinsertiterator-class"></a>back_insert_iterator 类
 
@@ -30,7 +30,7 @@ class back_insert_iterator;
 
 ### <a name="parameters"></a>参数
 
-*Container*<br/>
+*容器*\
 要通过 `back_insert_iterator` 将元素插入后端的容器的类型。
 
 ## <a name="remarks"></a>备注
@@ -54,9 +54,9 @@ class back_insert_iterator;
 
 |运算符|描述|
 |-|-|
-|[operator*](#op_star)|取消引用运算符，用于实现输出迭代器表达式\* `i`  =  `x`末尾插入。|
+|[operator*](#op_star)|取消引用运算符, 用于实现后退插入的\*输出迭代器表达式 =  `i`。 `x`|
 |[operator++](#op_add_add)|将 `back_insert_iterator` 递增到下一个可用来存储值的位置。|
-|[operator=](#op_eq)|赋值运算符，用于实现输出迭代器表达式\* `i`  =  `x`末尾插入。|
+|[operator=](#op_eq)|赋值运算符, 用于实现后退插入的输出\*迭代器表达式 =  `i`。 `x`|
 
 ## <a name="requirements"></a>要求
 
@@ -74,7 +74,7 @@ explicit back_insert_iterator(Container& _Cont);
 
 ### <a name="parameters"></a>参数
 
-*_Cont*<br/>
+*_Cont*\
 `back_insert_iterator` 要向其中插入元素的容器。
 
 ### <a name="return-value"></a>返回值
@@ -315,7 +315,7 @@ back_insert_iterator<Container>& operator=(typename Container::value_type&& val)
 
 ### <a name="parameters"></a>参数
 
-*val*<br/>
+*初始值*\
 要插入到容器中的值。
 
 ### <a name="return-value"></a>返回值
@@ -423,6 +423,6 @@ The last element in the vector vec is: 3.
 
 ## <a name="see-also"></a>请参阅
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

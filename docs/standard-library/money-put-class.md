@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::money_put [C++], do_put
 - std::money_put [C++], put
 ms.assetid: f439fd56-c9b1-414c-95e1-66c918c6eee6
-ms.openlocfilehash: 346dd4f681432143c954ca125c3862fc6827db60
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b9dff8a871895eee6774b75ca1c83dca6fd42ff3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383537"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460237"
 ---
 # <a name="moneyput-class"></a>money_put 类
 
@@ -37,10 +37,10 @@ class money_put : public locale::facet;
 
 ### <a name="parameters"></a>参数
 
-*CharType*<br/>
+*CharType*\
 在程序中用于对区域设置中的字符进行编码的类型。
 
-*OutputIterator*<br/>
+*OutputIterator*\
 供货币放置函数写入其输出结果的迭代器类型。
 
 ## <a name="remarks"></a>备注
@@ -108,19 +108,19 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>参数
 
-*next*<br/>
+*一个*\
 发现插入的字符串中第一个元素的迭代器。
 
-*_Intl*<br/>
+*_Intl*\
 一个布尔值，该值指示在序列中预期的货币符号的类型：如果为国际，则为 **true**，如果为国内，则为 **false**。
 
-*_Iosbase*<br/>
+*_Iosbase*\
 一种格式标志，设定时表示货币符号是可选项；否则，它是必需项
 
-*_Fill*<br/>
+*_Fill*\
 用于调整间距的字符。
 
-*val*<br/>
+*初始值*\
 要转换的字符串对象。
 
 ### <a name="return-value"></a>返回值
@@ -129,9 +129,9 @@ virtual iter_type do_put(
 
 ### <a name="remarks"></a>备注
 
-第一个受保护的虚拟成员函数生成有序元素*下一步*生成货币输出字段从[string_type](#string_type)对象*val*。 控制的序列*val*必须以与一个或多个十进制数字，可以后跟减号 （-），以表示数额。 该函数返回一个迭代器，指定超出生成货币输出字段的第一个元素。
+第一个受保护的虚拟成员函数生成从 " [string_type](#string_type) " 对象*val*生成货币输出*字段时开始*的连续元素。 由*val*控制的序列必须以一个或多个十进制数字开头, 可选择前面带有一个减号 (-), 表示数量。 该函数返回一个迭代器，指定超出生成货币输出字段的第一个元素。
 
-第二个受保护的虚拟成员函数的行为与第一个相同只不过它实际上首先将*val*到序列中的十进制数，可以后跟一个减号，然后将转换该序列作为更高版本。
+第二个受保护的虚拟成员函数的行为与第一个相同, 不同之处在于, 它会有效地将*val*转换为十进制数字的序列, 可选择前面加上负号, 然后将其转换为上述顺序。
 
 货币输出字段的格式由[区域设置 facet](../standard-library/locale-class.md#facet_class) fac 决定，而后者又由（有效）调用 [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, **intl**> >( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)) 返回。
 
@@ -191,22 +191,22 @@ explicit money_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>参数
 
-*_Refs*<br/>
+*_Refs*\
 用于指定对象的内存管理类型的整数值。
 
 ### <a name="remarks"></a>备注
 
-可能的值 *_Refs*参数和其重要性：
+*_Refs*参数的可能值及其重要性为:
 
 - 0：对象的生存期由包含该对象的区域设置管理。
 
 - 1：必须手动管理对象的生存期。
 
-- \> 1： 未定义这些值。
+- \>1: 未定义这些值。
 
 由于该析构函数受到保护，可能没有直接的示例。
 
-构造函数通过 **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`) 初始化其基对象。
+构造函数通过 **locale::** [facet](../standard-library/locale-class.md#facet_class)( `_Refs`) 初始化其基对象。
 
 ## <a name="put"></a>  money_put::put
 
@@ -230,19 +230,19 @@ iter_type put(
 
 ### <a name="parameters"></a>参数
 
-*next*<br/>
+*一个*\
 发现插入的字符串中第一个元素的迭代器。
 
-*_Intl*<br/>
+*_Intl*\
 一个布尔值，该值指示在序列中预期的货币符号的类型：如果为国际，则为 **true**，如果为国内，则为 **false**。
 
-*_Iosbase*<br/>
+*_Iosbase*\
 一种格式标志，设定时表示货币符号是可选项；否则，它是必需项
 
-*_Fill*<br/>
+*_Fill*\
 用于调整间距的字符。
 
-*val*<br/>
+*初始值*\
 要转换的字符串对象。
 
 ### <a name="return-value"></a>返回值
@@ -295,6 +295,6 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ## <a name="see-also"></a>请参阅
 
-[\<locale>](../standard-library/locale.md)<br/>
-[facet 类](../standard-library/locale-class.md#facet_class)<br/>
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[facet 类](../standard-library/locale-class.md#facet_class)\
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

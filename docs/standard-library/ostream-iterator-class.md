@@ -12,16 +12,16 @@ helpviewer_keywords:
 - std::ostream_iterator [C++], ostream_type
 - std::ostream_iterator [C++], traits_type
 ms.assetid: 24d842d3-9f45-4bf6-a697-62f5968f5a03
-ms.openlocfilehash: 6a065a100faf5ea40be161e980de2913add917fe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cebe127eb985e564289db100fa56b0b979104819
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370979"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447094"
 ---
 # <a name="ostreamiterator-class"></a>ostream_iterator 类
 
-模板类 ostream_iterator 描述输出迭代器对象，将使用提取的输出流的连续元素写入`operator <<`。
+模板类 ostream_iterator 描述一个输出迭代器对象, 该对象使用提取`operator <<`将连续的元素写入输出流。
 
 ## <a name="syntax"></a>语法
 
@@ -32,13 +32,13 @@ class ostream_iterator
 
 ### <a name="parameters"></a>参数
 
-*Type*<br/>
+*类别*\
 要插入到输出流的对象的类型。
 
-*CharType*<br/>
-表示 `ostream_iterator` 字符类型的类型。 此参数是可选的默认值是**char**。
+*CharType*\
+表示 `ostream_iterator` 字符类型的类型。 此参数是可选的, 默认值为**char**。
 
-*特征*<br/>
+*特征*\
 表示 `ostream_iterator` 字符类型的类型。 此自变量是可选自变量，默认值为 `char_traits`\<*CharType>。*
 
 ostream_iterator 类必须满足对输出迭代器的需求。 可使用 `ostream_iterator` 直接向输出流中写入算法。
@@ -61,9 +61,9 @@ ostream_iterator 类必须满足对输出迭代器的需求。 可使用 `ostrea
 
 |运算符|描述|
 |-|-|
-|[operator*](#op_star)|取消引用运算符，用于实现输出迭代器表达式\* `i`  =  `x`。|
+|[operator*](#op_star)|用于实现\*输出迭代器表达式`i`  =  `x`的取消引用运算符。|
 |[operator++](#op_add_add)|一种非功能性递增运算符，可向调用该运算之前所处理的同一对象返回 `ostream_iterator`。|
-|[operator=](#op_eq)|赋值运算符，用于实现输出迭代器表达式\* `i`  =  `x`以写入输出流。|
+|[operator=](#op_eq)|用于实现\*输出迭代器表达式`i`  =  `x`的赋值运算符, 用于写入输出流。|
 
 ## <a name="requirements"></a>要求
 
@@ -221,7 +221,7 @@ Elements written to output stream:
 
 ## <a name="op_eq"></a>ostream_iterator::operator=
 
-用于实现输出迭代器表达式的赋值运算符\* `i`  =  `x`以写入输出流。
+赋值运算符, 用于实现用于写入到\*输出流的 output_iterator 表达式 =  `i`。 `x`
 
 ```cpp
 ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
@@ -229,16 +229,16 @@ ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
 
 ### <a name="parameters"></a>参数
 
-*val*<br/>
+*初始值*\
 要插入到输出流的 `Type` 类型的对象的值。
 
 ### <a name="return-value"></a>返回值
 
-运算符插入*val*到输出流中与对象相关联，跟中指定的分隔符[ostream_iterator 构造函数](#ostream_iterator)（如果有），然后返回的引用`ostream_iterator`.
+运算符将*val*插入与对象关联的输出流, 后跟[ostream_iterator 构造函数](#ostream_iterator)(如果有) 中指定的分隔符, 然后返回对的`ostream_iterator`引用。
 
 ### <a name="remarks"></a>备注
 
-输出迭代器的需求，`ostream_iterator`必须满足仅要求表达式\* `ii`  =  `t`有效并且本身未提及运算符或运算符 = 靠自己。 此成员运算符将返回 `*this`。
+`ostream_iterator`必须满足的输出迭代器的要求仅要求表达式 =  \* `ii` `t`有效, 且不会对运算符或运算符 = 自行显示任何内容。 此成员运算符将返回 `*this`。
 
 ### <a name="example"></a>示例
 
@@ -288,17 +288,17 @@ ostream_iterator(
 
 ### <a name="parameters"></a>参数
 
-*_Ostr*<br/>
+*_Ostr*\
 将遍历的 [ostream_iterator::ostream_type](#ostream_type) 类型的输出流。
 
-*_Delimiter*<br/>
+*_Delimiter*\
 用于插入到值之间的输出流中的分隔符。
 
 ### <a name="remarks"></a>备注
 
 第一个构造函数通过 `&_Ostr` 初始化输出流指针。 分隔符字符串指针将指定一个空字符串。
 
-第二个构造函数初始化与输出流指针`&_Ostr`并使用分隔符字符串指针 *（_d)*。
+第二个构造函数通过`&_Ostr`初始化输出流指针, 并将分隔符字符串指针与 *_Delimiter*。
 
 ### <a name="example"></a>示例
 
@@ -415,6 +415,6 @@ by intOut are:
 
 ## <a name="see-also"></a>请参阅
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

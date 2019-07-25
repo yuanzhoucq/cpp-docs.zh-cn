@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::condition_variable::wait
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
-ms.openlocfilehash: 69f356301ce5b546c8bebe9429ca64fa61eff404
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 999e236433ec4f3f2f52abb06855004a89169fa6
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244627"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449457"
 ---
 # <a name="conditionvariable-class"></a>condition_variable 类
 
@@ -52,11 +52,11 @@ class condition_variable;
 |[native_handle](#native_handle)|返回表示 condition_variable 句柄的特定于实现的类型。|
 |[notify_all](#notify_all)|取消阻止正在等待 `condition_variable` 对象的所有线程。|
 |[notify_one](#notify_one)|取消阻止正在等待 `condition_variable` 对象的某个线程。|
-|[等待](#wait)|阻止线程。|
+|[再](#wait)|阻止线程。|
 |[wait_for](#wait_for)|阻止某个线程，并设置线程阻止的时间间隔。|
 |[wait_until](#wait_until)|阻止某个线程，并设置线程阻止的最大时间点。|
 
-## <a name="condition_variable"></a> condition_variable
+## <a name="condition_variable"></a>condition_variable
 
 构造 `condition_variable` 对象。
 
@@ -68,7 +68,7 @@ condition_variable();
 
 如果没有足够的内存，构造函数将抛出包含 `not_enough_memory` 错误代码的 [system_error](../standard-library/system-error-class.md) 对象。 如果由于某些其他资源不可用导致无法构造该对象，则构造函数将抛出包含 `resource_unavailable_try_again` 错误代码的 `system_error` 对象。
 
-## <a name="native_handle"></a> native_handle
+## <a name="native_handle"></a>native_handle
 
 返回表示 condition_variable 句柄的特定于实现的类型。
 
@@ -80,7 +80,7 @@ native_handle_type native_handle();
 
 `native_handle_type` 被定义为指向并发运行时内部数据结构的指针。
 
-## <a name="notify_all"></a> notify_all
+## <a name="notify_all"></a>notify_all
 
 取消阻止正在等待 `condition_variable` 对象的所有线程。
 
@@ -88,7 +88,7 @@ native_handle_type native_handle();
 void notify_all() noexcept;
 ```
 
-## <a name="notify_one"></a> notify_one
+## <a name="notify_one"></a>notify_one
 
 取消阻止正在 `condition_variable` 对象上等待的某个线程。
 
@@ -96,7 +96,7 @@ void notify_all() noexcept;
 void notify_one() noexcept;
 ```
 
-## <a name="wait"></a> 等待
+## <a name="wait"></a>再
 
 阻止线程。
 
@@ -109,11 +109,11 @@ void wait(unique_lock<mutex>& Lck, Predicate Pred);
 
 ### <a name="parameters"></a>参数
 
-*一个 Lck*\
+*Fuj-bk-lck*\
 [unique_lock\<mutex>](../standard-library/unique-lock-class.md) 对象。
 
 *Pred*\
-任何返回的表达式 **，则返回 true**或**false**。
+返回**true**或**false**的任何表达式。
 
 ### <a name="remarks"></a>备注
 
@@ -126,7 +126,7 @@ while(!Pred())
     wait(Lck);
 ```
 
-## <a name="wait_for"></a> wait_for
+## <a name="wait_for"></a>wait_for
 
 阻止某个线程，并设置线程阻止的时间间隔。
 
@@ -145,24 +145,24 @@ bool wait_for(
 
 ### <a name="parameters"></a>参数
 
-*一个 Lck*\
+*Fuj-bk-lck*\
 [unique_lock\<mutex>](../standard-library/unique-lock-class.md) 对象。
 
 *Rel_time*\
 `chrono::duration` 对象指定线程唤醒前的时间。
 
 *Pred*\
-任何返回的表达式 **，则返回 true**或**false**。
+返回**true**或**false**的任何表达式。
 
 ### <a name="return-value"></a>返回值
 
-第一种方法返回`cv_status::timeout`如果时等待终止*Rel_time*已过。 否则，该方法将返回 `cv_status::no_timeout`。
+如果 Rel_time 已过`cv_status::timeout` , 则第一种方法返回。 否则，该方法将返回 `cv_status::no_timeout`。
 
-第二种方法返回的值*Pred*。
+第二个方法返回*Pred*的值。
 
 ### <a name="remarks"></a>备注
 
-第一种方法进行阻止，直到`condition_variable`对象通过调用发出信号[notify_one](#notify_one)或[notify_all](#notify_all)或直到时间间隔*Rel_time*已过。 它还可错误唤醒。
+第一种方法将在`condition_variable`对象通过调用[notify_one](#notify_one)或[notify_all 或](#notify_all)的时间间隔结束之前, 阻止 。 它还可错误唤醒。
 
 第二种方法实际上执行以下代码。
 
@@ -174,7 +174,7 @@ while(!Pred())
 return true;
 ```
 
-## <a name="wait_until"></a> wait_until
+## <a name="wait_until"></a>wait_until
 
 阻止某个线程，并设置线程阻止的最大时间点。
 
@@ -203,20 +203,20 @@ bool wait_until(
 
 ### <a name="parameters"></a>参数
 
-*一个 Lck*\
+*Fuj-bk-lck*\
 [unique_lock\<mutex>](../standard-library/unique-lock-class.md) 对象。
 
 *Abs_time*\
 [chrono::time_point](../standard-library/time-point-class.md) 对象。
 
 *Pred*\
-任何返回的表达式 **，则返回 true**或**false**。
+返回**true**或**false**的任何表达式。
 
 ### <a name="return-value"></a>返回值
 
-返回的方法`cv_status`键入返回`cv_status::timeout`如果时等待终止*Abs_time*结束。 否则，方法返回 `cv_status::no_timeout`。
+如果等待时间`cv_status` *Abs_time* , 则`cv_status::timeout`返回类型的方法将返回。 否则，方法返回 `cv_status::no_timeout`。
 
-返回的方法**bool**返回的值*Pred*。
+返回**布尔**值的方法返回*Pred*的值。
 
 ### <a name="remarks"></a>备注
 
@@ -236,5 +236,5 @@ return true;
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)<br/>
-[<condition_variable>](../standard-library/condition-variable.md)<br/>
+[头文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[<condition_variable>](../standard-library/condition-variable.md)

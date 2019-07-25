@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_copy_constructible
 ms.assetid: 4274cef5-afdd-4f2d-bc83-7562e7944ddf
-ms.openlocfilehash: aa6d6b19ae2bd5d6967c57db61c5697c0c6153e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8c4026da424e77b57555dd4c342c9ac7a386591
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413432"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447992"
 ---
 # <a name="istriviallycopyconstructible-class"></a>is_trivially_copy_constructible 类
 
@@ -26,21 +26,21 @@ struct is_trivially_copy_constructible;
 
 ### <a name="parameters"></a>参数
 
-*T*<br/>
+*关心*\
 要查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型谓词的实例将保留 true 类型*T*是一个类具有普通复制构造函数，否则为 false。
+如果类型*T*是具有普通复制构造函数的类, 则类型谓词的实例为 true; 否则为 false。
 
-一个类的复制构造函数*T*并不重要，如果它隐式声明的该类*T*没有虚函数或虚拟基，类的所有直接基*T*具有普通复制构造函数的类类型的所有非静态数据成员的类具有普通复制构造函数和类的类型数组的所有非静态数据成员的类具有普通复制构造函数。
+如果类*t*的复制构造函数被隐式声明、类 t 没有虚拟函数或虚拟基, 则类 t 的所有直接基*都具有普通*复制构造函数, 即所有非静态数据成员的类类类型具有普通复制构造函数, 且类的类型数组的所有非静态数据成员的类具有普通复制构造函数。
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<type_traits>
+**标头：** \<type_traits>
 
 **命名空间：** std
 
 ## <a name="see-also"></a>请参阅
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

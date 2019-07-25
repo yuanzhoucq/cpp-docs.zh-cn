@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::cache_suballoc [C++], allocate
 - stdext::cache_suballoc [C++], deallocate
 ms.assetid: 9ea9c5e9-1dcc-45d0-b3a7-a56a93d88898
-ms.openlocfilehash: 06d0ef390e6ae1980b9ab20b8ceb67213837148b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa0ceda69fc169593719c3a4f81d308bb6cde284
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380112"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449647"
 ---
 # <a name="cachesuballoc-class"></a>cache_suballoc 类
 
@@ -36,9 +36,9 @@ class cache_suballoc
 
 ## <a name="remarks"></a>备注
 
-Cache_suballoc 模板类将释放的内存块存储在长度不受限制的可用列表中使用`freelist<sizeof(Type), max_unbounded>`，并使用分配的较大区块中细分内存块**new 运算符**空闲列表时为空。
+Cache_suballoc 模板类将已释放的内存块存储在一个免费列表中, `freelist<sizeof(Type), max_unbounded>`该列表包含一个在可用列表为空时使用**operator new**分配的更大区块中的内存块。
 
-每个区块保留`Sz * Nelts`字节的可用内存和数据的**new 运算符**并**运算符 delete**要求。 不会释放已分配的区块。
+每个区块`Sz * Nelts`都包含可用内存和**运算符 new**和**运算符 delete**需要的数据。 不会释放已分配的区块。
 
 ### <a name="constructors"></a>构造函数
 
@@ -55,7 +55,7 @@ Cache_suballoc 模板类将释放的内存块存储在长度不受限制的可�
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<allocators>
+**标头：** \<allocators>
 
 **命名空间：** stdext
 
@@ -71,7 +71,7 @@ void *allocate(std::size_t count);
 
 |参数|描述|
 |---------------|-----------------|
-|*count*|数组中要分配的元素数目。|
+|*计数*|数组中要分配的元素数目。|
 
 ### <a name="return-value"></a>返回值
 
@@ -102,10 +102,10 @@ void deallocate(void* ptr, std::size_t count);
 |参数|描述|
 |---------------|-----------------|
 |*ptr*|指向要从存储中释放的第一个对象的指针。|
-|*count*|要从存储中释放的对象数量。|
+|*计数*|要从存储中释放的对象数量。|
 
 ### <a name="remarks"></a>备注
 
 ## <a name="see-also"></a>请参阅
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)
