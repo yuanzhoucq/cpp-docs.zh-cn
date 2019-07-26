@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::money_get [C++], do_get
 - std::money_get [C++], get
 ms.assetid: 692d3374-3fe7-4b46-8aeb-f8d91ed66b2e
-ms.openlocfilehash: 40ce364d768e682c9e85506d2af9e46a01c76e65
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eb5e1a7b83db561687f83be96c79add8b54589e8
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383524"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455556"
 ---
 # <a name="moneyget-class"></a>money_get 类
 
@@ -36,10 +36,10 @@ class money_get : public locale::facet;
 
 ### <a name="parameters"></a>参数
 
-*CharType*<br/>
+*CharType*\
 在程序中用于对区域设置中的字符进行编码的类型。
 
-*InputIterator*<br/>
+*InputIterator*\
 获取函数从中读取其输入的迭代器类型。
 
 ## <a name="remarks"></a>备注
@@ -105,22 +105,22 @@ virtual iter_type do_get(iter_type first,
 
 ### <a name="parameters"></a>参数
 
-*first*<br/>
+*1*\
 确定待转换序列开头位置的输入迭代器。
 
-*last*<br/>
+*时间*\
 确定待转换序列末尾位置的输入迭代器。
 
-*Intl*<br/>
+*区号*\
 一个布尔值，该值指示在序列中预期的货币符号的类型：如果为国际，则为 **true**，如果为国内，则为 **false**。
 
-*Iosbase*<br/>
+*Iosbase*\
 一种格式标志，设定时表示货币符号是可选项；否则，它是必需项。
 
-*状态*<br/>
+*状态*\
 根据操作是否成功，设置流状态的相应位掩码元素。
 
-*val*<br/>
+*初始值*\
 存储已转换序列的字符串。
 
 ### <a name="return-value"></a>返回值
@@ -129,9 +129,9 @@ virtual iter_type do_get(iter_type first,
 
 ### <a name="remarks"></a>备注
 
-第一个受保护的虚拟成员函数首先会在序列 [ `first`, `last`) 中尝试匹配序列连续元素，直到识别到完整的非空货币输入字段。 如果成功，它将此字段转换为一系列一个或多个十进制数字前, 可带负号 ( `-`)，以表示数额，并将存储中的结果[string_type](#string_type)对象*val*. 它将返回一个迭代器，指定第一个超出货币输入字段的元素。 否则，函数将存储在一个空序列*val* ，并设置`ios_base::failbit`中*状态*。 它将返回一个迭代器，指定第一个超出有效货币输入字段的任何前缀的元素。 在任一情况下，如果返回的值等于 `last`，该函数在 `State` 中设置 `ios_base::eofbit`。
+第一个受保护的虚拟成员函数首先会在序列 [ `first`, `last`) 中尝试匹配序列连续元素，直到识别到完整的非空货币输入字段。 如果成功, 它会将此字段转换为一个或多个十进制数字的序列, 可选择前面加一个`-`减号 (), 以表示数量, 并将结果存储[](#string_type)在 string_type*对象值*中。 它将返回一个迭代器，指定第一个超出货币输入字段的元素。 否则, 该函数将按*val*和`ios_base::failbit` in*状态*存储空序列。 它将返回一个迭代器，指定第一个超出有效货币输入字段的任何前缀的元素。 在任一情况下，如果返回的值等于 `last`，该函数在 `State` 中设置 `ios_base::eofbit`。
 
-第二个受保护的虚拟成员函数的行为与第一个相同，只不过如果成功，则它将选择性签名的数字序列转换为类型的值**长双精度**并将该值存储于*val*.
+第二个受保护的虚拟成员函数的行为与第一个相同, 不同之处在于, 如果成功, 它会将可选的带符号数字序列转换为**long double**类型的值, 并将该值存储在*val*中。
 
 货币输入字段的格式由[区域设置 facet](../standard-library/locale-class.md#facet_class)**fac** 决定，而后者又有有效调用 [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, **intl**>>( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)) 返回。
 
@@ -187,22 +187,22 @@ iter_type get(iter_type first,
 
 ### <a name="parameters"></a>参数
 
-*first*<br/>
+*1*\
 确定待转换序列开头位置的输入迭代器。
 
-*last*<br/>
+*时间*\
 确定待转换序列末尾位置的输入迭代器。
 
-*Intl*<br/>
+*区号*\
 一个布尔值，该值指示在序列中预期的货币符号的类型：如果为国际，则为 **true**，如果为国内，则为 **false**。
 
-*Iosbase*<br/>
+*Iosbase*\
 一种格式标志，设定时表示货币符号是可选项；否则，它是必需项
 
-*状态*<br/>
+*状态*\
 根据操作是否成功，设置流状态的相应位掩码元素。
 
-*val*<br/>
+*初始值*\
 存储已转换序列的字符串。
 
 ### <a name="return-value"></a>返回值
@@ -211,7 +211,7 @@ iter_type get(iter_type first,
 
 ### <a name="remarks"></a>备注
 
-这两个成员函数返回[do_get](#do_get)`(first, last, Intl, Iosbase, State, val)`。
+这两个成员函数都返回[do_get](#do_get)`(first, last, Intl, Iosbase, State, val)`。
 
 ### <a name="example"></a>示例
 
@@ -284,22 +284,22 @@ explicit money_get(size_t _Refs = 0);
 
 ### <a name="parameters"></a>参数
 
-*_Refs*<br/>
+*_Refs*\
 用于指定对象的内存管理类型的整数值。
 
 ### <a name="remarks"></a>备注
 
-可能的值 *_Refs*参数和其重要性：
+*_Refs*参数的可能值及其重要性为:
 
-- 0:对象的生存期由包含它的区域设置管理。
+- 0对象的生存期由包含该对象的区域设置管理。
 
-- 1:必须手动管理的对象的生存期。
+- 1:必须手动管理对象的生存期。
 
-- \> 1:未定义这些值。
+- \>2未定义这些值。
 
 由于该析构函数受到保护，可能没有直接的示例。
 
-构造函数初始化其基对象与**区域设置::**[方面](../standard-library/locale-class.md#facet_class)(*_Refs*)。
+构造函数通过**locale::** [facet](../standard-library/locale-class.md#facet_class)( *_Refs*) 初始化其基对象。
 
 ## <a name="string_type"></a>  money_get::string_type
 
@@ -315,6 +315,6 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ## <a name="see-also"></a>请参阅
 
-[\<locale>](../standard-library/locale.md)<br/>
-[facet 类](../standard-library/locale-class.md#facet_class)<br/>
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[facet 类](../standard-library/locale-class.md#facet_class)\
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

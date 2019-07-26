@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::wstring_convert [C++], converted
 - std::wstring_convert [C++], state
 ms.assetid: e34f5b65-d572-4bdc-ac69-20778712e376
-ms.openlocfilehash: df3b003289dcd86e8033521d8cb0cacdbb7dfbd8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 35689f79f8987cb55c4578869369f35d8656faec
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410793"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450903"
 ---
 # <a name="wstringconvert-class"></a>wstring_convert 类
 
@@ -42,10 +42,10 @@ class wstring_convert
 
 ### <a name="parameters"></a>参数
 
-*Codecvt*<br/>
+*Codecvt*\
 表示转换对象的[区域设置](../standard-library/locale-class.md)方面。
 
-*Elem*<br/>
+*Elem*\
 宽字符元素类型。
 
 ## <a name="remarks"></a>备注
@@ -86,7 +86,7 @@ class wstring_convert
 |[from_bytes](#from_bytes)|将字节字符串转换为宽字符串。|
 |[to_bytes](#to_bytes)|将宽字符串转换为字节字符串。|
 |[converted](#converted)|返回成功转换数。|
-|[state](#state)|返回表示转换状态的对象。|
+|State[](#state)|返回表示转换状态的对象。|
 
 ## <a name="requirements"></a>要求
 
@@ -141,7 +141,7 @@ wide_string from_bytes(const char* first, const char* last);
 |*ptr*|要转换的以 null 结尾的 C 样式字符序列。|
 |*Bstr*|要转换的 [byte_string](#byte_string)。|
 |*first*|要转换的字符范围中的第一个字符。|
-|*last*|要转换的字符范围中的最后一个字符。|
+|*时间*|要转换的字符范围中的最后一个字符。|
 
 ### <a name="return-value"></a>返回值
 
@@ -149,7 +149,7 @@ wide_string from_bytes(const char* first, const char* last);
 
 ### <a name="remarks"></a>备注
 
-如果[转换状态](../standard-library/wstring-convert-class.md)对象已*不*使用显式值构造的它设置为其默认值 （初始转换状态） 在转换开始之前。 否则保持不变。
+如果[转换状态](../standard-library/wstring-convert-class.md)对象*不*是使用显式值构造的, 则在转换开始之前, 该对象设置为其默认值 (初始转换状态)。 否则保持不变。
 
 成功转换的输入元素的数量存储在转换计数对象中。 如果未发生转换错误，则该成员函数返回转换后的宽字符串。 否则，如果对象是使用宽字符串错误消息的初始值设定项构造的，则该成员函数返回宽字符串错误消息对象。 否则，成员函数将引发 [range_error](../standard-library/range-error-class.md) 类的对象。
 
@@ -210,11 +210,11 @@ byte_string to_bytes(const Elem* first, const Elem* last);
 |*Wptr*|要转换的以 null 结尾的 C 样式序列（从 `wptr` 开始）。|
 |*Wstr*|要转换的 [wide_string](#wide_string)。|
 |*first*|要转换的元素范围内的第一个元素。|
-|*last*|要转换的元素范围内的最后一个元素。|
+|*时间*|要转换的元素范围内的最后一个元素。|
 
 ### <a name="remarks"></a>备注
 
-如果[转换状态](../standard-library/wstring-convert-class.md)对象已*不*使用显式值构造的它设置为其默认值 （初始转换状态） 在转换开始之前。 否则保持不变。
+如果[转换状态](../standard-library/wstring-convert-class.md)对象*不*是使用显式值构造的, 则在转换开始之前, 该对象设置为其默认值 (初始转换状态)。 否则保持不变。
 
 成功转换的输入元素的数量存储在转换计数对象中。 如果未发生转换错误，则成员函数返回转换后的字节字符串。 否则，如果对象是使用字节字符串错误消息的初始值设定项构造的，则成员函数返回字节字符串错误消息对象。 否则，成员函数将引发 [range_error](../standard-library/range-error-class.md) 类的对象。
 

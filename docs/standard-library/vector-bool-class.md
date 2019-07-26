@@ -15,16 +15,16 @@ helpviewer_keywords:
 - std::vector [C++], flip
 - std::vector [C++], swap
 ms.assetid: 8028c8ed-ac9c-4f06-aba1-5de45c00aafb
-ms.openlocfilehash: f7663987b2759c762d1f6c1604923478915f5726
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4ae53f9a14f04d5656a13c32e75494688c5cdd0
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364995"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452259"
 ---
 # <a name="vectorltboolgt-class"></a>vector&lt;bool&gt; 类
 
-`vector<bool>`类是部分专用化[向量](../standard-library/vector-class.md)类型的元素**bool**。 它具有由专用化，可通过将一个存储空间优化的基础类型的分配器**bool**每个位的值。
+类是类型为**bool**的元素的矢量的部分专用化。 [](../standard-library/vector-class.md) `vector<bool>` 它具有用于专用化的基础类型的分配器, 此分配器通过每个位存储一个**布尔**值来提供空间优化。
 
 ## <a name="syntax"></a>语法
 
@@ -37,14 +37,14 @@ class vector<bool, Allocator>
 
 除了本文中说明的差异以外，此类模板专用化的行为类似于矢量。
 
-处理的操作**bool**类型对应于容器存储中的值。 `allocator_traits::construct` 不用于构造这些值。
+处理**bool**类型的操作与容器存储中的值相对应。 `allocator_traits::construct` 不用于构造这些值。
 
 ### <a name="typedefs"></a>Typedef
 
 |类型名称|描述|
 |-|-|
 |[const_pointer](#const_pointer)|`const_iterator` 的 typedef，可用作指向 `vector<bool>` 的布尔值元素的常量指针。|
-|[const_reference](#const_reference)|Typedef **bool**。 初始化之后，它不观察对原始值的更新。|
+|[const_reference](#const_reference)|**布尔**值的 typedef。 初始化之后，它不观察对原始值的更新。|
 |[pointer](#pointer)|`iterator` 的 typedef，可用作指向 `vector<bool>` 的布尔值元素的指针。|
 
 ### <a name="member-functions"></a>成员函数
@@ -142,7 +142,7 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 
 |参数|描述|
 |-|-|
-|*pos*|`vector<bool>` 元素的位置。|
+|*位置*|`vector<bool>` 元素的位置。|
 
 ### <a name="return-value"></a>返回值
 
@@ -152,7 +152,7 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 
 ### <a name="remarks"></a>备注
 
-如果使用 _ITERATOR_DEBUG_LEVEL 集进行编译，如果您尝试访问矢量边界之外的元素，会发生运行时错误。  有关更多信息，请参见 [Checked Iterators](../standard-library/checked-iterators.md)。
+如果使用 _ITERATOR_DEBUG_LEVEL 集进行编译, 则当你尝试访问矢量边界之外的元素时, 将发生运行时错误。  有关更多信息，请参见 [Checked Iterators](../standard-library/checked-iterators.md)。
 
 ### <a name="example"></a>示例
 
@@ -257,7 +257,7 @@ The vector with first element flipped is:
 
 ###  <a name="reference_operator_bool"></a>vector\<bool>::reference::operator bool
 
-提供了隐式转换`vector<bool>::reference`到**bool**。
+提供从`vector<bool>::reference`到**bool**的隐式转换。
 
 ```cpp
 operator bool() const;
@@ -282,10 +282,10 @@ reference& operator=(bool Val);
 
 ### <a name="parameters"></a>参数
 
-右侧<br/>
+*然后*\
 要将值赋给位的元素引用。
 
-*Val*<br/>
+*初始值*\
 要赋给位的布尔值。
 
 #### <a name="example"></a>示例
@@ -371,11 +371,11 @@ static void swap(
 
 ### <a name="parameters"></a>参数
 
-左侧<br/>
-要与交换的元素*右*元素。
+*左中*\
+要与*右侧*元素交换的元素。
 
-右侧<br/>
-要与交换的元素*左侧*元素。
+*然后*\
+要与*左侧*元素交换的元素。
 
 ### <a name="remarks"></a>备注
 
@@ -383,5 +383,5 @@ static void swap(
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)<br/>
+[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
