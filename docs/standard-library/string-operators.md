@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: a3ca469058ba65f83b0df60a93c63895e34f916e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bb66e7c0120da9f140ce33da7ecc61299a4d2867
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412353"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459259"
 ---
 # <a name="ltstringgt-operators"></a>&lt;string&gt; 运算符
 
@@ -103,10 +103,10 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="parameters"></a>参数
 
-*left*<br/>
+*左中*\
 要连接的 C 样式字符串或类型 `basic_string` 的对象。
 
-*right*<br/>
+*然后*\
 要连接的 C 样式字符串或类型 `basic_string` 的对象。
 
 ### <a name="return-value"></a>返回值
@@ -115,7 +115,7 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="remarks"></a>备注
 
-每个函数均重载 `operator+` 以连接模板类 [basic_string 类](../standard-library/basic-string-class.md)的两个对象。 全部都有效返回`basic_string< CharType, Traits, Allocator>(Left).append(right)`。 有关详细信息，请参阅[追加](../standard-library/basic-string-class.md#append)。
+每个函数均重载 `operator+` 以连接模板类 [basic_string 类](../standard-library/basic-string-class.md)的两个对象。 所有有效的`basic_string< CharType, Traits, Allocator>(Left).append(right)`返回。 有关详细信息, 请参阅[append](../standard-library/basic-string-class.md#append)。
 
 ### <a name="example"></a>示例
 
@@ -192,10 +192,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>参数
 
-*left*<br/>
+*左中*\
 要比较的 C 样式字符串或类型 `basic_string` 的对象。
 
-*right*<br/>
+*然后*\
 要比较的 C 样式字符串或类型 `basic_string` 的对象。
 
 ### <a name="return-value"></a>返回值
@@ -283,10 +283,10 @@ bool operator==(
 
 ### <a name="parameters"></a>参数
 
-*left*<br/>
+*左中*\
 要比较的 C 样式字符串或类型 `basic_string` 的对象。
 
-*right*<br/>
+*然后*\
 要比较的 C 样式字符串或类型 `basic_string` 的对象。
 
 ### <a name="return-value"></a>返回值
@@ -374,10 +374,10 @@ bool operator<(
 
 ### <a name="parameters"></a>参数
 
-*left*<br/>
+*左中*\
 要比较的 C 样式字符串或类型 `basic_string` 的对象。
 
-*right*<br/>
+*然后*\
 要比较的 C 样式字符串或类型 `basic_string` 的对象。
 
 ### <a name="return-value"></a>返回值
@@ -470,10 +470,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>参数
 
-*left*<br/>
+*左中*\
 要比较的 C 样式字符串或类型 `basic_string` 的对象。
 
-*right*<br/>
+*然后*\
 要比较的 C 样式字符串或类型 `basic_string` 的对象。
 
 ### <a name="return-value"></a>返回值
@@ -563,10 +563,10 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>参数
 
-*_Ostr*<br/>
+*_Ostr*\
 正在写入的输出流。
 
-*str*<br/>
+*字符串*\
 要输入到输出流的字符串。
 
 ### <a name="return-value"></a>返回值
@@ -575,7 +575,7 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="remarks"></a>备注
 
-模板函数重载**运算符 <<** 插入对象*str*模板类的[basic_string](../standard-library/basic-string-class.md)到流 *\_Ostr*。 实际上，该函数将返回`_Ostr.write( str.c_str, str.size )`。
+模板函数重载**运算符 < <** 将模板类[basic_string](../standard-library/basic-string-class.md)的对象*str*插入 stream  *\_Ostr*中。 该函数有效返回`_Ostr.write( str.c_str, str.size )`。
 
 ## <a name="op_gt"></a>operator&gt;
 
@@ -600,10 +600,10 @@ bool operator>(
 
 ### <a name="parameters"></a>参数
 
-*left*<br/>
+*左中*\
 要比较的 C 样式字符串或类型 `basic_string` 的对象。
 
-*right*<br/>
+*然后*\
 要比较的 C 样式字符串或类型 `basic_string` 的对象。
 
 ### <a name="return-value"></a>返回值
@@ -703,10 +703,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>参数
 
-*left*<br/>
+*左中*\
 要比较的 C 样式字符串或类型 `basic_string` 的对象。
 
-*right*<br/>
+*然后*\
 要比较的 C 样式字符串或类型 `basic_string` 的对象。
 
 ### <a name="return-value"></a>返回值
@@ -796,21 +796,21 @@ basic_istream<CharType, Traits>& operator>>(
 
 ### <a name="parameters"></a>参数
 
-*_Istr*<br/>
+*_Istr*\
 用来提取序列的输入流
 
-*right*<br/>
+*然后*\
 正在从输入流提取的字符串。
 
 ### <a name="return-value"></a>返回值
 
-从指定的字符串值读取 *_Istr*并返回到*右*。
+从 *_Istr*读取指定字符串的值, 并将其返回到*右侧*。
 
 ### <a name="remarks"></a>备注
 
 除非已设置 `skipws` 标志，否则运算符将跳过前导空白字符。 它读取以下所有字符，直到下一个字符是空格或到达文件末尾。
 
-模板函数重载**运算符 >>** 控制的序列替换*右*具有一系列元素从流中提取 *_Istr*。 提取将在以下位置停止：
+模板函数重载**运算符 > >** , 以将由*权限*控制的序列替换为从 stream *_Istr*中提取的一系列元素。 提取将在以下位置停止：
 
 - 文件末尾。
 
@@ -820,7 +820,7 @@ basic_istream<CharType, Traits>& operator>>(
 
 - 函数提取 *ch* 元素之后并且该元素的 [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **CharType**> >( `getloc`). **is**( **ctype**\< **CharType**>:: **space**, *ch*) 为 true 时，放回字符。
 
-如果函数没有提取任何元素，则会调用[setstate](../standard-library/basic-ios-class.md#setstate)(`ios_base::failbit`)。 在任何情况下，函数都会调用 **istr**. **width** (0)，并返回 \***this**。
+如果该函数未提取任何元素, 则[](../standard-library/basic-ios-class.md#setstate)它将`ios_base::failbit`调用 setstate ()。 在任何情况下，函数都会调用 **istr**. **width** (0)，并返回 \***this**。
 
 ### <a name="example"></a>示例
 
@@ -843,4 +843,4 @@ int main( )
 
 ## <a name="see-also"></a>请参阅
 
-[\<string>](../standard-library/string.md)<br/>
+[\<string>](../standard-library/string.md)
