@@ -3,14 +3,12 @@ title: C/C++项目属性 (Visual Studio)
 ms.date: 7/18/2019
 ms.topic: article
 ms.assetid: 16375038-4917-4bd0-9a2a-26343c1708b7
-author: mikeblome
-ms.author: mblome
-ms.openlocfilehash: bf457366f1818593e937d4c9e95651f48db64528
-ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
+ms.openlocfilehash: 91edf30ef0e5f38088727c0280d2edf07cdebfa5
+ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68342258"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68537566"
 ---
 # <a name="cc-property-pages"></a>C/C++属性页
 
@@ -436,7 +434,7 @@ C++模块 TS 和标准库模块的实验性支持。
 **方案**
 
 - **__cdecl** -为除成员函数和标记为 __stdcall 或C++ __fastcall 的函数之外的所有函数指定 __cdecl 调用约定。
-- **__fastcall** -为除 member 函数和函数标记为 __cdecl C++或 __stdcall 之外的所有函数指定 __fastcall 调用约定。 所有 __fastcall 函数都必须具有原型。
+- **__fastcall** -为除成员函数和标记为 __cdecl 或C++ __stdcall 的函数之外的所有函数指定 __fastcall 调用约定。 所有 __fastcall 函数都必须具有原型。
 - **__stdcall** -为除成员函数和标记为 __cdecl 或C++ __fastcall 的函数之外的所有函数指定 __stdcall 调用约定。 所有 __stdcall 函数都必须具有原型。
 - **__vectorcall** -为除成员函数和标记为 __cdecl、 C++ __fastcall 或 __stdcall 的函数之外的所有函数指定 __vectorcall 调用约定。 所有 __vectorcall 函数都必须具有原型。
 
