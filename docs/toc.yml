@@ -405,7 +405,7 @@
                   href: build/reference/vcxproj-file-structure.md
                 - name: 示例项目文件
                   href: build/reference/project-files.md
-            - name: C++ 项目属性参考
+            - name: C++ 项目属性页
               expanded: false
               items:
                 - name: C++ 项目属性参考
@@ -416,6 +416,8 @@
                   href: build/reference/general-property-page-file.md
                 - name: “高级”属性页
                   href: build/reference/advanced-property-page.md
+                - name: 调试属性页
+                  href: build/reference/debugging-prop-pages.md
                 - name: “VC++ 目录”属性页
                   href: build/reference/vcpp-directories-property-page.md
                 - name: C/C++ 属性页
@@ -4351,6 +4353,13 @@
                   href: cpp/assertion-and-user-supplied-messages-cpp.md
                 - name: static_assert
                   href: cpp/static-assert.md
+            - name: 模块
+              expanded: false
+              items:
+                - name: C++ 中的模块概述
+                  href: cpp/modules-cpp.md
+                - name: 模块，导入，导出
+                  href: cpp/import-export-module.md
             - name: 模板
               expanded: false
               items:
