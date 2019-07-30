@@ -429,18 +429,7 @@
                 - name: “Nmake”属性页
                   href: build/reference/nmake-property-page.md
                 - name: 清单工具属性页
-                  expanded: false
-                  items:
-                    - name: 清单工具属性页
-                      href: build/reference/manifest-tool-property-pages.md
-                    - name: “<Projectname> 属性页”对话框 ->“配置属性”->“清单工具”->“常规”
-                      href: build/reference/general-manifest-tool-configuration-properties.md
-                    - name: “<Projectname> 属性页”对话框 ->“配置属性”->“清单工具”->“输入和输出”
-                      href: build/reference/input-and-output-manifest-tool.md
-                    - name: “<Projectname> 属性页”对话框 ->“配置属性”->“清单工具”->“独立 COM”
-                      href: build/reference/isolated-com-manifest-tool.md
-                    - name: “<Projectname> 属性页”对话框 ->“配置属性”->“清单工具”->“高级”
-                      href: build/reference/advanced-manifest-tool.md
+                  href: build/reference/manifest-tool-property-pages.md
                 - name: “资源”属性页
                   href: build/reference/resources-property-pages.md
                 - name: “托管资源”属性页
@@ -456,16 +445,7 @@
                 - name: “自定义生成步骤”属性页：常规
                   href: build/reference/custom-build-step-property-page-general.md
                 - name: HLSL 属性页
-                  expanded: false
-                  items:
-                    - name: HLSL 属性页
-                      href: build/reference/hlsl-property-pages.md
-                    - name: HLSL 属性页：常规
-                      href: build/reference/hlsl-property-pages-general.md
-                    - name: HLSL 属性页：高级
-                      href: build/reference/hlsl-property-pages-advanced.md
-                    - name: HLSL 属性页：输出文件
-                      href: build/reference/hlsl-property-pages-output-files.md
+                  href: build/reference/hlsl-property-pages.md
         - name: MSVC 编译器参考
           expanded: false
           items:
@@ -1607,10 +1587,10 @@
 - name: Windows 桌面开发
   expanded: false
   items:
-    - name: C++ 中的桌面应用程序
-      href: windows/desktop-applications-visual-cpp.md
     - name: “C++ 中的 Windows 编程”概述
       href: windows/overview-of-windows-programming-in-cpp.md
+    - name: C++ 中的桌面应用程序
+      href: windows/desktop-applications-visual-cpp.md
     - name: 演练：创建标准 C++ 程序
       href: windows/walkthrough-creating-a-standard-cpp-program-cpp.md
     - name: 演练：创建 Windows 桌面应用程序
