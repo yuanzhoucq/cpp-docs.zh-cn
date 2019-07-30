@@ -55,7 +55,7 @@ Windows 运行时通过 COM，而不是异常使用 HRESULT 错误代码是一�
 
 ## <a name="dynamiccast"></a>dynamic_cast
 
-使用**dynamic_cast**强制转换对象时 (更具体地说，帽子**^**) 为派生程度更大的类型，你预期目标对象可能有时是**nullptr**或者该强制转换可能会失败，并且你想要该条件处理为普通的代码路径而不是异常。 例如，在**空白应用 (通用 Windows)** 项目模板`OnLaunched`app.xamp.cpp 使用中的方法**dynamic_cast**来测试应用程序窗口是否包含内容。 如果它没有内容，则不是错误；而是一个预期状况。 `Windows::Current::Content` 是 `Windows::UI::XAML::UIElement` ，该转换是一个 `Windows::UI.XAML::Controls::Frame`，是继承层次结构中派生程度更大的类型。
+使用**dynamic_cast**强制转换对象时 (更具体地说，帽子 **^** ) 为派生程度更大的类型，你预期目标对象可能有时是**nullptr**或者该强制转换可能会失败，并且你想要该条件处理为普通的代码路径而不是异常。 例如，在**空白应用 (通用 Windows)** 项目模板`OnLaunched`app.xamp.cpp 使用中的方法**dynamic_cast**来测试应用程序窗口是否包含内容。 如果它没有内容，则不是错误；而是一个预期状况。 `Windows::Current::Content` 是 `Windows::UI::XAML::UIElement` ，该转换是一个 `Windows::UI.XAML::Controls::Frame`，是继承层次结构中派生程度更大的类型。
 
 ```cpp
 void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEventArgs^ args)
