@@ -53,7 +53,7 @@ errno_t tmpfile_s(
 
 ### <a name="error-conditions"></a>错误条件
 
-|*pFilePtr*|**返回值**|**内容***pFilePtr*|
+|*pFilePtr*|**返回值**|**内容** *pFilePtr*|
 |----------------|----------------------|---------------------------------|
 |**NULL**|**EINVAL**|未更改|
 
