@@ -78,7 +78,7 @@ errno_t _wtmpnam_s(
 
 |||||
 |-|-|-|-|
-|*str*|*sizeInChars*|**返回值**|**内容***str*|
+|*str*|*sizeInChars*|**返回值**|**内容** *str*|
 |**NULL**|任何|**EINVAL**|未修改|
 |不**NULL** （指向有效内存）|过短|**ERANGE**|未修改|
 
