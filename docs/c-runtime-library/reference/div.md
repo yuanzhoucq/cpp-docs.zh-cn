@@ -74,13 +74,13 @@ lldiv_t div(
 
 ## <a name="return-value"></a>返回值
 
-**div**通过使用类型的自变量调用**int**返回类型的结构**div_t**，其中包括商和余数。 类型的参数的返回值**长**是**ldiv_t**，和返回值类型的参数**长****长**是**lldiv_t**。 **div_t**， **ldiv_t**，和**lldiv_t**中定义\<stdlib.h >。
+**div**通过使用类型的自变量调用**int**返回类型的结构**div_t**，其中包括商和余数。 类型的参数的返回值**长**是**ldiv_t**，和返回值类型的参数**长** **长**是**lldiv_t**。 **div_t**， **ldiv_t**，和**lldiv_t**中定义\<stdlib.h >。
 
 ## <a name="remarks"></a>备注
 
 **Div**函数划分*号码*由*denom* ，从而计算商和余数。 [Div_t](../../c-runtime-library/standard-types.md)结构包含商， **q u o t**，，其余**rem**。商的符号与数学商的符号相同。 其绝对值是小于数学商的绝对值的最大整数。 如果分母为 0，程序将终止并显示错误消息。
 
-重载**div**需要类型的自变量**长**或**长****长**仅可供C++代码。 返回类型[ldiv_t](../../c-runtime-library/standard-types.md)并[lldiv_t](../../c-runtime-library/standard-types.md)包含成员**q u o t**并**rem**，它具有相同的含义的成员**div_t**。
+重载**div**需要类型的自变量**长**或**长** **长**仅可供C++代码。 返回类型[ldiv_t](../../c-runtime-library/standard-types.md)并[lldiv_t](../../c-runtime-library/standard-types.md)包含成员**q u o t**并**rem**，它具有相同的含义的成员**div_t**。
 
 ## <a name="requirements"></a>要求
 
