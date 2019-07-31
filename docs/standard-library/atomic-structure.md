@@ -4,16 +4,16 @@ ms.date: 04/20/2018
 f1_keywords:
 - atomic/std::atomic
 ms.assetid: 261628ed-7049-41ac-99b9-cfe49f696b44
-ms.openlocfilehash: 258812f033d34f040d96847581d6f51692a933b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1b3b60d71fcdf68fdf215820535c3bfb3d4dfb2b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376664"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456735"
 ---
 # <a name="atomic-structure"></a>atomic 结构
 
-描述一个对象执行原子操作存储值的类型*Ty*。
+描述一个对象, 该对象对*Ty*类型的存储值执行原子操作。
 
 ## <a name="syntax"></a>语法
 
@@ -29,52 +29,52 @@ struct atomic;
 |**构造函数**||
 |[atomic](#atomic)|构造一个原子对象。|
 |**运算符**||
-|[atomic:: operator Ty](#op_ty)|读取并返回存储的值。 ([atomic::load](#load))|
+|[原子:: operator Ty](#op_ty)|读取并返回存储的值。 ([atomic::load](#load))|
 |[atomic::operator=](#op_eq)|使用指定值替换存储值。 ([atomic::store](#store))|
 |[atomic::operator++](#op_inc)|增加存储值。 仅由整型和指针专用化使用。|
 |[atomic::operator+=](#op_add_eq)|将指定的值添加到存储值。 仅由整型和指针专用化使用。|
 |[atomic::operator--](#op_dec)|减小存储值。 仅由整型和指针专用化使用。|
 |[atomic::operator-=](#op_sub_eq)|从存储值减去指定的值。 仅由整型和指针专用化使用。|
-|[atomic::operator&=](#op_and_eq)|执行按位以及指定的值和存储的值。 仅由整型专用化使用。|
-|[atomic::operator&#124;=](#op_or_eq)|执行按位或上指定的值和存储的值。 仅由整型专用化使用。|
-|[atomic::operator^=](#op_xor_eq)|执行按位异或上指定的值和存储的值。 仅由整型专用化使用。|
+|[atomic::operator&=](#op_and_eq)|对指定值和存储值执行按位 "与"。 仅由整型专用化使用。|
+|[atomic::operator&#124;=](#op_or_eq)|对指定值和存储值执行按位 "或"。 仅由整型专用化使用。|
+|[atomic::operator^=](#op_xor_eq)|对指定值和存储值执行按位 "异或" 运算。 仅由整型专用化使用。|
 |**函数**||
-|[compare_exchange_strong](#compare_exchange_strong)|执行*atomic_compare_and_exchange*上的操作**这**并返回结果。|
-|[compare_exchange_weak](#compare_exchange_weak)|执行*weak_atomic_compare_and_exchange*上的操作**这**并返回结果。|
+|[compare_exchange_strong](#compare_exchange_strong)|对**此**执行*atomic_compare_and_exchange*操作并返回结果。|
+|[compare_exchange_weak](#compare_exchange_weak)|对**此**执行*weak_atomic_compare_and_exchange*操作并返回结果。|
 |[fetch_add](#fetch_add)|将指定的值添加到存储值。|
-|[fetch_and](#fetch_and)|执行按位以及指定的值和存储的值。|
-|[fetch_or](#fetch_or)|执行按位或上指定的值和存储的值。|
+|[fetch_and](#fetch_and)|对指定值和存储值执行按位 "与"。|
+|[fetch_or](#fetch_or)|对指定值和存储值执行按位 "或"。|
 |[fetch_sub](#fetch_sub)|从存储值减去指定的值。|
-|[fetch_xor](#fetch_xor)|执行按位异或上指定的值和存储的值。|
-|[is_lock_free](#is_lock_free)|指定是否对原子操作**这**都*无锁*。 如果对类型执行的原子操作都没有使用锁，则原子类型为*无锁*。|
-|[load](#load)|读取并返回存储的值。|
+|[fetch_xor](#fetch_xor)|对指定值和存储值执行按位 "异或" 运算。|
+|[is_lock_free](#is_lock_free)|指定对**此**的原子操作是否为*无锁*。 如果对类型执行的原子操作都没有使用锁，则原子类型为*无锁*。|
+|[加载](#load)|读取并返回存储的值。|
 |[store](#store)|使用指定值替换存储值。|
 
 ## <a name="remarks"></a>备注
 
-类型*Ty*必须是*完全可复制*。 即，使用[memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md)复制其字节必须生成一个有效*Ty*等同于原始对象的对象。 [Compare_exchange_weak](#compare_exchange_weak)并[compare_exchange_strong](#compare_exchange_strong)成员函数使用[memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md)来确定两个*Ty*值相等。 这些函数将不会使用*Ty*-定义`operator==`。 成员函数`atomic`使用`memcpy`复制类型的值*Ty*。
+类型*Ty*必须是*完全复制*。 也就是说, 使用[memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md)复制其字节必须生成一个与原始对象相等的有效*Ty*对象。 [Compare_exchange_weak](#compare_exchange_weak)和[compare_exchange_strong](#compare_exchange_strong)成员函数使用[Memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md)来确定两个*Ty*值是否相等。 这些函数不会使用*Ty*定义`operator==`的。 的`atomic`成员函数,用于复制Ty类型的`memcpy`值。
 
-部分专用化**原子\<Ty \* >** ，存在的所有指针类型。 通过专用化可将偏移量添加到托管的指针值或者从其中减去该偏移量。 算术运算采用类型的自变量`ptrdiff_t`，并调整该参数的大小根据*Ty*与普通地址算术保持一致。
+所有指针类型都存在部分专用化**原子\<Ty \* >** 。 通过专用化可将偏移量添加到托管的指针值或者从其中减去该偏移量。 算术运算采用类型`ptrdiff_t`为的参数, 并根据*Ty*的大小调整该参数, 使其与普通地址算法保持一致。
 
-对于除每个整型类型存在专用化**bool**。 每个专用化为原子算术和逻辑运算提供了一组丰富的方法。
+除**bool**之外的每个整型类型都存在专用化。 每个专用化为原子算术和逻辑运算提供了一组丰富的方法。
 
 ||||
 |-|-|-|
-|**atomic\<char>**|**原子\<签名 char >**|**原子\<unsigned char >**|
+|**atomic\<char>**|**原子\<有符号字符 >**|**原子\<无符号字符 >**|
 |**atomic\<char16_t>**|**atomic\<char32_t>**|**atomic\<wchar_t>**|
-|**atomic\<short>**|**原子\<unsigned short >**|**atomic\<int>**|
-|**原子\<无符号的整数 >**|**atomic\<long>**|**原子\<无符号长 >**|
-|**atomic\<long long>**|**原子\<无符号长长 >**|
+|**atomic\<short>**|**原子\<无符号简短 >**|**原子\<整数 >**|
+|**原子\<无符号整数 >**|**原子\<长 >**|**原子\<无符号长 >**|
+|**原子\<长长 >**|**原子\<无符号长 >**|
 
-整型专用化派生自相应的 `atomic_integral` 类型。 例如，**原子\<无符号的整数 >** 派生自`atomic_uint`。
+整型专用化派生自相应的 `atomic_integral` 类型。 例如,**原子\<无符号整数 >** 派生自。 `atomic_uint`
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<原子 >
+**标头:** \<原子 >
 
 **命名空间：** std
 
-## <a name="atomic"></a> atomic:: atomic
+## <a name="atomic"></a>原子:: 原子
 
 构造一个原子对象。
 
@@ -86,23 +86,23 @@ atomic( Ty Value ) noexcept;
 
 ### <a name="parameters"></a>参数
 
-*值*<br/>
+*负值*\
 初始化值。
 
 ### <a name="remarks"></a>备注
 
 不能复制或移动原子对象。
 
-对象的实例化的原子\<*Ty*> 仅采用一个类型的参数的构造函数可以初始化*Ty*并不是通过使用聚合初始化。 但是，可以仅通过使用聚合初始化初始化 atomic_integral 对象。
+仅可使用*Ty*类型的\<参数的构造函数 (而不是使用聚合初始化) 来初始化原子*Ty*> 的实例化对象。 但是, 只能使用聚合初始化来初始化 atomic_integral 对象。
 
 ```cpp
 atomic<int> ai0 = ATOMIC_VAR_INIT(0);
 atomic<int> ai1(0);
 ```
 
-## <a name="op_ty"></a> atomic:: operator *Ty*
+## <a name="op_ty"></a>原子:: operator *Ty*
 
-指定到模板，原子类型的运算符\<*Ty*>。 检索中存储的值 **\*这**。
+为模板指定的类型的运算符, 原子\<*Ty*>。 检索 **\*此**中存储的值。
 
 ```cpp
 atomic<Ty>::operator Ty() const volatile noexcept;
@@ -111,9 +111,9 @@ atomic<Ty>::operator Ty() const noexcept;
 
 ### <a name="remarks"></a>备注
 
-此运算符可应用`memory_order_seq_cst` [memory_order](atomic-enums.md)。
+此运算符应用`memory_order_seq_cst` [memory_order](atomic-enums.md)。
 
-## <a name="op_eq"></a> atomic::operator=
+## <a name="op_eq"></a>原子:: operator =
 
 存储指定值。
 
@@ -128,14 +128,14 @@ Ty operator=(
 
 ### <a name="parameters"></a>参数
 
-*值*<br/>
+*负值*\
 一个*Ty*对象。
 
 ### <a name="return-value"></a>返回值
 
 返回*值*。
 
-## <a name="op_inc"></a> atomic::operator++
+## <a name="op_inc"></a>原子:: operator + +
 
 增加存储值。 仅由整型和指针专用化使用。
 
@@ -148,9 +148,9 @@ Ty atomic<Ty>::operator++() noexcept;
 
 ### <a name="return-value"></a>返回值
 
-前两个运算符返回递增的值;最后两个运算符将返回前递增的值。 使用运算符`memory_order_seq_cst` [memory_order](atomic-enums.md)。
+前两个运算符返回递增的值;最后两个运算符在增量之前返回值。 运算符使用`memory_order_seq_cst` [memory_order](atomic-enums.md)。
 
-## <a name="op_add_eq"></a> atomic::operator+=
+## <a name="op_add_eq"></a>原子:: operator + =
 
 将指定的值添加到存储值。 仅由整型和指针专用化使用。
 
@@ -165,18 +165,18 @@ Ty atomic<Ty>::operator+=(
 
 ### <a name="parameters"></a>参数
 
-*值*<br/>
-一个整型或指针的值。
+*负值*\
+整数或指针值。
 
 ### <a name="return-value"></a>返回值
 
-一个*Ty*对象，其中包含相加的结果。
+包含加法结果的*Ty*对象。
 
 ### <a name="remarks"></a>备注
 
-此运算符可使用`memory_order_seq_cst` [memory_order](atomic-enums.md)。
+此运算符使用`memory_order_seq_cst` [memory_order](atomic-enums.md)。
 
-## <a name="op_dec"></a> atomic::operator--
+## <a name="op_dec"></a>原子:: operator--
 
 减小存储值。 仅由整型和指针专用化使用。
 
@@ -189,9 +189,9 @@ Ty atomic<Ty>::operator--() noexcept;
 
 ### <a name="return-value"></a>返回值
 
-前两个运算符返回递减的值;最后两个运算符将返回前递减的值。 使用运算符`memory_order_seq_cst` [memory_order](atomic-enums.md)。
+前两个运算符返回递减的值;最后两个运算符返回减量前的值。 运算符使用`memory_order_seq_cst` [memory_order](atomic-enums.md)。
 
-## <a name="op_sub_eq"></a> atomic::operator-=
+## <a name="op_sub_eq"></a>原子:: operator-=
 
 从存储值减去指定的值。 仅由整型和指针专用化使用。
 
@@ -206,20 +206,20 @@ Ty atomic<Ty>::operator-=(
 
 ### <a name="parameters"></a>参数
 
-*值*<br/>
-一个整型或指针的值。
+*负值*\
+整数或指针值。
 
 ### <a name="return-value"></a>返回值
 
-一个*Ty*对象，其中包含该减法运算的结果。
+一个包含减法结果的*Ty*对象。
 
 ### <a name="remarks"></a>备注
 
-此运算符可使用`memory_order_seq_cst` [memory_order](atomic-enums.md)。
+此运算符使用`memory_order_seq_cst` [memory_order](atomic-enums.md)。
 
-## <a name="op_and_eq"></a> atomic::operator&=
+## <a name="op_and_eq"></a>原子:: operator & =
 
-执行按位并在指定的值和存储的值 **\*这**。 仅由整型专用化使用。
+对指定值和 **\*此**的存储值执行按位 "与"。 仅由整型专用化使用。
 
 ```cpp
 atomic<Ty>::operator&= (
@@ -232,20 +232,20 @@ atomic<Ty>::operator&= (
 
 ### <a name="parameters"></a>参数
 
-*值*<br/>
-类型的值*Ty*。
+*负值*\
+*Ty*类型的值。
 
 ### <a name="return-value"></a>返回值
 
-按位的结果和。
+按位 "与" 的结果。
 
 ### <a name="remarks"></a>备注
 
-此运算符执行读取-修改-写入操作的存储的值替换 **\*这**的按位和的*值*中存储的当前值和 **\*这**的约束内`memory_order_seq_cst` [memory_order](atomic-enums.md)。
+此运算符执行读修改-写操作, 将 **\*此**存储的值替换为*值*的按位 "与", 并在 **\*** `memory_order_seq_cst` [memory_order](atomic-enums.md)。
 
-## <a name="op_or_eq"></a> atomic::operator&#124;=
+## <a name="op_or_eq"></a>原子:: operator&#124;=
 
-执行按位或上指定的值和存储的值 **\*这**。 仅由整型专用化使用。
+对指定值和 **\*此**的存储值执行按位 "或"。 仅由整型专用化使用。
 
 ```cpp
 atomic<Ty>::operator|= (
@@ -258,20 +258,20 @@ atomic<Ty>::operator|= (
 
 ### <a name="parameters"></a>参数
 
-*值*<br/>
-类型的值*Ty*。
+*负值*\
+*Ty*类型的值。
 
 ### <a name="return-value"></a>返回值
 
-结果的按位或。
+按位 "或" 的结果。
 
 ### <a name="remarks"></a>备注
 
-此运算符执行读取-修改-写入操作的存储的值替换 **\*这**的按位或的*值*中存储的当前值和 **\*这**的约束内`memory_order_seq_cst` [memory_order](atomic-enums.md)约束。
+此运算符执行读修改-写操作, 将 **\*此**存储的值替换为*值*的按位 "或", 并将在 **\*此** `memory_order_seq_cst`中存储的当前值替换为 [memory_order](atomic-enums.md)约束。
 
-## <a name="op_xor_eq"></a> atomic:: operator ^ =
+## <a name="op_xor_eq"></a>原子:: operator ^ =
 
-执行按位异或上指定的值和存储的值 **\*这**。 仅由整型专用化使用。
+对指定的值和 **\*此**的存储值执行按位 "异或" 运算。 仅由整型专用化使用。
 
 ```cpp
 atomic<Ty>::operator^= (
@@ -284,20 +284,20 @@ atomic<Ty>::operator^= (
 
 ### <a name="parameters"></a>参数
 
-*值*<br/>
-类型的值*Ty*。
+*负值*\
+*Ty*类型的值。
 
 ### <a name="return-value"></a>返回值
 
-结果的按位异或。
+按位 "异或" 的结果。
 
 ### <a name="remarks"></a>备注
 
-此运算符执行读取-修改-写入操作的存储的值替换 **\*这**与按位异或的*值*中存储的当前值和 **\*这**的约束内`memory_order_seq_cst` [memory_order](atomic-enums.md)约束。
+此运算符执行读修改-写操作, 将 **\*此**存储的值替换为按位 "异或"*值*以及在 **\*此**中存储的当前值, 在[memory_order 约束](atomic-enums.md)。 `memory_order_seq_cst`
 
-## <a name="compare_exchange_strong"></a> atomic::compare_exchange_strong
+## <a name="compare_exchange_strong"></a>原子:: compare_exchange_strong
 
-在执行原子比较和交换操作 **\*这**。
+**对\*此**执行原子比较和交换操作。
 
 ```cpp
 bool compare_exchange_strong(
@@ -326,33 +326,33 @@ bool compare_exchange_strong(
 
 ### <a name="parameters"></a>参数
 
-*Exp*<br/>
-类型的值*Ty*。
+*.Exp*\
+*Ty*类型的值。
 
-*值*<br/>
-类型的值*Ty*。
+*负值*\
+*Ty*类型的值。
 
-*Order1*<br/>
-第一个`memory_order`参数。
+*Order1*\
+第`memory_order`一个参数。
 
-*Order2*<br/>
+*Order2*\
 第二个 `memory_order` 参数。
 
 ### <a name="return-value"></a>返回值
 
-一个**bool** ，该值指示值比较的结果。
+**布尔**值, 指示值比较的结果。
 
 ### <a name="remarks"></a>备注
 
-此原子比较和交换操作中存储的值进行比较 **\*这**与*Exp*。如果值相等，该操作将替换中存储的值 **\*这**与*值*通过使用读取-修改-写入操作和应用的内存顺序约束的通过指定*顺序排列 1*。 如果值不相等，操作将使用存储中的值 **\*这**替换*Exp* ，并应用指定的内存顺序约束*Order2*.
+此原子比较和交换操作将 **\*此**中存储的值与*Exp*进行比较。如果值相等, 则操作将使用读修改写操作替换存储在 **\*此**中  的值, 并应用*Order1*指定的内存顺序约束。 如果值不相等, 则操作将使用存储在 **\*此**中的值来替换*Exp* , 并应用*Order2*指定的内存顺序约束。
 
-不具有第二个重载`memory_order`使用隐式*Order2*基于的值*顺序排列 1*。 如果*顺序排列 1*是`memory_order_acq_rel`， *Order2*是`memory_order_acquire`。 如果*顺序排列 1*是`memory_order_release`， *Order2*是`memory_order_relaxed`。 在所有其他情况下， *Order2*等于*顺序排列 1*。
+没有第二个`memory_order`重载的重载使用基于*Order1*值的隐式*Order2* 。 如果*Order1*为`memory_order_acq_rel`,则 Order2 `memory_order_acquire`为。 如果*Order1*为`memory_order_release`,则 Order2 `memory_order_relaxed`为。 在所有其他情况下, *Order2*等于*Order1*。
 
-对于采用两个重载`memory_order`参数、 的值*Order2*不能`memory_order_release`或`memory_order_acq_rel`，并且不得超过了的值更强*顺序排列 1*。
+`memory_order`对于采用两个参数的重载, *Order2*的值不能为`memory_order_release`或`memory_order_acq_rel`, 且不得大于*Order1*的值。
 
-## <a name="compare_exchange_weak"></a> atomic:: compare_exchange_weak
+## <a name="compare_exchange_weak"></a>原子:: compare_exchange_weak
 
-对执行弱原子比较和交换操作 **\*这**。
+**对\*此**执行弱原子比较和交换操作。
 
 ```cpp
 bool compare_exchange_weak(
@@ -381,35 +381,35 @@ bool compare_exchange_weak(
 
 ### <a name="parameters"></a>参数
 
-*Exp*<br/>
-类型的值*Ty*。
+*.Exp*\
+*Ty*类型的值。
 
-*值*<br/>
-类型的值*Ty*。
+*负值*\
+*Ty*类型的值。
 
-*Order1*<br/>
-第一个`memory_order`参数。
+*Order1*\
+第`memory_order`一个参数。
 
-*Order2*<br/>
+*Order2*\
 第二个 `memory_order` 参数。
 
 ### <a name="return-value"></a>返回值
 
-一个**bool** ，该值指示值比较的结果。
+**布尔**值, 指示值比较的结果。
 
 ### <a name="remarks"></a>备注
 
-此原子比较和交换操作中存储的值进行比较 **\*这**与*Exp*。如果值相等，该操作将替换中存储的值 **\*这**与*值*通过使用读取-修改-写入操作和应用的内存顺序约束的通过指定*顺序排列 1*。 如果值不相等，操作将使用存储中的值 **\*这**替换*Exp* ，并应用指定的内存顺序约束*Order2*.
+此原子比较和交换操作将 **\*此**中存储的值与*Exp*进行比较。如果值相等, 则操作将使用读修改写操作替换存储在 **\*此**中  的值, 并应用*Order1*指定的内存顺序约束。 如果值不相等, 则操作将使用存储在 **\*此**中的值来替换*Exp* , 并应用*Order2*指定的内存顺序约束。
 
-弱原子比较和交换操作执行交换，如果所比较的值相等。 如果值是否不相等，则不保证该操作执行交换。
+如果比较的值相等, 则弱原子比较和交换操作将执行交换。 如果值不相等, 则不保证操作执行交换。
 
-不具有第二个重载`memory_order`使用隐式*Order2*基于的值*顺序排列 1*。 如果*顺序排列 1*是`memory_order_acq_rel`， *Order2*是`memory_order_acquire`。 如果*顺序排列 1*是`memory_order_release`， *Order2*是`memory_order_relaxed`。 在所有其他情况下， *Order2*等于*顺序排列 1*。
+没有第二个`memory_order`重载的重载使用基于*Order1*值的隐式*Order2* 。 如果*Order1*为`memory_order_acq_rel`,则 Order2 `memory_order_acquire`为。 如果*Order1*为`memory_order_release`,则 Order2 `memory_order_relaxed`为。 在所有其他情况下, *Order2*等于*Order1*。
 
-对于采用两个重载`memory_order`参数、 的值*Order2*不能`memory_order_release`或`memory_order_acq_rel`，并且不得超过了的值更强*顺序排列 1*。
+`memory_order`对于采用两个参数的重载, *Order2*的值不能为`memory_order_release`或`memory_order_acq_rel`, 且不得大于*Order1*的值。
 
-## <a name="exchange"></a> atomic::exchange
+## <a name="exchange"></a>原子:: exchange
 
-使用指定的值的存储的值替换 **\*这**。
+使用指定的值替换 **\*此**的存储值。
 
 ```cpp
 Ty atomic<Ty>::exchange(
@@ -424,23 +424,23 @@ Ty atomic<Ty>::exchange(
 
 ### <a name="parameters"></a>参数
 
-*值*<br/>
-类型的值*Ty*。
+*负值*\
+*Ty*类型的值。
 
-*Order*<br/>
+*为了*\
 `memory_order`。
 
 ### <a name="return-value"></a>返回值
 
-存储的值 **\*这**交换前。
+交换 **\*前的**存储的值。
 
 ### <a name="remarks"></a>备注
 
-此操作执行读取-修改-写入操作以使用*值*中存储的值替换 **\*这**，由指定的内存约束内*顺序*。
+此操作在按*顺序*指定的内存约束内执行读修改-写操作, 以使用*值*替换存储在 **\*此**中的值。
 
-## <a name="fetch_add"></a> atomic::fetch_add
+## <a name="fetch_add"></a>原子:: fetch_add
 
-提取中存储的值 **\*这**，然后将指定的值添加到存储的值。
+提取存储在 **\*此**中的值, 然后将指定的值添加到存储的值。
 
 ```cpp
 Ty atomic<Ty>::fetch_add (
@@ -455,23 +455,23 @@ Ty atomic<Ty>::fetch_add (
 
 ### <a name="parameters"></a>参数
 
-*值*<br/>
-类型的值*Ty*。
+*负值*\
+*Ty*类型的值。
 
-*Order*<br/>
+*为了*\
 `memory_order`。
 
 ### <a name="return-value"></a>返回值
 
-一个*Ty*对象，其中包含中存储的值 **\*这**之前添加。
+一个*Ty*对象, 该对象包含在添加之前存储在 **\*此**中的值。
 
 ### <a name="remarks"></a>备注
 
-`fetch_add`方法执行的读取-修改-写入操作以原子方式添加*值*中存储的值为 **\*这**，并应用指定的内存约束*顺序*。
+方法执行读修改-写操作, 以原子方式向 **\*此**中存储的值添加*值*, 并应用按顺序指定的内存约束。 `fetch_add`
 
-## <a name="fetch_and"></a> atomic::fetch_and
+## <a name="fetch_and"></a>原子:: fetch_and
 
-执行按位并对值和存储中的现有值 **\*这**。
+对值和存储在 **\*此**中的现有值执行按位 "与"。
 
 ```cpp
 Ty atomic<Ty>::fetch_and (
@@ -486,23 +486,23 @@ Ty atomic<Ty>::fetch_and (
 
 ### <a name="parameters"></a>参数
 
-*值*<br/>
-类型的值*Ty*。
+*负值*\
+*Ty*类型的值。
 
-*Order*<br/>
+*为了*\
 `memory_order`。
 
 ### <a name="return-value"></a>返回值
 
-一个*Ty*对象，其中包含按位的结果和。
+一个*Ty*对象, 它包含按位 "与" 的结果。
 
 ### <a name="remarks"></a>备注
 
-`fetch_and`方法执行的读取-修改-写入操作的存储的值替换 **\*这**的按位和*值*中存储的当前值和 **\*这**，由指定的内存约束内*顺序*。
+方法执行读修改-写操作, 将 **\*此**存储的值替换为*值*的按位 "与", 并在内存中存储 **\*** 的当前值`fetch_and`按*顺序*指定的约束。
 
-## <a name="fetch_or"></a> atomic:: fetch_or
+## <a name="fetch_or"></a>原子:: fetch_or
 
-执行按位或对值和存储中的现有值 **\*这**。
+对值和存储在 **\*此**中的现有值执行按位 "或"。
 
 ```cpp
 Ty atomic<Ty>::fetch_or (
@@ -517,21 +517,21 @@ Ty atomic<Ty>::fetch_or (
 
 ### <a name="parameters"></a>参数
 
-*值*<br/>
-类型的值*Ty*。
+*负值*\
+*Ty*类型的值。
 
-*Order*<br/>
+*为了*\
 `memory_order`。
 
 ### <a name="return-value"></a>返回值
 
-一个*Ty*对象，其中包含结果的按位或。
+一个*Ty*对象, 它包含按位 "或" 的结果。
 
 ### <a name="remarks"></a>备注
 
-`fetch_or`方法执行的读取-修改-写入操作的存储的值替换 **\*这**的按位或的*值*中存储的当前值和 **\*这**，由指定的内存约束内*顺序*。
+方法执行读修改写操作, 将 **\*此**存储的值替换为*值*的按位 "或", 并将 **\*此中存储**的当前值替换为内存`fetch_or`按*顺序*指定的约束。
 
-## <a name="fetch_sub"></a> atomic::fetch_sub
+## <a name="fetch_sub"></a>原子:: fetch_sub
 
 从存储值减去指定的值。
 
@@ -548,23 +548,23 @@ Ty atomic<Ty>::fetch_sub (
 
 ### <a name="parameters"></a>参数
 
-*值*<br/>
-类型的值*Ty*。
+*负值*\
+*Ty*类型的值。
 
-*Order*<br/>
+*为了*\
 `memory_order`。
 
 ### <a name="return-value"></a>返回值
 
-一个*Ty*对象，其中包含该减法运算的结果。
+一个包含减法结果的*Ty*对象。
 
 ### <a name="remarks"></a>备注
 
-`fetch_sub`方法执行的读取-修改-写入操作以原子方式减去*值*中存储的值从 **\*这**，由指定的内存约束内*顺序*。
+方法执行读修改-写 **\*操作, 以**原子方式在按*顺序*指定的内存约束内从存储的值中减去*值。* `fetch_sub`
 
-## <a name="fetch_xor"></a> atomic:: fetch_xor
+## <a name="fetch_xor"></a>原子:: fetch_xor
 
-执行按位异或对值和存储中的现有值 **\*这**。
+对值和存储在 **\*此**中的现有值执行按位 "异或" 运算。
 
 ```cpp
 Ty atomic<Ty>::fetch_xor (
@@ -579,23 +579,23 @@ Ty atomic<Ty>::fetch_xor (
 
 ### <a name="parameters"></a>参数
 
-*值*<br/>
-类型的值*Ty*。
+*负值*\
+*Ty*类型的值。
 
-*Order*<br/>
+*为了*\
 `memory_order`。
 
 ### <a name="return-value"></a>返回值
 
-一个*Ty*对象，其中包含结果的按位异或。
+一个*Ty*对象, 它包含按位 "异或" 的结果。
 
 ### <a name="remarks"></a>备注
 
-`fetch_xor`方法执行的读取-修改-写入操作的存储的值替换 **\*这**与按位异或的*值*和存储中的当前值 **\*这**，并应用指定的内存约束*顺序*。
+方法执行读修改-写操作, 将 **\*此**存储的值替换为按位 "异或"*值*和存储在 **\*此**中的当前值, 并将`fetch_xor`按*顺序*指定的内存约束。
 
-## <a name="is_lock_free"></a> atomic:: is_lock_free
+## <a name="is_lock_free"></a>原子:: is_lock_free
 
-指定是否对原子操作 **\*这**是无锁。
+指定对 **\*此**的原子操作是否为无锁。
 
 ```cpp
 bool is_lock_free() const volatile noexcept;
@@ -603,15 +603,15 @@ bool is_lock_free() const volatile noexcept;
 
 ### <a name="return-value"></a>返回值
 
-如果原子操作 **\*这**是锁可用; 否则为 false。
+如果对 **\*此**的原子操作是无锁的, 则为 true; 否则为 false。
 
 ### <a name="remarks"></a>备注
 
-如果没有对该类型执行原子操作使用了锁，则原子类型是无锁。
+如果对该类型执行的原子操作不使用锁, 则原子类型为无锁。
 
-## <a name="load"></a> atomic:: load
+## <a name="load"></a>原子:: load
 
-检索中存储的值 **\*这**，指定的内存约束内。
+在指定的内存约束内检索 **\*此**中存储的值。
 
 ```cpp
 Ty atomic::load(
@@ -624,14 +624,14 @@ Ty atomic::load(
 
 ### <a name="parameters"></a>参数
 
-*Order*<br/>
-`memory_order`。 *顺序*不能`memory_order_release`或`memory_order_acq_rel`。
+*为了*\
+`memory_order`。 *订单*不得为`memory_order_release`或`memory_order_acq_rel`。
 
 ### <a name="return-value"></a>返回值
 
-检索到的值存储在 **\*这**。
+**\*此**中存储的检索值。
 
-## <a name="store"></a> atomic:: store
+## <a name="store"></a>原子:: 存储
 
 存储指定值。
 
@@ -648,17 +648,17 @@ void atomic<Ty>::store(
 
 ### <a name="parameters"></a>参数
 
-*值*<br/>
+*负值*\
 一个*Ty*对象。
 
-*Order*<br/>
+*为了*\
 一个`memory_order`约束。
 
 ### <a name="remarks"></a>备注
 
-此成员函数以原子方式存储*值*中`*this`，在由指定的内存约束内*顺序*。
+此成员函数以原子  方式在`*this`按*顺序*指定的内存约束中存储值。
 
 ## <a name="see-also"></a>请参阅
 
-[\<atomic>](../standard-library/atomic.md)<br/>
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)<br/>
+[\<atomic>](../standard-library/atomic.md)\
+[头文件引用](../standard-library/cpp-standard-library-header-files.md)
