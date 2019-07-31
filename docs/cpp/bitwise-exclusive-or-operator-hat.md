@@ -27,13 +27,13 @@ expression ^ expression
 
 ## <a name="remarks"></a>备注
 
-按位异或运算符 (**^**) 将第二个操作数的相应位进行第一个操作数的每一位进行比较。 如果一个位是 0，另一个位是 1，则相应的结果位将设置为 1。 否则，将对应的结果位设置为 0。
+按位异或运算符 ( **^** ) 将第二个操作数的相应位进行第一个操作数的每一位进行比较。 如果一个位是 0，另一个位是 1，则相应的结果位将设置为 1。 否则，将对应的结果位设置为 0。
 
 按位“异或”运算符的两个操作数都必须为整型。 中涵盖的常用算术转换[标准转换](standard-conversions.md)适用于操作数。
 
 ## <a name="operator-keyword-for-"></a>^ 的运算符关键字
 
-**Xor**运算符是的文本等效**^**。 有两种方法来访问**xor**您的程序中的运算符： 包含头文件`iso646.h`，或使用编译[/Za](../build/reference/za-ze-disable-language-extensions.md) （禁用语言扩展） 编译器选项。
+**Xor**运算符是的文本等效 **^** 。 有两种方法来访问**xor**您的程序中的运算符： 包含头文件`iso646.h`，或使用编译[/Za](../build/reference/za-ze-disable-language-extensions.md) （禁用语言扩展） 编译器选项。
 
 ## <a name="example"></a>示例
 
