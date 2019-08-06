@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_pod class
 - is_pod
 ms.assetid: d73ebdee-746b-4082-9fa4-2db71432eb0e
-ms.openlocfilehash: 3dff4650cf0337a5ff54065d3b1644e11008ecfe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1249e9a3689d4b91334e545ba294c28984898035
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413614"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455766"
 ---
 # <a name="ispod-class"></a>is_pod 类
 
@@ -27,12 +27,12 @@ struct is_pod;
 
 ### <a name="parameters"></a>参数
 
-*T*<br/>
+*关心*\
 要查询的类型。
 
 ## <a name="remarks"></a>备注
 
-`is_pod<T>::value` 是 **，则返回 true**如果类型*T*为纯旧数据 (POD)。 否则它是**false**。
+`is_pod<T>::value`如果类型*T*为纯旧数据 (POD), 则为**true** 。 否则为**false**。
 
 算术类型、枚举类型、指针类型和指向成员类型的指针是 POD。
 
@@ -96,10 +96,10 @@ is_pod<throws> == false
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<type_traits>
+**标头：** \<type_traits>
 
 **命名空间：** std
 
 ## <a name="see-also"></a>请参阅
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

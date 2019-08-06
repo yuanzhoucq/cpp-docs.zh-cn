@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::promise [C++], set_value
 - std::promise [C++], set_value_at_thread_exit
 - std::promise [C++], swap
-ms.openlocfilehash: 991df549168456112afe27bed6f4991a7ccfb88e
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 560339dee5b13ddc13ff2f8af8283ea8615d804a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400874"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458367"
 ---
 # <a name="promise-class"></a>promise 类
 
@@ -44,7 +44,7 @@ class promise;
 
 |名称|描述|
 |----------|-----------------|
-|[promise](#promise)|构造 `promise` 对象。|
+|[承诺](#promise)|构造 `promise` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
@@ -65,11 +65,11 @@ class promise;
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
-*promise*
+*承诺*
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<将来 >
+**标头:** \<未来 >
 
 **命名空间：** std
 
@@ -97,7 +97,7 @@ promise& operator=(promise&& Other) noexcept;
 
 ### <a name="parameters"></a>参数
 
-*其他*<br/>
+*以外*\
 一个 `promise` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -106,7 +106,7 @@ promise& operator=(promise&& Other) noexcept;
 
 ### <a name="remarks"></a>备注
 
-此运算符传输关联异步状态从*其他*。 传输后，*其他*是*空*。
+此运算符将关联的异步状态从*其他*状态传输。 传输后,*其他*为*空*。
 
 ## <a name="promise"></a>promise::promise 构造函数
 
@@ -121,23 +121,23 @@ promise(promise&& Other) noexcept;
 
 ### <a name="parameters"></a>参数
 
-*Al*<br/>
+*Fc-al*\
 内存分配器。 有关详细信息，请参见 [\<allocators>](../standard-library/allocators-header.md)。
 
-*其他*<br/>
+*以外*\
 一个 `promise` 对象。
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数构造*空*`promise`对象。
+第一个构造函数构造一个*空* `promise`对象。
 
-第二个构造函数构造一个空`promise`对象，并使用*Al*内存分配。
+第二个构造函数构造`promise`一个空对象并使用*Al*进行内存分配。
 
-第三个构造函数构造`promise`对象，并传输关联异步状态从*其他*，并使*其他*为空。
+第三个构造函数`promise`构造一个对象, 并将关联的异步状态传输到另*一个, 并*保留*其他*空的。
 
 ## <a name="set_exception"></a>promise::set_exception
 
-以原子方式将异常存储为此 `promise` 对象的结果，并将“关联的异步状态”  设置为“就绪”  。
+以原子方式将异常存储为此 `promise` 对象的结果，并将“关联的异步状态”设置为“就绪”。
 
 ```cpp
 void set_exception(exception_ptr Exc);
@@ -145,7 +145,7 @@ void set_exception(exception_ptr Exc);
 
 ### <a name="parameters"></a>参数
 
-*Exc*<br/>
+*独占*\
 通过此方法另存为异常结果的 [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)。
 
 ### <a name="remarks"></a>备注
@@ -166,12 +166,12 @@ void set_exception_at_thread_exit(exception_ptr Exc);
 
 ### <a name="parameters"></a>参数
 
-*Exc*<br/>
+*独占*\
 通过此方法另存为异常结果的 [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)。
 
 ### <a name="remarks"></a>备注
 
-如果 promise 对象没有关联的异步状态  ，则此方法将引发具有错误代码 `no_state` 的 [future_error](../standard-library/future-error-class.md)。
+如果 promise 对象没有关联的异步状态，则此方法将引发具有错误代码 `no_state` 的 [future_error](../standard-library/future-error-class.md)。
 
 如果已为具有相同的关联异步状态的 `promise` 对象调用 [set_exception](#set_exception)、`set_exception_at_thread_exit`、[set_value](#set_value) 或 [set_value_at_thread_exit](#set_value_at_thread_exit)，则此方法将引发具有错误代码 `promise_already_satisfied` 的 `future_error`。
 
@@ -179,7 +179,7 @@ void set_exception_at_thread_exit(exception_ptr Exc);
 
 ## <a name="set_value"></a>promise::set_value
 
-以原子方式将值存储为此 `promise` 对象的结果，并将“关联的异步状态”  设置为“就绪”  。
+以原子方式将值存储为此 `promise` 对象的结果，并将“关联的异步状态”设置为“就绪”。
 
 ```cpp
 void promise::set_value(const Ty& Val);
@@ -190,7 +190,7 @@ void promise<void>::set_value();
 
 ### <a name="parameters"></a>参数
 
-*Val*<br/>
+*初始值*\
 要存储为结果的值。
 
 ### <a name="remarks"></a>备注
@@ -201,11 +201,11 @@ void promise<void>::set_value();
 
 此方法的结果是，不再阻止在关联的异步状态上受阻的任何线程。
 
-第一种方法还会引发任何异常时，会引发*Val*复制到关联异步状态。 在此情况下，关联的异步状态不设置为“就绪”。
+第一种方法还会引发在将*Val*复制到关联的异步状态时引发的任何异常。 在此情况下，关联的异步状态不设置为“就绪”。
 
-第二种方法还会引发任何异常时，会引发*Val*移到关联异步状态。 在此情况下，关联的异步状态不设置为“就绪”。
+第二种方法还会引发在将*Val*移到关联的异步状态时引发的任何异常。 在此情况下，关联的异步状态不设置为“就绪”。
 
-对于部分专用化`promise<Ty&>`，存储的值实际上是指*Val*。
+对于部分专用化`promise<Ty&>`, 存储的值实际上是对*Val*的引用。
 
 对于专用化 `promise<void>`，不存在任何存储的值。
 
@@ -222,22 +222,22 @@ void promise<void>::set_value_at_thread_exit();
 
 ### <a name="parameters"></a>参数
 
-*Val*<br/>
+*初始值*\
 要存储为结果的值。
 
 ### <a name="remarks"></a>备注
 
-如果 promise 对象没有关联的异步状态  ，则此方法将引发具有错误代码 `no_state` 的 [future_error](../standard-library/future-error-class.md)。
+如果 promise 对象没有关联的异步状态，则此方法将引发具有错误代码 `no_state` 的 [future_error](../standard-library/future-error-class.md)。
 
 如果已为具有相同的关联异步状态的 `promise` 对象调用 [set_exception](#set_exception)、[set_exception_at_thread_exit](#set_exception_at_thread_exit)、[set_value](#set_value) 或 `set_value_at_thread_exit`，则此方法将引发具有错误代码 `promise_already_satisfied` 的 `future_error`。
 
 与 `set_value` 相反，在当前线程中的所有线程本地对象被销毁前不会将关联的异步状态设置为已就绪。 通常，在关联的异步状态上受阻的线程会受到阻止，直到当前线程退出。
 
-第一种方法还会引发任何异常时，会引发*Val*复制到关联异步状态。
+第一种方法还会引发在将*Val*复制到关联的异步状态时引发的任何异常。
 
-第二种方法还会引发任何异常时，会引发*Val*移到关联异步状态。
+第二种方法还会引发在将*Val*移到关联的异步状态时引发的任何异常。
 
-对于部分专用化`promise<Ty&>`，存储的值实际上是指*Val*。
+对于部分专用化`promise<Ty&>`, 存储的值实际上是对*Val*的引用。
 
 对于专用化 `promise<void>`，不存在任何存储的值。
 
@@ -251,9 +251,9 @@ void swap(promise& Other) noexcept;
 
 ### <a name="parameters"></a>参数
 
-*其他*<br/>
+*以外*\
 一个 `promise` 对象。
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)<br/>
+[头文件引用](../standard-library/cpp-standard-library-header-files.md)

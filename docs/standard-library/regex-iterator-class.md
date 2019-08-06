@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::regex_iterator::operator->
 - std::regex_iterator::operator++
 ms.assetid: 0cfd8fd0-5a95-4f3c-bf8e-6ef028c423d3
-ms.openlocfilehash: 937c217cdef6895aaa3adb1499f1fde8f67fd513
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ccf806a7918100c58e04ab403f3a8b895e8dc256
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369484"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451563"
 ---
 # <a name="regexiterator-class"></a>regex_iterator 类
 
@@ -38,13 +38,13 @@ class regex_iterator
 
 ## <a name="parameters"></a>参数
 
-*BidIt*<br/>
+*BidIt*\
 子匹配项的迭代器类型。
 
-*Elem*<br/>
+*Elem*\
 要匹配的元素的类型。
 
-*RXtraits*<br/>
+*RXtraits*\
 元素的特征类。
 
 ## <a name="remarks"></a>备注
@@ -80,7 +80,7 @@ class regex_iterator
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<regex 1>
+**标头：** \<regex 1>
 
 **命名空间：** std
 
@@ -171,7 +171,7 @@ bool operator!=(const regex_iterator& right);
 
 ### <a name="parameters"></a>参数
 
-*right*<br/>
+*然后*\
 要进行比较的迭代器。
 
 ### <a name="remarks"></a>备注
@@ -215,12 +215,12 @@ bool operator==(const regex_iterator& right);
 
 ### <a name="parameters"></a>参数
 
-*right*<br/>
+*然后*\
 要进行比较的迭代器。
 
 ### <a name="remarks"></a>备注
 
-如果成员函数将返回 true`*this`并*右*为序列末迭代器或如果两者都不是一个序列末迭代器，并`begin == right.begin`， `end == right.end`， `pregex == right.pregex`，和`flags == right.flags`。 否则，返回 false。
+`*this`如果和*right*均为序列末尾`begin == right.begin`迭代`pregex == right.pregex`器, `end == right.end`或者两者都不是序列结尾迭代器、、和`flags == right.flags`, 则该成员函数返回 true。 否则，返回 false。
 
 ## <a name="op_arrow"></a>  regex_iterator::operator-&gt;
 
@@ -273,21 +273,21 @@ regex_iterator(BidIt first,
 
 ### <a name="parameters"></a>参数
 
-*first*<br/>
+*1*\
 要匹配的序列的开头。
 
-*last*<br/>
+*时间*\
 要匹配的序列的结尾。
 
-*re*<br/>
+*&* \
 匹配项正则表达式。
 
-*f*<br/>
+*果*\
 匹配标志。
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数将构造序列末迭代器。 第二个构造函数初始化存储的值`begin`与*第一个*，则存储值`end`与*最后一个*，则存储值`pregex`与`&re`，和存储值`flags`与*f*。 然后，它调用 `regex_search(begin, end, match, *pregex, flags)`。 如果搜索失败，则构造函数会将对象设置为序列末迭代器。
+第一个构造函数将构造序列末迭代器。 `begin`第二个构造函数将*首先*初始化存储的值、存储`end`的值和*最后一个*值`pregex` , `&re`并`flags`将存储的值与*f*一起存储。 然后，它调用 `regex_search(begin, end, match, *pregex, flags)`。 如果搜索失败，则构造函数会将对象设置为序列末迭代器。
 
 ## <a name="regex_type"></a>  regex_iterator::regex_type
 
@@ -315,12 +315,12 @@ typedef match_results<BidIt> value_type;
 
 ## <a name="see-also"></a>请参阅
 
-[\<regex>](../standard-library/regex.md)<br/>
-[regex_constants 类](../standard-library/regex-constants-class.md)<br/>
-[regex_error 类](../standard-library/regex-error-class.md)<br/>
-[\<regex> functions](../standard-library/regex-functions.md)<br/>
-[regex_iterator 类](../standard-library/regex-iterator-class.md)<br/>
-[\<regex> operators](../standard-library/regex-operators.md)<br/>
-[regex_token_iterator 类](../standard-library/regex-token-iterator-class.md)<br/>
-[regex_traits 类](../standard-library/regex-traits-class.md)<br/>
-[\<regex> typedefs](../standard-library/regex-typedefs.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[regex_constants 类](../standard-library/regex-constants-class.md)\
+[regex_error 类](../standard-library/regex-error-class.md)\
+[\<regex > 函数](../standard-library/regex-functions.md)\
+[regex_iterator 类](../standard-library/regex-iterator-class.md)\
+[\<regex > 运算符](../standard-library/regex-operators.md)\
+[regex_token_iterator 类](../standard-library/regex-token-iterator-class.md)\
+[regex_traits 类](../standard-library/regex-traits-class.md)\
+[\<regex> typedefs](../standard-library/regex-typedefs.md)

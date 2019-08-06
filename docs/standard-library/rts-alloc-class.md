@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stdext::rts_alloc [C++], deallocate
 - stdext::rts_alloc [C++], equals
 ms.assetid: ab41bffa-83d1-4a1c-87b9-5707d516931f
-ms.openlocfilehash: 2c77f93a2311dbf21959b0d2a7830c20ba6dce96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 065c0eaf936a438f48dbb8aa28704e0f53926a03
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409741"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451127"
 ---
 # <a name="rtsalloc-class"></a>rts_alloc 类
 
@@ -50,7 +50,7 @@ class rts_alloc
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<allocators>
+**标头：** \<allocators>
 
 **命名空间：** stdext
 
@@ -66,7 +66,7 @@ void *allocate(std::size_t count);
 
 |参数|描述|
 |---------------|-----------------|
-|*count*|数组中要分配的元素数目。|
+|*计数*|数组中要分配的元素数目。|
 
 ### <a name="return-value"></a>返回值
 
@@ -74,7 +74,7 @@ void *allocate(std::size_t count);
 
 ### <a name="remarks"></a>备注
 
-此成员函数返回`caches[_IDX].allocate(count)`，其中索引`_IDX`由请求的块大小*计数*，或者，如果*计数*是太大，它将返回`operator new(count)`。 用于表示缓存对象的 `cache`。
+成员函数返回`caches[_IDX].allocate(count)`, 其中索引`_IDX`由所请求的块大小*计数*确定, 如果*count*太大, 则返回`operator new(count)`。 用于表示缓存对象的 `cache`。
 
 ## <a name="deallocate"></a>  rts_alloc::deallocate
 
@@ -89,11 +89,11 @@ void deallocate(void* ptr, std::size_t count);
 |参数|描述|
 |---------------|-----------------|
 |*ptr*|指向要从存储中释放的第一个对象的指针。|
-|*count*|要从存储中释放的对象数量。|
+|*计数*|要从存储中释放的对象数量。|
 
 ### <a name="remarks"></a>备注
 
-此成员函数调用`caches[_IDX].deallocate(ptr, count)`，其中索引`_IDX`由请求的块大小*计数*，或者，如果*计数*是太大，它将返回`operator delete(ptr)`。
+成员函数将调用`caches[_IDX].deallocate(ptr, count)`, 其中索引`_IDX`由所请求的块大小*计数*确定, 如果*count*太大, 则返回`operator delete(ptr)`。
 
 ## <a name="equals"></a>  rts_alloc::equals
 
@@ -112,9 +112,9 @@ bool equals(const sync<_Cache>& _Other) const;
 
 ### <a name="remarks"></a>备注
 
-**true**如果的结果`caches[0].equals(other.caches[0])`; 否则为**false**。 `caches` 表示缓存对象的数组。
+如果的结果`caches[0].equals(other.caches[0])`为 true, 则为 true; 否则为**false**。 `caches` 表示缓存对象的数组。
 
 ## <a name="see-also"></a>请参阅
 
-[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)<br/>
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)\
+[\<allocators>](../standard-library/allocators-header.md)

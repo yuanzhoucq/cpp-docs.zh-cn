@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - iostream header
 ms.assetid: de5d39e1-7e77-4b55-bcd1-7c77b41515c8
-ms.openlocfilehash: fa90a861194275d8c82a407e2ca8db6e757aab35
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 471b149eba32d163e6e3e54e1c2820bbe0b94133
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245230"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449046"
 ---
 # <a name="ltiostreamgt"></a>&lt;iostream&gt;
 
-声明控制从标准流读取和写入到标准流的对象。 包括通常是您需要执行操作的输入和输出中的唯一标头C++程序。
+声明控制从标准流读取和写入到标准流的对象。 这通常是你需要从C++程序执行输入和输出操作的唯一标头。
 
 ## <a name="syntax"></a>语法
 
@@ -32,21 +32,21 @@ ms.locfileid: "68245230"
 ```
 
 > [!NOTE]
-> \<Iostream > 库使用`#include <ios>`， `#include <streambuf>`， `#include <istream>`，和`#include <ostream>`语句。
+> `#include <ios>` `#include <streambuf>`Iostream > 库使用、 、`#include <istream>`和`#include <ostream>`语句。 \<
 
 ## <a name="remarks"></a>备注
 
 这些对象分为两组：
 
-- [cin](#cin)， [cout](#cout)， [cerr](#cerr)，并且[clog](#clog)面向字节，在进行传统的一次一字节传输。
+- [cin](#cin)、 [cout](#cout)、 [cerr](#cerr)和[堵塞](#clog)是面向字节的, 可执行传统的一次性传输。
 
 - [wcin](#wcin)、[wcout](#wcout)、[wcerr](#wcerr) 和 [wclog](#wclog) 面向宽字节，与程序内部操作的宽字符相互转换。
 
-后执行流，例如标准输入上的执行某些操作不能执行不同的方向的同一个流上执行操作。 因此，程序不能互换操作上都[cin](#cin)并[wcin](#wcin)，例如。
+对流执行特定操作 (如标准输入) 后, 不能对同一流执行不同方向的操作。 因此, 程序不能在[cin](#cin)和[wcin](#wcin)上互换操作, 例如。
 
-在此标头共享一个特殊属性声明的所有对象，可以假定定义，包括翻译单元中的任意静态对象之前构造\<iostream >。 同样，可以假定你定义的任何此类静态对象的析构函数之前不会销毁这些对象。 （但是，在程序终止过程中输出流将刷新。）因此，可以在程序启动之前和程序终止之后安全地读取或写入标准流。
+此标头中声明的所有对象都共享特殊属性, 您可以假设它们是在您定义的任何静态对象之前构造的, 在包含\<iostream > 的翻译单元中。 同样, 你可以假定在你定义的任何此类静态对象的析构函数之前, 这些对象不会被销毁。 （但是，在程序终止过程中输出流将刷新。）因此，可以在程序启动之前和程序终止之后安全地读取或写入标准流。
 
-这种保证并不通，但是。 静态构造函数可能调用另一个翻译单元中的函数。 所调用的函数不能假定此标头中声明的对象已被构造，给定在哪个翻译单元参与静态构造的不确定的顺序。 若要在此类上下文中使用这些对象，必须先构造 [ios_base::Init](../standard-library/ios-base-class.md#init) 类的对象。
+但这种保证并不是通用的。 静态构造函数可能调用另一个翻译单元中的函数。 被调用的函数不能假定已构造了此标头中声明的对象, 因为翻译单元在静态构造中的顺序不确定。 若要在此类上下文中使用这些对象，必须先构造 [ios_base::Init](../standard-library/ios-base-class.md#init) 类的对象。
 
 ### <a name="global-stream-objects"></a>全局流对象
 
@@ -61,7 +61,7 @@ ms.locfileid: "68245230"
 |[wclog](#wclog)|指定 `wclog` 全局流。|
 |[wcout](#wcout)|指定 `wcout` 全局流。|
 
-###  <a name="cerr"></a> cerr
+###  <a name="cerr"></a>cerr
 
 对象 `cerr` 控制输出到与 \<cstdio> 中声明的对象 `stderr` 关联的流缓冲区的过程。
 
@@ -107,7 +107,7 @@ int main( )
 }
 ```
 
-###  <a name="cin"></a> cin
+###  <a name="cin"></a>cin
 
 指定 `cin` 全局流。
 
@@ -125,7 +125,7 @@ extern istream cin;
 
 #### <a name="example"></a>示例
 
-在此示例中，`cin`设置失败位流，就在非数字字符之间。 该程序清除失败位，并去除无效字符从流以继续。
+在此示例中`cin` , 在流出现在非数字字符的情况下, 设置流的失败位。 程序将清除失败位, 并从流中去除无效字符以继续。
 
 ```cpp
 // iostream_cin.cpp
@@ -158,7 +158,7 @@ int main()
 2
 ```
 
-###  <a name="clog"></a> clog
+###  <a name="clog"></a>clog
 
 指定 `clog` 全局流。
 
@@ -178,7 +178,7 @@ extern ostream clog;
 
 有关使用 `clog` 的示例，请参阅 [cerr](#cerr)。
 
-###  <a name="cout"></a> cout
+###  <a name="cout"></a>cout
 
 指定 `cout` 全局流。
 
@@ -198,7 +198,7 @@ extern ostream cout;
 
 有关使用 `cout` 的示例，请参阅 [cerr](#cerr)。
 
-### <a name="wcerr"></a> wcerr
+### <a name="wcerr"></a>wcerr
 
 指定 `wcerr` 全局流。
 
@@ -218,7 +218,7 @@ extern wostream wcerr;
 
 有关使用 `wcerr` 的示例，请参阅 [cerr](#cerr)。
 
-### <a name="wcin"></a> wcin
+### <a name="wcin"></a>wcin
 
 指定 `wcin` 全局流。
 
@@ -238,7 +238,7 @@ extern wistream wcin;
 
 有关使用 `wcin` 的示例，请参阅 [cerr](#cerr)。
 
-### <a name="wclog"></a> wclog
+### <a name="wclog"></a>wclog
 
 指定 `wclog` 全局流。
 
@@ -258,7 +258,7 @@ extern wostream wclog;
 
 有关使用 `wclog` 的示例，请参阅 [cerr](#cerr)。
 
-### <a name="wcout"></a> wcout
+### <a name="wcout"></a>wcout
 
 指定 `wcout` 全局流。
 
@@ -290,7 +290,7 @@ wcout <<(const wchar_t*) cs <<endl;
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream 编程](../standard-library/iostream-programming.md)<br/>
-[iostreams 约定](../standard-library/iostreams-conventions.md)<br/>
+[头文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream 编程](../standard-library/iostream-programming.md)\
+[iostreams 约定](../standard-library/iostreams-conventions.md)

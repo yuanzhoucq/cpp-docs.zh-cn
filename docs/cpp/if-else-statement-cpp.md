@@ -1,29 +1,29 @@
 ---
 title: if-else 语句 (C++)
-ms.date: 07/17/2017
+ms.date: 07/20/2019
+description: 使用中C++的 if-else 语句控制条件分支。
 f1_keywords:
 - else_cpp
 - if_cpp
 helpviewer_keywords:
 - if keyword [C++]
 - else keyword [C++]
-- if keyword [C++], if-else
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
-ms.openlocfilehash: 16aa65ab64d9fd855ae3306da88f8eb14eec759c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0e9de2d39e09e148c7e4f3ea82c3dadb173c2d0c
+ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183643"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661642"
 ---
 # <a name="if-else-statement-c"></a>if-else 语句 (C++)
 
-控制条件分支。 中的语句*if 块*仅当执行*if 表达式*的计算结果为非零值 （或 TRUE）。 如果的值*表达式*为非零值，*语句 1*和块中的任何其他语句执行和其他的块，如果存在，则跳过。 如果的值*表达式*是零，则跳过 if 块，并且执行其他的块，（如果存在）。 表达式的计算结果为非零值。
+控制条件分支。 仅当*if 表达式*的计算结果为非零值 (或 TRUE) 时, 才会执行*if 块*中的语句。 如果*expression*的值为非零值, 则将执行*语句 1*中的任何其他语句, 并跳过 else 块 (如果存在)。 如果*expression*的值为零, 则跳过 if 块, 并执行 else 块 (如果存在)。 计算结果为非零值的表达式为
 
-- true
-- 非 null 指针，
-- 任何非零值的算术值，或
-- 类定义明确转换为算术、 布尔值或指针类型。 (有关转换的信息，请参阅[标准转换](../cpp/standard-conversions.md)。)
+- TRUE
+- 非 null 指针,
+- 任何非零算术值, 或
+- 一种类类型, 该类型定义到算术、布尔或指针类型的明确转换。 (有关转换的信息, 请参阅[标准转换](../cpp/standard-conversions.md)。)
 
 ## <a name="syntax"></a>语法
 
@@ -39,7 +39,7 @@ else  // optional
    ...
 }
 
-// Visual Studio 2017 version 15.3 and later:
+// C++17 - Visual Studio 2017 version 15.3 and later:
 if ( initialization; expression )
 {
    statement1;
@@ -51,7 +51,7 @@ else  // optional
    ...
 }
 
-// Visual Studio 2017 version 15.3 and later:
+// C++17 - Visual Studio 2017 version 15.3 and later:
 if constexpr (expression)
 {
     statement1;
@@ -111,9 +111,9 @@ int main()
 }
 ```
 
-## <a name="if_with_init"></a> 如果语句具有初始值设定项
+## <a name="if_with_init"></a>带有初始值设定项的 if 语句
 
-**Visual Studio 2017 版本 15.3 及更高版本**(适用于[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):**如果**语句也可能包含声明并初始化命名的变量的表达式。 该变量时，才需要 if 块的作用域内时，请使用这种形式的 if 语句。
+**Visual Studio 2017 版本15.3 及更高版本**(可用于[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):**If**语句还可以包含声明和初始化命名变量的表达式。 如果只需要在 if 块范围内使用变量, 请使用以下形式的 if 语句。
 
 ## <a name="example"></a>示例
 
@@ -159,13 +159,13 @@ int main()
 }
 ```
 
-中的所有窗体**如果**语句*表达式*，它可以具有结构之外的任何值计算，包括所有副作用。 控制权将传递从**如果**语句在程序中的下一个语句除非之一*语句*s 包含[中断](../cpp/break-statement-cpp.md)，[继续](../cpp/continue-statement-cpp.md)，或[goto](../cpp/goto-statement-cpp.md)。
+在所有形式的**if**语句中, 将计算除结构之外的任何值的*表达式*(包括所有副作用)。 Control 将从**if**语句传递到程序中的下一条语句, 除非其中一个*语句*包含[break](../cpp/break-statement-cpp.md)、 [continue](../cpp/continue-statement-cpp.md)或[goto](../cpp/goto-statement-cpp.md)。
 
-**Else**子句`if...else`语句是与最接近以前**如果**不具有相应的同一范围中的语句**其他**语句。
+`if...else`语句的**else**子句与同一范围中没有相应**else**语句的最近一个**if**语句相关联。
 
-## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr"> 如果 constexpr 语句
+## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr">如果 constexpr 语句
 
-**Visual Studio 2017 版本 15.3 及更高版本**(适用于[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):在函数模板，你可以使用**如果 constexpr**语句进行编译时分支决策，而不必求助于多个函数重载。 例如，可以编写单个函数的句柄参数解包 （需要零参数重载均没有）：
+**Visual Studio 2017 版本15.3 及更高版本**(可用于[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):在函数模板中, 可以使用**if constexpr**语句进行编译时分支决策, 而无需使用多个函数重载。 例如, 可以编写处理参数解包的单个函数 (不需要零参数重载):
 
 ```cpp
 template <class T, class... Rest>

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - iterators, checked
 - checked iterators
 ms.assetid: cfc87df8-e3d9-403b-ab78-e9483247d940
-ms.openlocfilehash: 163729b401fa917d7df0002c621998f5021757f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f5a31843386d2246f5d74eae1f40b93f0ae35c90
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279159"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452128"
 ---
 # <a name="checked-iterators"></a>Checked Iterators
 
@@ -25,12 +25,12 @@ ms.locfileid: "62279159"
 
 有关如何禁止检查迭代器生成警告的信息，请参阅 [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md)。
 
-可以使用 [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md) 预处理器宏启用或禁用已检查的迭代器功能。 如果 _ITERATOR_DEBUG_LEVEL 定义为 1 或 2，迭代器的不安全使用会导致运行时错误并终止程序。 如果定义为 0，则会禁用检查迭代器。 默认情况下，_ITERATOR_DEBUG_LEVEL 的值是为发布版本 0 和 2 对于调试版本。
+可以使用 [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md) 预处理器宏启用或禁用已检查的迭代器功能。 如果将 _ITERATOR_DEBUG_LEVEL 定义为1或 2, 则不安全地使用迭代器会导致运行时错误, 并且程序将终止。 如果定义为 0，则会禁用检查迭代器。 默认情况下, 发布版本的 _ITERATOR_DEBUG_LEVEL 的值为 0, 而对于调试版本则为2。
 
 > [!IMPORTANT]
 > 较旧的文档和源代码可参考 [_SECURE_SCL](../standard-library/secure-scl.md) 宏。 使用 _ITERATOR_DEBUG_LEVEL 控制 _SECURE_SCL。 有关详细信息，请参阅 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)。
 
-如果 _ITERATOR_DEBUG_LEVEL 定义为 1 或 2，执行这些迭代器检查：
+当 _ITERATOR_DEBUG_LEVEL 定义为1或2时, 将执行这些迭代器检查:
 
 - 所有标准迭代器（例如，[vector::iterator](../standard-library/vector-class.md#iterator)）都会进行检查。
 
@@ -46,7 +46,7 @@ ms.locfileid: "62279159"
 |[deque::operator\[\]](../standard-library/deque-class.md#op_at)|[back](../standard-library/list-class.md#back)|[front](../standard-library/list-class.md#front)|[back](../standard-library/queue-class.md#back)|
 |[front](../standard-library/queue-class.md#front)|[vector::operator\[\]](../standard-library/vector-class.md#op_at)|[back](../standard-library/vector-class.md#back)|[front](../standard-library/vector-class.md#front)|
 
-如果 _ITERATOR_DEBUG_LEVEL 定义为 0:
+当 _ITERATOR_DEBUG_LEVEL 定义为0时:
 
 - 所有标准迭代器均未检查。 迭代器可以移动到容器边界之外，从而导致未定义的行为。
 
@@ -60,7 +60,7 @@ ms.locfileid: "62279159"
 
 ## <a name="example"></a>示例
 
-编译时通过使用 _ITERATOR_DEBUG_LEVEL 设置为 1 或 2，如果尝试访问的元素的容器的边界之外是通过使用某些类的索引运算符，将发生运行时错误。
+使用 _ITERATOR_DEBUG_LEVEL 设置为1或2进行编译时, 如果尝试通过使用某些类的索引运算符来访问位于容器边界之外的元素, 将发生运行时错误。
 
 ```cpp
 // checked_iterators_1.cpp
@@ -89,7 +89,7 @@ int main()
 
 ## <a name="example"></a>示例
 
-同样，编译时通过使用 _ITERATOR_DEBUG_LEVEL 设置为 1 或 2，运行时将发生错误如果你尝试使用访问一个元素`front`或`back`中容器类当容器为空。
+同样, 使用 _ITERATOR_DEBUG_LEVEL 设置为1或2进行编译时, 如果在容器为空时, 尝试使用`front`或`back`在 container 类中访问某个元素, 则会发生运行时错误。
 
 ```cpp
 // checked_iterators_2.cpp
@@ -113,7 +113,7 @@ int main()
 
 ## <a name="example"></a>示例
 
-下面的代码演示各种迭代器使用情形，并提供各个情形的注释。 默认情况下，_ITERATOR_DEBUG_LEVEL 是设置为在调试版本 2 和零售版本中为 0。
+下面的代码演示各种迭代器使用情形，并提供各个情形的注释。 默认情况下, 调试版本中的 _ITERATOR_DEBUG_LEVEL 设置为 2, 在零售版本中设置为0。
 
 ```cpp
 // checked_iterators_3.cpp
@@ -219,5 +219,5 @@ a8: 0 8 16 24 32 40 48 56 64 72 80 88 96 104 112 120
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 标准库概述](../standard-library/cpp-standard-library-overview.md)<br/>
-[Debug Iterator Support](../standard-library/debug-iterator-support.md)<br/>
+[C++ 标准库概述](../standard-library/cpp-standard-library-overview.md)\
+[Debug Iterator Support](../standard-library/debug-iterator-support.md)

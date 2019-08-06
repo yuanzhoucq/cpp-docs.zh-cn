@@ -7,12 +7,12 @@ helpviewer_keywords:
 - remove_cv class
 - remove_cv
 ms.assetid: 8502602a-1c80-479c-84e0-33bd1d6496d6
-ms.openlocfilehash: dcabf9b4687d473898dea98f1001647299a40b76
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dbe21d8e9f0ed0dc7c72a19584f24ee1bce0803c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368898"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451327"
 ---
 # <a name="removecv-class"></a>remove_cv 类
 
@@ -30,12 +30,12 @@ using remove_cv_t = typename remove_cv<T>::type;
 
 ### <a name="parameters"></a>参数
 
-*T*<br/>
+*关心*\
 要修改的类型。
 
 ## <a name="remarks"></a>备注
 
-实例`remove_cv<T>`包含修改类型，即`T1`时*T*的形式`const T1`， `volatile T1`，或`const volatile T1`; 否则为*T*。
+`remove_cv<T>`的实例保留修改后的类型, 当*t*为形式`const T1`、 `volatile T1`或`const volatile T1`时, 它将为`T1` *t*。
 
 ## <a name="example"></a>示例
 
@@ -61,12 +61,12 @@ remove_cv_t<const volatile int> == int
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<type_traits>
+**标头：** \<type_traits>
 
 **命名空间：** std
 
 ## <a name="see-also"></a>请参阅
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[remove_const 类](../standard-library/remove-const-class.md)<br/>
-[remove_volatile 类](../standard-library/remove-volatile-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[remove_const 类](../standard-library/remove-const-class.md)\
+[remove_volatile 类](../standard-library/remove-volatile-class.md)

@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - output streams, one-argument manipulators
 ms.assetid: e381dee8-6b16-4cef-805a-4a6a1d2b696b
-ms.openlocfilehash: b5f24033d8da0933b8252fdace60fb419ef2e605
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9e9e7531733ac40022b477980297c80ac488221
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370815"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453453"
 ---
 # <a name="other-one-argument-output-stream-manipulators"></a>其他单一参数输出流操控器
 
-下面的示例使用一个类`money`，即**长**类型。 `setpic` 操控器可将格式设置“图片”字符串附加到可由 `money` 类的重载的流插入运算符使用的类。 图片字符串将存储为 `money` 类中的静态变量，而非存储为流类的数据成员，因此无需派生新的输出流类。
+下面的示例使用一个类`money`, 它是一种**long**类型。 `setpic` 操控器可将格式设置“图片”字符串附加到可由 `money` 类的重载的流插入运算符使用的类。 图片字符串将存储为 `money` 类中的静态变量，而非存储为流类的数据成员，因此无需派生新的输出流类。
 
 ## <a name="example"></a>示例
 
@@ -77,4 +77,4 @@ int main( )
 
 ## <a name="see-also"></a>请参阅
 
-[带自变量的自定义操控器](../standard-library/custom-manipulators-with-arguments.md)<br/>
+[带自变量的自定义操控器](../standard-library/custom-manipulators-with-arguments.md)

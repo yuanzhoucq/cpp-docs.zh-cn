@@ -20,16 +20,16 @@ helpviewer_keywords:
 - std::strstreambuf [C++], str
 - std::strstreambuf [C++], underflow
 ms.assetid: b040b8ea-0669-4eba-8908-6a9cc159c54b
-ms.openlocfilehash: 75c9a96b727ef60280055536296f850f492d16ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f24d8fe99bc211e026172e42669cf5e430ad31e8
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412275"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459080"
 ---
 # <a name="strstreambuf-class"></a>strstreambuf 类
 
-描述控制元素与序列中存储的元素的传输的流缓冲区**char**数组对象。
+描述一个流缓冲区, 该缓冲区控制元素与**char**数组对象中存储的元素序列之间的来回传输。
 
 ## <a name="syntax"></a>语法
 
@@ -79,7 +79,7 @@ class strstreambuf : public streambuf
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<strstream>
+**标头：** \<strstream>
 
 **命名空间：** std
 
@@ -93,12 +93,12 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>参数
 
-*_Freezeit*<br/>
-一个**bool** ，该值指示是否要冻结的流。
+*_Freezeit*\
+一个**布尔**值, 指示是否要冻结流。
 
 ### <a name="remarks"></a>备注
 
-如果 *_Freezeit*为 true，该函数将更改存储`strstreambuf`模式以冻结受控的序列。 否则，不能冻结受控序列。
+如果 *_Freezeit*为 true, 则函数将更改存储`strstreambuf`模式, 以使受控序列冻结。 否则，不能冻结受控序列。
 
 [str](#str) 意味着 `freeze`。
 
@@ -181,16 +181,16 @@ virtual int overflow(int _Meta = EOF);
 
 ### <a name="parameters"></a>参数
 
-*_Meta*<br/>
+*_Meta*\
 要插入到缓冲区的字符或 `EOF`。
 
 ### <a name="return-value"></a>返回值
 
-如果该函数不成功，它将返回 `EOF`。 否则为如果 *\_Meta* == `EOF`，它不是返回某个值`EOF`。 否则，它将返回 *\_元*。
+如果该函数不成功，它将返回 `EOF`。 否则, == 如果 *\_为元*`EOF`, 则返回除`EOF`之外的其他值。 否则，它将返回 *\_元*。
 
 ### <a name="remarks"></a>备注
 
-如果 *\_Meta* ！ = `EOF`，受保护虚拟成员函数尝试将元素`(char)_Meta`到输出缓冲区。 它可以用多种方法执行此操作：
+`EOF`如果 *\_为 Meta* ! =, 受保护的虚拟成员函数尝试将元素`(char)_Meta`插入到输出缓冲区。 它可以用多种方法执行此操作：
 
 - 如果写入位置可用，它可将元素存储到写入位置并增加输出缓冲区的下一个指针。
 
@@ -206,22 +206,22 @@ virtual int pbackfail(int _Meta = EOF);
 
 ### <a name="parameters"></a>参数
 
-*_Meta*<br/>
+*_Meta*\
 要插入到缓冲区的字符或 `EOF`。
 
 ### <a name="return-value"></a>返回值
 
-如果该函数不成功，它将返回 `EOF`。 否则为如果 *\_Meta* == `EOF`，它不是返回某个值`EOF`。 否则，它将返回 *\_元*。
+如果该函数不成功，它将返回 `EOF`。 否则, == 如果 *\_为元*`EOF`, 则返回除`EOF`之外的其他值。 否则，它将返回 *\_元*。
 
 ### <a name="remarks"></a>备注
 
 受保护虚拟成员函数尝试将元素放回输入缓冲区，随后使它成为当前元素（由下一个指针指向）。
 
-如果 *\_Meta* == `EOF`，要推送回的元素实际上是已在当前元素之前的流中的一个。 否则，该元素将替换为`ch = (char)_Meta`。 该函数可以用多种方法放回元素：
+*如果\_是 Meta* == ,要推送回的元素在当前元素之前实际上已是流中的一个元素。`EOF` 否则, 该元素将替换`ch = (char)_Meta`为。 该函数可以用多种方法放回元素：
 
-- 如果放回位置可用，且存储在其中的元素进行比较等于`ch`，它可以递减输入缓冲区的下一个指针。
+- 如果放回位置可用, 且存储在该位置的元素与相等`ch`, 则它可以递减输入缓冲区的下一个指针。
 
-- 如果放回位置可用，且如果 strstreambuf 模式指出受控的序列是可修改，该函数可以存储`ch`到放回位置并递减输入缓冲区的下一个指针。
+- 如果放回位置可用, 且 strstreambuf 模式显示受控序列是可修改的, 则该函数可以存储`ch`在放回位置并减小输入缓冲区的下一个指针。
 
 ## <a name="pcount"></a>  strstreambuf::pcount
 
@@ -237,7 +237,7 @@ streamsize pcount() const;
 
 ### <a name="remarks"></a>备注
 
-具体而言，如果 [pptr](../standard-library/basic-streambuf-class.md#pptr) 是空指针，该函数将返回零。 否则，它将返回`pptr`  -  [pbase](../standard-library/basic-streambuf-class.md#pbase)。
+具体而言，如果 [pptr](../standard-library/basic-streambuf-class.md#pptr) 是空指针，该函数将返回零。 否则, 它将`pptr`返回 -  [pbase](../standard-library/basic-streambuf-class.md#pbase)。
 
 ### <a name="example"></a>示例
 
@@ -270,13 +270,13 @@ virtual streampos seekoff(streamoff _Off,
 
 ### <a name="parameters"></a>参数
 
-*_Off*<br/>
-要搜寻的相对于的位置 *_Way*。
+*_Off*\
+要查找的相对于 *_Way*的位置。
 
-*_Way*<br/>
+*_Way*\
 偏移操作的起点。 请参阅 [seekdir](../standard-library/ios-base-class.md#seekdir)，查看可能的值。
 
-*_Which*<br/>
+*_Which*\
 指定指针位置的模式。 默认允许修改读取和写入位置。
 
 ### <a name="return-value"></a>返回值
@@ -289,15 +289,15 @@ virtual streampos seekoff(streamoff _Off,
 
 确定新位置，如下所示：
 
-- 如果`_Way == ios_base::beg`，则新位置是加号流开头 *_Off*。
+- 如果`_Way == ios_base::beg`为, 则新位置是流的开头加上 *_Off*。
 
-- 如果`_Way == ios_base::cur`，则新位置是当前流位置加上 *_Off*。
+- 如果`_Way == ios_base::cur`为, 则新位置是当前流位置加上 *_Off*。
 
-- 如果`_Way == ios_base::end`，则新位置是加号流的末尾 *_Off*。
+- 如果`_Way == ios_base::end`为, 则新位置是流的末尾加上 *_Off*。
 
-如果`_Which & ios_base::in`为非零值且存在输入的缓冲区，该函数将更改在输入缓冲区中读取的下一个位置。 如果`_Which & ios_base::out`也不为零， `_Way != ios_base::cur`，且存在输出缓冲区，函数还将设置写入以便匹配下一个读取位置的下一个位置。
+如果`_Which & ios_base::in`为非零值且存在输入缓冲区, 则函数将更改下一个位置以在输入缓冲区中读取。 如果`_Which & ios_base::out`也为非零`_Way != ios_base::cur`值, 并且存在输出缓冲区, 则该函数还会将下一个要写入的位置设置为匹配要读取的下一个位置。
 
-否则为如果`_Which & ios_base::out`为非零值且存在输出缓冲区，则函数更改下一个位置以在输出缓冲区中写入。 否则，定位操作将失败。 若要成功执行定位操作，则结果流的位置必须位于受控序列内。
+否则, 如果`_Which & ios_base::out`为非零值且存在输出缓冲区, 则函数将更改下一个位置以在输出缓冲区中写入。 否则，定位操作将失败。 若要成功执行定位操作，则结果流的位置必须位于受控序列内。
 
 ## <a name="seekpos"></a>  strstreambuf::seekpos
 
@@ -309,10 +309,10 @@ virtual streampos seekpos(streampos _Sp, ios_base::openmode _Which = ios_base::i
 
 ### <a name="parameters"></a>参数
 
-*_Sp*<br/>
+*_Sp*\
 要搜寻的位置。
 
-*_Which*<br/>
+*_Which*\
 指定指针位置的模式。 默认允许修改读取和写入位置。
 
 ### <a name="return-value"></a>返回值
@@ -321,7 +321,7 @@ virtual streampos seekpos(streampos _Sp, ios_base::openmode _Which = ios_base::i
 
 ### <a name="remarks"></a>备注
 
-受保护虚拟成员函数更改受控流的当前位置。 对于 strstreambuf 类的对象，流位置仅包含流偏移量。 如果偏移量为零，将指定受控序列的第一个元素。 新的位置则由 *_Sp*。
+受保护虚拟成员函数更改受控流的当前位置。 对于 strstreambuf 类的对象，流位置仅包含流偏移量。 如果偏移量为零，将指定受控序列的第一个元素。 新位置由 *_Sp*确定。
 
 如果 `_Which` &  **ios_base::in** 为非零值且存在输入缓冲区，则该函数将更改输入缓冲区中的下一个读取位置。 如果 `_Which` &  `ios_base::out` 为非零值且存在输出缓冲区，则该函数还将设置下一个写入位置以便匹配下一个读取位置。 否则，如果 `_Which` &  `ios_base::out` 为非零值且存在输出缓冲区，则该函数将更改输出缓冲区中的下一个写入位置。 否则，定位操作将失败。 若要成功执行定位操作，则结果流的位置必须位于受控序列内。
 
@@ -379,26 +379,26 @@ strstreambuf(const unsigned char* _Getptr,
 
 ### <a name="parameters"></a>参数
 
-*_Allocfunc*<br/>
+*_Allocfunc*\
 用以分配缓冲区内存的函数。
 
-*count*<br/>
-确定指向缓冲区的长度 *_Getptr*。 如果 *_Getptr*不是参数 （第一个构造函数格式），建议的分配缓冲区的大小。
+*计*\
+确定 *_Getptr*所指向的缓冲区的长度。 如果 *_Getptr*不是参数 (第一个构造函数格式), 则为缓冲区提供建议的分配大小。
 
-*_Freefunc*<br/>
+*_Freefunc*\
 用来释放缓冲区内存的函数。
 
-*_Getptr*<br/>
+*_Getptr*\
 用于输入的缓冲区。
 
-*_Putptr*<br/>
+*_Putptr*\
 用于输出的缓冲区。
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数将空指针存储在所有控制输入缓冲区、输出缓冲区和 strstreambuf 分配的指针中。 该函数可设置存储的 strstreambuf 模式，使受控序列可修改和可扩展。 它还会接受*计数*作为建议的初始分配大小。
+第一个构造函数将空指针存储在所有控制输入缓冲区、输出缓冲区和 strstreambuf 分配的指针中。 该函数可设置存储的 strstreambuf 模式，使受控序列可修改和可扩展。 它还接受*count*作为建议的初始分配大小。
 
-不同之处在于它将存储的第二个构造函数行为类似于第一种 *\_Allocfunc*作为要调用来分配存储空间的函数的指针和 *\_Freefunc*作为指针到函数，以调用来释放该存储。
+第二个构造函数的行为与第一个相同, 不同之处在于, 它将 *\_Allocfunc*存储为指向函数的 *\_* 指针, 调用该函数以调用以调用以释放该存储。
 
 这三个构造函数为：
 
@@ -418,11 +418,11 @@ strstreambuf(unsigned char *_Getptr,
 
 同样与第一个构造函数类似，只不过 `_Getptr` 指定用来存储受控序列的数组对象。 （因此，它不能为空指针。）数组中 *N* 元素的数量按以下方式确定：
 
-- 如果 (`count` > 0)，然后*N*是`count`。
+- 如果为`count` (> 0), 则 N `count`为。
 
-- 如果 (`count` = = 0)，然后*N*是`strlen`(( **const** `char` *) `_Getptr` )。
+- 如果 (`count` = = 0), 则*N*为`strlen`(( **const** `char` *) `_Getptr` )。
 
-- 如果 (`count` < 0)，然后*N*是**INT_MAX**。
+- 如果为`count` (< 0), 则*N*为**INT_MAX**。
 
 如果 `_Putptr` 是空指针，该函数通过执行指令建立输入缓冲区：
 
@@ -480,11 +480,11 @@ virtual int underflow();
 
 ### <a name="remarks"></a>备注
 
-受保护虚拟成员函数尝试提取当前元素`ch`从输入缓冲区，然后提出当前流位置，并返回元素作为 (`int`) (`unsigned char`) **ch**。 它可以在只有一种方法的操作： 如果读取的位置可用，它采用`ch`如元素存储在读取位置，并提升输入缓冲区的下一个指针。
+受保护的虚拟成员函数致力于从输入缓冲区`ch`提取当前元素, 然后提升当前流位置, 并返回元素 (`int`)`unsigned char`() **ch**。 它只能通过一种方式执行此操作: 如果读取位置可用, 则它`ch`将作为存储在读取位置中的元素, 并提升输入缓冲区的下一个指针。
 
 ## <a name="see-also"></a>请参阅
 
-[streambuf](../standard-library/streambuf-typedefs.md#streambuf)<br/>
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream 编程](../standard-library/iostream-programming.md)<br/>
-[iostreams 约定](../standard-library/iostreams-conventions.md)<br/>
+[streambuf](../standard-library/streambuf-typedefs.md#streambuf)\
+[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream 编程](../standard-library/iostream-programming.md)\
+[iostreams 约定](../standard-library/iostreams-conventions.md)

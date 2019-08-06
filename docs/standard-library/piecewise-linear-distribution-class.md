@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::piecewise_linear_distribution [C++], param_type
 - std::piecewise_linear_distribution [C++], param_type
 ms.assetid: cd141152-7163-4754-8f98-c6d6500005e0
-ms.openlocfilehash: 327da9c6793e4e74f099bdc313ce34720561bbd0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9221daa002f19c3f73e65a49efb8da9c6f96b258
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370367"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455223"
 ---
 # <a name="piecewiselineardistribution-class"></a>piecewise_linear_distribution 类
 
@@ -80,8 +80,8 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*RealType*<br/>
-浮点结果类型，默认值为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*RealType*\
+浮点结果类型, 默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
@@ -215,7 +215,7 @@ Distribution for 100 samples:
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<random>
+**标头：** \<random>
 
 **命名空间：** std
 
@@ -249,31 +249,31 @@ explicit piecewise_linear_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-*firstI*<br/>
+*firstI*\
 分布范围中第一个元素的输入迭代器。
 
-*lastI*<br/>
+*lastI*\
 分布范围中最后一个元素的输入迭代器。
 
-*firstW*<br/>
+*firstW*\
 权重范围中第一个元素的输入迭代器。
 
-*intervals*<br/>
+*间隔*\
 具有分布区间的 [initializer_list](../cpp/initializers.md)。
 
-*count*<br/>
+*计*\
 分布范围中的元素数。
 
-*xmin*<br/>
+*xmin*\
 分布范围中的最低值。
 
-*xmax*<br/>
+*xmax*\
 分布范围中的最高值。 必须大于 *xmin*。
 
-*weightfunc*<br/>
-表示分布的概率函数的对象。 参数和返回值必须可转换为**double**。
+*weightfunc*\
+表示分布的概率函数的对象。 参数和返回值都必须可转换为**double**。
 
-*parm*<br/>
+*parm*\
 用于构造分布的参数结构。
 
 ### <a name="remarks"></a>备注
@@ -290,7 +290,7 @@ piecewise_linear_distribution(
     InputIteratorW firstW);
 ```
 
-对序列中构造分布对象与迭代器中的区间 [ `firstI`， `lastI`) 和的匹配权重序列开始*firstW*。
+使用序列 [ `firstI`, `lastI`) 上迭代器中的区间和从*firstW*开始的匹配权重序列来构造分布对象。
 
 初始值设定项列表构造函数
 
@@ -301,7 +301,7 @@ piecewise_linear_distribution(
     UnaryOperation weightfunc);
 ```
 
-构造分布对象初始值设定项列表区间*间隔*并从该函数生成的权重*weightfunc*。
+使用从函数*weightfunc*生成的初始值设定项列表*间隔*和权重的间隔构造分布对象。
 
 定义为以下内容的构造函数
 
@@ -314,7 +314,7 @@ piecewise_linear_distribution(
     UnaryOperation weightfunc);
 ```
 
-构造分布对象*计数*上均匀分布的时间间隔 [ `xmin,xmax`]，分配每个区间权重根据函数*weightfunc*，并*weightfunc*必须接受一个参数并包含返回值，这两种都可以转换为`double`。 **前提条件：**`xmin < xmax`。
+构造`xmin,xmax`一个在 [] 上均匀分布的*计数*间隔的分布对象, 根据函数*weightfunc*分配每个间隔权重, 并且*weightfunc*必须接受一个参数并返回值, 两者都可转换为`double`。 **前提条件：** `xmin < xmax`。
 
 定义为以下内容的构造函数
 
@@ -322,7 +322,7 @@ piecewise_linear_distribution(
 explicit piecewise_linear_distribution(const param_type& parm);
 ```
 
-构造分布对象使用*parm*作为存储的参数结构。
+使用*parm*作为存储的参数结构, 构造分布对象。
 
 ## <a name="param_type"></a>  piecewise_linear_distribution::param_type
 
@@ -352,10 +352,10 @@ struct param_type {
 
 ### <a name="remarks"></a>备注
 
-**前置条件：**`xmin < xmax`
+**前置条件：** `xmin < xmax`
 
 在实例化时，可将此结构传递给分布的类构造函数、传递给 `param()` 成员函数以设置现有分布的存储参数，并传递给 `operator()` 以代替存储参数使用。
 
 ## <a name="see-also"></a>请参阅
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

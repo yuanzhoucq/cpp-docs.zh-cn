@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_literal_type
 ms.assetid: a03a4ebb-ee66-48d6-91bb-41cf72b2401f
-ms.openlocfilehash: 804ef0462308b967fc0c4c95d8dfa96476475aab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 450c32d050a18f64e71992bd7a30412ebafe93de
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336462"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456211"
 ---
 # <a name="isliteraltype-class"></a>is_literal_type 类
 
@@ -26,19 +26,19 @@ struct is_literal_type;
 
 ### <a name="parameters"></a>参数
 
-*T*<br/>
+*关心*\
 要查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型谓词的实例将保留 true 类型*T*是*文本类型*，否则为 false。 文本类型为**void**，标量类型、 引用类型、 参数类型的数组或文本类类型。 文本类类型是一种类类型，其具有普通析构函数，为聚合类型或至少具有一个非移动非复制的 `constexpr` 构造函数，其所有基类和非静态数据成员为非易失性文本类型。 尽管文本类型始终为文本类型，但是文本类型的概念包括编译器在编译时可计算为 `constexpr` 的任何内容。
+如果类型*T*是*文本类型*, 则类型谓词的实例为 true; 否则为 false。 文本类型为**void**、标量类型、引用类型、文本类型的数组或文本类类型。 文本类类型是一种类类型，其具有普通析构函数，为聚合类型或至少具有一个非移动非复制的 `constexpr` 构造函数，其所有基类和非静态数据成员为非易失性文本类型。 尽管文本类型始终为文本类型，但是文本类型的概念包括编译器在编译时可计算为 `constexpr` 的任何内容。
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<type_traits>
+**标头：** \<type_traits>
 
 **命名空间：** std
 
 ## <a name="see-also"></a>请参阅
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

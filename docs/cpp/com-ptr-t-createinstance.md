@@ -45,10 +45,10 @@ HRESULT CreateInstance(
 `CLSID`的对象。
 
 *clsidString*<br/>
-由 Unicode 字符串，包含`CLSID`(从"**{**") 或`ProgID`。
+由 Unicode 字符串，包含`CLSID`(从" **{** ") 或`ProgID`。
 
 *clsidStringA*<br/>
-使用 ANSI 代码页，包含的多字节字符串`CLSID`(从"**{**") 或`ProgID`。
+使用 ANSI 代码页，包含的多字节字符串`CLSID`(从" **{** ") 或`ProgID`。
 
 *dwClsContext*<br/>
 运行可执行代码的上下文。
@@ -60,11 +60,11 @@ HRESULT CreateInstance(
 
 这些成员函数调用 `CoCreateInstance` 来创建新的 COM 对象，然后查询此智能指针的接口类型。 生成的指针随后将封装在此 `_com_ptr_t` 对象内。 `Release` 调用以减少前面封装指针的引用计数。 此例程将返回 HRESULT，指示成功或失败。
 
-- **CreateInstance (***rclsid* **，***dwClsContext***)** 创建给定的对象的新运行实例`CLSID`.
+- **CreateInstance (** *rclsid* **，** *dwClsContext* **)** 创建给定的对象的新运行实例`CLSID`.
 
-- **CreateInstance (***clsidString* **，***dwClsContext***)** 创建给定的对象的新运行实例Unicode 字符串包含`CLSID`(从"**{**") 或`ProgID`。
+- **CreateInstance (** *clsidString* **，** *dwClsContext* **)** 创建给定的对象的新运行实例Unicode 字符串包含`CLSID`(从" **{** ") 或`ProgID`。
 
-- **CreateInstance (***clsidStringA* **，***dwClsContext***)** 创建给定的对象的新运行实例多字节字符字符串包含`CLSID`(从"**{**") 或`ProgID`。 调用[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)，其假定该字符串为中的 ANSI 代码页而不是 OEM 代码页。
+- **CreateInstance (** *clsidStringA* **，** *dwClsContext* **)** 创建给定的对象的新运行实例多字节字符字符串包含`CLSID`(从" **{** ") 或`ProgID`。 调用[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)，其假定该字符串为中的 ANSI 代码页而不是 OEM 代码页。
 
 **结束 Microsoft 专用**
 

@@ -5,20 +5,20 @@ f1_keywords:
 - <any>
 helpviewer_keywords:
 - <any>
-ms.openlocfilehash: 169e44880c98248dc1941ccc8c9adfe05f76f358
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 19e30b1ab0a9b0f30c1a4f3d4b614643cb8b50ac
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268649"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456283"
 ---
 # <a name="ltanygt"></a>&lt;any&gt;
 
-定义的类和几个支持的函数和类。
+定义类 any 和多个支持函数和类。
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<任何 >
+**标头:** \<任何 >
 
 **命名空间：** std
 
@@ -28,17 +28,17 @@ ms.locfileid: "68268649"
 
 |||
 |-|-|
-|[any_cast](../standard-library/any-functions.md#any_cast)|使变成了任何对象。|
-|[make_any](../standard-library/any-functions.md#make_any)|接受的值并创建的任何对象。|
-|[swap](../standard-library/any-functions.md#swap)|任何交换两个对象的元素。|
+|[any_cast](../standard-library/any-functions.md#any_cast)|使对象成为任意对象。|
+|[make_any](../standard-library/any-functions.md#make_any)|采用值并创建任何对象。|
+|[swap](../standard-library/any-functions.md#swap)|交换两个对象的所有元素。|
 
 ### <a name="classes"></a>类
 
 |||
 |-|-|
-|[any](../standard-library/any-class.md)|存储任何类型的构造函数要求满足或不具有任何值。|
-|[bad_any_cast](../standard-library/bad-any-cast-class.md)|对象引发的故障`any_cast`。|
+|[any](../standard-library/any-class.md)|存储满足构造函数要求或没有值的任何类型。|
+|[bad_any_cast](../standard-library/bad-any-cast-class.md)|引发的对象失败`any_cast`。|
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)<br/>
+[头文件引用](../standard-library/cpp-standard-library-header-files.md)

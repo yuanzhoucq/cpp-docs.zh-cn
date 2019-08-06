@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - complex<float> function
 ms.assetid: 1178eb1e-39bd-4017-89cd-aea95f813939
-ms.openlocfilehash: a09b6d0306f633754cad4b12a652eac557f96634
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bfe0e9dcb0bf8f8b74487404998e06d233097a39
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279081"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453106"
 ---
 # <a name="complexltfloatgt"></a>complex&lt;float&gt;
 
-描述一个对象，用于存储这两种类型的对象的有序的对**float**，则首先表示第二个复数的实部表示虚数部分。
+描述一个对象, 该对象存储两个都为**float**类型的有序对象对, 第一个对象表示复数的实部, 第二个对象表示复数的虚部。
 
 ## <a name="syntax"></a>语法
 
@@ -41,14 +41,14 @@ constexpr complex(
 
 ### <a name="parameters"></a>参数
 
-*_RealVal*<br/>
+*_RealVal*\
 正在构造的复数实部的 **float** 类型值。
 
-*_ImagVal*<br/>
+*_ImagVal*\
 正在构造的复数虚部的 **float** 类型值。
 
-*complexNum*<br/>
-类型的复数**双**类型或类型**长双精度型**其实部和虚部用于初始化类型的复数**float**正在构造。
+*complexNum*\
+**Double**或**long double**类型的复数, 其实部和虚部用于初始化正在构造的**float**类型的复数。
 
 ## <a name="return-value"></a>返回值
 
@@ -56,7 +56,7 @@ constexpr complex(
 
 ## <a name="remarks"></a>备注
 
-模板类 complex 显式专用化为 **float** 类型的 complex 类仅在它所定义的构造函数中与模板类不同。 从转换**float**到**double**可以是隐式的但不太安全转换从**float**到**长双精度型**是将所需**显式**。 使用**显式**转换可排除使用赋值语法启动类型转换。
+模板类 complex 显式专用化为 **float** 类型的 complex 类仅在它所定义的构造函数中与模板类不同。 从**float**到**double**类型的转换可以是隐式的, 但从**float**到**long double**的不太安全转换必须是**显式**的。 使用**显式**转换可排除使用赋值语法启动类型转换。
 
 有关 `complex` 模板类的详细信息，请参阅 [complex 类](../standard-library/complex-class.md)。 有关 `complex` 模板类的成员列表，请参阅。
 
@@ -124,5 +124,5 @@ arg ( c3 ) = 0.927295 radians, which is 53.1301 degrees.
 
 ## <a name="see-also"></a>请参阅
 
-[complex 类](../standard-library/complex-class.md)<br/>
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[complex 类](../standard-library/complex-class.md)\
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

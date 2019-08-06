@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 18be1e52-57b9-489a-8a9b-f58894f0aaad
 helpviewer_keywords:
 - std::chrono [C++], time_point
-ms.openlocfilehash: 99477f57dc44d63f663a6db38250cc0620151ec9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4511c7b2d8629f1a052137c7997daf5913c976ab
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411989"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459992"
 ---
 # <a name="timepoint-class"></a>time_point 类
 
@@ -33,7 +33,7 @@ class time_point;
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|描述|
+|name|描述|
 |----------|-----------------|
 |`time_point::clock`|模板参数 `Clock` 的同义词。|
 |`time_point::duration`|模板参数 `Duration` 的同义词。|
@@ -63,7 +63,7 @@ class time_point;
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<chrono >
+**标头:** \<chrono >
 
 **命名空间：** std::chrono
 
@@ -101,7 +101,7 @@ time_point& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>参数
 
-*Dur*<br/>
+*工期*\
 一个 `duration` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -118,7 +118,7 @@ time_point& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>参数
 
-*Dur*<br/>
+*工期*\
 一个 `duration` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -140,17 +140,17 @@ constexpr time_point(const time_point<clock, Duration2>& Tp);
 
 ### <a name="parameters"></a>参数
 
-*Dur*<br/>
+*工期*\
 [duration](../standard-library/duration-class.md) 对象。
 
-*Tp*<br/>
+*Tp*\
 一个 `time_point` 对象。
 
 ### <a name="remarks"></a>备注
 
 第一个构造函数构造一个对象，该对象的存储 `duration` 值等于 [duration::zero](../standard-library/duration-class.md#zero)。
 
-第二个构造函数将构造一个对象，其存储的持续时间值为等于*Dur*。 除非`is_convertible<Duration2, duration>`保持为 true，第二个构造函数不参与重载决策。 有关详细信息，请参阅 [<type_traits>](../standard-library/type-traits.md)。
+第二个构造函数将构造一个其存储的 duration 值等于 "*工期*" 的对象。 除非`is_convertible<Duration2, duration>`保留为 true, 否则第二个构造函数不参与重载决策。 有关详细信息，请参阅 [<type_traits>](../standard-library/type-traits.md)。
 
 第三个构造函数使用 `Tp.time_since_epoch()` 来初始化其`duration` 值。
 
@@ -164,5 +164,5 @@ constexpr duration time_since_epoch() const;
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<chrono>](../standard-library/chrono.md)<br/>
+[头文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[\<chrono>](../standard-library/chrono.md)

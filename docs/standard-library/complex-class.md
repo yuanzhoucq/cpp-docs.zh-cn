@@ -10,16 +10,16 @@ helpviewer_keywords:
 - std::complex [C++], imag
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
-ms.openlocfilehash: db04569d3938c673653ac36eeebdabc9cb725c1e
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 44d44d48f66c9bdbf03d4e36e752ea3dee5ff9c9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244732"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453178"
 ---
 # <a name="complex-class"></a>complex 类
 
-此模板类描述一个对象，将两个对象类型的存储`Type`，一个代表实部的复数，一个表示虚数部分。
+此模板类描述一个对象, 该对象存储两个`Type`类型的对象, 一个对象表示复数的实部, 另一个表示复数的实部。
 
 ## <a name="syntax"></a>语法
 
@@ -30,7 +30,7 @@ class complex
 
 ## <a name="remarks"></a>备注
 
-类的对象`Type`:
+类`Type`的对象:
 
 - 具有公共默认构造函数、析构函数、复制构造函数、赋值运算符和常规行为。
 
@@ -38,9 +38,9 @@ class complex
 
 - 根据需要，定义适用于浮点类型的算术运算符、数学函数和常规行为。
 
-具体而言，复制构造和后跟分配的默认构造之间可能不存在任何细微的差异。 所有类的对象上操作`Type`可能会引发异常。
+具体而言，复制构造和后跟分配的默认构造之间可能不存在任何细微的差异。 对类`Type`的对象的操作都不会引发异常。
 
-对三个浮点类型的模板类复杂存在的显式专用化。 在此实现中，任何其他类型的值`Type`类型转换为**双**进行实际计算，使用**double**结果返回到的存储对象的类型分配`Type`。
+对三个浮点类型的模板类复杂存在的显式专用化。 在此实现中, `Type`任何其他类型的值都转换为**double**进行计算, 并将**双精度**值分配回类型`Type`为的存储对象。
 
 ## <a name="members"></a>成员
 
@@ -75,7 +75,7 @@ class complex
 
 
 
-## <a name="complex"></a> 复杂
+## <a name="complex"></a>过于
 
 构造一个具有指定实部和虚部的复数，或作为某些其他复数的副本的复数。
 
@@ -102,7 +102,7 @@ constexpr complex(
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数初始化存储到实部 *\_RealVal*并为存储的虚部 *\_Imagval*。 第二个构造函数初始化存储到实部`complexNum.real()`和存储的虚部为`complexNum.imag()`。
+第一个构造函数将存储的实部初始化为 *\_RealVal* , 将 *\_* 存储的虚部初始化为 Imagval。 第二个构造函数将存储的实`complexNum.real()`部初始化为, 将存储`complexNum.imag()`的虚部初始化为。
 
 在此实现中，如果转换器不支持成员模板函数，则模板：
 
@@ -159,7 +159,7 @@ int main( )
 }
 ```
 
-## <a name="imag"></a> imag
+## <a name="imag"></a>imag
 
 提取复数的虚分量。
 
@@ -171,7 +171,7 @@ T imag(const T& right);
 
 ### <a name="parameters"></a>参数
 
-*右侧*\
+*然后*\
 要提取其虚数值的复数。
 
 ### <a name="return-value"></a>返回值
@@ -180,7 +180,7 @@ T imag(const T& right);
 
 ### <a name="remarks"></a>备注
 
-对于复数*a + bi*，虚部或组件*Im(a + bi) = b*。
+对于复数*a + bi*, 虚部或 Component 是*Im (a + bi) = b*。
 
 ### <a name="example"></a>示例
 
@@ -213,7 +213,7 @@ The real part of c1 is c1.real() = 4.
 The imaginary part of c1 is c1.imag() = 3.
 ```
 
-## <a name="op_star_eq"></a> 运算符 * =
+## <a name="op_star_eq"></a>运算符 * =
 
 用一个系数乘以目标复数，这可能是复数或与复数的实部和虚部相同的类型。
 
@@ -228,7 +228,7 @@ complex<Type>& operator*=(const complex<Type>& right);
 
 ### <a name="parameters"></a>参数
 
-*右侧*\
+*然后*\
 复数或与目标复数的参数具有相同类型的数。
 
 ### <a name="return-value"></a>返回值
@@ -298,7 +298,7 @@ int main()
 }
 ```
 
-## <a name="op_add_eq"></a> operator + =
+## <a name="op_add_eq"></a>运算符 + =
 
 向目标复数添加一个数，其中所添加的数可能是复数或与所添加的复数的实部和虚部相同的类型。
 
@@ -313,7 +313,7 @@ complex<Type>& operator+=(const complex<Type>& right);
 
 ### <a name="parameters"></a>参数
 
-*右侧*\
+*然后*\
 复数或与目标复数的参数具有相同类型的数。
 
 ### <a name="return-value"></a>返回值
@@ -401,7 +401,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 0.927295 radians, which is 53.1301 degrees.
 ```
 
-## <a name="operator-_eq"></a> 运算符 =
+## <a name="operator-_eq"></a>operator-=
 
 从目标复数减去一个数，其中所减去的数可能是复数或与所添加的复数的实部和虚部相同的类型。
 
@@ -509,7 +509,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 2.2143 radians, which is 126.87 degrees.
 ```
 
-## <a name="op_div_eq"></a> / = 运算符
+## <a name="op_div_eq"></a>operator/=
 
 用一个除数除以目标复数，这可能是复数或与复数的实部和虚部相同的类型。
 
@@ -613,7 +613,7 @@ The modulus of cl2 is: 0.6
 The argument of cl2 is: 0.523599 radians, which is 30 degrees.
 ```
 
-## <a name="op_eq"></a> 运算符 =
+## <a name="op_eq"></a>operator =
 
 向目标复数分配一个数，其中所分配的数可能是复数或与所分配的复数的实部和虚部相同的类型。
 
@@ -626,7 +626,7 @@ complex<Type>& operator=(const Type& right);
 
 ### <a name="parameters"></a>参数
 
-*右侧*\
+*然后*\
 复数或与目标复数的参数具有相同类型的数。
 
 ### <a name="return-value"></a>返回值
@@ -691,7 +691,7 @@ The complex number (3, 4) assigned to the complex number cl2 is:
 cl2 = (3,4)
 ```
 
-## <a name="real"></a> 真正
+## <a name="real"></a>实际上
 
 获取或设置复数的实分量。
 
@@ -703,7 +703,7 @@ T real(const T& right);
 
 ### <a name="parameters"></a>参数
 
-*右侧*\
+*然后*\
 要提取其实数值的复数。
 
 ### <a name="return-value"></a>返回值
@@ -712,7 +712,7 @@ T real(const T& right);
 
 ### <a name="remarks"></a>备注
 
-对于复数*a + bi*，实部或组件*Re(a + bi) =* 。
+对于复数*a + bi*, 实部或组件是*Re (a + bi) = a*。
 
 ### <a name="example"></a>示例
 
@@ -755,7 +755,7 @@ typedef Type value_type;
 
 ### <a name="remarks"></a>备注
 
-`value_type` 是类的同义词复杂`Type`模板参数。
+`value_type`是类复杂`Type`模板参数的同义词。
 
 ### <a name="example"></a>示例
 
@@ -784,4 +784,4 @@ of type value_type: c1 = (3,4).
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

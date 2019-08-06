@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::istreambuf_iterator [C++], traits_type
 - std::istreambuf_iterator [C++], equal
 ms.assetid: 39002da2-61a6-48a5-9d0c-5df8271f6038
-ms.openlocfilehash: 41298909b53de1c7acf3cb8ae4b999eb6260765d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a2bbc69d4f2d3af0ee6e00a2672436a5f15ab67
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413263"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448130"
 ---
 # <a name="istreambufiterator-class"></a>istreambuf_iterator 类
 
@@ -39,10 +39,10 @@ class istreambuf_iterator
 
 ### <a name="parameters"></a>参数
 
-*CharType*<br/>
+*CharType*\
 一种类型，此类型表示 istreambuf_iterator 的字符类型。
 
-*特征*<br/>
+*特征*\
 一种类型，此类型表示 istreambuf_iterator 的字符类型。 此自变量是可选自变量，默认值为 `char_traits`\<*CharType>。*
 
 ## <a name="remarks"></a>备注
@@ -142,7 +142,7 @@ bool equal(const istreambuf_iterator<CharType, Traits>& right) const;
 
 ### <a name="parameters"></a>参数
 
-*right*<br/>
+*然后*\
 要针对其检查相等性的迭代器。
 
 ### <a name="return-value"></a>返回值
@@ -151,7 +151,7 @@ bool equal(const istreambuf_iterator<CharType, Traits>& right) const;
 
 ### <a name="remarks"></a>备注
 
-通过定义一系列`istreambuf_iterator`当前位置和流末尾迭代器，但由于所有非-流末尾迭代器均下等效`equal`成员函数不能定义使用任何子范围`istreambuf_iterator`s。 `==` 和 `!=` 运算符具有相同的语义。
+范围由`istreambuf_iterator`定义为当前位置和流末尾迭代器, 但由于所有非结束流迭代器`equal`在成员函数下都等效, 因此不能使用`istreambuf_iterator`定义任何子范围。 `==` 和 `!=` 运算符具有相同的语义。
 
 ### <a name="example"></a>示例
 
@@ -239,15 +239,15 @@ istreambuf_iterator(istream_type& _Istr) throw();
 
 ### <a name="parameters"></a>参数
 
-*strbuf*<br/>
+*strbuf*\
 `istreambuf_iterator` 要附加到的输入流缓冲区。
 
-*_Istr*<br/>
+*_Istr*\
 `istreambuf_iterator` 要附加到的输入流。
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数初始化与输入的流缓冲区指针*strbuf*。 第二个构造函数初始化与输入的流缓冲区指针 *_Istr*。 `rdbuf`然后最终尝试提取和存储类型的对象和`CharType`。
+第一个构造函数通过*strbuf*初始化输入流缓冲区指针。 第二个构造函数通过 *_Istr*初始化输入流缓冲区指针。 `rdbuf`, 最终会尝试提取并存储类型`CharType`的对象。
 
 ### <a name="example"></a>示例
 
@@ -336,7 +336,7 @@ istreambuf_iterator<CharType, Traits> operator++(int);
 
 ### <a name="remarks"></a>备注
 
-第一个运算符最终尝试提取和存储类型的对象`CharType`从关联的输入流。 第二个运算符生成对象的副本，递增对象，然后返回副本。
+第一个运算符最终尝试从关联的输入流提取和存储`CharType`类型的对象。 第二个运算符生成对象的副本，递增对象，然后返回副本。
 
 ### <a name="example"></a>示例
 
@@ -441,7 +441,7 @@ int main( )
 
 ## <a name="see-also"></a>请参阅
 
-[iterator 结构](../standard-library/iterator-struct.md)<br/>
-[\<iterator>](../standard-library/iterator.md)<br/>
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)<br/>
+[iterator 结构](../standard-library/iterator-struct.md)\
+[\<iterator>](../standard-library/iterator.md)\
+[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

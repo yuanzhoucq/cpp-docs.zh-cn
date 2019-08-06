@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::gamma_distribution [C++], param_type
 - std::gamma_distribution [C++], param_type
 ms.assetid: 2a6798ac-6152-41d7-8ef6-d684d92f1572
-ms.openlocfilehash: 06a7cbc8b054075f881474dbf49ad3bd42f0a9dc
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: ac6a82cc7f342f6a96b5f79f36b23d23a1d27097
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450679"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453942"
 ---
 # <a name="gammadistribution-class"></a>gamma_distribution 类
 
@@ -70,22 +70,22 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*RealType*<br/>
-浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*RealType*\
+浮点结果类型, 默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
-*URNG*<br/>
+*URNG*\
 统一随机数生成器引擎。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
-此模板类将描述产生的值的用户指定的浮点类型**double**如果未提供任何内容 Gamma 分布根据分布。 下表链接到有关各个成员的文章。
+此模板类描述产生用户指定的浮点类型的值的分布, 或者如果根据伽玛分布而未提供任何内容, 则为**double**类型。 下表链接到有关各个成员的文章。
 
 ||||
 |-|-|-|
 |[gamma_distribution](#gamma_distribution)|`gamma_distribution::alpha`|`gamma_distribution::param`|
 |`gamma_distribution::operator()`|`gamma_distribution::beta`|[param_type](#param_type)|
 
-属性函数 `alpha()` 和 `beta()` 返回存储的分布参数 alpha  和 beta  的各自值。
+属性函数 `alpha()` 和 `beta()` 返回存储的分布参数 alpha 和 beta 的各自值。
 
 属性成员 `param()` 将设置或返回 `param_type` 存储的分布参数包。
 
@@ -199,22 +199,22 @@ explicit gamma_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-alpha <br/>
+*全角字*\
 `alpha` 分布参数。
 
-beta <br/>
+*试用版*\
 `beta` 分布参数。
 
-*parm*<br/>
+*parm*\
 用于构造分布的参数结构。
 
 ### <a name="remarks"></a>备注
 
 **前提条件：** `0.0 < alpha` 和 `0.0 < beta`
 
-第一个构造函数构造的对象的存储的 `alpha` 值保留值 alpha  ，存储的 `beta` 值保留值 beta  。
+第一个构造函数构造的对象的存储的 `alpha` 值保留值 alpha，存储的 `beta` 值保留值 beta。
 
-第二个构造函数将构造一个从 parm  初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
+第二个构造函数将构造一个从 parm 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
 
 ## <a name="param_type"></a>gamma_distribution::param_type
 
@@ -234,13 +234,13 @@ struct param_type {
 
 ### <a name="parameters"></a>参数
 
-alpha <br/>
+*全角字*\
 `alpha` 分布参数。
 
-beta <br/>
+*试用版*\
 `beta` 分布参数。
 
-right <br/>
+*然后*\
 与此比较的 `param_type` 实例。
 
 ### <a name="remarks"></a>备注
@@ -251,4 +251,4 @@ right <br/>
 
 ## <a name="see-also"></a>请参阅
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

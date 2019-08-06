@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_final
 ms.assetid: 9dbad82f-6685-4909-94e8-98e4a93994b9
-ms.openlocfilehash: f605b160f6ed71aaafcc7c391e17180e4b243444
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 14efbeb33193cc674c6e766b880e89d9b76d140a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346445"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452657"
 ---
 # <a name="isfinal-class"></a>is_final 类
 
@@ -26,20 +26,20 @@ struct is_final;
 
 ### <a name="parameters"></a>参数
 
-*T*<br/>
+*关心*\
 要查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型谓词的实例将保留 true 类型*T*标记的类类型`final`，否则为 false。 如果*T*是类类型，它必须是完整的类型。
+如果类型*T*是标记`final`为的类类型, 则类型谓词的实例为 true; 否则为 false。 如果*T*是类类型, 则它必须是完整类型。
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<type_traits>
+**标头：** \<type_traits>
 
 **命名空间：** std
 
 ## <a name="see-also"></a>请参阅
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[final 说明符](../cpp/final-specifier.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[final 说明符](../cpp/final-specifier.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - translation, modes
 - translation modes (file I/O)
 ms.assetid: a5993bf4-7e7a-47f9-83c3-e46332b85579
-ms.openlocfilehash: 18e0ad8615bbe89c265247041729027f661915fe
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: a86c0c1a0b70613c6e7749c78f58f6dfb3602d4d
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746690"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376277"
 ---
 # <a name="translation-mode-constants"></a>翻译模式常量
 
@@ -40,7 +40,7 @@ ms.locfileid: "57746690"
 
 |||
 |-|-|
-`_O_TEXT`  | 在文本（已转换）模式下打开文件。 输入时回车-换行符 (CR-LF) 组合将转换为单个换行符 (LF)。 输出时换行符将转换为 CR-LF 组合。 CTRL+Z 也将在输入时解释为文件尾字符。 在打开以进行读取或读取/写入的文件中，`fopen` 将检查文件末尾的 Ctrl+Z 并在可能的情况下将其移除。 这样做是因为，使用 `fseek` 和 `ftell` 函数在以 Ctrl+Z 结尾的文件中移动时，可能导致 `fseek` 在文件末尾附近错误操作。
+`_O_TEXT`  | 在文本（已转换）模式下打开文件。 输入时回车符–换行符 (CR-LF) 组合将转换为单个换行符 (LF)。 输出时换行符将转换为 CR-LF 组合。 CTRL+Z 也将在输入时解释为文件尾字符。 在打开以进行读取或读取和写入的文件中，`fopen` 将检查文件末尾的 Ctrl+Z 并在可能的情况下将其移除。 这样做是因为，使用 `fseek` 和 `ftell` 函数在以 Ctrl+Z 结尾的文件中移动时，可能导致 `fseek` 在文件末尾附近错误操作。
 `_O_BINARY`  | 在二进制（未转换）模式下打开文件。 禁止上述的转换。
 `_O_RAW`  | 与 `_O_BINARY` 相同。 支持 C 2.0 兼容性。
 

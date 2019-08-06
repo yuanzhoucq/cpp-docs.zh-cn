@@ -1507,7 +1507,7 @@ virtual void OnDrawRibbonSliderZoomButton(
 [in]在功能区滑块指定的缩放按钮的边界矩形。
 
 *bIsZoomOut*<br/>
-[in]如果框架应绘制与左侧的按钮为" **-**"的缩放，或如果框架应绘制与右侧的按钮，则为 FALSE" **+**"为 zoom 中。
+[in]如果框架应绘制与左侧的按钮为" **-** "的缩放，或如果框架应绘制与右侧的按钮，则为 FALSE" **+** "为 zoom 中。
 
 *bIsHighlighted*<br/>
 [in]一个布尔型参数，该值指示是否突出显示按钮。
@@ -1520,7 +1520,7 @@ virtual void OnDrawRibbonSliderZoomButton(
 
 ### <a name="remarks"></a>备注
 
-默认情况下，在功能区滑块上的缩放按钮是使用一个圆圈**+** 或**-** 登录中心。 若要自定义缩放按钮的外观，请重写此方法在派生的视觉管理器中。
+默认情况下，在功能区滑块上的缩放按钮是使用一个圆圈 **+** 或 **-** 登录中心。 若要自定义缩放按钮的外观，请重写此方法在派生的视觉管理器中。
 
 ##  <a name="ondrawribbonstatusbarpane"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonStatusBarPane
 

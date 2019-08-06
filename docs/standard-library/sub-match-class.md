@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::sub_match [C++], iterator
 - std::sub_match [C++], value_type
 ms.assetid: 804e2b9e-d16a-4c4c-ac60-024e0b2dd0e8
-ms.openlocfilehash: e0edfbc69d6cba6ee352a34406860e4c999dc3a7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 07ec6f0dc9daaec19fa97a6220da4d4ea93b254b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412210"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447431"
 ---
 # <a name="submatch-class"></a>sub_match 类
 
@@ -41,7 +41,7 @@ class sub_match
 
 ## <a name="parameters"></a>参数
 
-*BidIt*<br/>
+*BidIt*\
 子匹配项的迭代器类型。
 
 ## <a name="remarks"></a>备注
@@ -50,7 +50,7 @@ class sub_match
 
 如果捕获组不匹配，则对象的数据成员 `matched` 保持为 false，两个迭代器 `first` 和 `second` （继承自基类 `std::pair`）相等。 如果捕获组匹配，则 `matched` 保持为 true，迭代器 `first` 指向与捕获组匹配的目标序列中第一个字符，迭代器 `second` 与捕获组匹配的目标序列中最后一个字符后紧邻的位置。 请注意，对于长度为零的匹配项，成员 `matched` 保持为 true，两个迭代器将相等并将同时将指向匹配项的位置。
 
-当捕获组仅由一个断言或一个允许重复次数为零的重复组成时，可能出现长度为零的匹配项。 例如：
+当捕获组仅由一个断言或一个允许重复次数为零的重复组成时，可能出现长度为零的匹配项。 例如:
 
 “^”匹配目标序列“a”； `sub_match` 对象对应捕获组 0 持有两个迭代器，它们均指向序列中第一个字符。
 
@@ -133,7 +133,7 @@ compare(sub) == 0
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<regex 1>
+**标头：** \<regex 1>
 
 **命名空间：** std
 
@@ -149,13 +149,13 @@ int compare(const value_type *ptr) const;
 
 ### <a name="parameters"></a>参数
 
-*right*<br/>
+*然后*\
 要比较的子匹配项。
 
-*str*<br/>
+*字符串*\
 要与之比较的字符串。
 
-*ptr*<br/>
+*ptr*\
 要比较的以 null 结尾的序列。
 
 ### <a name="remarks"></a>备注
@@ -216,7 +216,7 @@ bool matched;
 
 ### <a name="remarks"></a>备注
 
-成员保留 **，则返回 true**仅当与关联的捕获组`*this`是正则表达式匹配的一部分。
+仅当与`*this`关联的捕获组是正则表达式匹配的一部分时, 成员才**为 true** 。
 
 ## <a name="op_basic_string_lt_value_type_gt"></a>sub_match::operator basic_string&lt;value_type&gt;
 
@@ -256,5 +256,5 @@ typedef 是 `iterator_traits<BidIt>::value_type`的同义词。
 
 ## <a name="see-also"></a>请参阅
 
-[\<regex>](../standard-library/regex.md)<br/>
-[sub_match](../standard-library/sub-match-class.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[sub_match](../standard-library/sub-match-class.md)

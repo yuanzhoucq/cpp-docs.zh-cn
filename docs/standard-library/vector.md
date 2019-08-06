@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - vector header
 ms.assetid: c1431ad8-c0b6-4dbb-89c4-5f651e432d7f
-ms.openlocfilehash: 96f329bfdcc13bb557ef0cc487a1f414612e96c5
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 5992e368031b59c9b892167b135fa30a870c73f9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240966"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448071"
 ---
 # <a name="ltvectorgt"></a>&lt;vector&gt;
 
@@ -20,7 +20,7 @@ ms.locfileid: "68240966"
 `vector` 是将给定类型的元素组织到线性序列中的容器。 它使用户可以快速随机访问任何元素，并动态添加到序列和动态从序列中删除。 `vector` 是随机访问性能超出限制时的首选序列容器。
 
 > [!NOTE]
-> \<向量 > 库还使用`#include <initializer_list>`语句。
+> 向量 > 库还`#include <initializer_list>`使用语句。 \<
 
 有关类 `vector` 的详细信息，请参阅 [vector 类](../standard-library/vector-class.md)。 有关专业化 `vector<bool>` 的信息，请参阅 [vector\<bool> 类](../standard-library/vector-bool-class.md)。
 
@@ -77,16 +77,16 @@ void swap (
 
 ### <a name="parameters"></a>参数
 
-*类型*\
+*类别*\
 向量中所存储的数据类型的模板参数。
 
-*分配器*\
+*器*\
 负责分配和释放内存的已存储分配器对象的模板参数。
 
-*左侧*\
+*左中*\
 比较操作中的第一个（左）向量
 
-*右侧*\
+*然后*\
 比较操作中的第二个（右）向量。
 
 ## <a name="members"></a>成员
@@ -123,6 +123,6 @@ void swap (
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)<br/>
+[头文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

@@ -1,34 +1,40 @@
 ---
 title: '&lt;ctgmath&gt;'
-ms.date: 11/04/2016
+ms.date: 07/11/2019
+f1_keywords:
+- <ctgmath>
+- ctgmath
+helpviewer_keywords:
+- ctgmath header
 ms.assetid: ff521893-f445-4dc8-a2f6-699185bb7024
-ms.openlocfilehash: 85099f3cb206dd791aade59bf9a531a714e68ac3
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 30eca273ac41139251c024c27c16d4adefe7f784
+ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246608"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68341107"
 ---
 # <a name="ltctgmathgt"></a>&lt;ctgmath&gt;
 
-实际上，包括C++标准库标头\<复杂 > 和\<cmath >，其中提供的泛型类型算术宏等效于\<tgmath.h >。
+实际上, C++包括标准库标\<头 > 和\<h >, 后者提供与\<t h. > 等效的类型泛型数学宏。
+
+> [!NOTE]
+> C 标准库\<> t h. \<不\<包括 ctgmath >, 因为它实际上被复杂 > 和 h > 中C++ \<的重载替换。 这会使\<ctgmath > 标头冗余。 中\< C++弃用了 t h. > 标头。 \<Ctgmath > 标头在 c + + 17 中已弃用, 并已在草案 c + + 20 标准中删除。
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<ctgmath >
+**标头:** \<ctgmath >
 
 **命名空间：** std
 
 ## <a name="remarks"></a>备注
 
-标准 C 库标头的功能\<tgmath.h > 中的重载提供\<复杂 > 和\<cmath >。
-
-包含该标头还将确保使用标准 C 库标头中的外部链接声明的名称在 `std` 命名空间中声明。
+C 标准库标头\<t h. > 的功能由复杂 > 和\<h > 中\<的重载提供。
 
 ## <a name="see-also"></a>请参阅
 
-[\<ccomplex>](../standard-library/ccomplex.md)<br/>
-[\<cmath>](../standard-library/cmath.md)<br/>
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 标准库概述](../standard-library/cpp-standard-library-overview.md)<br/>
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<复杂 >](complex.md)\
+[\<cmath 1>](cmath.md)\
+[标头文件引用](cpp-standard-library-header-files.md)\
+[C++标准库概述](cpp-standard-library-overview.md)\
+[标准库中的C++线程安全](thread-safety-in-the-cpp-standard-library.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - value_compare class
 ms.assetid: c306c5b9-3505-4357-aa6b-216451b951ed
-ms.openlocfilehash: 4b7fff1bef091a9d47e6ea4dc0e53e86ce39ad7c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0e057a6229c903402a51b34a8f4e844e80ace187
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365284"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452373"
 ---
 # <a name="valuecompare-class"></a>value_compare 类
 
@@ -39,7 +39,7 @@ protected:
 
 ## <a name="remarks"></a>备注
 
-之间的 value_compare 提供的比较条件`value_types`的由 hash_map 包含的整个元素的比较将引发之间的相应元素的辅助类构造的密钥。 成员函数运算符使用的对象`comp`类型的`key_compare`存储在由 value_compare 用于比较两个元素的排序键组件提供的函数对象。
+Value_compare 提供的比较条件由 hash_map `value_types`包含的整个元素之间的比较结果, 由辅助类构造的各个元素的键之间的比较引起。 成员函数运算符使用 value_compare 提供的`comp`函数对象`key_compare`中存储的类型的对象来比较两个元素的排序键组件。
 
 对于 hash_set 和 hash_multiset（二者均为键值与元素值完全相同的简单容器），value_compare 等效于 `key_compare`；对于 hash_map 和 hash_multimap，它们则不相等，因为类型 `pair` 元素的值与元素的键值不完全相同。
 
@@ -49,12 +49,12 @@ protected:
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<hash_map>
+**标头：** \<hash_map>
 
 **命名空间：** stdext
 
 ## <a name="see-also"></a>请参阅
 
-[binary_function 结构](../standard-library/binary-function-struct.md)<br/>
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)<br/>
+[binary_function 结构](../standard-library/binary-function-struct.md)\
+[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

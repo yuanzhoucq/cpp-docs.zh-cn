@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_fundamental class
 - is_fundamental
 ms.assetid: b84eee84-2fb2-4611-beaf-b384074d8b6a
-ms.openlocfilehash: d16dfeebabd5909212425fcc27b355110e891d89
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5643aa6a2d4bbfaafc86cba4251df162b59b4692
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348440"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456251"
 ---
 # <a name="isfundamental-class"></a>is_fundamental 类
 
@@ -27,12 +27,12 @@ struct is_fundamental;
 
 ### <a name="parameters"></a>参数
 
-*Ty*<br/>
+*Ty*\
 要查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型谓词的实例将保留 true 类型*Ty*是一种基本类型，即**void**，一种整型类型，浮点点类型，或`cv-qualified`窗体的其中之一，否则为 false。
+如果类型*Ty*是基本类型 (即**void**、整数类型、浮点类型或`cv-qualified`其中之一的形式), 则类型谓词的实例为 true; 否则为 false。
 
 ## <a name="example"></a>示例
 
@@ -71,11 +71,11 @@ is_fundamental<void> == true
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<type_traits>
+**标头：** \<type_traits>
 
 **命名空间：** std
 
 ## <a name="see-also"></a>请参阅
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_compound 类](../standard-library/is-compound-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_compound 类](../standard-library/is-compound-class.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - set header
 ms.assetid: 43cb1ab2-6383-48cf-8bdc-2b96d7203596
-ms.openlocfilehash: 1bf5663d3e6891d45e2139c612d8e16860b6cace
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: b947d9ba268c9b4028415216e4ad0813f2d71947
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246387"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450526"
 ---
 # <a name="ltsetgt"></a>&lt;set&gt;
 
@@ -24,7 +24,7 @@ ms.locfileid: "68246387"
 **命名空间：** std
 
 > [!NOTE]
-> \<设置 > 库还使用`#include <initializer_list>`语句。
+> 集 > 库也使用该`#include <initializer_list>`语句。 \<
 
 ## <a name="members"></a>成员
 
@@ -54,6 +54,6 @@ ms.locfileid: "68246387"
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)<br/>
+[头文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

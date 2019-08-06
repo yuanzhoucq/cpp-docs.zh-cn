@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_volatile class
 - is_volatile
 ms.assetid: 54922e8a-db4e-4cae-8931-b3352f0b8d3b
-ms.openlocfilehash: 7fc873a2ec21dbfad83fd9d9c006d8345b83cdb8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: daba5dff55e0f3afa1e9996631125bf7ba64d52e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413354"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458846"
 ---
 # <a name="isvolatile-class"></a>is_volatile 类
 
@@ -27,12 +27,12 @@ struct is_volatile;
 
 ### <a name="parameters"></a>参数
 
-*Ty*<br/>
+*Ty*\
 要查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型谓词的实例的保留为 true *Ty*是`volatile-qualified`。
+如果*Ty*为`volatile-qualified`, 则类型谓词的实例为 true。
 
 ## <a name="example"></a>示例
 
@@ -71,11 +71,11 @@ is_volatile<volatile int> == true
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<type_traits>
+**标头：** \<type_traits>
 
 **命名空间：** std
 
 ## <a name="see-also"></a>请参阅
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_const 类](../standard-library/is-const-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_const 类](../standard-library/is-const-class.md)

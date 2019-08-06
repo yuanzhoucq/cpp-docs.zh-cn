@@ -1,53 +1,51 @@
 ---
 title: static_assert
-ms.date: 11/04/2016
+ms.date: 07/29/2019
 f1_keywords:
 - static_assert_cpp
 helpviewer_keywords:
-- C++ keywords, static_assert
-- C2338
 - assertions [C++], static_assert
 - static_assert
 ms.assetid: 28dd3668-e78c-4de8-ba68-552084743426
-ms.openlocfilehash: d5ef1ba45001a2b1a3ee1f2da46f66224857b070
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4ac79c23379dd1bf1c85521fdf0c28947d3b7ab9
+ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330635"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661588"
 ---
 # <a name="staticassert"></a>static_assert
 
-在编译时测试软件断言。 如果指定的常量表达式为 FALSE，在编译器显示指定的消息，如果提供，且编译将失败，错误为 C2338;否则，声明没有任何影响。
+在编译时测试软件断言。 如果指定的常量表达式为 FALSE, 则编译器将显示指定的消息 (如果已提供), 并且编译将失败并出现错误 C2338;否则, 声明不起作用。
 
 ## <a name="syntax"></a>语法
 
 ```
 static_assert( constant-expression, string-literal );
 
-static_assert( constant-expression ); // Visual Studio 2017 and later
+static_assert( constant-expression ); // C++17 (Visual Studio 2017 and later)
 ```
 
 #### <a name="parameters"></a>参数
 
 |参数|描述|
 |---------------|-----------------|
-|*constant-expression*|可以转换为布尔值的整型常量表达式。<br /><br /> 如果表达式的计算结果为零 (false)，*字符串文字*显示参数，则编译将失败并出现错误。 如果表达式为非零值 (true)， **static_assert**声明不起作用。|
-|*string-literal*|如果显示的消息*常数表达式*参数为零。 该消息是一个字符串中的字符[基字符集](../c-language/ascii-character-set.md)编译器; 的而非[多字节或宽字符](../c-language/multibyte-and-wide-characters.md)。|
+|*constant-expression*|可以转换为布尔值的整型常量表达式。<br /><br /> 如果计算出的表达式为零 (false), 则显示*字符串*参数, 且编译失败并出现错误。 如果表达式不为零 (true), 则**static_assert**声明不起作用。|
+|*string-literal*|如果*常量表达式*参数为零, 则显示一条消息。 消息是编译器的[基本字符集](../c-language/ascii-character-set.md)中的字符串;也就是说, 不能是[多字节或宽字符](../c-language/multibyte-and-wide-characters.md)。|
 
 ## <a name="remarks"></a>备注
 
-*常数表达式*的参数**static_assert**声明表示*软件断言*。 软件断言指定在程序的某个特定点应满足的条件。 如果条件为 true， **static_assert**声明不起作用。 如果条件为 false，则断言失败，在编译器显示中的消息*字符串文字*参数，并且编译失败并出现错误。 在 Visual Studio 2017 及更高版本，字符串文字参数是可选的。
+**Static_assert**声明的*常量表达式*参数表示*软件断言*。 软件断言指定在程序的某个特定点应满足的条件。 如果条件为 true, 则**static_assert**声明不起作用。 如果条件为 false, 则断言失败, 编译器会在*字符串*参数中显示消息, 并且编译将失败并出现错误。 在 Visual Studio 2017 和更高版本中, 字符串参数是可选的。
 
-**Static_assert**声明测试软件断言在编译时。 与此相反， [assert 宏、 _assert、 _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md)宏测试软件断言在运行时，会产生运行的时花费的空间和时间。 **Static_assert**声明是因为模板自变量可以包含在调试模板尤其有用*常数表达式*参数。
+**Static_assert**声明在编译时测试软件断言。 与此相反, [Assert 宏和 _assert 和 _wassert 函数](../c-runtime-library/reference/assert-macro-assert-wassert.md)在运行时测试软件断言, 并在空间或时间内产生运行时成本。 **Static_assert**声明对于调试模板特别有用, 因为模板参数可以包含在*常数表达式*参数中。
 
-编译器将检查**static_assert**遇到声明时出现语法错误的声明。 编译器将计算*常数表达式*立即如果它不依赖于模板参数的参数。 否则，编译器将计算*常数表达式*参数实例化模板时。 因此，当遇到声明时，编译器可能一次发布一个诊断消息，而在对模板进行实例化时也是如此。
+当遇到声明时, 编译器会检查**static_assert**声明中的语法错误。 如果*表达式*参数不依赖于模板参数, 则编译器会立即计算此参数。 否则, 在对模板进行实例化时, 编译器将计算*常数表达式*参数。 因此，当遇到声明时，编译器可能一次发布一个诊断消息，而在对模板进行实例化时也是如此。
 
-可以使用**static_assert**在命名空间、 类或块范围内的关键字。 ( **Static_assert**关键字是声明从技术上讲，即使它不会引入的新名称到您的程序，因为在命名空间范围内使用它也是如此。)
+可以在命名空间、类或块范围内使用**static_assert**关键字。 ( **Static_assert**关键字在技术上是一个声明, 尽管它不会将新名称引入到程序中, 因为它可以在命名空间范围内使用。)
 
 ## <a name="description"></a>描述
 
-在以下示例中， **static_assert**声明具有命名空间范围。 由于编译器知道类型 `void *` 的大小，因此可以立即计算表达式。
+在下面的示例中, **static_assert**声明具有命名空间范围。 由于编译器知道类型 `void *` 的大小，因此可以立即计算表达式。
 
 ## <a name="example"></a>示例
 
@@ -57,7 +55,7 @@ static_assert(sizeof(void *) == 4, "64-bit code generation is not supported.");
 
 ## <a name="description"></a>描述
 
-在以下示例中， **static_assert**声明具有类范围。 **Static_assert**验证模板参数是否*纯旧数据*(POD) 类型。 编译器将检查**static_assert**声明进行声明，但不会计算*常数表达式*参数，直到`basic_string`中实例化类模板`main()`.
+在下面的示例中, **static_assert**声明具有类范围。 **Static_assert**验证模板参数是否为*纯旧数据*(POD) 类型。 在声明**static_assert**声明时, 编译器会检查它, 但在中`main()`实例化`basic_string`类模板之前, 不会计算*常数表达式*参数。
 
 ## <a name="example"></a>示例
 
@@ -86,7 +84,7 @@ int main()
 
 ## <a name="description"></a>描述
 
-在以下示例中， **static_assert**声明具有块范围。 **Static_assert**验证 VMPage 结构的大小等于系统的虚拟内存 pagesize。
+在下面的示例中, **static_assert**声明具有块范围。 **Static_assert**验证 VMPage 结构的大小是否等于系统的虚拟内存 pagesize。
 
 ## <a name="example"></a>示例
 

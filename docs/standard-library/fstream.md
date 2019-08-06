@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - fstream header
 ms.assetid: 660de351-0489-41df-b239-40e0cdcab46b
-ms.openlocfilehash: 20efdc755b7f706fc6ee962daa32bd352df39d45
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba6a4152b8d37f5b0186f9d05c6ba850e8c2e54c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159764"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454022"
 ---
 # <a name="ltfstreamgt"></a>&lt;fstream&gt;
 
@@ -27,27 +27,27 @@ ms.locfileid: "62159764"
 
 |类型名称|描述|
 |-|-|
-|[filebuf](../standard-library/fstream-typedefs.md#filebuf)|一种类型`basic_filebuf`专用于**char**模板参数。|
-|[fstream](../standard-library/fstream-typedefs.md#fstream)|一种类型`basic_fstream`专用于**char**模板参数。|
-|[ifstream](../standard-library/fstream-typedefs.md#ifstream)|一种类型`basic_ifstream`专用于**char**模板参数。|
-|[ofstream](../standard-library/fstream-typedefs.md#ofstream)|一种类型`basic_ofstream`专用于**char**模板参数。|
-|[wfstream](../standard-library/fstream-typedefs.md#wfstream)|一种类型`basic_fstream`专用于**wchar_t**模板参数。|
-|[wifstream](../standard-library/fstream-typedefs.md#wifstream)|一种类型`basic_ifstream`专用于**wchar_t**模板参数。|
-|[wofstream](../standard-library/fstream-typedefs.md#wofstream)|一种类型`basic_ofstream`专用于**wchar_t**模板参数。|
-|[wfilebuf](../standard-library/fstream-typedefs.md#wfilebuf)|一种类型`basic_filebuf`专用于**wchar_t**模板参数。|
+|[filebuf](../standard-library/fstream-typedefs.md#filebuf)|专用于`basic_filebuf` **char**模板参数的类型。|
+|[fstream](../standard-library/fstream-typedefs.md#fstream)|专用于`basic_fstream` **char**模板参数的类型。|
+|[ifstream](../standard-library/fstream-typedefs.md#ifstream)|专用于`basic_ifstream` **char**模板参数的类型。|
+|[ofstream](../standard-library/fstream-typedefs.md#ofstream)|专用于`basic_ofstream` **char**模板参数的类型。|
+|[wfstream](../standard-library/fstream-typedefs.md#wfstream)|一个专用`basic_fstream`于**wchar_t**模板参数的类型。|
+|[wifstream](../standard-library/fstream-typedefs.md#wifstream)|一个专用`basic_ifstream`于**wchar_t**模板参数的类型。|
+|[wofstream](../standard-library/fstream-typedefs.md#wofstream)|一个专用`basic_ofstream`于**wchar_t**模板参数的类型。|
+|[wfilebuf](../standard-library/fstream-typedefs.md#wfilebuf)|一个专用`basic_filebuf`于**wchar_t**模板参数的类型。|
 
 ### <a name="classes"></a>类
 
 |类|描述|
 |-|-|
 |[basic_filebuf](../standard-library/basic-filebuf-class.md)|该模板类描述对 `Elem` 类型的元素（其字符特征由类 `Tr` 确定）与外部文件中存储的元素序列之间的来回传输进行控制的流缓冲区。|
-|[basic_fstream](../standard-library/basic-fstream-class.md)|此模板类描述控制元素的插入和提取的对象和编码的对象使用类的流缓冲区[basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**， **Tr**>，类型的元素`Elem`，其字符特征由类`Tr`。|
-|[basic_ifstream](../standard-library/basic-ifstream-class.md)|此模板类描述一个对象，用于控制提取元素和编码的对象类的流缓冲区[basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**， **Tr**>，类型的元素`Elem`，其字符特征由类`Tr`。|
-|[basic_ofstream](../standard-library/basic-ofstream-class.md)|此模板类描述类的流缓冲区控制元素插入的对象和编码的对象[basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**， **Tr**>，类型的元素`Elem`，其字符特征由类`Tr`。|
+|[basic_fstream](../standard-library/basic-fstream-class.md)|此模板类描述一个对象, 该对象使用[basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**> 类的流缓冲区控制元素和编码对象的插入和提取, 并使用类型`Elem`的元素进行字符特征由类`Tr`确定。|
+|[basic_ifstream](../standard-library/basic-ifstream-class.md)|此模板类描述一个对象, 该对象控制从[basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**> 类的流缓冲区中提取元素和编码对象, 其中包含类型`Elem`的元素, 其字符特征由类`Tr`确定。|
+|[basic_ofstream](../standard-library/basic-ofstream-class.md)|此模板类描述一个对象, 该对象控制将元素和编码对象插入到类[basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**> 的流缓冲区中, 其中包含`Elem`类型的元素, 其字符特征由类`Tr`确定。|
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream 编程](../standard-library/iostream-programming.md)<br/>
-[iostreams 约定](../standard-library/iostreams-conventions.md)<br/>
+[头文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream 编程](../standard-library/iostream-programming.md)\
+[iostreams 约定](../standard-library/iostreams-conventions.md)

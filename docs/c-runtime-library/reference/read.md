@@ -26,12 +26,12 @@ helpviewer_keywords:
 - reading data [C++]
 - files [C++], reading
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
-ms.openlocfilehash: 40f52ea37ae5419fe986aa505aad4fddfe8403ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4dd599f227192b8c3ce17a0321d6399319e1925
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357650"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376312"
 ---
 # <a name="read"></a>_read
 
@@ -56,23 +56,23 @@ int _read(
 数据的存储位置。
 
 *buffer_size*<br/>
-要读取的字节的最大数目。
+要读取的最大字节数。
 
 ## <a name="return-value"></a>返回值
 
-**_read**返回读取，这可能会更少的字节数比*buffer_size*如果少于*buffer_size*字节留在文件中，或如果在文本模式下打开文件。 在文本模式下，每个回车符-换行符对`\r\n`使用单一的换行的字符替换`\n`。 在返回值中仅计算单个换行符。 此替换不影响文件指针。
+**_read**返回所读取的字节数, 如果文件中剩余的字符数小于*buffer_size* , 则为; 如果文件在文本模式下打开, 则该值可能小于*buffer_size* 。 在文本模式下, 每个回车换行符对`\r\n`都将替换为一个换行符。 `\n` 在返回值中只计算单行换行符。 此替换不影响文件指针。
 
-如果函数尝试在文件末尾进行读取，则返回 0。 如果*fd*是无效，该文件未打开供读取，或文件被锁定，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，函数将返回-1 并设置**errno**到**EBADF**。
+如果函数尝试在文件末尾进行读取，则返回 0。 如果*fd*无效, 则文件未打开以进行读取, 或者文件被锁定, 将调用无效参数处理程序, 如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续, 则该函数将返回-1, 并将**errno**设置为**ebadf (** 。
 
-如果*缓冲区*是**NULL**，或者，如果*buffer_size* > **INT_MAX**，将调用无效参数处理程序。 如果允许继续执行，该函数返回-1 和**errno**设置为**EINVAL**。
+如果*buffer*为**NULL**, 或者如果*buffer_size* > **INT_MAX**, 则调用无效的参数处理程序。 如果允许执行继续, 则该函数将返回-1, 并且**errno**设置为**EINVAL**。
 
 有关于此代码以及其他返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**_Read**函数中读取的最大*buffer_size*字节*缓冲区*从与关联的文件*fd*。 读取操作从与给定文件相关联的文件指针的当前位置开始执行。 读取操作完成后，文件指针将指向下一个未读取的字符。
+**_Read**函数从与*fd*关联的文件中将最多*buffer_size*字节读入*缓冲区*。 读取操作从与给定文件相关联的文件指针的当前位置开始执行。 读取操作完成后，文件指针将指向下一个未读取的字符。
 
-如果文件已在文本模式下打开，读取将终止时 **_read**遇到 CTRL + Z 字符，被视为文件尾指示符。 使用 [_lseek](lseek-lseeki64.md) 可清除文件尾指示符。
+如果在文本模式下打开该文件, 则在 **_read**遇到 "CTRL + Z" 字符时, 读取将终止, 该字符被视为文件尾指示符。 使用 [_lseek](lseek-lseeki64.md) 可清除文件尾指示符。
 
 ## <a name="requirements"></a>要求
 

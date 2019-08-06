@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - iomanip header
 ms.assetid: 3681c346-4763-4037-bba4-cf0dc3447974
-ms.openlocfilehash: 983fbc190fb83b81534e3888c748c0bf9c235638
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b9da0de64bbb0ef48a6a9741ff941e6abda0e705
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404931"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449208"
 ---
 # <a name="ltiomanipgt"></a>&lt;iomanip&gt;
 
-包括`iostreams`标准标头\<iomanip > 来定义多个操控器各自采用单个参数。
+包含标准标头\<iomanip > 来定义多个操控器, 每个操控器都采用一个自变量。 `iostreams`
 
 ## <a name="syntax"></a>语法
 
@@ -26,7 +26,7 @@ ms.locfileid: "62404931"
 
 ## <a name="remarks"></a>备注
 
-每个操控器返回未指定的类型，称为`T1`通过`T10`，该重载同时`basic_istream` \< **Elem**， **Tr** >`::`[运算符 >>](../standard-library/istream-operators.md#op_gt_gt)并`basic_ostream` \< **Elem**， **Tr** > `::` [运算符 <<](../standard-library/ostream-operators.md#op_lt_lt)。
+其中每个操控器都返回一个名`T1` `T10`为的未指定类型, `basic_istream`该类型>重载\< **Elem**、Tr`::`[运算符 > >](../standard-library/istream-operators.md#op_gt_gt)和`basic_ostream` **Elem**、 Tr运算符`::`<[<](../standard-library/ostream-operators.md#op_lt_lt)。 \<>
 
 ### <a name="manipulators"></a>操控器
 
@@ -46,7 +46,7 @@ ms.locfileid: "62404931"
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream 编程](../standard-library/iostream-programming.md)<br/>
-[iostreams 约定](../standard-library/iostreams-conventions.md)<br/>
+[头文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream 编程](../standard-library/iostream-programming.md)\
+[iostreams 约定](../standard-library/iostreams-conventions.md)

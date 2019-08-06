@@ -10,12 +10,12 @@ f1_keywords:
 - regex/std::operator==
 - regex/std::operator<<
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-ms.openlocfilehash: ee0d9ba820cff55a9cfbb130c8f90ca02fbee84a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 829b4cf50b02db0a88d61a8801c1e21ddb470344
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369548"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460123"
 ---
 # <a name="ltregexgt-operators"></a>&lt;regex&gt; 运算符
 
@@ -66,19 +66,19 @@ bool operator!=(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>参数
 
-*BidIt*<br/>
+*BidIt*\
 迭代器类型。
 
-*IOtraits*<br/>
+*IOtraits*\
 字符串特征类。
 
-*Alloc*<br/>
+*分配*\
 allocator 类。
 
-*left*<br/>
+*左中*\
 要比较的左边的对象。
 
-*right*<br/>
+*然后*\
 要比较的右边的对象。
 
 ### <a name="remarks"></a>备注
@@ -181,24 +181,24 @@ bool operator<(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>参数
 
-*BidIt*<br/>
+*BidIt*\
 迭代器类型。
 
-*IOtraits*<br/>
+*IOtraits*\
 字符串特征类。
 
-*Alloc*<br/>
+*分配*\
 allocator 类。
 
-*left*<br/>
+*左中*\
 要比较的左边的对象。
 
-*right*<br/>
+*然后*\
 要比较的右边的对象。
 
 ### <a name="remarks"></a>备注
 
-每个模板运算符将其参数转换为字符串类型，仅当，则返回 true 的转换后的值*左*的转换后的值小于*右*。
+每个模板运算符将其参数转换为字符串类型, 并且仅当转换后的值与*right*的转换值小于时才返回 true。
 
 ### <a name="example"></a>示例
 
@@ -266,22 +266,22 @@ basic_ostream<Elem, IOtraits>& operator<<(basic_ostream<Elem, IOtraits>& os,
 
 ### <a name="parameters"></a>参数
 
-*Elem*<br/>
+*Elem*\
 元素类型。
 
-*IOtraits*<br/>
+*IOtraits*\
 字符串特征类。
 
-*Alloc*<br/>
+*分配*\
 allocator 类。
 
-*BidIt*<br/>
+*BidIt*\
 迭代器类型。
 
-*os*<br/>
+*o*\
 输出流。
 
-*right*<br/>
+*然后*\
 要插入的对象。
 
 ### <a name="remarks"></a>备注
@@ -351,19 +351,19 @@ bool operator<=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>参数
 
-*BidIt*<br/>
+*BidIt*\
 迭代器类型。
 
-*IOtraits*<br/>
+*IOtraits*\
 字符串特征类。
 
-*Alloc*<br/>
+*分配*\
 allocator 类。
 
-*left*<br/>
+*左中*\
 要比较的左边的对象。
 
-*right*<br/>
+*然后*\
 要比较的右边的对象。
 
 ### <a name="remarks"></a>备注
@@ -465,19 +465,19 @@ bool operator==(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>参数
 
-*BidIt*<br/>
+*BidIt*\
 迭代器类型。
 
-*IOtraits*<br/>
+*IOtraits*\
 字符串特征类。
 
-*Alloc*<br/>
+*分配*\
 allocator 类。
 
-*left*<br/>
+*左中*\
 要比较的左边的对象。
 
-*right*<br/>
+*然后*\
 要比较的右边的对象。
 
 ### <a name="remarks"></a>备注
@@ -588,19 +588,19 @@ bool operator>(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>参数
 
-*BidIt*<br/>
+*BidIt*\
 迭代器类型。
 
-*IOtraits*<br/>
+*IOtraits*\
 字符串特征类。
 
-*Alloc*<br/>
+*分配*\
 allocator 类。
 
-*left*<br/>
+*左中*\
 要比较的左边的对象。
 
-*right*<br/>
+*然后*\
 要比较的右边的对象。
 
 ### <a name="remarks"></a>备注
@@ -698,19 +698,19 @@ bool operator>=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>参数
 
-*BidIt*<br/>
+*BidIt*\
 迭代器类型。
 
-*IOtraits*<br/>
+*IOtraits*\
 字符串特征类。
 
-*Alloc*<br/>
+*分配*\
 allocator 类。
 
-*left*<br/>
+*左中*\
 要比较的左边的对象。
 
-*right*<br/>
+*然后*\
 要比较的右边的对象。
 
 ### <a name="remarks"></a>备注
@@ -773,11 +773,11 @@ sub >= 'a' == true
 
 ## <a name="see-also"></a>请参阅
 
-[\<regex>](../standard-library/regex.md)<br/>
-[regex_constants 类](../standard-library/regex-constants-class.md)<br/>
-[regex_error 类](../standard-library/regex-error-class.md)<br/>
-[\<regex> functions](../standard-library/regex-functions.md)<br/>
-[regex_iterator 类](../standard-library/regex-iterator-class.md)<br/>
-[regex_token_iterator 类](../standard-library/regex-token-iterator-class.md)<br/>
-[regex_traits 类](../standard-library/regex-traits-class.md)<br/>
-[\<regex> typedefs](../standard-library/regex-typedefs.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[regex_constants 类](../standard-library/regex-constants-class.md)\
+[regex_error 类](../standard-library/regex-error-class.md)\
+[\<regex > 函数](../standard-library/regex-functions.md)\
+[regex_iterator 类](../standard-library/regex-iterator-class.md)\
+[regex_token_iterator 类](../standard-library/regex-token-iterator-class.md)\
+[regex_traits 类](../standard-library/regex-traits-class.md)\
+[\<regex> typedefs](../standard-library/regex-typedefs.md)

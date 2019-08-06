@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::istream_iterator [C++], istream_type
 - std::istream_iterator [C++], traits_type
 ms.assetid: fb52a8cd-7f71-48d1-b73e-4b064e2a8d16
-ms.openlocfilehash: f8fc1593db8ddacefb4a231be76ca6d7cbd30849
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 941d625e388edc75dfe25a2de0e609c6d955ff19
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413315"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447757"
 ---
 # <a name="istreamiterator-class"></a>istream_iterator 类
 
@@ -36,16 +36,16 @@ class istream_iterator
 
 ### <a name="parameters"></a>参数
 
-*Type*<br/>
+*类别*\
 要从输入流中提取的对象的类型。
 
-*CharType*<br/>
-表示 `istream_iterator` 字符类型的类型。 此参数是可选的默认值是**char**。
+*CharType*\
+表示 `istream_iterator` 字符类型的类型。 此参数是可选的, 默认值为**char**。
 
-*特征*<br/>
+*特征*\
 表示 `istream_iterator` 字符类型的类型。 此自变量是可选自变量，默认值为 `char_traits`< `CharType`>。
 
-*距离*<br/>
+*长途*\
 表示 `istream_iterator` 差异类型的带符号的整数类型。 此参数为可选参数，默认值为 `ptrdiff_t`。
 
 构造或递增带有非 null 存储指针的 istream_iterator 类对象后，此对象将尝试从关联的输入流提取和存储 `Type` 类型的对象。 如果提取失败，对象将使用 null 指针有效替换存储指针，从而设置序列末尾指示符。
@@ -138,12 +138,12 @@ istream_iterator(istream_type& _Istr);
 
 ### <a name="parameters"></a>参数
 
-*_Istr*<br/>
+*_Istr*\
 要读取以用于初始化 `istream_iterator` 的输入流。
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数通过空指针初始化输入流指针，并创建流末尾迭代器。 第二个构造函数初始化与输入的流指针 *& _Istr*，然后尝试提取和存储类型的对象`Type`。
+第一个构造函数通过空指针初始化输入流指针，并创建流末尾迭代器。 第二个构造函数使用 *& _Istr*初始化输入流指针, 然后尝试提取并存储类型`Type`的对象。
 
 流末尾迭代器可用于测试 `istream_iterator` 是否已达到流末尾。
 
@@ -207,7 +207,7 @@ const Type& operator*() const;
 
 ### <a name="return-value"></a>返回值
 
-类型的存储的对象`Type`。
+类型`Type`的存储对象。
 
 ### <a name="example"></a>示例
 
@@ -255,7 +255,7 @@ const Type* operator->() const;
 
 ### <a name="remarks"></a>备注
 
-`i->m` 等效于 `(*i).m`
+`i->m`等效于`(*i).m`
 
 运算符返回 `&*this`。
 
@@ -303,7 +303,7 @@ istream_iterator<Type, CharType, Traits, Distance> operator++(int);
 
 ### <a name="return-value"></a>返回值
 
-第一个成员运算符返回类型的递增对象的引用`Type`提取从输入的流和第二个成员函数返回的对象的副本。
+第一个成员运算符返回对从输入流中提取的类型`Type`的递增对象的引用, 第二个成员函数返回该对象的副本。
 
 ### <a name="example"></a>示例
 
@@ -386,8 +386,8 @@ int main( )
 
 ## <a name="see-also"></a>请参阅
 
-[input_iterator_tag 结构](../standard-library/input-iterator-tag-struct.md)<br/>
-[iterator 结构](../standard-library/iterator-struct.md)<br/>
-[\<iterator>](../standard-library/iterator.md)<br/>
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)<br/>
+[input_iterator_tag 结构](../standard-library/input-iterator-tag-struct.md)\
+[iterator 结构](../standard-library/iterator-struct.md)\
+[\<iterator>](../standard-library/iterator.md)\
+[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

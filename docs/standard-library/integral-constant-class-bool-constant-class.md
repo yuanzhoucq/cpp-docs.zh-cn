@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::integral_constant [C++]
 - std::bool_constant [C++]
 ms.assetid: 11c002c6-4d31-4042-9341-f2543f43e108
-ms.openlocfilehash: f7b9217560bc94c536a7c819276266fd16fa4b07
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c85da1f3be7821f8d82cd2b19dab2a5864426a5a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404866"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452047"
 ---
 # <a name="integralconstant-class-boolconstant-class"></a>integral_constant 类、bool_constant 类
 
@@ -36,17 +36,17 @@ struct integral_constant {
 
 ### <a name="parameters"></a>参数
 
-*T*<br/>
+*关心*\
 常量的类型。
 
-*v*<br/>
+*向量*\
 常量的值。
 
 ## <a name="remarks"></a>备注
 
 使用整型类型 *T* 和该类型的值 *v* 进行专用化的 `integral_constant` 模板类表示一个对象，该对象保留该整型类型的常量以及指定的值。 名为 `type` 的成员是生成的模板专用化类型的别名，`value` 成员具有用于创建此专用化的值 *v*。
 
-`bool_constant`模板类是显式的部分专用化`integral_constant`，它使用**bool**作为*T*参数。
+模板类是的显式部分`integral_constant`专用化, 它使用**bool**作为*T*参数。 `bool_constant`
 
 ## <a name="example"></a>示例
 
@@ -74,12 +74,12 @@ integral_constant<bool, false> == false
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<type_traits>
+**标头：** \<type_traits>
 
 **命名空间：** std
 
 ## <a name="see-also"></a>请参阅
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[false_type](../standard-library/type-traits-typedefs.md#false_type)<br/>
-[true_type](../standard-library/type-traits-typedefs.md#true_type)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[false_type](../standard-library/type-traits-typedefs.md#false_type)\
+[true_type](../standard-library/type-traits-typedefs.md#true_type)

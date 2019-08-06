@@ -7,12 +7,12 @@ helpviewer_keywords:
 - remove_extent class
 - remove_extent
 ms.assetid: b9320862-3891-49fc-80bc-571eb2c035cf
-ms.openlocfilehash: 1425de12158354c649ec355124f8c255255b29c2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73af53d2b93d794e2479a33721bfeae71e531794
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368872"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451291"
 ---
 # <a name="removeextent-class"></a>remove_extent 类
 
@@ -30,12 +30,12 @@ using remove_extent_t = typename remove_extent<T>::type;
 
 ### <a name="parameters"></a>参数
 
-*T*<br/>
+*关心*\
 要修改的类型。
 
 ## <a name="remarks"></a>备注
 
-实例`remove_extent<T>`包含修改类型，即`T1`时*T*的形式`T1[N]`; 否则为*T*。
+的`remove_extent<T>`实例保留修改后的类型, 当*t*为形式`T1[N]`时, 则为, 否则为 `T1` t。
 
 ## <a name="example"></a>示例
 
@@ -66,11 +66,11 @@ remove_extent_t<int[5][10]> == int [10]
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<type_traits>
+**标头：** \<type_traits>
 
 **命名空间：** std
 
 ## <a name="see-also"></a>请参阅
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[remove_all_extents 类](../standard-library/remove-all-extents-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[remove_all_extents 类](../standard-library/remove-all-extents-class.md)

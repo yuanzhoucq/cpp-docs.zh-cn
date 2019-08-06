@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::shared_future [C++], wait
 - std::shared_future [C++], wait_for
 - std::shared_future [C++], wait_until
-ms.openlocfilehash: 2280c17c4ce58fe06365c107ad26d646c7ae2d72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b08a1341ed450dd5d5cee93cdfcbab57f8d6760
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412600"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450497"
 ---
 # <a name="sharedfuture-class"></a>shared_future 类
 
@@ -56,7 +56,7 @@ class shared_future;
 |----------|-----------------|
 |[get](#get)|检索存储在*关联异步状态*中的结果。|
 |[valid](#valid)|指定对象是否不为空。|
-|[wait](#wait)|阻止当前线程，直到关联异步状态为准备就绪。|
+|[再](#wait)|阻止当前线程，直到关联异步状态为准备就绪。|
 |[wait_for](#wait_for)|进行阻止，直到关联异步状态为准备就绪或已过指定时间。|
 |[wait_until](#wait_until)|进行阻止，直到关联异步状态为准备就绪或直到指定时间点。|
 
@@ -68,7 +68,7 @@ class shared_future;
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<将来 >
+**标头:** \<未来 >
 
 **命名空间：** std
 
@@ -92,7 +92,7 @@ void get() const;
 
 对于部分专用化 `shared_future<Ty&>`，存储值实际上是对已传递给*异步提供程序*作为返回值的对象的引用。
 
-因为对于专用化不存在任何存储的值`shared_future<void>`，该方法将返回**void**。
+由于专用化`shared_future<void>`不存在存储的值, 因此该方法返回**void**。
 
 ## <a name="op_eq"></a>shared_future::operator=
 
@@ -105,7 +105,7 @@ shared_future& operator=(const shared_future& Right);
 
 ### <a name="parameters"></a>参数
 
-右侧<br/>
+*然后*\
 一个 `shared_future` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -114,9 +114,9 @@ shared_future& operator=(const shared_future& Right);
 
 ### <a name="remarks"></a>备注
 
-对于第一个运算符，*右*操作完成后不再具有关联异步状态。
+对于第一个运算符, 在操作后*右端*不再具有关联的异步状态。
 
-对于第二个方法，请*右*维护其关联异步状态。
+对于第二种方法,*右*保持其关联的异步状态。
 
 ## <a name="shared_future"></a>  shared_future::shared_future 构造函数
 
@@ -131,16 +131,16 @@ shared_future(const shared_future& Right);
 
 ### <a name="parameters"></a>参数
 
-右侧<br/>
+*然后*\
 一个 [future](../standard-library/future-class.md) 或 一个 `shared_future` 对象。
 
 ### <a name="remarks"></a>备注
 
 第一个构造函数构造没有关联异步状态的 `shared_future` 对象。
 
-第二个和第三个构造函数构造`shared_future`对象，并传输关联异步状态从*右*。 *右*不再具有关联异步状态。
+第二个和第三个`shared_future`构造函数构造一个对象, 并从*右侧*传输关联的异步状态。 *Right*不再具有关联的异步状态。
 
-第四个构造函数构造`shared_future`对象，它具有相同关联异步状态的*右*。
+第四个构造函数`shared_future`构造一个对象, 该对象具有与*Right*相同的关联异步状态。
 
 ## <a name="valid"></a>  shared_future::valid
 
@@ -152,9 +152,9 @@ bool valid() noexcept;
 
 ### <a name="return-value"></a>返回值
 
-**true**如果该对象具有关联异步状态; 否则为**false**。
+如果对象有关联的异步状态,**则为 true** ;否则**为 false**。
 
-## <a name="wait"></a>  shared_future::wait
+## <a name="wait"></a>shared_future:: wait
 
 阻止当前线程，直到关联异步状态为准备就绪。
 
@@ -166,7 +166,7 @@ void wait() const;
 
 只有当其异步提供程序存储了返回值或存储了异常时，关联的异步状态才会为准备就绪。
 
-## <a name="wait_for"></a>  shared_future::wait_for
+## <a name="wait_for"></a>shared_future::wait_for
 
 阻止当前线程，直到关联异步状态为准备就绪或已过指定时间。
 
@@ -178,7 +178,7 @@ future_status wait_for(
 
 ### <a name="parameters"></a>参数
 
-*Rel_time*<br/>
+*Rel_time*\
 一个 [chrono::duration](../standard-library/duration-class.md) 对象，指定线程阻止的最大时间间隔。
 
 ### <a name="return-value"></a>返回值
@@ -201,7 +201,7 @@ future_status wait_until(
 
 ### <a name="parameters"></a>参数
 
-*Abs_time*<br/>
+*Abs_time*\
 一个 [chrono::time_point](../standard-library/time-point-class.md) 对象，指定在其后可取消阻止线程的时间。
 
 ### <a name="return-value"></a>返回值
@@ -214,5 +214,5 @@ future_status wait_until(
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<future>](../standard-library/future.md)<br/>
+[头文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[\<future>](../standard-library/future.md)

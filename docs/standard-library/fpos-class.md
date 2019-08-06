@@ -11,12 +11,12 @@ helpviewer_keywords:
 - std::fpos [C++], seekpos
 - std::fpos [C++], state
 ms.assetid: ffd0827c-fa34-47f4-b10e-5cb707fcde47
-ms.openlocfilehash: 78b136d72067fa5fff58e8a7acc044fb4e1a409e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 60d7d00e6b9426df9b3086d9b82deaf1fdd1463c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159452"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454146"
 ---
 # <a name="fpos-class"></a>fpos 类
 
@@ -24,7 +24,7 @@ ms.locfileid: "62159452"
 
 - 一是 [streamoff](../standard-library/ios-typedefs.md#streamoff) 类型的字节偏移。
 
-- 转换类型的状态，以供对象类 basic_filebuf `St`，通常`mbstate_t`。
+- 一个转换状态, 它由类型`St`为 basic_filebuf 的对象 (通常`mbstate_t`为) 使用。
 
 它还能存储 `fpos_t` 类型的任意文件位置，以供 [basic_filebuf](../standard-library/basic-filebuf-class.md) 类的对象使用。 但是，对于文件大小受限的环境，`streamoff` 和 `fpos_t` 有时可能互换使用。 对于不具有依赖于状态的编码的流的环境，实际上可能不会使用 `mbstate_t`。 因此，所存储成员对象的数目可能会有所不同。
 
@@ -37,7 +37,7 @@ class fpos
 
 ### <a name="parameters"></a>参数
 
-*Statetype*<br/>
+*Statetype*\
 状态信息。
 
 ### <a name="constructors"></a>构造函数
@@ -67,7 +67,7 @@ class fpos
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<ios>
+**标头：** \<ios>
 
 **命名空间：** std
 
@@ -83,20 +83,20 @@ fpos(Statetype _State, fpos_t _Filepos);
 
 ### <a name="parameters"></a>参数
 
-*_Off*<br/>
+*_Off*\
 进入流的偏移量。
 
-*_State*<br/>
+*_State*\
 `fpos` 对象的起始状态。
 
-*_Filepos*<br/>
+*_Filepos*\
 进入流的偏移量。
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数存储偏移量 *_Off*、 相对于文件开头和初始转换状态 （如果有关） 中。 如果 *_Off*为-1，生成的对象表示无效的流位置。
+第一个构造函数存储相对于文件开头和初始转换状态 (如果有问题) 的偏移 *_Off*。 如果 *_Off*为-1, 则生成的对象表示无效的流位置。
 
-第二个构造函数存储零偏移和对象 *_State*。
+第二个构造函数存储零偏移量和对象 *_State*。
 
 ## <a name="op_neq"></a>  fpos::operator!=
 
@@ -108,7 +108,7 @@ bool operator!=(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>参数
 
-*right*<br/>
+*然后*\
 要与之比较的文件位置指示器。
 
 ### <a name="return-value"></a>返回值
@@ -181,7 +181,7 @@ fpos<Statetype> operator+(streamoff _Off) const;
 
 ### <a name="parameters"></a>参数
 
-*_Off*<br/>
+*_Off*\
 要按其递增文件位置指示器的偏移量。
 
 ### <a name="return-value"></a>返回值
@@ -206,7 +206,7 @@ fpos<Statetype>& operator+=(streamoff _Off);
 
 ### <a name="parameters"></a>参数
 
-*_Off*<br/>
+*_Off*\
 要按其递增文件位置指示器的偏移量。
 
 ### <a name="return-value"></a>返回值
@@ -233,10 +233,10 @@ fpos<Statetype> operator-(streamoff _Off) const;
 
 ### <a name="parameters"></a>参数
 
-*right*<br/>
+*然后*\
 文件位置。
 
-*_Off*<br/>
+*_Off*\
 流偏移量。
 
 ### <a name="return-value"></a>返回值
@@ -257,7 +257,7 @@ fpos<Statetype>& operator-=(streamoff _Off);
 
 ### <a name="parameters"></a>参数
 
-*_Off*<br/>
+*_Off*\
 流偏移量。
 
 ### <a name="return-value"></a>返回值
@@ -282,7 +282,7 @@ bool operator==(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>参数
 
-*right*<br/>
+*然后*\
 要与之比较的文件位置指示器。
 
 ### <a name="return-value"></a>返回值
@@ -356,7 +356,7 @@ void state(Statetype _State);
 
 ### <a name="parameters"></a>参数
 
-*_State*<br/>
+*_State*\
 新的转换状态。
 
 ### <a name="return-value"></a>返回值
@@ -365,7 +365,7 @@ void state(Statetype _State);
 
 ### <a name="remarks"></a>备注
 
-第一个成员函数返回的值存储在`St`成员对象。 第二个成员函数存储 *_State*中`St`成员对象。
+第一个成员函数返回存储在`St`成员对象中的值。 第二个成员函数在`St`成员对象中存储 _State。
 
 ### <a name="example"></a>示例
 
@@ -394,6 +394,6 @@ int main() {
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream 编程](../standard-library/iostream-programming.md)<br/>
-[iostreams 约定](../standard-library/iostreams-conventions.md)<br/>
+[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream 编程](../standard-library/iostream-programming.md)\
+[iostreams 约定](../standard-library/iostreams-conventions.md)

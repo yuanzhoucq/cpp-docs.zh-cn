@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::binomial_distribution [C++], param_type
 - std::binomial_distribution [C++], param_type
 ms.assetid: b7c8a26a-da8c-45a5-a3a8-208f7a3609ce
-ms.openlocfilehash: ee61b79848a5649d44cf02384f32ad8e0226feb0
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 525e448a130f33df478627f7ae7ca682ff4a556d
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451106"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448048"
 ---
 # <a name="binomialdistribution-class"></a>binomial_distribution 类
 
@@ -71,22 +71,22 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*IntType*<br/>
-整数结果类型，默认为**int**。有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*IntType*\
+整数结果类型, 默认为**int**。有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
-*URNG*<br/>
+*URNG*\
 统一随机数生成器引擎。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
-此模板类将描述产生用户指定的整型值类型**int**如果未提供任何内容根据二项式分布离散型概率函数分布。 下表链接到有关各个成员的文章。
+模板类描述产生用户指定的整型值的分布, 或者 **, 如果未**提供任何值, 则根据二项式分布离散概率函数进行分布。 下表链接到有关各个成员的文章。
 
 ||||
 |-|-|-|
 |[binomial_distribution](#binomial_distribution)|`binomial_distribution::t`|`binomial_distribution::param`|
 |`binomial_distribution::operator()`|`binomial_distribution::p`|[param_type](#param_type)|
 
-属性成员`t()`并`p()`返回参数值的当前存储的分布*t*并*p*分别。
+属性成员`t()`和`p()`分别返回当前存储的分布参数值*t*和*p* 。
 
 属性成员 `param()` 将设置或返回 `param_type` 存储的分布参数包。
 
@@ -242,22 +242,22 @@ explicit binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-*t*<br/>
+*关心*\
 `t` 分布参数。
 
-*p*<br/>
+*h-p*\
 `p` 分布参数。
 
-*parm*<br/>
+*parm*\
 用于构造分布的 `param_type` 结构。
 
 ### <a name="remarks"></a>备注
 
 **前置条件：** `0 ≤ t` 和 `0.0 ≤ p ≤ 1.0`
 
-第一个构造函数构造一个对象，其存储*p*值保留值*p*并且其存储*t*值保留值*t*。
+第一个构造函数将构造一个对象, 该对象的存储的*p*值保留值*p* , 并且存储的*t*值保留值*t*。
 
-第二个构造函数将构造一个从 parm  初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
+第二个构造函数将构造一个从 parm 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
 
 ## <a name="param_type"></a>  binomial_distribution::param_type
 
@@ -277,13 +277,13 @@ struct param_type {
 
 ### <a name="parameters"></a>参数
 
-*t*<br/>
+*关心*\
 `t` 分布参数。
 
-*p*<br/>
+*h-p*\
 `p` 分布参数。
 
-*right*<br/>
+*然后*\
 要与它进行比较的 `param_type` 对象。
 
 ### <a name="remarks"></a>备注
@@ -294,4 +294,4 @@ struct param_type {
 
 ## <a name="see-also"></a>请参阅
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

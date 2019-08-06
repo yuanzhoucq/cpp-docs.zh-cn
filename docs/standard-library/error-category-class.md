@@ -56,7 +56,7 @@ error_category(const error_category&) = delete
 |[default_error_condition](#default_error_condition)|存储错误条件对象的错误代码值。|
 |[equivalent](#equivalent)|返回指定错误对象是否相等的值。|
 |[generic_category](#generic)||
-|message[](#message)|返回指定错误代码的名称。|
+|[message](#message)|返回指定错误代码的名称。|
 |[name](#name)|返回类别名称。|
 |[system_category](#system)||
 

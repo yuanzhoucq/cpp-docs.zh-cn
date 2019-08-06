@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - istream header
 ms.assetid: efcf24e4-05d1-4719-ab0b-9e7ebe845d89
-ms.openlocfilehash: 2e39c0de5b11c9aa0a4c69f0142841469ef798c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ad27bf849e8d4b9188868b9a29bf423b4cafafa
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413276"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458734"
 ---
 # <a name="ltistreamgt"></a>&lt;istream&gt;
 
@@ -29,8 +29,8 @@ ms.locfileid: "62413276"
 
 |类型名称|描述|
 |-|-|
-|[iostream](../standard-library/istream-typedefs.md#iostream)|一种类型`basic_iostream`专用于**char**。|
-|[istream](../standard-library/istream-typedefs.md#istream)|一种类型`basic_istream`专用于**char**。|
+|[iostream](../standard-library/istream-typedefs.md#iostream)|在`basic_iostream` **char**上专用化的类型。|
+|[istream](../standard-library/istream-typedefs.md#istream)|在`basic_istream` **char**上专用化的类型。|
 |[wiostream](../standard-library/istream-typedefs.md#wiostream)|专用于 **wchar** 的类型 `basic_iostream`。|
 |[wistream](../standard-library/istream-typedefs.md#wistream)|专用于 **wchar** 的类型 `basic_istream`。|
 
@@ -52,10 +52,10 @@ ms.locfileid: "62413276"
 |类|描述|
 |-|-|
 |[basic_iostream](../standard-library/basic-iostream-class.md)|可以完成输入和输出的流类。|
-|[basic_istream](../standard-library/basic-istream-class.md)|此模板类描述一个对象，用于控制提取元素和编码的对象从具有类型的元素的流缓冲区`Elem`，也称为[char_type](../standard-library/basic-ios-class.md#char_type)，其字符特征由类`Tr`，也称为[traits_type](../standard-library/basic-ios-class.md#traits_type)。|
+|[basic_istream](../standard-library/basic-istream-class.md)|此模板类描述一个对象, 该对象控制从流缓冲区提取元素和编码对象, 该缓冲区包含`Elem`类型为的元素, 也称为[char_type](../standard-library/basic-ios-class.md#char_type), 其字符特征由类`Tr`确定。称为[traits_type](../standard-library/basic-ios-class.md#traits_type)。|
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream 编程](../standard-library/iostream-programming.md)<br/>
-[iostreams 约定](../standard-library/iostreams-conventions.md)<br/>
+[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream 编程](../standard-library/iostream-programming.md)\
+[iostreams 约定](../standard-library/iostreams-conventions.md)

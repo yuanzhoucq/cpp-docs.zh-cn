@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt header
 ms.assetid: d44ee229-00d5-4761-9b48-0c702122789d
-ms.openlocfilehash: 56cd4263d3dcddd23246a05466275b8b7d370b95
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fc711b14a2d30041b4585a9515a95e42280f5306
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405204"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458589"
 ---
 # <a name="ltcodecvtgt"></a>&lt;codecvt&gt;
 
-定义了多种模板类，用于描述基于模板类 [codecvt](../standard-library/codecvt-class.md) 的对象。 这些对象来充当[区域设置 facet](../standard-library/locale-class.md#facet_class)控制的类型的值序列之间的转换`Elem`和类型的值序列**char**。
+定义了多种模板类，用于描述基于模板类 [codecvt](../standard-library/codecvt-class.md) 的对象。 这些对象可用作[区域设置 facet](../standard-library/locale-class.md#facet_class) , 它们控制类型`Elem`的值序列与**char**类型的值序列之间的转换。
 
 ## <a name="syntax"></a>语法
 
@@ -34,7 +34,7 @@ ms.locfileid: "62405204"
 
 - UTF-16 是在程序内作为任意一个或两个 16 位整数的编码的 Unicode。 （请注意，这不符合标准 C 或标准 C++ 的有效宽字符编码的全部要求。 不过，它仍被广泛使用。）
 
-对于字节流 (存储在文件中，作为字节序列进行传输或存储在数组中的程序**char**):
+对于字节流 (存储在文件中, 以字节序列的形式传输, 或存储于**char**数组中的程序内):
 
 - Utf-8 是字节流中已编码的 Unicode，为具有确定性字节顺序的一个或多个八位字节。
 
@@ -64,4 +64,4 @@ ms.locfileid: "62405204"
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)<br/>
+[头文件引用](../standard-library/cpp-standard-library-header-files.md)

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::extreme_value_distribution [C++], param_type
 - std::extreme_value_distribution [C++], param_type
 ms.assetid: a0cd8370-0a54-4e26-9388-8b9678fb57da
-ms.openlocfilehash: 5bc0270cb24fcff93d995e8908daaec62c956371
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 810a02e620e6b38732daf611d3b44a4a277322a5
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451185"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457762"
 ---
 # <a name="extremevaluedistribution-class"></a>extreme_value_distribution 类
 
@@ -71,15 +71,15 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*RealType*<br/>
-浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*RealType*\
+浮点结果类型, 默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
-*URNG*<br/>
+*URNG*\
 随机数生成器引擎。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
-此模板类将描述产生的值的用户指定的浮点类型**double**如果未提供任何内容极值分布根据分布。 下表链接到有关各个成员的文章。
+此模板类描述产生用户指定的浮点类型的值的分布, 或者, 如果未提供任何值, 则根据极端值分布来分布类型**double** 。 下表链接到有关各个成员的文章。
 
 ||||
 |-|-|-|
@@ -192,13 +192,13 @@ explicit extreme_value_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-*a_value*<br/>
+*a_value*\
 `a` 分布参数。
 
-*b_value*<br/>
+*b_value*\
 `b` 分布参数。
 
-*parm*<br/>
+*parm*\
 用于构造分布的 `param_type` 结构。
 
 ### <a name="remarks"></a>备注
@@ -207,7 +207,7 @@ explicit extreme_value_distribution(const param_type& parm);
 
 第一个构造函数将构造一个其存储的 `a` 值保留值 *a_value*，并且其存储的 `b` 值保留值 *b_value* 的对象。
 
-第二个构造函数将构造一个从 parm  初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
+第二个构造函数将构造一个从 parm 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
 
 ## <a name="param_type"></a>  extreme_value_distribution::param_type
 
@@ -227,13 +227,13 @@ struct param_type {
 
 ### <a name="parameters"></a>参数
 
-*a_value*<br/>
+*a_value*\
 `a` 分布参数。
 
-*b_value*<br/>
+*b_value*\
 `b` 分布参数。
 
-*right*<br/>
+*然后*\
 要与它进行比较的 `param_type` 对象。
 
 ### <a name="remarks"></a>备注
@@ -244,4 +244,4 @@ struct param_type {
 
 ## <a name="see-also"></a>请参阅
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

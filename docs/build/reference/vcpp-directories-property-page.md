@@ -1,6 +1,6 @@
 ---
 title: “VC++ 目录”属性页
-ms.date: 10/09/2018
+ms.date: 07/17/2019
 f1_keywords:
 - VC.Project.VCDirectories.IncludePath
 - VC.Project.VCDirectories.ReferencePath
@@ -13,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - VC++ Directories Property Page
 ms.assetid: 428eeef6-f127-4271-b3ea-0ae6f2c3d624
-ms.openlocfilehash: aff143fca47cb5958b90e4a3f4c7ec284f2129f5
-ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.openlocfilehash: 9b005a89156db48615ec6ea8dfc4f07a7414fc3b
+ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67861047"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68299779"
 ---
 # <a name="vc-directories-property-page-windows"></a>“VC++ 目录”属性页 (Windows)
 
-使用此属性页告知 Visual Studio 在生成当前所选项目时要使用的目录。 若要在解决方案中设置多个项目的目录，请使用自定义属性表中所述[共享或重用 Visual StudioC++项目设置](../create-reusable-property-configurations.md)。
+使用此属性页告知 Visual Studio 在生成当前所选项目时要使用的目录。 若要在解决方案中设置多个项目的目录, 请使用自定义属性表, 如[共享或重复C++使用 Visual Studio 项目设置](../create-reusable-property-configurations.md)中所述。
 
 若需要此页的 Linux 版本，请参阅 [VC++ 目录 (Linux C++)](../../linux/prop-pages/directories-linux.md)。
 
@@ -38,7 +38,7 @@ VC++ 目录属性适用于项目，而不是顶级解决方案节点。 如果�
 
 请注意，跨平台项目的“VC++ 目录”属性页看起来会有所不同  。 若要了解 Linux C++ 项目的特定信息，请参阅 [VC++ 目录 (Linux C++)](../../linux/prop-pages/directories-linux.md)。
 
-如果您不熟悉*项目属性*在 Visual Studio 中，您可能会有所它到第一次读取[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
+如果你不熟悉 Visual Studio 中的*项目属性*, 则在[visual studio 中首先阅读C++设置编译器和生成属性](../working-with-project-properties.md)可能会很有帮助。
 
 “VC++ 目录”属性的默认设置取决于项目类型  。 对于桌面项目，它们包括特定平台工具集的 C++ 工具位置以及 Windows SDK 位置。 可更改“配置属性” > “常规”页上的“平台工具集”和“Windows SDK 版本”     。
 
@@ -54,7 +54,7 @@ VC++ 目录属性适用于项目，而不是顶级解决方案节点。 如果�
 
 ![显示库目录](../media/vcppdir_libdir.png "用于添加或删除库路径的对话框")
 
-使用此对话框查看当前目录。 不过如果希望更改或添加目录，最好使用“属性管理器”创建属性表或修改默认用户属性表  。 有关详细信息，请参阅[共享或重用 Visual StudioC++项目设置](../create-reusable-property-configurations.md)。
+使用此对话框查看当前目录。 不过如果希望更改或添加目录，最好使用“属性管理器”创建属性表或修改默认用户属性表  。 有关详细信息, 请参阅[共享或重复使用C++ Visual Studio 项目设置](../create-reusable-property-configurations.md)。
 
 如上所述，很多继承路径都以宏的形式提供。  若要检查某个宏的当前值，请选择对话框右下角中的“宏”按钮  。 请注意，很多宏都取决于配置类型。 同样的宏在调试生成和版本生成中得出的路径可能会有所不同。
 
@@ -62,11 +62,11 @@ VC++ 目录属性适用于项目，而不是顶级解决方案节点。 如果�
 
 ![查看宏的值](../media/vcppdir_libdir_macros.png "用于编辑宏的对话框")
 
-注意:键入时，会填充列表。 请勿按 Enter  。
+注意:在您键入时, 将填充该列表。 请勿按 Enter  。
 
-有关宏以及为什么应而不是硬编码路径尽可能使用它们的详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
+若要详细了解宏以及为什么应尽可能使用宏, 而不是使用硬编码路径, 请[参阅C++在 Visual Studio 中设置编译器和生成属性](../working-with-project-properties.md)。
 
-有关常用宏的列表，请参阅[用于常见宏生成命令和属性](common-macros-for-build-commands-and-properties.md)。
+有关常用宏的列表, 请参阅[用于生成命令和属性的常见宏](common-macros-for-build-commands-and-properties.md)。
 
 可以通过两种方式来定义自己的宏：
 
@@ -74,7 +74,7 @@ VC++ 目录属性适用于项目，而不是顶级解决方案节点。 如果�
 
 - 在 .props 文件中定义用户宏。 有关详细信息，请参阅[属性页宏](../working-with-project-properties.md)。
 
-有关详细信息，请参阅以下博客文章：[VC + + 目录](https://blogs.msdn.com/b/vsproject/archive/2009/07/07/vc-directories.aspx)，[继承属性和属性表](https://blogs.msdn.com/b/vsproject/archive/2009/06/23/inherited-properties-and-property-sheets.aspx)，和[Visual Studio 2010C++项目升级指南](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/)。
+有关详细信息, 请参阅以下博客文章:[VC + + 目录](https://blogs.msdn.com/b/vsproject/archive/2009/07/07/vc-directories.aspx)、[继承的属性和属性表](https://blogs.msdn.com/b/vsproject/archive/2009/06/23/inherited-properties-and-property-sheets.aspx)以及[Visual Studio 2010 C++项目升级指南](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/)。
 
 ## <a name="directory-types"></a>目录类型
 

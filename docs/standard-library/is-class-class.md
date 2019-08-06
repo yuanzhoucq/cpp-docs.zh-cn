@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_class class
 - is_class
 ms.assetid: 96fc34a3-a81b-4ec6-b7fb-baafde1a0f4e
-ms.openlocfilehash: 43a4211d9841e754cefbe1bdf405001f0f4657d0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7dc71622a37164e996b067276ddf8a5d1dd88b62
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383641"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456641"
 ---
 # <a name="isclass-class"></a>is_class 类
 
@@ -27,12 +27,12 @@ struct is_class;
 
 ### <a name="parameters"></a>参数
 
-*Ty*<br/>
+*Ty*\
 要查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型谓词的实例将保留 true 类型*Ty*一种类型定义为**类**或**结构**，或`cv-qualified`窗体的其中之一，否则为 false。
+如果类型*Ty*是定义为**类**或`cv-qualified` **结构**的类型或其中一个类型的形式, 则类型谓词的实例为 true; 否则为 false。
 
 ## <a name="example"></a>示例
 
@@ -65,12 +65,12 @@ is_class<int> == false
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<type_traits>
+**标头：** \<type_traits>
 
 **命名空间：** std
 
 ## <a name="see-also"></a>请参阅
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_compound 类](../standard-library/is-compound-class.md)<br/>
-[is_union 类](../standard-library/is-union-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_compound 类](../standard-library/is-compound-class.md)\
+[is_union 类](../standard-library/is-union-class.md)

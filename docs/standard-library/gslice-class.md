@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::gslice [C++], start
 - std::gslice [C++], stride
 ms.assetid: f47cffd0-ea59-4b13-848b-7a5ce1d7e2a3
-ms.openlocfilehash: bee6fec3e09f7c5758112ba8b0c171a300797f9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9290fabc86ffbdb051b7c61fe1600cd2f7f17dca
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159465"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448900"
 ---
 # <a name="gslice-class"></a>gslice 类
 
@@ -25,13 +25,13 @@ ms.locfileid: "62159465"
 
 ## <a name="remarks"></a>备注
 
-类用于存储确定类型 [gslice_array](../standard-library/gslice-array-class.md) 对象的参数。 当类 gslice 对象显示为类 [valarray](../standard-library/valarray-class.md#op_at)**\<Type>** 时，将间接构造一个 valarray 的子集。 存储的值（用于指定从父级 valarray 选择的子集）包括：
+类用于存储确定类型 [gslice_array](../standard-library/gslice-array-class.md) 对象的参数。 当类 gslice 对象显示为类 [valarray](../standard-library/valarray-class.md#op_at) **\<Type>** 时，将间接构造一个 valarray 的子集。 存储的值（用于指定从父级 valarray 选择的子集）包括：
 
 - 一个起始索引。
 
-- 类的长度矢量`valarray<size_t>`。
+- 类`valarray<size_t>`的长度向量。
 
-- 类的跨距矢量`valarray<size_t>`。
+- 类`valarray<size_t>`的跨距向量。
 
 两个矢量必须具有相同长度。
 
@@ -55,7 +55,7 @@ ms.locfileid: "62159465"
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<valarray>
+**标头：** \<valarray>
 
 **命名空间：** std
 
@@ -74,22 +74,22 @@ gslice(
 
 ### <a name="parameters"></a>参数
 
-*_StartIndex*<br/>
+*_StartIndex*\
 子集中第一个元素的 valarray 索引。
 
-*_LenArray*<br/>
+*_LenArray*\
 指定每个切分中元素数的数组。
 
-*_IncArray*<br/>
+*_IncArray*\
 指定每个切分中跨距的数组。
 
 ### <a name="return-value"></a>返回值
 
-默认构造函数对起始索引存储零，对于长度和跨距向量存储长度为零的向量。 第二个构造函数存储 *_StartIndex*对于起始索引 *_LenArray*对于长度数组并 *_IncArray*对于跨距数组。
+默认构造函数对起始索引存储零，对于长度和跨距向量存储长度为零的向量。 第二个构造函数将 *_StartIndex*存储为起始索引, *_LenArray*为长度数组, 并为跨距数组存储 *_IncArray* 。
 
 ### <a name="remarks"></a>备注
 
-**gslice** 定义一个由多个 valarray 的切分组成的 valarray 子集，其中每个都以同一指定元素开始。 `gslice` 和 [slice::slice](../standard-library/slice-class.md#slice) 之间的唯一差别在于使用数组定义多个切分的能力。 第一个切分具有索引编号为第一个元素 *_StartIndex*，指定的第一个元素的元素数 *_LenArray*，并提供的第一个元素的跨距 *_IncArray*. 下一个正交切分集具有由第一个切分指定的第一个元素。 第二个元素 *_LenArray*指定的元素数。 第二个元素由给定跨距 *_IncArray*。 第三个维度的切分会将二维数组的元素视为起始元素，以此类推
+**gslice** 定义一个由多个 valarray 的切分组成的 valarray 子集，其中每个都以同一指定元素开始。 `gslice` 和 [slice::slice](../standard-library/slice-class.md#slice) 之间的唯一差别在于使用数组定义多个切分的能力。 第一个切片具有一个索引为 *_StartIndex*的第一个元素、 *_LenArray*的第一个元素指定的多个元素以及 *_IncArray*的第一个元素所指定的步幅。 下一个正交切分集具有由第一个切分指定的第一个元素。 *_LenArray*的第二个元素指定元素的数量。 跨距由 *_IncArray*的第二个元素提供。 第三个维度的切分会将二维数组的元素视为起始元素，以此类推
 
 ### <a name="example"></a>示例
 
@@ -349,4 +349,4 @@ vaGSlice.stride ( ) = ( 7 4 ).
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

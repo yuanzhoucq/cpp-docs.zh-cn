@@ -7,12 +7,12 @@ helpviewer_keywords:
 - remove_const class
 - remove_const
 ms.assetid: feb76fb3-9228-41d6-80f6-2fbb04daec43
-ms.openlocfilehash: 04f7c6475d88f843ef381563f80559529e6b59e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0091c77d33e1fcd2be5b361680c9422210866be2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368963"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451358"
 ---
 # <a name="removeconst-class"></a>remove_const 类
 
@@ -32,12 +32,12 @@ using remove_const_t = typename remove_const<T>::type;
 
 ### <a name="parameters"></a>参数
 
-*T*<br/>
+*关心*\
 要修改的类型。
 
 ## <a name="remarks"></a>备注
 
-实例`remove_const<T>`包含修改类型，即`T1`时*T*的形式`const T1`; 否则为*T*。
+的`remove_const<T>`实例保留修改后的类型, 当*t*为形式`const T1`时, 则为, 否则为 `T1` t。
 
 ## <a name="example"></a>示例
 
@@ -63,12 +63,12 @@ remove_const_t<const int> == int
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<type_traits>
+**标头：** \<type_traits>
 
 **命名空间：** std
 
 ## <a name="see-also"></a>请参阅
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[add_const 类](../standard-library/add-const-class.md)<br/>
-[remove_cv 类](../standard-library/remove-cv-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[add_const Class](../standard-library/add-const-class.md)\
+[remove_cv 类](../standard-library/remove-cv-class.md)

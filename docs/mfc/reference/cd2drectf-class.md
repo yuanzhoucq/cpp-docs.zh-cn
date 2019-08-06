@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CD2DRectF [MFC], CD2DRectF
 - CD2DRectF [MFC], IsNull
 ms.assetid: 87c12d87-9d18-4a19-ba14-0f51d6b6835a
-ms.openlocfilehash: 8e5c22fe15ce0d930f81dd16673927d5299bf630
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9b91cfaec3827a61152c4116b56e817a436606be
+ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396270"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682403"
 ---
 # <a name="cd2drectf-class"></a>CD2DRectF 类
 
@@ -33,19 +33,19 @@ class CD2DRectF : public D2D1_RECT_F;
 
 |名称|描述|
 |----------|-----------------|
-|[CD2DRectF::CD2DRectF](#cd2drectf)|已重载。 构造`CD2DRectF`对象从`D2D1_RECT_F`对象。|
+|[CD2DRectF::CD2DRectF](#cd2drectf)|已重载。 `CD2DRectF` 从`D2D1_RECT_F`对象构造对象。|
 
 ### <a name="public-methods"></a>公共方法
 
 |名称|描述|
 |----------|-----------------|
-|[CD2DRectF::IsNull](#isnull)|返回**布尔**值，该值指示表达式是否包含任何有效的数据 (NULL)。|
+|[CD2DRectF::IsNull](#isnull)|返回一个**布尔**值, 该值指示表达式是否不包含有效数据 (NULL)。|
 
 ### <a name="public-operators"></a>公共运算符
 
 |名称|描述|
 |----------|-----------------|
-|[CD2DRectF::operator CRect](#operator_crect)|将转换`CD2DRectF`到`CRect`对象。|
+|[CD2DRectF:: operator CRect](#operator_crect)|转换`CD2DRectF` 为`CRect`对象。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -55,16 +55,16 @@ class CD2DRectF : public D2D1_RECT_F;
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxrendertarget.h
+**标头:** afxrendertarget
 
 ##  <a name="cd2drectf"></a>  CD2DRectF::CD2DRectF
 
-构造 CRect 对象从一个 CD2DRectF 对象。
+从 CRect 对象构造 CD2DRectF 对象。
 
 ```
 CD2DRectF(const CRect& rect);
 CD2DRectF(const D2D1_RECT_F& rect);
-  CD2DRectF(const D2D1_RECT_F* rect);
+CD2DRectF(const D2D1_RECT_F* rect);
 
 CD2DRectF(
     FLOAT fLeft = 0.,
@@ -79,20 +79,20 @@ CD2DRectF(
 源矩形
 
 *fLeft*<br/>
-源左边缘坐标
+源左坐标
 
 *fTop*<br/>
-源上边缘坐标
+源顶层坐标
 
 *fRight*<br/>
-源角坐标
+源右坐标
 
 *fBottom*<br/>
-源下边缘坐标
+源下坐标
 
 ##  <a name="isnull"></a>  CD2DRectF::IsNull
 
-返回一个布尔值，该值指示表达式是否包含任何有效的数据 (Null)。
+返回一个布尔值, 该值指示表达式是否不包含有效数据 (Null)。
 
 ```
 BOOL IsNull() const;
@@ -100,7 +100,7 @@ BOOL IsNull() const;
 
 ### <a name="return-value"></a>返回值
 
-矩形的上、 左、 下、 和正确的值均相等，则为 0; 如果为 TRUE否则为 FALSE。
+如果矩形的上、左、下、右值全部等于 0, 则为 TRUE;否则为 FALSE。
 
 ##  <a name="operator_crect"></a>  CD2DRectF::operator CRect
 

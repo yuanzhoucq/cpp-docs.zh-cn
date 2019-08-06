@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (thread)
 - std::operator&lt;= (thread)
 - std::operator== (thread)
-ms.openlocfilehash: 5a2fd845598ac9f9c983bf53cbd7665ef66ffb70
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0593b8016cf45abe64114958ccda84eb3704844
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412041"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458443"
 ---
 # <a name="ltthreadgt-operators"></a>&lt;thread&gt; 运算符
 
@@ -45,10 +45,10 @@ bool operator>= (
 
 ### <a name="parameters"></a>参数
 
-左侧<br/>
+*左中*\
 左 `thread::id` 对象。
 
-右侧<br/>
+*然后*\
 正确的 `thread::id` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -71,10 +71,10 @@ bool operator> (
 
 ### <a name="parameters"></a>参数
 
-左侧<br/>
+*左中*\
 左 `thread::id` 对象。
 
-右侧<br/>
+*然后*\
 正确的 `thread::id` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -97,10 +97,10 @@ bool operator<= (
 
 ### <a name="parameters"></a>参数
 
-左侧<br/>
+*左中*\
 左 `thread::id` 对象。
 
-右侧<br/>
+*然后*\
 正确的 `thread::id` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -123,15 +123,15 @@ bool operator<(
 
 ### <a name="parameters"></a>参数
 
-左侧<br/>
+*左中*\
 左 `thread::id` 对象。
 
-右侧<br/>
+*然后*\
 正确的 `thread::id` 对象。
 
 ### <a name="return-value"></a>返回值
 
-**true**如果*左*之前*右侧*在总排序; 否则为**false**。
+如果在合计顺序*中* *靠左*, 则为**true** ;否则**为 false**。
 
 ### <a name="remarks"></a>备注
 
@@ -151,10 +151,10 @@ bool operator!= (
 
 ### <a name="parameters"></a>参数
 
-左侧<br/>
+*左中*\
 左 `thread::id` 对象。
 
-右侧<br/>
+*然后*\
 正确的 `thread::id` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -177,15 +177,15 @@ bool operator== (
 
 ### <a name="parameters"></a>参数
 
-左侧<br/>
+*左中*\
 左 `thread::id` 对象。
 
-右侧<br/>
+*然后*\
 正确的 `thread::id` 对象。
 
 ### <a name="return-value"></a>返回值
 
-**true**如果两个对象表示同一执行线程或者这两个对象表示一个线程的执行; 否则为**false**。
+如果两个对象表示相同的执行线程, 或者如果这两个对象都不表示执行线程,**则为 true** ;否则**为 false**。
 
 ### <a name="remarks"></a>备注
 
@@ -203,10 +203,10 @@ basic_ostream<Elem, Tr>& operator<<(
 
 ### <a name="parameters"></a>参数
 
-*Ostr*<br/>
+*Ostr*\
 一个 [basic_ostream](../standard-library/basic-ostream-class.md) 对象。
 
-*Id*<br/>
+*识别*\
 一个 `thread::id` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -215,10 +215,10 @@ basic_ostream<Elem, Tr>& operator<<(
 
 ### <a name="remarks"></a>备注
 
-此函数将插入*Id*成*Ostr*。
+此函数将*Id*插入*Ostr*。
 
 如果两个`thread::id` 对象相等，这些对象的文本表示形式相同。
 
 ## <a name="see-also"></a>请参阅
 
-[\<thread>](../standard-library/thread.md)<br/>
+[\<thread>](../standard-library/thread.md)

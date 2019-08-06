@@ -9,16 +9,16 @@ f1_keywords:
 - array/std::array::operator>=
 - array/std::array::operator==
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-ms.openlocfilehash: c44789c958b3fc24441b95178acc85ce3ba337fb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88244879be9ab27c826c0b051b724fa1c3ed4784
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377330"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456767"
 ---
 # <a name="ltarraygt-operators"></a>&lt;array&gt; 运算符
 
-\<数组 > 标头包含这些**数组**非成员比较模板函数。
+数组\<> 的标头包含这些**数组**非成员比较模板函数。
 
 ||||
 |-|-|-|
@@ -38,16 +38,16 @@ bool operator!=(
 
 ### <a name="parameters"></a>参数
 
-*Ty*<br/>
+*Ty*\
 元素的类型。
 
-*N*<br/>
+*北*\
 数组大小。
 
-*left*<br/>
+*左中*\
 要比较的左容器。
 
-*right*<br/>
+*然后*\
 要比较的右容器。
 
 ### <a name="remarks"></a>备注
@@ -111,16 +111,16 @@ bool operator<(
 
 ### <a name="parameters"></a>参数
 
-*Ty*<br/>
+*Ty*\
 元素的类型。
 
-*N*<br/>
+*北*\
 数组大小。
 
-*left*<br/>
+*左中*\
 要比较的左容器。
 
-*right*<br/>
+*然后*\
 要比较的右容器。
 
 ### <a name="remarks"></a>备注
@@ -184,16 +184,16 @@ bool operator<=(
 
 ### <a name="parameters"></a>参数
 
-*Ty*<br/>
+*Ty*\
 元素的类型。
 
-*N*<br/>
+*北*\
 数组大小。
 
-*left*<br/>
+*左中*\
 要比较的左容器。
 
-*right*<br/>
+*然后*\
 要比较的右容器。
 
 ### <a name="remarks"></a>备注
@@ -257,16 +257,16 @@ bool operator==(
 
 ### <a name="parameters"></a>参数
 
-*Ty*<br/>
+*Ty*\
 元素的类型。
 
-*N*<br/>
+*北*\
 数组大小。
 
-*left*<br/>
+*左中*\
 要比较的左容器。
 
-*right*<br/>
+*然后*\
 要比较的右容器。
 
 ### <a name="remarks"></a>备注
@@ -330,16 +330,16 @@ bool operator>(
 
 ### <a name="parameters"></a>参数
 
-*Ty*<br/>
+*Ty*\
 元素的类型。
 
-*N*<br/>
+*北*\
 数组大小。
 
-*left*<br/>
+*左中*\
 要比较的左容器。
 
-*right*<br/>
+*然后*\
 要比较的右容器。
 
 ### <a name="remarks"></a>备注
@@ -403,16 +403,16 @@ bool operator>=(
 
 ### <a name="parameters"></a>参数
 
-*Ty*<br/>
+*Ty*\
 元素的类型。
 
-*N*<br/>
+*北*\
 数组大小。
 
-*left*<br/>
+*左中*\
 要比较的左容器。
 
-*right*<br/>
+*然后*\
 要比较的右容器。
 
 ### <a name="remarks"></a>备注
@@ -465,4 +465,4 @@ false
 
 ## <a name="see-also"></a>请参阅
 
-[\<array>](../standard-library/array.md)<br/>
+[\<array>](../standard-library/array.md)

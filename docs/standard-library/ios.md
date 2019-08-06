@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
-ms.openlocfilehash: 013888a1ae11042645ef48c4fae15cbe6c2d939f
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 96e8588e72e864d5324e406859e5a39053a46ccf
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245238"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449137"
 ---
 # <a name="ltiosgt"></a>&lt;ios&gt;
 
@@ -25,13 +25,13 @@ ms.locfileid: "68245238"
 **命名空间：** std
 
 > [!NOTE]
-> \<Ios > 库使用`#include <iosfwd>`语句。
+> Ios > 库`#include <iosfwd>`使用语句。 \<
 
 ## <a name="remarks"></a>备注
 
-一大组函数为操控器。 在 \<ios> 中声明的操控器可更改存储在其 [ios_base](../standard-library/ios-base-class.md) 类的自变量对象中的值。 其他操控器对由对象（其类型派生自此类）控制的流执行操作，如其中一个模板类 [basic_istream](../standard-library/basic-istream-class.md) 或 [basic_ostream](../standard-library/basic-ostream-class.md) 的专用化。 例如， [noskipws](../standard-library/ios-functions.md#noskipws)(**str**) 清除格式标志`ios_base::skipws`对象中`str`，它可以是以下类型之一。
+一大组函数为操控器。 在 \<ios> 中声明的操控器可更改存储在其 [ios_base](../standard-library/ios-base-class.md) 类的自变量对象中的值。 其他操控器对由对象（其类型派生自此类）控制的流执行操作，如其中一个模板类 [basic_istream](../standard-library/basic-istream-class.md) 或 [basic_ostream](../standard-library/basic-ostream-class.md) 的专用化。 例如, [noskipws](../standard-library/ios-functions.md#noskipws)(**str**) 清除对象`ios_base::skipws` `str`中的格式标志, 该标志可以是以下类型之一。
 
-还可以通过将操控器插入到输出流中或从输入流提取操控器对其进行调用，原因是为派生自 `ios_base` 的类提供了专门的插入和提取操作。 例如:
+还可以通过将操控器插入到输出流中或从输入流提取操控器对其进行调用，原因是为派生自 `ios_base` 的类提供了专门的插入和提取操作。 例如：
 
 ```cpp
 istr>> noskipws;
@@ -101,7 +101,7 @@ istr>> noskipws;
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream 编程](../standard-library/iostream-programming.md)<br/>
-[iostreams 约定](../standard-library/iostreams-conventions.md)<br/>
+[头文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream 编程](../standard-library/iostream-programming.md)\
+[iostreams 约定](../standard-library/iostreams-conventions.md)

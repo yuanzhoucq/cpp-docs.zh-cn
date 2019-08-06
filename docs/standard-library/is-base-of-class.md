@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_base_of class
 - is_base_of
 ms.assetid: 436f6213-1d4c-4ffc-a588-fc7c4887dd86
-ms.openlocfilehash: 345301b5eeed7b66f18a54e56b9bee6346078634
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d56222f218033d00583e5e3def9790720ef7bb94
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383667"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456621"
 ---
 # <a name="isbaseof-class"></a>is_base_of 类
 
@@ -27,15 +27,15 @@ struct is_base_of;
 
 ### <a name="parameters"></a>参数
 
-*基本*<br/>
+*基座*\
 要测试的基类。
 
-*派生*<br/>
+*派生*\
 要测试的派生类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型谓词的实例将保留 true 类型*基*是类型的基类*派生*，否则为 false。
+如果类型*基*是*派生*类型的基类, 则类型谓词的实例为 true; 否则为 false。
 
 ## <a name="example"></a>示例
 
@@ -74,11 +74,11 @@ is_base_of<derived, base> == false
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<type_traits>
+**标头：** \<type_traits>
 
 **命名空间：** std
 
 ## <a name="see-also"></a>请参阅
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_convertible 类](../standard-library/is-convertible-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_convertible 类](../standard-library/is-convertible-class.md)

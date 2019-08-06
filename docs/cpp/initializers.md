@@ -1,19 +1,17 @@
 ---
 title: 初始值设定项
-ms.date: 11/19/2018
+ms.date: 07/29/2019
+description: 如何在中C++初始化类、结构、数组和基础类型。
 helpviewer_keywords:
-- array-element initializers
-- initializing arrays [C++], initializers
 - arrays [C++], array-element initializers
-- declarators, as initializers
-- initializers, array element
+- aggregate initializers [C++]
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
-ms.openlocfilehash: 1890899fb2ad63bff06d514ae8b18f9dc3ff9e21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fd926177dd7540d8dc1e8512e9f17e20a0b8238c
+ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183517"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661617"
 ---
 # <a name="initializers"></a>初始值设定项
 
@@ -83,11 +81,11 @@ ms.locfileid: "62183517"
 
 - 数值变量初始化为 0（或 0.0、0.0000000000 等）。
 
-- Char 变量初始化为`'\0'`。
+- Char 变量将初始化为`'\0'`。
 
-- 指针初始化为**nullptr**。
+- 将指针初始化为**nullptr**。
 
-- 数组[POD](../standard-library/is-pod-class.md)类、 结构和联合将其成员初始化为零值。
+- 数组、 [POD](../standard-library/is-pod-class.md)类、结构和联合的成员被初始化为零值。
 
 零初始化在不同的时间执行：
 
@@ -116,9 +114,9 @@ int main() {
 }
 ```
 
-### <a name="default_initialization"></a> 默认初始化
+### <a name="default_initialization"></a>默认初始化
 
-类、结构和联合的默认初始化是具有默认构造函数的初始化。 可以调用默认构造函数，不使用初始化表达式或与**新**关键字：
+类、结构和联合的默认初始化是具有默认构造函数的初始化。 可以不带初始化表达式或用**new**关键字调用默认构造函数:
 
 ```cpp
 MyClass mc1;
@@ -175,7 +173,7 @@ int main() {
 }
 ```
 
-有关全局静态对象的初始化详细信息，请参阅[附加启动注意事项](../cpp/additional-startup-considerations.md)。
+有关全局静态对象的初始化的详细信息, 请参阅[其他启动注意事项](../cpp/additional-startup-considerations.md)。
 
 ### <a name="value-initialization"></a>值初始化
 
@@ -185,7 +183,7 @@ int main() {
 
 - 使用空圆括号或大括号初始化匿名临时对象
 
-- 初始化的对象**新**关键字和空圆括号或大括号
+- 使用**新**关键字加空括号或大括号初始化对象
 
 值初始化执行以下操作：
 
@@ -226,7 +224,7 @@ int main() {
 
 - 使用等号初始化非静态数据成员
 
-- 在聚合初始化期间通过复制初始化来初始化类、结构和联合成员。 请参阅[聚合初始化](#agginit)有关示例。
+- 在聚合初始化期间通过复制初始化来初始化类、结构和联合成员。 有关示例, 请参阅[聚合初始化](#agginit)。
 
 下面的代码显示复制初始化的几个示例：
 
@@ -276,9 +274,9 @@ shared_ptr<int> sp = new int(1729); // the constructor is explicit; same error
 
 - 使用非空大括号或圆括号初始化变量
 
-- 使用初始化变量**新**关键字和非空大括号或圆括号
+- 使用**新**关键字和非空大括号或圆括号初始化变量
 
-- 使用初始化变量**static_cast**
+- 用**static_cast**初始化变量
 
 - 在构造函数中，使用初始值设定项列表初始化基类和非静态成员
 
@@ -319,7 +317,7 @@ int main(){
 
 - 初始化变量
 
-- 使用初始化类**新**关键字
+- 使用**new**关键字初始化类
 
 - 从函数返回对象
 
@@ -364,7 +362,7 @@ int main() {
 }
 ```
 
-### <a name="agginit"></a> 聚合初始化
+### <a name="agginit"></a>聚合初始化
 
 聚合初始化是针对数组或类类型（通常为结构或联合）的一种列表初始化形式：
 
@@ -377,7 +375,7 @@ int main() {
 - 没有虚拟成员函数
 
 > [!NOTE]
-> <!--conformance note-->在 Visual Studio 2015 及更早版本，不是允许聚合具有大括号或等号初始值设定项用于非静态成员。 此限制已在 C + + 14 标准中删除，并在 Visual Studio 2017 中实现。
+> <!--conformance note-->在 Visual Studio 2015 及更早版本中, 不允许聚合使用非静态成员的大括号或等号初始值设定项。 此限制已在 c + + 14 标准中删除, 并在 Visual Studio 2017 中实现。
 
 聚合初始值设定项包括含等号或不含等号的括号内的初始化列表，如以下示例所示：
 
@@ -390,9 +388,14 @@ struct MyAggregate{
     char myChar;
 };
 
+struct MyAggregate2{
+    int myInt;
+    char myChar = 'Z'; // member-initializer OK in C++14
+};
+
 int main() {
     MyAggregate agg1{ 1, 'c' };
-
+    MyAggregate2 agg2{2};
     cout << "agg1: " << agg1.myChar << ": " << agg1.myInt << endl;
     cout << "agg2: " << agg2.myChar << ": " << agg2.myInt << endl;
 
@@ -418,13 +421,13 @@ int main() {
 
 ```Output
 agg1: c: 1
-agg2: d: 2
+agg2: Z: 2
 myArr1: 1 2 3 4
 myArr3: 8 9 10 0 0
 ```
 
 > [!IMPORTANT]
-> 声明但未显式初始化聚合初始化期间的数组成员将进行零初始化，如`myArr3`上面。
+> 在聚合初始化期间声明但未显式初始化的数组成员将进行零初始化, 如`myArr3`上面所示。
 
 #### <a name="initializing-unions-and-structs"></a>初始化联合和结构
 
@@ -477,7 +480,7 @@ int main() {
 
 ### <a name="reference-initialization"></a>引用初始化
 
-引用类型的变量必须使用引用类型派生自的类型的对象进行初始化，或使用可转换为引用类型派生自的类型的类型的对象进行初始化。 例如：
+引用类型的变量必须使用引用类型派生自的类型的对象进行初始化，或使用可转换为引用类型派生自的类型的类型的对象进行初始化。 例如:
 
 ```cpp
 // initializing_references.cpp
@@ -502,25 +505,25 @@ int main()
 
 只有在下列声明中才能在没有初始值设定项的情况下声明引用类型变量：
 
-- 函数声明（原型）。 例如：
+- 函数声明（原型）。 例如:
 
     ```cpp
     int func( int& );
     ```
 
-- 函数返回类型声明。 例如：
+- 函数返回类型声明。 例如:
 
     ```cpp
     int& func( int& );
     ```
 
-- 引用类型类成员的声明。 例如：
+- 引用类型类成员的声明。 例如:
 
     ```cpp
     class c {public:   int& i;};
     ```
 
-- 显式指定为变量的声明**extern**。 例如：
+- 显式指定为**extern**的变量的声明。 例如:
 
     ```cpp
     extern int& iVal;
@@ -528,13 +531,13 @@ int main()
 
 初始化引用类型变量时，编译器将使用下图中所示的决策关系图，在创建对对象的引用或创建引用所指向的临时对象之间做出选择。
 
-![引用类型初始化决策图](../cpp/media/vc38s71.gif "引用类型初始化决策图") <br/>
-引用类型初始化决策图
+![引用类型的初始化决策图](../cpp/media/vc38s71.gif "引用类型的初始化决策图") <br/>
+引用类型的初始化决策图
 
-对引用**可变**类型 (声明为**易失性** *typename* <strong>&</strong> *标识符*)可以使用初始化**可变**对象相同类型的对象或使用未声明为**易失性**。 它们不能但是，使用初始化**const**该类型的对象。 同样，对**const**类型 (声明为**const** *typename* <strong>&</strong> *标识符*) 可以使用初始化**const**相同类型的对象 (或任何已转换为该类型对象或使用未声明为**const**)。 它们不能但是，使用初始化**易失性**该类型的对象。
+对**可变**类型的引用 (声明为**易失性** *typename* <strong>&</strong> *标识符*) 可以使用相同类型的**可变**对象或未声明为**volatile**的对象进行初始化. 但不能用该类型的**const**对象对其进行初始化。 同样, 可使用相同类型的**const**对象 (或具有到该类型的转换或对象的任何类型的任何内容) 初始化对**const**类型的引用 (声明为**const** *typename* <strong>&</strong> *标识符*)。尚未声明为**const**的。) 但是, 它们不能用该类型的**可变**对象进行初始化。
 
-不使用限定的引用**const**或**易失性**关键字可以仅使用作为既不声明的对象初始化**const**也不**易失性**。
+不带**const**或**volatile**关键字限定的引用只能用声明为**const**和**volatile**的对象进行初始化。
 
 ### <a name="initialization-of-external-variables"></a>外部变量的初始化
 
-自动、 静态和外部变量的声明可以包含初始值设定项。 但是，外部变量的声明可以包含初始值设定项仅当变量未声明为**extern**。
+自动、静态和外部变量的声明可包含初始值设定项。 但是, 仅当变量未声明为**extern**时, 外部变量的声明才能包含初始值设定项。

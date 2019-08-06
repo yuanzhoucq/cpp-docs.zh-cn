@@ -7,16 +7,16 @@ helpviewer_keywords:
 - random_access_iterator_tag class
 - random_access_iterator_tag struct
 ms.assetid: 59f5b741-c5b4-459c-ad0a-3b67cddeea23
-ms.openlocfilehash: 81e958750ab13c12e92b61e6971c40f3362ba22d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: edbd7ad33b2487060840ec690b363d7b934fec27
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369873"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458310"
 ---
 # <a name="randomaccessiteratortag-struct"></a>random_access_iterator_tag 结构
 
-一个类，提供返回类型的`iterator_category`代表随机访问迭代器的函数。
+一个类, 该类提供表示随机访问`iterator_category`迭代器的函数的返回类型。
 
 ## <a name="syntax"></a>语法
 
@@ -26,9 +26,9 @@ struct random_access_iterator_tag    : public bidirectional_iterator_tag {};
 
 ## <a name="remarks"></a>备注
 
-分类标记类用作算法选择的编译标记。 模板函数需要查找其迭代器参数的最特定的类别，以便可以在编译时使用最高效的算法。 对于每个 `Iterator` 类型的迭代器，`iterator_traits`< `Iterator`> **::iterator_category** 必须定义为最特定的类别标记，用于描述迭代器的行为。
+分类标记类用作算法选择的编译标记。 模板函数需要查找其迭代器参数的最特定的类别，以便可以在编译时使用最高效的算法。 对于每个 `Iterator` 类型的迭代器，`iterator_traits`< `Iterator`>  **::iterator_category** 必须定义为最特定的类别标记，用于描述迭代器的行为。
 
-类型是与相同**迭代器**\< **Iter**> **:: iterator_category**时`Iter`描述一个对象来充当随机访问迭代器。
+当描述可用作随机访问迭代器的对象`Iter`时, 该类型与**iterator** \< **Iter**>  **:: iterator_category**相同。
 
 ## <a name="example"></a>示例
 
@@ -104,6 +104,6 @@ The iterators are not the same.
 
 ## <a name="see-also"></a>请参阅
 
-[bidirectional_iterator_tag 结构](../standard-library/bidirectional-iterator-tag-struct.md)<br/>
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)<br/>
+[bidirectional_iterator_tag 结构](../standard-library/bidirectional-iterator-tag-struct.md)\
+[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

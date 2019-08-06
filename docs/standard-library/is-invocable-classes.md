@@ -1,5 +1,5 @@
 ---
-title: is_invocable、 is_invocable_r、 is_nothrow_invocable、 is_nothrow_invocable_r 类
+title: is_invocable、is_invocable_r、is_nothrow_invocable、is_nothrow_invocable_r 类
 ms.date: 02/21/2019
 f1_keywords:
 - type_traits/std::is_invocable
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - is_nothrow_invocable
 - is_nothrow_invocable_r class
 - is_nothrow_invocable_r
-ms.openlocfilehash: bb5e75a897029ded2e00e491d93d2df41a3e115b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 20fec55fc3ad1924ee85db3b2f78812e4847f447
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336226"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456234"
 ---
-# <a name="isinvocable-isinvocabler-isnothrowinvocable-isnothrowinvocabler-classes"></a>is_invocable、 is_invocable_r、 is_nothrow_invocable、 is_nothrow_invocable_r 类
+# <a name="isinvocable-isinvocabler-isnothrowinvocable-isnothrowinvocabler-classes"></a>is_invocable、is_invocable_r、is_nothrow_invocable、is_nothrow_invocable_r 类
 
-这些模板确定是否类型可以在调用与指定的参数类型。 `is_invocable_r` 和`is_nothrow_invocable_r`还确定是否调用的结果转换为特定类型。 `is_nothrow_invocable` 和`is_nothrow_invocable_r`还确定是否调用是否确定不引发异常。 添加 C + + 17 中。
+这些模板确定是否可以使用指定的参数类型调用类型。 `is_invocable_r``is_nothrow_invocable_r`还确定调用的结果是否可转换为特定类型。 `is_nothrow_invocable``is_nothrow_invocable_r`还确定调用是否已知不会引发异常。 在 c + + 17 中添加。
 
 ## <a name="syntax"></a>语法
 
@@ -61,26 +61,26 @@ inline constexpr bool is_nothrow_invocable_r_v =
 
 ### <a name="parameters"></a>参数
 
-*Callable*<br/>
+*多次*\
 要查询的可调用类型。
 
-*参数*<br/>
-若要查询的参数类型。
+*Args*\
+要查询的参数类型。
 
-*Convertible*<br/>
-结果的类型的*Callable*必须可转换为。
+*自由*\
+可*调用*结果的类型必须可转换为。
 
 ## <a name="remarks"></a>备注
 
-`is_invocable`如果 true 保留类型的谓词可调用类型*Callable*可以使用参数来调用*Args*未计算的上下文中。
+如果`is_invocable` *可以使用*未计算上下文中*的 arguments 参数*调用可调用的类型, 则类型谓词保留为 true。
 
-`is_invocable_r`如果 true 保留类型的谓词可调用类型*Callable*可以使用参数来调用*Args*中的未计算的上下文，以生成一个结果类型可转换为*可转换为*。
+如果可以使用未计算*上下文中的*arguments 参数调用可调用的类型, 则类型谓词为true,以生成可转换为可转换的结果`is_invocable_r`类型。
 
-`is_nothrow_invocable`如果 true 保留类型的谓词可调用类型*Callable*可以使用参数来调用*Args*在未计算的上下文，并且此类调用是否确定不引发异常。
+如果可以*使用*未计算上下文中*的 arguments 参数*调用可调用的类型, 则类型谓词为true,这种调用被认为不会引发异常。`is_nothrow_invocable`
 
-`is_nothrow_invocable_r`如果 true 保留类型的谓词可调用类型*Callable*可以使用参数来调用*Args*中的未计算的上下文，以生成一个结果类型可转换为*可转换为*，且此类调用已知无法引发异常。
+如果`is_nothrow_invocable_r` *可以使用*未计算的上下文中*的 arguments 参数*调用可调用的可调用类型以使其转换为*可转换*的结果类型, 且已知不引发此类调用, 则类型谓词保留为 true异常。
 
-每个类型*可转换*， *Callable*，参数包中的类型*Args*必须是完整类型、 未知边界的数组或可能是 cv 限定**void**。 否则，该谓词的行为是不确定的。
+可*转换*、可*调用*和*参数包参数*中的类型的每个类型都必须是完整类型、未知绑定的数组或可能的 cv 限定**void**。 否则, 谓词的行为是不确定的。
 
 ## <a name="example"></a>示例
 
@@ -116,11 +116,11 @@ int main()
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<type_traits>
+**标头：** \<type_traits>
 
 **命名空间：** std
 
 ## <a name="see-also"></a>请参阅
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[invoke](functional-functions.md#invoke)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[invoke](functional-functions.md#invoke)

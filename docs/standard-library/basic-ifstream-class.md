@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::basic_ifstream [C++], rdbuf
 - std::basic_ifstream [C++], swap
 ms.assetid: 366cd9a7-efc4-4b7f-ba10-c8271e47ffcf
-ms.openlocfilehash: 30ae1e6384b3861bc4324d42f095516f80dce6e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e5e22c837ca2d6389591cec6d2cdd256ca50b1a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400664"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455519"
 ---
 # <a name="basicifstream-class"></a>basic_ifstream 类
 
@@ -36,10 +36,10 @@ class basic_ifstream : public basic_istream<Elem, Tr>
 
 ### <a name="parameters"></a>参数
 
-*Elem*<br/>
+*Elem*\
 文件缓冲区的基本元素。
 
-*Tr*<br/>
+*Tr*\
 文件缓冲区的基本元素的特征（通常是 `char_traits`< `Elem`>）。
 
 ## <a name="remarks"></a>备注
@@ -107,7 +107,7 @@ This is the contents of basic_ifstream_class.txt.
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<fstream>
+**标头：** \<fstream>
 
 **命名空间：** std
 
@@ -133,13 +133,13 @@ basic_ifstream(basic_ifstream&& right);
 
 ### <a name="parameters"></a>参数
 
-*_Filename*<br/>
+*_Filename*\
 要打开的文件的名称。
 
-*_Mode*<br/>
+*_Mode*\
 [ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的枚举之一。
 
-*_Prot*<br/>
+*_Prot*\
 默认文件打开保护，等同于 [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md) 中的 `shflag` 参数。
 
 ### <a name="remarks"></a>备注
@@ -237,22 +237,22 @@ void open(
 
 ### <a name="parameters"></a>参数
 
-*_Filename*<br/>
+*_Filename*\
 要打开的文件的名称。
 
-*_Mode*<br/>
+*_Mode*\
 [ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的枚举之一。
 
-*_Prot*<br/>
+*_Prot*\
 默认文件打开保护，等同于 [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md) 中的 `shflag` 参数。
 
 ### <a name="remarks"></a>备注
 
-成员函数调用 [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode` &#124; **ios_base::in**). 如果打开失败，则函数调用[setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`)，这可能导致引发 ios_base:: failure 异常。
+成员函数调用 [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode` &#124; **ios_base::in**). 如果打开失败, 该函数将[](../standard-library/basic-ios-class.md#setstate)调用 setstate`failbit`(), 这可能会引发 ios_base:: 失败异常。
 
 ### <a name="example"></a>示例
 
-请参阅[basic_filebuf:: open](../standard-library/basic-filebuf-class.md#open)有关的示例，使用`open`。
+有关使用`open`的示例, 请参阅[basic_filebuf:: open](../standard-library/basic-filebuf-class.md#open) 。
 
 ## <a name="op_eq"></a>  basic_ifstream::operator=
 
@@ -264,7 +264,7 @@ basic_ifstream& operator=(basic_ifstream&& right);
 
 ### <a name="parameters"></a>参数
 
-*right*<br/>
+*然后*\
 对 `basic_ifstream` 对象的右值引用。
 
 ### <a name="return-value"></a>返回值
@@ -273,7 +273,7 @@ basic_ifstream& operator=(basic_ifstream&& right);
 
 ### <a name="remarks"></a>备注
 
-成员运算符使用的内容替换该对象的内容*右*，视为右值引用。 有关详细信息，请参阅[左值和右值](../cpp/lvalues-and-rvalues-visual-cpp.md)。
+成员运算符使用*right*的内容替换对象的内容, 并将其视为右值引用。 有关详细信息，请参阅[左值和右值](../cpp/lvalues-and-rvalues-visual-cpp.md)。
 
 ## <a name="rdbuf"></a>  basic_ifstream::rdbuf
 
@@ -301,15 +301,15 @@ void swap(basic_ifstream& right);
 
 ### <a name="parameters"></a>参数
 
-*right*<br/>
+*然后*\
 对另一个流缓冲区的引用。
 
 ### <a name="remarks"></a>备注
 
-该成员函数交换内容的此对象的内容*右*。
+该成员函数将此对象的内容与*右侧*的内容进行交换。
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream 编程](../standard-library/iostream-programming.md)<br/>
-[iostreams 约定](../standard-library/iostreams-conventions.md)<br/>
+[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream 编程](../standard-library/iostream-programming.md)\
+[iostreams 约定](../standard-library/iostreams-conventions.md)

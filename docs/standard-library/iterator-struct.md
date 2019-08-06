@@ -7,16 +7,16 @@ helpviewer_keywords:
 - iterator class
 - iterator struct
 ms.assetid: c74c8000-8b18-4829-9b71-6103c4229b74
-ms.openlocfilehash: 1dd62a6141e690d3bd4dcad69aa107c126a0f386
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64c9be76cb92d818e40714dd141ded3a8cc17c8a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224098"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455620"
 ---
 # <a name="iterator-struct"></a>iterator 结构
 
-空基结构使用，以确保用户定义的迭代器类可正常配合`iterator_trait`s。
+一个空基结构, 用于确保用户定义迭代器类能够正常使用`iterator_trait`。
 
 ## <a name="syntax"></a>语法
 
@@ -47,7 +47,7 @@ struct iterator {
 
 - `reference`（模板参数 `Reference` 的同义词）。
 
-请注意，`value_type`不应为常量类型即使`pointer`指向的对象**const** `Type`且引用指定的对象**const** `Type`。
+请注意`value_type` , `pointer`即使常量的**对象** `Type`和引用指定常量的对象 `Type`, 也不应为常量类型。
 
 ## <a name="example"></a>示例
 
@@ -61,6 +61,6 @@ struct iterator {
 
 ## <a name="see-also"></a>请参阅
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

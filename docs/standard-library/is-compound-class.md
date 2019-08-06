@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_compound class
 - is_compound
 ms.assetid: bdad1167-cf3f-4f37-8321-62a5df159ead
-ms.openlocfilehash: f270a1a58bb8023d91d84b0d1ca3395d36298c95
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 003ddcf77c30bc2dc5491218dfbf00731517bdeb
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337097"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452905"
 ---
 # <a name="iscompound-class"></a>is_compound 类
 
@@ -27,12 +27,12 @@ struct is_compound;
 
 ### <a name="parameters"></a>参数
 
-*Ty*<br/>
+*Ty*\
 要查询的类型。
 
 ## <a name="remarks"></a>备注
 
-类型谓词的实例将保留**false**如果的类型*Ty*是一种基本类型 (即，如果[is_fundamental](../standard-library/is-fundamental-class.md)\<Ty > 保存**true**);否则，它存储 **，则返回 true**。 因此，谓词 **，则返回 true**如果*Ty*是数组类型、 函数类型、 指向**void**或对象或函数、 引用、 类、 联合、 枚举，或指向非静态类成员的指针或*限定了 cv*其中之一的窗体。
+如果*Ty*的类型是一种基本类型 (即, 如果[is_fundamental](../standard-library/is-fundamental-class.md)\<Ty > 为**true**), 则类型谓词的实例为**false** ; 否则为**true**。 因此, 如果*Ty*是数组类型、函数类型、指向**void**的指针或对象或函数、引用、类、联合、枚举或指向非静态类成员的指针或由*cv 限定*的形式, 则谓词为**true**其中一个。
 
 ## <a name="example"></a>示例
 
@@ -77,11 +77,11 @@ is_compound<int> == false
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<type_traits>
+**标头：** \<type_traits>
 
 **命名空间：** std
 
 ## <a name="see-also"></a>请参阅
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_class 类](../standard-library/is-class-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_class 类](../standard-library/is-class-class.md)

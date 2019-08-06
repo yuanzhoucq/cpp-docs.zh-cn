@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - streambuf header
 ms.assetid: 4365b25c-5831-488b-b9c2-867bfe961b89
-ms.openlocfilehash: 15bfa86a3c697442b66a5f77aa6ea7a9aba5643c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 87fb74f62abffdd62b8c0179b13f53d96439d6c6
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412366"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449568"
 ---
 # <a name="ltstreambufgt"></a>&lt;streambuf&gt;
 
@@ -27,8 +27,8 @@ ms.locfileid: "62412366"
 
 |类型名称|描述|
 |-|-|
-|[streambuf](../standard-library/streambuf-typedefs.md#streambuf)|专用化`basic_streambuf`，它使用**char**作为模板参数。|
-|[wstreambuf](../standard-library/streambuf-typedefs.md#wstreambuf)|专用化`basic_streambuf`，它使用**wchar_t**作为模板参数。|
+|[streambuf](../standard-library/streambuf-typedefs.md#streambuf)|使用 char 作为`basic_streambuf`模板参数的的专用化。|
+|[wstreambuf](../standard-library/streambuf-typedefs.md#wstreambuf)|使用 wchar_t 作为`basic_streambuf`模板参数的的专用化。|
 
 ### <a name="classes"></a>类
 
@@ -38,7 +38,7 @@ ms.locfileid: "62412366"
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream 编程](../standard-library/iostream-programming.md)<br/>
-[iostreams 约定](../standard-library/iostreams-conventions.md)<br/>
+[头文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream 编程](../standard-library/iostream-programming.md)\
+[iostreams 约定](../standard-library/iostreams-conventions.md)

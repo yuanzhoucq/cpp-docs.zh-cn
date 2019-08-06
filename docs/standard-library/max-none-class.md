@@ -16,12 +16,12 @@ helpviewer_keywords:
 - stdext::max_none [C++], released
 - stdext::max_none [C++], saved
 ms.assetid: 12ab5376-412e-479c-86dc-2c3d6a3559b6
-ms.openlocfilehash: 20191b84e4bbad760de1035fdb027fcbe827c874
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d409928de4bf66bcc6d6dda3008131f87e790c3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412938"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460173"
 ---
 # <a name="maxnone-class"></a>max_none 类
 
@@ -52,7 +52,7 @@ class max_none
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<allocators>
+**标头：** \<allocators>
 
 **命名空间：** stdext
 
@@ -72,7 +72,7 @@ void allocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>备注
 
-此成员函数不执行任何操作。 每次调用成功后，它将调用`cache_freelist::allocate`向操作员**新**。 自变量 *_Nx*是由运算符分配的区块中的内存块的数目**新**。
+此成员函数不执行任何操作。 每次成功调用`cache_freelist::allocate`后, 都将调用此方法来调用**new**运算符。 参数 *_Nx*是运算符**new**分配的区块中的内存块数。
 
 ## <a name="deallocated"></a>max_none::deallocated
 
@@ -90,7 +90,7 @@ void deallocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>备注
 
-此成员函数不执行任何操作。 通过每次调用后调用此成员函数`cache_freelist::deallocate`向操作员**删除**。 自变量 *_Nx*是由运算符解除分配的区块中的内存块的数目**删除**。
+此成员函数不执行任何操作。 每次调用`cache_freelist::deallocate`后, 都将调用此成员函数以进行运算符**delete**。 参数 *_Nx*是运算符**delete**释放的块区中的内存块数。
 
 ## <a name="full"></a>max_none::full
 
@@ -102,11 +102,11 @@ bool full();
 
 ### <a name="return-value"></a>返回值
 
-此成员函数总是返回 **，则返回 true**。
+此成员函数始终返回**true**。
 
 ### <a name="remarks"></a>备注
 
-此成员函数由 `cache_freelist::deallocate` 调用。 如果该调用将返回 **，则返回 true**，`deallocate`放入内存块释放列表; 如果它返回 false，`deallocate`调用运算符**删除**解除分配块。
+此成员函数由 `cache_freelist::deallocate` 调用。 如果调用返回**true** `deallocate` , 则将内存块置于可用列表中; 如果返回 false, `deallocate`则调用运算符**delete**来释放块。
 
 ## <a name="released"></a>max_none::released
 
@@ -134,4 +134,4 @@ void saved();
 
 ## <a name="see-also"></a>请参阅
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

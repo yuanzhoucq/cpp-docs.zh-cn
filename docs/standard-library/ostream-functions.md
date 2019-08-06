@@ -12,16 +12,16 @@ helpviewer_keywords:
 - std::endl [C++]
 - std::ends [C++]
 - std::flush [C++]
-ms.openlocfilehash: fa498f4acbb151eab4321bcddc6af027ee266237
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d93e46b0323058d93c6d0bd8c1ee566998aef61
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370980"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447198"
 ---
 # <a name="ltostreamgt-functions"></a>&lt;ostream&gt; 函数
 
-这些是中定义的全局模板函数&lt;ostream&gt;。 成员函数，请参阅[basic_ostream 类](basic-ostream-class.md)文档。
+这些是在 ostream &lt;&gt;中定义的全局模板函数。 有关成员函数, 请参阅[Basic_ostream 类](basic-ostream-class.md)文档。
 
 ||||
 |-|-|-|
@@ -40,22 +40,22 @@ basic_ostream<Elem, Tr>& endl(
 
 ### <a name="parameters"></a>参数
 
-*Elem*<br/>
+*Elem*\
 元素类型。
 
-*Ostr*<br/>
-类型的对象**basic_ostream**。
+*Ostr*\
+**Basic_ostream**类型的对象。
 
-*Tr*<br/>
+*Tr*\
 字符特征。
 
 ### <a name="return-value"></a>返回值
 
-类型的对象**basic_ostream**。
+**Basic_ostream**类型的对象。
 
 ### <a name="remarks"></a>备注
 
-该操控器调用*Ostr*。[将放](../standard-library/basic-ostream-class.md#put)(*Ostr*。[扩大](../standard-library/basic-ios-class.md#widen)('\n'))，然后调用*Ostr*。[刷新](../standard-library/basic-ostream-class.md#flush)。 它将返回*Ostr*。
+操控器调用*Ostr*。[put](../standard-library/basic-ostream-class.md#put)(*Ostr*。[加宽](../standard-library/basic-ios-class.md#widen)(' \n ')), 然后调用*Ostr*。[flush](../standard-library/basic-ostream-class.md#flush)。 它将返回*Ostr*。
 
 ### <a name="example"></a>示例
 
@@ -87,13 +87,13 @@ basic_ostream<Elem, Tr>& ends(
 
 ### <a name="parameters"></a>参数
 
-*Elem*<br/>
+*Elem*\
 元素类型。
 
-*Ostr*<br/>
+*Ostr*\
 一个 `basic_ostream` 类型的对象。
 
-*Tr*<br/>
+*Tr*\
 字符特征。
 
 ### <a name="return-value"></a>返回值
@@ -102,7 +102,7 @@ basic_ostream<Elem, Tr>& ends(
 
 ### <a name="remarks"></a>备注
 
-该操控器调用*Ostr*。[将放](../standard-library/basic-ostream-class.md#put)(*Elem*(\0))。 它将返回*Ostr*。
+操控器调用*Ostr*。[put](../standard-library/basic-ostream-class.md#put)(*Elem*(' \ 0 '))。 它将返回*Ostr*。
 
 ### <a name="example"></a>示例
 
@@ -136,13 +136,13 @@ basic_ostream<Elem, Tr>& flush(
 
 ### <a name="parameters"></a>参数
 
-*Elem*<br/>
+*Elem*\
 元素类型。
 
-*Ostr*<br/>
+*Ostr*\
 一个 `basic_ostream` 类型的对象。
 
-*Tr*<br/>
+*Tr*\
 字符特征。
 
 ### <a name="return-value"></a>返回值
@@ -151,7 +151,7 @@ basic_ostream<Elem, Tr>& flush(
 
 ### <a name="remarks"></a>备注
 
-该操控器调用*Ostr*。[刷新](../standard-library/basic-ostream-class.md#flush)。 它将返回*Ostr*。
+操控器调用*Ostr*。[flush](../standard-library/basic-ostream-class.md#flush)。 它将返回*Ostr*。
 
 ### <a name="example"></a>示例
 
@@ -184,16 +184,16 @@ void swap(
 
 ### <a name="parameters"></a>参数
 
-*Elem*<br/>
+*Elem*\
 元素类型。
 
-*Tr*<br/>
+*Tr*\
 字符特征。
 
-*left*<br/>
+*左中*\
 对 `basic_ostream` 对象的左值引用。
 
-*right*<br/>
+*然后*\
 对 `basic_ostream` 对象的左值引用。
 
 ### <a name="remarks"></a>备注

@@ -5,16 +5,16 @@ f1_keywords:
 - <memory_resource>
 helpviewer_keywords:
 - memory_resource header
-ms.openlocfilehash: b5957412d2beff0dc709dc71a77834f13eeacb41
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: d4b25c6ee575191f1e17b0202d33298e2e9e67f0
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68269339"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451906"
 ---
 # <a name="ltmemoryresourcegt"></a>&lt;memory_resource&gt;
 
-定义容器模板类 memory_resource 和及其支持的模板。
+定义容器模板类 memory_resource 及其支持的模板。
 
 ## <a name="syntax"></a>语法
 
@@ -28,8 +28,8 @@ ms.locfileid: "68269339"
 
 |||
 |-|-|
-|[operator!=](../standard-library/memory-resource-operators.md#op_neq)|测试运算符左侧的 memory_resource 对象是否不等于右侧的 memory_resource 对象。|
-|[operator==](../standard-library/memory-resource-operators.md#op_eq_eq)|测试运算符左侧的 memory_resource 对象是否等于右侧的 memory_resource 对象。|
+|[operator!=](../standard-library/memory-resource-operators.md#op_neq)|测试位于运算符左侧的 memory_resource 对象是否不等于右侧的 memory_resource 对象。|
+|[operator==](../standard-library/memory-resource-operators.md#op_eq_eq)|测试位于运算符左侧的 memory_resource 对象是否等于右侧的 memory_resource 对象。|
 
 ### <a name="specialized-template-functions"></a>专用化模板函数
 
@@ -58,6 +58,6 @@ ms.locfileid: "68269339"
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)<br/>
+[头文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

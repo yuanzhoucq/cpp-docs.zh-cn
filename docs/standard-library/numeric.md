@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - <numeric> header
 ms.assetid: 6d6ccb94-48cc-479b-b4a9-bd9c78d4896a
-ms.openlocfilehash: ce195742605c3dd2e127c84ac2f4e1e696c75bd0
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 5862ddd812308c7bf81a5029249caf7e9b4a1168
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246701"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453552"
 ---
 # <a name="ltnumericgt"></a>&lt;数字&gt;
 
@@ -19,7 +19,7 @@ ms.locfileid: "68246701"
 
 ## <a name="requirements"></a>要求
 
-**标头**:\<数字 >
+**标头**: \<数值 >
 
 **命名空间：** std
 
@@ -42,15 +42,15 @@ ms.locfileid: "68246701"
 |[inclusive_scan](../standard-library/numeric-functions.md#inclusive_scan)||
 |[inner_product](../standard-library/numeric-functions.md#inner_product)|计算两个范围的逐元素集乘积的总和并将总和添加到指定初始值，或计算将求和与乘积运算替换为其他指定二元运算的一般化程序的结果。|
 |[iota](../standard-library/numeric-functions.md#iota)|存储一个起始值，从第一个元素开始，在间隔 `value++` 内的每个元素中填充此值的连续递增值 (`[first, last)`)。|
-|[lcm](../standard-library/numeric-functions.md#lcm)||
+|[相连](../standard-library/numeric-functions.md#lcm)||
 |[partial_sum](../standard-library/numeric-functions.md#partial_sum)|计算输入范围中从第一个元素到第 *i* 个元素的一系列总和，并在目标范围的第 *i* 个元素中存储每个总和的结果，或计算将求和运算替换为其他指定二元运算的一般化程序的结果。|
-|[减少](../standard-library/numeric-functions.md#reduce)||
+|[降](../standard-library/numeric-functions.md#reduce)||
 |[transform_exclusive_scan](../standard-library/numeric-functions.md#transform_exclusive_scan)||
 |[transform_inclusive_scan](../standard-library/numeric-functions.md#transform_inclusive_scan)||
 |[transform_reduce](../standard-library/numeric-functions.md#transform_reduce)||
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)<br/>
+[头文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

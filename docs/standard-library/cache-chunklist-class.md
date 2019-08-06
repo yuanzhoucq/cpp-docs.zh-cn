@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::cache_chunklist [C++], allocate
 - stdext::cache_chunklist [C++], deallocate
 ms.assetid: af19eccc-4ae7-4a34-bbb2-81e397424cb9
-ms.openlocfilehash: 94ae4dfc8f5f9073c0a39f315adfbed3e5c14daf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73730e0a4a22e7f5e63809cc2c1603cbda1ab596
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380164"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449662"
 ---
 # <a name="cachechunklist-class"></a>cache_chunklist 类
 
@@ -36,9 +36,9 @@ class cache_chunklist
 
 ## <a name="remarks"></a>备注
 
-使用此模板类**运算符 new**分配原始内存的区块，并阻止分配的内存块时所需的存储; 它将释放的内存块存储在每个区块的独立释放列表并使用**运算符 delete**时正在使用中的任何内存块释放区块。
+此模板类使用**new 运算符**来分配原始内存块, suballocating 块在需要时为内存块分配存储;它将已释放的内存块存储在单独的可用列表中, 用于每个块区, 并在不使用任何内存块时使用**运算符 delete**解除块。
 
-每个内存块保留*Sz*个字节的可用内存以及指向其所属的块区的指针。 每个区块保留`Nelts`内存块、 三个指针、 整数和数据的**new 运算符**并**运算符 delete**要求。
+每个内存块都包含*Sz*字节的可用内存和指向其所属块区的指针。 每个区块`Nelts`都包含内存块、三个指针、一个 int 以及**运算符 new**和**运算符 delete**需要的数据。
 
 ### <a name="constructors"></a>构造函数
 
@@ -55,7 +55,7 @@ class cache_chunklist
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<allocators>
+**标头：** \<allocators>
 
 **命名空间：** stdext
 
@@ -71,7 +71,7 @@ void *allocate(std::size_t count);
 
 |参数|描述|
 |---------------|-----------------|
-|*count*|数组中要分配的元素数目。|
+|*计数*|数组中要分配的元素数目。|
 
 ### <a name="return-value"></a>返回值
 
@@ -102,10 +102,10 @@ void deallocate(void* ptr, std::size_t count);
 |参数|描述|
 |---------------|-----------------|
 |*ptr*|指向要从存储中释放的第一个对象的指针。|
-|*count*|要从存储中释放的对象数量。|
+|*计数*|要从存储中释放的对象数量。|
 
 ### <a name="remarks"></a>备注
 
 ## <a name="see-also"></a>请参阅
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

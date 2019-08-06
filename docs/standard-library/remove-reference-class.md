@@ -7,12 +7,12 @@ helpviewer_keywords:
 - remove_reference class
 - remove_reference
 ms.assetid: 294e1965-3ae3-46ee-bc42-4fdf60c24717
-ms.openlocfilehash: 76f700b488d78af77e39ec91c7328604d18931fc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f185994f943b2419a67fe86ce957751dc4031cbe
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62186031"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451273"
 ---
 # <a name="removereference-class"></a>remove_reference 类
 
@@ -30,12 +30,12 @@ using remove_reference_t = typename remove_reference<T>::type;
 
 ### <a name="parameters"></a>参数
 
-*T*<br/>
+*关心*\
 要修改的类型。
 
 ## <a name="remarks"></a>备注
 
-实例`remove_reference<T>`包含修改类型，即`T1`时*T*的形式`T1&`; 否则为*T*。
+的`remove_reference<T>`实例保留修改后的类型, 当*t*为形式`T1&`时, 则为, 否则为 `T1` t。
 
 ## <a name="example"></a>示例
 
@@ -61,11 +61,11 @@ remove_reference_t<int&> == int
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<type_traits>
+**标头：** \<type_traits>
 
 **命名空间：** std
 
 ## <a name="see-also"></a>请参阅
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[add_lvalue_reference 类](../standard-library/add-lvalue-reference-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[add_lvalue_reference 类](../standard-library/add-lvalue-reference-class.md)

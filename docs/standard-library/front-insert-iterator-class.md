@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::front_insert_iterator [C++], container_type
 - std::front_insert_iterator [C++], reference
 ms.assetid: a9a9c075-136a-4419-928b-c4871afa033c
-ms.openlocfilehash: 322b513dc648bf10fe593d9541560c4d22da21fb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 176fac8053d352d6a7a72ce62d5a8ee7a64b9811
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159582"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454122"
 ---
 # <a name="frontinsertiterator-class"></a>front_insert_iterator 类
 
@@ -30,7 +30,7 @@ class front_insert_iterator;
 
 ### <a name="parameters"></a>参数
 
-*Container*<br/>
+*容器*\
 要通过 `front_insert_iterator` 将元素插入前端的容器的类型。
 
 ## <a name="remarks"></a>备注
@@ -54,9 +54,9 @@ class front_insert_iterator;
 
 |运算符|描述|
 |-|-|
-|[operator*](#op_star)|取消引用运算符，用于实现输出迭代器表达式\* `i`  =  `x`前端插入。|
+|[operator*](#op_star)|取消引用运算符, 用于实现前端插入的\*输出迭代器表达式 =  `i`。 `x`|
 |[operator++](#op_add_add)|将 `front_insert_iterator` 递增到下一个可用来存储值的位置。|
-|[operator=](#op_eq)|赋值运算符，用于实现输出迭代器表达式\* `i`  =  `x`前端插入。|
+|[operator=](#op_eq)|赋值运算符, 用于实现前端插入的输出\*迭代器表达式 =  `i`。 `x`|
 
 ## <a name="requirements"></a>要求
 
@@ -116,7 +116,7 @@ explicit front_insert_iterator(Container& _Cont);
 
 ### <a name="parameters"></a>参数
 
-*_Cont*<br/>
+*_Cont*\
 `front_insert_iterator` 要将元素插入到其中的容器对象。
 
 ### <a name="return-value"></a>返回值
@@ -169,7 +169,7 @@ After the front insertions, the list L is:
 */
 ```
 
-## <a name="op_star"></a>  front_insert_iterator::operator\*
+## <a name="op_star"></a>front_insert_iterator:: operator\*
 
 取消引用返回其所寻址元素的插入迭代器。
 
@@ -183,7 +183,7 @@ front_insert_iterator<Container>& operator*();
 
 ### <a name="remarks"></a>备注
 
-用于实现输出迭代器表达式 **\*Iter** = **value**。 如果`Iter`是迭代器，然后在序列中，元素 **\*Iter** = **值**使用值替换该元素并不会更改的总数序列中的元素。
+用于实现输出迭代器表达式 **\*Iter** = **value**。 如果`Iter`是在序列中对元素进行寻址的迭代器, 则 **\*Iter** = **值**会将该元素替换为值, 而不会更改序列中的元素总数。
 
 ### <a name="example"></a>示例
 
@@ -293,7 +293,7 @@ front_insert_iterator<Container>& operator=(typename Container::value_type&& val
 
 ### <a name="parameters"></a>参数
 
-*val*<br/>
+*初始值*\
 要赋给容器的值。
 
 ### <a name="return-value"></a>返回值
@@ -389,6 +389,6 @@ The first element in the list L is: 30.
 
 ## <a name="see-also"></a>请参阅
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

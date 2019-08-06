@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - independent_bits_engine class
 ms.assetid: 889e9a82-f457-49a7-9d2e-26e0fc3cd907
-ms.openlocfilehash: 8f420ca054d20cd222b8eda9a4a35a383a8e535a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a90e4be4ff6e92734f6b2e6804f8059be78e66b9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159218"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456345"
 ---
 # <a name="independentbitsengine-class"></a>independent_bits_engine 类
 
@@ -26,13 +26,13 @@ class independent_bits_engine;
 
 ### <a name="parameters"></a>参数
 
-*Engine*<br/>
+*搜索引擎优化*\
 基引擎类型。
 
-*W*<br/>
+*水平*\
 **字大小**。 生成的每个数字的大小（以字节为单位）。 **前提条件**：`0 < W ≤ numeric_limits<UIntType>::digits`
 
-*UIntType*<br/>
+*UIntType*\
 无符号的整数结果类型。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="members"></a>成员
@@ -46,14 +46,14 @@ class independent_bits_engine;
 
 ## <a name="remarks"></a>备注
 
-此模板类描述*引擎适配器*通过再次打包其基引擎，从而导致返回的值中的位来产生值*W*-位的值。
+此模板类描述了一个*引擎适配器*, 该适配器通过从其基引擎返回的值中重新打包位来生成值, 从而产生*W*位值。
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<random>
+**标头：** \<random>
 
 **命名空间：** std
 
 ## <a name="see-also"></a>请参阅
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

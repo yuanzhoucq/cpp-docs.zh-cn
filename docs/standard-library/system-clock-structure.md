@@ -9,12 +9,12 @@ f1_keywords:
 - chrono/std::chrono::system_clock::is_monotonic Constant
 - chrono/std::chrono::system_clock::is_steady Constant
 ms.assetid: a97bd46e-267a-4836-9f7d-af1f664e99ae
-ms.openlocfilehash: 66710f94d96f069d6d388d6b49c76747c618a0d0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7a9fd83840883de5172df8b2e1e451984a95ea47
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412145"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450179"
 ---
 # <a name="systemclock-structure"></a>system_clock 结构
 
@@ -50,25 +50,25 @@ struct system_clock;
 |名称|描述|
 |----------|-----------------|
 |[from_time_t](#from_time_t)|静态。 返回最接近指定的时间的 `time_point`。|
-|[now](#now)|静态。 返回当前日期。|
+|[现在](#now)|静态。 返回当前日期。|
 |[to_time_t](#to_time_t)|静态。 返回最接近指定 `time_point` 的 `time_t` 对象。|
 
 ### <a name="public-constants"></a>公共常量
 
-|名称|描述|
+|name|描述|
 |----------|-----------------|
 |[system_clock::is_monotonic 常量](#is_monotonic_constant)|指定时钟类型是否为单调。|
 |[system_clock::is_steady 常量](#is_steady_constant)|指定时钟类型是否为稳定。|
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<chrono >
+**标头:** \<chrono >
 
 **命名空间：** std::chrono
 
 ## <a name="from_time_t"></a>  system_clock::from_time_t
 
-返回的静态方法[time_point](../standard-library/time-point-class.md)该最接近的时间，由表示*Tm*。
+返回[time_point](../standard-library/time-point-class.md)的静态方法, 该方法最接近*Tm*表示的时间。
 
 ```cpp
 static time_point from_time_t(time_t Tm) noexcept;
@@ -76,7 +76,7 @@ static time_point from_time_t(time_t Tm) noexcept;
 
 ### <a name="parameters"></a>参数
 
-*Tm*<br/>
+*费*\
 一个 [time_t](../c-runtime-library/standard-types.md) 对象。
 
 ## <a name="is_monotonic_constant"></a>  system_clock::is_monotonic 常量
@@ -89,7 +89,7 @@ static const bool is_monotonic = false;
 
 ### <a name="return-value"></a>返回值
 
-在此实现中，`system_clock::is_monotonic`始终返回**false**。
+在此实现中`system_clock::is_monotonic` , 始终返回**false**。
 
 ### <a name="remarks"></a>备注
 
@@ -105,7 +105,7 @@ static const bool is_steady = false;
 
 ### <a name="return-value"></a>返回值
 
-在此实现中，`system_clock::is_steady`始终返回**false**。
+在此实现中`system_clock::is_steady` , 始终返回**false**。
 
 ### <a name="remarks"></a>备注
 
@@ -125,7 +125,7 @@ static time_point now() noexcept;
 
 ## <a name="to_time_t"></a>  system_clock::to_time_t
 
-返回的静态方法[time_t](../c-runtime-library/standard-types.md)该最接近的时间，由表示*时间*。
+返回[time_t](../c-runtime-library/standard-types.md)的静态方法, 该方法最接近于*时间*表示的时间。
 
 ```cpp
 static time_t to_time_t(const time_point& Time) noexcept;
@@ -133,11 +133,11 @@ static time_t to_time_t(const time_point& Time) noexcept;
 
 ### <a name="parameters"></a>参数
 
-*时间*<br/>
+*阶段*\
 一个 [time_point](../standard-library/time-point-class.md) 对象。
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<chrono>](../standard-library/chrono.md)<br/>
-[steady_clock 结构](../standard-library/steady-clock-struct.md)<br/>
+[头文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[\<chrono>](../standard-library/chrono.md)\
+[steady_clock 结构](../standard-library/steady-clock-struct.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - valarray header
 ms.assetid: 30835415-21c1-4801-8f24-6bbef7dd8ecd
-ms.openlocfilehash: 9154f15500863d815f56438090662416b9b6fe7f
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: c18b72017e4999e377bf8575f624f8fdda5b0caf
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246654"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448342"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
@@ -24,11 +24,11 @@ ms.locfileid: "68246654"
 **命名空间：** std
 
 > [!NOTE]
-> \<Valarray > 库使用 #include < initializer_list > 语句。
+> \<Valarray > 库使用 "#include < initializer_list >" 语句。
 
 ## <a name="remarks"></a>备注
 
-为了提高性能，允许这些模板类和函数有异常的纬度。 具体而言，任何函数返回类型`valarray<T1>`可能返回其他类型 T2 的对象。 在这种情况下，任何接受类型的一个或多个自变量函数`valarray<T2>`必须具有接受这些参数，每个替换为类型 T2 的自变量的任意组合的重载。
+为了提高性能，允许这些模板类和函数有异常的纬度。 具体而言, 返回类型`valarray<T1>`的任何函数都可能返回某个其他类型 T2 的对象。 在这种情况下, 任何接受类型`valarray<T2>`的一个或多个参数的函数必须具有接受这些参数的任意组合的重载, 每个重载都替换为类型 T2 的参数。
 
 ## <a name="members"></a>成员
 
@@ -89,15 +89,15 @@ ms.locfileid: "68246654"
 |[mask_array 类](../standard-library/mask-array-class.md)|一个内部的辅助模板类，该类通过提供子集阵列之间的操作来支持作为父级 valarray（使用布尔表达式指定）的子集的对象。|
 |[slice 类](../standard-library/slice-class.md)|一个用于定义 valarray 的一维矢量型子集的 valarray 实用程序类。|
 |[slice_array 类](../standard-library/slice-array-class.md)|一个内部的辅助模板类，该类通过提供由 valarray 的切分定义的子集阵列之间的操作来支持切分对象。|
-|[valarray 类](../standard-library/valarray-class.md)|模板类描述一个对象，用于控制的类型的元素序列`Type`，是存储为数组并用于执行高速数学运算，针对计算性能进行了优化。|
+|[valarray 类](../standard-library/valarray-class.md)|此模板类描述一个对象, 该对象控制类型`Type`的元素的序列, 这些元素存储为数组并针对计算性能进行了优化。|
 
 ### <a name="specializations"></a>专用化
 
 |||
 |-|-|
-|[valarray\<bool> 类](../standard-library/valarray-bool-class.md)|模板类 valarray 的专用的版本\<**类型**> 元素的类型为**bool**。|
+|[valarray\<bool> 类](../standard-library/valarray-bool-class.md)|模板类的专用版本 valarray\<**类型**> 为**bool**类型的元素。|
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[头文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

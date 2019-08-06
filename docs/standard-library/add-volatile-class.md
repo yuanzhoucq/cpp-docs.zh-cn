@@ -7,16 +7,16 @@ helpviewer_keywords:
 - add_volatile class
 - add_volatile
 ms.assetid: cde57277-d764-402d-841e-97611ebaab14
-ms.openlocfilehash: ff48b1848e2d7631d789621a5ef845d04d8e8821
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: becea4ff52342a79d0b87ffe0022e2cf84c47949
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411131"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456537"
 ---
 # <a name="addvolatile-class"></a>add_volatile 类
 
-使**易失性**从指定的类型的类型。
+从指定类型创建**可变**类型。
 
 ## <a name="syntax"></a>语法
 
@@ -30,12 +30,12 @@ using add_volatile_t = typename add_volatile<T>::type;
 
 ### <a name="parameters"></a>参数
 
-*T*<br/>
+*关心*\
 要修改的类型。
 
 ## <a name="remarks"></a>备注
 
-实例`add_volatile<T>`有一个成员**typedef** `type`即*T*如果*T*为引用、 函数或可变限定类型，否则为**可变** *T*。别名`add_volatile_t`是访问成员的快捷方式**typedef** `type`。
+如果 t 是`add_volatile<T>`引用、函数或可变限定类型, 则实例的成员**typedef** `type`为*T* , 否则为**volatile** *t*。别名`add_volatile_t`是访问成员**typedef** `type`的快捷方式。
 
 ## <a name="example"></a>示例
 
@@ -61,11 +61,11 @@ add_volatile<int> == int
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<type_traits>
+**标头：** \<type_traits>
 
 **命名空间：** std
 
 ## <a name="see-also"></a>请参阅
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[remove_volatile 类](../standard-library/remove-volatile-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[remove_volatile 类](../standard-library/remove-volatile-class.md)

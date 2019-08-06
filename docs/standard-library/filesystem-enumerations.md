@@ -11,12 +11,12 @@ f1_keywords:
 - filesystem/std::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
-ms.openlocfilehash: 9bf5f0231fbc5b694c1f4ae507feb82b0d19d600
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: dfbcf65462f0bb7bc6ca44f43507efa7b753e7bc
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240748"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457712"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt; 枚举
 
@@ -86,7 +86,7 @@ enum class directory_options {
 
 ## <a name="file_type"></a>  file_type
 
-文件类型的枚举。 支持的值为 regular、 directory、 not_found 和未知。
+文件类型的枚举。 支持的值有 regular、directory、not_found 和 unknown。
 
 ### <a name="syntax"></a>语法
 
@@ -120,9 +120,9 @@ enum class file_type {
 |`socket`|7|表示基于 UNIX 的系统上的套接字。 （不支持。）|
 |`unknown`|8|表示状态无法确定的文件。|
 
-## <a name="perm_options"></a>  perm_options
+## <a name="perm_options"></a>perm_options
 
-包含值`replace`， `add`， `remove`，和`nofollow`。
+包括值`replace` `add` 、、和`nofollow`。 `remove`
 
 ```cpp
 enum class perm_options;
@@ -163,5 +163,5 @@ enum class perms {// names for permissions
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<filesystem>](../standard-library/filesystem.md)<br/>
+[头文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[\<filesystem>](../standard-library/filesystem.md)

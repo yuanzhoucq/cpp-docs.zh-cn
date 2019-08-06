@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::student_t_distribution [C++], max
 - std::student_t_distribution [C++], param_type
 ms.assetid: 87b48127-9311-4d07-95df-833ed46bf0b1
-ms.openlocfilehash: 4c63f37c07a56144fdd18531af5e8f9fbdac656a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 42e7337a2a0803af51e7dd11f53c482dbfc2aa0f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412249"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458993"
 ---
 # <a name="studenttdistribution-class"></a>student_t_distribution 类
 
@@ -64,12 +64,12 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*RealType*<br/>
-浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*RealType*\
+浮点结果类型, 默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
-此模板类将描述产生用户指定的整型值类型**双**如果未提供任何内容根据学生的分布*t*-分发。 下表链接到有关各个成员的文章。
+模板类描述产生用户指定的整型值的分布, 或者 **, 如果未**提供任何值, 则根据学生的*t*-分布来分布。 下表链接到有关各个成员的文章。
 
 ||||
 |-|-|-|
@@ -159,7 +159,7 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<random>
+**标头：** \<random>
 
 **命名空间：** std
 
@@ -174,15 +174,15 @@ explicit student_t_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-*n*<br/>
+*n*\
 `n` 分布参数。
 
-*parm*<br/>
+*parm*\
 用于构造分布的参数包。
 
 ### <a name="remarks"></a>备注
 
-**前置条件：**`0.0 < n`
+**前置条件：** `0.0 < n`
 
 第一个构造函数将构造一个对象，该对象存储的 `n` 值保留值 *n*。
 
@@ -205,18 +205,18 @@ struct param_type {
 
 ### <a name="parameters"></a>参数
 
-*n*<br/>
+*n*\
 `n` 分布参数。
 
-*right*<br/>
+*然后*\
 要与它进行比较的 `param_type` 对象。
 
 ### <a name="remarks"></a>备注
 
-**前置条件：**`0.0 < n`
+**前置条件：** `0.0 < n`
 
 在实例化时，可将此结构传递给分布的类构造函数、传递给 `param()` 成员函数以设置现有分布的存储参数，并传递给 `operator()` 以代替存储参数使用。
 
 ## <a name="see-also"></a>请参阅
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

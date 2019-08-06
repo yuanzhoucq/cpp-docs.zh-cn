@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - cstddef header
 ms.assetid: be8d1e39-5974-41ee-b41d-eafa6c82ffce
-ms.openlocfilehash: 15d13a3af35cb41950df8aeba0c86d779e701ddb
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 87d268977ee46112fedce517e66a9e68071863db
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244447"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457562"
 ---
 # <a name="ltcstddefgt"></a>&lt;cstddef&gt;
 
-包含 C 标准库标头\<stddef.h > 并将关联的名称到添加`std`命名空间。 包括此标头中声明 C 标准库标头中使用外部链接声明的名称将确保`std`命名空间。
+包括 C 标准库标头\<stddef.h > 并将关联名称添加`std`到命名空间。 包括此标头可确保在`std`命名空间中声明使用 C 标准库标头中的外部链接声明的名称。
 
 > [!NOTE]
-> \<cstddef > 包括类型**字节**且不会包括类型**wchar_t**。
+> \<cstddef > 包含类型**byte** , 不包括类型**wchar_t**。
 
 ## <a name="syntax"></a>语法
 
@@ -26,7 +26,7 @@ ms.locfileid: "68244447"
 #include <cstddef>
 ```
 
-## <a name="namespace-and-macros"></a>Namespace 和宏
+## <a name="namespace-and-macros"></a>命名空间和宏
 
 ```cpp
 namespace std {
@@ -43,18 +43,18 @@ namespace std {
 ### <a name="parameters"></a>参数
 
 *ptrdiff_t*\
-实现定义带符号整数类型，可存储两个下标的数组对象中的差异。
+实现定义的有符号整数类型, 它可以保存数组对象中两个下标的差。
 
 *size_t*\
-实现定义无符号的整数类型的大小正好能容纳的大小以字节为单位的任何对象。
+实现定义的无符号整数类型, 该类型足够大, 足以包含任何对象的大小 (以字节为单位)。
 
-*这些*\
-其对齐要求是至少一样大，每个标量类型，并在每个上下文中支持的对齐需求的 POD 类型。
+*max_align_t*\
+一个 POD 类型, 其对齐要求至少与每个标量类型的类型相同, 并且每个上下文都支持其对齐要求。
 
 *nullptr_t*\
-类型的同义词**nullptr**表达式。 尽管**nullptr**不能采用地址，另一个*nullptr_t*可将是左值的对象。
+**Nullptr**表达式的类型的同义词。 尽管不能采用**nullptr**地址, 但也可以采用作为左值的另一个*nullptr_t*对象的地址。
 
-## <a name="byte-class"></a>字节类
+## <a name="byte-class"></a>byte 类
 
 ```cpp
 enum class byte : unsigned char {};
@@ -79,6 +79,6 @@ template <class IntType>
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 标准库概述](../standard-library/cpp-standard-library-overview.md)<br/>
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[头文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 标准库概述](../standard-library/cpp-standard-library-overview.md)\
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

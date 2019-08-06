@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_unsigned class
 - is_unsigned
 ms.assetid: ba5bec3d-796b-4e54-8595-a3941ec6a8dc
-ms.openlocfilehash: fc27689eb367950daf9dfdf113e1472b0945f9af
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3da9f71543815b507307f2cf4969e8f19c79e8c5
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413419"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458880"
 ---
 # <a name="isunsigned-class"></a>is_unsigned 类
 
@@ -27,12 +27,12 @@ struct is_unsigned;
 
 ### <a name="parameters"></a>参数
 
-*Ty*<br/>
+*Ty*\
 要查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型谓词的实例将保留 true 类型*Ty*是一种无符号整型类型或`cv-qualified`无符号整型类型，否则为 false。
+如果类型*Ty*是无符号整型类型或`cv-qualified`无符号整型类型, 则类型谓词的实例为 true; 否则为 false。
 
 ## <a name="example"></a>示例
 
@@ -71,11 +71,11 @@ is_unsigned<float> == false
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<type_traits>
+**标头：** \<type_traits>
 
 **命名空间：** std
 
 ## <a name="see-also"></a>请参阅
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_signed 类](../standard-library/is-signed-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_signed 类](../standard-library/is-signed-class.md)

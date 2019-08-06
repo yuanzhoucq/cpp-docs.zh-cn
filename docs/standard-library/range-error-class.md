@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - range_error class
 ms.assetid: 8afb3e88-fc49-4213-b096-ed63d7aea37c
-ms.openlocfilehash: a4b7e90e5806713408c6779b288cafe008e2b4ed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e741604a3bb23fa8166023d115f79e7a288e2f7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369796"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458247"
 ---
 # <a name="rangeerror-class"></a>range_error 类
 
@@ -29,7 +29,7 @@ public:
 
 ## <a name="remarks"></a>备注
 
-返回的值[什么](../standard-library/exception-class.md)是一份`message.data`。 有关详细信息，请参阅[basic_string:: data](../standard-library/basic-string-class.md#data)。
+的副本`message.data`返回的[](../standard-library/exception-class.md)值。 有关详细信息, 请参阅[basic_string::d ata](../standard-library/basic-string-class.md#data)。
 
 ## <a name="example"></a>示例
 
@@ -58,11 +58,11 @@ Type: class std::range_error
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<stdexcept>
+**标头：** \<stdexcept>
 
 **命名空间：** std
 
 ## <a name="see-also"></a>请参阅
 
-[runtime_error 类](../standard-library/runtime-error-class.md)<br/>
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[runtime_error 类](../standard-library/runtime-error-class.md)\
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

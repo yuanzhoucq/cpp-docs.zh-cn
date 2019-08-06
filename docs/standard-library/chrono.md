@@ -10,22 +10,22 @@ f1_keywords:
 - chrono/std::chrono::milliseconds
 - chrono/std::chrono::microseconds
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
-ms.openlocfilehash: 72d16b068f337fe935d07e1eb2d0e2b74de6268f
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: f01b00a1469cdf82590a1bdfc742312ec96912c9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244868"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459452"
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 
 包括标准标头 \< chrono > 来定义表示和操作持续时间及时刻的类和函数。
 
-开始在 Visual Studio 2015 中，实现`steady_clock`发生更改，以满足C++标准对稳定性和单一性的需求。 `steady_clock` 现在基于 QueryPerformanceCounter()，且 `high_resolution_clock` 现在是 `steady_clock` 的 typedef。 因此，在 MicrosoftC++编译器`steady_clock::time_point`现在是 typedef `chrono::time_point<steady_clock>`; 但是，此规则并不一定是其他实现这种情况。
+从 Visual Studio 2015 开始, 的实现`steady_clock`已更改为符合稳定性和单一性的C++标准要求。 `steady_clock` 现在基于 QueryPerformanceCounter()，且 `high_resolution_clock` 现在是 `steady_clock` 的 typedef。 因此, Microsoft C++编译器`steady_clock::time_point` `chrono::time_point<steady_clock>`现在是的 typedef; 但是, 其他实现不一定要使用此规则。
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<chrono >
+**标头:** \<chrono >
 
 **命名空间：** std
 
@@ -72,30 +72,30 @@ ms.locfileid: "68244868"
 |[operator&gt;](../standard-library/chrono-operators.md#op_gt)|确定一个 `duration` 或 `time_point` 对象是否大于另一个 `duration` 或 `time_point` 对象。|
 |[operator&gt;=](../standard-library/chrono-operators.md#op_gt_eq)|确定一个 `duration` 或 `time_point` 对象是否大于或等于另一个 `duration` 或 `time_point` 对象。|
 
-### <a name="typedefs-predefined-duration-types"></a>Typedef （预定义的持续时间类型）
+### <a name="typedefs-predefined-duration-types"></a>Typedef (预定义的持续时间类型)
 
 有关在以下 typedefs 中使用的比率类型的详细信息，请参阅 [\<ratio>](../standard-library/ratio.md)。
 
-|||||||`typedef duration<long long, nano> nanoseconds;`|同义词`duration`时钟周期 1 纳秒的类型。 | |`typedef duration<long long, micro> microseconds;`|同义词`duration`具有时钟周期为 1 微秒的类型。 | |`typedef duration<long long, milli> milliseconds;`|同义词`duration`类型的时钟周期为 1 毫秒。 | |`typedef duration<long long> seconds;`|同义词`duration`时钟周期为 1 秒的类型。 | |`typedef duration<int, ratio<60> > minutes;`|同义词`duration`时钟周期为 1 分钟的类型。 | |`typedef duration<int, ratio<3600> > hours;`|同义词`duration`时钟周期为 1 小时的类型。 |
+|||||||`typedef duration<long long, nano> nanoseconds;`|计时周期为`duration` 1 纳秒的类型的同义词。 | | |`typedef duration<long long, micro> microseconds;`计时周期为`duration` 1 微秒的类型的同义词。 | | |`typedef duration<long long, milli> milliseconds;`计时周期为`duration` 1 毫秒的类型的同义词。 | | |`typedef duration<long long> seconds;`计时周期为`duration` 1 秒的类型的同义词。 | | |`typedef duration<int, ratio<60> > minutes;`计时周期为`duration` 1 分钟的类型的同义词。 | | |`typedef duration<int, ratio<3600> > hours;`计时周期为`duration` 1 小时的类型的同义词。 |
 
 ### <a name="literals"></a>文本
 
-**(C + + 11)** \<Chrono > 标头定义了以下[用户定义的文本](../cpp/user-defined-literals-cpp.md)可用于更方便、 类型安全和你的代码的可维护性。 这些文本在 `literals::chrono_literals` 内联命名空间中定义，并且在 std::chrono 存在于作用域中时也存在于作用域中。
+**(C + + 11)** Chrono > 标头定义了以下[用户定义的文本](../cpp/user-defined-literals-cpp.md), 你可以使用它们来更好地使用、类型安全和代码的可维护性。 \< 这些文本在 `literals::chrono_literals` 内联命名空间中定义，并且在 std::chrono 存在于作用域中时也存在于作用域中。
 
 |||
 |-|-|
-|小时运算符""h (无符号长长 Val)|指定整数值形式的小时数。|
-|持续时间\<双倍，比\<3600 >> 运算符""h （长双精度值）|指定浮点值形式的小时数。|
-|分钟 (运算符""最小值) （无符号长长 Val）|指定整数值形式的分钟数。|
-|持续时间\<双倍，比\<60 >> (运算符""最小值) （长双精度值）|指定浮点值形式的分钟数。|
-|秒运算符""s (无符号长长 Val)|指定整数值形式的分钟数。|
-|持续时间\<双精度 > 运算符""s （长双精度值）|指定浮点值形式的描述。|
-|毫秒运算符""ms (无符号长长 Val)|指定整数值形式的毫秒数。|
-|持续时间\<双精度、 milli > 运算符""ms （长双精度值）|指定浮点值形式的毫秒数。|
-|微秒运算符""我们 (无符号长长 Val)|指定整数值形式的微秒数。|
-|持续时间\<双精度，micro > 运算符""我们 （长双精度值）|指定浮点值形式的微秒数。|
-|纳秒为单位运算符""ns (无符号长长 Val)|指定整数值形式的纳秒数。|
-|持续时间\<双精度，nano > 运算符""ns （长双精度值）|指定浮点值形式的纳秒数。|
+|小时运算符 "" h (无符号长整型值)|指定整数值形式的小时数。|
+|持续\<时间 double,\<比率 3600 > > 运算符 "" h (long double Val)|指定浮点值形式的小时数。|
+|分钟 (运算符 "" min) (无符号长整型值)|指定整数值形式的分钟数。|
+|持续\<时间 double,\<比率为 60 > > (运算符 "" min) (long double Val)|指定浮点值形式的分钟数。|
+|seconds 运算符 "" s (无符号长整型值)|指定整数值形式的分钟数。|
+|duration\<double > 运算符 "" s (long double Val)|指定浮点值形式的描述。|
+|毫秒运算符 "" ms (无符号长整型值)|指定整数值形式的毫秒数。|
+|duration\<double, milli > 运算符 "" ms (long double Val)|指定浮点值形式的毫秒数。|
+|微秒运算符 "" us (无符号长整型值)|指定整数值形式的微秒数。|
+|duration\<double, 微 > 运算符 "" us (long double Val)|指定浮点值形式的微秒数。|
+|毫微秒运算符 "" ns (无符号长整型值)|指定整数值形式的纳秒数。|
+|持续\<时间 double, nano > 运算符 "" ns (long double Val)|指定浮点值形式的纳秒数。|
 
 下面的示例演示如何使用 chrono 文本。
 
@@ -107,4 +107,4 @@ constexpr auto my_duration_unit = 108ms;
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)<br/>
+[头文件引用](../standard-library/cpp-standard-library-header-files.md)
