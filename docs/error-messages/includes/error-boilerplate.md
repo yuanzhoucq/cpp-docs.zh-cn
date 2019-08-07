@@ -1,19 +1,19 @@
 ---
 ms.openlocfilehash: 980cdc1c4ac82015cab61133a64fa54fbd030843
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451295"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68821116"
 ---
 > [!IMPORTANT]
-> Visual Studio 编译器和生成工具可报告多种类型的错误和警告。 找到错误或警告后，生成工具可能会做出有关代码意图的假设并尝试继续运行，以便可以在同一时间报告更多的问题。 如果工具做出错误假设，则后续错误或警告可能不适于你的项目。 纠正项目中的问题时，请始终先纠正报告的第一个错误或警告，然后在通常情况下重新生成。 一个修补程序可能会使许多后续错误消失。
+> Visual Studio 编译器和生成工具可以报告多种错误和警告。 找到错误或警告后, 生成工具可能会对代码意向作出假设并尝试继续, 以便可以同时报告更多问题。 如果工具做出错误假设，则后续错误或警告可能不适于你的项目。 纠正项目中的问题时，请始终先纠正报告的第一个错误或警告，然后在通常情况下重新生成。 一个修补程序可能会导致许多后续错误消失。
 
-若要在 Visual Studio 中的特定诊断消息获取帮助，请选择它在**输出**窗口，并按**F1**密钥。 如果存在，则 visual Studio 会打开该错误的文档页。 上面的搜索工具还可用于查找有关特定错误或警告的文章。 或者，浏览错误和警告的工具和在此页上的导航窗格中类型的列表。
+若要在 Visual Studio 中获取特定诊断消息的帮助, 请在 "**输出**" 窗口中选择该消息, 然后按**F1**键。 Visual Studio 将打开该错误的文档页 (如果存在)。 你还可以使用上面的搜索工具查找有关特定错误或警告的文章。 或者, 按工具浏览错误和警告列表, 并在此页上的导航窗格中键入。
 
 > [!NOTE]
-> 记录不是每个 Visual Studio 错误或警告。 在许多情况下，诊断消息提供了所有可用的信息。 如果您在使用时，在此页上位于**F1**和您认为错误或警告消息需要更多说明，请告诉我们。 可以使用在此页上的反馈按钮上引发文档问题[GitHub](https://github.com/MicrosoftDocs/cpp-docs/issues)，或上的一个产品问题[开发人员社区](https://developercommunity.visualstudio.com/spaces/8/index.html)站点。 您还可以发送反馈，并输入在 IDE 中的 bug。 在 Visual Studio 中，转到菜单栏并选择**帮助 > 发送反馈 > 报告问题**，或使用提交建议**帮助 > 发送反馈 > 发送建议**。
+> 并未记录每个 Visual Studio 错误或警告。 在许多情况下, 诊断消息提供了所有可用的信息。 如果你在使用**F1**时着陆此页, 并且你认为错误或警告消息需要其他说明, 请告知我们。 您可以使用此页上的反馈按钮, 在[GitHub](https://github.com/MicrosoftDocs/cpp-docs/issues)上提出文档问题, 或在[开发人员社区](https://developercommunity.visualstudio.com/spaces/8/index.html)站点上提出产品问题。 你还可以发送反馈, 并在 IDE 中输入 bug。 在 Visual Studio 中, 请在菜单栏上, 选择 "**帮助 > 发送反馈" > 报告问题**, 或通过使用 "**帮助 > 发送反馈 > 发送建议**" 来提交建议。
 
-在 Microsoft 的公共论坛中有关错误和警告都可能会发现更多帮助。 或者，搜索错误或警告编号，在 Visual Studio C++ [开发人员社区](https://developercommunity.visualstudio.com/spaces/8/index.html)站点。 此外可以搜索错误和警告，并上提问[Stack Overflow](https://stackoverflow.com/)查找解决方案。
+你可能会在 Microsoft 的公共论坛中找到有关错误和警告的其他协助。 或在 Visual Studio C++ [开发人员社区](https://developercommunity.visualstudio.com/spaces/8/index.html)网站上搜索错误或警告编号。 你还可以在[Stack Overflow](https://stackoverflow.com/)上搜索错误和警告, 并提出有关如何查找解决方案的问题。
 
-有关更多帮助和社区资源的链接，请参阅[可视化C++帮助和社区](../../overview/visual-cpp-help-and-community.md)。
+有关更多帮助和社区资源的链接, 请参阅[视觉C++帮助和社区](../../overview/visual-cpp-help-and-community.md)。

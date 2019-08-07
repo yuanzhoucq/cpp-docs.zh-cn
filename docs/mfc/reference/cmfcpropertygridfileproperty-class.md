@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCPropertyGridFileProperty [MFC], CMFCPropertyGridFileProperty
 ms.assetid: 2bb8b8b4-47fc-4798-bd5e-dc8ea0b4cd9d
-ms.openlocfilehash: 20a0a50198357602d70a2111c6884058f7578af7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b64d18a67ea499c202b81481684227200846483
+ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326691"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68821285"
 ---
 # <a name="cmfcpropertygridfileproperty-class"></a>CMFCPropertyGridFileProperty 类
 
-`CMFCPropertyGridFileProperty`类支持用于打开文件选择对话框中的属性列表控件项。
+`CMFCPropertyGridFileProperty`类支持用于打开文件选择对话框的属性列表控件项。
 
 ## <a name="syntax"></a>语法
 
@@ -38,8 +38,8 @@ class CMFCPropertyGridFileProperty : public CMFCPropertyGridProperty
 
 |名称|描述|
 |----------|-----------------|
-|`CMFCPropertyGridFileProperty::GetThisClass`|由框架用于获取一个指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)与此类类型相关联的对象。|
-|`CMFCPropertyGridFileProperty::OnClickButton`|(重写[cmfcpropertygridproperty:: Onclickbutton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton)。)|
+|`CMFCPropertyGridFileProperty::GetThisClass`|由框架用于获取指向与此类类型相关联的[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)对象的指针。|
+|`CMFCPropertyGridFileProperty::OnClickButton`|(重写[CMFCPropertyGridProperty:: OnClickButton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton)。)|
 
 ### <a name="remarks"></a>备注
 
@@ -53,9 +53,9 @@ class CMFCPropertyGridFileProperty : public CMFCPropertyGridProperty
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxpropertygridctrl.h
+**标头:** afxpropertygridctrl
 
-##  <a name="cmfcpropertygridfileproperty"></a>  CMFCPropertyGridFileProperty::CMFCPropertyGridFileProperty
+##  <a name="cmfcpropertygridfileproperty"></a>CMFCPropertyGridFileProperty:: CMFCPropertyGridFileProperty
 
 构造 `CMFCPropertyGridFileProperty` 对象。
 
@@ -74,38 +74,38 @@ CMFCPropertyGridFileProperty(
 ### <a name="parameters"></a>参数
 
 *strName*<br/>
-[in]属性名称。
+中属性名称。
 
 *bOpenFileDialog*<br/>
-[in]为 true，则打开**打开文件**对话框;如果为 FALSE，打开**保存文件**对话框。
+中若要打开 "**打开文件**" 对话框, 则为 TRUE;若要打开 "**保存文件**" 对话框, 则为 FALSE。
 
 *strFileName*<br/>
-[in]初始文件名。
+中初始文件名。
 
 *lpszDefExt*<br/>
-[in]一个或多个文件扩展名的字符串。 默认值为 NULL。
+中一个或多个文件扩展名的字符串。 默认值为 NULL。
 
 *dwFlags*<br/>
-[in]对话框标志。 默认值是 OFN_HIDEREADONLY 和 OFN_OVERWRITEPROMPT 的按位组合 (OR)。
+中对话框标志。 默认值是 OFN_HIDEREADONLY 和 OFN_OVERWRITEPROMPT 的按位组合 (OR)。
 
 *lpszFilter*<br/>
-[in]一个或多个文件筛选器的字符串。 默认值为 NULL。
+中一个或多个文件筛选器的字符串。 默认值为 NULL。
 
 *lpszDescr*<br/>
-[in]属性项说明。 默认值为 NULL。
+中属性项说明。 默认值为 NULL。
 
 *dwData*<br/>
-[in]与属性项相关联的特定于应用程序的数据。 例如，32 位整数或与指向其他数据的指针。 默认值为 0。
+中与属性项关联的特定于应用程序的数据。 例如，32 位整数或与指向其他数据的指针。 默认值为 0。
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-有关可用标志的完整列表，请参阅[OPENFILENAME 结构](/windows/desktop/api/commdlg/ns-commdlg-tagofna)。
+有关可用标志的完整列表, 请参阅[OPENFILENAME 结构](/windows/win32/api/commdlg/ns-commdlg-openfilenamew)。
 
 ### <a name="example"></a>示例
 
-以下示例演示如何使用 `CMFCPropertyGridFileProperty` 类的构造函数创建对象。 此示例摘自[Visual Studio 演示示例](../../overview/visual-cpp-samples.md)。
+以下示例演示如何使用 `CMFCPropertyGridFileProperty` 类的构造函数创建对象。 此示例是[Visual Studio 演示示例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#22](../../mfc/codesnippet/cpp/cmfcpropertygridfileproperty-class_1.cpp)]
 
