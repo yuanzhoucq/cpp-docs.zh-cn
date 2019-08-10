@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CFtpFileFind [MFC], FindNextFile
 - CFtpFileFind [MFC], GetFileURL
 ms.assetid: 9667cf01-657f-4b11-b9db-f11e5a7b4e4c
-ms.openlocfilehash: 885005cc04da94ff4339a5f538956b1bfc96b4c3
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 9afe2bf563ffa80a3238548d75efa69178fa1f64
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503678"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916056"
 ---
 # <a name="cftpfilefind-class"></a>CFtpFileFind 类
 
@@ -43,21 +43,21 @@ class CFtpFileFind : public CFileFind
 
 |名称|描述|
 |----------|-----------------|
-|[CFtpFileFind::FindFile](#findfile)|查找 FTP 服务器上的文件。|
-|[CFtpFileFind::FindNextFile](#findnextfile)|将继续通过以前调用文件搜索[FindFile](#findfile)。|
-|[CFtpFileFind::GetFileURL](#getfileurl)|获取的 URL，包括找到的文件的路径。|
+|[CFtpFileFind::FindFile](#findfile)|在 FTP 服务器上查找文件。|
+|[CFtpFileFind::FindNextFile](#findnextfile)|继续对[FindFile](#findfile)进行的文件搜索。|
+|[CFtpFileFind::GetFileURL](#getfileurl)|获取找到的文件的 URL (包括路径)。|
 
 ## <a name="remarks"></a>备注
 
-`CFtpFileFind` 包含成员函数来开始搜索，找到文件，并返回的 URL 或文件的其他说明性信息。
+`CFtpFileFind`包括一些成员函数, 这些函数开始搜索, 查找文件, 并返回有关该文件的 URL 或其他描述性信息。
 
-此演示适合对于 Internet 和本地文件搜索包括其他 MFC 类[CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md)并[CFileFind](../../mfc/reference/cfilefind-class.md)。 连同`CFtpFileFind`，这些类提供用于客户端以查找特定文件，而不考虑服务器协议或文件类型 （本地计算机或远程服务器） 的无缝机制。 请注意，搜索 HTTP 服务器上，因为 HTTP 不支持直接进行文件操作所需的搜索没有 MFC 类。
+用于搜索 Internet 和本地文件的其他 MFC 类包括[CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md)和[CFileFind](../../mfc/reference/cfilefind-class.md)。 与一起`CFtpFileFind`使用, 这些类提供一种无缝机制, 使客户端能够查找特定文件, 而不考虑服务器协议或文件类型 (本地计算机或远程服务器)。 请注意, 没有用于在 HTTP 服务器上搜索的 MFC 类, 因为 HTTP 不支持搜索所需的直接文件操作。
 
-有关如何使用详细信息`CFtpFileFind`和其他 WinInet 类，请参阅文章[Internet 编程与 WinInet](../../mfc/win32-internet-extensions-wininet.md)。
+有关如何使用`CFtpFileFind`和其他 WinInet 类的详细信息, 请参阅文章[使用 WinInet 进行 Internet 编程](../../mfc/win32-internet-extensions-wininet.md)。
 
 ## <a name="example"></a>示例
 
-下面的代码演示如何枚举在 FTP 服务器的当前目录中的所有文件。
+下面的代码演示如何枚举 FTP 服务器当前目录中的所有文件。
 
 [!code-cpp[NVC_MFCWinInet#8](../../mfc/codesnippet/cpp/cftpfilefind-class_1.cpp)]
 
@@ -71,9 +71,9 @@ class CFtpFileFind : public CFileFind
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxinet.h
+**标头:** afxinet。h
 
-##  <a name="cftpfilefind"></a>  CFtpFileFind::CFtpFileFind
+##  <a name="cftpfilefind"></a>CFtpFileFind:: CFtpFileFind
 
 调用此成员函数来构造`CFtpFileFind`对象。
 
@@ -86,22 +86,22 @@ explicit CFtpFileFind(
 ### <a name="parameters"></a>参数
 
 *pConnection*<br/>
-指向 `CFtpConnection` 对象的指针。 你可以通过调用获取 FTP 连接[cinternetsession:: Getftpconnection](../../mfc/reference/cinternetsession-class.md#getftpconnection)。
+指向 `CFtpConnection` 对象的指针。 可以通过调用[CInternetSession:: GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection)获取 FTP 连接。
 
 *dwContext*<br/>
-上下文标识符`CFtpFileFind`对象。 请参阅**备注**有关此参数的详细信息。
+`CFtpFileFind`对象的上下文标识符。 有关此参数的详细信息, 请参阅**备注**。
 
 ### <a name="remarks"></a>备注
 
-默认值为*dwContext*发送到 mfc`CFtpFileFind`对象从[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象创建`CFtpFileFind`对象。 您可以覆盖默认设置，以便将上下文标识符设置为所选的值。 上下文标识符就会归还[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供与该标识的对象上的状态。 请参阅文章[Internet 前几个步骤：WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。
+*DwContext*的默认值由 MFC 发送到创建该`CFtpFileFind` `CFtpFileFind`对象的[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象中的对象。 您可以重写默认值, 以将上下文标识符设置为您选择的值。 上下文标识符返回到[CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) , 以在标识它的对象上提供状态。 请参阅 Internet [First 步骤一文:WinInet](../../mfc/wininet-basics.md) , 详细了解上下文标识符。
 
 ### <a name="example"></a>示例
 
   请参阅本主题前面的类概述中的示例。
 
-##  <a name="findfile"></a>  CFtpFileFind::FindFile
+##  <a name="findfile"></a>CFtpFileFind:: FindFile
 
-调用此成员函数以找到 FTP 文件。
+调用此成员函数以查找 FTP 文件。
 
 ```
 virtual BOOL FindFile(
@@ -112,36 +112,36 @@ virtual BOOL FindFile(
 ### <a name="parameters"></a>参数
 
 *pstrName*<br/>
-指向包含要查找的文件的名称的字符串的指针。 如果为 NULL，则调用将执行通配符搜索 （*）。
+指向字符串的指针, 该字符串包含要查找的文件的名称。 如果为 NULL, 则调用将执行通配符搜索 (*)。
 
 *dwFlags*<br/>
-描述如何处理此会话标志。 可以使用按位 OR 运算符组合这些标志 (&#124;)，如下所示：
+描述如何处理此会话的标志。 这些标志可以与按位 "或" 运算符 (&#124;) 组合, 如下所示:
 
-- 即使本地缓存 INTERNET_FLAG_RELOAD 从网络中获取数据。 这是默认标志。
+- INTERNET_FLAG_RELOAD 从线路获取数据, 即使该数据在本地缓存也是如此。 这是默认标志。
 
-- INTERNET_FLAG_DONT_CACHE 不缓存数据，本地或在任何网关。
+- INTERNET_FLAG_DONT_CACHE 不会在本地或任何网关上缓存数据。
 
-- INTERNET_FLAG_RAW_DATA 重写默认设置，以便返回原始数据 ( [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) FTP 的结构)。
+- INTERNET_FLAG_RAW_DATA 重写默认值以返回原始数据 (FTP 的[WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa)结构)。
 
-- INTERNET_FLAG_SECURE 保护与安全套接字层或百分比在网络上的事务 此标志为适用于仅 HTTP 请求。
+- INTERNET_FLAG_SECURE 用安全套接字层或 PCT 保护网络上的事务。 此标志仅适用于 HTTP 请求。
 
-- INTERNET_FLAG_EXISTING_CONNECT 如果可能，请重复使用现有连接到服务器的新`FindFile`而不是创建新的会话的每个请求的请求。
+- INTERNET_FLAG_EXISTING_CONNECT 如果可能, 请为新`FindFile`请求重用服务器的现有连接, 而不是为每个请求创建一个新会话。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则不为 0；否则为 0。 若要获得扩展错误信息，请调用 Win32 函数[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
+如果成功，则不为 0；否则为 0。 若要获得扩展的错误信息, 请调用 Win32 函数[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
 
 ### <a name="remarks"></a>备注
 
-在调用`FindFile`若要检索的第一个 FTP 文件，可以调用[FindNextFile](#findnextfile)检索后续 FTP 文件。
+调用`FindFile`检索第一个 ftp 文件后, 可以调用[FindNextFile](#findnextfile)来检索后续的 ftp 文件。
 
 ### <a name="example"></a>示例
 
-  请参阅本主题中前面的示例。
+  请参阅本主题前面的示例。
 
-##  <a name="findnextfile"></a>  CFtpFileFind::FindNextFile
+##  <a name="findnextfile"></a>CFtpFileFind:: FindNextFile
 
-调用此成员函数以继续文件搜索开始通过调用[FindFile](#findfile)成员函数。
+调用此成员函数以继续通过调用[FindFile](#findfile)成员函数而开始的文件搜索。
 
 ```
 virtual BOOL FindNextFile();
@@ -149,21 +149,21 @@ virtual BOOL FindNextFile();
 
 ### <a name="return-value"></a>返回值
 
-非零，如果有多个文件;如果找到该文件是在目录中的最后一个，或如果出错，则为零。 若要获得扩展错误信息，请调用 Win32 函数[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。 如果找到该文件是在目录中的最后一个文件，或者如果没有匹配的可以找到文件，`GetLastError`函数返回 ERROR_NO_MORE_FILES。
+如果有多个文件, 则为非零值;如果找到的文件是目录中的最后一个, 或者如果出现错误, 则为零。 若要获得扩展的错误信息, 请调用 Win32 函数[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。 如果找到的文件是目录中的最后一个文件, 或者找不到匹配的文件, 则该`GetLastError`函数将返回 ERROR_NO_MORE_FILES。
 
 ### <a name="remarks"></a>备注
 
-您必须至少一次调用属性的任何函数之前调用此函数 (请参阅[CFileFind::FindNextFile](../../mfc/reference/cfilefind-class.md#findnextfile))。
+调用任何 attribute 函数之前, 必须至少调用此函数一次 (请参见[CFileFind:: FindNextFile](../../mfc/reference/cfilefind-class.md#findnextfile))。
 
-`FindNextFile` 包装 Win32 函数[FindNextFile](/windows/desktop/api/fileapi/nf-fileapi-findnextfilea)。
+`FindNextFile`包装 Win32 函数[FindNextFile](/windows/desktop/api/fileapi/nf-fileapi-findnextfilea)。
 
 ### <a name="example"></a>示例
 
   请参阅本主题前面的示例。
 
-##  <a name="getfileurl"></a>  CFtpFileFind::GetFileURL
+##  <a name="getfileurl"></a>CFtpFileFind:: GetFileURL
 
-调用此成员函数可获取指定文件的 URL。
+调用此成员函数以获取指定文件的 URL。
 
 ```
 CString GetFileURL() const;
@@ -171,11 +171,11 @@ CString GetFileURL() const;
 
 ### <a name="return-value"></a>返回值
 
-文件和路径的通用资源定位器 (URL)。
+通用资源定位符 (URL) 的文件和路径。
 
 ### <a name="remarks"></a>备注
 
-`GetFileURL` 类似于此成员函数[CFileFind::GetFilePath](../../mfc/reference/cfilefind-class.md#getfilepath)，只不过它在窗体中返回的 URL `ftp://moose/dir/file.txt`。
+`GetFileURL`与成员函数[CFileFind:: GetFilePath](../../mfc/reference/cfilefind-class.md#getfilepath)类似, 只是它以形式`ftp://moose/dir/file.txt`返回 URL。
 
 ## <a name="see-also"></a>请参阅
 

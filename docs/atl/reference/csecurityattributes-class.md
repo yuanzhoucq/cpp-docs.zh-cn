@@ -9,19 +9,19 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityAttributes class
 ms.assetid: a094880c-52e1-4a28-97ff-752d5869908e
-ms.openlocfilehash: b26de7a2a3426ed2fe86bd7ef50f6c5410fa5364
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 2139c25cb6d941d9debe0655ba91ba458b1f8c09
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503197"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915728"
 ---
 # <a name="csecurityattributes-class"></a>CSecurityAttributes 类
 
-此类是安全的属性结构的精简包装。
+此类是安全属性结构的精简包装器。
 
 > [!IMPORTANT]
->  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
+>  此类及其成员不能用于在 Windows 运行时中执行的应用程序。
 
 ## <a name="syntax"></a>语法
 
@@ -35,19 +35,19 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 
 |名称|描述|
 |----------|-----------------|
-|[CSecurityAttributes::CSecurityAttributes](#csecurityattributes)|构造函数。|
+|[CSecurityAttributes:: CSecurityAttributes](#csecurityattributes)|构造函数。|
 
 ### <a name="public-methods"></a>公共方法
 
 |名称|描述|
 |----------|-----------------|
-|[CSecurityAttributes::Set](#set)|调用此方法以设置的属性`CSecurityAttributes`对象。|
+|[CSecurityAttributes::Set](#set)|调用此方法可设置`CSecurityAttributes`对象的特性。|
 
 ## <a name="remarks"></a>备注
 
-`SECURITY_ATTRIBUTES`结构包含[安全描述符](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)用于创建对象并指定检索通过指定此结构的句柄是否可继承。
+结构包含用于创建对象的[安全描述符](/windows/desktop/api/winnt/ns-winnt-security_descriptor), 并指定通过指定此结构检索的句柄是否可继承。 `SECURITY_ATTRIBUTES`
 
-有关 Windows 中的访问控制模型的简介，请参阅[访问控制](/windows/desktop/SecAuthZ/access-control)Windows SDK 中。
+有关 Windows 中的访问控制模型的简介, 请参阅 Windows SDK 中的[访问控制](/windows/desktop/SecAuthZ/access-control)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -57,9 +57,9 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlsecurity.h
+**标头:** atlsecurity。h
 
-##  <a name="csecurityattributes"></a>  CSecurityAttributes::CSecurityAttributes
+##  <a name="csecurityattributes"></a>CSecurityAttributes:: CSecurityAttributes
 
 构造函数。
 
@@ -76,9 +76,9 @@ explicit CSecurityAttributes(const CSecurityDesc& rSecurityDescriptor, bool bInh
 *bInheritsHandle*<br/>
 指定在创建新进程时是否继承返回的句柄。 如果此成员为 true，则新进程继承该句柄。
 
-##  <a name="set"></a>  CSecurityAttributes::Set
+##  <a name="set"></a>CSecurityAttributes:: Set
 
-调用此方法以设置的属性`CSecurityAttributes`对象。
+调用此方法可设置`CSecurityAttributes`对象的特性。
 
 ```
 void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) throw(...);
@@ -94,12 +94,12 @@ void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) 
 
 ### <a name="remarks"></a>备注
 
-构造函数使用此方法以初始化`CSecurityAttributes`对象。
+构造函数使用此方法来初始化`CSecurityAttributes`对象。
 
 ## <a name="see-also"></a>请参阅
 
 [安全示例](../../overview/visual-cpp-samples.md)<br/>
 [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))<br/>
-[安全描述符](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)<br/>
+[安全描述符](/windows/desktop/api/winnt/ns-winnt-security_descriptor)<br/>
 [类概述](../../atl/atl-class-overview.md)<br/>
 [安全全局函数](../../atl/reference/security-global-functions.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - structures
 - structures, MFC
 ms.assetid: 2168fcc6-e800-4814-aabf-0bca86ff790d
-ms.openlocfilehash: cb888c1f3efe3ae0ecf35bc0f14ac0cda66112f9
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 3370736ebea81bdd19350f6236d2716cb9e54844
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611697"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68917006"
 ---
 # <a name="structures-used-by-mfc"></a>MFC 使用的结构
 
@@ -18,18 +18,18 @@ ms.locfileid: "65611697"
 
 |||
 |-|-|
-|[ABC 结构](/windows/desktop/api/wingdi/ns-wingdi-_abc)|[HSE_VERSION_INFO 结构](../../mfc/reference/hse-version-info-structure.md)|
-|[ABCFLOAT 结构](/windows/desktop/api/wingdi/ns-wingdi-_abcfloat)|[LINGER 结构](/windows/desktop/api/winsock/ns-winsock-linger)|
+|[ABC 结构](/windows/desktop/api/wingdi/ns-wingdi-abc)|[HSE_VERSION_INFO 结构](../../mfc/reference/hse-version-info-structure.md)|
+|[ABCFLOAT 结构](/windows/desktop/api/wingdi/ns-wingdi-abcfloat)|[LINGER 结构](/windows/desktop/api/winsock/ns-winsock-linger)|
 |[AFX_EXTENSION_MODULE 结构](../../mfc/reference/afx-extension-module-structure.md)|[LOGBRUSH 结构](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush)|
 |[BITMAP 结构](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap)|[LOGPEN 结构](/windows/desktop/api/Wingdi/ns-wingdi-taglogpen)|
 |[BITMAPINFO 结构](/windows/desktop/api/wingdi/ns-wingdi-tagbitmapinfo)|[MEASUREITEMSTRUCT 结构](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct)|
 |[CDaoDatabaseInfo 结构](../../mfc/reference/cdaodatabaseinfo-structure.md)|[MINMAXINFO 结构](/windows/desktop/api/winuser/ns-winuser-tagminmaxinfo)|
-|[CDaoErrorInfo 结构](../../mfc/reference/cdaoerrorinfo-structure.md)|[MSG 结构](/windows/desktop/api/winuser/ns-winuser-tagmsg)|
+|[CDaoErrorInfo 结构](../../mfc/reference/cdaoerrorinfo-structure.md)|[消息结构](/windows/desktop/api/winuser/ns-winuser-tagmsg)|
 |[CDaoFieldInfo 结构](../../mfc/reference/cdaofieldinfo-structure.md)|[NCCALCSIZE_PARAMS 结构](/windows/desktop/api/winuser/ns-winuser-tagnccalcsize_params)|
 |[CDaoIndexFieldInfo 结构](../../mfc/reference/cdaoindexfieldinfo-structure.md)|[PAINTSTRUCT 结构](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct)|
-|[CDaoIndexInfo 结构](../../mfc/reference/cdaoindexinfo-structure.md)|[POINT 结构](/windows/desktop/api/windef/ns-windef-tagpoint)|
+|[CDaoIndexInfo 结构](../../mfc/reference/cdaoindexinfo-structure.md)|[点结构](/windows/desktop/api/windef/ns-windef-tagpoint)|
 |[CDaoParameterInfo 结构](../../mfc/reference/cdaoparameterinfo-structure.md)|[RECT 结构](/windows/desktop/api/windef/ns-windef-tagrect)|
-|[CDaoQueryDefInfo 结构](../../mfc/reference/cdaoquerydefinfo-structure.md)|[RGNDATA 结构](/windows/desktop/api/wingdi/ns-wingdi-_rgndata)|
+|[CDaoQueryDefInfo 结构](../../mfc/reference/cdaoquerydefinfo-structure.md)|[RGNDATA 结构](/windows/desktop/api/wingdi/ns-wingdi-rgndata)|
 |[CDaoRelationFieldInfo 结构](../../mfc/reference/cdaorelationfieldinfo-structure.md)|[SOCKADDR 结构](/windows/desktop/winsock/sockaddr-2)|
 |[CDaoRelationInfo 结构](../../mfc/reference/cdaorelationinfo-structure.md)|[SOCKADDR_IN 结构](/windows/desktop/winsock/sockaddr-2)|
 |[CDaoTableDefInfo 结构](../../mfc/reference/cdaotabledefinfo-structure.md)|[SYSTEMTIME 结构](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)

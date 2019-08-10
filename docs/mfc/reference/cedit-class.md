@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: a66597f7a43e0730ae8b32369235ac860f51a0f1
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: ccf7445100977e1205bbcffe230e1919ac33adea
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375857"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916142"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -1205,7 +1205,7 @@ void SetPasswordChar(TCHAR ch);
 
 此成员函数对于多行编辑控件不起作用。
 
-调用成员函数时, `CEdit`将使用 ch 指定的字符重绘所有可见字符。  `SetPasswordChar`
+调用成员函数时, `CEdit`将使用 ch 指定的字符重绘所有可见字符。 `SetPasswordChar`
 
 如果使用[ES_PASSWORD](styles-used-by-mfc.md#edit-styles)样式创建编辑控件, 则默认密码字符将设置为星号 ( <strong>\*</strong>)。 如果`SetPasswordChar`在*ch*设置为0的情况下调用, 则删除此样式。
 
@@ -1400,10 +1400,10 @@ BOOL ShowBalloonTip(
 
 |参数|描述|
 |---------------|-----------------|
-|*pEditBalloonTip*|中指向[EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip)结构的指针, 该结构描述了气球提示。|
+|*pEditBalloonTip*|中指向[EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-editballoontip)结构的指针, 该结构描述了气球提示。|
 |*lpszTitle*|中指向一个 Unicode 字符串的指针, 该字符串包含气球状提示的标题。|
 |*lpszText*|中指向包含气球提示文本的 Unicode 字符串的指针。|
-|*ttiIcon*|中一个**INT** , 指定与气球状提示相关联的图标类型。 默认值为 TTI_NONE。 有关详细信息, 请参阅`ttiIcon` [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip)结构的成员。|
+|*ttiIcon*|中一个**INT** , 指定与气球状提示相关联的图标类型。 默认值为 TTI_NONE。 有关详细信息, 请参阅`ttiIcon` [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-editballoontip)结构的成员。|
 
 ### <a name="return-value"></a>返回值
 
