@@ -6,22 +6,22 @@ helpviewer_keywords:
 - rich edit controls [MFC], bottomless
 - CRichEditCtrl class [MFC], bottomless
 ms.assetid: 2877dd32-1e9a-4fd1-98c0-66dcbbeef1de
-ms.openlocfilehash: 6f078680777dcf80a4349ea34e4520cb56031f44
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d5650d34ffc350444061aa6147c38af016458811
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400742"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915256"
 ---
 # <a name="bottomless-rich-edit-controls"></a>无界限 Rich Edit 控件
 
-你的应用程序可以调整 rich edit 控件的大小 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) 根据需要以便它始终是其内容的大小相同。 Rich edit 控件支持此所谓的"无限制"功能通过发送其父窗口[EN_REQUESTRESIZE](/windows/desktop/Controls/en-requestresize)通知消息的内容大小发生更改时。
+应用程序可以根据需要调整多格式编辑控件 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) 的大小, 使其大小始终与内容相同。 Rich edit 控件支持此名为 "无限" 的功能, 方法是在其内容大小发生更改时, 向其父窗口发送[EN_REQUESTRESIZE](/windows/desktop/Controls/en-requestresize)通知消息。
 
-处理时**EN_REQUESTRESIZE**通知消息，应用程序应调整大小的尺寸以指定的控件[REQRESIZE](/windows/desktop/api/richedit/ns-richedit-_reqresize)结构。 应用程序可能也会移动控件附近的任何信息，以适应控件的高度变化。 若要调整控件的大小，可以使用`CWnd`函数[SetWindowPos](../mfc/reference/cwnd-class.md#setwindowpos)。
+处理**EN_REQUESTRESIZE**通知消息时, 应用程序应将控件的大小调整为指定的[REQRESIZE](/windows/desktop/api/richedit/ns-richedit-reqresize)结构中的维度。 应用程序可能也会移动控件附近的任何信息，以适应控件的高度变化。 若要调整控件的大小, 可以使用`CWnd`函数[SetWindowPos](../mfc/reference/cwnd-class.md#setwindowpos)。
 
-您可以强制无界限 rich edit 控件发送**EN_REQUESTRESIZE**使用的通知消息[RequestResize](../mfc/reference/cricheditctrl-class.md#requestresize)成员函数。 此消息很有用[OnSize](../mfc/reference/cwnd-class.md#onsize)处理程序。
+可以使用[REQUESTRESIZE](../mfc/reference/cricheditctrl-class.md#requestresize)成员函数强制无限 rich edit 控件发送**EN_REQUESTRESIZE**通知消息。 此消息在[OnSize](../mfc/reference/cwnd-class.md#onsize)处理程序中很有用。
 
-若要接收**EN_REQUESTRESIZE**通知消息，必须启用通知，可以使用`SetEventMask`成员函数。
+若要接收**EN_REQUESTRESIZE**通知消息, 必须使用`SetEventMask`成员函数启用通知。
 
 ## <a name="see-also"></a>请参阅
 
