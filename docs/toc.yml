@@ -10529,22 +10529,8 @@
                   items:
                     - name: 使用 C 和 Win32 进行多线程编程
                       href: parallel/multithreading-with-c-and-win32.md
-                    - name: 多线程程序
-                      href: parallel/multithread-programs.md
-                    - name: 多线程编程的库支持
-                      href: parallel/library-support-for-multithreading.md
-                    - name: 多线程编程的包含文件
-                      href: parallel/include-files-for-multithreading.md
-                    - name: 线程控制的 C 运行库函数
-                      href: parallel/c-run-time-library-functions-for-thread-control.md
                     - name: 多线程 C 程序示例
                       href: parallel/sample-multithread-c-program.md
-                    - name: 编写多线程 Win32 程序
-                      href: parallel/writing-a-multithreaded-win32-program.md
-                    - name: 编译和链接多线程程序
-                      href: parallel/compiling-and-linking-multithread-programs.md
-                    - name: 避免与多线程程序有关的问题
-                      href: parallel/avoiding-problem-areas-with-multithread-programs.md
                     - name: 线程本地存储 (TLS)
                       href: parallel/thread-local-storage-tls.md
                 - name: 使用 C++ 和 MFC 进行多线程编程
