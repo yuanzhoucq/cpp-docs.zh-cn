@@ -200,12 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: f389d38cf84f8f72d12242e798010d53a26f81a8
-ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
+ms.openlocfilehash: b08d45ac065fe63f6f51e3b63a49e8714a486988
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661532"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68956985"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 函数
 
@@ -442,7 +442,7 @@ bool any_of(
 
 ### <a name="remarks"></a>备注
 
-仅当 (对于  范围中的某些`N` ), 模板函数才返回 true
+仅当 (对于范围中的某些`N` ), 模板函数才返回 true
 
 `[0, last - first)`, 谓词`pred(*(first + N))`为 true。
 
@@ -650,7 +650,7 @@ constexpr const Type& clamp(
 值到夹具*值*的上限。
 
 *pred*\
-用于比较*值*为*lower* *或下限*的谓词。 比较谓词采用两个参数, 如果第一个参数的意义小于第二个参数, 则返回**true** , 否则返回**false**。
+用于比较*值*为*lower*或下限的谓词。 比较谓词采用两个参数, 如果第一个参数的意义小于第二个参数, 则返回**true** , 否则返回**false**。
 
 ### <a name="return-value"></a>返回值
 
@@ -1071,7 +1071,7 @@ count(
 
 ### <a name="return-value"></a>返回值
 
-的不同类型, 它`InputIterator`对具有值的范围 [*first*, *last*) 中的元素数进行*计数。*
+的不同类型, 它`InputIterator`对具有值的范围 [*first*, *last*) 中的元素数进行计数。
 
 ### <a name="remarks"></a>备注
 
@@ -3148,7 +3148,7 @@ bool is_permutation(
 
 `is_permutation` 在最坏情况下具有二次复杂性。
 
-第一个模板函数假设范围中的元素数从*first2*开始, 与指定`[first1, last1)`范围中的元素相同。 如果第二个范围中存在更多元素，则忽略它们；如果元素更少，则会发生未定义的行为。 第三个模板函数（C++14 及更高版本）不会进行此假设。 仅当  为 x = = y 的范围中的每个元素 x `[first1, last1)`指定的范围内, x = = y 与从*first2*或`[first2, last2)`开始的范围中的元素 y 相同时, 两者才返回 true。 此处, `operator==`必须在其操作数之间执行成对比较。
+第一个模板函数假设范围中的元素数从*first2*开始, 与指定`[first1, last1)`范围中的元素相同。 如果第二个范围中存在更多元素，则忽略它们；如果元素更少，则会发生未定义的行为。 第三个模板函数（C++14 及更高版本）不会进行此假设。 仅当为 x = = y 的范围中的每个元素 x `[first1, last1)`指定的范围内, x = = y 与从*first2*或`[first2, last2)`开始的范围中的元素 y 相同时, 两者才返回 true。 此处, `operator==`必须在其操作数之间执行成对比较。
 
 第二个和第四个模板函数的行为相同，只不过它们会将 `operator==(X, Y)` 替换为 `Pred(X, Y)`。 若要行为正确，谓词必须是对称、自反且可传递。
 
@@ -5843,7 +5843,7 @@ ForwardIterator partition(
 
 引用的范围必须有效；所有指针都必须可以引用，并且在序列中，可通过递增从第一个位置到达最后一个位置。
 
-`pred( b, a )`如果两者  `pred( a, b )`都为 false 且为 false, 则元素*a*和 b 等效, 但不一定相等, 其中*pred*是参数指定的谓词。 该`partition`算法不稳定, 并且不保证将保留等效元素的相对顺序。 算法 `stable_partition` 会保留此原始顺序。
+`pred( b, a )`如果两者 `pred( a, b )`都为 false 且为 false, 则元素*a*和 b 等效, 但不一定相等, 其中*pred*是参数指定的谓词。 该`partition`算法不稳定, 并且不保证将保留等效元素的相对顺序。 算法 `stable_partition` 会保留此原始顺序。
 
 复杂性是线性的: `(last - first)` *pred*的应用程序和最多`(last - first)/2`交换。
 
@@ -7646,7 +7646,7 @@ ForwardIterator search(
 用于定义两个元素被视为等效时应满足的条件的用户定义谓词函数对象。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
 
 *者*\
-封装要查找的模式以及要使用的搜索算法的搜索程序。
+封装要查找的模式以及要使用的搜索算法的搜索程序。 有关 searchers 的详细信息, 请参阅[default_searcher 类](default-searcher-class.md)、 [boyer_moore_horspool_searcher 类](boyer-moore-horspool-searcher-class.md)和[boyer_moore_searcher 类](boyer-moore-searcher-class.md)。
 
 ### <a name="return-value"></a>返回值
 
@@ -9004,7 +9004,7 @@ BidirectionalIterator stable_partition(
 
 引用的范围必须有效；所有指针都必须可以引用，并且在序列中，可通过递增从第一个位置到达最后一个位置。
 
-`pred( b, a )`如果两者  `pred( a, b )`都为 false 且为 false, 则元素*a*和 b 等效, 但不一定相等, 其中*pred*是参数指定的谓词。 `stable_partition`算法是稳定的, 可保证保留等效元素的相对顺序。 此算法`partition`不一定要保留此原始顺序。
+`pred( b, a )`如果两者 `pred( a, b )`都为 false 且为 false, 则元素*a*和 b 等效, 但不一定相等, 其中*pred*是参数指定的谓词。 `stable_partition`算法是稳定的, 可保证保留等效元素的相对顺序。 此算法`partition`不一定要保留此原始顺序。
 
 ### <a name="example"></a>示例
 
