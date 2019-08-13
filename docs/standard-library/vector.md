@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - vector header
 ms.assetid: c1431ad8-c0b6-4dbb-89c4-5f651e432d7f
-ms.openlocfilehash: 5992e368031b59c9b892167b135fa30a870c73f9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 59424a9f6a9434b5d7d3f4298cbb0bc03926621c
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448071"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957056"
 ---
 # <a name="ltvectorgt"></a>&lt;vector&gt;
 
@@ -112,7 +112,7 @@ void swap (
 
 |||
 |-|-|
-|[hash]()||
+|hash|返回向量的哈希值。|
 |[vector\<bool> 类](../standard-library/vector-bool-class.md)|模板类向量的一个完全专有化，针对类型 `bool` 的元素，且带有专有化所使用的基本类型的分配器。|
 
 ## <a name="requirements"></a>要求
