@@ -7,11 +7,11 @@ helpviewer_keywords:
 - subscript expressions
 ms.assetid: 4ba5c360-1f17-4575-b370-45f62e1f2bc2
 ms.openlocfilehash: 34f5c60ba9ba5da869426ae4971808a5d75fee2f
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151008"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "62233358"
 ---
 # <a name="multidimensional-arrays-c"></a>多维数组 (C)
 
@@ -21,7 +21,7 @@ ms.locfileid: "56151008"
 expression1 [ expression2 ] [ expression3 ] ...
 ```
 
-下标表达式从左至右关联。 首先计算最左侧的下标表达式 expression1[expression2]。 通过添加 expression1 和 expression2 得到的地址构成一个指针表达式；然后 expression3 将添加到此指针表达式，从而构成一个新的指针表达式，依此类推，直到添加最后一个下标表达式。 在计算最后一个下标表达式之后应用间接寻址运算符 (\*)，除非最终指针值寻址数组类型（请参阅以下示例）。
+下标表达式从左至右关联。 首先计算最左侧的下标表达式 expression1[expression2]     。 通过添加 expression1  和 expression2  得到的地址构成一个指针表达式；然后 expression3  将添加到此指针表达式，从而构成一个新的指针表达式，依此类推，直到添加最后一个下标表达式。 在计算最后一个下标表达式之后应用间接寻址运算符 (\*)，除非最终指针值寻址数组类型（请参阅以下示例）。
 
 具有多个下标的表达式引用“多维数组”的元素。 多维数组是其元素为数组的数组。 例如，三维数组的第一个元素是一个具有两个维度的数组。
 
