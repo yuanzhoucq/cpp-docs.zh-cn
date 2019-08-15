@@ -14,12 +14,12 @@ helpviewer_keywords:
 - literal strings [C++]
 - string literals [C++]
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
-ms.openlocfilehash: df690bea81b9799b30ae91313ce7157400ef8413
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.openlocfilehash: e7f0d4291aeb2e3d8dc1eac4dd08ef3e961468ff
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866098"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498531"
 ---
 # <a name="string-and-character-literals-c"></a>字符串和字符文本 (C++)
 
@@ -162,14 +162,14 @@ wchar_t w0 = 'abcd';    // C4305, C4309, truncates to '\x6364'
 int i0     = 'abcd';    // 0x61626364
 ```
 
-显示为包含三个以上位数的八进制转义序列被视为三位数八进制序列, 后跟作为多字符文本中字符的后续数字, 这可能会产生令人吃惊的结果。 例如:
+显示为包含三个以上位数的八进制转义序列被视为三位数八进制序列, 后跟作为多字符文本中字符的后续数字, 这可能会产生令人吃惊的结果。 例如：
 
 ```cpp
 char c1 = '\100';   // '@'
 char c2 = '\1000';  // C4305, C4309, truncates to '0'
 ```
 
-显示为包含非八进制字符的转义序列将作为八进制序列向上计算, 直到最后一个八进制字符, 后跟剩余字符作为多字符文本中的后续字符。 如果第一个非八进制字符是十进制数字, 则会生成警告 C4125。 例如:
+显示为包含非八进制字符的转义序列将作为八进制序列向上计算, 直到最后一个八进制字符, 后跟剩余字符作为多字符文本中的后续字符。 如果第一个非八进制字符是十进制数字, 则会生成警告 C4125。 例如：
 
 ```cpp
 char c3 = '\009';   // '9'
@@ -216,7 +216,7 @@ char u5 = '\U00000041'; // \U UCN 'A'
 
 通用字符名称不能对代理项码位范围 D800-DFFF 中的值进行编码。 对于 Unicode 代理项对，通过使用 `\UNNNNNNNN`（其中，NNNNNNNN 是字符的八位数码位）指定通用字符名称。 如果需要, 编译器将生成代理项对。
 
-在 C++03 中，语言只允许字符串子集通过其通用字符名称来表示，并且允许某些实际不表示任何有效 Unicode 字符的通用字符名称。 此错误已在 c + + 11 标准中解决。 在 C++ 11 中，字符以及字符串文本和标识符可以使用通用字符名称。  有关通用字符名称的详细信息，请参阅 [Character Sets](../cpp/character-sets.md)。 有关 Unicode 的详细信息，请参阅 [Unicode](https://msdn.microsoft.com/library/dd374081)。 有关代理项对的详细信息，请参阅 [代理项对与补充字符](/windows/desktop/Intl/surrogates-and-supplementary-characters)。
+在 C++03 中，语言只允许字符串子集通过其通用字符名称来表示，并且允许某些实际不表示任何有效 Unicode 字符的通用字符名称。 此错误已在 c + + 11 标准中解决。 在 C++ 11 中，字符以及字符串文本和标识符可以使用通用字符名称。  有关通用字符名称的详细信息，请参阅 [Character Sets](../cpp/character-sets.md)。 有关 Unicode 的详细信息，请参阅 [Unicode](/windows/win32/intl/unicode)。 有关代理项对的详细信息，请参阅 [代理项对与补充字符](/windows/win32/Intl/surrogates-and-supplementary-characters)。
 
 ## <a name="string-literals"></a>字符串文本
 

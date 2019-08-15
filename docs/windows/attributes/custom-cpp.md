@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - custom attributes, defining
 ms.assetid: 3abac928-4d55-4ea6-8cf6-8427a4ad79f1
-ms.openlocfilehash: 227e67696e679452a9c6c0e18c04e3d918f7a93f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19f28963a18abf42c6f629ac0f6491628387aa6d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148168"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491001"
 ---
 # <a name="custom-c"></a>custom (C++)
 
-类型库中定义的对象的元数据。
+为类型库中的对象定义元数据。
 
 ## <a name="syntax"></a>语法
 
@@ -32,13 +32,13 @@ ms.locfileid: "62148168"
 唯一 ID。
 
 *值*<br/>
-一个值，可以将放入一个变体。
+可以放入变量中的值。
 
 ## <a name="remarks"></a>备注
 
-**自定义**C++属性将可能会放入类型库的信息。 你将需要一种工具，从类型库中读取自定义值。
+**自定义** C++特性将导致信息放置到类型库中。 你将需要一个从类型库读取自定义值的工具。
 
-**自定义**属性具有相同的功能[自定义](/windows/desktop/Midl/custom)MIDL 特性。
+**自定义**特性具有与[自定义](/windows/win32/Midl/custom)MIDL 特性相同的功能。
 
 ## <a name="requirements"></a>要求
 
@@ -46,10 +46,10 @@ ms.locfileid: "62148168"
 
 |||
 |-|-|
-|**适用对象**|非 COM**接口**，**类**，**枚举**s，`idl_module`方法、 接口成员、 接口参数**typedef**s，**union**s，**结构**s|
+|**适用于**|非 COM**接口**,**类**,**枚举** `idl_module` s, 方法, 接口成员, 接口参数, **typedef**s,**联合**,**结构**s|
 |**可重复**|是|
-|**必需的特性**|**组件类**（当使用类）|
-|**无效的特性**|None|
+|**必需的特性**|**coclass**(当用于类时)|
+|**无效的特性**|无|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

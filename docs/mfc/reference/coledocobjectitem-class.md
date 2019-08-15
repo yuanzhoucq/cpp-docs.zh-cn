@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleDocObjectItem [MFC], QueryCommand
 - COleDocObjectItem [MFC], Release
 ms.assetid: d150d306-8fd3-4831-b06d-afbe71d8fc9b
-ms.openlocfilehash: 454be491fe5875b1b1ac9b2b85fdebe2f1663ebc
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: c6e00bf42cf20b46c949c218efe1820cc7ce0f9b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916968"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504013"
 ---
 # <a name="coledocobjectitem-class"></a>COleDocObjectItem 类
 
@@ -142,7 +142,7 @@ HRESULT ExecCommand(
 要执行的命令的标识符。 必须位于由*pguidCmdGroup*标识的组中。
 
 *nCmdExecOpt*<br/>
-指定命令执行选项。 默认情况下, 将设置为在不提示用户的情况下执行命令。 有关值的列表, 请参阅[OLECMDEXECOPT](/windows/desktop/api/docobj/ne-docobj-olecmdexecopt) 。
+指定命令执行选项。 默认情况下, 将设置为在不提示用户的情况下执行命令。 有关值的列表, 请参阅[OLECMDEXECOPT](/windows/win32/api/docobj/ne-docobj-olecmdexecopt) 。
 
 *pguidCmdGroup*<br/>
 命令组的唯一标识符。 默认情况下, 为 NULL, 它指定标准组。 传入*nCmdID*的命令必须属于组。
@@ -176,7 +176,7 @@ LPOLEDOCUMENTVIEW GetActiveView() const;
 
 ### <a name="return-value"></a>返回值
 
-指向当前活动视图的[IOleDocumentView](/windows/desktop/api/docobj/nn-docobj-ioledocumentview)接口的指针。 如果没有当前视图, 它将返回 NULL。
+指向当前活动视图的[IOleDocumentView](/windows/win32/api/docobj/nn-docobj-ioledocumentview)接口的指针。 如果没有当前视图, 它将返回 NULL。
 
 ### <a name="remarks"></a>备注
 
@@ -270,21 +270,21 @@ HRESULT QueryCommand(
 正在查询的命令的标识符。
 
 *pdwStatus*<br/>
-一个指针, 指向作为查询结果返回的标志。 有关可能值的列表, 请参阅[OLECMDF](/windows/desktop/api/docobj/ne-docobj-olecmdf)。
+一个指针, 指向作为查询结果返回的标志。 有关可能值的列表, 请参阅[OLECMDF](/windows/win32/api/docobj/ne-docobj-olecmdf)。
 
 *pCmdText*<br/>
-指向[OLECMDTEXT](/windows/desktop/api/docobj/ns-docobj-olecmdtext)结构的指针, 将在该结构中返回单个命令的名称和状态信息。 可以为 NULL, 以指示调用方不需要此信息。
+指向[OLECMDTEXT](/windows/win32/api/docobj/ns-docobj-olecmdtext)结构的指针, 将在该结构中返回单个命令的名称和状态信息。 可以为 NULL, 以指示调用方不需要此信息。
 
 *pguidCmdGroup*<br/>
 命令组的唯一标识符;可以为 NULL 以指定标准组。
 
 ### <a name="return-value"></a>返回值
 
-有关返回值的完整列表, 请参阅 Windows SDK 中的[IOleCommandTarget:: QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) 。
+有关返回值的完整列表, 请参阅 Windows SDK 中的[IOleCommandTarget:: QueryStatus](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-querystatus) 。
 
 ### <a name="remarks"></a>备注
 
-此成员函数模拟[IOleCommandTarget:: QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus)方法的功能, 如 Windows SDK 中所述。
+此成员函数模拟[IOleCommandTarget:: QueryStatus](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-querystatus)方法的功能, 如 Windows SDK 中所述。
 
 ##  <a name="release"></a>  COleDocObjectItem::Release
 

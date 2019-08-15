@@ -12,18 +12,18 @@ helpviewer_keywords:
 - NOTIFY_HANDLER macro, message handler functions
 - ATL, message handlers
 ms.assetid: 2007a8c5-0143-42f1-91ab-809f235f9d50
-ms.openlocfilehash: 658875ceb748d2f3ba4b460315d619fe8ad8a23c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28e6a4116f1b2e7acbc4c8897b2faad04d55543a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261704"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492341"
 ---
 # <a name="message-handler-functions"></a>消息处理程序函数
 
-ATL 提供了三种类型的消息处理程序函数：
+ATL 提供三种类型的消息处理函数:
 
-|消息处理程序的类型|相应消息宏|
+|消息处理程序的类型|对应的消息宏|
 |-----------------------------|---------------------------------|
 |[MessageHandler](../atl/messagehandler.md)|[MESSAGE_HANDLER](reference/message-map-macros-atl.md#message_handler)|
 |[CommandHandler](../atl/commandhandler.md)|[COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler)|
@@ -33,4 +33,4 @@ ATL 提供了三种类型的消息处理程序函数：
 
 [实现窗口](../atl/implementing-a-window.md)<br/>
 [消息映射](../atl/message-maps-atl.md)<br/>
-[WM_NOTIFY](/windows/desktop/controls/wm-notify)
+[WM_NOTIFY](/windows/win32/controls/wm-notify)

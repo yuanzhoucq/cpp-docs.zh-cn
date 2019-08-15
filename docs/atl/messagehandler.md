@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - MessageHandler function
 ms.assetid: 8a0acf97-1b0d-4226-91b9-75446634a03c
-ms.openlocfilehash: 1acd56357f9ce234e3c479fd8fa88c1ed8407878
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa044ef88ba3c872c2652cd774ac50024e52c68c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261691"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492313"
 ---
 # <a name="messagehandler"></a>MessageHandler
 
-`MessageHandler` 是由消息映射中的 MESSAGE_HANDLER 宏的第二个参数标识的名称。
+`MessageHandler`由消息映射中的 MESSAGE_HANDLER 宏的第二个参数标识的函数的名称。
 
 ## <a name="syntax"></a>语法
 
@@ -29,7 +29,7 @@ LRESULT MessageHandler(
 ### <a name="parameters"></a>参数
 
 *uMsg*<br/>
-指定的消息。
+指定消息。
 
 *wParam*<br/>
 其他特定于消息的信息。
@@ -38,18 +38,18 @@ LRESULT MessageHandler(
 其他特定于消息的信息。
 
 *bHandled*<br/>
-消息映射集*bHandled*为 TRUE，然后才能`MessageHandler`调用。 如果`MessageHandler`不完全处理该消息，应设置*bHandled*为 FALSE 以指示该消息需要进一步处理。
+消息映射在调用之前`MessageHandler`将 bHandled 设置为 TRUE。 如果`MessageHandler`未完全处理消息, 则应将*bHandled*设置为 FALSE, 以指示消息需要进一步处理。
 
 ## <a name="return-value"></a>返回值
 
-消息处理的结果。 如果成功，则为 0。
+消息处理的结果。 如果成功, 则为0。
 
 ## <a name="remarks"></a>备注
 
-消息映射中使用此消息处理程序的示例，请参阅[MESSAGE_HANDLER](reference/message-map-macros-atl.md#message_handler)。
+有关在消息映射中使用此消息处理程序的示例, 请参阅[MESSAGE_HANDLER](reference/message-map-macros-atl.md#message_handler)。
 
 ## <a name="see-also"></a>请参阅
 
 [实现窗口](../atl/implementing-a-window.md)<br/>
 [消息映射](../atl/message-maps-atl.md)<br/>
-[WM_NOTIFY](/windows/desktop/controls/wm-notify)
+[WM_NOTIFY](/windows/win32/controls/wm-notify)

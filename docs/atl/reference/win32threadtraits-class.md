@@ -10,19 +10,19 @@ helpviewer_keywords:
 - threading [ATL], creation functions
 - Win32ThreadTraits class
 ms.assetid: 50279c38-eae1-4301-9ea6-97ccea580f3e
-ms.openlocfilehash: cae5faea7938918da2656e21648282c1a2e1a66d
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: d086a42f5dcdf005d10c8853776da66b691a8e11
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503769"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495476"
 ---
 # <a name="win32threadtraits-class"></a>Win32ThreadTraits 类
 
-此类提供一个 Windows 线程的创建函数。 如果该线程不会使用的 CRT 函数，请使用此类。
+此类提供 Windows 线程的创建功能。 如果线程不使用 CRT 函数, 请使用此类。
 
 > [!IMPORTANT]
->  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
+>  此类及其成员不能用于在 Windows 运行时中执行的应用程序。
 
 ## <a name="syntax"></a>语法
 
@@ -36,27 +36,27 @@ class Win32ThreadTraits
 
 |名称|描述|
 |----------|-----------------|
-|[Win32ThreadTraits::CreateThread](#createthread)|（静态）调用此函数可创建不应使用的 CRT 函数的线程。|
+|[Win32ThreadTraits::CreateThread](#createthread)|静止调用此函数可创建不应使用 CRT 函数的线程。|
 
 ## <a name="remarks"></a>备注
 
-线程特征是线程的为特定类型提供创建函数的类。 创建函数将具有与 Windows 相同的签名和语义[CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread)函数。
+线程特征是为特定类型的线程提供创建函数的类。 创建函数的签名和语义与 Windows [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread)函数相同。
 
-以下类使用线程特征：
+线程特征由以下类使用:
 
 - [CThreadPool](../../atl/reference/cthreadpool-class.md)
 
 - [CWorkerThread](../../atl/reference/cworkerthread-class.md)
 
-如果该线程将使用的 CRT 函数，使用[CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md)相反。
+如果该线程将使用 CRT 函数, 请改用[CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md) 。
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlbase.h
+**标头:** atlbase。h
 
-##  <a name="createthread"></a>  Win32ThreadTraits::CreateThread
+##  <a name="createthread"></a>Win32ThreadTraits:: CreateThread
 
-调用此函数可创建不应使用的 CRT 函数的线程。
+调用此函数可创建不应使用 CRT 函数的线程。
 
 ```
 static HANDLE CreateThread(
@@ -71,10 +71,10 @@ static HANDLE CreateThread(
 ### <a name="parameters"></a>参数
 
 *lpsa*<br/>
-新线程的安全属性。
+新线程的安全特性。
 
 *dwStackSize*<br/>
-新线程堆栈大小。
+新线程的堆栈大小。
 
 *pfnThreadProc*<br/>
 新线程的线程过程。
@@ -83,20 +83,20 @@ static HANDLE CreateThread(
 要传递给线程过程的参数。
 
 *dwCreationFlags*<br/>
-创建标记 （0 或 CREATE_SUSPENDED）。
+创建标志 (0 或 CREATE_SUSPENDED)。
 
 *pdwThreadId*<br/>
-[out]成功后，接收新创建的线程的线程 ID 的 DWORD 变量的地址。
+弄成功接收新创建的线程的线程 ID 的 DWORD 变量的地址。
 
 ### <a name="return-value"></a>返回值
 
-在失败时返回的新创建的线程或为 NULL 的图柄。 调用[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)若要获得扩展错误信息。
+返回新创建的线程的句柄, 如果失败, 则返回 NULL。 拨打[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)获取扩展错误信息。
 
 ### <a name="remarks"></a>备注
 
-请参阅[CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread)有关此函数的参数的详细信息。
+有关此函数的参数的详细信息, 请参阅[CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) 。
 
-此函数将调用`CreateThread`创建的线程。
+此函数调用`CreateThread`以创建线程。
 
 ## <a name="see-also"></a>请参阅
 

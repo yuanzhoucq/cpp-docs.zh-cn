@@ -240,7 +240,7 @@
             - name: 创建注册器脚本
               href: creating-registrar-scripts.md
             - name: 了解巴科斯范式 (BNF) 语法
-              href: understanding-backus-nauer-form-bnf-syntax.md
+              href: understanding-backus-naur-form-bnf-syntax.md
             - name: 了解分析树
               href: understanding-parse-trees.md
             - name: 注册表脚本编写示例

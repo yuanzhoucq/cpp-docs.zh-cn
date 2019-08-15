@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CDiscreteTransition [MFC], m_delay
 - CDiscreteTransition [MFC], m_hold
 ms.assetid: b4d84fb3-ccaa-451c-a69b-6b50dcb9b9c8
-ms.openlocfilehash: dc2311f7dae71f7c3848b7825b297ec5c9747859
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7087dfa13972737f0a1244d2cc9a7088b23dc184
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62168006"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506852"
 ---
 # <a name="cdiscretetransition-class"></a>CDiscreteTransition 类
 
@@ -39,25 +39,25 @@ class CDiscreteTransition : public CBaseTransition;
 
 |名称|描述|
 |----------|-----------------|
-|[CDiscreteTransition::CDiscreteTransition](#cdiscretetransition)|构造一个离散转换对象并初始化其参数。|
+|[CDiscreteTransition::CDiscreteTransition](#cdiscretetransition)|构造离散转换对象并初始化其参数。|
 
 ### <a name="public-methods"></a>公共方法
 
 |名称|描述|
 |----------|-----------------|
-|[CDiscreteTransition::Create](#create)|调用要创建封装的转换 COM 对象的转换库。 (重写[CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create)。)|
+|[CDiscreteTransition::Create](#create)|调用转换库以创建封装的转换 COM 对象。 (重写[CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create)。)|
 
 ### <a name="public-data-members"></a>公共数据成员
 
 |名称|描述|
 |----------|-----------------|
-|[CDiscreteTransition::m_dblFinalValue](#m_dblfinalvalue)|转换结束时的动画变量的值。|
-|[CDiscreteTransition::m_delay](#m_delay)|若要延迟到最后一个值的即时切换所依据的时间量。|
-|[CDiscreteTransition::m_hold](#m_hold)|要保存该变量在其最终值的时间量。|
+|[CDiscreteTransition::m_dblFinalValue](#m_dblfinalvalue)|转换结束时动画变量的值。|
+|[CDiscreteTransition::m_delay](#m_delay)|将瞬时开关延迟到最终值的时间量。|
+|[CDiscreteTransition::m_hold](#m_hold)|变量在其最终值上保留的时间量。|
 
 ## <a name="remarks"></a>备注
 
-在离散的转换过程的动画变量保持为初始值为指定的延迟时间，然后切换到指定的最终值并且该值在保持在瞬间完成为给定的保留时间。 因为会自动清除所有转换，我们建议分配它们使用新运算符。 封装 IUIAnimationTransition 创建 COM 对象通过 CAnimationController::AnimateGroup，直到它为 NULL。 创建此 COM 对象不起作用之后更改成员变量。
+在离散转换期间, 动画变量在指定延迟时间内保持为初始值, 然后立即切换到指定的最终值并在给定的保留时间内保持该值。 由于所有转换都将自动清除, 因此建议使用 operator new 将其分配给它们。 封装的 IUIAnimationTransition COM 对象由 CAnimationController:: AnimateGroup 创建, 直到它为 NULL。 在创建此 COM 对象之后更改成员变量不起作用。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -71,9 +71,9 @@ class CDiscreteTransition : public CBaseTransition;
 
 **标头：** afxanimationcontroller.h
 
-##  <a name="cdiscretetransition"></a>  CDiscreteTransition::CDiscreteTransition
+##  <a name="cdiscretetransition"></a>CDiscreteTransition:: CDiscreteTransition
 
-构造一个离散转换对象并初始化其参数。
+构造离散转换对象并初始化其参数。
 
 ```
 CDiscreteTransition(
@@ -85,17 +85,17 @@ CDiscreteTransition(
 ### <a name="parameters"></a>参数
 
 *delay*<br/>
-若要延迟到最后一个值的即时切换所依据的时间量。
+将瞬时开关延迟到最终值的时间量。
 
 *dblFinalValue*<br/>
-转换结束时的动画变量的值。
+转换结束时动画变量的值。
 
-*hold*<br/>
-要保存该变量在其最终值的时间量。
+*暂时*<br/>
+变量在其最终值上保留的时间量。
 
-##  <a name="create"></a>  CDiscreteTransition::Create
+##  <a name="create"></a>CDiscreteTransition:: Create
 
-调用要创建封装的转换 COM 对象的转换库。
+调用转换库以创建封装的转换 COM 对象。
 
 ```
 virtual BOOL Create(
@@ -104,31 +104,31 @@ virtual BOOL Create(
 ```
 
 *pLibrary*<br/>
-一个指向[IUIAnimationTransitionLibrary 接口](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)，用于定义的标准转换库。
+指向[IUIAnimationTransitionLibrary 接口](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)的指针, 该接口定义标准转换库。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则创建转换，则返回 TRUE否则为 FALSE。
+如果成功创建转换, 则为 TRUE;否则为 FALSE。
 
-##  <a name="m_dblfinalvalue"></a>  CDiscreteTransition::m_dblFinalValue
+##  <a name="m_dblfinalvalue"></a>CDiscreteTransition:: m_dblFinalValue
 
-转换结束时的动画变量的值。
+转换结束时动画变量的值。
 
 ```
 DOUBLE m_dblFinalValue;
 ```
 
-##  <a name="m_delay"></a>  CDiscreteTransition::m_delay
+##  <a name="m_delay"></a>CDiscreteTransition:: m_delay
 
-若要延迟到最后一个值的即时切换所依据的时间量。
+将瞬时开关延迟到最终值的时间量。
 
 ```
 UI_ANIMATION_SECONDS m_delay;
 ```
 
-##  <a name="m_hold"></a>  CDiscreteTransition::m_hold
+##  <a name="m_hold"></a>CDiscreteTransition:: m_hold
 
-要保存该变量在其最终值的时间量。
+变量在其最终值上保留的时间量。
 
 ```
 UI_ANIMATION_SECONDS m_hold;

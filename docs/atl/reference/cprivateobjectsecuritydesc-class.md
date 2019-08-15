@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPrivateObjectSecurityDesc class
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
-ms.openlocfilehash: c1ac15d4d8254107a66e577321edb3c40578f240
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 97ea2b8411b404caf9f833ad85f226d18aea1e73
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915798"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496573"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>CPrivateObjectSecurityDesc 类
 
@@ -57,7 +57,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 
 此类派生自[CSecurityDesc](../../atl/reference/csecuritydesc-class.md), 它提供了用于创建和管理私有对象的安全描述符的方法。
 
-有关 Windows 中的访问控制模型的简介, 请参阅 Windows SDK 中的[访问控制](/windows/desktop/SecAuthZ/access-control)。
+有关 Windows 中的访问控制模型的简介, 请参阅 Windows SDK 中的[访问控制](/windows/win32/SecAuthZ/access-control)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -93,7 +93,7 @@ bool ConvertToAutoInherit(
 指定新对象是否可包含其他对象。 如果值为 true, 则指示新对象是一个容器。 如果值为 false, 则表示新的对象不是容器。
 
 *GenericMapping*<br/>
-指向[GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-generic_mapping)结构的指针, 该结构指定从每个泛型权限到对象的特定权限的映射。
+指向[GENERIC_MAPPING](/windows/win32/api/winnt/ns-winnt-generic_mapping)结构的指针, 该结构指定从每个泛型权限到对象的特定权限的映射。
 
 ### <a name="return-value"></a>返回值
 
@@ -101,7 +101,7 @@ bool ConvertToAutoInherit(
 
 ### <a name="remarks"></a>备注
 
-此方法尝试确定当前安全描述符的自由访问控制列表 (DACL) 和系统访问控制列表 (SACL) 中的 Ace 是否继承自父安全描述符。 它将调用[ConvertToAutoInheritPrivateObjectSecurity](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-converttoautoinheritprivateobjectsecurity)函数。
+此方法尝试确定当前安全描述符的自由访问控制列表 (DACL) 和系统访问控制列表 (SACL) 中的 Ace 是否继承自父安全描述符。 它将调用[ConvertToAutoInheritPrivateObjectSecurity](/windows/win32/api/securitybaseapi/nf-securitybaseapi-converttoautoinheritprivateobjectsecurity)函数。
 
 ##  <a name="cprivateobjectsecuritydesc"></a>  CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc
 
@@ -164,7 +164,7 @@ bool Create(
 对[CAccessToken](../../atl/reference/caccesstoken-class.md)对象的引用, 该对象表示要在其上创建对象的客户端进程。
 
 *GenericMapping*<br/>
-指向[GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-generic_mapping)结构的指针, 该结构指定从每个泛型权限到对象的特定权限的映射。
+指向[GENERIC_MAPPING](/windows/win32/api/winnt/ns-winnt-generic_mapping)结构的指针, 该结构指定从每个泛型权限到对象的特定权限的映射。
 
 *ObjectType*<br/>
 指向`GUID`结构的指针, 该结构标识与当前对象关联的对象的类型。 如果对象不具有 GUID, 请将*ObjectType*设置为 NULL。
@@ -173,7 +173,7 @@ bool Create(
 指定新对象是否可包含其他对象。 如果值为 true, 则指示新对象是一个容器。 如果值为 false, 则表示新的对象不是容器。
 
 *AutoInheritFlags*<br/>
-控制访问控制项 (Ace) 如何从*pParent*继承的一组位标志。 有关更多详细信息, 请参阅[CreatePrivateObjectSecurityEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) 。
+控制访问控制项 (Ace) 如何从*pParent*继承的一组位标志。 有关更多详细信息, 请参阅[CreatePrivateObjectSecurityEx](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) 。
 
 ### <a name="return-value"></a>返回值
 
@@ -181,7 +181,7 @@ bool Create(
 
 ### <a name="remarks"></a>备注
 
-此方法调用[CreatePrivateObjectSercurity](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurity)或[CreatePrivateObjectSecurityEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex)。
+此方法调用[CreatePrivateObjectSercurity](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurity)或[CreatePrivateObjectSecurityEx](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex)。
 
 第二种方法允许指定新对象的对象类型 GUID 或控制 Ace 的继承方式。
 
@@ -201,7 +201,7 @@ bool Get(
 ### <a name="parameters"></a>参数
 
 *si*<br/>
-指示要检索的安全描述符部分的一组位标志。 此值可以是[SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information)位标志的组合。
+指示要检索的安全描述符部分的一组位标志。 此值可以是[SECURITY_INFORMATION](/windows/win32/SecAuthZ/security-information)位标志的组合。
 
 *pResult*<br/>
 指向[CSecurityDesc](../../atl/reference/csecuritydesc-class.md)对象的指针, 该对象接收来自指定安全描述符的请求信息的副本。
@@ -253,19 +253,19 @@ bool Set(
 ### <a name="parameters"></a>参数
 
 *si*<br/>
-指示要设置的安全描述符部分的一组位标志。 此值可以是[SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information)位标志的组合。
+指示要设置的安全描述符部分的一组位标志。 此值可以是[SECURITY_INFORMATION](/windows/win32/SecAuthZ/security-information)位标志的组合。
 
 *做*<br/>
 指向[CSecurityDesc](../../atl/reference/csecuritydesc-class.md)对象的指针。 此安全描述符中由*si*参数指示的部分应用于对象的安全描述符。
 
 *GenericMapping*<br/>
-指向[GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-generic_mapping)结构的指针, 该结构指定从每个泛型权限到对象的特定权限的映射。
+指向[GENERIC_MAPPING](/windows/win32/api/winnt/ns-winnt-generic_mapping)结构的指针, 该结构指定从每个泛型权限到对象的特定权限的映射。
 
 *令牌*<br/>
 对[CAccessToken](../../atl/reference/caccesstoken-class.md)对象的引用, 该对象表示要在其上创建对象的客户端进程。
 
 *AutoInheritFlags*<br/>
-控制访问控制项 (Ace) 如何从*pParent*继承的一组位标志。 有关更多详细信息, 请参阅[CreatePrivateObjectSecurityEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) 。
+控制访问控制项 (Ace) 如何从*pParent*继承的一组位标志。 有关更多详细信息, 请参阅[CreatePrivateObjectSecurityEx](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) 。
 
 ### <a name="return-value"></a>返回值
 
@@ -277,7 +277,7 @@ bool Set(
 
 ## <a name="see-also"></a>请参阅
 
-[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-security_descriptor)<br/>
+[SECURITY_DESCRIPTOR](/windows/win32/api/winnt/ns-winnt-security_descriptor)<br/>
 [类概述](../../atl/atl-class-overview.md)<br/>
 [安全全局函数](../../atl/reference/security-global-functions.md)<br/>
 [CSecurityDesc 类](../../atl/reference/csecuritydesc-class.md)

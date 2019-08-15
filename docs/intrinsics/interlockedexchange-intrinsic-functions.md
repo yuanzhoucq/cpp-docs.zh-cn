@@ -44,14 +44,14 @@ helpviewer_keywords:
 - _InterlockedExchange intrinsic
 - _InterlockedExchange8_nf
 ms.assetid: be2f232a-6301-462a-a92b-fcdeb8b0f209
-ms.openlocfilehash: 3945b8a7516962531050e999e96bdef31b179bbb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c96ce57854bfb3eea0e1b8bc6283984c7fce50f9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396738"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509388"
 ---
-# <a name="interlockedexchange-intrinsic-functions"></a>_InterlockedExchange 内部函数
+# <a name="_interlockedexchange-intrinsic-functions"></a>_InterlockedExchange 内部函数
 
 **Microsoft 专用**
 
@@ -145,10 +145,10 @@ __int64 _InterlockedExchange64_rel(
 #### <a name="parameters"></a>参数
 
 *Target*<br/>
-[in、 out]指向要交换的值。 此函数会将此变量设置为 `Value` 并返回其之前的值。
+[in, out]指向要交换的值的指针。 此函数会将此变量设置为 `Value` 并返回其之前的值。
 
-*值*<br/>
-[in]指向值的值进行交换`Target`。
+*ReplTest1*<br/>
+中要与所指向的`Target`值交换的值。
 
 ## <a name="return-value"></a>返回值
 
@@ -158,13 +158,13 @@ __int64 _InterlockedExchange64_rel(
 
 |内部函数|体系结构|Header|
 |---------------|------------------|------------|
-|`_InterlockedExchange`, `_InterlockedExchange8`, `_InterlockedExchange16`, `_InterlockedExchange64`|x86、 ARM、 x64|\<intrin.h>|
+|`_InterlockedExchange`, `_InterlockedExchange8`, `_InterlockedExchange16`, `_InterlockedExchange64`|x86、ARM、x64|\<intrin.h>|
 |`_InterlockedExchange_acq`、`_InterlockedExchange_nf`、`_InterlockedExchange_rel`、`_InterlockedExchange8_acq`、`_InterlockedExchange8_nf`、`_InterlockedExchange8_rel`、`_InterlockedExchange16_acq`、`_InterlockedExchange16_nf`、`_InterlockedExchange16_rel`、`_InterlockedExchange64_acq`、`_InterlockedExchange64_nf`、`_InterlockedExchange64_rel`、|ARM|\<intrin.h>|
 |`_InterlockedExchange_HLEAcquire`, `_InterlockedExchange_HLERelease`, `_InterlockedExchange64_HLEAcquire`, `_InterlockedExchange64_HLERelease`|x86、x64|\<immintrin.h>|
 
 ## <a name="remarks"></a>备注
 
-`_InterlockedExchange` 提供了编译器内部函数支持 Win32 Windows SDK [InterlockedExchange](/windows/desktop/api/winnt/nf-winnt-interlockedexchange)函数。
+`_InterlockedExchange`为 Win32 Windows SDK [InterlockedExchange](/windows/win32/api/winnt/nf-winnt-interlockedexchange)函数提供编译器内部函数支持。
 
 `_InterlockedExchange` 存在几种变体，这些变体根据其涉及的数据类型和是否使用特定于处理器获取或发布语义而有所不同。
 
@@ -178,7 +178,7 @@ __int64 _InterlockedExchange64_rel(
 
 ## <a name="example"></a>示例
 
-有关如何使用的示例`_InterlockedExchange`，请参阅[_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)。
+有关如何使用`_InterlockedExchange`的示例, 请参阅[_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)。
 
 **结束 Microsoft 专用**
 

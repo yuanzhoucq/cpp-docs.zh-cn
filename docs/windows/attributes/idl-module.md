@@ -1,21 +1,21 @@
 ---
-title: idl_module (C++ COM 属性)
+title: idl_module (C++ COM 特性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.idl_module
 helpviewer_keywords:
 - idl_module attribute
 ms.assetid: 3578b337-e38a-4334-b747-15404c02dbc0
-ms.openlocfilehash: 80e4909a61b5b53ecde19471f2c838dd4c425874
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8838a833552ae7066dbcf17b4f676d6626c069f8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409455"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514671"
 ---
-# <a name="idlmodule"></a>idl_module
+# <a name="idl_module"></a>idl_module
 
-.Dll 文件中指定的入口点。
+指定 .dll 文件中的入口点。
 
 ## <a name="syntax"></a>语法
 
@@ -26,46 +26,46 @@ function declaration
 
 ### <a name="parameters"></a>参数
 
-*name*<br/>
-用户定义的名称，会在.idl 文件中显示的代码块。
+*名称*<br/>
+将出现在 .idl 文件中的代码块的用户定义名称。
 
 *dllname*<br/>
-（可选）包含导出的.dll 文件。
+可有可无包含导出的 .dll 文件。
 
 *uuid*<br/>
-（可选）唯一的 id。
+可有可无唯一 ID。
 
 *helpstring*<br/>
-（可选）用于描述类型库的字符串。
+可有可无用于描述类型库的字符串。
 
 *helpstringcontext*<br/>
-（可选）帮助主题中的.hlp 或.chm 文件的 ID。
+可有可无.Hlp 或 .chm 文件中的帮助主题的 ID。
 
 *helpcontext*<br/>
-（可选）此类型库的帮助 ID。
+可有可无此类型库的帮助 ID。
 
 *hidden*<br/>
-（可选）一个参数，阻止显示库。 更多详细信息，请参阅 [隐藏](/windows/desktop/Midl/hidden) MIDL 特性。
+可有可无用于阻止显示库的参数。 更多详细信息，请参阅 [隐藏](/windows/win32/Midl/hidden) MIDL 特性。
 
 *restricted*<br/>
-（可选）不能随意调用库中的成员。 更多详细信息，请参阅 [受限](/windows/desktop/Midl/restricted) MIDL 特性。
+可有可无不能随意调用库的成员。 更多详细信息，请参阅 [受限](/windows/win32/Midl/restricted) MIDL 特性。
 
 *函数声明*<br/>
-您将定义该函数。
+要定义的函数。
 
 ## <a name="remarks"></a>备注
 
-**Idl_module** C++属性允许您在.dll 文件，这允许您从一个.dll 文件导入指定的入口点。
+**Idl_module** C++属性允许您在 .dll 文件中指定入口点, 以便您可以从 .dll 文件导入。
 
-**Idl_module**属性具有类似于的功能[模块](/windows/desktop/Midl/module)MIDL 特性。
+**Idl_module**属性具有与[module](/windows/win32/Midl/module) MIDL 属性类似的功能。
 
-你可以从一个 COM 对象，可以通过将 DLL 入口点置于.idl 文件中的 library 块中导出的.dll 文件从导出的任何内容。
+您可以通过将 DLL 入口点置于 .idl 文件的库块中, 从一个 COM 对象导出可以从 .dll 文件导出的任何内容。
 
-你必须使用**idl_module**中两个步骤。 首先，必须定义一个名称/DLL 对。 然后，使用**idl_module**若要指定的入口点，指定的名称和任何其他属性。
+必须在两个步骤中使用**idl_module** 。 首先, 必须定义名称/DLL 对。 然后, 当你使用**idl_module**来指定入口点时, 请指定名称和任何其他属性。
 
 ## <a name="example"></a>示例
 
-下面的代码演示如何使用**idl_module**属性：
+下面的代码演示如何使用**idl_module**特性:
 
 ```cpp
 // cpp_attr_ref_idl_module.cpp
@@ -82,10 +82,10 @@ void FuncName(int i);
 
 |||
 |-|-|
-|**适用对象**|任何位置|
-|**可重复**|否|
-|**必需的特性**|None|
-|**无效的特性**|None|
+|**适用于**|任何位置|
+|**可重复**|No|
+|**必需的特性**|无|
+|**无效的特性**|无|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-ms.openlocfilehash: a9009c4ea08771949cea2c44e4f6265783ced35a
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 18b17d0f40aaab6ba2a018a568950549eda23016
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916939"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69503017"
 ---
 # <a name="cpagesetupdialog-class"></a>CPageSetupDialog 类
 
@@ -142,7 +142,7 @@ CPageSetupDialog(
 
 - PSD_DISABLEORIENTATION 禁用 "页面方向" 对话框控件。
 
-- PSD_RETURNDEFAULT 导致`CPageSetupDialog`返回在不显示对话框的情况下为系统默认打印机初始化的[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)和[DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames)结构。 假定`hDevNames` 和`hDevMode`均为 NULL; 否则, 函数将返回错误。 如果旧打印机驱动程序支持系统默认打印机 (早于 Windows 版本 3.0), 则仅`hDevNames`返回;`hDevMode`为 NULL。
+- PSD_RETURNDEFAULT 导致`CPageSetupDialog`返回在不显示对话框的情况下为系统默认打印机初始化的[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)和[DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames)结构。 假定`hDevNames` 和`hDevMode`均为 NULL; 否则, 函数将返回错误。 如果旧打印机驱动程序支持系统默认打印机 (早于 Windows 版本 3.0), 则仅`hDevNames`返回;`hDevMode`为 NULL。
 
 - PSD_DISABLEPAPER 禁用纸张选择控件。
 
@@ -171,7 +171,7 @@ CPageSetupDialog(
 
 ##  <a name="createprinterdc"></a>CPageSetupDialog::CreatePrinterDC
 
-从[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)和[DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames)结构创建打印机设备上下文。
+从[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)和[DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames)结构创建打印机设备上下文。
 
 ```
 HDC CreatePrinterDC();
@@ -191,7 +191,7 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>返回值
 
-IDOK 或 IDCANCEL。 如果返回 IDCANCEL, 则调用 Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror)函数来确定是否发生了错误。
+IDOK 或 IDCANCEL。 如果返回 IDCANCEL, 则调用 Windows [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror)函数来确定是否发生了错误。
 
 IDOK 和 IDCANCEL 是常量, 用于指示用户是否选择了 "确定" 或 "取消" 按钮。
 
@@ -231,7 +231,7 @@ LPDEVMODE GetDevMode() const;
 
 ### <a name="return-value"></a>返回值
 
-[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)数据结构, 其中包含有关打印机驱动程序的设备初始化和环境的信息。 必须使用 Windows SDK 中描述的 Windows [GlobalUnlock](/windows/desktop/api/winbase/nf-winbase-globalunlock)函数来解锁此结构使用的内存。
+[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)数据结构, 其中包含有关打印机驱动程序的设备初始化和环境的信息。 必须使用 Windows SDK 中描述的 Windows [GlobalUnlock](/windows/win32/api/winbase/nf-winbase-globalunlock)函数来解锁此结构使用的内存。
 
 ##  <a name="getdrivername"></a>CPageSetupDialog:: GetDriverName
 
@@ -262,7 +262,7 @@ void GetMargins(
 ### <a name="parameters"></a>参数
 
 *lpRectMargins*<br/>
-指向[矩形](/windows/desktop/api/windef/ns-windef-tagrect)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象的指针, 该对象描述当前所选打印机的打印边距 (1/1000 英寸或 1/100 mm)。 如果不对此矩形感兴趣, 请为此参数传递 NULL。
+指向[矩形](/windows/win32/api/windef/ns-windef-rect)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象的指针, 该对象描述当前所选打印机的打印边距 (1/1000 英寸或 1/100 mm)。 如果不对此矩形感兴趣, 请为此参数传递 NULL。
 
 *lpRectMinMargins*<br/>
 指向`RECT`结构或对象的`CRect`指针, 该结构或对象描述当前所选打印机的最小打印边距 (1/1000 英寸或 1/100 mm)。 如果不对此矩形感兴趣, 请为此参数传递 NULL。
@@ -305,7 +305,7 @@ PAGESETUPDLG m_psd;
 
 如果直接修改`m_psd`数据成员, 将重写任何默认行为。
 
-有关[PAGESETUPDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpsda)结构的详细信息, 请参阅 Windows SDK。
+有关[PAGESETUPDLG](/windows/win32/api/commdlg/ns-commdlg-psdw)结构的详细信息, 请参阅 Windows SDK。
 
 请参阅[CPageSetupDialog:: CPageSetupDialog](#cpagesetupdialog)的示例。
 
@@ -341,7 +341,7 @@ virtual UINT OnDrawPage(
 - 返回地址表示形式的 WM_PSD_YAFULLPAGERECT 区域。 此区域延伸到示例页区域的边缘。
 
 *lpRect*<br/>
-指向包含绘图区域坐标的[CRect](../../atl-mfc-shared/reference/crect-class.md)或[RECT](/windows/desktop/api/windef/ns-windef-tagrect)对象的指针。
+指向包含绘图区域坐标的[CRect](../../atl-mfc-shared/reference/crect-class.md)或[RECT](/windows/win32/api/windef/ns-windef-rect)对象的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -393,7 +393,7 @@ virtual UINT PreDrawPage(
 - 纵向模式下的0x01f 信封 (点阵)
 
 *pPSD*<br/>
-指向 `PAGESETUPDLG` 结构的指针。 有关[PAGESETUPDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpsda)的详细信息, 请参阅 Windows SDK。
+指向 `PAGESETUPDLG` 结构的指针。 有关[PAGESETUPDLG](/windows/win32/api/commdlg/ns-commdlg-psdw)的详细信息, 请参阅 Windows SDK。
 
 ### <a name="return-value"></a>返回值
 

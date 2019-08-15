@@ -1,21 +1,21 @@
 ---
-title: appobject (C++ COM 属性)
+title: appobject (C++ COM 特性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.appobject
 helpviewer_keywords:
 - appobject attribute
 ms.assetid: 8ce30b73-e945-403e-a755-6bc78078a695
-ms.openlocfilehash: 8219c8fdd1b1df93f92fc6c1d0324a2475d3384b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e02cedff70ac32f7edfdb92b240269c34befee7e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409702"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490938"
 ---
 # <a name="appobject"></a>appobject
 
-标识作为应用程序对象，这是与完整.exe 应用程序相关联，指示在此全局可用的函数和属性的组件类组件类[类型库](../../mfc/automation-clients-using-type-libraries.md)。
+将 coclass 标识为与完整 .exe 应用程序关联的应用程序对象, 并指示 coclass 的函数和属性在此[类型库](../../mfc/automation-clients-using-type-libraries.md)中全局可用。
 
 ## <a name="syntax"></a>语法
 
@@ -25,11 +25,11 @@ ms.locfileid: "62409702"
 
 ## <a name="remarks"></a>备注
 
-**Appobject** C++属性具有相同的功能[appobject](/windows/desktop/Midl/appobject) MIDL 特性。
+**Appobject** C++特性具有与[appobject](/windows/win32/Midl/appobject) MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
-下面的代码显示了简单的类定义包括特性块的前面**appobject**:
+下面的代码演示了一个简单的类定义, 该定义前面有一个包含**appobject**的特性块:
 
 ```cpp
 // cpp_attr_ref_appobject.cpp
@@ -52,10 +52,10 @@ class A : public ICustom {
 
 |||
 |-|-|
-|**适用对象**|**类**，**结构**|
-|**可重复**|否|
+|**适用于**|**class**、 **struct**|
+|**可重复**|No|
 |**必需的特性**|`coclass`|
-|**无效的特性**|None|
+|**无效的特性**|无|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

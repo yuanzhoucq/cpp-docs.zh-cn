@@ -6,52 +6,52 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Active Server Page Component Wizard, options
 ms.assetid: 54f34e26-53c7-4456-9675-cb86e356bde0
-ms.openlocfilehash: 7e9740a67f265484c349a4df644be882dba30c13
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c76ab7730256b007b66d54ca6753409926f7ae89
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197362"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495304"
 ---
 # <a name="options-atl-active-server-page-component-wizard"></a>选项，ATL Active Server Page 组件向导
 
-使用 ATL Active Server Page 组件向导此页设计更高的效率以及对该对象的错误支持。
+使用 ATL Active Server Page 组件向导的此页可为对象提供更高的效率和错误支持。
 
-ATL 项目和 ATL COM 类的详细信息，请参阅[ATL COM 桌面组件](../../atl/atl-com-desktop-components.md)。
+有关 ATL 项目和 ATL COM 类的详细信息，请参阅 [ATL COM 桌面组件](../../atl/atl-com-desktop-components.md)。
 
-- **线程处理模型**
+- **线程模型**
 
-   指示用于管理线程的方法。 默认情况下，使用项目**单元**线程处理。
+   指示用于管理线程的方法。 默认情况下, 该项目使用**单元**线程。
 
-   请参阅[指定项目的线程模型](../../atl/specifying-the-threading-model-for-a-project-atl.md)有关详细信息。
+   有关详细信息，请参阅[指定项目的线程模型](../../atl/specifying-the-threading-model-for-a-project-atl.md)。
 
    |选项|描述|
    |------------|-----------------|
-   |**Single**|指定该对象使用单线程模型。 在单线程处理模型中，对象始终在主 COM 线程中运行。 请参阅[单线程单元](/windows/desktop/com/single-threaded-apartments)并[InprocServer32](/windows/desktop/com/inprocserver32)有关详细信息。|
-   |**Apartment**|指定该对象使用单元线程处理。 等效于单线程单元。 单线程单元的组件的每个对象分配一个单元用于其线程的生存期内的对象;但是，多个线程可以用于多个对象。 每个单元绑定到特定线程，并具有 Windows 消息泵 （默认值）。<br /><br /> 请参阅[单线程单元](/windows/desktop/com/single-threaded-apartments)有关详细信息。|
-   |**两者**|指定该对象可以使用单元或自由线程处理，具体取决于创建它的线程的类型。|
-   |**免费**|指定该对象使用自由线程处理。 自由线程处理相当于多线程单元模型。 请参阅[多线程单元](/windows/desktop/com/multithreaded-apartments)有关详细信息。|
-   |**Neutral**|指定对象后面的多线程单元的准则，但它可以在任何类型的线程上执行。|
+   |**单精度**|指定对象使用单线程模型。 在单线程模型中, 对象始终在主 COM 线程中运行。 有关详细信息, 请参阅[单线程单元](/windows/win32/com/single-threaded-apartments)和[InprocServer32](/windows/win32/com/inprocserver32) 。|
+   |**单元**|指定对象使用单元线程。 等效于单线程单元。 在对象的整个生存期内, 单元线程组件的每个对象都为其线程分配一个单元;但是, 多个线程可用于多个对象。 每个单元都绑定到特定的线程, 并且具有 Windows 消息泵 (默认值)。<br /><br /> 有关详细信息, 请参阅[单线程单元](/windows/win32/com/single-threaded-apartments)。|
+   |**全部**|指定对象可以使用单元线程或自由线程, 具体取决于创建它的线程类型。|
+   |**忙**|指定对象使用自由线程处理。 自由线程处理等效于多线程单元模型。 有关详细信息, 请参阅[多线程单元](/windows/win32/com/multithreaded-apartments)。|
+   |**Neutral**|指定对象遵循多线程单元的准则, 但它可以在任何类型的线程上执行。|
 
 - **聚合**
 
-   指示对象是否使用[聚合](/windows/desktop/com/aggregation)。 聚合对象选择要向客户端，公开的接口和接口的公开方式像聚合对象实现它们。 聚合对象的客户端仅与聚合对象通信。
+   指示对象是否使用[聚合](/windows/win32/com/aggregation)。 聚合对象选择要向客户端公开的接口, 并公开接口, 就像聚合对象实现它们一样。 聚合对象的客户端仅与聚合对象通信。
 
    |选项|描述|
    |------------|-----------------|
-   |**是**|指定可聚合对象。 默认值。|
-   |**否**|指定对象不聚合。|
-   |**仅**|指定必须聚合对象。|
+   |**是**|指定可以聚合对象。 默认值。|
+   |**否**|指定不聚合对象。|
+   |**仅限**|指定必须聚合对象。|
 
 - **支持**
 
-   其他支持选项：
+   其他支持选项:
 
    |选项|描述|
    |------------|-----------------|
-   |**ISupportErrorInfo**|创建支持[ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md)接口使对象可以将错误信息返回到客户端。|
-   |**连接点**|派生的对象的类，从而使您的对象的连接点[IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md)。|
-   |**自由线程封送处理程序**|创建在同一进程中线程之间有效地封送接口指针的自由线程封送处理程序对象。 对指定的对象可用**两者**或**免费**作为线程模型。|
+   |**ISupportErrorInfo**|创建对 [ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md) 接口的支持，使对象可以将错误信息返回到客户端。|
+   |**连接点**|通过使对象的类派生自[IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md), 为对象启用连接点。|
+   |**自由线程封送拆收器**|创建自由线程封送拆收器对象, 以便在同一进程中的线程之间有效地封送接口指针。 可用于将或**自由**指定为线程模型的对象。|
 
 ## <a name="see-also"></a>请参阅
 

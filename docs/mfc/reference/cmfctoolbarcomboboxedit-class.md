@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCToolBarComboBoxEdit [MFC], CMFCToolBarComboBoxEdit
 ms.assetid: 4789c34a-ce58-48ba-a26f-38748b601352
-ms.openlocfilehash: 55a2cfef69ee215d63a859b0b7fbf3886bbf60b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2a0ab1766f42d34c86339cffb86f876358c97a4a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62218321"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504871"
 ---
 # <a name="cmfctoolbarcomboboxedit-class"></a>CMFCToolBarComboBoxEdit 类
 
-框架使用`CMFCToolBarComboBoxEdit`类创建的行为类似于一个可编辑的组合框控件的工具栏按钮。
+框架使用`CMFCToolBarComboBoxEdit`类创建一个与可编辑的组合框控件行为类似的工具栏按钮。
 
 ## <a name="syntax"></a>语法
 
@@ -38,11 +38,11 @@ class CMFCToolBarComboBoxEdit : public CEdit
 
 |名称|描述|
 |----------|-----------------|
-|`CMFCToolBarComboBoxEdit::PreTranslateMessage`|将窗口消息调度到之前[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)并[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函数。 （重写 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。）|
+|`CMFCToolBarComboBoxEdit::PreTranslateMessage`|转换窗口消息, 然后将其调度到[TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage)和[DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) Windows 函数。 （重写 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。）|
 
 ### <a name="remarks"></a>备注
 
-从派生类`CMFCToolBarComboBoxEdit`类自定义其编辑操作。
+从`CMFCToolBarComboBoxEdit`类派生一个类, 以自定义其编辑操作。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -58,9 +58,9 @@ class CMFCToolBarComboBoxEdit : public CEdit
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxtoolbarcomboboxbutton.h
+**标头:** afxtoolbarcomboboxbutton
 
-##  <a name="cmfctoolbarcomboboxedit"></a>  CMFCToolBarComboBoxEdit::CMFCToolBarComboBoxEdit
+##  <a name="cmfctoolbarcomboboxedit"></a>CMFCToolBarComboBoxEdit::CMFCToolBarComboBoxEdit
 
 构造 `CMFCToolBarComboBoxEdit` 对象。
 
@@ -70,12 +70,12 @@ CMFCToolBarComboBoxEdit(CMFCToolBarComboBoxButton& combo);
 
 ### <a name="parameters"></a>参数
 
-*combo*<br/>
-[in]对引用[CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)对象，它是包含一个组合框控件的工具栏按钮。
+*框*<br/>
+中对[CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)对象的引用, 该对象是一个包含组合框控件的工具栏按钮。
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何构造的对象`CMFCToolBarComboBoxEdit`类。 此代码片段属于[IE 演示示例](../../overview/visual-cpp-samples.md)。
+下面的示例演示如何构造`CMFCToolBarComboBoxEdit`类的对象。 此代码片段是[IE 演示示例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_IEDemo#5](../../mfc/reference/codesnippet/cpp/cmfctoolbarcomboboxedit-class_1.cpp)]
 
