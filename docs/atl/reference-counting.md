@@ -8,31 +8,31 @@ helpviewer_keywords:
 - reference counts
 - references, counting
 ms.assetid: b1fd4514-6de6-429f-9e60-2777c0d07a3d
-ms.openlocfilehash: fa160cb40af632321e1b14fd3ca88a4dd578b972
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 565b74956280d4e80c41376ead4249e69980a80e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62249647"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492225"
 ---
 # <a name="reference-counting"></a>引用计数
 
-COM 本身不会自动尝试从内存中移除对象时它认为不再使用的对象。 相反，该对象的程序员必须删除未使用的对象。 程序员确定是否可以删除对象根据引用计数。
+当某个对象认为不再使用该对象时, COM 本身不会自动尝试从内存中删除该对象。 相反, 对象程序员必须删除未使用的对象。 程序员根据引用计数确定是否可以移除对象。
 
-COM 用途`IUnknown`方法， [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)并[发行](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)，以管理对某个对象的接口的引用计数。 调用这些方法的一般规则是：
+COM 使用`IUnknown` [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)和[Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)方法来管理对象上的接口的引用计数。 调用这些方法的一般规则是:
 
-- 每当在客户端接收的接口指针，`AddRef`必须调用该接口上。
+- 每当客户端收到接口指针时, `AddRef`都必须在接口上调用。
 
-- 每当客户端已完成使用的接口指针，它必须调用`Release`。
+- 当客户端使用接口指针时, 必须调用`Release`。
 
-在简单实现中，每个`AddRef`递增和每个调用`Release`调用递减一个计数器变量对象中的。 计数将返回到零，接口不再有任何用户，且免费从内存中删除其自身。
+在简单实现中, 每`AddRef`次调用都会递增`Release` , 每次调用都会减少对象内的计数器变量。 当计数返回为零时, 接口将不再具有任何用户, 并且可以随意将其从内存中删除。
 
-引用计数还可以实现，以便 （不到一个单独的接口） 的对象的每次引用计数。 在这种情况下，每个`AddRef`并`Release`对象，调用委托给中央实现和`Release`时其引用计数达到零时释放整个对象。
+还可以实现引用计数, 以便对对象的每个引用 (而不是单个接口) 进行计数。 在这种情况下`AddRef` , `Release`每个和调用都委托对象的中心实现, `Release`当对象的引用计数达到零时释放整个对象。
 
 > [!NOTE]
->  当`CComObject`的派生的对象使用构造**新**运算符，引用计数为 0。 因此，调用`AddRef`必须已成功创建后进行`CComObject`-派生的对象。
+>  当使用 new 运算符构造派生对象时, 引用计数为0。 `CComObject` 因此, 在成功创建`AddRef`派生的`CComObject`对象之后, 必须执行对的调用。
 
 ## <a name="see-also"></a>请参阅
 
 [COM 简介](../atl/introduction-to-com.md)<br/>
-[管理对象生存期通过引用计数](/windows/desktop/com/managing-object-lifetimes-through-reference-counting)
+[通过引用计数管理对象生存期](/windows/win32/com/managing-object-lifetimes-through-reference-counting)

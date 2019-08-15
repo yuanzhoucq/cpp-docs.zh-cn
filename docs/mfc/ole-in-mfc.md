@@ -10,12 +10,12 @@ helpviewer_keywords:
 - applications [OLE], about OLE
 - OLE component object model (COM)
 ms.assetid: 5193479d-1239-4697-aea4-e82f92c707ab
-ms.openlocfilehash: 09d80e7c45875ad2e6ed8b599d4e01d2110d562f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2668d35c24e9d95440a96c5b3eda1fab7bbf3891
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378307"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507987"
 ---
 # <a name="ole-in-mfc"></a>MFC 中的 OLE
 
@@ -31,7 +31,7 @@ ms.locfileid: "62378307"
 
 - 管理 MFC 模块的状态数据，包括导出的 DLL 函数入口点，OLE/COM 接口入口点和窗口过程入口点。
 
-此外可以使用[自动化](../mfc/automation.md)。
+你还可以使用[自动化](../mfc/automation.md)。
 
 > [!NOTE]
 >  OLE 一词表示与链接和嵌入关联的技术，包括 OLE 容器、OLE 服务器、OLE 项、就地激活（也称为可视编辑）跟踪器、拖放和菜单合并。 Active 一词适用于组件对象模型 (COM) 和基于 COM 的对象（如 ActiveX 控件）。 OLE 自动化现在称为自动化。
@@ -70,10 +70,10 @@ ms.locfileid: "62378307"
 [连接点](../mfc/connection-points.md)<br/>
 介绍如何使用 MFC 类、`CCmdTarget` 和 `CConnectionPoint` 实现连接点（以前称为 OLE 连接点）。
 
-[服务器/容器 COM 组件](../mfc/containers-advanced-features.md)<br/>
+[容器/服务器 COM 组件](../mfc/containers-advanced-features.md)<br/>
 介绍将可选高级功能合并到现有容器应用程序中所需的步骤。
 
-[组件对象模型](/windows/desktop/com/the-component-object-model)<br/>
+[组件对象模型](/windows/win32/com/the-component-object-model)<br/>
 介绍如何在没有 MFC 的情况下使用 OLE。
 
 ## <a name="see-also"></a>请参阅

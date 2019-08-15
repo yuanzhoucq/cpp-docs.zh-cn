@@ -13,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComCriticalSection class
 ms.assetid: 44e1edd2-90be-4bfe-9739-58e8b419e7d1
-ms.openlocfilehash: f3a4b50f8dd9bc460a209c47497e720529c40e58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee4ce32ed4ae04bc3b390af5cf104b8a0af599f8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246639"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497277"
 ---
 # <a name="ccomcriticalsection-class"></a>CComCriticalSection 类
 
-此类提供方法用于获取并释放关键节对象的所有权。
+此类提供用于获取和释放关键节对象的所有权的方法。
 
 ## <a name="syntax"></a>语法
 
@@ -42,30 +42,30 @@ class CComCriticalSection
 
 |名称|描述|
 |----------|-----------------|
-|[CComCriticalSection::Init](#init)|创建并初始化关键部分对象。|
-|[CComCriticalSection::Lock](#lock)|获取关键节对象的所有权。|
-|[CComCriticalSection::Term](#term)|释放系统资源使用的关键部分对象。|
-|[CComCriticalSection::Unlock](#unlock)|释放关键节对象的所有权。|
+|[CComCriticalSection::Init](#init)|创建并初始化一个临界区对象。|
+|[CComCriticalSection::Lock](#lock)|获取临界区对象的所有权。|
+|[CComCriticalSection::Term](#term)|释放由临界区对象使用的系统资源。|
+|[CComCriticalSection::Unlock](#unlock)|释放临界区对象的所有权。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
 |名称|描述|
 |----------|-----------------|
-|[CComCriticalSection::m_sec](#m_sec)|CRITICAL_SECTION 对象。|
+|[CComCriticalSection::m_sec](#m_sec)|一个 CRITICAL_SECTION 对象。|
 
 ## <a name="remarks"></a>备注
 
-`CComCriticalSection` 类似于类[CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md)，只不过必须显式初始化并释放关键节。
+`CComCriticalSection`类似于类[CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md), 不同之处在于必须显式初始化并释放临界区。
 
-通常情况下，使用`CComCriticalSection`通过**typedef**名称[CriticalSection](ccommultithreadmodel-class.md#criticalsection)。 此名称引用`CComCriticalSection`时[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)正在使用。
+通常, 使用`CComCriticalSection` [CriticalSection](ccommultithreadmodel-class.md#criticalsection)的**typedef**名称。 当使用`CComCriticalSection` [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)时, 此名称引用。
 
-请参阅[CComCritSecLock 类](../../atl/reference/ccomcritseclock-class.md)以使用相对于调用此类更安全的方式`Lock`和`Unlock`直接。
+请参阅[CComCritSecLock 类](../../atl/reference/ccomcritseclock-class.md), 以了解使用此类比直接调用`Lock`和`Unlock`直接的方法更安全。
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlcore.h
+**标头:** atlcore
 
-##  <a name="ccomcriticalsection"></a>  CComCriticalSection::CComCriticalSection
+##  <a name="ccomcriticalsection"></a>CComCriticalSection::CComCriticalSection
 
 构造函数。
 
@@ -75,11 +75,11 @@ CComCriticalSection() throw();
 
 ### <a name="remarks"></a>备注
 
-集[m_sec](#m_sec)数据成员为 NULL。
+将[m_sec](#m_sec)数据成员设置为 NULL。
 
-##  <a name="init"></a>  CComCriticalSection::Init
+##  <a name="init"></a>CComCriticalSection:: Init
 
-调用 Win32 函数[InitializeCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsection)，其中初始化中包含的关键部分对象[m_sec](#m_sec)数据成员。
+调用 Win32 函数[InitializeCriticalSection](/windows/win32/api/synchapi/nf-synchapi-initializecriticalsection), 该函数初始化[m_sec](#m_sec)数据成员中包含的临界区对象。
 
 ```
 HRESULT Init() throw();
@@ -87,11 +87,11 @@ HRESULT Init() throw();
 
 ### <a name="return-value"></a>返回值
 
-如果成功，E_OUTOFMEMORY 或 E_FAIL 失败时返回 S_OK。
+如果成功, 则返回 S_OK; 如果失败, 则返回 E_OUTOFMEMORY 或 E_FAIL。
 
-##  <a name="lock"></a>  CComCriticalSection::Lock
+##  <a name="lock"></a>CComCriticalSection:: Lock
 
-调用 Win32 函数[EnterCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-entercriticalsection)，哪个等待线程可以获得中包含的关键部分对象的所有权[m_sec](#m_sec)数据成员。
+调用 Win32 函数[EnterCriticalSection](/windows/win32/api/synchapi/nf-synchapi-entercriticalsection), 该函数将等待, 直到线程可以获得[m_sec](#m_sec)数据成员中包含的临界区对象的所有权。
 
 ```
 HRESULT Lock() throw();
@@ -99,23 +99,23 @@ HRESULT Lock() throw();
 
 ### <a name="return-value"></a>返回值
 
-如果成功，E_OUTOFMEMORY 或 E_FAIL 失败时返回 S_OK。
+如果成功, 则返回 S_OK; 如果失败, 则返回 E_OUTOFMEMORY 或 E_FAIL。
 
 ### <a name="remarks"></a>备注
 
-首先必须使用对的调用初始化关键部分对象[Init](#init)方法。 当受保护的代码执行完成后时，必须调用线程[解锁](#unlock)释放关键节的所有权。
+必须首先使用对[Init](#init)方法的调用初始化临界区对象。 当受保护的代码执行完毕后, 线程必须调用[Unlock](#unlock)以释放关键部分的所有权。
 
-##  <a name="m_sec"></a>  CComCriticalSection::m_sec
+##  <a name="m_sec"></a>CComCriticalSection::m_sec
 
-包含一个关键部分对象，由所有`CComCriticalSection`方法。
+包含由所有`CComCriticalSection`方法使用的临界区对象。
 
 ```
 CRITICAL_SECTION m_sec;
 ```
 
-##  <a name="term"></a>  CComCriticalSection::Term
+##  <a name="term"></a>CComCriticalSection:: Term
 
-调用 Win32 函数[DeleteCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-deletecriticalsection)，以释放使用中包含的关键部分对象的所有资源[m_sec](#m_sec)数据成员。
+调用 Win32 函数[DeleteCriticalSection](/windows/win32/api/synchapi/nf-synchapi-deletecriticalsection), 该函数释放[m_sec](#m_sec)数据成员中包含的临界区对象所使用的所有资源。
 
 ```
 HRESULT Term() throw();
@@ -127,11 +127,11 @@ HRESULT Term() throw();
 
 ### <a name="remarks"></a>备注
 
-一次`Term`已调用的关键部分不能再用于同步。
+调用`Term`后, 关键部分将无法再用于同步。
 
-##  <a name="unlock"></a>  CComCriticalSection::Unlock
+##  <a name="unlock"></a>CComCriticalSection:: Unlock
 
-调用 Win32 函数[LeaveCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-leavecriticalsection)，该版本中包含的关键部分对象的所有权[m_sec](#m_sec)数据成员。
+调用 Win32 函数[LeaveCriticalSection](/windows/win32/api/synchapi/nf-synchapi-leavecriticalsection), 该函数释放[m_sec](#m_sec)数据成员中包含的临界区对象的所有权。
 
 ```
 HRESULT Unlock() throw();
@@ -143,7 +143,7 @@ HRESULT Unlock() throw();
 
 ### <a name="remarks"></a>备注
 
-若要首先获取所有权，线程必须调用[锁](#lock)方法。 每次调用`Lock`需要相应地调用`Unlock`释放关键节的所有权。
+若要首先获取所有权, 线程必须调用[Lock](#lock)方法。 对`Lock`的每个调用都需要对`Unlock`的调用, 以释放关键部分的所有权。
 
 ## <a name="see-also"></a>请参阅
 

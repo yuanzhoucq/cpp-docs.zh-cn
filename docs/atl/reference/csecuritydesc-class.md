@@ -34,12 +34,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-ms.openlocfilehash: a9e0eb01608edf29f99209dffc932630ad08807a
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 90f8cfd66fbab88bfa29c39ff27189f02447a7c7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915714"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496489"
 ---
 # <a name="csecuritydesc-class"></a>CSecurityDesc 类
 
@@ -107,7 +107,7 @@ class CSecurityDesc
 
 应用程序不应直接`SECURITY_DESCRIPTOR`修改结构, 而应使用提供的类方法。
 
-有关 Windows 中的访问控制模型的简介, 请参阅 Windows SDK 中的[访问控制](/windows/desktop/SecAuthZ/access-control)。
+有关 Windows 中的访问控制模型的简介, 请参阅 Windows SDK 中的[访问控制](/windows/win32/SecAuthZ/access-control)。
 
 ## <a name="requirements"></a>要求
 
@@ -155,7 +155,7 @@ bool FromString(LPCTSTR pstr) throw(...);
 ### <a name="parameters"></a>参数
 
 *pstr*<br/>
-指向以 null 结尾的字符串的指针, 该字符串包含要转换的[字符串格式安全说明符](/windows/desktop/SecAuthZ/security-descriptor-string-format)。
+指向以 null 结尾的字符串的指针, 该字符串包含要转换的[字符串格式安全说明符](/windows/win32/SecAuthZ/security-descriptor-string-format)。
 
 ### <a name="return-value"></a>返回值
 
@@ -165,7 +165,7 @@ bool FromString(LPCTSTR pstr) throw(...);
 
 可以使用[CSecurityDesc:: ToString](#tostring)创建字符串。 将安全描述符转换为字符串可以更轻松地进行存储和传输。
 
-此方法调用[ConvertStringSecurityDescriptorToSecurityDescriptor](/windows/desktop/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptora)。
+此方法调用[ConvertStringSecurityDescriptorToSecurityDescriptor](/windows/win32/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptorw)。
 
 ##  <a name="getcontrol"></a>  CSecurityDesc::GetControl
 
@@ -186,7 +186,7 @@ bool GetControl(SECURITY_DESCRIPTOR_CONTROL* psdc) const throw();
 
 ### <a name="remarks"></a>备注
 
-此方法调用[GetSecurityDescriptorControl](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-getsecuritydescriptorcontrol)。
+此方法调用[GetSecurityDescriptorControl](/windows/win32/api/securitybaseapi/nf-securitybaseapi-getsecuritydescriptorcontrol)。
 
 ##  <a name="getdacl"></a>  CSecurityDesc::GetDacl
 
@@ -268,7 +268,7 @@ const SECURITY_DESCRIPTOR* GetPSECURITY_DESCRIPTOR() const throw();
 
 ### <a name="return-value"></a>返回值
 
-返回一个指向[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-security_descriptor)结构的指针。
+返回一个指向[SECURITY_DESCRIPTOR](/windows/win32/api/winnt/ns-winnt-security_descriptor)结构的指针。
 
 ##  <a name="getsacl"></a>  CSecurityDesc::GetSacl
 
@@ -480,7 +480,7 @@ bool IsSelfRelative() const throw();
 
 ### <a name="return-value"></a>返回值
 
-如果安全描述符为自相关格式, 且具有连续内存块中的所有安全信息, 则返回 true。 如果安全描述符为绝对格式, 则返回 false。 有关详细信息, 请参阅[绝对和自相关安全描述符](/windows/desktop/SecAuthZ/absolute-and-self-relative-security-descriptors)。
+如果安全描述符为自相关格式, 且具有连续内存块中的所有安全信息, 则返回 true。 如果安全描述符为绝对格式, 则返回 false。 有关详细信息, 请参阅[绝对和自相关安全描述符](/windows/win32/SecAuthZ/absolute-and-self-relative-security-descriptors)。
 
 ##  <a name="makeabsolute"></a>  CSecurityDesc::MakeAbsolute
 
@@ -496,7 +496,7 @@ bool MakeAbsolute() throw(...);
 
 ### <a name="remarks"></a>备注
 
-绝对格式的安全描述符包含指向其所包含的信息的指针, 而不是信息本身。 自相关格式的安全描述符包含连续内存块中的信息。 在自相关安全描述符中, `SECURITY_DESCRIPTOR`结构始终启动信息, 但安全描述符的其他组件可以在结构中以任意顺序跟踪。 自相关安全描述符的组件由安全描述符开头的偏移量标识, 而不是使用内存地址。 当安全描述符必须存储在磁盘上或通过通信协议进行传输时, 此格式很有用。 有关详细信息, 请参阅[绝对和自相关安全描述符](/windows/desktop/SecAuthZ/absolute-and-self-relative-security-descriptors)。
+绝对格式的安全描述符包含指向其所包含的信息的指针, 而不是信息本身。 自相关格式的安全描述符包含连续内存块中的信息。 在自相关安全描述符中, `SECURITY_DESCRIPTOR`结构始终启动信息, 但安全描述符的其他组件可以在结构中以任意顺序跟踪。 自相关安全描述符的组件由安全描述符开头的偏移量标识, 而不是使用内存地址。 当安全描述符必须存储在磁盘上或通过通信协议进行传输时, 此格式很有用。 有关详细信息, 请参阅[绝对和自相关安全描述符](/windows/win32/SecAuthZ/absolute-and-self-relative-security-descriptors)。
 
 ##  <a name="makeselfrelative"></a>  CSecurityDesc::MakeSelfRelative
 
@@ -512,7 +512,7 @@ bool MakeSelfRelative() throw(...);
 
 ### <a name="remarks"></a>备注
 
-绝对格式的安全描述符包含指向其所包含的信息的指针, 而不是包含信息本身。 自相关格式的安全描述符包含连续内存块中的信息。 在自相关安全描述符中, `SECURITY_DESCRIPTOR`结构始终启动信息, 但安全描述符的其他组件可以在结构中以任意顺序跟踪。 安全描述符的组件会通过安全描述符开头的偏移量来标识, 而不是使用内存地址。 当安全描述符必须存储在磁盘上或通过通信协议进行传输时, 此格式很有用。 有关详细信息, 请参阅[绝对和自相关安全描述符](/windows/desktop/SecAuthZ/absolute-and-self-relative-security-descriptors)。
+绝对格式的安全描述符包含指向其所包含的信息的指针, 而不是包含信息本身。 自相关格式的安全描述符包含连续内存块中的信息。 在自相关安全描述符中, `SECURITY_DESCRIPTOR`结构始终启动信息, 但安全描述符的其他组件可以在结构中以任意顺序跟踪。 安全描述符的组件会通过安全描述符开头的偏移量来标识, 而不是使用内存地址。 当安全描述符必须存储在磁盘上或通过通信协议进行传输时, 此格式很有用。 有关详细信息, 请参阅[绝对和自相关安全描述符](/windows/win32/SecAuthZ/absolute-and-self-relative-security-descriptors)。
 
 ##  <a name="operator_eq"></a>CSecurityDesc:: operator =
 
@@ -553,7 +553,7 @@ bool SetControl(
 ### <a name="parameters"></a>参数
 
 *ControlBitsOfInterest*<br/>
-SECURITY_DESCRIPTOR_CONTROL 掩码, 指示要设置的控件位。 有关可以设置的标志的列表, 请参阅[SetSecurityDescriptorControl](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol)。
+SECURITY_DESCRIPTOR_CONTROL 掩码, 指示要设置的控件位。 有关可以设置的标志的列表, 请参阅[SetSecurityDescriptorControl](/windows/win32/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol)。
 
 *ControlBitsToSet*<br/>
 SECURITY_DESCRIPTOR_CONTROL 掩码, 指示*ControlBitsOfInterest*掩码指定的控制位的新值。 此参数可以是为*ControlBitsOfInterest*参数列出的标志的组合。
@@ -564,7 +564,7 @@ SECURITY_DESCRIPTOR_CONTROL 掩码, 指示*ControlBitsOfInterest*掩码指定的
 
 ### <a name="remarks"></a>备注
 
-此方法调用[SetSecurityDescriptorControl](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol)。
+此方法调用[SetSecurityDescriptorControl](/windows/win32/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol)。
 
 ##  <a name="setdacl"></a>  CSecurityDesc::SetDacl
 
@@ -673,7 +673,7 @@ bool ToString(
 ### <a name="parameters"></a>参数
 
 *pstr*<br/>
-指向以 null 结尾的字符串的指针, 该字符串将接收[字符串格式的安全描述符](/windows/desktop/SecAuthZ/security-descriptor-string-format)。
+指向以 null 结尾的字符串的指针, 该字符串将接收[字符串格式的安全描述符](/windows/win32/SecAuthZ/security-descriptor-string-format)。
 
 *si*<br/>
 指定 SECURITY_INFORMATION 位标志的组合, 以指示要在输出字符串中包含的安全描述符的组成部分。
@@ -697,13 +697,13 @@ bool ToString(
 
 如果 DACL 为 NULL, 并且在输入安全描述符中设置了 SE_DACL_PRESENT 控件位, 则该方法将失败。
 
-如果 DACL 为 NULL, 并且在输入安全描述符中未设置 SE_DACL_PRESENT 控件位, 则生成的安全描述符字符串没有 D: component。 有关更多详细信息, 请参阅[安全描述符字符串格式](/windows/desktop/SecAuthZ/security-descriptor-string-format)。
+如果 DACL 为 NULL, 并且在输入安全描述符中未设置 SE_DACL_PRESENT 控件位, 则生成的安全描述符字符串没有 D: component。 有关更多详细信息, 请参阅[安全描述符字符串格式](/windows/win32/SecAuthZ/security-descriptor-string-format)。
 
-此方法调用[ConvertStringSecurityDescriptorToSecurityDescriptor](/windows/desktop/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptora)。
+此方法调用[ConvertStringSecurityDescriptorToSecurityDescriptor](/windows/win32/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptorw)。
 
 ## <a name="see-also"></a>请参阅
 
 [安全示例](../../overview/visual-cpp-samples.md)<br/>
-[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-security_descriptor)<br/>
+[SECURITY_DESCRIPTOR](/windows/win32/api/winnt/ns-winnt-security_descriptor)<br/>
 [类概述](../../atl/atl-class-overview.md)<br/>
 [安全全局函数](../../atl/reference/security-global-functions.md)

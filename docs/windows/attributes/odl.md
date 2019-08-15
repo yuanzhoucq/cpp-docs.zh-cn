@@ -1,21 +1,21 @@
 ---
-title: odl (C++ COM 属性)
+title: odl (C++ COM 特性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.odl
 helpviewer_keywords:
 - odl attribute
 ms.assetid: 75dcb314-b50f-4a63-9180-507ac1bc78f3
-ms.openlocfilehash: 90f9f1df23542138b2fac0dcfe0e122f1993d805
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a4ae1aa7f27348e37c565b35e3dc0b2b1011c9cb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407635"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514313"
 ---
 # <a name="odl"></a>odl
 
-标识为对象描述语言 (ODL) 接口的接口。 MIDL 编译器不需要**odl**属性; 仅为与较旧的.odl 文件的兼容性而识别它。
+将接口标识为对象描述语言 (ODL) 接口。 MIDL 编译器不需要**odl**特性;它只是为了兼容 odl 文件。
 
 ## <a name="syntax"></a>语法
 
@@ -25,7 +25,7 @@ ms.locfileid: "62407635"
 
 ## <a name="remarks"></a>备注
 
-**Odl** C++属性具有相同的功能[odl](/windows/desktop/Midl/odl) MIDL 特性。
+**Odl** C++特性具有与[odl](/windows/win32/Midl/odl) MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
@@ -55,10 +55,10 @@ public:
 
 |||
 |-|-|
-|**适用对象**|**interface**|
-|**可重复**|否|
-|**必需的特性**|None|
-|**无效的特性**|None|
+|**适用于**|**interface**|
+|**可重复**|No|
+|**必需的特性**|无|
+|**无效的特性**|无|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

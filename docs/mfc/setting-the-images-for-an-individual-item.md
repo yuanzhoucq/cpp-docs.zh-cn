@@ -5,40 +5,40 @@ helpviewer_keywords:
 - extended combo boxes [MFC], images
 - images [MFC], combo box items
 ms.assetid: bde83db8-23a7-4e35-837a-c86447d2c0af
-ms.openlocfilehash: 39aa4761dbc753c42f1aedbb18f1832eab471e50
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 177c06acfe665a43921b19407d9d357d4545e748
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62307719"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511273"
 ---
 # <a name="setting-the-images-for-an-individual-item"></a>设置单个项的图像
 
-不同类型的扩展的组合框项所使用的映像由中的值*iImage*， *iSelectedImage*，并*iOverlay* 的成员[COMBOBOXEXITEM](/windows/desktop/api/commctrl/ns-commctrl-tagcomboboxexitema)结构。 每个值是图像的在该控件关联的图像列表中的索引。 默认情况下，这些成员设置为 0，从而导致要显示的项没有图像的控件。 如果你想要用于特定项的图像，您可以插入组合框项时或通过修改现有的组合框项相应地，修改结构。
+"扩展" 组合框项使用的不同类型的图像由[COMBOBOXEXITEM](/windows/win32/api/commctrl/ns-commctrl-comboboxexitemw)结构的*iImage*、 *iSelectedImage*和*iOverlay*成员中的值确定。 每个值都是控件的关联图像列表中的图像的索引。 默认情况下, 这些成员设置为 0, 使控件不显示该项的图像。 如果要对特定项使用图像, 则可以在插入组合框项或通过修改现有组合框项时相应地修改该结构。
 
 ## <a name="setting-the-image-for-a-new-item"></a>设置新项的图像
 
-如果要插入新项，初始化*iImage*， *iSelectedImage*，并*iOverlay*结构具有适当的值的成员，然后将通过调用项[CComboBoxEx::InsertItem](../mfc/reference/ccomboboxex-class.md#insertitem)。
+如果要插入新项, 请使用正确的值初始化*iImage*、 *iSelectedImage*和*iOverlay*结构成员, 然后使用调用[CComboBoxEx:: InsertItem](../mfc/reference/ccomboboxex-class.md#insertitem)插入该项。
 
-下面的示例插入一个新的扩展的组合框项 (`cbi`) 到扩展的组合框控件 (`m_comboEx`)，提供有关状态的所有三个图像的索引：
+下面的示例在扩展组合框控件 (`cbi``m_comboEx`) 中插入一个新的扩展组合框项 (), 为所有三个图像状态提供索引:
 
 [!code-cpp[NVC_MFCControlLadenDialog#12](../mfc/codesnippet/cpp/setting-the-images-for-an-individual-item_1.cpp)]
 
 ## <a name="setting-the-image-for-an-existing-item"></a>设置现有项的图像
 
-如果要修改现有的项，则需要使用*掩码*的成员**COMBOBOXEXITEM**结构。
+如果要修改现有项, 则需要使用**COMBOBOXEXITEM**结构的*mask*成员。
 
-#### <a name="to-modify-an-existing-item-to-use-images"></a>若要修改现有项目以使用映像
+#### <a name="to-modify-an-existing-item-to-use-images"></a>修改现有项目以使用图像
 
-1. 声明**COMBOBOXEXITEM**结构，并设置*掩码*感兴趣修改的数据成员的值。
+1. 声明**COMBOBOXEXITEM**结构, 然后将*mask*数据成员设置为你想要修改的值。
 
-1. 使用此结构，请调用[CComboBoxEx::GetItem](../mfc/reference/ccomboboxex-class.md#getitem)。
+1. 使用此结构调用[CComboBoxEx:: GetItem](../mfc/reference/ccomboboxex-class.md#getitem)。
 
-1. 修改*掩码*， *iImage*，并*iSelectedImage*成员的新返回的结构，使用适当的值。
+1. 使用适当的值修改新返回的结构的*mask*、 *iImage*和*iSelectedImage*成员。
 
-1. 调用[CComboBoxEx::SetItem](../mfc/reference/ccomboboxex-class.md#setitem)、 传入已修改的结构。
+1. 调用[CComboBoxEx:: SetItem](../mfc/reference/ccomboboxex-class.md#setitem), 并传入已修改的结构。
 
-下面的示例演示了此过程通过交换的第三个扩展的组合框项的选定和未选定的映像：
+下面的示例通过交换第三个扩展组合框项的选定和未选中的图像来演示此过程:
 
 [!code-cpp[NVC_MFCControlLadenDialog#13](../mfc/codesnippet/cpp/setting-the-images-for-an-individual-item_2.cpp)]
 

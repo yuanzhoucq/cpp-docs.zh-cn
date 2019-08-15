@@ -41,14 +41,14 @@ helpviewer_keywords:
 - _vsctprintf_p function
 - vscprintf_p_l function
 ms.assetid: 5da920b3-8652-4ee9-b19e-5aac3ace9d03
-ms.openlocfilehash: 357cc1f28e5495385b67fdb7c1b86bbc15f79950
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 74082f0b5ed15b807c626ce08c283724441fc15c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386182"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499119"
 ---
-# <a name="vscprintfp-vscprintfpl-vscwprintfp-vscwprintfpl"></a>_vscprintf_p、_vscprintf_p_l、_vscwprintf_p、_vscwprintf_p_l
+# <a name="_vscprintf_p-_vscprintf_p_l-_vscwprintf_p-_vscwprintf_p_l"></a>_vscprintf_p、_vscprintf_p_l、_vscwprintf_p、_vscwprintf_p_l
 
 返回使用指向参数列表的指针的格式化字符串的字符数量，并且能够指定参数的使用顺序。
 
@@ -90,18 +90,18 @@ int _vscwprintf_p _l(
 
 ## <a name="return-value"></a>返回值
 
-**_vscprintf_p**返回，如果将生成指向的字符串自变量列表的字符数是打印或发送到文件或缓冲区使用指定的格式设置代码。 返回的值不包括终止 null 字符。 **_vscwprintf_p**对于宽字符执行相同的功能。
+如果使用指定的格式化代码打印参数列表指向的字符串或将其发送到文件或缓冲区, 则 **_vscprintf_p**将返回将生成的字符数。 返回的值不包括终止 null 字符。 **_vscwprintf_p**对宽字符执行相同的功能。
 
 ## <a name="remarks"></a>备注
 
-这些函数与差异 **_vscprintf**并 **_vscwprintf**仅在于它们支持指定参数的使用顺序的功能。 有关详细信息，请参阅 [printf_p 位置参数](../../c-runtime-library/printf-p-positional-parameters.md)。
+这些函数不同于 **_vscprintf**和 **_vscwprintf** , 只是为了支持指定参数使用顺序的能力。 有关详细信息，请参阅 [printf_p 位置参数](../../c-runtime-library/printf-p-positional-parameters.md)。
 
-使用这些函数的版本 **_l**后缀完全相同，只不过它们使用传递中而不是当前线程区域设置的区域设置参数。
+这些带有 **_l**后缀的函数的版本相同, 只不过它们使用传入的区域设置参数而不是当前线程区域设置。
 
-如果*格式*是空指针，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，函数将返回-1 并设置**errno**到**EINVAL**。
+如果*format*为空指针, 则将调用无效参数处理程序, 如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续, 则函数将返回-1, 并将**errno**设置为**EINVAL**。
 
 > [!IMPORTANT]
-> 确保，如果*格式*是用户定义的字符串，它是以 null 结尾，并且具有正确的数量和类型的参数。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
+> 确保*format*是用户定义的字符串, 它是 null 终止的并且具有正确的参数数量和类型。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -114,8 +114,8 @@ int _vscwprintf_p _l(
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**_vscprintf_p**， **_vscprintf_p_l**|\<stdio.h>|
-|**_vscwprintf_p**， **_vscwprintf_p_l**|\<stdio.h> 或 \<wchar.h>|
+|**_vscprintf_p**、 **_vscprintf_p_l**|\<stdio.h>|
+|**_vscwprintf_p**、 **_vscwprintf_p_l**|\<stdio.h> 或 \<wchar.h>|
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

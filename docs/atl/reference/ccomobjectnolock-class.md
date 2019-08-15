@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComObjectNoLock class
 ms.assetid: 288c6506-7da8-4127-8d58-7f4bd779539a
-ms.openlocfilehash: 50dc4505c1da8df9efc0c9d0028461ef49c0840e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9253c7495f4d13ed6ce609988251d8abd09592ad
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246295"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497039"
 ---
 # <a name="ccomobjectnolock-class"></a>CComObjectNoLock 类
 
-此类实现`IUnknown`的非聚合的对象，但不会递增模块锁计数的构造函数中。
+此类实现`IUnknown`非聚合对象, 但不会在构造函数中递增模块锁计数。
 
 ## <a name="syntax"></a>语法
 
@@ -31,8 +31,8 @@ class CComObjectNoLock : public Base
 
 #### <a name="parameters"></a>参数
 
-*基本*<br/>
-您的类，派生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)，如你想要的对象上支持任何其他接口也一样。
+*基座*<br/>
+从[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)派生的类, 以及要在对象上支持的任何其他接口。
 
 ## <a name="members"></a>成员
 
@@ -47,15 +47,15 @@ class CComObjectNoLock : public Base
 
 |名称|描述|
 |----------|-----------------|
-|[CComObjectNoLock::AddRef](#addref)|递增该对象的引用计数。|
-|[CComObjectNoLock::QueryInterface](#queryinterface)|返回一个指向所请求的接口。|
-|[CComObjectNoLock::Release](#release)|递减引用计数对象上。|
+|[CComObjectNoLock::AddRef](#addref)|递增对象的引用计数。|
+|[CComObjectNoLock::QueryInterface](#queryinterface)|返回一个指向所请求的接口的指针。|
+|[CComObjectNoLock::Release](#release)|递减对象的引用计数。|
 
 ## <a name="remarks"></a>备注
 
-`CComObjectNoLock` 类似于[CComObject](../../atl/reference/ccomobject-class.md) ，其中实现[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)非聚合的对象; 但是，`CComObjectNoLock`没有构造函数中不递增模块锁计数。
+`CComObjectNoLock`类似于[CComObject](../../atl/reference/ccomobject-class.md) , 因为它为非聚合对象实现[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) ;但是, `CComObjectNoLock`不会在构造函数中递增模块锁计数。
 
-使用 ATL`CComObjectNoLock`在内部的类工厂。 一般情况下，您不会直接使用此类。
+ATL 在`CComObjectNoLock`内部为类工厂使用。 通常, 不会直接使用此类。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -65,11 +65,11 @@ class CComObjectNoLock : public Base
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlcom.h
+**标头:** atlcom。h
 
 ##  <a name="addref"></a>  CComObjectNoLock::AddRef
 
-递增该对象的引用计数。
+递增对象的引用计数。
 
 ```
 STDMETHOD_(ULONG, AddRef)();
@@ -77,11 +77,11 @@ STDMETHOD_(ULONG, AddRef)();
 
 ### <a name="return-value"></a>返回值
 
-可能是有用的诊断或测试一个值。
+可能对诊断或测试有用的值。
 
 ##  <a name="ccomobjectnolock"></a>  CComObjectNoLock::CComObjectNoLock
 
-构造函数。 与不同[CComObject](../../atl/reference/ccomobject-class.md)，不会递增模块的锁计数。
+构造函数。 与[CComObject](../../atl/reference/ccomobject-class.md)不同, 不会递增模块锁计数。
 
 ```
 CComObjectNoLock(void* = NULL);
@@ -90,7 +90,7 @@ CComObjectNoLock(void* = NULL);
 ### <a name="parameters"></a>参数
 
 \*void<br/>
-[in]未使用此未命名的参数。 存在与其他对称性`CComXXXObjectXXX`构造函数。
+中未使用此未命名参数。 它与其他`CComXXXObjectXXX`构造函数存在对称。
 
 ##  <a name="dtor"></a>  CComObjectNoLock::~CComObjectNoLock
 
@@ -102,7 +102,7 @@ CComObjectNoLock(void* = NULL);
 
 ### <a name="remarks"></a>备注
 
-释放所有已分配的资源并调用[FinalRelease](ccomobjectrootex-class.md#finalrelease)。
+释放所有已分配的资源, 并调用[FinalRelease](ccomobjectrootex-class.md#finalrelease)。
 
 ##  <a name="queryinterface"></a>  CComObjectNoLock::QueryInterface
 
@@ -115,10 +115,10 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 ### <a name="parameters"></a>参数
 
 *iid*<br/>
-[in]所请求的接口的标识符。
+中所请求的接口的标识符。
 
 *ppvObject*<br/>
-[out]通过标识的接口指针的指针*iid*。 如果该对象不支持此接口， *ppvObject*设置为 NULL。
+弄指向由*iid*标识的接口指针的指针。 如果对象不支持此接口, 则将*ppvObject*设置为 NULL。
 
 ### <a name="return-value"></a>返回值
 
@@ -126,7 +126,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ##  <a name="release"></a>  CComObjectNoLock::Release
 
-递减引用计数对象上。
+递减对象的引用计数。
 
 ```
 STDMETHOD_(ULONG, Release)();
@@ -134,7 +134,7 @@ STDMETHOD_(ULONG, Release)();
 
 ### <a name="return-value"></a>返回值
 
-在调试版本中，`Release`返回一个值，可能是有用的诊断或测试。 在非调试版本中，`Release`始终返回 0。
+在调试版本中`Release` , 将返回一个值, 该值对于诊断或测试可能很有用。 在非调试版本中, `Release`始终返回0。
 
 ## <a name="see-also"></a>请参阅
 

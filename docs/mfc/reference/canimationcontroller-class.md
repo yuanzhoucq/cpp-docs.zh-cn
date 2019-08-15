@@ -103,12 +103,12 @@ helpviewer_keywords:
 - CAnimationController [MFC], m_pTransitionFactory
 - CAnimationController [MFC], m_pTransitionLibrary
 ms.assetid: ed294c98-695e-40a6-b940-33ef1d40aa6b
-ms.openlocfilehash: a3a533b876b9ca245c0553c4c24a815ef3cabca1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9039d44d9ef36a47c11b3ecaddf232ad427727c4
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62151183"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507641"
 ---
 # <a name="canimationcontroller-class"></a>CAnimationController 类
 
@@ -126,75 +126,75 @@ class CAnimationController : public CObject;
 
 |名称|描述|
 |----------|-----------------|
-|[CAnimationController::CAnimationController](#canimationcontroller)|构造一个动画控制器。|
+|[CAnimationController::CAnimationController](#canimationcontroller)|构造动画控制器。|
 |[CAnimationController::~CAnimationController](#_dtorcanimationcontroller)|析构函数。 当动画控制器对象被销毁时调用。|
 
 ### <a name="public-methods"></a>公共方法
 
 |名称|描述|
 |----------|-----------------|
-|[CAnimationController::AddAnimationObject](#addanimationobject)|将动画对象添加到动画控制器所属的组。|
-|[CAnimationController::AddKeyframeToGroup](#addkeyframetogroup)|向组添加关键帧。|
-|[CAnimationController::AnimateGroup](#animategroup)|准备要运行动画的组，并根据需要对其进行安排。|
-|[CAnimationController::CleanUpGroup](#cleanupgroup)|已重载。 由框架调用以在计划动画时清理组。|
+|[CAnimationController::AddAnimationObject](#addanimationobject)|向属于动画控制器的组添加动画对象。|
+|[CAnimationController::AddKeyframeToGroup](#addkeyframetogroup)|将关键帧添加到组。|
+|[CAnimationController::AnimateGroup](#animategroup)|准备组以运行动画并根据需要对其进行计划。|
+|[CAnimationController::CleanUpGroup](#cleanupgroup)|已重载。 在计划动画时, 由框架调用以清除组。|
 |[CAnimationController::CreateKeyframe](#createkeyframe)|已重载。 创建取决于过渡的关键帧并将其添加到指定的组。|
-|[CAnimationController::EnableAnimationManagerEvent](#enableanimationmanagerevent)|设置或释放动画管理器的状态更改时要调用的处理程序。|
-|[CAnimationController::EnableAnimationTimerEventHandler](#enableanimationtimereventhandler)|设置或释放的计时事件的处理程序和计时更新处理程序。|
-|[CAnimationController::EnablePriorityComparisonHandler](#enableprioritycomparisonhandler)|设置或释放调用以确定是否计划的情节提要可以取消、 得出的结论是，修整或压缩的优先级比较处理程序。|
-|[CAnimationController::EnableStoryboardEventHandler](#enablestoryboardeventhandler)|设置或释放的情节提要状态和更新事件的处理程序。|
-|[CAnimationController::FindAnimationGroup](#findanimationgroup)|已重载。 查找其演示图板动画组。|
-|[CAnimationController::FindAnimationObject](#findanimationobject)|查找动画对象，其中包含指定的动画变量。|
-|[CAnimationController::GetKeyframeStoryboardStart](#getkeyframestoryboardstart)|返回标识启动情节提要的一个关键帧。|
-|[CAnimationController::GetUIAnimationManager](#getuianimationmanager)|提供对封装 IUIAnimationManager 对象的访问。|
-|[CAnimationController::GetUIAnimationTimer](#getuianimationtimer)|提供对封装 IUIAnimationTimer 对象的访问。|
-|[CAnimationController::GetUITransitionFactory](#getuitransitionfactory)|一个指向 IUIAnimationTransitionFactory 接口或如果创建的转换库失败，则为 NULL。|
-|[CAnimationController::GetUITransitionLibrary](#getuitransitionlibrary)|提供对封装 IUIAnimationTransitionLibrary 对象的访问。|
-|[CAnimationController::IsAnimationInProgress](#isanimationinprogress)|指示至少一个组是否正在播放动画。|
+|[CAnimationController::EnableAnimationManagerEvent](#enableanimationmanagerevent)|设置或释放在动画管理器状态更改时要调用的处理程序。|
+|[CAnimationController::EnableAnimationTimerEventHandler](#enableanimationtimereventhandler)|设置或释放计时事件的处理程序和计时更新处理程序。|
+|[CAnimationController::EnablePriorityComparisonHandler](#enableprioritycomparisonhandler)|设置或释放要调用的优先级比较处理程序, 以确定是否可以取消、结束、修整或压缩计划的情节提要。|
+|[CAnimationController::EnableStoryboardEventHandler](#enablestoryboardeventhandler)|设置或释放情节提要状态和更新事件的处理程序。|
+|[CAnimationController::FindAnimationGroup](#findanimationgroup)|已重载。 按动画组的情节提要查找动画组。|
+|[CAnimationController::FindAnimationObject](#findanimationobject)|查找包含指定动画变量的动画对象。|
+|[CAnimationController::GetKeyframeStoryboardStart](#getkeyframestoryboardstart)|返回标识情节提要开头的关键帧。|
+|[CAnimationController::GetUIAnimationManager](#getuianimationmanager)|提供对封装的 IUIAnimationManager 对象的访问。|
+|[CAnimationController::GetUIAnimationTimer](#getuianimationtimer)|提供对封装的 IUIAnimationTimer 对象的访问。|
+|[CAnimationController::GetUITransitionFactory](#getuitransitionfactory)|指向 IUIAnimationTransitionFactory 接口的指针; 如果创建转换库失败, 则为 NULL。|
+|[CAnimationController::GetUITransitionLibrary](#getuitransitionlibrary)|提供对封装的 IUIAnimationTransitionLibrary 对象的访问。|
+|[CAnimationController::IsAnimationInProgress](#isanimationinprogress)|指示是否至少有一个组正在播放动画。|
 |[CAnimationController::IsValid](#isvalid)|指示动画控制器是否有效。|
-|[CAnimationController::OnAnimationIntegerValueChanged](#onanimationintegervaluechanged)|动画变量的整数值发生更改时由框架调用。|
-|[CAnimationController::OnAnimationManagerStatusChanged](#onanimationmanagerstatuschanged)|由框架调用以响应 StatusChanged 事件从动画管理器。|
-|[CAnimationController::OnAnimationTimerPostUpdate](#onanimationtimerpostupdate)|动画更新完成后，由框架调用。|
-|[CAnimationController::OnAnimationTimerPreUpdate](#onanimationtimerpreupdate)|在动画更新开始之前，由框架调用。|
-|[CAnimationController::OnAnimationTimerRenderingTooSlow](#onanimationtimerrenderingtooslow)|当动画呈现帧速率低于最小的理想帧速率时由框架调用。|
-|[CAnimationController::OnAnimationValueChanged](#onanimationvaluechanged)|动画变量的值发生更改时由框架调用。|
-|[CAnimationController::OnBeforeAnimationStart](#onbeforeanimationstart)|之前由框架调用正确计划动画。|
+|[CAnimationController::OnAnimationIntegerValueChanged](#onanimationintegervaluechanged)|当动画变量的整数值已更改时由框架调用。|
+|[CAnimationController::OnAnimationManagerStatusChanged](#onanimationmanagerstatuschanged)|由框架调用, 以响应动画管理器中的 StatusChanged 事件。|
+|[CAnimationController::OnAnimationTimerPostUpdate](#onanimationtimerpostupdate)|动画更新完成后, 由框架调用。|
+|[CAnimationController::OnAnimationTimerPreUpdate](#onanimationtimerpreupdate)|在动画更新开始之前由框架调用。|
+|[CAnimationController::OnAnimationTimerRenderingTooSlow](#onanimationtimerrenderingtooslow)|当动画的呈现帧速率低于最小理想帧速率时由框架调用。|
+|[CAnimationController::OnAnimationValueChanged](#onanimationvaluechanged)|当动画变量的值已更改时由框架调用。|
+|[CAnimationController::OnBeforeAnimationStart](#onbeforeanimationstart)|在计划动画之前由框架调用。|
 |[CAnimationController::OnHasPriorityCancel](#onhasprioritycancel)|由框架调用以便解决计划冲突。|
 |[CAnimationController::OnHasPriorityCompress](#onhasprioritycompress)|由框架调用以便解决计划冲突。|
 |[CAnimationController::OnHasPriorityConclude](#onhaspriorityconclude)|由框架调用以便解决计划冲突。|
 |[CAnimationController::OnHasPriorityTrim](#onhasprioritytrim)|由框架调用以便解决计划冲突。|
-|[CAnimationController::OnStoryboardStatusChanged](#onstoryboardstatuschanged)|情节提要状态发生更改时由框架调用。|
-|[CAnimationController::OnStoryboardUpdated](#onstoryboardupdated)|已更新情节提要时由框架调用。|
+|[CAnimationController::OnStoryboardStatusChanged](#onstoryboardstatuschanged)|当情节提要状态发生更改时由框架调用。|
+|[CAnimationController::OnStoryboardUpdated](#onstoryboardupdated)|当情节提要已更新时由框架调用。|
 |[CAnimationController::RemoveAllAnimationGroups](#removeallanimationgroups)|从动画控制器中移除所有动画组。|
 |[CAnimationController::RemoveAnimationGroup](#removeanimationgroup)|从动画控制器中删除具有指定 ID 的动画组。|
 |[CAnimationController::RemoveAnimationObject](#removeanimationobject)|从动画控制器中删除动画对象。|
-|[CAnimationController::RemoveTransitions](#removetransitions)|从属于指定组的动画对象中删除转换。|
+|[CAnimationController::RemoveTransitions](#removetransitions)|从属于指定组的动画对象中移除转换。|
 |[CAnimationController::ScheduleGroup](#schedulegroup)|计划动画。|
-|[CAnimationController::SetRelatedWnd](#setrelatedwnd)|建立动画控制器和一个窗口之间的关系。|
-|[CAnimationController::UpdateAnimationManager](#updateanimationmanager)|指示动画管理器来更新所有的动画变量的值。|
+|[CAnimationController::SetRelatedWnd](#setrelatedwnd)|在动画控制器和窗口之间建立关系。|
+|[CAnimationController::UpdateAnimationManager](#updateanimationmanager)|指示动画管理器更新所有动画变量的值。|
 
 ### <a name="protected-methods"></a>受保护的方法
 
 |名称|描述|
 |----------|-----------------|
-|[CAnimationController::CleanUpGroup](#cleanupgroup)|已重载。 清理组帮助程序。|
-|[CAnimationController::OnAfterSchedule](#onafterschedule)|当动画，以指定组只是已计划时，由框架调用。|
+|[CAnimationController::CleanUpGroup](#cleanupgroup)|已重载。 清理组的帮助器。|
+|[CAnimationController::OnAfterSchedule](#onafterschedule)|当刚计划指定组的动画时, 由框架调用。|
 
 ### <a name="protected-data-members"></a>受保护的数据成员
 
 |name|描述|
 |----------|-----------------|
-|[CAnimationController::gkeyframeStoryboardStart](#g_keyframestoryboardstart)|表示开始情节提要的一个关键帧。|
-|[CAnimationController::m_bIsValid](#m_bisvalid)|指定动画控制器是否为有效。 如果当前操作系统不支持 Windows 动画 API，此成员设置为 FALSE。|
+|[CAnimationController::gkeyframeStoryboardStart](#g_keyframestoryboardstart)|表示情节提要开头的关键帧。|
+|[CAnimationController::m_bIsValid](#m_bisvalid)|指定动画控制器是否有效。 如果当前操作系统不支持 Windows 动画 API, 则将此成员设置为 FALSE。|
 |[CAnimationController::m_lstAnimationGroups](#m_lstanimationgroups)|属于此动画控制器的动画组的列表。|
 |[CAnimationController::m_pAnimationManager](#m_panimationmanager)|存储指向动画管理器 COM 对象的指针。|
 |[CAnimationController::m_pAnimationTimer](#m_panimationtimer)|存储指向动画计时器 COM 对象的指针。|
-|[CAnimationController::m_pRelatedWnd](#m_prelatedwnd)|指向相关的 CWnd 对象，可以将自动重绘动画管理器的状态已更改，或后更新事件发生时的指针。 可以为 NULL。|
-|[CAnimationController::m_pTransitionFactory](#m_ptransitionfactory)|存储指向转换工厂 COM 对象的指针。|
+|[CAnimationController::m_pRelatedWnd](#m_prelatedwnd)|指向相关 CWnd 对象的指针, 该对象可以在动画管理器的状态发生更改时自动重新绘制, 或发生更新后事件。 可以为 NULL。|
+|[CAnimationController::m_pTransitionFactory](#m_ptransitionfactory)|存储指向过渡工厂 COM 对象的指针。|
 |[CAnimationController::m_pTransitionLibrary](#m_ptransitionlibrary)|存储指向转换库 COM 对象的指针。|
 
 ## <a name="remarks"></a>备注
 
-CAnimationController 类是管理动画的关键类。 您可能的应用程序中创建的动画控制器的一个或多个实例，连接到使用 CAnimationController::SetRelatedWnd CWnd 对象 （可选） 的动画控制器实例。 自动将发送 WM_PAINT 消息到相关的窗口动画管理器状态已更改或已更新动画计时器时需要此连接。 如果不启用此关系，则必须重绘一个窗口，手动显示动画。 实现此目的，您可以从 CAnimationController 派生一个类并覆盖 OnAnimationManagerStatusChanged 和/或 OnAnimationTimerPostUpdate 并使一个或多个 windows 在必要时。
+CAnimationController 类是用于管理动画的键类。 可以在应用程序中创建一个或多个动画控制器实例, 还可以选择使用 CAnimationController:: SetRelatedWnd 将动画控制器的实例连接到 CWnd 对象。 若要在动画管理器状态发生更改或更新动画计时器时自动将 WM_PAINT 消息发送到相关窗口, 则需要此连接。 如果不启用此关系, 则必须重绘显示动画的窗口。 出于此目的, 可以从 CAnimationController 派生一个类, 并重写 OnAnimationManagerStatusChanged 和/或 OnAnimationTimerPostUpdate, 并在必要时使一个或多个窗口无效。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -206,7 +206,7 @@ CAnimationController 类是管理动画的关键类。 您可能的应用程序�
 
 **标头：** afxanimationcontroller.h
 
-##  <a name="_dtorcanimationcontroller"></a>  CAnimationController:: ~ CAnimationController
+##  <a name="_dtorcanimationcontroller"></a>CAnimationController:: ~ CAnimationController
 
 析构函数。 当动画控制器对象被销毁时调用。
 
@@ -214,9 +214,9 @@ CAnimationController 类是管理动画的关键类。 您可能的应用程序�
 virtual ~CAnimationController(void);
 ```
 
-##  <a name="addanimationobject"></a>  CAnimationController::AddAnimationObject
+##  <a name="addanimationobject"></a>CAnimationController:: AddAnimationObject
 
-将动画对象添加到动画控制器所属的组。
+向属于动画控制器的组添加动画对象。
 
 ```
 CAnimationGroup* AddAnimationObject(CAnimationBaseObject* pObject);
@@ -229,15 +229,15 @@ CAnimationGroup* AddAnimationObject(CAnimationBaseObject* pObject);
 
 ### <a name="return-value"></a>返回值
 
-如果函数成功，则具有已 pObject 添加其中的现有或新动画组到指针如果已将 pObject 添加到另一个动画控制器所属的组，则为 NULL。
+一个指针, 指向现有的或新的动画组 (如果函数成功, 则添加 pObject);如果已将 pObject 添加到属于另一个动画控制器的组, 则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-调用此方法将动画对象添加到动画控制器。 一个对象将添加到对象的 GroupID 按照为组 （请参阅 CAnimationBaseObject::SetID）。 它是否与指定 GroupID 所添加的第一个对象，动画控制器将创建一个新组。 可以将的动画对象添加到仅一个动画控制器。 如果需要将对象添加到另一个控制器，则应首先调用 RemoveAnimationObject。 如果已添加到组的对象调用与新 GroupID SetID，将从旧的组中删除和添加到具有指定 ID 的另一个组对象
+调用此方法可向动画控制器添加动画对象。 对象将根据对象的 GroupID 添加到组中 (请参见 CAnimationBaseObject:: SetID)。 如果动态控制器是使用指定的 GroupID 添加的第一个对象, 则它将创建一个新组。 只能向一个动画控制器添加动画对象。 如果需要将对象添加到另一个控制器, 请先调用 RemoveAnimationObject。 如果对已添加到组的对象调用 SetID, 则会从旧组中删除该对象, 并将该对象添加到具有指定 ID 的其他组。
 
-##  <a name="addkeyframetogroup"></a>  CAnimationController::AddKeyframeToGroup
+##  <a name="addkeyframetogroup"></a>CAnimationController:: AddKeyframeToGroup
 
-向组添加关键帧。
+将关键帧添加到组。
 
 ```
 BOOL AddKeyframeToGroup(
@@ -248,22 +248,22 @@ BOOL AddKeyframeToGroup(
 ### <a name="parameters"></a>参数
 
 *nGroupID*<br/>
-指定组 id。
+指定组 ID。
 
 *pKeyframe*<br/>
-指向一个关键帧的指针。
+指向关键帧的指针。
 
 ### <a name="return-value"></a>返回值
 
-如果函数成功，则为 TRUE否则为 FALSE。
+如果函数成功, 则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-通常不需要调用此方法，请改用 CAnimationController::CreateKeyframe，它创建并自动将创建关键帧添加到组。
+通常不需要调用此方法, 而应使用 CAnimationController:: CreateKeyframe 来自动创建创建的关键帧并将其添加到组。
 
-##  <a name="animategroup"></a>  CAnimationController::AnimateGroup
+##  <a name="animategroup"></a>CAnimationController:: AnimateGroup
 
-准备要运行动画的组，并根据需要对其进行安排。
+准备组以运行动画并根据需要对其进行计划。
 
 ```
 BOOL AnimateGroup(
@@ -277,27 +277,27 @@ BOOL AnimateGroup(
 指定 GroupID。
 
 *bScheduleNow*<br/>
-指定是否要立即运行动画。
+指定是否立即运行动画。
 
 ### <a name="return-value"></a>返回值
 
-如果动画已成功计划和运行，则为 TRUE。
+如果动画已成功计划并运行, 则为 TRUE。
 
 ### <a name="remarks"></a>备注
 
-此方法执行实际的工作创建情节提要、 添加动画变量、 应用转换和设置关键帧。 很可能要延迟计划如果 bScheduleNow 设置为 FALSE。 在这种情况下指定的组将保存已设置动画的情节提要。 此时，你可以设置的情节提要和动画变量的事件。 当你实际上需要运行动画调用 CAnimationController::ScheduleGroup。
+此方法执行实际工作创建情节提要、添加动画变量、应用过渡和设置关键帧。 如果将 bScheduleNow 设置为 FALSE, 则可能会延迟计划。 在这种情况下, 指定的组将包含已为动画设置的情节提要。 此时, 可以设置情节提要和动画变量的事件。 当你实际需要运行动画时, 请调用 CAnimationController:: ScheduleGroup。
 
-##  <a name="canimationcontroller"></a>  CAnimationController::CAnimationController
+##  <a name="canimationcontroller"></a>CAnimationController:: CAnimationController
 
-构造一个动画控制器。
+构造动画控制器。
 
 ```
 CAnimationController(void);
 ```
 
-##  <a name="cleanupgroup"></a>  CAnimationController::CleanUpGroup
+##  <a name="cleanupgroup"></a>CAnimationController:: CleanUpGroup
 
-由框架调用以在计划动画时清理组。
+在计划动画时, 由框架调用以清除组。
 
 ```
 void CleanUpGroup(UINT32 nGroupID);
@@ -310,13 +310,13 @@ void CleanUpGroup(CAnimationGroup* pGroup);
 指定 GroupID。
 
 *pGroup*<br/>
-指向要清除的动画组的指针。
+指向要清理的动画组的指针。
 
 ### <a name="remarks"></a>备注
 
-因为动画具有计划之后，它们是不相关，此方法会从指定的组中，删除所有转换和关键帧。
+此方法从指定的组中删除所有转换和关键帧, 因为它们在计划动画后不相关。
 
-##  <a name="createkeyframe"></a>  CAnimationController::CreateKeyframe
+##  <a name="createkeyframe"></a>CAnimationController:: CreateKeyframe
 
 创建取决于过渡的关键帧并将其添加到指定的组。
 
@@ -355,7 +355,7 @@ CKeyFrame* CreateKeyframe(
 
 ##  <a name="enableanimationmanagerevent"></a>  CAnimationController::EnableAnimationManagerEvent
 
-设置或释放动画管理器的状态更改时要调用的处理程序。
+设置或释放在动画管理器状态更改时要调用的处理程序。
 
 ```
 virtual BOOL EnableAnimationManagerEvent(BOOL bEnable = TRUE);
@@ -364,19 +364,19 @@ virtual BOOL EnableAnimationManagerEvent(BOOL bEnable = TRUE);
 ### <a name="parameters"></a>参数
 
 *bEnable*<br/>
-指定是否要设置或释放一个处理程序。
+指定是设置还是释放处理程序。
 
 ### <a name="return-value"></a>返回值
 
-如果处理程序已成功设置或发布，则为 TRUE。
+如果已成功设置或释放处理程序, 则为 TRUE。
 
 ### <a name="remarks"></a>备注
 
-当一个处理程序设置 （已启用） 时 Windows 动画调用 OnAnimationManagerStatusChanged 动画管理器的状态更改时。
+设置 (启用) 处理程序时, 当动画管理器的状态发生更改时, Windows 动画将调用 OnAnimationManagerStatusChanged。
 
-##  <a name="enableanimationtimereventhandler"></a>  CAnimationController::EnableAnimationTimerEventHandler
+##  <a name="enableanimationtimereventhandler"></a>CAnimationController:: EnableAnimationTimerEventHandler
 
-设置或释放的计时事件的处理程序和计时更新处理程序。
+设置或释放计时事件的处理程序和计时更新处理程序。
 
 ```
 virtual BOOL EnableAnimationTimerEventHandler(
@@ -387,22 +387,22 @@ virtual BOOL EnableAnimationTimerEventHandler(
 ### <a name="parameters"></a>参数
 
 *bEnable*<br/>
-指定是否设置或取消处理程序。
+指定是设置还是释放处理程序。
 
 *idleBehavior*<br/>
-指定空闲计时器更新处理程序的行为。
+指定计时器更新处理程序的空闲行为。
 
 ### <a name="return-value"></a>返回值
 
-如果处理程序已成功设置或发布; 则为 TRUE而不释放在处理程序首先，为第二次调用如果此属性为 FALSE 方法或者其他任何错误。
+如果成功设置或释放了处理程序, 则为 TRUE;如果再次调用此方法而不先释放处理程序, 则为 FALSE; 如果发生其他错误, 则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-在处理程序设置 （已启用） 的 Windows 动画 API 调用 OnAnimationTimerPreUpdate，OnAnimationTimerPostUpdate，OnRenderingTooSlow 方法。 需要启用动画计时器，以便允许 Windows 动画 API 更新情节提要。 否则你将需要调用 CAnimationController::UpdateAnimationManager，若要指示动画管理器更新所有的动画变量的值。
+设置 (启用) 处理程序时, Windows 动画 API 调用 OnAnimationTimerPreUpdate、OnAnimationTimerPostUpdate、OnRenderingTooSlow 方法。 需要启用动画计时器以允许 Windows 动画 API 更新情节提要。 否则, 你将需要调用 CAnimationController:: UpdateAnimationManager 以指示动画管理器更新所有动画变量的值。
 
 ##  <a name="enableprioritycomparisonhandler"></a>  CAnimationController::EnablePriorityComparisonHandler
 
-设置或释放调用以确定是否计划的情节提要可以取消、 得出的结论是，修整或压缩的优先级比较处理程序。
+设置或释放要调用的优先级比较处理程序, 以确定是否可以取消、结束、修整或压缩计划的情节提要。
 
 ```
 virtual BOOL EnablePriorityComparisonHandler(DWORD dwHandlerType);
@@ -411,19 +411,19 @@ virtual BOOL EnablePriorityComparisonHandler(DWORD dwHandlerType);
 ### <a name="parameters"></a>参数
 
 *dwHandlerType*<br/>
-UI_ANIMATION_PHT_ 组合标志 （请参阅备注），它指定要设置或释放哪些处理程序。
+UI_ANIMATION_PHT_ 标志的组合 (请参见 "备注"), 它指定要设置或释放的处理程序。
 
 ### <a name="return-value"></a>返回值
 
-如果处理程序已成功设置或发布，则为 TRUE。
+如果已成功设置或释放处理程序, 则为 TRUE。
 
 ### <a name="remarks"></a>备注
 
-当一个处理程序为集 （已启用） Windows 动画会调用具体取决于 dwHandlerType 以下虚拟方法：OnHasPriorityCancel，OnHasPriorityConclude，OnHasPriorityTrim，OnHasPriorityCompress。 dwHandler 可以是下列标志的组合：UI_ANIMATION_PHT_NONE-发布所有处理程序 ui_animation_pht_cancel，则-设置取消处理程序比较 ui_animation_pht_conclude，则-设置结束设置压缩比较处理程序 ui_animation_pht_trim，则比较处理程序 ui_animation_pht_compress，则--设置剪裁比较处理程序 UI_ANIMATION_PHT_CANCEL_REMOVE-删除取消比较处理程序 UI_ANIMATION_PHT_CONCLUDE_REMOVE-删除结束比较处理程序 UI_ANIMATION_PHT_COMPRESS_REMOVE-删除压缩比较处理程序 UI_ANIMATION_PHT_TRIM_REMOVE-删除剪裁比较处理程序
+设置 (启用) 处理程序时, Windows 动画会调用以下虚拟方法, 具体取决于 dwHandlerType:OnHasPriorityCancel, OnHasPriorityConclude, OnHasPriorityTrim, OnHasPriorityCompress. dwHandler 可以是以下标志的组合:UI_ANIMATION_PHT_NONE-发布所有处理程序 UI_ANIMATION_PHT_CANCEL-set Cancel 比较处理程序 UI_ANIMATION_PHT_CONCLUDE-set 结束比较处理程序 UI_ANIMATION_PHT_COMPRESS-set 压缩比较处理程序 UI_ANIMATION_PHT_TRIM-setTrim 比较处理程序 UI_ANIMATION_PHT_CANCEL_REMOVE-remove Cancel 比较处理程序 UI_ANIMATION_PHT_CONCLUDE_REMOVE-remove 结束比较处理程序 UI_ANIMATION_PHT_COMPRESS_REMOVE-remove 压缩比较处理程序 UI_ANIMATION_PHT_TRIM_REMOVE-删除剪裁比较处理程序
 
-##  <a name="enablestoryboardeventhandler"></a>  CAnimationController::EnableStoryboardEventHandler
+##  <a name="enablestoryboardeventhandler"></a>CAnimationController:: EnableStoryboardEventHandler
 
-设置或释放的情节提要状态和更新事件的处理程序。
+设置或释放情节提要状态和更新事件的处理程序。
 
 ```
 virtual BOOL EnableStoryboardEventHandler(
@@ -434,22 +434,22 @@ virtual BOOL EnableStoryboardEventHandler(
 ### <a name="parameters"></a>参数
 
 *nGroupID*<br/>
-指定组 id。
+指定组 ID。
 
 *bEnable*<br/>
-指定是否要设置或释放一个处理程序。
+指定是设置还是释放处理程序。
 
 ### <a name="return-value"></a>返回值
 
-如果处理程序已成功设置或发布; 则为 TRUE如果指定的动画组现在找到或尚未启动动画，以指定的组和其内部的情节提要为 NULL，则为 FALSE。
+如果已成功设置或释放处理程序, 则为 TRUE;如果现在找到指定的动画组, 或尚未启动指定组的动画, 其内部情节提要为 NULL, 则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-当设置处理程序 （已启用） 的 Windows 动画 API 调用 OnStoryboardStatusChanges 和 OnStoryboardUpdated 虚拟方法。 一个处理程序后，必须设置 CAnimationController::Animate 已调用指定的动画组，因为它会封装的 IUIAnimationStoryboard 对象。
+设置 (启用) 处理程序时, Windows 动画 API 调用 OnStoryboardStatusChanges 和 OnStoryboardUpdated 虚方法。 为指定动画组调用了 CAnimationController:: 动画后, 必须设置该处理程序, 因为它会创建封装的 IUIAnimationStoryboard 对象。
 
-##  <a name="findanimationgroup"></a>  CAnimationController::FindAnimationGroup
+##  <a name="findanimationgroup"></a>CAnimationController:: FindAnimationGroup
 
-查找动画组通过其组 id。
+按组 ID 查找动画组。
 
 ```
 CAnimationGroup* FindAnimationGroup(UINT32 nGroupID);
@@ -466,15 +466,15 @@ CAnimationGroup* FindAnimationGroup(IUIAnimationStoryboard* pStoryboard);
 
 ### <a name="return-value"></a>返回值
 
-一个指向动画组或如果找不到具有指定 ID 的组，则为 NULL。
+指向动画组的指针; 如果找不到具有指定 ID 的组, 则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-使用此方法在运行时查找动画组。 创建并添加到动画组的内部列表时具有特定 GroupID 的第一个动画对象添加到动画控制器组。
+使用此方法可在运行时查找动画组。 当具有特定 GroupID 的第一个动画对象添加到动画控制器时, 将创建一个组并将该对象添加到动画组的内部列表中。
 
-##  <a name="findanimationobject"></a>  CAnimationController::FindAnimationObject
+##  <a name="findanimationobject"></a>CAnimationController:: FindAnimationObject
 
-查找动画对象，其中包含指定的动画变量。
+查找包含指定动画变量的动画对象。
 
 ```
 BOOL FindAnimationObject(
@@ -489,30 +489,30 @@ BOOL FindAnimationObject(
 指向动画变量的指针。
 
 *ppObject*<br/>
-输出。 包含指向动画对象或为 NULL。
+输出. 包含指向动画对象或 NULL 的指针。
 
 *ppGroup*<br/>
-输出。 包含指向包含的动画对象或为 NULL 的动画组。
+输出. 包含一个指向包含动画对象的动画组的指针, 或为 NULL。
 
 ### <a name="return-value"></a>返回值
 
-如果找到对象; 则为 TRUE否则为 FALSE。
+如果找到对象, 则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-从事件处理程序需要查找从传入的动画变量的动画对象时调用。
+当需要从传入动画变量中查找动画对象时, 从事件处理程序调用。
 
-##  <a name="g_keyframestoryboardstart"></a>  CAnimationController::gkeyframeStoryboardStart
+##  <a name="g_keyframestoryboardstart"></a>CAnimationController:: gkeyframeStoryboardStart
 
-表示开始情节提要的一个关键帧。
+表示情节提要开头的关键帧。
 
 ```
 static CBaseKeyFrame gkeyframeStoryboardStart;
 ```
 
-##  <a name="getkeyframestoryboardstart"></a>  CAnimationController::GetKeyframeStoryboardStart
+##  <a name="getkeyframestoryboardstart"></a>CAnimationController:: GetKeyframeStoryboardStart
 
-返回标识启动情节提要的一个关键帧。
+返回标识情节提要开头的关键帧。
 
 ```
 static CBaseKeyFrame* GetKeyframeStoryboardStart();
@@ -520,15 +520,15 @@ static CBaseKeyFrame* GetKeyframeStoryboardStart();
 
 ### <a name="return-value"></a>返回值
 
-指向基关键帧，它标识情节提要的开头的指针。
+指向基本关键帧的指针, 它标识情节提要的开头。
 
 ### <a name="remarks"></a>备注
 
-获取此关键帧，以基于任何其他关键帧或转换情节提要启动时的时刻。
+获取此关键帧以使情节提要开始时的任何其他关键帧或转换成为基础。
 
-##  <a name="getuianimationmanager"></a>  CAnimationController::GetUIAnimationManager
+##  <a name="getuianimationmanager"></a>CAnimationController:: GetUIAnimationManager
 
-提供对封装 IUIAnimationManager 对象的访问。
+提供对封装的 IUIAnimationManager 对象的访问。
 
 ```
 IUIAnimationManager* GetUIAnimationManager();
@@ -536,15 +536,15 @@ IUIAnimationManager* GetUIAnimationManager();
 
 ### <a name="return-value"></a>返回值
 
-一个指向 IUIAnimationManager 接口或如果动画管理器创建失败，则为 NULL。
+指向 IUIAnimationManager 接口的指针; 如果创建动画管理器失败, 则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-如果当前操作系统不支持 Windows 动画 API，此方法返回 NULL，并且此后 CAnimationController::IsValid 上的所有后续调用将返回 FALSE。 您可能需要访问 IUIAnimationManager，才能调用不使用动画控制器的包装及其接口方法。
+如果当前操作系统不支持 Windows 动画 API, 则此方法返回 NULL, 并在 CAnimationController:: IsValid 上的所有后续调用返回 FALSE 后返回 FALSE。 你可能需要访问 IUIAnimationManager 以调用其不是由动画控制器包装的接口方法。
 
-##  <a name="getuianimationtimer"></a>  CAnimationController::GetUIAnimationTimer
+##  <a name="getuianimationtimer"></a>CAnimationController:: GetUIAnimationTimer
 
-提供对封装 IUIAnimationTimer 对象的访问。
+提供对封装的 IUIAnimationTimer 对象的访问。
 
 ```
 IUIAnimationTimer* GetUIAnimationTimer();
@@ -552,15 +552,15 @@ IUIAnimationTimer* GetUIAnimationTimer();
 
 ### <a name="return-value"></a>返回值
 
-一个指向 IUIAnimationTimer 接口或如果动画计时器创建失败，则为 NULL。
+指向 IUIAnimationTimer 接口的指针; 如果创建动画计时器失败, 则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-如果当前操作系统不支持 Windows 动画 API，此方法返回 NULL，并且此后 CAnimationController::IsValid 上的所有后续调用将返回 FALSE。
+如果当前操作系统不支持 Windows 动画 API, 则此方法返回 NULL, 并在 CAnimationController:: IsValid 上的所有后续调用返回 FALSE 后返回 FALSE。
 
-##  <a name="getuitransitionfactory"></a>  CAnimationController::GetUITransitionFactory
+##  <a name="getuitransitionfactory"></a>CAnimationController:: GetUITransitionFactory
 
-一个指向 IUIAnimationTransitionFactory 接口或如果创建的转换库失败，则为 NULL。
+指向 IUIAnimationTransitionFactory 接口的指针; 如果创建转换库失败, 则为 NULL。
 
 ```
 IUIAnimationTransitionFactory* GetUITransitionFactory();
@@ -568,15 +568,15 @@ IUIAnimationTransitionFactory* GetUITransitionFactory();
 
 ### <a name="return-value"></a>返回值
 
-指向 IUIAnimationTransitionFactory 或者如果转换工厂创建失败，则为 NULL 指针。
+如果创建转换工厂失败, 则为指向 IUIAnimationTransitionFactory 的指针或 NULL。
 
 ### <a name="remarks"></a>备注
 
-如果当前操作系统不支持 Windows 动画 API，此方法返回 NULL，并且此后 CAnimationController::IsValid 上的所有后续调用将返回 FALSE。
+如果当前操作系统不支持 Windows 动画 API, 则此方法返回 NULL, 并在 CAnimationController:: IsValid 上的所有后续调用返回 FALSE 后返回 FALSE。
 
-##  <a name="getuitransitionlibrary"></a>  CAnimationController::GetUITransitionLibrary
+##  <a name="getuitransitionlibrary"></a>CAnimationController:: GetUITransitionLibrary
 
-提供对封装 IUIAnimationTransitionLibrary 对象的访问。
+提供对封装的 IUIAnimationTransitionLibrary 对象的访问。
 
 ```
 IUIAnimationTransitionLibrary* GetUITransitionLibrary();
@@ -584,15 +584,15 @@ IUIAnimationTransitionLibrary* GetUITransitionLibrary();
 
 ### <a name="return-value"></a>返回值
 
-一个指向 IUIAnimationTransitionLibrary 接口或如果创建的转换库失败，则为 NULL。
+指向 IUIAnimationTransitionLibrary 接口的指针; 如果创建转换库失败, 则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-如果当前操作系统不支持 Windows 动画 API，此方法返回 NULL，并且此后 CAnimationController::IsValid 上的所有后续调用将返回 FALSE。
+如果当前操作系统不支持 Windows 动画 API, 则此方法返回 NULL, 并在 CAnimationController:: IsValid 上的所有后续调用返回 FALSE 后返回 FALSE。
 
-##  <a name="isanimationinprogress"></a>  CAnimationController::IsAnimationInProgress
+##  <a name="isanimationinprogress"></a>CAnimationController:: IsAnimationInProgress
 
-指示至少一个组是否正在播放动画。
+指示是否至少有一个组正在播放动画。
 
 ```
 virtual BOOL IsAnimationInProgress();
@@ -600,13 +600,13 @@ virtual BOOL IsAnimationInProgress();
 
 ### <a name="return-value"></a>返回值
 
-如果没有为此动画控制器; 进行动画，则返回 TRUE否则为 FALSE。
+如果此动画控制器正在进行动画处理, 则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-检查动画管理器的状态，如果状态为 UI_ANIMATION_MANAGER_BUSY 则返回 TRUE。
+检查动画管理器的状态, 如果状态为 UI_ANIMATION_MANAGER_BUSY, 则返回 TRUE。
 
-##  <a name="isvalid"></a>  CAnimationController::IsValid
+##  <a name="isvalid"></a>CAnimationController:: IsValid
 
 指示动画控制器是否有效。
 
@@ -616,21 +616,21 @@ BOOL IsValid() const;
 
 ### <a name="return-value"></a>返回值
 
-如果动画控制器有效，则为 TRUE否则为 FALSE。
+如果动画控制器有效, 则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-此方法返回 FALSE，仅当 Windows 动画 API 不支持的当前 OS 和动画管理器创建失败，因为它未注册。 你需要初始化 COM 库来设置此标志后至少一次调用 GetUIAnimationManager。
+仅当当前操作系统上不支持 Windows 动画 API 并创建动画管理器失败 (因为未注册) 时, 此方法才返回 FALSE。 需要在初始化 COM 库后至少调用一次 GetUIAnimationManager, 以导致设置此标志。
 
 ##  <a name="m_bisvalid"></a>  CAnimationController::m_bIsValid
 
-指定动画控制器是否为有效。 如果当前操作系统不支持 Windows 动画 API，此成员设置为 FALSE。
+指定动画控制器是否有效。 如果当前操作系统不支持 Windows 动画 API, 则将此成员设置为 FALSE。
 
 ```
 BOOL m_bIsValid;
 ```
 
-##  <a name="m_lstanimationgroups"></a>  CAnimationController::m_lstAnimationGroups
+##  <a name="m_lstanimationgroups"></a>CAnimationController:: m_lstAnimationGroups
 
 属于此动画控制器的动画组的列表。
 
@@ -646,7 +646,7 @@ CList<CAnimationGroup*, CAnimationGroup*> m_lstAnimationGroups;
 ATL::CComPtr<IUIAnimationManager> m_pAnimationManager;
 ```
 
-##  <a name="m_panimationtimer"></a>  CAnimationController::m_pAnimationTimer
+##  <a name="m_panimationtimer"></a>CAnimationController:: m_pAnimationTimer
 
 存储指向动画计时器 COM 对象的指针。
 
@@ -654,9 +654,9 @@ ATL::CComPtr<IUIAnimationManager> m_pAnimationManager;
 ATL::CComPtr<IUIAnimationTimer> m_pAnimationTimer;
 ```
 
-##  <a name="m_prelatedwnd"></a>  CAnimationController::m_pRelatedWnd
+##  <a name="m_prelatedwnd"></a>CAnimationController:: m_pRelatedWnd
 
-指向相关的 CWnd 对象，可以将自动重绘动画管理器的状态已更改，或后更新事件发生时的指针。 可以为 NULL。
+指向相关 CWnd 对象的指针, 该对象可以在动画管理器的状态发生更改时自动重新绘制, 或发生更新后事件。 可以为 NULL。
 
 ```
 CWnd* m_pRelatedWnd;
@@ -664,13 +664,13 @@ CWnd* m_pRelatedWnd;
 
 ##  <a name="m_ptransitionfactory"></a>  CAnimationController::m_pTransitionFactory
 
-存储指向转换工厂 COM 对象的指针。
+存储指向过渡工厂 COM 对象的指针。
 
 ```
 ATL::CComPtr<IUIAnimationTransitionFactory> m_pTransitionFactory;
 ```
 
-##  <a name="m_ptransitionlibrary"></a>  CAnimationController::m_pTransitionLibrary
+##  <a name="m_ptransitionlibrary"></a>CAnimationController:: m_pTransitionLibrary
 
 存储指向转换库 COM 对象的指针。
 
@@ -678,9 +678,9 @@ ATL::CComPtr<IUIAnimationTransitionFactory> m_pTransitionFactory;
 ATL::CComPtr<IUIAnimationTransitionLibrary> m_pTransitionLibrary;
 ```
 
-##  <a name="onafterschedule"></a>  CAnimationController::OnAfterSchedule
+##  <a name="onafterschedule"></a>CAnimationController:: OnAfterSchedule
 
-当动画，以指定组只是已计划时，由框架调用。
+当刚计划指定组的动画时, 由框架调用。
 
 ```
 virtual void OnAfterSchedule(CAnimationGroup* pGroup);
@@ -689,15 +689,15 @@ virtual void OnAfterSchedule(CAnimationGroup* pGroup);
 ### <a name="parameters"></a>参数
 
 *pGroup*<br/>
-已计划将动画组到指针。
+指向已计划的动画组的指针。
 
 ### <a name="remarks"></a>备注
 
-默认实现从指定组中删除关键帧，并从属于指定组的动画变量过渡。 在派生类才能根据动画安排任何其他操作，可以重写。
+默认实现从指定的组中删除关键帧, 并从属于指定组的动画变量转换。 可以在派生类中重写, 以便在动画计划时执行任何其他操作。
 
-##  <a name="onanimationintegervaluechanged"></a>  CAnimationController::OnAnimationIntegerValueChanged
+##  <a name="onanimationintegervaluechanged"></a>CAnimationController:: OnAnimationIntegerValueChanged
 
-动画变量的整数值发生更改时由框架调用。
+当动画变量的整数值已更改时由框架调用。
 
 ```
 virtual void OnAnimationIntegerValueChanged(
@@ -711,27 +711,27 @@ virtual void OnAnimationIntegerValueChanged(
 ### <a name="parameters"></a>参数
 
 *pGroup*<br/>
-已更改的指针指向包含其值的动画对象的动画组。
+一个指针, 指向包含其值已更改的动画对象的动画组。
 
 *pObject*<br/>
-指向一个动画对象，包含其值已更改的动画变量的指针。
+一个指向动画对象的指针, 该对象包含其值已更改的动画变量。
 
 *variable*<br/>
-指向一个动画变量的指针。
+指向动画变量的指针。
 
 *newValue*<br/>
 指定新值。
 
 *prevValue*<br/>
-指定以前的值。
+指定上一个值。
 
 ### <a name="remarks"></a>备注
 
-如果使用为特定的动画变量或动画对象调用 EnableIntegerValueChangedEvent 启用动画变量事件，调用此方法。 它可以在派生类中重写以便执行特定于应用程序的操作。
+如果为特定动画变量或动画对象启用了 EnableIntegerValueChangedEvent 调用的动画变量事件, 则会调用此方法。 它可以在派生类中重写以便执行特定于应用程序的操作。
 
-##  <a name="onanimationmanagerstatuschanged"></a>  CAnimationController::OnAnimationManagerStatusChanged
+##  <a name="onanimationmanagerstatuschanged"></a>CAnimationController:: OnAnimationManagerStatusChanged
 
-由框架调用以响应 StatusChanged 事件从动画管理器。
+由框架调用, 以响应动画管理器中的 StatusChanged 事件。
 
 ```
 virtual void OnAnimationManagerStatusChanged(
@@ -742,18 +742,18 @@ virtual void OnAnimationManagerStatusChanged(
 ### <a name="parameters"></a>参数
 
 *newStatus*<br/>
-新动画管理器状态。
+新的动画管理器状态。
 
 *previousStatus*<br/>
-上一个动画管理器状态。
+先前的动画管理器状态。
 
 ### <a name="remarks"></a>备注
 
-如果启用与 EnableAnimationManagerEvent 动画管理器事件，调用此方法。 它可以在派生类中重写以便执行特定于应用程序的操作。 如果设置 SetRelatedWnd 的默认实现将更新相关的窗口。
+如果使用 EnableAnimationManagerEvent 启用动画管理器事件, 则会调用此方法。 它可以在派生类中重写以便执行特定于应用程序的操作。 如果已使用 SetRelatedWnd 设置了相关窗口, 则默认实现将更新该窗口。
 
-##  <a name="onanimationtimerpostupdate"></a>  CAnimationController::OnAnimationTimerPostUpdate
+##  <a name="onanimationtimerpostupdate"></a>CAnimationController:: OnAnimationTimerPostUpdate
 
-动画更新完成后，由框架调用。
+动画更新完成后, 由框架调用。
 
 ```
 virtual void OnAnimationTimerPostUpdate();
@@ -761,11 +761,11 @@ virtual void OnAnimationTimerPostUpdate();
 
 ### <a name="remarks"></a>备注
 
-如果您启用使用 EnableAnimationTimerEventHandler 计时器事件处理程序，调用此方法。 它可以在派生类中重写以便执行特定于应用程序的操作。
+如果使用 EnableAnimationTimerEventHandler 启用计时器事件处理程序, 则会调用此方法。 它可以在派生类中重写以便执行特定于应用程序的操作。
 
-##  <a name="onanimationtimerpreupdate"></a>  CAnimationController::OnAnimationTimerPreUpdate
+##  <a name="onanimationtimerpreupdate"></a>CAnimationController:: OnAnimationTimerPreUpdate
 
-在动画更新开始之前，由框架调用。
+在动画更新开始之前由框架调用。
 
 ```
 virtual void OnAnimationTimerPreUpdate();
@@ -773,11 +773,11 @@ virtual void OnAnimationTimerPreUpdate();
 
 ### <a name="remarks"></a>备注
 
-如果您启用使用 EnableAnimationTimerEventHandler 计时器事件处理程序，调用此方法。 它可以在派生类中重写以便执行特定于应用程序的操作。
+如果使用 EnableAnimationTimerEventHandler 启用计时器事件处理程序, 则会调用此方法。 它可以在派生类中重写以便执行特定于应用程序的操作。
 
-##  <a name="onanimationtimerrenderingtooslow"></a>  CAnimationController::OnAnimationTimerRenderingTooSlow
+##  <a name="onanimationtimerrenderingtooslow"></a>CAnimationController:: OnAnimationTimerRenderingTooSlow
 
-当动画呈现帧速率低于最小的理想帧速率时由框架调用。
+当动画的呈现帧速率低于最小理想帧速率时由框架调用。
 
 ```
 virtual void OnAnimationTimerRenderingTooSlow(UINT32 fps);
@@ -786,15 +786,15 @@ virtual void OnAnimationTimerRenderingTooSlow(UINT32 fps);
 ### <a name="parameters"></a>参数
 
 *fps*<br/>
-每秒帧数中的当前帧速率。
+当前帧速率 (以帧/秒为单位)。
 
 ### <a name="remarks"></a>备注
 
-如果您启用使用 EnableAnimationTimerEventHandler 计时器事件处理程序，调用此方法。 它可以在派生类中重写以便执行特定于应用程序的操作。 通过调用 IUIAnimationTimer::SetFrameRateThreshold 指定最小的理想帧速率。
+如果使用 EnableAnimationTimerEventHandler 启用计时器事件处理程序, 则会调用此方法。 它可以在派生类中重写以便执行特定于应用程序的操作。 需要的最小帧速率是通过调用 IUIAnimationTimer:: SetFrameRateThreshold 来指定的。
 
-##  <a name="onanimationvaluechanged"></a>  CAnimationController::OnAnimationValueChanged
+##  <a name="onanimationvaluechanged"></a>CAnimationController:: OnAnimationValueChanged
 
-动画变量的值发生更改时由框架调用。
+当动画变量的值已更改时由框架调用。
 
 ```
 virtual void OnAnimationValueChanged(
@@ -808,27 +808,27 @@ virtual void OnAnimationValueChanged(
 ### <a name="parameters"></a>参数
 
 *pGroup*<br/>
-已更改的指针指向包含其值的动画对象的动画组。
+一个指针, 指向包含其值已更改的动画对象的动画组。
 
 *pObject*<br/>
-指向一个动画对象，包含其值已更改的动画变量的指针。
+一个指向动画对象的指针, 该对象包含其值已更改的动画变量。
 
 *variable*<br/>
-指向一个动画变量的指针。
+指向动画变量的指针。
 
 *newValue*<br/>
 指定新值。
 
 *prevValue*<br/>
-指定以前的值。
+指定上一个值。
 
 ### <a name="remarks"></a>备注
 
-如果使用为特定的动画变量或动画对象调用 EnableValueChangedEvent 启用动画变量事件，调用此方法。 它可以在派生类中重写以便执行特定于应用程序的操作。
+如果为特定动画变量或动画对象启用了 EnableValueChangedEvent 调用的动画变量事件, 则会调用此方法。 它可以在派生类中重写以便执行特定于应用程序的操作。
 
-##  <a name="onbeforeanimationstart"></a>  CAnimationController::OnBeforeAnimationStart
+##  <a name="onbeforeanimationstart"></a>CAnimationController:: OnBeforeAnimationStart
 
-之前由框架调用正确计划动画。
+在计划动画之前由框架调用。
 
 ```
 virtual void OnBeforeAnimationStart(CAnimationGroup* pGroup);
@@ -837,13 +837,13 @@ virtual void OnBeforeAnimationStart(CAnimationGroup* pGroup);
 ### <a name="parameters"></a>参数
 
 *pGroup*<br/>
-一个指向其动画即将开始的动画组。
+指向动画要开始的动画组的指针。
 
 ### <a name="remarks"></a>备注
 
-此调用将路由到相关 CWnd，并可以在执行任何其他操作之前在动画开始指定组的派生类中重写。
+此调用路由到相关 CWnd, 可在派生类中重写, 以便在为指定组启动动画之前执行任何其他操作。
 
-##  <a name="onhasprioritycancel"></a>  CAnimationController::OnHasPriorityCancel
+##  <a name="onhasprioritycancel"></a>CAnimationController:: OnHasPriorityCancel
 
 由框架调用以便解决计划冲突。
 
@@ -871,9 +871,9 @@ virtual BOOL OnHasPriorityCancel(
 
 ### <a name="remarks"></a>备注
 
-如果你使用 CAnimationController::EnablePriorityComparisonHandler 启用优先级比较事件，并指定 UI_ANIMATION_PHT_CANCEL，则会调用此方法。 它可以在派生类中重写以便执行特定于应用程序的操作。 有关详细信息的阅读 Windows 动画 API 文档[冲突管理](/windows/desktop/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority)。
+如果你使用 CAnimationController::EnablePriorityComparisonHandler 启用优先级比较事件，并指定 UI_ANIMATION_PHT_CANCEL，则会调用此方法。 它可以在派生类中重写以便执行特定于应用程序的操作。 有关[冲突管理](/windows/win32/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority)的详细信息, 请参阅 WINDOWS 动画 API 文档。
 
-##  <a name="onhasprioritycompress"></a>  CAnimationController::OnHasPriorityCompress
+##  <a name="onhasprioritycompress"></a>CAnimationController:: OnHasPriorityCompress
 
 由框架调用以便解决计划冲突。
 
@@ -901,9 +901,9 @@ virtual BOOL OnHasPriorityCompress(
 
 ### <a name="remarks"></a>备注
 
-如果你使用 CAnimationController::EnablePriorityComparisonHandler 启用优先级比较事件，并指定 UI_ANIMATION_PHT_COMPRESS，则会调用此方法。 它可以在派生类中重写以便执行特定于应用程序的操作。 有关详细信息的阅读 Windows 动画 API 文档[冲突管理](/windows/desktop/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority)。
+如果你使用 CAnimationController::EnablePriorityComparisonHandler 启用优先级比较事件，并指定 UI_ANIMATION_PHT_COMPRESS，则会调用此方法。 它可以在派生类中重写以便执行特定于应用程序的操作。 有关[冲突管理](/windows/win32/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority)的详细信息, 请参阅 WINDOWS 动画 API 文档。
 
-##  <a name="onhaspriorityconclude"></a>  CAnimationController::OnHasPriorityConclude
+##  <a name="onhaspriorityconclude"></a>CAnimationController:: OnHasPriorityConclude
 
 由框架调用以便解决计划冲突。
 
@@ -931,9 +931,9 @@ virtual BOOL OnHasPriorityConclude(
 
 ### <a name="remarks"></a>备注
 
-如果你使用 CAnimationController::EnablePriorityComparisonHandler 启用优先级比较事件，并指定 UI_ANIMATION_PHT_CONCLUDE，则会调用此方法。 它可以在派生类中重写以便执行特定于应用程序的操作。 有关详细信息的阅读 Windows 动画 API 文档[冲突管理](/windows/desktop/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority)。
+如果你使用 CAnimationController::EnablePriorityComparisonHandler 启用优先级比较事件，并指定 UI_ANIMATION_PHT_CONCLUDE，则会调用此方法。 它可以在派生类中重写以便执行特定于应用程序的操作。 有关[冲突管理](/windows/win32/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority)的详细信息, 请参阅 WINDOWS 动画 API 文档。
 
-##  <a name="onhasprioritytrim"></a>  CAnimationController::OnHasPriorityTrim
+##  <a name="onhasprioritytrim"></a>CAnimationController:: OnHasPriorityTrim
 
 由框架调用以便解决计划冲突。
 
@@ -961,11 +961,11 @@ virtual BOOL OnHasPriorityTrim(
 
 ### <a name="remarks"></a>备注
 
-如果你使用 CAnimationController::EnablePriorityComparisonHandler 启用优先级比较事件，并指定 UI_ANIMATION_PHT_TRIM，则会调用此方法。 它可以在派生类中重写以便执行特定于应用程序的操作。 有关详细信息的阅读 Windows 动画 API 文档[冲突管理](/windows/desktop/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority)。
+如果你使用 CAnimationController::EnablePriorityComparisonHandler 启用优先级比较事件，并指定 UI_ANIMATION_PHT_TRIM，则会调用此方法。 它可以在派生类中重写以便执行特定于应用程序的操作。 有关[冲突管理](/windows/win32/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority)的详细信息, 请参阅 WINDOWS 动画 API 文档。
 
-##  <a name="onstoryboardstatuschanged"></a>  CAnimationController::OnStoryboardStatusChanged
+##  <a name="onstoryboardstatuschanged"></a>CAnimationController:: OnStoryboardStatusChanged
 
-情节提要状态发生更改时由框架调用。
+当情节提要状态发生更改时由框架调用。
 
 ```
 virtual void OnStoryboardStatusChanged(
@@ -977,21 +977,21 @@ virtual void OnStoryboardStatusChanged(
 ### <a name="parameters"></a>参数
 
 *pGroup*<br/>
-已更改的动画组拥有其状态的情节提要的指针。
+一个指针, 它指向拥有其状态已更改的情节提要的动画组。
 
 *newStatus*<br/>
 指定新状态。
 
 *previousStatus*<br/>
-指定的以前的状态。
+指定以前的状态。
 
 ### <a name="remarks"></a>备注
 
-如果您启用使用 CAnimationController::EnableStoryboardEventHandler 情节提要事件，调用此方法。 它可以在派生类中重写以便执行特定于应用程序的操作。
+如果使用 CAnimationController:: EnableStoryboardEventHandler 启用情节提要事件, 则会调用此方法。 它可以在派生类中重写以便执行特定于应用程序的操作。
 
-##  <a name="onstoryboardupdated"></a>  CAnimationController::OnStoryboardUpdated
+##  <a name="onstoryboardupdated"></a>CAnimationController:: OnStoryboardUpdated
 
-已更新情节提要时由框架调用。
+当情节提要已更新时由框架调用。
 
 ```
 virtual void OnStoryboardUpdated(CAnimationGroup* pGroup);
@@ -1000,11 +1000,11 @@ virtual void OnStoryboardUpdated(CAnimationGroup* pGroup);
 ### <a name="parameters"></a>参数
 
 *pGroup*<br/>
-一个指向拥有的情节提要的组。
+指向拥有情节提要的组的指针。
 
 ### <a name="remarks"></a>备注
 
-如果您启用使用 CAnimationController::EnableStoryboardEventHandler 情节提要事件，调用此方法。 它可以在派生类中重写以便执行特定于应用程序的操作。
+如果使用 CAnimationController:: EnableStoryboardEventHandler 启用情节提要事件, 则会调用此方法。 它可以在派生类中重写以便执行特定于应用程序的操作。
 
 ##  <a name="removeallanimationgroups"></a>  CAnimationController::RemoveAllAnimationGroups
 
@@ -1016,7 +1016,7 @@ void RemoveAllAnimationGroups();
 
 ### <a name="remarks"></a>备注
 
-所有组将都被删除，其指针，如果存储在应用程序级别，必须都将失效。 如果要删除的组的 CAnimationGroup::m_bAutodestroyAnimationObjects 为 TRUE，则将删除属于该组的所有动画对象;否则为其对父动画控制器的引用将设置为 NULL，并将它们添加到另一个控制器。
+将删除所有组, 其指针 (如果存储在应用程序级别) 必须失效。 如果要删除的组的 CAnimationGroup:: m_bAutodestroyAnimationObjects 为 TRUE, 则将删除属于该组的所有动画对象;否则, 对父动画控制器的引用将设置为 NULL, 并且可以将其添加到另一个控制器。
 
 ##  <a name="removeanimationgroup"></a>  CAnimationController::RemoveAnimationGroup
 
@@ -1029,11 +1029,11 @@ void RemoveAnimationGroup(UINT32 nGroupID);
 ### <a name="parameters"></a>参数
 
 *nGroupID*<br/>
-指定动画组 id。
+指定动画组 ID。
 
 ### <a name="remarks"></a>备注
 
-此方法从内部的组列表中删除动画组并将其删除，因此如果存储一个指向该动画组时，它必须使其无效。 如果 CAnimationGroup::m_bAutodestroyAnimationObjects 为 TRUE，则将删除属于该组的所有动画对象;否则为其对父动画控制器的引用将设置为 NULL，并将它们添加到另一个控制器。
+此方法从组的内部列表中删除动画组并将其删除, 因此, 如果您存储了指向该动画组的指针, 则该动画组必须失效。 如果 CAnimationGroup:: m_bAutodestroyAnimationObjects 为 TRUE, 则将删除属于该组的所有动画对象;否则, 对父动画控制器的引用将设置为 NULL, 并且可以将其添加到另一个控制器。
 
 ##  <a name="removeanimationobject"></a>  CAnimationController::RemoveAnimationObject
 
@@ -1051,15 +1051,15 @@ void RemoveAnimationObject(
 指向动画对象的指针。
 
 *bNoDelete*<br/>
-如果此参数为 TRUE 时删除将不删除对象。
+如果此参数为 TRUE, 则删除时不会删除对象。
 
 ### <a name="remarks"></a>备注
 
-从动画控制器和动画组中删除动画对象。 如果特定的对象应不进行动画处理，或如果你需要将对象移动到另一个动画控制器调用此函数。 在最后一个事例 bNoDelete 必须为 TRUE。
+从动画控制器和动画组中移除动画对象。 如果特定对象不应进行动画处理, 或者需要将对象移动到另一个动画控制器, 请调用此函数。 在最后一种情况下, bNoDelete 必须为 TRUE。
 
-##  <a name="removetransitions"></a>  CAnimationController::RemoveTransitions
+##  <a name="removetransitions"></a>CAnimationController:: RemoveTransitions
 
-从属于指定组的动画对象中删除转换。
+从属于指定组的动画对象中移除转换。
 
 ```
 void RemoveTransitions(UINT32 nGroupID);
@@ -1068,13 +1068,13 @@ void RemoveTransitions(UINT32 nGroupID);
 ### <a name="parameters"></a>参数
 
 *nGroupID*<br/>
-指定组 id。
+指定组 ID。
 
 ### <a name="remarks"></a>备注
 
-在组及其动画对象将循环，并针对每个动画对象调用 ClearTransitions(FALSE)。 已安排动画后，由框架调用此方法。
+该组循环切换其动画对象, 并对每个动画对象调用 ClearTransitions (FALSE)。 此方法由框架在计划动画后调用。
 
-##  <a name="schedulegroup"></a>  CAnimationController::ScheduleGroup
+##  <a name="schedulegroup"></a>CAnimationController:: ScheduleGroup
 
 计划动画。
 
@@ -1087,22 +1087,22 @@ BOOL ScheduleGroup(
 ### <a name="parameters"></a>参数
 
 *nGroupID*<br/>
-指定动画要计划的组 ID。
+指定要计划的动画组 ID。
 
 *time*<br/>
 指定计划的时间。
 
 ### <a name="return-value"></a>返回值
 
-如果已成功计划了动画，则为 TRUE。 如果尚未创建情节提要，或发生其他错误，则为 FALSE。
+如果动画已成功计划, 则为 TRUE。 如果尚未创建情节提要或发生其他错误, 则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-必须使用设置为 FALSE 之前 ScheduleGroup 参数 bScheduleNow 调用 AnimateGroup。 您可以指定从 IUIAnimationTimer::GetTime 获取所需的动画时间。 如果时间参数为 0.0，动画的当前时间计划。
+必须先调用 AnimateGroup, 并将 bScheduleNow 参数设置为 FALSE, 然后再 ScheduleGroup。 可以指定从 IUIAnimationTimer:: GetTime 获取的所需动画时间。 如果时间参数为 0.0, 则会将动画计划为当前时间。
 
-##  <a name="setrelatedwnd"></a>  CAnimationController::SetRelatedWnd
+##  <a name="setrelatedwnd"></a>CAnimationController:: SetRelatedWnd
 
-建立动画控制器和一个窗口之间的关系。
+在动画控制器和窗口之间建立关系。
 
 ```
 void SetRelatedWnd(CWnd* pWnd);
@@ -1111,15 +1111,15 @@ void SetRelatedWnd(CWnd* pWnd);
 ### <a name="parameters"></a>参数
 
 *pWnd*<br/>
-指向要设置的窗口对象的指针。
+指向要设置的 window 对象的指针。
 
 ### <a name="remarks"></a>备注
 
-如果设置相关的 CWnd 对象，动画控制器都可以以自动更新它 （发送 WM_PAINT 消息） 的动画管理器的状态已更改或计时器后更新事件发生时。
+如果设置了相关的 CWnd 对象, 动画控制器可以在动画管理器状态发生更改或计时器更新事件发生时自动对其进行更新 (发送 WM_PAINT 消息)。
 
-##  <a name="updateanimationmanager"></a>  CAnimationController::UpdateAnimationManager
+##  <a name="updateanimationmanager"></a>CAnimationController:: UpdateAnimationManager
 
-指示动画管理器来更新所有的动画变量的值。
+指示动画管理器更新所有动画变量的值。
 
 ```
 virtual void UpdateAnimationManager();
@@ -1127,7 +1127,7 @@ virtual void UpdateAnimationManager();
 
 ### <a name="remarks"></a>备注
 
-调用此方法将推进到当前时间的动画管理器，根据需要更改情节提要的状态和更新到相应的任何动画变量内插的值。 此方法在内部调用 IUIAnimationTimer::GetTime(timeNow) 和 IUIAnimationManager::Update(timeNow)。 重写此方法在派生类来自定义此行为。
+调用此方法会使动画管理器前进到当前时间, 并根据需要更改情节提要的状态, 并将所有动画变量更新为适当的内插值。 此方法在内部调用 IUIAnimationTimer:: GetTime (timeNow) 和 IUIAnimationManager:: Update (timeNow)。 在派生类中重写此方法以自定义此行为。
 
 ## <a name="see-also"></a>请参阅
 

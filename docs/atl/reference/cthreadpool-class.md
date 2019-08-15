@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CThreadPool class
 ms.assetid: 06683718-01b9-413c-9481-2dc1734ec70f
-ms.openlocfilehash: 07fd470a6aeab0575f2733d72650bd695b8e2752
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: f0b732efdce5cf04349f468363b8d86621d90204
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915689"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496309"
 ---
 # <a name="cthreadpool-class"></a>CThreadPool 类
 
@@ -78,7 +78,7 @@ class CThreadPool : public IThreadPoolConfig
 
 在创建线程后立即开始,将在与`Initialize`该线程关联的对象上调用 Worker::。 紧跟在析构之前, 将调用*Worker*::`Terminate` 。 这两个方法都必须接受一个**空**<strong>\*</strong>参数。 通过[CThreadPool:: Initialize](#initialize)的*pvWorkerParam*参数将此参数的值传递给线程池。
 
-当队列中有工作项并且辅助线程可用于工作时, 工作线程将从队列中拉取一个项, 并为该线程`Execute`调用*worker*对象的方法。 然后, 将三个项传递给方法: 队列中`pvWorkerParam`的项、传递给 `Initialize` worker:: 和*worker*:: `Terminate`的项, 以及指向用于 IO 完成端口队列的[重叠](/windows/desktop/api/minwinbase/ns-minwinbase-overlapped)结构的指针.
+当队列中有工作项并且辅助线程可用于工作时, 工作线程将从队列中拉取一个项, 并为该线程`Execute`调用*worker*对象的方法。 然后, 将三个项传递给方法: 队列中`pvWorkerParam`的项、传递给 `Initialize` worker:: 和*worker*:: `Terminate`的项, 以及指向用于 IO 完成端口队列的[重叠](/windows/win32/api/minwinbase/ns-minwinbase-overlapped)结构的指针.
 
 *辅助*类通过提供 Typedef, *worker*:: `RequestType`来声明将在线程池上排队的项的类型。 此类型必须能够强制转换为 ULONG_PTR。
 
@@ -344,7 +344,7 @@ void Shutdown(DWORD dwMaxWait = 0) throw();
 
 ### <a name="remarks"></a>备注
 
-此方法将关闭请求发送到池中的所有线程。 如果超时时间已到, 则此方法将在任何未退出的线程上调用[TerminateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-terminatethread) 。 此方法是从类的析构函数自动调用的。
+此方法将关闭请求发送到池中的所有线程。 如果超时时间已到, 则此方法将在任何未退出的线程上调用[TerminateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-terminatethread) 。 此方法是从类的析构函数自动调用的。
 
 ## <a name="see-also"></a>请参阅
 

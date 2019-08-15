@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - .FPO directive
 ms.assetid: 35f4cd61-32f9-4262-b657-73f04f775d09
-ms.openlocfilehash: 3bdb6af98aa71fef3d4af24091dc7463d917ce15
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: b793b3efa72a676b800c10b98ea06001ddcf10d5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915960"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491425"
 ---
 # <a name="fpo"></a>.FPO
 
@@ -39,7 +39,7 @@ DWORD 中参数的大小, 无符号的16位值。
 指示是否已分配 EBP 寄存器。 0或1。
 
 *cbFrame*<br/>
-指示帧类型。  有关详细信息, 请参阅[FPO_DATA](/windows/desktop/api/winnt/ns-winnt-fpo_data) 。
+指示帧类型。  有关详细信息, 请参阅[FPO_DATA](/windows/win32/api/winnt/ns-winnt-fpo_data) 。
 
 ## <a name="see-also"></a>请参阅
 
