@@ -41,79 +41,79 @@ f1_keywords:
 - ATLPATH/ATL::ATLPath::StripToRoot
 - ATLPATH/ATL::ATLPath::UnquoteSpaces
 ms.assetid: d1ec2b8d-7ec7-43ea-90dd-0a740d2a742b
-ms.openlocfilehash: 683fd9c6464187e416ea032840507b2062de1fa3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 76efbb0bd43b800f186eac1afa168fc2a0c939f6
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62248185"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497986"
 ---
 # <a name="atl-path-functions"></a>ATL 路径函数
 
-ATL ATLPath 类提供用于操作的窗体中的路径[CPathT](cpatht-class.md)。 此代码可在 atlpath.h。
+ATL 提供 Atlpath.h 类, 用于以[CPathT](cpatht-class.md)的形式操作路径。 此代码可在 atlpath.h 中找到。
 
-### <a name="related-classes"></a>相关的类
-
-|||
-|-|-|
-|[CPathT 类](cpatht-class.md)|此类表示的路径。|
-
-### <a name="related-typedefs"></a>相关类型定义
+### <a name="related-classes"></a>相关类
 
 |||
 |-|-|
-|`CPath`|专用化[CPathT](cpatht-class.md)使用`CString`。|
-|`CPathA`|专用化[CPathT](cpatht-class.md)使用`CStringA`。|
-|`CPathW`|专用化[CPathT](cpatht-class.md)使用`CStringW`。|
+|[CPathT 类](cpatht-class.md)|此类表示一个路径。|
+
+### <a name="related-typedefs"></a>相关的 Typedef
+
+|||
+|-|-|
+|`CPath`|使用`CString`的[CPathT](cpatht-class.md)的专用化。|
+|`CPathA`|使用`CStringA`的[CPathT](cpatht-class.md)的专用化。|
+|`CPathW`|使用`CStringW`的[CPathT](cpatht-class.md)的专用化。|
 
 ### <a name="functions"></a>函数
 
 |||
 |-|-|
-|[ATLPath::AddBackslash](#addbackslash)|此函数是的重载包装器[PathAddBackslash](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddbackslasha)。|
-|[ATLPath::AddExtension](#addextension)|此函数是的重载包装器[PathAddExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddextensiona)。|
-|[ATLPath::Append](#append)|此函数是的重载包装器[PathAppend](/windows/desktop/api/shlwapi/nf-shlwapi-pathappenda)。|
-|[ATLPath::BuildRoot](#buildroot)|此函数是的重载包装器[PathBuildRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathbuildroota)。|
-|[ATLPath::Canonicalize](#canonicalize)|此函数是的重载包装器[PathCanonicalize](/windows/desktop/api/shlwapi/nf-shlwapi-pathcanonicalizea)。|
-|[ATLPath::Combine](#combine)|此函数是的重载包装器[PathCombine](/windows/desktop/api/shlwapi/nf-shlwapi-pathcombinea)。|
-|[ATLPath::CommonPrefix](#commonprefix)|此函数是的重载包装器[PathCommonPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathcommonprefixa)。|
-|[ATLPath::CompactPath](#compactpath)|此函数是的重载包装器[PathCompactPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpatha)。|
-|[ATLPath::CompactPathEx](#compactpathex)|此函数是的重载包装器[PathCompactPathEx](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpathexa)。|
-|[ATLPath::FileExists](#fileexists)|此函数是的重载包装器[PathFileExists](/windows/desktop/api/shlwapi/nf-shlwapi-pathfileexistsa)。|
-|[ATLPath::FindExtension](#findextension)|此函数是的重载包装器[PathFindExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindextensiona)。|
-|[ATLPath::FindFileName](#findfilename)|此函数是的重载包装器[PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea)。|
-|[ATLPath::GetDriveNumber](#getdrivenumber)|此函数是的重载包装器[PathGetDriveNumber](/windows/desktop/api/shlwapi/nf-shlwapi-pathgetdrivenumbera)。|
-|[ATLPath::IsDirectory](#isdirectory)|此函数是的重载包装器[PathIsDirectory](/windows/desktop/api/shlwapi/nf-shlwapi-pathisdirectorya)。|
-|[ATLPath::IsFileSpec](#isfilespec)|此函数是的重载包装器[PathIsFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathisfilespeca)。|
-|[ATLPath::IsPrefix](#isprefix)|此函数是的重载包装器[PathIsPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathisprefixa)。|
-|[ATLPath::IsRelative](#isrelative)|此函数是的重载包装器[PathIsRelative](/windows/desktop/api/shlwapi/nf-shlwapi-pathisrelativea)。|
-|[ATLPath::IsRoot](#isroot)|此函数是的重载包装器[PathIsRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathisroota)。|
-|[ATLPath::IsSameRoot](#issameroot)|此函数是的重载包装器[PathIsSameRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathissameroota)。|
-|[ATLPath::IsUNC](#isunc)|此函数是的重载包装器[PathIsUNC](/windows/desktop/api/shlwapi/nf-shlwapi-pathisunca)。|
-|[ATLPath::IsUNCServer](#isuncserver)|此函数是的重载包装器[PathIsUNCServer](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncservera)。|
-|[ATLPath::IsUNCServerShare](#isuncservershare)|此函数是的重载包装器[PathIsUNCServerShare](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncserversharea)。|
-|[ATLPath::MakePretty](#makepretty)|此函数是的重载包装器[PathMakePretty](/windows/desktop/api/shlwapi/nf-shlwapi-pathmakeprettya)。|
-|[ATLPath::MatchSpec](#matchspec)|此函数是的重载包装器[PathMatchSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathmatchspeca)。|
-|[ATLPath::QuoteSpaces](#quotespaces)|此函数是的重载包装器[PathQuoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathquotespacesa)。|
-|[ATLPath::RelativePathTo](#relativepathto)|此函数是的重载包装器[PathRelativePathTo](/windows/desktop/api/shlwapi/nf-shlwapi-pathrelativepathtoa)。|
-|[ATLPath::RemoveArgs](#removeargs)|此函数是的重载包装器[PathRemoveArgs](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveargsa)。|
-|[ATLPath::RemoveBackslash](#removebackslash)|此函数是的重载包装器[PathRemoveBackslash](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovebackslasha)。|
-|[ATLPath::RemoveBlanks](#removeblanks)|此函数是的重载包装器[PathRemoveBlanks](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveblanksa)。|
-|[ATLPath::RemoveExtension](#removeextension)|此函数是的重载包装器[PathRemoveExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveextensiona)。|
-|[ATLPath::RemoveFileSpec](#removefilespec)|此函数是的重载包装器[PathRemoveFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovefilespeca)。|
-|[ATLPath::RenameExtension](#renameextension)|此函数是的重载包装器[PathRenameExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathrenameextensiona)。|
-|[ATLPath::SkipRoot](#skiproot)|此函数是的重载包装器[PathSkipRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathskiproota)。|
-|[ATLPath::StripPath](#strippath)|此函数是的重载包装器[PathStripPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathstrippatha)。|
-|[ATLPath::StripToRoot](#striptoroot)|此函数是的重载包装器[PathStripToRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathstriptoroota)。|
-|[ATLPath::UnquoteSpaces](#unquotespaces)|此函数是的重载包装器[PathUnquoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathunquotespacesa)。|
+|[ATLPath::AddBackslash](#addbackslash)|此函数是[PathAddBackslash](/windows/win32/api/shlwapi/nf-shlwapi-pathaddbackslashw)的重载包装。|
+|[ATLPath::AddExtension](#addextension)|此函数是[PathAddExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathaddextensionw)的重载包装。|
+|[ATLPath::Append](#append)|此函数是[PathAppend](/windows/win32/api/shlwapi/nf-shlwapi-pathappendw)的重载包装。|
+|[ATLPath::BuildRoot](#buildroot)|此函数是[PathBuildRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathbuildrootw)的重载包装。|
+|[ATLPath::Canonicalize](#canonicalize)|此函数是[PathCanonicalize](/windows/win32/api/shlwapi/nf-shlwapi-pathcanonicalizew)的重载包装。|
+|[ATLPath::Combine](#combine)|此函数是[PathCombine](/windows/win32/api/shlwapi/nf-shlwapi-pathcombinew)的重载包装。|
+|[ATLPath::CommonPrefix](#commonprefix)|此函数是[PathCommonPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathcommonprefixw)的重载包装。|
+|[ATLPath::CompactPath](#compactpath)|此函数是[PathCompactPath](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathw)的重载包装。|
+|[ATLPath::CompactPathEx](#compactpathex)|此函数是[PathCompactPathEx](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathexw)的重载包装。|
+|[ATLPath::FileExists](#fileexists)|此函数是[PathFileExists](/windows/win32/api/shlwapi/nf-shlwapi-pathfileexistsw)的重载包装。|
+|[ATLPath::FindExtension](#findextension)|此函数是[PathFindExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathfindextensionw)的重载包装。|
+|[ATLPath::FindFileName](#findfilename)|此函数是[PathFindFileName](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew)的重载包装。|
+|[ATLPath::GetDriveNumber](#getdrivenumber)|此函数是[PathGetDriveNumber](/windows/win32/api/shlwapi/nf-shlwapi-pathgetdrivenumberw)的重载包装。|
+|[ATLPath::IsDirectory](#isdirectory)|此函数是[PathIsDirectory](/windows/win32/api/shlwapi/nf-shlwapi-pathisdirectoryw)的重载包装。|
+|[ATLPath::IsFileSpec](#isfilespec)|此函数是[PathIsFileSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathisfilespecw)的重载包装。|
+|[ATLPath::IsPrefix](#isprefix)|此函数是[PathIsPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathisprefixw)的重载包装。|
+|[ATLPath::IsRelative](#isrelative)|此函数是[PathIsRelative](/windows/win32/api/shlwapi/nf-shlwapi-pathisrelativew)的重载包装。|
+|[ATLPath::IsRoot](#isroot)|此函数是[PathIsRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathisrootw)的重载包装。|
+|[ATLPath::IsSameRoot](#issameroot)|此函数是[PathIsSameRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathissamerootw)的重载包装。|
+|[ATLPath::IsUNC](#isunc)|此函数是[PathIsUNC](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncw)的重载包装。|
+|[ATLPath::IsUNCServer](#isuncserver)|此函数是[PathIsUNCServer](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserverw)的重载包装。|
+|[ATLPath::IsUNCServerShare](#isuncservershare)|此函数是[PathIsUNCServerShare](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserversharew)的重载包装。|
+|[ATLPath::MakePretty](#makepretty)|此函数是[PathMakePretty](/windows/win32/api/shlwapi/nf-shlwapi-pathmakeprettyw)的重载包装。|
+|[ATLPath::MatchSpec](#matchspec)|此函数是[PathMatchSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathmatchspecw)的重载包装。|
+|[ATLPath::QuoteSpaces](#quotespaces)|此函数是[PathQuoteSpaces](/windows/win32/api/shlwapi/nf-shlwapi-pathquotespacesw)的重载包装。|
+|[ATLPath::RelativePathTo](#relativepathto)|此函数是[PathRelativePathTo](/windows/win32/api/shlwapi/nf-shlwapi-pathrelativepathtow)的重载包装。|
+|[ATLPath::RemoveArgs](#removeargs)|此函数是[PathRemoveArgs](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveargsw)的重载包装。|
+|[ATLPath::RemoveBackslash](#removebackslash)|此函数是[PathRemoveBackslash](/windows/win32/api/shlwapi/nf-shlwapi-pathremovebackslashw)的重载包装。|
+|[ATLPath::RemoveBlanks](#removeblanks)|此函数是[PathRemoveBlanks](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveblanksw)的重载包装。|
+|[ATLPath::RemoveExtension](#removeextension)|此函数是[PathRemoveExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveextensionw)的重载包装。|
+|[ATLPath::RemoveFileSpec](#removefilespec)|此函数是[PathRemoveFileSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathremovefilespecw)的重载包装。|
+|[ATLPath::RenameExtension](#renameextension)|此函数是[PathRenameExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathrenameextensionw)的重载包装。|
+|[ATLPath::SkipRoot](#skiproot)|此函数是[PathSkipRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathskiprootw)的重载包装。|
+|[ATLPath::StripPath](#strippath)|此函数是[PathStripPath](/windows/win32/api/shlwapi/nf-shlwapi-pathstrippathw)的重载包装。|
+|[ATLPath::StripToRoot](#striptoroot)|此函数是[PathStripToRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathstriptorootw)的重载包装。|
+|[ATLPath::UnquoteSpaces](#unquotespaces)|此函数是[PathUnquoteSpaces](/windows/win32/api/shlwapi/nf-shlwapi-pathunquotespacesw)的重载包装。|
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlpath.h
+**标头:** atlpath。h
 
-## <a name="addbackslash"></a> ATLPath::AddBackSlash
+## <a name="addbackslash"></a>Atlpath.h:: AddBackSlash
 
-此函数是的重载包装器[PathAddBackslash](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddbackslasha)。
+此函数是[PathAddBackslash](/windows/win32/api/shlwapi/nf-shlwapi-pathaddbackslashw)的重载包装。
 
 ### <a name="syntax"></a>语法
 
@@ -124,11 +124,11 @@ inline wchar_t* AddBackslash(wchar_t* pszPath);
 
 ### <a name="remarks"></a>备注
 
-请参阅[PathAddBackslash](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddbackslasha)有关详细信息。
+有关详细信息, 请参阅[PathAddBackslash](/windows/win32/api/shlwapi/nf-shlwapi-pathaddbackslashw) 。
 
-## <a name="addextension"></a> ATLPath::AddExtension
+## <a name="addextension"></a>Atlpath.h:: AddExtension
 
-此函数是的重载包装器[PathAddExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddextensiona)。
+此函数是[PathAddExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathaddextensionw)的重载包装。
 
 ### <a name="syntax"></a>语法
 
@@ -139,11 +139,11 @@ inline BOOL AddExtension(wchar_t* pszPath, const wchar_t* pszExtension);
 
 ### <a name="remarks"></a>备注
 
-请参阅[PathAddExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddextensiona)有关详细信息。
+有关详细信息, 请参阅[PathAddExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathaddextensionw) 。
 
-## <a name="append"></a> ATLPath::Append
+## <a name="append"></a>Atlpath.h:: Append
 
-此函数是的重载包装器[PathAppend](/windows/desktop/api/shlwapi/nf-shlwapi-pathappenda)。
+此函数是[PathAppend](/windows/win32/api/shlwapi/nf-shlwapi-pathappendw)的重载包装。
 
 ### <a name="syntax"></a>语法
 
@@ -154,11 +154,11 @@ inline BOOL Append(wchar_t* pszPath, const wchar_t* pszMore);
 
 ### <a name="remarks"></a>备注
 
-请参阅[PathAppend](/windows/desktop/api/shlwapi/nf-shlwapi-pathappenda)有关详细信息。
+有关详细信息, 请参阅[PathAppend](/windows/win32/api/shlwapi/nf-shlwapi-pathappendw) 。
 
 ## <a name="buildroot"></a> ATLPath::BuildRoot
 
-此函数是的重载包装器[PathBuildRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathbuildroota)。
+此函数是[PathBuildRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathbuildrootw)的重载包装。
 
 ### <a name="syntax"></a>语法
 
@@ -169,11 +169,11 @@ inline wchar_t* BuildRoot(wchar_t* pszPath, int iDrive);
 
 ### <a name="remarks"></a>备注
 
-请参阅[PathBuildRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathbuildroota)有关详细信息。
+有关详细信息, 请参阅[PathBuildRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathbuildrootw) 。
 
-## <a name="canonicalize"></a> ATLPath::Canonicalize
+## <a name="canonicalize"></a>Atlpath.h:: 规范化
 
-此函数是的重载包装器[PathCanonicalize](/windows/desktop/api/shlwapi/nf-shlwapi-pathcanonicalizea)。
+此函数是[PathCanonicalize](/windows/win32/api/shlwapi/nf-shlwapi-pathcanonicalizew)的重载包装。
 
 ### <a name="syntax"></a>语法
 
@@ -184,11 +184,11 @@ inline BOOL Canonicalize(wchar_t* pszDest, const wchar_t* pszSrc);
 
 ### <a name="remarks"></a>备注
 
-请参阅[PathCanonicalize](/windows/desktop/api/shlwapi/nf-shlwapi-pathcanonicalizea)有关详细信息。
+有关详细信息, 请参阅[PathCanonicalize](/windows/win32/api/shlwapi/nf-shlwapi-pathcanonicalizew) 。
 
-## <a name="combine"></a> ATLPath::Combine
+## <a name="combine"></a>Atlpath.h:: 合并
 
-此函数是的重载包装器[PathCombine](/windows/desktop/api/shlwapi/nf-shlwapi-pathcombinea)。
+此函数是[PathCombine](/windows/win32/api/shlwapi/nf-shlwapi-pathcombinew)的重载包装。
 
 ### <a name="syntax"></a>语法
 
@@ -207,11 +207,11 @@ inline wchar_t* Combine(
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅 PathCombine。
+有关详细信息, 请参阅 PathCombine。
 
 ## <a name="commonprefix"></a> ATLPath::CommonPrefix
 
-此函数是的重载包装器[PathCommonPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathcommonprefixa)。
+此函数是[PathCommonPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathcommonprefixw)的重载包装。
 
 ### <a name="syntax"></a>语法
 
@@ -229,11 +229,11 @@ inline int CommonPrefix(
 
 ### <a name="remarks"></a>备注
 
-请参阅[PathCommonPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathcommonprefixa)有关详细信息。
+有关详细信息, 请参阅[PathCommonPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathcommonprefixw) 。
 
 ## <a name="compactpath"></a> ATLPath::CompactPath
 
-此函数是的重载包装器[PathCompactPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpatha)。
+此函数是[PathCompactPath](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathw)的重载包装。
 
 ### <a name="syntax"></a>语法
 
@@ -251,11 +251,11 @@ inline BOOL CompactPath(
 
 ### <a name="remarks"></a>备注
 
-请参阅[PathCompactPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpatha)有关详细信息。
+有关详细信息, 请参阅[PathCompactPath](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathw) 。
 
 ## <a name="compactpathex"></a> ATLPath::CompactPathEx
 
-此函数是的重载包装器[PathCompactPathEx](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpathexa)。
+此函数是[PathCompactPathEx](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathexw)的重载包装。
 
 ### <a name="syntax"></a>语法
 
@@ -275,11 +275,11 @@ inline BOOL CompactPathEx(
 
 ### <a name="remarks"></a>备注
 
-请参阅[PathCompactPathEx](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpathexa)有关详细信息。
+有关详细信息, 请参阅[PathCompactPathEx](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathexw) 。
 
-## <a name="fileexists"></a> ATLPath::FileExists
+## <a name="fileexists"></a>Atlpath.h:: FileExists
 
-此函数是的重载包装器[PathFileExists](/windows/desktop/api/shlwapi/nf-shlwapi-pathfileexistsa)。
+此函数是[PathFileExists](/windows/win32/api/shlwapi/nf-shlwapi-pathfileexistsw)的重载包装。
 
 ### <a name="syntax"></a>语法
 
@@ -290,11 +290,11 @@ inline BOOL FileExists(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>备注
 
-请参阅[PathFileExists](/windows/desktop/api/shlwapi/nf-shlwapi-pathfileexistsa)有关详细信息。
+有关详细信息, 请参阅[PathFileExists](/windows/win32/api/shlwapi/nf-shlwapi-pathfileexistsw) 。
 
-## <a name="findextension"></a> ATLPath::FindExtension
+## <a name="findextension"></a>Atlpath.h:: FindExtension
 
-此函数是的重载包装器[PathFindExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindextensiona)。
+此函数是[PathFindExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathfindextensionw)的重载包装。
 
 ### <a name="syntax"></a>语法
 
@@ -305,11 +305,11 @@ inline wchar_t* FindExtension(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>备注
 
-请参阅[PathFindExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindextensiona)有关详细信息。
+有关详细信息, 请参阅[PathFindExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathfindextensionw) 。
 
 ## <a name="findfilename"></a> ATLPath::FindFileName
 
-此函数是的重载包装器[PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea)。
+此函数是[PathFindFileName](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew)的重载包装。
 
 ### <a name="syntax"></a>语法
 
@@ -320,11 +320,11 @@ inline wchar_t* FindFileName(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>备注
 
-请参阅[PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea)有关详细信息。
+有关详细信息, 请参阅[PathFindFileName](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew) 。
 
 ## <a name="getdrivenumber"></a> ATLPath::GetDriveNumber
 
-此函数是的重载包装器[PathGetDriveNumber](/windows/desktop/api/shlwapi/nf-shlwapi-pathgetdrivenumbera)。
+此函数是[PathGetDriveNumber](/windows/win32/api/shlwapi/nf-shlwapi-pathgetdrivenumberw)的重载包装。
 
 ### <a name="syntax"></a>语法
 
@@ -335,11 +335,11 @@ inline int GetDriveNumber(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>备注
 
-请参阅[PathGetDriveNumber](/windows/desktop/api/shlwapi/nf-shlwapi-pathgetdrivenumbera)有关详细信息。
+有关详细信息, 请参阅[PathGetDriveNumber](/windows/win32/api/shlwapi/nf-shlwapi-pathgetdrivenumberw) 。
 
 ## <a name="isdirectory"></a>  ATLPath::IsDirectory
 
-此函数是的重载包装器[PathIsDirectory](/windows/desktop/api/shlwapi/nf-shlwapi-pathisdirectorya)。
+此函数是[PathIsDirectory](/windows/win32/api/shlwapi/nf-shlwapi-pathisdirectoryw)的重载包装。
 
 ```
 inline BOOL IsDirectory(const char* pszPath);
@@ -348,11 +348,11 @@ inline BOOL IsDirectory(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅 PathIsDirectory。
+有关详细信息, 请参阅 PathIsDirectory。
 
 ## <a name="isfilespec"></a> ATLPath::IsFileSpec
 
-此函数是的重载包装器[PathIsFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathisfilespeca)。
+此函数是[PathIsFileSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathisfilespecw)的重载包装。
 
 ### <a name="syntax"></a>语法
 
@@ -363,11 +363,11 @@ inline BOOL IsFileSpec(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>备注
 
-请参阅[PathIsFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathisfilespeca)有关详细信息。
+有关详细信息, 请参阅[PathIsFileSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathisfilespecw) 。
 
 ## <a name="isprefix"></a> ATLPath::IsPrefix
 
-此函数是的重载包装器[PathIsPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathisprefixa)。
+此函数是[PathIsPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathisprefixw)的重载包装。
 
 ### <a name="syntax"></a>语法
 
@@ -378,11 +378,11 @@ inline BOOL IsPrefix(const wchar_t* pszPrefix, const wchar_t* pszPath);
 
 ### <a name="remarks"></a>备注
 
-请参阅[PathIsPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathisprefixa)有关详细信息。
+有关详细信息, 请参阅[PathIsPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathisprefixw) 。
 
 ## <a name="isrelative"></a> ATLPath::IsRelative
 
-此函数是的重载包装器[PathIsRelative](/windows/desktop/api/shlwapi/nf-shlwapi-pathisrelativea)。
+此函数是[PathIsRelative](/windows/win32/api/shlwapi/nf-shlwapi-pathisrelativew)的重载包装。
 
 ### <a name="syntax"></a>语法
 
@@ -393,11 +393,11 @@ inline BOOL IsRelative(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>备注
 
-请参阅[PathIsRelative](/windows/desktop/api/shlwapi/nf-shlwapi-pathisrelativea)有关详细信息。
+有关详细信息, 请参阅[PathIsRelative](/windows/win32/api/shlwapi/nf-shlwapi-pathisrelativew) 。
 
 ## <a name="isroot"></a> ATLPath::IsRoot
 
-此函数是的重载包装器[PathIsRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathisroota)。
+此函数是[PathIsRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathisrootw)的重载包装。
 
 ### <a name="syntax"></a>语法
 
@@ -408,11 +408,11 @@ inline BOOL IsRoot(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>备注
 
-请参阅[PathIsRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathisroota)有关详细信息。
+有关详细信息, 请参阅[PathIsRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathisrootw) 。
 
 ## <a name="issameroot"></a> ATLPath::IsSameRoot
 
-此函数是的重载包装器[PathIsSameRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathissameroota)。
+此函数是[PathIsSameRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathissamerootw)的重载包装。
 
 ### <a name="syntax"></a>语法
 
@@ -423,11 +423,11 @@ inline BOOL IsSameRoot(const wchar_t* pszPath1, const wchar_t* pszPath2);
 
 ### <a name="remarks"></a>备注
 
-请参阅[PathIsSameRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathissameroota)有关详细信息。
+有关详细信息, 请参阅[PathIsSameRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathissamerootw) 。
 
 ## <a name="isunc"></a> ATLPath::IsUNC
 
-此函数是的重载包装器[PathIsUNC](/windows/desktop/api/shlwapi/nf-shlwapi-pathisunca)。
+此函数是[PathIsUNC](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncw)的重载包装。
 
 ### <a name="syntax"></a>语法
 
@@ -438,11 +438,11 @@ inline BOOL IsUNC(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>备注
 
-请参阅[PathIsUNC](/windows/desktop/api/shlwapi/nf-shlwapi-pathisunca)有关详细信息。
+有关详细信息, 请参阅[PathIsUNC](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncw) 。
 
 ## <a name="isuncserver"></a> ATLPath::IsUNCServer
 
-此函数是的重载包装器[PathIsUNCServer](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncservera)。
+此函数是[PathIsUNCServer](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserverw)的重载包装。
 
 ### <a name="syntax"></a>语法
 
@@ -453,11 +453,11 @@ inline BOOL IsUNCServer(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>备注
 
-请参阅[PathIsUNCServer](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncservera)有关详细信息。
+有关详细信息, 请参阅[PathIsUNCServer](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserverw) 。
 
-## <a name="isuncservershare"></a> ATLPath::IsUNCServerShare
+## <a name="isuncservershare"></a>Atlpath.h:: IsUNCServerShare
 
-此函数是的重载包装器[PathIsUNCServerShare](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncserversharea)。
+此函数是[PathIsUNCServerShare](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserversharew)的重载包装。
 
 ### <a name="syntax"></a>语法
 
@@ -468,11 +468,11 @@ inline BOOL IsUNCServerShare(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>备注
 
-请参阅[PathIsUNCServerShare](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncserversharea)有关详细信息。
+有关详细信息, 请参阅[PathIsUNCServerShare](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserversharew) 。
 
 ## <a name="makepretty"></a> ATLPath::MakePretty
 
-此函数是的重载包装器[PathMakePretty](/windows/desktop/api/shlwapi/nf-shlwapi-pathmakeprettya)。
+此函数是[PathMakePretty](/windows/win32/api/shlwapi/nf-shlwapi-pathmakeprettyw)的重载包装。
 
 ### <a name="syntax"></a>语法
 
@@ -483,11 +483,11 @@ inline BOOL MakePretty(wchar_t* pszPath);
 
 ### <a name="remarks"></a>备注
 
-请参阅[PathMakePretty](/windows/desktop/api/shlwapi/nf-shlwapi-pathmakeprettya)有关详细信息。
+有关详细信息, 请参阅[PathMakePretty](/windows/win32/api/shlwapi/nf-shlwapi-pathmakeprettyw) 。
 
 ## <a name="matchspec"></a> ATLPath::MatchSpec
 
-此函数是的重载包装器[PathMatchSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathmatchspeca)。
+此函数是[PathMatchSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathmatchspecw)的重载包装。
 
 ### <a name="syntax"></a>语法
 
@@ -498,11 +498,11 @@ inline BOOL MatchSpec(const wchar_t* pszPath, const wchar_t* pszSpec);
 
 ### <a name="remarks"></a>备注
 
-请参阅[PathMatchSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathmatchspeca)有关详细信息。
+有关详细信息, 请参阅[PathMatchSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathmatchspecw) 。
 
 ## <a name="quotespaces"></a> ATLPath::QuoteSpaces
 
-此函数是的重载包装器[PathQuoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathquotespacesa)。
+此函数是[PathQuoteSpaces](/windows/win32/api/shlwapi/nf-shlwapi-pathquotespacesw)的重载包装。
 
 ### <a name="syntax"></a>语法
 
@@ -513,11 +513,11 @@ inline void QuoteSpaces(wchar_t* pszPath);
 
 ### <a name="remarks"></a>备注
 
-请参阅[PathQuoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathquotespacesa)有关详细信息。
+有关详细信息, 请参阅[PathQuoteSpaces](/windows/win32/api/shlwapi/nf-shlwapi-pathquotespacesw) 。
 
-## <a name="relativepathto"></a> ATLPath::RelativePathTo
+## <a name="relativepathto"></a>Atlpath.h:: RelativePathTo
 
-此函数是的重载包装器[PathRelativePathTo](/windows/desktop/api/shlwapi/nf-shlwapi-pathrelativepathtoa)。
+此函数是[PathRelativePathTo](/windows/win32/api/shlwapi/nf-shlwapi-pathrelativepathtow)的重载包装。
 
 ### <a name="syntax"></a>语法
 
@@ -539,11 +539,11 @@ inline BOOL RelativePathTo(
 
 ### <a name="remarks"></a>备注
 
-请参阅[PathRelativePathTo](/windows/desktop/api/shlwapi/nf-shlwapi-pathrelativepathtoa)有关详细信息。
+有关详细信息, 请参阅[PathRelativePathTo](/windows/win32/api/shlwapi/nf-shlwapi-pathrelativepathtow) 。
 
-## <a name="removeargs"></a> ATLPath::RemoveArgs
+## <a name="removeargs"></a>Atlpath.h:: RemoveArgs
 
-此函数是的重载包装器[PathRemoveArgs](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveargsa)。
+此函数是[PathRemoveArgs](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveargsw)的重载包装。
 
 ### <a name="syntax"></a>语法
 
@@ -554,11 +554,11 @@ inline void RemoveArgs(wchar_t* pszPath);
 
 ### <a name="remarks"></a>备注
 
-请参阅[PathRemoveArgs](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveargsa)有关详细信息。
+有关详细信息, 请参阅[PathRemoveArgs](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveargsw) 。
 
-## <a name="removebackslash"></a> ATLPath::RemoveBackslash
+## <a name="removebackslash"></a>Atlpath.h:: RemoveBackslash
 
-此函数是的重载包装器[PathRemoveBackslash](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovebackslasha)。
+此函数是[PathRemoveBackslash](/windows/win32/api/shlwapi/nf-shlwapi-pathremovebackslashw)的重载包装。
 
 ### <a name="syntax"></a>语法
 
@@ -569,11 +569,11 @@ inline wchar_t* RemoveBackslash(wchar_t* pszPath);
 
 ### <a name="remarks"></a>备注
 
-请参阅[PathRemoveBackslash](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovebackslasha)有关详细信息。
+有关详细信息, 请参阅[PathRemoveBackslash](/windows/win32/api/shlwapi/nf-shlwapi-pathremovebackslashw) 。
 
-## <a name="removeblanks"></a> ATLPath::RemoveBlanks
+## <a name="removeblanks"></a>Atlpath.h:: RemoveBlanks
 
-此函数是的重载包装器[PathRemoveBlanks](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveblanksa)。
+此函数是[PathRemoveBlanks](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveblanksw)的重载包装。
 
 ### <a name="syntax"></a>语法
 
@@ -584,11 +584,11 @@ inline void RemoveBlanks(wchar_t* pszPath);
 
 ### <a name="remarks"></a>备注
 
-请参阅[PathRemoveBlanks](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveblanksa)有关详细信息。
+有关详细信息, 请参阅[PathRemoveBlanks](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveblanksw) 。
 
-## <a name="removeextension"></a> ATLPath::RemoveExtension
+## <a name="removeextension"></a>Atlpath.h:: RemoveExtension
 
-此函数是的重载包装器[PathRemoveExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveextensiona)。
+此函数是[PathRemoveExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveextensionw)的重载包装。
 
 ### <a name="syntax"></a>语法
 
@@ -599,11 +599,11 @@ inline void RemoveExtension(wchar_t* pszPath);
 
 ### <a name="remarks"></a>备注
 
-请参阅[PathRemoveExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveextensiona)有关详细信息。
+有关详细信息, 请参阅[PathRemoveExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveextensionw) 。
 
 ## <a name="removefilespec"></a> ATLPath::RemoveFileSpec
 
-此函数是的重载包装器[PathRemoveFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovefilespeca)。
+此函数是[PathRemoveFileSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathremovefilespecw)的重载包装。
 
 ### <a name="syntax"></a>语法
 
@@ -614,11 +614,11 @@ inline BOOL RemoveFileSpec(wchar_t* pszPath);
 
 ### <a name="remarks"></a>备注
 
-请参阅[PathRemoveFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovefilespeca)有关详细信息。
+有关详细信息, 请参阅[PathRemoveFileSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathremovefilespecw) 。
 
 ## <a name="renameextension"></a> ATLPath::RenameExtension
 
-此函数是的重载包装器[PathRenameExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathrenameextensiona)。
+此函数是[PathRenameExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathrenameextensionw)的重载包装。
 
 ### <a name="syntax"></a>语法
 
@@ -629,11 +629,11 @@ inline BOOL RenameExtension(wchar_t* pszPath, const wchar_t* pszExt);
 
 ### <a name="remarks"></a>备注
 
-请参阅[PathRenameExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathrenameextensiona)有关详细信息。
+有关详细信息, 请参阅[PathRenameExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathrenameextensionw) 。
 
 ## <a name="skiproot"></a> ATLPath::SkipRoot
 
-此函数是的重载包装器[PathSkipRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathskiproota)。
+此函数是[PathSkipRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathskiprootw)的重载包装。
 
 ### <a name="syntax"></a>语法
 
@@ -644,11 +644,11 @@ inline wchar_t* SkipRoot(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>备注
 
-请参阅[PathSkipRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathskiproota)有关详细信息。
+有关详细信息, 请参阅[PathSkipRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathskiprootw) 。
 
 ## <a name="strippath"></a> ATLPath::StripPath
 
-此函数是的重载包装器[PathStripPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathstrippatha)。
+此函数是[PathStripPath](/windows/win32/api/shlwapi/nf-shlwapi-pathstrippathw)的重载包装。
 
 ### <a name="syntax"></a>语法
 
@@ -659,11 +659,11 @@ inline void StripPath(wchar_t* pszPath);
 
 ### <a name="remarks"></a>备注
 
-请参阅[PathStripPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathstrippatha)有关详细信息。
+有关详细信息, 请参阅[PathStripPath](/windows/win32/api/shlwapi/nf-shlwapi-pathstrippathw) 。
 
 ## <a name="striptoroot"></a> ATLPath::StripToRoot
 
-此函数是的重载包装器[PathStripToRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathstriptoroota)。
+此函数是[PathStripToRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathstriptorootw)的重载包装。
 
 ### <a name="syntax"></a>语法
 
@@ -674,11 +674,11 @@ inline BOOL StripToRoot(wchar_t* pszPath);
 
 ### <a name="remarks"></a>备注
 
-请参阅[PathStripToRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathstriptoroota)有关详细信息。
+有关详细信息, 请参阅[PathStripToRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathstriptorootw) 。
 
-## <a name="unquotespaces"></a> ATLPath::UnquoteSpaces
+## <a name="unquotespaces"></a>Atlpath.h:: UnquoteSpaces
 
-此函数是的重载包装器[PathUnquoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathunquotespacesa)。
+此函数是[PathUnquoteSpaces](/windows/win32/api/shlwapi/nf-shlwapi-pathunquotespacesw)的重载包装。
 
 ### <a name="syntax"></a>语法
 
@@ -689,4 +689,4 @@ inline void UnquoteSpaces(wchar_t* pszPath);
 
 ### <a name="remarks"></a>备注
 
-请参阅[PathUnquoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathunquotespacesa)有关详细信息。
+有关详细信息, 请参阅[PathUnquoteSpaces](/windows/win32/api/shlwapi/nf-shlwapi-pathunquotespacesw) 。

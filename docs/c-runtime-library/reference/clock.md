@@ -25,12 +25,12 @@ helpviewer_keywords:
 - processor time used
 - calculating processor time used
 ms.assetid: 3e1853dd-498f-49ba-b06a-f2315f20904e
-ms.openlocfilehash: 4b58b33b533250447cf964134de9869bddee4498
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2fabd18fb28cb5ea13dfb156ea21e8743c2afd49
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347465"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500261"
 ---
 # <a name="clock"></a>clock
 
@@ -44,13 +44,13 @@ clock_t clock( void );
 
 ## <a name="return-value"></a>返回值
 
-该过程中，CRT 初始化开始时起经过的时间单位**CLOCKS_PER_SEC**单位 / 秒。 如果运行时间不可用或已超出可记录为的最大正时间**clock_t**类型，该函数返回的值`(clock_t)(-1)`。
+自进程开始 CRT 初始化以来经过的时间, 以**CLOCKS_PER_SEC**单位/秒为单位。 如果运行时间不可用或已超过可记录为**clock_t**类型的最大正时间, 则函数将返回值`(clock_t)(-1)`。
 
 ## <a name="remarks"></a>备注
 
-**时钟**函数则指出期间进程开始 CRT 初始化以来经过的时钟时间。 请注意，此函数并不严格遵守 ISO C，它将净 CPU 时间指定为返回值。 若要获取 CPU 时间，请使用 Win32 [GetProcessTimes](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getprocesstimes) 函数。 若要确定所经过的时间以秒为单位，将返回的值**时钟**函数由宏**CLOCKS_PER_SEC**。
+**时钟**函数告诉您自开始处理 CRT 初始化以来已经过了多少时钟时间。 请注意，此函数并不严格遵守 ISO C，它将净 CPU 时间指定为返回值。 若要获取 CPU 时间，请使用 Win32 [GetProcessTimes](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getprocesstimes) 函数。 若要确定运行时间 (以秒为单位), 请使用宏**CLOCKS_PER_SEC**将**时钟**函数返回的值相除。
 
-只要有足够的时间，返回的值**时钟**可能会超过最大正值**clock_t**。 当进程运行更长，返回的值**时钟**始终`(clock_t)(-1)`、 所指定的 ISO C99 标准 (7.23.2.1) 和 ISO C11 标准 (7.27.2.1)。 Microsoft 实现**clock_t**作为**长**，带符号的 32 位整数，并且**CLOCKS_PER_SEC**宏定义为 1000年。 这样，最多**时钟**函数返回值为 2147483.647 秒，或大约 24.8 天。 不要依赖于返回的值**时钟**的进程中的运行时间超过此时间的时间。 可以使用 64 位[时间](time-time32-time64.md)函数或 Windows [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904)多年的记录进程运行时间的函数。
+如果有足够的时间, 则**时钟**返回的值可能会超过**clock_t**的最大正值。 当进程运行时间较长时, 由 C99 返回的值始终`(clock_t)(-1)`由 iso standard (7.23.2.1) 和 iso C11 standard (7.27.2.1) 指定。 Microsoft 将**clock_t**实现为**长**、有符号的32位整数, 并将**CLOCKS_PER_SEC**宏定义为1000。 这将提供最大**时钟**函数返回值2147483.647 秒, 即约24.8 天。 不要依赖于运行时间超过此时间的进程中**时钟**返回的值。 可以使用64位[时间](time-time32-time64.md)函数或 Windows [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter)函数记录多年的进程运行时间。
 
 ## <a name="requirements"></a>要求
 

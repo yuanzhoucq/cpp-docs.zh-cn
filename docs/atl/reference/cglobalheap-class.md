@@ -11,19 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - CGlobalHeap class
 ms.assetid: e348d838-3aa7-4bee-a1b3-cd000c99f834
-ms.openlocfilehash: cba15421fd0329df7a66a35979ed54b863b7cca0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b5aa09357ddcc77b6b10de58545bea86eff2488
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258814"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496761"
 ---
 # <a name="cglobalheap-class"></a>CGlobalHeap 类
 
-此类实现[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)使用 Win32 全局堆函数。
+此类使用 Win32 全局堆函数实现[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) 。
 
 > [!IMPORTANT]
->  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
+>  此类及其成员不能用于在 Windows 运行时中执行的应用程序。
 
 ## <a name="syntax"></a>语法
 
@@ -38,20 +38,20 @@ class CGlobalHeap : public IAtlMemMgr
 |名称|描述|
 |----------|-----------------|
 |[CGlobalHeap::Allocate](#allocate)|调用此方法来分配内存块。|
-|[CGlobalHeap::Free](#free)|调用此方法来释放此内存管理器分配的内存块。|
-|[CGlobalHeap::GetSize](#getsize)|调用此方法以获取此内存管理器分配的内存块的分配的大小。|
+|[CGlobalHeap::Free](#free)|调用此方法可释放此内存管理器分配的内存块。|
+|[CGlobalHeap::GetSize](#getsize)|调用此方法可获取此内存管理器分配的内存块的分配大小。|
 |[CGlobalHeap::Reallocate](#reallocate)|调用此方法以重新分配由该内存管理器分配的内存。|
 
 ## <a name="remarks"></a>备注
 
-`CGlobalHeap` 实现使用 Win32 全局堆函数的内存分配函数。
+`CGlobalHeap`使用 Win32 全局堆函数实现内存分配函数。
 
 > [!NOTE]
->  全局堆函数比其他内存管理函数，并不提供尽可能多的功能。 因此，应使用新的应用程序[堆函数](/windows/desktop/Memory/heap-functions)。 这些功能中位于[CWin32Heap](../../atl/reference/cwin32heap-class.md)类。 DDE 和剪贴板函数仍使用全局函数。
+>  全局堆函数比其他内存管理函数慢, 并且不提供任何多个功能。 因此, 新应用程序应使用[堆函数](/windows/win32/Memory/heap-functions)。 这些都在[CWin32Heap](../../atl/reference/cwin32heap-class.md)类中提供。 全局函数仍用于 DDE 和剪贴板函数。
 
 ## <a name="example"></a>示例
 
-有关示例，请参阅[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)。
+请参阅[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)的示例。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -61,9 +61,9 @@ class CGlobalHeap : public IAtlMemMgr
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlmem.h
+**标头:** atlmem
 
-##  <a name="allocate"></a>  CGlobalHeap::Allocate
+##  <a name="allocate"></a>CGlobalHeap:: Allocate
 
 调用此方法来分配内存块。
 
@@ -82,13 +82,13 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 
 ### <a name="remarks"></a>备注
 
-调用[cglobalheap:: Free](#free)或[cglobalheap:: Reallocate](#reallocate)来释放由此方法分配的内存。
+调用[CGlobalHeap:: Free](#free)或[CGlobalHeap:: 重新分配](#reallocate)以释放此方法分配的内存。
 
-使用实现[GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) GMEM_FIXED 的标记参数。
+使用[GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc)和 GMEM_FIXED 参数实现。
 
-##  <a name="free"></a>  Cglobalheap:: Free
+##  <a name="free"></a>CGlobalHeap:: Free
 
-调用此方法来释放此内存管理器分配的内存块。
+调用此方法可释放此内存管理器分配的内存块。
 
 ```
 virtual void Free(void* p) throw();
@@ -97,15 +97,15 @@ virtual void Free(void* p) throw();
 ### <a name="parameters"></a>参数
 
 *p*<br/>
-指向此内存管理器以前分配的内存的指针。 NULL 是一个有效的值，不执行任何操作。
+指向此内存管理器以前分配的内存的指针。 NULL 是有效的值并且不执行任何操作。
 
 ### <a name="remarks"></a>备注
 
-使用实现[GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree)。
+使用[GlobalFree](/windows/win32/api/winbase/nf-winbase-globalfree)实现。
 
-##  <a name="getsize"></a>  CGlobalHeap::GetSize
+##  <a name="getsize"></a>CGlobalHeap:: GetSize
 
-调用此方法以获取此内存管理器分配的内存块的分配的大小。
+调用此方法可获取此内存管理器分配的内存块的分配大小。
 
 ```
 virtual size_t GetSize(void* p) throw();
@@ -118,13 +118,13 @@ virtual size_t GetSize(void* p) throw();
 
 ### <a name="return-value"></a>返回值
 
-以字节为单位返回已分配的内存块的大小。
+返回分配的内存块的大小 (以字节为单位)。
 
 ### <a name="remarks"></a>备注
 
-使用实现[GlobalSize](/windows/desktop/api/winbase/nf-winbase-globalsize)。
+使用[GlobalSize](/windows/win32/api/winbase/nf-winbase-globalsize)实现。
 
-##  <a name="reallocate"></a>  CGlobalHeap::Reallocate
+##  <a name="reallocate"></a>CGlobalHeap:: 重新分配
 
 调用此方法以重新分配由该内存管理器分配的内存。
 
@@ -146,9 +146,9 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="remarks"></a>备注
 
-调用[cglobalheap:: Free](#free)来释放由此方法分配的内存。
+调用[CGlobalHeap:: free](#free)可释放由此方法分配的内存。
 
-使用实现[GlobalReAlloc](/windows/desktop/api/winbase/nf-winbase-globalrealloc)。
+使用[GlobalReAlloc](/windows/win32/api/winbase/nf-winbase-globalrealloc)实现。
 
 ## <a name="see-also"></a>请参阅
 

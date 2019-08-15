@@ -1,21 +1,21 @@
 ---
-title: 杂注 (C++ COM 属性)
+title: pragma (C++ COM 特性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.pragma
 helpviewer_keywords:
 - pragma attribute
 ms.assetid: 3f90d023-b8b5-4007-8311-008bb72cbea1
-ms.openlocfilehash: 159e1570c2bde07bb4df8fa904a519e8e0018a6a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5c3ee0d3f99bd27ca41d68b11c11522e92c8d40a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407453"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514276"
 ---
 # <a name="pragma"></a>pragma
 
-将指定的字符串发出到生成的.idl 文件而不使用引号引起来。
+向生成的 .idl 文件发出指定的字符串, 且不使用引号。
 
 ## <a name="syntax"></a>语法
 
@@ -26,11 +26,11 @@ ms.locfileid: "62407453"
 ### <a name="parameters"></a>参数
 
 *pragma_statement*<br/>
-你想要转到生成的.idl 文件杂注。
+要进入生成的 .idl 文件的杂注。
 
 ## <a name="remarks"></a>备注
 
-**杂注**C++属性具有相同的功能[杂注](/windows/desktop/Midl/pragma)MIDL 特性。
+**Pragma** C++特性具有与[杂注](/windows/win32/Midl/pragma)MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
@@ -54,10 +54,10 @@ __interface A
 
 |||
 |-|-|
-|**适用对象**|任何位置|
-|**可重复**|否|
-|**必需的特性**|None|
-|**无效的特性**|None|
+|**适用于**|任何位置|
+|**可重复**|No|
+|**必需的特性**|无|
+|**无效的特性**|无|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

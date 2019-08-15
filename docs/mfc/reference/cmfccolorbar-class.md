@@ -74,16 +74,16 @@ helpviewer_keywords:
 - CMFCColorBar [MFC], SetPropList
 - CMFCColorBar [MFC], ShowCommandMessageString
 ms.assetid: 4756ee40-25a5-4cee-af7f-acab7993d1c7
-ms.openlocfilehash: 4eee24eb93be446f6b4f2631b70736c13a02f45c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 25bfe3ef67fcca7708179d1a316af05b3ba49dda
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403758"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505434"
 ---
 # <a name="cmfccolorbar-class"></a>CMFCColorBar 类
 
-`CMFCColorBar`类表示可以在文档或应用程序中选择颜色的停靠控件条。
+`CMFCColorBar`类表示可选择文档或应用程序中的颜色的停靠控件条。
 
 ## <a name="syntax"></a>语法
 
@@ -95,7 +95,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
 
 ### <a name="protected-constructors"></a>受保护的构造函数
 
-|名称|描述|
+|name|描述|
 |----------|-----------------|
 |[CMFCColorBar::CMFCColorBar](#cmfccolorbar)|构造 `CMFCColorBar` 对象。|
 
@@ -103,106 +103,106 @@ class CMFCColorBar : public CMFCPopupMenuBar
 
 |名称|描述|
 |----------|-----------------|
-|[CMFCColorBar::ContextToSize](#contexttosize)|计算所需包含颜色条控件上的按钮，然后调整这些按钮的位置的水平和垂直边距。|
-|[CMFCColorBar::CreateControl](#createcontrol)|创建一个颜色条控制窗口，并将其附加到`CMFCColorBar`对象，并调整其大小控件以包含指定的调色板。|
-|[CMFCColorBar::Create](#create)|创建颜色栏控件窗口，并将其附加到`CMFCColorBar`对象。|
-|[CMFCColorBar::EnableAutomaticButton](#enableautomaticbutton)|显示或隐藏的自动按钮。|
-|[CMFCColorBar::EnableOtherButton](#enableotherbutton)|启用或禁用显示一个对话框，使用户可以选择更多颜色。|
+|[CMFCColorBar::ContextToSize](#contexttosize)|计算在颜色栏控件上包含按钮并调整这些按钮的位置所需的垂直和水平边距。|
+|[CMFCColorBar::CreateControl](#createcontrol)|创建一个颜色栏控件窗口, 将其附加到`CMFCColorBar`对象, 并调整控件的大小以包含指定的颜色调色板。|
+|[CMFCColorBar::Create](#create)|创建一个颜色栏控件窗口, 并将其附加`CMFCColorBar`到对象。|
+|[CMFCColorBar::EnableAutomaticButton](#enableautomaticbutton)|显示或隐藏 "自动" 按钮。|
+|[CMFCColorBar::EnableOtherButton](#enableotherbutton)|启用或禁用允许用户选择更多颜色的对话框显示。|
 |[CMFCColorBar::GetColor](#getcolor)|检索当前选定的颜色。|
 |[CMFCColorBar::GetCommandID](#getcommandid)|检索当前颜色栏控件的命令 ID。|
-|[CMFCColorBar::GetHighlightedColor](#gethighlightedcolor)|检索表示的颜色按钮具有焦点，则颜色也就是说，该按钮是*热*。|
-|[CMFCColorBar::GetHorzMargin](#gethorzmargin)|检索的水平边距，即左侧或右侧的颜色单元格与客户端区域边界之间的空间。|
-|[CMFCColorBar::GetVertMargin](#getvertmargin)|检索是在顶部或底部颜色单元格和客户端区域边界之间的空间的垂直边距。|
-|[CMFCColorBar::IsTearOff](#istearoff)|指示是否当前颜色栏可停靠。|
+|[CMFCColorBar::GetHighlightedColor](#gethighlightedcolor)|检索表示颜色按钮有焦点的颜色;也就是说, 按钮是*热*的。|
+|[CMFCColorBar::GetHorzMargin](#gethorzmargin)|检索水平边距, 即左或右两个颜色单元格与工作区边界之间的间距。|
+|[CMFCColorBar::GetVertMargin](#getvertmargin)|检索垂直边距, 即上、下颜色单元格与工作区边界之间的间距。|
+|[CMFCColorBar::IsTearOff](#istearoff)|指示当前颜色栏是否可停靠。|
 |[CMFCColorBar::SetColor](#setcolor)|设置当前选定的颜色。|
-|[CMFCColorBar::SetColorName](#setcolorname)|设置指定颜色的新名称。|
-|[CMFCColorBar::SetCommandID](#setcommandid)|设置颜色条控件的新命令 ID。|
-|[CMFCColorBar::SetDocumentColors](#setdocumentcolors)|设置当前文档中使用颜色的列表。|
-|[CMFCColorBar::SetHorzMargin](#sethorzmargin)|设置水平边距，即左侧或右侧的颜色单元格与客户端区域边界之间的空间。|
-|[CMFCColorBar::SetVertMargin](#setvertmargin)|设置客户端区域边界的顶部或底部的颜色单元格之间空间的垂直边距。|
+|[CMFCColorBar::SetColorName](#setcolorname)|为指定的颜色设置新名称。|
+|[CMFCColorBar::SetCommandID](#setcommandid)|为颜色栏控件设置新的命令 ID。|
+|[CMFCColorBar::SetDocumentColors](#setdocumentcolors)|设置在当前文档中使用的颜色的列表。|
+|[CMFCColorBar::SetHorzMargin](#sethorzmargin)|设置水平边距, 这是左或右两个颜色单元格与工作区边界之间的空间。|
+|[CMFCColorBar::SetVertMargin](#setvertmargin)|设置垂直边距, 即上、下颜色单元格与工作区边界之间的间距。|
 
 ### <a name="protected-methods"></a>受保护的方法
 
 |名称|描述|
 |----------|-----------------|
-|[CMFCColorBar::AdjustLocations](#adjustlocations)|调整颜色条控件上的颜色按钮的位置。|
-|[CMFCColorBar::AllowChangeTextLabels](#allowchangetextlabels)|指示是否可以更改颜色按钮的文本标签。|
-|[CMFCColorBar::AllowShowOnList](#allowshowonlist)|指示是否颜色栏控件对象可以出现在工具栏列表自定义过程。|
-|[CMFCColorBar::CalcSize](#calcsize)|由框架作为布局计算过程的一部分调用。|
-|[CMFCColorBar::CreatePalette](#createpalette)|初始化使用指定的颜色数组中的颜色的调色板。|
-|[CMFCColorBar::GetColorGridSize](#getcolorgridsize)|计算行和颜色栏控件的网格中的列的数。|
-|[CMFCColorBar::GetExtraHeight](#getextraheight)|计算当前的颜色条显示其他用户界面元素，如所需的其他高度**其他**按钮、 文档颜色等。|
-|[CMFCColorBar::InitColors](#initcolors)|初始化具有指定的调色板或系统默认调色板中颜色的颜色的数组。|
+|[CMFCColorBar::AdjustLocations](#adjustlocations)|调整颜色栏控件上颜色按钮的位置。|
+|[CMFCColorBar::AllowChangeTextLabels](#allowchangetextlabels)|指示颜色按钮的文本标签是否可以更改。|
+|[CMFCColorBar::AllowShowOnList](#allowshowonlist)|指示在自定义过程中, 颜色栏控件对象是否可以出现在工具栏列表中。|
+|[CMFCColorBar::CalcSize](#calcsize)|由框架作为布局计算过程的一部分进行调用。|
+|[CMFCColorBar::CreatePalette](#createpalette)|使用指定颜色数组中的颜色初始化调色板。|
+|[CMFCColorBar::GetColorGridSize](#getcolorgridsize)|计算颜色栏控件网格中的行数和列数。|
+|[CMFCColorBar::GetExtraHeight](#getextraheight)|计算当前颜色条显示其他用户界面元素 (如**其他**按钮、文档颜色等) 所需的附加高度。|
+|[CMFCColorBar::InitColors](#initcolors)|用指定调色板或系统默认调色板中的颜色初始化颜色数组。|
 |[CMFCColorBar::OnKey](#onkey)|当用户按下键盘按钮时由框架调用。|
-|[CMFCColorBar::OnSendCommand](#onsendcommand)|由框架调用以关闭弹出框控件的层次结构。|
-|[CMFCColorBar::OnUpdateCmdUI](#onupdatecmdui)|由框架调用以启用或禁用用户界面控件的项的颜色条显示项之前。|
-|[CMFCColorBar::OpenColorDialog](#opencolordialog)|将打开颜色对话框。|
+|[CMFCColorBar::OnSendCommand](#onsendcommand)|由框架调用以关闭 popup 控件的层次结构。|
+|[CMFCColorBar::OnUpdateCmdUI](#onupdatecmdui)|由框架调用, 以在显示项之前启用或禁用颜色栏控件的用户界面项。|
+|[CMFCColorBar::OpenColorDialog](#opencolordialog)|打开 "颜色" 对话框。|
 |[CMFCColorBar::Rebuild](#rebuild)|完全重绘颜色栏控件。|
-|[CMFCColorBar::SelectPalette](#selectpalette)|将指定的设备上下文的逻辑调色板设置为当前的颜色条控件的父按钮的调色板。|
-|[CMFCColorBar::SetPropList](#setproplist)|集`m_pWndPropList`受保护的数据成员添加到属性网格控件的指定指针。|
-|[CMFCColorBar::ShowCommandMessageString](#showcommandmessagestring)|请求拥有要更新状态栏中的消息行的颜色条控件的框架窗口。|
+|[CMFCColorBar::SelectPalette](#selectpalette)|将指定设备上下文的逻辑调色板设置为当前颜色条控件的父按钮的调色板。|
+|[CMFCColorBar::SetPropList](#setproplist)|将受`m_pWndPropList`保护的数据成员设置为指向属性网格控件的指定指针。|
+|[CMFCColorBar::ShowCommandMessageString](#showcommandmessagestring)|请求拥有颜色条控件的框架窗口, 以更新状态栏中的消息行。|
 
 ### <a name="protected-data-members"></a>受保护的数据成员
 
 |name|描述|
 |----------|-----------------|
-|`m_bInternal`|一个布尔字段，可确定是否处理鼠标事件。 通常情况下，此字段为 TRUE 和自定义模式为 FALSE 时，会处理鼠标事件。|
-|`m_bIsEnabled`|一个布尔值，该值指示是否已启用控件。|
-|`m_bIsTearOff`|一个布尔值，该值指示是否为颜色条控件支持停靠。|
-|`m_BoxSize`|一个[CSize](../../atl-mfc-shared/reference/csize-class.md)对象，它指定颜色条网格中的单元格的大小。|
-|`m_bShowDocColorsWhenDocked`|一个布尔值，该值指示是否停靠在颜色栏时显示文档的颜色。 有关详细信息，请参阅[CMFCColorBar::SetDocumentColors](#setdocumentcolors)。|
-|`m_bStdColorDlg`|一个布尔值，该值指示是否显示标准系统颜色对话框中或[CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)对话框。 有关详细信息，请参阅[CMFCColorBar::EnableOtherButton](#enableotherbutton)。|
-|`m_ColorAutomatic`|一个[COLORREF](/windows/desktop/gdi/colorref)用于存储当前的自动颜色。 有关详细信息，请参阅[CMFCColorBar::EnableOtherButton](#enableotherbutton)。|
-|`m_ColorNames`|[CMap](../../mfc/reference/cmap-class.md)对象关联一组的 RGB 颜色与它们的名称。|
-|`m_colors`|一个[CArray](../../mfc/reference/carray-class.md)的[COLORREF](/windows/desktop/gdi/colorref)包含颜色条在控件中显示的颜色的值。|
-|`m_ColorSelected`|一个[COLORREF](/windows/desktop/gdi/colorref)值，它是用户当前已选择从颜色栏控件的颜色。|
-|`m_lstDocColors`|一个[CList](../../mfc/reference/clist-class.md)的[COLORREF](/windows/desktop/gdi/colorref)包含当前文档中使用的颜色的值。|
-|`m_nCommandID`|无符号的整数的颜色按钮的命令 id。|
-|`m_nHorzMargin`|一个整数，表示在网格中的颜色的颜色按钮之间的水平间距。|
-|`m_nHorzOffset`|一个整数，表示为中心的颜色按钮的水平偏移量。 此值非常重要，如果该按钮显示的文本或图像除了一种颜色。|
-|`m_nNumColumns`|一个整数，表示颜色的颜色条控制网格中的列数。|
-|`m_nNumColumnsVert`|为垂直方向的颜色的网格中的列数的整数。|
-|`m_nNumRowsHorz`|一个整数，表示水平方向的颜色的网格中的列数。|
-|`m_nRowHeight`|一个整数，表示在网格中的颜色的颜色按钮的行的高度。|
-|`m_nVertMargin`|一个整数，表示在网格中的颜色的颜色按钮之间的垂直边距。|
-|`m_nVertOffset`|一个整数，表示为中心的颜色按钮的垂直偏移量。 此值非常重要，如果该按钮显示的文本或图像除了一种颜色。|
-|`m_Palette`|一个[CPalette](../../mfc/reference/cpalette-class.md)颜色栏控件中使用的颜色。|
-|`m_pParentBtn`|一个指向[CMFCColorButton](../../mfc/reference/cmfccolorbutton-class.md)是当前的按钮的父对象。 如果颜色按钮的工具栏上的控件层次结构中或在颜色属性网格控件中，此值是重要的。|
-|`m_pParentRibbonBtn`|一个指向[CMFCRibbonColorButton](../../mfc/reference/cmfcribboncolorbutton-class.md)对象，功能区上并为当前按钮的父按钮。 如果颜色按钮的工具栏上的控件层次结构中或在颜色属性网格控件中，此值是重要的。|
-|`m_pWndPropList`|一个指向[CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md)对象。|
-|`m_strAutoColor`|一个[CString](../../atl-mfc-shared/reference/cstringt-class.md) ，表示显示的文本**自动**按钮。 有关详细信息，请参阅[CMFCColorBar::EnableAutomaticButton](#enableautomaticbutton)。|
-|`m_strDocColors`|一个[CString](../../atl-mfc-shared/reference/cstringt-class.md) ，表示文档的颜色按钮显示的文本。 有关详细信息，请参阅[CMFCColorBar::SetDocumentColors](#setdocumentcolors)。|
-|`m_strOtherColor`|一个[CString](../../atl-mfc-shared/reference/cstringt-class.md) ，表示显示的文本*其他*按钮。 有关详细信息，请参阅[CMFCColorBar::EnableOtherButton](#enableotherbutton)。|
+|`m_bInternal`|确定是否处理鼠标事件的布尔型字段。 通常, 当此字段为 TRUE 且自定义模式为 FALSE 时, 将处理鼠标事件。|
+|`m_bIsEnabled`|指示控件是否已启用的布尔值。|
+|`m_bIsTearOff`|指示颜色栏控件是否支持停靠的布尔值。|
+|`m_BoxSize`|一个[CSize](../../atl-mfc-shared/reference/csize-class.md)对象, 该对象指定颜色条网格中的单元格的大小。|
+|`m_bShowDocColorsWhenDocked`|指示是否在停靠颜色栏时显示文档颜色的布尔值。 有关详细信息, 请参阅[CMFCColorBar:: SetDocumentColors](#setdocumentcolors)。|
+|`m_bStdColorDlg`|一个布尔值, 指示是显示标准系统颜色对话框还是显示[CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)对话框。 有关详细信息, 请参阅[CMFCColorBar:: EnableOtherButton](#enableotherbutton)。|
+|`m_ColorAutomatic`|存储当前自动颜色的[COLORREF](/windows/win32/gdi/colorref) 。 有关详细信息, 请参阅[CMFCColorBar:: EnableOtherButton](#enableotherbutton)。|
+|`m_ColorNames`|一个[CMap](../../mfc/reference/cmap-class.md)对象, 它将一组 RGB 颜色与其名称关联。|
+|`m_colors`|[COLORREF](/windows/win32/gdi/colorref)值的[CArray](../../mfc/reference/carray-class.md) , 其中包含颜色栏控件中显示的颜色。|
+|`m_ColorSelected`|[COLORREF](/windows/win32/gdi/colorref)值, 是用户当前从颜色栏控件中选择的颜色。|
+|`m_lstDocColors`|[COLORREF](/windows/win32/gdi/colorref)值的[CList](../../mfc/reference/clist-class.md) , 其中包含文档中当前使用的颜色。|
+|`m_nCommandID`|一个无符号整数, 它是颜色按钮的命令 ID。|
+|`m_nHorzMargin`|一个整数, 它是颜色网格中颜色按钮之间的水平边距。|
+|`m_nHorzOffset`|一个整数, 它是颜色按钮中心的水平偏移量。 如果按钮除颜色之外显示文本或图像, 则此值很重要。|
+|`m_nNumColumns`|一个整数, 它是颜色的颜色栏控件网格中的列数。|
+|`m_nNumColumnsVert`|一个整数, 它是以垂直方向的颜色网格中的列数。|
+|`m_nNumRowsHorz`|一个整数, 它是以水平方向的颜色网格中的列数。|
+|`m_nRowHeight`|一个整数, 它是颜色网格中的颜色按钮行的高度。|
+|`m_nVertMargin`|一个整数, 它是颜色网格中颜色按钮之间的垂直边距。|
+|`m_nVertOffset`|一个整数, 它是颜色按钮中心的垂直偏移量。 如果按钮除颜色之外显示文本或图像, 则此值很重要。|
+|`m_Palette`|颜色栏控件中使用的颜色的[CPalette](../../mfc/reference/cpalette-class.md) 。|
+|`m_pParentBtn`|指向[CMFCColorButton](../../mfc/reference/cmfccolorbutton-class.md)对象的指针, 该对象是当前按钮的父对象。 如果 "颜色" 按钮在工具栏控件的层次结构中或在颜色属性网格控件中, 则此值很重要。|
+|`m_pParentRibbonBtn`|指向[CMFCRibbonColorButton](../../mfc/reference/cmfcribboncolorbutton-class.md)对象的指针, 该对象位于功能区上, 是当前按钮的父按钮。 如果 "颜色" 按钮在工具栏控件的层次结构中或在颜色属性网格控件中, 则此值很重要。|
+|`m_pWndPropList`|指向[CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md)对象的指针。|
+|`m_strAutoColor`|一个[CString](../../atl-mfc-shared/reference/cstringt-class.md) , 它是在 "**自动**" 按钮上显示的文本。 有关详细信息, 请参阅[CMFCColorBar:: EnableAutomaticButton](#enableautomaticbutton)。|
+|`m_strDocColors`|一个[CString](../../atl-mfc-shared/reference/cstringt-class.md) , 它是在 "文档颜色" 按钮上显示的文本。 有关详细信息, 请参阅[CMFCColorBar:: SetDocumentColors](#setdocumentcolors)。|
+|`m_strOtherColor`|一个[CString](../../atl-mfc-shared/reference/cstringt-class.md) , 它是在*另*一个按钮上显示的文本。 有关详细信息, 请参阅[CMFCColorBar:: EnableOtherButton](#enableotherbutton)。|
 
 ## <a name="remarks"></a>备注
 
-通常情况下，未创建`CMFCColorBar`直接对象。 相反， [CMFCColorMenuButton 类](../../mfc/reference/cmfccolormenubutton-class.md)（在菜单和工具栏中使用） 或[CMFCColorButton 类](../../mfc/reference/cmfccolorbutton-class.md)创建`CMFCColorBar`对象。
+通常不会直接创建`CMFCColorBar`对象。 相反, [CMFCColorMenuButton 类](../../mfc/reference/cmfccolormenubutton-class.md)(用于菜单和工具栏) 或[CMFCColorButton 类](../../mfc/reference/cmfccolorbutton-class.md)将创建`CMFCColorBar`对象。
 
-`CMFCColorBar`类提供了以下功能：
+`CMFCColorBar`类提供以下功能:
 
 - 自动调整文档颜色的列表。
 
-- 保存并还原其状态，以及文档状态。
+- 保存并还原其状态, 以及文档状态。
 
-- 管理"自动"按钮。
+- 管理 "自动" 按钮。
 
-- 使用[CMFCColorPickerCtrl 类](../../mfc/reference/cmfccolorpickerctrl-class.md)控件以选择自定义颜色。
+- 使用[CMFCColorPickerCtrl 类](../../mfc/reference/cmfccolorpickerctrl-class.md)控件选择自定义颜色。
 
-- 支持"分离"状态 (如果使用创建[CMFCColorMenuButton 类](../../mfc/reference/cmfccolormenubutton-class.md))。
+- 支持 "拆卸" 状态 (如果是使用[CMFCColorMenuButton 类](../../mfc/reference/cmfccolormenubutton-class.md)创建的)。
 
-若要将合并`CMFCColorBar`功能集成到你的应用程序：
+将`CMFCColorBar`功能合并到应用程序中:
 
-1. 创建一个常规菜单按钮，并将其分配一个 ID，例如 ID_CHAR_COLOR。
+1. 创建一个常规菜单按钮并为其分配 ID, 例如 ID_CHAR_COLOR。
 
-1. 在框架窗口类中，重写[CFrameWndEx::OnShowPopupMenu](../../mfc/reference/cframewndex-class.md#onshowpopupmenu)方法将替换为常规菜单与按钮[CMFCColorMenuButton 类](../../mfc/reference/cmfccolormenubutton-class.md)对象 (通过调用[CMFCToolBar:: ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton))。
+1. 在框架窗口类中, 重写[CFrameWndEx:: OnShowPopupMenu](../../mfc/reference/cframewndex-class.md#onshowpopupmenu)方法, 并将常规菜单按钮替换为[CMFCColorMenuButton 类](../../mfc/reference/cmfccolormenubutton-class.md)对象 (通过调用[CMFCToolBar:: ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton))。
 
-1. 设置的所有样式以及启用或禁用的功能`CMFCColorBar`对象在过程[CMFCColorMenuButton 类](../../mfc/reference/cmfccolormenubutton-class.md)创建。 `CMFCColorMenuButton`对象动态创建`CMFCColorBar`framework 调用后的对象`CreatePopupMenu`方法。
+1. 设置所有样式, 并在创建[CMFCColorMenuButton 类](../../mfc/reference/cmfccolormenubutton-class.md)期间启用或`CMFCColorBar`禁用对象的功能。 在`CMFCColorMenuButton`框架调用方法`CreatePopupMenu`后`CMFCColorBar` , 对象动态创建对象。
 
-当用户单击颜色栏控件按钮时，则框架将使用`ON_COMMAND`宏，以通知颜色栏控件的父级。 在宏，命令 ID 参数是分配给在步骤 1 (在此示例中 ID_CHAR_COLOR) 中的颜色条控制按钮的值。 有关详细信息，请参阅[CMFCColorMenuButton 类](../../mfc/reference/cmfccolormenubutton-class.md)， [CMFCColorButton 类](../../mfc/reference/cmfccolorbutton-class.md)， [CMFCColorPickerCtrl 类](../../mfc/reference/cmfccolorpickerctrl-class.md)， [CFrameWndEx 类](../../mfc/reference/cframewndex-class.md)，并[CMFCToolBar 类](../../mfc/reference/cmfctoolbar-class.md)类。
+用户单击颜色栏控件按钮时, 框架将使用`ON_COMMAND`宏来通知颜色栏控件的父级。 在宏中, 命令 ID 参数是您在步骤1中分配给颜色栏控件按钮的值 (在本示例中为 ID_CHAR_COLOR)。 有关详细信息, 请参阅[CMFCColorMenuButton 类](../../mfc/reference/cmfccolormenubutton-class.md)、 [CMFCColorButton 类](../../mfc/reference/cmfccolorbutton-class.md)、 [CMFCColorPickerCtrl 类](../../mfc/reference/cmfccolorpickerctrl-class.md)、 [CFrameWndEx 类](../../mfc/reference/cframewndex-class.md)和[CMFCToolBar 类](../../mfc/reference/cmfctoolbar-class.md)。
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何使用各种方法中的配置颜色条`CMFCColorBar`类。 方法设置水平和垂直边距，启用其他按钮、 创建颜色栏控件窗口中，并设置当前选定的颜色。 此示例摘自[新的控件示例](../../overview/visual-cpp-samples.md)。
+下面的示例演示如何使用类中的`CMFCColorBar`各种方法来配置颜色条。 方法设置水平和垂直边距, 启用 "其他" 按钮, 创建颜色栏控件窗口, 并设置当前选定的颜色。 此示例是[新控件示例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_NewControls#1](../../mfc/reference/codesnippet/cpp/cmfccolorbar-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#2](../../mfc/reference/codesnippet/cpp/cmfccolorbar-class_2.cpp)]
@@ -229,11 +229,11 @@ class CMFCColorBar : public CMFCPopupMenuBar
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxcolorbar.h
+**标头:** afxcolorbar
 
-##  <a name="adjustlocations"></a>  CMFCColorBar::AdjustLocations
+##  <a name="adjustlocations"></a>CMFCColorBar:: AdjustLocations
 
-调整颜色条控件上的颜色按钮的位置。
+调整颜色栏控件上颜色按钮的位置。
 
 ```
 virtual void AdjustLocations();
@@ -241,11 +241,11 @@ virtual void AdjustLocations();
 
 ### <a name="remarks"></a>备注
 
-WM_SIZE 消息处理过程由框架调用此方法。
+在 WM_SIZE 消息处理期间, 框架将调用此方法。
 
-##  <a name="allowchangetextlabels"></a>  CMFCColorBar::AllowChangeTextLabels
+##  <a name="allowchangetextlabels"></a>CMFCColorBar:: AllowChangeTextLabels
 
-指示是否可以更改颜色按钮的文本标签。
+指示颜色按钮的文本标签是否可以更改。
 
 ```
 virtual BOOL AllowChangeTextLabels() const;
@@ -257,11 +257,11 @@ virtual BOOL AllowChangeTextLabels() const;
 
 ### <a name="remarks"></a>备注
 
-默认情况下，此方法始终返回 FALSE，这意味着不能修改文本标签。 重写此方法以允许修改文本标签。
+默认情况下, 此方法始终返回 FALSE, 这意味着不能修改文本标签。 重写此方法以启用修改文本标签。
 
-##  <a name="allowshowonlist"></a>  CMFCColorBar::AllowShowOnList
+##  <a name="allowshowonlist"></a>CMFCColorBar:: AllowShowOnList
 
-指示是否颜色栏控件对象可以出现在工具栏列表自定义过程。
+指示在自定义过程中, 颜色栏控件对象是否可以出现在工具栏列表中。
 
 ```
 virtual BOOL AllowShowOnList() const;
@@ -273,11 +273,11 @@ virtual BOOL AllowShowOnList() const;
 
 ### <a name="remarks"></a>备注
 
-默认情况下，此方法始终返回 TRUE，这意味着该框架可以在自定义过程中显示的颜色条控件。 重写此方法来实现不同的行为。
+默认情况下, 此方法始终返回 TRUE, 这意味着在自定义过程中, 框架可以显示颜色栏控件。 重写此方法以实现其他行为。
 
-##  <a name="calcsize"></a>  CMFCColorBar::CalcSize
+##  <a name="calcsize"></a>CMFCColorBar:: CalcSize
 
-由框架作为布局计算过程的一部分调用。
+由框架作为布局计算过程的一部分进行调用。
 
 ```
 virtual CSize CalcSize(BOOL bVertDock);
@@ -286,13 +286,13 @@ virtual CSize CalcSize(BOOL bVertDock);
 ### <a name="parameters"></a>参数
 
 *bVertDock*<br/>
-[in]若要指定颜色栏控件垂直; 停靠，则返回 TRUE如果为 FALSE，以指定颜色栏控件时水平停靠。
+中若要指定垂直停靠颜色栏控件, 则为 TRUE;若为 FALSE, 则指定颜色栏控件水平停靠。
 
 ### <a name="return-value"></a>返回值
 
-在颜色栏控件中的颜色按钮的数组的大小。
+颜色栏控件中颜色按钮的数组大小。
 
-##  <a name="cmfccolorbar"></a>  CMFCColorBar::CMFCColorBar
+##  <a name="cmfccolorbar"></a>CMFCColorBar:: CMFCColorBar
 
 构造 `CMFCColorBar` 对象。
 
@@ -330,55 +330,55 @@ CMFCColorBar(
 
 ### <a name="parameters"></a>参数
 
-*colors*<br/>
-[in]框架在颜色栏控件显示的颜色的数组。
+*颜色*<br/>
+中框架在颜色栏控件上显示的颜色数组。
 
 *color*<br/>
-[in]最初选定的颜色。
+中初始选择的颜色。
 
 *lpszAutoColor*<br/>
-[in]文本标签*自动*（默认值） 颜色按钮，则为 NULL。
+中"*自动*(默认)" 颜色按钮的文本标签, 或为 NULL。
 
-标准标签为自动按钮**自动**。
+"自动" 按钮的标准标签为 "**自动**"。
 
 *lpszOtherColor*<br/>
-[in]文本标签*其他*按钮，其中显示更多颜色选项，则为 NULL。
+中"*其他*" 按钮的文本标签, 可显示更多颜色选项, 或为 NULL。
 
-其他按钮的标准标签**更多颜色...**.
+"其他" 按钮的标准标签为 "其他**颜色 ...** "。
 
 *lpszDocColors*<br/>
-[in]文档颜色按钮的文本标签。 文档颜色调色板，列出所有的文档当前使用的颜色。
+中"文档颜色" 按钮的文本标签。 "文档颜色" 调色板列出了文档当前使用的所有颜色。
 
 *lstDocColors*<br/>
-[in]文档当前使用的颜色的列表。
+中文档当前使用的颜色的列表。
 
 *nColumns*<br/>
-[in]颜色数组具有的列数。
+中颜色数组具有的列数。
 
 *nRowsDockHorz*<br/>
-[in]颜色栏中的水平停靠时的行数。
+中颜色栏水平停靠时的行数。
 
 *nColDockVert*<br/>
-[in]颜色栏中的垂直停靠时的列数。
+中颜色栏垂直停靠时所具有的列数。
 
 *colorAutomatic*<br/>
-[in]在框架应用单击自动按钮时的默认颜色。
+中单击 "自动" 按钮时, 框架应用的默认颜色。
 
 *nCommandID*<br/>
-[in]颜色条控制命令 id。
+中颜色栏控件命令 ID。
 
 *pParentBtn*<br/>
-[in]指向父按钮的指针。
+中指向父按钮的指针。
 
 *src*<br/>
-[in]将现有`CMFCColorBar`对象复制到新`CMFCColorBar`对象。
+中要复制`CMFCColorBar`到新`CMFCColorBar`对象的现有对象。
 
 *uiCommandID*<br/>
-[in]命令 id。
+中命令 ID。
 
-##  <a name="contexttosize"></a>  CMFCColorBar::ContextToSize
+##  <a name="contexttosize"></a>CMFCColorBar:: ContextToSize
 
-计算的垂直和水平边距的所需包含在颜色栏控件上的按钮和调整这些按钮的位置。
+计算在颜色栏控件上包含按钮所需的垂直和水平边距, 并调整这些按钮的位置。
 
 ```
 void ContextToSize(
@@ -390,14 +390,14 @@ void ContextToSize(
 
 |参数|描述|
 |---------------|-----------------|
-|*bSquareButtons*|[in]以指定颜色条控件上按钮的形状的正方形;，则返回 TRUE否则为 FALSE。 默认值为 TRUE。|
-|*bCenterButtons*|[in]为 TRUE，则指定的颜色条控件按钮的表面上的内容居中;否则为 FALSE。 默认值为 TRUE。|
+|*bSquareButtons*|中如果为 TRUE, 则指定颜色条控件上的按钮的形状是正方形;否则为 FALSE。 默认值为 TRUE。|
+|*bCenterButtons*|中如果为 TRUE, 则指定颜色条控件按钮表面上的内容居中;否则为 FALSE。 默认值为 TRUE。|
 
 ### <a name="remarks"></a>备注
 
-##  <a name="create"></a>  CMFCColorBar::Create
+##  <a name="create"></a>CMFCColorBar:: Create
 
-创建颜色栏控件窗口，并将其附加到`CMFCColorBar`对象。
+创建一个颜色栏控件窗口, 并将其附加`CMFCColorBar`到对象。
 
 ```
 virtual BOOL Create(
@@ -413,37 +413,37 @@ virtual BOOL Create(
 ### <a name="parameters"></a>参数
 
 *pParentWnd*<br/>
-[in]向父窗口的指针。
+中指向父窗口的指针。
 
 *dwStyle*<br/>
-[in]按位组合 (OR) 的[的窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。
+中[窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)的按位组合 (OR)。
 
 *nID*<br/>
-[in]命令 id。
+中命令 ID。
 
 *pPalette*<br/>
-[in]指向颜色的调色板。 默认值为 NULL。
+中指向颜色调色板的指针。 默认值为 NULL。
 
 *nColumns*<br/>
-[in]在颜色栏控件中的列数。 默认值为 0。
+中颜色栏控件中的列数。 默认值为 0。
 
 *nRowsDockHorz*<br/>
-[in]颜色栏控件时水平停靠中的行数。 默认值为 0。
+中在水平停靠时颜色栏控件中的行数。 默认值为 0。
 
 *nColDockVert*<br/>
-[in]垂直停靠时在颜色栏控件中的列数。 默认值为 0。
+中在垂直停靠时颜色栏控件中的列数。 默认值为 0。
 
 ### <a name="return-value"></a>返回值
 
-如果此方法成功，则为 TRUE否则为 FALSE。
+如果此方法成功, 则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-若要构造`CMFCColorBar`对象，请调用类构造函数，则此方法。 `Create`方法创建 Windows 控件，并初始化颜色的列表。
+若要构造`CMFCColorBar`对象, 请调用类构造函数, 然后调用此方法。 `Create`方法创建 Windows 控件并初始化颜色列表。
 
-##  <a name="createcontrol"></a>  CMFCColorBar::CreateControl
+##  <a name="createcontrol"></a>CMFCColorBar:: CreateControl
 
-创建一个颜色条控制窗口，并将其附加到`CMFCColorBar`对象，并调整控件窗口以包含指定的调色板。
+创建一个颜色栏控件窗口, 将其附加到`CMFCColorBar`对象, 并调整控件窗口的大小以包含指定的颜色调色板。
 
 ```
 virtual BOOL CreateControl(
@@ -457,31 +457,31 @@ virtual BOOL CreateControl(
 ### <a name="parameters"></a>参数
 
 *pParentWnd*<br/>
-[in]向父窗口的指针。 不能为 NULL。
+中指向父窗口的指针。 不能为 NULL。
 
 *rect*<br/>
-[in]指定位置绘制颜色栏控件边界矩形。
+中指定颜色条控件绘制位置的边框。
 
 *nID*<br/>
-[in]控件 id。
+中控件 ID。
 
 *nColumns*<br/>
-[in]理想的颜色条控件中的列数。 此方法修改该数字以适应指定的调色板的颜色。 默认值为-1，表示未指定此参数。
+中颜色栏控件中的理想列数。 此方法修改该数字以适应颜色的指定调色板。 默认值为-1, 表示未指定此参数。
 
 *pPalette*<br/>
-[in]指向调色板的颜色，则为 NULL 指针。 如果此参数为 NULL，此方法将如同 20 颜色指定计算颜色栏控件的大小。 默认值为 NULL。
+中指向颜色调色板的指针, 或为 NULL。 如果此参数为 NULL, 此方法将计算颜色条控件的大小, 就像指定了20种颜色一样。 默认值为 NULL。
 
 ### <a name="return-value"></a>返回值
 
-如果此方法成功，则为 TRUE否则为 FALSE。
+如果此方法成功, 则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-此方法使用*rect*， *nColumns*，并*pPalette*参数来计算相应的行数和颜色栏控件，然后调用中的列[CMFCColorBar::Create](#create)方法。
+此方法使用*rect*、 *nColumns*和*pPalette*参数计算颜色栏控件中的适当数量或行和列, 然后调用[CMFCColorBar:: Create](#create)方法。
 
-##  <a name="createpalette"></a>  CMFCColorBar::CreatePalette
+##  <a name="createpalette"></a>CMFCColorBar:: CreatePalette
 
-初始化使用指定的颜色数组中的颜色的调色板。
+使用指定颜色数组中的颜色初始化调色板。
 
 ```
 static BOOL CreatePalette(
@@ -493,16 +493,16 @@ static BOOL CreatePalette(
 
 |参数|描述|
 |---------------|-----------------|
-|*arColors*|[in]一个颜色数组。|
-|*palette*|[in]颜色的调色板。|
+|*arColors*|中颜色的数组。|
+|*palette*|中颜色的调色板。|
 
 ### <a name="return-value"></a>返回值
 
-如果此方法成功，则为 TRUE否则为 FALSE。
+如果此方法成功, 则为 TRUE;否则为 FALSE。
 
-##  <a name="enableautomaticbutton"></a>  CMFCColorBar::EnableAutomaticButton
+##  <a name="enableautomaticbutton"></a>CMFCColorBar:: EnableAutomaticButton
 
-显示或隐藏的自动按钮。
+显示或隐藏 "自动" 按钮。
 
 ```
 void EnableAutomaticButton(
@@ -514,23 +514,23 @@ void EnableAutomaticButton(
 ### <a name="parameters"></a>参数
 
 *lpszLabel*<br/>
-[in]文本标签*自动*（默认值） 颜色按钮，则为 NULL。
+中"*自动*(默认)" 颜色按钮的文本标签, 或为 NULL。
 
-标准标签为自动按钮**自动**。
+"自动" 按钮的标准标签为 "**自动**"。
 
 *colorAutomatic*<br/>
-[in]在框架应用单击自动按钮时的默认颜色。
+中单击 "自动" 按钮时, 框架应用的默认颜色。
 
 *bEnable*<br/>
-[in]为 TRUE，则启用自动按钮;如果为 FALSE 来禁用自动按钮。 默认值为 TRUE。
+中若要启用自动按钮, 则为 TRUE;若要禁用自动按钮, 则为 FALSE。 默认值为 TRUE。
 
 ### <a name="remarks"></a>备注
 
-如果删除的自动按钮的文本标签*lpszLabel*参数为 NULL 或*bEnable*参数为 FALSE。
+如果*lpszLabel*参数为 NULL 或*BENABLE*参数为 FALSE, 则会删除 "自动" 按钮的文本标签。
 
-##  <a name="enableotherbutton"></a>  CMFCColorBar::EnableOtherButton
+##  <a name="enableotherbutton"></a>CMFCColorBar:: EnableOtherButton
 
-启用或禁用显示一个对话框，使用户可以选择更多颜色。
+启用或禁用允许用户选择更多颜色的对话框显示。
 
 ```
 void EnableOtherButton(
@@ -542,17 +542,17 @@ void EnableOtherButton(
 ### <a name="parameters"></a>参数
 
 *lpszLabel*<br/>
-[in]文本标签*其他*按钮，其中显示更多颜色选项，则为 NULL。
+中"*其他*" 按钮的文本标签, 可显示更多颜色选项, 或为 NULL。
 
-此按钮的标准标签**更多颜色...**.
+此按钮的标准标签为 "**其他颜色 ...** "。
 
 *bAltColorDlg*<br/>
-[in]为 true，则显示[CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)对话框;如果为 FALSE，显示标准[CColorDialog](../../mfc/reference/ccolordialog-class.md)对话框。 默认值为 TRUE。
+中如果显示 " [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) " 对话框, 则为 TRUE;若为 FALSE, 则显示 "标准[CColorDialog](../../mfc/reference/ccolordialog-class.md) " 对话框。 默认值为 TRUE。
 
 *bEnable*<br/>
-[in]为 TRUE，则启用该按钮;如果为 FALSE 禁用该按钮。 默认值为 TRUE。
+中若要启用此按钮, 则为 TRUE;若要禁用按钮, 则为 FALSE。 默认值为 TRUE。
 
-##  <a name="getcolor"></a>  CMFCColorBar::GetColor
+##  <a name="getcolor"></a>CMFCColorBar:: GetColor
 
 检索当前选定的颜色。
 
@@ -564,9 +564,9 @@ COLORREF GetColor() const;
 
 当前选定的颜色。
 
-##  <a name="getcolorgridsize"></a>  CMFCColorBar::GetColorGridSize
+##  <a name="getcolorgridsize"></a>CMFCColorBar:: GetColorGridSize
 
-计算行和颜色栏控件的网格中的列的数。
+计算颜色栏控件网格中的行数和列数。
 
 ```
 CSize GetColorGridSize(BOOL bVertDock) const;
@@ -576,13 +576,13 @@ CSize GetColorGridSize(BOOL bVertDock) const;
 
 |参数|描述|
 |---------------|-----------------|
-|*bVertDock*|[in]为 TRUE，则为垂直停靠的颜色栏控件，则执行计算否则，为水平停靠控件执行计算。|
+|*bVertDock*|中若要为垂直停靠的颜色栏控件执行计算, 则为 TRUE;否则, 请为水平停靠的控件执行计算。|
 
 ### <a name="return-value"></a>返回值
 
-一个[CSize](../../atl-mfc-shared/reference/csize-class.md)对象，其`cx`组件包含的列和它的数`cy`组件包含的行数。
+一个[CSize](../../atl-mfc-shared/reference/csize-class.md)对象, `cx`其组件包含列数以及其`cy`组件包含行数。
 
-##  <a name="getcommandid"></a>  CMFCColorBar::GetCommandID
+##  <a name="getcommandid"></a>CMFCColorBar:: GetCommandID
 
 检索当前颜色栏控件的命令 ID。
 
@@ -592,15 +592,15 @@ UINT GetCommandID() const;
 
 ### <a name="return-value"></a>返回值
 
-命令 id。
+命令 ID。
 
 ### <a name="remarks"></a>备注
 
-当用户选择一种新颜色时，framework 发送 WM_COMMAND 消息来通知父级的命令 ID`CMFCColorBar`对象。
+当用户选择新的颜色时, 框架会在 WM_COMMAND 消息中发送命令 ID 以通知`CMFCColorBar`对象的父对象。
 
-##  <a name="getextraheight"></a>  CMFCColorBar::GetExtraHeight
+##  <a name="getextraheight"></a>CMFCColorBar:: GetExtraHeight
 
-计算当前的颜色条显示其他用户界面元素，如所需的其他高度**其他**按钮或文档的颜色。
+计算当前颜色条显示其他用户界面元素 (如**其他**按钮或文档颜色) 所需的附加高度。
 
 ```
 int GetExtraHeight(int nNumColumns) const;
@@ -610,15 +610,15 @@ int GetExtraHeight(int nNumColumns) const;
 
 |参数|描述|
 |---------------|-----------------|
-|*nNumColumns*|[in]如果颜色栏控件包含文档颜色，要在文档颜色的网格中显示的列数。 否则，不使用此值。|
+|*nNumColumns*|中如果颜色栏控件包含文档颜色, 则为文档颜色网格中显示的列数。 否则, 不使用此值。|
 
 ### <a name="return-value"></a>返回值
 
-需要计算额外高度。
+需要计算的额外高度。
 
-##  <a name="gethighlightedcolor"></a>  CMFCColorBar::GetHighlightedColor
+##  <a name="gethighlightedcolor"></a>CMFCColorBar:: GetHighlightedColor
 
-检索表示的颜色按钮具有焦点，则颜色也就是说，该按钮是*热*。
+检索表示颜色按钮有焦点的颜色;也就是说, 按钮是*热*的。
 
 ```
 COLORREF GetHighlightedColor() const;
@@ -626,13 +626,13 @@ COLORREF GetHighlightedColor() const;
 
 ### <a name="return-value"></a>返回值
 
-RGB 值。
+一个 RGB 值。
 
 ### <a name="remarks"></a>备注
 
-##  <a name="gethorzmargin"></a>  CMFCColorBar::GetHorzMargin
+##  <a name="gethorzmargin"></a>CMFCColorBar:: GetHorzMargin
 
-检索的水平边距，即左侧或右侧的颜色单元格与客户端区域边界之间的空间。
+检索水平边距, 即左或右两个颜色单元格与工作区边界之间的间距。
 
 ```
 int GetHorzMargin();
@@ -642,9 +642,9 @@ int GetHorzMargin();
 
 水平边距。
 
-##  <a name="getvertmargin"></a>  CMFCColorBar::GetVertMargin
+##  <a name="getvertmargin"></a>CMFCColorBar:: GetVertMargin
 
-检索是在顶部或底部颜色单元格和客户端区域边界之间的空间的垂直边距。
+检索垂直边距, 即上、下颜色单元格与工作区边界之间的间距。
 
 ```
 int GetVertMargin() const;
@@ -654,9 +654,9 @@ int GetVertMargin() const;
 
 垂直边距。
 
-##  <a name="initcolors"></a>  CMFCColorBar::InitColors
+##  <a name="initcolors"></a>CMFCColorBar:: InitColors
 
-初始化一个使用中的指定调色板的颜色或使用系统默认调色板颜色数组。
+用指定调色板中的颜色或系统默认调色板初始化颜色数组。
 
 ```
 static int InitColors(
@@ -668,16 +668,16 @@ static int InitColors(
 
 |参数|描述|
 |---------------|-----------------|
-|*pPalette*|[in]调色板对象，或为 NULL 指针。 如果此参数为 NULL，则此方法使用的操作系统默认调色板。|
-|*arColors*|[in]一个颜色数组。|
+|*pPalette*|中指向调色板对象的指针, 或为 NULL。 如果此参数为 NULL, 此方法将使用操作系统的默认调色板。|
+|*arColors*|中颜色的数组。|
 
 ### <a name="return-value"></a>返回值
 
 颜色数组中的元素数。
 
-##  <a name="istearoff"></a>  CMFCColorBar::IsTearOff
+##  <a name="istearoff"></a>CMFCColorBar:: IsTearOff
 
-指示是否当前颜色栏可停靠。
+指示当前颜色栏是否可停靠。
 
 ```
 BOOL IsTearOff() const;
@@ -685,13 +685,13 @@ BOOL IsTearOff() const;
 
 ### <a name="return-value"></a>返回值
 
-如果当前颜色栏控件是可停靠; 则为 TRUE否则为 FALSE。
+如果当前颜色栏控件可停靠, 则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-如果颜色栏控件是可停靠，它可以拉出的控件条和停靠在另一个位置。
+如果颜色栏控件是可停靠控件, 则可以将其从控件栏中断开并停靠在另一个位置。
 
-##  <a name="onkey"></a>  CMFCColorBar::OnKey
+##  <a name="onkey"></a>CMFCColorBar:: OnKey
 
 当用户按下键盘按钮时由框架调用。
 
@@ -702,15 +702,15 @@ virtual BOOL OnKey(UINT nChar);
 ### <a name="parameters"></a>参数
 
 *nChar*<br/>
-[in]用户按下键的虚拟键代码。
+中用户按下的键的虚拟键代码。
 
 ### <a name="return-value"></a>返回值
 
-如果此方法处理指定的键; 则为 TRUE否则为 FALSE。
+如果此方法处理指定的键, 则为 TRUE;否则为 FALSE。
 
-##  <a name="onsendcommand"></a>  CMFCColorBar::OnSendCommand
+##  <a name="onsendcommand"></a>CMFCColorBar:: OnSendCommand
 
-由框架调用以关闭弹出窗口控件的层次结构。
+由框架调用以关闭弹出控件的层次结构。
 
 ```
 virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
@@ -720,15 +720,15 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 
 |参数|描述|
 |---------------|-----------------|
-|*pButton*|[in]指向驻留在工具栏的控件。|
+|*pButton*|中指向位于工具栏上的控件的指针。|
 
 ### <a name="return-value"></a>返回值
 
-如果此方法成功，则为 TRUE否则为 FALSE。
+如果此方法成功, 则为 TRUE;否则为 FALSE。
 
-##  <a name="onupdatecmdui"></a>  CMFCColorBar::OnUpdateCmdUI
+##  <a name="onupdatecmdui"></a>CMFCColorBar:: OnUpdateCmdUI
 
-由框架调用以启用或禁用用户界面控件的项的颜色条显示项之前。
+由框架调用, 以在显示项之前启用或禁用颜色栏控件的用户界面项。
 
 ```
 virtual void OnUpdateCmdUI(
@@ -739,18 +739,18 @@ virtual void OnUpdateCmdUI(
 ### <a name="parameters"></a>参数
 
 *pTarget*<br/>
-[in]指向一个窗口，其中包含要更新的用户界面项的指针。
+中指向包含要更新的用户界面项的窗口的指针。
 
 *bDisableIfNoHndler*<br/>
-[in]若要禁用的用户界面项，如果在消息映射; 中不定义任何处理程序，则返回 TRUE否则为 FALSE。
+中如果消息映射中未定义任何处理程序, 则为 TRUE; 否则为 false。否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-当应用程序的用户单击用户界面项时，该项必须知道是否应显示为已启用或禁用。 命令消息的目标来实现 ON_UPDATE_COMMAND_UI 命令处理程序提供此信息。 使用此方法以帮助处理命令。 有关详细信息，请参阅[CCmdUI 类](../../mfc/reference/ccmdui-class.md)。
+当应用程序的用户单击用户界面项时, 该项必须知道该用户是否应显示为已启用或已禁用。 命令消息的目标通过实现 ON_UPDATE_COMMAND_UI 命令处理程序来提供此信息。 使用此方法可帮助处理命令。 有关详细信息, 请参阅[CCmdUI 类](../../mfc/reference/ccmdui-class.md)。
 
-##  <a name="opencolordialog"></a>  CMFCColorBar::OpenColorDialog
+##  <a name="opencolordialog"></a>CMFCColorBar:: OpenColorDialog
 
-将打开颜色对话框。
+打开 "颜色" 对话框。
 
 ```
 virtual BOOL OpenColorDialog(
@@ -761,18 +761,18 @@ virtual BOOL OpenColorDialog(
 ### <a name="parameters"></a>参数
 
 *colorDefault*<br/>
-[in]颜色对话框打开时，默认情况下选择颜色。
+中当 "颜色" 对话框打开时默认选择的颜色。
 
 *colorRes*<br/>
-[out]用户选择了颜色。
+弄用户选择的颜色。
 
 ### <a name="return-value"></a>返回值
 
-如果用户选择某种颜色，则为 TRUE如果用户取消了颜色对话框中，则为 FALSE。
+如果用户选择了颜色, 则为 TRUE;如果用户取消了 "颜色" 对话框, 则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-##  <a name="rebuild"></a>  CMFCColorBar::Rebuild
+##  <a name="rebuild"></a>CMFCColorBar:: Rebuild
 
 完全重绘颜色栏控件。
 
@@ -780,9 +780,9 @@ virtual BOOL OpenColorDialog(
 virtual void Rebuild();
 ```
 
-##  <a name="selectpalette"></a>  CMFCColorBar::SelectPalette
+##  <a name="selectpalette"></a>CMFCColorBar:: SelectPalette
 
-将指定的设备上下文的逻辑调色板设置为当前的颜色条控件的父按钮的调色板。
+将指定设备上下文的逻辑调色板设置为当前颜色条控件的父按钮的调色板。
 
 ```
 CPalette* SelectPalette(CDC* pDC);
@@ -792,13 +792,13 @@ CPalette* SelectPalette(CDC* pDC);
 
 |参数|描述|
 |---------------|-----------------|
-|*pDC*|[in]指向当前颜色栏控件的父按钮的设备上下文指针。|
+|*pDC*|中一个指针, 指向当前颜色栏控件的父按钮的设备上下文。|
 
 ### <a name="return-value"></a>返回值
 
-指向将替换为当前的颜色条控件的父按钮的调色板的调色板。
+指向调色板的指针, 该调色板由当前颜色栏控件的父按钮的调色板替换。
 
-##  <a name="setcolor"></a>  CMFCColorBar::SetColor
+##  <a name="setcolor"></a>CMFCColorBar:: SetColor
 
 设置当前选定的颜色。
 
@@ -809,11 +809,11 @@ void SetColor(COLORREF color);
 ### <a name="parameters"></a>参数
 
 *color*<br/>
-[in]RGB 颜色值。
+中RGB 颜色值。
 
-##  <a name="setcolorname"></a>  CMFCColorBar::SetColorName
+##  <a name="setcolorname"></a>CMFCColorBar:: SetColorName
 
-设置指定颜色的新名称。
+为指定的颜色设置新名称。
 
 ```
 static void SetColorName(
@@ -824,18 +824,18 @@ static void SetColorName(
 ### <a name="parameters"></a>参数
 
 *color*<br/>
-[in]一种颜色的 RGB 值。
+中颜色的 RGB 值。
 
 *strName*<br/>
-[in]指定颜色的新名称。
+中指定颜色的新名称。
 
 ### <a name="remarks"></a>备注
 
-此方法将更改在所有指定的颜色名称`CMFCColorBar`你的应用程序中的对象。
+此方法在应用程序的所有`CMFCColorBar`对象中更改指定颜色的名称。
 
-##  <a name="setcommandid"></a>  CMFCColorBar::SetCommandID
+##  <a name="setcommandid"></a>CMFCColorBar:: SetCommandID
 
-设置颜色条控件的新命令 ID。
+为颜色栏控件设置新的命令 ID。
 
 ```
 void SetCommandID(UINT nCommandID);
@@ -844,15 +844,15 @@ void SetCommandID(UINT nCommandID);
 ### <a name="parameters"></a>参数
 
 *nCommandID*<br/>
-[in]命令 id。
+中命令 ID。
 
 ### <a name="remarks"></a>备注
 
-调用此方法来修改颜色栏控件的命令 ID 以及通知的 ID 已更改的控件的父窗口。
+调用此方法可修改颜色栏控件的命令 ID 并通知控件的父窗口, ID 已更改。
 
-##  <a name="setdocumentcolors"></a>  CMFCColorBar::SetDocumentColors
+##  <a name="setdocumentcolors"></a>CMFCColorBar:: SetDocumentColors
 
-设置当前文档中使用颜色的列表。
+设置在当前文档中使用的颜色的列表。
 
 ```
 void SetDocumentColors(
@@ -864,21 +864,21 @@ void SetDocumentColors(
 ### <a name="parameters"></a>参数
 
 *lpszCaption*<br/>
-[in]颜色栏控件未停靠时，将显示标题。
+中颜色栏控件未停靠时显示的标题。
 
 *lstDocColors*<br/>
-[in]将替换当前文档颜色的颜色列表。
+中替换当前文档颜色的颜色的列表。
 
 *bShowWhenDocked*<br/>
-[in]若要显示文档的颜色，颜色栏控件停靠; 时，则返回 TRUE否则为 FALSE。 默认值是 FALSE。
+中若要在停靠颜色栏控件时显示文档颜色, 则为 TRUE;否则为 FALSE。 默认值是 FALSE。
 
 ### <a name="remarks"></a>备注
 
-*文档颜色*是当前文档中使用的颜色。 框架会自动维护文档颜色的列表，但可以使用此方法可以修改的列表。
+*文档颜色*是当前在文档中使用的颜色。 框架自动维护文档颜色列表, 但您可以使用此方法修改列表。
 
-##  <a name="sethorzmargin"></a>  CMFCColorBar::SetHorzMargin
+##  <a name="sethorzmargin"></a>CMFCColorBar:: SetHorzMargin
 
-设置水平边距，即左侧或右侧的颜色单元格与客户端区域的边界之间的空间。
+设置水平边距, 这是左或右两个颜色单元格与工作区边界之间的间距。
 
 ```
 void SetHorzMargin(int nHorzMargin);
@@ -887,15 +887,15 @@ void SetHorzMargin(int nHorzMargin);
 ### <a name="parameters"></a>参数
 
 *nHorzMargin*<br/>
-[in]水平边距，以像素为单位。
+中水平边距 (以像素为单位)。
 
 ### <a name="remarks"></a>备注
 
-默认情况下[CMFCColorBar::CMFCColorBar](#cmfccolorbar)构造函数设置的水平边距为 4 个像素。
+默认情况下, [CMFCColorBar:: CMFCColorBar](#cmfccolorbar)构造函数将水平边距设置为4像素。
 
-##  <a name="setproplist"></a>  CMFCColorBar::SetPropList
+##  <a name="setproplist"></a>CMFCColorBar:: SetPropList
 
-集`m_pWndPropList`受保护的数据成员添加到属性网格控件的指定指针。
+将受`m_pWndPropList`保护的数据成员设置为指向属性网格控件的指定指针。
 
 ```
 void SetPropList(CMFCPropertyGridCtrl* pWndList);
@@ -905,11 +905,11 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
 
 |参数|描述|
 |---------------|-----------------|
-|*pWndList*|[in]为属性网格控件对象的指针。|
+|*pWndList*|中指向属性网格控件对象的指针。|
 
-##  <a name="setvertmargin"></a>  CMFCColorBar::SetVertMargin
+##  <a name="setvertmargin"></a>CMFCColorBar:: SetVertMargin
 
-设置客户端区域边界的顶部或底部的颜色单元格之间空间的垂直边距。
+设置垂直边距, 即上、下颜色单元格与工作区边界之间的间距。
 
 ```
 void SetVertMargin(int nVertMargin);
@@ -918,15 +918,15 @@ void SetVertMargin(int nVertMargin);
 ### <a name="parameters"></a>参数
 
 *nVertMargin*<br/>
-[in]垂直边距，以像素为单位。
+中垂直边距 (以像素为单位)。
 
 ### <a name="remarks"></a>备注
 
-默认情况下[CMFCColorBar::CMFCColorBar](#cmfccolorbar)构造函数设置的垂直边距为 4 个像素。
+默认情况下, [CMFCColorBar:: CMFCColorBar](#cmfccolorbar)构造函数将垂直边距设置为4像素。
 
-##  <a name="showcommandmessagestring"></a>  CMFCColorBar::ShowCommandMessageString
+##  <a name="showcommandmessagestring"></a>CMFCColorBar:: ShowCommandMessageString
 
-请求拥有要更新状态栏中的消息行的颜色条控件的框架窗口。
+请求拥有颜色条控件的框架窗口, 以更新状态栏中的消息行。
 
 ```
 virtual void ShowCommandMessageString(UINT uiCmdId);
@@ -935,7 +935,7 @@ virtual void ShowCommandMessageString(UINT uiCmdId);
 ### <a name="parameters"></a>参数
 
 *uiCmdId*<br/>
-[in]命令 id。 （忽略此参数。）
+中命令 ID。 (忽略此参数。)
 
 ### <a name="remarks"></a>备注
 

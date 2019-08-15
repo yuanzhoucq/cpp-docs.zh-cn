@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CRichEditCntrItem [MFC], CRichEditCntrItem
 - CRichEditCntrItem [MFC], SyncToRichEditObject
 ms.assetid: 6c0b4efe-0fb8-4621-b5e1-fdcb8ec48c3b
-ms.openlocfilehash: b333cbbe33b42709614376cf98be01111be967a2
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 8e242504c8ab0f59f6dec0602d4a5352a2d84867
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916811"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502731"
 ---
 # <a name="cricheditcntritem-class"></a>CRichEditCntrItem 类
 
@@ -80,7 +80,7 @@ CRichEditCntrItem(
 ### <a name="parameters"></a>参数
 
 *preo*<br/>
-指向描述 OLE 项的[REOBJECT](/windows/desktop/api/richole/ns-richole-reobject)结构的指针。 围绕此`CRichEditCntrItem` OLE 项构造新的对象。 如果*preo*为 NULL, 则客户端项为空。
+指向描述 OLE 项的[REOBJECT](/windows/win32/api/richole/ns-richole-reobject)结构的指针。 围绕此`CRichEditCntrItem` OLE 项构造新的对象。 如果*preo*为 NULL, 则客户端项为空。
 
 *pContainer*<br/>
 指向将包含此项的容器文档的指针。 如果*允许 pcontainer*为 NULL, 则必须显式调用[COleDocument:: AddItem](../../mfc/reference/coledocument-class.md#additem)将此客户端项添加到文档中。
@@ -89,11 +89,11 @@ CRichEditCntrItem(
 
 此函数不执行任何 OLE 初始化。
 
-有关详细信息, 请参阅 Windows SDK 中的[REOBJECT](/windows/desktop/api/richole/ns-richole-reobject)结构。
+有关详细信息, 请参阅 Windows SDK 中的[REOBJECT](/windows/win32/api/richole/ns-richole-reobject)结构。
 
 ##  <a name="synctoricheditobject"></a>CRichEditCntrItem:: SyncToRichEditObject
 
-调用此函数可将此`CRichEditCntrltem`的设备方面[DVASPECT](/windows/desktop/api/wtypes/ne-wtypes-tagdvaspect)同步到*reo*指定的。
+调用此函数可将此`CRichEditCntrltem`的设备方面[DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect)同步到*reo*指定的。
 
 ```
 void SyncToRichEditObject(REOBJECT& reo);
@@ -102,11 +102,11 @@ void SyncToRichEditObject(REOBJECT& reo);
 ### <a name="parameters"></a>参数
 
 *reo*<br/>
-对描述 OLE 项的[REOBJECT](/windows/desktop/api/richole/ns-richole-reobject)结构的引用。
+对描述 OLE 项的[REOBJECT](/windows/win32/api/richole/ns-richole-reobject)结构的引用。
 
 ### <a name="remarks"></a>备注
 
-有关详细信息, 请参阅 Windows SDK 中的[DVASPECT](/windows/desktop/api/wtypes/ne-wtypes-tagdvaspect) 。
+有关详细信息, 请参阅 Windows SDK 中的[DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect) 。
 
 ## <a name="see-also"></a>请参阅
 

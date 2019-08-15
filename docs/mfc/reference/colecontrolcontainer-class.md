@@ -72,12 +72,12 @@ helpviewer_keywords:
 - COleControlContainer [MFC], m_pWnd
 - COleControlContainer [MFC], m_siteMap
 ms.assetid: f7ce9246-0fb7-4f07-a83a-6c2390d0fdf8
-ms.openlocfilehash: 1d386072b67568ecf58afd0853df2d7fbaeac68d
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 3aa2515b1731eafcb5e3bcfa22a56ebbc1cdfdfb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504568"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504330"
 ---
 # <a name="colecontrolcontainer-class"></a>COleControlContainer 类
 
@@ -101,25 +101,25 @@ class COleControlContainer : public CCmdTarget
 
 |名称|描述|
 |----------|-----------------|
-|[COleControlContainer::AttachControlSite](#attachcontrolsite)|创建控件站点，由该容器承载。|
-|[COleControlContainer::BroadcastAmbientPropertyChange](#broadcastambientpropertychange)|通知环境属性已更改的所有托管的控件。|
+|[COleControlContainer::AttachControlSite](#attachcontrolsite)|创建由容器承载的控制站点。|
+|[COleControlContainer::BroadcastAmbientPropertyChange](#broadcastambientpropertychange)|通知所有宿主控件环境属性已更改。|
 |[COleControlContainer::CheckDlgButton](#checkdlgbutton)|修改指定的按钮控件。|
-|[COleControlContainer::CheckRadioButton](#checkradiobutton)|选择一组指定的单选按钮。|
-|[COleControlContainer::CreateControl](#createcontrol)|创建托管的 ActiveX 控件。|
+|[COleControlContainer::CheckRadioButton](#checkradiobutton)|选择组的指定单选按钮。|
+|[COleControlContainer::CreateControl](#createcontrol)|创建承载的 ActiveX 控件。|
 |[COleControlContainer::CreateOleFont](#createolefont)|创建 OLE 字体。|
 |[COleControlContainer::FindItem](#finditem)|返回指定控件的自定义网站。|
-|[COleControlContainer::FreezeAllEvents](#freezeallevents)|确定控件站点接受事件。|
+|[COleControlContainer::FreezeAllEvents](#freezeallevents)|确定控制站点是否正在接受事件。|
 |[COleControlContainer::GetAmbientProp](#getambientprop)|检索指定的环境属性。|
 |[COleControlContainer::GetDlgItem](#getdlgitem)|检索指定的对话框控件。|
-|[COleControlContainer::GetDlgItemInt](#getdlgitemint)|检索指定的对话框控件的值。|
-|[COleControlContainer::GetDlgItemText](#getdlgitemtext)|检索指定的对话框控件的标题。|
-|[COleControlContainer::HandleSetFocus](#handlesetfocus)|确定是否容器处理 WM_SETFOCUS 消息。|
+|[COleControlContainer::GetDlgItemInt](#getdlgitemint)|检索指定对话框控件的值。|
+|[COleControlContainer::GetDlgItemText](#getdlgitemtext)|检索指定对话框控件的标题。|
+|[COleControlContainer::HandleSetFocus](#handlesetfocus)|确定容器是否处理 WM_SETFOCUS 消息。|
 |[COleControlContainer::HandleWindowlessMessage](#handlewindowlessmessage)|处理发送到无窗口控件的消息。|
-|[COleControlContainer::IsDlgButtonChecked](#isdlgbuttonchecked)|确定指定的按钮的状态。|
-|[COleControlContainer::OnPaint](#onpaint)|调用以重新绘制的容器的一部分。|
-|[COleControlContainer::OnUIActivate](#onuiactivate)|调用控件时，将为就地激活。|
-|[COleControlContainer::OnUIDeactivate](#onuideactivate)|将要停用某个控件时调用。|
-|[COleControlContainer::ScrollChildren](#scrollchildren)|从子窗口接收滚动消息时由框架调用。|
+|[COleControlContainer::IsDlgButtonChecked](#isdlgbuttonchecked)|确定指定按钮的状态。|
+|[COleControlContainer::OnPaint](#onpaint)|调用以重绘部分容器。|
+|[COleControlContainer::OnUIActivate](#onuiactivate)|当控件即将就地激活时调用。|
+|[COleControlContainer::OnUIDeactivate](#onuideactivate)|当控件即将停用时调用。|
+|[COleControlContainer::ScrollChildren](#scrollchildren)|当从子窗口接收到滚动消息时由框架调用。|
 |[COleControlContainer::SendDlgItemMessage](#senddlgitemmessage)|将消息发送到指定控件。|
 |[COleControlContainer::SetDlgItemInt](#setdlgitemint)|设置指定控件的值。|
 |[COleControlContainer::SetDlgItemText](#setdlgitemtext)|设置指定控件的文本。|
@@ -130,20 +130,20 @@ class COleControlContainer : public CCmdTarget
 |----------|-----------------|
 |[COleControlContainer::m_crBack](#m_crback)|容器的背景色。|
 |[COleControlContainer::m_crFore](#m_crfore)|容器的前景色。|
-|[COleControlContainer::m_listSitesOrWnds](#m_listsitesorwnds)|支持的控件站点的列表。|
-|[COleControlContainer::m_nWindowlessControls](#m_nwindowlesscontrols)|托管的无窗口控件数。|
-|[COleControlContainer::m_pOleFont](#m_polefont)|一个指向自定义控件站点的 OLE 字体。|
-|[COleControlContainer::m_pSiteCapture](#m_psitecapture)|指向捕获控件站点。|
-|[COleControlContainer::m_pSiteFocus](#m_psitefocus)|指向当前具有输入焦点的控件。|
-|[COleControlContainer::m_pSiteUIActive](#m_psiteuiactive)|指向当前就地激活的控件。|
-|[COleControlContainer::m_pWnd](#m_pwnd)|指向实现控件容器的窗口。|
-|[COleControlContainer::m_siteMap](#m_sitemap)|站点图中。|
+|[COleControlContainer::m_listSitesOrWnds](#m_listsitesorwnds)|支持的控制站点的列表。|
+|[COleControlContainer::m_nWindowlessControls](#m_nwindowlesscontrols)|承载的无窗口控件数。|
+|[COleControlContainer::m_pOleFont](#m_polefont)|指向自定义控件网站的 OLE 字体的指针。|
+|[COleControlContainer::m_pSiteCapture](#m_psitecapture)|指向捕获控制站点的指针。|
+|[COleControlContainer::m_pSiteFocus](#m_psitefocus)|指向当前具有输入焦点的控件的指针。|
+|[COleControlContainer::m_pSiteUIActive](#m_psiteuiactive)|一个指针, 指向当前就地激活的控件。|
+|[COleControlContainer::m_pWnd](#m_pwnd)|指向实现控件容器的窗口的指针。|
+|[COleControlContainer::m_siteMap](#m_sitemap)|站点地图。|
 
 ## <a name="remarks"></a>备注
 
-这是通过提供的一个或多个 ActiveX 控件站点的支持 (由实现`COleControlSite`)。 `COleControlContainer` 完全实现[IOleInPlaceFrame](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceframe)并[IOleContainer](/windows/desktop/api/oleidl/nn-oleidl-iolecontainer)接口，使包含的 ActiveX 控件，以满足他们作为就地项的资格。
+这是通过提供对一个或多个 ActiveX 控件站点 (由`COleControlSite`实现) 的支持来完成的。 `COleControlContainer`完全实现[IOleInPlaceFrame](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceframe)和[IOleContainer](/windows/win32/api/oleidl/nn-oleidl-iolecontainer)接口, 允许包含的 ActiveX 控件将其限定为就地项。
 
-通常，此类使用结合`COccManager`和`COleControlSite`实现自定义 ActiveX 控件容器，具有一个或多个 ActiveX 控件的自定义站点。
+通常, 此类与`COccManager`和`COleControlSite`结合使用来实现自定义 ActiveX 控件容器, 其中包含一个或多个 ActiveX 控件的自定义网站。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -155,11 +155,11 @@ class COleControlContainer : public CCmdTarget
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxocc.h
+**标头:** afxocc
 
-##  <a name="attachcontrolsite"></a>  COleControlContainer::AttachControlSite
+##  <a name="attachcontrolsite"></a>COleControlContainer::AttachControlSite
 
-由框架调用以创建并附加控件站点。
+由框架调用, 用于创建和附加控件站点。
 
 ```
 virtual void AttachControlSite(
@@ -177,18 +177,18 @@ void AttachControlSite(
 指向 `CWnd` 对象的指针。
 
 *nIDC*<br/>
-要附加的控件 ID。
+要附加的控件的 ID。
 
 ### <a name="remarks"></a>备注
 
-如果你想要自定义此过程，重写此函数。
+如果要自定义此过程, 请重写此函数。
 
 > [!NOTE]
->  如果您以静态方式链接到 MFC 库，请使用此函数的第一种形式。 如果您动态链接到 MFC 库，请使用第二种形式。
+>  如果静态链接到 MFC 库, 请使用此函数的第一种形式。 如果您动态链接到 MFC 库, 请使用第二种形式。
 
-##  <a name="broadcastambientpropertychange"></a>  COleControlContainer::BroadcastAmbientPropertyChange
+##  <a name="broadcastambientpropertychange"></a>COleControlContainer::BroadcastAmbientPropertyChange
 
-通知环境属性已更改的所有托管的控件。
+通知所有宿主控件环境属性已更改。
 
 ```
 virtual void BroadcastAmbientPropertyChange(DISPID dispid);
@@ -201,9 +201,9 @@ virtual void BroadcastAmbientPropertyChange(DISPID dispid);
 
 ### <a name="remarks"></a>备注
 
-当环境属性已更改值时，由框架调用此函数。 重写此函数可自定义此行为。
+当环境属性的值发生更改时, 框架会调用此函数。 重写此函数以自定义此行为。
 
-##  <a name="checkdlgbutton"></a>  COleControlContainer::CheckDlgButton
+##  <a name="checkdlgbutton"></a>COleControlContainer::CheckDlgButton
 
 修改按钮的当前状态。
 
@@ -216,20 +216,20 @@ virtual void CheckDlgButton(
 ### <a name="parameters"></a>参数
 
 *nIDButton*<br/>
-若要修改的按钮的 ID。
+要修改的按钮的 ID。
 
 *nCheck*<br/>
 指定按钮的状态。 可以是以下各项之一：
 
-- BST_CHECKED 集的按钮状态检查。
+- BST_CHECKED 将按钮状态设置为 "已选中"。
 
-- BST_INDETERMINATE 设置按钮的状态为灰显，指示不确定状态。 仅当该按钮具有 BS_3STATE 或 BS_AUTO3STATE 样式，请使用此值。
+- BST_INDETERMINATE 将按钮状态设置为灰显, 表示状态不确定。 仅当按钮具有 BS_3STATE 或 BS_AUTO3STATE 样式时才使用此值。
 
-- BST_UNCHECKED 集将按钮为清除状态。
+- BST_UNCHECKED 将按钮状态设置为 "已清除"。
 
-##  <a name="checkradiobutton"></a>  COleControlContainer::CheckRadioButton
+##  <a name="checkradiobutton"></a>COleControlContainer::CheckRadioButton
 
-在组中选择某个指定的单选按钮，并清除组中的其余按钮。
+选择组中的指定单选按钮, 并清除组中剩余的按钮。
 
 ```
 virtual void CheckRadioButton(
@@ -241,15 +241,15 @@ virtual void CheckRadioButton(
 ### <a name="parameters"></a>参数
 
 *nIDFirstButton*<br/>
-指定组中的第一个单选按钮的标识符。
+指定组中第一个单选按钮的标识符。
 
 *nIDLastButton*<br/>
-指定组中的最后一个单选按钮的标识符。
+指定组中最后一个单选按钮的标识符。
 
 *nIDCheckButton*<br/>
 指定要检查的单选按钮的标识符。
 
-##  <a name="colecontrolcontainer"></a>  COleControlContainer::COleControlContainer
+##  <a name="colecontrolcontainer"></a>COleControlContainer::COleControlContainer
 
 构造 `COleControlContainer` 对象。
 
@@ -264,11 +264,11 @@ explicit COleControlContainer(CWnd* pWnd);
 
 ### <a name="remarks"></a>备注
 
-一旦成功创建对象后，将通过调用自定义控件站点添加`AttachControlSite`。
+成功创建对象后, 添加一个自定义控件站点, 同时调用`AttachControlSite`。
 
-##  <a name="createcontrol"></a>  COleControlContainer::CreateControl
+##  <a name="createcontrol"></a>COleControlContainer:: CreateControl
 
-创建由指定承载的 ActiveX 控件`COleControlSite`对象。
+创建由指定`COleControlSite`的对象承载的 ActiveX 控件。
 
 ```
 BOOL CreateControl(
@@ -306,34 +306,34 @@ BOOL CreateControl(
 控件的唯一类 ID。
 
 *lpszWindowName*<br/>
-指向要在控件中显示的文本的指针。 设置控件的标题或文本属性的值 （如果有）。 如果为 NULL，不会更改控件的标题或文本属性。
+指向要在控件中显示的文本的指针。 设置控件的标题或文本属性的值 (如果有)。 如果为 NULL, 则不更改控件的 "标题" 或 "文本" 属性。
 
 *dwStyle*<br/>
-窗口样式。 下列出的可用样式**备注**部分。
+窗口样式。 可用样式在 "**备注**" 部分下列出。
 
 *rect*<br/>
-指定控件的大小和位置。 它可以是`CRect`对象或`RECT`结构。
+指定控件的大小和位置。 它可以`CRect`是对象`RECT`或结构。
 
 *nID*<br/>
-指定控件的子窗口 id。
+指定控件的子窗口 ID。
 
 *pPersist*<br/>
-一个指向`CFile`包含控件的持久状态。 默认值为 NULL，指示该控件而不从任何持久性存储区中还原其状态初始化自身。 如果不为 NULL，它应该是一个指向`CFile`-派生对象，它包含控件的持久性数据的流或存储形式。 此数据可能已保存在客户端的上一个激活。 `CFile`可以包含其他数据，但必须在调用时将设置为持久性数据的第一个字节其读写指针`CreateControl`。
+指向的`CFile`指针, 该指针包含控件的持久状态。 默认值为 NULL, 指示控件将初始化自身, 而不从任何持久性存储还原其状态。 如果不为 NULL, 则它应为指向`CFile`派生对象的指针, 该对象包含控件的持久性数据 (以流或存储的形式)。 此数据可能已在以前的客户端激活中保存。 可以包含其他数据, 但必须在`CreateControl`调用时将其读写指针设置为持久性数据的第一个字节。 `CFile`
 
 *bStorage*<br/>
-指示是否在数据*pPersist*应解释为`IStorage`或`IStream`数据。 如果中的数据*pPersist*是存储*bStorage*应为 TRUE。 如果中的数据*pPersist*是一个流*bStorage*应为 FALSE。 默认值是 FALSE。
+指示*pPersist*中的数据是否应解释为`IStorage`或`IStream`数据。 如果*pPersist*中的数据是存储, 则*bStorage*应为 TRUE。 如果*pPersist*中的数据是流, 则*BSTORAGE*应为 FALSE。 默认值是 FALSE。
 
 *bstrLicKey*<br/>
-可选的许可证密钥数据。 仅用于创建控件需要运行时许可证密钥的情况下，需要此数据。 如果控件支持授权，则必须提供要成功完成的控件创建的许可证密钥。 默认值为 NULL。
+可选许可证密钥数据。 此数据仅用于创建需要运行时许可证密钥的控件。 如果控件支持授权, 则必须提供许可证密钥才能成功创建控件。 默认值为 NULL。
 
 *ppNewSite*<br/>
-指向将承载控件正在创建的现有控件站点的指针。 默认值为 NULL，指示该新控件站点将自动创建并附加到新的控件。
+一个指针, 指向将承载要创建的控件的现有控件站点。 默认值为 NULL, 表示将自动创建新的控制站点并将其附加到新控件。
 
 *ppt*<br/>
-一个指向`POINT`结构，其中包含控件的左上角。 值确定控件的大小*psize*。 *Ppt*并*psize*的值为指定的大小和位置的控件的可选方法。
+指向`POINT`结构的指针, 该结构包含控件的左上角。 控件的大小由*psize*的值确定。 *Ppt*和*psize*值是指定控件的大小和位置的可选方法。
 
 *psize*<br/>
-一个指向`SIZE`结构，其中包含控件的大小。 值确定左上角*ppt*。 *Ppt*并*psize*的值为指定的大小和位置的控件的可选方法。
+指向`SIZE`结构的指针, 该结构包含控件的大小。 左上角由*ppt*的值确定。 *Ppt*和*psize*值是指定控件的大小和位置的可选方法。
 
 ### <a name="return-value"></a>返回值
 
@@ -341,21 +341,21 @@ BOOL CreateControl(
 
 ### <a name="remarks"></a>备注
 
-Windows 的一个子集*dwStyle*支持标志`CreateControl`:
+仅支持`CreateControl`部分 Windows *dwStyle*标志:
 
-- WS_VISIBLE 创建初始可见的窗口。 如果您希望控件立即，像普通窗口可见，则必须填写。
+- WS_VISIBLE 创建一个最初可见的窗口。 如果希望立即显示控件 (如普通窗口), 则为必需。
 
-- WS_DISABLED 创建最初处于禁用状态的窗口。 被禁用的窗口不能接收来自用户的输入。 如果控件具有已启用属性可以设置。
+- WS_DISABLED 创建一个最初处于禁用状态的窗口。 禁用的窗口无法接收来自用户的输入。 如果控件具有 Enabled 属性, 则可以设置。
 
-- WS_BORDER 创建与细线边框的窗口。 如果控件具有 BorderStyle 属性可以设置。
+- WS_BORDER 创建一个具有细线边框的窗口。 如果控件具有 BorderStyle 属性, 则可以设置。
 
-- WS_GROUP 指定一组控件的第一个控件。 用户可以通过使用箭头键键盘焦点从一个控件组中更改为下一步。 定义与 WS_GROUP 样式后的第一个控件属于相同组的所有控件。 WS_GROUP 样式的下一个控件结束组，并启动下一个组。
+- WS_GROUP 指定一组控件的第一个控件。 用户可以使用方向键将键盘焦点从组中的一个控件更改为下一个控件。 在第一个控件属于同一组后, 所有用 WS_GROUP 样式定义的控件。 具有 WS_GROUP 样式的下一个控件将结束组并启动下一组。
 
-- WS_TABSTOP 指定一个在用户按 TAB 键时可以接收键盘焦点的控件。 按 TAB 键将键盘焦点更改到 WS_TABSTOP 样式的下一个控件。
+- WS_TABSTOP 指定当用户按 TAB 键时可接收键盘焦点的控件。 按 TAB 键会将键盘焦点更改为 WS_TABSTOP 样式的下一个控件。
 
-使用第二个重载来创建默认大小的控件。
+使用第二个重载创建默认大小的控件。
 
-##  <a name="createolefont"></a>  COleControlContainer::CreateOleFont
+##  <a name="createolefont"></a>COleControlContainer::CreateOleFont
 
 创建 OLE 字体。
 
@@ -366,11 +366,11 @@ void CreateOleFont(CFont* pFont);
 ### <a name="parameters"></a>参数
 
 *pFont*<br/>
-指向要使用的控件容器的字体的指针。
+一个指针, 指向控件容器使用的字体。
 
-##  <a name="finditem"></a>  COleControlContainer::FindItem
+##  <a name="finditem"></a>COleControlContainer::FindItem
 
-查找托管指定的项的自定义网站。
+查找承载指定项的自定义网站。
 
 ```
 virtual COleControlSite* FindItem(UINT nID) const;
@@ -383,11 +383,11 @@ virtual COleControlSite* FindItem(UINT nID) const;
 
 ### <a name="return-value"></a>返回值
 
-一个指向指定项的自定义站点。
+指向指定项的自定义站点的指针。
 
-##  <a name="freezeallevents"></a>  COleControlContainer::FreezeAllEvents
+##  <a name="freezeallevents"></a>COleControlContainer::FreezeAllEvents
 
-确定是否容器将忽略附加的控件站点中的事件，也不接受这些条款。
+确定容器是否将忽略附加的控制站点的事件或接受这些事件。
 
 ```
 void FreezeAllEvents(BOOL bFreeze);
@@ -396,16 +396,16 @@ void FreezeAllEvents(BOOL bFreeze);
 ### <a name="parameters"></a>参数
 
 *bFreeze*<br/>
-如果将处理事件，则非零值否则为 0。
+如果要处理事件, 则为非零值;否则为0。
 
 ### <a name="remarks"></a>备注
 
 > [!NOTE]
->  该控件不需要停止触发事件，如果该控件容器请求。 它可以继续激发，但控件容器将忽略所有后续事件。
+>  如果控件容器请求, 则不需要控件来停止激发事件。 它可以继续触发, 但所有后续事件都将被控件容器忽略。
 
-##  <a name="getambientprop"></a>  COleControlContainer::GetAmbientProp
+##  <a name="getambientprop"></a>COleControlContainer::GetAmbientProp
 
-检索指定的环境属性的值。
+检索指定环境属性的值。
 
 ```
 virtual BOOL GetAmbientProp(
@@ -417,21 +417,21 @@ virtual BOOL GetAmbientProp(
 ### <a name="parameters"></a>参数
 
 *pSite*<br/>
-一个指向从中检索环境属性的控件站点。
+指向要从中检索环境属性的控制站点的指针。
 
 *dispid*<br/>
-所需的环境属性的调度 ID。
+所需环境属性的调度 ID。
 
 *pVarResult*<br/>
-指向环境属性的值的指针。
+一个指针, 指向环境属性的值。
 
 ### <a name="return-value"></a>返回值
 
 如果成功，则不为 0；否则为 0。
 
-##  <a name="getdlgitem"></a>  COleControlContainer::GetDlgItem
+##  <a name="getdlgitem"></a>COleControlContainer::GetDlgItem
 
-检索指向在对话框中指定的控件或子窗口或其他窗口的指针。
+检索指向对话框或其他窗口中的指定控件或子窗口的指针。
 
 ```
 virtual CWnd* GetDlgItem(int nID) const;
@@ -444,18 +444,18 @@ virtual void GetDlgItem(
 ### <a name="parameters"></a>参数
 
 *nID*<br/>
-要检索的对话框项的标识符。
+要检索的对话项的标识符。
 
 *phWnd*<br/>
-指向对话框中指定的项的窗口对象的句柄的指针。
+一个指针, 指向指定的对话框项的窗口对象的句柄。
 
 ### <a name="return-value"></a>返回值
 
-指向对话框项的窗口的指针。
+指向对话框项窗口的指针。
 
-##  <a name="getdlgitemint"></a>  COleControlContainer::GetDlgItemInt
+##  <a name="getdlgitemint"></a>COleControlContainer::GetDlgItemInt
 
-检索给定控件的已翻译文本的值。
+检索给定控件的翻译后的文本值。
 
 ```
 virtual UINT GetDlgItemInt(
@@ -470,26 +470,26 @@ virtual UINT GetDlgItemInt(
 控件的标识符。
 
 *lpTrans*<br/>
-指向布尔变量来接收函数成功/失败值 （TRUE 表示成功，FALSE 表示失败）。
+一个指针, 指向接收函数成功/失败值的布尔变量 (TRUE 表示成功, FALSE 表示失败)。
 
 *bSigned*<br/>
-指定函数是否应检查负号开头的文本并返回一个有符号的整数值，如果它找到一个。 如果*bSigned*参数为 TRUE 时，指定要检索的值一个有符号的整数值，将返回值强制转换**int**类型。 若要获得扩展错误信息，请调用[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
+指定函数是否应检查开头的减号的文本, 并在找到有符号整数值时返回该整数值。 如果*bSigned*参数为 TRUE, 则指定要检索的值为有符号整数值, 并将返回值强制转换为**int**类型。 若要获取扩展的错误信息, 请调用[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，该变量指向*lpTrans*设置为 TRUE，返回值是控件文本的已翻译的值。
+如果成功, 则*lpTrans*指向的变量将设置为 TRUE, 并且返回值为控件文本的已转换值。
 
-如果函数失败，该变量指向*lpTrans*设置为 FALSE，返回值为零。 请注意，由于零是可能的已翻译的值，返回值为 0 不单独指示失败。
+如果函数失败, 则*lpTrans*指向的变量将设置为 FALSE, 并且返回值为零。 请注意, 由于零是可能转换后的值, 因此返回值0本身并不表示失败。
 
-如果*lpTrans*为 NULL，该函数返回不是成功还是失败有关的信息。
+如果*lpTrans*为 NULL, 则该函数不返回任何有关成功或失败的信息。
 
 ### <a name="remarks"></a>备注
 
-该函数将检索到的文本转换的最小化开头的文本的任何多余的空格，然后进行转换的十进制数字。 该函数会停止转换它达到文本的结尾或在遇到非数字字符时。
+函数通过去除文本开头的任何多余空格, 然后转换十进制数字来转换检索到的文本。 函数在到达文本末尾或遇到非数字字符时停止转换。
 
-如果已转换的值大于 INT_MAX （适用于有符号的数字） 或 UINT_MAX （适用于无符号数字），此函数将返回零。
+如果翻译后的值大于 INT_MAX (对于有符号数字) 或 UINT_MAX (对于无符号数字), 则此函数返回零。
 
-##  <a name="getdlgitemtext"></a>  COleControlContainer::GetDlgItemText
+##  <a name="getdlgitemtext"></a>COleControlContainer::GetDlgItemText
 
 检索给定控件的文本。
 
@@ -506,20 +506,20 @@ virtual int GetDlgItemText(
 控件的标识符。
 
 *lpStr*<br/>
-指向控件的文本指针。
+指向控件文本的指针。
 
 *nMaxCount*<br/>
-指定的最大长度，以字符为单位的字符串复制到由指向的缓冲区*lpStr*。 如果字符串的长度超过限制，将截断字符串。
+指定要复制到*lpStr*所指向的缓冲区中的字符串的最大长度 (以字符为字符)。 如果字符串的长度超出了限制, 则字符串将被截断。
 
 ### <a name="return-value"></a>返回值
 
-如果函数成功，返回的值指定字符复制到缓冲区，不包括终止 null 字符的数。
+如果函数成功, 则返回值指定复制到缓冲区的字符数, 不包括终止 null 字符。
 
-如果函数失败，则返回值为零。 若要获得扩展错误信息，请调用[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
+如果函数失败，则返回值为零。 若要获取扩展的错误信息, 请调用[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
 
-##  <a name="handlesetfocus"></a>  COleControlContainer::HandleSetFocus
+##  <a name="handlesetfocus"></a>COleControlContainer::HandleSetFocus
 
-确定是否容器处理 WM_SETFOCUS 消息。
+确定容器是否处理 WM_SETFOCUS 消息。
 
 ```
 virtual BOOL HandleSetFocus();
@@ -527,9 +527,9 @@ virtual BOOL HandleSetFocus();
 
 ### <a name="return-value"></a>返回值
 
-如果容器处理 WM_SETFOCUS 消息; 非零值否则为零。
+如果容器处理 WM_SETFOCUS 消息, 则为非零值;否则为零。
 
-##  <a name="handlewindowlessmessage"></a>  COleControlContainer::HandleWindowlessMessage
+##  <a name="handlewindowlessmessage"></a>COleControlContainer::HandleWindowlessMessage
 
 处理无窗口控件的窗口消息。
 
@@ -544,16 +544,16 @@ virtual BOOL HandleWindowlessMessage(
 ### <a name="parameters"></a>参数
 
 *message*<br/>
-窗口消息，由 Windows 提供的标识符。
+Windows 提供的窗口消息的标识符。
 
 *wParam*<br/>
-消息; 参数由 Windows 提供。 指定其他特定于消息的信息。 此参数的内容取决于的值*消息*参数。
+消息的参数;由 Windows 提供。 指定其他特定于消息的信息。 此参数的内容取决于*message*参数的值。
 
 *lParam*<br/>
-消息; 参数由 Windows 提供。 指定其他特定于消息的信息。 此参数的内容取决于的值*消息*参数。
+消息的参数;由 Windows 提供。 指定其他特定于消息的信息。 此参数的内容取决于*message*参数的值。
 
 *plResult*<br/>
-Windows 结果代码。 指定的消息处理结果，并取决于发送的消息。
+Windows 结果代码。 指定消息处理的结果, 并取决于所发送的消息。
 
 ### <a name="return-value"></a>返回值
 
@@ -561,11 +561,11 @@ Windows 结果代码。 指定的消息处理结果，并取决于发送的消�
 
 ### <a name="remarks"></a>备注
 
-重写此函数可自定义无窗口控件消息的处理。
+重写此函数以自定义无窗口控制消息的处理。
 
-##  <a name="isdlgbuttonchecked"></a>  COleControlContainer::IsDlgButtonChecked
+##  <a name="isdlgbuttonchecked"></a>COleControlContainer::IsDlgButtonChecked
 
-确定指定的按钮的状态。
+确定指定按钮的状态。
 
 ```
 virtual UINT IsDlgButtonChecked(int nIDButton) const;
@@ -578,19 +578,19 @@ virtual UINT IsDlgButtonChecked(int nIDButton) const;
 
 ### <a name="return-value"></a>返回值
 
-返回的值，从使用 BS_AUTOCHECKBOX、 BS_AUTORADIOBUTTON、 BS_AUTO3STATE、 BS_CHECKBOX、 BS_RADIOBUTTON 或 BS_3STATE 样式创建的按钮。 可以是以下各项之一：
+返回值, 通过使用 BS_AUTOCHECKBOX、BS_AUTORADIOBUTTON、BS_AUTO3STATE、BS_CHECKBOX、BS_RADIOBUTTON 或 BS_3STATE 样式创建的按钮。 可以是以下各项之一：
 
-- BST_CHECKED 按钮被选中。
+- 已选中 BST_CHECKED 按钮。
 
-- BST_INDETERMINATE 按钮为灰色，指示不确定状态 （仅适用于该按钮具有 BS_3STATE 或 BS_AUTO3STATE 样式的情况）。
+- BST_INDETERMINATE 按钮显示为灰色, 表示状态不确定 (仅当按钮具有 BS_3STATE 或 BS_AUTO3STATE 样式时才适用)。
 
-- BST_UNCHECKED 按钮已被清除。
+- BST_UNCHECKED 按钮已清除。
 
 ### <a name="remarks"></a>备注
 
-如果该按钮具有三个状态的控件，此成员函数将确定是否它灰显，选中，或都不。
+如果该按钮是三状态控件, 则成员函数将确定它是灰显还是选中, 或者两者都不是。
 
-##  <a name="m_crback"></a>  COleControlContainer::m_crBack
+##  <a name="m_crback"></a>COleControlContainer::m_crBack
 
 容器的背景色。
 
@@ -598,7 +598,7 @@ virtual UINT IsDlgButtonChecked(int nIDButton) const;
 COLORREF m_crBack;
 ```
 
-##  <a name="m_crfore"></a>  COleControlContainer::m_crFore
+##  <a name="m_crfore"></a>COleControlContainer::m_crFore
 
 容器的前景色。
 
@@ -606,39 +606,39 @@ COLORREF m_crBack;
 COLORREF m_crFore;
 ```
 
-##  <a name="m_listsitesorwnds"></a>  COleControlContainer::m_listSitesOrWnds
+##  <a name="m_listsitesorwnds"></a>COleControlContainer::m_listSitesOrWnds
 
-由该容器承载控件站点的列表。
+容器承载的控制站点的列表。
 
 ```
 CTypedPtrList<CPtrList, COleControlSiteOrWnd*> m_listSitesOrWnds;
 ```
 
-##  <a name="m_nwindowlesscontrols"></a>  COleControlContainer::m_nWindowlessControls
+##  <a name="m_nwindowlesscontrols"></a>COleControlContainer::m_nWindowlessControls
 
-无窗口控件承载的控件容器数。
+控件容器承载的无窗口控件的数目。
 
 ```
 int m_nWindowlessControls;
 ```
 
-##  <a name="m_polefont"></a>  COleControlContainer::m_pOleFont
+##  <a name="m_polefont"></a>COleControlContainer::m_pOleFont
 
-一个指向自定义控件站点的 OLE 字体。
+指向自定义控件网站的 OLE 字体的指针。
 
 ```
 LPFONTDISP m_pOleFont;
 ```
 
-##  <a name="m_psitecapture"></a>  COleControlContainer::m_pSiteCapture
+##  <a name="m_psitecapture"></a>COleControlContainer::m_pSiteCapture
 
-指向捕获控件站点。
+指向捕获控制站点的指针。
 
 ```
 COleControlSite* m_pSiteCapture;
 ```
 
-##  <a name="m_psitefocus"></a>  COleControlContainer::m_pSiteFocus
+##  <a name="m_psitefocus"></a>COleControlContainer::m_pSiteFocus
 
 指向当前具有输入焦点的控件站点的指针。
 
@@ -646,7 +646,7 @@ COleControlSite* m_pSiteCapture;
 COleControlSite* m_pSiteFocus;
 ```
 
-##  <a name="m_psiteuiactive"></a>  COleControlContainer::m_pSiteUIActive
+##  <a name="m_psiteuiactive"></a>COleControlContainer::m_pSiteUIActive
 
 指向就地激活的控件站点的指针。
 
@@ -654,23 +654,23 @@ COleControlSite* m_pSiteFocus;
 COleControlSite* m_pSiteUIActive;
 ```
 
-##  <a name="m_pwnd"></a>  COleControlContainer::m_pWnd
+##  <a name="m_pwnd"></a>COleControlContainer::m_pWnd
 
-指向与此容器关联的窗口对象的指针。
+指向与容器关联的窗口对象的指针。
 
 ```
 CWnd* m_pWnd;
 ```
 
-##  <a name="m_sitemap"></a>  COleControlContainer::m_siteMap
+##  <a name="m_sitemap"></a>COleControlContainer::m_siteMap
 
-站点图中。
+站点地图。
 
 ```
 CMapPtrToPtr m_siteMap;
 ```
 
-##  <a name="onpaint"></a>  COleControlContainer::OnPaint
+##  <a name="onpaint"></a>COleControlContainer:: OnPaint
 
 由框架调用以处理 WM_PAINT 请求。
 
@@ -681,19 +681,19 @@ virtual BOOL OnPaint(CDC* pDC);
 ### <a name="parameters"></a>参数
 
 *pDC*<br/>
-指向由容器使用的设备上下文的指针。
+指向容器使用的设备上下文的指针。
 
 ### <a name="return-value"></a>返回值
 
-如果该消息已处理; 非零值否则为零。
+如果消息已处理, 则为非零值;否则为零。
 
 ### <a name="remarks"></a>备注
 
-重写此函数可自定义绘制过程。
+重写此函数以自定义绘制过程。
 
-##  <a name="onuiactivate"></a>  COleControlContainer::OnUIActivate
+##  <a name="onuiactivate"></a>COleControlContainer::OnUIActivate
 
-由框架调用时控制站点中，指向*pSite*，之后，将为在就地激活。
+当由*pSite*指向的控制站点即将就地激活时, 由框架调用。
 
 ```
 virtual void OnUIActivate(COleControlSite* pSite);
@@ -702,15 +702,15 @@ virtual void OnUIActivate(COleControlSite* pSite);
 ### <a name="parameters"></a>参数
 
 *pSite*<br/>
-指向控件站点，将为就地激活的指针。
+指向要就地激活的控件站点的指针。
 
 ### <a name="remarks"></a>备注
 
-就地激活意味着容器的主菜单中将被替换为适当地复合菜单。
+就地激活意味着容器的主菜单被替换为就地复合菜单。
 
-##  <a name="onuideactivate"></a>  COleControlContainer::OnUIDeactivate
+##  <a name="onuideactivate"></a>COleControlContainer::OnUIDeactivate
 
-由框架调用时控制站点中，指向*pSite*，即将停用。
+当由*pSite*指向的控制站点即将停用时, 由框架调用。
 
 ```
 virtual void OnUIDeactivate(COleControlSite* pSite);
@@ -719,15 +719,15 @@ virtual void OnUIDeactivate(COleControlSite* pSite);
 ### <a name="parameters"></a>参数
 
 *pSite*<br/>
-指向控件站点将要停用的指针。
+指向要停用的控件站点的指针。
 
 ### <a name="remarks"></a>备注
 
-收到此通知后，容器应重新安装其用户界面，并获得焦点。
+收到此通知后, 容器应重新安装其用户界面并获得焦点。
 
-##  <a name="scrollchildren"></a>  COleControlContainer::ScrollChildren
+##  <a name="scrollchildren"></a>COleControlContainer::ScrollChildren
 
-从子窗口接收滚动消息时由框架调用。
+当从子窗口接收到滚动消息时由框架调用。
 
 ```
 virtual void ScrollChildren(
@@ -738,12 +738,12 @@ virtual void ScrollChildren(
 ### <a name="parameters"></a>参数
 
 *dx*<br/>
-沿 x 轴滚动量，以像素为单位。
+沿 x 轴滚动的量 (以像素为单位)。
 
 *dy*<br/>
-沿 y 轴滚动量，以像素为单位。
+沿 y 轴滚动的量 (以像素为单位)。
 
-##  <a name="senddlgitemmessage"></a>  COleControlContainer::SendDlgItemMessage
+##  <a name="senddlgitemmessage"></a>COleControlContainer::SendDlgItemMessage
 
 将消息发送到指定控件。
 
@@ -769,9 +769,9 @@ virtual LRESULT SendDlgItemMessage(
 *lParam*<br/>
 指定其他特定于消息的信息。
 
-##  <a name="setdlgitemint"></a>  COleControlContainer::SetDlgItemInt
+##  <a name="setdlgitemint"></a>COleControlContainer::SetDlgItemInt
 
-在对话框中指定的整数值的字符串表示形式中设置控件的文本。
+将对话框中控件的文本设置为指定整数值的字符串表示形式。
 
 ```
 virtual void SetDlgItemInt(
@@ -789,11 +789,11 @@ virtual void SetDlgItemInt(
 要显示的整数值。
 
 *bSigned*<br/>
-指定是否*n 值*签名或未签名的参数。 如果此参数为 TRUE， *n 值*进行签名。 如果此参数为 TRUE 并*n 值*小于零，放置在登录之前在字符串中的第一个数字相减。 如果此参数为 FALSE 时， *n 值*是无符号。
+指定*n 值*参数是否为已签名或未签名。 如果此参数为 TRUE, 则对*n 值*进行签名。 如果此参数为 TRUE 且*n 值*小于零, 则在字符串中的第一个数字前面放置一个减号。 如果此参数为 FALSE, 则*n 值*为无符号。
 
 ##  <a name="setdlgitemtext"></a>  COleControlContainer::SetDlgItemText
 
-设置指定的控件，使用中包含的文本的文本*lpszString*。
+使用*lpszString*中包含的文本设置指定控件的文本。
 
 ```
 virtual void SetDlgItemText(
@@ -807,7 +807,7 @@ virtual void SetDlgItemText(
 控件的标识符。
 
 *lpszString*<br/>
-指向控件的文本指针。
+指向控件文本的指针。
 
 ## <a name="see-also"></a>请参阅
 

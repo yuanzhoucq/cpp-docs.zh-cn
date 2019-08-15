@@ -25,19 +25,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlTransactionManager class
 ms.assetid: b01732dc-1d16-4b42-bfac-b137fca2b740
-ms.openlocfilehash: 031d72903d72af77f6929072e4605d32d81585a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d72867eaa449a20e676d4eddc4c94c02090334e5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260049"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497722"
 ---
 # <a name="catltransactionmanager-class"></a>CAtlTransactionManager 类
 
-CAtlTransactionManager 类提供了对内核事务管理器 (KTM) 函数的包装器。
+CAtlTransactionManager 类提供内核事务管理器 (KTM) 函数的包装器。
 
 > [!IMPORTANT]
->  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
+>  此类及其成员不能用于在 Windows 运行时中执行的应用程序。
 
 ## <a name="syntax"></a>语法
 
@@ -58,28 +58,28 @@ class CAtlTransactionManager;
 
 |名称|描述|
 |----------|-----------------|
-|[关闭](#close)|关闭其中一个事务句柄。|
-|[Commit](#commit)|该事务被提交的请求。|
+|[关闭](#close)|关闭事务句柄。|
+|[立即](#commit)|请求提交事务。|
 |[创建](#create)|创建事务句柄。|
-|[CreateFile](#createfile)|创建或打开文件、 文件流或事务处理操作的目录。|
-|[DeleteFile](#deletefile)|作为事务处理操作中删除一个现有文件。|
-|[FindFirstFile](#findfirstfile)|目录中搜索的文件或子目录作为事务处理操作。|
-|[GetFileAttributes](#getfileattributes)|事务处理操作的形式检索指定的文件或目录的文件系统属性。|
-|[GetFileAttributesEx](#getfileattributesex)|事务处理操作的形式检索指定的文件或目录的文件系统属性。|
+|[CreateFile](#createfile)|创建文件、文件流或目录作为事务处理操作。|
+|[DeleteFile](#deletefile)|删除作为事务处理操作的现有文件。|
+|[FindFirstFile](#findfirstfile)|在目录中搜索文件或子目录作为事务处理操作。|
+|[GetFileAttributes](#getfileattributes)|检索指定文件或目录的文件系统属性作为事务处理操作。|
+|[GetFileAttributesEx](#getfileattributesex)|检索指定文件或目录的文件系统属性作为事务处理操作。|
 |[GetHandle](#gethandle)|返回事务句柄。|
-|[IsFallback](#isfallback)|确定是否启用回退的调用。|
-|[MoveFile](#movefile)|将移动现有文件或目录，包括其子元素，作为事务处理操作。|
-|[RegCreateKeyEx](#regcreatekeyex)|创建指定的注册表项并将其与事务关联。 如果该键已存在，该函数将打开它。|
-|[RegDeleteKey](#regdeletekey)|作为事务处理操作，从注册表指定特定于平台的视图中删除子项和它的值。|
-|[RegOpenKeyEx](#regopenkeyex)|打开指定的注册表项并将其与事务关联。|
-|[Rollback](#rollback)|事务被回滚的请求。|
+|[IsFallback](#isfallback)|确定是否启用回退调用。|
+|[MoveFile](#movefile)|将现有文件或目录 (包括其子级) 作为事务处理操作移动。|
+|[RegCreateKeyEx](#regcreatekeyex)|创建指定的注册表项, 并将其与事务关联。 如果该键已存在, 则该函数将打开它。|
+|[RegDeleteKey](#regdeletekey)|从指定的特定于平台的注册表视图中删除子项及其值作为事务处理操作。|
+|[RegOpenKeyEx](#regopenkeyex)|打开指定的注册表项, 并将其与事务关联。|
+|[回退](#rollback)|请求回滚事务。|
 |[SetFileAttributes](#setfileattributes)|将文件或目录的属性设置为事务处理操作。|
 
 ### <a name="protected-data-members"></a>受保护的数据成员
 
 |name|描述|
 |----------|-----------------|
-|[m_bFallback](#m_bfallback)|如果回退支持，则为 TRUEFALSE 否则为。|
+|[m_bFallback](#m_bfallback)|如果支持回退, 则为 TRUE;否则为 FALSE。|
 |[m_hTransaction](#m_htransaction)|事务句柄。|
 
 ## <a name="remarks"></a>备注
@@ -90,7 +90,7 @@ class CAtlTransactionManager;
 
 ## <a name="requirements"></a>要求
 
-**标头：** atltransactionmanager.h
+**标头:** atltransactionmanager
 
 ##  <a name="dtor"></a>  ~CAtlTransactionManager
 
@@ -102,7 +102,7 @@ virtual ~CAtlTransactionManager();
 
 ### <a name="remarks"></a>备注
 
-在正常处理中，事务是自动提交并关闭。 如果异常展开期间调用的析构函数，是回滚事务并将其关闭。
+在正常处理过程中, 将自动提交和关闭事务。 如果在异常展开期间调用了析构函数, 则事务将回滚并关闭。
 
 ##  <a name="catltransactionmanager"></a>  CAtlTransactionManager
 
@@ -115,14 +115,14 @@ CAtlTransactionManager(BOOL bFallback = TRUE, BOOL bAutoCreateTransaction = TRUE
 ### <a name="parameters"></a>参数
 
 *bFallback*<br/>
-TRUE 表示支持回退。 如果事务处理的函数失败，类会自动调用"非事务性"函数。 FALSE 表示未"回退"的调用。
+TRUE 表示支持回退。 如果事务处理函数失败, 类将自动调用 "非事务性" 函数。 FALSE 表示没有 "回退" 调用。
 
 *bAutoCreateTransaction*<br/>
-TRUE 表示的构造函数中自动创建的事务处理程序。 FALSE 表示不是。
+TRUE 表示在构造函数中自动创建事务处理程序。 FALSE 指示它不是。
 
 ### <a name="remarks"></a>备注
 
-##  <a name="close"></a>  关闭
+##  <a name="close"></a>封闭
 
 关闭事务句柄。
 
@@ -136,11 +136,11 @@ inline BOOL Close();
 
 ### <a name="remarks"></a>备注
 
-此包装器调用`CloseHandle`函数。 自动在析构函数中调用该方法。
+此包装器调用`CloseHandle`函数。 方法自动在析构函数中调用。
 
-##  <a name="commit"></a>  提交
+##  <a name="commit"></a>立即
 
-该事务被提交的请求。
+请求提交事务。
 
 ```
 inline BOOL Commit();
@@ -152,9 +152,9 @@ inline BOOL Commit();
 
 ### <a name="remarks"></a>备注
 
-此包装器调用`CommitTransaction`函数。 自动在析构函数中调用该方法。
+此包装器调用`CommitTransaction`函数。 方法自动在析构函数中调用。
 
-##  <a name="create"></a>  创建
+##  <a name="create"></a>创建
 
 创建事务句柄。
 
@@ -168,11 +168,11 @@ inline BOOL Create();
 
 ### <a name="remarks"></a>备注
 
-此包装器调用`CreateTransaction`函数。 检查它的
+此包装器调用`CreateTransaction`函数。 检查
 
-##  <a name="createfile"></a>  CreateFile
+##  <a name="createfile"></a>CreateFile
 
-创建或打开文件、 文件流或事务处理操作的目录。
+创建文件、文件流或目录作为事务处理操作。
 
 ```
 inline HANDLE CreateFile(
@@ -188,25 +188,25 @@ inline HANDLE CreateFile(
 ### <a name="parameters"></a>参数
 
 *lpFileName*<br/>
-若要创建或打开的对象的名称。
+要创建或打开的对象的名称。
 
 *dwDesiredAccess*<br/>
-对可归纳如下读取、 写入、 两个，或都不 （零） 的对象的访问。 最常使用的值为 GENERIC_READ、 generic_write 外，或两者：GENERIC_READ &#124; GENERIC_WRITE.
+对对象的访问, 可将其汇总为读取、写入和/或两者 (零)。 最常使用的值是 GENERIC_READ、GENERIC_WRITE 或 both:GENERIC_READ &#124; GENERIC_WRITE.
 
 *dwShareMode*<br/>
-一个对象，它可以是读取、 写入，同时，删除，所有这些操作，或无共享模式：0，FILE_SHARE_DELETE，FILE_SHARE_READ，FILE_SHARE_WRITE。
+对象的共享模式, 可以是读取、写入、删除、删除、所有这些操作, 也可以无:0、FILE_SHARE_DELETE、FILE_SHARE_READ、FILE_SHARE_WRITE。
 
 *lpSecurityAttributes*<br/>
-指向包含可选的安全描述符，并且还确定可以由子进程继承返回的句柄的 SECURITY_ATTRIBUTES 结构的指针。 参数可以为 NULL。
+指向 SECURITY_ATTRIBUTES 结构的指针, 该结构包含可选的安全描述符, 还确定是否可以由子进程继承返回的句柄。 参数可以为 NULL。
 
 *dwCreationDisposition*<br/>
-要在存在并且不存在的文件上执行的操作。 此参数必须是以下值，不能组合之一：CREATE_ALWAYS、 CREATE_NEW、 OPEN_ALWAYS、 OPEN_EXISTING 或 TRUNCATE_EXISTING。
+对存在但不存在的文件执行的操作。 此参数必须是以下值之一, 这些值无法组合:CREATE_ALWAYS、CREATE_NEW、OPEN_ALWAYS、OPEN_EXISTING 或 TRUNCATE_EXISTING。
 
 *dwFlagsAndAttributes*<br/>
-文件属性和标志。 此参数可以包括可用的文件属性 （FILE_ATTRIBUTE_ *） 的任意组合。 所有其他文件属性重写 FILE_ATTRIBUTE_NORMAL。 此参数还可以包含标志的组合 (FILE_FLAG_\*) 进行缓冲行为的控制，访问模式和其他专用的标志。 它们与任何 FILE_ATTRIBUTE_ 结合\*值。
+文件属性和标志。 此参数可以包含可用文件属性 (FILE_ATTRIBUTE_ *) 的任意组合。 所有其他文件特性都将重写 FILE_ATTRIBUTE_NORMAL。 此参数还可以包含标志 (FILE_FLAG_\*) 的组合, 用于控制缓冲行为、访问模式和其他特殊用途的标志。 这些值结合了任何\* FILE_ATTRIBUTE_ 值。
 
 *hTemplateFile*<br/>
-有效句柄 GENERIC_READ 访问权限的模板文件。 模板文件提供文件属性和为其创建的文件的扩展的属性。 此参数可以为 NULL。
+具有 GENERIC_READ 访问权限的模板文件的有效句柄。 模板文件提供要创建的文件的文件属性和扩展属性。 此参数可以为 NULL。
 
 ### <a name="return-value"></a>返回值
 
@@ -218,7 +218,7 @@ inline HANDLE CreateFile(
 
 ##  <a name="deletefile"></a>  DeleteFile
 
-作为事务处理操作中删除一个现有文件。
+删除作为事务处理操作的现有文件。
 
 ```
 inline BOOL DeleteFile(LPCTSTR lpFileName);
@@ -233,9 +233,9 @@ inline BOOL DeleteFile(LPCTSTR lpFileName);
 
 此包装器调用`DeleteFileTransacted`函数。
 
-##  <a name="findfirstfile"></a>  FindFirstFile
+##  <a name="findfirstfile"></a>FindFirstFile
 
-目录中搜索的文件或子目录作为事务处理操作。
+在目录中搜索文件或子目录作为事务处理操作。
 
 ```
 inline HANDLE FindFirstFile(
@@ -246,22 +246,22 @@ inline HANDLE FindFirstFile(
 ### <a name="parameters"></a>参数
 
 *lpFileName*<br/>
-目录或路径，以及要搜索的文件名称。 此参数可以包含通配符字符，如星号 （*） 或问号 （）。
+要搜索的目录或路径以及文件名。 此参数可以包含通配符, 如星号 (*) 或问号 ()。
 
 *pNextInfo*<br/>
-指向接收找到的文件或子目录的相关信息的 WIN32_FIND_DATA 结构的指针。
+指向 WIN32_FIND_DATA 结构的指针, 该结构接收找到的文件或子目录的相关信息。
 
 ### <a name="return-value"></a>返回值
 
-如果函数成功，返回值是对的后续调用中使用的搜索句柄`FindNextFile`或`FindClose`。 如果函数失败，或找不到文件中的搜索字符串*lpFileName*参数，则返回值为 INVALID_HANDLE_VALUE。
+如果该函数成功, 则返回值是在对`FindNextFile`或`FindClose`的后续调用中使用的搜索句柄。 如果函数在*lpFileName*参数的搜索字符串中未能找到文件, 则返回值为 INVALID_HANDLE_VALUE。
 
 ### <a name="remarks"></a>备注
 
 此包装器调用`FindFirstFileTransacted`函数。
 
-##  <a name="getfileattributes"></a>  GetFileAttributes
+##  <a name="getfileattributes"></a>GetFileAttributes
 
-事务处理操作的形式检索指定的文件或目录的文件系统属性。
+检索指定文件或目录的文件系统属性作为事务处理操作。
 
 ```
 inline DWORD GetFileAttributes(LPCTSTR lpFileName);
@@ -278,7 +278,7 @@ inline DWORD GetFileAttributes(LPCTSTR lpFileName);
 
 ##  <a name="getfileattributesex"></a>  GetFileAttributesEx
 
-事务处理操作的形式检索指定的文件或目录的文件系统属性。
+检索指定文件或目录的文件系统属性作为事务处理操作。
 
 ```
 inline BOOL GetFileAttributesEx(
@@ -296,7 +296,7 @@ inline BOOL GetFileAttributesEx(
 要检索的属性信息的级别。
 
 *lpFileInformation*<br/>
-指向接收属性信息的缓冲区的指针。 存储到此缓冲区的属性信息的类型确定的值*fInfoLevelId*。 如果*fInfoLevelId*参数是 GetFileExInfoStandard，则此参数指向 WIN32_FILE_ATTRIBUTE_DATA 结构。
+指向接收属性信息的缓冲区的指针。 存储在此缓冲区中的属性信息的类型由*fInfoLevelId*的值确定。 如果*fInfoLevelId*参数为 GetFileExInfoStandard, 则此参数指向 WIN32_FILE_ATTRIBUTE_DATA 结构。
 
 ### <a name="remarks"></a>备注
 
@@ -312,13 +312,13 @@ HANDLE GetHandle() const;
 
 ### <a name="return-value"></a>返回值
 
-返回一个类的事务句柄。 如果返回 NULL`CAtlTransactionManager`未附加到一个句柄。
+返回类的事务句柄。 如果`CAtlTransactionManager`未附加到句柄, 则返回 NULL。
 
 ### <a name="remarks"></a>备注
 
-##  <a name="isfallback"></a>  IsFallback
+##  <a name="isfallback"></a>IsFallback
 
-确定是否启用回退的调用。
+确定是否启用回退调用。
 
 ```
 BOOL IsFallback() const;
@@ -326,13 +326,13 @@ BOOL IsFallback() const;
 
 ### <a name="return-value"></a>返回值
 
-类支持回退调用为返回 TRUE。 FALSE 否则为。
+如果类支持回退调用, 则返回 TRUE。 否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
 ##  <a name="m_bfallback"></a>  m_bFallback
 
-如果回退支持，则为 TRUEFALSE 否则为。
+如果支持回退, 则为 TRUE;否则为 FALSE。
 
 ```
 BOOL m_bFallback;
@@ -352,7 +352,7 @@ HANDLE m_hTransaction;
 
 ##  <a name="movefile"></a>  MoveFile
 
-将移动现有文件或目录，包括其子元素，作为事务处理操作。
+将现有文件或目录 (包括其子级) 作为事务处理操作移动。
 
 ```
 inline BOOL MoveFile(LPCTSTR lpOldFileName, LPCTSTR lpNewFileName);
@@ -361,18 +361,18 @@ inline BOOL MoveFile(LPCTSTR lpOldFileName, LPCTSTR lpNewFileName);
 ### <a name="parameters"></a>参数
 
 *lpOldFileName*<br/>
-当前的现有文件或本地计算机上的目录名称。
+本地计算机上现有文件或目录的当前名称。
 
 *lpNewFileName*<br/>
-文件或目录的新名称。 此名称必须已存在。 一个新的文件可能位于不同的文件系统或驱动器。 新目录必须位于同一个驱动器上。
+文件或目录的新名称。 此名称不能已存在。 新文件可能位于不同的文件系统或驱动器上。 新目录必须位于同一驱动器上。
 
 ### <a name="remarks"></a>备注
 
 此包装器调用`MoveFileTransacted`函数。
 
-##  <a name="regcreatekeyex"></a>  RegCreateKeyEx
+##  <a name="regcreatekeyex"></a>RegCreateKeyEx
 
-创建指定的注册表项并将其与事务关联。 如果该键已存在，该函数将打开它。
+创建指定的注册表项, 并将其与事务关联。 如果该键已存在, 则该函数将打开它。
 
 ```
 inline LSTATUS RegCreateKeyEx(
@@ -390,43 +390,43 @@ inline LSTATUS RegCreateKeyEx(
 ### <a name="parameters"></a>参数
 
 *hKey*<br/>
-打开注册表项句柄。
+打开的注册表项的句柄。
 
 *lpSubKey*<br/>
-此函数将打开或创建一个子项的名称。
+此函数打开或创建的子项的名称。
 
 *dwReserved*<br/>
-此参数保留并必须为零。
+此参数为保留参数, 必须为零。
 
 *lpClass*<br/>
-此密钥的用户定义的类。 可能会忽略此参数。 此参数可以为 NULL。
+此键的用户定义类。 此参数可能会被忽略。 此参数可以为 NULL。
 
 *dwOptions*<br/>
-此参数可以是下列值之一：REG_OPTION_BACKUP_RESTORE、 REG_OPTION_NON_VOLATILE 或 REG_OPTION_VOLATILE。
+此参数可以是下列值之一:REG_OPTION_BACKUP_RESTORE、REG_OPTION_NON_VOLATILE 或 REG_OPTION_VOLATILE。
 
 *samDesired*<br/>
-一个屏蔽，它指定密钥的访问权限。
+指定密钥的访问权限的掩码。
 
 *lpSecurityAttributes*<br/>
-指向 SECURITY_ATTRIBUTES 结构，用于确定返回的句柄能否由子进程继承。 如果*lpSecurityAttributes*为 NULL，不能继承句柄。
+指向 SECURITY_ATTRIBUTES 结构的指针, 该结构确定返回的句柄是否可以由子进程继承。 如果*lpSecurityAttributes*为 NULL, 则不能继承句柄。
 
 *phkResult*<br/>
-指向一个变量来接收打开或创建密钥的句柄的指针。 如果键不是预定义的注册表项之一，则调用`RegCloseKey`函数使用句柄完成。
+指向一个变量的指针, 该变量接收已打开或已创建的键的句柄。 如果该密钥不是预定义的注册表项之一, 请在`RegCloseKey`使用完该句柄后调用该函数。
 
 *lpdwDisposition*<br/>
-一个指向一个变量来接收以下 disposition 值之一：REG_CREATED_NEW_KEY 或 REG_OPENED_EXISTING_KEY。
+指向一个变量的指针, 该变量接收以下某个处置值:REG_CREATED_NEW_KEY 或 REG_OPENED_EXISTING_KEY。
 
 ### <a name="return-value"></a>返回值
 
-如果函数成功，返回值为 ERROR_SUCCESS。 如果函数失败，返回值是在 Winerror.h 中定义一个非零错误代码。
+如果该函数成功, 则返回值为 ERROR_SUCCESS。 如果函数失败, 则返回值为 Winerror.h 中定义的非零错误代码。
 
 ### <a name="remarks"></a>备注
 
 此包装器调用`RegCreateKeyTransacted`函数。
 
-##  <a name="regdeletekey"></a>  RegDeleteKey
+##  <a name="regdeletekey"></a>RegDeleteKey
 
-作为事务处理操作，从注册表指定特定于平台的视图中删除子项和它的值。
+从指定的特定于平台的注册表视图中删除子项及其值作为事务处理操作。
 
 ```
 inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
@@ -436,20 +436,20 @@ inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
 
 |参数|描述|
 |---------------|-----------------|
-|*hKey*|打开注册表项句柄。|
-|*lpSubKey*|要删除的键的名称。|
+|*hKey*|打开的注册表项的句柄。|
+|*lpSubKey*|要删除的密钥的名称。|
 
 ### <a name="return-value"></a>返回值
 
-如果函数成功，返回值为 ERROR_SUCCESS。 如果函数失败，返回值是在 Winerror.h 中定义一个非零错误代码。
+如果该函数成功, 则返回值为 ERROR_SUCCESS。 如果函数失败, 则返回值为 Winerror.h 中定义的非零错误代码。
 
 ### <a name="remarks"></a>备注
 
 此包装器调用`RegDeleteKeyTransacted`函数。
 
-##  <a name="regopenkeyex"></a>  RegOpenKeyEx
+##  <a name="regopenkeyex"></a>RegOpenKeyEx
 
-打开指定的注册表项并将其与事务关联。
+打开指定的注册表项, 并将其与事务关联。
 
 ```
 inline LSTATUS RegOpenKeyEx(
@@ -463,31 +463,31 @@ inline LSTATUS RegOpenKeyEx(
 ### <a name="parameters"></a>参数
 
 *hKey*<br/>
-打开注册表项句柄。
+打开的注册表项的句柄。
 
 *lpSubKey*<br/>
-若要打开的注册表子项的名称。
+要打开的注册表子项的名称。
 
 *ulOptions*<br/>
-此参数保留并必须为零。
+此参数为保留参数, 必须为零。
 
 *samDesired*<br/>
-一个屏蔽，它指定密钥的访问权限。
+指定密钥的访问权限的掩码。
 
 *phkResult*<br/>
-指向一个变量来接收打开或创建密钥的句柄的指针。 如果键不是预定义的注册表项之一，则调用`RegCloseKey`函数使用句柄完成。
+指向一个变量的指针, 该变量接收已打开或已创建的键的句柄。 如果该密钥不是预定义的注册表项之一, 请在`RegCloseKey`使用完该句柄后调用该函数。
 
 ### <a name="return-value"></a>返回值
 
-如果函数成功，返回值为 ERROR_SUCCESS。 如果函数失败，返回值是在 Winerror.h 中定义一个非零错误代码
+如果该函数成功, 则返回值为 ERROR_SUCCESS。 如果函数失败, 则返回值为 Winerror.h 中定义的非零错误代码
 
 ### <a name="remarks"></a>备注
 
 此包装器调用`RegOpenKeyTransacted`函数。
 
-##  <a name="rollback"></a>  Rollback
+##  <a name="rollback"></a>回退
 
-事务被回滚的请求。
+请求回滚事务。
 
 ```
 inline BOOL Rollback();
@@ -501,7 +501,7 @@ inline BOOL Rollback();
 
 此包装器调用`RollbackTransaction`函数。
 
-##  <a name="setfileattributes"></a>  SetFileAttributes
+##  <a name="setfileattributes"></a>SetFileAttributes
 
 将文件或目录的属性设置为事务处理操作。
 
@@ -515,7 +515,7 @@ inline BOOL SetFileAttributes(LPCTSTR lpFileName, DWORD dwAttributes);
 文件或目录的名称。
 
 *dwAttributes*<br/>
-若要为文件设置文件属性。 有关详细信息，请参阅[SetFileAttributesTransacted](/windows/desktop/api/winbase/nf-winbase-setfileattributestransacteda)。
+要为文件设置的文件特性。 有关详细信息, 请参阅[SetFileAttributesTransacted](/windows/win32/api/winbase/nf-winbase-setfileattributestransactedw)。
 
 ### <a name="remarks"></a>备注
 

@@ -10,18 +10,18 @@ helpviewer_keywords:
 - based pointers
 - pointers, based
 ms.assetid: 1e5f2e96-c52e-4738-8e14-87278681205e
-ms.openlocfilehash: 771d3ee132e4cd63499fec886ef9f7cd06ec0260
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a0435aa89e4cf744a5bc3c6dc72a715ed55f954
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393956"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498786"
 ---
 # <a name="based-pointers-c"></a>基指针 (C++)
 
 **Microsoft 专用**
 
-**__Based**关键字可以声明基于指针 （是从现有指针的偏移量的指针） 的指针。
+**__Based**关键字允许你根据指针 (作为来自现有指针的偏移量的指针) 声明指针。
 
 ## <a name="syntax"></a>语法
 
@@ -32,9 +32,9 @@ type __based( base ) declarator
 
 ## <a name="remarks"></a>备注
 
-基于指针地址的指针是唯一的形式 **__based**关键字在 32 位或 64 位编译中有效。 对于 Microsoft 32 位 C/C++ 编译器，基指针是相对于 32 位指针基的 32 位偏移量。 一个针对 64 位环境的类似限制保留，其中基指针是相对于 64 位基的 64 位偏移量。
+基于指针地址的指针是在32位或64位编译中唯一有效的 **__based**关键字形式。 对于 Microsoft 32 位 C/C++ 编译器，基指针是相对于 32 位指针基的 32 位偏移量。 一个针对 64 位环境的类似限制保留，其中基指针是相对于 64 位基的 64 位偏移量。
 
-基于指针的指针的用途之一是用于包含指针的永久标识符。 可将包含基于指针的指针的链接列表保存到磁盘，然后重新加载到内存中的另一个位置，并且指针保持有效。 例如：
+基于指针的指针的用途之一是用于包含指针的永久标识符。 可将包含基于指针的指针的链接列表保存到磁盘，然后重新加载到内存中的另一个位置，并且指针保持有效。 例如:
 
 ```cpp
 // based_pointers1.cpp
@@ -49,11 +49,11 @@ struct llist_t {
 将指针 `vpBuffer` 分配给程序中后面某个时间点分配的内存地址。 相对于 `vpBuffer` 的值重新定位链接的列表。
 
 > [!NOTE]
->  此外可以通过实现保留包含指针的标识符[内存映射文件](/windows/desktop/Memory/file-mapping)。
+>  还可以通过使用[内存映射文件](/windows/win32/Memory/file-mapping)来保存包含指针的标识符。
 
 当取消对基指针的引用时，必须显式指定基或通过声明隐式公开基。
 
-与以前版本的兼容性 **_based**是的同义词 **__based**除非编译器选项[/Za\(禁用语言扩展)](../build/reference/za-ze-disable-language-extensions.md)是指定。
+为了与早期版本兼容, **_based**为 **__based**的同义词, 除非指定编译器[选项\(/za 禁用语言扩展)](../build/reference/za-ze-disable-language-extensions.md) 。
 
 ## <a name="example"></a>示例
 

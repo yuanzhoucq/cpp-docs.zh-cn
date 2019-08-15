@@ -44,18 +44,18 @@ helpviewer_keywords:
 - _InterlockedDecrement64_nf intrinsic
 - InterlockedDecrement_rel intrinsic
 ms.assetid: 5268fce3-86b5-4b2b-b96c-2e531a3fb9b5
-ms.openlocfilehash: 525c40f4260d59f370f0580d2cb7d9e8f184ee4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43bf7a9b788c176490ec3fe08e370708eaf000ce
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396751"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509406"
 ---
-# <a name="interlockeddecrement-intrinsic-functions"></a>_InterlockedDecrement 内部函数
+# <a name="_interlockeddecrement-intrinsic-functions"></a>_InterlockedDecrement 内部函数
 
 **Microsoft 专用**
 
-提供了编译器内部函数支持 Win32 Windows SDK [InterlockedDecrement](/windows/desktop/api/winnt/nf-winnt-interlockeddecrement)函数。
+为 Win32 Windows SDK [InterlockedDecrement](/windows/win32/api/winnt/nf-winnt-interlockeddecrement)函数提供编译器内部函数支持。
 
 ## <a name="syntax"></a>语法
 
@@ -101,7 +101,7 @@ __int64 _InterlockedDecrement64_nf(
 #### <a name="parameters"></a>参数
 
 *lpAddend*<br/>
-[in、 out]指向要递减的变量。
+[in, out]指向要递减的变量的指针。
 
 ## <a name="return-value"></a>返回值
 
@@ -111,10 +111,10 @@ __int64 _InterlockedDecrement64_nf(
 
 |内部函数|体系结构|
 |---------------|------------------|
-|`_InterlockedDecrement`, `_InterlockedDecrement16`, `_InterlockedDecrement64`|x86、 ARM、 x64|
+|`_InterlockedDecrement`, `_InterlockedDecrement16`, `_InterlockedDecrement64`|x86、ARM、x64|
 |`_InterlockedDecrement_acq`, `_InterlockedDecrement_rel`, `_InterlockedDecrement_nf`, `_InterlockedDecrement16_acq`, `_InterlockedDecrement16_rel`, `_InterlockedDecrement16_nf`, `_InterlockedDecrement64_acq`, `_InterlockedDecrement64_rel`, `_InterlockedDecrement64_nf`,|ARM|
 
-**标头文件** \<intrin.h >
+**标头文件**\<intrin.h >
 
 ## <a name="remarks"></a>备注
 
@@ -124,7 +124,7 @@ __int64 _InterlockedDecrement64_nf(
 
 ARM 平台上，如果需要（例如在临界区的起点和终点）获取和发布语义，可以使用带 `_acq` 和 `_rel` 后缀的函数。 带 `_nf`（“无围墙”）后缀的内部函数不能充当内存屏障。
 
-由 `lpAddend` 参数指向的变量必须与 32 位边界对齐；否则，此函数在多处理器 x86 系统和任何非 x86 系统上将失效。 有关详细信息，请参阅[对齐](../cpp/align-cpp.md)。
+由 `lpAddend` 参数指向的变量必须与 32 位边界对齐；否则，此函数在多处理器 x86 系统和任何非 x86 系统上将失效。 有关详细信息, 请参阅[align](../cpp/align-cpp.md)。
 
 这些例程只能用作内部函数。
 

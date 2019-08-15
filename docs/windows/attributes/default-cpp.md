@@ -1,5 +1,5 @@
 ---
-title: 默认值 (C++ COM 属性)
+title: 默认值C++ (COM 特性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.default
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - attributes [C#], default attribute
 - defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
-ms.openlocfilehash: c6448b00fef50a7654816a2c39af2943db12d314
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 291e16ad0967acd1869874fcc9fa6eb5529e4b44
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148076"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501684"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -33,17 +33,17 @@ ms.locfileid: "62148076"
 如果未指定默认接口，则第一个出现的非源接口用作默认接口。
 
 *interface2*<br/>
-（可选）默认源接口。 你还必须使用 [source](source-cpp.md) 属性指定此接口。
+可有可无默认源接口。 你还必须使用 [source](source-cpp.md) 属性指定此接口。
 
 如果未指定默认源接口，则第一个源接口用作默认接口。
 
 ## <a name="remarks"></a>备注
 
-**default** C++ 属性具有与 [default](/windows/desktop/Midl/default) MIDL 属性相同的功能。 **default** 属性还可以与 [case](case-cpp.md) 属性结合使用。
+**default** C++ 属性具有与 [default](/windows/win32/Midl/default) MIDL 属性相同的功能。 **default** 属性还可以与 [case](case-cpp.md) 属性结合使用。
 
 ## <a name="example"></a>示例
 
-下面的代码演示如何**默认**组件类的定义中用于指定`ICustomDispatch`为默认可编程性接口：
+下面的代码演示如何在组件类的定义中使用**default**来指定`ICustomDispatch`为默认可编程性接口:
 
 ```cpp
 // cpp_attr_ref_default.cpp
@@ -99,10 +99,10 @@ int main() {
 
 |||
 |-|-|
-|**适用对象**|**类**，**结构**，数据成员|
-|**可重复**|否|
-|**必需的特性**|**组件类**(当应用于**类**或**结构**)|
-|**无效的特性**|None|
+|**适用于**|**类**、**结构**、数据成员|
+|**可重复**|No|
+|**必需的特性**|**coclass**(应用于**类**或**结构**时)|
+|**无效的特性**|无|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

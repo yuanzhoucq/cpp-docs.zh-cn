@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CWindowDC [MFC], CWindowDC
 - CWindowDC [MFC], m_hWnd
 ms.assetid: 876a3641-4cde-471c-b0d1-fe58b32af79c
-ms.openlocfilehash: 55a9ccfc496c95c9e7410cbd5645135ee555ff26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ef9b4917dc834eb8335690f9b0d171245f5c170
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323380"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502151"
 ---
 # <a name="cwindowdc-class"></a>CWindowDC 类
 
@@ -39,13 +39,13 @@ class CWindowDC : public CDC
 
 |name|描述|
 |----------|-----------------|
-|[CWindowDC::m_hWnd](#m_hwnd)|此 HWND`CWindowDC`附加。|
+|[CWindowDC::m_hWnd](#m_hwnd)|此`CWindowDC`附加到的 HWND。|
 
 ## <a name="remarks"></a>备注
 
-调用 Windows 函数[GetWindowDC](/windows/desktop/api/winuser/nf-winuser-getwindowdc)在构造时并[ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc)在析构时。 这意味着`CWindowDC`对象访问的整个屏幕区域[CWnd](../../mfc/reference/cwnd-class.md) （客户端和非工作区）。
+在构造时调用 Windows 函数[GetWindowDC](/windows/win32/api/winuser/nf-winuser-getwindowdc), 并在析构时调用[ReleaseDC](/windows/win32/api/winuser/nf-winuser-releasedc) 。 这意味着`CWindowDC`对象将访问[CWnd](../../mfc/reference/cwnd-class.md)的整个屏幕区域 (客户端和非工作区)。
 
-有关使用的详细信息`CWindowDC`，请参阅[设备上下文](../../mfc/device-contexts.md)。
+有关使用`CWindowDC`的详细信息, 请参阅[设备上下文](../../mfc/device-contexts.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -57,11 +57,11 @@ class CWindowDC : public CDC
 
 ## <a name="requirements"></a>要求
 
-标头： afxwin.h
+标头: afxwin。h
 
 ##  <a name="cwindowdc"></a>  CWindowDC::CWindowDC
 
-构造`CWindowDC`访问的整个屏幕区域 （客户端和非工作区） 的对象`CWnd`指向对象*pWnd*。
+构造一个`CWindowDC`对象, 该对象访问*pWnd*指向的`CWnd`对象的整个屏幕区域 (客户端和非工作区)。
 
 ```
 explicit CWindowDC(CWnd* pWnd);
@@ -70,13 +70,13 @@ explicit CWindowDC(CWnd* pWnd);
 ### <a name="parameters"></a>参数
 
 *pWnd*<br/>
-窗口设备上下文对象将访问其工作区中。
+设备上下文对象将访问的工作区所在的窗口。
 
 ### <a name="remarks"></a>备注
 
-构造函数将调用 Windows 函数[GetWindowDC](/windows/desktop/api/winuser/nf-winuser-getwindowdc)。
+构造函数调用 Windows 函数[GetWindowDC](/windows/win32/api/winuser/nf-winuser-getwindowdc)。
 
-异常 (类型的`CResourceException`) 如果则会引发 Windows`GetWindowDC`调用失败。 设备上下文可能不可用，如果 Windows 已分配所有可用的设备上下文。 你的应用程序争夺可在 Windows 下任何给定时间的五个常见显示上下文。
+如果 Windows `CResourceException` `GetWindowDC`调用失败, 则会引发异常 (类型为)。 如果 Windows 已分配了其所有可用设备上下文, 则设备上下文可能不可用。 您的应用程序将在 Windows 下的任何给定时间为五个常见显示上下文进行竞争。
 
 ### <a name="example"></a>示例
 
@@ -84,7 +84,7 @@ explicit CWindowDC(CWnd* pWnd);
 
 ##  <a name="m_hwnd"></a>  CWindowDC::m_hWnd
 
-HWND`CWnd`指针用于构造`CWindowDC`对象。
+`CWnd`指针的 HWND 用于`CWindowDC`构造对象。
 
 ```
 HWND m_hWnd;
@@ -92,11 +92,11 @@ HWND m_hWnd;
 
 ### <a name="remarks"></a>备注
 
-`m_hWnd` 是受保护的类型的变量的 HWND。
+`m_hWnd`是 HWND 类型的受保护变量。
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CWindowDC::CWindowDC](#cwindowdc)。
+  请参阅[CWindowDC:: CWindowDC](#cwindowdc)的示例。
 
 ## <a name="see-also"></a>请参阅
 

@@ -29,19 +29,19 @@ helpviewer_keywords:
 - data transfer [C++], asynchronous
 - CBindStatusCallback class
 ms.assetid: 0f5da276-6031-4418-b2a9-a4750ef29e77
-ms.openlocfilehash: 6e5e55a23ee678bbedf76f608bc4fdf562cc1822
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 89c65ff034cf7471c379b28116a741b62269a00c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259711"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497605"
 ---
 # <a name="cbindstatuscallback-class"></a>CBindStatusCallback 类
 
 此类实现 `IBindStatusCallback` 接口。
 
 > [!IMPORTANT]
->  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
+>  此类及其成员不能用于在 Windows 运行时中执行的应用程序。
 
 ## <a name="syntax"></a>语法
 
@@ -55,10 +55,10 @@ class ATL_NO_VTABLE CBindStatusCallback : public CComObjectRootEx <T ::_ThreadMo
 #### <a name="parameters"></a>参数
 
 *T*<br/>
-包含接收到数据时将调用的函数的类。
+您的类包含将在接收数据时调用的函数。
 
 *nBindFlags*<br/>
-指定由返回的绑定标志[GetBindInfo](#getbindinfo)。 默认实现设置的绑定是异步、 检索最新版本的数据/对象，而不将检索到的数据存储中磁盘缓存。
+指定[GetBindInfo](#getbindinfo)返回的绑定标志。 默认实现将绑定设置为异步, 检索数据/对象的最新版本, 并且不会将检索到的数据存储在磁盘缓存中。
 
 ## <a name="members"></a>成员
 
@@ -67,22 +67,22 @@ class ATL_NO_VTABLE CBindStatusCallback : public CComObjectRootEx <T ::_ThreadMo
 |名称|描述|
 |----------|-----------------|
 |[CBindStatusCallback::CBindStatusCallback](#cbindstatuscallback)|构造函数。|
-|[CBindStatusCallback::~CBindStatusCallback](#dtor)|析构函数。|
+|[CBindStatusCallback:: ~ CBindStatusCallback](#dtor)|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
 |名称|描述|
 |----------|-----------------|
-|[CBindStatusCallback::Download](#download)|启动下载过程的静态方法创建`CBindStatusCallback`对象，并调用`StartAsyncDownload`。|
-|[CBindStatusCallback::GetBindInfo](#getbindinfo)|调用要创建的绑定的类型的请求信息的异步名字对象。|
-|[CBindStatusCallback::GetPriority](#getpriority)|调用异步名字对象获取绑定操作的优先级。 ATL 实现返回`E_NOTIMPL`。|
-|[CBindStatusCallback::OnDataAvailable](#ondataavailable)|调用来提供到您的应用程序的数据变得可用。 读取数据，然后调用传递给它要使用的数据的函数。|
+|[CBindStatusCallback::Download](#download)|用于启动下载过程、创建`CBindStatusCallback`对象和调用`StartAsyncDownload`的静态方法。|
+|[CBindStatusCallback::GetBindInfo](#getbindinfo)|由异步名字对象调用以请求要创建的绑定类型的信息。|
+|[CBindStatusCallback::GetPriority](#getpriority)|由异步名字对象调用以获取绑定操作的优先级。 ATL 实现返回`E_NOTIMPL`。|
+|[CBindStatusCallback::OnDataAvailable](#ondataavailable)|调用以在应用程序可用时向其提供数据。 读取数据, 然后调用传递给它的函数以使用数据。|
 |[CBindStatusCallback::OnLowResource](#onlowresource)|当资源不足时调用。 ATL 实现返回 S_OK。|
-|[CBindStatusCallback::OnObjectAvailable](#onobjectavailable)|调用要将对象接口指针传递给你的应用程序的异步名字对象。 ATL 实现返回 S_OK。|
+|[CBindStatusCallback::OnObjectAvailable](#onobjectavailable)|由异步名字对象调用, 以将对象接口指针传递到应用程序。 ATL 实现返回 S_OK。|
 |[CBindStatusCallback::OnProgress](#onprogress)|调用以指示数据下载进程的进度。 ATL 实现返回 S_OK。|
 |[CBindStatusCallback::OnStartBinding](#onstartbinding)|当绑定启动时调用。|
-|[CBindStatusCallback::OnStopBinding](#onstopbinding)|当异步数据传输已停止时调用。|
-|[CBindStatusCallback::StartAsyncDownload](#startasyncdownload)|初始化可用的字节并为零，读取的字节数从一个 URL，并调用创建的推送类型流对象`OnDataAvailable`每当数据可用。|
+|[CBindStatusCallback::OnStopBinding](#onstopbinding)|当异步数据传输停止时调用。|
+|[CBindStatusCallback::StartAsyncDownload](#startasyncdownload)|初始化可用字节数和读取到零的字节数, 从 URL 创建推送类型流对象, 并在每`OnDataAvailable`次数据可用时调用。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
@@ -90,22 +90,22 @@ class ATL_NO_VTABLE CBindStatusCallback : public CComObjectRootEx <T ::_ThreadMo
 |----------|-----------------|
 |[CBindStatusCallback::m_dwAvailableToRead](#m_dwavailabletoread)|可读取的字节数。|
 |[CBindStatusCallback::m_dwTotalRead](#m_dwtotalread)|读取的总字节数。|
-|[CBindStatusCallback::m_pFunc](#m_pfunc)|数据可用时调用的函数指针。|
-|[CBindStatusCallback::m_pT](#m_pt)|对请求进行异步数据传输对象的指针。|
-|[CBindStatusCallback::m_spBindCtx](#m_spbindctx)|指向[IBindCtx](/windows/desktop/api/objidl/nn-objidl-ibindctx)当前绑定操作的接口。|
-|[CBindStatusCallback::m_spBinding](#m_spbinding)|指向`IBinding`当前绑定操作的接口。|
-|[CBindStatusCallback::m_spMoniker](#m_spmoniker)|指向[IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker)界面要使用的 URL。|
-|[CBindStatusCallback::m_spStream](#m_spstream)|指向[IStream](/windows/desktop/api/objidl/nn-objidl-istream)接口的数据传输。|
+|[CBindStatusCallback::m_pFunc](#m_pfunc)|指向在数据可用时调用的函数的指针。|
+|[CBindStatusCallback::m_pT](#m_pt)|指向请求异步数据传输的对象的指针。|
+|[CBindStatusCallback::m_spBindCtx](#m_spbindctx)|指向当前绑定操作的[IBindCtx](/windows/win32/api/objidl/nn-objidl-ibindctx)接口的指针。|
+|[CBindStatusCallback::m_spBinding](#m_spbinding)|指向当前绑定`IBinding`操作的接口的指针。|
+|[CBindStatusCallback::m_spMoniker](#m_spmoniker)|指向要使用的 URL 的[IMoniker](/windows/win32/api/objidl/nn-objidl-imoniker)接口的指针。|
+|[CBindStatusCallback::m_spStream](#m_spstream)|指向数据传输的[IStream](/windows/win32/api/objidl/nn-objidl-istream)接口的指针。|
 
 ## <a name="remarks"></a>备注
 
-`CBindStatusCallback` 类实现 `IBindStatusCallback` 接口。 `IBindStatusCallback` 必须由实现你的应用程序以便它可以从异步数据传输接收通知。 由系统提供的异步名字对象使用`IBindStatusCallback`方法来发送和接收异步数据有关的信息传输到和从您的对象。
+`CBindStatusCallback` 类实现 `IBindStatusCallback` 接口。 `IBindStatusCallback`必须由您的应用程序实现, 以便它可以从异步数据传输接收通知。 系统提供的异步名字对象使用`IBindStatusCallback`方法来发送和接收与对象之间的异步数据传输的相关信息。
 
-通常情况下，`CBindStatusCallback`对象是与特定的绑定操作相关联。 例如，在[异步](../../overview/visual-cpp-samples.md)示例中，当你设置的 URL 属性，它会创建`CBindStatusCallback`对的调用中的对象`Download`:
+通常, `CBindStatusCallback`对象与特定的绑定操作相关联。 例如, 在[异步](../../overview/visual-cpp-samples.md)示例中, 在设置 URL 属性时, 它将`CBindStatusCallback` `Download`在对的调用中创建对象:
 
 [!code-cpp[NVC_ATL_Windowing#86](../../atl/codesnippet/cpp/cbindstatuscallback-class_1.h)]
 
-异步名字对象使用的回调函数`OnData`时要调用你的应用程序具有的数据。 由系统提供的异步名字对象。
+当应用程序包含数据时, `OnData`异步名字对象使用回调函数调用它。 异步名字对象由系统提供。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -119,9 +119,9 @@ class ATL_NO_VTABLE CBindStatusCallback : public CComObjectRootEx <T ::_ThreadMo
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlctl.h
+**标头:** atlctl
 
-##  <a name="cbindstatuscallback"></a>  CBindStatusCallback::CBindStatusCallback
+##  <a name="cbindstatuscallback"></a>CBindStatusCallback::CBindStatusCallback
 
 构造函数。
 
@@ -131,11 +131,11 @@ CBindStatusCallback();
 
 ### <a name="remarks"></a>备注
 
-创建一个对象以接收通知有关异步数据传输。 通常情况下，为每个绑定操作创建一个对象。
+创建一个对象, 用于接收有关异步数据传输的通知。 通常, 会为每个绑定操作创建一个对象。
 
-此外可以在构造函数初始化[m_pT](#m_pt)并[m_pFunc](#m_pfunc)为 NULL。
+构造函数还将[m_pT](#m_pt)和[M_PFUNC](#m_pfunc)初始化为 NULL。
 
-##  <a name="dtor"></a>  CBindStatusCallback:: ~ CBindStatusCallback
+##  <a name="dtor"></a>CBindStatusCallback:: ~ CBindStatusCallback
 
 析构函数。
 
@@ -147,9 +147,9 @@ CBindStatusCallback();
 
 释放所有已分配的资源。
 
-##  <a name="download"></a>  CBindStatusCallback::Download
+##  <a name="download"></a>CBindStatusCallback::D o)
 
-创建`CBindStatusCallback`对象并调用`StartAsyncDownload`开始以异步方式从指定的 URL 下载数据。
+创建一个`CBindStatusCallback`对象, 并`StartAsyncDownload`调用以从指定的 URL 异步下载数据。
 
 ```
 static HRESULT Download(
@@ -163,33 +163,33 @@ static HRESULT Download(
 ### <a name="parameters"></a>参数
 
 *pT*<br/>
-[in]指向请求异步数据传输的对象的指针。 `CBindStatusCallback`对象针对此对象的类模板化。
+中指向请求异步数据传输的对象的指针。 `CBindStatusCallback`对象在此对象的类上是模板化的。
 
 *pFunc*<br/>
-[in]指向接收读取数据的函数的指针。 该函数是类型的对象的类的成员`T`。 请参阅[StartAsyncDownload](#startasyncdownload)有关语法和示例。
+中指向函数的指针, 该函数接收所读取的数据。 函数是对象的类型`T`的类的成员。 有关语法和示例, 请参阅[StartAsyncDownload](#startasyncdownload) 。
 
 *bstrURL*<br/>
-[in]要从其获取数据的 URL。 可以是任何有效的 URL 或文件名称。 不能为 NULL。 例如：
+中要从中获取数据的 URL。 可以是任何有效的 URL 或文件名。 不能为 NULL。 例如:
 
 `CComBSTR mybstr =_T("http://somesite/data.htm")`
 
 *pUnkContainer*<br/>
-[in]`IUnknown`的容器。 默认情况下为 NULL。
+中`IUnknown`容器的。 默认值为 NULL。
 
 *bRelative*<br/>
-[in]指示该 URL 相对值还是绝对值的标志。 默认情况下，这意味着 URL FALSE 是绝对路径。
+中指示 URL 是相对路径还是绝对 URL 的标志。 默认值为 FALSE, 表示 URL 是绝对的。
 
 ### <a name="return-value"></a>返回值
 
-一个标准的 HRESULT 值。
+标准的 HRESULT 值之一。
 
 ### <a name="remarks"></a>备注
 
-每次有可用数据发送到的对象通过`OnDataAvailable`。 `OnDataAvailable` 读取数据，并调用通过指向函数*pFunc* （例如，若要将数据存储或打印到屏幕）。
+每次有数据可用时, 都会通过`OnDataAvailable`发送到对象。 `OnDataAvailable`读取数据并调用*pFunc*所指向的函数 (例如, 存储数据或将其打印到屏幕)。
 
 ##  <a name="getbindinfo"></a>  CBindStatusCallback::GetBindInfo
 
-调用以通知如何将绑定的名字对象。
+调用以告知名字对象如何绑定。
 
 ```
 STDMETHOD(GetBindInfo)(
@@ -200,30 +200,30 @@ STDMETHOD(GetBindInfo)(
 ### <a name="parameters"></a>参数
 
 *pgrfBSCF*<br/>
-[out]一个指向 BINDF 枚举值，该值指示应发生绑定操作的方式。 默认情况下，设置下列枚举值：
+弄指向 BINDF 枚举值的指针, 指示绑定操作应如何发生。 默认情况下, 使用以下枚举值设置:
 
 BINDF_ASYNCHRONOUS 异步下载。
 
-BINDF_ASYNCSTORAGE`OnDataAvailable`返回 E_PENDING，当数据尚不可用而不是阻止，直到有可用数据。
+数据`OnDataAvailable`不可用时, BINDF_ASYNCSTORAGE 将返回 E_PENDING, 而不会在数据可用之前进行阻止。
 
-BINDF_GETNEWESTVERSION 绑定操作应检索数据的最新版本。
+BINDF_GETNEWESTVERSION 绑定操作应检索最新版本的数据。
 
-绑定操作不应存储的 BINDF_NOWRITECACHE 检索磁盘缓存中的数据。
+BINDF_NOWRITECACHE 绑定操作不应将检索到的数据存储在磁盘缓存中。
 
 *pbindinfo*<br/>
-[in、 out]一个指向`BINDINFO`结构提供有关如何对象想要发生绑定的详细信息。
+[in, out]指向`BINDINFO`结构的指针, 该结构提供有关对象如何进行绑定的详细信息。
 
 ### <a name="return-value"></a>返回值
 
-一个标准的 HRESULT 值。
+标准的 HRESULT 值之一。
 
 ### <a name="remarks"></a>备注
 
-默认实现设置为异步以及使用数据推送模型的绑定。 在数据推送模型中，名字对象驱动器异步绑定操作，并持续在新数据可用时通知客户端。
+默认实现将绑定设置为异步, 并使用数据推送模型。 在数据推送模型中, 名字对象驱动异步绑定操作, 并在有新数据可用时持续通知客户端。
 
-##  <a name="getpriority"></a>  CBindStatusCallback::GetPriority
+##  <a name="getpriority"></a>CBindStatusCallback:: GetPriority
 
-调用异步名字对象获取绑定操作的优先级。
+由异步名字对象调用以获取绑定操作的优先级。
 
 ```
 STDMETHOD(GetPriority)(LONG* pnPriority);
@@ -232,7 +232,7 @@ STDMETHOD(GetPriority)(LONG* pnPriority);
 ### <a name="parameters"></a>参数
 
 *pnPriority*<br/>
-[out]地址**长**，成功后，接收变量的优先级。
+弄成功时接收优先级的**长**变量的地址。
 
 ### <a name="return-value"></a>返回值
 
@@ -240,7 +240,7 @@ STDMETHOD(GetPriority)(LONG* pnPriority);
 
 ##  <a name="m_dwavailabletoread"></a>  CBindStatusCallback::m_dwAvailableToRead
 
-可以用于存储可供读取的字节数。
+可用于存储可读取的字节数。
 
 ```
 DWORD m_dwAvailableToRead;
@@ -248,11 +248,11 @@ DWORD m_dwAvailableToRead;
 
 ### <a name="remarks"></a>备注
 
-初始化将注意力集中在`StartAsyncDownload`。
+在中`StartAsyncDownload`初始化为零。
 
 ##  <a name="m_dwtotalread"></a>  CBindStatusCallback::m_dwTotalRead
 
-异步数据传输中读取的字节累计合计。
+异步数据传输中读取的字节的累积总数。
 
 ```
 DWORD m_dwTotalRead;
@@ -260,11 +260,11 @@ DWORD m_dwTotalRead;
 
 ### <a name="remarks"></a>备注
 
-每次递增`OnDataAvailable`调用的实际读取的字节数。 初始化将注意力集中在`StartAsyncDownload`。
+每次`OnDataAvailable`由实际读取的字节数调用时递增。 在中`StartAsyncDownload`初始化为零。
 
-##  <a name="m_pfunc"></a>  CBindStatusCallback::m_pFunc
+##  <a name="m_pfunc"></a>CBindStatusCallback::m_pFunc
 
-指向函数`m_pFunc`由调用`OnDataAvailable`读取可用数据 （例如，若要将数据存储或打印到屏幕） 后。
+指向`m_pFunc`的函数在读取可用数据 ( `OnDataAvailable`例如存储数据或将其打印到屏幕) 后由调用。
 
 ```
 ATL_PDATAAVAILABLE m_pFunc;
@@ -272,7 +272,7 @@ ATL_PDATAAVAILABLE m_pFunc;
 
 ### <a name="remarks"></a>备注
 
-指向函数`m_pFunc`是对象的类的成员，并且具有以下语法：
+指向的`m_pFunc`函数是对象类的成员, 并且具有以下语法:
 
 ```
 void Function_Name(
@@ -292,11 +292,11 @@ T* m_pT;
 
 ### <a name="remarks"></a>备注
 
-`CBindStatusCallback`对象针对此对象的类模板化。
+`CBindStatusCallback`对象在此对象的类上是模板化的。
 
 ##  <a name="m_spbindctx"></a>  CBindStatusCallback::m_spBindCtx
 
-一个指向[IBindCtx](/windows/desktop/api/objidl/nn-objidl-ibindctx)提供的绑定上下文 （存储特定的名字对象绑定操作的相关信息的对象） 的访问接口。
+指向[IBindCtx](/windows/win32/api/objidl/nn-objidl-ibindctx)接口的指针, 该接口提供对绑定上下文 (存储有关特定名字对象绑定操作的信息的对象) 的访问。
 
 ```
 CComPtr<IBindCtx> m_spBindCtx;
@@ -304,11 +304,11 @@ CComPtr<IBindCtx> m_spBindCtx;
 
 ### <a name="remarks"></a>备注
 
-在初始化`StartAsyncDownload`。
+在中`StartAsyncDownload`进行了初始化。
 
-##  <a name="m_spbinding"></a>  CBindStatusCallback::m_spBinding
+##  <a name="m_spbinding"></a>CBindStatusCallback::m_spBinding
 
-一个指向`IBinding`当前绑定操作的接口。
+指向当前绑定操作`IBinding`的接口的指针。
 
 ```
 CComPtr<IBinding> m_spBinding;
@@ -316,11 +316,11 @@ CComPtr<IBinding> m_spBinding;
 
 ### <a name="remarks"></a>备注
 
-在初始化`OnStartBinding`且已在发布`OnStopBinding`。
+已在中初始化`OnStopBinding`并在中发布。`OnStartBinding`
 
 ##  <a name="m_spmoniker"></a>  CBindStatusCallback::m_spMoniker
 
-一个指向[IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker)界面要使用的 URL。
+指向要使用的 URL 的[IMoniker](/windows/win32/api/objidl/nn-objidl-imoniker)接口的指针。
 
 ```
 CComPtr<IMoniker> m_spMoniker;
@@ -328,11 +328,11 @@ CComPtr<IMoniker> m_spMoniker;
 
 ### <a name="remarks"></a>备注
 
-在初始化`StartAsyncDownload`。
+在中`StartAsyncDownload`进行了初始化。
 
 ##  <a name="m_spstream"></a>  CBindStatusCallback::m_spStream
 
-一个指向[IStream](/windows/desktop/api/objidl/nn-objidl-istream)当前绑定操作的接口。
+指向当前绑定操作的[IStream](/windows/win32/api/objidl/nn-objidl-istream)接口的指针。
 
 ```
 CComPtr<IStream> m_spStream;
@@ -340,11 +340,11 @@ CComPtr<IStream> m_spStream;
 
 ### <a name="remarks"></a>备注
 
-在初始化`OnDataAvailable`从`STGMEDIUM`结构时 BCSF 标志 BCSF_FIRSTDATANOTIFICATION 上并释放 BCSF_LASTDATANOTIFICATION BCSF 标志时。
+当 BCSF `OnDataAvailable`标志为`STGMEDIUM` BCSF_FIRSTDATANOTIFICATION 并在 BCSF 标志为 BCSF_LASTDATANOTIFICATION 时发布时, 从结构中进行了初始化。
 
-##  <a name="ondataavailable"></a>  CBindStatusCallback::OnDataAvailable
+##  <a name="ondataavailable"></a>CBindStatusCallback:: OnDataAvailable
 
-系统提供的异步名字对象调用`OnDataAvailable`提供对对象的数据变得可用。
+系统提供的异步名字对象调用`OnDataAvailable` , 在对象可用时向其提供数据。
 
 ```
 STDMETHOD(
@@ -357,26 +357,26 @@ STDMETHOD(
 ### <a name="parameters"></a>参数
 
 *grfBSCF*<br/>
-[in]一个 BSCF 枚举值。 一个或多个以下：BSCF_FIRSTDATANOTIFICATION、 BSCF_INTERMEDIARYDATANOTIFICATION 或 BSCF_LASTDATANOTIFICATION。
+中BSCF 枚举值。 以下一项或多项操作:BSCF_FIRSTDATANOTIFICATION、BSCF_INTERMEDIARYDATANOTIFICATION 或 BSCF_LASTDATANOTIFICATION。
 
 *dwSize*<br/>
-[in]数据可用后的绑定的开始累积量 （以字节为单位）。 可以是零，表示没有相关的数据量或特定数量变得可用。
+中自绑定开始以来可用数据的累计量 (以字节为单位)。 可以为零, 表示数据量不相关或没有特定的可用量。
 
 *pformatetc*<br/>
-[in]指向[FORMATETC](/windows/desktop/com/the-formatetc-structure)结构，其中包含可用数据的格式。 如果没有格式，可以是 CF_NULL。
+中指向[FORMATETC](/windows/win32/com/the-formatetc-structure)结构的指针, 该结构包含可用数据的格式。 如果没有格式, 则可以是 CF_NULL。
 
 *pstgmed*<br/>
-[in]指向[STGMEDIUM](/windows/desktop/com/the-stgmedium-structure)保存现已推出的实际数据的结构。
+中指向[STGMEDIUM](/windows/win32/com/the-stgmedium-structure)结构的指针, 该结构包含当前可用的实际数据。
 
 ### <a name="return-value"></a>返回值
 
-一个标准的 HRESULT 值。
+标准的 HRESULT 值之一。
 
 ### <a name="remarks"></a>备注
 
-`OnDataAvailable` 读取数据，然后调用对象的类 （例如，若要将数据存储或打印到屏幕） 的方法。 请参阅[CBindStatusCallback::StartAsyncDownload](#startasyncdownload)有关详细信息。
+`OnDataAvailable`读取数据, 然后调用对象的类的方法 (例如, 存储数据或将数据打印到屏幕)。 有关详细信息, 请参阅[CBindStatusCallback:: StartAsyncDownload](#startasyncdownload) 。
 
-##  <a name="onlowresource"></a>  CBindStatusCallback::OnLowResource
+##  <a name="onlowresource"></a>CBindStatusCallback::OnLowResource
 
 当资源不足时调用。
 
@@ -395,7 +395,7 @@ STDMETHOD(OnLowResource)(DWORD /* dwReserved */);
 
 ##  <a name="onobjectavailable"></a>  CBindStatusCallback::OnObjectAvailable
 
-调用要将对象接口指针传递给你的应用程序的异步名字对象。
+由异步名字对象调用, 以将对象接口指针传递到应用程序。
 
 ```
 STDMETHOD(OnObjectAvailable)(REFID /* riid */, IUnknown* /* punk */);
@@ -404,7 +404,7 @@ STDMETHOD(OnObjectAvailable)(REFID /* riid */, IUnknown* /* punk */);
 ### <a name="parameters"></a>参数
 
 *riid*<br/>
-所请求的接口的接口标识符。 未使用。
+请求的接口的接口标识符。 未使用。
 
 *punk*<br/>
 IUnknown 接口的地址。 未使用。
@@ -431,21 +431,21 @@ STDMETHOD(OnProgress)(
 无符号长整数。 未使用。
 
 *ulProgressMax*<br/>
-无符号长整数未使用。
+未使用无符号长整数。
 
 *ulStatusCode*<br/>
 无符号长整数。 未使用。
 
 *szStatusText*<br/>
-一个字符串值的地址。 未使用。
+字符串值的地址。 未使用。
 
 ### <a name="return-value"></a>返回值
 
 返回 S_OK。
 
-##  <a name="onstartbinding"></a>  CBindStatusCallback::OnStartBinding
+##  <a name="onstartbinding"></a>CBindStatusCallback::OnStartBinding
 
-设置的数据成员[m_spBinding](#m_spbinding)到`IBinding`中的指针*pBinding*。
+将数据成员[m_spBinding](#m_spbinding)设置为`IBinding` *pBinding*中的指针。
 
 ```
 STDMETHOD(OnStartBinding)(DWORD /* dwReserved */, IBinding* pBinding);
@@ -457,11 +457,11 @@ STDMETHOD(OnStartBinding)(DWORD /* dwReserved */, IBinding* pBinding);
 留待将来使用。
 
 *pBinding*<br/>
-[in]当前的 IBinding 接口地址绑定操作。 这不能为 NULL。 客户端应保持对绑定对象的引用此指针上调用 AddRef。
+中当前绑定操作的 IBinding 接口的地址。 此值不能为 NULL。 客户端应对此指针调用 AddRef, 以保留对绑定对象的引用。
 
-##  <a name="onstopbinding"></a>  CBindStatusCallback::OnStopBinding
+##  <a name="onstopbinding"></a>CBindStatusCallback::OnStopBinding
 
-版本`IBinding`中的数据成员的指针[m_spBinding](#m_spbinding)。
+释放数据`IBinding`成员[m_spBinding](#m_spbinding)中的指针。
 
 ```
 STDMETHOD(OnStopBinding)(HRESULT hresult, LPCWSTR /* szError */);
@@ -470,18 +470,18 @@ STDMETHOD(OnStopBinding)(HRESULT hresult, LPCWSTR /* szError */);
 ### <a name="parameters"></a>参数
 
 *hresult*<br/>
-绑定操作中返回状态代码。
+从绑定操作返回的状态代码。
 
 *szError*<br/>
-一个字符串值的地址。 未使用。
+字符串值的地址。 未使用。
 
 ### <a name="remarks"></a>备注
 
-由系统提供异步名字对象以指示绑定操作结束时调用。
+由系统提供的异步名字对象调用, 指示绑定操作结束。
 
-##  <a name="startasyncdownload"></a>  CBindStatusCallback::StartAsyncDownload
+##  <a name="startasyncdownload"></a>CBindStatusCallback::StartAsyncDownload
 
-启动异步下载数据，从指定的 URL。
+开始从指定的 URL 异步下载数据。
 
 ```
 HRESULT StartAsyncDownload(
@@ -495,31 +495,31 @@ HRESULT StartAsyncDownload(
 ### <a name="parameters"></a>参数
 
 *pT*<br/>
-[in]指向请求异步数据传输的对象的指针。 `CBindStatusCallback`对象针对此对象的类模板化。
+中指向请求异步数据传输的对象的指针。 `CBindStatusCallback`对象在此对象的类上是模板化的。
 
 *pFunc*<br/>
-[in]指向接收读取的数据的函数的指针。 该函数是类型的对象的类的成员`T`。 请参阅**备注**有关语法和示例。
+中指向函数的指针, 该函数接收所读取的数据。 函数是对象的类型`T`的类的成员。 有关语法和示例, 请参阅**备注**。
 
 *bstrURL*<br/>
-[in]要从其获取数据的 URL。 可以是任何有效的 URL 或文件名称。 不能为 NULL。 例如：
+中要从中获取数据的 URL。 可以是任何有效的 URL 或文件名。 不能为 NULL。 例如:
 
 `CComBSTR mybstr =_T("http://somesite/data.htm")`
 
 *pUnkContainer*<br/>
-[in]`IUnknown`的容器。 默认情况下为 NULL。
+中`IUnknown`容器的。 默认值为 NULL。
 
 *bRelative*<br/>
-[in]指示该 URL 相对值还是绝对值的标志。 默认情况下，这意味着 URL FALSE 是绝对路径。
+中指示 URL 是相对路径还是绝对 URL 的标志。 默认值为 FALSE, 表示 URL 是绝对的。
 
 ### <a name="return-value"></a>返回值
 
-一个标准的 HRESULT 值。
+标准的 HRESULT 值之一。
 
 ### <a name="remarks"></a>备注
 
-每次有可用数据发送到的对象通过`OnDataAvailable`。 `OnDataAvailable` 读取数据，并调用通过指向函数*pFunc* （例如，若要将数据存储或打印到屏幕）。
+每次有数据可用时, 都会通过`OnDataAvailable`发送到对象。 `OnDataAvailable`读取数据并调用*pFunc*所指向的函数 (例如, 存储数据或将其打印到屏幕)。
 
-指向函数*pFunc*是对象的类的成员，并且具有以下语法：
+*PFunc*指向的函数是对象类的成员, 并且具有以下语法:
 
 ```
 void Function_Name(
@@ -528,7 +528,7 @@ void Function_Name(
     DWORD dwSize);
 ```
 
-在下面的示例 (摘自[异步](../../overview/visual-cpp-samples.md)示例)，该函数`OnData`将接收到的数据写入到文本框。
+在下面的示例中 (取自[ASYNC](../../overview/visual-cpp-samples.md)示例), 函数`OnData`将接收的数据写入文本框。
 
 ### <a name="example"></a>示例
 

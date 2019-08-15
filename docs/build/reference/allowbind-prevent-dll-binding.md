@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -ALLOWBIND linker option
 - DLLs [C++], preventing binding
 ms.assetid: 30e37e24-12e4-407e-988a-39d357403598
-ms.openlocfilehash: bd9976e434441d2480386ee6fa3d0315fd8d2ef5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d963a7145ab2e8c8872dc21c485bdc8f877b0b76
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295137"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493147"
 ---
 # <a name="allowbind-prevent-dll-binding"></a>/ALLOWBIND（禁止 DLL 绑定）
 
@@ -29,15 +29,15 @@ ms.locfileid: "62295137"
 
 /ALLOWBIND:NO 在 DLL 的标头中设置一个位，向 Bind.exe 指示不允许绑定图像。 如果 DLL 已经进行数字签名（绑定使签名无效），可能不需要绑定 DLL。
 
-您可以编辑 /ALLOWBIND 功能的现有 DLL [/ALLOWBIND](allowbind.md) EDITBIN 实用工具的选项。
+可以使用 EDITBIN 实用工具的[/ALLOWBIND](allowbind.md)选项编辑/ALLOWBIND 功能的现有 DLL。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页” 对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
-1. 展开**配置属性**，**链接器**，然后选择**命令行**。
+1. 展开 "**配置属性**"、"**链接器**", 然后选择 "**命令行**"。
 
-1. 输入`/ALLOWBIND:NO`成**其他选项**。
+1. 输入`/ALLOWBIND:NO` **其他选项**。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项
 
@@ -47,5 +47,5 @@ ms.locfileid: "62295137"
 
 [MSVC 链接器参考](linking.md)<br/>
 [MSVC 链接器选项](linker-options.md)<br/>
-[执行 bindimage 操作函数](/windows/desktop/api/imagehlp/nf-imagehlp-bindimage)<br/>
-[BindImageEx 函数](/windows/desktop/api/imagehlp/nf-imagehlp-bindimageex)
+[执行 bindimage 操作函数](/windows/win32/api/imagehlp/nf-imagehlp-bindimage)<br/>
+[BindImageEx 函数](/windows/win32/api/imagehlp/nf-imagehlp-bindimageex)

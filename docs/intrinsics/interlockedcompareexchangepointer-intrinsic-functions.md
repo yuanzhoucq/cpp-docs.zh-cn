@@ -24,14 +24,14 @@ helpviewer_keywords:
 - _InterlockedCompareExchangePointer_nf intrinsic
 - _InterlockedCompareExchangePointer_np intrinsic
 ms.assetid: 97fde59d-2bf9-42aa-a0fe-a5b6befdd44b
-ms.openlocfilehash: 2db18c73f7765454d29e2dfdbd9408f62c51d32a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b8ba4fe6224292d0160f859aeb630fc17c2d992
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348726"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509438"
 ---
-# <a name="interlockedcompareexchangepointer-intrinsic-functions"></a>_InterlockedCompareExchangePointer 内部函数
+# <a name="_interlockedcompareexchangepointer-intrinsic-functions"></a>_InterlockedCompareExchangePointer 内部函数
 
 **Microsoft 专用**
 
@@ -79,14 +79,14 @@ long _InterlockedCompareExchangePointer_rel (
 
 #### <a name="parameters"></a>参数
 
-*目标*<br/>
-[in、 out]指针到指向目标值。 忽略此标记。
+*位置*<br/>
+[in, out]指向目标值的指针的指针。 忽略此标记。
 
 *Exchange*<br/>
-[in]交换指针。 忽略此标记。
+中Exchange 指针。 忽略此标记。
 
-*比较对象*<br/>
-[in]若要与目标值比较的指针。 忽略此标记。
+*比较字*<br/>
+中要与目标进行比较的指针。 忽略此标记。
 
 ## <a name="return-value"></a>返回值
 
@@ -96,7 +96,7 @@ long _InterlockedCompareExchangePointer_rel (
 
 |内部函数|体系结构|Header|
 |---------------|------------------|------------|
-|`_InterlockedCompareExchangePointer`|x86、 ARM、 x64|\<intrin.h>|
+|`_InterlockedCompareExchangePointer`|x86、ARM、x64|\<intrin.h>|
 |`_InterlockedCompareExchangePointer_acq`, `_InterlockedCompareExchangePointer_nf`, `_InterlockedCompareExchangePointer_rel`|ARM|\<iiintrin.h>|
 |`_InterlockedCompareExchangePointer_HLEAcquire`， `_InterlockedCompareExchangePointer_HLERelease`|x86、x64|\<immintrin.h>|
 
@@ -104,9 +104,9 @@ long _InterlockedCompareExchangePointer_rel (
 
 `_InterlockedCompareExchangePointer` 执行 `Destination` 地址与 `Comparand` 地址之间的原子比较。 如果 `Destination` 地址与 `Comparand` 地址相等，则 `Exchange` 地址将存储在由 `Destination` 指定的地址中。 否则，不会执行任何操作。
 
-`_InterlockedCompareExchangePointer` 提供了编译器内部函数支持 Win32 Windows SDK [_InterlockedCompareExchangePointer](https://msdn.microsoft.com/library/ff547863.aspx)函数。
+`_InterlockedCompareExchangePointer`为 Win32 Windows SDK [InterlockedCompareExchangePointer](/windows-hardware/drivers/ddi/content/wdm/nf-wdm-interlockedcompareexchangepointer)函数提供编译器内部函数支持。
 
-有关如何使用的示例`_InterlockedCompareExchangePointer`，请参阅[_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)。
+有关如何使用`_InterlockedCompareExchangePointer`的示例, 请参阅[_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)。
 
 ARM 平台上，如果需要（例如在临界区的起点和终点）获取和发布语义，可以使用带 `_acq` 和 `_rel` 后缀的函数。 带 `_nf`（“无围墙”)后缀的 ARM 内部函数不能充当内存屏障。
 

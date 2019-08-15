@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPropertyPage [MFC], SetModified
 - CPropertyPage [MFC], m_psp
 ms.assetid: d9000a21-aa81-4530-85d9-f43432afb4dc
-ms.openlocfilehash: f9116306fd2bd6145096b055025bd4dd2075b0c1
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 6a6223708c83f7a5b3e6532a2016660d558f8270
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916876"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502803"
 ---
 # <a name="cpropertypage-class"></a>CPropertyPage 类
 
@@ -71,7 +71,7 @@ class CPropertyPage : public CDialog
 |----------|-----------------|
 |[CPropertyPage::CancelToClose](#canceltoclose)|将 "确定" 按钮更改为 "关闭", 并在模式属性表的页中发生不可恢复的更改后禁用 "取消" 按钮。|
 |[CPropertyPage::Construct](#construct)|构造 `CPropertyPage` 对象。 如果`Construct`要在运行时指定参数, 或者使用数组, 请使用。|
-|[CPropertyPage::GetPSP](#getpsp)|检索与`CPropertyPage`对象关联的 Windows [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-propsheetpagea_v2)结构。|
+|[CPropertyPage::GetPSP](#getpsp)|检索与`CPropertyPage`对象关联的 Windows [PROPSHEETPAGE](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2)结构。|
 |[CPropertyPage::OnApply](#onapply)|当单击 "立即应用" 按钮时, 由框架调用。|
 |[CPropertyPage::OnCancel](#oncancel)|当单击 "取消" 按钮时由框架调用。|
 |[CPropertyPage::OnKillActive](#onkillactive)|当当前页不再是活动页时由框架调用。 在此处执行数据验证。|
@@ -89,7 +89,7 @@ class CPropertyPage : public CDialog
 
 |名称|描述|
 |----------|-----------------|
-|[CPropertyPage::m_psp](#m_psp)|Windows [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-propsheetpagea_v2)结构。 提供对基本属性页参数的访问。|
+|[CPropertyPage::m_psp](#m_psp)|Windows [PROPSHEETPAGE](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2)结构。 提供对基本属性页参数的访问。|
 
 ## <a name="remarks"></a>备注
 
@@ -261,7 +261,7 @@ CPropertyPage(
 
 ##  <a name="getpsp"></a>CPropertyPage:: GetPSP
 
-检索与`CPropertyPage`对象关联的 Windows [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-propsheetpagea_v2)结构。
+检索与`CPropertyPage`对象关联的 Windows [PROPSHEETPAGE](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2)结构。
 
 ```
 const PROPSHEETPAGE& GetPSP() const;
@@ -275,7 +275,7 @@ PROPSHEETPAGE& GetPSP();
 
 ##  <a name="m_psp"></a>CPropertyPage:: m_psp
 
-`m_psp`一个结构, 其成员存储[PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-propsheetpagea_v2)的特性。
+`m_psp`一个结构, 其成员存储[PROPSHEETPAGE](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2)的特性。
 
 ```
 PROPSHEETPAGE m_psp;
@@ -311,7 +311,7 @@ virtual BOOL OnApply();
 
 `OnApply` 调用`OnOK`的默认实现。
 
-有关用户按属性表中的 "立即应用" 或 "确定" 按钮时发送的通知消息的详细信息, 请参阅 Windows SDK 中的[PSN_APPLY](/windows/desktop/Controls/psn-apply) 。
+有关用户按属性表中的 "立即应用" 或 "确定" 按钮时发送的通知消息的详细信息, 请参阅 Windows SDK 中的[PSN_APPLY](/windows/win32/Controls/psn-apply) 。
 
 ### <a name="example"></a>示例
 
@@ -367,7 +367,7 @@ virtual void OnOK();
 
 ### <a name="remarks"></a>备注
 
-当用户选择 "确定" 或 "立即应用" 按钮时, 框架会从属性页接收[PSN_APPLY](/windows/desktop/Controls/psn-apply)通知。 如果调用`OnOK` [CPropertySheet::P ressbutton](../../mfc/reference/cpropertysheet-class.md#pressbutton) , 则不会调用, 因为在这种情况下, 属性页不会发送通知。
+当用户选择 "确定" 或 "立即应用" 按钮时, 框架会从属性页接收[PSN_APPLY](/windows/win32/Controls/psn-apply)通知。 如果调用`OnOK` [CPropertySheet::P ressbutton](../../mfc/reference/cpropertysheet-class.md#pressbutton) , 则不会调用, 因为在这种情况下, 属性页不会发送通知。
 
 重写此成员函数可在用户关闭整个属性表时, 实现特定于当前活动页的其他行为。
 
@@ -481,7 +481,7 @@ virtual BOOL OnWizardFinish();
 
 您可以重写此成员函数, 以指定在按 "完成" 按钮时用户必须执行的某些操作。 重写此函数时, 将返回 FALSE 以防止对属性表进行销毁。
 
-有关用户按向导属性表中的 "完成" 按钮时发送的通知消息的详细信息, 请参阅 Windows SDK 中的[PSN_WIZFINISH](/windows/desktop/Controls/psn-wizfinish) 。
+有关用户按向导属性表中的 "完成" 按钮时发送的通知消息的详细信息, 请参阅 Windows SDK 中的[PSN_WIZFINISH](/windows/win32/Controls/psn-wizfinish) 。
 
 有关如何创建向导类型属性表的详细信息, 请参阅[CPropertySheet:: SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode)。
 

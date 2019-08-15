@@ -1,17 +1,17 @@
 ---
-title: requestedit (C++ COM 属性)
+title: requestedit (C++ COM 特性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.requestedit
 helpviewer_keywords:
 - requestedit attribute
 ms.assetid: b3c24790-3c4a-4646-8722-03d7b51172ee
-ms.openlocfilehash: 30b0c5ec807865280c8e538ea701c3d1a5c4ef9c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e90506619d4f13d4e5627f9c06b997d7034b5f49
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407375"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514087"
 ---
 # <a name="requestedit"></a>requestedit
 
@@ -25,11 +25,11 @@ ms.locfileid: "62407375"
 
 ## <a name="remarks"></a>备注
 
-**Requestedit** C++属性具有相同的功能[requestedit](/windows/desktop/Midl/requestedit) MIDL 特性。
+**Requestedit** C++特性具有与[requestedit](/windows/win32/Midl/requestedit) MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
-有关示例，请参阅[可绑定](bindable.md)的示例使用**requestedit**。
+有关**requestedit**的示例用法, 请参阅可[绑定](bindable.md)的示例。
 
 ## <a name="requirements"></a>要求
 
@@ -37,10 +37,10 @@ ms.locfileid: "62407375"
 
 |||
 |-|-|
-|**适用对象**|接口方法|
-|**可重复**|否|
-|**必需的特性**|None|
-|**无效的特性**|None|
+|**适用于**|接口方法|
+|**可重复**|No|
+|**必需的特性**|无|
+|**无效的特性**|无|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

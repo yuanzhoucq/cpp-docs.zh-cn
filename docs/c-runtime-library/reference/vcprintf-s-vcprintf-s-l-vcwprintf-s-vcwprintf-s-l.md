@@ -43,14 +43,14 @@ helpviewer_keywords:
 - vtcprintf_s function
 - formatted text [C++]
 ms.assetid: 5a46d45a-30db-45df-9850-455cbdac5636
-ms.openlocfilehash: e27018d02c8fb77b0e2a1c02164d3b6d112448ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ccd346141db9f4974ee5f9300792260bf2a8ec72
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365334"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499328"
 ---
-# <a name="vcprintfs-vcprintfsl-vcwprintfs-vcwprintfsl"></a>_vcprintf_s、_vcprintf_s_l、_vcwprintf_s、_vcwprintf_s_l
+# <a name="_vcprintf_s-_vcprintf_s_l-_vcwprintf_s-_vcwprintf_s_l"></a>_vcprintf_s、_vcprintf_s_l、_vcwprintf_s、_vcwprintf_s_l
 
 使用指向参数列表的指针编写格式化输出到控制台。 这些版本的 [_vcprintf、_vcprintf_l、_vcwprintf、_vcwprintf_l](vcprintf-vcprintf-l-vcwprintf-vcwprintf-l.md) 具有安全增强功能，如 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)所述。
 
@@ -97,16 +97,16 @@ int _vcwprintf_s_l(
 
 写入的字符数，如果发生输出错误，则为一个负值。
 
-如果喜欢这些函数的安全级别较低版本*格式*是空指针，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 此外，与这些函数的不安全版本不同的是如果*格式*未指定有效格式，则会生成无效参数异常。 如果允许执行继续，则这些函数将返回错误代码并设置**errno**为该错误代码。 默认错误代码是**EINVAL**如果更具体的值不适用。
+与这些函数的不安全版本一样, 如果*format*为空指针, 则将调用无效参数处理程序, 如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 此外, 与这些函数的不太安全版本不同的是, 如果*格式*不指定有效的格式, 则会生成无效的参数异常。 如果允许执行继续, 则这些函数将返回错误代码并将**errno**设置为该错误代码。 如果更具体的值不适用, 则默认错误代码为**EINVAL** 。
 
 ## <a name="remarks"></a>备注
 
-每个函数均采用一个指向参数列表的指针，然后将给定数据格式化并写入到控制台。 **_vcwprintf_s**是宽字符版本 **_vcprintf_s**。 它将采用一个宽字符字符串作为参数。
+每个函数均采用一个指向参数列表的指针，然后将给定数据格式化并写入到控制台。 **_vcwprintf_s**是 **_vcprintf_s**的宽字符版本。 它将采用一个宽字符字符串作为参数。
 
-具有这些函数的版本 **_l**后缀完全相同，只不过它们使用传入的区域设置参数而不是当前区域设置。
+具有 **_l**后缀的这些函数的版本相同, 只不过它们使用传入的区域设置参数而不是当前区域设置。
 
 > [!IMPORTANT]
-> 确保 format 不是用户定义的字符串。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
+> 确保 format不是用户定义的字符串。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -119,8 +119,8 @@ int _vcwprintf_s_l(
 
 |例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|----------------------|
-|**_vcprintf_s**， **_vcprintf_s_l**|\<conio.h> 和 \<stdarg.h>|\<varargs.h>*|
-|**_vcwprintf_s**， **_vcwprintf_s_l**|\<conio.h> 或 \<wchar.h> 和 \<stdarg.h>|\<varargs.h>*|
+|**_vcprintf_s**、 **_vcprintf_s_l**|\<conio.h> 和 \<stdarg.h>|\<varargs.h>*|
+|**_vcwprintf_s**、 **_vcwprintf_s_l**|\<conio.h> 或 \<wchar.h> 和 \<stdarg.h>|\<varargs.h>*|
 
 \* 仅对 UNIX V 兼容性是必需的。
 

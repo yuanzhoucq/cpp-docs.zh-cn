@@ -60,19 +60,19 @@ helpviewer_keywords:
 - fstrset function
 - _tcsset_l function
 ms.assetid: c42ded42-2ed9-4f06-a0a9-247ba305473a
-ms.openlocfilehash: 486e53a38f5b91732a422f01dce9dbd5c1b36c3d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 916e65f543e48a9fbfede3ca973698f8b0d07040
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375361"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500825"
 ---
-# <a name="strset-strsetl-wcsset-wcssetl-mbsset-mbssetl"></a>_strset、_strset_l、_wcsset、_wcsset_l、_mbsset、_mbsset_l
+# <a name="_strset-_strset_l-_wcsset-_wcsset_l-_mbsset-_mbsset_l"></a>_strset、_strset_l、_wcsset、_wcsset_l、_mbsset、_mbsset_l
 
 将字符串的字符设置为一个字符。 这些函数的更安全版本已经发布；请参阅 [_strset_s、_strset_s_l、_wcsset_s、_wcsset_s_l、_mbsset_s、_mbsset_s_l](strset-s-strset-s-l-wcsset-s-wcsset-s-l-mbsset-s-mbsset-s-l.md)。
 
 > [!IMPORTANT]
-> **_mbsset**并 **_mbsset_l**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbsset**和 **_mbsset_l**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -123,14 +123,14 @@ unsigned char *_mbsset_l(
 
 ## <a name="remarks"></a>备注
 
-**_Strset**函数设置 （除非终止 null 字符） 的所有字符*str*到*c*，已转换为**char**。 **_wcsset**并 **_mbsset_l**宽字符及多字节字符版本的 **_strset**，和的参数和返回值的数据类型会相应地变化。 否则这些函数具有相同行为。
+**_Strset**函数将*str*的所有字符 (终止 null 字符除外) 设置为*c*, 并将其转换为**char**。 **_wcsset**和 **_mbsset_l**是 **_strset**的宽字符和多字节字符版本, 参数和返回值的数据类型也有所不同。 否则这些函数具有相同行为。
 
-**_mbsset**验证其参数。 如果*str*是空指针，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则 **_mbsset**返回**NULL**并设置**errno**到**EINVAL**。 **_strset**并 **_wcsset**不会验证其参数。
+**_mbsset**验证其参数。 如果*str*为空指针, 则将调用无效参数处理程序, 如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续, 则 **_mbsset**将返回**NULL** , 并将**errno**设置为**EINVAL**。 **_strset**和 **_wcsset**不会验证其参数。
 
-输出值受的设置**LC_CTYPE**的区域设置的类别设置影响; 请参阅[setlocale、 _wsetlocale](setlocale-wsetlocale.md)有关详细信息。 这些函数的版本是相同的不同之处在于不具有 **_l**后缀使用当前区域设置以及是否有那些 **_l**后缀改为使用区域设置参数的传入。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的**LC_CTYPE**类别设置的影响;有关详细信息, 请参阅[setlocale、_wsetlocale](setlocale-wsetlocale.md) 。 这些函数的版本相同, 不同之处在于没有 **_l**后缀的函数使用当前区域设置, 而使用的是 **_l**后缀, 而是使用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 > [!IMPORTANT]
-> 这些函数可能容易受到的缓冲区溢出的威胁。 缓冲区溢出可以用于系统攻击，因为它们可能使权限的提升不能确保。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
+> 这些函数可能容易受到的缓冲区溢出的威胁。 缓冲区溢出可以用于系统攻击，因为它们可能使权限的提升不能确保。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -147,7 +147,7 @@ unsigned char *_mbsset_l(
 |**_strset_l**|\<tchar.h>|
 |**_wcsset**|\<string.h> 或 \<wchar.h>|
 |**_wcsset_l**|\<tchar.h>|
-|**_mbsset**， **_mbsset_l**|\<mbstring.h>|
+|**_mbsset**、 **_mbsset_l**|\<mbstring.h>|
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

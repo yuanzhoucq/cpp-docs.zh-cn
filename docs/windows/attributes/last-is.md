@@ -1,19 +1,19 @@
 ---
-title: last_is (C++ COM 属性)
+title: last_is (C++ COM 特性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.last_is
 helpviewer_keywords:
 - last_is attribute
 ms.assetid: 9e045ac0-fa38-4249-af55-67bde5d0a58c
-ms.openlocfilehash: 39b35b218f3402839d956c4da0a00f290fe5d595
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4745d4eb59fd2adb79937b34184081dbbd0814fb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409416"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514516"
 ---
-# <a name="lastis"></a>last_is
+# <a name="last_is"></a>last_is
 
 指定要传输的最后一个数组元素的索引。
 
@@ -25,16 +25,16 @@ ms.locfileid: "62409416"
 
 ### <a name="parameters"></a>参数
 
-*expression*<br/>
-一个或多个 C 语言表达式。 允许使用空参数槽。
+expression<br/>
+一个或多个 C 语言表达式。 允许空参数槽。
 
 ## <a name="remarks"></a>备注
 
-**Last_is** C++属性具有相同的功能[last_is](/windows/desktop/Midl/last-is) MIDL 特性。
+**Last_is** C++特性具有与[last_is](/windows/win32/Midl/last-is) MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
-请参阅[first_is](first-is.md)以举例说明如何指定数组的一部分。
+有关如何指定数组的部分的示例, 请参阅[first_is](first-is.md) 。
 
 ## <a name="requirements"></a>要求
 
@@ -42,10 +42,10 @@ ms.locfileid: "62409416"
 
 |||
 |-|-|
-|**适用对象**|中的字段**struct**或**union**，接口参数，接口方法|
-|**可重复**|否|
-|**必需的特性**|None|
-|**无效的特性**|None|
+|**适用于**|**结构**或**联合**中的字段, 接口参数, 接口方法|
+|**可重复**|No|
+|**必需的特性**|无|
+|**无效的特性**|无|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

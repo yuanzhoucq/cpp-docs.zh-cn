@@ -2,12 +2,12 @@
 title: C++ 中 Windows 编程概述
 ms.date: 07/28/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: f72e6320493027728a85741ba6d87025454c3b9e
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: 10ef9698e27099d5856c1ed5f8ed2f21cea72c24
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68607515"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514806"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>C++ 中 Windows 编程概述
 
@@ -21,9 +21,9 @@ C++控制台应用程序从控制台窗口中的命令行运行, 并且只能显
 
 ## <a name="native-desktop-client-applications"></a>本机桌面客户端应用程序
 
-*本机桌面客户端应用程序*是一个 C C++或有窗口的应用程序, 它使用原始本机[Windows C api 或组件对象模型 (COM) api](/windows/desktop/apiindex/windows-api-list)来访问操作系统。 这些 Api 在大多数情况下都是以 C 编写的。有多种方法可以创建本机桌面应用程序:您可以使用处理操作系统事件的 C 样式消息循环直接使用 Win32 Api 进行编程。 或者, 您可以使用*Microsoft 基础类*(MFC) 来编程, 这是一个用于C++包装 Win32 的稍微面向对象的库。 与通用 Windows 平台 (UWP) 相比, 这两种方法都不会被视为 "新式", 但这两种方法仍完全受支持, 并在世界各地运行了数百万行代码。 在窗口中运行的 Win32 应用程序需要开发人员显式使用 Windows 过程函数中的 Windows 消息。 不管名称如何, Win32 应用程序都可以编译为32位 (x86) 或64位 (x64) 二进制。 在 Visual Studio IDE 中，x86 和 Win32 这两个术语是同义的。
+*本机桌面客户端应用程序*是一个 C C++或有窗口的应用程序, 它使用原始本机[Windows C api 或组件对象模型 (COM) api](/windows/win32/apiindex/windows-api-list)来访问操作系统。 这些 Api 在大多数情况下都是以 C 编写的。有多种方法可以创建本机桌面应用程序:您可以使用处理操作系统事件的 C 样式消息循环直接使用 Win32 Api 进行编程。 或者, 您可以使用*Microsoft 基础类*(MFC) 来编程, 这是一个用于C++包装 Win32 的稍微面向对象的库。 与通用 Windows 平台 (UWP) 相比, 这两种方法都不会被视为 "新式", 但这两种方法仍完全受支持, 并在世界各地运行了数百万行代码。 在窗口中运行的 Win32 应用程序需要开发人员显式使用 Windows 过程函数中的 Windows 消息。 不管名称如何, Win32 应用程序都可以编译为32位 (x86) 或64位 (x64) 二进制。 在 Visual Studio IDE 中，x86 和 Win32 这两个术语是同义的。
 
-若要开始进行传统的C++ Windows 编程, 请参阅[Win32 和C++入门](/windows/desktop/LearnWin32/learn-to-program-for-windows)。 了解 Win32 后, 就可以更轻松地了解[MFC 桌面应用程序](../mfc/mfc-desktop-applications.md)。 有关使用复杂图形的传统C++桌面应用程序的示例, 请参阅[Hilo:开发C++适用于 Windows](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)的应用程序。
+若要开始进行传统的C++ Windows 编程, 请参阅[Win32 和C++入门](/windows/win32/LearnWin32/learn-to-program-for-windows)。 了解 Win32 后, 就可以更轻松地了解[MFC 桌面应用程序](../mfc/mfc-desktop-applications.md)。 有关使用复杂图形的传统C++桌面应用程序的示例, 请参阅[Hilo:开发C++适用于 Windows](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)的应用程序。
 
 ### <a name="c-or-net"></a>C++还是 .NET？
 
@@ -39,7 +39,7 @@ C++控制台应用程序从控制台窗口中的命令行运行, 并且只能显
 
 ## <a name="com-components"></a>COM 组件
 
-[组件对象模型 (COM)](/windows/desktop/com/the-component-object-model)是一种规范, 用不同语言编写的程序可以相互通信。 许多 Windows 组件是作为 COM 对象实现的, 并遵循用于对象创建、接口发现和对象析构的标准 COM 规则。  使用桌面应用程序C++中的 com 对象相对简单, 但编写自己的 com 对象更高级。 [活动模板库 (ATL)](../atl/atl-com-desktop-components.md)提供了可简化 COM 开发的宏和帮助程序函数。 有关详细信息, 请参阅[ATL COM 桌面组件](../atl/atl-com-desktop-components.md)。
+[组件对象模型 (COM)](/windows/win32/com/the-component-object-model)是一种规范, 用不同语言编写的程序可以相互通信。 许多 Windows 组件是作为 COM 对象实现的, 并遵循用于对象创建、接口发现和对象析构的标准 COM 规则。  使用桌面应用程序C++中的 com 对象相对简单, 但编写自己的 com 对象更高级。 [活动模板库 (ATL)](../atl/atl-com-desktop-components.md)提供了可简化 COM 开发的宏和帮助程序函数。 有关详细信息, 请参阅[ATL COM 桌面组件](../atl/atl-com-desktop-components.md)。
 
 ## <a name="universal-windows-platform-apps"></a>通用 Windows 平台应用
 
@@ -55,7 +55,7 @@ C++控制台应用程序从控制台窗口中的命令行运行, 并且只能显
 
 ## <a name="games"></a>游戏
 
-DirectX 游戏可以在电脑或 Xbox 上运行。 有关详细信息, 请参阅[DirectX 图形和游戏](/windows/desktop/directx)。
+DirectX 游戏可以在电脑或 Xbox 上运行。 有关详细信息, 请参阅[DirectX 图形和游戏](/windows/win32/directx)。
 
 ## <a name="sql-server-database-clients"></a>SQL Server 数据库客户端
 
@@ -67,7 +67,7 @@ DirectX 游戏可以在电脑或 Xbox 上运行。 有关详细信息, 请参阅
 
 ## <a name="windows-services"></a>Windows 服务
 
-Windows*服务*是一种可在后台运行, 几乎无需用户交互的程序。 在 UNIX 系统上, 这些程序称为*守护*程序。 有关详细信息, 请参阅[服务](/windows/desktop/services/services)。
+Windows*服务*是一种可在后台运行, 几乎无需用户交互的程序。 在 UNIX 系统上, 这些程序称为*守护*程序。 有关详细信息, 请参阅[服务](/windows/win32/services/services)。
 
 ## <a name="sdks-libraries-and-header-files"></a>Sdk、库和头文件
 

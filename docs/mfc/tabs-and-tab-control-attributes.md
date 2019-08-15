@@ -8,24 +8,24 @@ helpviewer_keywords:
 - tabs [MFC], attributes
 - CTabCtrl class [MFC], tab control attributes
 ms.assetid: ecf190cb-f323-4751-bfdb-766dbe6bb553
-ms.openlocfilehash: ca9f89565770e60a59007d609d132fae15eacae6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 982ec40e330e2a7dda5c125d83e54751cd14416d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62306441"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511241"
 ---
 # <a name="tabs-and-tab-control-attributes"></a>选项卡和选项卡控件特性
 
-有相当大的控制权的外观和行为的选项卡组成的选项卡控件 ([CTabCtrl](../mfc/reference/ctabctrl-class.md))。 每个选项卡上可以具有一个标签、 图标、 一项的状态，以及与之关联应用程序定义的 32 位值。 对于每个选项卡上，可以显示图标、 标签，或两者。
+您对构成选项卡控件 ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) 的选项卡的外观和行为具有相当大的控制权。 每个选项卡可以有一个与之关联的标签、图标、项状态和应用程序定义的32位值。 对于每个选项卡, 可以显示图标和/或标签。
 
-此外，每个选项卡项可以有三种可能状态： 按下、 非按下或突出显示。 此状态仅可以通过修改现有选项卡项设置。 若要修改现有选项卡项，检索通过调用[GetItem](../mfc/reference/ctabctrl-class.md#getitem)，修改`TCITEM`结构 (具体而言*dwState*并*dwStateMask*数据成员)，然后返回修改后`TCITEM`结构通过调用[SetItem](../mfc/reference/ctabctrl-class.md#setitem)。 如果您需要清除中的所有选项卡项的项状态`CTabCtrl`对象，调用[DeselectAll](../mfc/reference/ctabctrl-class.md#deselectall)。 此函数将重置所有选项卡项或所有项，但当前选择的状态。
+此外, 每个选项卡项可以有三种可能的状态: 按下、unpressed 或突出显示。 仅可通过修改现有选项卡项设置此状态。 若要修改现有选项卡项, 请使用对[GetItem](../mfc/reference/ctabctrl-class.md#getitem)的调用来检索它`TCITEM` , 修改该结构 (特别是*dwState*和*dwStateMask*数据成员), 然后通过`TCITEM`调用返回已修改的结构[SetItem](../mfc/reference/ctabctrl-class.md#setitem)。 如果需要清除`CTabCtrl`对象中所有选项卡项的状态, 请调用[DeselectAll](../mfc/reference/ctabctrl-class.md#deselectall)。 此函数将重置所有选项卡项或所有项 (当前选定项除外) 的状态。
 
-下面的代码中清除所有选项卡项的状态，然后修改第三个项的状态：
+下面的代码清除所有选项卡项的状态, 然后修改第三项的状态:
 
 [!code-cpp[NVC_MFCControlLadenDialog#32](../mfc/codesnippet/cpp/tabs-and-tab-control-attributes_1.cpp)]
 
-有关选项卡的属性的详细信息，请参阅[选项卡和选项卡特性](/windows/desktop/Controls/tab-controls)Windows SDK 中。 有关向选项卡控件添加选项卡的详细信息，请参阅[添加到选项卡控件的选项卡](../mfc/adding-tabs-to-a-tab-control.md)本主题中更高版本。
+有关选项卡属性的详细信息, 请参阅 Windows SDK 中的[选项卡和选项卡属性](/windows/win32/Controls/tab-controls)。 有关将选项卡添加到选项卡控件的详细信息, 请参阅本主题后面的将选项卡[添加到选项卡控件](../mfc/adding-tabs-to-a-tab-control.md)。
 
 ## <a name="see-also"></a>请参阅
 

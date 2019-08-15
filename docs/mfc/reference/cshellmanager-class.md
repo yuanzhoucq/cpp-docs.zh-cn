@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CShellManager [MFC], GetParentItem
 - CShellManager [MFC], ItemFromPath
 ms.assetid: f15c4c1a-6fae-487d-9913-9b7369b33da0
-ms.openlocfilehash: 14e8da573621f712ae9e27647122d305be54b7b0
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 8151550dafdd1bdf8593d555008af387cf548bc8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916684"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502620"
 ---
 # <a name="cshellmanager-class"></a>CShellManager 类
 
@@ -113,7 +113,7 @@ BOOL BrowseForFolder(
 中对话框的标题。
 
 *ulFlags*<br/>
-中指定对话框选项的标志。 有关详细说明, 请参阅[BROWSEINFO](/windows/desktop/api/shlobj_core/ns-shlobj_core-browseinfoa) 。
+中指定对话框选项的标志。 有关详细说明, 请参阅[BROWSEINFO](/windows/win32/api/shlobj_core/ns-shlobj_core-browseinfow) 。
 
 *piFolderImage*<br/>
 弄一个指向整数值的指针, 该方法在此位置写入所选文件夹的图像索引。
@@ -156,7 +156,7 @@ LPITEMIDLIST ConcatenateItem(
 
 ### <a name="remarks"></a>备注
 
-此方法创建一个足以同时包含*pidl1*和*Pidl2*的新[ITEMIDLIST](/windows/desktop/api/shtypes/ns-shtypes-itemidlist) 。 然后, 它会将*pidl1*和*pidl2*复制到新列表中。
+此方法创建一个足以同时包含*pidl1*和*Pidl2*的新[ITEMIDLIST](/windows/win32/api/shtypes/ns-shtypes-itemidlist) 。 然后, 它会将*pidl1*和*pidl2*复制到新列表中。
 
 ##  <a name="copyitem"></a>CShellManager:: CopyItem
 

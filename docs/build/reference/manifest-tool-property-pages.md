@@ -24,16 +24,16 @@ f1_keywords:
 - VC.Project.VCManifestTool.UpdateFileHashesSearchPath
 - vc.project.AdditionalOptionsPage
 ms.assetid: f33499c4-7733-42d9-80e3-8a5018786965
-ms.openlocfilehash: adc821370201eeb83b6c6b4b875e5e62b0fa523f
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: c8413a28024361db82ca74858453202393987e60
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68606437"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492691"
 ---
 # <a name="manifest-tool-property-pages"></a>清单工具属性页
 
-使用这些页面指定[mt.exe](https://msdn.microsoft.com/library/aa375649)的常规选项。 这些页面位于 "**项目** > **属性** > " "**配置属性** > " "**清单工具**" 下。
+使用这些页面指定[mt.exe](/windows/win32/sbscs/mt-exe)的常规选项。 这些页面位于 "**项目** > **属性** > " "**配置属性** > " "**清单工具**" 下。
 
 ## <a name="general-property-page"></a>"常规属性" 页
 
@@ -105,7 +105,7 @@ ms.locfileid: "68606437"
 
 ## <a name="isolated-com-property-page"></a>独立 COM 属性页
 
-有关独立 COM 的详细信息, 请参阅[独立应用程序](/windows/desktop/SbsCs/isolated-applications)和[如何:生成独立应用程序以使用 COM](../how-to-build-isolated-applications-to-consume-com-components.md)组件。
+有关独立 COM 的详细信息, 请参阅[独立应用程序](/windows/win32/SbsCs/isolated-applications)和[如何:生成独立应用程序以使用 COM](../how-to-build-isolated-applications-to-consume-com-components.md)组件。
 
 ###  <a name="type-library-file"></a>类型库文件
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CConstantTransition [MFC], Create
 - CConstantTransition [MFC], m_duration
 ms.assetid: f6fa4780-a71b-4cd6-80aa-d4792ace36c2
-ms.openlocfilehash: 9641af2f184d2edaa82922363dff75783e79f87e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ccf08b309e64cd82215acb6032bc2a777f4c809a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182179"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507170"
 ---
 # <a name="cconstanttransition-class"></a>CConstantTransition 类
 
@@ -41,17 +41,17 @@ class CConstantTransition : public CBaseTransition;
 
 |名称|描述|
 |----------|-----------------|
-|[CConstantTransition::Create](#create)|调用要创建封装的转换 COM 对象的转换库。 (重写[CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create)。)|
+|[CConstantTransition::Create](#create)|调用转换库以创建封装的转换 COM 对象。 (重写[CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create)。)|
 
 ### <a name="public-data-members"></a>公共数据成员
 
 |名称|描述|
 |----------|-----------------|
-|[CConstantTransition::m_duration](#m_duration)|过渡的持续时间。|
+|[CConstantTransition::m_duration](#m_duration)|转换的持续时间。|
 
 ## <a name="remarks"></a>备注
 
-常量在转换期间，动画变量的值保持为初始值过渡的持续时间内。 因为会自动清除所有转换，我们建议分配它们使用新运算符。 封装 IUIAnimationTransition 创建 COM 对象通过 CAnimationController::AnimateGroup，直到它为 NULL。 创建此 COM 对象不起作用之后更改成员变量。
+在常量转换期间, 动画变量的值将在转换的持续时间内保留为初始值。 由于所有转换都将自动清除, 因此建议使用 operator new 将其分配给它们。 封装的 IUIAnimationTransition COM 对象由 CAnimationController:: AnimateGroup 创建, 直到它为 NULL。 在创建此 COM 对象之后更改成员变量不起作用。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -65,7 +65,7 @@ class CConstantTransition : public CBaseTransition;
 
 **标头：** afxanimationcontroller.h
 
-##  <a name="cconstanttransition"></a>  CConstantTransition::CConstantTransition
+##  <a name="cconstanttransition"></a>CConstantTransition:: CConstantTransition
 
 构造转换对象并初始化其持续时间。
 
@@ -76,11 +76,11 @@ CConstantTransition (UI_ANIMATION_SECONDS duration);
 ### <a name="parameters"></a>参数
 
 *duration*<br/>
-过渡的持续时间。
+转换的持续时间。
 
-##  <a name="create"></a>  CConstantTransition::Create
+##  <a name="create"></a>CConstantTransition:: Create
 
-调用要创建封装的转换 COM 对象的转换库。
+调用转换库以创建封装的转换 COM 对象。
 
 ```
 virtual BOOL Create(
@@ -91,15 +91,15 @@ virtual BOOL Create(
 ### <a name="parameters"></a>参数
 
 *pLibrary*<br/>
-一个指向[IUIAnimationTransitionLibrary 接口](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)，用于定义的标准转换库。
+指向[IUIAnimationTransitionLibrary 接口](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)的指针, 该接口定义标准转换库。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则创建转换，则返回 TRUE否则为 FALSE。
+如果成功创建转换, 则为 TRUE;否则为 FALSE。
 
-##  <a name="m_duration"></a>  CConstantTransition::m_duration
+##  <a name="m_duration"></a>CConstantTransition:: m_duration
 
-过渡的持续时间。
+转换的持续时间。
 
 ```
 UI_ANIMATION_SECONDS m_duration;
