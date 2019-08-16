@@ -5,12 +5,12 @@ helpviewer_keywords:
 - deploying applications [C++]
 - application deployment [C++]
 ms.assetid: d4b4ffc0-d2bd-4e4a-84a6-62f1c26f6a09
-ms.openlocfilehash: 8dccf581cff88dc2e8c4a889bed8b47fc140eb7c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67d5c7b0772eda55d1b653bd73f95ac93e31e644
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345365"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514819"
 ---
 # <a name="deployment-in-visual-c"></a>Visual C++ 中的部署
 
@@ -48,7 +48,7 @@ ms.locfileid: "62345365"
 
 ## <a name="troubleshooting-deployment-issues"></a>部署问题疑难解答
 
-Visual C++ 库的加载顺序与系统相关。 若要诊断加载程序问题，请使用 depends.exe 或 where.exe。 有关详细信息，请参阅 [Dynamic-Link Library Search Order (Windows)](/windows/desktop/Dlls/dynamic-link-library-search-order)（动态链接库搜索顺序 (Windows)）。
+Visual C++ 库的加载顺序与系统相关。 若要诊断加载程序问题，请使用 depends.exe 或 where.exe。 有关详细信息，请参阅 [Dynamic-Link Library Search Order (Windows)](/windows/win32/Dlls/dynamic-link-library-search-order)（动态链接库搜索顺序 (Windows)）。
 
 ## <a name="see-also"></a>请参阅
 

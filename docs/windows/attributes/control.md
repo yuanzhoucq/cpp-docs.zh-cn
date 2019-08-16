@@ -1,17 +1,17 @@
 ---
-title: 控件 (C++ COM 属性)
+title: control (C++ COM 特性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.control
 helpviewer_keywords:
 - Control attribute
 ms.assetid: 3d046bb2-4afe-4cb8-a762-233b296e1975
-ms.openlocfilehash: 223acf774d1cc90d84aed2d0d0c8cb59fc778fa1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 12cf98b49b43b7a67834ea5401994ecdc749aa3b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148271"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501779"
 ---
 # <a name="control"></a>控件
 
@@ -25,7 +25,7 @@ ms.locfileid: "62148271"
 
 ## <a name="remarks"></a>备注
 
-**控制**属性对应[组件类](coclass.md)属性。 **控制**C++属性具有相同的功能[控制](/windows/desktop/Midl/control)MIDL 特性。
+**Control**特性隐含[coclass](coclass.md)特性。 **Control** C++特性具有与[控件](/windows/win32/Midl/control)MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
@@ -50,10 +50,10 @@ class CTest : public ICustom {};
 
 |||
 |-|-|
-|**适用对象**|**类**，**结构**|
-|**可重复**|否|
-|**必需的特性**|None|
-|**无效的特性**|None|
+|**适用于**|**class**、 **struct**|
+|**可重复**|No|
+|**必需的特性**|无|
+|**无效的特性**|无|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

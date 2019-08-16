@@ -26,14 +26,14 @@ helpviewer_keywords:
 - mbstowcs_s function
 - mbstowcs_s_l function
 ms.assetid: 2fbda953-6918-498f-b440-3e7b21ed65a4
-ms.openlocfilehash: 18af20b5722364ea306daebdcb77f5771d8ea2b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7a1c29118c48bbbb5358e7d7ea57296f7ec908a8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331150"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499761"
 ---
-# <a name="mbstowcss-mbstowcssl"></a>mbstowcs_s, _mbstowcs_s_l
+# <a name="mbstowcs_s-_mbstowcs_s_l"></a>mbstowcs_s, _mbstowcs_s_l
 
 将多字节字符序列转换为对应的宽字符序列。 这些版本的 [mbstowcs、_mbstowcs_l](mbstowcs-mbstowcs-l.md) 具有安全增强功能，如 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述。
 
@@ -81,13 +81,13 @@ errno_t _mbstowcs_s_l(
 用于转换所生成的宽字符串的缓冲区地址。
 
 *sizeInWords*<br/>
-大小*wcstr*中字词的缓冲区。
+*Wcstr*缓冲区的大小 (以单词为限)。
 
 *mbstr*<br/>
 Null 终止的多字节字符序列的地址。
 
-*count*<br/>
-宽字符存储在最大数目*wcstr*缓冲区，不包括终止 null 或[_TRUNCATE](../../c-runtime-library/truncate.md)。
+*计数*<br/>
+要存储在*wcstr*缓冲区中的宽字符的最大数量, 不包括终止 Null 或[_TRUNCATE](../../c-runtime-library/truncate.md)。
 
 *locale*<br/>
 要使用的区域设置。
@@ -98,37 +98,37 @@ Null 终止的多字节字符序列的地址。
 
 |错误条件|返回值和**errno**|
 |---------------------|------------------------------|
-|*wcstr*是**NULL**并*sizeInWords* > 0|**EINVAL**|
-|*mbstr*是**NULL**|**EINVAL**|
-|目标缓冲区因过小，无法包含转换后的字符串 (除非*计数*是 **_TRUNCATE**; 请参阅下面的备注)|**ERANGE**|
-|*wcstr*不是**NULL**并*sizeInWords* = = 0|**EINVAL**|
+|*wcstr*为**NULL** , *sizeInWords* > 0|**EINVAL**|
+|*mbstr*为**NULL**|**EINVAL**|
+|目标缓冲区太小, 无法包含转换后的字符串 (除非*计数*为 **_TRUNCATE**; 请参阅下面的备注)|**ERANGE**|
+|*wcstr*不为**NULL** , *sizeInWords* = = 0|**EINVAL**|
 
-如果发生这些情况中的任何一个，都会调用无效参数异常，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，函数将返回错误代码，并设置**errno**如下表所示。
+如果发生这些情况中的任何一个，都会调用无效参数异常，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续, 则该函数将返回错误代码并按表中所示设置**errno** 。
 
 ## <a name="remarks"></a>备注
 
-**Mbstowcs_s**函数将通过指向多字节字符的字符串转换*mbstr*指向的缓冲区中存储的宽字符*wcstr*。 在满足以下条件之一前，该转换将一直对每个字符执行：
+**Mbstowcs_s**函数将*mbstr*指向的多字节字符的字符串转换为存储在*wcstr*所指向的缓冲区中的宽字符。 在满足以下条件之一前，该转换将一直对每个字符执行：
 
 - 遇到一个多字节空字符
 
 - 遇到一个无效的多字节字符
 
-- 存储中的宽字符数*wcstr*缓冲 equals*计数*。
+- 存储在*wcstr*缓冲区中的宽字符数等于*count*。
 
 目标字符串始终以 null 结尾（即使在出错时）。
 
-如果*计数*是特殊值[_TRUNCATE](../../c-runtime-library/truncate.md)，然后**mbstowcs_s**多地将字符串转换根据目标缓冲区，同时仍保留为空的空间终结器。
+如果*count*是特殊值[_TRUNCATE](../../c-runtime-library/truncate.md), 则**mbstowcs_s**会将尽可能多的字符串转换为目标缓冲区的大小, 同时仍然为 null 终止符留下空间。
 
-如果**mbstowcs_s**成功转换了源字符串，它将大小放在转换后的字符串，包括 null 终止符的宽字符 *&#42;pReturnValue* (提供*pReturnValue*不是**NULL**)。 发生这种情况即使*wcstr*自变量是**NULL** ，并提供了一种方法来确定所需的缓冲区大小。 请注意，如果*wcstr*是**NULL**，*计数*将被忽略，并且*sizeInWords*必须为 0。
+如果**mbstowcs_s**成功转换了源字符串, 它会将转换后的字符串 (包括 null 终止符) 的宽字符大小放入 *&#42;pReturnValue* (前提是*pReturnValue*不为**null**)。 即使*wcstr*参数为**NULL** , 并且提供了一种方法来确定所需的缓冲区大小, 也会发生这种情况。 请注意, 如果*wcstr*为**NULL**, 则忽略*count* , 而*sizeInWords*必须为0。
 
-如果**mbstowcs_s**遇到无效的多字节字符，它将 0 放入 *&#42;pReturnValue*，将目标缓冲区设置为空字符串，设置**errno**到**EILSEQ**，并返回**EILSEQ**。
+如果**mbstowcs_s**遇到无效的多字节字符, 它将在 *&#42;pReturnValue*中放置 0, 将目标缓冲区设置为空字符串, 将**errno**设置为**eilseq 且**, 并返回**eilseq 且**。
 
-如果指向的序列*mbstr*并*wcstr*重叠的行为**mbstowcs_s**是不确定的。
+如果由*mbstr*和*wcstr*指向的序列重叠, 则**mbstowcs_s**的行为不确定。
 
 > [!IMPORTANT]
-> 絋粄*wcstr*和*mbstr*未重叠，并且*计数*正确反映了要转换的多字节字符的数量。
+> 确保*wcstr*和*mbstr*不重叠, 并且该*计数*正确反映了要转换的多字节字符的数量。
 
-**mbstowcs_s**的任何区域设置相关的行为; 使用当前区域设置 **_mbstowcs_s_l**是完全相同，只不过它改用已传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**mbstowcs_s**为任何与区域设置相关的行为使用当前区域设置; **_mbstowcs_s_l**是相同的, 只不过它使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -145,7 +145,7 @@ Null 终止的多字节字符序列的地址。
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
 [区域设置](../../c-runtime-library/locale.md)<br/>
-[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
+[MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
 [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>

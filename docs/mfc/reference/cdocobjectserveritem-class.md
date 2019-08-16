@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CDocObjectServerItem [MFC], OnHide
 - CDocObjectServerItem [MFC], OnShow
 ms.assetid: 530f7156-50c8-4806-9328-602c9133f622
-ms.openlocfilehash: 66ff2326cd3d08b3f6c8399d7e948d6aab5074c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d44791415626f1a94500b9c3885581d67e8fe42
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391134"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506824"
 ---
 # <a name="cdocobjectserveritem-class"></a>CDocObjectServerItem 类
 
@@ -37,7 +37,7 @@ class CDocObjectServerItem : public COleServerItem
 
 ### <a name="protected-constructors"></a>受保护的构造函数
 
-|名称|描述|
+|name|描述|
 |----------|-----------------|
 |[CDocObjectServerItem::CDocObjectServerItem](#cdocobjectserveritem)|构造 `CDocObjectServerItem` 对象。|
 
@@ -45,23 +45,23 @@ class CDocObjectServerItem : public COleServerItem
 
 |名称|描述|
 |----------|-----------------|
-|[CDocObjectServerItem::GetDocument](#getdocument)|检索指向包含项的文档。|
+|[CDocObjectServerItem::GetDocument](#getdocument)|检索指向包含该项的文档的指针。|
 
 ### <a name="protected-methods"></a>受保护的方法
 
 |名称|描述|
 |----------|-----------------|
 |[CDocObjectServerItem::OnDoVerb](#ondoverb)|调用以执行谓词。|
-|[CDocObjectServerItem::OnHide](#onhide)|如果框架试图隐藏 DocObject 项，将引发异常。|
-|[CDocObjectServerItem::OnShow](#onshow)|由框架调用以使该文档项就地活动状态。 如果项不是 DocObject，调用[COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow)。|
+|[CDocObjectServerItem::OnHide](#onhide)|如果框架尝试隐藏 DocObject 项, 将引发异常。|
+|[CDocObjectServerItem::OnShow](#onshow)|由框架调用以使 DocObject 项处于就地活动状态。 如果项不是 DocObject, 则调用[COleServerItem:: OnShow](../../mfc/reference/coleserveritem-class.md#onshow)。|
 
 ## <a name="remarks"></a>备注
 
-`CDocObjectServerItem` 定义可重写成员函数：[OnHide](#onhide)， [OnDoVerb](#ondoverb)，和[OnShow](#onshow)。
+`CDocObjectServerItem`定义可重写成员函数:[OnHide](#onhide)、 [OnDoVerb](#ondoverb)和[OnShow](#onshow)。
 
-若要使用`CDocObjectServerItem`，确保[OnGetEmbeddedItem](../../mfc/reference/coleserverdoc-class.md#ongetembeddeditem)重写中你`COleServerDoc`-派生的类返回一个新`CDocObjectServerItem`对象。 如果需要更改你的项中的任何功能，可以创建自己的新实例`CDocObjectServerItem`-派生的类。
+若要`CDocObjectServerItem`使用, 请确保派生类中`COleServerDoc`的[OnGetEmbeddedItem](../../mfc/reference/coleserverdoc-class.md#ongetembeddeditem)重写返回一个新`CDocObjectServerItem`的对象。 如果需要更改项中的任何功能, 则可以创建自己`CDocObjectServerItem`的派生类的新实例。
 
-DocObjects 的详细信息，请参阅[CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md)并[COleCmdUI](../../mfc/reference/colecmdui-class.md)中*MFC 参考*。
+有关 DocObjects 的详细信息, 请参阅*MFC 参考*中的[CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md)和[COleCmdUI](../../mfc/reference/colecmdui-class.md) 。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -77,9 +77,9 @@ DocObjects 的详细信息，请参阅[CDocObjectServer](../../mfc/reference/cdo
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxdocob.h
+**标头:** afxdocob
 
-##  <a name="cdocobjectserveritem"></a>  CDocObjectServerItem::CDocObjectServerItem
+##  <a name="cdocobjectserveritem"></a>CDocObjectServerItem:: CDocObjectServerItem
 
 构造 `CDocObjectServerItem` 对象。
 
@@ -93,11 +93,11 @@ CDocObjectServerItem(COleServerDoc* pServerDoc, BOOL bAutoDelete);
 指向将包含新 DocObject 项的文档的指针。
 
 *bAutoDelete*<br/>
-指示链接到该发布时是否可以删除该对象。 将参数设置为 FALSE;`CDocObjectServerItem`对象是不可或缺的一部分文档的数据。 将其设置为 TRUE 的对象是否用于标识可以通过该框架来删除文档的数据中的范围的辅助结构。
+指示在释放对象的链接时是否可将其删除。 如果`CDocObjectServerItem`对象是文档数据的组成部分, 则将参数设置为 FALSE。 如果对象是一个辅助结构, 则将其设置为 TRUE, 该结构用于标识可由框架删除的文档数据中的范围。
 
-##  <a name="getdocument"></a>  CDocObjectServerItem::GetDocument
+##  <a name="getdocument"></a>CDocObjectServerItem:: GetDocument
 
-检索指向包含项的文档。
+检索指向包含该项的文档的指针。
 
 ```
 COleServerDoc* GetDocument() const;
@@ -105,11 +105,11 @@ COleServerDoc* GetDocument() const;
 
 ### <a name="return-value"></a>返回值
 
-指向包含的项; 文档如果项不是文档的一部分，则为 NULL。
+指向包含该项的文档的指针;如果项不是文档的一部分, 则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-这样，作为参数传递服务器文档的访问权限[CDocObjectServerItem](#cdocobjectserveritem)构造函数。
+这允许访问作为参数传递给[CDocObjectServerItem](#cdocobjectserveritem)构造函数的服务器文档。
 
 ##  <a name="ondoverb"></a>  CDocObjectServerItem::OnDoVerb
 
@@ -122,15 +122,15 @@ virtual void OnDoVerb(LONG iVerb);
 ### <a name="parameters"></a>参数
 
 *iVerb*<br/>
-指定要执行的谓词。 有关可能的值，请参阅[IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) Windows SDK 中。
+指定要执行的谓词。 有关可能的值, 请参阅 IOleObject: Windows SDK 中的[::D overb](/windows/win32/api/oleidl/nf-oleidl-ioleobject-doverb) 。
 
 ### <a name="remarks"></a>备注
 
-默认实现调用[OnShow](#onshow)成员函数，如果该项是 DocObject 并且指定 OLEIVERB_INPLACEACTIVATE 或 OLEIVERB_SHOW。 如果此项不是 DocObject 或指定不同的谓词的默认实现调用[COleServerItem::OnDoVerb](../../mfc/reference/coleserveritem-class.md#ondoverb)。
+如果项是 DocObject 并且指定了 OLEIVERB_INPLACEACTIVATE 或 OLEIVERB_SHOW, 则默认实现将调用[OnShow](#onshow)成员函数。 如果项不是 DocObject 或指定了其他谓词, 则默认实现将调用[COleServerItem:: OnDoVerb](../../mfc/reference/coleserveritem-class.md#ondoverb)。
 
-##  <a name="onhide"></a>  CDocObjectServerItem::OnHide
+##  <a name="onhide"></a>CDocObjectServerItem:: OnHide
 
-由框架调用以隐藏项。
+由框架调用以隐藏该项。
 
 ```
 virtual void OnHide();
@@ -138,11 +138,11 @@ virtual void OnHide();
 
 ### <a name="remarks"></a>备注
 
-如果该项是 DocObject 的默认实现将引发异常。 整个视图，因此，不能隐藏 active DocObject 项。 必须先停用 DocObject 项目，使其消失。 如果项不是 DocObject 的默认实现调用[COleServerItem::OnHide](../../mfc/reference/coleserveritem-class.md#onhide)。
+如果项是 DocObject, 则默认实现会引发异常。 不能隐藏活动的 DocObject 项, 因为它将使用整个视图。 必须停用 DocObject 项以使其消失。 如果项不是 DocObject, 则默认实现将调用[COleServerItem:: OnHide](../../mfc/reference/coleserveritem-class.md#onhide)。
 
-##  <a name="onshow"></a>  CDocObjectServerItem::OnShow
+##  <a name="onshow"></a>CDocObjectServerItem:: OnShow
 
-由框架调用以指示服务器应用程序，以使该文档项就地活动状态。
+由框架调用, 指示服务器应用程序将 DocObject 项设置为就地活动。
 
 ```
 virtual void OnShow();
@@ -150,7 +150,7 @@ virtual void OnShow();
 
 ### <a name="remarks"></a>备注
 
-如果项不是 DocObject 的默认实现调用[COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onopen)。 如果你想要执行的特殊处理打开 DocObject 项时，重写此函数。
+如果项不是 DocObject, 则默认实现将调用[COleServerItem:: OnShow](../../mfc/reference/coleserveritem-class.md#onopen)。 如果希望在打开 DocObject 项时执行特殊处理, 请重写此函数。
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,5 +1,5 @@
 ---
-title: CAtlExeModuleT 类
+title: Catlexemodulet 用作类
 ms.date: 11/04/2016
 f1_keywords:
 - CAtlExeModuleT
@@ -22,14 +22,14 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlExeModuleT class
 ms.assetid: 82245f3d-91d4-44fa-aa86-7cc7fbd758d9
-ms.openlocfilehash: 87e526a10c9bcd6a52f4544c50344c5145cfa732
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d37cc8e97d29cbedfeb4ba79502d44529485399f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62247052"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497842"
 ---
-# <a name="catlexemodulet-class"></a>CAtlExeModuleT 类
+# <a name="catlexemodulet-class"></a>Catlexemodulet 用作类
 
 此类表示应用程序的模块。
 
@@ -43,7 +43,7 @@ class ATL_NO_VTABLE CAtlExeModuleT : public CAtlModuleT<T>
 #### <a name="parameters"></a>参数
 
 *T*<br/>
-您的类派生自`CAtlExeModuleT`。
+派生自`CAtlExeModuleT`的类。
 
 ## <a name="members"></a>成员
 
@@ -52,41 +52,41 @@ class ATL_NO_VTABLE CAtlExeModuleT : public CAtlModuleT<T>
 |名称|描述|
 |----------|-----------------|
 |[CAtlExeModuleT::CAtlExeModuleT](#catlexemodulet)|构造函数。|
-|[CAtlExeModuleT::~CAtlExeModuleT](#dtor)|析构函数。|
+|[Catlexemodulet 用作:: ~ Catlexemodulet 用作](#dtor)|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
 |名称|描述|
 |----------|-----------------|
-|[CAtlExeModuleT::InitializeCom](#initializecom)|初始化 com。|
-|[CAtlExeModuleT::ParseCommandLine](#parsecommandline)|分析命令行，并根据需要执行注册。|
-|[CAtlExeModuleT::PostMessageLoop](#postmessageloop)|消息循环退出后立即调用此方法。|
-|[CAtlExeModuleT::PreMessageLoop](#premessageloop)|输入消息循环之前调用此方法。|
+|[CAtlExeModuleT::InitializeCom](#initializecom)|初始化 COM。|
+|[CAtlExeModuleT::ParseCommandLine](#parsecommandline)|分析命令行并在必要时执行注册。|
+|[CAtlExeModuleT::PostMessageLoop](#postmessageloop)|消息循环退出后, 立即调用此方法。|
+|[CAtlExeModuleT::PreMessageLoop](#premessageloop)|此方法将在进入消息循环前立即调用。|
 |[CAtlExeModuleT::RegisterClassObjects](#registerclassobjects)|注册类对象。|
 |[CAtlExeModuleT::RevokeClassObjects](#revokeclassobjects)|撤消类对象。|
-|[CAtlExeModuleT::Run](#run)|此方法在初始化、 运行消息循环，该 EXE 模块中执行代码和清理。|
+|[CAtlExeModuleT::Run](#run)|此方法执行 EXE 模块中的代码以初始化、运行消息循环, 并进行清理。|
 |[CAtlExeModuleT::RunMessageLoop](#runmessageloop)|此方法执行消息循环。|
-|[CAtlExeModuleT::UninitializeCom](#uninitializecom)|取消初始化 com。|
-|[CAtlExeModuleT::Unlock](#unlock)|模块的锁计数递减。|
+|[CAtlExeModuleT::UninitializeCom](#uninitializecom)|取消 COM。|
+|[CAtlExeModuleT::Unlock](#unlock)|减小模块的锁计数。|
 |[CAtlExeModuleT::WinMain](#winmain)|此方法实现运行 EXE 所需的代码。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
 |名称|描述|
 |----------|-----------------|
-|[CAtlExeModuleT::m_bDelayShutdown](#m_bdelayshutdown)|指示应为延迟关闭该模块的标志。|
-|[CAtlExeModuleT::m_dwPause](#m_dwpause)|暂停值，用于确保在关闭前发布所有对象。|
-|[CAtlExeModuleT::m_dwTimeOut](#m_dwtimeout)|使用要延迟模块卸载的超时值。|
+|[CAtlExeModuleT::m_bDelayShutdown](#m_bdelayshutdown)|一个标志, 该标志指示应延迟关闭模块。|
+|[CAtlExeModuleT::m_dwPause](#m_dwpause)|用于确保在关闭前释放所有对象的暂停值。|
+|[CAtlExeModuleT::m_dwTimeOut](#m_dwtimeout)|用于延迟模块卸载的超时值。|
 
 ## <a name="remarks"></a>备注
 
-`CAtlExeModuleT` 表示应用程序 (EXE) 模块，并包含在退出支持创建 EXE、 处理命令行、 注册类对象、 运行消息循环和清理代码。
+`CAtlExeModuleT`表示应用程序的模块 (EXE), 其中包含支持创建 EXE、处理命令行、注册类对象、运行消息循环和在退出时清除的代码。
 
-此类旨在不断地创建和销毁 EXE 服务器中的 COM 对象时提高性能。 该 EXE 释放最后一个的 COM 对象后，等待指定的持续时间[CAtlExeModuleT::m_dwTimeOut](#m_dwtimeout)数据成员。 如果在此期间没有任何活动 （即，创建 COM 对象），启动关机进程。
+此类旨在提高 EXE 服务器中的 COM 对象不断创建和销毁时的性能。 在最后一个 COM 对象发布后, EXE 等待[catlexemodulet 用作:: m_dwTimeOut](#m_dwtimeout)数据成员指定的持续时间。 如果在此期间没有活动 (即, 未创建 COM 对象), 则启动关闭进程。
 
-[CAtlExeModuleT::m_bDelayShutdown](#m_bdelayshutdown)数据成员是标志，用于确定该 exe 文件应使用上面定义的机制。 如果设置为 false，该模块将立即终止。
+[Catlexemodulet 用作:: m_bDelayShutdown](#m_bdelayshutdown)数据成员是一个标志, 用于确定 EXE 是否应使用上面定义的机制。 如果将其设置为 false, 则该模块将立即终止。
 
-在 ATL 中的模块的详细信息，请参阅[ATL Module 类](../../atl/atl-module-classes.md)。
+有关 ATL 中的模块的详细信息, 请参阅[Atl Module 类](../../atl/atl-module-classes.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -100,9 +100,9 @@ class ATL_NO_VTABLE CAtlExeModuleT : public CAtlModuleT<T>
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlbase.h
+**标头:** atlbase。h
 
-##  <a name="catlexemodulet"></a>  CAtlExeModuleT::CAtlExeModuleT
+##  <a name="catlexemodulet"></a>Catlexemodulet 用作:: Catlexemodulet 用作
 
 构造函数。
 
@@ -112,9 +112,9 @@ CAtlExeModuleT() throw();
 
 ### <a name="remarks"></a>备注
 
-如果无法初始化 EXE 模块，WinMain 将立即返回而不会进一步处理。
+如果无法初始化 EXE 模块, WinMain 将立即返回, 无需进一步处理。
 
-##  <a name="dtor"></a>  CAtlExeModuleT:: ~ CAtlExeModuleT
+##  <a name="dtor"></a>Catlexemodulet 用作:: ~ Catlexemodulet 用作
 
 析构函数。
 
@@ -126,9 +126,9 @@ CAtlExeModuleT() throw();
 
 释放所有已分配的资源。
 
-##  <a name="initializecom"></a>  CAtlExeModuleT::InitializeCom
+##  <a name="initializecom"></a>Catlexemodulet 用作:: InitializeCom
 
-初始化 com。
+初始化 COM。
 
 ```
 static HRESULT InitializeCom() throw();
@@ -136,17 +136,17 @@ static HRESULT InitializeCom() throw();
 
 ### <a name="return-value"></a>返回值
 
-返回成功，则为 S_OK 或失败时的错误 HRESULT。
+如果成功, 则返回 S_OK, 否则返回错误 HRESULT。
 
 ### <a name="remarks"></a>备注
 
-此方法从构造函数调用，并且可重写以不同于默认实现方式初始化 COM。 默认实现可以调用`CoInitializeEx(NULL, COINIT_MULTITHREADED)`或`CoInitialize(NULL)`具体取决于项目配置。
+此方法是从构造函数调用的, 可以重写, 以不同于默认实现的方式初始化 COM。 默认实现将调用`CoInitializeEx(NULL, COINIT_MULTITHREADED)`或`CoInitialize(NULL)` , 具体取决于项目配置。
 
-重写此方法通常需要重写[CAtlExeModuleT::UninitializeCom](#uninitializecom)。
+重写此方法通常需要重写[catlexemodulet 用作:: UninitializeCom](#uninitializecom)。
 
-##  <a name="m_bdelayshutdown"></a>  CAtlExeModuleT::m_bDelayShutdown
+##  <a name="m_bdelayshutdown"></a>Catlexemodulet 用作:: m_bDelayShutdown
 
-指示应为延迟关闭该模块的标志。
+一个标志, 该标志指示应延迟关闭模块。
 
 ```
 bool m_bDelayShutdown;
@@ -154,11 +154,11 @@ bool m_bDelayShutdown;
 
 ### <a name="remarks"></a>备注
 
-请参阅[CAtlExeModuleT 概述](../../atl/reference/catlexemodulet-class.md)有关详细信息。
+有关详细信息, 请参阅[Catlexemodulet 用作概述](../../atl/reference/catlexemodulet-class.md)。
 
-##  <a name="m_dwpause"></a>  CAtlExeModuleT::m_dwPause
+##  <a name="m_dwpause"></a>Catlexemodulet 用作:: m_dwPause
 
-用来确保所有对象都已关闭之前的暂停值。
+用于确保所有对象在关闭之前都已消失的暂停值。
 
 ```
 DWORD m_dwPause;
@@ -166,11 +166,11 @@ DWORD m_dwPause;
 
 ### <a name="remarks"></a>备注
 
-将此值更改之后调用[CAtlExeModuleT::InitializeCom](#initializecom)设置为关闭服务器用作暂停值的毫秒数。 默认值为 1000年毫秒。
+请在调用[catlexemodulet 用作:: InitializeCom](#initializecom)后更改此值, 以设置用作关闭服务器的暂停值的毫秒数。 默认值为1000毫秒。
 
-##  <a name="m_dwtimeout"></a>  CAtlExeModuleT::m_dwTimeOut
+##  <a name="m_dwtimeout"></a>Catlexemodulet 用作:: m_dwTimeOut
 
-使用要延迟模块卸载的超时值。
+用于延迟模块卸载的超时值。
 
 ```
 DWORD m_dwTimeOut;
@@ -178,11 +178,11 @@ DWORD m_dwTimeOut;
 
 ### <a name="remarks"></a>备注
 
-将此值更改之后调用[CAtlExeModuleT::InitializeCom](#initializecom)定义用作关闭服务器的超时值的毫秒数。 默认值为 5000 毫秒。 请参阅[CAtlExeModuleT 概述](../../atl/reference/catlexemodulet-class.md)的更多详细信息。
+请在调用[catlexemodulet 用作:: InitializeCom](#initializecom)后更改此值, 以定义用作关闭服务器的超时值的毫秒数。 默认值为 5000 毫秒。 有关更多详细信息, 请参阅[Catlexemodulet 用作概述](../../atl/reference/catlexemodulet-class.md)。
 
-##  <a name="parsecommandline"></a>  CAtlExeModuleT::ParseCommandLine
+##  <a name="parsecommandline"></a>Catlexemodulet 用作::P arseCommandLine
 
-分析命令行，并根据需要执行注册。
+分析命令行并在必要时执行注册。
 
 ```
 bool ParseCommandLine(LPCTSTR lpCmdLine, HRESULT* pnRetCode) throw();
@@ -191,22 +191,22 @@ bool ParseCommandLine(LPCTSTR lpCmdLine, HRESULT* pnRetCode) throw();
 ### <a name="parameters"></a>参数
 
 *lpCmdLine*<br/>
-命令行传递给应用程序。
+传递给应用程序的命令行。
 
 *pnRetCode*<br/>
-（如果发生） 与注册相对应的 HRESULT。
+与注册相对应的 HRESULT (如果已发生)。
 
 ### <a name="return-value"></a>返回值
 
-如果应用程序应继续运行，否则为 false 则返回 true。
+如果应用程序应继续运行, 则返回 true; 否则返回 false。
 
 ### <a name="remarks"></a>备注
 
-从中调用此方法[CAtlExeModuleT::WinMain](#winmain) ，可以重写以处理命令行开关。 默认实现可检查 **/RegServer**并 **/UnRegServer**命令行参数，并执行注册或注销。
+此方法是从[catlexemodulet 用作:: WinMain](#winmain)调用的, 可以重写此方法以处理命令行开关。 默认实现检查 **/RegServer**和 **/UnRegServer**命令行参数, 并执行注册或注销。
 
 ##  <a name="postmessageloop"></a>  CAtlExeModuleT::PostMessageLoop
 
-消息循环退出后立即调用此方法。
+消息循环退出后, 立即调用此方法。
 
 ```
 HRESULT PostMessageLoop() throw();
@@ -214,15 +214,15 @@ HRESULT PostMessageLoop() throw();
 
 ### <a name="return-value"></a>返回值
 
-返回成功，则为 S_OK 或失败时的错误 HRESULT。
+如果成功, 则返回 S_OK, 否则返回错误 HRESULT。
 
 ### <a name="remarks"></a>备注
 
-重写此方法以执行自定义应用程序的清理操作。 默认实现调用[CAtlExeModuleT::RevokeClassObjects](#revokeclassobjects)。
+重写此方法以执行自定义应用程序清理。 默认实现将调用[catlexemodulet 用作:: RevokeClassObjects](#revokeclassobjects)。
 
-##  <a name="premessageloop"></a>  CAtlExeModuleT::PreMessageLoop
+##  <a name="premessageloop"></a>Catlexemodulet 用作::P reMessageLoop
 
-输入消息循环之前调用此方法。
+此方法将在进入消息循环前立即调用。
 
 ```
 HRESULT PreMessageLoop(int nShowCmd) throw();
@@ -231,19 +231,19 @@ HRESULT PreMessageLoop(int nShowCmd) throw();
 ### <a name="parameters"></a>参数
 
 *nShowCmd*<br/>
-作为传递的值*nShowCmd* WinMain 中的参数。
+作为 WinMain 中的*nShowCmd*参数传递的值。
 
 ### <a name="return-value"></a>返回值
 
-返回成功，则为 S_OK 或失败时的错误 HRESULT。
+如果成功, 则返回 S_OK, 否则返回错误 HRESULT。
 
 ### <a name="remarks"></a>备注
 
-重写此方法以添加该应用程序的自定义初始化代码。 默认实现注册类对象。
+重写此方法以添加应用程序的自定义初始化代码。 默认实现注册类对象。
 
-##  <a name="registerclassobjects"></a>  CAtlExeModuleT::RegisterClassObjects
+##  <a name="registerclassobjects"></a>Catlexemodulet 用作:: RegisterClassObjects
 
-向 OLE 注册类对象，以便其他应用程序可以连接到它。
+向 OLE 注册类对象, 以便其他应用程序可以连接到它。
 
 ```
 HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
@@ -252,18 +252,18 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 ### <a name="parameters"></a>参数
 
 *dwClsContext*<br/>
-指定在其中运行的类对象的上下文。 可能的值为 CLSCTX_INPROC_SERVER、 CLSCTX_INPROC_HANDLER 或 CLSCTX_LOCAL_SERVER。
+指定要在其中运行类对象的上下文。 可能的值包括 CLSCTX_INPROC_SERVER、CLSCTX_INPROC_HANDLER 或 CLSCTX_LOCAL_SERVER。
 
 *dwFlags*<br/>
-确定指向类对象的连接类型。 可能的值为 REGCLS_SINGLEUSE、 REGCLS_MULTIPLEUSE 或 REGCLS_MULTI_SEPARATE。
+确定类对象的连接类型。 可能的值包括 REGCLS_SINGLEUSE、REGCLS_MULTIPLEUSE 或 REGCLS_MULTI_SEPARATE。
 
 ### <a name="return-value"></a>返回值
 
-成功、 S_FALSE 没有任何类注册，则在失败的错误 HRESULT 返回 S_OK。
+如果成功, 则返回 S_OK; 如果没有要注册的类, 则返回 S_FALSE; 否则返回错误 HRESULT。
 
-##  <a name="revokeclassobjects"></a>  CAtlExeModuleT::RevokeClassObjects
+##  <a name="revokeclassobjects"></a>Catlexemodulet 用作:: RevokeClassObjects
 
-删除类的对象。
+删除类对象。
 
 ```
 HRESULT RevokeClassObjects() throw();
@@ -271,11 +271,11 @@ HRESULT RevokeClassObjects() throw();
 
 ### <a name="return-value"></a>返回值
 
-成功、 S_FALSE 没有任何类注册，则在失败的错误 HRESULT 返回 S_OK。
+如果成功, 则返回 S_OK; 如果没有要注册的类, 则返回 S_FALSE; 否则返回错误 HRESULT。
 
-##  <a name="run"></a>  CAtlExeModuleT::Run
+##  <a name="run"></a>Catlexemodulet 用作:: Run
 
-此方法在初始化、 运行消息循环，该 EXE 模块中执行代码和清理。
+此方法执行 EXE 模块中的代码以初始化、运行消息循环, 并进行清理。
 
 ```
 HRESULT Run(int nShowCmd = SW_HIDE) throw();
@@ -284,17 +284,17 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 ### <a name="parameters"></a>参数
 
 *nShowCmd*<br/>
-指定窗口的显示方式。 此参数可以是讨论中的值之一[WinMain](/windows/desktop/api/winbase/nf-winbase-winmain)部分。 默认值为 SW_HIDE。
+指定窗口的显示方式。 此参数可以是[WinMain](/windows/win32/api/winbase/nf-winbase-winmain)节中讨论的值之一。 默认值为 SW_HIDE。
 
 ### <a name="return-value"></a>返回值
 
-返回成功，则为 S_OK 或失败时的错误 HRESULT。
+如果成功, 则返回 S_OK, 否则返回错误 HRESULT。
 
 ### <a name="remarks"></a>备注
 
-可以重写此方法。 但是，在实践中是它更好地重写[CAtlExeModuleT::PreMessageLoop](#premessageloop)， [CAtlExeModuleT::RunMessageLoop](#runmessageloop)，或[CAtlExeModuleT::PostMessageLoop](#postmessageloop)改为。
+可以重写此方法。 但实际上, 更好的做法是替代[catlexemodulet 用作::P remessageloop](#premessageloop)、 [Catlexemodulet 用作:: RunMessageLoop](#runmessageloop)或[catlexemodulet 用作::P ostmessageloop](#postmessageloop) 。
 
-##  <a name="runmessageloop"></a>  CAtlExeModuleT::RunMessageLoop
+##  <a name="runmessageloop"></a>Catlexemodulet 用作:: RunMessageLoop
 
 此方法执行消息循环。
 
@@ -304,11 +304,11 @@ void RunMessageLoop() throw();
 
 ### <a name="remarks"></a>备注
 
-可以重写此方法，若要更改的消息循环行为。
+可以重写此方法以更改消息循环的行为。
 
-##  <a name="uninitializecom"></a>  CAtlExeModuleT::UninitializeCom
+##  <a name="uninitializecom"></a>Catlexemodulet 用作:: UninitializeCom
 
-取消初始化 com。
+取消 COM。
 
 ```
 static void UninitializeCom() throw();
@@ -316,11 +316,11 @@ static void UninitializeCom() throw();
 
 ### <a name="remarks"></a>备注
 
-默认情况下此方法只是调用[CoUninitialize](/windows/desktop/api/combaseapi/nf-combaseapi-couninitialize)和从析构函数调用。 重写此方法，如果重写[CAtlExeModuleT::InitializeCom](#initializecom)。
+默认情况下, 此方法只调用[CoUninitialize](/windows/win32/api/combaseapi/nf-combaseapi-couninitialize)并从析构函数调用。 如果重写[catlexemodulet 用作:: InitializeCom](#initializecom), 则重写此方法。
 
-##  <a name="unlock"></a>  CAtlExeModuleT::Unlock
+##  <a name="unlock"></a>Catlexemodulet 用作:: Unlock
 
-模块的锁计数递减。
+减小模块的锁计数。
 
 ```
 LONG Unlock() throw();
@@ -328,9 +328,9 @@ LONG Unlock() throw();
 
 ### <a name="return-value"></a>返回值
 
-返回一个值，该值可能是有用的诊断或测试。
+返回一个值, 该值对于诊断或测试可能很有用。
 
-##  <a name="winmain"></a>  CAtlExeModuleT::WinMain
+##  <a name="winmain"></a>Catlexemodulet 用作:: WinMain
 
 此方法实现运行 EXE 所需的代码。
 
@@ -341,7 +341,7 @@ int WinMain(int nShowCmd) throw();
 ### <a name="parameters"></a>参数
 
 *nShowCmd*<br/>
-指定窗口的显示方式。 此参数可以是讨论中的值之一[WinMain](/windows/desktop/api/winbase/nf-winbase-winmain)部分。
+指定窗口的显示方式。 此参数可以是[WinMain](/windows/win32/api/winbase/nf-winbase-winmain)节中讨论的值之一。
 
 ### <a name="return-value"></a>返回值
 
@@ -349,7 +349,7 @@ int WinMain(int nShowCmd) throw();
 
 ### <a name="remarks"></a>备注
 
-可以重写此方法。 如果重写[CAtlExeModuleT::PreMessageLoop](#premessageloop)， [CAtlExeModuleT::PostMessageLoop](#postmessageloop)，或[CAtlExeModuleT::RunMessageLoop](#runmessageloop)不具有足够的灵活性它是可以重写`WinMain`函数使用此方法。
+可以重写此方法。 如果替代[catlexemodulet 用作::P remessageloop](#premessageloop)、 [catlexemodulet 用作::P ostmessageloop](#postmessageloop)或[catlexemodulet 用作:: RunMessageLoop](#runmessageloop)无法提供足够的灵活性, 则`WinMain`可以使用此付款方式.
 
 ## <a name="see-also"></a>请参阅
 

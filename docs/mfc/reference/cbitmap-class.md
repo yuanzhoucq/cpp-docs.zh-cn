@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-ms.openlocfilehash: 3cd194d0b6303c6d337d7157a521c825f77fc312
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 7161a4cf4484b6cc9e76e6955de558ca6e9121ca
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916226"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507442"
 ---
 # <a name="cbitmap-class"></a>CBitmap 类
 
@@ -155,7 +155,7 @@ BOOL CreateBitmap(
 
 完成通过 `CBitmap` 函数创建的 `CreateBitmap` 对象后，首先选择设备上下文中的位图，然后删除 `CBitmap` 对象。
 
-有关详细信息, 请参阅`bmBits` `BITMAP`结构中的字段的说明。 [BITMAP](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap) 结构根据 [CBitmap::CreateBitmapIndirect](#createbitmapindirect) 成员函数进行说明。
+有关详细信息, 请参阅`bmBits` `BITMAP`结构中的字段的说明。 [BITMAP](/windows/win32/api/wingdi/ns-wingdi-bitmap) 结构根据 [CBitmap::CreateBitmapIndirect](#createbitmapindirect) 成员函数进行说明。
 
 ##  <a name="createbitmapindirect"></a>CBitmap:: CreateBitmapIndirect
 
@@ -168,7 +168,7 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 ### <a name="parameters"></a>参数
 
 *lpBitmap*<br/>
-指向包含位图相关信息的[位图](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap)结构。
+指向包含位图相关信息的[位图](/windows/win32/api/wingdi/ns-wingdi-bitmap)结构。
 
 ### <a name="return-value"></a>返回值
 
@@ -178,7 +178,7 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 
 尽管无法为显示设备直接选择位图, 但可以使用[cdc:: SelectObject](../../mfc/reference/cdc-class.md#selectobject)将其选为内存设备上下文的当前位图, 并使用[Cdc:: BitBlt](../../mfc/reference/cdc-class.md#bitblt)或[cdc::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt)函数。 ( [CDC::P atblt](../../mfc/reference/cdc-class.md#patblt)函数可以将当前画笔的位图直接复制到显示设备上下文。)
 
-如果 lpBitmap `BITMAP`参数所指向的结构已使用`GetObject`函数填充, 则不会指定位图的位, 也不会初始化位图。 若要初始化位图, 应用程序可以使用函数 (如[CDC:: BitBlt](../../mfc/reference/cdc-class.md#bitblt)或[SetDIBits](/windows/desktop/api/wingdi/nf-wingdi-setdibits) ) 将位从由的`CGdiObject::GetObject`第一个参数标识的位图复制到创建`CreateBitmapIndirect`的位图。
+如果 lpBitmap `BITMAP`参数所指向的结构已使用`GetObject`函数填充, 则不会指定位图的位, 也不会初始化位图。 若要初始化位图, 应用程序可以使用函数 (如[CDC:: BitBlt](../../mfc/reference/cdc-class.md#bitblt)或[SetDIBits](/windows/win32/api/wingdi/nf-wingdi-setdibits) ) 将位从由的`CGdiObject::GetObject`第一个参数标识的位图复制到创建`CreateBitmapIndirect`的位图。
 
 完成通过`CreateBitmapIndirect`函数创建的`CBitmap`对象后, 首先选择设备`CBitmap`上下文中的位图, 然后删除对象。
 
@@ -286,7 +286,7 @@ int GetBitmap(BITMAP* pBitMap);
 ### <a name="parameters"></a>参数
 
 *pBitMap*<br/>
-指向将接收图像属性的[位图](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap)结构的指针。 此参数不得为 NULL。
+指向将接收图像属性的[位图](/windows/win32/api/wingdi/ns-wingdi-bitmap)结构的指针。 此参数不得为 NULL。
 
 ### <a name="return-value"></a>返回值
 
@@ -408,7 +408,7 @@ BOOL LoadMappedBitmap(
 
 默认情况下`LoadMappedBitmap` , 将映射按钮字形中常用的颜色。
 
-有关创建映射的位图的信息, 请参阅 Windows SDK 中的 Windows 函数[CreateMappedBitmap](https://go.microsoft.com/fwlink/p/?linkid=230562)和[COLORMAP](/windows/desktop/api/commctrl/ns-commctrl-colormap)结构。
+有关创建映射的位图的信息, 请参阅 Windows SDK 中的 Windows 函数[CreateMappedBitmap](https://go.microsoft.com/fwlink/p/?linkid=230562)和[COLORMAP](/windows/win32/api/commctrl/ns-commctrl-colormap)结构。
 
 ##  <a name="loadoembitmap"></a>CBitmap:: LoadOEMBitmap
 
@@ -469,7 +469,7 @@ operator HBITMAP() const;
 
 此运算符是支持直接使用`HBITMAP`对象的强制转换运算符。
 
-有关使用图形对象的详细信息, 请参阅 Windows SDK 中的[图形对象](/windows/desktop/gdi/graphic-objects)。
+有关使用图形对象的详细信息, 请参阅 Windows SDK 中的[图形对象](/windows/win32/gdi/graphic-objects)。
 
 ##  <a name="setbitmapbits"></a>CBitmap:: SetBitmapBits
 

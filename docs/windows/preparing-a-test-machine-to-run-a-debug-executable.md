@@ -4,12 +4,12 @@ ms.date: 07/02/2019
 helpviewer_keywords:
 - debug executable, preparing a test machine to run
 ms.assetid: f0400989-cc2e-4dce-9788-6bdbe91c6f5a
-ms.openlocfilehash: 87d2bf434aef3a85bf7fa19f5886bec106515809
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.openlocfilehash: ae751b1632473fa316c7965bc751e91b782a89ea
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552329"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513665"
 ---
 # <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>准备用于运行调试可执行文件的测试计算机
 
@@ -25,15 +25,15 @@ ms.locfileid: "67552329"
 - 借助本地部署将特定的 Visual C++ DLL 的调试版本安装到应用程序的安装目录，方式是使用 \Microsoft Visual Studio \<版本>\VC\redist\Debug_NonRedist\\ 中的 Program Files 或 Program Files (x86) 目录下提供的文件。
 
     > [!NOTE]
-    >  对于在另一台计算机上使用 Visual Studio 2005 或 Visual Studio 2008 生成的应用程序的远程调试，必须部署视觉对象的调试版本C++库作为共享的并行程序集 Dll。 可以使用安装程序项目或 Windows Installer 来安装相应的合并模块。
+    >  若要在另一台计算机上使用 Visual Studio 2005 或 Visual Studio 2008 生成的应用程序的远程调试, 必须将 Visual C++ library dll 的调试版本作为共享并行程序集进行部署。 可以使用安装程序项目或 Windows Installer 来安装相应的合并模块。
 
-- 使用 Visual Studio 中“配置管理器”对话框中的“部署”选项将项目输出和其他文件复制到远程计算机   。
+- 使用 Visual Studio 中“配置管理器”对话框中的“部署”选项将项目输出和其他文件复制到远程计算机。
 
 安装 Visual C++ DLL 之后，您可以在网络共享上运行远程调试程序。 有关远程调试的详细信息，请参阅[远程调试](/visualstudio/debugger/remote-debugging)。
 
 ## <a name="see-also"></a>请参阅
 
 [Visual C++ 中的部署](deployment-in-visual-cpp.md)<br>
-[Windows Installer 命令行选项](/windows/desktop/Msi/command-line-options)<br>
+[Windows Installer 命令行选项](/windows/win32/Msi/command-line-options)<br>
 [部署示例](deployment-examples.md)<br>
 [远程调试](/visualstudio/debugger/remote-debugging)

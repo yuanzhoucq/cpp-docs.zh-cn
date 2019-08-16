@@ -74,16 +74,16 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], OnSend
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
-ms.openlocfilehash: ef486e653eaf78914ea25663e0c1ab744ab30cd4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef938796faf8e9b9272a519ed1e51037edc90425
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164900"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507531"
 ---
 # <a name="casyncsocket-class"></a>CAsyncSocket 类
 
-表示 Windows 套接字 — 网络通信的终结点。
+表示 Windows 套接字, 即网络通信终结点。
 
 ## <a name="syntax"></a>语法
 
@@ -104,68 +104,68 @@ class CAsyncSocket : public CObject
 |名称|描述|
 |----------|-----------------|
 |[CAsyncSocket::Accept](#accept)|接受套接字上的连接。|
-|[CAsyncSocket::AsyncSelect](#asyncselect)|套接字的请求事件通知。|
-|[CAsyncSocket::Attach](#attach)|将附加的套接字句柄`CAsyncSocket`对象。|
-|[CAsyncSocket::Bind](#bind)|将与套接字关联的本地地址。|
+|[CAsyncSocket::AsyncSelect](#asyncselect)|请求套接字的事件通知。|
+|[CAsyncSocket::Attach](#attach)|将套接字句柄附加`CAsyncSocket`到对象。|
+|[CAsyncSocket::Bind](#bind)|将本地地址与套接字关联。|
 |[CAsyncSocket::Close](#close)|关闭套接字。|
-|[CAsyncSocket::Connect](#connect)|建立到对等的套接字连接。|
-|[CAsyncSocket::Create](#create)|创建的套接字。|
-|[CAsyncSocket::Detach](#detach)|分离套接字句柄从`CAsyncSocket`对象。|
-|[CAsyncSocket::FromHandle](#fromhandle)|返回一个指向`CAsyncSocket`给定 socket 句柄的对象。|
-|[CAsyncSocket::GetLastError](#getlasterror)|获取失败的最后一个操作的错误状态。|
-|[CAsyncSocket::GetPeerName](#getpeername)|获取对等方套接字的套接字连接到的地址。|
-|[CAsyncSocket::GetPeerNameEx](#getpeernameex)|获取到套接字的连接 （句柄 IPv6 地址） 的对等方套接字地址。|
-|[CAsyncSocket::GetSockName](#getsockname)|获取一个套接字的本地名称。|
-|[CAsyncSocket::GetSockNameEx](#getsocknameex)|获取套接字 （句柄 IPv6 地址） 的本地名称。|
+|[CAsyncSocket::Connect](#connect)|建立与对等套接字的连接。|
+|[CAsyncSocket::Create](#create)|创建套接字。|
+|[CAsyncSocket::Detach](#detach)|从`CAsyncSocket`对象分离套接字句柄。|
+|[CAsyncSocket::FromHandle](#fromhandle)|给定套接字句柄, `CAsyncSocket`返回指向对象的指针。|
+|[CAsyncSocket::GetLastError](#getlasterror)|获取上次失败的操作的错误状态。|
+|[CAsyncSocket::GetPeerName](#getpeername)|获取套接字连接到的对等套接字的地址。|
+|[CAsyncSocket::GetPeerNameEx](#getpeernameex)|获取套接字连接到的对等套接字的地址 (处理 IPv6 地址)。|
+|[CAsyncSocket::GetSockName](#getsockname)|获取套接字的本地名称。|
+|[CAsyncSocket::GetSockNameEx](#getsocknameex)|获取套接字的本地名称 (处理 IPv6 地址)。|
 |[CAsyncSocket::GetSockOpt](#getsockopt)|检索套接字选项。|
 |[CAsyncSocket::IOCtl](#ioctl)|控制套接字的模式。|
-|[CAsyncSocket::Listen](#listen)|建立套接字以侦听传入连接请求。|
+|[CAsyncSocket::Listen](#listen)|建立用于侦听传入连接请求的套接字。|
 |[CAsyncSocket::Receive](#receive)|从套接字接收数据。|
-|[CAsyncSocket::ReceiveFrom](#receivefrom)|接收数据报并存储的源地址。|
-|[CAsyncSocket::ReceiveFromEx](#receivefromex)|接收数据报并存储源地址 （句柄 IPv6 地址）。|
+|[CAsyncSocket::ReceiveFrom](#receivefrom)|接收数据报并存储源地址。|
+|[CAsyncSocket::ReceiveFromEx](#receivefromex)|接收数据报并存储源地址 (处理 IPv6 地址)。|
 |[CAsyncSocket::Send](#send)|将数据发送到连接的套接字。|
-|[CAsyncSocket::SendTo](#sendto)|将数据发送到特定目标。|
-|[CAsyncSocket::SendToEx](#sendtoex)|将数据发送到特定目标 （句柄 IPv6 地址）。|
+|[CAsyncSocket::SendTo](#sendto)|向特定目标发送数据。|
+|[CAsyncSocket::SendToEx](#sendtoex)|将数据发送到特定目标 (处理 IPv6 地址)。|
 |[CAsyncSocket::SetSockOpt](#setsockopt)|设置套接字选项。|
-|[CAsyncSocket::ShutDown](#shutdown)|禁用`Send`和/或`Receive`套接字上调用。|
-|[CASyncSocket::Socket](#socket)|分配一个套接字句柄。|
+|[CAsyncSocket::ShutDown](#shutdown)|在`Send`套接字上`Receive`禁用和/或调用。|
+|[CASyncSocket::Socket](#socket)|分配套接字句柄。|
 
 ### <a name="protected-methods"></a>受保护的方法
 
 |名称|描述|
 |----------|-----------------|
-|[CAsyncSocket::OnAccept](#onaccept)|通知可通过调用接受挂起的连接请求的侦听套接字`Accept`。|
+|[CAsyncSocket::OnAccept](#onaccept)|通知侦听套接字它可以通过调用`Accept`来接受挂起的连接请求。|
 |[CAsyncSocket::OnClose](#onclose)|通知套接字连接到它的套接字已关闭。|
-|[CAsyncSocket::OnConnect](#onconnect)|通知连接的套接字连接尝试是否已完成，已成功或错误。|
-|[CAsyncSocket::OnOutOfBandData](#onoutofbanddata)|通知的接收套接字，没有要读取套接字通常紧急邮件上的带外数据。|
-|[CAsyncSocket::OnReceive](#onreceive)|没有要调用来检索数据时通知侦听套接字`Receive`。|
-|[CAsyncSocket::OnSend](#onsend)|通知套接字，它可以将数据发送通过调用`Send`。|
+|[CAsyncSocket::OnConnect](#onconnect)|通知连接套接字连接尝试已完成 (无论是成功还是错误)。|
+|[CAsyncSocket::OnOutOfBandData](#onoutofbanddata)|通知接收套接字存在要在套接字上读取的带外数据, 通常为紧急消息。|
+|[CAsyncSocket::OnReceive](#onreceive)|通知侦听套接字有要通过调用`Receive`检索的数据。|
+|[CAsyncSocket::OnSend](#onsend)|通知套接字它可以通过调用`Send`发送数据。|
 
 ### <a name="public-operators"></a>公共运算符
 
 |名称|描述|
 |----------|-----------------|
-|[CAsyncSocket::operator =](#operator_eq)|将一个新值赋给`CAsyncSocket`对象。|
-|[CAsyncSocket::operator SOCKET](#operator_socket)|使用此运算符将检索的套接字句柄`CAsyncSocket`对象。|
+|[CAsyncSocket::operator =](#operator_eq)|将新值分配给`CAsyncSocket`对象。|
+|[CAsyncSocket:: operator 套接字](#operator_socket)|使用此运算符检索`CAsyncSocket`对象的套接字句柄。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
 |名称|描述|
 |----------|-----------------|
-|[CAsyncSocket::m_hSocket](#m_hsocket)|表示附加到此套接字句柄`CAsyncSocket`对象。|
+|[CAsyncSocket::m_hSocket](#m_hsocket)|指示附加到此`CAsyncSocket`对象的套接字句柄。|
 
 ## <a name="remarks"></a>备注
 
-类`CAsyncSocket`封装 Windows 套接字函数 API，编程人员想要使用 Windows 套接字与 MFC 一起提供的面向对象的抽象。
+类`CAsyncSocket`封装 Windows 套接字函数 API, 为想要结合使用 Windows 套接字的程序员提供面向对象的抽象。
 
-此类基于了解网络通信的假设。 您是负责处理阻塞，字节顺序差异，并 Unicode 和多字节字符之间的转换设置 (MBCS) 字符串。 如果你想更方便的界面，用于为你管理这些问题，请参阅类[CSocket](../../mfc/reference/csocket-class.md)。
+此类基于你了解网络通信的假设。 您负责处理阻止、字节顺序差异以及 Unicode 和多字节字符集 (MBCS) 字符串之间的转换。 如果需要更方便的界面来管理这些问题, 请参阅类[CSocket](../../mfc/reference/csocket-class.md)。
 
-若要使用`CAsyncSocket`对象，请调用其构造函数，然后调用[创建](#create)函数来创建基础套接字句柄 (类型`SOCKET`)，除非在接受套接字上。 为服务器套接字调用[侦听](#listen)成员函数，并为客户端套接字调用[Connect](#connect)成员函数。 应调用服务器套接字[接受](#accept)收到连接请求的函数。 使用剩余`CAsyncSocket`函数来执行套接字之间的通信。 完成后，销毁`CAsyncSocket`对象，如果它在堆上创建; 析构函数自动调用[关闭](#close)函数。 套接字的数据类型本文所述[Windows 套接字：背景](../../mfc/windows-sockets-background.md)。
+若要使用`CAsyncSocket`对象, 请调用其构造函数, 然后调用[create](#create)函数以创建基础套接字句柄`SOCKET`(类型), 但接受的套接字除外。 对于服务器套接字, 调用[侦听](#listen)成员函数; 对于客户端套接字, 调用[Connect](#connect)成员函数。 服务器套接字应在收到连接请求时调用[Accept](#accept)函数。 使用剩余`CAsyncSocket`的函数来执行套接字间的通信。 完成后, 如果对象`CAsyncSocket`是在堆上创建的, 则销毁对象; 析构函数会自动调用[Close](#close)函数。 套接字数据类型在[Windows 套接:背景](../../mfc/windows-sockets-background.md)。
 
 > [!NOTE]
 >  在静态链接的 MFC 应用程序中的辅助线程中使用 MFC 套接字时，您必须在使用套接字的每个线程中调用 `AfxSocketInit` 来初始化套接字库。 默认情况下，仅在主线程中调用 `AfxSocketInit`。
 
-有关详细信息，请参阅[Windows 套接字：使用类 CAsyncSocket](../../mfc/windows-sockets-using-class-casyncsocket.md)和相关文章。，又能[Windows Sockets 2 API](/windows/desktop/WinSock/windows-sockets-start-page-2)。
+有关详细信息, 请[参阅 Windows 套接字:使用类 CAsyncSocket](../../mfc/windows-sockets-using-class-casyncsocket.md)和相关文章以及[Windows socket 2 API](/windows/win32/WinSock/windows-sockets-start-page-2)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -175,11 +175,11 @@ class CAsyncSocket : public CObject
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxsock.h
+**标头:** afxsock
 
 ##  <a name="accept"></a>  CAsyncSocket::Accept
 
-调用此成员函数可接受套接字上的连接。
+调用此成员函数以接受套接字上的连接。
 
 ```
 virtual BOOL Accept(
@@ -191,47 +191,47 @@ virtual BOOL Accept(
 ### <a name="parameters"></a>参数
 
 *rConnectedSocket*<br/>
-标识可用于连接的新套接字的引用。
+一个引用, 用于标识可用于连接的新套接字。
 
 *lpSockAddr*<br/>
-一个指向[SOCKADDR](/windows/desktop/winsock/sockaddr-2)套接字接收连接的地址的结构，因为识别在网络上。 确切格式*lpSockAddr*参数由时创建套接字时建立的地址族。 如果*lpSockAddr*和/或*lpSockAddrLen*均为 NULL，则返回的已接受的套接字的远程地址信息。
+指向[SOCKADDR](/windows/win32/winsock/sockaddr-2)结构的指针, 该结构接收连接套接字的地址 (在网络上是已知的)。 *LpSockAddr*参数的准确格式由创建套接字时建立的地址族决定。 如果*lpSockAddr*和/或*lpSockAddrLen*等于 NULL, 则不会返回有关已接受的套接字的远程地址的任何信息。
 
 *lpSockAddrLen*<br/>
-中的地址的长度的指针*lpSockAddr*以字节为单位。 *LpSockAddrLen*是值结果参数： 最初，它应包含指向的空间量*lpSockAddr*; 返回时它将包含返回的地址的实际长度 （以字节为单位）。
+一个指针, 指向*lpSockAddr*中地址的长度 (以字节为单位)。 *LpSockAddrLen*是一个值-result 参数: 它最初应该包含*lpSockAddr*指向的空间量;返回时, 将包含返回的地址的实际长度 (以字节为单位)。
 
 ### <a name="return-value"></a>返回值
 
-如果函数成功，则非零值否则通过调用检索 0 和特定的错误代码[GetLastError](#getlasterror)。 以下错误适用于此成员函数：
+如果函数成功, 则为非零值;否则为 0, 可以通过调用[GetLastError](#getlasterror)来检索特定的错误代码。 以下错误适用于此成员函数:
 
-- WSANOTINITIALISED 一个成功[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必须使用此 API 之前发生。
+- WSANOTINITIALISED 成功[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必须在使用此 API 之前发生。
 
-- WSAENETDOWN Windows 套接字实现检测到的网络子系统失败。
+- WSAENETDOWN Windows 套接字实现检测到网络子系统出现故障。
 
-- WSAEFAULT *lpSockAddrLen*自变量是太小 (小于的大小[SOCKADDR](/windows/desktop/winsock/sockaddr-2)结构)。
+- WSAEFAULT *lpSockAddrLen*参数太小 (小于[SOCKADDR](/windows/win32/winsock/sockaddr-2)结构的大小)。
 
-- 返回 WSAEINPROGRESS 一个阻止 Windows 套接字调用正在进行中。
+- 返回 WSAEINPROGRESS 正在进行阻止型 Windows 套接字调用。
 
-- WSAEINVAL`Listen`未被调用的之前接受。
+- 接受`Listen`之前未调用 WSAEINVAL。
 
-- WSAEMFILE 队列为空以接受在输入时，提供了不到描述符。
+- WSAEMFILE 当条目为 "接受" 时, 队列为空, 并且没有可用的描述符。
 
-- WSAENOBUFS 无缓冲区空间不可用。
+- WSAENOBUFS 无缓冲区空间可用。
 
-- WSAENOTSOCK 描述符不是一个套接字。
+- WSAENOTSOCK 描述符不是套接字。
 
-- WSAEOPNOTSUPP 引用套接字不支持面向连接的服务的类型。
+- WSAEOPNOTSUPP 引用的套接字不是支持面向连接的服务的类型。
 
-- WSAEWOULDBLOCK 套接字被标记为非阻止性且没有任何连接都存在要接受的。
+- WSAEWOULDBLOCK 套接字标记为非阻止, 不存在要接受的连接。
 
 ### <a name="remarks"></a>备注
 
-此例程提取挂起连接队列中的第一个连接，使用与此套接字，相同的属性创建新的套接字和将其附加到*rConnectedSocket*。 如果没有挂起的连接在队列中，存在`Accept`将返回零和`GetLastError`返回错误。 已接受的套接字 ( *rConnectedSocket)* 不能用来接受更多连接。 原始套接字将保持打开且正在侦听。
+此例程提取挂起连接的队列中的第一个连接, 创建具有与此套接字相同的属性的新套接字, 并将其附加到*rConnectedSocket*。 如果队列中没有挂起的连接, `Accept`则返回零并`GetLastError`返回错误。 接受的套接字 ( *rConnectedSocket)* 不能用于接受更多连接。 原始套接字保持打开和侦听。
 
-自变量*lpSockAddr*是填充的连接套接字地址的结果参数，因为识别通信层。 `Accept` 用于如 SOCK_STREAM 基于连接的套接字类型。
+参数*lpSockAddr*是一个结果参数, 该参数使用连接套接字的地址进行填充, 与通信层已知。 `Accept`用于基于连接的套接字类型 (如 SOCK_STREAM)。
 
 ##  <a name="asyncselect"></a>  CAsyncSocket::AsyncSelect
 
-调用此成员函数以请求为套接字的事件通知。
+调用此成员函数以请求套接字的事件通知。
 
 ```
 BOOL AsyncSelect(long lEvent = FD_READ | FD_WRITE | FD_OOB | FD_ACCEPT | FD_CONNECT | FD_CLOSE);
@@ -240,39 +240,39 @@ BOOL AsyncSelect(long lEvent = FD_READ | FD_WRITE | FD_OOB | FD_ACCEPT | FD_CONN
 ### <a name="parameters"></a>参数
 
 *lEvent*<br/>
-一个位掩码，它指定在其中所关注的应用程序的网络事件的组合。
+一个位掩码, 指定应用程序感兴趣的网络事件的组合。
 
-- FD_READ 想要接收通知的准备情况进行读取。
+- FD_READ 想要接收有关读取准备情况的通知。
 
-- FD_WRITE 想要接收通知，可用于读取数据时。
+- FD_WRITE 想要在数据可供读取时接收通知。
 
-- FD_OOB 想要接收的带外数据到达的通知。
+- FD_OOB 想要接收带外数据的通知。
 
 - FD_ACCEPT 想要接收传入连接的通知。
 
-- FD_CONNECT 想要接收通知的连接结果。
+- FD_CONNECT 想要接收连接结果的通知。
 
-- FD_CLOSE 想要对等方已关闭套接字时接收通知。
+- FD_CLOSE 要在对等方关闭套接字时接收通知。
 
 ### <a name="return-value"></a>返回值
 
-如果函数成功，则非零值否则通过调用检索 0 和特定的错误代码[GetLastError](#getlasterror)。 以下错误适用于此成员函数：
+如果函数成功, 则为非零值;否则为 0, 可以通过调用[GetLastError](#getlasterror)来检索特定的错误代码。 以下错误适用于此成员函数:
 
-- WSANOTINITIALISED 一个成功[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必须使用此 API 之前发生。
+- WSANOTINITIALISED 成功[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必须在使用此 API 之前发生。
 
-- WSAENETDOWN Windows 套接字实现检测到的网络子系统失败。
+- WSAENETDOWN Windows 套接字实现检测到网络子系统出现故障。
 
 - WSAEINVAL 指示指定的参数之一无效。
 
-- 返回 WSAEINPROGRESS 一个阻止 Windows 套接字操作正在进行。
+- 返回 WSAEINPROGRESS 正在进行阻止型 Windows 套接字操作。
 
 ### <a name="remarks"></a>备注
 
-此函数用于指定哪些 MFC 回调通知函数将调用为套接字。 `AsyncSelect` 自动设置为非阻止模式下的此套接字。 有关详细信息，请参阅文章[Windows 套接字：套接字通知](../../mfc/windows-sockets-socket-notifications.md)。
+此函数用于指定将为套接字调用哪些 MFC 回调通知函数。 `AsyncSelect`自动将此套接字设置为非阻止模式。 有关详细信息, 请参阅[Windows 套接字:套接字](../../mfc/windows-sockets-socket-notifications.md)通知。
 
 ##  <a name="attach"></a>  CAsyncSocket::Attach
 
-调用此成员函数可将附加*hSocket*句柄`CAsyncSocket`对象。
+调用此成员函数以将*hSocket*句柄附加到`CAsyncSocket`对象。
 
 ```
 BOOL Attach(
@@ -282,22 +282,22 @@ BOOL Attach(
 ### <a name="parameters"></a>参数
 
 *hSocket*<br/>
-包含一个套接字的句柄。
+包含套接字的句柄。
 
 *lEvent*<br/>
-一个位掩码，它指定在其中所关注的应用程序的网络事件的组合。
+一个位掩码, 指定应用程序感兴趣的网络事件的组合。
 
-- FD_READ 想要接收通知的准备情况进行读取。
+- FD_READ 想要接收有关读取准备情况的通知。
 
-- FD_WRITE 想要接收通知，可用于读取数据时。
+- FD_WRITE 想要在数据可供读取时接收通知。
 
-- FD_OOB 想要接收的带外数据到达的通知。
+- FD_OOB 想要接收带外数据的通知。
 
 - FD_ACCEPT 想要接收传入连接的通知。
 
-- FD_CONNECT 想要接收通知的连接结果。
+- FD_CONNECT 想要接收连接结果的通知。
 
-- FD_CLOSE 想要对等方已关闭套接字时接收通知。
+- FD_CLOSE 要在对等方关闭套接字时接收通知。
 
 ### <a name="return-value"></a>返回值
 
@@ -305,11 +305,11 @@ BOOL Attach(
 
 ### <a name="remarks"></a>备注
 
-SOCKET 句柄存储在对象的[m_hSocket](#m_hsocket)数据成员。
+套接字句柄存储在对象的[m_hSocket](#m_hsocket)数据成员中。
 
 ##  <a name="bind"></a>  CAsyncSocket::Bind
 
-调用此成员函数以将本地地址与套接字相关联。
+调用此成员函数以将本地地址与套接字关联。
 
 ```
 BOOL Bind(
@@ -324,46 +324,46 @@ BOOL Bind (
 ### <a name="parameters"></a>参数
 
 *nSocketPort*<br/>
-用于标识套接字应用程序端口。
+标识套接字应用程序的端口。
 
 *lpszSocketAddress*<br/>
-网络地址，例如"128.56.22.8"点分数字。 此参数指示将 NULL 传递字符串`CAsyncSocket`实例应侦听的所有网络接口上的客户端活动。
+网络地址, 一种点号, 如 "128.56.22.8"。 如果为此参数传递 NULL 字符串, 则`CAsyncSocket`指示该实例应侦听所有网络接口上的客户端活动。
 
 *lpSockAddr*<br/>
-一个指向[SOCKADDR](/windows/desktop/winsock/sockaddr-2)结构，其中包含要分配给此套接字地址。
+指向[SOCKADDR](/windows/win32/winsock/sockaddr-2)结构的指针, 该结构包含要分配给此套接字的地址。
 
 *nSockAddrLen*<br/>
-中的地址的长度*lpSockAddr*以字节为单位。
+*LpSockAddr*中地址的长度 (以字节为单位)。
 
 ### <a name="return-value"></a>返回值
 
-如果函数成功，则非零值否则通过调用检索 0 和特定的错误代码[GetLastError](#getlasterror)。 以下错误适用于此成员函数：
+如果函数成功, 则为非零值;否则为 0, 可以通过调用[GetLastError](#getlasterror)来检索特定的错误代码。 以下错误适用于此成员函数:
 
-- WSANOTINITIALISED 一个成功[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必须使用此 API 之前发生。
+- WSANOTINITIALISED 成功[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必须在使用此 API 之前发生。
 
-- WSAENETDOWN Windows 套接字实现检测到的网络子系统失败。
+- WSAENETDOWN Windows 套接字实现检测到网络子系统出现故障。
 
-- WSAEADDRINUSE 指定的地址已在使用中。 (请参阅下的 SO_REUSEADDR 套接字选项[SetSockOpt](#setsockopt)。)
+- WSAEADDRINUSE 指定的地址已被使用。 (请参阅[SetSockOpt](#setsockopt)下的 SO_REUSEADDR 套接字选项。)
 
-- WSAEFAULT *nSockAddrLen*自变量是太小 (小于的大小[SOCKADDR](/windows/desktop/winsock/sockaddr-2)结构)。
+- WSAEFAULT *nSockAddrLen*参数太小 (小于[SOCKADDR](/windows/win32/winsock/sockaddr-2)结构的大小)。
 
-- 返回 WSAEINPROGRESS 一个阻止 Windows 套接字调用正在进行中。
+- 返回 WSAEINPROGRESS 正在进行阻止型 Windows 套接字调用。
 
-- 此端口不支持 WSAEAFNOSUPPORT 指定的地址族。
+- WSAEAFNOSUPPORT 此端口不支持指定的地址族。
 
-- WSAEINVAL 套接字已绑定到一个地址。
+- WSAEINVAL 套接字已绑定到地址。
 
-- 不 WSAENOBUFS 足够放入缓冲区可用，过多连接。
+- WSAENOBUFS 可用缓冲区不足, 连接太多。
 
-- WSAENOTSOCK 描述符不是一个套接字。
+- WSAENOTSOCK 描述符不是套接字。
 
 ### <a name="remarks"></a>备注
 
-之前未连接的数据报或流套接字上使用此例程后续`Connect`或`Listen`调用。 它可以接受连接请求之前，侦听服务器套接字必须选择一个端口号，并将它已知 Windows 套接字到通过调用`Bind`。 `Bind` 通过将本地名称分配给未命名的套接字建立套接字的本地关联 （主机地址/端口号）。
+在后续`Connect`或`Listen`调用之前, 此例程用于未连接的数据报或流套接字。 在接受连接请求之前, 侦听服务器套接字必须选择端口号, 并通过调用`Bind`使其对 Windows 套接字是已知的。 `Bind`通过向未命名套接字分配本地名称, 建立套接字的本地关联 (主机地址/端口号)。
 
 ##  <a name="casyncsocket"></a>  CAsyncSocket::CAsyncSocket
 
-构造一个空的套接字对象。
+构造空套接对象。
 
 ```
 CAsyncSocket();
@@ -371,7 +371,7 @@ CAsyncSocket();
 
 ### <a name="remarks"></a>备注
 
-构造对象之后, 必须调用其`Create`成员函数以创建套接字数据结构并将其地址绑定。 (在服务器端的 Windows 套接字通信，当侦听套接字创建要在中使用的套接字`Accept`调用时，不要调用`Create`的套接字。)
+构造对象之后, 必须调用其`Create`成员函数来创建套接字数据结构并绑定其地址。 (在 Windows 套接字通信的服务器端, 当侦听套接字创建要在`Accept`调用中使用的套接字时, 不会调用`Create`该套接字。)
 
 ##  <a name="close"></a>  CAsyncSocket::Close
 
@@ -383,13 +383,13 @@ virtual void Close();
 
 ### <a name="remarks"></a>备注
 
-此函数，以便进一步对它的引用将失败并出现错误 WSAENOTSOCK 释放套接字描述符。 如果这是对基础套接字的最后一个引用，则放弃相关联的命名信息和排队的数据。 套接字对象的析构函数调用`Close`为您。
+此函数将释放套接字描述符, 以便进一步引用它将失败, 并出现错误 WSAENOTSOCK。 如果这是对基础套接字的最后一个引用, 则将丢弃关联的命名信息和排队数据。 套接字对象的析构函数`Close`会为您调用。
 
-有关`CAsyncSocket`，而不是`CSocket`的语义`Close`受 SO_LINGER 和 SO_DONTLINGER 的套接字选项。 有关详细信息，请参阅成员函数`GetSockOpt`。
+对于`CAsyncSocket`, 但不适用于`CSocket`, 套接字选项`Close` SO_LINGER 和 SO_DONTLINGER 会影响的语义。 有关详细信息, 请参阅成员`GetSockOpt`函数。
 
 ##  <a name="connect"></a>  CAsyncSocket::Connect
 
-调用此成员函数以建立与未连接的流或数据报套接字连接。
+调用此成员函数以建立与未连接的流或数据报套接字的连接。
 
 ```
 BOOL Connect(
@@ -404,66 +404,66 @@ BOOL Connect(
 ### <a name="parameters"></a>参数
 
 *lpszHostAddress*<br/>
-此对象连接的套接字的网络地址： 例如"ftp.microsoft.com"或一个以点分隔的数字，如"128.56.22.8"的计算机的名称。
+此对象连接的套接字的网络地址: 计算机名 (例如 "ftp.microsoft.com") 或点分数字, 如 "128.56.22.8"。
 
 *nHostPort*<br/>
-用于标识套接字应用程序端口。
+标识套接字应用程序的端口。
 
 *lpSockAddr*<br/>
-一个指向[SOCKADDR](/windows/desktop/winsock/sockaddr-2)结构，其中包含连接的套接字的地址。
+指向[SOCKADDR](/windows/win32/winsock/sockaddr-2)结构的指针, 该结构包含连接的套接字的地址。
 
 *nSockAddrLen*<br/>
-中的地址的长度*lpSockAddr*以字节为单位。
+*LpSockAddr*中地址的长度 (以字节为单位)。
 
 ### <a name="return-value"></a>返回值
 
-如果函数成功，则非零值否则通过调用检索 0 和特定的错误代码[GetLastError](#getlasterror)。 这指示的错误代码为 WSAEWOULDBLOCK，并且你的应用程序正在使用的可重写回叫，如果你的应用程序将收到`OnConnect`消息连接操作完成时。 以下错误适用于此成员函数：
+如果函数成功, 则为非零值;否则为 0, 可以通过调用[GetLastError](#getlasterror)来检索特定的错误代码。 如果这指示 WSAEWOULDBLOCK 的错误代码, 并且你的应用程序使用可重写的回调, 则当连接`OnConnect`操作完成时, 你的应用程序将收到一条消息。 以下错误适用于此成员函数:
 
-- WSANOTINITIALISED 一个成功[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必须使用此 API 之前发生。
+- WSANOTINITIALISED 成功[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必须在使用此 API 之前发生。
 
-- WSAENETDOWN Windows 套接字实现检测到的网络子系统失败。
+- WSAENETDOWN Windows 套接字实现检测到网络子系统出现故障。
 
-- WSAEADDRINUSE 指定的地址已在使用中。
+- WSAEADDRINUSE 指定的地址已被使用。
 
-- 返回 WSAEINPROGRESS 一个阻止 Windows 套接字调用正在进行中。
+- 返回 WSAEINPROGRESS 正在进行阻止型 Windows 套接字调用。
 
-- WSAEADDRNOTAVAIL 指定的地址不是可从本地计算机。
+- WSAEADDRNOTAVAIL 指定的地址在本地计算机上不可用。
 
 - 指定系列中的 WSAEAFNOSUPPORT 地址不能用于此套接字。
 
-- WSAECONNREFUSED 连接尝试被拒绝。
+- WSAECONNREFUSED 尝试连接被拒绝。
 
-- WSAEDESTADDRREQ 一个目标地址是必需的。
+- WSAEDESTADDRREQ 目标地址是必需的。
 
 - WSAEFAULT *nSockAddrLen*参数不正确。
 
-- WSAEINVAL 无效主机地址。
+- WSAEINVAL 无效的主机地址。
 
 - WSAEISCONN 套接字已连接。
 
-- WSAEMFILE 否提供了更多的文件描述符。
+- WSAEMFILE 没有更多可用的文件描述符。
 
-- WSAENETUNREACH 网络不能将从此主机访问这一次。
+- WSAENETUNREACH 无法从此主机访问网络。
 
-- WSAENOBUFS 无缓冲区空间不可用。 不能连接套接字。
+- WSAENOBUFS 无缓冲区空间可用。 无法连接套接字。
 
-- WSAENOTSOCK 描述符不是一个套接字。
+- WSAENOTSOCK 描述符不是套接字。
 
-- WSAETIMEDOUT 连接尝试超时而无需建立连接。
+- 在未建立连接的情况下, WSAETIMEDOUT 尝试连接超时。
 
-- WSAEWOULDBLOCK 套接字被标记为非阻止性和不能立即完成连接。
+- WSAEWOULDBLOCK 套接字标记为非阻止, 连接无法立即完成。
 
 ### <a name="remarks"></a>备注
 
-如果套接字是未绑定、 唯一值分配给本地关联系统，和套接字被标记为绑定。 请注意，如果名称结构的地址字段是全部为零，`Connect`将返回零。 若要获得扩展错误信息，请调用`GetLastError`成员函数。
+如果套接字是未绑定的, 则系统会将唯一值分配给本地关联, 并将套接字标记为绑定。 请注意, 如果名称结构的 address 字段均为零, `Connect`则将返回零。 若要获取扩展的错误信息, 请`GetLastError`调用成员函数。
 
-对于流套接字 （类型为 SOCK_STREAM），到外主机启动的活动连接。 套接字调用成功完成后，套接字已准备好发送/接收数据。
+对于流套接字 (类型为 SOCK_STREAM), 活动连接将启动到外部主机。 当套接字调用成功完成时, 套接字就可以发送/接收数据。
 
-对于数据报套接字 （类型为 SOCK_DGRAM），默认目标设置，其将使用在后续`Send`和`Receive`调用。
+对于数据报套接字 (类型为 SOCK_DGRAM), 会设置一个默认目标, 将在后续`Send`和`Receive`调用中使用。
 
 ##  <a name="create"></a>  CAsyncSocket::Create
 
-调用`Create`成员函数之后，构造一个套接字对象来创建 Windows 套接字并将其附加。
+构造套接字对象之后调用成员函数以创建Windows套接字并附加它。`Create`
 
 ```
 BOOL Create(
@@ -476,70 +476,70 @@ BOOL Create(
 ### <a name="parameters"></a>参数
 
 *nSocketPort*<br/>
-如果您希望 Windows 套接字，若要选择的端口套接字，则为 0 与一起使用的已知端口。
+要与套接字一起使用的已知端口, 或者如果希望 Windows 套接字选择端口, 则为0。
 
 *nSocketType*<br/>
 SOCK_STREAM 或 SOCK_DGRAM。
 
 *lEvent*<br/>
-一个位掩码，它指定在其中所关注的应用程序的网络事件的组合。
+一个位掩码, 指定应用程序感兴趣的网络事件的组合。
 
-- FD_READ 想要接收通知的准备情况进行读取。
+- FD_READ 想要接收有关读取准备情况的通知。
 
-- FD_WRITE 想要接收通知以进行写入的准备情况。
+- FD_WRITE 想要接收有关写入准备情况的通知。
 
-- FD_OOB 想要接收的带外数据到达的通知。
+- FD_OOB 想要接收带外数据的通知。
 
 - FD_ACCEPT 想要接收传入连接的通知。
 
-- FD_CONNECT 想要接收通知的已完成的连接。
+- FD_CONNECT 想要接收已完成连接的通知。
 
-- FD_CLOSE 想要接收的套接字关闭通知。
+- FD_CLOSE 想要接收套接字关闭通知。
 
 *lpszSockAddress*<br/>
-指向一个包含连接的套接字，一个以点分隔的数字，如"128.56.22.8"的网络地址的字符串的指针。此参数指示将 NULL 传递字符串`CAsyncSocket`实例应侦听的所有网络接口上的客户端活动。
+指向字符串的指针, 该字符串包含连接的套接字的网络地址, 如 "128.56.22.8"。如果为此参数传递 NULL 字符串, 则`CAsyncSocket`指示该实例应侦听所有网络接口上的客户端活动。
 
 ### <a name="return-value"></a>返回值
 
-如果函数成功，则非零值否则通过调用检索 0 和特定的错误代码[GetLastError](#getlasterror)。 以下错误适用于此成员函数：
+如果函数成功, 则为非零值;否则为 0, 可以通过调用[GetLastError](#getlasterror)来检索特定的错误代码。 以下错误适用于此成员函数:
 
-- WSANOTINITIALISED 一个成功[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必须使用此 API 之前发生。
+- WSANOTINITIALISED 成功[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必须在使用此 API 之前发生。
 
-- WSAENETDOWN Windows 套接字实现检测到的网络子系统失败。
+- WSAENETDOWN Windows 套接字实现检测到网络子系统出现故障。
 
-- 不支持指定的地址族 WSAEAFNOSUPPORT。
+- WSAEAFNOSUPPORT 不支持指定的地址族。
 
-- 返回 WSAEINPROGRESS 一个阻止 Windows 套接字操作正在进行。
+- 返回 WSAEINPROGRESS 正在进行阻止型 Windows 套接字操作。
 
-- WSAEMFILE 否提供了更多的文件描述符。
+- WSAEMFILE 没有更多可用的文件描述符。
 
-- WSAENOBUFS 无缓冲区空间不可用。 无法创建套接字。
+- WSAENOBUFS 无缓冲区空间可用。 无法创建套接字。
 
-- 不支持 WSAEPROTONOSUPPORT 指定的端口。
+- WSAEPROTONOSUPPORT 不支持指定的端口。
 
-- WSAEPROTOTYPE 指定的端口是此套接字的错误类型。
+- WSAEPROTOTYPE 为此套接字指定的端口类型错误。
 
-- 此地址族中不支持 WSAESOCKTNOSUPPORT 指定套接字类型。
+- WSAESOCKTNOSUPPORT 此地址系列不支持指定的套接字类型。
 
 ### <a name="remarks"></a>备注
 
-`Create` 调用[套接字](#socket)如果成功，它将调用[绑定](#bind)将套接字绑定到指定的地址。 支持以下的套接字类型：
+`Create`调用[套接字](#socket), 如果成功, 它将调用[bind](#bind)将套接字绑定到指定的地址。 支持以下套接字类型:
 
-- SOCK_STREAM 提供序列化，可靠、 全双工、 基于连接的字节流。 使用传输控制协议 (TCP) 进行 Internet 地址族。
+- SOCK_STREAM 提供排序的、可靠且基于连接的双字节流。 为 Internet 地址系列使用传输控制协议 (TCP)。
 
-- SOCK_DGRAM 支持数据报，即是无连接不可靠的数据包的固定 （通常很小） 的最大长度。 使用用户数据报协议 (UDP) 为 Internet 地址族。
+- SOCK_DGRAM 支持数据报, 该数据报为固定的 (通常为小) 最大长度的无连接和不可靠的数据包。 对 Internet 地址系列使用用户数据报协议 (UDP)。
 
     > [!NOTE]
-    >  `Accept`成员函数将一个新的空引用`CSocket`对象作为其参数。 在调用之前，必须构造此对象`Accept`。 请记住，如果此套接字对象超出范围，该连接将关闭。 不要调用`Create`此新的套接字对象。
+    >  成员函数使用新的空`CSocket`对象作为其参数。 `Accept` 在调用`Accept`之前, 必须构造此对象。 请记住, 如果此套接字对象超出范围, 则连接将关闭。 不要为此`Create`新的套接字对象调用。
 
 > [!IMPORTANT]
-> `Create` 是**不**线程安全。  如果你正在调用它在多线程环境中它可以调用的同时由不同的线程，请务必保护使用互斥体或其他同步锁的每个调用。
+> `Create`**不**是线程安全的。  如果要在多线程环境中调用它, 而该环境可以由不同的线程同时调用, 请确保使用 mutex 或其他同步锁来保护每个调用。
 
-有关流和数据报套接字的详细信息，请参阅文章[Windows 套接字：背景](../../mfc/windows-sockets-background.md)和[Windows 套接字：端口和套接字地址](../../mfc/windows-sockets-ports-and-socket-addresses.md)并[Windows 套接字 2 API](/windows/desktop/WinSock/windows-sockets-start-page-2)。
+有关流和数据报套接字的详细信息, 请[参阅文章 Windows socket:背景](../../mfc/windows-sockets-background.md) 和[Windows 套接字:端口和套接字](../../mfc/windows-sockets-ports-and-socket-addresses.md)地址和[Windows 套接字 2 API](/windows/win32/WinSock/windows-sockets-start-page-2)。
 
 ##  <a name="detach"></a>  CAsyncSocket::Detach
 
-调用此成员函数可分离在 SOCKET 句柄*m_hSocket*中的数据成员`CAsyncSocket`对象，并将*m_hSocket*为 NULL。
+调用此成员函数以从`CAsyncSocket`对象分离*m_hSocket*数据成员的套接字句柄, 并将*m_hSocket*设置为 NULL。
 
 ```
 SOCKET Detach();
@@ -547,7 +547,7 @@ SOCKET Detach();
 
 ##  <a name="fromhandle"></a>  CAsyncSocket::FromHandle
 
-返回一个指向`CAsyncSocket`对象。
+返回一个指向`CAsyncSocket`对象的指针。
 
 ```
 static CAsyncSocket* PASCAL FromHandle(SOCKET hSocket);
@@ -556,19 +556,19 @@ static CAsyncSocket* PASCAL FromHandle(SOCKET hSocket);
 ### <a name="parameters"></a>参数
 
 *hSocket*<br/>
-包含一个套接字的句柄。
+包含套接字的句柄。
 
 ### <a name="return-value"></a>返回值
 
-一个指向`CAsyncSocket`对象，或者如果没有，则为 NULL 没有`CAsyncSocket`对象附加到*hSocket*。
+指向`CAsyncSocket`对象的指针; 如果没有`CAsyncSocket`连接到*hSocket*的对象, 则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-如果给定的套接字的句柄，如果`CAsyncSocket`对象未附加到该句柄，则成员函数返回 NULL。
+给定套接字句柄时, 如果`CAsyncSocket`对象未附加到句柄, 成员函数将返回 NULL。
 
 ##  <a name="getlasterror"></a>  CAsyncSocket::GetLastError
 
-调用此成员函数以获取失败的最后一个操作的错误状态。
+调用此成员函数以获取上次失败的操作的错误状态。
 
 ```
 static int PASCAL GetLastError();
@@ -580,13 +580,13 @@ static int PASCAL GetLastError();
 
 ### <a name="remarks"></a>备注
 
-当某个特定成员函数指示已发生错误，`GetLastError`应调用以检索相应的错误代码。 请参阅适用的错误代码的单个成员函数说明的列表。
+当特定成员函数指示发生了错误时, `GetLastError`应调用来检索相应的错误代码。 有关适用的错误代码的列表, 请参阅单个成员函数说明。
 
-有关错误代码的详细信息，请参阅[Windows Sockets 2 API](/windows/desktop/WinSock/windows-sockets-start-page-2)。
+有关错误代码的详细信息, 请参阅[Windows 套接字 2 API](/windows/win32/WinSock/windows-sockets-start-page-2)。
 
 ##  <a name="getpeername"></a>  CAsyncSocket::GetPeerName
 
-调用此成员函数以获取此套接字连接到的对等方套接字地址。
+调用此成员函数以获取此套接字连接到的对等套接字的地址。
 
 ```
 BOOL GetPeerName(
@@ -601,40 +601,40 @@ BOOL GetPeerName(
 ### <a name="parameters"></a>参数
 
 *rPeerAddress*<br/>
-引用`CString`对象，它接收的以点分隔的数字 IP 地址。
+对接收点分数字 IP 地址的对象的引用。`CString`
 
 *rPeerPort*<br/>
-对将存储一个端口是 UINT 引用。
+引用存储端口的 UINT。
 
 *lpSockAddr*<br/>
-一个指向[SOCKADDR](/windows/desktop/winsock/sockaddr-2)结构，它接收的对等方套接字的名称。
+指向[SOCKADDR](/windows/win32/winsock/sockaddr-2)结构的指针, 该结构接收对等套接字的名称。
 
 *lpSockAddrLen*<br/>
-中的地址的长度的指针*lpSockAddr*以字节为单位。 返回时， *lpSockAddrLen*参数中包含的实际大小*lpSockAddr*返回以字节为单位。
+一个指针, 指向*lpSockAddr*中地址的长度 (以字节为单位)。 返回时, *lpSockAddrLen*参数包含返回的*lpSockAddr*的实际大小 (以字节为单位)。
 
 ### <a name="return-value"></a>返回值
 
-如果函数成功，则非零值否则通过调用检索 0 和特定的错误代码[GetLastError](#getlasterror)。 以下错误适用于此成员函数：
+如果函数成功, 则为非零值;否则为 0, 可以通过调用[GetLastError](#getlasterror)来检索特定的错误代码。 以下错误适用于此成员函数:
 
-- WSANOTINITIALISED 一个成功[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必须使用此 API 之前发生。
+- WSANOTINITIALISED 成功[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必须在使用此 API 之前发生。
 
-- WSAENETDOWN Windows 套接字实现检测到的网络子系统失败。
+- WSAENETDOWN Windows 套接字实现检测到网络子系统出现故障。
 
-- WSAEFAULT *lpSockAddrLen*参数不是足够大。
+- WSAEFAULT *lpSockAddrLen*参数不够大。
 
-- 返回 WSAEINPROGRESS 一个阻止 Windows 套接字调用正在进行中。
+- 返回 WSAEINPROGRESS 正在进行阻止型 Windows 套接字调用。
 
 - WSAENOTCONN 套接字未连接。
 
-- WSAENOTSOCK 描述符不是一个套接字。
+- WSAENOTSOCK 描述符不是套接字。
 
 ### <a name="remarks"></a>备注
 
-若要处理 IPv6 地址，请使用[CAsyncSocket::GetPeerNameEx](#getpeernameex)。
+若要处理 IPv6 地址, 请使用[CAsyncSocket:: GetPeerNameEx](#getpeernameex)。
 
 ##  <a name="getpeernameex"></a>  CAsyncSocket::GetPeerNameEx
 
-调用此成员函数以获取到此套接字的连接 （句柄 IPv6 地址） 的对等方套接字地址。
+调用此成员函数以获取此套接字连接到的对等套接字的地址 (处理 IPv6 地址)。
 
 ```
 BOOL GetPeerNameEx(
@@ -645,34 +645,34 @@ BOOL GetPeerNameEx(
 ### <a name="parameters"></a>参数
 
 *rPeerAddress*<br/>
-引用`CString`对象，它接收的以点分隔的数字 IP 地址。
+对接收点分数字 IP 地址的对象的引用。`CString`
 
 *rPeerPort*<br/>
-对将存储一个端口是 UINT 引用。
+引用存储端口的 UINT。
 
 ### <a name="return-value"></a>返回值
 
-如果函数成功，则非零值否则通过调用检索 0 和特定的错误代码[GetLastError](#getlasterror)。 以下错误适用于此成员函数：
+如果函数成功, 则为非零值;否则为 0, 可以通过调用[GetLastError](#getlasterror)来检索特定的错误代码。 以下错误适用于此成员函数:
 
-- WSANOTINITIALISED 一个成功[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必须使用此 API 之前发生。
+- WSANOTINITIALISED 成功[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必须在使用此 API 之前发生。
 
-- WSAENETDOWN Windows 套接字实现检测到的网络子系统失败。
+- WSAENETDOWN Windows 套接字实现检测到网络子系统出现故障。
 
-- WSAEFAULT *lpSockAddrLen*参数不是足够大。
+- WSAEFAULT *lpSockAddrLen*参数不够大。
 
-- 返回 WSAEINPROGRESS 一个阻止 Windows 套接字调用正在进行中。
+- 返回 WSAEINPROGRESS 正在进行阻止型 Windows 套接字调用。
 
 - WSAENOTCONN 套接字未连接。
 
-- WSAENOTSOCK 描述符不是一个套接字。
+- WSAENOTSOCK 描述符不是套接字。
 
 ### <a name="remarks"></a>备注
 
-此函数等同于[CAsyncSocket::GetPeerName](#getpeername) ，只不过它处理 IPv6 地址也较旧的协议。
+此函数与[CAsyncSocket:: GetPeerName](#getpeername)相同, 不同之处在于它处理 IPv6 地址和旧协议。
 
 ##  <a name="getsockname"></a>  CAsyncSocket::GetSockName
 
-调用此成员函数可获取套接字的本地名称。
+调用此成员函数以获取套接字的本地名称。
 
 ```
 BOOL GetSockName(
@@ -687,42 +687,42 @@ BOOL GetSockName(
 ### <a name="parameters"></a>参数
 
 *rSocketAddress*<br/>
-引用`CString`对象，它接收的以点分隔的数字 IP 地址。
+对接收点分数字 IP 地址的对象的引用。`CString`
 
 *rSocketPort*<br/>
-对将存储一个端口是 UINT 引用。
+引用存储端口的 UINT。
 
 *lpSockAddr*<br/>
-一个指向[SOCKADDR](/windows/desktop/winsock/sockaddr-2)接收套接字地址的结构。
+指向[SOCKADDR](/windows/win32/winsock/sockaddr-2)结构的指针, 该结构接收套接字地址。
 
 *lpSockAddrLen*<br/>
-中的地址的长度的指针*lpSockAddr*以字节为单位。
+一个指针, 指向*lpSockAddr*中地址的长度 (以字节为单位)。
 
 ### <a name="return-value"></a>返回值
 
-如果函数成功，则非零值否则通过调用检索 0 和特定的错误代码[GetLastError](#getlasterror)。 以下错误适用于此成员函数：
+如果函数成功, 则为非零值;否则为 0, 可以通过调用[GetLastError](#getlasterror)来检索特定的错误代码。 以下错误适用于此成员函数:
 
-- WSANOTINITIALISED 一个成功[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必须使用此 API 之前发生。
+- WSANOTINITIALISED 成功[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必须在使用此 API 之前发生。
 
-- WSAENETDOWN Windows 套接字实现检测到的网络子系统失败。
+- WSAENETDOWN Windows 套接字实现检测到网络子系统出现故障。
 
-- WSAEFAULT *lpSockAddrLen*参数不是足够大。
+- WSAEFAULT *lpSockAddrLen*参数不够大。
 
-- 返回 WSAEINPROGRESS 一个阻止 Windows 套接字操作正在进行。
+- 返回 WSAEINPROGRESS 正在进行阻止型 Windows 套接字操作。
 
-- WSAENOTSOCK 描述符不是一个套接字。
+- WSAENOTSOCK 描述符不是套接字。
 
-- 套接字不已绑定到包含的地址 WSAEINVAL `Bind`。
+- WSAEINVAL 套接字尚未绑定到地址`Bind`。
 
 ### <a name="remarks"></a>备注
 
-此调用时尤其有用`Connect`已调用而无需这样做`Bind`第一次; 此调用将提供可以确定由系统设置的本地关联的唯一方法。
+如果`Connect` 未`Bind`执行此操作, 则此调用会特别有用; 此调用提供的唯一方法是确定系统已设置的本地关联。
 
-若要处理 IPv6 地址，请使用[CAsyncSocket::GetSockNameEx](#getsocknameex)
+若要处理 IPv6 地址, 请使用[CAsyncSocket:: GetSockNameEx](#getsocknameex)
 
 ##  <a name="getsocknameex"></a>  CAsyncSocket::GetSockNameEx
 
-调用此成员函数可获取套接字 （句柄 IPv6 地址） 的本地名称。
+调用此成员函数以获取套接字的本地名称 (处理 IPv6 地址)。
 
 ```
 BOOL GetSockNameEx(
@@ -733,32 +733,32 @@ BOOL GetSockNameEx(
 ### <a name="parameters"></a>参数
 
 *rSocketAddress*<br/>
-引用`CString`对象，它接收的以点分隔的数字 IP 地址。
+对接收点分数字 IP 地址的对象的引用。`CString`
 
 *rSocketPort*<br/>
-对将存储一个端口是 UINT 引用。
+引用存储端口的 UINT。
 
 ### <a name="return-value"></a>返回值
 
-如果函数成功，则非零值否则通过调用检索 0 和特定的错误代码[GetLastError](#getlasterror)。 以下错误适用于此成员函数：
+如果函数成功, 则为非零值;否则为 0, 可以通过调用[GetLastError](#getlasterror)来检索特定的错误代码。 以下错误适用于此成员函数:
 
-- WSANOTINITIALISED 一个成功[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必须使用此 API 之前发生。
+- WSANOTINITIALISED 成功[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必须在使用此 API 之前发生。
 
-- WSAENETDOWN Windows 套接字实现检测到的网络子系统失败。
+- WSAENETDOWN Windows 套接字实现检测到网络子系统出现故障。
 
-- WSAEFAULT *lpSockAddrLen*参数不是足够大。
+- WSAEFAULT *lpSockAddrLen*参数不够大。
 
-- 返回 WSAEINPROGRESS 一个阻止 Windows 套接字操作正在进行。
+- 返回 WSAEINPROGRESS 正在进行阻止型 Windows 套接字操作。
 
-- WSAENOTSOCK 描述符不是一个套接字。
+- WSAENOTSOCK 描述符不是套接字。
 
-- 套接字不已绑定到包含的地址 WSAEINVAL `Bind`。
+- WSAEINVAL 套接字尚未绑定到地址`Bind`。
 
 ### <a name="remarks"></a>备注
 
-此调用是相同[CAsyncSocket::GetSockName](#getsockname) ，只不过它处理 IPv6 地址也较旧的协议。
+此调用与[CAsyncSocket:: GetSockName](#getsockname)相同, 不同之处在于它处理 IPv6 地址和旧协议。
 
-此调用时尤其有用`Connect`已调用而无需这样做`Bind`第一次; 此调用将提供可以确定由系统设置的本地关联的唯一方法。
+如果`Connect` 未`Bind`执行此操作, 则此调用会特别有用; 此调用提供的唯一方法是确定系统已设置的本地关联。
 
 ##  <a name="getsockopt"></a>  CAsyncSocket::GetSockOpt
 
@@ -775,72 +775,72 @@ BOOL GetSockOpt(
 ### <a name="parameters"></a>参数
 
 *nOptionName*<br/>
-为其值是要检索的套接字选项。
+要为其检索值的套接字选项。
 
 *lpOptionValue*<br/>
-指向在其中请求的选项的值是要返回的缓冲区的指针。 在缓冲区中返回与所选的选项相关联的值*lpOptionValue*。 指向整数*lpOptionLen*最初应包含以字节为单位; 此缓冲区的大小和返回时，它将设置为返回的值的大小。 对于 SO_LINGER，这将的大小`LINGER`结构; 对于所有其他选项，它将是一个布尔值的大小或**int**，具体取决于选项。 请参阅选项和备注部分中的其大小的列表。
+指向缓冲区的指针, 请求的选项的值将返回到该缓冲区。 与所选选项关联的值将在缓冲区*lpOptionValue*中返回。 *LpOptionLen*所指向的整数应最初包含此缓冲区的大小 (以字节为单位);返回时, 它将被设置为返回的值的大小。 对于 SO_LINGER, 这将是`LINGER`结构的大小; 对于所有其他选项, 它将是布尔值或**int**大小, 具体取决于选项。 请参阅 "备注" 部分中的选项列表及其大小。
 
 *lpOptionLen*<br/>
-指针的大小*lpOptionValue*以字节为单位的缓冲区。
+一个指针, 指向*lpOptionValue*缓冲区的大小 (以字节为单位)。
 
 *nLevel*<br/>
-在其中定义了选项; 级别唯一支持的级别为 SOL_SOCKET 和 IPPROTO_TCP。
+定义选项的级别;唯一受支持的级别为 SOL_SOCKET 和 IPPROTO_TCP。
 
 ### <a name="return-value"></a>返回值
 
-如果函数成功，则非零值否则通过调用检索 0 和特定的错误代码[GetLastError](#getlasterror)。 如果使用永远不会设置一个选项`SetSockOpt`，然后`GetSockOpt`返回选项的默认值。 以下错误适用于此成员函数：
+如果函数成功, 则为非零值;否则为 0, 可以通过调用[GetLastError](#getlasterror)来检索特定的错误代码。 如果某个选项从未设置`SetSockOpt`为, 则`GetSockOpt`返回该选项的默认值。 以下错误适用于此成员函数:
 
-- WSANOTINITIALISED 一个成功[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必须使用此 API 之前发生。
+- WSANOTINITIALISED 成功[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必须在使用此 API 之前发生。
 
-- WSAENETDOWN Windows 套接字实现检测到的网络子系统失败。
+- WSAENETDOWN Windows 套接字实现检测到网络子系统出现故障。
 
 - WSAEFAULT *lpOptionLen*参数无效。
 
-- 返回 WSAEINPROGRESS 一个阻止 Windows 套接字操作正在进行。
+- 返回 WSAEINPROGRESS 正在进行阻止型 Windows 套接字操作。
 
-- WSAENOPROTOOPT 选项是未知或不受支持。 具体而言，SO_BROADCAST 不支持在类型 SOCK_STREAM SO_ACCEPTCONN、 SO_DONTLINGER、 SO_KEEPALIVE、 SO_LINGER 和 SO_OOBINLINE 时不支持对类型 SOCK_DGRAM 的套接字的套接字上。
+- WSAENOPROTOOPT 选项未知或不受支持。 特别是, SOCK_STREAM 类型的套接字不支持 SO_BROADCAST, 而 SO_ACCEPTCONN、SO_DONTLINGER、SO_KEEPALIVE、SO_LINGER 和 SO_OOBINLINE 在 SOCK_DGRAM 类型的插槽上不受支持。
 
-- WSAENOTSOCK 描述符不是一个套接字。
+- WSAENOTSOCK 描述符不是套接字。
 
 ### <a name="remarks"></a>备注
 
-`GetSockOpt` 检索与在任何状态下，任何类型的套接字关联的套接字选项的当前值并将存储中的结果*lpOptionValue*。 选项会影响套接字操作，例如路由的数据包、 带外数据传输等操作。
+`GetSockOpt`检索与任意类型的任何类型的套接字关联的套接字选项的当前值, 并将结果存储在*lpOptionValue*中。 选项会影响套接字操作, 例如路由数据包、带外数据传输等。
 
-支持以下选项`GetSockOpt`。 类型标识的数据所处理的类型*lpOptionValue*。 TCP_NODELAY 选项使用级别 IPPROTO_TCP;所有其他选项使用级别 SOL_SOCKET。
+支持以下选项`GetSockOpt`。 类型标识*lpOptionValue*寻址的数据类型。 TCP_NODELAY 选项使用 level IPPROTO_TCP;所有其他选项都使用级别 SOL_SOCKET。
 
-|“值”|类型|含义|
+|值|类型|含义|
 |-----------|----------|-------------|
-|SO_ACCEPTCONN|BOOL|正在侦听套接字。|
-|SO_BROADCAST|BOOL|套接字用于广播消息的传输配置。|
+|SO_ACCEPTCONN|BOOL|套接字正在侦听。|
+|SO_BROADCAST|BOOL|套接字配置为传输广播消息。|
 |SO_DEBUG|BOOL|启用调试。|
-|SO_DONTLINGER|BOOL|如果为 true，则禁用 SO_LINGER 选项。|
-|SO_DONTROUTE|BOOL|禁用路由。|
+|SO_DONTLINGER|BOOL|如果为 true, 则禁用 SO_LINGER 选项。|
+|SO_DONTROUTE|BOOL|已禁用路由。|
 |SO_ERROR|**int**|检索错误状态并清除。|
-|SO_KEEPALIVE|BOOL|发送 keep-alive。|
-|SO_LINGER|`struct LINGER`|返回当前 linger 选项。|
-|SO_OOBINLINE|BOOL|带外数据正在接收正常数据流中。|
-|SO_RCVBUF|int|接收缓冲区大小。|
-|SO_REUSEADDR|BOOL|套接字可绑定到已在使用的地址。|
-|SO_SNDBUF|**int**|发送缓冲区大小。|
-|SO_TYPE|**int**|套接字 (例如，SOCK_STREAM) 的类型。|
+|SO_KEEPALIVE|BOOL|正在发送 keep-alive。|
+|SO_LINGER|`struct LINGER`|返回当前逗留选项。|
+|SO_OOBINLINE|BOOL|正在正常数据流中接收带外数据。|
+|SO_RCVBUF|int|接收的缓冲区大小。|
+|SO_REUSEADDR|BOOL|可以将套接字绑定到已在使用中的地址。|
+|SO_SNDBUF|**int**|发送的缓冲区大小。|
+|SO_TYPE|**int**|套接字的类型 (例如, SOCK_STREAM)。|
 |TCP_NODELAY|BOOL|为发送合并禁用 Nagle 算法。|
 
-不支持的 Berkeley Software Distribution (BSD) 选项`GetSockOpt`是：
+不支持的`GetSockOpt` Berkeley 软件分发 (BSD) 选项包括:
 
-|“值”|类型|含义|
+|值|类型|含义|
 |-----------|----------|-------------|
-|SO_RCVLOWAT|**int**|收到的低水印。|
+|SO_RCVLOWAT|**int**|接收低水位线。|
 |SO_RCVTIMEO|**int**|接收超时。|
-|SO_SNDLOWAT|**int**|发送的低水印。|
+|SO_SNDLOWAT|**int**|发送低水位线。|
 |SO_SNDTIMEO|**int**|发送超时。|
-|IP_OPTIONS||获取在 IP 标头中的选项。|
+|IP_OPTIONS||获取 IP 标头中的选项。|
 |TCP_MAXSEG|**int**|获取 TCP 最大段大小。|
 
-调用`GetSockOpt`与不受支持的选项将导致的错误代码为 WSAENOPROTOOPT 从返回`GetLastError`。
+使用`GetSockOpt`不受支持的选项调用将导致从`GetLastError`返回错误代码 WSAENOPROTOOPT。
 
 ##  <a name="ioctl"></a>  CAsyncSocket::IOCtl
 
-调用此成员函数可控制套接字的模式。
+调用此成员函数来控制套接字的模式。
 
 ```
 BOOL IOCtl(
@@ -854,33 +854,33 @@ BOOL IOCtl(
 要在套接字上执行的命令。
 
 *lpArgument*<br/>
-指向参数的指针*lCommand*。
+指向*lCommand*的参数的指针。
 
 ### <a name="return-value"></a>返回值
 
-如果函数成功，则非零值否则通过调用检索 0 和特定的错误代码[GetLastError](#getlasterror)。 以下错误适用于此成员函数：
+如果函数成功, 则为非零值;否则为 0, 可以通过调用[GetLastError](#getlasterror)来检索特定的错误代码。 以下错误适用于此成员函数:
 
-- WSANOTINITIALISED 一个成功[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必须使用此 API 之前发生。
+- WSANOTINITIALISED 成功[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必须在使用此 API 之前发生。
 
-- WSAENETDOWN Windows 套接字实现检测到的网络子系统失败。
+- WSAENETDOWN Windows 套接字实现检测到网络子系统出现故障。
 
-- WSAEINVAL *lCommand*不是有效的命令，或*lpArgument*不是可接受参数*lCommand*，或该命令不是适用于该类型提供的套接字.
+- WSAEINVAL *lCommand*不是有效的命令, 或者*lpArgument*不是适用于*lCommand*的可接受参数, 或者该命令不适用于提供的套接字类型。
 
-- 返回 WSAEINPROGRESS 一个阻止 Windows 套接字操作正在进行。
+- 返回 WSAEINPROGRESS 正在进行阻止型 Windows 套接字操作。
 
-- WSAENOTSOCK 描述符不是一个套接字。
+- WSAENOTSOCK 描述符不是套接字。
 
 ### <a name="remarks"></a>备注
 
-可以在任何状态的任何套接字上使用此例程。 它用于获取或检索与套接字，独立于协议和通信子系统关联的操作参数。 支持下列命令：
+此例程可用于任何状态的任何套接字。 它用于获取或检索与套接字关联的操作参数, 与协议和通信子系统无关。 支持下列命令：
 
-- FIONBIO 启用或禁用非阻止模式套接字上。 *LpArgument*参数指向`DWORD`，这是如果非阻止模式下将启用，非零值为零，则禁用。 如果`AsyncSelect`发出套接字，则如果尝试使用`IOCtl`设置套接字回到阻止模式下的将失败并 WSAEINVAL。 若要设置回阻止模式套接字并防止出现 WSAEINVAL 错误，应用程序必须首先禁用`AsyncSelect`通过调用`AsyncSelect`与*lEvent*参数等于 0，然后调用`IOCtl`。
+- FIONBIO 启用或禁用套接字上的非阻止模式。 *LpArgument*参数指向`DWORD`, 如果要启用非阻止模式, 则为非零值, 如果要禁用则为零。 如果`AsyncSelect`已在套接字上发出, 则尝试使用`IOCtl`将套接字设置回阻止模式的任何尝试都将失败, 并出现 WSAEINVAL。 若要将套接字设置回阻止模式并防止 WSAEINVAL 错误, 应用程序必须首先`AsyncSelect`通过将*lEvent*参数设置为0来进行调用`IOCtl` `AsyncSelect` , 然后调用。
 
-- FIONREAD 确定的最大可以与一个读取的字节数`Receive`此套接字发出调用。 *LpArgument*参数指向`DWORD`在其中`IOCtl`将结果存储。 FIONREAD 此套接字类型 SOCK_STREAM 的是，如果在单个返回的可读取的数据总量`Receive`; 这通常是相同为套接字上排队的总数据量。 如果此套接字的类型 SOCK_DGRAM，FIONREAD 返回套接字上排队的第一个数据报的大小。
+- FIONREAD 确定通过此套接字的一次`Receive`调用可以读取的最大字节数。 *LpArgument*参数指向`DWORD` `IOCtl`存储结果的。 如果此套接字的类型为 SOCK_STREAM, 则 FIONREAD 将返回可在单个`Receive`中读取的数据总量; 这通常与套接字上排队的数据总量相同。 如果此套接字的类型为 SOCK_DGRAM, 则 FIONREAD 将返回在套接字上排队的第一个数据报的大小。
 
-- SIOCATMARK 确定是否已读取所有带外数据。 这仅适用于的类型已配置的行中接收的任何带外数据 (SO_OOBINLINE) SOCK_STREAM 套接字。 如果没有带外数据正在等待读取，该操作将返回非零值。 否则它将返回 0 和下一步`Receive`或`ReceiveFrom`上执行套接字将检索某些或所有前面的"标记"的数据; 该应用程序应使用 SIOCATMARK 操作来确定是否保留了任何数据。 如果前面的"紧急"（带外） 数据的任何正常数据，它将按顺序接收它们。 (请注意，`Receive`或`ReceiveFrom`永远不会混合在同一调用中的带外并处于正常状态数据。)*LpArgument*参数指向`DWORD`在其中`IOCtl`将结果存储。
+- SIOCATMARK 确定是否已读取所有带外数据。 这仅适用于 SOCK_STREAM 类型的套接字, 该套接字已配置为可在任何带外数据 (SO_OOBINLINE) 的内联接收。 如果没有带外数据正在等待读取, 则操作将返回非零值。 否则, 它将返回 0, 然后`Receive` , `ReceiveFrom`在套接字上执行的下一个或执行的操作将检索某些或所有数据, 然后应用程序应使用 SIOCATMARK 操作来确定是否保留任何数据。 如果 "紧急" (带外) 数据之前有任何常规数据, 则会按顺序接收数据。 (请注意, `Receive`或`ReceiveFrom`决不会在同一调用中混合带外和普通数据。)*LpArgument*参数指向`DWORD` `IOCtl`存储结果的。
 
-此函数是的子集`ioctl()`因为在 Berkeley 套接字中使用。 具体而言，没有相当于 FIOASYNC，SIOCATMARK 时仅套接字级别的命令受支持的命令。
+此函数是 Berkeley 套接字`ioctl()`中使用的的子集。 具体而言, 不会有与 FIOASYNC 等效的命令, 而 SIOCATMARK 是唯一受支持的套接字级别命令。
 
 ##  <a name="listen"></a>  CAsyncSocket::Listen
 
@@ -893,43 +893,43 @@ BOOL Listen(int nConnectionBacklog = 5);
 ### <a name="parameters"></a>参数
 
 *nConnectionBacklog*<br/>
-挂起的连接的队列可以增长到的最大长度。 有效范围是从 1 到 5。
+挂起连接的队列可以增长到的最大长度。 有效范围是从1到5。
 
 ### <a name="return-value"></a>返回值
 
-如果函数成功，则非零值否则通过调用检索 0 和特定的错误代码[GetLastError](#getlasterror)。 以下错误适用于此成员函数：
+如果函数成功, 则为非零值;否则为 0, 可以通过调用[GetLastError](#getlasterror)来检索特定的错误代码。 以下错误适用于此成员函数:
 
-- WSANOTINITIALISED 一个成功[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必须使用此 API 之前发生。
+- WSANOTINITIALISED 成功[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必须在使用此 API 之前发生。
 
-- WSAENETDOWN Windows 套接字实现检测到的网络子系统失败。
+- WSAENETDOWN Windows 套接字实现检测到网络子系统出现故障。
 
-- 已进行 WSAEADDRINUSE 尝试要使用的地址上进行侦听。
+- WSAEADDRINUSE 尝试侦听正在使用的地址。
 
-- 返回 WSAEINPROGRESS 一个阻止 Windows 套接字操作正在进行。
+- 返回 WSAEINPROGRESS 正在进行阻止型 Windows 套接字操作。
 
-- 没有与绑定套接字 WSAEINVAL`Bind`或已连接。
+- WSAEINVAL 套接字尚未与`Bind`绑定, 或已连接。
 
 - WSAEISCONN 套接字已连接。
 
-- WSAEMFILE 否提供了更多的文件描述符。
+- WSAEMFILE 没有更多可用的文件描述符。
 
-- WSAENOBUFS 无缓冲区空间不可用。
+- WSAENOBUFS 无缓冲区空间可用。
 
-- WSAENOTSOCK 描述符不是一个套接字。
+- WSAENOTSOCK 描述符不是套接字。
 
-- 被引用的套接字的支持的类型不是的 WSAEOPNOTSUPP`Listen`操作。
+- WSAEOPNOTSUPP 引用的套接字不属于支持`Listen`操作的类型。
 
 ### <a name="remarks"></a>备注
 
-若要接受连接，套接字首次创建使用`Create`，使用指定的传入连接积压`Listen`，然后使用接受连接和`Accept`。 `Listen` 仅适用于套接字的支持的连接，也就是说，这些类型 SOCK_STREAM。 此套接字将进入"被动"模式已确认和队列的进程中的挂起接受传入的连接。
+为了接受连接, 首先使用`Create`创建套接字, 使用为传入连接`Listen`指定积压工作 (backlog), 然后使用`Accept`接受连接。 `Listen`仅适用于支持连接的套接字, 即 SOCK_STREAM 类型。 此套接字将置于 "被动" 模式, 在该模式下, 传入的连接被确认并排队等待进程接受。
 
-此函数通常由服务器 （或想要接受连接的任何应用程序），可以一次同时拥有多个连接请求： 如果连接请求到达与队列已满时，客户端将接收并指出了错误WSAECONNREFUSED。
+此函数通常由服务器 (或任何需要接受连接的应用程序) 用于一次可以有多个连接请求: 如果连接请求到达队列已满, 则客户端将收到错误, 指示WSAECONNREFUSED.
 
-`Listen` 尝试继续提交时没有可用的端口 （描述符）。 它将接受连接，直到该队列为空。 如果端口变得可用，稍后调用`Listen`或`Accept`将如果可能，请重新填充到当前或最新"积压工作，"队列并重新开始侦听传入连接。
+`Listen`如果没有可用的端口 (描述符), 则尝试继续运行 rationally。 在清空队列之前, 它将接受连接。 如果端口变为可用, 稍后对`Listen`或`Accept`的调用会将队列重新填充到当前或最新的 "积压工作 (backlog)", 并继续侦听传入连接。
 
 ##  <a name="m_hsocket"></a>  CAsyncSocket::m_hSocket
 
-包含封装此套接字的套接字句柄`CAsyncSocket`对象。
+包含此`CAsyncSocket`对象封装的套接字的套接字句柄。
 
 ```
 SOCKET m_hSocket;
@@ -937,7 +937,7 @@ SOCKET m_hSocket;
 
 ##  <a name="onaccept"></a>  CAsyncSocket::OnAccept
 
-由框架调用以通知它可以通过调用接受挂起的连接请求的侦听套接字[接受](#accept)成员函数。
+由框架调用, 以通知侦听套接字它可以通过调用[accept](#accept)成员函数接受挂起的连接请求。
 
 ```
 virtual void OnAccept(int nErrorCode);
@@ -946,19 +946,19 @@ virtual void OnAccept(int nErrorCode);
 ### <a name="parameters"></a>参数
 
 *nErrorCode*<br/>
-一个套接字上的最新错误。 以下的错误代码适用于`OnAccept`成员函数：
+套接字上的最新错误。 以下错误代码适用`OnAccept`于成员函数:
 
-- **0**成功执行的函数。
+- **0**已成功执行该函数。
 
-- WSAENETDOWN Windows 套接字实现检测到的网络子系统失败。
+- WSAENETDOWN Windows 套接字实现检测到网络子系统出现故障。
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[Windows 套接字：套接字通知](../../mfc/windows-sockets-socket-notifications.md)。
+有关详细信息, 请[参阅 Windows 套接字:套接字](../../mfc/windows-sockets-socket-notifications.md)通知。
 
 ##  <a name="onclose"></a>  CAsyncSocket::OnClose
 
-由框架调用以通知此套接字连接的套接字由其进程关闭。
+由框架调用以通知此套接字, 连接的套接字已由其进程关闭。
 
 ```
 virtual void OnClose(int nErrorCode);
@@ -967,23 +967,23 @@ virtual void OnClose(int nErrorCode);
 ### <a name="parameters"></a>参数
 
 *nErrorCode*<br/>
-一个套接字上的最新错误。 以下的错误代码应用于`OnClose`成员函数：
+套接字上的最新错误。 以下错误代码适用`OnClose`于成员函数:
 
-- **0**成功执行的函数。
+- **0**已成功执行该函数。
 
-- WSAENETDOWN Windows 套接字实现检测到的网络子系统失败。
+- WSAENETDOWN Windows 套接字实现检测到网络子系统出现故障。
 
-- WSAECONNRESET 的远程端重置连接。
+- WSAECONNRESET 连接被远程端重置。
 
-- 由于超时或其他故障，WSAECONNABORTED 连接已中止。
+- WSAECONNABORTED 由于超时或其他故障, 连接已中止。
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[Windows 套接字：套接字通知](../../mfc/windows-sockets-socket-notifications.md)。
+有关详细信息, 请[参阅 Windows 套接字:套接字](../../mfc/windows-sockets-socket-notifications.md)通知。
 
 ##  <a name="onconnect"></a>  CAsyncSocket::OnConnect
 
-由框架调用以通知此连接的套接字完成其连接尝试是否成功或错误。
+由框架调用, 用于通知此连接套接字其连接尝试已完成 (无论是成功还是错误)。
 
 ```
 virtual void OnConnect(int nErrorCode);
@@ -992,44 +992,44 @@ virtual void OnConnect(int nErrorCode);
 ### <a name="parameters"></a>参数
 
 *nErrorCode*<br/>
-一个套接字上的最新错误。 以下的错误代码应用于`OnConnect`成员函数：
+套接字上的最新错误。 以下错误代码适用`OnConnect`于成员函数:
 
-- **0**成功执行的函数。
+- **0**已成功执行该函数。
 
-- WSAEADDRINUSE 指定的地址已在使用中。
+- WSAEADDRINUSE 指定的地址已被使用。
 
-- WSAEADDRNOTAVAIL 指定的地址不是可从本地计算机。
+- WSAEADDRNOTAVAIL 指定的地址在本地计算机上不可用。
 
 - 指定系列中的 WSAEAFNOSUPPORT 地址不能用于此套接字。
 
-- 强制性拒绝 WSAECONNREFUSED 尝试连接。
+- WSAECONNREFUSED 尝试连接被强制拒绝。
 
-- WSAEDESTADDRREQ 一个目标地址是必需的。
+- WSAEDESTADDRREQ 目标地址是必需的。
 
 - WSAEFAULT *lpSockAddrLen*参数不正确。
 
-- WSAEINVAL 套接字已绑定到一个地址。
+- WSAEINVAL 套接字已绑定到地址。
 
 - WSAEISCONN 套接字已连接。
 
-- WSAEMFILE 否提供了更多的文件描述符。
+- WSAEMFILE 没有更多可用的文件描述符。
 
-- WSAENETUNREACH 网络不能将从此主机访问这一次。
+- WSAENETUNREACH 无法从此主机访问网络。
 
-- WSAENOBUFS 无缓冲区空间不可用。 不能连接套接字。
+- WSAENOBUFS 无缓冲区空间可用。 无法连接套接字。
 
 - WSAENOTCONN 套接字未连接。
 
-- WSAENOTSOCK 描述符是一个文件，未一个套接字。
+- WSAENOTSOCK 描述符是一个文件, 而不是套接字。
 
-- WSAETIMEDOUT 连接尝试超时而无需建立连接。
+- WSAETIMEDOUT 在未建立连接的情况下尝试连接超时。
 
 ### <a name="remarks"></a>备注
 
 > [!NOTE]
->  在中[CSocket](../../mfc/reference/csocket-class.md)，则`OnConnect`通知函数从未被调用。 对于连接，您只需调用`Connect`，这将返回完成连接后 （成功或错误）。 如何处理连接通知是 MFC 实现详细信息。
+>  在[CSocket](../../mfc/reference/csocket-class.md)中, `OnConnect`从不调用通知函数。 对于连接, 只需调用`Connect`, 当连接完成 (成功或错误) 时, 将返回。 如何处理连接通知是 MFC 实现的详细信息。
 
-有关详细信息，请参阅[Windows 套接字：套接字通知](../../mfc/windows-sockets-socket-notifications.md)。
+有关详细信息, 请[参阅 Windows 套接字:套接字](../../mfc/windows-sockets-socket-notifications.md)通知。
 
 ### <a name="example"></a>示例
 
@@ -1037,7 +1037,7 @@ virtual void OnConnect(int nErrorCode);
 
 ##  <a name="onoutofbanddata"></a>  CAsyncSocket::OnOutOfBandData
 
-由框架调用以通知的接收套接字的发送套接字有要发送的带外数据。
+由框架调用, 以通知接收套接字发送套接字具有要发送的带外数据。
 
 ```
 virtual void OnOutOfBandData(int nErrorCode);
@@ -1046,21 +1046,21 @@ virtual void OnOutOfBandData(int nErrorCode);
 ### <a name="parameters"></a>参数
 
 *nErrorCode*<br/>
-一个套接字上的最新错误。 以下的错误代码应用于`OnOutOfBandData`成员函数：
+套接字上的最新错误。 以下错误代码适用`OnOutOfBandData`于成员函数:
 
-- **0**成功执行的函数。
+- **0**已成功执行该函数。
 
-- WSAENETDOWN Windows 套接字实现检测到的网络子系统失败。
+- WSAENETDOWN Windows 套接字实现检测到网络子系统出现故障。
 
 ### <a name="remarks"></a>备注
 
-带外数据是一个逻辑上独立于通道，与已连接的套接字类型 SOCK_STREAM 的每一对相关联。 通道通常用于发送紧急的数据。
+带外数据是一个逻辑上独立的通道, 与 SOCK_STREAM 类型的每对连接套接字相关联。 通道通常用于发送紧急数据。
 
-MFC 支持带外数据，但是类的用户`CAsyncSocket`我们建议您不要使用它。 更简单的方法是创建用于传递此类数据的第二个套接字。 有关带外数据的详细信息，请参阅[Windows 套接字：套接字通知](../../mfc/windows-sockets-socket-notifications.md)。
+MFC 支持带外数据, 但不建议使用类`CAsyncSocket`的用户。 更简单的方法是创建另一个套接字用于传递此类数据。 有关带外数据的详细信息, 请参阅[Windows 套接字:套接字](../../mfc/windows-sockets-socket-notifications.md)通知。
 
 ##  <a name="onreceive"></a>  CAsyncSocket::OnReceive
 
-由框架调用以通知此套接字可以通过调用检索到的缓冲区中已有数据`Receive`成员函数。
+由框架调用, 以通知此套接字存在缓冲区中的数据, 可通过调用`Receive`成员函数来检索这些数据。
 
 ```
 virtual void OnReceive(int nErrorCode);
@@ -1069,15 +1069,15 @@ virtual void OnReceive(int nErrorCode);
 ### <a name="parameters"></a>参数
 
 *nErrorCode*<br/>
-一个套接字上的最新错误。 以下的错误代码应用于`OnReceive`成员函数：
+套接字上的最新错误。 以下错误代码适用`OnReceive`于成员函数:
 
-- **0**成功执行的函数。
+- **0**已成功执行该函数。
 
-- WSAENETDOWN Windows 套接字实现检测到的网络子系统失败。
+- WSAENETDOWN Windows 套接字实现检测到网络子系统出现故障。
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[Windows 套接字：套接字通知](../../mfc/windows-sockets-socket-notifications.md)。
+有关详细信息, 请[参阅 Windows 套接字:套接字](../../mfc/windows-sockets-socket-notifications.md)通知。
 
 ### <a name="example"></a>示例
 
@@ -1085,7 +1085,7 @@ virtual void OnReceive(int nErrorCode);
 
 ##  <a name="onsend"></a>  CAsyncSocket::OnSend
 
-由框架调用以通知套接字，它现在可通过调用来发送数据`Send`成员函数。
+由框架调用, 以通知套接字现在可以通过调用`Send`成员函数发送数据。
 
 ```
 virtual void OnSend(int nErrorCode);
@@ -1094,23 +1094,23 @@ virtual void OnSend(int nErrorCode);
 ### <a name="parameters"></a>参数
 
 *nErrorCode*<br/>
-一个套接字上的最新错误。 以下的错误代码应用于`OnSend`成员函数：
+套接字上的最新错误。 以下错误代码适用`OnSend`于成员函数:
 
-- **0**成功执行的函数。
+- **0**已成功执行该函数。
 
-- WSAENETDOWN Windows 套接字实现检测到的网络子系统失败。
+- WSAENETDOWN Windows 套接字实现检测到网络子系统出现故障。
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[Windows 套接字：套接字通知](../../mfc/windows-sockets-socket-notifications.md)。
+有关详细信息, 请[参阅 Windows 套接字:套接字](../../mfc/windows-sockets-socket-notifications.md)通知。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFCAsyncSocket#3](../../mfc/reference/codesnippet/cpp/casyncsocket-class_3.cpp)]
 
-##  <a name="operator_eq"></a>  CAsyncSocket::operator =
+##  <a name="operator_eq"></a>CAsyncSocket:: operator =
 
-将一个新值赋给`CAsyncSocket`对象。
+将新值分配给`CAsyncSocket`对象。
 
 ```
 void operator=(const CAsyncSocket& rSrc);
@@ -1119,15 +1119,15 @@ void operator=(const CAsyncSocket& rSrc);
 ### <a name="parameters"></a>参数
 
 *rSrc*<br/>
-向现有的引用`CAsyncSocket`对象。
+对现有`CAsyncSocket`对象的引用。
 
 ### <a name="remarks"></a>备注
 
-调用此函数可将复制的现有`CAsyncSocket`对象和另一个`CAsyncSocket`对象。
+调用此函数可将现有`CAsyncSocket`对象复制到另一个`CAsyncSocket`对象。
 
-##  <a name="operator_socket"></a>  CAsyncSocket::operator SOCKET
+##  <a name="operator_socket"></a>CAsyncSocket:: operator 套接字
 
-使用此运算符将检索的套接字句柄`CAsyncSocket`对象。
+使用此运算符检索`CAsyncSocket`对象的套接字句柄。
 
 ```
 operator SOCKET() const;
@@ -1135,15 +1135,15 @@ operator SOCKET() const;
 
 ### <a name="return-value"></a>返回值
 
-如果成功，套接字对象; 的句柄否则，为 NULL。
+如果成功, 则为套接字对象的句柄;否则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-句柄可用于直接调用 Windows Api。
+您可以使用句柄直接调用 Windows Api。
 
 ##  <a name="receive"></a>  CAsyncSocket::Receive
 
-调用此成员函数可从套接字接收数据。
+调用此成员函数以从套接字接收数据。
 
 ```
 virtual int Receive(
@@ -1158,62 +1158,62 @@ virtual int Receive(
 传入数据的缓冲区。
 
 *nBufLen*<br/>
-长度*lpBuf*以字节为单位。
+*LpBuf*的长度 (以字节为单位)。
 
 *nFlags*<br/>
-指定的方式进行调用。 此函数的语义由套接字选项和*nFlags*参数。 后一种构造通过组合使用以下值中的任何C++**或者**运算符：
+指定进行调用的方式。 此函数的语义由套接字选项和*nFlags*参数确定。 后者是通过将以下任意值与C++ **OR**运算符组合在一起构造的:
 
-- MSG_PEEK 查看传入数据。 将数据复制到缓冲区，但不是会从输入队列中。
+- MSG_PEEK 查看传入数据。 数据将复制到缓冲区中, 但不会从输入队列中删除。
 
 - MSG_OOB 处理带外数据。
 
 ### <a name="return-value"></a>返回值
 
-如果未发生错误，`Receive`返回接收的字节数。 如果连接已关闭，则返回 0。 否则为返回值为 SOCKET_ERROR，并且可以通过调用来检索特定的错误代码[GetLastError](#getlasterror)。 以下错误适用于此成员函数：
+如果未发生错误, `Receive`则返回已接收的字节数。 如果连接已关闭, 则返回0。 否则, 将返回值 SOCKET_ERROR, 并通过调用[GetLastError](#getlasterror)来检索特定的错误代码。 以下错误适用于此成员函数:
 
-- WSANOTINITIALISED 一个成功[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必须使用此 API 之前发生。
+- WSANOTINITIALISED 成功[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必须在使用此 API 之前发生。
 
-- WSAENETDOWN Windows 套接字实现检测到的网络子系统失败。
+- WSAENETDOWN Windows 套接字实现检测到网络子系统出现故障。
 
 - WSAENOTCONN 套接字未连接。
 
-- 返回 WSAEINPROGRESS 一个阻止 Windows 套接字操作正在进行。
+- 返回 WSAEINPROGRESS 正在进行阻止型 Windows 套接字操作。
 
-- WSAENOTSOCK 描述符不是一个套接字。
+- WSAENOTSOCK 描述符不是套接字。
 
-- 指定 WSAEOPNOTSUPP MSG_OOB，但不类型 SOCK_STREAM 套接字。
+- 已指定 WSAEOPNOTSUPP MSG_OOB, 但套接字的类型不是 SOCK_STREAM。
 
-- WSAESHUTDOWN 套接字已关闭;不能调用`Receive`对套接字后`ShutDown`已调用使用了*nHow*设置为 0 或 2。
+- WSAESHUTDOWN 套接字已关闭;调用*nHow*设置为0或`Receive` 2 后`ShutDown` , 不能对套接字调用。
 
-- WSAEWOULDBLOCK 套接字被标记为非阻止性和`Receive`操作将阻塞。
+- WSAEWOULDBLOCK 套接字标记为非阻塞, `Receive`操作会阻止。
 
-- WSAEMSGSIZE 数据报太大而无法放入指定的缓冲区，已被截断。
+- WSAEMSGSIZE 数据报太大, 无法放入指定的缓冲区, 并且已被截断。
 
-- 没有与绑定套接字 WSAEINVAL `Bind`。
+- WSAEINVAL 未绑定`Bind`套接字。
 
-- 由于超时或其他故障，WSAECONNABORTED 虚拟线路已中止。
+- WSAECONNABORTED 由于超时或其他故障, 虚拟线路已中止。
 
-- 远程端置 WSAECONNRESET 虚拟线路。
+- WSAECONNRESET 远程端重置了虚拟线路。
 
 ### <a name="remarks"></a>备注
 
-此函数用于连接的流或数据报套接字，用于读取传入的数据。
+此函数用于连接的流或数据报套接字, 用于读取传入的数据。
 
-针对的类型 SOCK_STREAM 套接字，则返回的信息是目前最多提供的缓冲区的大小。 如果已配置为在行中接收的带外数据 （套接字选项 SO_OOBINLINE） 套接字和带外数据未读，则将返回仅带外数据。 应用程序可以使用`IOCtlSIOCATMARK`选项或[OnOutOfBandData](#onoutofbanddata)以确定是否任何多带外数据将保留可供读取。
+对于 SOCK_STREAM 类型的套接字, 返回的信息与当前提供的、返回的缓冲区大小最多。 如果套接字已配置为带外数据 (套接字选项 SO_OOBINLINE) 的内联接收, 并且带外数据未读, 则只会返回带外数据。 应用程序可以使用`IOCtlSIOCATMARK`选项或[OnOutOfBandData](#onoutofbanddata)来确定是否仍在读取任何带外数据。
 
-对于数据报套接字，数据提取自第一个排队数据报，最多提供的缓冲区的大小。 如果数据报值大于提供的缓冲区，使用数据报的第一个部分填充缓冲区，则多余的数据将丢失，和`Receive`SOCKET_ERROR 的具有错误代码的值设置为 WSAEMSGSIZE 返回。 如果没有任何传入的数据在套接字可用，并提供错误代码设置为 WSAEWOULDBLOCK 返回 SOCKET_ERROR 的值。 [OnReceive](#onreceive)回调函数可用于确定当更多数据到达时。
+对于数据报套接字, 将从第一个排队的数据报中提取数据, 直到达到所提供的缓冲区大小。 如果数据报比提供的缓冲区大, 则将使用数据报的第一部分填充缓冲区, 多余的数据会丢失, 并返回值`Receive` SOCKET_ERROR, 并将错误代码设置为 WSAEMSGSIZE。 如果套接字中没有可用的传入数据, 将返回值 SOCKET_ERROR, 并将错误代码设置为 WSAEWOULDBLOCK。 可以使用[OnReceive](#onreceive)回调函数来确定更多的数据何时到达。
 
-如果套接字类型 SOCK_STREAM 且远程端已关闭的情况下连接正常，`Receive`将立即完成并接收到的 0 字节。 如果连接已被重置，`Receive`将失败并出现错误 WSAECONNRESET。
+如果套接字的类型为 SOCK_STREAM, 并且远程端已正常关闭连接, 则`Receive`会立即完成, 并收到0字节。 如果连接已重置, 则`Receive`将失败, 并出现错误 WSAECONNRESET。
 
-`Receive` 应为每次只有一次调用[CAsyncSocket::OnReceive](#onreceive)调用。
+`Receive`每次调用[CAsyncSocket:: OnReceive](#onreceive)时, 只应调用一次。
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CAsyncSocket::OnReceive](#onreceive)。
+  请参阅[CAsyncSocket:: OnReceive](#onreceive)的示例。
 
 ##  <a name="receivefrom"></a>  CAsyncSocket::ReceiveFrom
 
-调用此成员函数要接收数据报并存储中的源地址[SOCKADDR](/windows/desktop/winsock/sockaddr-2)结构中或在*rSocketAddress*。
+调用此成员函数以接收数据报, 并在[SOCKADDR](/windows/win32/winsock/sockaddr-2)结构或*rSocketAddress*中存储源地址。
 
 ```
 int ReceiveFrom(
@@ -1237,74 +1237,74 @@ int ReceiveFrom(
 传入数据的缓冲区。
 
 *nBufLen*<br/>
-长度*lpBuf*以字节为单位。
+*LpBuf*的长度 (以字节为单位)。
 
 *rSocketAddress*<br/>
-引用`CString`对象，它接收的以点分隔的数字 IP 地址。
+对接收点分数字 IP 地址的对象的引用。`CString`
 
 *rSocketPort*<br/>
-对将存储一个端口是 UINT 引用。
+引用存储端口的 UINT。
 
 *lpSockAddr*<br/>
-一个指向[SOCKADDR](/windows/desktop/winsock/sockaddr-2)保留在返回的源地址的结构。
+指向[SOCKADDR](/windows/win32/winsock/sockaddr-2)结构的指针, 该结构在返回时保存源地址。
 
 *lpSockAddrLen*<br/>
-中的源地址的长度的指针*lpSockAddr*以字节为单位。
+一个指针, 指向*lpSockAddr*中源地址的长度 (以字节为单位)。
 
 *nFlags*<br/>
-指定的方式进行调用。 此函数的语义由套接字选项和*nFlags*参数。 后一种构造通过组合使用以下值中的任何C++**或者**运算符：
+指定进行调用的方式。 此函数的语义由套接字选项和*nFlags*参数确定。 后者是通过将以下任意值与C++ **OR**运算符组合在一起构造的:
 
-- MSG_PEEK 查看传入数据。 将数据复制到缓冲区，但不是会从输入队列中。
+- MSG_PEEK 查看传入数据。 数据将复制到缓冲区中, 但不会从输入队列中删除。
 
 - MSG_OOB 处理带外数据。
 
 ### <a name="return-value"></a>返回值
 
-如果未发生错误，`ReceiveFrom`返回接收的字节数。 如果连接已关闭，则返回 0。 否则为返回值为 SOCKET_ERROR，并且可以通过调用来检索特定的错误代码`GetLastError`。 以下错误适用于此成员函数：
+如果未发生错误, `ReceiveFrom`则返回已接收的字节数。 如果连接已关闭, 则返回0。 否则, 将返回值 SOCKET_ERROR, 并通过调用`GetLastError`来检索特定的错误代码。 以下错误适用于此成员函数:
 
-- WSANOTINITIALISED 一个成功[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必须使用此 API 之前发生。
+- WSANOTINITIALISED 成功[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必须在使用此 API 之前发生。
 
-- WSAENETDOWN Windows 套接字实现检测到的网络子系统失败。
+- WSAENETDOWN Windows 套接字实现检测到网络子系统出现故障。
 
-- WSAEFAULT *lpSockAddrLen*参数无效： *lpSockAddr*缓冲区是否太小，无法容纳对等节点地址。
+- WSAEFAULT *lpSockAddrLen*参数无效: *lpSockAddr*缓冲区太小, 无法容纳对等地址。
 
-- 返回 WSAEINPROGRESS 一个阻止 Windows 套接字操作正在进行。
+- 返回 WSAEINPROGRESS 正在进行阻止型 Windows 套接字操作。
 
-- 没有与绑定套接字 WSAEINVAL `Bind`。
+- WSAEINVAL 未绑定`Bind`套接字。
 
-- WSAENOTCONN 套接字未连接 (仅 SOCK_STREAM)。
+- WSAENOTCONN 套接字未连接 (仅限 SOCK_STREAM)。
 
-- WSAENOTSOCK 描述符不是一个套接字。
+- WSAENOTSOCK 描述符不是套接字。
 
-- 指定 WSAEOPNOTSUPP MSG_OOB，但不类型 SOCK_STREAM 套接字。
+- 已指定 WSAEOPNOTSUPP MSG_OOB, 但套接字的类型不是 SOCK_STREAM。
 
-- WSAESHUTDOWN 套接字已关闭;不能调用`ReceiveFrom`对套接字后`ShutDown`已调用使用了*nHow*设置为 0 或 2。
+- WSAESHUTDOWN 套接字已关闭;调用*nHow*设置为0或`ReceiveFrom` 2 后`ShutDown` , 不能对套接字调用。
 
-- WSAEWOULDBLOCK 套接字被标记为非阻止性和`ReceiveFrom`操作将阻塞。
+- WSAEWOULDBLOCK 套接字标记为非阻塞, `ReceiveFrom`操作会阻止。
 
-- WSAEMSGSIZE 数据报太大而无法放入指定的缓冲区，已被截断。
+- WSAEMSGSIZE 数据报太大, 无法放入指定的缓冲区, 并且已被截断。
 
-- 由于超时或其他故障，WSAECONNABORTED 虚拟线路已中止。
+- WSAECONNABORTED 由于超时或其他故障, 虚拟线路已中止。
 
-- 远程端置 WSAECONNRESET 虚拟线路。
+- WSAECONNRESET 远程端重置了虚拟线路。
 
 ### <a name="remarks"></a>备注
 
-此函数用于读取 （可能是连接） 的套接字上的传入数据和捕获从其发送数据的地址。
+此函数用于读取 (可能连接的) 套接字上的传入数据, 并捕获从中发送数据的地址。
 
-若要处理 IPv6 地址，请使用[CAsyncSocket::ReceiveFromEx](#receivefromex)。
+若要处理 IPv6 地址, 请使用[CAsyncSocket:: ReceiveFromEx](#receivefromex)。
 
-针对的类型 SOCK_STREAM 套接字，则返回的信息是目前最多提供的缓冲区的大小。 如果已配置为在行中接收的带外数据 （套接字选项 SO_OOBINLINE） 套接字和带外数据未读，则将返回仅带外数据。 应用程序可以使用`IOCtlSIOCATMARK`选项或`OnOutOfBandData`以确定是否任何多带外数据将保留可供读取。 *LpSockAddr*并*lpSockAddrLen* SOCK_STREAM 套接字，将忽略参数。
+对于 SOCK_STREAM 类型的套接字, 返回的信息与当前提供的、返回的缓冲区大小最多。 如果套接字已配置为带外数据 (套接字选项 SO_OOBINLINE) 的内联接收, 并且带外数据未读, 则只会返回带外数据。 应用程序可以使用`IOCtlSIOCATMARK`选项, 或`OnOutOfBandData`确定是否仍然需要读取任何带外数据。 对于 SOCK_STREAM 套接字, 将忽略*lpSockAddr*和*lpSockAddrLen*参数。
 
-对于数据报套接字，数据提取自第一个排队数据报，最多提供的缓冲区的大小。 如果数据报值大于提供的缓冲区，使用消息的第一个部分填充缓冲区，则多余的数据将丢失，和`ReceiveFrom`SOCKET_ERROR 的具有错误代码的值设置为 WSAEMSGSIZE 返回。
+对于数据报套接字, 将从第一个排队的数据报中提取数据, 直到达到所提供的缓冲区大小。 如果数据报超过提供的缓冲区大小, 则缓冲区将填充消息的第一部分, 多余的数据会丢失, 并返回值 SOCKET_ERROR, `ReceiveFrom`并将错误代码设置为 WSAEMSGSIZE。
 
-如果*lpSockAddr*为非零值，和套接字类型 SOCK_DGRAM 的是，将它发送数据的套接字的网络地址复制到相应[SOCKADDR](/windows/desktop/winsock/sockaddr-2)结构。 指向的值*lpSockAddrLen*初始化为此结构的大小，并且修改返回以指示存储在其中的地址的实际大小。 如果没有任何传入的数据可用套接字，`ReceiveFrom`调用等待数据到达除非套接字是非阻止性。 在这种情况下，并提供错误代码设置为 WSAEWOULDBLOCK 返回 SOCKET_ERROR 的值。 `OnReceive`回调可以用于确定当更多数据到达时。
+如果*lpSockAddr*不为零, 并且套接字的类型为 SOCK_DGRAM, 则发送数据的套接字的网络地址会复制到相应的[SOCKADDR](/windows/win32/winsock/sockaddr-2)结构。 *LpSockAddrLen*所指向的值将初始化为此结构的大小, 并将在返回时修改以指示存储在该处的地址的实际大小。 如果套接字中没有可用的传入数据, 则`ReceiveFrom`调用将等待数据到达, 除非套接字处于非阻止状态。 在这种情况下, 将返回值 SOCKET_ERROR, 并将错误代码设置为 WSAEWOULDBLOCK。 可以`OnReceive`使用回调来确定更多的数据何时到达。
 
-如果套接字类型 SOCK_STREAM 且远程端已关闭的情况下连接正常，`ReceiveFrom`将立即完成并接收到的 0 字节。
+如果套接字的类型为 SOCK_STREAM, 并且远程端已正常关闭连接, 则`ReceiveFrom`会立即完成, 并收到0字节。
 
 ##  <a name="receivefromex"></a>  CAsyncSocket::ReceiveFromEx
 
-调用此成员函数要接收数据报并存储中的源地址[SOCKADDR](/windows/desktop/winsock/sockaddr-2)结构中或在*rSocketAddress* （处理 IPv6 地址）。
+调用此成员函数以接收数据报, 并将源地址存储在[SOCKADDR](/windows/win32/winsock/sockaddr-2)结构或*rSocketAddress*中 (处理 IPv6 地址)。
 
 ```
 int ReceiveFromEx(
@@ -1321,68 +1321,68 @@ int ReceiveFromEx(
 传入数据的缓冲区。
 
 *nBufLen*<br/>
-长度*lpBuf*以字节为单位。
+*LpBuf*的长度 (以字节为单位)。
 
 *rSocketAddress*<br/>
-引用`CString`对象，它接收的以点分隔的数字 IP 地址。
+对接收点分数字 IP 地址的对象的引用。`CString`
 
 *rSocketPort*<br/>
-对将存储一个端口是 UINT 引用。
+引用存储端口的 UINT。
 
 *nFlags*<br/>
-指定的方式进行调用。 此函数的语义由套接字选项和*nFlags*参数。 后一种构造通过组合使用以下值中的任何C++**或者**运算符：
+指定进行调用的方式。 此函数的语义由套接字选项和*nFlags*参数确定。 后者是通过将以下任意值与C++ **OR**运算符组合在一起构造的:
 
-- MSG_PEEK 查看传入数据。 将数据复制到缓冲区，但不是会从输入队列中。
+- MSG_PEEK 查看传入数据。 数据将复制到缓冲区中, 但不会从输入队列中删除。
 
 - MSG_OOB 处理带外数据。
 
 ### <a name="return-value"></a>返回值
 
-如果未发生错误，`ReceiveFromEx`返回接收的字节数。 如果连接已关闭，则返回 0。 否则为返回值为 SOCKET_ERROR，并且可以通过调用来检索特定的错误代码`GetLastError`。 以下错误适用于此成员函数：
+如果未发生错误, `ReceiveFromEx`则返回已接收的字节数。 如果连接已关闭, 则返回0。 否则, 将返回值 SOCKET_ERROR, 并通过调用`GetLastError`来检索特定的错误代码。 以下错误适用于此成员函数:
 
-- WSANOTINITIALISED 一个成功[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必须使用此 API 之前发生。
+- WSANOTINITIALISED 成功[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必须在使用此 API 之前发生。
 
-- WSAENETDOWN Windows 套接字实现检测到的网络子系统失败。
+- WSAENETDOWN Windows 套接字实现检测到网络子系统出现故障。
 
-- WSAEFAULT *lpSockAddrLen*参数无效： *lpSockAddr*缓冲区是否太小，无法容纳对等节点地址。
+- WSAEFAULT *lpSockAddrLen*参数无效: *lpSockAddr*缓冲区太小, 无法容纳对等地址。
 
-- 返回 WSAEINPROGRESS 一个阻止 Windows 套接字操作正在进行。
+- 返回 WSAEINPROGRESS 正在进行阻止型 Windows 套接字操作。
 
-- 没有与绑定套接字 WSAEINVAL `Bind`。
+- WSAEINVAL 未绑定`Bind`套接字。
 
-- WSAENOTCONN 套接字未连接 (仅 SOCK_STREAM)。
+- WSAENOTCONN 套接字未连接 (仅限 SOCK_STREAM)。
 
-- WSAENOTSOCK 描述符不是一个套接字。
+- WSAENOTSOCK 描述符不是套接字。
 
-- 指定 WSAEOPNOTSUPP MSG_OOB，但不类型 SOCK_STREAM 套接字。
+- 已指定 WSAEOPNOTSUPP MSG_OOB, 但套接字的类型不是 SOCK_STREAM。
 
-- WSAESHUTDOWN 套接字已关闭;不能调用`ReceiveFromEx`对套接字后`ShutDown`已调用使用了*nHow*设置为 0 或 2。
+- WSAESHUTDOWN 套接字已关闭;调用*nHow*设置为0或`ReceiveFromEx` 2 后`ShutDown` , 不能对套接字调用。
 
-- WSAEWOULDBLOCK 套接字被标记为非阻止性和`ReceiveFromEx`操作将阻塞。
+- WSAEWOULDBLOCK 套接字标记为非阻塞, `ReceiveFromEx`操作会阻止。
 
-- WSAEMSGSIZE 数据报太大而无法放入指定的缓冲区，已被截断。
+- WSAEMSGSIZE 数据报太大, 无法放入指定的缓冲区, 并且已被截断。
 
-- 由于超时或其他故障，WSAECONNABORTED 虚拟线路已中止。
+- WSAECONNABORTED 由于超时或其他故障, 虚拟线路已中止。
 
-- 远程端置 WSAECONNRESET 虚拟线路。
+- WSAECONNRESET 远程端重置了虚拟线路。
 
 ### <a name="remarks"></a>备注
 
-此函数用于读取 （可能是连接） 的套接字上的传入数据和捕获从其发送数据的地址。
+此函数用于读取 (可能连接的) 套接字上的传入数据, 并捕获从中发送数据的地址。
 
-此函数等同于[CAsyncSocket::ReceiveFrom](#receivefrom) ，只不过它处理 IPv6 地址也较旧的协议。
+此函数与[CAsyncSocket:: ReceiveFrom](#receivefrom)相同, 不同之处在于它处理 IPv6 地址和旧协议。
 
-针对的类型 SOCK_STREAM 套接字，则返回的信息是目前最多提供的缓冲区的大小。 如果已配置为在行中接收的带外数据 （套接字选项 SO_OOBINLINE） 套接字和带外数据未读，则将返回仅带外数据。 应用程序可以使用`IOCtlSIOCATMARK`选项或`OnOutOfBandData`以确定是否任何多带外数据将保留可供读取。 *LpSockAddr*并*lpSockAddrLen* SOCK_STREAM 套接字，将忽略参数。
+对于 SOCK_STREAM 类型的套接字, 返回的信息与当前提供的、返回的缓冲区大小最多。 如果套接字已配置为带外数据 (套接字选项 SO_OOBINLINE) 的内联接收, 并且带外数据未读, 则只会返回带外数据。 应用程序可以使用`IOCtlSIOCATMARK`选项, 或`OnOutOfBandData`确定是否仍然需要读取任何带外数据。 对于 SOCK_STREAM 套接字, 将忽略*lpSockAddr*和*lpSockAddrLen*参数。
 
-对于数据报套接字，数据提取自第一个排队数据报，最多提供的缓冲区的大小。 如果数据报值大于提供的缓冲区，使用消息的第一个部分填充缓冲区，则多余的数据将丢失，和`ReceiveFromEx`SOCKET_ERROR 的具有错误代码的值设置为 WSAEMSGSIZE 返回。
+对于数据报套接字, 将从第一个排队的数据报中提取数据, 直到达到所提供的缓冲区大小。 如果数据报超过提供的缓冲区大小, 则缓冲区将填充消息的第一部分, 多余的数据会丢失, 并返回值 SOCKET_ERROR, `ReceiveFromEx`并将错误代码设置为 WSAEMSGSIZE。
 
-如果*lpSockAddr*为非零值，和套接字类型 SOCK_DGRAM 的是，将它发送数据的套接字的网络地址复制到相应[SOCKADDR](/windows/desktop/winsock/sockaddr-2)结构。 指向的值*lpSockAddrLen*初始化为此结构的大小，并且修改返回以指示存储在其中的地址的实际大小。 如果没有任何传入的数据可用套接字，`ReceiveFromEx`调用等待数据到达除非套接字是非阻止性。 在这种情况下，并提供错误代码设置为 WSAEWOULDBLOCK 返回 SOCKET_ERROR 的值。 `OnReceive`回调可以用于确定当更多数据到达时。
+如果*lpSockAddr*不为零, 并且套接字的类型为 SOCK_DGRAM, 则发送数据的套接字的网络地址会复制到相应的[SOCKADDR](/windows/win32/winsock/sockaddr-2)结构。 *LpSockAddrLen*所指向的值将初始化为此结构的大小, 并将在返回时修改以指示存储在该处的地址的实际大小。 如果套接字中没有可用的传入数据, 则`ReceiveFromEx`调用将等待数据到达, 除非套接字处于非阻止状态。 在这种情况下, 将返回值 SOCKET_ERROR, 并将错误代码设置为 WSAEWOULDBLOCK。 可以`OnReceive`使用回调来确定更多的数据何时到达。
 
-如果套接字类型 SOCK_STREAM 且远程端已关闭的情况下连接正常，`ReceiveFromEx`将立即完成并接收到的 0 字节。
+如果套接字的类型为 SOCK_STREAM, 并且远程端已正常关闭连接, 则`ReceiveFromEx`会立即完成, 并收到0字节。
 
 ##  <a name="send"></a>  CAsyncSocket::Send
 
-调用此成员函数以连接的套接字上发送的数据。
+调用此成员函数以在连接的套接字上发送数据。
 
 ```
 virtual int Send(
@@ -1397,62 +1397,62 @@ virtual int Send(
 包含要传输的数据的缓冲区。
 
 *nBufLen*<br/>
-中的数据的长度*lpBuf*以字节为单位。
+*LpBuf*中数据的长度 (以字节为单位)。
 
 *nFlags*<br/>
-指定的方式进行调用。 此函数的语义由套接字选项和*nFlags*参数。 后一种构造通过组合使用以下值中的任何C++**或者**运算符：
+指定进行调用的方式。 此函数的语义由套接字选项和*nFlags*参数确定。 后者是通过将以下任意值与C++ **OR**运算符组合在一起构造的:
 
-- MSG_DONTROUTE 指定的数据不应受约束路由。 Windows 套接字供应商可以选择忽略此标志。
+- MSG_DONTROUTE 指定数据不应受路由限制。 Windows 套接字供应商可以选择忽略此标志。
 
-- MSG_OOB 发送带外数据 (仅 SOCK_STREAM)。
+- MSG_OOB 发送带外数据 (仅限 SOCK_STREAM)。
 
 ### <a name="return-value"></a>返回值
 
-如果未发生错误，`Send`返回发送的字符总数。 (请注意，这可能会少于所指示的数量*nBufLen*。)否则为返回值为 SOCKET_ERROR，并且可以通过调用来检索特定的错误代码[GetLastError](#getlasterror)。 以下错误适用于此成员函数：
+如果未发生错误, `Send`则返回已发送的字符总数。 (请注意, 这可能小于*nBufLen*指示的数字)。否则, 将返回值 SOCKET_ERROR, 并通过调用[GetLastError](#getlasterror)来检索特定的错误代码。 以下错误适用于此成员函数:
 
-- WSANOTINITIALISED 一个成功[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必须使用此 API 之前发生。
+- WSANOTINITIALISED 成功[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必须在使用此 API 之前发生。
 
-- WSAENETDOWN Windows 套接字实现检测到的网络子系统失败。
+- WSAENETDOWN Windows 套接字实现检测到网络子系统出现故障。
 
-- WSAEACCES 请求的地址是广播的地址，但未设置适当的标志。
+- WSAEACCES 请求的地址是广播地址, 但未设置适当的标志。
 
-- 返回 WSAEINPROGRESS 一个阻止 Windows 套接字操作正在进行。
+- 返回 WSAEINPROGRESS 正在进行阻止型 Windows 套接字操作。
 
-- WSAEFAULT *lpBuf*参数不是有效的部件的用户地址空间中。
+- WSAEFAULT *lpBuf*参数不在用户地址空间的有效部分中。
 
-- 必须重置 WSAENETRESET 连接，因为 Windows 套接字实现将其删除。
+- WSAENETRESET 必须重置连接, 因为 Windows 套接字实现已将其删除。
 
 - WSAENOBUFS Windows 套接字实现报告缓冲区死锁。
 
 - WSAENOTCONN 套接字未连接。
 
-- WSAENOTSOCK 描述符不是一个套接字。
+- WSAENOTSOCK 描述符不是套接字。
 
-- 指定 WSAEOPNOTSUPP MSG_OOB，但不类型 SOCK_STREAM 套接字。
+- 已指定 WSAEOPNOTSUPP MSG_OOB, 但套接字的类型不是 SOCK_STREAM。
 
-- WSAESHUTDOWN 套接字已关闭;不能调用`Send`对套接字后`ShutDown`已调用使用了*nHow*设置为 1 或 2。
+- WSAESHUTDOWN 套接字已关闭;在 nHow 设置为1或`Send` 2 的情况调用`ShutDown`之后, 不能在套接字上调用。
 
-- WSAEWOULDBLOCK 套接字被标记为非阻止性和请求的操作会阻止。
+- WSAEWOULDBLOCK 套接字标记为非阻止, 请求的操作将会阻止。
 
-- WSAEMSGSIZE 套接字的类型 SOCK_DGRAM，并且数据报大于支持的 Windows 套接字实现的最大值。
+- WSAEMSGSIZE 套接字的类型为 SOCK_DGRAM, 并且数据报大于 Windows 套接字实现所支持的最大值。
 
-- 没有与绑定套接字 WSAEINVAL `Bind`。
+- WSAEINVAL 未绑定`Bind`套接字。
 
-- 由于超时或其他故障，WSAECONNABORTED 虚拟线路已中止。
+- WSAECONNABORTED 由于超时或其他故障, 虚拟线路已中止。
 
-- 远程端置 WSAECONNRESET 虚拟线路。
+- WSAECONNRESET 远程端重置了虚拟线路。
 
 ### <a name="remarks"></a>备注
 
-`Send` 用于编写在连接的流或数据报套接字的传出数据。 对于数据报套接字，必须格外小心不能超过最大的 IP 数据包大小的基础的子网，这由给定`iMaxUdpDg`中的元素[WSADATA](/windows/desktop/api/winsock2/ns-winsock2-wsadata)由返回结构`AfxSocketInit`。 如果数据太长，以原子方式通过基础协议，返回的错误 WSAEMSGSIZE 是通过`GetLastError`，和不传输任何数据。
+`Send`用于写入已连接的流或数据报套接字上的传出数据。 对于数据报套接字, 必须注意不超过基础子网的最大 IP 数据包大小, 该大小由返回`iMaxUdpDg` `AfxSocketInit`的[WSADATA](/windows/win32/api/winsock2/ns-winsock2-wsadata)结构中的元素提供。 如果数据太长, 无法通过基础协议以原子方式传递, 则会通过`GetLastError`来返回错误 WSAEMSGSIZE, 并且不会传输任何数据。
 
-请注意，对于数据报套接字的成功完成的`Send`并不表示数据已成功传递。
+请注意, 对于数据报套接字, 成功完成`Send`后并不表示数据已成功传递。
 
-在`CAsyncSocket`SOCK_STREAM 类型的对象，写入的字节数可介于 1 和请求的长度，具体取决于本地和外来主机上的缓冲区可用性。
+在`CAsyncSocket` SOCK_STREAM 类型的对象上, 写入的字节数可以介于1和请求的长度之间, 具体取决于本地和外部主机上的缓冲区可用性。
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CAsyncSocket::OnSend](#onsend)。
+  请参阅[CAsyncSocket:: OnSend](#onsend)的示例。
 
 ##  <a name="sendto"></a>  CAsyncSocket::SendTo
 
@@ -1480,86 +1480,86 @@ int SendTo(
 包含要传输的数据的缓冲区。
 
 *nBufLen*<br/>
-中的数据的长度*lpBuf*以字节为单位。
+*LpBuf*中数据的长度 (以字节为单位)。
 
 *nHostPort*<br/>
-用于标识套接字应用程序端口。
+标识套接字应用程序的端口。
 
 *lpszHostAddress*<br/>
-此对象连接的套接字的网络地址： 例如"ftp.microsoft.com，"或一个以点分隔的数字，如"128.56.22.8"的计算机的名称。
+此对象连接的套接字的网络地址: 计算机名称 (如 "ftp.microsoft.com") 或点分数字, 如 "128.56.22.8"。
 
 *nFlags*<br/>
-指定的方式进行调用。 此函数的语义由套接字选项和*nFlags*参数。 后一种构造通过组合使用以下值中的任何C++**或者**运算符：
+指定进行调用的方式。 此函数的语义由套接字选项和*nFlags*参数确定。 后者是通过将以下任意值与C++ **OR**运算符组合在一起构造的:
 
-- MSG_DONTROUTE 指定的数据不应受约束路由。 Windows 套接字供应商可以选择忽略此标志。
+- MSG_DONTROUTE 指定数据不应受路由限制。 Windows 套接字供应商可以选择忽略此标志。
 
-- MSG_OOB 发送带外数据 (仅 SOCK_STREAM)。
+- MSG_OOB 发送带外数据 (仅限 SOCK_STREAM)。
 
 *lpSockAddr*<br/>
-一个指向[SOCKADDR](/windows/desktop/winsock/sockaddr-2)结构，其中包含目标套接字的地址。
+指向[SOCKADDR](/windows/win32/winsock/sockaddr-2)结构的指针, 该结构包含目标套接字的地址。
 
 *nSockAddrLen*<br/>
-中的地址的长度*lpSockAddr*以字节为单位。
+*LpSockAddr*中地址的长度 (以字节为单位)。
 
 ### <a name="return-value"></a>返回值
 
-如果未发生错误，`SendTo`返回发送的字符总数。 (请注意，这可能会少于所指示的数量*nBufLen*。)否则为返回值为 SOCKET_ERROR，并且可以通过调用来检索特定的错误代码[GetLastError](#getlasterror)。 以下错误适用于此成员函数：
+如果未发生错误, `SendTo`则返回已发送的字符总数。 (请注意, 这可能小于*nBufLen*指示的数字)。否则, 将返回值 SOCKET_ERROR, 并通过调用[GetLastError](#getlasterror)来检索特定的错误代码。 以下错误适用于此成员函数:
 
-- WSANOTINITIALISED 一个成功[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必须使用此 API 之前发生。
+- WSANOTINITIALISED 成功[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必须在使用此 API 之前发生。
 
-- WSAENETDOWN Windows 套接字实现检测到的网络子系统失败。
+- WSAENETDOWN Windows 套接字实现检测到网络子系统出现故障。
 
-- WSAEACCES 请求的地址是广播的地址，但未设置适当的标志。
+- WSAEACCES 请求的地址是广播地址, 但未设置适当的标志。
 
-- 返回 WSAEINPROGRESS 一个阻止 Windows 套接字操作正在进行。
+- 返回 WSAEINPROGRESS 正在进行阻止型 Windows 套接字操作。
 
-- WSAEFAULT *lpBuf*或*lpSockAddr*参数不是用户地址空间的一部分或*lpSockAddr*参数是太小 (小于大小[SOCKADDR](/windows/desktop/winsock/sockaddr-2)结构)。
+- WSAEFAULT *lpBuf*或*lpSockAddr*参数不是用户地址空间的一部分, 或者*lpSockAddr*参数太小 (小于[SOCKADDR](/windows/win32/winsock/sockaddr-2)结构的大小)。
 
-- WSAEINVAL 的主机名无效。
+- WSAEINVAL 主机名无效。
 
-- 必须重置 WSAENETRESET 连接，因为 Windows 套接字实现将其删除。
+- WSAENETRESET 必须重置连接, 因为 Windows 套接字实现已将其删除。
 
 - WSAENOBUFS Windows 套接字实现报告缓冲区死锁。
 
-- WSAENOTCONN 套接字未连接 (仅 SOCK_STREAM)。
+- WSAENOTCONN 套接字未连接 (仅限 SOCK_STREAM)。
 
-- WSAENOTSOCK 描述符不是一个套接字。
+- WSAENOTSOCK 描述符不是套接字。
 
-- 指定 WSAEOPNOTSUPP MSG_OOB，但不类型 SOCK_STREAM 套接字。
+- 已指定 WSAEOPNOTSUPP MSG_OOB, 但套接字的类型不是 SOCK_STREAM。
 
-- WSAESHUTDOWN 套接字已关闭;不能调用`SendTo`对套接字后`ShutDown`已调用使用了*nHow*设置为 1 或 2。
+- WSAESHUTDOWN 套接字已关闭;在 nHow 设置为1或`SendTo` 2 的情况调用`ShutDown`之后, 不能在套接字上调用。
 
-- WSAEWOULDBLOCK 套接字被标记为非阻止性和请求的操作会阻止。
+- WSAEWOULDBLOCK 套接字标记为非阻止, 请求的操作将会阻止。
 
-- WSAEMSGSIZE 套接字的类型 SOCK_DGRAM，并且数据报大于支持的 Windows 套接字实现的最大值。
+- WSAEMSGSIZE 套接字的类型为 SOCK_DGRAM, 并且数据报大于 Windows 套接字实现所支持的最大值。
 
-- 由于超时或其他故障，WSAECONNABORTED 虚拟线路已中止。
+- WSAECONNABORTED 由于超时或其他故障, 虚拟线路已中止。
 
-- 远程端置 WSAECONNRESET 虚拟线路。
+- WSAECONNRESET 远程端重置了虚拟线路。
 
-- WSAEADDRNOTAVAIL 指定的地址不是可从本地计算机。
+- WSAEADDRNOTAVAIL 指定的地址在本地计算机上不可用。
 
 - 指定系列中的 WSAEAFNOSUPPORT 地址不能用于此套接字。
 
-- WSAEDESTADDRREQ 一个目标地址是必需的。
+- WSAEDESTADDRREQ 目标地址是必需的。
 
-- WSAENETUNREACH 网络不能将从此主机访问这一次。
+- WSAENETUNREACH 无法从此主机访问网络。
 
 ### <a name="remarks"></a>备注
 
-`SendTo` 数据报或流套接字上使用，用于编写针对套接字的传出数据。 对于数据报套接字，必须格外小心不能超过最大的 IP 数据包大小的基础的子网，这由给定`iMaxUdpDg`中的元素[WSADATA](/windows/desktop/api/winsock2/ns-winsock2-wsadata)结构通过填写[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit). 如果数据太长，以原子方式通过基础协议，返回的错误 WSAEMSGSIZE，并不传输任何数据。
+`SendTo`用在数据报或流套接字上, 用于写入套接字上的传出数据。 对于数据报套接字, 必须注意不超过底层子网的最大 IP 数据包大小, `iMaxUdpDg` [WSADATA](/windows/win32/api/winsock2/ns-winsock2-wsadata)结构中的元素由[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)填充。 如果数据太长, 无法通过基础协议以原子方式传递, 则会返回错误 WSAEMSGSIZE, 并且不会传输任何数据。
 
-请注意，成功完成`SendTo`并不表示数据已成功传递。
+请注意, 成功完成`SendTo`后并不表示数据已成功传递。
 
-`SendTo` 仅用于 SOCK_DGRAM 套接字将数据报发送到由标识特定的套接字*lpSockAddr*参数。
+`SendTo`仅在 SOCK_DGRAM 套接字上用于将数据报发送到由*lpSockAddr*参数标识的特定套接字。
 
-若要将广播发送 （上 SOCK_DGRAM 仅) 中的地址*lpSockAddr*参数应构造使用特殊的 IP 地址 INADDR_BROADCAST （Windows 套接字标头文件 WINSOCK 中定义。H） 一起使用的目标的端口号。 或者，如果*lpszHostAddress*参数为 NULL，套接字配置进行广播。 它是广播数据报超出开始可以进行碎片，其大小通常不建议使用这表明数据报 （不包括标头） 的数据部分应不超过 512 个字节。
+若要发送广播 (仅在 SOCK_DGRAM 上), 应使用特殊的 IP 地址 INADDR_BROADCAST (在 Windows 套接头文件 WINSOCK 中定义) 构造*lpSockAddr*参数中的地址。H) 以及目标端口号。 或者, 如果*lpszHostAddress*参数为 NULL, 则会为广播配置套接字。 通常情况下, 广播数据报会可取到超过碎片的大小, 这意味着数据报的数据部分 (不包括标头) 不应超过512个字节。
 
-若要处理 IPv6 地址，请使用[CAsyncSocket::SendToEx](#sendtoex)。
+若要处理 IPv6 地址, 请使用[CAsyncSocket:: SendToEx](#sendtoex)。
 
 ##  <a name="sendtoex"></a>  CAsyncSocket::SendToEx
 
-调用此成员函数以将数据发送到特定目标 （句柄 IPv6 地址）。
+调用此成员函数以将数据发送到特定目标 (处理 IPv6 地址)。
 
 ```
 int SendToEx(
@@ -1576,80 +1576,80 @@ int SendToEx(
 包含要传输的数据的缓冲区。
 
 *nBufLen*<br/>
-中的数据的长度*lpBuf*以字节为单位。
+*LpBuf*中数据的长度 (以字节为单位)。
 
 *nHostPort*<br/>
-用于标识套接字应用程序端口。
+标识套接字应用程序的端口。
 
 *lpszHostAddress*<br/>
-此对象连接的套接字的网络地址： 例如"ftp.microsoft.com，"或一个以点分隔的数字，如"128.56.22.8"的计算机的名称。
+此对象连接的套接字的网络地址: 计算机名称 (如 "ftp.microsoft.com") 或点分数字, 如 "128.56.22.8"。
 
 *nFlags*<br/>
-指定的方式进行调用。 此函数的语义由套接字选项和*nFlags*参数。 后一种构造通过组合使用以下值中的任何C++**或者**运算符：
+指定进行调用的方式。 此函数的语义由套接字选项和*nFlags*参数确定。 后者是通过将以下任意值与C++ **OR**运算符组合在一起构造的:
 
-- MSG_DONTROUTE 指定的数据不应受约束路由。 Windows 套接字供应商可以选择忽略此标志。
+- MSG_DONTROUTE 指定数据不应受路由限制。 Windows 套接字供应商可以选择忽略此标志。
 
-- MSG_OOB 发送带外数据 (仅 SOCK_STREAM)。
+- MSG_OOB 发送带外数据 (仅限 SOCK_STREAM)。
 
 ### <a name="return-value"></a>返回值
 
-如果未发生错误，`SendToEx`返回发送的字符总数。 (请注意，这可能会少于所指示的数量*nBufLen*。)否则为返回值为 SOCKET_ERROR，并且可以通过调用来检索特定的错误代码[GetLastError](#getlasterror)。 以下错误适用于此成员函数：
+如果未发生错误, `SendToEx`则返回已发送的字符总数。 (请注意, 这可能小于*nBufLen*指示的数字)。否则, 将返回值 SOCKET_ERROR, 并通过调用[GetLastError](#getlasterror)来检索特定的错误代码。 以下错误适用于此成员函数:
 
-- WSANOTINITIALISED 一个成功[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必须使用此 API 之前发生。
+- WSANOTINITIALISED 成功[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必须在使用此 API 之前发生。
 
-- WSAENETDOWN Windows 套接字实现检测到的网络子系统失败。
+- WSAENETDOWN Windows 套接字实现检测到网络子系统出现故障。
 
-- WSAEACCES 请求的地址是广播的地址，但未设置适当的标志。
+- WSAEACCES 请求的地址是广播地址, 但未设置适当的标志。
 
-- 返回 WSAEINPROGRESS 一个阻止 Windows 套接字操作正在进行。
+- 返回 WSAEINPROGRESS 正在进行阻止型 Windows 套接字操作。
 
-- WSAEFAULT *lpBuf*或*lpSockAddr*参数不是用户地址空间的一部分或*lpSockAddr*参数是太小 (小于大小[SOCKADDR](/windows/desktop/winsock/sockaddr-2)结构)。
+- WSAEFAULT *lpBuf*或*lpSockAddr*参数不是用户地址空间的一部分, 或者*lpSockAddr*参数太小 (小于[SOCKADDR](/windows/win32/winsock/sockaddr-2)结构的大小)。
 
-- WSAEINVAL 的主机名无效。
+- WSAEINVAL 主机名无效。
 
-- 必须重置 WSAENETRESET 连接，因为 Windows 套接字实现将其删除。
+- WSAENETRESET 必须重置连接, 因为 Windows 套接字实现已将其删除。
 
 - WSAENOBUFS Windows 套接字实现报告缓冲区死锁。
 
-- WSAENOTCONN 套接字未连接 (仅 SOCK_STREAM)。
+- WSAENOTCONN 套接字未连接 (仅限 SOCK_STREAM)。
 
-- WSAENOTSOCK 描述符不是一个套接字。
+- WSAENOTSOCK 描述符不是套接字。
 
-- 指定 WSAEOPNOTSUPP MSG_OOB，但不类型 SOCK_STREAM 套接字。
+- 已指定 WSAEOPNOTSUPP MSG_OOB, 但套接字的类型不是 SOCK_STREAM。
 
-- WSAESHUTDOWN 套接字已关闭;不能调用`SendToEx`对套接字后`ShutDown`已调用使用了*nHow*设置为 1 或 2。
+- WSAESHUTDOWN 套接字已关闭;在 nHow 设置为1或`SendToEx` 2 的情况调用`ShutDown`之后, 不能在套接字上调用。
 
-- WSAEWOULDBLOCK 套接字被标记为非阻止性和请求的操作会阻止。
+- WSAEWOULDBLOCK 套接字标记为非阻止, 请求的操作将会阻止。
 
-- WSAEMSGSIZE 套接字的类型 SOCK_DGRAM，并且数据报大于支持的 Windows 套接字实现的最大值。
+- WSAEMSGSIZE 套接字的类型为 SOCK_DGRAM, 并且数据报大于 Windows 套接字实现所支持的最大值。
 
-- 由于超时或其他故障，WSAECONNABORTED 虚拟线路已中止。
+- WSAECONNABORTED 由于超时或其他故障, 虚拟线路已中止。
 
-- 远程端置 WSAECONNRESET 虚拟线路。
+- WSAECONNRESET 远程端重置了虚拟线路。
 
-- WSAEADDRNOTAVAIL 指定的地址不是可从本地计算机。
+- WSAEADDRNOTAVAIL 指定的地址在本地计算机上不可用。
 
 - 指定系列中的 WSAEAFNOSUPPORT 地址不能用于此套接字。
 
-- WSAEDESTADDRREQ 一个目标地址是必需的。
+- WSAEDESTADDRREQ 目标地址是必需的。
 
-- WSAENETUNREACH 网络不能将从此主机访问这一次。
+- WSAENETUNREACH 无法从此主机访问网络。
 
 ### <a name="remarks"></a>备注
 
-此方法等同于[CAsyncSocket::SendTo](#sendto) ，只不过它处理 IPv6 地址也较旧的协议。
+此方法与[CAsyncSocket:: SendTo](#sendto)相同, 不同之处在于它处理 IPv6 地址和旧协议。
 
-`SendToEx` 数据报或流套接字上使用，用于编写针对套接字的传出数据。 对于数据报套接字，必须格外小心不能超过最大的 IP 数据包大小的基础的子网，这由给定`iMaxUdpDg`中的元素[WSADATA](/windows/desktop/api/winsock2/ns-winsock2-wsadata)结构通过填写[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit). 如果数据太长，以原子方式通过基础协议，返回的错误 WSAEMSGSIZE，并不传输任何数据。
+`SendToEx`用在数据报或流套接字上, 用于写入套接字上的传出数据。 对于数据报套接字, 必须注意不超过底层子网的最大 IP 数据包大小, `iMaxUdpDg` [WSADATA](/windows/win32/api/winsock2/ns-winsock2-wsadata)结构中的元素由[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)填充。 如果数据太长, 无法通过基础协议以原子方式传递, 则会返回错误 WSAEMSGSIZE, 并且不会传输任何数据。
 
-请注意，成功完成`SendToEx`并不表示数据已成功传递。
+请注意, 成功完成`SendToEx`后并不表示数据已成功传递。
 
-`SendToEx` 仅用于 SOCK_DGRAM 套接字将数据报发送到由标识特定的套接字*lpSockAddr*参数。
+`SendToEx`仅在 SOCK_DGRAM 套接字上用于将数据报发送到由*lpSockAddr*参数标识的特定套接字。
 
-若要将广播发送 （上 SOCK_DGRAM 仅) 中的地址*lpSockAddr*参数应构造使用特殊的 IP 地址 INADDR_BROADCAST （Windows 套接字标头文件 WINSOCK 中定义。H） 一起使用的目标的端口号。 或者，如果*lpszHostAddress*参数为 NULL，套接字配置进行广播。 它是广播数据报超出开始可以进行碎片，其大小通常不建议使用这表明数据报 （不包括标头） 的数据部分应不超过 512 个字节。
+若要发送广播 (仅在 SOCK_DGRAM 上), 应使用特殊的 IP 地址 INADDR_BROADCAST (在 Windows 套接头文件 WINSOCK 中定义) 构造*lpSockAddr*参数中的地址。H) 以及目标端口号。 或者, 如果*lpszHostAddress*参数为 NULL, 则会为广播配置套接字。 通常情况下, 广播数据报会可取到超过碎片的大小, 这意味着数据报的数据部分 (不包括标头) 不应超过512个字节。
 
 ##  <a name="setsockopt"></a>  CAsyncSocket::SetSockOpt
 
-调用此成员函数可设置套接字选项。
+调用此成员函数以设置套接字选项。
 
 ```
 BOOL SetSockOpt(
@@ -1662,89 +1662,89 @@ BOOL SetSockOpt(
 ### <a name="parameters"></a>参数
 
 *nOptionName*<br/>
-为其值将设置套接字选项。
+要为其设置值的套接字选项。
 
 *lpOptionValue*<br/>
-指向在其中提供请求的选项的值的缓冲区的指针。
+指向缓冲区的指针, 在此缓冲区中提供请求选项的值。
 
 *nOptionLen*<br/>
-大小*lpOptionValue*以字节为单位的缓冲区。
+*LpOptionValue*缓冲区的大小 (以字节为单位)。
 
 *nLevel*<br/>
-在其中定义了选项; 级别唯一支持的级别为 SOL_SOCKET 和 IPPROTO_TCP。
+定义选项的级别;唯一受支持的级别为 SOL_SOCKET 和 IPPROTO_TCP。
 
 ### <a name="return-value"></a>返回值
 
-如果函数成功，则非零值否则通过调用检索 0 和特定的错误代码[GetLastError](#getlasterror)。 以下错误适用于此成员函数：
+如果函数成功, 则为非零值;否则为 0, 可以通过调用[GetLastError](#getlasterror)来检索特定的错误代码。 以下错误适用于此成员函数:
 
-- WSANOTINITIALISED 一个成功[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必须使用此 API 之前发生。
+- WSANOTINITIALISED 成功[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必须在使用此 API 之前发生。
 
-- WSAENETDOWN Windows 套接字实现检测到的网络子系统失败。
+- WSAENETDOWN Windows 套接字实现检测到网络子系统出现故障。
 
-- WSAEFAULT *lpOptionValue*不是有效的进程地址空间部分。
+- WSAEFAULT *lpOptionValue*不在进程地址空间的有效部分。
 
-- 返回 WSAEINPROGRESS 一个阻止 Windows 套接字操作正在进行。
+- 返回 WSAEINPROGRESS 正在进行阻止型 Windows 套接字操作。
 
-- WSAEINVAL *nLevel*无效，或中的信息*lpOptionValue*无效。
+- WSAEINVAL *nLevel*无效, 或者*lpOptionValue*中的信息无效。
 
-- 当设置 SO_KEEPALIVE，WSAENETRESET 连接已超时。
+- 设置 SO_KEEPALIVE 时, WSAENETRESET 连接已超时。
 
-- WSAENOPROTOOPT 选项是未知或不受支持。 具体而言，SO_BROADCAST 不支持在类型 SOCK_STREAM SO_DONTLINGER、 SO_KEEPALIVE、 SO_LINGER 和 SO_OOBINLINE 时不支持对类型 SOCK_DGRAM 的套接字的套接字上。
+- WSAENOPROTOOPT 选项未知或不受支持。 特别是, SOCK_STREAM 类型的套接字不支持 SO_BROADCAST, 而 SO_DONTLINGER、SO_KEEPALIVE、SO_LINGER 和 SO_OOBINLINE 在 SOCK_DGRAM 类型的插槽上不受支持。
 
-- 当设置 SO_KEEPALIVE WSAENOTCONN 连接已重置。
+- 设置 SO_KEEPALIVE 时, WSAENOTCONN 连接已重置。
 
-- WSAENOTSOCK 描述符不是一个套接字。
+- WSAENOTSOCK 描述符不是套接字。
 
 ### <a name="remarks"></a>备注
 
-`SetSockOpt` 设置与中的任何状态的任何类型的套接字关联的套接字选项的当前值。 尽管选项可以在多个协议级别存在，但此规范只定义最高"套接字"级别中存在的选项。 选项会影响套接字操作，如是否加急的数据是在流中收到正常数据，是否可以在套接字上发送广播的消息，并且其他操作。
+`SetSockOpt`设置与任何类型的套接字关联的套接字选项的当前值 (以任何状态表示)。 尽管选项可以存在于多个协议级别, 但此规范仅定义位于最上面的 "套接字" 级别的选项。 选项会影响套接字操作, 例如是否在正常数据流中接收加急数据、是否可以在套接字上发送广播消息等等。
 
-有两种类型的套接字选项：布尔选项启用或禁用功能或行为，以及它需要整数值或结构的选项。 若要启用布尔选项， *lpOptionValue*指向非零的整数。 若要禁用选项*lpOptionValue*指向一个等于零的整数。 *nOptionLen*应等于`sizeof(BOOL)`布尔选项。 有关其他选项， *lpOptionValue*指向的整数或结构，其中包含所需的值对于选项，并*nOptionLen*是整数或结构的长度。
+套接字选项有两种类型:启用或禁用功能或行为的布尔选项, 以及需要整数值或结构的选项。 若要启用布尔选项, *lpOptionValue*将指向非零整数。 若要禁用选项*lpOptionValue* , 请将其指向等于零的整数。 `sizeof(BOOL)`对于布尔选项, *nOptionLen*应等于。 对于其他选项, *lpOptionValue*指向包含选项所需值的整数或结构, *nOptionLen*是整数或结构的长度。
 
-SO_LINGER 控制时未发送的数据排队套接字上执行的操作和`Close`函数调用以关闭套接字。
+当未发送的数据在套接字上排队时, SO_LINGER 控制执行`Close`的操作, 并且调用该函数关闭套接字。
 
-默认情况下，不能绑定套接字 (请参阅[绑定](#bind)) 到其已在使用本地地址。 有时，但是，它可能需要"重新使用"在这种方式中的地址。 因为由本地和远程地址的组合唯一标识每个连接，所以也绑定到相同的本地地址，只要远程地址是不同的两个套接字出现任何问题。
+默认情况下, 不能将套接字绑定 (请参阅[Bind](#bind)) 到已在使用中的本地地址。 然而, 在这种情况下, 可能需要以这种方式 "重新使用" 地址。 由于每个连接都是由本地和远程地址的组合唯一标识的, 因此, 只要远程地址不同, 将两个套接字绑定到相同的本地地址就没有问题。
 
-若要通知的 Windows 套接字实现的`Bind`应不允许对套接字的调用，因为所需的地址已在使用另一套接字，该应用程序应设置套接字发出之前 SO_REUSEADDR 套接字选项`Bind`调用。 请注意，该选项仅在时解释`Bind`调用： 因此是不必要 （但是无害） 上的套接字，则不需要绑定到现有的地址，设置选项和设置或重置后的选项`Bind`调用具有此计算机或任何其他套接字不起作用。
+若要通知 Windows 套接字实现`Bind`不应禁用套接字上的调用, 因为其他套接字已使用了所需的地址, 则应用程序应在发出之前为套接字设置 SO_REUSEADDR 套接字选项`Bind`调用。 请注意, 此选项仅在`Bind`调用时才会被解释: 因此, 不需要 (但无害) 在不绑定到现有地址的套接字上设置选项, 并且在`Bind`调用后设置或重置选项对于此或任何其他套接字不起作用。
 
-应用程序可以请求 Windows 套接字实现通过开启 SO_KEEPALIVE 套接字选项启用"保持连接"上的数据包的传输控制协议 (TCP) 连接使用。 Windows 套接字实现不需要支持使用 keep-alive： 如果是这样，是特定于实现的精确语义，但应符合 RFC 1122 的 4.2.3.6 节："Internet 主机要求-通信层。" 如果删除连接作为结果的"keep-alive"返回的错误代码 WSAENETRESET 是正在进行中的任何调用套接字，和任何后续调用将因 WSAENOTCONN。
+应用程序可以通过打开 SO_KEEPALIVE 套接字选项来请求 Windows 套接字实现允许在传输控制协议 (TCP) 连接上使用 "保持活动状态" 数据包。 Windows 套接字实现不需要支持 keep-alive: 否则, 精确的语义是特定于实现的, 但应遵循 RFC 1122 的4.2.3.6 部分:"Internet 主机的要求 (通信层)" 如果由于 "保持 http 连接" 而删除了某个连接, 则错误代码 WSAENETRESET 将返回到该套接字上正在进行的任何调用, 并且任何后续调用都将失败, 并返回 WSAENOTCONN。
 
-TCP_NODELAY 选项将禁用 Nagle 算法。 使用 Nagle 算法来减少的小型数据包由主机发送缓冲请求未确认的发送数据，直到可以发送一个完全尺寸的数据包数。 但是，对于某些应用程序，此算法会妨碍性能，并且 TCP_NODELAY 可用于将其关闭。 应用程序编写器不应设置 TCP_NODELAY，除非这样做的影响因此是易于理解和所需的因为设置 TCP_NODELAY 可以对网络性能产生严重的负面影响。 TCP_NODELAY 是唯一支持的使用级别 IPPROTO_TCP; 套接字选项所有其他选项使用级别 SOL_SOCKET。
+TCP_NODELAY 选项禁用 Nagle 算法。 Nagle 算法用于通过缓冲未确认的发送数据来减少主机发送的小型数据包数量, 直到可以发送全尺寸的数据包。 但是, 对于某些应用程序, 此算法可能会影响性能, 而 TCP_NODELAY 可用于将其关闭。 除非设置 TCP_NODELAY 会对网络性能产生严重的负面影响, 否则应用程序编写器不应设置 TCP_NODELAY, 除非此操作的影响非常清楚并且需要。 TCP_NODELAY 是唯一受支持的套接字选项, 它使用 level IPPROTO_TCP;所有其他选项都使用级别 SOL_SOCKET。
 
-如果应用程序设置 SO_DEBUG 选项，某些实现 Windows 套接字提供输出调试信息。
+如果 SO_DEBUG 选项由应用程序设置, Windows 套接字的某些实现将提供输出调试信息。
 
-支持以下选项`SetSockOpt`。 类型标识的数据所处理的类型*lpOptionValue*。
+支持以下选项`SetSockOpt`。 类型标识*lpOptionValue*寻址的数据类型。
 
-|“值”|类型|含义|
+|值|类型|含义|
 |-----------|----------|-------------|
-|SO_BROADCAST|BOOL|允许在套接字上的广播消息的传输。|
+|SO_BROADCAST|BOOL|允许在套接字上传输广播消息。|
 |SO_DEBUG|BOOL|记录调试信息。|
-|SO_DONTLINGER|BOOL|不会阻止`Close`等待未发送的数据要发送。 设置此选项等同于将设置与 SO_LINGER`l_onoff`设置为零。|
-|SO_DONTROUTE|BOOL|不路由： 直接向接口发送。|
+|SO_DONTLINGER|BOOL|请勿阻止`Close`正在等待发送未发送的数据。 设置此选项等效于将设置为零`l_onoff`的 SO_LINGER 设置为零。|
+|SO_DONTROUTE|BOOL|不路由: 直接发送到接口。|
 |SO_KEEPALIVE|BOOL|发送 keep-alive。|
-|SO_LINGER|`struct LINGER`|Linger`Close`如果未发送的数据是否存在。|
+|SO_LINGER|`struct LINGER`|逗留未`Close`发送的数据是否存在。|
 |SO_OOBINLINE|BOOL|接收正常数据流中的带外数据。|
-|SO_RCVBUF|**int**|指定接收缓冲区大小。|
-|SO_REUSEADDR|BOOL|允许要绑定到已在使用的地址的套接字。 (请参阅[绑定](#bind)。)|
+|SO_RCVBUF|**int**|指定接收的缓冲区大小。|
+|SO_REUSEADDR|BOOL|允许将套接字绑定到已在使用中的地址。 (请参见[绑定](#bind)。)|
 |SO_SNDBUF|**int**|指定发送的缓冲区大小。|
 |TCP_NODELAY|BOOL|为发送合并禁用 Nagle 算法。|
 
-不支持的 Berkeley Software Distribution (BSD) 选项`SetSockOpt`是：
+不支持的`SetSockOpt` Berkeley 软件分发 (BSD) 选项包括:
 
-|“值”|类型|含义|
+|值|类型|含义|
 |-----------|----------|-------------|
-|SO_ACCEPTCONN|BOOL|套接字侦听|
+|SO_ACCEPTCONN|BOOL|套接字正在侦听|
 |SO_ERROR|**int**|获取错误状态并清除。|
-|SO_RCVLOWAT|**int**|收到的低水印。|
+|SO_RCVLOWAT|**int**|接收低水位线。|
 |SO_RCVTIMEO|**int**|接收超时|
-|SO_SNDLOWAT|**int**|发送的低水印。|
+|SO_SNDLOWAT|**int**|发送低水位线。|
 |SO_SNDTIMEO|**int**|发送超时。|
 |SO_TYPE|**int**|套接字的类型。|
 |IP_OPTIONS||在 IP 标头中设置选项字段。|
 
 ##  <a name="shutdown"></a>  CAsyncSocket::ShutDown
 
-调用此成员函数以禁用发送时，收到，或两个套接字上。
+调用此成员函数可在套接字上禁用发送、接收或同时禁用这两者。
 
 ```
 BOOL ShutDown(int nHow = sends);
@@ -1753,45 +1753,45 @@ BOOL ShutDown(int nHow = sends);
 ### <a name="parameters"></a>参数
 
 *nHow*<br/>
-一个标志，介绍哪些类型的操作将不再允许，请使用下列枚举的值：
+使用以下枚举值描述将不再允许哪些类型的操作的标志:
 
-- **receives = 0**
+- **接收 = 0**
 
-- **sends = 1**
+- **send = 1**
 
-- **both = 2**
+- **两者均为2**
 
 ### <a name="return-value"></a>返回值
 
-如果函数成功，则非零值否则通过调用检索 0 和特定的错误代码[GetLastError](#getlasterror)。 以下错误适用于此成员函数：
+如果函数成功, 则为非零值;否则为 0, 可以通过调用[GetLastError](#getlasterror)来检索特定的错误代码。 以下错误适用于此成员函数:
 
-- WSANOTINITIALISED 一个成功[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必须使用此 API 之前发生。
+- WSANOTINITIALISED 成功[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必须在使用此 API 之前发生。
 
-- WSAENETDOWN Windows 套接字实现检测到的网络子系统失败。
+- WSAENETDOWN Windows 套接字实现检测到网络子系统出现故障。
 
 - WSAEINVAL *nHow*无效。
 
-- 返回 WSAEINPROGRESS 一个阻止 Windows 套接字操作正在进行。
+- 返回 WSAEINPROGRESS 正在进行阻止型 Windows 套接字操作。
 
-- WSAENOTCONN 套接字未连接 (仅 SOCK_STREAM)。
+- WSAENOTCONN 套接字未连接 (仅限 SOCK_STREAM)。
 
-- WSAENOTSOCK 描述符不是一个套接字。
+- WSAENOTSOCK 描述符不是套接字。
 
 ### <a name="remarks"></a>备注
 
-`ShutDown` 用于所有类型的套接字上禁用接收、 传输，或这两者。 如果*nHow*为 0，则后续接收的套接字将不允许使用。 这没有任何影响较低的协议层上。
+`ShutDown`用于所有类型的套接字来禁用接收和/或传输。 如果*nHow*为 0, 则不允许在套接字上进行后续接收。 这不会影响较低协议层。
 
-有关传输控制协议 (TCP) TCP 窗口不会更改并且将传入的数据之前窗口已用尽，接受 （但不是确认）。 有关用户数据报协议 (UDP)，传入数据报是接受并已排队。 将在任何情况下生成 ICMP 错误数据包。 如果*nHow*为 1，不允许后续发送。 对于 TCP 套接字会发送 FIN。 设置*nHow*为 2 同时禁用发送和接收上文所述。
+对于传输控制协议 (TCP), TCP 窗口不会更改, 并且将接受传入的数据 (但不确认), 直到窗口耗尽。 对于用户数据报协议 (UDP), 会接受并排队传入的数据报。 在任何情况下, 都不会生成 ICMP 错误数据包。 如果*nHow*为 1, 则不允许后续发送。 对于 TCP 套接字, 将发送一个 FIN。 将*nHow*设置为2将禁用发送和接收, 如上所述。
 
-请注意，`ShutDown`不会关闭套接字，并附加到套接字的资源将不前不会释放`Close`调用。 应用程序不应依赖于能够重复使用套接字之后它已关闭。 具体而言，Windows 套接字实现不需要支持使用`Connect`针对此类套接字。
+请注意, 不会关闭套接字, 在调用之前`Close` , 不会释放附加到套接字的资源。 `ShutDown` 应用程序不应依赖于在关闭套接字后是否能够重复使用它。 特别是, Windows 套接字实现不需要支持`Connect`在此类套接字上使用。
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CAsyncSocket::OnReceive](#onreceive)。
+  请参阅[CAsyncSocket:: OnReceive](#onreceive)的示例。
 
 ##  <a name="socket"></a>  CASyncSocket::Socket
 
-分配一个套接字句柄。
+分配套接字句柄。
 
 ```
 BOOL Socket(
@@ -1807,22 +1807,22 @@ BOOL Socket(
 指定`SOCK_STREAM`或`SOCK_DGRAM`。
 
 *lEvent*<br/>
-指定在其中所关注的应用程序的网络事件的组合的位掩码。
+一个位掩码, 指定应用程序感兴趣的网络事件的组合。
 
-- `FD_READ`：想要接收通知的准备情况进行读取。
+- `FD_READ`：希望接收有关读取准备情况的通知。
 
-- `FD_WRITE`：想要接收通知以进行写入的准备情况。
+- `FD_WRITE`：希望接收有关写入准备情况的通知。
 
-- `FD_OOB`：想要接收的带外数据到达的通知。
+- `FD_OOB`：希望接收带外数据到达的通知。
 
-- `FD_ACCEPT`：想要接收传入连接的通知。
+- `FD_ACCEPT`：希望接收传入连接的通知。
 
-- `FD_CONNECT`：想要接收通知的已完成的连接。
+- `FD_CONNECT`：希望收到已完成连接的通知。
 
-- `FD_CLOSE`：想要接收的套接字关闭通知。
+- `FD_CLOSE`：希望接收套接字关闭通知。
 
 *nProtocolType*<br/>
-若要与特定于所指示的地址族的套接字一起使用的协议。
+要与特定于所指示的地址族的套接字一起使用的协议。
 
 *nAddressFormat*<br/>
 地址系列规范。
@@ -1833,7 +1833,7 @@ BOOL Socket(
 
 ### <a name="remarks"></a>备注
 
-此方法分配套接字句柄。 它不会调用[CAsyncSocket::Bind](#bind)将套接字绑定到指定的地址，以使您需要调用`Bind`更高版本才能将套接字绑定到指定的地址。 可以使用[CAsyncSocket::SetSockOpt](#setsockopt)之前它所绑定设置套接字选项。
+此方法分配套接字句柄。 它不会调用[CAsyncSocket:: bind](#bind)将套接字绑定到指定地址, 因此你需要在以后调用`Bind`以将套接字绑定到指定的地址。 在绑定之前, 可以使用[CAsyncSocket:: SetSockOpt](#setsockopt)设置套接字选项。
 
 ## <a name="see-also"></a>请参阅
 

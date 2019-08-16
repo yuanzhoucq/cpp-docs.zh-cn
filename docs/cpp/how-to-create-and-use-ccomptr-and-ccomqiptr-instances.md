@@ -4,16 +4,16 @@ ms.custom: how-to
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: b0356cfb-12cc-4ee8-b988-8311ed1ab5e0
-ms.openlocfilehash: 2bcabfe80185939b899c84fc44f71b98608fc3c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8dd7aa903eefd533b1dd2688f3cee46ab3787e60
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154056"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498596"
 ---
 # <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>如何：创建和使用 CComPtr 和 CComQIPtr 实例
 
-在经典 Windows 编程中，库通常作为 COM 对象（更准确地说是 COM 服务器）实现。 很多 Windows 操作系统组件都作为 COM 服务器实现，因此，很多参与者以这种形式提供库。 有关 COM 的基础知识的信息，请参阅 [Component Object Model (COM)](/windows/desktop/com/component-object-model--com--portal)。
+在经典 Windows 编程中，库通常作为 COM 对象（更准确地说是 COM 服务器）实现。 很多 Windows 操作系统组件都作为 COM 服务器实现，因此，很多参与者以这种形式提供库。 有关 COM 的基础知识的信息，请参阅 [Component Object Model (COM)](/windows/win32/com/component-object-model--com--portal)。
 
 在实例化组件对象模型 (COM) 对象时，请将接口指针存储在 COM 智能指针中，后者将使用 `AddRef` 和 `Release` 执行引用计数。 如果您使用了活动模板库 (ATL) 或 Microsoft 基础类库 (MFC)，则使用 `CComPtr` 智能指针。 如果没有使用 ATL 或 MFC，则使用 `_com_ptr_t`。 由于没有等效于 `std::unique_ptr`的 COM，请对单个所有者和多个所有者的情况都使用这些智能指针。 `CComPtr` 和 `ComQIPtr` 都支持具有 rvalue 引用的移动操作。
 
@@ -23,7 +23,7 @@ ms.locfileid: "62154056"
 
 [!code-cpp[COM_smart_pointers#01](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_1.cpp)]
 
-`CComPtr` 及其相关内容是 ATL 的一部分，在中定义\<atlcomcli.h >。 `_com_ptr_t` 在中声明\<comip.h 声明 >。 当为类型库生成包装器类时，编译器将创建 `_com_ptr_t` 的专用化。
+`CComPtr`及其亲属是 ATL 的一部分, 在 atlcomcli.h > 中\<进行了定义。 `_com_ptr_t`在 comip.h > \<中声明。 当为类型库生成包装器类时，编译器将创建 `_com_ptr_t` 的专用化。
 
 ## <a name="example"></a>示例
 

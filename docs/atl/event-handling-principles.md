@@ -8,39 +8,39 @@ helpviewer_keywords:
 - dual interfaces, event interfaces
 - event handling, dual event interfaces
 ms.assetid: d17ca7cb-54f2-4658-ab8b-b721ac56801d
-ms.openlocfilehash: b882a1d356a431f75be1feb6e7bd997abed41c33
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 066c8db60afed31ceba1c9ef6f4a10d5f842e608
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62234766"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492144"
 ---
 # <a name="event-handling-principles"></a>事件处理原则
 
-有三个步骤普遍适用于所有事件处理。 你将需要：
+所有事件处理都共有三个步骤。 你将需要:
 
 - 在对象上实现事件接口。
 
-- 建议您的对象想要接收事件的事件源。
+- 建议你的对象要接收事件的事件源。
 
-- 当您的对象不再需要接收事件时，不建议事件源。
+- 当对象不再需要接收事件时, Unadvise 事件源。
 
-将实现事件接口的方式将取决于其类型。 事件接口可以是 vtable、 双重、 或调度接口。 这取决于事件源的设计器来定义接口;由你来实现该接口。
+实现事件接口的方式将取决于其类型。 事件接口可以是 vtable、双重或调度接口。 它由事件源的设计器来定义接口;实现该接口是由您来实现的。
 
 > [!NOTE]
->  虽然有事件接口不能为双没有技术原因，但有多种良好的设计原因，若要避免使用双接口。 但是，这是由设计器/事件的实施者所做的决策*源*。 由于您是从事件的角度来看`sink`，您需要以允许您可能不具有任何所选的可能性，但若要实现双事件接口。 双重接口的详细信息，请参阅[双重接口和 ATL](../atl/dual-interfaces-and-atl.md)。
+>  尽管事件接口不能是双重的技术原因, 但有很多合理的设计原因可以避免使用 duals。 但是, 这是由事件*源*的设计器/实施者决定的。 由于从事件`sink`的角度来看, 您需要考虑到可能不会有任何选择来实现双重事件接口。 有关双重接口的详细信息, 请参阅[双重接口和 ATL](../atl/dual-interfaces-and-atl.md)。
 
-通知事件源可以分解为三个步骤：
+通知事件源可以分为三个步骤:
 
-- 查询的源对象[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)。
+- 查询[IConnectionPointContainer](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer)的源对象。
 
-- 调用[IConnectionPointContainer::FindConnectionPoint](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpointcontainer-findconnectionpoint)传递的事件接口的 IID 感兴趣。 如果成功，这将返回[IConnectionPoint](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpoint)连接点对象上的接口。
+- 调用[IConnectionPointContainer:: FindConnectionPoint](/windows/win32/api/ocidl/nf-ocidl-iconnectionpointcontainer-findconnectionpoint)传递感兴趣的事件接口的 IID。 如果成功, 将返回连接点对象上的[IConnectionPoint](/windows/win32/api/ocidl/nn-ocidl-iconnectionpoint)接口。
 
-- 调用[IConnectionPoint::Advise](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-advise)传递`IUnknown`的事件接收器。 如果成功，这将返回`DWORD`表示连接 cookie。
+- 调用[IConnectionPoint:: Advise](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-advise)传递`IUnknown`事件接收器的。 如果成功, 将返回`DWORD`表示连接的 cookie。
 
-一旦您已成功注册你有兴趣接收事件，将根据源对象触发的事件调用对象的事件接口上的方法。 当不再需要接收事件时，可以将 cookie 传递到的连接点通过[iconnectionpoint::](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-unadvise)。 这将中断源和接收器之间的连接。
+成功注册接收事件的兴趣后, 将根据源对象触发的事件调用对象的事件接口中的方法。 当不再需要接收事件时, 可以通过[IConnectionPoint:: Unadvise](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-unadvise)将该 cookie 传递回连接点。 这会中断源和接收器之间的连接。
 
-小心地避免引用时处理事件周期。
+在处理事件时, 请注意避免引用循环。
 
 ## <a name="see-also"></a>请参阅
 

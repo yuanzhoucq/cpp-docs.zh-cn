@@ -26,14 +26,14 @@ helpviewer_keywords:
 - mbstowcs_l function
 - mbstowcs function
 ms.assetid: 96696b27-e068-4eeb-8006-3f7a0546ae6d
-ms.openlocfilehash: b9178f64dd698ff517ea5b376ed19e97981c511d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cae1034d0bcb9789f5cb709399d4992de44cae9d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156650"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499785"
 ---
-# <a name="mbstowcs-mbstowcsl"></a>mbstowcs、_mbstowcs_l
+# <a name="mbstowcs-_mbstowcs_l"></a>mbstowcs、_mbstowcs_l
 
 将多字节字符序列转换为对应的宽字符序列。 提供这些函数的更多安全版本；请参阅 [mbstowcs_s、_mbstowcs_s_l](mbstowcs-s-mbstowcs-s-l.md)。
 
@@ -74,7 +74,7 @@ size_t _mbstowcs_l(
 *mbstr*<br/>
 Null 终止的多字节字符序列的地址。
 
-*count*<br/>
+*计数*<br/>
 要转换的多字节字符的最大数量。
 
 *locale*<br/>
@@ -82,20 +82,20 @@ Null 终止的多字节字符序列的地址。
 
 ## <a name="return-value"></a>返回值
 
-如果**mbstowcs**成功转换了源字符串，它将返回已转换多字节字符数。 如果*wcstr*自变量是**NULL**，该函数返回的目标字符串所需的大小 （以宽字符为单位）。 如果**mbstowcs**遇到无效的多字节字符，则返回-1。 如果返回值是*计数*，宽字符字符串不以 null 结尾。
+如果**mbstowcs**成功转换了源字符串, 则它将返回转换的多字节字符数。 如果*wcstr*参数为**NULL**, 则函数返回目标字符串所需的大小 (宽字符)。 如果**mbstowcs**遇到无效的多字节字符, 则返回-1。 如果返回值为*count*, 则宽字符字符串不以 null 结尾。
 
 > [!IMPORTANT]
-> 絋粄*wcstr*和*mbstr*未重叠，并且*计数*正确反映了要转换的多字节字符的数量。
+> 确保*wcstr*和*mbstr*不重叠, 并且该*计数*正确反映了要转换的多字节字符的数量。
 
 ## <a name="remarks"></a>备注
 
-**Mbstowcs**函数将转换到的最大数目*计数*指向多字节字符*mbstr*为相应的宽字符的字符串由当前区域设置确定。 它将存储生成的宽字符字符串表示的地址处*wcstr*。 结果是类似于对一系列[mbtowc](mbtowc-mbtowc-l.md)。 如果**mbstowcs**遇到单字节 null 字符 (\0) 之前或当*计数*发生，它会将转换为宽字符 null 字符 (L '\0) 的 null 字符并停止。 因此处的宽字符字符串*wcstr*是 null 终止的仅当在转换期间遇到 null 字符。 如果指向的序列*wcstr*并*mbstr*重叠，该行为不确定。
+**Mbstowcs**函数将*mbstr*指向的多字节字符的最大数量转换为由当前区域设置确定的相应宽字符字符串。 它将生成的宽字符字符串存储在*wcstr*表示的地址上。 结果类似于一系列对[mbtowc](mbtowc-mbtowc-l.md)的调用。 如果**mbstowcs**在*count 或 count*发生之后遇到单字节空字符 (' \ 0 '), 则它会将 null 字符转换为宽字符 null 字符 (L ' \ 0 '), 并停止。 因此, 只有在转换过程中遇到 null 字符时, *wcstr*处的宽字符字符串才以 null 结尾。 如果由*wcstr*和*mbstr*指向的序列重叠, 则行为是不确定的。
 
-如果*wcstr*自变量是**NULL**， **mbstowcs**返回得出的转换，不包括 null 终止符的宽字符数。 源字符串必须以 null 结尾才能返回正确的值。 如果需要生成以 null 结尾的宽字符串，请向返回的值添加一个。
+如果*wcstr*参数为**NULL**, 则**mbstowcs**将返回转换导致的宽字符数, 不包括 NULL 终止符。 源字符串必须以 null 结尾才能返回正确的值。 如果需要生成以 null 结尾的宽字符串，请向返回的值添加一个。
 
-如果*mbstr*自变量是**NULL**，或者，如果*计数*是 > **INT_MAX**，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，将 errno 设置为**EINVAL**和该函数将返回-1。
+如果*mbstr*参数为**NULL**, 或者*count* > **INT_MAX**, 则调用无效参数处理程序, 如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续, 则将 errno 设置为**EINVAL** , 并且该函数将返回-1。
 
-**mbstowcs**的任何区域设置相关的行为; 使用当前区域设置 **_mbstowcs_l**是完全相同，只不过它改用已传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**mbstowcs**为任何与区域设置相关的行为使用当前区域设置; **_mbstowcs_l**是相同的, 只不过它使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -212,4 +212,4 @@ Convert back to wide-character string:
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wcstombs、_wcstombs_l](wcstombs-wcstombs-l.md)<br/>
 [wctomb、_wctomb_l](wctomb-wctomb-l.md)<br/>
-[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
+[MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>

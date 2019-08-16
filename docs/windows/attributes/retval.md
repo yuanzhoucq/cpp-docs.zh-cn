@@ -1,17 +1,17 @@
 ---
-title: retval (C++ COM 属性)
+title: retval (C++ COM 特性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.retval
 helpviewer_keywords:
 - retval attribute
 ms.assetid: bfa16f08-157d-4eea-afde-1232c54b8501
-ms.openlocfilehash: 9f5ad86a289f8904278a58636e66809ae0edd55b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2a2865c1eda229f1a2fcd457c22119b2908c1caa
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407401"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514043"
 ---
 # <a name="retval"></a>retval
 
@@ -25,13 +25,13 @@ ms.locfileid: "62407401"
 
 ## <a name="remarks"></a>备注
 
-**Retval** C++属性具有相同的功能[retval](/windows/desktop/Midl/retval) MIDL 特性。
+**Retval** C++特性具有与[retval](/windows/win32/Midl/retval) MIDL 特性相同的功能。
 
-**retval**必须出现在函数声明中的最后一个参数。
+**retval**必须出现在函数声明中的最后一个参数上。
 
 ## <a name="example"></a>示例
 
-有关示例，请参阅[可绑定](bindable.md)的示例使用**retval**。
+有关**retval**的示例用法, 请参阅可[绑定](bindable.md)的示例。
 
 ## <a name="requirements"></a>要求
 
@@ -39,8 +39,8 @@ ms.locfileid: "62407401"
 
 |||
 |-|-|
-|**适用对象**|接口参数，接口方法|
-|**可重复**|否|
+|**适用于**|Interface 参数, interface 方法|
+|**可重复**|No|
 |**必需的特性**|**out**|
 |**无效的特性**|**in**|
 

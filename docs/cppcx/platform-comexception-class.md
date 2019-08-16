@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-ms.openlocfilehash: 5a74184a8cbc4126988da2ba0be61d9f5b2bb71c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eb6f3e0e4860687d0d47294e11b7741294abac20
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383342"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500545"
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException 类
 
@@ -55,7 +55,7 @@ COMException 类具有以下属性。
 
 下列预定义的异常从 COMException 派生。 它们与 COMException 的区别只在于名称、构造函数的名称和基础 HRESULT 值。
 
-|名称|基础 HRESULT|描述|
+|name|基础 HRESULT|描述|
 |----------|------------------------|-----------------|
 |COMException|*用户定义的 hresult*|从 COM 方法调用返回无法识别的 HRESULT 时引发。|
 |AccessDeniedException|E_ACCESSDENIED|被拒绝访问资源或功能时引发。|
@@ -73,15 +73,15 @@ COMException 类具有以下属性。
 
 ### <a name="requirements"></a>要求
 
-**支持的最低客户端：** Windows 8
+**支持的最低客户端:** Windows 8
 
-**支持的最低服务器：** Windows Server 2012
+**支持的最低服务器:** Windows Server 2012
 
-**命名空间：** Platform
+**命名空间：** 平台
 
 **元数据：** platform.winmd
 
-## <a name="ctor"></a> Comexception:: Comexception 构造函数
+## <a name="ctor"></a>COMException:: COMException 构造函数
 
 初始化 COMException 类的新实例。
 
@@ -96,7 +96,7 @@ COMException( int hresult )
 *hresult*<br/>
 由异常表示的错误 HRESULT。
 
-## <a name="hresult"></a> Comexception:: Hresult 属性
+## <a name="hresult"></a>COMException:: HResult 属性
 
 与异常相对应的 HRESULT。
 
@@ -113,9 +113,9 @@ public:
 
 ### <a name="remarks"></a>备注
 
-有关如何解释 HRESULT 值的详细信息，请参阅[COM 错误代码的结构](/windows/desktop/com/structure-of-com-error-codes)。
+有关如何解释 HRESULT 值的详细信息, 请参阅[COM 错误代码的结构](/windows/win32/com/structure-of-com-error-codes)。
 
-## <a name="message"></a> Comexception:: Message 属性
+## <a name="message"></a>COMException:: Message 属性
 
 描述异常的消息。
 

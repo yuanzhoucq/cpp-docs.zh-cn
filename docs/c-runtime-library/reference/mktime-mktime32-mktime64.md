@@ -31,14 +31,14 @@ helpviewer_keywords:
 - _mktime64 function
 - time, converting
 ms.assetid: 284ed5d4-7064-48a2-bd50-15effdae32cf
-ms.openlocfilehash: 8e9524249d6c90323bdcfc0b92ecf2dad281c79b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c45b69f84a0aec159ed59a480e9358f27c8e85e2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156481"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500982"
 ---
-# <a name="mktime-mktime32-mktime64"></a>mktime、_mktime32、_mktime64
+# <a name="mktime-_mktime32-_mktime64"></a>mktime、_mktime32、_mktime64
 
 将本地时间转换为日历值。
 
@@ -63,19 +63,19 @@ __time64_t _mktime64(
 
 ## <a name="return-value"></a>返回值
 
-**_mktime32**返回编码为类型的值的指定的日历时间[time_t](../../c-runtime-library/standard-types.md)。 如果*timeptr*引用了 1970 年 1 月 1 日午夜前的日期或者如果无法表示日历时间， **_mktime32**返回-1 强制转换为类型**time_t**。 使用时 **_mktime32** ; 如果*timeptr* 23:59:59 2038 年 1 月 18 日协调世界时 (UTC) 之后的日期引用它将返回-1 强制转换为类型**time_t**。
+**_mktime32**返回编码为[time_t](../../c-runtime-library/standard-types.md)类型的值的指定日历时间。 如果*timeptr*引用了1970年1月1日午夜之前的日期, 或者如果无法表示日历时间, 则 **_mktime32**将返回-1 强制转换为类型**time_t**。 当使用 **_mktime32**时, 如果*timeptr*引用的日期晚于23:59:59 年1月 2038 18 日 (协调世界时 (UTC)), 则它将返回-1 强制转换为类型**time_t**。
 
-**_mktime64**将返回-1 强制转换为类型 **__time64_t**如果*timeptr*引用 23:59:59，3000 年 12 月 31 日，UTC 之后的日期。
+如果*timeptr*引用的日期23:59:59 年12月31日年12月 3000 31 日, 则 **_mktime64**将返回-1 强制转换为类型 **__time64_t** 。
 
 ## <a name="remarks"></a>备注
 
-**Mktime**， **_mktime32**并 **_mktime64**函数将转换的提供的时间结构 （可能不完整） 指向*timeptr*到完全定义的结构与标准化值，然后将它转换**time_t**日历时间值。 转换后的时间与由 [time](time-time32-time64.md) 函数返回的值具有相同的编码。 原始值**tm_wday**并**tm_yday**组成部分*timeptr*结构将被忽略，并且其他组件的原始值不会限制为其正常范围。
+**Mktime**、 **_mktime32**和 **_mktime64**函数将*timeptr*所提供的时间结构 (可能不完整) 转换为具有规范化值的完全定义的结构, 然后将其转换为**time_t**日历时间值。 转换后的时间与由 [time](time-time32-time64.md) 函数返回的值具有相同的编码。 将忽略*timeptr*结构的**tm_wday**和**tm_yday**组件的原始值, 并且不会将其他组件的原始值限制为其正常范围。
 
-**mktime**是内联函数，它等效于 **_mktime64**，除非 **_USE_32BIT_TIME_T**定义，在这种情况下，它相当于 **_mktime32**.
+**mktime**是与 **_mktime64**等效的内联函数, 除非定义 **_USE_32BIT_TIME_T** , 在这种情况下, 它等效于 **_mktime32**。
 
-调整为 UTC 后, **_mktime32**句柄日期从 1970 年 1 月 1 日午夜到 23:59:59 2038 年 1 月 18 日，UTC。 **_mktime64**句柄日期从午夜，自 1970 年 1 月 1 日 23:59:59 到 3000 年 12 月 31 日。 这种调整可能会导致这些函数返回-1 (强制转换为**time_t**， **__time32_t**或 **__time64_t**) 即使您指定的日期范围内。 例如，如果你位于埃及开罗（比 UTC 早两个小时），则首先将从你在 *timeptr* 中指定的日期中减去两个小时；此时这可能会使你的日期超出范围。
+调整为 UTC 后, **_mktime32**将处理从1970年1月1日午夜到23:59:59 年1月18日 (2038, UTC) 的日期。 **_mktime64**处理从1970年1月1日午夜到 23:59:59 (12 月 3000 31 日) 的日期。 即使你指定的日期在范围内, 此调整也可能会导致这些函数返回-1 (强制转换为**time_t**、 **__time32_t**或 **__time64_t**)。 例如，如果你位于埃及开罗（比 UTC 早两个小时），则首先将从你在 *timeptr* 中指定的日期中减去两个小时；此时这可能会使你的日期超出范围。
 
-这些函数可用于在 tm 结构中进行验证和填充。 如果成功，这些函数将设置的值**tm_wday**并**tm_yday**根据和设置其他组件以表示指定的日历时间，但其值强制到正常范围。 最终值**tm_mday**之前未设置**tm_mon**并**tm_year**确定。 指定时**tm**结构时，请设置**tm_isdst**字段：
+这些函数可用于在 tm 结构中进行验证和填充。 如果成功, 这些函数将根据需要设置**tm_wday**和**tm_yday**的值, 并设置其他组件以表示指定的日历时间, 但会将其值强制用于正常范围。 在确定**tm_mon**和**tm_year**之前, 不会设置**tm_mday**的最终值。 指定**tm**结构时间时, 请将 " **tm_isdst** " 字段设置为:
 
 - 零 (0)，指示标准时间有效。
 
@@ -83,11 +83,11 @@ __time64_t _mktime64(
 
 - 小于零的值，使用 C 运行时库代码计算有效的是标准时间还是夏令时。
 
-C 运行时库将从 [TZ](tzset.md) 环境变量中确定夏令时行为。 如果**TZ**未设置，Win32 API 调用[GetTimeZoneInformation](/windows/desktop/api/timezoneapi/nf-timezoneapi-gettimezoneinformation)用于从操作系统中获取夏令时信息。 如果此操作失败，则该库将假设使用用于实现夏令时计算的美国规则。 **tm_isdst**是必填的字段。 如果未设置，则未定义其值，并且这些函数的返回值不可预知。 如果*timeptr*指向**tm**返回通过以前调用结构[asctime](asctime-wasctime.md)， [gmtime](gmtime-gmtime32-gmtime64.md)，或[localtime](localtime-localtime32-localtime64.md)（或这些函数的变量）， **tm_isdst**字段包含正确的值。
+C 运行时库将从 [TZ](tzset.md) 环境变量中确定夏令时行为。 如果未设置**TZ** , 则使用 Win32 API 调用[GetTimeZoneInformation](/windows/win32/api/timezoneapi/nf-timezoneapi-gettimezoneinformation)来从操作系统获取夏令时信息。 如果此操作失败，则该库将假设使用用于实现夏令时计算的美国规则。 **tm_isdst**是必填字段。 如果未设置，则未定义其值，并且这些函数的返回值不可预知。 如果*timeptr*指向由先前调用[asctime](asctime-wasctime.md)、 [gmtime](gmtime-gmtime32-gmtime64.md)或[localtime](localtime-localtime32-localtime64.md) (或这些函数的变体) 返回的**tm**结构, 则**tm_isdst**字段将包含正确的值。
 
-请注意， **gmtime**并**localtime** (并 **_gmtime32**， **_gmtime64**， **_localtime32**，和 **_localtime64**) 使用每个线程一个缓冲区用于转换。 如果提供此缓冲区**mktime**， **_mktime32**或 **_mktime64**，以前的内容会被销毁。
+请注意, **gmtime**和**localtime** (**和 _gmtime32**、 **_gmtime64**、 **_localtime32**和 **_localtime64**) 对每个线程使用单个缓冲区以实现转换。 如果为**mktime**、 **_mktime32**或 **_mktime64**提供此缓冲区, 则会销毁以前的内容。
 
-这些函数将验证其参数。 如果 *timeptr* 是 null 指针，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，函数将返回-1 并设置**errno**到**EINVAL**。
+这些函数将验证其参数。 如果 *timeptr* 是 null 指针，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续, 则函数将返回-1, 并将**errno**设置为**EINVAL**。
 
 ## <a name="requirements"></a>要求
 

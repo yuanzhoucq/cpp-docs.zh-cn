@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - NotifyHandler function
 ms.assetid: 5ff953ec-de35-42bc-8b3c-d384d636c139
-ms.openlocfilehash: d875a039b01b7458a1df46a2539cf5c68aa67e41
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 16fb330d2da83ddfd013e33a2d4b688b2711103b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915933"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492304"
 ---
 # <a name="notifyhandler"></a>NotifyHandler
 
@@ -31,7 +31,7 @@ LRESULT NotifyHandler(
 发送消息的控件的标识符。
 
 *pnmh*<br/>
-包含通知代码和其他信息的[NMHDR](/windows/desktop/api/richedit/ns-richedit-nmhdr)结构的地址。 对于某些通知消息, 此参数指向结构作为其第一个成员的`NMHDR`更大结构。
+包含通知代码和其他信息的[NMHDR](/windows/win32/api/richedit/ns-richedit-nmhdr)结构的地址。 对于某些通知消息, 此参数指向结构作为其第一个成员的`NMHDR`更大结构。
 
 *bHandled*<br/>
 消息映射将*bHandled*设置为 TRUE, 然后调用*NotifyHandler* 。 如果*NotifyHandler*未完全处理消息, 则应将*BHandled*设置为**FALSE**以指示消息需要进一步处理。
@@ -48,4 +48,4 @@ LRESULT NotifyHandler(
 
 [实现窗口](../atl/implementing-a-window.md)<br/>
 [消息映射](../atl/message-maps-atl.md)<br/>
-[WM_NOTIFY](/windows/desktop/controls/wm-notify)
+[WM_NOTIFY](/windows/win32/controls/wm-notify)

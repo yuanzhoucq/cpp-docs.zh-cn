@@ -44,19 +44,19 @@ helpviewer_keywords:
 - mbsnextc_l function
 - wcsnextc function
 ms.assetid: e3086173-9eb5-4540-a23a-5d866bd05340
-ms.openlocfilehash: 31ddc2721abe997041bfde6645c8405fdd875e4d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a0075a039e11f81917d605214d3924521851a26
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209730"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500901"
 ---
-# <a name="strnextc-wcsnextc-mbsnextc-mbsnextcl"></a>_strnextc、_wcsnextc、_mbsnextc、_mbsnextc_l
+# <a name="_strnextc-_wcsnextc-_mbsnextc-_mbsnextc_l"></a>_strnextc、_wcsnextc、_mbsnextc、_mbsnextc_l
 
 查找字符串中的下一个字符。
 
 > [!IMPORTANT]
-> **_mbsnextc**并 **_mbsnextc_l**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbsnextc**和 **_mbsnextc_l**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -86,15 +86,15 @@ unsigned int _mbsnextc_l(
 
 ## <a name="return-value"></a>返回值
 
-这些函数均返回中的下一个字符的整数值*str*。
+其中每个函数返回*str*中下一个字符的整数值。
 
 ## <a name="remarks"></a>备注
 
-**_Mbsnextc**函数返回下一步中的多字节字符的整数值*str*，但不前移字符串指针。 **_mbsnextc**识别多字节字符序列根据[多字节代码页](../../c-runtime-library/code-pages.md)当前正在使用。
+**_Mbsnextc**函数返回*str*中下一个多字节字符的整数值, 而不向前移动字符串指针。 **_mbsnextc**根据当前使用的[多字节代码页](../../c-runtime-library/code-pages.md)识别多字节字符序列。
 
-如果*str*是**NULL**，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**和该函数返回 0。
+如果*str*为**NULL**, 则将调用无效参数处理程序, 如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续, 则将**errno**设置为**EINVAL** , 并且该函数将返回0。
 
-**安全说明** 此 API 会引发由缓冲区溢出问题带来的潜在威胁。 缓冲区溢出问题是常见的系统攻击方法，使权限的提升不能确保。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
+**安全说明** 此 API 会引发由缓冲区溢出问题带来的潜在威胁。 缓冲区溢出问题是常见的系统攻击方法，使权限的提升不能确保。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -102,9 +102,9 @@ unsigned int _mbsnextc_l(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsnextc**|**_strnextc**|**_mbsnextc**|**_wcsnextc**|
 
-**_strnextc**并 **_wcsnextc**是单字节字符字符串和宽字符字符串版本 **_mbsnextc**。 **_wcsnextc**中的下一个宽字符的整数值将返回*str*;**_strnextc**返回下一步中的单字节字符的整数值*str*。 **_strnextc**并 **_wcsnextc**仅为此映射提供，否则不应使用。 有关详细信息，请参阅[使用一般文本映射](../../c-runtime-library/using-generic-text-mappings.md)和[一般文本映射](../../c-runtime-library/generic-text-mappings.md)。
+**_strnextc**和 **_wcsnextc**为单字节字符字符串和 **_mbsnextc**的宽字符字符串版本。 **_wcsnextc**返回*str*中下一个宽字符的整数值; **_strnextc**返回*str*中下一个单字节字符的整数值。 仅为此映射提供了 **_strnextc**和 **_wcsnextc** , 否则不应使用它。 有关详细信息，请参阅[使用一般文本映射](../../c-runtime-library/using-generic-text-mappings.md)和[一般文本映射](../../c-runtime-library/generic-text-mappings.md)。
 
-**_mbsnextc_l**是完全相同，只不过它改用已传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**_mbsnextc_l**是相同的, 只不过它使用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>要求
 
