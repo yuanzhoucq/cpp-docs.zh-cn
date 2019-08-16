@@ -1,21 +1,21 @@
 ---
-title: 本地 (C++ COM 属性)
+title: local (C++ COM 特性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.local
 helpviewer_keywords:
 - local attribute
 ms.assetid: 35cdd668-bd8e-492a-b7b8-263e7b662437
-ms.openlocfilehash: 678968bb7b0f2e7af94124bea5b0967df27e43f7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 853331ce191f8fe41d5967d2d625a3dac8543a4d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409221"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514413"
 ---
 # <a name="local-c"></a>local (C++)
 
-接口标头中使用时，可以使用 MIDL 编译器作为标头生成器。 单个函数中使用时，将指定为其生成无存根 （stub） 的本地过程。
+在 interface 标头中使用时, 允许将 MIDL 编译器用作标头生成器。 在单独的函数中使用时, 指定不会为其生成存根的本地过程。
 
 ## <a name="syntax"></a>语法
 
@@ -25,11 +25,11 @@ ms.locfileid: "62409221"
 
 ## <a name="remarks"></a>备注
 
-**本地**C++属性具有相同的功能[本地](/windows/desktop/Midl/local)MIDL 特性。
+**本地** C++特性具有与[本地](/windows/win32/Midl/local)MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
-请参阅[call_as](call-as.md)有关如何使用的示例**本地**。
+有关如何使用**local**的示例, 请参阅[call_as](call-as.md) 。
 
 ## <a name="requirements"></a>要求
 
@@ -37,9 +37,9 @@ ms.locfileid: "62409221"
 
 |||
 |-|-|
-|**适用对象**|**接口**，接口方法|
-|**可重复**|否|
-|**必需的特性**|None|
+|**适用于**|**interface**、interface 方法|
+|**可重复**|No|
+|**必需的特性**|无|
 |**无效的特性**|`dispinterface`|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。

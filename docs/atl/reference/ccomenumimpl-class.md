@@ -18,16 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComEnumImpl class
 ms.assetid: cc0d8e76-e608-46db-87cd-4c7161fe32d2
-ms.openlocfilehash: ccd083f3bfd9ae694c97e466fcb40b348fec0c27
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d26c59a38bfe43e49215fbb6108453e10ca6dea
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259854"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497177"
 ---
 # <a name="ccomenumimpl-class"></a>CComEnumImpl 类
 
-此类提供要枚举的项数组中的存储位置的 COM 枚举器接口的实现。
+此类提供 COM 枚举器接口的实现, 其中所枚举的项存储在数组中。
 
 ## <a name="syntax"></a>语法
 
@@ -39,17 +39,17 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
 
 #### <a name="parameters"></a>参数
 
-*基本*<br/>
-COM 枚举器接口。 请参阅[IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring)有关的示例。
+*基座*<br/>
+COM 枚举器接口。 有关示例, 请参阅[IEnumString](/windows/win32/api/objidl/nn-objidl-ienumstring) 。
 
 *piid*<br/>
-一个指向枚举器接口的接口 ID。
+指向枚举器接口的接口 ID 的指针。
 
 *T*<br/>
-枚举器接口所显示的项的类型。
+枚举器接口公开的项的类型。
 
 *复制*<br/>
-同构[复制策略类](../../atl/atl-copy-policy-classes.md)。
+同类[复制策略类](../../atl/atl-copy-policy-classes.md)。
 
 ## <a name="members"></a>成员
 
@@ -58,40 +58,40 @@ COM 枚举器接口。 请参阅[IEnumString](/windows/desktop/api/objidl/nn-obj
 |名称|描述|
 |----------|-----------------|
 |[CComEnumImpl::CComEnumImpl](#ccomenumimpl)|构造函数。|
-|[CComEnumImpl::~CComEnumImpl](#dtor)|析构函数。|
+|[CComEnumImpl:: ~ CComEnumImpl](#dtor)|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
 |名称|描述|
 |----------|-----------------|
-|[CComEnumImpl::Clone](#clone)|实现**克隆**枚举接口方法。|
+|[CComEnumImpl::Clone](#clone)|**克隆**枚举接口方法的实现。|
 |[CComEnumImpl::Init](#init)|初始化枚举器。|
-|[CComEnumImpl::Next](#next)|实现**下一步**。|
-|[CComEnumImpl::Reset](#reset)|实现**重置**。|
-|[CComEnumImpl::Skip](#skip)|实现**跳过**。|
+|[CComEnumImpl::Next](#next)|**下一步**的实现。|
+|[CComEnumImpl::Reset](#reset)|**重置**的实现。|
+|[CComEnumImpl::Skip](#skip)|**Skip**的实现。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
 |名称|描述|
 |----------|-----------------|
-|[CComEnumImpl::m_begin](#m_begin)|指向数组中的第一项的指针。|
-|[CComEnumImpl::m_dwFlags](#m_dwflags)|复制标志传递`Init`。|
-|[CComEnumImpl::m_end](#m_end)|指向刚超出数组中的最后一项的位置的指针。|
+|[CComEnumImpl::m_begin](#m_begin)|指向数组中第一个项的指针。|
+|[CComEnumImpl::m_dwFlags](#m_dwflags)|复制传递`Init`的标志。|
+|[CComEnumImpl::m_end](#m_end)|指向刚超出数组中最后一项的位置的指针。|
 |[CComEnumImpl::m_iter](#m_iter)|指向数组中的当前项的指针。|
-|[CComEnumImpl::m_spUnk](#m_spunk)|`IUnknown`提供要枚举的集合对象的指针。|
+|[CComEnumImpl::m_spUnk](#m_spunk)|提供要枚举的集合的对象的指针。`IUnknown`|
 
 ## <a name="remarks"></a>备注
 
-请参阅[IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring)方法实现的示例。 `CComEnumImpl` 提供要枚举的项数组中的存储位置的 COM 枚举器接口的实现。 此类是类似于`IEnumOnSTLImpl`类，该类提供枚举器接口的实现基于C++标准库容器。
+有关方法实现的示例, 请参阅[IEnumString](/windows/win32/api/objidl/nn-objidl-ienumstring) 。 `CComEnumImpl`提供 COM 枚举器接口的实现, 其中所枚举的项存储在数组中。 此类与`IEnumOnSTLImpl`类相似, 该类提供基于C++标准库容器的枚举器接口的实现。
 
 > [!NOTE]
->  有关进一步之间的差异的详细信息`CComEnumImpl`并`IEnumOnSTLImpl`，请参阅[CComEnumImpl::Init](#init)。
+>  有关和`CComEnumImpl` `IEnumOnSTLImpl`之间的进一步差异的详细信息, 请参阅[CComEnumImpl:: Init](#init)。
 
-通常情况下，将*不*需要通过此接口实现从派生来创建您自己的枚举器类。 如果你想要使用基于数组的 ATL 提供的枚举器，则更常见的是创建的实例[CComEnum](../../atl/reference/ccomenum-class.md)。
+通常, 您*不*需要通过从此接口实现派生来创建自己的枚举器类。 如果要使用基于数组的基于 ATL 的枚举器, 则创建[CComEnum](../../atl/reference/ccomenum-class.md)的实例较为常见。
 
-但是，如果需要提供的自定义枚举器 （例如，一个公开的枚举数接口除了接口），您可以从此类派生。 在此情况下，很可能需要重写[CComEnumImpl::Clone](#clone)方法以提供您自己的实现。
+但是, 如果确实需要提供自定义枚举器 (例如, 除了枚举器接口外, 还需要提供接口), 可以从此类派生。 在这种情况下, 可能需要重写[CComEnumImpl:: Clone](#clone)方法才能提供自己的实现。
 
-有关详细信息，请参阅[ATL 集合和枚举器](../../atl/atl-collections-and-enumerators.md)。
+有关详细信息, 请参阅[ATL 集合和枚举](../../atl/atl-collections-and-enumerators.md)器。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -101,9 +101,9 @@ COM 枚举器接口。 请参阅[IEnumString](/windows/desktop/api/objidl/nn-obj
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlcom.h
+**标头:** atlcom。h
 
-##  <a name="ccomenumimpl"></a>  CComEnumImpl::CComEnumImpl
+##  <a name="ccomenumimpl"></a>CComEnumImpl::CComEnumImpl
 
 构造函数。
 
@@ -111,7 +111,7 @@ COM 枚举器接口。 请参阅[IEnumString](/windows/desktop/api/objidl/nn-obj
 CComEnumImpl();
 ```
 
-##  <a name="dtor"></a>  CComEnumImpl:: ~ CComEnumImpl
+##  <a name="dtor"></a>CComEnumImpl:: ~ CComEnumImpl
 
 析构函数。
 
@@ -119,9 +119,9 @@ CComEnumImpl();
 ~CComEnumImpl();
 ```
 
-##  <a name="init"></a>  CComEnumImpl::Init
+##  <a name="init"></a>CComEnumImpl:: Init
 
-将指针传递到返回到任何客户端的枚举数接口前，必须调用此方法。
+必须先调用此方法, 然后再将指向枚举器接口的指针传递回任何客户端。
 
 ```
 HRESULT Init(
@@ -137,13 +137,13 @@ HRESULT Init(
 指向包含要枚举的项的数组的第一个元素的指针。
 
 *end*<br/>
-指向刚超出最后一个元素的数组，其中包含要枚举的项的位置的指针。
+指向刚超出数组最后一个元素的位置的指针, 该数组包含要枚举的项。
 
 *pUnk*<br/>
-[in]`IUnknown`必须保持活动状态的枚举器的生命周期内的对象的指针。 如果没有此类对象存在，则传递 NULL。
+中必须在枚举器的生存期内保持活动状态的对象的指针。`IUnknown` 如果不存在此类对象, 则传递 NULL。
 
 *flags*<br/>
-指定枚举器应获得数组的所有权或制作一份的标志。 可能的值如下所述。
+指定枚举器是应取得数组的所有权还是创建它的副本的标志。 可能的值如下所述。
 
 ### <a name="return-value"></a>返回值
 
@@ -151,11 +151,11 @@ HRESULT Init(
 
 ### <a name="remarks"></a>备注
 
-仅一次调用此方法，初始化枚举数，请使用它，然后将其丢弃。
+仅调用此方法一次—初始化枚举器, 使用它, 然后将其丢弃。
 
-如果将指针传递给保存在另一个对象的数组中的项 （和不询问枚举器，用于将数据复制），则可以使用*pUnk*参数以确保对象和它所持有的数组作为枚举器长时间可用需要它们。 枚举器只需上保持活动状态的对象保留的 COM 引用。 销毁枚举器时，会自动释放 COM 引用。
+如果将指向数组中的项的指针传递到另一个对象中, 而不要求枚举器复制数据, 则可以使用 PUnk 参数来确保只要枚举器需要, 就可以使用参数来确保该对象及其包含的数组。 枚举器仅保存对对象的 COM 引用, 以使其保持活动状态。 当枚举器被销毁时, 将自动释放 COM 引用。
 
-*标志*参数，可指定枚举器应如何处理传递给它的数组元素。 *标志*可接受的值从一个`CComEnumFlags`枚举如下所示：
+*Flags*参数用于指定枚举器应如何处理传递给它的数组元素。 *标志*可采用下面所示的`CComEnumFlags`枚举中的值之一:
 
 ```
 enum CComEnumFlags
@@ -166,18 +166,18 @@ enum CComEnumFlags
    };
 ```
 
-`AtlFlagNoCopy` 表示数组的生存期不控制由枚举器。 在这种情况下，其中一个数组将静态或标识的对象*pUnk*将负责在不再需要时释放数组。
+`AtlFlagNoCopy`表示数组的生存期不由枚举器控制。 在这种情况下, 该数组将为静态, 或者由*pUnk*标识的对象将负责在不再需要该数组时将其释放。
 
-`AtlFlagTakeOwnership` 意味着由枚举器来控制数组的析构。 在这种情况下，该数组必须具有动态分配使用**新**。 枚举器将删除其析构函数中的数组。 通常情况下，您将为传递 NULL *pUnk*，但如果您需要通知的枚举器析构出于某种原因，仍可以传递有效的指针。
+`AtlFlagTakeOwnership`表示将由枚举器控制对数组的析构。 在这种情况下, 必须使用**new**动态分配数组。 枚举器将在其析构函数中删除数组。 通常情况下, 你将为*pUnk*传递 NULL, 不过, 如果你出于某种原因需要通知枚举器, 则仍可传递有效指针。
 
-`AtlFlagCopy` 将通过复制传递到的数组来创建一个新数组，表示`Init`。 新数组的生存期是由枚举器进行控制。 枚举器将删除其析构函数中的数组。 通常情况下，您将为传递 NULL *pUnk*，但如果您需要通知的枚举器析构出于某种原因，仍可以传递有效的指针。
+`AtlFlagCopy`表示将通过复制传递到`Init`的数组来创建新的数组。 新数组的生存期由枚举器控制。 枚举器将在其析构函数中删除数组。 通常情况下, 你将为*pUnk*传递 NULL, 不过, 如果你出于某种原因需要通知枚举器, 则仍可传递有效指针。
 
 > [!NOTE]
->  此方法的原型为类型指定的数组元素`T`，其中`T`被定义为类的模板参数。 这是通过 COM 接口方法公开的相同类型[CComEnumImpl::Next](#next)。 这是的与不同[IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)，此类不支持不同的存储和公开的数据类型。 数组中元素的数据类型必须是通过 COM 接口公开的数据类型相同。
+>  此方法的原型将数组元素指定为类型`T`, 其中`T`定义为类的模板参数。 此类型与通过 COM 接口方法[CComEnumImpl:: Next](#next)公开的类型相同。 这意味着, 与[IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)不同, 此类不支持不同的存储和公开的数据类型。 数组中元素的数据类型必须与通过 COM 接口公开的数据类型相同。
 
-##  <a name="clone"></a>  CComEnumImpl::Clone
+##  <a name="clone"></a>CComEnumImpl:: Clone
 
-此方法提供的实现**克隆**方法通过创建类型的对象`CComEnum`，具有相同的数组和迭代器使用的当前对象，初始化并返回新创建的接口对象。
+此方法通过创建类型`CComEnum`为的对象, 并使用当前对象所使用的相同数组和迭代器对其进行初始化, 并返回新创建的对象上的接口, 来提供**Clone**方法的实现。
 
 ```
 STDMETHOD(Clone)(Base** ppEnum);
@@ -186,7 +186,7 @@ STDMETHOD(Clone)(Base** ppEnum);
 ### <a name="parameters"></a>参数
 
 *ppEnum*<br/>
-[out]从当前枚举数中克隆上新创建的对象的枚举器接口。
+弄从当前枚举器克隆的新创建对象上的枚举器接口。
 
 ### <a name="return-value"></a>返回值
 
@@ -194,25 +194,25 @@ STDMETHOD(Clone)(Base** ppEnum);
 
 ### <a name="remarks"></a>备注
 
-请注意，克隆的枚举器永远不会使他们自己的原始的枚举器使用的数据副本 （或取得所有权）。 如有必要，克隆的枚举器将保持原始的枚举器 （使用 COM 引用） 以确保数据可用于，只要它们需要它。
+请注意, 克隆的枚举器从不会生成原始枚举器使用的数据的副本 (或取得所有权)。 如有必要, 克隆的枚举器将使原始枚举器保持活动状态 (使用 COM 引用), 以确保数据在需要时可供使用。
 
-##  <a name="m_spunk"></a>  CComEnumImpl::m_spUnk
+##  <a name="m_spunk"></a>CComEnumImpl::m_spUnk
 
-此智能指针将保留在传递到的对象的引用[CComEnumImpl::Init](#init)，确保它仍然保持活动状态的枚举器的生存期内。
+此智能指针维护对传递给[CComEnumImpl:: Init](#init)的对象的引用, 确保它在枚举器的生存期内保持活动状态。
 
 ```
 CComPtr<IUnknown> m_spUnk;
 ```
 
-##  <a name="m_begin"></a>  CComEnumImpl::m_begin
+##  <a name="m_begin"></a>CComEnumImpl::m_begin
 
-指向刚超出最后一个元素的数组，其中包含要枚举的项的位置的指针。
+指向刚超出数组最后一个元素的位置的指针, 该数组包含要枚举的项。
 
 ```
 T* m_begin;
 ```
 
-##  <a name="m_end"></a>  CComEnumImpl::m_end
+##  <a name="m_end"></a>CComEnumImpl::m_end
 
 指向包含要枚举的项的数组的第一个元素的指针。
 
@@ -220,25 +220,25 @@ T* m_begin;
 T* m_end;
 ```
 
-##  <a name="m_iter"></a>  CComEnumImpl::m_iter
+##  <a name="m_iter"></a>CComEnumImpl::m_iter
 
-指向数组，其中包含要枚举的项的当前元素的指针。
+一个指针, 指向包含要枚举的项的数组的当前元素。
 
 ```
 T* m_iter;
 ```
 
-##  <a name="m_dwflags"></a>  CComEnumImpl::m_dwFlags
+##  <a name="m_dwflags"></a>CComEnumImpl::m_dwFlags
 
-标志传递给[CComEnumImpl::Init](#init)。
+传递给[CComEnumImpl:: Init](#init)的标志。
 
 ```
 DWORD m_dwFlags;
 ```
 
-##  <a name="next"></a>  CComEnumImpl::Next
+##  <a name="next"></a>CComEnumImpl:: Next
 
-此方法提供的实现**下一步**方法。
+此方法提供了**下一**方法的实现。
 
 ```
 STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
@@ -247,21 +247,21 @@ STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
 ### <a name="parameters"></a>参数
 
 *celt*<br/>
-[in]请求的元素数。
+中请求的元素的数目。
 
 *rgelt*<br/>
-[out]要填充的元素的数组。
+弄要用元素填充的数组。
 
 *pceltFetched*<br/>
-[out]中实际返回的元素数*rgelt*。 这可以是小于*celt*如果少于*celt*元素保持在列表中。
+弄在*rgelt*中实际返回的元素数。 如果列表中保留的元素少于*celt* , 则此项可以小于*celt* 。
 
 ### <a name="return-value"></a>返回值
 
 标准的 HRESULT 值。
 
-##  <a name="reset"></a>  CComEnumImpl::Reset
+##  <a name="reset"></a>CComEnumImpl:: Reset
 
-此方法提供的实现**重置**方法。
+此方法提供**Reset**方法的实现。
 
 ```
 STDMETHOD(Reset)(void);
@@ -271,9 +271,9 @@ STDMETHOD(Reset)(void);
 
 标准的 HRESULT 值。
 
-##  <a name="skip"></a>  CComEnumImpl::Skip
+##  <a name="skip"></a>CComEnumImpl:: Skip
 
-此方法提供的实现**跳过**方法。
+此方法提供**Skip**方法的实现。
 
 ```
 STDMETHOD(Skip)(ULONG celt);
@@ -282,7 +282,7 @@ STDMETHOD(Skip)(ULONG celt);
 ### <a name="parameters"></a>参数
 
 *celt*<br/>
-[in]要跳过的元素数。
+中要跳过的元素的数目。
 
 ### <a name="return-value"></a>返回值
 
@@ -290,7 +290,7 @@ STDMETHOD(Skip)(ULONG celt);
 
 ### <a name="remarks"></a>备注
 
-如果，则返回 E_INVALIDARG *celt*为零，则如果小于则返回 S_FALSE *celt*将返回元素，否则返回 S_OK。
+如果*celt*为零, 则返回 E_INVALIDARG; 如果返回小于*celt*元素, 则返回 S_FALSE, 否则返回 S_OK。
 
 ## <a name="see-also"></a>请参阅
 

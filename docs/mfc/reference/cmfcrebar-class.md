@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCReBar [MFC], OnUpdateCmdUI
 - CMFCReBar [MFC], SetPaneAlignment
 ms.assetid: 02a60e29-6224-49c1-9e74-e0a7d9f8d023
-ms.openlocfilehash: ccd500547bdcf65e922f7b5e5ca8d30e0423933d
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.openlocfilehash: d348cf7aac57ce213e4d3f602501d12cee8e20d8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866162"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505445"
 ---
 # <a name="cmfcrebar-class"></a>CMFCReBar 类
 
@@ -120,7 +120,7 @@ BOOL AddBar(
 [in, out]指定要在 rebar 背景上显示的位图。
 
 *dwStyle*<br/>
-中包含要应用于带区的样式。 有关带区样式的完整列表, 请参阅 Windows SDK 文档`fStyle`的[REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa)结构中的说明。
+中包含要应用于带区的样式。 有关带区样式的完整列表, 请参阅 Windows SDK 文档`fStyle`的[REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow)结构中的说明。
 
 *clrFore*<br/>
 中表示 rebar 的前景色。
@@ -150,7 +150,7 @@ BOOL Create(
 [in, out]指向此 rebar 控件的父窗口的指针。
 
 *dwCtrlStyle*<br/>
-中指定 rebar 控件的样式。 默认样式值为**RBS_BANDBORDERS**, 这将显示用于分隔 rebar 控件上相邻带区的窄线条。 有关有效样式的列表, 请参阅 Windows SDK 文档中的[Rebar 控件样式](/windows/desktop/Controls/rebar-control-styles)。
+中指定 rebar 控件的样式。 默认样式值为**RBS_BANDBORDERS**, 这将显示用于分隔 rebar 控件上相邻带区的窄线条。 有关有效样式的列表, 请参阅 Windows SDK 文档中的[Rebar 控件样式](/windows/win32/Controls/rebar-control-styles)。
 
 *dwStyle*<br/>
 中Rebar 控件的窗口样式。 有关有效样式的列表, 请参阅[窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。

@@ -43,14 +43,14 @@ helpviewer_keywords:
 - formatted text [C++]
 - vfwprintf_p function
 ms.assetid: 4d4a0914-4175-4b65-9ca1-037c4ef29147
-ms.openlocfilehash: 7e93972ccd77d730d873177fe92f958877c83fe4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f3a1fa472949d6d1f7880acc942a99c0f32c7ce
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365359"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499271"
 ---
-# <a name="vfprintfp-vfprintfpl-vfwprintfp-vfwprintfpl"></a>_vfprintf_p、_vfprintf_p_l、_vfwprintf_p、_vfwprintf_p_l
+# <a name="_vfprintf_p-_vfprintf_p_l-_vfwprintf_p-_vfwprintf_p_l"></a>_vfprintf_p、_vfprintf_p_l、_vfwprintf_p、_vfwprintf_p_l
 
 使用指向自变量列表的指针编写格式化输出，并且能够指定在格式字符中使用自变量的顺序。
 
@@ -99,20 +99,20 @@ int _vfwprintf_p_l(
 
 ## <a name="return-value"></a>返回值
 
-**_vfprintf_p**并 **_vfwprintf_p**返回写入的字符，不包括终止 null 字符，则为负值，如果发生输出错误数。
+**_vfprintf_p**和 **_vfwprintf_p**返回写入的字符数, 不包括终止 null 字符, 或在出现输出错误时返回一个负值。
 
 ## <a name="remarks"></a>备注
 
-每个函数采用一个指向参数列表，然后格式化和写入到给定的数据*流*。 这些函数与差异 **_vfprint_s**并 **_vfwprint_s**版本仅在于它们支持位置参数。 有关详细信息，请参阅 [printf_p 位置参数](../../c-runtime-library/printf-p-positional-parameters.md)。
+其中每个函数都采用一个指向参数列表的指针, 然后将给定数据格式化并写入到*流*中。 这些函数与 **_vfprint_s**和 **_vfwprint_s**版本的不同之处在于它们支持位置参数。 有关详细信息，请参阅 [printf_p 位置参数](../../c-runtime-library/printf-p-positional-parameters.md)。
 
-**_vfwprintf_p**是宽字符版本 **_vprintf_p**; 如果在 ANSI 模式下打开流，则两个函数行为相同。 **_vprintf_p**当前不到 UNICODE 流支持输出。
+**_vfwprintf_p**是 **_vprintf_p**的宽字符版本;如果在 ANSI 模式下打开流, 则这两个函数的行为相同。 **_vprintf_p**当前不支持输出到 UNICODE 流中。
 
-使用这些函数的版本 **_l**后缀完全相同，只不过它们使用传递中而不是当前线程区域设置的区域设置参数。
+这些带有 **_l**后缀的函数的版本相同, 只不过它们使用传入的区域设置参数而不是当前线程区域设置。
 
 > [!IMPORTANT]
-> 确保 format 不是用户定义的字符串。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
+> 确保 format不是用户定义的字符串。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
-如果任一*流*或*格式*是 null 指针，或如果格式字符串包含无效格式字符，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，函数将返回-1 并设置**errno**到**EINVAL**。
+如果*流*或*格式*为 null 指针, 或如果格式字符串包含无效的格式字符, 则将调用无效参数处理程序, 如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续, 则函数将返回-1, 并将**errno**设置为**EINVAL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -125,8 +125,8 @@ int _vfwprintf_p_l(
 
 |例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|----------------------|
-|**_vfprintf_p**， **_vfprintf_p_l**|\<stdio.h> 和 \<stdarg.h>|\<varargs.h>*|
-|**_vfwprintf_p**， **_vfwprintf_p_l**|\<stdio.h> 或 \<wchar.h> 和 \<stdarg.h>|\<varargs.h>*|
+|**_vfprintf_p**、 **_vfprintf_p_l**|\<stdio.h> 和 \<stdarg.h>|\<varargs.h>*|
+|**_vfwprintf_p**、 **_vfwprintf_p_l**|\<stdio.h> 或 \<wchar.h> 和 \<stdarg.h>|\<varargs.h>*|
 
 \* 仅对 UNIX V 兼容性是必需的。
 

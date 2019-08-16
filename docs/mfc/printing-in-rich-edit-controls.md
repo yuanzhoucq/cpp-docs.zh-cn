@@ -6,18 +6,18 @@ helpviewer_keywords:
 - rich edit controls [MFC], printing
 - CRichEditCtrl class [MFC], printing
 ms.assetid: dbda0e40-018f-424e-b5d8-7b489aaf27af
-ms.openlocfilehash: 6ae7212eaa8eed1088a507973c80311f169c7751
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 671aec27584af975ce1635793ae80879e7208d4b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916271"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508002"
 ---
 # <a name="printing-in-rich-edit-controls"></a>在 Rich Edit 控件中打印
 
 你可以通知 rich edit 控件 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) 为指定的设备 (例如打印机) 呈现其输出。 你还可以指定富编辑控件为其设置文本格式的输出设备。
 
-若要为特定设备设置丰富编辑控件部分内容的格式, 可以使用[FormatRange](../mfc/reference/cricheditctrl-class.md#formatrange)成员函数。 与此函数一起使用的[FORMATRANGE](/windows/desktop/api/richedit/ns-richedit-formatrange)结构指定要设置格式的文本范围, 以及目标设备的设备上下文 (DC)。
+若要为特定设备设置丰富编辑控件部分内容的格式, 可以使用[FormatRange](../mfc/reference/cricheditctrl-class.md#formatrange)成员函数。 与此函数一起使用的[FORMATRANGE](/windows/win32/api/richedit/ns-richedit-formatrange)结构指定要设置格式的文本范围, 以及目标设备的设备上下文 (DC)。
 
 格式化输出设备的文本后, 可以使用[DisplayBand](../mfc/reference/cricheditctrl-class.md#displayband)成员函数将输出发送到设备。 通过重复使用`FormatRange`和`DisplayBand`, 打印丰富编辑控件的内容的应用程序可以实现分级。 (将输出划分为多个较小的部分, 用于打印。)
 

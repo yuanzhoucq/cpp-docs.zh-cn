@@ -12,18 +12,18 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
-ms.openlocfilehash: fb582106fe2f18e939f11180048a125c683ca2f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5652123d4866262515f804dba790af51610eb426
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182933"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500524"
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray 类
 
 表示一个一维数组，当调用方为要填充的方法传递数组时，可将此一维数组用作输入参数。
 
-此 ref 类在 vccorlib.h 中声明为私有；因此，它不是通过元数据发出的，只能通过 C++ 使用它。 此类仅用作输入参数，用于接收调用方分配的数组。 此类无法通过用户代码构造。 它允许 C++ 方法直接写入到该数组中，这种模式称为“FillArray”  模式。 有关详细信息，请参阅[Array 和 WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)。
+此 ref 类在 vccorlib.h 中声明为私有；因此，它不是通过元数据发出的，只能通过 C++ 使用它。 此类仅用作输入参数，用于接收调用方分配的数组。 此类无法通过用户代码构造。 它允许 C++ 方法直接写入到该数组中，这种模式称为“FillArray” 模式。 有关详细信息, 请参阅[Array 和 WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -37,11 +37,11 @@ private ref class WriteOnlyArray<T, 1>
 
 这些方法具有内部可访问性，即，只能在 C++ 应用或组件中访问这些方法。
 
-|名称|描述|
+|name|描述|
 |----------|-----------------|
-|[WriteOnlyArray::begin](#begin)|指向数组中第一个元素的迭代器。|
+|[WriteOnlyArray:: begin](#begin)|指向数组中第一个元素的迭代器。|
 |[WriteOnlyArray::Data](#data)|指向数据缓冲区的指针。|
-|[WriteOnlyArray::end](#end)|指向数组中最后一个元素的下一位置的迭代器。|
+|[WriteOnlyArray:: end](#end)|指向数组中最后一个元素的下一位置的迭代器。|
 |[WriteOnlyArray::FastPass](#fastpass)|指示数组能否使用 FastPass 机制，此机制是系统透明执行的优化。 请勿在你的代码中使用此机制|
 |[WriteOnlyArray::Length](#length)|返回数组中的元素数目。|
 |[WriteOnlyArray::set](#set)|将指定元素设置为指定值。|
@@ -54,9 +54,9 @@ private ref class WriteOnlyArray<T, 1>
 
 编译器选项： **/ZW**
 
-**元数据：** Platform.winmd
+**新元**Platform.winmd
 
-**命名空间：** Platform
+**命名空间：** 平台
 
 ## <a name="begin"></a>  WriteOnlyArray::begin 方法
 
@@ -126,7 +126,7 @@ property bool FastPass{
 
 指示数组是否为 FastPass 的布尔值。
 
-## <a name="get"></a>  Writeonlyarray:: Get 方法
+## <a name="get"></a>WriteOnlyArray:: get 方法
 
 返回指定索引处的元素。
 
@@ -185,9 +185,9 @@ T& set(
 
 ### <a name="remarks"></a>备注
 
-有关如何解释 HRESULT 值的详细信息，请参阅[COM 错误代码的结构](/windows/desktop/com/structure-of-com-error-codes)。
+有关如何解释 HRESULT 值的详细信息, 请参阅[COM 错误代码的结构](/windows/win32/com/structure-of-com-error-codes)。
 
 ## <a name="see-also"></a>请参阅
 
-[平台 Namespace](platform-namespace-c-cx.md)<br/>
+[平台命名空间](platform-namespace-c-cx.md)<br/>
 [用 C++ 创建 Windows 运行时组件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

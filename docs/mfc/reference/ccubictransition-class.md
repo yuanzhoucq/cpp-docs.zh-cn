@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CCubicTransition [MFC], m_dblFinalVelocity
 - CCubicTransition [MFC], m_duration
 ms.assetid: 4fc30e9c-160c-45e1-bdbe-51adf8fee9c5
-ms.openlocfilehash: f4d5898172c0544064fad82856e404f4fb12b561
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6bb626f944ce87748809a5eb03a6f06f92c3de5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62163976"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507142"
 ---
 # <a name="ccubictransition-class"></a>CCubicTransition 类
 
@@ -45,19 +45,19 @@ class CCubicTransition : public CBaseTransition;
 
 |名称|描述|
 |----------|-----------------|
-|[CCubicTransition::Create](#create)|调用要创建封装的转换 COM 对象的转换库。 (重写[CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create)。)|
+|[CCubicTransition::Create](#create)|调用转换库以创建封装的转换 COM 对象。 (重写[CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create)。)|
 
 ### <a name="public-data-members"></a>公共数据成员
 
 |名称|描述|
 |----------|-----------------|
-|[CCubicTransition::m_dblFinalValue](#m_dblfinalvalue)|转换结束时的动画变量的值。|
-|[CCubicTransition::m_dblFinalVelocity](#m_dblfinalvelocity)|在转换结束时变量的速度。|
-|[CCubicTransition::m_duration](#m_duration)|过渡的持续时间。|
+|[CCubicTransition::m_dblFinalValue](#m_dblfinalvalue)|转换结束时动画变量的值。|
+|[CCubicTransition::m_dblFinalVelocity](#m_dblfinalvelocity)|变量在转换结束时的速度。|
+|[CCubicTransition::m_duration](#m_duration)|转换的持续时间。|
 
 ## <a name="remarks"></a>备注
 
-在三次方转换期间动画变量的值从其初始值更改为指定的最终值的转换，结束于指定速度的持续时间内。 因为会自动清除所有转换，我们建议分配它们使用新运算符。 封装 IUIAnimationTransition 创建 COM 对象通过 CAnimationController::AnimateGroup，直到它为 NULL。 创建此 COM 对象不起作用之后更改成员变量。
+在三次转换期间, 动画变量的值在转换期间从其初始值更改为指定的最终值, 以指定速度结束。 由于所有转换都将自动清除, 因此建议使用 operator new 将其分配给它们。 封装的 IUIAnimationTransition COM 对象由 CAnimationController:: AnimateGroup 创建, 直到它为 NULL。 在创建此 COM 对象之后更改成员变量不起作用。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -71,7 +71,7 @@ class CCubicTransition : public CBaseTransition;
 
 **标头：** afxanimationcontroller.h
 
-##  <a name="ccubictransition"></a>  CCubicTransition::CCubicTransition
+##  <a name="ccubictransition"></a>CCubicTransition:: CCubicTransition
 
 构造转换对象并初始化其参数。
 
@@ -85,17 +85,17 @@ CCubicTransition(
 ### <a name="parameters"></a>参数
 
 *duration*<br/>
-过渡的持续时间。
+转换的持续时间。
 
 *finalValue*<br/>
-转换结束时的动画变量的值。
+转换结束时动画变量的值。
 
 *finalVelocity*<br/>
-在转换结束时变量的速度。
+变量在转换结束时的速度。
 
-##  <a name="create"></a>  CCubicTransition::Create
+##  <a name="create"></a>CCubicTransition:: Create
 
-调用要创建封装的转换 COM 对象的转换库。
+调用转换库以创建封装的转换 COM 对象。
 
 ```
 virtual BOOL Create(
@@ -106,31 +106,31 @@ virtual BOOL Create(
 ### <a name="parameters"></a>参数
 
 *pLibrary*<br/>
-一个指向[IUIAnimationTransitionLibrary 接口](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)，用于定义的标准转换库。
+指向[IUIAnimationTransitionLibrary 接口](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)的指针, 该接口定义标准转换库。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则创建转换，则返回 TRUE否则为 FALSE。
+如果成功创建转换, 则为 TRUE;否则为 FALSE。
 
-##  <a name="m_dblfinalvalue"></a>  CCubicTransition::m_dblFinalValue
+##  <a name="m_dblfinalvalue"></a>CCubicTransition:: m_dblFinalValue
 
-转换结束时的动画变量的值。
+转换结束时动画变量的值。
 
 ```
 DOUBLE m_dblFinalValue;
 ```
 
-##  <a name="m_dblfinalvelocity"></a>  CCubicTransition::m_dblFinalVelocity
+##  <a name="m_dblfinalvelocity"></a>CCubicTransition:: m_dblFinalVelocity
 
-在转换结束时变量的速度。
+变量在转换结束时的速度。
 
 ```
 DOUBLE m_dblFinalVelocity;
 ```
 
-##  <a name="m_duration"></a>  CCubicTransition::m_duration
+##  <a name="m_duration"></a>CCubicTransition:: m_duration
 
-过渡的持续时间。
+转换的持续时间。
 
 ```
 UI_ANIMATION_SECONDS m_duration;

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - COleIPFrameWnd [MFC], OnCreateControlBars
 - COleIPFrameWnd [MFC], RepositionFrame
 ms.assetid: 24abb2cb-826c-4dda-a287-d8a8900a5763
-ms.openlocfilehash: 34388e635ba89d732ae3993074a2c8268e2289a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 483998529b83d9b28c6ab1b219c4f5288dbd8ec7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224551"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69503836"
 ---
 # <a name="coleipframewnd-class"></a>COleIPFrameWnd 类
 
@@ -35,20 +35,20 @@ class COleIPFrameWnd : public CFrameWnd
 
 |名称|描述|
 |----------|-----------------|
-|[COleIPFrameWnd::COleIPFrameWnd](#coleipframewnd)|构造 `COleIPFrameWnd` 对象。|
+|[COleIPFrameWnd:: COleIPFrameWnd](#coleipframewnd)|构造 `COleIPFrameWnd` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
 |名称|描述|
 |----------|-----------------|
-|[COleIPFrameWnd::OnCreateControlBars](#oncreatecontrolbars)|项激活进行就地编辑时由框架调用。|
-|[COleIPFrameWnd::RepositionFrame](#repositionframe)|由框架调用以重新定位就地编辑窗口。|
+|[COleIPFrameWnd::OnCreateControlBars](#oncreatecontrolbars)|当激活某项以进行就地编辑时, 由框架调用。|
+|[COleIPFrameWnd::RepositionFrame](#repositionframe)|由框架调用以重定位就地编辑窗口。|
 
 ## <a name="remarks"></a>备注
 
-此类创建和位置控件容器应用程序的文档窗口中的条。 它还处理生成的嵌入通知[COleResizeBar](../../mfc/reference/coleresizebar-class.md)对象在用户调整的就地编辑窗口。
+此类在容器应用程序的文档窗口中创建并定位控件条。 当用户调整就地编辑窗口的大小时, 它还处理嵌入[COleResizeBar](../../mfc/reference/coleresizebar-class.md)对象生成的通知。
 
-有关使用的详细信息`COleIPFrameWnd`，请参阅文章[激活](../../mfc/activation-cpp.md)。
+有关使用`COleIPFrameWnd`的详细信息, 请参阅文章[激活](../../mfc/activation-cpp.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -64,11 +64,11 @@ class COleIPFrameWnd : public CFrameWnd
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxole.h
+**标头:** afxole
 
-##  <a name="coleipframewnd"></a>  COleIPFrameWnd::COleIPFrameWnd
+##  <a name="coleipframewnd"></a>COleIPFrameWnd:: COleIPFrameWnd
 
-构造`COleIPFrameWnd`对象并初始化其就地状态信息，它存储在类型 OLEINPLACEFRAMEINFO 的结构。
+构造一个`COleIPFrameWnd`对象并初始化其就地状态信息, 该信息存储在 OLEINPLACEFRAMEINFO 类型的结构中。
 
 ```
 COleIPFrameWnd();
@@ -76,11 +76,11 @@ COleIPFrameWnd();
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[OLEINPLACEFRAMEINFO](/windows/desktop/api/oleidl/ns-oleidl-tagoifi) Windows SDK 中。
+有关详细信息, 请参阅 Windows SDK 中的[OLEINPLACEFRAMEINFO](/windows/win32/api/oleidl/ns-oleidl-oifi) 。
 
-##  <a name="oncreatecontrolbars"></a>  COleIPFrameWnd::OnCreateControlBars
+##  <a name="oncreatecontrolbars"></a>COleIPFrameWnd:: Oncreatecontrolbars 以便
 
-框架将调用`OnCreateControlBars`时进行就地编辑激活某个项的功能。
+当激活某项`OnCreateControlBars`以进行就地编辑时, 框架将调用该函数。
 
 ```
 virtual BOOL OnCreateControlBars(
@@ -95,22 +95,22 @@ virtual BOOL OnCreateControlBars(
 ### <a name="parameters"></a>参数
 
 *pWndFrame*<br/>
-向容器应用程序的框架窗口的指针。
+指向容器应用程序框架窗口的指针。
 
 *pWndDoc*<br/>
-指向容器的文档级别窗口的指针。 如果容器是 SDI 应用程序，可以为 NULL。
+指向容器文档级窗口的指针。 如果容器是 SDI 应用程序, 则可以为 NULL。
 
 ### <a name="return-value"></a>返回值
 
-非零值; 如果成功否则为为 0。
+如果成功, 则为非零;否则为0。
 
 ### <a name="remarks"></a>备注
 
-默认实现不执行任何操作。 重写此函数可执行创建条形图控件时所需任何特殊处理。
+默认实现不执行任何操作。 重写此函数以在创建控件条时执行所需的任何特殊处理。
 
-##  <a name="repositionframe"></a>  COleIPFrameWnd::RepositionFrame
+##  <a name="repositionframe"></a>COleIPFrameWnd:: RepositionFrame
 
-框架将调用`RepositionFrame`版式控件条和重新定位就地编辑窗口，因此它是可见的成员函数。
+框架调用`RepositionFrame`成员函数来布置控件条并重新定位就地编辑窗口, 使其全部可见。
 
 ```
 virtual void RepositionFrame(
@@ -121,14 +121,14 @@ virtual void RepositionFrame(
 ### <a name="parameters"></a>参数
 
 *lpPosRect*<br/>
-指向`RECT`结构或`CRect`对象，其中包含的就地框架窗口的当前位置坐标，以像素为单位，相对于客户端区域。
+指向`RECT` 结构`CRect`或对象的指针, 该对象包含就地框架窗口的当前位置坐标 (以像素为单位), 相对于工作区。
 
 *lpClipRect*<br/>
-指向`RECT`结构或`CRect`对象，其中包含的就地框架窗口的当前剪辑矩形坐标，以像素为单位，相对于客户端区域。
+指向`RECT`结构的指针`CRect`或包含就地框架窗口的当前剪辑矩形坐标 (以像素为单位) 相对于工作区的对象。
 
 ### <a name="remarks"></a>备注
 
-在容器窗口中的控件条的布局不同于执行的非 OLE 框架窗口。 非 OLE 框架窗口计算的位置控件条和其他对象从给定的框架窗口大小，如下所示调用[CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout)。 客户端区域是什么仍后减去控件条和其他对象的空间。 一个`COleIPFrameWnd`窗口中，但是，根据给定的工作区定位工具栏。 换而言之， `CFrameWnd::RecalcLayout` "从在中，外部"起作用，而`COleIPFrameWnd::RepositionFrame`工作原理"从内到外。"
+容器窗口中的控件条布局不同于非 OLE 框架窗口执行的布局。 非 OLE 框架窗口根据给定的框架窗口大小计算控件条和其他对象的位置, 如对[CFrameWnd:: RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout)的调用。 工作区是指在控制栏和其他对象的空间被减去后保留的区域。 另一方面`COleIPFrameWnd` , 窗口根据给定的工作区定位工具栏。 换句话说, `CFrameWnd::RecalcLayout`在中的 "从外" 工作, `COleIPFrameWnd::RepositionFrame`从内到外 "工作"。
 
 ## <a name="see-also"></a>请参阅
 

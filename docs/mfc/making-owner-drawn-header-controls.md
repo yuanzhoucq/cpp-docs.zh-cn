@@ -8,16 +8,16 @@ helpviewer_keywords:
 - controls [MFC], header
 - owner-drawn header controls [MFC]
 ms.assetid: 455c113b-e8d0-400c-8690-dbb92cba0d05
-ms.openlocfilehash: 145134a4c3a0518d5248d72c098927ed4ee5042a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9147708f672a5aec26f58a3c81ed7a5dfcf8cad
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310838"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508325"
 ---
 # <a name="making-owner-drawn-header-controls"></a>定义所有者描述的标题控件
 
-你可以定义标头控件的单个项 ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) 为所有者描述的项。 有关详细信息，请参阅[所有者描述的标题控件](/windows/desktop/Controls/header-controls)Windows SDK 中。
+可以将标题控件 ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) 的各个项定义为所有者描述的项。 有关详细信息, 请参阅 Windows SDK 中[所有者描述的标头控件](/windows/win32/Controls/header-controls)。
 
 ## <a name="see-also"></a>请参阅
 

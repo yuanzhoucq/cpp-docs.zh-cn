@@ -11,19 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - CLocalHeap class
 ms.assetid: 1ffa87a5-5fc8-4f8d-8809-58e87e963bd2
-ms.openlocfilehash: 53288bea8a50f62437eab4dd81d5d816abf78f44
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a302ba4ea55c42ce214c8de4a24be843d6cb1b9f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258827"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496745"
 ---
 # <a name="clocalheap-class"></a>CLocalHeap 类
 
-此类实现[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)使用 Win32 本地堆函数。
+此类使用 Win32 本地堆函数实现[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) 。
 
 > [!IMPORTANT]
->  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
+>  此类及其成员不能用于在 Windows 运行时中执行的应用程序。
 
 ## <a name="syntax"></a>语法
 
@@ -38,20 +38,20 @@ class CLocalHeap : public IAtlMemMgr
 |名称|描述|
 |----------|-----------------|
 |[CLocalHeap::Allocate](#allocate)|调用此方法来分配内存块。|
-|[CLocalHeap::Free](#free)|调用此方法来释放此内存管理器分配的内存块。|
-|[CLocalHeap::GetSize](#getsize)|调用此方法以获取此内存管理器分配的内存块的分配的大小。|
+|[CLocalHeap::Free](#free)|调用此方法可释放此内存管理器分配的内存块。|
+|[CLocalHeap::GetSize](#getsize)|调用此方法可获取此内存管理器分配的内存块的分配大小。|
 |[CLocalHeap::Reallocate](#reallocate)|调用此方法以重新分配由该内存管理器分配的内存。|
 
 ## <a name="remarks"></a>备注
 
-`CLocalHeap` 实现使用 Win32 本地堆函数的内存分配函数。
+`CLocalHeap`使用 Win32 本地堆函数实现内存分配函数。
 
 > [!NOTE]
->  本地堆函数比其他内存管理函数，并不提供尽可能多的功能。 因此，应使用新的应用程序[堆函数](/windows/desktop/Memory/heap-functions)。 这些功能中位于[CWin32Heap](../../atl/reference/cwin32heap-class.md)类。
+>  本地堆函数比其他内存管理函数慢, 并且不提供任何多个功能。 因此, 新应用程序应使用[堆函数](/windows/win32/Memory/heap-functions)。 这些都在[CWin32Heap](../../atl/reference/cwin32heap-class.md)类中提供。
 
 ## <a name="example"></a>示例
 
-有关示例，请参阅[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)。
+请参阅[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)的示例。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -61,9 +61,9 @@ class CLocalHeap : public IAtlMemMgr
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlmem.h
+**标头:** atlmem
 
-##  <a name="allocate"></a>  CLocalHeap::Allocate
+##  <a name="allocate"></a>CLocalHeap:: Allocate
 
 调用此方法来分配内存块。
 
@@ -82,13 +82,13 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 
 ### <a name="remarks"></a>备注
 
-调用[clocalheap:: Free](#free)或[clocalheap:: Reallocate](#reallocate)来释放由此方法分配的内存。
+调用[CLocalHeap:: Free](#free)或[CLocalHeap:: 重新分配](#reallocate)以释放此方法分配的内存。
 
-使用实现[LocalAlloc](/windows/desktop/api/winbase/nf-winbase-localalloc) LMEM_FIXED 的标记参数。
+使用[LocalAlloc](/windows/win32/api/winbase/nf-winbase-localalloc)和 LMEM_FIXED 参数实现。
 
-##  <a name="free"></a>  Clocalheap:: Free
+##  <a name="free"></a>CLocalHeap:: Free
 
-调用此方法来释放此内存管理器分配的内存块。
+调用此方法可释放此内存管理器分配的内存块。
 
 ```
 virtual void Free(void* p) throw();
@@ -97,15 +97,15 @@ virtual void Free(void* p) throw();
 ### <a name="parameters"></a>参数
 
 *p*<br/>
-指向此内存管理器以前分配的内存的指针。 NULL 是一个有效的值，不执行任何操作。
+指向此内存管理器以前分配的内存的指针。 NULL 是有效的值并且不执行任何操作。
 
 ### <a name="remarks"></a>备注
 
-使用实现[LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree)。
+使用[LocalFree](/windows/win32/api/winbase/nf-winbase-localfree)实现。
 
-##  <a name="getsize"></a>  CLocalHeap::GetSize
+##  <a name="getsize"></a>CLocalHeap:: GetSize
 
-调用此方法以获取此内存管理器分配的内存块的分配的大小。
+调用此方法可获取此内存管理器分配的内存块的分配大小。
 
 ```
 virtual size_t GetSize(void* p) throw();
@@ -118,13 +118,13 @@ virtual size_t GetSize(void* p) throw();
 
 ### <a name="return-value"></a>返回值
 
-以字节为单位返回已分配的内存块的大小。
+返回分配的内存块的大小 (以字节为单位)。
 
 ### <a name="remarks"></a>备注
 
-使用实现[LocalSize](/windows/desktop/api/winbase/nf-winbase-localsize)。
+使用[LocalSize](/windows/win32/api/winbase/nf-winbase-localsize)实现。
 
-##  <a name="reallocate"></a>  CLocalHeap::Reallocate
+##  <a name="reallocate"></a>CLocalHeap:: 重新分配
 
 调用此方法以重新分配由该内存管理器分配的内存。
 
@@ -146,9 +146,9 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="remarks"></a>备注
 
-调用[clocalheap:: Free](#free)来释放由此方法分配的内存。
+调用[CLocalHeap:: free](#free)可释放由此方法分配的内存。
 
-使用实现[LocalReAlloc](/windows/desktop/api/winbase/nf-winbase-localrealloc)。
+使用[LocalReAlloc](/windows/win32/api/winbase/nf-winbase-localrealloc)实现。
 
 ## <a name="see-also"></a>请参阅
 

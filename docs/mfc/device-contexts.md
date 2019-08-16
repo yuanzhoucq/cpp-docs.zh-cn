@@ -32,46 +32,46 @@ helpviewer_keywords:
 - drawing [MFC], directly into windows
 - painting and device context
 ms.assetid: d0cd51f1-f778-4c7e-bf50-d738d10433c7
-ms.openlocfilehash: 7893b446c224dd84514ab63dc97cae467792750c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d5337e8d8b83a641458a15612803feeec3b6361c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405971"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508655"
 ---
 # <a name="device-contexts"></a>设备上下文
 
-设备上下文是包含显示器或打印机等设备的信息的绘制特性的 Windows 数据结构。 所有绘图调用都是通过设备上下文对象，封装 Windows Api，可用于绘制线条、 形状和文本。 设备上下文允许在 Windows 中的独立于设备的绘图。 用于绘制到屏幕、 打印机或图元文件设备上下文。
+"设备上下文" 是一种 Windows 数据结构, 其中包含有关设备 (例如显示器或打印机) 的绘图属性的信息。 所有绘图调用都通过设备上下文对象进行, 该对象封装用于绘制线条、形状和文本的 Windows Api。 设备上下文允许 Windows 中与设备无关的绘图。 设备上下文可用于绘制到屏幕、打印机或图元文件。
 
-[CPaintDC](../mfc/reference/cpaintdc-class.md)对象将封装 Windows，调用的常规用法`BeginPaint`函数，然后绘制在设备上下文中，然后调用`EndPaint`函数。 `CPaintDC`构造函数调用`BeginPaint`，和析构函数调用`EndPaint`。 简化的过程是创建[CDC](../mfc/reference/cdc-class.md)对象和绘制，然后销毁`CDC`对象。 在 framework 中，即使此过程的大部分可以自动完成。 具体而言，你`OnDraw`函数传递`CPaintDC`已准备好 (通过`OnPrepareDC`)，并只需绘制到它。 由框架销毁和基础设备上下文从调用返回时发布到 Windows 应用`OnDraw`函数。
+[CPaintDC](../mfc/reference/cpaintdc-class.md)对象封装 Windows 的常见用法, 调用`BeginPaint`函数, 然后在设备上下文中绘制`EndPaint` , 然后调用函数。 构造函数调用`BeginPaint` , 析构函数调用`EndPaint`。 `CPaintDC` 简化的过程是创建[CDC](../mfc/reference/cdc-class.md)对象, 绘制并销毁`CDC`对象。 在框架中, 大部分甚至是自动化的过程。 特别是, `OnDraw`您的`CPaintDC`函数已通过已准备好 ( `OnPrepareDC`通过), 您只需将其绘制到其中即可。 它由框架销毁, 基础设备上下文在从对`OnDraw`函数的调用返回时发布到 Windows。
 
-[CClientDC](../mfc/reference/cclientdc-class.md)对象将封装表示一个窗口的工作区的设备上下文的工作。 `CClientDC`构造函数调用`GetDC`函数和析构函数调用`ReleaseDC`函数。 [CWindowDC](../mfc/reference/cwindowdc-class.md)对象将封装表示整个窗口，其中包括其框架的设备上下文。
+[CClientDC](../mfc/reference/cclientdc-class.md)对象封装使用只表示窗口工作区的设备上下文。 构造函数调用函数, 析构函数调用`ReleaseDC`函数。 `GetDC` `CClientDC` [CWindowDC](../mfc/reference/cwindowdc-class.md)对象封装表示整个窗口的设备上下文, 包括其框架。
 
-[CMetaFileDC](../mfc/reference/cmetafiledc-class.md)对象封装到 Windows 图元文件绘制。 与此相反`CPaintDC`传递给`OnDraw`，在这种情况下，必须调用[OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc)自己。
+[CMetaFileDC](../mfc/reference/cmetafiledc-class.md)对象将绘图封装到 Windows 图元文件中。 与传递到`OnDraw`的`CPaintDC`不同, 在这种情况下, 您必须自行调用[OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc) 。
 
 ## <a name="mouse-drawing"></a>鼠标绘制
 
-框架程序中的大多数绘图，和大多数设备上下文工作 — 在视图中完成`OnDraw`成员函数。 但是，仍可以使用用于其他用途的设备上下文对象。 例如，若要在视图中的鼠标移动提供跟踪反馈，您需要绘制直接到视图而无需等待`OnDraw`调用。
+框架程序中的大多数绘图 (以及大多数设备上下文工作) 都是在视图的`OnDraw`成员函数中完成的。 不过, 您仍可以将设备上下文对象用于其他目的。 例如, 若要为视图中的鼠标移动提供跟踪反馈, 需要直接在视图中进行绘制, 而无需`OnDraw`等待调用。
 
-在这种情况下，你可以使用[CClientDC](../mfc/reference/cclientdc-class.md)直接到视图中绘制的设备上下文对象。
+在这种情况下, 可以使用[CClientDC](../mfc/reference/cclientdc-class.md)设备上下文对象直接在视图中进行绘制。
 
-### <a name="what-do-you-want-to-know-more-about"></a>你想要了解更多信息
+### <a name="what-do-you-want-to-know-more-about"></a>要了解有关的详细信息
 
-- [设备上下文 （定义）](/windows/desktop/gdi/device-contexts)
+- [设备上下文 (定义)](/windows/win32/gdi/device-contexts)
 
 - [在视图中绘制](../mfc/drawing-in-a-view.md)
 
 - [通过视图解释用户输入](../mfc/interpreting-user-input-through-a-view.md)
 
-- [直线和曲线](/windows/desktop/gdi/lines-and-curves)
+- [直线和曲线](/windows/win32/gdi/lines-and-curves)
 
-- [实心的形状](/windows/desktop/gdi/filled-shapes)
+- [实心形状](/windows/win32/gdi/filled-shapes)
 
-- [字体和文本](/windows/desktop/gdi/fonts-and-text)
+- [字体和文本](/windows/win32/gdi/fonts-and-text)
 
-- [颜色](/windows/desktop/gdi/colors)
+- [颜色](/windows/win32/gdi/colors)
 
-- [坐标空间和转换](/windows/desktop/gdi/coordinate-spaces-and-transformations)
+- [坐标空格和转换](/windows/win32/gdi/coordinate-spaces-and-transformations)
 
 ## <a name="see-also"></a>请参阅
 

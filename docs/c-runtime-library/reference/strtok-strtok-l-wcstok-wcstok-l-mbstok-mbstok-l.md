@@ -45,19 +45,19 @@ helpviewer_keywords:
 - _tcstok_l function
 - strtok_l function
 ms.assetid: 904cb734-f0d7-4d77-ba81-4791ddf461ae
-ms.openlocfilehash: 22dd01a0b2558c83ca1e25875a2ace7dd4ee15c0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 13fbc0e305f7ad183db06ec0060b2059b4964fe7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176182"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500795"
 ---
-# <a name="strtok-strtokl-wcstok-wcstokl-mbstok-mbstokl"></a>strtok、_strtok_l、wcstok、_wcstok_l、_mbstok、_mbstok_l
+# <a name="strtok-_strtok_l-wcstok-_wcstok_l-_mbstok-_mbstok_l"></a>strtok、_strtok_l、wcstok、_wcstok_l、_mbstok、_mbstok_l
 
 通过使用当前区域设置或传入的指定区域设置，查找在字符串中的下一个标记。 提供这些函数的更多安全版本；请参阅 [strtok_s、_strtok_s_l、wcstok_s、_wcstok_s_l、_mbstok_s、_mbstok_s_l](strtok-s-strtok-s-l-wcstok-s-wcstok-s-l-mbstok-s-mbstok-s-l.md)。
 
 > [!IMPORTANT]
-> **_mbstok**并 **_mbstok_l**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbstok**和 **_mbstok_l**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -104,20 +104,20 @@ unsigned char *_mbstok_l(
 
 ## <a name="return-value"></a>返回值
 
-返回一个指向下一个令牌中找到*strToken*。 这些函数返回**NULL**找到没有更多标记时。 每个调用都会修改*strToken* ，只需替换 null 字符在返回的令牌后发生的第一个分隔符。
+返回一个指针, 该指针指向在*strToken*中找到的下一个标记。 当找不到更多的标记时, 函数将返回**NULL** 。 每个调用都通过将 null 字符替换为在返回的标记后出现的第一个分隔符来修改*strToken* 。
 
 ## <a name="remarks"></a>备注
 
-**Strtok**函数查找字符串中的下一个标记*strToken*。 中的字符组*strDelimit*指定的令牌中找到可能的分隔符*strToken*在当前调用上。 **wcstok**并 **_mbstok**宽字符及多字节字符版本的**strtok**。 参数和返回值**wcstok**是宽字符字符串; **_mbstok**是多字节字符字符串。 否则这三个函数否则具有相同行为。
+**Strtok**函数查找*strToken*中的下一个标记。 *StrDelimit*中的字符集指定要在当前调用的*strToken*中找到的令牌的可能分隔符。 **wcstok**和 **_mbstok**是**strtok**的宽字符和多字节字符版本。 **Wcstok**的参数和返回值是宽字符字符串; **_mbstok**的这些字符串是多字节字符字符串。 否则这三个函数否则具有相同行为。
 
 > [!IMPORTANT]
-> 这些函数会引发由缓冲区溢出问题带来的潜在威胁。 缓冲区溢出问题是常见的系统攻击方法，使权限的提升不能确保。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
+> 这些函数会引发由缓冲区溢出问题带来的潜在威胁。 缓冲区溢出问题是常见的系统攻击方法，使权限的提升不能确保。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
-在首次调用**strtok**，函数跳过前导分隔符并返回一个指针中的第一个标记*strToken*，终止空字符的标记。 更多标记可以分离出的余数*strToken*的调用的一系列**strtok**。 每次调用**strtok**修改*strToken*的方法是插入 null 字符之后**令牌**通过调用返回。 若要读取的下一个令牌*strToken*，调用**strtok**与**NULL**值*strToken*参数。 **NULL** *strToken*参数可以使**strtok**搜索中的修改后的下一个标记*strToken*。 *StrDelimit*参数可使用从到下一次调用的任何值，以使分隔符集可能会有所不同。
+第一次调用**strtok**时, 函数跳过前导分隔符并返回指向*strToken*中第一个标记的指针, 并将标记终止为 null 字符。 通过一系列对**strtok**的调用, 可以将更多标记分解出*strToken*的剩余部分。 对**strtok**的每次调用都会通过在该调用返回的**标记**后插入一个 Null 字符来修改*strToken* 。 若要从*strToken*中读取下一个令牌, 请对*strToken*参数调用**strtok** , 并为其提供**NULL**值。 **NULL** *strToken*参数会导致**Strtok**在修改后的*strToken*中搜索下一个标记。 *StrDelimit*参数可以从一个调用到下一个调用, 以使分隔符集不同。
 
-输出值受的设置**LC_CTYPE**类别设置的区域设置。 有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。
+输出值受区域设置的**LC_CTYPE**类别设置的设置影响。 有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。
 
-无需这些函数的版本 **_l**后缀的区域设置相关的行为使用当前区域设置。 与版本 **_l**后缀是相同，只不过它们改用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+这些不带 **_l**后缀的函数的版本对与区域设置相关的行为使用当前区域设置。 带有 **_l**后缀的版本是相同的, 只不过它们使用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 > [!NOTE]
 > 每个函数均使用线程本地静态变量，以将字符串分析为标记。 因此，多线程可以同时调用这些函数，不会产生不良影响。 但是，在单个线程内，对任一这些函数的交替调用很可能导致数据损坏和结果不准确。 解析不同的字符串时，在解析完一个字符串后再开始解析下一个字符串。 此外，请注意，从调用其他函数的循环内调用其中任一函数可能引发潜在危险。 如果其他函数最终使用这些函数之一，则导致调用交错的序列，从而触发数据损坏。
@@ -135,7 +135,7 @@ unsigned char *_mbstok_l(
 |-------------|---------------------|
 |**strtok**|\<string.h>|
 |**wcstok**|\<string.h> 或 \<wchar.h>|
-|**_mbstok**， **_mbstok_l**|\<mbstring.h>|
+|**_mbstok**、 **_mbstok_l**|\<mbstring.h>|
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

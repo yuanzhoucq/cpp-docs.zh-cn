@@ -22,14 +22,14 @@ helpviewer_keywords:
 - _memccpy function
 - memccpy function
 ms.assetid: 9a2337df-6e85-4eba-b247-dd0532f45ddb
-ms.openlocfilehash: 5cd037974d8580b6ee90b1af736e8f2c6897fe8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 704aab84ea3e39c91def1d4ac8b6d2d9d3650759
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156598"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499689"
 ---
-# <a name="memccpy"></a>_memccpy
+# <a name="_memccpy"></a>_memccpy
 
 复制缓冲区中的字符。
 
@@ -46,7 +46,7 @@ void *_memccpy(
 
 ### <a name="parameters"></a>参数
 
-*dest*<br/>
+dest<br/>
 指向目标的指针。
 
 *src*<br/>
@@ -55,18 +55,18 @@ void *_memccpy(
 *c*<br/>
 要复制的最后一个字符。
 
-*count*<br/>
+*计数*<br/>
 字符数。
 
 ## <a name="return-value"></a>返回值
 
-如果字符*c*复制 **_memccpy**将指针返回到 char *dest*紧跟在字符。 如果*c*不复制，则它将返回**NULL**。
+如果复制了字符*c* , 则 **_memccpy**将返回一个指针, 该指针指向在*dest*中紧跟在字符后面的字符。 如果未复制*c* , 则返回**NULL**。
 
 ## <a name="remarks"></a>备注
 
-**_Memccpy**函数将复制的 0 或更多个字符*src*到*dest*，终止字符*c*已复制，或者当*计数*已复制的字符，具体取决于第一个。
+**_Memccpy**函数将*src*的0个或更多个字符复制到*dest*, 并在已复制字符*c*时停止, 或在复制*计数*字符后停止。
 
-**安全说明** 确保目标缓冲区的大小等于或大于源缓冲区的大小。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
+**安全说明** 确保目标缓冲区的大小等于或大于源缓冲区的大小。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 ## <a name="requirements"></a>要求
 

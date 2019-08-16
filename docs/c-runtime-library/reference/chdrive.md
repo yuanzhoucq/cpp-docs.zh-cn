@@ -24,14 +24,14 @@ helpviewer_keywords:
 - _chdrive function
 - chdrive function
 ms.assetid: 212a1a4b-4fa8-444e-9677-7fca4c8c47e3
-ms.openlocfilehash: 963b7b7b40b632981abfc1529beb9c48a5b991ba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e36867bb8237c549fd250be88a99244766920ba
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335472"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500252"
 ---
-# <a name="chdrive"></a>_chdrive
+# <a name="_chdrive"></a>_chdrive
 
 更改当前工作驱动器。
 
@@ -57,11 +57,11 @@ int _chdrive(
 
 ## <a name="remarks"></a>备注
 
-如果*驱动器*是不在 1 到 26 的范围，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则 **_chdrive**函数返回-1， **errno**设置为**EACCES**，以及 **_doserrno**设置为**ERROR_INVALID_DRIVE**。
+如果*驱动器*不在1到26的范围内, 则将调用无效的参数处理程序, 如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续, 则 **_chdrive**函数将返回-1, **Errno**设置为**EACCES**, 并将 **_doserrno**设置为**ERROR_INVALID_DRIVE**。
 
-**_chdrive** 函数不具备线程安全，因为它依赖 **SetCurrentDirectory** 函数，该函数本身不具备线程安全。 若要在多线程应用程序中安全地使用 **_chdrive**，必须提供自己的线程同步。 有关详细信息，请参阅[SetCurrentDirectory](/windows/desktop/api/winbase/nf-winbase-setcurrentdirectory)。
+**_chdrive** 函数不具备线程安全，因为它依赖 **SetCurrentDirectory** 函数，该函数本身不具备线程安全。 若要在多线程应用程序中安全地使用 **_chdrive**，必须提供自己的线程同步。 有关详细信息, 请参阅[SetCurrentDirectory](/windows/win32/api/winbase/nf-winbase-setcurrentdirectory)。
 
-**_chdrive** 函数仅更改当前工作驱动器；**_chdir** 更改当前工作目录。
+**_chdrive** 函数仅更改当前工作驱动器； **_chdir** 更改当前工作目录。
 
 ## <a name="requirements"></a>要求
 

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Managed Resources property page
 ms.assetid: 80b80384-ee55-494d-9f0e-907bb98cfc19
-ms.openlocfilehash: 394aac779fceb4d9d5918e4a5ad36eee8be896ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 97cf05f881949444879b0d48e3b3c2703a614985
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321457"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498233"
 ---
 # <a name="managed-resources-property-page"></a>“托管资源”属性页
 
@@ -33,10 +33,10 @@ ms.locfileid: "62321457"
 
    指定给定的 .resx 文件是构成默认资源还是附属 .dll。
 
-有关如何访问的信息**被管理的资源**属性页中，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
+有关如何访问 "**托管资源**" 属性页的信息, 请[参阅C++在 Visual Studio 中设置编译器和生成属性](../working-with-project-properties.md)。
 
 ## <a name="see-also"></a>请参阅
 
-[使用 RC（RC 命令行）](/windows/desktop/menurc/using-rc-the-rc-command-line-)<br>
+[使用 RC（RC 命令行）](/windows/win32/menurc/using-rc-the-rc-command-line-)<br>
 [C++项目属性页引用](property-pages-visual-cpp.md)<br>
 [/ASSEMBLYRESOURCE（嵌入托管资源）](assemblyresource-embed-a-managed-resource.md)

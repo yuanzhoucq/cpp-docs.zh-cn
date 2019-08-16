@@ -43,14 +43,14 @@ helpviewer_keywords:
 - vtcprintf function
 - formatted text [C++]
 ms.assetid: 4ef8d237-6200-4b66-8731-8c57e5624bb1
-ms.openlocfilehash: e78d2f0b873042bda4fc79df100374b52751aebc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e5991f903771408a22722dceec3e0c5d84b878e2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364839"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499315"
 ---
-# <a name="vcprintf-vcprintfl-vcwprintf-vcwprintfl"></a>_vcprintf、_vcprintf_l、_vcwprintf、_vcwprintf_l
+# <a name="_vcprintf-_vcprintf_l-_vcwprintf-_vcwprintf_l"></a>_vcprintf、_vcprintf_l、_vcwprintf、_vcwprintf_l
 
 使用指向参数列表的指针编写格式化输出到控制台。 提供这些函数的更多安全版本；请参阅 [_vcprintf_s、_vcprintf_s_l、_vcwprintf_s、_vcwprintf_s_l](vcprintf-s-vcprintf-s-l-vcwprintf-s-vcwprintf-s-l.md)。
 
@@ -95,16 +95,16 @@ int _vcwprintf_l(
 
 ## <a name="return-value"></a>返回值
 
-写入的字符数，如果发生输出错误，则为一个负值。 如果*格式*是空指针，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**并返回-1。
+写入的字符数，如果发生输出错误，则为一个负值。 如果*format*为空指针, 则将调用无效参数处理程序, 如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续, 则将**errno**设置为**EINVAL** , 并返回-1。
 
 ## <a name="remarks"></a>备注
 
-每个函数均采用一个指向参数列表的指针，然后将给定数据格式化并写入到控制台。 **_vcwprintf**是宽字符版本 **_vcprintf**。 它将采用一个宽字符字符串作为参数。
+每个函数均采用一个指向参数列表的指针，然后将给定数据格式化并写入到控制台。 **_vcwprintf**是 **_vcprintf**的宽字符版本。 它将采用一个宽字符字符串作为参数。
 
-使用这些函数的版本 **_l**后缀完全相同，只不过它们使用传递中而不是当前区域设置的区域设置参数。
+使用 **_l**后缀的这些函数的版本是相同的, 只不过它们使用传入的区域设置参数而不是当前区域设置。
 
 > [!IMPORTANT]
-> 确保 format 不是用户定义的字符串。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
+> 确保 format不是用户定义的字符串。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -117,8 +117,8 @@ int _vcwprintf_l(
 
 |例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|----------------------|
-|**_vcprintf**， **_vcprintf_l**|\<conio.h> 和 \<stdarg.h>|\<varargs.h>*|
-|**_vcwprintf**， **_vcwprintf_l**|\<conio.h> 或 \<wchar.h> 和 \<stdarg.h>|\<varargs.h>*|
+|**_vcprintf**、 **_vcprintf_l**|\<conio.h> 和 \<stdarg.h>|\<varargs.h>*|
+|**_vcwprintf**、 **_vcwprintf_l**|\<conio.h> 或 \<wchar.h> 和 \<stdarg.h>|\<varargs.h>*|
 
 \* 仅对 UNIX V 兼容性是必需的。
 

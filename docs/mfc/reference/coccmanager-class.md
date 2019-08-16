@@ -30,12 +30,12 @@ helpviewer_keywords:
 - COccManager [MFC], SetDefaultButton
 - COccManager [MFC], SplitDialogTemplate
 ms.assetid: 7d47aeed-d1ab-48e3-b4cf-d429718e370a
-ms.openlocfilehash: a83f58b8de2411577d9fc025f7a8f8dc535ea8b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c2a49e3396879e5f1e0864ab5342b57541c6b36c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388262"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504487"
 ---
 # <a name="coccmanager-class"></a>COccManager 类
 
@@ -54,21 +54,21 @@ class COccManager : public CNoTrackObject
 |名称|描述|
 |----------|-----------------|
 |[COccManager::CreateContainer](#createcontainer)|创建一个 `COleContainer` 对象。|
-|[COccManager::CreateDlgControls](#createdlgcontrols)|创建 ActiveX 控件，由关联托管`COleContainer`对象。|
+|[COccManager::CreateDlgControls](#createdlgcontrols)|创建由关联`COleContainer`的对象承载的 ActiveX 控件。|
 |[COccManager::CreateSite](#createsite)|创建一个 `COleClientSite` 对象。|
 |[COccManager::GetDefBtnCode](#getdefbtncode)|检索默认按钮的代码。|
-|[COccManager::IsDialogMessage](#isdialogmessage)|确定目标的对话消息。|
+|[COccManager::IsDialogMessage](#isdialogmessage)|确定对话消息的目标。|
 |[COccManager::IsLabelControl](#islabelcontrol)|确定指定的控件是否为标签控件。|
-|[COccManager::IsMatchingMnemonic](#ismatchingmnemonic)|确定当前的助记键是否与指定控件的助记键相匹配。|
+|[COccManager::IsMatchingMnemonic](#ismatchingmnemonic)|确定当前助记键是否与指定控件的助记键匹配。|
 |[COccManager::OnEvent](#onevent)|尝试处理指定的事件。|
-|[COccManager::PostCreateDialog](#postcreatedialog)|释放对话框创建期间分配的资源。|
+|[COccManager::PostCreateDialog](#postcreatedialog)|释放在创建对话框的过程中分配的资源。|
 |[COccManager::PreCreateDialog](#precreatedialog)|处理 ActiveX 控件的对话框模板。|
 |[COccManager::SetDefaultButton](#setdefaultbutton)|切换指定控件的默认状态。|
-|[COccManager::SplitDialogTemplate](#splitdialogtemplate)|从指定的对话框模板中的公共控件将任何现有的 ActiveX 控件。|
+|[COccManager::SplitDialogTemplate](#splitdialogtemplate)|分隔指定对话框模板中的公共控件中的任何现有 ActiveX 控件。|
 
 ## <a name="remarks"></a>备注
 
-基类， `CNoTrackObject`，是一个未记录的基础类 （位于 AFXTLS。H) 中。 设计为供 MFC 框架，类派生自`CNoTrackObject`类不受内存泄漏检测。 不建议直接从派生`CNoTrackObject`。
+基类`CNoTrackObject`是未记录的基类 (位于 AFXTLS 中。H)。 旨在供 MFC 框架使用, 从`CNoTrackObject`类派生的类不受内存泄漏检测的阻止。 不建议直接从`CNoTrackObject`派生。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -78,9 +78,9 @@ class COccManager : public CNoTrackObject
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxocc.h
+**标头:** afxocc
 
-##  <a name="createcontainer"></a>  COccManager::CreateContainer
+##  <a name="createcontainer"></a>COccManager:: CreateContainer
 
 由框架调用以创建控件容器。
 
@@ -95,15 +95,15 @@ virtual COleControlContainer* CreateContainer(CWnd* pWnd);
 
 ### <a name="return-value"></a>返回值
 
-一个指向新创建的容器;否则为，为 NULL。
+指向新创建的容器的指针;否则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-有关创建自定义站点的详细信息，请参阅[COleControlContainer::AttachControlSite](../../mfc/reference/colecontrolcontainer-class.md#attachcontrolsite)。
+有关创建自定义网站的详细信息, 请参阅[COleControlContainer:: AttachControlSite](../../mfc/reference/colecontrolcontainer-class.md#attachcontrolsite)。
 
-##  <a name="createdlgcontrols"></a>  COccManager::CreateDlgControls
+##  <a name="createdlgcontrols"></a>COccManager::CreateDlgControls
 
-调用此函数可创建由指定的 ActiveX 控件*pOccDialogInfo*参数。
+调用此函数可创建由*pOccDialogInfo*参数指定的 ActiveX 控件。
 
 ```
 virtual BOOL CreateDlgControls(
@@ -126,18 +126,18 @@ virtual BOOL CreateDlgControls(
 正在创建的资源的名称。
 
 *pOccDialogInfo*<br/>
-指向用来创建对话框对象的对话框模板的指针。
+指向用于创建对话框对象的对话框模板的指针。
 
 *lpResource*<br/>
 指向资源的指针。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则创建该控件，非零值否则为零。
+如果已成功创建控件, 则为非零值;否则为零。
 
-##  <a name="createsite"></a>  COccManager::CreateSite
+##  <a name="createsite"></a>COccManager:: 网站
 
-由框架调用以创建控件站点，由指向该容器承载*pCtrlCont*。
+由框架调用, 以创建由*pCtrlCont*指向的容器承载的控制站点。
 
 ```
 virtual COleControlSite* CreateSite(COleControlContainer* pCtrlCont);
@@ -146,7 +146,7 @@ virtual COleControlSite* CreateSite(COleControlContainer* pCtrlCont);
 ### <a name="parameters"></a>参数
 
 *pCtrlCont*<br/>
-指向承载新控件站点的控件容器的指针。
+一个指针, 指向承载新控件网站的控件容器。
 
 ### <a name="return-value"></a>返回值
 
@@ -154,13 +154,13 @@ virtual COleControlSite* CreateSite(COleControlContainer* pCtrlCont);
 
 ### <a name="remarks"></a>备注
 
-重写此函数可创建自定义控件站点，使用你[COleControlSite](../../mfc/reference/colecontrolsite-class.md)-派生的类。
+使用[COleControlSite](../../mfc/reference/colecontrolsite-class.md)派生类重写此函数以创建自定义控件站点。
 
-每个控件容器可以托管多个站点。 通过多个调用创建其他站点`CreateSite`。
+每个控件容器都可以托管多个站点。 创建具有多个调用`CreateSite`的其他站点。
 
-##  <a name="getdefbtncode"></a>  COccManager::GetDefBtnCode
+##  <a name="getdefbtncode"></a>COccManager::GetDefBtnCode
 
-调用此函数可确定控件是否默认下压按钮。
+调用此函数可确定控件是否为默认按钮。
 
 ```
 static DWORD AFX_CDECL GetDefBtnCode(CWnd* pWnd);
@@ -169,7 +169,7 @@ static DWORD AFX_CDECL GetDefBtnCode(CWnd* pWnd);
 ### <a name="parameters"></a>参数
 
 *pWnd*<br/>
-包含按钮控件的窗口对象。
+包含 button 控件的窗口对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -179,11 +179,11 @@ static DWORD AFX_CDECL GetDefBtnCode(CWnd* pWnd);
 
 - DLGC_UNDEFPUSHBUTTON 控件不是对话框中的默认按钮。
 
-- **0**控件不是一个按钮。
+- **0**控件不是按钮。
 
-##  <a name="isdialogmessage"></a>  COccManager::IsDialogMessage
+##  <a name="isdialogmessage"></a>COccManager::IsDialogMessage
 
-由框架调用以确定消息是否适用于指定的对话框中，如果是，处理该消息。
+由框架调用, 用于确定消息是否用于指定的对话框, 如果为, 则处理消息。
 
 ```
 virtual BOOL IsDialogMessage(
@@ -194,24 +194,24 @@ virtual BOOL IsDialogMessage(
 ### <a name="parameters"></a>参数
 
 *pWndDlg*<br/>
-一个指向该消息的预期的目标对话框。
+指向消息的目标对话框的指针。
 
 *lpMsg*<br/>
-一个指向`MSG`结构，其中包含要检查的消息。
+指向`MSG`结构的指针, 该结构包含要检查的消息。
 
 ### <a name="return-value"></a>返回值
 
-如果处理了消息; 非零值否则为零。
+如果处理消息, 则为非零值;否则为零。
 
 ### <a name="remarks"></a>备注
 
-默认行为`IsDialogMessage`是检查是否有键盘消息，并将其转换成相应的对话框中的选择。 例如，TAB 键，按下时，选择下一个控件的组。
+的`IsDialogMessage`默认行为是检查键盘消息, 并将其转换为相应对话框的选定内容。 例如, 按 TAB 键时, 将选择下一个控件或一组控件。
 
-重写此函数可为消息发送到指定的对话框提供自定义行为。
+重写此函数以提供发送到指定对话框的消息的自定义行为。
 
-##  <a name="islabelcontrol"></a>  COccManager::IsLabelControl
+##  <a name="islabelcontrol"></a>COccManager::IsLabelControl
 
-调用此函数可确定指定的控件是否标签控件。
+调用此函数可确定指定的控件是否为标签控件。
 
 ```
 static BOOL AFX_CDECL IsLabelControl(CWnd* pWnd);
@@ -221,19 +221,19 @@ static BOOL AFX_CDECL IsLabelControl(COleControlSiteOrWnd* pWnd);
 ### <a name="parameters"></a>参数
 
 *pWnd*<br/>
-指向包含该控件的窗口的指针。
+指向包含控件的窗口的指针。
 
 ### <a name="return-value"></a>返回值
 
-如果该控件的标签; 非零值否则为零
+如果控件是标签, 则为非零值;否则为零
 
 ### <a name="remarks"></a>备注
 
-标签控件是一个类似于任何控件是下一步在排序中的标签。
+"标签" 控件是一个, 它的作用类似于排序中下一控件的标签。
 
-##  <a name="ismatchingmnemonic"></a>  COccManager::IsMatchingMnemonic
+##  <a name="ismatchingmnemonic"></a>COccManager::IsMatchingMnemonic
 
-调用此函数可确定当前的助记键匹配表示的控件。
+调用此函数可确定当前助记键是否与由控件表示的助记键相匹配。
 
 ```
 static BOOL AFX_CDECL IsMatchingMnemonic(
@@ -248,20 +248,20 @@ static BOOL AFX_CDECL IsMatchingMnemonic(
 ### <a name="parameters"></a>参数
 
 *pWnd*<br/>
-指向包含该控件的窗口的指针。
+指向包含控件的窗口的指针。
 
 *lpMsg*<br/>
-指向要匹配的消息包含助记键的指针。
+指向包含要匹配的助记键的消息的指针。
 
 ### <a name="return-value"></a>返回值
 
-如果与助记键匹配的控件，则非零值否则为零
+如果助记键与控件匹配, 则为非零值;否则为零
 
 ### <a name="remarks"></a>备注
 
-##  <a name="onevent"></a>  COccManager::OnEvent
+##  <a name="onevent"></a>COccManager:: OnEvent
 
-由框架调用以处理指定的事件。
+由框架调用, 用于处理指定的事件。
 
 ```
 virtual BOOL OnEvent(
@@ -274,28 +274,28 @@ virtual BOOL OnEvent(
 ### <a name="parameters"></a>参数
 
 *pCmdTarget*<br/>
-一个指向`CCmdTarget`尝试处理该事件的对象
+指向试图处理事件`CCmdTarget`的对象的指针
 
 *idCtrl*<br/>
 控件的资源 ID。
 
 *pEvent*<br/>
-要处理的事件。
+正在处理的事件。
 
 *pHandlerInfo*<br/>
-如果不为 NULL，`OnEvent`填入`pTarget`并`pmf`的成员`AFX_CMDHANDLERINFO`而不是调度该命令的结构。 通常情况下，此参数应为 NULL。
+如果不为 NULL `OnEvent` , 则填充`pTarget` `AFX_CMDHANDLERINFO`结构`pmf`的和成员, 而不是分派命令。 通常, 此参数应为 NULL。
 
 ### <a name="return-value"></a>返回值
 
-如果事件已处理，否则为零，非零值。
+如果已处理事件, 则为非零; 否则为零。
 
 ### <a name="remarks"></a>备注
 
-重写此函数可自定义默认事件处理过程。
+重写此函数以自定义默认事件处理过程。
 
-##  <a name="precreatedialog"></a>  COccManager::PreCreateDialog
+##  <a name="precreatedialog"></a>COccManager::P reCreateDialog
 
-由框架调用以在创建实际的对话框之前处理 ActiveX 控件的对话框模板。
+由框架调用, 用于在创建实际对话框之前处理 ActiveX 控件的对话框模板。
 
 ```
 virtual const DLGTEMPLATE* PreCreateDialog(
@@ -306,24 +306,24 @@ virtual const DLGTEMPLATE* PreCreateDialog(
 ### <a name="parameters"></a>参数
 
 *pOccDialogInfo*<br/>
-`_AFX_OCC_DIALOG_INFO`结构，它包含在对话框模板和由对话框承载任何 ActiveX 控件的信息。
+一个`_AFX_OCC_DIALOG_INFO`结构, 该结构包含对话框所承载的对话框模板和任何 ActiveX 控件的信息。
 
 *pOrigTemplate*<br/>
-指向要在中创建对话框的使用的对话框模板的指针。
+一个指针, 指向要在创建对话框时使用的对话框模板。
 
 ### <a name="return-value"></a>返回值
 
-指向用于创建对话框中的对话框模板结构的指针。
+一个指针, 指向用于创建对话框的对话框模板结构。
 
 ### <a name="remarks"></a>备注
 
-默认行为使调用`SplitDialogTemplate`，确定是否存在任何 ActiveX 控件存在，然后返回结果的对话框模板。
+默认行为将调用`SplitDialogTemplate`, 从而确定是否存在任何 ActiveX 控件, 然后返回生成的对话框模板。
 
-重写此函数可自定义创建一个对话框，承载 ActiveX 控件的过程。
+重写此函数以自定义用于创建承载 ActiveX 控件的对话框的过程。
 
-##  <a name="postcreatedialog"></a>  COccManager::PostCreateDialog
+##  <a name="postcreatedialog"></a>COccManager::P ostCreateDialog
 
-由框架调用以释放内存分配的对话框模板。
+由框架调用以释放为对话框模板分配的内存。
 
 ```
 virtual void PostCreateDialog(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
@@ -332,15 +332,15 @@ virtual void PostCreateDialog(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
 ### <a name="parameters"></a>参数
 
 *pOccDialogInfo*<br/>
-`_AFX_OCC_DIALOG_INFO`结构，它包含在对话框模板和由对话框承载任何 ActiveX 控件的信息。
+一个`_AFX_OCC_DIALOG_INFO`结构, 该结构包含对话框所承载的对话框模板和任何 ActiveX 控件的信息。
 
 ### <a name="remarks"></a>备注
 
-此内存分配通过调用`SplitDialogTemplate`，和用于在对话框中的任何托管 ActiveX 控件。
+此内存由对的调用`SplitDialogTemplate`分配, 并用于对话框中的任何托管 ActiveX 控件。
 
-重写此函数可自定义清理使用对话框对象的任何资源的过程。
+重写此函数以自定义清理对话框对象所使用的任何资源的过程。
 
-##  <a name="setdefaultbutton"></a>  COccManager::SetDefaultButton
+##  <a name="setdefaultbutton"></a>COccManager::SetDefaultButton
 
 调用此函数可将控件设置为默认按钮。
 
@@ -353,10 +353,10 @@ static void AFX_CDECL SetDefaultButton(
 ### <a name="parameters"></a>参数
 
 *pWnd*<br/>
-指向包含该控件的窗口的指针。
+指向包含控件的窗口的指针。
 
 *bDefault*<br/>
-如果控件应成为默认按钮，则非零值否则为零。
+如果控件应成为默认按钮, 则为非零值;否则为零。
 
 ### <a name="return-value"></a>返回值
 
@@ -365,11 +365,11 @@ static void AFX_CDECL SetDefaultButton(
 ### <a name="remarks"></a>备注
 
 > [!NOTE]
->  控件必须具有 OLEMISC_ACTSLIKEBUTTON 位的状态集。 OLEMISC 标志的详细信息，请参阅[OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc) Windows SDK 中的主题。
+>  控件必须设置 OLEMISC_ACTSLIKEBUTTON 状态位。 有关 OLEMISC 标志的详细信息, 请参阅 "Windows SDK 中的[OLEMISC](/windows/win32/api/oleidl/ne-oleidl-olemisc)主题。
 
-##  <a name="splitdialogtemplate"></a>  COccManager::SplitDialogTemplate
+##  <a name="splitdialogtemplate"></a>COccManager::SplitDialogTemplate
 
-由框架调用以拆分从公共对话框控件的 ActiveX 控件。
+由框架调用, 用于从公共对话框控件拆分 ActiveX 控件。
 
 ```
 virtual DLGTEMPLATE* SplitDialogTemplate(
@@ -383,22 +383,22 @@ virtual DLGTEMPLATE* SplitDialogTemplate(
 指向要检查的对话框模板的指针。
 
 *ppOleDlgItems*<br/>
-指向作为 ActiveX 控件的对话框项的指针的列表。
+指向属于 ActiveX 控件的对话框项的指针列表。
 
 ### <a name="return-value"></a>返回值
 
-指向包含仅非 ActiveX 控件的对话框模板结构的指针。 如果存在任何 ActiveX 控件，则返回 NULL。
+指向仅包含非 ActiveX 控件的对话框模板结构的指针。 如果没有 ActiveX 控件, 则返回 NULL。
 
 ### <a name="remarks"></a>备注
 
-如果找到任何 ActiveX 控件，该模板将分析并创建一个新的模板，其中包含仅非 ActiveX 控件。 在此过程中发现任何 ActiveX 控件添加到*ppOleDlgItems*。
+如果找到任何 ActiveX 控件, 则会分析模板, 并创建仅包含非 ActiveX 控件的新模板。 在此过程中找到的任何 ActiveX 控件都将添加到*ppOleDlgItems*中。
 
-如果在模板中没有任何 ActiveX 控件，则返回 NULL *。*
+如果模板中没有 ActiveX 控件, 则返回 NULL *。*
 
 > [!NOTE]
->  为新模板将在释放分配的内存`PostCreateDialog`函数。
+>  为新模板分配的内存在`PostCreateDialog`函数中释放。
 
-重写此函数可自定义此过程。
+重写此函数以自定义此过程。
 
 ## <a name="see-also"></a>请参阅
 

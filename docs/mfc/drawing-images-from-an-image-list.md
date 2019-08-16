@@ -7,12 +7,12 @@ helpviewer_keywords:
 - image lists [MFC], drawing images from
 - images [MFC], drawing
 ms.assetid: 2f6063fb-1c28-45f8-a333-008c064db11c
-ms.openlocfilehash: e4e60f0e6e4ee22712e4bbce344fd6437cf3db7e
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: fb307d5557c0e136c1c44c29f08af6062bb1c19d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916413"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508607"
 ---
 # <a name="drawing-images-from-an-image-list"></a>从图像列表绘制图像
 
@@ -28,7 +28,7 @@ ms.locfileid: "68916413"
 
 使用`SRCCOPY`光栅操作将 draw 映像复制到目标设备上下文。 不论设备上下文的背景色是什么，图像中的颜色都相同。 中`Draw`指定的绘制样式也不会影响 draw 图像的外观。
 
-除了 Draw 成员函数外, 另一个函数[DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect)还扩展了呈现图像的能力。 `DrawIndirect`采用[IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commctrl-imagelistdrawparams)结构作为参数。 此结构可用于自定义当前图像的渲染，包括光栅操作 (ROP) 代码的使用。 有关 ROP 代码的详细信息, 请参阅[光栅操作代码](/windows/desktop/gdi/raster-operation-codes)和[位图作为](/windows/desktop/gdi/bitmaps-as-brushes)Windows SDK 中的画笔。
+除了 Draw 成员函数外, 另一个函数[DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect)还扩展了呈现图像的能力。 `DrawIndirect`采用[IMAGELISTDRAWPARAMS](/windows/win32/api/commctrl/ns-commctrl-imagelistdrawparams)结构作为参数。 此结构可用于自定义当前图像的渲染，包括光栅操作 (ROP) 代码的使用。 有关 ROP 代码的详细信息, 请参阅[光栅操作代码](/windows/win32/gdi/raster-operation-codes)和[位图作为](/windows/win32/gdi/bitmaps-as-brushes)Windows SDK 中的画笔。
 
 ## <a name="see-also"></a>请参阅
 

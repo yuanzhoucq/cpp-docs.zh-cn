@@ -34,14 +34,14 @@ helpviewer_keywords:
 - _mbccpy function
 - mbccpy_l function
 ms.assetid: 13f4de6e-7792-41ac-b319-dd9b135433aa
-ms.openlocfilehash: 852097ebea41ef99b1a53f7bc344eb0c08911a4d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d0711a98813565e945dad1d0e998847029668c2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156832"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499898"
 ---
-# <a name="mbccpy-mbccpyl"></a>_mbccpy、_mbccpy_l
+# <a name="_mbccpy-_mbccpy_l"></a>_mbccpy、_mbccpy_l
 
 将多字节字符从一个字符串复制到另一个字符串。 提供这些函数的更多安全版本；请参阅 [_mbccpy_s、_mbccpy_s_l](mbccpy-s-mbccpy-s-l.md)。
 
@@ -64,7 +64,7 @@ void _mbccpy_l(
 
 ### <a name="parameters"></a>参数
 
-*dest*<br/>
+dest<br/>
 复制目标。
 
 *src*<br/>
@@ -75,13 +75,13 @@ void _mbccpy_l(
 
 ## <a name="remarks"></a>备注
 
-**_Mbccpy**函数将复制从一个多字节字符*src*到*dest*。
+**_Mbccpy**函数将一个多字节字符从*src*复制到*目标*。
 
-此函数验证其参数。 如果 **_mbccpy**为传递了 null 指针*dest*或*src*，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md). 如果允许执行继续，则**errno**设置为**EINVAL**。
+此函数验证其参数。 如果向 **_mbccpy**传递了用于*dest*或*src*的空指针, 则将调用无效参数处理程序, 如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续, 则将**errno**设置为**EINVAL**。
 
-**_mbccpy**的任何区域设置相关行为使用当前区域设置。 **_mbccpy_l**等同于 **_mbccpy**只不过 **_mbccpy_l**使用任何区域设置相关的行为的传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**_mbccpy**为任何与区域设置相关的行为使用当前区域设置。 **_mbccpy_l**与 **_mbccpy**相同, 不同之处在于 **_mbccpy_l**使用传入的区域设置用于任何依赖于区域设置的行为。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-**安全说明** 使用以 null 结尾的字符串。 以 null 结尾的字符串不得超过目标缓冲区的大小。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。 缓冲区溢出问题是常见的系统攻击方法，使权限的提升不能确保。
+**安全说明** 使用以 null 结尾的字符串。 以 null 结尾的字符串不得超过目标缓冲区的大小。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。 缓冲区溢出问题是常见的系统攻击方法，使权限的提升不能确保。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
