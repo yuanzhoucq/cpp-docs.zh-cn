@@ -7,12 +7,12 @@ helpviewer_keywords:
 - RBN_ notification messages [MFC]
 - notifications [MFC], CReBarCtrl
 ms.assetid: 40f43a60-0c18-4d8d-8fab-213a095624f9
-ms.openlocfilehash: 8ac225802bd1d0a0a4b0f30e017fa677f1072fd3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 948990c8597c2ccdcec496252c6801c02a78cbf5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296288"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507959"
 ---
 # <a name="processing-notification-messages-in-a-rebar-control"></a>处理 Rebar 控件中的通知消息
 
@@ -20,25 +20,25 @@ ms.locfileid: "57296288"
 
 可通过 rebar 控件对象发送以下通知消息：
 
-- RBN_AUTOSIZE，由 rebar 控件 （使用 RBS_AUTOSIZE 样式创建） 发送当 rebar 自动调整自身大小。
+- 当 rebar 自动调整自身的大小时, 由 rebar 控件发送的 RBN_AUTOSIZE (使用 RBS_AUTOSIZE 样式创建)。
 
-- 当用户开始拖动带区的 rebar 控件发送 RBN_BEGINDRAG。
+- RBN_BEGINDRAG 当用户开始拖动带区时, 由 rebar 控件发送。
 
-- RBN_CHILDSIZE，由 rebar 控件带区的子窗口调整大小时发送。
+- 当调整带区子窗口的大小时, 由 rebar 控件发送的 RBN_CHILDSIZE。
 
-- RBN_DELETEDBAND，由 rebar 控件删除带区后发送。
+- RBN_DELETEDBAND 在删除带区之后由 rebar 控件发送。
 
-- RBN_DELETINGBAND，由 rebar 控件即将删除带区时发送。
+- RBN_DELETINGBAND 要删除带区时, 由 rebar 控件发送。
 
-- RBN_ENDDRAG，由 rebar 控件用户停止拖动带区时发送。
+- RBN_ENDDRAG 当用户停止拖动带区时, 由 rebar 控件发送。
 
-- RBN_GETOBJECT，由 rebar 控件 （使用 RBS_REGISTERDROP 样式创建） 发送时将对象拖控件中的带。
+- 当将对象拖到控件中的带区上时, 由 rebar 控件发送的 RBN_GETOBJECT (使用 RBS_REGISTERDROP 样式创建)。
 
-- RBN_HEIGHTCHANGE，由 rebar 控件窗体的高度已更改时发送。
+- 当 rebar 控件的高度改变时, RBN_HEIGHTCHANGE 发送。
 
-- RBN_LAYOUTCHANGED，由 rebar 控件在用户更改控件的带区布局时发送。
+- RBN_LAYOUTCHANGED 当用户更改控件带区的布局时, 由 rebar 控件发送。
 
-这些通知的详细信息，请参阅[Rebar 控件参考](/windows/desktop/controls/rebar-control-reference)Windows SDK 中。
+有关这些通知的详细信息, 请参阅中的[Rebar 控件引用](/windows/win32/controls/rebar-control-reference)Windows SDK。
 
 ## <a name="see-also"></a>请参阅
 

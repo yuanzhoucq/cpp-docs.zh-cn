@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - istream/std::operator&gt;&gt;
 ms.assetid: 7174da41-f301-4a34-b631-0ab918b188d2
-ms.openlocfilehash: c10692194c80051b10ecbe776c7d23a03860d508
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f5da7c6805d10e919255ce301dae5618ef58e76d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447789"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501914"
 ---
 # <a name="ltistreamgt-operators"></a>&lt;istream&gt; 运算符
 
@@ -86,7 +86,7 @@ basic_istream<Elem, Tr>& operator>>(
 
 提取多达 *N* - 1 个元素，并将其存储在以 _ *Str* 开始的数组中。 如果 `Istr`. [width](../standard-library/ios-base-class.md#width) 大于 0，则 *N* 为 `Istr`. **width**;否则, 它是可声明`Elem`的最大数组的大小。 函数始终将值`Elem()`存储在它存储的任何提取的元素之后。 遇到文件末尾、值为 **Elem**(0) 的字符（不会被提取）或会被 [ws](../standard-library/istream-functions.md#ws) 放弃的任何元素（不会被提取）时，提取会提前结束。 如果此函数没有提取任何元素，则会调用 `Istr`. [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**)。 在任何情况下，它调用 `Istr`. **宽度**(0) 并返回*Istr*。
 
-**安全说明**要从输入流中提取的以 null 结尾的字符串不得超过目标缓冲区*str*的大小。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
+**安全说明**要从输入流中提取的以 null 结尾的字符串不得超过目标缓冲区*str*的大小。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 模板函数：
 

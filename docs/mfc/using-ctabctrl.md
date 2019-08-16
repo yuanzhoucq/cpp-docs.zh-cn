@@ -7,20 +7,20 @@ helpviewer_keywords:
 - CTabCtrl class [MFC], using
 - tab controls [MFC], using
 ms.assetid: 6bda6798-0085-4c09-a5ea-fe0e97af5c95
-ms.openlocfilehash: 97844fea667edab5a4d1f1a49c3908454a203d1f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f07452fd52e2da3187e89ceafcd9f74e3f0cb159
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411677"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510780"
 ---
 # <a name="using-ctabctrl"></a>使用 CTabCtrl
 
-“选项卡控件”类似于笔记本中的分隔条或文件柜中的带标签的文件夹。 使用选项卡控件，由类[CTabCtrl](../mfc/reference/ctabctrl-class.md)、 给用户，建议的对等或每页之间的逻辑关系的格式一次一个地显示的信息或控件的多页。
+“选项卡控件”类似于笔记本中的分隔条或文件柜中的带标签的文件夹。 使用由类[CTabCtrl](../mfc/reference/ctabctrl-class.md)表示的选项卡控件, 可以一次向用户显示多页的信息或控件, 采用一种格式, 该格式建议每个页面之间的对等或逻辑关系。
 
-选项卡控件的详细信息，请参阅[选项卡控件](/windows/desktop/Controls/tab-controls)Windows SDK 中。
+有关选项卡控件的详细信息, 请参阅 Windows SDK 中的[选项卡控件](/windows/win32/Controls/tab-controls)。
 
-## <a name="what-do-you-want-to-know-more-about"></a>你想要了解更多信息
+## <a name="what-do-you-want-to-know-more-about"></a>要了解有关的详细信息
 
 - [选项卡控件和属性表](../mfc/tab-controls-and-property-sheets.md)
 

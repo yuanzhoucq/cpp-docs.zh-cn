@@ -20,19 +20,19 @@ helpviewer_keywords:
 - controls [ATL], windowless
 - deactivating ATL
 ms.assetid: a2e0feb4-bc59-4adf-aab2-105457bbdbb4
-ms.openlocfilehash: df14c22f5cf4828b51bf03f6d0f0c4c20cf5a009
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fdd660daae109ac2a656519131dd9869ceaeaf4e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197859"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495747"
 ---
 # <a name="ioleinplaceobjectwindowlessimpl-class"></a>IOleInPlaceObjectWindowlessImpl 类
 
-此类实现`IUnknown`并提供启用无窗口控件接收窗口消息并将参与拖放操作的方法。
+此类实现`IUnknown`并提供使无窗口控件接收窗口消息和参与拖放操作的方法。
 
 > [!IMPORTANT]
->  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
+>  此类及其成员不能用于在 Windows 运行时中执行的应用程序。
 
 ## <a name="syntax"></a>语法
 
@@ -44,7 +44,7 @@ class IOleInPlaceObjectWindowlessImpl
 #### <a name="parameters"></a>参数
 
 *T*<br/>
-您的类，派生自`IOleInPlaceObjectWindowlessImpl`。
+派生自`IOleInPlaceObjectWindowlessImpl`的类。
 
 ## <a name="members"></a>成员
 
@@ -52,20 +52,20 @@ class IOleInPlaceObjectWindowlessImpl
 
 |名称|描述|
 |----------|-----------------|
-|[IOleInPlaceObjectWindowlessImpl::ContextSensitiveHelp](#contextsensitivehelp)|使上下文相关帮助。 ATL 实现返回 E_NOTIMPL。|
-|[IOleInPlaceObjectWindowlessImpl::GetDropTarget](#getdroptarget)|提供`IDropTarget`支持拖放的适当地处于活动状态，无窗口对象的接口。 ATL 实现返回 E_NOTIMPL。|
+|[IOleInPlaceObjectWindowlessImpl::ContextSensitiveHelp](#contextsensitivehelp)|启用区分上下文的帮助。 ATL 实现返回 E_NOTIMPL。|
+|[IOleInPlaceObjectWindowlessImpl::GetDropTarget](#getdroptarget)|提供支持拖放的就地活动的无窗口对象的接口。`IDropTarget` ATL 实现返回 E_NOTIMPL。|
 |[IOleInPlaceObjectWindowlessImpl::GetWindow](#getwindow)|获取窗口句柄。|
 |[IOleInPlaceObjectWindowlessImpl::InPlaceDeactivate](#inplacedeactivate)|停用活动的就地控件。|
-|[IOleInPlaceObjectWindowlessImpl::OnWindowMessage](#onwindowmessage)|将调度到处于就地活动状态的无窗口控件容器的消息。|
-|[IOleInPlaceObjectWindowlessImpl::ReactivateAndUndo](#reactivateandundo)|重新激活以前已停用的控件。 ATL 实现返回 E_NOTIMPL。|
-|[IOleInPlaceObjectWindowlessImpl::SetObjectRects](#setobjectrects)|指示哪一部分的就地控件可见。|
+|[IOleInPlaceObjectWindowlessImpl::OnWindowMessage](#onwindowmessage)|将来自容器的消息调度到就地活动的无窗口控件。|
+|[IOleInPlaceObjectWindowlessImpl::ReactivateAndUndo](#reactivateandundo)|重新激活以前停用的控件。 ATL 实现返回 E_NOTIMPL。|
+|[IOleInPlaceObjectWindowlessImpl::SetObjectRects](#setobjectrects)|指示就地控件的哪些部分可见。|
 |[IOleInPlaceObjectWindowlessImpl::UIDeactivate](#uideactivate)|停用并删除支持就地激活的用户界面。|
 
 ## <a name="remarks"></a>备注
 
-[IOleInPlaceObject](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceobject)接口管理重新激活和停用现有的控制，并确定控件的大小应为可见。 [IOleInPlaceObjectWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplaceobjectwindowless)接口，无窗口控件接收窗口消息并将参与拖放操作。 类`IOleInPlaceObjectWindowlessImpl`提供的默认实现`IOleInPlaceObject`并`IOleInPlaceObjectWindowless`并实现`IUnknown`信息发送给转储调试中的设备生成。
+[IOleInPlaceObject](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceobject)接口管理就地控件的重新激活和停用, 并确定控件应可见的程度。 [IOleInPlaceObjectWindowless](/windows/win32/api/ocidl/nn-ocidl-ioleinplaceobjectwindowless)接口允许无窗口控件接收窗口消息, 并参与拖放操作。 类`IOleInPlaceObjectWindowlessImpl`提供`IOleInPlaceObject`和`IUnknown`的默认实现, 并通过在调试版本中将信息发送到转储设备来实现。 `IOleInPlaceObjectWindowless`
 
-**相关文章** [ATL 教程](../../atl/active-template-library-atl-tutorial.md)，[创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)
+**相关文章**[Atl 教程](../../atl/active-template-library-atl-tutorial.md),[创建 atl 项目](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -75,7 +75,7 @@ class IOleInPlaceObjectWindowlessImpl
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlctl.h
+**标头:** atlctl
 
 ##  <a name="contextsensitivehelp"></a>  IOleInPlaceObjectWindowlessImpl::ContextSensitiveHelp
 
@@ -87,7 +87,7 @@ HRESULT ContextSensitiveHelp(BOOL fEnterMode);
 
 ### <a name="remarks"></a>备注
 
-请参阅[IOleWindow::ContextSensitiveHelp](/windows/desktop/api/oleidl/nf-oleidl-iolewindow-contextsensitivehelp) Windows SDK 中。
+请参阅 Windows SDK 中的[IOleWindow:: ContextSensitiveHelp](/windows/win32/api/oleidl/nf-oleidl-iolewindow-contextsensitivehelp) 。
 
 ##  <a name="getdroptarget"></a>  IOleInPlaceObjectWindowlessImpl::GetDropTarget
 
@@ -99,11 +99,11 @@ HRESULT GetDropTarget(IDropTarget** ppDropTarget);
 
 ### <a name="remarks"></a>备注
 
-请参阅[IOleInPlaceObjectWindowless::GetDropTarget](/windows/desktop/api/ocidl/nf-ocidl-ioleinplaceobjectwindowless-getdroptarget) Windows SDK 中。
+请参阅 Windows SDK 中的[IOleInPlaceObjectWindowless:: GetDropTarget](/windows/win32/api/ocidl/nf-ocidl-ioleinplaceobjectwindowless-getdroptarget) 。
 
 ##  <a name="getwindow"></a>  IOleInPlaceObjectWindowlessImpl::GetWindow
 
-容器调用此函数可获取该控件的窗口句柄。
+容器调用此函数以获取控件的窗口句柄。
 
 ```
 HRESULT GetWindow(HWND* phwnd);
@@ -111,13 +111,13 @@ HRESULT GetWindow(HWND* phwnd);
 
 ### <a name="remarks"></a>备注
 
-某些容器不会使用已无窗口，即使它是当前窗口的控件。 在 ATL 的实现中，如果控件类数据成员`m_bWasOnceWindowless`为 TRUE 时，该函数将返回 E_FAIL。 否则为如果*phwnd*不为 NULL，`GetWindow`设置\* *phwnd*到控件类数据成员`m_hWnd`，并返回 S_OK。
+某些容器将不会使用无窗口的控件, 即使它当前处于窗口窗口也是如此。 在 ATL 的实现中, 如果控件类的数据成员`m_bWasOnceWindowless`为 TRUE, 则函数返回 E_FAIL。 否则, 如果*phwnd*不为 NULL, `GetWindow`则\*将*phwnd*设置为控件类的数据`m_hWnd`成员, 并返回 S_OK。
 
-请参阅[IOleWindow::GetWindow](/windows/desktop/api/oleidl/nf-oleidl-iolewindow-getwindow) Windows SDK 中。
+请参阅 Windows SDK 中的[IOleWindow:: GetWindow](/windows/win32/api/oleidl/nf-oleidl-iolewindow-getwindow) 。
 
 ##  <a name="inplacedeactivate"></a>  IOleInPlaceObjectWindowlessImpl::InPlaceDeactivate
 
-若要停用的就地活动控件的容器由调用。
+由容器调用以停用就地活动控件。
 
 ```
 HRESULT InPlaceDeactivate(HWND* phwnd);
@@ -125,13 +125,13 @@ HRESULT InPlaceDeactivate(HWND* phwnd);
 
 ### <a name="remarks"></a>备注
 
-此方法执行具体取决于控件的状态的完整或部分停用。 如有必要，控件的用户界面已停用，并销毁该控件的窗口中，如果有的话。 容器是收到通知，该控件不再处于活动状态中的位置。 `IOleInPlaceUIWindow`释放由容器来协商菜单和边框空间的接口。
+此方法执行完全或部分停用, 具体取决于控件的状态。 如有必要, 将停用该控件的用户界面, 并且销毁该控件的窗口 (如果有)。 将通知容器控件不再处于活动状态。 容器用来协商菜单和边框空间的接口已释放。`IOleInPlaceUIWindow`
 
-请参阅[IOleInPlaceObject::InPlaceDeactivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceobject-inplacedeactivate) Windows SDK 中。
+请参阅 Windows SDK 中的[IOleInPlaceObject:: InPlaceDeactivate](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-inplacedeactivate) 。
 
 ##  <a name="onwindowmessage"></a>  IOleInPlaceObjectWindowlessImpl::OnWindowMessage
 
-将调度到处于就地活动状态的无窗口控件容器的消息。
+将来自容器的消息调度到就地活动的无窗口控件。
 
 ```
 HRESULT OnWindowMessage(
@@ -143,7 +143,7 @@ HRESULT OnWindowMessage(
 
 ### <a name="remarks"></a>备注
 
-请参阅[IOleInPlaceObjectWindowless::OnWindowMessage](/windows/desktop/api/ocidl/nf-ocidl-ioleinplaceobjectwindowless-onwindowmessage) Windows SDK 中。
+请参阅 Windows SDK 中的[IOleInPlaceObjectWindowless:: OnWindowMessage](/windows/win32/api/ocidl/nf-ocidl-ioleinplaceobjectwindowless-onwindowmessage) 。
 
 ##  <a name="reactivateandundo"></a>  IOleInPlaceObjectWindowlessImpl::ReactivateAndUndo
 
@@ -155,11 +155,11 @@ HRESULT ReactivateAndUndo();
 
 ### <a name="remarks"></a>备注
 
-请参阅[IOleInPlaceObject::ReactivateAndUndo](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceobject-reactivateandundo) Windows SDK 中。
+请参阅 Windows SDK 中的[IOleInPlaceObject:: ReactivateAndUndo](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-reactivateandundo) 。
 
 ##  <a name="setobjectrects"></a>  IOleInPlaceObjectWindowlessImpl::SetObjectRects
 
-由容器以通知其大小和/或位置已更改的控件调用。
+由容器调用以通知控件其大小和/或位置已更改。
 
 ```
 HRESULT SetObjectRects(LPCRECT prcPos, LPCRECT prcClip);
@@ -167,13 +167,13 @@ HRESULT SetObjectRects(LPCRECT prcPos, LPCRECT prcClip);
 
 ### <a name="remarks"></a>备注
 
-更新控件的`m_rcPos`数据成员和控件显示。 将显示仅与该剪辑区域相交的控件的部分。 如果以前剪辑控件的显示，但已删除剪辑，则可以调用此函数重绘该控件的完整视图。
+更新控件的`m_rcPos`数据成员和控件显示。 只显示与剪辑区域相交的控件部分。 如果以前剪切了控件的显示, 但剪辑已被移除, 则可调用此函数来重绘控件的完整视图。
 
-请参阅[IOleInPlaceObject::SetObjectRects](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceobject-setobjectrects) Windows SDK 中。
+请参阅 Windows SDK 中的[IOleInPlaceObject:: SetObjectRects](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-setobjectrects) 。
 
 ##  <a name="uideactivate"></a>  IOleInPlaceObjectWindowlessImpl::UIDeactivate
 
-停用并删除支持就地激活的控件的用户界面。
+停用并删除控件的支持就地激活的用户界面。
 
 ```
 HRESULT UIDeactivate();
@@ -181,9 +181,9 @@ HRESULT UIDeactivate();
 
 ### <a name="remarks"></a>备注
 
-设置控件类数据成员`m_bUIActive`为 FALSE。 此函数的 ATL 实现始终返回 S_OK。
+将控件类的数据成员`m_bUIActive`设置为 FALSE。 此函数的 ATL 实现始终返回 S_OK。
 
-请参阅[IOleInPlaceObject::UIDeactivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceobject-uideactivate) Windows SDK 中。
+请参阅 Windows SDK 中的[IOleInPlaceObject:: UIDeactivate](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-uideactivate) 。
 
 ## <a name="see-also"></a>请参阅
 

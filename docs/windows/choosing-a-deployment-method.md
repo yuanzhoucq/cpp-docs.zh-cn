@@ -12,12 +12,12 @@ helpviewer_keywords:
 - static linking [C++]
 - libraries [C++], application deployment issues
 ms.assetid: fd8eb956-f4a0-4ffb-b401-328c73e66986
-ms.openlocfilehash: 5ca1f33a809bc81b7dcc090231e507ba66775205
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e2281effaa94c32454e88100c8b7020961f748d9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407050"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514838"
 ---
 # <a name="choosing-a-deployment-method"></a>选择部署方法
 
@@ -42,7 +42,7 @@ ms.locfileid: "62407050"
 
 如果部署使用可再发行合并模块，并且由不具备管理员权限的用户运行安装，则 Visual C++ DLL 不会安装，应用程序也不会运行。 另外，通过允许按用户安装的合并模块生成的应用程序安装程序会将库安装在影响所有系统用户的共享位置中。 你可以使用本地部署在特定用户的应用程序目录中安装所需的 Visual C++ DLL，这样不影响其他用户，也不需要管理员权限。 由于这可能造成可服务性问题，因此不建议本地部署 Visual C++ 可再发行 DLL。
 
-Visual C++ 库的错误部署可能导致执行依赖于这些库的应用程序时出现运行时错误。 当操作系统加载应用程序时，它使用中所述的搜索顺序[LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexw)。
+Visual C++ 库的错误部署可能导致执行依赖于这些库的应用程序时出现运行时错误。 当操作系统加载该应用程序时, 它将使用[LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw)中所述的搜索顺序。
 
 ## <a name="dynamic-linking-is-better-than-static-linking"></a>动态链接优于静态链接
 

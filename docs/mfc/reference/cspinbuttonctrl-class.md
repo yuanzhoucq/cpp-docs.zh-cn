@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: da247524dae77627bbf041b83bc1534a75c3b073
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: c167745eed45b7081e62a2c3be225a33e7ee0520
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916701"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502440"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl 类
 
@@ -117,7 +117,7 @@ virtual BOOL Create(
 ### <a name="parameters"></a>参数
 
 *dwStyle*<br/>
-指定数值调节钮控件的样式。 将数值调节钮控件样式的任意组合应用于控件。 Windows SDK 中的 up-down[控件样式](/windows/desktop/Controls/up-down-control-styles)介绍了这些样式。
+指定数值调节钮控件的样式。 将数值调节钮控件样式的任意组合应用于控件。 Windows SDK 中的 up-down[控件样式](/windows/win32/Controls/up-down-control-styles)介绍了这些样式。
 
 *rect*<br/>
 指定数值调节钮控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](/previous-versions/dd162897\(v=vs.85\))结构
@@ -154,10 +154,10 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>参数
 
 *dwExStyle*<br/>
-指定正在创建的控件的扩展样式。 有关扩展 windows 样式的列表, 请参阅 Windows SDK 中[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)的*dwExStyle*参数。
+指定正在创建的控件的扩展样式。 有关扩展 windows 样式的列表, 请参阅 Windows SDK 中[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)的*dwExStyle*参数。
 
 *dwStyle*<br/>
-指定数值调节钮控件的样式。 将数值调节钮控件样式的任意组合应用于控件。 Windows SDK 中的 up-down[控件样式](/windows/desktop/Controls/up-down-control-styles)介绍了这些样式。
+指定数值调节钮控件的样式。 将数值调节钮控件样式的任意组合应用于控件。 Windows SDK 中的 up-down[控件样式](/windows/win32/Controls/up-down-control-styles)介绍了这些样式。
 
 *rect*<br/>
 对[矩形](/previous-versions/dd162897\(v=vs.85\))结构的引用, 该结构描述要创建的窗口的大小和位置 (以*pParentWnd*的工作区坐标表示)。
@@ -200,7 +200,7 @@ UINT GetAccel(
 由*pAccel*指定的数组中的元素数。
 
 *pAccel*<br/>
-指向接收加速信息的[UDACCEL](/windows/desktop/api/commctrl/ns-commctrl-udaccel)结构的数组的指针。
+指向接收加速信息的[UDACCEL](/windows/win32/api/commctrl/ns-commctrl-udaccel)结构的数组的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -298,7 +298,7 @@ BOOL SetAccel(
 ### <a name="parameters"></a>参数
 
 *nAccel*<br/>
-*PAccel*指定的[UDACCEL](/windows/desktop/api/commctrl/ns-commctrl-udaccel)结构的数量。
+*PAccel*指定的[UDACCEL](/windows/win32/api/commctrl/ns-commctrl-udaccel)结构的数量。
 
 *pAccel*<br/>
 指向 UDACCEL 结构的数组的指针, 该数组包含加速信息。 元素应根据`nSec`成员按升序排序。

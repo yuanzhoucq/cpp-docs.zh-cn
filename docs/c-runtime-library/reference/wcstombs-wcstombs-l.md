@@ -30,14 +30,14 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 91234252-9ea1-423a-af99-e9d0ce4a40e3
-ms.openlocfilehash: d102cd74061faeb0c41823e6cf5c9a8ef335294f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5ee2a0e5636e9c1d1f3fc204b2b6cbf8b733d45
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188579"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498986"
 ---
-# <a name="wcstombs-wcstombsl"></a>wcstombs、_wcstombs_l
+# <a name="wcstombs-_wcstombs_l"></a>wcstombs、_wcstombs_l
 
 将宽字符序列转换为对应的多字节字符序列。 提供这些函数的更多安全版本；请参阅 [wcstombs_s、_wcstombs_s_l](wcstombs-s-wcstombs-s-l.md)。
 
@@ -78,7 +78,7 @@ size_t _wcstombs_l(
 *wcstr*<br/>
 宽字符序列的地址。
 
-*count*<br/>
+*计数*<br/>
 多字节输出字符串可以存储的最大字节数。
 
 *locale*<br/>
@@ -86,19 +86,19 @@ size_t _wcstombs_l(
 
 ## <a name="return-value"></a>返回值
 
-如果**wcstombs**成功转换多字节字符串，它将返回到不包括终止 null （如果有） 的多字节输出字符串写入的字节数。 如果*mbstr*自变量是**NULL**， **wcstombs**返回以字节为单位的目标字符串所需的大小。 如果**wcstombs**遇到无法转换为多字节字符的宽字符则返回-1 强制转换为类型**size_t**并设置**errno**到**EILSEQ**.
+如果**wcstombs**成功转换多字节字符串, 则它将返回写入多字节输出字符串的字节数, 不包括终止 null (如果有)。 如果*mbstr*参数为**NULL**, 则**wcstombs**返回目标字符串所需的大小 (以字节为单位)。 如果**wcstombs**遇到不能转换为多字节字符的宽字符, 则将返回-1 强制转换为类型**size_t** , 并将**errno**设置为**eilseq 且**。
 
 ## <a name="remarks"></a>备注
 
-**Wcstombs**函数将转换的指向的宽字符字符串*wcstr*到相应的多字节字符，并将存储中的结果*mbstr*数组。 *计数*参数指示的最大可以为多字节输出字符串中存储的字节数 (即，大小*mbstr*)。 一般情况下，转换宽字符字符串时不会知道需要多少个字节。 某些宽字符在输出字符串中仅占一个字节；其他的字符则占两个。 如果输入字符串 （包括宽字符 null） 中的每个宽字符的多字节输出字符串中有两个字节，保证结果以适合。
+**Wcstombs**函数将*wcstr*指向的宽字符字符串转换为相应的多字节字符, 并将结果存储在*mbstr*数组中。 *Count*参数指示多字节输出字符串可以存储的最大字节数 (即*mbstr*的大小)。 一般情况下，转换宽字符字符串时不会知道需要多少个字节。 某些宽字符在输出字符串中仅占一个字节；其他的字符则占两个。 如果输入字符串中的每个宽字符的多字节输出字符串中有两个字节 (包括宽字符 null), 则结果将保证合适。
 
-如果**wcstombs**遇到宽字符 null 字符 (L '\0) 之前或当*计数*发生时，会将其转换为 8 位 0 并停止。 因此，在多字节字符字符串*mbstr*是 null 终止的仅当**wcstombs**在转换期间遇到宽字符 null 字符。 如果指向的序列*wcstr*并*mbstr*重叠的行为**wcstombs**是不确定的。
+如果**wcstombs**在*count 或 count*发生前后遇到宽字符 null 字符 (L ' \ 0 '), 则它会将其转换为8位0并停止。 因此, 仅当**wcstombs**在转换期间遇到宽字符 null 字符时, *mbstr*处的多字节字符串才以 null 结尾。 如果由*wcstr*和*mbstr*指向的序列重叠, 则**wcstombs**的行为不确定。
 
-如果*mbstr*自变量是**NULL**， **wcstombs**返回以字节为单位的目标字符串所需的大小。
+如果*mbstr*参数为**NULL**, 则**wcstombs**返回目标字符串所需的大小 (以字节为单位)。
 
-**wcstombs**验证其参数。 如果*wcstr*是**NULL**，或者，如果*计数*大于**INT_MAX**，此函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许继续执行，该函数将设置**errno**到**EINVAL**并返回-1。
+**wcstombs**验证其参数。 如果*wcstr*为**NULL**, 或者*计数*大于**INT_MAX**, 则此函数将调用无效参数处理程序, 如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续, 则该函数将**errno**设置为**EINVAL** , 并返回-1。
 
-**wcstombs**的任何区域设置相关的行为; 使用当前区域设置 **_wcstombs_l**是完全相同，只不过它改用已传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**wcstombs**为任何与区域设置相关的行为使用当前区域设置; **_wcstombs_l**是相同的, 只不过它使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -113,7 +113,7 @@ size_t _wcstombs_l(
 
 ## <a name="example"></a>示例
 
-本程序演示的行为**wcstombs**函数。
+此程序演示**wcstombs**函数的行为。
 
 ```C
 // crt_wcstombs.c
@@ -161,4 +161,4 @@ Convert wide-character string:
 [mbstowcs、_mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wctomb、_wctomb_l](wctomb-wctomb-l.md)<br/>
-[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>
+[WideCharToMultiByte](/windows/win32/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

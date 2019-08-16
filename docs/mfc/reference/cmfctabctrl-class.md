@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: db2dcf7c60d164f9d04eb98f8eaac79ae14e3e73
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
+ms.openlocfilehash: 442860b1751591c5763a768f9bd9b6ba59f33fa5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821256"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504887"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 
@@ -177,7 +177,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 |[CMFCTabCtrl::OnDragEnter](#ondragenter)|当游标第一次拖动到 "选项卡控件" 窗口时由框架调用。|
 |[CMFCTabCtrl::OnDragOver](#ondragover)|在拖动操作过程中, 当鼠标移到拖放目标窗口上时由框架调用。 (重写[CMFCBaseTabCtrl:: system.windows.uielement.ondragover](../../mfc/reference/cmfcbasetabctrl-class.md#ondragover)。)|
 |[CMFCTabCtrl::OnShowTabDocumentsMenu](#onshowtabdocumentsmenu)|显示选项卡式窗口的弹出菜单, 等待用户选择选项卡, 并使选定的选项卡成为活动选项卡。|
-|`CMFCTabCtrl::PreTranslateMessage`|转换窗口消息, 然后将其调度到[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)和[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函数。 (重写[CMFCBaseTabCtrl::P retranslatemessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage)。)|
+|`CMFCTabCtrl::PreTranslateMessage`|转换窗口消息, 然后将其调度到[TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage)和[DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) Windows 函数。 (重写[CMFCBaseTabCtrl::P retranslatemessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage)。)|
 |`CMFCTabCtrl::RecalcLayout`|重新计算选项卡控件的内部布局。 (重写[CMFCBaseTabCtrl:: RecalcLayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout)。)|
 |[CMFCTabCtrl::SetActiveInMDITabGroup](#setactiveinmditabgroup)|将选项卡控件的当前选项卡设置为多文档界面选项卡组中的活动选项卡。|
 |[CMFCTabCtrl::SetActiveTab](#setactivetab)|激活选项卡。(重写[CMFCBaseTabCtrl:: SetActiveTab](../../mfc/reference/cmfcbasetabctrl-class.md#setactivetab)。)|
@@ -846,7 +846,7 @@ BOOL ModifyTabStyle(Style style);
 
 *Style*参数的值可以是以下`CMFCTabCtrl::Style`枚举之一。
 
-|名称|描述|
+|name|描述|
 |----------|-----------------|
 |STYLE_3D|显示具有圆角的三维矩形选项卡。|
 |STYLE_3D_ONENOTE|显示三维选项卡, 该选项卡具有一个垂直边和一个倾斜边并且具有圆角。|
@@ -874,7 +874,7 @@ virtual DROPEFFECT OnDragEnter(
 中指向包含用户拖动的数据的数据对象。
 
 *dwKeyState*<br/>
-中包含修改键的状态。 此参数是以下值的按位组合 (OR):MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON 和 MK_RBUTTON。 有关详细信息, 请参阅[关于鼠标输入](/windows/desktop/inputdev/about-mouse-input)的**消息参数**部分。
+中包含修改键的状态。 此参数是以下值的按位组合 (OR):MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON 和 MK_RBUTTON。 有关详细信息, 请参阅[关于鼠标输入](/windows/win32/inputdev/about-mouse-input)的**消息参数**部分。
 
 *point*<br/>
 中包含光标在工作区坐标中的当前位置。
@@ -906,7 +906,7 @@ virtual DROPEFFECT OnDragOver(
 中指向要拖动到拖放目标上的[COleDataObject](../../mfc/reference/coledataobject-class.md)对象的指针。
 
 *dwKeyState*<br/>
-中修改键的状态, 它是 MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON 和 MK_RBUTTON 的按位组合 (OR)。 有关详细信息, 请参阅[关于鼠标输入](/windows/desktop/inputdev/about-mouse-input)中的 "消息参数"。
+中修改键的状态, 它是 MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON 和 MK_RBUTTON 的按位组合 (OR)。 有关详细信息, 请参阅[关于鼠标输入](/windows/win32/inputdev/about-mouse-input)中的 "消息参数"。
 
 *point*<br/>
 中当前鼠标位置。

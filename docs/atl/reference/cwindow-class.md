@@ -153,19 +153,19 @@ f1_keywords:
 helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
-ms.openlocfilehash: 2767770e354c81e5a34a0d6e9105a27ecb361ddc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f6d52c8fce8e1437e87f9f251b7f5f050efa6fed
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276846"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496168"
 ---
 # <a name="cwindow-class"></a>CWindow 类
 
-此类提供用于处理窗口的方法。
+此类提供用于操作窗口的方法。
 
 > [!IMPORTANT]
->  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
+>  此类及其成员不能用于在 Windows 运行时中执行的应用程序。
 
 ## <a name="syntax"></a>语法
 
@@ -179,35 +179,35 @@ class CWindow
 
 |名称|描述|
 |----------|-----------------|
-|[CWindow::CWindow](#cwindow)|构造函数。|
+|[CWindow:: CWindow](#cwindow)|构造函数。|
 
 ### <a name="public-methods"></a>公共方法
 
 |名称|描述|
 |----------|-----------------|
 |[CWindow::ArrangeIconicWindows](#arrangeiconicwindows)|排列所有最小化的子窗口。|
-|[CWindow::Attach](#attach)|将附加到窗口`CWindow`对象。|
-|[CWindow::BeginPaint](#beginpaint)|准备进行绘制的窗口。|
-|[CWindow::BringWindowToTop](#bringwindowtotop)|将窗口带到 Z 顺序的顶部。|
-|[CWindow::CenterWindow](#centerwindow)|中心针对给定窗口的窗口。|
-|[CWindow::ChangeClipboardChain](#changeclipboardchain)|从剪贴板查看器链中删除窗口。|
-|[CWindow::CheckDlgButton](#checkdlgbutton)|更改指定的按钮的复选状态。|
+|[CWindow::Attach](#attach)|将窗口附加到`CWindow`对象。|
+|[CWindow::BeginPaint](#beginpaint)|准备用于绘制的窗口。|
+|[CWindow::BringWindowToTop](#bringwindowtotop)|将窗口置于 Z 顺序的顶部。|
+|[CWindow::CenterWindow](#centerwindow)|使窗口针对给定窗口居中。|
+|[CWindow::ChangeClipboardChain](#changeclipboardchain)|删除剪贴板查看器链中的窗口。|
+|[CWindow::CheckDlgButton](#checkdlgbutton)|更改指定按钮的复选状态。|
 |[CWindow::CheckRadioButton](#checkradiobutton)|检查指定的单选按钮。|
-|[CWindow::ChildWindowFromPoint](#childwindowfrompoint)|检索包含指定的点的子窗口。|
-|[CWindow::ChildWindowFromPointEx](#childwindowfrompointex)|检索特定类型的子窗口，其中包含指定的点。|
+|[CWindow::ChildWindowFromPoint](#childwindowfrompoint)|检索包含指定点的子窗口。|
+|[CWindow::ChildWindowFromPointEx](#childwindowfrompointex)|检索包含指定点的特定类型的子窗口。|
 |[CWindow::ClientToScreen](#clienttoscreen)|将工作区坐标转换为屏幕坐标。|
 |[CWindow::Create](#create)|创建一个窗口。|
-|[CWindow::CreateCaret](#createcaret)|创建一个新形状为系统插入符号。|
-|[CWindow::CreateGrayCaret](#creategraycaret)|创建系统插入符号的灰色矩形。|
+|[CWindow::CreateCaret](#createcaret)|为系统插入符号创建新的形状。|
+|[CWindow::CreateGrayCaret](#creategraycaret)|为系统插入符号创建灰色矩形。|
 |[CWindow::CreateSolidCaret](#createsolidcaret)|创建系统插入符号的实心矩形。|
-|[CWindow::DeferWindowPos](#deferwindowpos)|更新指定窗口的指定的窗口的多个位置结构。|
-|[CWindow::DestroyWindow](#destroywindow)|销毁与关联的窗口`CWindow`对象。|
-|[CWindow::Detach](#detach)|从窗口中分离`CWindow`对象。|
-|[CWindow::DlgDirList](#dlgdirlist)|用指定的路径或文件的名称匹配的所有文件的名称填充列表框。|
-|[CWindow::DlgDirListComboBox](#dlgdirlistcombobox)|用指定的路径或文件的名称匹配的所有文件的名称填充组合框。|
+|[CWindow::DeferWindowPos](#deferwindowpos)|为指定窗口更新指定的多窗口位置结构。|
+|[CWindow::DestroyWindow](#destroywindow)|销毁与`CWindow`对象关联的窗口。|
+|[CWindow::Detach](#detach)|将窗口与`CWindow`对象分离。|
+|[CWindow::DlgDirList](#dlgdirlist)|使用与指定的路径或文件名匹配的所有文件的名称填充列表框。|
+|[CWindow::DlgDirListComboBox](#dlgdirlistcombobox)|使用与指定的路径或文件名匹配的所有文件的名称填充组合框。|
 |[CWindow::DlgDirSelect](#dlgdirselect)|从列表框检索当前所选内容。|
-|[CWindow::DlgDirSelectComboBox](#dlgdirselectcombobox)|从组合框检索当前所选内容。|
-|[CWindow::DragAcceptFiles](#dragacceptfiles)|寄存器窗口是否接受拖放文件。|
+|[CWindow::DlgDirSelectComboBox](#dlgdirselectcombobox)|从组合框中检索当前选定内容。|
+|[CWindow::DragAcceptFiles](#dragacceptfiles)|注册窗口是否接受拖动的文件。|
 |[CWindow::DrawMenuBar](#drawmenubar)|重绘窗口的菜单栏。|
 |[CWindow::EnableScrollBar](#enablescrollbar)|启用或禁用滚动条箭头。|
 |[CWindow::EnableWindow](#enablewindow)|启用或禁用输入。|
@@ -215,95 +215,95 @@ class CWindow
 |[CWindow::FlashWindow](#flashwindow)|使窗口闪烁一次。|
 |[CWindow::GetClientRect](#getclientrect)|检索工作区的坐标。|
 |[CWindow::GetDC](#getdc)|检索工作区的设备上下文。|
-|[CWindow::GetDCEx](#getdcex)|检索工作区的设备上下文，并允许剪辑选项。|
-|[CWindow::GetDescendantWindow](#getdescendantwindow)|检索指定子代窗口。|
-|[CWindow::GetDlgControl](#getdlgcontrol)|检索指定的控件上的接口。|
-|[CWindow::GetDlgCtrlID](#getdlgctrlid)|检索窗口的标识符 （用于子窗口）。|
+|[CWindow::GetDCEx](#getdcex)|检索工作区的设备上下文, 并允许剪切选项。|
+|[CWindow::GetDescendantWindow](#getdescendantwindow)|检索指定的子窗口。|
+|[CWindow::GetDlgControl](#getdlgcontrol)|检索指定控件上的接口。|
+|[CWindow::GetDlgCtrlID](#getdlgctrlid)|检索窗口的标识符 (仅适用于子窗口)。|
 |[CWindow::GetDlgHost](#getdlghost)|检索指向 ATL 控件承载容器的接口的指针。|
 |[CWindow::GetDlgItem](#getdlgitem)|检索指定的子窗口。|
-|[CWindow::GetDlgItemInt](#getdlgitemint)|将转换为整数的控件的文本。|
+|[CWindow::GetDlgItemInt](#getdlgitemint)|将控件的文本转换为整数。|
 |[CWindow::GetDlgItemText](#getdlgitemtext)|检索控件的文本。|
 |[CWindow::GetExStyle](#getexstyle)|检索扩展的窗口样式。|
 |[CWindow::GetFont](#getfont)|检索窗口的当前字体。|
-|[CWindow::GetHotKey](#gethotkey)|确定热键与窗口相关联。|
-|[CWindow::GetIcon](#geticon)|检索窗口的大或小图标。|
+|[CWindow::GetHotKey](#gethotkey)|确定与窗口关联的热键。|
+|[CWindow::GetIcon](#geticon)|检索窗口的大图标或小图标。|
 |[CWindow::GetLastActivePopup](#getlastactivepopup)|检索最近活动的弹出窗口。|
 |[CWindow::GetMenu](#getmenu)|检索窗口的菜单。|
-|[CWindow::GetNextDlgGroupItem](#getnextdlggroupitem)|检索中的一组控件的上一个或下一个控件。|
+|[CWindow::GetNextDlgGroupItem](#getnextdlggroupitem)|检索控件组中的上一个或下一个控件。|
 |[CWindow::GetNextDlgTabItem](#getnextdlgtabitem)|检索具有 WS_TABSTOP 样式的上一个或下一个控件。|
 |[CWindow::GetParent](#getparent)|检索直接父窗口。|
 |[CWindow::GetScrollInfo](#getscrollinfo)|检索滚动条的参数。|
 |[CWindow::GetScrollPos](#getscrollpos)|检索滚动框的位置。|
 |[CWindow::GetScrollRange](#getscrollrange)|检索滚动条范围。|
 |[CWindow::GetStyle](#getstyle)|检索窗口样式。|
-|[CWindow::GetSystemMenu](#getsystemmenu)|创建一份修改的系统菜单。|
-|[CWindow::GetTopLevelParent](#gettoplevelparent)|检索顶级父级或所有者窗口。|
+|[CWindow::GetSystemMenu](#getsystemmenu)|创建用于修改的系统菜单的副本。|
+|[CWindow::GetTopLevelParent](#gettoplevelparent)|检索顶级父窗口或所有者窗口。|
 |[CWindow::GetTopLevelWindow](#gettoplevelwindow)|检索顶级所有者窗口。|
 |[CWindow::GetTopWindow](#gettopwindow)|检索顶级子窗口。|
 |[CWindow::GetUpdateRect](#getupdaterect)|检索完全包围更新区域的最小矩形的坐标。|
-|[CWindow::GetUpdateRgn](#getupdatergn)|检索更新区域，并将其复制到指定的区域。|
+|[CWindow::GetUpdateRgn](#getupdatergn)|检索更新区域, 并将其复制到指定的区域。|
 |[CWindow::GetWindow](#getwindow)|检索指定的窗口。|
 |[CWindow::GetWindowContextHelpId](#getwindowcontexthelpid)|检索窗口的帮助上下文标识符。|
 |[CWindow::GetWindowDC](#getwindowdc)|检索整个窗口的设备上下文。|
-|[CWindow::GetWindowLong](#getwindowlong)|检索到的额外窗口内存中指定的偏移量处的 32 位值。|
-|[CWindow::GetWindowLongPtr](#getwindowlongptr)|检索指定的窗口，其中按指定偏移量值包括到额外的窗口内存有关的信息。|
+|[CWindow::GetWindowLong](#getwindowlong)|在额外的窗口内存中, 按指定的偏移量检索32位值。|
+|[CWindow::GetWindowLongPtr](#getwindowlongptr)|检索有关指定窗口的信息, 包括在额外的窗口内存中指定偏移量处的值。|
 |[CWindow::GetWindowPlacement](#getwindowplacement)|检索显示状态和位置。|
-|[CWindow::GetWindowProcessID](#getwindowprocessid)|检索在创建窗口的进程的标识符。|
-|[CWindow::GetWindowRect](#getwindowrect)|检索窗口的边框尺寸。|
-|[CWindow::GetWindowRgn](#getwindowrgn)|获取一个窗口的窗口区域的副本。|
+|[CWindow::GetWindowProcessID](#getwindowprocessid)|检索创建窗口的进程的标识符。|
+|[CWindow::GetWindowRect](#getwindowrect)|检索窗口的边界尺寸。|
+|[CWindow::GetWindowRgn](#getwindowrgn)|获取窗口的窗口区域的副本。|
 |[CWindow::GetWindowText](#getwindowtext)|检索窗口的文本。|
-|[CWindow::GetWindowTextLength](#getwindowtextlength)|检索窗口的文本的长度。|
-|[CWindow::GetWindowThreadID](#getwindowthreadid)|检索创建了指定的窗口的线程标识符。|
-|[CWindow::GetWindowWord](#getwindowword)|检索到的额外窗口内存中按指定偏移量为 16 位值。|
-|[CWindow::GotoDlgCtrl](#gotodlgctrl)|在对话框中，键盘焦点设置到控件。|
+|[CWindow::GetWindowTextLength](#getwindowtextlength)|检索窗口文本的长度。|
+|[CWindow::GetWindowThreadID](#getwindowthreadid)|检索创建指定窗口的线程的标识符。|
+|[CWindow::GetWindowWord](#getwindowword)|在额外的窗口内存中检索指定偏移量处的16位值。|
+|[CWindow::GotoDlgCtrl](#gotodlgctrl)|将键盘焦点设置到对话框中的控件。|
 |[CWindow::HideCaret](#hidecaret)|隐藏系统插入符号。|
-|[CWindow::HiliteMenuItem](#hilitemenuitem)|突出显示，或者从顶级菜单项移除突出显示。|
+|[CWindow::HiliteMenuItem](#hilitemenuitem)|突出显示或删除顶级菜单项中的突出显示。|
 |[CWindow::Invalidate](#invalidate)|使整个工作区无效。|
-|[CWindow::InvalidateRect](#invalidaterect)|使指定的矩形内的客户端区域无效。|
-|[CWindow::InvalidateRgn](#invalidatergn)|使指定区域内的客户端区域无效。|
+|[CWindow::InvalidateRect](#invalidaterect)|使指定矩形中的工作区失效。|
+|[CWindow::InvalidateRgn](#invalidatergn)|使指定区域内的工作区失效。|
 |[CWindow::IsChild](#ischild)|确定指定的窗口是否为子窗口。|
-|[CWindow::IsDialogMessage](#isdialogmessage)|确定消息是否适用于指定的对话框。|
+|[CWindow::IsDialogMessage](#isdialogmessage)|确定消息是否用于指定的对话框。|
 |[CWindow::IsDlgButtonChecked](#isdlgbuttonchecked)|确定按钮的复选状态。|
-|[CWindow::IsIconic](#isiconic)|确定窗口是否最小化。|
-|[CWindow::IsParentDialog](#isparentdialog)|确定控件的父窗口是一个对话框窗口。|
+|[CWindow::IsIconic](#isiconic)|确定窗口是否已最小化。|
+|[CWindow::IsParentDialog](#isparentdialog)|确定控件的父窗口是否为对话框窗口。|
 |[CWindow::IsWindow](#iswindow)|确定指定的窗口句柄是否标识现有窗口。|
-|[CWindow::IsWindowEnabled](#iswindowenabled)|确定是否为输入启用窗口。|
+|[CWindow::IsWindowEnabled](#iswindowenabled)|确定是否为窗口启用了输入。|
 |[CWindow::IsWindowUnicode](#iswindowunicode)|确定指定的窗口是否为本机 Unicode 窗口。|
 |[CWindow::IsWindowVisible](#iswindowvisible)|确定窗口的可见性状态。|
-|[CWindow::IsZoomed](#iszoomed)|确定是否在窗口已最大化。|
+|[CWindow:: IsZoomed](#iszoomed)|确定窗口是否处于最大化状态。|
 |[CWindow::KillTimer](#killtimer)|销毁计时器事件。|
-|[CWindow::LockWindowUpdate](#lockwindowupdate)|禁用或启用在窗口中绘制。|
-|[CWindow::MapWindowPoints](#mapwindowpoints)|将一组点从窗口的坐标空间转换到另一个窗口的坐标空间。|
+|[CWindow::LockWindowUpdate](#lockwindowupdate)|禁用或启用窗口中的绘图。|
+|[CWindow::MapWindowPoints](#mapwindowpoints)|将窗口坐标空间中的一组点转换为另一个窗口的坐标空间。|
 |[CWindow::MessageBox](#messagebox)|显示消息框。|
 |[CWindow::ModifyStyle](#modifystyle)|修改窗口样式。|
 |[CWindow::ModifyStyleEx](#modifystyleex)|修改扩展的窗口样式。|
 |[CWindow::MoveWindow](#movewindow)|更改窗口的大小和位置。|
-|[CWindow::NextDlgCtrl](#nextdlgctrl)|在对话框中，键盘焦点设置到下一个控件。|
+|[CWindow::NextDlgCtrl](#nextdlgctrl)|将键盘焦点设置到对话框中的下一个控件。|
 |[CWindow::OpenClipboard](#openclipboard)|打开剪贴板。|
-|[CWindow::PostMessage](#postmessage)|将消息放在与创建窗口的线程关联的消息队列中。 而无需等待的线程来处理该消息返回。|
-|[CWindow::PrevDlgCtrl](#prevdlgctrl)|在对话框中，键盘焦点设置到上一个控件。|
-|[CWindow::Print](#print)|在窗口在指定的设备上下文中绘制的请求。|
-|[CWindow::PrintClient](#printclient)|窗口的工作区在指定的设备上下文中绘制的请求。|
-|[CWindow::RedrawWindow](#redrawwindow)|更新指定的矩形或区域的工作区中。|
+|[CWindow::PostMessage](#postmessage)|将消息放入与创建该窗口的线程关联的消息队列中。 返回, 而不等待线程处理该消息。|
+|[CWindow::PrevDlgCtrl](#prevdlgctrl)|将键盘焦点设置到对话框中的上一个控件。|
+|[CWindow::Print](#print)|请求在指定的设备上下文中绘制窗口。|
+|[CWindow::PrintClient](#printclient)|请求在指定的设备上下文中绘制窗口的工作区。|
+|[CWindow::RedrawWindow](#redrawwindow)|更新工作区中的指定矩形或区域。|
 |[CWindow::ReleaseDC](#releasedc)|释放设备上下文。|
 |[CWindow::ResizeClient](#resizeclient)|调整窗口的大小。|
-|[CWindow::ScreenToClient](#screentoclient)|将屏幕坐标转换到工作区坐标。|
-|[CWindow::ScrollWindow](#scrollwindow)|滚动指定的客户端区域。|
-|[CWindow::ScrollWindowEx](#scrollwindowex)|滚动具有附加功能的指定的客户端区域。|
-|[CWindow::SendDlgItemMessage](#senddlgitemmessage)|向控件发送一条消息。|
-|[CWindow::SendMessage](#sendmessage)|向窗口发送一条消息且不返回之前的窗口过程处理完该消息。|
-|[CWindow::SendMessageToDescendants](#sendmessagetodescendants)|将消息发送到指定子代窗口。|
-|[CWindow::SendNotifyMessage](#sendnotifymessage)|向窗口发送一条消息。 如果窗口由调用线程，创建`SendNotifyMessage`窗口过程处理完该消息才会返回。 否则，它会立即返回。|
+|[CWindow::ScreenToClient](#screentoclient)|将屏幕坐标转换为客户端坐标。|
+|[CWindow::ScrollWindow](#scrollwindow)|滚动指定的工作区。|
+|[CWindow::ScrollWindowEx](#scrollwindowex)|滚动指定的工作区和其他功能。|
+|[CWindow::SendDlgItemMessage](#senddlgitemmessage)|将消息发送到控件。|
+|[CWindow::SendMessage](#sendmessage)|向窗口发送一条消息, 该消息直到窗口过程处理消息后才返回。|
+|[CWindow::SendMessageToDescendants](#sendmessagetodescendants)|向指定的子代窗口发送消息。|
+|[CWindow::SendNotifyMessage](#sendnotifymessage)|向窗口发送一条消息。 如果窗口是由调用线程创建的, 则`SendNotifyMessage`在窗口过程处理该消息之前, 不会返回。 否则, 它会立即返回。|
 |[CWindow::SetActiveWindow](#setactivewindow)|激活窗口。|
-|[CWindow::SetCapture](#setcapture)|将发送到窗口的所有后续鼠标输入。|
+|[CWindow::SetCapture](#setcapture)|向窗口发送所有后续鼠标输入。|
 |[CWindow::SetClipboardViewer](#setclipboardviewer)|将窗口添加到剪贴板查看器链。|
 |[CWindow::SetDlgCtrlID](#setdlgctrlid)|更改窗口的标识符。|
-|[CWindow::SetDlgItemInt](#setdlgitemint)|控件的文本更改为一个整数值的字符串表示形式。|
+|[CWindow::SetDlgItemInt](#setdlgitemint)|将控件的文本更改为整数值的字符串表示形式。|
 |[CWindow::SetDlgItemText](#setdlgitemtext)|更改控件的文本。|
-|[CWindow::SetFocus](#setfocus)|将输入的焦点设置为窗口中。|
+|[CWindow::SetFocus](#setfocus)|将输入焦点设置到窗口中。|
 |[CWindow::SetFont](#setfont)|更改窗口的当前字体。|
-|[CWindow::SetHotKey](#sethotkey)|将热键与窗口相关联。|
-|[CWindow::SetIcon](#seticon)|更改窗口的大或小图标。|
+|[CWindow::SetHotKey](#sethotkey)|将热键与窗口关联。|
+|[CWindow::SetIcon](#seticon)|更改窗口的大图标或小图标。|
 |[CWindow::SetMenu](#setmenu)|更改窗口的当前菜单。|
 |[CWindow::SetParent](#setparent)|更改父窗口。|
 |[CWindow::SetRedraw](#setredraw)|设置或清除重绘标志。|
@@ -312,73 +312,73 @@ class CWindow
 |[CWindow::SetScrollRange](#setscrollrange)|更改滚动条范围。|
 |[CWindow::SetTimer](#settimer)|创建计时器事件。|
 |[CWindow::SetWindowContextHelpId](#setwindowcontexthelpid)|设置窗口的帮助上下文标识符。|
-|[CWindow::SetWindowLong](#setwindowlong)|到额外的窗口内存指定的偏移量处设置一个 32 位值。|
-|[CWindow::SetWindowLongPtr](#setwindowlongptr)|更改指定窗口的属性，并还额外窗口内存中指定的偏移量处设置一个值。|
-|[CWindow::SetWindowPlacement](#setwindowplacement)|设置显示状态和位置。|
-|[CWindow::SetWindowPos](#setwindowpos)|设置大小、 位置和 Z 顺序。|
+|[CWindow::SetWindowLong](#setwindowlong)|将指定偏移量的32位值设置为额外的窗口内存。|
+|[CWindow::SetWindowLongPtr](#setwindowlongptr)|更改指定窗口的特性, 同时在额外的窗口内存中设置指定偏移量处的值。|
+|[CWindow::SetWindowPlacement](#setwindowplacement)|设置 "显示状态" 和 "位置"。|
+|[CWindow::SetWindowPos](#setwindowpos)|设置大小、位置和 Z 顺序。|
 |[CWindow::SetWindowRgn](#setwindowrgn)|设置窗口的窗口区域。|
 |[CWindow::SetWindowText](#setwindowtext)|更改窗口的文本。|
-|[CWindow::SetWindowWord](#setwindowword)|到额外的窗口内存指定的偏移量处设置一个 16 位值。|
+|[CWindow::SetWindowWord](#setwindowword)|将位于指定偏移量的16位值设置为额外的窗口内存。|
 |[CWindow::ShowCaret](#showcaret)|显示系统插入符号。|
-|[CWindow::ShowOwnedPopups](#showownedpopups)|显示或隐藏窗口所拥有的弹出窗口。|
+|[CWindow::ShowOwnedPopups](#showownedpopups)|显示或隐藏窗口拥有的弹出窗口。|
 |[CWindow::ShowScrollBar](#showscrollbar)|显示或隐藏滚动条。|
 |[CWindow::ShowWindow](#showwindow)|设置窗口的显示状态。|
-|[CWindow::ShowWindowAsync](#showwindowasync)|设置另一个线程创建的窗口的显示状态。|
+|[CWindow::ShowWindowAsync](#showwindowasync)|设置由不同线程创建的窗口的显示状态。|
 |[CWindow::UpdateWindow](#updatewindow)|更新工作区。|
-|[CWindow::ValidateRect](#validaterect)|验证指定的矩形内的客户端区域。|
-|[CWindow::ValidateRgn](#validatergn)|验证指定的区域内的客户端区域。|
+|[CWindow::ValidateRect](#validaterect)|验证指定矩形中的工作区。|
+|[CWindow::ValidateRgn](#validatergn)|验证指定区域内的工作区。|
 |[CWindow::WinHelp](#winhelp)|启动 Windows 帮助。|
 
 ### <a name="public-operators"></a>公共运算符
 
 |名称|描述|
 |----------|-----------------|
-|[CWindow::operator HWND](#operator_hwnd)|将转换`CWindow`对象与 HWND。|
-|[CWindow::operator =](#operator_eq)|将分配到 HWND`CWindow`对象。|
+|[CWindow:: operator HWND](#operator_hwnd)|`CWindow`将对象转换为 HWND。|
+|[CWindow:: operator =](#operator_eq)|为`CWindow`对象分配 HWND。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
 |名称|描述|
 |----------|-----------------|
-|[CWindow::m_hWnd](#m_hwnd)|与关联的窗口的句柄`CWindow`对象。|
+|[CWindow::m_hWnd](#m_hwnd)|与`CWindow`对象关联的窗口的句柄。|
 |[CWindow::rcDefault](#rcdefault)|包含默认窗口尺寸。|
 
 ## <a name="remarks"></a>备注
 
-`CWindow` 提供的基本功能用于操作的窗口中 atl。 许多`CWindow`方法只是包装 Win32 API 函数之一。 例如，比较的原型`CWindow::ShowWindow`和`ShowWindow`:
+`CWindow`提供用于在 ATL 中操作窗口的基本功能。 `CWindow`许多方法只是包装 Win32 API 函数之一。 例如, 比较`CWindow::ShowWindow`和`ShowWindow`的原型:
 
 |CWindow 方法|Win32 函数|
 |--------------------|--------------------|
 |**BOOL ShowWindow( int** `nCmdShow` **);**|**BOOL ShowWindow( HWND** `hWnd` **, int** `nCmdShow` **);**|
 
-`CWindow::ShowWindow` 调用 Win32 函数`ShowWindow`表示通过`CWindow::m_hWnd`作为第一个参数。 每个`CWindow`直接包装的 Win32 函数的方法将传递给`m_hWnd`成员; 因此，大部分`CWindow`文档将引导您访问 Windows SDK。
+`CWindow::ShowWindow`通过将作为第`ShowWindow`一个参数`CWindow::m_hWnd`传递来调用 Win32 函数。 直接`CWindow`包装 Win32 函数的每个方法都`m_hWnd`传递成员; `CWindow`因此, 大部分文档将向你介绍 Windows SDK。
 
 > [!NOTE]
->  包装不是每个与窗口相关的 Win32 函数`CWindow`，并不是每个`CWindow`方法包装 Win32 函数。
+>  并非每个与窗口相关的 Win32 函数都`CWindow`由包装, 并且`CWindow`并非每个方法都包装 Win32 函数。
 
-`CWindow::m_hWnd` 将存储标识一个窗口的 HWND。 HWND 附加到您的对象时您：
+`CWindow::m_hWnd`存储用于标识窗口的 HWND。 当你执行以下操作时, 会将 HWND 附加到你的对象:
 
-- 指定在 HWND`CWindow`的构造函数。
+- 在的构造函数`CWindow`中指定 HWND。
 
 - 调用 `CWindow::Attach`。
 
-- 使用`CWindow`的**运算符 =**。
+- 使用`CWindow`的**operator =** 。
 
-- 创建或子类的窗口使用以下类之一派生自`CWindow`:
+- 使用以下派生自`CWindow`的类之一创建窗口或为窗口创建子类:
 
-[CWindowImpl](../../atl/reference/cwindowimpl-class.md)允许您创建一个新窗口或子类现有窗口。
+[CWindowImpl](../../atl/reference/cwindowimpl-class.md)允许您创建新窗口或将现有窗口划分为子类。
 
-[CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)实现包含在另一个对象内的窗口。 您可以创建一个新窗口或子类现有窗口。
+[CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)实现一个包含在另一个对象中的窗口。 您可以创建新窗口或将现有窗口划分为子类。
 
-[CDialogImpl](../../atl/reference/cdialogimpl-class.md)允许您创建一个模式或无模式对话框。
+[CDialogImpl](../../atl/reference/cdialogimpl-class.md)允许您创建模式对话框或无模式对话框。
 
-有关 windows 的详细信息，请参阅[Windows](/windows/desktop/winmsg/windows)和 Windows SDK 中的后续主题。 有关使用 ATL 中的窗口的详细信息，请参阅文章[ATL 窗口类](../../atl/atl-window-classes.md)。
+有关 windows 的详细信息, 请参阅 Windows SDK 中的[windows](/windows/win32/winmsg/windows)和后续主题。 有关在 ATL 中使用 windows 的详细信息, 请参阅[Atl 窗口类](../../atl/atl-window-classes.md)一文。
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlwin.h
+**标头:** atlwin。h
 
-##  <a name="arrangeiconicwindows"></a>  CWindow::ArrangeIconicWindows
+##  <a name="arrangeiconicwindows"></a>CWindow:: ArrangeIconicWindows
 
 排列所有最小化的子窗口。
 
@@ -388,11 +388,11 @@ UINT ArrangeIconicWindows() throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[ArrangeIconicWindows](/windows/desktop/api/winuser/nf-winuser-arrangeiconicwindows) Windows SDK 中。
+请参阅 Windows SDK 中的[ArrangeIconicWindows](/windows/win32/api/winuser/nf-winuser-arrangeiconicwindows) 。
 
-##  <a name="attach"></a>  CWindow::Attach
+##  <a name="attach"></a>CWindow:: Attach
 
-将附加标识窗口*hWndNew*到`CWindow`对象。
+将由*hWndNew*标识的窗口附加到`CWindow`对象。
 
 ```
 void Attach(HWND hWndNew) throw();
@@ -401,15 +401,15 @@ void Attach(HWND hWndNew) throw();
 ### <a name="parameters"></a>参数
 
 *hWndNew*<br/>
-[in]窗口句柄。
+中窗口的句柄。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Windowing#1](../../atl/codesnippet/cpp/cwindow-class_1.cpp)]
 
-##  <a name="beginpaint"></a>  CWindow::BeginPaint
+##  <a name="beginpaint"></a>CWindow:: BeginPaint
 
-准备进行绘制的窗口。
+准备用于绘制的窗口。
 
 ```
 HDC BeginPaint(LPPAINTSTRUCT lpPaint) throw();
@@ -417,7 +417,7 @@ HDC BeginPaint(LPPAINTSTRUCT lpPaint) throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint) Windows SDK 中。
+请参阅 Windows SDK 中的[BeginPaint](/windows/win32/api/winuser/nf-winuser-beginpaint) 。
 
 ### <a name="example"></a>示例
 
@@ -425,7 +425,7 @@ HDC BeginPaint(LPPAINTSTRUCT lpPaint) throw();
 
 ##  <a name="bringwindowtotop"></a>  CWindow::BringWindowToTop
 
-将窗口带到 Z 顺序的顶部。
+将窗口置于 Z 顺序的顶部。
 
 ```
 BOOL BringWindowToTop() throw();
@@ -433,15 +433,15 @@ BOOL BringWindowToTop() throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[BringWindowToTop](/windows/desktop/api/winuser/nf-winuser-bringwindowtotop) Windows SDK 中。
+请参阅 Windows SDK 中的[BringWindowToTop](/windows/win32/api/winuser/nf-winuser-bringwindowtotop) 。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Windowing#3](../../atl/codesnippet/cpp/cwindow-class_3.cpp)]
 
-##  <a name="centerwindow"></a>  CWindow::CenterWindow
+##  <a name="centerwindow"></a>CWindow:: CenterWindow
 
-中心针对给定窗口的窗口。
+使窗口针对给定窗口居中。
 
 ```
 BOOL CenterWindow(HWND hWndCenter = NULL) throw();
@@ -450,19 +450,19 @@ BOOL CenterWindow(HWND hWndCenter = NULL) throw();
 ### <a name="parameters"></a>参数
 
 *hWndCenter*<br/>
-[in]对其居中窗口的句柄。 如果此参数为 NULL （默认值），该方法将*hWndCenter*到窗口的父窗口，如果它是一个子窗口。 否则，它将设置*hWndCenter*到窗口的所有者窗口。
+中要居中的窗口的句柄。 如果此参数为 NULL (默认值), 则方法将*hWndCenter*设置为窗口的父窗口 (如果它是子窗口)。 否则, 它会将*hWndCenter*设置为窗口的所有者窗口。
 
 ### <a name="return-value"></a>返回值
 
-如果成功居中窗口; 则为 TRUE否则为 FALSE。
+如果窗口成功居中, 则为 TRUE;否则为 FALSE。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Windowing#4](../../atl/codesnippet/cpp/cwindow-class_4.cpp)]
 
-##  <a name="changeclipboardchain"></a>  CWindow::ChangeClipboardChain
+##  <a name="changeclipboardchain"></a>CWindow:: ChangeClipboardChain
 
-从剪贴板查看器链中删除窗口。
+删除剪贴板查看器链中的窗口。
 
 ```
 BOOL ChangeClipboardChain(HWND hWndNewNext) throw();
@@ -470,11 +470,11 @@ BOOL ChangeClipboardChain(HWND hWndNewNext) throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[ChangeClipboardChain](/windows/desktop/api/winuser/nf-winuser-changeclipboardchain) Windows SDK 中。
+请参阅 Windows SDK 中的[ChangeClipboardChain](/windows/win32/api/winuser/nf-winuser-changeclipboardchain) 。
 
-##  <a name="checkdlgbutton"></a>  CWindow::CheckDlgButton
+##  <a name="checkdlgbutton"></a>CWindow:: CheckDlgButton
 
-更改指定的按钮的复选状态。
+更改指定按钮的复选状态。
 
 ```
 BOOL CheckDlgButton(int nIDButton, UINT nCheck) throw();
@@ -482,9 +482,9 @@ BOOL CheckDlgButton(int nIDButton, UINT nCheck) throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[CheckDlgButton](/windows/desktop/api/winuser/nf-winuser-checkdlgbutton) Windows SDK 中。
+请参阅 Windows SDK 中的[CheckDlgButton](/windows/win32/api/winuser/nf-winuser-checkdlgbutton) 。
 
-##  <a name="checkradiobutton"></a>  CWindow::CheckRadioButton
+##  <a name="checkradiobutton"></a>CWindow:: CheckRadioButton
 
 检查指定的单选按钮。
 
@@ -497,11 +497,11 @@ BOOL CheckRadioButton(
 
 ### <a name="remarks"></a>备注
 
-请参阅[CheckRadioButton](/windows/desktop/api/winuser/nf-winuser-checkradiobutton) Windows SDK 中。
+请参阅 Windows SDK 中的[CheckRadioButton](/windows/win32/api/winuser/nf-winuser-checkradiobutton) 。
 
-##  <a name="childwindowfrompoint"></a>  CWindow::ChildWindowFromPoint
+##  <a name="childwindowfrompoint"></a>CWindow:: ChildWindowFromPoint
 
-检索包含指定的点的子窗口。
+检索包含指定点的子窗口。
 
 ```
 HWND ChildWindowFromPoint(POINT point) const throw();
@@ -509,11 +509,11 @@ HWND ChildWindowFromPoint(POINT point) const throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[ChildWindowFromPoint](/windows/desktop/api/winuser/nf-winuser-childwindowfrompoint) Windows SDK 中。
+请参阅 Windows SDK 中的[ChildWindowFromPoint](/windows/win32/api/winuser/nf-winuser-childwindowfrompoint) 。
 
-##  <a name="childwindowfrompointex"></a>  CWindow::ChildWindowFromPointEx
+##  <a name="childwindowfrompointex"></a>CWindow:: ChildWindowFromPointEx
 
-检索特定类型的子窗口，其中包含指定的点。
+检索包含指定点的特定类型的子窗口。
 
 ```
 HWND ChildWindowFromPoint(POINT point, UINT uFlags) const throw();
@@ -521,9 +521,9 @@ HWND ChildWindowFromPoint(POINT point, UINT uFlags) const throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[ChildWindowFromPointEx](/windows/desktop/api/winuser/nf-winuser-childwindowfrompointex) Windows SDK 中。
+请参阅 Windows SDK 中的[ChildWindowFromPointEx](/windows/win32/api/winuser/nf-winuser-childwindowfrompointex) 。
 
-##  <a name="clienttoscreen"></a>  CWindow::ClientToScreen
+##  <a name="clienttoscreen"></a>CWindow:: ClientToScreen
 
 将工作区坐标转换为屏幕坐标。
 
@@ -534,11 +534,11 @@ BOOL ClientToScreen(LPRECT lpRect) const throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[ClientToScreen](/windows/desktop/api/winuser/nf-winuser-clienttoscreen) Windows SDK 中。
+请参阅 Windows SDK 中的[ClientToScreen](/windows/win32/api/winuser/nf-winuser-clienttoscreen) 。
 
-此方法的第二个版本允许您将转换的坐标[RECT](/previous-versions/dd162897\(v=vs.85\))结构。
+此方法的第二个版本允许您转换[RECT](/previous-versions/dd162897\(v=vs.85\))结构的坐标。
 
-##  <a name="create"></a>  CWindow::Create
+##  <a name="create"></a>CWindow:: Create
 
 创建一个窗口。
 
@@ -557,44 +557,44 @@ HWND Create(
 ### <a name="parameters"></a>参数
 
 *lpstrWndClass*<br/>
-[in]指向窗口的类的指针。
+中指向窗口类的指针。
 
 *hWndParent*<br/>
-[in]父级或所有者窗口的句柄。
+中父窗口或所有者窗口的句柄。
 
 *rect*<br/>
-[in]类型的变量[_U_RECT](../../atl/reference/u-rect-class.md)指定窗口的位置。 默认值为 NULL。 当此参数为 NULL，值`CWindow::rcDefault`使用。
+中类型为[_U_RECT](../../atl/reference/u-rect-class.md)的变量, 用于指定窗口的位置。 默认值为 NULL。 当此参数为 NULL 时, 使用的`CWindow::rcDefault`值。
 
 *szWindowName*<br/>
-[in]指定窗口的名称。 默认值为 NULL。
+中指定窗口的名称。 默认值为 NULL。
 
 *dwStyle*<br/>
-[in]窗口的样式。 默认值为 0，这意味着任何样式指定。 有关可能的值的列表，请参阅[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Windows SDK 中。
+中窗口的样式。 默认值为 0, 表示未指定样式。 有关可能值的列表, 请参阅 Windows SDK 中的[CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) 。
 
 *dwExStyle*<br/>
-[in]扩展的窗口样式。 默认值为 0，这意味着没有扩展的样式指定。 有关可能的值的列表，请参阅[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。
+中扩展的窗口样式。 默认值为 0, 表示未指定扩展样式。 有关可能值的列表, 请参阅 Windows SDK 中的[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) 。
 
 *MenuOrID*<br/>
-[in]类型的变量[_U_MENUorID](../../atl/reference/u-menuorid-class.md)指定一个菜单或窗口标识符的句柄。 默认值为 0U。
+中类型为[_U_MENUorID](../../atl/reference/u-menuorid-class.md)的变量, 用于指定菜单或窗口标识符的句柄。 默认值为0U。
 
 *lpCreateParam*<br/>
-指向中包含的窗口创建数据的指针[CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa)结构。
+指向[CREATESTRUCT](/windows/win32/api/winuser/ns-winuser-createstructw)结构中包含的窗口创建数据的指针。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，新创建的窗口的句柄由指定[m_hWnd](#m_hwnd)。 否则，为 NULL。
+如果成功, 则为[m_hWnd](#m_hwnd)指定的新创建的窗口的句柄。 否则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-`CWindow::rcDefault` 定义为`__declspec(selectany) RECT CWindow::rcDefault = {CW_USEDEFAULT, CW_USEDEFAULT, 0, 0};`。
+`CWindow::rcDefault`定义为`__declspec(selectany) RECT CWindow::rcDefault = {CW_USEDEFAULT, CW_USEDEFAULT, 0, 0};`。
 
-请参阅[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Windows SDK for 的详细信息中。
+有关详细信息, 请参阅 Windows SDK 中的[CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) 。
 
-**请注意**如果使用 0 的值作为*MenuOrID*参数，则必须指定为 0U （默认值） 以避免编译器错误。
+**注意**如果将0用作*MenuOrID*参数的值, 则必须将其指定为 0u (默认值), 以避免出现编译器错误。
 
-##  <a name="createcaret"></a>  CWindow::CreateCaret
+##  <a name="createcaret"></a>CWindow:: CreateCaret
 
-创建一个新形状为系统插入符号。
+为系统插入符号创建新的形状。
 
 ```
 BOOL CreateCaret(HBITMAP pBitmap) throw();
@@ -602,11 +602,11 @@ BOOL CreateCaret(HBITMAP pBitmap) throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[CreateCaret](/windows/desktop/api/winuser/nf-winuser-createcaret) Windows SDK 中。
+请参阅 Windows SDK 中的[CreateCaret](/windows/win32/api/winuser/nf-winuser-createcaret) 。
 
-##  <a name="creategraycaret"></a>  CWindow::CreateGrayCaret
+##  <a name="creategraycaret"></a>CWindow:: CreateGrayCaret
 
-创建系统插入符号的灰色矩形。
+为系统插入符号创建灰色矩形。
 
 ```
 BOOL CreateGrayCaret(int nWidth, int nHeight) throw();
@@ -614,11 +614,11 @@ BOOL CreateGrayCaret(int nWidth, int nHeight) throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[CreateCaret](/windows/desktop/api/winuser/nf-winuser-createcaret) Windows SDK 中。
+请参阅 Windows SDK 中的[CreateCaret](/windows/win32/api/winuser/nf-winuser-createcaret) 。
 
-传递 (HBITMAP) 1 位图源处理 Win32 函数的参数。
+将位图句柄参数的 (HBITMAP) 1 传递到 Win32 函数。
 
-##  <a name="createsolidcaret"></a>  CWindow::CreateSolidCaret
+##  <a name="createsolidcaret"></a>CWindow:: CreateSolidCaret
 
 创建系统插入符号的实心矩形。
 
@@ -628,11 +628,11 @@ BOOL CreateSolidCaret(int nWidth, int nHeight) throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[CreateCaret](/windows/desktop/api/winuser/nf-winuser-createcaret) Windows SDK 中。
+请参阅 Windows SDK 中的[CreateCaret](/windows/win32/api/winuser/nf-winuser-createcaret) 。
 
-传递 (HBITMAP) 0 位图源处理 Win32 函数的参数。
+将位图句柄参数的 (HBITMAP) 0 传递到 Win32 函数。
 
-##  <a name="cwindow"></a>  CWindow::CWindow
+##  <a name="cwindow"></a>CWindow:: CWindow
 
 构造函数。
 
@@ -643,18 +643,18 @@ CWindow(HWND hWnd = NULL) throw();
 ### <a name="parameters"></a>参数
 
 *hWnd*<br/>
-[in]窗口句柄。
+中窗口的句柄。
 
 ### <a name="remarks"></a>备注
 
-初始化[m_hWnd](#m_hwnd)成员添加到*hWnd*，默认情况下为 NULL。
+将[m_hWnd](#m_hwnd)成员初始化为*hWnd*, 默认值为 NULL。
 
 > [!NOTE]
-> `CWindow::CWindow` 不会创建一个窗口。 类[CWindowImpl](../../atl/reference/cwindowimpl-class.md)， [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)，并[CDialogImpl](../../atl/reference/cdialogimpl-class.md) (所有这些派生`CWindow`) 提供一个用于创建窗口或对话框中，这是方法然后，分配到`CWindow::m_hWnd`。 此外可以使用[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Win32 函数。
+> `CWindow::CWindow`不创建窗口。 类[CWindowImpl](../../atl/reference/cwindowimpl-class.md)、 [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)和[CDialogImpl](../../atl/reference/cdialogimpl-class.md) (派生自`CWindow`的类) 提供了一个创建窗口或`CWindow::m_hWnd`对话框的方法, 然后将该对话框分配给。 你还可以使用[CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) Win32 函数。
 
-##  <a name="deferwindowpos"></a>  CWindow::DeferWindowPos
+##  <a name="deferwindowpos"></a>CWindow::D eferWindowPos
 
-更新指定窗口的指定的窗口的多个位置结构。
+为指定窗口更新指定的多窗口位置结构。
 
 ```
 HDWP DeferWindowPos(
@@ -669,11 +669,11 @@ HDWP DeferWindowPos(
 
 ### <a name="remarks"></a>备注
 
-请参阅[DeferWindowPos](/windows/desktop/api/winuser/nf-winuser-deferwindowpos) Windows SDK 中。
+请参阅 Windows SDK 中的[DeferWindowPos](/windows/win32/api/winuser/nf-winuser-deferwindowpos) 。
 
-##  <a name="destroywindow"></a>  CWindow::DestroyWindow
+##  <a name="destroywindow"></a>CWindow::D estroyWindow
 
-销毁与关联的窗口`CWindow`对象并设置[m_hWnd](#m_hwnd)为 NULL。
+销毁与`CWindow`对象关联的窗口, 并将[m_hWnd](#m_hwnd)设置为 NULL。
 
 ```
 BOOL DestroyWindow() throw();
@@ -681,7 +681,7 @@ BOOL DestroyWindow() throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[DestroyWindow](/windows/desktop/api/winuser/nf-winuser-destroywindow) Windows SDK 中。
+请参阅 Windows SDK 中的[DestroyWindow](/windows/win32/api/winuser/nf-winuser-destroywindow) 。
 
 它不会销毁`CWindow`对象本身。
 
@@ -689,9 +689,9 @@ BOOL DestroyWindow() throw();
 
 [!code-cpp[NVC_ATL_Windowing#5](../../atl/codesnippet/cpp/cwindow-class_5.cpp)]
 
-##  <a name="detach"></a>  CWindow::Detach
+##  <a name="detach"></a>CWindow::D etach
 
-分离[m_hWnd](#m_hwnd)从`CWindow`对象并设置`m_hWnd`为 NULL。
+将[m_hWnd](#m_hwnd)与`CWindow`对象分离, 并`m_hWnd`将设置为 NULL。
 
 ```
 HWND Detach() throw();
@@ -699,15 +699,15 @@ HWND Detach() throw();
 
 ### <a name="return-value"></a>返回值
 
-与关联的 HWND`CWindow`对象。
+与`CWindow`对象关联的 HWND。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Windowing#6](../../atl/codesnippet/cpp/cwindow-class_6.cpp)]
 
-##  <a name="dlgdirlist"></a>  CWindow::DlgDirList
+##  <a name="dlgdirlist"></a>CWindow::D lgDirList
 
-用指定的路径或文件的名称匹配的所有文件的名称填充列表框。
+使用与指定的路径或文件名匹配的所有文件的名称填充列表框。
 
 ```
 int DlgDirList(
@@ -719,11 +719,11 @@ int DlgDirList(
 
 ### <a name="remarks"></a>备注
 
-请参阅[DlgDirList](/windows/desktop/api/winuser/nf-winuser-dlgdirlista) Windows SDK 中。
+请参阅 Windows SDK 中的[DlgDirList](/windows/win32/api/winuser/nf-winuser-dlgdirlistw) 。
 
-##  <a name="dlgdirlistcombobox"></a>  CWindow::DlgDirListComboBox
+##  <a name="dlgdirlistcombobox"></a>CWindow::D lgDirListComboBox
 
-用指定的路径或文件的名称匹配的所有文件的名称填充组合框。
+使用与指定的路径或文件名匹配的所有文件的名称填充组合框。
 
 ```
 int DlgDirListComboBox(
@@ -735,9 +735,9 @@ int DlgDirListComboBox(
 
 ### <a name="remarks"></a>备注
 
-请参阅[DlgDirListComboBox](/windows/desktop/api/winuser/nf-winuser-dlgdirlistcomboboxa) Windows SDK 中。
+请参阅 Windows SDK 中的[DlgDirListComboBox](/windows/win32/api/winuser/nf-winuser-dlgdirlistcomboboxw) 。
 
-##  <a name="dlgdirselect"></a>  CWindow::DlgDirSelect
+##  <a name="dlgdirselect"></a>CWindow::D lgDirSelect
 
 从列表框检索当前所选内容。
 
@@ -750,11 +750,11 @@ BOOL DlgDirSelect(
 
 ### <a name="remarks"></a>备注
 
-请参阅[DlgDirSelectEx](/windows/desktop/api/winuser/nf-winuser-dlgdirselectexa) Windows SDK 中。
+请参阅 Windows SDK 中的[DlgDirSelectEx](/windows/win32/api/winuser/nf-winuser-dlgdirselectexw) 。
 
-##  <a name="dlgdirselectcombobox"></a>  CWindow::DlgDirSelectComboBox
+##  <a name="dlgdirselectcombobox"></a>CWindow::D lgDirSelectComboBox
 
-从组合框检索当前所选内容。
+从组合框中检索当前选定内容。
 
 ```
 BOOL DlgDirSelectComboBox(
@@ -765,11 +765,11 @@ BOOL DlgDirSelectComboBox(
 
 ### <a name="remarks"></a>备注
 
-请参阅[DlgDirSelectComboBoxEx](/windows/desktop/api/winuser/nf-winuser-dlgdirselectcomboboxexa) Windows SDK 中。
+请参阅 Windows SDK 中的[DlgDirSelectComboBoxEx](/windows/win32/api/winuser/nf-winuser-dlgdirselectcomboboxexw) 。
 
-##  <a name="dragacceptfiles"></a>  CWindow::DragAcceptFiles
+##  <a name="dragacceptfiles"></a>CWindow::D ragAcceptFiles
 
-寄存器窗口是否接受拖放文件。
+注册窗口是否接受拖动的文件。
 
 ```
 void DragAcceptFiles(BOOL bAccept = TRUE);
@@ -777,9 +777,9 @@ void DragAcceptFiles(BOOL bAccept = TRUE);
 
 ### <a name="remarks"></a>备注
 
-请参阅[DragAcceptFiles](/windows/desktop/api/shellapi/nf-shellapi-dragacceptfiles) Windows SDK 中。
+请参阅 Windows SDK 中的[DragAcceptFiles](/windows/win32/api/shellapi/nf-shellapi-dragacceptfiles) 。
 
-##  <a name="drawmenubar"></a>  CWindow::DrawMenuBar
+##  <a name="drawmenubar"></a>CWindow::D rawMenuBar
 
 重绘窗口的菜单栏。
 
@@ -789,9 +789,9 @@ BOOL DrawMenuBar() throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[DrawMenuBar](/windows/desktop/api/winuser/nf-winuser-drawmenubar) Windows SDK 中。
+请参阅 Windows SDK 中的[DrawMenuBar](/windows/win32/api/winuser/nf-winuser-drawmenubar) 。
 
-##  <a name="enablescrollbar"></a>  CWindow::EnableScrollBar
+##  <a name="enablescrollbar"></a>CWindow:: EnableScrollBar
 
 启用或禁用滚动条箭头。
 
@@ -801,9 +801,9 @@ BOOL EnableScrollBar(UINT uSBFlags, UINT uArrowFlags = ESB_ENABLE_BOTH) throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[EnableScrollBar](/windows/desktop/api/winuser/nf-winuser-enablescrollbar) Windows SDK 中。
+请参阅 Windows SDK 中的[EnableScrollBar](/windows/win32/api/winuser/nf-winuser-enablescrollbar) 。
 
-##  <a name="enablewindow"></a>  CWindow::EnableWindow
+##  <a name="enablewindow"></a>CWindow:: EnableWindow
 
 启用或禁用输入。
 
@@ -813,13 +813,13 @@ BOOL EnableWindow(BOOL bEnable = TRUE) throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[EnableWindow](/windows/desktop/api/winuser/nf-winuser-enablewindow) Windows SDK 中。
+请参阅 Windows SDK 中的[EnableWindow](/windows/win32/api/winuser/nf-winuser-enablewindow) 。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Windowing#7](../../atl/codesnippet/cpp/cwindow-class_7.cpp)]
 
-##  <a name="endpaint"></a>  CWindow::EndPaint
+##  <a name="endpaint"></a>CWindow:: EndPaint
 
 标记绘制的末尾。
 
@@ -829,13 +829,13 @@ void EndPaint(LPPAINTSTRUCT lpPaint) throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[EndPaint](/windows/desktop/api/winuser/nf-winuser-endpaint) Windows SDK 中。
+请参阅 Windows SDK 中的[EndPaint](/windows/win32/api/winuser/nf-winuser-endpaint) 。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Windowing#2](../../atl/codesnippet/cpp/cwindow-class_2.cpp)]
 
-##  <a name="flashwindow"></a>  CWindow::FlashWindow
+##  <a name="flashwindow"></a>CWindow:: FlashWindow
 
 使窗口闪烁一次。
 
@@ -845,9 +845,9 @@ BOOL FlashWindow(BOOL bInvert) throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[FlashWindow](/windows/desktop/api/winuser/nf-winuser-flashwindow) Windows SDK 中。
+请参阅 Windows SDK 中的[FlashWindow](/windows/win32/api/winuser/nf-winuser-flashwindow) 。
 
-##  <a name="getclientrect"></a>  CWindow::GetClientRect
+##  <a name="getclientrect"></a>CWindow:: GetClientRect
 
 检索工作区的坐标。
 
@@ -857,13 +857,13 @@ BOOL GetClientRect(LPRECT lpRect) const throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[GetClientRect](/windows/desktop/api/winuser/nf-winuser-getclientrect) Windows SDK 中。
+请参阅 Windows SDK 中的[GetClientRect](/windows/win32/api/winuser/nf-winuser-getclientrect) 。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Windowing#8](../../atl/codesnippet/cpp/cwindow-class_8.cpp)]
 
-##  <a name="getdc"></a>  CWindow::GetDC
+##  <a name="getdc"></a>CWindow:: GetDC
 
 检索工作区的设备上下文。
 
@@ -873,15 +873,15 @@ HDC GetDC() throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[GetDC](/windows/desktop/api/winuser/nf-winuser-getdc) Windows SDK 中。
+请参阅 Windows SDK 中的[GetDC](/windows/win32/api/winuser/nf-winuser-getdc) 。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Windowing#9](../../atl/codesnippet/cpp/cwindow-class_9.cpp)]
 
-##  <a name="getdcex"></a>  CWindow::GetDCEx
+##  <a name="getdcex"></a>CWindow:: GetDCEx
 
-检索工作区的设备上下文，并允许剪辑选项。
+检索工作区的设备上下文, 并允许剪切选项。
 
 ```
 HDC GetDCEx(HRGN hRgnClip, DWORD flags) throw();
@@ -889,11 +889,11 @@ HDC GetDCEx(HRGN hRgnClip, DWORD flags) throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[GetDCEx](/windows/desktop/api/winuser/nf-winuser-getdcex) Windows SDK 中。
+请参阅 Windows SDK 中的[GetDCEx](/windows/win32/api/winuser/nf-winuser-getdcex) 。
 
-##  <a name="getdescendantwindow"></a>  CWindow::GetDescendantWindow
+##  <a name="getdescendantwindow"></a>CWindow:: GetDescendantWindow
 
-查找给定的标识符指定的子代窗口。
+查找由给定标识符指定的子代窗口。
 
 ```
 HWND GetDescendantWindow(int nID) const throw();
@@ -902,7 +902,7 @@ HWND GetDescendantWindow(int nID) const throw();
 ### <a name="parameters"></a>参数
 
 *nID*<br/>
-[in]要检索的子代窗口的标识符。
+中要检索的子代窗口的标识符。
 
 ### <a name="return-value"></a>返回值
 
@@ -910,11 +910,11 @@ HWND GetDescendantWindow(int nID) const throw();
 
 ### <a name="remarks"></a>备注
 
-`GetDescendantWindow` 搜索子窗口，不仅 windows 直接子级的整个树。
+`GetDescendantWindow`搜索整个子窗口树, 而不仅搜索直接子项的窗口。
 
-##  <a name="getdlgcontrol"></a>  CWindow::GetDlgControl
+##  <a name="getdlgcontrol"></a>CWindow:: GetDlgControl
 
-调用此函数可获得到复合控件或控件宿主对话框承载的 ActiveX 控件的接口的指针。
+调用此函数可获取一个指针, 该指针指向由复合控件或控件承载对话框承载的 ActiveX 控件的接口。
 
 ```
 HRESULT GetDlgControl(
@@ -926,25 +926,25 @@ HRESULT GetDlgControl(
 ### <a name="parameters"></a>参数
 
 *nID*<br/>
-[in]正在检索控件的资源 ID。
+中正在检索的控件的资源 ID。
 
 *iid*<br/>
-[in]你想要从控件中获取的接口 ID。
+中要从控件获取的接口的 ID。
 
 *ppCtrl*<br/>
-[out]指向接口指针。
+弄指向接口的指针。
 
 ### <a name="return-value"></a>返回值
 
-返回成功，则为 S_OK 或任何有效的错误 HRESULT。 例如，如果通过指定的控件函数返回 E_FAIL *nID*找不到，如果找不到该控件，但它不支持指定的接口，它返回 E_NOINTERFACE *iid*。
+如果成功, 则返回 S_OK; 如果 HRESULT 为, 则返回。 例如, 如果找不到由*nID*指定的控件, 则函数返回 E_FAIL; 如果可以找到该控件, 则返回 E_NOINTERFACE, 但它不支持由*iid*指定的接口。
 
 ### <a name="remarks"></a>备注
 
-使用此指针，可以在接口上调用方法。
+使用此指针, 可以在接口上调用方法。
 
-##  <a name="getdlgctrlid"></a>  CWindow::GetDlgCtrlID
+##  <a name="getdlgctrlid"></a>CWindow:: GetDlgCtrlID
 
-检索窗口的标识符 （用于子窗口）。
+检索窗口的标识符 (仅适用于子窗口)。
 
 ```
 int GetDlgCtrlID() const throw();
@@ -952,9 +952,9 @@ int GetDlgCtrlID() const throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[GetDlgCtrlID](/windows/desktop/api/winuser/nf-winuser-getdlgctrlid) Windows SDK 中。
+请参阅 Windows SDK 中的[GetDlgCtrlID](/windows/win32/api/winuser/nf-winuser-getdlgctrlid) 。
 
-##  <a name="getdlghost"></a>  CWindow::GetDlgHost
+##  <a name="getdlghost"></a>CWindow:: GetDlgHost
 
 检索指向 ATL 控件承载容器的接口的指针。
 
@@ -968,23 +968,23 @@ HRESULT GetDlgHost(
 ### <a name="parameters"></a>参数
 
 *nID*<br/>
-[in]正在检索控件的资源 ID。
+中正在检索的控件的资源 ID。
 
 *iid*<br/>
-[in]你想要从控件中获取的接口 ID。
+中要从控件获取的接口的 ID。
 
 *ppHost*<br/>
-[out]指向接口指针。
+弄指向接口的指针。
 
 ### <a name="return-value"></a>返回值
 
-如果通过指定窗口，则返回 S_OK *iid*是控件容器，并可以检索所请求的接口。 如果窗口不是控件容器，或如果检索不到所请求的接口，则返回 E_FAIL。 如果找不到具有指定 ID 的窗口，返回的值等于 HRESULT_FROM_WIN32(ERROR_CONTROL_ID_NOT_FOUND)。
+如果由*iid*指定的窗口为控件容器, 则返回 S_OK, 并且可以检索所请求的接口。 如果该窗口不是控件容器, 或者无法检索请求的接口, 则返回 E_FAIL。 如果找不到具有指定 ID 的窗口, 则返回值等于 HRESULT_FROM_WIN32 (ERROR_CONTROL_ID_NOT_FOUND)。
 
 ### <a name="remarks"></a>备注
 
-使用此指针，可以在接口上调用方法。
+使用此指针, 可以在接口上调用方法。
 
-##  <a name="getdlgitem"></a>  CWindow::GetDlgItem
+##  <a name="getdlgitem"></a>CWindow:: GetDlgItem
 
 检索指定的子窗口。
 
@@ -994,11 +994,11 @@ HWND GetDlgItem(int nID) const throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[GetDlgItem](/windows/desktop/api/winuser/nf-winuser-getdlgitem) Windows SDK 中。
+请参阅 Windows SDK 中的[GetDlgItem](/windows/win32/api/winuser/nf-winuser-getdlgitem) 。
 
-##  <a name="getdlgitemint"></a>  CWindow::GetDlgItemInt
+##  <a name="getdlgitemint"></a>CWindow:: GetDlgItemInt
 
-将转换为整数的控件的文本。
+将控件的文本转换为整数。
 
 ```
 UINT GetDlgItemInt(
@@ -1009,9 +1009,9 @@ UINT GetDlgItemInt(
 
 ### <a name="remarks"></a>备注
 
-请参阅[GetDlgItemInt](/windows/desktop/api/winuser/nf-winuser-getdlgitemint) Windows SDK 中。
+请参阅 Windows SDK 中的[GetDlgItemInt](/windows/win32/api/winuser/nf-winuser-getdlgitemint) 。
 
-##  <a name="getdlgitemtext"></a>  CWindow::GetDlgItemText
+##  <a name="getdlgitemtext"></a>CWindow:: GetDlgItemText
 
 检索控件的文本。
 
@@ -1028,15 +1028,15 @@ BOOL GetDlgItemText(
 
 ### <a name="remarks"></a>备注
 
-请参阅[GetDlgItemText](/windows/desktop/api/winuser/nf-winuser-getdlgitemtexta) Windows SDK 中。
+请参阅 Windows SDK 中的[GetDlgItemText](/windows/win32/api/winuser/nf-winuser-getdlgitemtextw) 。
 
 ### <a name="remarks"></a>备注
 
-此方法的第二个版本，可将控件的文本复制到 BSTR。 如果成功复制文本; 此版本将返回 TRUE否则为 FALSE。
+此方法的第二个版本允许您将控件的文本复制到 BSTR。 如果成功复制文本, 则此版本返回 TRUE;否则为 FALSE。
 
-##  <a name="getexstyle"></a>  CWindow::GetExStyle
+##  <a name="getexstyle"></a>CWindow:: GetExStyle
 
-检索窗口的扩展的窗口样式。
+检索窗口的扩展窗口样式。
 
 ```
 DWORD GetExStyle() const throw();
@@ -1044,19 +1044,19 @@ DWORD GetExStyle() const throw();
 
 ### <a name="return-value"></a>返回值
 
-在窗口的扩展样式。
+窗口的扩展样式。
 
 ### <a name="remarks"></a>备注
 
-若要检索的正则窗口样式，请调用[GetStyle](#getstyle)。
+若要检索常规窗口样式, 请调用[GetStyle](#getstyle)。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Windowing#10](../../atl/codesnippet/cpp/cwindow-class_10.cpp)]
 
-##  <a name="getfont"></a>  CWindow::GetFont
+##  <a name="getfont"></a>CWindow:: Ivsfontandcolorstorage.getfont 错误
 
-通过发送检索窗口的当前字体[WM_GETFONT](/windows/desktop/winmsg/wm-getfont)到窗口的消息。
+通过向窗口发送[WM_GETFONT](/windows/win32/winmsg/wm-getfont)消息来检索窗口的当前字体。
 
 ```
 HFONT GetFont() const throw();
@@ -1064,11 +1064,11 @@ HFONT GetFont() const throw();
 
 ### <a name="return-value"></a>返回值
 
-字体句柄。
+字体控点。
 
-##  <a name="gethotkey"></a>  CWindow::GetHotKey
+##  <a name="gethotkey"></a>CWindow:: GetHotKey
 
-确定热键与窗口相关联的发送 WM_GETHOTKEY 消息。
+通过发送 WM_GETHOTKEY 消息确定与窗口关联的热键。
 
 ```
 DWORD GetHotKey() const throw();
@@ -1076,11 +1076,11 @@ DWORD GetHotKey() const throw();
 
 ### <a name="return-value"></a>返回值
 
-虚拟键代码和修饰符热键与窗口相关联。 有关可能的修饰符的列表，请参阅[WM_GETHOTKEY](/windows/desktop/inputdev/wm-gethotkey) Windows SDK 中。 标准虚拟键代码的列表，请参见 Winuser.h。
+与窗口关联的热键的虚拟键代码和修饰符。 有关可能的修饰符的列表, 请参阅 Windows SDK 中的[WM_GETHOTKEY](/windows/win32/inputdev/wm-gethotkey) 。 有关标准虚拟键代码的列表, 请参阅 Winuser.h。
 
-##  <a name="geticon"></a>  CWindow::GetIcon
+##  <a name="geticon"></a>CWindow:: GetIcon
 
-检索窗口的大或小图标的句柄。
+检索窗口的大图标或小图标的句柄。
 
 ```
 HICON GetIcon(BOOL bBigIcon = TRUE) const;
@@ -1089,7 +1089,7 @@ HICON GetIcon(BOOL bBigIcon = TRUE) const;
 ### <a name="parameters"></a>参数
 
 *bBigIcon*<br/>
-[in]如果为 TRUE （默认值） 方法返回的大图标。 否则，返回的小图标。
+中如果为 TRUE (默认值), 则方法返回大图标。 否则, 它将返回小图标。
 
 ### <a name="return-value"></a>返回值
 
@@ -1097,9 +1097,9 @@ HICON GetIcon(BOOL bBigIcon = TRUE) const;
 
 ### <a name="remarks"></a>备注
 
-`GetIcon` 将发送[WM_GETICON](/windows/desktop/winmsg/wm-geticon)到窗口的消息。
+`GetIcon`向窗口发送[WM_GETICON](/windows/win32/winmsg/wm-geticon)消息。
 
-##  <a name="getlastactivepopup"></a>  CWindow::GetLastActivePopup
+##  <a name="getlastactivepopup"></a>CWindow:: GetLastActivePopup
 
 检索最近活动的弹出窗口。
 
@@ -1109,9 +1109,9 @@ HWND GetLastActivePopup() const throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[GetLastActivePopup](/windows/desktop/api/winuser/nf-winuser-getlastactivepopup) Windows SDK 中。
+请参阅 Windows SDK 中的[GetLastActivePopup](/windows/win32/api/winuser/nf-winuser-getlastactivepopup) 。
 
-##  <a name="getmenu"></a>  CWindow::GetMenu
+##  <a name="getmenu"></a>CWindow:: GetMenu
 
 检索窗口的菜单。
 
@@ -1121,11 +1121,11 @@ HMENU GetMenu() const throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[GetMenu](/windows/desktop/api/winuser/nf-winuser-getmenu) Windows SDK 中。
+请参阅 Windows SDK 中的[GetMenu](/windows/win32/api/winuser/nf-winuser-getmenu) 。
 
-##  <a name="getnextdlggroupitem"></a>  CWindow::GetNextDlgGroupItem
+##  <a name="getnextdlggroupitem"></a>CWindow:: GetNextDlgGroupItem
 
-检索中的一组控件的上一个或下一个控件。
+检索控件组中的上一个或下一个控件。
 
 ```
 HWND GetNextDlgGroupItem(HWND hWndCtl, BOOL bPrevious = FALSE) const throw();
@@ -1133,9 +1133,9 @@ HWND GetNextDlgGroupItem(HWND hWndCtl, BOOL bPrevious = FALSE) const throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[GetNextDlgGroupItem](/windows/desktop/api/winuser/nf-winuser-getnextdlggroupitem) Windows SDK 中。
+请参阅 Windows SDK 中的[GetNextDlgGroupItem](/windows/win32/api/winuser/nf-winuser-getnextdlggroupitem) 。
 
-##  <a name="getnextdlgtabitem"></a>  CWindow::GetNextDlgTabItem
+##  <a name="getnextdlgtabitem"></a>CWindow:: GetNextDlgTabItem
 
 检索具有 WS_TABSTOP 样式的上一个或下一个控件。
 
@@ -1145,9 +1145,9 @@ HWND GetNextDlgTabItem(HWND hWndCtl, BOOL bPrevious = FALSE) const throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[GetNextDlgTabItem](/windows/desktop/api/winuser/nf-winuser-getnextdlgtabitem) Windows SDK 中。
+请参阅 Windows SDK 中的[GetNextDlgTabItem](/windows/win32/api/winuser/nf-winuser-getnextdlgtabitem) 。
 
-##  <a name="getparent"></a>  CWindow::GetParent
+##  <a name="getparent"></a>CWindow:: GetParent
 
 检索直接父窗口。
 
@@ -1157,13 +1157,13 @@ HWND GetParent() const throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[GetParent](/windows/desktop/api/winuser/nf-winuser-getparent) Windows SDK 中。
+请参阅 Windows SDK 中的[GetParent](/windows/win32/api/winuser/nf-winuser-getparent) 。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Windowing#11](../../atl/codesnippet/cpp/cwindow-class_11.cpp)]
 
-##  <a name="getscrollinfo"></a>  CWindow::GetScrollInfo
+##  <a name="getscrollinfo"></a>CWindow:: GetScrollInfo
 
 检索滚动条的参数。
 
@@ -1173,9 +1173,9 @@ BOOL GetScrollInfo(int nBar, LPSCROLLINFO lpScrollInfo) throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[GetScrollInfo](/windows/desktop/api/winuser/nf-winuser-getscrollinfo) Windows SDK 中。
+请参阅 Windows SDK 中的[GetScrollInfo](/windows/win32/api/winuser/nf-winuser-getscrollinfo) 。
 
-##  <a name="getscrollpos"></a>  CWindow::GetScrollPos
+##  <a name="getscrollpos"></a>CWindow:: GetScrollPos
 
 检索滚动框的位置。
 
@@ -1185,9 +1185,9 @@ int GetScrollPos(int nBar) const throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[GetScrollPos](/windows/desktop/api/winuser/nf-winuser-getscrollpos) Windows SDK 中。
+请参阅 Windows SDK 中的[GetScrollPos](/windows/win32/api/winuser/nf-winuser-getscrollpos) 。
 
-##  <a name="getscrollrange"></a>  CWindow::GetScrollRange
+##  <a name="getscrollrange"></a>CWindow:: GetScrollRange
 
 检索滚动条范围。
 
@@ -1200,9 +1200,9 @@ BOOL GetScrollRange(
 
 ### <a name="remarks"></a>备注
 
-请参阅[GetScrollRange](/windows/desktop/api/winuser/nf-winuser-getscrollrange) Windows SDK 中。
+请参阅 Windows SDK 中的[GetScrollRange](/windows/win32/api/winuser/nf-winuser-getscrollrange) 。
 
-##  <a name="getstyle"></a>  CWindow::GetStyle
+##  <a name="getstyle"></a>CWindow:: GetStyle
 
 检索窗口的窗口样式。
 
@@ -1212,19 +1212,19 @@ DWORD GetStyle() const throw();
 
 ### <a name="return-value"></a>返回值
 
-窗口样式。
+窗口的样式。
 
 ### <a name="remarks"></a>备注
 
-若要检索扩展的窗口样式，请调用[GetExStyle](#getexstyle)。
+若要检索扩展的窗口样式, 请调用[GetExStyle](#getexstyle)。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Windowing#12](../../atl/codesnippet/cpp/cwindow-class_12.cpp)]
 
-##  <a name="getsystemmenu"></a>  CWindow::GetSystemMenu
+##  <a name="getsystemmenu"></a>CWindow:: GetSystemMenu
 
-创建一份修改的系统菜单。
+创建用于修改的系统菜单的副本。
 
 ```
 HMENU GetSystemMenu(BOOL bRevert) const throw();
@@ -1232,9 +1232,9 @@ HMENU GetSystemMenu(BOOL bRevert) const throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[GetSystemMenu](/windows/desktop/api/winuser/nf-winuser-getsystemmenu) Windows SDK 中。
+请参阅 Windows SDK 中的[GetSystemMenu](/windows/win32/api/winuser/nf-winuser-getsystemmenu) 。
 
-##  <a name="gettoplevelparent"></a>  CWindow::GetTopLevelParent
+##  <a name="gettoplevelparent"></a>CWindow:: GetTopLevelParent
 
 检索窗口的顶级父窗口。
 
@@ -1246,9 +1246,9 @@ HWND GetTopLevelParent() const throw();
 
 顶级父窗口的句柄。
 
-##  <a name="gettoplevelwindow"></a>  CWindow::GetTopLevelWindow
+##  <a name="gettoplevelwindow"></a>CWindow:: GetTopLevelWindow
 
-检索窗口的顶级父或所有者窗口。
+检索窗口的顶级父级或所有者窗口。
 
 ```
 HWND GetTopLevelWindow() const throw();
@@ -1256,9 +1256,9 @@ HWND GetTopLevelWindow() const throw();
 
 ### <a name="return-value"></a>返回值
 
-顶级所有者窗口的句柄。
+顶层所有者窗口的句柄。
 
-##  <a name="gettopwindow"></a>  CWindow::GetTopWindow
+##  <a name="gettopwindow"></a>CWindow:: GetTopWindow
 
 检索顶级子窗口。
 
@@ -1268,13 +1268,13 @@ HWND GetTopWindow() const throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[GetTopWindow](/windows/desktop/api/winuser/nf-winuser-gettopwindow) Windows SDK 中。
+请参阅 Windows SDK 中的[GetTopWindow](/windows/win32/api/winuser/nf-winuser-gettopwindow) 。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Windowing#13](../../atl/codesnippet/cpp/cwindow-class_13.cpp)]
 
-##  <a name="getupdaterect"></a>  CWindow::GetUpdateRect
+##  <a name="getupdaterect"></a>CWindow:: GetUpdateRect
 
 检索完全包围更新区域的最小矩形的坐标。
 
@@ -1284,11 +1284,11 @@ BOOL GetUpdateRect(LPRECT lpRect, BOOL bErase = FALSE) throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[GetUpdateRect](/windows/desktop/api/winuser/nf-winuser-getupdaterect) Windows SDK 中。
+请参阅 Windows SDK 中的[GetUpdateRect](/windows/win32/api/winuser/nf-winuser-getupdaterect) 。
 
-##  <a name="getupdatergn"></a>  CWindow::GetUpdateRgn
+##  <a name="getupdatergn"></a>CWindow:: GetUpdateRgn
 
-检索更新区域，并将其复制到指定的区域。
+检索更新区域, 并将其复制到指定的区域。
 
 ```
 int GetUpdateRgn(HRGN hRgn, BOOL bErase = FALSE) throw();
@@ -1296,9 +1296,9 @@ int GetUpdateRgn(HRGN hRgn, BOOL bErase = FALSE) throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[GetUpdateRgn](/windows/desktop/api/winuser/nf-winuser-getupdatergn) Windows SDK 中。
+请参阅 Windows SDK 中的[GetUpdateRgn](/windows/win32/api/winuser/nf-winuser-getupdatergn) 。
 
-##  <a name="getwindow"></a>  CWindow::GetWindow
+##  <a name="getwindow"></a>CWindow:: GetWindow
 
 检索指定的窗口。
 
@@ -1308,9 +1308,9 @@ HWND GetWindow(UINT nCmd) const throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅`GetWindow`Windows SDK 中。
+请`GetWindow`参阅 Windows SDK 中的。
 
-##  <a name="getwindowcontexthelpid"></a>  CWindow::GetWindowContextHelpId
+##  <a name="getwindowcontexthelpid"></a>CWindow:: GetWindowContextHelpId
 
 检索窗口的帮助上下文标识符。
 
@@ -1320,9 +1320,9 @@ DWORD GetWindowContextHelpId() const throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[GetWindowContextHelpId](/windows/desktop/api/winuser/nf-winuser-getwindowcontexthelpid) Windows SDK 中。
+请参阅 Windows SDK 中的[GetWindowContextHelpId](/windows/win32/api/winuser/nf-winuser-getwindowcontexthelpid) 。
 
-##  <a name="getwindowdc"></a>  CWindow::GetWindowDC
+##  <a name="getwindowdc"></a>CWindow:: GetWindowDC
 
 检索整个窗口的设备上下文。
 
@@ -1332,15 +1332,15 @@ HDC GetWindowDC() throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[GetWindowDC](/windows/desktop/api/winuser/nf-winuser-getwindowdc) Windows SDK 中。
+请参阅 Windows SDK 中的[GetWindowDC](/windows/win32/api/winuser/nf-winuser-getwindowdc) 。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Windowing#14](../../atl/codesnippet/cpp/cwindow-class_14.cpp)]
 
-##  <a name="getwindowlong"></a>  CWindow::GetWindowLong
+##  <a name="getwindowlong"></a>CWindow:: GetWindowLong
 
-检索到的额外窗口内存中指定的偏移量处的 32 位值。
+在额外的窗口内存中, 按指定的偏移量检索32位值。
 
 ```
 LONG GetWindowLong(int nIndex) const throw();
@@ -1348,14 +1348,14 @@ LONG GetWindowLong(int nIndex) const throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[GetWindowLong](/windows/desktop/api/winuser/nf-winuser-getwindowlonga) Windows SDK 中。
+请参阅 Windows SDK 中的[GetWindowLong](/windows/win32/api/winuser/nf-winuser-getwindowlongw) 。
 
 > [!NOTE]
->  若要编写与 32 位和 64 位版本的 Windows 兼容的代码，请使用[CWindow::GetWindowLongPtr](#getwindowlongptr)。
+>  若要编写与32位和64位版本的 Windows 兼容的代码, 请使用[CWindow:: GetWindowLongPtr](#getwindowlongptr)。
 
-##  <a name="getwindowlongptr"></a>  CWindow::GetWindowLongPtr
+##  <a name="getwindowlongptr"></a>CWindow:: GetWindowLongPtr
 
-检索指定的窗口，其中按指定偏移量值包括到额外的窗口内存有关的信息。
+检索有关指定窗口的信息, 包括在额外的窗口内存中指定偏移量处的值。
 
 ```
 LONG_PTR GetWindowLongPtr(int nIndex) const throw();
@@ -1363,18 +1363,18 @@ LONG_PTR GetWindowLongPtr(int nIndex) const throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[GetWindowLongPtr](/windows/desktop/api/winuser/nf-winuser-getwindowlongptra) Windows SDK 中。
+请参阅 Windows SDK 中的[GetWindowLongPtr](/windows/win32/api/winuser/nf-winuser-getwindowlongptrw) 。
 
 ### <a name="remarks"></a>备注
 
-如果要检索的指针或句柄，此函数取代`CWindow::GetWindowLong`方法。
+如果要检索指针或句柄, 此函数将取代`CWindow::GetWindowLong`方法。
 
 > [!NOTE]
->  在 32 位 Windows 上和 64 位 Windows 上的 64 位的 32 位指针和句柄。
+>  指针和句柄是32位 Windows 上的32位和64位 Windows 上的64位。
 
-若要编写与 32 位和 64 位版本的 Windows 兼容的代码，使用`CWindow::GetWindowLongPtr`。
+若要编写与32位和64位版本的 Windows 兼容的代码, 请使用`CWindow::GetWindowLongPtr`。
 
-##  <a name="getwindowplacement"></a>  CWindow::GetWindowPlacement
+##  <a name="getwindowplacement"></a>CWindow:: GetWindowPlacement
 
 检索显示状态和位置。
 
@@ -1384,11 +1384,11 @@ BOOL GetWindowPlacement(WINDOWPLACEMENT FAR* lpwndpl) const throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[GetWindowPlacement](/windows/desktop/api/winuser/nf-winuser-getwindowplacement) Windows SDK 中。
+请参阅 Windows SDK 中的[GetWindowPlacement](/windows/win32/api/winuser/nf-winuser-getwindowplacement) 。
 
-##  <a name="getwindowprocessid"></a>  CWindow::GetWindowProcessID
+##  <a name="getwindowprocessid"></a>CWindow:: GetWindowProcessID
 
-检索在创建窗口的进程的标识符。
+检索创建窗口的进程的标识符。
 
 ```
 DWORD GetWindowProcessID() throw();
@@ -1396,15 +1396,15 @@ DWORD GetWindowProcessID() throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[GetWindowThreadProcessID](/windows/desktop/api/winuser/nf-winuser-getwindowthreadprocessid) Windows SDK 中。
+请参阅 Windows SDK 中的[GetWindowThreadProcessID](/windows/win32/api/winuser/nf-winuser-getwindowthreadprocessid) 。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Windowing#15](../../atl/codesnippet/cpp/cwindow-class_15.cpp)]
 
-##  <a name="getwindowrect"></a>  CWindow::GetWindowRect
+##  <a name="getwindowrect"></a>CWindow:: GetWindowRect
 
-检索窗口的边框尺寸。
+检索窗口的边界尺寸。
 
 ```
 BOOL GetWindowRect(LPRECT lpRect) const throw();
@@ -1412,11 +1412,11 @@ BOOL GetWindowRect(LPRECT lpRect) const throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[GetWindowRect](/windows/desktop/api/winuser/nf-winuser-getwindowrect) Windows SDK 中。
+请参阅 Windows SDK 中的[GetWindowRect](/windows/win32/api/winuser/nf-winuser-getwindowrect) 。
 
-##  <a name="getwindowrgn"></a>  CWindow::GetWindowRgn
+##  <a name="getwindowrgn"></a>CWindow:: GetWindowRgn
 
-获取一个窗口的窗口区域的副本。
+获取窗口的窗口区域的副本。
 
 ```
 int GetWindowRgn(HRGN hRgn) throw();
@@ -1424,9 +1424,9 @@ int GetWindowRgn(HRGN hRgn) throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[GetWindowRgn](/windows/desktop/api/winuser/nf-winuser-getwindowrgn) Windows SDK 中。
+请参阅 Windows SDK 中的[GetWindowRgn](/windows/win32/api/winuser/nf-winuser-getwindowrgn) 。
 
-##  <a name="getwindowtext"></a>  CWindow::GetWindowText
+##  <a name="getwindowtext"></a>CWindow:: GetWindowText
 
 检索窗口的文本。
 
@@ -1445,24 +1445,24 @@ int GetWindowText(CSimpleString& strText) const;
 缓冲区的大小（以字符为单位），这也是要写入的最大字符数。
 
 *bstrText*<br/>
-要在其中存储窗口文本 BSTR。
+用于存储窗口文本的 BSTR。
 
 *strText*<br/>
 用于存储窗口文本的 `CString`。
 
 ### <a name="return-value"></a>返回值
 
-如果已成功复制文本，则返回值为 TRUE;否则，返回值为 FALSE。
+如果成功复制文本, 则返回值为 TRUE;否则, 返回值为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-请参阅[GetWindowText](/windows/desktop/api/winuser/nf-winuser-getwindowtexta) Windows SDK 中。
+请参阅 Windows SDK 中的[GetWindowText](/windows/win32/api/winuser/nf-winuser-getwindowtextw) 。
 
-此方法的第二个版本，可将文本存储在 BSTR;第三个版本，可将结果存储在[CString](../../atl-mfc-shared/reference/cstringt-class.md)，因为`CSimpleString`是类的基类`CString`。
+此方法的第二个版本允许您将文本存储在 BSTR 中;第三个版本允许将结果存储在[CString](../../atl-mfc-shared/reference/cstringt-class.md)中, 因为`CSimpleString`是的基类。 `CString`
 
-##  <a name="getwindowtextlength"></a>  Cwindow:: Getwindowtextlength
+##  <a name="getwindowtextlength"></a>CWindow:: GetWindowTextLength
 
-检索窗口的文本的长度。
+检索窗口文本的长度。
 
 ```
 int GetWindowTextLength() const throw();
@@ -1470,11 +1470,11 @@ int GetWindowTextLength() const throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[GetWindowTextLength](/windows/desktop/api/winuser/nf-winuser-getwindowtextlengtha) Windows SDK 中。
+请参阅 Windows SDK 中的[GetWindowTextLength](/windows/win32/api/winuser/nf-winuser-getwindowtextlengthw) 。
 
-##  <a name="getwindowthreadid"></a>  CWindow::GetWindowThreadID
+##  <a name="getwindowthreadid"></a>CWindow:: GetWindowThreadID
 
-检索创建了指定的窗口的线程标识符。
+检索创建指定窗口的线程的标识符。
 
 ```
 DWORD GetWindowThreadID() throw();
@@ -1482,15 +1482,15 @@ DWORD GetWindowThreadID() throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[GetWindowThreadProcessID](/windows/desktop/api/winuser/nf-winuser-getwindowthreadprocessid) Windows SDK 中。
+请参阅 Windows SDK 中的[GetWindowThreadProcessID](/windows/win32/api/winuser/nf-winuser-getwindowthreadprocessid) 。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Windowing#16](../../atl/codesnippet/cpp/cwindow-class_16.cpp)]
 
-##  <a name="getwindowword"></a>  CWindow::GetWindowWord
+##  <a name="getwindowword"></a>CWindow:: GetWindowWord
 
-检索到的额外窗口内存中按指定偏移量为 16 位值。
+在额外的窗口内存中检索指定偏移量处的16位值。
 
 ```
 WORD GetWindowWord(int nIndex) const throw();
@@ -1498,11 +1498,11 @@ WORD GetWindowWord(int nIndex) const throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[GetWindowLong](/windows/desktop/api/winuser/nf-winuser-getwindowlonga) Windows SDK 中。
+请参阅 Windows SDK 中的[GetWindowLong](/windows/win32/api/winuser/nf-winuser-getwindowlongw) 。
 
-##  <a name="gotodlgctrl"></a>  CWindow::GotoDlgCtrl
+##  <a name="gotodlgctrl"></a>CWindow:: GotoDlgCtrl
 
-在对话框中，键盘焦点设置到控件。
+将键盘焦点设置到对话框中的控件。
 
 ```
 void GotoDlgCtrl(HWND hWndCtrl) const throw();
@@ -1510,9 +1510,9 @@ void GotoDlgCtrl(HWND hWndCtrl) const throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[WM_NEXTDLGCTL](/windows/desktop/dlgbox/wm-nextdlgctl) Windows SDK 中。
+请参阅 Windows SDK 中的[WM_NEXTDLGCTL](/windows/win32/dlgbox/wm-nextdlgctl) 。
 
-##  <a name="hidecaret"></a>  CWindow::HideCaret
+##  <a name="hidecaret"></a>CWindow:: HideCaret
 
 隐藏系统插入符号。
 
@@ -1522,15 +1522,15 @@ BOOL HideCaret() throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[HideCaret](/windows/desktop/api/winuser/nf-winuser-hidecaret) Windows SDK 中。
+请参阅 Windows SDK 中的[HideCaret](/windows/win32/api/winuser/nf-winuser-hidecaret) 。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Windowing#17](../../atl/codesnippet/cpp/cwindow-class_17.cpp)]
 
-##  <a name="hilitemenuitem"></a>  CWindow::HiliteMenuItem
+##  <a name="hilitemenuitem"></a>CWindow:: HiliteMenuItem
 
-突出显示，或者从顶级菜单项移除突出显示。
+突出显示或删除顶级菜单项中的突出显示。
 
 ```
 BOOL HiliteMenuItem(
@@ -1541,9 +1541,9 @@ BOOL HiliteMenuItem(
 
 ### <a name="remarks"></a>备注
 
-请参阅[HiliteMenuItem](/windows/desktop/api/winuser/nf-winuser-hilitemenuitem) Windows SDK 中。
+请参阅 Windows SDK 中的[HiliteMenuItem](/windows/win32/api/winuser/nf-winuser-hilitemenuitem) 。
 
-##  <a name="invalidate"></a>  CWindow::Invalidate
+##  <a name="invalidate"></a>CWindow:: 无效
 
 使整个工作区无效。
 
@@ -1553,17 +1553,17 @@ BOOL Invalidate(BOOL bErase = TRUE) throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[InvalidateRect](/windows/desktop/api/winuser/nf-winuser-invalidaterect) Windows SDK 中。
+请参阅 Windows SDK 中的[InvalidateRect](/windows/win32/api/winuser/nf-winuser-invalidaterect) 。
 
-传递 NULL`RECT`参数`InvalidateRect`Win32 函数。
+将`RECT`参数的 NULL 传递`InvalidateRect`到 Win32 函数。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Windowing#18](../../atl/codesnippet/cpp/cwindow-class_18.cpp)]
 
-##  <a name="invalidaterect"></a>  CWindow::InvalidateRect
+##  <a name="invalidaterect"></a>CWindow:: InvalidateRect
 
-使指定的矩形内的客户端区域无效。
+使指定矩形中的工作区失效。
 
 ```
 BOOL InvalidateRect(LPCRECT lpRect, BOOL bErase = TRUE) throw();
@@ -1571,11 +1571,11 @@ BOOL InvalidateRect(LPCRECT lpRect, BOOL bErase = TRUE) throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[InvalidateRect](/windows/desktop/api/winuser/nf-winuser-invalidaterect) Windows SDK 中。
+请参阅 Windows SDK 中的[InvalidateRect](/windows/win32/api/winuser/nf-winuser-invalidaterect) 。
 
-##  <a name="invalidatergn"></a>  CWindow::InvalidateRgn
+##  <a name="invalidatergn"></a>CWindow:: InvalidateRgn
 
-使指定区域内的客户端区域无效。
+使指定区域内的工作区失效。
 
 ```
 void InvalidateRgn(HRGN hRgn, BOOL bErase = TRUE) throw();
@@ -1583,13 +1583,13 @@ void InvalidateRgn(HRGN hRgn, BOOL bErase = TRUE) throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[InvalidateRgn](/windows/desktop/api/winuser/nf-winuser-invalidatergn) Windows SDK 中。
+请参阅 Windows SDK 中的[InvalidateRgn](/windows/win32/api/winuser/nf-winuser-invalidatergn) 。
 
 ### <a name="remarks"></a>备注
 
-指定**void**返回类型，而`InvalidateRgn`Win32 函数始终返回 TRUE。
+指定**void**返回类型, 而`InvalidateRgn` Win32 函数始终返回 TRUE。
 
-##  <a name="ischild"></a>  CWindow::IsChild
+##  <a name="ischild"></a>CWindow:: IsChild
 
 确定指定的窗口是否为子窗口。
 
@@ -1599,11 +1599,11 @@ BOOL IsChild(const HWND hWnd) const throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[IsChild](/windows/desktop/api/winuser/nf-winuser-ischild) Windows SDK 中。
+请参阅 Windows SDK 中的[IsChild](/windows/win32/api/winuser/nf-winuser-ischild) 。
 
-##  <a name="isdialogmessage"></a>  CWindow::IsDialogMessage
+##  <a name="isdialogmessage"></a>CWindow:: IsDialogMessage
 
-确定消息是否适用于指定的对话框。
+确定消息是否用于指定的对话框。
 
 ```
 BOOL IsDialogMessage(LPMSG lpMsg) throw();
@@ -1611,9 +1611,9 @@ BOOL IsDialogMessage(LPMSG lpMsg) throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[IsDialogMessage](/windows/desktop/api/winuser/nf-winuser-isdialogmessagea) Windows SDK 中。
+请参阅 Windows SDK 中的[IsDialogMessage](/windows/win32/api/winuser/nf-winuser-isdialogmessagew) 。
 
-##  <a name="isdlgbuttonchecked"></a>  CWindow::IsDlgButtonChecked
+##  <a name="isdlgbuttonchecked"></a>CWindow:: IsDlgButtonChecked
 
 确定按钮的复选状态。
 
@@ -1623,11 +1623,11 @@ UINT IsDlgButtonChecked(int nIDButton) const throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[IsDlgButtonChecked](/windows/desktop/api/winuser/nf-winuser-isdlgbuttonchecked) Windows SDK 中。
+请参阅 Windows SDK 中的[IsDlgButtonChecked](/windows/win32/api/winuser/nf-winuser-isdlgbuttonchecked) 。
 
-##  <a name="isiconic"></a>  CWindow::IsIconic
+##  <a name="isiconic"></a>CWindow:: IsIconic
 
-确定窗口是否最小化。
+确定窗口是否已最小化。
 
 ```
 BOOL IsIconic() const throw();
@@ -1635,15 +1635,15 @@ BOOL IsIconic() const throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[IsIconic](/windows/desktop/api/winuser/nf-winuser-isiconic) Windows SDK 中。
+请参阅 Windows SDK 中的[IsIconic](/windows/win32/api/winuser/nf-winuser-isiconic) 。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Windowing#19](../../atl/codesnippet/cpp/cwindow-class_19.cpp)]
 
-##  <a name="isparentdialog"></a>  CWindow::IsParentDialog
+##  <a name="isparentdialog"></a>CWindow:: IsParentDialog
 
-确定控件的父窗口是一个对话框窗口。
+确定控件的父窗口是否为对话框窗口。
 
 ```
 BOOL IsParentDialog() throw();
@@ -1651,9 +1651,9 @@ BOOL IsParentDialog() throw();
 
 ### <a name="return-value"></a>返回值
 
-如果父窗口是一个对话框，则返回 FALSE 否则，则返回 TRUE。
+如果父窗口是对话框, 则返回 TRUE, 否则返回 FALSE。
 
-##  <a name="iswindow"></a>  CWindow::IsWindow
+##  <a name="iswindow"></a>CWindow:: IsWindow
 
 确定指定的窗口句柄是否标识现有窗口。
 
@@ -1663,15 +1663,15 @@ BOOL IsWindow() throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[IsWindow](/windows/desktop/api/winuser/nf-winuser-iswindow) Windows SDK 中。
+请参阅 Windows SDK 中的[IsWindow](/windows/win32/api/winuser/nf-winuser-iswindow) 。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Windowing#20](../../atl/codesnippet/cpp/cwindow-class_20.cpp)]
 
-##  <a name="iswindowenabled"></a>  CWindow::IsWindowEnabled
+##  <a name="iswindowenabled"></a>CWindow:: IsWindowEnabled
 
-确定是否为输入启用窗口。
+确定是否为窗口启用了输入。
 
 ```
 BOOL IsWindowEnabled() const throw();
@@ -1679,13 +1679,13 @@ BOOL IsWindowEnabled() const throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[IsWindowEnabled](/windows/desktop/api/winuser/nf-winuser-iswindowenabled) Windows SDK 中。
+请参阅 Windows SDK 中的[IsWindowEnabled](/windows/win32/api/winuser/nf-winuser-iswindowenabled) 。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Windowing#21](../../atl/codesnippet/cpp/cwindow-class_21.cpp)]
 
-##  <a name="iswindowvisible"></a>  CWindow::IsWindowVisible
+##  <a name="iswindowvisible"></a>CWindow:: IsWindowVisible
 
 确定窗口的可见性状态。
 
@@ -1695,13 +1695,13 @@ BOOL IsWindowVisible() const throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[IsWindowVisible](/windows/desktop/api/winuser/nf-winuser-iswindowvisible) Windows SDK 中。
+请参阅 Windows SDK 中的[IsWindowVisible](/windows/win32/api/winuser/nf-winuser-iswindowvisible) 。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Windowing#22](../../atl/codesnippet/cpp/cwindow-class_22.cpp)]
 
-##  <a name="iswindowunicode"></a>  CWindow::IsWindowUnicode
+##  <a name="iswindowunicode"></a>CWindow:: IsWindowUnicode
 
 确定指定的窗口是否为本机 Unicode 窗口。
 
@@ -1711,15 +1711,15 @@ BOOL IsWindowUnicode() throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[IsWindowUnicode](/windows/desktop/api/winuser/nf-winuser-iswindowunicode) Windows SDK 中。
+请参阅 Windows SDK 中的[IsWindowUnicode](/windows/win32/api/winuser/nf-winuser-iswindowunicode) 。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Windowing#23](../../atl/codesnippet/cpp/cwindow-class_23.cpp)]
 
-##  <a name="iszoomed"></a>  CWindow::IsZoomed
+##  <a name="iszoomed"></a>CWindow:: IsZoomed
 
-确定是否在窗口已最大化。
+确定窗口是否处于最大化状态。
 
 ```
 BOOL IsZoomed() const throw();
@@ -1727,11 +1727,11 @@ BOOL IsZoomed() const throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[IsZoomed](/windows/desktop/api/winuser/nf-winuser-iszoomed) Windows SDK 中。
+请参阅 Windows SDK 中的[IsZoomed](/windows/win32/api/winuser/nf-winuser-iszoomed) 。
 
-##  <a name="killtimer"></a>  CWindow::KillTimer
+##  <a name="killtimer"></a>CWindow:: KillTimer
 
-销毁创建的计时器事件`CWindow::SetTimer`。
+销毁由`CWindow::SetTimer`创建的计时器事件。
 
 ```
 BOOL KillTimer(UINT nIDEvent) throw();
@@ -1739,11 +1739,11 @@ BOOL KillTimer(UINT nIDEvent) throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[KillTimer](/windows/desktop/api/winuser/nf-winuser-killtimer) Windows SDK 中。
+请参阅 Windows SDK 中的[KillTimer](/windows/win32/api/winuser/nf-winuser-killtimer) 。
 
-##  <a name="lockwindowupdate"></a>  CWindow::LockWindowUpdate
+##  <a name="lockwindowupdate"></a>CWindow:: LockWindowUpdate
 
-禁用或启用绘制在窗口中，通过调用[LockWindowUpdate](/windows/desktop/api/winuser/nf-winuser-lockwindowupdate) Win32 函数。
+通过调用[LockWindowUpdate](/windows/win32/api/winuser/nf-winuser-lockwindowupdate) Win32 函数, 禁用或启用窗口中的绘制。
 
 ```
 BOOL LockWindowUpdate(BOOL bLock = TRUE) throw();
@@ -1752,27 +1752,27 @@ BOOL LockWindowUpdate(BOOL bLock = TRUE) throw();
 ### <a name="parameters"></a>参数
 
 *bLock*<br/>
-[in]如果 TRUE （默认值），则将锁定该窗口。 否则，它将解除锁定。
+中如果为 TRUE (默认值), 则窗口将被锁定。 否则, 将解除锁定。
 
 ### <a name="return-value"></a>返回值
 
-如果窗口被成功锁定，则为 TRUE否则为 FALSE。
+如果成功锁定窗口, 则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-如果*块*为 TRUE 时，此方法将传递[m_hWnd](#m_hwnd) Win32 函数; 否则，它将传递 NULL。
+如果*bLock*为 TRUE, 则此方法将[M_hWnd](#m_hwnd)传递到 Win32 函数;否则, 它会传递 NULL。
 
-##  <a name="m_hwnd"></a>  CWindow::m_hWnd
+##  <a name="m_hwnd"></a>CWindow:: m_hWnd
 
-包含与关联的窗口的句柄`CWindow`对象。
+包含与`CWindow`对象关联的窗口的句柄。
 
 ```
 HWND m_hWnd throw() throw();
 ```
 
-##  <a name="mapwindowpoints"></a>  CWindow::MapWindowPoints
+##  <a name="mapwindowpoints"></a>CWindow:: MapWindowPoints
 
-将一组点从窗口的坐标空间转换到另一个窗口的坐标空间。
+将窗口坐标空间中的一组点转换为另一个窗口的坐标空间。
 
 ```
 int MapWindowPoints(
@@ -1787,11 +1787,11 @@ int MapWindowPoints(
 
 ### <a name="remarks"></a>备注
 
-请参阅[MapWindowPoints](/windows/desktop/api/winuser/nf-winuser-mapwindowpoints) Windows SDK 中。
+请参阅 Windows SDK 中的[MapWindowPoints](/windows/win32/api/winuser/nf-winuser-mapwindowpoints) 。
 
-此方法的第二个版本允许您将转换的坐标[RECT](/previous-versions/dd162897\(v=vs.85\))结构。
+此方法的第二个版本允许您转换[RECT](/previous-versions/dd162897\(v=vs.85\))结构的坐标。
 
-##  <a name="messagebox"></a>  CWindow::MessageBox
+##  <a name="messagebox"></a>CWindow:: MessageBox
 
 显示消息框。
 
@@ -1804,15 +1804,15 @@ int MessageBox(
 
 ### <a name="remarks"></a>备注
 
-请参阅[MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) Windows SDK 中。
+请参阅 Windows SDK 中的[MessageBox](/windows/win32/api/winuser/nf-winuser-messagebox) 。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Windowing#24](../../atl/codesnippet/cpp/cwindow-class_24.cpp)]
 
-##  <a name="modifystyle"></a>  CWindow::ModifyStyle
+##  <a name="modifystyle"></a>CWindow:: ModifyStyle
 
-修改的窗口样式`CWindow`对象。
+修改`CWindow`对象的窗口样式。
 
 ```
 BOOL ModifyStyle(
@@ -1824,41 +1824,41 @@ BOOL ModifyStyle(
 ### <a name="parameters"></a>参数
 
 *dwRemove*<br/>
-[in]指定要删除在样式修改过程的窗口样式。
+中指定要在样式修改过程中删除的窗口样式。
 
 *dwAdd*<br/>
-[in]指定要添加样式修改期间的窗口样式。
+中指定要在样式修改过程中添加的窗口样式。
 
 *nFlags*<br/>
-[in]窗口定位标志。 有关可能的值的列表，请参阅[SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) Windows SDK 中的函数。
+中窗口-定位标志。 有关可能值的列表, 请参阅 Windows SDK 中的[SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos)函数。
 
 ### <a name="return-value"></a>返回值
 
-如果修改窗口样式; 则为 TRUE否则为 FALSE。
+如果修改了窗口样式, 则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-可以通过使用按位 OR 组合样式来添加或删除 ( &#124; ) 运算符。 请参阅[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)有关可用的窗口样式的 Windows SDKfor 信息中的函数。
+要添加或删除的样式可以使用按位 OR ( &#124; ) 运算符组合在一起。 有关可用窗口样式的信息, 请参阅 Windows SDKfor 中的[CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww)函数。
 
-如果*nFlags*为非零值，`ModifyStyle`调用 Win32 函数`SetWindowPos`，并通过组合重绘的窗口*nFlags*与以下四个标志：
+如果*nFlags*为非零`ModifyStyle` , 则调用 Win32 `SetWindowPos`函数, 并通过将*nFlags*与以下四个标志组合来重绘窗口:
 
 - SWP_NOSIZE 保留当前的大小。
 
-- SWP_NOMOVE 保留当前的位置。
+- SWP_NOMOVE 保留当前位置。
 
 - SWP_NOZORDER 保留当前的 Z 顺序。
 
 - SWP_NOACTIVATE 不会激活窗口。
 
-若要修改一个窗口的扩展样式，请调用[ModifyStyleEx](#modifystyleex)。
+若要修改窗口的扩展样式, 请调用[ModifyStyleEx](#modifystyleex)。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Windowing#25](../../atl/codesnippet/cpp/cwindow-class_25.cpp)]
 
-##  <a name="modifystyleex"></a>  CWindow::ModifyStyleEx
+##  <a name="modifystyleex"></a>CWindow:: ModifyStyleEx
 
-修改的扩展的窗口样式`CWindow`对象。
+修改`CWindow`对象的扩展窗口样式。
 
 ```
 BOOL ModifyStyleEx(
@@ -1870,39 +1870,39 @@ BOOL ModifyStyleEx(
 ### <a name="parameters"></a>参数
 
 *dwRemove*<br/>
-[in]指定要删除在样式修改过程的扩展的样式。
+中指定要在样式修改过程中删除的扩展样式。
 
 *dwAdd*<br/>
-[in]指定要添加样式修改期间的扩展的样式。
+中指定在样式修改过程中要添加的扩展样式。
 
 *nFlags*<br/>
-[in]窗口定位标志。 有关可能的值的列表，请参阅[SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) Windows SDK 中的函数。
+中窗口-定位标志。 有关可能值的列表, 请参阅 Windows SDK 中的[SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos)函数。
 
 ### <a name="return-value"></a>返回值
 
-如果修改扩展的窗口样式; 则为 TRUE否则为 FALSE。
+如果修改了扩展的窗口样式, 则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-可以通过使用按位 OR 组合样式来添加或删除 ( &#124; ) 运算符。 请参阅[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)有关可用的扩展样式的 Windows SDKfor 信息中的函数。
+要添加或删除的样式可以使用按位 OR ( &#124; ) 运算符组合在一起。 有关可用扩展样式的信息, 请参阅 Windows SDKfor 中的[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)函数。
 
-如果*nFlags*为非零值，`ModifyStyleEx`调用 Win32 函数`SetWindowPos`，并通过组合重绘的窗口*nFlags*与以下四个标志：
+如果*nFlags*为非零`ModifyStyleEx` , 则调用 Win32 `SetWindowPos`函数, 并通过将*nFlags*与以下四个标志组合来重绘窗口:
 
 - SWP_NOSIZE 保留当前的大小。
 
-- SWP_NOMOVE 保留当前的位置。
+- SWP_NOMOVE 保留当前位置。
 
 - SWP_NOZORDER 保留当前的 Z 顺序。
 
 - SWP_NOACTIVATE 不会激活窗口。
 
-若要修改 windows 中使用正则窗口样式，请调用[ModifyStyle](#modifystyle)。
+若要使用常规窗口样式修改 windows, 请调用[ModifyStyle](#modifystyle)。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Windowing#26](../../atl/codesnippet/cpp/cwindow-class_26.cpp)]
 
-##  <a name="movewindow"></a>  CWindow::MoveWindow
+##  <a name="movewindow"></a>CWindow:: MoveWindow
 
 更改窗口的大小和位置。
 
@@ -1921,13 +1921,13 @@ BOOL MoveWindow(
 
 ### <a name="remarks"></a>备注
 
-为顶层窗口对象、 x 和 y 参数是相对于屏幕的左上角。 对于子窗口对象，它们是相对于父窗口的工作区的左上角。
+对于顶级窗口对象, x 和 y 参数是相对于屏幕左上角的。 对于子窗口对象, 它们相对于父窗口的工作区的左上角。
 
-此方法的第二个版本使用[RECT](/previous-versions/dd162897\(v=vs.85\))结构，以确定窗口的新位置、 宽度和高度。
+此方法的第二个版本使用[矩形](/previous-versions/dd162897\(v=vs.85\))结构来确定窗口的新位置、宽度和高度。
 
-##  <a name="nextdlgctrl"></a>  CWindow::NextDlgCtrl
+##  <a name="nextdlgctrl"></a>CWindow:: NextDlgCtrl
 
-在对话框中，键盘焦点设置到下一个控件。
+将键盘焦点设置到对话框中的下一个控件。
 
 ```
 void NextDlgCtrl() const throw();
@@ -1935,9 +1935,9 @@ void NextDlgCtrl() const throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[WM_NEXTDLGCTL](/windows/desktop/dlgbox/wm-nextdlgctl) Windows SDK 中。
+请参阅 Windows SDK 中的[WM_NEXTDLGCTL](/windows/win32/dlgbox/wm-nextdlgctl) 。
 
-##  <a name="openclipboard"></a>  CWindow::OpenClipboard
+##  <a name="openclipboard"></a>CWindow:: OpenClipboard
 
 打开剪贴板。
 
@@ -1947,27 +1947,27 @@ BOOL OpenClipboard() throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[打开剪贴板](/windows/desktop/api/winuser/nf-winuser-openclipboard)Windows SDK 中。
+请参阅 Windows SDK 中的[OpenClipboard](/windows/win32/api/winuser/nf-winuser-openclipboard) 。
 
-##  <a name="operator_hwnd"></a>  CWindow::operator HWND
+##  <a name="operator_hwnd"></a>CWindow:: operator HWND
 
-将转换`CWindow`对象与 HWND。
+`CWindow`将对象转换为 HWND。
 
 ```
 operator HWND() const throw();
 ```
 
-##  <a name="operator_eq"></a>  CWindow::operator =
+##  <a name="operator_eq"></a>CWindow:: operator =
 
-将分配到 HWND`CWindow`通过设置对象[m_hWnd](#m_hwnd)成员添加到`hWnd`。
+通过将[m_hWnd](#m_hwnd)成员设置`CWindow`为`hWnd`, 为对象分配 HWND。
 
 ```
 CWindow& operator= (HWND hWnd) throw();
 ```
 
-##  <a name="postmessage"></a>  CWindow::PostMessage
+##  <a name="postmessage"></a>CWindow::P ostMessage
 
-将消息放在与创建窗口的线程关联的消息队列中。
+将消息放入与创建该窗口的线程关联的消息队列中。
 
 ```
 BOOL PostMessage(
@@ -1978,17 +1978,17 @@ BOOL PostMessage(
 
 ### <a name="remarks"></a>备注
 
-请参阅[PostMessage](/windows/desktop/api/winuser/nf-winuser-postmessagea) Windows SDK 中。
+请参阅 Windows SDK 中的[PostMessage](/windows/win32/api/winuser/nf-winuser-postmessagew) 。
 
-而无需等待的线程来处理该消息返回。
+返回, 而不等待线程处理该消息。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Windowing#27](../../atl/codesnippet/cpp/cwindow-class_27.cpp)]
 
-##  <a name="prevdlgctrl"></a>  CWindow::PrevDlgCtrl
+##  <a name="prevdlgctrl"></a>CWindow::P revDlgCtrl
 
-在对话框中，键盘焦点设置到上一个控件。
+将键盘焦点设置到对话框中的上一个控件。
 
 ```
 void PrevDlgCtrl() const throw();
@@ -1996,11 +1996,11 @@ void PrevDlgCtrl() const throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[WM_NEXTDLGCTL](/windows/desktop/dlgbox/wm-nextdlgctl) Windows SDK 中。
+请参阅 Windows SDK 中的[WM_NEXTDLGCTL](/windows/win32/dlgbox/wm-nextdlgctl) 。
 
-##  <a name="print"></a>  CWindow::Print
+##  <a name="print"></a>CWindow::P rint
 
-将发送[WM_PRINT](/windows/desktop/gdi/wm-print)到窗口的消息以请求它在指定的设备上下文中绘制自身。
+向窗口发送[WM_PRINT](/windows/win32/gdi/wm-print)消息, 以请求它在指定的设备上下文中绘制自身。
 
 ```
 void Print(HDC hDC, DWORD dwFlags) const throw();
@@ -2009,26 +2009,26 @@ void Print(HDC hDC, DWORD dwFlags) const throw();
 ### <a name="parameters"></a>参数
 
 *hDC*<br/>
-[in]设备上下文的句柄。
+中设备上下文的句柄。
 
 *dwFlags*<br/>
-[in]指定绘图选项。 可以组合一个或多个下列标志：
+中指定绘图选项。 可以合并以下一个或多个标志:
 
-- PRF_CHECKVISIBLE 绘制窗口才可见。
+- PRF_CHECKVISIBLE 仅在显示窗口时绘制。
 
-- PRF_CHILDREN 绘制所有可见子窗口。
+- PRF_CHILDREN 绘制所有可见的子窗口。
 
-- PRF_CLIENT 绘制窗口的客户端区域。
+- PRF_CLIENT 绘制窗口的工作区。
 
-- PRF_ERASEBKGND 绘图窗口前，清除背景。
+- PRF_ERASEBKGND 在绘制窗口之前擦除背景。
 
-- PRF_NONCLIENT 绘制窗口非工作的区。
+- PRF_NONCLIENT 绘制窗口的非工作区。
 
-- PRF_OWNED 绘制所有拥有的 windows。
+- PRF_OWNED 绘制所有拥有的窗口。
 
-##  <a name="printclient"></a>  CWindow::PrintClient
+##  <a name="printclient"></a>CWindow::P rintClient
 
-将发送[WM_PRINTCLIENT](/windows/desktop/gdi/wm-printclient)到窗口的消息以请求它绘制指定的设备上下文中其工作区。
+向窗口发送[WM_PRINTCLIENT](/windows/win32/gdi/wm-printclient)消息, 请求它在指定的设备上下文中绘制其工作区。
 
 ```
 void PrintClient(HDC hDC, DWORD dwFlags) const throw();
@@ -2037,24 +2037,24 @@ void PrintClient(HDC hDC, DWORD dwFlags) const throw();
 ### <a name="parameters"></a>参数
 
 *hDC*<br/>
-[in]设备上下文的句柄。
+中设备上下文的句柄。
 
 *dwFlags*<br/>
-[in]指定绘图选项。 可以组合一个或多个下列标志：
+中指定绘图选项。 可以合并以下一个或多个标志:
 
-- PRF_CHECKVISIBLE 绘制窗口才可见。
+- PRF_CHECKVISIBLE 仅在显示窗口时绘制。
 
-- PRF_CHILDREN 绘制所有可见子窗口。
+- PRF_CHILDREN 绘制所有可见的子窗口。
 
-- PRF_CLIENT 绘制窗口的客户端区域。
+- PRF_CLIENT 绘制窗口的工作区。
 
-- PRF_ERASEBKGND 绘图窗口前，清除背景。
+- PRF_ERASEBKGND 在绘制窗口之前擦除背景。
 
-- PRF_NONCLIENT 绘制窗口非工作的区。
+- PRF_NONCLIENT 绘制窗口的非工作区。
 
-- PRF_OWNED 绘制所有拥有的 windows。
+- PRF_OWNED 绘制所有拥有的窗口。
 
-##  <a name="rcdefault"></a>  CWindow::rcDefault
+##  <a name="rcdefault"></a>CWindow:: rcDefault
 
 包含默认窗口尺寸。
 
@@ -2062,9 +2062,9 @@ void PrintClient(HDC hDC, DWORD dwFlags) const throw();
 static RECT rcDefault;
 ```
 
-##  <a name="redrawwindow"></a>  CWindow::RedrawWindow
+##  <a name="redrawwindow"></a>CWindow:: RedrawWindow
 
-更新指定的矩形或区域的工作区中。
+更新工作区中的指定矩形或区域。
 
 ```
 BOOL RedrawWindow(
@@ -2077,13 +2077,13 @@ throw()
 
 ### <a name="remarks"></a>备注
 
-请参阅[RedrawWindow](/windows/desktop/api/winuser/nf-winuser-redrawwindow) Windows SDK 中。
+请参阅 Windows SDK 中的[RedrawWindow](/windows/win32/api/winuser/nf-winuser-redrawwindow) 。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Windowing#28](../../atl/codesnippet/cpp/cwindow-class_28.cpp)]
 
-##  <a name="releasedc"></a>  CWindow::ReleaseDC
+##  <a name="releasedc"></a>CWindow:: ReleaseDC
 
 释放设备上下文。
 
@@ -2093,15 +2093,15 @@ int ReleaseDC(HDC hDC);
 
 ### <a name="remarks"></a>备注
 
-请参阅[ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc) Windows SDK 中。
+请参阅 Windows SDK 中的[ReleaseDC](/windows/win32/api/winuser/nf-winuser-releasedc) 。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Windowing#9](../../atl/codesnippet/cpp/cwindow-class_9.cpp)]
 
-##  <a name="resizeclient"></a>  CWindow::ResizeClient
+##  <a name="resizeclient"></a>CWindow:: ResizeClient
 
-调整为指定的客户端区域大小的窗口的大小。
+将窗口的大小调整为指定的工作区大小。
 
 ```
 BOOL ResizeClient(
@@ -2113,17 +2113,17 @@ BOOL ResizeClient(
 ### <a name="parameters"></a>参数
 
 *nWidth*<br/>
-以像素为单位的窗口的新宽度。
+窗口的新宽度 (以像素为单位)。
 
 *nHeight*<br/>
-以像素为单位的窗口的新高度。
+窗口的新高度 (以像素为单位)。
 
 *bRedraw*<br/>
-一个标志，指示是否重绘更改。 默认值为 FALSE，指示窗口不重绘更改。
+指示是否重绘更改的标志。 默认值为 FALSE, 表示窗口不重绘更改。
 
-##  <a name="screentoclient"></a>  CWindow::ScreenToClient
+##  <a name="screentoclient"></a>CWindow:: ScreenToClient
 
-将屏幕坐标转换到工作区坐标。
+将屏幕坐标转换为客户端坐标。
 
 ```
 BOOL ScreenToClient(LPPOINT lpPoint) const throw();
@@ -2132,13 +2132,13 @@ BOOL ScreenToClient(LPRECT lpRect) const throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[ScreenToClient](/windows/desktop/api/winuser/nf-winuser-screentoclient) Windows SDK 中。
+请参阅 Windows SDK 中的[ScreenToClient](/windows/win32/api/winuser/nf-winuser-screentoclient) 。
 
-此方法的第二个版本允许您将转换的坐标[RECT](/previous-versions/dd162897\(v=vs.85\))结构。
+此方法的第二个版本允许您转换[RECT](/previous-versions/dd162897\(v=vs.85\))结构的坐标。
 
-##  <a name="scrollwindow"></a>  CWindow::ScrollWindow
+##  <a name="scrollwindow"></a>CWindow:: ScrollWindow
 
-滚动指定的客户端区域。
+滚动指定的工作区。
 
 ```
 BOOL ScrollWindow(
@@ -2150,11 +2150,11 @@ BOOL ScrollWindow(
 
 ### <a name="remarks"></a>备注
 
-请参阅[ScrollWindow](/windows/desktop/api/winuser/nf-winuser-scrollwindow) Windows SDK 中。
+请参阅 Windows SDK 中的[ScrollWindow](/windows/win32/api/winuser/nf-winuser-scrollwindow) 。
 
-##  <a name="scrollwindowex"></a>  CWindow::ScrollWindowEx
+##  <a name="scrollwindowex"></a>CWindow:: ScrollWindowEx
 
-滚动具有附加功能的指定的客户端区域。
+滚动指定的工作区和其他功能。
 
 ```
 int ScrollWindowEx(
@@ -2169,11 +2169,11 @@ int ScrollWindowEx(
 
 ### <a name="remarks"></a>备注
 
-请参阅[ScrollWindowEx](/windows/desktop/api/winuser/nf-winuser-scrollwindowex) Windows SDK 中。
+请参阅 Windows SDK 中的[ScrollWindowEx](/windows/win32/api/winuser/nf-winuser-scrollwindowex) 。
 
-##  <a name="senddlgitemmessage"></a>  CWindow::SendDlgItemMessage
+##  <a name="senddlgitemmessage"></a>CWindow:: SendDlgItemMessage
 
-向控件发送一条消息。
+将消息发送到控件。
 
 ```
 LRESULT SendDlgItemMessage(
@@ -2185,11 +2185,11 @@ LRESULT SendDlgItemMessage(
 
 ### <a name="remarks"></a>备注
 
-请参阅[SendDlgItemMessage](/windows/desktop/api/winuser/nf-winuser-senddlgitemmessagea) Windows SDK 中。
+请参阅 Windows SDK 中的[SendDlgItemMessage](/windows/win32/api/winuser/nf-winuser-senddlgitemmessagew) 。
 
-##  <a name="sendmessage"></a>  CWindow::SendMessage
+##  <a name="sendmessage"></a>CWindow:: SendMessage
 
-向窗口发送一条消息且不返回之前的窗口过程处理完该消息。
+向窗口发送一条消息, 该消息直到窗口过程处理消息后才返回。
 
 ```
 LRESULT SendMessage(
@@ -2206,15 +2206,15 @@ static LRESULT SendMessage(
 
 ### <a name="remarks"></a>备注
 
-请参阅[SendMessage](/windows/desktop/api/winuser/nf-winuser-sendmessage) Windows SDK 中。
+请参阅 Windows SDK 中的[SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) 。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Windowing#29](../../atl/codesnippet/cpp/cwindow-class_29.cpp)]
 
-##  <a name="sendmessagetodescendants"></a>  CWindow::SendMessageToDescendants
+##  <a name="sendmessagetodescendants"></a>CWindow:: SendMessageToDescendants
 
-将指定的消息发送到的所有直接子级`CWindow`对象。
+将指定的消息发送到`CWindow`对象的所有直接子级。
 
 ```
 void SendMessageToDescendants(
@@ -2227,22 +2227,22 @@ void SendMessageToDescendants(
 ### <a name="parameters"></a>参数
 
 *message*<br/>
-[in]要发送的消息。
+中要发送的消息。
 
 *wParam*<br/>
-[in]其他特定于消息的信息。
+中其他特定于消息的信息。
 
 *lParam*<br/>
-[in]其他特定于消息的信息。
+中其他特定于消息的信息。
 
 *bDeep*<br/>
-[in]如果为 TRUE （默认值），该消息将发送给所有子代窗口;否则，它将发送的直接子窗口。
+中如果为 TRUE (默认值), 则将消息发送到所有子代窗口;否则, 它将仅发送到直接子窗口。
 
 ### <a name="remarks"></a>备注
 
-如果*bDeep*为 TRUE，此外将消息发送到其他所有子代窗口。
+如果*bDeep*为 TRUE, 则消息将另外发送到所有其他子代窗口。
 
-##  <a name="sendnotifymessage"></a>  CWindow::SendNotifyMessage
+##  <a name="sendnotifymessage"></a>CWindow:: SendNotifyMessage
 
 向窗口发送一条消息。
 
@@ -2255,11 +2255,11 @@ BOOL SendNotifyMessage(
 
 ### <a name="remarks"></a>备注
 
-请参阅[SendNotifyMessage](/windows/desktop/api/winuser/nf-winuser-sendnotifymessagea) Windows SDK 中。
+请参阅 Windows SDK 中的[SendNotifyMessage](/windows/win32/api/winuser/nf-winuser-sendnotifymessagew) 。
 
-如果窗口由调用线程，创建`SendNotifyMessage`窗口过程处理完该消息才会返回。 否则，它会立即返回。
+如果窗口是由调用线程创建的, 则`SendNotifyMessage`在窗口过程处理该消息之前, 不会返回。 否则, 它会立即返回。
 
-##  <a name="setactivewindow"></a>  CWindow::SetActiveWindow
+##  <a name="setactivewindow"></a>CWindow:: SetActiveWindow
 
 激活窗口。
 
@@ -2269,15 +2269,15 @@ HWND SetActiveWindow() throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[SetActiveWindow](/windows/desktop/api/winuser/nf-winuser-setactivewindow) Windows SDK 中。
+请参阅 Windows SDK 中的[SetActiveWindow](/windows/win32/api/winuser/nf-winuser-setactivewindow) 。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Windowing#30](../../atl/codesnippet/cpp/cwindow-class_30.cpp)]
 
-##  <a name="setcapture"></a>  CWindow::SetCapture
+##  <a name="setcapture"></a>CWindow:: SetCapture
 
-将发送到窗口的所有后续鼠标输入。
+向窗口发送所有后续鼠标输入。
 
 ```
 HWND SetCapture() throw();
@@ -2285,7 +2285,7 @@ HWND SetCapture() throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[SetCapture](/windows/desktop/api/winuser/nf-winuser-setcapture) Windows SDK 中。
+请参阅 Windows SDK 中的[SetCapture](/windows/win32/api/winuser/nf-winuser-setcapture) 。
 
 ##  <a name="setclipboardviewer"></a>  CWindow::SetClipboardViewer
 
@@ -2297,11 +2297,11 @@ HWND SetClipboardViewer() throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[SetClipboardViewer](/windows/desktop/api/winuser/nf-winuser-setclipboardviewer) Windows SDK 中。
+请参阅 Windows SDK 中的[SetClipboardViewer](/windows/win32/api/winuser/nf-winuser-setclipboardviewer) 。
 
-##  <a name="setdlgctrlid"></a>  CWindow::SetDlgCtrlID
+##  <a name="setdlgctrlid"></a>CWindow:: SetDlgCtrlID
 
-将窗口的标识符设置为指定的值。
+将窗口的标识符设置为指定值。
 
 ```
 int SetDlgCtrlID(int nID) throw();
@@ -2310,15 +2310,15 @@ int SetDlgCtrlID(int nID) throw();
 ### <a name="parameters"></a>参数
 
 *nID*<br/>
-[in]要设置为窗口的标识符的新值。
+中要为窗口标识符设置的新值。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，窗口; 的上一个标识符否则为 0。
+如果成功, 则为窗口的上一个标识符;否则为0。
 
-##  <a name="setdlgitemint"></a>  CWindow::SetDlgItemInt
+##  <a name="setdlgitemint"></a>CWindow:: SetDlgItemInt
 
-控件的文本更改为一个整数值的字符串表示形式。
+将控件的文本更改为整数值的字符串表示形式。
 
 ```
 BOOL SetDlgItemInt(
@@ -2329,9 +2329,9 @@ BOOL SetDlgItemInt(
 
 ### <a name="remarks"></a>备注
 
-请参阅[SetDlgItemInt](/windows/desktop/api/winuser/nf-winuser-setdlgitemint) Windows SDK 中。
+请参阅 Windows SDK 中的[SetDlgItemInt](/windows/win32/api/winuser/nf-winuser-setdlgitemint) 。
 
-##  <a name="setdlgitemtext"></a>  CWindow::SetDlgItemText
+##  <a name="setdlgitemtext"></a>CWindow:: SetDlgItemText
 
 更改控件的文本。
 
@@ -2341,11 +2341,11 @@ BOOL SetDlgItemText(int nID, LPCTSTR lpszString) throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[SetDlgItemText](/windows/desktop/api/winuser/nf-winuser-setdlgitemtexta) Windows SDK 中。
+请参阅 Windows SDK 中的[SetDlgItemText](/windows/win32/api/winuser/nf-winuser-setdlgitemtextw) 。
 
-##  <a name="setfocus"></a>  CWindow::SetFocus
+##  <a name="setfocus"></a>CWindow:: SetFocus
 
-将输入的焦点设置为窗口中。
+将输入焦点设置到窗口中。
 
 ```
 HWND SetFocus() throw();
@@ -2353,15 +2353,15 @@ HWND SetFocus() throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[SetFocus](/windows/desktop/api/winuser/nf-winuser-setfocus) Windows SDK 中。
+请参阅 Windows SDK 中的[SetFocus](/windows/win32/api/winuser/nf-winuser-setfocus) 。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Windowing#31](../../atl/codesnippet/cpp/cwindow-class_31.cpp)]
 
-##  <a name="setfont"></a>  CWindow::SetFont
+##  <a name="setfont"></a>CWindow:: SetFont
 
-通过发送更改窗口的当前字体[WM_SETFONT](/windows/desktop/winmsg/wm-setfont)到窗口的消息。
+通过向窗口发送[WM_SETFONT](/windows/win32/winmsg/wm-setfont)消息更改窗口的当前字体。
 
 ```
 void SetFont(HFONT hFont, BOOL bRedraw = TRUE) throw();
@@ -2370,14 +2370,14 @@ void SetFont(HFONT hFont, BOOL bRedraw = TRUE) throw();
 ### <a name="parameters"></a>参数
 
 *hFont*<br/>
-[in]指向新字体的句柄。
+中新字体的句柄。
 
 *bRedraw*<br/>
-[in]如果 TRUE （默认值），则在重绘该窗口。 否则，它不是。
+中如果为 TRUE (默认值), 则重绘窗口。 否则为。
 
-##  <a name="sethotkey"></a>  CWindow::SetHotKey
+##  <a name="sethotkey"></a>CWindow:: SetHotKey
 
-将热键与窗口相关联的发送 WM_SETHOTKEY 消息。
+通过发送 WM_SETHOTKEY 消息将热键与窗口关联。
 
 ```
 int SetHotKey(WORD wVirtualKeyCode, WORD wModifiers) throw();
@@ -2386,18 +2386,18 @@ int SetHotKey(WORD wVirtualKeyCode, WORD wModifiers) throw();
 ### <a name="parameters"></a>参数
 
 *wVirtualKeyCode*<br/>
-[in]热键虚拟键代码。 标准虚拟键代码的列表，请参见 Winuser.h。
+中热键的虚拟键代码。 有关标准虚拟键代码的列表, 请参阅 Winuser.h。
 
 *wModifiers*<br/>
-[in]热键的修饰符。 可能的值的列表，请参阅 Windows SDK 中的 WM_SETHOTKEY。
+中热键的修饰符。 有关可能值的列表, 请参阅 Windows SDK 中的 WM_SETHOTKEY。
 
 ### <a name="return-value"></a>返回值
 
-一系列可能的返回值，请参阅[WM_SETHOTKEY](/windows/desktop/inputdev/wm-sethotkey) Windows SDK 中。
+有关可能的返回值的列表, 请参阅 Windows SDK 中的[WM_SETHOTKEY](/windows/win32/inputdev/wm-sethotkey) 。
 
-##  <a name="seticon"></a>  CWindow::SetIcon
+##  <a name="seticon"></a>CWindow:: SetIcon
 
-将窗口的大或小图标设置为标识图标*hIcon*。
+将窗口的大图标或小图标设置为由*hIcon*标识的图标。
 
 ```
 HICON SetIcon(HICON hIcon, BOOL bBigIcon = TRUE) throw();
@@ -2406,10 +2406,10 @@ HICON SetIcon(HICON hIcon, BOOL bBigIcon = TRUE) throw();
 ### <a name="parameters"></a>参数
 
 *hIcon*<br/>
-[in]新图标的句柄。
+中新图标的句柄。
 
 *bBigIcon*<br/>
-[in]如果 TRUE （默认值），则该方法将设置大图标。 否则，它设置小图标。
+中如果为 TRUE (默认值), 则方法设置大图标。 否则, 它将设置一个小图标。
 
 ### <a name="return-value"></a>返回值
 
@@ -2417,9 +2417,9 @@ HICON SetIcon(HICON hIcon, BOOL bBigIcon = TRUE) throw();
 
 ### <a name="remarks"></a>备注
 
-`SetIcon` 将发送[WM_SETICON](/windows/desktop/winmsg/wm-seticon)到窗口的消息。
+`SetIcon`向窗口发送[WM_SETICON](/windows/win32/winmsg/wm-seticon)消息。
 
-##  <a name="setmenu"></a>  CWindow::SetMenu
+##  <a name="setmenu"></a>CWindow:: SetMenu
 
 更改窗口的当前菜单。
 
@@ -2429,9 +2429,9 @@ BOOL SetMenu(HMENU hMenu) throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[SetMenu](/windows/desktop/api/winuser/nf-winuser-setmenu) Windows SDK 中。
+请参阅 Windows SDK 中的[SetMenu](/windows/win32/api/winuser/nf-winuser-setmenu) 。
 
-##  <a name="setparent"></a>  CWindow::SetParent
+##  <a name="setparent"></a>CWindow:: SetParent
 
 更改父窗口。
 
@@ -2441,15 +2441,15 @@ HWND SetParent(HWND hWndNewParent) throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[SetParent](/windows/desktop/api/winuser/nf-winuser-setparent) Windows SDK 中。
+请参阅 Windows SDK 中的[SetParent](/windows/win32/api/winuser/nf-winuser-setparent) 。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Windowing#32](../../atl/codesnippet/cpp/cwindow-class_32.cpp)]
 
-##  <a name="setredraw"></a>  CWindow::SetRedraw
+##  <a name="setredraw"></a>CWindow:: SetRedraw
 
-设置或清除重绘标志通过发送[WM_SETREDRAW](/windows/desktop/gdi/wm-setredraw)到窗口的消息。
+通过向窗口发送[WM_SETREDRAW](/windows/win32/gdi/wm-setredraw)消息设置或清除重绘标志。
 
 ```
 void SetRedraw(BOOL bRedraw = TRUE) throw();
@@ -2458,17 +2458,17 @@ void SetRedraw(BOOL bRedraw = TRUE) throw();
 ### <a name="parameters"></a>参数
 
 *bRedraw*<br/>
-[in]指定重绘标志的状态。 如果 TRUE （默认值），则将重绘标志设置;如果为 FALSE，，清除该标记。
+中指定重绘标志的状态。 如果为 TRUE (默认值), 则设置重绘标志;如果为 FALSE, 则清除标志。
 
 ### <a name="remarks"></a>备注
 
-调用`SetRedraw`以允许重绘，或以防止更改重绘的更改。
+调用`SetRedraw`以允许重绘更改或防止重绘更改。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Windowing#33](../../atl/codesnippet/cpp/cwindow-class_33.cpp)]
 
-##  <a name="setscrollinfo"></a>  CWindow::SetScrollInfo
+##  <a name="setscrollinfo"></a>CWindow:: SetScrollInfo
 
 设置滚动条的参数。
 
@@ -2481,9 +2481,9 @@ int SetScrollInfo(
 
 ### <a name="remarks"></a>备注
 
-请参阅[SetScrollInfo](/windows/desktop/api/winuser/nf-winuser-setscrollinfo) Windows SDK 中。
+请参阅 Windows SDK 中的[SetScrollInfo](/windows/win32/api/winuser/nf-winuser-setscrollinfo) 。
 
-##  <a name="setscrollpos"></a>  CWindow::SetScrollPos
+##  <a name="setscrollpos"></a>CWindow:: SetScrollPos
 
 更改滚动框的位置。
 
@@ -2496,9 +2496,9 @@ int SetScrollPos(
 
 ### <a name="remarks"></a>备注
 
-请参阅[SetScrollPos](/windows/desktop/api/winuser/nf-winuser-setscrollpos) Windows SDK 中。
+请参阅 Windows SDK 中的[SetScrollPos](/windows/win32/api/winuser/nf-winuser-setscrollpos) 。
 
-##  <a name="setscrollrange"></a>  CWindow::SetScrollRange
+##  <a name="setscrollrange"></a>CWindow:: SetScrollRange
 
 更改滚动条范围。
 
@@ -2512,9 +2512,9 @@ BOOL SetScrollRange(
 
 ### <a name="remarks"></a>备注
 
-请参阅[SetScrollRange](/windows/desktop/api/winuser/nf-winuser-setscrollrange) Windows SDK 中。
+请参阅 Windows SDK 中的[SetScrollRange](/windows/win32/api/winuser/nf-winuser-setscrollrange) 。
 
-##  <a name="settimer"></a>  CWindow::SetTimer
+##  <a name="settimer"></a>CWindow:: SetTimer
 
 创建计时器事件。
 
@@ -2527,9 +2527,9 @@ UINT SetTimer(
 
 ### <a name="remarks"></a>备注
 
-请参阅[SetTimer](/windows/desktop/api/winuser/nf-winuser-settimer) Windows SDK 中。
+请参阅 Windows SDK 中的[SetTimer](/windows/win32/api/winuser/nf-winuser-settimer) 。
 
-##  <a name="setwindowcontexthelpid"></a>  CWindow::SetWindowContextHelpId
+##  <a name="setwindowcontexthelpid"></a>CWindow:: SetWindowContextHelpId
 
 设置窗口的帮助上下文标识符。
 
@@ -2539,11 +2539,11 @@ BOOL SetWindowContextHelpId(DWORD dwContextHelpId) throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[SetWindowContextHelpId](/windows/desktop/api/winuser/nf-winuser-setwindowcontexthelpid) Windows SDK 中。
+请参阅 Windows SDK 中的[SetWindowContextHelpId](/windows/win32/api/winuser/nf-winuser-setwindowcontexthelpid) 。
 
-##  <a name="setwindowlong"></a>  CWindow::SetWindowLong
+##  <a name="setwindowlong"></a>CWindow:: SetWindowLong
 
-到额外的窗口内存指定的偏移量处设置一个 32 位值。
+将指定偏移量的32位值设置为额外的窗口内存。
 
 ```
 LONG SetWindowLong(int nIndex, LONG dwNewLong) throw();
@@ -2551,14 +2551,14 @@ LONG SetWindowLong(int nIndex, LONG dwNewLong) throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) Windows SDK 中。
+请参阅 Windows SDK 中的[SetWindowLong](/windows/win32/api/winuser/nf-winuser-setwindowlongw) 。
 
 > [!NOTE]
->  若要编写与 32 位和 64 位版本的 Windows 兼容的代码，请使用[CWindow::SetWindowLongPtr](#setwindowlongptr)。
+>  若要编写与32位和64位版本的 Windows 兼容的代码, 请使用[CWindow:: SetWindowLongPtr](#setwindowlongptr)。
 
-##  <a name="setwindowlongptr"></a>  CWindow::SetWindowLongPtr
+##  <a name="setwindowlongptr"></a>CWindow:: SetWindowLongPtr
 
-更改指定窗口的属性，并还额外窗口内存中指定的偏移量处设置一个值。
+更改指定窗口的特性, 同时在额外的窗口内存中设置指定偏移量处的值。
 
 ```
 LONG_PTR SetWindowLongPtr(int nIndex, LONG_PTR dwNewLong) throw();
@@ -2566,13 +2566,13 @@ LONG_PTR SetWindowLongPtr(int nIndex, LONG_PTR dwNewLong) throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[SetWindowLongPtr](/windows/desktop/api/winuser/nf-winuser-setwindowlongptra) Windows SDK 中。
+请参阅 Windows SDK 中的[SetWindowLongPtr](/windows/win32/api/winuser/nf-winuser-setwindowlongptrw) 。
 
-此函数取代`CWindow::SetWindowLong`方法。 若要编写与 32 位和 64 位版本的 Windows 兼容的代码，使用`CWindow::SetWindowLongPtr`。
+此函数取代了`CWindow::SetWindowLong`方法。 若要编写与32位和64位版本的 Windows 兼容的代码, 请使用`CWindow::SetWindowLongPtr`。
 
-##  <a name="setwindowplacement"></a>  CWindow::SetWindowPlacement
+##  <a name="setwindowplacement"></a>CWindow:: SetWindowPlacement
 
-设置显示状态和位置。
+设置 "显示状态" 和 "位置"。
 
 ```
 BOOL SetWindowPlacement(const WINDOWPLACEMENT FAR* lpwndpl);
@@ -2580,11 +2580,11 @@ BOOL SetWindowPlacement(const WINDOWPLACEMENT FAR* lpwndpl);
 
 ### <a name="remarks"></a>备注
 
-请参阅[SetWindowPlacement](/windows/desktop/api/winuser/nf-winuser-setwindowplacement) Windows SDK 中。
+请参阅 Windows SDK 中的[SetWindowPlacement](/windows/win32/api/winuser/nf-winuser-setwindowplacement) 。
 
-##  <a name="setwindowpos"></a>  CWindow::SetWindowPos
+##  <a name="setwindowpos"></a>CWindow:: SetWindowPos
 
-设置大小、 位置和 Z 顺序。
+设置大小、位置和 Z 顺序。
 
 ```
 BOOL SetWindowPos(
@@ -2603,11 +2603,11 @@ BOOL SetWindowPos(
 
 ### <a name="remarks"></a>备注
 
-请参阅[SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) Windows SDK 中。
+请参阅 Windows SDK 中的[SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos) 。
 
-此方法的第二个版本使用[RECT](/previous-versions/dd162897\(v=vs.85\))结构来设置窗口的新位置、 宽度和高度。
+此方法的第二个版本使用[矩形](/previous-versions/dd162897\(v=vs.85\))结构设置窗口的新位置、宽度和高度。
 
-##  <a name="setwindowrgn"></a>  CWindow::SetWindowRgn
+##  <a name="setwindowrgn"></a>CWindow:: SetWindowRgn
 
 设置窗口的窗口区域。
 
@@ -2617,9 +2617,9 @@ int SetWindowRgn(HRGN hRgn, BOOL bRedraw = FALSE) throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[SetWindowRgn](/windows/desktop/api/winuser/nf-winuser-setwindowrgn) Windows SDK 中。
+请参阅 Windows SDK 中的[SetWindowRgn](/windows/win32/api/winuser/nf-winuser-setwindowrgn) 。
 
-##  <a name="setwindowtext"></a>  Cwindow:: Setwindowtext
+##  <a name="setwindowtext"></a>CWindow:: SetWindowText
 
 更改窗口的文本。
 
@@ -2629,15 +2629,15 @@ BOOL SetWindowText(LPCTSTR lpszString) throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[SetWindowText](/windows/desktop/api/winuser/nf-winuser-setwindowtexta) Windows SDK 中。
+请参阅 Windows SDK 中的[SetWindowText](/windows/win32/api/winuser/nf-winuser-setwindowtextw) 。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Windowing#34](../../atl/codesnippet/cpp/cwindow-class_34.cpp)]
 
-##  <a name="setwindowword"></a>  CWindow::SetWindowWord
+##  <a name="setwindowword"></a>CWindow:: SetWindowWord
 
-到额外的窗口内存指定的偏移量处设置一个 16 位值。
+将位于指定偏移量的16位值设置为额外的窗口内存。
 
 ```
 WORD SetWindowWord(int nIndex, WORD wNewWord) throw();
@@ -2645,9 +2645,9 @@ WORD SetWindowWord(int nIndex, WORD wNewWord) throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) Windows SDK 中。
+请参阅 Windows SDK 中的[SetWindowLong](/windows/win32/api/winuser/nf-winuser-setwindowlongw) 。
 
-##  <a name="showcaret"></a>  CWindow::ShowCaret
+##  <a name="showcaret"></a>CWindow:: ShowCaret
 
 显示系统插入符号。
 
@@ -2657,15 +2657,15 @@ BOOL ShowCaret() throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[ShowCaret](/windows/desktop/api/winuser/nf-winuser-showcaret) Windows SDK 中。
+请参阅 Windows SDK 中的[ShowCaret](/windows/win32/api/winuser/nf-winuser-showcaret) 。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Windowing#35](../../atl/codesnippet/cpp/cwindow-class_35.cpp)]
 
-##  <a name="showownedpopups"></a>  CWindow::ShowOwnedPopups
+##  <a name="showownedpopups"></a>CWindow:: ShowOwnedPopups
 
-显示或隐藏窗口所拥有的弹出窗口。
+显示或隐藏窗口拥有的弹出窗口。
 
 ```
 BOOL ShowOwnedPopups(BOOL bShow = TRUE) throw();
@@ -2673,9 +2673,9 @@ BOOL ShowOwnedPopups(BOOL bShow = TRUE) throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[ShowOwnedPopups](/windows/desktop/api/winuser/nf-winuser-showownedpopups) Windows SDK 中。
+请参阅 Windows SDK 中的[ShowOwnedPopups](/windows/win32/api/winuser/nf-winuser-showownedpopups) 。
 
-##  <a name="showscrollbar"></a>  CWindow::ShowScrollBar
+##  <a name="showscrollbar"></a>CWindow:: ShowScrollBar
 
 显示或隐藏滚动条。
 
@@ -2685,9 +2685,9 @@ BOOL ShowScrollBar(UINT nBar, BOOL bShow = TRUE) throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[ShowScrollBar](/windows/desktop/api/winuser/nf-winuser-showscrollbar) Windows SDK 中。
+请参阅 Windows SDK 中的[ShowScrollBar](/windows/win32/api/winuser/nf-winuser-showscrollbar) 。
 
-##  <a name="showwindow"></a>  CWindow::ShowWindow
+##  <a name="showwindow"></a>CWindow:: ShowWindow
 
 设置窗口的显示状态。
 
@@ -2697,15 +2697,15 @@ BOOL ShowWindow(int nCmdShow) throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[ShowWindow](/windows/desktop/api/winuser/nf-winuser-showwindow) Windows SDK 中。
+请参阅 Windows SDK 中的[ShowWindow](/windows/win32/api/winuser/nf-winuser-showwindow) 。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Windowing#36](../../atl/codesnippet/cpp/cwindow-class_36.cpp)]
 
-##  <a name="showwindowasync"></a>  CWindow::ShowWindowAsync
+##  <a name="showwindowasync"></a>CWindow:: ShowWindowAsync
 
-设置另一个线程创建的窗口的显示状态。
+设置由不同线程创建的窗口的显示状态。
 
 ```
 BOOL ShowWindowAsync(int nCmdShow) throw();
@@ -2713,9 +2713,9 @@ BOOL ShowWindowAsync(int nCmdShow) throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[ShowWindowAsync](/windows/desktop/api/winuser/nf-winuser-showwindowasync) Windows SDK 中。
+请参阅 Windows SDK 中的[ShowWindowAsync](/windows/win32/api/winuser/nf-winuser-showwindowasync) 。
 
-##  <a name="updatewindow"></a>  CWindow::UpdateWindow
+##  <a name="updatewindow"></a>CWindow:: UpdateWindow
 
 更新工作区。
 
@@ -2725,15 +2725,15 @@ BOOL UpdateWindow() throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[UpdateWindow](/windows/desktop/api/winuser/nf-winuser-updatewindow) Windows SDK 中。
+请参阅 Windows SDK 中的[UpdateWindow](/windows/win32/api/winuser/nf-winuser-updatewindow) 。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Windowing#37](../../atl/codesnippet/cpp/cwindow-class_37.cpp)]
 
-##  <a name="validaterect"></a>  CWindow::ValidateRect
+##  <a name="validaterect"></a>CWindow:: ValidateRect
 
-验证指定的矩形内的客户端区域。
+验证指定矩形中的工作区。
 
 ```
 BOOL ValidateRect(LPCRECT lpRect) throw();
@@ -2741,11 +2741,11 @@ BOOL ValidateRect(LPCRECT lpRect) throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[ValidateRect](/windows/desktop/api/winuser/nf-winuser-validaterect) Windows SDK 中。
+请参阅 Windows SDK 中的[ValidateRect](/windows/win32/api/winuser/nf-winuser-validaterect) 。
 
-##  <a name="validatergn"></a>  CWindow::ValidateRgn
+##  <a name="validatergn"></a>CWindow:: ValidateRgn
 
-验证指定的区域内的客户端区域。
+验证指定区域内的工作区。
 
 ```
 BOOL ValidateRgn(HRGN hRgn) throw();
@@ -2753,9 +2753,9 @@ BOOL ValidateRgn(HRGN hRgn) throw();
 
 ### <a name="remarks"></a>备注
 
-请参阅[ValidateRgn](/windows/desktop/api/winuser/nf-winuser-validatergn) Windows SDK 中。
+请参阅 Windows SDK 中的[ValidateRgn](/windows/win32/api/winuser/nf-winuser-validatergn) 。
 
-##  <a name="winhelp"></a>  CWindow::WinHelp
+##  <a name="winhelp"></a>CWindow:: WinHelp
 
 启动 Windows 帮助。
 
@@ -2768,7 +2768,7 @@ BOOL WinHelp(
 
 ### <a name="remarks"></a>备注
 
-请参阅[WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) Windows SDK 中。
+请参阅 Windows SDK 中的[WinHelp](/windows/win32/api/winuser/nf-winuser-winhelpw) 。
 
 ## <a name="see-also"></a>请参阅
 

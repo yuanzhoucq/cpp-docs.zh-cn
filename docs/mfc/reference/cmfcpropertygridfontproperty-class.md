@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CMFCPropertyGridFontProperty [MFC], GetColor
 - CMFCPropertyGridFontProperty [MFC], GetLogFont
 ms.assetid: 83693f33-bbd3-4fcb-a9ad-fa79fcf2ca24
-ms.openlocfilehash: b348dc2ac68ced89fb0702073f57a114befaf1cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a3c5b806482a97d64a9ffab92877781cb8778b6b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310573"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505111"
 ---
 # <a name="cmfcpropertygridfontproperty-class"></a>CMFCPropertyGridFontProperty 类
 
-`CMFCPropertyGridFileProperty`类支持用于打开字体选择对话框中的属性列表控件项。
+`CMFCPropertyGridFileProperty`类支持打开字体选择对话框的属性列表控件项。
 
 ## <a name="syntax"></a>语法
 
@@ -42,11 +42,11 @@ class CMFCPropertyGridFontProperty : public CMFCPropertyGridProperty
 
 |名称|描述|
 |----------|-----------------|
-|`CMFCPropertyGridFontProperty::FormatProperty`|设置属性值的文本表示形式的格式。 (重写[cmfcpropertygridproperty:: Formatproperty](../../mfc/reference/cmfcpropertygridproperty-class.md#formatproperty)。)|
-|[CMFCPropertyGridFontProperty::GetColor](#getcolor)|检索用户选择从字体对话框的字体颜色。|
-|[CMFCPropertyGridFontProperty::GetLogFont](#getlogfont)|检索用户选择从字体对话框的字体。|
-|`CMFCPropertyGridFontProperty::GetThisClass`|由框架用于获取一个指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)与此类类型相关联的对象。|
-|`CMFCPropertyGridFontProperty::OnClickButton`|当用户单击属性中包含的按钮时，由框架调用。 (重写[cmfcpropertygridproperty:: Onclickbutton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton)。)|
+|`CMFCPropertyGridFontProperty::FormatProperty`|设置属性值的文本表示形式的格式。 (重写[CMFCPropertyGridProperty:: FormatProperty](../../mfc/reference/cmfcpropertygridproperty-class.md#formatproperty)。)|
+|[CMFCPropertyGridFontProperty::GetColor](#getcolor)|检索用户从 "字体" 对话框中选择的字体颜色。|
+|[CMFCPropertyGridFontProperty::GetLogFont](#getlogfont)|检索用户从 "字体" 对话框中选择的字体。|
+|`CMFCPropertyGridFontProperty::GetThisClass`|由框架用于获取指向与此类类型相关联的[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)对象的指针。|
+|`CMFCPropertyGridFontProperty::OnClickButton`|当用户单击属性中包含的按钮时，由框架调用。 (重写[CMFCPropertyGridProperty:: OnClickButton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton)。)|
 
 ## <a name="remarks"></a>备注
 
@@ -60,9 +60,9 @@ class CMFCPropertyGridFontProperty : public CMFCPropertyGridProperty
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxpropertygridctrl.h
+**标头:** afxpropertygridctrl
 
-##  <a name="cmfcpropertygridfontproperty"></a>  CMFCPropertyGridFontProperty::CMFCPropertyGridFontProperty
+##  <a name="cmfcpropertygridfontproperty"></a>CMFCPropertyGridFontProperty::CMFCPropertyGridFontProperty
 
 构造 `CMFCPropertyGridFontProperty` 对象。
 
@@ -79,36 +79,36 @@ CMFCPropertyGridFontProperty(
 ### <a name="parameters"></a>参数
 
 *strName*<br/>
-[in]属性的名称。
+中属性的名称。
 
 *lf*<br/>
-[in]逻辑字体结构，它指定字体的属性。
+中指定字体特性的逻辑字体结构。
 
 *dwFontDialogFlags*<br/>
-[in]应用于字体对话框中单击属性值下拉列表按钮时显示的样式。 默认值为 CF_EFFECTS 和 CF_SCREENFONTS 的按位组合 (OR)。 有关详细信息，请参阅*标志*的参数[CHOOSEFONT 结构](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta)。
+中应用于在单击 "属性值" 下拉按钮时显示的 "字体" 对话框的样式。 默认值为 CF_EFFECTS 和 CF_SCREENFONTS 的按位组合 (OR)。 有关详细信息, 请参阅[CHOOSEFONT 结构](/windows/win32/api/commdlg/ns-commdlg-choosefontw)的*Flags*参数。
 
 *lpszDescr*<br/>
-[in]字体属性的说明。 默认值为 NULL。
+中Font 属性的说明。 默认值为 NULL。
 
 *dwData*<br/>
-[in]特定于应用程序的数据，如整数或与属性关联的其他数据的指针。 默认值为 0。
+中应用程序特定的数据, 例如一个整数或指向与属性关联的其他数据的指针。 默认值为 0。
 
 *color*<br/>
-[in]字体的颜色。 默认值为默认颜色。
+中字体的颜色。 默认值为默认颜色。
 
 ### <a name="remarks"></a>备注
 
-一个`CMFCPropertyGridFontProperty`对象表示在属性网格字体控件中的字体属性。
+`CMFCPropertyGridFontProperty`对象表示属性网格字体控件中的字体属性。
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何构造的对象`CMFCPropertyGridFontProperty`类。 此示例摘自[新的控件示例](../../overview/visual-cpp-samples.md)。
+下面的示例演示如何构造`CMFCPropertyGridFontProperty`类的对象。 此示例是[新控件示例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_NewControls#26](../../mfc/reference/codesnippet/cpp/cmfcpropertygridfontproperty-class_1.cpp)]
 
-##  <a name="getcolor"></a>  CMFCPropertyGridFontProperty::GetColor
+##  <a name="getcolor"></a>CMFCPropertyGridFontProperty:: GetColor
 
-检索用户选择从字体对话框的字体颜色。
+检索用户从 "字体" 对话框中选择的字体颜色。
 
 ```
 COLORREF GetColor() const;
@@ -116,13 +116,13 @@ COLORREF GetColor() const;
 
 ### <a name="return-value"></a>返回值
 
-一个表示所选的字体颜色的 RGB 颜色值。
+表示选定字体颜色的 RGB 颜色值。
 
 ### <a name="remarks"></a>备注
 
-##  <a name="getlogfont"></a>  CMFCPropertyGridFontProperty::GetLogFont
+##  <a name="getlogfont"></a>CMFCPropertyGridFontProperty::GetLogFont
 
-检索用户选择从字体对话框的字体。
+检索用户从 "字体" 对话框中选择的字体。
 
 ```
 LPLOGFONT GetLogFont();
@@ -130,7 +130,7 @@ LPLOGFONT GetLogFont();
 
 ### <a name="return-value"></a>返回值
 
-一个指向[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)描述所选的字体的结构。
+指向描述选定字体的[LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw)结构的指针。
 
 ### <a name="remarks"></a>备注
 

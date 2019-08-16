@@ -26,12 +26,12 @@ helpviewer_keywords:
 - wmemset function
 - memset function
 ms.assetid: e7ceb01b-df69-49c2-b294-a39358ad4699
-ms.openlocfilehash: d517c5565ef07a834d7ef864e495a4bb33351007
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d7b57292f582491a7750b4e12a8072112eac4dd
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285138"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501017"
 ---
 # <a name="memset-wmemset"></a>memset、wmemset
 
@@ -60,18 +60,18 @@ wchar_t *wmemset(
 *c*<br/>
 要设置的字符。
 
-*count*<br/>
+*计数*<br/>
 字符数。
 
 ## <a name="return-value"></a>返回值
 
-值*dest*。
+*Dest*的值。
 
 ## <a name="remarks"></a>备注
 
-设置第一个*计数*个字符*dest*的字符*c*。
+将*dest*的第一个*计数*字符设置为字符*c*。
 
-**安全说明**请确保目标缓冲区至少具有足够的空间存放*计数*字符。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
+**安全说明**请确保目标缓冲区有足够的空间来容纳至少*数量*的字符。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 ## <a name="requirements"></a>要求
 

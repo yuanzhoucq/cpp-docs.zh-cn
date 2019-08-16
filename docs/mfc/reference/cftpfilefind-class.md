@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CFtpFileFind [MFC], FindNextFile
 - CFtpFileFind [MFC], GetFileURL
 ms.assetid: 9667cf01-657f-4b11-b9db-f11e5a7b4e4c
-ms.openlocfilehash: 9afe2bf563ffa80a3238548d75efa69178fa1f64
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 2f4a394e29be135cac95edf6f504d8b066f53414
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916056"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506238"
 ---
 # <a name="cftpfilefind-class"></a>CFtpFileFind 类
 
@@ -121,7 +121,7 @@ virtual BOOL FindFile(
 
 - INTERNET_FLAG_DONT_CACHE 不会在本地或任何网关上缓存数据。
 
-- INTERNET_FLAG_RAW_DATA 重写默认值以返回原始数据 (FTP 的[WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa)结构)。
+- INTERNET_FLAG_RAW_DATA 重写默认值以返回原始数据 (FTP 的[WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)结构)。
 
 - INTERNET_FLAG_SECURE 用安全套接字层或 PCT 保护网络上的事务。 此标志仅适用于 HTTP 请求。
 
@@ -129,7 +129,7 @@ virtual BOOL FindFile(
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则不为 0；否则为 0。 若要获得扩展的错误信息, 请调用 Win32 函数[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
+如果成功，则不为 0；否则为 0。 若要获得扩展的错误信息, 请调用 Win32 函数[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
 
 ### <a name="remarks"></a>备注
 
@@ -149,13 +149,13 @@ virtual BOOL FindNextFile();
 
 ### <a name="return-value"></a>返回值
 
-如果有多个文件, 则为非零值;如果找到的文件是目录中的最后一个, 或者如果出现错误, 则为零。 若要获得扩展的错误信息, 请调用 Win32 函数[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。 如果找到的文件是目录中的最后一个文件, 或者找不到匹配的文件, 则该`GetLastError`函数将返回 ERROR_NO_MORE_FILES。
+如果有多个文件, 则为非零值;如果找到的文件是目录中的最后一个, 或者如果出现错误, 则为零。 若要获得扩展的错误信息, 请调用 Win32 函数[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)。 如果找到的文件是目录中的最后一个文件, 或者找不到匹配的文件, 则该`GetLastError`函数将返回 ERROR_NO_MORE_FILES。
 
 ### <a name="remarks"></a>备注
 
 调用任何 attribute 函数之前, 必须至少调用此函数一次 (请参见[CFileFind:: FindNextFile](../../mfc/reference/cfilefind-class.md#findnextfile))。
 
-`FindNextFile`包装 Win32 函数[FindNextFile](/windows/desktop/api/fileapi/nf-fileapi-findnextfilea)。
+`FindNextFile`包装 Win32 函数[FindNextFile](/windows/win32/api/fileapi/nf-fileapi-findnextfilew)。
 
 ### <a name="example"></a>示例
 

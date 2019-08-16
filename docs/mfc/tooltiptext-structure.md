@@ -7,12 +7,12 @@ helpviewer_keywords:
 - TOOLTIPTEXT structure [MFC]
 - tool tips [MFC], notifications
 ms.assetid: 547591bf-80f5-400e-a2a7-0708cfffbb5d
-ms.openlocfilehash: 2eb899e66acbadbe45aae2c8adbb356bf4730191
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 80b95225a277a7985c30e5ea453597b06e501753
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915246"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513297"
 ---
 # <a name="tooltiptext-structure"></a>TOOLTIPTEXT 结构
 
@@ -31,7 +31,7 @@ typedef struct {
 ```
 
 *hdr*<br/>
-确定需要文本的工具。 您可能需要的此结构的唯一成员是控件的命令 ID。 控件的命令 ID 将位于**NMHDR**结构`hdr.idFrom`的*idFrom*成员中, 可通过语法访问。 有关**NMHDR**结构的成员的讨论, 请参阅[NMHDR](/windows/desktop/api/richedit/ns-richedit-nmhdr) 。
+确定需要文本的工具。 您可能需要的此结构的唯一成员是控件的命令 ID。 控件的命令 ID 将位于**NMHDR**结构`hdr.idFrom`的*idFrom*成员中, 可通过语法访问。 有关**NMHDR**结构的成员的讨论, 请参阅[NMHDR](/windows/win32/api/richedit/ns-richedit-nmhdr) 。
 
 *lpszText*<br/>
 接收工具文本的字符串的地址。

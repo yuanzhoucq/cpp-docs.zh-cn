@@ -1,17 +1,17 @@
 ---
-title: 调度接口 (C++ COM 属性)
+title: 调度接口C++ (COM 特性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.dispinterface
 helpviewer_keywords:
 - dispinterface attribute
 ms.assetid: 61c5a4a1-ae92-47e9-8ee4-f847be90172b
-ms.openlocfilehash: 6fd5010dc20d03c518206d81919e3beafbcaa9a9
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 6360c5e97eae19d7b2d74b3b43d4feae07d4b091
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346299"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501614"
 ---
 # <a name="dispinterface"></a>dispinterface
 
@@ -29,7 +29,7 @@ ms.locfileid: "64346299"
 
 除非指定基类，否则调度接口派生自 `IDispatch`。 必须为调度接口的成员指定 [id](id.md) 。
 
-MIDL 文档中的 [dispinterface](/windows/desktop/Midl/dispinterface) 用法示例：
+MIDL 文档中的 [dispinterface](/windows/win32/Midl/dispinterface) 用法示例：
 
 ```cpp
 dispinterface helloPro
@@ -48,9 +48,9 @@ dispinterface helloPro
 
 |||
 |-|-|
-|**适用对象**|**interface**|
-|**可重复**|否|
-|**必需的特性**|None|
+|**适用于**|**interface**|
+|**可重复**|No|
+|**必需的特性**|无|
 |**无效的特性**|`dual`, `object`, `oleautomation`, `local`, `ms_union`|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。

@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComClassFactory2 class
 ms.assetid: 19b66fd6-b9ed-47a0-822c-8132184f5a3e
-ms.openlocfilehash: b3b14fa59765aa72a1142e0eef41aa84abea35de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e34ebffc937c3e4ef1272fdf13ddcde7513d28e4
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259685"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497462"
 ---
 # <a name="ccomclassfactory2-class"></a>CComClassFactory2 类
 
-此类实现[IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2)接口。
+此类实现[IClassFactory2](/windows/win32/api/ocidl/nn-ocidl-iclassfactory2)接口。
 
 ## <a name="syntax"></a>语法
 
@@ -35,7 +35,7 @@ class CComClassFactory2 : public IClassFactory2,
 #### <a name="parameters"></a>参数
 
 *license*<br/>
-实现以下静态函数的类：
+实现以下静态函数的类:
 
 - `static BOOL VerifyLicenseKey( BSTR bstr );`
 
@@ -49,25 +49,25 @@ class CComClassFactory2 : public IClassFactory2,
 
 |名称|描述|
 |----------|-----------------|
-|[CComClassFactory2::CreateInstance](#createinstance)|创建指定的 CLSID 的对象。|
-|[CComClassFactory2::CreateInstanceLic](#createinstancelic)|给定的许可证密钥，将创建指定的 CLSID 的对象。|
+|[CComClassFactory2::CreateInstance](#createinstance)|创建指定 CLSID 的对象。|
+|[CComClassFactory2::CreateInstanceLic](#createinstancelic)|给定许可证密钥, 创建指定 CLSID 的对象。|
 |[CComClassFactory2::GetLicInfo](#getlicinfo)|检索描述类工厂的授权功能的信息。|
-|[CComClassFactory2::LockServer](#lockserver)|锁定在内存中的类工厂。|
+|[CComClassFactory2::LockServer](#lockserver)|锁定内存中的类工厂。|
 |[CComClassFactory2::RequestLicKey](#requestlickey)|创建并返回许可证密钥。|
 
 ## <a name="remarks"></a>备注
 
-`CComClassFactory2` 实现[IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2)接口，这是扩展的[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)。 `IClassFactory2` 控件通过许可证创建的对象。 已授权的计算机上类工厂执行可以提供运行时许可证密钥。 此许可证密钥允许应用程序的完整计算机许可证不存在时实例化对象。
+`CComClassFactory2`实现[IClassFactory2](/windows/win32/api/ocidl/nn-ocidl-iclassfactory2)接口, 该接口是[IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory)的扩展。 `IClassFactory2`通过许可证控制对象的创建。 在许可计算机上执行的类工厂可以提供运行时许可证密钥。 此许可证密钥允许应用程序在完整的计算机许可证不存在时实例化对象。
 
-ATL 对象通常通过继承获取类工厂[CComCoClass](../../atl/reference/ccomcoclass-class.md)。 此类包括宏[DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)，其中声明[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)作为默认类工厂。 若要使用`CComClassFactory2`，指定[DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2)对象的类定义中的宏。 例如：
+ATL 对象通过从[CComCoClass](../../atl/reference/ccomcoclass-class.md)派生来通常获取类工厂。 此类包含宏[DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory), 该宏将[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)声明为默认类工厂。 若要`CComClassFactory2`使用, 请在对象的类定义中指定[DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2)宏。 例如：
 
 [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/ccomclassfactory2-class_1.h)]
 
-`CMyLicense`模板参数`CComClassFactory2`，必须实现的静态函数`VerifyLicenseKey`， `GetLicenseKey`，和`IsLicenseValid`。 下面是简单的许可证类的一个示例：
+`CMyLicense`, 的模板`CComClassFactory2`参数必须实现静态函数`VerifyLicenseKey`、 `GetLicenseKey`和`IsLicenseValid`。 下面是一个简单许可证类的示例:
 
 [!code-cpp[NVC_ATL_COM#3](../../atl/codesnippet/cpp/ccomclassfactory2-class_2.h)]
 
-`CComClassFactory2` 从这两个派生`CComClassFactory2Base`并*许可证*。 `CComClassFactory2Base`反过来，派生`IClassFactory2`和`CComObjectRootEx< CComGlobalsThreadModel >`。
+`CComClassFactory2`派生自`CComClassFactory2Base`和*许可证*。 `CComClassFactory2Base`反过来, 派生自`IClassFactory2`和。 `CComObjectRootEx< CComGlobalsThreadModel >`
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -83,11 +83,11 @@ ATL 对象通常通过继承获取类工厂[CComCoClass](../../atl/reference/cco
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlcom.h
+**标头:** atlcom。h
 
-##  <a name="createinstance"></a>  CComClassFactory2::CreateInstance
+##  <a name="createinstance"></a>CComClassFactory2:: CreateInstance
 
-创建指定的 CLSID 的对象，并检索到此对象的接口指针。
+创建指定 CLSID 的对象, 并检索此对象的接口指针。
 
 ```
 STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
@@ -96,13 +96,13 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 ### <a name="parameters"></a>参数
 
 *pUnkOuter*<br/>
-[in]如果对象正在创建的聚合，然后*pUnkOuter*必须是未知的外部。 否则为*pUnkOuter*必须为 NULL。
+中如果该对象是作为聚合的一部分创建的, 则*pUnkOuter*必须是外部未知的。 否则, *pUnkOuter*必须为 NULL。
 
 *riid*<br/>
-[in]所请求的接口的 IID。 如果*pUnkOuter*为非 NULL *riid*必须是`IID_IUnknown`。
+中所请求的接口的 IID。 如果*pUnkOuter*为非 NULL, 则*riid*必须是`IID_IUnknown`。
 
 *ppvObj*<br/>
-[out]通过标识的接口指针的指针*riid*。 如果该对象不支持此接口， *ppvObj*设置为 NULL。
+弄指向由*riid*标识的接口指针的指针。 如果对象不支持此接口, 则将*ppvObj*设置为 NULL。
 
 ### <a name="return-value"></a>返回值
 
@@ -110,11 +110,11 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 
 ### <a name="remarks"></a>备注
 
-要求计算机进行完全授权。 如果完整的计算机许可证不存在，则调用[CreateInstanceLic](#createinstancelic)。
+要求计算机获得完全许可。 如果完整的计算机许可证不存在, 请调用[CreateInstanceLic](#createinstancelic)。
 
-##  <a name="createinstancelic"></a>  CComClassFactory2::CreateInstanceLic
+##  <a name="createinstancelic"></a>CComClassFactory2::CreateInstanceLic
 
-类似于[CreateInstance](#createinstance)，只不过`CreateInstanceLic`需要许可证密钥。
+类似于[CreateInstance](#createinstance), 只不过`CreateInstanceLic`需要许可证密钥。
 
 ```
 STDMETHOD(CreateInstanceLic)(
@@ -129,19 +129,19 @@ STDMETHOD(CreateInstanceLic)(
 ### <a name="parameters"></a>参数
 
 *pUnkOuter*<br/>
-[in]如果对象正在创建的聚合，然后*pUnkOuter*必须是未知的外部。 否则为*pUnkOuter*必须为 NULL。
+中如果该对象是作为聚合的一部分创建的, 则*pUnkOuter*必须是外部未知的。 否则, *pUnkOuter*必须为 NULL。
 
 *pUnkReserved*<br/>
-[in]不使用。 必须为 NULL。
+中不使用。 必须为 NULL。
 
 *riid*<br/>
-[in]所请求的接口的 IID。 如果*pUnkOuter*为非 NULL *riid*必须是`IID_IUnknown`。
+中所请求的接口的 IID。 如果*pUnkOuter*为非 NULL, 则*riid*必须是`IID_IUnknown`。
 
 *bstrKey*<br/>
-[in]通过调用以前获取的运行时许可证密钥`RequestLicKey`。 创建该对象需要此密钥。
+中以前通过调用`RequestLicKey`获取的运行时许可证密钥。 创建对象时需要此密钥。
 
 *ppvObject*<br/>
-[out]指向由指定的接口指针的指针*riid*。 如果该对象不支持此接口， *ppvObject*设置为 NULL。
+弄由*riid*指定的接口指针的指针。 如果对象不支持此接口, 则将*ppvObject*设置为 NULL。
 
 ### <a name="return-value"></a>返回值
 
@@ -149,11 +149,11 @@ STDMETHOD(CreateInstanceLic)(
 
 ### <a name="remarks"></a>备注
 
-你可以获取许可证密钥 using [RequestLicKey](#requestlickey)。 若要在未授权的计算机上创建一个对象，必须调用`CreateInstanceLic`。
+可以使用[RequestLicKey](#requestlickey)获取许可证密钥。 若要在未经授权的计算机上创建对象, 则必须调用`CreateInstanceLic`。
 
-##  <a name="getlicinfo"></a>  CComClassFactory2::GetLicInfo
+##  <a name="getlicinfo"></a>CComClassFactory2::GetLicInfo
 
-填充[LICINFO](/windows/desktop/api/ocidl/ns-ocidl-taglicinfo)结构描述的类工厂的信息的许可功能。
+使用描述类工厂的授权功能的信息填充[LICINFO](/windows/win32/api/ocidl/ns-ocidl-licinfo)结构。
 
 ```
 STDMETHOD(GetLicInfo)(LICINFO* pLicInfo);
@@ -162,7 +162,7 @@ STDMETHOD(GetLicInfo)(LICINFO* pLicInfo);
 ### <a name="parameters"></a>参数
 
 *pLicInfo*<br/>
-[out]指向`LICINFO`结构。
+弄指向结构的`LICINFO`指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -170,11 +170,11 @@ STDMETHOD(GetLicInfo)(LICINFO* pLicInfo);
 
 ### <a name="remarks"></a>备注
 
-`fRuntimeKeyAvail`此结构的成员指示是否，提供许可证密钥，类工厂允许未经授权的计算机上创建的对象。 *FLicVerified*成员指示完整机许可证是否存在。
+此结构的成员指示在给定许可证密钥的情况下, 类工厂是否允许在未经授权的计算机上创建对象。 `fRuntimeKeyAvail` *FLicVerified*成员指示是否存在完整的计算机许可证。
 
 ##  <a name="lockserver"></a>  CComClassFactory2::LockServer
 
-递增和递减模块锁计数通过调用`_Module::Lock`和`_Module::Unlock`分别。
+分别通过调用`_Module::Lock`和`_Module::Unlock`来递增和递减模块锁计数。
 
 ```
 STDMETHOD(LockServer)(BOOL fLock);
@@ -183,7 +183,7 @@ STDMETHOD(LockServer)(BOOL fLock);
 ### <a name="parameters"></a>参数
 
 *fLock*<br/>
-[in]如果为 TRUE，将增加的锁计数;否则，将减少锁计数。
+中如果为 TRUE, 则锁定计数递增;否则, 锁计数将减少。
 
 ### <a name="return-value"></a>返回值
 
@@ -191,13 +191,13 @@ STDMETHOD(LockServer)(BOOL fLock);
 
 ### <a name="remarks"></a>备注
 
-`_Module` 全局实例是指[CComModule](../../atl/reference/ccommodule-class.md)或从其派生的类。
+`_Module`引用[CComModule](../../atl/reference/ccommodule-class.md)的全局实例或从其派生的类。
 
-调用`LockServer`允许客户端，以便可以快速创建多个对象保存到一个类工厂。
+调用`LockServer`可允许客户端持有类工厂, 以便可以快速创建多个对象。
 
-##  <a name="requestlickey"></a>  CComClassFactory2::RequestLicKey
+##  <a name="requestlickey"></a>CComClassFactory2::RequestLicKey
 
-创建并返回提供的许可证密钥`fRuntimeKeyAvail`的成员[LICINFO](/windows/desktop/api/ocidl/ns-ocidl-taglicinfo)结构为 TRUE。
+创建并返回许可证密钥, 前提`fRuntimeKeyAvail`是[LICINFO](/windows/win32/api/ocidl/ns-ocidl-licinfo)结构的成员为 TRUE。
 
 ```
 STDMETHOD(RequestLicKey)(DWORD dwReserved, BSTR* pbstrKey);
@@ -206,10 +206,10 @@ STDMETHOD(RequestLicKey)(DWORD dwReserved, BSTR* pbstrKey);
 ### <a name="parameters"></a>参数
 
 *dwReserved*<br/>
-[in]不使用。 必须为零。
+中不使用。 必须为零。
 
 *pbstrKey*<br/>
-[out]指向指针的许可证密钥。
+弄指向许可证密钥的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -217,9 +217,9 @@ STDMETHOD(RequestLicKey)(DWORD dwReserved, BSTR* pbstrKey);
 
 ### <a name="remarks"></a>备注
 
-许可证密钥才可进行调用[CreateInstanceLic](#createinstancelic)未授权的计算机上创建对象。 如果`fRuntimeKeyAvail`为 FALSE，则仅在完全许可的计算机上创建对象。
+若要调用[CreateInstanceLic](#createinstancelic)来在未授权的计算机上创建对象, 则需要许可证密钥。 如果`fRuntimeKeyAvail`为 FALSE, 则只能在完全许可的计算机上创建对象。
 
-调用[GetLicInfo](#getlicinfo)若要检索的值`fRuntimeKeyAvail`。
+调用[GetLicInfo](#getlicinfo)检索的值`fRuntimeKeyAvail`。
 
 ## <a name="see-also"></a>请参阅
 

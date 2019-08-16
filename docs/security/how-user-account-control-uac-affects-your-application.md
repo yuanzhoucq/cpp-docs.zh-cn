@@ -7,28 +7,28 @@ helpviewer_keywords:
 - user accounts [C++]
 - User Account Control [C++]
 ms.assetid: 0d001870-253e-4989-b689-f78035953799
-ms.openlocfilehash: 3818b0ff7d4e4c551c41726dd44935beb5d32842
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 8c283e86a71092bb510892b6361f3d0fddc2abb6
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448473"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510146"
 ---
 # <a name="how-user-account-control-uac-affects-your-application"></a>用户帐户控制 (UAC) 如何影响应用程序
 
 用户帐户控制 (UAC) 是 Windows Vista 的一项功能，其中用户帐户具有有限的特权。 可以在下列站点找到关于 UAC 的详细信息：
 
-- [Developer Best Practices and Guidelines for Applications in a Least Privileged Environment](/windows/desktop/uxguide/winenv-uac)
+- [最小特权环境中应用程序的开发人员最佳实践和指南](/windows/win32/uxguide/winenv-uac)
 
 ## <a name="building-projects-after-enabling-uac"></a>在启用 UAC 后生成项目
 
-如果生成 Visual StudioC++禁用了 UAC 的 Windows Vista 上的项目，并在以后启用 UAC，必须清除并重新生成该项目才能正常工作。
+如果在禁用了 UAC 的C++情况下在 Windows Vista 上生成 Visual Studio 项目, 并且稍后启用了 uac, 则必须清除并重新生成项目, 以使其能够正常工作。
 
 ## <a name="applications-that-require-administrative-privileges"></a>需要管理特权的应用程序
 
-默认情况下，视觉对象C++链接器将 UAC 片段嵌入到应用程序的程序集清单的执行级别`asInvoker`。 如果应用程序需要管理特权才能正确运行（例如，修改注册表的 HKLM 节点或者写入磁盘的受保护区域，如 Windows 目录），则必须修改应用程序。
+默认情况下, 可视化C++链接器将 UAC 片段嵌入到执行级别为的`asInvoker`应用程序的清单中。 如果应用程序需要管理特权才能正确运行（例如，修改注册表的 HKLM 节点或者写入磁盘的受保护区域，如 Windows 目录），则必须修改应用程序。
 
-第一个选项是修改要更改到的执行级别的清单的 UAC 片段*requireAdministrator*。 然后，应用程序在运行之前将提示用户提供管理凭据。 有关如何执行此操作的信息，请参阅[/MANIFESTUAC （将 UAC 信息嵌入在清单中）](../build/reference/manifestuac-embeds-uac-information-in-manifest.md)。
+第一种方法是修改清单的 UAC 片段, 将执行级别更改为*requireAdministrator*。 然后，应用程序在运行之前将提示用户提供管理凭据。 有关如何执行此操作的信息, 请参阅[/MANIFESTUAC (将 UAC 信息嵌入到清单中)](../build/reference/manifestuac-embeds-uac-information-in-manifest.md)。
 
 第二个选项是通过指定 `/MANIFESTUAC:NO` 链接器选项不将 UAC 片段嵌入到清单。 在这种情况下，应用程序将以虚拟化方式运行。 在应用程序结束后，对注册表或文件系统的任何更改将不会保留。
 

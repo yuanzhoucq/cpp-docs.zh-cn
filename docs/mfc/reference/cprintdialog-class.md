@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPrintDialog [MFC], PrintSelection
 - CPrintDialog [MFC], m_pd
 ms.assetid: 5bdb2424-adf8-433d-a97c-df11a83bc4e4
-ms.openlocfilehash: ab194b1c289f8347243b36354f4f314b7450a7aa
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 1f4a4dbec9a1c79ac1e0cec925156ae7db4c293e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916903"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502903"
 ---
 # <a name="cprintdialog-class"></a>CPrintDialog 类
 
@@ -104,7 +104,7 @@ class CPrintDialog : public CCommonDialog
 
 如果希望应用程序在不使用框架的情况下处理打印, 则可以使用提供`CPrintDialog`的构造函数的 "按原样" 类, 也可以从`CPrintDialog`派生您自己的对话类, 并编写一个构造函数来满足您的需求。 在这两种情况下, 这些对话框的行为类似于标准 MFC 对话框, 因为它们是`CCommonDialog`从类派生的。
 
-若要使用`CPrintDialog`对象, 请先`CPrintDialog`使用构造函数创建对象。 构造该对话框后, 您可以设置或修改[m_pd](#m_pd)结构中的任何值以初始化对话框控件的值。 结构的类型为[PRINTDLG。](/windows/desktop/api/commdlg/ns-commdlg-tagpda) `m_pd` 有关此结构的详细信息, 请参阅 Windows SDK。
+若要使用`CPrintDialog`对象, 请先`CPrintDialog`使用构造函数创建对象。 构造该对话框后, 您可以设置或修改[m_pd](#m_pd)结构中的任何值以初始化对话框控件的值。 结构的类型为[PRINTDLG。](/windows/win32/api/commdlg/ns-commdlg-pdw) `m_pd` 有关此结构的详细信息, 请参阅 Windows SDK。
 
 如果没有`m_pd` `GlobalFree`为和成员`hDevNames`提供自己的句柄, 请确保在完成该对话框后, 为这些句柄调用 Windows 函数。 `hDevMode` 使用提供`CWinApp::OnFilePrintSetup`的框架打印设置实现时, 无需释放这些句柄。 句柄由`CWinApp`维护, 并在的析构`CWinApp`函数中释放。 仅当使用`CPrintDialog`独立时, 才需要释放这些句柄。
 
@@ -159,7 +159,7 @@ CPrintDialog(
 指定是否显示标准的 "Windows 打印" 对话框或 "打印设置" 对话框。 将此参数设置为 TRUE 可显示标准的 "Windows 打印设置" 对话框。 将其设置为 FALSE 可显示 "Windows 打印" 对话框。 如果*bPrintSetupOnly*为 FALSE, 则 "打印" 对话框中仍将显示 "打印设置" 选项按钮。
 
 *dwFlags*<br/>
-可用于自定义对话框的设置的一个或多个标志, 使用按位 "或" 运算符组合在一起。 例如, PD_ALLPAGES 标志将默认打印范围设置为文档的所有页。 有关这些标志的详细信息, 请参阅 Windows SDK 中的[PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda)结构。
+可用于自定义对话框的设置的一个或多个标志, 使用按位 "或" 运算符组合在一起。 例如, PD_ALLPAGES 标志将默认打印范围设置为文档的所有页。 有关这些标志的详细信息, 请参阅 Windows SDK 中的[PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-pdw)结构。
 
 *pParentWnd*<br/>
 指向对话框的父窗口或所有者窗口的指针。
@@ -168,7 +168,7 @@ CPrintDialog(
 
 此成员函数仅构造对象。 `DoModal`使用成员函数来显示对话框。
 
-请注意, 当你调用*bPrintSetupOnly*设置为 FALSE 的构造函数时, 将自动使用 PD_RETURNDC 标志。 调用`DoModal`、 `GetDefaults`或`m_pd.hDC`后, 将在中返回打印机 DC。 `GetPrinterDC` 必须通过调用方`CPrintDialog`调用[DELETEDC](/windows/desktop/api/wingdi/nf-wingdi-deletedc)来释放此 DC。
+请注意, 当你调用*bPrintSetupOnly*设置为 FALSE 的构造函数时, 将自动使用 PD_RETURNDC 标志。 调用`DoModal`、 `GetDefaults`或`m_pd.hDC`后, 将在中返回打印机 DC。 `GetPrinterDC` 必须通过调用方`CPrintDialog`调用[DELETEDC](/windows/win32/api/wingdi/nf-wingdi-deletedc)来释放此 DC。
 
 ### <a name="example"></a>示例
 
@@ -176,7 +176,7 @@ CPrintDialog(
 
 ##  <a name="createprinterdc"></a>  CPrintDialog::CreatePrinterDC
 
-从[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)和[DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames)结构创建打印机设备上下文 (DC)。
+从[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)和[DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames)结构创建打印机设备上下文 (DC)。
 
 ```
 HDC CreatePrinterDC();
@@ -204,7 +204,7 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>返回值
 
-IDOK 或 IDCANCEL。 如果返回 IDCANCEL, 则调用 Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror)函数来确定是否发生了错误。
+IDOK 或 IDCANCEL。 如果返回 IDCANCEL, 则调用 Windows [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror)函数来确定是否发生了错误。
 
 IDOK 和 IDCANCEL 是常量, 用于指示用户是否选择了 "确定" 或 "取消" 按钮。
 
@@ -214,7 +214,7 @@ IDOK 和 IDCANCEL 是常量, 用于指示用户是否选择了 "确定" 或 "取
 
 调用`DoModal`后, 可以调用其他成员函数来检索用户在对话框中输入的设置或信息。
 
-请注意, 当你调用*bPrintSetupOnly*设置为 FALSE 的构造函数时, 将自动使用 PD_RETURNDC 标志。 调用`DoModal`、 `GetDefaults`或`m_pd.hDC`后, 将在中返回打印机 DC。 `GetPrinterDC` 必须通过调用方`CPrintDialog`调用[DELETEDC](/windows/desktop/api/wingdi/nf-wingdi-deletedc)来释放此 DC。
+请注意, 当你调用*bPrintSetupOnly*设置为 FALSE 的构造函数时, 将自动使用 PD_RETURNDC 标志。 调用`DoModal`、 `GetDefaults`或`m_pd.hDC`后, 将在中返回打印机 DC。 `GetPrinterDC` 必须通过调用方`CPrintDialog`调用[DELETEDC](/windows/win32/api/wingdi/nf-wingdi-deletedc)来释放此 DC。
 
 ### <a name="example"></a>示例
 
@@ -258,7 +258,7 @@ BOOL GetDefaults();
 
 在某些情况下, 对此函数的调用将调用的[构造函数](#cprintdialog) `CPrintDialog` , 并将*bPrintSetupOnly*设置为 FALSE。 在这些情况下, 将自动分配`hDevNames`打印机`hDevMode` DC 和和 (位于数据`m_pd`成员中的两个句柄)。
 
-如果在*bPrintSetupOnly*设置`CPrintDialog`为 FALSE 的情况下调用的构造函数, 则此函数将`hDevNames`不`hDevMode`会只`m_pd.hDevNames`返回`m_pd.hDevMode`和定位到调用方, 但也将在中返回打印机 DC`m_pd.hDC`. 当您完成`CPrintDialog`对象时, 调用方负责删除打印机 DC 并在句柄上调用 Windows [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree)函数。
+如果在*bPrintSetupOnly*设置`CPrintDialog`为 FALSE 的情况下调用的构造函数, 则此函数将`hDevNames`不`hDevMode`会只`m_pd.hDevNames`返回`m_pd.hDevMode`和定位到调用方, 但也将在中返回打印机 DC`m_pd.hDC`. 当您完成`CPrintDialog`对象时, 调用方负责删除打印机 DC 并在句柄上调用 Windows [GlobalFree](/windows/win32/api/winbase/nf-winbase-globalfree)函数。
 
 ### <a name="example"></a>示例
 
@@ -298,7 +298,7 @@ LPDEVMODE GetDevMode() const;
 
 ### <a name="return-value"></a>返回值
 
-[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)数据结构, 其中包含有关打印机驱动程序的设备初始化和环境的信息。 必须使用 Windows SDK 中描述的 Windows [GlobalUnlock](/windows/desktop/api/winbase/nf-winbase-globalunlock)函数来解锁此结构使用的内存。
+[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)数据结构, 其中包含有关打印机驱动程序的设备初始化和环境的信息。 必须使用 Windows SDK 中描述的 Windows [GlobalUnlock](/windows/win32/api/winbase/nf-winbase-globalunlock)函数来解锁此结构使用的内存。
 
 ### <a name="remarks"></a>备注
 
@@ -382,7 +382,7 @@ HDC GetPrinterDC() const;
 
 ### <a name="remarks"></a>备注
 
-如果`CPrintDialog`构造函数的*bPrintSetupOnly*参数为 FALSE (表示显示 "打印" 对话框), 则`GetPrinterDC`返回打印机设备上下文的句柄。 使用 Windows [DeleteDC](/windows/desktop/api/wingdi/nf-wingdi-deletedc)函数时, 必须调用该函数以删除设备上下文。
+如果`CPrintDialog`构造函数的*bPrintSetupOnly*参数为 FALSE (表示显示 "打印" 对话框), 则`GetPrinterDC`返回打印机设备上下文的句柄。 使用 Windows [DeleteDC](/windows/win32/api/wingdi/nf-wingdi-deletedc)函数时, 必须调用该函数以删除设备上下文。
 
 ### <a name="example"></a>示例
 
@@ -418,7 +418,7 @@ PRINTDLG& m_pd;
 
 ### <a name="remarks"></a>备注
 
-构造`CPrintDialog`对象之后, 您可以使用`m_pd`在调用[DoModal](#domodal)成员函数之前设置对话框的各个方面。 有关`m_pd`结构的详细信息, 请参阅 Windows SDK 中的[PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda) 。
+构造`CPrintDialog`对象之后, 您可以使用`m_pd`在调用[DoModal](#domodal)成员函数之前设置对话框的各个方面。 有关`m_pd`结构的详细信息, 请参阅 Windows SDK 中的[PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-pdw) 。
 
 如果直接修改`m_pd`数据成员, 将重写任何默认行为。
 

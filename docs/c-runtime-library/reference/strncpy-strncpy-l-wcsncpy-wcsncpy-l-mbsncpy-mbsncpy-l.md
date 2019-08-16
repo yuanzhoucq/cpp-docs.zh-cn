@@ -62,19 +62,19 @@ helpviewer_keywords:
 - tcsncpy function
 - _strncpy_l function
 ms.assetid: ac4345a1-a129-4f2f-bb8a-373ec58ab8b0
-ms.openlocfilehash: 04ca1f0b689e68008b3b5a57d01e626ee92a60b9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fac7e052c5c1d5525946bdbc599404ac56d47f5a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209743"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499458"
 ---
-# <a name="strncpy-strncpyl-wcsncpy-wcsncpyl-mbsncpy-mbsncpyl"></a>strncpy、_strncpy_l、wcsncpy、_wcsncpy_l、_mbsncpy、_mbsncpy_l
+# <a name="strncpy-_strncpy_l-wcsncpy-_wcsncpy_l-_mbsncpy-_mbsncpy_l"></a>strncpy、_strncpy_l、wcsncpy、_wcsncpy_l、_mbsncpy、_mbsncpy_l
 
 将一个字符串的字符复制到另一个字符串。 这些函数的更安全版本已经发布；请参阅 [strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l](strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)。
 
 > [!IMPORTANT]
-> **_mbsncpy**并 **_mbsncpy_l**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbsncpy**和 **_mbsncpy_l**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -161,7 +161,7 @@ unsigned char *_mbsncpy_l(
 *strSource*<br/>
 源字符串。
 
-*count*<br/>
+*计数*<br/>
 要复制的字符数。
 
 *locale*<br/>
@@ -173,16 +173,16 @@ unsigned char *_mbsncpy_l(
 
 ## <a name="remarks"></a>备注
 
-**Strncpy**函数将复制初始*计数*字符*strSource*到*strDest* ，并返回*strDest*. 如果*计数*小于或等于的长度*strSource*，向复制的字符串不会自动追加 null 字符。 如果*计数*大于的长度*strSource*的最长度的 null 字符填补目标字符串*计数*。 行为**strncpy**如果源和目标字符串重叠，则是未定义。
+**Strncpy**函数将*strSource*的初始*计数*字符复制到*strDest*并返回*strDest*。 如果*count*小于或等于*strSource*的长度, 则不会自动向复制的字符串追加 null 字符。 如果*count*大于*strSource*的长度, 则目标字符串将用空字符填充, 最大长度为*count*。 如果源和目标字符串重叠, 则**strncpy**的行为是不确定的。
 
 > [!IMPORTANT]
-> **strncpy**不会有足够的空间中检查*strDest*; 这样就可能会造成缓冲区溢出。 *计数*参数将限制复制的字符数; 它不是限制的大小*strDest*。 请参见以下示例。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
+> **strncpy**不检查*strDest*中是否有足够的空间;这会导致缓冲区溢出的潜在原因。 *Count*参数限制复制的字符数;它不是*strDest*的大小限制。 请参见以下示例。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
-如果*strDest*或*strSource*是**NULL**指针，或者如果*计数*小于或等于零，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，这些函数将返回-1 并设置**errno**到**EINVAL**。
+如果*strDest*或*strSource*为**NULL**指针, 或者*count*小于或等于零, 则会调用无效参数处理程序, 如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续, 则这些函数将返回-1, 并将**errno**设置为**EINVAL**。
 
-**wcsncpy**并 **_mbsncpy**宽字符及多字节字符版本的**strncpy**。 参数和返回值**wcsncpy**并 **_mbsncpy**会相应地变化。 否则这六个函数具有相同行为。
+**wcsncpy**和 **_mbsncpy**是**strncpy**的宽字符和多字节字符版本。 **Wcsncpy**和 **_mbsncpy**的参数和返回值将相应变化。 否则这六个函数具有相同行为。
 
-使用这些函数的版本 **_l**后缀完全相同，只不过它们使用为其区域设置相关的行为而不是当前区域设置传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+这些带有 **_l**后缀的函数的版本相同, 只不过它们使用传入的区域设置, 而不是其与区域设置相关的行为的当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -194,7 +194,7 @@ unsigned char *_mbsncpy_l(
 |**_tcsncpy_l**|**_strncpy_l**|**_mbsnbcpy_l**|**_wcsncpy_l**|
 
 > [!NOTE]
-> **_strncpy_l**并 **_wcsncpy_l**没有区域设置相关性; 它们只是为了提供 **_tcsncpy_l** ，不应直接调用。
+> **_strncpy_l**和 **_wcsncpy_l**没有区域设置依赖关系;它们只是为 **_tcsncpy_l**提供的, 不应直接调用。
 
 ## <a name="requirements"></a>要求
 
@@ -202,13 +202,13 @@ unsigned char *_mbsncpy_l(
 |-------------|---------------------|
 |**strncpy**|\<string.h>|
 |**wcsncpy**|\<string.h> 或 \<wchar.h>|
-|**_mbsncpy**， **_mbsncpy_l**|\<mbstring.h>|
+|**_mbsncpy**、 **_mbsncpy_l**|\<mbstring.h>|
 
 有关其他平台兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何将**strncpy**和如何误用它会导致程序 bug 和安全问题。 编译器将生成每次调用警告**strncpy**类似于**crt_strncpy_x86.c(15： 警告 C4996: strncpy:此函数或变量可能不安全。请考虑改用 strncpy_s。若要禁用弃用，请使用 _CRT_SECURE_NO_WARNINGS。请参阅联机帮助了解详细信息。**
+下面的示例演示如何使用**strncpy** , 以及如何使用它来导致程序 bug 和安全问题。 编译器将为对**strncpy**的每个调用生成一个警告 **, 类似于 crt_strncpy_x86 (15): warning C4996: "strncpy":此函数或变量可能不安全。请考虑改用 strncpy_s。若要禁用弃用，请使用 _CRT_SECURE_NO_WARNINGS。请参阅联机帮助了解详细信息。**
 
 ```C
 // crt_strncpy_x86.c

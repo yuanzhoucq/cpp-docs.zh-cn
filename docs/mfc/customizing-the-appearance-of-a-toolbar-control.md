@@ -11,46 +11,46 @@ helpviewer_keywords:
 - CToolBarCtrl class [MFC], object styles
 - toolbar controls [MFC], style
 ms.assetid: fd0a73db-7ad1-4fe4-889b-02c3980f49e8
-ms.openlocfilehash: 8a0db3299ebb54d226edc1434dedbc6a04eb9b00
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 590f0dce6c50ee6d0ca30c4c68e21787563bd686
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241801"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508726"
 ---
 # <a name="customizing-the-appearance-of-a-toolbar-control"></a>自定义工具栏控件的外观
 
-类`CToolBarCtrl`提供了许多影响外观 （和，有时，行为） 的工具栏对象的样式。 通过设置来修改工具栏对象`dwCtrlStyle`的参数`CToolBarCtrl::Create`(或`CToolBar::CreateEx`) 成员函数，首次创建工具栏控件时。
+类`CToolBarCtrl`提供许多样式, 它们会影响 toolbar 对象的外观 (有时也是行为)。 首次创建 toolbar 控件时, `dwCtrlStyle`可以通过设置`CToolBarCtrl::Create` (或`CToolBar::CreateEx`) 成员函数的参数来修改 toolbar 对象。
 
-工具栏按钮的"3D"方面和按钮文本的位置会影响以下样式：
+以下样式会影响工具栏按钮的 "三维" 方面以及按钮文本的位置:
 
-- **TBSTYLE_FLAT**创建透明工具栏和按钮是一个平面工具栏。 按钮文本会显示下按钮位图。 使用此样式时，将自动突出显示光标下的按钮。
+- **TBSTYLE_FLAT**创建一个平面工具栏, 其中的工具栏和按钮都是透明的。 按钮文本显示在 "按钮位图" 下。 使用此样式时, 将自动突出显示光标下的按钮。
 
-- **TBSTYLE_TRANSPARENT**创建透明工具栏。 在透明工具栏中，工具栏是透明的但不是按钮。 按钮文本会显示下按钮位图。
+- **TBSTYLE_TRANSPARENT**创建透明工具栏。 在透明工具栏中, 工具栏是透明的, 但按钮不透明。 按钮文本显示在 "按钮位图" 下。
 
-- **TBSTYLE_LIST**位置按钮右侧的按钮位图的文本。
+- **TBSTYLE_LIST**将按钮文本置于按钮位图的右侧。
 
 > [!NOTE]
->  若要避免重新绘制问题**TBSTYLE_FLAT**并**TBSTYLE_TRANSPARENT**工具栏对象才会显示应设置样式。
+>  若要防止重绘问题, 应在工具栏对象可见之前设置**TBSTYLE_FLAT**和**TBSTYLE_TRANSPARENT**样式。
 
-以下样式确定工具栏是否允许用户重新定位各个按钮在工具栏对象使用拖放：
+以下样式确定工具栏是否允许用户使用拖放操作在工具栏对象内重新定位单个按钮:
 
-- **TBSTYLE_ALTDRAG**允许用户通过按住 ALT 的同时拖动来更改工具栏按钮的位置。 如果未指定此样式，用户必须按下 SHIFT 的同时拖动按钮。
+- **TBSTYLE_ALTDRAG**允许用户通过在按住 ALT 的同时拖动工具栏按钮来更改工具栏按钮的位置。 如果未指定此样式, 则用户必须在拖动按钮时按住 SHIFT 键。
 
     > [!NOTE]
-    >  **CCS_ADJUSTABLE**必须指定样式以启用要拖动的工具栏按钮。
+    >  若要拖动工具栏按钮, 必须指定**CCS_ADJUSTABLE**样式。
 
-- **TBSTYLE_REGISTERDROP**生成**TBN_GETOBJECT**通知消息来请求删除目标对象，当鼠标指针经过工具栏按钮。
+- **TBSTYLE_REGISTERDROP**当鼠标指针移到工具栏按钮上时, 将生成**TBN_GETOBJECT**通知消息, 以请求删除目标对象。
 
-剩余样式影响 visual 和非可视方面的工具栏对象：
+其余样式影响 toolbar 对象的视觉和非可视方面:
 
-- **TBSTYLE_WRAPABLE**创建可以具有多个行的按钮的工具栏。 工具栏按钮可以"包装"到下一行时工具栏变得过窄而无法包含在同一行上的所有按钮。 分离和行会边界上会发生换行。
+- **TBSTYLE_WRAPABLE**创建一个工具栏, 该工具栏可以具有多行按钮。 当工具栏变得太窄, 无法在同一行上包含所有按钮时, 工具栏按钮可以 "换行" 到下一行。 环绕和 nongroup 边界进行包装。
 
-- **TBSTYLE_CUSTOMERASE**生成**NM_CUSTOMDRAW**通知消息处理时**WM_ERASEBKGND**消息。
+- **TBSTYLE_CUSTOMERASE**当处理**WM_ERASEBKGND**消息时, 将生成**NM_CUSTOMDRAW**通知消息。
 
-- **TBSTYLE_TOOLTIPS**创建工具提示控件的应用程序可以使用工具栏中显示按钮的描述性文本。
+- **TBSTYLE_TOOLTIPS**创建一个工具提示控件, 应用程序可以使用该控件在工具栏中显示按钮的描述性文本。
 
-Toolbar 样式和扩展的样式的完整列表，请参阅[工具栏控件和按钮样式](/windows/desktop/Controls/toolbar-control-and-button-styles)并[工具栏上的扩展样式](/windows/desktop/Controls/toolbar-extended-styles)Windows SDK 中。
+有关工具栏样式和扩展样式的完整列表, 请参阅 Windows SDK 中的[工具栏控件和按钮样式](/windows/win32/Controls/toolbar-control-and-button-styles)和[工具栏扩展样式](/windows/win32/Controls/toolbar-extended-styles)。
 
 ## <a name="see-also"></a>请参阅
 

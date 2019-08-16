@@ -5,20 +5,20 @@ helpviewer_keywords:
 - manifests [C++]
 - manifest tool (mt.exe)
 ms.assetid: fc2ff255-82b1-4c44-af76-8405c5850292
-ms.openlocfilehash: 37036ceedc59e20374fd1106a051ab2a66edd143
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 381406213422e286dd9aba26adcdbd6caff7bfe3
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273771"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493195"
 ---
 # <a name="manifest-generation-at-the-command-line"></a>命令行上的清单生成
 
-当生成 C /C++链接器已处理所有对象文件和生成最终二进制文件后，生成应用程序从命令行使用 nmake 或类似的工具，该清单。 链接器收集程序集信息存储在对象文件，并将组合到最终的清单文件的此信息。 默认情况下，链接器将生成名为的文件*二进制*。*扩展*.manifest 来描述最终二进制文件。 链接器不会嵌入二进制文件中的清单文件，仅可以生成为外部文件的清单。 有几种方法来将最终二进制文件，例如，使用清单嵌入[清单工具 (mt.exe)](https://msdn.microsoft.com/library/aa375649)或编译成资源文件的清单。 务必记住，特定的规则需要时最终二进制文件中，若要启用增量链接等功能将清单嵌入遵循签名，以及编辑并继续。 在讨论这些和其他选项[如何：嵌入清单内 C /C++应用程序](how-to-embed-a-manifest-inside-a-c-cpp-application.md)命令行上生成时。
+当使用 nmake 或C++类似的工具从命令行生成 C/应用程序时, 会在链接器处理完所有对象文件并生成最终的二进制文件后生成清单。 链接器收集存储在对象文件中的程序集信息, 并将此信息合并到最终清单文件中。 默认情况下, 链接器将生成一个名为*binary_name*的文件。用于描述最终二进制文件的*扩展名*。 链接器不会将清单文件嵌入到二进制文件中, 并且只能生成一个清单作为外部文件。 有多种方法可以将清单嵌入到最终二进制文件中, 如使用[清单工具 (mt.exe)](/windows/win32/sbscs/mt-exe)或将清单编译到资源文件中。 请务必记住, 在最终二进制文件中嵌入清单时必须遵循特定的规则, 以启用增量链接、签名和编辑并继续等功能。 以下内容讨论[了这些选项和其他选项:在命令行上生成时,C++将](how-to-embed-a-manifest-inside-a-c-cpp-application.md)清单嵌入到 C/应用程序中。
 
 ## <a name="see-also"></a>请参阅
 
-[清单](/windows/desktop/sbscs/manifests)<br/>
+[进行](/windows/win32/sbscs/manifests)<br/>
 [/INCREMENTAL（增量链接）](reference/incremental-link-incrementally.md)<br/>
 [强名称程序集（程序集签名）(C++/CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)<br/>
 [编辑并继续](/visualstudio/debugger/edit-and-continue)<br/>

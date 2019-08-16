@@ -10,16 +10,16 @@ helpviewer_keywords:
 - CClientDC [MFC], CClientDC
 - CClientDC [MFC], m_hWnd
 ms.assetid: 8a871d6b-06f8-496e-9fa3-9a5780848369
-ms.openlocfilehash: a67af5d7d82b8bd7d0490d4ae6f9535bf3283ea2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 46428740d052c70218d4443395777428cdf3c3b0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62206619"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507338"
 ---
 # <a name="cclientdc-class"></a>CClientDC 类
 
-负责调用 Windows 函数[GetDC](/windows/desktop/api/winuser/nf-winuser-getdc)在构造时并[ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc)在析构时。
+负责在构造时调用 Windows 函数[GetDC](/windows/win32/api/winuser/nf-winuser-getdc) , 并在析构时调用[ReleaseDC](/windows/win32/api/winuser/nf-winuser-releasedc) 。
 
 ## <a name="syntax"></a>语法
 
@@ -33,19 +33,19 @@ class CClientDC : public CDC
 
 |名称|描述|
 |----------|-----------------|
-|[CClientDC::CClientDC](#cclientdc)|构造`CClientDC`连接到对象`CWnd`。|
+|[CClientDC::CClientDC](#cclientdc)|构造连接到的`CWnd`对象。`CClientDC`|
 
 ### <a name="protected-data-members"></a>受保护的数据成员
 
 |name|描述|
 |----------|-----------------|
-|[CClientDC::m_hWnd](#m_hwnd)|此窗口的 HWND`CClientDC`有效。|
+|[CClientDC::m_hWnd](#m_hwnd)|此`CClientDC`对其有效的窗口的 HWND。|
 
 ## <a name="remarks"></a>备注
 
-这意味着，与关联的设备上下文`CClientDC`对象是一个窗口的工作区。
+这意味着与`CClientDC`对象关联的设备上下文是窗口的工作区。
 
-有关详细信息`CClientDC`，请参阅[设备上下文](../../mfc/device-contexts.md)。
+有关的详细信息`CClientDC`, 请参阅[设备上下文](../../mfc/device-contexts.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -59,9 +59,9 @@ class CClientDC : public CDC
 
 **标头:** afxwin.h
 
-##  <a name="cclientdc"></a>  CClientDC::CClientDC
+##  <a name="cclientdc"></a>CClientDC:: CClientDC
 
-构造`CClientDC`对象的访问的工作区[CWnd](../../mfc/reference/cwnd-class.md)指向*pWnd*。
+构造一个`CClientDC`对象, 该对象访问*pWnd*指向的[CWnd](../../mfc/reference/cwnd-class.md)的工作区。
 
 ```
 explicit CClientDC(CWnd* pWnd);
@@ -70,13 +70,13 @@ explicit CClientDC(CWnd* pWnd);
 ### <a name="parameters"></a>参数
 
 *pWnd*<br/>
-窗口设备上下文对象将访问其工作区中。
+设备上下文对象将访问的工作区所在的窗口。
 
 ### <a name="remarks"></a>备注
 
-构造函数将调用 Windows 函数[GetDC](/windows/desktop/api/winuser/nf-winuser-getdc)。
+构造函数调用 Windows 函数[GetDC](/windows/win32/api/winuser/nf-winuser-getdc)。
 
-异常 (类型的`CResourceException`) 如果则会引发 Windows`GetDC`调用失败。 设备上下文可能不可用，如果 Windows 已分配所有可用的设备上下文。 你的应用程序争夺可在 Windows 下任何给定时间的五个常见显示上下文。
+如果 Windows `CResourceException` `GetDC`调用失败, 则会引发异常 (类型为)。 如果 Windows 已分配了其所有可用设备上下文, 则设备上下文可能不可用。 您的应用程序将在 Windows 下的任何给定时间为五个常见显示上下文进行竞争。
 
 ### <a name="example"></a>示例
 
@@ -84,7 +84,7 @@ explicit CClientDC(CWnd* pWnd);
 
 ##  <a name="m_hwnd"></a>  CClientDC::m_hWnd
 
-`HWND`的`CWnd`指针，用于构造`CClientDC`对象。
+用于构造对象`CClientDC`的指针的。 `CWnd` `HWND`
 
 ```
 HWND m_hWnd;
@@ -96,7 +96,7 @@ HWND m_hWnd;
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CClientDC::CClientDC](#cclientdc)。
+  请参阅[CClientDC:: CClientDC](#cclientdc)的示例。
 
 ## <a name="see-also"></a>请参阅
 

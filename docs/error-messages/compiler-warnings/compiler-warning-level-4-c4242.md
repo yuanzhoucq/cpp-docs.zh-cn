@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4242
 ms.assetid: 8df742e1-fbf1-42f3-8e93-c0e1c222dc7e
-ms.openlocfilehash: e0582f3dfdd223b4571e361dc69fae1990aeea1c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed145444d6eec583c448a3a49167ca1f82644f0b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401002"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510006"
 ---
 # <a name="compiler-warning-level-4-c4242"></a>编译器警告（等级 4）C4242
 
-identifier： 从 type1 到 type2，可能丢失数据的转换
+"identifier": 从 "type1" 转换到 "type2", 可能丢失数据
 
-类型是不同的。 类型转换可能会导致数据丢失。 编译器进行类型转换。
+类型不同。 类型转换可能会导致数据丢失。 编译器进行类型转换。
 
 默认情况下，此警告处于关闭状态。 请参阅 [默认情况下处于关闭状态的编译器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 了解详细信息。
 
-C4242 的其他信息，请参阅[常见编译器错误](/windows/desktop/WinProg64/common-compiler-errors)。
+有关 C4242 的其他信息, 请参阅[常见编译器错误](/windows/win32/WinProg64/common-compiler-errors)。
 
 下面的示例生成 C4242:
 
