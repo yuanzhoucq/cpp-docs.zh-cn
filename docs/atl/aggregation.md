@@ -5,22 +5,22 @@ helpviewer_keywords:
 - aggregation [C++]
 - aggregate objects [C++]
 ms.assetid: 7125bb8e-b269-4b50-9bba-295b467a54cc
-ms.openlocfilehash: 2eec7a801f9fe16bc48fc888d10ce413ec7e79db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 288af427bd6a8d9baf572dfad8e4a25452694ad9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223501"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491974"
 ---
 # <a name="aggregation"></a>聚合
 
-有些的时候对象的实现者希望充分利用预构建的另一个对象提供的服务。 此外，它想要此第二个对象显示为第一个自然组成部分。 COM 来实现这两个通过包含关系和聚合目标。
+有时, 对象的实现器要利用另一个预先生成的对象提供的服务。 此外, 它还会将第二个对象作为第一个对象的一个自然部分显示。 COM 通过包含和聚合来实现这两个目标。
 
-聚合意味着包含 （外部） 对象作为其创建过程的一部分创建包含 （内部） 的对象和由外部公开的内部对象的接口。 对象允许本身或不是可聚合。 如果是，它必须遵循某些规则，聚合才能正常工作。
+"聚合" 意味着包含 (外部) 对象会创建包含的 (内部) 对象作为其创建进程的一部分, 并由外部公开内部对象的接口。 对象允许自身可聚合。 如果是, 则必须遵循特定的聚合规则才能正常工作。
 
-首先，所有`IUnknown`上包含的对象的方法调用必须委托到包含的对象。
+主要是, `IUnknown`包含对象上的所有方法调用都必须委托给包含对象。
 
 ## <a name="see-also"></a>请参阅
 
 [COM 简介](../atl/introduction-to-com.md)<br/>
-[重用对象](/windows/desktop/com/reusing-objects)
+[重用对象](/windows/win32/com/reusing-objects)

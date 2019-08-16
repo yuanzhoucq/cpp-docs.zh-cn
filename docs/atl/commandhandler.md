@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - CommandHandler function
 ms.assetid: 662bc7bf-4a10-42b3-986d-d8bae4f63551
-ms.openlocfilehash: 743be3e0bc9cc96fc6b22d0806d399ab5e160a3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 99a95228f6036e5f391395be367cdef39ca3dc3b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62235059"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492459"
 ---
 # <a name="commandhandler"></a>CommandHandler
 
-`CommandHandler` 函数是通过消息映射中的 COMMAND_HANDLER 宏的第三个参数标识。
+`CommandHandler`由消息映射中的 COMMAND_HANDLER 宏的第三个参数标识的函数。
 
 ## <a name="syntax"></a>语法
 
@@ -32,24 +32,24 @@ LRESULT CommandHandler(
 通知代码。
 
 *wID*<br/>
-菜单项、 控件或加速器的标识符。
+菜单项、控件或快捷键的标识符。
 
 *hWndCtl*<br/>
 窗口控件的句柄。
 
 *bHandled*<br/>
-消息映射集*bHandled*为 TRUE，然后才能`CommandHandler`调用。 如果`CommandHandler`不完全处理该消息，应设置*bHandled*为 FALSE 以指示该消息需要进一步处理。
+消息映射在调用之前`CommandHandler`将 bHandled 设置为 TRUE。 如果`CommandHandler`未完全处理消息, 则应将*bHandled*设置为 FALSE, 以指示消息需要进一步处理。
 
 ## <a name="return-value"></a>返回值
 
-消息处理的结果。 如果成功，则为 0。
+消息处理的结果。 如果成功, 则为0。
 
 ## <a name="remarks"></a>备注
 
-消息映射中使用此消息处理程序的示例，请参阅[COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler)。
+有关在消息映射中使用此消息处理程序的示例, 请参阅[COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler)。
 
 ## <a name="see-also"></a>请参阅
 
 [实现窗口](../atl/implementing-a-window.md)<br/>
 [消息映射](../atl/message-maps-atl.md)<br/>
-[WM_NOTIFY](/windows/desktop/controls/wm-notify)
+[WM_NOTIFY](/windows/win32/controls/wm-notify)

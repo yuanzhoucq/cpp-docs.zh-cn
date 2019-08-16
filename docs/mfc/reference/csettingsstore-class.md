@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CSettingsStore [MFC], Read
 - CSettingsStore [MFC], Write
 ms.assetid: 0ea181de-a13e-4b29-b560-7c43838223ff
-ms.openlocfilehash: 1e1373da86c1c3fea3b1ddd6ff17f0fac4f76980
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75d86b81d9651e5892913af5919ae0a78fe6bbc5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324181"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502926"
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore Class
 
@@ -45,27 +45,27 @@ class CSettingsStore : public CObject
 
 |名称|描述|
 |----------|-----------------|
-|[CSettingsStore::CSettingsStore](#csettingsstore)|构造 `CSettingsStore` 对象。|
+|[CSettingsStore:: CSettingsStore](#csettingsstore)|构造 `CSettingsStore` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
 |名称|描述|
 |----------|-----------------|
-|[CSettingsStore::Close](#close)|关闭打开注册表项。|
-|[CSettingsStore::CreateKey](#createkey)|打开指定的密钥或创建它，如果不存在。|
-|[CSettingsStore::DeleteKey](#deletekey)|删除指定的密钥及其所有子级。|
-|[CSettingsStore::DeleteValue](#deletevalue)|删除打开密钥的指定的值。|
-|[CSettingsStore::Open](#open)|打开指定的密钥。|
-|[CSettingsStore::Read](#read)|检索指定的密钥值的数据。|
-|[CSettingsStore::Write](#write)|向下打开的注册表的注册表中写入值。|
+|[CSettingsStore::Close](#close)|关闭打开的注册表项。|
+|[CSettingsStore::CreateKey](#createkey)|打开指定的密钥, 如果不存在, 则创建它。|
+|[CSettingsStore::DeleteKey](#deletekey)|删除指定的键及其所有子级。|
+|[CSettingsStore::DeleteValue](#deletevalue)|删除 open 键的指定值。|
+|[CSettingsStore::Open](#open)|打开指定的键。|
+|[CSettingsStore::Read](#read)|检索指定密钥值的数据。|
+|[CSettingsStore::Write](#write)|将一个值写入到注册表中的 open 键下。|
 
 ## <a name="remarks"></a>备注
 
-成员函数`CreateKey`和`Open`非常相似。 如果已存在的注册表项，`CreateKey`和`Open`函数相同的方式。 但是，如果注册表项不存在，则`CreateKey`将创建它，而`Open`将返回错误值。
+成员函数`CreateKey`和`Open`非常类似。 如果注册表项已存在, `CreateKey` `Open`则以相同的方式运行。 但是, 如果该注册表项不存在, 则`CreateKey`将创建它, `Open`而将返回一个错误值。
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何使用的打开和读取方法`CSettingsStore`类。 此代码片段属于[工具提示演示示例](../../overview/visual-cpp-samples.md)。
+下面的示例演示如何使用`CSettingsStore`类的 Open 和 Read 方法。 此代码段是[工具提示演示示例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_ToolTipDemo#1](../../mfc/reference/codesnippet/cpp/csettingsstore-class_1.cpp)]
 
@@ -77,11 +77,11 @@ class CSettingsStore : public CObject
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxsettingsstore.h
+**标头:** afxsettingsstore
 
-##  <a name="close"></a>  CSettingsStore::Close
+##  <a name="close"></a>CSettingsStore:: Close
 
-关闭打开注册表项。
+关闭打开的注册表项。
 
 ```
 virtual void Close();
@@ -89,11 +89,11 @@ virtual void Close();
 
 ### <a name="remarks"></a>备注
 
-默认情况下，此方法调用的析构函数从[CSettingsStore 类](../../mfc/reference/csettingsstore-class.md)。
+默认情况下, 从[CSettingsStore 类](../../mfc/reference/csettingsstore-class.md)的析构函数中调用此方法。
 
-##  <a name="createkey"></a>  CSettingsStore::CreateKey
+##  <a name="createkey"></a>CSettingsStore:: CreateKey
 
-打开注册表项或不存在时创建该队列。
+打开注册表项, 如果不存在, 则创建它。
 
 ```
 virtual BOOL CreateKey(LPCTSTR pszPath);
@@ -102,17 +102,17 @@ virtual BOOL CreateKey(LPCTSTR pszPath);
 ### <a name="parameters"></a>参数
 
 *pszPath*<br/>
-[in]指定创建或打开密钥的名称。
+中指定要创建或打开的项的名称。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则为 0否则为一个非零值。
+如果成功, 则为 0;否则为非零值。
 
 ### <a name="remarks"></a>备注
 
-`CreateKey` 使用`m_hKey`作为根的注册表的查询。 它会搜索*pszPath*作为子项的`m_hKey`。 如果不存在该键，`CreateKey`创建它。 否则，它打开的密钥。 `CreateKey` 然后设置`m_hKey`到创建或打开密钥。
+`CreateKey`使用`m_hKey`作为注册表查询的根。 它搜索*pszPath*作为的子项`m_hKey`。 如果该键不存在, `CreateKey`则创建它。 否则, 会打开该密钥。 `CreateKey`然后, `m_hKey`将设置为创建或打开的键。
 
-##  <a name="csettingsstore"></a>  CSettingsStore::CSettingsStore
+##  <a name="csettingsstore"></a>CSettingsStore:: CSettingsStore
 
 创建一个 `CSettngsStore` 对象。
 
@@ -125,22 +125,22 @@ CSettingsStore(
 ### <a name="parameters"></a>参数
 
 *bAdmin*<br/>
-[in]布尔参数，用于指定是否`CSettingsStore`对象在管理员模式下起作用。
+中指定`CSettingsStore`对象是否在管理员模式下操作的布尔参数。
 
 *bReadOnly*<br/>
-[in]布尔参数，用于指定是否`CSettingsStore`在只读模式下创建对象。
+中指定是否`CSettingsStore`在只读模式下创建对象的布尔参数。
 
 ### <a name="remarks"></a>备注
 
-如果*bAdmin*设置为 TRUE，`m_hKey`成员变量设置为**HKEY_LOCAL_MACHINE**。 如果您设置*bAdmin*为 FALSE，`m_hKey`设置为**HKEY_CURRENT_USER**。
+如果将*bAdmin*设置为 TRUE, `m_hKey`则成员变量将设置为**HKEY_LOCAL_MACHINE**。 如果将*bAdmin*设置为 FALSE, `m_hKey`则将设置为**HKEY_CURRENT_USER**。
 
-安全访问权限取决于*bReadOnly*参数。 如果*bReadonly*为 FALSE 时，安全访问权限将设置为**KEY_ALL_ACCESS**。 如果*bReadyOnly*为 TRUE 时，安全访问权限将设置为的组合**KEY_QUERY_VALUE、 KEY_NOTIFY**并**KEY_ENUMERATE_SUB_KEYS**。 有关安全访问以及注册表的详细信息，请参阅[注册表项安全和访问权限](/windows/desktop/SysInfo/registry-key-security-and-access-rights)。
+安全访问依赖于*bReadOnly*参数。 如果*bReadonly*为 FALSE, 则将安全访问权限设置为**KEY_ALL_ACCESS**。 如果*bReadyOnly*为 TRUE, 则安全访问将设置为**KEY_QUERY_VALUE、KEY_NOTIFY**和**KEY_ENUMERATE_SUB_KEYS**的组合。 有关安全访问和注册表的详细信息, 请参阅[注册表项安全和访问权限](/windows/win32/SysInfo/registry-key-security-and-access-rights)。
 
-析构函数`CSettingsStore`释放`m_hKey`自动。
+自动`CSettingsStore` 释放`m_hKey`的析构函数。
 
-##  <a name="deletekey"></a>  CSettingsStore::DeleteKey
+##  <a name="deletekey"></a>CSettingsStore::D eleteKey
 
-从注册表中删除密钥及其所有子级。
+从注册表中删除密钥及其所有子项。
 
 ```
 virtual BOOL DeleteKey(
@@ -151,10 +151,10 @@ virtual BOOL DeleteKey(
 ### <a name="parameters"></a>参数
 
 *pszPath*<br/>
-[in]若要删除的密钥的名称。
+中要删除的键的名称。
 
 *bAdmin*<br/>
-[in]指定要删除的密钥的位置的开关。
+中指定要删除的密钥位置的开关。
 
 ### <a name="return-value"></a>返回值
 
@@ -162,13 +162,13 @@ virtual BOOL DeleteKey(
 
 ### <a name="remarks"></a>备注
 
-如果此方法将失败`CSettingsStore`对象处于只读模式。
+如果`CSettingsStore`对象处于只读模式, 则此方法将失败。
 
-如果将参数*bAdmin*为零，`DeleteKey`搜索要删除下的键**HKEY_CURRENT_USER**。 如果*bAdmin*为非零值，`DeleteKey`搜索要删除下的键**HKEY_LOCAL_MACHINE**。
+如果参数*bAdmin*为零, `DeleteKey`则在**HKEY_CURRENT_USER**下搜索要删除的密钥。 如果*bAdmin*为非零`DeleteKey`值, 则会在**HKEY_LOCAL_MACHINE**下搜索要删除的密钥。
 
-##  <a name="deletevalue"></a>  CSettingsStore::DeleteValue
+##  <a name="deletevalue"></a>CSettingsStore::D eleteValue
 
-删除从值`m_hKey`。
+从中`m_hKey`删除值。
 
 ```
 virtual BOOL DeleteValue(LPCTSTR pszValue);
@@ -177,13 +177,13 @@ virtual BOOL DeleteValue(LPCTSTR pszValue);
 ### <a name="parameters"></a>参数
 
 *pszValue*<br/>
-[in]指定要移除的值字段。
+中指定要删除的值字段。
 
 ### <a name="return-value"></a>返回值
 
 如果成功，则不为 0；否则为 0。
 
-##  <a name="open"></a>  CSettingsStore::Open
+##  <a name="open"></a>CSettingsStore:: Open
 
 打开注册表项。
 
@@ -194,7 +194,7 @@ virtual BOOL Open(LPCTSTR pszPath);
 ### <a name="parameters"></a>参数
 
 *pszPath*<br/>
-[in]注册表项的名称。
+中注册表项的名称。
 
 ### <a name="return-value"></a>返回值
 
@@ -202,11 +202,11 @@ virtual BOOL Open(LPCTSTR pszPath);
 
 ### <a name="remarks"></a>备注
 
-此方法成功打开指定的密钥后，它会设置`m_hKey`到此密钥的句柄。
+此方法成功打开指定的键后, 它会`m_hKey`将设置为此项的句柄。
 
-##  <a name="read"></a>  CSettingsStore::Read
+##  <a name="read"></a>CSettingsStore:: Read
 
-从注册表中读取的值。
+从注册表项中读取值。
 
 ```
 virtual BOOL Read(
@@ -270,52 +270,52 @@ virtual BOOL Read(
 ### <a name="parameters"></a>参数
 
 *pszKey*<br/>
-[in]包含要从注册表中读取的值的名称的以 null 结尾的字符串指针。
+中指向以 null 结尾的字符串的指针, 该字符串包含要从注册表中读取的值的名称。
 
 *iVal*<br/>
-[out]对接收从注册表项中读取的值的整数变量的引用。
+弄对接收从注册表项中读取的值的整型变量的引用。
 
 *dwVal*<br/>
-[out]一个 32 位双字变量来接收从注册表项中读取的值对的引用。
+弄对接收从注册表项中读取的值的32位双字变量的引用。
 
 *sVal*<br/>
-[out]一个字符串变量来接收从注册表项中读取的值对的引用。
+弄对接收从注册表项中读取的值的字符串变量的引用。
 
 *scStringList*<br/>
-[out]一个字符串列表变量来接收从注册表项中读取的值对的引用。
+弄对字符串列表变量的引用, 该变量接收从注册表项中读取的值。
 
 *scArray*<br/>
-[out]一个字符串数组变量来接收从注册表项中读取的值对的引用。
+弄对字符串数组变量的引用, 该变量接收从注册表项中读取的值。
 
 *dwcArray*<br/>
-[out]一个 32 位双字数组变量来接收从注册表项中读取的值对的引用。
+弄对32位双字数组变量的引用, 该变量接收从注册表项中读取的值。
 
 *wcArray*<br/>
-[out]对一个 16 位字数组变量来接收从注册表项中读取的值的引用。
+弄对从注册表项中读取值的16位 word 数组变量的引用。
 
 *bcArray*<br/>
-[out]对一个字节数组变量来接收从注册表项中读取的值的引用。
+弄对字节数组变量的引用, 该变量接收从注册表项中读取的值。
 
 *lpPoint*<br/>
-[out]引用指向`POINT`从注册表项读取收到的值的结构。
+弄引用指向`POINT`结构的指针, 该结构接收从注册表项中读取的值。
 
 *rect*<br/>
-[out]引用[CRect](../../atl-mfc-shared/reference/crect-class.md)从注册表项读取收到的值的变量。
+弄对[CRect](../../atl-mfc-shared/reference/crect-class.md)变量的引用, 该变量接收从注册表项中读取的值。
 
 *ppData*<br/>
-[out]从注册表项读取指针到指向接收的值的数据。
+弄指向数据的指针的指针, 该数据接收从注册表项中读取的值。
 
 *pBytes*<br/>
-[out]指向无符号的整数变量的指针。 此变量接收缓冲区的大小， *ppData*指向。
+弄指向无符号整数变量的指针。 此变量接收*ppData*指向的缓冲区的大小。
 
 *list*<br/>
-[out]引用[CObList](../../mfc/reference/coblist-class.md)从注册表项读取收到的值的变量。
+弄对[CObList](../../mfc/reference/coblist-class.md)变量的引用, 该变量接收从注册表项中读取的值。
 
 *obj*<br/>
-[out]引用[CObject](../../mfc/reference/cobject-class.md)从注册表项读取收到的值的变量。
+弄对接收从注册表项中读取的值的[CObject](../../mfc/reference/cobject-class.md)变量的引用。
 
 *pObj*<br/>
-[out]引用指向`CObject`从注册表项读取收到的值的变量。
+弄引用指向一个`CObject`变量的指针, 该变量接收从注册表项中读取的值。
 
 ### <a name="return-value"></a>返回值
 
@@ -323,11 +323,11 @@ virtual BOOL Read(
 
 ### <a name="remarks"></a>备注
 
-`Read` 检查*pszKey*作为子项的`m_hKey`。
+`Read`检查*pszKey*是否为的子项`m_hKey`。
 
-##  <a name="write"></a>  CSettingsStore::Write
+##  <a name="write"></a>CSettingsStore:: Write
 
-向下打开的注册表的注册表中写入值。
+将一个值写入到注册表中的 open 键下。
 
 ```
 virtual BOOL Write(
@@ -391,52 +391,52 @@ virtual BOOL Write(
 ### <a name="parameters"></a>参数
 
 *pszKey*<br/>
-[in]包含要设置的值的名称的字符串指针。
+中指向字符串的指针, 该字符串包含要设置的值的名称。
 
 *iVal*<br/>
-[in]对包含要存储的数据的整数变量的引用。
+中对包含要存储的数据的整数变量的引用。
 
 *dwVal*<br/>
-[in]对包含要存储的数据的 32 位双字变量引用。
+中对包含要存储的数据的32位双字变量的引用。
 
 *pszVal*<br/>
-[in]指向包含要存储的数据的以 null 结尾的字符串变量的指针。
+中一个指针, 指向以 null 结尾的字符串变量, 其中包含要存储的数据。
 
 *scStringList*<br/>
-[in]引用[CStringList](../../mfc/reference/cstringlist-class.md)变量包含要存储的数据。
+中对包含要存储的数据的[CStringList](../../mfc/reference/cstringlist-class.md)变量的引用。
 
 *bcArray*<br/>
-[in]对包含要存储的数据的字节数组变量的引用。
+中对包含要存储的数据的字节数组变量的引用。
 
 *scArray*<br/>
-[in]对包含要存储的数据的字符串数组变量的引用。
+中对包含要存储的数据的字符串数组变量的引用。
 
 *dwcArray*<br/>
-[in]对包含要存储的数据的 32 位双字数组变量的引用。
+中对包含要存储的数据的32位双字数组变量的引用。
 
 *wcArray*<br/>
-[in]对包含要存储的数据的 16 位字数组变量的引用。
+中对包含要存储的数据的16位 word 数组变量的引用。
 
 *rect*<br/>
-[in]引用[CRect](../../atl-mfc-shared/reference/crect-class.md)变量包含要存储的数据。
+中对包含要存储的数据的[CRect](../../atl-mfc-shared/reference/crect-class.md)变量的引用。
 
 *lpPoint*<br/>
-[in]引用指向`POINT`变量包含要存储的数据。
+中引用指向包含要存储的`POINT`数据的变量的指针。
 
 *pData*<br/>
-[in]指向包含要存储的数据的缓冲区的指针。
+中指向包含要存储的数据的缓冲区的指针。
 
 *nBytes*<br/>
-[in]指定的大小，以字节为单位的数据*pData*参数所指向。
+中指定*pData*参数指向的数据的大小 (以字节为单位)。
 
 *list*<br/>
-[in]引用[CObList](../../mfc/reference/coblist-class.md)变量包含要存储的数据。
+中对包含要存储的数据的[CObList](../../mfc/reference/coblist-class.md)变量的引用。
 
 *obj*<br/>
-[in]引用[CObject](../../mfc/reference/cobject-class.md)变量包含要存储的数据。
+中对包含要存储的数据的[CObject](../../mfc/reference/cobject-class.md)变量的引用。
 
 *pObj*<br/>
-[in]指针到指向`CObject`变量包含要存储的数据。
+中指向一个指针的指针, `CObject`该指针指向包含要存储的数据的变量。
 
 ### <a name="return-value"></a>返回值
 
@@ -444,7 +444,7 @@ virtual BOOL Write(
 
 ### <a name="remarks"></a>备注
 
-若要写入到注册表，必须设置*bReadOnly*为非零值在创建时[CSettingsStore](../../mfc/reference/csettingsstore-class.md)对象。 有关详细信息，请参阅[CSettingsStore::CSettingsStore](#csettingsstore)。
+若要写入注册表, 在创建[CSettingsStore](../../mfc/reference/csettingsstore-class.md)对象时, 必须将*bReadOnly*设置为非零值。 有关详细信息, 请参阅[CSettingsStore:: CSettingsStore](#csettingsstore)。
 
 ## <a name="see-also"></a>请参阅
 

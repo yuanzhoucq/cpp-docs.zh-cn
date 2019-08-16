@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSplitButton [MFC], SetDropDownMenu
 - CSplitButton [MFC], OnDropDown
 ms.assetid: 6844d0a9-6408-4e44-9b5f-57628ed8bad6
-ms.openlocfilehash: d493a2d4d1c531250abc1cd60d1d3d5b79dea1b7
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: a552334adb4963f45388a798eb0723e61c09ec85
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916776"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502836"
 ---
 # <a name="csplitbutton-class"></a>CSplitButton 类
 
@@ -54,7 +54,7 @@ class CSplitButton : public CButton
 
 ## <a name="remarks"></a>备注
 
-此`CSplitButton`类派生自[CButton](../../mfc/reference/cbutton-class.md)类。 拆分按钮控件是其样式为 BS_SPLITBUTTON 的按钮控件。 当用户单击下拉箭头时, 它会显示一个自定义菜单。 有关详细信息, 请参阅[按钮样式](/windows/desktop/Controls/button-styles)中的 BS_SPLITBUTTON 和 BS_DEFSPLITBUTTON 样式。
+此`CSplitButton`类派生自[CButton](../../mfc/reference/cbutton-class.md)类。 拆分按钮控件是其样式为 BS_SPLITBUTTON 的按钮控件。 当用户单击下拉箭头时, 它会显示一个自定义菜单。 有关详细信息, 请参阅[按钮样式](/windows/win32/Controls/button-styles)中的 BS_SPLITBUTTON 和 BS_DEFSPLITBUTTON 样式。
 
 下图描绘了一个对话框, 其中包含一个页导航控件和一个 (1) 拆分按钮控件。 已单击 (2) 下拉箭头, 并显示了 "(3)" 子菜单。
 
@@ -144,8 +144,8 @@ afx_msg void OnDropDown(
 
 |参数|描述|
 |---------------|-----------------|
-|*pNMHDR*|中指向[NMHDR](/windows/desktop/api/richedit/ns-richedit-nmhdr)结构的指针, 该结构包含有关[BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown)通知的信息。|
-|*pResult*|弄(未使用; 不返回任何值。)[BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown)通知的返回值。|
+|*pNMHDR*|中指向[NMHDR](/windows/win32/api/richedit/ns-richedit-nmhdr)结构的指针, 该结构包含有关[BCN_DROPDOWN](/windows/win32/Controls/bcn-dropdown)通知的信息。|
+|*pResult*|弄(未使用; 不返回任何值。)[BCN_DROPDOWN](/windows/win32/Controls/bcn-dropdown)通知的返回值。|
 
 ### <a name="remarks"></a>备注
 

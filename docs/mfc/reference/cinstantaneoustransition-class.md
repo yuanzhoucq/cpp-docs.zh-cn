@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CInstantaneousTransition [MFC], Create
 - CInstantaneousTransition [MFC], m_dblFinalValue
 ms.assetid: c3d5121f-2c6b-4221-9e57-10e082a31120
-ms.openlocfilehash: 6e28c7d51fd80771d0348ab42021d196f81d3474
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f3861bbbc0fc138dcb0f2a8b969ed9bde41335bd
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345742"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505939"
 ---
 # <a name="cinstantaneoustransition-class"></a>CInstantaneousTransition 类
 
@@ -41,17 +41,17 @@ class CInstantaneousTransition : public CBaseTransition;
 
 |名称|描述|
 |----------|-----------------|
-|[CInstantaneousTransition::Create](#create)|调用要创建封装的转换 COM 对象的转换库。 (重写[CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create)。)|
+|[CInstantaneousTransition::Create](#create)|调用转换库以创建封装的转换 COM 对象。 (重写[CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create)。)|
 
 ### <a name="public-data-members"></a>公共数据成员
 
 |名称|描述|
 |----------|-----------------|
-|[CInstantaneousTransition::m_dblFinalValue](#m_dblfinalvalue)|转换结束时的动画变量的值。|
+|[CInstantaneousTransition::m_dblFinalValue](#m_dblfinalvalue)|转换结束时动画变量的值。|
 
 ## <a name="remarks"></a>备注
 
-瞬时转换，在动画变量的值立即从其当前值更改为指定的最终值。 此转换的持续时间值始终为零。 因为会自动清除所有转换，我们建议分配它们使用新运算符。 封装 IUIAnimationTransition 创建 COM 对象通过 CAnimationController::AnimateGroup，直到它为 NULL。 创建此 COM 对象不起作用之后更改成员变量。
+在瞬时转换期间, 动画变量的值会立即从其当前值更改为指定的最终值。 此转换的持续时间始终为零。 由于所有转换都将自动清除, 因此建议使用 operator new 将其分配给它们。 封装的 IUIAnimationTransition COM 对象由 CAnimationController:: AnimateGroup 创建, 直到它为 NULL。 在创建此 COM 对象之后更改成员变量不起作用。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -65,7 +65,7 @@ class CInstantaneousTransition : public CBaseTransition;
 
 **标头：** afxanimationcontroller.h
 
-##  <a name="cinstantaneoustransition"></a>  CInstantaneousTransition::CInstantaneousTransition
+##  <a name="cinstantaneoustransition"></a>CInstantaneousTransition:: CInstantaneousTransition
 
 构造转换对象并初始化其最终值。
 
@@ -76,11 +76,11 @@ CInstantaneousTransition(DOUBLE dblFinalValue);
 ### <a name="parameters"></a>参数
 
 *dblFinalValue*<br/>
-转换结束时的动画变量的值。
+转换结束时动画变量的值。
 
-##  <a name="create"></a>  CInstantaneousTransition::Create
+##  <a name="create"></a>CInstantaneousTransition:: Create
 
-调用要创建封装的转换 COM 对象的转换库。
+调用转换库以创建封装的转换 COM 对象。
 
 ```
 virtual BOOL Create(
@@ -91,15 +91,15 @@ virtual BOOL Create(
 ### <a name="parameters"></a>参数
 
 *pLibrary*<br/>
-一个指向[IUIAnimationTransitionLibrary 接口](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)，用于定义的标准转换库。
+指向[IUIAnimationTransitionLibrary 接口](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)的指针, 该接口定义标准转换库。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则创建转换，则返回 TRUE否则为 FALSE。
+如果成功创建转换, 则为 TRUE;否则为 FALSE。
 
-##  <a name="m_dblfinalvalue"></a>  CInstantaneousTransition::m_dblFinalValue
+##  <a name="m_dblfinalvalue"></a>CInstantaneousTransition:: m_dblFinalValue
 
-转换结束时的动画变量的值。
+转换结束时动画变量的值。
 
 ```
 DOUBLE m_dblFinalValue;

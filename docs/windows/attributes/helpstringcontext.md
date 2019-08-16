@@ -1,21 +1,21 @@
 ---
-title: helpstringcontext (C++ COM 属性)
+title: helpstringcontext (C++ COM 特性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpstringcontext
 helpviewer_keywords:
 - helpstringcontext attribute [C++]
 ms.assetid: d4cd135e-d91c-4aa3-9353-8aeb096f52cf
-ms.openlocfilehash: a6df5b63291fbc54d6c12a116fccd8372e8ced9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ae48c6216b1f1d987b33eff50acf9d82dc551400
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409572"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501488"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 
-在.hlp 或.chm 文件中指定的帮助主题的 ID。
+指定 .hlp 或 .chm 文件中帮助主题的 ID。
 
 ## <a name="syntax"></a>语法
 
@@ -26,11 +26,11 @@ ms.locfileid: "62409572"
 ### <a name="parameters"></a>参数
 
 *contextID*<br/>
-中的 32 位的帮助上下文标识符**帮助**文件。
+**帮助**文件中的32位帮助上下文标识符。
 
 ## <a name="remarks"></a>备注
 
-**Helpstringcontext** C++属性具有相同的功能[helpstringcontext](/windows/desktop/Midl/helpstringcontext) ODL 特性。
+**Helpstringcontext** C++属性具有与[helpstringcontext](/windows/win32/Midl/helpstringcontext) ODL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
@@ -54,10 +54,10 @@ __interface IMyI
 
 |||
 |-|-|
-|**适用对象**|**类**，**接口**，接口方法|
-|**可重复**|否|
-|**必需的特性**|None|
-|**无效的特性**|None|
+|**适用于**|**类**、**接口**、接口方法|
+|**可重复**|No|
+|**必需的特性**|无|
+|**无效的特性**|无|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

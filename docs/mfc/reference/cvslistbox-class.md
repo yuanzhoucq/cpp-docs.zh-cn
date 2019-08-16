@@ -28,16 +28,16 @@ helpviewer_keywords:
 - CVSListBox [MFC], SetItemData
 - CVSListBox [MFC], GetListHwnd
 ms.assetid: c79be7b4-46ed-4af8-a41e-68962782d8ef
-ms.openlocfilehash: 618f4f386db477dd301ada862ebd2094a6c6651f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a33f5b64c5094bfe2ca2ff259b5cd8654058ed3
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324427"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502236"
 ---
 # <a name="cvslistbox-class"></a>CVSListBox 类
 
-`CVSListBox`类支持的可编辑列表控件。
+`CVSListBox`类支持可编辑列表控件。
 
 ## <a name="syntax"></a>语法
 
@@ -59,35 +59,35 @@ class CVSListBox : public CVSListBoxBase
 |名称|描述|
 |----------|-----------------|
 |[CVSListBox::AddItem](#additem)|将字符串添加到列表控件。 （重写 `CVSListBoxBase::AddItem`。）|
-|[CVSListBox::EditItem](#edititem)|启动对文本的列表控件项的编辑操作。 （重写 `CVSListBoxBase::EditItem`。）|
-|[CVSListBox::GetCount](#getcount)|检索一个可编辑列表控件中的字符串数。 （重写 `CVSListBoxBase::GetCount`。）|
-|[CVSListBox::GetItemData](#getitemdata)|检索与可编辑列表控件项相关联的特定于应用程序的 32 位值。 （重写 `CVSListBoxBase::GetItemData`。）|
+|[CVSListBox::EditItem](#edititem)|对列表控件项的文本启动编辑操作。 （重写 `CVSListBoxBase::EditItem`。）|
+|[CVSListBox::GetCount](#getcount)|检索可编辑列表控件中的字符串的数目。 （重写 `CVSListBoxBase::GetCount`。）|
+|[CVSListBox::GetItemData](#getitemdata)|检索与可编辑列表控件项关联的特定于应用程序的32位值。 （重写 `CVSListBoxBase::GetItemData`。）|
 |[CVSListBox::GetItemText](#getitemtext)|检索可编辑列表控件项的文本。 （重写 `CVSListBoxBase::GetItemText`。）|
-|[CVSListBox::GetSelItem](#getselitem)|检索一个可编辑列表控件中当前选定项的从零开始的索引。 （重写 `CVSListBoxBase::GetSelItem`。）|
-|`CVSListBox::PreTranslateMessage`|将窗口消息调度到之前[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)并[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函数。 有关详细信息和方法语法，请参阅[cwnd:: Pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。 （重写 `CVSListBoxBase::PreTranslateMessage`。）|
-|[CVSListBox::RemoveItem](#removeitem)|从一个可编辑列表控件中移除的项。 （重写 `CVSListBoxBase::RemoveItem`。）|
-|[CVSListBox::SelectItem](#selectitem)|选择一个可编辑列表控件字符串。 （重写 `CVSListBoxBase::SelectItem`。）|
-|[CVSListBox::SetItemData](#setitemdata)|将特定于应用程序的 32 位值的可编辑列表控件项与相关联。 （重写 `CVSListBoxBase::SetItemData`。）|
+|[CVSListBox::GetSelItem](#getselitem)|检索可编辑列表控件中当前选定项的从零开始的索引。 （重写 `CVSListBoxBase::GetSelItem`。）|
+|`CVSListBox::PreTranslateMessage`|转换窗口消息, 然后将其调度到[TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage)和[DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) Windows 函数。 有关详细信息和方法语法, 请参阅[CWnd::P retranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。 （重写 `CVSListBoxBase::PreTranslateMessage`。）|
+|[CVSListBox::RemoveItem](#removeitem)|删除可编辑列表控件中的项。 （重写 `CVSListBoxBase::RemoveItem`。）|
+|[CVSListBox::SelectItem](#selectitem)|选择可编辑的列表控件字符串。 （重写 `CVSListBoxBase::SelectItem`。）|
+|[CVSListBox::SetItemData](#setitemdata)|将特定于应用程序的32位值与可编辑的列表控件项关联。 （重写 `CVSListBoxBase::SetItemData`。）|
 
 ### <a name="protected-methods"></a>受保护的方法
 
 |名称|描述|
 |----------|-----------------|
-|[CVSListBox::GetListHwnd](#getlisthwnd)|返回当前的嵌入的列表视图控件的图柄。|
+|[CVSListBox::GetListHwnd](#getlisthwnd)|返回当前嵌入的列表视图控件的句柄。|
 
 ## <a name="remarks"></a>备注
 
-`CVSListBox`类提供了一组使用户能够创建、 修改、 删除或重新排列列表控件中的项的编辑按钮。
+`CVSListBox`类提供一组编辑按钮, 用户可以使用这些按钮来创建、修改、删除或重新排列列表控件中的项。
 
-以下是可编辑列表控件的图片。 标题为"Item2"的第二个列表项选择进行编辑。
+下面是可编辑列表控件的图片。 选择名为 "Item2" 的第二个列表项进行编辑。
 
 ![CVSListBox 控件](../../mfc/reference/media/cvslistbox.png "CVSListBox 控件")
 
-如果使用资源编辑器将添加一个可编辑列表控件，请注意**工具箱**编辑器窗格中不提供预定义的可编辑列表控件。 相反，如添加静态控件**分组框**控件。 框架使用静态控件作为占位符，以指定的大小和可编辑列表控件的位置。
+如果使用资源编辑器来添加可编辑列表控件, 请注意, 编辑器的 "**工具箱**" 窗格不提供预定义的可编辑列表控件。 相反, 请添加静态控件, 如 "**分组框**" 控件。 框架使用静态控件作为占位符来指定可编辑列表控件的大小和位置。
 
-若要在对话框模板中使用的可编辑列表控件，声明`CVSListBox`对话框类中用户定义变量。 若要支持变量和控件之间的数据交换，定义`DDX_Control`中的宏条目`DoDataExchange`对话框的方法。 默认情况下，没有编辑按钮的情况下创建可编辑列表控件。 使用继承的 CVSListBoxBase::SetStandardButtons 方法启用的编辑按钮。
+若要在对话框模板中使用可编辑的列表控件, 请`CVSListBox`在对话框类中声明变量。 若要支持变量与控件之间的数据交换, 请`DDX_Control` `DoDataExchange`在对话框的方法中定义一个宏项。 默认情况下, 不使用 "编辑" 按钮创建可编辑列表控件。 使用继承的 CVSListBoxBase:: SetStandardButtons 方法启用 "编辑" 按钮。
 
-有关详细信息，请参阅示例目录中，`New Controls`示例 Page3.cpp 和 Page3.h 文件。
+有关详细信息, 请参阅示例目录`New Controls`示例、Page3 和 Page3 文件。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -105,9 +105,9 @@ class CVSListBox : public CVSListBoxBase
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxvslistbox.h
+**标头:** afxvslistbox
 
-##  <a name="additem"></a>  CVSListBox::AddItem
+##  <a name="additem"></a>CVSListBox:: AddItem
 
 将字符串添加到列表控件。
 
@@ -121,23 +121,23 @@ virtual int AddItem(
 ### <a name="parameters"></a>参数
 
 *strIext*<br/>
-[in]对字符串的引用。
+中对字符串的引用。
 
 *dwData*<br/>
-[in]一个与字符串相关联的特定于应用程序的 32 位值。 默认值为 0。
+中与字符串关联的应用程序特定的32位值。 默认值为 0。
 
 *iIndex*<br/>
-[in]将保存的字符串的位置的从零开始的索引。 如果*iIndex*参数为-1，则字符串添加到列表的末尾。 默认值为 -1。
+中将保留字符串的位置的从零开始的索引。 如果*iIndex*参数为-1, 则字符串将被添加到列表的末尾。 默认值为 -1。
 
 ### <a name="return-value"></a>返回值
 
-列表控件中字符串的位置的从零开始索引。
+列表控件中字符串位置的从零开始的索引。
 
 ### <a name="remarks"></a>备注
 
-使用[CVSListBox::GetItemData](#getitemdata)方法来检索由指定的值*dwData*参数。 此值可以是特定于应用程序的整数或其他数据的指针。
+使用[CVSListBox:: GetItemData](#getitemdata)方法检索*dwData*参数指定的值。 此值可以是应用程序特定的整数, 也可以是指向其他数据的指针。
 
-##  <a name="cvslistbox"></a>  CVSListBox::CVSListBox
+##  <a name="cvslistbox"></a>CVSListBox:: CVSListBox
 
 构造 `CVSListBox` 对象。
 
@@ -149,9 +149,9 @@ CVSListBox();
 
 ### <a name="remarks"></a>备注
 
-##  <a name="edititem"></a>  CVSListBox::EditItem
+##  <a name="edititem"></a>CVSListBox:: EditItem
 
-启动对文本的列表控件项的编辑操作。
+对列表控件项的文本启动编辑操作。
 
 ```
 virtual BOOL EditItem(int iIndex);
@@ -160,19 +160,19 @@ virtual BOOL EditItem(int iIndex);
 ### <a name="parameters"></a>参数
 
 *iIndex*<br/>
-[in]列表控件项的从零开始的索引。
+中列表控件项的从零开始的索引。
 
 ### <a name="return-value"></a>返回值
 
-如果编辑操作启动成功，则为 TRUE否则为 FALSE。
+如果编辑操作成功启动, 则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-用户开始编辑操作，通过双击某一项，标签或通过按**F2**或**空格键**键项具有焦点时。
+用户可以通过双击项的标签或按**F2**键或**空格键**(当项具有焦点时) 来启动编辑操作。
 
-##  <a name="getcount"></a>  CVSListBox::GetCount
+##  <a name="getcount"></a>CVSListBox:: GetCount
 
-检索一个可编辑列表控件中的字符串数。
+检索可编辑列表控件中的字符串的数目。
 
 ```
 virtual int GetCount() const;
@@ -184,11 +184,11 @@ virtual int GetCount() const;
 
 ### <a name="remarks"></a>备注
 
-请注意因为索引从零开始的计数是一个大于最后一项的索引值。
+请注意, 此计数比最后一项的索引值大 1, 因为该索引是从零开始的。
 
-##  <a name="getitemdata"></a>  CVSListBox::GetItemData
+##  <a name="getitemdata"></a>CVSListBox:: GetItemData
 
-检索与可编辑列表控件项相关联的特定于应用程序的 32 位值。
+检索与可编辑列表控件项关联的特定于应用程序的32位值。
 
 ```
 virtual DWORD_PTR GetItemData(int iIndex) const;
@@ -197,17 +197,17 @@ virtual DWORD_PTR GetItemData(int iIndex) const;
 ### <a name="parameters"></a>参数
 
 *iIndex*<br/>
-[in]可编辑列表控件项的从零开始的索引。
+中可编辑列表控件项的从零开始的索引。
 
 ### <a name="return-value"></a>返回值
 
-与指定项关联的 32 位值。
+与指定项关联的32位值。
 
 ### <a name="remarks"></a>备注
 
-使用[CVSListBox::SetItemData](#setitemdata)或[CVSListBox::AddItem](#additem)方法来将 32 位值与列表控件项相关联。 此值可以是特定于应用程序的整数或其他数据的指针。
+使用[CVSListBox:: SetItemData](#setitemdata)或[CVSListBox:: AddItem](#additem)方法将32位值与列表控件项关联。 此值可以是应用程序特定的整数, 也可以是指向其他数据的指针。
 
-##  <a name="getitemtext"></a>  CVSListBox::GetItemText
+##  <a name="getitemtext"></a>CVSListBox:: GetItemText
 
 检索可编辑列表控件项的文本。
 
@@ -218,17 +218,17 @@ virtual CString GetItemText(int iIndex) const;
 ### <a name="parameters"></a>参数
 
 *iIndex*<br/>
-[in]可编辑列表控件项的从零开始的索引。
+中可编辑列表控件项的从零开始的索引。
 
 ### <a name="return-value"></a>返回值
 
-一个[CString](../../atl-mfc-shared/reference/cstringt-class.md)对象，其中包含指定项的文本。
+一个[CString](../../atl-mfc-shared/reference/cstringt-class.md)对象, 其中包含指定项的文本。
 
 ### <a name="remarks"></a>备注
 
-##  <a name="getlisthwnd"></a>  CVSListBox::GetListHwnd
+##  <a name="getlisthwnd"></a>CVSListBox:: GetListHwnd
 
-返回当前的嵌入的列表视图控件的图柄。
+返回当前嵌入的列表视图控件的句柄。
 
 ```
 virtual HWND GetListHwnd() const;
@@ -240,11 +240,11 @@ virtual HWND GetListHwnd() const;
 
 ### <a name="remarks"></a>备注
 
-使用此方法来检索支持嵌入的列表视图控件的句柄`CVSListBox`类。
+使用此方法可检索支持`CVSListBox`类的嵌入列表视图控件的句柄。
 
-##  <a name="getselitem"></a>  CVSListBox::GetSelItem
+##  <a name="getselitem"></a>CVSListBox:: GetSelItem
 
-检索一个可编辑列表控件中当前选定项的从零开始的索引。
+检索可编辑列表控件中当前选定项的从零开始的索引。
 
 ```
 virtual int GetSelItem() const;
@@ -252,13 +252,13 @@ virtual int GetSelItem() const;
 
 ### <a name="return-value"></a>返回值
 
-如果此方法成功，当前选定项的从零开始的索引否则为-1。
+如果此方法成功, 则为当前选定项的从零开始的索引;否则为-1。
 
 ### <a name="remarks"></a>备注
 
-##  <a name="removeitem"></a>  CVSListBox::RemoveItem
+##  <a name="removeitem"></a>CVSListBox:: RemoveItem
 
-从一个可编辑列表控件中移除的项。
+删除可编辑列表控件中的项。
 
 ```
 virtual BOOL RemoveItem(int iIndex);
@@ -267,17 +267,17 @@ virtual BOOL RemoveItem(int iIndex);
 ### <a name="parameters"></a>参数
 
 *iIndex*<br/>
-[in]可编辑列表控件项的从零开始的索引。
+中可编辑列表控件项的从零开始的索引。
 
 ### <a name="return-value"></a>返回值
 
-如果指定的项被删除; 则为 TRUE否则为 FALSE。
+如果删除了指定的项, 则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-##  <a name="selectitem"></a>  CVSListBox::SelectItem
+##  <a name="selectitem"></a>CVSListBox:: SelectItem
 
-选择一个可编辑列表控件字符串。
+选择可编辑的列表控件字符串。
 
 ```
 virtual BOOL SelectItem(int iItem);
@@ -286,19 +286,19 @@ virtual BOOL SelectItem(int iItem);
 ### <a name="parameters"></a>参数
 
 *iItem*<br/>
-[in]可编辑列表控件项的从零开始的索引。
+中可编辑列表控件项的从零开始的索引。
 
 ### <a name="return-value"></a>返回值
 
-如果此方法成功，则为 TRUE否则为 FALSE。
+如果此方法成功, 则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-此方法选择指定的项，如果它是必需的则将该项滚动到视图。
+此方法选择指定的项, 如果需要, 则将该项滚动到视图中。
 
-##  <a name="setitemdata"></a>  CVSListBox::SetItemData
+##  <a name="setitemdata"></a>CVSListBox:: SetItemData
 
-将特定于应用程序的 32 位值的可编辑列表控件项与相关联。
+将特定于应用程序的32位值与可编辑的列表控件项关联。
 
 ```
 virtual void SetItemData(
@@ -309,10 +309,10 @@ virtual void SetItemData(
 ### <a name="parameters"></a>参数
 
 *iIndex*<br/>
-[in]可编辑列表控件项的从零开始的索引。
+中可编辑列表控件项的从零开始的索引。
 
 *dwData*<br/>
-[in]一个 32 位值。 此值可以是特定于应用程序的整数或其他数据的指针。
+中32位值。 此值可以是应用程序特定的整数, 也可以是指向其他数据的指针。
 
 ### <a name="remarks"></a>备注
 

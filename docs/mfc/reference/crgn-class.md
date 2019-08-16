@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CRgn [MFC], RectInRegion
 - CRgn [MFC], SetRectRgn
 ms.assetid: d904da84-76aa-481e-8780-b09485f49e64
-ms.openlocfilehash: 66721f34a8ac2b6dac6addcfa04a88b46a37ee60
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 34dcc618f603302c5598e42588ffad78d61ee222
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916832"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502710"
 ---
 # <a name="crgn-class"></a>CRgn 类
 
@@ -78,13 +78,13 @@ class CRgn : public CGdiObject
 |[CRgn::CombineRgn](#combinergn)|设置对象, 使其等效于两个指定`CRgn`的对象的并集。 `CRgn`|
 |[CRgn::CopyRgn](#copyrgn)|设置对象, 使其成为指定`CRgn`对象的副本。 `CRgn`|
 |[CRgn::CreateEllipticRgn](#createellipticrgn)|使用椭圆形区域初始化对象。`CRgn`|
-|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|使用[矩形](/windows/desktop/api/windef/ns-windef-tagrect)结构定义的椭圆形区域初始化对象。`CRgn`|
+|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|使用[矩形](/windows/win32/api/windef/ns-windef-tagrect)结构定义的椭圆形区域初始化对象。`CRgn`|
 |[CRgn::CreateFromData](#createfromdata)|从给定的区域创建区域和转换数据。|
 |[CRgn::CreateFromPath](#createfrompath)|从选择到给定设备上下文的路径创建区域。|
 |[CRgn::CreatePolygonRgn](#createpolygonrgn)|使用多边形区域初始化对象。`CRgn` 系统会根据需要, 通过从最后一个顶点到第一个顶点绘制线条来自动关闭多边形。|
 |[CRgn::CreatePolyPolygonRgn](#createpolypolygonrgn)|使用由一系列闭合多边形组成的区域初始化对象。`CRgn` 多边形可能是不相交的, 也可能是重叠的。|
 |[CRgn::CreateRectRgn](#createrectrgn)|使用矩形区域初始化对象。`CRgn`|
-|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|使用由[RECT](/windows/desktop/api/windef/ns-windef-tagrect)结构定义的矩形区域初始化对象。`CRgn`|
+|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|使用由[RECT](/windows/win32/api/windef/ns-windef-rect)结构定义的矩形区域初始化对象。`CRgn`|
 |[CRgn::CreateRoundRectRgn](#createroundrectrgn)|使用带有圆角的矩形区域初始化对象。`CRgn`|
 |[CRgn::EqualRgn](#equalrgn)|检查两`CRgn`个对象以确定它们是否等效。|
 |[CRgn::FromHandle](#fromhandle)|当给定 Windows 区域的`CRgn`句柄时, 返回指向对象的指针。|
@@ -297,13 +297,13 @@ BOOL CreateFromData(
 ### <a name="parameters"></a>参数
 
 *lpXForm*<br/>
-指向[XFORM](/windows/desktop/api/wingdi/ns-wingdi-tagxform)数据结构, 该结构定义要在区域上执行的转换。 如果此指针为 NULL, 则使用标识转换。
+指向[XFORM](/windows/win32/api/wingdi/ns-wingdi-xform)ata 结构, 该结构定义要在区域上执行的转换。 如果此指针为 NULL, 则使用标识转换。
 
 *nCount*<br/>
 指定*pRgnData*指向的字节数。
 
 *pRgnData*<br/>
-指向包含区域数据的[RGNDATA](/windows/desktop/api/wingdi/ns-wingdi-rgndata)数据结构。
+指向包含区域数据的[RGNDATA](/windows/win32/api/wingdi/ns-wingdi-rgndata)数据结构。
 
 ### <a name="return-value"></a>返回值
 
@@ -631,7 +631,7 @@ int GetRegionData(
 ### <a name="parameters"></a>参数
 
 *lpRgnData*<br/>
-指向接收信息的[RGNDATA](/windows/desktop/api/wingdi/ns-wingdi-rgndata)数据结构。 如果此参数为 NULL, 则返回值包含区域数据所需的字节数。
+指向接收信息的[RGNDATA](/windows/win32/api/wingdi/ns-wingdi-rgndata)数据结构。 如果此参数为 NULL, 则返回值包含区域数据所需的字节数。
 
 *nCount*<br/>
 指定*lpRgnData*缓冲区的大小 (以字节为单位)。
@@ -746,7 +746,7 @@ operator HRGN() const;
 
 此运算符是支持直接使用 HRGN 对象的强制转换运算符。
 
-有关使用图形对象的详细信息, 请参阅文章 Windows SDK 中的[图形对象](/windows/desktop/gdi/graphic-objects)。
+有关使用图形对象的详细信息, 请参阅文章 Windows SDK 中的[图形对象](/windows/win32/gdi/graphic-objects)。
 
 ##  <a name="ptinregion"></a>CRgn::P tInRegion
 

@@ -14,34 +14,34 @@ helpviewer_keywords:
 - DTN_FORMAT notification [MFC]
 - DateTimePicker control [MFC]
 ms.assetid: ffbe29ab-ff80-4609-89f7-260b404439c4
-ms.openlocfilehash: ce84863744629d30248f94b94448d776177f9841
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: fead5643299aee4beace55abde0b6a6c801a324f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292882"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507880"
 ---
 # <a name="processing-notification-messages-in-date-and-time-picker-controls"></a>处理日期和时间选取器控件中的通知消息
 
-在用户与日期和时间选取器控件，该控件进行交互 (`CDateTimeCtrl`) 将通知消息发送到其父窗口，通常是视图或对话框对象。 如果您要在响应中做些什么，请处理这些消息。 例如，当用户打开的日期和时间选取器，以显示嵌入的月历控件时，发送 DTN_DROPDOWN 通知。
+当用户与日期和时间选取器控件交互时, 控件 (`CDateTimeCtrl`) 会将通知消息发送到其父窗口, 通常是视图或对话框对象。 如果您要在响应中做些什么，请处理这些消息。 例如, 当用户打开日期和时间选择器以显示嵌入的月历控件时, 将发送 DTN_DROPDOWN 通知。
 
 请使用“属性”窗口将通知处理程序添加到你希望实现的那些消息的父类。
 
-以下列表介绍由日期和时间选取器控件发送的各种通知。
+以下列表描述了日期和时间选择器控件发送的各种通知。
 
-- DTN_DROPDOWN 通知即将显示嵌入的月历控件的父级。 尚未设置 DTS_UPDOWN 样式时，才发送此通知。 此通知的详细信息，请参阅[访问嵌入月历控件](../mfc/accessing-the-embedded-month-calendar-control.md)。
+- DTN_DROPDOWN 通知父级将要显示嵌入的月历控件。 仅当未设置 DTS_UPDOWN 样式时才会发送此通知。 有关此通知的详细信息, 请参阅[访问嵌入月历控件](../mfc/accessing-the-embedded-month-calendar-control.md)。
 
-- DTN_CLOSEUP 通知即将关闭嵌入的月历控件的父级。 尚未设置 DTS_UPDOWN 样式时，才发送此通知。
+- DTN_CLOSEUP 通知父级嵌入的月历控件即将关闭。 仅当未设置 DTS_UPDOWN 样式时才会发送此通知。
 
-- DTN_DATETIMECHANGE 通知控件中发生了更改的父级。
+- DTN_DATETIMECHANGE 通知父控件中发生了更改。
 
-- DTN_FORMAT 通知父级文本所需的回调字段中显示。 此通知并回调字段的详细信息，请参阅[日期和时间选取器控件中使用回调字段](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md)。
+- DTN_FORMAT 通知父项需要在回调字段中显示文本。 有关此通知和回调字段的详细信息, 请参阅[在日期和时间选取器控件中使用回调字段](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md)。
 
-- DTN_FORMATQUERY 请求要提供将在回调字段中显示的字符串的最大大小的父级。 处理此通知允许在所有时间，减少闪烁控件的显示中正确显示输出到控件。 此通知的详细信息，请参阅[日期和时间选取器控件中使用回调字段](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md)。
+- DTN_FORMATQUERY 请求父对象以提供将在回调字段中显示的字符串的最大允许大小。 处理此通知后, 控件可以随时正确显示输出, 从而减少控件显示内的闪烁。 有关此通知的详细信息, 请参阅[在日期和时间选取器控件中使用回调字段](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md)。
 
-- DTN_USERSTRING 通知用户已完成的日期和时间选取器内容编辑的父控件。 如果已设置 DTS_APPCANPARSE 样式，将只发送此通知。
+- DTN_USERSTRING 通知父级用户已完成日期和时间选择器控件的内容编辑。 仅当设置了 DTS_APPCANPARSE 样式时才会发送此通知。
 
-- 当用户在回调字段中，DTN_WMKEYDOWN 通知父级。 处理此通知来模拟用于日期和时间选取器控件中的非回调字段的相同键盘响应。 此通知的详细信息，请参阅[在 DTP 控件支持回调字段](/windows/desktop/Controls/date-and-time-picker-controls)Windows SDK 中。
+- 当用户键入回调字段时, DTN_WMKEYDOWN 通知父级。 处理此通知, 以在日期和时间选取器控件中模拟非回调字段所支持的相同键盘响应。 有关此通知的详细信息, 请参阅在 Windows SDK 中的[DTP 控件中支持回拨字段](/windows/win32/Controls/date-and-time-picker-controls)。
 
 ## <a name="see-also"></a>请参阅
 

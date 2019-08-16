@@ -18,19 +18,19 @@ helpviewer_keywords:
 - CWindowImpl class
 - subclassing windows, ATL
 ms.assetid: 02eefd45-a0a6-4d1b-99f6-dbf627e2cc2f
-ms.openlocfilehash: f835f2869af20a1cb22595837c317eb165ef5fe9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8b633dcf4ea14e899ee00552b553476cf697689
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276882"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496189"
 ---
 # <a name="cwindowimpl-class"></a>CWindowImpl 类
 
 提供创建或子类化窗口的方法。
 
 > [!IMPORTANT]
->  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
+>  此类及其成员不能用于在 Windows 运行时中执行的应用程序。
 
 ## <a name="syntax"></a>语法
 
@@ -45,10 +45,10 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 您的新类，派生自 `CWindowImpl`。
 
 *TBase*<br/>
-您的类的基类。 默认情况下，基类是[CWindow](../../atl/reference/cwindow-class.md)。
+您的类的基类。 默认情况下, 基类为[CWindow](../../atl/reference/cwindow-class.md)。
 
 *TWinTraits*<br/>
-一个[特征类](../../atl/understanding-window-traits.md)，它定义为您的窗口样式。 默认值为 `CControlWinTraits`。
+定义窗口样式的[特征类](../../atl/understanding-window-traits.md)。 默认值为 `CControlWinTraits`。
 
 ## <a name="members"></a>成员
 
@@ -65,7 +65,7 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 |[DefWindowProc](#defwindowproc)|提供默认消息处理。|
 |[GetCurrentMessage](#getcurrentmessage)|返回当前消息。|
 |[GetWindowProc](#getwindowproc)|返回当前窗口过程。|
-|[OnFinalMessage](#onfinalmessage)|接收到最后一条消息后调用 (通常 WM_NCDESTROY)。|
+|[OnFinalMessage](#onfinalmessage)|在收到最后一条消息后调用 (通常为 WM_NCDESTROY)。|
 |[SubclassWindow](#subclasswindow)|对窗口子类化。|
 |[UnsubclassWindow](#unsubclasswindow)|还原先前子类化的窗口。|
 
@@ -73,7 +73,7 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 
 |||
 |-|-|
-|[GetWndClassInfo](#getwndclassinfo)|返回的静态实例[CWndClassInfo](../../atl/reference/cwndclassinfo-class.md)，用于管理窗口类信息。|
+|[GetWndClassInfo](#getwndclassinfo)|返回[CWndClassInfo](../../atl/reference/cwndclassinfo-class.md)的静态实例, 该实例管理窗口类信息。|
 |[WindowProc](#windowproc)|处理发送到窗口的消息。|
 
 ### <a name="data-members"></a>数据成员
@@ -84,9 +84,9 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 
 ## <a name="remarks"></a>备注
 
-可以使用`CWindowImpl`创建窗口或子类现有窗口。 `CWindowImpl`窗口过程使用消息映射来将消息定向到相应的处理程序。
+您可以使用`CWindowImpl`创建现有窗口的窗口或子类。 `CWindowImpl`窗口过程使用消息映射将消息定向到适当的处理程序。
 
-`CWindowImpl::Create` 创建基于由管理的窗口类信息的窗口[CWndClassInfo](../../atl/reference/cwndclassinfo-class.md)。 `CWindowImpl` 包含[{2&gt;declare_wnd_class&lt;2](window-class-macros.md#declare_wnd_class)宏，这意味着`CWndClassInfo`注册新的窗口类。 如果你想超类现有的窗口类，派生类从`CWindowImpl`，包括[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)宏。 在这种情况下，`CWndClassInfo` 将注册基于现有类的窗口类，但使用 `CWindowImpl::WindowProc`。 例如：
+`CWindowImpl::Create`基于由[CWndClassInfo](../../atl/reference/cwndclassinfo-class.md)管理的窗口类信息创建窗口。 `CWindowImpl`包含[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class)宏, 这意味着`CWndClassInfo`将注册新窗口类。 如果要将现有窗口类作为超类, 请从`CWindowImpl`派生类, 并包括[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)宏。 在这种情况下，`CWndClassInfo` 将注册基于现有类的窗口类，但使用 `CWindowImpl::WindowProc`。 例如:
 
 [!code-cpp[NVC_ATL_Windowing#43](../../atl/codesnippet/cpp/cwindowimpl-class_1.h)]
 
@@ -96,13 +96,13 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 `CWindowImpl` 还支持窗口子类化。 `SubclassWindow` 方法将现有的窗口附加到 `CWindowImpl` 对象并将窗口过程更改为 `CWindowImpl::WindowProc`。 `CWindowImpl` 的每个实例可以子类化其他窗口。
 
 > [!NOTE]
->  对于任何给定`CWindowImpl`对象，请调用`Create`或`SubclassWindow`。 不要对同一对象调用两种方法。
+>  对于任何给定`CWindowImpl`的对象, 请`Create`调用`SubclassWindow`或。 不要对同一对象调用两种方法。
 
-除了`CWindowImpl`，ATL 提供[CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)在另一个对象中创建包含一个窗口。
+除了之外`CWindowImpl`, ATL 还提供[CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)以创建一个包含在另一个对象中的窗口。
 
-基类析构函数 (~ `CWindowImplRoot`) 可确保窗口消失之前销毁对象。
+基类析构函数 (~ `CWindowImplRoot`) 确保在销毁对象之前窗口已消失。
 
-`CWindowImpl` 派生自`CWindowImplBaseT`，又派生自`CWindowImplRoot`，它派生`TBase`并[CMessageMap](../../atl/reference/cmessagemap-class.md)。
+`CWindowImpl`派生自`CWindowImplRoot`, 它`TBase`派生自和[CMessageMap。](../../atl/reference/cmessagemap-class.md) `CWindowImplBaseT`
 
 |有关以下内容的详细信息|查看|
 |--------------------------------|---------|
@@ -124,11 +124,11 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlwin.h
+**标头:** atlwin。h
 
-##  <a name="create"></a>  CWindowImpl::Create
+##  <a name="create"></a>CWindowImpl:: Create
 
-创建基于新的窗口类的窗口。
+基于新的窗口类创建窗口。
 
 ```
 HWND Create(
@@ -144,45 +144,45 @@ HWND Create(
 ### <a name="parameters"></a>参数
 
 *hWndParent*<br/>
-[in]父级或所有者窗口的句柄。
+中父窗口或所有者窗口的句柄。
 
 *rect*<br/>
-[in]一个[RECT](/previous-versions/dd162897\(v=vs.85\))结构，它指定窗口的位置。 `RECT`可以由指针或按引用传递。
+中指定窗口位置的[矩形](/previous-versions/dd162897\(v=vs.85\))结构。 `RECT`可以通过指针或引用传递。
 
 *szWindowName*<br/>
-[in]指定窗口的名称。 默认值为 NULL。
+中指定窗口的名称。 默认值为 NULL。
 
 *dwStyle*<br/>
-[in]窗口的样式。 此值被合并在一起对窗口特征类提供的样式。 默认值为特征提供了类样式的完全控制。 有关可能的值的列表，请参阅[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Windows SDK 中。
+中窗口的样式。 此值与窗口的特性类提供的样式组合在一起。 默认值为特征类提供完全控制样式。 有关可能值的列表, 请参阅 Windows SDK 中的[CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) 。
 
 *dwExStyle*<br/>
-[in]扩展的窗口样式。 此值被合并在一起对窗口特征类提供的样式。 默认值为特征提供了类样式的完全控制。 有关可能的值的列表，请参阅[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。
+中扩展的窗口样式。 此值与窗口的特性类提供的样式组合在一起。 默认值为特征类提供完全控制样式。 有关可能值的列表, 请参阅 Windows SDK 中的[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) 。
 
 *MenuOrID*<br/>
-[in]对于子窗口，窗口标识符。 为顶层窗口，窗口的菜单句柄。 默认值是**0U**。
+中对于子窗口, 则为窗口标识符。 对于顶级窗口, 为窗口的菜单控点。 默认值为**0u**。
 
 *lpCreateParam*<br/>
-[in]指向窗口创建数据的指针。 有关完整说明，请参阅到最后一个参数的说明[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)。
+中指向窗口创建数据的指针。 有关完整说明, 请参阅[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)的最终参数说明。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，新创建的窗口的句柄。 否则，为 NULL。
+如果成功, 则为新创建的窗口的句柄。 否则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-`Create` 如果尚未注册，第一次注册窗口类。 新创建的窗口会自动附加到`CWindowImpl`对象。
+`Create`如果窗口类尚未注册, 则首先注册它。 新创建的窗口将自动附加到`CWindowImpl`对象。
 
 > [!NOTE]
->  不要调用`Create`如果你已调用[SubclassWindow](#subclasswindow)。
+>  如果已调用`Create` [SubclassWindow](#subclasswindow), 请不要调用。
 
-若要使用的窗口类，基于现有的窗口类，派生从类`CWindowImpl`，包括[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)宏。 在保存现有窗口类的窗口过程[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)。 有关详细信息，请参阅[CWindowImpl](../../atl/reference/cwindowimpl-class.md)概述。
+若要使用基于现有窗口类的窗口类, 请从`CWindowImpl`派生类, 并包括[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)宏。 现有窗口类的窗口过程保存在[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)中。 有关详细信息, 请参阅[CWindowImpl](../../atl/reference/cwindowimpl-class.md)概述。
 
 > [!NOTE]
->  如果使用 0 的值作为*MenuOrID*参数，则必须指定为 0U （默认值） 以避免编译器错误。
+>  如果将0用作*MenuOrID*参数的值, 则必须将其指定为 0u (默认值), 以避免出现编译器错误。
 
-##  <a name="defwindowproc"></a>  CWindowImpl::DefWindowProc
+##  <a name="defwindowproc"></a>CWindowImpl::D efWindowProc
 
-调用[WindowProc](#windowproc)未处理的消息映射处理消息。
+由[WindowProc](#windowproc)调用, 用于处理不是由消息映射处理的消息。
 
 ```
 LRESULT DefWindowProc(
@@ -196,13 +196,13 @@ LRESULT DefWindowProc();
 ### <a name="parameters"></a>参数
 
 *uMsg*<br/>
-[in]发送到窗口的消息。
+中发送到窗口的消息。
 
 *wParam*<br/>
-[in]其他特定于消息的信息。
+中其他特定于消息的信息。
 
 *lParam*<br/>
-[in]其他特定于消息的信息。
+中其他特定于消息的信息。
 
 ### <a name="return-value"></a>返回值
 
@@ -210,13 +210,13 @@ LRESULT DefWindowProc();
 
 ### <a name="remarks"></a>备注
 
-默认情况下`DefWindowProc`调用[CallWindowProc](/windows/desktop/api/winuser/nf-winuser-callwindowproca) Win32 函数来发送消息给中指定的窗口过程[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)。
+默认情况下`DefWindowProc` , 调用[CallWindowProc](/windows/win32/api/winuser/nf-winuser-callwindowprocw) Win32 函数将消息信息发送到[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)中指定的窗口过程。
 
-不带任何参数的函数会自动从当前消息中检索所需的参数。
+不带参数的函数会自动从当前消息中检索所需的参数。
 
-##  <a name="getcurrentmessage"></a>  CWindowImpl::GetCurrentMessage
+##  <a name="getcurrentmessage"></a>CWindowImpl:: GetCurrentMessage
 
-返回当前消息，打包在`MSG`结构。
+返回在`MSG`结构中打包的当前消息。
 
 ```
 const MSG* GetCurrentMessage();
@@ -226,9 +226,9 @@ const MSG* GetCurrentMessage();
 
 当前消息。
 
-##  <a name="getwindowproc"></a>  CWindowImpl::GetWindowProc
+##  <a name="getwindowproc"></a>CWindowImpl:: GetWindowProc
 
-返回`WindowProc`，当前窗口过程。
+返回`WindowProc`当前窗口过程。
 
 ```
 virtual WNDPROC GetWindowProc();
@@ -236,15 +236,15 @@ virtual WNDPROC GetWindowProc();
 
 ### <a name="return-value"></a>返回值
 
-当前的窗口过程。
+当前窗口过程。
 
 ### <a name="remarks"></a>备注
 
-重写此方法以替换为您自己的窗口过程。
+重写此方法以将窗口过程替换为您自己的。
 
-##  <a name="getwndclassinfo"></a>  CWindowImpl::GetWndClassInfo
+##  <a name="getwndclassinfo"></a>CWindowImpl:: GetWndClassInfo
 
-调用[创建](#create)访问窗口类信息。
+由[Create](#create)调用以访问窗口类信息。
 
 ```
 static CWndClassInfo& GetWndClassInfo();
@@ -252,19 +252,19 @@ static CWndClassInfo& GetWndClassInfo();
 
 ### <a name="return-value"></a>返回值
 
-静态实例[CWndClassInfo](../../atl/reference/cwndclassinfo-class.md)。
+[CWndClassInfo](../../atl/reference/cwndclassinfo-class.md)的静态实例。
 
 ### <a name="remarks"></a>备注
 
-默认情况下`CWindowImpl`获取此方法通过[{2&gt;declare_wnd_class&lt;2](window-class-macros.md#declare_wnd_class)宏，它指定新的窗口类。
+默认情况下`CWindowImpl` , 通过[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class)宏获取此方法, 该宏指定一个新的窗口类。
 
-为超类现有的窗口类，派生从类`CWindowImpl`，包括[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)宏重写`GetWndClassInfo`。 有关详细信息，请参阅[CWindowImpl](../../atl/reference/cwindowimpl-class.md)概述。
+若要将现有窗口类作为超类, 请从`CWindowImpl`派生类, 并包含要重`GetWndClassInfo`写的[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)宏。 有关详细信息, 请参阅[CWindowImpl](../../atl/reference/cwindowimpl-class.md)概述。
 
-除了使用 {2&gt;declare_wnd_class&lt;2 和 DECLARE_WND_SUPERCLASS 宏，您可以重写`GetWndClassInfo`与您自己的实现。
+除了使用 DECLARE_WND_CLASS 和 DECLARE_WND_SUPERCLASS 宏以外, 还可以使用`GetWndClassInfo`自己的实现来替代。
 
 ##  <a name="m_pfnsuperwindowproc"></a>  CWindowImpl::m_pfnSuperWindowProc
 
-具体取决于窗口中，指向以下窗口过程之一。
+根据窗口的不同, 指向以下窗口过程之一。
 
 ```
 WNDPROC m_pfnSuperWindowProc;
@@ -272,17 +272,17 @@ WNDPROC m_pfnSuperWindowProc;
 
 ### <a name="remarks"></a>备注
 
-|类型的窗口|窗口过程|
+|窗口类型|窗口过程|
 |--------------------|----------------------|
-|一个窗口，基于一个新的窗口类，通过指定[{2&gt;declare_wnd_class&lt;2](window-class-macros.md#declare_wnd_class)宏。|[DefWindowProc](/windows/desktop/api/winuser/nf-winuser-defwindowproca) Win32 函数。|
-|修改现有类，通过指定的窗口类上基于窗口[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)宏。|现有窗口类的窗口过程。|
-|子类化的窗口。|子类化的窗口的原始窗口过程。|
+|基于通过[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class)宏指定的新窗口类的窗口。|[DefWindowProc](/windows/win32/api/winuser/nf-winuser-defwindowprocw) Win32 函数。|
+|基于窗口类的窗口, 用于修改通过[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)宏指定的现有类。|现有窗口类的窗口过程。|
+|子类窗口。|子类窗口的原始窗口过程。|
 
-[CWindowImpl::DefWindowProc](#defwindowproc)发送消息到窗口过程中保存信息`m_pfnSuperWindowProc`。
+[CWindowImpl::D efwindowproc](#defwindowproc)将消息信息发送到保存在中`m_pfnSuperWindowProc`的窗口过程。
 
-##  <a name="onfinalmessage"></a>  CWindowImpl::OnFinalMessage
+##  <a name="onfinalmessage"></a>CWindowImpl:: OnFinalMessage
 
-接收最后一条消息 (通常 WM_NCDESTROY) 之后调用。
+在收到最后一条消息后调用 (通常为 WM_NCDESTROY)。
 
 ```
 virtual void OnFinalMessage(HWND hWnd);
@@ -291,15 +291,15 @@ virtual void OnFinalMessage(HWND hWnd);
 ### <a name="parameters"></a>参数
 
 *hWnd*<br/>
-[in]正在销毁窗口的句柄。
+中要销毁的窗口的句柄。
 
 ### <a name="remarks"></a>备注
 
-默认实现`OnFinalMessage`不执行任何操作，但您可以覆盖此函数可销毁一个窗口之前处理清理。 如果你想要自动删除您在窗口析构时的对象，则可以调用**删除此;** 中此函数。
+的`OnFinalMessage`默认实现不执行任何操作, 但你可以重写此函数以在销毁窗口之前处理清理。 如果要在销毁窗口后自动删除对象, 则可以在此函数中调用**delete this** 。
 
-##  <a name="subclasswindow"></a>  CWindowImpl::SubclassWindow
+##  <a name="subclasswindow"></a>CWindowImpl:: SubclassWindow
 
-窗口由的子类*hWnd*并将其附加到`CWindowImpl`对象。
+子类由*hWnd*标识并将其附加到`CWindowImpl`对象。
 
 ```
 BOOL SubclassWindow(HWND hWnd);
@@ -308,22 +308,22 @@ BOOL SubclassWindow(HWND hWnd);
 ### <a name="parameters"></a>参数
 
 *hWnd*<br/>
-[in]正在创建子类的窗口句柄。
+中要进行子类处理的窗口的句柄。
 
 ### <a name="return-value"></a>返回值
 
-如果对窗口成功子类化; 则为 TRUE否则为 FALSE。
+如果窗口成功进行了子类化, 则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-子类化的窗口现在使用[CWindowImpl::WindowProc](#windowproc)。 在保存原始窗口过程[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)。
+子类窗口现在使用[CWindowImpl:: WindowProc](#windowproc)。 原始窗口过程保存在[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)中。
 
 > [!NOTE]
->  不要调用`SubclassWindow`如果你已调用[创建](#create)。
+>  如果已调用`SubclassWindow` [Create](#create), 请不要调用。
 
-##  <a name="unsubclasswindow"></a>  CWindowImpl::UnsubclassWindow
+##  <a name="unsubclasswindow"></a>CWindowImpl:: UnsubclassWindow
 
-从子类化的窗口中分离`CWindowImpl`对象，并还原原始窗口过程，在保存[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)。
+从`CWindowImpl`对象分离子类窗口, 并还原原始窗口过程, 保存在[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)中。
 
 ```
 HWND UnsubclassWindow();
@@ -331,11 +331,11 @@ HWND UnsubclassWindow();
 
 ### <a name="return-value"></a>返回值
 
-先前子类化窗口的句柄。
+之前子类的窗口的句柄。
 
-##  <a name="windowproc"></a>  CWindowImpl::WindowProc
+##  <a name="windowproc"></a>CWindowImpl:: WindowProc
 
-此静态函数实现的窗口过程。
+此静态函数实现窗口过程。
 
 ```
 static LRESULT CALLBACK WindowProc(
@@ -348,16 +348,16 @@ static LRESULT CALLBACK WindowProc(
 ### <a name="parameters"></a>参数
 
 *hWnd*<br/>
-[in]窗口的句柄。
+中窗口的句柄。
 
 *uMsg*<br/>
-[in]发送到窗口的消息。
+中发送到窗口的消息。
 
 *wParam*<br/>
-[in]其他特定于消息的信息。
+中其他特定于消息的信息。
 
 *lParam*<br/>
-[in]其他特定于消息的信息。
+中其他特定于消息的信息。
 
 ### <a name="return-value"></a>返回值
 
@@ -365,15 +365,15 @@ static LRESULT CALLBACK WindowProc(
 
 ### <a name="remarks"></a>备注
 
-`WindowProc` 使用默认消息映射 (使用声明[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)) 若要将消息定向到相应的处理程序。 如果有必要，请`WindowProc`调用[DefWindowProc](#defwindowproc)进行更多的消息处理。 如果未处理最后一条消息，`WindowProc`执行以下操作：
+`WindowProc`使用默认消息映射 (用[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)声明) 将消息定向到适当的处理程序。 如有必要`WindowProc` , 调用[DefWindowProc](#defwindowproc)进行其他消息处理。 如果未处理最后一条消息, `WindowProc`将执行以下操作:
 
-- 执行 unsubclassing unsubclassed 窗口时。
+- 如果窗口为 unsubclassed, 则执行 unsubclassing。
 
 - 清除`m_hWnd`。
 
-- 调用[OnFinalMessage](#onfinalmessage)窗口被破坏之前。
+- 在销毁窗口之前调用[OnFinalMessage](#onfinalmessage) 。
 
-您可以重写`WindowProc`提供不同的机制，用于处理消息。
+可以重写`WindowProc`以提供不同的消息处理机制。
 
 ## <a name="see-also"></a>请参阅
 

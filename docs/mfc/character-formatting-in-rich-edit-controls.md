@@ -6,24 +6,24 @@ helpviewer_keywords:
 - rich edit controls [MFC], character formatting in
 - CRichEditCtrl class [MFC], character formatting in
 ms.assetid: c80f4305-75ad-45f9-8d17-d83d0fe79be5
-ms.openlocfilehash: a7467f9cd6a14dc6dfc2c03b6eb35f71802454fb
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 4ac996c1cb018a29137e37d9603016dc1c151c58
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344295"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508976"
 ---
 # <a name="character-formatting-in-rich-edit-controls"></a>Rich Edit 控件中的字符格式设置
 
-可以使用格式文本编辑控件的成员函数 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) 个字符的格式以及如何检索格式设置信息。 对于字符，可以指定字体、 大小、 颜色和效果如粗体、 斜体和受保护。
+您可以使用 rich edit 控件 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) 的成员函数设置字符格式, 并检索格式设置信息。 对于字符, 可以指定字体、大小、颜色和效果 (如粗体、斜体和受保护)。
 
-您可以将应用使用字符格式设置[SetSelectionCharFormat](../mfc/reference/cricheditctrl-class.md#setselectioncharformat)并[SetWordCharFormat](../mfc/reference/cricheditctrl-class.md#setwordcharformat)成员函数。 若要确定当前字符格式设置为所选文本，请使用[GetSelectionCharFormat](../mfc/reference/cricheditctrl-class.md#getselectioncharformat)成员函数。 [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat)结构使用与这些成员函数来指定字符的属性。 重要成员之一**CHARFORMAT**是**dwMask**。 在中`SetSelectionCharFormat`并`SetWordCharFormat`， **dwMask**指定字符的属性将设置此函数调用。 `GetSelectionCharFormat` 报告所选内容; 中的第一个字符的属性**dwMask**指定选择中一致的属性。
+可以通过使用[SetSelectionCharFormat](../mfc/reference/cricheditctrl-class.md#setselectioncharformat)和[SetWordCharFormat](../mfc/reference/cricheditctrl-class.md#setwordcharformat)成员函数应用字符格式设置。 若要确定所选文本的当前字符格式设置, 请使用[GetSelectionCharFormat](../mfc/reference/cricheditctrl-class.md#getselectioncharformat)成员函数。 [CHARFORMAT](/windows/win32/api/richedit/ns-richedit-_charformat)结构与这些成员函数结合使用, 以指定字符特性。 **CHARFORMAT**的一个重要成员是**dwMask**。 在`SetSelectionCharFormat`和`SetWordCharFormat`中, **dwMask**指定此函数调用将设置哪些字符特性。 `GetSelectionCharFormat`报告所选内容中第一个字符的属性;**dwMask**指定在整个选定内容中一致的属性。
 
-您可以还获取和设置的"默认字符格式设置，"这是应用于任何随后插入字符的格式。 例如，如果应用程序设置的默认字符格式设置为粗体，且用户随后键入一个字符，该字符为粗体。 若要获取和设置默认字符格式设置，请使用[GetDefaultCharFormat](../mfc/reference/cricheditctrl-class.md#getdefaultcharformat)并[SetDefaultCharFormat](../mfc/reference/cricheditctrl-class.md#setdefaultcharformat)成员函数。
+还可以获取和设置 "默认字符格式设置", 这是应用于任何后续插入字符的格式。 例如, 如果应用程序将默认字符格式设置为粗体, 然后用户键入一个字符, 则该字符为粗体。 若要获取和设置默认字符格式设置, 请使用[GetDefaultCharFormat](../mfc/reference/cricheditctrl-class.md#getdefaultcharformat)和[SetDefaultCharFormat](../mfc/reference/cricheditctrl-class.md#setdefaultcharformat)成员函数。
 
-"受保护"字符属性不会更改文本的外观。 如果用户试图修改受保护的文本，文本编辑控件将发送其父窗口**EN_PROTECTED**通知消息，从而允许父窗口，以允许或阻止该更改。 若要接收此通知消息，必须启用使用它[SetEventMask](../mfc/reference/cricheditctrl-class.md#seteventmask)成员函数。 有关事件掩码的详细信息，请参阅[来自格式文本编辑控件的通知](../mfc/notifications-from-a-rich-edit-control.md)，本主题中更高版本。
+"Protected" 字符属性不会更改文本的外观。 如果用户尝试修改受保护的文本, 则丰富的编辑控件将向其父窗口发送**EN_PROTECTED**通知消息, 允许父窗口允许或阻止更改。 若要接收此通知消息, 必须使用[SetEventMask](../mfc/reference/cricheditctrl-class.md#seteventmask)成员函数来启用它。 有关事件掩码的详细信息, 请参阅本主题后面的[从 Rich Edit 控件发出的通知](../mfc/notifications-from-a-rich-edit-control.md)。
 
-前景色是一种字符属性，但背景色是 rich edit 控件的属性。 若要设置背景颜色，请使用[SetBackgroundColor](../mfc/reference/cricheditctrl-class.md#setbackgroundcolor)成员函数。
+前景颜色是字符属性, 但背景色是富编辑控件的属性。 若要设置背景色, 请使用[SetBackgroundColor](../mfc/reference/cricheditctrl-class.md#setbackgroundcolor)成员函数。
 
 ## <a name="see-also"></a>请参阅
 

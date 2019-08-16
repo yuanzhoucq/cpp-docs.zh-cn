@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlServiceModuleT class
 ms.assetid: 8fc753ce-4a50-402b-9b4a-0a4ce5dd496c
-ms.openlocfilehash: 095d909fefe0053b742368f260cf61937c2f5426
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 2854d0902700b268383eca094bed35843ea73272
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915868"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497735"
 ---
 # <a name="catlservicemodulet-class"></a>CAtlServiceModuleT 类
 
@@ -244,7 +244,7 @@ void __cdecl LogEvent(LPCTSTR pszFormat, ...) throw();
 
 ### <a name="remarks"></a>备注
 
-此方法使用函数[ReportEvent](/windows/desktop/api/winbase/nf-winbase-reporteventa)将详细信息写入事件日志。 如果没有正在运行的服务, 则会将字符串发送到控制台。
+此方法使用函数[ReportEvent](/windows/win32/api/winbase/nf-winbase-reporteventw)将详细信息写入事件日志。 如果没有正在运行的服务, 则会将字符串发送到控制台。
 
 ##  <a name="m_bservice"></a>  CAtlServiceModuleT::m_bService
 
@@ -280,7 +280,7 @@ SERVICE_STATUS_HANDLE m_hServiceStatus;
 
 ### <a name="remarks"></a>备注
 
-[SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-service_status)结构包含有关服务的信息。
+[SERVICE_STATUS](/windows/win32/api/winsvc/ns-winsvc-service_status)结构包含有关服务的信息。
 
 ##  <a name="m_status"></a>CAtlServiceModuleT:: m_status
 
@@ -292,7 +292,7 @@ SERVICE_STATUS m_status;
 
 ### <a name="remarks"></a>备注
 
-[SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-service_status)结构包含有关服务的信息。
+[SERVICE_STATUS](/windows/win32/api/winsvc/ns-winsvc-service_status)结构包含有关服务的信息。
 
 ##  <a name="m_szservicename"></a>  CAtlServiceModuleT::m_szServiceName
 
@@ -432,7 +432,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 ### <a name="parameters"></a>参数
 
 *nShowCmd*<br/>
-指定窗口的显示方式。 此参数可以是[WinMain](/windows/desktop/api/winbase/nf-winbase-winmain)节中讨论的值之一。 默认值为 SW_HIDE。
+指定窗口的显示方式。 此参数可以是[WinMain](/windows/win32/api/winbase/nf-winbase-winmain)节中讨论的值之一。 默认值为 SW_HIDE。
 
 ### <a name="return-value"></a>返回值
 
@@ -475,7 +475,7 @@ void SetServiceStatus(DWORD dwState) throw();
 ### <a name="parameters"></a>参数
 
 *dwState*<br/>
-新状态。 有关可能的值, 请参阅[SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) 。
+新状态。 有关可能的值, 请参阅[SetServiceStatus](/windows/win32/api/winsvc/nf-winsvc-setservicestatus) 。
 
 ### <a name="remarks"></a>备注
 
@@ -492,7 +492,7 @@ HRESULT Start(int nShowCmd) throw();
 ### <a name="parameters"></a>参数
 
 *nShowCmd*<br/>
-指定窗口的显示方式。 此参数可以是[WinMain](/windows/desktop/api/winbase/nf-winbase-winmain)节中讨论的值之一。
+指定窗口的显示方式。 此参数可以是[WinMain](/windows/win32/api/winbase/nf-winbase-winmain)节中讨论的值之一。
 
 ### <a name="return-value"></a>返回值
 
@@ -553,7 +553,7 @@ int WinMain(int nShowCmd) throw();
 ### <a name="parameters"></a>参数
 
 *nShowCmd*<br/>
-指定窗口的显示方式。 此参数可以是[WinMain](/windows/desktop/api/winbase/nf-winbase-winmain)节中讨论的值之一。
+指定窗口的显示方式。 此参数可以是[WinMain](/windows/win32/api/winbase/nf-winbase-winmain)节中讨论的值之一。
 
 ### <a name="return-value"></a>返回值
 

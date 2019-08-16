@@ -1,21 +1,21 @@
 ---
-title: max_is (C++ COM 属性)
+title: max_is (C++ COM 特性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.max_is
 helpviewer_keywords:
 - max_is attribute
 ms.assetid: 7c851f5c-6649-4d77-a792-247c37d8f560
-ms.openlocfilehash: dca2a3dc18aa3c3e75bbb682ed0b1b90adcd9236
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2e6db997891817620c1b2c1f70cb310818dd346
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409273"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514431"
 ---
-# <a name="maxis"></a>max_is
+# <a name="max_is"></a>max_is
 
-指定有效的数组索引的最大值。
+指定有效数组索引的最大值。
 
 ## <a name="syntax"></a>语法
 
@@ -25,12 +25,12 @@ ms.locfileid: "62409273"
 
 ### <a name="parameters"></a>参数
 
-*expression*<br/>
-一个或多个 C 语言表达式。 允许使用空参数槽。
+expression<br/>
+一个或多个 C 语言表达式。 允许空参数槽。
 
 ## <a name="remarks"></a>备注
 
-**Max_is** C++属性具有相同的功能[max_is](/windows/desktop/Midl/max-is) MIDL 特性。
+**Max_is** C++特性具有与[max_is](/windows/win32/Midl/max-is) MIDL 特性相同的功能。
 
 ## <a name="requirements"></a>要求
 
@@ -38,16 +38,16 @@ ms.locfileid: "62409273"
 
 |||
 |-|-|
-|**适用对象**|中的字段**struct**或**union**，接口参数，接口方法|
-|**可重复**|否|
-|**必需的特性**|None|
+|**适用于**|**结构**或**联合**中的字段, 接口参数, 接口方法|
+|**可重复**|No|
+|**必需的特性**|无|
 |**无效的特性**|**size_is**|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
 ## <a name="example"></a>示例
 
-请参阅[first_is](first-is.md)以举例说明如何指定数组的一部分。
+有关如何指定数组的部分的示例, 请参阅[first_is](first-is.md) 。
 
 ## <a name="see-also"></a>请参阅
 

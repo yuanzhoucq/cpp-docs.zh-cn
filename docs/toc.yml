@@ -1587,7 +1587,7 @@
     - name: 演练：创建 Windows 桌面应用程序
       href: windows/walkthrough-creating-windows-desktop-applications-cpp.md
     - name: Windows 桌面向导
-      href: windows/win32-application-wizard.md
+      href: windows/windows-desktop-wizard.md
     - name: 活动模板库 (ATL)
       href: atl/
     - name: Microsoft 基础类 (MFC)
@@ -1607,10 +1607,6 @@
               items:
                 - name: 日期和时间概述
                   href: atl-mfc-shared/date-and-time.md
-                - name: 日期和时间：自动化支持
-                  href: atl-mfc-shared/date-and-time-automation-support.md
-                - name: 日期和时间：数据库支持
-                  href: atl-mfc-shared/date-and-time-database-support.md
                 - name: 日期类型
                   href: atl-mfc-shared/date-type.md
             - name: 字符串 (ATL-MFC)
@@ -2766,10 +2762,10 @@
           items:
             - name: 同步（lock 类）
               href: dotnet/synchronization-lock-class.md
-            - name: lock
+            - name: 锁 (lock)
               expanded: false
               items:
-                - name: lock
+                - name: 锁 (lock)
                   href: dotnet/lock.md
                 - name: lock 类
                   href: dotnet/lock-class.md
@@ -2888,6 +2884,8 @@
 - name: 参考
   expanded: false
   items:
+    - name: C/C ++ 语言和标准库
+      href: cpp/c-cpp-language-and-standard-libraries.md
     - name: 语言参考
       expanded: false
       items:
@@ -4503,7 +4501,7 @@
                       href: cpp/selectany.md
                     - name: spectre
                       href: cpp/spectre.md
-                    - name: thread
+                    - name: 线程 (thread)
                       href: cpp/thread.md
                     - name: uuid
                       href: cpp/uuid-cpp.md
@@ -5990,7 +5988,7 @@
               href: extensions/delegate-cpp-component-extensions.md
             - name: 枚举类
               href: extensions/enum-class-cpp-component-extensions.md
-            - name: Event — 事件
+            - name: 事件
               href: extensions/event-cpp-component-extensions.md
             - name: 异常处理
               href: extensions/exception-handling-cpp-component-extensions.md
@@ -6179,7 +6177,7 @@
                   href: windows/attributes/db-source.md
                 - name: db_table
                   href: windows/attributes/db-table.md
-                - name: default
+                - name: 默认值
                   href: windows/attributes/default-cpp.md
                 - name: defaultbind
                   href: windows/attributes/defaultbind.md
@@ -6271,7 +6269,7 @@
                   href: windows/attributes/noncreatable.md
                 - name: nonextensible
                   href: windows/attributes/nonextensible.md
-                - name: object
+                - name: 对象 (object)
                   href: windows/attributes/object-cpp.md
                 - name: odl
                   href: windows/attributes/odl.md

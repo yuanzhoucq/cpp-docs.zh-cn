@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: 5c7204f5207b85e4b9ada4b68e9feedaf83deccd
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 2d00a7216778f4a9a40b9d503bce7d26982669e0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916219"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506069"
 ---
 # <a name="chtmlview-class"></a>CHtmlView 类
 
@@ -259,14 +259,14 @@ class CHtmlView : public CFormView
 |[CHtmlView::OnBeforeNavigate2](#onbeforenavigate2)|在给定 WebBrowser 中发生导航之前调用（在窗口或框架集元素上）|
 |[CHtmlView::OnCommandStateChange](#oncommandstatechange)|调用以通知应用程序 Web 浏览器命令的启用状态已更改。|
 |[CHtmlView::OnDocumentComplete](#ondocumentcomplete)|调用以通知应用程序文档已到达 READYSTATE_COMPLETE 状态。|
-|[CHtmlView::OnDocWindowActivate](#ondocwindowactivate)|从 [IOleInPlaceActiveObject::OnDocWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate)的 Internet Explorer 或 MSHTML 实现调用，该操作将在激活或停用容器文件窗口时通知活动的就地对象。|
+|[CHtmlView::OnDocWindowActivate](#ondocwindowactivate)|从 [IOleInPlaceActiveObject::OnDocWindowActivate](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate)的 Internet Explorer 或 MSHTML 实现调用，该操作将在激活或停用容器文件窗口时通知活动的就地对象。|
 |[CHtmlView::OnDownloadBegin](#ondownloadbegin)|调用以通知应用程序将开始导航操作|
 |[CHtmlView::OnDownloadComplete](#ondownloadcomplete)|在导航操作完成、暂停或失败时调用。|
 |[CHtmlView::OnEnableModeless](#onenablemodeless)|调用以在容器创建或销毁模式对话框时启用或禁用无模式对话框。|
 |[CHtmlView::OnFilterDataObject](#onfilterdataobject)|由 Internet Explorer 或 MSHTML 对主机调用，以允许主机替换 Internet Explorer 或 MSHTML 的数据对象。|
-|[CHtmlView::OnFrameWindowActivate](#onframewindowactivate)|从 [IOleInPlaceActiveObject::OnFrameWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate) 调用以在容器的顶级框架窗口被激活或停用时通知对象。|
+|[CHtmlView::OnFrameWindowActivate](#onframewindowactivate)|从 [IOleInPlaceActiveObject::OnFrameWindowActivate](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate) 调用以在容器的顶级框架窗口被激活或停用时通知对象。|
 |[CHtmlView::OnFullScreen](#onfullscreen)|当 FullScreen 属性已更改时调用。|
-|[CHtmlView::OnGetDropTarget](#ongetdroptarget)|当用作放置目标时由 Internet Explorer 或 MSHTML 调用以允许主机提供替代的 [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget)。|
+|[CHtmlView::OnGetDropTarget](#ongetdroptarget)|当用作放置目标时由 Internet Explorer 或 MSHTML 调用以允许主机提供替代的 [IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget)。|
 |[CHtmlView::OnGetExternal](#ongetexternal)|由 Internet Explorer 或 MSHTML 调用以获取主机的 `IDispatch` 接口。|
 |[CHtmlView::OnGetHostInfo](#ongethostinfo)|检索 Internet Explorer 或 MSHTML 主机的用户界面功能。|
 |[CHtmlView::OnGetOptionKeyPath](#ongetoptionkeypath)|返回 Internet Explorer 或 MSHTML 在其下存储用户首选项的注册表项。|
@@ -278,7 +278,7 @@ class CHtmlView : public CFormView
 |[CHtmlView::OnProgressChange](#onprogresschange)|调用以通知应用程序下载操作的进度已更新。|
 |[CHtmlView::OnPropertyChange](#onpropertychange)|调用以通知应用程序 [PutProperty](#putproperty) 方法已更改一个属性的值。|
 |[CHtmlView::OnQuit](#onquit)|调用以通知应用程序 Internet Explorer 应用程序已准备退出。 （仅适用于 Internet Explorer）|
-|[CHtmlView::OnResizeBorder](#onresizeborder)|从 [IOleInPlaceActiveObject::ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder)的 Internet Explorer 或 MSHTML 实现调用，该操作警告对象需要重新调整其边框空间的大小。|
+|[CHtmlView::OnResizeBorder](#onresizeborder)|从 [IOleInPlaceActiveObject::ResizeBorder](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder)的 Internet Explorer 或 MSHTML 实现调用，该操作警告对象需要重新调整其边框空间的大小。|
 |[CHtmlView::OnShowContextMenu](#onshowcontextmenu)|当 Internet Explorer 或 MSHTML 将要显示其上下文菜单时，从其调用。|
 |[CHtmlView::OnShowUI](#onshowui)|在 Internet Explorer 或 MSHTML 显示其菜单和工具栏之前调用。|
 |[CHtmlView::OnStatusBar](#onstatusbar)|当 StatusBar 属性已更改时调用。|
@@ -286,7 +286,7 @@ class CHtmlView : public CFormView
 |[CHtmlView::OnTheaterMode](#ontheatermode)|当 TheaterMode 属性已更改时调用。|
 |[CHtmlView::OnTitleChange](#ontitlechange)|调用以通知应用程序 WebBrowser 控件中的文档的标题是否变为可用或是否更改。|
 |[CHtmlView::OnToolBar](#ontoolbar)|当 ToolBar 属性已更改时调用。|
-|[CHtmlView::OnTranslateAccelerator](#ontranslateaccelerator)|当调用 [IOleInPlaceActiveObject::TranslateAccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) 或 [IOleControlSite::TranslateAccelerator](/windows/desktop/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator) 以处理来自容器消息队列的菜单快捷键消息时由 Internet Explorer 或 MSHTML 调用。|
+|[CHtmlView::OnTranslateAccelerator](#ontranslateaccelerator)|当调用 [IOleInPlaceActiveObject::TranslateAccelerator](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) 或 [IOleControlSite::TranslateAccelerator](/windows/win32/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator) 以处理来自容器消息队列的菜单快捷键消息时由 Internet Explorer 或 MSHTML 调用。|
 |[CHtmlView::OnTranslateUrl](#ontranslateurl)|由 Internet Explorer 或 MSHTML 调用以允许主机有机会修改要加载的 URL。|
 |[CHtmlView::OnUpdateUI](#onupdateui)|通知主机命令状态已更改。|
 |[CHtmlView::OnVisible](#onvisible)|当应该显示/隐藏 WebBrowser 控件的窗口时调用。|
@@ -459,11 +459,11 @@ HRESULT ExecFormsCommand(
 
 ### <a name="return-value"></a>返回值
 
-标准的 HRESULT 值。 有关可能值的完整列表, 请参阅 Windows SDK 中的[IOleCommandTarget:: Exec](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-exec) 。
+标准的 HRESULT 值。 有关可能值的完整列表, 请参阅 Windows SDK 中的[IOleCommandTarget:: Exec](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-exec) 。
 
 ### <a name="remarks"></a>备注
 
-`ExecFormsCommand`实现[IOleCommandTarget:: Exec](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-exec)方法的行为。
+`ExecFormsCommand`实现[IOleCommandTarget:: Exec](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-exec)方法的行为。
 
 ##  <a name="execwb"></a>  CHtmlView::ExecWB
 
@@ -1092,7 +1092,7 @@ void Navigate2(
 ### <a name="parameters"></a>参数
 
 *pIDL*<br/>
-指向[ITEMIDLIST](/windows/desktop/api/shtypes/ns-shtypes-itemidlist)结构的指针。
+指向[ITEMIDLIST](/windows/win32/api/shtypes/ns-shtypes-itemidlist)结构的指针。
 
 *dwFlags*<br/>
 变量的标志, 它指定是否将资源添加到历史记录列表中、是从缓存中读取还是写入, 以及是否在新窗口中显示资源。 变量可以是[BrowserNavConstants](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768360\(v=vs.85\))枚举定义的值的组合。
@@ -1271,7 +1271,7 @@ virtual HRESULT OnFilterDataObject(
 ### <a name="parameters"></a>参数
 
 *pDataObject*<br/>
-Internet Explorer 或 MSHTML 提供的[IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject)接口的地址。
+Internet Explorer 或 MSHTML 提供的[IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject)接口的地址。
 
 *ppDataObject*<br/>
 接收主机提供的`IDataObject`接口指针的地址。 即使方法失败, 也应始终将此参数的内容初始化为 NULL。
@@ -1286,7 +1286,7 @@ Internet Explorer 或 MSHTML 提供的[IDataObject](/windows/desktop/api/objidl/
 
 ##  <a name="onframewindowactivate"></a>CHtmlView:: Onframewindowactivate 调用
 
-从 [IOleInPlaceActiveObject::OnFrameWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate) 调用以在容器的顶级框架窗口被激活或停用时通知对象。
+从 [IOleInPlaceActiveObject::OnFrameWindowActivate](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate) 调用以在容器的顶级框架窗口被激活或停用时通知对象。
 
 ```
 virtual HRESULT OnFrameWindowActivate(BOOL fActivate);
@@ -1331,7 +1331,7 @@ virtual HRESULT OnGetDropTarget(
 ### <a name="parameters"></a>参数
 
 *pDropTarget*<br/>
-[IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget)要使用的 Internet Explorer 或 MSHTML 建议使用。
+[IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget)要使用的 Internet Explorer 或 MSHTML 建议使用。
 
 *ppDropTarget*<br/>
 的地址`IDropTarget` , 接收主机要提供的接口指针。 `IDropTarget`
@@ -1399,7 +1399,7 @@ virtual HRESULT OnGetOptionKeyPath(
 ### <a name="parameters"></a>参数
 
 *pchKey*<br/>
-的地址, 接收注册表子项字符串, 其中主机存储其默认选项。 `LPOLESTR` 此子项将位于 HKEY_CURRENT_USER 项下。 使用[CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc)分配此内存。 调用应用程序负责使用[CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree)释放此内存。 即使方法失败, 也应始终将此参数初始化为 NULL。
+的地址, 接收注册表子项字符串, 其中主机存储其默认选项。 `LPOLESTR` 此子项将位于 HKEY_CURRENT_USER 项下。 使用[CoTaskMemAlloc](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemalloc)分配此内存。 调用应用程序负责使用[CoTaskMemFree](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree)释放此内存。 即使方法失败, 也应始终将此参数初始化为 NULL。
 
 *dwReserved*<br/>
 留待将来使用。 当前未使用。
@@ -1559,7 +1559,7 @@ virtual void OnQuit();
 
 ##  <a name="onresizeborder"></a>CHtmlView:: OnResizeBorder
 
-从 [IOleInPlaceActiveObject::ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder)的 Internet Explorer 或 MSHTML 实现调用，该操作警告对象需要重新调整其边框空间的大小。
+从 [IOleInPlaceActiveObject::ResizeBorder](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder)的 Internet Explorer 或 MSHTML 实现调用，该操作警告对象需要重新调整其边框空间的大小。
 
 ```
 virtual HRESULT OnResizeBorder(
@@ -1577,7 +1577,7 @@ virtual HRESULT OnResizeBorder(
 一个指针, 指向其边框已更改的框架或文档窗口对象的接口。
 
 *fFrameWindow*<br/>
-如果框架窗口正在调用[IOleInPlaceActiveObject:: ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder), 则为 TRUE; 否则为 FALSE。
+如果框架窗口正在调用[IOleInPlaceActiveObject:: ResizeBorder](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder), 则为 TRUE; 否则为 FALSE。
 
 ### <a name="return-value"></a>返回值
 
@@ -1608,7 +1608,7 @@ virtual HRESULT OnShowContextMenu(
 菜单的屏幕坐标。
 
 *pcmdtReserved*<br/>
-[IOleCommandTarget](/windows/desktop/api/docobj/nn-docobj-iolecommandtarget)接口, 用于查询命令状态并在此对象上执行命令。
+[IOleCommandTarget](/windows/win32/api/docobj/nn-docobj-iolecommandtarget)接口, 用于查询命令状态并在此对象上执行命令。
 
 *pdispReserved*<br/>
 对象的 IDispatch 接口, 以屏幕坐标表示。 这允许宿主区分特定对象, 以提供更具体的上下文。
@@ -1640,16 +1640,16 @@ virtual HRESULT OnShowUI(
 留待将来使用。
 
 *pActiveObject*<br/>
-当前处于活动状态的对象的[IOleInPlaceActiveObject](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceactiveobject)接口。
+当前处于活动状态的对象的[IOleInPlaceActiveObject](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceactiveobject)接口。
 
 *pCommandTarget*<br/>
-对象的[IOleCommandTarget](/windows/desktop/api/docobj/nn-docobj-iolecommandtarget)接口。
+对象的[IOleCommandTarget](/windows/win32/api/docobj/nn-docobj-iolecommandtarget)接口。
 
 *pFrame*<br/>
-对象的[IOleInPlaceFrame](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceframe)接口。 这对于菜单和工具栏是必需的。
+对象的[IOleInPlaceFrame](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceframe)接口。 这对于菜单和工具栏是必需的。
 
 *pDoc*<br/>
-对象的[IOleInPlaceUIWindow](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceuiwindow)接口。 这对于工具栏是必需的。
+对象的[IOleInPlaceUIWindow](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceuiwindow)接口。 这对于工具栏是必需的。
 
 ### <a name="return-value"></a>返回值
 
@@ -1730,7 +1730,7 @@ virtual void OnToolBar(BOOL bToolBar);
 
 ##  <a name="ontranslateaccelerator"></a>CHtmlView:: OnTranslateAccelerator
 
-当调用 [IOleInPlaceActiveObject::TranslateAccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) 或 [IOleControlSite::TranslateAccelerator](/windows/desktop/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator) 以处理来自容器消息队列的菜单快捷键消息时由 Internet Explorer 或 MSHTML 调用。
+当调用 [IOleInPlaceActiveObject::TranslateAccelerator](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) 或 [IOleControlSite::TranslateAccelerator](/windows/win32/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator) 以处理来自容器消息队列的菜单快捷键消息时由 Internet Explorer 或 MSHTML 调用。
 
 ```
 virtual HRESULT OnTranslateAccelerator(
@@ -1902,11 +1902,11 @@ HRESULT QueryFormsCommand(
 
 ### <a name="return-value"></a>返回值
 
-标准的 HRESULT 值。 有关可能值的完整列表, 请参阅 Windows SDK 中的[IOleCommandTarget:: QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) 。
+标准的 HRESULT 值。 有关可能值的完整列表, 请参阅 Windows SDK 中的[IOleCommandTarget:: QueryStatus](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-querystatus) 。
 
 ### <a name="remarks"></a>备注
 
-`QueryFormsCommand`实现[IOleCommandTarget:: QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus)方法的行为。
+`QueryFormsCommand`实现[IOleCommandTarget:: QueryStatus](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-querystatus)方法的行为。
 
 ##  <a name="querystatuswb"></a>CHtmlView:: QueryStatusWB
 
@@ -1919,15 +1919,15 @@ OLECMDF QueryStatusWB(OLECMDID cmdID) const;
 ### <a name="parameters"></a>参数
 
 *cmdID*<br/>
-调用方需要其状态信息的命令的[OLECMDID](/windows/desktop/api/docobj/ne-docobj-olecmdid)值。
+调用方需要其状态信息的命令的[OLECMDID](/windows/win32/api/docobj/ne-docobj-olecmdid)值。
 
 ### <a name="return-value"></a>返回值
 
-接收命令状态的[OLECMDF](/windows/desktop/api/docobj/ne-docobj-olecmdf)值的地址。
+接收命令状态的[OLECMDF](/windows/win32/api/docobj/ne-docobj-olecmdf)值的地址。
 
 ### <a name="remarks"></a>备注
 
-`QueryStatusWB`实现[IOleCommandTarget:: QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus)方法的行为。
+`QueryStatusWB`实现[IOleCommandTarget:: QueryStatus](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-querystatus)方法的行为。
 
 适用于 Internet Explorer 和 WebBrowser。
 
@@ -2236,4 +2236,4 @@ void Stop();
 [MFC 示例 MFCIE](../../overview/visual-cpp-samples.md)<br/>
 [CFormView 类](../../mfc/reference/cformview-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
-[IWebBrowser2](/windows/desktop/api/exdisp/nn-exdisp-iwebbrowser2)
+[IWebBrowser2](/windows/win32/api/exdisp/nn-exdisp-iwebbrowser2)

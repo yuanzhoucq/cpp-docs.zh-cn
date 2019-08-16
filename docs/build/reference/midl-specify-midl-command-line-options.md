@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MIDL linker option
 - MIDL, command line options
 ms.assetid: 22dc259e-b34c-4ed3-a380-4beb734482c1
-ms.openlocfilehash: 584958ac51bdc491ad1bdd16117ecaad6e000ec7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca172428943d2446490eeb10741966f5e8c9ea85
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321067"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492724"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL（指定 MIDL 命令行选项）
 
@@ -24,22 +24,22 @@ ms.locfileid: "62321067"
 
 ## <a name="syntax"></a>语法
 
-> **/MIDL:\@**<em>file</em>
+> **/MIDL:\@** <em>文件</em>
 
 ## <a name="arguments"></a>自变量
 
 文件<br/>
-包含文件的名称[MIDL 命令行选项](/windows/desktop/Midl/general-midl-command-line-syntax)。
+包含[MIDL 命令行选项](/windows/win32/Midl/general-midl-command-line-syntax)的文件的名称。
 
 ## <a name="remarks"></a>备注
 
-必须给定的 IDL 文件转换为 TLB 文件的所有选项*文件*;不能链接器的命令行上指定 MIDL 命令行选项。 如果未指定 /MIDL，MIDL 编译器将调用使用 IDL 文件名称和任何其他选项。
+要将 IDL 文件转换为 TLB 文件的所有选项都必须在*文件*中提供;不能在链接器的命令行上指定 MIDL 命令行选项。 如果未指定/MIDL, 则将仅通过 IDL 文件名和其他选项调用 MIDL 编译器。
 
-该文件应包含每行一个 MIDL 命令行选项。
+文件应每行包含一个 MIDL 命令行选项。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页” 对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 选择**配置属性** > **链接器** > **嵌入的 IDL**属性页。
 

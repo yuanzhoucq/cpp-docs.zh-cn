@@ -6,12 +6,12 @@ helpviewer_keywords:
 - delayed loading of DLLs, constraints
 - DLLs [C++], constraints
 ms.assetid: 0097ff65-550f-4a4e-8ac3-39bf6404f926
-ms.openlocfilehash: e37890fcd757a52ddeff0ccd79289bbc0c35e042
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: be5e5eb360f80e0b2ea9682f38f6787044cd3c63
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344169"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493074"
 ---
 # <a name="constraints-of-delay-loading-dlls"></a>延迟加载 DLL 的约束
 
@@ -21,9 +21,9 @@ ms.locfileid: "64344169"
 
 - 不支持延迟加载 Kernel32.dll。 延迟加载 Helper 例程执行延迟加载时需要该 DLL。
 
-- [绑定](binding-imports.md)的入口点转发不受支持。
+- 不支持转发的入口点的[绑定](binding-imports.md)。
 
-- 如果在延迟加载的 DLL 的入口点发生每个进程初始化，则 DLL 的延迟加载可能不会造成进程行为相同。 其他情况包括静态 TLS （线程本地存储区），使用声明[__declspec （thread)](../../cpp/thread.md)，这不处理时通过加载了 DLL `LoadLibrary`。 使用 `TlsAlloc`、`TlsFree`、`TlsGetValue` 和 `TlsSetValue` 的动态 TLS 仍可在静态或者延迟加载的 DLL 中使用。
+- 如果在延迟加载的 DLL 的入口点发生每个进程初始化，则 DLL 的延迟加载可能不会造成进程行为相同。 其他情况包括静态 TLS (线程本地存储), 使用[__declspec (thread)](../../cpp/thread.md)声明, 在通过`LoadLibrary`加载 DLL 时不会对其进行处理。 使用 `TlsAlloc`、`TlsFree`、`TlsGetValue` 和 `TlsSetValue` 的动态 TLS 仍可在静态或者延迟加载的 DLL 中使用。
 
 - 初次调用静态（全局）函数后，应将其指针重新初始化为导入函数。 这是因为该函数指针在初次使用时将指向 thunk。
 
@@ -34,10 +34,10 @@ ms.locfileid: "64344169"
 ## <a name="see-also"></a>请参阅
 
 [延迟加载 DLL 的链接器支持](linker-support-for-delay-loaded-dlls.md)<br/>
-[LoadLibrary 函数](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya)<br/>
-[GetModuleHandle 函数](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulehandlea)<br/>
-[GetProcAddress 函数](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)<br/>
-[TlsAlloc 函数](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)<br/>
-[TlsFree 函数](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsfree)<br/>
-[TlsGetValue 函数](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue)<br/>
-[TlsSetValue 函数](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlssetvalue)
+[LoadLibrary 函数](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw)<br/>
+[GetModuleHandle 函数](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulehandlew)<br/>
+[GetProcAddress 函数](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress)<br/>
+[TlsAlloc 函数](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsalloc)<br/>
+[TlsFree 函数](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsfree)<br/>
+[TlsGetValue 函数](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue)<br/>
+[TlsSetValue 函数](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlssetvalue)

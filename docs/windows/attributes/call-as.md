@@ -1,21 +1,21 @@
 ---
-title: call_as (C++ COM 属性)
+title: call_as (C++ COM 特性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.call_as
 helpviewer_keywords:
 - call_as attribute
 ms.assetid: a09d7f1f-353b-4870-9b45-f0284161695d
-ms.openlocfilehash: a0051cdca6673800b37d5733c0b849da24010fcb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f36cf8d1be589cc614a6def583b00af00aabdb61
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148349"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501796"
 ---
-# <a name="callas"></a>call_as
+# <a name="call_as"></a>call_as
 
-使[本地](local-cpp.md)函数以便远程函数调用时，调用本地函数要映射到远程函数。
+使[本地](local-cpp.md)函数能够映射到远程函数, 以便在调用远程函数时调用本地函数。
 
 ## <a name="syntax"></a>语法
 
@@ -25,16 +25,16 @@ ms.locfileid: "62148349"
 
 ### <a name="parameters"></a>参数
 
-*function*<br/>
-你想要远程函数调用时调用本地函数。
+*函数*<br/>
+调用远程函数时要调用的本地函数。
 
 ## <a name="remarks"></a>备注
 
-**Call_as** C++属性具有相同的功能[call_as](/windows/desktop/Midl/call-as) MIDL 特性。
+**Call_as** C++特性具有与[call_as](/windows/win32/Midl/call-as) MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
-下面的代码演示如何使用**call_as**映射不可远程处理函数 (`f1`) 到可远程处理函数 (`Remf1`):
+下面的代码演示如何使用**call_as**将不可远程处理函数 (`f1`) 映射到可远程处理的函数 (`Remf1`):
 
 ```cpp
 // cpp_attr_ref_call_as.cpp
@@ -54,10 +54,10 @@ __interface IMInterface {
 
 |||
 |-|-|
-|**适用对象**|接口方法|
-|**可重复**|否|
-|**必需的特性**|None|
-|**无效的特性**|None|
+|**适用于**|接口方法|
+|**可重复**|No|
+|**必需的特性**|无|
+|**无效的特性**|无|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

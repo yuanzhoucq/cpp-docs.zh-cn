@@ -1,21 +1,21 @@
 ---
-title: 导入 (C++ COM 属性)
+title: 导入C++ (COM 特性)
 ms.date: 10/03/2018
 f1_keywords:
 - vc-attr.import
 helpviewer_keywords:
 - import attribute
 ms.assetid: ebf07cae-39fb-4047-8b57-54af0a9a83de
-ms.openlocfilehash: d458ce9d938da5f3650eb2478385165de6a140ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f9ed80bdcc04302c0dee85935f377c8e3dbfd37f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409364"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514619"
 ---
 # <a name="import"></a>import
 
-指定包含要引用主要 IDL 中定义的另一个.idl、.odl 或标头文件。
+指定另一个 .idl、odl 或头文件, 该文件包含要从主 IDL 引用的定义。
 
 ## <a name="syntax"></a>语法
 
@@ -28,13 +28,13 @@ ms.locfileid: "62409364"
 ### <a name="parameters"></a>参数
 
 *idl_file*<br/>
-要导入当前项目的类型库的.idl 文件的名称。
+要导入到当前项目的类型库中的 .idl 文件的名称。
 
 ## <a name="remarks"></a>备注
 
-**导入**C++属性的原因`#import`语句下面放置`import "docobj.idl"`语句生成的.idl 文件中。 **导入**属性具有相同的功能[导入](/windows/desktop/Midl/import)MIDL 特性。
+**Import** C++ `import "docobj.idl"`特性导致语句放置在生成的 .idl 文件中的语句的下方。 `#import` **Import**特性与 "[导入](/windows/win32/Midl/import)MIDL" 特性具有相同的功能。
 
-**导入**属性仅将指定的文件放入你的项目; 将生成的.idl 文件**导入**属性不允许您从源代码中指定的文件调用构造在你的项目。  若要从项目中的源代码在指定的文件中调用的构造，使用[#import](../../preprocessor/hash-import-directive-cpp.md)并`embedded_idl`属性也可以将的.h 文件*idl_file*，如果存在的.h 文件。
+**Import**特性仅将指定的文件放入将由您的项目生成的 .idl 文件中;**import**特性不允许从项目的源代码中调用指定文件中的构造。  若要从项目中的源代码调用指定文件中的构造, 请使用[#import](../../preprocessor/hash-import-directive-cpp.md)和`embedded_idl`属性, 或者可以包含*idl_file*的 .h 文件 (如果存在 .h 文件)。
 
 ## <a name="example"></a>示例
 
@@ -47,7 +47,7 @@ ms.locfileid: "62409364"
 [import(import.idl)];
 ```
 
-生成生成的.idl 文件中的以下代码：
+在生成的 .idl 文件中生成以下代码:
 
 ```
 import "docobj.idl";
@@ -66,10 +66,10 @@ library MyLib {
 
 |||
 |-|-|
-|**适用对象**|任何位置|
-|**可重复**|否|
-|**必需的特性**|None|
-|**无效的特性**|None|
+|**适用于**|任何位置|
+|**可重复**|No|
+|**必需的特性**|无|
+|**无效的特性**|无|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

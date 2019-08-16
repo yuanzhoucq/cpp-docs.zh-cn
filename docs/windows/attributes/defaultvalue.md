@@ -1,21 +1,21 @@
 ---
-title: 默认值 (C++ COM 属性)
+title: defaultvalue (C++ COM 特性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.defaultvalue
 helpviewer_keywords:
 - defaultvalue attribute
 ms.assetid: efa5d050-b2cc-4d9e-9b8e-79954f218d3a
-ms.openlocfilehash: ff6924db6f4805bb5f2dbab69076a86020b2a075
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2057658b5881efd0c3ff095d51e5ee88c9c533e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62147959"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490920"
 ---
 # <a name="defaultvalue"></a>defaultvalue
 
-允许类型化可选参数的默认值的规范。
+允许为类型化可选参数指定默认值。
 
 ## <a name="syntax"></a>语法
 
@@ -30,11 +30,11 @@ ms.locfileid: "62147959"
 
 ## <a name="remarks"></a>备注
 
-**Defaultvalue** C++属性具有相同的功能[defaultvalue](/windows/desktop/Midl/defaultvalue) MIDL 特性。
+**Defaultvalue** C++特性具有与[defaultvalue](/windows/win32/Midl/defaultvalue) MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
-下面的代码显示了接口的方法使用**defaultvalue**属性：
+下面的代码演示使用**defaultvalue**特性的接口方法:
 
 ```cpp
 // cpp_attr_ref_defaultvalue.cpp
@@ -60,10 +60,10 @@ __interface IFireTabCtrl : IDispatch {
 
 |||
 |-|-|
-|**适用对象**|接口参数|
-|**可重复**|否|
-|**必需的特性**|None|
-|**无效的特性**|None|
+|**适用于**|接口参数|
+|**可重复**|No|
+|**必需的特性**|无|
+|**无效的特性**|无|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

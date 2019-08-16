@@ -14,19 +14,19 @@ helpviewer_keywords:
 - IDispatchImpl class
 - IDispatch class support in ATL
 ms.assetid: 8108eb36-1228-4127-a203-3ab5ba488892
-ms.openlocfilehash: bf6b416337c58f5e9b8a62dda841615412573666
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e9cb903742cdc31c1d9bba2c4aabbb0472407c1
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275342"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495952"
 ---
 # <a name="idispatchimpl-class"></a>IDispatchImpl 类
 
-提供一个默认实现`IDispatch`双重接口的一部分。
+为双重接口的`IDispatch`部分提供默认实现。
 
 > [!IMPORTANT]
->  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
+>  此类及其成员不能用于在 Windows 运行时中执行的应用程序。
 
 ## <a name="syntax"></a>语法
 
@@ -43,22 +43,22 @@ class ATL_NO_VTABLE IDispatchImpl : public T
 #### <a name="parameters"></a>参数
 
 *T*<br/>
-[in]双重接口。
+中双重接口。
 
 *piid*<br/>
-[in]指向 IID *T*。
+中指向*T*的 IID 的指针。
 
 *plibid*<br/>
-[in]一个指向包含有关接口的信息的类型库的 LIBID。 默认情况下，传递服务器级类型库。
+中一个指针, 指向包含接口相关信息的类型库的 LIBID。 默认情况下, 将传递服务器级类型库。
 
 *wMajor*<br/>
-[in]类型库的主要版本。 默认情况下，值为 1。
+中类型库的主版本。 默认情况下, 该值为1。
 
 *wMinor*<br/>
-[in]类型库的次版本。 默认情况下，值为 0。
+中类型库的次版本。 默认情况下, 该值为0。
 
 *tihclass*<br/>
-[in]用于管理的类型信息的类*T*。默认情况下，该值为 `CComTypeInfoHolder`。
+中用于管理*T*的类型信息的类。默认情况下，该值为 `CComTypeInfoHolder`。
 
 ## <a name="members"></a>成员
 
@@ -66,7 +66,7 @@ class ATL_NO_VTABLE IDispatchImpl : public T
 
 |名称|描述|
 |----------|-----------------|
-|[IDispatchImpl::IDispatchImpl](#idispatchimpl)|构造函数。 调用`AddRef`管理双重接口的类型信息的受保护的成员变量上。 析构函数调用 `Release`。|
+|[IDispatchImpl::IDispatchImpl](#idispatchimpl)|构造函数。 对`AddRef`管理双重接口的类型信息的受保护成员变量调用。 析构函数调用 `Release`。|
 
 ### <a name="public-methods"></a>公共方法
 
@@ -74,20 +74,20 @@ class ATL_NO_VTABLE IDispatchImpl : public T
 |----------|-----------------|
 |[IDispatchImpl::GetIDsOfNames](#getidsofnames)|将一组名称映射为对应的一组调度标识符。|
 |[IDispatchImpl::GetTypeInfo](#gettypeinfo)|检索双重接口的类型信息。|
-|[IDispatchImpl::GetTypeInfoCount](#gettypeinfocount)|确定是否存在可用于双重接口的类型信息。|
-|[IDispatchImpl::Invoke](#invoke)|可以访问的方法和属性公开的双重接口。|
+|[IDispatchImpl::GetTypeInfoCount](#gettypeinfocount)|确定是否有可用于双重接口的类型信息。|
+|[IDispatchImpl::Invoke](#invoke)|提供对由双重接口公开的方法和属性的访问。|
 
 ## <a name="remarks"></a>备注
 
-`IDispatchImpl` 提供一个默认实现`IDispatch`对象上的任何双接口的一部分。 双重接口派生`IDispatch`，并使用只有自动化兼容类型。 调度接口，如双重接口支持早期绑定和后期绑定;但是，双重接口还支持 vtable 绑定。
+`IDispatchImpl`为对象的任何双重接口`IDispatch`的部分提供默认实现。 双重接口派生自`IDispatch` , 并且仅使用自动化兼容类型。 与调度接口一样, 双重接口支持早期绑定和后期绑定;但是, 双重接口还支持 vtable 绑定。
 
-下面的示例演示的典型实现`IDispatchImpl`。
+下面的示例演示的`IDispatchImpl`典型实现。
 
 [!code-cpp[NVC_ATL_COM#47](../../atl/codesnippet/cpp/idispatchimpl-class_1.h)]
 
-默认情况下`IDispatchImpl`类会查找的类型信息*T*注册表中。 若要实现取消注册的接口，可以使用`IDispatchImpl`类，而使用预定义的版本号访问注册表。 如果您创建`IDispatchImpl`对象，它具有的值为 0xFFFF *wMajor*和 0xFFFF 的值作为*wMinor*，则`IDispatchImpl`类从.dll 文件而不是检索类型库注册表。
+默认情况下, `IDispatchImpl`类会在注册表中查找*T*的类型信息。 若要实现未注册的接口, 可以使用`IDispatchImpl`类, 而无需使用预定义的版本号访问注册表。 如果创建`IDispatchImpl`的对象的值为0xffff 作为*wMajor*的值, 而将0xffff 作为*wMinor*的值, 则`IDispatchImpl`类将从 .dll 文件而不是注册表中检索类型库。
 
-`IDispatchImpl` 包含类型的静态成员`CComTypeInfoHolder`管理双重接口的类型信息。 如果有多个对象的实现相同的双重接口，只有一个实例`CComTypeInfoHolder`使用。
+`IDispatchImpl`包含类型的静态成员, `CComTypeInfoHolder`该类型管理双重接口的类型信息。 如果有多个实现相同双重接口的对象, `CComTypeInfoHolder`则仅使用一个实例。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -97,9 +97,9 @@ class ATL_NO_VTABLE IDispatchImpl : public T
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlcom.h
+**标头:** atlcom。h
 
-##  <a name="getidsofnames"></a>  IDispatchImpl::GetIDsOfNames
+##  <a name="getidsofnames"></a>IDispatchImpl:: Idispatch.getidsofnames
 
 将一组名称映射为对应的一组调度标识符。
 
@@ -114,9 +114,9 @@ STDMETHOD(GetIDsOfNames)(
 
 ### <a name="remarks"></a>备注
 
-请参阅[IDispatch::GetIDsOfNames](/windows/desktop/api/oaidl/nf-oaidl-idispatch-getidsofnames) Windows SDK 中。
+请参阅 Windows SDK 中的[IDispatch:: idispatch.getidsofnames](/windows/win32/api/oaidl/nf-oaidl-idispatch-getidsofnames) 。
 
-##  <a name="gettypeinfo"></a>  IDispatchImpl::GetTypeInfo
+##  <a name="gettypeinfo"></a>IDispatchImpl:: GetTypeInfo
 
 检索双重接口的类型信息。
 
@@ -129,11 +129,11 @@ STDMETHOD(GetTypeInfo)(
 
 ### <a name="remarks"></a>备注
 
-请参阅[IDispatch::GetTypeInfo](/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfo) Windows SDK 中。
+请参阅 Windows SDK 中的[IDispatch:: GetTypeInfo](/windows/win32/api/oaidl/nf-oaidl-idispatch-gettypeinfo) 。
 
-##  <a name="gettypeinfocount"></a>  IDispatchImpl::GetTypeInfoCount
+##  <a name="gettypeinfocount"></a>IDispatchImpl::GetTypeInfoCount
 
-确定是否存在可用于双重接口的类型信息。
+确定是否有可用于双重接口的类型信息。
 
 ```
 STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
@@ -141,19 +141,19 @@ STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
 
 ### <a name="remarks"></a>备注
 
-请参阅`IDispatch::GetTypeInfoCount`Windows SDK 中。
+请`IDispatch::GetTypeInfoCount`参阅 Windows SDK 中的。
 
-##  <a name="idispatchimpl"></a>  IDispatchImpl::IDispatchImpl
+##  <a name="idispatchimpl"></a>IDispatchImpl::IDispatchImpl
 
-构造函数。 调用`AddRef`管理双重接口的类型信息的受保护的成员变量上。 析构函数调用 `Release`。
+构造函数。 对`AddRef`管理双重接口的类型信息的受保护成员变量调用。 析构函数调用 `Release`。
 
 ```
 IDispatchImpl();
 ```
 
-##  <a name="invoke"></a>  IDispatchImpl::Invoke
+##  <a name="invoke"></a>IDispatchImpl:: Invoke
 
-可以访问的方法和属性公开的双重接口。
+提供对由双重接口公开的方法和属性的访问。
 
 ```
 STDMETHOD(Invoke)(
@@ -169,7 +169,7 @@ STDMETHOD(Invoke)(
 
 ### <a name="remarks"></a>备注
 
-请参阅[idispatch:: Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) Windows SDK 中。
+请参阅 Windows SDK 中的[IDispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke) 。
 
 ## <a name="see-also"></a>请参阅
 

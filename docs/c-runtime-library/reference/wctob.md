@@ -23,12 +23,12 @@ helpviewer_keywords:
 - wctob function
 - characters, converting
 ms.assetid: 46aec98b-c2f2-4e9d-9d89-7db99ba8a9a6
-ms.openlocfilehash: 1d9dca16ca905afbc94d912a8083017ba9cc84e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c977bc204f4c9428a4aae09300269b1ed82d53e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188527"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498953"
 ---
 # <a name="wctob"></a>wctob
 
@@ -49,13 +49,13 @@ int wctob(
 
 ## <a name="return-value"></a>返回值
 
-如果**wctob**成功转换宽字符，它返回多字节字符表示形式，仅当多字节字符正好为一个字节长。 如果**wctob**遇到它不能转换为多字节字符或多字节字符的宽字符不完全是一个字节长，则返回-1。
+如果**wctob**成功地转换宽字符, 则它仅在多字节字符正好为一个字节时返回其多字节字符表示形式。 如果**wctob**遇到不能转换为多字节字符的宽字符, 或者多字节字符的长度不能正好为一个字节, 则返回-1。
 
 ## <a name="remarks"></a>备注
 
-**Wctob**函数将转换的宽字符中包含*wchar*传递由返回的相应多字节字符**int**值，如果多字节字符正好为一个字节长。
+如果多字节字符的长度正好为一个字节, 则**wctob**函数会将*wchar*中包含的宽字符转换为返回**int**值传递的相应多字节字符。
 
-如果**wctob**不成功，没有相应的多字节字符未找到，该函数设置**errno**到**EILSEQ**并返回-1。
+如果**wctob**不成功且未找到相应的多字节字符, 则该函数将**Errno**设置为**eilseq 且**并返回-1。
 
 ## <a name="requirements"></a>要求
 
@@ -67,7 +67,7 @@ int wctob(
 
 ## <a name="example"></a>示例
 
-本程序演示的行为**wcstombs**函数。
+此程序演示**wcstombs**函数的行为。
 
 ```C
 // crt_wctob.c
@@ -107,4 +107,4 @@ Determined the corresponding multibyte character to be "A".
 [mbstowcs、_mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wctomb、_wctomb_l](wctomb-wctomb-l.md)<br/>
-[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>
+[WideCharToMultiByte](/windows/win32/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

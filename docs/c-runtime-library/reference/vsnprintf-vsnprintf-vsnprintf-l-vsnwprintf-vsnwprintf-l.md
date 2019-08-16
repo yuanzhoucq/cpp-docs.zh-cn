@@ -52,14 +52,14 @@ helpviewer_keywords:
 - formatted text [C++]
 - vsnwprintf function
 ms.assetid: a97f92df-c2f8-4ea0-9269-76920d2d566a
-ms.openlocfilehash: 7c3416397d8f43963d3be2ce9bc39707ea7865db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e665562f3dd8ee0be70b4e50068955a91233c60
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383459"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499079"
 ---
-# <a name="vsnprintf-vsnprintf-vsnprintfl-vsnwprintf-vsnwprintfl"></a>vsnprintf、_vsnprintf、_vsnprintf_l、_vsnwprintf、_vsnwprintf_l
+# <a name="vsnprintf-_vsnprintf-_vsnprintf_l-_vsnwprintf-_vsnwprintf_l"></a>vsnprintf、_vsnprintf、_vsnprintf_l、_vsnwprintf、_vsnwprintf_l
 
 使用指向参数列表的指针写入格式化的输出。 提供这些函数的更多安全版本；请参阅 [vsnprintf_s、_vsnprintf_s、_vsnprintf_s_l、_vsnwprintf_s、_vsnwprintf_s_l](vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md)。
 
@@ -142,7 +142,7 @@ int _vsnwprintf_l(
 *buffer*<br/>
 输出的存储位置
 
-*count*<br/>
+*计数*<br/>
 要写入的最大字符数。
 
 *format*<br/>
@@ -158,29 +158,29 @@ int _vsnwprintf_l(
 
 ## <a name="return-value"></a>返回值
 
-**Vsnprintf**函数将返回写入的字符数，不包括终止 null 字符。 如果通过指定缓冲区大小*计数*不是不够大，无法包含由指定的输出*格式*并*argptr*的返回值**vsnprintf**是的则会写入，如果不包括 null 字符的字符数*计数*足够大。 如果返回的值大于*计数*-1，则输出被截断。 返回值 -1 指示发生编码错误。
+**Vsnprintf**函数返回写入的字符数, 不包括终止 null 字符。 如果*count*指定的缓冲区大小不够大, 无法包含由*format*和*argptr*指定的输出, 则**vsnprintf**的返回值是将写入的字符数, 而不是计数 null如果*count*足够大, 则为。 如果返回值大于*计数*-1, 则输出已被截断。 返回值 -1 指示发生编码错误。
 
-这两 **_vsnprintf**并 **_vsnwprintf**函数将返回要写入的字符数是否小于或等于写入的字符数*计数*; 如果数字格式要写入的字符是否大于*计数*，则这些函数将返回-1，该值指示输出已被截断。
+如果要写入的字符数小于或等于*count*, 则 **_vsnprintf**和 **_vsnwprintf**函数将返回写入的字符数;如果要写入的字符数大于*计数*, 则这些函数将返回-1, 指示输出已被截断。
 
-不论是否写入终止 null，所有这些函数的返回值都不会将其包含在内。 当*计数*为零，返回的值函数写入，未的字符数包括任何终止 null。 可以将此结果用于为字符串和终止 null 分配足够的缓冲区空间，然后再次调用可填充缓冲区的函数。
+不论是否写入终止 null，所有这些函数的返回值都不会将其包含在内。 当*count*为零时, 返回的值是函数将写入的字符数, 不包括任何终止 null。 可以将此结果用于为字符串和终止 null 分配足够的缓冲区空间，然后再次调用可填充缓冲区的函数。
 
-如果*格式*是**NULL**，或者，如果*缓冲区*是**NULL**并*计数*不等于零，这些函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，这些函数将返回-1 并设置**errno**到**EINVAL**。
+如果*format*为**null**, 或者如果*buffer*为**null**并且*count*不等于零, 则这些函数将调用无效参数处理程序, 如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续, 则这些函数将返回-1, 并将**errno**设置为**EINVAL**。
 
 ## <a name="remarks"></a>备注
 
-每个函数采用一个指向参数列表，然后格式化数据，并将最多写入*计数*指向的内存的字符*缓冲区*。 **Vsnprintf**函数始终写入一个 null 终止符，即使它截断输出。 使用时 **_vsnprintf**并 **_vsnwprintf**，缓冲区将以 null 终止仅当有空间末尾 (即，如果要写入的字符数小于*计数*).
+其中每个函数都采用一个指向参数列表的指针, 然后设置数据的格式, 并将多达*count*个字符写入*缓冲区*指向的内存。 **Vsnprintf**函数始终会写入一个 null 终止符, 即使它截断输出。 使用 **_vsnprintf**和 **_vsnwprintf**时, 仅当结尾处有空间时 (即, 如果要写入的字符数小于*计数*), 缓冲区才以 null 结尾。
 
 > [!IMPORTANT]
-> 若要防止某些类型的安全风险，请确保*格式*不是用户定义的字符串。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
+> 若要防止某些类型的安全风险, 请确保该*格式*不是用户定义的字符串。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 > [!NOTE]
-> 若要确保在调用时没有终止 null 的空间 **_vsnprintf**， **_vsnprintf_l**， **_vsnwprintf**和 **_vsnwprintf_l**，请确保*计数*严格小于缓冲区长度并将缓冲区初始化为 null 之前调用该函数。
+> 若要确保在调用 **_vsnprintf**、 **_vsnprintf_l**、 **_vsnwprintf**和 **_vsnwprintf_l**时存在终止 null 的空间, 请确保*计数*严格小于缓冲区长度并将缓冲区初始化为在调用函数之前为 null。
 >
-> 因为**vsnprintf**始终会写入终止 null*计数*参数可能等于缓冲区的大小。
+> 由于**vsnprintf**始终写入终止 null, 因此*count*参数可能等于缓冲区的大小。
 
-从 Visual Studio 2015 和 Windows 10 中的 UCRT 开始**vsnprintf**不再等同于 **_vsnprintf**。 **Vsnprintf**函数遵循 C99 标准;**_vnsprintf**保留了使用较旧的 Visual Studio code 的向后兼容性。
+从 Visual Studio 2015 和 Windows 10 中的 UCRT 开始, **vsnprintf**不再与 **_vsnprintf**相同。 **Vsnprintf**函数符合 C99 标准;保留 **_vnsprintf**是为了与旧版 Visual Studio code 向后兼容。
 
-使用这些函数的版本 **_l**后缀完全相同，只不过它们使用传递中而不是当前线程区域设置的区域设置参数。
+这些带有 **_l**后缀的函数的版本相同, 只不过它们使用传入的区域设置参数而不是当前线程区域设置。
 
 在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -195,10 +195,10 @@ int _vsnwprintf_l(
 
 |例程所返回的值|必需的标头 (C)|必需的标头 (C++)|
 |-------------|---------------------------|-------------------------------|
-|**vsnprintf**, **_vsnprintf**, **_vsnprintf_l**|\<stdio.h>|\<stdio.h> 或 \<cstdio>|
-|**_vsnwprintf**， **_vsnwprintf_l**|\<stdio.h> 或 \<wchar.h>|\<stdio.h>、\<wchar.h>、\<cstdio> 或 \<cwchar>|
+|**vsnprintf**、 **_vsnprintf**、 **_vsnprintf_l**|\<stdio.h>|\<stdio.h> 或 \<cstdio>|
+|**_vsnwprintf**、 **_vsnwprintf_l**|\<stdio.h> 或 \<wchar.h>|\<stdio.h>、\<wchar.h>、\<cstdio> 或 \<cwchar>|
 
-**_Vsnprintf**， **_vsnprintf_l**， **_vsnwprintf**并 **_vsnwprintf_l**是 Microsoft 特定函数的函数。 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+**_Vsnprintf**、 **_vsnprintf_l**、 **_Vsnwprintf**和 **_vsnwprintf_l**函数是 Microsoft 特定的。 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -240,7 +240,7 @@ nSize: 9, buff: Hi there!
 nSize: -1, buff: Hi there!
 ```
 
-如果使用 vsnprintf 以及窄字符串参数代替，结果会发生更改。 *计数*参数可以是整个大小的缓冲区，并返回值是将如果已写入的字符数*计数*是否足够大：
+如果使用 vsnprintf 以及窄字符串参数代替，结果会发生更改。 *Count*参数可以是缓冲区的全部大小, 返回值是当*count*足够大时, 将写入的字符数:
 
 ## <a name="example"></a>示例
 

@@ -6,20 +6,20 @@ helpviewer_keywords:
 - image lists [MFC], image overlays in
 - CImageList class [MFC], image overlays in
 ms.assetid: aaf4e1c4-cd12-42c8-9af4-1bb458889b4e
-ms.openlocfilehash: 8dd0b30ef29a48ebc763564e6fe23632cd300831
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec795193a28a68d8aee61e9932481a89c4b3e8e0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407960"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508386"
 ---
 # <a name="image-overlays-in-image-lists"></a>图像列表中的图像覆盖
 
-每个图像列表 ([CImageList](../mfc/reference/cimagelist-class.md)) 包括映像以用作覆盖掩码的列表。 “覆盖掩码”是在其他图像上透明绘制的图像。 任何图像都可用作覆盖掩码。 每个图像列表您最多可以指定 4 个覆盖掩码。
+每个图像列表 ([CImageList](../mfc/reference/cimagelist-class.md)) 都包含一个要用作覆盖蒙板的图像的列表。 “覆盖掩码”是在其他图像上透明绘制的图像。 任何图像都可用作覆盖掩码。 每个图像列表您最多可以指定 4 个覆盖掩码。
 
-通过添加到覆盖掩码的列表的图像的索引[SetOverlayImage](../mfc/reference/cimagelist-class.md#setoverlayimage)成员函数、 以图像的索引和覆盖掩码的索引。 请注意，覆盖掩码的索引是从 1 而不是 0 开始的。
+使用[SetOverlayImage](../mfc/reference/cimagelist-class.md#setoverlayimage)成员函数、图像的索引和覆盖掩码的索引, 将图像的索引添加到覆盖掩码列表。 请注意，覆盖掩码的索引是从 1 而不是 0 开始的。
 
-使用调用一次图像上绘制覆盖掩码`Draw`。 参数包括要绘制图像的索引和覆盖掩码的索引。 必须使用[INDEXTOOVERLAYMASK](/windows/desktop/api/commctrl/nf-commctrl-indextooverlaymask)宏指定覆盖掩码的索引。 调用时，还可以指定覆盖图像[DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect)成员函数。
+使用对`Draw`的单个调用, 可以在图像上绘制覆盖屏蔽。 参数包括要绘制图像的索引和覆盖掩码的索引。 必须使用[INDEXTOOVERLAYMASK](/windows/win32/api/commctrl/nf-commctrl-indextooverlaymask)宏来指定覆盖掩码的索引。 在调用[DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect)成员函数时, 还可以指定覆盖图像。
 
 ## <a name="see-also"></a>请参阅
 

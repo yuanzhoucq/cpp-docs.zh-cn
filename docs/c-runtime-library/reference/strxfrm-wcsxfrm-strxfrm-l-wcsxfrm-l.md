@@ -35,14 +35,14 @@ helpviewer_keywords:
 - strings [C++], comparing locale
 - _wcsxfrm_l function
 ms.assetid: 6ba8e1f6-4484-49aa-83b8-bc2373187d9e
-ms.openlocfilehash: 4e4f5bb6639cbeee0f004f94f09177c08394d43e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4dc94d76562daf10544e9b0d09d9608bd83e454
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258710"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500775"
 ---
-# <a name="strxfrm-wcsxfrm-strxfrml-wcsxfrml"></a>strxfrm、wcsxfrm、_strxfrm_l、_wcsxfrm_l
+# <a name="strxfrm-wcsxfrm-_strxfrm_l-_wcsxfrm_l"></a>strxfrm、wcsxfrm、_strxfrm_l、_wcsxfrm_l
 
 根据区域设置特定信息转换字符串。
 
@@ -81,25 +81,25 @@ size_t wcsxfrm_l(
 *strSource*<br/>
 源字符串。
 
-*count*<br/>
-最大数目的字符将放入*strDest*。
+*计数*<br/>
+要放置在*strDest*中的最大字符数。
 
 *locale*<br/>
 要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
 
-返回转换的字符串的长度（不算结尾的 null 字符）。 如果返回值是大于或等于*计数*，则内容*strDest*是不可预知的。 发生错误时，每个函数可设置**errno** ，并返回**INT_MAX**。 无效的字符，对于**errno**设置为**EILSEQ**。
+返回转换的字符串的长度（不算结尾的 null 字符）。 如果返回值大于或等于*count*, 则*strDest*的内容不可预测。 出现错误时, 每个函数将设置**errno**并返回**INT_MAX**。 对于无效字符, **errno**设置为**eilseq 且**。
 
 ## <a name="remarks"></a>备注
 
-**Strxfrm**指向的字符串函数转换*strSource*中新的排序中存储的窗体*strDest*。 不能超过*计数*字符，包括 null 字符，已转换并放入生成的字符串。 使用的区域设置进行转换**LC_COLLATE**类别设置。 有关详细信息**LC_COLLATE**，请参阅[setlocale](setlocale-wsetlocale.md)。 **strxfrm**其区域设置相关的行为; 使用当前区域设置 **_strxfrm_l**是完全相同，只不过它使用传入中而不是当前区域设置的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**Strxfrm**函数将*strSource*指向的字符串转换为存储在*strDest*中的新的逐份打印形式。 不超过*count*个字符 (包括空字符) 会被转换并放入生成的字符串中。 使用区域设置的**LC_COLLATE**类别设置进行转换。 有关**LC_COLLATE**的详细信息, 请参阅[setlocale](setlocale-wsetlocale.md)。 **strxfrm**对其与区域设置相关的行为使用当前区域设置; **_strxfrm_l**是相同的, 只不过它使用传入的区域设置而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-转换到的调用完成之后**strcmp**与两个已转换的字符串将产生与调用相同的结果**strcoll**应用到原始的两个字符串。 如同**strcoll**并**stricoll**， **strxfrm**自动处理的是根据多字节字符字符串。
+转换后, 使用两个已转换的字符串调用**strcmp**将生成与对**strcoll**应用于原始两个字符串的调用结果相同的结果。 与**strcoll**和**stricoll**一样, **strxfrm**会根据需要自动处理多字节字符字符串。
 
-**wcsxfrm**是宽字符版本**strxfrm**; 的字符串参数**wcsxfrm**都是宽字符指针。 有关**wcsxfrm**后，将字符串转换，先调用**wcscmp**与两个已转换的字符串将产生与调用相同的结果**wcscoll**应用于原始的两个字符串。 **wcsxfrm**并**strxfrm**行为相同。 **wcsxfrm**其区域设置相关的行为; 使用当前区域设置 **_wcsxfrm_l**使用而不是当前区域设置中传入的区域设置。
+**wcsxfrm**是**strxfrm**的宽字符版本;**wcsxfrm**的字符串参数是宽字符指针。 对于**wcsxfrm**, 在字符串转换之后, 使用两个已转换的字符串对**wcscmp**的调用将产生与对原始两个字符串的**wcscoll**调用的结果相同的结果。 否则, **wcsxfrm**和**strxfrm**的行为相同。 **wcsxfrm**对其与区域设置相关的行为使用当前区域设置; **_wcsxfrm_l**使用传入的区域设置, 而不是当前区域设置。
 
-这些函数验证其参数。 如果*strSource*是空指针，或*strDest*是**NULL**指针 （除非计数为零），或者如果*计数*大于**INT_MAX**，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许继续执行，这些函数将设置**errno**到**EINVAL**并返回**INT_MAX**。
+这些函数验证其参数。 如果*strSource*为 null 指针, 或*strDest*为**null**指针 (除非计数为零), 或者*计数*大于**INT_MAX**, 则调用无效参数处理程序, 如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续, 则这些函数会将**errno**设置为**EINVAL**并返回**INT_MAX**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -110,15 +110,15 @@ size_t wcsxfrm_l(
 
 在“C”区域设置中，字符集（ASCII 字符集）中的字符顺序与字典中的字符顺序相同。 但是在其他区域设置中，字符集中的字符顺序可能与字典中的字符顺序不同。 例如，在某些欧洲区域设置中，字符集中的字符“a”（值 0x61）位于字符“&\#x00E4;”（值 0xE4）之前，但在字典顺序中字符“ä”位于字符“a”之前。
 
-在为其的字符集和字典字符顺序不同的区域设置中，使用**strxfrm**对原始字符串，然后**strcmp**对结果字符串以生成按字典顺序的字符串根据当前区域设置的比较**LC_COLLATE**类别设置。 因此，若要比较两个以上的区域设置中按字典顺序的字符串，请使用**strxfrm**对原始字符串，然后**strcmp**对结果字符串。 或者，可以使用**strcoll**而非**strcmp**对原始字符串。
+在字符集和字典字符顺序不同的区域设置中, 对原始字符串使用**strxfrm** , 然后对生成的字符串**strcmp** , 以根据当前区域设置的**LC_COLLATE**类别设置。 因此, 若要比较以上区域设置中按字典顺序的两个字符串, 请对原始字符串使用**strxfrm** , 并对生成的字符串使用**strcmp** 。 或者, 可以对原始字符串使用**strcoll**而不是**strcmp** 。
 
-**strxfrm**基本上是一个包装[LCMapString](/windows/desktop/api/winnls/nf-winnls-lcmapstringa)与**LCMAP_SORTKEY**。
+**strxfrm**基本上是围绕[LCMapString](/windows/win32/api/winnls/nf-winnls-lcmapstringw)和**LCMAP_SORTKEY**的包装。
 
-下面的表达式的值是包含所需的数组的大小**strxfrm**转换源字符串：
+以下表达式的值是保存源字符串的**strxfrm**转换所需的数组大小:
 
 `1 + strxfrm( NULL, string, 0 )`
 
-在"C"区域设置仅**strxfrm**等效于以下：
+仅在 "C" 区域设置中, **strxfrm**等效于以下内容:
 
 ```C
 strncpy( _string1, _string2, _count );

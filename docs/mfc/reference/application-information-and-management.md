@@ -4,55 +4,55 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: b106a8874d1b0243f408a6c6c7311a9ce791e019
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 934e89d928104c33f0c2038f136b5ad0ca48cbd4
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504499"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507775"
 ---
 # <a name="application-information-and-management"></a>应用程序信息和管理
 
-当您编写的应用程序时，创建单个[CWinApp](../../mfc/reference/cwinapp-class.md)-派生的对象。 有时，可能想要获取有关从外部此对象的信息`CWinApp`-派生的对象。 或者，您可能需要与其他全局"mananger"对象的访问。
+编写应用程序时, 将创建单个[CWinApp](../../mfc/reference/cwinapp-class.md)派生对象。 有时, 可能需要从派生的`CWinApp`对象外部获取有关此对象的信息。 或者, 可能需要访问其他全局 "manange" 对象。
 
-Microsoft 基础类库提供了以下全局函数，以帮助您完成这些任务：
+Microsoft 基础类库提供了以下全局函数来帮助你完成这些任务:
 
 ### <a name="application-information-and-management-functions"></a>应用程序信息和管理功能
 
 |||
 |-|-|
-|[AfxBeginThread](#afxbeginthread)|创建一个新线程。|
-|[AfxContextMenuManager](#afxcontextmenumanager)|指向全局[上下文菜单管理器](ccontextmenumanager-class.md)。|
+|[AfxBeginThread](#afxbeginthread)|创建新线程。|
+|[AfxContextMenuManager](#afxcontextmenumanager)|指向全局[上下文菜单管理器](ccontextmenumanager-class.md)的指针。|
 |[AfxEndThread](#afxendthread)|终止当前线程。|
-|[AfxFindResourceHandle](#afxfindresourcehandle)|指导资源链并查找特定资源的资源 ID 和资源类型。 |
-|[AfxFreeLibrary](#afxfreelibrary)|递减引用计数的已加载的动态链接库 (DLL) 模块中;当引用计数达到零时，该模块未映射。|
-|[AfxGetApp](#afxgetapp)|返回一个指向应用程序的单个`CWinApp`对象。|
-|[AfxGetAppName](#afxgetappname)|返回一个字符串，包含应用程序的名称。|
-|[AfxGetInstanceHandle](#afxgetinstancehandle)|返回表示此实例的应用程序的 HINSTANCE。|
-|[AfxGetMainWnd](#afxgetmainwnd)|返回指向当前"main"窗口的非 OLE 应用程序或服务器应用程序的就地框架窗口的指针。|
-|[AfxGetPerUserRegistration](#afxgetperuserregistration)|使用此函数可确定应用程序是否将注册表访问重定向**HKEY_CURRENT_USER** ( **HKCU**) 节点。|
-|[AfxGetResourceHandle](#afxgetresourcehandle)|返回到应用程序的默认资源源 HINSTANCE。 用于直接访问应用程序的资源。|
-|[AfxGetThread](#afxgetthread)|检索指向当前[CWinThread](../../mfc/reference/cwinthread-class.md)对象。|
-|[AfxInitRichEdit](#afxinitrichedit)|初始化 1.0 rich edit 控件的应用程序的版本。|
-|[AfxInitRichEdit2](#afxinitrichedit2)|初始化 2.0 及更高版本的 rich edit 控件的应用程序的版本。|
+|[AfxFindResourceHandle](#afxfindresourcehandle)|遍历资源链, 并按资源 ID 和资源类型查找特定资源。 |
+|[AfxFreeLibrary](#afxfreelibrary)|递减已加载的动态链接库 (DLL) 模块的引用计数;当引用计数达到零时, 模块将被取消映射。|
+|[AfxGetApp](#afxgetapp)|返回一个指向应用程序的单个`CWinApp`对象的指针。|
+|[AfxGetAppName](#afxgetappname)|返回一个字符串, 其中包含应用程序的名称。|
+|[AfxGetInstanceHandle](#afxgetinstancehandle)|返回表示应用程序的此实例的 HINSTANCE。|
+|[AfxGetMainWnd](#afxgetmainwnd)|返回指向非 OLE 应用程序的当前 "主" 窗口或服务器应用程序的就地框架窗口的指针。|
+|[AfxGetPerUserRegistration](#afxgetperuserregistration)|使用此函数可确定应用程序是否将注册表访问重定向到**HKEY_CURRENT_USER** ( **HKCU**) 节点。|
+|[AfxGetResourceHandle](#afxgetresourcehandle)|将 HINSTANCE 返回到应用程序的默认资源的源。 使用此可直接访问应用程序的资源。|
+|[AfxGetThread](#afxgetthread)|检索指向当前[CWinThread](../../mfc/reference/cwinthread-class.md)对象的指针。|
+|[AfxInitRichEdit](#afxinitrichedit)|初始化应用程序的版本1.0 格式编辑控件。|
+|[AfxInitRichEdit2](#afxinitrichedit2)|初始化应用程序的版本2.0 和更高版本的编辑控件。|
 |[AfxIsExtendedFrameClass](#afxisextendedframeclass)|确定给定窗口是否是扩展框架对象。|
 |[AfxIsMFCToolBar](#afxismfctoolbar)|确定给定窗口是否为工具栏对象。|
-|[AfxKeyboardManager](#afxkeyboardmanager)|指向全局[键盘管理器](ckeyboardmanager-class.md)。|
-|[AfxLoadLibrary](#afxloadlibrary)|映射 DLL 模块，并返回一个句柄，可用于获取 DLL 函数的地址。|
-|[AfxMenuTearOffManager](#afxmenutearoffmanager)|指向全局[tearoff 菜单管理器](cmenutearoffmanager-class.md)。|
-|[AfxMouseManager](#afxmousemanager)|指向全局[鼠标管理器](cmousemanager-class.md)。|
-|[AfxRegisterClass](#afxregisterclass)|在使用 MFC 的 DLL 中注册窗口类。|
-|[AfxRegisterWndClass](#afxregisterwndclass)|注册来补充这些由 MFC 自动注册的 Windows 窗口类。|
-|[AfxSetPerUserRegistration](#afxsetperuserregistration)|设置是否在应用程序将注册表访问重定向**HKEY_CURRENT_USER** ( **HKCU**) 节点。|
-|[AfxSetResourceHandle](#afxsetresourcehandle)|设置的默认资源的应用程序的加载位置的 HINSTANCE 句柄。|
-|[AfxShellManager](#afxshellmanager)|指向全局[shell 管理器](cshellmanager-class.md)。 |
-|[AfxSocketInit](#afxsocketinit)|在中称为`CWinApp::InitInstance`替代，以便初始化 Windows 套接字。|
-|[AfxUserToolsManager](#afxusertoolsmanager)|指向全局[用户工具管理器](cusertoolsmanager-class.md)。|
-|[AfxWinInit](#afxwininit)|由 MFC 提供调用`WinMain`函数，作为的一部分[CWinApp](../../mfc/reference/cwinapp-class.md)的基于 GUI 的应用程序，以初始化 MFC 的初始化。 必须为使用 MFC 的控制台应用程序直接调用。|
+|[AfxKeyboardManager](#afxkeyboardmanager)|指向全局[键盘管理器](ckeyboardmanager-class.md)的指针。|
+|[AfxLoadLibrary](#afxloadlibrary)|映射 DLL 模块并返回一个句柄, 该句柄可用于获取 DLL 函数的地址。|
+|[AfxMenuTearOffManager](#afxmenutearoffmanager)|指向全局[tearoff 菜单管理器](cmenutearoffmanager-class.md)的指针。|
+|[AfxMouseManager](#afxmousemanager)|指向全局[鼠标管理器](cmousemanager-class.md)的指针。|
+|[AfxRegisterClass](#afxregisterclass)|在使用 MFC 的 DLL 中注册一个窗口类。|
+|[AfxRegisterWndClass](#afxregisterwndclass)|注册 Windows 窗口类以补充由 MFC 自动注册的窗口类。|
+|[AfxSetPerUserRegistration](#afxsetperuserregistration)|设置应用程序是否将注册表访问重定向到**HKEY_CURRENT_USER** ( **HKCU**) 节点。|
+|[AfxSetResourceHandle](#afxsetresourcehandle)|设置 HINSTANCE 句柄, 其中加载了应用程序的默认资源。|
+|[AfxShellManager](#afxshellmanager)|指向全局[shell 管理器](cshellmanager-class.md)的指针。 |
+|[AfxSocketInit](#afxsocketinit)|在`CWinApp::InitInstance`重写中调用以初始化 Windows 套接字。|
+|[AfxUserToolsManager](#afxusertoolsmanager)|指向全局[用户工具管理器](cusertoolsmanager-class.md)的指针。|
+|[AfxWinInit](#afxwininit)|由 MFC 提供`WinMain`的函数调用, 作为基于 GUI 的应用程序的[CWinApp](../../mfc/reference/cwinapp-class.md)初始化的一部分, 用于初始化 MFC。 必须直接为使用 MFC 的控制台应用程序调用。|
 
-##  <a name="afxbeginthread"></a>  AfxBeginThread
+##  <a name="afxbeginthread"></a>AfxBeginThread
 
-调用此函数可创建一个新线程。
+调用此函数可创建新线程。
 
 ```
 CWinThread* AfxBeginThread(
@@ -74,57 +74,57 @@ CWinThread* AfxBeginThread(
 ### <a name="parameters"></a>参数
 
 *pfnThreadProc*<br/>
-指向工作线程的控件函数。 不能为 NULL。 必须按如下所示声明此函数：
+指向工作线程的控制函数。 不能为 NULL。 必须按如下所示声明此函数:
 
 `UINT __cdecl MyControllingFunction( LPVOID pParam );`
 
 *pThreadClass*<br/>
-对象的 RUNTIME_CLASS 派生自[CWinThread](../../mfc/reference/cwinthread-class.md)。
+派生自[CWinThread](../../mfc/reference/cwinthread-class.md)的对象的 RUNTIME_CLASS。
 
 *pParam*<br/>
-参数要传递到控制函数的参数中的函数声明中所示*pfnThreadProc*。
+要传递到控制函数的参数, 如*pfnThreadProc*中函数声明的参数中所示。
 
 *nPriority*<br/>
-所需的线程优先级。 有关完整列表和可用优先级的说明，请参阅[SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) Windows SDK 中。
+线程所需的优先级。 有关可用优先级的完整列表和说明, 请参阅 Windows SDK 中的[参见 setthreadpriority](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) 。
 
 *nStackSize*<br/>
-以字节为单位的新线程的堆栈中指定的大小。 如果为 0，堆栈大小默认为同一个与创建线程堆栈大小。
+指定新线程堆栈的大小 (以字节为单位)。 如果为 0, 则堆栈大小默认为与创建线程相同的堆栈大小。
 
 *dwCreateFlags*<br/>
-指定一个额外的标记的线程的创建操作进行控制。 此标志可以包含两个值之一：
+指定控制线程创建的其他标志。 此标志可以包含以下两个值之一:
 
-- CREATE_SUSPENDED 开始挂起计数为 1 的线程。 如果你想要初始化的任何成员数据，请使用 CREATE_SUSPENDED`CWinThread`对象，例如[m_bAutoDelete](../../mfc/reference/cwinthread-class.md#m_bautodelete)或派生类中之前在线程开始运行, 的任何成员。 你的初始化完成后，使用[cwinthread:: Resumethread](../../mfc/reference/cwinthread-class.md#resumethread)开始运行的线程。 在线程不会执行直到`CWinThread::ResumeThread`调用。
+- CREATE_SUSPENDED 启动线程, 该线程的挂起计数为1。 如果要在线程开始运行之前初始化`CWinThread`对象的任何成员数据 (如[m_bAutoDelete](../../mfc/reference/cwinthread-class.md#m_bautodelete)或派生类的任何成员), 请使用 CREATE_SUSPENDED。 初始化完成后, 请使用[CWinThread:: ResumeThread](../../mfc/reference/cwinthread-class.md#resumethread)启动运行的线程。 在调用之前`CWinThread::ResumeThread` , 将不会执行该线程。
 
 - **0**创建后立即启动线程。
 
 *lpSecurityAttrs*<br/>
-指向[SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))结构，它指定线程的安全属性。 如果为 NULL，则将使用与创建线程相同的安全属性。 此结构的详细信息，请参阅 Windows SDK。
+指向指定线程的安全属性的[SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))结构。 如果为 NULL, 则将使用与创建线程相同的安全特性。 有关此结构的详细信息, 请参阅 Windows SDK。
 
 ### <a name="return-value"></a>返回值
 
-指向新创建的线程对象，或者如果发生故障，则为 NULL 指针。
+指向新创建的线程对象的指针; 如果发生失败, 则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-第一种形式`AfxBeginThread`创建工作线程。 第二个窗体作为用户界面线程或工作线程创建可以为提供服务的线程。
+的第一种`AfxBeginThread`形式是创建工作线程。 第二个窗体创建一个线程, 该线程可用作用户界面线程或工作线程。
 
-`AfxBeginThread` 创建一个新`CWinThread`对象，调用其[CreateThread](../../mfc/reference/cwinthread-class.md#createthread)函数开始执行线程，并将指针返回到线程。 整个过程进行检查以确保所有对象都都已解除分配正确应创建的任何部分出现故障。 若要结束该线程，请调用[AfxEndThread](#afxendthread)从中的线程或从工作线程控制函数返回。
+`AfxBeginThread`创建一个新`CWinThread`的对象, 调用其[CreateThread](../../mfc/reference/cwinthread-class.md#createthread)函数以开始执行线程, 并返回指向该线程的指针。 在整个过程中进行检查, 以确保在创建过程中的任何部分都不会正确释放所有对象。 若要结束线程, 请从线程内调用[AfxEndThread](#afxendthread) , 或从工作线程的控制函数返回。
 
-多线程处理必须启用该应用程序。否则，此函数将失败。 有关启用多线程处理的详细信息，请参阅[/MD、 /MT、 /LD （使用运行时库）](../../build/reference/md-mt-ld-use-run-time-library.md)下*VisualC++编译器选项*。
+应用程序必须启用多线程处理;否则, 此函数将失败。 有关启用多线程处理的详细信息, 请参阅[/md、/mt、/ld (使用运行时库](../../build/reference/md-mt-ld-use-run-time-library.md),*如C++ Visual 编译器选项*)。
 
-有关详细信息`AfxBeginThread`，请参阅文章[多线程处理：创建辅助线程](../../parallel/multithreading-creating-worker-threads.md)和[多线程处理：创建用户界面线程](../../parallel/multithreading-creating-user-interface-threads.md)。
+有关的详细信息`AfxBeginThread`, 请参阅文章[多线程处理:创建工作线程](../../parallel/multithreading-creating-worker-threads.md)和[多线程:创建用户界面线程](../../parallel/multithreading-creating-user-interface-threads.md)。
 
 ### <a name="example"></a>示例
 
-有关示例，请参阅[csocket:: Attach](../../mfc/reference/csocket-class.md#attach)。
+请参阅[CSocket:: Attach](../../mfc/reference/csocket-class.md#attach)的示例。
 
 ### <a name="requirements"></a>要求
 
-  **标头**afxwin.h
+  **标头**afxwin。h
 
 ## <a name="afxcontextmenumanager"></a> AfxContextMenuManager
 
-指向全局[上下文菜单管理器](ccontextmenumanager-class.md)。
+指向全局[上下文菜单管理器](ccontextmenumanager-class.md)的指针。
 
 ### <a name="syntax"></a>语法
 
@@ -134,7 +134,7 @@ CContextMenuManager* afxContextMenuManager;
 
 ### <a name="requirements"></a>要求
 
-**标头：** afxcontextmenumanager.h
+**标头:** afxcontextmenumanager
 
 ##  <a name="afxendthread"></a>  AfxEndThread
 
@@ -156,13 +156,13 @@ void AFXAPI AfxEndThread(
 
 ### <a name="remarks"></a>备注
 
-必须从调用的线程终止内。
+必须从要终止的线程中调用。
 
-有关详细信息`AfxEndThread`，请参阅文章[多线程处理：终止线程](../../parallel/multithreading-terminating-threads.md)。
+有关的详细信息`AfxEndThread`, 请参阅[多线程处理:终止线程](../../parallel/multithreading-terminating-threads.md)。
 
 ### <a name="requirements"></a>要求
 
-  **标头**afxwin.h
+  **标头**afxwin。h
 
   ## <a name="afxfindresourcehandle"></a>AfxFindResourceHandle
 使用 `AfxFindResourceHandle` 处理资源链并按资源 ID 和资源类型找到特定资源。
@@ -178,7 +178,7 @@ HINSTANCE AFXAPI AfxFindResourceHandle( LPCTSTR lpszName,  LPCTSTR lpszType );
 *lpszName*<br/>
 指向包含资源 ID 的字符串的指针。
 *lpszType*<br/>
-指向资源的类型的指针。 资源类型的列表，请参阅[FindResource](/windows/desktop/api/winbase/nf-winbase-findresourcea) Windows SDK 中。
+指向资源的类型的指针。 有关资源类型的列表, 请参阅 Windows SDK 中的[system.windows.frameworkelement.findresource](/windows/win32/api/winbase/nf-winbase-findresourcew) 。
 
 ### <a name="return-value"></a>返回值
 
@@ -186,11 +186,11 @@ HINSTANCE AFXAPI AfxFindResourceHandle( LPCTSTR lpszName,  LPCTSTR lpszType );
 
 ### <a name="remarks"></a>备注
 
-`AfxFindResourceHandle` 查找特定资源并返回包含该资源的模块的句柄。 该资源可能在任何 MFC 扩展 DLL 已加载。 `AfxFindResourceHandle` 将告知您哪个 DLL 包含该资源。
+`AfxFindResourceHandle` 查找特定资源并返回包含该资源的模块的句柄。 资源可能位于已加载的任何 MFC 扩展 DLL 中。 `AfxFindResourceHandle` 将告知您哪个 DLL 包含该资源。
 
 模块将按以下顺序进行搜索：
 
-1. 主模块 （如果它是 MFC 扩展 DLL）。
+1. 主模块 (如果它是 MFC 扩展 DLL)。
 
 1. 非系统模块。
 
@@ -219,7 +219,7 @@ BOOL AFXAPI AfxFreeLibrary(HINSTANCE hInstLib);
 
 ### <a name="return-value"></a>返回值
 
-如果函数成功，则为 TRUE否则为 FALSE。
+如果函数成功, 则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
@@ -229,19 +229,19 @@ BOOL AFXAPI AfxFreeLibrary(HINSTANCE hInstLib);
 
 使用 `AfxLoadLibrary` 映射 DLL 模块。
 
-请务必使用`AfxFreeLibrary`并`AfxLoadLibrary`(而不是 Win32 函数`FreeLibrary`和`LoadLibrary`) 如果你的应用程序使用多个线程。 使用`AfxLoadLibrary`和`AfxFreeLibrary`确保 MFC 扩展 DLL 加载和卸载不会损坏全局 MFC 状态时执行的启动和关闭代码。
+如果你的应用`AfxFreeLibrary`程序`AfxLoadLibrary`使用多个线程, 请`FreeLibrary`确保`LoadLibrary`使用和 (而不是 Win32 函数和)。 使用`AfxLoadLibrary` 和`AfxFreeLibrary`可确保在加载并卸载 MFC 扩展 DLL 时执行的启动和关闭代码不会损坏全局 mfc 状态。
 
 ### <a name="example"></a>示例
 
-有关示例，请参阅[AfxLoadLibrary](#afxloadlibrary)。
+请参阅[AfxLoadLibrary](#afxloadlibrary)的示例。
 
 ### <a name="requirements"></a>要求
 
-  **标头**afxdll_.h
+  **标头**afxdll_
 
 ##  <a name="afxgetapp"></a>  AfxGetApp
 
-此函数返回的指针可用于访问应用程序信息，例如主消息调度代码或最顶层窗口。
+此函数返回的指针可用于访问应用程序信息, 如主消息调度代码或最顶部的窗口。
 
 ```
 CWinApp* AFXAPI AfxGetApp();
@@ -249,11 +249,11 @@ CWinApp* AFXAPI AfxGetApp();
 
 ### <a name="return-value"></a>返回值
 
-指向单个`CWinApp`应用程序的对象。
+指向应用程序的单个`CWinApp`对象的指针。
 
 ### <a name="remarks"></a>备注
 
-如果此方法返回 NULL，则可能表示，应用程序主窗口具有尚未完全初始化。 它还可能表示存在问题。
+如果此方法返回 NULL, 则可能表示应用程序主窗口尚未完全初始化。 它也可能表示存在问题。
 
 ### <a name="example"></a>示例
 
@@ -261,7 +261,7 @@ CWinApp* AFXAPI AfxGetApp();
 
 ### <a name="requirements"></a>要求
 
-  **标头**afxwin.h
+  **标头**afxwin。h
 
 ##  <a name="afxgetappname"></a>  AfxGetAppName
 
@@ -281,7 +281,7 @@ LPCTSTR AFXAPI AfxGetAppName();
 
 ### <a name="requirements"></a>要求
 
-  **标头**afxwin.h
+  **标头**afxwin。h
 
 ##  <a name="afxgetinstancehandle"></a>  AfxGetInstanceHandle
 
@@ -293,11 +293,11 @@ HINSTANCE  AFXAPI AfxGetInstanceHandle();
 
 ### <a name="return-value"></a>返回值
 
-与当前实例的应用程序的 HINSTANCE。 如果从内部与 MFC 的 USRDLL 版本链接的 DLL 调用，则返回对 DLL HINSTANCE。
+应用程序的当前实例的 HINSTANCE。 如果从使用 MFC 的 USRDLL 版本链接的 DLL 中进行调用, 则会返回 DLL 的 HINSTANCE。
 
 ### <a name="remarks"></a>备注
 
-`AfxGetInstanceHandle` 始终返回可执行文件的 HINSTANCE (。EXE) 除非调用内，否则与 MFC 的 USRDLL 版本链接 DLL。 在这种情况下，它返回 HINSTANCE 到 DLL。
+`AfxGetInstanceHandle`始终返回可执行文件的 HINSTANCE (。EXE), 除非从与 MFC 的 USRDLL 版本链接的 DLL 中进行调用。 在这种情况下, 它会将 HINSTANCE 返回到 DLL。
 
 ### <a name="example"></a>示例
 
@@ -305,11 +305,11 @@ HINSTANCE  AFXAPI AfxGetInstanceHandle();
 
 ### <a name="requirements"></a>要求
 
-  **标头**afxwin.h
+  **标头**afxwin。h
 
-##  <a name="afxgetmainwnd"></a>  AfxGetMainWnd
+##  <a name="afxgetmainwnd"></a>AfxGetMainWnd
 
-如果你的应用程序是 OLE 服务器，调用此函数可检索到的应用程序而不是直接引用的活动主窗口的指针[m_pMainWnd](../../mfc/reference/cwinthread-class.md#m_pmainwnd)应用程序对象的成员。
+如果你的应用程序是 OLE 服务器, 请调用此函数来检索指向应用程序活动主窗口的指针, 而不是直接引用应用程序对象的[m_pMainWnd](../../mfc/reference/cwinthread-class.md#m_pmainwnd)成员。
 
 ```
 CWnd* AFXAPI AfxGetMainWnd();
@@ -319,13 +319,13 @@ CWnd* AFXAPI AfxGetMainWnd();
 
 如果服务器具有在容器内处于就地活动状态的对象，并且此容器处于活动状态，此函数将返回一个指针，该指针指向包含就地活动文档的框架窗口对象。
 
-如果没有为容器内的处于就地活动状态的对象，或者你的应用程序不是 OLE 服务器，此函数仅返回*m_pMainWnd*的应用程序对象。
+如果容器中没有处于就地活动状态的对象, 或者您的应用程序不是 OLE 服务器, 则此函数只返回您的应用程序对象的*m_pMainWnd* 。
 
 如果 `AfxGetMainWnd` 是从应用程序的主线程调用的，它将根据上述规则返回应用程序的主窗口。 如果该函数是从应用程序中的辅助线程调用的，它将返回与执行调用的线程关联的主窗口。
 
 ### <a name="remarks"></a>备注
 
-如果你的应用程序不是 OLE 服务器，则调用此函数等同于直接引用*m_pMainWnd*应用程序对象的成员。
+如果你的应用程序不是 OLE 服务器, 则调用此函数等效于直接引用应用程序对象的*m_pMainWnd*成员。
 
 ### <a name="example"></a>示例
 
@@ -333,11 +333,11 @@ CWnd* AFXAPI AfxGetMainWnd();
 
 ### <a name="requirements"></a>要求
 
-  **标头**afxwin.h
+  **标头**afxwin。h
 
-##  <a name="afxgetperuserregistration"></a>  AfxGetPerUserRegistration
+##  <a name="afxgetperuserregistration"></a>AfxGetPerUserRegistration
 
-使用此函数可确定应用程序是否将注册表访问重定向**HKEY_CURRENT_USER** ( **HKCU**) 节点。
+使用此函数可确定应用程序是否将注册表访问重定向到**HKEY_CURRENT_USER** ( **HKCU**) 节点。
 
 ```
 BOOL AFXAPI AfxGetPerUserRegistration();
@@ -345,21 +345,21 @@ BOOL AFXAPI AfxGetPerUserRegistration();
 
 ### <a name="return-value"></a>返回值
 
-TRUE 表示注册表信息将定向到的 HKCU 节点;FALSE 表示应用程序将注册表信息写入到默认的节点。 默认的节点是**HKEY_CLASSES_ROOT** ( **HKCR**)。
+TRUE 指示将注册表信息定向到 HKCU 节点;FALSE 表示应用程序将注册表信息写入默认节点。 默认节点为**HKEY_CLASSES_ROOT** ( **HKCR**)。
 
 ### <a name="remarks"></a>备注
 
-如果启用注册表重定向，则框架会将访问权限**HKCR**到**HKEY_CURRENT_USER\Software\Classes**。 仅 MFC 和 ATL 框架受重定向影响。
+如果启用注册表重定向, 则该框架会将访问从**HKCR**重定向到**HKEY_CURRENT_USER\Software\Classes**。 仅 MFC 和 ATL 框架受重定向影响。
 
-若要更改是否在应用程序将重定向注册表访问权限，请使用[AfxSetPerUserRegistration](#afxsetperuserregistration)。
+若要更改应用程序是否重定向注册表访问, 请使用[AfxSetPerUserRegistration](#afxsetperuserregistration)。
 
 ### <a name="requirements"></a>要求
 
-  **标头**afxstat_.h
+  **标头**afxstat_
 
-##  <a name="afxgetresourcehandle"></a>  AfxGetResourceHandle
+##  <a name="afxgetresourcehandle"></a>AfxGetResourceHandle
 
-使用 HINSTANCE 处理返回的此函数可直接访问应用程序的资源，在调用 Windows 函数`FindResource`。
+使用此函数返回的 HINSTANCE 句柄可以直接访问应用程序的资源, 例如, 调用 Windows 函数`FindResource`。
 
 ```
 extern HINSTANCE  AfxGetResourceHandle();
@@ -367,7 +367,7 @@ extern HINSTANCE  AfxGetResourceHandle();
 
 ### <a name="return-value"></a>返回值
 
-默认资源的应用程序的加载位置 HINSTANCE 句柄。
+HINSTANCE 句柄, 其中加载了应用程序的默认资源。
 
 ### <a name="example"></a>示例
 
@@ -375,11 +375,11 @@ extern HINSTANCE  AfxGetResourceHandle();
 
 ### <a name="requirements"></a>要求
 
-  **标头**afxwin.h
+  **标头**afxwin。h
 
-##  <a name="afxgetthread"></a>  AfxGetThread
+##  <a name="afxgetthread"></a>AfxGetThread
 
-调用此函数可获取一个指向[CWinThread](../../mfc/reference/cwinthread-class.md)对象，表示当前正在执行的线程。
+调用此函数可获取指向[CWinThread](../../mfc/reference/cwinthread-class.md)对象的指针, 该对象表示当前正在执行的线程。
 
 ```
 CWinThread* AfxGetThread();
@@ -387,14 +387,14 @@ CWinThread* AfxGetThread();
 
 ### <a name="return-value"></a>返回值
 
-指向当前正在执行的线程;否则为，为 NULL。
+指向当前正在执行的线程的指针;否则为 NULL。
 
 ### <a name="remarks"></a>备注
 
 必须从所需线程内部调用。
 
 > [!NOTE]
->  如果要将迁移 MFC 项目调用`AfxGetThread`从视觉对象C++版本 4.2、 5.0 或 6.0`AfxGetThread`调用[AfxGetApp](#afxgetapp)如果未找到线程时。 在较新版本的编译器，`AfxGetThread`如果未找到线程时，则返回 NULL。 如果需要应用程序线程，则必须调用 `AfxGetApp`。
+>  如果要移植`AfxGetThread`从 Visual C++版本4.2、5.0 或6.0 调用的 MFC 项目, `AfxGetThread`如果找不到线程, 将调用[AfxGetApp](#afxgetapp) 。 在最新版本的编译器中, `AfxGetThread`如果未找到任何线程, 则返回 NULL。 如果需要应用程序线程，则必须调用 `AfxGetApp`。
 
 ### <a name="example"></a>示例
 
@@ -402,11 +402,11 @@ CWinThread* AfxGetThread();
 
 ### <a name="requirements"></a>要求
 
-  **标头**afxwin.h
+  **标头**afxwin。h
 
-##  <a name="afxinitrichedit"></a>  AfxInitRichEdit
+##  <a name="afxinitrichedit"></a>AfxInitRichEdit
 
-调用此函数可初始化 rich edit 控件 （版本 1.0） 的应用程序。
+调用此函数可初始化应用程序的 rich edit 控件 (版本 1.0)。
 
 ```
 BOOL AFXAPI AfxInitRichEdit();
@@ -414,19 +414,19 @@ BOOL AFXAPI AfxInitRichEdit();
 
 ### <a name="remarks"></a>备注
 
-提供此函数是为了向后兼容性。 新的应用程序应使用[AfxInitRichEdit2](#afxinitrichedit2)。
+提供此函数是为了向后兼容。 新应用程序应使用[AfxInitRichEdit2](#afxinitrichedit2)。
 
-`AfxInitRichEdit` 加载 RICHED32。若要初始化 rich edit 控件的 1.0 版的 DLL。 若要使用版本 2.0 和 3.0 rich edit 控件，RICHED20。需要加载 DLL。 这通过调用来实现[AfxInitRichEdit2](#afxinitrichedit2)。
+`AfxInitRichEdit`加载 RICHED32。用于初始化 rich edit 控件的1.0 版本的 DLL。 若要使用 rich edit 控件的2.0 和3.0 版本, 请 RICHED20.DLL。需要加载 DLL。 这是通过调用[AfxInitRichEdit2](#afxinitrichedit2)来完成的。
 
-若要更新丰富编辑现有视觉对象中的控件C++到版本 2.0 中，应用程序打开。RC 文件作为文本，更改每个格式文本编辑控件从"RICHEDIT"到"RichEdit20a"的类名。 然后将为调用`AfxInitRichEdit`与`AfxInitRichEdit2`。
+若要将现有视觉对象C++中的 rich edit 控件更新到版本 2.0, 请打开。RC 文件作为文本, 将每个 rich edit 控件的类名从 "RICHEDIT" 更改为 "RichEdit20a"。 然后, 将对的`AfxInitRichEdit`调用`AfxInitRichEdit2`替换为。
 
-此函数还可以初始化公共控件库，如果库尚未初始化的进程。 如果你直接从 MFC 应用程序使用 rich edit 控件，则应调用此函数可确保 MFC 程序正确初始化格式文本编辑控件运行时。 如果调用的 Create 方法[CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)， [CRichEditView](../../mfc/reference/cricheditview-class.md)，或[CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)，通常无需调用此函数，但在某些情况下可能会必需。
+如果尚未为进程初始化库, 此函数还会初始化公共控制库。 如果直接在 MFC 应用程序中使用 rich edit 控件, 则应调用此函数以确保 MFC 正确地初始化了丰富的编辑控件运行时。 如果调用[CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)、 [CRichEditView](../../mfc/reference/cricheditview-class.md)或[CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)的 Create 方法, 则通常不需要调用此函数, 但在某些情况下, 可能需要这样做。
 
 ### <a name="requirements"></a>要求
 
-  **标头**afxwin.h
+  **标头**afxwin。h
 
-##  <a name="afxinitrichedit2"></a>  AfxInitRichEdit2
+##  <a name="afxinitrichedit2"></a>AfxInitRichEdit2
 
 调用此函数为应用程序初始化 Rich Edit 控件（2.0 版和更高版本）。
 
@@ -436,13 +436,13 @@ BOOL AFXAPI AfxInitRichEdit2();
 
 ### <a name="remarks"></a>备注
 
-调用此函数以加载 RICHED20.DLL 并初始化 Rich Edit 控件 2.0 版。 如果调用的 Create 方法[CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)， [CRichEditView](../../mfc/reference/cricheditview-class.md)，或[CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)，通常无需调用此函数，但在某些情况下可能会必需。
+调用此函数以加载 RICHED20.DLL 并初始化 Rich Edit 控件 2.0 版。 如果调用[CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)、 [CRichEditView](../../mfc/reference/cricheditview-class.md)或[CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)的 Create 方法, 则通常不需要调用此函数, 但在某些情况下, 可能需要这样做。
 
 ### <a name="requirements"></a>要求
 
-  **标头**afxwin.h
+  **标头**afxwin。h
 
-  ## <a name="afxisextendedframeclass"></a>  AfxIsExtendedFrameClass
+  ## <a name="afxisextendedframeclass"></a>AfxIsExtendedFrameClass
 确定给定窗口是否是扩展框架对象。
 
 ### <a name="syntax"></a>语法
@@ -454,15 +454,15 @@ BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );
 ### <a name="parameters"></a>参数
 
 *pWnd*<br/>
-[in]指向派生自的对象的指针`CWnd`。
+中指向派生自`CWnd`的对象的指针。
 
 ### <a name="return-value"></a>返回值
 
-如果提供的窗口是扩展的框架对象; 则为 TRUE否则为 FALSE。
+如果提供的窗口是扩展框架对象, 则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-此方法返回 TRUE，如果*pWnd*派生以下类之一：
+如果*pWnd*从以下类之一派生, 则此方法返回 TRUE:
 
 - `CFrameWndEx`
 
@@ -480,7 +480,7 @@ BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );
 
 **标头：** afxpriv.h
 
-## <a name="afxismfctoolbar"></a> AfxIsMFCToolBar
+## <a name="afxismfctoolbar"></a>AfxIsMFCToolBar
 
 确定给定窗口是否为工具栏对象。
 
@@ -493,23 +493,23 @@ BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);
 ### <a name="parameters"></a>参数
 
 *pWnd*<br/>
-[in]指向派生自的对象的指针`CWnd`。
+中指向派生自`CWnd`的对象的指针。
 
 ### <a name="return-value"></a>返回值
 
-如果提供的窗口为工具栏对象; 则为 TRUE否则为 FALSE。
+如果提供的窗口为工具栏对象, 则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-此方法返回`TRUE`如果*pWnd*派生自`CMFCToolBar`。 此方法在您必须验证函数或方法参数是否是 `CMFCToolBar` 对象时很有用。
+如果 pWnd 派生`TRUE`自 `CMFCToolBar`, 则此方法返回。 此方法在您必须验证函数或方法参数是否是 `CMFCToolBar` 对象时很有用。
 
 ### <a name="requirements"></a>要求
 
 **标头：** afxpriv.h
 
-## <a name="afxkeyboardmanager"></a> AfxKeyboardManager
+## <a name="afxkeyboardmanager"></a>AfxKeyboardManager
 
-指向全局[键盘管理器](ckeyboardmanager-class.md)。
+指向全局[键盘管理器](ckeyboardmanager-class.md)的指针。
 
 ### <a name="syntax"></a>语法
 
@@ -519,7 +519,7 @@ CKeyboardManager* afxKeyboardManager;
 
 ### <a name="requirements"></a>要求
 
-**标头：** afxkeyboardmanager.h
+**标头:** afxkeyboardmanager
 
 ##  <a name="afxloadlibrary"></a>  AfxLoadLibrary
 
@@ -532,37 +532,37 @@ HINSTANCE AFXAPI AfxLoadLibrary(LPCTSTR lpszModuleName);
 ### <a name="parameters"></a>参数
 
 *lpszModuleName*<br/>
-指向以 null 结尾的字符串，其中包含的模块的名称 (任一。DLL 或。EXE 文件）。 指定的名称是该模块的文件名。
+指向以 null 结尾的字符串, 该字符串包含模块的名称 (。DLL 或。EXE 文件)。 指定的名称是模块的文件名。
 
-如果该字符串指定的路径，但该文件不存在指定的目录中，函数将失败。
+如果字符串指定了一个路径, 但该文件不在指定的目录中, 则该函数将失败。
 
-如果未指定路径和文件扩展名省略，默认扩展插件。追加 DLL。 但是，文件名字符串可以不包含尾随点字符 （.） 来指示模块名称包含任何扩展。 时未指定路径，该函数搜索的文件按以下顺序：
+如果未指定路径, 并且省略了文件扩展名, 则默认扩展名为。附加了 DLL。 但是, 文件名字符串可包含尾随的点字符 (.) 来指示模块名称没有扩展名。 如果未指定路径, 函数将按以下顺序搜索文件:
 
-- 加载应用程序目录。
+- 从中加载应用程序的目录。
 
-- 当前目录中。
+- 当前目录。
 
-- **Windows 95/98:** Windows 系统目录。 **Windows NT:** 32 位 Windows 系统目录。 此目录的名称是 SYSTEM32。
+- **Windows 95/98:** Windows 系统目录。 **Windows NT:** 32位 Windows 系统目录。 此目录的名称为 SYSTEM32。
 
-- **Windows NT:** 16 位 Windows 系统目录。 获取此目录的路径没有 Win32 函数，但它会搜索。 此目录的名称是系统。
+- **仅适用于 Windows NT:** 16位 Windows 系统目录。 没有可获取此目录路径的 Win32 函数, 但会搜索该路径。 此目录的名称为 SYSTEM。
 
-- Windows 目录中。
+- Windows 目录。
 
 - PATH 环境变量中列出的目录。
 
 ### <a name="return-value"></a>返回值
 
-如果函数成功，返回值是模块的句柄。 如果函数失败，返回值为 NULL。
+如果函数成功, 则返回值为模块的句柄。 如果函数失败, 则返回值为 NULL。
 
 ### <a name="remarks"></a>备注
 
-它将返回一个句柄，可在[GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)获取 DLL 函数的地址。 `AfxLoadLibrary` 此外可以用于映射其他可执行模块。
+它将返回一个句柄, 该句柄可用于[GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress)以获取 DLL 函数的地址。 `AfxLoadLibrary`还可用于映射其他可执行模块。
 
-每个进程维护每个已加载的库模块引用的计数。 此引用计数会在每次递增`AfxLoadLibrary`称为，将减少每次`AfxFreeLibrary`调用。 当引用计数达到零时，将从调用进程的地址空间取消映射模块，并且句柄不再有效。
+每个进程都维护每个已加载库模块的引用计数。 每次调用时, 此引用`AfxLoadLibrary`计数都将递增, 每次`AfxFreeLibrary`调用时, 都将减少。 当引用计数达到零时，将从调用进程的地址空间取消映射模块，并且句柄不再有效。
 
-请务必使用`AfxLoadLibrary`并`AfxFreeLibrary`(而不是 Win32 函数`LoadLibrary`和`FreeLibrary`) 如果你的应用程序使用多个线程和动态加载的 MFC 扩展 DLL。 使用`AfxLoadLibrary`和`AfxFreeLibrary`也可确保在加载和卸载 MFC 扩展 DLL 时执行的启动和关闭代码不会损坏全局 MFC 状态。
+如果应用程序使用`AfxLoadLibrary`多个线程并且动态加载 MFC 扩展`FreeLibrary`DLL, 请确保使用和`AfxFreeLibrary` (而不是 Win32 函数`LoadLibrary`和)。 使用`AfxLoadLibrary` 并`AfxFreeLibrary`确保加载并卸载 MFC 扩展 DLL 时执行的启动和关闭代码不会损坏全局 mfc 状态。
 
-使用`AfxLoadLibrary`在应用程序要求您动态链接到 MFC; 的 DLL 版本的标头文件`AfxLoadLibrary`，Afxdll_.h，才包括当 MFC 已链接到 dll 的应用程序。 这是特意设计因为您必须链接到使用或创建 MFC 扩展 Dll 的 MFC 的 DLL 版本。
+在`AfxLoadLibrary`应用程序中使用时, 要求您动态链接到 MFC 的 DLL 版本; 如果将 mfc `AfxLoadLibrary`作为 DLL 链接到应用程序, 则仅包含 Afxdll_ 的头文件。 这是设计使然, 因为必须链接到 MFC 的 DLL 版本才能使用或创建 MFC 扩展 Dll。
 
 ### <a name="example"></a>示例
 
@@ -572,11 +572,11 @@ HINSTANCE AFXAPI AfxLoadLibrary(LPCTSTR lpszModuleName);
 
 ### <a name="requirements"></a>要求
 
-  **标头**afxdll_.h
+  **标头**afxdll_
 
-## <a name="afxmenutearoffmanager"></a> AfxMenuTearOffManager
+## <a name="afxmenutearoffmanager"></a>AfxMenuTearOffManager
 
-指向全局[tearoff 菜单管理器](cmenutearoffmanager-class.md)。
+指向全局[tearoff 菜单管理器](cmenutearoffmanager-class.md)的指针。
 
 ### <a name="syntax"></a>语法
 
@@ -586,11 +586,11 @@ CMenuTearOffManager* g_pTearOffMenuManager;
 
 ### <a name="requirements"></a>要求
 
-**标头：** afxmenutearoffmanager.h
+**标头:** afxmenutearoffmanager
 
 ## <a name="afxmousemanager"></a>  AfxMouseManager
 
-指向全局[鼠标管理器](cmousemanager-class.md)。
+指向全局[鼠标管理器](cmousemanager-class.md)的指针。
 
 ### <a name="syntax"></a>语法
 
@@ -600,9 +600,9 @@ CMouseManager* afxMouseManager;
 
 ### <a name="requirements"></a>要求
 
-**标头：** afxmousemanager.h
+**标头:** afxmousemanager
 
-##  <a name="afxregisterclass"></a>  AfxRegisterClass
+##  <a name="afxregisterclass"></a>AfxRegisterClass
 
 使用此函数在使用 MFC 的 DLL 中注册窗口类。
 
@@ -613,17 +613,17 @@ BOOL AFXAPI AfxRegisterClass(WNDCLASS* lpWndClass);
 ### <a name="parameters"></a>参数
 
 *lpWndClass*<br/>
-指向[WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)结构，它包含有关要注册的窗口类信息。 此结构的详细信息，请参阅 Windows SDK。
+指向[WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw)结构的指针, 该结构包含要注册的窗口类的相关信息。 有关此结构的详细信息, 请参阅 Windows SDK。
 
 ### <a name="return-value"></a>返回值
 
-如果已成功注册的类; 则为 TRUE否则为 FALSE。
+如果成功注册了类, 则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
 如果使用此函数，则将在卸载 DLL 时自动取消注册类。
 
-在非 DLL 版本中，`AfxRegisterClass`标识符定义为宏映射到 Windows 函数`RegisterClass`，因为应用程序中注册的类会自动注销。 如果您使用`AfxRegisterClass`而不是`RegisterClass`，可以使用你的代码而无需更改应用程序中并在 DLL 中。
+在非 DLL 生成中, `AfxRegisterClass`标识符定义为映射到 Windows 函数`RegisterClass`的宏, 因为在应用程序中注册的类会自动取消注册。 如果你使用`AfxRegisterClass` `RegisterClass`而不是, 则可以使用你的代码, 而无需在应用程序和 DLL 中进行更改。
 
 ### <a name="example"></a>示例
 
@@ -631,9 +631,9 @@ BOOL AFXAPI AfxRegisterClass(WNDCLASS* lpWndClass);
 
 ### <a name="requirements"></a>要求
 
-  **标头**afxwin.h
+  **标头**afxwin。h
 
-##  <a name="afxregisterwndclass"></a>  AfxRegisterWndClass
+##  <a name="afxregisterwndclass"></a>AfxRegisterWndClass
 
 允许您注册自己的窗口类。
 
@@ -648,28 +648,28 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
 ### <a name="parameters"></a>参数
 
 *nClassStyle*<br/>
-指定的 Windows 类样式或样式，使用按位或创建的组合 ( **&#124;** ) 运算符，窗口类。 有关类样式的列表，请参阅[WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) Windows SDK 中的结构。 如果为 NULL，则将按如下所示设置默认值：
+指定窗口类的 Windows 类样式或样式组合, 使用按位 "或" ( **&#124;** ) 运算符创建。 有关类样式的列表, 请参阅 Windows SDK 中的[WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw)结构。 如果为 NULL, 则默认值将设置如下:
 
-- 将鼠标样式设置为 CS_DBLCLKS，它会将双击消息到窗口过程当用户双击鼠标。
+- 将鼠标样式设置为 CS_DBLCLKS, 当用户双击鼠标时, 它会将双击消息发送到窗口过程。
 
-- 设置为 Windows 标准 IDC_ARROW 的箭头光标样式。
+- 将箭头光标样式设置为 Windows standard IDC_ARROW。
 
-- 设置为 NULL，背景画笔，因此窗口不会擦除其背景。
+- 将背景画笔设置为 NULL, 使窗口不会擦除其背景。
 
 - 将图标设置为标准的 Windows 徽标图标（飘扬的旗帜）。
 
 *hCursor*<br/>
-指定要在从窗口类创建的每个窗口中安装的光标资源的句柄。 如果使用默认值为**0**，将显示标准的 IDC_ARROW 光标。
+指定要在从窗口类创建的每个窗口中安装的光标资源的句柄。 如果使用默认值**0**, 您将获得标准的 IDC_ARROW 光标。
 
 *hbrBackground*<br/>
-指定要在从窗口类创建的每个窗口中安装的画笔资源的句柄。 如果使用默认值为**0**，将拥有 NULL 背景画笔，并且您的窗口，默认情况下，不会擦除其背景处理时[WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd)。
+指定要在从窗口类创建的每个窗口中安装的画笔资源的句柄。 如果使用默认值**0**, 则将具有 NULL 背景画笔, 默认情况下, 在处理[WM_ERASEBKGND](/windows/win32/winmsg/wm-erasebkgnd)时, 窗口不会擦除其背景。
 
 *hIcon*<br/>
-指定要在从窗口类创建的每个窗口中安装的图标资源的句柄。 如果使用默认值为**0**，您将获得标准的飘扬标志 Windows 徽标图标。
+指定要在从窗口类创建的每个窗口中安装的图标资源的句柄。 如果使用默认值**0**, 您将获得标准的飘扬-标记 Windows 徽标图标。
 
 ### <a name="return-value"></a>返回值
 
-包含类名的以 null 结尾的字符串。 可以将传递到此类名`Create`中的成员函数`CWnd`或其他**CWnd-** 派生类，以创建窗口。 该名称由 Microsoft 基础类库生成。
+包含类名的以 null 结尾的字符串。 可以将此类名称传递到或`Create`其他**CWnd**派生`CWnd`类中的成员函数以创建窗口。 该名称由 Microsoft 基础类库生成。
 
 > [!NOTE]
 >  返回值是指向静态缓冲区的指针。 若要保存此字符串，请将其分配到 `CString` 变量。
@@ -680,9 +680,9 @@ Microsoft 基础类库将自动为您注册若干标准窗口类。 如果要注
 
 由 `AfxRegisterWndClass` 为类注册的名称仅依赖于参数。 如果使用相同的参数调用 `AfxRegisterWndClass` 多次，它只会在首次调用时注册类。 如果使用相同的参数继续对 `AfxRegisterWndClass` 进行调用，则只会返回已注册的类名。
 
-如果使用相同的参数为多个 CWnd 派生类调用 `AfxRegisterWndClass`，而不是为每个类获得单独的窗口类，则每个类都将共享同一窗口类。 如果使用 CS_CLASSDC 类样式，这会导致问题。 而不是多个 CS_CLASSDC 窗口类，最终会得到一个 CS_CLASSDC 窗口类及其所有C++中使用该类的 windows 共享同一个域控制器。 若要避免此问题，请调用[AfxRegisterClass](#afxregisterclass)以注册类。
+如果使用相同的参数为多个 CWnd 派生类调用 `AfxRegisterWndClass`，而不是为每个类获得单独的窗口类，则每个类都将共享同一窗口类。 如果使用 CS_CLASSDC 类样式, 这可能会导致问题。 最终使用一个 CS_CLASSDC 窗口类, 而不是多个 CS_CLASSDC 窗口类, 而使用C++该类的所有窗口共享同一 DC。 若要避免此问题, 请调用[AfxRegisterClass](#afxregisterclass)来注册该类。
 
-请参阅技术说明[TN001:窗口类注册](../../mfc/tn001-window-class-registration.md)有关详细信息窗口类注册和`AfxRegisterWndClass`函数。
+请参阅技术说明[TN001:窗口类注册](../../mfc/tn001-window-class-registration.md) , 详细了解窗口类注册`AfxRegisterWndClass`和函数。
 
 ### <a name="example"></a>示例
 
@@ -690,11 +690,11 @@ Microsoft 基础类库将自动为您注册若干标准窗口类。 如果要注
 
 ### <a name="requirements"></a>要求
 
-  **标头**afxwin.h
+  **标头**afxwin。h
 
-##  <a name="afxsetperuserregistration"></a>  AfxSetPerUserRegistration
+##  <a name="afxsetperuserregistration"></a>AfxSetPerUserRegistration
 
-设置是否在应用程序将注册表访问重定向**HKEY_CURRENT_USER** ( **HKCU**) 节点。
+设置应用程序是否将注册表访问重定向到**HKEY_CURRENT_USER** ( **HKCU**) 节点。
 
 ```
 void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
@@ -703,25 +703,25 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 ### <a name="parameters"></a>参数
 
 *bEnable*<br/>
-[in]TRUE 表示注册表信息将定向到的 HKCU 节点;FALSE 表示应用程序将注册表信息写入到默认的节点。 默认的节点是**HKEY_CLASSES_ROOT** ( **HKCR**)。
+中TRUE 指示将注册表信息定向到 HKCU 节点;FALSE 表示应用程序将注册表信息写入默认节点。 默认节点为**HKEY_CLASSES_ROOT** ( **HKCR**)。
 
 ### <a name="remarks"></a>备注
 
-Windows Vista，访问注册表，通常可用的应用程序之前**HKEY_CLASSES_ROOT**节点。 但是，与 Windows Vista 或更高版本的操作系统，必须在提升模式下将 HKCR 写入运行应用程序。
+在 Windows Vista 之前, 访问注册表的应用程序通常使用**HKEY_CLASSES_ROOT**节点。 但是, 对于 Windows Vista 或更高版本的操作系统, 必须在提升模式下运行应用程序才能写入 HKCR。
 
-此方法使应用程序可以读取和写入注册表，而无需通过将从 HKCR 到 HKCU 注册表访问重定向在提升模式下运行。 有关详细信息，请参阅 [Linker Property Pages](../../build/reference/linker-property-pages.md)。
+此方法使应用程序能够在不以提升模式运行的情况下读取和写入注册表, 只需将注册表访问从 HKCR 重定向到 HKCU 即可。 有关详细信息，请参阅 [Linker Property Pages](../../build/reference/linker-property-pages.md)。
 
-如果启用注册表重定向，则框架会将访问从到的 HKCR **HKEY_CURRENT_USER\Software\Classes**。 仅 MFC 和 ATL 框架受重定向影响。
+如果启用注册表重定向, 则该框架会将访问从 HKCR 重定向到**HKEY_CURRENT_USER\Software\Classes**。 仅 MFC 和 ATL 框架受重定向影响。
 
 默认实现访问 HKCR 下的注册表。
 
 ### <a name="requirements"></a>要求
 
-  **标头**afxstat_.h
+  **标头**afxstat_
 
-##  <a name="afxsetresourcehandle"></a>  AfxSetResourceHandle
+##  <a name="afxsetresourcehandle"></a>AfxSetResourceHandle
 
-使用此函数设置确定的默认资源的应用程序的加载位置的 HINSTANCE 句柄。
+使用此函数设置用于确定应用程序的默认资源加载位置的 HINSTANCE 句柄。
 
 ```
 void AFXAPI AfxSetResourceHandle(HINSTANCE hInstResource);
@@ -738,11 +738,11 @@ void AFXAPI AfxSetResourceHandle(HINSTANCE hInstResource);
 
 ### <a name="requirements"></a>要求
 
-  **标头**afxwin.h
+  **标头**afxwin。h
 
 ## <a name="afxshellmanager"></a>  AfxShellManager
 
-指向全局[shell 管理器](cshellmanager-class.md)。
+指向全局[shell 管理器](cshellmanager-class.md)的指针。
 
 ### <a name="syntax"></a>语法
 
@@ -752,7 +752,7 @@ CShellManager* afxShellManager;
 
 ### <a name="requirements"></a>要求
 
-**标头：** afxshellmanager.h
+**标头:** afxshellmanager
 
 ##  <a name="afxsocketinit"></a>  AfxSocketInit
 
@@ -765,7 +765,7 @@ BOOL AfxSocketInit(WSADATA* lpwsaData = NULL);
 ### <a name="parameters"></a>参数
 
 *lpwsaData*<br/>
-一个指向[WSADATA](/windows/desktop/api/winsock2/ns-winsock2-wsadata)结构。 如果*lpwsaData*不等于 NULL，然后的地址`WSADATA`结构填充通过调用`WSAStartup`。 此函数还确保在应用程序终止前为您调用 `WSACleanup`。
+指向[WSADATA](/windows/win32/api/winsock2/ns-winsock2-wsadata)结构的指针。 如果*lpwsaData*不等于 NULL, 则通过调用来`WSADATA` `WSAStartup`填充结构的地址。 此函数还确保在应用程序终止前为您调用 `WSACleanup`。
 
 ### <a name="return-value"></a>返回值
 
@@ -777,11 +777,11 @@ BOOL AfxSocketInit(WSADATA* lpwsaData = NULL);
 
 ### <a name="requirements"></a>要求
 
-  **标头**afxsock.h
+  **标头**afxsock
 
 ## <a name="afxusertoolsmanager"></a>  AfxUserToolsManager
 
-指向全局[用户工具管理器](cusertoolsmanager-class.md)。
+指向全局[用户工具管理器](cusertoolsmanager-class.md)的指针。
 
 ### <a name="syntax"></a>语法
 
@@ -791,11 +791,11 @@ CUserToolsManager* afxUserToolsManager;
 
 ### <a name="requirements"></a>要求
 
-**标头：** afxusertoolsmanager.h
+**标头:** afxusertoolsmanager
 
-##  <a name="afxwininit"></a>  AfxWinInit
+##  <a name="afxwininit"></a>AfxWinInit
 
-MFC 提供调用此函数`WinMain`函数，作为的一部分[CWinApp](../../mfc/reference/cwinapp-class.md)的基于 GUI 的应用程序，以初始化 MFC 的初始化。
+此函数由 MFC 提供`WinMain`的函数调用, 作为基于 GUI 的应用程序的[CWinApp](../../mfc/reference/cwinapp-class.md)初始化的一部分, 用于初始化 MFC。
 
 ```
 BOOL AFXAPI AfxWinInit(
@@ -811,22 +811,22 @@ BOOL AFXAPI AfxWinInit(
 当前正在运行的模块的句柄。
 
 *hPrevInstance*<br/>
-应用程序的前一个实例句柄。 为基于 Win32 的应用程序，此参数始终是**NULL**。
+应用程序的前一个实例的句柄。 对于基于 Win32 的应用程序, 此参数始终为**NULL**。
 
 *lpCmdLine*<br/>
-指向一个以 null 结尾的字符串，指定命令行应用程序。
+指向以 null 结尾的字符串, 用于指定应用程序的命令行。
 
 *nCmdShow*<br/>
-指定将如何显示 GUI 应用程序的主窗口。
+指定 GUI 应用程序的主窗口的显示方式。
 
 ### <a name="remarks"></a>备注
 
-为控制台应用程序，其中不使用 MFC 提供`WinMain`函数，必须调用`AfxWinInit`直接以初始化 MFC。
+对于不使用 MFC 提供`WinMain`函数的控制台应用程序, 必须直接调用`AfxWinInit`以初始化 mfc。
 
-如果您调用`AfxWinInit`自己，应声明的实例`CWinApp`类。 为控制台应用程序，您可能选择不派生您自己的类从`CWinApp`改为使用的实例和`CWinApp`直接。 此技术是如果决定将您的应用程序的所有功能的实现中相应**主要**。
+如果您亲自`AfxWinInit`调用, 则应声明一个`CWinApp`类的实例。 对于控制台应用程序, 您可以选择不从`CWinApp`派生您自己的类, 而是直接使用的`CWinApp`实例。 如果你决定将应用程序的所有功能保留在**主**实现中, 则此方法适用。
 
 > [!NOTE]
->  当它创建激活上下文的程序集时，MFC 使用用户模块提供的清单资源。 激活上下文是在 `AfxWinInit` 中创建的。 有关详细信息，请参阅[支持 MFC 模块状态中的激活上下文](../../mfc/support-for-activation-contexts-in-the-mfc-module-state.md)。
+>  当它为程序集创建激活上下文时, MFC 使用用户模块提供的清单资源。 激活上下文是在 `AfxWinInit` 中创建的。 有关详细信息, 请参阅[MFC 模块状态中的激活上下文支持](../../mfc/support-for-activation-contexts-in-the-mfc-module-state.md)。
 
 ### <a name="example"></a>示例
 
@@ -834,11 +834,11 @@ BOOL AFXAPI AfxWinInit(
 
 ### <a name="requirements"></a>要求
 
-  **标头**afxwin.h
+  **标头**afxwin。h
 
 ## <a name="see-also"></a>请参阅
 
-[宏和全局函数](mfc-macros-and-globals.md)<br/>
+[宏和全局](mfc-macros-and-globals.md)<br/>
 [CWinApp 类](cwinapp-class.md)<br/>
 [CContextMenuManager 类](ccontextmenumanager-class.md)<br/>
 [CWnd 类](cwnd-class.md)<br/>

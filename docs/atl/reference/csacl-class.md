@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSacl class
 ms.assetid: 8624889b-aebc-4183-9d29-a20f07837f05
-ms.openlocfilehash: b75dc4110b785f0ab1f55ba5c31df7d3fc6fbd37
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: c4bbdfccb2d6d8b167c537b7ae4df57c89438479
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915745"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496519"
 ---
 # <a name="csacl-class"></a>CSacl 类
 
@@ -64,7 +64,7 @@ SACL 包含访问控制项 (Ace), 用于指定在域控制器的安全事件日�
 
 使用提供的类方法可以从`SACL`对象添加、删除、创建和删除 ace。 另请参阅[AtlGetSacl](security-global-functions.md#atlgetsacl)和[AtlSetSacl](security-global-functions.md#atlsetsacl)。
 
-有关 Windows 中的访问控制模型的简介, 请参阅 Windows SDK 中的[访问控制](/windows/desktop/SecAuthZ/access-control)。
+有关 Windows 中的访问控制模型的简介, 请参阅 Windows SDK 中的[访问控制](/windows/win32/SecAuthZ/access-control)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -129,7 +129,7 @@ bool AddAuditAce(
 
 `CSacl`对象包含访问控制项 (ace), 用于指定在安全事件日志中生成审核记录的访问尝试的类型。 此方法将此类 ACE 添加到`CSacl`对象。
 
-有关可在*AceFlags*参数中设置的各种标志的说明, 请参阅[ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header) 。
+有关可在*AceFlags*参数中设置的各种标志的说明, 请参阅[ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header) 。
 
 ##  <a name="csacl"></a>  CSacl::CSacl
 
@@ -222,7 +222,7 @@ void RemoveAllAces() throw();
 ## <a name="see-also"></a>请参阅
 
 [CAcl 类](../../atl/reference/cacl-class.md)<br/>
-[Acl](/windows/desktop/SecAuthZ/access-control-lists)<br/>
-[Ace](/windows/desktop/SecAuthZ/access-control-entries)<br/>
+[Acl](/windows/win32/SecAuthZ/access-control-lists)<br/>
+[Ace](/windows/win32/SecAuthZ/access-control-entries)<br/>
 [类概述](../../atl/atl-class-overview.md)<br/>
 [安全全局函数](../../atl/reference/security-global-functions.md)

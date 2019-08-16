@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-ms.openlocfilehash: 337fe03ab09a6ed3da283f45dd4eb58aaaad5bc5
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: d33da7a9bc81f9733df840a87fbbbeca1e02cc04
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957505"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502560"
 ---
 # <a name="exception-processing"></a>异常处理
 
@@ -380,7 +380,7 @@ void AfxThrowMemoryException();
 
 ### <a name="remarks"></a>备注
 
-如果对基础系统内存分配器 (如**malloc**和[GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) Windows 函数) 的调用失败, 请调用此函数。 不需要为**new**调用该方法, 因为如果内存分配失败, 则**new**将自动引发内存异常。
+如果对基础系统内存分配器 (如**malloc**和[GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) Windows 函数) 的调用失败, 请调用此函数。 不需要为**new**调用该方法, 因为如果内存分配失败, 则**new**将自动引发内存异常。
 
 ### <a name="requirements"></a>要求
 
@@ -491,7 +491,7 @@ void AFXAPI AfxThrowOleException(HRESULT hr);
 
 ### <a name="remarks"></a>备注
 
-采用 HRESULT 作为参数的版本将该结果代码转换为相应的 SCODE。 有关 HRESULT 和 SCODE 的详细信息, 请参阅 Windows SDK 中[COM 错误代码的结构](/windows/desktop/com/structure-of-com-error-codes)。
+采用 HRESULT 作为参数的版本将该结果代码转换为相应的 SCODE。 有关 HRESULT 和 SCODE 的详细信息, 请参阅 Windows SDK 中[COM 错误代码的结构](/windows/win32/com/structure-of-com-error-codes)。
 
 ### <a name="requirements"></a>要求
 

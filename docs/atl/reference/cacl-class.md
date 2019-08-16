@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAcl class
 ms.assetid: 20bcb9af-dc1c-4737-b923-3864776680d6
-ms.openlocfilehash: ba791ddc46fd59a470943bb30f415da01966dc61
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 5d03154597f800042846e82d0a0cf5e7c46b613f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915890"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497892"
 ---
 # <a name="cacl-class"></a>CAcl 类
 
@@ -46,7 +46,7 @@ class CAcl
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|描述|
+|name|描述|
 |----------|-----------------|
 |[CAcl::CAccessMaskArray](#caccessmaskarray)|ACCESS_MASKs 的数组。|
 |[CAcl::CAceFlagArray](#caceflagarray)|字节数组。|
@@ -84,21 +84,21 @@ class CAcl
 
 ## <a name="remarks"></a>备注
 
-`ACL`结构是 ACL (访问控制列表) 的标头。 ACL 包括零个或多个[ace](/windows/desktop/SecAuthZ/access-control-entries)的顺序列表 (访问控制项)。 ACL 中的各个 Ace 的编号为0到*n-1*, 其中*n*是 acl 中的 ace 的数量。 编辑 ACL 时, 应用程序通过索引引用 ACL 中的访问控制项 (ACE)。
+`ACL`结构是 ACL (访问控制列表) 的标头。 ACL 包括零个或多个[ace](/windows/win32/SecAuthZ/access-control-entries)的顺序列表 (访问控制项)。 ACL 中的各个 Ace 的编号为0到*n-1*, 其中*n*是 acl 中的 ace 的数量。 编辑 ACL 时, 应用程序通过索引引用 ACL 中的访问控制项 (ACE)。
 
 有两种 ACL 类型:
 
 - 自主
 
-- 系统
+- System
 
 自定义 ACL 由对象的所有者控制, 或者被授予了对该对象的 WRITE_DAC 访问权限的任何人。 它指定特定用户和组对对象的访问权限。 例如, 文件的所有者可以使用任意 ACL 来控制哪些用户和组可以和不能访问该文件。
 
 对象也可以具有与之关联的系统级安全信息, 以系统管理员控制的系统 ACL 的形式提供。 系统 ACL 可以允许系统管理员审核获取对象访问权限的任何尝试。
 
-有关更多详细信息, 请参阅 Windows SDK 中的[ACL](/windows/desktop/SecAuthZ/access-control-lists)讨论。
+有关更多详细信息, 请参阅 Windows SDK 中的[ACL](/windows/win32/SecAuthZ/access-control-lists)讨论。
 
-有关 Windows 中的访问控制模型的简介, 请参阅 Windows SDK 中的[访问控制](/windows/desktop/SecAuthZ/access-control)。
+有关 Windows 中的访问控制模型的简介, 请参阅 Windows SDK 中的[访问控制](/windows/win32/SecAuthZ/access-control)。
 
 ## <a name="requirements"></a>要求
 
@@ -126,7 +126,7 @@ typedef CAtlArray<BYTE> CAceFlagArray;
 
 ### <a name="remarks"></a>备注
 
-此 typedef 指定用于定义访问控制项 (ACE) 类型特定控件标志的数组类型。 有关可能的标志的完整列表, 请参阅[ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header)定义。
+此 typedef 指定用于定义访问控制项 (ACE) 类型特定控件标志的数组类型。 有关可能的标志的完整列表, 请参阅[ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header)定义。
 
 ##  <a name="cacetypearray"></a>  CAcl::CAceTypeArray
 
@@ -138,7 +138,7 @@ typedef CAtlArray<BYTE> CAceTypeArray;
 
 ### <a name="remarks"></a>备注
 
-此 typedef 指定用于定义访问控制项 (ACE) 对象 (如 ACCESS_ALLOWED_ACE_TYPE 或 ACCESS_DENIED_ACE_TYPE) 的性质的数组类型。 有关可能的类型的完整列表, 请参阅[ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header)定义。
+此 typedef 指定用于定义访问控制项 (ACE) 对象 (如 ACCESS_ALLOWED_ACE_TYPE 或 ACCESS_DENIED_ACE_TYPE) 的性质的数组类型。 有关可能的类型的完整列表, 请参阅[ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header)定义。
 
 ##  <a name="cacl"></a>  CAcl::CAcl
 
@@ -214,7 +214,7 @@ ACE 标志。
 
 每个数组的内容彼此对应, 也就是说, `CAccessMaskArray`数组的第一个元素对应于`CSidArray`数组中的第一个元素, 依此类推。
 
-有关 ACE 类型和标志的详细信息, 请参阅[ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header) 。
+有关 ACE 类型和标志的详细信息, 请参阅[ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header) 。
 
 ##  <a name="getaclentry"></a>CAcl::GetAclEntry
 
@@ -258,7 +258,7 @@ ACE 标志。
 
 此方法将检索有关单个 ACE 的所有信息, 并提供比[CAcl:: GetAclEntries](#getaclentries)单独提供的信息更多的信息。
 
-有关 ACE 类型和标志的详细信息, 请参阅[ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header) 。
+有关 ACE 类型和标志的详细信息, 请参阅[ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header) 。
 
 ##  <a name="getlength"></a>CAcl:: GetLength
 
