@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - namespaces [C++]
 ms.assetid: d1a5a9ab-1cad-47e6-a82d-385bb77f4188
-ms.openlocfilehash: 15717c6f2f34836de9b546af203a45dc8099d4d4
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: ae3006dd1b17ec38240a318af6cfcac5c7d6bf49
+ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222355"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68866039"
 ---
 # <a name="namespaces-c"></a>命名空间 (C++)
 
-命名空间是一个声明性区域，为其内部的标识符（类型、函数和变量等的名称）提供一个范围。 命名空间用于将代码组织到逻辑组中，还可用于避免名称冲突，尤其是在基本代码包括多个库时。 命名空间范围内的所有标识符彼此可见，而没有任何限制。 命名空间之外的标识符可以通过使用为每个标识符的完全限定的名称，例如访问成员`std::vector<std::string> vec;`，也可通过[using 声明](../cpp/using-declaration.md)单个标识符 (`using std::string`)，或[using 指令](../cpp/namespaces-cpp.md#using_directives)命名空间中的所有标识符 (`using namespace std;`)。 头文件中的代码应始终使用完全限定的命名空间名称。
+命名空间是一个声明性区域，为其内部的标识符（类型、函数和变量等的名称）提供一个范围。 命名空间用于将代码组织到逻辑组中，还可用于避免名称冲突，尤其是在基本代码包括多个库时。 命名空间范围内的所有标识符彼此可见，而没有任何限制。 命名空间之外的标识符可以通过对每个标识符使用完全限定名称来访问成员, 例如`std::vector<std::string> vec;`, 使用单个标识符的[声明](../cpp/using-declaration.md)(`using std::string`) 或对[所有命名空间中的标识符](../cpp/namespaces-cpp.md#using_directives) (`using namespace std;`)。 头文件中的代码应始终使用完全限定的命名空间名称。
 
 下面的示例演示了一个命名空间声明和命名空间之外的代码可访问其成员的三种方法。
 
@@ -58,9 +58,9 @@ mgr.DoSomething();
 Func(mgr);
 ```
 
-## <a id="using_directives"></a> using 指令
+## <a id="using_directives"></a>using 指令
 
-**使用**指令允许中的所有名称**命名空间**若要使用不带*命名空间名称*为显式限定符。 使用 using 指令在实现文件 (即 *.cpp) 如果在命名空间; 使用多个不同的标识符如果只需要使用一个或两个标识符，请考虑使用声明，以仅将这些标识符到作用域中，并不是所有标识符的命名空间中。 如果本地变量的名称与命名空间变量的名称相同，则隐藏命名空间变量。 使命名空间变量具有与全局变量相同的名称是错误的。
+**Using**指令允许使用**命名空间**中的所有名称, 而不使用*命名空间名称*作为显式限定符。 如果要在命名空间中使用多个不同的标识符, 请在实现文件 (即 * .cpp) 中使用 using 指令;如果你只是使用一个或两个标识符, 则请考虑使用声明, 使这些标识符只引入作用域, 而不是命名空间中的所有标识符。 如果本地变量的名称与命名空间变量的名称相同，则隐藏命名空间变量。 使命名空间变量具有与全局变量相同的名称是错误的。
 
 > [!NOTE]
 >  using 指令可以放置在 .cpp 文件的顶部（在文件范围内），或放置在类或函数定义内。
@@ -81,7 +81,7 @@ namespace ContosoDataServer
 }
 ```
 
-Contosodata.cpp 中的函数实现应使用完全限定的名称，即使将**使用**指令置于文件顶部：
+Contosodata 中的函数实现应使用完全限定的名称, 即使你在该文件的顶部放置**using**指令也是如此:
 
 ```cpp
 #include "contosodata.h"
@@ -98,21 +98,20 @@ int ContosoDataServer::Bar(){return 0;}
 
 可以在单个文件中的多个块中声明命名空间，也可在多个文件中声明命名空间。 编译器在预处理过程中将各部分联接在一起，产生的命名空间中包含所有部分中声明的所有成员。 一个相关示例是在标准库中的每个头文件中声明的 std 命名空间。
 
-可以通过显式限定所定义的名称的声明的命名空间外定义命名的命名空间的成员。 但是，定义必须出现在命名空间中的声明位置之后，该命名空间包含在声明的命名空间中。 例如：
+命名命名空间的成员可以在由定义的名称的显式限定声明的命名空间的外部定义。 但是，定义必须出现在命名空间中的声明位置之后，该命名空间包含在声明的命名空间中。 例如：
 
 ```cpp
 // defining_namespace_members.cpp
 // C2039 expected
 namespace V {
-        void f();
-    }
+    void f();
+}
 
-    void V::f() { }        // ok
-    void V::g() { }        // C2039, g() is not yet a member of V
+void V::f() { }        // ok
+void V::g() { }        // C2039, g() is not yet a member of V
 
-    namespace V {
-        void g();
-    }
+namespace V {
+    void g();
 }
 ```
 
@@ -120,7 +119,7 @@ namespace V {
 
 ## <a name="the-global-namespace"></a>全局命名空间
 
-如果未在显式命名空间中声明某个标识符，则该标识符属于隐式全局命名空间的一部分。 一般情况下，尝试避免创建在全局范围内，如果可能，除了入口点的声明[主函数](../c-language/main-function-and-program-execution.md)，这必须是全局命名空间中。 若要显式限定全局标识符，请使用没有名称的范围解析运算符，如 `::SomeFunction(x);` 中所示。 这将使标识符与任何其他命名空间中具有相同名称的任何内容区分开来，并且还有助于使其他人更轻松地了解你的代码。
+如果未在显式命名空间中声明某个标识符，则该标识符属于隐式全局命名空间的一部分。 一般情况下, 尝试避免在全局范围内进行声明 (入口点[Main 函数](../c-language/main-function-and-program-execution.md)除外, 它必须位于全局命名空间中)。 若要显式限定全局标识符，请使用没有名称的范围解析运算符，如 `::SomeFunction(x);` 中所示。 这将使标识符与任何其他命名空间中具有相同名称的任何内容区分开来，并且还有助于使其他人更轻松地了解你的代码。
 
 ## <a name="the-std-namespace"></a>Std 命名空间
 
@@ -242,9 +241,9 @@ namespace Contoso
 }
 ```
 
-## <a id="namespace_aliases"></a> Namespace 别名
+## <a id="namespace_aliases"></a>命名空间别名
 
-命名空间名称必须是唯一的，这意味着通常它们不应太短。 如果名称的长度使代码难以阅读，或在不能使用 using 指令的头文件中进行键入单调乏味，则可以使用用作实际名称的缩写的命名空间别名。 例如：
+命名空间名称必须是唯一的，这意味着通常它们不应太短。 如果名称的长度使代码难以阅读，或在不能使用 using 指令的头文件中进行键入单调乏味，则可以使用用作实际名称的缩写的命名空间别名。 例如:
 
 ```cpp
 namespace a_very_long_namespace_name { class Foo {}; }
@@ -263,7 +262,7 @@ namespace
 }
 ```
 
-这称为未命名或匿名命名空间，当你想要使其他文件中的变量声明对代码不可见时非常有用 （即为他们提供内部链接） 而无需创建一个命名的命名空间。 同一文件中的所有代码都可以看到未命名的命名空间中的标识符，但这些标识符以及命名空间本身在该文件外部（或更准确地说，在翻译单元外部）不可见。
+这称为未命名或匿名命名空间, 当你想要使变量声明对其他文件中的代码不可见 (即, 提供内部链接), 而无需创建命名命名空间时, 这会很有用。 同一文件中的所有代码都可以看到未命名的命名空间中的标识符，但这些标识符以及命名空间本身在该文件外部（或更准确地说，在翻译单元外部）不可见。
 
 ## <a name="see-also"></a>请参阅
 
