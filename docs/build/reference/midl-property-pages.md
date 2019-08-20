@@ -47,12 +47,12 @@ f1_keywords:
 - VC.Project.VCMidlTool.RedirectOutputAndErrors
 - VC.Project.VCMidlTool.MinimumTargetSystem
 - vc.project.AdditionalOptionsPage
-ms.openlocfilehash: 8174f6382ea2dab4ef2a49f5d30a6e27e8af3f5b
-ms.sourcegitcommit: ce3393846c86e7905ff0c86e4cd6610476809585
+ms.openlocfilehash: 0113fbd68d7687236b91b098ead2ac6b8338fee9
+ms.sourcegitcommit: af4ab63866ed09b5988ed53f1bb6996a54f02484
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68492167"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68787072"
 ---
 # <a name="midl-property-pages"></a>“MIDL”属性页
 
@@ -62,7 +62,7 @@ MIDL 属性页作为上的项属性提供。使用 COM 的C++项目中的 IDL �
 
 ### <a name="preprocessor-definitions"></a>预处理器定义
 
-指定一个或多个定义, 包括 MIDL 宏[](/windows/win32/midl/-d)(/d\[)\]宏。
+指定一个或多个定义, 包括 MIDL 宏 ([/D](/windows/win32/midl/-d))\[macros\]).
 
 ### <a name="additional-include-directories"></a>附加包含目录
 
@@ -129,15 +129,15 @@ MIDL 属性页作为上的项属性提供。使用 COM 的C++项目中的 IDL �
 
 ### <a name="generate-stubless-proxies"></a>生成无存根代理
 
-生成具有对象接口的扩展和无存根代理的完全解释的存根 ([/Oicf](/windows/win32/midl/-Oicf), [/Oif](/windows/win32/midl/-Oif) )。
+生成具有对象接口的扩展和无存根代理的完全解释的存根 ([/Oicf](/windows/win32/midl/-oi), [/Oif](/windows/win32/midl/-oi) )。
 
 ### <a name="suppress-compiler-warnings"></a>取消显示编译器警告
 
-禁止显示编译器警告消息 ([/no_warn](/windows/win32/midl/-no_warn))。
+禁止显示编译器警告消息 ([/no_warn](/windows/win32/midl/-no-warn))。
 
 ### <a name="application-configuration-mode"></a>应用程序配置模式
 
-允许在 IDL 文件中选择 ACF 属性 ([/app_config](/windows/win32/midl/-app_config))。
+允许在 IDL 文件中选择 ACF 属性 ([/app_config](/windows/win32/midl/-app-config))。
 
 ### <a name="locale-id"></a>区域设置 ID
 
@@ -220,7 +220,7 @@ MIDL 属性页作为上的项属性提供。使用 COM 的C++项目中的 IDL �
 
 ### <a name="c-preprocess-options"></a>C 预处理选项
 
-指定要传递给 C 编译器预处理器 ([/cpp_opt](/windows/win32/midl/-cpp_opt)开关) 的开关。
+指定要传递给 C 编译器预处理器 ([/cpp_opt](/windows/win32/midl/-cpp-opt)开关) 的开关。
 
 ### <a name="undefine-preprocessor-definitions"></a>取消定义预处理器定义
 
@@ -258,15 +258,15 @@ MIDL 属性页作为上的项属性提供。使用 COM 的C++项目中的 IDL �
 
 ### <a name="prepend-with-abi-namespace"></a>预置 "ABI" 命名空间
 
-在所有类型前面预置 "ABI" 命名空间。  ([/ns_prefix](/windows/win32/midl/-ns_prefix))。
+在所有类型前面预置 "ABI" 命名空间。  ([/ns_prefix](/windows/win32/midl/-ns-prefix))。
 
 ### <a name="validate-parameters"></a>验证参数
 
-生成其他信息以验证参数 ([/robust](/windows/win32/midl/-robust) | [/robust](/windows/win32/midl/-no_robust))。
+生成其他信息以验证参数 ([/robust](/windows/win32/midl/-robust) | [/no_robust](/windows/win32/midl/-no-robust))。
 
 ### <a name="struct-member-alignment"></a>结构成员对齐
 
-指定目标系统中的结构的封装级别 ([/ZpN](/windows/win32/midl/-zpn))。
+指定目标系统中的结构的封装级别 (/ZpN)。
 
 **方案**
 

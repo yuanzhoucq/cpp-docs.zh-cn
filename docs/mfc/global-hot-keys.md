@@ -7,20 +7,20 @@ helpviewer_keywords:
 - access keys [MFC], hot keys
 - global hot keys [MFC]
 ms.assetid: e0b95d14-c571-4c9a-9cd1-e7fc1f0e278d
-ms.openlocfilehash: eedeb0547320c8b421fa72647f51b02f834af300
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59918648ea24fd1e2a86ca786de3081cd6cca2df
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219601"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508570"
 ---
 # <a name="global-hot-keys"></a>全局热键
 
-全局热键是与特定的非子窗口相关联。 它允许用户激活系统的任何部分中的窗口。 应用程序通过发送在设置特定窗口的全局热键[WM_SETHOTKEY](/windows/desktop/inputdev/wm-sethotkey)给该窗口的消息。 例如，如果`m_HotKeyCtrl`是[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)对象和`pMainWnd`的指针到按下了热键时激活窗口，可以使用下面的代码，以将热键与控件中指定相关联指向窗口`pMainWnd`。
+全局热键与特定 nonchild 窗口相关联。 它允许用户从系统的任何部分激活窗口。 应用程序通过将[WM_SETHOTKEY](/windows/win32/inputdev/wm-sethotkey)消息发送到该窗口来设置特定窗口的全局热键。 例如, 如果`m_HotKeyCtrl`是[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)对象, 并且`pMainWnd`是一个指向在按下热键时要激活的窗口的指针, 则可以使用以下代码将控件中指定的热键与指向的窗口相关联`pMainWnd`。
 
 [!code-cpp[NVC_MFCControlLadenDialog#18](../mfc/codesnippet/cpp/global-hot-keys_1.cpp)]
 
-每当用户按全局热键，指定的窗口接收[WM_SYSCOMMAND](/windows/desktop/menurc/wm-syscommand)指定的消息**SC_HOTKEY**作为命令的类型。 此消息还会激活接收它的窗口。 因为此消息不包含任何信息的键，按下，使用此方法不允许区分不同可能附加到同一个窗口的热键。 热键之前发送的应用程序将保持有效**WM_SETHOTKEY**退出。
+每当用户按全局热键时, 指定的窗口就会收到一条[WM_SYSCOMMAND](/windows/win32/menurc/wm-syscommand)消息, 该消息将**SC_HOTKEY**指定为命令的类型。 此消息还会激活接收它的窗口。 由于此消息不包括任何按下的确切密钥的信息, 因此使用此方法不允许区分可能附加到同一个窗口的不同热键。 热键始终有效, 直到发送的**WM_SETHOTKEY**的应用程序退出。
 
 ## <a name="see-also"></a>请参阅
 
