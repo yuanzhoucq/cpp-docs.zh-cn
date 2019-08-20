@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CRichEditDoc [MFC], GetView
 - CRichEditDoc [MFC], m_bRTF
 ms.assetid: c936ec18-d516-49d4-b7fb-c9aa0229eddc
-ms.openlocfilehash: 4cc3af7649d30a153b67cd8269e595c11018833f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: d296185fe2ea2216f4abe17b191f71b6fa36e1f9
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372083"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916708"
 ---
 # <a name="cricheditdoc-class"></a>CRichEditDoc 类
 
-与[CRichEditView](../../mfc/reference/cricheditview-class.md)并[CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)，提供 MFC 文档视图体系结构的上下文中 rich edit 控件的功能。
+对于[CRichEditView](../../mfc/reference/cricheditview-class.md)和[CRICHEDITCNTRITEM](../../mfc/reference/cricheditcntritem-class.md), 提供 MFC 文档视图体系结构上下文中 rich edit 控件的功能。
 
 ## <a name="syntax"></a>语法
 
@@ -37,25 +37,25 @@ class CRichEditDoc : public COleServerDoc
 
 |名称|描述|
 |----------|-----------------|
-|[CRichEditDoc::CreateClientItem](#createclientitem)|调用以执行清理的文档。|
+|[CRichEditDoc::CreateClientItem](#createclientitem)|调用以执行文档清理。|
 |[CRichEditDoc::GetStreamFormat](#getstreamformat)|指示流输入和输出是否应包含格式设置信息。|
-|[CRichEditDoc::GetView](#getview)|检索关联[CRichEditView](../../mfc/reference/cricheditview-class.md)对象。|
+|[CRichEditDoc::GetView](#getview)|检索 asssociated [CRichEditView](../../mfc/reference/cricheditview-class.md)对象。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
 |名称|描述|
 |----------|-----------------|
-|[CRichEditDoc::m_bRTF](#m_brtf)|指示流 I/O 是否应包含格式设置。|
+|[CRichEditDoc::m_bRTF](#m_brtf)|指示流 i/o 是否应包括格式设置。|
 
 ## <a name="remarks"></a>备注
 
-"格式文本编辑控件"是一个窗口，用户可以输入和编辑文本。 文本字符和段落格式设置，可以分配，并且可以包含嵌入的 OLE 对象。 Rich edit 控件提供用于设置文本格式的编程接口。 但是，应用程序必须实现使用户可进行格式设置操作所需的任何用户界面组件。
+"Rich edit 控件" 是用户可在其中输入和编辑文本的窗口。 可以为文本分配字符和段落格式, 还可以包括嵌入的 OLE 对象。 Rich edit 控件提供了用于设置文本格式的编程接口。 但是，应用程序必须实现使用户可进行格式设置操作所需的任何用户界面组件。
 
-`CRichEditView` 保留文本及其格式特征。 `CRichEditDoc` 维护视图中的客户端项目的列表。 `CRichEditCntrItem` 提供对 OLE 客户端项的容器端访问。
+`CRichEditView` 保留文本及其格式特征。 `CRichEditDoc`维护视图中的客户端项的列表。 `CRichEditCntrItem`提供对 OLE 客户端项的容器端访问。
 
-此 Windows 公共控件 (并因此[CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)和相关类) 仅适用于在 Windows 95/98 和 Windows NT 版本 3.51 下运行的程序和更高版本。
+此 Windows 公共控件 (以及[CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)和相关类) 仅适用于在 windows 95/98 和 windows NT 版本3.51 及更高版本下运行的程序。
 
-在 MFC 应用程序中使用格式文本编辑文档的示例，请参阅[写字板](../../overview/visual-cpp-samples.md)示例应用程序。
+有关在 MFC 应用程序中使用丰富编辑文档的示例, 请参阅[写字板](../../overview/visual-cpp-samples.md)示例应用程序。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -75,11 +75,11 @@ class CRichEditDoc : public COleServerDoc
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxrich.h
+**标头:** afxrich
 
-##  <a name="createclientitem"></a>  CRichEditDoc::CreateClientItem
+##  <a name="createclientitem"></a>CRichEditDoc:: CreateClientItem
 
-调用此函数可创建`CRichEditCntrItem`对象，并将其添加到此文档。
+调用此函数可创建`CRichEditCntrItem`对象并将其添加到此文档中。
 
 ```
 virtual CRichEditCntrItem* CreateClientItem(REOBJECT* preo = NULL) const = 0;
@@ -88,21 +88,21 @@ virtual CRichEditCntrItem* CreateClientItem(REOBJECT* preo = NULL) const = 0;
 ### <a name="parameters"></a>参数
 
 *preo*<br/>
-指向[REOBJECT](/windows/desktop/api/richole/ns-richole-_reobject)结构描述 OLE 项。 新`CRichEditCntrItem`此 OLE 项的周围构造对象。 如果*preo*为 NULL，新的客户端项为空。
+指向描述 OLE 项的[REOBJECT](/windows/desktop/api/richole/ns-richole-reobject)结构的指针。 围绕此`CRichEditCntrItem` OLE 项构造新的对象。 如果*preo*为 NULL, 则新的客户端项为空。
 
 ### <a name="return-value"></a>返回值
 
-指向新指针[CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)已添加到本文档的对象。
+指向已添加到此文档中的新[CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)对象的指针。
 
 ### <a name="remarks"></a>备注
 
 此函数不执行任何 OLE 初始化。
 
-有关详细信息，请参阅[REOBJECT](/windows/desktop/api/richole/ns-richole-_reobject) Windows SDK 中的结构。
+有关详细信息, 请参阅 Windows SDK 中的[REOBJECT](/windows/desktop/api/richole/ns-richole-reobject)结构。
 
-##  <a name="getstreamformat"></a>  CRichEditDoc::GetStreamFormat
+##  <a name="getstreamformat"></a>CRichEditDoc:: GetStreamFormat
 
-调用此函数可确定文本格式的流式处理格式文本编辑的内容。
+调用此函数可确定用于流式传输丰富编辑内容的文本格式。
 
 ```
 int GetStreamFormat() const;
@@ -110,19 +110,19 @@ int GetStreamFormat() const;
 
 ### <a name="return-value"></a>返回值
 
-下列标志之一：
+下列标志之一:
 
-- SF_TEXT 指示 rich edit 控件不维护格式设置信息。
+- SF_TEXT 指示 rtf 编辑控件不维护格式设置信息。
 
-- SF_RTF 指示 rich edit 控件中保存了格式设置信息。
+- SF_RTF 指示 rich edit 控件确实维护格式设置信息。
 
 ### <a name="remarks"></a>备注
 
-返回值基于[m_bRTF](#m_brtf)数据成员。 如果此函数将返回 SF_RTF`m_bRTF`为 TRUE; 否则为 SF_TEXT。
+返回值基于[m_bRTF](#m_brtf)数据成员。 如果`m_bRTF`为 TRUE, 则此函数将返回 SF_RTF; 否则返回 SF_TEXT。
 
-##  <a name="getview"></a>  CRichEditDoc::GetView
+##  <a name="getview"></a>CRichEditDoc:: GetView
 
-调用此函数可访问[CRichEditView](../../mfc/reference/cricheditview-class.md)与此相关联的对象`CRichEditDoc`对象。
+调用此函数可访问与此`CRichEditDoc`对象关联的 [CRichEditView](../../mfc/reference/cricheditview-class.md) 对象。
 
 ```
 virtual CRichEditView* GetView() const;
@@ -130,15 +130,15 @@ virtual CRichEditView* GetView() const;
 
 ### <a name="return-value"></a>返回值
 
-指向`CRichEditView`与文档关联的对象。
+指向与文档`CRichEditView`关联的对象的指针。
 
 ### <a name="remarks"></a>备注
 
-中包含的文本和格式设置信息`CRichEditView`对象。 `CRichEditDoc`对象维护序列化的 OLE 项。 应该只有一个`CRichEditView`为每个`CRichEditDoc`。
+文本和格式设置信息包含在`CRichEditView`对象内。 `CRichEditDoc`对象维护用于序列化的 OLE 项。 每个`CRichEditView` `CRichEditDoc`只能有一个。
 
-##  <a name="m_brtf"></a>  CRichEditDoc::m_bRTF
+##  <a name="m_brtf"></a>CRichEditDoc:: m_bRTF
 
-如果为 TRUE，指示[CRichEditCtrl::StreamIn](../../mfc/reference/cricheditctrl-class.md#streamin)并[CRichEditCtrl::StreamOut](../../mfc/reference/cricheditctrl-class.md#streamout)应存储段落和字符格式设置特征。
+如果为 TRUE, 则指示[CRichEditCtrl:: StreamIn](../../mfc/reference/cricheditctrl-class.md#streamin)和[CRichEditCtrl:: StreamOut](../../mfc/reference/cricheditctrl-class.md#streamout)应存储段落和字符格式特性。
 
 ```
 BOOL m_bRTF;
