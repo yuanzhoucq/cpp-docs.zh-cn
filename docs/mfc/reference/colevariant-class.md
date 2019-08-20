@@ -20,12 +20,12 @@ helpviewer_keywords:
 - COleVariant [MFC], GetByteArrayFromVariantArray
 - COleVariant [MFC], SetString
 ms.assetid: e1b5cd4a-b066-4b9b-b48b-6215ed52d998
-ms.openlocfilehash: 2b2d0935380caed8ad9d6741b9107a5f879f7903
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 66ff3d684dba6b876ae94699209a43aaf4db5f23
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373305"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916950"
 ---
 # <a name="colevariant-class"></a>COleVariant 类
 
@@ -49,35 +49,35 @@ class COleVariant : public tagVARIANT
 
 |名称|描述|
 |----------|-----------------|
-|[COleVariant::Attach](#attach)|将附加到一个变体`COleVariant`。|
-|[COleVariant::ChangeType](#changetype)|更改此变体类型`COleVariant`对象。|
+|[COleVariant::Attach](#attach)|将变体附加到`COleVariant`。|
+|[COleVariant::ChangeType](#changetype)|更改此`COleVariant`对象的变量类型。|
 |[COleVariant::Clear](#clear)|清除此 `COleVariant` 对象。|
-|[COleVariant::Detach](#detach)|分离的变体从`COleVariant`，并返回该变体。|
-|[COleVariant::GetByteArrayFromVariantArray](#getbytearrayfromvariantarray)|从现有变量数组中检索的字节数组。|
-|[COleVariant::SetString](#setstring)|为特定类型，通常 ANSI 设置的字符串。|
+|[COleVariant::Detach](#detach)|从分离变量`COleVariant`并返回变量。|
+|[COleVariant::GetByteArrayFromVariantArray](#getbytearrayfromvariantarray)|从现有变体数组中检索字节数组。|
+|[COleVariant::SetString](#setstring)|将字符串设置为特定类型, 通常为 ANSI。|
 
 ### <a name="public-operators"></a>公共运算符
 
 |名称|描述|
 |----------|-----------------|
-|[COleVariant::operator LPCVARIANT](#operator_lpcvariant)|将转换`COleVariant`值到`LPCVARIANT`。|
-|[COleVariant::operator LPVARIANT](#operator_lpvariant)|将转换`COleVariant`对象插入`LPVARIANT`。|
-|[COleVariant::operator =](#operator_eq)|副本`COleVariant`值。|
-|[COleVariant::operator ==](#operator_eq_eq)|比较两个`COleVariant`值。|
-|[COleVariant::operator &lt; &lt;， &gt;&gt;](#operator_lt_lt__gt_gt)|输出`COleVariant`值设为`CArchive`或`CDumpContext`并将输入`COleVariant`对象从`CArchive`。|
+|[COleVariant:: operator LPCVARIANT](#operator_lpcvariant)|将值转换为`LPCVARIANT`。 `COleVariant`|
+|[COleVariant:: operator LPVARIANT](#operator_lpvariant)|将对象转换为`LPVARIANT`。 `COleVariant`|
+|[COleVariant:: operator =](#operator_eq)|`COleVariant`复制值。|
+|[COleVariant:: operator = =](#operator_eq_eq)|比较两`COleVariant`个值。|
+|[COleVariant:: operator &lt;, &lt;&gt;&gt;](#operator_lt_lt__gt_gt)|`CArchive` `CDumpContext` `CArchive`将值输出到或, 并输入`COleVariant`中的对象。 `COleVariant`|
 
 ## <a name="remarks"></a>备注
 
-OLE 自动化中使用此数据类型。 具体而言， [DISPPARAMS](/windows/desktop/api/oaidl/ns-oaidl-tagdispparams)结构包含一个变体结构数组的指针。 一个`DISPPARAMS`结构用于将参数传递给[idispatch:: Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke)。
+此数据类型用于 OLE 自动化。 具体而言, [DISPPARAMS](/windows/desktop/api/oaidl/ns-oaidl-tagdispparams)结构包含指向变体结构的数组的指针。 结构用于将参数传递到[IDispatch:: Invoke。](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) `DISPPARAMS`
 
 > [!NOTE]
-> 此类派生自`VARIANT`结构。 这意味着可以将传递`COleVariant`中为调用的参数`VARIANT`并且的数据成员`VARIANT`结构是可访问的数据成员的`COleVariant`。
+> 此类派生自`VARIANT`结构。 这`COleVariant`意味着, 可以在调用`VARIANT`的参数中传递, 该`VARIANT`结构的数据成员可以访问数据成员`COleVariant`。
 
-两个相关的 MFC 类[COleCurrency](../../mfc/reference/colecurrency-class.md)并[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)封装货币的变量数据类型 ( `VT_CY`) 和日期 ( `VT_DATE`)。 `COleVariant` DAO 类中广泛使用类; 请参阅此类，这些类的典型用法示例[CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)并[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)。
+这两个相关 MFC 类[COleCurrency](../../mfc/reference/colecurrency-class.md)和[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)封装 variant 数据类型 CURRENCY ( `VT_CY`) 和 DATE ( `VT_DATE`)。 类在 DAO 类中广泛使用; 有关此类的典型用法, 请参阅这些类, 例如[CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)和[CDaoRecordset。](../../mfc/reference/cdaorecordset-class.md) `COleVariant`
 
-有关详细信息，请参阅[VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)，[货币](/windows/desktop/api/wtypes/ns-wtypes-tagcy)， [DISPPARAMS](/windows/desktop/api/oaidl/ns-oaidl-tagdispparams)，并[idispatch:: Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) Windows SDK 中的条目。
+有关详细信息, 请参阅 Windows SDK 中的[VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)、 [CURRENCY](/windows/desktop/api/wtypes/ns-wtypes-tagcy)、 [DISPPARAMS](/windows/desktop/api/oaidl/ns-oaidl-tagdispparams)和[IDispatch:: Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke)条目。
 
-有关详细信息`COleVariant`类并在 OLE 自动化中的使用它，请参见"传递的参数在 OLE 自动化"一文中[自动化](../../mfc/automation.md)。
+有关类及其在 ole `COleVariant`自动化中的用法的详细信息, 请参阅[自动化](../../mfc/automation.md)中的 "在 ole 自动化中传递参数"。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -89,9 +89,9 @@ OLE 自动化中使用此数据类型。 具体而言， [DISPPARAMS](/windows/d
 
 **标头：** afxdisp.h
 
-##  <a name="attach"></a>  COleVariant::Attach
+##  <a name="attach"></a>COleVariant:: Attach
 
-调用此函数可将附加给定[VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)对象与当前`COleVariant`对象。
+调用此函数可将给定的[变体](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)对象附加到`COleVariant`当前对象。
 
 ```
 void Attach(VARIANT& varSrc);
@@ -100,15 +100,15 @@ void Attach(VARIANT& varSrc);
 ### <a name="parameters"></a>参数
 
 *varSrc*<br/>
-将现有`VARIANT`对象附加到当前`COleVariant`对象。
+要附加`VARIANT`到当前`COleVariant`对象的现有对象。
 
 ### <a name="remarks"></a>备注
 
-此函数设置的 VARTYPE *varSrc*为 VT_EMPTY。
+此函数将*varSrc*的 VARTYPE 设置为 VT_EMPTY。
 
-有关详细信息，请参阅[VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)并[VARENUM](/windows/desktop/api/wtypes/ne-wtypes-varenum) Windows SDK 中的条目。
+有关详细信息, 请参阅 Windows SDK 中的[VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)和[VARENUM](/windows/desktop/api/wtypes/ne-wtypes-varenum)项。
 
-##  <a name="colevariant"></a>  COleVariant::COleVariant
+##  <a name="colevariant"></a>COleVariant:: COleVariant
 
 构造 `COleVariant` 对象。
 
@@ -135,82 +135,82 @@ COleVariant(LPCITEMIDLIST pidl);
 ### <a name="parameters"></a>参数
 
 *varSrc*<br/>
-将现有`COleVariant`或`VARIANT`要复制到新对象`COleVariant`对象。
+要复制`COleVariant`到`VARIANT` 新`COleVariant`对象的现有或对象。
 
 *pSrc*<br/>
-一个指向`VARIANT`将复制到新的对象`COleVariant`对象。
+指向`VARIANT`对象的指针, 该对象将被复制到新`COleVariant`的对象中。
 
 *lpszSrc*<br/>
-要复制到新的以 null 结尾的字符串`COleVariant`对象。
+要复制到新`COleVariant`对象中的以 null 值结束的字符串。
 
 *vtSrc*<br/>
-`VARTYPE`新`COleVariant`对象。
+`VARTYPE` 新`COleVariant`对象的。
 
 *strSrc*<br/>
-一个[CString](../../atl-mfc-shared/reference/cstringt-class.md)要复制到新对象`COleVariant`对象。
+要复制到新`COleVariant`对象中的 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 对象。
 
-*nSrc*， *lSrc*数字值要复制到新`COleVariant`对象。
+*nSrc*, *lSrc*要复制到新`COleVariant`对象中的数字值。
 
 *vtSrc*<br/>
-`VARTYPE`新`COleVariant`对象。
+`VARTYPE` 新`COleVariant`对象的。
 
 *curSrc*<br/>
-一个[COleCurrency](../../mfc/reference/colecurrency-class.md)要复制到新对象`COleVariant`对象。
+要复制到新`COleVariant`对象中的 [COleCurrency](../../mfc/reference/colecurrency-class.md) 对象。
 
-*fltSrc*, *dblSrc*<br/>
+*fltSrc*、 *dblSrc*<br/>
 要复制到新的 `COleVariant` 对象中的数值。
 
 *timeSrc*<br/>
-一个[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)要复制到新对象`COleVariant`对象。
+要复制到新`COleVariant`对象中的 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) 对象。
 
 *arrSrc*<br/>
-一个[CByteArray](../../mfc/reference/cbytearray-class.md)要复制到新对象`COleVariant`对象。
+要复制到新`COleVariant`对象中的 [CByteArray](../../mfc/reference/cbytearray-class.md) 对象。
 
 *lbSrc*<br/>
-一个[CLongBinary](../../mfc/reference/clongbinary-class.md)要复制到新对象`COleVariant`对象。
+要复制到新`COleVariant`对象中的 [CLongBinary](../../mfc/reference/clongbinary-class.md) 对象。
 
 *pidl*<br/>
-一个指向[ITEMIDLIST](/windows/desktop/api/shtypes/ns-shtypes-_itemidlist)结构，以复制到新`COleVariant`对象。
+指向要复制到新`COleVariant`对象中的 [ITEMIDLIST](/windows/desktop/api/shtypes/ns-shtypes-itemidlist) 结构的指针。
 
 ### <a name="remarks"></a>备注
 
-所有这些构造函数创建新`COleVariant`对象初始化为指定的值。 遵循这些构造函数的简要说明。
+所有这些构造函数将`COleVariant`创建初始化为指定值的新对象。 下面是每个构造函数的简要说明。
 
-- **COleVariant （)** 创建一个空`COleVariant`对象，VT_EMPTY。
+- **COleVariant ()** 创建一个空`COleVariant`的对象 VT_EMPTY。
 
-- **COleVariant (** *varSrc* **)** 将复制的现有`VARIANT`或`COleVariant`对象。 变体类型将保留。
+- **COleVariant (** *varSrc* **)** 复制现有`VARIANT`的或`COleVariant`对象。 变体类型将保留。
 
-- **COleVariant (** *pSrc* **)** 将复制的现有`VARIANT`或`COleVariant`对象。 变体类型将保留。
+- **COleVariant (** *.psrc* **)** 复制现有`VARIANT`的或`COleVariant`对象。 变体类型将保留。
 
-- **COleVariant (** *lpszSrc* **)** 将一个字符串复制到新对象，VT_BSTR (UNICODE)。
+- **COleVariant (** *lpszSrc* **)** 将字符串复制到新的对象 VT_BSTR (UNICODE) 中。
 
-- **COleVariant (** *lpszSrc* **，** *vtSrc* **)** 将一个字符串复制到新的对象。 将参数*vtSrc*必须为 VT_BSTR (UNICODE) 或 VT_BSTRT (ANSI)。
+- **COleVariant (** *lpszSrc* **,** *vtSrc* **)** 将字符串复制到新的对象。 参数*vtSrc*必须是 VT_BSTR (UNICODE) 或 VT_BSTRT (ANSI)。
 
-- **COleVariant (** *strSrc* **)** 将一个字符串复制到新对象，VT_BSTR (UNICODE)。
+- **COleVariant (** *strSrc* **)** 将字符串复制到新的对象 VT_BSTR (UNICODE) 中。
 
-- **COleVariant (** *nSrc* **)** 复制到新的对象，VT_UI1 的 8 位整数。
+- **COleVariant (** *nSrc* **)** 将一个8位整数复制到新的对象 VT_UI1。
 
-- **COleVariant (** *nSrc* **，** *vtSrc* **)** 将 16 位整数 （或布尔值） 复制到新的对象。 将参数*vtSrc*必须 VT_I2 或 VT_BOOL。
+- **COleVariant (** *nSrc* **,** *vtSrc* **)** 将一个16位整数 (或布尔值) 复制到新的对象。 参数*vtSrc*必须是 VT_I2 或 VT_BOOL。
 
-- **COleVariant (** *lSrc* **，** *vtSrc* **)** 将 32 位整数 （或 SCODE 值） 复制到新的对象。 将参数*vtSrc*必须为 VT_I4、 VT_ERROR 或 VT_BOOL。
+- **COleVariant (** *lSrc* **,** *vtSrc* **)** 将32位整数 (或 SCODE 值) 复制到新的对象。 参数*vtSrc*必须是 VT_I4、VT_ERROR 或 VT_BOOL。
 
-- **COleVariant (** *curSrc* **)** 副本`COleCurrency`到新的对象，VT_CY 的值。
+- **COleVariant (** *curSrc* **)** `COleCurrency`将值复制到新的对象 VT_CY。
 
-- **COleVariant (** *fltSrc* **)** 将 32 位浮点值复制到新对象，VT_R4。
+- **COleVariant (** *fltSrc* **)** 将32位浮点值复制到新的 VT_R4 对象中。
 
-- **COleVariant (** *dblSrc* **)** 将 64 位浮点值复制到新对象，VT_R8。
+- **COleVariant (** *dblSrc* **)** 将64位浮点值复制到新的 VT_R8 对象中。
 
-- **COleVariant (** *timeSrc* **)** 副本`COleDateTime`到新的对象，VT_DATE 值。
+- **COleVariant (** *timeSrc* **)** `COleDateTime`将值复制到新的对象 VT_DATE。
 
-- **COleVariant (** *arrSrc* **)** 副本`CByteArray`新对象，VT_EMPTY 对象。
+- **COleVariant (** *arrSrc* **)** `CByteArray`将对象复制到新的对象 VT_EMPTY。
 
-- **COleVariant (** *lbSrc* **)** 副本`CLongBinary`新对象，VT_EMPTY 对象。
+- **COleVariant (** *lbSrc* **)** `CLongBinary`将对象复制到新的对象 VT_EMPTY。
 
-SCODE 的详细信息，请参阅[COM 错误代码的结构](/windows/desktop/com/structure-of-com-error-codes)Windows SDK 中。
+有关 SCODE 的详细信息, 请参阅 Windows SDK 中[COM 错误代码的结构](/windows/desktop/com/structure-of-com-error-codes)。
 
-##  <a name="changetype"></a>  COleVariant::ChangeType
+##  <a name="changetype"></a>COleVariant:: ChangeType
 
-在此变量值的类型转换`COleVariant`对象。
+转换此`COleVariant`对象中的变量值的类型。
 
 ```
 void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
@@ -219,18 +219,18 @@ void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
 ### <a name="parameters"></a>参数
 
 *vartype*<br/>
-为此 VARTYPE`COleVariant`对象。
+此`COleVariant`对象的 VARTYPE。
 
 *pSrc*<br/>
-一个指向[变体](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)要转换的对象。 如果此值为 NULL，这`COleVariant`对象用作转换源。
+指向要转换的[VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)对象的指针。 如果此值为 NULL, 则`COleVariant`将此对象用作转换的源。
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)， [VARENUM](/windows/desktop/api/wtypes/ne-wtypes-varenum)，并[VariantChangeType](/windows/desktop/api/oleauto/nf-oleauto-variantchangetype) Windows SDK 中的条目。
+有关详细信息, 请参阅 Windows SDK 中的[VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)、 [VARENUM](/windows/desktop/api/wtypes/ne-wtypes-varenum)和[VariantChangeType](/windows/desktop/api/oleauto/nf-oleauto-variantchangetype)条目。
 
-##  <a name="clear"></a>  COleVariant::Clear
+##  <a name="clear"></a>COleVariant:: Clear
 
-清除`VARIANT`。
+`VARIANT`清除。
 
 ```
 void Clear();
@@ -238,13 +238,13 @@ void Clear();
 
 ### <a name="remarks"></a>备注
 
-这将为此对象 VARTYPE 设置为 VT_EMPTY。 `COleVariant`析构函数将调用此函数。
+这会将此对象的 VARTYPE 设置为 VT_EMPTY。 `COleVariant`析构函数调用此函数。
 
-有关详细信息，请参阅`VARIANT`，VARTYPE，和`VariantClear`Windows SDK 中的条目。
+有关详细信息, 请参阅`VARIANT`Windows SDK 中的、 `VariantClear` VARTYPE 和条目。
 
-##  <a name="detach"></a>  COleVariant::Detach
+##  <a name="detach"></a>COleVariant::D etach
 
-分离的基础[VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)从此对象`COleVariant`对象。
+从此`COleVariant`对象分离基础[变体](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)对象。
 
 ```
 VARIANT Detach();
@@ -252,16 +252,16 @@ VARIANT Detach();
 
 ### <a name="remarks"></a>备注
 
-此函数设置此 VARTYPE`COleVariant`对象为 VT_EMPTY。
+此函数将此`COleVariant`对象的 VARTYPE 设置为 VT_EMPTY。
 
 > [!NOTE]
->  在调用`Detach`，调用方负责`VariantClear`上生成`VARIANT`结构。
+>  调用`Detach`后, 调用方负责调用`VariantClear`生成`VARIANT`的结构。
 
-有关详细信息，请参阅[VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)， [VARENUM](/windows/desktop/api/wtypes/ne-wtypes-varenum)，并[VariantClear](/windows/desktop/api/oleauto/nf-oleauto-variantclear) Windows SDK 中的条目。
+有关详细信息, 请参阅 Windows SDK 中的[VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)、 [VARENUM](/windows/desktop/api/wtypes/ne-wtypes-varenum)和[VariantClear](/windows/desktop/api/oleauto/nf-oleauto-variantclear)条目。
 
-##  <a name="getbytearrayfromvariantarray"></a>  COleVariant::GetByteArrayFromVariantArray
+##  <a name="getbytearrayfromvariantarray"></a>COleVariant:: GetByteArrayFromVariantArray
 
-从现有变量数组中检索的字节数组
+从现有的变体数组中检索字节数组
 
 ```
 void GetByteArrayFromVariantArray(CByteArray& bytes);
@@ -269,12 +269,12 @@ void GetByteArrayFromVariantArray(CByteArray& bytes);
 
 ### <a name="parameters"></a>参数
 
-*bytes*<br/>
-向现有的引用[CByteArray](../../mfc/reference/cbytearray-class.md)对象。
+*字节*<br/>
+对现有[CByteArray](../../mfc/reference/cbytearray-class.md)对象的引用。
 
-##  <a name="operator_lpcvariant"></a>  COleVariant::operator LPCVARIANT
+##  <a name="operator_lpcvariant"></a>COleVariant:: operator LPCVARIANT
 
-此强制转换运算符将返回`VARIANT`其值将复制从该结构`COleVariant`对象。
+此强制转换运算符返回`VARIANT`一个结构, 其值`COleVariant`从此对象复制。
 
 ```
 operator LPCVARIANT() const;
@@ -282,9 +282,9 @@ operator LPCVARIANT() const;
 
 ### <a name="remarks"></a>备注
 
-##  <a name="operator_lpvariant"></a>  COleVariant::operator LPVARIANT
+##  <a name="operator_lpvariant"></a>COleVariant:: operator LPVARIANT
 
-调用此强制转换运算符来访问基础`VARIANT`此结构`COleVariant`对象。
+调用此强制转换运算符可访问此`VARIANT` `COleVariant`对象的基础结构。
 
 ```
 operator LPVARIANT();
@@ -293,11 +293,11 @@ operator LPVARIANT();
 ### <a name="remarks"></a>备注
 
 > [!CAUTION]
-> 更改中的值`VARIANT`访问此函数返回的指针的结构将更改此设置的值`COleVariant`对象。
+> 更改此函数所返回`VARIANT`的指针所访问的结构中的值将更改此`COleVariant`对象的值。
 
-##  <a name="operator_eq"></a>  COleVariant::operator =
+##  <a name="operator_eq"></a>COleVariant:: operator =
 
-这些重载的赋值运算符将源值复制到此`COleVariant`对象。
+这些重载赋值运算符将源值复制到此`COleVariant`对象中。
 
 ```
 const COleVariant& operator=(const VARIANT& varSrc);
@@ -318,46 +318,46 @@ const COleVariant& operator=(const CLongBinary& lbSrc);
 
 ### <a name="remarks"></a>备注
 
-每个运算符的简短说明如下所示：
+下面是每个运算符的简要说明:
 
-- **运算符 = (** *varSrc* **)** 复制现有的变体或`COleVariant`到此对象的对象。
+- **operator = (** *varSrc* **)** 将现有的变体`COleVariant`或对象复制到此对象中。
 
-- **运算符 = (** *pSrc* **)** 将访问的变体对象复制*pSrc*到此对象。
+- **operator = (** *.psrc* **)** 将 *.psrc*访问的变量对象复制到此对象中。
 
-- **运算符 = (** *lpszSrc* **)** 将以 null 结尾的字符串复制到此对象并设置为 VT_BSTR 的 VARTYPE。
+- **operator = (** *lpszSrc* **)** 将以 null 结尾的字符串复制到此对象中, 并将 VARTYPE 设置为 VT_BSTR。
 
-- **运算符 = (** *strSrc* **)** 副本[CString](../../atl-mfc-shared/reference/cstringt-class.md)到此对象并设置为 VT_BSTR VARTYPE 对象。
+- **operator = (** *strSrc* **)** 将[CString](../../atl-mfc-shared/reference/cstringt-class.md)对象复制到此对象中, 并将 VARTYPE 设置为 VT_BSTR。
 
-- **运算符 = (** *nSrc* **)** 将一个 8 或 16 位整数值复制到此对象。 如果*nSrc*是 8 位值，此 VARTYPE 设置为 VT_UI1。 如果*nSrc*是 16 位值，此 VARTYPE 都是 VT_BOOL，保留; 否则为设置为 VT_I2。
+- **operator = (** *nSrc* **)** 将一个8位或16位整数值复制到此对象中。 如果*nSrc*是一个8位值, 则将此的 VARTYPE 设置为 VT_UI1。 如果*nSrc*是一个16位值, 并且此值的 VARTYPE 为 VT_BOOL, 则将其保留;否则, 将其设置为 VT_I2。
 
-- **运算符 = (** *lSrc* **)** 将 32 位整数值复制到此对象。 如果此 VARTYPE VT_ERROR，则将其保留;否则，它设置为 VT_I4。
+- **operator = (** *lSrc* **)** 将32位整数值复制到此对象中。 如果这是 VT_ERROR, 则将其保留;否则, 将其设置为 VT_I4。
 
-- **运算符 = (** *curSrc* **)** 副本[COleCurrency](../../mfc/reference/colecurrency-class.md)到此对象并设置到 VT_CY VARTYPE 对象。
+- **operator = (** *curSrc* **)** 将[COleCurrency](../../mfc/reference/colecurrency-class.md)对象复制到此对象中, 并将 VARTYPE 设置为 VT_CY。
 
-- **运算符 = (** *fltSrc* **)** 将 32 位浮点值复制到此对象并设置 VARTYPE 为 VT_R4。
+- **operator = (** *fltSrc* **)** 将32位浮点值复制到此对象中, 并将 VARTYPE 设置为 VT_R4。
 
-- **运算符 = (** *dblSrc* **)** 将 64 位浮点值复制到此对象并设置 VARTYPE 为 VT_R8。
+- **operator = (** *dblSrc* **)** 将64位浮点值复制到此对象中, 并将 VARTYPE 设置为 VT_R8。
 
-- **运算符 = (** *dateSrc* **)** 副本[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)到此对象并设置为 VT_DATE VARTYPE 对象。
+- **operator = (** *dateSrc* **)** 将[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)对象复制到此对象中, 并将 VARTYPE 设置为 VT_DATE。
 
-- **运算符 = (** *arrSrc* **)** 副本[CByteArray](../../mfc/reference/cbytearray-class.md)到此对象`COleVariant`对象。
+- **operator = (** *arrSrc* **)** 将[CByteArray](../../mfc/reference/cbytearray-class.md)对象复制到此`COleVariant`对象中。
 
-- **运算符 = (** *lbSrc* **)** 副本[CLongBinary](../../mfc/reference/clongbinary-class.md)到此对象`COleVariant`对象。
+- **operator = (** *lbSrc* **)** 将[CLongBinary](../../mfc/reference/clongbinary-class.md)对象复制到此`COleVariant`对象中。
 
-有关详细信息，请参阅[VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)并[VARENUM](/windows/desktop/api/wtypes/ne-wtypes-varenum) Windows SDK 中的条目。
+有关详细信息, 请参阅 Windows SDK 中的[VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)和[VARENUM](/windows/desktop/api/wtypes/ne-wtypes-varenum)项。
 
-##  <a name="operator_eq_eq"></a>  COleVariant::operator = =
+##  <a name="operator_eq_eq"></a>COleVariant:: operator = =
 
-此运算符比较两个变量的值，并返回非零，如果它们相等;否则为 0。
+此运算符比较两个变体值, 如果相等, 则返回非零值;否则为0。
 
 ```
 BOOL operator==(const VARIANT& varSrc) const;
 BOOL operator==(LPCVARIANT pSrc) const;
 ```
 
-##  <a name="operator_lt_lt__gt_gt"></a>  COleVariant::operator &lt;&lt;, &gt;&gt;
+##  <a name="operator_lt_lt__gt_gt"></a>COleVariant:: operator &lt;, &lt;&gt;&gt;
 
-输出`COleVariant`值设为`CArchive`或`CdumpContext`并将输入`COleVariant`对象从`CArchive`。
+`CArchive` `CdumpContext` `CArchive`将值输出到或, 并输入`COleVariant`中的对象。 `COleVariant`
 
 ```
 friend CDumpContext& AFXAPI operator<<(
@@ -375,11 +375,11 @@ friend CArchive& AFXAPI operator>>(
 
 ### <a name="remarks"></a>备注
 
-`COleVariant`插入 (**\<\<**) 运算符支持诊断转储和存储到存档。 提取 (**>>**) 运算符支持加载从存档。
+`COleVariant`插入 **()运算符\<支持诊断转储并存储到存档。\<** 提取 ( **>>** ) 运算符支持从存档中加载。
 
 ##  <a name="setstring"></a>  COleVariant::SetString
 
-设置为特定类型的字符串。
+将字符串设置为特定类型。
 
 ```
 void SetString(LPCTSTR lpszSrc, VARTYPE vtSrc);
@@ -388,16 +388,16 @@ void SetString(LPCTSTR lpszSrc, VARTYPE vtSrc);
 ### <a name="parameters"></a>参数
 
 *lpszSrc*<br/>
-要复制到新的以 null 结尾的字符串`COleVariant`对象。
+要复制到新`COleVariant`对象中的以 null 值结束的字符串。
 
 *VtSrc*<br/>
-新的 VARTYPE`COleVariant`对象。
+新`COleVariant`对象的 VARTYPE。
 
 ### <a name="remarks"></a>备注
 
-将参数*vtSrc*必须为 VT_BSTR (UNICODE) 或 VT_BSTRT (ANSI)。 `SetString` 通常用于设置字符串为 ANSI，因为的默认值为[COleVariant::COleVariant](#colevariant)构造函数使用字符串或字符串指针参数和没有 VARTYPE 是 UNICODE。
+参数*vtSrc*必须是 VT_BSTR (UNICODE) 或 VT_BSTRT (ANSI)。 `SetString`通常用于将字符串设置为 ANSI, 因为使用字符串或字符串指针参数的[COleVariant:: COleVariant](#colevariant)构造函数的默认值, 且不能是 UNICODE。
 
-DAO 记录集在非 UNICODE 版本中的期望将 ANSI 字符串。 因此，对于 DAO 函数使用`COleVariant`对象，如果不创建 UNICODE 记录集，则必须使用 **COleVariant::COleVariant (** *lpszSrc* **，** *vtSrc* **)** 窗体的构造函数*vtSrc*设置为 VT_BSTRT (ANSI)，或者使用`SetString`与*vtSrc*设置为 VT_BSTRT 使 ANSI 字符串。 例如，`CDaoRecordset`函数[CDaoRecordset::Seek](../../mfc/reference/cdaorecordset-class.md#seek)并[CDaoRecordset::SetFieldValue](../../mfc/reference/cdaorecordset-class.md#setfieldvalue)使用`COleVariant`对象作为参数。 如果 DAO 记录集不是 UNICODE，这些对象必须是 ANSI。
+非 UNICODE 生成中的 DAO 记录集需要字符串为 ANSI。 因此，对于 DAO 函数使用`COleVariant`对象，如果不创建 UNICODE 记录集，则必须使用 **COleVariant::COleVariant (** *lpszSrc* **，** *vtSrc* **)** 窗体的构造函数*vtSrc*设置为 VT_BSTRT (ANSI)，或者使用`SetString`与*vtSrc*设置为 VT_BSTRT 使 ANSI 字符串。 例如, `CDaoRecordset`函数[CDaoRecordset:: Seek](../../mfc/reference/cdaorecordset-class.md#seek)和[CDaoRecordset:: SetFieldValue](../../mfc/reference/cdaorecordset-class.md#setfieldvalue)将`COleVariant`对象用作参数。 如果 DAO 记录集不是 UNICODE, 则这些对象必须为 ANSI。
 
 ## <a name="see-also"></a>请参阅
 
