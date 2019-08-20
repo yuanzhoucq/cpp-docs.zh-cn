@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: 253b1958a93fea28fa2d1408bc8238a5eb0ca519
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: fc2b4c08b5a999f0369199e0dd65a09a7cdf8dff
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916805"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69503155"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl 类
 
@@ -296,7 +296,7 @@ BOOL CanPaste(UINT nFormat = 0) const;
 ### <a name="parameters"></a>参数
 
 *nFormat*<br/>
-要查询的剪贴板数据格式。 此参数可以是预定义的剪贴板格式之一, 也可以是[RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata)返回的值。
+要查询的剪贴板数据格式。 此参数可以是预定义的剪贴板格式之一, 也可以是[RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw)返回的值。
 
 ### <a name="return-value"></a>返回值
 
@@ -306,7 +306,7 @@ BOOL CanPaste(UINT nFormat = 0) const;
 
 如果*nFormat*为 0, `CanPaste`将尝试当前剪贴板上的任何格式。
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_CANPASTE](/windows/desktop/Controls/em-canpaste)消息和[RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata)函数。
+有关详细信息, 请参阅 Windows SDK 中的[EM_CANPASTE](/windows/win32/Controls/em-canpaste)消息和[RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw)函数。
 
 ### <a name="example"></a>示例
 
@@ -328,7 +328,7 @@ BOOL CanRedo() const;
 
 若要在重做队列中发现操作的名称, 请调用[CRichEditCtrl:: GetRedoName](#getredoname)。 若要重做最新的撤消操作, 请调用[redo](#redo)。
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_CANREDO](/windows/desktop/Controls/em-canredo) 。
+有关详细信息, 请参阅 Windows SDK 中的[EM_CANREDO](/windows/win32/Controls/em-canredo) 。
 
 ##  <a name="canundo"></a>CRichEditCtrl:: CanUndo
 
@@ -344,7 +344,7 @@ BOOL CanUndo() const;
 
 ### <a name="remarks"></a>备注
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_CANUNDO](/windows/desktop/Controls/em-canundo) 。
+有关详细信息, 请参阅 Windows SDK 中的[EM_CANUNDO](/windows/win32/Controls/em-canundo) 。
 
 ### <a name="example"></a>示例
 
@@ -371,7 +371,7 @@ int CharFromPos(CPoint pt) const;
 
 此成员函数适用于富编辑控件。 若要获取编辑控件的信息, 请调用[CEdit:: CharFromPos](../../mfc/reference/cedit-class.md#charfrompos)。
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_CHARFROMPOS](/windows/desktop/Controls/em-charfrompos) 。
+有关详细信息, 请参阅 Windows SDK 中的[EM_CHARFROMPOS](/windows/win32/Controls/em-charfrompos) 。
 
 ##  <a name="clear"></a>CRichEditCtrl:: Clear
 
@@ -387,7 +387,7 @@ void Clear();
 
 若要删除当前所选内容并将删除的内容放到剪贴板上, 请调用[Cut](#cut)成员函数。
 
-有关详细信息, 请参阅 Windows SDK 中的[WM_CLEAR](/windows/desktop/dataxchg/wm-clear) 。
+有关详细信息, 请参阅 Windows SDK 中的[WM_CLEAR](/windows/win32/dataxchg/wm-clear) 。
 
 ### <a name="example"></a>示例
 
@@ -403,7 +403,7 @@ void Copy();
 
 ### <a name="remarks"></a>备注
 
-有关详细信息, 请参阅 Windows SDK 中的[WM_COPY](/windows/desktop/dataxchg/wm-copy) 。
+有关详细信息, 请参阅 Windows SDK 中的[WM_COPY](/windows/win32/dataxchg/wm-copy) 。
 
 ### <a name="example"></a>示例
 
@@ -424,10 +424,10 @@ virtual BOOL Create(
 ### <a name="parameters"></a>参数
 
 *dwStyle*<br/>
-指定编辑控件的样式。 应用下面的 "**备注**" 部分中列出的窗口样式的组合, 并[编辑控件样式](/windows/desktop/Controls/edit-control-styles), 如 Windows SDK 中所述。
+指定编辑控件的样式。 应用下面的 "**备注**" 部分中列出的窗口样式的组合, 并[编辑控件样式](/windows/win32/Controls/edit-control-styles), 如 Windows SDK 中所述。
 
 *rect*<br/>
-指定编辑控件的大小和位置。 可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](/windows/desktop/api/windef/ns-windef-tagrect)结构。
+指定编辑控件的大小和位置。 可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](/windows/win32/api/windef/ns-windef-rect)结构。
 
 *pParentWnd*<br/>
 指定编辑控件的父窗口 (通常为[CDialog](../../mfc/reference/cdialog-class.md))。 它不能为 NULL。
@@ -461,7 +461,7 @@ virtual BOOL Create(
 
 - WS_TABSTOP, 以按 tab 键顺序包含编辑控件。
 
-有关窗口样式的详细信息, 请参阅 Windows SDK 中的[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) 。
+有关窗口样式的详细信息, 请参阅 Windows SDK 中的[CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) 。
 
 ### <a name="example"></a>示例
 
@@ -483,10 +483,10 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>参数
 
 *dwExStyle*<br/>
-指定正在创建的控件的扩展样式。 有关扩展 Windows 样式的列表, 请参阅 Windows SDK 中[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)的*dwExStyle*参数。
+指定正在创建的控件的扩展样式。 有关扩展 Windows 样式的列表, 请参阅 Windows SDK 中[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)的*dwExStyle*参数。
 
 *dwStyle*<br/>
-指定编辑控件的样式。 应用[创建](#create)和[编辑控件样式](/windows/desktop/Controls/edit-control-styles)的 "**备注**" 部分中列出的窗口样式的组合, 如 Windows SDK 中所述。
+指定编辑控件的样式。 应用[创建](#create)和[编辑控件样式](/windows/win32/Controls/edit-control-styles)的 "**备注**" 部分中列出的窗口样式的组合, 如 Windows SDK 中所述。
 
 *rect*<br/>
 对[矩形](/previous-versions/dd162897\(v=vs.85\))结构的引用, 该结构描述要创建的窗口的大小和位置 (以*pParentWnd*的工作区坐标表示)。
@@ -535,7 +535,7 @@ void Cut();
 
 若要删除当前所选内容而不将删除的文本放入剪贴板, 请调用[Clear](#clear)成员函数。
 
-有关详细信息, 请参阅 Windows SDK 中的[WM_CUT](/windows/desktop/dataxchg/wm-cut) 。
+有关详细信息, 请参阅 Windows SDK 中的[WM_CUT](/windows/win32/dataxchg/wm-cut) 。
 
 ### <a name="example"></a>示例
 
@@ -552,7 +552,7 @@ BOOL DisplayBand(LPRECT pDisplayRect);
 ### <a name="parameters"></a>参数
 
 *pDisplayRect*<br/>
-指向[RECT](/windows/desktop/api/windef/ns-windef-tagrect)或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象的指针, 该对象指定要显示文本的设备区域。
+指向[RECT](/windows/win32/api/windef/ns-windef-rect)或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象的指针, 该对象指定要显示文本的设备区域。
 
 ### <a name="return-value"></a>返回值
 
@@ -562,7 +562,7 @@ BOOL DisplayBand(LPRECT pDisplayRect);
 
 文本和 OLE 项将被剪裁到指针*pDisplayRect*指定的区域。
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_DISPLAYBAND](/windows/desktop/Controls/em-displayband) 。
+有关详细信息, 请参阅 Windows SDK 中的[EM_DISPLAYBAND](/windows/win32/Controls/em-displayband) 。
 
 ### <a name="example"></a>示例
 
@@ -582,7 +582,7 @@ void EmptyUndoBuffer();
 
 每当调用[CWnd](../../mfc/reference/cwnd-class.md)成员函数[SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext)时, 都会自动清除 undo 标志。
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_EMPTYUNDOBUFFER](/windows/desktop/Controls/em-emptyundobuffer) 。
+有关详细信息, 请参阅 Windows SDK 中的[EM_EMPTYUNDOBUFFER](/windows/win32/Controls/em-emptyundobuffer) 。
 
 ### <a name="example"></a>示例
 
@@ -601,10 +601,10 @@ long FindText(
 ### <a name="parameters"></a>参数
 
 *dwFlags*<br/>
-有关可能值的列表, 请参阅 Windows SDK 中的[EM_FINDTEXTEXT](/windows/desktop/Controls/em-findtextex)中的*wParam* 。
+有关可能值的列表, 请参阅 Windows SDK 中的[EM_FINDTEXTEXT](/windows/win32/Controls/em-findtextex)中的*wParam* 。
 
 *pFindText*<br/>
-指向[FINDTEXTEX](/windows/desktop/api/richedit/ns-richedit-findtextexa)结构的指针, 该结构提供搜索参数并返回找到匹配项的范围。
+指向[FINDTEXTEX](/windows/win32/api/richedit/ns-richedit-findtextexw)结构的指针, 该结构提供搜索参数并返回找到匹配项的范围。
 
 ### <a name="return-value"></a>返回值
 
@@ -612,9 +612,9 @@ long FindText(
 
 ### <a name="remarks"></a>备注
 
-您可以通过在`FINDTEXTEX`结构中的[CHARRANGE](/windows/desktop/api/richedit/ns-richedit-charrange)结构中设置适当的范围参数来向上或向下搜索。
+您可以通过在`FINDTEXTEX`结构中的[CHARRANGE](/windows/win32/api/richedit/ns-richedit-charrange)结构中设置适当的范围参数来向上或向下搜索。
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_FINDTEXTEX](/windows/desktop/Controls/em-findtextex)消息和[FINDTEXTEX](/windows/desktop/api/richedit/ns-richedit-findtextexa)结构。
+有关详细信息, 请参阅 Windows SDK 中的[EM_FINDTEXTEX](/windows/win32/Controls/em-findtextex)消息和[FINDTEXTEX](/windows/win32/api/richedit/ns-richedit-findtextexw)结构。
 
 ### <a name="example"></a>示例
 
@@ -640,7 +640,7 @@ DWORD FindWordBreak(
 
 ### <a name="return-value"></a>返回值
 
-基于参数*nCode*。 有关详细信息, 请参阅 Windows SDK 中的[EM_FINDWORDBREAK](/windows/desktop/Controls/em-findwordbreak) 。
+基于参数*nCode*。 有关详细信息, 请参阅 Windows SDK 中的[EM_FINDWORDBREAK](/windows/win32/Controls/em-findwordbreak) 。
 
 ### <a name="remarks"></a>备注
 
@@ -659,7 +659,7 @@ long FormatRange(
 ### <a name="parameters"></a>参数
 
 *pfr*<br/>
-指向[FORMATRANGE](/windows/desktop/api/richedit/ns-richedit-formatrange)结构的指针, 该结构包含有关输出设备的信息。 NULL 表示可以释放 rich edit 控件中的缓存信息。
+指向[FORMATRANGE](/windows/win32/api/richedit/ns-richedit-formatrange)结构的指针, 该结构包含有关输出设备的信息。 NULL 表示可以释放 rich edit 控件中的缓存信息。
 
 *bDisplay*<br/>
 指示是否应呈现文本。 如果为 FALSE, 则仅度量文本。
@@ -672,7 +672,7 @@ long FormatRange(
 
 通常, 此调用后跟对[DisplayBand](#displayband)的调用。
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_FORMATRANGE](/windows/desktop/Controls/em-formatrange)消息和[FORMATRANGE](/windows/desktop/api/richedit/ns-richedit-formatrange)结构。
+有关详细信息, 请参阅 Windows SDK 中的[EM_FORMATRANGE](/windows/win32/Controls/em-formatrange)消息和[FORMATRANGE](/windows/win32/api/richedit/ns-richedit-formatrange)结构。
 
 ### <a name="example"></a>示例
 
@@ -699,7 +699,7 @@ CPoint GetCharPos(long lChar) const;
 
 字符是通过提供其从零开始的索引值来指定的。 如果*lChar*大于此`CRichEditCtrl`对象中最后一个字符的索引, 则返回值指定紧随此`CRichEditCtrl`对象中最后一个字符的字符位置的坐标。
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_POSFROMCHAR](/windows/desktop/Controls/em-posfromchar) 。
+有关详细信息, 请参阅 Windows SDK 中的[EM_POSFROMCHAR](/windows/win32/Controls/em-posfromchar) 。
 
 ##  <a name="getdefaultcharformat"></a>CRichEditCtrl:: GetDefaultCharFormat
 
@@ -744,7 +744,7 @@ long GetEventMask() const;
 
 事件掩码指定`CRichEditCtrl`对象发送到其父窗口的通知消息。
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_GETEVENTMASK](/windows/desktop/Controls/em-geteventmask) 。
+有关详细信息, 请参阅 Windows SDK 中的[EM_GETEVENTMASK](/windows/win32/Controls/em-geteventmask) 。
 
 ### <a name="example"></a>示例
 
@@ -764,7 +764,7 @@ int GetFirstVisibleLine() const;
 
 ### <a name="remarks"></a>备注
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_GETFIRSTVISIBLELINE](/windows/desktop/Controls/em-getfirstvisibleline) 。
+有关详细信息, 请参阅 Windows SDK 中的[EM_GETFIRSTVISIBLELINE](/windows/win32/Controls/em-getfirstvisibleline) 。
 
 ### <a name="example"></a>示例
 
@@ -780,13 +780,13 @@ IRichEditOle* GetIRichEditOle() const;
 
 ### <a name="return-value"></a>返回值
 
-指向[IRichEditOle](/windows/desktop/api/richole/nn-richole-iricheditole)接口的指针, 该接口可用于访问此`CRichEditCtrl`对象的 OLE 功能;如果接口不可访问, 则为 NULL。
+指向[IRichEditOle](/windows/win32/api/richole/nn-richole-iricheditole)接口的指针, 该接口可用于访问此`CRichEditCtrl`对象的 OLE 功能;如果接口不可访问, 则为 NULL。
 
 ### <a name="remarks"></a>备注
 
 使用此接口可以访问此`CRichEditCtrl`对象的 OLE 功能。
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_GETOLEINTERFACE](/windows/desktop/Controls/em-getoleinterface) Message and [IRichEditOle](/windows/desktop/api/richole/nn-richole-iricheditole) interface。
+有关详细信息, 请参阅 Windows SDK 中的[EM_GETOLEINTERFACE](/windows/win32/Controls/em-getoleinterface) Message and [IRichEditOle](/windows/win32/api/richole/nn-richole-iricheditole) interface。
 
 ##  <a name="getlimittext"></a>CRichEditCtrl:: GetLimitText
 
@@ -804,7 +804,7 @@ long GetLimitText() const;
 
 "文本限制" 是超文本编辑控件可以接受的最大文本量 (以字节为单位)。
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_GETLIMITTEXT](/windows/desktop/Controls/em-getlimittext) 。
+有关详细信息, 请参阅 Windows SDK 中的[EM_GETLIMITTEXT](/windows/win32/Controls/em-getlimittext) 。
 
 ### <a name="example"></a>示例
 
@@ -847,7 +847,7 @@ int GetLine(
 > [!NOTE]
 >  因为缓冲区的第一个词存储要复制的字符数, 请确保缓冲区的长度至少为4个字节。
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_GETLINE](/windows/desktop/Controls/em-getline) 。
+有关详细信息, 请参阅 Windows SDK 中的[EM_GETLINE](/windows/win32/Controls/em-getline) 。
 
 ### <a name="example"></a>示例
 
@@ -867,7 +867,7 @@ int GetLineCount() const;
 
 ### <a name="remarks"></a>备注
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_GETLINECOUNT](/windows/desktop/Controls/em-getlinecount) 。
+有关详细信息, 请参阅 Windows SDK 中的[EM_GETLINECOUNT](/windows/win32/Controls/em-getlinecount) 。
 
 ### <a name="example"></a>示例
 
@@ -889,7 +889,7 @@ BOOL GetModify() const;
 
 Windows 将维护一个内部标志, 该标志指示是否更改了 rich edit 控件的内容。 当编辑控件是第一次创建的, 并且还可以通过调用[SetModify](#setmodify)成员函数清除时, 此标志会被清除。
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_GETMODIFY](/windows/desktop/Controls/em-getmodify) 。
+有关详细信息, 请参阅 Windows SDK 中的[EM_GETMODIFY](/windows/win32/Controls/em-getmodify) 。
 
 ### <a name="example"></a>示例
 
@@ -905,7 +905,7 @@ UINT GetOptions() const;
 
 ### <a name="return-value"></a>返回值
 
-当前选项标志值的组合。 有关这些值的列表, 请参阅[EM_SETOPTIONS](/windows/desktop/Controls/em-setoptions)消息中的*用于*参数, 如 Windows SDK 中所述。
+当前选项标志值的组合。 有关这些值的列表, 请参阅[EM_SETOPTIONS](/windows/win32/Controls/em-setoptions)消息中的*用于*参数, 如 Windows SDK 中所述。
 
 ##  <a name="getparaformat"></a>CRichEditCtrl:: GetParaFormat
 
@@ -918,9 +918,9 @@ DWORD GetParaFormat(PARAFORMAT& pf) const;  DWORD GetParaFormat(PARAFORMAT2& pf)
 ### <a name="parameters"></a>参数
 
 *pf*<br/>
-在第一个版本中, 是指向[PARAFORMAT](/windows/desktop/api/richedit/ns-richedit-paraformat)结构的指针, 用于保存当前所选内容的段落格式特性。
+在第一个版本中, 是指向[PARAFORMAT](/windows/win32/api/richedit/ns-richedit-paraformat)结构的指针, 用于保存当前所选内容的段落格式特性。
 
-在第二个版本中, 是指向[PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2)结构的指针, 该结构是对`PARAFORMAT`结构的丰富编辑2.0 扩展, 它包含默认的字符格式设置特性。
+在第二个版本中, 是指向[PARAFORMAT2](/windows/win32/api/richedit/ns-richedit-paraformat2)结构的指针, 该结构是对`PARAFORMAT`结构的丰富编辑2.0 扩展, 它包含默认的字符格式设置特性。
 
 ### <a name="return-value"></a>返回值
 
@@ -930,7 +930,7 @@ DWORD GetParaFormat(PARAFORMAT& pf) const;  DWORD GetParaFormat(PARAFORMAT2& pf)
 
 如果选择了多个段落, *pf*会接收选定段落的第一个段落。 返回值指定哪些属性在整个选定内容中是一致的。
 
-有关详细信息, 请参阅[EM_GETPARAFORMAT](/windows/desktop/Controls/em-getparaformat)消息和`PARAFORMAT` Windows SDK 中`PARAFORMAT2`的和结构。
+有关详细信息, 请参阅[EM_GETPARAFORMAT](/windows/win32/Controls/em-getparaformat)消息和`PARAFORMAT` Windows SDK 中`PARAFORMAT2`的和结构。
 
 ### <a name="example"></a>示例
 
@@ -949,10 +949,10 @@ BOOL GetPunctuation(
 ### <a name="parameters"></a>参数
 
 *fType*<br/>
-标点符号类型标志, 如 Windows SDK 中[EM_GETPUNCTUATION](/windows/desktop/Controls/em-getpunctuation)的*fType*参数中所述。
+标点符号类型标志, 如 Windows SDK 中[EM_GETPUNCTUATION](/windows/win32/Controls/em-getpunctuation)的*fType*参数中所述。
 
 *lpPunc*<br/>
-指向[标点符号](/windows/desktop/api/richedit/ns-richedit-punctuation)结构的指针, 如 Windows SDK 中所述。
+指向[标点符号](/windows/win32/api/richedit/ns-richedit-punctuation)结构的指针, 如 Windows SDK 中所述。
 
 ### <a name="return-value"></a>返回值
 
@@ -973,13 +973,13 @@ void GetRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>参数
 
 *lpRect*<br/>
-[CRect](../../atl-mfc-shared/reference/crect-class.md)或指向要接收此`CRichEditCtrl`对象的格式设置矩形的 [RECT](/windows/desktop/api/windef/ns-windef-tagrect) 的指针。
+[CRect](../../atl-mfc-shared/reference/crect-class.md)或指向要接收此`CRichEditCtrl`对象的格式设置矩形的 [RECT](/windows/win32/api/windef/ns-windef-rect) 的指针。
 
 ### <a name="remarks"></a>备注
 
 格式设置矩形是文本的边框。 此值与`CRichEditCtrl`对象的大小无关。
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_GETRECT](/windows/desktop/Controls/em-getrect) 。
+有关详细信息, 请参阅 Windows SDK 中的[EM_GETRECT](/windows/win32/Controls/em-getrect) 。
 
 ### <a name="example"></a>示例
 
@@ -995,7 +995,7 @@ UNDONAMEID GetRedoName() const;
 
 ### <a name="return-value"></a>返回值
 
-如果成功, `GetRedoName`则返回[UNDONAMEID](/windows/desktop/api/richedit/ne-richedit-undonameid)枚举类型, 该类型指示控件的重做队列中的下一操作的类型。 如果重做队列为空, 或如果队列中的 "重做" 操作是未知类型, `GetRedoName`则返回0。
+如果成功, `GetRedoName`则返回[UNDONAMEID](/windows/win32/api/richedit/ne-richedit-undonameid)枚举类型, 该类型指示控件的重做队列中的下一操作的类型。 如果重做队列为空, 或如果队列中的 "重做" 操作是未知类型, `GetRedoName`则返回0。
 
 ### <a name="remarks"></a>备注
 
@@ -1016,7 +1016,7 @@ void GetSel(
 ### <a name="parameters"></a>参数
 
 *cr*<br/>
-对[CHARRANGE](/windows/desktop/api/richedit/ns-richedit-charrange)结构的引用, 用于接收当前所选内容的边界。
+对[CHARRANGE](/windows/win32/api/richedit/ns-richedit-charrange)结构的引用, 用于接收当前所选内容的边界。
 
 *nStartChar*<br/>
 当前选定内容中第一个字符的从零开始的索引。
@@ -1034,7 +1034,7 @@ void GetSel(
 
 如果开头 (`cpMin`或*nStartChar*) 为 0, 结束 (`cpMax`或*nEndChar*) 为-1, 则选择内容包括所有内容。
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_EXGETSEL](/windows/desktop/Controls/em-exgetsel)消息和[CHARRANGE](/windows/desktop/api/richedit/ns-richedit-charrange)结构。
+有关详细信息, 请参阅 Windows SDK 中的[EM_EXGETSEL](/windows/win32/Controls/em-exgetsel)消息和[CHARRANGE](/windows/win32/api/richedit/ns-richedit-charrange)结构。
 
 ### <a name="example"></a>示例
 
@@ -1051,9 +1051,9 @@ DWORD GetSelectionCharFormat(CHARFORMAT& cf) const;  DWORD GetSelectionCharForma
 ### <a name="parameters"></a>参数
 
 *cf*<br/>
-在第一个版本中, 是指向[CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat)结构的指针, 该结构接收当前选定内容的字符格式设置特性。
+在第一个版本中, 是指向[CHARFORMAT](/windows/win32/api/richedit/ns-richedit-_charformat)结构的指针, 该结构接收当前选定内容的字符格式设置特性。
 
-在第二个版本中, 是指向[CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a)结构的指针, 该结构是用于接收当前选择`CHARFORMAT`的字符格式设置属性的结构的丰富编辑2.0 扩展。
+在第二个版本中, 是指向[CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w)结构的指针, 该结构是用于接收当前选择`CHARFORMAT`的字符格式设置属性的结构的丰富编辑2.0 扩展。
 
 ### <a name="return-value"></a>返回值
 
@@ -1063,7 +1063,7 @@ Cf `dwMask`的数据成员。它指定在当前选定内容中一致的字符格
 
 *Cf*参数接收当前选定内容中第一个字符的属性。 返回值指定哪些属性在整个选定内容中是一致的。
 
-有关详细信息, 请参阅[EM_GETCHARFORMAT](/windows/desktop/Controls/em-getcharformat)消息和`CHARFORMAT` Windows SDK 中`CHARFORMAT2`的和结构。
+有关详细信息, 请参阅[EM_GETCHARFORMAT](/windows/win32/Controls/em-getcharformat)消息和`CHARFORMAT` Windows SDK 中`CHARFORMAT2`的和结构。
 
 ### <a name="example"></a>示例
 
@@ -1093,7 +1093,7 @@ WORD GetSelectionType() const;
 
 ### <a name="remarks"></a>备注
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_SELECTIONTYPE](/windows/desktop/Controls/em-selectiontype) 。
+有关详细信息, 请参阅 Windows SDK 中的[EM_SELECTIONTYPE](/windows/win32/Controls/em-selectiontype) 。
 
 ### <a name="example"></a>示例
 
@@ -1124,7 +1124,7 @@ long GetSelText(LPSTR lpBuf) const;  CString GetSelText() const;
 
 如果使用第一种形式**GetSelText (** `lpBuf` **)** , 则必须确保缓冲区的大小足以容纳它将接收的文本。 调用[GetSel](#getsel)以确定当前选择的字符数。
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_GETSELTEXT](/windows/desktop/Controls/em-getseltext) 。
+有关详细信息, 请参阅 Windows SDK 中的[EM_GETSELTEXT](/windows/win32/Controls/em-getseltext) 。
 
 ### <a name="example"></a>示例
 
@@ -1144,7 +1144,7 @@ long GetTextLength() const;
 
 ### <a name="remarks"></a>备注
 
-有关详细信息, 请参阅 Windows SDK 中的[WM_GETTEXTLENGTH](/windows/desktop/winmsg/wm-gettextlength) 。
+有关详细信息, 请参阅 Windows SDK 中的[WM_GETTEXTLENGTH](/windows/win32/winmsg/wm-gettextlength) 。
 
 ### <a name="example"></a>示例
 
@@ -1163,7 +1163,7 @@ long GetTextLengthEx(
 ### <a name="parameters"></a>参数
 
 *dwFlags*<br/>
-值, 用于指定确定文本长度时使用的方法。 此成员可以是 Windows SDK 中所述的 [GETTEXTLENGTHEX](/windows/desktop/api/richedit/ns-richedit-gettextlengthex) flags 成员中列出的一个或多个值。
+值, 用于指定确定文本长度时使用的方法。 此成员可以是 Windows SDK 中所述的[GETTEXTLENGTHEX](/windows/win32/api/richedit/ns-richedit-gettextlengthex) flags 成员中列出的一个或多个值。
 
 *uCodePage*<br/>
 用于转换的代码页 (对于 ANSI 代码页为 CP_ACP, 对于 Unicode 为 1200)。
@@ -1174,7 +1174,7 @@ long GetTextLengthEx(
 
 ### <a name="remarks"></a>备注
 
-`GetTextLengthEx`提供确定文本长度的其他方法。 它支持丰富的编辑2.0 功能。 有关详细信息, 请参阅 Windows SDKfor 中的[丰富编辑控件](/windows/desktop/Controls/about-rich-edit-controls)。
+`GetTextLengthEx`提供确定文本长度的其他方法。 它支持丰富的编辑2.0 功能。 有关详细信息, 请参阅 Windows SDKfor 中的[丰富编辑控件](/windows/win32/Controls/about-rich-edit-controls)。
 
 ##  <a name="gettextmode"></a>CRichEditCtrl:: GetTextMode
 
@@ -1186,7 +1186,7 @@ UINT GetTextMode() const;
 
 ### <a name="return-value"></a>返回值
 
-[TEXTMODE](/windows/desktop/api/richedit/ne-richedit-tagtextmode)枚举类型的一组位标志, 如 Windows SDK 中所述。 标志指示控件的当前文本模式和撤消级别。
+[TEXTMODE](/windows/win32/api/richedit/ne-richedit-textmode)枚举类型的一组位标志, 如 Windows SDK 中所述。 标志指示控件的当前文本模式和撤消级别。
 
 ##  <a name="gettextrange"></a>CRichEditCtrl:: GetTextRange
 
@@ -1216,9 +1216,9 @@ int GetTextRange(
 
 ### <a name="remarks"></a>备注
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_GETTEXTRANGE](/windows/desktop/Controls/em-gettextrange) 。
+有关详细信息, 请参阅 Windows SDK 中的[EM_GETTEXTRANGE](/windows/win32/Controls/em-gettextrange) 。
 
-`GetTextRange`支持丰富的编辑2.0 功能。 有关详细信息, 请参阅 Windows SDKfor 中的[丰富编辑控件](/windows/desktop/Controls/about-rich-edit-controls)。
+`GetTextRange`支持丰富的编辑2.0 功能。 有关详细信息, 请参阅 Windows SDKfor 中的[丰富编辑控件](/windows/win32/Controls/about-rich-edit-controls)。
 
 ##  <a name="getundoname"></a>CRichEditCtrl:: GetUndoName
 
@@ -1230,7 +1230,7 @@ UNDONAMEID GetUndoName() const;
 
 ### <a name="return-value"></a>返回值
 
-如果撤消操作在控件的撤消队列中, `GetUndoName`则返回[UNDONAMEID](/windows/desktop/api/richedit/ne-richedit-undonameid)枚举类型, 指示队列中下一操作的类型。 如果撤消队列为空, 或如果队列中的撤消操作为未知类型, `GetUndoName`则返回0。
+如果撤消操作在控件的撤消队列中, `GetUndoName`则返回[UNDONAMEID](/windows/win32/api/richedit/ne-richedit-undonameid)枚举类型, 指示队列中下一操作的类型。 如果撤消队列为空, 或如果队列中的撤消操作为未知类型, `GetUndoName`则返回0。
 
 ### <a name="remarks"></a>备注
 
@@ -1246,7 +1246,7 @@ UINT GetWordWrapMode() const;
 
 ### <a name="return-value"></a>返回值
 
-当前的 "自动换行" 和 "断字" 选项。 Windows SDK 中的[EM_SETWORDWRAPMODE](/windows/desktop/Controls/em-setwordwrapmode)介绍了这些选项。
+当前的 "自动换行" 和 "断字" 选项。 Windows SDK 中的[EM_SETWORDWRAPMODE](/windows/win32/Controls/em-setwordwrapmode)介绍了这些选项。
 
 ### <a name="remarks"></a>备注
 
@@ -1274,7 +1274,7 @@ void HideSelection(
 
 当*bPerm*为 TRUE 时, 它会更改此`CRichEditCtrl`对象的 ECO_NOHIDESEL 选项。 有关此选项的简要说明, 请参阅[SetOptions](#setoptions)。 您可以使用此函数设置此`CRichEditCtrl`对象的所有选项。
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_HIDESELECTION](/windows/desktop/Controls/em-hideselection) 。
+有关详细信息, 请参阅 Windows SDK 中的[EM_HIDESELECTION](/windows/win32/Controls/em-hideselection) 。
 
 ### <a name="example"></a>示例
 
@@ -1300,7 +1300,7 @@ void LimitText(long nChars = 0);
 > [!NOTE]
 >  对于文本限制, 每个 OLE 项都作为单个字符计数。
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_EXLIMITTEXT](/windows/desktop/Controls/em-exlimittext) 。
+有关详细信息, 请参阅 Windows SDK 中的[EM_EXLIMITTEXT](/windows/win32/Controls/em-exlimittext) 。
 
 ### <a name="example"></a>示例
 
@@ -1327,7 +1327,7 @@ long LineFromChar(long nIndex) const;
 
 字符索引是从超文本编辑控件开头的字符数。 对于字符计数, OLE 项作为单个字符计数。
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_EXLINEFROMCHAR](/windows/desktop/Controls/em-exlinefromchar) 。
+有关详细信息, 请参阅 Windows SDK 中的[EM_EXLINEFROMCHAR](/windows/win32/Controls/em-exlinefromchar) 。
 
 ### <a name="example"></a>示例
 
@@ -1354,7 +1354,7 @@ int LineIndex(int nLine = -1) const;
 
 字符索引是从超文本编辑控件开头到指定行的字符数。
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_LINEINDEX](/windows/desktop/controls/em-lineindex) 。
+有关详细信息, 请参阅 Windows SDK 中的[EM_LINEINDEX](/windows/win32/controls/em-lineindex) 。
 
 ### <a name="example"></a>示例
 
@@ -1381,7 +1381,7 @@ int LineLength(int nLine = -1) const;
 
 使用[LineIndex](#lineindex)成员函数检索此`CRichEditCtrl`对象内给定行号的字符索引。
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_LINELENGTH](/windows/desktop/Controls/em-linelength) 。
+有关详细信息, 请参阅 Windows SDK 中的[EM_LINELENGTH](/windows/win32/Controls/em-linelength) 。
 
 ### <a name="example"></a>示例
 
@@ -1411,7 +1411,7 @@ void LineScroll(
 
 `LineScroll`可用于水平滚动越过任意行的最后一个字符。
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_LINESCROLL](/windows/desktop/Controls/em-linescroll) 。
+有关详细信息, 请参阅 Windows SDK 中的[EM_LINESCROLL](/windows/win32/Controls/em-linescroll) 。
 
 ### <a name="example"></a>示例
 
@@ -1429,7 +1429,7 @@ void Paste();
 
 仅当剪贴板包含可识别格式的数据时, 才插入数据。
 
-有关详细信息, 请参阅 Windows SDK 中的[WM_PASTE](/windows/desktop/dataxchg/wm-paste) 。
+有关详细信息, 请参阅 Windows SDK 中的[WM_PASTE](/windows/win32/dataxchg/wm-paste) 。
 
 ### <a name="example"></a>示例
 
@@ -1461,7 +1461,7 @@ void PasteSpecial(
 
 新材料将插入到插入点处, 插入符号的位置。
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_PASTESPECIAL](/windows/desktop/Controls/em-pastespecial) 。
+有关详细信息, 请参阅 Windows SDK 中的[EM_PASTESPECIAL](/windows/win32/Controls/em-pastespecial) 。
 
 ### <a name="example"></a>示例
 
@@ -1486,7 +1486,7 @@ CPoint PosFromChar(UINT nChar) const;
 
 ### <a name="remarks"></a>备注
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_POSFROMCHAR](/windows/desktop/Controls/em-posfromchar) 。
+有关详细信息, 请参阅 Windows SDK 中的[EM_POSFROMCHAR](/windows/win32/Controls/em-posfromchar) 。
 
 ##  <a name="redo"></a>  CRichEditCtrl::Redo
 
@@ -1502,7 +1502,7 @@ BOOL Redo();
 
 ### <a name="remarks"></a>备注
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_REDO](/windows/desktop/Controls/em-redo) 。
+有关详细信息, 请参阅 Windows SDK 中的[EM_REDO](/windows/win32/Controls/em-redo) 。
 
 ##  <a name="replacesel"></a>  CRichEditCtrl::ReplaceSel
 
@@ -1530,7 +1530,7 @@ void ReplaceSel(
 
 此函数将用现有字符格式设置插入的文本格式。 在替换整个文本范围 (通过在调用`SetSel` `ReplaceSel`之前调用 (0,-1)) 时, 有一个段落字符末尾保留上一段落的格式, 该格式由新插入的文本继承。
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_REPLACESEL](/windows/desktop/Controls/em-replacesel) 。
+有关详细信息, 请参阅 Windows SDK 中的[EM_REPLACESEL](/windows/win32/Controls/em-replacesel) 。
 
 ### <a name="example"></a>示例
 
@@ -1548,7 +1548,7 @@ void RequestResize();
 
 在[CWnd:: OnSize](../../mfc/reference/cwnd-class.md#onsize)处理无限`CRichEditCtrl`对象时, 此函数很有用。
 
-有关详细信息, 请参阅有关 Windows SDK 中的[Rich Edit 控件](/windows/desktop/Controls/about-rich-edit-controls)的[EM_REQUESTRESIZE](/windows/desktop/Controls/em-requestresize)消息和**无限丰富的编辑控件**部分。
+有关详细信息, 请参阅有关 Windows SDK 中的[Rich Edit 控件](/windows/win32/Controls/about-rich-edit-controls)的[EM_REQUESTRESIZE](/windows/win32/Controls/em-requestresize)消息和**无限丰富的编辑控件**部分。
 
 ##  <a name="setautourldetect"></a>CRichEditCtrl:: SetAutoURLDetect
 
@@ -1569,10 +1569,10 @@ BOOL SetAutoURLDetect(BOOL bEnable = TRUE);
 
 ### <a name="remarks"></a>备注
 
-如果启用, 富编辑控件将扫描文本, 以确定它是否与标准 URL 格式匹配。 有关这些 URL 格式的列表, 请参阅 Windows SDK 中的[EM_AUTOURLDETECT](/windows/desktop/Controls/em-autourldetect) 。
+如果启用, 富编辑控件将扫描文本, 以确定它是否与标准 URL 格式匹配。 有关这些 URL 格式的列表, 请参阅 Windows SDK 中的[EM_AUTOURLDETECT](/windows/win32/Controls/em-autourldetect) 。
 
 > [!NOTE]
->  如果编辑控件`SetAutoURLDetect`对除 url 之外的文本使用 CFE_LINK 效果, 请不要将设置为 TRUE。 `SetAutoURLDetect`为 Url 启用此效果, 并对所有其他文本禁用此效果。 有关 CFE_LINK 效果的详细信息, 请参阅[EN_LINK](/windows/desktop/Controls/en-link) 。
+>  如果编辑控件`SetAutoURLDetect`对除 url 之外的文本使用 CFE_LINK 效果, 请不要将设置为 TRUE。 `SetAutoURLDetect`为 Url 启用此效果, 并对所有其他文本禁用此效果。 有关 CFE_LINK 效果的详细信息, 请参阅[EN_LINK](/windows/win32/Controls/en-link) 。
 
 ##  <a name="setbackgroundcolor"></a>  CRichEditCtrl::SetBackgroundColor
 
@@ -1598,9 +1598,9 @@ COLORREF SetBackgroundColor(
 
 ### <a name="remarks"></a>备注
 
-可以将背景色设置为系统值或指定的[COLORREF](/windows/desktop/gdi/colorref)值。
+可以将背景色设置为系统值或指定的[COLORREF](/windows/win32/gdi/colorref)值。
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_SETBKGNDCOLOR](/windows/desktop/Controls/em-setbkgndcolor)消息和[COLORREF](/windows/desktop/gdi/colorref)结构。
+有关详细信息, 请参阅 Windows SDK 中的[EM_SETBKGNDCOLOR](/windows/win32/Controls/em-setbkgndcolor)消息和[COLORREF](/windows/win32/gdi/colorref)结构。
 
 ### <a name="example"></a>示例
 
@@ -1618,9 +1618,9 @@ BOOL SetDefaultCharFormat(CHARFORMAT2& cf);
 ### <a name="parameters"></a>参数
 
 *cf*<br/>
-在第一个版本中, 指向[CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat)结构的指针, 该结构包含新的默认字符格式设置特性。
+在第一个版本中, 指向[CHARFORMAT](/windows/win32/api/richedit/ns-richedit-_charformat)结构的指针, 该结构包含新的默认字符格式设置特性。
 
-在第二个版本中, 指向[CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a)结构的指针, 该结构是对`CHARFORMAT`结构的一种丰富编辑2.0 扩展, 其中包含默认字符格式设置特性。
+在第二个版本中, 指向[CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w)结构的指针, 该结构是对`CHARFORMAT`结构的一种丰富编辑2.0 扩展, 其中包含默认字符格式设置特性。
 
 ### <a name="return-value"></a>返回值
 
@@ -1630,7 +1630,7 @@ BOOL SetDefaultCharFormat(CHARFORMAT2& cf);
 
 此函数只更改`dwMask` *cf*成员指定的属性。
 
-有关详细信息, 请参阅[EM_SETCHARFORMAT](/windows/desktop/Controls/em-setcharformat)消息和`CHARFORMAT` Windows SDK 中`CHARFORMAT2`的和结构。
+有关详细信息, 请参阅[EM_SETCHARFORMAT](/windows/win32/Controls/em-setcharformat)消息和`CHARFORMAT` Windows SDK 中`CHARFORMAT2`的和结构。
 
 ### <a name="example"></a>示例
 
@@ -1657,7 +1657,7 @@ DWORD SetEventMask(DWORD dwEventMask);
 
 事件掩码指定`CRichEditCtrl`对象发送到其父窗口的通知消息。
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_SETEVENTMASK](/windows/desktop/Controls/em-seteventmask) 。
+有关详细信息, 请参阅 Windows SDK 中的[EM_SETEVENTMASK](/windows/win32/Controls/em-seteventmask) 。
 
 ### <a name="example"></a>示例
 
@@ -1680,7 +1680,7 @@ void SetModify(BOOL bModified = TRUE);
 
 修改后的标志指示编辑控件中的文本是否已被修改。 每当用户更改文本时, 将自动设置该设置。 可以通过[GetModify](#getmodify)成员函数检索其值。
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_SETMODIFY](/windows/desktop/Controls/em-setmodify) 。
+有关详细信息, 请参阅 Windows SDK 中的[EM_SETMODIFY](/windows/win32/Controls/em-setmodify) 。
 
 ### <a name="example"></a>示例
 
@@ -1697,7 +1697,7 @@ BOOL SetOLECallback(IRichEditOleCallback* pCallback);
 ### <a name="parameters"></a>参数
 
 *pCallback*<br/>
-指向[IRichEditOleCallback](/windows/desktop/api/richole/nn-richole-iricheditolecallback)对象的指针, 此`CRichEditCtrl`对象将使用该对象获取与 OLE 相关的资源和信息。
+指向[IRichEditOleCallback](/windows/win32/api/richole/nn-richole-iricheditolecallback)对象的指针, 此`CRichEditCtrl`对象将使用该对象获取与 OLE 相关的资源和信息。
 
 ### <a name="return-value"></a>返回值
 
@@ -1705,9 +1705,9 @@ BOOL SetOLECallback(IRichEditOleCallback* pCallback);
 
 ### <a name="remarks"></a>备注
 
-此`CRichEditCtrl`对象将调用[IUnknown:: AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)来递增*pCallback*指定的 COM 对象的使用计数。
+此`CRichEditCtrl`对象将调用[IUnknown:: AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)来递增*pCallback*指定的 COM 对象的使用计数。
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_SETOLECALLBACK](/windows/desktop/Controls/em-setolecallback) Message and [IRichEditOleCallback](/windows/desktop/api/richole/nn-richole-iricheditolecallback) interface。
+有关详细信息, 请参阅 Windows SDK 中的[EM_SETOLECALLBACK](/windows/win32/Controls/em-setolecallback) Message and [IRichEditOleCallback](/windows/win32/api/richole/nn-richole-iricheditolecallback) interface。
 
 ##  <a name="setoptions"></a>CRichEditCtrl:: SetOptions
 
@@ -1755,7 +1755,7 @@ void SetOptions(
 
 - ECO_VERTICAL 以垂直方向绘制文本和对象。 仅适用于亚洲语言。
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_SETOPTIONS](/windows/desktop/Controls/em-setoptions) 。
+有关详细信息, 请参阅 Windows SDK 中的[EM_SETOPTIONS](/windows/win32/Controls/em-setoptions) 。
 
 ### <a name="example"></a>示例
 
@@ -1773,9 +1773,9 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 ### <a name="parameters"></a>参数
 
 *pf*<br/>
-在第一个版本中, 指向[PARAFORMAT](/windows/desktop/api/richedit/ns-richedit-paraformat)结构的指针, 该结构包含新的默认段落格式特性。
+在第一个版本中, 指向[PARAFORMAT](/windows/win32/api/richedit/ns-richedit-paraformat)结构的指针, 该结构包含新的默认段落格式特性。
 
-在第二个版本中, 是指向[PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2)结构的指针, 该结构是对`PARAFORMAT`结构的丰富编辑2.0 扩展, 它包含默认的字符格式设置特性。
+在第二个版本中, 是指向[PARAFORMAT2](/windows/win32/api/richedit/ns-richedit-paraformat2)结构的指针, 该结构是对`PARAFORMAT`结构的丰富编辑2.0 扩展, 它包含默认的字符格式设置特性。
 
 ### <a name="return-value"></a>返回值
 
@@ -1785,7 +1785,7 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 
 此函数只更改由`dwMask` *pf*的成员指定的属性。
 
-有关详细信息, 请参阅[EM_SETPARAFORMAT](/windows/desktop/Controls/em-setparaformat)消息和`PARAFORMAT` Windows SDK 中`PARAFORMAT2`的和结构。
+有关详细信息, 请参阅[EM_SETPARAFORMAT](/windows/win32/Controls/em-setparaformat)消息和`PARAFORMAT` Windows SDK 中`PARAFORMAT2`的和结构。
 
 ### <a name="example"></a>示例
 
@@ -1804,10 +1804,10 @@ BOOL SetPunctuation(
 ### <a name="parameters"></a>参数
 
 *fType*<br/>
-标点标志。 有关可能值的列表, 请参阅 Windows SDK 中[EM_SETPUNCTUATION](/windows/desktop/Controls/em-setpunctuation)的*fType*参数。
+标点标志。 有关可能值的列表, 请参阅 Windows SDK 中[EM_SETPUNCTUATION](/windows/win32/Controls/em-setpunctuation)的*fType*参数。
 
 *lpPunc*<br/>
-指向[标点符号](/windows/desktop/api/richedit/ns-richedit-punctuation)结构的指针, 如 Windows SDK 中所述。
+指向[标点符号](/windows/win32/api/richedit/ns-richedit-punctuation)结构的指针, 如 Windows SDK 中所述。
 
 ### <a name="return-value"></a>返回值
 
@@ -1838,7 +1838,7 @@ BOOL SetReadOnly(BOOL bReadOnly = TRUE);
 
 有关此选项的简要说明, 请参阅[SetOptions](#setoptions)。 您可以使用此函数设置此`CRichEditCtrl`对象的所有选项。
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_SETREADONLY](/windows/desktop/Controls/em-setreadonly) 。
+有关详细信息, 请参阅 Windows SDK 中的[EM_SETREADONLY](/windows/win32/Controls/em-setreadonly) 。
 
 ### <a name="example"></a>示例
 
@@ -1855,13 +1855,13 @@ void SetRect(LPCRECT lpRect);
 ### <a name="parameters"></a>参数
 
 *lpRect*<br/>
-[CRect](../../atl-mfc-shared/reference/crect-class.md)或指向[矩形](/windows/desktop/api/windef/ns-windef-tagrect)的指针, 该矩形指示格式设置矩形的新边界。
+[CRect](../../atl-mfc-shared/reference/crect-class.md)或指向[矩形](/windows/win32/api/windef/ns-windef-rect)的指针, 该矩形指示格式设置矩形的新边界。
 
 ### <a name="remarks"></a>备注
 
 格式设置矩形是文本的限制矩形。 限制矩形与富编辑控件窗口的大小无关。 首次`CRichEditCtrl`创建此对象时, 格式设置矩形的大小与窗口的工作区相同。 用于`SetRect`使格式设置矩形大于或小于富编辑窗口。
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_SETRECT](/windows/desktop/Controls/em-setrect) 。
+有关详细信息, 请参阅 Windows SDK 中的[EM_SETRECT](/windows/win32/Controls/em-setrect) 。
 
 ### <a name="example"></a>示例
 
@@ -1888,7 +1888,7 @@ void SetSel(CHARRANGE& cr);
 选择的最后一个字符的从零开始的索引。
 
 *cr*<br/>
-[CHARRANGE](/windows/desktop/api/richedit/ns-richedit-charrange)结构, 用于保存当前所选内容的边界。
+[CHARRANGE](/windows/win32/api/richedit/ns-richedit-charrange)结构, 用于保存当前所选内容的边界。
 
 ### <a name="remarks"></a>备注
 
@@ -1902,7 +1902,7 @@ void SetSel(CHARRANGE& cr);
 
 若要选择此`CRichEditCtrl`对象中的所有文本, 请调用`SetSel`开头索引为0、结束索引为-1 的。
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_EXSETSEL](/windows/desktop/Controls/em-exsetsel)消息和[CHARRANGE](/windows/desktop/api/richedit/ns-richedit-charrange)结构。
+有关详细信息, 请参阅 Windows SDK 中的[EM_EXSETSEL](/windows/win32/Controls/em-exsetsel)消息和[CHARRANGE](/windows/win32/api/richedit/ns-richedit-charrange)结构。
 
 ### <a name="example"></a>示例
 
@@ -1920,9 +1920,9 @@ BOOL SetSelectionCharFormat(CHARFORMAT2& cf);
 ### <a name="parameters"></a>参数
 
 *cf*<br/>
-在第一个版本中, 是指向[CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat)结构的指针, 该结构包含当前选定内容的新字符格式特性。
+在第一个版本中, 是指向[CHARFORMAT](/windows/win32/api/richedit/ns-richedit-_charformat)结构的指针, 该结构包含当前选定内容的新字符格式特性。
 
-在第二个版本中, 指向[CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a)结构的指针, 该结构是`CHARFORMAT`结构的丰富编辑2.0 扩展, 其中包含当前选定内容的新字符格式特性。
+在第二个版本中, 指向[CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w)结构的指针, 该结构是`CHARFORMAT`结构的丰富编辑2.0 扩展, 其中包含当前选定内容的新字符格式特性。
 
 ### <a name="return-value"></a>返回值
 
@@ -1932,7 +1932,7 @@ BOOL SetSelectionCharFormat(CHARFORMAT2& cf);
 
 此函数只更改`dwMask` *cf*成员指定的属性。
 
-有关详细信息, 请参阅 Windows SDK 中的`CHARFORMAT` [EM_SETCHARFORMAT](/windows/desktop/Controls/em-setcharformat) `CHARFORMAT2`和和结构。
+有关详细信息, 请参阅 Windows SDK 中的`CHARFORMAT` [EM_SETCHARFORMAT](/windows/win32/Controls/em-setcharformat) `CHARFORMAT2`和和结构。
 
 ### <a name="example"></a>示例
 
@@ -1971,7 +1971,7 @@ BOOL SetTargetDevice(
 
 如果此函数成功, 则富编辑控件拥有作为参数传递的设备上下文。 在这种情况下, 调用函数不应销毁设备上下文。
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_SETTARGETDEVICE](/windows/desktop/Controls/em-settargetdevice) 。
+有关详细信息, 请参阅 Windows SDK 中的[EM_SETTARGETDEVICE](/windows/win32/Controls/em-settargetdevice) 。
 
 ### <a name="example"></a>示例
 
@@ -1988,7 +1988,7 @@ BOOL SetTextMode(UINT fMode);
 ### <a name="parameters"></a>参数
 
 *fMode*<br/>
-为控件的文本模式和撤消级别参数指定新设置。 有关可能值的列表, 请参阅 Windows SDK 中[EM_SETTEXTMODE](/windows/desktop/Controls/em-settextmode)的 mode 参数。
+为控件的文本模式和撤消级别参数指定新设置。 有关可能值的列表, 请参阅 Windows SDK 中[EM_SETTEXTMODE](/windows/win32/Controls/em-settextmode)的 mode 参数。
 
 ### <a name="return-value"></a>返回值
 
@@ -1998,7 +1998,7 @@ BOOL SetTextMode(UINT fMode);
 
 有关文本模式的说明, 请参阅 Windows SDK 中的 EM_SETTEXTMODE。
 
-如果控件包含文本, 此成员函数将失败。 若要确保控件为空, 请发送包含空字符串的[WM_SETTEXT](/windows/desktop/winmsg/wm-settext)消息。
+如果控件包含文本, 此成员函数将失败。 若要确保控件为空, 请发送包含空字符串的[WM_SETTEXT](/windows/win32/winmsg/wm-settext)消息。
 
 ##  <a name="setundolimit"></a>CRichEditCtrl:: SetUndoLimit
 
@@ -2033,9 +2033,9 @@ BOOL SetWordCharFormat(CHARFORMAT2& cf);
 ### <a name="parameters"></a>参数
 
 *cf*<br/>
-在第一个版本中, 指向[CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat)结构的指针, 该结构包含当前选定的单词的新字符格式设置特性。
+在第一个版本中, 指向[CHARFORMAT](/windows/win32/api/richedit/ns-richedit-_charformat)结构的指针, 该结构包含当前选定的单词的新字符格式设置特性。
 
-在第二个版本中, 是指向[CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a)结构的指针, 该结构是对`CHARFORMAT`结构的丰富编辑2.0 扩展, 其中包含当前选定的单词的新字符格式设置特性。
+在第二个版本中, 是指向[CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w)结构的指针, 该结构是对`CHARFORMAT`结构的丰富编辑2.0 扩展, 其中包含当前选定的单词的新字符格式设置特性。
 
 ### <a name="return-value"></a>返回值
 
@@ -2045,7 +2045,7 @@ BOOL SetWordCharFormat(CHARFORMAT2& cf);
 
 此函数只更改`dwMask` *cf*成员指定的属性。
 
-有关详细信息, 请参阅[EM_SETCHARFORMAT](/windows/desktop/Controls/em-setcharformat)消息和`CHARFORMAT` Windows SDK 中`CHARFORMAT2`的和结构。
+有关详细信息, 请参阅[EM_SETCHARFORMAT](/windows/win32/Controls/em-setcharformat)消息和`CHARFORMAT` Windows SDK 中`CHARFORMAT2`的和结构。
 
 ### <a name="example"></a>示例
 
@@ -2062,7 +2062,7 @@ UINT SetWordWrapMode(UINT uFlags) const;
 ### <a name="parameters"></a>参数
 
 *uFlags*<br/>
-要设置为自动换行和断字的选项。 有关可能选项的列表, 请参阅 Windows SDK 中的[EM_SETWORDWRAPMODE](/windows/desktop/Controls/em-setwordwrapmode) 。
+要设置为自动换行和断字的选项。 有关可能选项的列表, 请参阅 Windows SDK 中的[EM_SETWORDWRAPMODE](/windows/win32/Controls/em-setwordwrapmode) 。
 
 ### <a name="return-value"></a>返回值
 
@@ -2084,7 +2084,7 @@ void StopGroupTyping();
 
 控件将下一个键入操作 (如果有) 存储在撤消队列中的新操作中。
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_STOPGROUPTYPING](/windows/desktop/Controls/em-stopgrouptyping) 。
+有关详细信息, 请参阅 Windows SDK 中的[EM_STOPGROUPTYPING](/windows/win32/Controls/em-stopgrouptyping) 。
 
 ##  <a name="streamin"></a>CRichEditCtrl:: StreamIn
 
@@ -2102,7 +2102,7 @@ long StreamIn(
 指定输入数据格式的标志。 有关详细信息，请参阅备注部分。
 
 *es*<br/>
-指定输入流的[EDITSTREAM](/windows/desktop/api/richedit/ns-richedit-editstream)结构。 有关详细信息，请参阅备注部分。
+指定输入流的[EDITSTREAM](/windows/win32/api/richedit/ns-richedit-editstream)结构。 有关详细信息，请参阅备注部分。
 
 ### <a name="return-value"></a>返回值
 
@@ -2120,7 +2120,7 @@ long StreamIn(
 
 在参数 es 中, 指定用文本填充缓冲区的回调函数。 `EDITSTREAM` 此回调函数将重复调用, 直到输入流用尽。
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_STREAMIN](/windows/desktop/Controls/em-streamin)消息和[EDITSTREAM](/windows/desktop/api/richedit/ns-richedit-editstream)结构。
+有关详细信息, 请参阅 Windows SDK 中的[EM_STREAMIN](/windows/win32/Controls/em-streamin)消息和[EDITSTREAM](/windows/win32/api/richedit/ns-richedit-editstream)结构。
 
 ### <a name="example"></a>示例
 
@@ -2144,7 +2144,7 @@ long StreamOut(
 指定输出数据格式的标志。 有关详细信息，请参阅备注部分。
 
 *es*<br/>
-指定输出流的[EDITSTREAM](/windows/desktop/api/richedit/ns-richedit-editstream)结构。 有关详细信息，请参阅备注部分。
+指定输出流的[EDITSTREAM](/windows/win32/api/richedit/ns-richedit-editstream)结构。 有关详细信息，请参阅备注部分。
 
 ### <a name="return-value"></a>返回值
 
@@ -2166,7 +2166,7 @@ long StreamOut(
 
 在参数 es 中, 指定用文本填充缓冲区的回调函数。 `EDITSTREAM` 此回调函数将重复调用, 直到输出流用尽。
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_STREAMOUT](/windows/desktop/Controls/em-streamout)消息和[EDITSTREAM](/windows/desktop/api/richedit/ns-richedit-editstream)结构。
+有关详细信息, 请参阅 Windows SDK 中的[EM_STREAMOUT](/windows/win32/Controls/em-streamout)消息和[EDITSTREAM](/windows/win32/api/richedit/ns-richedit-editstream)结构。
 
 ### <a name="example"></a>示例
 
@@ -2190,7 +2190,7 @@ BOOL Undo();
 
 撤消操作还可以撤消。 例如, 你可以在首次调用`Undo`时还原已删除的文本。 只要没有干预编辑操作, 就可以使用第二次调用`Undo`删除文本。
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_UNDO](/windows/desktop/Controls/em-undo) 。
+有关详细信息, 请参阅 Windows SDK 中的[EM_UNDO](/windows/win32/Controls/em-undo) 。
 
 ### <a name="example"></a>示例
 

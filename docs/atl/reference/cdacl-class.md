@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CDacl class
 ms.assetid: 2dc76616-6362-4967-b6cf-e2d39ca37ddd
-ms.openlocfilehash: 2bc962407bac947f475368b43f5039bca3c1da1e
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: a37ef47a4ea89d9ec24fac417e5b715bd2602fd7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915819"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496934"
 ---
 # <a name="cdacl-class"></a>CDacl 类
 
@@ -66,7 +66,7 @@ class CDacl : public CAcl
 
 使用提供的类方法创建、添加、删除和删除对象中的`CDacl` ace。 另请参阅[AtlGetDacl](security-global-functions.md#atlgetdacl)和[AtlSetDacl](security-global-functions.md#atlsetdacl)。
 
-有关 Windows 中的访问控制模型的简介, 请参阅 Windows SDK 中的[访问控制](/windows/desktop/SecAuthZ/access-control)。
+有关 Windows 中的访问控制模型的简介, 请参阅 Windows SDK 中的[访问控制](/windows/win32/SecAuthZ/access-control)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -121,7 +121,7 @@ bool AddAllowedAce(
 
 `CDacl`对象包含零个或多个 ace (访问控制项), 这些 ace 用于标识可以访问对象的用户和组。 此方法添加一个允许访问`CDacl`对象的 ACE。
 
-有关可在`AceFlags`参数中设置的各种标志的说明, 请参阅 [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header)。
+有关可在`AceFlags`参数中设置的各种标志的说明, 请参阅 [ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header)。
 
 ##  <a name="adddeniedace"></a>  CDacl::AddDeniedAce
 
@@ -166,7 +166,7 @@ bool AddDeniedAce(
 
 `CDacl`对象包含零个或多个 ace (访问控制项), 这些 ace 用于标识可以访问对象的用户和组。 此方法添加一个拒绝对对象的`CDacl`访问的 ACE。
 
-有关可在`AceFlags`参数中设置的各种标志的说明, 请参阅 [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header)。
+有关可在`AceFlags`参数中设置的各种标志的说明, 请参阅 [ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header)。
 
 ##  <a name="cdacl"></a>  CDacl::CDacl
 
@@ -264,7 +264,7 @@ void RemoveAllAces() throw();
 
 [安全示例](../../overview/visual-cpp-samples.md)<br/>
 [CAcl 类](../../atl/reference/cacl-class.md)<br/>
-[Acl](/windows/desktop/SecAuthZ/access-control-lists)<br/>
-[Ace](/windows/desktop/SecAuthZ/access-control-entries)<br/>
+[Acl](/windows/win32/SecAuthZ/access-control-lists)<br/>
+[Ace](/windows/win32/SecAuthZ/access-control-entries)<br/>
 [类概述](../../atl/atl-class-overview.md)<br/>
 [安全全局函数](../../atl/reference/security-global-functions.md)

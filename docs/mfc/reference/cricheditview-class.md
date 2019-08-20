@@ -100,12 +100,12 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-ms.openlocfilehash: eacb41a7ae4c42a34a67f57dc0af0d966d134c14
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: c8eba16779b837b33912006a2ff3b7cdfa73f1e6
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916755"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502634"
 ---
 # <a name="cricheditview-class"></a>CRichEditView 类
 
@@ -357,11 +357,11 @@ CHARFORMAT2& GetCharFormatSelection();
 
 ### <a name="return-value"></a>返回值
 
-一个[CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a)结构, 其中包含当前选定内容的字符格式设置特性。
+一个[CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w)结构, 其中包含当前选定内容的字符格式设置特性。
 
 ### <a name="remarks"></a>备注
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_GETCHARFORMAT](/windows/desktop/Controls/em-getcharformat)消息和[CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a)结构。
+有关详细信息, 请参阅 Windows SDK 中的[EM_GETCHARFORMAT](/windows/win32/Controls/em-getcharformat)消息和[CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w)结构。
 
 ### <a name="example"></a>示例
 
@@ -369,7 +369,7 @@ CHARFORMAT2& GetCharFormatSelection();
 
 ##  <a name="getclipboarddata"></a>CRichEditView:: GetClipboardData
 
-在处理[IRichEditOleCallback:: GetClipboardData](/windows/desktop/api/richole/nf-richole-iricheditolecallback-getclipboarddata)时, 框架会调用此函数。
+在处理[IRichEditOleCallback:: GetClipboardData](/windows/win32/api/richole/nf-richole-iricheditolecallback-getclipboarddata)时, 框架会调用此函数。
 
 ```
 virtual HRESULT GetClipboardData(
@@ -382,7 +382,7 @@ virtual HRESULT GetClipboardData(
 ### <a name="parameters"></a>参数
 
 *lpchrg*<br/>
-指向[CHARRANGE](/windows/desktop/api/richedit/ns-richedit-charrange)结构的指针, 该结构指定要复制到*lplpdataobj*指定的数据对象的字符 (和 OLE 项) 范围。
+指向[CHARRANGE](/windows/win32/api/richedit/ns-richedit-charrange)结构的指针, 该结构指定要复制到*lplpdataobj*指定的数据对象的字符 (和 OLE 项) 范围。
 
 *dwReco*<br/>
 剪贴板操作标志。 可以是下列值之一。
@@ -398,14 +398,14 @@ virtual HRESULT GetClipboardData(
 - 从剪贴板中粘贴 RECO_PASTE。
 
 *lpRichDataObj*<br/>
-指向包含富编辑控件 ( [IRichEditOle:: GetClipboardData](/windows/desktop/api/richole/nf-richole-iricheditole-getclipboarddata)) 中剪贴板数据的[IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject)对象的指针。
+指向包含富编辑控件 ( [IRichEditOle:: GetClipboardData](/windows/win32/api/richole/nf-richole-iricheditole-getclipboarddata)) 中剪贴板数据的[IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject)对象的指针。
 
 *lplpdataobj*<br/>
 一个指针, 指向用于接收`IDataObject`对象地址的指针变量, 该对象表示在*lpchrg*参数中指定的范围。 如果返回错误, 则忽略*lplpdataobj*的值。
 
 ### <a name="return-value"></a>返回值
 
-报告操作成功的 HRESULT 值。 有关 HRESULT 的详细信息, 请参阅 Windows SDK 中[COM 错误代码的结构](/windows/desktop/com/structure-of-com-error-codes)。
+报告操作成功的 HRESULT 值。 有关 HRESULT 的详细信息, 请参阅 Windows SDK 中[COM 错误代码的结构](/windows/win32/com/structure-of-com-error-codes)。
 
 ### <a name="remarks"></a>备注
 
@@ -413,11 +413,11 @@ virtual HRESULT GetClipboardData(
 
 这是一种高级的可重写。
 
-有关详细信息, 请参阅 Windows SDK 中的[IRichEditOle:: GetClipboardData](/windows/desktop/api/richole/nf-richole-iricheditole-getclipboarddata)、 [IRichEditOleCallback:: GetClipboardData](/windows/desktop/api/richole/nf-richole-iricheditolecallback-getclipboarddata)和[CHARRANGE](/windows/desktop/api/richedit/ns-richedit-charrange) , 并在 Windows SDK 中查看[IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject) 。
+有关详细信息, 请参阅 Windows SDK 中的[IRichEditOle:: GetClipboardData](/windows/win32/api/richole/nf-richole-iricheditole-getclipboarddata)、 [IRichEditOleCallback:: GetClipboardData](/windows/win32/api/richole/nf-richole-iricheditolecallback-getclipboarddata)和[CHARRANGE](/windows/win32/api/richedit/ns-richedit-charrange) , 并在 Windows SDK 中查看[IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) 。
 
 ##  <a name="getcontextmenu"></a>CRichEditView:: GetContextMenu
 
-在处理[IRichEditOleCallback:: GetContextMenu](/windows/desktop/api/richole/nf-richole-iricheditolecallback-getcontextmenu)时, 框架会调用此函数。
+在处理[IRichEditOleCallback:: GetContextMenu](/windows/win32/api/richole/nf-richole-iricheditolecallback-getcontextmenu)时, 框架会调用此函数。
 
 ```
 virtual HMENU GetContextMenu(
@@ -435,7 +435,7 @@ virtual HMENU GetContextMenu(
 指向`OLEOBJECT`结构的指针, 该结构指定选定的第一个 ole 对象 (如果选定内容包含一个或多个 ole 项)。 如果所选内容不包含任何项, 则*lpoleobj*为 NULL。 `OLEOBJECT`结构保存指向 OLE 对象 v 表的指针。
 
 *lpchrg*<br/>
-指向包含当前所选内容的[CHARRANGE](/windows/desktop/api/richedit/ns-richedit-charrange)结构的指针。
+指向包含当前所选内容的[CHARRANGE](/windows/win32/api/richedit/ns-richedit-charrange)结构的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -459,7 +459,7 @@ virtual HMENU GetContextMenu(
 
 默认实现返回 NULL。 这是一种高级的可重写。
 
-有关详细信息, 请参阅 Windows SDK 中的[IRichEditOleCallback:: GetContextMenu](/windows/desktop/api/richole/nf-richole-iricheditolecallback-getcontextmenu)和[CHARRANGE](/windows/desktop/api/richedit/ns-richedit-charrange) 。
+有关详细信息, 请参阅 Windows SDK 中的[IRichEditOleCallback:: GetContextMenu](/windows/win32/api/richole/nf-richole-iricheditolecallback-getcontextmenu)和[CHARRANGE](/windows/win32/api/richedit/ns-richedit-charrange) 。
 
 ##  <a name="getdocument"></a>CRichEditView:: GetDocument
 
@@ -539,11 +539,11 @@ PARAFORMAT2& GetParaFormatSelection();
 
 ### <a name="return-value"></a>返回值
 
-一个[PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2)结构, 其中包含当前选定内容的段落格式特性。
+一个[PARAFORMAT2](/windows/win32/api/richedit/ns-richedit-paraformat2)结构, 其中包含当前选定内容的段落格式特性。
 
 ### <a name="remarks"></a>备注
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_GETPARAFORMAT](/windows/desktop/Controls/em-getparaformat)消息和[PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2)结构。
+有关详细信息, 请参阅 Windows SDK 中的[EM_GETPARAFORMAT](/windows/win32/Controls/em-getparaformat)消息和[PARAFORMAT2](/windows/win32/api/richedit/ns-richedit-paraformat2)结构。
 
 ##  <a name="getprintrect"></a>CRichEditView:: GetPrintRect
 
@@ -626,7 +626,7 @@ long GetTextLengthEx(
 ### <a name="parameters"></a>参数
 
 *dwFlags*<br/>
-值, 用于指定确定文本长度时使用的方法。 此成员可以是 Windows SDK 中所述的[GETTEXTLENGTHEX](/windows/desktop/api/richedit/ns-richedit-gettextlengthex) flags 成员中列出的一个或多个值。
+值, 用于指定确定文本长度时使用的方法。 此成员可以是 Windows SDK 中所述的[GETTEXTLENGTHEX](/windows/win32/api/richedit/ns-richedit-gettextlengthex) flags 成员中列出的一个或多个值。
 
 *uCodePage*<br/>
 用于转换的代码页 (对于 ANSI 代码页为 CP_ACP, 对于 Unicode 为 1200)。
@@ -637,7 +637,7 @@ long GetTextLengthEx(
 
 ### <a name="remarks"></a>备注
 
-`GetTextLengthEx`提供确定文本长度的其他方法。 它支持丰富的编辑2.0 功能。 有关详细信息, 请参阅关于 Windows SDK 中的[丰富编辑控件](/windows/desktop/Controls/about-rich-edit-controls)。
+`GetTextLengthEx`提供确定文本长度的其他方法。 它支持丰富的编辑2.0 功能。 有关详细信息, 请参阅关于 Windows SDK 中的[丰富编辑控件](/windows/win32/Controls/about-rich-edit-controls)。
 
 ##  <a name="insertfileasobject"></a>CRichEditView:: InsertFileAsObject
 
@@ -671,7 +671,7 @@ HRESULT 值, 指示插入是否成功。
 
 ### <a name="remarks"></a>备注
 
-有关 HRESULT 的详细信息, 请参阅 Windows SDK 中[COM 错误代码的结构](/windows/desktop/com/structure-of-com-error-codes)。
+有关 HRESULT 的详细信息, 请参阅 Windows SDK 中[COM 错误代码的结构](/windows/win32/com/structure-of-com-error-codes)。
 
 ##  <a name="isricheditformat"></a>CRichEditView:: IsRichEditFormat
 
@@ -763,7 +763,7 @@ void OnCharEffect(
 
 对此函数的每个调用都将为当前选择切换指定的格式设置效果。
 
-有关*dwMask*和*dwEffect*参数及其潜在值的详细信息, 请参阅 Windows SDK 中[CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat)的对应数据成员。
+有关*dwMask*和*dwEffect*参数及其潜在值的详细信息, 请参阅 Windows SDK 中[CHARFORMAT](/windows/win32/api/richedit/ns-richedit-_charformat)的对应数据成员。
 
 ### <a name="example"></a>示例
 
@@ -826,7 +826,7 @@ virtual BOOL OnPasteNativeObject(LPSTORAGE lpStg);
 ### <a name="parameters"></a>参数
 
 *lpStg*<br/>
-指向[IStorage](/windows/desktop/api/objidl/nn-objidl-istorage)对象的指针。
+指向[IStorage](/windows/win32/api/objidl/nn-objidl-istorage)对象的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -838,7 +838,7 @@ virtual BOOL OnPasteNativeObject(LPSTORAGE lpStg);
 
 这是一种高级的可重写。
 
-有关详细信息, 请参阅 Windows SDK 中的[IStorage](/windows/desktop/api/objidl/nn-objidl-istorage) 。
+有关详细信息, 请参阅 Windows SDK 中的[IStorage](/windows/win32/api/objidl/nn-objidl-istorage) 。
 
 ##  <a name="onparaalign"></a>CRichEditView:: OnParaAlign
 
@@ -963,9 +963,9 @@ virtual void OnTextNotFound(LPCTSTR lpszFind);
 
 ### <a name="remarks"></a>备注
 
-重写此函数以更改[MessageBeep](/windows/desktop/api/winuser/nf-winuser-messagebeep)的输出通知。
+重写此函数以更改[MessageBeep](/windows/win32/api/winuser/nf-winuser-messagebeep)的输出通知。
 
-有关详细信息, 请参阅 Windows SDK 中的[MessageBeep](/windows/desktop/api/winuser/nf-winuser-messagebeep) 。
+有关详细信息, 请参阅 Windows SDK 中的[MessageBeep](/windows/win32/api/winuser/nf-winuser-messagebeep) 。
 
 ### <a name="example"></a>示例
 
@@ -997,7 +997,7 @@ void OnUpdateCharEffect(
 
 掩码*dwMask*指定要检查的字符格式设置特性。 Flags *dwEffect*列出要设置/清除的字符格式设置属性。
 
-有关*dwMask*和*dwEffect*参数及其潜在值的详细信息, 请参阅 Windows SDK 中[CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat)的对应数据成员。
+有关*dwMask*和*dwEffect*参数及其潜在值的详细信息, 请参阅 Windows SDK 中[CHARFORMAT](/windows/win32/api/richedit/ns-richedit-_charformat)的对应数据成员。
 
 ### <a name="example"></a>示例
 
@@ -1050,7 +1050,7 @@ long PrintInsideRect(
 指向输出区域的设备上下文的指针。
 
 *rectLayout*<br/>
-[矩形](/windows/desktop/api/windef/ns-windef-tagrect)或[CRect](../../atl-mfc-shared/reference/crect-class.md) , 定义输出区域。
+[矩形](/windows/win32/api/windef/ns-windef-rect)或[CRect](../../atl-mfc-shared/reference/crect-class.md) , 定义输出区域。
 
 *nIndexStart*<br/>
 要设置格式的第一个字符的从零开始的索引。
@@ -1121,7 +1121,7 @@ virtual HRESULT QueryAcceptData(
 ### <a name="parameters"></a>参数
 
 *lpdataobj*<br/>
-指向要查询的[IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject)的指针。
+指向要查询的[IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject)的指针。
 
 *lpcfFormat*<br/>
 指向可接受的数据格式的指针。
@@ -1143,7 +1143,7 @@ virtual HRESULT QueryAcceptData(
 
 重写此函数可处理派生文档类中的不同 COM 项的组织。 这是一种高级的可重写。
 
-有关 HRESULT 和`IDataObject`的详细信息, 请参阅 Windows SDK 中的[COM 错误代码](/windows/desktop/com/structure-of-com-error-codes)和[IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject)的结构。
+有关 HRESULT 和`IDataObject`的详细信息, 请参阅 Windows SDK 中的[COM 错误代码](/windows/win32/com/structure-of-com-error-codes)和[IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject)的结构。
 
 ### <a name="example"></a>示例
 
@@ -1160,13 +1160,13 @@ void SetCharFormat(CHARFORMAT2 cf);
 ### <a name="parameters"></a>参数
 
 *cf*<br/>
-包含新的默认字符格式设置属性的[CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a)结构。
+包含新的默认字符格式设置属性的[CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w)结构。
 
 ### <a name="remarks"></a>备注
 
 此函数只更改`dwMask` *cf*成员指定的属性。
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_SETCHARFORMAT](/windows/desktop/Controls/em-setcharformat)消息和[CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a)结构。
+有关详细信息, 请参阅 Windows SDK 中的[EM_SETCHARFORMAT](/windows/win32/Controls/em-setcharformat)消息和[CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w)结构。
 
 ### <a name="example"></a>示例
 
@@ -1227,7 +1227,7 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 ### <a name="parameters"></a>参数
 
 *pf*<br/>
-[PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2)结构, 其中包含新的默认段落格式特性。
+[PARAFORMAT2](/windows/win32/api/richedit/ns-richedit-paraformat2)结构, 其中包含新的默认段落格式特性。
 
 ### <a name="return-value"></a>返回值
 
@@ -1237,7 +1237,7 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 
 此函数只更改由`dwMask` *pf*的成员指定的属性。
 
-有关详细信息, 请参阅 Windows SDK 中的[EM_SETPARAFORMAT](/windows/desktop/Controls/em-setparaformat)消息和[PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2)结构。
+有关详细信息, 请参阅 Windows SDK 中的[EM_SETPARAFORMAT](/windows/win32/Controls/em-setparaformat)消息和[PARAFORMAT2](/windows/win32/api/richedit/ns-richedit-paraformat2)结构。
 
 ### <a name="example"></a>示例
 

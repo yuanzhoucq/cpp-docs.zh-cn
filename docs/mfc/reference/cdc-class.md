@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: 4f9f08ae751ba2482967c1eee4268c6d5f6d4a76
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: bae2f9a5a4f39c4eeffe68cc33e744e44c6800c8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916249"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507005"
 ---
 # <a name="cdc-class"></a>CDC 类
 
@@ -810,7 +810,7 @@ BOOL AlphaBlend(
 指定源矩形的高度 (以逻辑单位为单位)。
 
 *blend*<br/>
-指定[BLENDFUNCTION](/windows/desktop/api/wingdi/ns-wingdi-blendfunction)结构。
+指定[BLENDFUNCTION](/windows/win32/api/wingdi/ns-wingdi-blendfunction)结构。
 
 ### <a name="return-value"></a>返回值
 
@@ -818,7 +818,7 @@ BOOL AlphaBlend(
 
 ### <a name="remarks"></a>备注
 
-有关详细信息, 请参阅 Windows SDK 中的[AlphaBlend](/windows/desktop/api/wingdi/nf-wingdi-alphablend) 。
+有关详细信息, 请参阅 Windows SDK 中的[AlphaBlend](/windows/win32/api/wingdi/nf-wingdi-alphablend) 。
 
 ##  <a name="anglearc"></a>  CDC::AngleArc
 
@@ -913,7 +913,7 @@ BOOL Arc(
 指定边框 (以逻辑单位表示)。 可以为此参数传递 LPRECT 或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象。
 
 *ptStart*<br/>
-指定定义弧线起点的点的 x 和 y 坐标 (以逻辑单位表示)。 此点不必完全位于弧上。可以为此参数传递[点](/windows/desktop/api/windef/ns-windef-tagpoint)结构或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象。
+指定定义弧线起点的点的 x 和 y 坐标 (以逻辑单位表示)。 此点不必完全位于弧上。可以为此参数传递[点](/windows/win32/api/windef/ns-windef-point)结构或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象。
 
 *ptEnd*<br/>
 指定定义弧线结束点的点的 x 和 y 坐标 (以逻辑单位表示)。 此点不必完全位于弧上。可以为此参数传递`POINT`结构`CPoint`或对象。
@@ -980,10 +980,10 @@ BOOL ArcTo(
 指定定义弧线的端点的点的 y 坐标 (以逻辑单位表示)。 此点不必完全位于弧上。
 
 *lpRect*<br/>
-指定边框 (以逻辑单位表示)。 可以为此参数传递指向[RECT](/windows/desktop/api/windef/ns-windef-tagrect)数据结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象的指针。
+指定边框 (以逻辑单位表示)。 可以为此参数传递指向[RECT](/windows/win32/api/windef/ns-windef-rect)数据结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象的指针。
 
 *ptStart*<br/>
-指定定义弧线起点的点的 x 和 y 坐标 (以逻辑单位表示)。 此点不必完全位于弧上。可以为此参数传递[POINT](/windows/desktop/api/windef/ns-windef-tagpoint)数据结构或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象。
+指定定义弧线起点的点的 x 和 y 坐标 (以逻辑单位表示)。 此点不必完全位于弧上。可以为此参数传递[POINT](/windows/win32/api/windef/ns-windef-point)数据结构或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象。
 
 *ptEnd*<br/>
 指定定义弧线结束点的点的 x 和 y 坐标 (以逻辑单位表示)。 此点不必完全位于弧上。可以为此参数传递`POINT`数据结构`CPoint`或对象。
@@ -1035,7 +1035,7 @@ BOOL BeginPath();
 
 打开路径方括号后, 应用程序可以开始调用 GDI 绘图函数以定义位于该路径中的点。 应用程序可以通过调用`EndPath`成员函数来关闭开放路径方括号。 当应用程序调用`BeginPath`时, 将丢弃以前的任何路径。
 
-有关定义路径中的点的绘图函数的列表, 请参阅 Windows SDK 中的[BeginPath](/windows/desktop/api/wingdi/nf-wingdi-beginpath) 。
+有关定义路径中的点的绘图函数的列表, 请参阅 Windows SDK 中的[BeginPath](/windows/win32/api/wingdi/nf-wingdi-beginpath) 。
 
 ### <a name="example"></a>示例
 
@@ -1081,9 +1081,9 @@ BOOL BitBlt(
 指定源位图左上角的逻辑 y 坐标。
 
 *dwRop*<br/>
-指定要执行的光栅操作。 光栅操作代码定义 GDI 如何在输出操作中组合涉及当前画笔、可能的源位图和目标位图的颜色。 请参阅 Windows SDK 中的[BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) , 以获取*dwRop*的光栅操作代码的列表及其说明
+指定要执行的光栅操作。 光栅操作代码定义 GDI 如何在输出操作中组合涉及当前画笔、可能的源位图和目标位图的颜色。 请参阅 Windows SDK 中的[BitBlt](/windows/win32/api/wingdi/nf-wingdi-bitblt) , 以获取*dwRop*的光栅操作代码的列表及其说明
 
-有关光栅操作代码的完整列表, 请参阅关于 Windows SDK 中的[光栅操作代码](/windows/desktop/gdi/raster-operation-codes)。
+有关光栅操作代码的完整列表, 请参阅关于 Windows SDK 中的[光栅操作代码](/windows/win32/gdi/raster-operation-codes)。
 
 ### <a name="return-value"></a>返回值
 
@@ -1169,7 +1169,7 @@ BOOL Chord(
 指定定义弦的起点的点的 x 和 y 坐标 (以逻辑单位表示)。 此点不必完全位于弦上。 可以为此参数传递`POINT`结构`CPoint`或对象。
 
 *ptEnd*<br/>
-指定定义弦的结束点的点的 x 和 y 坐标 (以逻辑单位表示)。 此点不必完全位于弦上。 可以为此参数传递[点](/windows/desktop/api/windef/ns-windef-tagpoint)结构或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象。
+指定定义弦的结束点的点的 x 和 y 坐标 (以逻辑单位表示)。 此点不必完全位于弦上。 可以为此参数传递[点](/windows/win32/api/windef/ns-windef-point)结构或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -1361,7 +1361,7 @@ void DPtoHIMETRIC(LPSIZE lpSize) const;
 ### <a name="parameters"></a>参数
 
 *lpSize*<br/>
-指向[大小](/windows/desktop/api/windef/ns-windef-tagsize)结构或[CSize](../../atl-mfc-shared/reference/csize-class.md)对象。
+指向[大小](/windows/win32/api/windef/ns-windef-size)结构或[CSize](../../atl-mfc-shared/reference/csize-class.md)对象。
 
 ### <a name="remarks"></a>备注
 
@@ -1383,16 +1383,16 @@ void DPtoLP(LPSIZE lpSize) const;
 ### <a name="parameters"></a>参数
 
 *lpPoints*<br/>
-指向[点](/windows/desktop/api/windef/ns-windef-tagpoint)结构或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象的数组。
+指向[点](/windows/win32/api/windef/ns-windef-point)结构或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象的数组。
 
 *nCount*<br/>
 数组中的点数。
 
 *lpRect*<br/>
-指向[RECT](/windows/desktop/api/windef/ns-windef-tagrect)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象。 此参数用于将一个矩形从设备点转换为逻辑点的简单情况。
+指向[RECT](/windows/win32/api/windef/ns-windef-rect)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象。 此参数用于将一个矩形从设备点转换为逻辑点的简单情况。
 
 *lpSize*<br/>
-指向[大小](/windows/desktop/api/windef/ns-windef-tagsize)结构或[CSize](../../atl-mfc-shared/reference/csize-class.md)对象。
+指向[大小](/windows/win32/api/windef/ns-windef-size)结构或[CSize](../../atl-mfc-shared/reference/csize-class.md)对象。
 
 ### <a name="remarks"></a>备注
 
@@ -1420,7 +1420,7 @@ void Draw3dRect(
 ### <a name="parameters"></a>参数
 
 *lpRect*<br/>
-指定边框 (以逻辑单位表示)。 可以为此参数传递指向[RECT](/windows/desktop/api/windef/ns-windef-tagrect)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象的指针。
+指定边框 (以逻辑单位表示)。 可以为此参数传递指向[RECT](/windows/win32/api/windef/ns-windef-rect)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象的指针。
 
 *clrTopLeft*<br/>
 指定三维矩形的顶部和左侧的颜色。
@@ -1465,13 +1465,13 @@ void DrawDragRect(
 ### <a name="parameters"></a>参数
 
 *lpRect*<br/>
-指向[RECT](/windows/desktop/api/windef/ns-windef-tagrect)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象, 该对象指定矩形的逻辑坐标 (在本例中为要重新绘制的矩形的结束位置)。
+指向[RECT](/windows/win32/api/windef/ns-windef-rect)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象, 该对象指定矩形的逻辑坐标 (在本例中为要重新绘制的矩形的结束位置)。
 
 *size*<br/>
 指定从外边框的左上角到矩形边框的左上角的偏移量 (即边框的宽度) 的偏移量。
 
 *lpRectLast*<br/>
-指向[RECT](/windows/desktop/api/windef/ns-windef-tagrect)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象, 该对象指定矩形位置的逻辑坐标 (在本例中为要重新绘制的矩形的原始位置)。
+指向[RECT](/windows/win32/api/windef/ns-windef-rect)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象, 该对象指定矩形位置的逻辑坐标 (在本例中为要重新绘制的矩形的原始位置)。
 
 *sizeLast*<br/>
 指定从外边框的左上角到要重新绘制的原始矩形的左上角 (即, 边框的宽度) 的偏移量。
@@ -1505,7 +1505,7 @@ BOOL DrawEdge(
 指向`RECT`结构的指针, 该结构包含矩形的逻辑坐标。
 
 *nEdge*<br/>
-指定要绘制的内部和外部边缘的类型。 此参数必须是一个内边框标志和一个外边框标志的组合。 有关参数类型的表, 请参阅 Windows SDK 中的[DrawEdge](/windows/desktop/api/winuser/nf-winuser-drawedge) 。
+指定要绘制的内部和外部边缘的类型。 此参数必须是一个内边框标志和一个外边框标志的组合。 有关参数类型的表, 请参阅 Windows SDK 中的[DrawEdge](/windows/win32/api/winuser/nf-winuser-drawedge) 。
 
 *nFlags*<br/>
 用于指定要绘制的边框类型的标志。 有关`DrawEdge`参数值的表, 请参阅中的 Windows SDK。 对于对角线, BF_RECT 标志指定由矩形参数限定的矢量的终点。
@@ -1555,7 +1555,7 @@ void DrawFocusRect(LPCRECT lpRect);
 ### <a name="parameters"></a>参数
 
 *lpRect*<br/>
-指向[RECT](/windows/desktop/api/windef/ns-windef-tagrect)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象, 该对象指定要绘制的矩形的逻辑坐标。
+指向[RECT](/windows/win32/api/windef/ns-windef-rect)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象, 该对象指定要绘制的矩形的逻辑坐标。
 
 ### <a name="remarks"></a>备注
 
@@ -1581,7 +1581,7 @@ BOOL DrawFrameControl(
 指向`RECT`结构的指针, 该结构包含矩形的逻辑坐标。
 
 *nType*<br/>
-指定要绘制的框架控件的类型。 有关此参数的可能值的列表, 请参阅 Windows SDK 中[DrawFrameControl](/windows/desktop/api/winuser/nf-winuser-drawframecontrol)的*uType*参数。
+指定要绘制的框架控件的类型。 有关此参数的可能值的列表, 请参阅 Windows SDK 中[DrawFrameControl](/windows/win32/api/winuser/nf-winuser-drawframecontrol)的*uType*参数。
 
 *nState*<br/>
 指定框架控件的初始状态。 可以是 Windows SDK `DrawFrameControl`中的*uState*参数所描述的一个或多个值。 使用 " *nState*值 DFCS_ADJUSTRECT" 调整边框, 使其不包含 "推送" 按钮的周围边缘。
@@ -1675,7 +1675,7 @@ BOOL DrawIcon(
 标识要绘制的图标的句柄。
 
 *point*<br/>
-指定图标左上角的逻辑 x 和 y 坐标。 可以为此参数传递[点](/windows/desktop/api/windef/ns-windef-tagpoint)结构或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象。
+指定图标左上角的逻辑 x 和 y 坐标。 可以为此参数传递[点](/windows/win32/api/windef/ns-windef-point)结构或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -1774,7 +1774,7 @@ BOOL DrawState(
 位图的句柄。
 
 *nFlags*<br/>
-指定映像类型和状态的标志。 有关可能的*nFlags*类型和状态, 请参阅 Windows SDK 中的[DrawState](/windows/desktop/api/winuser/nf-winuser-drawstatea) 。
+指定映像类型和状态的标志。 有关可能的*nFlags*类型和状态, 请参阅 Windows SDK 中的[DrawState](/windows/win32/api/winuser/nf-winuser-drawstatew) 。
 
 *hBrush*<br/>
 画笔的句柄。
@@ -1798,7 +1798,7 @@ BOOL DrawState(
 *LpszText*指向的文本字符串的长度。 如果*nTextLen*为 0, 则假定该字符串以 null 结尾。
 
 *lpDrawProc*<br/>
-指向用于呈现图像的回调函数的指针。 如果*nFlags*中的图像类型为 DST_COMPLEX, 则此参数是必需的。 它是可选的, 如果图像类型为 DST_TEXT, 则可以为 NULL。 对于所有其他图像类型, 忽略此参数。 有关回调函数的详细信息, 请参阅 Windows SDK 中的[DrawStateProc](/windows/desktop/api/winuser/nc-winuser-drawstateproc)函数。
+指向用于呈现图像的回调函数的指针。 如果*nFlags*中的图像类型为 DST_COMPLEX, 则此参数是必需的。 它是可选的, 如果图像类型为 DST_TEXT, 则可以为 NULL。 对于所有其他图像类型, 忽略此参数。 有关回调函数的详细信息, 请参阅 Windows SDK 中的[DrawStateProc](/windows/win32/api/winuser/nc-winuser-drawstateproc)函数。
 
 *lData*<br/>
 指定有关映像的信息。 此参数的含义取决于映像类型。
@@ -1833,13 +1833,13 @@ int DrawText(
 指定字符串中的字符数。 如果*nCount*为-1, 则假定*lpszString*为指向以 null 结尾的字符串的长指针, 并`DrawText`自动计算字符计数。
 
 *lpRect*<br/>
-指向一个[RECT](/windows/desktop/api/windef/ns-windef-tagrect)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象, 其中包含用于设置文本格式的矩形 (以逻辑坐标表示)。
+指向一个[RECT](/windows/win32/api/windef/ns-windef-rect)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象, 其中包含用于设置文本格式的矩形 (以逻辑坐标表示)。
 
 *str*<br/>
 一个[CString](../../atl-mfc-shared/reference/cstringt-class.md)对象, 其中包含要绘制的指定字符。
 
 *nFormat*<br/>
-指定格式化文本的方法。 它可以是在 Windows SDK 中为[DrawText](/windows/desktop/api/winuser/nf-winuser-drawtext)中的*uFormat*参数描述的任何值组合。 (使用按位 OR 运算符合并):
+指定格式化文本的方法。 它可以是在 Windows SDK 中为[DrawText](/windows/win32/api/winuser/nf-winuser-drawtext)中的*uFormat*参数描述的任何值组合。 (使用按位 OR 运算符合并):
 
 > [!NOTE]
 >  某些*uFormat*标志组合可能会导致修改传递的字符串。 将 DT_MODIFYSTRING 与 DT_END_ELLIPSIS 或 DT_PATH_ELLIPSIS 一起使用可能会导致修改字符串, 从而导致`CString`重写中的断言。 值 DT_CALCRECT、DT_EXTERNALLEADING、DT_INTERNAL、DT_NOCLIP 和 DT_NOPREFIX 不能与 DT_TABSTOP 值一起使用。
@@ -1890,23 +1890,23 @@ int DrawTextEx(
 指定字符串中的字符数。 如果*nCount*为-1, 则假定*lpszString*为指向以 null 结尾的字符串的长指针, 并`DrawText`自动计算字符计数。
 
 *lpRect*<br/>
-指向一个[RECT](/windows/desktop/api/windef/ns-windef-tagrect)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象, 其中包含用于设置文本格式的矩形 (以逻辑坐标表示)。
+指向一个[RECT](/windows/win32/api/windef/ns-windef-rect)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象, 其中包含用于设置文本格式的矩形 (以逻辑坐标表示)。
 
 *str*<br/>
 一个[CString](../../atl-mfc-shared/reference/cstringt-class.md)对象, 其中包含要绘制的指定字符。
 
 *nFormat*<br/>
-指定格式化文本的方法。 它可以是在 Windows SDK 中为[DrawText](/windows/desktop/api/winuser/nf-winuser-drawtext)中的*uFormat*参数描述的任何值组合。 (使用按位**or**运算符合并):
+指定格式化文本的方法。 它可以是在 Windows SDK 中为[DrawText](/windows/win32/api/winuser/nf-winuser-drawtext)中的*uFormat*参数描述的任何值组合。 (使用按位**or**运算符合并):
 
 > [!NOTE]
 >  某些*uFormat*标志组合可能会导致修改传递的字符串。 将 DT_MODIFYSTRING 与 DT_END_ELLIPSIS 或 DT_PATH_ELLIPSIS 一起使用可能会导致修改字符串, 从而导致`CString`重写中的断言。 值 DT_CALCRECT、DT_EXTERNALLEADING、DT_INTERNAL、DT_NOCLIP 和 DT_NOPREFIX 不能与 DT_TABSTOP 值一起使用。
 
 *lpDTParams*<br/>
-指向[DRAWTEXTPARAMS](/windows/desktop/api/winuser/ns-winuser-tagdrawtextparams)结构的指针, 该结构指定其他格式设置选项。 此参数可以为 NULL。
+指向[DRAWTEXTPARAMS](/windows/win32/api/winuser/ns-winuser-drawtextparams)结构的指针, 该结构指定其他格式设置选项。 此参数可以为 NULL。
 
 ### <a name="remarks"></a>备注
 
-它通过将选项卡展开为适当的空间来设置文本格式, 将文本与给定矩形的左、右或中心对齐, 将文本分解为适合给定矩形的行。 格式设置类型由*nFormat*和*lpDTParams*指定。 有关详细信息, 请参阅 Windows SDK 中的[CDC::D rawtext](#drawtext)和[DrawTextEx](/windows/desktop/api/winuser/nf-winuser-drawtextexa) 。
+它通过将选项卡展开为适当的空间来设置文本格式, 将文本与给定矩形的左、右或中心对齐, 将文本分解为适合给定矩形的行。 格式设置类型由*nFormat*和*lpDTParams*指定。 有关详细信息, 请参阅 Windows SDK 中的[CDC::D rawtext](#drawtext)和[DrawTextEx](/windows/win32/api/winuser/nf-winuser-drawtextexw) 。
 
 可以通过[CDC:: SetTextColor](#settextcolor)设置文本颜色。
 
@@ -2087,7 +2087,7 @@ int Escape(
 *nEscape*<br/>
 指定要执行的转义函数。
 
-有关转义函数的完整列表, 请参阅 Windows SDK 中的[转义](/windows/desktop/api/wingdi/nf-wingdi-escape)。
+有关转义函数的完整列表, 请参阅 Windows SDK 中的[转义](/windows/win32/api/wingdi/nf-wingdi-escape)。
 
 *nCount*<br/>
 指定*lpszInData*指向的数据字节数。
@@ -2140,11 +2140,11 @@ int Escape(
 
 - [CDC::StartPage](#startpage)
 
-此外, [CDC:: GetDeviceCaps](#getdevicecaps)支持取代其他打印机转义的 Win32 索引。 有关详细信息, 请参阅 Windows SDK 中的[GetDeviceCaps](/windows/desktop/api/wingdi/nf-wingdi-getdevicecaps) 。
+此外, [CDC:: GetDeviceCaps](#getdevicecaps)支持取代其他打印机转义的 Win32 索引。 有关详细信息, 请参阅 Windows SDK 中的[GetDeviceCaps](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) 。
 
 此成员函数允许应用程序访问不能通过 GDI 直接提供的特定设备的工具。
 
-如果你的应用程序使用预定义的转义值, 请使用第一个版本。 如果你的应用程序定义私有转义值, 请使用第二个版本。 有关第二个版本的详细信息, 请参阅 Windows SDK 中的[ExtEscape](/windows/desktop/api/wingdi/nf-wingdi-extescape) 。
+如果你的应用程序使用预定义的转义值, 请使用第一个版本。 如果你的应用程序定义私有转义值, 请使用第二个版本。 有关第二个版本的详细信息, 请参阅 Windows SDK 中的[ExtEscape](/windows/win32/api/wingdi/nf-wingdi-extescape) 。
 
 ##  <a name="excludecliprect"></a>  CDC::ExcludeClipRect
 
@@ -2301,7 +2301,7 @@ BOOL ExtTextOut(
 - ETO_OPAQUE 指定当前背景色填充矩形。 (可以通过[SetBkColor](#setbkcolor)和[GetBkColor](#getbkcolor)成员函数设置和查询当前背景色。)
 
 *lpRect*<br/>
-指向[RECT](/windows/desktop/api/windef/ns-windef-tagrect)结构 , 该结构确定矩形的尺寸。 此参数可以为 NULL。 还可以传递此参数的[CRect](../../atl-mfc-shared/reference/crect-class.md)对象。
+指向[RECT](/windows/win32/api/windef/ns-windef-rect)结构 , 该结构确定矩形的尺寸。 此参数可以为 NULL。 还可以传递此参数的[CRect](../../atl-mfc-shared/reference/crect-class.md)对象。
 
 *lpszString*<br/>
 指向要绘制的指定字符串。 还可以为此参数传递[CString](../../atl-mfc-shared/reference/cstringt-class.md)对象。
@@ -2354,7 +2354,7 @@ void FillRect(
 ### <a name="parameters"></a>参数
 
 *lpRect*<br/>
-指向包含要填充的矩形的逻辑坐标的[RECT](/windows/desktop/api/windef/ns-windef-tagrect)结构。 还可以传递此参数的[CRect](../../atl-mfc-shared/reference/crect-class.md)对象。
+指向包含要填充的矩形的逻辑坐标的[RECT](/windows/win32/api/windef/ns-windef-rect)结构。 还可以传递此参数的[CRect](../../atl-mfc-shared/reference/crect-class.md)对象。
 
 *pBrush*<br/>
 标识用于填充矩形的画笔。
@@ -2419,7 +2419,7 @@ void FillSolidRect(
 ### <a name="parameters"></a>参数
 
 *lpRect*<br/>
-指定边框 (以逻辑单位表示)。 可以为此参数传递指向[RECT](/windows/desktop/api/windef/ns-windef-tagrect)数据结构或`CRect`对象的指针。
+指定边框 (以逻辑单位表示)。 可以为此参数传递指向[RECT](/windows/win32/api/windef/ns-windef-rect)数据结构或`CRect`对象的指针。
 
 *clr*指定用于填充矩形的颜色。
 
@@ -2501,7 +2501,7 @@ void FrameRect(
 ### <a name="parameters"></a>参数
 
 *lpRect*<br/>
-指向[RECT](/windows/desktop/api/windef/ns-windef-tagrect)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象, 其中包含矩形的左上角和右下角的逻辑坐标。 还可以为此参数`CRect`传递对象。
+指向[RECT](/windows/win32/api/windef/ns-windef-rect)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象, 其中包含矩形的左上角和右下角的逻辑坐标。 还可以为此参数`CRect`传递对象。
 
 *pBrush*<br/>
 标识要用于使矩形成为组帧的画笔。
@@ -2718,16 +2718,16 @@ DWORD GetCharacterPlacement(
 指向要处理的字符串的指针。
 
 *nCount*<br/>
-指定字符串的长度。 对于 ANSI 版本, 它是一个字节计数, 而 Unicode 函数是一个单词计数。 有关详细信息, 请参阅[GetCharacterPlacement](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa)。
+指定字符串的长度。 对于 ANSI 版本, 它是一个字节计数, 而 Unicode 函数是一个单词计数。 有关详细信息, 请参阅[GetCharacterPlacement](/windows/win32/api/wingdi/nf-wingdi-getcharacterplacementw)。
 
 *nMaxExtent*<br/>
 指定对字符串进行处理的最大范围 (以逻辑单位为单位)。 如果已处理, 则会忽略此区。 任何所需排序或标志符号数组的计算仅适用于包含的字符。 仅当在*dwFlags*参数中指定了 GCP_MAXEXTENT 值时, 才使用此参数。 当函数处理输入字符串时, 只有在总范围尚未超过最大值时, 才会将每个字符及其范围添加到输出、范围和其他数组。 达到限制后, 处理将停止。
 
 *lpResults*<br/>
-指向[GCP_Results](/windows/desktop/api/wingdi/ns-wingdi-taggcp_resultsa)结构的指针, 该结构接收函数的结果。
+指向[GCP_Results](/windows/win32/api/wingdi/ns-wingdi-gcp_resultsw)结构的指针, 该结构接收函数的结果。
 
 *dwFlags*<br/>
-指定如何将字符串处理到所需的数组中。 此参数可以是[GetCharacterPlacement](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa)主题的*dwFlags*节中列出的一个或多个值。
+指定如何将字符串处理到所需的数组中。 此参数可以是[GetCharacterPlacement](/windows/win32/api/wingdi/nf-wingdi-getcharacterplacementw)主题的*dwFlags*节中列出的一个或多个值。
 
 *str*<br/>
 指向要处理的[CString](../../atl-mfc-shared/reference/cstringt-class.md)对象的指针。
@@ -2740,7 +2740,7 @@ DWORD GetCharacterPlacement(
 
 ### <a name="remarks"></a>备注
 
-此成员函数模拟函数[GetCharacterPlacement](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa)的功能, 如 Windows SDK 中所述。
+此成员函数模拟函数[GetCharacterPlacement](/windows/win32/api/wingdi/nf-wingdi-getcharacterplacementw)的功能, 如 Windows SDK 中所述。
 
 ##  <a name="getcharabcwidths"></a>  CDC::GetCharABCWidths
 
@@ -2767,10 +2767,10 @@ BOOL GetCharABCWidths(
 指定返回字符宽度的当前字体中的字符范围中的最后一个字符。
 
 *lpabc*<br/>
-指向在函数返回时接收字符宽度的[ABC](/windows/desktop/api/wingdi/ns-wingdi-abc)结构数组。 此数组必须至少包含与*nFirstChar*和`ABC` *nLastChar*参数所指定范围内的字符数量相同的结构。
+指向在函数返回时接收字符宽度的[ABC](/windows/win32/api/wingdi/ns-wingdi-abc)结构数组。 此数组必须至少包含与*nFirstChar*和`ABC` *nLastChar*参数所指定范围内的字符数量相同的结构。
 
 *lpABCF*<br/>
-指向应用程序提供的缓冲区, 其中包含[ABCFLOAT](/windows/desktop/api/wingdi/ns-wingdi-abcfloat)结构的数组, 用于在函数返回时接收字符宽度。 此函数返回的宽度采用 IEEE 浮点格式。
+指向应用程序提供的缓冲区, 其中包含[ABCFLOAT](/windows/win32/api/wingdi/ns-wingdi-abcfloat)结构的数组, 用于在函数返回时接收字符宽度。 此函数返回的宽度采用 IEEE 浮点格式。
 
 ### <a name="return-value"></a>返回值
 
@@ -2784,11 +2784,11 @@ BOOL GetCharABCWidths(
 
 `GetCharABCWidths`当成员函数为字符检索负的 "A" 或 "C" 宽度时, 该字符包括 underhangs 或 overhangs。
 
-若要将 ABC 宽度转换为字体设计单元, 应用程序应创建其高度 ( `lfHeight`在[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)结构的成员中指定) 等于`ntmSizeEM` [NEWTEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-tagnewtextmetrica)成员中存储的值的字体。构造. (可以通过调用`ntmSizeEM` [EnumFontFamilies](/windows/desktop/api/wingdi/nf-wingdi-enumfontfamiliesa) Windows 函数来检索成员的值。)
+若要将 ABC 宽度转换为字体设计单元, 应用程序应创建其高度 ( `lfHeight`在[LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw)结构的成员中指定) 等于`ntmSizeEM` [NEWTEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-newtextmetricw)成员中存储的值的字体。构造. (可以通过调用`ntmSizeEM` [EnumFontFamilies](/windows/win32/api/wingdi/nf-wingdi-enumfontfamiliesw) Windows 函数来检索成员的值。)
 
 默认字符的 ABC 宽度用于当前所选字体范围之外的字符。
 
-若要检索非 TrueType 字体中字符的宽度, 应用程序应使用[GetCharWidth](/windows/desktop/api/wingdi/nf-wingdi-getcharwidtha) Windows 函数。
+若要检索非 TrueType 字体中字符的宽度, 应用程序应使用[GetCharWidth](/windows/win32/api/wingdi/nf-wingdi-getcharwidthw) Windows 函数。
 
 ##  <a name="getcharabcwidthsi"></a>  CDC::GetCharABCWidthsI
 
@@ -2814,7 +2814,7 @@ BOOL GetCharABCWidthsI(
 指向包含标志符号索引的数组的指针。 如果该值为 NULL, 则改为使用*giFirst*参数。 *Cgi*参数指定此数组中标志符号索引的数目。
 
 *lpabc*<br/>
-指向接收字符宽度的[ABC](/windows/desktop/api/wingdi/ns-wingdi-abc)结构的数组的指针。 此数组必须包含至少与*cgi*参数`ABC`所指定的标志符号索引数量相同的结构。
+指向接收字符宽度的[ABC](/windows/win32/api/wingdi/ns-wingdi-abc)结构的数组的指针。 此数组必须包含至少与*cgi*参数`ABC`所指定的标志符号索引数量相同的结构。
 
 ### <a name="return-value"></a>返回值
 
@@ -2822,7 +2822,7 @@ BOOL GetCharABCWidthsI(
 
 ### <a name="remarks"></a>备注
 
-此成员函数模拟函数[GetCharABCWidthsI](/windows/desktop/api/wingdi/nf-wingdi-getcharabcwidthsi)的功能, 如 Windows SDK 中所述。
+此成员函数模拟函数[GetCharABCWidthsI](/windows/win32/api/wingdi/nf-wingdi-getcharabcwidthsi)的功能, 如 Windows SDK 中所述。
 
 ##  <a name="getcharwidth"></a>  CDC::GetCharWidth
 
@@ -2898,7 +2898,7 @@ BOOL GetCharWidthI(
 
 ### <a name="remarks"></a>备注
 
-此成员函数模拟函数[GetCharWidthI](/windows/desktop/api/wingdi/nf-wingdi-getcharwidthi)的功能, 如 Windows SDK 中所述。
+此成员函数模拟函数[GetCharWidthI](/windows/win32/api/wingdi/nf-wingdi-getcharwidthi)的功能, 如 Windows SDK 中所述。
 
 ##  <a name="getclipbox"></a>  CDC::GetClipBox
 
@@ -2911,7 +2911,7 @@ virtual int GetClipBox(LPRECT lpRect) const;
 ### <a name="parameters"></a>参数
 
 *lpRect*<br/>
-指向要接收矩形尺寸的[RECT](/windows/desktop/api/windef/ns-windef-tagrect)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象。
+指向要接收矩形尺寸的[RECT](/windows/win32/api/windef/ns-windef-rect)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -2940,7 +2940,7 @@ BOOL GetColorAdjustment(LPCOLORADJUSTMENT lpColorAdjust) const;
 ### <a name="parameters"></a>参数
 
 *lpColorAdjust*<br/>
-指向用于接收颜色调整值的[COLORADJUSTMENT](/windows/desktop/api/wingdi/ns-wingdi-tagcoloradjustment)数据结构。
+指向用于接收颜色调整值的[COLORADJUSTMENT](/windows/win32/api/wingdi/ns-wingdi-coloradjustment)数据结构。
 
 ### <a name="return-value"></a>返回值
 
@@ -3052,13 +3052,13 @@ COLORREF GetDCBrushColor() const;
 
 ### <a name="return-value"></a>返回值
 
-如果该函数成功, 则返回值为当前画笔颜色的[COLORREF](/windows/desktop/gdi/colorref)值。
+如果该函数成功, 则返回值为当前画笔颜色的[COLORREF](/windows/win32/gdi/colorref)值。
 
 如果函数失败, 则返回值为 CLR_INVALID。
 
 ### <a name="remarks"></a>备注
 
-此成员函数模拟函数[GetDCBrushColor](/windows/desktop/api/wingdi/nf-wingdi-getdcbrushcolor)的功能, 如 Windows SDK 中所述。
+此成员函数模拟函数[GetDCBrushColor](/windows/win32/api/wingdi/nf-wingdi-getdcbrushcolor)的功能, 如 Windows SDK 中所述。
 
 ##  <a name="getdcpencolor"></a>  CDC::GetDCPenColor
 
@@ -3070,13 +3070,13 @@ COLORREF GetDCPenColor() const;
 
 ### <a name="return-value"></a>返回值
 
-如果该函数成功, 则返回值为当前笔颜色的[COLORREF](/windows/desktop/gdi/colorref)值。
+如果该函数成功, 则返回值为当前笔颜色的[COLORREF](/windows/win32/gdi/colorref)值。
 
 如果函数失败, 则返回值为 CLR_INVALID。
 
 ### <a name="remarks"></a>备注
 
-此成员函数使用 Win32 函数[GetDCPenColor](/windows/desktop/api/wingdi/nf-wingdi-getdcpencolor), 如 Windows SDK 中所述。
+此成员函数使用 Win32 函数[GetDCPenColor](/windows/win32/api/wingdi/nf-wingdi-getdcpencolor), 如 Windows SDK 中所述。
 
 ##  <a name="getdevicecaps"></a>  CDC::GetDeviceCaps
 
@@ -3089,7 +3089,7 @@ int GetDeviceCaps(int nIndex) const;
 ### <a name="parameters"></a>参数
 
 *nIndex*<br/>
-指定要返回的信息的类型。 有关值的列表, 请参阅 Windows SDK 中的[GetDeviceCaps](/windows/desktop/api/wingdi/nf-wingdi-getdevicecaps) 。
+指定要返回的信息的类型。 有关值的列表, 请参阅 Windows SDK 中的[GetDeviceCaps](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) 。
 
 ### <a name="return-value"></a>返回值
 
@@ -3135,7 +3135,7 @@ DWORD GetFontData(
 
 应用程序有时可以使用`GetFontData`成员函数来保存 TrueType 字体和文档。 为此, 应用程序将确定是否可以嵌入字体, 然后检索整个字体文件, 并为*dwTable*、 *dwOffset*和*cbData*参数指定0。
 
-应用程序可以通过检查`otmfsType` [OUTLINETEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-outlinetextmetrica)结构的成员来确定是否可以嵌入字体。 如果设置了的`otmfsType`第1位, 则不允许嵌入该字体。 如果第1位为明文, 则可以嵌入该字体。 如果设置了 bit 2, 则嵌入为只读。
+应用程序可以通过检查`otmfsType` [OUTLINETEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-outlinetextmetricw)结构的成员来确定是否可以嵌入字体。 如果设置了的`otmfsType`第1位, 则不允许嵌入该字体。 如果第1位为明文, 则可以嵌入该字体。 如果设置了 bit 2, 则嵌入为只读。
 
 如果应用程序尝试使用此函数来检索非 TrueType 字体的信息, 则成员函数将`GetFontData`返回-1。
 
@@ -3149,11 +3149,11 @@ DWORD GetFontLanguageInfo() const;
 
 ### <a name="return-value"></a>返回值
 
-返回值标识当前选定字体的特征。 有关可能值的完整列表, 请参阅[GetFontLanguageInfo](/windows/desktop/api/wingdi/nf-wingdi-getfontlanguageinfo)。
+返回值标识当前选定字体的特征。 有关可能值的完整列表, 请参阅[GetFontLanguageInfo](/windows/win32/api/wingdi/nf-wingdi-getfontlanguageinfo)。
 
 ### <a name="remarks"></a>备注
 
-此成员函数模拟函数[GetFontLanguageInfo](/windows/desktop/api/wingdi/nf-wingdi-getfontlanguageinfo)的功能, 如 Windows SDK 中所述。
+此成员函数模拟函数[GetFontLanguageInfo](/windows/win32/api/wingdi/nf-wingdi-getfontlanguageinfo)的功能, 如 Windows SDK 中所述。
 
 ##  <a name="getglyphoutline"></a>  CDC::GetGlyphOutline
 
@@ -3182,7 +3182,7 @@ DWORD GetGlyphOutline(
 |GGO_BITMAP|返回标志符号位图。 当函数返回时, *lpBuffer*所指向的缓冲区包含一个每像素1位的位图, 其行从多个字边界开始。|
 |GGO_NATIVE|使用设备单位返回光栅化程序本机格式的曲线数据点。 如果指定此值, 则将忽略*lpmat2*中指定的任何转换。|
 
-当*nFormat*的值为0时, 函数将填充[GLYPHMETRICS](/windows/desktop/api/wingdi/ns-wingdi-glyphmetrics)结构, 但不返回标志符号大纲数据。
+当*nFormat*的值为0时, 函数将填充[GLYPHMETRICS](/windows/win32/api/wingdi/ns-wingdi-glyphmetrics)结构, 但不返回标志符号大纲数据。
 
 *lpgm*<br/>
 指向描述字符单元中标志符号位置的 GLYPHMETRICS 结构。
@@ -3194,7 +3194,7 @@ DWORD GetGlyphOutline(
 指向函数将有关轮廓字符的信息复制到的缓冲区。 如果*nFormat*指定 GGO_NATIVE 值, 则以 TTPOLYGONHEADER 和 TTPOLYCURVE 结构的形式复制信息。 如果此值为 NULL, 并且*nFormat*为 GGO_BITMAP 或 GGO_NATIVE 值, 则该函数将返回所需的缓冲区大小。
 
 *lpmat2*<br/>
-指向包含字符的转换矩阵的[MAT2](/windows/desktop/api/wingdi/ns-wingdi-mat2)结构。 即使为*nFormat*指定了 GGO_NATIVE 值, 此参数也不能为 NULL。
+指向包含字符的转换矩阵的[MAT2](/windows/win32/api/wingdi/ns-wingdi-mat2)结构。 即使为*nFormat*指定了 GGO_NATIVE 值, 此参数也不能为 NULL。
 
 ### <a name="return-value"></a>返回值
 
@@ -3204,7 +3204,7 @@ DWORD GetGlyphOutline(
 
 应用程序可以通过在*lpmat2*指向的结构中指定一个 2 x 2 的变换矩阵来旋转以位图格式检索的字符。
 
-标志符号轮廓作为一系列轮廓返回。 每个轮廓由一个[TTPOLYGONHEADER](/windows/desktop/api/wingdi/ns-wingdi-tagttpolygonheader)结构定义, 后跟所`TTPOLYCURVE`需的任意多个结构。 所有点都作为[POINTFX](/windows/desktop/api/wingdi/ns-wingdi-tagpointfx)结构返回, 表示绝对位置, 而不是相对移动。 `pfxStart` [TTPOLYGONHEADER](/windows/desktop/api/wingdi/ns-wingdi-tagttpolygonheader)结构成员指定的起始点是轮廓轮廓开始的点。 下面的[TTPOLYCURVE](/windows/desktop/api/wingdi/ns-wingdi-tagttpolycurve)结构可以是折线记录或样条记录。 折线记录是一系列的点;点之间绘制的线条描述字符的轮廓。 样条记录表示 TrueType 使用的二次曲线 (即, 二次 b 样条)。
+标志符号轮廓作为一系列轮廓返回。 每个轮廓由一个[TTPOLYGONHEADER](/windows/win32/api/wingdi/ns-wingdi-ttpolygonheader)结构定义, 后跟所`TTPOLYCURVE`需的任意多个结构。 所有点都作为[POINTFX](/windows/win32/api/wingdi/ns-wingdi-pointfx)结构返回, 表示绝对位置, 而不是相对移动。 `pfxStart` [TTPOLYGONHEADER](/windows/win32/api/wingdi/ns-wingdi-ttpolygonheader)结构成员指定的起始点是轮廓轮廓开始的点。 下面的[TTPOLYCURVE](/windows/win32/api/wingdi/ns-wingdi-ttpolycurve)结构可以是折线记录或样条记录。 折线记录是一系列的点;点之间绘制的线条描述字符的轮廓。 样条记录表示 TrueType 使用的二次曲线 (即, 二次 b 样条)。
 
 ##  <a name="getgraphicsmode"></a>  CDC::GetGraphicsMode
 
@@ -3216,15 +3216,15 @@ int GetGraphicsMode() const;
 
 ### <a name="return-value"></a>返回值
 
-在成功时返回当前图形模式。 有关此方法可以返回值的列表, 请参阅[GetGraphicsMode](/windows/desktop/api/wingdi/nf-wingdi-getgraphicsmode)。
+在成功时返回当前图形模式。 有关此方法可以返回值的列表, 请参阅[GetGraphicsMode](/windows/win32/api/wingdi/nf-wingdi-getgraphicsmode)。
 
 失败时返回0。
 
-若要获取扩展的错误信息, 请调用[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
+若要获取扩展的错误信息, 请调用[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
 
 ### <a name="remarks"></a>备注
 
-此方法包装 Windows GDI 函数[GetGraphicsMode](/windows/desktop/api/wingdi/nf-wingdi-getgraphicsmode)。
+此方法包装 Windows GDI 函数[GetGraphicsMode](/windows/win32/api/wingdi/nf-wingdi-getgraphicsmode)。
 
 ##  <a name="gethalftonebrush"></a>  CDC::GetHalftoneBrush
 
@@ -3257,7 +3257,7 @@ int GetKerningPairs(
 ### <a name="parameters"></a>参数
 
 *nPairs*<br/>
-指定*lpkrnpair*指向的[KERNINGPAIR](/windows/desktop/api/wingdi/ns-wingdi-tagkerningpair)结构的数量。 函数将不会复制*nPairs*指定的更多字偶间距对。
+指定*lpkrnpair*指向的[KERNINGPAIR](/windows/win32/api/wingdi/ns-wingdi-kerningpair)结构的数量。 函数将不会复制*nPairs*指定的更多字偶间距对。
 
 *lpkrnpair*<br/>
 指向当函数返回时`KERNINGPAIR`接收字偶间距对的结构的数组。 此数组必须包含*nPairs*指定的最多结构。 如果此参数为 NULL, 则该函数将返回该字体的字偶间距对的总数。
@@ -3276,7 +3276,7 @@ DWORD GetLayout() const;
 
 ### <a name="return-value"></a>返回值
 
-如果成功, 则为当前设备上下文的布局标志。 否则, GDI_ERROR。 有关扩展的错误信息, 请调用[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。 有关布局标志的列表, 请参阅[CDC:: SetLayout](#setlayout)。
+如果成功, 则为当前设备上下文的布局标志。 否则, GDI_ERROR。 有关扩展的错误信息, 请调用[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)。 有关布局标志的列表, 请参阅[CDC:: SetLayout](#setlayout)。
 
 ### <a name="remarks"></a>备注
 
@@ -3351,7 +3351,7 @@ UINT GetOutlineTextMetrics(
 ### <a name="parameters"></a>参数
 
 *lpotm*<br/>
-指向[OUTLINETEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-outlinetextmetrica)结构的数组。 如果此参数为 NULL, 则函数返回检索到的指标数据所需的缓冲区大小。
+指向[OUTLINETEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-outlinetextmetricw)结构的数组。 如果此参数为 NULL, 则函数返回检索到的指标数据所需的缓冲区大小。
 
 *cbData*<br/>
 指定返回信息的缓冲区的大小 (以字节为单位)。
@@ -3365,7 +3365,7 @@ UINT GetOutlineTextMetrics(
 
 ### <a name="remarks"></a>备注
 
-[OUTLINETEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-outlinetextmetrica)结构包含与 TrueType 格式一起提供的大多数字体指标信息, 包括[TEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica)结构。 `OUTLINETEXTMETRIC`结构的最后四个成员是指向字符串的指针。 除了其他成员所需的空间外, 应用程序还应为这些字符串分配空间。 由于对字符串大小没有系统规定的限制, 因此分配内存的最简单方法是通过在首次调用`GetOutlineTextMetrics`函数时指定 NULL for *lpotm*来检索所需的大小。
+[OUTLINETEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-outlinetextmetricw)结构包含与 TrueType 格式一起提供的大多数字体指标信息, 包括[TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textmetricw)结构。 `OUTLINETEXTMETRIC`结构的最后四个成员是指向字符串的指针。 除了其他成员所需的空间外, 应用程序还应为这些字符串分配空间。 由于对字符串大小没有系统规定的限制, 因此分配内存的最简单方法是通过在首次调用`GetOutlineTextMetrics`函数时指定 NULL for *lpotm*来检索所需的大小。
 
 ##  <a name="getoutputcharwidth"></a>  CDC::GetOutputCharWidth
 
@@ -3424,7 +3424,7 @@ CSize GetOutputTabbedTextExtent(
 指向要测量的字符串。 还可以为此参数传递[CString](../../atl-mfc-shared/reference/cstringt-class.md)对象。
 
 *nCount*<br/>
-指定*lpszString*指向的[字符串的长度](/windows/desktop/gdi/specifying-length-of-text-output-string)。
+指定*lpszString*指向的[字符串的长度](/windows/win32/gdi/specifying-length-of-text-output-string)。
 
 *nTabPositions*<br/>
 指定*lpnTabStopPositions*所指向的数组中的制表位位置的数目。
@@ -3467,7 +3467,7 @@ CSize GetOutputTextExtent(const CString& str) const;
 指向字符串字符串。 还可以为此参数传递[CString](../../atl-mfc-shared/reference/cstringt-class.md)对象。
 
 *nCount*<br/>
-指定*lpszString*指向的[字符串的长度](/windows/desktop/gdi/specifying-length-of-text-output-string)。
+指定*lpszString*指向的[字符串的长度](/windows/win32/gdi/specifying-length-of-text-output-string)。
 
 *str*<br/>
 一个`CString`包含要测量的指定字符的对象。
@@ -3493,7 +3493,7 @@ BOOL GetOutputTextMetrics(LPTEXTMETRIC lpMetrics) const;
 ### <a name="parameters"></a>参数
 
 *lpMetrics*<br/>
-指向接收指标的[TEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica)结构。
+指向接收指标的[TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textmetricw)结构。
 
 ### <a name="return-value"></a>返回值
 
@@ -3513,7 +3513,7 @@ int GetPath(
 ### <a name="parameters"></a>参数
 
 *lpPoints*<br/>
-指向放置直线终结点和曲线控制点的[POINT](/windows/desktop/api/windef/ns-windef-tagpoint)点数据结构或`CPoint`对象的数组。
+指向放置直线终结点和曲线控制点的[POINT](/windows/win32/api/windef/ns-windef-point)点数据结构或`CPoint`对象的数组。
 
 *lpTypes*<br/>
 指向放置顶点类型的字节数组。 值为下列值之一:
@@ -3531,7 +3531,7 @@ PT_BEZIERTO 类型始终按三组出现。 位于它们前面的路径中的点�
 - PT_CLOSEFIGURE 指定在绘制相应的线条或曲线后, 图形自动关闭。 通过绘制直线或曲线端点到与上一个 PT_MOVETO 相对应的点, 将该图形关闭。
 
 *nCount*<br/>
-指定可能放置在*lpPoints*数组中的[点](/windows/desktop/api/windef/ns-windef-tagpoint)数据结构的总数。 此值必须与*lpTypes*数组中可放置的字节数相同。
+指定可能放置在*lpPoints*数组中的[点](/windows/win32/api/windef/ns-windef-point)数据结构的总数。 此值必须与*lpTypes*数组中可放置的字节数相同。
 
 ### <a name="return-value"></a>返回值
 
@@ -3578,7 +3578,7 @@ COLORREF GetPixel(POINT point) const;
 
 不是所有的设备都支持 `GetPixel` 函数。 有关详细信息, 请参阅[GetDeviceCaps](#getdevicecaps)成员函数下的 RC_BITBLT 光栅功能。
 
-`GetPixel`成员函数有两种形式。 第一种采用两个坐标值;第二种方法是使用[点](/windows/desktop/api/windef/ns-windef-tagpoint)结构或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象。
+`GetPixel`成员函数有两种形式。 第一种采用两个坐标值;第二种方法是使用[点](/windows/win32/api/windef/ns-windef-point)结构或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象。
 
 ##  <a name="getpolyfillmode"></a>  CDC::GetPolyFillMode
 
@@ -3669,7 +3669,7 @@ CSize GetTabbedTextExtent(
 指向字符串。 还可以为此参数传递[CString](../../atl-mfc-shared/reference/cstringt-class.md)对象。
 
 *nCount*<br/>
-指定*lpszString*指向的[字符串的长度](/windows/desktop/gdi/specifying-length-of-text-output-string)。
+指定*lpszString*指向的[字符串的长度](/windows/win32/gdi/specifying-length-of-text-output-string)。
 
 *nTabPositions*<br/>
 指定*lpnTabStopPositions*所指向的数组中的制表位位置的数目。
@@ -3841,7 +3841,7 @@ BOOL GetTextExtentExPointI(
 一个指针, 指向接收部分标志符号范围的整数数组。 数组中的每个元素都提供了标志符号索引数组的开头与*nMaxExtent*所指定空间中的一个标志符号之间的距离 (以逻辑单位表示)。 尽管此数组应具有至少与*cgi*指定的标志符号索引数量相同的元素, 但函数只使用*lpnFit*指定的多个标志符号索引来填充数组。 如果*lpnDx*为 NULL, 则该函数不计算部分字符串宽度。
 
 *lpSize*<br/>
-指向一个[大小](/windows/desktop/api/windef/ns-windef-tagsize)结构的指针, 该结构接收标志符号索引数组的尺寸 (以逻辑单元表示)。 此值不能为 NULL。
+指向一个[大小](/windows/win32/api/windef/ns-windef-size)结构的指针, 该结构接收标志符号索引数组的尺寸 (以逻辑单元表示)。 此值不能为 NULL。
 
 ### <a name="return-value"></a>返回值
 
@@ -3849,7 +3849,7 @@ BOOL GetTextExtentExPointI(
 
 ### <a name="remarks"></a>备注
 
-此成员函数模拟函数[GetTextExtentExPointI](/windows/desktop/api/wingdi/nf-wingdi-gettextextentexpointi)的功能, 如 Windows SDK 中所述。
+此成员函数模拟函数[GetTextExtentExPointI](/windows/win32/api/wingdi/nf-wingdi-gettextextentexpointi)的功能, 如 Windows SDK 中所述。
 
 ##  <a name="gettextextentpointi"></a>  CDC::GetTextExtentPointI
 
@@ -3871,7 +3871,7 @@ BOOL GetTextExtentPointI(
 指定*pgiIn*所指向的数组中的标志符号数。
 
 *lpSize*<br/>
-指向一个[大小](/windows/desktop/api/windef/ns-windef-tagsize)结构的指针, 该结构接收标志符号索引数组的尺寸 (以逻辑单元表示)。 此值不能为 NULL。
+指向一个[大小](/windows/win32/api/windef/ns-windef-size)结构的指针, 该结构接收标志符号索引数组的尺寸 (以逻辑单元表示)。 此值不能为 NULL。
 
 ### <a name="return-value"></a>返回值
 
@@ -3879,7 +3879,7 @@ BOOL GetTextExtentPointI(
 
 ### <a name="remarks"></a>备注
 
-此成员函数模拟函数[GetTextExtentPointI](/windows/desktop/api/wingdi/nf-wingdi-gettextextentpointi)的功能, 如 Windows SDK 中所述。
+此成员函数模拟函数[GetTextExtentPointI](/windows/win32/api/wingdi/nf-wingdi-gettextextentpointi)的功能, 如 Windows SDK 中所述。
 
 ##  <a name="gettextface"></a>  CDC::GetTextFace
 
@@ -3923,7 +3923,7 @@ BOOL GetTextMetrics(LPTEXTMETRIC lpMetrics) const;
 ### <a name="parameters"></a>参数
 
 *lpMetrics*<br/>
-指向接收指标的[TEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica)结构。
+指向接收指标的[TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textmetricw)结构。
 
 ### <a name="return-value"></a>返回值
 
@@ -4004,7 +4004,7 @@ BOOL GetWorldTransform(XFORM& rXform) const;
 ### <a name="parameters"></a>参数
 
 *rXform*<br/>
-对接收当前世界空间到页面空间转换的[XFORM](/windows/desktop/api/wingdi/ns-wingdi-tagxform)结构的引用。
+对接收当前世界空间到页面空间转换的[XFORM](/windows/win32/api/wingdi/ns-wingdi-xform)结构的引用。
 
 ### <a name="return-value"></a>返回值
 
@@ -4012,11 +4012,11 @@ BOOL GetWorldTransform(XFORM& rXform) const;
 
 失败时返回0。
 
-若要获取扩展的错误信息, 请调用[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
+若要获取扩展的错误信息, 请调用[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
 
 ### <a name="remarks"></a>备注
 
-此方法包装 Windows GDI 函数[GetWorldTransform](/windows/desktop/api/wingdi/nf-wingdi-getworldtransform)。
+此方法包装 Windows GDI 函数[GetWorldTransform](/windows/win32/api/wingdi/nf-wingdi-getworldtransform)。
 
 ##  <a name="gradientfill"></a>  CDC::GradientFill
 
@@ -4034,19 +4034,19 @@ BOOL GradientFill(
 ### <a name="parameters"></a>参数
 
 *pVertices*<br/>
-一个指针, 指向[TRIVERTEX](/windows/desktop/api/wingdi/ns-wingdi-trivertex)结构的数组, 每个结构都定义一个三角形顶点。
+一个指针, 指向[TRIVERTEX](/windows/win32/api/wingdi/ns-wingdi-trivertex)结构的数组, 每个结构都定义一个三角形顶点。
 
 *nVertices*<br/>
 顶点的数目。
 
 *pMesh*<br/>
-三角形模式下的[GRADIENT_TRIANGLE](/windows/desktop/api/wingdi/ns-wingdi-gradient_triangle)结构的数组, 或以矩形模式[GRADIENT_RECT](/windows/desktop/api/wingdi/ns-wingdi-gradient_rect)结构的数组。
+三角形模式下的[GRADIENT_TRIANGLE](/windows/win32/api/wingdi/ns-wingdi-gradient_triangle)结构的数组, 或以矩形模式[GRADIENT_RECT](/windows/win32/api/wingdi/ns-wingdi-gradient_rect)结构的数组。
 
 *nMeshElements*<br/>
 *PMesh*中的元素数 (三角形或矩形)。
 
 *dwMode*<br/>
-指定渐变填充模式。 有关可能值的列表, 请参阅 Windows SDK 中的[GradientFill](/windows/desktop/api/wingdi/nf-wingdi-gradientfill) 。
+指定渐变填充模式。 有关可能值的列表, 请参阅 Windows SDK 中的[GradientFill](/windows/win32/api/wingdi/nf-wingdi-gradientfill) 。
 
 ### <a name="return-value"></a>返回值
 
@@ -4111,7 +4111,7 @@ virtual BOOL GrayString(
 
 应用程序可以在支持纯灰色颜色的设备上绘制灰显 (灰显) 的字符串`GrayString` , 而无需调用成员函数。 系统颜色 COLOR_GRAYTEXT 是用于绘制禁用文本的灰色系统颜色。 应用程序可以调用`GetSysColor` Windows 函数来检索 COLOR_GRAYTEXT 的颜色值。 如果颜色不是 0 (黑色), 则应用程序可以调用`SetTextColor`成员函数将文本颜色设置为颜色值, 然后直接绘制字符串。 如果检索的颜色为黑色, 则应用程序必须`GrayString`调用以使文本变暗 (灰色)。
 
-如果*lpfnOutput*为 NULL, 则 GDI 将使用 Windows [TextOut](/windows/desktop/api/wingdi/nf-wingdi-textouta)函数, 而*lpData*被假定为要输出的字符的远端指针。 如果要输出的字符无法由`TextOut`成员函数处理 (例如, 字符串存储为位图), 则应用程序必须提供其自己的输出函数。
+如果*lpfnOutput*为 NULL, 则 GDI 将使用 Windows [TextOut](/windows/win32/api/wingdi/nf-wingdi-textoutw)函数, 而*lpData*被假定为要输出的字符的远端指针。 如果要输出的字符无法由`TextOut`成员函数处理 (例如, 字符串存储为位图), 则应用程序必须提供其自己的输出函数。
 
 另请注意, 在返回 Windows 之前, 所有回调函数都必须捕获 Microsoft Foundation 异常, 因为异常不能跨回调边界引发。 有关异常的详细信息, 请参阅文章[异常](../../mfc/exception-handling-in-mfc.md)。
 
@@ -4130,7 +4130,7 @@ void HIMETRICtoDP(LPSIZE lpSize) const;
 ### <a name="parameters"></a>参数
 
 *lpSize*<br/>
-指向[大小](/windows/desktop/api/windef/ns-windef-tagsize)结构或[CSize](../../atl-mfc-shared/reference/csize-class.md)对象。
+指向[大小](/windows/win32/api/windef/ns-windef-size)结构或[CSize](../../atl-mfc-shared/reference/csize-class.md)对象。
 
 ### <a name="remarks"></a>备注
 
@@ -4147,7 +4147,7 @@ void HIMETRICtoLP(LPSIZE lpSize) const;
 ### <a name="parameters"></a>参数
 
 *lpSize*<br/>
-指向[大小](/windows/desktop/api/windef/ns-windef-tagsize)结构或[CSize](../../atl-mfc-shared/reference/csize-class.md)对象。
+指向[大小](/windows/win32/api/windef/ns-windef-size)结构或[CSize](../../atl-mfc-shared/reference/csize-class.md)对象。
 
 ### <a name="remarks"></a>备注
 
@@ -4309,16 +4309,16 @@ void LPtoDP(LPSIZE lpSize) const;
 ### <a name="parameters"></a>参数
 
 *lpPoints*<br/>
-指向点的数组。 数组中的每个点都是一个[点](/windows/desktop/api/windef/ns-windef-tagpoint)结构或一个[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象。
+指向点的数组。 数组中的每个点都是一个[点](/windows/win32/api/windef/ns-windef-point)结构或一个[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象。
 
 *nCount*<br/>
 数组中的点数。
 
 *lpRect*<br/>
-指向[RECT](/windows/desktop/api/windef/ns-windef-tagrect)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象。 此参数用于将矩形从逻辑设备映射到设备单位的常见情况。
+指向[RECT](/windows/win32/api/windef/ns-windef-rect)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象。 此参数用于将矩形从逻辑设备映射到设备单位的常见情况。
 
 *lpSize*<br/>
-指向[大小](/windows/desktop/api/windef/ns-windef-tagsize)结构或[CSize](../../atl-mfc-shared/reference/csize-class.md)对象。
+指向[大小](/windows/win32/api/windef/ns-windef-size)结构或[CSize](../../atl-mfc-shared/reference/csize-class.md)对象。
 
 ### <a name="remarks"></a>备注
 
@@ -4448,10 +4448,10 @@ BOOL ModifyWorldTransform(
 ### <a name="parameters"></a>参数
 
 *rXform*<br/>
-对用于修改给定设备上下文的世界转换的[XFORM](/windows/desktop/api/wingdi/ns-wingdi-tagxform)结构的引用。
+对用于修改给定设备上下文的世界转换的[XFORM](/windows/win32/api/wingdi/ns-wingdi-xform)结构的引用。
 
 *iMode*<br/>
-指定转换数据修改当前世界转换的方式。 有关此参数可以采用的值的列表, 请参阅[ModifyWorldTransform](/windows/desktop/api/wingdi/nf-wingdi-modifyworldtransform)。
+指定转换数据修改当前世界转换的方式。 有关此参数可以采用的值的列表, 请参阅[ModifyWorldTransform](/windows/win32/api/wingdi/nf-wingdi-modifyworldtransform)。
 
 ### <a name="return-value"></a>返回值
 
@@ -4459,11 +4459,11 @@ BOOL ModifyWorldTransform(
 
 失败时返回0。
 
-若要获取扩展的错误信息, 请调用[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
+若要获取扩展的错误信息, 请调用[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
 
 ### <a name="remarks"></a>备注
 
-此方法包装 Windows GDI 函数[ModifyWorldTransform](/windows/desktop/api/wingdi/nf-wingdi-modifyworldtransform)。
+此方法包装 Windows GDI 函数[ModifyWorldTransform](/windows/win32/api/wingdi/nf-wingdi-modifyworldtransform)。
 
 ##  <a name="moveto"></a>  CDC::MoveTo
 
@@ -4713,7 +4713,7 @@ BOOL Pie(
 指定边框。 `CRect` 可以`RECT`向此参数传递对象或指向结构的指针。
 
 *ptStart*<br/>
-指定圆弧的起点。此点不必完全位于弧上。可以为此参数传递[点](/windows/desktop/api/windef/ns-windef-tagpoint)结构或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象。
+指定圆弧的起点。此点不必完全位于弧上。可以为此参数传递[点](/windows/win32/api/windef/ns-windef-point)结构或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象。
 
 *ptEnd*<br/>
 指定弧的终结点。此点不必完全位于弧上。可以为此参数传递`POINT`结构`CPoint`或对象。
@@ -4850,7 +4850,7 @@ BOOL PolyBezier(
 ### <a name="parameters"></a>参数
 
 *lpPoints*<br/>
-指向一个[点](/windows/desktop/api/windef/ns-windef-tagpoint)数据结构数组, 其中包含样条的终结点和控制点。
+指向一个[点](/windows/win32/api/windef/ns-windef-point)数据结构数组, 其中包含样条的终结点和控制点。
 
 *nCount*<br/>
 指定*lpPoints*数组中的点数。 此值必须是要绘制的样条数的三倍以上, 因为每个 Bzier 样条都需要两个控制点和一个端点, 而初始样条需要另一个起点。
@@ -4878,7 +4878,7 @@ BOOL PolyBezierTo(
 ### <a name="parameters"></a>参数
 
 *lpPoints*<br/>
-指向包含终结点和控制点的[点](/windows/desktop/api/windef/ns-windef-tagpoint)数据结构数组。
+指向包含终结点和控制点的[点](/windows/win32/api/windef/ns-windef-point)数据结构数组。
 
 *nCount*<br/>
 指定*lpPoints*数组中的点数。 此值必须是要绘制的样条数的三倍, 因为每个 Bzier 样条都需要两个控制点和一个终点。
@@ -4909,7 +4909,7 @@ BOOL PolyDraw(
 ### <a name="parameters"></a>参数
 
 *lpPoints*<br/>
-指向一个[点](/windows/desktop/api/windef/ns-windef-tagpoint)数据结构数组, 其中包含每个线段的端点以及每个 Bzier 样条的端点和控制点。
+指向一个[点](/windows/win32/api/windef/ns-windef-point)数据结构数组, 其中包含每个线段的端点以及每个 Bzier 样条的端点和控制点。
 
 *lpTypes*<br/>
 指向一个数组, 该数组指定*lpPoints*数组中的每个点的使用方式。 值可以是下列值之一:
@@ -5001,7 +5001,7 @@ BOOL Polyline(
 
 使用当前笔从第一个点到后续点之间绘制线条。 与成员函数不同, 函数既不使用也不更新当前位置。 `Polyline` `LineTo`
 
-有关详细信息, 请参阅 Windows SDK 中的[折线](/windows/desktop/api/wingdi/nf-wingdi-polyline)。
+有关详细信息, 请参阅 Windows SDK 中的[折线](/windows/win32/api/wingdi/nf-wingdi-polyline)。
 
 ##  <a name="polylineto"></a>  CDC::PolylineTo
 
@@ -5016,7 +5016,7 @@ BOOL PolylineTo(
 ### <a name="parameters"></a>参数
 
 *lpPoints*<br/>
-指向包含直线顶点的[点](/windows/desktop/api/windef/ns-windef-tagpoint)数据结构数组。
+指向包含直线顶点的[点](/windows/win32/api/windef/ns-windef-point)数据结构数组。
 
 *nCount*<br/>
 指定数组中的点数。
@@ -5932,7 +5932,7 @@ BOOL SetColorAdjustment(const COLORADJUSTMENT* lpColorAdjust);
 ### <a name="parameters"></a>参数
 
 *lpColorAdjust*<br/>
-指向包含颜色调整值的[COLORADJUSTMENT](/windows/desktop/api/wingdi/ns-wingdi-tagcoloradjustment)数据结构。
+指向包含颜色调整值的[COLORADJUSTMENT](/windows/win32/api/wingdi/ns-wingdi-coloradjustment)数据结构。
 
 ### <a name="return-value"></a>返回值
 
@@ -5963,7 +5963,7 @@ COLORREF SetDCBrushColor(COLORREF crColor);
 
 ### <a name="remarks"></a>备注
 
-此方法模拟函数[SetDCBrushColor](/windows/desktop/api/wingdi/nf-wingdi-setdcbrushcolor)的功能, 如 Windows SDK 中所述。
+此方法模拟函数[SetDCBrushColor](/windows/win32/api/wingdi/nf-wingdi-setdcbrushcolor)的功能, 如 Windows SDK 中所述。
 
 ##  <a name="setdcpencolor"></a>  CDC::SetDCPenColor
 
@@ -5984,7 +5984,7 @@ COLORREF SetDCPenColor(COLORREF crColor);
 
 ### <a name="remarks"></a>备注
 
-此成员函数使用 Win32 函数[SetDCPenColor](/windows/desktop/api/wingdi/nf-wingdi-setdcpencolor), 如 Windows SDK 中所述。
+此成员函数使用 Win32 函数[SetDCPenColor](/windows/win32/api/wingdi/nf-wingdi-setdcpencolor), 如 Windows SDK 中所述。
 
 ##  <a name="setgraphicsmode"></a>  CDC::SetGraphicsMode
 
@@ -5997,17 +5997,17 @@ int SetGraphicsMode(int iMode);
 ### <a name="parameters"></a>参数
 
 *iMode*<br/>
-指定图形模式。 有关此参数可以采用的值的列表, 请参阅[SetGraphicsMode](/windows/desktop/api/wingdi/nf-wingdi-setgraphicsmode)。
+指定图形模式。 有关此参数可以采用的值的列表, 请参阅[SetGraphicsMode](/windows/win32/api/wingdi/nf-wingdi-setgraphicsmode)。
 
 ### <a name="return-value"></a>返回值
 
 如果成功, 则返回旧的图形模式。
 
-失败时返回0。 若要获取扩展的错误信息, 请调用[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
+失败时返回0。 若要获取扩展的错误信息, 请调用[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
 
 ### <a name="remarks"></a>备注
 
-此方法包装 Windows GDI 函数[SetGraphicsMode](/windows/desktop/api/wingdi/nf-wingdi-setgraphicsmode)。
+此方法包装 Windows GDI 函数[SetGraphicsMode](/windows/win32/api/wingdi/nf-wingdi-setgraphicsmode)。
 
 ##  <a name="setlayout"></a>  CDC::SetLayout
 
@@ -6032,7 +6032,7 @@ DWORD SetLayout(DWORD dwLayout);
 
 如果成功, 则为先前布局的设备上下文。
 
-如果不成功, 则为 GDI_ERROR。 若要获取扩展的错误信息, 请调用[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
+如果不成功, 则为 GDI_ERROR。 若要获取扩展的错误信息, 请调用[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
 
 ### <a name="remarks"></a>备注
 
@@ -6042,7 +6042,7 @@ DWORD SetLayout(DWORD dwLayout);
 
 在某些情况下, 例如, 对于许多位图, 可能需要保留从左到右的布局。 在这些情况下, 通过调用`BitBlt`或`StretchBlt`来呈现图像, 然后将*dwLayout*的位图控件标志设置为 LAYOUT_BITMAPORIENTATIONPRESERVED。
 
-更改具有 LAYOUT_RTL 标志的布局后, 通常会反转指定向右或向左的标志。 为避免混淆, 你可能需要为标准标志定义替换名称。 有关建议的备用标志名称的列表, 请参阅 Windows SDK 中的[SetLayout](/windows/desktop/api/wingdi/nf-wingdi-setlayout) 。
+更改具有 LAYOUT_RTL 标志的布局后, 通常会反转指定向右或向左的标志。 为避免混淆, 你可能需要为标准标志定义替换名称。 有关建议的备用标志名称的列表, 请参阅 Windows SDK 中的[SetLayout](/windows/win32/api/wingdi/nf-wingdi-setlayout) 。
 
 ##  <a name="setmapmode"></a>  CDC::SetMapMode
 
@@ -6177,7 +6177,7 @@ COLORREF SetPixel(
 指定要设置的点的逻辑 y 坐标。
 
 *crColor*<br/>
-COLORREF RGB 值, 指定用于绘制点的颜色。 有关此值的说明, 请参阅 Windows SDK 中的[COLORREF](/windows/desktop/gdi/colorref) 。
+COLORREF RGB 值, 指定用于绘制点的颜色。 有关此值的说明, 请参阅 Windows SDK 中的[COLORREF](/windows/win32/gdi/colorref) 。
 
 *point*<br/>
 指定要设置的点的逻辑 x 和 y 坐标。 可以为此参数传递`POINT`结构`CPoint`或对象。
@@ -6219,7 +6219,7 @@ BOOL SetPixelV(
 指定用于绘制点的颜色。
 
 *point*<br/>
-指定要设置的点的逻辑 x 和 y 坐标。 可以为此参数传递[POINT](/windows/desktop/api/windef/ns-windef-tagpoint)数据结构或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象。
+指定要设置的点的逻辑 x 和 y 坐标。 可以为此参数传递[POINT](/windows/win32/api/windef/ns-windef-point)数据结构或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -6327,7 +6327,7 @@ int SetStretchBltMode(int nStretchMode);
 |BLACKONWHITE|使用消除和现有像素的颜色值执行布尔和运算。 如果位图是单色位图, 此模式将以白色像素为代价保留黑色像素。|
 |COLORONCOLOR|删除像素。 此模式删除所有消除的像素行, 而不会尝试保留其信息。|
 |色|将源矩形中的像素映射到目标矩形中的像素块。 目标像素块上的平均颜色约为源像素的颜色。|
-||设置半色调拉伸模式后, 应用程序必须调用 Win32 函数[SetBrushOrgEx](/windows/desktop/api/wingdi/nf-wingdi-setbrushorgex)来设置画笔原点。 如果无法执行此操作, 则会发生画笔未对齐。|
+||设置半色调拉伸模式后, 应用程序必须调用 Win32 函数[SetBrushOrgEx](/windows/win32/api/wingdi/nf-wingdi-setbrushorgex)来设置画笔原点。 如果无法执行此操作, 则会发生画笔未对齐。|
 |STRETCH_ANDSCANS|**Windows 95/98**:与 BLACKONWHITE 相同|
 |STRETCH_DELETESCANS|**Windows 95/98**:与 COLORONCOLOR 相同|
 |STRETCH_HALFTONE|**Windows 95/98**:与半色调相同。|
@@ -6649,7 +6649,7 @@ BOOL SetWorldTransform(const XFORM& rXform);
 ### <a name="parameters"></a>参数
 
 *rXform*<br/>
-对包含转换数据的[XFORM](/windows/desktop/api/wingdi/ns-wingdi-tagxform)结构的引用。
+对包含转换数据的[XFORM](/windows/win32/api/wingdi/ns-wingdi-xform)结构的引用。
 
 ### <a name="return-value"></a>返回值
 
@@ -6657,11 +6657,11 @@ BOOL SetWorldTransform(const XFORM& rXform);
 
 失败时返回0。
 
-若要获取扩展的错误信息, 请调用[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
+若要获取扩展的错误信息, 请调用[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
 
 ### <a name="remarks"></a>备注
 
-此方法包装 Windows GDI 函数[SetWorldTransform](/windows/desktop/api/wingdi/nf-wingdi-setworldtransform)。
+此方法包装 Windows GDI 函数[SetWorldTransform](/windows/win32/api/wingdi/nf-wingdi-setworldtransform)。
 
 ##  <a name="startdoc"></a>  CDC::StartDoc
 
@@ -6675,7 +6675,7 @@ int StartDoc(LPCTSTR lpszDocName);
 ### <a name="parameters"></a>参数
 
 *lpDocInfo*<br/>
-指向一个[DOCINFO](/windows/desktop/api/wingdi/ns-wingdi-docinfoa)结构, 该结构包含文档文件的名称和输出文件的名称。
+指向一个[DOCINFO](/windows/win32/api/wingdi/ns-wingdi-docinfow)结构, 该结构包含文档文件的名称和输出文件的名称。
 
 *lpszDocName*<br/>
 指向包含文档文件名称的字符串的指针。
@@ -6891,7 +6891,7 @@ CSize TabbedTextOut(
 指向要绘制的字符串。 可以向此参数传递指向字符数组或[CString](../../atl-mfc-shared/reference/cstringt-class.md)对象的指针。
 
 *nCount*<br/>
-指定*lpszString*指向的[字符串的长度](/windows/desktop/gdi/specifying-length-of-text-output-string)。
+指定*lpszString*指向的[字符串的长度](/windows/win32/gdi/specifying-length-of-text-output-string)。
 
 *nTabPositions*<br/>
 指定制表位位置数组中的值的数目。
@@ -7023,7 +7023,7 @@ BOOL TransparentBlt(
 
 `TransparentBlt`允许透明度;也就是说, *clrTransparent*指示的 RGB 颜色对于传输是透明的。
 
-有关详细信息, 请参阅 Windows SDK 中的[TransparentBlt](/windows/desktop/api/wingdi/nf-wingdi-transparentblt) 。
+有关详细信息, 请参阅 Windows SDK 中的[TransparentBlt](/windows/win32/api/wingdi/nf-wingdi-transparentblt) 。
 
 ##  <a name="updatecolors"></a>  CDC::UpdateColors
 
@@ -7037,7 +7037,7 @@ void UpdateColors();
 
 当系统调色板发生更改时, 具有已实现`UpdateColors`逻辑调色板的非活动窗口可能会作为重绘其工作区的替代方法。
 
-有关使用调色板的详细信息, 请参阅 Windows SDK 中的[UpdateColors](/windows/desktop/api/wingdi/nf-wingdi-updatecolors) 。
+有关使用调色板的详细信息, 请参阅 Windows SDK 中的[UpdateColors](/windows/win32/api/wingdi/nf-wingdi-updatecolors) 。
 
 `UpdateColors`成员函数通常比重绘区域更快地更新工作区。 但是, 因为函数在系统调色板更改之前基于每个像素的颜色执行颜色转换, 所以每次调用此函数都会导致某些颜色精度丢失。
 

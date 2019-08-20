@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COlePropertiesDialog [MFC], m_psh
 - COlePropertiesDialog [MFC], m_vp
 ms.assetid: a54dbc89-1447-4329-bd01-00e98ec9e935
-ms.openlocfilehash: bdae64ff4a7bcfef761eaf3dd70a85a54efc28b7
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: b819bc430868717a2df01a086b482dfe6d56cc0f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916959"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504166"
 ---
 # <a name="colepropertiesdialog-class"></a>COlePropertiesDialog 类
 
@@ -152,11 +152,11 @@ virtual INT_PTR DoModal();
 
 如果成功, 则为 IDOK 或 IDCANCEL;否则为0。 IDOK 和 IDCANCEL 是常量, 用于指示用户是否选择了 "确定" 或 "取消" 按钮。
 
-如果返回 IDCANCEL, 则可以调用 Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror)函数来确定是否发生了错误。
+如果返回 IDCANCEL, 则可以调用 Windows [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror)函数来确定是否发生了错误。
 
 ##  <a name="m_gp"></a>COlePropertiesDialog::m_gp
 
-类型为[OLEUIGNRLPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuignrlpropsa)的结构, 用于初始化 OLE 对象的 "属性" 对话框的 "常规" 页。
+类型为[OLEUIGNRLPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuignrlpropsw)的结构, 用于初始化 OLE 对象的 "属性" 对话框的 "常规" 页。
 
 ```
 OLEUIGNRLPROPS m_gp;
@@ -170,7 +170,7 @@ OLEUIGNRLPROPS m_gp;
 
 ##  <a name="m_lp"></a>COlePropertiesDialog::m_lp
 
-类型为[OLEUILINKPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuilinkpropsa)的结构, 用于初始化 OLE 对象的 "属性" 对话框的 "链接" 页。
+类型为[OLEUILINKPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuilinkpropsw)的结构, 用于初始化 OLE 对象的 "属性" 对话框的 "链接" 页。
 
 ```
 OLEUILINKPROPS m_lp;
@@ -184,7 +184,7 @@ OLEUILINKPROPS m_lp;
 
 ##  <a name="m_op"></a>COlePropertiesDialog::m_op
 
-[OLEUIOBJECTPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiobjectpropsa)类型的结构, 用于初始化公用 OLE 对象属性对话框。
+[OLEUIOBJECTPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuiobjectpropsw)类型的结构, 用于初始化公用 OLE 对象属性对话框。
 
 ```
 OLEUIOBJECTPROPS m_op;
@@ -194,11 +194,11 @@ OLEUIOBJECTPROPS m_op;
 
 此结构包含用于初始化 "常规"、"链接" 和 "视图" 页的成员。
 
-有关详细信息, 请参阅 Windows SDK 中的 OLEUIOBJECTPROPS 和[OLEUILINKPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuilinkpropsa)结构。
+有关详细信息, 请参阅 Windows SDK 中的 OLEUIOBJECTPROPS 和[OLEUILINKPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuilinkpropsw)结构。
 
 ##  <a name="m_psh"></a>COlePropertiesDialog::m_psh
 
-[PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-propsheetheadera_v2)类型的结构, 其成员存储对话框对象的特征。
+[PROPSHEETHEADER](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2)类型的结构, 其成员存储对话框对象的特征。
 
 ```
 PROPSHEETHEADER m_psh;
@@ -214,7 +214,7 @@ PROPSHEETHEADER m_psh;
 
 ##  <a name="m_vp"></a>COlePropertiesDialog::m_vp
 
-类型为[OLEUIVIEWPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiviewpropsa)的结构, 用于初始化 OLE 对象的 "属性" 对话框的 "视图" 页。
+类型为[OLEUIVIEWPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuiviewpropsw)的结构, 用于初始化 OLE 对象的 "属性" 对话框的 "视图" 页。
 
 ```
 OLEUIVIEWPROPS m_vp;
