@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CGopherFileFind [MFC], GetScreenName
 - CGopherFileFind [MFC], IsDots
 ms.assetid: 8465a979-6323-496d-ab4b-e81383fb999d
-ms.openlocfilehash: 31b013a14f24dcd59b9e7f23bc5284d882039990
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: 55c40fc04934f00ccb541a01cce611d9532bee1a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916179"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506178"
 ---
 # <a name="cgopherfilefind-class"></a>CGopherFileFind 类
 
@@ -161,7 +161,7 @@ virtual BOOL FindFile(
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则不为 0；否则为 0。 若要获得扩展的错误信息, 请调用 Win32 函数[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
+如果成功，则不为 0；否则为 0。 若要获得扩展的错误信息, 请调用 Win32 函数[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
 
 ### <a name="remarks"></a>备注
 
@@ -177,7 +177,7 @@ virtual BOOL FindNextFile();
 
 ### <a name="return-value"></a>返回值
 
-如果有多个文件, 则为非零值;如果找到的文件是目录中的最后一个, 或者如果出现错误, 则为零。 若要获得扩展的错误信息, 请调用 Win32 函数[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。 如果找到的文件是目录中的最后一个文件, 或者找不到匹配的文件, 则该`GetLastError`函数将返回 ERROR_NO_MORE_FILES。
+如果有多个文件, 则为非零值;如果找到的文件是目录中的最后一个, 或者如果出现错误, 则为零。 若要获得扩展的错误信息, 请调用 Win32 函数[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)。 如果找到的文件是目录中的最后一个文件, 或者找不到匹配的文件, 则该`GetLastError`函数将返回 ERROR_NO_MORE_FILES。
 
 ##  <a name="getcreationtime"></a>CGopherFileFind:: GetCreationTime
 
@@ -191,7 +191,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 ### <a name="parameters"></a>参数
 
 *pTimeStamp*<br/>
-指向包含文件创建时间的[FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)结构的指针。
+指向包含文件创建时间的[FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime)结构的指针。
 
 *refTime*<br/>
 对[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象的引用。
@@ -205,7 +205,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 在调用`GetCreationTime`之前, 必须至少调用[FindNextFile](#findnextfile) 。
 
 > [!NOTE]
->  并非所有文件系统都使用相同的语义来实现此函数返回的时间戳。 如果基础文件系统或服务器不支持保留时间属性, 则此函数返回的值可能与其他时间戳函数返回的值相同。 有关时间格式的信息, 请参阅[Win32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa)结构。 在某些操作系统上, 返回的时间是文件所在计算机的本地时区。 有关详细信息, 请参阅 Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) API。
+>  并非所有文件系统都使用相同的语义来实现此函数返回的时间戳。 如果基础文件系统或服务器不支持保留时间属性, 则此函数返回的值可能与其他时间戳函数返回的值相同。 有关时间格式的信息, 请参阅[WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)结构。 在某些操作系统上, 返回的时间是文件所在计算机的本地时区。 有关详细信息, 请参阅 Win32 [FileTimeToLocalFileTime](/windows/win32/api/fileapi/nf-fileapi-filetimetolocalfiletime) API。
 
 ##  <a name="getlastaccesstime"></a>  CGopherFileFind::GetLastAccessTime
 
@@ -222,7 +222,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 对[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象的引用。
 
 *pTimeStamp*<br/>
-指向包含文件上次访问时间的[FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)结构的指针。
+指向包含文件上次访问时间的[FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime)结构的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -233,7 +233,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 在调用`GetLastAccessTime`之前, 必须至少调用[FindNextFile](#findnextfile) 。
 
 > [!NOTE]
->  并非所有文件系统都使用相同的语义来实现此函数返回的时间戳。 如果基础文件系统或服务器不支持保留时间属性, 则此函数返回的值可能与其他时间戳函数返回的值相同。 有关时间格式的信息, 请参阅[Win32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa)结构。 在某些操作系统上, 返回的时间是文件所在计算机的本地时区。 有关详细信息, 请参阅 Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) API。
+>  并非所有文件系统都使用相同的语义来实现此函数返回的时间戳。 如果基础文件系统或服务器不支持保留时间属性, 则此函数返回的值可能与其他时间戳函数返回的值相同。 有关时间格式的信息, 请参阅[WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)结构。 在某些操作系统上, 返回的时间是文件所在计算机的本地时区。 有关详细信息, 请参阅 Win32 [FileTimeToLocalFileTime](/windows/win32/api/fileapi/nf-fileapi-filetimetolocalfiletime) API。
 
 ##  <a name="getlastwritetime"></a>CGopherFileFind:: GetLastWriteTime
 
@@ -247,7 +247,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 ### <a name="parameters"></a>参数
 
 *pTimeStamp*<br/>
-指向包含文件上次写入时间的[FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)结构的指针。
+指向包含文件上次写入时间的[FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime)结构的指针。
 
 *refTime*<br/>
 对[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象的引用。
@@ -261,7 +261,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 在调用`GetLastWriteTime`之前, 必须至少调用[FindNextFile](#findnextfile) 。
 
 > [!NOTE]
->  并非所有文件系统都使用相同的语义来实现此函数返回的时间戳。 如果基础文件系统或服务器不支持保留时间属性, 则此函数返回的值可能与其他时间戳函数返回的值相同。 有关时间格式的信息, 请参阅[Win32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa)结构。 在某些操作系统上, 返回的时间是文件所在计算机的本地时区。 有关详细信息, 请参阅 Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) API。
+>  并非所有文件系统都使用相同的语义来实现此函数返回的时间戳。 如果基础文件系统或服务器不支持保留时间属性, 则此函数返回的值可能与其他时间戳函数返回的值相同。 有关时间格式的信息, 请参阅[WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)结构。 在某些操作系统上, 返回的时间是文件所在计算机的本地时区。 有关详细信息, 请参阅 Win32 [FileTimeToLocalFileTime](/windows/win32/api/fileapi/nf-fileapi-filetimetolocalfiletime) API。
 
 ##  <a name="getlength"></a>CGopherFileFind:: GetLength
 
@@ -277,7 +277,7 @@ virtual ULONGLONG GetLength() const;
 
 ### <a name="remarks"></a>备注
 
-`GetLength`使用 Win32 结构[WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa)获取文件大小的值 (以字节为单位)。
+`GetLength`使用 Win32 结构[WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)获取文件大小的值 (以字节为单位)。
 
 > [!NOTE]
 >  在 MFC 7.0 中, `GetLength`支持64位整数类型。 以前-用此更新版本的库生成的现有代码可能会导致截断警告。

@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - CTokenPrivileges class
 ms.assetid: 89590105-f001-4014-870d-142926091231
-ms.openlocfilehash: 5f8379d20d8c8d525cd645e1d4aa0c751e16f531
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: f4ecc96ee53d6c688d17afa9957ccbf5060ca3fd
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915535"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496273"
 ---
 # <a name="ctokenprivileges-class"></a>CTokenPrivileges 类
 
@@ -71,13 +71,13 @@ class CTokenPrivileges
 
 ## <a name="remarks"></a>备注
 
-[访问令牌](/windows/desktop/SecAuthZ/access-tokens)是一个对象, 该对象描述进程或线程的安全上下文, 并分配给登录到 Windows 系统的每个用户。
+[访问令牌](/windows/win32/SecAuthZ/access-tokens)是一个对象, 该对象描述进程或线程的安全上下文, 并分配给登录到 Windows 系统的每个用户。
 
-访问令牌用于描述授予每个用户的各种安全权限。 权限由64位数字组成, 称为本地唯一标识符 ( [LUID](/windows/desktop/api/winnt/ns-winnt-luid)) 和描述符字符串。
+访问令牌用于描述授予每个用户的各种安全权限。 权限由64位数字组成, 称为本地唯一标识符 ( [LUID](/windows/win32/api/winnt/ns-winnt-luid)) 和描述符字符串。
 
-类是 [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-token_privileges) 结构的包装, 包含0个或多个权限。 `CTokenPrivileges` 可以使用提供的类方法添加、删除或查询权限。
+类是 [TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges) 结构的包装, 包含0个或多个权限。 `CTokenPrivileges` 可以使用提供的类方法添加、删除或查询权限。
 
-有关 Windows 中的访问控制模型的简介, 请参阅 Windows SDK 中的[访问控制](/windows/desktop/SecAuthZ/access-control)。
+有关 Windows 中的访问控制模型的简介, 请参阅 Windows SDK 中的[访问控制](/windows/win32/SecAuthZ/access-control)。
 
 ## <a name="requirements"></a>要求
 
@@ -101,7 +101,7 @@ void Add(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 如果为 true, 则启用特权。 如果为 false, 则禁用特权。
 
 *rPrivileges*<br/>
-对[TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-token_privileges)结构的引用。 将从该结构中复制权限和属性, 并将其`CTokenPrivileges`添加到对象。
+对[TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges)结构的引用。 将从该结构中复制权限和属性, 并将其`CTokenPrivileges`添加到对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -123,7 +123,7 @@ rhs<br/>
 要`CTokenPrivileges`分配给新对象的对象。
 
 *rPrivileges*<br/>
-要分配给新`CTokenPrivileges`对象的 [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-token_privileges) 结构。
+要分配给新`CTokenPrivileges`对象的 [TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges) 结构。
 
 ### <a name="remarks"></a>备注
 
@@ -230,7 +230,7 @@ void GetLuidsAndAttributes(
 ### <a name="parameters"></a>参数
 
 *pPrivileges*<br/>
-指向[LUID](/windows/desktop/api/winnt/ns-winnt-luid)对象的数组的指针。 `CLUIDArray`是一个定义为`CAtlArray<LUID> CLUIDArray`的 typedef。
+指向[LUID](/windows/win32/api/winnt/ns-winnt-luid)对象的数组的指针。 `CLUIDArray`是一个定义为`CAtlArray<LUID> CLUIDArray`的 typedef。
 
 *pAttributes*<br/>
 指向 DWORD 对象的数组的指针。 如果省略此参数或为 NULL, 则不检索特性。 `CAttributes`是一个定义为`CAtlArray <DWORD> CAttributes`的 typedef。
@@ -273,7 +273,7 @@ const TOKEN_PRIVILEGES* GetPTOKEN_PRIVILEGES() const throw(...);
 
 ### <a name="return-value"></a>返回值
 
-返回一个指向[TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-token_privileges)结构的指针。
+返回一个指向[TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges)结构的指针。
 
 ##  <a name="lookupprivilege"></a>  CTokenPrivileges::LookupPrivilege
 
@@ -309,7 +309,7 @@ CTokenPrivileges& operator= (const CTokenPrivileges& rhs) throw(...);
 ### <a name="parameters"></a>参数
 
 *rPrivileges*<br/>
-要分配给`CTokenPrivileges`对象的 [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-token_privileges) 结构。
+要分配给`CTokenPrivileges`对象的 [TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges) 结构。
 
 rhs<br/>
 要分配给对象的对象。`CTokenPrivileges`
@@ -328,13 +328,13 @@ operator const TOKEN_PRIVILEGES *() const throw(...);
 
 ### <a name="remarks"></a>备注
 
-将一个值转换为指向[TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-token_privileges)结构的指针。
+将一个值转换为指向[TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges)结构的指针。
 
 ## <a name="see-also"></a>请参阅
 
 [安全示例](../../overview/visual-cpp-samples.md)<br/>
-[TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-token_privileges)<br/>
-[LUID](/windows/desktop/api/winnt/ns-winnt-luid)<br/>
-[LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-luid_and_attributes)<br/>
+[TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges)<br/>
+[LUID](/windows/win32/api/winnt/ns-winnt-luid)<br/>
+[LUID_AND_ATTRIBUTES](/windows/win32/api/winnt/ns-winnt-luid_and_attributes)<br/>
 [类概述](../../atl/atl-class-overview.md)<br/>
 [安全全局函数](../../atl/reference/security-global-functions.md)

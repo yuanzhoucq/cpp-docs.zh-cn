@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: bbd369d282df1cac59e6966a2d832e23b8ff6da0
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: 046c8a3f99e8b505ee6a6e8b534318263090e07d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916744"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502256"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -261,7 +261,7 @@ BOOL AdjustRect(
 
 此成员函数从其窗口矩形计算工具提示控件的文本显示矩形, 或从显示指定文本显示矩形的工具提示窗口矩形计算。
 
-此成员函数实现 Win32 消息[TTM_ADJUSTRECT](/windows/desktop/Controls/ttm-adjustrect)的行为, 如 Windows SDK 中所述。
+此成员函数实现 Win32 消息[TTM_ADJUSTRECT](/windows/win32/Controls/ttm-adjustrect)的行为, 如 Windows SDK 中所述。
 
 ##  <a name="create"></a>CToolTipCtrl:: Create
 
@@ -322,7 +322,7 @@ virtual BOOL CreateEx(
 指定工具提示控件的样式。 有关详细信息, 请参阅[Create](#create)的 "**备注**" 部分。
 
 *dwStyleEx*<br/>
-指定正在创建的控件的扩展样式。 有关扩展 Windows 样式的列表, 请参阅 Windows SDK 中[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)的*dwExStyle*参数。
+指定正在创建的控件的扩展样式。 有关扩展 Windows 样式的列表, 请参阅 Windows SDK 中[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)的*dwExStyle*参数。
 
 ### <a name="return-value"></a>返回值
 
@@ -377,7 +377,7 @@ CSize GetBubbleSize(LPTOOLINFO lpToolInfo) const;
 ### <a name="parameters"></a>参数
 
 *lpToolInfo*<br/>
-指向工具提示的[TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa)结构的指针。
+指向工具提示的[TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow)结构的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -385,7 +385,7 @@ CSize GetBubbleSize(LPTOOLINFO lpToolInfo) const;
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 消息[TTM_GETBUBBLESIZE](/windows/desktop/Controls/ttm-getbubblesize)的行为, 如 Windows SDK 中所述。
+此成员函数实现 Win32 消息[TTM_GETBUBBLESIZE](/windows/win32/Controls/ttm-getbubblesize)的行为, 如 Windows SDK 中所述。
 
 ##  <a name="getcurrenttool"></a>CToolTipCtrl:: GetCurrentTool
 
@@ -399,7 +399,7 @@ BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
 
 |参数|描述|
 |---------------|-----------------|
-|*lpToolInfo*|弄指向[TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa)结构的指针, 该结构接收有关当前工具提示窗口的信息。|
+|*lpToolInfo*|弄指向[TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow)结构的指针, 该结构接收有关当前工具提示窗口的信息。|
 
 ### <a name="return-value"></a>返回值
 
@@ -407,7 +407,7 @@ BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
 
 ### <a name="remarks"></a>备注
 
-此方法发送[TTM_GETCURRENTTOOL](/windows/desktop/Controls/ttm-getcurrenttool)消息, 如 Windows SDK 中所述。
+此方法发送[TTM_GETCURRENTTOOL](/windows/win32/Controls/ttm-getcurrenttool)消息, 如 Windows SDK 中所述。
 
 ### <a name="example"></a>示例
 
@@ -440,7 +440,7 @@ int GetDelayTime(DWORD dwDuration) const;
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 消息[TTM_GETDELAYTIME](/windows/desktop/Controls/ttm-getdelaytime)的行为, 如 Windows SDK 中所述。
+此成员函数实现 Win32 消息[TTM_GETDELAYTIME](/windows/win32/Controls/ttm-getdelaytime)的行为, 如 Windows SDK 中所述。
 
 ##  <a name="getmargin"></a>CToolTipCtrl:: GetMargin
 
@@ -464,7 +464,7 @@ void GetMargin(LPRECT lprc) const;
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 消息[TTM_GETMARGIN](/windows/desktop/Controls/ttm-getmargin)的行为, 如 Windows SDK 中所述。
+此成员函数实现 Win32 消息[TTM_GETMARGIN](/windows/win32/Controls/ttm-getmargin)的行为, 如 Windows SDK 中所述。
 
 ##  <a name="getmaxtipwidth"></a>CToolTipCtrl:: GetMaxTipWidth
 
@@ -480,7 +480,7 @@ int GetMaxTipWidth() const;
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 消息[TTM_GETMAXTIPWIDTH](/windows/desktop/Controls/ttm-getmaxtipwidth)的行为, 如 Windows SDK 中所述。
+此成员函数实现 Win32 消息[TTM_GETMAXTIPWIDTH](/windows/win32/Controls/ttm-getmaxtipwidth)的行为, 如 Windows SDK 中所述。
 
 ##  <a name="gettext"></a>CToolTipCtrl:: GetText
 
@@ -518,11 +518,11 @@ COLORREF GetTipBkColor() const;
 
 ### <a name="return-value"></a>返回值
 
-一个表示背景色的[COLORREF](/windows/desktop/gdi/colorref)值。
+一个表示背景色的[COLORREF](/windows/win32/gdi/colorref)值。
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 消息[TTM_GETTIPBKCOLOR](/windows/desktop/Controls/ttm-gettipbkcolor)的行为, 如 Windows SDK 中所述。
+此成员函数实现 Win32 消息[TTM_GETTIPBKCOLOR](/windows/win32/Controls/ttm-gettipbkcolor)的行为, 如 Windows SDK 中所述。
 
 ##  <a name="gettiptextcolor"></a>CToolTipCtrl:: GetTipTextColor
 
@@ -534,11 +534,11 @@ COLORREF GetTipTextColor() const;
 
 ### <a name="return-value"></a>返回值
 
-表示文本颜色的[COLORREF](/windows/desktop/gdi/colorref)值。
+表示文本颜色的[COLORREF](/windows/win32/gdi/colorref)值。
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 消息[TTM_GETTIPTEXTCOLOR](/windows/desktop/Controls/ttm-gettiptextcolor)的行为, 如 Windows SDK 中所述。
+此成员函数实现 Win32 消息[TTM_GETTIPTEXTCOLOR](/windows/win32/Controls/ttm-gettiptextcolor)的行为, 如 Windows SDK 中所述。
 
 ##  <a name="gettitle"></a>CToolTipCtrl:: GetTitle
 
@@ -552,11 +552,11 @@ void GetTitle(PTTGETTITLE pttgt) const;
 
 |参数|描述|
 |---------------|-----------------|
-|*pttgt*|弄指向[TTGETTITLE](/windows/desktop/api/commctrl/ns-commctrl-ttgettitle)结构的指针, 该结构包含 ToolTip 控件的相关信息。 此方法返回时, [TTGETTITLE](/windows/desktop/api/commctrl/ns-commctrl-ttgettitle)结构的*pszTitle*成员指向标题的文本。|
+|*pttgt*|弄指向[TTGETTITLE](/windows/win32/api/commctrl/ns-commctrl-ttgettitle)结构的指针, 该结构包含 ToolTip 控件的相关信息。 此方法返回时, [TTGETTITLE](/windows/win32/api/commctrl/ns-commctrl-ttgettitle)结构的*pszTitle*成员指向标题的文本。|
 
 ### <a name="remarks"></a>备注
 
-此方法发送[TTM_GETTITLE](/windows/desktop/Controls/ttm-gettitle)消息, 如 Windows SDK 中所述。
+此方法发送[TTM_GETTITLE](/windows/win32/Controls/ttm-gettitle)消息, 如 Windows SDK 中所述。
 
 ##  <a name="gettoolcount"></a>CToolTipCtrl:: GetToolCount
 
@@ -598,7 +598,7 @@ BOOL GetToolInfo(
 
 ### <a name="remarks"></a>备注
 
-CToolInfo `hwnd`所`uId`引用的[TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa)结构的和成员标识该工具。 如果已通过先前对的调用`AddTool`向工具提示控件注册该工具, 则将`TOOLINFO`使用有关该工具的信息填充该结构。
+CToolInfo `hwnd`所`uId`引用的[TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow)结构的和成员标识该工具。 如果已通过先前对的调用`AddTool`向工具提示控件注册该工具, 则将`TOOLINFO`使用有关该工具的信息填充该结构。
 
 ##  <a name="hittest"></a>CToolTipCtrl:: System.windows.media.visualtreehelper.hittest
 
@@ -620,7 +620,7 @@ BOOL HitTest(
 `CPoint`指向对象的指针, 该对象包含要测试的点的坐标。
 
 *lpToolInfo*<br/>
-指向[TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa)结构的指针, 该结构包含有关该工具的信息。
+指向[TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow)结构的指针, 该结构包含有关该工具的信息。
 
 ### <a name="return-value"></a>返回值
 
@@ -662,7 +662,7 @@ void Pop();
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 消息[TTM_POP](/windows/desktop/Controls/ttm-pop)的行为, 如 Windows SDK 中所述。
+此成员函数实现 Win32 消息[TTM_POP](/windows/win32/Controls/ttm-pop)的行为, 如 Windows SDK 中所述。
 
 ##  <a name="popup"></a>CToolTipCtrl::P opup
 
@@ -674,7 +674,7 @@ void Popup();
 
 ### <a name="remarks"></a>备注
 
-此方法发送[TTM_POPUP](/windows/desktop/Controls/ttm-popup)消息, 如 Windows SDK 中所述。
+此方法发送[TTM_POPUP](/windows/win32/Controls/ttm-popup)消息, 如 Windows SDK 中所述。
 
 ### <a name="example"></a>示例
 
@@ -693,7 +693,7 @@ void RelayEvent(LPMSG lpMsg);
 ### <a name="parameters"></a>参数
 
 *lpMsg*<br/>
-指向包含要中继的消息的[MSG](/windows/desktop/api/winuser/ns-winuser-msg)结构的指针。
+指向包含要中继的消息的[MSG](/windows/win32/api/winuser/ns-winuser-msg)结构的指针。
 
 ### <a name="remarks"></a>备注
 
@@ -751,7 +751,7 @@ void SetMargin(LPRECT lprc);
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 消息[TTM_SETMARGIN](/windows/desktop/Controls/ttm-setmargin)的行为, 如 Windows SDK 中所述。
+此成员函数实现 Win32 消息[TTM_SETMARGIN](/windows/win32/Controls/ttm-setmargin)的行为, 如 Windows SDK 中所述。
 
 ##  <a name="setmaxtipwidth"></a>CToolTipCtrl:: SetMaxTipWidth
 
@@ -772,7 +772,7 @@ int SetMaxTipWidth(int iWidth);
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 消息[TTM_SETMAXTIPWIDTH](/windows/desktop/Controls/ttm-setmaxtipwidth)的行为, 如 Windows SDK 中所述。
+此成员函数实现 Win32 消息[TTM_SETMAXTIPWIDTH](/windows/win32/Controls/ttm-setmaxtipwidth)的行为, 如 Windows SDK 中所述。
 
 ##  <a name="settipbkcolor"></a>CToolTipCtrl:: SetTipBkColor
 
@@ -789,7 +789,7 @@ void SetTipBkColor(COLORREF clr);
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 消息[TTM_SETTIPBKCOLOR](/windows/desktop/Controls/ttm-settipbkcolor)的行为, 如 Windows SDK 中所述。
+此成员函数实现 Win32 消息[TTM_SETTIPBKCOLOR](/windows/win32/Controls/ttm-settipbkcolor)的行为, 如 Windows SDK 中所述。
 
 ##  <a name="settiptextcolor"></a>CToolTipCtrl:: SetTipTextColor
 
@@ -806,7 +806,7 @@ void SetTipTextColor(COLORREF clr);
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 消息[TTM_SETTIPTEXTCOLOR](/windows/desktop/Controls/ttm-settiptextcolor)的行为, 如 Windows SDK 中所述。
+此成员函数实现 Win32 消息[TTM_SETTIPTEXTCOLOR](/windows/win32/Controls/ttm-settiptextcolor)的行为, 如 Windows SDK 中所述。
 
 ##  <a name="settitle"></a>CToolTipCtrl:: SetTitle
 
@@ -821,7 +821,7 @@ BOOL SetTitle(
 ### <a name="parameters"></a>参数
 
 *uIcon*<br/>
-请参阅 Windows SDK 中[TTM_SETTITLE](/windows/desktop/Controls/ttm-settitle)的*图标*。
+请参阅 Windows SDK 中[TTM_SETTITLE](/windows/win32/Controls/ttm-settitle)的*图标*。
 
 *lpstrTitle*<br/>
 指向标题字符串的指针。
@@ -832,7 +832,7 @@ BOOL SetTitle(
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 消息[TTM_SETTITLE](/windows/desktop/Controls/ttm-settitle)的行为, 如 Windows SDK 中所述。
+此成员函数实现 Win32 消息[TTM_SETTITLE](/windows/win32/Controls/ttm-settitle)的行为, 如 Windows SDK 中所述。
 
 ##  <a name="settoolinfo"></a>CToolTipCtrl:: SetToolInfo
 
@@ -845,7 +845,7 @@ void SetToolInfo(LPTOOLINFO lpToolInfo);
 ### <a name="parameters"></a>参数
 
 *lpToolInfo*<br/>
-指向[TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa)结构的指针, 该结构指定要设置的信息。
+指向[TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow)结构的指针, 该结构指定要设置的信息。
 
 ##  <a name="settoolrect"></a>CToolTipCtrl:: SetToolRect
 
@@ -888,7 +888,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 
 ### <a name="remarks"></a>备注
 
-此成员函数模拟[TTM_SETWINDOWTHEME](/windows/desktop/Controls/ttm-setwindowtheme)消息的功能, 如 Windows SDK 中所述。
+此成员函数模拟[TTM_SETWINDOWTHEME](/windows/win32/Controls/ttm-setwindowtheme)消息的功能, 如 Windows SDK 中所述。
 
 ##  <a name="update"></a>CToolTipCtrl:: Update
 

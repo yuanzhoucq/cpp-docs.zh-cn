@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-ms.openlocfilehash: fb496e3bd58d0fe134c37b240eb2698302c6aa64
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: ed19ed3cdeb77612e20d826480ab73b9361366e9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915703"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496453"
 ---
 # <a name="csid-class"></a>CSid 类
 
@@ -97,7 +97,7 @@ class CSid
 
 应用程序不应直接`SID`修改结构, 而是使用此包装类中提供的方法。 另请参阅[AtlGetOwnerSid](security-global-functions.md#atlgetownersid)、 [AtlSetGroupSid](security-global-functions.md#atlsetgroupsid)、 [AtlGetGroupSid](security-global-functions.md#atlgetgroupsid)和[AtlSetOwnerSid](security-global-functions.md#atlsetownersid)。
 
-有关 Windows 中的访问控制模型的简介, 请参阅 Windows SDK 中的[访问控制](/windows/desktop/SecAuthZ/access-control)。
+有关 Windows 中的访问控制模型的简介, 请参阅 Windows SDK 中的[访问控制](/windows/win32/SecAuthZ/access-control)。
 
 ## <a name="requirements"></a>要求
 
@@ -117,7 +117,7 @@ LPCTSTR AccountName() const throw(...);
 
 ### <a name="remarks"></a>备注
 
-此方法尝试查找指定`SID`的 (安全标识符) 的名称。 有关完整详细信息, 请参阅[LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida)。
+此方法尝试查找指定`SID`的 (安全标识符) 的名称。 有关完整详细信息, 请参阅[LookupAccountSid](/windows/win32/api/winbase/nf-winbase-lookupaccountsidw)。
 
 如果找不到的帐户`SID`名称, `AccountName`则返回一个空字符串。 如果网络超时使此方法无法找到该名称, 则会发生这种情况。 对于没有对应帐户名称的安全标识符 (如`SID`标识登录会话的), 也会发生此错误。
 
@@ -208,7 +208,7 @@ LPCTSTR Domain() const throw(...);
 
 ### <a name="remarks"></a>备注
 
-此方法尝试查找指定`SID`的 (安全标识符) 的名称。 有关完整详细信息, 请参阅[LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida)。
+此方法尝试查找指定`SID`的 (安全标识符) 的名称。 有关完整详细信息, 请参阅[LookupAccountSid](/windows/win32/api/winbase/nf-winbase-lookupaccountsidw)。
 
 如果找不到的`SID`帐户名称, `Domain`则会将该域作为空字符串返回。 如果网络超时使此方法无法找到该名称, 则会发生这种情况。 对于没有对应帐户名称的安全标识符 (如`SID`标识登录会话的), 也会发生此错误。
 
@@ -232,7 +232,7 @@ rhs<br/>
 
 ### <a name="remarks"></a>备注
 
-有关更多详细信息, 请参阅 Windows SDK 中的[EqualPrefixSid](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-equalprefixsid) 。
+有关更多详细信息, 请参阅 Windows SDK 中的[EqualPrefixSid](/windows/win32/api/securitybaseapi/nf-securitybaseapi-equalprefixsid) 。
 
 ##  <a name="getlength"></a>  CSid::GetLength
 
@@ -360,7 +360,7 @@ bool LoadAccount(
 系统名称。 此字符串可以是远程计算机的名称。 如果此字符串为 NULL, 则改为使用本地系统。
 
 *pSid*<br/>
-指向[SID](/windows/desktop/api/winnt/ns-winnt-sid)结构的指针。
+指向[SID](/windows/win32/api/winnt/ns-winnt-sid)结构的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -368,7 +368,7 @@ bool LoadAccount(
 
 ### <a name="remarks"></a>备注
 
-`LoadAccount`尝试查找指定名称的安全标识符。 有关更多详细信息, 请参阅[LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida) 。
+`LoadAccount`尝试查找指定名称的安全标识符。 有关更多详细信息, 请参阅[LookupAccountSid](/windows/win32/api/winbase/nf-winbase-lookupaccountsidw) 。
 
 ##  <a name="operator_eq"></a>CSid:: operator =
 
@@ -542,7 +542,7 @@ LPCTSTR Sid() const throw(...);
 
 ### <a name="return-value"></a>返回值
 
-`SID`将结构返回为适用于显示、存储或传输的格式的字符串。 等效于[ConvertSidToStringSid](/windows/desktop/api/sddl/nf-sddl-convertsidtostringsida)。
+`SID`将结构返回为适用于显示、存储或传输的格式的字符串。 等效于[ConvertSidToStringSid](/windows/win32/api/sddl/nf-sddl-convertsidtostringsidw)。
 
 ##  <a name="sidnameuse"></a>CSid:: SidNameUse
 

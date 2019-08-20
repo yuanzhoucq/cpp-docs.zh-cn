@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: 066494f4ba0119f4576e0c8e3c06d87ff736aea3
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: 732bdf980240b1f496c1aca56c8a89b6a7f52d27
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916719"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502185"
 ---
 # <a name="cwinapp-class"></a>CWinApp 类
 
@@ -260,7 +260,7 @@ class CWinApp : public CWinThread
 |[CWinApp::OnIdle](#onidle)|重写以执行应用程序特定的空闲时间处理。|
 |[CWinApp::OpenDocumentFile](#opendocumentfile)|由框架调用, 以从文件打开文档。|
 |[CWinApp::ParseCommandLine](#parsecommandline)|分析命令行中的单个参数和标志。|
-|[CWinApp::PreTranslateMessage](#pretranslatemessage)|在将消息调度到 Windows 函数[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)和[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage)之前筛选消息。|
+|[CWinApp::PreTranslateMessage](#pretranslatemessage)|在将消息调度到 Windows 函数[TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage)和[DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage)之前筛选消息。|
 |[CWinApp::ProcessMessageFilter](#processmessagefilter)|在某些消息到达应用程序之前截获这些消息。|
 |[CWinApp::ProcessShellCommand](#processshellcommand)|处理命令行参数和标志。|
 |[CWinApp::ProcessWndProcException](#processwndprocexception)|截获应用程序的消息和命令处理程序引发的所有未经处理的异常。|
@@ -850,7 +850,7 @@ BOOL GetPrinterDeviceDefaults(struct tagPDA* pPrintDlg);
 ### <a name="parameters"></a>参数
 
 *pPrintDlg*<br/>
-指向[PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda)结构的指针。
+指向[PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-pdw)结构的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -902,7 +902,7 @@ BOOL GetProfileBinary(
 > `GetProfileBinary`分配一个缓冲区并在\* *ppData*中返回其地址。 调用方负责使用**delete []** 释放缓冲区。
 
 > [!IMPORTANT]
-> 此函数返回的数据不一定是以 NULL 结尾的，并且调用方必须执行验证。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
+> 此函数返回的数据不一定是以 NULL 结尾的，并且调用方必须执行验证。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="example"></a>示例
 
@@ -943,7 +943,7 @@ UINT GetProfileInt(
 此成员函数不区分大小写, 因此*lpszSection*和*lpszEntry*参数中的字符串可能会有所不同。
 
 > [!IMPORTANT]
-> 此函数返回的数据不一定是以 NULL 结尾的，并且调用方必须执行验证。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
+> 此函数返回的数据不一定是以 NULL 结尾的，并且调用方必须执行验证。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="example"></a>示例
 
@@ -980,7 +980,7 @@ CString GetProfileString(
 ### <a name="remarks"></a>备注
 
 > [!IMPORTANT]
-> 此函数返回的数据不一定是以 NULL 结尾的，并且调用方必须执行验证。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
+> 此函数返回的数据不一定是以 NULL 结尾的，并且调用方必须执行验证。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="example"></a>示例
 
@@ -1036,7 +1036,7 @@ virtual void HtmlHelp(
 指定其他数据。 使用的值取决于*nCmd*参数的值。 默认值`0x000F`为, 表示[HH_HELP_CONTEXT](/previous-versions/windows/desktop/htmlhelp/hh-help-context-command)。
 
 *nCmd*<br/>
-指定请求的帮助的类型。 有关可能值的列表以及这些值如何影响*dwData*参数, 请参阅 Windows SDK 中的[HtmlHelpW](/windows/desktop/api/htmlhelp/nf-htmlhelp-htmlhelpw)或[HtmlHelpA](/windows/desktop/api/htmlhelp/nf-htmlhelp-htmlhelpa) API 函数中描述的*uCommand*参数。  
+指定请求的帮助的类型。 有关可能值的列表以及这些值如何影响*dwData*参数, 请参阅 Windows SDK 中的[HtmlHelpW](/windows/win32/api/htmlhelp/nf-htmlhelp-htmlhelpw)或[HtmlHelpA](/windows/win32/api/htmlhelp/nf-htmlhelp-htmlhelpa) API 函数中描述的*uCommand*参数。  
 
 ### <a name="remarks"></a>备注
 
@@ -1063,7 +1063,7 @@ virtual BOOL InitInstance();
 重`InitInstance`写以初始化在 Windows 下运行的应用程序的每个新实例。 通常, 重写`InitInstance`以构造主窗口对象并`CWinThread::m_pMainWnd`将数据成员设置为指向该窗口。 有关重写此成员函数的详细信息, [请参阅 CWinApp:应用程序类](../../mfc/cwinapp-the-application-class.md)。
 
 > [!NOTE]
-> MFC 应用程序必须初始化为单线程单元 (STA)。 如果在`InitInstance`重写中调用[CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) , 请指定 COINIT_APARTMENTTHREADED (而不是 COINIT_MULTITHREADED)。
+> MFC 应用程序必须初始化为单线程单元 (STA)。 如果在`InitInstance`重写中调用[CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) , 请指定 COINIT_APARTMENTTHREADED (而不是 COINIT_MULTITHREADED)。
 
 ### <a name="example"></a>示例
 
@@ -1099,7 +1099,7 @@ HCURSOR LoadCursor(LPCTSTR lpszResourceName) const;  HCURSOR LoadCursor(UINT nID
 指向以 null 结尾的字符串, 该字符串包含游标资源的名称。 可以将`CString`用于此参数。
 
 *nIDResource*<br/>
-游标资源的 ID。 有关资源列表, 请参阅 Windows SDK 中的[LoadCursor](/windows/desktop/api/winuser/nf-winuser-loadcursora) 。
+游标资源的 ID。 有关资源列表, 请参阅 Windows SDK 中的[LoadCursor](/windows/win32/api/winuser/nf-winuser-loadcursorw) 。
 
 ### <a name="return-value"></a>返回值
 
@@ -1142,7 +1142,7 @@ HICON LoadIcon(LPCTSTR lpszResourceName) const;  HICON LoadIcon(UINT nIDResource
 可以使用[LoadStandardIcon](#loadstandardicon)或[LoadOEMIcon](#loadoemicon)成员函数访问预定义的 Windows 图标。
 
 > [!NOTE]
-> 此成员函数调用 Win32 API 函数[LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadicona), 该函数只能加载其大小符合 SM_CXICON 和 SM_CYICON 系统指标值的图标。
+> 此成员函数调用 Win32 API 函数[LoadIcon](/windows/win32/api/winuser/nf-winuser-loadiconw), 该函数只能加载其大小符合 SM_CXICON 和 SM_CYICON 系统指标值的图标。
 
 ##  <a name="loadoemcursor"></a>CWinApp:: LoadOEMCursor
 
@@ -1252,7 +1252,7 @@ HICON LoadStandardIcon(LPCTSTR lpszIconName) const;
 ### <a name="parameters"></a>参数
 
 *lpszIconName*<br/>
-一个清单常量标识符, 它指定预定义的 Windows 图标。 这些标识符在 WINDOWS 中定义。高. 有关可能的预定义值及其说明的列表, 请参阅 Windows SDK 的[LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadicona)中的*lpIconName*参数。
+一个清单常量标识符, 它指定预定义的 Windows 图标。 这些标识符在 WINDOWS 中定义。高. 有关可能的预定义值及其说明的列表, 请参阅 Windows SDK 的[LoadIcon](/windows/win32/api/winuser/nf-winuser-loadiconw)中的*lpIconName*参数。
 
 ### <a name="return-value"></a>返回值
 
@@ -1784,7 +1784,7 @@ void ParseCommandLine(CCommandLineInfo& rCmdInfo);
 
 ##  <a name="pretranslatemessage"></a>CWinApp::P reTranslateMessage
 
-重写此函数以筛选窗口消息, 然后将其调度到 Windows 函数[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)和[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) 。默认实现将执行快捷键转换, 因此必须调用`CWinApp::PreTranslateMessage`重写的版本中的成员函数。
+重写此函数以筛选窗口消息, 然后将其调度到 Windows 函数[TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage)和[DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) 。默认实现将执行快捷键转换, 因此必须调用`CWinApp::PreTranslateMessage`重写的版本中的成员函数。
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -1793,7 +1793,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>参数
 
 *pMsg*<br/>
-指向包含要处理的消息的[MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg)结构的指针。
+指向包含要处理的消息的[MSG](/windows/win32/api/winuser/ns-winuser-tagmsg)结构的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -1815,7 +1815,7 @@ virtual BOOL ProcessMessageFilter(
 指定挂钩代码。 此成员函数使用代码来确定如何处理*lpMsg。*
 
 *lpMsg*<br/>
-指向 Windows [MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg)结构的指针。
+指向 Windows [MSG](/windows/win32/api/winuser/ns-winuser-msg)结构的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -1886,7 +1886,7 @@ virtual LRESULT ProcessWndProcException(
 指向未捕获的异常的指针。
 
 *pMsg*<br/>
-一种[MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg)结构, 其中包含导致框架引发异常的 windows 消息的相关信息。
+一种[MSG](/windows/win32/api/winuser/ns-winuser-msg)结构, 其中包含导致框架引发异常的 windows 消息的相关信息。
 
 ### <a name="return-value"></a>返回值
 
@@ -2118,7 +2118,7 @@ void SelectPrinter(
 ### <a name="parameters"></a>参数
 
 *hDevNames*<br/>
-标识特定打印机的驱动程序、设备和输出端口名称的[DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames)结构的句柄。
+标识特定打印机的驱动程序、设备和输出端口名称的[DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames)结构的句柄。
 
 *hDevMode*<br/>
 [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)结构的句柄, 它指定有关打印机的设备初始化和环境的信息。
@@ -2260,7 +2260,7 @@ virtual void WinHelp(
 指定其他数据。 使用的值取决于*nCmd*参数的值。
 
 *nCmd*<br/>
-指定请求的帮助的类型。 有关可能值的列表以及这些值如何影响*dwData*参数, 请参阅[WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) Windows 函数。
+指定请求的帮助的类型。 有关可能值的列表以及这些值如何影响*dwData*参数, 请参阅[WinHelp](/windows/win32/api/winuser/nf-winuser-winhelpw) Windows 函数。
 
 ### <a name="remarks"></a>备注
 

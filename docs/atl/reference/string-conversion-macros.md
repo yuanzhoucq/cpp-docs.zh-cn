@@ -11,12 +11,12 @@ f1_keywords:
 - atlconv/ATL::DEVMODEW2A
 - atlconv/ATL::TEXTMETRICW2A
 ms.assetid: 2ff7c0b6-2bde-45fe-897f-6128e18e0c27
-ms.openlocfilehash: 6a84424de81eba2e6ab1e1baf60f567ebf2739ee
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: f7d9548fc5710e8d3d5d668dff230a60e7a291a1
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915506"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495183"
 ---
 # <a name="string-conversion-macros"></a>字符串转换宏
 
@@ -28,7 +28,7 @@ ms.locfileid: "68915506"
 
 ##  <a name="devmode_and_textmetric_string_conversion_macros"></a>DEVMODE 和 TEXTMETRIC 字符串转换宏
 
-这些宏创建[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)或[TEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica)结构的副本, 并将新结构中的字符串转换为新的字符串类型。 宏为新结构在堆栈上分配内存, 并返回指向新结构的指针。
+这些宏创建[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)或[TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textmetricw)结构的副本, 并将新结构中的字符串转换为新的字符串类型。 宏为新结构在堆栈上分配内存, 并返回指向新结构的指针。
 
 ```cpp
 MACRONAME( address_of_structure )
