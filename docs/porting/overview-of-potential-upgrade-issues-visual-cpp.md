@@ -2,12 +2,12 @@
 title: 潜在的升级问题概述 (Visual C++)
 ms.date: 05/03/2019
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: 27cfe90f33f71d82af90cf4fa62186c1c0a189ce
-ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
+ms.openlocfilehash: 10c2de547611cf7b1b47de2b1ec05dcf419c6225
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66182937"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511556"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>潜在的升级问题概述 (Visual C++)
 
@@ -86,7 +86,7 @@ CRT 向来不支持混合与匹配，但通常还是能使用混合与匹配（�
 dumpbin.exe /LINKERMEMBER somelibrary.lib
 ```
 
-### <a name="zcwchart-wchart-is-native-type"></a>/Zc:wchar_t（wchar_t 是本机类型）
+### <a name="zcwchar_t-wchar_t-is-native-type"></a>/Zc:wchar_t（wchar_t 是本机类型）
 
 （在 Microsoft Visual C++ 6.0 及早期版本中，wchar_t 未作为内置类型实现，而是在 wchar.h 中声明作为 unsigned short 的 typedef。）  C++ 标准要求 **wchar_t** 为内置类型。 使用 typedef 版本可能导致可移植性问题。 如果你从 Visual Studio 的早期版本进行升级，并遇到编译器错误 C2664（理由是代码尝试将 wchar_t 隐式转换为 unsigned short），则建议更改代码来修正错误，而不是设置 `/Zc:wchar_t-`   。 有关详细信息，请参阅 [/Zc:wchar_t（wchar_t 是本机类型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。
 
@@ -168,7 +168,7 @@ C++ 标准发展的方式并不总是后向兼容。 在 C++11 中引入移动�
 
 ATL 和 MFC 是相对稳定的 API，但偶尔对其进行更改。 有关详细信息，请参阅 [Visual C++ 更改历史记 (2003 - 2015)](visual-cpp-change-history-2003-2015.md)、[Visual Studio 中 Visual C++ 的新增功能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)以及 [Visual Studio 中 C++ 的符合性改进](../overview/cpp-conformance-improvements.md)。
 
-### <a name="lnk-2005-dllmain12-already-defined-in-msvcrtdlib"></a>已在 MSVCRTD.lib 中定义 LNK 2005 _DllMain@12
+### <a name="lnk-2005-_dllmain12-already-defined-in-msvcrtdlib"></a>已在 MSVCRTD.lib 中定义 LNK 2005 _DllMain@12
 
 MFC 应用程序中可能发生此错误。 它指示 CRT 库和 MFC 库之间的顺序问题。 必须先链接 MFC，使其提供 new 和 delete 运算符。 若要修复此错误，请使用 `/NODEFAULTLIB` 开关忽略以下默认库：MSVCRTD.lib 和 mfcs140d.lib。 然后将这些相同的 lib 添加为附加依赖项。
 
@@ -176,7 +176,7 @@ MFC 应用程序中可能发生此错误。 它指示 CRT 库和 MFC 库之间�
 
 如果原始代码针对 32 位系统编译，除了新建 32 位应用外，还可以选择创建 64 位版本。 一般情况下，应首先在 32 位模式下编译程序，然后再尝试使用 64 位模式。 针对 64 位进行编译是直截了当的方法，但在某些情况下，这可能暴露出 32 位版本中隐藏的一些 Bug。
 
-此外，还应注意可能的编译时和运行时问题，这些问题与 printf 和 scanf 函数中的指针大小、时间和大小值以及格式说明符相关。 有关详细信息，请参阅[针对 64 位 x64 目标配置 Visual C++](../build/configuring-programs-for-64-bit-visual-cpp.md) 和 [Visual C++ 64 位迁移的常见问题](../build/common-visual-cpp-64-bit-migration-issues.md)。 有关迁移的其他提示，请参阅[适用于 64 位 Windows 的编程指南](/windows/desktop/WinProg64/programming-guide-for-64-bit-windows)。
+此外，还应注意可能的编译时和运行时问题，这些问题与 printf 和 scanf 函数中的指针大小、时间和大小值以及格式说明符相关。 有关详细信息，请参阅[针对 64 位 x64 目标配置 Visual C++](../build/configuring-programs-for-64-bit-visual-cpp.md) 和 [Visual C++ 64 位迁移的常见问题](../build/common-visual-cpp-64-bit-migration-issues.md)。 有关迁移的其他提示，请参阅[适用于 64 位 Windows 的编程指南](/windows/win32/WinProg64/programming-guide-for-64-bit-windows)。
 
 ## <a name="unicode-vs-mbcsascii"></a>Unicode 和 MBCS/ASCII
 

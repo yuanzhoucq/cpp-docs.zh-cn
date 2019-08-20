@@ -4,12 +4,12 @@ ms.date: 08/30/2017
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: f05656612e464395117e77c82fb9dc9eb2290e0e
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 9597f04781c9009cf6f8f284348f0831c347201d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451285"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510353"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 更改历史记录（2003 - 2015）
 
@@ -277,7 +277,7 @@ ms.locfileid: "66451285"
 
 - **clock**
 
-   在早期版本中，已使用 Windows API [GetSystemTimeAsFileTime](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getsystemtimeasfiletime) 实现了 [clock](../c-runtime-library/reference/clock.md) 函数。 使用此实现，clock 函数对系统时间比较敏感，因此不一定是单一的。 已根据 [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) 重新实现了 clock 函数，现在它是单一的。
+   在早期版本中，已使用 Windows API [GetSystemTimeAsFileTime](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getsystemtimeasfiletime) 实现了 [clock](../c-runtime-library/reference/clock.md) 函数。 使用此实现，clock 函数对系统时间比较敏感，因此不一定是单一的。 已根据 [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) 重新实现了 clock 函数，现在它是单一的。
 
 - fstat 和 _utime 
 
@@ -313,7 +313,7 @@ ms.locfileid: "66451285"
 
 - steady_clock 
 
-   已更改 [steady_clock](../standard-library/steady-clock-struct.md) 的 \<chrono> 实现，以便满足 C++ 标准对稳定性和单一性的需求。 `steady_clock` 现在基于 [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx)，且 `high_resolution_clock` 现在是 `steady_clock` 的 typedef。 因此，在 Visual Studio 中，`steady_clock::time_point` 现在是 `chrono::time_point<steady_clock>` 的 typedef；但是，其他实现不一定是这种情况。
+   已更改 [steady_clock](../standard-library/steady-clock-struct.md) 的 \<chrono> 实现，以便满足 C++ 标准对稳定性和单一性的需求。 `steady_clock` 现在基于 [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter)，且 `high_resolution_clock` 现在是 `steady_clock` 的 typedef。 因此，在 Visual Studio 中，`steady_clock::time_point` 现在是 `chrono::time_point<steady_clock>` 的 typedef；但是，其他实现不一定是这种情况。
 
 - 分配器和 const 
 
@@ -2541,7 +2541,7 @@ ms.locfileid: "66451285"
 
 - **弃用属性化 ATL 代码支持**（默认开启等级 1 (`/W1`)）
 
-   以前版本的编译器支持属性化 ATL 代码。 由于下一阶段将删除[从 Visual Studio 2008](https://msdn.microsoft.com/library/bb384632) 开始的属性化 ATL 代码支持，所以已弃用属性化 ATL 代码。 编译器现将发出编译器警告 C4467 以帮助识别这类已弃用的代码。
+   以前版本的编译器支持属性化 ATL 代码。 由于下一阶段将删除[从 Visual Studio 2008](../porting/visual-cpp-what-s-new-2003-through-2015.md#whats-new-for-c-in-visual-studio-2008) 开始的属性化 ATL 代码支持，所以已弃用属性化 ATL 代码。 编译器现将发出编译器警告 C4467 以帮助识别这类已弃用的代码。
 
     ```Output
     warning C4467: Usage of ATL attributes is deprecated
@@ -3238,7 +3238,7 @@ Visual Studio 2013 中的 C++ 编译器可以检测到 _ITERATOR_DEBUG_LEVEL 中
 
 - 对新的 lambda 表示法的支持不包括支持对 IDL uuid 属性中的未引用 GUID 进行编码。
 
-- .NET Framework 4 引入了损坏状态异常的概念，这是指使进程处于不可恢复损坏状态的异常。 默认情况下，无法捕获损坏状态异常，即使使用可捕获所有其他异常的 /EHa 编译器选项，也是如此。                 若要显式捕获损坏状态异常，请使用 __try-\__except 语句。 或者，应用 [HandledProcessCorruptedStateExceptions] 属性以启用捕获损坏状态异常的函数。  此更改主要影响可能必须捕获损坏状态异常的系统程序员。 八个例外是 STATUS_ACCESS_VIOLATION、STATUS_STACK_OVERFLOW、EXCEPTION_ILLEGAL_INSTRUCTION、EXCEPTION_IN_PAGE_ERROR、EXCEPTION_INVALID_DISPOSITION、EXCEPTION_NONCONTINUABLE_EXCEPTION、EXCEPTION_PRIV_INSTRUCTION、STATUS_UNWIND_CONSOLIDATE。                 有关这些异常的详细信息，请参阅 [GetExceptionCode](/windows/desktop/Debug/getexceptioncode) 宏。
+- .NET Framework 4 引入了损坏状态异常的概念，这是指使进程处于不可恢复损坏状态的异常。 默认情况下，无法捕获损坏状态异常，即使使用可捕获所有其他异常的 /EHa 编译器选项，也是如此。                 若要显式捕获损坏状态异常，请使用 __try-\__except 语句。 或者，应用 [HandledProcessCorruptedStateExceptions] 属性以启用捕获损坏状态异常的函数。  此更改主要影响可能必须捕获损坏状态异常的系统程序员。 八个例外是 STATUS_ACCESS_VIOLATION、STATUS_STACK_OVERFLOW、EXCEPTION_ILLEGAL_INSTRUCTION、EXCEPTION_IN_PAGE_ERROR、EXCEPTION_INVALID_DISPOSITION、EXCEPTION_NONCONTINUABLE_EXCEPTION、EXCEPTION_PRIV_INSTRUCTION、STATUS_UNWIND_CONSOLIDATE。                 有关这些异常的详细信息，请参阅 [GetExceptionCode](/windows/win32/Debug/getexceptioncode) 宏。
 
 - 修改后的 `/GS` 编译器选项比早期版本更全面地防止缓冲区溢出。 此版本可能会在可能导致性能下降的堆栈中插入额外的安全检查。 使用新的 `__declspec(safebuffers)` 关键字指示编译器不要为特定函数插入安全检查。
 

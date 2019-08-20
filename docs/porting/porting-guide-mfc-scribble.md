@@ -2,12 +2,12 @@
 title: 移植指南：MFC Scribble
 ms.date: 11/19/2018
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: 0424b5e8c87c0103b4ebee65765244b40e8fa553
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: e808f67b1479653add27a54ddf91f6578c046734
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448943"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511542"
 ---
 # <a name="porting-guide-mfc-scribble"></a>移植指南：MFC Scribble
 
@@ -65,7 +65,7 @@ Visual Studio 随后将显示一个迁移报告，该报告列出旧项目文件
 _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
 ```
 
-这是一个警告而不是错误，在升级 Visual Studio C++ 项目时很常见。 这是定义我们的应用程序将在其上运行的最低版本的 Windows 的宏。 如果我们忽略该警告，则接受表示当前 Windows 版本的默认值（_WIN32_WINNT_MAXVER）。 有关可能的值的表，请参阅 [Using the Windows Headers](/windows/desktop/WinProg/using-the-windows-headers)（使用 Windows 标头）。 例如，我们可以将其设置为自 Vista 起的任何版本上运行。
+这是一个警告而不是错误，在升级 Visual Studio C++ 项目时很常见。 这是定义我们的应用程序将在其上运行的最低版本的 Windows 的宏。 如果我们忽略该警告，则接受表示当前 Windows 版本的默认值（_WIN32_WINNT_MAXVER）。 有关可能的值的表，请参阅 [Using the Windows Headers](/windows/win32/WinProg/using-the-windows-headers)（使用 Windows 标头）。 例如，我们可以将其设置为自 Vista 起的任何版本上运行。
 
 ```cpp
 #define _WIN32_WINNT _WIN32_WINNT_VISTA
