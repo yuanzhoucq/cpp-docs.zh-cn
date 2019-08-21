@@ -1,6 +1,6 @@
 ---
 title: Dll 和 Visual C++运行时库行为
-ms.date: 05/06/2019
+ms.date: 08/19/2019
 f1_keywords:
 - _DllMainCRTStartup
 - CRT_INIT
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - run-time [C++], DLL startup sequence
 - DLLs [C++], startup sequence
 ms.assetid: e06f24ab-6ca5-44ef-9857-aed0c6f049f2
-ms.openlocfilehash: d44f3bf7a8b06f567b1af221e17085d589e56aca
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 572a0ba70c1ba2d46d2d9fd6d8ac543a77bbbc01
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492608"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630367"
 ---
 # <a name="dlls-and-visual-c-run-time-library-behavior"></a>Dll 和 Visual C++运行时库行为
 
@@ -30,7 +30,7 @@ ms.locfileid: "69492608"
 
 在 Windows 中, 所有 dll 都可以包含一个可选的入口点函数, `DllMain`通常称为, 用于初始化和终止。 这为你提供了根据需要分配或释放其他资源的机会。 Windows 在四种情况下调用入口点函数: 进程附加、进程分离、线程附加和线程分离。 当 DLL 加载到进程地址空间时, 在加载使用它的应用程序时, 或者当应用程序在运行时请求 DLL 时, 操作系统将创建 DLL 数据的单独副本。 这称为 "*进程附加*"。 当在中加载 DLL 的进程创建新的线程时,*将发生线程附加*。 当线程终止时,*线程分离*发生, 并且在不再需要 DLL 并由应用程序发布时,*处理分离*操作。 操作系统对每个事件的每个事件都单独调用 DLL 入口点, 并为每个事件类型传递*原因*参数。 例如, OS 作为*reason*参数`DLL_PROCESS_ATTACH`发送到信号进程附加。
 
-VCRuntime 库提供了一个入口点函数`_DllMainCRTStartup` , 用于处理默认的初始化和终止操作。 在进程附加上, `_DllMainCRTStartup`该函数设置缓冲区安全检查, 初始化 CRT 和其他库, 初始化运行时类型信息, 为静态和非本地数据初始化和调用构造函数, 初始化线程本地存储, 增加每个附加的内部静态计数器, 然后调用提供`DllMain`的用户或库。 处理分离时, 函数将按相反的顺序执行这些步骤。 它调用`DllMain`、递减内部计数器、调用析构函数、调用 CRT 终止函数和已`atexit`注册函数, 并通知任何其他终止库。 当附件计数器变为零时, 函数将返回`FALSE`以指示 Windows 可以卸载 DLL。 线程附加和线程分离期间也会调用函数。`_DllMainCRTStartup` 在这些情况下, VCRuntime 代码不会自行进行额外的初始化或终止, 只需调用`DllMain`即可传递该消息。 如果`DllMain`从`FALSE`进程附加返回, 信令失败`_DllMainCRTStartup` , `DllMain`将再次调用`DLL_PROCESS_DETACH`并将作为*reason*参数传递, 然后将经历终止过程的其余部分。
+VCRuntime 库提供了一个入口点函数`_DllMainCRTStartup` , 用于处理默认的初始化和终止操作。 在进程附加上, `_DllMainCRTStartup`该函数设置缓冲区安全检查, 初始化 CRT 和其他库, 初始化运行时类型信息, 为静态和非本地数据初始化和调用构造函数, 初始化线程本地存储, 增加每个附加的内部静态计数器, 然后调用提供`DllMain`的用户或库。 处理分离时, 函数将按相反的顺序执行这些步骤。 它调用`DllMain`、递减内部计数器、调用析构函数、调用 CRT 终止函数和已`atexit`注册函数, 并通知任何其他终止库。 当附件计数器变为零时, 函数将返回`FALSE`以指示 Windows 可以卸载 DLL。 线程附加和线程分离期间也会调用函数。`_DllMainCRTStartup` 在这些情况下, VCRuntime 代码不会自行进行额外的初始化或终止, 只需调用`DllMain`即可传递该消息。 如果`DllMain`从`FALSE`进程附加返回、发出信号失败`_DllMainCRTStartup` 、 `DllMain`再次调用并`DLL_PROCESS_DETACH`传递作为*reason*参数, 则会经历其余终止过程。
 
 在 Visual Studio 中生成 dll 时, VCRuntime 提供的`_DllMainCRTStartup`默认入口点将自动链接在中。 无需使用[/ENTRY (入口点符号)](reference/entry-entry-point-symbol.md)链接器选项为 DLL 指定入口点函数。
 
@@ -125,7 +125,7 @@ extern "C" BOOL WINAPI DllMain (
 向导为 MFC 扩展 Dll 提供了以下代码。 在代码中, `PROJNAME`是项目名称的占位符。
 
 ```cpp
-#include "stdafx.h"
+#include "pch.h" // For Visual Studio 2017 and earlier, use "stdafx.h"
 #include <afxdllx.h>
 
 #ifdef _DEBUG
@@ -174,7 +174,7 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
 请注意, 头文件 Afxdllx 包含 MFC 扩展 dll 中使用的结构的特殊定义, 如`AFX_EXTENSION_MODULE`和`CDynLinkLibrary`的定义。 应将此标头文件包含在 MFC 扩展 DLL 中。
 
 > [!NOTE]
->  务必在 stdafx.h 中定义或取消定义任何`_AFX_NO_XXX`宏, 这一点很重要。 这些宏仅用于检查特定目标平台是否支持该功能。 您可以编写程序来检查这些宏 (例如`#ifndef _AFX_NO_OLE_SUPPORT`), 但您的程序不应定义或取消定义这些宏。
+>  务必在*pch* (Visual Studio 2017 及更早版本) `_AFX_NO_XXX`中定义或取消定义任何宏, 这一点很重要。 这些宏仅用于检查特定目标平台是否支持该功能。 您可以编写程序来检查这些宏 (例如`#ifndef _AFX_NO_OLE_SUPPORT`), 但您的程序不应定义或取消定义这些宏。
 
 用于处理多线程处理的示例初始化函数包含在 Windows SDK 的[动态链接库中的线程本地存储](/windows/win32/Dlls/using-thread-local-storage-in-a-dynamic-link-library)中。 请注意, 该示例包含一个名`LibMain`为的入口点函数, 但您应将此函数`DllMain`命名为, 以便它适用于 MFC 和 C 运行时库。
 
