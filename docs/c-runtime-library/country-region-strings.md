@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - country/region strings
 ms.assetid: 5baf0ccf-0d9b-40dc-83bd-323705287930
-ms.openlocfilehash: 3a3bbe9d1278cf733bafbeb23efcb0a1ad577228
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49eb6bc4473d9e54c06c3bf9290f8c3c96640415
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463461"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500244"
 ---
 # <a name="countryregion-strings"></a>Country/Region Strings
 
-可以将国家和地区字符串与语言字符串结合使用，以便创建 `setlocale`、 `_wsetlocale`、 `_create_locale`和 `_wcreate_locale` 函数的区域设置规范。 有关各种 Windows 操作系统版本支持的国家和地区名称列表，请转到“[MS-LCID]：Windows 语言代码标识符 (LCID) 参考”中的[附录 A：产品行为](https://msdn.microsoft.com/library/cc233982.aspx)，参阅其中表内的“语言”、“位置”和“语言标记”列。 有关枚举可用区域设置名称和相关值的代码示例，请参阅 [NLS：基于名称的 API 示例](/windows/desktop/intl/nls--name-based-apis-sample)。
+可以将国家和地区字符串与语言字符串结合使用，以便创建 `setlocale`、 `_wsetlocale`、 `_create_locale`和 `_wcreate_locale` 函数的区域设置规范。 有关各种 Windows 操作系统版本支持的国家/地区和区域名称列表，请参阅以下附录中表的“语言”  、“位置”  和“语言标记”  列：[附录 A：产品行为](https://msdn.microsoft.com/library/cc233982.aspx)（位于 [MS-LCID]：Windows 语言代码标识符 (LCID) 参考内）。 有关枚举可用区域设置名称和相关值的代码示例，请参阅 [NLS：基于名称的 API 示例](/windows/win32/intl/nls--name-based-apis-sample)。
 
 ## <a name="additional-supported-country-and-region-strings"></a>其他受支持的国家和地区字符串
 

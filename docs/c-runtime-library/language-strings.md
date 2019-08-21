@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - language strings
 ms.assetid: bbee63b1-af0b-4e44-9eaf-dd3e265c05fd
-ms.openlocfilehash: 143f06a0cf22265734d6d77f8fca4efd5ac3031b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a9e6eaa65516b5b49022526f24e220dec83b2c26
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620280"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500078"
 ---
 # <a name="language-strings"></a>Language Strings
 
-[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) 和 [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) 函数均可在不使用 Unicode 代码页的操作系统上使用 Windows NLS API 支持的语言。 有关操作系统版本支持的语言列表，请参阅“[MS-LCID]：Windows 语言代码标识符 (LCID) 参考”中的[附录 A：产品行为](https://msdn.microsoft.com/library/cc233982.aspx)。 语言字符串可以是支持语言列表的“语言”和“语言标记”列中的任意值。 有关枚举可用区域设置名称和相关值的代码示例，请参阅 [NLS：基于名称的 API 示例](/windows/desktop/intl/nls--name-based-apis-sample)。
+[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) 和 [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) 函数均可在不使用 Unicode 代码页的操作系统上使用 Windows NLS API 支持的语言。 有关操作系统版本支持的语言列表，请参阅[附录 A：产品行为](https://msdn.microsoft.com/library/cc233982.aspx)（位于 [MS-LCID]：Windows 语言代码标识符 (LCID) 参考内）。 语言字符串可以是支持语言列表的“语言”  和“语言标记”  列中的任意值。 有关枚举可用区域设置名称和相关值的代码示例，请参阅 [NLS：基于名称的 API 示例](/windows/win32/intl/nls--name-based-apis-sample)。
 
 ## <a name="additional-supported-language-strings"></a>其他受支持的语言字符串
 
