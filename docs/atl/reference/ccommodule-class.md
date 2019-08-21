@@ -1,6 +1,6 @@
 ---
 title: CComModule 类
-ms.date: 11/04/2016
+ms.date: 08/19/2019
 f1_keywords:
 - CComModule
 - ATLBASE/ATL::CComModule
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - CComModule class
 - DLL modules [C++], ATL
 ms.assetid: f5face2c-8fd8-40e6-9ec3-54ab74701769
-ms.openlocfilehash: 53138081a6d712f775a2cc8f1e6905c45d95d34d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 482f29bae28841ab40ca8a8f80ab7f0df42ddc8b
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497110"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630648"
 ---
 # <a name="ccommodule-class"></a>CComModule 类
 
@@ -681,7 +681,7 @@ virtual HRESULT UpdateRegistryFromResourceS(
 
 类似于[UpdateRegistryFromResourceD](#updateregistryfromresourced) , `UpdateRegistryFromResourceS`但会创建指向 ATL 注册表组件 (注册器) 的静态链接。
 
-`UpdateRegistryFromResourceS`当你将对象映射添加`#define _ATL_STATIC_REGISTRY`到 stdafx.h 时, 将自动调用。
+`UpdateRegistryFromResourceS`当处理对象映射时, 如果将添加`#define _ATL_STATIC_REGISTRY`到*pch* (Visual Studio 2017 及更早版本中的*stdafx.h* ), 将自动调用。
 
 > [!NOTE]
 >  若要在运行时替换替换值, 请不要指定[DECLARE_REGISTRY_RESOURCE](registry-macros.md#declare_registry_resource)或[DECLARE_REGISTRY_RESOURCEID](registry-macros.md#declare_registry_resourceid)宏。 而是创建结构的`_ATL_REGMAP_ENTRIES`数组, 其中每个条目都包含一个与值配对的变量占位符, 以便在运行时替换占位符。 然后调用`UpdateRegistryFromResourceS`, 传递*pMapEntries*参数的数组。 这会将`_ATL_REGMAP_ENTRIES`结构中的所有替换值添加到注册机构的替换地图。

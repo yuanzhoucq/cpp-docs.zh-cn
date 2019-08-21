@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: d6a36da79f24d98d162c4ffffff17b4471b2b063
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e3a5b634eb22a6860fe8af5b3b737a8e649e03c2
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69512246"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631740"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>C++为 UWP 应用创建异步操作
 
@@ -70,10 +70,10 @@ Windows 运行时是一种编程接口, 可用于创建只在特殊操作系统�
 
 `create_async` 的返回类型由其参数的类型决定。 例如，如果工作函数不返回值并且不报告进度，则 `create_async` 返回 `IAsyncAction`。 如果工作函数不返回值，但还会报告进度，则 `create_async` 返回 `IAsyncActionWithProgress`。 若要报告进度，请提供 [concurrency::progress_reporter](../../parallel/concrt/reference/progress-reporter-class.md) 对象作为工作函数的参数。 报告进度的能力使您能够报告已执行的工作量和仍然剩余的工作量（比如以百分比表示）。 还可以使您在结果可用时报告结果。
 
-`IAsyncAction`、 `IAsyncActionWithProgress<TProgress>`、 `IAsyncOperation<TResult>`和 `IAsyncActionOperationWithProgress<TProgress, TProgress>` 接口均提供可以使您取消异步操作的 `Cancel` 方法。 `task` 类与取消标记一起使用。 当使用取消标记来取消工作时，运行时不会启动订阅此标记的新工作。 已处于活动状态的工作会监控其取消标记并在可能时停止。 文档 [Cancellation in the PPL](cancellation-in-the-ppl.md)中更详细地介绍了这种机制。 可以通过两种方式将任务取消`Cancel`与 Windows 运行时方法连接。 首先，可以定义传递给 `create_async` 的工作函数以采用 [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) 对象。 当调用 `Cancel` 方法时，将取消此取消标记，并将常规取消规则应用于支持 `task` 调用的基础 `create_async` 对象。 如果没有提供 `cancellation_token` 对象，则基础 `task` 对象会隐式定义一个。 在需要以协作方式响应工作函数中的取消时，可定义一个 `cancellation_token` 对象。 部分[示例:使用C++和 xaml](#example-app)在 Windows 运行时应用中控制执行会显示一个示例, 说明如何使用C#和 xaml 在通用 Windows 平台 (UWP) 应用中执行取消操作, 并使用C++自定义 Windows 运行时组件。
+`IAsyncAction`、 `IAsyncActionWithProgress<TProgress>`、 `IAsyncOperation<TResult>`和 `IAsyncActionOperationWithProgress<TProgress, TProgress>` 接口均提供可以使您取消异步操作的 `Cancel` 方法。 `task` 类与取消标记一起使用。 当使用取消标记来取消工作时，运行时不会启动订阅此标记的新工作。 已处于活动状态的工作会监控其取消标记并在可能时停止。 文档 [Cancellation in the PPL](cancellation-in-the-ppl.md)中更详细地介绍了这种机制。 可以通过两种方式将任务取消`Cancel`与 Windows 运行时方法连接。 首先，可以定义传递给 `create_async` 的工作函数以采用 [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) 对象。 调用方法时, 将取消此取消标记, 并将常规取消规则应用于支持`create_async`调用的`task`基础对象。 `Cancel` 如果没有提供 `cancellation_token` 对象，则基础 `task` 对象会隐式定义一个。 在需要以协作方式响应工作函数中的取消时，可定义一个 `cancellation_token` 对象。 部分[示例:使用C++和 xaml](#example-app)在 Windows 运行时应用中控制执行会显示一个示例, 说明如何使用C#和 xaml 在通用 Windows 平台 (UWP) 应用中执行取消操作, 并使用C++自定义 Windows 运行时组件。
 
 > [!WARNING]
->  在一个任务延续链中，当取消了取消标记时，应始终清理状态，然后调用 [concurrency::cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) 。 如果是提早返回而不是调用 `cancel_current_task`，则操作将转换为已完成状态而非已取消状态。
+>  在任务延续链中, 当取消标记被取消时, 始终清理状态, 然后调用[concurrency:: cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) 。 如果是提早返回而不是调用 `cancel_current_task`，则操作将转换为已完成状态而非已取消状态。
 
 下表总结了在应用程序中可用于定义异步操作的组合。
 
@@ -161,7 +161,7 @@ Windows 运行时使用 COM 线程模型。 在此模型中，根据对象处理
 
 [!code-xml[concrt-windowsstore-commonwords#1](../../parallel/concrt/codesnippet/xaml/creating-asynchronous-operations-in-cpp-for-windows-store-apps_6.xaml)]
 
-将以下 `#include` 语句添加到 pch.h。
+将以下`#include`语句添加到*pch*。
 
 [!code-cpp[concrt-windowsstore-commonwords#2](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_7.h)]
 

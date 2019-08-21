@@ -4,12 +4,12 @@ ms.date: 05/06/2019
 helpviewer_keywords:
 - property page XML files
 ms.assetid: dd9d9734-4387-4098-8ba6-85b93507731d
-ms.openlocfilehash: f23c252604c5b69423b808b3b9f072889e38c816
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 76378dc5ef9d7443045c329579cfa3c410dc262f
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837436"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630743"
 ---
 # <a name="property-page-xml-rule-files"></a>属性页 XML 规则文件
 
@@ -119,7 +119,7 @@ IDE 中的项目属性页是由 VCTargets 文件夹中的 XML 文件配置的。
       </ItemDefinitionGroup>
       ```
 
-      如果在特定文件（例如 stdafx.cpp）的属性页中设置此值，则该属性值将在项目文件中的 stdafx.cpp 项下写入，如下所示。 请注意将配置条件直接附加到元数据本身的方式。
+      如果此值是在特定文件 (如 stdafx.h) 的属性页中设置的, 则属性值将写入项目文件中的*stdafx.h*项下面, 如下所示。 请注意将配置条件直接附加到元数据本身的方式。
 
       ```xml
       <ItemGroup>

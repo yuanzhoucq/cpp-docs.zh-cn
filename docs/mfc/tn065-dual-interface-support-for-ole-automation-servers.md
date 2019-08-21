@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ACDUAL sample [MFC]
 - Automation servers [MFC], dual-interface support
 ms.assetid: b5c8ed09-2f7f-483c-80fc-2a47ad896063
-ms.openlocfilehash: afcbfd643d8b931e61b0f011b66482be5b2bcc82
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1508b5219f7bb7fd2e9c9a56c42c30bb99686804
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510995"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630395"
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065：对 OLE 自动化服务器的双重接口支持
 
@@ -218,7 +218,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_Position(
 }
 ```
 
-在通过双重接口方法向后传递指针之前, 您可能需要将其从 MFC `IDispatch`指针转换为双重接口指针。 例如：
+在通过双重接口方法向后传递指针之前, 您可能需要将其从 MFC `IDispatch`指针转换为双重接口指针。 例如:
 
 ```
 STDMETHODIMP CAutoClickDoc::XDualAClick::get_Position(
@@ -267,7 +267,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::get_Position(
 
 若要将 Mktyplib.exe 生成的标头文件中的**UUID**定义添加到项目中, 请执行以下操作:
 
-1. 在标准中包括 Mktyplib.exe 生成的标头文件包括头文件 STDAFX.H。高.
+1. 在标准中包括 Mktyplib.exe 生成的标头文件包括头文件*stdafx.h*。
 
 2. 创建新文件 INITIIDS。CPP, 并将其添加到你的项目中。 在此文件中, 包含 OLE2 后, 包括 Mktyplib.exe 生成的标头文件。H 和 INITGUID.H。高
 

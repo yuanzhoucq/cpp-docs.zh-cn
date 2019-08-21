@@ -1,6 +1,6 @@
 ---
 title: 注册表宏
-ms.date: 11/04/2016
+ms.date: 08/19/2019
 f1_keywords:
 - atlcom/ATL::_ATL_STATIC_REGISTRY
 - atlcom/ATL::DECLARE_LIBID
@@ -12,34 +12,34 @@ f1_keywords:
 helpviewer_keywords:
 - registry, ATL macros
 ms.assetid: 3ee041da-c63b-42a4-89cf-2a4b2a6f81ae
-ms.openlocfilehash: 8e05d6a47ea67138e8d1d456077526dd3178cc44
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c2a70c15473798ba6eb2ef35e0b7ded395708586
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274637"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630622"
 ---
 # <a name="registry-macros"></a>注册表宏
 
-这些宏定义有用类型库和注册表功能。
+这些宏定义有用的类型库和注册表功能。
 
 |||
 |-|-|
-|[_ATL_STATIC_REGISTRY](#_atl_static_registry)|指示您希望您的对象中要避免 atl 的依赖项的对象的注册代码DLL。|
-|[DECLARE_LIBID](#declare_libid)|为 ATL 以获取提供一种*libid*的类型库。|
-|[DECLARE_NO_REGISTRY](#declare_no_registry)|避免了默认的 ATL 注册。|
-|[DECLARE_REGISTRY](#declare_registry)|进入，或者在系统注册表中删除该主要对象的项。|
-|[DECLARE_REGISTRY_APPID_RESOURCEID](#declare_registry_appid_resourceid)|指定自动注册所需的信息*appid*。|
-|[DECLARE_REGISTRY_RESOURCE](#declare_registry_resource)|找到的已命名的资源并运行在其注册表脚本。|
-|[DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid)|查找由一个 ID 号标识的资源并运行其中的注册表脚本。|
+|[_ATL_STATIC_REGISTRY](#_atl_static_registry)|指示您希望对象的注册代码位于对象中, 以避免依赖于 ATL.DLL.|
+|[DECLARE_LIBID](#declare_libid)|为 ATL 提供了一种方法来获取类型库的*libid* 。|
+|[DECLARE_NO_REGISTRY](#declare_no_registry)|避免默认的 ATL 注册。|
+|[DECLARE_REGISTRY](#declare_registry)|在系统注册表中输入或删除主对象的条目。|
+|[DECLARE_REGISTRY_APPID_RESOURCEID](#declare_registry_appid_resourceid)|指定自动注册*appid*所需的信息。|
+|[DECLARE_REGISTRY_RESOURCE](#declare_registry_resource)|查找指定的资源, 并在其中运行注册表脚本。|
+|[DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid)|查找由 ID 号标识的资源, 并在其中运行注册表脚本。|
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlcom.h
+**标头:** atlcom。h
 
-##  <a name="_atl_static_registry"></a>  _ATL_STATIC_REGISTRY
+##  <a name="_atl_static_registry"></a>_ATL_STATIC_REGISTRY
 
-一个表示您希望您的对象中要避免 atl 的依赖项的对象的注册代码的符号DLL。
+一个符号, 指示你希望对象的注册代码位于对象中, 以避免依赖于 ATL.DLL.
 
 ```
 #define _ATL_STATIC_REGISTRY
@@ -47,13 +47,13 @@ ms.locfileid: "62274637"
 
 ### <a name="remarks"></a>备注
 
-在定义 ATL_STATIC_REGISTRY 时，应使用以下代码：
+定义 ATL_STATIC_REGISTRY 时, 应使用以下代码:
 
 [!code-cpp[NVC_ATL_EventHandlingSample#5](../../atl/codesnippet/cpp/registry-macros_1.cpp)]
 
 ##  <a name="declare_libid"></a>  DECLARE_LIBID
 
-为 ATL 以获取提供一种*libid*的类型库。
+为 ATL 提供了一种方法来获取类型库的*libid* 。
 
 ```
 DECLARE_LIBID( libid )
@@ -66,23 +66,23 @@ DECLARE_LIBID( libid )
 
 ### <a name="remarks"></a>备注
 
-使用中的 DECLARE_LIBID `CAtlModuleT`-派生的类。
+使用派生类中`CAtlModuleT`的 DECLARE_LIBID。
 
 ### <a name="example"></a>示例
 
-非特性化向导生成 ATL 项目将有一个使用此宏的示例。
+非特性向导生成的 ATL 项目将有一个使用此宏的示例。
 
-##  <a name="declare_no_registry"></a>  DECLARE_NO_REGISTRY
+##  <a name="declare_no_registry"></a>DECLARE_NO_REGISTRY
 
-如果您想要避免此宏会显示的类的任何默认的 ATL 注册，请使用 DECLARE_NO_REGISTRY。
+如果要避免显示此宏的类的任何默认 ATL 注册, 请使用 DECLARE_NO_REGISTRY。
 
 ```
 DECLARE_NO_REGISTRY()
 ```
 
-##  <a name="declare_registry"></a>  DECLARE_REGISTRY
+##  <a name="declare_registry"></a>DECLARE_REGISTRY
 
-将标准类注册输入到系统注册表或将其从系统注册表中删除。
+将标准类注册输入到系统注册表中, 或将其从系统注册表中移除。
 
 ```
 DECLARE_REGISTRY(
@@ -96,29 +96,29 @@ DECLARE_REGISTRY(
 ### <a name="parameters"></a>参数
 
 *class*<br/>
-[in]包含用于向后兼容。
+中为了向后兼容而提供。
 
 pid<br/>
-[in]是特定于版本的程序标识符 LPCTSTR。
+中LPCTSTR, 它是特定于版本的程序标识符。
 
 *vpid*<br/>
-[in]是独立于版本的程序标识符 LPCTSTR。
+中是独立于版本的程序标识符的 LPCTSTR。
 
 *nid*<br/>
-[in]UINT，是要用作程序的说明在注册表中的资源字符串的索引。
+中UINT, 是注册表中要用作程序说明的资源字符串的索引。
 
 *flags*<br/>
-[in]一个 dword 值，包含程序的注册表中的线程模型。 必须是以下值之一：THREADFLAGS_APARTMENT、 THREADFLAGS_BOTH 或 AUTPRXFLAG。
+中包含注册表中程序的线程模型的 DWORD。 必须是下列值之一:THREADFLAGS_APARTMENT、THREADFLAGS_BOTH 或 AUTPRXFLAG。
 
 ### <a name="remarks"></a>备注
 
-标准注册包含 CLSID、 程序 ID、 独立于版本的程序 ID、 说明字符串和线程模型。
+标准注册包含 CLSID、程序 ID、独立于版本的程序 ID、说明字符串和线程模型。
 
-当您创建的对象或控制使用 ATL 添加类向导时，向导会自动实现基于脚本的注册表的支持并添加[DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid)宏为你的文件。 如果不想使用脚本基于注册表的支持，您需要替换 DECLARE_REGISTRY 为此宏。 DECLARE_REGISTRY 仅插入到注册表，上面所述的五个基本密钥。 您必须手动编写代码以插入到注册表的其他密钥。
+当使用 ATL 添加类向导创建对象或控件时, 向导将自动实现基于脚本的注册表支持, 并将[DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid)宏添加到文件中。 如果不想要支持基于脚本的注册表, 则需要将此宏替换为 DECLARE_REGISTRY。 DECLARE_REGISTRY 仅将上述五个基本键插入注册表中。 您必须手动编写代码以将其他键插入注册表中。
 
-##  <a name="declare_registry_appid_resourceid"></a>  DECLARE_REGISTRY_APPID_RESOURCEID
+##  <a name="declare_registry_appid_resourceid"></a>DECLARE_REGISTRY_APPID_RESOURCEID
 
-指定自动注册所需的信息*appid*。
+指定自动注册*appid*所需的信息。
 
 ```
 DECLARE_REGISTRY_APPID_RESOURCEID(
@@ -128,23 +128,23 @@ DECLARE_REGISTRY_APPID_RESOURCEID(
 
 ### <a name="parameters"></a>参数
 
-*resid*<br/>
-Rgs 文件包含有关的信息的资源 id *appid*。
+*resid 标识*<br/>
+包含*appid*相关信息的 .rgs 文件的资源 id。
 
 *appid*<br/>
 一个 GUID。
 
 ### <a name="remarks"></a>备注
 
-使用中的 DECLARE_REGISTRY_APPID_RESOURCEID `CAtlModuleT`-派生的类。
+使用派生类中`CAtlModuleT`的 DECLARE_REGISTRY_APPID_RESOURCEID。
 
 ### <a name="example"></a>示例
 
-使用添加类代码向导添加到 ATL 项目中的类将具有一个使用此宏的示例。
+使用 "添加类代码" 向导添加到 ATL 项目中的类将有一个使用此宏的示例。
 
-##  <a name="declare_registry_resource"></a>  DECLARE_REGISTRY_RESOURCE
+##  <a name="declare_registry_resource"></a>DECLARE_REGISTRY_RESOURCE
 
-获取包含注册表文件的命名的资源，并运行脚本以输入到系统注册表对象或从系统注册表中删除它们。
+获取包含注册表文件的已命名资源, 并运行该脚本, 以将对象输入到系统注册表中或从系统注册表中删除对象。
 
 ```
 DECLARE_REGISTRY_RESOURCE( x )
@@ -153,23 +153,23 @@ DECLARE_REGISTRY_RESOURCE( x )
 ### <a name="parameters"></a>参数
 
 *x*<br/>
-[in]字符串的所需的资源的标识符。
+中资源的字符串标识符。
 
 ### <a name="remarks"></a>备注
 
-当您创建的对象或控制使用 ATL 项目向导时，该向导将自动实现基于脚本的注册表的支持和添加[DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid)宏，类似于 DECLARE_REGISTRY_对文件的资源。
+当使用 ATL 项目向导创建对象或控件时, 向导将自动实现基于脚本的注册表支持, 并向文件添加类似于 DECLARE_REGISTRY_RESOURCE 的[DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid)宏。
 
-你可以以静态方式链接与 ATL 注册表组件 （注册器） 进行优化的注册表访问。 以静态方式链接到的注册机构代码，请将以下行添加到 stdafx.h 文件中：
+可以使用 ATL 注册表组件 (注册器) 进行静态链接, 以实现优化的注册表访问。 若要以静态方式链接到注册器代码, 请将以下行添加到*pch .h*文件 (Visual Studio 2017 及更早版本中的*stdafx.h* ):
 
 [!code-cpp[NVC_ATL_COM#56](../../atl/codesnippet/cpp/registry-macros_2.h)]
 
-如果你想要在运行时替换的替换值的 ATL，不要指定 DECLARE_REGISTRY_RESOURCE 或 DECLARE_REGISTRY_RESOURCEID 宏。 相反，创建一个数组`_ATL_REGMAP_ENTRIES`结构，其中的每个条目都包含变量的占位符的值的占位符替换为在运行时与成对出现。 然后调用[CAtlModule::UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced)或[CAtlModule::UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources)，将数组传递。 这会添加所有中的替换值`_ATL_REGMAP_ENTRIES`到注册机构的替换映射的结构。
+如果希望 ATL 在运行时替换替换值, 请不要指定 DECLARE_REGISTRY_RESOURCE 或 DECLARE_REGISTRY_RESOURCEID 宏。 而是创建结构的`_ATL_REGMAP_ENTRIES`数组, 其中每个条目都包含一个与值配对的变量占位符, 以便在运行时替换占位符。 然后调用[CAtlModule:: UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced)或[CAtlModule:: UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources), 传递数组。 这会将`_ATL_REGMAP_ENTRIES`结构中的所有替换值添加到注册机构的替换地图。
 
-有关可替换参数和脚本的详细信息，请参阅文章[ATL 注册表组件 （注册器）](../../atl/atl-registry-component-registrar.md)。
+有关可替换参数和脚本的详细信息, 请参阅[ATL 注册表组件 (注册器)](../../atl/atl-registry-component-registrar.md)一文。
 
-##  <a name="declare_registry_resourceid"></a>  DECLARE_REGISTRY_RESOURCEID
+##  <a name="declare_registry_resourceid"></a>DECLARE_REGISTRY_RESOURCEID
 
-与相同[DECLARE_REGISTRY_RESOURCE](#declare_registry_resource) ，只不过它使用向导生成 UINT 来标识资源，而不是字符串名称。
+与[DECLARE_REGISTRY_RESOURCE](#declare_registry_resource)相同, 只不过它使用向导生成的 UINT 来标识资源, 而不是字符串名称。
 
 ```
 DECLARE_REGISTRY_RESOURCEID( x )
@@ -178,19 +178,19 @@ DECLARE_REGISTRY_RESOURCEID( x )
 ### <a name="parameters"></a>参数
 
 *x*<br/>
-[in]向导生成所需的资源标识符。
+中向导生成的资源标识符。
 
 ### <a name="remarks"></a>备注
 
-当你创建的对象或使用 ATL 项目向导的控件时，该向导将自动实现基于脚本的注册表的支持和 DECLARE_REGISTRY_RESOURCEID 宏添加到你的文件。
+当使用 ATL 项目向导创建对象或控件时, 向导将自动实现基于脚本的注册表支持, 并将 DECLARE_REGISTRY_RESOURCEID 宏添加到文件中。
 
-你可以以静态方式链接与 ATL 注册表组件 （注册器） 进行优化的注册表访问。 以静态方式链接到的注册机构代码，请将以下行添加到 stdafx.h 文件中：
+可以使用 ATL 注册表组件 (注册器) 进行静态链接, 以实现优化的注册表访问。 若要以静态方式链接到注册器代码, 请将以下行添加到*stdafx.h*文件 (Visual Studio 2019 及更高版本中的*pch* ):
 
 [!code-cpp[NVC_ATL_COM#56](../../atl/codesnippet/cpp/registry-macros_2.h)]
 
-如果你想要在运行时替换的替换值的 ATL，不要指定 DECLARE_REGISTRY_RESOURCE 或 DECLARE_REGISTRY_RESOURCEID 宏。 相反，创建一个数组`_ATL_REGMAP_ENTRIES`结构，其中的每个条目都包含变量的占位符的值的占位符替换为在运行时与成对出现。 然后调用[CAtlModule::UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced)或[CAtlModule::UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources)，将数组传递。 这会添加所有中的替换值`_ATL_REGMAP_ENTRIES`到注册机构的替换映射的结构。
+如果希望 ATL 在运行时替换替换值, 请不要指定 DECLARE_REGISTRY_RESOURCE 或 DECLARE_REGISTRY_RESOURCEID 宏。 而是创建结构的`_ATL_REGMAP_ENTRIES`数组, 其中每个条目都包含一个与值配对的变量占位符, 以便在运行时替换占位符。 然后调用[CAtlModule:: UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced)或[CAtlModule:: UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources), 传递数组。 这会将`_ATL_REGMAP_ENTRIES`结构中的所有替换值添加到注册机构的替换地图。
 
-有关可替换参数和脚本的详细信息，请参阅文章[ATL 注册表组件 （注册器）](../../atl/atl-registry-component-registrar.md)。
+有关可替换参数和脚本的详细信息, 请参阅[ATL 注册表组件 (注册器)](../../atl/atl-registry-component-registrar.md)一文。
 
 ## <a name="see-also"></a>请参阅
 

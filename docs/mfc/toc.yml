@@ -11,22 +11,7 @@
         - name: 常规 MFC 主题
           href: general-mfc-topics.md
         - name: 使用 MFC 源文件
-          expanded: false
-          items:
-            - name: 使用 MFC 源文件
-              href: using-the-mfc-source-files.md
-            - name: 注释示例
-              href: an-example-of-the-comments.md
-            - name: '-- Implementation 注释'
-              href: decrement-implementation-comment.md
-            - name: '-- Constructors 注释'
-              href: decrement-constructors-comment.md
-            - name: '-- Attributes 注释'
-              href: decrement-attributes-comment.md
-            - name: '-- Operations 注释'
-              href: decrement-operations-comment.md
-            - name: '-- Overridables 注释'
-              href: decrement-overridables-comment.md
+          href: using-the-mfc-source-files.md
         - name: MFC 库版本
           expanded: false
           items:

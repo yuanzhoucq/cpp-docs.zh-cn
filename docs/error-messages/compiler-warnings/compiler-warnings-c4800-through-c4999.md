@@ -153,12 +153,12 @@ helpviewer_keywords:
 - C5105
 - C5106
 - C5107
-ms.openlocfilehash: 518efdd74a90198818538c1548adb2b7ff37290c
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
+ms.openlocfilehash: ae73d4ba503dfbbc27f91040c31beb91da3b7e54
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821122"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631540"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>编译器警告 C4800 - C5999
 
@@ -266,7 +266,8 @@ ms.locfileid: "68821122"
 |编译器警告 (等级 1) C4973|"*symbol*": 标记为已弃用|
 |编译器警告 (等级 1) C4974|"*symbol*": 标记为已弃用|
 |编译器警告 (等级 3) C4981|Warbird: 标记为 __forceinline 的函数 "*function*" 未内联, 因为该函数包含异常语义|
-|编译器警告 (等级 3) C4985|symbol name ": 先前声明中不存在特性。|
+|[编译器警告 C4984](compiler-warning-c4984.md)|"if constexpr" 是 c + + 17 语言扩展|
+|编译器警告 (等级 3) C4985|"*symbol_name*": 以前的声明中不存在特性。|
 |[编译器警告 C4986](compiler-warning-c4986.md)|"*声明*": 异常规范与前面的声明不匹配|
 |编译器警告 (等级 4) C4987|使用了非标准扩展：“throw (...)”|
 |编译器警告 (等级 4) C4988|"*variable*": 在类/函数范围外声明的变量|
