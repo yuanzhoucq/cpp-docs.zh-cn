@@ -422,7 +422,7 @@ void EnableTabDocumentsMenu(BOOL bEnable=TRUE);
 
 当用户单击选项卡标签时, 框架会显示相应的选项卡式窗口。 如果选项卡标签可见, 则会在不更改其位置的情况下打开选项卡式窗口。 如果用户从弹出菜单中选择一个文档, 并且相应的选项卡式窗口在屏幕上, 则选项卡式窗口将变为第一个选项卡。
 
-##  <a name="ensurevisible"></a>CMFCTabCtrl:: Ensurevisible\
+##  <a name="ensurevisible"></a>CMFCTabCtrl:: Ensurevisible
 
 确保选项卡可见。
 
