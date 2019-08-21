@@ -1,16 +1,16 @@
 ---
 title: 演练：从用户界面线程中移除工作
-ms.date: 04/25/2019
+ms.date: 08/19/2019
 helpviewer_keywords:
 - user-interface threads, removing work from [Concurrency Runtime]
 - removing work from user-interface threads [Concurrency Runtime]
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
-ms.openlocfilehash: 214796777968c8aec7116a848e791aeef0d3af7b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2ee15d4660984c9afb77cb20f8ef0dab25a8b933
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69512263"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631714"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>演练：从用户界面线程中移除工作
 
@@ -70,7 +70,7 @@ ms.locfileid: "69512263"
 
 #### <a name="to-implement-the-serial-version-of-the-mandelbrot-application"></a>实现 Mandelbrot 应用程序的串行版本
 
-1. 在 stdafx.h 中, 添加以下`#include`指令:
+1. 在*pch* (Visual Studio 2017 及更早版本中的*stdafx.h* ) 中, 添加以下`#include`指令:
 
    [!code-cpp[concrt-mandelbrot#1](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_1.h)]
 
@@ -124,7 +124,7 @@ ms.locfileid: "69512263"
 
 #### <a name="to-remove-the-drawing-work-from-the-ui-thread"></a>从 UI 线程删除绘图工作
 
-1. 在 stdafx.h 中, 添加以下`#include`指令:
+1. 在*pch* (Visual Studio 2017 及更早版本中的*stdafx.h* ) 中, 添加以下`#include`指令:
 
    [!code-cpp[concrt-mandelbrot#101](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_9.h)]
 

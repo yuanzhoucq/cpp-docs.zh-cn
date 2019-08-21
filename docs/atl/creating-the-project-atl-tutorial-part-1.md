@@ -1,25 +1,25 @@
 ---
 title: 创建项目（ATL 教程，第 1 部分）
 ms.custom: get-started-article
-ms.date: 05/06/2019
+ms.date: 08/19/2019
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-ms.openlocfilehash: 0df793b23aaec57835774252eeac21b092f8a9e9
-ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.openlocfilehash: 9f7f62ec94d5ac6d6076763853aa19297cf310e6
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67861025"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630694"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>创建项目（ATL 教程，第 1 部分）
 
-本教程将指导你逐步完成创建显示多边形的 ActiveX 对象的非属性化 ATL 项目。 该对象包含用于允许用户的选项，若要更改组成 polygon 和代码以刷新显示的边数。
+本教程指导你逐步完成一个非特性化 ATL 项目, 该项目创建了一个显示多边形的 ActiveX 对象。 对象包括允许用户更改多边形的边数的选项, 以及用于刷新显示的代码。
 
 > [!NOTE]
-> ATL 和 MFC 不通常支持在 Visual Studio 速成版中。
+> Visual Studio 的 Express 版本中通常不支持 ATL 和 MFC。
 
 > [!NOTE]
-> 本教程将创建与多边形的示例相同的源代码。 如果你想要避免手动输入的源代码，您可以从中进行下载[多边形示例抽象](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/Polygon)。 然后可以指多边形源代码在你完成本教程中，或使用它来检查自己的项目中的错误。
-> 若要编译，请打开 stdafx.h 并替换为：
+> 本教程将创建与多边形示例相同的源代码。 如果您想要避免手动输入源代码, 可以从[多边形示例抽象](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/Polygon)下载。 然后, 您可以在学习本教程时参考多边形源代码, 或使用它来检查您自己的项目中是否存在错误。
+> 若要编译, 请打开*pch* (Visual Studio 2017 及更早版本中的*stdafx.h* ) 并替换:
 > ```
 > #ifndef WINVER
 > #define WINVER 0x0400
@@ -32,46 +32,66 @@ ms.locfileid: "67861025"
 > #define _WIN32_WINNT 0x0500
 > #endif
 > ```
-> 编译器仍抱怨`regsvr32`未退出正确，但你仍应生成并可供使用的控件的 DLL。
+> 编译器仍会抱怨`regsvr32`未正确退出, 但你仍应为控件的 DLL 生成并可供使用。
 
-### <a name="to-create-the-initial-atl-project-using-the-atl-project-wizard"></a>若要创建使用 ATL 项目向导的初始 ATL 项目
+### <a name="to-create-the-initial-atl-project-using-the-atl-project-wizard"></a>使用 ATL 项目向导创建初始 ATL 项目
 
-1. 在 Visual Studio 2017 及更早版本：**文件** > **新** > **项目**。 打开**可视化C++** 选项卡并选择**MFC/ATL**。 选择**ATL 项目**。
+1. 在 Visual Studio 2017 及更早版本中:**文件** > 新建项目 > 。 打开 "**视觉对象C++**  " 选项卡, 然后选择 " **MFC/ATL**"。 选择 " **ATL 项目**"。
 
-   在 Visual Studio 2019:选择**文件** > **新建** > **项目**中，在搜索框中，键入"atl"并选择**ATL 项目**。
+   在 Visual Studio 2019 中:选择 "**文件** > " "**新建** > **项目**", 在搜索框中键入 "atl", 然后选择 " **atl 项目**"。
 
-1. 类型*多边形*作为项目名称。
+1. 键入*多边形*作为项目名称。
 
-    源代码的位置将通常默认为 \Users\\\<用户名 > 将自动创建 \source\repos 和一个新的文件夹。
+    源代码的位置通常默认为 \Users\\\<username > \source\repos, 并将自动创建一个新文件夹。
 
-1. 在 Visual Studio 2019，接受默认值，然后单击**确定**。 
-   在 Visual Studio 2017 中，单击**确定**以打开**ATL 项目**向导。 单击**应用程序设置**若要查看可用的选项。 由于此项目将创建一个控件，并且必须是进程内服务器，将保留**应用程序类型**作为 DLL。 单击 **“确定”** 。
+1. 在 Visual Studio 2019 中, 接受默认值, 然后单击 **"确定"** 。 
+   在 Visual Studio 2017 中, 单击 **"确定"** 以打开**ATL 项目**向导。 单击 "**应用程序设置**" 以查看可用选项。 由于此项目创建一个控件, 并且控件必须是进程内服务器, 因此将**应用程序类型**保留为 DLL。 单击 **“确定”** 。
 
-Visual Studio 将通过生成多个文件创建项目。 您可以查看这些文件置于**解决方案资源管理器**展开`Polygon`对象。 下面列出的文件。
+Visual Studio 将通过生成一些文件来创建项目。 您可以通过展开`Polygon`对象在**解决方案资源管理器**中查看这些文件。 下面列出了这些文件。
+
+::: moniker range="<=vs-2017"
 
 |文件|描述|
 |----------|-----------------|
-|Polygon.cpp|包含实现`DllMain`， `DllCanUnloadNow`， `DllGetClassObject`， `DllRegisterServer`，和`DllUnregisterServer`。 此外包含对象代码图，它是你的项目中的 ATL 对象的列表。 这是最初为空。|
-|Polygon.def|此模块定义文件提供了有关所需的 DLL 导出的信息链接器。|
-|Polygon.idl 使其|接口定义语言文件，其中描述了特定于您的对象的接口。|
-|Polygon.rgs|此注册表脚本包含用于注册应用程序的 DLL 的信息。|
-|Polygon.rc|最初包含版本信息和包含项目名称的字符串资源文件。|
+|多边形 .cpp|包含`DllMain` 、`DllCanUnloadNow` 、、`DllUnregisterServer`和的实现。 `DllGetClassObject` `DllRegisterServer` 还包含对象映射, 这是项目中 ATL 对象的列表。 这最初是空白的。|
+|多边形 .def|此模块定义文件为链接器提供有关 DLL 所需的导出的信息。|
+|多边形 .idl|接口定义语言文件, 描述特定于对象的接口。|
+|多边|此注册表脚本包含用于注册程序的 DLL 的信息。|
+|多边形 .rc|资源文件, 最初包含版本信息和包含项目名称的字符串。|
 |Resource.h|资源文件的头文件。|
-|Polygonps.def|此模块定义文件提供了有关支持跨单元调用导出所需的代理和存根代码的信息链接器。|
-|stdafx.cpp|将该文件`#include`ATL 实现文件。|
-|stdafx.h|将该文件`#include`ATL 标头文件。|
+|Polygonps|此模块定义文件为链接器提供有关代理所需的导出的信息以及支持跨单元调用的存根代码。|
+|stdafx.cpp|将`#include` *stdafx.h*的文件。|
+|stdafx.h|将`#include`和预编译 ATL 标头文件的文件。|
 
-1. 在“解决方案资源管理器”  中，右键单击“`Polygon`”项目。
+::: moniker-end
 
-1. 在快捷菜单上，单击**属性**。
+::: moniker range=">=vs-2019"
 
-1. 单击**链接器**。 更改**每个 UserRedirection**选项设为**是**。
+|文件|描述|
+|----------|-----------------|
+|多边形 .cpp|包含`DllMain` 、`DllCanUnloadNow` 、、`DllUnregisterServer`和的实现。 `DllGetClassObject` `DllRegisterServer` 还包含对象映射, 这是项目中 ATL 对象的列表。 这最初是空白的。|
+|多边形 .def|此模块定义文件为链接器提供有关 DLL 所需的导出的信息。|
+|多边形 .idl|接口定义语言文件, 描述特定于对象的接口。|
+|多边|此注册表脚本包含用于注册程序的 DLL 的信息。|
+|多边形 .rc|资源文件, 最初包含版本信息和包含项目名称的字符串。|
+|Resource.h|资源文件的头文件。|
+|Polygonps|此模块定义文件为链接器提供有关代理所需的导出的信息以及支持跨单元调用的存根代码。|
+|pch|将`#include`为*pch*的文件。|
+|pch。h|将`#include`和预编译 ATL 标头文件的文件。|
+
+::: moniker-end
+
+1. 在“解决方案资源管理器”中，右键单击“`Polygon`”项目。
+
+1. 在快捷菜单上, 单击 "**属性**"。
+
+1. 单击 "**链接器**"。 将**UserRedirection**选项更改为**Yes**。
 
 1. 单击 **“确定”** 。
 
-在下一步中，将将控件添加到你的项目。
+在下一步中, 你将向你的项目添加一个控件。
 
-[步骤 2 到](../atl/adding-a-control-atl-tutorial-part-2.md)
+[到步骤2](../atl/adding-a-control-atl-tutorial-part-2.md)
 
 ## <a name="see-also"></a>请参阅
 

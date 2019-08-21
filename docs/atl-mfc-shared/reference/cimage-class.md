@@ -1,6 +1,6 @@
 ---
 title: CImage 类
-ms.date: 02/01/2018
+ms.date: 08/19/2019
 f1_keywords:
 - CImage
 - ATLIMAGE/ATL::CImage
@@ -54,12 +54,12 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-ms.openlocfilehash: 6c651f160fdab582b769cf1764add2cc482745bf
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 3b278f37bbcbe2ee879d9c3d2837267fe31e57e2
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491333"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630720"
 ---
 # <a name="cimage-class"></a>CImage 类
 
@@ -193,9 +193,9 @@ void CMyDlg::OnRButtonDown(UINT nFlags, CPoint point)
 可以从 MFC `CImage`或 ATL 使用。
 
 > [!NOTE]
-> 使用`CImage`创建项目时, 必须先定义`CString` , 然后再添加`atlimage.h`。 如果你的项目使用不带 MFC 的`atlstr.h` ATL, 请`atlimage.h`在包含之前包括。 如果你的项目使用 mfc (或者, 如果它是包含 mfc 支持的 ATL 项目) `afxstr.h` , 请在`atlimage.h`添加之前包括。<br/>
+> 使用`CImage`创建项目时, 必须先定义`CString` , 然后才能包括*atlimage*。 如果你的项目使用不带 MFC 的 ATL, 请在包含*atlimage*之前包含*atlstr.h* 。 如果你的项目使用 MFC (或者, 如果它是包含 MFC 支持的 ATL 项目), 请在包含*atlimage*之前包含*afxstr* 。<br/>
 > <br/>
-> 同样, 在包括`atlimage.h` `atlimpl.cpp`之前, 必须包括。 若要轻松实现此目的`atlimage.h` , 请`stdafx.h`将包含在中。
+> 同样, 必须包含*atlimage* , 然后才能包括*atlimpl*。 若要轻松实现此目的, 请在*pch* (Visual Studio 2017 及更早版本) 中包括*atlimage* (*stdafx.h* )。
 
 ## <a name="requirements"></a>要求
 
@@ -765,7 +765,7 @@ _T("All Image Files"));
 
 file description0&#124;\*. ext0&#124;&#124;filedescription1\*. ext1&#124;文件说明*n.* &#124;\* *n*&#124;&#124;
 
-其中,&#124;"" 是指定的`chSeparator`分隔符。 例如:
+其中,&#124;"" 是指定的`chSeparator`分隔符。 例如：
 
 `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`
 
@@ -856,7 +856,7 @@ _T("All Image Files"));
 
 file description0&#124;\*. ext0&#124;&#124;filedescription1\*. ext1&#124;文件说明*n.* &#124;\* *n*&#124;&#124;
 
-其中,&#124;"" 是*chSeparator*指定的分隔符。 例如：
+其中,&#124;"" 是*chSeparator*指定的分隔符。 例如:
 
 `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`
 

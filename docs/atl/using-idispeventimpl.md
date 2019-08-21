@@ -1,35 +1,35 @@
 ---
 title: 使用 IDispEventImpl (ATL)
-ms.date: 11/04/2016
+ms.date: 08/19/2019
 helpviewer_keywords:
 - IDispEventImpl class, using
 ms.assetid: 82d53b61-9d0d-45c5-aff9-2fafa468a9ca
-ms.openlocfilehash: c532164788d359c7834759de01407d49c19463ca
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 9684781ba99d96e2c58d450ee0ff892374e33aef
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341480"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630601"
 ---
 # <a name="using-idispeventimpl"></a>使用 IDispEventImpl
 
-当使用`IDispEventImpl`来处理事件，你将需要：
+使用`IDispEventImpl`处理事件时, 你将需要:
 
-- 从类派生[IDispEventImpl](../atl/reference/idispeventimpl-class.md)。
+- 从[IDispEventImpl](../atl/reference/idispeventimpl-class.md)派生类。
 
-- 将事件接收器映射添加到您的类。
+- 将事件接收器映射添加到你的类。
 
-- 将条目添加到使用事件接收器映射[SINK_ENTRY](reference/composite-control-macros.md#sink_entry)或[SINK_ENTRY_EX](reference/composite-control-macros.md#sink_entry_ex)宏。
+- 使用[SINK_ENTRY](reference/composite-control-macros.md#sink_entry)或[SINK_ENTRY_EX](reference/composite-control-macros.md#sink_entry_ex)宏向事件接收器映射添加条目。
 
-- 实现你感兴趣处理的方法。
+- 实现您想要处理的方法。
 
-- 通知和取消通知事件源。
+- 建议和 unadvise 事件源。
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何处理`DocumentChange`由 Word 的事件触发**应用程序**对象。 此事件指一种方法上`ApplicationEvents`调度接口。
+下面的示例演示如何处理由 Word `DocumentChange`的**应用程序**对象触发的事件。 此事件在`ApplicationEvents`调度接口上定义为方法。
 
-该示例摘自[ATLEventHandling 示例](../overview/visual-cpp-samples.md)。
+该示例来自[ATLEventHandling 示例](../overview/visual-cpp-samples.md)。
 
 ```cpp
 [ uuid(000209F7-0000-0000-C000-000000000046), hidden ]
@@ -47,11 +47,11 @@ methods:
 };
 ```
 
-该示例使用`#import`从 Word 的类型库生成必需的标头文件。 如果你想要使用此示例与其他版本的 Word，则必须指定正确 mso dll 文件。 例如，Office 2000 提供 mso9.dll 并 OfficeXP 提供 mso.dll 有关的问题。 此代码从 stdafx.h 简化：
+该示例使用`#import`从 Word 的类型库生成所需的标头文件。 如果要将此示例与其他版本的 Word 一起使用, 则必须指定正确的 mso dll 文件。 例如, Office 2000 提供 mso9 和 OfficeXP 提供 mso.dll。 此代码简化了*pch* (Visual Studio 2017 及更早版本中的*stdafx.h* ):
 
 [!code-cpp[NVC_ATL_EventHandlingSample#1](../atl/codesnippet/cpp/using-idispeventimpl_1.h)]
 
-下面的代码所示 NotSoSimple.h。 通过注释记录了相关代码：
+以下代码将出现在 NotSoSimple 中。 相关代码按注释记录:
 
 [!code-cpp[NVC_ATL_EventHandlingSample#2](../atl/codesnippet/cpp/using-idispeventimpl_2.h)]
 
