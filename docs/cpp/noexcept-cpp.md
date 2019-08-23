@@ -4,16 +4,16 @@ ms.date: 01/12/2018
 f1_keywords:
 - noexcept_cpp
 ms.assetid: df24edb9-c6a6-4e37-9914-fd5c0c3716a8
-ms.openlocfilehash: c314b554abb6c10e62b143f554777af50267e4e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf53aca918e36d18ab7f8aa14b01caaf0e55627c
+ms.sourcegitcommit: ace42fa67e704d56d03c03745b0b17d2a5afeba4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245356"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69975889"
 ---
 # <a name="noexcept-c"></a>noexcept (C++)
 
-**C + + 11:** 指定函数是否可能引发异常。
+**C + + 11:** 指定函数是否可能会引发异常。
 
 ## <a name="syntax"></a>语法
 
@@ -22,17 +22,17 @@ ms.locfileid: "62245356"
 ### <a name="parameters"></a>参数
 
 *constant-expression*<br/>
-类型的常量表达式**bool**表示潜在的异常类型集是否为空。 无条件版本相当于`noexcept(true)`。
+类型为**bool**的常量表达式, 它表示可能的异常类型集是否为空。 无条件版本与等效`noexcept(true)`。
 
 ## <a name="remarks"></a>备注
 
-一个*noexcept 表达式*是一种类型的*异常规范*，后缀表示一组可通过退出任何异常的异常处理程序相匹配的类型的函数声明函数。 一元条件运算符`noexcept(` *constant_expression* `)`其中*constant_expression* yeilds **true**，及其无条件同义词**noexcept**，指定可以退出函数的潜在异常类型的集为空。 即，该函数从不引发异常并永远不会允许异常传播其作用域之外。 运算符`noexcept(` *constant_expression* `)`其中*constant_expression* yeilds **false**，或不存在的异常规范（以外的析构函数或释放函数），指示可以退出该函数的潜在异常组的所有类型的集合。
+*Noexcept 表达式*是一种*异常规范*, 它是一个函数声明的后缀, 表示一组类型, 这些类型可能由任何退出函数的异常的异常处理程序匹配。 一元条件运算符`noexcept(` *constant_expression* `)`其中, *constant_expression*生成**true**, 而其无条件同义词**noexcept**, 指定可能的异常类型集可以退出函数为空。 也就是说, 函数永远不会引发异常, 并且永远不允许将异常传播到其作用域外。 运算符`noexcept(` *constant_expression*, 其中 constant_expression 产生 false, 或缺少异常规范 (对于析构函数或释放函数除外), 指示`)`可以退出函数的可能的异常集是所有类型的集合。
 
-将标记一个函数作为**noexcept**仅当调用，直接或间接的所有函数都都还**noexcept**或**const**。 编译器不一定会检查异常可能归因于每个代码路径**noexcept**函数。 如果异常 does 退出标记的函数的外部作用域`noexcept`， [std:: terminate](../standard-library/exception-functions.md#terminate)立即调用，则将调用的任何范围内对象的析构函数不能保证。 使用**noexcept**而不是动态的异常说明符`throw()`，该标准中现已弃用。 我们建议您应用`noexcept`永远不会允许异常传播到调用堆栈的任何函数。 当声明的函数**noexcept**，它使编译器能够在多种不同的上下文中生成更高效的代码。 有关详细信息，请参阅[异常规范](exception-specifications-throw-cpp.md)。
+仅当函数直接或间接调用的所有函数也是**noexcept**或**const**时, 才将其标记为**noexcept** 。 编译器不一定要检查可能冒泡到**noexcept**函数的异常的每个代码路径。 如果异常退出了标记`noexcept`的函数的外部范围, 则会立即调用[std:: terminate](../standard-library/exception-functions.md#terminate) , 并且不保证将调用任何范围内对象的析构函数。 使用**noexcept**而不是动态异常说明符`throw()`, 该说明符现已在标准中弃用。 建议你将应用`noexcept`到任何从不允许异常来向上传播调用堆栈的函数。 将函数声明为**noexcept**时, 编译器会使编译器在多个不同的上下文中生成更高效的代码。 有关详细信息, 请参阅[异常规范](exception-specifications-throw-cpp.md)。
 
 ## <a name="example"></a>示例
 
-可能会声明复制其自变量的模板函数**noexcept**前提是要复制的对象是普通的旧数据类型 (POD)。 此类函数可以如下声明：
+如果要复制的对象是普通的旧数据类型 (POD), 则可将复制其参数的模板函数声明为**noexcept** 。 此类函数可以如下声明：
 
 ```cpp
 #include <type_traits>
@@ -47,4 +47,4 @@ T copy_object(const T& obj) noexcept(std::is_pod<T>)
 ## <a name="see-also"></a>请参阅
 
 [C++ 异常处理](cpp-exception-handling.md)<br/>
-[异常规范 （throw，noexcept）](exception-specifications-throw-cpp.md)
+[异常规范 (throw, noexcept)](exception-specifications-throw-cpp.md)
