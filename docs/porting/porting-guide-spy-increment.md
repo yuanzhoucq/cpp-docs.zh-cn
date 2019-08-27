@@ -2,12 +2,12 @@
 title: 移植指南：Spy++
 ms.date: 11/19/2018
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: 206698d35239f416d2f13891044aa54fe502500a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 175f3fbba7e18f625dc3425c236162737689f068
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511663"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630450"
 ---
 # <a name="porting-guide-spy"></a>移植指南：Spy++
 
@@ -67,7 +67,7 @@ Microsoft 不再为 Windows XP 提供支持，因此，即使 Visual Studio 中�
 
 若要消除此错误，请将“项目属性”  设置更新为当前要面向的最低版本的 Windows，以定义 WINVER。 [此处](/windows/win32/WinProg/using-the-windows-headers)可找到包含各种 Windows 版本的值的表。
 
-Stdafx.h 文件包含一些宏定义。
+stdafx.h  文件包含了一些宏定义。
 
 ```cpp
 #define WINVER       0x0500  // these defines are set so that we get the
@@ -373,7 +373,7 @@ DECODEPARM(CB_GETLBTEXT)
 #define PARM(var, type, src)type var = (type)src
 ```
 
-因此，`lpszBuffer` 变量在相同的函数中进行了两次声明。 如果代码未使用宏（只需删除第二个类型声明），则修复这个问题并不容易。 事实上，我们面对的选择很艰难，必须决定是将宏代码重写为普通代码（单调乏味并且可能出错的任务）还是禁用该警告。
+因此，`lpszBuffer` 变量在相同的函数中进行了两次声明。 如果代码未使用宏，那么修复这个问题就没有只需删除第二个类型声明那么简单了。 事实上，我们面对的选择很艰难，必须决定是将宏代码重写为普通代码（单调乏味并且可能出错的任务）还是禁用该警告。
 
 在本例中，我们选择禁用该警告。 可以通过添加如下杂注实现此操作：
 
@@ -502,7 +502,7 @@ warning C4211: nonstandard extension used: redefined extern to static
 
 ##  <a name="porting_to_unicode"></a>步骤 11. 从 MBCS 移植到 Unicode
 
-注意，在 Windows 世界中，当说到 Unicode 时，通常是指 UTF-16。 其他操作系统（如 Linux）使用 UTF-8，但 Windows 通常不使用。 Visual Studio 2013 和 Visual Studio 2015 中弃用了 MFC 的 MBCS 版本，但是 Visual Studio 2017 将不再弃用它。 如果使用的是 Visual Studio 2013 或 Visual Studio 2015，在执行实际将 MBCS 代码移植到 UTF-16 Unicode 的步骤之前，我们可能需要暂时消除已弃用 MBCS 的警告，以便执行其他工作或将移植推迟到方便的时间。 当前的代码使用 MBCS，若要继续使用，则需要安装 ANSI/MBCS 版本的 MFC。 Visual Studio 使用 C++ 的桌面开发的默认安装内容并不包括较大的 MFC 库，因此需要在安装程序的可选组件中将其选中  。 请参阅 [MFC MBCS DLL 加载项](../mfc/mfc-mbcs-dll-add-on.md)。 完成下载并重启 Visual Studio 后，可以使用 MBCS 版本的 MFC 进行编译和链接，但若要在使用 Visual Studio 2013 和 Visual Studio 2015 时完全删除关于 MBCS 的警告，则还应将 NO_WARN_MBCS_MFC_DEPRECATION 添加到项目属性预处理器部分的预定义宏列表，或者添加到 stdafx.h 头文件或其他常见头文件的开头  。
+注意，在 Windows 世界中，当说到 Unicode 时，通常是指 UTF-16。 其他操作系统（如 Linux）使用 UTF-8，但 Windows 通常不使用。 Visual Studio 2013 和 Visual Studio 2015 中弃用了 MFC 的 MBCS 版本，但是 Visual Studio 2017 将不再弃用它。 如果使用的是 Visual Studio 2013 或 Visual Studio 2015，在执行实际将 MBCS 代码移植到 UTF-16 Unicode 的步骤之前，我们可能需要暂时消除已弃用 MBCS 的警告，以便执行其他工作或将移植推迟到方便的时间。 当前的代码使用 MBCS，若要继续使用，则需要安装 ANSI/MBCS 版本的 MFC。 Visual Studio 使用 C++ 的桌面开发的默认安装内容并不包括较大的 MFC 库，因此需要在安装程序的可选组件中将其选中  。 请参阅 [MFC MBCS DLL 加载项](../mfc/mfc-mbcs-dll-add-on.md)。 下载并重启 Visual Studio 后，就可以编译并关联到 MBCS 版本的 MFC；但若要在使用 Visual Studio 2013 或 2015 时消除关于 MBCS 的警告，还应将 NO_WARN_MBCS_MFC_DEPRECATION 添加到项目属性的“预处理器”  部分中的预定义宏列表，或添加到 stdafx.h  头文件或其他常见头文件的开头。
 
 现在我们将获得一些链接器错误。
 
