@@ -2,12 +2,12 @@
 title: 如何：在通用 Windows 平台应用中使用现有 C++ 代码
 ms.date: 04/08/2019
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-ms.openlocfilehash: e587ae88fe8d38a22b351d87ae585efe82acf091
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5050a9773eea55549958195efa624743f44ed031
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510382"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630426"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>如何：在通用 Windows 平台应用中使用现有 C++ 代码
 
@@ -151,7 +151,7 @@ UWP 应用在受保护的环境中运行，结果，很多可能危及平台安�
 
    现在，解决方案资源管理器会将该项目标识为通用 Windows 项目  。
 
-5. 请确保预编译的头文件的名称正确。 在“预编译标头”部分中，将预编译头文件从 pch.h 更改为 stdafx.h   。 如果没有这样操作，将出现以下错误。
+5. 请确保预编译的头文件的名称正确。 在“预编译标头”  部分中，将“预编译标头文件”  从“pch.h”  更改为“stdafx.h”  。 如果没有这样操作，将出现以下错误。
 
    > 错误 C2857：在源文件中没有找到用 /Ycpch.h 命令行选项指定的“#include”语句
 
@@ -165,7 +165,7 @@ UWP 应用在受保护的环境中运行，结果，很多可能危及平台安�
 
    在“项目” > “解决方案”下，选中 DLL 项目旁边的复选框，然后选择“确定”按钮    。
 
-8. 将库的标头文件包含在 UWP 应用的 pch.h 文件中。
+8. 将库的一个或多个头文件添加到 UWP 应用的 pch.h  文件中。
 
     ```cpp
     #include "..\MyNativeDLL\giraffe.h"
@@ -195,7 +195,7 @@ UWP 应用在受保护的环境中运行，结果，很多可能危及平台安�
 
 1. 在 UWP 项目的项目属性中，在左窗格中依次选择“配置属性” > “链接器” > “输入”    。 在右窗格中，将路径添加到库中的“其他依赖项”  属性中。 例如，对于将其输出放置在 *SolutionFolder*\Debug\MyNativeLibrary\MyNativeLibrary.lib 中的项目中的库，则添加相对路径 `Debug\MyNativeLibrary\MyNativeLibrary.lib`。
 
-2. 添加一个 include 语句，将头文件引用到 pch.h 文件（如果存在），或按需要引用到任何所需的 .cpp 文件中，并开始添加使用库的代码。
+2. 添加 include 语句，以将头文件引用到 pch.h  文件（若有）或所需的任何 .cpp 文件中，并开始添加使用库的代码。
 
    ```cpp
    #include "..\MyNativeLibrary\giraffe.h"
@@ -219,7 +219,7 @@ UWP 应用在受保护的环境中运行，结果，很多可能危及平台安�
 
 5. 从原始项目中选择要添加的所有文件，然后选择“确定”  。 如果子文件夹需要，则重复。
 
-6. 你现在可能有一些重复代码。 如果你有多个预编译的标头（假设 stdafx.h 和 pch.h），选择一个保留。 将任何所需的代码（比如 include 语句）复制到你要保留的标头中。 然后，删除另一个，并在“预编译标头”  下的项目属性中，请确保头文件的名称正确。
+6. 你现在可能有一些重复代码。 如果有多个预编译标头（例如 stdafx.h  和 pch.h  ），请选择一个保留。 将任何所需的代码（比如 include 语句）复制到你要保留的标头中。 然后，删除另一个，并在“预编译标头”  下的项目属性中，请确保头文件的名称正确。
 
    如果更改了要用作预编译标头的文件，请确保预编译标头选项适用于每个文件。 依次选择每个 .cpp 文件，打开其属性窗口，并确保所有项都设置为“使用 (/Yu)”  （所需的预编译标头除外，其应设置为“创建 (/Yc)”  ）。
 

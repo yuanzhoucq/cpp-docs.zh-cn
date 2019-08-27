@@ -5,12 +5,12 @@ ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 15226d41991d5a09d104d2edbfb3dbf2f7432b65
-ms.sourcegitcommit: db1ed91fa7451ade91c3fb76bc7a2b857f8a5eef
+ms.openlocfilehash: 17ed76551102653e2f05e9731834f4787198db49
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68980532"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631647"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Microsoft C++ 语言一致性表
 
@@ -348,7 +348,7 @@ __VS 2017 15.7__ 表示 Visual Studio 2017 15.7 版中支持的功能。<br/>
 
 <a name="note_C"></a>__C__：编译器对 C99 预处理器规则的支持在 Visual Studio 2017 中不完整。 Variadic 宏受支持，但预处理器的行为存在很多 Bug。 我们正在修改预处理器，并且很快将在 [/permissive-](../build/reference/permissive-standards-conformance.md) 模式下发布实验版的改进内容。
 
-<a name="note_D"></a>__D__：在 [/std:c++14](../build/reference/std-specify-language-standard-version.md) 下受支持，并且出现可取消的警告 C4984。
+<a name="note_D"></a>__D__：在 [/std:c++14](../build/reference/std-specify-language-standard-version.md) 下受支持，并且出现可取消的警告 [C4984](../error-messages/compiler-warnings/compiler-warning-c4984.md)。
 
 <a name="note_E"></a>__E__：此为全新实现，与之前的 `std::experimental` 版本不兼容，这对符号链接支持、bug 修复以及更改必须符合标准的行为而言是必不可少的。 目前，添加 \<filesystem> 可提供新 `std::filesystem` 和旧 `std::experimental::filesystem`，而添加 \<experimental/filesystem> 则仅提供旧实验性实现。 在下一突破性 ABI 版本的库中，实验性实现将会被删除。
 
