@@ -1,22 +1,22 @@
 ---
 title: 析构函数 (C++)
-ms.date: 05/06/2019
+ms.date: 07/20/2019
 helpviewer_keywords:
 - objects [C++], destroying
 - destructors, C++
 ms.assetid: afa859b0-f3bc-4c4d-b250-c68b335b6004
-ms.openlocfilehash: 7bcfbd1ca95d98421fd2d58b595dd3309cdf8011
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 1e1190f49c7ccf5c312172f265d32a4b855bd878
+ms.sourcegitcommit: 2da5c42928739ca8cd683a9002598f28d8ec5f8e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222449"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70060139"
 ---
 # <a name="destructors-c"></a>析构函数 (C++)
 
-析构函数是超出范围或通过调用显式销毁的对象时，会自动调用的成员函数**删除**。 析构函数有同名的类，前面是波形符 (`~`)。 例如，声明 `String` 类的析构函数：`~String()`。
+析构函数是一个成员函数, 该函数在对象超出范围时自动调用, 或通过调用**delete**进行显式销毁。 析构函数具有与类相同的名称, 前面有一个波形符 (`~`)。 例如，声明 `String` 类的析构函数：`~String()`。
 
-如果未定义析构函数，编译器将提供默认值对于许多类，这已足够。 只需定义自定义的析构函数时，类存储需要释放的系统资源的句柄或拥有内存的指针指向的目标。
+如果未定义析构函数, 则编译器将提供一个默认析构函数;对于许多类, 这就足够了。 仅当类将句柄存储到需要释放的系统资源或拥有它们指向的内存的指针时, 才需要定义自定义析构函数。
 
 请考虑 `String` 类的以下声明：
 
@@ -57,7 +57,7 @@ int main() {
 }
 ```
 
-在前面的示例中，析构函数`String::~String`使用**删除**运算符先解除分配，文本存储为动态分配的空间。
+在前面的示例中, 析构`String::~String`函数使用**delete**运算符来释放为文本存储动态分配的空间。
 
 ## <a name="declaring-destructors"></a>声明析构函数
 
@@ -69,7 +69,7 @@ int main() {
 
 - 不返回值 (或**void**)。
 
-- 不能声明为**const**，**易失性**，或**静态**。 但是，它们可以调用对于对象的析构声明为**const**，**易失性**，或**静态**。
+- 不能声明为**const**、 **volatile**或**static**。 但是, 可以调用它们来销毁声明为**const**、 **volatile**或**static**的对象。
 
 - 可以声明为**虚拟**。 通过使用虚拟析构函数，无需知道对象的类型即可销毁对象 - 使用虚函数机制调用该对象的正确析构函数。 请注意，析构函数也可以声明为抽象类的纯虚函数。
 
@@ -79,7 +79,7 @@ int main() {
 
 - 具有块范围的本地（自动）对象超出范围。
 
-- 使用分配的对象**新**运算符显式解除分配使用**删除**。
+- 使用**new**运算符分配的对象使用**delete**进行显式释放。
 
 - 临时对象的生存期结束。
 
@@ -89,11 +89,11 @@ int main() {
 
 析构函数可以随意调用类成员函数和访问类成员数据。
 
-有两个的限制的析构函数：
+对析构函数的使用有两个限制:
 
 - 不能采用其地址。
 
-- 派生的类不会继承其基类的析构函数。
+- 派生类不继承其基类的析构函数。
 
 ## <a name="order-of-destruction"></a>析构的顺序
 
@@ -101,9 +101,9 @@ int main() {
 
 1. 将调用该类的析构函数，并且会执行该析构函数的主体。
 
-1. 按照非静态成员对象的析构函数在类声明中的显示顺序的相反顺序调用这些函数。 这些成员的构造中使用的可选成员优化列表不会影响构造或析构的顺序。
+1. 按照非静态成员对象的析构函数在类声明中的显示顺序的相反顺序调用这些函数。 构造这些成员时使用的可选成员初始化列表不会影响构造或析构的顺序。
 
-1. 声明的相反顺序调用非虚拟基类的析构函数。
+1. 非虚拟基类的析构函数以声明的相反顺序调用。
 
 1. 虚拟基类的析构函数以声明的相反顺序被调用。
 
@@ -202,7 +202,7 @@ class E : public C, public D, virtual public B
 
 ### <a name="non-virtual-base-classes"></a>非虚拟基类
 
-声明基类名称的相反顺序调用非虚拟基类的析构函数。 考虑下列类声明：
+非虚拟基类的析构函数以声明基类名称的反向顺序调用。 考虑下列类声明：
 
 ```cpp
 class MultInherit : public Base1, public Base2
@@ -213,7 +213,7 @@ class MultInherit : public Base1, public Base2
 
 ## <a name="explicit-destructor-calls"></a>显式析构函数调用
 
-很少需要显式调用析构函数。 但是，对置于绝对地址的对象进行清理会很有用。 通常使用用户定义分配这些对象**新**采用位置自变量的运算符。 **删除**运算符不能释放该内存，因为它不从自由存储分配 (有关详细信息，请参阅[新和 delete 运算符](../cpp/new-and-delete-operators.md))。 但是，对析构函数的调用可以执行相应的清理。 若要显式调用 `s` 类的对象 `String` 的析构函数，请使用下列语句之一：
+很少需要显式调用析构函数。 但是，对置于绝对地址的对象进行清理会很有用。 这些对象通常使用采用位置参数的用户定义的**new**运算符进行分配。 **Delete**运算符无法释放此内存, 因为它不是从免费存储分配的 (有关详细信息, 请参阅[New 和 delete 运算符](../cpp/new-and-delete-operators.md))。 但是，对析构函数的调用可以执行相应的清理。 若要显式调用 `s` 类的对象 `String` 的析构函数，请使用下列语句之一：
 
 ```cpp
 s.String::~String();     // non-virtual call
@@ -224,3 +224,27 @@ ps->~String();     // Virtual call
 ```
 
 可以使用对前面显示的析构函数的显式调用的表示法，无论类型是否定义了析构函数。 这允许您进行此类显式调用，而无需了解是否为此类型定义了析构函数。 显式调用析构函数，其中未定义的析构函数无效。
+
+## <a name="robust-programming"></a>可靠编程
+
+如果类获取资源, 则需要析构函数, 若要安全地管理资源, 则它可能必须实现复制构造函数和复制分配。
+
+如果这些特殊函数不是由用户定义的, 则由编译器隐式定义。 隐式生成的构造函数和赋值运算符执行浅层的按成员复制, 如果对象正在管理资源, 这几乎肯定会出错。
+
+在下一个示例中, 隐式生成的复制构造函数会`str1.text`使`str2.text`指针和引用相同的内存, 当我们从`copy_strings()`返回时, 将删除两次内存, 这是未定义的行为:
+
+```cpp
+void copy_strings()
+{
+   String str1("I have a sense of impending disaster...");
+   String str2 = str1; // str1.text and str2.text now refer to the same object
+} // delete[] _text; deallocates the same memory twice
+  // undefined behavior
+```
+
+显式定义析构函数、复制构造函数或复制赋值运算符会阻止移动构造函数和移动赋值运算符的隐式定义。 在这种情况下, 如果复制开销较高, 则无法提供移动操作, 这种情况会导致丢失优化机会。
+
+## <a name="see-also"></a>请参阅
+
+[复制构造函数和复制赋值运算符](../cpp/copy-constructors-and-copy-assignment-operators-cpp.md)</br>
+[移动构造函数和移动赋值运算符](../cpp/move-constructors-and-move-assignment-operators-cpp.md)
