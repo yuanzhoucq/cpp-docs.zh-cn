@@ -3,19 +3,16 @@ title: 创建项目（ATL 教程，第 1 部分）
 ms.custom: get-started-article
 ms.date: 08/19/2019
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-ms.openlocfilehash: 9f7f62ec94d5ac6d6076763853aa19297cf310e6
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 5bb4c6edffd13e13a451b203feea9a03461a9318
+ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630694"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70108370"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>创建项目（ATL 教程，第 1 部分）
 
-本教程指导你逐步完成一个非特性化 ATL 项目, 该项目创建了一个显示多边形的 ActiveX 对象。 对象包括允许用户更改多边形的边数的选项, 以及用于刷新显示的代码。
-
-> [!NOTE]
-> Visual Studio 的 Express 版本中通常不支持 ATL 和 MFC。
+本教程指导你逐步完成一个非属性化 ATL 项目, 该项目创建了一个显示多边形的 ActiveX 对象。 对象包括允许用户更改多边形的边数的选项, 以及用于刷新显示的代码。
 
 > [!NOTE]
 > 本教程将创建与多边形示例相同的源代码。 如果您想要避免手动输入源代码, 可以从[多边形示例抽象](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/Polygon)下载。 然后, 您可以在学习本教程时参考多边形源代码, 或使用它来检查您自己的项目中是否存在错误。
