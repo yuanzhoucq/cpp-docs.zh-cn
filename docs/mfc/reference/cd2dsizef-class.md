@@ -1,6 +1,6 @@
 ---
 title: CD2DSizeF 类
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 f1_keywords:
 - CD2DSizeF
 - AFXRENDERTARGET/CD2DSizeF
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - CD2DSizeF [MFC], CD2DSizeF
 - CD2DSizeF [MFC], IsNull
 ms.assetid: f486a1e1-997d-4286-8cb9-26369dc82055
-ms.openlocfilehash: 09ccd8c4ba6bb0c345adb32bcf22686c485d1184
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df895c278003e2c71f37a00af6bf14912756701a
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396231"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177201"
 ---
 # <a name="cd2dsizef-class"></a>CD2DSizeF 类
 
-D2D1_SIZE_F 包装器。
+D2D1_SIZE_F 的包装器。
 
 ## <a name="syntax"></a>语法
 
@@ -33,19 +33,19 @@ class CD2DSizeF : public D2D1_SIZE_F;
 
 |名称|描述|
 |----------|-----------------|
-|[CD2DSizeF::CD2DSizeF](#cd2dsizef)|已重载。 构造`CD2DSizeF`对象从`D2D1_SIZE_F`对象。|
+|[CD2DSizeF::CD2DSizeF](#cd2dsizef)|已重载。 `CD2DSizeF` 从`D2D1_SIZE_F`对象构造对象。|
 
 ### <a name="public-methods"></a>公共方法
 
 |名称|描述|
 |----------|-----------------|
-|[CD2DSizeF::IsNull](#isnull)|返回**布尔**值，该值指示表达式是否包含任何有效的数据 (NULL)。|
+|[CD2DSizeF::IsNull](#isnull)|返回一个**布尔**值, 该值指示表达式是否不包含有效数据 (NULL)。|
 
 ### <a name="public-operators"></a>公共运算符
 
 |名称|描述|
 |----------|-----------------|
-|[CD2DSizeF::operator CSize](#operator_csize)|将转换`CD2DSizeF`到`CSize`对象。|
+|[CD2DSizeF:: operator CSize](#operator_csize)|转换`CD2DSizeF` 为`CSize`对象。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -55,16 +55,16 @@ class CD2DSizeF : public D2D1_SIZE_F;
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxrendertarget.h
+**标头:** afxrendertarget
 
-##  <a name="cd2dsizef"></a>  CD2DSizeF::CD2DSizeF
+##  <a name="cd2dsizef"></a>CD2DSizeF:: CD2DSizeF
 
-构造 CSize 对象从一个 CD2DSizeF 对象。
+从 CSize 对象构造 CD2DSizeF 对象。
 
 ```
 CD2DSizeF(const CSize& size);
 CD2DSizeF(const D2D1_SIZE_F& size);
-  CD2DSizeF(const D2D1_SIZE_F* size);
+CD2DSizeF(const D2D1_SIZE_F* size);
 
 CD2DSizeF(
     FLOAT cx = 0.,
@@ -82,9 +82,9 @@ CD2DSizeF(
 *cy*<br/>
 源高度
 
-##  <a name="isnull"></a>  CD2DSizeF::IsNull
+##  <a name="isnull"></a>CD2DSizeF:: IsNull
 
-返回一个布尔值，该值指示表达式是否包含任何有效的数据 (Null)。
+返回一个布尔值, 该值指示表达式是否不包含有效数据 (Null)。
 
 ```
 BOOL IsNull() const;
@@ -92,9 +92,9 @@ BOOL IsNull() const;
 
 ### <a name="return-value"></a>返回值
 
-如果宽度和高度都为空; 则为 TRUE否则为 FALSE。
+如果 "宽度" 和 "高度" 为空, 则为 TRUE;否则为 FALSE。
 
-##  <a name="operator_csize"></a>  CD2DSizeF::operator CSize
+##  <a name="operator_csize"></a>CD2DSizeF:: operator CSize
 
 将 CD2DSizeF 转换为 CSize 对象。
 

@@ -1,6 +1,6 @@
 ---
 title: CFtpConnection 类
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 f1_keywords:
 - CFtpConnection
 - AFXINET/CFtpConnection
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CFtpConnection [MFC], Rename
 - CFtpConnection [MFC], SetCurrentDirectory
 ms.assetid: 5e3a0501-8893-49cf-a3d5-0628d8d6b936
-ms.openlocfilehash: 977a8c9fc6dd653a59434d29bb72b0fe28900001
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 94ee4cb938ee061470282eb2f08a94d83c908805
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506371"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177281"
 ---
 # <a name="cftpconnection-class"></a>CFtpConnection 类
 
@@ -171,11 +171,13 @@ CInternetFile* Command(
 指向包含待发送命令的字符串的指针。
 
 *eResponse*<br/>
-确定是否预期从 FTP 服务器获得响应。 可以是以下值之一：
+指定 FTP 服务器是否需要响应。 可以是以下值之一：
 
 - `CmdRespNone`不需要响应。
-
 - `CmdRespRead`应为响应。
+- `CmdRespWrite`不使用。
+
+CmdResponseType 是*afxinet.h*中定义的 CFtpConnection 的成员。
 
 *dwFlags*<br/>
 包含控制此函数的标志的值。 有关完整列表, 请参阅[getdcbrushcolor](/windows/win32/api/wininet/nf-wininet-ftpcommandw)。

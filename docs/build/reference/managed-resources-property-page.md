@@ -1,6 +1,6 @@
 ---
 title: “托管资源”属性页
-ms.date: 11/04/2016
+ms.date: 08/28/2019
 f1_keywords:
 - VC.Project.VCManagedResourceCompilerTool.ResourceFileName
 - VC.Project.VCManagedResourceCompilerTool.OutputFileName
@@ -8,18 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - Managed Resources property page
 ms.assetid: 80b80384-ee55-494d-9f0e-907bb98cfc19
-ms.openlocfilehash: 97cf05f881949444879b0d48e3b3c2703a614985
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 14802996e63392bfb5fcc22096ef5f3d9db197c2
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498233"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177524"
 ---
 # <a name="managed-resources-property-page"></a>“托管资源”属性页
 
-启用资源编译器的设置。
-
-“受管理资源”属性页包含下列属性：
+在/Cli 程序中C++使用 .net 资源时, "**托管**资源" 属性页公开了托管资源编译器[resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator)的以下属性:
 
 - **资源逻辑名称**
 
