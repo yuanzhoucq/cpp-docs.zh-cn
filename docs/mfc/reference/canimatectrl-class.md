@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CAnimateCtrl [MFC], Seek
 - CAnimateCtrl [MFC], Stop
 ms.assetid: 5e8eb1bd-96b7-47b8-8de2-6bcbb3cc299b
-ms.openlocfilehash: adf8302508b81f1ac4f6cce3e3811ea6e3743bd4
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 18adead999f26768ae669d3a829b557bf9632a29
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507694"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177451"
 ---
 # <a name="canimatectrl-class"></a>CAnimateCtrl 类
 
@@ -332,7 +332,7 @@ BOOL Seek(UINT nTo);
 
 ### <a name="example"></a>示例
 
-  请参阅[CAnimateCtrl:: CAnimateCtrl](#canimatectrl)的示例。
+请参阅[CAnimateCtrl:: CAnimateCtrl](#canimatectrl)的示例。
 
 ##  <a name="stop"></a>CAnimateCtrl:: Stop
 
