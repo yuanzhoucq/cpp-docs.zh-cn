@@ -7,12 +7,12 @@ helpviewer_keywords:
 - projects [C++]
 - solutions [C++], about solutions
 ms.assetid: 93a3f290-e294-46e3-876e-e3084d9ae833
-ms.openlocfilehash: ae2830d58bb992a4ff065aa0e53085a490eb90d7
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 6d9ee71e2608c2ed4935e7a5a3c54af45921e5d2
+ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400956"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70108401"
 ---
 # <a name="walkthrough-working-with-projects-and-solutions-c"></a>演练：使用项目和解决方案 (C++)
 
@@ -36,7 +36,7 @@ ms.locfileid: "67400956"
 
 1. 在主菜单中，选择“文件”>“新建”>“项目”，打开“创建新项目”对话框     。
 
-1. 在对话框顶部，将“语言”  设置为“C++”  ，将“平台”  设置为“Windows”  ，并将“项目类型”  设置为“控制台”  。 
+1. 在对话框顶部，将“语言”  设置为“C++”  ，将“平台”  设置为“Windows”  ，并将“项目类型”  设置为“控制台”  。
 
 1. 从筛选的项目类型列表中，选择“控制台应用”，然后选择“下一步”   。 在下一页中，输入“游戏”作为项目名称  。
 
