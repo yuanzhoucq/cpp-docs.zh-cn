@@ -2,12 +2,13 @@
 layout: LandingPage
 title: 使用 C++ 文档的 Linux 开发
 description: 创建和调试在 Linux 上运行的应用程序。
-ms.openlocfilehash: ac80c6ad3b0650d7da20f18b049af0242ffa5704
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.topic: landing-page
+ms.openlocfilehash: ee956f25914e1996acb6776d9ecbb8c9e79c689b
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042729"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216103"
 ---
 # <a name="linux-development-with-c-documentation"></a>使用 C++ 文档的 Linux 开发
 
