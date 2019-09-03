@@ -1,6 +1,6 @@
 ---
-title: 函数 (C/C++)
-ms.date: 11/04/2016
+title: 函数杂注
+ms.date: 08/29/2019
 f1_keywords:
 - function_CPP
 - vc-pragma.function
@@ -8,27 +8,26 @@ helpviewer_keywords:
 - function pragma
 - pragmas, function
 ms.assetid: cbd1bd60-fabf-4b5a-9c3d-2d9f4b871365
-ms.openlocfilehash: c57ff2053b3c1fd52474c7eb0dd598641632f789
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f99f3c878789a6c47fdb0d48e0a8690d65fa8062
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409923"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220137"
 ---
-# <a name="function-cc"></a>函数 (C/C++)
-指定生成对杂注的自变量列表中指定的函数的调用。
+# <a name="function-pragma"></a>函数杂注
+
+通知编译器生成对杂注的参数列表中指定的函数的调用, 而不是内联它们。
 
 ## <a name="syntax"></a>语法
 
-```
-#pragma function( function1 [, function2, ...] )
-```
+> **#pragma 函数 (** *function1* [ **,** *function2* ...] **)**
 
 ## <a name="remarks"></a>备注
 
-如果您使用`intrinsic`杂注 （或 /Oi） 告诉编译器生成内部函数 （内部函数生成为内联代码而不是作为函数调用），可以使用**函数**杂注来显式强制函数调用。 一旦显示函数杂注，它将在包含指定的内部函数的第一个函数定义中生效。 该效果持续到源文件的末尾或外观的`intrinsic`杂注指定相同内部函数。 **函数**杂注可以仅在函数的外部使用，在全局级别。
+内部函数通常生成为内联代码, 而不是函数调用。 如果使用[内部杂注](intrinsic.md)或[/Oi](../build/reference/oi-generate-intrinsic-functions.md)编译器选项告知编译器生成内部函数, 则可以使用**函数**杂注显式强制执行函数调用。 出现**函数**杂注后, 它将在包含指定的内部函数的第一个函数定义处生效。 该效果将继续到源文件的末尾, 或指定相同内部函数的`intrinsic`杂注的外观。 在全局级别, 只能在函数之外使用**函数**杂注。
 
-有关具有内部形式的函数列表，请参阅[#pragma 内部](../preprocessor/intrinsic.md)。
+有关具有内部形式的函数的列表, 请参阅[内部杂注](intrinsic.md)。
 
 ## <a name="example"></a>示例
 
@@ -84,4 +83,4 @@ str is '!!!!!!!!!!!!!!!'
 
 ## <a name="see-also"></a>请参阅
 
-[Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Pragma 指令和 __pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

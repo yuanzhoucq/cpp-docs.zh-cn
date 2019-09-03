@@ -1,41 +1,41 @@
 ---
 title: _mm_stream_ss
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _mm_stream_ss
 helpviewer_keywords:
 - movntss instruction
 - _mm_stream_ss intrinsic
 ms.assetid: c53dffe9-0dfe-4063-85d3-e8987b870fce
-ms.openlocfilehash: 76c6c848351df773b9857b2f83726b64db982d9f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 005f4f697d64f6ea68b35dc32daf1217be463a2a
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263225"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217348"
 ---
-# <a name="mmstreamss"></a>_mm_stream_ss
+# <a name="_mm_stream_ss"></a>_mm_stream_ss
 
 **Microsoft 专用**
 
-32 位数据而无需污染缓存写入内存位置中。
+在不污染缓存的情况下将32位数据写入内存位置。
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 void _mm_stream_ss(
-   float * Dest,
+   float * Destination,
    __m128 Source
 );
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-*dest*<br/>
-[out]指向写入源数据的位置的指针。
+*位置*\
+弄指向写入源数据的位置的指针。
 
-*源*<br/>
-[in]包含一个 128 位数字`float`32 位在其下中写入值...
+*Source*\
+中一个128位数字, 其中包含要`float`在其下32位写入的值。
 
 ## <a name="return-value"></a>返回值
 
@@ -47,13 +47,13 @@ void _mm_stream_ss(
 |---------------|------------------|
 |`_mm_stream_ss`|SSE4a|
 
-**标头文件** \<intrin.h >
+**标头文件**\<intrin.h >
 
 ## <a name="remarks"></a>备注
 
-此内部函数生成`movntss`指令。 若要确定此指令的硬件支持，请调用`__cpuid`与内部`InfoType=0x80000001`，并检查的 6 位`CPUInfo[2] (ECX)`。 此位为 1 时支持的指令，则和 0 否则。
+内部函数生成`movntss`指令。 若要确定此指令的硬件支持, 请`__cpuid`调用`InfoType=0x80000001`内部, 并检查的`CPUInfo[2] (ECX)`第6位。 当支持指令时, 此位为 1; 否则为0。
 
-如果你运行使用的代码`_mm_stream_ss`内部函数不支持的硬件上`movntss`指令，则结果不可预知。
+如果在不`movntss`支持指令的硬件`_mm_stream_ss`上运行使用内部函数的代码, 则结果是不可预知的。
 
 ## <a name="example"></a>示例
 
@@ -89,12 +89,12 @@ f[2] = -3, f[3] = 3
 
 **结束 Microsoft 专用**
 
-高级微设备，inc.版权所有 2007保留所有权利。 重新生成具有高级微设备，inc.的权限
+部分版权 2007, 由高级微设备, Inc。保留所有权利。 从高级微设备, Inc. 的权限重现。
 
 ## <a name="see-also"></a>请参阅
 
-[_mm_stream_sd](../intrinsics/mm-stream-sd.md)<br/>
-[_mm_stream_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_stream_ps)<br/>
-[_mm_store_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_ss)<br/>
-[_mm_sfence](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sfence)<br/>
+[_mm_stream_sd](../intrinsics/mm-stream-sd.md)\
+[_mm_stream_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_stream_ps)\
+[_mm_store_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_ss)\
+[_mm_sfence](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sfence)\
 [编译器内部函数](../intrinsics/compiler-intrinsics.md)

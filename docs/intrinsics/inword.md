@@ -1,6 +1,6 @@
 ---
 title: __inword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __indword_cpp
 - __indword
@@ -8,31 +8,31 @@ helpviewer_keywords:
 - in instruction
 - __inword intrinsic
 ms.assetid: 5c617edd-6709-40a1-aad2-40d5e39283c6
-ms.openlocfilehash: f7355f64eeb2ace550d272ac6a9b1414e90eb172
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cfb6e5a11bed5feec3435ab604d22b8f532d3400
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264486"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217525"
 ---
-# <a name="inword"></a>__inword
+# <a name="__inword"></a>__inword
 
 **Microsoft 专用**
 
-从指定的端口使用读取数据`in`指令。
+使用`in`指令从指定端口读取数据。
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 unsigned short __inword(
    unsigned short Port
 );
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-*端口*<br/>
-[in]要读取的端口。
+*口*\
+中要从其读取的端口。
 
 ## <a name="return-value"></a>返回值
 
@@ -44,7 +44,7 @@ unsigned short __inword(
 |---------------|------------------|
 |`__inword`|x86、x64|
 
-**标头文件** \<intrin.h >
+**标头文件**\<intrin.h >
 
 ## <a name="remarks"></a>备注
 

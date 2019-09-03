@@ -1,41 +1,41 @@
 ---
 title: __outword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __outword
 helpviewer_keywords:
 - __outword intrinsic
 - out instruction
 ms.assetid: 995f8834-0f50-4b4f-a7a2-af0e7c371cda
-ms.openlocfilehash: 067f438d2135f4d61245606ab25af5a6f1ec9568
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 766f6adff5ea0212f48ff8727024ac7a5729c944
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262952"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221400"
 ---
-# <a name="outword"></a>__outword
+# <a name="__outword"></a>__outword
 
 **Microsoft 专用**
 
-将生成`out`指令，将发送一词`Data`出指定的 I/O 端口`Port`。
+生成指令, 该指令将向外发送由*端口*指定的 i/o 端口的单词。 `out`
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 void __outword(
    unsigned short Port,
    unsigned short Data
 );
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-*端口*<br/>
-[in]要向其发送数据的端口。
+*口*\
+中要将数据发送到的端口。
 
-*Data*<br/>
-[in]要发送的数据。
+*数据*\
+中要发送的数据。
 
 ## <a name="requirements"></a>要求
 
@@ -43,7 +43,7 @@ void __outword(
 |---------------|------------------|
 |`__outword`|x86、x64|
 
-**标头文件** \<intrin.h >
+**标头文件**\<intrin.h >
 
 ## <a name="remarks"></a>备注
 

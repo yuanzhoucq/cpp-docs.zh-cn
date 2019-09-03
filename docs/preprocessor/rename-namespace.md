@@ -1,44 +1,42 @@
 ---
-title: rename_namespace
-ms.date: 10/18/2018
+title: rename_namespace 导入属性
+ms.date: 08/29/2019
 f1_keywords:
 - rename_namespace
 helpviewer_keywords:
 - rename_namespace attribute
 ms.assetid: 45006d2b-36cd-4bec-98b9-3b8ec45299e3
-ms.openlocfilehash: 7b3917a7114ca44d092f10a7831bb35bc64e9387
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d319d7390e7c7dce070a35be44aad37c7a34e1a0
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179758"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216652"
 ---
-# <a name="renamenamespace"></a>rename_namespace
+# <a name="rename_namespace-import-attribute"></a>rename_namespace 导入属性
 
-**C++特定**
+**C++相关**
 
 重命名包含类型库内容的命名空间。
 
 ## <a name="syntax"></a>语法
 
-```
-rename_namespace("NewName")
-```
+> **#import***类型库***rename_namespace (** "*NewName*" **)**
 
 ### <a name="parameters"></a>参数
 
-*NewName*<br/>
+*NewName*\
 命名空间的新名称。
 
 ## <a name="remarks"></a>备注
 
-它采用一个参数， *NewName*，它指定命名空间的新名称。
+**Rename_namespace**属性采用单个自变量, 它指定命名空间的新名称。
 
-若要删除命名空间，请使用[no_namespace](../preprocessor/no-namespace.md)特性。
+若要删除命名空间, 请改为使用[no_namespace](../preprocessor/no-namespace.md)特性。
 
 **结束C++特定**
 
 ## <a name="see-also"></a>请参阅
 
-[#import 属性](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import 特性](../preprocessor/hash-import-attributes-cpp.md)\
 [#import 指令](../preprocessor/hash-import-directive-cpp.md)

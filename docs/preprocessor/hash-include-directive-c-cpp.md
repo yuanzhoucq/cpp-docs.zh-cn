@@ -1,6 +1,6 @@
 ---
-title: '#include 指令 (C /C++)'
-ms.date: 11/04/2016
+title: '#include 指令 (C/C++)'
+ms.date: 08/29/2019
 f1_keywords:
 - '#include'
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - '#include directive'
 - include directive (#include)
 ms.assetid: 17067dc0-8db1-4f2d-b43e-ec12ecf83238
-ms.openlocfilehash: 7ffccb34d52f8ffa1e6b9cc64a58d3471d02ac92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0792f522427e5658de992969745878894fbd454d
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388125"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220257"
 ---
 # <a name="include-directive-cc"></a>#include 指令 (C/C++)
 
@@ -21,67 +21,65 @@ ms.locfileid: "62388125"
 
 ## <a name="syntax"></a>语法
 
-```
-#include  "path-spec"
-#include  <path-spec>
-```
+> **#include**"*路径规范*" \
+> **#include**\<*路径规范*>
 
 ## <a name="remarks"></a>备注
 
-您可以将常数和宏定义编入包含文件，然后使用 **#include**指令将它们添加到任何源文件。 包含文件还可用于合并外部变量和复杂数据类型的声明。 在为此目的而创建的包含文件中，类型只能定义和命名一次。
+您可以将常数和宏定义组织到包含文件中, 然后使用 **#include**指令将它们添加到任何源文件中。 包含文件还可用于合并外部变量和复杂数据类型的声明。 在为此目的而创建的包含文件中，类型只能定义和命名一次。
 
-*路径规范*可能可跟目录规范是文件名。 文件名必须命名现有文件。 语法*路径规范*取决于其编译该程序的操作系统。
+*路径规范*是一个文件名, 可以选择性地以目录规范开头。 文件名必须命名现有文件。 *路径规范*的语法取决于编译程序的操作系统。
 
-有关如何在引用程序集信息C++通过使用编译的应用程序[/clr](../build/reference/clr-common-language-runtime-compilation.md)，请参阅[#using](../preprocessor/hash-using-directive-cpp.md)。
+有关如何在使用C++ [/clr](../build/reference/clr-common-language-runtime-compilation.md)编译的应用程序中引用程序集的信息, 请参阅[#using](../preprocessor/hash-using-directive-cpp.md)。
 
 两种语法形式都会导致指令被替换为指定包含文件的整个内容。 两种形式之间的区别在于，在未完全指定路径时预处理器搜索标头文件的顺序。 下表显示了这两种语法形式之间的差异。
 
 |语法形式|操作|
 |---|------------|
-|带引号的形式|预处理器按以下顺序搜索包含文件：<br/><br/> 1） 中包含的文件所在的目录 **#include**语句。<br/><br/> 2） 在当前打开的目录包含文件，打开它们的相反顺序。 搜索从父包含文件的目录中开始进行，然后继续向上到任何祖父包含文件的目录。<br/><br/> 3） 沿每个指定的路径 **/I**编译器选项。<br/><br/> 4） 跟随 INCLUDE 环境变量指定的路径。|
-|尖括号形式|预处理器按以下顺序搜索包含文件：<br/><br/> 1） 沿每个指定的路径 **/I**编译器选项。<br/><br/> 2） 当编译时在命令行，跟随 INCLUDE 环境变量指定的路径。|
+|带引号的形式|预处理器按以下顺序搜索包含文件：<br/><br/> 1) 在包含 **#include**语句的文件所在的目录中。<br/><br/> 2) 在当前打开的包含文件的目录中, 以其打开的相反顺序排列。 搜索从父包含文件的目录中开始进行，然后继续向上到任何祖父包含文件的目录。<br/><br/> 3) 沿着每个 **/i**编译器选项指定的路径。<br/><br/> 4) 沿着 INCLUDE 环境变量指定的路径。|
+|尖括号形式|预处理器按以下顺序搜索包含文件：<br/><br/> 1) 沿着每个 **/i**编译器选项指定的路径。<br/><br/> 2) 在命令行上进行编译时, 沿着 INCLUDE 环境变量指定的路径。|
 
-只要找到具有给定名称的文件，预处理器就会停止搜索。 如果将两个双引号之间的包含文件的完整明确的路径规范 (**""**)，则预处理器只搜索该路径说明并忽略标准目录。
+只要找到具有给定名称的文件，预处理器就会停止搜索。 如果将包含文件的完整、明确的路径规范括在双引号 (`" "`) 之间, 则预处理器只搜索该路径规范并忽略标准目录。
 
-如果用双引号括起来的文件名是不完整的路径规格，则预处理器将首先搜索“父”文件的目录。 父文件是包含的文件 **#include**指令。 例如，如果包括名为的文件*file2*中名为的文件*file1*， *file1*为父文件。
+如果用双引号括起来的文件名是不完整的路径规格，则预处理器将首先搜索“父”文件的目录。 父文件是包含 **#include**指令的文件。 例如, 如果将名为*file2*的文件包含在名为*file1*的文件中, 则*file1*是父文件。
 
-包含文件可以"嵌套";即 **#include**指令可以出现在由另一个名为的文件 **#include**指令。 例如， *file2*可能包括*file3*。 在这种情况下， *file1*还是会引起的父*file2*，但它会的"祖父" *file3*。
+包含文件可以 "嵌套": **#Include**指令可以出现在由另一个 **#include**指令命名的文件中。 例如, *file2*可以包括*file3*。 在这种情况下, *file1*仍是*file2*的父级, 但它将是*file3*的 "祖父"。
 
-当嵌套了包含文件并从命令行开始编译时，目录搜索会从父文件的目录开始，然后在所有祖父文件的目录中继续进行。 即，搜索将相对于包含当前正在处理的源的目录开始。 如果找不到该文件，则搜索会移动到由指定的目录[/I （附加包含目录）](../build/reference/i-additional-include-directories.md)编译器选项。 最后，将搜索 INCLUDE 环境变量指定的目录。
+当包含文件嵌套并在命令行上编译时, 目录搜索会从父文件的目录开始。 然后, 它会遍历所有祖父文件的目录。 即，搜索将相对于包含当前正在处理的源的目录开始。 如果找不到该文件, 则搜索会移动到由[/i (附加包含目录)](../build/reference/i-additional-include-directories.md)编译器选项指定的目录。 最后，将搜索 INCLUDE 环境变量指定的目录。
 
-从 Visual Studio 开发环境中，将忽略 INCLUDE 环境变量。 有关如何设置搜索包含文件的目录信息 — 这也适用于 LIB 环境变量，请参阅[VC + + Directories Property Page](../build/reference/vcpp-directories-property-page.md)。
+在 Visual Studio 开发环境中, 将忽略 INCLUDE 环境变量。 有关如何设置要在其中搜索包含文件和库文件的目录的信息, 请参阅 " [VC + + 目录" 属性页](../build/reference/vcpp-directories-property-page.md)。
 
 此示例使用尖括号显示文件包含：
 
-```
+```C
 #include <stdio.h>
 ```
 
-此示例将名为 STDIO.H 文件的内容添加到源程序。 尖括号会促使预处理器搜索 INCLUDE 环境变量指定 STDIO 的目录。H 之后它将搜索由指定的目录, **/I**编译器选项。
+此示例将名为 STDIO.H 文件的内容添加到源程序。 尖括号导致预处理器在 INCLUDE 环境变量指定的目录中搜索 STDIO.H。H. 搜索由 **/i**编译器选项指定的目录。
 
 下一个示例用引号形式显示文件包含：
 
-```
+```C
 #include "defs.h"
 ```
 
 此示例将 DEFS.H 指定的文件的内容添加到源程序。 双引号意味着，预处理器将首先搜索包含父源文件的目录。
 
-包含文件的嵌套可扩展至 10 个级别。 当嵌套 **#include**是处理，预处理器将继续到原始的源文件中插入封闭的包含文件。
+包含文件的嵌套可扩展至 10 个级别。 处理嵌套的 **#include**后, 预处理器将继续在原始源文件中插入封闭的包含文件。
 
 **Microsoft 专用**
 
-若要查找可包含的源文件，预处理器首先搜索由指定的目录 **/I**编译器选项。 如果 **/I**选项不存在或失败，则预处理器使用 INCLUDE 环境变量来查找在尖括号内包含文件。 INCLUDE 环境变量和 **/I**编译器选项可以包含多个路径，之间用分号分隔 (**;**)。 如果多个目录显示为的一部分 **/I**选项，或在 INCLUDE 环境变量，预处理器搜索它们的显示顺序。
+若要查找可包含源文件, 预处理器首先搜索由 **/i**编译器选项指定的目录。 如果 **/i**选项不存在或失败, 则预处理器将使用 INCLUDE 环境变量在尖括号中查找任意包含文件。 INCLUDE 环境变量和 **/i**编译器选项可包含多个路径, 以分号 ( **;** ) 分隔。 如果多个目录显示为 **/i**选项的一部分或在 INCLUDE 环境变量中, 预处理器会按照它们出现的顺序进行搜索。
 
 例如，命令
 
-```
+```cmd
 CL /ID:\MSVC\INCLUDE MYPROG.C
 ```
 
 会促使预处理器搜索包含文件（如 STDIO.H）的目录 D:\MSVC\INCLUDE\。 命令
 
-```
+```cmd
 SET INCLUDE=D:\MSVC\INCLUDE
 CL MYPROG.C
 ```
@@ -90,11 +88,11 @@ CL MYPROG.C
 
 如果为路径包含冒号的包含文件指定完整的文件名（例如，F:\MSVC\SPECIAL\INCL\TEST.H），则预处理器会遵循该路径。
 
-包含文件指定为`#include "path-spec"`，目录搜索父文件的目录开始，然后在继续进行任何祖父文件的目录。 也就是说，相对于包含包含的源文件的目录搜索开始 **#include**正在处理的指令。 如果没有祖父文件且没有找到该文件，则搜索会像文件名括在尖括号中一样继续进行。
+对于指定为`#include "path-spec"`的包含文件, 目录搜索从父文件的目录开始, 然后在所有祖父文件的目录中继续进行。 也就是说, 搜索将相对于包含要处理的 **#include**指令的源文件的目录开始。 如果没有祖父文件且没有找到该文件，则搜索会像文件名括在尖括号中一样继续进行。
 
 **结束 Microsoft 专用**
 
 ## <a name="see-also"></a>请参阅
 
-[预处理器指令](../preprocessor/preprocessor-directives.md)<br/>
-[/I （附加包含目录）](../build/reference/i-additional-include-directories.md)<br/>
+[预处理器指令](../preprocessor/preprocessor-directives.md)\
+[/I (附加包含目录)](../build/reference/i-additional-include-directories.md)

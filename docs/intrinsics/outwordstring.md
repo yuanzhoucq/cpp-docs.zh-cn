@@ -1,6 +1,6 @@
 ---
 title: __outwordstring
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __outwordstring
 helpviewer_keywords:
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - __outwordstring intrinsic
 - outsw instruction
 ms.assetid: b470c7a0-1de9-4370-886a-b2c3a1f842f4
-ms.openlocfilehash: d7141dd7f9f1f81e905952959e392a23d141f4e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3cc5b0ae2101c86e3dc899b7924ec2524f0ea6e7
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396595"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217119"
 ---
-# <a name="outwordstring"></a>__outwordstring
+# <a name="__outwordstring"></a>__outwordstring
 
 **Microsoft 专用**
 
-将生成`rep outsw`指令，将发送`Count`处开头的单词`Buffer`出指定的 I/O 端口`Port`。
+生成指令, 该指令将从*Buffer*开始的*计数*字词发送到端口指定的 i/o 端口。 `rep outsw`
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 void __outwordstring(
    unsigned short Port,
    unsigned short* Buffer,
@@ -31,16 +31,16 @@ void __outwordstring(
 );
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-*端口*<br/>
-[in]要向其发送数据的端口。
+*口*\
+中要将数据发送到的端口。
 
-*Buffer*<br/>
-[in]指向要指定的端口发送的数据的指针。
+*宽限*\
+中指向要通过指定端口发送的数据的指针。
 
-“计数”<br/>
-[in]若要发送的单词数。
+*计*\
+中要发送的单词数。
 
 ## <a name="requirements"></a>要求
 
@@ -48,7 +48,7 @@ void __outwordstring(
 |---------------|------------------|
 |`__outwordstring`|x86、x64|
 
-**标头文件** \<intrin.h >
+**标头文件**\<intrin.h >
 
 ## <a name="remarks"></a>备注
 

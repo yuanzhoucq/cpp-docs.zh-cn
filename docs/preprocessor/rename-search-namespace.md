@@ -1,33 +1,31 @@
 ---
-title: rename_search_namespace
-ms.date: 10/18/2018
+title: rename_search_namespace 导入属性
+ms.date: 08/29/2019
 f1_keywords:
 - rename_search_namespace
 helpviewer_keywords:
 - rename_search_namespace attribute
 ms.assetid: 47c9d7fd-59dc-4c62-87a1-9011a0040167
-ms.openlocfilehash: ca5d24ca9cc12e9defaa395cf150bc3c04ee4439
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 42c6edb6aa34b441db8041dd2974728c138b2c82
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179771"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216632"
 ---
-# <a name="renamesearchnamespace"></a>rename_search_namespace
+# <a name="rename_search_namespace-import-attribute"></a>rename_search_namespace 导入属性
 
-**C++特定**
+**C++相关**
 
-具有相同的功能[rename_namespace](../preprocessor/rename-namespace.md)属性，但在您使用的类型库使用`#import`指令与[auto_search](../preprocessor/auto-search.md)属性。
+具有与[rename_namespace](../preprocessor/rename-namespace.md)特性相同的功能, 但用于与`#import` [auto_search](../preprocessor/auto-search.md)特性一起使用指令的类型库。
 
 ## <a name="syntax"></a>语法
 
-```
-rename_search_namespace("NewName")
-```
+> **#import***类型库***rename_search_namespace (** "*NewName*" **)**
 
 ### <a name="parameters"></a>参数
 
-*NewName*<br/>
+*NewName*\
 命名空间的新名称。
 
 ## <a name="remarks"></a>备注
@@ -36,5 +34,5 @@ rename_search_namespace("NewName")
 
 ## <a name="see-also"></a>请参阅
 
-[#import 属性](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import 特性](../preprocessor/hash-import-attributes-cpp.md)\
 [#import 指令](../preprocessor/hash-import-directive-cpp.md)

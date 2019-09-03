@@ -1,6 +1,6 @@
 ---
 title: _bittestandreset、_bittestandreset64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _bittestandreset64_cpp
 - _bittestandreset
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - _bittestandreset intrinsic
 - _bittestandreset64 intrinsic
 ms.assetid: 8dad63bb-a051-4cd7-a793-3357537dfeaf
-ms.openlocfilehash: 53a9921b856a3bc489d1d8e1cd78a4cfa7493320
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e0c869b926b2f9f3c04fd648f84ef33b8d16fcd
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349142"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216919"
 ---
-# <a name="bittestandreset-bittestandreset64"></a>_bittestandreset、_bittestandreset64
+# <a name="_bittestandreset-_bittestandreset64"></a>_bittestandreset、_bittestandreset64
 
 **Microsoft 专用**
 
-生成可以检查地址 `b` 的位 `a`，返回其当前值，然后将位重新设置为 0 的指令。
+生成指令以检查地址`b` `a`的位, 返回其当前值, 然后将位重置为0。
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 unsigned char _bittestandreset(
    long *a,
    long b
@@ -37,13 +37,13 @@ unsigned char _bittestandreset64(
 );
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-*a*<br/>
-[in、 out]指向要检查的内存的指针。
+*的*\
+[in, out]指向要检查的内存的指针。
 
-*b*<br/>
-[in]要测试的位位置。
+*b*\
+中要测试的位位置。
 
 ## <a name="return-value"></a>返回值
 
@@ -53,10 +53,10 @@ unsigned char _bittestandreset64(
 
 |内部函数|体系结构|
 |---------------|------------------|
-|`_bittestandreset`|x86、 ARM、 x64|
-|`_bittestandreset64`|X64|
+|`_bittestandreset`|x86、ARM、x64、ARM64|
+|`_bittestandreset64`|x64、ARM64|
 
-**标头文件** \<intrin.h >
+**标头文件**\<intrin.h >
 
 ## <a name="remarks"></a>备注
 
@@ -64,7 +64,7 @@ unsigned char _bittestandreset64(
 
 ## <a name="example"></a>示例
 
-```
+```cpp
 // bittestandreset.cpp
 // processor: x86, IPF, x64
 #include <stdio.h>

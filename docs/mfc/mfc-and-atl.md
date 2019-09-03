@@ -2,12 +2,13 @@
 title: MFC 和 ATL
 ms.date: 01/24/2018
 ms.assetid: 31b1a3a8-4154-4c4a-af10-fafc23ecdc5c
-ms.openlocfilehash: 2d986c3237a6fa58cfcebef29939dbf6b1c316ae
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.topic: landing-page
+ms.openlocfilehash: 3eba0731c01fe232334efb4a2ff7df7179747b3e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65706622"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218739"
 ---
 # <a name="mfc-and-atl"></a>MFC 和 ATL
 
@@ -17,7 +18,7 @@ Microsoft 基础类 (MFC) 通过 Win32 提供面向 C++ 对象的包装，以便
 
 在 Visual Studio 2015 中，Visual C++ 是一个可选组件，MFC 和 ATL 组件是 Visual C++ 下的可选子组件。 如果首次安装 Visual Studio 时未选择这些组件，则在你第一次尝试创建或打开 MFC 或 ATL 项目时，系统将提示你安装它们。
 
-在 Visual Studio 2017 及更高版本，MFC 和 ATL 是下的可选子组件**使用的桌面开发C++**  Visual Studio 安装程序中的工作负荷。 您可以安装而不使用 MFC、 ATL 支持或结合使用 MFC 和 ATL 支持 （MFC 取决于 ATL）。 有关工作负载和组件的详细信息，请参阅[安装 Visual Studio](/visualstudio/install/install-visual-studio)。
+在 Visual Studio 2017 及更高版本中, MFC 和 ATL 是 Visual Studio 安装程序计划中的工作负荷的**桌面开发C++** 下的可选子组件。 可以安装不带 MFC 的 ATL 支持或组合的 MFC 和 ATL 支持 (MFC 依赖于 ATL)。 有关工作负载和组件的详细信息, 请参阅[安装 Visual Studio](/visualstudio/install/install-visual-studio)。
 
 ## <a name="related-articles"></a>相关文章
 

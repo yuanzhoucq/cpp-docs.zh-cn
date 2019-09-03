@@ -1,6 +1,6 @@
 ---
 title: __stosd
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __stosd
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - rep stosd instruction
 - __stosd intrinsic
 ms.assetid: 03104247-1cea-49f6-b6f8-287917bf5680
-ms.openlocfilehash: 43a0efcfb94b7e53dacec16caccdacf86a96f5bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c46bb124390ff23d79361c66530493c48faf3f0a
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390251"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219976"
 ---
-# <a name="stosd"></a>__stosd
+# <a name="__stosd"></a>__stosd
 
 **Microsoft 专用**
 
-生成的存储字符串指令 (`rep stosd`)。
+生成存储字符串指令 (`rep stosd`)。
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 void __stosd(
-   unsigned long* Dest,
+   unsigned long* Destination,
    unsigned long Data,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-*dest*<br/>
-[out]该操作的目标。
+*位置*\
+弄操作的目标。
 
-*Data*<br/>
-[in]要存储的数据。
+*数据*\
+中要存储的数据。
 
-“计数”<br/>
-[in]双字写入的块的长度。
+*计*\
+中要写入的双字块的长度。
 
 ## <a name="requirements"></a>要求
 
@@ -48,17 +48,17 @@ void __stosd(
 |---------------|------------------|
 |`__stosd`|x86、x64|
 
-**标头文件** \<intrin.h >
+**标头文件**\<intrin.h >
 
 ## <a name="remarks"></a>备注
 
-结果是，双字`Data`写入到块`Count`指向的内存位置的双字`Dest`。
+结果是, 将双字*数据*写入到*目标*所指向的内存位置上的*计数*的双字块中。
 
 此例程仅可用作内部函数。
 
 ## <a name="example"></a>示例
 
-```
+```C
 // stosd.c
 // processor: x86, x64
 

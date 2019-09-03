@@ -9,12 +9,13 @@ helpviewer_keywords:
 - builds [C++], options
 - C++, build options
 ms.assetid: fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008
-ms.openlocfilehash: 672dea77c4165ddcd84d3253525dc8c2d8be3e7c
-ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
+ms.topic: landing-page
+ms.openlocfilehash: b0ca5f28aea30ccf1e66ecd354ab15aae3e2d38a
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68313173"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216425"
 ---
 # <a name="cc-projects-and-build-systems-in-visual-studio"></a>Visual StudioC++中的 C/项目和生成系统
 
@@ -22,7 +23,7 @@ ms.locfileid: "68313173"
 
 ## <a name="c-compilation"></a>C++汇编
 
-若  要生成C++程序, 则意味着要从一个或多个文件编译源代码, 然后将这些文件链接到可执行文件 (.exe)、动态加载库 (.dll) 或静态库 (.lib)。 
+若要生成C++程序, 则意味着要从一个或多个文件编译源代码, 然后将这些文件链接到可执行文件 (.exe)、动态加载库 (.dll) 或静态库 (.lib)。 
 
 基本C++编译涉及三个主要步骤:
 

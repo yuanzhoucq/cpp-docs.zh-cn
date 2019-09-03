@@ -1,6 +1,6 @@
 ---
 title: _InterlockedExchange 内部函数
-ms.date: 12/17/2018
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedExchange_rel
 - _InterlockedExchange8_nf
@@ -44,12 +44,12 @@ helpviewer_keywords:
 - _InterlockedExchange intrinsic
 - _InterlockedExchange8_nf
 ms.assetid: be2f232a-6301-462a-a92b-fcdeb8b0f209
-ms.openlocfilehash: c96ce57854bfb3eea0e1b8bc6283984c7fce50f9
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 53c3545be5e74d802fe63f8e7c03d2a7a2b26110
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509388"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222004"
 ---
 # <a name="_interlockedexchange-intrinsic-functions"></a>_InterlockedExchange 内部函数
 
@@ -59,7 +59,7 @@ ms.locfileid: "69509388"
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 long _InterlockedExchange(
    long volatile * Target,
    long Value
@@ -142,12 +142,12 @@ __int64 _InterlockedExchange64_rel(
 );
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-*Target*<br/>
+*靶*\
 [in, out]指向要交换的值的指针。 此函数会将此变量设置为 `Value` 并返回其之前的值。
 
-*ReplTest1*<br/>
+*负值*\
 中要与所指向的`Target`值交换的值。
 
 ## <a name="return-value"></a>返回值
@@ -158,9 +158,11 @@ __int64 _InterlockedExchange64_rel(
 
 |内部函数|体系结构|Header|
 |---------------|------------------|------------|
-|`_InterlockedExchange`, `_InterlockedExchange8`, `_InterlockedExchange16`, `_InterlockedExchange64`|x86、ARM、x64|\<intrin.h>|
-|`_InterlockedExchange_acq`、`_InterlockedExchange_nf`、`_InterlockedExchange_rel`、`_InterlockedExchange8_acq`、`_InterlockedExchange8_nf`、`_InterlockedExchange8_rel`、`_InterlockedExchange16_acq`、`_InterlockedExchange16_nf`、`_InterlockedExchange16_rel`、`_InterlockedExchange64_acq`、`_InterlockedExchange64_nf`、`_InterlockedExchange64_rel`、|ARM|\<intrin.h>|
-|`_InterlockedExchange_HLEAcquire`, `_InterlockedExchange_HLERelease`, `_InterlockedExchange64_HLEAcquire`, `_InterlockedExchange64_HLERelease`|x86、x64|\<immintrin.h>|
+|`_InterlockedExchange`, `_InterlockedExchange8`, `_InterlockedExchange16`|x86、ARM、x64、ARM64|\<intrin.h>|
+|`_InterlockedExchange64`|ARM、x64、ARM64|\<intrin.h>|
+|`_InterlockedExchange_acq`、`_InterlockedExchange_nf`、`_InterlockedExchange_rel`、`_InterlockedExchange8_acq`、`_InterlockedExchange8_nf`、`_InterlockedExchange8_rel`、`_InterlockedExchange16_acq`、`_InterlockedExchange16_nf`、`_InterlockedExchange16_rel`、`_InterlockedExchange64_acq`、`_InterlockedExchange64_nf`、`_InterlockedExchange64_rel`、|ARM, ARM64|\<intrin.h>|
+|`_InterlockedExchange_HLEAcquire`， `_InterlockedExchange_HLERelease`|x86、x64|\<immintrin.h>|
+|`_InterlockedExchange64_HLEAcquire`， `_InterlockedExchange64_HLERelease`|X64|\<immintrin.h>|
 
 ## <a name="remarks"></a>备注
 
@@ -170,7 +172,7 @@ __int64 _InterlockedExchange64_rel(
 
 当 `_InterlockedExchange` 函数对 32 位整数值操作时，`_InterlockedExchange8` 对 8 位整数值操作，`_InterlockedExchange16` 对 16 位整数值操作且 `_InterlockedExchange64` 对 64 位整数值操作。
 
-在 ARM 平台上，可以使用带 `_acq` 和 `_rel` 后缀的内部函数获取和发布语义，例如在临界区的起始位置。 带 `_nf`（“无围墙”）后缀的内部函数不能充当内存屏障。
+在 ARM 平台上，可以使用带 `_acq` 和 `_rel` 后缀的内部函数获取和发布语义，例如在临界区的起始位置。 带`_nf` ("无围墙") 后缀的内部函数不能充当内存屏障。
 
 在支持硬件锁省略 (HLE) 指令的 Intel 平台，带 `_HLEAcquire` 和 `_HLERelease` 后缀的内部函数包括一个发送到处理器的提示，可以通过消除硬件中的锁写步骤来提升速度。 如果在不支持 HLE 的平台上调用这些函数，则忽略此提示。
 
@@ -184,6 +186,6 @@ __int64 _InterlockedExchange64_rel(
 
 ## <a name="see-also"></a>请参阅
 
-[编译器内部函数](../intrinsics/compiler-intrinsics.md)<br/>
-[关键字](../cpp/keywords-cpp.md)<br/>
+[编译器内部函数](../intrinsics/compiler-intrinsics.md)\
+[关键字](../cpp/keywords-cpp.md)\
 [与 x86 编译器冲突](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

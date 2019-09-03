@@ -1,6 +1,6 @@
 ---
 title: _InterlockedIncrement 内部函数
-ms.date: 12/17/2018
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedIncrement_acq
 - _InterlockedIncrement16_rel_cpp
@@ -44,12 +44,12 @@ helpviewer_keywords:
 - _InterlockedIncrement_acq intrinsic
 - InterlockedIncrement intrinsic
 ms.assetid: 37700615-f372-438b-bcef-d76e11839482
-ms.openlocfilehash: 58c71c577e3d87ca72836134a4f895f32170fe7f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 4dd9ae9ba5454b0afefa332689d94fa3619a07a6
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509355"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221982"
 ---
 # <a name="_interlockedincrement-intrinsic-functions"></a>_InterlockedIncrement 内部函数
 
@@ -59,7 +59,7 @@ ms.locfileid: "69509355"
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 long _InterlockedIncrement(
    long * lpAddend
 );
@@ -98,9 +98,9 @@ __int64 _InterlockedIncrement64_nf(
 );
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-*lpAddend*<br/>
+*lpAddend*\
 [in, out]指向要递增的变量的指针。
 
 ## <a name="return-value"></a>返回值
@@ -111,8 +111,9 @@ __int64 _InterlockedIncrement64_nf(
 
 |内部函数|体系结构|Header|
 |---------------|------------------|------------|
-|`_InterlockedIncrement`, `_InterlockedIncrement16`, `_InterlockedIncrement64`|x86、ARM、x64|\<intrin.h>|
-|`_InterlockedIncrement_acq`、`_InterlockedIncrement_rel`、`_InterlockedIncrement_nf`、`_InterlockedIncrement16_acq`、`_InterlockedIncrement16_rel`、`_InterlockedIncrement16_nf`、`_InterlockedIncrement64_acq`、`_InterlockedIncrement64_rel`、`_InterlockedIncrement64_nf`|ARM|\<intrin.h>|
+|`_InterlockedIncrement`， `_InterlockedIncrement16`|x86、ARM、x64、ARM64|\<intrin.h>|
+|`_InterlockedIncrement64`|ARM、x64、ARM64|\<intrin.h>|
+|`_InterlockedIncrement_acq`、`_InterlockedIncrement_rel`、`_InterlockedIncrement_nf`、`_InterlockedIncrement16_acq`、`_InterlockedIncrement16_rel`、`_InterlockedIncrement16_nf`、`_InterlockedIncrement64_acq`、`_InterlockedIncrement64_rel`、`_InterlockedIncrement64_nf`|ARM, ARM64|\<intrin.h>|
 
 ## <a name="remarks"></a>备注
 
@@ -120,7 +121,7 @@ __int64 _InterlockedIncrement64_nf(
 
 当 `_InterlockedIncrement` 函数对 32 位整数值操作时，`_InterlockedIncrement16` 对 16 位整数值操作且 `_InterlockedIncrement64` 可以对 64 位整数值操作。
 
-ARM 平台上，如果需要（例如在临界区的起点和终点）获取和发布语义，可以使用带 `_acq` 和 `_rel` 后缀的函数。 带 `_nf`（“无围墙”）后缀的内部函数不能充当内存屏障。
+ARM 平台上，如果需要（例如在临界区的起点和终点）获取和发布语义，可以使用带 `_acq` 和 `_rel` 后缀的函数。 带`_nf` ("无围墙") 后缀的内部函数不能充当内存屏障。
 
 由 `lpAddend` 参数指向的变量必须与 32 位边界对齐；否则，此函数在多处理器 x86 系统和任何非 x86 系统上将失效。 有关详细信息, 请参阅[align](../cpp/align-cpp.md)。
 
@@ -136,6 +137,6 @@ Win32 函数在 `Wdm.h` 或 `Ntddk.h` 中声明。
 
 ## <a name="see-also"></a>请参阅
 
-[编译器内部函数](../intrinsics/compiler-intrinsics.md)<br/>
-[关键字](../cpp/keywords-cpp.md)<br/>
+[编译器内部函数](../intrinsics/compiler-intrinsics.md)\
+[关键字](../cpp/keywords-cpp.md)\
 [与 x86 编译器冲突](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

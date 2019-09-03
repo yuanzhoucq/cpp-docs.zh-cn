@@ -1,36 +1,35 @@
 ---
-title: raw_dispinterfaces
-ms.date: 11/04/2016
+title: raw_dispinterfaces 导入属性
+ms.date: 08/29/2019
 f1_keywords:
 - raw_dispinterfaces
 helpviewer_keywords:
 - raw_dispinterfaces attribute
 ms.assetid: f762864d-29bf-445b-825a-ba7b29a95409
-ms.openlocfilehash: ef8ed3992c77df0f1d551e923ddc90c2d1bb9b0b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73c58b72b27de8dcf96e8ab9464d0fb6bce12b66
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179836"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216229"
 ---
-# <a name="rawdispinterfaces"></a>raw_dispinterfaces
-**C++特定**
+# <a name="raw_dispinterfaces-import-attribute"></a>raw_dispinterfaces 导入属性
 
-告知编译器生成低级别的包装函数的调用调度接口方法和属性的`IDispatch::Invoke`并返回 HRESULT 错误代码。
+**C++相关**
+
+通知编译器为调度接口方法生成低级别包装函数, 并通知调用`IDispatch::Invoke`并返回 HRESULT 错误代码的属性。
 
 ## <a name="syntax"></a>语法
 
-```
-raw_dispinterfaces
-```
+> **#import***类型库***raw_dispinterfaces**
 
 ## <a name="remarks"></a>备注
 
-如果未指定该特性，则只生成高级包装器，它在失败时引发 C++ 异常。
+如果未指定此特性, 则仅生成高级包装, 这会在失败C++时引发异常。
 
 **结束C++特定**
 
 ## <a name="see-also"></a>请参阅
 
-[#import 属性](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import 特性](../preprocessor/hash-import-attributes-cpp.md)\
 [#import 指令](../preprocessor/hash-import-directive-cpp.md)

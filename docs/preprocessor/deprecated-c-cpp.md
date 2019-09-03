@@ -1,6 +1,6 @@
 ---
-title: 已弃用 (C/C++)
-ms.date: 11/04/2016
+title: 已弃用杂注
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.deprecated
 - deprecated_CPP
@@ -8,35 +8,33 @@ helpviewer_keywords:
 - deprecated pragma
 - pragmas, deprecated
 ms.assetid: 9c046f12-7875-499a-8d5d-12f8642fed2d
-ms.openlocfilehash: 262b23e6e4813a5e22bc3f4e7c9a18efb9988a7c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e76d1c53cb900c108e2839a9aad17b330143a5d
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389289"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222403"
 ---
-# <a name="deprecated-cc"></a>已弃用 (C/C++)
+# <a name="deprecated-pragma"></a>已弃用杂注
 
-**弃用**杂注，可以指示，一个函数、 类型或任何其他标识符可能不再支持在以后发布或不再使用。
+**弃用**的杂注使你可以指示函数、类型或任何其他标识符在未来版本中可能不再受支持, 也不应再使用。
 
 > [!NOTE]
-> 有关 C + + 14`[[deprecated]]`属性，并指导用户何时使用该属性与 Microsoft declspec 或杂注，请参阅[C++标准属性](../cpp/attributes.md)属性。
+> 有关 c `[[deprecated]]` + + 14 属性的信息, 以及有关何时使用该属性而不是 Microsoft `__declspec(deprecated)`修饰符或不**推荐**使用的杂注的指导, 请参阅中[ C++的属性](../cpp/attributes.md)。
 
 ## <a name="syntax"></a>语法
 
-```
-#pragma deprecated( identifier1 [,identifier2, ...] )
-```
+> **#pragma 弃用 (** *identifier1* [ **,** *identifier2* ...] **)**
 
 ## <a name="remarks"></a>备注
 
-当编译器遇到指定的标识符**弃用**杂注，它会发出编译器警告[C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md)。
+当编译器遇到不**推荐使用**的杂注所指定的标识符时, 它会发出编译器警告[C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md)。
 
 可以否决宏名称。 将宏名称包含在引号内，否则宏将展开。
 
-因为**弃用**杂注，适用于所有匹配的标识符，而不考虑使用签名，它不是即将弃用的特定版本的重载函数的最佳选项。 引入到范围的任何匹配的函数名称将触发警告。
+由于**弃用**的杂注适用于所有匹配标识符, 并且不考虑签名, 因此它不是弃用特定版本重载函数的最佳选项。 引入到作用域中的任何匹配的函数名称都会触发警告。
 
-我们建议你使用 C + + 14`[[deprecated]]`属性，如果可能，而不是**弃用**杂注。 Microsoft 专用[__declspec （deprecated)](../cpp/deprecated-cpp.md)声明修饰符也是更好的选择在许多情况下比**弃用**杂注。 `[[deprecated]]`属性和`__declspec(deprecated)`修饰符，可以指定不推荐使用的重载函数的特殊形式的状态。 诊断警告仅出现在对特定重载函数的引用属性还是适用于修饰符。
+建议尽可能使用 c + + 14 `[[deprecated]]`属性, 而不是已**弃用**的杂注。 在许多情况下, 与不**推荐使用**的杂注相比, Microsoft 特定的[__declspec (弃用)](../cpp/deprecated-cpp.md)声明修饰符也是更好的选择。 `[[deprecated]]`特性和`__declspec(deprecated)`修饰符允许您为特定窗体的重载函数指定弃用状态。 仅在对属性或修饰符适用于特定重载函数的引用上显示诊断警告。
 
 ## <a name="example"></a>示例
 
@@ -77,4 +75,4 @@ int main() {
 
 ## <a name="see-also"></a>请参阅
 
-[Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Pragma 指令和 __pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

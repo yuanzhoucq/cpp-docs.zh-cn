@@ -1,16 +1,16 @@
 ---
-title: 默认情况下处于关闭状态的编译器警告
-ms.date: 05/30/2018
+title: 默认关闭的编译器警告
+ms.date: 08/29/2019
 helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: 1a95153f3cefd2bcfcae6ebb297a7c6b52944f82
-ms.sourcegitcommit: d3829ae0c3db909f96057755a80665f5ea4896ea
+ms.openlocfilehash: a8b203c94d4a5af28837627fda1b8e1631dfb0c0
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69550465"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220483"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>默认关闭的编译器警告
 
@@ -150,15 +150,13 @@ ms.locfileid: "69550465"
 |C5042 (等级 3)|"*function*": 不能在标准C++中指定块范围内的函数声明;删除 "inline" 说明符<sup>15.5</sup>|
 |[C5045](../error-messages/compiler-warnings/c5045.md)|如果/Qspectre 开关指定<sup>15.7</sup> , 编译器将插入内存加载的 Spectre 缓解|
 
-<sup>14.1</sup>从 Visual Studio 2015 Update 1 开始提供此警告。<br/>
-<sup>14.3</sup>从 Visual Studio 2015 Update 3 开始提供此警告。<br/>
-<sup>15.3</sup>从 Visual Studio 2017 版本15.3 开始, 此警告已推出。<br/>
-<sup>15.5</sup>从 Visual Studio 2017 版本15.5 开始, 此警告已推出。<br/>
-<sup>15.7</sup>从 Visual Studio 2017 版本15.7 开始, 此警告已推出。<br/>
-<sup>15.8</sup>从 Visual Studio 2017 版本15.8 开始, 此警告已推出。<br/>
-::: moniker range=">= vs-2019"
-<sup>16.0</sup>从 Visual STUDIO 2019 RTM 开始, 此警告已推出。<br/>
-::: moniker-end
+<sup>14.1</sup>从 Visual Studio 2015 Update 1 开始提供此警告。 \
+<sup>14.3</sup>从 Visual Studio 2015 Update 3 开始提供此警告。 \
+<sup>15.3</sup>从 Visual Studio 2017 版本15.3 开始, 此警告已推出。
+<sup>15.5</sup>从 Visual Studio 2017 版本15.5 开始, 此警告已推出。
+<sup>15.7</sup>从 Visual Studio 2017 版本15.7 开始, 此警告已推出。
+<sup>15.8</sup>从 Visual Studio 2017 版本15.8 开始, 此警告已推出。
+<sup>16.0</sup>在 Visual STUDIO 2019 RTM 中开始提供此警告。 \
 <sup>永久状态</sup>除非设置了[/permissive-](../build/reference/permissive-standards-conformance.md)编译器选项, 否则将关闭此警告。
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>默认情况下, 在早期版本中关闭警告

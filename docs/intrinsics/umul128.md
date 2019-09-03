@@ -1,19 +1,19 @@
 ---
 title: _umul128
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __umul128
 helpviewer_keywords:
 - __umul128 intrinsic
 ms.assetid: 13684df3-3ac7-467c-b258-a0e93bc490b5
-ms.openlocfilehash: afca1e62127ac2dbcfc407982dbe191d379b4acb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 205f0f7f9046ede624bb09e18d8ede32fadbc3de
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390095"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219690"
 ---
-# <a name="umul128"></a>_umul128
+# <a name="_umul128"></a>_umul128
 
 **Microsoft 专用**
 
@@ -21,7 +21,7 @@ ms.locfileid: "62390095"
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 unsigned __int64 _umul128(
    unsigned __int64 Multiplier,
    unsigned __int64 Multiplicand,
@@ -29,16 +29,16 @@ unsigned __int64 _umul128(
 );
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-*乘数*<br/>
-[in]要相乘的第一个 64 位整数。
+*乘数*\
+中要相乘的第一个64位整数。
 
-*被乘数*<br/>
-[in]要相乘的第二个 64 位整数。
+*被乘数*\
+中要相乘的第二个64位整数。
 
-*HighProduct*<br/>
-[out]该产品的高 64 位。
+*HighProduct*\
+弄产品的高64位。
 
 ## <a name="return-value"></a>返回值
 
@@ -52,7 +52,7 @@ unsigned __int64 _umul128(
 
 ## <a name="example"></a>示例
 
-```
+```C
 // umul128.c
 // processor: x64
 

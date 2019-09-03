@@ -1,6 +1,6 @@
 ---
-title: warning
-ms.date: 11/04/2016
+title: warning 杂注
+ms.date: 08/29/2019
 f1_keywords:
 - warning_CPP
 - vc-pragma.warning
@@ -10,24 +10,24 @@ helpviewer_keywords:
 - pop warning pragma
 - warning pragma
 ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
-ms.openlocfilehash: 1341472af22582635207a2bdff93b4367fd59330
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a79f0c4a9eed6b62e42f056f9d1994b44b57297
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179927"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216472"
 ---
-# <a name="warning-pragma"></a>警告杂注
+# <a name="warning-pragma"></a>warning 杂注
+
 启用编译器警告消息的行为的选择性修改。
 
 ## <a name="syntax"></a>语法
 
-```
-#pragma warning(
-    warning-specifier : warning-number-list [; warning-specifier : warning-number-list...] )
-#pragma warning( push[ ,n ] )
-#pragma warning( pop )
-```
+> **#pragma 警告 (** \
+> &nbsp;&nbsp;&nbsp;&nbsp;*warning-说明符* **:** *警告编号-列表*\
+> &nbsp;&nbsp;&nbsp;&nbsp;[ **;** *warning-说明符* **:** *警告-数字列表*...] **)** \
+> **#pragma warning (push** [ **,** *n* ] **)** \
+> **#pragma 警告 (pop)**
 
 ## <a name="remarks"></a>备注
 
@@ -35,9 +35,9 @@ ms.locfileid: "62179927"
 
 |警告说明符|含义|
 |------------------------|-------------|
-|*1, 2, 3, 4*|将给定级别应用于指定的警告。 这也会启用默认情况下处于关闭状态的指定警告。|
-|*default*|将警告行为重置为其默认值。 这也会启用默认情况下处于关闭状态的指定警告。 警告将在其默认存档级别生成。<br /><br /> 有关详细信息，请参阅 [Compiler Warnings That Are Off by Default](../preprocessor/compiler-warnings-that-are-off-by-default.md)。|
-|*disable*|不发出指定的警告消息。|
+|*1, 2, 3, 4*|将给定级别应用于指定的警告。 还会打开默认情况下处于关闭状态的指定警告。|
+|*default*|将警告行为重置为其默认值。 还会打开默认情况下处于关闭状态的指定警告。 警告将在其默认存档级别生成。<br /><br /> 有关详细信息, 请参阅[默认情况下处于关闭状态的编译器警告](../preprocessor/compiler-warnings-that-are-off-by-default.md)。|
+|*disable*|不要发出指定的警告消息。|
 |*error*|将指定警告报告为错误。|
 |*once*|只显示指定消息一次。|
 |*suppress*|将杂注的当前状态推送到堆栈上，禁用下一行的指定警告，然后弹出警告堆栈，从而重置杂注状态。|
@@ -48,7 +48,7 @@ ms.locfileid: "62179927"
 #pragma warning( disable : 4507 34; once : 4385; error : 164 )
 ```
 
-这在功能上等效于以下代码。
+此指令在功能上等效于以下代码:
 
 ```cpp
 // Disable warning messages 4507 and 4034.
@@ -63,7 +63,7 @@ ms.locfileid: "62179927"
 
 编译器将 4000 添加到 0 和 999 之间的任何警告编号。
 
-对于范围 4700-4999 内的警告编号（与代码生成相关联），在编译器遇到函数的左大括号时生效的警告状态将对函数的其余部分生效。 使用**警告**杂注中要更改具有编号大于 4699 的警告状态的函数在函数末尾后才会生效。 下面的示例显示了正确的位置**警告**杂注来禁用代码生成警告消息，然后再将其还原。
+对于范围 4700-4999 内的警告编号（与代码生成相关联），在编译器遇到函数的左大括号时生效的警告状态将对函数的其余部分生效。 使用函数中的**警告**杂注来更改大于4699的警告编号的状态仅在函数的末尾后生效。 下面的示例演示**警告**杂注的正确位置, 以禁用代码生成警告消息, 然后将其还原。
 
 ```cpp
 // pragma_warning.cpp
@@ -81,19 +81,19 @@ int main() {
 }
 ```
 
-请注意，在整个函数体的最后一个设置**警告**杂注将生效的整个函数。
+请注意, 在整个函数体中,**警告**杂注的最后一个设置将对整个函数有效。
 
 ## <a name="push-and-pop"></a>推送和弹出
 
-**警告**杂注还支持以下语法，其中*n*表示警告等级 (1 到 4)。
+**警告**杂注还支持以下语法, 其中*n*表示警告等级 (1 到 4)。
 
 `#pragma warning( push [ , n ] )`
 
 `#pragma warning( pop )`
 
-杂注`warning( push )`存储每个警告的当前警告状态。 杂注`warning( push, n )`存储每个警告的当前状态并将全局警告级别设置为*n*。
+杂注`warning( push )`存储每个警告的当前警告状态。 杂注`warning( push, n )`存储每个警告的当前状态, 并将全局警告等级设置为*n*。
 
-杂注`warning( pop )`pop 的最后一个警告状态推送到堆栈上。 警告状态之间所做的任何更改*推送*并*pop*的情况下撤消。 请看以下示例：
+杂注`warning( pop )`弹出推送到堆栈上的最后一个警告状态。 对*推送*和*pop*之间的警告状态所做的任何更改都将被撤消。 请看以下示例：
 
 ```cpp
 #pragma warning( push )
@@ -104,9 +104,9 @@ int main() {
 #pragma warning( pop )
 ```
 
-在此代码中，末尾*pop*还原每个警告的状态 （包括 4705、 4706 和 4707） 到其代码的开头。
+在此代码的末尾, *pop*将每个警告的状态 (包括4705、4706和 4707) 还原为它在代码开始时的状态。
 
-在编写标头文件时，可以使用*推送*并*pop*以保证，由用户所做的警告状态更改不会阻止标头进行正确的编译。 使用*推送*开头的标头和*pop*末尾。 例如，如果你具有不在警告等级 4 完全编译的标头，以下代码会将警告等级更改为 3，然后在标头的末尾还原原始警告等级。
+当你编写标头文件时, 可以使用*push*和*pop*来确保用户所做的警告状态更改不会阻止标头正确编译。 在标头开头使用*push* , 并在末尾使用*pop* 。 例如, 如果你有一个在警告级别4不完全编译的标头, 以下代码会将警告等级更改为 3, 然后在标头的末尾还原原始警告等级。
 
 ```cpp
 #pragma warning( push, 3 )
@@ -114,8 +114,8 @@ int main() {
 #pragma warning( pop )
 ```
 
-有关编译器选项，可以帮助您禁止显示警告，请参阅[/FI](../build/reference/fi-name-forced-include-file.md)并[/w](../build/reference/compiler-option-warning-level.md)。
+有关可帮助您禁止显示警告的编译器选项的详细信息, 请参阅[/fi](../build/reference/fi-name-forced-include-file.md)和[/w](../build/reference/compiler-option-warning-level.md)。
 
 ## <a name="see-also"></a>请参阅
 
-[Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Pragma 指令和 __pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

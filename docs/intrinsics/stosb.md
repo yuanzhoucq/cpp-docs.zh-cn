@@ -1,6 +1,6 @@
 ---
 title: __stosb
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __stosb
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - __stosb intrinsic
 - stosb instruction
 ms.assetid: 634589ed-2da3-439b-a381-a214d89bf10c
-ms.openlocfilehash: 679f1a892a6ee5b458a05d1577ecf766bed385dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: edf74da4c8b5aa97e542d89f55b3ed8411db9bac
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390277"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221212"
 ---
-# <a name="stosb"></a>__stosb
+# <a name="__stosb"></a>__stosb
 
 **Microsoft 专用**
 
-生成的存储字符串指令 (`rep stosb`)。
+生成存储字符串指令 (`rep stosb`)。
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 void __stosb(
-   unsigned char* Dest,
+   unsigned char* Destination,
    unsigned char Data,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-*dest*<br/>
-[out]该操作的目标。
+*位置*\
+弄操作的目标。
 
-*Data*<br/>
-[in]要存储的数据。
+*数据*\
+中要存储的数据。
 
-“计数”<br/>
-[in]要写入的字节块的长度。
+*计*\
+中要写入的字节块的长度。
 
 ## <a name="requirements"></a>要求
 
@@ -48,11 +48,11 @@ void __stosb(
 |---------------|------------------|
 |`__stosb`|x86、x64|
 
-**标头文件** \<intrin.h >
+**标头文件**\<intrin.h >
 
 ## <a name="remarks"></a>备注
 
-结果是，字符`Data`写入到块`Count`中的字节`Dest`字符串。
+结果是字符*数据*写入*目标*字符串中的*计数*字节块。
 
 此例程仅可用作内部函数。
 

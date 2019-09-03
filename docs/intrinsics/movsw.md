@@ -1,6 +1,6 @@
 ---
 title: __movsw
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __movsw
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - rep movsw instruction
 - __movsw intrinsic
 ms.assetid: db402ad5-7f0e-449a-b0b0-eea9928d6435
-ms.openlocfilehash: 3d584300b514ec3e79c44a2943b3fb8a79495df4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67eef7fe0a5b9803650f345740a8c40262cd2014
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263199"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221722"
 ---
-# <a name="movsw"></a>__movsw
+# <a name="__movsw"></a>__movsw
 
 **Microsoft 专用**
 
-生成移动字符串 (`rep movsw`) 指令。
+生成 Move String (`rep movsw`) 指令。
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 void __movsw(
-   unsigned short* Dest,
+   unsigned short* Destination,
    unsigned short* Source,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-*dest*<br/>
-[out]该操作的目标。
+*位置*\
+弄操作的目标。
 
-*源*<br/>
-[in]操作的源。
+*Source*\
+中操作的源。
 
-“计数”<br/>
-[in]若要复制的单词数。
+*计*\
+中要复制的单词数。
 
 ## <a name="requirements"></a>要求
 
@@ -48,17 +48,17 @@ void __movsw(
 |---------------|------------------|
 |`__movsw`|x86、x64|
 
-**标头文件** \<intrin.h >
+**标头文件**\<intrin.h >
 
 ## <a name="remarks"></a>备注
 
-结果是，第一个`Count`指向单词`Source`复制到`Dest`字符串。
+结果就是将*源*指向的第一个*计数*词复制到*目标*字符串。
 
 此例程仅可用作内部函数。
 
 ## <a name="example"></a>示例
 
-```
+```cpp
 // movsw.cpp
 // processor: x86, x64
 #include <stdio.h>

@@ -1,6 +1,6 @@
 ---
 title: __movsd
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __movsd
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - __movsd intrinsic
 - movsd instruction
 ms.assetid: eb5cccf3-aa76-47f0-b9fc-eeca38fd943f
-ms.openlocfilehash: 950e83f2cd03e92bb5a9f953affe8e7ff479a408
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c43f6bdb731abc281d60fe4bc6ecaec1331b9945
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263166"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221767"
 ---
-# <a name="movsd"></a>__movsd
+# <a name="__movsd"></a>__movsd
 
 **Microsoft 专用**
 
-生成移动字符串 (`rep movsd`) 指令。
+生成 Move String (`rep movsd`) 指令。
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 void __movsd(
-   unsigned long* Dest,
+   unsigned long* Destination,
    unsigned long* Source,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-*dest*<br/>
-[out]该操作的目标。
+*位置*\
+弄操作的目标。
 
-*源*<br/>
-[in]操作的源。
+*Source*\
+中操作的源。
 
-“计数”<br/>
-[in]双字数组要复制的数。
+*计*\
+中要复制的双字的数目。
 
 ## <a name="requirements"></a>要求
 
@@ -48,17 +48,17 @@ void __movsd(
 |---------------|------------------|
 |`__movsd`|x86、x64|
 
-**标头文件** \<intrin.h >
+**标头文件**\<intrin.h >
 
 ## <a name="remarks"></a>备注
 
-结果是，第一个`Count`指向双字`Source`复制到`Dest`字符串。
+结果是将*源*指向的第一个计数的第一个*计数*复制到*目标*字符串。
 
 此例程仅可用作内部函数。
 
 ## <a name="example"></a>示例
 
-```
+```cpp
 // movsd.cpp
 // processor: x86, x64
 #include <stdio.h>

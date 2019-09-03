@@ -1,6 +1,6 @@
 ---
 title: _bittestandset、_bittestandset64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _bittestandset_cpp
 - _bittestandset64_cpp
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - _bittestandset intrinsic
 - _bittestandset64 intrinsic
 ms.assetid: 6d6c8670-fea0-4c1c-9aad-2bb842715203
-ms.openlocfilehash: dadeeae23b1808bbee13940727a3bdbace1dad54
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d54be5688acfb1e3cfc9d79514c39f665efdd9fd
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264174"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216883"
 ---
-# <a name="bittestandset-bittestandset64"></a>_bittestandset、_bittestandset64
+# <a name="_bittestandset-_bittestandset64"></a>_bittestandset、_bittestandset64
 
 **Microsoft 专用**
 
-生成一个指令，该指令可以检查地址 `b` 的位 `a`，返回其当前值，然后将位设置为 1。
+生成一个指令以检查地址`b` `a`的位, 返回其当前值, 然后将位设置为1。
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 unsigned char _bittestandset(
    long *a,
    long b
@@ -37,13 +37,13 @@ unsigned char _bittestandset64(
 );
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-*a*<br/>
-[in、 out]指向要检查的内存的指针。
+*的*\
+[in, out]指向要检查的内存的指针。
 
-*b*<br/>
-[in]要测试的位位置。
+*b*\
+中要测试的位位置。
 
 ## <a name="return-value"></a>返回值
 
@@ -53,10 +53,10 @@ unsigned char _bittestandset64(
 
 |内部函数|体系结构|
 |---------------|------------------|
-|`_bittestandset`|x86、 ARM、 x64|
-|`_bittestandset64`|X64|
+|`_bittestandset`|x86、ARM、x64、ARM64|
+|`_bittestandset64`|x64、ARM64|
 
-**标头文件** \<intrin.h >
+**标头文件**\<intrin.h >
 
 ## <a name="remarks"></a>备注
 
@@ -64,7 +64,7 @@ unsigned char _bittestandset64(
 
 ## <a name="example"></a>示例
 
-```
+```cpp
 // bittestandset.cpp
 // processor: x86, ARM, x64
 // This example uses several of the _bittest family of intrinsics

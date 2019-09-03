@@ -1,6 +1,6 @@
 ---
 title: _InterlockedAnd 内部函数
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedAnd_rel
 - _InterlockedAnd_cpp
@@ -56,14 +56,14 @@ helpviewer_keywords:
 - _InterlockedAnd8 intrinsic
 - _InterlockedAnd_HLEAcquire intrinsic
 ms.assetid: ad271dc3-42cd-47d0-9f65-30d5cfeb66fc
-ms.openlocfilehash: b38a181102247ab203c86ccb6310a72135dccc8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e22b463a5229de4745f71aaa0240374a5c057508
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349457"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217770"
 ---
-# <a name="interlockedand-intrinsic-functions"></a>_InterlockedAnd 内部函数
+# <a name="_interlockedand-intrinsic-functions"></a>_InterlockedAnd 内部函数
 
 **Microsoft 专用**
 
@@ -71,7 +71,7 @@ ms.locfileid: "62349457"
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 long _InterlockedAnd(
    long volatile * value,
    long mask
@@ -170,13 +170,13 @@ __int64 _InterlockedAnd64_rel(
 );
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-*值*<br/>
-[in、 out]指向要替换为结果的第一个操作数的指针。
+*value*\
+[in, out]指向第一个操作数的指针, 将由结果替换。
 
-*mask*<br/>
-[in]第二个操作数。
+*掩盖*\
+中第二个操作数。
 
 ## <a name="return-value"></a>返回值
 
@@ -186,8 +186,9 @@ __int64 _InterlockedAnd64_rel(
 
 |内部函数|体系结构|Header|
 |---------------|------------------|------------|
-|`_InterlockedAnd`, `_InterlockedAnd8`, `_InterlockedAnd16`, `_InterlockedAnd64`|x86、 ARM、 x64|\<intrin.h>|
-|`_InterlockedAnd_acq`, `_InterlockedAnd_nf`, `_InterlockedAnd_rel`, `_InterlockedAnd8_acq`, `_InterlockedAnd8_nf`, `_InterlockedAnd8_rel`, `_InterlockedAnd16_acq`, `_InterlockedAnd16_nf`, `_InterlockedAnd16_rel`, `_InterlockedAnd64_acq`, `_InterlockedAnd64_nf`, `_InterlockedAnd64_rel`|ARM|\<intrin.h>|
+|`_InterlockedAnd`, `_InterlockedAnd8`, `_InterlockedAnd16`|x86、ARM、x64、ARM64|\<intrin.h>|
+|`_InterlockedAnd64`|ARM、x64、ARM64|\<intrin.h>|
+|`_InterlockedAnd_acq`, `_InterlockedAnd_nf`, `_InterlockedAnd_rel`, `_InterlockedAnd8_acq`, `_InterlockedAnd8_nf`, `_InterlockedAnd8_rel`, `_InterlockedAnd16_acq`, `_InterlockedAnd16_nf`, `_InterlockedAnd16_rel`, `_InterlockedAnd64_acq`, `_InterlockedAnd64_nf`, `_InterlockedAnd64_rel`|ARM, ARM64|\<intrin.h>|
 |`_InterlockedAnd_np`, `_InterlockedAnd8_np`, `_InterlockedAnd16_np`, `_InterlockedAnd64_np`|X64|\<intrin.h>|
 |`_InterlockedAnd_HLEAcquire`, `_InterlockedAnd_HLERelease`, `_InterlockedAnd64_HLEAcquire`, `_InterlockedAnd64_HLERelease`|x86、x64|\<immintrin.h>|
 
@@ -195,7 +196,7 @@ __int64 _InterlockedAnd64_rel(
 
 每个函数名称中的数字指定了参数的位大小。
 
-在 ARM 平台上，可以使用带 `_acq` 和 `_rel` 后缀的内部函数获取和发布语义，例如在临界区的起始位置。 带 `_nf`（“无围墙”）后缀的内部函数不能充当内存屏障。
+在 ARM 和 ARM64 平台上, 将内部函数`_acq`和`_rel`后缀用于获取和释放语义, 如关键部分的开头和结尾。 带 `_nf`（“无围墙”）后缀的内部函数不能充当内存屏障。
 
 带 `_np`（“无预取”）后缀的函数可以阻止编译器插入可能的预取操作。
 
@@ -203,7 +204,7 @@ __int64 _InterlockedAnd64_rel(
 
 ## <a name="example"></a>示例
 
-```
+```cpp
 // InterlockedAnd.cpp
 // Compile with: /Oi
 #include <stdio.h>
@@ -229,5 +230,5 @@ int main()
 
 ## <a name="see-also"></a>请参阅
 
-[编译器内部函数](../intrinsics/compiler-intrinsics.md)<br/>
+[编译器内部函数](../intrinsics/compiler-intrinsics.md)\
 [与 x86 编译器冲突](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
