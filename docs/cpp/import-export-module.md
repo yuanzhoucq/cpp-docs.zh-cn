@@ -1,5 +1,5 @@
 ---
-title: 模块, 导入, 导出
+title: 模块，导入，导出
 ms.date: 07/15/2019
 f1_keywords:
 - module_cpp
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - modules [C++], import
 - modules [C++], export
 description: 使用 import 语句可访问指定模块中定义的类型和函数。
-ms.openlocfilehash: fbb9c45ec816c859edb4df38ad67dc7778247e87
-ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
+ms.openlocfilehash: ee1d50a76a3304359c0771aa0174968439f5faa4
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537783"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273629"
 ---
-# <a name="module-import-export"></a>模块, 导入, 导出
+# <a name="module-import-export"></a>模块，导入，导出
 
-在 `/std:c++latest`c++ 20 中提供了模块、**导入**和**导出**关键字, 并要求编译器开关与一起使用。`/experimental:modules` 有关详细信息, 请参阅[ C++中模块概述](modules-cpp.md)。
+**模块**、**导入**和**导出**关键字在 c + + 20 中提供，并且需要[/experimental： module](../build/reference/experimental-module.md)编译器开关和[/std： C + + 最新版本](../build/reference/std-specify-language-standard-version.md)。 有关详细信息，请参阅[ C++中模块概述](modules-cpp.md)。
 
 ## <a name="module"></a>name
 
@@ -31,13 +31,13 @@ module ModuleA;
 
 ## <a name="export"></a>export
 
-对模块的主接口文件使用**export module**语句, 该文件必须具有扩展名 **. ixx**:
+对模块的主接口文件使用**export module**语句，该文件必须具有扩展名 **. ixx**：
 
 ```cpp
 export module ModuleA;
 ```
 
-在接口文件中, 对要作为公共接口的一部分的名称使用**export**修饰符:
+在接口文件中，对要作为公共接口的一部分的名称使用**export**修饰符：
 
 ```cpp
 // ModuleA.ixx
@@ -52,7 +52,7 @@ namespace Bar
 }
 ```
 
-导入模块的代码不会显示非导出名称:
+导入模块的代码不会显示非导出名称：
 
 ```cpp
 //MyProgram.cpp
@@ -66,7 +66,7 @@ void main() {
 }
 ```
 
-**Export**关键字不能出现在模块实现文件中。 当**export**修饰符应用于命名空间名称时, 将导出命名空间中的所有名称。
+**Export**关键字不能出现在模块实现文件中。 当**export**修饰符应用于命名空间名称时，将导出命名空间中的所有名称。
 
 ## <a name="import"></a>import
 
@@ -87,4 +87,5 @@ class Baz
 ```
 
 ## <a name="see-also"></a>请参阅
+
 [模块概述C++](modules-cpp.md)

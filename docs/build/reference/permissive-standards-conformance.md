@@ -1,5 +1,5 @@
 ---
-title: 触发-（标准符合性）
+title: /permissive-（标准符合性）
 ms.date: 03/08/2019
 f1_keywords:
 - /permissive
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - Standards conformance compiler options
 - permissive compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: 05089ef4f0a516f932d82f13be979da572701ae2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aca0fbc6a2ca36ceae26ba060b5bf92fea79c32c
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320040"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273728"
 ---
-# <a name="permissive--standards-conformance"></a>触发-（标准符合性）
+# <a name="permissive--standards-conformance"></a>/permissive-（标准符合性）
 
-指定到编译器的标准符合性模式。 使用此选项以帮助你发现并纠正在代码中，以使其更正确并更易于移植的一致性问题。
+指定编译器的标准一致性模式。 使用此选项可帮助您识别和修复代码中的符合性问题，使其更正确且更具可移植性。
 
 ## <a name="syntax"></a>语法
 
@@ -27,36 +27,36 @@ ms.locfileid: "62320040"
 
 ## <a name="remarks"></a>备注
 
-在 Visual Studio 2017 及更高版本支持此选项。
+Visual Studio 2017 及更高版本支持此选项。
 
-可以使用**触发-** 编译器选项来指定符合标准的编译器行为。 此选项禁用宽松的行为，并设置[/Zc](zc-conformance.md)严格的一致性的编译器选项。 在 IDE 中，此选项还使 IntelliSense 引擎下划线非符合代码。
+可以使用 **/permissive-** 编译器选项指定符合标准的编译器行为。 此选项将禁用许可行为，并为严格一致性设置[/zc](zc-conformance.md)编译器选项。 在 IDE 中，此选项还使 IntelliSense 引擎为不一致的代码添加下划线。
 
-默认情况下**触发-** 在通过 Visual Studio 2017 版本 15.5 及更高版本创建的新项目中设置选项。 未设置默认情况下，在早期版本中。 当设置此选项，编译器将生成诊断错误或警告非标准的语言构造时检测到在代码中时，在预包括一些常见 bug 的 C + + 11 代码。
+默认情况下，在 Visual Studio 2017 版本15.5 及更高版本创建的新项目中设置 **/permissive-** 选项。 默认情况下，它在早期版本中未设置。 设置该选项后，当在代码中检测到非标准语言构造时，编译器将生成诊断错误或警告，其中包括 C + + 11 代码中的一些常见错误。
 
-**触发-** 选项适用于几乎所有最新的 Windows 工具包，例如软件开发工具包 (SDK) 或 Windows Driver Kit (WDK)，从 Windows Fall Creators SDK (10.0.16299.0) 中的标头文件。 较旧版本的 SDK 可能无法在编译**触发-** 各种源代码一致性方面的考虑。 编译器和 Sdk 飞船上不同的发布时间线，因此有一些其他问题。 有关特定的标头文件问题，请参阅[Windows 标头问题](#windows-header-issues)下面。
+**/Permissive-** 选项与最近的 windows 工具包中的几乎所有头文件（例如软件开发工具包（SDK）或 Windows 驱动程序工具包（WDK））兼容，从 Windows 秋季创建者 SDK （10.0.16299.0）开始。 由于各种源代码一致性原因，SDK 的早期版本可能无法在 **/permissive-** 下编译。 编译器和 Sdk 随附在不同的发布时间线上，因此存在一些剩余问题。 有关特定标头文件的问题，请参阅下面的[Windows 标题问题](#windows-header-issues)。
 
-**触发-** 选项集[/zc: referencebinding](zc-referencebinding-enforce-reference-binding-rules.md)， [/zc: strictstrings](zc-strictstrings-disable-string-literal-type-conversion.md)，以及[/zc: rvaluecast](zc-rvaluecast-enforce-type-conversion-rules.md)到符合的选项行为。 这些选项默认为不符合要求的行为。 您可以将传递特定 **/Zc**选项后**触发的**用于重写此行为的命令行上。
+**/Permissive-** 选项将[/zc： referenceBinding](zc-referencebinding-enforce-reference-binding-rules.md)、 [/zc： strictStrings](zc-strictstrings-disable-string-literal-type-conversion.md)和[/zc： rvalueCast](zc-rvaluecast-enforce-type-conversion-rules.md)选项设置为一致的行为。 这些选项默认为不一致的行为。 可以在命令行中的 **/permissive-** 后传递特定的 **/zc**选项，以覆盖此行为。
 
-在 Visual Studio 2017 版本 15.3 中，编译器从开始版本中**触发-** 选项集[/zc: ternary](zc-ternary.md)选项。 编译器还实现两阶段名称查找的要求的详细信息。 当**触发-** 设置选项，编译器分析函数和类模板定义，并标识相关和非依赖于在模板中使用的名称。 在此版本中，执行仅名称依赖项分析。
+在版本的编译器中，从 Visual Studio 2017 版本15.3 开始， **/permissive-** 选项设置[/zc：三元](zc-ternary.md)选项。 编译器还实现了两阶段名称查找的更多要求。 如果设置了 **/permissive-** 选项，则编译器会分析函数和类模板定义，并标识模板中使用的依赖项和非依赖名称。 在此版本中，只执行名称依赖项分析。
 
-不受特定于环境的扩展语言的区域，以及由该实现标准离开**触发-**。 例如，Microsoft 专用`__declspec`，调用约定和结构化的异常处理关键字，和特定于编译器的杂注指令或属性不在编译器标记**触发-** 模式。
+标准留给实现的环境特定扩展和语言区域不受 **/permissive-** 的影响。 例如，Microsoft 特定`__declspec`的调用约定和结构化异常处理关键字，以及特定于编译器的杂注指令或属性在 **/permissive-** 模式下不由编译器标记。
 
-**触发-** 选项使用的符合性支持当前的编译器版本中来确定哪些语言构造是不符合要求。 选项不确定你的代码是否符合特定版本的C++标准。 若要启用所有实现的编译器对最新草案标准的支持，请使用[/std:latest](std-specify-language-standard-version.md)选项。 若要限制当前实现中 C + + 17 标准编译器支持，使用[/std: c + + 17](std-specify-language-standard-version.md)选项。 若要限制的编译器支持以更接近 C + + 14 标准，请使用[/std: c + + 14](std-specify-language-standard-version.md)选项，这是默认值。
+**/Permissive-** 选项使用当前编译器版本中的一致性支持来确定哪些语言构造是不一致的。 选项不确定您的代码是否符合特定的C++标准版本。 若要为最新草案标准启用所有实现的编译器支持，请使用[/std：最新](std-specify-language-standard-version.md)选项。 若要将编译器支持限制为当前实现的 c + + 17 标准，请使用[/std： c + + 17](std-specify-language-standard-version.md)选项。 若要使编译器支持更接近 c + + 14 标准，请使用[/std： c + + 14](std-specify-language-standard-version.md)选项，这是默认值。
 
-未列出所有 C + + 11、 C + + 14 或 C + + 17 符合标准的代码支持的所有版本的 Visual Studio 2017 中的 MSVC 编译器。 具体取决于版本的 Visual Studio 中，**触发-** 选项可能无法检测到问题有关的两阶段名称查找某些方面，绑定到一个临时的非常量引用、 复制 init 视为直接 init，允许多个用户定义的转换中进行初始化或替代标记的逻辑运算符和不受支持的符合性的其他区域。 有关 Visual C++ 中一致性问题的详细信息，请参阅 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)。 若要获取最大程度**触发-**，Visual Studio 更新到最新版本。
+并非所有版本的 Visual Studio 2017 的 MSVC 编译器都支持 c + + 11、c + + 14 或 c + + 17 标准一致代码。 根据 Visual Studio 的版本， **/permissive-** 选项可能无法检测到两个阶段名称查找的某些方面的问题，请将非常量引用绑定到临时，将副本 init 视为直接初始化，从而允许多个用户定义初始化中的转换或逻辑运算符的替代标记，以及其他不支持的一致性区域。 有关 Visual C++ 中一致性问题的详细信息，请参阅 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)。 若要充分利用 **/permissive-** ，请将 Visual Studio 更新到最新版本。
 
-### <a name="how-to-fix-your-code"></a>如何修复你的代码
+### <a name="how-to-fix-your-code"></a>如何修复代码
 
-下面是一些示例被检测为不符合要求时使用的代码**触发-**，以及修复这些问题的建议方法。
+下面是在使用 **/permissive-** 时检测为不一致的代码示例，以及解决问题的建议方法。
 
-#### <a name="use-default-as-an-identifier-in-native-code"></a>使用默认值为本机代码中的标识符
+#### <a name="use-default-as-an-identifier-in-native-code"></a>在本机代码中使用 default 作为标识符
 
 ```cpp
 void func(int default); // Error C2321: 'default' is a keyword, and
                         // cannot be used in this context
 ```
 
-#### <a name="look-up-members-in-dependent-base"></a>查找依赖基础中的成员
+#### <a name="look-up-members-in-dependent-base"></a>查找依赖基准中的成员
 
 ```cpp
 template <typename T>
@@ -84,7 +84,7 @@ void h() {
 }
 ```
 
-#### <a name="use-of-qualified-names-in-member-declarations"></a>使用的成员声明中的限定名称
+#### <a name="use-of-qualified-names-in-member-declarations"></a>在成员声明中使用限定名
 
 ```cpp
 struct A {
@@ -94,7 +94,7 @@ struct A {
 };
 ```
 
-#### <a name="initialize-multiple-union-members-in-a-member-initializer"></a>初始化成员初始值设定项中的多个联合成员
+#### <a name="initialize-multiple-union-members-in-a-member-initializer"></a>在成员初始值设定项中初始化多个联合成员
 
 ```cpp
 union U
@@ -109,7 +109,7 @@ union U
 };
 ```
 
-#### <a name="hidden-friend-name-lookup-rules"></a>隐藏的友元名称查找规则
+#### <a name="hidden-friend-name-lookup-rules"></a>隐藏的 friend name 查找规则
 
 ```cpp
 // Example 1
@@ -137,7 +137,7 @@ void g() {
 }
 ```
 
-#### <a name="use-scoped-enums-in-array-bounds"></a>在数组边界内使用作用域内的枚举
+#### <a name="use-scoped-enums-in-array-bounds"></a>在数组边界内使用范围枚举
 
 ```cpp
 enum class Color {
@@ -149,7 +149,7 @@ int data[Color::Blue]; // error C3411: 'Color' is not valid as the size
                        // Cast to type size_t or int to fix.
 ```
 
-#### <a name="use-for-each-in-native-code"></a>为每个本机代码中使用
+#### <a name="use-for-each-in-native-code"></a>在本机代码中使用
 
 ```cpp
 void func() {
@@ -164,7 +164,7 @@ void func() {
 }
 ```
 
-#### <a name="use-of-atl-attributes"></a>使用 ATL 属性
+#### <a name="use-of-atl-attributes"></a>ATL 属性的使用
 
 ```cpp
 // Example 1
@@ -233,21 +233,21 @@ class ATL_NO_VTABLE CFooImpl : public ICustom,
 };
 ```
 
-#### <a name="ambiguous-conditional-operator-arguments"></a>不明确的条件运算符的参数
+#### <a name="ambiguous-conditional-operator-arguments"></a>条件运算符参数不明确
 
-在 Visual Studio 2017 版本 15.3 之前的编译器版本中，编译器接受的条件运算符 （或三元运算符） 参数`?:`被视为不明确的标准。 在中**触发-** 模式下，编译器现将发出一个或多个诊断的情况下，编译而无需在早期版本中的诊断。
+在 Visual Studio 2017 版本15.3 之前的编译器版本中，编译器接受由标准视为不明确的条件运算符（或三元`?:`运算符）的自变量。 在 **/permissive-** 模式下，编译器现在会在编译时发出一个或多个诊断，在早期版本中不进行诊断。
 
-此更改，可能会导致的常见错误包括：
+此更改可能导致的常见错误包括：
 
-- 错误 C2593: operator？ 不明确
+- 错误 C2593： "operator？" 不明确
 
-- 错误 C2679： 二进制？： 没有找到运算符采用 B 的右操作数的类型 （或没有可接受的转换）
+- 错误 C2679：二进制 "？"：没有找到接受类型 "B" 的右操作数的运算符（或没有可接受的转换）
 
-- 错误 C2678： 二进制？： 没有找到运算符接受类型 A 的左侧操作数 （或没有可接受的转换）
+- 错误 C2678：二进制 "？"：没有找到接受类型为 "A" 的左操作数的运算符（或没有可接受的转换）
 
-- 错误 C2446::： 没有从 'B' 到 'A' 转换
+- 错误 C2446： "："：没有从 "B" 到 "A" 的转换
 
-某些类 C 到 T 类型提供了从另一种类型 T 的非显式构造函数而非显式转换运算符时，可能会导致此问题的典型代码模式在这种情况下，第二个参数转换为第三个参数的类型和第三个参数转换为第二个参数的类型是有效的转换。 由于两者都有效，则根据标准不明确。
+如果某个类 C 同时提供了另一类型 T 中的非显式构造函数和类型 T 的非显式转换运算符，则可能导致此问题的一种典型的代码模式。在这种情况下，第二个参数的类型转换为第三个参数的类型，第三个参数的转换为第二个参数的类型，是有效的转换。 由于两者都是有效的，因此它不明确，这一点与标准有所不同。
 
 ```cpp
 // Example 1: class that provides conversion to and initialization from some type T
@@ -267,7 +267,7 @@ auto y = cond ? 7 : int(a);
 auto z = cond ? A(7) : a;
 ```
 
-没有为此通用模式的一个重要异常时 T 表示一个以 null 结尾的字符串类型 (例如， `const char *`， `const char16_t *`，依此类推) 的实际自变量和`?:`是一个字符串，相应类型的文本。 C + + 17 已从 C + + 14 更改语义。 因此，示例 2 中的代码接受下 **/std: c + + 14**或将其拒绝下 **/std: c + + 17**时 **/zc: ternary**或 **/permissive-** 使用。
+当 T 表示以`const char *` `?:` null 结尾的字符串类型之一（例如`const char16_t *`，、等），并且的实际自变量为相应类型的字符串文字时，此通用模式存在重要的例外情况。 C + + 17 已更改 c + + 14 的语义。 因此，在 **/std： c + + 14**下接受示例2中的代码，并在 **/std： c + + 17 （** 当使用 **/zc：三元**或 **/permissive-** 时被拒绝。
 
 ```cpp
 // Example 2: exception from the above
@@ -288,7 +288,7 @@ auto x = cond ? "A" : s;
 auto y = cond ? "A" : static_cast<const char*>(s);
 ```
 
-其中可能会看到错误的另一种情况是在带有一个自变量类型的条件运算符`void`。 这种情况下可能都在类似于 ASSERT 的宏的位置相同。
+另外一种情况下，你可能会发现错误位于类型`void`为的参数的条件运算符中。 这种情况在类似断言的宏中可能很常见。
 
 ```cpp
 // Example 3: void arguments
@@ -299,7 +299,7 @@ void myassert(const char* text, const char* file, int line);
 #define ASSERT_B(ex) (void)((ex) ? void() : myassert(#ex, __FILE__, __LINE__))
 ```
 
-您还可能看到的模板元编程，其中条件运算符的结果类型可能会更改下中的错误 **/zc: ternary**并**触发的**。 解决此问题是使用一种方法[std::remove_reference](../../standard-library/remove-reference-class.md)上生成的类型。
+你可能还会在模板元编程中看到错误，其中条件运算符结果类型可能在 **/zc：三元**和 **/permissive-** 下更改。 解决此问题的一种方法是对结果类型使用[std：： remove_reference](../../standard-library/remove-reference-class.md) 。
 
 ```cpp
 // Example 4: different result types
@@ -313,7 +313,7 @@ const char (&z)[2] = count > 3 ? "A" : "B"; // const char* without /Zc:ternary
 
 #### <a name="two-phase-name-look-up"></a>两阶段名称查找
 
-当**触发-** 设置选项，编译器分析函数和类模板定义，标识所需的模板中使用的两阶段名称查找的相关和非依赖名称。 在 Visual Studio 2017 版本 15.3 中，执行名称依赖项分析。 具体而言，未在模板定义的上下文中声明的非依赖名称会导致一条诊断消息所需的 ISOC++标准。 在 Visual Studio 2017 版本 15.7 中，需要定义上下文中的依赖于自变量执行查找非依赖名称的绑定是也可以完成。
+如果设置了 **/permissive-** 选项，则编译器会分析函数和类模板定义，并根据需要为两阶段名称查找所需的模板中的依赖项和非相关名称标识。 在 Visual Studio 2017 版本15.3 中，执行名称依赖项分析。 特别是，在模板定义上下文中未声明的非依赖名称会导致 ISO C++标准要求诊断消息。 在 Visual Studio 2017 版本15.7 中，还完成了在定义上下文中需要依赖于参数的查找的非依赖项名称的绑定。
 
 ```cpp
 // dependent base
@@ -339,17 +339,17 @@ int main()
 }
 ```
 
-如果为两阶段查找希望旧行为，但想**触发-** 行为，添加 **/zc: twophase-** 选项。
+如果你希望对两阶段查找执行旧行为，但又想要 **/permissive-** 行为，请添加 **/zc： twoPhase** 。
 
-### <a name="windows-header-issues"></a>Windows 标头问题
+### <a name="windows-header-issues"></a>Windows 标题问题
 
-**触发-** 选项设置为 Windows Fall Creators Update SDK (10.0.16299.0) 之前 Windows 工具包的版本或 Windows Driver Kit (WDK) 版本 1709年太严格。 我们建议你更新到最新版本的 Windows 工具包，以便使用**触发-** Windows 或设备驱动程序代码中。
+Windows 秋季创意者更新 SDK （10.0.16299.0）或 Windows 驱动程序工具包（WDK）版本1709之前的 Windows 工具包版本的 **/permissive-** 选项过严格。 建议更新到最新版本的 Windows 工具包，以便在 Windows 或设备驱动程序代码中使用 **/permissive-** 。
 
-在 Windows 年 4 月 2018年更新 SDK (10.0.17134.0)、 Windows Fall Creators Update SDK (10.0.16299.0) 或 Windows Driver Kit (WDK) 1709，某些标头文件仍有问题，使它们与使用的不兼容 **/permissive-**. 若要解决这些问题，我们建议使用这些标头，限制对那些源的代码文件需要它们，并删除**触发-** 选项编译这些特定的源代码文件时。
+Windows 2018 年4月更新 SDK （10.0.17134.0）、Windows 秋季创意者更新 SDK （10.0.16299.0）或 Windows 驱动程序工具包（WDK）1709中的某些头文件仍然存在使它们与使用 **/permissive-** 不兼容的问题。 若要解决这些问题，我们建议你仅将这些标头的使用限制为那些需要它们的源代码文件，并在编译这些特定源代码文件时删除 **/permissive-** 选项。
 
-发布这些 WinRT WRL 标头在 Windows 中 2018 年 4 月更新 SDK (10.0.17134.0) 不是使用干净**触发-**。 若要解决这些问题，请不要将**触发-**，或使用**触发-** 与 **/zc: twophase-** 时使用这些标头：
+在 Windows 2018 年4月的更新 SDK （10.0.17134.0）中发布的这些 WinRT WRL 标头与 **/permissive-** 并不完全相同。 若要解决这些问题，请不要使用 **/permissive-** ，或将 **/permissive-** 与 **/zc： twoPhase**配合使用：
 
-- Winrt/wrl/async.h 中的问题
+- Winrt/wrl/async 中的问题
 
    ```Output
    C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\winrt\wrl\async.h(483): error C3861: 'TraceDelegateAssigned': identifier not found
@@ -358,15 +358,15 @@ int main()
    C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\winrt\wrl\async.h(513): error C3861: 'TraceProgressNotificationComplete': identifier not found
    ```
 
-- 发出 winrt/wrl/implements.h 中
+- Winrt/wrl/实现 .h 中的问题
 
    ```Output
    C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\winrt\wrl\implements.h(2086): error C2039: 'SetStrongReference': is not a member of 'Microsoft::WRL::Details::WeakReferenceImpl'
    ```
 
-发布这些用户模式下标头在 Windows 中 2018 年 4 月更新 SDK (10.0.17134.0) 不是使用干净**触发-**。 若要解决这些问题，不要使用**触发-** 时使用这些标头：
+在 Windows 2018 年4月的更新 SDK （10.0.17134.0）中发布的这些用户模式标头不会与 **/permissive-** 完全相同。 若要解决这些问题，请在使用这些标头时不要使用 **/permissive-** ：
 
-- Um/Tune.h 中的问题
+- Um/调整 .h 中的问题
 
    ```Output
    C:\ProgramFiles(x86)\Windows Kits\10\include\10.0.17134.0\um\tune.h(139): error C3861: 'Release': identifier not found
@@ -375,13 +375,13 @@ int main()
    C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\tune.h(1240): note: 'Release': function declaration must be available as none of the arguments depend on a template parameter
    ```
 
-- 发出 um/spddkhlp.h 中
+- Um/spddkhlp 中的问题
 
    ```Output
    C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\spddkhlp.h(759): error C3861: 'pNode': identifier not found
    ```
 
-- Um/refptrco.h 中的问题
+- Um/refptrco 中的问题
 
    ```Output
    C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\refptrco.h(179): error C2760: syntax error: unexpected token 'identifier', expected 'type specifier'
@@ -389,11 +389,11 @@ int main()
    C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\refptrco.h(395): error C2760: syntax error: unexpected token 'identifier', expected 'type specifier'
    ```
 
-这些问题是特定于用户模式下在 Windows Fall Creators Update SDK (10.0.16299.0) 中的标头：
+这些问题特定于 Windows 秋季创意者更新 SDK （10.0.16299.0）中的用户模式标头：
 
-- 发出 um/Query.h 中
+- Um/Query 中的问题
 
-   使用时**触发-** 编译器开关，`tagRESTRICTION`结构不会由于 case(RTOr) 成员进行编译或。
+   使用 **/permissive-** 编译器开关时，由于 case `tagRESTRICTION` （RTOr）成员 "or"，结构不进行编译。
 
    ```cpp
    struct tagRESTRICTION
@@ -415,21 +415,21 @@ int main()
    };
    ```
 
-   若要解决此问题，编译文件，其中包括无需 Query.h**触发-** 选项。
+   若要解决此问题，请在不带 **/permissive-** 选项的情况下编译包含 Query 的文件。
 
-- 发出 um/cellularapi_oem.h 中
+- Um/cellularapi_oem 中的问题
 
-   使用时**触发-** 编译器开关、 的前向声明`enum UICCDATASTOREACCESSMODE`导致警告：
+   使用 **/permissive-** 编译器开关时，的`enum UICCDATASTOREACCESSMODE`前向声明会导致警告：
 
    ```cpp
    typedef enum UICCDATASTOREACCESSMODE UICCDATASTOREACCESSMODE; // C4471
    ```
 
-   未区分范围枚举的前向声明是 Microsoft 扩展。 若要解决此问题，编译文件，其中包括无需 cellularapi_oem.h**触发-** 选项，或使用[/wd](compiler-option-warning-level.md)提示警告 C4471 的选项。
+   未区分范围的枚举的前向声明是 Microsoft 扩展。 若要解决此问题，请在不使用 **/permissive-** 选项的情况下编译包含 cellularapi_oem 的文件，或使用[/wd](compiler-option-warning-level.md)选项静音警告 C4471。
 
-- 发出 um/omscript.h 中
+- Um/omscript 中的问题
 
-   在 C + + 03，从字符串文字转换为 BSTR (即的 typedef wchar_t *) 是不推荐使用，但允许。 在 C + + 11 中，不再允许转换。
+   在 c + + 03 中，已弃用从字符串文本到 BSTR （即 typedef 到 "wchar_t *"）的转换，但允许使用该转换。 在 c + + 11 中，不再允许转换。
 
    ```cpp
    virtual /* [id] */ HRESULT STDMETHODCALLTYPE setExpression(
@@ -438,25 +438,25 @@ int main()
        /* [in][defaultvalue] */ __RPC__in BSTR language = L"") = 0; // C2440
    ```
 
-   若要解决此问题，编译文件，其中包括无需 omscript.h**触发-** 选项，或使用 **/Zc:strictStrings-** 相反。
+   若要解决此问题，请在不使用 **/permissive-** 选项的情况下编译包含 omscript 的文件，或改用 **/zc： strictStrings** 。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-在 Visual Studio 2017 版本 15.5 和更高版本中，使用此过程：
+在 Visual Studio 2017 版本15.5 及更高版本中，使用此过程：
 
-1. 打开你的项目**属性页**对话框。
+1. 打开项目的 "**属性页**" 对话框。
 
-1. 选择**配置属性** > **C /C++** > **语言**属性页。
+1. 选择 "**配置属性** > " " > **C/C++** **语言**" 属性页。
 
-1. 更改**符合模式**属性值设置为**是 (触发的)**。 选择**确定**或**应用**以保存所做的更改。
+1. 将**一致性模式**属性值更改为 **"是（/permissive-）"** 。 选择 **"确定" 或 "** **应用**" 保存更改。
 
-在 Visual Studio 2017 版本 15.5 之前的版本，使用此过程：
+在 Visual Studio 2017 版本15.5 之前的版本中，使用此过程：
 
-1. 打开你的项目**属性页**对话框。
+1. 打开项目的 "**属性页**" 对话框。
 
-1. 选择**配置属性** > **C /C++** > **命令行**属性页。
+1. 选择“配置属性” > “C/C++” > “命令行”属性页。
 
-1. 输入**触发-** 中的编译器选项**其他选项**框。 选择**确定**或**应用**以保存所做的更改。
+1. 在 "**附加选项**" 框中输入 **/permissive-** 编译器选项。 选择 **"确定" 或 "** **应用**" 保存更改。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
 
@@ -464,5 +464,5 @@ int main()
 
 ## <a name="see-also"></a>请参阅
 
-- [MSVC 编译器选项](compiler-options.md)
-- [MSVC 编译器命令行语法](compiler-command-line-syntax.md)
+[MSVC 编译器选项](compiler-options.md)\
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)
