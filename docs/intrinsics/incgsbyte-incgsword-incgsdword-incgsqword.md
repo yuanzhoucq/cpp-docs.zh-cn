@@ -1,6 +1,6 @@
 ---
 title: __incgsbyte, __incgsword, __incgsdword, __incgsqword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __incgsdword
 - __incgsqword_cpp
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - __incgsqword intrinsic
 - __incgsdword intrinsic
 ms.assetid: 06bfdf4f-7643-4fe0-8455-60ce3068073e
-ms.openlocfilehash: 3b96fbdb343fa40b6615ac7f91f83099a294624c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b4e88b4ccd2cf1d2a3130e3a535de1c9a434320
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264018"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217791"
 ---
-# <a name="incgsbyte-incgsword-incgsdword-incgsqword"></a>__incgsbyte, __incgsword, __incgsdword, __incgsqword
+# <a name="__incgsbyte-__incgsword-__incgsdword-__incgsqword"></a>__incgsbyte, __incgsword, __incgsdword, __incgsqword
 
 **Microsoft 专用**
 
-指定相对于开头的偏移量的内存位置中添加一个值`GS`段。
+在相对于`GS`段开头的偏移量指定的内存位置, 向值添加一个值。
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 void __incgsbyte(
    unsigned long Offset
 );
@@ -46,10 +46,10 @@ void __incgsqword(
 );
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-*Offset*<br/>
-[in]从开始处的偏移量`GS`。
+*抵销*\
+中与开头`GS`之间的偏移量。
 
 ## <a name="requirements"></a>要求
 
@@ -60,15 +60,17 @@ void __incgsqword(
 |`__incgsdword`|X64|
 |`__incgsqword`|X64|
 
+**标头文件**\<intrin.h >
+
 ## <a name="remarks"></a>备注
 
-这些例程都仅可用作内部函数。
+这些例程只能用作内部函数。
 
 **结束 Microsoft 专用**
 
 ## <a name="see-also"></a>请参阅
 
-[__addgsbyte, \__addgsword, \__addgsdword, \__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)<br/>
-[__readgsbyte， \__readgsdword， \__readgsqword， \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)<br/>
-[__writegsbyte， \__writegsdword， \__writegsqword， \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)<br/>
+[\__addgsbyte、 \__addgsword、 \__addgsdword、 \__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)\
+[\__readgsbyte、 \__readgsdword、 \__readgsqword、 \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)\
+[\__writegsbyte、 \__writegsdword、 \__writegsqword、 \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)\
 [编译器内部函数](../intrinsics/compiler-intrinsics.md)

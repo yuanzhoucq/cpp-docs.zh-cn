@@ -1,6 +1,6 @@
 ---
 title: __writemsr
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __writemsr
 helpviewer_keywords:
@@ -8,35 +8,35 @@ helpviewer_keywords:
 - wrmsr instruction
 - __writemsr intrinsic
 ms.assetid: 938b1553-51a8-4822-a818-6bed79b0fde5
-ms.openlocfilehash: ac57bac1d132c581ee12048b89d13ed1d1fdb7da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7819477edb8d4e6b18a1213a73ba67065ea7ff57
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389705"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219132"
 ---
-# <a name="writemsr"></a>__writemsr
+# <a name="__writemsr"></a>__writemsr
 
 **Microsoft 专用**
 
-生成对模型特定注册写入 (`wrmsr`) 指令。
+生成写入特定于模型的 Register (`wrmsr`) 指令。
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 void __writemsr(
    unsigned long Register,
    unsigned __int64 Value
 );
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-*注册*<br/>
-[in]模型特定寄存器。
+*注册*\
+中特定于模型的寄存器。
 
-*值*<br/>
-[in]要写入的值。
+*负值*\
+中要写入的值。
 
 ## <a name="requirements"></a>要求
 
@@ -44,11 +44,11 @@ void __writemsr(
 |---------------|------------------|
 |`__writemsr`|x86、x64|
 
-**标头文件** \<intrin.h >
+**标头文件**\<intrin.h >
 
 ## <a name="remarks"></a>备注
 
-此函数只能用于在内核模式下，且此例程仅用作内部函数。
+此函数只能用于内核模式, 此例程仅作为内部函数使用。
 
 **结束 Microsoft 专用**
 

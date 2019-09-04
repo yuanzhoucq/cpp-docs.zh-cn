@@ -1,6 +1,6 @@
 ---
 title: __movsb
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __movsb
 helpviewer_keywords:
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - rep movsb instruction
 - __movsb intrinsic
 ms.assetid: ba5469f6-f797-4cd2-bee8-74c7666c26d4
-ms.openlocfilehash: 42124743c27b297c723780c1bc19038fb54e638d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca06fc9114f6e824a690cc4e612c21d705a485cd
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263810"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217276"
 ---
-# <a name="movsb"></a>__movsb
+# <a name="__movsb"></a>__movsb
 
 **Microsoft 专用**
 
-生成移动字符串 (`rep movsb`) 指令。
+生成 Move String (`rep movsb`) 指令。
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 void __movsb(
    unsigned char* Destination,
    unsigned const char* Source,
@@ -31,16 +31,16 @@ void __movsb(
 );
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-*目标*<br/>
-[out]一个指向该副本的目标。
+*位置*\
+弄指向副本的目标的指针。
 
-*源*<br/>
-[in]指向源的副本的指针。
+*Source*\
+中指向副本的源的指针。
 
-“计数”<br/>
-[in]要复制的字节数。
+*计*\
+中要复制的字节数。
 
 ## <a name="requirements"></a>要求
 
@@ -48,17 +48,17 @@ void __movsb(
 |---------------|------------------|
 |`__movsb`|x86、x64|
 
-**标头文件** \<intrin.h >
+**标头文件**\<intrin.h >
 
 ## <a name="remarks"></a>备注
 
-结果是，第一个`Count`指向字节`Source`复制到`Destination`字符串。
+结果是, 指向的`Count` `Source`第一个字节将被复制到该`Destination`字符串。
 
 此例程仅可用作内部函数。
 
 ## <a name="example"></a>示例
 
-```
+```cpp
 // movsb.cpp
 // processor: x86, x64
 #include <stdio.h>

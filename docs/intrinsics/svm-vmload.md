@@ -1,20 +1,20 @@
 ---
 title: __svm_vmload
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __svm_vmload
 helpviewer_keywords:
 - __svm_vmload intrinsic
 - VMLOAD instruction
 ms.assetid: b46a5592-db76-4ffc-8694-2f3494e28bed
-ms.openlocfilehash: 282f1c005c7eb59b2c590c70b38233c88c664e07
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da6ca9786b9c7e5041b9a8ca908d567b16176436
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390225"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219808"
 ---
-# <a name="svmvmload"></a>__svm_vmload
+# <a name="__svm_vmload"></a>__svm_vmload
 
 **Microsoft 专用**
 
@@ -22,21 +22,20 @@ ms.locfileid: "62390225"
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 void __svm_vmload(
    size_t VmcbPhysicalAddress
 );
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-|参数|描述|
-|---------------|-----------------|
-|*VmcbPhysicalAddress*|[in]VMCB 物理地址。|
+*VmcbPhysicalAddress*\
+中VMCB 的物理地址。
 
 ## <a name="remarks"></a>备注
 
-`__svm_vmload` 函数等同于 `VMLOAD` 计算机指令。 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索文档中，"AMD64 体系结构编程人员手动卷 2:系统编程，"文档数 24593，3.11，修订[AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/)站点。
+`__svm_vmload` 函数等同于 `VMLOAD` 计算机指令。 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息, 请搜索文档 "AMD64 体系结构程序员手册卷 2:系统编程, "文档编号 24593, 修订版 3.11, 位于[AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/)站点。
 
 ## <a name="requirements"></a>要求
 
@@ -44,12 +43,12 @@ void __svm_vmload(
 |---------------|------------------|
 |`__svm_vmload`|x86、x64|
 
-**标头文件** \<intrin.h >
+**标头文件**\<intrin.h >
 
 **结束 Microsoft 专用**
 
 ## <a name="see-also"></a>请参阅
 
-[编译器内部函数](../intrinsics/compiler-intrinsics.md)<br/>
-[__svm_vmrun](../intrinsics/svm-vmrun.md)<br/>
+[编译器内部函数](../intrinsics/compiler-intrinsics.md)\
+[__svm_vmrun](../intrinsics/svm-vmrun.md)\
 [__svm_vmsave](../intrinsics/svm-vmsave.md)

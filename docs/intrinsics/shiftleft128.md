@@ -1,19 +1,19 @@
 ---
 title: __shiftleft128
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __shiftleft128
 helpviewer_keywords:
 - __shiftleft128 intrinsic
 ms.assetid: 557b846a-8fb0-469d-91ac-1b1fad80dc2a
-ms.openlocfilehash: 5fcb797694c7a45dc4f2113f3d2ed4a2f578c894
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5da9ac81cedbdd24e10eb438892f88510c32ca24
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390407"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218001"
 ---
-# <a name="shiftleft128"></a>__shiftleft128
+# <a name="__shiftleft128"></a>__shiftleft128
 
 **Microsoft 专用**
 
@@ -21,7 +21,7 @@ ms.locfileid: "62390407"
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 unsigned __int64 __shiftleft128(
    unsigned __int64 LowPart,
    unsigned __int64 HighPart,
@@ -29,16 +29,16 @@ unsigned __int64 __shiftleft128(
 );
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-*LowPart*<br/>
-[in]要位移的 128 位数量的低 64 位。
+*LowPart*\
+中要移位的128位数量的低64位。
 
-*HighPart*<br/>
-[in]要位移的 128 位数量高 64 位。
+*Largeint.highpart*\
+中要移位的128位数量的高64位。
 
-*Shift*<br/>
-[in]移动的位数数。
+*格*\
+中要移位的位数。
 
 ## <a name="return-value"></a>返回值
 
@@ -50,15 +50,15 @@ unsigned __int64 __shiftleft128(
 |---------------|------------------|
 |`__shiftleft128`|X64|
 
-**标头文件** \<intrin.h >
+**标头文件**\<intrin.h >
 
 ## <a name="remarks"></a>备注
 
-`Shift` 值始终是模 64，如果调用 `__shiftleft128(1, 0, 64)`，该函数将向左位移低部分 `0` 位并返回高部分的 `0` 而不是另外预期的 `1`。
+*移位*值始终为模数 64, 因此, 例如`__shiftleft128(1, 0, 64)`, 如果调用, 该函数将`0`向左移动低部分`0`位并返回的上限, 而不`1`是预期的情况。
 
 ## <a name="example"></a>示例
 
-```
+```C
 // shiftleft128.c
 // processor: IPF, x64
 #include <stdio.h>
@@ -98,5 +98,5 @@ int main()
 
 ## <a name="see-also"></a>请参阅
 
-[__shiftright128](../intrinsics/shiftright128.md)<br/>
+[__shiftright128](../intrinsics/shiftright128.md)\
 [编译器内部函数](../intrinsics/compiler-intrinsics.md)

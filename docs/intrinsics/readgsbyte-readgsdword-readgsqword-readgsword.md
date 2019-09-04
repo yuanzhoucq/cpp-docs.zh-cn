@@ -1,6 +1,6 @@
 ---
 title: __readgsbyte、__readgsdword、__readgsqword、__readgsword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __readgsbyte
 - __readgsdword
@@ -12,22 +12,22 @@ helpviewer_keywords:
 - __readgsqword intrinsic
 - __readgsbyte intrinsic
 ms.assetid: f822632d-854c-4558-a71b-cdfc3eea2236
-ms.openlocfilehash: a677b96975e0d2adcc7e548992a12bd597bea6a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 278f1de33a7e01c5893217ddd8aaa22e68cf0c94
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396465"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222346"
 ---
-# <a name="readgsbyte-readgsdword-readgsqword-readgsword"></a>__readgsbyte、__readgsdword、__readgsqword、__readgsword
+# <a name="__readgsbyte-__readgsdword-__readgsqword-__readgsword"></a>__readgsbyte、__readgsdword、__readgsqword、__readgsword
 
 **Microsoft 专用**
 
-从指定相对于 GS 段开头的偏移量的位置读取内存。
+从相对于 GS 段开头的偏移量指定的位置读取内存。
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 unsigned char __readgsbyte(
    unsigned long Offset
 );
@@ -42,14 +42,14 @@ unsigned __int64 __readgsqword(
 );
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-*Offset*<br/>
-[in]从开始处的偏移量`GS`读取。
+*抵销*\
+中从开始读取的`GS`偏移量。
 
 ## <a name="return-value"></a>返回值
 
-内存内容的字节、 字、 双字或四字 （如所示的调用的函数名称） 的位置`GS:[Offset]`。
+位置`GS:[Offset]`处的字节、字、双字或四声的内存内容 (由调用的函数名称指示)。
 
 ## <a name="requirements"></a>要求
 
@@ -60,15 +60,15 @@ unsigned __int64 __readgsqword(
 |`__readgsqword`|X64|
 |`__readgsword`|X64|
 
-**标头文件** \<intrin.h >
+**标头文件**\<intrin.h >
 
 ## <a name="remarks"></a>备注
 
-这些例程都仅可用作内部函数。
+这些例程只能用作内部函数。
 
 **结束 Microsoft 专用**
 
 ## <a name="see-also"></a>请参阅
 
-[__writegsbyte， \__writegsdword， \__writegsqword， \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)<br/>
+[__writegsbyte、 \__writegsdword、 \__writegsqword、 \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)\
 [编译器内部函数](../intrinsics/compiler-intrinsics.md)

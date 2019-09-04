@@ -1,6 +1,6 @@
 ---
-title: once
-ms.date: 11/04/2016
+title: once 杂注
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.once
 - once_CPP
@@ -8,39 +8,38 @@ helpviewer_keywords:
 - once pragma
 - pragmas, once
 ms.assetid: c7517556-6403-4b16-8898-f2aa0a6f685f
-ms.openlocfilehash: 6061fe77960aa64e2dcb39db05897ef0e7fb5f2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 643ad83b672f7b632925383972751a966256eb41
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326334"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220536"
 ---
-# <a name="once"></a>once
-指定该文件在编译源代码文件时仅由编译器包含（打开）一次。
+# <a name="once-pragma"></a>once 杂注
+
+指定在编译源代码文件时编译器仅包含头文件一次。
 
 ## <a name="syntax"></a>语法
 
-```
-#pragma once
-```
+> **#pragma 一次**
 
 ## <a name="remarks"></a>备注
 
-利用`#pragma once`可减少生成次数，因为编译器不将打开并读取该文件后第一个`#include`的翻译单元中的文件。 这被称为*多次包括优化*。 它具有类似的效果`#include guard`惯用语法，后者使用预处理器宏定义来避免多次包含文件的内容。 这也有助于防止违反*定义的一个规则*— 要求，所有模板、 类型、 函数和对象不能超过一个定义都具有你的代码。
+使用`#pragma once`可以减少生成时间, 因为编译器不会在翻译单元中的第一个`#include`文件之后打开并再次读取该文件。 这称为 "*多个包含优化*"。 它的作用类似于*include guard*方法, 该方法使用预处理器宏定义来防止多次包含文件内容。 它还有助于防止违反*单个定义规则*, 要求所有模板、类型、函数和对象在代码中都不能有多个定义。
 
-例如：
+例如:
 
-```
+```cpp
 // header.h
 #pragma once
 // Code placed here is included only once per translation unit
 ```
 
-建议对新代码使用 `#pragma once` 指令，因为它不会用预处理器符号污染全局命名空间。 它需要的键入较少，因此不太会让人分心，并且不会导致符号冲突（不同的头文件使用相同的预处理器符号作为防护值时导致的错误）。 它不属于 C++ 标准，而是由几个常见的编译器移植实现。
+建议对新代码使用 `#pragma once` 指令，因为它不会用预处理器符号污染全局命名空间。 它需要更少的键入, 减少了混乱程度, 并且不会导致*符号冲突*, 因此, 当不同的标头文件使用与临界值相同的预处理器符号时, 会导致错误。 它不是C++标准的一部分, 而是由多个常用编译器来实现移植。
 
-在同一文件中同时使用 #include 防护惯用语法和 `#pragma once` 没有任何优势。 编译器会识别 #include 防护惯用语法，并在标准形式的惯用语法前后未出现任何非注释代码或预处理器指令时实现多次包括优化，实现方法与`#pragma once` 指令相同：
+在同一文件中同时使用 include 防护方法并`#pragma once`没有优势。 编译器可识别 include guard 方法, 并以与`#pragma once`指令相同的方式实现多重包含优化, 前提是在标准形式的方法之前或之后没有任何非注释代码或预处理器指令:
 
-```
+```cpp
 // header.h
 // Demonstration of the #include guard idiom.
 // Note that the defined symbol can be arbitrary.
@@ -50,10 +49,10 @@ ms.locfileid: "62326334"
 #endif // HEADER_H_
 ```
 
-我们建议`#include guard`惯用语法时代码必须是可移植到未实现的编译器`#pragma once`指令，以保持与现有代码的一致性时，或者当多次包括优化是不可能。 在复杂的项目中，当文件系统别名化或使用别名的包括路径使编译器无法按规范路径识别相同的包括文件时可能出现这种情况。
+如果必须将代码移植到未实现`#pragma once`指令的编译器、保持与现有代码的一致性或无法进行多重包含优化, 则建议包含 guard。 如果文件系统别名或别名包含路径包含路径, 则可能会在复杂的项目中出现此问题。
 
-请注意，不要使用`#pragma once`或`#include guard`惯用语法设计为包含多个时间，使用预处理器符号来控制其效果的标头文件中。 这种设计的示例，请参阅\<assert.h > 标头文件。 此外，还要注意管理包括路径，以避免创建多个路径包含的文件，可以抵消多次包括优化`#include guard`s 和`#pragma once`。
+请注意不要使用`#pragma once`或在设计为多次包含的标头文件中包含防护用法, 使用预处理器符号控制其效果。 有关此设计的示例, 请参阅\<assert > 头文件。 还要小心管理包含路径, 以避免创建到包含文件的多个路径, 这会使其中包含保护和`#pragma once`的多包含优化。
 
 ## <a name="see-also"></a>请参阅
 
-[Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Pragma 指令和 __pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

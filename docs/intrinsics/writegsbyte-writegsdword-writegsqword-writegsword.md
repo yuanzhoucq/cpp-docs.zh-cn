@@ -1,6 +1,6 @@
 ---
 title: __writegsbyte, __writegsdword, __writegsqword, __writegsword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __writegsbyte
 - __writegsqword
@@ -12,22 +12,22 @@ helpviewer_keywords:
 - __writegsword intrinsic
 - __writegsdword intrinsic
 ms.assetid: 7746cf6d-2259-4139-9aab-c07dd75c8037
-ms.openlocfilehash: dbd3fff75107ae61f7680dee84b72ff3153bfa8e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b9e812776e9b2bb0820905d088111669096db64
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389770"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221202"
 ---
-# <a name="writegsbyte-writegsdword-writegsqword-writegsword"></a>__writegsbyte, __writegsdword, __writegsqword, __writegsword
+# <a name="__writegsbyte-__writegsdword-__writegsqword-__writegsword"></a>__writegsbyte, __writegsdword, __writegsqword, __writegsword
 
 **Microsoft 专用**
 
-内存写入指定相对于 GS 段开头的偏移量的位置。
+将内存写入相对于 GS 段开头的偏移量指定的位置。
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 void __writegsbyte(
    unsigned long Offset,
    unsigned char Data
@@ -46,13 +46,13 @@ void __writegsqword(
 );
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-*Offset*<br/>
-[in]从要写入到的 GS 开头的偏移量。
+*抵销*\
+中要写入到 GS 开头的偏移量。
 
-*Data*<br/>
-[in]要写入的值。
+*数据*\
+中要写入的值。
 
 ## <a name="requirements"></a>要求
 
@@ -63,15 +63,15 @@ void __writegsqword(
 |`__writegsqword`|X64|
 |`__writegsword`|X64|
 
-**标头文件** \<intrin.h >
+**标头文件**\<intrin.h >
 
 ## <a name="remarks"></a>备注
 
-这些例程都仅可用作内部函数。
+这些例程只能用作内部函数。
 
 **结束 Microsoft 专用**
 
 ## <a name="see-also"></a>请参阅
 
-[__readgsbyte， \__readgsdword， \__readgsqword， \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)<br/>
+[__readgsbyte、 \__readgsdword、 \__readgsqword、 \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)\
 [编译器内部函数](../intrinsics/compiler-intrinsics.md)

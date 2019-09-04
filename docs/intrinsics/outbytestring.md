@@ -1,6 +1,6 @@
 ---
 title: __outbytestring
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __outbytestring
 helpviewer_keywords:
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - __outbytestring intrinsic
 - outsb instruction
 ms.assetid: c9150661-9c18-427f-bae8-710bba6ed78c
-ms.openlocfilehash: 41064dda6a1a0b9ad4c15f98c3f3081f08ef8db6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 31caf17db5d56efccd6b30200994b1080356b4c1
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396608"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217170"
 ---
-# <a name="outbytestring"></a>__outbytestring
+# <a name="__outbytestring"></a>__outbytestring
 
 **Microsoft 专用**
 
-将生成`rep outsb`指令，将发送第一个`Count`指向的数据的字节`Buffer`到指定的端口`Port`。
+生成指令, 该指令将指向的`Count` `Buffer`数据的前个字节发送到指定`Port`的端口。 `rep outsb`
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 void __outbytestring(
    unsigned short Port,
    unsigned char* Buffer,
@@ -31,16 +31,16 @@ void __outbytestring(
 );
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-*端口*<br/>
-[in]要向其发送数据的端口。
+*口*\
+中要将数据发送到的端口。
 
-*Buffer*<br/>
-[in]要指定的端口发送的数据。
+*宽限*\
+中要从指定端口发送的数据。
 
-“计数”<br/>
-[in]要发送的数据的字节数。
+*计*\
+中要发送的数据的字节数。
 
 ## <a name="requirements"></a>要求
 
@@ -48,7 +48,7 @@ void __outbytestring(
 |---------------|------------------|
 |`__outbytestring`|x86、x64|
 
-**标头文件** \<intrin.h >
+**标头文件**\<intrin.h >
 
 ## <a name="remarks"></a>备注
 

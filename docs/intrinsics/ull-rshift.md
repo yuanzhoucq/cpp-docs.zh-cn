@@ -1,45 +1,45 @@
 ---
 title: __ull_rshift
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __ull_rshift
 helpviewer_keywords:
 - ull_rshift intrinsic
 - __ull_rshift intrinsic
 ms.assetid: b7ff5254-3540-4e6e-b57c-a6c4beb7dca2
-ms.openlocfilehash: 5d62ec1526aff595c14a53e9eca43a7a3118c8fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e914a019877482058c6b2842d3138cda02f1e228
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390121"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219709"
 ---
-# <a name="ullrshift"></a>__ull_rshift
+# <a name="__ull_rshift"></a>__ull_rshift
 
 **Microsoft 专用**
 
-在 x64 上，第二个参数指定的位数右移由右侧的第一个参数指定的 64 位值。
+在 x64 上, 将第一个参数指定的64位值向右移动第二个参数指定的位数。
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 unsigned __int64 __ull_rshift(
    unsigned __int64 mask, 
    int nBit
 );
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-*mask*<br/>
-[in]要右移位的 64 位整数值。
+*掩盖*\
+中要右移的64位整数值。
 
-*nBit*<br/>
-[in]要切换，请取模 x86 上的 32 和取模运算在 x64 上的 64 位的数。
+*nBit*\
+中要移位的位数、x86 上的模数32和 x64 上的模数64。
 
 ## <a name="return-value"></a>返回值
 
-掩码移动`nBit`位。
+按`nBit`位移动的掩码。
 
 ## <a name="requirements"></a>要求
 
@@ -47,15 +47,15 @@ unsigned __int64 __ull_rshift(
 |---------------|------------------|
 |`__ull_rshift`|x86、x64|
 
-**标头文件** \<intrin.h >
+**标头文件**\<intrin.h >
 
 ## <a name="remarks"></a>备注
 
-如果第二个参数大于 31 x86 (63 在 x64 上) 上，该数字执行取模 32 (64 在 x64 上) 若要确定移动的位数编号。 `ull`名称中指示`unsigned long long (unsigned __int64)`。
+如果 x86 (x64 上为 63) 上的第二个参数大于 31, 则会将该数字取模 32 (x64 上的 64) 以确定要移位的位数。 名称`ull`中的指示。 `unsigned long long (unsigned __int64)`
 
 ## <a name="example"></a>示例
 
-```
+```cpp
 // ull_rshift.cpp
 // compile with: /EHsc
 // processor: x86, x64
@@ -74,9 +74,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Output
-
-```
+```Output
 1
 ```
 
@@ -84,6 +82,6 @@ int main()
 
 ## <a name="see-also"></a>请参阅
 
-[__ll_lshift](../intrinsics/ll-lshift.md)<br/>
-[__ll_rshift](../intrinsics/ll-rshift.md)<br/>
+[__ll_lshift](../intrinsics/ll-lshift.md)\
+[__ll_rshift](../intrinsics/ll-rshift.md)\
 [编译器内部函数](../intrinsics/compiler-intrinsics.md)

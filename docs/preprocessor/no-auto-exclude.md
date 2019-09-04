@@ -1,36 +1,35 @@
 ---
-title: no_auto_exclude
-ms.date: 11/04/2016
+title: no_auto_exclude 导入属性
+ms.date: 08/29/2019
 f1_keywords:
 - no_auto_exclude
 helpviewer_keywords:
 - no_auto_exclude attribute
 ms.assetid: 3241ef9c-758a-4e86-bdc5-37da6072430f
-ms.openlocfilehash: 06bde7535bd181057750ab9dd4c3999321b4990c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 530c2b2adf24e964cb0a512371f4430a61bf8b11
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371693"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216076"
 ---
-# <a name="noautoexclude"></a>no_auto_exclude
-**C++特定**
+# <a name="no_auto_exclude-import-attribute"></a>no_auto_exclude 导入属性
+
+**C++相关**
 
 禁用自动排除。
 
 ## <a name="syntax"></a>语法
 
-```
-no_auto_exclude
-```
+> **#import***类型库***no_auto_exclude**
 
 ## <a name="remarks"></a>备注
 
-类型库可能包含在系统标头文件或其他类型库中定义的项的定义。 `#import` 尝试通过自动排除此类项来避免多个定义错误。 完成此操作后，[编译器警告 （等级 3） C4192](../error-messages/compiler-warnings/compiler-warning-level-3-c4192.md)为每个要排除的项，将发出。 您可以使用此特性来禁用此自动排除。
+类型库可能包含在系统标头文件或其他类型库中定义的项的定义。 `#import` 尝试通过自动排除此类项来避免多个定义错误。 这会导致为要排除的每个项发出[编译器警告 (等级 3) C4192](../error-messages/compiler-warnings/compiler-warning-level-3-c4192.md) 。 您可以使用此属性禁用自动排除。
 
 **结束C++特定**
 
 ## <a name="see-also"></a>请参阅
 
-[#import 属性](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import 特性](../preprocessor/hash-import-attributes-cpp.md)\
 [#import 指令](../preprocessor/hash-import-directive-cpp.md)

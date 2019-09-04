@@ -2,12 +2,13 @@
 title: 桌面应用程序 ( C++视觉对象)
 ms.date: 07/28/2019
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
-ms.openlocfilehash: 355102d9d58a8d93d7fb6935528f8fb8c4b534b1
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.topic: landing-page
+ms.openlocfilehash: 1d0e725cce42785357232312d21ce37e18d9c73d
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514751"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216997"
 ---
 # <a name="desktop-applications-visual-c"></a>桌面应用程序 ( C++视觉对象)
 
@@ -23,7 +24,7 @@ C++桌面应用程序是可以访问完整的 Windows API 集并在窗口或系�
 
 ### <a name="terminology"></a>术语
 
--           *Win32* 应用程序是采用 C++ 编写的 Windows 桌面应用程序，它可以使用本机 [Windows C API 和/或 COM API](/windows/win32/apiindex/windows-api-list) CRT 和标准库 API 以及第三方库。 在窗口中运行的 Win32 应用程序需要开发人员显式使用 Windows 过程函数中的 Windows 消息。 虽然名为 32 位，但 Win32 应用程序可以编译为 32 位 (x86) 或 64 位 (x64) 二进制程序。 在 Visual Studio IDE 中，x86 和 Win32 这两个术语是同义的。
+- *Win32* 应用程序是采用 C++ 编写的 Windows 桌面应用程序，它可以使用本机 [Windows C API 和/或 COM API](/windows/win32/apiindex/windows-api-list) CRT 和标准库 API 以及第三方库。 在窗口中运行的 Win32 应用程序需要开发人员显式使用 Windows 过程函数中的 Windows 消息。 虽然名为 32 位，但 Win32 应用程序可以编译为 32 位 (x86) 或 64 位 (x64) 二进制程序。 在 Visual Studio IDE 中，x86 和 Win32 这两个术语是同义的。
 
 - [组件对象模型 (COM)](/windows/win32/com/the-component-object-model)是一种规范, 用不同语言编写的程序可以相互通信。 许多 Windows 组件是作为 COM 对象实现的, 并遵循用于对象创建、接口发现和对象析构的标准 COM 规则。  使用桌面应用程序C++中的 com 对象相对简单, 但编写自己的 com 对象更高级。 [活动模板库 (ATL)](../atl/atl-com-desktop-components.md)提供了可简化 COM 开发的宏和帮助程序函数。
 

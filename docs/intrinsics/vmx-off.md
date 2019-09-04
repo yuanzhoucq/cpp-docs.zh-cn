@@ -1,34 +1,34 @@
 ---
 title: __vmx_off
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __vmx_off
 helpviewer_keywords:
 - VMXOFF instruction
 - __vmx_off intrinsic
 ms.assetid: 78a32d46-9291-406c-b982-a550855aff18
-ms.openlocfilehash: 4a01752bd510f9aa8cb159c23e691c9d244145e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 226b5111c2f4f6771ac75d165c80c3e8ae2336af
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390069"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219595"
 ---
-# <a name="vmxoff"></a>__vmx_off
+# <a name="__vmx_off"></a>__vmx_off
 
 **Microsoft 专用**
 
-停用在处理器中的虚拟机扩展 (VMX) 操作。
+在处理器中停用虚拟机扩展 (.VMX) 操作。
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 void __vmx_off();
 ```
 
 ## <a name="remarks"></a>备注
 
-`__vmx_off` 函数等同于 `VMXOFF` 计算机指令。 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索"Intel 虚拟化技术规范的 IA-32 Intel 体系结构，"文档在文档数字 C97063 002 [Intel Corporation](https://software.intel.com/articles/intel-sdm)站点。
+`__vmx_off` 函数等同于 `VMXOFF` 计算机指令。 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息, 请在[Intel Corporation](https://software.intel.com/articles/intel-sdm)站点搜索文档 "适用于 IA-32 Intel 体系结构的 Intel 虚拟化技术规范" 文档编号 C97063-002。
 
 ## <a name="requirements"></a>要求
 
@@ -36,7 +36,7 @@ void __vmx_off();
 |---------------|------------------|
 |`__vmx_off`|x86、x64|
 
-**标头文件** \<intrin.h >
+**标头文件**\<intrin.h >
 
 **结束 Microsoft 专用**
 

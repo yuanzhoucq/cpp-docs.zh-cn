@@ -1,6 +1,6 @@
 ---
 title: __cpuid、__cpuidex
-ms.date: 03/22/2018
+ms.date: 09/02/2019
 f1_keywords:
 - __cpuid_cpp
 - __cpuid
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - cpuid instruction
 - cpuid intrinsic
 ms.assetid: f8c344d3-91bf-405f-8622-cb0e337a6bdc
-ms.openlocfilehash: c66a3fe7b923b214c4cf2bd84fc03f535d5f4973
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: ab814527c8019dd7d6b1e1eb620af0273f270e06
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449995"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216831"
 ---
-# <a name="cpuid-cpuidex"></a>__cpuid、__cpuidex
+# <a name="__cpuid-__cpuidex"></a>__cpuid、__cpuidex
 
 **Microsoft 专用**
 
-生成`cpuid`x86 和 x64 可用的指令。 本指令可查询处理器，以获取有关支持的功能和 CPU 类型的信息。
+生成适用于 x86 和 x64 的指令。`cpuid` 本指令可查询处理器，以获取有关支持的功能和 CPU 类型的信息。
 
 ## <a name="syntax"></a>语法
 
-```cpp
+```C
 void __cpuid(
    int cpuInfo[4],
    int function_id
@@ -39,14 +39,14 @@ void __cpuidex(
 
 ### <a name="parameters"></a>参数
 
-[out] *cpuInfo*<br/>
-四个整数的数组，包含在 EAX、EBX、ECX 和 EDX 中返回的有关 CPU 支持的功能的信息。
+*cpuInfo*\
+弄一个包含四个整数的数组, 其中包含在 EAX、EBX、ECX 和 EDX 中返回的有关 CPU 支持的功能的信息。
 
-[in] *function_id*<br/>
-在 EAX 中传递的指定要检索的信息的代码。
+*function_id*\
+中指定要检索的信息的代码, 传入 EAX。
 
-[in] *subfunction_id*<br/>
-在 ECX 中传递的指定要检索的信息的附加代码。
+*subfunction_id*\
+中指定要检索的信息的附加代码, 在 ECX 中传递。
 
 ## <a name="requirements"></a>要求
 
@@ -55,23 +55,23 @@ void __cpuidex(
 |`__cpuid`|x86、x64|
 |`__cpuidex`|x86、x64|
 
-**标头文件** \<intrin.h >
+**标头文件**\<intrin.h >
 
 ## <a name="remarks"></a>备注
 
-此内部函数将存储支持的功能和返回的 CPU 信息`cpuid`中的指令*cpuInfo*，四个 32 位整数数组填充 EAX、 EBX、 ECX 和 EDX 中的值 （在中的注册顺序）。 返回的信息具有不同的含义，具体取决于作为传递值*function_id*参数。 使用的各种值返回的信息*function_id*与处理器相关。
+此内部函数存储由`cpuid` *cpuInfo*中的指令返回的支持的功能和 CPU 信息, 这是一个 4 32 位整数数组, 其中填充了 EAX、EBX、ECX 和 EDX 寄存器的值 (按此顺序)。 返回的信息具有不同的含义, 具体取决于作为*function_id*参数传递的值。 随*function_id*的不同值返回的信息与处理器相关。
 
-`__cpuid` 内部函数将在调用 `cpuid` 指令前清除 ECX 寄存器。 `__cpuidex`内部函数设置的值为 ECX 寄存器*subfunction_id*它生成之前`cpuid`指令。 这使你能够收集有关该处理器的其他信息。
+`__cpuid` 内部函数将在调用 `cpuid` 指令前清除 ECX 寄存器。 内部函数在生成`cpuid`指令之前, 将 ECX 寄存器的值设置为*subfunction_id。* `__cpuidex` 它使您能够收集有关处理器的其他信息。
 
-有关使用和 Intel 处理器上这些内部函数所返回的值的特定参数的详细信息，请参阅的文档`cpuid`中的指令[Intel 64 和 IA-32 体系结构软件开发人员手册第 2 卷：指令设置参考](https://go.microsoft.com/fwlink/p/?LinkID=510021)并[Intel 体系架构指令集扩展编程参考](https://go.microsoft.com/fwlink/p/?LinkID=506627)。 Intel 文档将使用术语"leaf"和"subleaf"对于*function_id*并*subfunction_id*在 EAX 和 ECX 中传递的参数。
+有关在 intel 处理器上使用的特定参数和这些内部函数所返回的值的详细信息, 请参阅英特尔 64 `cpuid`和 IA [-32 体系结构软件开发人员手册中的说明文档卷 2:指令集参考](https://go.microsoft.com/fwlink/p/?LinkID=510021)和[Intel 体系结构指令集扩展编程参考](https://go.microsoft.com/fwlink/p/?LinkID=506627)。 Intel 文档对在 EAX 和 ECX 中传递的*function_id*和*subfunction_id*参数使用术语 "叶" 和 "subleaf"。
 
-有关使用和 AMD 处理器上这些内部函数所返回的值的特定参数的详细信息，请参阅的文档`cpuid`指令在 AMD64 体系结构编程人员手册第 3 卷：通用和系统指令和特定处理器系列的修订版本指南中。 这些文档和其他信息的链接，请参阅 AMD[开发人员指南、 手册和 ISA 文档](https://go.microsoft.com/fwlink/p/?LinkId=510023)页。 AMD 文档将使用术语"function number"和"subfunction number"对于*function_id*并*subfunction_id*在 EAX 和 ECX 中传递的参数。
+有关将使用的特定参数和这些内部函数所返回的值的详细信息, 请参阅 AMD64 体系结构程序员手册`cpuid`第3卷中的说明文档。一般用途和系统说明, 以及特定处理器系列的修订指南。 有关这些文档和其他信息的链接, 请参阅 AMD[开发人员指南和手册 &AMP; ISA 文档](https://go.microsoft.com/fwlink/p/?LinkId=510023)"页。 对于在 EAX 和 ECX 中传递的*function_id*和*SUBFUNCTION_ID*参数, AMD 文档使用术语 "function number" 和 "subfunction number"。
 
-当*function_id*自变量为 0， *cpuInfo*[0] 返回的最高可用非扩展*function_id*处理器支持的值。 在编码处理器制造商*cpuInfo*[1] *cpuInfo*[2] 和*cpuInfo*[3]。
+当*function_id*参数为0时, *cpuInfo*[0] 返回处理器支持的最高可用非扩展*function_id*值。 处理器制造商在*cpuInfo*[1]、 *cpuInfo*[2] 和*cpuInfo*[3] 中进行编码。
 
-支持特定指令集扩展和 CPU 功能进行编码*cpuInfo*更高版本返回的结果*function_id*值。 有关详细信息，请参阅上述链接的手册和以下示例代码。
+对特定指令集扩展和 CPU 功能的支持将在为较高*function_id*值返回的*cpuInfo*结果中进行编码。 有关详细信息，请参阅上述链接的手册和以下示例代码。
 
-某些处理器支持扩展函数 CPUID 信息。 如果支持这样做， *function_id* 0x80000000 中的值可能用于返回信息。 若要确定允许的最大有意义的值，请设置*function_id*为 0x80000000。 最大值*function_id*支持扩展的函数将写入*cpuInfo*[0]。
+某些处理器支持扩展函数 CPUID 信息。 支持时, 可以使用0x80000000 中的*function_id*值返回信息。 若要确定允许的最大有意义的值, 请将*function_id*设置为0x80000000。 扩展函数支持的*function_id*的最大值将写入*cpuInfo*[0]。
 
 ## <a name="example"></a>示例
 

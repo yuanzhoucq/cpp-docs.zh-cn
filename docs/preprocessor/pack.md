@@ -1,6 +1,6 @@
 ---
-title: pack
-ms.date: 12/17/2018
+title: pack 杂注
+ms.date: 08/29/2019
 f1_keywords:
 - pack_CPP
 - vc-pragma.pack
@@ -8,48 +8,50 @@ helpviewer_keywords:
 - pragmas, pack
 - pack pragma
 ms.assetid: e4209cbb-5437-4b53-b3fe-ac264501d404
-ms.openlocfilehash: da4484ec86d39c8fa55a741eadd53a1d614b20dc
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 4bf0b3d4529de012f4a09d6e60a5b112b9a101df
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510174"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218762"
 ---
-# <a name="pack"></a>pack
-指定结构、联合和类成员的封装对齐。
+# <a name="pack-pragma"></a>pack 杂注
+
+指定结构、联合和类成员的封装对齐方式。
 
 ## <a name="syntax"></a>语法
 
-```
-#pragma pack( [ show ] | [ push | pop ] [, identifier ] , n  )
-```
+> **#pragma pack (show)** \
+> **#pragma pack (push** [ **,** *identifier* ] [ **,** *n* ] **)** \
+> **#pragma pack (pop** [ **,** { *identifier* | *n* }] **)** \
+> **#pragma pack (** [ *n* ] **)**
 
 ### <a name="parameters"></a>参数
 
-**show**<br/>
+**向**\
 可有可无显示打包对齐的当前字节值。 该值由警告消息显示。
 
-**push**<br/>
+**请求**\
 可有可无将当前封装对齐值推送到内部编译器堆栈上, 并将当前封装对齐值设置为*n*。 如果未指定*n* , 则推送当前封装对齐值。
 
-**pop**<br/>
-可有可无从内部编译器堆栈的顶部移除记录。 如果未用**pop**指定*n* , 则与堆栈顶部的结果记录关联的封装值是新的封装对齐值。 例如 `#pragma pack(pop, 16)`, 如果指定了 n, 则*n*会成为新的封装对齐值。 如果您用*标识符*(例如`#pragma pack(pop, r1)`,) 弹出, 则会弹出堆栈上的所有记录, 直到找到具有*标识符*的记录。 该记录将会弹出，与堆栈顶部的生成的记录关联的封装值是新的封装对齐值。 如果你使用在堆栈上的任何记录中都找不到的*标识符*弹出消息, 则将忽略**pop** 。
+**弹出**\
+可有可无从内部编译器堆栈的顶部移除记录。 如果未用**pop**指定*n* , 则与堆栈顶部的结果记录关联的封装值是新的封装对齐值。 例如 `#pragma pack(pop, 16)`, 如果指定了 n, 则*n*会成为新的封装对齐值。 如果使用*标识符*(例如`#pragma pack(pop, r1)`,) 进行弹出, 则会弹出堆栈上的所有记录, 直到找到具有*标识符*的记录。 将弹出该记录, 并且与堆栈顶部的结果记录关联的封装值是新的封装对齐值。 如果你使用在堆栈上的任何记录中都找不到的*标识符*来进行弹出, 则会忽略**pop** 。
 
-*identifier*<br/>
-可有可无与*push*一起使用时, 将为内部编译器堆栈上的记录指定一个名称。 当与**pop**一起使用时, 将在内部堆栈中弹出记录, 直到删除*标识符*;如果在内部堆栈上找不到*标识符*, 则不会弹出任何内容。
+*标志*\
+可有可无与**push**一起使用时, 将为内部编译器堆栈上的记录指定一个名称。 当与**pop**一起使用时, 将在内部堆栈中弹出记录, 直到删除*标识符*。 如果在内部堆栈上找不到*标识符*, 则不会弹出任何内容。
 
-*n*<br/>
-可有可无指定要用于打包的值 (以字节为单位)。 如果没有为模块设置编译器选项[/Zp](../build/reference/zp-struct-member-alignment.md) , 则*n*的默认值为8。 有效值为 1、2、4、8 和 16。 成员的对齐方式将位于边界, 该边界是*n*的倍数或该成员大小的倍数, 以较小者为准。
+*n*\
+可有可无指定要用于打包的值 (以字节为单位)。 如果没有为模块设置编译器选项[/Zp](../build/reference/zp-struct-member-alignment.md) , 则*n*的默认值为8。 有效值为 1、2、4、8 和 16。 成员的对齐方式在一个边界上, 该边界是*n*的倍数或该成员大小的倍数, 以较小者为准。
 
 `#pragma pack(pop, identifier, n)`未定义。
 
 ## <a name="remarks"></a>备注
 
-封装类是在内存中将其一个成员直接放在另一个后面，这可能表示对齐部分或全部成员的边界可以小于默认对齐目标体系结构。 **pack**为数据声明级别提供控制。 这不同于编译器选项[/Zp](../build/reference/zp-struct-member-alignment.md), 后者仅提供模块级控件。 在检测到杂注后, **pack**会在第一个**结构**、**联合**或**类**声明上生效。 **pack**对定义没有任何影响。 调用不带参数的**pack**会将*n*设置为编译器选项`/Zp`中设置的值。 如果未设置编译器选项，则默认值为 8。
+*打包*类是将其成员彼此直接放置在内存中。 这可能意味着, 某些或全部成员可以在小于目标体系结构的默认对齐方式的边界上对齐。 **pack**为数据声明级别提供控制。 它不同于编译器选项[/Zp](../build/reference/zp-struct-member-alignment.md), 后者仅提供模块级控件。 在检测到杂注后, **pack**会在第一个**结构**、**联合**或**类**声明上生效。 **pack**对定义没有任何影响。 调用不带参数的**pack**会将*n*设置为编译器选项`/Zp`中设置的值。 如果未设置编译器选项, 则默认值为8。
 
 如果更改某个结构的对齐方式，它可能不会使用像内存中一样多的空间，但您可能会发现性能降低或者甚至是因未对齐访问而遇到硬件产生的异常。  可以使用[SetErrorMode](/windows/win32/api/errhandlingapi/nf-errhandlingapi-seterrormode)修改此异常行为。
 
-有关如何修改对齐方式的详细信息，请参阅以下主题：
+有关如何修改对齐方式的详细信息, 请参阅以下文章:
 
 - [__alignof](../cpp/alignof-operator.md)
 
@@ -60,7 +62,7 @@ ms.locfileid: "69510174"
 - [结构对齐示例](../build/x64-software-conventions.md#examples-of-structure-alignment)(x64 特定)
 
    > [!WARNING]
-   > 请注意，在 Visual Studio 2015 和更高版本可使用标准的 alignas 和 alignof 运算符，这 不同于 `__alignof` 和 `declspec( align )`，它们是跨编译器可移植的。 C++标准版不会寻址打包, 因此您仍然必须使用**pack** (或其他编译器上的相应扩展名) 来指定小于目标体系结构的单词大小的对齐方式。
+   > 在 Visual Studio 2015 和更高版本中, 你可以使用标准的**alignas**和 alignof 运算符`declspec( align )` , 这与在编译器之间是可移植的不同。 `__alignof` C++标准并不寻址打包, 因此您仍然必须使用**pack** (或其他编译器上相应的扩展) 来指定小于目标体系结构的单词大小的对齐方式。
 
 ## <a name="examples"></a>示例
 
@@ -117,4 +119,4 @@ int main() {
 
 ## <a name="see-also"></a>请参阅
 
-[Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Pragma 指令和 __pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

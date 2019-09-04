@@ -1,6 +1,6 @@
 ---
 title: _BitScanReverse、_BitScanReverse64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _BitScanReverse64
 - _BitScanReverse_cpp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - _BitScanReverse intrinsic
 - BitScanReverse intrinsic
 ms.assetid: 2520a207-af8b-4aad-9ae7-831abeadf376
-ms.openlocfilehash: 3639aac38f4c7df82cbbdb23ed9038ac86ba2cc0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 848c153967e5581f08f1d499a28ab282ee2602df
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264278"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216957"
 ---
-# <a name="bitscanreverse-bitscanreverse64"></a>_BitScanReverse、_BitScanReverse64
+# <a name="_bitscanreverse-_bitscanreverse64"></a>_BitScanReverse、_BitScanReverse64
 
 **Microsoft 专用**
 
@@ -26,7 +26,7 @@ ms.locfileid: "62264278"
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 unsigned char _BitScanReverse(
    unsigned long * Index,
    unsigned long Mask
@@ -37,13 +37,13 @@ unsigned char _BitScanReverse64(
 );
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-*Tuple*<br/>
-[out]使用找到的第一个设置位 (1) 的位位置加载。
+*编入*\
+弄加载时找到第一组位 (1) 的位位置。
 
-*掩码*<br/>
-[in]要搜索的 32 位或 64 位值。
+*掩盖*\
+中要搜索的32位或64位值。
 
 ## <a name="return-value"></a>返回值
 
@@ -53,12 +53,12 @@ unsigned char _BitScanReverse64(
 
 |内部函数|体系结构|Header|
 |---------------|------------------|------------|
-|`_BitScanReverse`|x86、 ARM、 x64|\<intrin.h>|
-|`_BitScanReverse64`|ARM、 x64||
+|`_BitScanReverse`|x86、ARM、x64、ARM64|\<intrin.h>|
+|`_BitScanReverse64`|ARM64, x64|\<intrin.h>|
 
 ## <a name="example"></a>示例
 
-```
+```cpp
 // BitScanReverse.cpp
 // compile with: /EHsc
 #include <iostream>
@@ -87,15 +87,11 @@ int main()
 }
 ```
 
-## <a name="input"></a>输入
-
-```
+```Input
 12
 ```
 
-## <a name="sample-output"></a>示例输出
-
-```
+```Output
 Enter a positive integer as the mask:
 Mask: 12 Index: 3
 ```

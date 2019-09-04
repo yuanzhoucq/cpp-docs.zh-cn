@@ -1,41 +1,41 @@
 ---
 title: _mm_stream_si64x
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _mm_stream_si64x
 helpviewer_keywords:
 - movnti instruction
 - _mm_stream_si64x intrinsic
 ms.assetid: 114c2cd0-085f-41aa-846e-87bdd56c9ee7
-ms.openlocfilehash: d7f7a75be1602fbb70a230b0dd3a791be99d092a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f6ed0f2482ecbcdaa4d50034e0d08381768847a2
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396634"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221743"
 ---
-# <a name="mmstreamsi64x"></a>_mm_stream_si64x
+# <a name="_mm_stream_si64x"></a>_mm_stream_si64x
 
 **Microsoft 专用**
 
-生成 MOVNTI 指令。 将数据写入`Source`到指定的内存位置`Dest`，而无需污染缓存。
+生成 MOVNTI 指令。 将*源*中的数据写入*目标*指定的内存位置, 而不会污染缓存。
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 void _mm_stream_si64x(
-   __int64 * Dest,
+   __int64 * Destination,
    __int64 Source
 );
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-*dest*<br/>
-[out]指向要写入到源数据的位置的指针。
+*位置*\
+弄指向要将源数据写入到的位置的指针。
 
-*源*<br/>
-[in]要写入的数据。
+*Source*\
+中要写入的数据。
 
 ## <a name="requirements"></a>要求
 
@@ -43,7 +43,7 @@ void _mm_stream_si64x(
 |---------------|------------------|
 |`_mm_stream_si64x`|X64|
 
-**标头文件** \<intrin.h >
+**标头文件**\<intrin.h >
 
 ## <a name="remarks"></a>备注
 

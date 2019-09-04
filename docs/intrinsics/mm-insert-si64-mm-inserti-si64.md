@@ -1,6 +1,6 @@
 ---
 title: _mm_insert_si64, _mm_inserti_si64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _mm_inserti_si64
 - _mm_insert_si64
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - _mm_insert_si64 intrinsic
 - _mm_inserti_si64 intrinsic
 ms.assetid: 897a4b36-8b08-4b00-a18f-7850f5732d7d
-ms.openlocfilehash: f8c8f2f9b33588513e25b2290772aac464f46808
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 08469ad8049df2a07f0e66d650c1ca3118f8b980
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396673"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221774"
 ---
-# <a name="mminsertsi64-mminsertisi64"></a>_mm_insert_si64, _mm_inserti_si64
+# <a name="_mm_insert_si64-_mm_inserti_si64"></a>_mm_insert_si64, _mm_inserti_si64
 
 **Microsoft 专用**
 
-生成`insertq`指令，bits 从第二个操作数插入第一个操作数。
+`insertq`生成指令, 以将位从其第二个操作数插入第一个操作数。
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 __m128i _mm_insert_si64(
    __m128i Source1,
    __m128i Source2
@@ -37,23 +37,23 @@ __m128i _mm_inserti_si64(
 );
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-*Source1*<br/>
-[in]具有一个字段将插入其较低的 64 位中的输入数据的 128 位字段。
+*Source1*\
+中一个128位字段, 它具有在其下插入字段的位于其较低64位的输入数据。
 
-*Source2*<br/>
-[in]具有要在其低位中插入的数据的 128 位字段。  有关`_mm_insert_si64`，还包含其高位中的字段描述符。
+*Source2*\
+中一个包含要在其低位中插入的数据的128位字段。  对于`_mm_insert_si64`, 还包含其高位中的字段描述符。
 
-*长度*<br/>
-[in]整数常量，指定要插入的字段的长度。
+*长短*\
+中指定要插入的字段长度的整数常量。
 
-*Tuple*<br/>
-[in]整数常量，它指定将插入数据的字段的最低有效位的索引。
+*编入*\
+中一个整数常量, 它指定要将数据插入到其中的字段的最小有效位的索引。
 
 ## <a name="return-value"></a>返回值
 
-128 位字段，其较低的 64 位包含原始的低 64 位`Source1`与指定的位字段替换为的低位`Source2`。 返回值的高 64 位未定义。
+128位字段, 其64位包含*Source1*的原始低64位, 并且指定的位域由*Source2*的低位替换。 返回值的上限64位未定义。
 
 ## <a name="requirements"></a>要求
 
@@ -62,21 +62,21 @@ __m128i _mm_inserti_si64(
 |`_mm_insert_si64`|SSE4a|
 |`_mm_inserti_si64`|SSE4a|
 
-**标头文件** \<intrin.h >
+**标头文件**\<intrin.h >
 
 ## <a name="remarks"></a>备注
 
-此内部函数生成`insertq`指令，以插入位`Source2`到`Source1`。 有两个版本的此内部函数： `_mm_inserti_si64`，是即时的版本中，和`_mm_insert_si64`是非直接。  每个版本从 Source2 提取给定长度的位字段，并将其插入到 Source1。  提取的位都 Source2 的最低有效位。  这些位将插入字段 Source1 规定的长度和其最低有效位的索引。  长度和索引的值所求模 64，因此为-1 到 127 之间被解释为 63。 如果 （减少） 位索引和 （减少） 的字段长度的总和大于 64，则结果不确定。 字段长度为零的值被解释为 64。  如果字段长度和位索引的两个为零，bits 63:0`Source2`插入到`Source1`。  如果字段长度为零，但比索引为非零，则结果不确定。
+这些内部函数生成`insertq`指令, 以便将*Source2*中的位插入到*Source1*中。 有两个版本: `_mm_inserti_si64`, 是即时版本`_mm_insert_si64` , 是非直接版本。 每个版本从 Source2 中提取给定长度的位域, 并将其插入到 Source1 中。  提取的位是 Source2 的最小有效位。  将在其中插入这些位的字段 Source1 由长度和最小有效位的索引定义。  长度和索引的值采用的是 mod 64, 因此-1 和127都解释为63。 如果 (减) 位索引和 (减少) 字段长度之和大于 64, 则结果是不确定的。 如果字段长度为零, 则将其解释为64。 如果字段长度和位索引均为零, 则将*Source2*的位63:0 插入到*Source1*中。 如果字段长度为零, 但位索引不为零, 则结果是不确定的。
 
-在 _mm_insert_si64 调用，则字段长度包含在位 77:72 Source2 和 bits 69:64 中的索引。
+在对 _mm_insert_si64 的调用中, 字段长度包含在 Source2 的 bits 77:72 和 bits 69:64 中的索引内。
 
-如果您调用`_mm_inserti_si64`使用编译器无法确定为整数常量的参数，编译器将生成代码打包到 XMM 寄存器的这些值并调用`_mm_insert_si64`。
+如果使用编译器`_mm_inserti_si64`无法确定为整数常量的参数调用, 则编译器将生成代码以便将这些值打包到一个 XMM 寄存器并调用。 `_mm_insert_si64`
 
-若要确定的硬件支持`insertq`指令调用`__cpuid`与内部`InfoType=0x80000001`，并检查的 6 位`CPUInfo[2] (ECX)`。 此位将否则如果支持该指令，则为 1 和 0。 如果你运行代码，使用此内部函数不支持的硬件上`insertq`指令，则结果不可预知。
+若要确定`insertq`指令的硬件支持, 请`__cpuid`调用内部`InfoType=0x80000001` , 并检查的`CPUInfo[2] (ECX)`第6位。 如果支持指令, 则此位为 1; 否则为0。 如果在不支持`insertq`指令的硬件上运行使用内部函数的代码, 则结果是不可预知的。
 
 ## <a name="example"></a>示例
 
-```
+```cpp
 // Compile this sample with: /EHsc
 #include <iostream>
 #include <intrin.h>
@@ -120,9 +120,9 @@ result3 = 0xfffffffff3210fff
 
 **结束 Microsoft 专用**
 
-高级微设备，inc.版权所有 2007保留所有权利。 重新生成具有高级微设备，inc.的权限
+部分版权 2007, 由高级微设备, Inc。保留所有权利。 从高级微设备, Inc. 的权限重现。
 
 ## <a name="see-also"></a>请参阅
 
-[_mm_extract_si64, _mm_extracti_si64](../intrinsics/mm-extract-si64-mm-extracti-si64.md)<br/>
+[_mm_extract_si64, _mm_extracti_si64](../intrinsics/mm-extract-si64-mm-extracti-si64.md)\
 [编译器内部函数](../intrinsics/compiler-intrinsics.md)

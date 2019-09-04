@@ -1,6 +1,6 @@
 ---
 title: _InterlockedExchangeAdd 内部函数
-ms.date: 12/17/2018
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedExchangeAdd64_nf
 - _InterlockedExchangeAdd64_rel
@@ -55,22 +55,22 @@ helpviewer_keywords:
 - _InterlockedExchangeAdd16_nf intrinsic
 - _InterlockedExchangeAdd64_rel intrinsic
 ms.assetid: 25809e1f-9c60-4492-9f7c-0fb59c8d13d2
-ms.openlocfilehash: 2cffd5a088c4b3c67441e79bc04bd709be6bf8ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a81439a4ee20e7251173fd0eb0e7ddf240a9341f
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396725"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217662"
 ---
-# <a name="interlockedexchangeadd-intrinsic-functions"></a>_InterlockedExchangeAdd 内部函数
+# <a name="_interlockedexchangeadd-intrinsic-functions"></a>_InterlockedExchangeAdd 内部函数
 
 **Microsoft 专用**
 
-提供编译器内部函数支持 Win32 Windows SDK [_InterlockedExchangeAdd 内部函数](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)函数。
+为 Win32 Windows SDK [_InterlockedExchangeAdd 内部函数](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)函数提供编译器内部支持。
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 long _InterlockedExchangeAdd(
    long volatile * Addend,
    long Value
@@ -153,13 +153,13 @@ __int64 _InterlockedExchangeAdd64_HLERelease(
 );
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-*加数*<br/>
-[in、 out]要添加到; 的值替换为相加的结果。
+*加数*\
+[in, out]要添加到的值;替换为添加的结果。
 
-*值*<br/>
-[in]要添加的值。
+*负值*\
+中要添加的值。
 
 ## <a name="return-value"></a>返回值
 
@@ -169,9 +169,11 @@ __int64 _InterlockedExchangeAdd64_HLERelease(
 
 |内部函数|体系结构|Header|
 |---------------|------------------|------------|
-|`_InterlockedExchangeAdd`, `_InterlockedExchangeAdd8`, `_InterlockedExchangeAdd16`, `_InterlockedExchangeAdd64`|x86、 ARM、 x64|\<intrin.h>|
-|`_InterlockedExchangeAdd_acq`, `_InterlockedExchangeAdd_rel`, `_InterlockedExchangeAdd_nf`, `_InterlockedExchangeAdd8_acq`, `_InterlockedExchangeAdd8_rel`, `_InterlockedExchangeAdd8_nf`,`_InterlockedExchangeAdd16_acq`, `_InterlockedExchangeAdd16_rel`, `_InterlockedExchangeAdd16_nf`, `_InterlockedExchangeAdd64_acq`, `_InterlockedExchangeAdd64_rel`, `_InterlockedExchangeAdd64_nf`|ARM|\<intrin.h>|
-|`_InterlockedExchangeAdd_HLEAcquire`, `_InterlockedExchangeAdd_HLERelease`, `_InterlockedExchangeAdd64_HLEAcquire`, `_InterlockedExchangeAdd64_HLErelease`|x86、x64|\<immintrin.h>|
+|`_InterlockedExchangeAdd`, `_InterlockedExchangeAdd8`, `_InterlockedExchangeAdd16`|x86、ARM、x64、ARM64|\<intrin.h>|
+|`_InterlockedExchangeAdd64`|ARM、x64、ARM64|\<intrin.h>|
+|`_InterlockedExchangeAdd_acq`, `_InterlockedExchangeAdd_rel`, `_InterlockedExchangeAdd_nf`, `_InterlockedExchangeAdd8_acq`, `_InterlockedExchangeAdd8_rel`, `_InterlockedExchangeAdd8_nf`,`_InterlockedExchangeAdd16_acq`, `_InterlockedExchangeAdd16_rel`, `_InterlockedExchangeAdd16_nf`, `_InterlockedExchangeAdd64_acq`, `_InterlockedExchangeAdd64_rel`, `_InterlockedExchangeAdd64_nf`|ARM, ARM64|\<intrin.h>|
+|`_InterlockedExchangeAdd_HLEAcquire`， `_InterlockedExchangeAdd_HLERelease`|x86、x64|\<immintrin.h>|
+|`_InterlockedExchangeAdd64_HLEAcquire`， `_InterlockedExchangeAdd64_HLErelease`|X64|\<immintrin.h>|
 
 ## <a name="remarks"></a>备注
 
@@ -179,20 +181,20 @@ __int64 _InterlockedExchangeAdd64_HLERelease(
 
 当 `_InterlockedExchangeAdd` 函数对 32 位整数值操作时，`_InterlockedExchangeAdd8` 对 8 位整数值操作，`_InterlockedExchangeAdd16` 对 16 位整数值操作且 `_InterlockedExchangeAdd64` 对 64 位整数值操作。
 
-ARM 平台上，如果需要（例如在临界区的起点和终点）获取和发布语义，可以使用带 `_acq` 和 `_rel` 后缀的函数。 带 `_nf`（“无围墙”）后缀的内部函数不能充当内存屏障。
+ARM 平台上，如果需要（例如在临界区的起点和终点）获取和发布语义，可以使用带 `_acq` 和 `_rel` 后缀的函数。 带`_nf` ("无围墙") 后缀的内部函数不能充当内存屏障。
 
-在支持硬件锁省略 (HLE) 指令的 Intel 平台，带 `_HLEAcquire` 和 `_HLERelease` 后缀的内部函数包括一个发送到处理器的提示，可以通过消除硬件中的锁写步骤来提升速度。 如果在不支持 HLE 的平台上调用这些函数，则忽略此提示。
+在支持硬件锁省略 (HLE) 指令的 Intel 平台，带 `_HLEAcquire` 和 `_HLERelease` 后缀的内部函数包括一个发送到处理器的提示，可以通过消除硬件中的锁写步骤来提升速度。 如果在不支持 HLE 的平台上调用这些内部函数, 则忽略该提示。
 
-这些例程只能用作内部函数。 因此，它们是内部函数是否还是不[/Oi](../build/reference/oi-generate-intrinsic-functions.md)或[#pragma 内部](../preprocessor/intrinsic.md)使用。 不能使用[#pragma 函数](../preprocessor/function-c-cpp.md)这些内部函数。
+这些例程只能用作内部函数。 即使使用[/Oi](../build/reference/oi-generate-intrinsic-functions.md)或[#pragma 内部函数](../preprocessor/intrinsic.md), 它们也是内部的。 不能对这些内部[函数使用 #pragma 函数](../preprocessor/function-c-cpp.md)。
 
 ## <a name="example"></a>示例
 
-有关如何使用的示例`_InterlockedExchangeAdd`，请参阅[_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)。
+有关如何使用`_InterlockedExchangeAdd`的示例, 请参阅[_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)。
 
 **结束 Microsoft 专用**
 
 ## <a name="see-also"></a>请参阅
 
-[编译器内部函数](../intrinsics/compiler-intrinsics.md)<br/>
-[关键字](../cpp/keywords-cpp.md)<br/>
+[编译器内部函数](../intrinsics/compiler-intrinsics.md)\
+[关键字](../cpp/keywords-cpp.md)\
 [与 x86 编译器冲突](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

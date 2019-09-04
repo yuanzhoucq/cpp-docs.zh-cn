@@ -1,6 +1,6 @@
 ---
 title: __stosw
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __stosw
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - __stosw intrinsic
 - rep stosw instruction
 ms.assetid: 7620fd1d-dba5-40e3-8e07-01aa68895133
-ms.openlocfilehash: c203973a79c2c3b1094ad8a5351db0999a56bf19
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5fd29bbf1aebba115670fc1bc35e0d8cbe29c7ad
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390290"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219927"
 ---
-# <a name="stosw"></a>__stosw
+# <a name="__stosw"></a>__stosw
 
 **Microsoft 专用**
 
-生成的存储字符串指令 (`rep stosw`)。
+生成存储字符串指令 (`rep stosw`)。
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 void __stosw(
-   unsigned short* Dest,
+   unsigned short* Destination,
    unsigned short Data,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-*dest*<br/>
-[out]该操作的目标。
+*位置*\
+弄操作的目标。
 
-*Data*<br/>
-[in]要存储的数据。
+*数据*\
+中要存储的数据。
 
-“计数”<br/>
-[in]中的单词写入块的长度。
+*计*\
+中要写入的单词块的长度。
 
 ## <a name="requirements"></a>要求
 
@@ -48,17 +48,17 @@ void __stosw(
 |---------------|------------------|
 |`__stosw`|x86、x64|
 
-**标头文件** \<intrin.h >
+**标头文件**\<intrin.h >
 
 ## <a name="remarks"></a>备注
 
-结果是，字`Data`写入到块`Count`词中`Dest`字符串。
+结果是将单词*数据*写入*目标*字符串中的*计数*词块。
 
 此例程仅可用作内部函数。
 
 ## <a name="example"></a>示例
 
-```
+```C
 // stosw.c
 // processor: x86, x64
 #include <stdio.h>

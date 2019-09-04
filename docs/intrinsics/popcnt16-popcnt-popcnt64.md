@@ -1,6 +1,6 @@
 ---
 title: __popcnt16, __popcnt, __popcnt64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __popcnt64
 - __popcnt
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - __popcnt64
 - __popcnt
 ms.assetid: e525b236-adc8-42df-9b9b-8b7d8c245d3b
-ms.openlocfilehash: d6cc9a0ce784ab79f5e4225675a082fc55bd53e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e5ae7f897500775671f8bd2563028874579a627
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263212"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221356"
 ---
-# <a name="popcnt16-popcnt-popcnt64"></a>__popcnt16, __popcnt, __popcnt64
+# <a name="__popcnt16-__popcnt-__popcnt64"></a>__popcnt16, __popcnt, __popcnt64
 
 **Microsoft 专用**
 
-计数的一个 16 位、 32 位或 64 位无符号的整数中的位 （填充计数）。
+计算16、32 `1`或64位无符号整数中的位数 (人口数)。
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 unsigned short __popcnt16(
    unsigned short value
 );
@@ -38,34 +38,34 @@ unsigned __int64 __popcnt64(
 );
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-*值*<br/>
-[in]16 位、 32 或 64 位无符号的整数，我们需要填充计数。
+*value*\
+中要填充计数的16、32或64位无符号整数。
 
 ## <a name="return-value"></a>返回值
 
-中的一个比特数`value`参数。
+值参数中`1`的位数。
 
 ## <a name="requirements"></a>要求
 
 |内部函数|体系结构|
 |---------------|------------------|
-|`__popcnt16`|高级的位操作|
-|`__popcnt`|高级的位操作|
-|`__popcnt64`|在 64 位模式下的高级的位操作。|
+|`__popcnt16`|高级位操作|
+|`__popcnt`|高级位操作|
+|`__popcnt64`|64位模式下的高级位操作。|
 
-**标头文件** \<intrin.h >
+**标头文件**\<intrin.h >
 
 ## <a name="remarks"></a>备注
 
-每个这些内部函数生成`popcnt`指令。 在 32 位模式下有任何 64 位的通用寄存器，因此不是 64 位`popcnt`。
+每个内部函数都会生成`popcnt`指令。 在32位模式下, 没有任何64位通用寄存器, 因此不支持64位`popcnt` 。
 
-若要确定的硬件支持`popcnt`指令，调用`__cpuid`与内部`InfoType=0x00000001`并检查位 23 的`CPUInfo[2] (ECX)`。 此位为否则如果支持该指令，则为 1 和 0。 如果你运行代码，使用此内部函数不支持的硬件上`popcnt`指令，则结果不可预知。
+若要确定`popcnt`指令的硬件支持, 请`__cpuid`调用内部`InfoType=0x00000001` , 并检查的`CPUInfo[2] (ECX)`位23。 如果支持指令, 则此位为 1; 否则为0。 如果在不支持`popcnt`指令的硬件上运行使用这些内部函数的代码, 则结果是不可预知的。
 
 ## <a name="example"></a>示例
 
-```
+```cpp
 #include <iostream>
 #include <intrin.h>
 using namespace std;
@@ -101,7 +101,7 @@ __popcnt(0xffffffff) = 32
 
 **结束 Microsoft 专用**
 
-高级微设备，inc.版权所有 2007保留所有权利。 重新生成具有高级微设备，inc.的权限
+部分版权 2007, 由高级微设备, Inc。保留所有权利。 从高级微设备, Inc. 的权限重现。
 
 ## <a name="see-also"></a>请参阅
 

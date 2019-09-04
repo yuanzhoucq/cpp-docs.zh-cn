@@ -1,6 +1,6 @@
 ---
 title: __stosq
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __stosq
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - stosq instruction
 - __stosq intrinsic
 ms.assetid: 3ea28297-4369-4c2d-bf0c-91fa539ce209
-ms.openlocfilehash: eacb12f7c02b82607d980281f8d4a0bc1e1d7c14
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b347d595da4cdbf1fefb6244940e262981671e9
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390342"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219948"
 ---
-# <a name="stosq"></a>__stosq
+# <a name="__stosq"></a>__stosq
 
 **Microsoft 专用**
 
-生成的存储字符串指令 (`rep stosq`)。
+生成存储字符串指令 (`rep stosq`)。
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 void __stosb(
-   unsigned __int64* Dest,
+   unsigned __int64* Destination,
    unsigned __int64 Data,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-*dest*<br/>
-[out]该操作的目标。
+*位置*\
+弄操作的目标。
 
-*Data*<br/>
-[in]要存储的数据。
+*数据*\
+中要存储的数据。
 
-“计数”<br/>
-[in]四字要写入的块的长度。
+*计*\
+中要写入的 quadwords 块的长度。
 
 ## <a name="requirements"></a>要求
 
@@ -48,17 +48,17 @@ void __stosb(
 |---------------|------------------|
 |`__stosq`|AMD64|
 
-**标头文件** \<intrin.h >
+**标头文件**\<intrin.h >
 
 ## <a name="remarks"></a>备注
 
-结果是，四字`Data`写入到块`Count`中的四字`Dest`字符串。
+结果就是, 将四 quadwords*数据*写入*目标*字符串中的*计数*块。
 
 此例程仅可用作内部函数。
 
 ## <a name="example"></a>示例
 
-```
+```C
 // stosq.c
 // processor: x64
 #include <stdio.h>
@@ -76,9 +76,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Output
-
-```
+```Output
 0 ffffffffffff ffffffffffff 0
 ```
 

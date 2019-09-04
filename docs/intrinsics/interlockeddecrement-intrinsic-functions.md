@@ -1,6 +1,6 @@
 ---
 title: _InterlockedDecrement 内部函数
-ms.date: 12/17/2018
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedDecrement16_rel_cpp
 - _InterlockedDecrement16_acq_cpp
@@ -44,12 +44,12 @@ helpviewer_keywords:
 - _InterlockedDecrement64_nf intrinsic
 - InterlockedDecrement_rel intrinsic
 ms.assetid: 5268fce3-86b5-4b2b-b96c-2e531a3fb9b5
-ms.openlocfilehash: 43bf7a9b788c176490ec3fe08e370708eaf000ce
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f7d46cc90c9925a49948da488c2ed7ede7bdee8f
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509406"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217673"
 ---
 # <a name="_interlockeddecrement-intrinsic-functions"></a>_InterlockedDecrement 内部函数
 
@@ -59,7 +59,7 @@ ms.locfileid: "69509406"
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 long _InterlockedDecrement(
    long * lpAddend
 );
@@ -98,9 +98,9 @@ __int64 _InterlockedDecrement64_nf(
 );
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-*lpAddend*<br/>
+*lpAddend*\
 [in, out]指向要递减的变量的指针。
 
 ## <a name="return-value"></a>返回值
@@ -111,8 +111,9 @@ __int64 _InterlockedDecrement64_nf(
 
 |内部函数|体系结构|
 |---------------|------------------|
-|`_InterlockedDecrement`, `_InterlockedDecrement16`, `_InterlockedDecrement64`|x86、ARM、x64|
-|`_InterlockedDecrement_acq`, `_InterlockedDecrement_rel`, `_InterlockedDecrement_nf`, `_InterlockedDecrement16_acq`, `_InterlockedDecrement16_rel`, `_InterlockedDecrement16_nf`, `_InterlockedDecrement64_acq`, `_InterlockedDecrement64_rel`, `_InterlockedDecrement64_nf`,|ARM|
+|`_InterlockedDecrement`， `_InterlockedDecrement16`|x86、ARM、x64、ARM64|
+|`_InterlockedDecrement64`|ARM、x64、ARM64|
+|`_InterlockedDecrement_acq`, `_InterlockedDecrement_rel`, `_InterlockedDecrement_nf`, `_InterlockedDecrement16_acq`, `_InterlockedDecrement16_rel`, `_InterlockedDecrement16_nf`, `_InterlockedDecrement64_acq`, `_InterlockedDecrement64_rel`, `_InterlockedDecrement64_nf`,|ARM, ARM64|
 
 **标头文件**\<intrin.h >
 
@@ -122,7 +123,7 @@ __int64 _InterlockedDecrement64_nf(
 
 当 `_InterlockedDecrement` 函数对 32 位整数值操作时，`_InterlockedDecrement16` 对 16 位整数值操作且 `_InterlockedDecrement64` 可以对 64 位整数值操作。
 
-ARM 平台上，如果需要（例如在临界区的起点和终点）获取和发布语义，可以使用带 `_acq` 和 `_rel` 后缀的函数。 带 `_nf`（“无围墙”）后缀的内部函数不能充当内存屏障。
+ARM 平台上，如果需要（例如在临界区的起点和终点）获取和发布语义，可以使用带 `_acq` 和 `_rel` 后缀的函数。 带`_nf` ("无围墙") 后缀的内部函数不能充当内存屏障。
 
 由 `lpAddend` 参数指向的变量必须与 32 位边界对齐；否则，此函数在多处理器 x86 系统和任何非 x86 系统上将失效。 有关详细信息, 请参阅[align](../cpp/align-cpp.md)。
 
@@ -198,6 +199,6 @@ void __cdecl SimpleThread(void* pParam) {
 
 ## <a name="see-also"></a>请参阅
 
-[编译器内部函数](../intrinsics/compiler-intrinsics.md)<br/>
-[关键字](../cpp/keywords-cpp.md)<br/>
+[编译器内部函数](../intrinsics/compiler-intrinsics.md)\
+[关键字](../cpp/keywords-cpp.md)\
 [与 x86 编译器冲突](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

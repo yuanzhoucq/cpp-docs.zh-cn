@@ -1,6 +1,6 @@
 ---
 title: __lzcnt16、__lzcnt、__lzcnt64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __lzcnt64
 - __lzcnt16
@@ -14,22 +14,22 @@ helpviewer_keywords:
 - lzcnt64 intrinsic
 - __lzcnt64 intrinsic
 ms.assetid: 412113e7-052e-46e5-8bfa-d5ad72abc10e
-ms.openlocfilehash: 333d9f2b23fb90388af8395945256956c9222ab9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fcd801717974a230fbd19cc7802d8f6a011774f7
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263368"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221800"
 ---
-# <a name="lzcnt16-lzcnt-lzcnt64"></a>__lzcnt16、__lzcnt、__lzcnt64
+# <a name="__lzcnt16-__lzcnt-__lzcnt64"></a>__lzcnt16、__lzcnt、__lzcnt64
 
 **Microsoft 专用**
 
-计数在 16 位、 32 位或 64 位整数数量的前导零。
+计算16、32或64位整数中的前导零的数目。
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 unsigned short __lzcnt16(
    unsigned short value
 );
@@ -41,36 +41,36 @@ unsigned __int64 __lzcnt64(
 );
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-*值*<br/>
-[in]16 位、 32 或 64 位无符号的整数，扫描的前导零。
+*value*\
+中用于扫描前导零的16、32或64位无符号整数。
 
 ## <a name="return-value"></a>返回值
 
-数的前导零位数中的`value`参数。 如果`value`为零，则返回值是在输入操作数 （16、 32 或 64） 的大小。 如果最高有效位`value`为 1，返回值为零。
+`value`参数中前导零位的数目。 如果`value`为零, 则返回值为输入操作数的大小 (16、32或 64)。 如果的最高有效位`value`为 1, 则返回值为零。
 
 ## <a name="requirements"></a>要求
 
 |内部函数|体系结构|
 |---------------|------------------|
-|`__lzcnt16`|AMD:高级的位操作 (ABM)<br /><br /> Intel:Haswell|
-|`__lzcnt`|AMD:高级的位操作 (ABM)<br /><br /> Intel:Haswell|
-|`__lzcnt64`|AMD:高级位操作 (ABM) 在 64 位模式下。<br /><br /> Intel:Haswell|
+|`__lzcnt16`|采用高级位操作 (ABM)<br /><br /> 媒体Haswell|
+|`__lzcnt`|采用高级位操作 (ABM)<br /><br /> 媒体Haswell|
+|`__lzcnt64`|采用64位模式下的高级位操作 (ABM)。<br /><br /> 媒体Haswell|
 
-**标头文件** \<intrin.h >
+**标头文件**\<intrin.h >
 
 ## <a name="remarks"></a>备注
 
-每个这些内部函数生成`lzcnt`指令。  值的大小，`lzcnt`指令返回为其自变量的大小相同。  在 32 位模式下有任何 64 位的通用寄存器，因此不是 64 位`lzcnt`。
+每个内部函数都会生成`lzcnt`指令。  `lzcnt`指令返回的值的大小与参数的大小相同。  在32位模式下, 没有任何64位通用寄存器, 因此不支持64位`lzcnt` 。
 
-若要确定的硬件支持`lzcnt`指令调用`__cpuid`内部使用`InfoType=0x80000001`，并检查的 5 位`CPUInfo[2] (ECX)`。 此位将否则如果支持该指令，则为 1 和 0。 如果你运行代码，使用此内部函数不支持的硬件上`lzcnt`指令，则结果不可预知。
+若要确定`lzcnt`指令的硬件支持, 请`__cpuid`调用内部`InfoType=0x80000001` , 并检查的`CPUInfo[2] (ECX)`第5位。 如果支持指令, 则此位为 1; 否则为0。 如果在不支持`lzcnt`指令的硬件上运行使用内部函数的代码, 则结果是不可预知的。
 
-不支持的 Intel 处理器上`lzcnt`指令的字节编码为执行的指令， `bsr` （位扫描相反）。 如果代码可移植性是一个问题，请考虑使用`_BitScanReverse`内部函数相反。 有关详细信息，请参阅[_bitscanreverse、_bitscanreverse64](../intrinsics/bitscanreverse-bitscanreverse64.md)。
+在不支持`lzcnt`指令的 Intel 处理器上, 指令字节编码将作为`bsr` (位扫描反向) 执行。 如果需要考虑代码可移植性, 请改为`_BitScanReverse`考虑使用内部函数。 有关详细信息, 请参阅[_BitScanReverse、_BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md)。
 
 ## <a name="example"></a>示例
 
-```
+```cpp
 // Compile this test with: /EHsc
 #include <iostream>
 #include <intrin.h>
@@ -107,7 +107,7 @@ __lzcnt(0xffffffff) = 0
 
 **结束 Microsoft 专用**
 
-本部分内容是高级微设备，inc.版权所有 2007保留所有权利。 重新生成具有高级微设备，inc.的权限
+本内容的部分内容为高级微设备, Inc. 的版权2007。保留所有权利。 从高级微设备, Inc. 的权限重现。
 
 ## <a name="see-also"></a>请参阅
 

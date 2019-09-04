@@ -1,6 +1,6 @@
 ---
 title: __movsq
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __movsq
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - rep movsq instruction
 - movsq instruction
 ms.assetid: be116a6e-2176-4ca4-93b1-9ccf3e7e7835
-ms.openlocfilehash: 4e4908cd5ffc28840b5a48b735048cccb557e97c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66de1971c48f6697fd06579fac635cce31545e92
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263160"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217258"
 ---
-# <a name="movsq"></a>__movsq
+# <a name="__movsq"></a>__movsq
 
 **Microsoft 专用**
 
-生成重复移动字符串 (`rep movsq`) 指令。
+生成重复的 Move String (`rep movsq`) 指令。
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 void __movsq(
-   unsigned char* Dest,
+   unsigned char* Destination,
    unsigned char* Source,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-*dest*<br/>
-[out]该操作的目标。
+*位置*\
+弄操作的目标。
 
-*源*<br/>
-[in]操作的源。
+*Source*\
+中操作的源。
 
-“计数”<br/>
-[in]要复制的四字的数目。
+*计*\
+中要复制的 quadwords 的数目。
 
 ## <a name="requirements"></a>要求
 
@@ -48,17 +48,17 @@ void __movsq(
 |---------------|------------------|
 |`__movsq`|X64|
 
-**标头文件** \<intrin.h >
+**标头文件**\<intrin.h >
 
 ## <a name="remarks"></a>备注
 
-结果是，第一个`Count`指向四字`Source`复制到`Dest`字符串。
+结果是将*源*指向的第一个*计数*quadwords 复制到*目标*字符串。
 
 此例程仅可用作内部函数。
 
 ## <a name="example"></a>示例
 
-```
+```cpp
 // movsq.cpp
 // processor: x64
 #include <stdio.h>

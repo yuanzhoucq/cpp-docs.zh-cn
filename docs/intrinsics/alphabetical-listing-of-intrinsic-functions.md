@@ -1,25 +1,25 @@
 ---
-title: 按字母顺序列出的内部函数
+title: 按字母顺序排序的内部函数列表
 ms.date: 11/04/2016
 helpviewer_keywords:
 - cl.exe compiler intrinsics
 - intrinsics, alphabetical list
 - intrinsics
 ms.assetid: 178f88a2-7e8e-43ac-b55e-ef3298bef895
-ms.openlocfilehash: 67206e63d163b489c5087e6bc6759cde30a3d6c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ff6957436ecfb86ae44388e55488981f528f2c73
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264304"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220080"
 ---
-# <a name="alphabetical-listing-of-intrinsic-functions"></a>按字母顺序列出的内部函数
+# <a name="alphabetical-listing-of-intrinsic-functions"></a>按字母顺序排序的内部函数列表
 
-以下各部分介绍了部分或所有体系架构中可用的特定于 Microsoft 的内部函数。 其他受支持的内部函数由处理器制造商在标题文件或其网站上提供。 请参阅[ARM 内部函数](../intrinsics/arm-intrinsics.md)， [x86 内部函数](../intrinsics/x86-intrinsics-list.md)，并[x64 内部函数](../intrinsics/x64-amd64-intrinsics-list.md)的部分，了解制造商文档的链接。 本文; 未提供已为其实现的内部函数的 C 运行时库 (CRT) 函数这些函数均记录在[C 运行时库参考](../c-runtime-library/c-run-time-library-reference.md)。
+以下各部分介绍了部分或所有体系架构中可用的特定于 Microsoft 的内部函数。 其他受支持的内部函数由处理器制造商在标题文件或其网站上提供。 有关指向制造商文档的链接, 请参阅[ARM 内部](../intrinsics/arm-intrinsics.md)函数、 [x86 内部函数](../intrinsics/x86-intrinsics-list.md)和[x64 内部函数](../intrinsics/x64-amd64-intrinsics-list.md)部分。 为其实现了内部函数的 C 运行时库 (CRT) 函数在此处没有介绍;[C 运行库参考](../c-runtime-library/c-run-time-library-reference.md)中介绍了这些函数。
 
-[__addfsbyte, \__addfsword, \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)
+[__addfsbyte、 \__addfsword、 \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)
 
-[__addgsbyte, \__addgsword, \__addgsdword, \__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)
+[__addgsbyte、 \__addgsword、 \__addgsdword、 \__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)
 
 [_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)
 
@@ -37,13 +37,13 @@ ms.locfileid: "62264304"
 
 [_bittestandset, _bittestandset64](../intrinsics/bittestandset-bittestandset64.md)
 
-[__cpuid, \__cpuidex](../intrinsics/cpuid-cpuidex.md)
+[__cpuid、 \__cpuidex](../intrinsics/cpuid-cpuidex.md)
 
 [__debugbreak](../intrinsics/debugbreak.md)
 
 [_disable](../intrinsics/disable.md)
 
-[__emul， \__emulu](../intrinsics/emul-emulu.md)
+[__emul、 \__emulu](../intrinsics/emul-emulu.md)
 
 [_enable](../intrinsics/enable.md)
 
@@ -59,9 +59,9 @@ ms.locfileid: "62264304"
 
 [__inbytestring](../intrinsics/inbytestring.md)
 
-[__incfsbyte， \__incfsword， \__incfsdword](../intrinsics/incfsbyte-incfsword-incfsdword.md)
+[__incfsbyte、 \__incfsword、 \__incfsdword](../intrinsics/incfsbyte-incfsword-incfsdword.md)
 
-[__incgsbyte， \__incgsword， \__incgsdword， \__incgsqword](../intrinsics/incgsbyte-incgsword-incgsdword-incgsqword.md)
+[__incgsbyte、 \__incgsword、 \__incgsdword、 \__incgsqword](../intrinsics/incgsbyte-incgsword-incgsdword-incgsqword.md)
 
 [__indword](../intrinsics/indword.md)
 
@@ -111,7 +111,7 @@ ms.locfileid: "62264304"
 
 [__ll_rshift](../intrinsics/ll-rshift.md)
 
-[__lzcnt16, \__lzcnt, \__lzcnt64](../intrinsics/lzcnt16-lzcnt-lzcnt64.md)
+[__lzcnt16、 \__lzcnt、 \__lzcnt64](../intrinsics/lzcnt16-lzcnt-lzcnt64.md)
 
 [_mm_cvtsi64x_ss](../intrinsics/mm-cvtsi64x-ss.md)
 
@@ -157,7 +157,7 @@ ms.locfileid: "62264304"
 
 [__outwordstring](../intrinsics/outwordstring.md)
 
-[__popcnt16， \__popcnt， \__popcnt64](../intrinsics/popcnt16-popcnt-popcnt64.md)
+[__popcnt16、 \__popcnt、 \__popcnt64](../intrinsics/popcnt16-popcnt-popcnt64.md)
 
 [__rdtsc](../intrinsics/rdtsc.md)
 
@@ -179,9 +179,9 @@ ms.locfileid: "62264304"
 
 [__readeflags](../intrinsics/readeflags.md)
 
-[__readfsbyte， \__readfsdword， \__readfsqword， \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)
+[__readfsbyte、 \__readfsdword、 \__readfsqword、 \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)
 
-[__readgsbyte， \__readgsdword， \__readgsqword， \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)
+[__readgsbyte、 \__readgsdword、 \__readgsqword、 \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)
 
 [__readmsr](../intrinsics/readmsr.md)
 
@@ -267,9 +267,9 @@ ms.locfileid: "62264304"
 
 [__writeeflags](../intrinsics/writeeflags.md)
 
-[__writefsbyte， \__writefsdword， \__writefsqword， \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)
+[__writefsbyte、 \__writefsdword、 \__writefsqword、 \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)
 
-[__writegsbyte， \__writegsdword， \__writegsqword， \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)
+[__writegsbyte、 \__writegsdword、 \__writegsqword、 \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)
 
 [__writemsr](../intrinsics/writemsr.md)
 

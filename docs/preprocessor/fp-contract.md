@@ -1,6 +1,6 @@
 ---
-title: fp_contract
-ms.date: 03/12/2018
+title: fp_contract 杂注
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.fp_contract
 - fp_contract_CPP
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - pragmas, fp_contract
 - fp_contract pragma
 ms.assetid: 15b97338-6680-4287-ba2a-2dccc5b2ccf5
-ms.openlocfilehash: 14c3ac60d4fc0f45fcf0ece6c3f73153e5de4271
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 833d8e7f4b8c9da18901610e52afed619468c5c3
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409910"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218565"
 ---
-# <a name="fpcontract"></a>fp_contract
+# <a name="fp_contract-pragma"></a>fp_contract 杂注
 
-确定浮点缩写式是否会发生。 浮点缩写式是一个指令如 FMA （Fused-乘加） 结合了两个单独浮点运算成一条指令。 因为而不是每次操作后的舍入，处理器可能舍入一次只能在这两项操作后，这些指令的使用可能会影响浮点精度。
+确定是否发生浮点缩写式。 浮点缩写式是将两个单独的浮点运算组合到一个指令中的一个指令, 如 FMA (带外接程序)。 使用这些指令可能会影响浮点精度, 因为在执行每个运算后, 处理器可能仅舍入一次。
 
 ## <a name="syntax"></a>语法
 
@@ -25,9 +25,9 @@ ms.locfileid: "62409910"
 
 ## <a name="remarks"></a>备注
 
-默认情况下**fp_contract**是**上**。 这将告知编译器使用浮点缩写式的说明，在可能的情况。 设置**fp_contract**到**关闭**来保留单个浮点指令。
+默认情况下, **fp_contract**为**on**。 这会告知编译器尽可能使用浮点缩写式指令。 将**fp_contract**设置为**off** , 以保留单个浮点指令。
 
-有关浮点行为的详细信息，请参阅[/fp （指定浮点行为）](../build/reference/fp-specify-floating-point-behavior.md)。
+有关浮点行为的详细信息, 请参阅[/fp (指定浮点行为)](../build/reference/fp-specify-floating-point-behavior.md)。
 
 其他浮点杂注包括：
 
@@ -37,7 +37,7 @@ ms.locfileid: "62409910"
 
 ## <a name="example"></a>示例
 
-此示例中生成的代码不使用融合的乘加指令，即使它是可在目标处理器上。 如果注释掉`#pragma fp_contract (off)`，生成的代码可能会使用融合的乘加指令是否可用。
+此示例生成的代码不使用带外乘添加指令, 即使它在目标处理器上可用也是如此。 如果注释掉`#pragma fp_contract (off)`, 则生成的代码可能会使用带外乘添加指令 (如果可用)。
 
 ```cpp
 // pragma_directive_fp_contract.cpp
@@ -77,4 +77,4 @@ out = 4.587525000000000e+03
 
 ## <a name="see-also"></a>请参阅
 
-[Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Pragma 指令和 __pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

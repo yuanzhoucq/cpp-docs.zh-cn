@@ -1,41 +1,41 @@
 ---
 title: __outbyte
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __outbyte
 helpviewer_keywords:
 - out instruction
 - __outbyte intrinsic
 ms.assetid: c4cd1a34-8a02-4e37-993d-3201bc17901a
-ms.openlocfilehash: 234892369572a2ee315687f5d70533a0c8cf4b59
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 18792010c45ffb648e9555ccb73f8614c3e3e6ea
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262965"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217196"
 ---
-# <a name="outbyte"></a>__outbyte
+# <a name="__outbyte"></a>__outbyte
 
 **Microsoft 专用**
 
-将生成`out`指令，将发送由指定 1 个字节`Data`出指定的 I/O 端口`Port`。
+生成指令, 该指令发送由`Data`指定`Port`的 i/o 端口指定的1个字节。 `out`
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 void __outbyte(
    unsigned short Port,
    unsigned char Data
 );
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-*端口*<br/>
-[in]要向其发送数据的端口。
+*口*\
+中要将数据发送到的端口。
 
-*Data*<br/>
-[in]要指定的端口发送的字节。
+*数据*\
+中要从指定端口发送的字节。
 
 ## <a name="requirements"></a>要求
 
@@ -43,7 +43,7 @@ void __outbyte(
 |---------------|------------------|
 |`__outbyte`|x86、x64|
 
-**标头文件** \<intrin.h >
+**标头文件**\<intrin.h >
 
 ## <a name="remarks"></a>备注
 
