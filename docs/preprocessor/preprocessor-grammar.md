@@ -1,90 +1,90 @@
 ---
 title: 预处理器语法
-ms.date: 09/04/2018
+ms.date: 08/29/2019
 helpviewer_keywords:
 - preprocessor
 - grammar, preprocessor
 - preprocessor, grammar
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
-ms.openlocfilehash: 6177cf5fddba549e410842ef3f270edcc13d4782
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0916e3cc9bbdb398db693286dacc4517df03557
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179875"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222256"
 ---
 # <a name="preprocessor-grammar"></a>预处理器语法
 
-*控制行*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#define** *identifier* *token-string*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#define** <em>identifier</em>**(** *identifier*<sub>opt</sub> **,** ... **,** *identifier*<sub>opt</sub> **)** *token-string*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#include** **"** *path-spec* **"**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#include** **\<** *path-spec* **>**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#line** *digit-sequence*  **"** *filename* **"**<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#undef** *identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#error** *token-string*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#pragma** *token-string*
+*控件行*: \
+&nbsp;&nbsp;&nbsp;&nbsp; **#define***标识符* *标记-字符串*<sub>opt</sub>\
+&nbsp;&nbsp;&nbsp;&nbsp; **#define***标识符* **(** &#x2800;标识符&#x200B;<sub>opt</sub> **,** ... **,** *标识符*&#x200B; <sub></sub>opt&#x2800; **)** *令牌-字符串*<sub>opt</sub>\
+&nbsp;&nbsp;&nbsp;&nbsp; **#include** **"** _路径规范_ **"** \
+&nbsp;&nbsp;&nbsp;&nbsp; **#include** **\<** _路径规范_ **>** \
+&nbsp;&nbsp;&nbsp;&nbsp; **#line***数字序列* **"** _filename_ **"** &#x200B; <sub>opt</sub>  \
+&nbsp;&nbsp;&nbsp;&nbsp; **#undef***标识符*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#error***标记-字符串*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#pragma** *token-string*
 
-*constant-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**defined(** *identifier* **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**defined** *identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;任何其他常量表达式
+*常量-表达式*: \
+&nbsp;&nbsp;&nbsp;&nbsp;**定义 (** &#x2800;*标识符*&#x2800; **)** \
+&nbsp;&nbsp;&nbsp;&nbsp;**定义***标识符*\
+&nbsp;&nbsp;&nbsp;&nbsp;任何其他常数表达式
 
-*条件*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*if-part* *elif-parts*<sub>opt</sub> *else-part*<sub>opt</sub> *endif-line*
+*条件*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*如果-部分* *elif*<sub>opt</sub>*else-部分*<sub>opt</sub>*endif 行*
 
-*if-part* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*if-line* *text*
+*如果-部分*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*如果为-line* *文本*
 
-*如果行*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#if** *constant-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef** *identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef** *identifier*
+*如果为-line*: \
+&nbsp;&nbsp;&nbsp;&nbsp; **#if***常量表达式*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifdef***标识符*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifndef***标识符*
 
-*命令部件*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*elif-line* *text*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*elif-parts* *elif-line* *text*
+*elif*:
+&nbsp;&nbsp;&nbsp;&nbsp;*elif* *文本*\
+&nbsp;&nbsp;&nbsp;&nbsp;*elif* *elif* *文本*
 
-*命令行*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#elif** *constant-expression*
+*elif*: \
+&nbsp;&nbsp;&nbsp;&nbsp; **#elif** *constant-expression*
 
-*其他部件*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*else-line* *text*
+*else-部分*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*else-线条* *文本*
 
-*其他行*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#else**
+*else-line*: \
+&nbsp;&nbsp;&nbsp;&nbsp; **#else**
 
-*endif 行*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#endif**
+*endif 行*: \
+&nbsp;&nbsp;&nbsp;&nbsp; **#endif**
 
-*digit-sequence* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*digit*<br/>
+*数字序列*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*年份*\
 &nbsp;&nbsp;&nbsp;&nbsp;digit-sequence digit
 
-*digit* : one of<br/>
+*数字*: 1
 &nbsp;&nbsp;&nbsp;&nbsp;0 1 2 3 4 5 6 7 8 9
 
-*令牌字符串*:<br/>
+*标记-字符串*: \
 &nbsp;&nbsp;&nbsp;&nbsp;标记字符串
 
-*令牌*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*keyword*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*constant*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*operator*<br/>
+*令牌*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*关键字*\
+&nbsp;&nbsp;&nbsp;&nbsp;*标志*\
+&nbsp;&nbsp;&nbsp;&nbsp;*常量*\
+&nbsp;&nbsp;&nbsp;&nbsp;*操作员*\
 &nbsp;&nbsp;&nbsp;&nbsp;*punctuator*
 
-*filename* :<br/>
+*filename*: \
 &nbsp;&nbsp;&nbsp;&nbsp;合法操作系统文件名
 
-*path-spec* :<br/>
+*路径-规范*: \
 &nbsp;&nbsp;&nbsp;&nbsp;合法文件路径
 
-*text* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;文本的任何序列
+*文本*: \
+&nbsp;&nbsp;&nbsp;&nbsp;任何文本序列
 
 > [!NOTE]
-> 在中展开以下非终止符[词法约定](../cpp/lexical-conventions.md)一部分*C++语言参考*:*常量*， *常量表达式*，*标识符*，*关键字*，*运算符*，并且*标点符号*。
+> 以下非终止符在 *C++语言参考*的 "[词法约定](../cpp/lexical-conventions.md)" 部分中展开:*常量*、*常量表达式*、*标识符*、*关键字*、*运算符*和*标点符号*。
 
 ## <a name="see-also"></a>请参阅
 
