@@ -1,14 +1,14 @@
 ---
 title: 按字母顺序列出的编译器选项
-ms.date: 05/06/2019
+ms.date: 08/08/2019
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 7e69aa501dd0a7dbf2af51b6fa2c5bf4339eb416
-ms.sourcegitcommit: 07b34ca1c1fecced9fadc95de15dc5fee4f31e5a
+ms.openlocfilehash: 90c7ee5637a5d1e0f9d48c0f128364ee0df73dab
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67693428"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273637"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>按字母顺序列出的编译器选项
 
@@ -21,7 +21,7 @@ ms.locfileid: "67693428"
 |[/AI](ai-specify-metadata-directories.md)|指定在解析传递到 [#using](../../preprocessor/hash-using-directive-cpp.md) 指令的文件引用时搜索的目录。|
 |[/analyze](analyze-code-analysis.md)|启用代码分析。|
 |[/arch](arch-minimum-cpu-architecture.md)|为代码生成指定体系结构。|
-|[/await](await-enable-coroutine-support.md)|启用协同程序 （可恢复函数） 的扩展。|
+|[/await](await-enable-coroutine-support.md)|启用协同程序（可恢复函数）扩展。|
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|增加 .obj 文件中可寻址节的数目。|
 |[/C](c-preserve-comments-during-preprocessing.md)|在预处理期间保留注释。|
 |[/c](c-compile-without-linking.md)|编译但不链接。|
@@ -34,10 +34,12 @@ ms.locfileid: "67693428"
 |[/E](e-preprocess-to-stdout.md)|将预处理器输出复制到标准输出。|
 |[/EH](eh-exception-handling-model.md)|指定异常处理模型。|
 |[/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|将预处理器输出复制到标准输出。|
-|[/errorReport](errorreport-report-internal-compiler-errors.md)|允许您直接向 Microsoft 提供内部编译器错误 (ICE) 信息C++团队。|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)|允许你将内部编译器错误（ICE）信息直接提供给 Microsoft C++团队。|
 |[/execution-charset](execution-charset-set-execution-character-set.md)|设置执行字符集。|
+|[/experimental： module](experimental-module.md)|启用实验性模块支持。|
+|[/experimental：预处理器](experimental-preprocessor.md)|启用实验相容预处理器支持。|
 |[/F](f-set-stack-size.md)|设置堆栈大小。|
-|[/favor](favor-optimize-for-architecture-specifics.md)|生成代码适用于特定 x64 体系结构或 AMD64 和扩展内存 64 技术 (EM64T) 体系结构中的微体系结构的具体情况。|
+|[/favor](favor-optimize-for-architecture-specifics.md)|生成针对特定 x64 体系结构或适用于 AMD64 和扩展内存64技术（EM64T）体系结构中的微体系结构的详细信息进行优化的代码。|
 |[/FA](fa-fa-listing-file.md)|创建列表文件。|
 |[/Fa](fa-fa-listing-file.md)|设置列表文件名。|
 |[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|在诊断文本中显示传递给 cl.exe 的源代码文件的完整路径。|
@@ -45,7 +47,7 @@ ms.locfileid: "67693428"
 |[/Fe](fe-name-exe-file.md)|重命名可执行文件。|
 |[/FI](fi-name-forced-include-file.md)|预处理指定的包含文件。|
 |[/Fi](fi-preprocess-output-file-name.md)|设置预处理输出文件名。|
-|[/Fm](fm-name-mapfile.md)|创建一个映射文件。|
+|[/Fm](fm-name-mapfile.md)|创建映射文件。|
 |[/Fo](fo-object-file-name.md)|创建对象文件。|
 |[/fp](fp-specify-floating-point-behavior.md)|指定浮点行为。|
 |[/Fp](fp-name-dot-pch-file.md)|指定预编译头文件名。|
@@ -75,8 +77,8 @@ ms.locfileid: "67693428"
 |[/Gz](gd-gr-gv-gz-calling-convention.md)|使用 `__stdcall` 调用约定（仅限 x86）。|
 |[/H](h-restrict-length-of-external-names.md)|已否决。 限制外部（公共）名称的长度。|
 |[/HELP](help-compiler-command-line-help.md)|列出编译器选项。|
-|[/homeparams](homeparams-copy-register-parameters-to-stack.md)|强制将传入寄存器的参数写入其在函数入口的堆栈上的位置。 此编译器选项是仅针对 x64 编译器 （本机编译和跨平台编译）。|
-|[/hotpatch](hotpatch-create-hotpatchable-image.md)|创建可热修补的映像。|
+|[/homeparams](homeparams-copy-register-parameters-to-stack.md)|强制将传入寄存器的参数写入其在函数入口的堆栈上的位置。 此编译器选项仅适用于 x64 编译器（本机编译和跨平台编译）。|
+|[/hotpatch](hotpatch-create-hotpatchable-image.md)|创建热可修补映像。|
 |[/I](i-additional-include-directories.md)|在目录中搜索包含文件。|
 |[/J](j-default-char-type-is-unsigned.md)|更改默认的 `char` 类型。|
 |[/JMC](jmc.md)|支持本机C++仅我的代码调试。|
@@ -97,33 +99,34 @@ ms.locfileid: "67693428"
 |[/Od](od-disable-debug.md)|禁用优化。|
 |[/Og](og-global-optimizations.md)|已否决。 使用全局优化。|
 |[/Oi](oi-generate-intrinsic-functions.md)|生成内部函数。|
-|[/openmp](openmp-enable-openmp-2-0-support.md)|使[ `#pragma omp` ](../../preprocessor/omp.md)指令在源代码中。|
+|[/openmp](openmp-enable-openmp-2-0-support.md)|启用源代码[`#pragma omp`](../../preprocessor/omp.md)中的指令。|
 |[/Os](os-ot-favor-small-code-favor-fast-code.md)|代码大小优先。|
 |[/Ot](os-ot-favor-small-code-favor-fast-code.md)|代码速度优先。|
-|[/Ox](ox-full-optimization.md)|使用最大优化 (/Ob2gity /Gs)。|
+|[/Ox](ox-full-optimization.md)|不包含/GF 或/Gy. 的/O2 子集|
 |[/Oy](oy-frame-pointer-omission.md)|省略帧指针（仅限 x86）。|
 |[/P](p-preprocess-to-a-file.md)|将预处理器输出写入文件。|
-|[/permissive-](permissive-standards-conformance.md)|将标准符合性模式设置。|
+|[/permissive-](permissive-standards-conformance.md)|设置标准一致性模式。|
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|生成快速先验。|
 |[/QIfist](qifist-suppress-ftol.md)|已否决。 当需要从浮点类型转换为整型时（仅限 x86）取消 `_ftol` 。|
 |[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|移除 `fwait` 块中的 `try` 命令。|
 |[/Qpar（自动并行化程序）](qpar-auto-parallelizer.md)|对标记有 [#pragma loop()](../../preprocessor/loop.md) 指令的循环启用自动并行化。|
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|将整数移动指令用于浮点值，并禁用特定浮点加载优化。|
+|[/Qspectre](qspectre.md)|指定编译器生成指令以缓解某些 Spectre 变体 1 安全漏洞。|
 |[/Qvec-report（自动矢量化程序报告等级）](qvec-report-auto-vectorizer-reporting-level.md)|启用自动矢量化的报告级别。|
 |[/RTC](rtc-run-time-error-checks.md)|启用运行时错误检查。|
 |[/sdl](sdl-enable-additional-security-checks.md)|启用更多安全功能和警告。|
 |[/showIncludes](showincludes-list-include-files.md)|在编译期间显示包含文件的列表。|
 |[/source-charset](source-charset-set-source-character-set.md)|设置源字符集。|
-|[/std](std-specify-language-standard-version.md)|C++标准版本兼容性的选择器。|
+|[/std](std-specify-language-standard-version.md)|C++标准版本兼容性选择器。|
 |[/Tc](tc-tp-tc-tp-specify-source-file-type.md)|指定 C 源文件。|
-|[/TC](tc-tp-tc-tp-specify-source-file-type.md)|指定源的所有文件都都 c。|
+|[/TC](tc-tp-tc-tp-specify-source-file-type.md)|指定所有源文件均为 C。|
 |[/Tp](tc-tp-tc-tp-specify-source-file-type.md)|指定 C++ 源文件。|
-|[/TP](tc-tp-tc-tp-specify-source-file-type.md)|指定源的所有文件都都C++。|
+|[/TP](tc-tp-tc-tp-specify-source-file-type.md)|指定所有源文件C++。|
 |[/U](u-u-undefine-symbols.md)|移除预定义宏。|
 |[/u](u-u-undefine-symbols.md)|移除所有的预定义宏。|
-|[/utf-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|设置源和执行字符集设置为 utf-8。|
+|[/utf-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|将源和执行字符集设置为 UTF-8。|
 |[/V](v-version-number.md)|已否决。 设置 .obj 文件版本字符串。|
-|[/validate-charset](validate-charset-validate-for-compatible-characters.md)|验证 utf-8 文件兼容的字符。|
+|[/validate-charset](validate-charset-validate-for-compatible-characters.md)|仅验证 UTF-8 文件的兼容字符。|
 |[/vd](vd-disable-construction-displacements.md)|取消或启用隐藏的 vtordisp 类成员。|
 |[/vmb](vmb-vmg-representation-method.md)|对指向成员的指针使用最佳的基。|
 |[/vmg](vmb-vmg-representation-method.md)|对指向成员的指针使用完全一般性。|
@@ -150,15 +153,15 @@ ms.locfileid: "67693428"
 |[/Yu](yu-use-precompiled-header-file.md)|在生成期间使用预编译头文件。|
 |[/Z7](z7-zi-zi-debug-information-format.md)|生成与 C 7.0 兼容的调试信息。|
 |[/Za](za-ze-disable-language-extensions.md)|禁用语言扩展。|
-|[/Zc](zc-conformance.md)|指定下的标准行为[/Ze](za-ze-disable-language-extensions.md)。[/Za、 /Ze （禁用语言扩展）](za-ze-disable-language-extensions.md)|
+|[/Zc](zc-conformance.md)|指定[/ze](za-ze-disable-language-extensions.md)下的标准行为。[/Za、/ze （禁用语言扩展）](za-ze-disable-language-extensions.md)|
 |[/Ze](za-ze-disable-language-extensions.md)|已否决。 启用语言扩展。|
-|[/Zf](zf.md)|改进了 PDB 中并行生成的生成时间。|
-|[/Zg](zg-generate-function-prototypes.md)|在 Visual Studio 2015 中删除。 生成函数原型。|
+|[/Zf](zf.md)|在并行生成中改善 PDB 生成时间。|
+|[/Zg](zg-generate-function-prototypes.md)|在 Visual Studio 2015 中移除。 生成函数原型。|
 |[/ZI](z7-zi-zi-debug-information-format.md)|将调试信息包含在与“编辑并继续”兼容的程序数据库中。|
 |[/Zi](z7-zi-zi-debug-information-format.md)|生成完整的调试信息。|
 |[/Zl](zl-omit-default-library-name.md)|从 .obj 文件中移除默认库名（仅限 x86）。|
 |[/Zm](zm-specify-precompiled-header-memory-allocation-limit.md)|指定预编译头内存分配限制。|
-|[/Zo](zo-enhance-optimized-debugging.md)|生成增强为优化代码的调试信息。|
+|[/Zo](zo-enhance-optimized-debugging.md)|为优化代码生成增强的调试信息。|
 |[/Zp](zp-struct-member-alignment.md)|封装结构成员。|
 |[/Zs](zs-syntax-check-only.md)|只检查语法。|
 |[/ZW](zw-windows-runtime-compilation.md)|生成要在 Windows 运行时上运行的输出文件。|

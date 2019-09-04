@@ -32,18 +32,18 @@ helpviewer_keywords:
 - CMFCToolTipCtrl [MFC], SetLocation
 - CMFCToolTipCtrl [MFC], SetParams
 ms.assetid: 9fbfcfb1-a8ab-417f-ae29-9a9ca85ee58f
-ms.openlocfilehash: aaf9d9570906b7886d8ec78575c39db5d62099f7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5376fd21f84411c86ade564d7c76d073ccb909a6
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388301"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273695"
 ---
 # <a name="cmfctooltipctrl-class"></a>CMFCToolTipCtrl 类
 
 基于 [CToolTipCtrl Class](../../mfc/reference/ctooltipctrl-class.md)的扩展工具提示实现。 基于 `CMFCToolTipCtrl` 类的工具提示可显示图标、标签和说明。 可以使用渐变填充、自定义文本和边框颜色、粗体文本、圆角或气球样式来自定义可视外观。
 
-有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。
+有关更多详细信息，请参阅位于 Visual Studio 安装的**VC\\atlmfc\\src\\mfc**文件夹中的源代码。
 
 ## <a name="syntax"></a>语法
 
@@ -79,42 +79,31 @@ class CMFCToolTipCtrl : public CToolTipCtrl
 
 ## <a name="remarks"></a>备注
 
-使用`CMFCToolTipCtrl`， `CMFCToolTipInfo`，并[CTooltipManager 类](../../mfc/reference/ctooltipmanager-class.md)对象，以在应用程序中实现自定义工具提示。
+在`CMFCToolTipCtrl`应用`CMFCToolTipInfo`程序中将、和[CTooltipManager 类](../../mfc/reference/ctooltipmanager-class.md)对象一起使用，以实现自定义的工具提示。
 
 例如，若要使用气球样式的工具提示，请按照下列步骤执行：
 
-1. 使用[CWinAppEx 类](../../mfc/reference/cwinappex-class.md)方法以初始化应用程序中的工具提示管理器。
+1. 使用[CWinAppEx 类](../../mfc/reference/cwinappex-class.md)方法可在应用程序中初始化 tooltip 管理器。
 
 2. 创建 `CMFCToolTipInfo` 结构，以指定所需的视觉样式：
 
 ```
 CMFCToolTipInfo params;
-    params.m_bBoldLabel = FALSE;
-    params.m_bDrawDescription = FALSE;
-    params.m_bDrawIcon = FALSE;
-    params.m_bRoundedCorners = TRUE;
-    params.m_bDrawSeparator = FALSE;
-    if (m_bCustomColors)
+params.m_bBoldLabel = FALSE;
+params.m_bDrawDescription = FALSE;
+params.m_bDrawIcon = FALSE;
+params.m_bRoundedCorners = TRUE;
+params.m_bDrawSeparator = FALSE;
+if (m_bCustomColors)
 {
-    params.m_clrFill = RGB (255,
-    255,
-    255);
-
-    params.m_clrFillGradient = RGB (228,
-    228,
-    240);
-
-    params.m_clrText = RGB (61,
-    83,
-    80);
-
-    params.m_clrBorder = RGB (144,
-    149,
-    168);
+    params.m_clrFill = RGB (255, 255, 255);
+    params.m_clrFillGradient = RGB (228, 228, 240);
+    params.m_clrText = RGB (61, 83, 80);
+    params.m_clrBorder = RGB (144, 149, 168);
 
 }
 ```
-3. 使用[ctooltipmanager:: Settooltipparams](../../mfc/reference/ctooltipmanager-class.md#settooltipparams)方法使用的样式中定义的应用程序中设置所有工具提示的视觉样式`CMFCToolTipInfo`对象：
+3. 使用[CTooltipManager：： SetTooltipParams](../../mfc/reference/ctooltipmanager-class.md#settooltipparams)方法，通过使用`CMFCToolTipInfo`对象中定义的样式为应用程序中的所有工具提示设置视觉样式：
 
 ```
 theApp.GetTooltipManager ()->SetTooltipParams (AFX_TOOLTIP_TYPE_ALL,
@@ -154,9 +143,9 @@ theApp.GetTooltipManager ()->SetTooltipParams (AFX_TOOLTIP_TYPE_ALL,
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxtooltipctrl.h
+**标头：** afxtooltipctrl
 
-##  <a name="cmfctooltipctrl"></a>  CMFCToolTipCtrl::CMFCToolTipCtrl
+##  <a name="cmfctooltipctrl"></a>CMFCToolTipCtrl：： CMFCToolTipCtrl
 
 ```
 CMFCToolTipCtrl(CMFCToolTipInfo* pParams = NULL);
@@ -164,11 +153,11 @@ CMFCToolTipCtrl(CMFCToolTipInfo* pParams = NULL);
 
 ### <a name="parameters"></a>参数
 
-[in] *pParams*<br/>
+中*pParams*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="geticonsize"></a>  CMFCToolTipCtrl::GetIconSize
+##  <a name="geticonsize"></a>CMFCToolTipCtrl：： GetIconSize
 
 返回工具提示中的图标大小。
 
@@ -178,9 +167,9 @@ virtual CSize GetIconSize();
 
 ### <a name="return-value"></a>返回值
 
-该图标，以像素为单位的大小。
+图标的大小（以像素为单位）。
 
-##  <a name="getparams"></a>  CMFCToolTipCtrl::GetParams
+##  <a name="getparams"></a>CMFCToolTipCtrl：： GetParams
 
 返回工具提示的显示设置。
 
@@ -190,9 +179,9 @@ const CMFCToolTipInfo& GetParams() const;
 
 ### <a name="return-value"></a>返回值
 
-当前的工具提示显示设置，它们将存储在[CMFCToolTipInfo 类](../../mfc/reference/cmfctooltipinfo-class.md)对象。
+当前工具提示显示设置，存储在[CMFCToolTipInfo 类](../../mfc/reference/cmfctooltipinfo-class.md)对象中。
 
-##  <a name="ondrawborder"></a>  CMFCToolTipCtrl::OnDrawBorder
+##  <a name="ondrawborder"></a>CMFCToolTipCtrl：： OnDrawBorder
 
 绘制工具提示的边框。
 
@@ -206,17 +195,17 @@ virtual void OnDrawBorder(
 ### <a name="parameters"></a>参数
 
 *pDC*<br/>
-[in]指向设备上下文指针。
+中指向设备上下文的指针。
 
 *rect*<br/>
-[in]在工具提示的边框。
+中Tooltip 的边框。
 
 *clrLine*<br/>
-[in]边框颜色。
+中边框颜色。
 
 ### <a name="remarks"></a>备注
 
-重写此方法在派生类以自定义工具提示边框的外观。
+在派生类中重写此方法以自定义工具提示边框的外观。
 
 ##  <a name="ondrawdescription"></a>  CMFCToolTipCtrl::OnDrawDescription
 
@@ -230,8 +219,8 @@ virtual CSize OnDrawDescription(
 ### <a name="parameters"></a>参数
 
 [in] *pDC*<br/>
-[in] *rect*<br/>
-[in] *bCalcOnly*<br/>
+中*rect*<br/>
+中*bCalcOnly*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -250,18 +239,18 @@ virtual BOOL OnDrawIcon(
 ### <a name="parameters"></a>参数
 
 *pDC*<br/>
-[in]指向设备上下文的指针。
+中指向设备上下文的指针。
 
 *rectImage*<br/>
-[in]图标的坐标。
+中图标的坐标。
 
 ### <a name="return-value"></a>返回值
 
-如果绘制图标，则为 TRUE。 否则为 FALSE。
+如果已绘制图标，则为 TRUE。 否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-重写此方法在派生类以显示自定义图标。 您还必须重写[CMFCToolTipCtrl::GetIconSize](#geticonsize)启用工具提示以正确地计算的文本和说明的布局。
+在派生类中重写此方法以显示自定义图标。 还必须重写[CMFCToolTipCtrl：： GetIconSize](#geticonsize)以使工具提示能够正确计算文本和说明的布局。
 
 ##  <a name="ondrawlabel"></a>  CMFCToolTipCtrl::OnDrawLabel
 
@@ -277,21 +266,21 @@ virtual CSize OnDrawLabel(
 ### <a name="parameters"></a>参数
 
 *pDC*<br/>
-[in]指向设备上下文的指针。
+中指向设备上下文的指针。
 
 *rect*<br/>
-[in]标签区域的边界矩形。
+中标签区域的边框。
 
 *bCalcOnly*<br/>
-[in]如果为 TRUE，将不绘制标签。
+中如果为 TRUE，则不绘制标签。
 
 ### <a name="return-value"></a>返回值
 
-该标签，以像素为单位的大小。
+标签的大小（以像素为单位）。
 
 ### <a name="remarks"></a>备注
 
-如果你想要自定义工具提示标签的外观，重写此方法在派生类中。
+如果要自定义工具提示标签的外观，请在派生类中重写此方法。
 
 ##  <a name="ondrawseparator"></a>  CMFCToolTipCtrl::OnDrawSeparator
 
@@ -308,22 +297,22 @@ virtual void OnDrawSeparator(
 ### <a name="parameters"></a>参数
 
 *pDC*<br/>
-[in]指向设备上下文的指针。
+中指向设备上下文的指针。
 
 *x1*<br/>
-[in]分隔符的水平坐标。
+中分隔符左端的水平坐标。
 
 *x2*<br/>
-[in]右端的分隔符的水平坐标。
+中分隔符右端的水平坐标。
 
 *Y*<br/>
-[in]分隔符的垂直坐标。
+中分隔符的垂直坐标。
 
 ### <a name="remarks"></a>备注
 
-默认实现从点绘制一条线 (x1，y) 到点 (x2，y)。
+默认实现从点（x1，y）绘制直线到点（x2，y）。
 
-重写此方法在派生类来自定义分隔符的外观。
+在派生类中重写此方法以自定义分隔符的外观。
 
 ##  <a name="onfillbackground"></a>  CMFCToolTipCtrl::OnFillBackground
 
@@ -340,22 +329,22 @@ virtual void OnFillBackground(
 ### <a name="parameters"></a>参数
 
 *pDC*<br/>
-[in]指向设备上下文的指针。
+中指向设备上下文的指针。
 
 *rect*<br/>
-[in]指定要填充的区域的边框。
+中指定要填充的区域的边框。
 
 *clrText*<br/>
-[in]工具提示前景色。
+中工具提示的前景色。
 
 *clrLine*<br/>
-[in]边框和标签和说明之间的分隔符线的颜色。
+中边框的颜色和标签和说明之间的分隔线。
 
 ### <a name="remarks"></a>备注
 
-默认实现来填充指定的矩形*rect*使用的颜色或指定的最新调用模式[CMFCToolTipCtrl::SetParams](#setparams)。
+默认实现使用由对[CMFCToolTipCtrl：： SetParams](#setparams)的最新调用所指定的颜色或模式填充*rect*指定的矩形。
 
-如果你想要自定义工具提示的外观，重写此方法在派生类中。
+如果要自定义工具提示的外观，请在派生类中重写此方法。
 
 ##  <a name="setdescription"></a>  CMFCToolTipCtrl::SetDescription
 
@@ -368,13 +357,13 @@ virtual void SetDescription(const CString strDesrciption);
 ### <a name="parameters"></a>参数
 
 *strDesrciption*<br/>
-[in]说明文本。
+中说明文本。
 
 ### <a name="remarks"></a>备注
 
-在分隔符下的工具提示上显示的说明文本。
+说明文本将显示在工具提示下分隔符下。
 
-##  <a name="setfixedwidth"></a>  CMFCToolTipCtrl::SetFixedWidth
+##  <a name="setfixedwidth"></a>CMFCToolTipCtrl：： SetFixedWidth
 
 ```
 void SetFixedWidth(
@@ -389,7 +378,7 @@ void SetFixedWidth(
 
 ### <a name="remarks"></a>备注
 
-##  <a name="sethotribbonbutton"></a>  CMFCToolTipCtrl::SetHotRibbonButton
+##  <a name="sethotribbonbutton"></a>CMFCToolTipCtrl：： SetHotRibbonButton
 
 ```
 void SetHotRibbonButton(CMFCRibbonButton* pRibbonButton);
@@ -397,7 +386,7 @@ void SetHotRibbonButton(CMFCRibbonButton* pRibbonButton);
 
 ### <a name="parameters"></a>参数
 
-[in] *pRibbonButton*<br/>
+中*pRibbonButton*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -415,7 +404,7 @@ void SetLocation(CPoint pt);
 
 ##  <a name="setparams"></a>  CMFCToolTipCtrl::SetParams
 
-通过使用指定的工具提示的视觉外观[CMFCToolTipInfo 类](../../mfc/reference/cmfctooltipinfo-class.md)对象。
+使用[CMFCToolTipInfo 类](../../mfc/reference/cmfctooltipinfo-class.md)对象指定工具提示的可视外观。
 
 ```
 void SetParams(CMFCToolTipInfo* pParams);
@@ -424,11 +413,11 @@ void SetParams(CMFCToolTipInfo* pParams);
 ### <a name="parameters"></a>参数
 
 *pParams*<br/>
-[in]指向[CMFCToolTipInfo 类](../../mfc/reference/cmfctooltipinfo-class.md)对象，其中包含显示参数。
+中指向包含显示参数的[CMFCToolTipInfo 类](../../mfc/reference/cmfctooltipinfo-class.md)对象的指针。
 
 ### <a name="remarks"></a>备注
 
-每当显示工具提示、 使用的颜色绘制和视觉样式*pParams*指定。 值*pParams*存储在受保护的成员`m_Params`，重写的派生类来访问它[CMFCToolTipCtrl::OnDrawBorder](#ondrawborder)， [CMFCToolTipCtrl:: OnDrawIcon](#ondrawicon)， [CMFCToolTipCtrl::OnDrawLabel](#ondrawlabel)， [CMFCToolTipCtrl::OnDrawSeparator](#ondrawseparator)，或[CMFCToolTipCtrl::OnFillBackground](#onfillbackground)来保持指定的外观。
+只要显示工具提示，就会使用*pParams*指定的颜色和视觉样式来绘制工具提示。 *PParams*的值存储在受保护的成员`m_Params`中，此派生类可以通过重写[CMFCToolTipCtrl：： OnDrawBorder](#ondrawborder)、 [CMFCToolTipCtrl：： OnDrawIcon](#ondrawicon)、 [CMFCToolTipCtrl：： OnDrawLabel 的派生类对其进行访问。](#ondrawlabel)、 [CMFCToolTipCtrl：： OnDrawSeparator](#ondrawseparator)或[CMFCToolTipCtrl：： OnFillBackground](#onfillbackground)来维护指定的外观。
 
 ## <a name="see-also"></a>请参阅
 
