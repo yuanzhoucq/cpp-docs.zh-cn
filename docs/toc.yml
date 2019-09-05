@@ -58,6 +58,8 @@
               href: build/project-property-inheritance.md
             - name: 在不更改项目文件的情况下修改属性和目标
               href: build/modify-project-properties-without-changing-project-file.md
+        - name: Visual Studio 项目中的 Clang/LLVM (MSBuild)
+          href: build/clang-support-msbuild.md
         - name: 在生成时引用库和组件
           href: build/adding-references-in-visual-cpp-projects.md
         - name: 整理项目输出文件
@@ -4794,7 +4796,7 @@
                       href: preprocessor/null-directive.md
                     - name: '#undef 指令 (C/C++)'
                       href: preprocessor/hash-undef-directive-c-cpp.md
-                    - name: '#using 指令 (C++)'
+                    - name: '#using 指令 (C++/CLI)'
                       href: preprocessor/hash-using-directive-cpp.md
                 - name: 预处理器运算符
                   expanded: false
@@ -4829,10 +4831,10 @@
                   href: preprocessor/conventions.md
                 - name: 预处理器语法
                   href: preprocessor/preprocessor-grammar.md
-            - name: Pragma 指令和 __Pragma 关键字
+            - name: Pragma 指令和 __pragma 关键字
               expanded: false
               items:
-                - name: Pragma 指令和 __Pragma 关键字
+                - name: Pragma 指令和 __pragma 关键字
                   href: preprocessor/pragma-directives-and-the-pragma-keyword.md
                 - name: alloc_text 杂注
                   href: preprocessor/alloc-text.md
