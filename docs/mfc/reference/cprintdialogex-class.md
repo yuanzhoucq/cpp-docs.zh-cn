@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CPrintDialogEx [MFC], PrintSelection
 - CPrintDialogEx [MFC], m_pdex
 ms.assetid: 1d506703-ee1c-44cc-b4ce-4e778fec26b8
-ms.openlocfilehash: 2334fb0a420e14aa4fa8b8b570671fb9a611de32
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 76c3968b20a66e9653fd769339e23ede2a756bbd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502886"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741326"
 ---
 # <a name="cprintdialogex-class"></a>CPrintDialogEx 类
 
@@ -90,23 +90,23 @@ class CPrintDialogEx : public CCommonDialog
 
 ## <a name="remarks"></a>备注
 
-您可以依赖于框架来处理应用程序打印过程的许多方面。 有关使用框架来处理打印任务的详细信息, 请参阅文章[打印](../../mfc/printing.md)。
+您可以依赖于框架来处理应用程序打印过程的许多方面。 有关使用框架来处理打印任务的详细信息，请参阅文章[打印](../../mfc/printing.md)。
 
-如果希望应用程序在不使用框架的情况下处理打印, 则可以使用提供`CPrintDialogEx`的构造函数的 "按原样" 类, 也可以从`CPrintDialogEx`派生您自己的对话类, 并编写一个构造函数来满足您的需求。 在这两种情况下, 这些对话框的行为类似于标准 MFC 对话框, 因为它们是`CCommonDialog`从类派生的。
+如果希望应用程序在不使用框架的情况下处理打印，则可以使用提供`CPrintDialogEx`的构造函数的 "按原样" 类，也可以从`CPrintDialogEx`派生您自己的对话类，并编写一个构造函数来满足您的需求。 在这两种情况下，这些对话框的行为类似于标准 MFC 对话框，因为它们是`CCommonDialog`从类派生的。
 
-若要使用`CPrintDialogEx`对象, 请先`CPrintDialogEx`使用构造函数创建对象。 构造该对话框后, 您可以设置或修改[m_pdex](#m_pdex)结构中的任何值以初始化对话框控件的值。 结构的类型为[PRINTDLGEX。](/windows/win32/api/commdlg/ns-commdlg-pdexw) `m_pdex` 有关此结构的详细信息, 请参阅 Windows SDK。
+若要使用`CPrintDialogEx`对象，请先`CPrintDialogEx`使用构造函数创建对象。 构造该对话框后，您可以设置或修改[m_pdex](#m_pdex)结构中的任何值以初始化对话框控件的值。 结构的类型为[PRINTDLGEX。](/windows/win32/api/commdlg/ns-commdlg-printdlgexw) `m_pdex` 有关此结构的详细信息，请参阅 Windows SDK。
 
-如果没有`m_pdex` `GlobalFree`为和成员`hDevNames`提供自己的句柄, 请确保在完成该对话框后, 为这些句柄调用 Windows 函数。 `hDevMode`
+如果没有`m_pdex` `GlobalFree`为和成员`hDevNames`提供自己的句柄，请确保在完成该对话框后，为这些句柄调用 Windows 函数。 `hDevMode`
 
-初始化对话框控件后, 调用`DoModal`成员函数以显示对话框, 并允许用户选择打印选项。 返回`DoModal`时, 可以确定用户是否选择了 "确定"、"应用" 或 "取消" 按钮。
+初始化对话框控件后，调用`DoModal`成员函数以显示对话框，并允许用户选择打印选项。 返回`DoModal`时，可以确定用户是否选择了 "确定"、"应用" 或 "取消" 按钮。
 
-如果用户按 "确定", 则可以`CPrintDialogEx`使用的成员函数来检索用户输入的信息。
+如果用户按 "确定"，则可以`CPrintDialogEx`使用的成员函数来检索用户输入的信息。
 
-此`CPrintDialogEx::GetDefaults`成员函数可用于检索当前打印机默认值, 而不会显示对话框。 此方法无需用户交互。
+此`CPrintDialogEx::GetDefaults`成员函数可用于检索当前打印机默认值，而不会显示对话框。 此方法无需用户交互。
 
-您可以使用 Windows `CommDlgExtendedError`函数来确定初始化对话框期间是否发生了错误, 并了解有关该错误的详细信息。 有关此函数的详细信息, 请参阅 Windows SDK。
+您可以使用 Windows `CommDlgExtendedError`函数来确定初始化对话框期间是否发生了错误，并了解有关该错误的详细信息。 有关此函数的详细信息，请参阅 Windows SDK。
 
-有关使用`CPrintDialogEx`的详细信息, 请参阅[通用对话框类](../../mfc/common-dialog-classes.md)。
+有关使用`CPrintDialogEx`的详细信息，请参阅[通用对话框类](../../mfc/common-dialog-classes.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -128,7 +128,7 @@ class CPrintDialogEx : public CCommonDialog
 
 ## <a name="requirements"></a>要求
 
-**标头:** afxdlgs
+**标头：** afxdlgs
 
 ##  <a name="cprintdialogex"></a>  CPrintDialogEx::CPrintDialogEx
 
@@ -143,7 +143,7 @@ CPrintDialogEx(
 ### <a name="parameters"></a>参数
 
 *dwFlags*<br/>
-可用于自定义对话框的设置的一个或多个标志, 使用按位 "或" 运算符组合在一起。 例如, PD_ALLPAGES 标志将默认打印范围设置为文档的所有页。 有关这些标志的详细信息, 请参阅 Windows SDK 中的[PRINTDLGEX](/windows/win32/api/commdlg/ns-commdlg-pdexw)结构。
+可用于自定义对话框的设置的一个或多个标志，使用按位 "或" 运算符组合在一起。 例如，PD_ALLPAGES 标志将默认打印范围设置为文档的所有页。 有关这些标志的详细信息，请参阅 Windows SDK 中的[PRINTDLGEX](/windows/win32/api/commdlg/ns-commdlg-printdlgexw)结构。
 
 *pParentWnd*<br/>
 指向对话框的父窗口或所有者窗口的指针。
@@ -154,7 +154,7 @@ CPrintDialogEx(
 
 ##  <a name="createprinterdc"></a>  CPrintDialogEx::CreatePrinterDC
 
-从[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)和[DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames)结构创建打印机设备上下文 (DC)。
+从[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)和[DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames)结构创建打印机设备上下文（DC）。
 
 ```
 HDC CreatePrinterDC();
@@ -168,11 +168,11 @@ HDC CreatePrinterDC();
 
 返回的 DC 还会存储在`hDC` [m_pdex](#m_pdex)的成员中。
 
-此 DC 被假定为当前打印机 DC, 并且必须删除任何其他以前获得的打印机 Dc。 可以调用此函数, 并使用生成的 DC, 无需显示 "打印" 对话框。
+此 DC 被假定为当前打印机 DC，并且必须删除任何其他以前获得的打印机 Dc。 可以调用此函数，并使用生成的 DC，无需显示 "打印" 对话框。
 
 ##  <a name="domodal"></a>  CPrintDialogEx::DoModal
 
-调用此函数以显示 Windows Print 属性表, 并允许用户选择各种打印选项, 如副本数、页面范围以及是否应逐份打印副本。
+调用此函数以显示 Windows Print 属性表，并允许用户选择各种打印选项，如副本数、页面范围以及是否应逐份打印副本。
 
 ```
 virtual INT_PTR DoModal();
@@ -184,11 +184,11 @@ INT_PTR 返回值实际上是 HRESULT。 请参阅 Windows SDK 中[PrintDlgEx](/
 
 ### <a name="remarks"></a>备注
 
-如果希望通过设置`m_pdex`结构的成员来初始化各种打印对话框选项, 应在调用`DoModal`之前执行此操作, 但在构造对话框对象之后。
+如果希望通过设置`m_pdex`结构的成员来初始化各种打印对话框选项，应在调用`DoModal`之前执行此操作，但在构造对话框对象之后。
 
-调用`DoModal`后, 可以调用其他成员函数来检索用户在对话框中输入的设置或信息。
+调用`DoModal`后，可以调用其他成员函数来检索用户在对话框中输入的设置或信息。
 
-如果在调用`DoModal`时使用了 PD_RETURNDC 标志, 则将`hDC`在[m_pdex](#m_pdex)的成员中返回打印机 DC。 必须通过调用方`CPrintDialogEx`调用[DELETEDC](/windows/win32/api/wingdi/nf-wingdi-deletedc)来释放此 DC。
+如果在调用`DoModal`时使用了 PD_RETURNDC 标志，则将`hDC`在[m_pdex](#m_pdex)的成员中返回打印机 DC。 必须通过调用方`CPrintDialogEx`调用[DELETEDC](/windows/win32/api/wingdi/nf-wingdi-deletedc)来释放此 DC。
 
 ##  <a name="getcopies"></a>  CPrintDialogEx::GetCopies
 
@@ -204,7 +204,7 @@ int GetCopies() const;
 
 ##  <a name="getdefaults"></a>  CPrintDialogEx::GetDefaults
 
-调用此函数可检索默认打印机的设备默认值, 而不会显示对话框。
+调用此函数可检索默认打印机的设备默认值，而不会显示对话框。
 
 ```
 BOOL GetDefaults();
@@ -212,19 +212,19 @@ BOOL GetDefaults();
 
 ### <a name="return-value"></a>返回值
 
-如果成功, 则为 TRUE; 否则为 FALSE。
+如果成功，则为 TRUE; 否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-从[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)和[DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames)结构创建打印机设备上下文 (DC)。
+从[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)和[DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames)结构创建打印机设备上下文（DC）。
 
-`GetDefaults`不显示打印属性页。 相反`hDevNames` , 它将[m_pdex](#m_pdex)的`hDevMode`和成员设置为处理系统默认打印机的[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)和[DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames)结构。 `GetDefaults`和`hDevNames` 都`hDevMode`必须为 NULL 或失败。
+`GetDefaults`不显示打印属性页。 相反`hDevNames` ，它将[m_pdex](#m_pdex)的`hDevMode`和成员设置为处理系统默认打印机的[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)和[DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames)结构。 `GetDefaults`和`hDevNames` 都`hDevMode`必须为 NULL 或失败。
 
-如果设置了 PD_RETURNDC 标志, 则此函数将不会只`hDevNames`返回`hDevMode`调用方的`m_pdex.hDevNames`和`m_pdex.hDevMode`(位于和中), 但也将在中`m_pdex.hDC`返回打印机 DC。 当您完成`CPrintDialogEx`对象时, 调用方负责删除打印机 DC 并在句柄上调用 Windows [GlobalFree](/windows/win32/api/winbase/nf-winbase-globalfree)函数。
+如果设置了 PD_RETURNDC 标志，则此函数将不会只`hDevNames`返回`hDevMode`调用方的`m_pdex.hDevNames`和`m_pdex.hDevMode`（位于和中），但也将在中`m_pdex.hDC`返回打印机 DC。 当您完成`CPrintDialogEx`对象时，调用方负责删除打印机 DC 并在句柄上调用 Windows [GlobalFree](/windows/win32/api/winbase/nf-winbase-globalfree)函数。
 
 ##  <a name="getdevicename"></a>  CPrintDialogEx::GetDeviceName
 
-在调用[DoModal](#domodal)以检索当前所选打印机的名称后, 或在调用[GetDefaults](#getdefaults)检索默认打印机的名称后, 调用此函数。
+在调用[DoModal](#domodal)以检索当前所选打印机的名称后，或在调用[GetDefaults](#getdefaults)检索默认打印机的名称后，调用此函数。
 
 ```
 CString GetDeviceName() const;
@@ -236,7 +236,7 @@ CString GetDeviceName() const;
 
 ### <a name="remarks"></a>备注
 
-在对[CDC:: CreateDC](../../mfc/reference/cdc-class.md#createdc)的调用`GetDeviceName`中, 使用指向`lpszDeviceName` `CString`返回的对象的指针作为的值。
+在对[CDC：： CreateDC](../../mfc/reference/cdc-class.md#createdc)的调用`GetDeviceName`中，使用指向`lpszDeviceName` `CString`返回的对象的指针作为的值。
 
 ##  <a name="getdevmode"></a>  CPrintDialogEx::GetDevMode
 
@@ -248,7 +248,7 @@ LPDEVMODE GetDevMode() const;
 
 ### <a name="return-value"></a>返回值
 
-[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)数据结构, 其中包含有关打印机驱动程序的设备初始化和环境的信息。 必须使用 Windows SDK 中描述的 Windows [GlobalUnlock](/windows/win32/api/winbase/nf-winbase-globalunlock)函数来解锁此结构使用的内存。
+[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)数据结构，其中包含有关打印机驱动程序的设备初始化和环境的信息。 必须使用 Windows SDK 中描述的 Windows [GlobalUnlock](/windows/win32/api/winbase/nf-winbase-globalunlock)函数来解锁此结构使用的内存。
 
 ##  <a name="getdrivername"></a>  CPrintDialogEx::GetDriverName
 
@@ -260,11 +260,11 @@ CString GetDriverName() const;
 
 ### <a name="return-value"></a>返回值
 
-一个`CString` , 指定系统定义的驱动程序名称。
+一个`CString` ，指定系统定义的驱动程序名称。
 
 ### <a name="remarks"></a>备注
 
-在对[CDC:: CreateDC](../../mfc/reference/cdc-class.md#createdc)的调用`GetDriverName`中, 使用指向`CString`作为*lpszDriverName*值返回的对象的指针。
+在对[CDC：： CreateDC](../../mfc/reference/cdc-class.md#createdc)的调用`GetDriverName`中，使用指向`CString`作为*lpszDriverName*值返回的对象的指针。
 
 ##  <a name="getportname"></a>  CPrintDialogEx::GetPortName
 
@@ -292,11 +292,11 @@ HDC GetPrinterDC() const;
 
 ### <a name="remarks"></a>备注
 
-使用 Windows [DeleteDC](/windows/win32/api/wingdi/nf-wingdi-deletedc)函数时, 必须调用该函数以删除设备上下文。
+使用 Windows [DeleteDC](/windows/win32/api/wingdi/nf-wingdi-deletedc)函数时，必须调用该函数以删除设备上下文。
 
 ##  <a name="m_pdex"></a>  CPrintDialogEx::m_pdex
 
-一个 PRINTDLGEX 结构, 其成员存储对话框对象的特征。
+一个 PRINTDLGEX 结构，其成员存储对话框对象的特征。
 
 ```
 PRINTDLGEX m_pdex;
@@ -304,9 +304,9 @@ PRINTDLGEX m_pdex;
 
 ### <a name="remarks"></a>备注
 
-构造`CPrintDialogEx`对象之后, 您可以使用`m_pdex`在调用[DoModal](#domodal)成员函数之前设置对话框的各个方面。 有关`m_pdex`结构的详细信息, 请参阅 Windows SDK 中的[PRINTDLGEX](/windows/win32/api/commdlg/ns-commdlg-pdexw) 。
+构造`CPrintDialogEx`对象之后，您可以使用`m_pdex`在调用[DoModal](#domodal)成员函数之前设置对话框的各个方面。 有关`m_pdex`结构的详细信息，请参阅 Windows SDK 中的[PRINTDLGEX](/windows/win32/api/commdlg/ns-commdlg-printdlgexw) 。
 
-如果直接修改`m_pdex`数据成员, 将重写任何默认行为。
+如果直接修改`m_pdex`数据成员，将重写任何默认行为。
 
 ##  <a name="printall"></a>  CPrintDialogEx::PrintAll
 
@@ -318,7 +318,7 @@ BOOL PrintAll() const;
 
 ### <a name="return-value"></a>返回值
 
-如果文档中的所有页面都要打印, 则为 TRUE;否则为 FALSE。
+如果文档中的所有页面都要打印，则为 TRUE;否则为 FALSE。
 
 ##  <a name="printcollate"></a>  CPrintDialogEx::PrintCollate
 
@@ -330,7 +330,7 @@ BOOL PrintCollate() const;
 
 ### <a name="return-value"></a>返回值
 
-如果用户在对话框中选中了 "逐份打印" 复选框, 则为 TRUE;否则为 FALSE。
+如果用户在对话框中选中了 "逐份打印" 复选框，则为 TRUE;否则为 FALSE。
 
 ##  <a name="printcurrentpage"></a>  CPrintDialogEx::PrintCurrentPage
 
@@ -342,7 +342,7 @@ BOOL PrintCurrentPage() const;
 
 ### <a name="return-value"></a>返回值
 
-如果在 "打印" 对话框中选择了 "**打印当前页**", 则为 TRUE;否则为 FALSE。
+如果在 "打印" 对话框中选择了 "**打印当前页**"，则为 TRUE;否则为 FALSE。
 
 ##  <a name="printrange"></a>  CPrintDialogEx::PrintRange
 
@@ -354,11 +354,11 @@ BOOL PrintRange() const;
 
 ### <a name="return-value"></a>返回值
 
-如果仅打印文档中的一系列页面, 则为 TRUE;否则为 FALSE。
+如果仅打印文档中的一系列页面，则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-指定的页范围可以从[m_pdex](#m_pdex)确定 (请参阅`nPageRanges`、 `nMaxPageRanges`和`lpPageRanges` , 在[PRINTDLGEX](/windows/win32/api/commdlg/ns-commdlg-pdexw)结构的 Windows SDK) 中。
+指定的页范围可以从[m_pdex](#m_pdex)确定（请参阅`nPageRanges`、 `nMaxPageRanges`和`lpPageRanges` ，在[PRINTDLGEX](/windows/win32/api/commdlg/ns-commdlg-printdlgexw)结构的 Windows SDK）中。
 
 ##  <a name="printselection"></a>  CPrintDialogEx::PrintSelection
 
@@ -370,7 +370,7 @@ BOOL PrintSelection() const;
 
 ### <a name="return-value"></a>返回值
 
-如果仅打印选定项, 则为 TRUE;否则为 FALSE。
+如果仅打印选定项，则为 TRUE;否则为 FALSE。
 
 ## <a name="see-also"></a>请参阅
 

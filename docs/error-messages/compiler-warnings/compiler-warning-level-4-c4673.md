@@ -7,19 +7,19 @@ helpviewer_keywords:
 - C4673
 ms.assetid: 95626ec6-f05b-43c7-8b9a-a60a6f98dd30
 ms.openlocfilehash: ceaa5cd647dfb527713613b9ce3b5cd81a780fd7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657725"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741379"
 ---
 # <a name="compiler-warning-level-4-c4673"></a>编译器警告（等级 4）C4673
 
-引发以下类型的 identifier 不会被视为在 catch 站点
+引发 "identifier" 不会在 catch 站点上考虑以下类型
 
-不能在中处理引发对象**捕获**块。 不能处理每种类型是紧跟包含此警告的行的错误输出中列出。 每个未处理的类型都有其自己的警告。 读取的每个特定类型的详细信息的警告。
+无法在**catch**块中处理 throw 对象。 无法处理的每个类型都列在紧随包含此警告的行之后的错误输出中。 每个未处理的类型都有自己的警告。 有关详细信息，请阅读每个特定类型的警告。
 
-下面的示例生成 C4673:
+下面的示例生成 C4673：
 
 ```
 // C4673.cpp

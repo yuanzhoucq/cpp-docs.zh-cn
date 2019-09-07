@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CFontDialog [MFC], IsUnderline
 - CFontDialog [MFC], m_cf
 ms.assetid: 6228d500-ed0f-4156-81e5-ab0d57d1dcf4
-ms.openlocfilehash: b538acd564402459a05cc96303b63a35a99ba243
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c0d0c37d055d9b337f7b709b4ee3d299daae7658
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506472"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741559"
 ---
 # <a name="cfontdialog-class"></a>CFontDialog 类
 
@@ -84,25 +84,25 @@ class CFontDialog : public CCommonDialog
 
 ## <a name="remarks"></a>备注
 
-`CFontDialog`对象是一个对话框, 其中包含当前安装在系统中的字体的列表。 用户可以从列表中选择特定字体, 然后将此选择报告回应用程序。
+`CFontDialog`对象是一个对话框，其中包含当前安装在系统中的字体的列表。 用户可以从列表中选择特定字体，然后将此选择报告回应用程序。
 
-若要构造`CFontDialog`对象, 请使用提供的构造函数或派生新的子类, 并使用您自己的自定义构造函数。
+若要构造`CFontDialog`对象，请使用提供的构造函数或派生新的子类，并使用您自己的自定义构造函数。
 
-构造对象后, 可以`m_cf`使用结构初始化对话框中控件的值或状态。 `CFontDialog` [M_cf](#m_cf)结构的类型为[CHOOSEFONT](/windows/win32/api/commdlg/ns-commdlg-choosefontw)。 有关此结构的详细信息, 请参阅 Windows SDK。
+构造对象后，可以`m_cf`使用结构初始化对话框中控件的值或状态。 `CFontDialog` [M_cf](#m_cf)结构的类型为[CHOOSEFONT](/windows/win32/api/commdlg/ns-commdlg-choosefontw)。 有关此结构的详细信息，请参阅 Windows SDK。
 
-初始化对话框对象的控件后, 调用`DoModal`成员函数以显示对话框, 并允许用户选择字体。 `DoModal`返回用户是否选择了 "确定" (IDOK) 或 "取消" (IDCANCEL) 按钮。
+初始化对话框对象的控件后，调用`DoModal`成员函数以显示对话框，并允许用户选择字体。 `DoModal`返回用户是否选择了 "确定" （IDOK）或 "取消" （IDCANCEL）按钮。
 
-如果`DoModal`返回 IDOK, 则可以使用`CFontDialog`的成员函数来检索用户输入的信息。
+如果`DoModal`返回 IDOK，则可以使用`CFontDialog`的成员函数来检索用户输入的信息。
 
-您可以使用 Windows [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror)函数来确定初始化对话框期间是否发生了错误, 并了解有关错误的详细信息。 有关此函数的详细信息, 请参阅 Windows SDK。
+您可以使用 Windows [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror)函数来确定初始化对话框期间是否发生了错误，并了解有关错误的详细信息。 有关此函数的详细信息，请参阅 Windows SDK。
 
 `CFontDialog`依赖于 COMMDLG。Windows 版本3.1 及更高版本附带的 DLL 文件。
 
-若要自定义对话框, 从`CFontDialog`派生类, 提供自定义对话框模板, 并添加消息映射以处理来自扩展控件的通知消息。 所有未处理的消息都应传递到基类。
+若要自定义对话框，从`CFontDialog`派生类，提供自定义对话框模板，并添加消息映射以处理来自扩展控件的通知消息。 所有未处理的消息都应传递到基类。
 
 不需要自定义挂钩函数。
 
-有关使用`CFontDialog`的详细信息, 请参阅[通用对话框类](../../mfc/common-dialog-classes.md)。
+有关使用`CFontDialog`的详细信息，请参阅[通用对话框类](../../mfc/common-dialog-classes.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -120,7 +120,7 @@ class CFontDialog : public CCommonDialog
 
 ## <a name="requirements"></a>要求
 
-**标头:** afxdlgs
+**标头：** afxdlgs
 
 ##  <a name="cfontdialog"></a>CFontDialog::CFontDialog
 
@@ -143,13 +143,13 @@ CFontDialog(
 ### <a name="parameters"></a>参数
 
 *plfInitial*<br/>
-指向[LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw)数据结构的指针, 该结构允许您设置字体的某些特征。
+指向[LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw)数据结构的指针，该结构允许您设置字体的某些特征。
 
 *charFormat*<br/>
-指向[CHARFORMAT](/windows/win32/api/richedit/ns-richedit-_charformat)数据结构的指针, 该结构允许您在 rich edit 控件中设置字体的某些特征。
+指向[CHARFORMAT](/windows/win32/api/richedit/ns-richedit-charformata)数据结构的指针，该结构允许您在 rich edit 控件中设置字体的某些特征。
 
 *dwFlags*<br/>
-指定一个或多个用于选择字体的标记。 可以使用按位“OR”运算符对一个或多个预设值进行组合。 如果修改 `m_cf.Flag` 结构成员，请确保在更改中使用按位“OR”运算符以保持默认行为不变。 有关上述每个标志的详细信息, 请参阅 Windows SDK 中的[CHOOSEFONT](/windows/win32/api/commdlg/ns-commdlg-choosefontw)结构说明。
+指定一个或多个用于选择字体的标记。 可以使用按位“OR”运算符对一个或多个预设值进行组合。 如果修改 `m_cf.Flag` 结构成员，请确保在更改中使用按位“OR”运算符以保持默认行为不变。 有关上述每个标志的详细信息，请参阅 Windows SDK 中的[CHOOSEFONT](/windows/win32/api/commdlg/ns-commdlg-choosefontw)结构说明。
 
 *pdcPrinter*<br/>
 一个指向打印机设备上下文的指针。 如果已提供此参数，它将指向要选择其字体的打印机的打印机设备上下文。
@@ -168,9 +168,9 @@ CFontDialog(
 
 [!code-cpp[NVC_MFCDocView#78](../../mfc/codesnippet/cpp/cfontdialog-class_1.cpp)]
 
-##  <a name="domodal"></a>CFontDialog::D oModal
+##  <a name="domodal"></a>CFontDialog：:D oModal
 
-调用此函数以显示 "Windows 通用字体" 对话框, 并允许用户选择字体。
+调用此函数以显示 "Windows 通用字体" 对话框，并允许用户选择字体。
 
 ```
 virtual INT_PTR DoModal();
@@ -178,19 +178,19 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>返回值
 
-IDOK 或 IDCANCEL。 如果返回 IDCANCEL, 则调用 Windows [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror)函数来确定是否发生了错误。
+IDOK 或 IDCANCEL。 如果返回 IDCANCEL，则调用 Windows [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror)函数来确定是否发生了错误。
 
-IDOK 和 IDCANCEL 是常量, 用于指示用户是否选择了 "确定" 或 "取消" 按钮。
+IDOK 和 IDCANCEL 是常量，用于指示用户是否选择了 "确定" 或 "取消" 按钮。
 
 ### <a name="remarks"></a>备注
 
-如果要通过设置[m_cf](#m_cf)结构的成员来初始化各种字体对话框控件, 应在调用`DoModal`之前执行此操作, 但在构造对话框对象之后。
+如果要通过设置[m_cf](#m_cf)结构的成员来初始化各种字体对话框控件，应在调用`DoModal`之前执行此操作，但在构造对话框对象之后。
 
-如果`DoModal`返回 IDOK, 则可以调用其他成员函数来检索用户在对话框中输入的设置或信息。
+如果`DoModal`返回 IDOK，则可以调用其他成员函数来检索用户在对话框中输入的设置或信息。
 
 ### <a name="example"></a>示例
 
-  请参阅[CFontDialog:: CFontDialog](#cfontdialog)和[CFontDialog:: GetColor](#getcolor)的示例。
+  请参阅[CFontDialog：： CFontDialog](#cfontdialog)和[CFontDialog：： GetColor](#getcolor)的示例。
 
 ##  <a name="getcharformat"></a>CFontDialog::GetCharFormat
 
@@ -203,9 +203,9 @@ void GetCharFormat(CHARFORMAT& cf) const;
 ### <a name="parameters"></a>参数
 
 *cf*<br/>
-一个[CHARFORMAT](/windows/win32/api/richedit/ns-richedit-_charformat)结构, 其中包含有关所选字体的字符格式的信息。
+一个[CHARFORMAT](/windows/win32/api/richedit/ns-richedit-charformata)结构，其中包含有关所选字体的字符格式的信息。
 
-##  <a name="getcolor"></a>CFontDialog:: GetColor
+##  <a name="getcolor"></a>CFontDialog：： GetColor
 
 调用此函数可检索选定的字体颜色。
 
@@ -238,7 +238,7 @@ void GetCurrentFont(LPLOGFONT lplf);
 
 提供`CFontDialog`其他成员函数以访问当前字体的各个特性。
 
-如果在调用[DoModal](#domodal)期间调用此函数, 则它将返回当前选定的内容 (用户在对话框中看到或已更改的内容)。 如果在调用`DoModal`后调用此函数 (仅在返回 IDOK `DoModal`时调用), 则它将返回用户实际选择的内容。
+如果在调用[DoModal](#domodal)期间调用此函数，则它将返回当前选定的内容（用户在对话框中看到或已更改的内容）。 如果在调用`DoModal`后调用此函数（仅在返回 IDOK `DoModal`时调用），则它将返回用户实际选择的内容。
 
 ### <a name="example"></a>示例
 
@@ -260,7 +260,7 @@ CString GetFaceName() const;
 
 [!code-cpp[NVC_MFCDocView#81](../../mfc/codesnippet/cpp/cfontdialog-class_4.cpp)]
 
-##  <a name="getsize"></a>CFontDialog:: GetSize
+##  <a name="getsize"></a>CFontDialog：： GetSize
 
 调用此函数可检索选定字体的大小。
 
@@ -270,7 +270,7 @@ int GetSize() const;
 
 ### <a name="return-value"></a>返回值
 
-字体的大小 (以十分之一为点)。
+字体的大小（以十分之一为点）。
 
 ### <a name="example"></a>示例
 
@@ -306,7 +306,7 @@ int GetWeight() const;
 
 ### <a name="remarks"></a>备注
 
-有关字体权重的详细信息, 请参阅[CFont:: CreateFont](../../mfc/reference/cfont-class.md#createfont)。
+有关字体权重的详细信息，请参阅[CFont：： CreateFont](../../mfc/reference/cfont-class.md#createfont)。
 
 ### <a name="example"></a>示例
 
@@ -322,7 +322,7 @@ BOOL IsBold() const;
 
 ### <a name="return-value"></a>返回值
 
-如果所选字体启用了粗体特征, 则为非零值;否则为0。
+如果所选字体启用了粗体特征，则为非零值;否则为0。
 
 ### <a name="example"></a>示例
 
@@ -338,7 +338,7 @@ BOOL IsItalic() const;
 
 ### <a name="return-value"></a>返回值
 
-如果所选字体启用了斜体特征, 则为非零值;否则为0。
+如果所选字体启用了斜体特征，则为非零值;否则为0。
 
 ### <a name="example"></a>示例
 
@@ -354,7 +354,7 @@ BOOL IsStrikeOut() const;
 
 ### <a name="return-value"></a>返回值
 
-如果所选字体启用了删除线特征, 则为非零值;否则为0。
+如果所选字体启用了删除线特征，则为非零值;否则为0。
 
 ### <a name="example"></a>示例
 
@@ -370,7 +370,7 @@ BOOL IsUnderline() const;
 
 ### <a name="return-value"></a>返回值
 
-如果所选字体已启用下划线特征, 则为非零值;否则为0。
+如果所选字体已启用下划线特征，则为非零值;否则为0。
 
 ### <a name="example"></a>示例
 
@@ -378,7 +378,7 @@ BOOL IsUnderline() const;
 
 ##  <a name="m_cf"></a>  CFontDialog::m_cf
 
-一个结构, 其成员存储对话框对象的特性。
+一个结构，其成员存储对话框对象的特性。
 
 ```
 CHOOSEFONT m_cf;
@@ -386,7 +386,7 @@ CHOOSEFONT m_cf;
 
 ### <a name="remarks"></a>备注
 
-构造`CFontDialog`对象之后, 您可以使用`m_cf`在调用`DoModal`成员函数之前修改对话框的各个方面。 有关此结构的详细信息, 请参阅 Windows SDK 中的[CHOOSEFONT](/windows/win32/api/commdlg/ns-commdlg-choosefontw) 。
+构造`CFontDialog`对象之后，您可以使用`m_cf`在调用`DoModal`成员函数之前修改对话框的各个方面。 有关此结构的详细信息，请参阅 Windows SDK 中的[CHOOSEFONT](/windows/win32/api/commdlg/ns-commdlg-choosefontw) 。
 
 ### <a name="example"></a>示例
 
