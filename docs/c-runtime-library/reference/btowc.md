@@ -22,11 +22,11 @@ helpviewer_keywords:
 - btowc function
 ms.assetid: 99a46e02-6f86-4569-af79-5feca012add8
 ms.openlocfilehash: 399f56fe133a9f67ed457b435ae6c0496e1ecaa5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514669"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740006"
 ---
 # <a name="btowc"></a>btowc
 
@@ -47,7 +47,7 @@ wint_t btowc(
 
 ## <a name="return-value"></a>返回值
 
-如果整数表示初始位移状态中的有效单字节字符，则将返回字符的宽字符表示形式。 如果整数是 EOF 或不是初始位移状态中的有效单字节字符，则返回 WEOF。 此函数的输出受当前**LC_TYPE**区域设置。
+如果整数表示初始位移状态中的有效单字节字符，则将返回字符的宽字符表示形式。 如果整数是 EOF 或不是初始位移状态中的有效单字节字符，则返回 WEOF。 此函数的输出受当前**LC_TYPE**区域设置的影响。
 
 ## <a name="requirements"></a>要求
 

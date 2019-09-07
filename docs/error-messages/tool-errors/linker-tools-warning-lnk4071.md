@@ -7,14 +7,14 @@ helpviewer_keywords:
 - LNK4071
 ms.assetid: 803f8c34-8219-4f55-a4ae-7133ceff2ba3
 ms.openlocfilehash: 0aa54d2469c34a55fbe3e82eabe77ec27e8a8b66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601768"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740723"
 ---
 # <a name="linker-tools-warning-lnk4071"></a>链接器工具警告 LNK4071
 
-不能以增量方式链接后面的链接上
+无法增量链接到后面的链接上
 
-找到多个定义的一个或多个符号链接，但[/force](../../build/reference/force-force-file-output.md)或 **/FORCE:MULTIPLE**用于创建输出文件而不考虑错误。 删除链接的增量状态 (.ilk) 文件。
+LINK 找到一个或多个符号的多个定义，但[/force](../../build/reference/force-force-file-output.md)或 **/FORCE：多个**用于创建输出文件，而不考虑错误。 链接已删除增量状态（. .ilk）文件。

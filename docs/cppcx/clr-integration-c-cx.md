@@ -2,24 +2,24 @@
 title: CLR 集成 (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 76e213cf-2f3d-4181-b35b-9fd25d5b307c
-ms.openlocfilehash: df0c5e9cfaf9a4148c8d16b68ee04b4e9ce82e6a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 44ef35d1a62706cae37285c06547a8b9b7deb35c
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257772"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740296"
 ---
 # <a name="clr-integration-ccx"></a>CLR 集成 (C++/CX)
 
-某些 Windows 运行时类型中接收特殊处理，在C++/CX 和基于公共语言运行时 (CLR) 的语言。 本文讨论一种语言中的几种类型如何映射到另一种语言。 例如，CLR 将 Windows.Foundation.IVector 映射到 System.Collections.IList，将 Windows.Foundation.IMap 映射到 System.Collections.IDictionary，等等。 同样， C++/CX 特别映射如 platform:: delegate 和 platform:: string 类型。
+某些 Windows 运行时类型接收/Cx 中C++的特殊处理以及基于公共语言运行时（CLR）的语言。 本文讨论一种语言中的几种类型如何映射到另一种语言。 例如，CLR 将 Windows.Foundation.IVector 映射到 System.Collections.IList，将 Windows.Foundation.IMap 映射到 System.Collections.IDictionary，等等。 同样， C++/cx 专门映射类型，如 Platform：:D 委托和 platform：： String。
 
-## <a name="mapping-the-windows-runtime-to-ccx"></a>映射到 Windows 运行时C++/CX
+## <a name="mapping-the-windows-runtime-to-ccx"></a>将 Windows 运行时映射到C++/cx
 
-当C++/CX 读取 Windows 元数据 (.winmd) 文件，编译器会自动映射公共 Windows 运行时命名空间和类型到C++/CX 命名空间和类型。 例如，数值的 Windows 运行时类型`UInt32`自动映射到`default::uint32`。
+当C++/Cx 读取 Windows 元数据（winmd）文件时，编译器会自动将常见 Windows 运行时命名空间和类型C++映射到/cx 命名空间和类型。 例如，数字 Windows 运行时类型`UInt32`自动映射到。 `default::uint32`
 
-C++/CX 映射到多个其他 Windows 运行时类型**平台**命名空间。 例如， **windows:: foundation** HSTRING 句柄，它表示只读 Unicode 文本字符串，映射到C++/CX`Platform::String`类。 如果 Windows 运行时操作返回的错误 HRESULT，它将映射到C++/CX `Platform::Exception`。
+C++/CX 将一些其他 Windows 运行时类型映射到**平台**命名空间。 例如， **Windows：： Foundation** HSTRING 句柄（表示只读 Unicode 文本字符串）映射到C++/cx `Platform::String`类。 当 Windows 运行时操作返回错误 HRESULT 时，它将映射到C++/cx。 `Platform::Exception`
 
-C++/CX 还会将映射 Windows 运行时命名空间中的某些类型以增强类型的功能。 对于这些类型， C++/CX 提供帮助器构造函数和方法的特定于C++且不支持该类型的标准.winmd 文件中。
+C++/Cx 还映射 Windows 运行时命名空间中的某些类型以增强类型的功能。 对于这些类型， C++/cx 提供了 helper 构造函数和特定于C++类型的标准 winmd 文件中无法使用的方法。
 
 下表显示支持新构造函数和帮助器方法的值结构。 如果以前编写了使用结构初始化列表的代码，请将它更改为使用新添加的构造函数。
 
@@ -29,7 +29,7 @@ C++/CX 还会将映射 Windows 运行时命名空间中的某些类型以增强�
 
 - Rect
 
-- 大小
+- Size
 
 **Windows::UI**
 
@@ -39,7 +39,7 @@ C++/CX 还会将映射 Windows 运行时命名空间中的某些类型以增强�
 
 - CornerRadius
 
-- 持续时间
+- Duration
 
 - GridLength
 
@@ -63,11 +63,11 @@ C++/CX 还会将映射 Windows 运行时命名空间中的某些类型以增强�
 
 - Matrix3D
 
-## <a name="mapping-the-clr-to-ccx"></a>将 CLR 映射到C++/CX
+## <a name="mapping-the-clr-to-ccx"></a>将 CLR 映射到C++/cx
 
-当视觉对象C++或C#编译器读取.winmd 文件，它们会自动将元数据文件中的某些类型映射到相应C++/CX 或 CLR 类型。 例如，在 CLR 中，IVector\<T > 接口映射到 IList\<T >。 但在C++/CX，IVector\<T > 接口未映射到另一种类型。
+当 Microsoft C++或C#编译器读取 winmd 文件时，它们会将元数据文件中的某些类型自动映射到C++适当的/cx 或 CLR 类型。 例如，在 CLR 中，IVector\<t > 接口映射到 IList\<t >。 但在C++/cx 中，IVector\<T > 接口未映射到另一种类型。
 
-IReference\<T > 在 Windows 运行时将映射到可以为 Null\<T > 在.NET 中。
+IReference\<t > 在 Windows 运行时映射到 .net 中\<的可以为 null 的 t >。
 
 ## <a name="see-also"></a>请参阅
 

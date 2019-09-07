@@ -2,22 +2,22 @@
 title: 异常 (C++/CX)
 ms.date: 07/02/2019
 ms.assetid: 6cbdc1f1-e4d7-4707-a670-86365146432f
-ms.openlocfilehash: 93a3c096c79140787a46dcbd0ae6ec7edc0bf2e4
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.openlocfilehash: ade406dc5db6022978f83715555c425caef4375b
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552184"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740174"
 ---
 # <a name="exceptions-ccx"></a>异常 (C++/CX)
 
-中的错误处理C++/CX 基于异常。 在最基本的级别，Windows 运行时组件将错误报告为 HRESULT 值。 在C++/CX，这些值转换为包含 HRESULT 值和可以以编程方式访问的字符串说明的强类型异常。  异常作为从 `ref class` 派生的 `Platform::Exception`来实现。  `Platform` 命名空间为最常见的 HRESULT 值定义独特的异常类，而所有其他值都通过 `Platform::COMException` 类来报告。 所有异常类都有一个 [Exception::HResult](platform-exception-class.md#hresult) 字段，可用于检索原始 HRESULT。 您还可以检查可帮助查明的原始源的异常，即使以外用一种语言编写的代码中产生在调试器中的用户代码的调用堆栈信息C++。
+/Cx 中C++的错误处理基于异常。 在最基本的级别上，Windows 运行时组件将错误报告为 HRESULT 值。 在C++/cx 中，这些值将转换为包含 HRESULT 值的强类型异常以及可通过编程方式访问的字符串说明。  异常作为从 `ref class` 派生的 `Platform::Exception`来实现。  `Platform` 命名空间为最常见的 HRESULT 值定义独特的异常类，而所有其他值都通过 `Platform::COMException` 类来报告。 所有异常类都有一个 [Exception::HResult](platform-exception-class.md#hresult) 字段，可用于检索原始 HRESULT。 你还可以在调试器中检查用户代码的调用堆栈信息，这些信息可帮助确定异常的原始来源，即使该代码源自以以外C++的语言编写的代码中。
 
 ## <a name="exceptions"></a>Exceptions
 
-在你C++程序中，您可以引发和捕获来自 Windows 运行时操作的异常，异常派生自`std::exception`，或用户定义的类型。 必须仅当将跨越应用程序二进制接口 (ABI) 边界，例如，当以 JavaScript 编写的代码捕获你的异常时引发的 Windows 运行时异常。 当非 Windows 运行时C++异常到达 ABI 边界时，该异常转换为`Platform::FailureException`异常，后者表示 E_FAIL HRESULT。 有关 ABI 的更多信息，请参见 [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)。
+在C++程序中，你可以引发和捕获来自 Windows 运行时操作的异常、派生自`std::exception`的异常或用户定义的类型。 仅当它将跨越应用程序二进制接口（ABI）边界时（例如，当捕获异常的代码是用 JavaScript 编写的时），才必须引发 Windows 运行时异常。 当某个非 Windows 运行时C++异常到达 ABI 边界时，该异常将转换为一个`Platform::FailureException`异常，该异常表示 E_FAIL HRESULT。 有关 ABI 的更多信息，请参见 [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)。
 
-可以声明[platform:: exception](platform-exception-class.md)通过两个构造函数采用 HRESULT 参数或者 HRESULT 参数和一个[platform:: string](platform-string-class.md)^ 可跨传递的参数对其进行处理的任何 Windows 运行时应用的 ABI。 也可以使用两个 [Exception::CreateException 方法](platform-exception-class.md#createexception) 重载之一声明异常，这两个方法重载采用 HRESULT 参数或者 HRESULT 参数和 `Platform::String^` 参数。
+您可以使用以下两个构造函数之一来声明[Platform：： Exception](platform-exception-class.md) ，该构造函数采用 hresult 参数或者 hresult 参数和[Platform：： String](platform-string-class.md)^ 参数，该参数可跨 ABI 传递到处理它的任何 Windows 运行时应用。 也可以使用两个 [Exception::CreateException 方法](platform-exception-class.md#createexception) 重载之一声明异常，这两个方法重载采用 HRESULT 参数或者 HRESULT 参数和 `Platform::String^` 参数。
 
 ## <a name="standard-exceptions"></a>标准异常
 
@@ -27,11 +27,11 @@ C++/CX 支持一组表示典型 HRESULT 错误的标准异常。 每个标准异
 
 下表列出了标准异常。
 
-|名称|基础 HRESULT|描述|
+|name|基础 HRESULT|描述|
 |----------|------------------------|-----------------|
 |COMException|*用户定义的 hresult*|从 COM 方法调用返回无法识别的 HRESULT 时引发。|
 |AccessDeniedException|E\_ACCESSDENIED|被拒绝访问资源或功能时引发。|
-|ChangedStateException|电子\_CHANGED\_状态|在父集合更改后调用集合迭代器或集合视图的方法时引发，从而使方法的结果无效。|
+|ChangedStateException|E\_已\_更改状态|在父集合更改后调用集合迭代器或集合视图的方法时引发，从而使方法的结果无效。|
 |ClassNotRegisteredException|REGDB\_E\_CLASSNOTREG|当 COM 类尚未注册时引发。|
 |DisconnectedException|RPC\_E\_已断开连接|当对象与其客户端的连接断开时引发。|
 |FailureException|E\_失败|操作失败时引发。|
@@ -43,15 +43,15 @@ C++/CX 支持一组表示典型 HRESULT 错误的标准异常。 每个标准异
 |OperationCanceledException|E\_中止|操作中止时引发。|
 |OutOfBoundsException|E\_边界|某个操作尝试在有效范围外访问数据时引发。|
 |OutOfMemoryException|E\_OUTOFMEMORY|没有足够内存来完成操作时引发。|
-|WrongThreadException|RPC\_E\_错误\_线程|当一个线程通过专用于代理对象而不属于该线程单元的接口指针调用时引发。|
+|WrongThreadException|RPC\_E\_错误\_的线程|当一个线程通过专用于代理对象而不属于该线程单元的接口指针调用时引发。|
 
 ## <a name="hresult-and-message-properties"></a>HResult 和 Message 属性
 
-所有异常都有一个 [HResult](platform-comexception-class.md#hresult) 属性和一个 [Message](platform-comexception-class.md#message) 属性。 [Exception::HResult](platform-exception-class.md#hresult) 属性获取异常的基础数字 HRESULT 值。 [Exception::Message](platform-exception-class.md#message) 属性获取系统提供的描述异常的字符串。 在 Windows 8 中，消息仅在调试器中可用，并且是只读的。 这意味着，重新引发异常时将无法对其进行更改。 在 Windows 8.1 中，可通过编程方式访问消息字符串，并在重新引发异常时提供新的消息。 调试器中还提供了更详细的调用堆栈信息，包括异步方法调用的调用堆栈。
+所有异常都有一个 [HResult](platform-comexception-class.md#hresult) 属性和一个 [Message](platform-comexception-class.md#message) 属性。 [Exception::HResult](platform-exception-class.md#hresult) 属性获取异常的基础数字 HRESULT 值。 [Exception::Message](platform-exception-class.md#message) 属性获取系统提供的描述异常的字符串。 在 Windows 8 中，消息仅在调试器中提供，并且是只读的。 这意味着，重新引发异常时将无法对其进行更改。 在 Windows 8.1 中，可通过编程方式访问消息字符串，并在重新引发异常时提供新的消息。 调试器中还提供了更详细的调用堆栈信息，包括异步方法调用的调用堆栈。
 
 ### <a name="examples"></a>示例
 
-此示例演示如何引发同步操作的 Windows 运行时异常：
+此示例演示如何为同步操作引发 Windows 运行时异常：
 
 [!code-cpp[cx_exceptions#01](codesnippet/CPP/exceptiontest/class1.cpp#01)]
 
@@ -63,15 +63,15 @@ C++/CX 支持一组表示典型 HRESULT 错误的标准异常。 每个标准异
 
 ## <a name="unhandlederrordetected-event"></a>UnhandledErrorDetected 事件
 
-在 Windows 8.1 可订阅[Windows::ApplicationModel::Core::CoreApplication::UnhandledErrorDetected](/uwp/api/windows.applicationmodel.core.icoreapplicationunhandlederror.unhandlederrordetected)静态事件，可访问即将关闭进程的未处理的错误事件。 无论错误源于何处，它都作为与事件参数一起传入的 [Windows::ApplicationModel::Core::UnhandledError](/uwp/api/windows.applicationmodel.core.unhandlederror) 对象到达此处理程序。 对该对象调用 `Propagate` 时，它根据错误代码创建并引发相应类型的 `Platform::*Exception` 。 在 catch 块内，可根据需要保存用户状态，然后通过调用 `throw`让进程终止，或者执行其他操作让程序返回已知的状态。 下面的示例演示了基本模式：
+在 Windows 8.1 您可以订阅[Windows：： windows.applicationmodel.resources.core：： Core：： CoreApplication：： UnhandledErrorDetected](/uwp/api/windows.applicationmodel.core.icoreapplicationunhandlederror.unhandlederrordetected)静态事件，该事件可访问即将关闭进程的未处理的错误。 无论错误源于何处，它都作为与事件参数一起传入的 [Windows::ApplicationModel::Core::UnhandledError](/uwp/api/windows.applicationmodel.core.unhandlederror) 对象到达此处理程序。 对该对象调用 `Propagate` 时，它根据错误代码创建并引发相应类型的 `Platform::*Exception` 。 在 catch 块内，可根据需要保存用户状态，然后通过调用 `throw`让进程终止，或者执行其他操作让程序返回已知的状态。 下面的示例演示了基本模式：
 
-在 app.xaml.h:
+在 app.xaml 中：
 
 ```cpp
 void OnUnhandledException(Platform::Object^ sender, Windows::ApplicationModel::Core::UnhandledErrorDetectedEventArgs^ e);
 ```
 
-在 app.xaml.cpp:
+在 app.xaml 中：
 
 ```cpp
 // Subscribe to the event, for example in the app class constructor:
@@ -99,9 +99,9 @@ void App::OnUnhandledException(Platform::Object^ sender, Windows::ApplicationMod
 
 ### <a name="remarks"></a>备注
 
-C++/CX 不使用`finally`子句。
+C++/Cx 不使用`finally`子句。
 
 ## <a name="see-also"></a>请参阅
 
-[VisualC++语言参考](visual-c-language-reference-c-cx.md)<br/>
+[C++/CX 语言参考](visual-c-language-reference-c-cx.md)<br/>
 [命名空间参考](namespaces-reference-c-cx.md)
