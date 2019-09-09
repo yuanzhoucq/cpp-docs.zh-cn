@@ -26,7 +26,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 07/16/2019
 ms.locfileid: "68245822"
 ---
-# <a name="errorcode-class"></a>error_code 类
+# <a name="error_code-class"></a>error_code 类
 
 表示特定于实现的低级别系统错误。
 
@@ -62,7 +62,7 @@ class error_code;
 |[category](#category)|返回错误类别。|
 |[clear](#clear)|清除错误代码值和类别。|
 |[default_error_condition](#default_error_condition)|返回默认的错误条件。|
-|message[](#message)|返回错误代码的名称。|
+|[message](#message)|返回错误代码的名称。|
 
 ### <a name="operators"></a>运算符
 
@@ -74,7 +74,7 @@ class error_code;
 |[operator=](#op_eq)|向 `error_code` 对象分配新的枚举值。|
 |[operator bool](#op_bool)|转换 `error_code` 类型的变量。|
 
-### <a name="assign"></a> 分配
+### <a name="assign"></a>将
 
 向错误代码分配错误代码值和类别。
 
@@ -84,17 +84,17 @@ void assign(value_type val, const error_category& _Cat);
 
 #### <a name="parameters"></a>参数
 
-*val*\
+*初始值*\
 要存储在 `error_code` 中的错误代码值。
 
-*则*\
+*_Cat*\
 要存储在 `error_code` 中的错误类别。
 
 #### <a name="remarks"></a>备注
 
-此成员函数存储*val*作为错误代码值和指向*则*。
+成员函数将*val*存储为错误代码值和指向 *_Cat*的指针。
 
-### <a name="category"></a> 类别
+### <a name="category"></a>类别
 
 返回错误类别。
 
@@ -104,7 +104,7 @@ const error_category& category() const;
 
 #### <a name="remarks"></a>备注
 
-### <a name="clear"></a> 清除
+### <a name="clear"></a>清除
 
 清除错误代码值和类别。
 
@@ -116,7 +116,7 @@ clear();
 
 此成员函数存储零错误代码值和指向 [generic_category](../standard-library/system-error-functions.md#generic_category) 对象的指针。
 
-### <a name="default_error_condition"></a> default_error_condition
+### <a name="default_error_condition"></a>default_error_condition
 
 返回默认的错误条件。
 
@@ -132,7 +132,7 @@ error_condition default_error_condition() const;
 
 此成员函数返回 `category().default_error_condition(value())`。
 
-### <a name="error_code"></a> error_code
+### <a name="error_code"></a>error_code
 
 构造 `error_code` 类型的对象。
 
@@ -149,10 +149,10 @@ error_code(_Enum _Errcode,
 
 #### <a name="parameters"></a>参数
 
-*val*\
+*初始值*\
 要存储在 `error_code` 中的错误代码值。
 
-*则*\
+*_Cat*\
 要存储在 `error_code` 中的错误类别。
 
 *_Errcode*\
@@ -162,11 +162,11 @@ error_code(_Enum _Errcode,
 
 第一个构造函数存储零错误代码值和指向 [generic_category](../standard-library/system-error-functions.md#generic_category) 的指针。
 
-第二个构造函数存储*val*作为错误代码值和指向[error_category](../standard-library/error-category-class.md)。
+第二个构造函数存储*val*作为错误代码值和指向[error_category](../standard-library/error-category-class.md)的指针。
 
 第三个构造函数存储 `(value_type)_Errcode` 作为错误代码值和指向 [generic_category](../standard-library/system-error-functions.md#generic_category) 的指针。
 
-### <a name="message"></a> 消息
+### <a name="message"></a>消息
 
 返回错误代码的名称。
 
@@ -182,7 +182,7 @@ string message() const;
 
 此成员函数返回 `category().message(value())`。
 
-### <a name="op_eq_eq"></a> 运算符 = =
+### <a name="op_eq_eq"></a>operator = =
 
 测试各 `error_code` 对象是否相等。
 
@@ -192,7 +192,7 @@ bool operator==(const error_code& right) const;
 
 #### <a name="parameters"></a>参数
 
-*右侧*\
+*然后*\
 要测试是否相等的对象。
 
 #### <a name="return-value"></a>返回值
@@ -203,7 +203,7 @@ bool operator==(const error_code& right) const;
 
 该成员运算符将返回 `category() == right.category() && value == right.value()`。
 
-### <a name="op_neq"></a> 运算符 ！ =
+### <a name="op_neq"></a>operator！ =
 
 测试各 `error_code` 对象是否不相等。
 
@@ -213,12 +213,12 @@ bool operator!=(const error_code& right) const;
 
 #### <a name="parameters"></a>参数
 
-*右侧*\
+*然后*\
 要测试是否不相等的对象。
 
 #### <a name="return-value"></a>返回值
 
-**true**如果`error_code`对象是否不等于`error_code`传入的对象*右*; 否则为**false**。
+`error_code`如果`error_code`对象与右传递的对象不相等，则**为 true** ; 否则为 false。
 
 #### <a name="remarks"></a>备注
 
@@ -234,7 +234,7 @@ bool operator<(const error_code& right) const;
 
 #### <a name="parameters"></a>参数
 
-*右侧*\
+*然后*\
 要比较的 error_code 对象。
 
 #### <a name="return-value"></a>返回值
@@ -245,7 +245,7 @@ bool operator<(const error_code& right) const;
 
 该成员运算符将返回 `category() < right.category() || category() == right.category() && value < right.value()`。
 
-### <a name="op_eq"></a> 运算符 =
+### <a name="op_eq"></a>operator =
 
 向 `error_code` 对象分配新的枚举值。
 
@@ -268,7 +268,7 @@ typename enable_if<is_error_code_enum<_Enum>::value, error_code>::type&
 
 成员运算符存储 `(value_type)_Errcode` 作为错误代码值和指向 [generic_category](../standard-library/system-error-functions.md#generic_category) 的指针。 它将返回 `*this`。
 
-### <a name="op_bool"></a> 布尔运算符
+### <a name="op_bool"></a>operator bool
 
 转换 `error_code` 类型的变量。
 
@@ -282,9 +282,9 @@ explicit operator bool() const;
 
 #### <a name="remarks"></a>备注
 
-该运算符将返回一个值可转换为 **，则返回 true**仅当[值](#value)不等于零。 返回类型是转换仅为**bool**不为`void *`或其他已知的标量类型。
+仅当[值](#value)不等于零时，运算符才会返回一个可转换为**true**的值。 返回类型只能转换为**bool**，而不`void *`能转换为或其他已知的标量类型。
 
-### <a name="value"></a> 值
+### <a name="value"></a>负值
 
 返回存储的错误代码值。
 
@@ -306,4 +306,4 @@ typedef int value_type;
 
 #### <a name="remarks"></a>备注
 
-此类型定义是的同义词**int**。
+此类型定义是**int**的同义词。

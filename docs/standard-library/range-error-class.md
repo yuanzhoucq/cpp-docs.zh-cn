@@ -13,7 +13,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68458247"
 ---
-# <a name="rangeerror-class"></a>range_error 类
+# <a name="range_error-class"></a>range_error 类
 
 此类用作引发报告范围错误的所有异常的基类。
 
@@ -29,7 +29,7 @@ public:
 
 ## <a name="remarks"></a>备注
 
-的副本`message.data`返回的[](../standard-library/exception-class.md)值。 有关详细信息, 请参阅[basic_string::d ata](../standard-library/basic-string-class.md#data)。
+的副本`message.data`[返回的值](../standard-library/exception-class.md)。 有关详细信息，请参阅[basic_string：:d ata](../standard-library/basic-string-class.md#data)。
 
 ## <a name="example"></a>示例
 

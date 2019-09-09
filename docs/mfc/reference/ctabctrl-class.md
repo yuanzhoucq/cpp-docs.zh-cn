@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CTabCtrl [MFC], SetPadding
 - CTabCtrl [MFC], SetToolTips
 ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
-ms.openlocfilehash: ccf35c7a036a69487d5138baf8c017f9c5995bef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a0ca4cbad48c420250fe39e131de5504b1ae70f3
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323708"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502483"
 ---
 # <a name="ctabctrl-class"></a>CTabCtrl 类
 
@@ -101,46 +101,46 @@ class CTabCtrl : public CWnd
 
 |名称|描述|
 |----------|-----------------|
-|[CTabCtrl::AdjustRect](#adjustrect)|计算给定窗口矩形的选项卡控件的显示区域或计算将对应于给定的显示区域的窗口矩形。|
-|[CTabCtrl::Create](#create)|创建选项卡控件，并将其附加到的实例`CTabCtrl`对象。|
-|[CTabCtrl::CreateEx](#createex)|创建具有指定的 Windows 扩展样式的选项卡控件并将其附加到的实例`CTabCtrl`对象。|
+|[CTabCtrl::AdjustRect](#adjustrect)|计算给定窗口矩形的选项卡控件的显示区域，或计算与给定显示区域相对应的窗口矩形。|
+|[CTabCtrl::Create](#create)|创建选项卡控件，并将其附加到`CTabCtrl`对象的实例。|
+|[CTabCtrl::CreateEx](#createex)|创建具有指定 Windows 扩展样式的选项卡控件，并将其附加到`CTabCtrl`对象的实例。|
 |[CTabCtrl::DeleteAllItems](#deleteallitems)|从选项卡控件中移除所有项。|
-|[CTabCtrl::DeleteItem](#deleteitem)|从选项卡控件中移除的项。|
-|[CTabCtrl::DeselectAll](#deselectall)|重置清除任何已按下的选项卡控件中的项。|
-|[CTabCtrl::DrawItem](#drawitem)|绘制选项卡控件的指定的项。|
+|[CTabCtrl::DeleteItem](#deleteitem)|从选项卡控件中移除项。|
+|[CTabCtrl::DeselectAll](#deselectall)|重置选项卡控件中的项，清除已按下的任何项。|
+|[CTabCtrl::DrawItem](#drawitem)|绘制选项卡控件的指定项。|
 |[CTabCtrl::GetCurFocus](#getcurfocus)|检索具有选项卡控件的当前焦点的选项卡。|
-|[CTabCtrl::GetCurSel](#getcursel)|确定选项卡控件中当前所选的选项卡。|
-|[CTabCtrl::GetExtendedStyle](#getextendedstyle)|检索当前正在使用的选项卡控件的扩展的样式。|
+|[CTabCtrl::GetCurSel](#getcursel)|确定选项卡控件中当前选定的选项卡。|
+|[CTabCtrl::GetExtendedStyle](#getextendedstyle)|检索当前用于选项卡控件的扩展样式。|
 |[CTabCtrl::GetImageList](#getimagelist)|检索与选项卡控件关联的图像列表。|
-|[CTabCtrl::GetItem](#getitem)|检索的选项卡中选项卡控件有关的信息。|
-|[CTabCtrl::GetItemCount](#getitemcount)|检索在选项卡控件中的选项卡的数目。|
-|[CTabCtrl::GetItemRect](#getitemrect)|检索的选项卡中选项卡控件的边框。|
-|[CTabCtrl::GetItemState](#getitemstate)|检索指示选项卡控件项的状态。|
-|[CTabCtrl::GetRowCount](#getrowcount)|检索当前的选项卡控件中的选项卡的行数。|
+|[CTabCtrl::GetItem](#getitem)|检索有关选项卡控件中的选项卡的信息。|
+|[CTabCtrl::GetItemCount](#getitemcount)|检索选项卡控件中选项卡的数目。|
+|[CTabCtrl::GetItemRect](#getitemrect)|检索选项卡控件中选项卡的边框。|
+|[CTabCtrl::GetItemState](#getitemstate)|检索所指示的选项卡控件项的状态。|
+|[CTabCtrl::GetRowCount](#getrowcount)|检索选项卡控件中选项卡的当前行数。|
 |[CTabCtrl::GetToolTips](#gettooltips)|检索与选项卡控件关联的工具提示控件的句柄。|
 |[CTabCtrl::HighlightItem](#highlightitem)|设置选项卡项的突出显示状态。|
-|[CTabCtrl::HitTest](#hittest)|确定哪些选项卡上，如果有，为指定的屏幕位置。|
-|[CTabCtrl::InsertItem](#insertitem)|在选项卡控件中插入一个新选项卡。|
+|[CTabCtrl::HitTest](#hittest)|确定哪个选项卡（如果有）位于指定的屏幕位置。|
+|[CTabCtrl::InsertItem](#insertitem)|在选项卡控件中插入新选项卡。|
 |[CTabCtrl::RemoveImage](#removeimage)|从选项卡控件的图像列表中移除图像。|
-|[CTabCtrl::SetCurFocus](#setcurfocus)|将焦点设置到指定的选项卡中选项卡控件。|
-|[CTabCtrl::SetCurSel](#setcursel)|在选项卡控件中选择一个选项卡。|
-|[CTabCtrl::SetExtendedStyle](#setextendedstyle)|设置选项卡控件的扩展的样式。|
-|[CTabCtrl::SetImageList](#setimagelist)|将图像列表分配到选项卡控件。|
-|[CTabCtrl::SetItem](#setitem)|设置部分或全部选项卡的属性。|
-|[CTabCtrl::SetItemExtra](#setitemextra)|设置每个选项卡为选项卡控件中的应用程序定义数据保留的字节数。|
-|[CTabCtrl::SetItemSize](#setitemsize)|设置宽度和高度的项。|
-|[CTabCtrl::SetItemState](#setitemstate)|设置指示选项卡控件项的状态。|
+|[CTabCtrl::SetCurFocus](#setcurfocus)|将焦点设置到选项卡控件中的指定选项卡。|
+|[CTabCtrl::SetCurSel](#setcursel)|选择选项卡控件中的选项卡。|
+|[CTabCtrl::SetExtendedStyle](#setextendedstyle)|设置选项卡控件的扩展样式。|
+|[CTabCtrl::SetImageList](#setimagelist)|将图像列表分配给选项卡控件。|
+|[CTabCtrl::SetItem](#setitem)|设置选项卡的部分或全部属性。|
+|[CTabCtrl::SetItemExtra](#setitemextra)|设置选项卡控件中为应用程序定义的数据保留的每个选项卡的字节数。|
+|[CTabCtrl::SetItemSize](#setitemsize)|设置项的宽度和高度。|
+|[CTabCtrl::SetItemState](#setitemstate)|设置所指示的选项卡控件项的状态。|
 |[CTabCtrl::SetMinTabWidth](#setmintabwidth)|设置选项卡控件中项的最小宽度。|
-|[CTabCtrl::SetPadding](#setpadding)|设置 （填充） 每个选项卡图标和选项卡控件中的标签周围的空间量。|
+|[CTabCtrl::SetPadding](#setpadding)|设置选项卡控件中每个选项卡的图标和标签周围的空间量（填充）。|
 |[CTabCtrl::SetToolTips](#settooltips)|将工具提示控件分配给选项卡控件。|
 
 ## <a name="remarks"></a>备注
 
-"选项卡控件"是类似于笔记本中的分隔条或文件柜中的标签。 通过使用选项卡控件，应用程序可以为窗口或对话框的相同区域定义多个页。 每个页面包含一组信息或一组应用程序将显示在用户选择相应的选项卡时的控件。一种特殊类型的选项卡控件显示看起来像按钮的选项卡。 单击一个按钮应立即执行命令而不是显示一个页面。
+"选项卡控件" 类似于笔记本中的分隔条或文件柜中的标签。 通过使用选项卡控件，应用程序可以为窗口或对话框的相同区域定义多个页。 每个页面都包含一组信息或一组控件，当用户选择相应的选项卡时，应用程序会显示该选项卡。特殊类型的选项卡控件显示类似按钮的选项卡。 单击某个按钮应立即执行命令，而不是显示页面。
 
-此控件 (并因此`CTabCtrl`类) 仅适用于 Windows 95/98 和 Windows NT 版本 3.51 下运行的程序和更高版本。
+此控件（因而`CTabCtrl`类）仅适用于在 windows 95/98 和 windows NT 版本3.51 及更高版本下运行的程序。
 
-有关使用的详细信息`CTabCtrl`，请参阅[控件](../../mfc/controls-mfc.md)并[使用 CTabCtrl](../../mfc/using-ctabctrl.md)。
+有关使用`CTabCtrl`的详细信息，请参阅[控件](../../mfc/controls-mfc.md)和[使用 CTabCtrl](../../mfc/using-ctabctrl.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -156,9 +156,9 @@ class CTabCtrl : public CWnd
 
 **标头：** afxcmn.h
 
-##  <a name="adjustrect"></a>  CTabCtrl::AdjustRect
+##  <a name="adjustrect"></a>CTabCtrl：： AdjustRect
 
-计算给定窗口矩形的选项卡控件的显示区域或计算将对应于给定的显示区域的窗口矩形。
+计算给定窗口矩形的选项卡控件的显示区域，或计算与给定显示区域相对应的窗口矩形。
 
 ```
 void AdjustRect(BOOL bLarger,   LPRECT lpRect);
@@ -167,18 +167,18 @@ void AdjustRect(BOOL bLarger,   LPRECT lpRect);
 ### <a name="parameters"></a>参数
 
 *bLarger*<br/>
-指示要执行哪些操作。 如果此参数为 TRUE， *lpRect*指定显示矩形，并接收相应的窗口矩形。 如果此参数为 FALSE 时， *lpRect*指定窗口矩形，并接收相应显示矩形。
+指示要执行的操作。 如果此参数为 TRUE，则*lpRect*将指定一个显示矩形并接收相应的窗口矩形。 如果此参数为 FALSE，则*lpRect*指定一个窗口矩形并接收相应的显示矩形。
 
 *lpRect*<br/>
-指向[RECT](/previous-versions/dd162897\(v=vs.85\))结构，它指定给定的矩形并接收的计算的矩形。
+指向[矩形结构的指针，该结构](/previous-versions/dd162897\(v=vs.85\))指定给定矩形并接收计算矩形。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFC_CTabCtrl#1](../../mfc/reference/codesnippet/cpp/ctabctrl-class_1.cpp)]
 
-##  <a name="create"></a>  CTabCtrl::Create
+##  <a name="create"></a>CTabCtrl：： Create
 
-创建选项卡控件，并将其附加到的实例`CTabCtrl`对象。
+创建选项卡控件，并将其附加到`CTabCtrl`对象的实例。
 
 ```
 virtual BOOL Create(
@@ -191,46 +191,46 @@ virtual BOOL Create(
 ### <a name="parameters"></a>参数
 
 *dwStyle*<br/>
-指定选项卡控件的样式。 应用的任意组合[选项卡控件样式](/windows/desktop/Controls/tab-control-styles)Windows SDK 中所述。 请参阅**备注**还可以应用到控件的窗口样式的列表。
+指定选项卡控件的样式。 应用 Windows SDK 中所述的任何[选项卡控件样式](/windows/win32/Controls/tab-control-styles)组合。 有关还可以应用于控件的窗口样式列表，请参阅 "**备注**"。
 
 *rect*<br/>
 指定选项卡控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](/previous-versions/dd162897\(v=vs.85\))结构。
 
 *pParentWnd*<br/>
-通常指定选项卡控件的父窗口， `CDialog`。 它不能为 NULL。
+指定选项卡控件的父窗口，通常为`CDialog`。 它不能为 NULL。
 
 *nID*<br/>
-指定选项卡控件的 id。
+指定选项卡控件的 ID。
 
 ### <a name="return-value"></a>返回值
 
-如果对象的初始化成功，则为 TRUE否则为 FALSE。
+如果对象初始化成功，则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-构造`CTabCtrl`两个步骤中的对象。 首先，调用构造函数中，，然后调用`Create`，它创建选项卡控件，并将其附加到`CTabCtrl`对象。
+可以通过`CTabCtrl`两个步骤构造对象。 首先，调用构造函数，然后调用`Create`，它将创建选项卡控件，并将其附加`CTabCtrl`到对象。
 
-除了选项卡控件样式，可以将以下窗口样式应用到选项卡控件：
+除了选项卡控件样式以外，还可以将以下窗口样式应用于选项卡控件：
 
-- WS_CHILD 创建表示选项卡控件的子窗口。 不能用于 WS_POPUP 样式。
+- WS_CHILD 创建表示选项卡控件的子窗口。 不能与 WS_POPUP 样式一起使用。
 
-- WS_VISIBLE 创建初始可见的选项卡控件。
+- WS_VISIBLE 创建一个最初可见的选项卡控件。
 
-- WS_DISABLED 创建最初处于禁用状态的窗口。
+- WS_DISABLED 创建一个最初处于禁用状态的窗口。
 
-- WS_GROUP 指定一组控件在其中用户可以从一个控件移动到下的箭头键的第一个控件。 定义与 WS_GROUP 样式后的第一个控件属于相同组的所有控件。 WS_GROUP 样式的下一个控件结束样式组，并启动下一个组 （即，一组结束的地方开始下）。
+- WS_GROUP 指定一组控件的第一个控件，用户可以使用箭头键从一个控件移动到下一个控件。 在第一个控件属于同一组后，所有用 WS_GROUP 样式定义的控件。 具有 WS_GROUP 样式的下一个控件将结束样式组，并启动下一组（即，一个组在下一次开始时结束）。
 
-- WS_TABSTOP 指定一个任意数量的通过该用户可以通过使用 TAB 键移动的控件。 TAB 键将用户移动到由 WS_TABSTOP 样式指定的下一个控件。
+- WS_TABSTOP 指定任意数量的控件，用户可以使用 TAB 键移动这些控件。 TAB 键将用户移动到 WS_TABSTOP 样式指定的下一个控件。
 
-若要创建具有扩展的窗口样式的选项卡控件，调用[CTabCtrl::CreateEx](#createex)而不是`Create`。
+若要创建具有扩展窗口样式的选项卡控件，请调用[CTabCtrl：： CreateEx](#createex)而不是`Create`。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFC_CTabCtrl#2](../../mfc/reference/codesnippet/cpp/ctabctrl-class_2.cpp)]
 
-##  <a name="createex"></a>  CTabCtrl::CreateEx
+##  <a name="createex"></a>CTabCtrl：： CreateEx
 
-创建控件 （子窗口），并将其与`CTabCtrl`对象。
+创建一个控件（子窗口）并将`CTabCtrl`其与对象关联。
 
 ```
 virtual BOOL CreateEx(
@@ -244,29 +244,29 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>参数
 
 *dwExStyle*<br/>
-指定要创建的控件的扩展的样式。 扩展 Windows 样式的列表，请参阅*dwExStyle*参数[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。
+指定正在创建的控件的扩展样式。 有关扩展 Windows 样式的列表，请参阅 Windows SDK 中[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)的*dwExStyle*参数。
 
 *dwStyle*<br/>
-指定选项卡控件的样式。 应用的任意组合[选项卡控件样式](/windows/desktop/Controls/tab-control-styles)Windows SDK 中所述。 请参阅**备注**中[创建](#create)还可以应用到控件的窗口样式的列表。
+指定选项卡控件的样式。 应用 Windows SDK 中所述的任何[选项卡控件样式](/windows/win32/Controls/tab-control-styles)组合。 有关还可以应用于控件的窗口样式列表，请参阅[创建](#create)中的**备注**。
 
 *rect*<br/>
-对引用[RECT](/previous-versions/dd162897\(v=vs.85\))结构的结构描述的大小和窗口的工作区中创建的位置*pParentWnd*。
+对[矩形](/previous-versions/dd162897\(v=vs.85\))结构的引用，该结构描述要创建的窗口的大小和位置（以*pParentWnd*的工作区坐标表示）。
 
 *pParentWnd*<br/>
-指向控件的父级的窗口的指针。
+指向作为控件的父级的窗口的指针。
 
 *nID*<br/>
-控件的子窗口 id。
+控件的子窗口 ID。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则非零; 否则为 0。
+如果成功，则为非零; 否则为0。
 
 ### <a name="remarks"></a>备注
 
-使用`CreateEx`而不是[创建](#create)若要将应用扩展的 Windows 样式，指定的 Windows 扩展的样式加**WS_EX_**。
+使用`CreateEx`而不是[Create](#create)来应用扩展的 windows 样式，由 windows 扩展样式指定的**WS_EX_** 。
 
-`CreateEx` 创建使用指定的扩展 Windows 样式的控件*dwExStyle*。 设置扩展样式特定于控件使用[SetExtendedStyle](#setextendedstyle)。 例如，使用`CreateEx`来将此类样式设置为 WS_EX_CONTEXTHELP，但使用`SetExtendedStyle`若要将此类样式设置为 TCS_EX_FLATSEPARATORS。 有关详细信息，请参阅中所述的样式[选项卡控件扩展样式](/windows/desktop/Controls/tab-control-extended-styles)Windows SDK 中。
+`CreateEx`使用由*dwExStyle*指定的扩展 Windows 样式创建控件。 使用[SetExtendedStyle](#setextendedstyle)设置特定于控件的扩展样式。 例如，使用`CreateEx`将此类样式设置为 WS_EX_CONTEXTHELP，但使用`SetExtendedStyle`将此类样式设置为 TCS_EX_FLATSEPARATORS。 有关详细信息，请参阅在 Windows SDK 中的[选项卡控件扩展样式](/windows/win32/Controls/tab-control-extended-styles)中所述的样式。
 
 ##  <a name="ctabctrl"></a>  CTabCtrl::CTabCtrl
 
@@ -288,9 +288,9 @@ BOOL DeleteAllItems();
 
 如果成功，则不为 0；否则为 0。
 
-##  <a name="deleteitem"></a>  CTabCtrl::DeleteItem
+##  <a name="deleteitem"></a>CTabCtrl：:D eleteItem
 
-从选项卡控件中移除指定的项。
+从选项卡控件中移除指定项。
 
 ```
 BOOL DeleteItem(int nItem);
@@ -299,7 +299,7 @@ BOOL DeleteItem(int nItem);
 ### <a name="parameters"></a>参数
 
 *nItem*<br/>
-要删除的项的从零开始值。
+要删除的项的从零开始的值。
 
 ### <a name="return-value"></a>返回值
 
@@ -309,9 +309,9 @@ BOOL DeleteItem(int nItem);
 
 [!code-cpp[NVC_MFC_CTabCtrl#3](../../mfc/reference/codesnippet/cpp/ctabctrl-class_3.cpp)]
 
-##  <a name="deselectall"></a>  CTabCtrl::DeselectAll
+##  <a name="deselectall"></a>CTabCtrl：:D eselectAll
 
-重置清除任何已按下的选项卡控件中的项。
+重置选项卡控件中的项，清除已按下的任何项。
 
 ```
 void DeselectAll(BOOL fExcludeFocus);
@@ -320,15 +320,15 @@ void DeselectAll(BOOL fExcludeFocus);
 ### <a name="parameters"></a>参数
 
 *fExcludeFocus*<br/>
-指定的项取消选择范围的标志。 如果此参数设置为 FALSE，则将重置所有选项卡按钮。 如果它设置为 TRUE，则所有选项卡除了当前所选的项将重置。
+指定项 deselection 的作用域的标志。 如果此参数设置为 "FALSE"，则将重置所有选项卡按钮。 如果设置为 TRUE，则将重置当前所选的所有选项卡项。
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 消息的行为[TCM_DESELECTALL](/windows/desktop/Controls/tcm-deselectall)，如 Windows SDK 中所述。
+此成员函数实现 Win32 消息[TCM_DESELECTALL](/windows/win32/Controls/tcm-deselectall)的行为，如 Windows SDK 中所述。
 
 ##  <a name="drawitem"></a>  CTabCtrl::DrawItem
 
-由框架在所有者描述选项卡控件更改的可视方面时调用。
+当所有者描述的选项卡控件的可视方位更改时，由框架调用。
 
 ```
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
@@ -337,19 +337,19 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>参数
 
 *lpDrawItemStruct*<br/>
-一个指向[DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct)结构描述要绘制的项。
+指向[DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct)结构的指针，该结构描述要绘制的项。
 
 ### <a name="remarks"></a>备注
 
-`itemAction`的成员`DRAWITEMSTRUCT`结构定义要执行的绘制操作。
+`DRAWITEMSTRUCT`结构的成员定义要执行的绘图操作。 `itemAction`
 
-默认情况下，此成员函数没有任何影响。 重写此成员函数以实现绘制所有者描述的`CTabCtrl`对象。
+默认情况下，此成员函数不执行任何操作。 重写此成员函数以实现所有者描述`CTabCtrl`对象的绘制。
 
-应用程序应还原所有图形设备接口 (GDI) 对象的显示上下文中提供选定*lpDrawItemStruct*之前此成员函数将终止。
+此成员函数终止之前，应用程序应还原为*lpDrawItemStruct*中提供的显示上下文选择的所有图形设备接口（GDI）对象。
 
-##  <a name="getcurfocus"></a>  CTabCtrl::GetCurFocus
+##  <a name="getcurfocus"></a>CTabCtrl：： GetCurFocus
 
-检索当前具有焦点的选项卡索引。
+检索具有当前焦点的选项卡的索引。
 
 ```
 int GetCurFocus() const;
@@ -359,9 +359,9 @@ int GetCurFocus() const;
 
 具有当前焦点的选项卡的从零开始的索引。
 
-##  <a name="getcursel"></a>  CTabCtrl::GetCurSel
+##  <a name="getcursel"></a>CTabCtrl：： GetCurSel
 
-检索在选项卡控件中当前所选的选项卡。
+检索选项卡控件中当前选定的选项卡。
 
 ```
 int GetCurSel() const;
@@ -369,11 +369,11 @@ int GetCurSel() const;
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则所选的选项卡或-1，如果不选择任何选项卡的从零开始的索引。
+如果成功，则为所选选项卡的从零开始的索引; 如果未选择任何选项卡，则为-1。
 
-##  <a name="getextendedstyle"></a>  CTabCtrl::GetExtendedStyle
+##  <a name="getextendedstyle"></a>CTabCtrl：： GetExtendedStyle
 
-检索当前正在使用的选项卡控件的扩展的样式。
+检索当前用于选项卡控件的扩展样式。
 
 ```
 DWORD GetExtendedStyle();
@@ -381,11 +381,11 @@ DWORD GetExtendedStyle();
 
 ### <a name="return-value"></a>返回值
 
-表示当前正在使用的选项卡控件的扩展的样式。 此值是的组合[选项卡控件扩展样式](/windows/desktop/Controls/tab-control-extended-styles)，如 Windows SDK 中所述。
+表示选项卡控件当前使用的扩展样式。 此值是[选项卡控件扩展样式](/windows/win32/Controls/tab-control-extended-styles)的组合，如 Windows SDK 中所述。
 
 ### <a name="remarks"></a>备注
 
-此成员函数可实现 Win32 消息的行为[TCM_GETEXTENDEDSTYLE](/windows/desktop/Controls/tcm-getextendedstyle)，如 Windows SDK 中所述。
+此成员函数实现 Win32 消息[TCM_GETEXTENDEDSTYLE](/windows/win32/Controls/tcm-getextendedstyle)的行为，如 Windows SDK 中所述。
 
 ##  <a name="getimagelist"></a>  CTabCtrl::GetImageList
 
@@ -397,11 +397,11 @@ CImageList* GetImageList() const;
 
 ### <a name="return-value"></a>返回值
 
-如果成功，指向选项卡的图像列表的控件;否则，为 NULL。
+如果成功，则返回指向选项卡控件的图像列表的指针;否则为 NULL。
 
-##  <a name="getitem"></a>  CTabCtrl::GetItem
+##  <a name="getitem"></a>CTabCtrl：： GetItem
 
-检索的选项卡中选项卡控件有关的信息。
+检索有关选项卡控件中的选项卡的信息。
 
 ```
 BOOL GetItem(int nItem,   TCITEM* pTabCtrlItem) const;
@@ -410,54 +410,54 @@ BOOL GetItem(int nItem,   TCITEM* pTabCtrlItem) const;
 ### <a name="parameters"></a>参数
 
 *nItem*<br/>
-该选项卡的从零开始的索引。
+选项卡的从零开始的索引。
 
 *pTabCtrlItem*<br/>
-指向[TCITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtcitema)结构，用于指定要检索的信息。 此外用于接收选项卡的信息。此结构用于`InsertItem`， `GetItem`，和`SetItem`成员函数。
+指向[TCITEM](/windows/win32/api/commctrl/ns-commctrl-tcitemw)结构的指针，该结构用于指定要检索的信息。 还用于接收有关选项卡的信息。此结构用于`InsertItem`、 `GetItem`和`SetItem`成员函数。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则返回 TRUEFALSE 否则为。
+如果成功，则返回 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-发送消息，`mask`成员指定要返回的属性。 如果`mask`成员指定 TCIF_TEXT 值`pszText`成员必须包含接收项文本的缓冲区的地址和`cchTextMax`成员必须指定缓冲区的大小。
+发送消息时，该`mask`成员指定要返回的属性。 如果成员指定 TCIF_TEXT 值，则`pszText`成员必须包含接收项文本的缓冲区的地址，并且`cchTextMax`成员必须指定缓冲区的大小。 `mask`
 
 - `mask`
 
-   值，该值指定该`TCITEM`结构要检索或设置成员。 此成员可以是零，也可以是以下值的组合：
+   指定要检索`TCITEM`或设置的结构成员的值。 此成员可以为零或以下值的组合：
 
-   - TCIF_TEXT`pszText`成员是否有效。
+   - `pszText` TCIF_TEXT 成员有效。
 
-   - TCIF_IMAGE`iImage`成员是否有效。
+   - `iImage` TCIF_IMAGE 成员有效。
 
-   - TCIF_PARAM`lParam`成员是否有效。
+   - `lParam` TCIF_PARAM 成员有效。
 
-   - TCIF_RTLREADING 文本的`pszText`希伯来语或阿拉伯语系统上使用从右到左的阅读顺序显示。
+   - TCIF_RTLREADING 在希伯来语`pszText`或阿拉伯语系统上使用从右到左的阅读顺序显示的文本。
 
-   - TCIF_STATE`dwState`成员是否有效。
+   - `dwState` TCIF_STATE 成员有效。
 
 - `pszText`
 
-   如果结构包含一个选项卡有关的信息包含在选项卡文本的以 null 结尾的字符串指针。如果结构接收的信息，则此成员指定接收的选项卡文本的缓冲区的地址。
+   指向以 null 结尾的字符串的指针，如果该结构包含有关选项卡的信息，则该字符串包含选项卡文本。如果结构正在接收信息，则此成员指定接收选项卡文本的缓冲区的地址。
 
 - `cchTextMax`
 
-   指向缓冲区的大小`pszText`。 如果结构未接收信息，则忽略此成员。
+   所指向`pszText`的缓冲区的大小。 如果结构未接收信息，则忽略此成员。
 
-- `iImage` 如果没有图像为选项卡中选项卡控件的图像列表中，或-1 的索引。
+- `iImage`在选项卡控件的图像列表中编制索引，或者，如果选项卡没有图像，则为-1。
 
 - `lParam`
 
-   与选项卡关联的应用程序定义的数据。如果有多个四个字节的每个选项卡应用程序定义的数据，应用程序必须定义一个结构，并使用它而不是`TCITEM`结构。 应用程序定义的结构的第一个成员必须是[TCITEMHEADER](/windows/desktop/api/commctrl/ns-commctrl-tagtcitemheadera)结构。 `TCITEMHEADER`结构是否与相同`TCITEM`结构，但如果没有`lParam`成员。 您的结构的大小和的大小之间的区别`TCITEMHEADER`结构应等于每个选项卡的额外字节数。
+   与选项卡关联的应用程序定义数据。如果每个选项卡的应用程序定义的数据超过四个字节，应用程序必须定义一个结构，并使用它而`TCITEM`不是结构。 应用程序定义的结构的第一个成员必须是[TCITEMHEADER](/windows/win32/api/commctrl/ns-commctrl-tcitemheaderw)结构。 结构与`TCITEM`结构完全相同，但不包含成员。`lParam` `TCITEMHEADER` 结构大小与`TCITEMHEADER`结构大小之间的差异应该等于每个选项卡的额外字节数。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFC_CTabCtrl#4](../../mfc/reference/codesnippet/cpp/ctabctrl-class_4.cpp)]
 
-##  <a name="getitemcount"></a>  CTabCtrl::GetItemCount
+##  <a name="getitemcount"></a>CTabCtrl：： GetItemCount
 
-检索在选项卡控件中的选项卡的数目。
+检索选项卡控件中选项卡的数目。
 
 ```
 int GetItemCount() const;
@@ -465,15 +465,15 @@ int GetItemCount() const;
 
 ### <a name="return-value"></a>返回值
 
-选项卡控件中的项目数。
+选项卡控件中的项数。
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol)。
+  请参阅[CPropertySheet：： GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol)的示例。
 
-##  <a name="getitemrect"></a>  CTabCtrl::GetItemRect
+##  <a name="getitemrect"></a>CTabCtrl：： GetItemRect
 
-检索指定的选项卡中选项卡控件的边框。
+检索选项卡控件中的指定选项卡的边框。
 
 ```
 BOOL GetItemRect(int nItem,   LPRECT lpRect) const;
@@ -482,10 +482,10 @@ BOOL GetItemRect(int nItem,   LPRECT lpRect) const;
 ### <a name="parameters"></a>参数
 
 *nItem*<br/>
-该选项卡项的从零开始的索引。
+选项卡项的从零开始的索引。
 
 *lpRect*<br/>
-指向[RECT](/previous-versions/dd162897\(v=vs.85\))结构，它接收的边框的选项卡。这些坐标使用视区的当前映射模式。
+一个指针，指向用于接收该选项卡的边框的[RECT](/previous-versions/dd162897\(v=vs.85\))结构。这些坐标使用视区的当前映射模式。
 
 ### <a name="return-value"></a>返回值
 
@@ -493,11 +493,11 @@ BOOL GetItemRect(int nItem,   LPRECT lpRect) const;
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol)。
+  请参阅[CPropertySheet：： GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol)的示例。
 
 ##  <a name="getitemstate"></a>  CTabCtrl::GetItemState
 
-检索由标识的选项卡控件项的状态*nItem*。
+检索由*nItem*标识的选项卡控件项的状态。
 
 ```
 DWORD GetItemState(
@@ -508,27 +508,27 @@ DWORD GetItemState(
 ### <a name="parameters"></a>参数
 
 *nItem*<br/>
-要为其检索状态信息项的从零开始的索引号。
+要为其检索状态信息的项的从零开始的索引号。
 
 *dwMask*<br/>
-指定用于返回的项的状态标志的掩码。 值的列表，请参阅掩码隶属[TCITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtcitema)结构，如 Windows SDK 中所述。
+指定要返回的项的状态标志的掩码。 有关值的列表，请参阅[TCITEM](/windows/win32/api/commctrl/ns-commctrl-tcitemw)结构的 mask 成员，如 Windows SDK 中所述。
 
 ### <a name="return-value"></a>返回值
 
-对接收的状态信息的 DWORD 值的引用。 可以是以下值之一：
+对接收状态信息的 DWORD 值的引用。 可以是以下值之一：
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
-|TCIS_BUTTONPRESSED|选择该选项卡控件项。|
-|TCIS_HIGHLIGHTED|突出显示该选项卡控件项，并使用当前突出显示颜色绘制选项卡和文本。 在使用突出显示颜色，这将是 true 的内插，不是抖色的颜色。|
+|TCIS_BUTTONPRESSED|选择 "选项卡控件" 项。|
+|TCIS_HIGHLIGHTED|选项卡控件项将突出显示，并使用当前突出显示颜色绘制选项卡和文本。 使用突出显示颜色时，这将是真正的插值，而不是抖动颜色。|
 
 ### <a name="remarks"></a>备注
 
-通过指定项的状态`dwState`的成员`TCITEM`结构。
+项的状态由`dwState` `TCITEM`结构的成员指定。
 
-##  <a name="getrowcount"></a>  CTabCtrl::GetRowCount
+##  <a name="getrowcount"></a>CTabCtrl：： GetRowCount
 
-检索当前选项卡控件中的行数。
+检索选项卡控件中的当前行数。
 
 ```
 int GetRowCount() const;
@@ -536,11 +536,11 @@ int GetRowCount() const;
 
 ### <a name="return-value"></a>返回值
 
-选项卡控件中的选项卡的行数。
+选项卡控件中选项卡的行数。
 
 ### <a name="remarks"></a>备注
 
-仅具有 TCS_MULTILINE 样式的选项卡控件可以具有多个行的选项卡。
+只有具有 TCS_MULTILINE 样式的选项卡控件才能有多行选项卡。
 
 ##  <a name="gettooltips"></a>  CTabCtrl::GetToolTips
 
@@ -552,13 +552,13 @@ CToolTipCtrl* GetToolTips() const;
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则将工具提示控件的句柄否则为，为 NULL。
+如果成功，则为工具提示控件的句柄;否则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-如果它具有 TCS_TOOLTIPS 样式，选项卡控件创建工具提示控件。 您还可以将工具提示控件通过使用分配给选项卡控件`SetToolTips`成员函数。
+如果选项卡控件具有 TCS_TOOLTIPS 样式，它将创建一个工具提示控件。 还可以使用`SetToolTips`成员函数向选项卡控件分配工具提示控件。
 
-##  <a name="highlightitem"></a>  CTabCtrl::HighlightItem
+##  <a name="highlightitem"></a>CTabCtrl：： HighlightItem
 
 设置选项卡项的突出显示状态。
 
@@ -569,10 +569,10 @@ BOOL HighlightItem(int idItem,   BOOL fHighlight = TRUE);
 ### <a name="parameters"></a>参数
 
 *idItem*<br/>
-选项卡控件项的从零开始索引。
+选项卡控件项的从零开始的索引。
 
 *fHighlight*<br/>
-值，该值指定要设置的突出显示状态。 如果此值为 TRUE，选项卡会突出显示;如果为 FALSE，选项卡设置为其默认状态。
+指定要设置的突出显示状态的值。 如果此值为 TRUE，则突出显示该选项卡;如果为 FALSE，则选项卡将设置为其默认状态。
 
 ### <a name="return-value"></a>返回值
 
@@ -580,11 +580,11 @@ BOOL HighlightItem(int idItem,   BOOL fHighlight = TRUE);
 
 ### <a name="remarks"></a>备注
 
-此成员函数可实现的 Win32 消息[TCM_HIGHLIGHTITEM](/windows/desktop/Controls/tcm-highlightitem)，如 Windows SDK 中所述。
+此成员函数实现 Win32 消息[TCM_HIGHLIGHTITEM](/windows/win32/Controls/tcm-highlightitem)，如 Windows SDK 中所述。
 
-##  <a name="hittest"></a>  CTabCtrl::HitTest
+##  <a name="hittest"></a>CTabCtrl：： System.windows.media.visualtreehelper.hittest
 
-确定哪些选项卡上，如果有，为指定的屏幕位置。
+确定哪个选项卡（如果有）位于指定的屏幕位置。
 
 ```
 int HitTest(TCHITTESTINFO* pHitTestInfo) const;
@@ -593,15 +593,15 @@ int HitTest(TCHITTESTINFO* pHitTestInfo) const;
 ### <a name="parameters"></a>参数
 
 *pHitTestInfo*<br/>
-指向[TCHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtchittestinfo)结构，如所述在 Windows SDK 中，指定要测试的屏幕位置。
+指向[TCHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-tchittestinfo)结构的指针，如 Windows SDK 中所述，它指定要测试的屏幕位置。
 
 ### <a name="return-value"></a>返回值
 
-如果没有选项卡在指定的位置，则返回选项卡或 1 的从零开始的索引。
+返回选项卡的从零开始的索引; 如果在指定位置没有选项卡，则返回-1。
 
 ##  <a name="insertitem"></a>  CTabCtrl::InsertItem
 
-在现有选项卡控件中插入一个新选项卡。
+在现有选项卡控件中插入新选项卡。
 
 ```
 LONG InsertItem(
@@ -637,42 +637,42 @@ LONG InsertItem(
 ### <a name="parameters"></a>参数
 
 *nItem*<br/>
-新选项卡的从零开始索引。
+新选项卡的从零开始的索引。
 
 *pTabCtrlItem*<br/>
-指向[TCITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtcitema)结构，它指定该选项卡的属性。
+指向[TCITEM](/windows/win32/api/commctrl/ns-commctrl-tcitemw)结构的指针，该结构指定选项卡的属性。
 
 *lpszItem*<br/>
-以 null 结尾的字符串，包含选项卡的文本的地址。
+以 null 结尾的包含选项卡文本的字符串的地址。
 
 *nImage*<br/>
-要插入从图像列表的图像的从零开始的索引。
+要从图像列表插入的图像的从零开始的索引。
 
 *nMask*<br/>
-指定哪些`TCITEM`结构属性设置。 可以是零个或以下值的组合：
+指定要`TCITEM`设置的结构特性。 可以为零或以下值的组合：
 
-- TCIF_TEXT`pszText`成员是否有效。
+- `pszText` TCIF_TEXT 成员有效。
 
-- TCIF_IMAGE`iImage`成员是否有效。
+- `iImage` TCIF_IMAGE 成员有效。
 
-- TCIF_PARAM *lParam*成员是否有效。
+- TCIF_PARAM *lParam*成员有效。
 
-- TCIF_RTLREADING 文本的`pszText`希伯来语或阿拉伯语系统上使用从右到左的阅读顺序显示。
+- TCIF_RTLREADING 在希伯来语`pszText`或阿拉伯语系统上使用从右到左的阅读顺序显示的文本。
 
-- TCIF_STATE *dwState*成员是否有效。
+- TCIF_STATE *dwState*成员有效。
 
 *lParam*<br/>
-与选项卡关联的应用程序定义的数据。
+与选项卡关联的应用程序定义数据。
 
 *dwState*<br/>
-指定的项的状态的值。 有关详细信息，请参阅[TCITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtcitema) Windows SDK 中。
+指定项的状态值。 有关详细信息，请参阅 Windows SDK 中的[TCITEM](/windows/win32/api/commctrl/ns-commctrl-tcitemw) 。
 
 *dwStateMask*<br/>
-指定要设置哪些状态。 有关详细信息，请参阅[TCITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtcitema) Windows SDK 中。
+指定要设置的状态。 有关详细信息，请参阅 Windows SDK 中的[TCITEM](/windows/win32/api/commctrl/ns-commctrl-tcitemw) 。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则该新选项卡的从零开始的索引否则为-1。
+如果成功，则为新选项卡的从零开始的索引;否则为-1。
 
 ### <a name="example"></a>示例
 
@@ -680,7 +680,7 @@ LONG InsertItem(
 
 ##  <a name="removeimage"></a>  CTabCtrl::RemoveImage
 
-从选项卡控件的图像列表中删除指定的图像。
+从选项卡控件的图像列表中移除指定的图像。
 
 ```
 void RemoveImage(int nImage);
@@ -693,11 +693,11 @@ void RemoveImage(int nImage);
 
 ### <a name="remarks"></a>备注
 
-选项卡控件更新每个选项卡的图像索引，以便每个选项卡仍与同一个映像相关联。
+选项卡控件将更新每个选项卡的图像索引，以便每个选项卡与同一个图像保持关联。
 
-##  <a name="setcurfocus"></a>  CTabCtrl::SetCurFocus
+##  <a name="setcurfocus"></a>CTabCtrl：： SetCurFocus
 
-将焦点设置到指定的选项卡中选项卡控件。
+将焦点设置到选项卡控件中的指定选项卡。
 
 ```
 void SetCurFocus(int nItem);
@@ -706,15 +706,15 @@ void SetCurFocus(int nItem);
 ### <a name="parameters"></a>参数
 
 *nItem*<br/>
-指定的索引获得焦点的选项卡。
+指定获取焦点的选项卡的索引。
 
 ### <a name="remarks"></a>备注
 
-此成员函数可实现 Win32 消息的行为[TCM_SETCURFOCUS](/windows/desktop/Controls/tcm-setcurfocus)，如 Windows SDK 中所述。
+此成员函数实现 Win32 消息[TCM_SETCURFOCUS](/windows/win32/Controls/tcm-setcurfocus)的行为，如 Windows SDK 中所述。
 
 ##  <a name="setcursel"></a>  CTabCtrl::SetCurSel
 
-在选项卡控件中选择一个选项卡。
+选择选项卡控件中的选项卡。
 
 ```
 int SetCurSel(int nItem);
@@ -727,15 +727,15 @@ int SetCurSel(int nItem);
 
 ### <a name="return-value"></a>返回值
 
-从零开始的索引的以前选择的选项卡，如果成功，否则为-1。
+如果成功，则为之前选择的选项卡的从零开始的索引; 否则为-1。
 
 ### <a name="remarks"></a>备注
 
-选项卡控件不发送 TCN_SELCHANGING 或 TCN_SELCHANGE 通知消息时使用此函数选择一个选项卡。 使用 WM_NOTIFY，当用户单击或使用键盘更改选项卡时，发送这些通知。
+使用此函数选择选项卡时，选项卡控件不发送 TCN_SELCHANGING 或 TCN_SELCHANGE 通知消息。 当用户单击或使用键盘更改选项卡时，将使用 WM_NOTIFY 发送这些通知。
 
-##  <a name="setextendedstyle"></a>  CTabCtrl::SetExtendedStyle
+##  <a name="setextendedstyle"></a>CTabCtrl：： SetExtendedStyle
 
-设置选项卡控件的扩展的样式。
+设置选项卡控件的扩展样式。
 
 ```
 DWORD SetExtendedStyle(DWORD dwNewStyle,   DWORD dwExMask = 0);
@@ -744,22 +744,22 @@ DWORD SetExtendedStyle(DWORD dwNewStyle,   DWORD dwExMask = 0);
 ### <a name="parameters"></a>参数
 
 *dwNewStyle*<br/>
-值，该值指定的选项卡组合控制扩展的样式。
+指定选项卡控件扩展样式组合的值。
 
 *dwExMask*<br/>
-DWORD 值，该值指示在哪种样式*dwNewStyle*会受到影响。 中的扩展的样式*dwExMask*将会更改。 是，将保持所有其他样式。 如果此参数为零，则所有中的样式*dwNewStyle*会受到影响。
+一个 DWORD 值，指示要对*dwNewStyle*中的哪些样式产生影响。 仅更改*dwExMask*中的扩展样式。 所有其他样式将按原样维护。 如果此参数为零，则将影响*dwNewStyle*中的所有样式。
 
 ### <a name="return-value"></a>返回值
 
-包含以前的 DWORD 值[选项卡控件扩展样式](/windows/desktop/Controls/tab-control-extended-styles)，如 Windows SDK 中所述。
+一个 DWORD 值，其中包含上一个[选项卡控件扩展样式](/windows/win32/Controls/tab-control-extended-styles)，如 Windows SDK 中所述。
 
 ### <a name="return-value"></a>返回值
 
-此成员函数可实现 Win32 消息的行为[TCM_SETEXTENDEDSTYLE](/windows/desktop/Controls/tcm-setextendedstyle)，如 Windows SDK 中所述。
+此成员函数实现 Win32 消息[TCM_SETEXTENDEDSTYLE](/windows/win32/Controls/tcm-setextendedstyle)的行为，如 Windows SDK 中所述。
 
 ##  <a name="setimagelist"></a>  CTabCtrl::SetImageList
 
-将图像列表分配到选项卡控件。
+将图像列表分配给选项卡控件。
 
 ```
 CImageList* SetImageList(CImageList* pImageList);
@@ -772,11 +772,11 @@ CImageList* SetImageList(CImageList* pImageList);
 
 ### <a name="return-value"></a>返回值
 
-如果没有以前的映像列表，请为上一图像列表或 NULL 返回的指针。
+返回指向上一个图像列表的指针; 如果没有上一个图像列表，则返回 NULL。
 
 ##  <a name="setitem"></a>  CTabCtrl::SetItem
 
-设置部分或全部选项卡的属性。
+设置选项卡的部分或全部属性。
 
 ```
 BOOL SetItem(int nItem,   TCITEM* pTabCtrlItem);
@@ -788,7 +788,7 @@ BOOL SetItem(int nItem,   TCITEM* pTabCtrlItem);
 项的从零开始的索引。
 
 *pTabCtrlItem*<br/>
-指向[TCITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtcitema)结构，其中包含新的项属性。 `mask`成员指定要设置的属性。 如果`mask`成员指定 TCIF_TEXT 值`pszText`成员是以 null 结尾的字符串的地址和`cchTextMax`成员将被忽略。
+指向[TCITEM](/windows/win32/api/commctrl/ns-commctrl-tcitemw)结构的指针，该结构包含新的项特性。 `mask`成员指定要设置的特性。 如果成员指定 TCIF_TEXT 值，则该`pszText`成员为以 null 结尾的字符串的地址，并且该`cchTextMax`成员将被忽略。 `mask`
 
 ### <a name="return-value"></a>返回值
 
@@ -796,11 +796,11 @@ BOOL SetItem(int nItem,   TCITEM* pTabCtrlItem);
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[GetItem](#getitem)。
+  请参阅[GetItem](#getitem)的示例。
 
-##  <a name="setitemextra"></a>  CTabCtrl::SetItemExtra
+##  <a name="setitemextra"></a>CTabCtrl：： SetItemExtra
 
-设置每个选项卡为选项卡控件中的应用程序定义数据保留的字节数。
+设置选项卡控件中为应用程序定义的数据保留的每个选项卡的字节数。
 
 ```
 BOOL SetItemExtra(int nBytes);
@@ -809,7 +809,7 @@ BOOL SetItemExtra(int nBytes);
 ### <a name="parameters"></a>参数
 
 *nBytes*<br/>
-若要设置的额外字节数。
+要设置的额外字节数。
 
 ### <a name="return-value"></a>返回值
 
@@ -817,7 +817,7 @@ BOOL SetItemExtra(int nBytes);
 
 ### <a name="remarks"></a>备注
 
-此成员函数可实现 Win32 消息的行为[TCM_SETITEMEXTRA](/windows/desktop/Controls/tcm-setitemextra)，如 Windows SDK 中所述。
+此成员函数实现 Win32 消息[TCM_SETITEMEXTRA](/windows/win32/Controls/tcm-setitemextra)的行为，如 Windows SDK 中所述。
 
 ##  <a name="setitemsize"></a>  CTabCtrl::SetItemSize
 
@@ -838,7 +838,7 @@ CSize SetItemSize(CSize size);
 
 ##  <a name="setitemstate"></a>  CTabCtrl::SetItemState
 
-设置由标识的选项卡控件项的状态*nItem*。
+设置由*nItem*标识的选项卡控件项的状态。
 
 ```
 BOOL SetItemState(
@@ -850,18 +850,18 @@ BOOL SetItemState(
 ### <a name="parameters"></a>参数
 
 *nItem*<br/>
-为其设置状态信息项的从零开始的索引号。
+要为其设置状态信息的项的从零开始的索引号。
 
 *dwMask*<br/>
-指定的项的状态标志设置的掩码。 值的列表，请参阅掩码隶属[TCITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtcitema)结构，如 Windows SDK 中所述。
+指定要设置的项的状态标志的掩码。 有关值的列表，请参阅[TCITEM](/windows/win32/api/commctrl/ns-commctrl-tcitemw)结构的 mask 成员，如 Windows SDK 中所述。
 
 *dwState*<br/>
-对包含的状态信息的 DWORD 值的引用。 可以是以下值之一：
+对包含状态信息的 DWORD 值的引用。 可以是以下值之一：
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
-|TCIS_BUTTONPRESSED|选择该选项卡控件项。|
-|TCIS_HIGHLIGHTED|突出显示该选项卡控件项，并使用当前突出显示颜色绘制选项卡和文本。 在使用突出显示颜色，这将是 true 的内插，不是抖色的颜色。|
+|TCIS_BUTTONPRESSED|选择 "选项卡控件" 项。|
+|TCIS_HIGHLIGHTED|选项卡控件项将突出显示，并使用当前突出显示颜色绘制选项卡和文本。 使用突出显示颜色时，这将是真正的插值，而不是抖动颜色。|
 
 ### <a name="return-value"></a>返回值
 
@@ -878,19 +878,19 @@ int SetMinTabWidth(int cx);
 ### <a name="parameters"></a>参数
 
 *cx*<br/>
-若要设置的选项卡控件项的最小宽度。 如果此参数设置为-1，该控件将使用默认选项卡宽度。
+为选项卡控件项设置的最小宽度。 如果将此参数设置为-1，则控件将使用默认选项卡宽度。
 
 ### <a name="return-value"></a>返回值
 
-以前的最小的选项卡宽度。
+上一个最小制表符宽度。
 
 ### <a name="return-value"></a>返回值
 
-此成员函数可实现 Win32 消息的行为[TCM_SETMINTABWIDTH](/windows/desktop/Controls/tcm-setmintabwidth)，如 Windows SDK 中所述。
+此成员函数实现 Win32 消息[TCM_SETMINTABWIDTH](/windows/win32/Controls/tcm-setmintabwidth)的行为，如 Windows SDK 中所述。
 
-##  <a name="setpadding"></a>  CTabCtrl::SetPadding
+##  <a name="setpadding"></a>CTabCtrl：： SetPadding
 
-设置 （填充） 每个选项卡图标和选项卡控件中的标签周围的空间量。
+设置选项卡控件中每个选项卡的图标和标签周围的空间量（填充）。
 
 ```
 void SetPadding(CSize size);
@@ -899,7 +899,7 @@ void SetPadding(CSize size);
 ### <a name="parameters"></a>参数
 
 *size*<br/>
-设置 （填充） 每个选项卡图标和选项卡控件中的标签周围的空间量。
+设置选项卡控件中每个选项卡的图标和标签周围的空间量（填充）。
 
 ##  <a name="settooltips"></a>  CTabCtrl::SetToolTips
 
@@ -916,11 +916,11 @@ void SetToolTips(CToolTipCtrl* pWndTip);
 
 ### <a name="remarks"></a>备注
 
-可以获取工具提示控件选项卡控件与相关联，从而调用`GetToolTips`。
+可以通过调用来`GetToolTips`获取与选项卡控件关联的工具提示控件。
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol)。
+  请参阅[CPropertySheet：： GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol)的示例。
 
 ## <a name="see-also"></a>请参阅
 

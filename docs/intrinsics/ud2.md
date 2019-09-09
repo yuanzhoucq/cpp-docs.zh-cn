@@ -1,20 +1,20 @@
 ---
 title: __ud2
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __ud2
 helpviewer_keywords:
 - UD2 instruction
 - __ud2 intrinsic
 ms.assetid: 0831cd5a-8b65-402e-bb57-11e1d5d7ffd2
-ms.openlocfilehash: a36ab5c25ac9138b2a4d6810cc2a339e534f1695
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5aa20804099af4d75dcc62a5e62ccc0d4a09566
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390173"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219753"
 ---
-# <a name="ud2"></a>__ud2
+# <a name="__ud2"></a>__ud2
 
 **Microsoft 专用**
 
@@ -22,15 +22,15 @@ ms.locfileid: "62390173"
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 void __ud2();
 ```
 
 ## <a name="remarks"></a>备注
 
-如果您执行未定义的指令，处理器将引发无效操作码异常。
+如果执行未定义的指令，处理器将引发无效的操作码异常。
 
-`__ud2`函数等同于`UD2`机器指令，并且仅在内核模式下可用。 有关详细信息，搜索文档中，"Intel 体系结构软件开发人员手册，卷 2:指令设置参考，"在[Intel Corporation](https://software.intel.com/articles/intel-sdm)站点。
+`__ud2`函数等效`UD2`于计算机指令，仅在内核模式下可用。 有关详细信息，请搜索文档 "Intel 体系结构软件开发人员手册，第2卷：说明集[参考 "。](https://software.intel.com/articles/intel-sdm)
 
 ## <a name="requirements"></a>要求
 
@@ -38,15 +38,15 @@ void __ud2();
 |---------------|------------------|
 |`__ud2`|x86、x64|
 
-**标头文件** \<intrin.h >
+**标头文件**\<intrin.h >
 
 **结束 Microsoft 专用**
 
 ## <a name="example"></a>示例
 
-以下示例将执行未定义的指令，会引发异常。 然后，异常处理程序从零到其中一个更改返回代码。
+下面的示例执行未定义的指令，这会引发异常。 然后，异常处理程序将返回代码从0更改为1。
 
-```
+```cpp
 // __ud2_intrinsic.cpp
 #include <stdio.h>
 #include <intrin.h>
