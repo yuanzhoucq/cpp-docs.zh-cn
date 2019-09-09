@@ -27,15 +27,15 @@ helpviewer_keywords:
 - _ASSERT_EXPR macro
 ms.assetid: e98fd2a6-7f5e-4aa8-8fe8-e93490deba36
 ms.openlocfilehash: d2d83c3afa8e22c1f75480fe2afefa8bf68be858
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598453"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740015"
 ---
-# <a name="assert-asserte-assertexpr-macros"></a>_ASSERT、_ASSERTE、_ASSERT_EXPR 宏
+# <a name="_assert-_asserte-_assert_expr-macros"></a>_ASSERT、_ASSERTE、_ASSERT_EXPR 宏
 
-计算表达式，并在结果为时生成调试报告**False** （仅限调试版本）。
+计算表达式，并在结果为**False**时生成调试报告（仅限调试版本）。
 
 ## <a name="syntax"></a>语法
 
@@ -48,7 +48,7 @@ _ASSERTE( booleanExpression );
 
 ### <a name="parameters"></a>参数
 
-*布尔表达式*<br/>
+*booleanExpression*<br/>
 计算结果不为零 (true) 或为零 (false) 的标量表达式（包括指针表达式）。
 
 *message*<br/>
@@ -56,13 +56,13 @@ _ASSERTE( booleanExpression );
 
 ## <a name="remarks"></a>备注
 
-**_ASSERT_EXPR**， **_ASSERT**并 **_ASSERTE**宏提供简洁明了的机制，用于在调试过程中检查假设提供一个应用程序。 它们非常灵活，因为无需包含在 `#ifdef` 语句中，可防止在零售版本的应用程序中调用它们。 这种灵活性使用 [_DEBUG](../../c-runtime-library/debug.md) 宏来实现。 **_ASSERT_EXPR**， **_ASSERT**并 **_ASSERTE**时，才可 **_DEBUG**在编译时定义。 当 **_DEBUG**是未定义，对这些宏调用删除在预处理期间。
+**_ASSERT_EXPR**、 **_ASSERT**和 **_ASSERTE**宏为应用程序提供了一个干净且简单的机制，用于在调试过程中检查假设。 它们非常灵活，因为无需包含在 `#ifdef` 语句中，可防止在零售版本的应用程序中调用它们。 这种灵活性使用 [_DEBUG](../../c-runtime-library/debug.md) 宏来实现。 仅当在编译时定义 **_debug**时， **_ASSERT_EXPR**、 **_ASSERT**和 **_ASSERTE**才可用。 未定义 **_debug**时，将在预处理过程中删除对这些宏的调用。
 
-**_ASSERT_EXPR**， **_ASSERT**并 **_ASSERTE**评估其*布尔表达式*参数，则结果为**false**(0)，它们会打印诊断消息并调用[_CrtDbgReportW](crtdbgreport-crtdbgreportw.md)生成调试报告。 **_ASSERT**宏会打印简单的诊断消息， **_ASSERTE**在消息中，包括失败的表达式的字符串表示形式并 **_ASSERT_EXPR**包括*消息*诊断消息中的字符串。 这些宏不执行任何操作时*布尔表达式*的计算结果为非零值。
+**_ASSERT_EXPR**、 **_ASSERT**和 **_ASSERTE**评估其*booleanExpression*参数，在结果为**false** （0）时，它们会打印诊断消息并调用[_CrtDbgReportW](crtdbgreport-crtdbgreportw.md)以生成调试报告。 **_ASSERT**宏打印简单的诊断消息， **_ASSERTE**在消息中包含失败表达式的字符串表示形式，并且 **_ASSERT_EXPR**在诊断消息中包含*消息*字符串。 如果*booleanExpression*的计算结果为非零值，则这些宏不执行任何操作
 
-**_ASSERT_EXPR**， **_ASSERT**并 **_ASSERTE**调用 **_CrtDbgReportW**，这会使所有输出都采用宽字符。 **_ASSERTE**中正确打印 Unicode 字符*布尔表达式*并 **_ASSERT_EXPR**中打印 Unicode 字符*消息*。
+**_ASSERT_EXPR**、 **_ASSERT**和 **_ASSERTE** invoke **_CrtDbgReportW**，这会使所有输出都采用宽字符。 **_ASSERTE**在*booleanExpression*中正确打印 Unicode 字符，而 **_ASSERT_EXPR**在*消息*中打印 unicode 字符。
 
-因为 **_ASSERTE**宏会指定失败的表达式，并 **_ASSERT_EXPR**允许在生成的报告指定一条消息，它们使用户能够确定此问题，而不引用应用程序源代码。 但是，缺点中存在的每个*消息*打印 **_ASSERT_EXPR**并评估每个表达式 **_ASSERTE**包括在输出 （调试版本）应用程序作为一个字符串常量的文件。 因此，如果大量的在调用 **_ASSERT_EXPR**或 **_ASSERTE**，这些表达式可以极大地增加输出文件的大小。
+由于 **_ASSERTE**宏指定了失败的表达式，而 **_ASSERT_EXPR**可让你在生成的报告中指定消息，因此，用户可以在不引用应用程序源代码的情况下识别问题。 但是，_ASSERT_EXPR 中存在的一个缺点是，每个由打印的*消息*和由 **_ASSERTE**计算的每个表达式都包含在应用程序的输出（调试版本）文件中，该文件是一个字符串常量。 因此，如果对 **_ASSERT_EXPR**或 **_ASSERTE**进行大量调用，则这些表达式可能会大大增加输出文件的大小。
 
 除非使用 [_CrtSetReportMode](crtsetreportmode.md) 和 [_CrtSetReportFile](crtsetreportfile.md) 函数另行指定，否则消息会出现在弹出对话框中，这等于设置以下内容：
 
@@ -70,25 +70,25 @@ _ASSERTE( booleanExpression );
 _CrtSetReportMode(CRT_ASSERT, _CRTDBG_MODE_WNDW);
 ````
 
-**_CrtDbgReportW**生成调试报告并确定其目标或目标，基于为定义文件或当前报告模式和模式 **_CRT_ASSERT**报告类型。 默认情况下，断言失败和错误会定向到调试消息窗口。 [_CrtSetReportMode](crtsetreportmode.md) 和 [_CrtSetReportFile](crtsetreportfile.md) 函数用于为每种报告类型定义目标。
+**_CrtDbgReportW**基于当前报表模式或为 **_CRT_ASSERT**报表类型定义的文件，生成调试报告并确定其目标。 默认情况下，断言失败和错误会定向到调试消息窗口。 [_CrtSetReportMode](crtsetreportmode.md) 和 [_CrtSetReportFile](crtsetreportfile.md) 函数用于为每种报告类型定义目标。
 
-当目标是调试消息窗口且用户单击**重试**按钮， **_CrtDbgReportW**返回 1，从而导致 **_ASSERT_EXPR**， **_断言**并 **_ASSERTE**宏启动调试器，前提是启用了实时 (JIT) 调试。
+当目标是调试消息窗口并且用户单击 "**重试**" 按钮时， **_CrtDbgReportW**返回1，导致 **_ASSERT_EXPR**、 **_ASSERT**和 **_ASSERTE**宏启动调试器，并提供已启用实时（JIT）调试。
 
 有关报告过程的详细信息，请参阅 [_CrtDbgReport、_CrtDbgReportW](crtdbgreport-crtdbgreportw.md) 函数。 有关解决断言失败以及将这些宏用作调试错误处理机制的详细信息，请参阅 [使用宏进行验证和报告](/visualstudio/debugger/macros-for-reporting)。
 
-除了 **_ASSERT**宏[断言](assert-macro-assert-wassert.md)宏可以用于验证程序逻辑。 此宏可在这些库的调试和发布版本中使用。 [_RPT、_RPTF](rpt-rptf-rptw-rptfw-macros.md) 调试宏还可用于生成调试报告，但它们不计算表达式。 **_RPT**宏生成一个简单的报表。 **_RPTF**宏生成的报告中包括在其中调用报告宏的源代码文件和行号。 提供了这些宏的宽字符版本 (**_RPTW**， **_RPTFW**)。 宽字符版本与窄字符版本相同，只不过宽字符字符串用于所有字符串参数和输出。
+除了 **_ASSERT**宏以外，还可以使用[ASSERT](assert-macro-assert-wassert.md)宏来验证程序逻辑。 此宏可在这些库的调试和发布版本中使用。 [_RPT、_RPTF](rpt-rptf-rptw-rptfw-macros.md) 调试宏还可用于生成调试报告，但它们不计算表达式。 **_RPT**宏生成一个简单的报表。 **_RPTF**宏包括在生成的报表中调用报表宏的源文件和行号。 提供了这些宏的宽字符版本（ **_RPTW**， **_RPTFW**）。 宽字符版本与窄字符版本相同，只不过宽字符字符串用于所有字符串参数和输出。
 
-尽管 **_ASSERT_EXPR**， **_ASSERT**并 **_ASSERTE**是宏并且可通过包括\<crtdbg.h >，该应用程序必须与调试链接C 运行时库的版本时 **_DEBUG**定义，因为这些宏调用其他运行时函数。
+尽管 **_ASSERT_EXPR**、 **_ASSERT**和 **_ASSERTE**是宏并且可通过包含\<crtdbg.h > 来使用，但是在定义 **_debug**时，应用程序必须与 C 运行时库的调试版本链接，因为这些宏调用其他运行时函数。
 
 ## <a name="requirements"></a>要求
 
 |宏|必需的标头|
 |-----------|---------------------|
-|**_ASSERT_EXPR**， **_ASSERT**， **_ASSERTE**|\<crtdbg.h>|
+|**_ASSERT_EXPR**、 **_ASSERT**、 **_ASSERTE**|\<crtdbg.h>|
 
 ## <a name="example"></a>示例
 
-在此程序中，在调用 **_ASSERT**并 **_ASSERTE**宏，以测试条件`string1 == string2`。 如果条件失败，则这些宏会打印诊断消息。 **_RPT**并 **_RPTF**宏的组中还会执行此程序中，作为一种替代方法**printf**函数。
+在此程序中，对 **_ASSERT**和 **_ASSERTE**宏进行调用以测试条件`string1 == string2`。 如果条件失败，则这些宏会打印诊断消息。 此程序中还会运用宏的 **_RPT**和 **_RPTF**组作为**printf**函数的替代项。
 
 ```C
 // crt_ASSERT_macro.c
