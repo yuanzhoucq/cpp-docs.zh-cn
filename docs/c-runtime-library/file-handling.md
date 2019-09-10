@@ -8,12 +8,12 @@ helpviewer_keywords:
 - files [C++], opening
 - files [C++], manipulating
 ms.assetid: 48119e2e-e94f-4602-b08b-b72440f731d8
-ms.openlocfilehash: e5e43fe2cfcdfe067833d02bda511e8c9cb944ad
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2a5c6ec3a70a85bf81f00b104d0c505677f609ac
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500101"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740058"
 ---
 # <a name="file-handling"></a>文件处理
 
@@ -82,7 +82,7 @@ C 运行时库将任何时候可以打开的文件数限制为 512。 试图打�
 
 - [CreatePipe](/windows/win32/api/namedpipeapi/nf-namedpipeapi-createpipe)
 
-- [CreateNamedPipe](/windows/win32/api/winbase/nf-winbase-createnamedpipew)
+- [CreateNamedPipe](/windows/win32/api/winbase/nf-winbase-createnamedpipea)
 
 ## <a name="see-also"></a>请参阅
 
