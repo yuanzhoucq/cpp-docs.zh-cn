@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing projects
 - projects [C++], testing
 ms.assetid: 88cdd377-c5c8-4201-889d-32f5653ebead
-ms.openlocfilehash: c170deef8bf76bdd223bde01794f8996dc77922d
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: e0422b4f862b5438a313e25dac421d591bbbb9a5
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400937"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273701"
 ---
 # <a name="walkthrough-testing-a-project-c"></a>演练：测试项目 (C++)
 
@@ -31,7 +31,7 @@ ms.locfileid: "67400937"
 
 1. 选择此代码行：
 
-   `Cardgame.solitaire(1);`
+   `Cardgame solitaire(1);`
 
 1. 要在该行上设置断点，请在菜单栏上选择“调试”   > “切换断点”  ，或选择 F9  键。 行的左侧出现一个红色圆圈，它表示已设置断点。 要删除断点，可再次选择菜单命令或 F9  键。
 
