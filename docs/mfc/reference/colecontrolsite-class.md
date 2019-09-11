@@ -639,7 +639,7 @@ virtual void AFX_CDECL InvokeHelper(
 
 ### <a name="remarks"></a>备注
 
-*PbParamInfo*参数指定传递到方法或属性的参数的类型。 参数的变量列表用 .。。语法声明中的。
+*PbParamInfo*参数指定传递到方法或属性的参数的类型。 参数的变量列表用 ...语法声明中的。
 
 此函数将参数转换为 VARIANTARG 值, 然后调用该`IDispatch::Invoke`控件上的方法。 如果 `IDispatch::Invoke` 调用失败，则此函数会引发异常。 如果返回`IDispatch::Invoke`的状态代码为`COleDispatchException` , `DISP_E_EXCEPTION`则此函数将引发对象, 否则将引发`COleException`。
 
