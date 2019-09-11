@@ -1,26 +1,26 @@
 ---
 title: C++ 的符合性改进
-ms.date: 06/14/2019
+ms.date: 08/30/2019
 description: Visual Studio 中的 Microsoft C++ 正朝着完全符合 C++20 语言标准的方向发展。
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 1652c7ab9a48de65b32123b34c3231a0b06a410a
-ms.sourcegitcommit: 0ad35b26e405bbde17dc0bd0141e72f78f0a38fb
+ms.openlocfilehash: aeaaab704706bee575e3ae44726522cd04c17433
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67194772"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222314"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Visual Studio 中的 C++ 符合性改进
 
 Microsoft C++ 在每个版本中进行了符合性改进和 bug 修复。 本文按主要版本然后次要版本列出了改进之处。 还按版本列出了主要 bug 修复。 若要直接跳转到特定版本的更改，请使用“本文中”  列表。
 
-::: moniker range=">=vs-2019"
+::: moniker range="vs-2019"
 
-## <a name="improvements_160"></a> Visual Studio 2019 RTW（版本 16.0）中的改进之处
+## <a name="improvements_160"></a>Visual Studio 2019 RTW（版本 16.0）中的符合性改进
 
-Visual Studio 2019 RTW 包含 Microsoft C++ 编译器 (MSVC) 的以下符合性改进、bug 修复和行为变更。
+Visual Studio 2019 RTW 包含 Microsoft C++ 编译器 (MSVC) 的以下符合性改进、bug 修复和行为变更
 
 **注意：** C++20 功能将在 `/std:c++latest` 模式下提供，直到编译器和 IntelliSense 的 C++20 实现完成。 届时，将推出 `/std:c++20` 编译器模式。
 
@@ -93,7 +93,7 @@ int main()
 }
 ```
 
-### <a name="reinterpretcast-from-an-overloaded-function"></a>来自重载函数的 `reinterpret_cast`
+### <a name="reinterpret_cast-from-an-overloaded-function"></a>来自重载函数的 `reinterpret_cast`
 
 `reinterpret_cast` 的参数不属于允许使用重载函数地址的上下文。 在 Visual Studio 2017 中编译以下代码时不会引发错误，但在 Visual Studio 2019 中，它会引发 *C2440: 无法从 “overloaded-function” 转换为 “fp”* ：
 
@@ -134,7 +134,7 @@ int main()
 
 若要避免该错误，请删除 `constexpr` 限定符，或将符合性模式更改为 `/std:c++17`。
 
-### <a name="stdcreatedirectory-failure-codes"></a>`std::create_directory` 失败代码
+### <a name="stdcreate_directory-failure-codes"></a>`std::create_directory` 失败代码
 
 根据 C++20 无条件地实现了 [P1164](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1164r1.pdf)。 这会更改 `std::create_directory` 来检查目标是否已经为故障目录。 之前，所有 ERROR_ALREADY_EXISTS 类型错误都会转换为成功但未创建目录的代码。
 
@@ -150,7 +150,7 @@ int main()
 
 [P0883“修复原子初始化”](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0883r1.pdf)将 `std::atomic` 更改为对包含的 T 进行值初始化，而不是默认初始化。 将 Clang/LLVM 与 Microsoft 标准库配合使用时，将启用此修复。 当前对 Microsoft C++ 编译器禁用此修复，以用作 `constexpr` 处理中 bug 的解决方法。
 
-### <a name="removecvref-and-removecvreft"></a>`remove_cvref` 和 `remove_cvref_t`
+### <a name="remove_cvref-and-remove_cvref_t"></a>`remove_cvref` 和 `remove_cvref_t`
 
 根据 [P0550](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0550r2.pdf) 实现了 `remove_cvref` 和 `remove_cvref_t` 类型特征。 这些类型特征可从类型移除引用性和 cv 限定，而无需将函数和数组衰减为指针（与 `std::decay` 和 `std::decay_t` 不同）。
 
@@ -162,9 +162,9 @@ int main()
 
 [C++20 P1008R1 - 禁止使用用户声明的构造函数进行聚合](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p1008r1.pdf)已完成。
 
-## <a name="improvements_161"></a>Visual Studio 2019 版本 16.1 中的改进
+## <a name="improvements_161"></a> 16.1 中的符合性改进
 
-### <a name="char8t"></a>char8_t
+### <a name="char8_t"></a>char8_t
 
 [P0482r6](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0482r6.html)。 C++20 增加了新的字符类型，可用于表示 UTF-8 代码单元。 C++20 中的 `u8` 字符串文本具有 `const char8_t[N]` 类型而不是 `const char[N]` 类型，这是之前的情况。 在 [N2231](http://www.open-std.org/jtc1/sc22/wg14/www/docs/n2231.htm) 中已针对 C 标准提出了类似的更改。 在 [P1423r0](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1423r0.html) 中给出了有关 `char8_t` 后向兼容性修正的建议。 如果指定 **/Zc:char8_t** 编译器选项，Microsoft C++ 编译器会在 Visual Studio 2019 版本 16.1 中添加对 `char8_t` 的支持。 将来，[/std:c++latest](../build/reference/std-specify-language-standard-version.md) 将支持它，其可通过 **/Zc:char8_t-** 还原为 C++17 行为。 为 IntelliSense 提供支持的 EDG 编译器尚不支持它，因此将看到虚假的仅限于 IntelliSense 的错误，这些错误不会影响实际编译。
 
@@ -175,7 +175,7 @@ const char* s = u8"Hello"; // C++17
 const char8_t* s = u8"Hello"; // C++20
 ```
 
-### <a name="stdtypeidentity-metafunction-and-stdidentity-function-object"></a>std::type_identity 元函数和  std::identity 函数对象
+### <a name="stdtype_identity-metafunction-and-stdidentity-function-object"></a>std::type_identity 元函数和  std::identity 函数对象
 
 [P0887R1 type_identity](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0887r1.pdf)。 弃用的 `std::identity` 类模板扩展已删除，并替换为 C++20 `std::type_identity` 元函数和 `std::identity` 函数对象。 两者仅在 [/std:c++latest](../build/reference/std-specify-language-standard-version.md) 下可用。
 
@@ -241,9 +241,156 @@ void f() {
 - `list` 和 `forward_list` 的 `remove()`、`remove_if()` 和 `unique()` 现在返回 `size_type`。
 - `shift_left()` 和 `shift_right()` 已添加到 \<algorithm> 中。
 
-## <a name="bug-fixes-and-behavior-changes-in-visual-studio-2019"></a>Visual Studio 2019 中的 bug 修复和行为变更
 
-### <a name="correct-diagnostics-for-basicstring-range-constructor"></a>basic_string 范围构造函数的正确诊断
+## <a name="improvements_162"></a> 16.2 中的符合性改进
+
+### <a name="noexcept-constexpr-functions"></a>noexcept constexpr 函数
+
+在常量表达式中使用时，Constexpr 函数默认不再被视为 `noexcept`。 此行为更改来自解决方法 [CWG 1351](http://www.open-std.org/jtc1/sc22/wg21/docs/cwg_defects.html#1351)，并已在 [/permissive-](../build/reference/permissive-standards-conformance.md) 中启用。 以下示例在 Visual Studio 2019 版本 16.1 和更早版本中编译，但在 Visual Studio 2019 版本 16.2 中生成 C2338：
+
+```cpp
+constexpr int f() { return 0; }
+
+int main() {
+    static_assert(noexcept(f()), "f should be noexcept"); // C2338 in 16.2
+}
+```
+
+要修复此错误，请将 `noexcept` 表达式添加到函数声明中：
+
+```cpp
+constexpr int f() noexcept { return 0; }
+
+int main() {
+    static_assert(noexcept(f()), "f should be noexcept");
+}
+```
+
+### <a name="binary-expressions-with-different-enum-types"></a>具有不同枚举类型的二进制表达式
+
+C++20 ([P1120R0](http://wg21.link/p1120r0)) 中已弃用以下功能：针对操作数（其中一个为枚举类型，另一个为其他枚举类型或浮点类型）应用常见算术转换。 在 Visual Studio 2019 版本 16.2 和更高版本中，以下代码在启用 [/std:c++latest](../build/reference/std-specify-language-standard-version.md) 编译器选项的情况下，生成级别 4 警告：
+
+```cpp
+enum E1 { a };
+enum E2 { b };
+int main() {
+    int i = a | b; // warning C5054: operator '|': deprecated between enumerations of different types
+}
+```
+
+要避免出现此警告，使用 [static_cast](../cpp/static-cast-operator.md) 转换第二个操作数：
+
+```cpp
+enum E1 { a };
+enum E2 { b };
+int main() {
+  int i = a | static_cast<int>(b);
+}
+```
+
+### <a name="binary-expressions-with-enumeration-and-floating-point-types"></a>具有枚举和浮点类型的二进制表达式
+
+C++20 中已弃用以下功能：针对操作数（其中一个为枚举类型，另一个为其他枚举类型或浮点类型）应用常见算术转换 ([P1120R0](http://wg21.link/p1120r0))。 换言之，在启用 [/std:c++latest](../build/reference/std-specify-language-standard-version.md) 编译器选项的情况下，使用枚举和浮点类型之间的二进制运算现在会发出警告：
+
+```cpp
+enum E1 { a };
+int main() {
+  double i = a * 1.1;
+}
+```
+
+要避免出现此警告，使用 [static_cast](../cpp/static-cast-operator.md) 转换第二个操作数：
+
+```cpp
+enum E1 { a };
+int main() {
+   double i = static_cast<int>(a) * 1.1;
+}
+```
+
+### <a name="equality-and-relational-comparisons-of-arrays"></a>数组的相等性和关系比较
+
+C++20 中已弃用数组类型的两个操作数之间的相等性和关系比较 ([P1120R0](http://wg21.link/p1120r0))。 换句话说，两个数组之间的比较运算（与级别和范围相似性无关）现在会引发警告。 从 Visual Studio 2019 版本 16.2 开始，以下代码生成 C5056：如果启用 [/std:c++latest](../build/reference/std-specify-language-standard-version.md) 编译器选项，数组类型会弃用运算符“==”  ：
+
+```cpp
+int main() {
+    int a[] = { 1, 2, 3 };
+    int b[] = { 1, 2, 3 };
+    if (a == b) { return 1; }
+}
+```
+
+要避免出现此警告，可以比较第一个元素的地址：
+
+```cpp
+int main() {
+    int a[] = { 1, 2, 3 };
+    int b[] = { 1, 2, 3 };
+    if (&a[0] == &b[0]) { return 1; }
+}
+```
+
+要确定两个数组内容是否相等，可以使用 [std::equal](../standard-library/algorithm-functions.md#equal) 函数：
+
+```cpp
+std::equal(std::begin(a), std::end(a), std::begin(b), std::end(b));
+```
+
+### <a name="effect-of-defining-spaceship-operator-on--and-"></a>对 == 和 != 定义宇宙飞船运算符的效果
+
+仅定义宇宙飞船运算符 (<=>  ) 将不再重写涉及 ==  或 **!=** 的表达式，除非宇宙飞船运算符标记为 `= default` ([P1185R2](https://wg21.link/p1185r2))。 以下示例在 Visual Studio 2019 RTW 和版本 16.1 中编译，但在 Visual Studio 2019 版本 16.2 中生成 C2678：
+
+```cpp
+#include <compare>
+
+struct S {
+  int a;
+  auto operator<=>(const S& rhs) const {
+    return a <=> rhs.a;
+  }
+};
+bool eq(const S& lhs, const S& rhs) {
+  return lhs == rhs;
+}
+bool neq(const S& lhs, const S& rhs) {
+    return lhs != rhs;
+}
+```
+
+要避免此错误，请定义运算符 == 或将其声明为默认值：
+
+```cpp
+#include <compare>
+
+struct S {
+  int a;
+  auto operator<=>(const S& rhs) const {
+    return a <=> rhs.a;
+  }
+  bool operator==(const S&) const = default;
+};
+bool eq(const S& lhs, const S& rhs) {
+  return lhs == rhs;
+}
+bool neq(const S& lhs, const S& rhs) {
+    return lhs != rhs;
+}
+```
+
+### <a name="standard-library-improvements"></a>标准库改进
+
+- 具有固定/科学精度的 \<charconv> `to_chars()`。 （一般精度目前为 16.4 计划。）
+- [P0020R6](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0020r6.html)：atomic\<float>、atomic\<double>、atomic\<long double>
+- [P0463R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0463r1.html)：endian
+- [P0482R6](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0482r6.html)：char8_t 的库支持
+- [P0600R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0600r1.pdf)：[\[nodiscard]] 针对 STL，第 1 部分
+- [P0653R2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0653r2.html)：to_address()
+- [P0754R2](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0754r2.pdf)：\<version>
+- [P0771R1](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0771r1.pdf)：用于 std::function 的移动构造函数的 noexcept
+
+## <a name="update_160"></a>Visual Studio 2019 中的 bug 修复和行为变更
+
+### <a name="correct-diagnostics-for-basic_string-range-constructor"></a>basic_string 范围构造函数的正确诊断
 
 在 Visual Studio 2019 中，`basic_string` 范围构造函数不再禁止显示包含 `static_cast` 的编译器诊断。 尽管在初始化 `out` 时可能会丢失从 `wchar_t` 到 `char` 的数据，但在 Visual Studio 2017 中编译以下代码时不会出现警告：
 
@@ -443,7 +590,7 @@ int main()
 }
 ```
 
-### <a name="iterator-debugging-and-stdmoveiterator"></a>迭代器调试和 `std::move_iterator`
+### <a name="iterator-debugging-and-stdmove_iterator"></a>迭代器调试和 `std::move_iterator`
 
 已讲解如何使用迭代器调试功能来正确解包 `std::move_iterator`。 例如，`std::copy(std::move_iterator<std::vector<int>::iterator>, std::move_iterator<std::vector<int>::iterator>, int*)` 现在可占用 `memcpy` 快速路径。
 
@@ -475,11 +622,11 @@ int main()
 
 并行算法库现在可以在 Windows 8 及更高版本上正确使用真实的 `WaitOnAddress` 系列，而不是始终使用 Windows 7 及早期虚假版本。
 
-### <a name="stdsystemcategorymessage-whitespace"></a>`std::system_category::message()` whitespace
+### <a name="stdsystem_categorymessage-whitespace"></a>`std::system_category::message()` whitespace
 
 `std::system_category::message()` 现在会截断返回消息的尾随空格。
 
-### <a name="stdlinearcongruentialengine-divide-by-zero"></a>`std::linear_congruential_engine` 被零除
+### <a name="stdlinear_congruential_engine-divide-by-zero"></a>`std::linear_congruential_engine` 被零除
 
 导致 `std::linear_congruential_engine` 触发被 0 除的一些条件已得到修复。
 
@@ -505,7 +652,7 @@ int main()
 
 - 根据 [P0083“拼接映射和集”](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0083r3.pdf)，为容器合并以及接受右值容器的提取成员函数添加了重载
 
-### <a name="stdbasicistreamread-processing-of-rn--n"></a>`std::basic_istream::read` 处理 \\r\\n => \\n
+### <a name="stdbasic_istreamread-processing-of-rn--n"></a>`std::basic_istream::read` 处理 \\r\\n => \\n
 
 `std::basic_istream::read` 已修复为不作为 \\r\\n => \\n 处理的一部分临时写入提供的缓冲区部分。 此更改导致在读取大小超过 4K 的文件时，放弃了一些在 Visual Studio 2017 15.8 中获得的性能优势。 但是，仍存在从避免每个字符三个虚拟调用的效率改进。
 
@@ -517,15 +664,65 @@ int main()
 
 修复了在实现 [LWG 2729 “std::pair::operator= 上缺少 SFINAE”](https://cplusplus.github.io/LWG/issue2729)时引入的 `std::pair` 赋值运算符回归问题。 它现在能够再次正确接受可转换为 `std::pair` 的类型。
 
-### <a name="non-deduced-contexts-for-addconstt"></a>`add_const_t` 的非导出上下文
+### <a name="non-deduced-contexts-for-add_const_t"></a>`add_const_t` 的非导出上下文
 
 修复了一个有关类型特征的小 bug，其中 `add_const_t` 和相关函数应该是非导出上下文。 换而言之，`typename add_const<T>::type` 的别名应该是 `add_const_t`，而不是 `const T`。
 
+## <a name="update_162"></a> 16.2 中的 Bug 修补程序和行为更改
+
+### <a name="const-comparators-for-associative-containers"></a>相关容器的 Const 比较运算符
+
+[集](../standard-library/set-class.md)、[地图](../standard-library/map-class.md)、[多集](../standard-library/multiset-class.md)和[多地图](../standard-library/multimap-class.md)中的用于搜索和插入的代码已合并，以减少代码。 插入操作现在针对 `const` 比较运算符调用小于比较，方式与之前的搜索操作相同。 以下代码在 Visual Studio 2019 版本 16.1 和更早版本中编译，但在 Visual Studio 2019 版本 16.2 中引发 C3848：
+
+```cpp
+#include <iostream>
+#include <map>
+
+using namespace std;
+
+struct K
+{
+   int a;
+   string b = "label";
+};
+
+struct Comparer  {
+   bool operator() (K a, K b) {
+      return a.a < b.a;
+   }
+};
+
+map<K, double, Comparer> m;
+
+K const s1{1};
+K const s2{2};
+K const s3{3};
+
+int main() {
+
+   m.emplace(s1, 1.08);
+   m.emplace(s2, 3.14);
+   m.emplace(s3, 5.21);
+
+}
+```
+
+要避免此错误，请设置比较运算符 `const`：
+
+```cpp
+struct Comparer  {
+   bool operator() (K a, K b) const {
+      return a.a < b.a;
+   }
+};
+
+```
+
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range="vs-2017"
 
-## <a name="improvements_150"></a> Visual Studio 2017 RTW（版本 15.0）中的改进之处
+## <a name="improvements_150"></a>Visual Studio 2017 RTW（版本 15.0）中的符合性改进
 
 Microsoft C++ 编译器支持通用 `constexpr` 和用于聚合的非静态数据成员初始化 (NSDMI)，现具有 Visual Studio 2017 中的 C++14 标准中的全部新增功能。 但编译器仍缺少 C++11 和 C++98 标准版中的一些功能。 请参阅 [Visual C++ 语言合规性](../visual-cpp-language-conformance.md)中显示编译器当前状态的表。
 
@@ -541,7 +738,7 @@ Microsoft C++ 编译器支持通用 `constexpr` 和用于聚合的非静态数�
 
 现在允许声明为 `constexpr` 的表达式包含某些种类的声明：if 和 switch 语句、loop 语句，以及某些对象的突变，这些对象的生命期开始时间处于 constexpr 表达式计算范围内。 此外，`constexpr` 非静态成员函数不再必须为隐式 `const`。 有关详细信息，请参阅 [Relaxing constraints on constexpr functions](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3652.html)（放松对 constexpr 函数的约束）。
 
-### <a name="c17-terse-staticassert"></a>C++17：简要 `static_assert`
+### <a name="c17-terse-static_assert"></a>C++17：简要 `static_assert`
 
 `static_assert` 的消息参数是可选的。 有关详细信息，请参阅 [Extending static_assert, v2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3928.pdf)（扩展 static_assert, v2）。
 
@@ -553,7 +750,7 @@ Microsoft C++ 编译器支持通用 `constexpr` 和用于聚合的非静态数�
 
 基于范围的 for 循环不再需要 `begin()` 和 `end()` 返回相同类型的对象。 此更改使 `end()` 能够返回 [range-v3](https://github.com/ericniebler/range-v3) 中的范围和完成但尚未发布的范围技术规范使用的 sentinel。 有关详细信息，请参阅 [Generalizing the Range-Based For Loop](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html)（通用化基于范围的 for 循环）。
 
-## <a name="improvements_153"></a>Visual Studio 2017 版本 15.3 中的改进
+## <a name="improvements_153"></a> 15.3 中的符合性改进
 
 ### <a name="constexpr-lambdas"></a>constexpr lambda
 
@@ -567,7 +764,7 @@ Microsoft C++ 编译器支持通用 `constexpr` 和用于聚合的非静态数�
 
 `if` 语句可以包括在该语句本身所含块范围中引入变量的初始化表达式。 有关详细信息，请参阅[具有初始化表达式的 if 语句](../cpp/if-else-statement-cpp.md#if_with_init)。
 
-### <a name="maybeunused-and-nodiscard-attributes"></a>`[[maybe_unused]]` 和 `[[nodiscard]]` 属性
+### <a name="maybe_unused-and-nodiscard-attributes"></a>`[[maybe_unused]]` 和 `[[nodiscard]]` 属性
 
 实体未使用时，将出现新属性 `[[maybe_unused]]` 静默处理警告。 如果放弃函数调用的返回值，`[[nodiscard]]` 属性将创建一条警告。 有关详细信息，请参阅 [C++ 中的属性](../cpp/attributes.md)。
 
@@ -595,7 +792,7 @@ Lambda 表达式中的 `*this` 对象现在可按值捕获。 此更改可以在
 
 之前弃用（且被编译器忽略的）`register` 关键字现已从语言中删除。 有关详细信息，请参阅[删除弃用的 register 关键字](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0001r1.html)。
 
-## <a name="improvements_155"></a>Visual Studio 2017 版本 15.5 中的改进
+## <a name="improvements_155"></a> 15.5 中的符合性改进
 
 标有 \[14] 的功能即使是在 /std:c++14  模式中也无条件提供。
 
@@ -611,7 +808,7 @@ Lambda 表达式中的 `*this` 对象现在可按值捕获。 此更改可以在
 
 [P0005R4](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0005r4.html) `not_fn` 替换了 `not1` 和 `not2`。
 
-### <a name="rewording-enablesharedfromthis"></a>改写 `enable_shared_from_this`
+### <a name="rewording-enable_shared_from_this"></a>改写 `enable_shared_from_this`
 
 在 C++11 中添加 [P0033R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0033r1.html) `enable_shared_from_this`。 C++17 标准更新规范以更好地处理某些特殊情况。 [14]
 
@@ -627,19 +824,19 @@ Lambda 表达式中的 `*this` 对象现在可按值捕获。 此更改可以在
 
 [P0302R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0302r1.html) 在 C++17 之前，经典模板 `std::function` 有多个采用分配器参数的构造函数。 但是，在此上下文中，分配器的使用出现了问题并且语义不明。 已删除问题构造函数。
 
-### <a name="fixes-for-notfn"></a>`not_fn()` 的修复
+### <a name="fixes-for-not_fn"></a>`not_fn()` 的修复
 
 [P0358R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0358r1.html) `std::not_fn` 的新措词提供对在调用包装器时传播值类别的支持。
 
-### <a name="sharedptrt-sharedptrtn"></a>`shared_ptr<T[]>`， `shared_ptr<T[N]>`
+### <a name="shared_ptrt-shared_ptrtn"></a>`shared_ptr<T[]>`， `shared_ptr<T[N]>`
 
 [P0414R2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0414r2.html) 将库基础知识中的 `shared_ptr` 更改合并到 C++17。 [14]
 
-### <a name="fixing-sharedptr-for-arrays"></a>修复数组的 `shared_ptr`
+### <a name="fixing-shared_ptr-for-arrays"></a>修复数组的 `shared_ptr`
 
 [P0497R0](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0497r0.html) 修复数组的 shared_ptr 支持。 [14]
 
-### <a name="clarifying-insertreturntype"></a>阐明 `insert_return_type`
+### <a name="clarifying-insert_return_type"></a>阐明 `insert_return_type`
 
 [P0508R0](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0508r0.html) 有唯一键的关联容器和有唯一键的无序容器均有一个返回嵌套类型 `insert_return_type` 的成员函数 `insert`。 该返回类型现在定义为在容器 Iterator 和 NodeType 上参数化的类型的专用化。
 
@@ -659,7 +856,7 @@ C++ 标准的 Annex D 包含所有已弃用的功能，包括 `shared_ptr::uniqu
 
 标准库已随 C++17 编译器的更改更新，包括在类型系统中添加 `noexcept` 和删除动态异常规范。
 
-## <a name="improvements_156"></a>Visual Studio 2017 版本 15.6 中的改进
+## <a name="improvements_156"></a> 15.6 中的符合性改进
 
 ### <a name="c17-library-fundamentals-v1"></a>C++17 Library Fundamentals V1
 
@@ -669,7 +866,7 @@ C++ 标准的 Annex D 包含所有已弃用的功能，包括 `shared_ptr::uniqu
 
 [P0739R0](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0739r0.html) 将 `adopt_lock_t` 移动到 `scoped_lock` 参数列表的前面，以启用对 `scoped_lock` 的一致使用。 允许 `std::variant` 构造函数在更多事例中参与重载解析，以便启用副本分配。
 
-## <a name="improvements_157"></a>Visual Studio 2017 版本 15.7 中的改进
+## <a name="improvements_157"></a> 15.7 中的符合性改进
 
 ### <a name="c17-rewording-inheriting-constructors"></a>C++17：重新组织继承构造函数
 
@@ -837,11 +1034,11 @@ void sample(A<0> *p)
 
 [P0682R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0682r1.html) 将新的基本字符串转换函数从 P0067R5 移动到新的 \<charconv> 标头，并进行了其他改进，包括更改错误处理以使用 `std::errc` 而非 `std::error_code`。
 
-### <a name="c17-constexpr-for-chartraits-partial"></a>C++17：`char_traits` 为 `constexpr`（部分）
+### <a name="c17-constexpr-for-char_traits-partial"></a>C++17：`char_traits` 为 `constexpr`（部分）
 
 [P0426R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html) 对 `std::traits_type` 成员函数 `length`、`compare` 和 `find` 进行了更改，以便使 `std::string_view` 在常数表达式中可用。 （在 Visual Studio 2017 版本 15.6 中，仅支持 Clang/LLVM。 在版本 15.7 预览版 2 中，也几乎完全支持 ClXX。）
 
-## <a name="improvements_159"></a>Visual Studio 2017 版本 15.9 中的改进
+## <a name="improvements_159"></a> 15.9 中的符合性改进
 
 ### <a name="left-to-right-evaluation-order-for-operators-----and-"></a>运算符 `->*`、`[]`、`>>` 和 `<<` 从左到右的计算顺序
 
@@ -1198,7 +1395,7 @@ void f(ClassLibrary1::Class1 ^r1, ClassLibrary1::Class2 ^r2)
 }
 ```
 
-## <a name="update_153"></a> Visual Studio 2017 版本 15.3 中的 Bug 修复
+## <a name="update_153"></a> 15.3 中的 bug 修补程序
 
 ### <a name="calls-to-deleted-member-templates"></a>调用的成员模板已遭删除
 
@@ -1460,7 +1657,7 @@ C;      // warning C4091 : '' : ignored on left of 'C' when no variable is decla
 
 在 /Wv:18 下此警告被排除在外，而在警告等级 W2 下此警告默认启用  。
 
-### <a name="stdisconvertible-for-array-types"></a>`std::is_convertible` 为数组类型
+### <a name="stdis_convertible-for-array-types"></a>`std::is_convertible` 为数组类型
 
 早期版本的编译器为数组类型提供了不正确的 [std::is_convertible](../standard-library/is-convertible-class.md) 结果。 这要求库编写者在使用 `std::is_convertible<...>` 类型特征时，将 Microsoft C++ 编译器作为特例处理。 在以下示例中，静态断言在早期版本的 Visual Studio 中是通过的，但在 Visual Studio 2017 版本 15.3 中不通过：
 
@@ -1481,7 +1678,7 @@ static_assert(std::is_convertible<Array, Array&>::value, "");
    To test() { return std::declval<From>(); }
 ```
 
-### <a name="private-destructors-and-stdisconstructible"></a>私有析构函数和 `std::is_constructible`
+### <a name="private-destructors-and-stdis_constructible"></a>私有析构函数和 `std::is_constructible`
 
 在决定 [std::is_constructible](../standard-library/is-constructible-class.md) 的结果时，早期版本的编译器忽略了析构函数是否是私有的。 现在会考虑这一点。 在以下示例中，静态断言在早期版本的 Visual Studio 中是通过的，但在 Visual Studio 2017 版本 15.3 中不通过：
 
@@ -1570,7 +1767,7 @@ struct A
 
 此警告默认为关闭，它仅会影响通过 /Wall 编译的代码  。
 
-## <a name="update_155"></a>Visual Studio 2017 版本 15.5 中的 Bug 修复和其他行为更改
+## <a name="update_155"></a> 15.5 中的 Bug 修补程序和其他行为更改
 
 ### <a name="partial-ordering-change"></a>部分排序更改
 
@@ -1783,7 +1980,7 @@ warning C4619: #pragma warning: there is no warning number '4001'
 /* single line comment */
 ```
 
-### <a name="declspec-attributes-with-extern-c-linkage"></a>带 `extern "C"` 链接的 `__declspec` 属性
+### <a name="__declspec-attributes-with-extern-c-linkage"></a>带 `extern "C"` 链接的 `__declspec` 属性
 
 在 Visual Studio 的早期版本中，在 `extern "C"` 链接规范之前应用 `__declspec(...)` 时，编译器会忽略 `__declspec(...)` 属性。 此行为导致生成用户意料之外的代码并且可能产生运行时影响。 Visual Studio 版本 15.3 中添加了此警告，但是默认关闭。 Visual Studio 2017 版本 15.5 默认启用此警告。
 
@@ -1848,7 +2045,7 @@ void f() { typeid(S); } //C2027 in 15.5
 error C2027: use of undefined type 'S'
 ```
 
-### <a name="stdisconvertible-target-type"></a>`std::is_convertible` 目标类型
+### <a name="stdis_convertible-target-type"></a>`std::is_convertible` 目标类型
 
 `std::is_convertible` 要求目标类型为有效返回类型。 在早期版本的 Visual Studio 中，编译器不正确地允许抽象类型，这可能导致不正确的重载决策和意外的运行时行为。  现在，以下代码正确引发错误 C2338：
 
@@ -1921,11 +2118,11 @@ struct X {
 const int X::size; // C5041
 ```
 
-### <a name="extern-c-declspec-warning-c4768-now-on-by-default"></a>现在默认打开 `extern "C" __declspec(...)` 警告 C4768
+### <a name="extern-c-__declspec-warning-c4768-now-on-by-default"></a>现在默认打开 `extern "C" __declspec(...)` 警告 C4768
 
 Visual Studio 2017 版本 15.3 中添加了此警告，但是默认关闭。 Visual Studio 2017 版本 15.5 默认启用此警告。 有关详细信息，请参阅[有关 \_\_declspec 属性的新警告](#declspec)。
 
-### <a name="defaulted-functions-and-declspecnothrow"></a>默认函数和 `__declspec(nothrow)`
+### <a name="defaulted-functions-and-__declspecnothrow"></a>默认函数和 `__declspec(nothrow)`
 
 以前，当相应基/成员函数允许异常时，编译器允许使用 `__declspec(nothrow)` 声明默认函数。 此行为与 C++ 标准冲突，可能导致在运行时发生未定义的行为。 如果有异常规范不匹配，标准要求此类函数定义为已删除。  在 /std:c++17 下，以下代码引发错误 C2280: 尝试引用已删除的函数  *。因为显式异常规范与隐式声明的异常规范不兼容，所以已隐式删除函数。*
 
@@ -2029,7 +2226,7 @@ int main()
 }
 ```
 
-## <a name="update_157"></a>Visual Studio 2017 版本 15.7 中的 bug 修复和其他行为更改
+## <a name="update_157"></a> 15.7 中的 Bug 修补程序和其他行为更改
 
 ### <a name="c17-default-argument-in-the-primary-class-template"></a>C++17：主类模板中的默认参数
 
@@ -2165,7 +2362,7 @@ int main() {
 }
 ```
 
-## <a name="update_158"></a>Visual Studio 2017 版本 15.8 中的 bug 修复和行为更改
+## <a name="update_158"></a> 15.8 中的 Bug 修补程序和行为更改
 
 Visual Studio 2017 版本 15.8 中的编译器更改全部归为 Bug 修复和行为更改类别，如下所示：
 
@@ -2180,7 +2377,7 @@ using  X = typename T;
 
 要修复此错误，将第二行更改为 `using  X = T;`。
 
-### <a name="declspec-on-right-side-of-alias-template-definitions"></a>别名模板定义右侧的 `__declspec()`
+### <a name="__declspec-on-right-side-of-alias-template-definitions"></a>别名模板定义右侧的 `__declspec()`
 
 别名模板定义的右侧不再允许 [__declspec](../cpp/declspec.md)。 编译器以前接受但忽略了此代码，且在使用别名时从不会发出弃用警告。
 
@@ -2372,7 +2569,7 @@ struct X : Base<T>
 };
 ```
 
-## <a name="update_159"></a>Visual Studio 2017 版本 15.9 中的 bug 修复和行为更改
+## <a name="update_159"></a> 15.9 中的 Bug 修补程序和行为更改
 
 ### <a name="identifiers-in-member-alias-templates"></a>成员别名模板中的标识符
 
@@ -2557,9 +2754,13 @@ note: see usage of 'g'.
 
 ::: moniker-end
 
+::: moniker range="vs-2015"
+
 ## <a name="c-conformance-improvements-in-visual-studio-2015"></a>Visual Studio 2015 中的 C++ 符合性改进
 
 有关 Visual Studio 2015 Update 3 及之前的版本中一致性改进的完整列表，请参阅 [Visual C++ What's New 2003 through 2015](/cpp/porting/visual-cpp-what-s-new-2003-through-2015)（Visual C++ 2003 至 2015 中的新增功能）。
+
+::: moniker-end
 
 ## <a name="see-also"></a>请参阅
 
