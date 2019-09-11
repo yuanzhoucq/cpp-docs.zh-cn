@@ -3,12 +3,12 @@ title: 在 Visual Studio 中创建和配置 Linux CMake 项目
 description: 如何在 Visual Studio 中创建、配置、编辑和编译 Linux CMake 项目
 ms.date: 06/12/2019
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: d70ffe593cc014bca40a447a9cdb1c1c96a40e3f
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.openlocfilehash: 5c3a2b212240217fe6d6053188dd466376010391
+ms.sourcegitcommit: a42d3b0408f02138dcd6fabcb98d50b0cb159191
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042664"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70383417"
 ---
 # <a name="create-and-configure-a-linux-cmake-project"></a>创建和配置 Linux CMake 项目
 
@@ -112,7 +112,18 @@ Visual Studio 2019 版本 16.1：在以 WSL 为目标时，无需复制源或标
 
 若要在指定调试目标系统上调试代码，请设置断点，并在项目设置旁边的工具栏菜单中选择“CMake 目标”作为启动项，再选择工具栏中的“&#x23f5; 开始”，或按 F5  。
 
-若要自定义项目的命令行参数，请按“解决方案资源管理器”顶部的“切换目标”按钮，然后选择“目标视图”    。 然后右键单击一个目标并选择“调试和启动设置”  。 这会打开或创建 launch.vs.json 配置文件，其中包含程序信息。 若要指定其他参数，请以 `args` JSON 数组形式添加它们。 有关详细信息，请参阅 [C++ 的“打开文件夹”项目](../build/configure-cmake-debugging-sessions.md)和[配置 CMake 调试会话](../build/open-folder-projects-cpp.md)。
+若要自定义项目的命令行参数，请按“解决方案资源管理器”顶部的“切换目标”按钮，然后选择“目标视图”    。 然后右键单击一个目标并选择“调试和启动设置”  。 这会打开或创建 launch.vs.json 配置文件，其中包含程序信息。 要指定源文件的位置，请将 sourceFileMap 属性添加到该文件中，如以下示例中所示： 
+
+```json
+"MIMode": "gdb",
+"externalConsole": true,
+"sourceFileMap": {
+"c/Users/USER/source/repos/CMAKEPROJECTNAME": "C:\\Users\\USER\\source\\repos\\CMAKEPROJECTNAME"
+},
+"remoteMachineName": "${debugInfo.remoteMachineName}",
+```
+
+若要指定其他参数，请以 `args` JSON 数组形式添加它们。 有关详细信息，请参阅 [C++ 的“打开文件夹”项目](../build/configure-cmake-debugging-sessions.md)和[配置 CMake 调试会话](../build/open-folder-projects-cpp.md)。
 
 ## <a name="configure_cmake_linux"></a> 配置适用于 Linux 的 CMake 设置
 
