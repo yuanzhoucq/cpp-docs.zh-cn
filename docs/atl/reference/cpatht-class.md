@@ -284,7 +284,7 @@ CPathT<StringType> CommonPrefix(PCXSTR pszOther);
 
 ### <a name="remarks"></a>备注
 
-前缀为以下类型之一:"C:\\\\"、"."、".."、".。。\\\\". 有关详细信息, 请参阅[PathCommonPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathcommonprefixw)。
+前缀为以下类型之一:"C:\\\\"、"."、".."、"..\\\\". 有关详细信息, 请参阅[PathCommonPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathcommonprefixw)。
 
 ##  <a name="compactpath"></a>  CPathT::CompactPath
 
@@ -471,7 +471,7 @@ BOOL IsPrefix(PCXSTR pszPrefix) const;
 ### <a name="parameters"></a>参数
 
 *pszPrefix*<br/>
-要搜索的前缀。 前缀为以下类型之一:"C:\\\\"、"."、".."、".。。\\\\".
+要搜索的前缀。 前缀为以下类型之一:"C:\\\\"、"."、".."、"..\\\\".
 
 ### <a name="return-value"></a>返回值
 
