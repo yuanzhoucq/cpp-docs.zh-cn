@@ -708,7 +708,7 @@ void EnableTabSwap(BOOL bEnable);
 
 启用选项卡交换后, 用户可以在选项卡控件中拖动选项卡并更改其相对位置。
 
-##  <a name="ensurevisible"></a>CMFCBaseTabCtrl:: Ensurevisible\
+##  <a name="ensurevisible"></a>CMFCBaseTabCtrl:: Ensurevisible
 
 滚动选项卡，直到指定选项卡可见。
 
