@@ -6185,7 +6185,7 @@
                   href: windows/attributes/db-source.md
                 - name: db_table
                   href: windows/attributes/db-table.md
-                - name: 默认值
+                - name: default
                   href: windows/attributes/default-cpp.md
                 - name: defaultbind
                   href: windows/attributes/defaultbind.md
@@ -6245,7 +6245,7 @@
                   href: windows/attributes/importidl.md
                 - name: importlib
                   href: windows/attributes/importlib.md
-                - name: 中的
+                - name: in
                   href: windows/attributes/in-cpp.md
                 - name: include
                   href: windows/attributes/include-cpp.md
@@ -6395,8 +6395,6 @@
                   expanded: false
                   items:
                     - name: 文件和流
-                      href: c-runtime-library/files-and-streams.md
-                    - name: 文本和二进制流
                       href: c-runtime-library/text-and-binary-streams.md
                     - name: 字节和宽流
                       href: c-runtime-library/byte-and-wide-streams.md
