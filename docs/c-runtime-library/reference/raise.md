@@ -1,6 +1,6 @@
 ---
 title: raise
-ms.date: 1/02/2018
+ms.date: 01/02/2018
 apiname:
 - raise
 apilocation:
@@ -23,19 +23,19 @@ helpviewer_keywords:
 - raise function
 - signals
 - programs [C++], sending signals to executing programs
-ms.openlocfilehash: 68d1cc653b955e607648e4d30562d2b77e3520e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 1354c76207d6cd59249f6c06df88ae23fe69b1e0
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358044"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927422"
 ---
 # <a name="raise"></a>raise
 
 将信号发送到正在执行的程序。
 
 > [!NOTE]
-> 不使用此方法来关闭的情况下的 Microsoft Store 应用，除非在测试或调试方案。 以编程或 UI 方式关闭应用商店应用程序不允许根据[Microsoft Store 策略](/legal/windows/agreements/store-policies)。 有关详细信息，请参阅[UWP 应用程序生命周期](/windows/uwp/launch-resume/app-lifecycle)。
+> 不要使用此方法关闭 Microsoft Store 的应用程序，除非在测试或调试方案中。 根据[Microsoft Store 策略](/legal/windows/agreements/store-policies)，不允许以编程方式或 UI 方式关闭应用商店应用。 有关详细信息，请参阅[UWP 应用生命周期](/windows/uwp/launch-resume/app-lifecycle)。
 
 ## <a name="syntax"></a>语法
 
@@ -67,7 +67,7 @@ int raise(
 |**SIGSEGV**|非法存储区访问|终止调用程序|
 |**SIGTERM**|发送到程序的终止请求|忽略信号|
 
-如果参数不是以上指定的有效信号，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果未处理，该函数将设置**errno**到**EINVAL** ，并返回一个非零值。
+如果参数不是以上指定的有效信号，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果未处理，函数会将**errno**设置为**EINVAL** ，并返回一个非零值。
 
 ## <a name="requirements"></a>要求
 

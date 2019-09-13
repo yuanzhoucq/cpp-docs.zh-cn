@@ -1,6 +1,6 @@
 ---
 title: exit, _Exit, _exit
-ms.date: 1/02/2018
+ms.date: 01/02/2018
 apiname:
 - _exit
 - exit
@@ -30,19 +30,19 @@ helpviewer_keywords:
 - processes, terminating
 - function calls, terminating
 - process termination, calling
-ms.openlocfilehash: 7b2a22649d779f382bb4055b1e44c14312627ccd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: c16f306d745b96d8bc7c223213378140fdae14bb
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339346"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927399"
 ---
-# <a name="exit-exit-exit"></a>exit, _Exit, _exit
+# <a name="exit-_exit-_exit"></a>exit, _Exit, _exit
 
-终止调用进程。 **退出**函数将终止该进程后清除;**_exit**并 **_Exit**立即终止。
+终止调用进程。 **Exit**函数会在清除后终止它; **_exit**和 **_exit**立即终止它。
 
 > [!NOTE]
-> 不使用此方法关闭通用 Windows 平台 (UWP) 应用，除测试或调试方案中。 以编程或 UI 方式关闭应用商店应用程序不允许根据[Microsoft Store 策略](/legal/windows/agreements/store-policies)。 有关详细信息，请参阅[UWP 应用程序生命周期](/windows/uwp/launch-resume/app-lifecycle)。 有关 Windows 10 应用的详细信息，请参阅 [Windows 10 应用的操作方法指南](https://developer.microsoft.com/windows/apps)。
+> 不要使用此方法关闭通用 Windows 平台（UWP）应用程序，除非在测试或调试方案中。 根据[Microsoft Store 策略](/legal/windows/agreements/store-policies)，不允许以编程方式或 UI 方式关闭应用商店应用。 有关详细信息，请参阅[UWP 应用生命周期](/windows/uwp/launch-resume/app-lifecycle)。 有关 Windows 10 应用的详细信息，请参阅 [Windows 10 应用的操作方法指南](https://developer.microsoft.com/windows/apps)。
 
 ## <a name="syntax"></a>语法
 
@@ -65,11 +65,11 @@ void _exit(
 
 ## <a name="remarks"></a>备注
 
-**退出**， **_Exit**并 **_exit**函数会终止调用进程。 **退出**函数会调用析构函数的线程本地对象，然后调用-先出 (LIFO) 顺序-由注册的函数**atexit**和 **_onexit**，它会终止进程之前刷新所有文件缓冲区。 **_Exit**并 **_exit**函数而无需销毁线程本地对象或处理会终止进程**atexit**或 **_onexit**函数，且无需刷新流缓冲区。
+**Exit**、 **_Exit**和 **_Exit**函数终止调用进程。 **Exit**函数调用线程本地对象的析构函数，然后以后进先出（LIFO）顺序调用**atexit**和 **_onexit**注册的函数，然后在终止之前刷新所有文件缓冲区。正在. **_Exit**和 **_Exit**函数终止进程，而无需销毁线程本地对象或处理**atexit**或 **_onexit**函数，也不会刷新流缓冲区。
 
-尽管**退出**， **_Exit**并 **_exit**调用不会返回一个值，在值*状态*提供给主机环境或者，如果存在，在进程退出后等待调用进程。 通常情况下，调用方集*状态*值为 0 来指示正常退出，或为其他值以指示错误。 *状态*值是可用于操作系统批处理命令**ERRORLEVEL**和由两个常量之一表示：**EXIT_SUCCESS**，它表示值为 0，或**EXIT_FAILURE**，它表示的值为 1。
+尽管**exit**、 **_Exit**和 **_Exit**调用不返回值，但是在进程退出后，*状态*中的值可用于主机环境或等待调用进程（如果存在）。 通常，调用方将*状态值*设置为0，指示正常退出，或设置为其他值来指示错误。 *Status*值可用于操作系统批处理命令**ERRORLEVEL** ，并由以下两个常量之一表示：**EXIT_SUCCESS**，表示值为**0，表示**值为1。
 
-**退出**， **_Exit**， **_exit**， **quick_exit**， **_cexit**，和 **_c_exit**函数的行为，如下所示。
+**Exit**、 **_Exit**、 **_Exit**、 **quick_exit**、 **_cexit**和 **_c_exit**函数的行为如下所示。
 
 |函数|描述|
 |--------------|-----------------|
@@ -80,7 +80,7 @@ void _exit(
 |**_cexit**|执行完整的 C 库终止过程并返回给调用方。 不终止进程。|
 |**_c_exit**|执行最少的 C 库终止过程并返回给调用方。 不终止进程。|
 
-当您调用**退出**， **_Exit**或 **_exit**函数，不会调用在调用时存在的任何临时或自动对象的析构函数。 自动对象是在函数中定义的非静态本地对象。 临时对象是由编译器，如函数调用所返回的值创建的对象。 若要在调用之前销毁自动对象**退出**， **_Exit**，或 **_exit**，请显式调用析构函数的对象，如下所示：
+调用**exit**、 **_Exit**或 **_Exit**函数时，不会调用在调用时存在的任何临时或自动对象的析构函数。 自动对象是在函数中定义的非静态本地对象。 临时对象是由编译器创建的对象，例如函数调用返回的值。 若要在调用**exit**、 **_Exit**或 **_Exit**之前销毁自动对象，请显式调用该对象的析构函数，如下所示：
 
 ```cpp
 void last_fn() {}
@@ -91,13 +91,13 @@ void last_fn() {}
 }
 ```
 
-不要使用**DLL_PROCESS_ATTACH**调用**退出**从**DllMain**。 若要退出**DLLMain**函数，返回**FALSE**从**DLL_PROCESS_ATTACH**。
+不要使用**DLL_PROCESS_ATTACH**从**DllMain**调用**exit** 。 若要退出**DLLMain**函数，请从**DLL_PROCESS_ATTACH**返回**FALSE** 。
 
 ## <a name="requirements"></a>要求
 
 |函数|必需的标头|
 |--------------|---------------------|
-|**退出**， **_Exit**， **_exit**|\<process.h> 或 \<stdlib.h>|
+|**exit**、 **_Exit**、 **_Exit**|\<process.h> 或 \<stdlib.h>|
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

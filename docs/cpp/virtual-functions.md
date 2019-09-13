@@ -1,17 +1,17 @@
 ---
 title: 虚函数
-ms.date: 11/04/2016
+ms.date: 09/10/2019
 helpviewer_keywords:
 - functions [C++], virtual functions
 - derived classes [C++], virtual functions
 - virtual functions
 ms.assetid: b3e1ed88-2a90-4af8-960a-16f47deb3452
-ms.openlocfilehash: 07dfd8a602dca93c89a078b2eb69e04cf9d4a7a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c482107b5ad1546c64e0b70ef1714cff8a668ab
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393839"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926091"
 ---
 # <a name="virtual-functions"></a>虚函数
 
@@ -19,7 +19,7 @@ ms.locfileid: "62393839"
 
 虚函数确保为该对象调用正确的函数，这与用于进行函数调用的表达式无关。
 
-假定基类包含声明为一个函数[虚拟](../cpp/virtual-cpp.md)和派生的类定义相同的功能。 为派生类的对象调用派生类中的函数，即使它是使用指针或对基类的引用来调用的。 以下示例显示了一个基类，它提供了 `PrintBalance` 函数和两个派生类的实现
+假设基类包含声明为[virtual](../cpp/virtual-cpp.md)的函数，并且派生类定义了相同的函数。 为派生类的对象调用派生类中的函数，即使它是使用指针或对基类的引用来调用的。 以下示例显示了一个基类，它提供了 `PrintBalance` 函数和两个派生类的实现
 
 ```cpp
 // deriv_VirtualFunctions.cpp
@@ -30,6 +30,7 @@ using namespace std;
 class Account {
 public:
    Account( double d ) { _balance = d; }
+   virtual ~Account() {}
    virtual double GetBalance() { return _balance; }
    virtual void PrintBalance() { cerr << "Error. Balance not available for base type." << endl; }
 private:
@@ -50,15 +51,15 @@ public:
 
 int main() {
    // Create objects of type CheckingAccount and SavingsAccount.
-   CheckingAccount *pChecking = new CheckingAccount( 100.00 ) ;
-   SavingsAccount  *pSavings  = new SavingsAccount( 1000.00 );
+   CheckingAccount checking( 100.00 );
+   SavingsAccount  savings( 1000.00 );
 
    // Call PrintBalance using a pointer to Account.
-   Account *pAccount = pChecking;
+   Account *pAccount = &checking;
    pAccount->PrintBalance();
 
    // Call PrintBalance using a pointer to Account.
-   pAccount = pSavings;
+   pAccount = &savings;
    pAccount->PrintBalance();
 }
 ```
@@ -130,8 +131,6 @@ int main() {
 }
 ```
 
-### <a name="output"></a>Output
-
 ```Output
 Derived::NameOf
 Invoked by Base
@@ -141,11 +140,11 @@ Invoked by Derived
 
 请注意，无论 `NameOf` 函数是通过指向 `Base` 的指针还是通过指向 `Derived` 的指针进行调用，它都会调用 `Derived` 的函数。 它调用 `Derived` 的函数，因为 `NameOf` 是虚函数，并且 `pBase` 和 `pDerived` 都指向类型 `Derived` 的对象。
 
-仅为类类型的对象调用虚函数，因为不能声明为全局或静态函数**虚拟**。
+由于仅对类类型的对象调用虚函数，因此不能将全局或静态函数声明为**虚拟**函数。
 
-**虚拟**派生类中声明重写函数时，可以使用关键字，但它是必需的; 虚函数的重写始终是虚拟。
+当在派生类中声明重写函数时，可以使用**virtual**关键字，但这是不必要的;虚函数的重写始终为虚函数。
 
-必须定义在基类中的虚函数，除非它们声明为使用*纯说明符*。 (有关纯虚函数的详细信息，请参阅[抽象类](../cpp/abstract-classes-cpp.md)。)
+必须定义基类中的虚函数，除非它们是使用*纯说明符*声明的。 （有关纯虚函数的详细信息，请参阅[抽象类](../cpp/abstract-classes-cpp.md)。）
 
 可通过使用范围解析运算符 (`::`) 显式限定函数名称来禁用虚函数调用机制。 考虑先前涉及 `Account` 类的示例。 若要调用基类中的 `PrintBalance`，请使用如下所示的代码：
 

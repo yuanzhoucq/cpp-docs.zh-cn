@@ -1,6 +1,6 @@
 ---
 title: _set_abort_behavior
-ms.date: 1/02/2018
+ms.date: 01/02/2018
 apiname:
 - _set_abort_behavior
 apilocation:
@@ -23,19 +23,19 @@ helpviewer_keywords:
 - aborting programs
 - _set_abort_behavior function
 - set_abort_behavior function
-ms.openlocfilehash: 8b36a771a3694c6d01573d619990743c7ddc0f3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: b72a485287684fc85f1e232e89774e07a5e3f42b
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356678"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927480"
 ---
-# <a name="setabortbehavior"></a>_set_abort_behavior
+# <a name="_set_abort_behavior"></a>_set_abort_behavior
 
 指定当程序异常终止时要采取的操作。
 
 > [!NOTE]
-> 不要使用[中止](abort.md)函数来关闭的情况下的 Microsoft Store 应用，除非在测试或调试方案。 以编程或 UI 方式关闭应用商店应用程序不允许根据[Microsoft Store 策略](/legal/windows/agreements/store-policies)。 有关详细信息，请参阅[UWP 应用程序生命周期](/windows/uwp/launch-resume/app-lifecycle)。
+> 不要使用[abort](abort.md)函数关闭 Microsoft Store 的应用程序，除非在测试或调试方案中。 根据[Microsoft Store 策略](/legal/windows/agreements/store-policies)，不允许以编程方式或 UI 方式关闭应用商店应用。 有关详细信息，请参阅[UWP 应用生命周期](/windows/uwp/launch-resume/app-lifecycle)。
 
 ## <a name="syntax"></a>语法
 
@@ -49,10 +49,10 @@ unsigned int _set_abort_behavior(
 ### <a name="parameters"></a>参数
 
 *flags*<br/>
-新值[中止](abort.md)标志。
+[中止](abort.md)标志的新值。
 
 *mask*<br/>
-掩码[中止](abort.md)标志位设置。
+要设置的[中止](abort.md)标志位的掩码。
 
 ## <a name="return-value"></a>返回值
 
@@ -60,7 +60,7 @@ unsigned int _set_abort_behavior(
 
 ## <a name="remarks"></a>备注
 
-有两个[中止](abort.md)标志： **_WRITE_ABORT_MSG**并 **_CALL_REPORTFAULT**。 **_WRITE_ABORT_MSG**确定当程序异常终止时是否打印有帮助的文本消息。 该消息声明应用程序已调用[中止](abort.md)函数。 默认行为是打印该消息。 **_CALL_REPORTFAULT**，如果设置，则指定 Watson 故障转储生成和报告何时[中止](abort.md)调用。 默认情况下，在非调试生成中启用故障转储报告。
+有两个[中止](abort.md)标志： **_WRITE_ABORT_MSG**和 **_CALL_REPORTFAULT**。 **_WRITE_ABORT_MSG**确定在程序异常终止时是否打印有帮助的文本消息。 此消息表明应用程序已调用[abort](abort.md)函数。 默认行为是打印该消息。 **_CALL_REPORTFAULT**（如果已设置）指定在调用[abort](abort.md)时生成并报告 Watson 故障转储。 默认情况下，在非调试生成中启用故障转储报告。
 
 ## <a name="requirements"></a>要求
 

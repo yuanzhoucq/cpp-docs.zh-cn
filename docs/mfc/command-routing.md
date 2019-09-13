@@ -1,6 +1,6 @@
 ---
 title: 命令传送
-ms.date: 11/04/2016
+ms.date: 09/06/2019
 helpviewer_keywords:
 - MFC, command routing
 - command handling [MFC], routing commands
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - handlers, command [MFC]
 - command routing
 ms.assetid: 9393a956-bdd4-47c5-9013-dbd680433f93
-ms.openlocfilehash: ae9741a66e944b60dc38c1366353e43977e1ee7a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d1e1e59c56439c01655a1416df645ccc6922411
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165134"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907618"
 ---
 # <a name="command-routing"></a>命令传送
 
-你使用命令的职责限于在命令及其处理程序函数间建立消息映射连接，也是你使用“属性”窗口的任务。 还必须编写大部分命令处理程序。
+使用命令的责任仅限于在命令及其处理程序函数之间建立消息映射连接，这是使用[MFC 类向导](reference/mfc-class-wizard.md)的任务。 还必须为命令处理程序编写代码。
 
 Windows 消息通常发送到主框架窗口中，但命令消息则传送到其他对象。 框架通过命令目标对象的标准顺序传送命令，这些对象中应包含命令的处理程序。 每个命令目标对象检查其消息映射，看看是否能处理传入的消息。
 
@@ -29,7 +29,7 @@ Windows 消息通常发送到主框架窗口中，但命令消息则传送到其
 
 1. 到其他命令目标。
 
-如何为您的处理程序中响应命令的作用的路由机制比较是昂贵，路由的成本较低。 请记住，仅当用户与用户界面对象交互时，框架才生成命令。
+此路由机制与处理程序响应命令所执行的操作相比，此路由机制的代价是很低。 请记住，仅当用户与用户界面对象交互时，框架才生成命令。
 
 ### <a name="_core_standard_command_route"></a> 标准命令传送
 
