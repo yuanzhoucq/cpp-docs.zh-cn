@@ -1,27 +1,27 @@
 ---
 title: 编译器警告（等级 1）C4319
-ms.date: 1/18/2018
+ms.date: 01/18/2018
 f1_keywords:
 - C4319
 helpviewer_keywords:
 - C4319
 ms.assetid: 1fac8048-9bd6-4552-a21c-192c67772bb9
-ms.openlocfilehash: 20b268bacd6e7e259e9b4fa1c9e98fa6fd353718
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2d5ae8fcf5a527031c3a974b227f713675f31ffa
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385467"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926104"
 ---
 # <a name="compiler-warning-level-1-c4319"></a>编译器警告（等级 1）C4319
 
-> ~： 零扩展*type1*到*type2*更大的
+> "~"：将 "*type1*" 扩展到更大的 "*type2*" 时为零
 
-结果 **~** （按位求补） 运算符是无符号，然后零扩展转换为更大的类型时。
+**~** （按位求补）运算符的结果是无符号的，然后在转换为更大的类型时进行零扩展。
 
 ## <a name="example"></a>示例
 
-在以下示例中，`~(a - 1)`是作为 32 位无符号 long 表达式计算，然后通过零扩展转换为 64 位。 这会导致意外的运算结果。
+在下面的示例中`~(a - 1)` ，将作为32位无符号长表达式进行计算，然后将其转换为64位。 这会导致意外的运算结果。
 
 ```cpp
 // C4319.cpp

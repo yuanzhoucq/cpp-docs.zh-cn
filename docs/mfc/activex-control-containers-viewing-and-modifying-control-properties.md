@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [MFC], properties
 - controls [MFC], properties
 ms.assetid: 14ce5152-742b-4e0d-a9ab-c7b456e32918
-ms.openlocfilehash: 0a03acfd880bcf63017eec9796315b98e5d5f4d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d42820efd06c2ae52f5d1b22b0bdfb6335c4a89
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394879"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907810"
 ---
 # <a name="activex-control-containers-viewing-and-modifying-control-properties"></a>ActiveX 控件容器：查看和修改控件属性
 
@@ -21,7 +21,7 @@ ms.locfileid: "62394879"
 
 如果 ActiveX 控件容器应用程序使用嵌入控件，则可在资源编辑器中查看和修改控件的属性。 还可在设计时使用资源编辑器设置属性值。 资源编辑器之后会将这些值自动保存在项目资源文件中。 控件的任何实例之后会将其属性初始化为这些值。
 
-此过程假定，您已将控件插入项目中。 有关信息，请参阅[ActiveX 控件容器：将控件插入控件容器应用程序](../mfc/inserting-a-control-into-a-control-container-application.md)。
+此过程假定，您已将控件插入项目中。 有关信息，请[参阅 ActiveX 控件容器：将控件插入控件容器应用程序](../mfc/inserting-a-control-into-a-control-container-application.md)。
 
 查看控件属性的第一步是将控件实例添加到项目的对话框模板中。
 
@@ -31,13 +31,13 @@ ms.locfileid: "62394879"
 
 1. 打开主对话框模板。
 
-1. 插入 ActiveX 控件使用**插入 ActiveX 控件**对话框。 有关详细信息，请参阅[查看和添加到对话框中的 ActiveX 控件](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md)。
+1. 使用 "**插入 Activex 控件**" 对话框插入 activex 控件。 有关详细信息，请参阅[查看 ActiveX 控件并将其添加到对话框](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md)。
 
 1. 选择对话框中的 ActiveX 控件。
 
-1. 从属性窗口中，单击**属性**按钮。
+1. 在 "**属性**" 窗口中，单击 "**属性**" 按钮。
 
-使用**属性**对话框以修改并立即测试新的属性。
+使用 "**属性**" 对话框可以立即修改和测试新属性。
 
 ## <a name="see-also"></a>请参阅
 

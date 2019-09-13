@@ -1,6 +1,6 @@
 ---
 title: C++调试属性页
-ms.date: 7/24/2019
+ms.date: 07/24/2019
 ms.topic: article
 ms.assetid: 78115a6b-3799-4515-814e-8566b5bdc55d
 f1_keywords:
@@ -35,16 +35,16 @@ f1_keywords:
 - VC.Project.IVCWebSvcDebugPageObject.HttpUrl
 - VC.Project.IVCWebSvcDebugPageObject.DebuggerType
 - VC.Project.IVCWebSvcDebugPageObject.SQLDebugging
-ms.openlocfilehash: a63ac181b4ef281d6d78d951a46bba85103ba636
-ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
+ms.openlocfilehash: 5f7a7bc0e2c696365daa38696fde6f1a480644b4
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537793"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927738"
 ---
 # <a name="c-debugging-property-pages"></a>C++调试属性页
 
-这些属性页位于 "**项目** > **属性** > " "**配置属性** > " "**调试**" 下。 在下拉控件中选择 "调试器类型"。 有关调试C++代码的详细信息, 请[参阅教程:了解如何使用C++ Visual Studio](/visualstudio/debugger/getting-started-with-the-debugger-cpp)调试代码和[调试本机代码](/visualstudio/debugger/debugging-native-code)。
+这些属性页位于 "**项目** > **属性** > " "**配置属性** > " "**调试**" 下。 在下拉控件中选择 "调试器类型"。 有关调试C++代码的详细信息，请[参阅教程：了解如何使用C++ Visual Studio](/visualstudio/debugger/getting-started-with-the-debugger-cpp)调试代码和[调试本机代码](/visualstudio/debugger/debugging-native-code)。
 
 ## <a name="local-windows-debugger-property-page"></a>"本地 Windows 调试器" 属性页
 
@@ -58,7 +58,7 @@ ms.locfileid: "68537793"
 
 ### <a name="working-directory"></a>工作目录
 
-应用程序的工作目录。 默认情况下, 包含项目文件的目录。
+应用程序的工作目录。 默认情况下，包含项目文件的目录。
 
 ### <a name="attach"></a>Attach
 
@@ -66,7 +66,7 @@ ms.locfileid: "68537793"
 
 ### <a name="debugger-type"></a>调试器类型
 
-指定要使用的调试器类型。 如果设置为 "自动", 则将根据 exe 文件的内容选择调试器类型。
+指定要使用的调试器类型。 如果设置为 "自动"，则将根据 exe 文件的内容选择调试器类型。
 
 **方案**
 
@@ -75,15 +75,15 @@ ms.locfileid: "68537793"
 - **混合**混合
 - **自动**自动
 - **脚本**-脚本
-- **仅限 GPUC++ (amp)** -仅限C++ gpu (amp)
+- **仅限 GPUC++ （amp）** -仅限C++ gpu （amp）
 
 ### <a name="environment"></a>环境
 
-指定要调试的程序的环境, 或要与现有环境合并的变量。
+指定要调试的程序的环境，或要与现有环境合并的变量。
 
 ### <a name="debugging-accelerator-type"></a>调试加速器类型
 
-用于调试 GPU 代码的调试加速器类型。 (当 GPU 调试器处于活动状态时可用。)
+用于调试 GPU 代码的调试加速器类型。 （当 GPU 调试器处于活动状态时可用。）
 
 ### <a name="gpu-default-breakpoint-behavior"></a>GPU 默认断点行为
 
@@ -92,7 +92,7 @@ ms.locfileid: "68537793"
 **方案**
 
 - **每**个弯曲一次中断一次
-- 为每个线程**中断 (例如 cpu 行为)** -每个线程中断 (如 cpu 行为)
+- 为每个线程**中断（例如 cpu 行为）** -每个线程中断（如 cpu 行为）
 
 ### <a name="merge-environment"></a>合并环境
 
@@ -104,11 +104,11 @@ ms.locfileid: "68537793"
 
 ### <a name="amp-default-accelerator"></a>Amp 默认快捷键
 
-覆盖C++ AMP 的默认快捷键选择。 调试托管代码时, 属性不适用。
+覆盖C++ AMP 的默认快捷键选择。 调试托管代码时，属性不适用。
 
 ## <a name="remote-windows-debugger-property-page"></a>"远程 Windows 调试器" 属性页
 
-有关远程调试的详细信息, 请参阅[在 Visual Studio C++中远程调试视觉对象](/visualstudio/debugger/remote-debugging-cpp)。
+有关远程调试的详细信息，请参阅[在 Visual Studio C++中远程调试视觉对象](/visualstudio/debugger/remote-debugging-cpp)。
 
 ### <a name="remote-command"></a>远程命令
 
@@ -120,7 +120,7 @@ ms.locfileid: "68537793"
 
 ### <a name="working-directory"></a>工作目录
 
-应用程序的工作目录。 默认情况下, 包含项目文件的目录。
+应用程序的工作目录。 默认情况下，包含项目文件的目录。
 
 ### <a name="remote-server-name"></a>远程服务器名称
 
@@ -133,11 +133,11 @@ ms.locfileid: "68537793"
 **方案**
 
 - **带 windows 身份验证的远程**-远程和[windows 身份验证](/windows-server/security/windows-authentication/windows-authentication-overview)。
-- **不带身份验证的远程远程**身份验证 (无身份验证)。
+- **不带身份验证的远程远程**身份验证（无身份验证）。
 
 ### <a name="debugger-type"></a>调试器类型
 
-指定要使用的调试器类型。 如果设置为 "自动", 则将根据 exe 文件的内容选择调试器类型。
+指定要使用的调试器类型。 如果设置为 "自动"，则将根据 exe 文件的内容选择调试器类型。
 
 **方案**
 
@@ -146,15 +146,15 @@ ms.locfileid: "68537793"
 - **混合**混合
 - **自动**自动
 - **脚本**-脚本
-- **仅限 GPUC++ (amp)** -仅限C++ gpu (amp)
+- **仅限 GPUC++ （amp）** -仅限C++ gpu （amp）
 
 ### <a name="environment"></a>环境
 
-指定要调试的程序的环境, 或要与现有环境合并的变量。
+指定要调试的程序的环境，或要与现有环境合并的变量。
 
 ### <a name="debugging-accelerator-type"></a>调试加速器类型
 
-用于调试 GPU 代码的调试加速器类型。 (当 GPU 调试器处于活动状态时可用。)
+用于调试 GPU 代码的调试加速器类型。 （当 GPU 调试器处于活动状态时可用。）
 
 ### <a name="gpu-default-breakpoint-behavior"></a>GPU 默认断点行为
 
@@ -163,7 +163,7 @@ ms.locfileid: "68537793"
 **方案**
 
 - **每**个弯曲一次中断一次
-- 为每个线程**中断 (例如 cpu 行为)** -每个线程中断 (如 cpu 行为)
+- 为每个线程**中断（例如 cpu 行为）** -每个线程中断（如 cpu 行为）
 
 ### <a name="attach"></a>Attach
 
@@ -175,19 +175,19 @@ ms.locfileid: "68537793"
 
 ### <a name="deployment-directory"></a>部署目录
 
-当在远程计算机上进行调试时, 如果希望将项目输出的内容 (PDB 文件除外) 复制到远程计算机, 请在此指定路径。
+当在远程计算机上进行调试时，如果希望将项目输出的内容（PDB 文件除外）复制到远程计算机，请在此指定路径。
 
 ### <a name="additional-files-to-deploy"></a>其他要部署的文件
 
-在远程计算机上进行调试时, 此处指定的文件和目录 (项目输出除外) 将被复制到部署目录 (如果已指定)。
+在远程计算机上进行调试时，此处指定的文件和目录（项目输出除外）将被复制到部署目录（如果已指定）。
 
 ### <a name="deploy-visual-c-debug-runtime-libraries"></a>部署 Visual C++ 调试运行时库
 
-指定是否为活动平台 (Win32、x64 或 ARM) 部署调试运行库。
+指定是否为活动平台（Win32、x64 或 ARM）部署调试运行库。
 
 ### <a name="amp-default-accelerator"></a>Amp 默认快捷键
 
-覆盖C++ AMP 的默认快捷键选择。 调试托管代码时, 属性不适用。
+覆盖C++ AMP 的默认快捷键选择。 调试托管代码时，属性不适用。
 
 ## <a name="web-browser-debugger-property-page"></a>Web 浏览器调试器属性页
 
@@ -197,7 +197,7 @@ ms.locfileid: "68537793"
 
 ### <a name="debugger-type"></a>调试器类型
 
-指定要使用的调试器类型。 如果设置为 "自动", 则将根据 exe 文件的内容选择调试器类型。
+指定要使用的调试器类型。 如果设置为 "自动"，则将根据 exe 文件的内容选择调试器类型。
 
 **方案**
 
@@ -215,7 +215,7 @@ ms.locfileid: "68537793"
 
 ### <a name="debugger-type"></a>调试器类型
 
-指定要使用的调试器类型。 如果设置为 "自动", 则将根据 exe 文件的内容选择调试器类型。
+指定要使用的调试器类型。 如果设置为 "自动"，则将根据 exe 文件的内容选择调试器类型。
 
 **方案**
 

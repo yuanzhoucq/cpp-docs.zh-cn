@@ -1,6 +1,6 @@
 ---
 title: 支持 Unicode
-ms.date: 1/09/2018
+ms.date: 01/09/2018
 helpviewer_keywords:
 - globalization [C++], character sets
 - portable data types [MFC]
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - character sets [C++], Unicode
 - localization [C++], character sets
 - Unicode [C++], installing support
-ms.openlocfilehash: fea49bff2a4563b8617e19636e27afbae1c55811
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c30cb1fbfb1930b5e4b026e58c478f0099e8ecdf
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410546"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929919"
 ---
 # <a name="support-for-unicode"></a>支持 Unicode
 
-Unicode 是支持所有字符集，包括那些不能表示仅为一个字节 （即，其中的大多数） 中的规范。 如果为国际市场编程时，我们建议你使用 Unicode 或[多字节字符集](../text/support-for-multibyte-character-sets-mbcss.md)(MBCS)，或对程序进行编码，以便能够通过更改开关来生成。
+Unicode 是支持所有字符集（包括不能用单字节表示的字符集）的规范。  如果要对国际市场进行编程，建议使用 Unicode 或[多字节字符集](../text/support-for-multibyte-character-sets-mbcss.md)（MBCS）。 或者编写程序代码，以便可以通过更改开关来生成。
 
-宽字符是双字节多语言字符代码。 可以根据 Unicode 规范为单个范围表示数以万计的字符，其中包含几乎所有使用的字符在现代全球，计算包括技术符号和特殊的发布字符，字符编码使用 utf-16。 通过使用 Unicode 代理项对功能，可在 Unicode 对表示不能在一个宽字符表示的字符。 由于普通用途的几乎每个字符以 utf-16 表示在单个 16 位宽字符，使用宽字符可以简化使用国际字符集进行编程。 宽字符编码 （适用于小字节序） 使用 UTF 16LE 是 Windows 的本机字符格式。
+宽字符是双字节多语言字符代码。 成千上万个字符（包括技术符号和特殊的发布字符）可根据 Unicode 规范（包括技术符号和特殊的发布字符）用使用 UTF-16。 使用 Unicode 代理项对功能，只能在 Unicode 对中表示不能用一个宽字符表示的字符。 由于几乎每个字符在单个16位宽字符中以 UTF-16 表示，因此使用宽字符可简化使用国际字符集进行的编程。 使用 UTF-16LE （对于小字节序）进行编码的宽字符是 Windows 的本机字符格式。
 
-宽字符串表示为一个 `wchar_t[]` 数组，由 `wchar_t*` 指针指向它。 通过使用字母 L 作为该字符的前缀，可将任何 ASCII 字符表示为宽字符。 例如，L \0' 是终止宽 （16 位） NULL 字符。 同样，通过使用字母 L 作为 ASCII 文本的前缀 (L"Hello")，可将任何 ASCII 字符串文本表示为宽字符字符串。
+宽字符串表示为一个 `wchar_t[]` 数组，由 `wchar_t*` 指针指向它。 通过使用字母 L 作为该字符的前缀，可将任何 ASCII 字符表示为宽字符。 例如，L "\ 0" 是终止宽（16位）空字符。 同样，通过使用字母 L 作为 ASCII 文本的前缀 (L"Hello")，可将任何 ASCII 字符串文本表示为宽字符字符串。
 
-通常，宽字符在内存中占用的空间比多字节字符多，但处理速度更快。 此外，只有一个区域设置可以表示多字节编码中一次，而世界中的所有字符都设置同时以 Unicode 表示形式。
+通常，宽字符在内存中占用的空间比多字节字符多，但处理速度更快。 此外，在多字节编码中一次只能表示一个区域设置，而世界上的所有字符集同时由 Unicode 表示形式表示。
 
 MFC 框架完全支持 Unicode，MFC 通过使用可移植的宏来实现对 Unicode 的支持，如下表所示。
 
@@ -33,28 +33,28 @@ MFC 框架完全支持 Unicode，MFC 通过使用可移植的宏来实现对 Uni
 |不可移植的数据类型|替换为此宏|
 |-----------------------------|----------------------------|
 |`char`， `wchar_t`|`_TCHAR`|
-|`char*``LPSTR` （Win32 数据类型） `LPWSTR`|`LPTSTR`|
-|`const char*``LPCSTR` （Win32 数据类型） `LPCWSTR`|`LPCTSTR`|
+|`char*`， `LPSTR` （Win32 数据类型），`LPWSTR`|`LPTSTR`|
+|`const char*`， `LPCSTR` （Win32 数据类型），`LPCWSTR`|`LPCTSTR`|
 
-类`CString`使用`_TCHAR`作为其基类，并提供构造函数和运算符以方便转换。 通过使用与用于处理 Windows ANSI 字符集相同的逻辑，可编写 Unicode 的大多数字符串操作，但基本操作单位是 16 位字符，而非 8 位字节。 与使用多字节字符集不同，不必（也不应）将 Unicode 字符视为两个不同的字节。 执行操作，但是，必须处理由代理项对的宽字符表示的单个字符的可能性。 一般情况下，不要编写会假定字符串的长度为相同数量的字符，是否窄或宽，它包含的代码。
+类`CString` 使用`_TCHAR`作为其基，并提供用于轻松转换的构造函数和运算符。 通过使用与用于处理 Windows ANSI 字符集相同的逻辑，可编写 Unicode 的大多数字符串操作，但基本操作单位是 16 位字符，而非 8 位字节。 与使用多字节字符集不同，不必（也不应）将 Unicode 字符视为两个不同的字节。 但是，您必须处理由代理项对宽字符表示的单个字符。 通常，不要编写假定字符串长度与它所包含的字符数（无论是否为窄或宽）相同的代码。
 
 ## <a name="what-do-you-want-to-do"></a>你希望做什么？
 
-- [使用 MFC Unicode 和多字节字符集 (MBCS) 支持](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)
+- [使用 MFC Unicode 和多字节字符集（MBCS）支持](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)
 
 - [在我的程序中启用 Unicode](../text/international-enabling.md)
 
 - [在我的程序中启用 Unicode 和 MBCS](../text/internationalization-strategies.md)
 
-- [使用 Unicode 创建国际化的程序](../text/unicode-programming-summary.md)
+- [使用 Unicode 创建国际化程序](../text/unicode-programming-summary.md)
 
 - [了解 Unicode 的优点](../text/benefits-of-character-set-portability.md)
 
-- [使用 wmain 以便我可以将宽字符自变量传递到我的程序](../text/support-for-using-wmain.md)
+- [使用 wmain 以便我可以将宽字符参数传递给我的程序](../text/support-for-using-wmain.md)
 
 - [请参阅 Unicode 编程摘要](../text/unicode-programming-summary.md)
 
-- [了解字节宽度可移植性的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)
+- [了解用于字节宽度可移植性的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)
 
 ## <a name="see-also"></a>请参阅
 

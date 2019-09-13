@@ -1,18 +1,18 @@
 ---
 title: “链接器”属性页
-ms.date: 7/24/2019
+ms.date: 07/24/2019
 ms.topic: article
 ms.assetid: 7e7671e5-a35a-4e67-9bdb-661d75c4d11e
-ms.openlocfilehash: 17880d50ae012b640cb83f3766883ab2b1bcbe73
-ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
+ms.openlocfilehash: 55fcefd826ec6ecb153adad495e21ce97aa432f1
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537591"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927708"
 ---
 # <a name="linker-property-pages"></a>“链接器”属性页
 
-以下属性位于 "**项目** > **属性** > " "**配置属性** > " "**链接器**" 下。 有关链接器的详细信息, 请参阅[CL 调用链接器](cl-invokes-the-linker.md)和[链接器选项](linker-options.md)。
+以下属性位于 "**项目** > **属性** > " "**配置属性** > " "**链接器**" 下。 有关链接器的详细信息，请参阅[CL 调用链接器](cl-invokes-the-linker.md)和[链接器选项](linker-options.md)。
 
 ## <a name="general-property-page"></a>"常规属性" 页
 
@@ -36,11 +36,11 @@ ms.locfileid: "68537591"
 
 ### <a name="version"></a>Version
 
-[/VERSION](version-version-information.md)选项告知链接器将版本号置于 .exe 或 .dll 文件的标头中。 使用 DUMPBIN/HEADERS 查看可选标头值的 "图像版本" 字段, 以查看 **/VERSION**的效果。
+[/VERSION](version-version-information.md)选项告知链接器将版本号置于 .exe 或 .dll 文件的标头中。 使用 DUMPBIN/HEADERS 查看可选标头值的 "图像版本" 字段，以查看 **/VERSION**的效果。
 
 ### <a name="enable-incremental-linking"></a>启用增量链接
 
-启用增量链接。 ([/INCREMENTAL](incremental-link-incrementally.md),/INCREMENTAL: NO)
+启用增量链接。 （[/INCREMENTAL](incremental-link-incrementally.md)，/INCREMENTAL： NO）
 
 ### <a name="suppress-startup-banner"></a>取消显示启动版权标志
 
@@ -48,7 +48,7 @@ ms.locfileid: "68537591"
 
 ### <a name="ignore-import-library"></a>Ignore Import Library
 
-此属性指示链接器不要将基于该版本生成的任何 .lib 输出链接到任何相关项目。 这允许项目系统处理在生成时不创建 .lib 文件的 .dll 文件。 如果项目依赖于创建 DLL 的另一个项目，则项目系统会自动链接该子项目生成的 .lib 文件。 正在生成 COM DLL 或纯资源 DLL 的项目可能无需执行此操作，这些 DLL 的输出不具任何意义。 如果 DLL 没有导出项，链接器不会生成 .lib 文件。 如果磁盘上没有导出 .lib 文件，并且项目系统指示链接器链接此（缺少的）DLL，则链接将失败。 使用 Ignore Import Library 属性解决此问题  。 设置为“是”时，项目系统会忽略是否存在该 .lib 文件，并导致依赖于此项目的任何项目不与非存在的 .lib 文件进行链接  。
+此属性指示链接器不要将基于该版本生成的任何 .lib 输出链接到任何相关项目。 它允许项目系统处理在生成时不生成 .lib 文件的 .dll 文件。 如果项目依赖于创建 DLL 的另一个项目，则项目系统会自动链接该子项目生成的 .lib 文件。 此属性可能在生成 COM Dll 或纯资源 Dll 的项目中不必要，因为这些 Dll 没有任何有意义的导出。 如果 DLL 没有导出，链接器不会生成 .lib 文件。 如果不存在导出 .lib 文件，并且项目系统通知链接器与缺少的 DLL 链接，链接将失败。 使用 Ignore Import Library 属性解决此问题。 当设置为 **"是"** 时，项目系统将忽略 .lib 文件是否存在，并使依赖于此项目的任何项目不与不存在的 .lib 文件链接。
 
 若要以编程方式访问此属性，请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreImportLibrary%2A>。
 
@@ -60,33 +60,33 @@ ms.locfileid: "68537591"
 
 ### <a name="per-user-redirection"></a>Per-user Redirection
 
-传统上，Visual Studio 中的注册是在 HKEY_CLASSES_ROOT (HKCR) 中完成的。 如果使用 Windows Vista 及更高版本的操作系统，则必须在提升模式下运行 Visual Studio 才能访问 HKCR。 开发人员并非总是希望在提升模式下运行，但仍然必须注册。 使用 Per-user Redirection，可在非此模式下运行时进行注册。
+传统上，Visual Studio 中的注册是在 HKEY_CLASSES_ROOT (HKCR) 中完成的。 如果使用 Windows Vista 及更高版本的操作系统，则必须在提升模式下运行 Visual Studio 才能访问 HKCR。 开发人员并不总是希望在提升模式下运行，但仍必须与注册一起工作。 每个用户的重定向允许注册，而无需在提升模式下运行。
 
 Per-user Redirection 强制将任何对 HKCR 的写入重定向到 HKEY\_CURRENT\_USER (HKCU)。 如果关闭了 Per-user Redirection，当程序试图写入到 HKCR 时，可能导致[项目生成错误 PRJ0050](../../error-messages/tool-errors/project-build-error-prj0050.md)。
 
 ### <a name="additional-library-directories"></a>附加库目录
 
-允许用户重写环境库路径。 ([/LIBPATH](libpath-additional-libpath.md): folder)
+允许用户重写环境库路径。 （[/LIBPATH](libpath-additional-libpath.md)： folder）
 
 ### <a name="link-library-dependencies"></a>链接库依赖项
 
-指定是否链接由依赖项目生成的 .lib 文件。 通常，需要链接 .lib 文件，但某些 DLL 可能并非如此。
+指定是否链接由依赖项目生成的 .lib 文件。 通常，您需要在 .lib 文件中链接，但对于某些 Dll，可能不会出现这种情况。
 
-也可通过提供文件名和相对路径来指定 .obj 文件，如“..\\..\MyLibProject\MyObjFile.obj”。 如果 .obj 文件 的源代码包含预编译标头（如 pch.h），则 pch.obj 文件位于 MyObjFile.obj 所在的文件夹中，且必须将 pch.obj 添加为附加依赖项。
+也可通过提供文件名和相对路径来指定 .obj 文件，如“..\\..\MyLibProject\MyObjFile.obj”。 如果 .obj 文件的源代码 #includes 一个预编译标头（例如，.pch），则 pch 文件位于与 MyObjFile 相同的文件夹中。还必须添加 .pch 作为附加依赖项。
 
 ### <a name="use-library-dependency-inputs"></a>使用库依赖项输入
 
-指定在项目依赖项的库输出中进行链接时, 是否使用管理员工具的输入而不是库文件本身。 在大型项目中，当依赖项目生成 .lib 文件时，将禁用增量链接。 如果有许多依赖项目生成 .lib 文件，则生成应用程序可能需要很长时间。 当此属性设置为“是”时，项目系统链接 .obj 文件中依赖项目生成的 .lib 文件，从而启用增量链接  。
+指定在项目依赖项的库输出中进行链接时，是否使用管理员工具的输入，而不是库文件本身。 在大型项目中，当依赖项目生成 .lib 文件时，将禁用增量链接。 如果有许多依赖项目生成 .lib 文件，则生成应用程序可能需要很长时间。 当此属性设置为 **"是"** 时，项目系统会链接依赖项目生成的 .lib 文件中的 .obj 文件，从而启用增量链接。
 
-有关如何访问 "**常规**链接器" 属性页的信息, 请参阅[在 Visual Studio 中设置C++编译器和生成属性](../working-with-project-properties.md)。
+有关如何访问 "**常规**链接器" 属性页的信息，请参阅[在 Visual Studio 中设置C++编译器和生成属性](../working-with-project-properties.md)。
 
 ### <a name="link-status"></a>链接状态
 
-指定链接器是否应显示进度指示器以显示链接完成的百分比。 默认情况下, 不显示此状态信息。 ([/LTCG](ltcg-link-time-code-generation.md): 状态 |LTCG: NOSTATUS)
+指定链接器是否应显示进度指示器以显示链接完成的百分比。 默认情况下，不显示此状态信息。 （[/LTCG](ltcg-link-time-code-generation.md)：状态 |LTCG： NOSTATUS）
 
-### <a name="prevent-dll-binding"></a>阻止 Dll 绑定
+### <a name="prevent-dll-binding"></a>阻止 DLL 绑定
 
-[/ALLOWBIND](allowbind-prevent-dll-binding.md): NO 在 DLL 的标头中设置一个位, 这表示不允许对该映像进行绑定。 如果 DLL 已经进行数字签名（绑定使签名无效），可能不需要绑定 DLL。
+[/ALLOWBIND](allowbind-prevent-dll-binding.md)： NO 在 DLL 的标头中设置一个位，这表示不允许将该图像绑定到的 .exe。 如果 DLL 已经进行数字签名（绑定使签名无效），可能不需要绑定 DLL。
 
 ### <a name="treat-linker-warning-as-errors"></a>将链接器警告视为错误
 
@@ -94,13 +94,13 @@ Per-user Redirection 强制将任何对 HKCR 的写入重定向到 HKEY\_CURRENT
 
 ### <a name="force-file-output"></a>强制文件输出
 
-[/Force](force-force-file-output.md)选项通知链接器创建 .exe 文件或 DLL, 即使引用的是符号但未定义或被多次定义也是如此。 它可能会创建无效的 .exe 文件。
+[/Force](force-force-file-output.md)选项通知链接器创建 .exe 文件或 DLL，即使引用的是符号但未定义或被多次定义。 它可能会创建无效的 .exe 文件。
 
 **方案**
 
 - **已启用**-不带参数的/force 表示多个和未解析。
-- **仅限定义的符号**, 使用/FORCE: MULTIPLE 可创建输出文件, 而不管 LINK 是否找到某个符号的多个定义。
-- **仅限未定义的符号**-使用/FORCE: 无法解析以创建输出文件, 而不管 LINK 是否找到未定义的符号。 /FORCE: 如果入口点符号未解析, 则忽略未解析的。
+- **仅限定义的符号**，使用/FORCE： MULTIPLE 可创建输出文件，即使 LINK 找到符号的多个定义。
+- **仅限未定义的符号**-使用/FORCE：无法解析以创建输出文件，而不管 LINK 是否找到未定义的符号。 /FORCE: 如果入口点符号未解析, 则忽略未解析的。
 
 ### <a name="create-hot-patchable-image"></a>创建热可修补映像
 
@@ -115,13 +115,13 @@ Per-user Redirection 强制将任何对 HKCR 的写入重定向到 HKEY\_CURRENT
 
 ### <a name="specify-section-attributes"></a>指定节特性
 
-[/SECTION](section-specify-section-attributes.md)选项将更改节的特性, 重写编译节的 .obj 文件时设置的特性。
+[/SECTION](section-specify-section-attributes.md)选项将更改节的特性，重写编译节的 .obj 文件时设置的特性。
 
 ## <a name="input-property-page"></a>输入属性页
 
 ### <a name="additional-dependencies"></a>附加依赖项
 
-指定要添加到链接命令行的附加项, 例如*kernel32.dll*。
+指定要添加到链接命令行的附加项，例如*kernel32.dll*。
 
 ### <a name="ignore-all-default-libraries"></a>忽略所有默认库
 
@@ -129,15 +129,15 @@ Per-user Redirection 强制将任何对 HKCR 的写入重定向到 HKEY\_CURRENT
 
 ### <a name="ignore-specific-default-libraries"></a>忽略特定默认库
 
-指定要忽略的一个或多个默认库的名称;用分号分隔多个库。 (/NODEFAULTLIB: [名称, 名称, ...])
+指定一个或多个要忽略的默认库的名称。 用分号分隔多个库。 （/NODEFAULTLIB： [名称，名称，...]）
 
 ### <a name="module-definition-file"></a>模块定义文件
 
-[/DEF](def-specify-module-definition-file.md)选项将模块定义文件 (.def) 传递到链接器。 仅可指定一个 .def 文件来链接。 
+[/DEF](def-specify-module-definition-file.md)选项将模块定义文件（.def）传递到链接器。 仅可指定一个 .def 文件来链接。 
 
 ### <a name="add-module-to-assembly"></a>向程序集添加模块
 
-使用[/ASSEMBLYMODULE](assemblymodule-add-a-msil-module-to-the-assembly.md)选项, 可以将模块引用添加到程序集。 模块中的类型信息将不可用于添加了模块引用的程序集程序。 但是, 模块中的类型信息将可用于引用该程序集的任何程序。
+使用[/ASSEMBLYMODULE](assemblymodule-add-a-msil-module-to-the-assembly.md)选项，可以将模块引用添加到程序集。 模块中的类型信息将不可用于添加了模块引用的程序集程序。 但是，模块中的类型信息将可用于引用该程序集的任何程序。
 
 ### <a name="embed-managed-resource-file"></a>嵌入托管资源文件
 
@@ -167,29 +167,29 @@ Per-user Redirection 强制将任何对 HKCR 的写入重定向到 HKEY\_CURRENT
 
 ### <a name="additional-manifest-dependencies"></a>附加清单依赖项
 
-通过[/MANIFESTDEPENDENCY](manifestdependency-specify-manifest-dependencies.md) , 您可以指定将放置在清单文件的依赖项节中的特性。
+通过[/MANIFESTDEPENDENCY](manifestdependency-specify-manifest-dependencies.md) ，您可以指定将放置在清单文件的依赖项节中的特性。
 
 ### <a name="allow-isolation"></a>允许隔离
 
-指定清单查找的行为。 ([/ALLOWISOLATION](allowisolation-manifest-lookup.md): NO)
+指定清单查找的行为。 （[/ALLOWISOLATION](allowisolation-manifest-lookup.md)： NO）
 
-### <a name="enable-user-account-control-uac"></a>启用用户帐户控制 (UAC)
+### <a name="enable-user-account-control-uac"></a>启用用户帐户控制（UAC）
 
-指定是否启用用户帐户控制。  ([/MANIFESTUAC](manifestuac-embeds-uac-information-in-manifest.md),/MANIFESTUAC: NO)
+指定是否启用用户帐户控制。  （[/MANIFESTUAC](manifestuac-embeds-uac-information-in-manifest.md)，/MANIFESTUAC： NO）
 
 ### <a name="uac-execution-level"></a>UAC 执行级别
 
-指定在用用户帐户控制运行时为应用程序请求的执行级别。  (/MANIFESTUAC: level = [值])
+指定在用用户帐户控制运行时为应用程序请求的执行级别。  （/MANIFESTUAC： level = [值]）
 
 **方案**
 
-- **asInvoker** -UAC 执行级别: 作为调用程序。
-- **highestAvailable** -UAC 执行级别: 最高可用。
-- **requireAdministrator** -UAC 执行级别: 需要管理员。
+- **asInvoker** -UAC 执行级别：作为调用程序。
+- **highestAvailable** -UAC 执行级别：最高可用。
+- **requireAdministrator** -UAC 执行级别：需要管理员。
 
 ### <a name="uac-bypass-ui-protection"></a>UAC 绕过 UI 保护
 
-指定是否绕过桌面上其他窗口的用户界面保护级别。  仅对辅助功能应用程序将此属性设置为 "是"。  ([/MANIFESTUAC](manifestuac-embeds-uac-information-in-manifest.md): uiAccess = [true | false])
+指定是否绕过桌面上其他窗口的用户界面保护级别。  仅对辅助功能应用程序将此属性设置为 "是"。  （[/MANIFESTUAC](manifestuac-embeds-uac-information-in-manifest.md)： uiAccess = [true | false]）
 
 ## <a name="debugging-property-page"></a>“调试”属性页
 
@@ -200,17 +200,17 @@ Per-user Redirection 强制将任何对 HKCR 的写入重定向到 HKEY\_CURRENT
 **方案**
 
 - **No** -不生成任何调试信息。
-- **生成调试信息**-创建一个适用于 Microsoft 符号服务器分发的完整程序数据库 (PDB)。
-- **为更快的链接生成调试信息优化**-生成适用于编辑-链接-调试周期的程序数据库 (PDB)。 
-- **生成经过优化以共享和发布的调试信息**-生成适用于编辑-链接-调试周期的程序数据库 (PDB)。 
+- **生成调试信息**-创建一个适用于 Microsoft 符号服务器分发的完整程序数据库（PDB）。
+- **为更快的链接生成调试信息优化**-生成适用于编辑-链接-调试周期的程序数据库（PDB）。 
+- **生成经过优化以共享和发布的调试信息**-生成适用于编辑-链接-调试周期的程序数据库（PDB）。 
 
 ### <a name="generate-program-database-file"></a>生成程序数据库文件
 
-默认情况下, 如果指定了[/debug](debug-generate-debug-info.md) , 则链接器会创建一个保存调试信息的程序数据库 (PDB)。 PDB 的默认文件名具有程序的基名称和扩展名 .pdb。
+默认情况下，如果指定了[/debug](debug-generate-debug-info.md) ，则链接器会创建一个保存调试信息的程序数据库（PDB）。 PDB 的默认文件名具有程序的基名称和扩展名 .pdb。
 
 ### <a name="strip-private-symbols"></a>去除私有符号
 
-使用任何生成 PDB 文件的编译器或链接器选项 (/DEBUG、/Z7、/Zd 或/Zi) 生成程序映像时, [/PDBSTRIPPED](pdbstripped-strip-private-symbols.md)选项将创建另一个程序数据库 (PDB) 文件。
+使用任何生成 PDB 文件的编译器或链接器选项（/DEBUG、/Z7、/Zd 或/Zi）生成程序映像时， [/PDBSTRIPPED](pdbstripped-strip-private-symbols.md)选项将创建另一个程序数据库（PDB）文件。
 
 ### <a name="generate-map-file"></a>生成映射文件
 
@@ -222,7 +222,7 @@ Per-user Redirection 强制将任何对 HKCR 的写入重定向到 HKEY\_CURRENT
 
 ### <a name="map-exports"></a>映射导出
 
-[/MAPINFO](mapinfo-include-information-in-mapfile.md)选项告知链接器在映射器中包含指定的信息, 如果指定了/MAP 选项, 则会创建该映射。 导出通知链接器包含导出的函数。
+[/MAPINFO](mapinfo-include-information-in-mapfile.md)选项告知链接器在映射器中包含指定的信息，如果指定了/MAP 选项，则会创建该映射。 导出通知链接器包含导出的函数。
 
 ### <a name="debuggable-assembly"></a>可调试程序集
 
@@ -232,14 +232,14 @@ Per-user Redirection 强制将任何对 HKCR 的写入重定向到 HKEY\_CURRENT
 
 ### <a name="subsystem"></a>适用
 
-[/SUBSYSTEM](subsystem-specify-subsystem.md)选项告知操作系统如何运行 .exe 文件。子系统的选择会影响链接器将选择的入口点符号 (或入口点函数)。
+[/SUBSYSTEM](subsystem-specify-subsystem.md)选项告知操作系统如何运行 .exe 文件。 子系统的选择会影响链接器将选择的入口点符号（或入口点函数）。
 
 **方案**
 
 - **未设置**-未设置子系统。
-- **Console** -Win32 字符模式应用程序。 操作系统为控制台应用程序提供控制台。 如果定义了 main 或 wmain, 则控制台为默认值。
-- **Windows**应用程序不需要控制台, 这可能是因为它创建自己的 Windows 以便与用户交互。 如果定义了 WinMain 或 wWinMain, 则默认情况下为 WINDOWS。
-- Windows NT 的**本机**-设备驱动程序。 如果指定了/DRIVER: WDM, 则默认值为 NATIVE。
+- **Console** -Win32 字符模式应用程序。 操作系统为控制台应用程序提供控制台。 如果定义了 main 或 wmain，则控制台为默认值。
+- **Windows**应用程序不需要控制台，这可能是因为它创建自己的 Windows 以便与用户交互。 如果定义了 WinMain 或 wWinMain，则默认情况下为 WINDOWS。
+- Windows NT 的**本机**-设备驱动程序。 如果指定了/DRIVER： WDM，则默认值为 NATIVE。
 - **Efi 应用程序**-Efi 应用程序。
 - **Efi 启动服务驱动**程序-Efi 启动服务驱动程序。
 - **EFI ROM** -EFI ROM。
@@ -252,23 +252,23 @@ Per-user Redirection 强制将任何对 HKCR 的写入重定向到 HKEY\_CURRENT
 
 ### <a name="heap-reserve-size"></a>堆保留大小
 
-指定虚拟内存中堆分配的合计大小。 默认值为 1 MB。    ([/HEAP](heap-set-heap-size.md): reserve)
+指定虚拟内存中堆分配的合计大小。 默认值为 1 MB。    （[/HEAP](heap-set-heap-size.md)： reserve）
 
 ### <a name="heap-commit-size"></a>堆提交大小
 
-指定物理内存中堆分配的合计大小。 默认值为 4 KB。    ([/HEAP](heap-set-heap-size.md): reserve, commit)
+指定物理内存中堆分配的合计大小。 默认值为 4 KB。    （[/HEAP](heap-set-heap-size.md)： reserve，commit）
 
 ### <a name="stack-reserve-size"></a>堆栈预留大小
 
-指定虚拟内存中的堆栈分配总大小。 默认值为 1 MB。     ([/STACK](stack-stack-allocations.md): reserve)
+指定虚拟内存中的堆栈分配总大小。 默认值为 1 MB。     （[/STACK](stack-stack-allocations.md)： reserve）
 
 ### <a name="stack-commit-size"></a>堆栈提交大小
 
-指定物理内存中堆栈分配的合计大小。 默认值为 4 KB。     ([/STACK](stack-stack-allocations.md): reserve, commit)
+指定物理内存中堆栈分配的合计大小。 默认值为 4 KB。     （[/STACK](stack-stack-allocations.md)： reserve，commit）
 
 ### <a name="enable-large-addresses"></a>启用大地址
 
-[/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md)选项告知链接器应用程序可以处理大于 2 gb 的地址。 默认情况下, 如果未在链接器行上指定/LARGEADDRESSAWARE, 则默认情况下启用/LARGEADDRESSAWARE: NO。
+[/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md)选项告知链接器应用程序可以处理大于 2 gb 的地址。 默认情况下，如果未在链接器行上指定/LARGEADDRESSAWARE，则默认情况下启用/LARGEADDRESSAWARE： NO。
 
 ### <a name="terminal-server"></a>终端服务器
 
@@ -276,11 +276,11 @@ Per-user Redirection 强制将任何对 HKCR 的写入重定向到 HKEY\_CURRENT
 
 ### <a name="swap-run-from-cd"></a>从 CD 交换运行
 
-[/SWAPRUN](swaprun-load-linker-output-to-swap-file.md)选项告知操作系统首先将链接器输出复制到交换文件, 然后从此处运行映像。 这是 Windows NT 4.0 (及更高版本) 的功能。 指定**CD**后, 操作系统会将可移动磁盘上的映像复制到页面文件, 然后将其加载。
+[/SWAPRUN](swaprun-load-linker-output-to-swap-file.md)选项告知操作系统首先将链接器输出复制到交换文件，然后从此处运行映像。 此选项是 Windows NT 4.0 （及更高版本）的功能。 指定**CD**后，操作系统会将可移动磁盘上的映像复制到页面文件，然后将其加载。
 
 ### <a name="swap-run-from-network"></a>从网络交换运行
 
-[/SWAPRUN](swaprun-load-linker-output-to-swap-file.md)选项告知操作系统首先将链接器输出复制到交换文件, 然后从此处运行映像。 这是 Windows NT 4.0 (及更高版本) 的功能。 如果指定**NET** , 则操作系统将首先将二进制映像从网络复制到交换文件, 然后从该文件中加载它。 此选项可用于在网络上运行应用程序。
+[/SWAPRUN](swaprun-load-linker-output-to-swap-file.md)选项告知操作系统首先将链接器输出复制到交换文件，然后从此处运行映像。 此选项是 Windows NT 4.0 （及更高版本）的功能。 如果指定**NET** ，则操作系统将首先将二进制映像从网络复制到交换文件，然后从该文件中加载它。 此选项可用于在网络上运行应用程序。
 
 ### <a name="driver"></a>驱动程序
 
@@ -290,30 +290,30 @@ Per-user Redirection 强制将任何对 HKCR 的写入重定向到 HKEY\_CURRENT
 
 - **未设置**-默认驱动程序设置。
 - **驱动**程序-驱动程序
-- **UP** /DRIVER: UPONLY 导致链接器将 IMAGE_FILE_UP_SYSTEM_ONLY 位添加到 output 标头中的特征, 以指定它是一个单处理器 (UP) 驱动程序。 操作系统将拒绝在多处理器 (MP) 系统上加载 UP 驱动程序。
--  /DRIVER: wdm 使链接器设置可选标头的 DLLCHARACTERISTICS 字段中的 IMAGE_DLLCHARACTERISTICS_WDM_DRIVER 位。
+- **UP** /DRIVER： UPONLY 导致链接器将 IMAGE_FILE_UP_SYSTEM_ONLY 位添加到 output 标头中的特征，以指定它是一个单处理器（UP）驱动程序。 操作系统将拒绝在多处理器（MP）系统上加载 UP 驱动程序。
+- /DRIVER **： wdm 使**链接器设置可选标头的 DLLCHARACTERISTICS 字段中的 IMAGE_DLLCHARACTERISTICS_WDM_DRIVER 位。
 
 ## <a name="optimization-property-page"></a>"优化" 属性页
 
 ### <a name="references"></a>参考资料
 
-[/Opt](opt-optimizations.md): REF 消除了在/opt 时从不引用的函数和/或数据: NOREF 保留从未引用的函数和/或数据。 
+[/Opt](opt-optimizations.md)： REF 消除了在/opt 时从不引用的函数和/或数据： NOREF 保留从未引用的函数和/或数据。
 
 ### <a name="enable-comdat-folding"></a>启用 COMDAT 折叠
 
-使用[/opt](opt-optimizations.md): ICF\[= 迭代] 执行相同的 COMDAT 折叠。 
+使用[/opt](opt-optimizations.md)： ICF\[= 迭代] 执行相同的 COMDAT 折叠。
 
 ### <a name="function-order"></a>函数顺序
 
-[/Order](order-put-functions-in-order.md)选项通过以预先确定的顺序将特定的 comdat 放入图像, 告诉链接优化程序。 LINK 按指定顺序将函数置于图像的每个部分中。
+[/Order](order-put-functions-in-order.md)选项通过以预先确定的顺序将特定的 comdat 放入图像，告诉链接优化程序。 LINK 按指定顺序将函数置于图像的每个部分中。
 
 ### <a name="profile-guided-database"></a>按配置文件数据库
 
-为按配置文件优化指定 .pgd 文件。 ([/PGD](pgd-specify-database-for-profile-guided-optimizations.md))
+为按配置文件优化指定 .pgd 文件。 （[/PGD](pgd-specify-database-for-profile-guided-optimizations.md)）
 
 ### <a name="link-time-code-generation"></a>链接时间代码生成
 
-指定链接时间代码生成。 ([/LTCG](ltcg-link-time-code-generation.md))
+指定链接时间代码生成。 （[/LTCG](ltcg-link-time-code-generation.md)）
 
 **方案**
 
@@ -328,7 +328,7 @@ Per-user Redirection 强制将任何对 HKCR 的写入重定向到 HKEY\_CURRENT
 
 ### <a name="midl-commands"></a>MIDL 命令
 
-指定 MIDL 命令行选项。 ([/MIDL](midl-specify-midl-command-line-options.md):@responsefile)
+指定 MIDL 命令行选项。 （[/MIDL](midl-specify-midl-command-line-options.md):@responsefile）
 
 ### <a name="ignore-embedded-idl"></a>忽略嵌入的 IDL
 
@@ -344,7 +344,7 @@ Per-user Redirection 强制将任何对 HKCR 的写入重定向到 HKEY\_CURRENT
 
 ### <a name="typelib-resource-id"></a>TypeLib 资源 ID
 
-允许您指定链接器生成的类型库的资源 ID。 ([/TLBID](tlbid-specify-resource-id-for-typelib.md): id)
+允许您指定链接器生成的类型库的资源 ID。 （[/TLBID](tlbid-specify-resource-id-for-typelib.md)： id）
 
 ## <a name="windows-metadata-property-page"></a>"Windows 元数据" 属性页
 
@@ -363,15 +363,15 @@ Per-user Redirection 强制将任何对 HKCR 的写入重定向到 HKEY\_CURRENT
 
 ### <a name="windows-metadata-key-file"></a>Windows 元数据密钥文件
 
-指定密钥或密钥对来对 Windows 元数据进行签名。 ([/WINMDKEYFILE](winmdkeyfile-specify-winmd-key-file.md): filename)
+指定密钥或密钥对来对 Windows 元数据进行签名。 （[/WINMDKEYFILE](winmdkeyfile-specify-winmd-key-file.md)： filename）
 
 ### <a name="windows-metadata-key-container"></a>Windows 元数据密钥容器
 
-指定用于对 Windows 元数据进行签名的密钥容器。 ([/WINMDKEYCONTAINER](winmdkeycontainer-specify-key-container.md): name)
+指定用于对 Windows 元数据进行签名的密钥容器。 （[/WINMDKEYCONTAINER](winmdkeycontainer-specify-key-container.md)： name）
 
 ### <a name="windows-metadata-delay-sign"></a>Windows 元数据延迟签名
 
-对 Windows 元数据进行部分签名。 如果只希望将公钥放在 Windows 元数据中, 请使用[/WINMDDELAYSIGN](winmddelaysign-partially-sign-a-winmd.md) 。 默认值为/WINMDDELAYSIGN: NO。
+对 Windows 元数据进行部分签名。 如果只希望将公钥放在 Windows 元数据中，请使用[/WINMDDELAYSIGN](winmddelaysign-partially-sign-a-winmd.md) 。 默认值为/WINMDDELAYSIGN： NO。
 
 ## <a name="advanced-property-page"></a>"高级" 属性页
 
@@ -389,39 +389,39 @@ Per-user Redirection 强制将任何对 HKCR 的写入重定向到 HKEY\_CURRENT
 
 ### <a name="base-address"></a>基址
 
-为程序设置基址。 ([/Base](base-base-address.md): {address\[, size] |@filename, key})
+为程序设置基址。 （[/Base](base-base-address.md)： {address\[，size] |@filename，key}）
 
 ### <a name="randomized-base-address"></a>随机基址
 
-随机基址。 ([/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)\[: NO])
+随机基址。 （[/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)\[： NO]）
 
 ### <a name="fixed-base-address"></a>固定基址
 
-创建只能在其首选基址加载的程序。 ([/FIXED](fixed-fixed-base-address.md)\[: NO])
+创建只能在其首选基址加载的程序。 （[/FIXED](fixed-fixed-base-address.md)\[： NO]）
 
-### <a name="data-execution-prevention-dep"></a>数据执行保护 (DEP)
+### <a name="data-execution-prevention-dep"></a>数据执行保护（DEP）
 
-将可执行文件标记为经过测试, 以与 Windows 数据执行保护功能兼容。 ([/NXCOMPAT](nxcompat-compatible-with-data-execution-prevention.md)\[: NO])
+将可执行文件标记为经过测试，以与 Windows 数据执行保护功能兼容。 （[/NXCOMPAT](nxcompat-compatible-with-data-execution-prevention.md)\[： NO]）
 
 ### <a name="turn-off-assembly-generation"></a>关闭程序集生成
 
-[/NOASSEMBLY](noassembly-create-a-msil-module.md)选项告知链接器创建当前输出文件的映像, 而不包含 .NET Framework 的程序集。
+[/NOASSEMBLY](noassembly-create-a-msil-module.md)选项告知链接器创建当前输出文件的映像，而不包含 .NET Framework 的程序集。
 
 ### <a name="unload-delay-loaded-dll"></a>卸载延迟加载的 DLL
 
-**卸载**限定符告知延迟加载 helper 函数支持 DLL 的显式卸载。 ([/DELAY](delay-delay-load-import-settings.md): UNLOAD)
+**卸载**限定符告知延迟加载 helper 函数支持 DLL 的显式卸载。 （[/DELAY](delay-delay-load-import-settings.md)： UNLOAD）
 
 ### <a name="nobind-delay-loaded-dll"></a>Nobind 延迟加载的 DLL
 
-**NOBIND**限定符通知链接器不要在最终映像中包含可绑定的 IAT。 默认值是为延迟加载的 DLL 创建可绑定的 IAT。 ([/DELAY](delay-delay-load-import-settings.md): NOBIND)
+**NOBIND**限定符通知链接器不要在最终映像中包含可绑定的 IAT。 默认值是为延迟加载的 DLL 创建可绑定的 IAT。 （[/DELAY](delay-delay-load-import-settings.md)： NOBIND）
 
 ### <a name="import-library"></a>导入库
 
-重写默认的导入库名。 ([/IMPLIB](implib-name-import-library.md): filename)
+重写默认的导入库名。 （[/IMPLIB](implib-name-import-library.md)： filename）
 
 ### <a name="merge-sections"></a>合并部分
 
-[/Merge](merge-combine-sections.md)选项将第一个部分 (从) 与第二部分 (到) 相结合, 并将生成的节命名为。 例如,/merge:. rdata =。
+[/Merge](merge-combine-sections.md)选项将第一个部分（从）与第二部分（到）相结合，并将生成的节命名为。 例如，/merge：. rdata =。
 
 ### <a name="target-machine"></a>目标计算机
 
@@ -445,7 +445,7 @@ Per-user Redirection 强制将任何对 HKCR 的写入重定向到 HKEY\_CURRENT
 
 ### <a name="profile"></a>配置文件
 
-生成一个可与“性能工具”探查器结合使用的输出文件。 需要设置 GenerateDebugInformation (/[/debug](debug-generate-debug-info.md))。 ([/PROFILE](profile-performance-tools-profiler.md))
+生成一个可与“性能工具”探查器结合使用的输出文件。 需要设置 GenerateDebugInformation （/[/debug](debug-generate-debug-info.md)）。 （[/PROFILE](profile-performance-tools-profiler.md)）
 
 ### <a name="clr-thread-attribute"></a>CLR 线程特性
 
@@ -455,7 +455,7 @@ Per-user Redirection 强制将任何对 HKCR 的写入重定向到 HKEY\_CURRENT
 
 - **MTA 线程特性**-将 MTAThreadAttribute 特性应用于程序的入口点。
 - **STA 线程特性**-将 STAThreadAttribute 特性应用于程序的入口点。
-- **默认线程属性**-与未指定[/CLRTHREADATTRIBUTE](clrthreadattribute-set-clr-thread-attribute.md)的属性相同。 允许公共语言运行时 (CLR) 设置默认线程特性。
+- **默认线程属性**-与未指定[/CLRTHREADATTRIBUTE](clrthreadattribute-set-clr-thread-attribute.md)的属性相同。 允许公共语言运行时（CLR）设置默认线程特性。
 
 ### <a name="clr-image-type"></a>CLR 映像类型
 
@@ -470,15 +470,15 @@ Per-user Redirection 强制将任何对 HKCR 的写入重定向到 HKEY\_CURRENT
 
 ### <a name="key-file"></a>密钥文件
 
-指定密钥或密钥对以对程序集进行签名。 ([/KEYFILE](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md): filename)
+指定密钥或密钥对以对程序集进行签名。 （[/KEYFILE](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)： filename）
 
 ### <a name="key-container"></a>密钥容器
 
-指定用于对程序集进行签名的密钥容器。 ([/KEYCONTAINER](keycontainer-specify-a-key-container-to-sign-an-assembly.md): name)
+指定用于对程序集进行签名的密钥容器。 （[/KEYCONTAINER](keycontainer-specify-a-key-container-to-sign-an-assembly.md)： name）
 
 ### <a name="delay-sign"></a>延迟签名
 
-对程序集进行部分签名。 如果只希望将公钥放入程序集中, 请使用[/DELAYSIGN](delaysign-partially-sign-an-assembly.md) 。 默认值为/DELAYSIGN: NO。
+对程序集进行部分签名。 如果只希望将公钥放入程序集中，请使用[/DELAYSIGN](delaysign-partially-sign-an-assembly.md) 。 默认值为/DELAYSIGN： NO。
 
 ### <a name="clr-unmanaged-code-check"></a>CLR 非托管代码检查
 
@@ -491,17 +491,17 @@ Per-user Redirection 强制将任何对 HKCR 的写入重定向到 HKEY\_CURRENT
 **方案**
 
 - **PromptImmediately** -立即提示。
-- 下一次登录时**队列,** 用于下一次登录。
+- 下一次登录时**队列，** 用于下一次登录。
 - **发送错误报告**-发送错误报告。
 - **无错误报告**-无错误报告。
 
 ### <a name="sectionalignment"></a>SectionAlignment
 
-[/Align](align-section-alignment.md)选项指定程序的线性地址空间内每个部分的对齐方式。 Number 参数以字节为单位, 必须是2的幂。
+[/Align](align-section-alignment.md)选项指定程序的线性地址空间内每个部分的对齐方式。 Number 参数以字节为单位，必须是2的幂。
 
 ### <a name="preserve-last-error-code-for-pinvoke-calls"></a>保留 PInvoke 调用的最后一个错误代码
 
-默认情况下, [/CLRSUPPORTLASTERROR](clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls.md)将保留通过 P/Invoke 机制调用的函数的最后一个错误代码, 该机制允许您通过用/clr 编译的代码调用 dll 中的本机函数。
+默认情况下， [/CLRSUPPORTLASTERROR](clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls.md)将保留通过 P/Invoke 机制调用的函数的最后一个错误代码，该机制允许您通过用/clr 编译的代码调用 dll 中的本机函数。
 
 **方案**
 
@@ -511,4 +511,4 @@ Per-user Redirection 强制将任何对 HKCR 的写入重定向到 HKEY\_CURRENT
 
 ### <a name="image-has-safe-exception-handlers"></a>映像具有安全异常处理程序
 
-当指定了[/SAFESEH](safeseh-image-has-safe-exception-handlers.md)时, 链接器将仅生成一个图像, 如果它还可以生成一个映像的安全异常处理程序表。 此表指定操作系统的哪些异常处理程序对图像有效。
+当指定了[/SAFESEH](safeseh-image-has-safe-exception-handlers.md)时，链接器将仅生成一个图像，如果它还可以生成一个映像的安全异常处理程序表。 此表指定操作系统的哪些异常处理程序对图像有效。

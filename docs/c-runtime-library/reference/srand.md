@@ -1,6 +1,6 @@
 ---
 title: srand
-ms.date: 1/02/2018
+ms.date: 01/02/2018
 apiname:
 - srand
 apilocation:
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - pseudorandom numbers
 - starting points, setting random
 - starting points
-ms.openlocfilehash: 6545d4eba6c17fd55bb2b8cf23fb0319d1c96bee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: d74ae4cbec5a76df48bb2b56acab7329e6cf8aa5
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354881"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927405"
 ---
 # <a name="srand"></a>srand
 
-设置使用的伪随机数字生成器的起始种子值**rand**函数。
+设置**rand**函数使用的伪随机数生成器的起始种子值。
 
 ## <a name="syntax"></a>语法
 
@@ -55,7 +55,7 @@ void srand(
 
 ## <a name="remarks"></a>备注
 
-**Srand**函数设置用于在当前线程中生成的伪随机整数序列的起始点。 若要重新初始化生成器来创建相同的结果序列，请调用**srand**函数，并使用同一个*种子*再次参数。 任何其他值*种子*将生成器设置为伪随机序列中的不同起始点。 **rand**检索生成的伪随机数。 调用**rand**对任何调用之前**srand**生成相同的序列与调用**srand**与*种子*作为 1 传递。
+**Srand**函数设置在当前线程中生成一系列伪随机整数的起点。 若要重新初始化生成器以创建相同的结果序列，请调用**srand**函数并再次使用同一*种子*参数。 *种子*的任何其他值将生成器设置为伪随机序列中的另一个起点。 **rand**检索生成的伪随机数。 在调用**srand**之前调用**rand**会生成与调用**srand**时的序列相同的序列，并将*seed*作为1传递。
 
 ## <a name="requirements"></a>要求
 

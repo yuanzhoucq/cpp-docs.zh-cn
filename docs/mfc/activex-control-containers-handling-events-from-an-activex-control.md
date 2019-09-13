@@ -11,61 +11,61 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - BEGIN_EVENTSINK_MAP macro
 ms.assetid: f9c106db-052f-4e32-82ad-750646aa760b
-ms.openlocfilehash: 8087d84d2203e4f910200acdd1b00e58d14f920e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7487792fbc9fe6775640f40755a7f725543fb9f3
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394892"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907761"
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>ActiveX 控件容器：处理 ActiveX 控件中的事件
 
-本文讨论如何使用属性窗口在 ActiveX 控件容器中安装 ActiveX 控件的事件处理程序。 事件处理程序用于接收通知 （从控件） 的某些事件和响应执行某些操作。 此通知是名为"触发"此事件。
+本文介绍如何使用 "**属性**" 窗口（在**类视图**中）为 activex 控件容器中的 activex 控件安装事件处理程序。 事件处理程序用于接收某些事件的通知（来自控件）并执行某些操作以响应。 此通知称为 "激发" 事件。
 
 >[!IMPORTANT]
-> ActiveX 是一项传统技术，不应使用新的开发。 有关取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
+> ActiveX 是一种不能用于新开发的旧技术。 有关取代 ActiveX 的新式技术的详细信息，请参阅[Activex 控件](activex-controls.md)。
 
 > [!NOTE]
 >  本文使用一个名为 Container、基于对话框的 ActiveX 控件容器项目和一个名为 Circ 的嵌入控件分别作为过程和代码中的示例。
 
-在属性窗口中使用事件按钮，可以在 ActiveX 控件容器应用程序中创建的映射可以发生的事件。 此映射，称为"事件接收器映射 '，创建和维护视觉对象C++时将事件处理程序添加到控件容器类。 每个事件处理程序，实现与事件映射条目时，将特定事件映射到容器事件处理程序成员函数。 指定的事件触发的 ActiveX 控件对象时调用此事件处理程序函数。
+使用 "**属性**" 窗口中的 "事件" 按钮（在**类视图**中），可以创建可在 ActiveX 控件容器应用程序中发生的事件的映射。 在将事件处理程序添加到控件容器类C++时，此映射称为 "事件接收器映射"。 使用事件映射项实现的每个事件处理程序将一个特定事件映射到一个容器事件处理程序成员函数。 当 ActiveX 控件对象激发指定的事件时，将调用此事件处理程序函数。
 
-事件接收器映射的详细信息，请参阅[事件接收器映射](../mfc/reference/event-sink-maps.md)中*类库参考*。
+有关事件接收器映射的详细信息，请参阅类库*参考*中的[事件接收器映射](../mfc/reference/event-sink-maps.md)。
 
-##  <a name="_core_event_handler_modifications_to_the_project"></a> 修改项目的事件处理程序
+##  <a name="_core_event_handler_modifications_to_the_project"></a>对项目的事件处理程序修改
 
-当使用属性窗口来添加事件处理程序时，事件接收器映射声明和定义项目中。 以下语句添加到控件。CPP 文件第一次添加一个事件处理程序。 此代码声明了事件接收器映射对话框类 (在这种情况下， `CContainerDlg`):
+使用 "**属性**" 窗口添加事件处理程序时，会在项目中声明和定义事件接收器映射。 以下语句将添加到控件中。在第一次添加事件处理程序时的 CPP 文件。 此代码为对话框类（在本例中`CContainerDlg`为）声明一个事件接收器映射：
 
 [!code-cpp[NVC_MFC_AxCont#8](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_1.cpp)]
 [!code-cpp[NVC_MFC_AxCont#9](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_2.cpp)]
 
-当您使用属性窗口中添加事件，事件映射条目 (`ON_EVENT`) 添加到事件接收器映射和事件处理程序函数添加到容器的实现 (。CPP) 文件。
+使用 "**属性**" 窗口添加事件时，会将事件映射项（`ON_EVENT`）添加到事件接收器映射，并将事件处理程序函数添加到容器的实现（。CPP）文件。
 
-下面的示例声明一个事件处理程序调用`OnClickInCircCtrl`，为 Circ 控件的`ClickIn`事件：
+下面的示例为 Circ 控件的`OnClickInCircCtrl` `ClickIn`事件声明一个名为的事件处理程序：
 
 [!code-cpp[NVC_MFC_AxCont#10](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_3.cpp)]
 
-此外，以下模板添加到`CContainerDlg`类实现 (。对于事件处理程序成员函数 CPP) 文件：
+此外，以下模板将添加到`CContainerDlg`类实现（。CPP）文件：
 
 [!code-cpp[NVC_MFC_AxCont#11](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_4.cpp)]
 
-事件接收器宏的详细信息，请参阅[事件接收器映射](../mfc/reference/event-sink-maps.md)中*类库参考*。
+有关事件接收器宏的详细信息，请参阅类库*参考*中的[事件接收器映射](../mfc/reference/event-sink-maps.md)。
 
-#### <a name="to-create-an-event-handler-function"></a>若要创建一个事件处理程序函数
+#### <a name="to-create-an-event-handler-function"></a>创建事件处理程序函数
 
-1. 从类视图中，选择包含 ActiveX 控件的对话框类。 对于此示例中，使用`CContainerDlg`。
+1. 在类视图中，选择包含 ActiveX 控件的对话框类。 对于本示例，请`CContainerDlg`使用。
 
-1. 在属性窗口中，单击**事件**按钮。
+1. 在 **“属性”** 窗口中，单击 **“事件”** 按钮。
 
-1. 在属性窗口中，选择嵌入 ActiveX 控件的控件 ID。 对于此示例中，使用`IDC_CIRCCTRL1`。
+1. 在 "**属性**" 窗口中，选择嵌入的 ActiveX 控件的控件 ID。 对于本示例，请`IDC_CIRCCTRL1`使用。
 
-   属性窗口显示可以由嵌入 ActiveX 控件激发的事件的列表。 已以粗体显示的任何成员函数具有分配给它的处理程序函数。
+   "**属性**" 窗口显示可由嵌入 ActiveX 控件触发的事件的列表。 以粗体显示的任何成员函数都已分配有处理程序函数。
 
-1. 选择想要处理的对话框类的事件。 对于此示例中，选择**单击**。
+1. 选择希望对话框类处理的事件。 对于本示例，请选择 **"单击"** 。
 
-1. 从右侧的下拉列表框中，选择 **\<添加 > ClickCircctrl1**。
+1. 从右侧的下拉列表框中，选择 **\<"添加 > ClickCircctrl1**"。
 
-1. 双击要跳转到实现中的事件处理程序代码的类视图中的新处理程序函数 (。CPP) 文件的`CContainerDlg`。
+1. 双击类视图的新处理程序函数，跳转到实现中的事件处理程序代码（。CPP）文件`CContainerDlg`。
 
 ## <a name="see-also"></a>请参阅
 

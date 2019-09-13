@@ -1,28 +1,28 @@
 ---
 title: 编译器警告（等级 1）C4305
-ms.date: 1/17/2018
+ms.date: 01/17/2018
 f1_keywords:
 - C4305
 helpviewer_keywords:
 - C4305
-ms.openlocfilehash: 3f9116b0e7bdd9ee13c42b48f44da4b090f41ccd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dc718e5f7ebe9478ed1bf2a7323db940935cb1d6
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327465"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926123"
 ---
 # <a name="compiler-warning-level-1-c4305"></a>编译器警告（等级 1）C4305
 
-> '*上下文*： 从截断*type1*to*type2*
+> "*context*"：从 "*type1*" 到 "*type2*" 的截断
 
 ## <a name="remarks"></a>备注
 
-一个值转换为较小的类型进行初始化，或作为构造函数参数，从而导致信息丢失时，将发出此警告。
+如果将值转换为较小类型的初始化或构造函数参数，则会发出此警告，导致信息丢失。
 
 ## <a name="example"></a>示例
 
-以下示例显示两种方法可能会看到此警告：
+此示例显示了你可能会看到此警告的两种方式：
 
 ```cpp
 // C4305.cpp
@@ -41,4 +41,4 @@ int main()
 }
 ```
 
-若要解决此问题，请使用正确类型的值初始化或使用显式强制转换为正确的类型。 例如，使用**float** 2.71828f 而不是如文字**double** （浮点文本默认类型） 来初始化**float**变量，或要传递给构造函数采用**float**参数。
+若要解决此问题，请使用正确类型的值进行初始化，或使用显式强制转换为正确的类型。 例如，使用**浮点**文本（如 2.71828 f），而不是**双精度**（浮点文本的默认类型）来初始化**浮点**变量，或传递给采用**float**参数的构造函数。
