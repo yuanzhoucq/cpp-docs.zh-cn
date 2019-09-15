@@ -1,9 +1,9 @@
 ---
 title: _rmtmp
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _rmtmp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - rmtmp
 - _rmtmp
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - files [C++], removing
 - temporary files [C++], removing
 ms.assetid: 7419501e-2587-4f2a-b469-0dca07f84736
-ms.openlocfilehash: bf4f2cff48e8660682fc8a00d10d9a1fe960a6a7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 314399cf174974132a3635631162a7ffa89342c4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357416"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949164"
 ---
-# <a name="rmtmp"></a>_rmtmp
+# <a name="_rmtmp"></a>_rmtmp
 
 删除临时文件。
 
@@ -47,11 +50,11 @@ int _rmtmp( void );
 
 ## <a name="return-value"></a>返回值
 
-**_rmtmp**返回已关闭和删除临时文件的数目。
+**_rmtmp**返回已关闭和删除的临时文件的数量。
 
 ## <a name="remarks"></a>备注
 
-**_Rmtmp**函数将清除当前目录中的所有临时文件。 函数删除由创建这些文件**tmpfile**; 仅在其中创建了临时文件的相同目录中使用它。
+**_Rmtmp**函数将清除当前目录中的所有临时文件。 函数仅删除由**tmpfile**创建的文件;仅在创建临时文件的相同目录中使用它。
 
 ## <a name="requirements"></a>要求
 

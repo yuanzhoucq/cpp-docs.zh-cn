@@ -1,9 +1,9 @@
 ---
 title: _fcvt_s
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _fcvt_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fcvt_s
 - _fcvt_s
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - floating-point functions, converting number to string
 - _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
-ms.openlocfilehash: 51ff3c675f1f53aee9beab629b17193164a2e7eb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a63b542333717a57097da455fb514eeef80344b4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334861"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941360"
 ---
-# <a name="fcvts"></a>_fcvt_s
+# <a name="_fcvt_s"></a>_fcvt_s
 
 将浮点数转换为字符串。 这是 [_fcvt](fcvt.md) 版本，具有 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全增强功能。
 
@@ -65,7 +68,7 @@ errno_t _fcvt_s(
 *sizeInBytes*<br/>
 缓冲区的大小（以字节为单位）。
 
-*值*<br/>
+*value*<br/>
 要转换的数字。
 
 *count*<br/>
@@ -81,30 +84,30 @@ errno_t _fcvt_s(
 
 如果成功，则返回 0。 如果失败，则返回值为错误代码。 错误代码是在 ERRNO.h 中定义的。 有关这些错误的列表，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-对于无效参数（如下表中所列），此函数调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，此函数可设置**errno**到**EINVAL** ，并返回**EINVAL**。
+对于无效参数（如下表中所列），此函数调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数会将**errno**设置为**EINVAL**并返回**EINVAL**。
 
 ### <a name="error-conditions"></a>错误条件
 
-|*buffer*|*sizeInBytes*|值|count|dec|Sign|返回|中的值*缓冲区*|
+|*buffer*|*sizeInBytes*|value|计数|dec|Sign|返回|*缓冲区*中的值|
 |--------------|-------------------|-----------|-----------|---------|----------|------------|-----------------------|
 |**NULL**|任何|任何|任何|任何|任何|**EINVAL**|未修改。|
-|不**NULL** （指向有效内存）|<=0|任何|任何|任何|任何|**EINVAL**|未修改。|
+|Not **NULL** （指向有效内存）|<=0|任何|任何|任何|任何|**EINVAL**|未修改。|
 |任何|任何|任何|任何|**NULL**|任何|**EINVAL**|未修改。|
 |任何|任何|任何|任何|任何|**NULL**|**EINVAL**|未修改。|
 
 ## <a name="security-issues"></a>安全性问题
 
-**_fcvt_s**时，可能会产生访问冲突*缓冲区*不指向有效内存且不**NULL**。
+如果*缓冲区*未指向有效内存且不为**NULL**，则 **_fcvt_s**可能会产生访问冲突。
 
 ## <a name="remarks"></a>备注
 
-**_Fcvt_s**函数将浮点数转换为以 null 结尾的字符串。 *值*参数是要转换的浮点数。 **_fcvt_s**存储的位数*值*作为一个字符串，并追加 null 字符 (\0)。 *计数*参数指定要存储在小数点后的位数。 多余的位数被舍入到*计数*放置。 如果少于*计数*用零填充数字的精度，该字符串。
+**_Fcvt_s**函数将浮点数转换为以 null 值结束的字符串。 *值*参数是要转换的浮点数。 **_fcvt_s**将*值*的位数存储为字符串，并追加一个 null 字符（' \ 0 '）。 *Count*参数指定小数点后要存储的位数。 多余的数字被舍入到*计数*位置。 如果精度小于*计数*位数，则用零填充字符串。
 
-字符串中仅存储位数。 小数点和的符号的位置*值*可从此*dec*并*登录*后调用。 *Dec*参数指向一个整数值; 此整数值指定相对于字符串开头的小数点的位置。 零或负整数值表示小数点位于第一个数字的左侧。 将参数*符号*指向一个整数，指示的符号*值*。 整数设置为 0，如果*值*为正，设置为非零数字*值*为负。
+字符串中仅存储位数。 在调用后，可以从*dec*和*符号*获取小数点的位置和*值*的符号。 *Dec*参数指向整数值;此整数值提供小数点相对于字符串开头的位置。 零或负整数值表示小数点位于第一个数字的左侧。 参数*sign*指向一个整数，该整数指示*值*的符号。 如果*值*为正，则整数设置为 0; 如果*值*为负，则设置为非零数字。
 
-缓冲区长度 **_CVTBUFSIZE**足以满足任何浮点值。
+长度为 **_CVTBUFSIZE**的缓冲区足以满足任何浮点值。
 
-之间的差异 **_ecvt_s**并 **_fcvt_s**中的解释*计数*参数。 **_ecvt_s**解释*计数*输出字符串中的位数总数和 **_fcvt_s**解释*计数*后的位数小数点。
+**_Ecvt_s**和 **_fcvt_s**之间的区别在于*count*参数的解释。 **_ecvt_s**将*count*解释为输出字符串中的总位数， **_fcvt_s**将*count*解释为小数点后的位数。
 
 在 C++ 中，通过模板重载简化此函数的使用；重载可以自动推导出缓冲区长度，不再需要指定大小参数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -118,7 +121,7 @@ errno_t _fcvt_s(
 
 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
-**库：** 所有版本的[CRT 库功能](../../c-runtime-library/crt-library-features.md)。
+**库**所有版本的[CRT 库功能](../../c-runtime-library/crt-library-features.md)。
 
 ## <a name="example"></a>示例
 

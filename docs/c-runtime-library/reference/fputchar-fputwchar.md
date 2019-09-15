@@ -1,10 +1,10 @@
 ---
 title: _fputchar、_fputwchar
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fputchar
 - _fputwchar
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fputtchar
 - _fputwchar
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - fputtchar function
 - _fputchar function
 ms.assetid: b92ff600-a924-4f2b-b0e7-3097ee31bdff
-ms.openlocfilehash: 57ec2350fa1d0b681c6eed0c4cfc4ec4660977e8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 39642be871c1c5b5c2deaf35b7c26d19c188b440
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287925"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956939"
 ---
-# <a name="fputchar-fputwchar"></a>_fputchar、_fputwchar
+# <a name="_fputchar-_fputwchar"></a>_fputchar、_fputwchar
 
 将字符写入 **stdout**。
 
@@ -62,13 +65,13 @@ wint_t _fputwchar(
 
 ## <a name="return-value"></a>返回值
 
-其中每个函数都会返回写入的字符。 有关 **_fputchar**，返回值为**EOF**指示错误。 有关 **_fputwchar**，返回值为**WEOF**指示错误。 如果 c **NULL**，这些函数将生成无效的参数异常，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，它们将返回**EOF** (或**WEOF**) 并设置**errno**到**EINVAL**。
+其中每个函数都会返回写入的字符。 对于 **_fputchar**，返回值**EOF**表示错误。 对于 **_fputwchar**， **WEOF**的返回值指示错误。 如果 c 为**NULL**，则这些函数将生成无效的参数异常，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则它们将返回**EOF** （或**WEOF**），并将**errno**设置为**EINVAL**。
 
 有关这些及其他错误代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-这两个函数将单个字符写入*c*到**stdout** ，并将提升为相应的指示符。 **_fputchar**等效于`fputc( stdout )`。 它还等效于**putchar**，但仅作为函数，而不是作为函数和宏实现。 与不同**fputc**并**putchar**，这些函数都不符合 ANSI 标准。
+这两个函数将单个字符*c*写入**stdout** ，并根据需要提升指示器。 **_fputchar**等效于`fputc( stdout )`。 它还等效于**putchar**，但仅作为函数实现，而不是作为函数和宏实现。 与**fputc**和**putchar**不同，这些函数与 ANSI 标准不兼容。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -83,7 +86,7 @@ wint_t _fputwchar(
 |**_fputchar**|\<stdio.h>|
 |**_fputwchar**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台 (UWP) 应用中不支持控制台。 与控制台关联的标准流句柄 —**stdin**， **stdout**，并**stderr**— C 运行时函数可以在 UWP 应用中使用它们之前，必须重定向. 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台 (UWP) 应用中不支持控制台。 与控制台（**stdin**、 **stdout**和**stderr**）关联的标准流句柄必须重定向，然后 C 运行时函数才能在 UWP 应用中使用它们。 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 

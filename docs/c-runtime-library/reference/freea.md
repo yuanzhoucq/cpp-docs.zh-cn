@@ -1,9 +1,9 @@
 ---
 title: _freea
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _freea
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - freea
 - _freea
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - freea function
 - memory deallocation
 ms.assetid: dcd30584-dd9d-443b-8c4c-13237a1cecac
-ms.openlocfilehash: ac9c5528755898b0de131bccf94185b501b0e720
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dcad8bea4f8cec28d8cb15a9937b1032593ef0cc
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333062"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956714"
 ---
-# <a name="freea"></a>_freea
+# <a name="_freea"></a>_freea
 
 解除分配或释放内存块。
 
@@ -53,17 +56,17 @@ void _freea(
 
 ## <a name="remarks"></a>备注
 
-**_Freea**函数释放内存块 (*memblock*) 的以前分配通过调用[_malloca](malloca.md)。 **_freea**检查以确定是否堆或堆栈上分配内存时。 如果被在堆栈上分配 **_freea**不执行任何操作。 如果被分配到堆上，则已释放的字节数等于分配块时请求的字节数。 如果*memblock*是**NULL**，将忽略指针并 **_freea**立即返回。 尝试释放无效指针 (指向的未分配的内存块的指针 **_malloca**) 可能会影响后续分配请求，并导致错误。
+**_Freea**函数释放先前由对[_malloca](malloca.md)的调用分配的内存块（*memblock*）。 **_freea**检查是否在堆或堆栈上分配内存。 如果它是在堆栈上分配的， **_freea**不会执行任何操作。 如果被分配到堆上，则已释放的字节数等于分配块时请求的字节数。 如果*memblock*为**NULL**，则将忽略指针，并且 **_freea**会立即返回。 尝试释放无效指针（指向不是由 **_malloca**分配的内存块的指针）可能会影响后续分配请求并导致错误。
 
-**_freea**调用**免费**内部如果它找到了堆上分配内存。 内存是在堆上还是在堆栈上由内存中的标记决定，该内存地址紧接所分配的内存。
+如果发现内存是在堆上分配的，则 **_freea**会在内部**免费**调用。 内存是在堆上还是在堆栈上由内存中的标记决定，该内存地址紧接所分配的内存。
 
-如果在释放内存，出现错误**errno**的操作系统从性质上的失败的信息，以及设置。 有关详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如果在释放内存时发生错误，则会在出现故障的情况下，使用操作系统中的信息设置**errno** 。 有关详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 释放内存块后， [_heapmin](heapmin.md) 通过合并未使用的区域并将其释放回到操作系统，将堆上的可用内存量降至最低。 未释放给操作系统的已释放内存还原到可用池，并且可用于重新分配。
 
-调用 **_freea**必须附带转到的所有调用 **_malloca**。 它也是错误调用 **_freea**两次在相同的内存。 尤其是对于与 C 运行时库的调试版本链接应用程序时[_malloc_dbg](malloc-dbg.md)通过定义来启用的功能 **_CRTDBG_MAP_ALLOC**，它是更轻松地查找丢失或重复调用 **_freea**。 有关在调试过程中如何托管堆的详细信息，请参阅 [CRT 调试堆](/visualstudio/debugger/crt-debug-heap-details)。
+对 **_freea**的调用必须伴随对 **_malloca**的所有调用。 同时在同一内存上调用 **_freea**是错误的。 当应用程序与调试版的 C 运行时库链接时，尤其是在定义 **_CRTDBG_MAP_ALLOC**的情况下启用[_malloc_dbg](malloc-dbg.md)功能时，更容易发现对 **_freea**的丢失或重复调用。 有关在调试过程中如何托管堆的详细信息，请参阅 [CRT 调试堆](/visualstudio/debugger/crt-debug-heap-details)。
 
-**_freea**被标记为`__declspec(noalias)`，这意味着确保该函数不能修改全局变量。 有关详细信息，请参阅 [noalias](../../cpp/noalias.md)。
+**_freea**已标记`__declspec(noalias)`，这意味着该函数不能修改全局变量。 有关详细信息，请参阅 [noalias](../../cpp/noalias.md)。
 
 ## <a name="requirements"></a>要求
 

@@ -1,10 +1,10 @@
 ---
 title: freopen、_wfreopen
 ms.date: 11/04/2016
-apiname:
+api_name:
 - freopen
 - _wfreopen
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wfreopen
 - _tfreopen
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - tfreopen function
 - wfreopen function
 ms.assetid: de4b73f8-1043-4d62-98ee-30d2022da885
-ms.openlocfilehash: f31f0eeacaf573fe0f6489f4dc8b5da03bf9b64f
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: 9f6d4343db3cb507e43e409361059e83fad63148
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376106"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956860"
 ---
-# <a name="freopen-wfreopen"></a>freopen、_wfreopen
+# <a name="freopen-_wfreopen"></a>freopen、_wfreopen
 
 重新分配文件指针。 提供这些函数的更安全版本；请参阅 [freopen_s、_wfreopen_s](freopen-s-wfreopen-s.md)。
 
@@ -76,7 +79,7 @@ FILE *_wfreopen(
 
 提供这些函数的更安全版本；请参阅 [freopen_s、_wfreopen_s](freopen-s-wfreopen-s.md)。
 
-**Freopen**函数关闭当前与*stream*关联的文件, 并将*流*重新分配到*path*指定的文件。 **_wfreopen**是 **_freopen**的宽字符版本; **_wfreopen**的*路径*和*模式*参数是宽字符字符串。 否则, **_wfreopen**和 **_freopen**的行为相同。
+**Freopen**函数关闭当前与*stream*关联的文件, 并将*流*重新分配到*path*指定的文件。 **_wfreopen**是 **_freopen**的宽字符版本; **_wfreopen**的*路径*和*模式*参数是宽字符字符串。 否则， **_wfreopen**和 **_freopen**的行为相同。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -110,7 +113,7 @@ FILE *_wfreopen(
 
 在文本 (已转换) 模式下, 回车换行符 (CR-LF) 组合将转换为输入的单行换行符 (LF) 字符;换行符在输出时转换为 CR-LF 组合。 CTRL+Z 也将在输入时解释为文件尾字符。 在打开以进行读取或使用 **"a +"** 进行读取和读取的文件中, 运行时库将检查文件末尾的 CTRL + Z 并将其删除 (如果可能)。 这样做的原因是, 使用[fseek](fseek-fseeki64.md)和[ftell](ftell-ftelli64.md)在文件中移动可能导致[fseek](fseek-fseeki64.md)在文件结尾附近出现错误。 **T**选项是一个 Microsoft 扩展, 不应在需要 ANSI 可移植性时使用。
 
-如果在*mode*中未给出**t**或**b** , 则默认转换模式由全局变量[_fmode](../../c-runtime-library/fmode.md)定义。 如果**t**或**b**作为参数的前缀, 则函数将失败并返回**NULL**。
+如果在*mode*中未给出**t**或**b** ，则默认转换模式由全局变量[_fmode](../../c-runtime-library/fmode.md)定义。 如果**t**或**b**作为参数的前缀, 则函数将失败并返回**NULL**。
 
 有关文本模式和二进制模式的讨论，请参阅[文本和二进制模式文件 I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md)。
 

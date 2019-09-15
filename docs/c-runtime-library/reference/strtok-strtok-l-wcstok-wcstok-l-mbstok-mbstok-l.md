@@ -1,14 +1,14 @@
 ---
 title: strtok、_strtok_l、wcstok、_wcstok_l、_mbstok、_mbstok_l
 ms.date: 03/25/2019
-apiname:
+api_name:
 - _mbstok_l
 - _mbstok
 - wcstok
 - _mbstok
 - strtok
 - _wcstok_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -21,7 +21,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbstok
 - strtok
@@ -45,12 +48,12 @@ helpviewer_keywords:
 - _tcstok_l function
 - strtok_l function
 ms.assetid: 904cb734-f0d7-4d77-ba81-4791ddf461ae
-ms.openlocfilehash: 13fbc0e305f7ad183db06ec0060b2059b4964fe7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 62ed9edc6ec5a7ee60223f1c5e908aa14f421a25
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500795"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957645"
 ---
 # <a name="strtok-_strtok_l-wcstok-_wcstok_l-_mbstok-_mbstok_l"></a>strtok、_strtok_l、wcstok、_wcstok_l、_mbstok、_mbstok_l
 
@@ -104,7 +107,7 @@ unsigned char *_mbstok_l(
 
 ## <a name="return-value"></a>返回值
 
-返回一个指针, 该指针指向在*strToken*中找到的下一个标记。 当找不到更多的标记时, 函数将返回**NULL** 。 每个调用都通过将 null 字符替换为在返回的标记后出现的第一个分隔符来修改*strToken* 。
+返回一个指针，该指针指向在*strToken*中找到的下一个标记。 当找不到更多的标记时，函数将返回**NULL** 。 每个调用都通过将 null 字符替换为在返回的标记后出现的第一个分隔符来修改*strToken* 。
 
 ## <a name="remarks"></a>备注
 
@@ -113,11 +116,11 @@ unsigned char *_mbstok_l(
 > [!IMPORTANT]
 > 这些函数会引发由缓冲区溢出问题带来的潜在威胁。 缓冲区溢出问题是常见的系统攻击方法，使权限的提升不能确保。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
-第一次调用**strtok**时, 函数跳过前导分隔符并返回指向*strToken*中第一个标记的指针, 并将标记终止为 null 字符。 通过一系列对**strtok**的调用, 可以将更多标记分解出*strToken*的剩余部分。 对**strtok**的每次调用都会通过在该调用返回的**标记**后插入一个 Null 字符来修改*strToken* 。 若要从*strToken*中读取下一个令牌, 请对*strToken*参数调用**strtok** , 并为其提供**NULL**值。 **NULL** *strToken*参数会导致**Strtok**在修改后的*strToken*中搜索下一个标记。 *StrDelimit*参数可以从一个调用到下一个调用, 以使分隔符集不同。
+第一次调用**strtok**时，函数跳过前导分隔符并返回指向*strToken*中第一个标记的指针，并将标记终止为 null 字符。 通过一系列对**strtok**的调用，可以将更多标记分解出*strToken*的剩余部分。 对**strtok**的每次调用都会通过在该调用返回的**标记**后插入一个 Null 字符来修改*strToken* 。 若要从*strToken*中读取下一个令牌，请对*strToken*参数调用**strtok** ，并为其提供**NULL**值。 **NULL** *strToken*参数会导致**Strtok**在修改后的*strToken*中搜索下一个标记。 *StrDelimit*参数可以从一个调用到下一个调用，以使分隔符集不同。
 
 输出值受区域设置的**LC_CTYPE**类别设置的设置影响。 有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。
 
-这些不带 **_l**后缀的函数的版本对与区域设置相关的行为使用当前区域设置。 带有 **_l**后缀的版本是相同的, 只不过它们使用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+这些不带 **_l**后缀的函数的版本对与区域设置相关的行为使用当前区域设置。 带有 **_l**后缀的版本是相同的，只不过它们使用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 > [!NOTE]
 > 每个函数均使用线程本地静态变量，以将字符串分析为标记。 因此，多线程可以同时调用这些函数，不会产生不良影响。 但是，在单个线程内，对任一这些函数的交替调用很可能导致数据损坏和结果不准确。 解析不同的字符串时，在解析完一个字符串后再开始解析下一个字符串。 此外，请注意，从调用其他函数的循环内调用其中任一函数可能引发潜在危险。 如果其他函数最终使用这些函数之一，则导致调用交错的序列，从而触发数据损坏。
