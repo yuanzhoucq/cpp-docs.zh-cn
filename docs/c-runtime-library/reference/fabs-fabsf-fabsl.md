@@ -1,11 +1,11 @@
 ---
 title: fabs、fabsf、fabsl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fabsf
 - fabs
 - fabsl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fabs
 - fabsf
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - fabs function
 - fabsl function
 ms.assetid: 23bca210-f408-4f5e-b46b-0ccaaec31e36
-ms.openlocfilehash: 8df36c06fb3ca9af9be4cf704998946b3eaf9a6c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 155b0e4ced7eb4ea0ade5445a62fc385f0c157e9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334939"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941486"
 ---
 # <a name="fabs-fabsf-fabsl"></a>fabs、fabsf、fabsl
 
@@ -70,21 +73,21 @@ long double fabsl(
 
 ## <a name="return-value"></a>返回值
 
-**Fabs**函数返回参数的绝对值*x*。 无错误返回。
+**Fabs**函数返回参数*x*的绝对值。 无错误返回。
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
-|± QNAN,IND|无|_DOMAIN|
+|± QNAN，IND|无|_DOMAIN|
 
 ## <a name="remarks"></a>备注
 
-C++允许重载，因此可以调用的重载**fabs**如果包括\<cmath > 标头。 在 C 程序中， **fabs**始终采用并返回**double**。
+C++允许重载，因此，如果包含\<h > 标头，则可以调用**fabs**的重载。 在 C 程序中， **fabs**始终采用并返回**双精度型**。
 
 ## <a name="requirements"></a>要求
 
 |函数|必需的 C 标头|必需的 C++ 标头|
 |--------------|-----------------------|---------------------------|
-|**fabs**， **fabsf**， **fabsl**|\<math.h>|\<cmath> 或 \<math.h>|
+|**fabs**、 **fabsf**、 **fabsl**|\<math.h>|\<cmath> 或 \<math.h>|
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

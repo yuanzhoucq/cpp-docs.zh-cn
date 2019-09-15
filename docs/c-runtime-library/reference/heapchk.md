@@ -1,9 +1,9 @@
 ---
 title: _heapchk
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _heapchk
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _heapchk
 - heapchk
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - heaps, checking consistency
 - _heapchk function
 ms.assetid: 859619a5-1e35-4f02-9e09-11d9fa266ec0
-ms.openlocfilehash: bdc0137761664a668d6ef95d739f09501e8290e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 857feb66d89d5dc406042478156483ecb86a2474
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331709"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954812"
 ---
-# <a name="heapchk"></a>_heapchk
+# <a name="_heapchk"></a>_heapchk
 
 在堆上运行一致性检查。
 
@@ -45,7 +48,7 @@ int _heapchk( void );
 
 ## <a name="return-value"></a>返回值
 
-**_heapchk**返回 Malloc.h 中定义的以下整数清单常量之一。
+**_heapchk**返回在 Malloc. h 中定义的以下整数清单常量之一。
 
 |返回值|条件|
 |-|-|
@@ -55,11 +58,11 @@ int _heapchk( void );
 | **_HEAPEMPTY** | 尚未初始化堆。 |
 | **_HEAPOK** | 堆看起来一致。 |
 
-此外，如果出错，则 **_heapchk**设置**errno**到**ENOSYS**。
+此外，如果发生错误， **_heapchk**会将**Errno**设置为**ENOSYS**。
 
 ## <a name="remarks"></a>备注
 
-**_Heapchk**函数帮助通过检查堆的最小一致性来调试与堆有关的问题。 如果操作系统不支持 **_heapchk**（例如 Windows 98），该函数返回 **_HEAPOK**并设置**errno**到**ENOSYS**.
+**_Heapchk**函数通过检查堆的最小一致性来帮助调试堆相关的问题。 如果操作系统不支持 **_heapchk**（例如，Windows 98），该函数将返回 **_HEAPOK**并将**errno**设置为**ENOSYS**。
 
 ## <a name="requirements"></a>要求
 

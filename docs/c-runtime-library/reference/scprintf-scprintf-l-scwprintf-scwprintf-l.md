@@ -1,12 +1,12 @@
 ---
 title: _scprintf、_scprintf_l、_scwprintf、_scwprintf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _scprintf_l
 - _scwprintf
 - _scwprintf_l
 - _scprintf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - scprintf
 - _scprintf_l
@@ -44,14 +47,14 @@ helpviewer_keywords:
 - _scprintf function
 - scwprintf function
 ms.assetid: ecbb0ba6-5f4c-4ce6-a64b-144ad8b5fe92
-ms.openlocfilehash: 09c44bbf6f918211c1aa2ee875a23bfcc7ca2da5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d7f682156d37538f6ac152e6d93814877631a5c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357065"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948809"
 ---
-# <a name="scprintf-scprintfl-scwprintf-scwprintfl"></a>_scprintf、_scprintf_l、_scwprintf、_scwprintf_l
+# <a name="_scprintf-_scprintf_l-_scwprintf-_scwprintf_l"></a>_scprintf、_scprintf_l、_scwprintf、_scwprintf_l
 
 返回格式化字符串中的字符数。
 
@@ -83,7 +86,7 @@ int _scwprintf_l(
 *format*<br/>
 窗体控件字符串。
 
-*argument*<br/>
+*实际*<br/>
 可选参数。
 
 *locale*<br/>
@@ -93,20 +96,20 @@ int _scwprintf_l(
 
 ## <a name="return-value"></a>返回值
 
-返回在使用指定的格式化代码打印字符串或将其发送到文件或缓冲区时生成的字符的数目。 返回的值不包括终止 null 字符。 **_scwprintf**对于宽字符执行相同的功能。
+返回在使用指定的格式化代码打印字符串或将其发送到文件或缓冲区时生成的字符的数目。 返回的值不包括终止 null 字符。 **_scwprintf**对宽字符执行相同的功能。
 
-如果*格式*是**NULL**调用指针，无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，这些函数将返回-1 并设置**errno**到**EINVAL**。
+如果*format*为**空**指针，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回-1，并将**errno**设置为**EINVAL**。
 
 有关这些及其他错误代码的信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-每个*自变量*（如果有） 根据中的相应格式规范转换*格式*。 该格式包括普通字符，其形式和函数与相同*格式*参数[printf](printf-printf-l-wprintf-wprintf-l.md)。
+每个*自变量*（如果有）都根据*格式*的相应格式规范进行转换。 该格式包括普通字符，其形式和函数与[printf](printf-printf-l-wprintf-wprintf-l.md)的*format*参数相同。
 
-使用这些函数的版本 **_l**后缀完全相同，只不过它们使用传递中而不是当前线程区域设置的区域设置参数。
+这些带有 **_l**后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
 
 > [!IMPORTANT]
-> 确保 format 不是用户定义的字符串。
+> 确保 format不是用户定义的字符串。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -119,8 +122,8 @@ int _scwprintf_l(
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**_scprintf**， **_scprintf_l**|\<stdio.h>|
-|**_scwprintf**， **_scwprintf_l**|\<stdio.h> 或 \<wchar.h>|
+|**_scprintf**、 **_scprintf_l**|\<stdio.h>|
+|**_scwprintf**、 **_scwprintf_l**|\<stdio.h> 或 \<wchar.h>|
 
 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

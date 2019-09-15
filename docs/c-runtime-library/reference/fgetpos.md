@@ -1,9 +1,9 @@
 ---
 title: fgetpos
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fgetpos
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fgetpos
 helpviewer_keywords:
 - fgetpos function
 - streams, file position indicator
 ms.assetid: bfa05c38-1135-418c-bda1-d41be51acb62
-ms.openlocfilehash: e213c9830ffe6edf04b12a80828f14cc48f77524
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 27d25b29f656d1df889e5f83857ca437f609a07a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333925"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940841"
 ---
 # <a name="fgetpos"></a>fgetpos
 
@@ -47,16 +50,16 @@ int fgetpos(
 *stream*<br/>
 目标流。
 
-*pos*<br/>
+*位置*<br/>
 位置指示器存储。
 
 ## <a name="return-value"></a>返回值
 
-如果成功， **fgetpos**返回 0。 在失败时，它返回非零值，并设置**errno**下列任一清单常量 （在 STDIO 中定义。H):**EBADF**，这意味着指定的流不是有效的文件指针或不可访问，或**EINVAL**，这意味着*流*的值或值*pos*是无效的例如，如果可以为 null 指针。 如果*流*或*pos*是**NULL**指针，该函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md).
+如果成功， **fgetpos**将返回0。 如果失败，它将返回一个非零值，并将**errno**设置为以下清单常量之一（在 stdio.h 中定义）。H）：**Ebadf (** ，这意味着指定的流不是有效的文件指针或不可访问，也可能是**EINVAL**，这意味着*流*值或*pos*的值无效，例如，如果这两个值都为 null 指针。 如果*stream*或*pos*为**空**指针，则函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。
 
 ## <a name="remarks"></a>备注
 
-**Fgetpos**函数获取的当前值*流*参数的文件位置指示符和存储它的对象中指向*pos*。**Fsetpos**函数可以稍后使用信息存储在*pos*若要重置*流*参数的指针，指向其位置时**fgetpos**调用。 *Pos*值以内部格式存储，并适用于使用仅由**fgetpos**并**fsetpos**。
+**Fgetpos**函数获取*流*参数的文件位置指示器的当前值，并将其存储在*pos*所指向的对象中。**Fsetpos**函数稍后可以使用存储在*pos*中的信息来重置*流*参数的指针，使其在调用**fgetpos**时重置为其位置。 *Pos*值以内部格式存储，仅供**fgetpos**和**fsetpos**使用。
 
 ## <a name="requirements"></a>要求
 
@@ -108,13 +111,13 @@ int main( void )
 }
 ```
 
-## <a name="input-crtfgetpostxt"></a>输入：crt_fgetpos.txt
+## <a name="input-crt_fgetpostxt"></a>输入：crt_fgetpos.txt
 
 ```Input
 fgetpos gets a stream's file-position indicator.
 ```
 
-### <a name="output-crtfgetpostxt"></a>输出：crt_fgetpos.txt
+### <a name="output-crt_fgetpostxt"></a>输出：crt_fgetpos.txt
 
 ```Output
 after fgetpos: gets a stream

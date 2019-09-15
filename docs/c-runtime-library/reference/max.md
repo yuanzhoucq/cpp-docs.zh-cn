@@ -1,9 +1,9 @@
 ---
 title: __max
 ms.date: 04/05/2018
-apiname:
+api_name:
 - __max
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - max
 - __max
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - maximum macro
 - __max macro
 ms.assetid: 05c936f6-0e22-45d6-a58d-4bc102e9dae2
-ms.openlocfilehash: 32e1207ea4bb030ac5303de32c0566f98e0596a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dac82ecd1c96d1edf9175a29797d93c65bc19c99
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156858"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952754"
 ---
-# <a name="max"></a>__max
+# <a name="__max"></a>__max
 
-返回较大的两个值的预处理器宏。
+返回两个值中较大值的预处理器宏。
 
 ## <a name="syntax"></a>语法
 
@@ -42,18 +45,18 @@ ms.locfileid: "62156858"
 
 ### <a name="parameters"></a>参数
 
-*a*, *b*<br/>
+*a*、 *b*<br/>
 要比较的任何数字类型的值。
 
 ## <a name="return-value"></a>返回值
 
-**__max**返回其参数的较大。
+**__max**返回其参数中的较大者。
 
 ## <a name="remarks"></a>备注
 
-**__Max**宏将两个值进行比较并返回其中的较大的值。 参数可以是任何数字数据类型，有符号或无符号均可。 两个自变量以及返回值必须是同一数据类型。
+**__Max**宏比较两个值，并返回较大值的值。 参数可以是任何数字数据类型，有符号或无符号均可。 两个自变量以及返回值必须是同一数据类型。
 
-返回参数的计算两次由宏。 这可能导致意外的结果，如果参数为一个表达式，它计算时，如来更改其值`*p++`。
+返回的参数由宏计算两次。 如果参数是在计算时更改其值的表达式（如`*p++`），则这可能会导致意外的结果。
 
 ## <a name="requirements"></a>要求
 

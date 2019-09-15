@@ -1,11 +1,11 @@
 ---
 title: conj、conjf、conjl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - conj
 - conjf
 - conjl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - conj
 - conjf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - conjf function
 - conjl function
 ms.assetid: 792fccfa-19c6-4890-99f9-a3b89effccd6
-ms.openlocfilehash: 57ed5e8570a3a2467bf7080524db9d1bef618091
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cb87e502d3fa927f10675796bae0b1d37115b2a2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335380"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939027"
 ---
 # <a name="conj-conjf-conjl"></a>conj、conjf、conjl
 
@@ -68,17 +71,17 @@ _Lcomplex conjl(
 
 ## <a name="return-value"></a>返回值
 
-复数的共轭*z*。  结果具有相同的实部和虚部零件*z*，但符号相反。
+*Z*的复杂共轭。  结果与*z*具有相同的实部和虚部，但符号相反。
 
 ## <a name="remarks"></a>备注
 
-因为C++允许重载，可以调用的重载**conj**采用并返回 **_Fcomplex**并 **_Lcomplex**的值。 在 C 程序中， **conj**始终采用并返回 **_Dcomplex**值。
+由于C++允许重载，因此可以调用**conj**的重载，该重载采用并返回 **_Fcomplex**和 **_Lcomplex**值。 在 C 程序中， **conj**始终采用并返回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|C 标头|C++ 标头|
 |-------------|--------------|------------------|
-|**conj**,               **conjf**, **conjl**|\<complex.h>|\<ccomplex>|
+|**conj**、 **conjf**、 **conjl**|\<complex.h>|\<ccomplex>|
 
 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

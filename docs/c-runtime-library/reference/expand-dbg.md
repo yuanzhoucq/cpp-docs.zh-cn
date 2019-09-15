@@ -1,9 +1,9 @@
 ---
 title: _expand_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _expand_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - expand_dbg
 - _expand_dbg
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - expand_dbg function
 - _expand_dbg function
 ms.assetid: dc58c91f-72a8-48c6-b643-fe130fb6c1fd
-ms.openlocfilehash: cc3aa2b7e39b52eb71ac10a9b5c4a221ba6fb70c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 836b9cffcf0367f248a14469b30c1a355e2bdec2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288040"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941581"
 ---
-# <a name="expanddbg"></a>_expand_dbg
+# <a name="_expand_dbg"></a>_expand_dbg
 
 通过展开或收缩块调整指定堆的内存块大小（仅限调试版本）。
 
@@ -55,31 +58,31 @@ void *_expand_dbg(
 请求块的新大小（以字节为单位）。
 
 *blockType*<br/>
-请求的调整大小的块类型： **_CLIENT_BLOCK**或 **_NORMAL_BLOCK**。
+已调整大小的块的请求类型： **_CLIENT_BLOCK**或 **_NORMAL_BLOCK**。
 
 *filename*<br/>
-指向已请求的源文件名展开操作或**NULL**。
+指向请求展开操作的源文件名的指针或**NULL**。
 
 *linenumber*<br/>
-请求扩展操作所在的源文件中的行数或**NULL**。
+请求展开操作的源文件中的行号或**NULL**。
 
-*文件名*并*linenumber*参数才可用 **_expand_dbg**已显式调用或[_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)预处理器常量已定义。
+仅当已显式调用 **_expand_dbg**或已定义[_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)预处理器常量时， *filename*和*linenumber*参数才可用。
 
 ## <a name="return-value"></a>返回值
 
-成功完成后， **_expand_dbg**返回指向已调整大小的内存块的指针。 因为内存未移动，所以地址与 userData 相同。 如果出现错误或块无法扩展到所请求的大小，则返回**NULL**。 如果失败，则**errno**是性质的信息从操作系统故障的使用。 有关详细信息**errno**，请参阅[errno、 _doserrno、 _sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+成功完成后， **_expand_dbg**将返回一个指向已调整大小的内存块的指针。 因为内存未移动，所以地址与 userData 相同。 如果发生错误或块无法扩展到所请求的大小，则返回**NULL**。 如果发生失败， **errno**将会出现有关故障性质的操作系统的信息。 有关**errno**的详细信息，请参阅[errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**_Expand_dbg**函数是 _ 的调试版本[展开](expand.md)函数。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，则每次调用 **_expand_dbg**缩减为调用 **_expand**。 这两 **_expand**并 **_expand_dbg**调整基堆中的内存块的大小，但 **_expand_dbg**还包含几种调试功能： 用户两侧的缓冲区用于测试泄漏，用于跟踪特定分配类型的块类型参数的块部分和*文件名*/*linenumber*的信息来确定的来源分配请求。
+**_Expand_dbg**函数是 _[expand](expand.md)函数的调试版本。 未定义[_debug](../../c-runtime-library/debug.md)时，对 **_expand_dbg**的每次调用都会减少到对 **_expand**的调用。 **_Expand**和 **_expand_dbg**调整了基堆中的内存块的大小，但 **_expand_dbg**提供了若干调试功能：用于测试泄漏的块的用户部分两侧的缓冲区，要跟踪的块类型参数特定分配类型和*文件名*/*linenumber*信息，用于确定分配请求的源。
 
-**_expand_dbg**调整稍多的空间比请求与指定的内存块的大小*newSize*。 *newSize*可能会大于或小于最初分配的内存块的大小。 其他空间将由调试堆管理器用于链接调试内存块，以及提供具有调试标头信息的应用程序和覆盖缓冲区。 通过扩展或收缩原始内存块完成调整大小。 **_expand_dbg**不会移动内存块，如同[_realloc_dbg](realloc-dbg.md)函数。
+**_expand_dbg**会将指定的内存块的大小调整为比请求的*newSize*略多的空间。 *newSize*可能大于或小于最初分配的内存块的大小。 其他空间将由调试堆管理器用于链接调试内存块，以及提供具有调试标头信息的应用程序和覆盖缓冲区。 通过扩展或收缩原始内存块完成调整大小。 **_expand_dbg**不会移动内存块，这与[_realloc_dbg](realloc-dbg.md)函数相同。
 
-当*newSize*大于原始块大小，内存块已展开。 扩展期间，如果内存块无法扩展以容纳所请求的大小， **NULL**返回。 当*newSize*小于原始块大小，内存块进行收缩，直至获取新的大小。
+当*newSize*大于原始块大小时，将扩展内存块。 在展开过程中，如果内存块无法扩展以容纳请求的大小，则返回**NULL** 。 当*newSize*小于原始块大小时，将会收缩内存块，直到获取新大小。
 
 有关如何在基堆的调试版本中分配、初始化和管理内存块的信息，请参阅 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。 有关分配块类型及其使用方式的信息，请参阅[调试堆上的块类型](/visualstudio/debugger/crt-debug-heap-details)。 有关在应用程序的调试版本中调用标准堆函数及其调试版本之间差异的信息，请参阅[堆分配函数的调试版本](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)。
 
-此函数验证其参数。 如果*memblock*是空指针，或如果大小大于 **_HEAP_MAXREQ**，此函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**并且该函数返回**NULL**。
+此函数验证其参数。 如果*memblock*为 null 指针，或者如果大小大于 **_HEAP_MAXREQ**，此函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将**errno**设置为**EINVAL** ，并且该函数将返回**NULL**。
 
 ## <a name="requirements"></a>要求
 

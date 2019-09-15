@@ -1,9 +1,9 @@
 ---
 title: _fread_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fread_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fread_nolock
 - fread_nolock
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - _fread_nolock function
 - streams [C++], reading data from
 ms.assetid: 60e4958b-1097-46f5-a77b-94af5e7dba40
-ms.openlocfilehash: 81827363d670c7cdeeddcb86390323bf431c6f98
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2d896e3809d22c0f2752ef67c89233652bdade19
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287910"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956874"
 ---
-# <a name="freadnolock"></a>_fread_nolock
+# <a name="_fread_nolock"></a>_fread_nolock
 
 读取流中的数据，而不锁定其他线程。
 
@@ -68,7 +71,7 @@ size_t _fread_nolock(
 
 ## <a name="remarks"></a>备注
 
-此函数是的非锁定版本**fread**。 它等同于**fread** ，只不过它不受干扰从其他线程。 它可能更快，因为它不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用此函数，如单线程应用程序或调用范围已处理线程隔离的区域。
+此函数是**fread**的非锁定版本。 它与**fread**完全相同，只不过它不会受到其他线程的干扰。 它可能更快，因为它不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用此函数，如单线程应用程序或调用范围已处理线程隔离的区域。
 
 ## <a name="requirements"></a>要求
 

@@ -1,14 +1,14 @@
 ---
 title: _ismbcl0、_ismbcl0_l、_ismbcl1、_ismbcl1_l、_ismbcl2、_ismbcl2_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbcl2
 - _ismbcl1
 - _ismbcl0
 - _ismbcl2_l
 - _ismbcl1_l
 - _ismbcl0_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ismbcl0
 - _ismbcl1_l
@@ -48,14 +51,14 @@ helpviewer_keywords:
 - _ismbcl2_l function
 - _ismbcl0 function
 ms.assetid: ee15ebd1-462c-4a43-95f3-6735836d626a
-ms.openlocfilehash: b4ea5a165e5fb06229c3fdf69c53cdf82c4f35f4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 04560b7dd3a7188531e247499bc2ffd18bc23ca5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286625"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953852"
 ---
-# <a name="ismbcl0-ismbcl0l-ismbcl1-ismbcl1l-ismbcl2-ismbcl2l"></a>_ismbcl0、_ismbcl0_l、_ismbcl1、_ismbcl1_l、_ismbcl2、_ismbcl2_l
+# <a name="_ismbcl0-_ismbcl0_l-_ismbcl1-_ismbcl1_l-_ismbcl2-_ismbcl2_l"></a>_ismbcl0、_ismbcl0_l、_ismbcl1、_ismbcl1_l、_ismbcl2、_ismbcl2_l
 
 **代码页 932 特定函数**，使用当前区域设置或指定的 LC_CTYPE 转换状态类别。
 
@@ -98,7 +101,7 @@ int _ismbcl2_l(
 
 ## <a name="return-value"></a>返回值
 
-其中每个例程在字符满足测试条件时返回一个非零值，在不满足测试条件时回 0。 如果*c* < = 255 且存在相应 **_ismbb**例程 (例如， **_ismbcalnum**对应于 **_ismbbalnum**)，则结果是相应的返回值 **_ismbb**例程。
+其中每个例程在字符满足测试条件时返回一个非零值，在不满足测试条件时回 0。 如果*c* < = 255 且存在相应的 **_ismbb**例程（例如， **_ismbcalnum**对应于 **_ismbbalnum**），则结果为相应 **_ismbb**例程的返回值。
 
 ## <a name="remarks"></a>备注
 
@@ -110,14 +113,14 @@ int _ismbcl2_l(
 |-------------|-------------------------------------------|
 |**_ismbcl0**|JIS 非日本汉字：0x8140<=*c*<=0x889E.|
 |**_ismbcl0_l**|JIS 非日本汉字：0x8140<=*c*<=0x889E.|
-|**_ismbcl1**|JIS 1 级：0x889F<=*c*<=0x9872.|
-|**_ismbcl1_l**|JIS 1 级：0x889F<=*c*<=0x9872.|
-|**_ismbcl2**|0JIS 2 级：0x989F<=*c*<=0xEAA4.|
-|**_ismbcl2_l**|0JIS 2 级：0x989F<=*c*<=0xEAA4.|
+|**_ismbcl1**|JIS 1 级：0x889F < =*c*< = 0x9872。|
+|**_ismbcl1_l**|JIS 1 级：0x889F < =*c*< = 0x9872。|
+|**_ismbcl2**|0JIS 2 级：0X989f< < =*c*< = 0xEAA4。|
+|**_ismbcl2_l**|0JIS 2 级：0X989f< < =*c*< = 0xEAA4。|
 
-函数将检查指定的值*c*匹配的测试条件，上面所述，但不是会检查*c*是有效的多字节字符。 如果低字节位于范围 0x00 - 0x3F、0x7F 或 0xFD - 0xFF 内，这些函数将返回一个非零值，指明字符满足测试条件。 使用 [_ismbbtrail](ismbbtrail-ismbbtrail-l.md) 来测试是否定义了多字节字符。
+函数检查指定的值*c*是否与上述测试条件匹配，但不检查*c*是否为有效的多字节字符。 如果低字节位于范围 0x00 - 0x3F、0x7F 或 0xFD - 0xFF 内，这些函数将返回一个非零值，指明字符满足测试条件。 使用 [_ismbbtrail](ismbbtrail-ismbbtrail-l.md) 来测试是否定义了多字节字符。
 
-**END 特定于代码页 932** 
+**END 特定于代码页 932**
 
 ## <a name="requirements"></a>要求
 

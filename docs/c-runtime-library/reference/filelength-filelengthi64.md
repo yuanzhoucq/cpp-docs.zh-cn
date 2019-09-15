@@ -1,10 +1,10 @@
 ---
 title: _filelength、_filelengthi64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _filelengthi64
 - _filelength
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _filelength
 - _filelengthi64
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - files [C++], length
 - _filelengthi64 function
 ms.assetid: 3ab83d5a-543c-4079-b9d9-0abfc7da0275
-ms.openlocfilehash: 00d755138b9293145865b832994a25062edd883e
-ms.sourcegitcommit: fc6bdffcf7d5521609da629621cc8459b200b004
+ms.openlocfilehash: d7cf7f5bea5ed8964ec1a714a2a70d289daf085f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67351764"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957220"
 ---
-# <a name="filelength-filelengthi64"></a>_filelength、_filelengthi64
+# <a name="_filelength-_filelengthi64"></a>_filelength、_filelengthi64
 
 获取文件的长度。
 
@@ -58,7 +61,7 @@ __int64 _filelengthi64(
 
 ## <a name="return-value"></a>返回值
 
-这两 **_filelength**并 **_filelengthi64**返回以字节为单位，与关联的目标文件的文件长度*fd*。 如果*fd*是一个无效文件说明符，此函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许继续执行，这两个函数将返回-1l 以指示错误，并设置**errno**到**EBADF**。
+**_Filelength**和 **_filelengthi64**都返回与*fd*关联的目标文件的文件长度（以字节为单位）。 如果*fd*是无效的文件描述符，则此函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这两个函数都将返回-1L 以指示错误，并将**errno**设置为**ebadf (** 。
 
 ## <a name="requirements"></a>要求
 

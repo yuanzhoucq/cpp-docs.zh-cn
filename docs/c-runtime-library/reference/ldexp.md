@@ -1,12 +1,12 @@
 ---
-title: ldexp、 ldexpf、 ldexpl
+title: ldexp、ldexpf、ldexpl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - ldexp
 - ldexpf
 - ldexpl
 - _ldexpl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ldexp
 - ldexpf
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - exponent, floating-point numbers
 - floating-point functions, mantissa and exponent
 ms.assetid: aa7f5310-3879-4f63-ae74-86a39fbdedfa
-ms.openlocfilehash: 7fbf89f8d78e8a2ce1018a790350ec986dcab87e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7fabd00c7ddc5c430c158089b7e5769158b46328
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286288"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953508"
 ---
-# <a name="ldexp-ldexpf-ldexpl"></a>ldexp、 ldexpf、 ldexpl
+# <a name="ldexp-ldexpf-ldexpl"></a>ldexp、ldexpf、ldexpl
 
 将浮点数乘以二的整数幂。
 
@@ -80,19 +83,19 @@ long double ldexpl(
 
 ## <a name="return-value"></a>返回值
 
-**Ldexp**函数将返回的值*x* \* 2<sup>*exp* </sup>如果成功。 在溢出时，和具体取决于的符号*x*， **ldexp**返回 + /- **HUGE_VAL**; **errno**值设置为**ERANGE**.
+如果成功， **ldexp**函数将返回*x* \* 2<sup>*exp*</sup>的值。 溢出时，根据*x*的符号， **ldexp**返回 +/- **HUGE_VAL**;**errno**值设置为**ERANGE**。
 
-有关详细信息**errno**和可能的错误返回值，请参阅[errno、 _doserrno、 _sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+有关**errno**和可能的错误返回值的详细信息，请参阅[errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-因为C++允许重载，可以调用的重载**ldexp**采用**float**或**长** **double**类型。 在 C 程序中， **ldexp**始终采用**double**和一个**int** ，并返回**double**。
+由于C++允许重载，因此可以调用采用**float**或**long** **双精度**类型的**ldexp**的重载。 在 C 程序中， **ldexp**始终采用**double**和**int** ，并返回**double**。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|C 标头|C++ 标头|
 |-------------|--------------|------------------|
-|**ldexp**， **ldexpf**， **ldexpl**|\<math.h>|\<cmath>|
+|**ldexp**、 **ldexpf**、 **ldexpl**|\<math.h>|\<cmath>|
 
 有关兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

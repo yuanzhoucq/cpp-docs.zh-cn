@@ -1,11 +1,11 @@
 ---
 title: acos、acosf、acosl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - acosf
 - acos
 - acosl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - acos
 - acosl
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: 22149e9ff552015238d34a15166d04115438534b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e8aba1104af5855db9cb4f3cbb989d182b2c78e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335667"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939994"
 ---
 # <a name="acos-acosf-acosl"></a>acos、acosf、acosl
 
@@ -58,29 +61,29 @@ long double acos( long double x );   // C++ only
 ### <a name="parameters"></a>参数
 
 *x*<br/>
-值为-1 和 1 之间，要计算反余弦值 （反余弦值）。
+介于-1 和1之间的值，用于计算反余弦值（反余弦值）。
 
 ## <a name="return-value"></a>返回值
 
-**Acos**函数返回的反余弦*x* 0 到 π 弧度范围内。
+**Acos**函数返回0到π弧度范围内*x*的反余弦。
 
-默认情况下，如果*x*小于-1 或大于 1， **acos**返回无穷大。
+默认情况下，如果*x*小于-1 或大于1，则**acos**将返回无限值。
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
 |± ∞|INVALID|_DOMAIN|
-|± QNAN,IND|无|_DOMAIN|
+|± QNAN，IND|无|_DOMAIN|
 |&#124;x&#124;>1|INVALID|_DOMAIN|
 
 ## <a name="remarks"></a>备注
 
-因为C++允许重载，可以调用的重载**acos**采用并返回**float**并**长** **double**类型。 在 C 程序中， **acos**始终采用并返回**double**。
+由于C++允许重载，因此可以调用**acos**的重载，该重载采用和返回**float**和**long** **double**类型。 在 C 程序中， **acos**始终采用并返回**双精度型**。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|----------------------|
-|**acos**， **acosf**， **acosl**|\<math.h>|\<errno.h>|
+|**acos**、 **acosf**、 **acosl**|\<math.h>|\<errno.h>|
 
 ## <a name="example"></a>示例
 

@@ -1,10 +1,10 @@
 ---
 title: _endthread、_endthreadex
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _endthread
 - _endthreadex
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _endthread
 - endthreadex
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - _endthreadex function
 - threading [C++], terminating threads
 ms.assetid: 18a91f2f-659e-40b4-b266-ec12dcf2abf5
-ms.openlocfilehash: 5afbc907356d4c5b14b749de5de0c8d36280891e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c9dd4a49e534e8fa3e0f5ac735faccb4b0f65af5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499966"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937735"
 ---
 # <a name="_endthread-_endthreadex"></a>_endthread、_endthreadex
 
-终止线程; **_endthread**终止由 **_beginthread**创建的线程, 并 **_endthreadex**终止由 **_beginthreadex**创建的线程。
+终止线程; **_endthread**终止由 **_beginthread**创建的线程，并 **_endthreadex**终止由 **_beginthreadex**创建的线程。
 
 ## <a name="syntax"></a>语法
 
@@ -57,14 +60,14 @@ void _endthreadex(
 
 ## <a name="remarks"></a>备注
 
-可以显式调用 **_endthread**或 **_endthreadex**以终止线程;但是, 当线程从作为参数传递给 **_beginthread**或 **_beginthreadex**的例程中返回时, 会自动调用 **_endthread**或 **_endthreadex** 。 使用对**endthread**或 **_endthreadex**的调用来终止线程有助于确保正确恢复为线程分配的资源。
+可以显式调用 **_endthread**或 **_endthreadex**以终止线程;但是，当线程从作为参数传递给 **_beginthread**或 **_beginthreadex**的例程中返回时，会自动调用 **_endthread**或 **_endthreadex** 。 使用对**endthread**或 **_endthreadex**的调用来终止线程有助于确保正确恢复为线程分配的资源。
 
 > [!NOTE]
-> 对于与 Libcmt.lib 链接的可执行文件，请不要调用 Win32 [ExitThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-exitthread) API；这将阻止运行时系统回收已分配的资源。 **_endthread**和 **_endthreadex**回收分配的线程资源, 然后调用**ExitThread**。
+> 对于与 Libcmt.lib 链接的可执行文件，请不要调用 Win32 [ExitThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-exitthread) API；这将阻止运行时系统回收已分配的资源。 **_endthread**和 **_endthreadex**回收分配的线程资源，然后调用**ExitThread**。
 
-**_endthread**会自动关闭线程句柄。 (此行为与 Win32 **ExitThread** API 不同。)因此, 使用 **_beginthread**和 **_endthread**时, 不要通过调用 Win32 [CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle) API 来显式关闭线程句柄。
+**_endthread**会自动关闭线程句柄。 （此行为与 Win32 **ExitThread** API 不同。）因此，使用 **_beginthread**和 **_endthread**时，不要通过调用 Win32 [CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle) API 来显式关闭线程句柄。
 
-与 Win32 **ExitThread** API 一样, **_endthreadex**不会关闭线程句柄。 因此, 在使用 **_beginthreadex**和 **_endthreadex**时, 必须通过调用 Win32 **CloseHandle** API 来关闭线程句柄。
+与 Win32 **ExitThread** API 一样， **_endthreadex**不会关闭线程句柄。 因此，在使用 **_beginthreadex**和 **_endthreadex**时，必须通过调用 Win32 **CloseHandle** API 来关闭线程句柄。
 
 > [!NOTE]
 > **_endthread**和 **_endthreadex**导致C++不会调用线程中的析构函数。

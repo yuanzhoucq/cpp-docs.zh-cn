@@ -1,10 +1,10 @@
 ---
 title: setlocale、_wsetlocale
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wsetlocale
 - setlocale
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wsetlocale
 - _tsetlocale
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - defining locales
 - _wsetlocale function
 ms.assetid: 3ffb684e-5990-4202-9553-b5339af9520d
-ms.openlocfilehash: 618b3e58a52e89561439fe76bf1b30e3cbbce001
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 375b1de82f72447d7e41b051c2aa1307716fb0dd
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356350"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948249"
 ---
-# <a name="setlocale-wsetlocale"></a>setlocale、_wsetlocale
+# <a name="setlocale-_wsetlocale"></a>setlocale、_wsetlocale
 
 设置或检索运行时区域设置。
 
@@ -64,7 +67,7 @@ wchar_t *_wsetlocale(
 
 ## <a name="return-value"></a>返回值
 
-如果提供了有效*区域设置*并*类别*，则返回指向与指定关联的字符串的指针*区域设置*并*类别*。 如果*区域设置*或*类别*无效，则返回 null 指针，但不更改程序的当前区域设置。
+如果提供了有效的*区域设置*和*类别*，则返回指向与指定的*区域设置*和*类别*关联的字符串的指针。 如果*区域设置*或*类别*无效，则返回空指针，并且不更改程序的当前区域设置。
 
 例如，调用
 
@@ -78,13 +81,13 @@ setlocale( LC_ALL, "en-US" );
 en-US
 ```
 
-可以将复制返回的字符串**setlocale**还原该程序的区域设置信息的一部分。 全局或线程本地存储用于返回的字符串**setlocale**。 稍后调用**setlocale**覆盖字符串，这会使之前调用返回的字符串指针。
+可以复制**setlocale**返回的字符串，以便还原该程序区域设置信息的一部分。 全局或线程本地存储用于**setlocale**返回的字符串。 稍后对**setlocale**的调用将覆盖字符串，这将使之前调用返回的字符串指针失效。
 
 ## <a name="remarks"></a>备注
 
-使用**setlocale**函数来设置、 更改或查询的一部分或由指定的当前程序区域设置信息的所有*区域设置*并*类别*。 *区域设置*指的是可以自定义应用程序的某些方面的局部性 （国家/地区和语言）。 一些与区域设置相关的类别包括日期的格式设置和货币值的显示格式。 如果您设置*区域设置*为具有多个窗体在您的计算机上受支持的语言的默认字符串，应检查**setlocale**返回值以确定哪种语言为有效。 例如，如果您设置*区域设置*为"chinese"的返回值可以是"简体中文"或"中文-繁体"。
+使用**setlocale**函数设置、更改或查询由*区域设置*和*类别*指定的某些或全部当前程序区域设置信息。 *区域设置*是指可为其自定义程序的某些方面的区域（国家/地区和语言）。 一些与区域设置相关的类别包括日期的格式设置和货币值的显示格式。 如果将 "*区域*设置" 设置为在计算机上支持多个窗体的语言的默认字符串，则应检查**setlocale**返回值以查看哪种语言有效。 例如，如果将 "*区域*设置" 设置为 "中文"，则返回值可能是 "简体中文" 或 "繁体中文"。
 
-**_wsetlocale**是宽字符版本**setlocale**;*区域设置*参数和返回值 **_wsetlocale**都是宽字符字符串。 **_wsetlocale**并**setlocale**行为相同。
+**_wsetlocale**是**setlocale**的宽字符版本; **_wsetlocale**的*区域设置*参数和返回值是宽字符字符串。 否则， **_wsetlocale**和**setlocale**的行为相同。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -92,28 +95,28 @@ en-US
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tsetlocale**|**setlocale**|**setlocale**|**_wsetlocale**|
 
-*类别*参数指定受影响的程序的区域设置信息部分。 用于的宏*类别*和及其影响的程序部分如下所示：
+*Category*参数指定程序的受影响的部分区域设置信息。 用于*类别*的宏及其影响的程序的部分如下所示：
 
 |*类别*标志|影响|
 |-|-|
 | **LC_ALL** | 以下列出了所有类别。 |
-| LC_COLLATE | **Strcoll**， **_stricoll**， **wcscoll**， **_wcsicoll**， **strxfrm**， **_strncoll**， **_strnicoll**， **_wcsncoll**， **_wcsnicoll**，并且**wcsxfrm**函数。 |
-| LC_CTYPE | 字符处理函数 (除**isdigit**， **isxdigit**， **mbstowcs**，以及**mbtowc**，不受影响)。 |
-| **LC_MONETARY** | 返回的货币格式信息**localeconv**函数。 |
-| LC_NUMERIC | 小数点字符格式化的输出例程 (如**printf**)、 数据转换例程，以及返回的非货币格式设置信息**localeconv**。 除小数点字符之外**LC_NUMERIC**集千位分隔符和分组控制返回字符串[localeconv](localeconv.md)。 |
-| LC_TIME | **Strftime**并**wcsftime**函数。 |
+| LC_COLLATE | **Strcoll**、 **_stricoll**、 **wcscoll**、 **_wcsicoll**、 **strxfrm**、 **_strncoll**、 **_strnicoll**、 **_wcsncoll**、 **_wcsnicoll**和**wcsxfrm**函数。 |
+| LC_CTYPE | 字符处理函数（ **isdigit**、 **isxdigit**、 **mbstowcs**和**mbtowc**除外，它们不受影响）。 |
+| **LC_MONETARY** | **Localeconv**函数返回的货币格式信息。 |
+| LC_NUMERIC | 格式化输出例程（如**printf**）的小数点字符，适用于数据转换例程和**localeconv**返回的非货币格式设置信息。 除小数点字符外， **LC_NUMERIC**还会设置[localeconv](localeconv.md)返回的千位分隔符和分组控制字符串。 |
+| LC_TIME | **Strftime**和**wcsftime**函数。 |
 
-此函数验证类别参数。 如果类别参数不是上表中提供的值之一，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，该函数将设置**errno**到**EINVAL** ，并返回**NULL**。
+此函数验证类别参数。 如果类别参数不是上表中提供的值之一，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将**errno**设置为**EINVAL** ，并返回**NULL**。
 
-*区域设置*参数是指向指定的区域设置的字符串。 有关格式的详细信息*区域设置*自变量，请参阅[区域设置名称、 语言和国家/地区字符串](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)。 如果 *locale* 指向一个空字符串，则区域设置是实现定义的本机环境。 值为**C**指定最小为 C 转换 ANSI 符合的环境。 **C**区域设置假设所有**char**数据类型为 1 个字节，并且其值始终是小于 256。
+*Locale*参数是指向指定区域设置的字符串的指针。 有关*区域设置*参数格式的信息，请参阅[区域设置名称、语言和国家/地区字符串](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)。 如果 *locale* 指向一个空字符串，则区域设置是实现定义的本机环境。 值**c**指定 c 转换的最小 ANSI 一致性环境。 **C**区域设置假设所有**char**数据类型均为1个字节，并且其值始终小于256。
 
 在程序启动时，将执行以下语句的等效项：
 
 `setlocale( LC_ALL, "C" );`
 
-*区域设置*参数可使用区域设置名称、 语言字符串、 语言字符串和国家/地区代码、 代码页或语言字符串、 国家/地区代码和代码页。 可用区域设置名称、语言、国家/地区代码和代码页集包含 Windows NLS API 支持的所有内容，要求每个字符对应两个以上的字节的代码页除外（如 UTF-7 和 UTF-8）。 如果提供的 utf-7 或 utf-8 的代码页值**setlocale**将失败并返回**NULL**。 支持的区域设置名称的一套**setlocale**中所述[区域设置名称、 语言和国家/地区字符串](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)。 支持的语言和国家/地区字符串的一套**setlocale**中列出[语言字符串](../../c-runtime-library/language-strings.md)并[国家/地区字符串](../../c-runtime-library/country-region-strings.md)。 建议对嵌入到代码中或序列化到存储中的区域设置字符串的性能和可维护性使用区域设置名称格式。 与语言和国家/地区名称格式相比，操作系统的更新更改区域设置名称字符串的可能性会小一些。
+*区域设置*参数可以采用区域设置名称、语言字符串、语言字符串和国家/地区代码、代码页或语言字符串、国家/地区代码和代码页。 可用区域设置名称、语言、国家/地区代码和代码页集包含 Windows NLS API 支持的所有内容，要求每个字符对应两个以上的字节的代码页除外（如 UTF-7 和 UTF-8）。 如果您提供的代码页值为 UTF-7 或 UTF-8，则**setlocale**将失败，并返回**NULL**。 [区域设置名称、语言和国家/地区字符串](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)中描述了**setlocale**支持的区域设置名称集。 [语言字符串](../../c-runtime-library/language-strings.md)和[国家/地区字符串](../../c-runtime-library/country-region-strings.md)中列出了**setlocale**支持的语言和国家/地区字符串集。 建议对嵌入到代码中或序列化到存储中的区域设置字符串的性能和可维护性使用区域设置名称格式。 与语言和国家/地区名称格式相比，操作系统的更新更改区域设置名称字符串的可能性会小一些。
 
-作为传递的 null 指针*区域设置*参数告知**setlocale**查询而不是设置国际环境。 如果*区域设置*参数为 null 指针，该程序的当前区域设置不会更改。 相反， **setlocale**与关联的字符串返回指向*类别*线程的当前区域设置。 如果*类别*自变量是**LC_ALL**，该函数返回一个字符串，指示每个类别，之间用分号分隔的当前设置。 例如，调用的顺序
+作为*区域设置*参数传递的 null 指针通知**setlocale**查询而不是设置国际环境。 如果*locale*参数为 null 指针，则不更改程序的当前区域设置。 相反， **setlocale**返回指向与线程的当前区域设置*类别*关联的字符串的指针。 如果*category*参数为**LC_ALL**，则该函数将返回一个字符串，该字符串指示每个类别的当前设置（用分号分隔）。 例如，调用的顺序
 
 ```C
 // Set all categories and return "en-US"
@@ -129,9 +132,9 @@ printf("%s\n", setlocale(LC_ALL, NULL));
 LC_COLLATE=en-US;LC_CTYPE=en-US;LC_MONETARY=fr-FR;LC_NUMERIC=en-US;LC_TIME=en-US
 ```
 
-这是与之关联的字符串**LC_ALL**类别。
+这是与**LC_ALL**类别关联的字符串。
 
-下面的示例适用于**LC_ALL**类别。 可使用字符串“.OCP”或“.ACP”而非代码页号来分别指定用户默认的 OEM 代码页和用户默认的 ANSI 代码页的用法。
+以下示例适用于**LC_ALL**类别。 可使用字符串“.OCP”或“.ACP”而非代码页号来分别指定用户默认的 OEM 代码页和用户默认的 ANSI 代码页的用法。
 
 - `setlocale( LC_ALL, "" );`
 
@@ -155,7 +158,7 @@ LC_COLLATE=en-US;LC_CTYPE=en-US;LC_MONETARY=fr-FR;LC_NUMERIC=en-US;LC_TIME=en-US
 
 - `setlocale( LC_ALL, "<language>_<country>.<code_page>" );`
 
-   设置语言、 国家/地区和代码页的区域设置为由 *\<语言 >*， *\<国家/地区 >*，以及 *\<code_page>* 字符串。 你可以使用语言、国家/地区和代码页的各种组合。 例如，此调用会将区域设置设定为“法语(加拿大)”并使用代码页 1252：
+   设置语言、 国家/地区和代码页的区域设置为由 *\<语言 >* ， *\<国家/地区 >* ，以及 *\<code_page>* 字符串。 你可以使用语言、国家/地区和代码页的各种组合。 例如，此调用会将区域设置设定为“法语(加拿大)”并使用代码页 1252：
 
    `setlocale( LC_ALL, "French_Canada.1252" );`
 
@@ -169,7 +172,7 @@ LC_COLLATE=en-US;LC_CTYPE=en-US;LC_MONETARY=fr-FR;LC_NUMERIC=en-US;LC_TIME=en-US
 
 - `setlocale( LC_ALL, "<language>" );`
 
-   将区域设置设定为由 *\<language>* 指示的语言，为指定的语言使用默认国家/地区，为从主机操作系统获取的国家/地区使用用户默认的 ANSI 代码页。 例如，以下调用**setlocale**在功能上等效：
+   将区域设置设定为由 *\<language>* 指示的语言，为指定的语言使用默认国家/地区，为从主机操作系统获取的国家/地区使用用户默认的 ANSI 代码页。 例如，以下对**setlocale**的调用在功能上是等效的：
 
    `setlocale( LC_ALL, "en-US" );`
 
@@ -183,7 +186,7 @@ LC_COLLATE=en-US;LC_CTYPE=en-US;LC_MONETARY=fr-FR;LC_NUMERIC=en-US;LC_TIME=en-US
 
    将代码页设置为由 *<code_page>* 指示的值，以及指定代码页的默认国家/地区和语言（由主机操作系统定义）。
 
-类别必须是**LC_ALL**或**LC_CTYPE**实现代码页的更改。 例如，如果默认国家/地区和主机操作系统的语言是"美国"和"英语"，以下两个调用到**setlocale**在功能上等效：
+类别必须是**LC_ALL**或**LC_CTYPE**才能影响代码页的更改。 例如，如果主机操作系统的默认国家/地区和语言为 "美国" 和 "英语"，则以下两个对**setlocale**的调用在功能上是等效的：
 
 `setlocale( LC_ALL, ".1252" );`
 
@@ -191,7 +194,7 @@ LC_COLLATE=en-US;LC_CTYPE=en-US;LC_MONETARY=fr-FR;LC_NUMERIC=en-US;LC_TIME=en-US
 
 有关详细信息，请参阅 [C/C++ 预处理器参考](../../preprocessor/c-cpp-preprocessor-reference.md)中的 [setlocale](../../preprocessor/setlocale.md) pragma 指令。
 
-该函数[_configthreadlocale](configthreadlocale.md)是否用于控制**setlocale**会影响程序中的所有线程的区域设置或仅调用线程的区域设置。
+函数[_configthreadlocale](configthreadlocale.md)用于控制**setlocale**是否影响程序中所有线程的区域设置或仅影响调用线程的区域设置。
 
 ## <a name="requirements"></a>要求
 

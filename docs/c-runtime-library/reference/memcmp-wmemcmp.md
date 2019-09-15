@@ -1,10 +1,10 @@
 ---
 title: memcmp、wmemcmp
 ms.date: 11/04/2016
-apiname:
+api_name:
 - memcmp
 - wmemcmp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,8 +17,10 @@ apilocation:
 - ntdll.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
-topictype: APIRef
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - memcmp
 - wmemcmp
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - wmemcmp function
 - memcmp function
 ms.assetid: 0c21c3e3-8ee4-40e5-add1-eb26d225fd8d
-ms.openlocfilehash: 228a74ac8cc83bca169779f1afd6936f5be59bee
-ms.sourcegitcommit: 010ecc2bb9a15deea192a34975176ec0426aa3d8
+ms.openlocfilehash: 2fa902c0fa5a4a78f6fd3e46edeb3799aaf92569
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66265631"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951926"
 ---
 # <a name="memcmp-wmemcmp"></a>memcmp、wmemcmp
 
@@ -61,21 +63,21 @@ int wmemcmp(
 第二个缓冲区。
 
 *count*<br/>
-要比较的字符数。 (比较的字节数**memcmp**的宽字符**wmemcmp**)。
+要比较的字符数。 （比较**memcmp**的 bytes， **wmemcmp**的宽字符）。
 
 ## <a name="return-value"></a>返回值
 
 返回值指示缓冲区之间的关系。
 
-|返回值|第一个关系*计数*buf1 和 buf2 的字符|
+|返回值|Buf1 和 buf2 的第一个*计数*字符的关系|
 |------------------|---------------------------------------------------------------|
 |< 0|*buffer1*小于*buffer2*|
-|0|*buffer1*等于*buffer2*|
+|0|*buffer1*等同于*buffer2*|
 |> 0|*buffer1*大于*buffer2*|
 
 ## <a name="remarks"></a>备注
 
-比较第一个*计数*个字符*buffer1*并*buffer2* ，并返回一个值，指示二者关系。 非零返回值的符号是缓冲区中的第一个不同值对之差的符号。 值解释为**无符号** **char**有关**memcmp**，以及**wchar_t**为**wmemcmp**。
+比较*buffer1*和*buffer2*的第一个*计数*字符并返回指示它们关系的值。 非零返回值的符号是缓冲区中的第一个不同值对之差的符号。 这些值被解释为**memcmp**的**无符号** **字符**，而**wmemcmp**的值被解释为**wchar_t** 。
 
 ## <a name="requirements"></a>要求
 

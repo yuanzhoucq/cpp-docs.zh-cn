@@ -1,10 +1,10 @@
 ---
 title: vfscanf、vfwscanf
 ms.date: 11/04/2016
-apiname:
+api_name:
 - vfwscanf
 - vfscanf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,18 +15,21 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - vfwscanf
 - _vftscanf
 - vfscanf
 ms.assetid: c06450ef-03f1-4d24-a8ac-d2dd98847918
-ms.openlocfilehash: 3076f63e05e156a479372adfca9dc707255f9e6a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72591c9fa91855745f45f3f77c88dd0ed5b001a0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364774"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945526"
 ---
 # <a name="vfscanf-vfwscanf"></a>vfscanf、vfwscanf
 
@@ -60,15 +63,15 @@ int vfwscanf(
 
 ## <a name="return-value"></a>返回值
 
-每个函数都将返回成功转换和分配的字段数；返回值不包括已读取但未分配的字段。 返回值为 0 表示没有分配任何字段。 如果发生错误，或如果在第一次转换前达到文件流的末尾，则返回值是**EOF**有关**vfscanf**并**vfwscanf**。
+每个函数都将返回成功转换和分配的字段数；返回值不包括已读取但未分配的字段。 返回值为 0 表示没有分配任何字段。 如果发生错误，或者在第一次转换之前到达文件流的末尾，则返回值为**vfscanf**和**vfwscanf**的**EOF** 。
 
-这些函数验证其参数。 如果*流*或*格式*是 null 指针，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，这些函数将返回**EOF**并设置**errno**到**EINVAL**。
+这些函数验证其参数。 如果*stream*或*format*为空指针，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回**EOF** ，并将**Errno**设置为**EINVAL**。
 
 ## <a name="remarks"></a>备注
 
-**Vfscanf**函数将从当前的位置读取数据*流*到由给定的位置*arglist*参数列表。 列表中的每个参数必须是指向类型中的类型说明符相对应的变量的指针*格式*。 *格式*控制字段输入的解释，并且具有相同格式和函数作为*格式*自变量**scanf**; 请参阅[scanf](scanf-scanf-l-wscanf-wscanf-l.md)为说明*格式*。
+**Vfscanf**函数将数据从*流*的当前位置读入*arglist*参数列表给定的位置。 列表中的每个自变量都必须是指向类型的变量的指针，该类型与*格式*中的类型说明符对应。 *format*控制输入字段的解释，其形式和函数与**scanf**的*格式*参数相同;有关*格式*的说明，请参阅[scanf](scanf-scanf-l-wscanf-wscanf-l.md) 。
 
-**vfwscanf**是宽字符版本**vfscanf**; 的格式参数**vfwscanf**是宽字符字符串。 如果在 ANSI 模式下打开流，则这些函数行为相同。 **vfscanf**不支持 UNICODE 流输入。
+**vfwscanf**是**vfscanf**的宽字符版本;**vfwscanf**的格式参数是宽字符字符串。 如果在 ANSI 模式下打开流，则这些函数行为相同。 **vfscanf**不支持 UNICODE 流的输入。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

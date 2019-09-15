@@ -1,12 +1,12 @@
 ---
 title: _strspnp、_wcsspnp、_mbsspnp、_mbsspnp_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsspnp
 - _wcsspnp
 - _mbsspnp_l
 - _strspnp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcsspnp
 - _mbsspnp
@@ -42,19 +45,19 @@ helpviewer_keywords:
 - _tcsspnp function
 - tcsspnp function
 ms.assetid: 1ce18100-2edd-4c3b-af8b-53f204d80233
-ms.openlocfilehash: 9a4a0d2f9b9940e181625b129e5ded8bb9644c39
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: af80f4970e5aad4355b0287c901f130809cc4f79
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223126"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946672"
 ---
-# <a name="strspnp-wcsspnp-mbsspnp-mbsspnpl"></a>_strspnp、_wcsspnp、_mbsspnp、_mbsspnp_l
+# <a name="_strspnp-_wcsspnp-_mbsspnp-_mbsspnp_l"></a>_strspnp、_wcsspnp、_mbsspnp、_mbsspnp_l
 
 返回指向给定字符串（不在另一个给定字符串）中的第一个字符的指针。
 
 > [!IMPORTANT]
-> **_mbsspnp**并 **_mbsspnp_l**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbsspnp**和 **_mbsspnp_l**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -91,13 +94,13 @@ null 终止的字符集。
 
 ## <a name="return-value"></a>返回值
 
-**_strspnp**， **_wcsspnp**，和 **_mbsspnp**中的第一个字符返回一个指向*str* ，不属于组字符*charset*。 每个函数将返回**NULL**如果*str*包含中的所有字符*字符集*。 对于这些例程，都不会保留返回值来指示错误。
+**_strspnp**、 **_wcsspnp**和 **_mbsspnp**返回指向*str*中的第一个字符的指针，该字符不属于*字符集*中的字符集。 如果*str*包含*字符集*中的所有字符，则这些函数将返回**NULL** 。 对于这些例程，都不会保留返回值来指示错误。
 
 ## <a name="remarks"></a>备注
 
-**_Mbsspnp**函数返回一个指针是中的第一个字符的多字节字符*str*的不属于组中的字符*字符集*。 **_mbsspnp**识别多字节字符序列根据[多字节代码页](../../c-runtime-library/code-pages.md)当前正在使用。 搜索不包括结尾的 null 字符。
+**_Mbsspnp**函数返回一个指向多字节字符的指针，该字符是*str*中的第一个字符，该字符不属于*字符集*中的字符集。 **_mbsspnp**根据当前使用的[多字节代码页](../../c-runtime-library/code-pages.md)识别多字节字符序列。 搜索不包括结尾的 null 字符。
 
-如果任一*str*或*字符集*是 null 指针，此函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，该函数返回**NULL** ，并设置**errno**到**EINVAL**。
+如果*str*或*字符集*为空指针，此函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将返回**NULL** ，并将**Errno**设置为**EINVAL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -105,9 +108,9 @@ null 终止的字符集。
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsspnp**|**_strspnp**|**_mbsspnp**|**_wcsspnp**|
 
-**_strspnp**并 **_wcsspnp**单字节字符和宽字符版本的 **_mbsspnp**。 **_strspnp**并 **_wcsspnp**行为 **_mbsspnp** ; 否则为仅针对此映射提供，不应因任何其他原因。 有关详细信息，请参阅[使用一般文本映射](../../c-runtime-library/using-generic-text-mappings.md)和[一般文本映射](../../c-runtime-library/generic-text-mappings.md)。
+**_strspnp**和 **_wcsspnp**是 **_mbsspnp**的单字节字符和宽字符版本。 **_strspnp**和 **_wcsspnp**与 **_mbsspnp**的行为相同; 否则为。它们仅为此映射提供，不应用于任何其他原因。 有关详细信息，请参阅[使用一般文本映射](../../c-runtime-library/using-generic-text-mappings.md)和[一般文本映射](../../c-runtime-library/generic-text-mappings.md)。
 
-**_mbsspnp_l**是完全相同，只不过它改用已传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**_mbsspnp_l**是相同的，只不过它使用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>要求
 

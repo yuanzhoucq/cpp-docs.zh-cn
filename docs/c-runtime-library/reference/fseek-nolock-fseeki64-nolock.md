@@ -1,10 +1,10 @@
 ---
 title: _fseek_nolock、_fseeki64_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fseek_nolock
 - _fseeki64_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fseek_nolock
 - _fseeki64_nolock
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - _fseeki64_nolock function
 - seek file pointers
 ms.assetid: 2dd4022e-b715-462b-b935-837561605a02
-ms.openlocfilehash: 57e9a57223d6af620f4f9160923675b4873ab3ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c72f44b214893a6702f5da5594db7725a2f02136
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287691"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956532"
 ---
-# <a name="fseeknolock-fseeki64nolock"></a>_fseek_nolock、_fseeki64_nolock
+# <a name="_fseek_nolock-_fseeki64_nolock"></a>_fseek_nolock、_fseeki64_nolock
 
 将文件指针移到指定位置。
 
@@ -69,17 +72,17 @@ int _fseeki64_nolock(
 
 ## <a name="return-value"></a>返回值
 
-与相同[fseek](fseek-fseeki64.md)并[_fseeki64](fseek-fseeki64.md)分别。
+与[fseek](fseek-fseeki64.md)和[_fseeki64](fseek-fseeki64.md)分别相同。
 
 ## <a name="remarks"></a>备注
 
-这些函数是的非锁定版本[fseek](fseek-fseeki64.md)并[_fseeki64](fseek-fseeki64.md)分别。 这些是与相同[fseek](fseek-fseeki64.md)并[_fseeki64](fseek-fseeki64.md) ，只不过它们不受干扰从其他线程。 这些函数可能更快，因为它们不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用这些函数，如单线程应用程序或调用范围已经处理线程隔离。
+这些函数分别是[fseek](fseek-fseeki64.md)和[_fseeki64](fseek-fseeki64.md)的非锁定版本。 它们与[fseek](fseek-fseeki64.md)和[_fseeki64](fseek-fseeki64.md)相同，只不过它们不会受到其他线程的干扰。 这些函数可能更快，因为它们不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用这些函数，如单线程应用程序或调用范围已经处理线程隔离。
 
 ## <a name="requirements"></a>要求
 
 |函数|必需的标头|
 |--------------|---------------------|
-|**_fseek_nolock**， **_fseeki64_nolock**|\<stdio.h>|
+|**_fseek_nolock**、 **_fseeki64_nolock**|\<stdio.h>|
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

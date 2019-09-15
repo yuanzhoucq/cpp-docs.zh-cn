@@ -1,9 +1,9 @@
 ---
 title: _alloca
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _alloca
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _alloca
 - alloca
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - alloca function
 - _alloca function
 ms.assetid: 74488eb1-b71f-4515-88e1-cdd03b6f8225
-ms.openlocfilehash: 7c083e791301d3224709a5fc6c711ceaa6397d38
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2212f9e40c78932b63eebfc221ad2f07fa3d3f9d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341595"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943701"
 ---
-# <a name="alloca"></a>_alloca
+# <a name="_alloca"></a>_alloca
 
-在堆栈上分配内存。 此函数已弃用，因为一个更安全版本可用;请参阅[_malloca](malloca.md)。
+在堆栈上分配内存。 此函数已弃用，因为更安全的版本可用;请参阅[_malloca](malloca.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -49,28 +52,28 @@ void *_alloca(
 
 ## <a name="return-value"></a>返回值
 
-**_Alloca**例程返回**void**指向保证适当对齐任何类型的对象的存储的已分配空间。 如果*大小*为 0， **_alloca**分配零长度的项并向该项返回有效的指针。
+**_Alloca**例程返回指向已分配空间的**void**指针，该指针保证能针对任何类型的对象的存储进行适当的调整。 如果*size*为0，则 **_alloca**分配一个长度为零的项，并返回指向该项的有效指针。
 
 如果无法分配空间，将生成堆栈溢出异常。 堆栈溢出异常不是 C++ 异常，它是结构化异常。 必须使用[结构化异常处理](../../cpp/structured-exception-handling-c-cpp.md) (SEH)，而使用 C++ 异常处理。
 
 ## <a name="remarks"></a>备注
 
-**_alloca**分配*大小*从程序堆栈的字节数。 调用函数退出 （而不是在分配仅传递超出范围） 时，会自动释放已分配的空间。 因此，不传递返回的指针值 **_alloca**的参数作为[免费](free.md)。
+**_alloca**从程序堆栈分配*大小*字节。 释放调用函数时，将自动释放已分配的空间（而不是在分配超出范围时）。 因此，请不要将 **_alloca**返回的指针值作为参数传递给[free](free.md)。
 
-存在一些限制显式调用 **_alloca**异常处理程序 (EH) 中。 在 x86 类处理器运行的 EH 例程在自己的内存框架操作：他们未基于封闭函数的堆栈指针的当前位置的内存空间中执行其任务。 最常见的实现包括 Windows NT 结构化异常处理 (SEH) 和 C++ catch 子句表达式。 因此，显式调用 **_alloca**中任何以下方案结果在返回至调用 EH 例程时程序失败：
+在异常处理程序（EH）中显式调用 **_alloca**存在一些限制。 在 x86 类处理器上运行的 EH 例程在其自己的内存帧中运行：它们在内存空间中执行其任务，这些任务不基于封闭函数的堆栈指针的当前位置。 最常见的实现包括 Windows NT 结构化异常处理 (SEH) 和 C++ catch 子句表达式。 因此，在以下任何一种情况下，显式调用 **_alloca**会导致在返回到调用 EH 例程期间程序失败：
 
-- Windows NT SEH 异常筛选器表达式： `__except ( _alloca() )`
+- Windows NT SEH 异常筛选器表达式：`__except ( _alloca() )`
 
-- Windows NT SEH 最终异常处理程序： `__finally { _alloca() }`
+- Windows NT SEH 最终异常处理程序：`__finally { _alloca() }`
 
 - C++ EH catch 子句表达式
 
-但是， **_alloca**可以直接从 EH 例程调用或通过调用从调用应用程序提供的回调之前列出的 EH 方案之一。
+但是，可以从 EH 例程内或从应用程序提供的回调中直接调用 **_alloca** ，此回调是前面列出的一个 EH 方案调用的。
 
 > [!IMPORTANT]
-> 在 Windows XP 中，如果 **_alloca**称为在 try/catch 块中，必须调用[_resetstkoflw](resetstkoflw.md) catch 块中。
+> 在 Windows XP 中，如果在 try/catch 块中调用 **_alloca** ，则必须在 catch 块中调用[_resetstkoflw](resetstkoflw.md) 。
 
-除了上述限制，使用时[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)选项， **_alloca**不能用于 **__except**块。 有关详细信息，请参阅 [/clr Restrictions](../../build/reference/clr-restrictions.md)。
+除了上述限制之外，在使用[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)选项时，不能在 **__except**块中使用 **_alloca** 。 有关详细信息，请参阅 [/clr Restrictions](../../build/reference/clr-restrictions.md)。
 
 ## <a name="requirements"></a>要求
 

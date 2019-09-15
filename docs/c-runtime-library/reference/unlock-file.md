@@ -1,9 +1,9 @@
 ---
 title: _unlock_file
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _unlock_file
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _unlock_file
 - unlock_file
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - _unlock_file function
 - unlocking files
 ms.assetid: cf380a51-6d3a-4f38-bd64-2d4fb57b4369
-ms.openlocfilehash: e3d11cbd59ef5846b33908ae6b6c40d7ea6125e8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2983408f066ea00c0b7ab111d9a6349700ecaece
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353531"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957480"
 ---
-# <a name="unlockfile"></a>_unlock_file
+# <a name="_unlock_file"></a>_unlock_file
 
 解锁文件，允许其他进程访问此文件。
 
@@ -51,7 +54,7 @@ void _unlock_file(
 
 ## <a name="remarks"></a>备注
 
-**_Unlock_file**函数解锁由指定的文件*文件*。 解锁文件可允许其他进程访问此文件。 除非，不应调用此函数 **_lock_file**之前已调用*文件*指针。 调用 **_unlock_file**上不会锁定的文件可能会导致死锁。 有关示例，请参阅 [_lock_file](lock-file.md)。
+**_Unlock_file**函数取消锁定*file*指定的文件。 解锁文件可允许其他进程访问此文件。 除非以前在*文件*指针上调用了 **_lock_file** ，否则不应调用此函数。 对未锁定的文件调用 **_unlock_file**可能会导致死锁。 有关示例，请参阅 [_lock_file](lock-file.md)。
 
 ## <a name="requirements"></a>要求
 

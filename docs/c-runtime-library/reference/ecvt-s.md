@@ -1,9 +1,9 @@
 ---
 title: _ecvt_s
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _ecvt_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ecvt_s
 - _ecvt_s
@@ -25,16 +28,16 @@ helpviewer_keywords:
 - numbers, converting
 - converting double numbers
 ms.assetid: d52fb0a6-cb91-423f-80b3-952a8955d914
-ms.openlocfilehash: 0123c618eb5ba614bd8e5b5b3f1f4b0aff539c4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c50200d16a5e542c247d1c85f8c104381af4a883
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288240"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937717"
 ---
-# <a name="ecvts"></a>_ecvt_s
+# <a name="_ecvt_s"></a>_ecvt_s
 
-将转换**double**数字的字符串。 这是 [_ecvt](ecvt.md) 版本，具有 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全增强功能。
+将**双精度**数字转换为字符串。 这是 [_ecvt](ecvt.md) 版本，具有 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全增强功能。
 
 ## <a name="syntax"></a>语法
 
@@ -81,30 +84,30 @@ errno_t _ecvt_s(
 
 如果成功，则返回 0。 如果失败，则返回值为错误代码。 错误代码是在 Errno.h 中定义。 有关详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-对于无效参数（如下表中所列），此函数调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，此函数可设置**errno**到**EINVAL** ，并返回**EINVAL**。
+对于无效参数（如下表中所列），此函数调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数会将**errno**设置为**EINVAL**并返回**EINVAL**。
 
 ### <a name="error-conditions"></a>错误条件
 
-|*_Buffer*|*_SizeInBytes*|_Value|_Count|_Dec|_Sign|返回值|中的值*缓冲区*|
+|*_Buffer*|*_SizeInBytes*|_Value|_Count|_Dec|_Sign|返回值|*缓冲区*中的值|
 |---------------|--------------------|-------------|-------------|-----------|------------|------------------|-----------------------|
 |**NULL**|任何|任何|任何|任何|任何|**EINVAL**|未修改。|
-|不**NULL** （指向有效内存）|<=0|任何|任何|任何|任何|**EINVAL**|未修改。|
+|Not **NULL** （指向有效内存）|<=0|任何|任何|任何|任何|**EINVAL**|未修改。|
 |任何|任何|任何|任何|**NULL**|任何|**EINVAL**|未修改。|
 |任何|任何|任何|任何|任何|**NULL**|**EINVAL**|未修改。|
 
 ## <a name="security-issues"></a>安全性问题
 
-**_ecvt_s**时，可能会产生访问冲突*缓冲区*不指向有效内存且不**NULL**。
+如果*缓冲区*未指向有效内存且不为**NULL**，则 **_ecvt_s**可能会产生访问冲突。
 
 ## <a name="remarks"></a>备注
 
-**_Ecvt_s**函数将浮点数转换为字符字符串。 *_Value*参数是要转换的浮点数。 此函数最多存储*计数*位数 *_Value*作为一个字符串，并追加 null 字符 (\0)。 如果中的数字个数 *_Value*超过 *_Count*，低位数字舍入。 如果少于*计数*用零填充数字字符串。
+**_Ecvt_s**函数将浮点数转换为字符串。 *_Value*参数是要转换的浮点数。 此函数以字符串的形式存储 *_Value*的*计数*位数，并追加一个 null 字符（"\ 0"）。 如果 *_Value*中的数字位数超过 *_Count*，则将舍入低序位。 如果数字少于*计数*，则用零填充字符串。
 
-字符串中仅存储位数。 小数点和的符号的位置 *_Value*可从此 *_Dec*并 *（_s)* 后调用。 *_Dec*参数指向整数值提供相对于字符串开头的小数点的位置。 0 或负整数值表示小数点位于第一个数字的左侧。 *（_s)* 参数指向一个整数，指示转换后的数字的符号。 如果整数值为 0，则数值为正值。 否认，数值为负值。
+字符串中仅存储位数。 在调用后，可以从 *_Dec*和 *_Sign*获取小数点的位置和 *_Value*的符号。 *_Dec*参数指向一个整数值，该整数值给定小数点相对于字符串开头的位置。 0 或负整数值表示小数点位于第一个数字的左侧。 *_Sign*参数指向一个整数，该整数指示转换后的数字的符号。 如果整数值为 0，则数值为正值。 否认，数值为负值。
 
-缓冲区长度 **_CVTBUFSIZE**足以满足任何浮点值。
+长度为 **_CVTBUFSIZE**的缓冲区足以满足任何浮点值。
 
-之间的差异 **_ecvt_s**并 **_fcvt_s**中的解释 *_Count*参数。 **_ecvt_s**解释 *_Count*输出字符串中的位数总数而 **_fcvt_s**解释 *_Count*后的位数小数点。
+**_Ecvt_s**和 **_fcvt_s**之间的区别在于 *_Count*参数的解释。 **_ecvt_s**将 *_Count*解释为输出字符串中的总位数，而 **_fcvt_s**将 *_Count*解释为小数点后的位数。
 
 在 C++ 中，通过模板重载简化此函数的使用；重载可以自动推导出缓冲区长度，不再需要指定大小参数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 

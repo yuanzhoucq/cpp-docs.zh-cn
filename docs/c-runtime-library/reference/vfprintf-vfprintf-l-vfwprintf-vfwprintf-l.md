@@ -1,12 +1,12 @@
 ---
 title: vfprintf、_vfprintf_l、vfwprintf、_vfwprintf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _vfprintf_l
 - vfprintf
 - vfwprintf
 - _vfwprintf_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - vfwprintf
 - _vftprintf
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - _vfprintf_l function
 - formatted text [C++]
 ms.assetid: 4443be50-cedf-40b2-b3e2-ff2b3af3b666
-ms.openlocfilehash: 18ba244bceb2deaf5ada78ae85aa8cab7058d51b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e72142f33c042e60ac6c06f6b84aa63b3de67457
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499225"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946633"
 ---
 # <a name="vfprintf-_vfprintf_l-vfwprintf-_vfwprintf_l"></a>vfprintf、_vfprintf_l、vfwprintf、_vfwprintf_l
 
@@ -91,17 +94,17 @@ int _vfwprintf_l(
 
 ## <a name="return-value"></a>返回值
 
-**vfprintf**和**vfwprintf**返回写入的字符数, 不包括终止 null 字符, 或在出现输出错误时返回一个负值。 如果*流*或*格式*为 null 指针, 则将调用无效参数处理程序, 如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续, 则函数将返回-1, 并将**errno**设置为**EINVAL**。
+**vfprintf**和**vfwprintf**返回写入的字符数，不包括终止 null 字符，或在出现输出错误时返回一个负值。 如果*流*或*格式*为 null 指针，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则函数将返回-1，并将**errno**设置为**EINVAL**。
 
 有关这些代码及其他错误代码的信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-其中每个函数都采用一个指向参数列表的指针, 然后将给定数据格式化并写入到*流*中。
+其中每个函数都采用一个指向参数列表的指针，然后将给定数据格式化并写入到*流*中。
 
-**vfwprintf**是**vfprintf**的宽字符版本;如果在 ANSI 模式下打开流, 则这两个函数的行为相同。 **vfprintf**当前不支持输出到 UNICODE 流中。
+**vfwprintf**是**vfprintf**的宽字符版本;如果在 ANSI 模式下打开流，则这两个函数的行为相同。 **vfprintf**当前不支持输出到 UNICODE 流中。
 
-这些带有 **_l**后缀的函数的版本相同, 只不过它们使用传入的区域设置参数而不是当前线程区域设置。
+这些带有 **_l**后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
 
 > [!IMPORTANT]
 > 确保 format不是用户定义的字符串。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。

@@ -1,9 +1,9 @@
 ---
 title: _CrtIsValidHeapPointer
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtIsValidHeapPointer
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtlsValidHeapPointer
 - _CrtIsValidHeapPointer
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - _CrtIsValidHeapPointer function
 - CrtIsValidHeapPointer function
 ms.assetid: caf597ce-1b05-4764-9f37-0197a982bec5
-ms.openlocfilehash: cdfb02c622cddc4c86a99f614e469abc527d8845
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a8746eb2da90ac5515d92113b977011a4647fe6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339385"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942387"
 ---
-# <a name="crtisvalidheappointer"></a>_CrtIsValidHeapPointer
+# <a name="_crtisvalidheappointer"></a>_CrtIsValidHeapPointer
 
 验证确保指定的指针位于某些 C 运行时库分配的堆中，但不一定在由调用方的 CRT 库分配的堆中。 在 Visual Studio 2010 之前的 CRT 版本中，这将验证指定的指针是否位于本地堆（仅限调试版本）。
 
@@ -48,11 +51,11 @@ int _CrtIsValidHeapPointer(
 
 ## <a name="return-value"></a>返回值
 
-**_CrtIsValidHeapPointer**如果指定的指针位于所有 CRT 库实例所都共享的堆，则返回 TRUE。 在 Visual Studio 2010 之前的 CRT 版本中，如果指定的指针位于本地堆，则将返回 TRUE。 否则，此函数返回 FALSE。
+如果指定的指针位于所有 CRT 库实例所共享的堆中， **_CrtIsValidHeapPointer**将返回 TRUE。 在 Visual Studio 2010 之前的 CRT 版本中，如果指定的指针位于本地堆，则将返回 TRUE。 否则，此函数返回 FALSE。
 
 ## <a name="remarks"></a>备注
 
-建议你不要使用此函数。 从 Visual Studio 2010 CRT 库开始，所有 CRT 库共享一个操作系统堆 - *进程堆*。 **_CrtIsValidHeapPointer**函数报告是否指针已分配到 CRT 堆中，但不是由调用方的 CRT 库分配。 例如，存在使用 Visual Studio 2010 版本的 CRT 库分配的块。 如果 **_CrtIsValidHeapPointer**由 Visual Studio 2012 版本的 CRT 库导出的函数测试指针，则返回 TRUE。 此测试不再有用。 在 Visual Studio 2010 之前版本的 CRT 库中，此函数用于确保特定的内存地址位于本地堆中。 本地堆是指由 C 运行库的特定实例创建和管理的堆。 如果动态链接库 (DLL) 包含到运行时库的静态链接，则它自身具有运行时堆的实例，从而本身具有独立于应用程序本地堆的堆。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，则调用 **_CrtIsValidHeapPointer**在预处理过程中删除。
+建议你不要使用此函数。 从 Visual Studio 2010 CRT 库开始，所有 CRT 库共享一个操作系统堆 - *进程堆*。 **_CrtIsValidHeapPointer**函数报告指针是否是在 CRT 堆中分配的，而不是由调用方的 CRT 库分配的。 例如，存在使用 Visual Studio 2010 版本的 CRT 库分配的块。 如果 Visual Studio 2012 版本的 CRT 库导出的 **_CrtIsValidHeapPointer**函数测试指针，则返回 TRUE。 此测试不再有用。 在 Visual Studio 2010 之前版本的 CRT 库中，此函数用于确保特定的内存地址位于本地堆中。 本地堆是指由 C 运行库的特定实例创建和管理的堆。 如果动态链接库 (DLL) 包含到运行时库的静态链接，则它自身具有运行时堆的实例，从而本身具有独立于应用程序本地堆的堆。 未定义[_debug](../../c-runtime-library/debug.md)时，将在预处理过程中删除对 **_CrtIsValidHeapPointer**的调用。
 
 因为此函数返回 TRUE 或 FALSE，因此可将它传递到其中一个 [_ASSERT](assert-asserte-assert-expr-macros.md) 宏，以创建一种简单的调试错误处理机制。 如果本地堆中没有指定的地址，则以下示例将导致断言失败：
 
@@ -60,7 +63,7 @@ int _CrtIsValidHeapPointer(
 _ASSERTE( _CrtIsValidHeapPointer( userData ) );
 ```
 
-详细了解如何 **_CrtIsValidHeapPointer**可以与其他调试函数和宏一起使用，请参阅[用于报告的宏](/visualstudio/debugger/macros-for-reporting)。 有关如何在基堆的调试版本中分配、初始化和管理内存块的信息，请参阅 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。
+有关 **_CrtIsValidHeapPointer**如何与其他调试函数和宏一起使用的详细信息，请参阅用于[报告的宏](/visualstudio/debugger/macros-for-reporting)。 有关如何在基堆的调试版本中分配、初始化和管理内存块的信息，请参阅 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。
 
 ## <a name="requirements"></a>要求
 

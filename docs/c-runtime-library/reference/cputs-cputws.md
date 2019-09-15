@@ -1,10 +1,10 @@
 ---
 title: _cputs、_cputws
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cputws
 - _cputs
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cputws
 - _cputs
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - console, sending strings to
 - cputws function
 ms.assetid: ec418484-0f8d-43ec-8d8b-198a556c659e
-ms.openlocfilehash: 81d2364cd1fc409ca3267bc416bd3cbd16c62a15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 46fce16078b9ce289d45ee4e62bb4076eaf5795a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340219"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942635"
 ---
-# <a name="cputs-cputws"></a>_cputs、_cputws
+# <a name="_cputs-_cputws"></a>_cputs、_cputws
 
 将字符串放到控制台。
 
@@ -62,13 +65,13 @@ int _cputws(
 
 ## <a name="return-value"></a>返回值
 
-如果成功， **_cputs**返回 0。 如果函数失败，则返回非零值。
+如果成功， **_cputs**将返回0。 如果函数失败，则返回非零值。
 
 ## <a name="remarks"></a>备注
 
-**_Cputs**函数将所指向的以 null 结尾的字符串写入*str*直接到控制台。 回车换行符 (CR-LF) 组合不会自动追加到字符串。
+**_Cputs**函数将*str*直接指向的以 null 结尾的字符串写入控制台。 回车换行符 (CR-LF) 组合不会自动追加到字符串。
 
-此函数验证其参数。 如果*str*是**NULL**，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**并返回-1。
+此函数验证其参数。 如果*str*为**NULL**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将**errno**设置为**EINVAL** ，并返回-1。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

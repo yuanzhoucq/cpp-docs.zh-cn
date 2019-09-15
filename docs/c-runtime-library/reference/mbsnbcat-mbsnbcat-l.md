@@ -1,10 +1,10 @@
 ---
 title: _mbsnbcat、_mbsnbcat_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnbcat_l
 - _mbsnbcat
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsnbcat
 - mbsnbcat_l
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - _mbsnbcat function
 - tcsncat function
 ms.assetid: aa0f1d30-0ddd-48d1-88eb-c6884b20fd91
-ms.openlocfilehash: 476909858a8537fb96d56d3230fd48719d5564ed
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 117171ec75ec0dddc3d7447f4110556165343258
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499826"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952346"
 ---
 # <a name="_mbsnbcat-_mbsnbcat_l"></a>_mbsnbcat、_mbsnbcat_l
 
@@ -83,7 +86,7 @@ dest<br/>
 *src*<br/>
 以 null 终止的多字节字符源字符串。
 
-*计数*<br/>
+*count*<br/>
 从*src*追加到*目标*的字节数。
 
 *locale*<br/>
@@ -95,13 +98,13 @@ dest<br/>
 
 ## <a name="remarks"></a>备注
 
-**_Mbsnbcat**函数最多将*src*的第一个*计数*字节追加到*dest*。 如果在*dest*中紧跟在 null 字符之前的字节是前导字节, 则*src*的初始字节会覆盖此前导字节。 否则, *src*的初始字节将覆盖*dest*的终止 null 字符。 如果在附加*count*个字节之前, *src*中出现 null 字节, 则 **_mbsnbcat**会将所有字节从*src*追加到 null 字符。 如果*count*大于*src*的长度, 则使用*src*的长度代替*计数*。 生成的字符串由空字符终止。 如果复制出现在重叠的字符串之间，则该行为不确定。
+**_Mbsnbcat**函数最多将*src*的第一个*计数*字节追加到*dest*。 如果在*dest*中紧跟在 null 字符之前的字节是前导字节，则*src*的初始字节会覆盖此前导字节。 否则， *src*的初始字节将覆盖*dest*的终止 null 字符。 如果在附加*count*个字节之前， *src*中出现 null 字节，则 **_mbsnbcat**会将所有字节从*src*追加到 null 字符。 如果*count*大于*src*的长度，则使用*src*的长度代替*计数*。 生成的字符串由空字符终止。 如果复制出现在重叠的字符串之间，则该行为不确定。
 
-输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 函数的 **_mbsnbcat**版本对与区域设置相关的行为使用当前区域设置; **_mbsnbcat_l**版本相同, 只不过它们改用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 函数的 **_mbsnbcat**版本对与区域设置相关的行为使用当前区域设置; **_mbsnbcat_l**版本相同，只不过它们改用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 **安全说明** 使用以 null 结尾的字符串。 以 null 结尾的字符串不得超过目标缓冲区的大小。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
-如果*dest*或*src*为**NULL**, 该函数将生成无效的参数错误, 如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果处理错误, 函数将返回**EINVAL** , 并将**Errno**设置为**EINVAL**。
+如果*dest*或*src*为**NULL**，该函数将生成无效的参数错误，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果处理错误，函数将返回**EINVAL** ，并将**Errno**设置为**EINVAL**。
 
 在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 

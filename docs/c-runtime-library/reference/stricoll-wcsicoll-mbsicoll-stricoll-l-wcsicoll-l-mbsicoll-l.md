@@ -1,14 +1,14 @@
 ---
 title: _stricoll、_wcsicoll、_mbsicoll、_stricoll_l、_wcsicoll_l、_mbsicoll_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsicoll_l
 - _stricoll_l
 - _mbsicoll
 - _wcsicoll_l
 - _wcsicoll
 - _stricoll
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -21,7 +21,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - stricoll
 - _stricoll
@@ -51,19 +54,19 @@ helpviewer_keywords:
 - strings [C++], comparing by code page
 - ftcsicoll function
 ms.assetid: 8ec93016-5a49-49d2-930f-721566661d82
-ms.openlocfilehash: bd2406751fd2855afd02743c98938e530398e7d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 952d3b25f9c3741313e791c49f88a7d2e79ac60b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353659"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940702"
 ---
-# <a name="stricoll-wcsicoll-mbsicoll-stricolll-wcsicolll-mbsicolll"></a>_stricoll、_wcsicoll、_mbsicoll、_stricoll_l、_wcsicoll_l、_mbsicoll_l
+# <a name="_stricoll-_wcsicoll-_mbsicoll-_stricoll_l-_wcsicoll_l-_mbsicoll_l"></a>_stricoll、_wcsicoll、_mbsicoll、_stricoll_l、_wcsicoll_l、_mbsicoll_l
 
 使用特定于区域设置的信息比较字符串。
 
 > [!IMPORTANT]
-> **_mbsicoll**并 **_mbsicoll_l**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbsicoll**和 **_mbsicoll_l**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -99,7 +102,7 @@ int _mbsicoll_l(
 
 ### <a name="parameters"></a>参数
 
-*string1*， *string2*<br/>
+*string1*、 *string2*<br/>
 要比较的 null 终止的字符串。
 
 *locale*<br/>
@@ -107,7 +110,7 @@ int _mbsicoll_l(
 
 ## <a name="return-value"></a>返回值
 
-这些函数均返回一个值，该值的关系*string1*到*string2*，按如下所示。
+其中每个函数都将返回一个值，该值指示*string1*与*string2*的关系，如下所示。
 
 |返回值|string1 与 string2 的关系|
 |------------------|----------------------------------------|
@@ -116,15 +119,15 @@ int _mbsicoll_l(
 |> 0|*string1*大于*string2*|
 |**_NLSCMPERROR**|出现了错误。|
 
-每个函数将返回 **_NLSCMPERROR**。 若要使用 **_NLSCMPERROR**，包括\<string.h > 或\<mbstring.h >。 **_wcsicoll**可能会失败，如果任一*string1*或*string2*包含排序序列域外部的宽字符代码。 出现错误时， **_wcsicoll**可能设置**errno**到**EINVAL**。 若要调用的错误检查 **_wcsicoll**，请设置**errno**为 0，然后选中**errno**后调用 **_wcsicoll**。
+其中每个函数均返回 **_NLSCMPERROR**。 若要使用 **_NLSCMPERROR**，请\<包含 string .h > 或\<mbstring.h >。 如果*string1*或*string2*包含排序序列域外部的宽字符代码，则 **_wcsicoll**可能会失败。 出现错误时， **_wcsicoll**可能会将**Errno**设置为**EINVAL**。 若要检查对 **_wcsicoll**的调用是否有错误，请将**errno**设置为0，然后在调用 **_wcsicoll**后检查**errno** 。
 
 ## <a name="remarks"></a>备注
 
-每个函数执行不区分大小写的比较*string1*并*string2*根据当前正在使用的代码页。 仅在当前代码页中的字符集顺序与字典字符顺序之间存在差异，并且此差异对于字符串比较有关系时，才应使用这些函数。
+其中每个函数根据当前使用的代码页对*string1*和*string2*执行不区分大小写的比较。 仅在当前代码页中的字符集顺序与字典字符顺序之间存在差异，并且此差异对于字符串比较有关系时，才应使用这些函数。
 
-**_stricmp**不同于 **_stricoll**在于 **_stricmp**会影响比较**LC_CTYPE**，而 **_stricoll**比较根据**LC_CTYPE**并**LC_COLLATE**的区域设置的类别。 有关详细信息**LC_COLLATE**类别中，请参阅[setlocale](setlocale-wsetlocale.md)并[区域设置类别](../../c-runtime-library/locale-categories.md)。 无需这些函数的版本 **_l**后缀使用当前区域设置; 的版本与 **_l**后缀是相同，只不过它们改用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**_stricmp**与 **_stricoll**的不同之处**在于 _stricmp**比较受**LC_CTYPE** **的影响**，而 **_stricoll**比较则根据本地. 有关**LC_COLLATE**类别的详细信息，请参阅[Setlocale](setlocale-wsetlocale.md)和[区域设置类别](../../c-runtime-library/locale-categories.md)。 这些不带 **_l**后缀的函数的版本使用当前区域设置;带有 **_l**后缀的版本相同，只不过它们改用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-所有这些函数都验证其参数。 如果任一*string1*或*string2*是**NULL**调用指针，无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md). 如果允许执行继续，这些函数将返回 **_NLSCMPERROR**并设置**errno**到**EINVAL**。
+所有这些函数都验证其参数。 如果*string1*或*string2*为**NULL**指针，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回 **_NLSCMPERROR** ，并将**Errno**设置为**EINVAL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -136,9 +139,9 @@ int _mbsicoll_l(
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**_stricoll**， **_stricoll_l**|\<string.h>|
-|**_wcsicoll**， **_wcsicoll_l**|\<wchar.h>、\<string.h>|
-|**_mbsicoll**， **_mbsicoll_l**|\<mbstring.h>|
+|**_stricoll**、 **_stricoll_l**|\<string.h>|
+|**_wcsicoll**、 **_wcsicoll_l**|\<wchar.h>、\<string.h>|
+|**_mbsicoll**、 **_mbsicoll_l**|\<mbstring.h>|
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

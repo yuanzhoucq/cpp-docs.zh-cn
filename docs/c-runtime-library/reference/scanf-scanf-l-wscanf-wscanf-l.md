@@ -1,12 +1,12 @@
 ﻿---
 title: scanf、_scanf_l、wscanf、_wscanf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wscanf_l
 - scanf
 - _scanf_l
 - wscanf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tscanf
 - _scanf_l
@@ -40,14 +43,14 @@ helpviewer_keywords:
 - wscanf_l function
 - _wscanf_l function
 ms.assetid: 73eac607-117f-4be4-9ff0-4afd9cf3c848
-ms.openlocfilehash: 48aa0bb3348a3336de9ee0eb9f9ec0d3e1a2b3cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5c3b0f73561dcd41ef1643042baeac7fff0728b4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357117"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948836"
 ---
-# <a name="scanf-scanfl-wscanf-wscanfl"></a>scanf、_scanf_l、wscanf、_wscanf_l
+# <a name="scanf-_scanf_l-wscanf-_wscanf_l"></a>scanf、_scanf_l、wscanf、_wscanf_l
 
 读取标准输入流中的格式化数据。 提供这些函数的更多安全版本；请参阅 [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)。
 
@@ -79,7 +82,7 @@ int _wscanf_l(
 *format*<br/>
 格式控制字符串。
 
-*argument*<br/>
+*实际*<br/>
 可选参数。
 
 *locale*<br/>
@@ -89,20 +92,20 @@ int _wscanf_l(
 
 返回已成功转换和分配的字段数量；返回值不包括已读取但未分配的字段。 返回值为 0 表示没有分配任何字段。
 
-如果*格式*是**NULL**调用指针，无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，这些函数将返回**EOF**并设置**errno**到**EINVAL**。
+如果*format*为**空**指针，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回**EOF** ，并将**Errno**设置为**EINVAL**。
 
 有关这些代码及其他错误代码的信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**Scanf**函数从标准输入流中读取数据**stdin**并将数据写入到指定的位置*参数*。 每个*自变量*必须是指向类型中的类型说明符相对应的变量的指针*格式*。 如果复制出现在重叠的字符串之间，则该行为不确定。
+**Scanf**函数从标准输入流**stdin**中读取数据，并将数据写入到由*参数*给定的位置。 每个*参数*都必须是指向类型的变量的指针，该类型与*格式*中的类型说明符对应。 如果复制出现在重叠的字符串之间，则该行为不确定。
 
 > [!IMPORTANT]
 > 读取的字符串时**scanf**，始终指定的宽度 **%s**格式 (例如， **"%32s"** 而不是 **"%s"**); 否则为输入格式不正确很容易导致缓冲区溢出。 或者，可以考虑使用 [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) 或 [fgets](fgets-fgetws.md)。
 
-**wscanf**是宽字符版本**scanf**;*格式*参数**wscanf**是宽字符字符串。 **wscanf**并**scanf**如果在 ANSI 模式下打开流，则行为相同。 **scanf**当前不支持 UNICODE 流的输入。
+**wscanf**是**scanf**的宽字符版本;**wscanf**的*格式*参数是宽字符字符串。 如果在 ANSI 模式下打开流，则**wscanf**和**scanf**的行为相同。 **scanf**当前不支持 UNICODE 流的输入。
 
-使用这些函数的版本 **_l**后缀完全相同，只不过它们使用传递中而不是当前线程区域设置的区域设置参数。
+这些带有 **_l**后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -117,10 +120,10 @@ int _wscanf_l(
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**scanf**， **_scanf_l**|\<stdio.h>|
-|**wscanf**， **_wscanf_l**|\<stdio.h> 或 \<wchar.h>|
+|**scanf**、 **_scanf_l**|\<stdio.h>|
+|**wscanf**、 **_wscanf_l**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台 (UWP) 应用中不支持控制台。 控制台中，与关联的标准流句柄**stdin**， **stdout**，并**stderr**，C 运行时函数可以在 UWP 应用中使用它们之前，必须重定向. 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台 (UWP) 应用中不支持控制台。 与控制台、 **stdin**、 **stdout**和**stderr**关联的标准流句柄必须重定向, 然后 C 运行时函数才能在 UWP 应用中使用它们。 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 

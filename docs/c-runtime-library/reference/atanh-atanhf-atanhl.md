@@ -1,11 +1,11 @@
 ---
 title: atanh、atanhf、atanhl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - atanhl
 - atanhf
 - atanh
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - atanhl
 - atanhf
@@ -27,12 +30,12 @@ helpviewer_keywords:
 - atanhl function
 - atanh funciton
 ms.assetid: 83a43b5b-2580-4461-854f-dc84236d9f32
-ms.openlocfilehash: 6044c40427e407ee9746867e4b04104c1ca29c7c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 539d015d5691f62f990faf650ab738f60066a2a6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341283"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939588"
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh、atanhf、atanhl
 
@@ -58,22 +61,22 @@ long double atanh( long double x );  // C++ only
 
 ## <a name="return-value"></a>返回值
 
-**Atanh**函数返回的反双曲正切值 （反双曲正切） *x*。 如果*x*大于 1 或小于-1 **errno**设置为**EDOM**和结果是 quiet NaN。 如果*x*是等于 1 或-1，正或负无穷大返回，则分别，并**errno**设置为**ERANGE**。
+**Atanh**函数返回*x*的反双曲正切值（反双曲正切值）。 如果*x*大于1或小于-1，则将**Errno**设置为**EDOM** ，并将结果设置为 quiet NaN。 如果*x*等于1或-1，则分别返回正无穷或负无穷，并将**Errno**设置为**ERANGE**。
 
 |输入|SEH 异常|**Matherr**异常|
 |-----------|-------------------|-------------------------|
-|± QNAN,IND|无|无|
+|± QNAN，IND|无|无|
 |*X* ≥ 1; *x* ≤ -1|无|无|
 
 ## <a name="remarks"></a>备注
 
-因为C++允许重载，可以调用的重载**atanh**采用并返回**float**或**长** **double**值。 在 C 程序中， **atanh**始终采用并返回**double**。
+由于C++允许重载，因此你可以调用**atanh**的重载，该重载采用并返回**浮点**或**长** **双精度**值。 在 C 程序中， **atanh**始终采用并返回**double**。
 
 ## <a name="requirements"></a>要求
 
 |函数|C 标头|C++ 标头|
 |--------------|--------------|------------------|
-|**atanh**， **atanhf**， **atanhl**|\<math.h>|\<cmath> 或 \<math.h>|
+|**atanh**、 **atanhf**、 **atanhl**|\<math.h>|\<cmath> 或 \<math.h>|
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

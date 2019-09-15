@@ -1,10 +1,10 @@
 ---
 title: _CrtSetReportHook2、_CrtSetReportHookW2
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtSetReportHook2
 - _CrtSetReportHookW2
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtSetReportHookW2
 - CrtSetReportHook2
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - _CrtSetReportHookW2 function
 - CrtSetReportHookW2 function
 ms.assetid: 12e5f68d-c8a7-4b1a-9a75-72ba4a8592d0
-ms.openlocfilehash: 1e850d3e83ed7b7c77873400deac073084708b78
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37ec0cea3fb558a5926e6f9c707e0e5033a17222
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335316"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942218"
 ---
-# <a name="crtsetreporthook2-crtsetreporthookw2"></a>_CrtSetReportHook2、_CrtSetReportHookW2
+# <a name="_crtsetreporthook2-_crtsetreporthookw2"></a>_CrtSetReportHook2、_CrtSetReportHookW2
 
 通过以下方式安装或卸载客户端定义的报告函数：将该函数挂钩到 C 运行时调试报告过程（仅限调试版本）中。
 
@@ -57,19 +60,19 @@ int _CrtSetReportHookW2(
 要执行的操作： **_CRT_RPTHOOK_INSTALL**或 **_CRT_RPTHOOK_REMOVE**。
 
 *pfnNewHook*<br/>
-要安装或删除此函数的窄字符或宽字符版本中的报告挂钩。
+要在此函数的窄字符或宽字符版本中安装或移除的报告挂钩。
 
 ## <a name="return-value"></a>返回值
 
-遇到错误，则为-1 与**EINVAL**或**ENOMEM**设置; 否则，返回的引用计数*pfnNewHook*后调用。
+如果遇到错误，则为-1; 如果设置了**EINVAL**或**ENOMEM** ，则为-1;否则，在调用后返回*pfnNewHook*的引用计数。
 
 ## <a name="remarks"></a>备注
 
-**_CrtSetReportHook2**并 **_CrtSetReportHookW2**让你挂钩或解除挂钩函数，而[_CrtSetReportHook](crtsetreporthook.md)仅能让您挂钩函数。
+**_CrtSetReportHook2**和 **_CrtSetReportHookW2**允许挂钩或解除挂钩函数，而[_CrtSetReportHook](crtsetreporthook.md)只允许挂钩函数。
 
-**_CrtSetReportHook2**或 **_CrtSetReportHookW2**应使用而不是 **_CrtSetReportHook**时在 DLL 中进行挂钩调用时可能会加载多个 Dll 并设置其自己挂钩函数。 在此类情况下，可按与 DLL 的加载顺序不同的顺序来卸载 DLL，并且挂钩函数可以仍指向已卸载的 DLL。 任何调试输出会导致进程崩溃如果通过添加了挂钩函数 **_CrtSetReportHook**。
+在 DLL 中进行挂钩调用时以及可能加载多个 Dll 并设置其自己的挂钩函数时，应使用 **_CrtSetReportHook2**或 **_CrtSetReportHookW2** ，而不是 **_CrtSetReportHook** 。 在此类情况下，可按与 DLL 的加载顺序不同的顺序来卸载 DLL，并且挂钩函数可以仍指向已卸载的 DLL。 如果挂钩函数已添加到 **_CrtSetReportHook**，则任何调试输出均会导致进程崩溃。
 
-任何挂钩函数与添加 **_CrtSetReportHook**如果未将添加与函数调用 **_CrtSetReportHook2**或 **_CrtSetReportHookW2**或如果所有挂钩使用添加的函数 **_CrtSetReportHook2**并 **_CrtSetReportHookW2**返回**FALSE**。
+如果没有与 **_CrtSetReportHook2**或 **_CrtSetReportHookW2**一起添加的挂钩函数，或者添加了 **_CrtSetReportHook2**和 _ 的所有挂钩函数，则调用添加了 **_CrtSetReportHook**的任何挂钩函数。 **CrtSetReportHookW2**返回**FALSE**。
 
 此函数的宽字符版本可用。 报告挂钩函数采用一个其类型（宽字符或窄字符）必须与使用的此函数版本匹配的字符串。 将以下函数原型用于与此函数的宽字符版本一起使用的报告挂钩：
 
@@ -83,10 +86,10 @@ int YourReportHook( int reportType, wchar_t *message, int *returnValue );
 int YourReportHook( int reportType, char *message, int *returnValue );
 ```
 
-这些函数验证其参数。 如果*模式下*或**pfnNewNook**是无效的这些函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许继续执行，这些函数将设置**errno**到**EINVAL**并返回-1。
+这些函数验证其参数。 如果*mode*或**pfnNewNook**无效，则这些函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续, 则这些函数会将**errno**设置为**EINVAL** , 并返回-1。
 
 > [!NOTE]
-> 如果你的应用程序编译 **/clr**和报告函数后调用应用程序已退出主，CLR 将引发异常，如果在报告函数调用任何 CRT 函数。
+> 如果你的应用程序是使用 **/clr**编译的，并且在应用程序退出 main 后调用报表函数，则在报表函数调用任何 CRT 函数时，clr 将引发异常。
 
 ## <a name="requirements"></a>要求
 

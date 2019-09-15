@@ -1,12 +1,12 @@
 ---
 title: _cscanf、_cscanf_l、_cwscanf、_cwscanf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cscanf_l
 - _cscanf
 - _cwscanf
 - _cwscanf_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _cwscanf
 - cwscanf_l
@@ -45,14 +48,14 @@ helpviewer_keywords:
 - reading data [C++], from the console
 - _cwscanf_l function
 ms.assetid: dbfe7547-b577-4567-a1cb-893fa640e669
-ms.openlocfilehash: 8cb121166ab0103565260538521824d8999425e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee4c380d3e470fa6e3d12066d3bf34918acf1bea
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335251"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938504"
 ---
-# <a name="cscanf-cscanfl-cwscanf-cwscanfl"></a>_cscanf、_cscanf_l、_cwscanf、_cwscanf_l
+# <a name="_cscanf-_cscanf_l-_cwscanf-_cwscanf_l"></a>_cscanf、_cscanf_l、_cwscanf、_cwscanf_l
 
 从控制台读取格式数据。 提供这些函数的更安全版本。请参阅 [_cscanf_s、_cscanf_s_l、_cwscanf_s、_cwscanf_s_l](cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md)。
 
@@ -87,7 +90,7 @@ int _cwscanf_l(
 *format*<br/>
 窗体控件字符串。
 
-*argument*<br/>
+*实际*<br/>
 可选参数。
 
 *locale*<br/>
@@ -95,15 +98,15 @@ int _cwscanf_l(
 
 ## <a name="return-value"></a>返回值
 
-已成功转换和分配的字段数。 返回值不包括已读取但未分配的字段。 返回值是**EOF**尝试读取文件的末尾。 在操作系统命令行级别重定向键盘输入时，会发生这种情况。 返回值为 0 表示没有分配任何字段。
+已成功转换和分配的字段数。 返回值不包括已读取但未分配的字段。 返回值为**EOF** ，尝试在文件末尾进行读取。 在操作系统命令行级别重定向键盘输入时，会发生这种情况。 返回值为 0 表示没有分配任何字段。
 
 ## <a name="remarks"></a>备注
 
-**_Cscanf**函数直接从控制台到给定的位置读取数据*自变量*。 [_Getche](getch-getwch.md) 函数用于读取字符。 每个可选参数必须是指向具有中的类型说明符相对应的类型的变量*格式*。 格式控制字段输入的解释，并且具有相同格式和函数作为*格式*参数[scanf](scanf-scanf-l-wscanf-wscanf-l.md)函数。 虽然 **_cscanf**通常回显输入的字符，不会这样执行操作，如果最后一个调用的是 **_ungetch**。
+**_Cscanf**函数将数据直接从控制台读取到由*参数*指定的位置。 [_Getche](getch-getwch.md) 函数用于读取字符。 每个可选参数都必须是指向类型的变量的指针，该类型与*格式*的类型说明符对应。 格式控制输入字段的解释，其形式和函数与[scanf](scanf-scanf-l-wscanf-wscanf-l.md)函数的*format*参数相同。 尽管 **_cscanf**通常会回显输入字符，但如果最后一次调用 **_ungetch**，则不会这样做。
 
-此函数验证其参数。 如果格式是**NULL**，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**并且该函数返回**EOF**。
+此函数验证其参数。 如果 format 为**NULL**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将**errno**设置为**EINVAL** ，并且该函数将返回**EOF**。
 
-使用这些函数的版本 **_l**后缀完全相同，只不过它们使用传递中而不是当前线程区域设置的区域设置参数。
+这些带有 **_l**后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -116,8 +119,8 @@ int _cwscanf_l(
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**_cscanf**， **_cscanf_l**|\<conio.h>|
-|**_cwscanf**， **_cwscanf_l**|\<conio.h> 或 \<wchar.h>|
+|**_cscanf**、 **_cscanf_l**|\<conio.h>|
+|**_cwscanf**、 **_cwscanf_l**|\<conio.h> 或 \<wchar.h>|
 
 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

@@ -1,13 +1,13 @@
 ---
 title: sprintf、_sprintf_l、swprintf、_swprintf_l、__swprintf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __swprintf_l
 - sprintf
 - _sprintf_l
 - _swprintf_l
 - swprintf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - ntdll.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _stprintf_l
 - __swprintf_l
@@ -46,16 +49,16 @@ helpviewer_keywords:
 - sprintf_l function
 - formatted text [C++]
 ms.assetid: f6efe66f-3563-4c74-9455-5411ed939b81
-ms.openlocfilehash: f32b1622539e73ab04c19d6d46ffdbc58b9961d6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9a306788045fc6fe52da835029d32cfc42c0ed4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354868"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958288"
 ---
-# <a name="sprintf-sprintfl-swprintf-swprintfl-swprintfl"></a>sprintf、_sprintf_l、swprintf、_swprintf_l、__swprintf_l
+# <a name="sprintf-_sprintf_l-swprintf-_swprintf_l-__swprintf_l"></a>sprintf、_sprintf_l、swprintf、_swprintf_l、__swprintf_l
 
-将设置格式的数据写入字符串。 可提供某些函数的更多安全版本，请参阅 [sprintf_s、_sprintf_s_l、swprintf_s 和 _swprintf_s_l](sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)。 安全版本的**swprintf**并 **_swprintf_l**不会*计数*参数。
+将设置格式的数据写入字符串。 可提供某些函数的更多安全版本，请参阅 [sprintf_s、_sprintf_s_l、swprintf_s 和 _swprintf_s_l](sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)。 **Swprintf**和 **_swprintf_l**的安全版本不采用*count*参数。
 
 ## <a name="syntax"></a>语法
 
@@ -116,7 +119,7 @@ int _sprintf_l(
 *format*<br/>
 格式控件字符串
 
-*argument*<br/>
+*实际*<br/>
 可选自变量
 
 *locale*<br/>
@@ -126,20 +129,20 @@ int _sprintf_l(
 
 ## <a name="return-value"></a>返回值
 
-写入的字符数或为-1 时出错。 如果*缓冲区*或*格式*是 null 指针，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，这些函数将返回-1 并设置**errno**到**EINVAL**。
+写入的字符数; 如果出现错误，则为-1。 如果*缓冲区*或*格式*为 null 指针，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回-1，并将**errno**设置为**EINVAL**。
 
-**sprintf**返回存储中的字节数*缓冲区*，不包括终止 null 字符。 **swprintf**返回存储在中的宽字符数*缓冲区*，不包括终止 null 宽字符。
+**sprintf**返回*缓冲区*中存储的字节数，不包括终止 null 字符。 **swprintf**返回存储在*缓冲区*中的宽字符数，不包括终止 null 宽字符。
 
 ## <a name="remarks"></a>备注
 
-**Sprintf**函数设置的格式并将存储一系列字符和中的值*缓冲区*。 每个*自变量*（如果有） 进行转换和输出中的相应格式规范根据*格式*。 该格式包括普通字符，其形式和函数与相同*格式*参数[printf](printf-printf-l-wprintf-wprintf-l.md)。 null 字符追加在写入的最后一个字符后。 如果在重叠的字符串之间发生复制，则此行为不确定。
+**Sprintf**函数将一系列字符和值存储到*缓冲区*中。 每个*自变量*（如果有）根据*格式*规范的相应格式规范进行转换和输出。 该格式包括普通字符，其形式和函数与[printf](printf-printf-l-wprintf-wprintf-l.md)的*format*参数相同。 null 字符追加在写入的最后一个字符后。 如果在重叠的字符串之间发生复制，则此行为不确定。
 
 > [!IMPORTANT]
-> 使用**sprintf**，没有方法来限制写入的字符数，这意味着，使用代码**sprintf**容易受到缓冲区溢出。 请考虑使用相关的函数[_snprintf](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)，它指定要写入的字符最大数目*缓冲区*，或使用[_scprintf](scprintf-scprintf-l-scwprintf-scwprintf-l.md)来确定大小缓冲区是必需的。 此外，确保*格式*不是用户定义的字符串。
+> 使用**sprintf**，无法限制写入的字符数，这意味着使用**sprintf**的代码容易受到缓冲区溢出的影响。 请考虑使用相关的函数[_snprintf](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)，该函数指定要写入到*缓冲区*中的最大字符数，或使用[_scprintf](scprintf-scprintf-l-scwprintf-scwprintf-l.md)来确定需要多大的缓冲区。 此外，请确保该*格式*不是用户定义的字符串。
 
-**swprintf**是宽字符版本**sprintf**; 的指针参数**swprintf**都是宽字符字符串。 检测到的编码中的错误**swprintf**可能有所不同，在**sprintf**。 **swprintf**并**fwprintf**行为方式相同，只不过**swprintf**将输出写入到一个字符串，而不是类型的目标**文件**，和**swprintf**要求*计数*参数来指定要写入的字符的最大数。 使用这些函数的版本 **_l**后缀完全相同，只不过它们使用传递中而不是当前线程区域设置的区域设置参数。
+**swprintf**是**sprintf**的宽字符版本;**swprintf**的指针参数是宽字符字符串。 **Swprintf**中的编码错误检测可能与**sprintf**中的错误不同。 **swprintf**和**fwprintf**的行为完全相同，只是**swprintf**将输出写入字符串而不是类型**文件**的目标，而**swprintf**要求使用*count*参数来指定最大数目要写入的字符数。 这些带有 **_l**后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
 
-**swprintf**符合 ISO C 标准，这要求第二个参数，*计数*，类型的**size_t**。 若要强制旧的非标准行为，定义 **_CRT_NON_CONFORMING_SWPRINTFS**。 在未来版本中，可能会删除旧行为，因此应将代码更改为使用新的符合标准行为。
+**swprintf**符合 ISO C 标准，该标准需要类型为**size_t**的第二个参数*count*。 若要强制使用旧的非标准行为，请定义 **_CRT_NON_CONFORMING_SWPRINTFS**。 在未来版本中，可能会删除旧行为，因此应将代码更改为使用新的符合标准行为。
 
 在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -154,8 +157,8 @@ int _sprintf_l(
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**sprintf**， **_sprintf_l**|\<stdio.h>|
-|**swprintf**， **_swprintf_l**|\<stdio.h> 或 \<wchar.h>|
+|**sprintf**、 **_sprintf_l**|\<stdio.h>|
+|**swprintf**、 **_swprintf_l**|\<stdio.h> 或 \<wchar.h>|
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

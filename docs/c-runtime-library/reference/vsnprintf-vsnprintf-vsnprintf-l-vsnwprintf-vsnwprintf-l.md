@@ -1,7 +1,7 @@
 ---
 title: vsnprintf、_vsnprintf、_vsnprintf_l、_vsnwprintf、_vsnwprintf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _vsnprintf
 - _vsnprintf_l
 - _vsnwprintf
@@ -12,7 +12,7 @@ apiname:
 - _vsnwprintf;
 - _vsnprintf_l;
 - _vsnwprintf_l;
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -24,7 +24,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ntoskrnl.exe
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _vsnprintf
 - _vsnwprintf
@@ -52,12 +55,12 @@ helpviewer_keywords:
 - formatted text [C++]
 - vsnwprintf function
 ms.assetid: a97f92df-c2f8-4ea0-9269-76920d2d566a
-ms.openlocfilehash: 2e665562f3dd8ee0be70b4e50068955a91233c60
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 721ea80272f7a76e959528ec4114d69bd0e80507
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499079"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945315"
 ---
 # <a name="vsnprintf-_vsnprintf-_vsnprintf_l-_vsnwprintf-_vsnwprintf_l"></a>vsnprintf、_vsnprintf、_vsnprintf_l、_vsnwprintf、_vsnwprintf_l
 
@@ -142,7 +145,7 @@ int _vsnwprintf_l(
 *buffer*<br/>
 输出的存储位置
 
-*计数*<br/>
+*count*<br/>
 要写入的最大字符数。
 
 *format*<br/>
@@ -158,29 +161,29 @@ int _vsnwprintf_l(
 
 ## <a name="return-value"></a>返回值
 
-**Vsnprintf**函数返回写入的字符数, 不包括终止 null 字符。 如果*count*指定的缓冲区大小不够大, 无法包含由*format*和*argptr*指定的输出, 则**vsnprintf**的返回值是将写入的字符数, 而不是计数 null如果*count*足够大, 则为。 如果返回值大于*计数*-1, 则输出已被截断。 返回值 -1 指示发生编码错误。
+**Vsnprintf**函数返回写入的字符数，不包括终止 null 字符。 如果*count*指定的缓冲区大小不够大，无法包含由*format*和*argptr*指定的输出，则**vsnprintf**的返回值是将写入的字符数，而不是计数 null如果*count*足够大，则为。 如果返回值大于*计数*-1，则输出已被截断。 返回值 -1 指示发生编码错误。
 
-如果要写入的字符数小于或等于*count*, 则 **_vsnprintf**和 **_vsnwprintf**函数将返回写入的字符数;如果要写入的字符数大于*计数*, 则这些函数将返回-1, 指示输出已被截断。
+如果要写入的字符数小于或等于*count*，则 **_vsnprintf**和 **_vsnwprintf**函数将返回写入的字符数;如果要写入的字符数大于*计数*，则这些函数将返回-1，指示输出已被截断。
 
-不论是否写入终止 null，所有这些函数的返回值都不会将其包含在内。 当*count*为零时, 返回的值是函数将写入的字符数, 不包括任何终止 null。 可以将此结果用于为字符串和终止 null 分配足够的缓冲区空间，然后再次调用可填充缓冲区的函数。
+不论是否写入终止 null，所有这些函数的返回值都不会将其包含在内。 当*count*为零时，返回的值是函数将写入的字符数，不包括任何终止 null。 可以将此结果用于为字符串和终止 null 分配足够的缓冲区空间，然后再次调用可填充缓冲区的函数。
 
-如果*format*为**null**, 或者如果*buffer*为**null**并且*count*不等于零, 则这些函数将调用无效参数处理程序, 如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续, 则这些函数将返回-1, 并将**errno**设置为**EINVAL**。
+如果*format*为**null**，或者如果*buffer*为**null**并且*count*不等于零，则这些函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回-1，并将**errno**设置为**EINVAL**。
 
 ## <a name="remarks"></a>备注
 
-其中每个函数都采用一个指向参数列表的指针, 然后设置数据的格式, 并将多达*count*个字符写入*缓冲区*指向的内存。 **Vsnprintf**函数始终会写入一个 null 终止符, 即使它截断输出。 使用 **_vsnprintf**和 **_vsnwprintf**时, 仅当结尾处有空间时 (即, 如果要写入的字符数小于*计数*), 缓冲区才以 null 结尾。
+其中每个函数都采用一个指向参数列表的指针，然后设置数据的格式，并将多达*count*个字符写入*缓冲区*指向的内存。 **Vsnprintf**函数始终会写入一个 null 终止符，即使它截断输出。 使用 **_vsnprintf**和 **_vsnwprintf**时，仅当结尾处有空间时（即，如果要写入的字符数小于*计数*），缓冲区才以 null 结尾。
 
 > [!IMPORTANT]
-> 若要防止某些类型的安全风险, 请确保该*格式*不是用户定义的字符串。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
+> 若要防止某些类型的安全风险，请确保该*格式*不是用户定义的字符串。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 > [!NOTE]
-> 若要确保在调用 **_vsnprintf**、 **_vsnprintf_l**、 **_vsnwprintf**和 **_vsnwprintf_l**时存在终止 null 的空间, 请确保*计数*严格小于缓冲区长度并将缓冲区初始化为在调用函数之前为 null。
+> 若要确保在调用 **_vsnprintf**、 **_vsnprintf_l**、 **_vsnwprintf**和 **_vsnwprintf_l**时存在终止 null 的空间，请确保*计数*严格小于缓冲区长度并将缓冲区初始化为在调用函数之前为 null。
 >
-> 由于**vsnprintf**始终写入终止 null, 因此*count*参数可能等于缓冲区的大小。
+> 由于**vsnprintf**始终写入终止 null，因此*count*参数可能等于缓冲区的大小。
 
-从 Visual Studio 2015 和 Windows 10 中的 UCRT 开始, **vsnprintf**不再与 **_vsnprintf**相同。 **Vsnprintf**函数符合 C99 标准;保留 **_vnsprintf**是为了与旧版 Visual Studio code 向后兼容。
+从 Visual Studio 2015 和 Windows 10 中的 UCRT 开始， **vsnprintf**不再与 **_vsnprintf**相同。 **Vsnprintf**函数符合 C99 标准;保留 **_vnsprintf**是为了与旧版 Visual Studio code 向后兼容。
 
-这些带有 **_l**后缀的函数的版本相同, 只不过它们使用传入的区域设置参数而不是当前线程区域设置。
+这些带有 **_l**后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
 
 在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -240,7 +243,7 @@ nSize: 9, buff: Hi there!
 nSize: -1, buff: Hi there!
 ```
 
-如果使用 vsnprintf 以及窄字符串参数代替，结果会发生更改。 *Count*参数可以是缓冲区的全部大小, 返回值是当*count*足够大时, 将写入的字符数:
+如果使用 vsnprintf 以及窄字符串参数代替，结果会发生更改。 *Count*参数可以是缓冲区的全部大小，返回值是当*count*足够大时，将写入的字符数：
 
 ## <a name="example"></a>示例
 

@@ -1,9 +1,9 @@
 ---
 title: _chdrive
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _chdrive
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - chdrive
 - _chdrive
@@ -24,12 +27,12 @@ helpviewer_keywords:
 - _chdrive function
 - chdrive function
 ms.assetid: 212a1a4b-4fa8-444e-9677-7fca4c8c47e3
-ms.openlocfilehash: 7e36867bb8237c549fd250be88a99244766920ba
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 3ee292c03c9d31944e0a555c2159d7a5dd2cd0eb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500252"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939243"
 ---
 # <a name="_chdrive"></a>_chdrive
 
@@ -57,9 +60,9 @@ int _chdrive(
 
 ## <a name="remarks"></a>备注
 
-如果*驱动器*不在1到26的范围内, 则将调用无效的参数处理程序, 如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续, 则 **_chdrive**函数将返回-1, **Errno**设置为**EACCES**, 并将 **_doserrno**设置为**ERROR_INVALID_DRIVE**。
+如果*驱动器*不在1到26的范围内，则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则 **_chdrive**函数将返回-1， **Errno**设置为**EACCES**，并将 **_doserrno**设置为**ERROR_INVALID_DRIVE**。
 
-**_chdrive** 函数不具备线程安全，因为它依赖 **SetCurrentDirectory** 函数，该函数本身不具备线程安全。 若要在多线程应用程序中安全地使用 **_chdrive**，必须提供自己的线程同步。 有关详细信息, 请参阅[SetCurrentDirectory](/windows/win32/api/winbase/nf-winbase-setcurrentdirectory)。
+**_chdrive** 函数不具备线程安全，因为它依赖 **SetCurrentDirectory** 函数，该函数本身不具备线程安全。 若要在多线程应用程序中安全地使用 **_chdrive**，必须提供自己的线程同步。 有关详细信息，请参阅[SetCurrentDirectory](/windows/win32/api/winbase/nf-winbase-setcurrentdirectory)。
 
 **_chdrive** 函数仅更改当前工作驱动器； **_chdir** 更改当前工作目录。
 

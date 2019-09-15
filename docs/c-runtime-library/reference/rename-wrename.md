@@ -1,10 +1,10 @@
 ---
 title: rename、_wrename
 ms.date: 11/04/2016
-apiname:
+api_name:
 - rename
 - _wrename
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wrename
 - _trename
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - names [C++], changing directory
 - renaming files
 ms.assetid: 9f0a6103-26a2-4dda-b14b-79a48946266a
-ms.openlocfilehash: 3536bfb6c38c99a8d6d943102fb9303dd4d85b7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3d88c46fc055fb173264b40a56c755c360c7adf
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357482"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949308"
 ---
-# <a name="rename-wrename"></a>rename、_wrename
+# <a name="rename-_wrename"></a>rename、_wrename
 
 重命名文件或目录。
 
@@ -68,7 +71,7 @@ int _wrename(
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则这些函数均返回 0。 发生错误时，该函数返回非零值，并设置**errno**为以下值之一：
+如果成功，则这些函数均返回 0。 出现错误时，函数将返回一个非零值，并将**errno**设置为以下值之一：
 
 |errno 值|条件|
 |-|-|
@@ -82,7 +85,7 @@ int _wrename(
 
 **rename** 函数将 *oldname* 指定的文件或目录重命名为由 *newname* 给定的名称。 旧名称必须是现有文件或目录的路径。 新名称一定不能是现有文件或目录的名称。 通过在 *newname* 参数中给定不同的路径，可以使用 **rename** 将文件从一个目录或设备移至另一个目录或设备。 但是，不能使用 **rename** 来移动目录。 目录可以重命名，但不能移动。
 
-**_wrename**是宽字符版本 **_rename**; 的自变量 **_wrename**都是宽字符字符串。 **_wrename**并 **_rename**行为相同。
+**_wrename**是 **_rename**的宽字符版本; **_wrename**的参数是宽字符字符串。 否则， **_wrename**和 **_rename**的行为相同。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

@@ -1,12 +1,12 @@
 ---
 title: _ismbslead、_ismbstrail、_ismbslead_l、_ismbstrail_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbstrail
 - _ismbslead_l
 - _ismbslead
 - _ismbstrail_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbslead
 - ismbs
@@ -40,14 +43,14 @@ helpviewer_keywords:
 - ismbstrail_l function
 - _ismbstrail_l function
 ms.assetid: 86d2cd7a-3cff-443a-b713-14cc17a231e9
-ms.openlocfilehash: 5b4d3f371f4be640cc22a1bdc3d920acf88e2585
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71a5d2a82c01a41f945ef3fa8c7652f846f05103
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287352"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953769"
 ---
-# <a name="ismbslead-ismbstrail-ismbsleadl-ismbstraill"></a>_ismbslead、_ismbstrail、_ismbslead_l、_ismbstrail_l
+# <a name="_ismbslead-_ismbstrail-_ismbslead_l-_ismbstrail_l"></a>_ismbslead、_ismbstrail、_ismbslead_l、_ismbstrail_l
 
 对多字节字符串前导字节和结尾字节执行上下文相关测试，并确定给定子字符串指针指向前导字节还是结尾字节。
 
@@ -90,13 +93,13 @@ int _ismbstrail_l(
 
 ## <a name="return-value"></a>返回值
 
-**_ismbslead**如果字符是前导字节，则返回-1 并 **_ismbstrail**如果字符为结尾字节，则返回-1。 如果输入字符串有效，但不是前导字节也不是结尾字节，则这些函数将返回零。 如果任一参数为**NULL**，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，这些函数将返回**NULL**并设置**errno**到**EINVAL**。
+如果字符是前导字节，则 **_ismbslead**返回-1; 如果字符为尾字节，**则返回-** 1。 如果输入字符串有效，但不是前导字节也不是结尾字节，则这些函数将返回零。 如果任何一个参数为**NULL**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续, 则这些函数将返回**NULL** , 并将**Errno**设置为**EINVAL**。
 
 ## <a name="remarks"></a>备注
 
-**_ismbslead**并 **_ismbstrail**比 **_ismbblead**并 **_ismbbtrail**版本因为将字符串文本考虑进去。
+**_ismbslead**和 **_ismbstrail**的速度比 **_ismbblead**和 **_ismbbtrail**版本慢，因为它们会将字符串上下文纳入考虑范围。
 
-具有这些函数的版本 **_l**后缀完全相同，只不过它们可以为其区域设置相关的行为来使用而不是当前区域设置中传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+这些具有 **_l**后缀的函数的版本相同，不同之处在于，对于其与区域设置相关的行为，它们使用传入的区域设置而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>要求
 

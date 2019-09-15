@@ -1,9 +1,9 @@
 ---
 title: _RTC_SetErrorType
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _RTC_SetErrorType
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - RTC_SetErrorType
 - _RTC_SetErrorType
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - RTC_SetErrorType function
 - _RTC_SetErrorType function
 ms.assetid: f5f99be7-d357-4b11-b8f5-ddd3428f2b06
-ms.openlocfilehash: 022079bd199477c8bca92e853ed66879c96428db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c1eff5920931aa3b72bf3dbc6232c371828b16a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357130"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948924"
 ---
-# <a name="rtcseterrortype"></a>_RTC_SetErrorType
+# <a name="_rtc_seterrortype"></a>_RTC_SetErrorType
 
 将运行时错误检查 (RTC) 检测到的错误与类型关联。 错误处理程序处理如何输出指定类型的错误。
 
@@ -49,13 +52,13 @@ int _RTC_SetErrorType(
 一个数字，介于 0 和 [_RTC_NumErrors](rtc-numerrors.md) 返回的值减 1 所得的值之间。
 
 *ErrType*<br/>
-要分配给此 *errnum*的值。 例如，可以使用 **_CRT_ERROR**。 如果使用的 **_CrtDbgReport**作为错误处理程序， *ErrType*只能含有一个中定义的符号[_CrtSetReportMode](crtsetreportmode.md)。 如果你有自己的错误处理程序 ([_RTC_SetErrorFunc](rtc-seterrorfunc.md))，那么你可以拥有与 *errnum*的数量一样多的 *ErrType*。
+要分配给此 *errnum*的值。 例如，可以使用 **_CRT_ERROR**。 如果使用 **_CrtDbgReport**作为错误处理程序，则*ErrType*只能是[_CrtSetReportMode](crtsetreportmode.md)中定义的其中一个符号。 如果你有自己的错误处理程序 ([_RTC_SetErrorFunc](rtc-seterrorfunc.md))，那么你可以拥有与 *errnum*的数量一样多的 *ErrType*。
 
-*ErrType* _RTC_ERRTYPE_IGNORE 的具有特殊含义 **_CrtSetReportMode**; 忽略该错误。
+对的*ErrType*具有特殊意义的 **_CrtSetReportMode**;忽略此错误。
 
 ## <a name="return-value"></a>返回值
 
-错误类型的前一个值*类型*。
+错误类型*类型*的上一个值。
 
 ## <a name="remarks"></a>备注
 

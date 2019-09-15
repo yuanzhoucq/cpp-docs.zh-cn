@@ -1,12 +1,12 @@
 ---
 title: fprintf_s、_fprintf_s_l、fwprintf_s、_fwprintf_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fprintf_s_l
 - fwprintf_s
 - fprintf_s
 - _fwprintf_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ftprintf_s
 - fprintf_s
@@ -35,14 +38,14 @@ helpviewer_keywords:
 - _fwprintf_s_l function
 - print formatted data to streams
 ms.assetid: 16067c3c-69ce-472a-8272-9aadf1f5beed
-ms.openlocfilehash: 05886dc4ce7de771749f157913a222b6b01a5c5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48f15bee685b058c0c059d676bea48e2bc32d699
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333152"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956974"
 ---
-# <a name="fprintfs-fprintfsl-fwprintfs-fwprintfsl"></a>fprintf_s、_fprintf_s_l、fwprintf_s、_fwprintf_s_l
+# <a name="fprintf_s-_fprintf_s_l-fwprintf_s-_fwprintf_s_l"></a>fprintf_s、_fprintf_s_l、fwprintf_s、_fwprintf_s_l
 
 将格式化数据输出到流。 如 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述，这些版本的 [fprintf、_fprintf_l、fwprintf、_fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md) 具有安全增强功能。
 
@@ -93,16 +96,16 @@ int _fwprintf_s_l(
 
 ## <a name="remarks"></a>备注
 
-**fprintf_s**格式化并将一系列字符和值到输出*流*。 在每个自变量*argument_list* （如果有） 进行转换和输出中的相应格式规范根据*格式*。 *格式*自变量使用[格式规范语法 printf 和 wprintf 函数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。
+**fprintf_s**设置格式并将一系列字符和值输出到输出*流*中。 *Argument_list*中的每个参数（如果有）将根据*格式*中对应的格式规范进行转换和输出。 *Format*参数将[格式规范语法用于 printf 和 wprintf 函数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。
 
-**fwprintf_s**是宽字符版本**fprintf_s**; 在**fwprintf_s**，*格式*是宽字符字符串。 如果在 ANSI 模式下打开流，则这些函数行为相同。 **fprintf_s**当前不到 UNICODE 流支持输出。
+**fwprintf_s**是**fprintf_s**的宽字符版本;在**fwprintf_s**中， *format*是宽字符字符串。 如果在 ANSI 模式下打开流，则这些函数行为相同。 **fprintf_s**当前不支持输出到 UNICODE 流中。
 
-使用这些函数的版本 **_l**后缀完全相同，只不过它们使用传递中而不是当前区域设置的区域设置参数。
+使用 **_l**后缀的这些函数的版本是相同的，只不过它们使用传入的区域设置参数而不是当前区域设置。
 
 > [!IMPORTANT]
-> 确保 format 不是用户定义的字符串。
+> 确保 format不是用户定义的字符串。
 
-与不安全版本一样 (请参阅[fprintf、 _fprintf_l、 fwprintf、 _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md))，这些函数验证其参数并调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)，如果*流*或*格式*是 null 指针。 格式字符串本身也需进行验证。 如果有任何未知或格式错误的格式化说明符，则这些函数将生成无效参数异常。 在所有情况下，如果允许执行继续，则这些函数返回-1 并设置**errno**到**EINVAL**。 有关这些代码以及其他错误代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+与不安全版本一样（请参阅[fprintf、_fprintf_l、fwprintf、_fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)），这些函数将验证其参数并调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述，如果有一个*流*或*format*为 null 指针。 格式字符串本身也会进行验证。 如果有任何未知或格式错误的格式化说明符，则这些函数将生成无效参数异常。 在所有情况下，如果允许执行继续，则函数将返回-1，并将**errno**设置为**EINVAL**。 有关这些代码以及其他错误代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -117,8 +120,8 @@ int _fwprintf_s_l(
 
 |函数|必需的标头|
 |--------------|---------------------|
-|**fprintf_s**， **_fprintf_s_l**|\<stdio.h>|
-|**fwprintf_s**， **_fwprintf_s_l**|\<stdio.h> 或 \<wchar.h>|
+|**fprintf_s**、 **_fprintf_s_l**|\<stdio.h>|
+|**fwprintf_s**、 **_fwprintf_s_l**|\<stdio.h> 或 \<wchar.h>|
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

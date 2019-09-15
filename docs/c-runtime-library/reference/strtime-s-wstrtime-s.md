@@ -1,10 +1,10 @@
 ---
 title: _strtime_s、_wstrtime_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wstrtime_s
 - _strtime_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wstrtime_s
 - strtime_s
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - time, copying
 - _strtime_s function
 ms.assetid: 42acf013-c334-485d-b610-84c0af8a46ec
-ms.openlocfilehash: 579c4a99b52c66bd14cea947eaa1f301cc1127e1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 855c88f22e00cad398f6357b8e35931598041aeb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375322"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946567"
 ---
-# <a name="strtimes-wstrtimes"></a>_strtime_s、_wstrtime_s
+# <a name="_strtime_s-_wstrtime_s"></a>_strtime_s、_wstrtime_s
 
 将当前时间复制到缓冲区。 这些版本的 [_strtime、_wstrtime](strtime-wstrtime.md) 具有安全性增强功能，如 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述。
 
@@ -78,24 +81,24 @@ errno_t _wstrtime_s(
 
 ### <a name="error-conditions"></a>错误条件
 
-|*buffer*|*numberOfElements*|返回|内容*缓冲区*|
+|*buffer*|*numberOfElements*|返回|*缓冲区*内容|
 |--------------|------------------------|------------|--------------------------|
 |**NULL**|（任意数值）|**EINVAL**|未修改|
-|不**NULL** （指向有效的缓冲区）|0|**EINVAL**|未修改|
-|不**NULL** （指向有效的缓冲区）|0 < 大小 < 9|**EINVAL**|空字符串|
-|不**NULL** （指向有效的缓冲区）|大小 > 9|0|注解中指定的当前时间格式|
+|Not **NULL** （指向有效的缓冲区）|0|**EINVAL**|未修改|
+|Not **NULL** （指向有效的缓冲区）|0 < 大小 < 9|**EINVAL**|空字符串|
+|Not **NULL** （指向有效的缓冲区）|大小 > 9|0|注解中指定的当前时间格式|
 
 ## <a name="security-issues"></a>安全性问题
 
-传入无效非**NULL**值的缓冲区将导致访问冲突，如果*numberOfElements*参数大于 9。
+如果*numberOfElements*参数大于9，则为缓冲区传入无效的非**NULL**值将导致访问冲突。
 
-为传递值*numberOfElements*大于缓冲区的实际大小将导致缓冲区溢出。
+传递*numberOfElements*的值大于缓冲区的实际大小将导致缓冲区溢出。
 
 ## <a name="remarks"></a>备注
 
-这些函数提供更多安全版本[_strtime](strtime-wstrtime.md)并[_wstrtime](strtime-wstrtime.md)。 **_Strtime_s**函数将当前的本地时间复制到由指向的缓冲区*timestr*。 时间格式为**hh: mm:** 其中**hh**是两位数字，表示 24 小时制的小时**mm**是两位数表示小时，并且分钟**ss**是两位数表示秒。 例如，字符串**18:23:44**表示 23 分 44 秒下午 6 点 缓冲区必须至少为 9 个字节长；实际大小由第二个参数指定。
+这些函数提供更安全的[_strtime](strtime-wstrtime.md)和[_wstrtime](strtime-wstrtime.md)版本。 **_Strtime_s**函数将当前的本地时间复制到*timestr*指向的缓冲区中。 此时间的格式为**hh： mm： ss** ，其中， **hh**是表示小时的两位数字，以24小时表示法表示， **mm**是表示分钟后的分钟数的两位数， **ss**是表示秒的两位数。 例如，字符串**18:23:44**表示23分钟到 6 p.m 之前的44秒。 缓冲区必须至少为 9 个字节长；实际大小由第二个参数指定。
 
-**_wstrtime**是宽字符版本 **_strtime**; 的自变量和返回值 **_wstrtime**都是宽字符字符串。 否则这些函数具有相同行为。
+**_wstrtime**是 **_strtime**的宽字符版本; **_wstrtime**的参数和返回值是宽字符字符串。 否则这些函数具有相同行为。
 
 在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 

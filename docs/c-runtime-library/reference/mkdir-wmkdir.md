@@ -1,10 +1,10 @@
 ---
 title: _mkdir、_wmkdir
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wmkdir
 - _mkdir
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mkdir
 - tmkdir
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _mkdir function
 - _tmkdir function
 ms.assetid: 7f22d01d-63a5-4712-a6e7-d34878b2d840
-ms.openlocfilehash: 0d89e1f0930cf9131156a4691069f1f17c15c124
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d2fd45b566909a61a04a5cabb34c74b9b253430
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285192"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951722"
 ---
-# <a name="mkdir-wmkdir"></a>_mkdir、_wmkdir
+# <a name="_mkdir-_wmkdir"></a>_mkdir、_wmkdir
 
 新建目录。
 
@@ -63,9 +66,9 @@ int _wmkdir(
 
 ## <a name="return-value"></a>返回值
 
-如果创建新目录，这些函数都将返回值 0。 出现错误，函数将返回-1 和集**errno** ，如下所示。
+如果创建新目录，这些函数都将返回值 0。 出现错误时，函数将返回-1，并按如下所示设置**errno** 。
 
-**EEXIST**不创建目录，因为*dirname*是现有文件、 目录或设备的名称。
+**EEXIST**未创建目录，因为*dirname*是现有文件、目录或设备的名称。
 
 **ENOENT**找不到路径。
 
@@ -73,9 +76,9 @@ int _wmkdir(
 
 ## <a name="remarks"></a>备注
 
-**_Mkdir**函数创建一个新目录具有指定*dirname。* **_mkdir**可以创建一个新目录，每次调用，因此，只有最后一个组件的*dirname*可以命名新目录。 **_mkdir**不会转换路径分隔符。 在 Windows NT 中，反斜杠 (\\) 和正斜杠 (/) 在运行时例程中都是字符串的有效路径分隔符。
+**_Mkdir**函数创建具有指定 dirname 的新目录 *。* **_mkdir**每次调用只能创建一个新目录，因此只有*dirname*的最后一个组件可以命名新目录。 **_mkdir**不会转换路径分隔符。 在 Windows NT 中，反斜杠 (\\) 和正斜杠 (/) 在运行时例程中都是字符串的有效路径分隔符。
 
-**_wmkdir**是宽字符版本 **_mkdir**; *dirname*参数 **_wmkdir**是宽字符字符串。 **_wmkdir**并 **_mkdir**行为相同。
+**_wmkdir**是 **_mkdir**的宽字符版本; **_wmkdir**的*dirname*参数是宽字符字符串。 否则， **_wmkdir**和 **_mkdir**的行为相同。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

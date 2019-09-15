@@ -1,9 +1,9 @@
 ---
-title: div、 ldiv、 lldiv
+title: div、ldiv、lldiv
 ms.date: 04/05/2018
-apiname:
+api_name:
 - div
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - div
 helpviewer_keywords:
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - dividing integers
 - remainder computing
 ms.assetid: 8ae80d97-54fd-499e-b14c-e30993b58119
-ms.openlocfilehash: 0ee1b3b6a5d7b15470ffe1e667b4077d1f9581e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b40fa0c4cc9cdf0c0de0f6af21da04b0c70369f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339255"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937693"
 ---
-# <a name="div-ldiv-lldiv"></a>div、 ldiv、 lldiv
+# <a name="div-ldiv-lldiv"></a>div、ldiv、lldiv
 
 计算两个整数值的商和余数。
 
@@ -66,7 +69,7 @@ lldiv_t div(
 
 ### <a name="parameters"></a>参数
 
-*numer*<br/>
+*收藏*<br/>
 分子。
 
 *denom*<br/>
@@ -74,19 +77,19 @@ lldiv_t div(
 
 ## <a name="return-value"></a>返回值
 
-**div**通过使用类型的自变量调用**int**返回类型的结构**div_t**，其中包括商和余数。 类型的参数的返回值**长**是**ldiv_t**，和返回值类型的参数**长** **长**是**lldiv_t**。 **div_t**， **ldiv_t**，和**lldiv_t**中定义\<stdlib.h >。
+使用**int**类型的参数调用的**div**返回类型为**div_t**的结构，该结构包含商和余数。 带有**long**类型的参数的返回值为**ldiv_t**，且类型为 long 的参数的返回 **值为** **lldiv_t**。 stdlib.h > 中\<定义了 div_t、ldiv_t 和 lldiv_t。
 
 ## <a name="remarks"></a>备注
 
-**Div**函数划分*号码*由*denom* ，从而计算商和余数。 [Div_t](../../c-runtime-library/standard-types.md)结构包含商， **q u o t**，，其余**rem**。商的符号与数学商的符号相同。 其绝对值是小于数学商的绝对值的最大整数。 如果分母为 0，程序将终止并显示错误消息。
+**Div**函数通过*denom*将*收藏*除以，从而计算商和余数。 [Div_t](../../c-runtime-library/standard-types.md)结构包含**商、商**和**余数。** 商的符号与数学商的符号相同。 其绝对值是小于数学商的绝对值的最大整数。 如果分母为 0，程序将终止并显示错误消息。
 
-重载**div**需要类型的自变量**长**或**长** **长**仅可供C++代码。 返回类型[ldiv_t](../../c-runtime-library/standard-types.md)并[lldiv_t](../../c-runtime-library/standard-types.md)包含成员**q u o t**并**rem**，它具有相同的含义的成员**div_t**。
+采用**long**或**long**类型的参数的**div**重载仅适用于C++代码。 返回类型[ldiv_t](../../c-runtime-library/standard-types.md)和[lldiv_t](../../c-runtime-library/standard-types.md)包含与**div_t**成员具有相同意义**的成员。**
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**div**， **ldiv**， **lldiv**|\<stdlib.h>|
+|**div**、 **ldiv**、 **lldiv**|\<stdlib.h>|
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

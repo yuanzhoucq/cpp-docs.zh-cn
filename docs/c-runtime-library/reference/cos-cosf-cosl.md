@@ -1,11 +1,11 @@
 ---
-title: cos、 cosf、 cosl
+title: cos、cosf、cosl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - cos
 - cosf
 - cosl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cos
 - cosf
@@ -31,14 +34,14 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-ms.openlocfilehash: b050fd98a35028b121def8b665fce62ad58ec437
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d07a8636aabc4973c7beb9725a39e98c229a098
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335355"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942823"
 ---
-# <a name="cos-cosf-cosl"></a>cos、 cosf、 cosl
+# <a name="cos-cosf-cosl"></a>cos、cosf、cosl
 
 计算余弦值。
 
@@ -62,28 +65,28 @@ long double cos( long double x );  // C++ only
 
 ## <a name="return-value"></a>返回值
 
-余弦*x*。 如果*x*是大于或等于 263，或小于或等于-263，会发生丢失结果中的基数。
+*X*的余弦值。 如果*x*大于或等于263，或者小于或等于-263，则结果中的结果会丢失。
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
-|为 QNAN IND|无|**_DOMAIN**|
-|± INF|**INVALID**|**_DOMAIN**|
+|± QNAN，IND|无|**_DOMAIN**|
+|± INF|**无效**|**_DOMAIN**|
 
 ## <a name="remarks"></a>备注
 
-因为C++允许重载，可以调用的重载**cos**采用并返回**float**或**长** **double**值。 在 C 程序中， **cos**始终采用并返回**double**。
+由于C++允许重载，因此你可以调用采用并返回**浮点**或**长** **双精度**值的**cos**的重载。 在 C 程序中， **cos**始终采用并返回**双精度型**。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|必需的 C 标头|必需的 C++ 标头|
 |-------------|---------------------|-|
-|**cos**， **cosh**， **cosf**|\<math.h>|\<cmath> 或 \<math.h>|
+|**cos**、 **cosh**、 **cosf**|\<math.h>|\<cmath> 或 \<math.h>|
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
-请参阅中的示例[sin、 sinf、 sinl](sin-sinf-sinl.md)。
+请参阅[sin、sinf、sinl](sin-sinf-sinl.md)中的示例。
 
 ## <a name="see-also"></a>请参阅
 

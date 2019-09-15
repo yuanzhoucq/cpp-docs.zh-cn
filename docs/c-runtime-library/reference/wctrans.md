@@ -1,9 +1,9 @@
 ---
 title: wctrans
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wctrans
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wctrans
 helpviewer_keywords:
@@ -24,12 +27,12 @@ helpviewer_keywords:
 - characters, converting
 - wctrans function
 ms.assetid: 215404bf-6d60-489c-9ae9-880e6b586162
-ms.openlocfilehash: 3c7aace7a93160d2e9a4c1523d49bcaf6ae4dc20
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a75de3b699d0eb5ec6117d0f627e6a8ba34dbc62
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188450"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944877"
 ---
 # <a name="wctrans"></a>wctrans
 
@@ -50,7 +53,7 @@ wctrans_t wctrans(
 
 ## <a name="return-value"></a>返回值
 
-如果**LC_CTYPE**的当前区域设置类别未定义其名称与属性字符串的映射*属性*，该函数将返回零。 否则，它将返回一个适合用作对 [towctrans](towctrans.md) 的后续调用的第二个参数的非零值。
+如果当前区域设置的**LC_CTYPE**类别未定义其名称与属性字符串*属性*匹配的映射，则该函数将返回零。 否则，它将返回一个适合用作对 [towctrans](towctrans.md) 的后续调用的第二个参数的非零值。
 
 ## <a name="remarks"></a>备注
 
@@ -60,8 +63,8 @@ wctrans_t wctrans(
 
 |函数|与以下项相同|
 |--------------|-------------|
-|tolower(c)|towctrans (c、 wctrans("towlower"))|
-|towupper(c)|towctrans (c、 wctrans("toupper"))|
+|tolower （c）|towctrans （c，wctrans （"towlower"））|
+|towupper （c）|towctrans （c，wctrans （"toupper"））|
 
 ## <a name="requirements"></a>要求
 

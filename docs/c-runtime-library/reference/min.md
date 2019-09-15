@@ -1,9 +1,9 @@
 ---
 title: __min
 ms.date: 04/05/2018
-apiname:
+api_name:
 - __min
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __min
 - min
@@ -25,16 +28,16 @@ helpviewer_keywords:
 - minimum macro
 - _min macro
 ms.assetid: 2037f26c-b48a-4a69-8870-22519f052a3c
-ms.openlocfilehash: f9e867cd1f3e3519e440c91895e61e317d9688a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b5cc6517c125f91337ca0d9b12b7a49bd7c1753
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156546"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951737"
 ---
-# <a name="min"></a>__min
+# <a name="__min"></a>__min
 
-返回两个值的较小的预处理器宏。
+返回两个值中较小值的预处理器宏。
 
 ## <a name="syntax"></a>语法
 
@@ -44,8 +47,8 @@ ms.locfileid: "62156546"
 
 ### <a name="parameters"></a>参数
 
-*a*, *b*<br/>
-任何值类型**<** 运算符工作。
+*a*、 *b*<br/>
+**<** 运算符处理的任何类型的值。
 
 ## <a name="return-value"></a>返回值
 
@@ -53,9 +56,9 @@ ms.locfileid: "62156546"
 
 ## <a name="remarks"></a>备注
 
-**__Min**宏将两个值进行比较并返回其中的较小的值。 参数可以是任何数字数据类型，有符号或无符号均可。 两个自变量以及返回值必须是同一数据类型。
+**__Min**宏比较两个值，并返回较小值的值。 参数可以是任何数字数据类型，有符号或无符号均可。 两个自变量以及返回值必须是同一数据类型。
 
-返回参数的计算两次由宏。 这可能导致意外的结果，如果参数为一个表达式，它计算时，如来更改其值`*p++`。
+返回的参数由宏计算两次。 如果参数是在计算时更改其值的表达式（如`*p++`），则这可能会导致意外的结果。
 
 ## <a name="requirements"></a>要求
 

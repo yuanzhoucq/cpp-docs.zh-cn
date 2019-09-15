@@ -1,10 +1,10 @@
 ---
 title: _lrotl、_lrotr
 ms.date: 04/04/2018
-apiname:
+api_name:
 - _lrotl
 - _lrotr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lrotr
 - lrotl
@@ -31,16 +34,16 @@ helpviewer_keywords:
 - _lrotl function
 - bits, rotating
 ms.assetid: d42f295b-35f9-49d2-9ee4-c66896ffe68e
-ms.openlocfilehash: 71ca61676e4551155f9f14e792c5c1cee65ddb7e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ea78aeb8829a80abae345b4e9e6ac3a7bbaddf8b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156955"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953035"
 ---
-# <a name="lrotl-lrotr"></a>_lrotl、_lrotr
+# <a name="_lrotl-_lrotr"></a>_lrotl、_lrotr
 
-将位向左旋转 (**_lrotl**) 或向右 (**_lrotr**)。
+将位向左（ **_lrotl**）或向右（ **_lrotr**）旋转。
 
 ## <a name="syntax"></a>语法
 
@@ -51,7 +54,7 @@ unsigned long _lrotr( unsigned long value, int shift );
 
 ### <a name="parameters"></a>参数
 
-*值*<br/>
+*value*<br/>
 要旋转的值。
 
 *shift*<br/>
@@ -63,13 +66,13 @@ unsigned long _lrotr( unsigned long value, int shift );
 
 ## <a name="remarks"></a>备注
 
-**_Lrotl**并 **_lrotr**函数将旋转*值*通过*shift*位。 **_lrotl**旋转左、 向更有效的位的值。 **_lrotr**旋转值向右，向不太明显的位。 两个函数将旋转的位从 *value* 的一端移到另一端。
+**_Lrotl**和 **_lrotr**函数通过*shift*位旋转*值*。 **_lrotl**将值向左旋转，以获得更重要的位。 **_lrotr**将值向右旋转，从而降低有效位。 两个函数将旋转的位从 *value* 的一端移到另一端。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**_lrotl**， **_lrotr**|\<stdlib.h>|
+|**_lrotl**、 **_lrotr**|\<stdlib.h>|
 
 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

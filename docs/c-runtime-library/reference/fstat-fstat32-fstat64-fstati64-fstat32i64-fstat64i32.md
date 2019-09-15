@@ -1,14 +1,14 @@
 ---
 title: _fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fstat32
 - _fstat64
 - _fstati64
 - _fstat
 - _fstat64i32
 - _fstat32i64
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fstat32i64
 - fstat
@@ -49,14 +52,14 @@ helpviewer_keywords:
 - _fstati64 function
 - fstat32i64 function
 ms.assetid: 088f5e7a-9636-4cf7-ab8e-e28d2aa4280a
-ms.openlocfilehash: 36d8b0d6480266f86136119a470fb7af5859a5b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1ab71071fdf5578295cfcd72f79930787e634d5f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332778"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956465"
 ---
-# <a name="fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32"></a>_fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32
+# <a name="_fstat-_fstat32-_fstat64-_fstati64-_fstat32i64-_fstat64i32"></a>_fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32
 
 获取有关打开文件的信息。
 
@@ -99,34 +102,34 @@ int _fstat64i32(
 
 ## <a name="return-value"></a>返回值
 
-如果获取到文件状态信息，则返回 0。 返回值-1 指示错误。 如果文件描述符无效或*缓冲区*是**NULL**，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EBADF**，对于一个无效文件说明符，或设置为**EINVAL**，如果*缓冲区*是**NULL**。
+如果获取到文件状态信息，则返回 0。 返回值-1 表示错误。 如果文件描述符无效或*缓冲区*为**NULL**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将**errno**设置为**ebadf (** （对于无效的文件描述符，则设置为 EINVAL），如果*buffer*为**NULL**，则设置为。
 
 ## <a name="remarks"></a>备注
 
-**_Fstat**函数可获取有关与关联的打开文件的信息*fd*并将其存储在由指向的结构*缓冲区*。 **_Stat** SYS\Stat.h 中定义的结构包含以下字段。
+**_Fstat**函数获取与*fd*关联的打开文件的相关信息，并将其存储在*缓冲区*指向的结构中。 在 SYS\Stat.h 中定义的 **_stat**结构包含下列字段。
 
 |字段|含义|
 |-|-|
 | **st_atime** | 上次文件访问的时间。 |
 | **st_ctime** | 文件的创建时间。 |
-| **st_dev** | 如果一台设备， *fd*; 否则为 0。 |
-| **st_mode** | 文件模式信息的位掩码。 **_S_IFCHR**如果设置位*fd*指设备。 **_S_IFREG**如果设置位*fd*指的是一个普通的文件。 将根据文件的权限模式设置读/写位。 **_S_IFCHR**和其他常量在 SYS\Stat.h 中定义。 |
+| **st_dev** | 如果设备， *fd*;否则为0。 |
+| **st_mode** | 文件模式信息的位掩码。 如果*fd*引用设备，则设置 **_S_IFCHR**位。 如果*fd*引用普通文件，则设置 **_S_IFREG**位。 将根据文件的权限模式设置读/写位。 **_S_IFCHR**和其他常量在 sys\stat.h 中定义 |
 | **st_mtime** | 上次进行文件修改的时间。 |
 | **st_nlink** | 在非 NTFS 文件系统上始终为 1。 |
-| **st_rdev** | 如果一台设备， *fd*; 否则为 0。 |
+| **st_rdev** | 如果设备， *fd*;否则为0。 |
 | **st_size** | 文件的大小（以字节为单位）。 |
 
-如果*fd*设备，是指**st_atime**， **st_ctime**， **st_mtime**，并**st_size**字段无意义。
+如果*fd*引用设备，则**st_atime**、 **st_ctime**、 **st_mtime**和**st_size**字段没有意义。
 
 因为 Stat.h 使用 Types.h 中定义的 [_dev_t](../../c-runtime-library/standard-types.md) 类型，所以必须在代码中的 Stat.h 之前包含 Types.h。
 
-**_fstat64**，使用该 **__stat64**结构，允许文件创建日期最大表示为 23:59:59，3000 年 12 月 31 日，UTC; 而其他函数只能表示截至 23:59:59 年 1 月 18 日，2038，UTC。 1970 年 1 月 1 日午夜是所有这些函数的日期范围下限。
+使用 **__stat64**结构的 **_fstat64**允许文件创建日期在23:59:59 年12月31日（3000，UTC;其他函数只表示日期为23:59:59 年1月 2038 18 日，UTC。 1970 年 1 月 1 日午夜是所有这些函数的日期范围下限。
 
-这些函数的变体支持 32 位或 64 位时间类型以及 32 位或 64 位文件长度。 第一个数字后缀 (**32**或**64**) 指示的时间的大小使用的类型; 第二个后缀是**i32**或者**i64**，该值指示是否将文件大小表示为 32 位或 64 位整数。
+这些函数的变体支持 32 位或 64 位时间类型以及 32 位或 64 位文件长度。 第一个数字后缀（**32**或**64**）表示所用时间类型的大小;第二个后缀是**i32**或**i64**，指示文件大小是否表示为32位或64位整数。
 
-**_fstat**等效于 **_fstat64i32**，和**结构** **_stat**包含 64 位时间。 这是 true 除非 **_USE_32BIT_TIME_T**定义了，这种情况下旧行为有效;**_fstat**使用 32 位时间，并**结构** **_stat**包含 32 位时间。 同样适用于 **_fstati64**。
+**_fstat**等效于 **_fstat64i32**，而**struct** **_stat**包含64位时间。 除非定义了 **_USE_32BIT_TIME_T** ，这种情况下旧行为有效; **_fstat**使用32位时间，**结构** **_stat**包含32位时间。 对于 **_fstati64**，情况也是如此。
 
-### <a name="time-type-and-file-length-type-variations-of-stat"></a>_stat 时间类型和文件长度类型变体
+### <a name="time-type-and-file-length-type-variations-of-_stat"></a>_stat 时间类型和文件长度类型变体
 
 |函数|已定义 _USE_32BIT_TIME_T？|时间类型|文件长度类型|
 |---------------|------------------------------------|---------------|----------------------|

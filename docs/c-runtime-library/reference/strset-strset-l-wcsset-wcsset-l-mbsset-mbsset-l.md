@@ -1,14 +1,14 @@
 ---
 title: _strset、_strset_l、_wcsset、_wcsset_l、_mbsset、_mbsset_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wcsset
 - _mbsset
 - _strset_l
 - _strset
 - _wcsset_l
 - _mbsset_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsset
 - _strset_l
@@ -60,12 +63,12 @@ helpviewer_keywords:
 - fstrset function
 - _tcsset_l function
 ms.assetid: c42ded42-2ed9-4f06-a0a9-247ba305473a
-ms.openlocfilehash: 916e65f543e48a9fbfede3ca973698f8b0d07040
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 7f8674467c0d02143e6edf1e4e95c6ee3e20c4b5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500825"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946774"
 ---
 # <a name="_strset-_strset_l-_wcsset-_wcsset_l-_mbsset-_mbsset_l"></a>_strset、_strset_l、_wcsset、_wcsset_l、_mbsset、_mbsset_l
 
@@ -123,11 +126,11 @@ unsigned char *_mbsset_l(
 
 ## <a name="remarks"></a>备注
 
-**_Strset**函数将*str*的所有字符 (终止 null 字符除外) 设置为*c*, 并将其转换为**char**。 **_wcsset**和 **_mbsset_l**是 **_strset**的宽字符和多字节字符版本, 参数和返回值的数据类型也有所不同。 否则这些函数具有相同行为。
+**_Strset**函数将*str*的所有字符（终止 null 字符除外）设置为*c*，并将其转换为**char**。 **_wcsset**和 **_mbsset_l**是 **_strset**的宽字符和多字节字符版本，参数和返回值的数据类型也有所不同。 否则这些函数具有相同行为。
 
-**_mbsset**验证其参数。 如果*str*为空指针, 则将调用无效参数处理程序, 如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续, 则 **_mbsset**将返回**NULL** , 并将**errno**设置为**EINVAL**。 **_strset**和 **_wcsset**不会验证其参数。
+**_mbsset**验证其参数。 如果*str*为空指针，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则 **_mbsset**将返回**NULL** ，并将**errno**设置为**EINVAL**。 **_strset**和 **_wcsset**不会验证其参数。
 
-输出值受区域设置的**LC_CTYPE**类别设置的影响;有关详细信息, 请参阅[setlocale、_wsetlocale](setlocale-wsetlocale.md) 。 这些函数的版本相同, 不同之处在于没有 **_l**后缀的函数使用当前区域设置, 而使用的是 **_l**后缀, 而是使用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的**LC_CTYPE**类别设置的影响;有关详细信息，请参阅[setlocale、_wsetlocale](setlocale-wsetlocale.md) 。 这些函数的版本相同，不同之处在于没有 **_l**后缀的函数使用当前区域设置，而使用的是 **_l**后缀，而是使用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 > [!IMPORTANT]
 > 这些函数可能容易受到的缓冲区溢出的威胁。 缓冲区溢出可以用于系统攻击，因为它们可能使权限的提升不能确保。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。

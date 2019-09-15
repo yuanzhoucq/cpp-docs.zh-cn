@@ -1,9 +1,9 @@
 ---
 title: _close
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _close
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _close
 helpviewer_keywords:
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - close function
 - files [C++], closing
 ms.assetid: 4708a329-8acf-4cd9-b7b0-a952e1897247
-ms.openlocfilehash: faea008903136e8abdc39297672b31800ada796d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e274cd45c42a5cf49430ecce69e111cbbf6fe88b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340009"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942937"
 ---
-# <a name="close"></a>_close
+# <a name="_close"></a>_close
 
 关闭文件。
 
@@ -49,15 +52,15 @@ int _close(
 
 ## <a name="return-value"></a>返回值
 
-**_close**如果已成功关闭文件，则返回 0。 返回值-1 指示错误。
+如果文件已成功关闭， **_close**将返回0。 返回值-1 表示错误。
 
 ## <a name="remarks"></a>备注
 
-**_Close**函数将关闭与关联的文件*fd*。
+**_Close**函数关闭与*fd*关联的文件。
 
-文件描述符和基础 OS 文件句柄已关闭。 因此，不需要调用**CloseHandle**如果最初使用 Win32 函数打开该文件**CreateFile**并转换为文件描述符使用 **_open_osfhandle**.
+文件描述符和基础 OS 文件句柄已关闭。 因此，如果最初使用 Win32 函数**CreateFile**打开该文件并使用 **_open_osfhandle**将其转换为文件描述符，则无需调用**CloseHandle** 。
 
-此函数验证其参数。 如果*fd*是错误的文件描述符，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许继续执行，该函数将返回-1 和**errno**设置为**EBADF**。
+此函数验证其参数。 如果*fd*是错误的文件描述符，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则函数将返回-1，并且**errno**设置为**ebadf (** 。
 
 ## <a name="requirements"></a>要求
 

@@ -1,9 +1,9 @@
 ---
 title: _set_fmode
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _set_fmode
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _set_fmode
 - set_fmode
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - file translation [C++], setting mode
 - set_fmode function
 ms.assetid: f80eb9c7-733b-4652-a9bc-6b3790a35f12
-ms.openlocfilehash: af83f22ebfaf274b73ca9e891563d3775e28925f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef3b811a607184de54bb736bddcc456af53ac089
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356571"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948552"
 ---
-# <a name="setfmode"></a>_set_fmode
+# <a name="_set_fmode"></a>_set_fmode
 
 为文件 I/O 操作设置默认文件转换模式。
 
@@ -47,17 +50,17 @@ errno_t _set_fmode(
 ### <a name="parameters"></a>参数
 
 *模式*<br/>
-所需的文件转换模式： **_O_TEXT**或 **_O_BINARY**。
+需要文件转换模式： **_O_TEXT**或 **_O_BINARY**。
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则返回零；如果失败，则返回错误代码。 如果*模式下*不是 **_O_TEXT**或 **_O_BINARY**或者 **_O_WTEXT**，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数可设置**errno**到**EINVAL** ，并返回**EINVAL**。
+如果成功，则返回零；如果失败，则返回错误代码。 如果*mode*不是 **_O_TEXT**或 **_O_BINARY**或 **_O_WTEXT**，则会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数会将**errno**设置为**EINVAL**并返回**EINVAL**。
 
 ## <a name="remarks"></a>备注
 
-该函数设置 [_fmode](../../c-runtime-library/fmode.md) 全局变量。 此变量指定的文件 I/O 操作的默认文件转换模式 **_open**并 **_pipe**。
+该函数设置 [_fmode](../../c-runtime-library/fmode.md) 全局变量。 此变量为文件 i/o 操作 **_open**和 **_pipe**指定默认文件转换模式。
 
-**_O_TEXT**并 **_O_BINARY**在 Fcntl.h 中定义。 **EINVAL**在 Errno.h 中定义。
+**_O_TEXT**和 **_O_BINARY**是在 fcntl.h> 中定义的。 **EINVAL**是在 Errno 中定义的。
 
 ## <a name="requirements"></a>要求
 

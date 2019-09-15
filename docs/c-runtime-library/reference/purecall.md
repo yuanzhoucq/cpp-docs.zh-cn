@@ -1,9 +1,9 @@
 ---
 title: _purecall
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _purecall
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ntoskrnl.exe
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - purecall
 - _purecall
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - _purecall function
 - purecall function
 ms.assetid: 56135d9b-3403-4e22-822d-e714523801cc
-ms.openlocfilehash: df6dde91ccb952e66eb77c841b2b1ace12756b8c
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 5d62ec30731ce26c4683afc88474d4bddb63a697
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446626"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950155"
 ---
-# <a name="purecall"></a>_purecall
+# <a name="_purecall"></a>_purecall
 
 默认纯虚拟函数调用错误处理程序。 当调用纯虚拟成员函数时，编译器生成调用此函数的代码。
 
@@ -42,13 +45,13 @@ extern "C" int __cdecl _purecall();
 
 ## <a name="remarks"></a>备注
 
-**_Purecall**函数是 Microsoft 的特定于 Microsoft 的实现详细信息C++编译器。 此函数不可以直接通过代码调用，也没有任何公用标头声明。 之所以在这里讨论此函数，是因为它是 C 运行时库的公用导出。
+**_Purecall**函数是 microsoft C++编译器的特定于 microsoft 的实现细节。 此函数不可以直接通过代码调用，也没有任何公用标头声明。 之所以在这里讨论此函数，是因为它是 C 运行时库的公用导出。
 
-对纯虚拟函数的调用出错，因为它没有实现。 编译器生成代码以调用 **_purecall**错误处理程序函数调用纯虚函数时。 默认情况下 **_purecall**终止程序。 在终止之前， **_purecall**函数将调用 **_purecall_handler 中**函数如果已设置了一个进程。 可以安装自己的错误处理程序进行纯虚拟函数调用，以捕获这些调用用于调试和报告目的。 若要使用错误处理程序，创建具有的函数 **_purecall_handler 中**签名，然后使用[_set_purecall_handler](get-purecall-handler-set-purecall-handler.md)使它成为当前处理程序。
+对纯虚拟函数的调用出错，因为它没有实现。 调用纯虚函数时，编译器将生成代码来调用 **_purecall**错误处理程序函数。 默认情况下， **_purecall**将终止该程序。 在终止之前， **_purecall**函数会调用 **_purecall_handler**函数（如果已为进程设置了一个函数）。 可以安装自己的错误处理程序进行纯虚拟函数调用，以捕获这些调用用于调试和报告目的。 若要使用自己的错误处理程序，请创建具有 **_purecall_handler**签名的函数，然后使用[_set_purecall_handler](get-purecall-handler-set-purecall-handler.md)使其成为当前处理程序。
 
 ## <a name="requirements"></a>要求
 
-**_Purecall**函数没有标头声明。 **_Purecall_handler 中**中定义 typedef \<stdlib.h >。
+**_Purecall**函数没有标头声明。 **_Purecall_handler** typedef 是在 stdlib.h > \<中定义的。
 
 ## <a name="see-also"></a>请参阅
 

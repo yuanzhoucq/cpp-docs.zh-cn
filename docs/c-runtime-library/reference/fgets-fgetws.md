@@ -1,10 +1,10 @@
 ---
 title: fgets、fgetws
 ms.date: 07/11/2018
-apiname:
+api_name:
 - fgets
 - fgetws
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fgetts
 - fgetws
@@ -29,12 +32,12 @@ helpviewer_keywords:
 - fgetws function
 - fgetts function
 ms.assetid: ad549bb5-df98-4ccd-a53f-95114e60c4fc
-ms.openlocfilehash: 16dfb7cb0401083960669a735a976fbcd4ad4081
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3f68bee181ebb20eb7a0a2eaca02a72c4dc03616
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333857"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957402"
 ---
 # <a name="fgets-fgetws"></a>fgets、fgetws
 
@@ -68,17 +71,17 @@ wchar_t *fgetws(
 
 ## <a name="return-value"></a>返回值
 
-每个函数将返回*str*。 **NULL**返回以指示错误或文件结尾条件。 使用**feof**或**ferror**以确定是否发生了错误。 如果*str*或*流*是 null 指针，或*numChars*小于或等于零，此函数调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**并且该函数返回**NULL**。
+其中每个函数都会返回*str*。 返回**NULL**以指示错误或文件尾条件。 使用**feof**或**ferror**来确定是否发生了错误。 如果*str*或*stream*是 Null 指针，或*numChars*小于或等于零，则此函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将**errno**设置为**EINVAL** ，并且该函数将返回**NULL**。
 
 有关这些代码以及其他错误代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**Fgets**函数从输入读取的字符串*流*自变量并将其存储在*str*。 **fgets**读取字符从当前流位置到并包括第一个换行符，到流的结尾或直到读取的字符数等于*numChars* -1，具体取决于第一个。 结果存储在*str*追加 null 字符。 换行符（如果读取）将包括在字符串中。
+**Fgets**函数从输入*流*参数读取字符串，并将其存储在*str*中。 **fgets**将字符从当前流位置读取到流的末尾，并包含第一个换行符，或直到读取的字符数等于*numChars* ，以先达到的字符数为准。 In *str*中存储的结果追加一个 null 字符。 换行符（如果读取）将包括在字符串中。
 
-**fgetws**是宽字符版本**fgets**。
+**fgetws**是**fgets**的宽字符版本。
 
-**fgetws**读取的宽字符自变量*str*作为多字节字符字符串或宽字符字符串根据*流*在文本模式还是二进制模式中打开分别。 有关在 Unicode 和多字节流 I/O 中使用文本和二进制模式的详细信息，请参阅[文本和二进制模式文件 I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md) 和[文本和二进制模式下的 Unicode 流 I/O](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md)。
+**fgetws**读取宽字符参数*str*作为多字节字符字符串或宽字符字符串，具体取决于*流*是以文本模式还是二进制模式打开的。 有关在 Unicode 和多字节流 I/O 中使用文本和二进制模式的详细信息，请参阅[文本和二进制模式文件 I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md) 和[文本和二进制模式下的 Unicode 流 I/O](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -120,7 +123,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crtfgetstxt"></a>输入：crt_fgets.txt
+### <a name="input-crt_fgetstxt"></a>输入：crt_fgets.txt
 
 ```Input
 Line one.

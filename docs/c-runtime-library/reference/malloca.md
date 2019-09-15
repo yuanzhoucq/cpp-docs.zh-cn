@@ -1,9 +1,9 @@
 ---
 title: _malloca
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _malloca
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - malloca
 - _malloca
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - malloca function
 - _malloca function
 ms.assetid: 293992df-cfca-4bc9-b313-0a733a6bb936
-ms.openlocfilehash: 22a63002c900d69e8a7706a54acedf0b4b4f6376
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b12b4adde710f2fc46b3a3790519006fabbb1fc
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156864"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952774"
 ---
-# <a name="malloca"></a>_malloca
+# <a name="_malloca"></a>_malloca
 
 在堆栈上分配内存。 这是 [_alloca](alloca.md) 版本，具有 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全增强功能。
 
@@ -49,28 +52,28 @@ void *_malloca(
 
 ## <a name="return-value"></a>返回值
 
-**_Malloca**例程返回**void**指向保证适当对齐任何类型的对象的存储的已分配空间。 如果*大小*为 0， **_malloca**分配零长度的项并向该项返回有效的指针。
+**_Malloca**例程返回指向已分配空间的**void**指针，该指针保证能针对任何类型的对象的存储进行适当的调整。 如果*size*为0，则 **_malloca**将分配一个长度为零的项，并返回指向该项的有效指针。
 
-如果*大小*大于 **_ALLOCA_S_THRESHOLD**，然后 **_malloca**尝试在堆上分配和返回一个空指针，如果不能分配的空间。 如果*大小*小于或等于 **_ALLOCA_S_THRESHOLD**，然后 **_malloca**如果空间不能则会生成尝试堆栈和堆栈溢出异常上要分配给分配。 堆栈溢出异常不是C++异常;这是结构化的异常。 而不是使用C++异常处理，则必须使用[结构化异常处理](../../cpp/structured-exception-handling-c-cpp.md)(SEH) 来捕获该异常。
+如果*size*大于 **_ALLOCA_S_THRESHOLD**，则 **_malloca**将尝试在堆上分配，如果无法分配空间，则返回空指针。 如果*size*小于或等于 **_ALLOCA_S_THRESHOLD**，则 **_malloca**尝试在堆栈上分配，并在无法分配空间时生成堆栈溢出异常。 堆栈溢出异常不是C++异常;这是结构化异常。 您必须使用C++ [结构化异常处理](../../cpp/structured-exception-handling-c-cpp.md)（SEH）来捕获此异常，而不是使用异常处理。
 
 ## <a name="remarks"></a>备注
 
-**_malloca**分配*大小*从程序堆栈或堆如果请求超过某个大小以字节为单位指定的字节 **_ALLOCA_S_THRESHOLD**。 之间的差异 **_malloca**并 **_alloca**在于 **_alloca**始终在堆栈上，而不考虑大小分配。 与不同 **_alloca**，这并不要求或允许调用**免费**可释放的内存分配， **_malloca**需要使用[_freea](freea.md)来释放内存。 在调试模式下 **_malloca**始终从堆中分配内存。
+如果请求超出了 **_ALLOCA_S_THRESHOLD**给定的特定大小（以字节为单位）， **_malloca**将从程序堆栈或堆分配*大小*字节。 **_Malloca**和 **_alloca**之间的差异在于，无论大小如何， **_alloca**始终在堆栈上分配。 与 **_alloca**不同，不要求或不允许调用**自由**释放内存以便分配， **_malloca**需要使用[_freea](freea.md)来释放内存。 在调试模式下， **_malloca**始终从堆中分配内存。
 
-存在一些限制显式调用 **_malloca**异常处理程序 (EH) 中。 在 x86 类处理器运行的 EH 例程在自己的内存框架操作：他们未基于封闭函数的堆栈指针的当前位置的内存空间中执行其任务。 最常见的实现包括 Windows NT 结构化异常处理 (SEH) 和 C++ catch 子句表达式。 因此，显式调用 **_malloca**中任何以下方案结果在返回至调用 EH 例程时程序失败：
+在异常处理程序（EH）中显式调用 **_malloca**存在一些限制。 在 x86 类处理器上运行的 EH 例程在其自己的内存帧中运行：它们在内存空间中执行其任务，这些任务不基于封闭函数的堆栈指针的当前位置。 最常见的实现包括 Windows NT 结构化异常处理 (SEH) 和 C++ catch 子句表达式。 因此，在以下任何一种情况下，显式调用 **_malloca**会导致在返回到调用 EH 例程期间程序失败：
 
-- Windows NT SEH 异常筛选器表达式： **__except** (`_malloca ()` )
+- Windows NT SEH 异常筛选器表达式 ： __except`_malloca ()` （）
 
-- Windows NT SEH 最终异常处理程序： **__finally** {`_malloca ()` }
+- Windows NT SEH 最终异常处理程序 ： __finally`_malloca ()` {}
 
 - C++ EH catch 子句表达式
 
-但是， **_malloca**可以直接从 EH 例程调用或通过调用从调用应用程序提供的回调之前列出的 EH 方案之一。
+但是，可以从 EH 例程内或从应用程序提供的回调中直接调用 **_malloca** ，该回调由前面列出的某个 EH 方案调用。
 
 > [!IMPORTANT]
-> 在 Windows XP 中，如果 **_malloca**称为在 try/catch 块中，必须调用[_resetstkoflw](resetstkoflw.md) catch 块中。
+> 在 Windows XP 中，如果在 try/catch 块中调用 **_malloca** ，则必须在 catch 块中调用[_resetstkoflw](resetstkoflw.md) 。
 
-除了上述限制，使用时[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)选项， **_malloca**不能用于 **__except**块。 有关详细信息，请参阅 [/clr Restrictions](../../build/reference/clr-restrictions.md)。
+除了上述限制之外，在使用[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)选项时， **_malloca**不能在 **__except**块中使用。 有关详细信息，请参阅 [/clr Restrictions](../../build/reference/clr-restrictions.md)。
 
 ## <a name="requirements"></a>要求
 

@@ -1,10 +1,10 @@
 ---
 title: vsscanf、vswscanf
 ms.date: 11/04/2016
-apiname:
+api_name:
 - vsscanf
 - vswscanf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _vstscanf
 - vsscanf
@@ -24,12 +27,12 @@ helpviewer_keywords:
 - vswscanf function
 - vsscanf function
 ms.assetid: e96180f2-df46-423d-b4eb-0a49ab819bde
-ms.openlocfilehash: 5bbe80cd2463c5c5b9b4ea55b8d6574675e42054
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5dabe603c1cd0c95411fec87b9c0344f28c5c698
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188855"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945101"
 ---
 # <a name="vsscanf-vswscanf"></a>vsscanf、vswscanf
 
@@ -63,20 +66,20 @@ int vswscanf(
 
 ## <a name="return-value"></a>返回值
 
-每个函数都将返回成功转换并分配的字段数；返回值不包括已读取但未分配的字段。 返回值为 0 表示没有分配任何字段。 返回值是**EOF**错误或如果在第一个转换之前到达字符串的末尾。
+每个函数都将返回成功转换并分配的字段数；返回值不包括已读取但未分配的字段。 返回值为 0 表示没有分配任何字段。 如果发生错误，则返回值为**EOF** ; 或者，如果在第一次转换之前到达字符串的末尾，则为。
 
-如果*缓冲区*或*格式*是**NULL**调用指针，无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，这些函数将返回-1 并设置**errno**到**EINVAL**。
+如果*缓冲区*或*格式*为**NULL**指针，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回-1，并将**errno**设置为**EINVAL**。
 
 有关这些及其他错误代码的信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**Vsscanf**函数读取来自数据*缓冲区*到每个参数中给定的位置*arglist*参数列表。 列表中的每个参数必须是指向具有中的类型说明符相对应的类型的变量*格式*。 *格式*参数控制字段输入的解释，并且具有相同格式和函数作为*格式*参数**scanf**函数。 如果复制出现在重叠的字符串之间，则该行为不确定。
+**Vsscanf**函数将*缓冲区*中的数据读取到*arglist*参数列表中每个参数给定的位置。 列表中的每个自变量都必须是指向类型的变量的指针，该变量的类型与*格式*的类型说明符对应。 *Format*参数控制输入字段的解释，其形式和函数与**scanf**函数的*format*参数相同。 如果复制出现在重叠的字符串之间，则该行为不确定。
 
 > [!IMPORTANT]
-> 当你使用**vsscanf**若要读取一个字符串，始终指定的宽度 **%s**格式 (例如， **"%32 秒"** 而不是 **"%s"**);否则，输入格式不正确可能导致缓冲区溢出。
+> 使用**vsscanf**读取字符串时，请始终指定 **% s**格式的宽度（例如， **"% 32s"** 而不是 **"% s"** ）;否则，格式错误的输入会导致缓冲区溢出。
 
-**vswscanf**是宽字符版本**vsscanf**; 的自变量**vswscanf**都是宽字符字符串。 **vsscanf**不处理多字节十六进制字符。 **vswscanf**不处理 Unicode 全角十六进制或"兼容区"字符。 否则为**vswscanf**并**vsscanf**行为方式相同。
+**vswscanf**是**vsscanf**的宽字符版本;**vswscanf**的参数是宽字符字符串。 **vsscanf**不处理多字节十六进制字符。 **vswscanf**不处理 Unicode 全角十六进制或 "兼容区域" 字符。 否则， **vswscanf**和**vsscanf**的行为方式相同。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

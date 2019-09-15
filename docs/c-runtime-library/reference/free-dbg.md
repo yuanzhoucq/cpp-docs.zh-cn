@@ -1,9 +1,9 @@
 ---
 title: _free_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _free_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _free_dbg
 - free_dbg
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - _free_dbg function
 - free_dbg function
 ms.assetid: fc5e8299-616d-48a0-b979-e037117278c6
-ms.openlocfilehash: 5a0024101e4f5a74f1573b271d444b27738db8e1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43591ce8710dd25ad33832a5f084ca6e84bba979
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287858"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956809"
 ---
-# <a name="freedbg"></a>_free_dbg
+# <a name="_free_dbg"></a>_free_dbg
 
 释放堆中的内存块（仅限调试版本）。
 
@@ -50,15 +53,15 @@ void _free_dbg(
 指向要释放的已分配内存块的指针。
 
 *blockType*<br/>
-要释放分配的内存块的类型： **_CLIENT_BLOCK**， **_NORMAL_BLOCK**，或 **_IGNORE_BLOCK**。
+要释放的已分配内存块的类型： **_CLIENT_BLOCK**、 **_NORMAL_BLOCK**或 **_IGNORE_BLOCK**。
 
 ## <a name="remarks"></a>备注
 
-**_Free_dbg**函数是调试版[免费](free.md)函数。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，则每次调用 **_free_dbg**缩减为调用**免费**。 这两**免费**并 **_free_dbg**释放基堆中的内存块，但 **_free_dbg**还包含两个调试功能： 能够保留已释放的块的堆中若要模拟内存不足的情况和用于释放特定分配类型的块类型参数的链接的列表。
+**_Free_dbg**函数是[可用](free.md)函数的调试版本。 当未定义[_debug](../../c-runtime-library/debug.md)时，对 **_free_dbg**的每次调用都会减少到对**free**的调用。 **Free**和 **_free_dbg**都自由地释放基堆中的内存块，但 **_free_dbg**提供了两种调试功能：能够在堆的链接列表中保留已释放的块，以便模拟内存不足的情况和块类型参数免费的特定分配类型。
 
-**_free_dbg**执行有效性检查所有指定的文件和块位置上执行释放操作之前。 应用程序不应该提供此信息。 当释放内存块时，调试堆管理器自动检查用户部分两侧的缓冲区的完整性，如果发生覆盖，将发出错误报告。 如果 **_CRTDBG_DELAY_FREE_MEM_DF**位域[_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)设置标志，则使用值 0xDD，分配填充释放的块 **_FREE_BLOCK**块类型，并保留在堆链接列表的内存块。
+在执行免费操作之前， **_free_dbg**对所有指定的文件和块位置执行有效性检查。 应用程序不应该提供此信息。 当释放内存块时，调试堆管理器自动检查用户部分两侧的缓冲区的完整性，如果发生覆盖，将发出错误报告。 如果设置了[_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)标志的 **_CRTDBG_DELAY_FREE_MEM_DF**位字段，则会用值0xDD 填充已释放的块，并为其分配 **_FREE_BLOCK**块类型，并将其保留在堆的链接内存块列表中。
 
-如果在释放内存，出现错误**errno**的操作系统从性质上的失败的信息，以及设置。 有关详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如果在释放内存时发生错误，则会在出现故障的情况下，使用操作系统中的信息设置**errno** 。 有关详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 有关如何在基堆的调试版本中分配、初始化和管理内存块的信息，请参阅 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。 有关分配块类型及其使用方式的信息，请参阅[调试堆上的块类型](/visualstudio/debugger/crt-debug-heap-details)。 有关在应用程序的调试版本中调用标准堆函数及其调试版本之间差异的信息，请参阅[堆分配函数的调试版本](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)。
 
@@ -72,7 +75,7 @@ void _free_dbg(
 
 ## <a name="example"></a>示例
 
-有关如何使用的示例 **_free_dbg**，请参阅[crt_dbg2](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg2)。
+有关如何使用 **_free_dbg**的示例，请参阅[crt_dbg2](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg2)。
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,14 +1,14 @@
 ---
 title: _strnset_s、_strnset_s_l、_wcsnset_s、_wcsnset_s_l、_mbsnset_s、_mbsnset_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnset_s_l
 - _strnset_s
 - _mbsnset_s
 - _strnset_s_l
 - _wcsnset_s_l
 - _wcsnset_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbsnset_s_l
 - wcsnset_s
@@ -55,19 +58,19 @@ helpviewer_keywords:
 - strnset_s function
 - _wcsnset_s function
 ms.assetid: 9cf1b321-b5cb-4469-b285-4c07cfbd8813
-ms.openlocfilehash: 9fc8149bcabb2708f644c80837a93cee72658b8e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3542d2272282a9c3f6b2aed8cc443bef85dfe883
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209618"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946993"
 ---
-# <a name="strnsets-strnsetsl-wcsnsets-wcsnsetsl-mbsnsets-mbsnsetsl"></a>_strnset_s、_strnset_s_l、_wcsnset_s、_wcsnset_s_l、_mbsnset_s、_mbsnset_s_l
+# <a name="_strnset_s-_strnset_s_l-_wcsnset_s-_wcsnset_s_l-_mbsnset_s-_mbsnset_s_l"></a>_strnset_s、_strnset_s_l、_wcsnset_s、_wcsnset_s_l、_mbsnset_s、_mbsnset_s_l
 
 将字符串的字符初始化为给定字符。 这些版本的 [_strnset、_strnset_l、_wcsnset、_wcsnset_l、_mbsnset、_mbsnset_l](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md) 具有安全性增强功能，如 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述。
 
 > [!IMPORTANT]
-> **_mbsnset_s**并 **_mbsnset_s_l**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbsnset_s**和 **_mbsnset_s_l**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -119,7 +122,7 @@ errno_t _mbsnset_s_l(
 要修改的字符串。
 
 *numberOfElements*<br/>
-大小*str*缓冲区。
+*Str*缓冲区的大小。
 
 *c*<br/>
 字符设置。
@@ -134,13 +137,13 @@ errno_t _mbsnset_s_l(
 
 如果成功，则为零；否则为错误代码。
 
-这些函数将验证其参数。 如果*str*不是有效的以 null 结尾的字符串或大小自变量是小于或等于 0，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则这些函数将返回错误代码并设置**errno**为该错误代码。 默认错误代码是**EINVAL**如果更具体的值不适用。
+这些函数将验证其参数。 如果*str*不是有效的以 null 结尾的字符串，或者 size 参数小于或等于0，则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回错误代码并将**errno**设置为该错误代码。 如果更具体的值不适用，则默认错误代码为**EINVAL** 。
 
 ## <a name="remarks"></a>备注
 
-这些函数的最大设置第一个*计数*个字符*str*到*c*。 如果*计数*超过的大小*str*，则大小*str*而不是*计数*。 如果出错*计数*大于*numberOfElements*这两个参数的大小，并且*str*。
+这些函数最多将*str*的第一个*计数*字符设置为*c*。 如果*count*大于*str*的大小，则使用*str*的大小而不是*count*。 如果*计数*大于*numberOfElements*并且这两个参数都大于*str*大小，则会发生错误。
 
-**_wcsnset_s**并 **_mbsnset_s**宽字符及多字节字符版本的 **_strnset_s**。 字符串参数 **_wcsnset_s**是宽字符字符串; **_mbsnset_s**是一个多字节字符字符串。 否则这三个函数否则具有相同行为。
+**_wcsnset_s**和 **_mbsnset_s**是 **_strnset_s**的宽字符和多字节字符版本。 **_Wcsnset_s**的字符串参数是宽字符字符串; **_mbsnset_s**的是 amultibyte 字符串。 否则这三个函数否则具有相同行为。
 
 输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
@@ -161,7 +164,7 @@ errno_t _mbsnset_s_l(
 |**_strnset_s_l**|\<tchar.h>|
 |**_wcsnset_s**|\<string.h> 或 \<wchar.h>|
 |**_wcsnset_s_l**|\<tchar.h>|
-|**_mbsnset_s**， **_mbsnset_s_l**|\<mbstring.h>|
+|**_mbsnset_s**、 **_mbsnset_s_l**|\<mbstring.h>|
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

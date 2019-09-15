@@ -1,14 +1,14 @@
 ---
 title: _strset_s、_strset_s_l、_wcsset_s、_wcsset_s_l、_mbsset_s、_mbsset_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wcsset_s
 - _wcsset_s_l
 - _strset_s
 - _mbsset_s_l
 - _strset_s_l
 - _mbsset_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wcsset_s_l
 - strset_s
@@ -58,19 +61,19 @@ helpviewer_keywords:
 - _tcsset_s function
 - mbsset_s function
 ms.assetid: dceb2909-6b41-4792-acb7-888e45bb8b35
-ms.openlocfilehash: 031678f75dacd8112ac897053066216e7b3b2450
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d959a1b8856fda6abc17c77e0c0f8c0679883a7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368783"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946775"
 ---
-# <a name="strsets-strsetsl-wcssets-wcssetsl-mbssets-mbssetsl"></a>_strset_s、_strset_s_l、_wcsset_s、_wcsset_s_l、_mbsset_s、_mbsset_s_l
+# <a name="_strset_s-_strset_s_l-_wcsset_s-_wcsset_s_l-_mbsset_s-_mbsset_s_l"></a>_strset_s、_strset_s_l、_wcsset_s、_wcsset_s_l、_mbsset_s、_mbsset_s_l
 
 将字符串的字符设置为一个字符。 这些版本的 [_strset、_strset_l、_wcsset、_wcsset_l、_mbsset、_mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md) 具有安全性增强功能，如 [CRT 的安全性增强功能](../../c-runtime-library/security-features-in-the-crt.md)中所述。
 
 > [!IMPORTANT]
-> **_mbsset_s**并 **_mbsset_s_l**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbsset_s**和 **_mbsset_s_l**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -116,7 +119,7 @@ errno_t _mbsset_s_l(
 要设置的 null 终止字符串。
 
 *numberOfElements*<br/>
-大小*str*缓冲区。
+*Str*缓冲区的大小。
 
 *c*<br/>
 字符设置。
@@ -128,11 +131,11 @@ errno_t _mbsset_s_l(
 
 如果成功，则为零；否则为错误代码。
 
-这些函数将验证其参数。 如果*str*是空指针，或*numberOfElements*参数为小于或等于 0，或传递的块不是以 null 结尾，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，这些函数将返回**EINVAL**并设置**errno**到**EINVAL**。
+这些函数将验证其参数。 如果*str*为空指针，或*numberOfElements*参数小于或等于0，或者传入的块不是以 null 结尾的，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回**EINVAL** ，并将**Errno**设置为**EINVAL**。
 
 ## <a name="remarks"></a>备注
 
-**_Strset_s**函数设置的所有字符*str*到*c* (转换为**char**)，除非终止 null 字符。 **_wcsset_s**并 **_mbsset_s**宽字符及多字节字符版本的 **_strset_s**。 参数和返回值的数据类型会相应地变化。 否则这些函数具有相同行为。
+除终止 null 字符之外， **_strset_s**函数将*str*的所有字符都设置为*c* （转换为**char**）。 **_wcsset_s**和 **_mbsset_s**是 **_strset_s**的宽字符和多字节字符版本。 参数和返回值的数据类型会相应地变化。 否则这些函数具有相同行为。
 
 输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
@@ -153,7 +156,7 @@ errno_t _mbsset_s_l(
 |**_strset_s_l**|\<tchar.h>|
 |**_wcsset_s**|\<string.h> 或 \<wchar.h>|
 |**_wcsset_s_l**|\<tchar.h>|
-|**_mbsset_s**， **_mbsset_s_l**|\<mbstring.h>|
+|**_mbsset_s**、 **_mbsset_s_l**|\<mbstring.h>|
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

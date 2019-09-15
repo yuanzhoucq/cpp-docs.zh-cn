@@ -1,12 +1,12 @@
 ---
 title: ispunct、iswpunct、_ispunct_l、_iswpunct_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ispunct
 - _iswpunct_l
 - iswpunct
 - _ispunct_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - iswpunct
 - _istpunct
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _iswpunct_l function
 - iswpunct_l function
 ms.assetid: 94403240-85c8-40a4-9c2b-e3e95c729c76
-ms.openlocfilehash: 209f94bb8f9d3338f62b719d4d4b94b152ed5ab7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 54c51c612cf3b491b49d7e141df34ed5b4415520
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286530"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953693"
 ---
-# <a name="ispunct-iswpunct-ispunctl-iswpunctl"></a>ispunct、iswpunct、_ispunct_l、_iswpunct_l
+# <a name="ispunct-iswpunct-_ispunct_l-_iswpunct_l"></a>ispunct、iswpunct、_ispunct_l、_iswpunct_l
 
 确定整数是否表示标点字符。
 
@@ -73,11 +76,11 @@ int _iswpunct_l(
 
 ## <a name="return-value"></a>返回值
 
-这些例程返回非零值如果*c*是标点字符的特定表示形式。 **ispunct**返回非零值不是空格字符或字符的任何可打印字符**isalnum**为非零值。 **iswpunct**返回非零值不是空格宽字符或宽字符的任何可打印宽字符**iswalnum**为非零值。 每个例程将返回 0，如果*c*不满足测试条件。
+如果*c*是标点符号的特定表示形式，则每个例程将返回非零值。 对于不是空格字符的任何可打印字符或**isalnum**不为零的字符， **ispunct**将返回一个非零值。 **iswpunct**为任何可打印宽字符返回非零值，该字符既不是空格宽字符，也不是宽字符， **iswalnum**不为零。 如果*c*不满足测试条件，则这些例程都将返回0。
 
-测试条件的结果**ispunct**函数取决于**LC_CTYPE**区域设置类别设置影响; 请参阅[setlocale、 _wsetlocale](setlocale-wsetlocale.md)有关详细信息。 不具有这些函数的版本 **_l**后缀，请使用当前区域设置的任何依赖于区域设置的行为; 具有的版本 **_l**后缀完全相同，只不过它们使用改用已传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**Ispunct**函数的测试条件的结果取决于区域设置的**LC_CTYPE**类别设置;有关详细信息，请参阅[setlocale、_wsetlocale](setlocale-wsetlocale.md) 。 这些不带 **_l**后缀的函数的版本对与区域设置相关的行为使用当前区域设置;具有 **_l**后缀的版本是相同的，只不过它们使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-行为**ispunct**并 **_ispunct_l**未定义当*c*不是 EOF 或在范围 0 到 0xff 内，非独占。 使用调试 CRT 库时， *c*是不包含其中一个值，函数将引发断言。
+如果*c*不是 EOF 或介于0到0xff （含0和0xff），则**ispunct**和 **_ispunct_l**的行为是不确定的。 当使用调试 CRT 库并且*c*不是这些值之一时，函数将引发断言。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

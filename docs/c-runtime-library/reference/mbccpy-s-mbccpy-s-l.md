@@ -1,10 +1,10 @@
 ---
 title: _mbccpy_s、_mbccpy_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbccpy_s
 - _mbccpy_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbccpy_s_l
 - mbccpy_s_l
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - _tccpy_s_l function
 - _mbccpy_s_l function
 ms.assetid: b6e965fa-53c1-4ec3-85ef-a1c4b4f2b2da
-ms.openlocfilehash: f9a7554630bd3b46196358c01c21b99978c53e53
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 26fad83c5b7847e0050fe490cad30e0643aefd74
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156845"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952636"
 ---
-# <a name="mbccpys-mbccpysl"></a>_mbccpy_s、_mbccpy_s_l
+# <a name="_mbccpy_s-_mbccpy_s_l"></a>_mbccpy_s、_mbccpy_s_l
 
 将一个多字节字符从一个字符串复制到另一个字符串。 这些版本的 [_mbccpy、_mbccpy_l](mbccpy-mbccpy-l.md) 具有安全增强功能，如 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)所述。
 
@@ -79,14 +82,14 @@ errno_t _mbccpy_s_l(
 
 ### <a name="parameters"></a>参数
 
-*dest*<br/>
+dest<br/>
 复制目标。
 
 *buffSizeInBytes*<br/>
 目标缓冲区的大小。
 
 *pCopied*<br/>
-填充复制的字节数（如果成功则为 1 或 2）。 传递**NULL**如果您不关心数。
+填充复制的字节数（如果成功则为 1 或 2）。 如果对数字不感兴趣，则传递**NULL** 。
 
 *src*<br/>
 要复制的多字节字符。
@@ -96,26 +99,26 @@ errno_t _mbccpy_s_l(
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则为零；如果失败，则为错误代码。 如果*src*或*dest*是**NULL**，或如果有多个**buffSizeinBytes**字节都要复制到*dest*，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，这些函数返回**EINVAL**并**errno**设置为**EINVAL**。
+如果成功，则为零；如果失败，则为错误代码。 如果*src*或*dest*为**NULL**，或者如果要将超过**buffSizeinBytes**字节复制到*dest*，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则函数返回**EINVAL** ， **Errno**设置为**EINVAL**。
 
 ## <a name="remarks"></a>备注
 
-**_Mbccpy_s**函数将复制从一个多字节字符*src*到*dest*。 如果*src*不指向由确定隐式调用的多字节字符的前导字节[_ismbblead](ismbblead-ismbblead-l.md)，然后单字节， *src*复制到的点。 如果*src*指向前导字节但是后续字节为 0 并因此而无效，则将 0 复制到*dest*， **errno**设置为**EILSEQ**，和函数返回**EILSEQ**。
+**_Mbccpy_s**函数将一个多字节字符从*src*复制到*目标*。 如果*src*不指向由对[_ismbblead](ismbblead-ismbblead-l.md)的隐式调用确定的多字节字符的前导字节，则会复制*src*指向的单个字节。 如果*src*指向前导字节，但以下字节是0，因而无效，则将0复制到*dest*， **errno**设置为**eilseq 且**，并且函数返回**eilseq 且**。
 
-**_mbccpy_s**未追加 null 终止符; 但是，如果*src*指向空字符，则该 null 复制到*dest* （这是只是常规的单字节副本）。
+**_mbccpy_s**不追加空终止符;但是，如果*src*指向 null 字符，则会将该 null 复制到*dest* （这只是一个常规的单字节副本）。
 
-中的值*pCopied*填入复制的字节数。 如果操作成功，则可能的值为 1 和 2。 如果**NULL**传递中，则忽略此参数。
+*PCopied*中的值由复制的字节数填充。 如果操作成功，则可能的值为 1 和 2。 如果传入**NULL** ，则忽略此参数。
 
-|*src*|复制到*dest*|*pCopied*|返回值|
+|*src*|已复制到*目标*|*pCopied*|返回值|
 |-----------|----------------------|---------------|------------------|
 |非前导字节|非前导字节|1|0|
 |0|0|1|0|
 |前导字节，后跟非零值|前导字节，后跟非零值|2|0|
 |前导字节，后跟 0|0|1|**EILSEQ**|
 
-请注意，第二行只是第一行的特殊情况。 另请注意，此表假设*buffSizeInBytes* >= *pCopied*。
+请注意，第二行只是第一行的特殊情况。 另请注意，表假设*buffSizeInBytes* >= *pCopied*。
 
-**_mbccpy_s**的任何区域设置相关行为使用当前区域设置。 **_mbccpy_s_l**等同于 **_mbccpy_s**只不过 **_mbccpy_s_l**使用任何区域设置相关的行为的传入的区域设置。
+**_mbccpy_s**为任何与区域设置相关的行为使用当前区域设置。 **_mbccpy_s_l**与 **_mbccpy_s**相同，不同之处在于 **_mbccpy_s_l**使用传入的区域设置用于任何依赖于区域设置的行为。
 
 在 C++ 中，通过模板重载简化这些函数的使用；重载可以自动推导出缓冲区长度，不再需要指定大小参数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 

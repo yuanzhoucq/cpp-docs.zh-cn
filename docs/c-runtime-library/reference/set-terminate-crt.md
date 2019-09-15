@@ -1,9 +1,9 @@
 ---
 title: set_terminate (CRT)
 ms.date: 11/04/2016
-apiname:
+api_name:
 - set_terminate
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - set_terminate
 helpviewer_keywords:
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 3ff1456a-7898-44bc-9266-a328a80b6006
-ms.openlocfilehash: 7be81dec7fba80a273d635cbd30b96b09928bc66
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 860789a3f2fda5ef13cadffa2a00dba4fbd2090a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356441"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948354"
 ---
-# <a name="setterminate-crt"></a>set_terminate (CRT)
+# <a name="set_terminate-crt"></a>set_terminate (CRT)
 
-安装你自己的终止例程通过调用**终止**。
+安装**终止**时要调用的自己的终止例程。
 
 ## <a name="syntax"></a>语法
 
@@ -47,24 +50,24 @@ terminate_function set_terminate( terminate_function termFunction );
 
 ## <a name="return-value"></a>返回值
 
-注册的上一个函数返回指向**set_terminate** ，以便稍后能还原上一个函数。 如果已设置上一个函数，返回值可能用于还原默认行为;此值可能**NULL**。
+返回指向**set_terminate**注册的上一个函数的指针，以便稍后可以还原以前的函数。 如果以前未设置函数，则返回值可用于还原默认行为;此值可以为**NULL**。
 
 ## <a name="remarks"></a>备注
 
-**Set_terminate**函数安装*termFunction*由调用的函数作为**终止**。 **set_terminate**用于C++异常处理和引发异常之前可能在程序中的任意位置调用。 **终止**调用[中止](abort.md)默认情况下。 您可以更改此默认设置编写你自己的终止函数并调用**set_terminate**与作为其参数函数的名称。 **终止**调用的最后一个函数的参数被当作**set_terminate**。 执行任何所需的清除任务后*termFunction*应退出程序。 如果它没有退出 （如果它返回给调用方），[中止](abort.md)调用。
+**Set_terminate**函数将*termFunction*安装为**终止**时调用的函数。 **set_terminate**与C++异常处理一起使用，并且在引发异常之前可在程序中的任意位置调用。 默认情况下，**终止**调用[中止](abort.md)。 可以通过以下方式更改此默认设置：编写自己的终止函数并调用**set_terminate** ，并将函数名称作为其参数。 **terminate**调用作为**set_terminate**的参数提供的最后一个函数。 执行任何所需的清除任务后， *termFunction*应退出程序。 如果不退出（如果它返回到其调用方），则调用[abort](abort.md) 。
 
 在多线程环境中，终止单独为每个线程维护的函数。 每个新线程都需要安装自己的终止函数。 因此，每个线程都负责处理它自己的终止处理。
 
-**Terminate_function** EH 中定义类型。为指向用户定义的终止函数的 H *termFunction* ，它返回**void**。 自定义函数*termFunction*可以不采用参数，不应返回到其调用方。 如果是这样，[中止](abort.md)调用。 在不引发异常*termFunction*。
+**Terminate_function**类型在 EH 中定义。H 作为指向用户定义的终止函数的指针， *termFunction*返回**void**。 自定义函数*termFunction*不能采用任何参数，并且不应返回到其调用方。 如果是，则调用[abort](abort.md) 。 不能从*termFunction*内部引发异常。
 
 ```cpp
 typedef void ( *terminate_function )( );
 ```
 
 > [!NOTE]
-> **Set_terminate**函数只能在调试器外部。
+> **Set_terminate**函数仅在调试器外部运行。
 
-没有单个**set_terminate**处理程序的所有动态链接的 Dll 或 Exe; 即使你调用**set_terminate**您的处理程序可能会替换为另一个，或者你可能会替换由另一个设置了处理程序DLL 或 EXE。
+所有动态链接的 Dll 或 Exe 都有一个**set_terminate**的处理程序;即使您调用**set_terminate** ，您的处理程序也可能被另一个 DLL 或 EXE 替换。
 
 ## <a name="requirements"></a>要求
 

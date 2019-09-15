@@ -1,11 +1,11 @@
 ---
 title: cacosh、cacoshf、cacoshl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - cacosh
 - cacoshf
 - cacoshl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cacosh
 - cacoshf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - cacoshf function
 - cacoshl function
 ms.assetid: 83fd05eb-3587-4741-9be6-589a830a1703
-ms.openlocfilehash: aa31dfa1b29eda18d34528fc8aa9544e58a5a082
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 05ba0b37540e9f1b2dbb4d255e0fa033b54762d1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340724"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943403"
 ---
 # <a name="cacosh-cacoshf-cacoshl"></a>cacosh、cacoshf、cacoshl
 
@@ -68,17 +71,17 @@ _Lcomplex cacoshl(
 
 ## <a name="return-value"></a>返回值
 
-反双曲余弦值*z*，以弧度为单位。 结果为无限且为非负沿实轴，并位于的间隔 [-i π，+ i π] 沿虚轴。
+*Z*的反双曲余弦值（以弧度表示）。 沿实轴的结果为无限和非负值，并沿虚轴的间隔 [-i π，+ i π]。
 
 ## <a name="remarks"></a>备注
 
-因为C++允许重载，可以调用的重载**cacosh**采用并返回 **_Fcomplex**并 **_Lcomplex**的值。 在 C 程序中， **cacosh**始终采用并返回 **_Dcomplex**值。
+由于C++允许重载，因此可以调用**cacosh**的重载，该重载采用并返回 **_Fcomplex**和 **_Lcomplex**值。 在 C 程序中， **cacosh**始终采用并返回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|C 标头|C++ 标头|
 |-------------|--------------|------------------|
-|**cacosh**,               **cacoshf**, **cacoshl**|\<complex.h>|\<ccomplex>|
+|**cacosh**、 **cacoshf**、 **cacoshl**|\<complex.h>|\<ccomplex>|
 
 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

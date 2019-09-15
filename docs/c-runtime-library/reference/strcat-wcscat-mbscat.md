@@ -1,11 +1,11 @@
 ---
 title: strcat、wcscat、_mbscat
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbscat
 - wcscat
 - strcat
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbscat
 - _ftcscat
@@ -40,19 +43,19 @@ helpviewer_keywords:
 - appending strings
 - wcscat function
 ms.assetid: c89c4ef1-817a-44ff-a229-fe22d06ba78a
-ms.openlocfilehash: 629b66a5c9dded3a910919f5e302a97c4f731240
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 973c54c18e941b29526cb3e9b1cadb98f6582c4a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354335"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958278"
 ---
-# <a name="strcat-wcscat-mbscat"></a>strcat、wcscat、_mbscat
+# <a name="strcat-wcscat-_mbscat"></a>strcat、wcscat、_mbscat
 
 追加字符串。 这些函数的更安全版本已发布，请参阅 [strcat_s、wcscat_s、_mbscat_s](strcat-s-wcscat-s-mbscat-s.md)。
 
 > [!IMPORTANT]
-> **_mbscat_s**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbscat_s**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -96,16 +99,16 @@ null 终止的源字符串。
 
 ## <a name="return-value"></a>返回值
 
-每个函数都会返回目标字符串 (*strDestination*)。 没有保留任何返回值以指示错误。
+其中每个函数都会返回目标字符串（*strDestination*）。 没有保留任何返回值以指示错误。
 
 ## <a name="remarks"></a>备注
 
-**Strcat**函数将追加*strSource*到*strDestination*和终止 null 字符生成的字符串。 初始字符*strSource*覆盖的终止 null 字符*strDestination*。 行为**strcat**如果源和目标字符串重叠，则是未定义。
+**Strcat**函数将*StrSource*追加到*strDestination* ，并使用空字符终止结果字符串。 *StrSource*的初始字符将覆盖*strDestination*的终止 null 字符。 如果源和目标字符串重叠，则**strcat**的行为是不确定的。
 
 > [!IMPORTANT]
-> 因为**strcat**不会检查有足够空间*strDestination*之前追加*strSource*，很可能会造成缓冲区溢出。 请考虑改用 [strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)。
+> 由于**strcat**在追加*strSource*之前不会检查*strDestination*中是否有足够的空间，因此可能会导致缓冲区溢出。 请考虑改用 [strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)。
 
-**wcscat**并 **_mbscat**宽字符及多字节字符版本的**strcat**。 参数和返回值**wcscat**是宽字符字符串; **_mbscat**是多字节字符字符串。 否则这三个函数否则具有相同行为。
+**wcscat**和 **_mbscat**是**strcat**的宽字符和多字节字符版本。 **Wcscat**的参数和返回值是宽字符字符串; **_mbscat**的这些字符串是多字节字符字符串。 否则这三个函数否则具有相同行为。
 
 在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 

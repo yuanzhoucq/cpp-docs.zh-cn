@@ -1,9 +1,9 @@
 ---
 title: _RTC_SetErrorFuncW
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _RTC_SetErrorFuncW
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _RTC_SetErrorFuncW
 - RTC_SetErrorFuncW
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - _RTC_SetErrorFuncW function
 - RTC_error_fnW typedef
 ms.assetid: b3e0d71f-1bd3-4c37-9ede-2f638eb3c81a
-ms.openlocfilehash: 03e9f540a215550a698700f28e5722b33b119149
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d45e5c857e917ca23b62482c64a06314565226e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357221"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948969"
 ---
-# <a name="rtcseterrorfuncw"></a>_RTC_SetErrorFuncW
+# <a name="_rtc_seterrorfuncw"></a>_RTC_SetErrorFuncW
 
 将函数指定为报告运行时错误检查 (RTC) 的处理程序。
 
@@ -46,22 +49,22 @@ _RTC_error_fnW _RTC_SetErrorFuncW(
 
 ### <a name="parameters"></a>参数
 
-*function*<br/>
+*函数*<br/>
 处理运行时错误检查的函数的地址。
 
 ## <a name="return-value"></a>返回值
 
-以前定义的错误函数;或**NULL**如果没有以前定义的函数。
+以前定义的错误函数;如果没有以前定义的函数，则**为 NULL** 。
 
 ## <a name="remarks"></a>备注
 
-在新代码中，仅使用 **_RTC_SetErrorFuncW**。 **_RTC_SetErrorFunc**仅包含用于向后兼容性的库中。
+在新代码中，仅使用 **_RTC_SetErrorFuncW**。 **_RTC_SetErrorFunc**仅包含在库中，以便向后兼容。
 
-**_RTC_SetErrorFuncW**回调仅适用于它链接，该组件但不是全局。
+**_RTC_SetErrorFuncW**回调仅适用于它链接的组件，但不是全局的。
 
-请确保传递到的地址 **_RTC_SetErrorFuncW**是有效的错误处理函数。
+请确保传递给 **_RTC_SetErrorFuncW**的地址是有效的错误处理函数的地址。
 
-如果错误已分配为-1 的类型使用[_RTC_SetErrorType](rtc-seterrortype.md)，则不会调用错误处理函数。
+如果使用[_RTC_SetErrorType](rtc-seterrortype.md)为错误分配了类型-1，则不会调用错误处理函数。
 
 在可以调用此函数之前，首先必须调用其中一个运行时错误检查初始化函数。 有关更多信息，请参见 [Using Run-Time Checks Without the C Run-Time Library](/visualstudio/debugger/using-run-time-checks-without-the-c-run-time-library)。
 

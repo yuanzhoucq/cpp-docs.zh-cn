@@ -1,9 +1,9 @@
 ---
 title: _fileno
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fileno
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fileno
 helpviewer_keywords:
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - _fileno function
 - streams, getting file handles
 ms.assetid: 86474174-2f17-4100-bcc4-352dd976c7b5
-ms.openlocfilehash: 682ab4b01a663bd9a6314138aa692b1c05b7437a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 586e390e100f5dc46a49b99c007016cf23ac68f0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333763"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957207"
 ---
-# <a name="fileno"></a>_fileno
+# <a name="_fileno"></a>_fileno
 
 获取与流关联的文件描述符。
 
@@ -50,16 +53,16 @@ int _fileno(
 
 ## <a name="return-value"></a>返回值
 
-**_fileno**返回的文件说明符。 无错误返回。 如果，则结果为 undefined*流*未指定打开的文件。 如果流**NULL**， **_fileno**将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则此函数将返回-1 并设置**errno**到**EINVAL**。
+**_fileno**返回文件描述符。 无错误返回。 如果*stream*未指定打开的文件，则结果是不确定的。 如果 stream 为**NULL**， **_fileno**将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数将返回 -1 并将 errno 设置为 EINVAL。
 
 有关这些及其他错误代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 > [!NOTE]
-> 如果**stdout**或**stderr**未关联与输出流 （例如，在没有控制台窗口的 Windows 应用程序），返回的文件说明符为-2。 在早期版本中，返回的文件说明符为 -1。 此更改使应用程序得以将此情况与错误区分开来。
+> 如果**stdout**或**stderr**不与输出流（例如，在没有控制台窗口的 Windows 应用程序中）关联，则返回的文件描述符为-2。 在早期版本中，返回的文件说明符为 -1。 此更改使应用程序得以将此情况与错误区分开来。
 
 ## <a name="remarks"></a>备注
 
-**_Fileno**例程将返回与当前关联的文件描述符*流*。 此例程作为函数和宏实现。 有关选择任一实现的信息，请参阅[在函数和宏之间选择](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)。
+**_Fileno**例程返回当前与*stream*关联的文件描述符。 此例程作为函数和宏实现。 有关选择任一实现的信息，请参阅[在函数和宏之间选择](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)。
 
 ## <a name="requirements"></a>要求
 

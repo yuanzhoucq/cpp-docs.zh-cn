@@ -1,9 +1,9 @@
 ---
 title: fetestexcept
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fetestexcept
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fetestexcept
 - fenv/fetestexcept
 helpviewer_keywords:
 - fetestexept function
 ms.assetid: ca4dc43f-5573-440d-bc19-ead7571b13dc
-ms.openlocfilehash: ed75ab0ff13029f6ec10c1aafbcb7f7b23b46fd6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 61a68b4569d52b550da3fad12c077b82bb067fa9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334160"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941015"
 ---
 # <a name="fetestexcept"></a>fetestexcept
 
@@ -52,7 +55,7 @@ int fetestexcept(
 
 ## <a name="remarks"></a>备注
 
-使用 fetestexcept 函数来确定哪些异常由浮点运算引发。 使用*除*参数来指定要测试的异常状态标志。 **Fetestexcept**函数将使用在中定义的这些异常宏\<fenv.h > 中*除*和返回值：
+使用 fetestexcept 函数来确定哪些异常由浮点运算引发。 使用*removed*参数来指定要测试的异常状态标志。 **Fetestexcept**函数使用\< *removed*中 v. > 中定义的这些异常宏和返回值：
 
 |异常宏|描述|
 |---------------------|-----------------|
@@ -63,7 +66,7 @@ int fetestexcept(
 |FE_UNDERFLOW|早期的浮点运算结果因为过小而无法以完整的精度表示；创建了非常规值。|
 |FE_ALLEXCEPT|所有受支持的浮点异常的按位 OR。|
 
-指定*除*参数可能为 0，一个受支持的浮点异常宏，或按位 OR 的两个或多个宏。 任何其他影响*除*未定义参数值。
+指定的*removed*参数可以是0、支持的浮点异常宏之一，或者两个或多个宏的按位 or。 任何其他*removed*参数值的效果均为 undefined。
 
 若要使用此函数，必须在调用前先使用 `#pragma fenv_access(on)` 指令关闭可能会阻止访问的浮点优化。 有关详细信息，请参阅 [fenv_access](../../preprocessor/fenv-access.md)。
 

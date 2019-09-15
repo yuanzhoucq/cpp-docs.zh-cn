@@ -1,9 +1,9 @@
 ---
 title: terminate (CRT)
 ms.date: 11/04/2016
-apiname:
+api_name:
 - terminate
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,23 +15,26 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - terminate
 helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 90e67402-08e9-4b2a-962c-66a8afd3ccb4
-ms.openlocfilehash: 1f655d328b4d97a2989ad49005ed8a9f44fd9d79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b76ce42817fa1a6b79ef32965fcfa550a508e88d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155623"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946200"
 ---
 # <a name="terminate-crt"></a>terminate (CRT)
 
-调用[中止](abort.md)或指定使用的函数**set_terminate**。
+调用[abort](abort.md)或使用**set_terminate**指定的函数。
 
 ## <a name="syntax"></a>语法
 
@@ -41,7 +44,7 @@ void terminate( void );
 
 ## <a name="remarks"></a>备注
 
-**终止**函数与一起使用C++异常处理并在以下情况下调用：
+**Terminate**函数与C++异常处理一起使用，并在以下情况下调用：
 
 - 无法为引发的 C++ 异常找到匹配的 catch 处理程序。
 
@@ -49,7 +52,7 @@ void terminate( void );
 
 - 在引发异常后，堆栈已损坏。
 
-**终止**调用[中止](abort.md)默认情况下。 您可以更改此默认设置编写你自己的终止函数并调用**set_terminate**与作为其参数函数的名称。 **终止**调用的最后一个函数的参数被当作**set_terminate**。 有关详细信息，请参阅 [未经处理的 C++ 异常](../../cpp/unhandled-cpp-exceptions.md)。
+默认情况下，**终止**调用[中止](abort.md)。 可以通过以下方式更改此默认设置：编写自己的终止函数并调用**set_terminate** ，并将函数名称作为其参数。 **terminate**调用作为**set_terminate**的参数提供的最后一个函数。 有关详细信息，请参阅 [未经处理的 C++ 异常](../../cpp/unhandled-cpp-exceptions.md)。
 
 ## <a name="requirements"></a>要求
 

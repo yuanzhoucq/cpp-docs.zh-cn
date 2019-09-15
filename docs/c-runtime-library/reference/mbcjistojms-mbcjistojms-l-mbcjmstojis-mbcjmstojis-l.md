@@ -1,12 +1,12 @@
 ---
 title: _mbcjistojms、_mbcjistojms_l、_mbcjmstojis、_mbcjmstojis_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbcjistojms
 - _mbcjmstojis
 - _mbcjistojms_l
 - _mbcjmstojis_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbcjistojms
 - _mbcjistojms
@@ -38,14 +41,14 @@ helpviewer_keywords:
 - mbcjmstojis_l function
 - mbcjistojms_l function
 ms.assetid: dece5127-b337-40a4-aa10-53320a2c9432
-ms.openlocfilehash: 22cf8eeb5f99b6abee624aa3b1d06246d7230652
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6bf1109cfba93042bd00acde4812706c1bbf7a01
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156819"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952592"
 ---
-# <a name="mbcjistojms-mbcjistojmsl-mbcjmstojis-mbcjmstojisl"></a>_mbcjistojms、_mbcjistojms_l、_mbcjmstojis、_mbcjmstojis_l
+# <a name="_mbcjistojms-_mbcjistojms_l-_mbcjmstojis-_mbcjmstojis_l"></a>_mbcjistojms、_mbcjistojms_l、_mbcjmstojis、_mbcjmstojis_l
 
 在日本行业标准 (JIS) 和日本 Microsoft (JMS) 字符之间转换。
 
@@ -85,15 +88,15 @@ unsigned int _mbcjmstojis_l(
 
 ## <a name="remarks"></a>备注
 
-**_Mbcjistojms**函数将日本行业标准 (JIS) 字符转换为 Microsoft 日文汉字 (转义 JIS) 字符。 仅当前导和结尾字节处于 0x21-0x7E 范围，转换的字符。 如果超出此范围是前导字节或结尾字节**errno**设置为**EILSEQ**。 有关此代码及其他错误代码的详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+**_Mbcjistojms**函数将日本行业标准（jis）字符转换为 Microsoft 日文汉字（shift-jis）字符。 仅当前导字节和结尾字节在 0x21-0x7E 范围内时才转换字符。 如果前导字节或试用期超出此范围，则将**errno**设置为**eilseq 且**。 有关此代码及其他错误代码的详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-**_Mbcjmstojis**函数将 Shift JIS 字符转换为 JIS 字符。 仅当处于范围内 0x81-0x9F 或 0xE0-0xFC 前导字节和结尾字节处于 0x40-0x7E 或 0x80-0xFC 被转换的字符。 请注意该范围内的一些码位未分配字符，因此无法进行转换。
+**_Mbcjmstojis**函数将 shift-jis 字符转换为 jis 字符。 仅当前导字节在 0x81-0x9F 或 0xE0-0xFC 范围内，并且轨迹字节在 0x40-0x7E 或 0x80-0xFC 范围内时，才转换字符。 请注意该范围内的一些码位未分配字符，因此无法进行转换。
 
-该值*c*其较高的 8 位表示要转换的字符的前导字节，其低 8 位表示结尾字节，应为 16 位值。
+值*c*应为16位值，其前8位表示要转换的字符的前导字节，其低8位表示尾字节。
 
 输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-在早期版本中， **_mbcjistojms**并 **_mbcjmstojis**调用**jistojms**并**jmstojis**分别。 **_mbcjistojms**， **_mbcjistojms_l**， **_mbcjmstojis**并 **_mbcjmstojis_l**应改为使用。
+在早期版本中， **_mbcjistojms**和 **_mbcjmstojis**分别称为**jistojms**和**jmstojis**。 应改用 **_mbcjistojms**、 **_mbcjistojms_l**、 **_mbcjmstojis**和 **_mbcjmstojis_l** 。
 
 ## <a name="requirements"></a>要求
 

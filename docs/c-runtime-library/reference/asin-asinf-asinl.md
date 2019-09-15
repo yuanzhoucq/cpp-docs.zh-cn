@@ -1,11 +1,11 @@
 ---
 title: asin、asinf、asinl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - asinf
 - asinl
 - asin
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - asin
 - asinl
@@ -29,12 +32,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
-ms.openlocfilehash: 20a2ffc37ea666207b9558cb5c282c414cfd4838
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e70c9b2187b97d3dea589c1757081da8bf2bd10
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347959"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943653"
 ---
 # <a name="asin-asinf-asinl"></a>asin、asinf、asinl
 
@@ -60,25 +63,25 @@ long double asin( long double x );  // C++ only
 
 ## <a name="return-value"></a>返回值
 
-**Asin**函数返回的反正弦值 （反正弦函数） 的*x*中范围-π/2 到 π/2 弧度。
+**Asin**函数返回范围-π/2 到π/2 弧度的*x*的反正弦值（反正弦函数）。
 
-默认情况下，如果*x*小于-1 或大于 1， **asin**返回无穷大。
+默认情况下，如果*x*小于-1 或大于1，则**asin**将返回无限值。
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
-|± ∞|**INVALID**|**_DOMAIN**|
-|为**QNAN**， **IND**|无|**_DOMAIN**|
-|&#124;x&#124;>1|**INVALID**|**_DOMAIN**|
+|± ∞|**无效**|**_DOMAIN**|
+|± **QNAN**， **IND**|无|**_DOMAIN**|
+|&#124;x&#124;>1|**无效**|**_DOMAIN**|
 
 ## <a name="remarks"></a>备注
 
-因为C++允许重载，可以调用的重载**asin**与**float**并**长** **double**值。 在 C 程序中， **asin**始终采用并返回**double**。
+由于C++允许重载，因此可以调用**asin** **的重载和** **长** **双精度**值。 在 C 程序中， **asin**始终采用并返回**双精度型**。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|必需的标头 (C)|必需的标头 (C++)|
 |-------------|---------------------|-|
-|**asin**， **asinf**， **asinl**|\<math.h>|\<cmath> 或 \<math.h>|
+|**asin**、 **asinf**、 **asinl**|\<math.h>|\<cmath> 或 \<math.h>|
 
 ## <a name="example"></a>示例
 

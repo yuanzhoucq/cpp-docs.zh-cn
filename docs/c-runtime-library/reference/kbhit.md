@@ -1,9 +1,9 @@
 ---
 title: _kbhit
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _kbhit
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _kbhit
 - kbhit
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - _kbhit function
 - keyboards, checking input
 ms.assetid: e82a1cc9-bbec-4150-b678-a7e433220fe4
-ms.openlocfilehash: 9133d73e92438327bb2381e3293fd37076dd27ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 49c8df1a2c600ad3976babea0b560108ea69efd8
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286474"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953514"
 ---
-# <a name="kbhit"></a>_kbhit
+# <a name="_kbhit"></a>_kbhit
 
 检查键盘输入的控制台。
 
@@ -53,11 +56,11 @@ int _kbhit( void );
 
 ## <a name="return-value"></a>返回值
 
-**_kbhit**如果按下某个键，则返回一个非零值。 否则返回 0。
+如果已按下某个键，则 **_kbhit**将返回一个非零值。 否则返回 0。
 
 ## <a name="remarks"></a>备注
 
-**_Kbhit**函数检查最近键击的控制台。 如果函数返回一个非零值，则键击将在缓冲区中等待。 然后，程序可以调用 **_getch**或 **_getche**来获取键击。
+**_Kbhit**函数检查控制台中最近的击键。 如果函数返回一个非零值，则键击将在缓冲区中等待。 然后，程序可以调用 **_getch**或 **_getche**以获取击键。
 
 ## <a name="requirements"></a>要求
 

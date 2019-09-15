@@ -1,7 +1,7 @@
 ---
 title: nextafter、nextafterf、nextafterl、_nextafter、_nextafterf、nexttoward、nexttowardf、nexttowardl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - nextafterf
 - _nextafterf
 - nextafter
@@ -10,7 +10,7 @@ apiname:
 - nexttoward
 - nexttowardf
 - nexttowardl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - nextafter
 - _nextafter
@@ -48,14 +51,14 @@ helpviewer_keywords:
 - nexttowardf function
 - nexttowardl function
 ms.assetid: 9785bfb9-de53-4bd0-9637-f05fa0c1f6ab
-ms.openlocfilehash: 0e0a60dc9f7c068d8c18c10f3c6b819b9e06d3b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c56c9f8032c9af2ed4404428abe3b9ee26b4b603
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156182"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951355"
 ---
-# <a name="nextafter-nextafterf-nextafterl-nextafter-nextafterf-nexttoward-nexttowardf-nexttowardl"></a>nextafter、nextafterf、nextafterl、_nextafter、_nextafterf、nexttoward、nexttowardf、nexttowardl
+# <a name="nextafter-nextafterf-nextafterl-_nextafter-_nextafterf-nexttoward-nexttowardf-nexttowardl"></a>nextafter、nextafterf、nextafterl、_nextafter、_nextafterf、nexttoward、nexttowardf、nexttowardl
 
 返回下一个可表示的浮点值。
 
@@ -92,21 +95,21 @@ long double nexttoward( long double x, long double y ); /* C++ only, requires <c
 
 ## <a name="return-value"></a>返回值
 
-返回之后的返回类型的下一步可表示浮点值*x*的方向*y*。 如果*x*并*y*相等，该函数将返回*y*，已转换为返回类型，且未触发异常。 如果*x*不等于*y*，并且结果为非正规或零， **FE_UNDERFLOW**并**FE_INEXACT**浮点异常状态设置，并返回正确的结果。 如果任一*x*或*y*是 NAN，则返回值为输入 Nan 之一。 如果*x*是有限的结果为无限或无法在类型中表示，正确的有符号无穷大或 NAN 返回的则**FE_OVERFLOW**并**FE_INEXACT**设置浮点异常状态，并**errno**设置为**ERANGE**。
+返回在*y*方向*x*后返回类型的下一个可表示的浮点值。 如果*x*和*y*相等，则函数返回*y*，转换为返回类型，并且不会触发异常。 如果*x*不等于*y*，并且结果为 denormal 或零，则会设置**FE_UNDERFLOW**和**FE_INEXACT**浮点异常状态，并返回正确的结果。 如果*x*或*y*为 NAN，则返回值为输入 nan 之一。 如果*x*是有限的，并且结果是无限的或无法在类型中表示，则返回一个正确的带符号无穷大或 NAN，并设置**FE_OVERFLOW**和**FE_INEXACT**浮点异常状态，并将**errno**设置为**ERANGE。** .
 
 ## <a name="remarks"></a>备注
 
-**Nextafter**并**nexttoward**函数系列是等同的只不过参数类型的*y*。 如果*x*并*y*相等，则返回该值*y*转换为返回类型。
+**Nextafter**和**nexttoward**函数系列等效，但*y*的参数类型除外。 如果*x*和*y*相等，则返回的值将*转换为*返回类型。
 
-因为C++允许重载，如果包含\<cmath > 可以调用的重载**nextafter**并**nexttoward**返回**float**和**长** **double**类型。 在 C 程序中， **nextafter**并**nexttoward**始终返回**double**。
+由于C++允许重载，因此，如果\<包含 > h，则可以调用返回**float**和**long** **双精度**类型的**nextafter**和**nexttoward**的重载。 在 C 程序中， **nextafter**和**nexttoward**始终返回**double**。
 
-**_Nextafter**并 **_nextafterf**是 Microsoft 特定函数的函数。 **_Nextafterf**编译 x64 时，函数才可用。
+**_Nextafter**和 **_Nextafterf**函数是 Microsoft 特定的。 **_Nextafterf**函数仅在为 x64 编译时可用。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|必需的标头 (C)|必需的标头 (C++)|
 |-------------|---------------------------|-------------------------------|
-|**nextafter**， **nextafterf**， **nextafterl**， **_nextafterf**， **nexttoward**， **nexttowardf**， **nexttowardl**|\<math.h>|\<math.h> 或 \<cmath>|
+|**nextafter**、 **nextafterf**、 **nextafterl**、 **_nextafterf**、 **nexttoward**、 **nexttowardf**、 **nexttowardl**|\<math.h>|\<math.h> 或 \<cmath>|
 |**_nextafter**|\<float.h>|\<float.h> 或 \<cfloat>|
 
 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。

@@ -1,10 +1,10 @@
 ---
 title: _putch、_putwch
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _putwch
 - _putch
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _putch
 - putwch
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - putch function
 - console, writing characters to
 ms.assetid: 3babc7cf-e333-405d-8449-c788d61d51aa
-ms.openlocfilehash: da45744fe56c198cc97228cae8043abbb5436fbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8e7d7d57f5418e8c15aa02f015d3346298fa0422
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358140"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950045"
 ---
-# <a name="putch-putwch"></a>_putch、_putwch
+# <a name="_putch-_putwch"></a>_putch、_putwch
 
 将字符写入控制台。
 
@@ -62,13 +65,13 @@ wint_t _putwch(
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则返回 *c*。 如果 **_putch**失败，则返回**EOF**; 如果 **_putwch**失败，则返回**WEOF**。
+如果成功，则返回 *c*。 如果 **_putch**失败，则返回**EOF**;如果 **_putwch**失败，则返回**WEOF**。
 
 ## <a name="remarks"></a>备注
 
-这些函数将字符写入*c*直接，无需缓冲到控制台。 在 Windows NT 中，**_putwch** 使用当前控制台区域设置写入 Unicode 字符。
+这些函数将字符*c*直接写入控制台，而不是进行缓冲处理。 在 Windows NT 中， **_putwch** 使用当前控制台区域设置写入 Unicode 字符。
 
-后缀为 **_nolock** 的版本是相同的，只不过它们可能会受到其他线程的影响。 有关详细信息，请参阅 **_putch_nolock**， **_putwch_nolock**。
+后缀为 **_nolock** 的版本是相同的，只不过它们可能会受到其他线程的影响。 有关详细信息，请参阅 **_putch_nolock**、 **_putwch_nolock**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

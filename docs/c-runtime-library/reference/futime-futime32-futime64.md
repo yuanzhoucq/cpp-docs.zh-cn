@@ -1,11 +1,11 @@
 ---
 title: _futime、_futime32、_futime64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _futime64
 - _futime32
 - _futime
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - futime
 - _futime
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - futime function
 - _futime32 function
 ms.assetid: b942ce8f-5cc7-4fa8-ab47-de5965eded53
-ms.openlocfilehash: f21e394acdcc7fbf8a91c5450a4c04daa050db21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3de638f08882e2aae4743311730afcd888c43a60
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332671"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956237"
 ---
-# <a name="futime-futime32-futime64"></a>_futime、_futime32、_futime64
+# <a name="_futime-_futime32-_futime64"></a>_futime、_futime32、_futime64
 
 设置打开的文件的修改时间。
 
@@ -70,13 +73,13 @@ int _futime64(
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则返回 0。 出现错误时，会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，该函数返回-1 和**errno**设置为**EBADF**，，该值指示一个无效文件说明符，或**EINVAL**，指示无效参数。
+如果成功，则返回 0。 出现错误时，会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将返回-1，并将**errno**设置为**ebadf (** ，指示无效的文件描述符或**EINVAL**，指示参数无效。
 
 ## <a name="remarks"></a>备注
 
-**_Futime**例程与关联的打开文件上设置的修改日期和访问时间*fd*。 **_futime**等同于[_utime](utime-utime32-utime64-wutime-wutime32-wutime64.md)，只不过其参数是打开的文件的文件描述符而不是文件或文件的路径的名称。 **_Utimbuf**结构包含新修改日期和访问时间的字段。 这两个字段必须包含有效的值。 **_utimbuf32**并 **_utimbuf64**等于 **_utimbuf** 32 位和 64 位时间类型，用于分别除外。 **_futime**并 **_utimbuf**使用 64 位时间类型以及 **_futime**是行为等同于 **_futime64**。 如果需要强制旧行为，定义 **_USE_32BIT_TIME_T**。 这将导致这样做 **_futime**为行为等同于 **_futime32** ，并导致 **_utimbuf**结构使用 32 位时间类型，使其等效于 **__utimbuf32**。
+**_Futime**例程设置与*fd*关联的打开文件的修改日期和访问时间。 **_futime**与[_utime](utime-utime32-utime64-wutime-wutime32-wutime64.md)相同，不同之处在于其参数是打开的文件的文件描述符，而不是文件的名称或文件的路径。 **_Utimbuf**结构包含新修改日期和访问时间的字段。 这两个字段必须包含有效的值。 除了使用32位和64位时间类型之外， **_utimbuf32**和 **_utimbuf64**与 **_utimbuf**相同。 **_futime**和 **_utimbuf**使用64位时间类型，而 **_futime**在行为上与 **_futime64**相同。 如果需要强制执行旧行为，请定义 **_USE_32BIT_TIME_T**。 这样做会导致 **_futime**与 **_futime32**的行为相同，并导致 **_utimbuf**结构使用32位时间类型，使其等效于 **__utimbuf32**。
 
-**_futime64**，使用该 **__utimbuf64**结构，可以读取和修改文件日期到 23:59:59，3000 年 12 月 31 日，UTC; 而调用 **_futime32**失败是否对该文件的日期高于 23:59:59 2038 年 1 月 18 日，UTC。 1970 年 1 月 1 日午夜是这些函数的日期范围下限。
+使用 **__utimbuf64**结构的 **_futime64**可以读取和修改文件日期到23:59:59 年12月31日3000，UTC;如果文件中的日期晚于23:59:59 年1月18日2038（UTC），则对 **_futime32**的调用将失败。 1970 年 1 月 1 日午夜是这些函数的日期范围下限。
 
 ## <a name="requirements"></a>要求
 
@@ -124,7 +127,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crtfutimecinput"></a>输入：crt_futime.c_input
+### <a name="input-crt_futimec_input"></a>输入：crt_futime.c_input
 
 ```Input
 Arbitrary file contents.

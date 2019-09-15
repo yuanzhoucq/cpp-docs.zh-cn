@@ -1,14 +1,14 @@
 ---
 title: strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - strncat
 - _strncat_l
 - _mbsncat
 - _mbsncat_l
 - wcsncat
 - wcsncat_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcsncat_l
 - _wcsncat_l
@@ -58,12 +61,12 @@ helpviewer_keywords:
 - _mbsncat_l function
 - tcsncat function
 ms.assetid: de67363b-68c6-4ca5-91e3-478610ad8159
-ms.openlocfilehash: 2165ab1c379c89be658341b154f2d5823b2add0b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f27c2cb9b59d789e34da19b531a20d13475e62ee
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499440"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947349"
 ---
 # <a name="strncat-_strncat_l-wcsncat-_wcsncat_l-_mbsncat-_mbsncat_l"></a>strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l
 
@@ -131,7 +134,7 @@ null 终止的目标字符串。
 *strSource*<br/>
 null 终止的源字符串。
 
-*计数*<br/>
+*count*<br/>
 要追加的字符数。
 
 *locale*<br/>
@@ -143,10 +146,10 @@ null 终止的源字符串。
 
 ## <a name="remarks"></a>备注
 
-**Strncat**函数最多将*strSource*的第一个*计数*字符追加到*strDest*。 *StrSource*的初始字符将覆盖*strDest*的终止 null 字符。 如果在追加*count*个字符之前, *strSource*中出现空字符, 则**strncat**将从*strSource*中追加到 null 字符之前的所有字符。 如果*count*大于*strSource*的长度, 则使用*strSource*的长度来代替*count*。 在所有情况下，结果字符串以 null 字符终止。 如果复制出现在重叠的字符串之间，则该行为不确定。
+**Strncat**函数最多将*strSource*的第一个*计数*字符追加到*strDest*。 *StrSource*的初始字符将覆盖*strDest*的终止 null 字符。 如果在追加*count*个字符之前， *strSource*中出现空字符，则**strncat**将从*strSource*中追加到 null 字符之前的所有字符。 如果*count*大于*strSource*的长度，则使用*strSource*的长度来代替*count*。 在所有情况下，结果字符串以 null 字符终止。 如果复制出现在重叠的字符串之间，则该行为不确定。
 
 > [!IMPORTANT]
-> **strncat**不检查*strDest*中是否有足够的空间;因此, 这可能会导致缓冲区溢出。 请记住, *count*限制了追加的字符数;它不是*strDest*的大小限制。 请参见下面的示例。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
+> **strncat**不检查*strDest*中是否有足够的空间;因此，这可能会导致缓冲区溢出。 请记住， *count*限制了追加的字符数;它不是*strDest*的大小限制。 请参见下面的示例。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 **wcsncat**和 **_mbsncat**是**strncat**的宽字符和多字节字符版本。 **Wcsncat**的字符串参数和返回值是宽字符字符串; **_mbsncat**的这些字符串是多字节字符字符串。 否则这三个函数否则具有相同行为。
 
@@ -162,7 +165,7 @@ null 终止的源字符串。
 |**_tcsncat_l**|**_strncat_l**|**_mbsnbcat_l**|**_wcsncat_l**|
 
 > [!NOTE]
-> **_strncat_l**和 **_wcsncat_l**没有区域设置依赖关系, 因此不应直接调用。 它们供 **_tcsncat_l**内部使用。
+> **_strncat_l**和 **_wcsncat_l**没有区域设置依赖关系，因此不应直接调用。 它们供 **_tcsncat_l**内部使用。
 
 ## <a name="requirements"></a>要求
 
@@ -222,7 +225,7 @@ After BadAppend :  This is the initial string!Extra text to add to (47 chars)
 After GoodAppend:  This is the initial string!Extra text t (39 chars)
 ```
 
-请注意, **BadAppend**导致缓冲区溢出。
+请注意， **BadAppend**导致缓冲区溢出。
 
 ## <a name="see-also"></a>请参阅
 

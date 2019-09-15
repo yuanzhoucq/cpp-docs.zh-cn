@@ -1,10 +1,10 @@
 ---
 title: _mbsnbcpy、_mbsnbcpy_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnbcpy
 - _mbsnbcpy_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsnbcpy
 - _ftcsncpy
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - mbsnbcpy_l function
 - tcsncpy function
 ms.assetid: 83d17b50-3cbf-4df9-bce8-3b6d52f85d04
-ms.openlocfilehash: 9940146e46990c91a49478a0450d5ff489e51bc5
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 9b8a5884b646baf582e6bb9868136ffe7c2a24cf
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499849"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952254"
 ---
 # <a name="_mbsnbcpy-_mbsnbcpy_l"></a>_mbsnbcpy、_mbsnbcpy_l
 
@@ -84,7 +87,7 @@ unsigned char * _mbsnbcpy_l(
 *strSource*<br/>
 要复制的字符串。
 
-*计数*<br/>
+*count*<br/>
 要复制的字节数。
 
 *locale*<br/>
@@ -96,11 +99,11 @@ unsigned char * _mbsnbcpy_l(
 
 ## <a name="remarks"></a>备注
 
-**_Mbsnbcpy**函数将*计数*字节从*strSource*复制到*strDest*。 如果*count*超过*strDest*的大小, 或者源字符串和目标字符串重叠, 则 **_mbsnbcpy**的行为是不确定的。
+**_Mbsnbcpy**函数将*计数*字节从*strSource*复制到*strDest*。 如果*count*超过*strDest*的大小，或者源字符串和目标字符串重叠，则 **_mbsnbcpy**的行为是不确定的。
 
-如果*strSource*或*strDest*为 null 指针, 则此函数将调用无效参数处理程序, 如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续, 则该函数将返回**NULL** , 并将**Errno**设置为**EINVAL**。
+如果*strSource*或*strDest*为 null 指针，则此函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将返回**NULL** ，并将**Errno**设置为**EINVAL**。
 
-输出值受区域设置的**LC_CTYPE**类别设置的影响;有关详细信息, 请参阅[setlocale、_wsetlocale](setlocale-wsetlocale.md) 。 这些函数的版本相同, 不同之处在于没有 **_l**后缀的函数使用当前区域设置, 而具有 **_l**后缀的版本则使用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的**LC_CTYPE**类别设置的影响;有关详细信息，请参阅[setlocale、_wsetlocale](setlocale-wsetlocale.md) 。 这些函数的版本相同，不同之处在于没有 **_l**后缀的函数使用当前区域设置，而具有 **_l**后缀的版本则使用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 > [!IMPORTANT]
 > 这些函数可能容易受到的缓冲区溢出的威胁。 缓冲区溢出可用于执行任意代码者攻击，这些代码可能会导致不必要地提升特权并危害系统。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。

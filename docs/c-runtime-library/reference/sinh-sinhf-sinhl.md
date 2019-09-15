@@ -1,11 +1,11 @@
 ---
-title: sinh、 sinhf、 sinhl
+title: sinh、sinhf、sinhl
 ms.date: 04/10/2018
-apiname:
+api_name:
 - sinhl
 - sinhf
 - sinhl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - sinh
 - sinhf
@@ -31,14 +34,14 @@ helpviewer_keywords:
 - sinhf function
 - sinhl function
 - hyperbolic functions
-ms.openlocfilehash: 7327809a20569c520aa799690203458d54e30fb5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ae500cf595707acf9022b1c52232314c36cfe4d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356272"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948088"
 ---
-# <a name="sinh-sinhf-sinhl"></a>sinh、 sinhf、 sinhl
+# <a name="sinh-sinhf-sinhl"></a>sinh、sinhf、sinhl
 
 计算双曲正弦值。
 
@@ -62,24 +65,24 @@ long double sinh(long double x);  // C++ only
 
 ## <a name="return-value"></a>返回值
 
-**Sinh**函数返回的双曲正弦值*x*。 默认情况下，如果结果太大， **sinh**设置**errno**到**ERANGE** ，并返回为**HUGE_VAL**。
+**Sinh**函数返回*x*的双曲正弦值。 默认情况下，如果结果太大， **sinh**会将**Errno**设置为**ERANGE**并返回±**HUGE_VAL**。
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
-|± QNAN,IND|None|_DOMAIN|
+|± QNAN，IND|无|_DOMAIN|
 |&#124;x&#124; ≥ 7.104760e+002|溢出 + 不准确|OVERFLOW|
 
 有关返回代码的详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-因为C++允许重载，可以调用的重载**sinh**采用并返回**float**或**长** **double**值。 在 C 程序中， **sinh**始终采用并返回**double**。
+由于C++允许重载，因此你可以调用**sinh**的重载，该重载采用并返回**浮点**或**长** **双精度**值。 在 C 程序中， **sinh**始终采用并返回**double**。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|必需的标头 (C)|必需的标头 (C++)|
 |-|-|-|
-|**sinh**， **sinhf**， **sinhl**|\<math.h>|\<cmath> 或 \<math.h>|
+|**sinh**、 **sinhf**、 **sinhl**|\<math.h>|\<cmath> 或 \<math.h>|
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

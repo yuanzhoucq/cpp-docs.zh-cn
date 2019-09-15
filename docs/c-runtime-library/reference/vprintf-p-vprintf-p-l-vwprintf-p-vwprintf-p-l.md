@@ -1,12 +1,12 @@
 ---
 title: _vprintf_p、_vprintf_p_l、_vwprintf_p、_vwprintf_p_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _vwprintf_p
 - _vprintf_p
 - _vprintf_p_l
 - _vwprintf_p_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _vwprintf_p_l
 - vprintf_p
@@ -44,12 +47,12 @@ helpviewer_keywords:
 - vwprintf_p_l function
 - formatted text [C++]
 ms.assetid: 3f99bde3-c891-493d-908f-30559c421058
-ms.openlocfilehash: 8b41c7307ccdbbec4cd16c662d1d123642c339f8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 4fa8b6c4909e45d6d4278dc14e3a2947285fe3ed
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499190"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945713"
 ---
 # <a name="_vprintf_p-_vprintf_p_l-_vwprintf_p-_vwprintf_p_l"></a>_vprintf_p、_vprintf_p_l、_vwprintf_p、_vwprintf_p_l
 
@@ -93,20 +96,20 @@ int _vwprintf_p_l(
 
 ## <a name="return-value"></a>返回值
 
-**_vprintf_p**和 **_vwprintf_p**返回写入的字符数, 不包括终止 null 字符, 或在出现输出错误时返回一个负值。
+**_vprintf_p**和 **_vwprintf_p**返回写入的字符数，不包括终止 null 字符，或在出现输出错误时返回一个负值。
 
 ## <a name="remarks"></a>备注
 
-其中每个函数都采用一个指向参数列表的指针, 然后将给定数据格式化并写入**stdout**。 这些函数不同于**vprintf_s**和**vwprintf_s** , 只是为了支持指定参数使用顺序的能力。 有关详细信息，请参阅 [printf_p 位置参数](../../c-runtime-library/printf-p-positional-parameters.md)。
+其中每个函数都采用一个指向参数列表的指针，然后将给定数据格式化并写入**stdout**。 这些函数不同于**vprintf_s**和**vwprintf_s** ，只是为了支持指定参数使用顺序的能力。 有关详细信息，请参阅 [printf_p 位置参数](../../c-runtime-library/printf-p-positional-parameters.md)。
 
-**_vwprintf_p**是 **_vprintf_p**的宽字符版本;如果在 ANSI 模式下打开流, 则这两个函数的行为相同。 **_vprintf_p**当前不支持输出到 UNICODE 流中。
+**_vwprintf_p**是 **_vprintf_p**的宽字符版本;如果在 ANSI 模式下打开流，则这两个函数的行为相同。 **_vprintf_p**当前不支持输出到 UNICODE 流中。
 
-这些带有 **_l**后缀的函数的版本相同, 只不过它们使用传入的区域设置参数而不是当前线程区域设置。
+这些带有 **_l**后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
 
 > [!IMPORTANT]
 > 确保 format不是用户定义的字符串。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
-如果*format*为空指针, 或如果格式字符串包含无效的格式字符, 则将调用无效的参数处理程序, 如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续, 则函数将返回-1, 并将**errno**设置为**EINVAL**。
+如果*format*为空指针，或如果格式字符串包含无效的格式字符，则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则函数将返回-1，并将**errno**设置为**EINVAL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

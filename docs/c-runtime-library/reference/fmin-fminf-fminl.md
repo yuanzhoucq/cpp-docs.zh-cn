@@ -1,11 +1,11 @@
 ---
 title: fmin、fminf、fminl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fmin
 - fminf
 - fminl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fmin
 - fminf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - fminf function
 - fminl function
 ms.assetid: 1916dfb5-99c1-4b0d-aefb-513525c3f2ac
-ms.openlocfilehash: f73853e18bd5d7f699cd2c3109fe5fb830859bf1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df01f2205291920b8c0519db622c93048278beb1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333373"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957096"
 ---
 # <a name="fmin-fminf-fminl"></a>fmin、fminf、fminl
 
@@ -80,25 +83,25 @@ long double fminl(
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则返回的较小者*x*或*y*。
+如果成功，则返回*x*或*y*中的较小者。
 
 |输入|结果|
 |-----------|------------|
 |*x*为 NaN|*y*|
 |*y*为 NaN|*x*|
-|*x*并*y*为 NaN|NaN|
+|*x*和*y*为 NaN|NaN|
 
-该函数不会导致[_matherr](matherr.md)被调用，会导致任何浮点异常，或更改的值**errno**。
+函数不会导致调用[_matherr](matherr.md) ，导致任何浮点异常或更改**errno**的值。
 
 ## <a name="remarks"></a>备注
 
-因为C++允许重载，可以调用的重载**fmin**采用并返回**float**并**长** **double**类型。 在 C 程序中， **fmin**始终采用并返回**double**。
+由于C++允许重载，因此可以调用**fmin**的重载，该重载采用和返回**float**和**long** **double**类型。 在 C 程序中， **fmin**始终采用并返回**双精度型**。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**fmin**， **fminf**， **fminl**|C：\<math.h><br />C++：\<math.h> 或 \<cmath>|
+|**fmin**、 **fminf**、 **fminl**|C：\<math.h><br />C++：\<math.h> 或 \<cmath>|
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

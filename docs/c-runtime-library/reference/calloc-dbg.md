@@ -1,9 +1,9 @@
 ---
 title: _calloc_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _calloc_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _calloc_dbg
 - calloc_dbg
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - _calloc_dbg function
 - calloc_dbg function
 ms.assetid: 7f62c42b-eb9f-4de5-87d0-df57036c87de
-ms.openlocfilehash: c525aa2f19b39ba3cb8304c59c96196707ad859c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eab17348e473a4f642e784defe4569e0e799299e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340855"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939324"
 ---
-# <a name="callocdbg"></a>_calloc_dbg
+# <a name="_calloc_dbg"></a>_calloc_dbg
 
 在具有额外空间的堆中为调试标头和覆盖缓冲区分配大量内存块（仅限调试版本）。
 
@@ -59,30 +62,30 @@ void *_calloc_dbg(
 有关分配块类型及其使用方式的信息，请参阅[调试堆上的块类型](/visualstudio/debugger/crt-debug-heap-details)。
 
 *filename*<br/>
-指向已请求分配操作的源文件名或**NULL**。
+指向已请求分配操作的源文件名的指针或**NULL**。
 
 *linenumber*<br/>
-请求分配操作所在的源文件中的行数或**NULL**。
+请求分配操作所在的源文件中的行号或**NULL**。
 
-*文件名*并*linenumber*参数才可用 **_calloc_dbg**已显式调用或[_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)预处理器常量已定义。
+仅当已显式调用 **_calloc_dbg**或已定义[_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)预处理器常量时， *filename*和*linenumber*参数才可用。
 
 ## <a name="return-value"></a>返回值
 
-成功完成后，此函数将返回指向最后一个已分配的内存块用户部分的指针、 调用新处理程序函数，或返回**NULL**。 有关返回行为的完整说明，请参阅“备注”部分。 有关如何使用新处理程序函数的详细信息，请参阅 [calloc](calloc.md) 函数。
+成功完成后，此函数将返回指向最后分配的内存块的用户部分的指针，调用新的处理程序函数，或返回**NULL**。 有关返回行为的完整说明，请参阅“备注”部分。 有关如何使用新处理程序函数的详细信息，请参阅 [calloc](calloc.md) 函数。
 
 ## <a name="remarks"></a>备注
 
-**_calloc_dbg**是调试版[calloc](calloc.md)函数。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，则每次调用 **_calloc_dbg**缩减为调用**calloc**。 这两**calloc**并 **_calloc_dbg**分配*数*基堆中的内存块，但 **_calloc_dbg**提供了多个调试功能：
+**_calloc_dbg**是[calloc](calloc.md)函数的调试版本。 未定义[_debug](../../c-runtime-library/debug.md)时，对 **_calloc_dbg**的每次调用都会减少到对**calloc**的调用。 **Calloc**和 **_calloc_dbg** *都分配基*堆中的内存块，但 **_calloc_dbg**提供了若干调试功能：
 
 - 用于测试泄漏的块的用户部分两侧的缓冲区。
 
 - 用于跟踪特定分配类型的块类型参数。
 
-- *文件名*/*linenumber*信息用于确定分配请求的源。
+- filename/*linenumber*用于确定分配请求的源的信息。
 
-**_calloc_dbg**分配稍多的空间比请求与每个内存块*大小*。 其他空间将由调试堆管理器用于链接调试内存块，以及提供具有调试标头信息的应用程序和覆盖缓冲区。 分配该块后，使用值 0xCD 填充该块的用户部分，使用值 0xFD 填充每个覆盖缓冲区。
+**_calloc_dbg**分配的每个内存块的空间比请求的*大小*稍多。 其他空间将由调试堆管理器用于链接调试内存块，以及提供具有调试标头信息的应用程序和覆盖缓冲区。 分配该块后，使用值 0xCD 填充该块的用户部分，使用值 0xFD 填充每个覆盖缓冲区。
 
-**_calloc_dbg**设置**errno**到**ENOMEM**如果内存分配失败;**EINVAL**返回如果 （包括之前提到过的开销） 所需的内存量超出 **_HEAP_MAXREQ**。 有关此代码及其他错误代码的信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如果内存分配失败，则 **_calloc_dbg**将**Errno**设置为**ENOMEM** ;如果所需的内存量（包括前面提到的开销）超过 **_HEAP_MAXREQ**，则返回**EINVAL** 。 有关此代码及其他错误代码的信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 有关如何在基堆的调试版本中分配、初始化和管理内存块的信息，请参阅 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。 有关在应用程序的调试版本中调用标准堆函数与调试版本之间的差异的信息，请参阅[堆分配函数的调试版本](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)。
 

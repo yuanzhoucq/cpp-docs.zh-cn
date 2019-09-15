@@ -1,12 +1,12 @@
 ---
 title: strtoul、_strtoul_l、wcstoul、_wcstoul_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wcstoul_l
 - _strtoul_l
 - strtoul
 - wcstoul
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - strtoul
 - _tcstoul
@@ -35,14 +38,14 @@ helpviewer_keywords:
 - strtoul_l function
 - tcstoul function
 ms.assetid: 38f2afe8-8178-4e0b-8bbe-d5c6ad66e3ab
-ms.openlocfilehash: d4d974084c9249740d565f879f471bc7dfc697bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29edd517b9aa4737497a36557820bf45b6b9804f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62269197"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946331"
 ---
-# <a name="strtoul-strtoull-wcstoul-wcstoull"></a>strtoul、_strtoul_l、wcstoul、_wcstoul_l
+# <a name="strtoul-_strtoul_l-wcstoul-_wcstoul_l"></a>strtoul、_strtoul_l、wcstoul、_wcstoul_l
 
 将字符串转换为无符号的长整数值。
 
@@ -89,7 +92,7 @@ unsigned long _wcstoul_l(
 
 ## <a name="return-value"></a>返回值
 
-**strtoul**返回转换后的值，如果有，或**ULONG_MAX**在溢出。 **strtoul**如果可以不执行任何转换，则返回 0。 **wcstoul**类似于返回值**strtoul**。 对于这两个函数， **errno**设置为**ERANGE**如果出现溢出或下溢。
+**strtoul**返回转换后的值（如果有），或在溢出时返回**ULONG_MAX** 。 如果无法执行任何转换，则**strtoul**将返回0。 **wcstoul**将类似值返回到**strtoul**。 对于这两个函数，如果出现溢出或下溢，则**errno**设置为**ERANGE** 。
 
 关于此代码以及其他返回代码的详细信息，请参阅 [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 。
 
@@ -97,11 +100,11 @@ unsigned long _wcstoul_l(
 
 每个函数将输入的字符串转换 *strSource* 到 **无符号** **长**。
 
-**strtoul**停止读取字符串*strSource*在它无法识别为数字一部分的第一个字符。 这可能是终止 null 字符，也可能会大于或等于第一个数字字符*基*。 **LC_NUMERIC**的区域设置的类别设置确定中基数字符的识别*strSource*; 有关详细信息，请参阅[setlocale](setlocale-wsetlocale.md)。 **strtoul**并**wcstoul**使用当前区域设置;**_strtoul_l**并 **_wcstoul_l**是完全相同，只不过它们改用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**strtoul**停止读取其无法识别为数字一部分的第一个字符的字符串*strSource* 。 这可能是终止 null 字符，也可能是大于或等于*base*的第一个数字字符。 区域设置的**LC_NUMERIC**类别设置决定了*strSource*中的基数字符的识别;有关详细信息，请参阅[setlocale](setlocale-wsetlocale.md)。 **strtoul**和**wcstoul**使用当前区域设置; **_strtoul_l**和 **_wcstoul_l**是相同的，只不过它们改用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-如果*endptr*不是**NULL**，指向的位置存储指向停止扫描的字符的指针*endptr*。 如果可以不执行任何转换 （未找到任何有效的数字或指定了无效的基数） 的值*strSource*指向的位置处存储*endptr*。
+如果*endptr*不为**NULL**，则指向停止扫描的字符的指针将存储在*endptr*指向的位置。 如果无法执行任何转换（未找到任何有效的数字或指定了无效的基数），则*strSource*的值将存储在*endptr*指向的位置。
 
-**wcstoul**是宽字符版本**strtoul**; 它*strSource*参数是宽字符字符串。 否则，这些函数具有相同行为。
+**wcstoul**是**strtoul**的宽字符版本;其*strSource*参数是宽字符字符串。 否则，这些函数具有相同行为。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -110,11 +113,11 @@ unsigned long _wcstoul_l(
 |**_tcstoul**|**strtoul**|**strtoul**|**wcstoul**|
 |**_tcstoul_l**|**strtoul_l**|**_strtoul_l**|**_wcstoul_l**|
 
-**strtoul**预期*strSource*以指向以下形式的字符串：
+**strtoul**要求*strSource*指向以下格式的字符串：
 
-> [*whitespace*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [*digits*  &#124; *letters*]
+> [*空格*][{ **+** &#124; &#124; &#124; }] [0 [{x x}]] [数字字母] **-**
 
-一个*空格*可能包含的空格和制表符，被忽略。 *数字*是一个或多个十进制数字。 *字母*中的一个或多个字母 a 到 z （或 A 到 Z）。 不符合此形式的第一个字符停止扫描。 如果*基*则用作数字的基数是 2 和 36，之间。 如果*基*为 0，指向字符串的初始字符*strSource*用于确定基数。 如果第一个字符为 0，且第二个字符不为“x”或“X”，则将该字符串视为八进制整数。 如果第一个字符为“0”，且第二个字符为“x”或“X”，则将该字符串视为十六进制整数。 如果第一个字符是“1”至“9”，则将该字符串视为十进制整数。 为字母“a”到“z”（或“A”到“Z”）分配了 10 到 35 的值；仅允许分配的值小于 *base* 的字母。 超出基数范围的第一个字符停止扫描。 例如，如果*基*为 0 和扫描的第一个字符为"0"，则假定八进制整数，且"8"或"9"字符将停止扫描。 **strtoul**允许加号 (**+**) 或减号 (**-**) 符号前缀; 前导减号符号表示返回值不起作用。
+*空白*可能包含被忽略的空格和制表符。 *数字*是一个或多个十进制数字。 *字母*是从 "a" 到 "z" （或 "a" 到 "z"）的一个或多个字母。 不符合此形式的第一个字符停止扫描。 如果*base*介于2和36之间，则将其用作数字的基数。 如果*base*为0，则使用*strSource*指向的字符串的初始字符来确定基。 如果第一个字符为 0，且第二个字符不为“x”或“X”，则将该字符串视为八进制整数。 如果第一个字符为“0”，且第二个字符为“x”或“X”，则将该字符串视为十六进制整数。 如果第一个字符是“1”至“9”，则将该字符串视为十进制整数。 为字母“a”到“z”（或“A”到“Z”）分配了 10 到 35 的值；仅允许分配的值小于 *base* 的字母。 超出基数范围的第一个字符停止扫描。 例如，如果*base*为0且扫描的第一个字符为 "0"，则假定八进制整数，且 "8" 或 "9" 字符会停止扫描。 **strtoul**允许加号（ **+** ）或减号（ **-** ）符号前缀; 前导减号表示返回值为否定。
 
 ## <a name="requirements"></a>要求
 

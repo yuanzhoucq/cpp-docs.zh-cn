@@ -1,9 +1,9 @@
 ---
 title: realloc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - realloc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _brealloc
 - _nrealloc
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - _frealloc function
 - reallocate memory blocks
 ms.assetid: 2b2239de-810b-4b11-9438-32ab0a244185
-ms.openlocfilehash: 0d61746365a8ded8d68072b1f398a18ba6ce7605
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6197b7bca3ec9f416696e1ded8ea5ca813392616
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357663"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949501"
 ---
 # <a name="realloc"></a>realloc
 
@@ -62,23 +65,23 @@ void *realloc(
 
 ## <a name="return-value"></a>返回值
 
-**realloc**将返回**void**指向重新分配的 （并且可能已移动的） 内存块。
+**realloc**返回指向重新分配的（并且可能已移动的）内存块的**void**指针。
 
-如果没有足够的可用内存将块扩展到给定大小，原始块将保持不变，并**NULL**返回。
+如果没有足够的可用内存将块扩展到给定大小，则原始块将保持不变，并返回**NULL** 。
 
-如果*大小*为零，则通过指向的块*memblock*释放; 返回值是**NULL**，以及*memblock*仍指向已释放的块。
+如果*size*为零，则释放由*memblock*指向的块;返回值为**NULL**， *memblock*将指向已释放的块。
 
-返回值将指向保证适当对齐任何类型的对象的存储的存储空间。 若要获取指向类型以外**void**，使用类型强制转换返回值上。
+返回值将指向保证适当对齐任何类型的对象的存储的存储空间。 若要获取指向非**void**类型的指针，请在返回值上使用类型转换。
 
 ## <a name="remarks"></a>备注
 
-**Realloc**函数更改已分配的内存块的大小。 *Memblock*参数指向内存块的开头。 如果*memblock*是**NULL**， **realloc**的行为方式相同**malloc** ，并分配新的块的*大小*字节。 如果*memblock*不是**NULL**，它应为以前调用返回的指针**calloc**， **malloc**，或**realloc**.
+**Realloc**函数更改已分配内存块的大小。 *Memblock*参数指向内存块的开头。 如果*memblock*为**NULL**，则**realloc**的行为方式与**malloc**相同，并分配一个*大小*为字节的新块。 如果*memblock*不为**NULL**，则它应为先前对**calloc**、 **malloc**或**realloc**的调用返回的指针。
 
-*大小*参数提供的新大小的块，以字节为单位。 块的内容不随其新旧大小而更改，尽管新块可以在不同的位置。 因为新块可以在新的内存位置，通过返回的指针**realloc**不保证可通过传递的指针*memblock*参数。 **realloc**不为零新分配的内存在缓冲区增长的情况下。
+*Size*参数提供块的新大小（以字节为单位）。 块的内容不随其新旧大小而更改，尽管新块可以在不同的位置。 因为新块可以在新的内存位置，所以**realloc**返回的指针不一定是通过*memblock*参数传递的指针。 在缓冲区增长时， **realloc**不会为新分配的内存分配零。
 
-**realloc**设置**errno**到**ENOMEM**如果内存分配失败或请求的内存量超过 **_HEAP_MAXREQ**。 有关此代码及其他错误代码的信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如果内存分配失败或请求的内存量超过 **_HEAP_MAXREQ**， **realloc**将**errno**设置为**ENOMEM** 。 有关此代码及其他错误代码的信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-**realloc**调用**malloc**若要使用C++ [_set_new_mode](set-new-mode.md)函数设置新的处理程序模式。 新的处理程序模式将指示是否在失败时， **malloc**是所设置的调用新处理程序例程[_set_new_handler](set-new-handler.md)。 默认情况下**malloc**不会调用新处理程序例程上分配内存失败。 可以重写此默认行为，以便，当**realloc**无法分配内存， **malloc**调用新处理程序例程中相同的方式**新**运算符执行当出于相同原因。 若要重写默认值，请在程序的早期调用：
+**realloc**调用**malloc**以便使用C++ [_set_new_mode](set-new-mode.md)函数设置新的处理程序模式。 新处理程序模式指示在失败时， **malloc**是否调用由[_set_new_handler](set-new-handler.md)设置的新处理程序例程。 默认情况下，在无法分配内存时， **malloc**不会调用新的处理程序例程。 您可以重写此默认行为，以便在**realloc**无法分配内存时， **malloc**会调用新的处理程序例程，其方式与在同一原因下**新**运算符失败时相同。 若要重写默认值，请在程序的早期调用：
 
 ```C
 _set_new_mode(1);
@@ -86,9 +89,9 @@ _set_new_mode(1);
 
 或链接到 NEWMODE.OBJ（请参阅[链接选项](../../c-runtime-library/link-options.md)）。
 
-当与 C 运行时库的调试版本链接应用程序**realloc**解析为[_realloc_dbg](realloc-dbg.md)。 有关在调试过程中如何托管堆的详细信息，请参阅 [CRT 调试堆](/visualstudio/debugger/crt-debug-heap-details)。
+当应用程序与调试版的 C 运行时库链接时， **realloc**解析为[_realloc_dbg](realloc-dbg.md)。 有关在调试过程中如何托管堆的详细信息，请参阅 [CRT 调试堆](/visualstudio/debugger/crt-debug-heap-details)。
 
-**realloc**砆`__declspec(noalias)`和`__declspec(restrict)`，这意味着确保该函数不能修改全局变量，并且指针返回不使用别名。 有关详细信息，请参阅 [noalias](../../cpp/noalias.md) 和[限制](../../cpp/restrict.md)。
+**realloc**被标记`__declspec(noalias)` `__declspec(restrict)`为，这意味着该函数保证不修改全局变量，并且返回的指针没有化名。 有关详细信息，请参阅 [noalias](../../cpp/noalias.md) 和[限制](../../cpp/restrict.md)。
 
 ## <a name="requirements"></a>要求
 

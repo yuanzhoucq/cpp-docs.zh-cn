@@ -1,9 +1,9 @@
 ---
 title: _CrtGetAllocHook
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtGetAllocHook
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtGetAllocHook
 - _CrtGetAllocHook
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - _CrtGetAllocHook function
 - CrtGetAllocHook function
 ms.assetid: 036acf7c-547a-4b3f-a636-80451070d7ed
-ms.openlocfilehash: b49c4cfc820a925187d0ea4d1562965295bea817
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 769621e92bf5f99f76f71b368a3b9a5cd0f79fd0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339905"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942411"
 ---
-# <a name="crtgetallochook"></a>_CrtGetAllocHook
+# <a name="_crtgetallochook"></a>_CrtGetAllocHook
 
 检索当前客户端定义的分配函数，以挂钩到 C 运行时调试内存分配进程（仅限调试版本）。
 
@@ -45,7 +48,7 @@ _CRT_ALLOC_HOOK _CrtGetAllocHook( void );
 
 ## <a name="remarks"></a>备注
 
-**_CrtGetAllocHook**检索 C 运行时调试库内存分配进程的当前客户端定义的应用程序挂钩函数。
+**_CrtGetAllocHook**为 C 运行时调试库内存分配进程检索当前客户端定义的应用程序挂钩函数。
 
 有关使用其他具有挂钩功能的运行时函数和编写你自己的客户端定义挂钩函数的详细信息，请参阅[编写调试挂钩函数](/visualstudio/debugger/debug-hook-function-writing)。
 

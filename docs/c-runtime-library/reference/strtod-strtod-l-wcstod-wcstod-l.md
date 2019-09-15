@@ -1,12 +1,12 @@
 ---
 title: strtod、_strtod_l、wcstod、_wcstod_l
 ms.date: 10/20/2017
-apiname:
+api_name:
 - wcstod
 - _wcstod_l
 - _strtod_l
 - strtod
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcstod
 - strtod
@@ -42,14 +45,14 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-ms.openlocfilehash: c8c2b3b491e2e7265829fa88580529dc757ace8c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5372525eb99dc9d39e31b10def0377c9aad5296c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376466"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946496"
 ---
-# <a name="strtod-strtodl-wcstod-wcstodl"></a>strtod、_strtod_l、wcstod、_wcstod_l
+# <a name="strtod-_strtod_l-wcstod-_wcstod_l"></a>strtod、_strtod_l、wcstod、_wcstod_l
 
 将字符串转换为双精度值。
 
@@ -89,13 +92,13 @@ double wcstod_l(
 
 ## <a name="return-value"></a>返回值
 
-**strtod**返回的值的浮点数，只有当表示形式会导致的溢出时，该函数返回 + /-**HUGE_VAL**。 符号**HUGE_VAL**不能表示的值相匹配。 **strtod**如果可以执行任何转换或发生下溢，则返回 0。
+**strtod**返回浮点数的值，除非表示形式导致溢出，在这种情况下，函数返回 +/-**HUGE_VAL**。 **HUGE_VAL**的符号与无法表示的值的符号匹配。 如果无法执行任何转换或发生下溢，则**strtod**将返回0。
 
-**wcstod**类似于返回值**strtod**。 对于这两个函数， **errno**设置为**ERANGE**如果出现溢出或下溢并调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 有关此代码以及其他返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+**wcstod**将类似值返回到**strtod**。 对于这两个函数，如果出现溢出或下溢，则**errno**设置为**ERANGE** ，并调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 有关此代码以及其他返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-每个函数将输入的字符串转换*strSource*到**double**。 **Strtod**函数转换*strSource*为双精度值。 **strtod**停止读取字符串*strSource*在它无法识别为数字一部分的第一个字符。 这可能是终止 null 字符。 **wcstod**是宽字符版本**strtod**; 它*strSource*参数是宽字符字符串。 否则这些函数具有相同行为。
+每个函数将输入字符串*strSource*转换为**双精度型**。 **Strtod**函数将*strSource*转换为双精度值。 **strtod**停止读取其无法识别为数字一部分的第一个字符的字符串*strSource* 。 这可能是终止 null 字符。 **wcstod**是**strtod**的宽字符版本;其*strSource*参数是宽字符字符串。 否则这些函数具有相同行为。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -104,24 +107,24 @@ double wcstod_l(
 |**_tcstod**|**strtod**|**strtod**|**wcstod**|
 |**_tcstod_l**|**_strtod_l**|**_strtod_l**|**_wcstod_l**|
 
-**LC_NUMERIC**的当前区域设置类别设置确定在基数点字符的识别*strSource*。 有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 功能而无需 **_l**后缀使用当前区域设置; **_strtod_l**等同于 **_strtod_l** ，只不过它们使用*区域设置*中传递。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+当前区域设置的**LC_NUMERIC**类别设置决定了*strSource*中的基数点字符的识别。 有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 不带 **_l**后缀的函数使用当前区域设置; **_strtod_l**与 **_strtod_l**相同，只不过它们改用传入的*区域设置*。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-如果*endptr*不是**NULL**，指向的位置存储指向停止扫描的字符的指针*endptr*。 如果可以不执行任何转换 （未找到任何有效的数字或指定了无效的基数） 的值*strSource*指向的位置处存储*endptr*。
+如果*endptr*不为**NULL**，则指向停止扫描的字符的指针将存储在*endptr*指向的位置。 如果无法执行任何转换（未找到任何有效的数字或指定了无效的基数），则*strSource*的值将存储在*endptr*指向的位置。
 
-**strtod**预期*strSource*以指向字符串的以下形式之一：
+**strtod**要求*strSource*指向以下格式之一的字符串：
 
-[*空格*] [*登录*] {*数字*[*基数* *数字*] &#124; *基数* *位数*} [{**e** &#124; **电子**} [*登录*]*数字*] [*空格*] [*登录*] {**0x** &#124; **0 X**} {*hexdigits* [*基数* *hexdigits*] &#124; *基数* *hexdigits*} [{**p** &#124;**P**} [*登录*] *hexdigits*] [*空格*] [*登录*] {**INF** &#124; **无穷大**} [*空格*] [*登录*] **NAN** [*序列*]
+[*空格*][*sign*]{*数字*[*基数* *数字*] &#124; *基数* *位数*}[{**e** &#124; **e**} [*sign*]*数字*] [*空格*] [*sign*] {**0x** &#124; **0x**} {*hexdigits* [*基数* *hexdigits*] &#124; *基数* *hexdigits*} [{**p** &#124; **p**} [*sign*] *hexdigits*] [*空格*] [*sign*] {**INF** &#124; **无限大**} [*空格*] [*sign*] **NAN** [*sequence*]
 
-可选前导*空格*可能包含的空格和制表符，将被忽略;*登录*是加号 （+） 或减号 （–）;*位数*是一个或多个十进制数字;*hexdigits*是一个或多个十六进制数字;*基数*基数点字符，也是一个句点 （.） 默认值"C"区域设置，或特定于区域设置的值或如果当前区域设置不同时*区域设置*指定，则为*序列*是一系列字母数字或下划线字符。 在十进制和十六进制数字的窗体，如果没有数字前基数点字符，至少一个必须出现后基数点字符。 在十进制，十进制数字可以后接一个指数，其中包含介绍性字母 (**e**或**E**) 和一个可选的带符号整数。 以十六进制形式，十六进制数字可以后接一个指数，其中包含介绍性字母 (**p**或**P**) 和一个可选的带符号的十六进制整数，表示为 2 的幂的指数。 在任一窗体中，如果指数部分和基数点字符都不出现，基数点字符假定按照字符串中的最后一位数。 在这种忽略大小写**INF**并**NAN**窗体。 不符合这些窗体的第一个字符停止扫描。
+可选前导*空格*可能包含被忽略的空格和制表符;*sign*为加号（+）或减号（-）;*位数*为一个或多个十进制数字;*hexdigits*是一个或多个十六进制数字;*基数*是基数点字符，在默认 "C" 区域设置中是句点（.），或者如果当前区域设置不同或指定了*区域*设置，则为特定于区域设置的值;*序列*是字母数字或下划线字符的序列。 在十进制和十六进制数字形式中，如果没有数字出现在基数点字符之前，则必须至少有一个数字出现在基数点字符之后。 在十进制格式中，十进制数字后面可以跟一个指数，其中包含一个引导字母（**e**或**e**）和一个可选择的带符号整数。 在十六进制形式中，十六进制数字后面可以跟一个指数，其中包含一个介绍性字母（**p**或**p**）和一个可选的带符号的十六进制整数，该整数表示指数作为2的幂。 在任一窗体中，如果指数部分和基数点字符均未出现，则假定使用了字符串中的最后一个数字。 **INF**和**NAN**形式都忽略大小写。 不符合其中一种形式的第一个字符会停止扫描。
 
-这些函数的 UCRT 版本不支持转换 Fortran 样式的 (**d**或**D**) 指数字母。 这个非标准扩展受早期版本的 CRT 支持，可能会为你的代码的带来重大变化。 UCRT 版本支持十六进制字符串与 INF 和 NAN 值，不受支持早期版本中的往返。 这也会在代码中导致重大更改。 例如，字符串"0x1a"将解释由**strtod**作为 0.0 在以前版本，而是作为中的 UCRT 版本 26.0。
+这些函数的 UCRT 版本不支持 Fortran 样式（**d**或**d**）指数字母的转换。 这个非标准扩展受早期版本的 CRT 支持，可能会为你的代码的带来重大变化。 UCRT 版本支持十六进制字符串和 INF 和 NAN 值的往返，这在早期版本中不受支持。 这也可能导致代码中的重大更改。 例如，在以前的版本中，字符串 "0x1a" 将由**strtod**解释为0.0，而不是在 UCRT 版本中解释为26.0。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**strtod**， **_strtod_l**|C：&lt;stdlib.h> C++：&lt;cstdlib> 或 &lt;stdlib.h> |
-|**wcstod**， **_wcstod_l**|C：&lt;stdlib.h> 或 &lt;wchar.h> C++：&lt;cstdlib>、&lt;stdlib.h> 或 &lt;wchar.h> |
+|**strtod**、 **_strtod_l**|C：&lt;stdlib.h> C++：&lt;cstdlib> 或 &lt;stdlib.h> |
+|**wcstod**、 **_wcstod_l**|C：&lt;stdlib.h> 或 &lt;wchar.h> C++：&lt;cstdlib>、&lt;stdlib.h> 或 &lt;wchar.h> |
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

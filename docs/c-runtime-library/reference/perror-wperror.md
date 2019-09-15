@@ -1,10 +1,10 @@
 ---
 title: perror、_wperror
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wperror
 - perror
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wperror
 - _tperror
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - _wperror function
 - perror function
 ms.assetid: 34fce792-16fd-4673-9849-cd88b54b6cd5
-ms.openlocfilehash: c9026a96ecc74640eb2bcd7004d5d1e0fc287e38
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 755b638f320fcc583faecfe6aa82269e4e1b3d8f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156094"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951037"
 ---
-# <a name="perror-wperror"></a>perror、_wperror
+# <a name="perror-_wperror"></a>perror、_wperror
 
 打印错误消息。
 
@@ -59,7 +62,7 @@ void _wperror(
 
 ## <a name="remarks"></a>备注
 
-**Perror**函数显示为一条错误消息**stderr**。 **_wperror**是宽字符版本 **_perror**;*消息*参数 **_wperror**是宽字符字符串。 **_wperror**并 **_perror**行为相同。
+**Perror**函数将错误消息打印到**stderr**。 **_wperror**是 **_perror**的宽字符版本; **_wperror**的*message*参数是宽字符字符串。 否则， **_wperror**和 **_perror**的行为相同。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -67,13 +70,13 @@ void _wperror(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tperror**|**perror**|**perror**|**_wperror**|
 
-*消息*打印第一次后, 接一个冒号，然后通过生成错误的最后一个库调用的系统错误消息，最后通过换行字符。 如果*消息*是空指针或指向空字符串的指针**perror**打印系统错误消息。
+首先打印一*条消息*，后跟一个冒号，最后是产生错误的最后一个库调用的系统错误消息，最后是一个换行符。 如果*message*为 null 指针或指向空字符串的指针，则**perror**仅打印系统错误消息。
 
-错误数字存储在变量 [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 中（在 ERRNO.H 中定义）。 通过变量 [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 访问系统错误消息，该变量是按错误编号排序的消息数组。 **perror**相应的错误消息使用打印**errno**的索引值 **_sys_errlist**。 变量的值[_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)定义为中的元素的最大数 **_sys_errlist**数组。
+错误数字存储在变量 [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 中（在 ERRNO.H 中定义）。 通过变量 [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 访问系统错误消息，该变量是按错误编号排序的消息数组。 **perror**使用**errno**值作为 **_sys_errlist**的索引来打印相应的错误消息。 变量[_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)的值定义为 **_sys_errlist**数组中的最大元素数。
 
-获取准确的结果，调用**perror**后立即在库例程将返回错误消息。 否则，后续调用可覆盖**errno**值。
+为获得准确的结果，请在库例程返回错误后立即调用**perror** 。 否则，后续调用会覆盖**errno**值。
 
-在 Windows 操作系统，某些**errno** ERRNO 中列出的值。H 是未使用。 这些值将保留以供 UNIX 操作系统使用。 请参阅[_doserrno、 errno、 _sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)有关的列表**errno** Windows 操作系统使用的值。 **perror**任何打印一个空字符串**errno**不使用这些平台的值。
+在 Windows 操作系统中，某些**errno**值列在 errno 中。H 未使用。 这些值将保留以供 UNIX 操作系统使用。 有关 Windows 操作系统使用的**errno**值的列表，请参阅[_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 。 **perror**为这些平台未使用的任何**errno**值打印一个空字符串。
 
 ## <a name="requirements"></a>要求
 

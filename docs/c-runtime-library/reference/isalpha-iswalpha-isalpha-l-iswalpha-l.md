@@ -1,12 +1,12 @@
 ---
 title: isalpha、iswalpha、_isalpha_l、_iswalpha_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - iswalpha
 - _iswalpha_l
 - isalpha
 - _isalpha_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _istalpha
 - _ismbcalpha_l
@@ -38,14 +41,14 @@ helpviewer_keywords:
 - istalpha function
 - _istalpha function
 ms.assetid: ed6cc2be-c4b0-4475-87ac-bc06d8c23064
-ms.openlocfilehash: 47b7e43172884524e50e332dcb421e84a99b9806
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a7de0ba1316a6c0155a46eed0564792ee6256f2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157989"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954581"
 ---
-# <a name="isalpha-iswalpha-isalphal-iswalphal"></a>isalpha、iswalpha、_isalpha_l、_iswalpha_l
+# <a name="isalpha-iswalpha-_isalpha_l-_iswalpha_l"></a>isalpha、iswalpha、_isalpha_l、_iswalpha_l
 
 确定整数是否表示字母字符。
 
@@ -78,11 +81,11 @@ int _iswalpha_l(
 
 ## <a name="return-value"></a>返回值
 
-这些例程返回非零值如果*c*是字母字符的特定表示形式。 **isalpha**返回非零值，如果*c*在 A-Z 或 a-z 范围内。 **iswalpha**为其返回一个非零值仅对于宽字符[iswupper](isupper-isupper-l-iswupper-iswupper-l.md)或**iswlower**为非零值; 即，为任何宽字符，这是一个实现定义的集合该宽**iswcntrl**， **iswdigit**， **iswpunct**，或者**iswspace**为非零值。 每个例程将返回 0，如果*c*不满足测试条件。
+如果*c*是字母字符的特定表示形式，则每个例程将返回非零值。 如果*c*范围在 a-z 或 a-z 范围内，则**isalpha**将返回一个非零值。 **iswalpha**仅对宽字符返回非零值， [iswupper](isupper-isupper-l-iswupper-iswupper-l.md)或**iswlower**为非零值;也就是说，对于**iswcntrl**、 **iswdigit**、 **iswpunct**或**iswspace**均不为零的任何一个实现定义集的宽字符。 如果*c*不满足测试条件，则这些例程都将返回0。
 
-具有这些函数的版本 **_l**后缀使用传入的区域设置参数而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+具有 **_l**后缀的这些函数的版本使用传入的区域设置参数而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-行为**isalpha**并 **_isalpha_l**未定义当*c*不是 EOF 或在范围 0 到 0xff 内，非独占。 使用调试 CRT 库时， *c*是不包含其中一个值，函数将引发断言。
+如果*c*不是 EOF 或介于0到0xff （含0和0xff），则**isalpha**和 **_isalpha_l**的行为是不确定的。 当使用调试 CRT 库并且*c*不是这些值之一时，函数将引发断言。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

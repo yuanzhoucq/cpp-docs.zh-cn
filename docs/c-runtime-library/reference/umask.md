@@ -1,9 +1,9 @@
 ---
 title: _umask
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _umask
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _umask
 helpviewer_keywords:
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - file permissions [C++]
 - files [C++], permission settings for
 ms.assetid: 5e9a13ba-5321-4536-8721-6afb6f4c8483
-ms.openlocfilehash: 113bf97b0fe93204cd41de20bc36a8be080a88b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 44614384427b9b70102da03972969c9aa8ef4b83
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155415"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957499"
 ---
-# <a name="umask"></a>_umask
+# <a name="_umask"></a>_umask
 
 设置默认的文件权限掩码。 此函数有一个更安全的版本；请参阅 [_umask_s](umask-s.md)。
 
@@ -50,13 +53,13 @@ int _umask( int pmode );
 
 ## <a name="return-value"></a>返回值
 
-**_umask**返回以前的值*pmode*。 无错误返回。
+**_umask**返回*pmode*的以前值。 无错误返回。
 
 ## <a name="remarks"></a>备注
 
-**_Umask**函数将当前进程的文件权限掩码设置为所指定的模式*pmode*。 文件权限掩码修改创建的新文件的权限设置 **_creat**， **_open**，或 **_sopen**。 如果掩码中的一位是 1，则将文件的请求权限值中相应的一位设置为 0 (不允许)。 如果掩码中的一位是 0，则相应的一位保留不变。 直至首次关闭新文件时才会设置新文件的权限设置。
+**_Umask**函数将当前进程的文件权限掩码设置为*pmode*指定的模式。 文件权限掩码修改 **_creat**、 **_open**或 **_sopen**创建的新文件的权限设置。 如果掩码中的一位是 1，则将文件的请求权限值中相应的一位设置为 0 (不允许)。 如果掩码中的一位是 0，则相应的一位保留不变。 直至首次关闭新文件时才会设置新文件的权限设置。
 
-整数表达式*pmode*包含一个或两个 SYS\STAT 中定义的以下清单常量。H:
+整数表达式*pmode*包含在 SYS\STAT. 中定义的以下一个或两个清单常量。高
 
 |*pmode*| |
 |-|-|
@@ -64,9 +67,9 @@ int _umask( int pmode );
 | **_S_IREAD** | 允许读取。 |
 | **_S_IREAD** &#124; **_S_IWRITE** | 允许读取和写入。 |
 
-当给定这两个常量时，它们使用按位 OR 运算符联接 ( **&#124;** )。 如果*pmode*自变量是 **_S_IREAD**，则不允许读取 （此文件为只写）。 如果*pmode*自变量是 **_S_IWRITE**，则不允许写入 （文件是只读的）。 例如，如果掩码中设置了写入位，则任何新文件都将为只读。 请注意在 MS-DOS 和 Windows 操作系统下，所有文件均可读；不可能提供只写权限。 因此，设置读取位与 **_umask**不起作用的文件模式。
+当提供两个常量时，它们将与按位 "或" 运算符 **&#124;** （）联接。 如果*pmode*参数为 **_S_IREAD**，则不允许读取（文件是只写的）。 如果*pmode*参数为 **_S_IWRITE**，则不允许写入（文件是只读的）。 例如，如果掩码中设置了写入位，则任何新文件都将为只读。 请注意在 MS-DOS 和 Windows 操作系统下，所有文件均可读；不可能提供只写权限。 因此，将读取位设置为 **_umask**不会影响文件的模式。
 
-如果*pmode*不是清单常量之一的组合或合并了一组替代常量，该函数将会忽略这些。
+如果*pmode*不是清单常量之一的组合或包含一组备用常量，则该函数将直接忽略这些常量。
 
 ## <a name="requirements"></a>要求
 

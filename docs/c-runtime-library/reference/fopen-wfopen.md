@@ -1,10 +1,10 @@
 ---
 title: fopen、_wfopen
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wfopen
 - fopen
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fopen
 - _wfopen
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: b57ed2b26428c48efbe544c2b4802e347b915c29
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 0e50854cf35dd58f7f59f67ed861247b51fd4541
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499945"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957055"
 ---
 # <a name="fopen-_wfopen"></a>fopen、_wfopen
 
@@ -72,7 +75,7 @@ FILE *_wfopen(
 
 ## <a name="remarks"></a>备注
 
-**Fopen**函数打开*文件名*指定的文件。 默认情况下, 使用 ANSI 代码页 (CP_ACP) 解释窄*文件名*字符串。 在 Windows 桌面应用程序中，可以通过使用 [SetFileApisToOEM](/windows/win32/api/fileapi/nf-fileapi-setfileapistooem) 函数将此更改为 OEM 代码页 (CP_OEMCP)。 您可以使用[AreFileApisANSI](/windows/win32/api/fileapi/nf-fileapi-arefileapisansi)函数来确定是使用 ANSI 还是系统默认的 OEM 代码页来解释*文件名*。 **_wfopen**是**fopen**的宽字符版本; **_wfopen**的参数是宽字符字符串。 否则, **_wfopen**和**fopen**的行为方式相同。 只使用 **_wfopen**不会影响在文件流中使用的编码字符集。
+**Fopen**函数打开*文件名*指定的文件。 默认情况下，使用 ANSI 代码页（CP_ACP）解释窄*文件名*字符串。 在 Windows 桌面应用程序中，可以通过使用 [SetFileApisToOEM](/windows/win32/api/fileapi/nf-fileapi-setfileapistooem) 函数将此更改为 OEM 代码页 (CP_OEMCP)。 您可以使用[AreFileApisANSI](/windows/win32/api/fileapi/nf-fileapi-arefileapisansi)函数来确定是使用 ANSI 还是系统默认的 OEM 代码页来解释*文件名*。 **_wfopen**是**fopen**的宽字符版本; **_wfopen**的参数是宽字符字符串。 否则， **_wfopen**和**fopen**的行为方式相同。 只使用 **_wfopen**不会影响在文件流中使用的编码字符集。
 
 **fopen**接受在执行时文件系统上有效的路径;**fopen**接受 UNC 路径和包含映射的网络驱动器的路径, 前提是执行代码的系统在执行时能够访问共享或映射的驱动器。 构造**fopen**的路径时, 请确保驱动器、路径或网络共享在执行环境中可用。 可使用斜杠 (/) 或反斜杠 (\\) 作为路径中的目录分隔符。
 
@@ -86,7 +89,7 @@ FILE *_wfopen(
 
 允许的*编码*值为**UNICODE**、 **utf-8**和**utf-16le**。
 
-在 Unicode 模式下打开文件时, 输入函数会将从文件读取的数据转换为存储为**wchar_t**类型的 utf-16 数据。 写入在 Unicode 模式下打开的文件的函数需要包含存储为**wchar_t**类型的 utf-16 数据的缓冲区。 如果将文件编码为 UTF-8，则在写入它时，UTF-16 数据会转换为 UTF-8；在读取它时，该文件的 UTF-8 编码的内容会转换为 UTF-16。 尝试在 Unicode 模式下读取或写入奇数个字节会导致 [参数验证](../../c-runtime-library/parameter-validation.md) 错误。 若要读取或写入在你的程序中存储为 UTF-8 的数据，请使用文本或二进制文件模式，而不是 Unicode 模式。 你应负责所有必需的编码转换。
+在 Unicode 模式下打开文件时，输入函数会将从文件读取的数据转换为存储为**wchar_t**类型的 utf-16 数据。 写入在 Unicode 模式下打开的文件的函数需要包含存储为**wchar_t**类型的 utf-16 数据的缓冲区。 如果将文件编码为 UTF-8，则在写入它时，UTF-16 数据会转换为 UTF-8；在读取它时，该文件的 UTF-8 编码的内容会转换为 UTF-16。 尝试在 Unicode 模式下读取或写入奇数个字节会导致 [参数验证](../../c-runtime-library/parameter-validation.md) 错误。 若要读取或写入在你的程序中存储为 UTF-8 的数据，请使用文本或二进制文件模式，而不是 Unicode 模式。 你应负责所有必需的编码转换。
 
 如果文件已存在并已打开以进行读取或追加，字节顺序标记 (BOM)（如果文件中有）将确定编码。 BOM 编码优先于**ccs**标志指定的编码。 仅在不存在 BOM 或文件是新文件时, 才使用**ccs**编码。
 
@@ -141,7 +144,7 @@ FILE *_wfopen(
 
 在文本模式下, 回车换行符组合在输入时转换为单行馈送, 换行字符将转换为输出上的回车换行符组合。 当 Unicode 流 I/O 函数在文本模式（默认设置）下运行时，源或目标流将假定为一系列多字节字符。 因此，Unicode 流输入函数将多字节字符转换为宽字符（就像调用 mbtowc 函数一样）。 出于同一原因，Unicode 流输出函数将宽字符转换为多字节字符（就像调用 wctomb 函数一样）。
 
-如果在*mode*中未给出**t**或**b** , 则默认转换模式由全局变量[_fmode](../../c-runtime-library/fmode.md)定义。 如果**t**或**b**作为参数的前缀, 则函数将失败并返回**NULL**。
+如果在*mode*中未给出**t**或**b** ，则默认转换模式由全局变量[_fmode](../../c-runtime-library/fmode.md)定义。 如果**t**或**b**作为参数的前缀, 则函数将失败并返回**NULL**。
 
 有关如何在 Unicode 和多字节流 I/O 中使用文本和二进制模式的详细信息，请参阅 [Text and Binary Mode File I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md) 和 [文本和二进制模式下的 Unicode 流 I/O](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md)。
 
@@ -149,7 +152,7 @@ FILE *_wfopen(
 
 |*模式*修饰符|行为|
 |-|-|
-| **c** | 启用关联*文件名*的提交标志, 以便在调用**fflush**或 **_flushall**时, 将文件缓冲区的内容直接写入磁盘。 |
+| **c** | 启用关联*文件名*的提交标志，以便在调用**fflush**或 **_flushall**时，将文件缓冲区的内容直接写入磁盘。 |
 | **n** | 将关联的*文件名*的提交标志重置为 "无提交"。 这是默认设置。 如果将程序显式链接到 COMMODE.OBJ，它还将重写全局提交标志。 除非将程序显式链接到 COMMODE.OBJ，否则全局提交标志默认为“no-commit”（请参阅 [Link Options](../../c-runtime-library/link-options.md)）。 |
 | **N** | 指定文件不由子进程继承。 |
 | **S** | 指定缓存针对（但不限于）从磁盘的顺序访问进行优化。 |
@@ -158,7 +161,7 @@ FILE *_wfopen(
 | **D** | 将文件指定为临时。 最后一个文件指针关闭时，它将被删除。 |
 | **ccs=** _encoding_ | 指定要使用的编码字符集 ( **utf-8**、 **utf-16le**或**UNICODE**中的一个)。 如果需要 ANSI 编码，请不要指定此字符集。 |
 
-**Fopen**和 **_fdopen**中使用的*模式*字符串的有效字符与[_open](open-wopen.md)和[_sopen](sopen-wsopen.md)中使用的*oflag*参数对应, 如下所示。
+**Fopen**和 **_fdopen**中使用的*模式*字符串的有效字符与[_open](open-wopen.md)和[_sopen](sopen-wsopen.md)中使用的*oflag*参数对应，如下所示。
 
 |*模式*字符串中的字符|Open \_/\_sopen 的等效 oflag 值|
 |-------------------------------|----------------------------------------------------|
@@ -191,11 +194,11 @@ FILE *_wfopen(
 
 **_wfopen**是 Microsoft 扩展。 有关兼容性的更多信息，请参见 [兼容性](../../c-runtime-library/compatibility.md)。
 
-" **C**"、" **n**"、" **t**"、" **S**"、" **R**"、" **t**" 和 " **D** "*模式*选项是 Microsoft **fopen**和 **_fdopen**的扩展, 不应在需要 ANSI 可移植性时使用。
+" **C**"、" **n**"、" **t**"、" **S**"、" **R**"、" **t**" 和 " **D** "*模式*选项是 Microsoft **fopen**和 **_fdopen**的扩展，不应在需要 ANSI 可移植性时使用。
 
 ## <a name="example-1"></a>示例 1
 
-以下程序打开两个文件。  它使用**fclose**关闭第一个文件, 并使用 **_fcloseall**关闭所有剩余文件。
+以下程序打开两个文件。  它使用**fclose**关闭第一个文件，并使用 **_fcloseall**关闭所有剩余文件。
 
 ```C
 // crt_fopen.c

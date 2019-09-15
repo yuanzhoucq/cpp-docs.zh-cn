@@ -1,12 +1,12 @@
 ---
 title: _vsprintf_p、_vsprintf_p_l、_vswprintf_p、_vswprintf_p_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _vsprintf_p
 - _vswprintf_p
 - _vsprintf_p_l
 - _vswprintf_p_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - vsprintf_p
 - _vswprintf_p
@@ -40,14 +43,14 @@ helpviewer_keywords:
 - _vsprintf_p function
 - _vstprintf_p_l function
 ms.assetid: 00821c0d-9fee-4d8a-836c-0669cfb11317
-ms.openlocfilehash: 15f368da84eb9cbf8c394a0e9b5eeec2611c3f7f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e684bebc0a997e25963366b64fbab6d4f958e8eb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383433"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945245"
 ---
-# <a name="vsprintfp-vsprintfpl-vswprintfp-vswprintfpl"></a>_vsprintf_p、_vsprintf_p_l、_vswprintf_p、_vswprintf_p_l
+# <a name="_vsprintf_p-_vsprintf_p_l-_vswprintf_p-_vswprintf_p_l"></a>_vsprintf_p、_vsprintf_p_l、_vswprintf_p、_vswprintf_p_l
 
 使用指向自变量列表的指针编写格式化输出，并且能够指定自变量的使用顺序。
 
@@ -88,7 +91,7 @@ int _vswprintf_p_l(
 输出的存储位置
 
 *sizeInBytes*<br/>
-大小*缓冲区*以字符为单位。
+*缓冲区*的大小（以字符为限）。
 
 *count*<br/>
 要存储在 Unicode 版的此函数中的最大字符数。
@@ -104,17 +107,17 @@ int _vswprintf_p_l(
 
 ## <a name="return-value"></a>返回值
 
-**_vsprintf_p**并 **_vswprintf_p**返回写入的字符，不包括终止 null 字符，则为负值，如果发生输出错误数。
+**_vsprintf_p**和 **_vswprintf_p**返回写入的字符数，不包括终止 null 字符，或在出现输出错误时返回一个负值。
 
 ## <a name="remarks"></a>备注
 
-每个函数采用一个指向参数列表，然后设置格式并将给定的数据写入到指向的内存*缓冲区*。
+其中每个函数都采用一个指向参数列表的指针，然后将给定数据格式化并写入*缓冲区*指向的内存。
 
-这些函数与差异**vsprintf_s**并**vswprintf_s**仅在于它们支持位置参数。 有关详细信息，请参阅 [printf_p 位置参数](../../c-runtime-library/printf-p-positional-parameters.md)。
+这些函数与**vsprintf_s**和**vswprintf_s**的不同之处在于它们支持位置参数。 有关详细信息，请参阅 [printf_p 位置参数](../../c-runtime-library/printf-p-positional-parameters.md)。
 
-使用这些函数的版本 **_l**后缀完全相同，只不过它们使用传递中而不是当前线程区域设置的区域设置参数。
+这些带有 **_l**后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
 
-如果*缓冲区*或*格式*参数**NULL**指针，如果计数为零，或如果格式字符串包含无效格式字符，无效的参数调用处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，函数将返回-1 并设置**errno**到**EINVAL**。
+如果*缓冲区*或*格式*参数为**NULL**指针，如果 count 为零，或者格式字符串包含无效的格式字符，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则函数将返回-1，并将**errno**设置为**EINVAL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -127,8 +130,8 @@ int _vswprintf_p_l(
 
 |例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|----------------------|
-|**_vsprintf_p**， **_vsprintf_p_l**|\<stdio.h> 和 \<stdarg.h>|\<varargs.h>*|
-|**_vswprintf_p**， **_vswprintf_p_l**|\<stdio.h> 或 \<wchar.h> 和 \<stdarg.h>|\<varargs.h>*|
+|**_vsprintf_p**、 **_vsprintf_p_l**|\<stdio.h> 和 \<stdarg.h>|\<varargs.h>*|
+|**_vswprintf_p**、 **_vswprintf_p_l**|\<stdio.h> 或 \<wchar.h> 和 \<stdarg.h>|\<varargs.h>*|
 
 \* 仅对 UNIX V 兼容性是必需的。
 

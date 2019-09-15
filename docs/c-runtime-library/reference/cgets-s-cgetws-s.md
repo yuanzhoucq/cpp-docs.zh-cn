@@ -1,10 +1,10 @@
 ---
 title: _cgets_s、_cgetws_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cgetws_s
 - _cgets_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _cgets_s
 - cgets_s
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - _cgetws_s function
 - cgetws_s function
 ms.assetid: 38b74897-afe6-4dd9-a43f-36a3c0d72c5c
-ms.openlocfilehash: 8341b775df3b9cbaececdfaa1f17e075d7c7416c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2039fc32cecb768c3c3fbc239446abedeb48f188
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340580"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939267"
 ---
-# <a name="cgetss-cgetwss"></a>_cgets_s、_cgetws_s
+# <a name="_cgets_s-_cgetws_s"></a>_cgets_s、_cgetws_s
 
 从控制台获取字符串。 如 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)所述，这些 [_cgets 和 _cgetws](../../c-runtime-library/cgets-cgetws.md) 版本具有安全性增强功能。
 
@@ -86,17 +89,17 @@ errno_t _cgetws_s(
 
 ### <a name="error-conditions"></a>错误条件
 
-|*buffer*|*numberOfElements*|*pSizeRead*|返回|内容*缓冲区*|
+|*buffer*|*numberOfElements*|*pSizeRead*|返回|*缓冲区*内容|
 |--------------|------------------------|-----------------|------------|--------------------------|
 |**NULL**|任何|任何|**EINVAL**|n/a|
-|不**NULL**|零|任何|**EINVAL**|未修改|
-|不**NULL**|任何|**NULL**|**EINVAL**|零长度字符串|
+|not **NULL**|零|任何|**EINVAL**|未修改|
+|not **NULL**|任何|**NULL**|**EINVAL**|零长度字符串|
 
 ## <a name="remarks"></a>备注
 
-**_cgets_s**并 **_cgetws_s**从控制台读取一个字符串，并将字符串 （具有 null 结束符） 复制到*缓冲区*。 **_cgetws_s**是宽字符版本的函数; 除了字符大小，这两个函数的行为是相同。 要读取的字符串的最大大小作为传入*numberOfElements*参数。 此大小应包括用于终止 null 的额外字符。 实际读取的字符数置于*pSizeRead*。
+**_cgets_s**和 **_cgetws_s**从控制台读取字符串，并将字符串（带有 null 结束符）复制到*缓冲区*中。 **_cgetws_s**是函数的宽字符版本;除了字符大小之外，这两个函数的行为是相同的。 要读取的字符串的最大大小作为*numberOfElements*参数传入。 此大小应包括用于终止 null 的额外字符。 读取的实际字符数放在*pSizeRead*中。
 
-如果在操作期间或在参数验证中发生错误，则调用的参数处理程序无效，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则**errno**设置为**EINVAL**并**EINVAL**返回。
+如果在操作期间或在参数验证中发生错误，则调用的参数处理程序无效，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将**errno**设置为**EINVAL** ，并返回**EINVAL** 。
 
 在 C++ 中，模板重载简化了这些函数的使用；重载可以自动推断缓冲区长度，从而无需指定大小自变量，并且它们可以自动将较旧、不安全的函数替换为更新、更安全的函数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 

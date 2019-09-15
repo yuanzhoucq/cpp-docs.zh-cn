@@ -1,12 +1,12 @@
 ---
 title: _strninc、_wcsninc、_mbsninc、_mbsninc_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsninc
 - _mbsninc_l
 - _wcsninc
 - _strninc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - strninc
 - wcsninc
@@ -42,19 +45,19 @@ helpviewer_keywords:
 - mbsninc_l function
 - _tcsninc function
 ms.assetid: 6caace64-f9e4-48c0-afa8-ea51824ad723
-ms.openlocfilehash: ef30a9f57f0b8c84199befb00f3edc13342a1eaf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b03ca4c9515bd2c70a1ce2574850e23b3add44c5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209706"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947061"
 ---
-# <a name="strninc-wcsninc-mbsninc-mbsnincl"></a>_strninc、_wcsninc、_mbsninc、_mbsninc_l
+# <a name="_strninc-_wcsninc-_mbsninc-_mbsninc_l"></a>_strninc、_wcsninc、_mbsninc、_mbsninc_l
 
-前移字符串指针**n**字符。
+将字符串指针前移**n**个字符。
 
 > [!IMPORTANT]
-> **_mbsninc**并 **_mbsninc_l**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbsninc**和 **_mbsninc_l**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -91,11 +94,11 @@ unsigned char *_mbsninc(
 
 ## <a name="return-value"></a>返回值
 
-每个例程将返回一个指向*str*后*str*通过递增*计数*字符或**NULL**如果所提供在指针位于**NULL**。 如果*计数*大于或等于的中的字符数*str*，则结果不可确定。
+其中每个例程都将返回一个指向*str*的指针，该指针在按*计数*字符递增*str*后，如果提供的指针为**null**，则返回**null** 。 如果*count*大于或等于*str*中的字符数，则结果是不确定的。
 
 ## <a name="remarks"></a>备注
 
-**_Mbsninc**函数的增量*str*由*计数*多字节字符。 **_mbsninc**识别多字节字符序列根据[多字节代码页](../../c-runtime-library/code-pages.md)当前正在使用。
+**_Mbsninc**函数通过*计算*多字节字符来递增*str* 。 **_mbsninc**根据当前使用的[多字节代码页](../../c-runtime-library/code-pages.md)识别多字节字符序列。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -103,9 +106,9 @@ unsigned char *_mbsninc(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsninc**|**_strninc**|**_mbsninc**|**_wcsninc**|
 
-**_strninc**并 **_wcsninc**是单字节字符字符串和宽字符字符串版本 **_mbsninc**。 **_wcsninc**并 **_strninc**仅为此映射提供，否则不应使用。 有关详细信息，请参阅[使用一般文本映射](../../c-runtime-library/using-generic-text-mappings.md)和[一般文本映射](../../c-runtime-library/generic-text-mappings.md)。
+**_strninc**和 **_wcsninc**为单字节字符字符串和 **_mbsninc**的宽字符字符串版本。 仅为此映射提供了 **_wcsninc**和 **_strninc** ，否则不应使用它。 有关详细信息，请参阅[使用一般文本映射](../../c-runtime-library/using-generic-text-mappings.md)和[一般文本映射](../../c-runtime-library/generic-text-mappings.md)。
 
-**_mbsninc_l**是完全相同，只不过它改用已传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**_mbsninc_l**是相同的，只不过它使用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>要求
 

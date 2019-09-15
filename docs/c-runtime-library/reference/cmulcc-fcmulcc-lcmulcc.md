@@ -1,11 +1,11 @@
 ---
-title: _Cmulcc、 _FCmulcc、 _LCmulcc
+title: _Cmulcc、_FCmulcc、_LCmulcc
 ms.date: 03/30/2018
-apiname:
+api_name:
 - _Cmulcc
 - _FCmulcc
 - _LCmulcc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _Cmulcc
 - _FCmulcc
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - _Cmulcc function
 - _FCmulcc function
 - _LCmulcc function
-ms.openlocfilehash: f81ccb641a80ab264e8bc54ba1987e2c2c8469f1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fc21f8cbd2103993bc2b3e36020c57c8520f04a1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335370"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939078"
 ---
-# <a name="cmulcc-fcmulcc-lcmulcc"></a>_Cmulcc、 _FCmulcc、 _LCmulcc
+# <a name="_cmulcc-_fcmulcc-_lcmulcc"></a>_Cmulcc、_FCmulcc、_LCmulcc
 
 将两个复数相乘。
 
@@ -51,26 +54,26 @@ _Lcomplex _LCmulcc( _Lcomplex x, _Lcomplex y );
 ### <a name="parameters"></a>参数
 
 *x*<br/>
-其中一个复杂的操作数进行乘法运算。
+要相乘的复杂操作数之一。
 
 *y*<br/>
-其他复杂操作数进行乘法运算。
+要相乘的其他复数运算。
 
 ## <a name="return-value"></a>返回值
 
-一个 **_Dcomplex**， **_Fcomplex**，或 **_Lcomplex**结构，它表示复杂数字的复杂产品*x*和*y*。
+一个 **_Dcomplex**、 **_Fcomplex**或 **_Lcomplex**结构，它表示复数*x*和*y*的复杂乘积。
 
 ## <a name="remarks"></a>备注
 
-内置算术运算符无法正常工作的 Microsoft 实现的复杂类型，因为 **_Cmulcc**， **_FCmulcc**，并 **_LCmulcc**函数简化复杂类型的乘法。
+由于内置算术运算符不适用于复杂类型的 Microsoft 实现，因此， **_Cmulcc**、 **_FCmulcc**和 **_LCmulcc**函数可简化复杂类型的乘法运算。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|C 标头|C++ 标头|
 |-------------|--------------|------------------|
-|**_Cmulcc**, **_FCmulcc**, **_LCmulcc**|\<complex.h>|\<complex.h>|
+|**_Cmulcc**、 **_FCmulcc**、 **_LCmulcc**|\<complex.h>|\<complex.h>|
 
-这些函数是特定于 Microsoft 的。 类型 **_Dcomplex**， **_Fcomplex**，并 **_Lcomplex**是未实现 C99 本机类型与特定于 Microsoft 的等效**double _Complex**， **float _Complex**，和**long double _Complex**分别。 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+这些函数是 Microsoft 特定的。 类型 **_Dcomplex**、 **_Fcomplex**和 **_Lcomplex**是特定于 Microsoft 的等效项，适用于未实现的 C99 本机类型**double _Complex**、 **float _Complex**和**long double _Complex**。 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>请参阅
 
