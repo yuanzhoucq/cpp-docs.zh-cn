@@ -1,9 +1,9 @@
 ---
 title: _lfind_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _lfind_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lfind_s
 - _lfind_s
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - searching, linear
 - _lfind_s function
 ms.assetid: f1d9581d-5c9d-4222-a31c-a6dfafefa40d
-ms.openlocfilehash: 08c04d9d1ca69998d54304c96468298013907179
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 69db97dc24b567714bda3e02f5f53ff381ae4911
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286422"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953451"
 ---
-# <a name="lfinds"></a>_lfind_s
+# <a name="_lfind_s"></a>_lfind_s
 
 用于针对指定的键执行线性搜索。 这是一个 [_lfind](lfind.md) 版本，具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增强功能。
 
@@ -73,9 +76,9 @@ void *_lfind_s(
 
 ## <a name="return-value"></a>返回值
 
-如果找到该键，则 **_lfind_s**处的数组的元素返回指向*基*相匹配*密钥*。 如果未找到该键， **_lfind_s**返回**NULL**。
+如果找到该键，则 **_lfind_s**将返回一个指针，该指针指向与*键*匹配的*基*中的数组元素。 如果找不到该密钥， **_lfind_s**将返回**NULL**。
 
-如果传递到此函数的参数无效，则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则**errno**设置为**EINVAL**并且该函数返回**NULL**。
+如果传递到此函数的参数无效，则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将**errno**设置为**EINVAL** ，并且该函数将返回**NULL**。
 
 ### <a name="error-conditions"></a>错误条件
 
@@ -88,9 +91,9 @@ void *_lfind_s(
 
 ## <a name="remarks"></a>备注
 
-**_Lfind_s**函数执行值的线性搜索*密钥*数组中的*数*，每个元素*宽度*字节。 与不同**bsearch_s**， **_lfind_s**不需要要进行排序的数组。 *基*参数是指向待搜索数组基的指针。 *比较*参数是指向用户提供的比较两个数组元素，然后返回一个值，指定其关系的例程的指针。 **_lfind_s**调用*比较*例程的一个或多个时间搜索，并传递过程*上下文*指针和指向每个调用上的两个数组元素的指针。 *比较*例程必须比较这些元素，然后返回非零值 （表示元素是不同的） 或 0 （表示元素相同）。
+**_Lfind_s**函数对*数字*元素数组中的值*键*执行线性搜索，其中每个*宽度*字节。 与**bsearch_s**不同， **_lfind_s**不需要对数组进行排序。 *Base*参数是指向要搜索的数组的基的指针。 *Compare*参数是指向用户提供的例程的指针，它比较两个数组元素，然后返回指定其关系的值。 **_lfind_s**在搜索过程中一次或多次调用*比较*例程，并将*上下文*指针和指针传递给每个调用上的两个数组元素。 *比较*例程必须比较这些元素，然后返回非零值（表示元素不同）或0（表示元素相同）。
 
-**_lfind_s**类似于 **_lfind**除了添加*上下文*指向比较函数的参数和函数的参数列表。 *上下文*指针可能有用，如果搜索的数据结构是对象的一部分并*比较*函数需要访问对象的成员。 *比较*函数可将 void 指针转换该对象的适当的对象类型并访问成员。 添加了*上下文*参数将使得 **_lfind_s**更加安全，因为其他上下文可用于避免重新进入 bug 与使用静态变量以使数据可供关联*比较*函数。
+除了将*上下文*指针添加到比较函数的自变量和函数的参数列表外， **_lfind_s**与 **_lfind**类似。 如果搜索的数据结构是对象的一部分，并且*compare*函数需要访问该对象的成员，则*上下文*指针会很有用。 *Compare*函数可以将 void 指针转换为适当的对象类型并访问该对象的成员。 添加*上下文*参数会使 **_lfind_s**更安全，因为其他上下文可用于避免与使用静态变量关联的重入 bug，以使数据可供*compare*函数使用。
 
 ## <a name="requirements"></a>要求
 

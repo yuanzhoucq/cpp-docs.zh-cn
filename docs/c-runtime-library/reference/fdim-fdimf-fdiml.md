@@ -1,11 +1,11 @@
 ---
 title: fdim、fdimf、fdiml
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fdim
 - fdimf
 - fdiml
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fdim
 - fdimf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - fdimf function
 - fdiml function
 ms.assetid: 2d4ac639-51e9-462d-84ab-fb03b06971a0
-ms.openlocfilehash: 263635a32b21b01faa84405ab97bd5518f054ba5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 74935f724b678b08e39604d9916c7c5de5925aee
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334783"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941289"
 ---
 # <a name="fdim-fdimf-fdiml"></a>fdim、fdimf、fdiml
 
@@ -80,9 +83,9 @@ long double fdiml(
 
 ## <a name="return-value"></a>返回值
 
-返回之间的正数差*x*并*y*:
+返回*x*和*y*之间的正差：
 
-|返回值|方案|
+|返回值|应用场景|
 |------------------|--------------|
 |x-y|如果 x > y|
 |0|如果 x <= y|
@@ -91,7 +94,7 @@ long double fdiml(
 
 |问题|返回|
 |-----------|------------|
-|溢出范围错误|+ HUGE_VAL、+ HUGE_VALF，或 + HUGE_VALL|
+|溢出范围错误|\+ HUGE_VAL、+ HUGE_VALF，或 + HUGE_VALL|
 |下溢范围错误|正确值（舍入后）|
 |*x*或*y*为 NaN|NaN|
 
@@ -99,15 +102,15 @@ long double fdiml(
 
 ## <a name="remarks"></a>备注
 
-因为C++允许重载，可以调用的重载**fdim**采用并返回**float**并**长** **double**类型。 在 C 程序中， **fdim**始终采用并返回**double**。
+由于C++允许重载，因此可以调用**fdim**的重载，该重载采用和返回**float**和**long** **double**类型。 在 C 程序中， **fdim**始终采用并返回**双精度型**。
 
-除了 NaN 处理，此函数相当于`fmax(x - y, 0)`。
+除 NaN 处理外，此函数与等效`fmax(x - y, 0)`。
 
 ## <a name="requirements"></a>要求
 
 |函数|C 标头|C++ 标头|
 |--------------|--------------|------------------|
-|**fdim**， **fdimf**， **fdiml**|\<math.h>|\<cmath>|
+|**fdim**、 **fdimf**、 **fdiml**|\<math.h>|\<cmath>|
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

@@ -1,12 +1,12 @@
 ---
 title: isalnum、iswalnum、_isalnum_l、_iswalnum_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _iswalnum_l
 - _isalnum_l
 - iswalnum
 - isalnum
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _istalnum_l
 - _iswalnum_l
@@ -37,14 +40,14 @@ helpviewer_keywords:
 - _istalnum_l function
 - _iswalnum_l function
 ms.assetid: 0dc51306-ade8-4944-af27-e4176fc89093
-ms.openlocfilehash: 3aa9adada9ad904221b91e41ac2d843b174677ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 636e43a921c2b859db3a31b3dd658112f4e8e9f4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331644"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954592"
 ---
-# <a name="isalnum-iswalnum-isalnuml-iswalnuml"></a>isalnum、iswalnum、_isalnum_l、_iswalnum_l
+# <a name="isalnum-iswalnum-_isalnum_l-_iswalnum_l"></a>isalnum、iswalnum、_isalnum_l、_iswalnum_l
 
 确定整数是否表示字母数字字符。
 
@@ -67,11 +70,11 @@ int _iswalnum_l( wint_t c, _locale_t locale );
 
 ## <a name="return-value"></a>返回值
 
-这些例程返回非零值如果*c*是以字母数字字符的特定表示形式。 **isalnum**返回非零值，如果任一**isalpha**或**isdigit**为非零*c*，即，如果*c*内范围 A-Z、 a-z 或 0-9。 **iswalnum**返回非零值，如果任一**iswalpha**或**iswdigit**为非零*c*。 每个例程将返回 0，如果*c*不满足测试条件。
+如果*c*是字母数字字符的特定表示形式，则每个例程将返回非零值。 如果*c*的**isalpha**或**isdigit**为非零，则**isalnum**将返回一个非零值，即，如果*c*在范围 a-z、a-z 或 0-9 内。 如果**iswalpha**或**iswdigit**为非零值，则**iswalnum**将返回非零*值。* 如果*c*不满足测试条件，则这些例程都将返回0。
 
-具有这些函数的版本 **_l**后缀使用传入的区域设置参数而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+具有 **_l**后缀的这些函数的版本使用传入的区域设置参数而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-行为**isalnum**并 **_isalnum_l**未定义当*c*不是 EOF 或在范围 0 到 0xff 内，非独占。 使用调试 CRT 库时， *c*是不包含其中一个值，函数将引发断言。
+如果*c*不是 EOF 或介于0到0xff （含0和0xff），则**isalnum**和 **_isalnum_l**的行为是不确定的。 当使用调试 CRT 库并且*c*不是这些值之一时，函数将引发断言。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

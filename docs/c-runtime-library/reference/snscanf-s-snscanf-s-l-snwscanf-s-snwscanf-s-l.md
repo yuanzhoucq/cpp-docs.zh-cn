@@ -1,12 +1,12 @@
 ---
 title: _snscanf_s、_snscanf_s_l、_snwscanf_s、_snwscanf_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _snwscanf_s_l
 - _snwscanf_s
 - _snscanf_s
 - _snscanf_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _sntscanf_s
 - snscanf_s
@@ -49,14 +52,14 @@ helpviewer_keywords:
 - _sntscanf_s function
 - snwscanf_s_l function
 ms.assetid: 72356653-7362-461a-af73-597b9c0a8094
-ms.openlocfilehash: 8d56999aea69c4674070410774d5a2fa11abb178
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 33507990c1b7e2c6fd1b30e2bdb9277ab611ef2a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62355687"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947951"
 ---
-# <a name="snscanfs-snscanfsl-snwscanfs-snwscanfsl"></a>_snscanf_s、_snscanf_s_l、_snwscanf_s、_snwscanf_s_l
+# <a name="_snscanf_s-_snscanf_s_l-_snwscanf_s-_snwscanf_s_l"></a>_snscanf_s、_snscanf_s_l、_snwscanf_s、_snwscanf_s_l
 
 从字符串中读取指定长度的格式化数据。 这些版本的 [_snscanf、_snscanf_l、_snwscanf、_snwscanf_l](snscanf-snscanf-l-snwscanf-snwscanf-l.md) 具有安全增强功能，如 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)所述。
 
@@ -93,7 +96,7 @@ int __cdecl _snwscanf_s_l(
 要检查的输入字符串。
 
 *length*<br/>
-要检查中的字符数*输入*。
+*输入*中要检查的字符数。
 
 *format*<br/>
 一个或多个格式说明符。
@@ -102,26 +105,26 @@ int __cdecl _snwscanf_s_l(
 要使用的区域设置。
 
 *argument_list*<br/>
-要分配根据格式字符串的可选参数。
+要根据格式字符串分配的可选参数。
 
 ## <a name="return-value"></a>返回值
 
-这两个函数都将返回已成功转换并分配的字段的数目；返回值不包括已读取但未分配的字段。 返回值为 0 表示没有分配任何字段。 返回值是**EOF**错误或如果在第一个转换之前到达字符串的末尾。 有关详细信息，请参阅 [sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)。
+这两个函数都将返回已成功转换并分配的字段的数目；返回值不包括已读取但未分配的字段。 返回值为 0 表示没有分配任何字段。 如果发生错误，则返回值为**EOF** ; 或者，如果在第一次转换之前到达字符串的末尾，则为。 有关详细信息，请参阅 [sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)。
 
-如果*输入*或*格式*是**NULL**调用指针，无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，这些函数将返回**EOF**并设置**errno**到**EINVAL**。
+如果*输入*或*格式*为**NULL**指针，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回**EOF** ，并将**Errno**设置为**EINVAL**。
 
 有关这些及其他错误代码的信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-此函数是像**sscanf_s** ，只不过它提供指定固定的数量的字符从输入字符串检查的功能。 有关详细信息，请参阅 [sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)。
+此函数类似于**sscanf_s** ，只不过它可以指定要从输入字符串中检查的固定数量的字符。 有关详细信息，请参阅 [sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)。
 
-缓冲区大小参数是必需的类型字段字符**c**， **C**， **s**， **S**，并 **[**. 有关详细信息，请参阅 [scanf 类型字段字符](../../c-runtime-library/scanf-type-field-characters.md)。
+缓冲区大小参数需要具有类型字段字符**c**、 **c**、 **s**、 **s**和 **[** 。 有关详细信息，请参阅 [scanf 类型字段字符](../../c-runtime-library/scanf-type-field-characters.md)。
 
 > [!NOTE]
-> 大小参数的类型是**无符号**，而非**size_t**。
+> 大小参数的类型为**无符号**类型，而不是**size_t**。
 
-使用这些函数的版本 **_l**后缀完全相同，只不过它们使用传递中而不是当前线程区域设置的区域设置参数。
+这些带有 **_l**后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -134,8 +137,8 @@ int __cdecl _snwscanf_s_l(
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**_snscanf_s**， **_snscanf_s_l**|\<stdio.h>|
-|**_snwscanf_s**， **_snwscanf_s_l**|\<stdio.h> 或 \<wchar.h>|
+|**_snscanf_s**、 **_snscanf_s_l**|\<stdio.h>|
+|**_snwscanf_s**、 **_snwscanf_s_l**|\<stdio.h> 或 \<wchar.h>|
 
 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

@@ -1,10 +1,10 @@
 ---
 title: _ismbbalpha、_ismbbalpha_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbbalpha
 - _ismbbalpha_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ismbbalpha
 - ismbbalpha_l
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - _ismbbalpha function
 - _ismbbalpha_l function
 ms.assetid: 8e54cb92-fc2b-41f5-8ab4-b22ac8aa9ad0
-ms.openlocfilehash: c08a92ae0630c977f12deb1d0bd7587f575efd86
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe60eec2eb7f93d866340aabe382bf32d6b04b21
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331553"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954257"
 ---
-# <a name="ismbbalpha-ismbbalphal"></a>_ismbbalpha、_ismbbalpha_l
+# <a name="_ismbbalpha-_ismbbalpha_l"></a>_ismbbalpha、_ismbbalpha_l
 
 确定指定的多字节字符是否是字母。
 
@@ -60,11 +63,11 @@ int _ismbbalpha_l(
 
 ## <a name="return-value"></a>返回值
 
-**_ismbbalpha**返回非零值，如果该表达式：
+如果表达式为，则 **_ismbbalpha**返回非零值：
 
 `isalpha(c) || _ismbbkalnum(c)`
 
-为非零*c*，或者，如果它不是 0。 **_ismbbalpha**的任何区域设置相关的字符设置使用当前区域设置。 **_ismbbalpha_l**是完全相同，只不过它使用传入的区域设置。
+对于*c*，为非零; 否则为0。 **_ismbbalpha**为任何与区域设置相关的字符设置使用当前区域设置。 **_ismbbalpha_l**是相同的，只不过它使用传入的区域设置。
 
 ## <a name="requirements"></a>要求
 

@@ -1,13 +1,13 @@
 ---
 title: vsnprintf_s、_vsnprintf_s、_vsnprintf_s_l、_vsnwprintf_s、_vsnwprintf_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _vsnwprintf_s
 - _vsnwprintf_s_l
 - _vsnprintf_s
 - vsnprintf_s
 - _vsnprintf_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - ntdll.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _vsnprintf_s
 - _vsntprintf_s
@@ -40,12 +43,12 @@ helpviewer_keywords:
 - _vsnwprintf_s function
 - formatted text [C++]
 ms.assetid: 147ccfce-58c7-4681-a726-ef54ac1c604e
-ms.openlocfilehash: 50e38e3177462f17436727cf26d1e7dade9cb882
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 8c41a09ce35819403b2361dcf5ad53eb93b7a615
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499087"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945292"
 ---
 # <a name="vsnprintf_s-_vsnprintf_s-_vsnprintf_s_l-_vsnwprintf_s-_vsnwprintf_s_l"></a>vsnprintf_s、_vsnprintf_s、_vsnprintf_s_l、_vsnwprintf_s、_vsnwprintf_s_l
 
@@ -113,9 +116,9 @@ int _vsnwprintf_s(
 输出的存储位置
 
 *sizeOfBuffer*<br/>
-用于输出的*缓冲区*大小, 作为字符计数。
+用于输出的*缓冲区*大小，作为字符计数。
 
-*计数*<br/>
+*count*<br/>
 要写入的字符最大数量（不包括终止 null 或 [_TRUNCATE](../../c-runtime-library/truncate.md)）。
 
 *format*<br/>
@@ -131,11 +134,11 @@ int _vsnwprintf_s(
 
 ## <a name="return-value"></a>返回值
 
-**vsnprintf_s**、 **_vsnprintf_s**和 **_vsnwprintf_s**返回写入的字符数, 不包括终止 null, 或者在出现输出错误时返回一个负值。 **vsnprintf_s**与 **_vsnprintf_s**相同。 提供**vsnprintf_s**是为了符合 ANSI 标准。 保留 **_vnsprintf**是为了向后兼容。
+**vsnprintf_s**、 **_vsnprintf_s**和 **_vsnwprintf_s**返回写入的字符数，不包括终止 null，或者在出现输出错误时返回一个负值。 **vsnprintf_s**与 **_vsnprintf_s**相同。 提供**vsnprintf_s**是为了符合 ANSI 标准。 保留 **_vnsprintf**是为了向后兼容。
 
-如果存储数据和终止 null 值所需的存储空间超过*sizeOfBuffer*, 则会调用无效的参数处理程序, 如[参数验证](../../c-runtime-library/parameter-validation.md)中所述, 除非*count*为[_TRUNCATE](../../c-runtime-library/truncate.md), 在这种情况下, 最多写入*缓冲区*中的字符串, 并返回-1。 如果执行在无效的参数处理程序之后继续, 则这些函数将*缓冲区*设置为空字符串, 将**Errno**设置为**ERANGE**, 并返回-1。
+如果存储数据和终止 null 值所需的存储空间超过*sizeOfBuffer*，则会调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述，除非*count*为[_TRUNCATE](../../c-runtime-library/truncate.md)，在这种情况下，最多写入*缓冲区*中的字符串，并返回-1。 如果执行在无效的参数处理程序之后继续，则这些函数将*缓冲区*设置为空字符串，将**Errno**设置为**ERANGE**，并返回-1。
 
-如果*buffer*或*format*为**空**指针, 或者*count*小于或等于零, 则调用无效的参数处理程序。 如果允许执行继续, 则这些函数会将**errno**设置为**EINVAL** , 并返回-1。
+如果*buffer*或*format*为**空**指针，或者*count*小于或等于零，则调用无效的参数处理程序。 如果允许执行继续, 则这些函数会将**errno**设置为**EINVAL** , 并返回-1。
 
 ### <a name="error-conditions"></a>错误条件
 
@@ -144,21 +147,21 @@ int _vsnwprintf_s(
 |*缓冲区*为**NULL**|-1|**EINVAL**|
 |*格式*为**NULL**|-1|**EINVAL**|
 |*计数*< = 0|-1|**EINVAL**|
-|*sizeOfBuffer*太小 (和*Count* ! = **_TRUNCATE**)|-1 (并将*缓冲区*设置为空字符串)|**ERANGE**|
+|*sizeOfBuffer*太小（和*Count* ！ = **_TRUNCATE**）|-1 （并将*缓冲区*设置为空字符串）|**ERANGE**|
 
 ## <a name="remarks"></a>备注
 
-其中每个函数都采用一个指向参数列表的指针, 然后将给定数据的最多个字符的*计数*字符写入*缓冲区*, 并追加一个终止 null。
+其中每个函数都采用一个指向参数列表的指针，然后将给定数据的最多个字符的*计数*字符写入*缓冲区*，并追加一个终止 null。
 
-如果*count*为[_TRUNCATE](../../c-runtime-library/truncate.md), 则这些函数会将尽可能多的字符串写入*缓冲区*, 同时为终止 null 留出空间。 如果整个字符串 (包括终止 null) 都适合*缓冲区*, 则这些函数将返回写入的字符数 (不包括终止 null);否则, 这些函数将返回-1 以指示发生了截断。
+如果*count*为[_TRUNCATE](../../c-runtime-library/truncate.md)，则这些函数会将尽可能多的字符串写入*缓冲区*，同时为终止 null 留出空间。 如果整个字符串（包括终止 null）都适合*缓冲区*，则这些函数将返回写入的字符数（不包括终止 null）;否则，这些函数将返回-1 以指示发生了截断。
 
-这些带有 **_l**后缀的函数的版本相同, 只不过它们使用传入的区域设置参数而不是当前线程区域设置。
+这些带有 **_l**后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
 
 > [!IMPORTANT]
 > 确保 format不是用户定义的字符串。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 > [!NOTE]
-> 若要确保终止 null 的空间, 请确保*计数*严格小于缓冲区长度, 或使用 **_TRUNCATE**。
+> 若要确保终止 null 的空间，请确保*计数*严格小于缓冲区长度，或使用 **_TRUNCATE**。
 
 在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 

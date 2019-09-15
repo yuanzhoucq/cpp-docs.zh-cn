@@ -1,10 +1,10 @@
 ---
 title: _getch、_getwch
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getch
 - _getwch
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - getwch
 - _getch
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - _getch function
 - getwch function
 ms.assetid: cc116be7-cff2-4274-970f-5e7b18ccc05c
-ms.openlocfilehash: 0b8f8ed4985810526552a3b66e81462fd656bb23
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 122892945e8542afa7f9f944f984387db7c5ec8a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331839"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955482"
 ---
-# <a name="getch-getwch"></a>_getch、_getwch
+# <a name="_getch-_getwch"></a>_getch、_getwch
 
 从无回显的控制台获取字符。
 
@@ -56,7 +59,7 @@ wint_t _getwch( void );
 
 ## <a name="remarks"></a>备注
 
-**_Getch**并 **_getwch**函数从不回显字符从控制台读取单个字符。 无可用于读取 CTRL+C 的函数。 在读取功能键或箭头键时，必须调用每个函数两次；第一次调用返回 0 或 0xE0，并且第二个调用会返回实际的键代码。
+**_Getch**和 **_getwch**函数在不回显字符的情况下从控制台读取单个字符。 无可用于读取 CTRL+C 的函数。 在读取功能键或箭头键时，必须调用每个函数两次；第一次调用返回 0 或 0xE0，并且第二个调用会返回实际的键代码。
 
 这些函数会锁定调用线程，因此是线程安全的。 有关非锁定版本的信息，请参阅 [_getch_nolock、_getwch_nolock](getch-nolock-getwch-nolock.md)。
 

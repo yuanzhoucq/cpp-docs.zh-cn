@@ -1,12 +1,12 @@
 ---
 title: _ungetch、_ungetwch、_ungetch_nolock、_ungetwch_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ungetch_nolock
 - _ungetwch_nolock
 - _ungetwch
 - _ungetch
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ungetch_nolock
 - ungetwch
@@ -44,14 +47,14 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-ms.openlocfilehash: 7407d26606bd5242c430961faa4f60090b83f036
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2f6b782334df710ac9fe6359fda77b40a31e060c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62268866"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945904"
 ---
-# <a name="ungetch-ungetwch-ungetchnolock-ungetwchnolock"></a>_ungetch、_ungetwch、_ungetch_nolock、_ungetwch_nolock
+# <a name="_ungetch-_ungetwch-_ungetch_nolock-_ungetwch_nolock"></a>_ungetch、_ungetwch、_ungetch_nolock、_ungetwch_nolock
 
 推送回未从控制台读取的最后一个字符。
 
@@ -82,11 +85,11 @@ wint_t _ungetwch_nolock(
 
 ## <a name="return-value"></a>返回值
 
-这两个函数均返回字符*c*如果成功。 如果出现错误 **_ungetch**返回的值**EOF**并 **_ungetwch**返回**WEOF**。
+如果成功，两个函数都将返回字符*c* 。 如果发生错误，则 **_ungetch**将返回值**EOF**并且 **_ungetwch**返回**WEOF**。
 
 ## <a name="remarks"></a>备注
 
-这些函数将字符推送*c*返回到控制台中，从而导致*c*要读取的下一个字符 **_getch**或者 **_getche** （或 **_getwch**或 **_getwche**)。 **_ungetch**并 **_ungetwch**如果它们之前下一次读取一次调用失败。 *C*参数可以不是**EOF** (或**WEOF**)。
+这些函数将字符*c*推送回控制台，导致*c*成为 **_getch**或 **_getche** （或 **_getwch**或 **_getwche**）读取的下一个字符。 如果在下一次读取之前调用了多次，则 **_ungetch**和 **_ungetwch**会失败。 *C*参数不能为**EOF** （或**WEOF**）。
 
 后缀为 **_nolock** 的版本是相同的，只不过它们可能会受到其他线程的影响。 它们可能更快，因为它们不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用这些函数，如单线程应用程序或调用范围已经处理线程隔离。
 
@@ -101,8 +104,8 @@ wint_t _ungetwch_nolock(
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**_ungetch**， **_ungetch_nolock**|\<conio.h>|
-|**_ungetwch**， **_ungetwch_nolock**|\<conio.h> 或 \<wchar.h>|
+|**_ungetch**、 **_ungetch_nolock**|\<conio.h>|
+|**_ungetwch**、 **_ungetwch_nolock**|\<conio.h> 或 \<wchar.h>|
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

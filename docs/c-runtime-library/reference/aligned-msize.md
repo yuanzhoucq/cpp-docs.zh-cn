@@ -1,9 +1,9 @@
 ---
 title: _aligned_msize
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _aligned_msize
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _aligned_msize
 - aligned_msize
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - aligned_msize function
 - _aligned_msize function
 ms.assetid: 10995edc-2110-4212-9ca9-5e0220a464f4
-ms.openlocfilehash: 97c739eed1f54f0c6705d37542eb13c6ec6879d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 922224dc81858076770a36551df26c89940b3282
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341920"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943905"
 ---
-# <a name="alignedmsize"></a>_aligned_msize
+# <a name="_aligned_msize"></a>_aligned_msize
 
 返回在堆中分配的存储块的大小。
 
@@ -61,11 +64,11 @@ size_t _msize(
 
 ## <a name="remarks"></a>备注
 
-**_Aligned_msize**函数返回的大小，以字节为单位，通过调用分配的内存块[_aligned_malloc](aligned-malloc.md)或[_aligned_realloc](aligned-realloc.md)。 *对齐*并*偏移量*值必须与传递给分配该块的函数的值相同。
+**_Aligned_msize**函数返回通过调用[_aligned_malloc](aligned-malloc.md)或[_aligned_realloc](aligned-realloc.md)分配的内存块的大小（以字节为单位）。 *对齐*和*偏移*值必须与传递给分配了块的函数的值相同。
 
-当与 C 运行时库的调试版本链接应用程序 **_aligned_msize**解析为[_aligned_msize_dbg](aligned-msize-dbg.md)。 有关在调试过程中如何托管堆的详细信息，请参阅 [CRT 调试堆](/visualstudio/debugger/crt-debug-heap-details)。
+当应用程序与调试版的 C 运行时库链接时， **_aligned_msize**解析为[_aligned_msize_dbg](aligned-msize-dbg.md)。 有关在调试过程中如何托管堆的详细信息，请参阅 [CRT 调试堆](/visualstudio/debugger/crt-debug-heap-details)。
 
-此函数验证其参数。 如果*memblock*是空指针或*对齐*不是 2 的幂 **_msize**中所述将调用无效参数处理程序，[参数验证](../../c-runtime-library/parameter-validation.md). 如果处理了错误，该函数将设置**errno**到**EINVAL**并返回-1。
+此函数验证其参数。 如果*memblock*为 null 指针或*对齐*不是2的幂，则 **_msize**将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果处理错误，函数会将**errno**设置为**EINVAL** ，并返回-1。
 
 ## <a name="requirements"></a>要求
 

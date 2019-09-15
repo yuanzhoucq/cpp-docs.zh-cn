@@ -1,10 +1,10 @@
 ---
 title: _putenv_s、_wputenv_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wputenv_s
 - _putenv_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - putenv_s
 - wputenv_s
@@ -31,14 +34,14 @@ helpviewer_keywords:
 - environment variables, creating
 - environment variables, modifying
 ms.assetid: fbf51225-a8da-4b9b-9d7c-0b84ef72df18
-ms.openlocfilehash: f675c2c0a2b12db3cce841dd0db9fa722393f1b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2de609314a12f626a21680b470bc8831eada2cb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357858"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949906"
 ---
-# <a name="putenvs-wputenvs"></a>_putenv_s、_wputenv_s
+# <a name="_putenv_s-_wputenv_s"></a>_putenv_s、_wputenv_s
 
 创建、修改或删除环境变量。 这些是安全性增强的 [_putenv、_wputenv](putenv-wputenv.md) 版本，如 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述。
 
@@ -77,11 +80,11 @@ errno_t _wputenv_s(
 |**NULL**|任何|**EINVAL**|
 |任何|**NULL**|**EINVAL**|
 
-如果发生某个错误条件，这些函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，这些函数将返回**EINVAL**并设置**errno**到**EINVAL**。
+如果发生某个错误条件，这些函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回**EINVAL** ，并将**Errno**设置为**EINVAL**。
 
 ## <a name="remarks"></a>备注
 
-**_Putenv_s**函数将新环境变量添加或修改现有环境变量的值。 环境变量定义过程执行的环境（例如待与程序链接的库的默认搜索路径）。 **_wputenv_s**是宽字符版本 **_putenv_s**; *envstring*参数 **_wputenv_s**是宽字符字符串。
+**_Putenv_s**函数添加了新的环境变量，或修改了现有环境变量的值。 环境变量定义过程执行的环境（例如待与程序链接的库的默认搜索路径）。 **_wputenv_s**是 **_putenv_s**的宽字符版本; **_wputenv_s**的*envstring*参数是宽字符字符串。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -89,16 +92,16 @@ errno_t _wputenv_s(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tputenv_s**|**_putenv_s**|**_putenv_s**|**_wputenv_s**|
 
-*varname*是要添加或修改的环境变量的名称和*value_string*是变量的值。 如果*varname*已经是环境，其值将替换为*value_string*; 否则为新*varname*变量并将其*value_string*添加到环境。 可以从环境中删除变量通过指定一个空字符串 (即，"") 的*value_string*。
+*varname*是要添加或修改的环境变量的名称， *value_string*是变量的值。 如果*varname*已是环境的一部分，则其值将替换为*value_string*;否则，新的*varname*变量及其*value_string*将添加到环境中。 可以通过为*value_string*指定一个空字符串（即 ""）来从环境中删除变量。
 
-**_putenv_s**并 **_wputenv_s**影响的当前进程局部环境; 不能用于修改命令级别环境。 这些函数仅对运行库可访问的数据结构执行，而不对操作系统为进程创建的环境“段”运行。 在当前进程终止时，环境将还原到调用进程的级别，它在大多数情况下为操作系统级别。 但是，修改后的环境可以传递到创建的任何新进程 **_spawn**， **_exec**，或**系统**，这些新进程将获取的任何新项通过添加 **_putenv_s**并 **_wputenv_s**。
+**_putenv_s**和 **_wputenv_s**仅影响当前进程的本地环境;不能使用它们来修改命令级别环境。 这些函数仅对运行库可访问的数据结构执行，而不对操作系统为进程创建的环境“段”运行。 在当前进程终止时，环境将还原到调用进程的级别，它在大多数情况下为操作系统级别。 但是，可以将修改后的环境传递到由 **_spawn**、 **_exec**或**系统**创建的任何新进程，这些新进程将获取 **_putenv_s**和 **_wputenv_s**添加的所有新项。
 
-不要直接调用更改环境条目请改用 **_putenv_s**或 **_wputenv_s**若要对其进行更改。 具体而言，直接释放的元素 **_environ []** 全局数组可能会导致无效内存寻址。
+不要直接更改环境条目;改为使用 **_putenv_s**或 **_wputenv_s**对其进行更改。 具体而言，直接释放 **_environ []** 全局数组的元素可能会导致无效内存。
 
-**getenv**并 **_putenv_s**使用全局变量 **_environ**访问环境表;**_wgetenv**并 **_wputenv_s**使用 **_wenviron**。 **_putenv_s**并 **_wputenv_s**可能会更改的值 **_environ**并 **_wenviron**，并因此使无效*envp*自变量**主**并 **_wenvp**参数**wmain**。 因此，它是使用更为安全的做法 **_environ**或 **_wenviron**访问环境信息。 有关关系的详细信息 **_putenv_s**并 **_wputenv_s**与全局变量，请参阅[_environ、 _wenviron](../../c-runtime-library/environ-wenviron.md)。
+**getenv**和 **_putenv_s**使用全局变量 **_environ**访问环境表; **_wgetenv**和 **_wputenv_s**使用 **_wenviron**。 **_putenv_s**和 **_wputenv_s**可能会更改 **_environ**和 **_wenviron**的值，因此会使*envp*参数和**main**和 **_wenvp 参数失效**。 因此，使用 **_environ**或 **_wenviron**来访问环境信息更安全。 有关 **_putenv_s**和 **_wputenv_s**与全局变量的关系的详细信息，请参阅[_environ，_wenviron](../../c-runtime-library/environ-wenviron.md)。
 
 > [!NOTE]
-> **_Putenv_s**并 **_getenv_s**系列函数不是线程安全。 **_getenv_s**返回时字符串指针 **_putenv_s**是修改的字符串，从而导致随机失败。 确保对这些函数的调用同步。
+> **_Putenv_s**和 **_getenv_s**系列的函数不是线程安全的。 当 **_putenv_s**正在修改字符串时， **_getenv_s**可能会返回字符串指针，从而导致随机失败。 确保对这些函数的调用同步。
 
 ## <a name="requirements"></a>要求
 
@@ -111,7 +114,7 @@ errno_t _wputenv_s(
 
 ## <a name="example"></a>示例
 
-有关演示如何使用的示例 **_putenv_s**，请参阅[getenv_s、 _wgetenv_s](getenv-s-wgetenv-s.md)。
+有关演示如何使用 **_putenv_s**的示例，请参阅[getenv_s、_wgetenv_s](getenv-s-wgetenv-s.md)。
 
 ## <a name="see-also"></a>请参阅
 

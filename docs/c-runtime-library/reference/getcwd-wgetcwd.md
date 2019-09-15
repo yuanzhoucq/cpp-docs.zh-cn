@@ -1,10 +1,10 @@
 ---
 title: _getcwd、_wgetcwd
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wgetcwd
 - _getcwd
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _getcwd
 - wgetcwd
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - wgetcwd function
 - directories [C++], current working
 ms.assetid: 888dc8c6-5595-4071-be55-816b38e3e739
-ms.openlocfilehash: 4c533f0e716cb9a13c152b9be3c46f60291118d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78b02871aafca85db50df2eea74a2210c578c204
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331787"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955249"
 ---
-# <a name="getcwd-wgetcwd"></a>_getcwd、_wgetcwd
+# <a name="_getcwd-_wgetcwd"></a>_getcwd、_wgetcwd
 
 获取当前工作目录。
 
@@ -63,23 +66,23 @@ wchar_t *_wgetcwd(
 路径的存储位置。
 
 *maxlen*<br/>
-以字符为单位的路径的最大长度： **char**有关 **_getcwd**并**wchar_t**有关 **_wgetcwd**。
+路径的最大长度（字符）： **char** for **_getcwd** ， **wchar_t**用于 **_wgetcwd**。
 
 ## <a name="return-value"></a>返回值
 
-返回一个指向*缓冲区*。 一个**NULL**返回值指示错误，并**errno**设置为**ENOMEM**，，该值指示是否有足够的内存来分配*maxlen*字节 (时**NULL**参数指定为*缓冲区*)，或设置为**ERANGE**，指示路径的长度超过*maxlen*字符。 如果*maxlen*小于或等于零，此函数调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。
+返回一个指向*缓冲区*的指针。 **空**返回值指示错误， **Errno**设置为**ENOMEM**，指示内存不足，无法分配*maxlen*字节（当**空**参数作为*缓冲区*提供时）或**ERANGE**，指示路径长度超过*maxlen*个字符。 如果*maxlen*小于或等于零，此函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。
 
 有关这些属性和其他的更多信息返回代码示例，请参见 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**_Getcwd**函数获取默认驱动器的当前工作目录的完整路径，并将其存储在*缓冲区*。 整数自变量*maxlen*指定路径的最大长度。 如果路径 （包括终止 null 字符） 的长度超过了出错*maxlen*。 *缓冲区*参数可以是**NULL**; 的大小至少缓冲区*maxlen* （仅在必需时超过） 自动分配，使用**malloc**，以存储路径。 更高版本可以通过调用释放此缓冲区**免费**并将其传递 **_getcwd**返回值 （指向已分配的缓冲区的指针）。
+**_Getcwd**函数获取默认驱动器的当前工作目录的完整路径，并将其存储在*缓冲区*中。 整数参数*maxlen*指定路径的最大长度。 如果路径长度（包括终止 null 字符）超过*maxlen*，则会出现错误。 *Buffer*参数可以为**NULL**;使用**malloc**自动分配*maxlen*大小至少为（仅在必要时更多）的缓冲区，以存储路径。 稍后可通过调用**free**并向其传递 **_getcwd**返回值（指向已分配缓冲区的指针）来释放此缓冲区。
 
-**_getcwd**返回一个字符串，表示当前工作目录的路径。 如果当前工作目录为根目录，该字符串以反斜杠结尾 ( **\\** )。 如果当前工作目录为根目录之外的目录，则字符串以目录名称结尾，而不是以反斜杠结尾。
+**_getcwd**返回一个字符串，该字符串表示当前工作目录的路径。 如果当前工作目录是根，则字符串以反斜杠（ **\\** ）结尾。 如果当前工作目录为根目录之外的目录，则字符串以目录名称结尾，而不是以反斜杠结尾。
 
-**_wgetcwd**是宽字符版本 **_getcwd**;*缓冲区*参数和返回值 **_wgetcwd**都是宽字符字符串。 **_wgetcwd**并 **_getcwd**行为相同。
+**_wgetcwd**是 **_getcwd**的宽字符版本; **_wgetcwd**的*buffer*参数和返回值是宽字符字符串。 否则， **_wgetcwd**和 **_getcwd**的行为相同。
 
-当 **_DEBUG**和 **_CRTDBG_MAP_ALLOC**定义，则调用 **_getcwd**并 **_wgetcwd**对的调用替换为 **_getcwd_dbg**并 **_wgetcwd_dbg**以便调试内存分配。 有关详细信息，请参阅 [_getcwd_dbg, _wgetcwd_dbg](getcwd-dbg-wgetcwd-dbg.md)。
+定义 **_debug**和 **_CRTDBG_MAP_ALLOC**时，对 **_getcwd**和 **_wgetcwd**的调用将替换为对 **_getcwd_dbg**和 **_wgetcwd_dbg**的调用，以允许调试内存分配。 有关详细信息，请参阅 [_getcwd_dbg, _wgetcwd_dbg](getcwd-dbg-wgetcwd-dbg.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

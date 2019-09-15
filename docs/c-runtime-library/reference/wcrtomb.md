@@ -1,9 +1,9 @@
 ---
 title: wcrtomb
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wcrtomb
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcrtomb
 helpviewer_keywords:
@@ -24,12 +27,12 @@ helpviewer_keywords:
 - multibyte characters
 - characters, converting
 ms.assetid: 717f1b21-2705-4b7f-b6d0-82adc5224340
-ms.openlocfilehash: a5fad3f41c7ed459a1af3fae7c6a5a85c867d5ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d2108b90f6884113f0bd974bf7aa634544adf5f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188648"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945223"
 ---
 # <a name="wcrtomb"></a>wcrtomb
 
@@ -60,7 +63,7 @@ size_t wcrtomb(
 要转换的宽字符。
 
 *mbstate*<br/>
-一个指向**mbstate_t**对象。
+指向**mbstate_t**对象的指针。
 
 ## <a name="return-value"></a>返回值
 
@@ -68,17 +71,17 @@ size_t wcrtomb(
 
 ## <a name="remarks"></a>备注
 
-**Wcrtomb**函数将转换的宽字符，包含在指定的转换状态开始*mbstate*，从中包含的值*wchar*，到地址由*mbchar*。 返回值是表示相应多字节字符，所需的字节数，但它不会返回多个**MB_CUR_MAX**字节。
+**Wcrtomb**函数将从*mbstate* *中包含*的指定转换状态开始的宽字符转换为*mbchar*所表示的地址。 返回值是表示相应的多字节字符所需的字节数，但不会返回超过**MB_CUR_MAX**字节。
 
-如果*mbstate*为 null，内部**mbstate_t**对象，其中包含的转换状态*mbchar*使用。 如果字符序列*wchar*不具有相应的多字节字符表示形式，则返回-1 并**errno**设置为**EILSEQ**。
+如果*mbstate*为 null，则使用包含*mbchar*转换状态的内部**mbstate_t**对象。 如果字符序列*wchar*没有对应的多字节字符表示形式，则返回-1，并将**Errno**设置为**eilseq 且**。
 
-**Wcrtomb**函数不同于[wctomb、 _wctomb_l](wctomb-wctomb-l.md)通过其可重启性。 转换状态存储在*mbstate*以便后续调用相同或其他可重启函数。 混合使用可重启函数和不可重启函数时，结果不确定。 例如，使用应用程序**wcsrlen**而非**wcsnlen**，则随后调用**wcsrtombs**而不是使用了**wcstombs**.
+**Wcrtomb**函数的可重启性不同于[wctomb、_wctomb_l](wctomb-wctomb-l.md) 。 转换状态存储在*mbstate*中，以便后续调用相同的或其他可重启的函数。 混合使用可重启函数和不可重启函数时，结果不确定。 例如，如果使用了对**wcsrtombs**的后续调用而不是**wcstombs**，应用程序将使用**wcsrlen**而不是**wcsnlen**。
 
 在 C++ 中，此函数具有一个调用此函数的更新、更安全副本的模板重载。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
 ## <a name="exceptions"></a>Exceptions
 
-**Wcrtomb**函数是多线程安全，只要当前线程中的函数不调用**setlocale** ，此函数执行和 while *mbstate*为 null。
+只要当前线程中的函数都不调用**setlocale** ，而此函数正在执行且*mbstate*为 null， **wcrtomb**函数就是多线程安全的。
 
 ## <a name="example"></a>示例
 

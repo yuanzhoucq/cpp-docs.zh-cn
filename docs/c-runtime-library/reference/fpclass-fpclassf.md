@@ -1,10 +1,10 @@
 ---
 title: _fpclass、_fpclassf
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _fpclass
 - _fpclassf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fpclass
 - _fpclass
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - _fpclass function
 - _fpclassf function
 ms.assetid: 2774872d-3543-446f-bc72-db85f8b95a6b
-ms.openlocfilehash: 987c87cc7a03f4a24e47654ae52e8a2416a15184
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e561cff956ca51707834bf869a1c114f0c99a3e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333217"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957032"
 ---
-# <a name="fpclass-fpclassf"></a>_fpclass、_fpclassf
+# <a name="_fpclass-_fpclassf"></a>_fpclass、_fpclassf
 
 返回一个值，该值指示参数的浮点分类。
 
@@ -60,16 +63,16 @@ int _fpclassf(
 
 ## <a name="return-value"></a>返回值
 
-**_Fpclass**并 **_fpclassf**函数将返回一个整数值，指示该参数的浮点分类*x*。 分类可能具有 \<float.h> 中定义的下列值之一。
+**_Fpclass**和 **_fpclassf**函数返回一个整数值，指示参数*x*的浮点分类。 分类可能具有 \<float.h> 中定义的下列值之一。
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
 |**_FPCLASS_SNAN**|信令 NaN|
 |**_FPCLASS_QNAN**|静默 NaN|
-|**_FPCLASS_NINF**|负无穷大 (-INF)|
+|**_FPCLASS_NINF**|负无穷大（-INF）|
 |**_FPCLASS_NN**|标准化的非零负值|
 |**_FPCLASS_ND**|非标准化的负值|
-|**_FPCLASS_NZ**|负零 （-0）|
+|**_FPCLASS_NZ**|负零（-0）|
 |**_FPCLASS_PZ**|正零 (+0)|
 |**_FPCLASS_PD**|非标准化的正值|
 |**_FPCLASS_PN**|标准化的非零正值|
@@ -77,13 +80,13 @@ int _fpclassf(
 
 ## <a name="remarks"></a>备注
 
-**_Fpclass**并 **_fpclassf**是 Microsoft 特定函数的函数。 它们类似于 [fpclassify](fpclassify.md)，但返回有关参数的更多详情信息。 **_Fpclassf**函数只是在编译 x64 时可用平台。
+**_Fpclass**和 **_Fpclassf**函数是 Microsoft 特定的。 它们类似于 [fpclassify](fpclassify.md)，但返回有关参数的更多详情信息。 仅当为 x64 平台编译时， **_fpclassf**函数才可用。
 
 ## <a name="requirements"></a>要求
 
 |函数|必需的标头|
 |--------------|---------------------|
-|**_fpclass**， **_fpclassf**|\<float.h>|
+|**_fpclass**、 **_fpclassf**|\<float.h>|
 
 有关兼容性和符合性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 

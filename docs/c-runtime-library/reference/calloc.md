@@ -1,9 +1,9 @@
 ---
 title: calloc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - calloc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - calloc
 helpviewer_keywords:
 - memory allocation, arrays
 - calloc function
 ms.assetid: 17bb79a1-98cf-4096-90cb-1f9365cd6829
-ms.openlocfilehash: 59aa535136cf32ea5dd68b8917ec969eee41e2ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba498b35106f9ff1636bb1bc0764088a434b5b01
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347725"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939329"
 ---
 # <a name="calloc"></a>calloc
 
@@ -52,15 +55,15 @@ void *calloc(
 
 ## <a name="return-value"></a>返回值
 
-**calloc**返回指向已分配空间的指针。 返回值将指向保证适当对齐任何类型的对象的存储的存储空间。 若要获取指向类型以外**void**，使用类型强制转换返回值上。
+**calloc**返回指向已分配空间的指针。 返回值将指向保证适当对齐任何类型的对象的存储的存储空间。 若要获取指向非**void**类型的指针，请在返回值上使用类型转换。
 
 ## <a name="remarks"></a>备注
 
-**Calloc**函数的数组分配存储空间*数量*元素，每个长度*大小*字节。 将每个元素初始化为 0。
+**Calloc**函数为数字元素数组分配存储空间，每个*数字*元素长度为*大小*字节。 将每个元素初始化为 0。
 
-**calloc**设置**errno**到**ENOMEM**如果内存分配失败或请求的内存量超过 **_HEAP_MAXREQ**。 有关此代码及其他错误代码的信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如果内存分配失败或请求的内存量超过 **_HEAP_MAXREQ**， **calloc**将**errno**设置为**ENOMEM** 。 有关此代码及其他错误代码的信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-**calloc**调用**malloc**使用C++ [_set_new_mode](set-new-mode.md)函数设置新的处理程序模式。 新的处理程序模式将指示是否在失败时， **malloc**是所设置的调用新处理程序例程[_set_new_handler](set-new-handler.md)。 默认情况下**malloc**不会调用新处理程序例程上分配内存失败。 可以重写此默认行为，以便，当**calloc**无法分配内存， **malloc**调用新处理程序例程中相同的方式**新**运算符执行当出于相同原因。 若要重写默认值，请在程序的早期调用：
+**calloc**调用**malloc**来使用C++ [_set_new_mode](set-new-mode.md)函数设置新的处理程序模式。 新处理程序模式指示在失败时， **malloc**是否调用由[_set_new_handler](set-new-handler.md)设置的新处理程序例程。 默认情况下，在无法分配内存时， **malloc**不会调用新的处理程序例程。 您可以重写此默认行为，以便在**calloc**无法分配内存时， **malloc**会调用新的处理程序例程，其方式与在同一原因下**新**运算符失败时相同。 若要重写默认值，请在程序的早期调用：
 
 ```C
 _set_new_mode(1);
@@ -68,9 +71,9 @@ _set_new_mode(1);
 
 或链接到 NEWMODE.OBJ（请参阅[链接选项](../../c-runtime-library/link-options.md)）。
 
-当与 C 运行时库的调试版本链接应用程序**calloc**解析为[_calloc_dbg](calloc-dbg.md)。 有关在调试过程中如何托管堆的详细信息，请参阅 [CRT 调试堆](/visualstudio/debugger/crt-debug-heap-details)。
+当应用程序与调试版的 C 运行时库链接时， **calloc**解析为[_calloc_dbg](calloc-dbg.md)。 有关在调试过程中如何托管堆的详细信息，请参阅 [CRT 调试堆](/visualstudio/debugger/crt-debug-heap-details)。
 
-**calloc**砆`__declspec(noalias)`和`__declspec(restrict)`，这意味着确保该函数不能修改全局变量，并且指针返回不使用别名。 有关详细信息，请参阅 [noalias](../../cpp/noalias.md) 和[限制](../../cpp/restrict.md)。
+**calloc**被标记`__declspec(noalias)` `__declspec(restrict)`为，这意味着该函数保证不修改全局变量，并且返回的指针没有化名。 有关详细信息，请参阅 [noalias](../../cpp/noalias.md) 和[限制](../../cpp/restrict.md)。
 
 ## <a name="requirements"></a>要求
 

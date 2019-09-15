@@ -1,10 +1,10 @@
 ---
 title: _onexit、_onexit_m
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _onexit
 - _onexit_m
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _onexit
 - onexit_m
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - registering exit routines
 - registering to be called on exit
 ms.assetid: 45743298-0e2f-46cf-966d-1ca44babb443
-ms.openlocfilehash: c190f777032904802f771bab9fc323ba305ff32e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9afcd729f19f11b82e8f24c2b7fcf9ec40990deb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156040"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951349"
 ---
-# <a name="onexit-onexitm"></a>_onexit、_onexit_m
+# <a name="_onexit-_onexit_m"></a>_onexit、_onexit_m
 
 注册在退出时要调用的例程。
 
@@ -54,20 +57,20 @@ _onexit_t_m _onexit_m(
 
 ### <a name="parameters"></a>参数
 
-*function*<br/>
+*函数*<br/>
 指向在退出时要调用的函数的指针。
 
 ## <a name="return-value"></a>返回值
 
-**_onexit**如果成功，则返回对函数的指针或**NULL**如果没有空间来存储函数指针。
+如果成功， **_onexit**将返回指向函数的指针; 如果没有空间来存储函数指针，则返回**NULL** 。
 
 ## <a name="remarks"></a>备注
 
-**_Onexit**函数被传入函数的地址 (*函数*) 程序正常终止时要调用。 后续调用 **_onexit**创建一个函数注册表的后进先出 （上一次中的先进先出） 顺序执行的函数。 函数传递给 **_onexit**不能采用参数。
+当程序正常终止时，传递要调用的函数的地址（*函数*）的 **_onexit**函数。 对 **_onexit**的后续调用将创建一个在后进先出（后进先出）顺序执行的函数。 传递给 **_onexit**的函数不能采用参数。
 
-在这种情况时 **_onexit**从 DLL 注册的例程中调用 **_onexit** DLL 上的运行的卸载后**DllMain**使用 DLL_PROCESS_DETACH 调用。
+如果从 DLL 中调用 **_onexit** ，则在使用 DLL_PROCESS_DETACH 调用**DllMain**后，使用 **_onexit**注册的例程会在 dll 卸载时运行。
 
-**_onexit**是 Microsoft 扩展。 若要获得 ANSI 可移植性，请使用 [atexit](atexit.md)。 **_Onexit_m**函数的版本是适用于混合的模式。
+**_onexit**是 Microsoft 扩展。 若要获得 ANSI 可移植性，请使用 [atexit](atexit.md)。 函数的 **_onexit_m**版本适用于混合模式使用。
 
 ## <a name="requirements"></a>要求
 

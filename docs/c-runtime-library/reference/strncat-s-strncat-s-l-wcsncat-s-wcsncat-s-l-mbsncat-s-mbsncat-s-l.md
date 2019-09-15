@@ -1,14 +1,14 @@
 ---
 title: strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wcsncat_s_l
 - wcsncat_s
 - _mbsncat_s_l
 - _mbsncat_s
 - strncat_s
 - _strncat_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - strncat_s_l
 - _mbsncat_s_l
@@ -48,19 +51,19 @@ helpviewer_keywords:
 - wcsncat_s_l function
 - mbsncat_s function
 ms.assetid: de77eca2-4d9c-4e66-abf2-a95fefc21e5a
-ms.openlocfilehash: 6651bb6ac405ed51945f021e8d1e19f1db05d5e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2a3c8d7019c271b2673e85e124d50139d34866c6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209887"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947411"
 ---
-# <a name="strncats-strncatsl-wcsncats-wcsncatsl-mbsncats-mbsncatsl"></a>strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l
+# <a name="strncat_s-_strncat_s_l-wcsncat_s-_wcsncat_s_l-_mbsncat_s-_mbsncat_s_l"></a>strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l
 
 向字符串追加字符。 这些版本的 [strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md) 具有安全性增强功能，如 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述。
 
 > [!IMPORTANT]
-> **_mbsncat_s**并 **_mbsncat_s_l**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbsncat_s**和 **_mbsncat_s_l**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -168,7 +171,7 @@ null 终止的源字符串。
 
 ### <a name="error-conditions"></a>错误条件
 
-|*strDestination*|*numberOfElements*|*strSource*|返回值|内容*strDestination*|
+|*strDestination*|*numberOfElements*|*strSource*|返回值|*StrDestination*的内容|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
 |**NULL**或未终止|任何|任何|**EINVAL**|未修改|
 |任何|任何|**NULL**|**EINVAL**|未修改|
@@ -176,9 +179,9 @@ null 终止的源字符串。
 
 ## <a name="remarks"></a>备注
 
-这些函数尝试将第一个追加*D*个字符*strSource*到末尾*strDest*，其中*D*是较小的*计数*和长度*strSource*。 如果追加那些*D*个字符将适合*strDest* (其大小给定为*numberOfElements*) 并且仍有空间 null 终止符，则这些字符追加，开始终止 null 的原始*strDest*，并且新的终止 null 追加; 否则为*strDest*[0] 设置为 null 字符，并且无效的参数调用处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。
+这些函数尝试将*strSource*的前*D*个字符追加到*StrDest*的末尾，其中*D*是*计数*的较小和*strSource*的长度。 如果将这些*D*字符追加到*strDest* （其大小被指定为*numberOfElements*），并且仍为 null 终止符留出空间，则会追加这些字符，从*strDest*，并追加新的终止 null 值;否则， *strDest*[0] 设置为 null 字符，并调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。
 
-在上段描述的内容中有一个例外。 如果*计数*是[_TRUNCATE](../../c-runtime-library/truncate.md)然后尽可能多*strSource*会追加到*strDest*同时保留有空间追加终止 null。
+在上段描述的内容中有一个例外。 如果*count*为[_TRUNCATE](../../c-runtime-library/truncate.md) ，则在仍有空间追加终止 null 值时，会在*StrDest*中追加最多*strSource* 。
 
 例如，应用于对象的
 
@@ -188,9 +191,9 @@ strncpy_s(dst, _countof(dst), "12", 2);
 strncat_s(dst, _countof(dst), "34567", 3);
 ```
 
-意味着我们要求**strncat_s**将三个字符追加到两个字符的缓冲区五个字符长; 这会不留有空间为 null 终止符，因此**strncat_s**零字符串并调用无效参数处理程序。
+表示我们要求**strncat_s**将三个字符追加到缓冲区中的两个字符（长度为5个字符）;这将不会为 null 终止符留出空间，因此**strncat_s**将字符串输出为零，并调用无效的参数处理程序。
 
-如果需要截断行为，则使用 **_TRUNCATE**或调整*大小*参数相应地：
+如果需要截断行为，请使用 **_TRUNCATE**或相应地调整*size*参数：
 
 ```C
 strncat_s(dst, _countof(dst), "34567", _TRUNCATE);
@@ -204,9 +207,9 @@ strncat_s(dst, _countof(dst), "34567", _countof(dst)-strlen(dst)-1);
 
 在所有情况下，结果字符串以 null 字符终止。 如果复制出现在重叠的字符串之间，则该行为不确定。
 
-如果*strSource*或*strDest*是**NULL**，或者*numberOfElements*为零，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，该函数返回**EINVAL**而无需修改其参数。
+如果*strSource*或*strDest*为**NULL**，或者*numberOfElements*为0，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则函数返回**EINVAL** ，而不修改其参数。
 
-**wcsncat_s**并 **_mbsncat_s**宽字符及多字节字符版本的**strncat_s**。 字符串参数和返回值**wcsncat_s**是宽字符字符串; **_mbsncat_s**是多字节字符字符串。 否则这三个函数否则具有相同行为。
+**wcsncat_s**和 **_mbsncat_s**是**strncat_s**的宽字符和多字节字符版本。 **Wcsncat_s**的字符串参数和返回值是宽字符字符串; **_mbsncat_s**的这些字符串是多字节字符字符串。 否则这三个函数否则具有相同行为。
 
 输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
@@ -221,7 +224,7 @@ strncat_s(dst, _countof(dst), "34567", _countof(dst)-strlen(dst)-1);
 |**_tcsncat_s**|**strncat_s**|**_mbsnbcat_s**|**wcsncat_s**|
 |**_tcsncat_s_l**|**_strncat_s_l**|**_mbsnbcat_s_l**|**_wcsncat_s_l**|
 
-**_strncat_s_l**并 **_wcsncat_s_l**没有区域设置相关性; 它们仅供 **_tcsncat_s_l**。
+**_strncat_s_l**和 **_wcsncat_s_l**没有区域设置依赖关系;它们只是为 **_tcsncat_s_l**提供的。
 
 ## <a name="requirements"></a>要求
 
@@ -229,7 +232,7 @@ strncat_s(dst, _countof(dst), "34567", _countof(dst)-strlen(dst)-1);
 |-------------|---------------------|
 |**strncat_s**|\<string.h>|
 |**wcsncat_s**|\<string.h> 或 \<wchar.h>|
-|**_mbsncat_s**， **_mbsncat_s_l**|\<mbstring.h>|
+|**_mbsncat_s**、 **_mbsncat_s_l**|\<mbstring.h>|
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

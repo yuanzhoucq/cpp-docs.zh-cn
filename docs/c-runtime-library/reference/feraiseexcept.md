@@ -1,9 +1,9 @@
 ---
 title: feraiseexcept
 ms.date: 04/05/2018
-apiname:
+api_name:
 - feraiseexcept
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,19 +14,20 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: HeaderDef
+api_type:
+- HeaderDef
 f1_keywords:
 - feraiseexcept
 - fenv/feraiseexcept
 helpviewer_keywords:
 - feraiseexcept function
 ms.assetid: 87e89151-83c2-4563-9a9a-45666245d437
-ms.openlocfilehash: 581dd4026a20ce7221945c5815af3ae102f132fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40ff315c179a6b62a3073d4f07e4e6a6d1c1acab
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334354"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941129"
 ---
 # <a name="feraiseexcept"></a>feraiseexcept
 
@@ -51,7 +52,7 @@ int feraiseexcept(
 
 ## <a name="remarks"></a>备注
 
-**Feraiseexcept**函数尝试引发由指定的浮点异常*除*。   **Feraiseexcept**函数支持中定义的这些异常宏\<fenv.h >:
+**Feraiseexcept**函数尝试引发*removed*指定的浮点异常。   **Feraiseexcept**函数支持在 v. > 中定义的\<这些异常宏：
 
 |异常宏|描述|
 |---------------------|-----------------|
@@ -62,11 +63,11 @@ int feraiseexcept(
 |FE_UNDERFLOW|早期的浮点运算结果因为过小而无法以完整的精度表示；创建了非常规值。|
 |FE_ALLEXCEPT|所有受支持的浮点异常的按位 OR。|
 
-*除*参数可能为零、 一个异常宏值，或按位 OR 的两个或多个受支持的异常宏。 如果一个指定的异常宏是 FE_OVERFLOW 或 FE_UNDERFLOW，FE_INEXACT 异常可能会引发副作用。
+*Removed*参数可以为零、一个异常宏值，或者两个或多个受支持的异常宏的按位 or。 如果一个指定的异常宏是 FE_OVERFLOW 或 FE_UNDERFLOW，FE_INEXACT 异常可能会引发副作用。
 
 若要使用此函数，必须在调用前先使用 `#pragma fenv_access(on)` 指令关闭可能会阻止访问的浮点优化。 有关详细信息，请参阅 [fenv_access](../../preprocessor/fenv-access.md)。
 
-**特定于 Microsoft:** 中指定的异常*除*引发顺序 FE_INVALID、 FE_DIVBYZERO、 FE_OVERFLOW、 FE_UNDERFLOW、 FE_INEXACT。 但是，可能引发 FE_INEXACT 当引发 FE_OVERFLOW 或 FE_UNDERFLOW 时，即使在未指定*除*。 **结束 Microsoft 专用**
+**Microsoft 专用：** 在*removed*中指定的异常将按顺序 FE_INVALID、FE_DIVBYZERO、FE_OVERFLOW、FE_UNDERFLOW、FE_INEXACT 引发。 但是，如果在*removed*中未指定，则会在引发 FE_OVERFLOW 或 FE_UNDERFLOW 时引发 FE_INEXACT。 **结束 Microsoft 专用**
 
 ## <a name="requirements"></a>要求
 

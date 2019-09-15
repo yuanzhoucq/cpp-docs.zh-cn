@@ -1,11 +1,11 @@
 ---
 title: log2、log2f、log2l
 ms.date: 04/05/2018
-apiname:
+api_name:
 - log2
 - log2l
 - log2f
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,14 +17,17 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 ms.assetid: 94d11b38-70b7-4d3a-94ac-523153c92b2e
-ms.openlocfilehash: d70d074b13b0f24f1f040ef0e861e073e303ac7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf1734ea2f96fa1c09b3b0d1f43b681fc31c8f9f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285934"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953160"
 ---
 # <a name="log2-log2f-log2l"></a>log2、log2f、log2l
 
@@ -61,7 +64,7 @@ long double log2l(
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则返回 log2 *x*。
+如果成功，返回 log2 *x*。
 
 否则，可能返回以下值之一：
 
@@ -79,13 +82,13 @@ long double log2l(
 
 ## <a name="remarks"></a>备注
 
-如果 x 是一个整数，此函数实质上是返回的最重要的 1 位的从零开始的索引*x*。
+如果 x 是整数，则此函数实质上将返回*x*的最大1位的从零开始的索引。
 
 ## <a name="requirements"></a>要求
 
 |函数|C 标头|C++ 标头|
 |--------------|--------------|------------------|
-|**log2**， **log2f**， **log2l**|\<math.h>|\<cmath>|
+|**log2**、 **log2f**、 **log2l**|\<math.h>|\<cmath>|
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

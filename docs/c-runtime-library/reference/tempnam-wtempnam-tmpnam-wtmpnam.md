@@ -1,12 +1,12 @@
 ---
 title: _tempnam、_wtempnam、tmpnam、_wtmpnam
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wtempnam
 - _wtmpnam
 - tmpnam
 - _tempnam
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wtempnam
 - _wtmpnam
@@ -40,12 +43,12 @@ helpviewer_keywords:
 - _wtmpnam function
 - _wtempnam function
 ms.assetid: 3ce75f0f-5e30-42a6-9791-8d7cbfe70fca
-ms.openlocfilehash: 0e8e11182948e9bccf1c55685cc7c3d55ff697c8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 9fd1eb9f2f718afec5b7d5555145fcd7e5cc17cf
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500768"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957522"
 ---
 # <a name="_tempnam-_wtempnam-tmpnam-_wtmpnam"></a>_tempnam、_wtempnam、tmpnam、_wtmpnam
 
@@ -83,7 +86,7 @@ wchar_t *_wtmpnam(
 
 ## <a name="return-value"></a>返回值
 
-其中每个函数均返回一个指向生成的名称的指针, 如果出现错误, 则返回**NULL** 。 如果尝试超过**TMP_MAX** , 则可能会失败 (请参阅 stdio.h。H) 使用**tmpnam**调用, 或者, 如果使用的是 **_tempnam** , 并且在 TMP 环境变量和*dir*参数中指定了无效的目录名称。
+其中每个函数均返回一个指向生成的名称的指针，如果出现错误，则返回**NULL** 。 如果尝试超过**TMP_MAX** ，则可能会失败（请参阅 stdio.h。H）使用**tmpnam**调用，或者，如果使用的是 **_tempnam** ，并且在 TMP 环境变量和*dir*参数中指定了无效的目录名称。
 
 > [!NOTE]
 > **Tmpnam**和 **_wtmpnam**所返回的指针指向内部静态缓冲区。 不应调用 [free](free.md) 来释放这些指针。 需要为 **_tempnam**和 **_wtempnam**所分配的指针调用**free** 。
@@ -92,21 +95,21 @@ wchar_t *_wtmpnam(
 
 这些函数返回的文件名当前不存在。 **tmpnam**返回由[GetTempPathW](/windows/win32/api/fileapi/nf-fileapi-gettemppathw)返回的指定 Windows 临时目录中唯一的名称。 tempnam 在指定的目录以外的目录中生成唯一名称。  **\_** 请注意，如果一个文件名称使用反斜杠作为前缀（如 \fname21），表示该名称对当前工作目录有效。
 
-对于**tmpnam**, 你可以将生成的文件名存储在*str*中。 如果*str*为**NULL**, 则**tmpnam**将结果保留在内部静态缓冲区中。 因此，任何后续调用都会破坏该值。 由**tmpnam**生成的名称包含程序生成的文件名, 并在第一次调用 tmpnam 后, 在第 32 (. 1-, TMP_MAX 中的**stdio.h**时, 为的文件扩展名。H 为 32767)。
+对于**tmpnam**，你可以将生成的文件名存储在*str*中。 如果*str*为**NULL**，则**tmpnam**将结果保留在内部静态缓冲区中。 因此，任何后续调用都会破坏该值。 由**tmpnam**生成的名称包含程序生成的文件名，并在第一次调用 tmpnam 后，在第32（. 1-，TMP_MAX 中的**stdio.h**时，为的文件扩展名。H 为32767）。
 
-**_tempnam**将为以下规则所选择的目录生成唯一的文件名:
+**_tempnam**将为以下规则所选择的目录生成唯一的文件名：
 
 - 如果定义了 TMP 环境变量并将其设置为有效的目录名称，则 TMP 所指定的目录将生成唯一文件名。
 
-- 如果未定义 TMP 环境变量, 或者未将其设置为不存在的目录的名称, 则 **_tempnam**将使用*dir*参数作为其将生成唯一名称的路径。
+- 如果未定义 TMP 环境变量，或者未将其设置为不存在的目录的名称，则 **_tempnam**将使用*dir*参数作为其将生成唯一名称的路径。
 
-- 如果未定义 TMP 环境变量, 或将其设置为不存在的目录的名称, 并且*dir*为**空**或设置为不存在的目录的名称, 则 **_tempnam**将使用当前工作目录基因为唯一名称打分。 目前, 如果 TMP 和*目录*均指定不存在的目录的名称, 则 **_tempnam**函数调用将失败。
+- 如果未定义 TMP 环境变量，或将其设置为不存在的目录的名称，并且*dir*为**空**或设置为不存在的目录的名称，则 **_tempnam**将使用当前工作目录基因为唯一名称打分。 目前，如果 TMP 和*目录*均指定不存在的目录的名称，则 **_tempnam**函数调用将失败。
 
-**_Tempnam**返回的名称将是*前缀*和序列号的串联, 这将组合起来为指定目录创建唯一的文件名。 **_tempnam**生成无扩展名的文件名。 **_tempnam**使用[malloc](malloc.md)为文件名分配空间;程序负责在不再需要此空间时将其释放。
+**_Tempnam**返回的名称将是*前缀*和序列号的串联，这将组合起来为指定目录创建唯一的文件名。 **_tempnam**生成无扩展名的文件名。 **_tempnam**使用[malloc](malloc.md)为文件名分配空间;程序负责在不再需要此空间时将其释放。
 
-**_tempnam**和**tmpnam**会根据需要自动处理多字节字符串参数, 根据从操作系统获取的 OEM 代码页识别多字节字符序列。 **_wtempnam**是 **_tempnam**的宽字符版本; **_wtempnam**的参数和返回值是宽字符字符串。 **_wtempnam**和 **_tempnam**的行为相同, 只不过 **_wtempnam**不处理多字节字符字符串。 **_wtmpnam**是**tmpnam**的宽字符版本; **_wtmpnam**的参数和返回值是宽字符字符串。 **_wtmpnam**和**tmpnam**的行为相同, 只不过 **_wtmpnam**不处理多字节字符字符串。
+**_tempnam**和**tmpnam**会根据需要自动处理多字节字符串参数，根据从操作系统获取的 OEM 代码页识别多字节字符序列。 **_wtempnam**是 **_tempnam**的宽字符版本; **_wtempnam**的参数和返回值是宽字符字符串。 **_wtempnam**和 **_tempnam**的行为相同，只不过 **_wtempnam**不处理多字节字符字符串。 **_wtmpnam**是**tmpnam**的宽字符版本; **_wtmpnam**的参数和返回值是宽字符字符串。 **_wtmpnam**和**tmpnam**的行为相同，只不过 **_wtmpnam**不处理多字节字符字符串。
 
-如果定义了 **_debug**和 **_CRTDBG_MAP_ALLOC** , 则 **_tempnam**和 **_wtempnam**将被调用[_tempnam_dbg 和 _wtempnam_dbg](tempnam-dbg-wtempnam-dbg.md)。
+如果定义了 **_debug**和 **_CRTDBG_MAP_ALLOC** ，则 **_tempnam**和 **_wtempnam**将被调用[_tempnam_dbg 和 _wtempnam_dbg](tempnam-dbg-wtempnam-dbg.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

@@ -1,9 +1,9 @@
 ---
 title: fesetenv
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fesetenv
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fesetenv
 - fenv/fesetenv
 helpviewer_keywords:
 - fesetenv function
 ms.assetid: ffc64fff-8ea7-4d59-9e04-ff96ef8cd012
-ms.openlocfilehash: 8c91bfbb89df964fed0a632d5fb5ebac47ebe948
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 155b9f635f6e8c3dc5acb61126f41c49cd32601f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334176"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941107"
 ---
 # <a name="fesetenv"></a>fesetenv
 
@@ -44,7 +47,7 @@ int fesetenv(
 ### <a name="parameters"></a>参数
 
 *penv*<br/>
-指向**fenv_t**对象，其中包含作为组的浮点环境，通过调用[fegetenv](fegetenv1.md)或[feholdexcept](feholdexcept2.md)。 此外可以通过使用指定的默认启动浮点环境**FE_DFL_ENV**宏。
+指向**fenv_t**对象的指针，该对象包含通过调用[fegetenv](fegetenv1.md)或[feholdexcept](feholdexcept2.md)设置的浮点环境。 还可以通过使用**FE_DFL_ENV**宏指定默认启动浮点环境。
 
 ## <a name="return-value"></a>返回值
 
@@ -52,9 +55,9 @@ int fesetenv(
 
 ## <a name="remarks"></a>备注
 
-**Fesetenv**函数设置当前浮点环境中存储的值从**fenv_t**指向对象*penv*。 浮点环境是一系列影响浮点计算的状态标志和控件模式。 这包括舍入模式和浮点异常的状态标志。  如果*penv*不是**FE_DFL_ENV**或不指向有效**fenv_t**对象，则未定义后续行为。
+**Fesetenv**函数通过*penv*指向的**fenv_t**对象中存储的值设置当前浮点环境。 浮点环境是一系列影响浮点计算的状态标志和控件模式。 这包括舍入模式和浮点异常的状态标志。  如果*penv*不是**FE_DFL_ENV**或未指向有效的**fenv_t**对象，则不定义后续行为。
 
-对此函数的调用设置的异常中的状态标志*penv*对象，但它不会引发这些异常。
+对此函数的调用将设置*penv*对象中的异常状态标志，但不会引发这些异常。
 
 若要使用此函数，必须在调用前先使用 `#pragma fenv_access(on)` 指令关闭可能会阻止访问的浮点优化。 有关详细信息，请参阅 [fenv_access](../../preprocessor/fenv-access.md)。
 

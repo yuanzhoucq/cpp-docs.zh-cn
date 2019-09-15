@@ -1,10 +1,10 @@
 ---
 title: _access、_waccess
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _access
 - _waccess
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _waccess
 - _access
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - _waccess function
 - taccess function
 ms.assetid: ba34f745-85c3-49e5-a7d4-3590bd249dd3
-ms.openlocfilehash: 37c5760eb5231d17a8b17fe5d21f1459a865c067
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 90092b5d1c250fd79be107b0c36ee5641f70b30c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500022"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943929"
 ---
 # <a name="_access-_waccess"></a>_access、_waccess
 
@@ -65,7 +68,7 @@ int _waccess(
 
 ## <a name="return-value"></a>返回值
 
-如果该文件具有给定的模式，则每个函数将返回 0。 如果命名文件不存在或没有给定模式, 则函数返回-1;在这种情况`errno`下, 设置如下表所示。
+如果该文件具有给定的模式，则每个函数将返回 0。 如果命名文件不存在或没有给定模式，则函数返回-1;在这种情况`errno`下，设置如下表所示。
 
 |||
 |-|-|
@@ -77,7 +80,7 @@ int _waccess(
 
 ## <a name="remarks"></a>备注
 
-与文件一起使用时, **_access**函数确定指定的文件或目录是否存在并具有由*mode*值指定的属性。 与目录一起使用时, **_access**仅确定指定的目录是否存在;在 Windows 2000 和更高版本的操作系统中, 所有目录都具有读取和写入访问权限。
+与文件一起使用时， **_access**函数确定指定的文件或目录是否存在并具有由*mode*值指定的属性。 与目录一起使用时， **_access**仅确定指定的目录是否存在;在 Windows 2000 和更高版本的操作系统中，所有目录都具有读取和写入访问权限。
 
 |*模式*值|文件检查内容|
 |------------------|---------------------|
@@ -88,9 +91,9 @@ int _waccess(
 
 此函数仅检查文件和目录是否为只读，不检查文件系统安全设置。 因此，你需要访问令牌。 有关文件系统安全性的详细信息，请参阅[访问令牌](/windows/win32/SecAuthZ/access-tokens)。 存在 ATL 类以提供此功能；请参阅 [CAccessToken 类](../../atl/reference/caccesstoken-class.md)。
 
-**_waccess**是 **_access**的宽字符版本; **_waccess**的*path*参数是宽字符字符串。 否则, **_waccess**和 **_access**的行为相同。
+**_waccess**是 **_access**的宽字符版本; **_waccess**的*path*参数是宽字符字符串。 否则， **_waccess**和 **_access**的行为相同。
 
-此函数验证其参数。 如果*path*为 NULL 或*模式*未指定有效模式, 则将调用无效参数处理程序, 如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则该函数将 `errno` 设置为 `EINVAL` 并返回 -1。
+此函数验证其参数。 如果*path*为 NULL 或*模式*未指定有效模式，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则该函数将 `errno` 设置为 `EINVAL` 并返回 -1。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -107,7 +110,7 @@ int _waccess(
 
 ## <a name="example"></a>示例
 
-下面的示例使用 **_access**检查名为 crt_ACCESS 的文件。C, 查看其是否存在以及是否允许写入。
+下面的示例使用 **_access**检查名为 crt_ACCESS 的文件。C，查看其是否存在以及是否允许写入。
 
 ```C
 // crt_access.c

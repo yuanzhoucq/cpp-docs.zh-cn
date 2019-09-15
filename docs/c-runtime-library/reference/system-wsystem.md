@@ -1,10 +1,10 @@
 ---
 title: system、_wsystem
 ms.date: 11/04/2016
-apiname:
+api_name:
 - system
 - _wsystem
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tsystem
 - _wsystem
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-ms.openlocfilehash: 46c4949fcc8cfbe4a3477e66b57d8fc6fc97ed73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 82b39f012bebb41772cdc7350eb08dba48678fdd
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259087"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957679"
 ---
-# <a name="system-wsystem"></a>system、_wsystem
+# <a name="system-_wsystem"></a>system、_wsystem
 
 执行命令。
 
@@ -61,7 +64,7 @@ int _wsystem(
 
 ## <a name="return-value"></a>返回值
 
-如果*命令*是**NULL**并找到命令解释器，则返回一个非零值。 如果未找到命令解释器，返回 0 并设置**errno**到**ENOENT**。 如果*命令*不是**NULL**，**系统**返回由命令解释器返回的值。 仅当命令解释器返回值 0 时，它才会返回值 0。 返回值为-1 指示错误，并**errno**设置为以下值之一：
+如果*命令*为**NULL** ，并且找到命令解释器，则返回一个非零值。 如果未找到命令解释器，则返回0，并将**errno**设置为**ENOENT**。 如果*命令*不为**NULL**，则**系统**返回由命令解释器返回的值。 仅当命令解释器返回值 0 时，它才会返回值 0。 返回值-1 表示错误， **errno**设置为以下值之一：
 
 |||
 |-|-|
@@ -74,11 +77,11 @@ int _wsystem(
 
 ## <a name="remarks"></a>备注
 
-**系统**函数传递*命令*到命令解释器，它将执行操作系统命令作为字符串。 **系统**使用**COMSPEC**并**路径**环境变量来定位命令解释器文件 CMD.exe。 如果*命令*是**NULL**，该函数只检查命令解释器是否存在。
+**系统**函数将*命令*传递到命令解释器，后者将字符串作为操作系统命令执行。 **system**使用**COMSPEC**和**PATH**环境变量来定位命令解释器文件 cmd.exe。 如果*command*为**NULL**，则该函数只检查命令解释器是否存在。
 
-您必须显式刷新，请使用[fflush](fflush.md)或[_flushall](flushall.md)，或在调用之前关闭任何流**系统**。
+你必须通过使用[fflush](fflush.md)或[_flushall](flushall.md)显式刷新，或在调用**system**之前关闭任何流。
 
-**_wsystem**是宽字符版本**系统**;*命令*参数 **_wsystem**是宽字符字符串。 否则这些函数具有相同行为。
+**_wsystem**是**系统**的宽字符版本; **_wsystem**的*命令*参数是宽字符字符串。 否则这些函数具有相同行为。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -97,7 +100,7 @@ int _wsystem(
 
 ## <a name="example"></a>示例
 
-此示例使用**系统**键入一个文本文件。
+此示例使用**SYSTEM**键入一个文本文件。
 
 ```C
 // crt_system.c
@@ -110,7 +113,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crtsystemtxt"></a>输入：crt_system.txt
+### <a name="input-crt_systemtxt"></a>输入：crt_system.txt
 
 ```Input
 Line one.

@@ -1,10 +1,10 @@
 ---
 title: _findnext, _findnext32, _findnext32i64, _findnext64, _findnext64i32, _findnexti64, _wfindnext, _wfindnext32, _wfindnext32i64, _wfindnext64, _wfindnext64i32, _wfindnexti64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wfindnext
 - _findnext
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - findnext
 - _wfindnext32i64
@@ -92,16 +95,16 @@ helpviewer_keywords:
 - tfindnext32i64 function
 - _tfindnexti64 function
 ms.assetid: 75d97188-5add-4698-a46c-4c492378f0f8
-ms.openlocfilehash: c7df8649625488a83239a19e4afcecea129f9072
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 083f0f1d383472c104a1e4fcb6f3139c7a9d9c88
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333724"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957249"
 ---
-# <a name="findnext-findnext32-findnext32i64-findnext64-findnext64i32-findnexti64-wfindnext-wfindnext32-wfindnext32i64-wfindnext64-wfindnext64i32-wfindnexti64"></a>_findnext, _findnext32, _findnext32i64, _findnext64, _findnext64i32, _findnexti64, _wfindnext, _wfindnext32, _wfindnext32i64, _wfindnext64, _wfindnext64i32, _wfindnexti64
+# <a name="_findnext-_findnext32-_findnext32i64-_findnext64-_findnext64i32-_findnexti64-_wfindnext-_wfindnext32-_wfindnext32i64-_wfindnext64-_wfindnext64i32-_wfindnexti64"></a>_findnext, _findnext32, _findnext32i64, _findnext64, _findnext64i32, _findnexti64, _wfindnext, _wfindnext32, _wfindnext32i64, _wfindnext64, _wfindnext64i32, _wfindnexti64
 
-查找下一个名称，如果有匹配*filespec*中的以前调用的参数[_findfirst](findfirst-functions.md)，然后更改*fileinfo*相应结构内容。
+查找下一个名称（如果有），该名称与之前对[_findfirst](findfirst-functions.md)的调用中的*filespec*参数匹配，然后相应地更改*fileinfo*结构内容。
 
 ## <a name="syntax"></a>语法
 
@@ -158,46 +161,46 @@ int _wfindnext64i32(
 
 ### <a name="parameters"></a>参数
 
-*handle*<br/>
-通过以前调用返回的搜索句柄 **_findfirst**。
+*柄*<br/>
+之前对 **_findfirst**的调用返回的搜索句柄。
 
 *fileinfo*<br/>
 文件信息缓冲区。
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则返回 0。 否则为返回-1，并设置**errno**为值，该值指示故障的性质。 下表中显示了可能的错误代码。
+如果成功，则返回 0。 否则，将返回-1，并将**errno**设置为指示失败性质的值。 下表中显示了可能的错误代码。
 
 |errno 值|条件|
 |-|-|
-| **EINVAL** | 无效的参数： *fileinfo*已**NULL**。 或者，操作系统返回了意外错误。 |
+| **EINVAL** | 参数无效： *fileinfo*为**NULL**。 或者，操作系统返回了意外错误。 |
 | **ENOENT** | 找不到更多匹配的文件。 |
-| **ENOMEM** | 没有足够的内存或文件名称的长度超出**MAX_PATH**。 |
+| **ENOMEM** | 内存不足或文件名长度超过**MAX_PATH**。 |
 
 如果传入了无效参数，这些函数则会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。
 
 ## <a name="remarks"></a>备注
 
-必须调用[_findclose](findclose.md)完成后使用后 **_findfirst**或 **_findnext**函数 （或任何变体）。 这将释放应用程序中这些函数所使用的资源。
+使用 **_findfirst**或 **_findnext**函数（或任何变体）后，必须调用[_findclose](findclose.md) 。 这将释放应用程序中这些函数所使用的资源。
 
-使用这些函数的变体**w**前缀都是宽字符版本; 否则，它们与相应的单字节函数完全相同。
+这些具有**w**前缀的函数的变体是宽字符版本;否则，它们与相应的单字节函数相同。
 
-这些函数的变体支持 32 位或 64 位时间类型以及 32 位或 64 位文件大小。 第一个数字后缀 (**32**或**64**) 指示的时间的大小使用的类型; 第二个后缀是**i32**或者**i64**，该值指示是否将文件大小表示为 32 位或 64 位整数。 有关支持 32 位和 64 位时间类型及文件大小的版本的信息，请参阅下表。 使用 64 位时间类型的变体允许文件创建日期最大表示为 3000 年 12 月 31 日 23:59:59，UTC；那些使用 32 位时间类型的变体只能表示截至 2038 年 1 月 18 日 23:59:59，UTC 之前的日期。 1970 年 1 月 1 日午夜是所有这些函数的日期范围下限。
+这些函数的变体支持 32 位或 64 位时间类型以及 32 位或 64 位文件大小。 第一个数字后缀（**32**或**64**）表示所用时间类型的大小;第二个后缀是**i32**或**i64**，指示文件大小是否表示为32位或64位整数。 有关支持 32 位和 64 位时间类型及文件大小的版本的信息，请参阅下表。 使用 64 位时间类型的变体允许文件创建日期最大表示为 3000 年 12 月 31 日 23:59:59，UTC；那些使用 32 位时间类型的变体只能表示截至 2038 年 1 月 18 日 23:59:59，UTC 之前的日期。 1970 年 1 月 1 日午夜是所有这些函数的日期范围下限。
 
-除非有特定原因要使用显式指定时间大小，请使用的版本 **_findnext**或 **_wfindnext**或者，如果你需要支持大于 3 GB 的文件大小，使用 **_findnexti64**或 **_wfindnexti64**。 所有这些函数均使用 64 位时间类型。 在早期版本中，这些函数使用 32 位时间类型。 如果这是一项重大更改的应用程序，可以定义 **_USE_32BIT_TIME_T**若要获取旧行为。 如果 **_USE_32BIT_TIME_T**定义，则 **_findnext**， **_finnexti64**和其对应的 Unicode 版本使用 32 位时间。
+除非有特定原因要使用显式指定时间大小的版本，否则请使用 **_findnext**或 **_wfindnext** ; 如果需要支持大于 3 GB 的文件大小，请使用 **_findnexti64**或 **_wfindnexti64**。 所有这些函数均使用 64 位时间类型。 在早期版本中，这些函数使用 32 位时间类型。 如果这是应用程序的重大更改，则可以定义 **_USE_32BIT_TIME_T**以获取旧行为。 如果定义了 **_USE_32BIT_TIME_T** ， **_findnext**， **_finnexti64**及其对应的 Unicode 版本将使用32位时间。
 
-### <a name="time-type-and-file-length-type-variations-of-findnext"></a>_findnext 的时间类型和文件长度类型变体
+### <a name="time-type-and-file-length-type-variations-of-_findnext"></a>_findnext 的时间类型和文件长度类型变体
 
-|函数|**_USE_32BIT_TIME_T**定义？|时间类型|文件长度类型|
+|函数|是否定义 **_USE_32BIT_TIME_T** ？|时间类型|文件长度类型|
 |---------------|----------------------------------|---------------|----------------------|
-|**_findnext**， **_wfindnext**|未定义|64 位|32 位|
-|**_findnext**， **_wfindnext**|已定义|32 位|32 位|
-|**_findnext32**， **_wfindnext32**|不受宏定义影响|32 位|32 位|
-|**_findnext64**， **_wfindnext64**|不受宏定义影响|64 位|64 位|
-|**_findnexti64**， **_wfindnexti64**|未定义|64 位|64 位|
-|**_findnexti64**， **_wfindnexti64**|已定义|32 位|64 位|
-|**_findnext32i64**， **_wfindnext32i64**|不受宏定义影响|32 位|64 位|
-|**_findnext64i32**， **_wfindnext64i32**|不受宏定义影响|64 位|32 位|
+|**_findnext**、 **_wfindnext**|未定义|64 位|32 位|
+|**_findnext**、 **_wfindnext**|已定义|32 位|32 位|
+|**_findnext32**、 **_wfindnext32**|不受宏定义影响|32 位|32 位|
+|**_findnext64**、 **_wfindnext64**|不受宏定义影响|64 位|64 位|
+|**_findnexti64**、 **_wfindnexti64**|未定义|64 位|64 位|
+|**_findnexti64**、 **_wfindnexti64**|已定义|32 位|64 位|
+|**_findnext32i64**、 **_wfindnext32i64**|不受宏定义影响|32 位|64 位|
+|**_findnext64i32**、 **_wfindnext64i32**|不受宏定义影响|64 位|32 位|
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

@@ -1,10 +1,10 @@
 ---
 title: _ismbbkalnum、_ismbbkalnum_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbbkalnum
 - _ismbbkalnum_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbbkalnum
 - ismbbkalnum
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - _ismbbkalnum function
 - ismbbkalnum function
 ms.assetid: e1d70e7b-29d0-469c-9d93-442b99de22ac
-ms.openlocfilehash: 4eca5738068dab7393f70edf619629b179637e73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b7f188e38a2d13bf08210d6c2408ab996f18849
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62158002"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954182"
 ---
-# <a name="ismbbkalnum-ismbbkalnuml"></a>_ismbbkalnum、_ismbbkalnum_l
+# <a name="_ismbbkalnum-_ismbbkalnum_l"></a>_ismbbkalnum、_ismbbkalnum_l
 
 确定特定多字节字符是否为非 ASCII 文本符号。
 
@@ -61,7 +64,7 @@ int _ismbbkalnum_l(
 
 ## <a name="return-value"></a>返回值
 
-**_ismbbkalnum**返回非零值，如果整数*c*为非 ASCII 文本符号而标点，则为 0，如果不是。 **_ismbbkalnum**的区域设置相关的字符信息使用当前区域设置。 **_ismbbkalnum_l**等同于 **_ismbbkalnum** ，但前者将区域设置用作参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+如果整数*c*是除标点符号以外的非 ASCII 文本符号，则 **_ismbbkalnum**将返回非零值; 如果不是，则返回0。 **_ismbbkalnum**对与区域设置相关的字符信息使用当前区域设置。 **_ismbbkalnum_l**与 **_ismbbkalnum**相同，只不过它会将区域设置用作参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>要求
 

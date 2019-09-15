@@ -1,12 +1,12 @@
 ---
 title: strrchr、wcsrchr、_mbsrchr、_mbsrchr_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - strrchr
 - wcsrchr
 - _mbsrchr
 - _mbsrchr_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcsrchr
 - _ftcsrchr
@@ -42,14 +45,14 @@ helpviewer_keywords:
 - _ftcsrchr function
 - _mbsrchr_l function
 ms.assetid: 75cf2664-758e-49bb-bf6b-8a139cd474d2
-ms.openlocfilehash: 016be9a1d753787b6e0c3800df5a96baea1a19f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b5ce46f43f8bf6801882e1a86b57c22fd4f2ab5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347293"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946847"
 ---
-# <a name="strrchr-wcsrchr-mbsrchr-mbsrchrl"></a>strrchr、wcsrchr、_mbsrchr、_mbsrchr_l
+# <a name="strrchr-wcsrchr-_mbsrchr-_mbsrchr_l"></a>strrchr、wcsrchr、_mbsrchr、_mbsrchr_l
 
 扫描字符串以查找某个字符的末次出现位置。
 
@@ -125,19 +128,19 @@ const unsigned char *_mbsrchr_l(
 
 ## <a name="return-value"></a>返回值
 
-将指针返回到的最后一个匹配项*c*中*str*，则为 null *c*找不到。
+返回指向*str*中最后一个匹配项*的指针*; 如果找不到*c* ，则返回 NULL。
 
 ## <a name="remarks"></a>备注
 
-`strrchr`函数查找字符串的最后一个匹配项*c* (转换为**char**) 中*str*。 搜索包括终止 null 字符。
+函数在*str*中查找*c*的最后一个匹配项（转换为 char）。 `strrchr` 搜索包括终止 null 字符。
 
 `wcsrchr` 和 `_mbsrchr` 分别是 `strrchr`的宽字符及多字节字符版本。 `wcsrchr` 的参数和返回值是宽字符字符串；而 `_mbsrchr` 的则是多字节字符字符串。
 
-在 C 中，这些函数采用**const**的第一个参数的指针。 在 C++ 中，有两个重载可用。 采用指向的重载**const**返回一个指向**const**; 将指针传递到非版本**const**返回一个指向非**常量**. 如果这两个定义宏 _CRT_CONST_CORRECT_OVERLOADS **const**和非-**const**提供了这些函数的版本。 如果需要非**const**两个行为C++重载，定义符号 _CONST_RETURN。
+在 C 中，这些函数使用第一个参数的**常量**指针。 在 C++ 中，有两个重载可用。 采用指向**const**的指针的重载返回指向**const**的指针;采用指向非常**量**的指针的版本返回指向非常**量**的指针。 如果这些函数的**常量**和非常**量**版本都可用，则会定义宏 _CRT_CONST_CORRECT_OVERLOADS。 如果这两个重载都 C++需要非常量行为，请定义符号 _CONST_RETURN。
 
-`_mbsrchr` 会验证其参数。 如果*str*为 NULL，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则`errno`设置为 EINVAL 和`_mbsrchr`返回 0。 `strrchr` 和 `wcsrchr` 不会验证其参数。 否则这三个函数否则具有相同行为。
+`_mbsrchr` 会验证其参数。 如果*str*为 NULL，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续， `errno`则将设置为 EINVAL，并`_mbsrchr`返回0。 `strrchr` 和 `wcsrchr` 不会验证其参数。 否则这三个函数否则具有相同行为。
 
-输出值受区域设置; 的 LC_CTYPE 类别设置的设置有关详细信息，请参阅[setlocale](setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的 LC_CTYPE 类别设置的影响;有关详细信息，请参阅[setlocale](setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

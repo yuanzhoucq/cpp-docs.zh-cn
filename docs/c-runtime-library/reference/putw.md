@@ -1,9 +1,9 @@
 ---
 title: _putw
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _putw
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _putw
 - putw
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-ms.openlocfilehash: 3fd18c2a8869d6b09703547f50ee6e096bd72395
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0515ae911a653bde1208b1711bf33dd8b4e2f8e1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358043"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949755"
 ---
-# <a name="putw"></a>_putw
+# <a name="_putw"></a>_putw
 
 将一个整数写入到流中。
 
@@ -55,13 +58,13 @@ int _putw(
 
 ## <a name="return-value"></a>返回值
 
-返回写入的值。 返回值**EOF**可能表示存在错误。 因为**EOF**也是合法的整数值，请使用**ferror**来验证错误。 如果*流*是空指针，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数可设置**errno**到**EINVAL** ，并返回**EOF**。
+返回写入的值。 返回值**EOF**可能指示错误。 由于**EOF**也是合法的整数值，请使用**ferror**来验证错误。 如果*stream*为空指针，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数会将**errno**设置为**EINVAL**并返回**EOF**。
 
 有关这些及其他错误代码的信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**_Putw**函数的类型的二进制值写入**int**的当前位置到*流。* **_putw**不会影响流中的项的对齐方式也不会采用任何特殊的对齐方式。 **_putw**主要是为了与以前的库的兼容性。 可移植性问题可能会发生的 **_putw**因为的大小**int**和中的字节顺序**int**系统而异。
+**_Putw**函数将**int**类型的二进制值写入流的当前位置 *。* **_putw**不会影响流中的项的对齐方式，也不会采用任何特殊的对齐方式。 **_putw**主要用于与以前的库兼容。 **_Putw**可能会出现可移植性**问题，因为 int 和** **int**中的字节顺序的大小在不同系统之间存在差异。
 
 ## <a name="requirements"></a>要求
 

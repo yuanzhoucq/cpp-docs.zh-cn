@@ -1,14 +1,14 @@
 ---
 title: strlen、wcslen、_mbslen、_mbslen_l、_mbstrlen、_mbstrlen_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbslen
 - _mbslen_l
 - _mbstrlen
 - wcslen
 - _mbstrlen_l
 - strlen
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbstrlen
 - wcslen
@@ -49,12 +52,12 @@ helpviewer_keywords:
 - strlen function
 - _mbslen function
 ms.assetid: 16462f2a-1e0f-4eb3-be55-bf1c83f374c2
-ms.openlocfilehash: 7736e1e7889642c41a5e3853ac13221ab22f6d03
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5b1d3f7483ec96cbcda7c72178613d81747c8060
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500927"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947569"
 ---
 # <a name="strlen-wcslen-_mbslen-_mbslen_l-_mbstrlen-_mbstrlen_l"></a>strlen、wcslen、_mbslen、_mbslen_l、_mbstrlen、_mbstrlen_l
 
@@ -98,11 +101,11 @@ size_t _mbstrlen_l(
 
 ## <a name="return-value"></a>返回值
 
-其中每个函数均返回*str*中的字符数, 不包括终端 null。 不保留任何返回值以指示错误 ( **_mbstrlen**和 **_mbstrlen_l**除外), 如果字符串包含`((size_t)(-1))`无效的多字节字符, 则返回。
+其中每个函数均返回*str*中的字符数，不包括终端 null。 不保留任何返回值以指示错误（ **_mbstrlen**和 **_mbstrlen_l**除外），如果字符串包含`((size_t)(-1))`无效的多字节字符，则返回。
 
 ## <a name="remarks"></a>备注
 
-**strlen**将字符串解释为单字节字符字符串, 因此即使字符串包含多字节字符, 其返回值也始终等于字节数。 **wcslen**是**strlen**的宽字符版本;**wcslen**的参数是宽字符字符串, 字符计数采用宽 (双字节) 字符。 否则, **wcslen**和**strlen**的行为相同。
+**strlen**将字符串解释为单字节字符字符串，因此即使字符串包含多字节字符，其返回值也始终等于字节数。 **wcslen**是**strlen**的宽字符版本;**wcslen**的参数是宽字符字符串，字符计数采用宽（双字节）字符。 否则， **wcslen**和**strlen**的行为相同。
 
 **安全说明**这些函数会引发由缓冲区溢出问题带来的潜在威胁。 缓冲区溢出问题是常见的系统攻击方法，使权限的提升不能确保。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
@@ -114,7 +117,7 @@ size_t _mbstrlen_l(
 |**_tcsclen**|**strlen**|**_mbslen**|**wcslen**|
 |**_tcsclen_l**|**strlen**|**_mbslen_l**|**wcslen**|
 
-**_mbslen**和 **_mbslen_l**返回多字节字符字符串中的多字节字符数, 但它们不会测试多字节字符的有效性。 **_mbstrlen**和 **_mbstrlen_l**测试多字节字符的有效性并识别多字节字符序列。 如果传递给 **_mbstrlen**或 **_mbstrlen_l**的字符串包含无效的用于代码页的多字节字符, 则该函数将返回-1 并将**errno**设置为**eilseq 且**。
+**_mbslen**和 **_mbslen_l**返回多字节字符字符串中的多字节字符数，但它们不会测试多字节字符的有效性。 **_mbstrlen**和 **_mbstrlen_l**测试多字节字符的有效性并识别多字节字符序列。 如果传递给 **_mbstrlen**或 **_mbstrlen_l**的字符串包含无效的用于代码页的多字节字符，则该函数将返回-1 并将**errno**设置为**eilseq 且**。
 
 输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 

@@ -1,14 +1,14 @@
 ---
 title: 贝塞尔函数：_j0、_j1、_jn、_y0、_y1、_yn
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _j0
 - _j1
 - _jn
 - _y0
 - _y1
 - _yn
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - c.bessel
 - _j0
@@ -38,14 +41,14 @@ helpviewer_keywords:
 - _y1 function
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
-ms.openlocfilehash: 682eaa99d0be1b959152ff94cc10a86aa68d988d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5420b34846998cdbcb4814d8319274f1a3516d91
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341105"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939462"
 ---
-# <a name="bessel-functions-j0-j1-jn-y0-y1-yn"></a>贝塞尔函数：_j0、_j1、_jn、_y0、_y1、_yn
+# <a name="bessel-functions-_j0-_j1-_jn-_y0-_y1-_yn"></a>贝塞尔函数：_j0、_j1、_jn、_y0、_y1、_yn
 
 计算第一种或第二种贝塞尔函数，顺序为 0、1 或 n。 贝赛耳函数通常用于电磁波理论的数学学科中。
 
@@ -84,29 +87,29 @@ Bessel 函数的整数顺序。
 
 ## <a name="return-value"></a>返回值
 
-每个例程将返回的贝赛耳函数*x*。 如果*x*中是负数 **_y0**， **_y1**，或者 **_yn**函数、 例程集**errno**到**EDOM**，将打印 **（_d)** 发送给错误消息**stderr**，并返回 **_HUGE_VAL**。 您可以修改错误处理通过使用 **_matherr**。
+其中每个例程都返回*x*的贝赛耳函数。 如果*x*在 **_y0**、 **_y1**或 **_yn**函数中为负，则例程将**errno**设置为**EDOM**，将 **_DOMAIN**错误消息输出到**stderr**，并返回 **_HUGE_VAL**。 可以使用 **_matherr**修改错误处理。
 
 ## <a name="remarks"></a>备注
 
-**_J0**， **_j1**，并 **_jn**例程将返回贝赛耳的第一类函数： 顺序分别为 0、 1 和 n。
+**_J0**、 **_j1**和 **_jn**例程分别返回第一种类型的贝赛耳函数： orders 0、1和 n。
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
-|为**QNAN**， **IND**|**INVALID**|**_DOMAIN**|
+|± **QNAN**， **IND**|**无效**|**_DOMAIN**|
 
-**_Y0**， **_y1**，并 **_yn**例程将返回贝赛耳函数的第二个类型： 顺序分别为 0、 1 和 n。
+**_Y0**、 **_y1**和 **_yn**例程将返回第二种类型的贝赛耳函数：分别为 "orders 0"、"1" 和 "n"。
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
-|为**QNAN**， **IND**|**INVALID**|**_DOMAIN**|
+|± **QNAN**， **IND**|**无效**|**_DOMAIN**|
 |± 0|**ZERODIVIDE**|**_SING**|
-|&#124;x&#124; < 0.0|**INVALID**|**_DOMAIN**|
+|&#124;x&#124; < 0。0|**无效**|**_DOMAIN**|
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**_j0**, **_j1**, **_jn**, **_y0**, **_y1**, **_yn**|\<cmath> (C++), \<math.h> (C, C++)|
+|**_j0**、 **_j1**、 **_jn**、 **_y0**、 **_y1**、 **_yn**|\<cmath> (C++), \<math.h> (C, C++)|
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

@@ -1,11 +1,11 @@
 ---
-title: log1p，log1pf log1pl2
+title: log1p、log1pf、log1pl2
 ms.date: 04/05/2018
-apiname:
+api_name:
 - log1p
 - log1pf
 - log1pl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - log1p
 - log1pf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - log1pf function
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
-ms.openlocfilehash: 2ac864d7e28823c95b0202c0a8f2454d03c64aff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aad6675a832e1715c505026fe11ffe77f1f6d275
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285981"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953220"
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p、log1pf、log1pl
 
@@ -72,7 +75,7 @@ long double log1pl(
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则返回自然 (底*e*) 的日志 (*x* + 1)。
+如果成功，则返回（*x* + 1）的自然（以*e*为底）对数。
 
 否则，可能返回以下值之一：
 
@@ -85,23 +88,23 @@ long double log1pl(
 |< -1|nan|INVALID|EDOM|
 |-inf|nan|INVALID|EDOM|
 |±SNaN|与输入相同|INVALID||
-|±QNaN 无限|与输入相同|||
+|± QNaN，不定|与输入相同|||
 
-**Errno**如果值设置为 ERANGE *x* =-1。 **Errno**值设置为**EDOM**如果*x* <-1。
+如果*x* =-1，则**errno**值设置为 ERANGE。 如果*x* <-1，则将**errno**值设置为**EDOM** 。
 
 ## <a name="remarks"></a>备注
 
-**Log1p**函数可能会比使用更精确`log(x + 1)`时*x*接近 0。
+当 x 接近0时， **log1p**函数可能更准确。 `log(x + 1)`
 
-因为C++允许重载，可以调用的重载**log1p**采用并返回**float**并**长** **double**类型。 在 C 程序中， **log1p**始终采用并返回**double**。
+由于C++允许重载，因此可以调用**log1p**的重载，该重载采用和返回**float**和**long** **double**类型。 在 C 程序中， **log1p**始终采用并返回**双精度型**。
 
-如果*x*是自然数，此函数返回的阶乘的对数 (*x* -1)。
+如果*x*是自然数，则此函数返回（*x* -1）的阶乘的对数。
 
 ## <a name="requirements"></a>要求
 
 |函数|C 标头|C++ 标头|
 |--------------|--------------|------------------|
-|**log1p**， **log1pf**， **log1pl**|\<math.h>|\<cmath>|
+|**log1p**、 **log1pf**、 **log1pl**|\<math.h>|\<cmath>|
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

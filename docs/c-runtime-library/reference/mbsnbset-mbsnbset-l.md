@@ -1,10 +1,10 @@
 ---
 title: _mbsnbset、_mbsnbset_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnbset
 - _mbsnbset_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsnbset
 - mbsnbset_l
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - tcsnset_l function
 - mbsnbset function
 ms.assetid: 8e46ef75-9a56-42d2-a522-a08450c67c19
-ms.openlocfilehash: 7783ff6519147331ae3943f053efe1bae01aee7d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 8ba619dba07f102387d70c3bb3a2af729e44b495
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499786"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952169"
 ---
 # <a name="_mbsnbset-_mbsnbset_l"></a>_mbsnbset、_mbsnbset_l
 
@@ -70,7 +73,7 @@ unsigned char *_mbsnbset_l(
 *c*<br/>
 单字节或多字节字符设置。
 
-*计数*<br/>
+*count*<br/>
 要设置的字节数。
 
 *locale*<br/>
@@ -82,13 +85,13 @@ unsigned char *_mbsnbset_l(
 
 ## <a name="remarks"></a>备注
 
-**_Mbsnbset**和 **_mbsnbset_l**函数最多将*字符串*的第一个*计数*字节数设置为*c*。 如果*count*大于*str*的长度, 则使用*str*的长度而不是*count*。 如果*c*是多字节字符, 且不能完全设置到*count*指定的最后一个字节中, 则用空白字符填充最后一个字节。 **_mbsnbset**和 **_mbsnbset_l**不会在*str*末尾放置终止 null。
+**_Mbsnbset**和 **_mbsnbset_l**函数最多将*字符串*的第一个*计数*字节数设置为*c*。 如果*count*大于*str*的长度，则使用*str*的长度而不是*count*。 如果*c*是多字节字符，且不能完全设置到*count*指定的最后一个字节中，则用空白字符填充最后一个字节。 **_mbsnbset**和 **_mbsnbset_l**不会在*str*末尾放置终止 null。
 
-**_mbsnbset**和 **_mbsnbset_l**类似于 **_mbsnset**, 只不过它会设置*计数*字节而不是*count*个字符的*c*。
+**_mbsnbset**和 **_mbsnbset_l**类似于 **_mbsnset**，只不过它会设置*计数*字节而不是*count*个字符的*c*。
 
-如果*str*为**NULL**或*计数*为零, 则此函数将生成无效的参数异常, 如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续, 则将**errno**设置为**EINVAL** , 并且该函数将返回**NULL**。 此外, 如果*c*不是有效的多字节字符, 则将**Errno**设置为**EINVAL** , 并改为使用空格。
+如果*str*为**NULL**或*计数*为零，则此函数将生成无效的参数异常，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将**errno**设置为**EINVAL** ，并且该函数将返回**NULL**。 此外，如果*c*不是有效的多字节字符，则将**Errno**设置为**EINVAL** ，并改为使用空格。
 
-输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 此函数的 **_mbsnbset**版本对与区域设置相关的行为使用当前区域设置; **_mbsnbset_l**版本相同, 只不过它使用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 此函数的 **_mbsnbset**版本对与区域设置相关的行为使用当前区域设置; **_mbsnbset_l**版本相同，只不过它使用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 **安全说明** 此 API 会引发由缓冲区溢出问题带来的潜在威胁。 缓冲区溢出问题是常见的系统攻击方法，使权限的提升不能确保。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 

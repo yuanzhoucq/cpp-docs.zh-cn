@@ -1,12 +1,12 @@
 ---
 title: sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _sscanf_s_l
 - sscanf_s
 - _swscanf_s_l
 - swscanf_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _stscanf_s
 - sscanf_s
@@ -41,14 +44,14 @@ helpviewer_keywords:
 - strings [C++], reading
 - _sscanf_s_l function
 ms.assetid: 956e65c8-00a5-43e8-a2f2-0f547ac9e56c
-ms.openlocfilehash: 07911b7254e74c28310669a697c7492b69567b7f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 14707b64a9c5c49837391be59d83ee39b79d5065
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354792"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957973"
 ---
-# <a name="sscanfs-sscanfsl-swscanfs-swscanfsl"></a>sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l
+# <a name="sscanf_s-_sscanf_s_l-swscanf_s-_swscanf_s_l"></a>sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l
 
 从字符串中读取格式化数据。 这些版本的 [sscanf、_sscanf_l、swscanf、_swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md) 具有安全性增强功能，如 [CRT 的安全性增强功能](../../c-runtime-library/security-features-in-the-crt.md)中所述。
 
@@ -87,7 +90,7 @@ int _swscanf_s_l(
 *format*<br/>
 窗体控件字符串。 有关详细信息，请参阅[格式规范字段：scanf 和 wscanf 函数](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)。
 
-*argument*<br/>
+*实际*<br/>
 可选自变量
 
 *locale*<br/>
@@ -95,15 +98,15 @@ int _swscanf_s_l(
 
 ## <a name="return-value"></a>返回值
 
-每个函数都将返回成功转换并分配的字段数；返回值不包括已读取但未分配的字段。 返回值为 0 表示没有分配任何字段。 返回值是**EOF**错误或如果在第一个转换之前到达字符串的末尾。
+每个函数都将返回成功转换并分配的字段数；返回值不包括已读取但未分配的字段。 返回值为 0 表示没有分配任何字段。 如果发生错误，则返回值为**EOF** ; 或者，如果在第一次转换之前到达字符串的末尾，则为。
 
-如果*缓冲区*或*格式*是**NULL**调用指针，无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，这些函数将返回-1 并设置**errno**到**EINVAL**
+如果*缓冲区*或*格式*为**NULL**指针，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回-1，并将**errno**设置为**EINVAL**
 
 有关这些及其他错误代码的信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**Sscanf_s**函数读取来自数据*缓冲区*到每个给定的位置*参数*。 格式字符串之后的参数指定指向具有中的类型说明符相对应的类型的变量的指针*格式*。 与安全级别较低的版本不同[sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md)，使用类型字段字符时，缓冲区大小参数是必需**c**， **C**， **s**，**S**，或字符串中包含的控件集 **[]**。 必须紧跟在需要缓冲区大小的缓冲区参数后提供缓冲区大小（以字符为单位）作为附加参数。 例如，如果你正在读入一个字符串，则将传递该字符串的缓冲区大小，如下所示：
+**Sscanf_s**函数将*缓冲区*中的数据读取到每个*自变量*给定的位置。 格式字符串后面的参数指定指向类型的变量的指针，该类型与*格式*的类型说明符对应。 与安全性较差的[版本 sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md)不同，使用括在 **[]** 中的类型字段字符**c**、 **c**、 **s**、 **s**或字符串控制集时，需要使用缓冲区大小参数。 必须紧跟在需要缓冲区大小的缓冲区参数后提供缓冲区大小（以字符为单位）作为附加参数。 例如，如果你正在读入一个字符串，则将传递该字符串的缓冲区大小，如下所示：
 
 ```C
 wchar_t ws[10];
@@ -129,13 +132,13 @@ sscanf_s(input, "%4c", &c, (unsigned)_countof(c)); // not null terminated
 有关详细信息，请参阅 [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) 和 [scanf 类型字段字符](../../c-runtime-library/scanf-type-field-characters.md)。
 
 > [!NOTE]
-> 大小参数的类型是**无符号**，而非**size_t**。 当针对 64 位目标进行编译，使用静态强制转换来转换 **_countof**或**sizeof**结果为正确的大小。
+> 大小参数的类型为**无符号**类型，而不是**size_t**。 为64位目标进行编译时，请使用静态强制转换将 **_countof**或**sizeof**结果转换为正确的大小。
 
-*格式*参数控制字段输入的解释，并且具有相同格式和函数作为*格式*参数**scanf_s**函数。 如果在重叠的字符串之间发生复制，则此行为不确定。
+*Format*参数控制输入字段的解释，其形式和函数与**scanf_s**函数的*format*参数相同。 如果在重叠的字符串之间发生复制，则此行为不确定。
 
-**swscanf_s**是宽字符版本**sscanf_s**; 的自变量**swscanf_s**都是宽字符字符串。 **sscanf_s**不处理多字节十六进制字符。 **swscanf_s**不处理 Unicode 全角十六进制或"兼容区"字符。 否则为**swscanf_s**并**sscanf_s**行为方式相同。
+**swscanf_s**是**sscanf_s**的宽字符版本;**swscanf_s**的参数是宽字符字符串。 **sscanf_s**不处理多字节十六进制字符。 **swscanf_s**不处理 Unicode 全角十六进制或 "兼容区域" 字符。 否则， **swscanf_s**和**sscanf_s**的行为方式相同。
 
-具有这些函数的版本 **_l**后缀完全相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
+具有 **_l**后缀的这些函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -148,8 +151,8 @@ sscanf_s(input, "%4c", &c, (unsigned)_countof(c)); // not null terminated
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**sscanf_s**， **_sscanf_s_l**|\<stdio.h>|
-|**swscanf_s**， **_swscanf_s_l**|\<stdio.h> 或 \<wchar.h>|
+|**sscanf_s**、 **_sscanf_s_l**|\<stdio.h>|
+|**swscanf_s**、 **_swscanf_s_l**|\<stdio.h> 或 \<wchar.h>|
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

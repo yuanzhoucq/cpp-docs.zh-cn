@@ -1,10 +1,10 @@
 ---
 title: _strdate, _wstrdate
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _strdate
 - _wstrdate
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tstrdate
 - wstrdate
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _tstrdate function
 - copying dates
 ms.assetid: de8e4097-58f8-42ba-9dcd-cb4d9a9f1696
-ms.openlocfilehash: 4dc2ea7f25e644c9bf7a4ddca4a625991f37d912
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e1164db5857643bac649e96493a3d66cdee3b6e2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353958"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958224"
 ---
-# <a name="strdate-wstrdate"></a>_strdate, _wstrdate
+# <a name="_strdate-_wstrdate"></a>_strdate, _wstrdate
 
 将当前系统日期复制到缓冲区。 这些函数的更安全版本已发布，请参阅 [_strdate_s、_wstrdate_s](strdate-s-wstrdate-s.md)。
 
@@ -70,17 +73,17 @@ wchar_t *_wstrdate(
 
 ## <a name="return-value"></a>返回值
 
-每个函数返回指向结果字符串的指针*datestr*。
+其中每个函数均返回一个指向生成的字符串*datestr*的指针。
 
 ## <a name="remarks"></a>备注
 
 这些函数的更安全版本已发布，请参阅 [_strdate_s、_wstrdate_s](strdate-s-wstrdate-s.md)。 建议尽可能使用更为安全的函数。
 
-**_Strdate**函数将当前系统日期复制到由指向的缓冲区*datestr*格式化**mm**/**dd** / **yy**，其中**mm**是两位数表示月**dd**是两位数表示日，和**yy**是一年中的最后两位数字。 例如，字符串**12/05/99**表示 1999 年 12 月 5 日。 缓冲区长度必须至少为 9 个字节。
+**_Strdate**函数将当前系统日期复制到*datestr*所指向的缓冲区，格式为**mm**/**dd**/**yy**，其中**mm**是表示月份的两位数字， **dd**表示天的两位数字， **yy**是年份的最后两位数字。 例如，字符串**12/05/99**表示1999年12月5日。 缓冲区长度必须至少为 9 个字节。
 
-如果*datestr*是**NULL**调用指针，无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，这些函数将返回-1 并设置**errno**到**EINVAL**。
+如果*datestr*为**NULL**指针，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回-1，并将**errno**设置为**EINVAL**。
 
-**_wstrdate**是宽字符版本 **_strdate**; 的自变量和返回值 **_wstrdate**都是宽字符字符串。 否则这些函数具有相同行为。
+**_wstrdate**是 **_strdate**的宽字符版本; **_wstrdate**的参数和返回值是宽字符字符串。 否则这些函数具有相同行为。
 
 在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 

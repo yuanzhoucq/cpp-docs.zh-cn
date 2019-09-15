@@ -1,11 +1,11 @@
 ---
 title: cacos、cacosf、cacosl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - cacos
 - cacosf
 - cacosl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cacos
 - cacosf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - cacosf function
 - cacosl function
 ms.assetid: 78118c00-0a07-49c1-8a13-4bf19ce3aea8
-ms.openlocfilehash: 18757ecd30f399ca3d1fdb77e8bff8213a265e74
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b0751703b9b9cdcdb50e265a6b5d3c929d89ae1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348570"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939399"
 ---
 # <a name="cacos-cacosf-cacosl"></a>cacos、cacosf、cacosl
 
-检索复数的分支切割超出间隔 [-1，+ 1] 沿实轴的反余弦值。
+检索复数的反余弦，其中的分支切口沿实轴的间隔 [-1，+ 1] 外。
 
 ## <a name="syntax"></a>语法
 
@@ -61,17 +64,17 @@ _Lcomplex cacos( _Lcomplex z );  // C++ only
 
 ## <a name="return-value"></a>返回值
 
-反余弦*z*，以弧度为单位。 沿虚轴的结果为无限，并位于沿实轴的间隔 [0, π] 中。 如果将发生域错误*z*超出间隔 [-1，+ 1]。
+*Z*的反余弦（以弧度表示）。 沿虚轴的结果为无限，并位于沿实轴的间隔 [0, π] 中。 如果*z*超出间隔 [-1，+ 1]，将出现域错误。
 
 ## <a name="remarks"></a>备注
 
-因为C++允许重载，可以调用的重载**cacos**采用并返回 **_Fcomplex**并 **_Lcomplex**的值。 在 C 程序中， **cacos**始终采用并返回 **_Dcomplex**值。
+由于C++允许重载，因此可以调用**cacos**的重载，该重载采用并返回 **_Fcomplex**和 **_Lcomplex**值。 在 C 程序中， **cacos**始终采用并返回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|C 标头|C++ 标头|
 |-------------|--------------|------------------|
-|**cacos**,               **cacosf**, **cacosl**|\<complex.h>|\<ccomplex>|
+|**cacos**、 **cacosf**、 **cacosl**|\<complex.h>|\<ccomplex>|
 
 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

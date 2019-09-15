@@ -1,10 +1,10 @@
 ---
 title: fgetc、fgetwc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fgetwc
 - fgetc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fgettc
 - fgetwc
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - reading characters from streams
 - fgetwc function
 ms.assetid: 13348b7b-dc86-421c-9d6c-611ca79c8338
-ms.openlocfilehash: a853a46fc43106c9ea57be84b37fb46a18041ba8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92f44c65802f3baed37078574577bf108bbcd09a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334003"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940895"
 ---
 # <a name="fgetc-fgetwc"></a>fgetc、fgetwc
 
@@ -59,15 +62,15 @@ wint_t fgetwc(
 
 ## <a name="return-value"></a>返回值
 
-**fgetc**返回读取的字符**int**或返回**EOF**以指示错误或文件结尾。 **fgetwc**返回时，作为[wint_t](../../c-runtime-library/standard-types.md)，对应于读取的字符或返回的宽字符**WEOF**以指示错误或文件结尾。 对于这两个函数，使用**feof**或**ferror**区分错误和文件尾条件。 如果发生读取错误，则会设置流的错误指示器。 如果*流*是**NULL**， **fgetc**并**fgetwc**将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许继续执行，这些函数将设置**errno**到**EINVAL**并返回**EOF**。
+**fgetc**返回作为**int**读取的字符，或返回**EOF**以指示错误或文件尾。 **fgetwc**返回一个[wint_t](../../c-runtime-library/standard-types.md)，它是与读取的字符相对应的宽字符，或返回**WEOF** ，以指示错误或文件尾。 对于这两个函数，请使用**feof**或**ferror**来区分错误和文件尾条件。 如果发生读取错误，则会设置流的错误指示器。 如果*stream*为**NULL**，则**fgetc**和**fgetwc**将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数会将**errno**设置为**EINVAL**并返回**EOF**。
 
 ## <a name="remarks"></a>备注
 
-每个函数从与关联的文件的当前位置读取单个字符*流*。 然后该函数递增关联的文件指针（如果已定义）以指向下一个字符。 如果流位于文件结尾，则设置流的文件结尾指示器。
+其中每个函数均从与*stream*关联的文件的当前位置读取单个字符。 然后该函数递增关联的文件指针（如果已定义）以指向下一个字符。 如果流位于文件结尾，则设置流的文件结尾指示器。
 
-**fgetc**等效于**getc**，但仅作为函数，而不是作为函数和宏实现。
+**fgetc**等效于**getc**，但仅作为函数实现，而不是作为函数和宏实现。
 
-**fgetwc**是宽字符版本**fgetc**; 它会读取**c**作为多字节字符或宽字符根据*流*中打开文本模式还是二进制模式。
+**fgetwc**是**fgetc**的宽字符版本;它根据*流*是在文本模式还是二进制模式中打开，将**c**读取为多字节字符或宽字符。
 
 后缀为 **_nolock** 的版本是相同的，只不过它们可能会受到其他线程的影响。
 
@@ -125,7 +128,7 @@ int main( void )
 }
 ```
 
-## <a name="input-crtfgetctxt"></a>输入：crt_fgetc.txt
+## <a name="input-crt_fgetctxt"></a>输入：crt_fgetc.txt
 
 ```Input
 Line one.

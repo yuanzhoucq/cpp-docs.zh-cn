@@ -1,12 +1,12 @@
 ---
 title: isgraph、iswgraph、_isgraph_l、_iswgraph_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - isgraph
 - iswgraph
 - _iswgraph_l
 - _isgraph_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _isgraph_l
 - _iswgraph_l
@@ -37,14 +40,14 @@ helpviewer_keywords:
 - _istgraph function
 - _ismbcgraph_l function
 ms.assetid: 531a5f34-4302-4d0a-8a4f-b7ea150ad941
-ms.openlocfilehash: af3fae11536a869c0c3e3ebae285ebbaca5ea907
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88219ca6dc4218fc13f7d7c0b5f2ba399c07d501
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287038"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954868"
 ---
-# <a name="isgraph-iswgraph-isgraphl-iswgraphl"></a>isgraph、iswgraph、_isgraph_l、_iswgraph_l
+# <a name="isgraph-iswgraph-_isgraph_l-_iswgraph_l"></a>isgraph、iswgraph、_isgraph_l、_iswgraph_l
 
 确定整数是否表示图形字符。
 
@@ -74,11 +77,11 @@ int _iswgraph_l(
 
 ## <a name="return-value"></a>返回值
 
-这些例程返回非零值如果*c*是可打印字符而非空格的特定表示形式。 **isgraph**返回非零值，如果*c*是可打印字符而非空格。 **iswgraph**返回非零值，如果*c*是可打印宽字符而非宽字符空格。 每个例程将返回 0，如果*c*不满足测试条件。
+如果*c*是可打印字符而非空格的特定表示形式，则每个例程将返回非零值。 如果*c*是一个除空格之外的可打印字符，则**isgraph**将返回一个非零值。 如果*c*是一个非宽字符空间的可打印宽字符，则**iswgraph**将返回一个非零值。 如果*c*不满足测试条件，则这些例程都将返回0。
 
-具有这些函数的版本 **_l**后缀为其区域设置相关的行为使用传入的区域设置而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+具有 **_l**后缀的这些函数的版本使用传入的区域设置，而不是其与区域设置相关的行为的当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-行为**isgraph**并 **_isgraph_l**未定义当*c*不是 EOF 或在范围 0 到 0xff 内，非独占。 使用调试 CRT 库时， *c*是不包含其中一个值，函数将引发断言。
+如果*c*不是 EOF 或介于0到0xff （含0和0xff），则**isgraph**和 **_isgraph_l**的行为是不确定的。 当使用调试 CRT 库并且*c*不是这些值之一时，函数将引发断言。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

@@ -1,11 +1,11 @@
 ---
 title: casinh、casinhf、casinhl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - casinh
 - casinhl
 - casinhf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - casinh
 - casinhf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - casinhf function
 - casinhl function
 ms.assetid: bd18340b-21dd-4c86-a14e-e8e15dd97e3b
-ms.openlocfilehash: c274f4dcdfb16317820ce5c39918fa6135210eea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6deec85dc980a7bd421de87349f512564912d98c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340672"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943376"
 ---
 # <a name="casinh-casinhf-casinhl"></a>casinh、casinhf、casinhl
 
-检索复数的分支切割超出间隔的反双曲正弦值 [-i，+ i] 沿虚轴。
+检索复数的反双曲正弦值，并在虚轴的间隔 [-i，+ i] 外使用分支剪切。
 
 ## <a name="syntax"></a>语法
 
@@ -68,17 +71,17 @@ _Lcomplex casinhl(
 
 ## <a name="return-value"></a>返回值
 
-反双曲正弦值*z*，以弧度为单位。 结果是未绑定，沿实轴，并位于的间隔 [-i π/2，+ i π/2] 沿虚轴。
+*Z*的反双曲正弦值（以弧度表示）。 沿实轴对结果进行取消绑定，在虚轴的间隔 [-i π/2，+ i π/2] 中。
 
 ## <a name="remarks"></a>备注
 
-因为C++允许重载，可以调用的重载**casinh**采用并返回 **_Fcomplex**并 **_Lcomplex**的值。 在 C 程序中， **casinh**始终采用并返回 **_Dcomplex**值。
+由于C++允许重载，因此可以调用**casinh**的重载，该重载采用并返回 **_Fcomplex**和 **_Lcomplex**值。 在 C 程序中， **casinh**始终采用并返回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|C 标头|C++ 标头|
 |-------------|--------------|------------------|
-|**casinh**， **casinhf**， **casinhl**|\<complex.h>|\<ccomplex>|
+|**casinh**、 **casinhf**、 **casinhl**|\<complex.h>|\<ccomplex>|
 
 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

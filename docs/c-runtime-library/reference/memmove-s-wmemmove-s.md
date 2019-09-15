@@ -1,10 +1,10 @@
 ---
 title: memmove_s、wmemmove_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wmemmove_s
 - memmove_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wmemmove_s
 - memmove_s
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-ms.openlocfilehash: 28d879a205790d1f132caca1022d0740e317c342
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc932bb0b13289349543d042e02ead884921d00a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285137"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951784"
 ---
-# <a name="memmoves-wmemmoves"></a>memmove_s、wmemmove_s
+# <a name="memmove_s-wmemmove_s"></a>memmove_s、wmemmove_s
 
 将一个缓冲区移到另一个缓冲区。 如 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述，这些版本的 [memmove、wmemmove](memmove-wmemmove.md) 具有安全增强功能。
 
@@ -55,7 +58,7 @@ errno_t wmemmove_s(
 
 ### <a name="parameters"></a>参数
 
-*dest*<br/>
+dest<br/>
 目标对象。
 
 *numberOfElements*<br/>
@@ -65,7 +68,7 @@ errno_t wmemmove_s(
 源对象。
 
 *count*<br/>
-字节数 (**memmove_s**) 或多个字符 (**wmemmove_s**) 复制。
+要复制的字节数（**memmove_s**）或字符数（**wmemmove_s**）。
 
 ## <a name="return-value"></a>返回值
 
@@ -73,17 +76,17 @@ errno_t wmemmove_s(
 
 ### <a name="error-conditions"></a>错误条件
 
-|*dest*|*numberOfElements*|*src*|返回值|内容*dest*|
+|dest|*numberOfElements*|*src*|返回值|*Dest*的内容|
 |------------|------------------------|-----------|------------------|------------------------|
 |**NULL**|任何|任何|**EINVAL**|未修改|
 |任何|任何|**NULL**|**EINVAL**|未修改|
-|任何|< *count*|任何|**ERANGE**|未修改|
+|任何|< *计*|任何|**ERANGE**|未修改|
 
 ## <a name="remarks"></a>备注
 
-副本*计数*中的字符的字节*src*到*dest*。 如果源区域和目标的某些区域重叠时， **memmove_s**确保在重叠区域中的原始源字节被覆盖之前会复制。
+将*count*个字符从*src*复制到*目标*。 如果源区域的某些区域和目标重叠，则**memmove_s**确保在覆盖重叠区域中的原始源字节后将其复制。
 
-如果*dest*或者如果*src*是 null 指针，或如果目标字符串过小，这些函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md) . 如果允许执行继续，这些函数将返回**EINVAL**并设置**errno**到**EINVAL**。
+如果*dest*或*src*为空指针，或者如果目标字符串过小，则这些函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回**EINVAL** ，并将**Errno**设置为**EINVAL**。
 
 ## <a name="requirements"></a>要求
 

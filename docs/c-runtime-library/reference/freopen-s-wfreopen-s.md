@@ -1,10 +1,10 @@
 ---
 title: freopen_s、_wfreopen_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wfreopen_s
 - freopen_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - freopen_s
 - _tfreopen_s
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - wfreopen_s function
 - freopen_s function
 ms.assetid: ad25a4da-6ad4-476b-a86d-660b221ca84d
-ms.openlocfilehash: 6efe858713bf8c315536098f1b6dabdbcba01bfa
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: 30cd1612045a9f9a69e6ac856a601bac3101467f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376112"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956704"
 ---
-# <a name="freopens-wfreopens"></a>freopen_s、_wfreopen_s
+# <a name="freopen_s-_wfreopen_s"></a>freopen_s、_wfreopen_s
 
 重新分配文件指针。 这些版本的 [freopen、_wfreopen](freopen-wfreopen.md) 具有安全增强功能，如 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)所述。
 
@@ -77,7 +80,7 @@ errno_t _wfreopen(
 
 ## <a name="remarks"></a>备注
 
-**Freopen_s**函数关闭当前与*stream*关联的文件, 并将*流*重新分配到*path*指定的文件。 **_wfreopen_s**是 **_freopen_s**的宽字符版本; **_wfreopen_s**的*路径*和*模式*参数是宽字符字符串。 否则, **_wfreopen_s**和 **_freopen_s**的行为相同。
+**Freopen_s**函数关闭当前与*stream*关联的文件，并将*流*重新分配到*path*指定的文件。 **_wfreopen_s**是 **_freopen_s**的宽字符版本; **_wfreopen_s**的*路径*和*模式*参数是宽字符字符串。 否则， **_wfreopen_s**和 **_freopen_s**的行为相同。
 
 如果任何 *.pfile*、 *path*、 *mode*或*stream*为**NULL**, 或者如果*path*为空字符串, 则这些函数将调用无效参数处理程序, 如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续, 则这些函数会将**errno**设置为**EINVAL**并返回**EINVAL**。
 
@@ -91,7 +94,7 @@ errno_t _wfreopen(
 
 |*模式*|Access|
 |-|-|
-| **“r”** | 打开以便读取。 如果文件不存在或找不到, 则**freopen_s**调用失败。 |
+| **“r”** | 打开以便读取。 如果文件不存在或找不到，则**freopen_s**调用失败。 |
 | **“w”** | 打开用于写入的空文件。 如果给定文件存在，则其内容会被销毁。 |
 | **“a”** | 在文件末尾打开以进行写入（追加），在新数据写入到文件之前不移除文件末尾 (EOF) 标记。 创建文件（如果文件不存在）。 |
 | **“r+”** | 打开以便读取和写入。 文件必须存在。 |
@@ -113,7 +116,7 @@ errno_t _wfreopen(
 
 在文本 (已转换) 模式下, 回车换行符 (CR-LF) 组合将转换为输入的单行换行符 (LF) 字符;换行符在输出时转换为 CR-LF 组合。 CTRL+Z 也将在输入时解释为文件尾字符。 在打开以进行读取或使用 **"a +"** 进行读取和读取的文件中, 运行时库将检查文件末尾的 CTRL + Z 并将其删除 (如果可能)。 这样做的原因是, 使用[fseek](fseek-fseeki64.md)和[ftell](ftell-ftelli64.md)在文件中移动可能导致[fseek](fseek-fseeki64.md)在文件结尾附近出现错误。 **T**选项是一个 Microsoft 扩展, 不应在需要 ANSI 可移植性时使用。
 
-如果在*mode*中未给出**t**或**b** , 则默认转换模式由全局变量[_fmode](../../c-runtime-library/fmode.md)定义。 如果**t**或**b**作为参数的前缀, 则函数将失败并返回**NULL**。
+如果在*mode*中未给出**t**或**b** ，则默认转换模式由全局变量[_fmode](../../c-runtime-library/fmode.md)定义。 如果**t**或**b**作为参数的前缀, 则函数将失败并返回**NULL**。
 
 有关文本模式和二进制模式的讨论，请参阅[文本和二进制模式文件 I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md)。
 

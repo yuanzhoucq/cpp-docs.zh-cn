@@ -1,10 +1,10 @@
 ---
 title: _memicmp、_memicmp_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _memicmp_l
 - _memicmp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _memicmp
 - memicmp_l
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - memicmp_l function
 - _memicmp_l function
 ms.assetid: 0a6eb945-4077-4f84-935d-1aaebe8db8cb
-ms.openlocfilehash: 8beb632c8bd2cfac486fc58fc930b94490bdecbc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a463b9c79a76879311bb811b38e4aabcfd6e7226
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285269"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951843"
 ---
-# <a name="memicmp-memicmpl"></a>_memicmp、_memicmp_l
+# <a name="_memicmp-_memicmp_l"></a>_memicmp、_memicmp_l
 
 比较两个缓冲区中的字符（不区分大小写）。
 
@@ -74,18 +77,18 @@ int _memicmp_l(
 
 |返回值|buf1 和 buf2 的第一个计数字节的关系|
 |------------------|--------------------------------------------------------|
-|< 0|*buffer1*少于*buffer2*。|
-|0|*buffer1*等于*buffer2*。|
+|< 0|*buffer1*小于*buffer2*。|
+|0|*buffer1*与*buffer2*相同。|
 |> 0|*buffer1*大于*buffer2*。|
 |**_NLSCMPERROR**|出现了错误。|
 
 ## <a name="remarks"></a>备注
 
-**_Memicmp**函数进行比较的第一个*计数*字符的两个缓冲区*buffer1*并*buffer2*逐字节。 该比较不区分大小写。
+**_Memicmp**函数比较两个缓冲区*buffer1*和*buffer2* byte 的第一个*计数*字符。 该比较不区分大小写。
 
-如果任一*buffer1*或*buffer2*是 null 指针，此函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，该函数返回 **_NLSCMPERROR** ，并设置**errno**到**EINVAL**。
+如果*buffer1*或*buffer2*为 null 指针，此函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将返回 **_NLSCMPERROR** ，并将**Errno**设置为**EINVAL**。
 
-**_memicmp**的区域设置相关的行为; 使用当前区域设置 **_memicmp_l**是完全相同，只不过它改用已传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**_memicmp**对与区域设置相关的行为使用当前区域设置; **_memicmp_l**是相同的，只不过它使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>要求
 

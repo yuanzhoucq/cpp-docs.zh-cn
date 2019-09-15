@@ -1,11 +1,11 @@
 ---
 title: fma、fmaf、fmal
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fma
 - fmaf
 - fmal
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fma
 - fmaf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - fmaf function
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
-ms.openlocfilehash: f96592e245e443bae2f3334da51cae5572753708
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4ddc4061e5a24ee3b5176aedc569d134d85e0002
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333490"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957106"
 ---
 # <a name="fma-fmaf-fmal"></a>fma、fmaf、fmal
 
@@ -94,18 +97,18 @@ long double fmal(
 
 |问题|返回|
 |-----------|------------|
-|*x* = 无穷大*y* = 0 或<br /><br /> *x* = 0 时， *y* = INFINITY|NaN|
-|*x*或*y* = 确切为无穷大*z*符号相反 = INFINITY|NaN|
+|*x* = 无限大、 *y* = 0 或<br /><br /> *x* = 0、 *y* = 无限大|NaN|
+|*x*或*y* = 精确的±无限大， *z* = 无穷大，正负号|NaN|
 |*x*或*y* = NaN|NaN|
-|不 (*x* = 0， *y*= 不定值) 和*z* = NaN<br /><br /> 不 (*x*= 不定值， *y*= 0) 和*z* = NaN|NaN|
-|溢出范围错误|±HUGE_VAL、 ±HUGE_VALF 或 ±HUGE_VALL|
+|not （*x* = 0， *y*= 不定）， *z* = NaN<br /><br /> not （*x*= 不定、 *y*= 0）和*z* = NaN|NaN|
+|溢出范围错误|± HUGE_VAL、± HUGE_VALF 或± HUGE_VALL|
 |下溢范围错误|舍入后的正确值。|
 
 按 [_matherr](matherr.md) 中所指定的报告错误。
 
 ## <a name="remarks"></a>备注
 
-因为C++允许重载，可以调用的重载**fma**采用并返回**float**并**长** **double**类型。 在 C 程序中， **fma**始终采用并返回**double**。
+由于C++允许重载，因此你可以调用采用并返回**浮点**型和**长** **双精度**类型的**fma**的重载。 在 C 程序中， **fma**始终采用并返回**double**。
 
 此函数计算值就好像它采取了无限精度，然后将最终结果舍入。
 
@@ -113,7 +116,7 @@ long double fmal(
 
 |函数|C 标头|C++ 标头|
 |--------------|--------------|------------------|
-|**fma**， **fmaf**， **fmal**|\<math.h>|\<cmath>|
+|**fma**、 **fmaf**、 **fmal**|\<math.h>|\<cmath>|
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

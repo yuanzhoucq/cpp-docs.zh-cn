@@ -1,12 +1,12 @@
 ---
 title: _isctype、iswctype、_isctype_l、_iswctype_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _isctype_l
 - iswctype
 - _iswctype_l
 - _isctype
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - iswctype
 - _isctype
@@ -38,16 +41,16 @@ helpviewer_keywords:
 - isctype function
 - _iswctype function
 ms.assetid: cf7509b7-12fc-4d95-8140-ad2eb98173d3
-ms.openlocfilehash: c5eb0b51cf0371100ed884221ee04885dfbe9ad9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9fefb852f8ebd34b932842ee4c12b53f79b29641
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157284"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954400"
 ---
-# <a name="isctype-iswctype-isctypel-iswctypel"></a>_isctype、iswctype、_isctype_l、_iswctype_l
+# <a name="_isctype-iswctype-_isctype_l-_iswctype_l"></a>_isctype、iswctype、_isctype_l、_iswctype_l
 
-测试*c* ctype 属性指定*desc*参数。 对于每个有效值都*desc*，还有一个等效的宽字符分类例程。
+针对*desc*参数指定的 ctype 属性测试*c* 。 对于*desc*的每个有效值，都有一个等效的宽字符分类例程。
 
 ## <a name="syntax"></a>语法
 
@@ -85,9 +88,9 @@ int _iswctype_l(
 
 ## <a name="return-value"></a>返回值
 
-**_isctype**并**iswctype**返回非零值，如果*c*具有指定的属性*desc*中当前区域设置或如果不为 0。 使用这些函数的版本 **_l**后缀完全相同，只不过它们使用为其区域设置相关的行为而不是当前区域设置传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+如果*c*具有在当前区域设置中由*desc*指定的属性，则 **_isctype**和**iswctype**将返回一个非零值，如果不是，则返回0。 这些带有 **_l**后缀的函数的版本相同，只不过它们使用传入的区域设置，而不是其与区域设置相关的行为的当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-行为 **_isctype**并 **_isctype_l**未定义当*c*不是 EOF 或在范围 0 到 0xff 内，非独占。 使用调试 CRT 库时， *c*是不包含其中一个值，函数将引发断言。
+如果*c*不是 EOF 或介于0到0xff （含0和0xff），则 **_isctype**和 **_isctype_l**的行为是不确定的。 当使用调试 CRT 库并且*c*不是这些值之一时，函数将引发断言。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

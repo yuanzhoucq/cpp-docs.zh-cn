@@ -1,10 +1,10 @@
 ---
 title: memcpy_s、wmemcpy_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - memcpy_s
 - wmemcpy_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wmemcpy_s
 - memcpy_s
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-ms.openlocfilehash: 802d75307096e649df15b1864b99699fba92a3a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8078590df6950201ef81356ba6c28173e80572ee
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285318"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952803"
 ---
-# <a name="memcpys-wmemcpys"></a>memcpy_s、wmemcpy_s
+# <a name="memcpy_s-wmemcpy_s"></a>memcpy_s、wmemcpy_s
 
 在缓冲区之间复制字节。 如 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述，这些版本的 [memcpy、wmemcpy](memcpy-wmemcpy.md) 具有安全增强功能。
 
@@ -55,7 +58,7 @@ errno_t wmemcpy_s(
 
 ### <a name="parameters"></a>参数
 
-*dest*<br/>
+dest<br/>
 新缓冲区。
 
 *destSize*<br/>
@@ -73,18 +76,18 @@ errno_t wmemcpy_s(
 
 ### <a name="error-conditions"></a>错误条件
 
-|*dest*|*destSize*|*src*|*count*|返回值|内容*dest*|
+|dest|*destSize*|*src*|*count*|返回值|*Dest*的内容|
 |------------|----------------|-----------|---|------------------|------------------------|
 |任何|任何|任何|0|0|未修改|
 |**NULL**|任何|任何|非零|**EINVAL**|未修改|
-|任何|任何|**NULL**|非零|**EINVAL**|*dest*已清零|
-|任何|< *count*|任何|非零|**ERANGE**|*dest*已清零|
+|任何|任何|**NULL**|非零|**EINVAL**|*dest*已归零|
+|任何|< *计*|任何|非零|**ERANGE**|*dest*已归零|
 
 ## <a name="remarks"></a>备注
 
-**memcpy_s**副本*计数*个字节从*src*到*dest*;**wmemcpy_s**副本*计数*宽字符 （两个字节为单位）。 如果源和目标重叠的行为**memcpy_s**是不确定的。 使用**memmove_s**处理重叠区域。
+**memcpy_s**将*计数*字节从*src*复制到*目标*;**wmemcpy_s**复制*计数*宽字符（两个字节）。 如果源和目标重叠，则**memcpy_s**的行为是不确定的。 使用**memmove_s**处理重叠区域。
 
-这些函数验证其参数。 如果*计数*为非零和*dest*或*src*是 null 指针，或者*destSize*小于*计数*，这些函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，这些函数将返回**EINVAL**或**ERANGE**并设置**errno**的返回值。
+这些函数验证其参数。 如果*count*为非零，且*dest*或*src*为空指针，或*destSize*小于*count*，则这些函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回**EINVAL**或**ERANGE** ，并将**errno**设置为返回值。
 
 ## <a name="requirements"></a>要求
 

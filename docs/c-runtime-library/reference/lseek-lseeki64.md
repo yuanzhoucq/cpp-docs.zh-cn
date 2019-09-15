@@ -1,10 +1,10 @@
 ---
 title: _lseek、_lseeki64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _lseeki64
 - _lseek
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _lseeki64
 - _lseek
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - file pointers [C++], moving
 - seek file pointers
 ms.assetid: aba8a768-d40e-48c3-b38e-473dbd782f93
-ms.openlocfilehash: 4d0320b45cb8cd99f1d9f6494b7dcb17bc545a81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67bcce2a9936cd09973e8ddf1828704944866439
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285921"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952976"
 ---
-# <a name="lseek-lseeki64"></a>_lseek、_lseeki64
+# <a name="_lseek-_lseeki64"></a>_lseek、_lseeki64
 
 将文件指针移到指定位置。
 
@@ -68,21 +71,21 @@ __int64 _lseeki64(
 
 ## <a name="return-value"></a>返回值
 
-**_lseek**返回的偏移量，以字节为单位，该文件从一开始的新位置。 **_lseeki64**在 64 位整数返回的偏移量。 该函数将返回-1l 以指示错误。 如果传递的参数无效，例如文件描述符格式错误，或 *origin* 的值无效或 *offset* 指定的位置在文件的开头之前，则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，这些函数将设置**errno**到**EBADF**并返回-1l。 在无法查找（例如端接设备和打印机）的设备上，返回值未定义。
+**_lseek**返回从文件开头开始的新位置的偏移量（以字节为单位）。 **_lseeki64**返回64位整数中的偏移量。 函数将返回-1L 以指示错误。 如果传递的参数无效，例如文件描述符格式错误，或 *origin* 的值无效或 *offset* 指定的位置在文件的开头之前，则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数会将**errno**设置为**Ebadf (** 并返回1L。 在无法查找（例如端接设备和打印机）的设备上，返回值未定义。
 
 有关这些及其他错误代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**_Lseek**函数将与关联的文件指针*fd*到新位置，即*偏移量*个字节从*源*。 对文件的下一步操作发生在新位置。 *origin* 参数必须是 Stdio.h 中定义的以下常量之一。
+**_Lseek**函数将与*fd*关联的文件指针移动到从源*偏移*字节的新*位置。* 对文件的下一步操作发生在新位置。 *origin* 参数必须是 Stdio.h 中定义的以下常量之一。
 
-|*源*值||
+|*原始*值||
 |-|-|
 | **SEEK_SET** | 文件开头。 |
 | **SEEK_CUR** | 文件指针的当前位置。 |
 | **SEEK_END** | 文件结尾。 |
 
-可以使用 **_lseek**将指针重新定位任何位置的文件中或文件的末尾之外。
+可以使用 **_lseek**将指针重新定位到文件中的任何位置，或移到文件的末尾之外。
 
 ## <a name="requirements"></a>要求
 
@@ -149,7 +152,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crtlseekcinput"></a>输入：crt_lseek.c_input
+### <a name="input-crt_lseekc_input"></a>输入：crt_lseek.c_input
 
 ```Input
 Line one.

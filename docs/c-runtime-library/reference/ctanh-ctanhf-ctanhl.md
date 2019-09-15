@@ -1,11 +1,11 @@
 ---
 title: ctanh、ctanhf、ctanhl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ctanh
 - ctanhf
 - ctanhl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ctanh
 - ctanhf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - ctanhl function
 - ctanhf function
 ms.assetid: 807f2cd1-8740-4988-afff-5911c346385b
-ms.openlocfilehash: f63329e45fdcd3a26d613f73cd911fdf6fb10401
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dae59dcd4a71045b27c6ba9501580bf981b9828f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288935"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941952"
 ---
 # <a name="ctanh-ctanhf-ctanhl"></a>ctanh、ctanhf、ctanhl
 
@@ -68,22 +71,22 @@ _Lcomplex ctanhl(
 
 ## <a name="return-value"></a>返回值
 
-复数的双曲正切值*z*。
+*Z*的复杂双曲正切值。
 
 |输入|SEH 异常|**_matherr**异常|
 |-----------|-------------------|--------------------------|
-|为 ∞，QNAN IND|无|_DOMAIN|
-|为 ∞ （tan、 tanf）|INVALID|_DOMAIN|
+|±∞、QNAN、IND|无|_DOMAIN|
+|±∞（tan，tanf）|INVALID|_DOMAIN|
 
 ## <a name="remarks"></a>备注
 
-因为C++允许重载，可以调用的重载**ctanh**采用并返回 **_Fcomplex**并 **_Lcomplex**的值。 在 C 程序中， **ctanh**始终采用并返回 **_Dcomplex**值。
+由于C++允许重载，因此可以调用**ctanh**的重载，该重载采用并返回 **_Fcomplex**和 **_Lcomplex**值。 在 C 程序中， **ctanh**始终采用并返回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|C 标头|C++ 标头|
 |-------------|--------------|------------------|
-|**ctanh**,               **ctanhf**, **ctanhl**|\<complex.h>|\<ccomplex>|
+|**ctanh**、 **ctanhf**、 **ctanhl**|\<complex.h>|\<ccomplex>|
 
 有关兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

@@ -1,10 +1,10 @@
 ---
 title: _fgetc_nolock、_fgetwc_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fgetc_nolock
 - _fgetwc_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fgetwc_nolock
 - fgettc_nolock
@@ -35,14 +38,14 @@ helpviewer_keywords:
 - reading characters from streams
 - _fgettc_nolock function
 ms.assetid: fb8e7c5b-4503-493a-879e-6a1db75aa114
-ms.openlocfilehash: 568a96caf481fbaf3e80cf60958dc826db49dd86
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5bc2ff8e8ca36a9c6acee821d1507767f4b1a0d5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333964"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940883"
 ---
-# <a name="fgetcnolock-fgetwcnolock"></a>_fgetc_nolock、_fgetwc_nolock
+# <a name="_fgetc_nolock-_fgetwc_nolock"></a>_fgetc_nolock、_fgetwc_nolock
 
 读取流中的字符，而不锁定线程。
 
@@ -68,7 +71,7 @@ wint_t _fgetwc_nolock(
 
 ## <a name="remarks"></a>备注
 
-**_fgetc_nolock**和 **_fgetwc_nolock**等于**fgetc**并**fgetwc**分别，只不过它们未受保护的干扰从其他线程。 它们可能更快，因为它们不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用这些函数，如单线程应用程序或调用范围已经处理线程隔离。
+**_fgetc_nolock**和 **_fgetwc_nolock**分别与**fgetc**和**fgetwc**相同，不同之处在于它们不会受到其他线程的干扰。 它们可能更快，因为它们不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用这些函数，如单线程应用程序或调用范围已经处理线程隔离。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -121,7 +124,7 @@ int main( void )
 }
 ```
 
-## <a name="input-crtfgetcnolocktxt"></a>输入：crt_fgetc_nolock.txt
+## <a name="input-crt_fgetc_nolocktxt"></a>输入：crt_fgetc_nolock.txt
 
 ```Input
 Line one.

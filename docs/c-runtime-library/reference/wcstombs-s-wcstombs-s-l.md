@@ -1,10 +1,10 @@
 ---
 title: wcstombs_s、_wcstombs_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wcstombs_s_l
 - wcstombs_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcstombs_s
 - _wcstombs_s_l
@@ -29,12 +32,12 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 105f2d33-221a-4f6d-864c-23c1865c42af
-ms.openlocfilehash: 3f30ef1f94803005a1afd99a6f82c46296f5c4f7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 135bcb90e6a82591bf05e56b60575719f4c7d45c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498991"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945032"
 ---
 # <a name="wcstombs_s-_wcstombs_s_l"></a>wcstombs_s、_wcstombs_s_l
 
@@ -81,19 +84,19 @@ errno_t _wcstombs_s_l(
 ### <a name="parameters"></a>参数
 
 *pReturnValue*<br/>
-转换后的字符串 (包括 null 终止符) 的大小 (以字节为单位)。
+转换后的字符串（包括 null 终止符）的大小（以字节为单位）。
 
 *mbstr*<br/>
 生成的已转换多字节字符字符串的缓冲区的地址。
 
 *sizeInBytes*<br/>
-*Mbstr*缓冲区的大小 (以字节为单位)。
+*Mbstr*缓冲区的大小（以字节为单位）。
 
 *wcstr*<br/>
 指向要转换的宽字符字符串的指针。
 
-*计数*<br/>
-要存储在*mbstr*缓冲区中的最大字节数, 不包括终止 null 字符或[_TRUNCATE](../../c-runtime-library/truncate.md)。
+*count*<br/>
+要存储在*mbstr*缓冲区中的最大字节数，不包括终止 null 字符或[_TRUNCATE](../../c-runtime-library/truncate.md)。
 
 *locale*<br/>
 要使用的区域设置。
@@ -104,11 +107,11 @@ errno_t _wcstombs_s_l(
 
 |错误条件|返回值和**errno**|
 |---------------------|------------------------------|
-|*mbstr*为**NULL** , *sizeInBytes* > 0|**EINVAL**|
+|*mbstr*为**NULL** ， *sizeInBytes* > 0|**EINVAL**|
 |*wcstr*为**NULL**|**EINVAL**|
-|目标缓冲区太小, 无法包含转换后的字符串 (除非*计数*为 **_TRUNCATE**; 请参阅下面的备注)|**ERANGE**|
+|目标缓冲区太小，无法包含转换后的字符串（除非*计数*为 **_TRUNCATE**; 请参阅下面的备注）|**ERANGE**|
 
-如果发生这些情况中的任何一个，都会调用无效参数异常，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续, 则该函数将返回错误代码并按表中所示设置**errno** 。
+如果发生这些情况中的任何一个，都会调用无效参数异常，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将返回错误代码并按表中所示设置**errno** 。
 
 ## <a name="remarks"></a>备注
 
@@ -122,18 +125,18 @@ errno_t _wcstombs_s_l(
 
 目标字符串始终以 null 结尾（即使在出错时）。
 
-如果*count*是特殊值[_TRUNCATE](../../c-runtime-library/truncate.md), 则**wcstombs_s**会将尽可能多的字符串转换为目标缓冲区的大小, 同时仍然为 null 终止符留下空间。 如果字符串被截断, 则返回值为**STRUNCATE**, 转换将视为成功。
+如果*count*是特殊值[_TRUNCATE](../../c-runtime-library/truncate.md)，则**wcstombs_s**会将尽可能多的字符串转换为目标缓冲区的大小，同时仍然为 null 终止符留下空间。 如果字符串被截断，则返回值为**STRUNCATE**，转换将视为成功。
 
-如果**wcstombs_s**成功转换了源字符串, 它会将转换后的字符串 (包括 null 终止符) 的大小 (以字节为单位) 放入 *&#42;pReturnValue* (提供的*pReturnValue*不为**null**)。 即使*mbstr*参数为**NULL** , 并且提供了一种方法来确定所需的缓冲区大小, 也会发生这种情况。 请注意, 如果*mbstr*为**NULL**, 则忽略*count* 。
+如果**wcstombs_s**成功转换了源字符串，它会将转换后的字符串（包括 null 终止符）的大小（以字节为单位）放入 *&#42;pReturnValue* （提供的*pReturnValue*不为**null**）。 即使*mbstr*参数为**NULL** ，并且提供了一种方法来确定所需的缓冲区大小，也会发生这种情况。 请注意，如果*mbstr*为**NULL**，则忽略*count* 。
 
-如果**wcstombs_s**遇到不能转换为多字节字符的宽字符, 则它会将0放在 *&#42;pReturnValue*中, 将目标缓冲区设置为空字符串, 将**errno**设置为**eilseq 且**, 并返回**eilseq 且**。
+如果**wcstombs_s**遇到不能转换为多字节字符的宽字符，则它会将0放在 *&#42;pReturnValue*中，将目标缓冲区设置为空字符串，将**errno**设置为**eilseq 且**，并返回**eilseq 且**。
 
-如果由*wcstr*和*mbstr*指向的序列重叠, 则**wcstombs_s**的行为不确定。
+如果由*wcstr*和*mbstr*指向的序列重叠，则**wcstombs_s**的行为不确定。
 
 > [!IMPORTANT]
-> 确保*wcstr*和*mbstr*不重叠, 并且该*计数*正确反映了要转换的宽字符数。
+> 确保*wcstr*和*mbstr*不重叠，并且该*计数*正确反映了要转换的宽字符数。
 
-**wcstombs_s**为任何与区域设置相关的行为使用当前区域设置; **_wcstombs_s_l**与**wcstombs**相同, 只不过它使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**wcstombs_s**为任何与区域设置相关的行为使用当前区域设置; **_wcstombs_s_l**与**wcstombs**相同，只不过它使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 

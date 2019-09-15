@@ -1,9 +1,9 @@
 ---
 title: _aligned_malloc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _aligned_malloc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _aligned_malloc
 - alligned_malloc
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - aligned_malloc function
 - _aligned_malloc function
 ms.assetid: fb788d40-ee94-4039-aa4d-97d73dab1ca0
-ms.openlocfilehash: c89dff7d2159855037fee565f2148a8edb89f07d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b4a2b35e5344757a1269ccb781a0524383a4f792
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341816"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943869"
 ---
-# <a name="alignedmalloc"></a>_aligned_malloc
+# <a name="_aligned_malloc"></a>_aligned_malloc
 
 在指定对齐边界分配内存。
 
@@ -53,15 +56,15 @@ void * _aligned_malloc(
 
 ## <a name="return-value"></a>返回值
 
-已分配的内存块的指针或如果操作失败，则为 NULL。 在指针位于的倍数*对齐*。
+指向分配的内存块的指针; 如果操作失败，则为 NULL。 指针是*对齐*的倍数。
 
 ## <a name="remarks"></a>备注
 
 **_aligned_malloc**基于[malloc](malloc.md)。
 
-**_aligned_malloc**砆`__declspec(noalias)`和`__declspec(restrict)`，这意味着确保该函数不能修改全局变量，并且指针返回不使用别名。 有关详细信息，请参阅 [noalias](../../cpp/noalias.md) 和[限制](../../cpp/restrict.md)。
+**_aligned_malloc**被标记`__declspec(noalias)` `__declspec(restrict)`为，这意味着该函数不能修改全局变量，并且返回的指针没有化名。 有关详细信息，请参阅 [noalias](../../cpp/noalias.md) 和[限制](../../cpp/restrict.md)。
 
-如果内存分配失败或请求的大小大于 `errno`，则此函数会将 `ENOMEM` 设置为 `_HEAP_MAXREQ`。 有关 `errno` 的详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。 此外， **_aligned_malloc**验证其参数。 如果*对齐*不是 2 的幂或*大小*为零，此函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则此函数将返回 NULL 并集`errno`到`EINVAL`。
+如果内存分配失败或请求的大小大于 `errno`，则此函数会将 `ENOMEM` 设置为 `_HEAP_MAXREQ`。 有关 `errno` 的详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。 此外， **_aligned_malloc**还会验证其参数。 如果*对齐*不是2的幂或*大小*为零，则此函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数将返回 NULL，并`errno`将`EINVAL`设置为。
 
 ## <a name="requirements"></a>要求
 

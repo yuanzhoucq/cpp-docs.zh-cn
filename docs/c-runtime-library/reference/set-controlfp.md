@@ -1,9 +1,9 @@
 ---
 title: _set_controlfp
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _set_controlfp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - set_controlfp
 - _set_controlfp
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - floating-point functions, setting control word
 - _set_controlfp function
 ms.assetid: e0689d50-f68a-4028-a9c1-fb23eedee4ad
-ms.openlocfilehash: 1187502f09849d7ca4d8e595c237cfa511d00c6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d39406db0f4c9ba6374776da62aea2dbb61e23d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356675"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948673"
 ---
-# <a name="setcontrolfp"></a>_set_controlfp
+# <a name="_set_controlfp"></a>_set_controlfp
 
 设置浮点控制字。
 
@@ -58,9 +61,9 @@ void __cdecl _set_controlfp(
 
 ## <a name="remarks"></a>备注
 
-**_Set_controlfp**函数是类似于 **_control87**，但它仅将浮点控制字设置为*newControl*。 值中的位表示浮点控制状态。 浮点控制状态允许程序在浮点数学包中更改精度、舍入和无穷模式。 此外可以屏蔽或取消屏蔽浮点异常通过 **_set_controlfp**。 有关详细信息，请参阅 [_control87、_controlfp、\__control87_2](control87-controlfp-control87-2.md)。
+**_Set_controlfp**函数类似于 **_control87**，但它仅将浮点控制字设置为*newControl*。 值中的位表示浮点控制状态。 浮点控制状态允许程序在浮点数学包中更改精度、舍入和无穷模式。 还可以使用 **_set_controlfp**屏蔽或取消屏蔽浮点异常。 有关详细信息，请参阅 [_control87、_controlfp、\__control87_2](control87-controlfp-control87-2.md)。
 
-使用编译时，此函数已弃用[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)因为公共语言运行时仅支持默认浮点精度。
+使用[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)进行编译时，不推荐使用此函数，因为公共语言运行时仅支持默认的浮点精度。
 
 ## <a name="requirements"></a>要求
 

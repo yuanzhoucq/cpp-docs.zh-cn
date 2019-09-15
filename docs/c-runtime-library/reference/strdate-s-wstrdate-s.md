@@ -1,10 +1,10 @@
 ---
 title: _strdate_s、_wstrdate_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _strdate_s
 - _wstrdate_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _strdate_s
 - wstrdate_s
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _strdate_s function
 - _wstrdate_s function
 ms.assetid: d41d8ea9-e5ce-40d4-864e-1ac29b455991
-ms.openlocfilehash: 85c9ab7dcad68f3aa4832236461cd38b07d4ae44
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fadd30ec81cff59d675212e59c8513656c7b2f35
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353984"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940754"
 ---
-# <a name="strdates-wstrdates"></a>_strdate_s、_wstrdate_s
+# <a name="_strdate_s-_wstrdate_s"></a>_strdate_s、_wstrdate_s
 
 将当前系统日期复制到缓冲区。 如 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述，这些版本的 [_strdate、_wstrdate](strdate-wstrdate.md) 具有安全性增强功能。
 
@@ -79,26 +82,26 @@ errno_t _wstrdate_s(
 
 ## <a name="error-conditions"></a>错误条件
 
-|*buffer*|*numberOfElements*|返回|内容*缓冲区*|
+|*buffer*|*numberOfElements*|返回|*缓冲区*内容|
 |--------------|------------------------|------------|--------------------------|
 |**NULL**|（任意数值）|**EINVAL**|未修改|
-|不**NULL** （指向有效的缓冲区）|0|**EINVAL**|未修改|
-|不**NULL** （指向有效的缓冲区）|0 < *numberOfElements* < 9|**EINVAL**|空字符串|
-|不**NULL** （指向有效的缓冲区）|*numberOfElements* >= 9|0|注解中指定的当前日期格式|
+|Not **NULL** （指向有效的缓冲区）|0|**EINVAL**|未修改|
+|Not **NULL** （指向有效的缓冲区）|0 < *numberOfElements* < 9|**EINVAL**|空字符串|
+|Not **NULL** （指向有效的缓冲区）|*numberOfElements* > = 9|0|注解中指定的当前日期格式|
 
 ## <a name="security-issues"></a>安全性问题
 
-传入无效非**NULL**值的缓冲区将导致访问冲突，如果*numberOfElements*参数大于 9。
+如果*numberOfElements*参数大于9，则为缓冲区传入无效的非**NULL**值将导致访问冲突。
 
-将大小的值传递大于的实际大小*缓冲区*将导致缓冲区溢出。
+如果传递的大小大于*缓冲区*的实际大小，将导致缓冲区溢出。
 
 ## <a name="remarks"></a>备注
 
-这些函数提供更多安全版本 **_strdate**并 **_wstrdate**。 **_Strdate_s**函数将当前系统日期复制到由指向的缓冲区*缓冲区*格式化**mm**/**dd** / **yy**，其中**mm**是两位数表示月**dd**是两位数表示日，和**yy**是一年中的最后两位数字。 例如，字符串**12/05/99**表示 1999 年 12 月 5 日。 缓冲区长度必须至少为 9 个字符。
+这些函数提供更安全的 **_strdate**和 **_wstrdate**版本。 **_Strdate_s**函数将当前系统日期复制到*缓冲区*所指向的缓冲区，格式为**mm**/**dd**/**yy**，其中**mm**是表示月份的两位数字， **dd**表示天的两位数字， **yy**是年份的最后两位数字。 例如，字符串**12/05/99**表示1999年12月5日。 缓冲区长度必须至少为 9 个字符。
 
-**_wstrdate_s**是宽字符版本 **_strdate_s**; 的自变量和返回值 **_wstrdate_s**都是宽字符字符串。 否则这些函数具有相同行为。
+**_wstrdate_s**是 **_strdate_s**的宽字符版本; **_wstrdate_s**的参数和返回值是宽字符字符串。 否则这些函数具有相同行为。
 
-如果*缓冲区*是**NULL**指针，或者，如果*numberOfElements*小于 9 个字符，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，这些函数将返回-1 并设置**errno**到**EINVAL**如果缓冲区**NULL**或者如果*numberOfElements*是否小于或等于 0 或一组**errno**到**ERANGE**如果*numberOfElements*小于 9。
+如果*buffer*为**空**指针，或者如果*numberOfElements*少于9个字符，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回-1，并将**errno**设置为**EINVAL** （如果缓冲区为**NULL** ），或者如果*numberOfElements*小于或等于0，则将**errno**设置为**ERANGE** （如果*numberOfElements*小于9。
 
 在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 

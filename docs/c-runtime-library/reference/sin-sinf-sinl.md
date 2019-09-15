@@ -1,11 +1,11 @@
 ---
-title: sin、 sinf、 sinl
+title: sin、sinf、sinl
 ms.date: 04/10/2018
-apiname:
+api_name:
 - sinl
 - sinf
 - sin
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _sinl
 - sinf
@@ -31,16 +34,16 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-ms.openlocfilehash: 7006d7246837e5dc69733a007b3f7dab1c55280e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4ef8ac08ada6162932bbf9b872f30e6aa88b79b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356246"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948067"
 ---
-# <a name="sin-sinf-sinl"></a>sin、 sinf、 sinl
+# <a name="sin-sinf-sinl"></a>sin、sinf、sinl
 
-计算正弦值的浮点值。
+计算浮点值的正弦值。
 
 ## <a name="syntax"></a>语法
 
@@ -62,24 +65,24 @@ long double sin(long double x);  // C++ only
 
 ## <a name="return-value"></a>返回值
 
-**Sin**函数返回的正弦*x*。 如果*x*是大于或等于 263，或小于或等于-263，会发生丢失结果中的基数。
+**Sin**函数返回*x*的正弦值。 如果*x*大于或等于263，或者小于或等于-263，则结果中的结果会丢失。
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
-|± QNAN,IND|None|_DOMAIN|
-|为 ∞ （sin、 sinf、 sinl）|INVALID|_DOMAIN|
+|± QNAN，IND|无|_DOMAIN|
+|±∞（sin、sinf、sinl）|INVALID|_DOMAIN|
 
 有关返回代码的详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-因为C++允许重载，可以调用的重载**sin**采用并返回**float**或**长** **double**值。 在 C 程序中， **sin**始终采用并返回**double**。
+由于C++允许重载，因此你可以调用采用并返回**浮点**或**长** **双精度**值的**sin**重载。 在 C 程序中， **sin**始终采用并返回**double**。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|必需的标头 (C)|必需的标头 (C++)|
 |-|-|-|
-|**sin**， **sinf**， **sinl**|\<math.h>|\<cmath> 或 \<math.h>|
+|**sin**、 **sinf**、 **sinl**|\<math.h>|\<cmath> 或 \<math.h>|
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

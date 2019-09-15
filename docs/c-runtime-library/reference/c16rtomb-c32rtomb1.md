@@ -1,10 +1,10 @@
 ---
 title: c16rtomb, c32rtomb
 ms.date: 01/22/2018
-apiname:
+api_name:
 - c16rtomb
 - c32rtomb
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - c16rtomb
 - c32rtomb
@@ -26,12 +29,12 @@ helpviewer_keywords:
 - c16rtomb function
 - c32rtomb function
 ms.assetid: 7f5743ca-a90e-4e3f-a310-c73e16f4e14d
-ms.openlocfilehash: ad58184c7bab6f95a842bda5f9eb545f09434a3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a16effe48442ccbb5144b57ead2fb15c908fe898
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341751"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943432"
 ---
 # <a name="c16rtomb-c32rtomb"></a>c16rtomb, c32rtomb
 
@@ -60,26 +63,26 @@ size_t c32rtomb(
 *wchar*<br/>
 要转换的宽字符。
 
-*state*<br/>
-一个指向**mbstate_t**对象。
+State<br/>
+指向**mbstate_t**对象的指针。
 
 ## <a name="return-value"></a>返回值
 
-数组对象中存储的字节数*mbchar*，包括任何位移序列。 如果*wchar*不是有效的宽字符，值 (**size_t**返回)(-1) **errno**设置为**EILSEQ**，和值*状态*未指定。
+数组对象*mbchar*中存储的字节数，包括任何移位序列。 如果*wchar*不是有效的宽字符，则返回值（**size_t**）（-1）， **errno**设置为**eilseq 且**，*状态*的值未指定。
 
 ## <a name="remarks"></a>备注
 
-**C16rtomb**函数将 utf-16 字符*wchar*到当前区域设置中的等效多字节窄字符序列。 如果*mbchar*不是 null 指针，指向已转换的序列数组对象中的函数存储*mbchar*。 最多**MB_CUR_MAX**中存储的字节*mbchar*，并*状态*设置为生成的多字节位移状态。    如果*wchar*是 null 宽字符，则为所需的序列还原初始位移状态存储中，如果需要后跟 null 字符，并且*状态*设置为初始转换状态。 **C32rtomb**函数完全相同，但将 UTF-32 字符转换。
+**C16rtomb**函数将 utf-16 字符*wchar*转换为当前区域设置中的等效多字节窄字符序列。 如果*mbchar*不是空指针，则该函数将转换后的序列存储在由*mbchar*指向的数组对象中。 最多**MB_CUR_MAX**字节存储在*mbchar*中，*状态*设置为生成的多字节移位状态。    如果*wchar*是 null 宽字符，则会存储还原初始移位状态所需的序列，如果需要，后面跟 null 字符，*状态*设置为初始转换状态。 **C32rtomb**函数是相同的，但会转换32字符。
 
-如果*mbchar*是空指针，该行为相当于替换内部缓冲区的函数调用*mbchar*和宽 null 字符*wchar*。
+如果*mbchar*为 null 指针，则行为等效于调用函数的函数，该函数将内部缓冲区替换为*mbchar* ，将宽 null 字符替换为*wchar*。
 
-*状态*转换状态对象，可对此函数和其他维护的多字节输出字符的移位状态的可重启函数执行后续调用。 如果混合使用可重启和非可重启函数，或如果调用，结果不确定**setlocale**可重启函数调用之间进行。
+通过*状态*转换状态对象，您可以对此函数和其他保留多字节输出字符的移位状态的可重启函数进行后续调用。 混合使用可重启和非可重启的函数时，或者如果在可重启的函数调用之间进行了**setlocale**调用，则结果是不确定的。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**c16rtomb**， **c32rtomb**|C, C++: \<uchar.h>|
+|**c16rtomb**、 **c32rtomb**|C, C++: \<uchar.h>|
 
 有关兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

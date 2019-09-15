@@ -1,9 +1,9 @@
 ---
-title: frexp、 frexpf、 frexpl
+title: frexp、frexpf、frexpl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - frexp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - frexp
 - _frexpl
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - frexp function
 - floating-point functions, mantissa and exponent
 ms.assetid: 9b020f2e-3967-45ec-a6a8-d467a071aa55
-ms.openlocfilehash: c9e259f730d2d63d07032735be930f6f0fdb17e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3a67ced9bd6653a7c40c98a8cf015663c37457bb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332970"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956641"
 ---
-# <a name="frexp-frexpf-frexpl"></a>frexp、 frexpf、 frexpl
+# <a name="frexp-frexpf-frexpl"></a>frexp、frexpf、frexpl
 
 获取浮点数的尾数和指数。
 
@@ -73,19 +76,19 @@ long double frexp(
 
 ## <a name="return-value"></a>返回值
 
-**frexp**返回表示尾数。 如果*x*为 0，则该函数返回 0 表示尾数和指数。 如果*expptr*是**NULL**，如中所述，将调用无效的参数处理程序[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数可设置**errno**到**EINVAL** ，并返回 0。
+**frexp**返回尾数。 如果*x*为0，则函数对于尾数和指数都返回0。 如果*expptr*为**NULL**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续, 则此函数会将**errno**设置为**EINVAL** , 并返回0。
 
 ## <a name="remarks"></a>备注
 
-**Frexp**函数将分解的浮点值 (*x*) 分解为一个尾数 (*m*) 和一个指数 (*n*)，这样，绝对值*m*大于或等于 0.5 且小于 1.0，并*x* = *m* * 2<sup>*n*</sup>. 整数指数*n*指向的位置处存储*expptr*。
+**Frexp**函数将浮点值（*x*）分解为尾数（*m*）和指数（*n*），以使*m*的绝对值大于或等于0.5 且小于1.0， *x*  = *m* * 2<sup>*n*</sup>。 整数指数*n*存储在*expptr*所指向的位置。
 
-C++允许重载，因此可以调用的重载**frexp**。 在 C 程序中， **frexp**始终采用**double**和一个**int**指针和返回**double**。
+C++允许重载，因此可以调用**frexp**的重载。 在 C 程序中， **frexp**始终采用**double**和**int**指针并返回**double**。
 
 ## <a name="requirements"></a>要求
 
 |函数|必需的标头|
 |--------------|---------------------|
-|**frexp**， **frexpf**， **frexpl**|\<math.h>|
+|**frexp**、 **frexpf**、 **frexpl**|\<math.h>|
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

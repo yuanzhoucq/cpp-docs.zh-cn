@@ -1,10 +1,10 @@
 ---
 title: mbstowcs_s, _mbstowcs_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbstowcs_s_l
 - mbstowcs_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbstowcs_s_l
 - mbstowcs_s
@@ -26,12 +29,12 @@ helpviewer_keywords:
 - mbstowcs_s function
 - mbstowcs_s_l function
 ms.assetid: 2fbda953-6918-498f-b440-3e7b21ed65a4
-ms.openlocfilehash: 7a1c29118c48bbbb5358e7d7ea57296f7ec908a8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 0812c3f667f28c5c43d7932d4746052dbaff3a60
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499761"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952005"
 ---
 # <a name="mbstowcs_s-_mbstowcs_s_l"></a>mbstowcs_s, _mbstowcs_s_l
 
@@ -81,13 +84,13 @@ errno_t _mbstowcs_s_l(
 用于转换所生成的宽字符串的缓冲区地址。
 
 *sizeInWords*<br/>
-*Wcstr*缓冲区的大小 (以单词为限)。
+*Wcstr*缓冲区的大小（以单词为限）。
 
 *mbstr*<br/>
 Null 终止的多字节字符序列的地址。
 
-*计数*<br/>
-要存储在*wcstr*缓冲区中的宽字符的最大数量, 不包括终止 Null 或[_TRUNCATE](../../c-runtime-library/truncate.md)。
+*count*<br/>
+要存储在*wcstr*缓冲区中的宽字符的最大数量，不包括终止 Null 或[_TRUNCATE](../../c-runtime-library/truncate.md)。
 
 *locale*<br/>
 要使用的区域设置。
@@ -98,12 +101,12 @@ Null 终止的多字节字符序列的地址。
 
 |错误条件|返回值和**errno**|
 |---------------------|------------------------------|
-|*wcstr*为**NULL** , *sizeInWords* > 0|**EINVAL**|
+|*wcstr*为**NULL** ， *sizeInWords* > 0|**EINVAL**|
 |*mbstr*为**NULL**|**EINVAL**|
-|目标缓冲区太小, 无法包含转换后的字符串 (除非*计数*为 **_TRUNCATE**; 请参阅下面的备注)|**ERANGE**|
-|*wcstr*不为**NULL** , *sizeInWords* = = 0|**EINVAL**|
+|目标缓冲区太小，无法包含转换后的字符串（除非*计数*为 **_TRUNCATE**; 请参阅下面的备注）|**ERANGE**|
+|*wcstr*不为**NULL** ， *sizeInWords* = = 0|**EINVAL**|
 
-如果发生这些情况中的任何一个，都会调用无效参数异常，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续, 则该函数将返回错误代码并按表中所示设置**errno** 。
+如果发生这些情况中的任何一个，都会调用无效参数异常，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将返回错误代码并按表中所示设置**errno** 。
 
 ## <a name="remarks"></a>备注
 
@@ -117,18 +120,18 @@ Null 终止的多字节字符序列的地址。
 
 目标字符串始终以 null 结尾（即使在出错时）。
 
-如果*count*是特殊值[_TRUNCATE](../../c-runtime-library/truncate.md), 则**mbstowcs_s**会将尽可能多的字符串转换为目标缓冲区的大小, 同时仍然为 null 终止符留下空间。
+如果*count*是特殊值[_TRUNCATE](../../c-runtime-library/truncate.md)，则**mbstowcs_s**会将尽可能多的字符串转换为目标缓冲区的大小，同时仍然为 null 终止符留下空间。
 
-如果**mbstowcs_s**成功转换了源字符串, 它会将转换后的字符串 (包括 null 终止符) 的宽字符大小放入 *&#42;pReturnValue* (前提是*pReturnValue*不为**null**)。 即使*wcstr*参数为**NULL** , 并且提供了一种方法来确定所需的缓冲区大小, 也会发生这种情况。 请注意, 如果*wcstr*为**NULL**, 则忽略*count* , 而*sizeInWords*必须为0。
+如果**mbstowcs_s**成功转换了源字符串，它会将转换后的字符串（包括 null 终止符）的宽字符大小放入 *&#42;pReturnValue* （前提是*pReturnValue*不为**null**）。 即使*wcstr*参数为**NULL** ，并且提供了一种方法来确定所需的缓冲区大小，也会发生这种情况。 请注意，如果*wcstr*为**NULL**，则忽略*count* ，而*sizeInWords*必须为0。
 
-如果**mbstowcs_s**遇到无效的多字节字符, 它将在 *&#42;pReturnValue*中放置 0, 将目标缓冲区设置为空字符串, 将**errno**设置为**eilseq 且**, 并返回**eilseq 且**。
+如果**mbstowcs_s**遇到无效的多字节字符，它将在 *&#42;pReturnValue*中放置0，将目标缓冲区设置为空字符串，将**errno**设置为**eilseq 且**，并返回**eilseq 且**。
 
-如果由*mbstr*和*wcstr*指向的序列重叠, 则**mbstowcs_s**的行为不确定。
+如果由*mbstr*和*wcstr*指向的序列重叠，则**mbstowcs_s**的行为不确定。
 
 > [!IMPORTANT]
-> 确保*wcstr*和*mbstr*不重叠, 并且该*计数*正确反映了要转换的多字节字符的数量。
+> 确保*wcstr*和*mbstr*不重叠，并且该*计数*正确反映了要转换的多字节字符的数量。
 
-**mbstowcs_s**为任何与区域设置相关的行为使用当前区域设置; **_mbstowcs_s_l**是相同的, 只不过它使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**mbstowcs_s**为任何与区域设置相关的行为使用当前区域设置; **_mbstowcs_s_l**是相同的，只不过它使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 

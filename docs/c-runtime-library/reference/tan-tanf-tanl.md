@@ -1,11 +1,11 @@
 ---
-title: tan、 tanf、 tanl
+title: tan、tanf、tanl
 ms.date: 04/10/2018
-apiname:
+api_name:
 - tan
 - tanf
 - tanl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tan
 - tanf
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-ms.openlocfilehash: 79a374142a914e8c2c7cf5c094d443b16e4bce88
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c79c56555e04c865b70d52a6b1a6e3da1ce94c87
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258619"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946904"
 ---
-# <a name="tan-tanf-tanl"></a>tan、 tanf、 tanl
+# <a name="tan-tanf-tanl"></a>tan、tanf、tanl
 
 计算正切值。
 
@@ -63,22 +66,22 @@ long double tan( long double x );  // C++ only
 
 ## <a name="return-value"></a>返回值
 
-**Tan**函数返回的切线*x*。 如果*x*是大于或等于 263，或小于或等于-263，会发生丢失结果中的基数。
+**Tan**函数返回*x*的正切值。 如果*x*大于或等于263，或者小于或等于-263，则结果中的结果会丢失。
 
 |输入|SEH 异常|**Matherr**异常|
 |-----------|-------------------|-------------------------|
-|± QNAN,IND|无|_DOMAIN|
-|± INF|**INVALID**|_DOMAIN|
+|± QNAN，IND|无|_DOMAIN|
+|± INF|**无效**|_DOMAIN|
 
 ## <a name="remarks"></a>备注
 
-因为C++允许重载，可以调用的重载**tan**采用并返回**float**或**长** **double**值。 在 C 程序中， **tan**始终采用并返回**double**。
+由于C++允许重载，因此你可以调用具有**tan**的重载，该重载采用并返回**浮点**或**长** **双精度**值。 在 C 程序中， **tan**始终采用并返回**double**。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|必需的标头 (C)|必需的标头 (C++)|
 |-------------|---------------------|-|
-|**tan**， **tanf**， **tanl**|\<math.h>|\<cmath> 或 \<math.h>|
+|**tan**、 **tanf**、 **tanl**|\<math.h>|\<cmath> 或 \<math.h>|
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

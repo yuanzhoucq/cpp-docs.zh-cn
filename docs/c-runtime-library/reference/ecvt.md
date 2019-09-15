@@ -1,9 +1,9 @@
 ---
 title: _ecvt
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _ecvt
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ecvt
 helpviewer_keywords:
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - converting double numbers
 - ecvt function
 ms.assetid: a916eb05-92d1-4b5c-8563-093acdb49dc8
-ms.openlocfilehash: 36c9cb2e8cd9eb4dd67bb91e9e4dbd36d8d1fc8e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f91733c566c1782d5ccfc9a7c01e490a5915a85
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288667"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942050"
 ---
-# <a name="ecvt"></a>_ecvt
+# <a name="_ecvt"></a>_ecvt
 
-将转换**double**数字的字符串。 提供此函数的更安全的版本；请参阅 [_ecvt_s](ecvt-s.md)。
+将**双精度**数字转换为字符串。 提供此函数的更安全的版本；请参阅 [_ecvt_s](ecvt-s.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -48,7 +51,7 @@ char *_ecvt(
 
 ### <a name="parameters"></a>参数
 
-*值*<br/>
+*value*<br/>
 要转换的数字。
 
 *count*<br/>
@@ -62,21 +65,21 @@ char *_ecvt(
 
 ## <a name="return-value"></a>返回值
 
-**_ecvt**返回一个指向字符串的数字;**NULL**是否发生错误。
+**_ecvt**返回指向数字字符串的指针;如果发生错误，则**为 NULL** 。
 
 ## <a name="remarks"></a>备注
 
-**_Ecvt**函数将浮点数转换为字符字符串。 *值*参数是要转换的浮点数。 此函数最多存储*计数*位数*值*作为一个字符串，并追加 null 字符 (\0)。 如果中的数字个数*值*超过*计数*，低位数字舍入。 如果少于*计数*用零填充数字字符串。
+**_Ecvt**函数将浮点数转换为字符串。 *值*参数是要转换的浮点数。 此函数以字符串的形式存储*值*的*计数*位数，并追加一个 null 字符（"\ 0"）。 如果*值*中的数字位数超过*计数*，则会舍入低序位。 如果数字少于*计数*，则用零填充字符串。
 
-返回的总位数 **_ecvt**将不会超过 **_CVTBUFSIZE**。
+**_Ecvt**返回的总位数不能超过 **_CVTBUFSIZE**。
 
-字符串中仅存储位数。 小数点和的符号的位置*值*可从此*dec*并*登录*后调用。 *Dec*参数指向整数值提供相对于字符串开头的小数点的位置。 0 或负整数值表示小数点位于第一个数字的左侧。 *登录*参数指向一个整数，指示转换后的数字的符号。 如果整数值为 0，则数值为正值。 否认，数值为负值。
+字符串中仅存储位数。 在调用后，可以从*dec*和*符号*获取小数点的位置和*值*的符号。 *Dec*参数指向一个整数值，该整数值给定小数点相对于字符串开头的位置。 0 或负整数值表示小数点位于第一个数字的左侧。 *Sign*参数指向一个整数，该整数指示转换后的数字的符号。 如果整数值为 0，则数值为正值。 否认，数值为负值。
 
-之间的差异 **_ecvt**并 **_fcvt**中的解释*计数*参数。 **_ecvt**解释*计数*输出字符串中的位数总数而 **_fcvt**解释*计数*后的位数小数点。
+**_Ecvt**和 **_fcvt**之间的区别在于*count*参数的解释。 **_ecvt**将*count*解释为输出字符串中的总位数，而 **_fcvt**将*count*解释为小数点后的位数。
 
-**_ecvt**并 **_fcvt**使用单个静态分配的缓冲区用于转换。 每次调用这些例程都会破坏上一次调用的结果。
+**_ecvt**和 **_fcvt**使用单个静态分配的缓冲区进行转换。 每次调用这些例程都会破坏上一次调用的结果。
 
-此函数验证其参数。 如果*dec*或*登录*是**NULL**，或者*计数*为 0，则调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**并**NULL**返回。
+此函数验证其参数。 如果*dec*或*sign*为**NULL**，或者*count*为0，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将**errno**设置为**EINVAL** ，并返回**NULL** 。
 
 ## <a name="requirements"></a>要求
 

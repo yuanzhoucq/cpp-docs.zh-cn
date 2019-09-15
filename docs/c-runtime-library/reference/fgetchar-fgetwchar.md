@@ -1,10 +1,10 @@
 ---
 title: _fgetchar、_fgetwchar
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fgetchar
 - _fgetwchar
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fgetwchar
 - _fgettchar
@@ -32,16 +35,16 @@ helpviewer_keywords:
 - standard input, reading from
 - fgetchar function
 ms.assetid: 8bce874c-701a-41a3-b1b2-feff266fb5b9
-ms.openlocfilehash: c74618fa0be5392062d13618ff73e2ef45bf7c2a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90a97308b8c60776d52e58feb84c5398456f26d5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333951"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940863"
 ---
-# <a name="fgetchar-fgetwchar"></a>_fgetchar、_fgetwchar
+# <a name="_fgetchar-_fgetwchar"></a>_fgetchar、_fgetwchar
 
-读取从字符**stdin**。
+从**stdin**中读取字符。
 
 ## <a name="syntax"></a>语法
 
@@ -52,13 +55,13 @@ wint_t _fgetwchar( void );
 
 ## <a name="return-value"></a>返回值
 
-**\_fgetchar**返回读取的字符**int**或返回`EOF`以指示错误或文件结尾。 **\_fgetwchar**返回时，作为[wint_t](../../c-runtime-library/standard-types.md)，对应于读取的字符或返回的宽字符`WEOF`以指示错误或文件结尾。 对于这两个函数，使用**feof**或**ferror**区分错误和文件尾条件。
+fgetchar 返回作为**int**读取的字符，或返回`EOF`以指示错误或文件尾。  **\_** fgetwchar 以[wint_t](../../c-runtime-library/standard-types.md)的形式返回与字符读取或返回`WEOF`以指示错误或文件尾的宽字符。  **\_** 对于这两个函数，请使用**feof**或**ferror**来区分错误和文件尾条件。
 
 ## <a name="remarks"></a>备注
 
-这些函数读取中的单个字符**stdin**。 然后该函数递增关联的文件指针（如果已定义）以指向下一个字符。 如果流位于文件结尾，则设置流的文件结尾指示器。
+这些函数从**stdin**中读取单个字符。 然后该函数递增关联的文件指针（如果已定义）以指向下一个字符。 如果流位于文件结尾，则设置流的文件结尾指示器。
 
-**_fgetchar**等效于`fgetc( stdin )`。 它还等效于**getchar**，但仅作为函数，而不是作为函数和宏实现。 **_fgetwchar**是宽字符版本 **_fgetchar**。
+**_fgetchar**等效于`fgetc( stdin )`。 它还等效于**getchar**，但仅作为函数实现，而不是作为函数和宏实现。 **_fgetwchar**是 **_fgetchar**的宽字符版本。
 
 这些函数不符合 ANSI 标准。
 
@@ -75,7 +78,7 @@ wint_t _fgetwchar( void );
 |**_fgetchar**|\<stdio.h>|
 |**_fgetwchar**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台 (UWP) 应用中不支持控制台。 与控制台关联的标准流句柄 —**stdin**， **stdout**，并**stderr**— C 运行时函数可以在 UWP 应用中使用它们之前，必须重定向. 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台 (UWP) 应用中不支持控制台。 与控制台（**stdin**、 **stdout**和**stderr**）关联的标准流句柄必须重定向，然后 C 运行时函数才能在 UWP 应用中使用它们。 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 

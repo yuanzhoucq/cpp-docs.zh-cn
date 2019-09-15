@@ -1,11 +1,11 @@
 ---
 title: cpow、cpowf、cpowl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - cpow
 - cpowf
 - cpowl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cpow
 - cpowf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - cpowf function
 - complex/cpowl function
 ms.assetid: 83fe2187-22b7-4295-ab16-4d77abdbb80b
-ms.openlocfilehash: 588c437a01237de297e1db31fb2c507eb1145d90
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 005bafd4b19164f5c85be839a90fc7d5259d61bf
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339840"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942694"
 ---
 # <a name="cpow-cpowf-cpowl"></a>cpow、cpowf、cpowl
 
@@ -71,11 +74,11 @@ _Lcomplex cpowl(
 
 ## <a name="return-value"></a>返回值
 
-值*x*次的幂*y*进行分支切割*x*沿负实轴。
+*X*的值为 x 的次*幂，沿*负实轴将 x 剪切到*x* 。
 
 ## <a name="remarks"></a>备注
 
-因为C++允许重载，可以调用的重载**cpow**采用并返回 **_Fcomplex**并 **_Lcomplex**的值。 在 C 程序中， **cpow**始终采用并返回 **_Dcomplex**值。
+由于C++允许重载，因此可以调用**cpow**的重载，该重载采用并返回 **_Fcomplex**和 **_Lcomplex**值。 在 C 程序中， **cpow**始终采用并返回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>要求
 

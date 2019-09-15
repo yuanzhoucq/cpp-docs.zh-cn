@@ -1,10 +1,10 @@
 ---
 title: _ismbbalnum、_ismbbalnum_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbbalnum
 - _ismbbalnum_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbbalnum
 - ismbbalnum
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - ismbbalnum_l function
 - _ismbbalnum function
 ms.assetid: 8025de50-a871-49fd-9ae6-f437b47aa987
-ms.openlocfilehash: 5b5f54754907c09a34b0f4c3bae3e5c27336ca36
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d817ea6875149f9342854b0c22b27b0c93d29636
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286556"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954298"
 ---
-# <a name="ismbbalnum-ismbbalnuml"></a>_ismbbalnum、_ismbbalnum_l
+# <a name="_ismbbalnum-_ismbbalnum_l"></a>_ismbbalnum、_ismbbalnum_l
 
 确定指定的多字节字符是字母还是数字。
 
@@ -60,13 +63,13 @@ int _ismbbalnum_l(
 
 ## <a name="return-value"></a>返回值
 
-**_ismbbalnum**返回非零值，如果该表达式：
+如果表达式为，则 **_ismbbalnum**返回非零值：
 
 `isalnum(c) || _ismbbkalnum(c)`
 
-为非零*c*，或者，如果它不是 0。
+对于*c*，为非零; 否则为0。
 
-使用此函数的版本 **_l**后缀是完全相同，只不过它使用其区域设置相关的行为，而不是当前区域设置传入的区域设置。
+此函数与 **_l**后缀的版本相同，只不过它使用传入的区域设置，而不是其与区域设置相关的行为的当前区域设置。
 
 ## <a name="requirements"></a>要求
 

@@ -1,9 +1,9 @@
 ---
 title: fread
 ms.date: 11/28/2018
-apiname:
+api_name:
 - fread
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fread
 helpviewer_keywords:
@@ -24,12 +27,12 @@ helpviewer_keywords:
 - data [C++], reading from input stream
 - streams [C++], reading data from
 ms.assetid: 9a3c1538-93dd-455e-ae48-77c1e23c53f0
-ms.openlocfilehash: da3828142a06ed89a6447ccaef4a0d8ff0063cca
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: 7cf4542a656798f7e2431b2f939df1b5d6396144
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376180"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956821"
 ---
 # <a name="fread"></a>fread
 
@@ -54,7 +57,7 @@ size_t fread(
 *size*<br/>
 项目大小（以字节为单位）。
 
-*计数*<br/>
+*count*<br/>
 要读取的项的最大数量。
 
 *stream*<br/>
@@ -70,9 +73,9 @@ size_t fread(
 
 **Fread**函数从输入*流*中读取的*大小*为字节*的项,* 并将其存储在*缓冲区*中。 与*流*关联的文件指针 (如果有) 以实际读取的字节数为增量增加。 如果在[文本模式下](../../c-runtime-library/text-and-binary-mode-file-i-o.md)打开给定的流, 则会将 Windows 样式的换行符转换为 Unix 样式的换行符。 也就是说, 回车换行符 (CRLF) 对替换为单行换行符 (LF) 字符。 该替换不会影响文件指针或返回值。 如果发生错误，文件指针位置不确定。 无法确定部分读取项的值。
 
-在文本模式流上使用时, 如果所请求的数据量 (即,*大小* \* *计数*) 大于或等于内部**文件** \*缓冲区大小 (默认为4096字节, 则可使用[setvbuf](../../c-runtime-library/reference/setvbuf.md)), 流数据直接复制到用户提供的缓冲区中, 并在该缓冲区中完成行转换。 由于转换后的数据可能比复制到缓冲区中的流数据短, 因此, 数据的*缓冲区*\[*return_value* \* *大小*] (其中*return_value*是**fread**中的返回值) 可能包含文件中未转换的数据。 出于此原因, 如果缓冲区的意图是要充当 C 样式  \[字符串, 则建议以 null 终止字符数据的形式为*return_value* \* 。  有关文本模式和二进制模式效果的详细信息, 请参阅[fopen](fopen-wfopen.md) 。
+在文本模式流上使用时, 如果所请求的数据量 (即,*大小* \* *计数*) 大于或等于内部**文件** \*缓冲区大小 (默认为4096字节, 则可使用[setvbuf](../../c-runtime-library/reference/setvbuf.md)), 流数据直接复制到用户提供的缓冲区中, 并在该缓冲区中完成行转换。 由于转换后的数据可能比复制到缓冲区中的流数据短，因此，数据的*缓冲区*\[*return_value* \* *大小*] （其中*return_value*是**fread**中的返回值）可能包含文件中未转换的数据。 出于此原因，如果缓冲区的意图是要充当 C 样式字符串，则建议以 null 终止字符数据\[的形式为*return_value* \* 。 有关文本模式和二进制模式效果的详细信息, 请参阅[fopen](fopen-wfopen.md) 。
 
-此函数将锁定其他线程。 如果需要非锁定版本, 请使用 **_fread_nolock**。
+此函数将锁定其他线程。 如果需要非锁定版本，请使用 **_fread_nolock**。
 
 ## <a name="requirements"></a>要求
 

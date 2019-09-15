@@ -1,7 +1,7 @@
 ---
-title: _itoa_s、 _itow_s 函数
+title: _itoa_s，_itow_s 函数
 ms.date: 03/21/2018
-apiname:
+api_name:
 - _itoa_s
 - _ltoa_s
 - _ultoa_s
@@ -12,7 +12,7 @@ apiname:
 - _ultow_s
 - _i64tow_s
 - _ui64tow_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -25,7 +25,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _itoa_s
 - _ltoa_s
@@ -76,16 +79,16 @@ helpviewer_keywords:
 - _ui64tot_s function
 - _i64toa_s function
 ms.assetid: eb746581-bff3-48b5-a973-bfc0a4478ecf
-ms.openlocfilehash: e534a9010f3f39c517b7b0f2bf50041190caf7d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 204abd65981371a970623879ec94ff77db6728b2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157547"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953560"
 ---
-# <a name="itoas-ltoas-ultoas-i64toas-ui64toas-itows--ltows--ultows-i64tows-ui64tows"></a>_itoa_s、 _ltoa_s、 _ultoa_s、 _i64toa_s、 _ui64toa_s、 _itow_s、 _ltow_s、 _ultow_s、 _i64tow_s、 _ui64tow_s
+# <a name="_itoa_s-_ltoa_s-_ultoa_s-_i64toa_s-_ui64toa_s-_itow_s--_ltow_s--_ultow_s-_i64tow_s-_ui64tow_s"></a>_itoa_s, _ltoa_s, _ultoa_s, _i64toa_s, _ui64toa_s, _itow_s, _ltow_s, _ultow_s, _i64tow_s, _ui64tow_s
 
-将整数转换为字符串。 这些是新版[_itoa，_itow 函数](itoa-itow.md)具有安全增强功能，如中所述[CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)。
+将整数转换为字符串。 这些版本的[_itoa、_itow 函数](itoa-itow.md)具有 CRT 中的[安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全增强功能。
 
 ## <a name="syntax"></a>语法
 
@@ -132,17 +135,17 @@ errno_t _ultow_s( unsigned long value, wchar_t (&buffer)[size], int radix );
 
 ### <a name="parameters"></a>参数
 
-*值*<br/>
+*value*<br/>
 要转换的数字。
 
 *buffer*<br/>
-包含转换的结果的输出缓冲区。
+保存转换结果的输出缓冲区。
 
 *size*<br/>
-大小*缓冲区*中的字符或宽字符。
+*缓冲区*的大小（字符或宽字符）。
 
 *radix*<br/>
-基数或要用于转换的数值基数*值*，它必须是 2 36 的范围中。
+用于转换值的基数或数字基数，*该值*必须在2-36 范围内。
 
 ## <a name="return-value"></a>返回值
 
@@ -150,7 +153,7 @@ errno_t _ultow_s( unsigned long value, wchar_t (&buffer)[size], int radix );
 
 ### <a name="error-conditions"></a>错误条件
 
-|值|buffer|size|radix|返回|
+|value|buffer|size|radix|返回|
 |-----------|------------|----------------------|-----------|------------|
 |任何|**NULL**|任何|任何|**EINVAL**|
 |任何|任何|<=0|任何|**EINVAL**|
@@ -159,17 +162,17 @@ errno_t _ultow_s( unsigned long value, wchar_t (&buffer)[size], int radix );
 
 ### <a name="security-issues"></a>安全问题
 
-这些函数会导致访问冲突，如果*缓冲区*不指向有效内存且不**NULL**，或如果缓冲区的长度不足够长，以容纳结果字符串。
+如果*缓冲区*未指向有效内存且不为**空**，或者缓冲区长度不够长而无法容纳结果字符串，这些函数可能会产生访问冲突。
 
 ## <a name="remarks"></a>备注
 
-除了参数和返回值 **_itoa_s**并 **_itow_s**函数系列具有相同的行为与相应安全级别较低 **_itoa**并 **_itow**版本。
+除了参数和返回值以外， **_itoa_s**和 **_itow_s**函数系列与相应的安全 **_itoa**和 **_itow**版本具有相同的行为。
 
 在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
-这些函数的调试库版本首先填充用 0xFD 缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+这些函数的调试库版本首先用0xFD 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
-CRT 包括方便宏来定义转换为每个整数类型，包括 null 终止符的最长可能值所需的缓冲区的大小和登录字符，对于几个常见基本。 有关信息，请参阅[最大转换计数宏](itoa-itow.md#maximum-conversion-count-macros)。
+CRT 包含便利的宏，用于定义转换每个整数类型（包括 null 结束符和符号）的最长可能值（对于几个常见基）所需的缓冲区大小。 有关信息，请参阅[最大转换计数宏](itoa-itow.md#maximum-conversion-count-macros)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -185,14 +188,14 @@ CRT 包括方便宏来定义转换为每个整数类型，包括 null 终止符�
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**_itoa_s**， **_ltoa_s**， **_ultoa_s**， **_i64toa_s**， **_ui64toa_s**|\<stdlib.h>|
-|**_itow_s**， **_ltow_s**， **_ultow_s**， **_i64tow_s**， **_ui64tow_s**|\<stdlib.h> 或 \<wchar.h>|
+|**_itoa_s**、 **_ltoa_s**、 **_ultoa_s**、 **_i64toa_s**、 **_ui64toa_s**|\<stdlib.h>|
+|**_itow_s**、 **_ltow_s**、 **_ultow_s**、 **_i64tow_s**、 **_ui64tow_s**|\<stdlib.h> 或 \<wchar.h>|
 
-这些函数是特定于 Microsoft 的。 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+这些函数是 Microsoft 特定的。 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
-此示例演示如何将几个整数转换函数。 请注意， [_countof](countof-macro.md)宏，只能看到编译器，而不是针对已发生衰变到指针的参数数组声明时确定的缓冲区大小。
+此示例演示如何使用几个 integer 转换函数。 请注意， [_countof](countof-macro.md)宏仅可用于在数组声明对编译器可见时确定缓冲区大小，而不能用于 decayed 到指针的参数。
 
 ```C
 // crt_itoa_s.c

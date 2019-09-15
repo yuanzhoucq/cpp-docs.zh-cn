@@ -1,9 +1,9 @@
 ---
 title: fpclassify
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fpclassify
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,8 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: HeaderDef
+api_type:
+- HeaderDef
 f1_keywords:
 - fpclassify
 - math/fpclassify
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - fpclassify macro
 - fpclassify function
 ms.assetid: bf549499-7ff9-4a58-8692-f2d1cb6bab81
-ms.openlocfilehash: a25897a110d96923a45695d61f923dc7818c7e3a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e9b5aa1f7dc20cc920a51c2c36371eb907469875
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287923"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957068"
 ---
 # <a name="fpclassify"></a>fpclassify
 
@@ -60,9 +61,9 @@ int fpclassify(
 
 ## <a name="return-value"></a>返回值
 
-**fpclassify**返回一个整数值，该值指示参数的浮点类*x*。 此表显示了可能的值返回**fpclassify**中定义\<math.h >。
+**fpclassify**返回一个整数值，该值指示参数*x*的浮点类。 此表显示**fpclassify**中\<定义的可能值，>。
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
 |**FP_NAN**|静态、信令或不确定的 NaN|
 |**FP_INFINITE**|正或负无穷大|
@@ -72,7 +73,7 @@ int fpclassify(
 
 ## <a name="remarks"></a>备注
 
-在 C 中， **fpclassify**是一个宏; 在C++， **fpclassify**取决于重载使用的参数类型**float**， **double**，或**长** **double**。 在任一情况下，返回的值取决于参数表达式的有效类型，而不是任何中间表示形式。 例如，一个普通**双**或**长** **double**值可以成为无穷大、 非常规，或零值转换为时**float**。
+在 C 中， **fpclassify**是一个宏;在C++中， **fpclassify**是使用**float**、 **double**或**long** **double**参数类型重载的函数。 在任一情况下，返回的值取决于参数表达式的有效类型，而不是任何中间表示形式。 例如，在转换为**浮点**值时，正常的**double**或**long** **double**值可以变成无限大、denormal 或零值。
 
 ## <a name="requirements"></a>要求
 
@@ -80,7 +81,7 @@ int fpclassify(
 |---------------------|---------------------------|-------------------------------|
 |**fpclassify**|\<math.h>|\<math.h> 或 \<cmath>|
 
-**Fpclassify**宏和**fpclassify**函数符合 ISO C99 和 C + + 11 规范。 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+**Fpclassify**宏和**FPCLASSIFY**函数符合 ISO C99 和 c + + 11 规范。 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>请参阅
 

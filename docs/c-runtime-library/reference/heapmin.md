@@ -1,9 +1,9 @@
 ---
 title: _heapmin
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _heapmin
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _heapmin
 - heapmin
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - _heapmin function
 - heapmin function
 ms.assetid: c0bccdf6-2d14-4d7b-a7ff-d6a17bdb410f
-ms.openlocfilehash: 130986894d1e2a68415e6ab9218641eff484ffd1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c36a1028e42d59217586cc50adcb612e78072b03
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157219"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954808"
 ---
-# <a name="heapmin"></a>_heapmin
+# <a name="_heapmin"></a>_heapmin
 
 将未使用的堆内存释放到操作系统。
 
@@ -46,13 +49,13 @@ int _heapmin( void );
 
 ## <a name="return-value"></a>返回值
 
-如果成功， **_heapmin**返回 0; 否则，该函数返回-1，并设置**errno**到**ENOSYS**。
+如果成功， **_heapmin**将返回 0;否则，该函数将返回-1，并将**errno**设置为**ENOSYS**。
 
 有关于此代码以及其他返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**_Heapmin**函数释放到操作系统未使用的堆内存，最小化堆。 如果操作系统不支持 **_heapmin**（例如 Windows 98），该函数返回-1，并设置**errno**到**ENOSYS**。
+**_Heapmin**函数通过将未使用的堆内存释放到操作系统来最大程度地减少堆。 如果操作系统不支持 **_heapmin**（例如，Windows 98），则该函数将返回-1，并将**Errno**设置为**ENOSYS**。
 
 ## <a name="requirements"></a>要求
 

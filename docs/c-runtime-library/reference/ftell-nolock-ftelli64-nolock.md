@@ -1,10 +1,10 @@
 ---
 title: _ftell_nolock、_ftelli64_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ftelli64_nolock
 - _ftell_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ftelli64_nolock
 - ftelli64_nolock
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - ftell_nolock function
 - file pointers [C++], getting current position
 ms.assetid: 84e68b0a-32f8-4c4a-90ad-3f2387685ede
-ms.openlocfilehash: 58bfc8c7a8b8e820fdec09d52e24dfcb07f328f8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e72687077cc5401bb411fca81a3ccec48a6258f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332931"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956366"
 ---
-# <a name="ftellnolock-ftelli64nolock"></a>_ftell_nolock、_ftelli64_nolock
+# <a name="_ftell_nolock-_ftelli64_nolock"></a>_ftell_nolock、_ftelli64_nolock
 
 获取文件指针的当前位置，而无需锁定线程。
 
@@ -54,15 +57,15 @@ __int64 _ftelli64_nolock(
 ### <a name="parameters"></a>参数
 
 *stream*<br/>
-目标**文件**结构。
+以**文件**结构为目标。
 
 ## <a name="return-value"></a>返回值
 
-与相同**ftell**并 **_ftelli64**。 有关详细信息，请参阅[ftell、_ftelli64](ftell-ftelli64.md)。
+与**ftell**和 **_ftelli64**相同。 有关详细信息，请参阅[ftell、_ftelli64](ftell-ftelli64.md)。
 
 ## <a name="remarks"></a>备注
 
-这些函数是非锁定版本的**ftell**并 **_ftelli64**分别。 它们是相同**ftell**并 **_ftelli64** ，只不过它们不受干扰从其他线程。 这些函数可能更快，因为它们不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用这些函数，如单线程应用程序或调用范围已经处理线程隔离。
+这些函数分别是**ftell**和 **_ftelli64**的非锁定版本。 它们与**ftell**和 **_ftelli64**相同，只不过它们不会受到其他线程的干扰。 这些函数可能更快，因为它们不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用这些函数，如单线程应用程序或调用范围已经处理线程隔离。
 
 ## <a name="requirements"></a>要求
 

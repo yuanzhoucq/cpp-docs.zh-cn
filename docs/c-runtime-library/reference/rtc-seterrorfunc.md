@@ -1,9 +1,9 @@
 ---
 title: _RTC_SetErrorFunc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _RTC_SetErrorFunc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - RTC_SetErrorFunc
 - _RTC_SetErrorFunc
@@ -22,16 +25,16 @@ helpviewer_keywords:
 - RTC_SetErrorFunc function
 - _RTC_SetErrorFunc function
 ms.assetid: b2292722-0d83-4092-83df-3d5b19880666
-ms.openlocfilehash: 6b292d685eea8eccb9e9b2a3c3e6cd903d501005
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b173dd9af9fe11146341468c44a0abc10ce90bc
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357197"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949018"
 ---
-# <a name="rtcseterrorfunc"></a>_RTC_SetErrorFunc
+# <a name="_rtc_seterrorfunc"></a>_RTC_SetErrorFunc
 
-将函数指定为报告运行时错误检查 (RTC) 的处理程序。 此函数已弃用;使用 **_RTC_SetErrorFuncW**相反。
+将函数指定为报告运行时错误检查 (RTC) 的处理程序。 此函数已弃用;改用 **_RTC_SetErrorFuncW** 。
 
 ## <a name="syntax"></a>语法
 
@@ -43,7 +46,7 @@ _RTC_error_fn _RTC_SetErrorFunc(
 
 ### <a name="parameters"></a>参数
 
-*function*<br/>
+*函数*<br/>
 处理运行时错误检查的函数的地址。
 
 ## <a name="return-value"></a>返回值
@@ -52,7 +55,7 @@ _RTC_error_fn _RTC_SetErrorFunc(
 
 ## <a name="remarks"></a>备注
 
-不使用此函数;请改用 **_RTC_SetErrorFuncW**。 仅为后向兼容性保留使用此函数。
+请勿使用此函数;相反，请使用 **_RTC_SetErrorFuncW**。 仅为后向兼容性保留使用此函数。
 
 ## <a name="requirements"></a>要求
 

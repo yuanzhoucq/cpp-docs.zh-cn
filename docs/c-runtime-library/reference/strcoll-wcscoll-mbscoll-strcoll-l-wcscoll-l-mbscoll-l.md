@@ -1,14 +1,14 @@
 ---
 title: strcoll、wcscoll、_mbscoll、_strcoll_l、_wcscoll_l、_mbscoll_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wcscoll
 - _mbscoll
 - _mbscoll_l
 - strcoll
 - _strcoll_l
 - _wcscoll_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -21,7 +21,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcscoll
 - _mbscoll
@@ -43,19 +46,19 @@ helpviewer_keywords:
 - strcoll functions
 - strings [C++], comparing by code page
 ms.assetid: 900a7540-c7ec-4c2f-b292-7a85f63e3fe8
-ms.openlocfilehash: ae72b4cbb2b001a332d41a74883a0e2a9d20a181
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7519b8f41d77ed668bb7da1e8ced18ee13c0a5bf
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354205"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957880"
 ---
-# <a name="strcoll-wcscoll-mbscoll-strcolll-wcscolll-mbscolll"></a>strcoll、wcscoll、_mbscoll、_strcoll_l、_wcscoll_l、_mbscoll_l
+# <a name="strcoll-wcscoll-_mbscoll-_strcoll_l-_wcscoll_l-_mbscoll_l"></a>strcoll、wcscoll、_mbscoll、_strcoll_l、_wcscoll_l、_mbscoll_l
 
 使用当前区域设置或指定的 LC_COLLATE 转换状态类别比较字符串。
 
 > [!IMPORTANT]
-> **_mbscoll**并 **_mbscoll_l**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbscoll**和 **_mbscoll_l**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -91,7 +94,7 @@ int _mbscoll_l(
 
 ### <a name="parameters"></a>参数
 
-*string1*， *string2*<br/>
+*string1*、 *string2*<br/>
 要比较的 null 终止的字符串。
 
 *locale*<br/>
@@ -99,7 +102,7 @@ int _mbscoll_l(
 
 ## <a name="return-value"></a>返回值
 
-这些函数均返回一个值，该值的关系*string1*到*string2*，按如下所示。
+其中每个函数都将返回一个值，该值指示*string1*与*string2*的关系，如下所示。
 
 |返回值|string1 与 string2 的关系|
 |------------------|----------------------------------------|
@@ -107,15 +110,15 @@ int _mbscoll_l(
 |0|*string1*等于*string2*|
 |> 0|*string1*大于*string2*|
 
-每个函数将返回 **_NLSCMPERROR**发生错误时。 若要使用 **_NLSCMPERROR**，包括其中某一字符串。H 或 MBSTRING。H. **wcscoll**可能会失败，如果任一*string1*或*string2*是**NULL**或包含排序序列域外部的宽字符代码。 出现错误时， **wcscoll**可能设置**errno**到**EINVAL**。 若要调用的错误检查**wcscoll**，请设置**errno**为 0，然后选中**errno**后调用**wcscoll**。
+其中每个函数都会返回 **_NLSCMPERROR**错误。 若要使用 **_NLSCMPERROR**，请包含任意一个字符串。H 或 MBSTRING.H。高. 如果*string1*或*string2*为**NULL** ，或者包含排序序列域外部的宽字符代码，则**wcscoll**可能会失败。 出现错误时， **wcscoll**可能会将**Errno**设置为**EINVAL**。 若要检查对**wcscoll**的调用是否有错误，请将**errno**设置为0，然后在调用**wcscoll**后检查**errno** 。
 
 ## <a name="remarks"></a>备注
 
-每个函数执行区分大小写的比较*string1*并*string2*根据当前正在使用的代码页。 仅在当前代码页中的字符集顺序与字典字符顺序之间存在差异，并且此差异对于字符串比较有关系时，才应使用这些函数。
+其中每个*函数根据当前*使用的代码*页，执行*区分大小写比较。 仅在当前代码页中的字符集顺序与字典字符顺序之间存在差异，并且此差异对于字符串比较有关系时，才应使用这些函数。
 
-所有这些函数都验证其参数。 如果任一*string1*或*string2*是 null 指针，或者，如果*计数*大于**INT_MAX**，将调用无效参数处理程序如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，这些函数将返回 **_NLSCMPERROR**并设置**errno**到**EINVAL**。
+所有这些函数都验证其参数。 如果*string1*或*string2*是 null 指针，或者*计数*大于**INT_MAX**，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回 **_NLSCMPERROR** ，并将**Errno**设置为**EINVAL**。
 
-两个字符串的比较是一个与区域设置相关的操作，因为每个区域设置对排序字符有不同的规则。 无需这些函数的版本 **_l**后缀使用当前线程的区域设置的区域设置相关的行为; 的版本与 **_l**后缀是相同的相应函数不带后缀不同之处在于它们使用作为参数而不是当前区域设置传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+两个字符串的比较是一个与区域设置相关的操作，因为每个区域设置对排序字符有不同的规则。 这些不带 **_l**后缀的函数的版本对与区域设置相关的行为使用当前线程的区域设置;带有 **_l**后缀的版本与不带后缀的相应函数相同，只不过它们使用作为参数传入的区域设置而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -129,7 +132,7 @@ int _mbscoll_l(
 |-------------|---------------------|
 |**strcoll**|\<string.h>|
 |**wcscoll**|\<wchar.h>、\<string.h>|
-|**_mbscoll**， **_mbscoll_l**|\<mbstring.h>|
+|**_mbscoll**、 **_mbscoll_l**|\<mbstring.h>|
 |**_strcoll_l**|\<string.h>|
 |**_wcscoll_l**|\<wchar.h>、\<string.h>|
 

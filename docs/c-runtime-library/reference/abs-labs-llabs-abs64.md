@@ -1,12 +1,12 @@
 ---
 title: abs、labs、llabs、_abs64
 ms.date: 04/05/2018
-apiname:
+api_name:
 - abs
 - _abs64
 - labs
 - llabs
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - stdlib/_abs64
 - math/abs
@@ -36,14 +39,14 @@ helpviewer_keywords:
 - _abs64 function
 - calculating absolute values
 ms.assetid: 60f789d1-4a1e-49f5-9e4e-0bdb277ea26a
-ms.openlocfilehash: 61aa0a48757a35708ffb85d2c0525bb4eac82d56
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf5b4be654a3bd48b3e0d43ac97ce02b348942bc
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341985"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939932"
 ---
-# <a name="abs-labs-llabs-abs64"></a>abs、labs、llabs、_abs64
+# <a name="abs-labs-llabs-_abs64"></a>abs、labs、llabs、_abs64
 
 计算参数的绝对值。
 
@@ -71,22 +74,22 @@ float abs( float n );   // C++ only
 
 ## <a name="return-value"></a>返回值
 
-**Abs**，**实验室**， **llabs**并 **_abs64**函数返回参数的绝对值*n*. 无错误返回。
+**Abs**、 **labs**、 **llabs**和 **_abs64**函数返回参数*n*的绝对值。 无错误返回。
 
 ## <a name="remarks"></a>备注
 
-因为C++允许重载，可以调用的重载**abs**采用并返回**长**，**长** **长**， **float**， **double**，并**长** **double**值。 这些重载在 \<cmath> 标头中进行定义。 在 C 程序中， **abs**始终采用并返回**int**。
+由于C++允许重载，因此你可以调用采用并返回**long**、 **long** **、** **float**、 **double**和**long** **双精度**值的**abs**重载。 这些重载在 \<cmath> 标头中进行定义。 在 C 程序中， **abs**始终采用并返回**int**。
 
-**特定于 Microsoft**:因为可使用任何整型类型表示的负整数的范围大于可使用该类型表示的正整数的范围，所以可以向这些不能被转换的函数提供参数。 如果自变量的绝对值无法由返回类型，表示**abs**函数返回参数值保持不变。 具体而言，`abs(INT_MIN)` 返回 `INT_MIN`、`labs(LONG_MIN)` 返回 `LONG_MIN`、`llabs(LLONG_MIN)` 返回 `LLONG_MIN`，`_abs64(_I64_MIN)` 返回 `_I64_MIN`。 这意味着**abs**函数不能用于保证正值。
+**Microsoft 专用**：因为可使用任何整型类型表示的负整数的范围大于可使用该类型表示的正整数的范围，所以可以向这些不能被转换的函数提供参数。 如果参数的绝对值不能由返回类型表示，则**abs**函数返回的参数值保持不变。 具体而言，`abs(INT_MIN)` 返回 `INT_MIN`、`labs(LONG_MIN)` 返回 `LONG_MIN`、`llabs(LLONG_MIN)` 返回 `LLONG_MIN`，`_abs64(_I64_MIN)` 返回 `_I64_MIN`。 这意味着不能使用**abs**函数来保证正值。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|必需的 C 标头|必需的 C++ 标头|
 |-------------|-----------------------|---------------------------|
-|**abs**，**实验室**， **llabs**|\<math.h> 或 \<stdlib.h>|\<cmath>、\<cstdlib>、\<stdlib.h> 或 \<math.h>|
+|**abs**、 **labs**、 **llabs**|\<math.h> 或 \<stdlib.h>|\<cmath>、\<cstdlib>、\<stdlib.h> 或 \<math.h>|
 |**_abs64**|\<stdlib.h>|\<cstdlib> 或 \<stdlib.h>|
 
-若要使用的重载的版本**abs**中C++，则必须包括\<cmath > 标头。
+若要在中C++使用\< **abs**的重载版本，必须包含 h > 标头。
 
 ## <a name="example"></a>示例
 

@@ -1,10 +1,10 @@
 ---
 title: _dupenv_s_dbg、_wdupenv_s_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _dupenv_s_dbg
 - _wdupenv_s_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tdupenv_s_dbg
 - _dupenv_s_dbg
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - wdupenv_s_dbg function
 - _dupenv_s_dbg function
 ms.assetid: e3d81148-e24e-46d0-a21d-fd87b5e6256c
-ms.openlocfilehash: 95d8c18a0ebc543304fdb6bf51c4adde589333aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c61986184f93c6cf6e83b33f77dce2bd017cfae
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339216"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937682"
 ---
-# <a name="dupenvsdbg-wdupenvsdbg"></a>_dupenv_s_dbg、_wdupenv_s_dbg
+# <a name="_dupenv_s_dbg-_wdupenv_s_dbg"></a>_dupenv_s_dbg、_wdupenv_s_dbg
 
 从当前环境中获取值。  [_dupenv_s、_wdupenv_s](dupenv-s-wdupenv-s.md) 的版本，使用 [_malloc_dbg](malloc-dbg.md) 来分配内存，以提供其他调试信息。
 
@@ -67,7 +70,7 @@ errno_t _wdupenv_s_dbg(
 用于存储变量值的缓冲区。
 
 *numberOfElements*<br/>
-大小*缓冲区*。
+*缓冲区*的大小。
 
 *varname*<br/>
 环境变量名称。
@@ -76,24 +79,24 @@ errno_t _wdupenv_s_dbg(
 内存块的请求类型： **_CLIENT_BLOCK**或 **_NORMAL_BLOCK**。
 
 *filename*<br/>
-指向源文件的名称或**NULL**。
+指向源文件名的指针或**NULL**。
 
 *linenumber*<br/>
-源文件中的行数或**NULL**。
+源文件中的行号或**NULL**。
 
 ## <a name="return-value"></a>返回值
 
 如果成功，则为零；如果失败，则为错误代码。
 
-这些函数将验证其参数;如果*缓冲区*或*varname*是**NULL**，如中所述，将调用无效的参数处理程序[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则函数将设置**errno**到**EINVAL**并返回**EINVAL**。
+这些函数验证其参数;如果*buffer*或*varname*为**NULL**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数会将**errno**设置为**EINVAL**并返回**EINVAL**。
 
-如果这些函数无法分配足够的内存，则设置*缓冲区*到**NULL**并*numberOfElements*为 0，并返回**ENOMEM**。
+如果这些函数无法分配足够的内存，它们会将*缓冲区*设置为**NULL** ，将*numberOfElements*设置为0，并返回**ENOMEM**。
 
 ## <a name="remarks"></a>备注
 
-**_Dupenv_s_dbg**并 **_wdupenv_s_dbg**函数是相同 **_dupenv_s**并 **_wdupenv_s**只不过，当 **_DEBUG**是定义，这些函数将使用的调试版本[malloc](malloc.md)， [_malloc_dbg](malloc-dbg.md)来分配内存的环境变量的值。 有关调试功能的信息 **_malloc_dbg**，请参阅[_malloc_dbg](malloc-dbg.md)。
+**_Dupenv_s_dbg**和 **_wdupenv_s_dbg**函数与 **_dupenv_s**和 **_wdupenv_s**相同，不同之处在于，定义 **_debug**后，这些函数将使用[malloc](malloc.md)、 [_malloc_dbg](malloc-dbg.md)的调试版本。为环境变量的值分配内存。 有关 **_malloc_dbg**调试功能的信息，请参阅[_malloc_dbg](malloc-dbg.md)。
 
-在大多数情况下，无需显式调用这些函数。 相反，可以定义标志 **_CRTDBG_MAP_ALLOC**。 当 **_CRTDBG_MAP_ALLOC**定义，则调用 **_dupenv_s**并 **_wdupenv_s**重新映射到 **_dupenv_s_dbg**和 **_wdupenv_s_dbg**分别具有*blockType*设置为 **_NORMAL_BLOCK**。 因此，不需要显式调用这些函数，除非你想要将标记作为堆块 **_CLIENT_BLOCK**。 有关块类型的详细信息，请参阅[调试堆中的块类型](/visualstudio/debugger/crt-debug-heap-details)。
+在大多数情况下，无需显式调用这些函数。 您可以改为定义标志 **_CRTDBG_MAP_ALLOC**。 定义 **_CRTDBG_MAP_ALLOC**时，对 **_dupenv_s**和 **_wdupenv_s**的调用将分别重新映射到 **_dupenv_s_dbg**和 **_wdupenv_s_dbg**，并将*blockType*设置为 **_NORMAL_BLOCK**。 因此，无需显式调用这些函数，除非你希望将堆块标记为 **_CLIENT_BLOCK**。 有关块类型的详细信息，请参阅[调试堆中的块类型](/visualstudio/debugger/crt-debug-heap-details)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

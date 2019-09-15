@@ -1,14 +1,14 @@
 ---
 title: strncpy、_strncpy_l、wcsncpy、_wcsncpy_l、_mbsncpy、_mbsncpy_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - strncpy
 - _strncpy_l
 - _mbsncpy
 - wcsncpy
 - _mbsncpy_l
 - _wcsncpy_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fstrncpy
 - strncpy
@@ -62,12 +65,12 @@ helpviewer_keywords:
 - tcsncpy function
 - _strncpy_l function
 ms.assetid: ac4345a1-a129-4f2f-bb8a-373ec58ab8b0
-ms.openlocfilehash: fac7e052c5c1d5525946bdbc599404ac56d47f5a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 82e88a48752cb96cca5cb636332fa477aef13d50
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499458"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947214"
 ---
 # <a name="strncpy-_strncpy_l-wcsncpy-_wcsncpy_l-_mbsncpy-_mbsncpy_l"></a>strncpy、_strncpy_l、wcsncpy、_wcsncpy_l、_mbsncpy、_mbsncpy_l
 
@@ -161,7 +164,7 @@ unsigned char *_mbsncpy_l(
 *strSource*<br/>
 源字符串。
 
-*计数*<br/>
+*count*<br/>
 要复制的字符数。
 
 *locale*<br/>
@@ -173,16 +176,16 @@ unsigned char *_mbsncpy_l(
 
 ## <a name="remarks"></a>备注
 
-**Strncpy**函数将*strSource*的初始*计数*字符复制到*strDest*并返回*strDest*。 如果*count*小于或等于*strSource*的长度, 则不会自动向复制的字符串追加 null 字符。 如果*count*大于*strSource*的长度, 则目标字符串将用空字符填充, 最大长度为*count*。 如果源和目标字符串重叠, 则**strncpy**的行为是不确定的。
+**Strncpy**函数将*strSource*的初始*计数*字符复制到*strDest*并返回*strDest*。 如果*count*小于或等于*strSource*的长度，则不会自动向复制的字符串追加 null 字符。 如果*count*大于*strSource*的长度，则目标字符串将用空字符填充，最大长度为*count*。 如果源和目标字符串重叠，则**strncpy**的行为是不确定的。
 
 > [!IMPORTANT]
 > **strncpy**不检查*strDest*中是否有足够的空间;这会导致缓冲区溢出的潜在原因。 *Count*参数限制复制的字符数;它不是*strDest*的大小限制。 请参见以下示例。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
-如果*strDest*或*strSource*为**NULL**指针, 或者*count*小于或等于零, 则会调用无效参数处理程序, 如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续, 则这些函数将返回-1, 并将**errno**设置为**EINVAL**。
+如果*strDest*或*strSource*为**NULL**指针，或者*count*小于或等于零，则会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回-1，并将**errno**设置为**EINVAL**。
 
 **wcsncpy**和 **_mbsncpy**是**strncpy**的宽字符和多字节字符版本。 **Wcsncpy**和 **_mbsncpy**的参数和返回值将相应变化。 否则这六个函数具有相同行为。
 
-这些带有 **_l**后缀的函数的版本相同, 只不过它们使用传入的区域设置, 而不是其与区域设置相关的行为的当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+这些带有 **_l**后缀的函数的版本相同，只不过它们使用传入的区域设置，而不是其与区域设置相关的行为的当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -194,7 +197,7 @@ unsigned char *_mbsncpy_l(
 |**_tcsncpy_l**|**_strncpy_l**|**_mbsnbcpy_l**|**_wcsncpy_l**|
 
 > [!NOTE]
-> **_strncpy_l**和 **_wcsncpy_l**没有区域设置依赖关系;它们只是为 **_tcsncpy_l**提供的, 不应直接调用。
+> **_strncpy_l**和 **_wcsncpy_l**没有区域设置依赖关系;它们只是为 **_tcsncpy_l**提供的，不应直接调用。
 
 ## <a name="requirements"></a>要求
 
@@ -208,7 +211,7 @@ unsigned char *_mbsncpy_l(
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何使用**strncpy** , 以及如何使用它来导致程序 bug 和安全问题。 编译器将为对**strncpy**的每个调用生成一个警告 **, 类似于 crt_strncpy_x86 (15): warning C4996: "strncpy":此函数或变量可能不安全。请考虑改用 strncpy_s。若要禁用弃用，请使用 _CRT_SECURE_NO_WARNINGS。请参阅联机帮助了解详细信息。**
+下面的示例演示如何使用**strncpy** ，以及如何使用它来导致程序 bug 和安全问题。 编译器将为对**strncpy**的每个调用生成一个警告 **，类似于 crt_strncpy_x86 （15）： warning C4996： "strncpy"：此函数或变量可能不安全。请考虑改用 strncpy_s。若要禁用弃用，请使用 _CRT_SECURE_NO_WARNINGS。请参阅联机帮助了解详细信息。**
 
 ```C
 // crt_strncpy_x86.c

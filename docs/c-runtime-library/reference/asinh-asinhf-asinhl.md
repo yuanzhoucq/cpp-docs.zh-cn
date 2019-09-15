@@ -1,11 +1,11 @@
 ---
 title: asinh、asinhf、asinhl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - asinh
 - asinhf
 - asinhl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - asinhf
 - asinhl
@@ -27,12 +30,12 @@ helpviewer_keywords:
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-ms.openlocfilehash: f6100268b77178487b7a7aa1cc3f10ac3ea7e9dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4d93f121c0124293a5bdff9041d0adfaab5d83c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341777"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939645"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh、asinhf、asinhl
 
@@ -58,21 +61,21 @@ long double asinh( long double x );  // C++ only
 
 ## <a name="return-value"></a>返回值
 
-**Asinh**函数返回的反双曲正弦值 （反双曲正弦值） *x*。 此函数在浮点域上有效。 如果*x*是不定的静默 NaN 或无穷大，返回相同的值。
+**Asinh**函数返回*x*的反双曲正弦值（反双曲正弦）。 此函数在浮点域上有效。 如果*x*为静默 NaN、不定或无穷大，则返回相同的值。
 
 |输入|SEH 异常|**_matherr**异常|
 |-----------|-------------------|--------------------------|
-|为 QNAN，IND INF|无|无|
+|± QNAN、IND、INF|无|无|
 
 ## <a name="remarks"></a>备注
 
-当你使用C++，可以调用的重载**asinh**采用并返回**float**或**长** **double**值。 在 C 程序中， **asinh**始终采用并返回**double**。
+使用C++时，可以调用**asinh**的重载，该重载采用并返回**浮点**或**长** **双精度**值。 在 C 程序中， **asinh**始终采用并返回**double**。
 
 ## <a name="requirements"></a>要求
 
 |函数|必需的 C 标头|必需的 C++ 标头|
 |--------------|--------------|------------------|
-|**asinh**， **asinhf**， **asinhl**|\<math.h>|\<cmath > 或\<math.h <|
+|**asinh**、 **asinhf**、 **asinhl**|\<math.h>|\<h > 或\<math <|
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

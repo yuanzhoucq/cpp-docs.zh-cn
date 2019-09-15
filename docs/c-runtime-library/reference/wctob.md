@@ -1,9 +1,9 @@
 ---
 title: wctob
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wctob
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wctob
 helpviewer_keywords:
@@ -23,12 +26,12 @@ helpviewer_keywords:
 - wctob function
 - characters, converting
 ms.assetid: 46aec98b-c2f2-4e9d-9d89-7db99ba8a9a6
-ms.openlocfilehash: 9c977bc204f4c9428a4aae09300269b1ed82d53e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 151325b0d66e6d57156cdf94828ca1d4b151d437
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498953"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944933"
 ---
 # <a name="wctob"></a>wctob
 
@@ -49,13 +52,13 @@ int wctob(
 
 ## <a name="return-value"></a>返回值
 
-如果**wctob**成功地转换宽字符, 则它仅在多字节字符正好为一个字节时返回其多字节字符表示形式。 如果**wctob**遇到不能转换为多字节字符的宽字符, 或者多字节字符的长度不能正好为一个字节, 则返回-1。
+如果**wctob**成功地转换宽字符，则它仅在多字节字符正好为一个字节时返回其多字节字符表示形式。 如果**wctob**遇到不能转换为多字节字符的宽字符，或者多字节字符的长度不能正好为一个字节，则返回-1。
 
 ## <a name="remarks"></a>备注
 
-如果多字节字符的长度正好为一个字节, 则**wctob**函数会将*wchar*中包含的宽字符转换为返回**int**值传递的相应多字节字符。
+如果多字节字符的长度正好为一个字节，则**wctob**函数会将*wchar*中包含的宽字符转换为返回**int**值传递的相应多字节字符。
 
-如果**wctob**不成功且未找到相应的多字节字符, 则该函数将**Errno**设置为**eilseq 且**并返回-1。
+如果**wctob**不成功且未找到相应的多字节字符，则该函数将**Errno**设置为**eilseq 且**并返回-1。
 
 ## <a name="requirements"></a>要求
 

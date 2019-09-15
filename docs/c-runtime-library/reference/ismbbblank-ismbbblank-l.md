@@ -1,10 +1,10 @@
 ---
 title: _ismbbblank、_ismbbblank_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbbblank_l
 - _ismbbblank
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,16 +16,19 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 ms.assetid: d21b2e41-7206-41f5-85bb-9c9ab4f3e21b
-ms.openlocfilehash: c6709d5a5870c44d200b704e4a34043ff9c37226
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 21f4c88b00774159f8e6945973641e67718494e6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286939"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954244"
 ---
-# <a name="ismbbblank-ismbbblankl"></a>_ismbbblank、_ismbbblank_l
+# <a name="_ismbbblank-_ismbbblank_l"></a>_ismbbblank、_ismbbblank_l
 
 确定指定的多字节字符是否为空白字符。
 
@@ -54,7 +57,7 @@ int _ismbbblank_l(
 
 ## <a name="return-value"></a>返回值
 
-**_ismbbblank**返回非零值，如果*c*表示空格 (0x20) 字符、 水平制表符 (0x09) 字符或用于哪些的文本行中分隔单词的区域设置特定字符**isspace**为 true; 否则为返回 0。 **_ismbbblank**的任何区域设置相关行为使用当前区域设置。 **_ismbbblank_l**具有完全相同，只不过它改用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+如果*c*表示空格（0x20）字符、水平制表符（0x09）或用于在**isspace**为 true 的文本行中分隔单词的特定于区域设置的字符，则 **_ismbbblank**将返回非零值;否则，返回0。 **_ismbbblank**为任何与区域设置相关的行为使用当前区域设置。 **_ismbbblank_l**是相同的，只不过它改用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>要求
 

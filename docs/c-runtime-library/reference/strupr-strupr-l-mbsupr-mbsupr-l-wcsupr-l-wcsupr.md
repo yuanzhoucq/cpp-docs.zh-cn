@@ -1,14 +1,14 @@
 ---
 title: _strupr、_strupr_l、_mbsupr、_mbsupr_l、_wcsupr_l、_wcsupr
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsupr_l
 - _mbsupr
 - _strupr_l
 - _wcsupr
 - _wcsupr_l
 - _strupr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbsupr
 - _ftcsupr
@@ -60,19 +63,19 @@ helpviewer_keywords:
 - _tcsupr function
 - strings [C++], converting case
 ms.assetid: caac8f16-c233-41b6-91ce-575ec7061b77
-ms.openlocfilehash: c3d155ebfdc40c5dd479cffed0b892dd73f80138
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8078bddd022032196c0e10cd54b0ad68d9c71419
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62269025"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957571"
 ---
-# <a name="strupr-struprl-mbsupr-mbsuprl-wcsuprl-wcsupr"></a>_strupr、_strupr_l、_mbsupr、_mbsupr_l、_wcsupr_l、_wcsupr
+# <a name="_strupr-_strupr_l-_mbsupr-_mbsupr_l-_wcsupr_l-_wcsupr"></a>_strupr、_strupr_l、_mbsupr、_mbsupr_l、_wcsupr_l、_wcsupr
 
 将字符串转换成大写形式。 提供这些函数的更多安全版本，请参阅 [_strupr_s、_strupr_s_l、_mbsupr_s、_mbsupr_s_l、_wcsupr_s、_wcsupr_s_l](strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md)。
 
 > [!IMPORTANT]
-> **_mbsupr**并 **_mbsupr_l**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbsupr**和 **_mbsupr_l**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -141,11 +144,11 @@ unsigned char *_mbsupr_l(
 
 ## <a name="remarks"></a>备注
 
-**_Strupr**函数将转换时中的位置，在每个小写字母*str*为大写。 由转换**LC_CTYPE**类别设置的区域设置。 其他字符不受影响。 有关详细信息**LC_CTYPE**，请参阅[setlocale](setlocale-wsetlocale.md)。 无需这些函数的版本 **_l**后缀使用当前区域设置; 的版本与 **_l**后缀是相同，只不过它们改用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**_Strupr**函数将*字符串*中的每个小写字母就地转换为大写形式。 该转换由区域设置的**LC_CTYPE**类别设置确定。 其他字符不受影响。 有关**LC_CTYPE**的详细信息，请参阅[setlocale](setlocale-wsetlocale.md)。 这些不带 **_l**后缀的函数的版本使用当前区域设置;带有 **_l**后缀的版本相同，只不过它们改用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-**_wcsupr**并 **_mbsupr**宽字符及多字节字符版本的 **_strupr**。 自变量和返回值 **_wcsupr**是宽字符字符串; **_mbsupr**是多字节字符字符串。 否则这三个函数否则具有相同行为。
+**_wcsupr**和 **_mbsupr**是 **_strupr**的宽字符和多字节字符版本。 **_Wcsupr**的参数和返回值是宽字符字符串; **_mbsupr**的这些字符串是多字节字符字符串。 否则这三个函数否则具有相同行为。
 
-如果*str*是空指针，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则这些函数将返回原始字符串并设置**errno**到**EINVAL**。
+如果*str*为空指针，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回原始字符串，并将**errno**设置为**EINVAL**。
 
 在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -160,9 +163,9 @@ unsigned char *_mbsupr_l(
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**_strupr**， **_strupr_l**|\<string.h>|
-|**_wcsupr**， **_wcsupr_l**|\<string.h> 或 \<wchar.h>|
-|**_mbsupr**， **_mbsupr_l**|\<mbstring.h>|
+|**_strupr**、 **_strupr_l**|\<string.h>|
+|**_wcsupr**、 **_wcsupr_l**|\<string.h> 或 \<wchar.h>|
+|**_mbsupr**、 **_mbsupr_l**|\<mbstring.h>|
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

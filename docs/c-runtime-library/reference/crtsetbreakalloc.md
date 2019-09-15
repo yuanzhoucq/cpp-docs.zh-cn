@@ -1,9 +1,9 @@
 ---
 title: _CrtSetBreakAlloc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtSetBreakAlloc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtSetBreakAlloc
 - _CrtSetBreakAlloc
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - CrtSetBreakAlloc function
 - _CrtSetBreakAlloc function
 ms.assetid: 33bfc6af-a9ea-405b-a29f-1c2d4d9880a1
-ms.openlocfilehash: bbc4b0de553533dde95f37675b3c9234569e3505
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: e13c908c1efd1af9196885dee6e3b0f45845946b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342957"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942304"
 ---
-# <a name="crtsetbreakalloc"></a>_CrtSetBreakAlloc
+# <a name="_crtsetbreakalloc"></a>_CrtSetBreakAlloc
 
 在指定的对象分配序号上设置断点（仅限调试版本）。
 
@@ -52,11 +55,11 @@ long _CrtSetBreakAlloc(
 
 ## <a name="remarks"></a>备注
 
-**_CrtSetBreakAlloc**允许应用程序的内存分配的特定点处中断并重新跟踪请求的来源执行内存泄露检测。 该函数使用在堆中分配它时分配到内存块的有序对象分配序号。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，则调用 **_CrtSetBreakAlloc**在预处理过程中删除。
+**_CrtSetBreakAlloc**允许应用程序通过在内存分配的特定点中断，并跟踪回请求的源，来执行内存泄露检测。 该函数使用在堆中分配它时分配到内存块的有序对象分配序号。 未定义[_debug](../../c-runtime-library/debug.md)时，将在预处理过程中删除对 **_CrtSetBreakAlloc**的调用。
 
-对象分配序号存储在 Crtdbg.h 中定义的 **_CrtMemBlockHeader** 结构的 *lRequest* 字段中。 当其中一个调试转储函数报告有关某个内存块的信息时，该编号将括在括号内，如{36}。
+对象分配序号存储在 Crtdbg.h 中定义的 **_CrtMemBlockHeader** 结构的 *lRequest* 字段中。 当某个调试转储函数报告有关某个内存块的信息时，此数字会括在大括号中，例如{36}。
 
-详细了解如何 **_CrtSetBreakAlloc**可以与其他内存管理函数一起使用，请参阅[跟踪堆分配请求](/visualstudio/debugger/crt-debug-heap-details)。 有关如何在基堆的调试版本中分配、初始化和管理内存块的详细信息，请参阅 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。
+有关 **_CrtSetBreakAlloc**如何与其他内存管理函数一起使用的详细信息，请参阅[跟踪堆分配请求](/visualstudio/debugger/crt-debug-heap-details)。 有关如何在基堆的调试版本中分配、初始化和管理内存块的详细信息，请参阅 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。
 
 ## <a name="requirements"></a>要求
 

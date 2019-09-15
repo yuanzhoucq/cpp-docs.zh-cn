@@ -1,9 +1,9 @@
 ---
 title: _gcvt
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _gcvt
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _gcvt
 helpviewer_keywords:
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 5761411e-c06b-409a-912f-810fe7f4bcb5
-ms.openlocfilehash: 9cf966b455af601d09b4444a5c590e305a6681c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3618f5571275783131c74c89f29218f89023f70e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332244"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956105"
 ---
-# <a name="gcvt"></a>_gcvt
+# <a name="_gcvt"></a>_gcvt
 
 将浮点值转换为字符串，并将其存储在缓冲区中。 此函数有一个更安全的版本；请参阅 [_gcvt_s](gcvt-s.md)。
 
@@ -51,7 +54,7 @@ char *_gcvt(
 
 ### <a name="parameters"></a>参数
 
-*值*<br/>
+*value*<br/>
 要转换的值。
 
 *digits*<br/>
@@ -66,11 +69,11 @@ char *_gcvt(
 
 ## <a name="remarks"></a>备注
 
-**_Gcvt**函数将转换浮点*值*转换为字符串 （其中包括小数点和可能的登录字节），并将存储中的字符串*缓冲区*。 *缓冲区*应足够大以容纳转换后的值加上会自动追加终止 null 字符。 如果缓冲区大小为*位数*+ 1，则该函数将覆盖缓冲区的末尾。 这是因为转换后的字符串包含小数点，并且可以包含符号和指数信息。 没有为溢出进行预配。 **_gcvt**尝试生成*数字*以十进制格式的数字。 如果不能则会生成*位数*指数格式的数字。 在转换过程中，可以取消零结尾。
+**_Gcvt**函数将浮点*值*转换为字符串（包含一个小数点和一个可能的符号字节），并将该字符串存储在*buffer*中。 *缓冲区*应足够大以容纳转换后的值加上自动追加的终止 null 字符。 如果使用了*数字*+ 1 的缓冲区大小，则函数将覆盖缓冲区的末尾。 这是因为转换后的字符串包含小数点，并且可以包含符号和指数信息。 没有为溢出进行预配。 **_gcvt**尝试以十进制格式生成*数字*位数。 如果不能，则它将以指数格式生成*位数*。 在转换过程中，可以取消零结尾。
 
-一个*缓冲区*的长度 **_CVTBUFSIZE**足以满足任何浮点值。
+长度为 **_CVTBUFSIZE**的*缓冲区*足以满足任何浮点值。
 
-此函数验证其参数。 如果*缓冲区*是**NULL**，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数可设置**errno**到**EINVAL** ，并返回**NULL**。
+此函数验证其参数。 如果*buffer*为**NULL**，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数会将**errno**设置为**EINVAL** ，并返回**NULL**。
 
 ## <a name="requirements"></a>要求
 

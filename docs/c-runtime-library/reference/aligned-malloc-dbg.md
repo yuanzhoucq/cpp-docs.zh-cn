@@ -1,9 +1,9 @@
 ---
 title: _aligned_malloc_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _aligned_malloc_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _aligned_malloc_dbg
 - aligned_malloc_dbg
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - aligned_malloc_dbg function
 - _aligned_malloc_dbg function
 ms.assetid: fb0429c3-685d-4826-9075-2515c5bdc5c6
-ms.openlocfilehash: eb58313c892ffe13e9f8e34e98b7940022899d14
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3db61d494ea94c9ccbf2844c9f47df66dad87ff7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341634"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939885"
 ---
-# <a name="alignedmallocdbg"></a>_aligned_malloc_dbg
+# <a name="_aligned_malloc_dbg"></a>_aligned_malloc_dbg
 
 在指定内存边界上为调试标头和覆盖缓冲区分配内存（仅限调试模式）。
 
@@ -60,15 +63,15 @@ void * _aligned_malloc_dbg(
 
 ## <a name="return-value"></a>返回值
 
-已分配的内存块的指针或如果操作失败，则为 NULL。
+指向分配的内存块的指针; 如果操作失败，则为 NULL。
 
 ## <a name="remarks"></a>备注
 
-**_aligned_malloc_dbg**是调试版[_aligned_malloc](aligned-malloc.md)函数。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，则每次调用 **_aligned_malloc_dbg**缩减为调用`_aligned_malloc`。 这两`_aligned_malloc`并 **_aligned_malloc_dbg**分配基堆中的内存块，但 **_aligned_malloc_dbg**提供了几种调试功能： 的用户部分两侧的缓冲区块用于测试泄漏，并*文件名*/*linenumber*信息用于确定分配请求的源。 跟踪特定分配类型的块类型参数具有不一致的分配的受支持的调试功能。 一致的分配将显示为 _NORMAL_BLOCK 块类型。
+**_aligned_malloc_dbg**是[_aligned_malloc](aligned-malloc.md)函数的调试版本。 未定义[_debug](../../c-runtime-library/debug.md)时，对 **_aligned_malloc_dbg** `_aligned_malloc`的每次调用都会减少到对的调用。 和 _aligned_malloc_dbg 在基堆中分配内存块，但 **_aligned_malloc_dbg**提供若干调试功能：块的用户部分两侧的缓冲区，用于测试泄漏和文件名 `_aligned_malloc`用于确定分配请求的源的 linenumber 信息。 / 使用块类型参数跟踪特定分配类型不是用于对齐分配的受支持调试功能。 对齐分配将显示为 _NORMAL_BLOCK 块类型。
 
-**_aligned_malloc_dbg**分配稍多的空间比请求的内存块*大小*。 其他空间将由调试堆管理器用于链接调试内存块，以及提供具有调试标头信息的应用程序和覆盖缓冲区。 分配该块后，使用值 0xCD 填充该块的用户部分，使用值 0xFD 填充每个覆盖缓冲区。
+**_aligned_malloc_dbg**分配的内存块的空间稍微大于所请求的*大小*。 其他空间将由调试堆管理器用于链接调试内存块，以及提供具有调试标头信息的应用程序和覆盖缓冲区。 分配该块后，使用值 0xCD 填充该块的用户部分，使用值 0xFD 填充每个覆盖缓冲区。
 
-**_aligned_malloc_dbg**设置`errno`到`ENOMEM`如果内存分配失败或 （包括之前提到过的开销） 所需的内存量超过`_HEAP_MAXREQ`。 有关此代码及其他错误代码的信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。 此外， **_aligned_malloc_dbg**验证其参数。 如果*对齐*不是 2 的幂或*大小*为零，此函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则此函数将返回 NULL 并集`errno`到`EINVAL`。
+如果内存`errno`分配`ENOMEM`失败或所需的内存量（包括前面提到的开销）超过`_HEAP_MAXREQ`，则将设置为 **_aligned_malloc_dbg** 。 有关此代码及其他错误代码的信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。 此外， **_aligned_malloc_dbg**还会验证其参数。 如果*对齐*不是2的幂或*大小*为零，则此函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数将返回 NULL，并`errno`将`EINVAL`设置为。
 
 有关如何在基堆的调试版本中分配、初始化和管理内存块的信息，请参阅 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。 有关分配块类型及其使用方式的信息，请参阅[调试堆上的块类型](/visualstudio/debugger/crt-debug-heap-details)。 有关在应用程序的调试版本中调用标准堆函数及其调试版本之间差异的信息，请参阅[堆分配函数的调试版本](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)。
 

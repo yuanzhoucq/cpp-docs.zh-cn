@@ -1,10 +1,10 @@
 ---
 title: fopen_s、_wfopen_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wfopen_s
 - fopen_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fopen_s
 - _tfopen_s
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - files [C++], opening
 - Unicode [C++], files
 ms.assetid: c534857e-39ee-4a3f-bd26-dfe551ac96c3
-ms.openlocfilehash: e4ccce3c4a4fe1e327b7830ef03f6ab69f2d7814
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: 2a400918a171c0009e40be8a20b814e8ded336ce
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376217"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957128"
 ---
-# <a name="fopens-wfopens"></a>fopen_s、_wfopen_s
+# <a name="fopen_s-_wfopen_s"></a>fopen_s、_wfopen_s
 
 打开文件。 这些版本的 [fopen、_wfopen](fopen-wfopen.md) 具有安全增强功能，如 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)所述。
 
@@ -84,11 +87,11 @@ errno_t _wfopen_s(
 
 ## <a name="remarks"></a>备注
 
-**Fopen_s**和 **_wfopen_s**打开的文件不可共享。 如果需要共享文件, 请使用[_fsopen、_wfsopen](fsopen-wfsopen.md)以及适当的共享模式常量 (例如, **_SH_DENYNO**进行读/写共享。
+**Fopen_s**和 **_wfopen_s**打开的文件不可共享。 如果需要共享文件，请使用[_fsopen、_wfsopen](fsopen-wfsopen.md)以及适当的共享模式常量（例如， **_SH_DENYNO**进行读/写共享。
 
-**Fopen_s**函数打开*文件名*指定的文件。 **_wfopen_s**是**fopen_s**的宽字符版本; **_wfopen_s**的参数是宽字符字符串。 否则, **_wfopen_s**和**fopen_s**的行为相同。
+**Fopen_s**函数打开*文件名*指定的文件。 **_wfopen_s**是**fopen_s**的宽字符版本; **_wfopen_s**的参数是宽字符字符串。 否则， **_wfopen_s**和**fopen_s**的行为相同。
 
-**fopen_s**接受在执行时文件系统上有效的路径;只要执行代码的系统在执行时能够访问共享或映射的网络驱动器, **fopen_s**就会接受包含映射的网络驱动器的 UNC 路径和路径。 构造**fopen_s**的路径时, 不要对执行环境中驱动器、路径或网络共享的可用性进行假设。 可使用斜杠 (/) 或反斜杠 (\\) 作为路径中的目录分隔符。
+**fopen_s**接受在执行时文件系统上有效的路径;只要执行代码的系统在执行时能够访问共享或映射的网络驱动器， **fopen_s**就会接受包含映射的网络驱动器的 UNC 路径和路径。 构造**fopen_s**的路径时，不要对执行环境中驱动器、路径或网络共享的可用性进行假设。 可使用斜杠 (/) 或反斜杠 (\\) 作为路径中的目录分隔符。
 
 这些函数验证其参数。 如果 *.pfile*、 *filename*或*mode*为空指针, 则这些函数将生成无效的参数异常, 如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。
 
@@ -96,11 +99,11 @@ errno_t _wfopen_s(
 
 ## <a name="unicode-support"></a>Unicode 支持
 
-**fopen_s**支持 Unicode 文件流。 若要打开新的或现有的 Unicode 文件, 请将指定所需编码的*ccs*标志传递给**fopen_s**:
+**fopen_s**支持 Unicode 文件流。 若要打开新的或现有的 Unicode 文件，请将指定所需编码的*ccs*标志传递给**fopen_s**：
 
 **fopen_s(&fp, "newfile.txt", "rw, ccs=** _encoding_ **");**
 
-允许的*编码*值为**UNICODE**、 **utf-8**和**utf-16le**。 如果没有为*编码*指定值, **FOPEN_S**将使用 ANSI 编码。
+允许的*编码*值为**UNICODE**、 **utf-8**和**utf-16le**。 如果没有为*编码*指定值， **FOPEN_S**将使用 ANSI 编码。
 
 如果文件已存在并已打开以进行读取或追加，则字节顺序标记 (BOM)（如果文件中存在）将确定编码。 BOM 编码优先于*ccs*标志指定的编码。 仅在不存在 BOM 或文件是新文件时, 才使用*ccs*编码。
 
@@ -119,7 +122,7 @@ errno_t _wfopen_s(
 
 在 Unicode 模式下打开用于写入的文件将自动在其中写入 BOM。
 
-如果*mode*为 **"a, ccs =** _encoding_ **"** , **fopen_s**将首先尝试使用读取访问权限和写入访问权限打开文件。 如果成功，此函数将读取 BOM 以确定文件的编码；如果失败，此函数将使用文件的默认编码。 在任一情况下, **fopen_s**将使用只写访问权限重新打开文件。 (这仅适用**于模式,** 不适用于 **+** 。)
+如果*mode*为 **"a，ccs =** _encoding_ **"** ， **fopen_s**将首先尝试使用读取访问权限和写入访问权限打开文件。 如果成功，此函数将读取 BOM 以确定文件的编码；如果失败，此函数将使用文件的默认编码。 在任一情况下， **fopen_s**将使用只写访问权限重新打开文件。 (这仅适用**于模式,** 不适用于 **+** 。)
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -131,7 +134,7 @@ errno_t _wfopen_s(
 
 |*模式*|Access|
 |-|-|
-| **“r”** | 打开以便读取。 如果文件不存在或找不到, 则**fopen_s**调用失败。 |
+| **“r”** | 打开以便读取。 如果文件不存在或找不到，则**fopen_s**调用失败。 |
 | **“w”** | 打开用于写入的空文件。 如果给定文件存在，则其内容会被销毁。 |
 | **“a”** | 在文件末尾打开以进行写入（追加），在新数据写入到文件之前不移除文件末尾 (EOF) 标记。 创建文件（如果文件不存在）。 |
 | **“r+”** | 打开以便读取和写入。 文件必须存在。 |
@@ -151,17 +154,17 @@ errno_t _wfopen_s(
 | **t** | 在文本（转换）模式下打开。 |
 | **b** | 在二进制 (未转换) 模式下打开;将禁止涉及回车符和换行符的翻译。 |
 
-在文本 (已转换) 模式下, CTRL + Z 将在输入时解释为文件尾字符。 在使用 **"a +"** 打开以进行读取/写入的文件中, **fopen_s**将检查文件末尾的 CTRL + Z 并将其删除 (如果可能)。 这是因为, 使用[fseek](fseek-fseeki64.md)和**FTELL**在以 CTRL + Z 结尾的文件中移动时, 可能会导致[fseek](fseek-fseeki64.md)在文件结尾附近出现错误的行为。
+在文本 (已转换) 模式下, CTRL + Z 将在输入时解释为文件尾字符。 在使用 **"a +"** 打开以进行读取/写入的文件中， **fopen_s**将检查文件末尾的 CTRL + Z 并将其删除（如果可能）。 这是因为, 使用[fseek](fseek-fseeki64.md)和**FTELL**在以 CTRL + Z 结尾的文件中移动时, 可能会导致[fseek](fseek-fseeki64.md)在文件结尾附近出现错误的行为。
 
-此外, 在文本模式中, 回车换行符组合在输入时转换为单行馈送, 换行符转换为输出时的回车符。 当 Unicode 流 I/O 函数在文本模式（默认设置）下运行时，源或目标流将假定为一系列多字节字符。 因此，Unicode 流输入函数将多字节字符转换为宽字符（就像调用 mbtowc  函数一样）。 出于同一原因，Unicode 流输出函数将宽字符转换为多字节字符（就像调用 wctomb  函数一样）。
+此外, 在文本模式中, 回车换行符组合在输入时转换为单行馈送, 换行符转换为输出时的回车符。 当 Unicode 流 I/O 函数在文本模式（默认设置）下运行时，源或目标流将假定为一系列多字节字符。 因此，Unicode 流输入函数将多字节字符转换为宽字符（就像调用 mbtowc 函数一样）。 出于同一原因，Unicode 流输出函数将宽字符转换为多字节字符（就像调用 wctomb 函数一样）。
 
-如果在*mode*中未给出**t**或**b** , 则默认转换模式由全局变量[_fmode](../../c-runtime-library/fmode.md)定义。 如果**t**或**b**作为参数的前缀, 则函数将失败并返回**NULL**。
+如果在*mode*中未给出**t**或**b** ，则默认转换模式由全局变量[_fmode](../../c-runtime-library/fmode.md)定义。 如果**t**或**b**作为参数的前缀, 则函数将失败并返回**NULL**。
 
 有关在 Unicode 和多字节流 I/O 中使用文本和二进制模式的详细信息，请参阅[文本和二进制模式文件 I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md) 和[文本和二进制模式下的 Unicode 流 I/O](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md)。
 
 |*模式*修饰符|行为|
 |-|-|
-| **c** | 启用关联*文件名*的提交标志, 以便在调用**fflush**或 **_flushall**时, 将文件缓冲区的内容直接写入磁盘。 |
+| **c** | 启用关联*文件名*的提交标志，以便在调用**fflush**或 **_flushall**时，将文件缓冲区的内容直接写入磁盘。 |
 | **n** | 将关联的*文件名*的提交标志重置为 "无提交"。 这是默认设置。 如果将程序显式链接到 COMMODE.OBJ，它还将重写全局提交标志。 除非将程序显式链接到 COMMODE.OBJ，否则全局提交标志默认为“no-commit”（请参阅 [Link Options](../../c-runtime-library/link-options.md)）。 |
 | **N** | 指定文件不由子进程继承。 |
 | **S** | 指定缓存针对（但不限于）从磁盘的顺序访问进行优化。 |
@@ -170,19 +173,19 @@ errno_t _wfopen_s(
 | **D** | 将文件指定为临时。 最后一个文件指针关闭时，它将被删除。 |
 | **ccs=** _encoding_ | 指定要使用的编码字符集 ( **utf-8**、 **utf-16le**或**UNICODE**中的一个)。 如果需要 ANSI 编码，请不要指定此字符集。 |
 
-**Fopen_s**和[_fdopen](fdopen-wfdopen.md)中使用的*模式*字符串的有效字符对应于[_open](open-wopen.md)和[_sopen](sopen-wsopen.md)中使用的*oflag*参数, 如下所示。
+**Fopen_s**和[_fdopen](fdopen-wfdopen.md)中使用的*模式*字符串的有效字符对应于[_open](open-wopen.md)和[_sopen](sopen-wsopen.md)中使用的*oflag*参数，如下所示。
 
 |*模式*字符串中的字符|_Open/_sopen 的等效*oflag*值|
 |-------------------------------|----------------------------------------------------|
-|**a**|**_O_WRONLY**&#124; **_O_APPEND** (通常为 **_O_WRONLY** &#124; **_O_CREAT** &#124;* * _O_APPEND * *)|
+|**a**|**_O_WRONLY**&#124; **_O_APPEND** （通常为 **_O_WRONLY** &#124; **_O_CREAT** &#124;* * _O_APPEND * *）|
 |**a+**|**_O_RDWR** &#124; **_O_APPEND** (usually **_O_RDWR** &#124; **_O_APPEND** &#124; **_O_CREAT** )|
 |**r**|**_O_RDONLY**|
 |**r+**|**_O_RDWR**|
-|**w**|**_O_WRONLY**(通常为 **_O_WRONLY** &#124; **_O_CREAT** &#124;* * _O_TRUNC * *)|
+|**w**|**_O_WRONLY**（通常为 **_O_WRONLY** &#124; **_O_CREAT** &#124;* * _O_TRUNC * *）|
 |**w+**|**_O_RDWR** (usually **_O_RDWR** &#124; **_O_CREAT** &#124; **_O_TRUNC**)|
 |**b**|**_O_BINARY**|
 |**t**|**_O_TEXT**|
-|**c**|None|
+|**c**|无|
 |**n**|无|
 |**S**|**_O_SEQUENTIAL**|
 |**R**|**_O_RANDOM**|
@@ -207,7 +210,7 @@ errno_t _wfopen_s(
 
 [C 运行时库](../../c-runtime-library/crt-library-features.md)的所有版本。
 
-" **C**"、" **n**" 和 " **t** *" 模式*选项是 Microsoft **fopen_s**和[_fdopen](fdopen-wfdopen.md)的扩展, 不应在需要 ANSI 可移植性时使用。
+" **C**"、" **n**" 和 " **t** *" 模式*选项是 Microsoft **fopen_s**和[_fdopen](fdopen-wfdopen.md)的扩展，不应在需要 ANSI 可移植性时使用。
 
 ## <a name="example"></a>示例
 

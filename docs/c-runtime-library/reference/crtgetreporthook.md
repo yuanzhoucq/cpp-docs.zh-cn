@@ -1,9 +1,9 @@
 ---
 title: _CrtGetReportHook
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtGetReportHook
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtGetReportHook
 - _CrtGetReportHook
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - CrtGetReportHook function
 - _CrtGetReportHook function
 ms.assetid: 922758ed-7edd-4359-9c92-0535192dc11a
-ms.openlocfilehash: 0b8b666093807c95312d4328ca9b3043ad1e09df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc005dda435b5e11d6c3c886de180ed85b9c2a04
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339411"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942399"
 ---
-# <a name="crtgetreporthook"></a>_CrtGetReportHook
+# <a name="_crtgetreporthook"></a>_CrtGetReportHook
 
 检索客户端定义的报告函数，以挂钩到 C 运行时调试报告进程（仅限调试版本）。
 
@@ -45,7 +48,7 @@ _CRT_REPORT_HOOK _CrtGetReportHook( void );
 
 ## <a name="remarks"></a>备注
 
-**_CrtGetReportHook** ，应用程序可以检索有关 C 运行时调试库报告进程当前报告函数。
+**_CrtGetReportHook**允许应用程序检索 C 运行时调试库报告进程的当前报告函数。
 
 有关使用其他具有挂钩功能的运行时函数和编写你自己的客户端定义挂钩函数的详细信息，请参阅[编写调试挂钩函数](/visualstudio/debugger/debug-hook-function-writing)。
 
@@ -63,7 +66,7 @@ _CRT_REPORT_HOOK _CrtGetReportHook( void );
 
 ## <a name="example"></a>示例
 
-有关如何使用的示例 **_CrtSetReportHook**，请参阅[报表](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/report)。
+有关如何使用 **_CrtSetReportHook**的示例，请参阅[报表](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/report)。
 
 ## <a name="see-also"></a>请参阅
 

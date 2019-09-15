@@ -1,14 +1,14 @@
 ---
 title: lrint、lrintf、lrintl、llrint、llrintf、llrintl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - lrint
 - lrintl
 - lrintf
 - llrint
 - llrintf
 - llrintl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lrint
 - lrintf
@@ -42,12 +45,12 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-ms.openlocfilehash: 01680a62e654112475a55bd8eac0cc14d254e2a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72870c3548f0fd6972183b0c090708c6eddc591e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285767"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953131"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint、lrintf、lrintl、llrint、llrintf、llrintl
 
@@ -104,25 +107,25 @@ long long int llrintl(
 
 ## <a name="return-value"></a>返回值
 
-如果成功，返回的圆角的整数值*x*。
+如果成功，则返回*x*的舍入整数值。
 
 |问题|返回|
 |-----------|------------|
-|*x*超出返回类型的范围<br /><br /> *x* = ±∞<br /><br /> *x* = NaN|将引发**FE_INVALID** ，并返回零 (0)。|
+|*x*超出了返回类型的范围<br /><br /> *x* = ±∞<br /><br /> *x* = NaN|引发**FE_INVALID**并返回零（0）。|
 
 ## <a name="remarks"></a>备注
 
-因为C++允许重载，可以调用的重载**lrint**并**llrint**采用**float**并**长** **双**类型。 在 C 程序中， **lrint**并**llrint**始终采用**double**。
+由于C++允许重载，因此可以调用**lrint**和**llrint**的重载，该重载采用**float**和**long** **double**类型。 在 C 程序中， **lrint**和**llrint**始终采用**double**。
 
-如果*x*不表示等效的整数值，这些函数将引发浮**FE_INEXACT**。
+如果*x*不表示整数值的浮点等效项，则这些函数将引发**FE_INEXACT**。
 
-**特定于 Microsoft**:结果超出范围时的返回类型，或当参数为 NaN 或无穷大，返回值是定义的实现。 Microsoft 编译器返回零 (0) 值。
+**Microsoft 专用**：如果结果超出了返回类型的范围，或者参数为 NaN 或无穷大，则返回值为 "已定义实现"。 Microsoft 编译器返回零 (0) 值。
 
 ## <a name="requirements"></a>要求
 
 |函数|C 标头|C++ 标头|
 |--------------|--------------|------------------|
-|**lrint**， **lrintf**， **lrintl**， **llrint**， **llrintf**， **llrintl**|\<math.h>|\<cmath>|
+|**lrint**、 **lrintf**、 **lrintl**、 **llrint**、 **llrintf**、 **llrintl**|\<math.h>|\<cmath>|
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

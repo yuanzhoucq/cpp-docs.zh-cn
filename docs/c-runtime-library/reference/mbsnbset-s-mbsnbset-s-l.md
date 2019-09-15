@@ -1,10 +1,10 @@
 ---
 title: _mbsnbset_s、_mbsnbset_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnbset_s_l
 - _mbsnbset_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsnbset_s
 - _mbsnbset_s_l
@@ -32,16 +35,16 @@ helpviewer_keywords:
 - _tcsnset_s function
 - tcsnset_s_l function
 ms.assetid: 811f92c9-cc31-4bbd-8017-2d1bfc6fb96f
-ms.openlocfilehash: 5d021f147ba407f5b0b7316afc7cfd79fe300997
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b54a05d163430aa01f4c12e841a11d1faf5a6c4b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331241"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952111"
 ---
-# <a name="mbsnbsets-mbsnbsetsl"></a>_mbsnbset_s、_mbsnbset_s_l
+# <a name="_mbsnbset_s-_mbsnbset_s_l"></a>_mbsnbset_s、_mbsnbset_s_l
 
-设置第一个**n**多字节字符字符串为指定字符的字节数。 这些版本的 [_mbsnbset、_mbsnbset_l](mbsnbset-mbsnbset-l.md) 具有安全性增强功能，如 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述。
+将多字节字符字符串的前**n**个字节设置为指定字符。 这些版本的 [_mbsnbset、_mbsnbset_l](mbsnbset-mbsnbset-l.md) 具有安全性增强功能，如 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述。
 
 > [!IMPORTANT]
 > 此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
@@ -100,13 +103,13 @@ errno_t _mbsnbset_s_l(
 
 ## <a name="remarks"></a>备注
 
-**_Mbsnbset_s**并 **_mbsnbset_s_l**函数设置的最大第一个*计数*字节*str*到*c*. 如果*计数*大于的长度*str*，时长*str*而不是*计数*。 如果*c*是一个多字节字符，不能完全设置到由指定的最后一个字节*计数*，则用空白字符填充最后一个字节。 **_mbsnbset_s**并 **_mbsnbset_s_l**未放置终止 null 的末尾*str*。
+**_Mbsnbset_s**和 **_mbsnbset_s_l**函数最多将*字符串*的第一个*计数*字节数设置为*c*。 如果*count*大于*str*的长度，则使用*str*的长度而不是*count*。 如果*c*是多字节字符，且不能完全设置到*count*指定的最后一个字节中，则用空白字符填充最后一个字节。 **_mbsnbset_s**和 **_mbsnbset_s_l**不在*str*末尾放置终止 null。
 
-**_mbsnbset_s**并 **_mbsnbset_s_l**类似于 **_mbsnset**，只不过它们设置*计数*字节而非*计数*字符*c*。
+**_mbsnbset_s**和 **_mbsnbset_s_l**类似于 **_mbsnset**，只不过它们设置的是*count*个字节，而不是*count*个字符的*c*。
 
-如果*str*是**NULL**或*计数*为零，此函数生成无效的参数异常，如中所述[参数验证](../../c-runtime-library/parameter-validation.md). 如果允许执行继续，则**errno**设置为**EINVAL**并且该函数返回**NULL**。 此外，如果*c*不是有效的多字节字符**errno**设置为**EINVAL**并改为使用一个空格。
+如果*str*为**NULL**或*计数*为零，则此函数将生成无效的参数异常，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将**errno**设置为**EINVAL** ，并且该函数将返回**NULL**。 此外，如果*c*不是有效的多字节字符，则将**Errno**设置为**EINVAL** ，并改为使用空格。
 
-输出值受的设置**LC_CTYPE**的区域设置的类别设置影响; 请参阅[setlocale、 _wsetlocale](setlocale-wsetlocale.md)有关详细信息。 **_Mbsnbset_s**依赖于区域设置的行为; 此函数版本使用当前区域设置 **_mbsnbset_s_l**版本是相同，但它使用区域设置参数的传入。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的**LC_CTYPE**类别设置的影响;有关详细信息，请参阅[setlocale、_wsetlocale](setlocale-wsetlocale.md) 。 此函数的 **_mbsnbset_s**版本对与区域设置相关的行为使用当前区域设置; **_mbsnbset_s_l**版本相同，只不过它使用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 在 C++ 中，这些函数的使用由模板重载简化；重载可以自动推导出缓冲区长度，从而不再需要指定大小自变量。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
