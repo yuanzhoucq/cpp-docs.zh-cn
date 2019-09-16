@@ -18,16 +18,16 @@ helpviewer_keywords:
 - connection points [C++], managing
 - CComDynamicUnkArray class
 ms.assetid: 202470d7-9a1b-498f-b96d-659d681acd65
-ms.openlocfilehash: 39f137f199db1d7519801c19375baea6cd08db93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d55a6d6bfbcc6921fa0633753365f5799388dc27
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259477"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497252"
 ---
 # <a name="ccomdynamicunkarray-class"></a>CComDynamicUnkArray 类
 
-此类存储数组的`IUnknown`指针。
+此类存储指针的`IUnknown`数组。
 
 ## <a name="syntax"></a>语法
 
@@ -41,41 +41,41 @@ class CComDynamicUnkArray
 
 |名称|描述|
 |----------|-----------------|
-|[CComDynamicUnkArray::CComDynamicUnkArray](#ccomdynamicunkarray)|构造函数。 初始化集合的值为 NULL 和集合大小为零。|
-|[CComDynamicUnkArray::~CComDynamicUnkArray](#dtor)|析构函数。|
+|[CComDynamicUnkArray::CComDynamicUnkArray](#ccomdynamicunkarray)|构造函数。 将集合值初始化为 NULL，将集合大小初始化为零。|
+|[CComDynamicUnkArray：： ~ CComDynamicUnkArray](#dtor)|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
 |名称|描述|
 |----------|-----------------|
-|[CComDynamicUnkArray::Add](#add)|调用此方法以添加`IUnknown`指向该数组。|
-|[CComDynamicUnkArray::begin](#begin)|返回一个指向第一个`IUnknown`集合中的指针。|
-|[CComDynamicUnkArray::clear](#clear)|清空该数组。|
-|[CComDynamicUnkArray::end](#end)|返回一个指向一个过去的最后一个`IUnknown`集合中的指针。|
-|[CComDynamicUnkArray::GetAt](#getat)|检索位于指定索引处的元素。|
-|[CComDynamicUnkArray::GetCookie](#getcookie)|调用此方法以获取与关联的 cookie 给定`IUnknown`指针。|
+|[CComDynamicUnkArray：： Add](#add)|调用此方法可添加`IUnknown`指向该数组的指针。|
+|[CComDynamicUnkArray：： begin](#begin)|返回指向集合中第一个`IUnknown`指针的指针。|
+|[CComDynamicUnkArray：： clear](#clear)|清空数组。|
+|[CComDynamicUnkArray：： end](#end)|返回指向集合中最后`IUnknown`一个指针之后的一个指针。|
+|[CComDynamicUnkArray::GetAt](#getat)|检索指定索引处的元素。|
+|[CComDynamicUnkArray::GetCookie](#getcookie)|调用此方法以获取与给定`IUnknown`指针关联的 cookie。|
 |[CComDynamicUnkArray::GetSize](#getsize)|返回数组的长度。|
-|[CComDynamicUnkArray::GetUnknown](#getunknown)|调用此方法以获取`IUnknown`与给定的 cookie 关联的指针。|
-|[CComDynamicUnkArray::Remove](#remove)|调用此方法来删除`IUnknown`从数组的指针。|
+|[CComDynamicUnkArray::GetUnknown](#getunknown)|调用此方法以获取与`IUnknown`给定 cookie 关联的指针。|
+|[CComDynamicUnkArray::Remove](#remove)|调用此方法可从数组`IUnknown`中删除指针。|
 
 ## <a name="remarks"></a>备注
 
-`CComDynamicUnkArray` 保存动态分配的数组`IUnknown`指针，每个点的连接上的接口。 `CComDynamicUnkArray` 可以使用作为参数[IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)模板类。
+`CComDynamicUnkArray`保存一个动态分配的`IUnknown`指针数组，其中每个都是连接点上的接口。 `CComDynamicUnkArray`可用作[IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)模板类的参数。
 
-`CComDynamicUnkArray`方法[开始](#begin)并[最终](#end)可用于循环访问所有连接点 （例如，激发的事件时）。
+`CComDynamicUnkArray`方法[开始](#begin)和[结束](#end)可用于循环遍历所有连接点（例如，触发事件时）。
 
-请参阅[添加到对象的连接点](../../atl/adding-connection-points-to-an-object.md)的详细信息自动创建的连接点的代理。
+有关自动创建连接点代理的详细信息，请参阅向[对象添加连接点](../../atl/adding-connection-points-to-an-object.md)。
 
 > [!NOTE]
-> **请注意**该类`CComDynamicUnkArray`由**添加类**向导创建一个具有的连接点的控件时。 如果你想要手动指定连接点的数量，将更改从引用`CComDynamicUnkArray`到`CComUnkArray<` *n* `>`，其中*n*是连接点的数量必填。
+> **注意**类`CComDynamicUnkArray`由**添加类**向导在创建具有连接点的控件时使用。 如果要手动指定连接点的数目， `CComDynamicUnkArray`请将引用从更改为 `>` `CComUnkArray<` n，其中*n*是所需的连接点的数目。
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlcom.h
+**标头：** atlcom。h
 
-##  <a name="add"></a>  CComDynamicUnkArray::Add
+##  <a name="add"></a>CComDynamicUnkArray：： Add
 
-调用此方法以添加`IUnknown`指向该数组。
+调用此方法可添加`IUnknown`指向该数组的指针。
 
 ```
 DWORD Add(IUnknown* pUnk);
@@ -84,15 +84,15 @@ DWORD Add(IUnknown* pUnk);
 ### <a name="parameters"></a>参数
 
 *pUnk*<br/>
-`IUnknown`用于添加到数组的指针。
+要`IUnknown`添加到数组中的指针。
 
 ### <a name="return-value"></a>返回值
 
-返回新添加的指针与关联的 cookie。
+返回与新添加的指针关联的 cookie。
 
-##  <a name="begin"></a>  CComDynamicUnkArray::begin
+##  <a name="begin"></a>CComDynamicUnkArray：： begin
 
-将指针返回到的集合的开头`IUnknown`接口指针。
+返回指向`IUnknown`接口指针集合的开头的指针。
 
 ```
 IUnknown**
@@ -101,23 +101,23 @@ IUnknown**
 
 ### <a name="return-value"></a>返回值
 
-一个指向`IUnknown`接口指针。
+指向`IUnknown`接口指针的指针。
 
 ### <a name="remarks"></a>备注
 
-集合中包含指向本地存储为接口的指针`IUnknown`。 您在将每个转换`IUnknown`实际接口类型的接口，然后通过它调用。 不需要首先查询接口。
+集合包含指向本地存储的接口的`IUnknown`指针。 将每个`IUnknown`接口强制转换为实际接口类型，然后调用它。 不需要先查询接口。
 
-使用之前`IUnknown`接口，应检查不为 NULL。
+使用`IUnknown`接口之前，应检查其是否不为 NULL。
 
-##  <a name="clear"></a>  CComDynamicUnkArray::clear
+##  <a name="clear"></a>CComDynamicUnkArray：： clear
 
-清空该数组。
+清空数组。
 
 ```
 void clear();
 ```
 
-##  <a name="ccomdynamicunkarray"></a>  CComDynamicUnkArray::CComDynamicUnkArray
+##  <a name="ccomdynamicunkarray"></a>CComDynamicUnkArray::CComDynamicUnkArray
 
 构造函数。
 
@@ -127,9 +127,9 @@ CComDynamicUnkArray();
 
 ### <a name="remarks"></a>备注
 
-集合大小设置为零并初始化为 NULL 的值。 析构函数释放集合中，如有必要。
+将集合大小设置为零，并将值初始化为 NULL。 如果需要，析构函数将释放该集合。
 
-##  <a name="dtor"></a>  CComDynamicUnkArray:: ~ CComDynamicUnkArray
+##  <a name="dtor"></a>CComDynamicUnkArray：： ~ CComDynamicUnkArray
 
 析构函数。
 
@@ -141,9 +141,9 @@ CComDynamicUnkArray();
 
 释放由类构造函数分配的资源。
 
-##  <a name="end"></a>  CComDynamicUnkArray::end
+##  <a name="end"></a>CComDynamicUnkArray：： end
 
-返回一个指向一个过去的最后一个`IUnknown`集合中的指针。
+返回指向集合中最后`IUnknown`一个指针之后的一个指针。
 
 ```
 IUnknown**
@@ -152,11 +152,11 @@ IUnknown**
 
 ### <a name="return-value"></a>返回值
 
-一个指向`IUnknown`接口指针。
+指向`IUnknown`接口指针的指针。
 
-##  <a name="getat"></a>  CComDynamicUnkArray::GetAt
+##  <a name="getat"></a>CComDynamicUnkArray：： GetAt
 
-检索位于指定索引处的元素。
+检索指定索引处的元素。
 
 ```
 IUnknown* GetAt(int nIndex);
@@ -169,11 +169,11 @@ IUnknown* GetAt(int nIndex);
 
 ### <a name="return-value"></a>返回值
 
-一个指向[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)接口。
+指向[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)接口的指针。
 
-##  <a name="getcookie"></a>  CComDynamicUnkArray::GetCookie
+##  <a name="getcookie"></a>CComDynamicUnkArray：： System.windows.application.getcookie
 
-调用此方法以获取与关联的 cookie 给定`IUnknown`指针。
+调用此方法以获取与给定`IUnknown`指针关联的 cookie。
 
 ```
 DWORD WINAPI GetCookie(IUnknown** ppFind);
@@ -182,17 +182,17 @@ DWORD WINAPI GetCookie(IUnknown** ppFind);
 ### <a name="parameters"></a>参数
 
 *ppFind*<br/>
-`IUnknown`为其关联的 cookie 是必需的指针。
+需要相关 cookie 的指针。`IUnknown`
 
 ### <a name="return-value"></a>返回值
 
-返回与关联的 cookie`IUnknown`指针或如果没有匹配的零`IUnknown`找到指针。
+返回与`IUnknown`指针关联的 cookie; 如果找不到匹配`IUnknown`的指针，则返回零。
 
 ### <a name="remarks"></a>备注
 
-如果有多个实例的相同`IUnknown`指针，此函数返回的第一个 cookie。
+如果有多个相同`IUnknown`指针的实例，则此函数将返回第一个实例的 cookie。
 
-##  <a name="getsize"></a>  CComDynamicUnkArray::GetSize
+##  <a name="getsize"></a>CComDynamicUnkArray：： GetSize
 
 返回数组的长度。
 
@@ -204,9 +204,9 @@ int GetSize() const;
 
 数组的长度。
 
-##  <a name="getunknown"></a>  CComDynamicUnkArray::GetUnknown
+##  <a name="getunknown"></a>CComDynamicUnkArray::GetUnknown
 
-调用此方法以获取`IUnknown`与给定的 cookie 关联的指针。
+调用此方法以获取与`IUnknown`给定 cookie 关联的指针。
 
 ```
 IUnknown* WINAPI GetUnknown(DWORD dwCookie);
@@ -215,15 +215,15 @@ IUnknown* WINAPI GetUnknown(DWORD dwCookie);
 ### <a name="parameters"></a>参数
 
 *dwCookie*<br/>
-为其 cookie 关联`IUnknown`指针是必需。
+需要关联`IUnknown`指针的 cookie。
 
 ### <a name="return-value"></a>返回值
 
-返回`IUnknown`指针或如果不找到任何匹配的 cookie，则为 NULL。
+`IUnknown`返回指针，或者如果找不到匹配的 cookie，则为 NULL。
 
-##  <a name="remove"></a>  CComDynamicUnkArray::Remove
+##  <a name="remove"></a>CComDynamicUnkArray：： Remove
 
-调用此方法来删除`IUnknown`从数组的指针。
+调用此方法可从数组`IUnknown`中删除指针。
 
 ```
 BOOL Remove(DWORD dwCookie);
@@ -232,11 +232,11 @@ BOOL Remove(DWORD dwCookie);
 ### <a name="parameters"></a>参数
 
 *dwCookie*<br/>
-Cookie 引用`IUnknown`指针要从数组中删除。
+引用要从数组`IUnknown`中移除的指针的 cookie。
 
 ### <a name="return-value"></a>返回值
 
-如果该指针被删除; 将返回 TRUE否则为 FALSE。
+如果指针被移除，则返回 TRUE;否则为 FALSE。
 
 ## <a name="see-also"></a>请参阅
 

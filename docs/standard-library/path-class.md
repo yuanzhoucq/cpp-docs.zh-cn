@@ -13,7 +13,7 @@ ms.locfileid: "68455097"
 ---
 # <a name="path-class"></a>path 类
 
-**Path**类存储类型`string_type`为的对象, `myname`此对象用于处于阐释, 适合用作路径名。 `string_type``basic_string<value_type>`是的同义词, `value_type`其中是在 Windows 上的**wchar_t**或 POSIX 上的**char**的同义词。
+**Path**类存储类型`string_type`为的对象， `myname`此对象用于处于阐释，适合用作路径名。 `string_type``basic_string<value_type>`是的同义词， `value_type`其中是在 Windows 上的**wchar_t**或 POSIX 上的**char**的同义词。
 
 有关详细信息和代码示例，请参阅[文件系统导航 (C++)](../standard-library/file-system-navigation.md)。
 
@@ -41,13 +41,13 @@ class path;
 
 |成员函数|描述|
 |-|-|
-|[append](#append)|根据需要, 将指定`mypath`序列追加到、转换和插入 preferred_separator。|
-|[assign](#assign)|替换`mypath`为指定的序列, 并根据需要进行转换。|
-|[begin](#begin)|返回一个`path::iterator` , 它指定路径名中的第一个路径元素 (如果存在)。|
+|[append](#append)|根据需要，将指定`mypath`序列追加到、转换和插入 preferred_separator。|
+|[assign](#assign)|替换`mypath`为指定的序列，并根据需要进行转换。|
+|[begin](#begin)|返回一个`path::iterator` ，它指定路径名中的第一个路径元素（如果存在）。|
 |[c_str](#c_str)|返回指向中`mypath`的第一个字符的指针。|
 |[clear](#clear)|执行`mypath.clear()`。|
 |[compare](#compare)|返回比较值。|
-|[concat](#compare)|根据需要, 将指定`mypath`序列追加到, 并转换 (但不插入分隔符)。|
+|[concat](#compare)|根据需要，将指定`mypath`序列追加到，并转换（但不插入分隔符）。|
 |[empty](#empty)|返回 `mypath.empty()`。|
 |[end](#end)|返回类型`iterator`的序列末迭代器。|
 |[拓](#extension)|返回的后缀`filename()`。|
@@ -65,7 +65,7 @@ class path;
 |[has_root_name](#has_root_name)|返回 `!root_name().empty()`。|
 |[has_root_path](#has_root_path)|返回 `!root_path().empty()`。|
 |[has_stem](#has_stem)|返回 `!stem().empty()`。|
-|[is_absolute](#is_absolute)|对于 Windows, 函数返回`has_root_name() && has_root_directory()`。 对于 Posix, 函数返回`has_root_directory()`。|
+|[is_absolute](#is_absolute)|对于 Windows，函数返回`has_root_name() && has_root_directory()`。 对于 Posix，函数返回`has_root_directory()`。|
 |[is_relative](#is_relative)|返回 `!is_absolute()`。|
 |[make_preferred](#make_preferred)|根据需要将每个分隔符转换为 preferred_separator。|
 |[本机](#native)|返回 `myname`。|
@@ -81,11 +81,11 @@ class path;
 |[stem](#stem)|`stem`返回的`myname`组件。|
 |[string](#string)|转换中`mypath`存储的序列。|
 |[swap](#swap)|执行`swap(mypath, right.mypath)`。|
-|[u16string](#u16string)|将中`mypath`存储的序列转换为 utf-16, 并将其返回存储在类型`u16string`的对象中。|
-|[u32string](#u32string)|将中`mypath`存储的序列转换为 32 utf-8, 并将其返回存储在类型`u32string`的对象中。|
-|[u8string](#u8string)|将中`mypath`存储的序列转换为 utf-8, 并将其返回存储在类型`u8string`的对象中。|
+|[u16string](#u16string)|将中`mypath`存储的序列转换为 utf-16，并将其返回存储在类型`u16string`的对象中。|
+|[u32string](#u32string)|将中`mypath`存储的序列转换为 32 utf-8，并将其返回存储在类型`u32string`的对象中。|
+|[u8string](#u8string)|将中`mypath`存储的序列转换为 utf-8，并将其返回存储在类型`u8string`的对象中。|
 |[value_type](#value_type)|类型描述了主机操作系统偏好的路径元素。|
-|[wstring](#wstring)|将中`mypath`存储的序列转换为`wchar_t`序列的主机系统所用的编码, 并将其返回存储在类型`wstring`的对象中。|
+|[wstring](#wstring)|将中`mypath`存储的序列转换为`wchar_t`序列的主机系统所用的编码，并将其返回存储在类型`wstring`的对象中。|
 
 ### <a name="operators"></a>运算符
 
@@ -98,13 +98,13 @@ class path;
 
 ## <a name="requirements"></a>要求
 
-**标头:** \<filesystem >
+**标头：** \<filesystem >
 
 **命名空间：** std::experimental::filesystem
 
-## <a name="append"></a>path:: append
+## <a name="append"></a>path：： append
 
-将指定序列追加到`mypath`, 并`preferred_separator`根据需要进行转换和插入。
+将指定序列追加到`mypath`，并`preferred_separator`根据需要进行转换和插入。
 
 ```cpp
 template <class Source>
@@ -125,9 +125,9 @@ path& append(InIt first, InIt last);
 *时间*\
 指定序列的末尾。
 
-## <a name="assign"></a>path:: assign
+## <a name="assign"></a>path：： assign
 
-替换`mypath`为指定的序列, 并根据需要进行转换。
+替换`mypath`为指定的序列，并根据需要进行转换。
 
 ```cpp
 template <class Source>
@@ -148,15 +148,15 @@ path& assign(InIt first, InIt last);
 *时间*\
 指定序列的末尾。
 
-## <a name="begin"></a>path:: begin
+## <a name="begin"></a>path：： begin
 
-返回一个`path::iterator` , 它指定路径名中的第一个路径元素 (如果存在)。
+返回一个`path::iterator` ，它指定路径名中的第一个路径元素（如果存在）。
 
 ```cpp
 iterator begin() const;
 ```
 
-## <a name="c_str"></a>path:: c_str
+## <a name="c_str"></a>path：： c_str
 
 返回指向中`mypath`的第一个字符的指针。
 
@@ -164,7 +164,7 @@ iterator begin() const;
 const value_type& *c_str() const noexcept;
 ```
 
-## <a name="clear"></a>path:: clear
+## <a name="clear"></a>path：： clear
 
 执行`mypath.clear()`。
 
@@ -172,7 +172,7 @@ const value_type& *c_str() const noexcept;
 void clear() noexcept;
 ```
 
-## <a name="compare"></a>path:: compare
+## <a name="compare"></a>path：： compare
 
 第一个函数返回 `mypath.compare(pval.native())`。 第二个函数返回 `mypath.compare(str)`。 第三个函数`mypath.compare(ptr)`返回。
 
@@ -193,9 +193,9 @@ int compare(const value_type *ptr) const;
 *ptr*\
 要比较的指针。
 
-## <a name="concat"></a>path:: concat
+## <a name="concat"></a>path：： concat
 
-根据需要, 将指定`mypath`序列追加到, 并转换 (但不插入分隔符)。
+根据需要，将指定`mypath`序列追加到，并转换（但不插入分隔符）。
 
 ```cpp
 template <class Source>
@@ -216,7 +216,7 @@ path& concat(InIt first, InIt last);
 *时间*\
 指定序列的末尾。
 
-## <a name="const_iterator"></a>path:: const_iterator
+## <a name="const_iterator"></a>path：： const_iterator
 
 `iterator` 的同义词。
 
@@ -224,7 +224,7 @@ path& concat(InIt first, InIt last);
 typedef iterator const_iterator;
 ```
 
-## <a name="empty"></a>路径:: empty
+## <a name="empty"></a>路径：： empty
 
 返回 `mypath.empty()`。
 
@@ -232,7 +232,7 @@ typedef iterator const_iterator;
 bool empty() const noexcept;
 ```
 
-## <a name="end"></a>path:: end
+## <a name="end"></a>path：： end
 
 返回类型`iterator`的序列末迭代器。
 
@@ -240,7 +240,7 @@ bool empty() const noexcept;
 iterator end() const;
 ```
 
-## <a name="extension"></a>path:: extension
+## <a name="extension"></a>path：： extension
 
 返回的后缀`filename()`。
 
@@ -250,13 +250,13 @@ path extension() const;
 
 ### <a name="remarks"></a>备注
 
-返回的后缀`filename() X` , 以:
+返回的后缀`filename() X` ，以：
 
-如果`X == path(".") || X == path("..")`或如果`X`不包含任何点, 则后缀为空。
+如果`X == path(".") || X == path("..")`或如果`X`不包含任何点，则后缀为空。
 
 否则，前缀以最右侧的点开头（并将其包含在内）。
 
-## <a name="filename"></a>path:: filename
+## <a name="filename"></a>path：： filename
 
 返回 myname 的根目录组件，尤其是 `empty() path() : *--end()`。 组件可能为空。
 
@@ -264,7 +264,7 @@ path extension() const;
 path filename() const;
 ```
 
-## <a name="generic_string"></a>path:: generic_string
+## <a name="generic_string"></a>path：： generic_string
 
 返回 `this->string<Elem, Traits, Alloc>(al)` ，其中（在 Windows 下）任何反斜杠均转换为正斜杠。
 
@@ -278,7 +278,7 @@ template <class Elem,
 string generic_string() const;
 ```
 
-## <a name="generic_u16string"></a>path:: generic_u16string
+## <a name="generic_u16string"></a>path：： generic_u16string
 
 返回 `u16string()` ，其中（在 Windows 下）任何反斜杠均转换为正斜杠。
 
@@ -286,7 +286,7 @@ string generic_string() const;
 u16string generic_u16string() const;
 ```
 
-## <a name="generic_u32string"></a>path:: generic_u32string
+## <a name="generic_u32string"></a>path：： generic_u32string
 
 返回 `u32string()` ，其中（在 Windows 下）任何反斜杠均转换为正斜杠。
 
@@ -294,7 +294,7 @@ u16string generic_u16string() const;
 u32string generic_u32string() const;
 ```
 
-## <a name="generic_u8string"></a>path:: generic_u8string
+## <a name="generic_u8string"></a>path：： generic_u8string
 
 返回 `u8string()` ，其中（在 Windows 下）任何反斜杠均转换为正斜杠。
 
@@ -302,7 +302,7 @@ u32string generic_u32string() const;
 string generic_u8string() const;
 ```
 
-## <a name="generic_wstring"></a>path:: generic_wstring
+## <a name="generic_wstring"></a>path：： generic_wstring
 
 返回 `wstring()` ，其中（在 Windows 下）任何反斜杠均转换为正斜杠。
 
@@ -310,7 +310,7 @@ string generic_u8string() const;
 wstring generic_wstring() const;
 ```
 
-## <a name="has_extension"></a>path:: has_extension
+## <a name="has_extension"></a>path：： has_extension
 
 返回 `!extension().empty()`。
 
@@ -318,7 +318,7 @@ wstring generic_wstring() const;
 bool has_extension() const;
 ```
 
-## <a name="has_filename"></a>path:: has_filename
+## <a name="has_filename"></a>path：： has_filename
 
 返回 `!filename().empty()`。
 
@@ -326,7 +326,7 @@ bool has_extension() const;
 bool has_filename() const;
 ```
 
-## <a name="has_parent_path"></a>path:: has_parent_path
+## <a name="has_parent_path"></a>path：： has_parent_path
 
 返回 `!parent_path().empty()`。
 
@@ -334,7 +334,7 @@ bool has_filename() const;
 bool has_parent_path() const;
 ```
 
-## <a name="has_relative_path"></a>path:: has_relative_path
+## <a name="has_relative_path"></a>path：： has_relative_path
 
 返回 `!relative_path().empty()`。
 
@@ -342,7 +342,7 @@ bool has_parent_path() const;
 bool has_relative_path() const;
 ```
 
-## <a name="has_root_directory"></a>path:: has_root_directory
+## <a name="has_root_directory"></a>path：： has_root_directory
 
 返回 `!root_directory().empty()`。
 
@@ -350,7 +350,7 @@ bool has_relative_path() const;
 bool has_root_directory() const;
 ```
 
-## <a name="has_root_name"></a>path:: has_root_name
+## <a name="has_root_name"></a>path：： has_root_name
 
 返回 `!root_name().empty()`。
 
@@ -358,7 +358,7 @@ bool has_root_directory() const;
 bool has_root_name() const;
 ```
 
-## <a name="has_root_path"></a>path:: has_root_path
+## <a name="has_root_path"></a>path：： has_root_path
 
 返回 `!root_path().empty()`。
 
@@ -366,7 +366,7 @@ bool has_root_name() const;
 bool has_root_path() const;
 ```
 
-## <a name="has_stem"></a>path:: has_stem
+## <a name="has_stem"></a>path：： has_stem
 
 返回 `!stem().empty()`。
 
@@ -374,15 +374,15 @@ bool has_root_path() const;
 bool has_stem() const;
 ```
 
-## <a name="is_absolute"></a>path:: is_absolute
+## <a name="is_absolute"></a>path：： is_absolute
 
-对于 Windows, 函数返回`has_root_name() && has_root_directory()`。 对于 Posix, 函数返回`has_root_directory()`。
+对于 Windows，函数返回`has_root_name() && has_root_directory()`。 对于 Posix，函数返回`has_root_directory()`。
 
 ```cpp
 bool is_absolute() const;
 ```
 
-## <a name="is_relative"></a>path:: is_relative
+## <a name="is_relative"></a>path：： is_relative
 
 返回 `!is_absolute()`。
 
@@ -390,7 +390,7 @@ bool is_absolute() const;
 bool is_relative() const;
 ```
 
-## <a name="iterator"></a>path:: iterator
+## <a name="iterator"></a>path：： iterator
 
 指定的路径组件`myname`的双向常量迭代器。
 
@@ -409,19 +409,19 @@ class iterator
 
 ### <a name="remarks"></a>备注
 
-类描述了一个双向常量迭代器, 该`path`迭代器`myname`指定序列中的组件:
+类描述了一个双向常量迭代器，该`path`迭代器`myname`指定序列中的组件：
 
 1. 根名称（如存在）
 
 1. 根目录（如存在）
 
-1. 父项`path`的其余目录元素 (如果存在), 以文件名结尾 (如果存在)
+1. 父项`path`的其余目录元素（如果存在），以文件名结尾（如果存在）
 
-对于`pval` 类型`path`为的对象:
+对于`pval` 类型`path`为的对象：
 
-1. `path::iterator X = pval.begin()`指定路径名中`path`的第一个元素 (如果存在)。
+1. `path::iterator X = pval.begin()`指定路径名中`path`的第一个元素（如果存在）。
 
-1. `X == pval.end()`当点刚`X`越过组件序列的末尾时, 为 true。
+1. `X == pval.end()`当点刚`X`越过组件序列的末尾时，为 true。
 
 3. `*X`返回与当前组件匹配的字符串
 
@@ -431,7 +431,7 @@ class iterator
 
 1. 更改`myname`会使在中指定元素`myname`的所有迭代器失效。
 
-## <a name="make_preferred"></a>path:: make_preferred
+## <a name="make_preferred"></a>path：： make_preferred
 
 `preferred_separator`根据需要将每个分隔符转换为。
 
@@ -439,7 +439,7 @@ class iterator
 path& make_preferred();
 ```
 
-## <a name="native"></a>路径:: native
+## <a name="native"></a>路径：： native
 
 返回 `myname`。
 
@@ -447,7 +447,7 @@ path& make_preferred();
 const string_type& native() const noexcept;
 ```
 
-## <a name="op_as"></a>path:: operator =
+## <a name="op_as"></a>path：： operator =
 
 将路径的元素替换为另一个路径的副本。
 
@@ -462,7 +462,7 @@ path& operator=(const Source& source);
 ### <a name="parameters"></a>参数
 
 *然后*\
-要[](../standard-library/path-class.md)复制到`path`中的路径。
+要复制到`path`中的[路径](../standard-library/path-class.md)。
 
 *源程序*\
 源路径。
@@ -471,7 +471,7 @@ path& operator=(const Source& source);
 
 第一个成员运算符将`right.myname`复制`myname`到。 第二个成员运算符`right.myname`移`myname`到。 第三个成员运算符的行为与`*this = path(source)`相同。
 
-## <a name="op_add"></a>path:: operator + =
+## <a name="op_add"></a>path：： operator + =
 
 各种`concat`表达式。
 
@@ -521,7 +521,7 @@ path& operator+=(Elem elem);
 
 1. `concat(path(basic_string<Elem>(1, elem)));`
 
-## <a name="op_divide"></a>path:: operator/=
+## <a name="op_divide"></a>path：： operator/=
 
 各种`append`表达式。
 
@@ -548,7 +548,7 @@ path& operator/=(const Source& source);
 
 1. `append(source);`
 
-## <a name="op_string"></a>path:: operator string_type
+## <a name="op_string"></a>path：： operator string_type
 
 返回 `myname`。
 
@@ -556,7 +556,7 @@ path& operator/=(const Source& source);
 operator string_type() const;
 ```
 
-## <a name="parent_path"></a>路径::p arent_path
+## <a name="parent_path"></a>路径：:p arent_path
 
 返回的父路径组件`myname`。
 
@@ -566,9 +566,9 @@ path parent_path() const;
 
 ### <a name="remarks"></a>备注
 
-返回的父路径组件`myname`, 尤其是删除`myname` `filename().native()`后的前缀和任何前面紧邻的目录分隔符。 (同样, 如果`begin() != end()`为, 则它通过连续应用`operator/=`来合并范围`[begin(), --end())`中的所有元素。)组件可能为空。
+返回的父路径组件`myname`，尤其是删除`myname` `filename().native()`后的前缀和任何前面紧邻的目录分隔符。 （同样，如果`begin() != end()`为，则它通过连续应用`operator/=`来合并范围`[begin(), --end())`中的所有元素。）组件可能为空。
 
-## <a name="path"></a>路径::p a
+## <a name="path"></a>路径：:p a
 
 `path`以各种方式构造。
 
@@ -610,23 +610,23 @@ path(InIt first, InIt last, const locale& loc);
 
 ### <a name="remarks"></a>备注
 
-构造函数均以`myname`各种方式构造:
+构造函数均以`myname`各种方式构造：
 
-对于`path()` , 它`myname()`是。
+对于`path()` ，它`myname()`是。
 
-对于`path(const path& right`), 它`myname(right.myname)`是。
+对于`path(const path& right`），它`myname(right.myname)`是。
 
-对于`path(path&& right)` , 它`myname(right.myname)`是。
+对于`path(path&& right)` ，它`myname(right.myname)`是。
 
-对于`template<class Source> path(const Source& source)` , 它`myname(source)`是。
+对于`template<class Source> path(const Source& source)` ，它`myname(source)`是。
 
-为`template<class Source> path(const Source& source, const locale& loc)` `loc`此, 请从中获取所需的任何 codecvt facet。 `myname(source)`
+为`template<class Source> path(const Source& source, const locale& loc)` `loc`此，请从中获取所需的任何 codecvt facet。 `myname(source)`
 
-对于`template<class InIt> path(InIt first, InIt last)` , 它`myname(first, last)`是。
+对于`template<class InIt> path(InIt first, InIt last)` ，它`myname(first, last)`是。
 
-为`template<class InIt> path(InIt first, InIt last, const locale& loc)` `loc`此, 请从中获取所需的任何 codecvt facet。 `myname(first, last)`
+为`template<class InIt> path(InIt first, InIt last, const locale& loc)` `loc`此，请从中获取所需的任何 codecvt facet。 `myname(first, last)`
 
-## <a name="preferred_separator"></a>路径::p referred_separator
+## <a name="preferred_separator"></a>路径：:p referred_separator
 
 常量对象提供首选字符来分隔路径组件，具体取决于主机操作系统。
 
@@ -642,7 +642,7 @@ static constexpr value_type preferred_separator == '/';
 
 请注意，在 Windows 下的大多数上下文中，同样允许在它的位置使用 L'/'。
 
-## <a name="relative_path"></a>path:: relative_path
+## <a name="relative_path"></a>path：： relative_path
 
 返回的`myname`相对路径组件。
 
@@ -652,9 +652,9 @@ path relative_path() const;
 
 ### <a name="remarks"></a>备注
 
-返回的相对路径组件`myname`, 尤其是删除`root_path().native()`后的`myname`后缀和任何紧随其后的冗余目录分隔符。 组件可能为空。
+返回的相对路径组件`myname`，尤其是删除`root_path().native()`后的`myname`后缀和任何紧随其后的冗余目录分隔符。 组件可能为空。
 
-## <a name="remove_filename"></a>path:: remove_filename
+## <a name="remove_filename"></a>path：： remove_filename
 
 删除文件名。
 
@@ -662,7 +662,7 @@ path relative_path() const;
 path& remove_filename();
 ```
 
-## <a name="replace_extension"></a>path:: replace_extension
+## <a name="replace_extension"></a>path：： replace_extension
 
 替换的扩展`myname`。
 
@@ -677,9 +677,9 @@ path& replace_extension(const path& newext = path());
 
 ### <a name="remarks"></a>备注
 
-首先删除中`myname`的`extension().native()`后缀。 那么, `!newext.empty() && newext[0] != dot`如果 ( `dot` where `*path(".").c_str()`为), `dot`则将追加`myname`到。 然后将*newext*追加到`myname`。
+首先删除中`myname`的`extension().native()`后缀。 那么， `!newext.empty() && newext[0] != dot`如果（ `dot` where `*path(".").c_str()`为）， `dot`则将追加`myname`到。 然后将*newext*追加到`myname`。
 
-## <a name="replace_filename"></a>path:: replace_filename
+## <a name="replace_filename"></a>path：： replace_filename
 
 替换文件名。
 
@@ -703,7 +703,7 @@ remove_filename();
 return (*this);
 ```
 
-## <a name="root_directory"></a>path:: root_directory
+## <a name="root_directory"></a>path：： root_directory
 
 返回的根目录组件`myname`。
 
@@ -715,7 +715,7 @@ path root_directory() const;
 
 组件可能为空。
 
-## <a name="root_name"></a>path:: root_name
+## <a name="root_name"></a>path：： root_name
 
 返回的根名称组件`myname`。
 
@@ -727,7 +727,7 @@ path root_name() const;
 
 组件可能为空。
 
-## <a name="root_path"></a>path:: root_path
+## <a name="root_path"></a>path：： root_path
 
 返回的`myname`根路径组件。
 
@@ -737,9 +737,9 @@ path root_path() const;
 
 ### <a name="remarks"></a>备注
 
-返回的根路径组件`myname`, 尤其是。 `root_name()`  /  `root_directory` 组件可能为空。
+返回的根路径组件`myname`，尤其是。 `root_name()`  /  `root_directory` 组件可能为空。
 
-## <a name="stem"></a>path:: 词干
+## <a name="stem"></a>path：：词干
 
 `stem`返回的`myname`组件。
 
@@ -749,9 +749,9 @@ path stem() const;
 
 ### <a name="remarks"></a>备注
 
-`filename().native()` `extension().native()`返回的`stem`组件, 尤其是删除了任何尾随。 `myname` 组件可能为空。
+`filename().native()` `extension().native()`返回的`stem`组件，尤其是删除了任何尾随。 `myname` 组件可能为空。
 
-## <a name="string"></a>path:: string
+## <a name="string"></a>path：： string
 
 转换中`mypath`存储的序列。
 
@@ -763,7 +763,7 @@ string string() const;
 
 ### <a name="remarks"></a>备注
 
-第一个 (模板) 成员函数按与相同`mypath`的方式转换存储的顺序:
+第一个（模板）成员函数按与相同`mypath`的方式转换存储的顺序：
 
 1. `string()` 的 `string<char, Traits, Alloc>()`
 
@@ -773,9 +773,9 @@ string string() const;
 
 1. `u32string()` 的 `string<char32_t, Traits, Alloc>()`
 
-第二个成员函数将存储在中`mypath`的序列转换为**char**序列的主机系统所采用的编码, 并将其返回存储在类型`string`的对象中。
+第二个成员函数将存储在中`mypath`的序列转换为**char**序列的主机系统所采用的编码，并将其返回存储在类型`string`的对象中。
 
-## <a name="string_type"></a>path:: string_type
+## <a name="string_type"></a>path：： string_type
 
 该类型是 `basic_string<value_type>` 的同义词。
 
@@ -783,7 +783,7 @@ string string() const;
 typedef basic_string<value_type> string_type;
 ```
 
-## <a name="swap"></a>path:: swap
+## <a name="swap"></a>path：： swap
 
 执行`swap(mypath, right.mypath)`。
 
@@ -791,31 +791,31 @@ typedef basic_string<value_type> string_type;
 void swap(path& right) noexcept;
 ```
 
-## <a name="u16string"></a>path:: u16string
+## <a name="u16string"></a>path：： u16string
 
-将中`mypath`存储的序列转换为 utf-16, 并将其返回存储在类型`u16string`的对象中。
+将中`mypath`存储的序列转换为 utf-16，并将其返回存储在类型`u16string`的对象中。
 
 ```cpp
 u16string u16string() const;
 ```
 
-## <a name="u32string"></a>path:: u32string
+## <a name="u32string"></a>path：： u32string
 
-将中`mypath`存储的序列转换为 32 utf-8, 并将其返回存储在类型`u32string`的对象中。
+将中`mypath`存储的序列转换为 32 utf-8，并将其返回存储在类型`u32string`的对象中。
 
 ```cpp
 u32string u32string() const;
 ```
 
-## <a name="u8string"></a>path:: u8string
+## <a name="u8string"></a>path：： u8string
 
-将中`mypath`存储的序列转换为 utf-8, 并将其返回存储在类型`u8string`的对象中。
+将中`mypath`存储的序列转换为 utf-8，并将其返回存储在类型`u8string`的对象中。
 
 ```cpp
 string u8string() const;
 ```
 
-## <a name="value_type"></a>path:: value_type
+## <a name="value_type"></a>path：： value_type
 
 类型描述了主机`path`操作系统欢迎使用的元素。
 
@@ -827,9 +827,9 @@ typedef char value_type;
 #endif // filesystem model now defined
 ```
 
-## <a name="wstring"></a>path:: wstring
+## <a name="wstring"></a>path：： wstring
 
-将中`mypath`存储的序列转换为**wchar_t**序列的主机系统所采用的编码, 并将其返回存储在类型`wstring`的对象中。
+将中`mypath`存储的序列转换为**wchar_t**序列的主机系统所采用的编码，并将其返回存储在类型`wstring`的对象中。
 
 ```cpp
 wstring wstring() const;

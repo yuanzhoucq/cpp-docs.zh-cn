@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CPalette [MFC], ResizePalette
 - CPalette [MFC], SetPaletteEntries
 ms.assetid: 8cd95498-53ed-4852-85e1-70e522541114
-ms.openlocfilehash: 1dc29a675f6ab3883683b3afae7e22e7ed0f1cc3
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 27f4f14c9e93091728e256c890dcffee26a43de4
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504772"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69503004"
 ---
 # <a name="cpalette-class"></a>CPalette 类
 
@@ -49,35 +49,35 @@ class CPalette : public CGdiObject
 
 |名称|描述|
 |----------|-----------------|
-|[CPalette::CPalette](#cpalette)|构造`CPalette`对象没有附加 Windows 调色板。 必须初始化`CPalette`具有一个初始化成员函数才可以使用对象。|
+|[CPalette：： CPalette](#cpalette)|构造一个`CPalette`没有附加的 Windows 调色板的对象。 必须使用一个初始化`CPalette`成员函数初始化对象，然后才能使用该对象。|
 
 ### <a name="public-methods"></a>公共方法
 
 |名称|描述|
 |----------|-----------------|
-|[CPalette::AnimatePalette](#animatepalette)|替换由标识逻辑调色板中的条目`CPalette`对象。 应用程序没有要更新其工作区，因为 Windows 立即将映射到系统调色板的新条目。|
+|[CPalette::AnimatePalette](#animatepalette)|替换由`CPalette`对象标识的逻辑调色板中的项。 应用程序无需更新其客户端区域，因为 Windows 会立即将新项映射到系统调色板。|
 |[CPalette::CreateHalftonePalette](#createhalftonepalette)|创建设备上下文的半色调调色板，并将其附加到`CPalette`对象。|
-|[CPalette::CreatePalette](#createpalette)|创建 Windows 调色板，并将其附加到`CPalette`对象。|
-|[CPalette::FromHandle](#fromhandle)|返回一个指向`CPalette`对象时提供给 Windows 调色板对象的句柄。|
-|[CPalette::GetEntryCount](#getentrycount)|检索调色板逻辑调色板中的条目数。|
+|[CPalette::CreatePalette](#createpalette)|创建一个 Windows 调色板，并将其附加到`CPalette`对象。|
+|[CPalette::FromHandle](#fromhandle)|当给定 Windows 调色板对象`CPalette`的句柄时，返回指向对象的指针。|
+|[CPalette::GetEntryCount](#getentrycount)|检索逻辑调色板中的调色板项的数目。|
 |[CPalette::GetNearestPaletteIndex](#getnearestpaletteindex)|返回与颜色值最匹配的逻辑调色板中的项的索引。|
-|[CPalette::GetPaletteEntries](#getpaletteentries)|检索一系列逻辑调色板中的调色板条目。|
-|[CPalette::ResizePalette](#resizepalette)|指定的逻辑调色板的大小更改`CPalette`对象与指定的条目数。|
-|[CPalette::SetPaletteEntries](#setpaletteentries)|设置逻辑调色板中的条目范围中的 RGB 颜色值和标志。|
+|[CPalette::GetPaletteEntries](#getpaletteentries)|检索逻辑调色板中的一系列调色板项。|
+|[CPalette::ResizePalette](#resizepalette)|将`CPalette`对象指定的逻辑调色板的大小更改为指定的项数。|
+|[CPalette::SetPaletteEntries](#setpaletteentries)|设置逻辑调色板中某一范围的项的 RGB 颜色值和标志。|
 
 ### <a name="public-operators"></a>公共运算符
 
 |名称|描述|
 |----------|-----------------|
-|[CPalette::operator HPALETTE](#operator_hpalette)|返回 HPALETTE 附加到`CPalette`。|
+|[CPalette：： operator HPALETTE](#operator_hpalette)|返回附加到的`CPalette`HPALETTE。|
 
 ## <a name="remarks"></a>备注
 
-调色板提供了应用程序和颜色输出设备 （如显示设备） 之间的接口。 接口允许应用程序以充分利用输出设备的颜色功能而不会严重干扰其他应用程序显示的颜色。 Windows 使用应用程序的逻辑调色板 （所需颜色的列表） 和系统调色板 （用于定义可用的颜色） 来确定使用的颜色。
+调色板在应用程序和彩色输出设备（如显示设备）之间提供了一个接口。 使用接口，应用程序可以充分利用输出设备的颜色功能，而不会严重影响其他应用程序显示的颜色。 Windows 使用应用程序的逻辑调色板（所需颜色的列表）和系统调色板（定义可用颜色）来确定所使用的颜色。
 
-一个`CPalette`对象提供成员函数的操作面板到引用的对象。 构造`CPalette`对象，并使用其成员函数来创建实际的面板中，图形设备接口 (GDI) 对象，并操作其项和其他属性。
+`CPalette`对象提供用于操作由对象引用的调色板的成员函数。 `CPalette`构造对象并使用其成员函数创建实际调色板、图形设备接口（GDI）对象，以及操作其项和其他属性。
 
-有关使用的详细信息`CPalette`，请参阅[图形对象](../../mfc/graphic-objects.md)。
+有关使用`CPalette`的详细信息，请参阅[图形对象](../../mfc/graphic-objects.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -91,9 +91,9 @@ class CPalette : public CGdiObject
 
 **标头:** afxwin.h
 
-##  <a name="animatepalette"></a>  CPalette::AnimatePalette
+##  <a name="animatepalette"></a>CPalette：： AnimatePalette
 
-替换附加到逻辑调色板中的条目`CPalette`对象。
+替换附加到`CPalette`对象的逻辑调色板中的项。
 
 ```
 void AnimatePalette(
@@ -111,15 +111,15 @@ void AnimatePalette(
 指定要进行动画处理的调色板中的条目数。
 
 *lpPaletteColors*<br/>
-指向数组的第一个成员[PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\))结构，以替换由标识调色板条目*nStartIndex*并*nNumEntries*。
+指向[PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\))结构数组的第一个成员，以替换*nStartIndex*和*nNumEntries*标识的调色板项。
 
 ### <a name="remarks"></a>备注
 
-当应用程序调用`AnimatePalette`，它无需更新其工作区，因为 Windows 立即将映射到系统调色板的新条目。
+当应用程序调用`AnimatePalette`时，无需更新其客户端区域，因为 Windows 会立即将新项映射到系统调色板。
 
-`AnimatePalette`函数只会 PC_RESERVED 标志中相应设置更改条目`palPaletteEntry`的成员[LOGPALETTE](/windows/desktop/api/wingdi/ns-wingdi-taglogpalette)附加到的结构`CPalette`对象。 LOGPALETTE 在 Windows SDK 中有关此结构的详细信息，请参阅。
+`AnimatePalette`函数仅更改附加到`CPalette`对象的 [LOGPALETTE](/windows/win32/api/wingdi/ns-wingdi-logpalette) 结构的相应`palPaletteEntry`成员中设置了 PC_RESERVED 标志的条目。 有关此结构的详细信息，请参阅 Windows SDK 中的 LOGPALETTE。
 
-##  <a name="cpalette"></a>  CPalette::CPalette
+##  <a name="cpalette"></a>CPalette：： CPalette
 
 构造 `CPalette` 对象。
 
@@ -129,9 +129,9 @@ CPalette();
 
 ### <a name="remarks"></a>备注
 
-该对象具有没有附加的调色板，直到你调用`CreatePalette`以附加一个。
+对象没有附加调色板，直到你调用`CreatePalette`附加一个。
 
-##  <a name="createhalftonepalette"></a>  CPalette::CreateHalftonePalette
+##  <a name="createhalftonepalette"></a>CPalette：： CreateHalftonePalette
 
 创建设备上下文的半色调调色板。
 
@@ -150,13 +150,13 @@ BOOL CreateHalftonePalette(CDC* pDC);
 
 ### <a name="remarks"></a>备注
 
-设备上下文的拉伸模式设置为半色调时，应用程序应创建半色调调色板。 返回由逻辑半色调调色板[CreateHalftonePalette](/windows/desktop/api/wingdi/nf-wingdi-createhalftonepalette)成员函数应然后选择并意识到之前在设备上下文[CDC::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt)或[StretchDIBits](/windows/desktop/api/wingdi/nf-wingdi-stretchdibits)调用函数。
+当设备上下文的拉伸模式设置为半色调时，应用程序应创建半色调调色板。 然后，在调用[CDC：： StretchBlt](../../mfc/reference/cdc-class.md#stretchblt)或[StretchDIBits](/windows/win32/api/wingdi/nf-wingdi-stretchdibits)函数之前，应选择[CreateHalftonePalette](/windows/win32/api/wingdi/nf-wingdi-createhalftonepalette)成员函数返回的逻辑半色调调色板，并将其实现到设备上下文。
 
-了解适用于的详细信息的 Windows SDK`CreateHalftonePalette`和`StretchDIBits`。
+有关`CreateHalftonePalette` 和`StretchDIBits`的详细信息，请参阅 Windows SDK。
 
-##  <a name="createpalette"></a>  CPalette::CreatePalette
+##  <a name="createpalette"></a>CPalette：： CreatePalette
 
-初始化`CPalette`通过创建 Windows 逻辑调色板并将其附加到对象`CPalette`对象。
+通过创建 Windows 逻辑调色板并将其附加`CPalette`到对象来初始化对象。`CPalette`
 
 ```
 BOOL CreatePalette(LPLOGPALETTE lpLogPalette);
@@ -165,7 +165,7 @@ BOOL CreatePalette(LPLOGPALETTE lpLogPalette);
 ### <a name="parameters"></a>参数
 
 *lpLogPalette*<br/>
-指向[LOGPALETTE](/windows/desktop/api/wingdi/ns-wingdi-taglogpalette)结构，其中包含有关逻辑调色板中的颜色的信息。
+指向[LOGPALETTE](/windows/win32/api/wingdi/ns-wingdi-logpalette)结构，该结构包含有关逻辑调色板中的颜色的信息。
 
 ### <a name="return-value"></a>返回值
 
@@ -173,11 +173,11 @@ BOOL CreatePalette(LPLOGPALETTE lpLogPalette);
 
 ### <a name="remarks"></a>备注
 
-了解适用于的详细信息的 Windows SDK`LOGPALETTE`结构。
+有关`LOGPALETTE`结构的详细信息，请参阅 Windows SDK。
 
-##  <a name="fromhandle"></a>  CPalette::FromHandle
+##  <a name="fromhandle"></a>CPalette：： FromHandle
 
-返回一个指向`CPalette`对象时提供给 Windows 调色板对象的句柄。
+当给定 Windows 调色板对象`CPalette`的句柄时，返回指向对象的指针。
 
 ```
 static CPalette* PASCAL FromHandle(HPALETTE hPalette);
@@ -190,15 +190,15 @@ Windows GDI 调色板的句柄。
 
 ### <a name="return-value"></a>返回值
 
-一个指向`CPalette`如果成功，否则该值为 NULL 的对象。
+如果成功，则`CPalette`为指向对象的指针; 否则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-如果`CPalette`对象尚未附加到 Windows 调色板，临时`CPalette`创建并附加对象。 此临时`CPalette`对象仅用于有效直到下一次应用程序在其事件循环内有空闲时间，在该时间所有临时图形对象会被删除。 换而言之，仅在一个窗口消息处理期间的临时对象有效。
+如果某个`CPalette`对象尚未附加到 Windows 调色板，则会创建并附加`CPalette`一个临时对象。 此临时`CPalette`对象仅在下一次应用程序的事件循环中有空闲时间时才有效，此时所有临时图形对象都会被删除。 换言之，只有在处理一条窗口消息的过程中，临时对象才有效。
 
-##  <a name="getentrycount"></a>  CPalette::GetEntryCount
+##  <a name="getentrycount"></a>CPalette：： GetEntryCount
 
-调用此成员函数可检索给定逻辑调色板中的条目数。
+调用此成员函数以检索给定逻辑调色板中的条目数。
 
 ```
 int GetEntryCount();
@@ -206,9 +206,9 @@ int GetEntryCount();
 
 ### <a name="return-value"></a>返回值
 
-逻辑调色板中的条目数。
+逻辑调色板中的项数。
 
-##  <a name="getnearestpaletteindex"></a>  CPalette::GetNearestPaletteIndex
+##  <a name="getnearestpaletteindex"></a>CPalette：： GetNearestPaletteIndex
 
 返回与指定的颜色值最匹配的逻辑调色板中的项的索引。
 
@@ -223,11 +223,11 @@ UINT GetNearestPaletteIndex(COLORREF crColor) const;
 
 ### <a name="return-value"></a>返回值
 
-逻辑调色板中的项的索引。 该条目包含与指定的颜色最近似匹配的颜色。
+逻辑调色板中的项的索引。 此条目包含与指定颜色最接近的颜色。
 
-##  <a name="getpaletteentries"></a>  CPalette::GetPaletteEntries
+##  <a name="getpaletteentries"></a>CPalette：： GetPaletteEntries
 
-检索一系列逻辑调色板中的调色板条目。
+检索逻辑调色板中的一系列调色板项。
 
 ```
 UINT GetPaletteEntries(
@@ -245,15 +245,15 @@ UINT GetPaletteEntries(
 指定要检索的逻辑调色板中的条目数。
 
 *lpPaletteColors*<br/>
-指向数组[PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\))数据结构，以接收调色板条目。 该数组必须包含至少多少数据结构由指定*nNumEntries*。
+指向[PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\))数据结构的数组以接收调色板项。 数组包含的数据结构必须至少包含*nNumEntries*指定的数量。
 
 ### <a name="return-value"></a>返回值
 
-从逻辑调色板; 检索的条目数如果函数失败，则为 0。
+从逻辑调色板检索的项数;如果函数失败，则为0。
 
-##  <a name="operator_hpalette"></a>  CPalette::operator HPALETTE
+##  <a name="operator_hpalette"></a>CPalette：： operator HPALETTE
 
-此运算符用于获取附加的 Windows GDI 句柄的`CPalette`对象。
+使用此运算符可获取`CPalette`对象的附加 Windows GDI 句柄。
 
 ```
 operator HPALETTE() const;
@@ -261,17 +261,17 @@ operator HPALETTE() const;
 
 ### <a name="return-value"></a>返回值
 
-如果成功，Windows GDI 对象的句柄由`CPalette`对象; 否则为 NULL。
+如果成功，则为`CPalette`对象表示的 Windows GDI 对象的句柄; 否则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-此运算符是强制转换运算符，支持直接使用 HPALETTE 对象。
+此运算符是支持直接使用 HPALETTE 对象的强制转换运算符。
 
-有关使用图形对象的详细信息，请参阅文章[图形对象](/windows/desktop/gdi/graphic-objects)Windows SDK 中。
+有关使用图形对象的详细信息，请参阅文章 Windows SDK 中的[图形对象](/windows/win32/gdi/graphic-objects)。
 
-##  <a name="resizepalette"></a>  CPalette::ResizePalette
+##  <a name="resizepalette"></a>CPalette：： ResizePalette
 
-更改附加到的逻辑调色板的大小`CPalette`对象与指定的项数*nNumEntries*。
+将附加到`CPalette`对象的逻辑调色板的大小更改为*nNumEntries*指定的项数。
 
 ```
 BOOL ResizePalette(UINT nNumEntries);
@@ -280,21 +280,21 @@ BOOL ResizePalette(UINT nNumEntries);
 ### <a name="parameters"></a>参数
 
 *nNumEntries*<br/>
-已调整大小后，在调色板中指定条目的数。
+指定调整后调色板中的条目数。
 
 ### <a name="return-value"></a>返回值
 
-调色板已成功地调整大小; 如果非零值否则为 0。
+如果成功调整调色板的大小，则为非零值;否则为0。
 
 ### <a name="remarks"></a>备注
 
-如果应用程序调用`ResizePalette`若要减少的调色板的大小，调整过大小的面板中剩余的条目保持不变。 如果应用程序调用`ResizePalette`可将其放大调色板，附加调色板条目已设置为黑色 （红色、 绿色和蓝色值为全部由 0），并为所有其他项的标志设置为 0。
+如果应用程序调用`ResizePalette`来减小调色板的大小，则已调整大小的调色板中剩余的项将保持不变。 如果应用程序调用`ResizePalette`来扩大调色板，则附加调色板项设置为黑色（红色、绿色和蓝色值均为0），所有其他项的标志设置为0。
 
-有关 Windows API 的详细信息`ResizePalette`，请参阅[ResizePalette](/windows/desktop/api/wingdi/nf-wingdi-resizepalette) Windows SDK 中。
+有关 Windows API `ResizePalette`的详细信息，请参阅 Windows SDK 中的[ResizePalette](/windows/win32/api/wingdi/nf-wingdi-resizepalette) 。
 
-##  <a name="setpaletteentries"></a>  CPalette::SetPaletteEntries
+##  <a name="setpaletteentries"></a>CPalette：： SetPaletteEntries
 
-设置逻辑调色板中的条目范围中的 RGB 颜色值和标志。
+设置逻辑调色板中某一范围的项的 RGB 颜色值和标志。
 
 ```
 UINT SetPaletteEntries(
@@ -312,17 +312,17 @@ UINT SetPaletteEntries(
 指定要设置的逻辑调色板中的条目数。
 
 *lpPaletteColors*<br/>
-指向数组[PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\))数据结构，以接收调色板条目。 该数组必须包含至少多少数据结构由指定*nNumEntries*。
+指向[PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\))数据结构的数组以接收调色板项。 数组包含的数据结构必须至少包含*nNumEntries*指定的数量。
 
 ### <a name="return-value"></a>返回值
 
-在逻辑调色板; 中设置的条目数如果函数失败，则为 0。
+逻辑调色板中设置的项数;如果函数失败，则为0。
 
 ### <a name="remarks"></a>备注
 
-如果逻辑调色板选入设备上下文中，当应用程序调用`SetPaletteEntries`，所做的更改不会影响应用程序调用直到[CDC::RealizePalette](../../mfc/reference/cdc-class.md#realizepalette)。
+当应用程序调用`SetPaletteEntries`时，如果在设备上下文中选择了逻辑调色板，则在应用程序调用[CDC：： RealizePalette](../../mfc/reference/cdc-class.md#realizepalette)之前，这些更改不会生效。
 
-有关详细信息，请参阅[PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\)) Windows SDK 中。
+有关详细信息，请参阅 Windows SDK 中的[PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\)) 。
 
 ## <a name="see-also"></a>请参阅
 

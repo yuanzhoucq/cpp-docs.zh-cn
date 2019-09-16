@@ -19,7 +19,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68457756"
 ---
-# <a name="filestatus-class"></a>file_status 类
+# <a name="file_status-class"></a>file_status 类
 
 包装 [file_type](../standard-library/filesystem-enumerations.md#file_type) 和文件 [perms](../standard-library/filesystem-enumerations.md#perms)。
 
@@ -50,9 +50,9 @@ class file_status;
 
 ## <a name="requirements"></a>要求
 
-**标头:** \<filesystem >
+**标头：** \<filesystem >
 
-**命名空间:** std:: 实验:: filesystem, std:: 实验:: filesystem
+**命名空间：** std：：实验：： filesystem，std：：实验：： filesystem
 
 ## <a name="file_status"></a>file_status::file_status
 
@@ -73,15 +73,15 @@ file_status(file_status&&) noexcept = default;
 ### <a name="parameters"></a>参数
 
 *ftype*\
-指定`file_type`, 则默认`file_type::none`为。
+指定`file_type`，则默认`file_type::none`为。
 
 *掩盖*\
-指定的`perms`文件, 默认`perms::unknown`为。
+指定的`perms`文件，默认`perms::unknown`为。
 
 *file_status*\
 存储的对象。
 
-## <a name="op_as"></a>file_status:: operator =
+## <a name="op_as"></a>file_status：： operator =
 
 默认成员赋值运算符的行为符合预期。
 
@@ -93,7 +93,7 @@ file_status& operator=(file_status&&) nexcept = default;
 ### <a name="parameters"></a>参数
 
 *file_status*\
-要[](../standard-library/file-status-class.md)复制到`file_status`中的 file_status。
+要复制到 `file_status` 中的 [file_status](../standard-library/file-status-class.md)。
 
 ## <a name="type"></a>类别
 
