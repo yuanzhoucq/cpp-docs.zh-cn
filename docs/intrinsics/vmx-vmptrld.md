@@ -35,13 +35,13 @@ int __vmx_vmptrld(
 
 ## <a name="return-value"></a>返回值
 
-0
+0\
 操作成功。
 
-2
+1\
 操作失败，当前 VMCS 的 `VM-instruction error field` 中提供了扩展状态。
 
-pps-2
+2\
 操作失败，无可用状态。
 
 ## <a name="remarks"></a>备注
