@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2778
 ms.assetid: b24cb732-2914-42cc-8928-e2d87b393428
-ms.openlocfilehash: 56c316ac971d0bdd1a0ca27ef8d4282acbe24779
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 98b5bf0a1315236f3ce96fd4b8c140ce1ab70a9f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227671"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501040"
 ---
 # <a name="compiler-error-c2778"></a>编译器错误 C2778
 
-在 __declspec(uuid()) GUID 格式不正确
+__declspec （uuid （））中的 GUID 格式不正确
 
-不正确的 GUID 提供给[uuid](../../cpp/uuid-cpp.md)扩展的特性。
+为[uuid](../../cpp/uuid-cpp.md)扩展属性提供的 GUID 不正确。
 
-GUID 必须为具有以下格式的十六进制数字的字符串：
+GUID 必须是十六进制数字的字符串，格式如下：
 
 ```
 // C2778a.cpp
@@ -28,9 +28,9 @@ struct __declspec(uuid("00000000-0000-0000-0000-000000000000")) A {};
 struct __declspec(uuid("{00000000-0000-0000-0000-000000000000}")) B{};
 ```
 
-`uuid`扩展的特性接受字符串识别[CLSIDFromString](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromstring)、 使用或不带括号分隔符。
+`uuid`扩展属性接受 [CLSIDFromString](/windows/win32/api/combaseapi/nf-combaseapi-clsidfromstring) 识别的字符串（带或不带大括号分隔符）。
 
-下面的示例生成 C2778:
+下面的示例生成 C2778：
 
 ```
 // C2778b.cpp

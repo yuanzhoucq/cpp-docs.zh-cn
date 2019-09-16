@@ -13,19 +13,19 @@ helpviewer_keywords:
 - IQuickActivateImpl class
 - IQuickActivate ATL implementation
 ms.assetid: aa80c056-1041-494e-b21d-2acca7dc27ea
-ms.openlocfilehash: 2a2b11746249b6ee4f6ddd578717aacc374d53bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2169686ebbf756c5caf9232f5031532c62ac8265
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62198136"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495508"
 ---
 # <a name="iquickactivateimpl-class"></a>IQuickActivateImpl 类
 
-此类将合并到一个调用容器的控件初始化。
+此类将容器的控件初始化组合为单个调用。
 
 > [!IMPORTANT]
->  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
+>  此类及其成员不能用于在 Windows 运行时中执行的应用程序。
 
 ## <a name="syntax"></a>语法
 
@@ -37,7 +37,7 @@ class ATL_NO_VTABLE IQuickActivateImpl : public IQuickActivate
 #### <a name="parameters"></a>参数
 
 *T*<br/>
-您的类，派生自`IQuickActivateImpl`。
+派生自`IQuickActivateImpl`的类。
 
 ## <a name="members"></a>成员
 
@@ -45,15 +45,15 @@ class ATL_NO_VTABLE IQuickActivateImpl : public IQuickActivate
 
 |名称|描述|
 |----------|-----------------|
-|[IQuickActivateImpl::GetContentExtent](#getcontentextent)|检索当前正在运行的控件的显示大小。|
-|[IQuickActivateImpl::QuickActivate](#quickactivate)|执行快速加载的控件的初始化。|
-|[IQuickActivateImpl::SetContentExtent](#setcontentextent)|通知控件容器有分配给它的显示空间。|
+|[IQuickActivateImpl::GetContentExtent](#getcontentextent)|检索正在运行的控件的当前显示大小。|
+|[IQuickActivateImpl::QuickActivate](#quickactivate)|快速初始化正在加载的控件。|
+|[IQuickActivateImpl::SetContentExtent](#setcontentextent)|通知控制容器分配给它的显示空间量。|
 
 ## <a name="remarks"></a>备注
 
-[IQuickActivate](/windows/desktop/api/ocidl/nn-ocidl-iquickactivate)界面可帮助避免延迟加载控件通过组合的单个调用中初始化时的容器。 `QuickActivate`方法，传递一个指向容器[QACONTAINER](/windows/desktop/api/ocidl/ns-ocidl-tagqacontainer)结构，它包含所有的接口指针控件需要。 返回时，该控件将通过返回一个指向[QACONTROL](/windows/desktop/api/ocidl/ns-ocidl-tagqacontrol)包含它自己的容器使用的接口指针的结构。 类`IQuickActivateImpl`提供的默认实现`IQuickActivate`并实现`IUnknown`信息发送给转储调试中的设备生成。
+在单个调用中组合初始化时， [IQuickActivate](/windows/win32/api/ocidl/nn-ocidl-iquickactivate)接口可帮助容器避免延迟加载控件。 `QuickActivate`方法允许容器传递指向 [QACONTAINER](/windows/win32/api/ocidl/ns-ocidl-qacontainer) 结构的指针，该结构保存指向控件所需的所有接口的指针。 返回时，控件向后传递一个指向[QACONTROL](/windows/win32/api/ocidl/ns-ocidl-qacontrol)结构的指针，该结构包含指向其自己的接口的指针，这些接口由容器使用。 类`IQuickActivateImpl`提供的`IQuickActivate`默认实现，并通过`IUnknown`在调试版本中将信息发送到转储设备来实现。
 
-**相关文章** [ATL 教程](../../atl/active-template-library-atl-tutorial.md)，[创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)
+**相关文章**[Atl 教程](../../atl/active-template-library-atl-tutorial.md)，[创建 atl 项目](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -63,11 +63,11 @@ class ATL_NO_VTABLE IQuickActivateImpl : public IQuickActivate
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlctl.h
+**标头：** atlctl
 
-##  <a name="getcontentextent"></a>  IQuickActivateImpl::GetContentExtent
+##  <a name="getcontentextent"></a>IQuickActivateImpl::GetContentExtent
 
-检索当前正在运行的控件的显示大小。
+检索正在运行的控件的当前显示大小。
 
 ```
 STDMETHOD(GetContentExtent)(LPSIZEL pSize);
@@ -75,13 +75,13 @@ STDMETHOD(GetContentExtent)(LPSIZEL pSize);
 
 ### <a name="remarks"></a>备注
 
-大小用于完全呈现控件，以 HIMETRIC 为单位指定。
+该大小用于控件的完全呈现，并且是在 HIMETRIC 单元中指定的。
 
-请参阅[IQuickActivate::GetContentExtent](/windows/desktop/api/ocidl/nf-ocidl-iquickactivate-getcontentextent) Windows SDK 中。
+请参阅 Windows SDK 中的[IQuickActivate：： GetContentExtent](/windows/win32/api/ocidl/nf-ocidl-iquickactivate-getcontentextent) 。
 
-##  <a name="quickactivate"></a>  IQuickActivateImpl::QuickActivate
+##  <a name="quickactivate"></a>IQuickActivateImpl::QuickActivate
 
-执行快速加载的控件的初始化。
+快速初始化正在加载的控件。
 
 ```
 STDMETHOD(QuickActivate)(
@@ -91,13 +91,13 @@ STDMETHOD(QuickActivate)(
 
 ### <a name="remarks"></a>备注
 
-该结构包含控件和一些环境属性的值所需的接口的指针。 在返回时，控制权将传递一个指向[QACONTROL](/windows/desktop/api/ocidl/ns-ocidl-tagqacontrol)结构，其中包含指向容器要求，其自身接口和其他状态信息的指针。
+结构包含指向控件所需的接口的指针以及某些环境属性的值。 返回后，控件将传递一个指向[QACONTROL](/windows/win32/api/ocidl/ns-ocidl-qacontrol)结构的指针，该结构包含指向其自己的容器所需接口的指针以及其他状态信息。
 
-请参阅[IQuickActivate::QuickActivate](/windows/desktop/api/ocidl/nf-ocidl-iquickactivate-quickactivate) Windows SDK 中。
+请参阅 Windows SDK 中的[IQuickActivate：： QuickActivate](/windows/win32/api/ocidl/nf-ocidl-iquickactivate-quickactivate) 。
 
-##  <a name="setcontentextent"></a>  IQuickActivateImpl::SetContentExtent
+##  <a name="setcontentextent"></a>IQuickActivateImpl::SetContentExtent
 
-通知控件容器有分配给它的显示空间。
+通知控制容器分配给它的显示空间量。
 
 ```
 STDMETHOD(SetContentExtent)(LPSIZEL pSize);
@@ -105,9 +105,9 @@ STDMETHOD(SetContentExtent)(LPSIZEL pSize);
 
 ### <a name="remarks"></a>备注
 
-以 HIMETRIC 为单位指定大小。
+大小是在 HIMETRIC 单位中指定的。
 
-请参阅[IQuickActivate::SetContentExtent](/windows/desktop/api/ocidl/nf-ocidl-iquickactivate-setcontentextent) Windows SDK 中。
+请参阅 Windows SDK 中的[IQuickActivate：： SetContentExtent](/windows/win32/api/ocidl/nf-ocidl-iquickactivate-setcontentextent) 。
 
 ## <a name="see-also"></a>请参阅
 

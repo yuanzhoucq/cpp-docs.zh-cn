@@ -14,19 +14,19 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComContainedObject class
 ms.assetid: e8616b41-c200-47b8-bf2c-fb9f713ebdad
-ms.openlocfilehash: 15ea9be2a3576081901c9e744d89d33688fe838a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c5e2fa64cc0938e632a37eac7dd1d6e9111c3d98
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259503"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497324"
 ---
 # <a name="ccomcontainedobject-class"></a>CComContainedObject 类
 
-此类实现[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)通过将委派给所有者对象`IUnknown`。
+此类通过委托给所有者对象的`IUnknown`来实现 [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)。
 
 > [!IMPORTANT]
->  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
+>  此类及其成员不能用于在 Windows 运行时中执行的应用程序。
 
 ## <a name="syntax"></a>语法
 
@@ -37,8 +37,8 @@ class CComContainedObject : public Base
 
 #### <a name="parameters"></a>参数
 
-*基本*<br/>
-您的类，派生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)。
+*基座*<br/>
+从[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)派生的类。
 
 ## <a name="members"></a>成员
 
@@ -46,21 +46,21 @@ class CComContainedObject : public Base
 
 |名称|描述|
 |----------|-----------------|
-|[CComContainedObject::CComContainedObject](#ccomcontainedobject)|构造函数。 初始化所有者对象的成员指针`IUnknown`。|
-|[CComContainedObject::~CComContainedObject](#dtor)|析构函数。|
+|[CComContainedObject::CComContainedObject](#ccomcontainedobject)|构造函数。 初始化指向所有者对象的`IUnknown`成员指针。|
+|[CComContainedObject：： ~ CComContainedObject](#dtor)|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
 |名称|描述|
 |----------|-----------------|
 |[CComContainedObject::AddRef](#addref)|递增所有者对象的引用计数。|
-|[CComContainedObject::GetControllingUnknown](#getcontrollingunknown)|检索所有者对象`IUnknown`。|
-|[CComContainedObject::QueryInterface](#queryinterface)|检索在所有者对象上请求的接口指针。|
-|[CComContainedObject::Release](#release)|递减引用计数在所有者对象上。|
+|[CComContainedObject::GetControllingUnknown](#getcontrollingunknown)|检索所有者对象的`IUnknown`。|
+|[CComContainedObject::QueryInterface](#queryinterface)|检索指向所有者对象上所请求的接口的指针。|
+|[CComContainedObject::Release](#release)|递减所有者对象的引用计数。|
 
 ## <a name="remarks"></a>备注
 
-使用 ATL`CComContainedObject`类中[CComAggObject](../../atl/reference/ccomaggobject-class.md)， [CComPolyObject](../../atl/reference/ccompolyobject-class.md)，并且[CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md)。 `CComContainedObject` 实现[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)通过将委派给所有者对象`IUnknown`。 （所有者为外部对象的聚合或为其创建分离式接口的对象）。`CComContainedObject`调用`CComObjectRootEx`的`OuterQueryInterface`， `OuterAddRef`，并`OuterRelease`、 通过所有继承`Base`。
+ATL 在`CComContainedObject`类[CComAggObject](../../atl/reference/ccomaggobject-class.md)、 [CComPolyObject](../../atl/reference/ccompolyobject-class.md)和[CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md)中使用。 `CComContainedObject`通过委托给所有者对象的`IUnknown`来实现 [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)。 （所有者是聚合的外部对象或正在为其创建脱离接口的对象。）`CComContainedObject` 调用`CComObjectRootEx` 、`OuterRelease`和，它们都通过`Base`继承。 `OuterAddRef` `OuterQueryInterface`
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -70,9 +70,9 @@ class CComContainedObject : public Base
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlcom.h
+**标头：** atlcom。h
 
-##  <a name="addref"></a>  CComContainedObject::AddRef
+##  <a name="addref"></a>CComContainedObject：： AddRef
 
 递增所有者对象的引用计数。
 
@@ -82,9 +82,9 @@ STDMETHOD_(ULONG, AddRef)();
 
 ### <a name="return-value"></a>返回值
 
-可能是有用的诊断或测试一个值。
+可能对诊断或测试有用的值。
 
-##  <a name="ccomcontainedobject"></a>  CComContainedObject::CComContainedObject
+##  <a name="ccomcontainedobject"></a>CComContainedObject::CComContainedObject
 
 构造函数。
 
@@ -95,13 +95,13 @@ CComContainedObject(void* pv);
 ### <a name="parameters"></a>参数
 
 *pv*<br/>
-[in]所有者对象`IUnknown`。
+中所有者对象的`IUnknown`。
 
 ### <a name="remarks"></a>备注
 
-集`m_pOuterUnknown`成员指针 (通过继承`Base`类) 向*pv*。
+将成员指针（ `Base`通过类继承）设置为*pv。* `m_pOuterUnknown`
 
-##  <a name="dtor"></a>  CComContainedObject:: ~ CComContainedObject
+##  <a name="dtor"></a>CComContainedObject：： ~ CComContainedObject
 
 析构函数。
 
@@ -113,9 +113,9 @@ CComContainedObject(void* pv);
 
 释放所有已分配的资源。
 
-##  <a name="getcontrollingunknown"></a>  CComContainedObject::GetControllingUnknown
+##  <a name="getcontrollingunknown"></a>CComContainedObject::GetControllingUnknown
 
-返回`m_pOuterUnknown`成员指针 (通过继承*Base*类)，它持有所有者对象`IUnknown`。
+返回保存所有者对象的`IUnknown` 成员指针（通过基类继承`m_pOuterUnknown` ）。
 
 ```
 IUnknown* GetControllingUnknown();
@@ -123,15 +123,15 @@ IUnknown* GetControllingUnknown();
 
 ### <a name="return-value"></a>返回值
 
-所有者对象`IUnknown`。
+所有者对象的`IUnknown`。
 
 ### <a name="remarks"></a>备注
 
-此方法可能是虚拟如果`Base`已声明[DECLARE_GET_CONTROLLING_UNKNOWN](aggregation-and-class-factory-macros.md#declare_get_controlling_unknown)宏。
+如果`Base`已声明[DECLARE_GET_CONTROLLING_UNKNOWN](aggregation-and-class-factory-macros.md#declare_get_controlling_unknown)宏，则此方法可能是虚拟的。
 
-##  <a name="queryinterface"></a>  CComContainedObject::QueryInterface
+##  <a name="queryinterface"></a>CComContainedObject：： QueryInterface
 
-检索在所有者对象上请求的接口指针。
+检索指向所有者对象上所请求的接口的指针。
 
 ```
 STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
@@ -142,21 +142,21 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ### <a name="parameters"></a>参数
 
 *iid*<br/>
-[in]所请求的接口的标识符。
+中所请求的接口的标识符。
 
 *ppvObject*<br/>
-[out]通过标识的接口指针的指针*iid*。 如果该对象不支持此接口， *ppvObject*设置为 NULL。
+弄指向由*iid*标识的接口指针的指针。 如果对象不支持此接口，则将*ppvObject*设置为 NULL。
 
 *pp*<br/>
-[out]由类型标识的接口指针的指针`Q`。 如果该对象不支持此接口， *pp*设置为 NULL。
+弄指向由类型`Q`标识的接口指针的指针。 如果对象不支持此接口，则*pp*设置为 NULL。
 
 ### <a name="return-value"></a>返回值
 
 标准的 HRESULT 值。
 
-##  <a name="release"></a>  CComContainedObject::Release
+##  <a name="release"></a>CComContainedObject：： Release
 
-递减引用计数在所有者对象上。
+递减所有者对象的引用计数。
 
 ```
 STDMETHOD_(ULONG, Release)();
@@ -164,7 +164,7 @@ STDMETHOD_(ULONG, Release)();
 
 ### <a name="return-value"></a>返回值
 
-在调试版本中，`Release`返回一个值，可能是有用的诊断或测试。 在非调试版本中，`Release`始终返回 0。
+在调试版本中`Release` ，将返回一个值，该值对于诊断或测试可能很有用。 在非调试版本中， `Release`始终返回0。
 
 ## <a name="see-also"></a>请参阅
 

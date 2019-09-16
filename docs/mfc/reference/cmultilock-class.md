@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMultiLock [MFC], Lock
 - CMultiLock [MFC], Unlock
 ms.assetid: c5b7c78b-1f81-4387-b7dd-2c813c5b6b61
-ms.openlocfilehash: 107ed227c5515cbf2fcb08e957a64a4a17d8287a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2fe3ecf2197b8edb13e89600b16e550deff9af2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366805"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504541"
 ---
 # <a name="cmultilock-class"></a>CMultiLock 类
 
@@ -43,21 +43,21 @@ class CMultiLock
 
 |名称|描述|
 |----------|-----------------|
-|[CMultiLock::IsLocked](#islocked)|确定是否数组中的特定的同步对象将被锁定。|
+|[CMultiLock::IsLocked](#islocked)|确定数组中的特定同步对象是否处于锁定状态。|
 |[CMultiLock::Lock](#lock)|等待同步对象的数组。|
-|[CMultiLock::Unlock](#unlock)|释放任何拥有的同步对象。|
+|[CMultiLock::Unlock](#unlock)|释放所有拥有的同步对象。|
 
 ## <a name="remarks"></a>备注
 
-`CMultiLock` 没有基类。
+`CMultiLock`没有基类。
 
-若要使用同步类[CSemaphore](../../mfc/reference/csemaphore-class.md)， [CMutex](../../mfc/reference/cmutex-class.md)，并[CEvent](../../mfc/reference/cevent-class.md)，可以创建`CMultiLock`或[CSingleLock](../../mfc/reference/csinglelock-class.md)对象等待，并释放同步对象。 使用`CMultiLock`时可以使用在特定时间的多个对象。 使用`CSingleLock`时只需等待上一个对象，一次。
+若要使用同步类[CSemaphore](../../mfc/reference/csemaphore-class.md)、 [CMutex](../../mfc/reference/cmutex-class.md)和[CEvent](../../mfc/reference/cevent-class.md)，可以创建一个`CMultiLock`或[CSingleLock](../../mfc/reference/csinglelock-class.md)对象，以等待并释放同步对象。 当`CMultiLock`有多个对象可以在特定时间使用时，请使用。 当`CSingleLock`只需等待一个对象时使用。
 
-若要使用`CMultiLock`对象，请首先创建一个你想要等待同步对象数组。 接下来，调用`CMultiLock`受控的资源的类中的成员函数内的对象的构造函数。 然后调用[锁](#lock)成员函数以确定资源是否可用 （发出信号）。 如果是，继续使用成员函数的其余部分。 如果没有资源可用，等待指定的要释放的资源的时间内，或返回失败。 使用的资源完成后，调用[解锁](#unlock)函数如果`CMultiLock`对象将再次，使用或允许`CMultiLock`要销毁对象。
+若要使用`CMultiLock`对象，请首先创建要等待的同步对象的数组。 接下来，在`CMultiLock`受控资源的类中的成员函数内调用对象的构造函数。 然后调用[锁定](#lock)成员函数来确定资源是否可用（已终止）。 如果一个为，则继续执行成员函数的其余部分。 如果没有可用的资源，请等待指定的资源释放一段时间，或返回失败。 完成资源的使用后，如果要再次使用该 `CMultiLock`对象 ，请调用 [Unlock](#unlock) 函数，或允许`CMultiLock`对象被销毁。
 
-`CMultiLock` 对象是最有用，当线程必须大量`CEvent`对象可以响应。 创建一个数组，包含所有`CEvent`指针，并调用`Lock`。 这会导致线程等待，直到其中一个事件发出信号。
+`CMultiLock`当线程有大量`CEvent`对象可以响应时，对象最有用。 创建一个包含所有指针的`CEvent`数组，然后调用`Lock`。 这将导致线程等待，直到其中一个事件发出信号。
 
-有关如何使用的详细信息`CMultiLock`对象，请参阅文章[多线程处理：如何使用同步类](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。
+有关如何使用`CMultiLock`对象的详细信息，请参阅[多线程处理：如何使用同步类](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -65,9 +65,9 @@ class CMultiLock
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxmt.h
+**标头：** afxmt
 
-##  <a name="cmultilock"></a>  CMultiLock::CMultiLock
+##  <a name="cmultilock"></a>CMultiLock::CMultiLock
 
 构造 `CMultiLock` 对象。
 
@@ -84,18 +84,18 @@ CMultiLock(
 指向要等待的同步对象的指针的数组。 不能为 NULL。
 
 *dwCount*<br/>
-中的对象数*ppObjects*。 必须大于 0。
+*PpObjects*中的对象数。 必须大于 0。
 
 *bInitialLock*<br/>
-指定是否以最初尝试访问的任何提供的对象。
+指定是否最初尝试访问任何提供的对象。
 
 ### <a name="remarks"></a>备注
 
-创建要等待的同步对象的数组后调用此函数。 它通常称为从内的线程必须等待的其中一个同步对象变得可用。
+创建要等待的同步对象数组后，将调用此函数。 它通常从必须等待某个同步对象变为可用的线程中调用。
 
-##  <a name="islocked"></a>  CMultiLock::IsLocked
+##  <a name="islocked"></a>CMultiLock：： IsLocked
 
-确定指定的对象是否为非终止 （不可用）。
+确定指定的对象是否为非终止（不可用）。
 
 ```
 BOOL IsLocked(DWORD dwItem);
@@ -104,15 +104,15 @@ BOOL IsLocked(DWORD dwItem);
 ### <a name="parameters"></a>参数
 
 *dwItem*<br/>
-要查询其状态的对象所对应的对象的数组中的索引。
+对象数组中对应于正在查询其状态的对象的索引。
 
 ### <a name="return-value"></a>返回值
 
-如果指定的对象被锁定，则非零值否则为 0。
+如果指定的对象被锁定，则为非零值;否则为0。
 
 ##  <a name="lock"></a>  CMultiLock::Lock
 
-调用此函数可获取对一个或多个由提供给的同步对象控制的资源访问权限`CMultiLock`构造函数。
+调用此函数可获取对提供给`CMultiLock`构造函数的同步对象所控制的一个或多个资源的访问权限。
 
 ```
 DWORD Lock(
@@ -124,43 +124,43 @@ DWORD Lock(
 ### <a name="parameters"></a>参数
 
 *dwTimeOut*<br/>
-指定的时间来等待同步对象可用 （发出信号）。 如果无限期，`Lock`将等待，直到对象返回之前发出信号。
+指定等待同步对象可用所需的时间（信号）。 如果是无限`Lock`的，将等待直到对象收到信号后才返回。
 
 *bWaitForAll*<br/>
-指定是否必须在同一时间在返回之前收到信号等待的所有对象。 如果为 FALSE，`Lock`等待的对象之一发出的信号时，将返回。
+指定在返回前是否所有的对象都必须在同一时间终止。 如果为 FALSE `Lock` ，则当任何一个对象等待时，将返回。
 
 *dwWakeMask*<br/>
-指定允许中止在等待其他条件。 此参数的可用选项的完整列表，请参阅[MsgWaitForMultipleObjects](/windows/desktop/api/winuser/nf-winuser-msgwaitformultipleobjects) Windows SDK 中。
+指定允许中止等待的其他条件。 有关此参数的可用选项的完整列表，请参阅 Windows SDK 中的[MsgWaitForMultipleObjects](/windows/win32/api/winuser/nf-winuser-msgwaitformultipleobjects) 。
 
 ### <a name="return-value"></a>返回值
 
-如果`Lock`失败，则返回-1。 如果成功，则返回以下值之一：
+如果`Lock`失败，则返回-1。 如果成功，它将返回以下值之一：
 
-- WAIT_OBJECT_0 和 WAIT_OBJECT_0 + （多个对象-1） 之间
+- 介于 WAIT_OBJECT_0 和 WAIT_OBJECT_0 + 之间（对象数为-1）
 
-   如果*bWaitForAll*为 TRUE 时，所有对象都已都终止 （可用）。 如果*bWaitForAll*是 FALSE，则返回值-WAIT_OBJECT_0 是中的对象发出信号 （可用） 的对象的数组索引。
+   如果*bWaitForAll*为 TRUE，则所有对象均处于终止状态（可用）。 如果*bWaitForAll*为 FALSE，则返回值-WAIT_OBJECT_0 是对象的对象数组中的索引（可用）。
 
-- WAIT_OBJECT_0 + （的对象数）
+- WAIT_OBJECT_0 + （对象数量）
 
-   中指定的事件*dwWakeMask*是线程的输入队列中可用。
+   在*dwWakeMask*中指定的事件在线程的输入队列中可用。
 
-- WAIT_ABANDONED_0 和 WAIT_ABANDONED_0 + （多个对象-1） 之间
+- 介于 WAIT_ABANDONED_0 和 WAIT_ABANDONED_0 + 之间（对象数为-1）
 
-   如果*bWaitForAll*为 TRUE，所有对象都已都终止，并且至少一个对象是一个放弃的互斥体对象。 如果*bWaitForAll*是 FALSE，则返回值-WAIT_ABANDONED_0 是放弃的互斥体对象满足等待的对象的数组中的索引。
+   如果*bWaitForAll*为 TRUE，则会向所有对象发出信号，并且至少有一个对象是被放弃的互斥体对象。 如果*bWaitForAll*为 FALSE，则返回值-WAIT_ABANDONED_0 为满足等待的被放弃的 mutex 对象的对象数组中的索引。
 
 - WAIT_TIMEOUT
 
-   中指定的超时间隔*dwTimeOut*而无需等待之后过期。
+   *DwTimeOut*中指定的超时间隔已过期，无需等待。
 
 ### <a name="remarks"></a>备注
 
-如果*bWaitForAll*为 TRUE，`Lock`将立即同步的所有对象都信号同时成功返回。 如果*bWaitForAll*为 FALSE，`Lock`将一个或多个同步对象发出信号时，就立即返回。
+如果*bWaitForAll*为 TRUE， `Lock`则将在所有同步对象同时终止时立即返回。 如果*bWaitForAll*为 FALSE， `Lock`则将在一个或多个同步对象发出信号后立即返回。
 
-如果`Lock`不能立即返回，它将等待中指定的毫秒数不超过*dwTimeOut*在返回之前的参数。 如果*dwTimeOut*为 INFINITE，`Lock`之前获得对象的访问权限或在指定的条件不会返回*dwWakeMask*已满足。 否则为如果`Lock`已无法获得的同步对象，它将返回成功; 如果不是，它将返回失败。
+如果`Lock`无法立即返回，它将在返回前等待的时间不超过*dwTimeOut*参数中指定的毫秒数。 如果*dwTimeOut*是无限的`Lock` ，将不会返回，直到获取了对对象的访问权限或满足*dwWakeMask*中指定的条件。 否则，如果`Lock`能够获取同步对象，则它将返回成功; 否则，将返回失败。
 
 ##  <a name="unlock"></a>  CMultiLock::Unlock
 
-释放所拥有的同步对象`CMultiLock`。
+释放由拥有的`CMultiLock`同步对象。
 
 ```
 BOOL Unlock();
@@ -173,20 +173,20 @@ BOOL Unlock(
 ### <a name="parameters"></a>参数
 
 *lCount*<br/>
-数的引用计数来释放。 必须大于 0。 如果指定的量将导致超过其最大值的对象计数，计数不会更改，并且该函数将返回 FALSE。
+要释放的引用计数的数目。 必须大于 0。 如果指定的量会导致对象的计数超过其最大值，则不会更改计数，并且函数返回 FALSE。
 
 *lPrevCount*<br/>
-指向一个变量来接收的同步对象的前一个计数。 如果为 NULL，则不返回前一个计数。
+指向一个变量，用于接收同步对象的前一个计数。 如果为 NULL，则不返回前一个计数。
 
 ### <a name="return-value"></a>返回值
 
-如果函数成功，则非零值否则为 0。
+如果函数成功，则为非零值;否则为0。
 
 ### <a name="remarks"></a>备注
 
-调用此函数`CMultiLock`的析构函数。
+此函数由`CMultiLock`的析构函数调用。
 
-第一个窗体`Unlock`尝试解锁由管理的同步对象`CMultiLock`。 第二个窗体`Unlock`尝试解锁`CSemaphore`拥有的对象`CMultiLock`。 如果`CMultiLock`不拥有任何锁定`CSemaphore`对象，则函数返回 FALSE; 否则，返回 TRUE。 *lCount*并*lpPrevCount*是完全相同的参数作为[CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock)。 第二种形式的`Unlock`很少适用于 multilock 的情况下。
+第一种形式`Unlock`的尝试对`CMultiLock`管理的同步对象进行解锁。 的第二种`Unlock`形式尝试对所`CSemaphore`拥有`CMultiLock`的对象进行解锁。 如果`CMultiLock`不拥有任何锁定`CSemaphore`的对象，则该函数将返回 FALSE; 否则返回 TRUE。 *lCount*和*lpPrevCount*与[CSingleLock：： Unlock](../../mfc/reference/csinglelock-class.md#unlock)的参数完全相同。 的第二种`Unlock`形式很少适用于 multilock 情况。
 
 ## <a name="see-also"></a>请参阅
 

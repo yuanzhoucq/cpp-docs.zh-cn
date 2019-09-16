@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-ms.openlocfilehash: 58c7fed2d6e95967101e98589a13c114fe2e9a8a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: 525fc01247053a1e2bc993398978cb332262a1a5
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496640"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927773"
 ---
 # <a name="composite-control-global-functions"></a>复合控件全局函数
 
@@ -156,18 +156,18 @@ ATLAPI AtlAxCreateControl(
 *lpszName*<br/>
 指向要传递到控件的字符串的指针。 必须采用下列方式之一进行格式化：
 
-- ProgID，如 "MSCAL"。Calendar. 7 "
+- ProgID，如`"MSCAL.Calendar.7"`
 
-- CLSID，如 "{8E27C92B-1264-101C-8A2F-040224009C02}"
+- CLSID，如`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- URL，如 "<http://www.microsoft.com>"
+- URL，如`"<https://www.microsoft.com>"`
 
-- 对活动文档的引用，例如 "file://\\\Documents\MyDoc.doc"
+- 对活动文档的引用，例如`"file://\\\Documents\MyDoc.doc"`
 
-- Html 片段，如\<"MSHTML： html >\<BODY > 这是一/BODY >\</HTML >"\<的文本行
+- HTML 片段，如`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > "MSHTML：" 必须在 HTML 片段之前，才能指定为 MSHTML 流。
+   > `"MSHTML:"`必须在 HTML 片段之前，才能指定为 MSHTML 流。
 
 *hWnd*<br/>
 中控件将附加到的窗口的句柄。
@@ -208,18 +208,18 @@ ATLAPI AtlAxCreateControlEx(
 *lpszName*<br/>
 指向要传递到控件的字符串的指针。 必须采用下列方式之一进行格式化：
 
-- ProgID，如 "MSCAL"。Calendar. 7 "
+- ProgID，如`"MSCAL.Calendar.7"`
 
-- CLSID，如 "{8E27C92B-1264-101C-8A2F-040224009C02}"
+- CLSID，如`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- URL，如 "<http://www.microsoft.com>"
+- URL，如`"<https://www.microsoft.com>"`
 
-- 对活动文档的引用，例如 "file://\\\Documents\MyDoc.doc"
+- 对活动文档的引用，例如`"file://\\\Documents\MyDoc.doc"`
 
-- Html 片段，如\<"MSHTML： html >\<BODY > 这是一/BODY >\</HTML >"\<的文本行
+- HTML 片段，如`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > "MSHTML：" 必须在 HTML 片段之前，才能指定为 MSHTML 流。
+   > `"MSHTML:"`必须在 HTML 片段之前，才能指定为 MSHTML 流。
 
 *hWnd*<br/>
 中控件将附加到的窗口的句柄。
@@ -267,18 +267,18 @@ ATLAPI AtlAxCreateControlLic(
 *lpszName*<br/>
 指向要传递到控件的字符串的指针。 必须采用下列方式之一进行格式化：
 
-- ProgID，如 "MSCAL"。Calendar. 7 "
+- ProgID，如`"MSCAL.Calendar.7"`
 
-- CLSID，如 "{8E27C92B-1264-101C-8A2F-040224009C02}"
+- CLSID，如`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- URL，如 "<http://www.microsoft.com>"
+- URL，如`"<https://www.microsoft.com>"`
 
-- 对活动文档的引用，例如 "file://\\\Documents\MyDoc.doc"
+- 对活动文档的引用，例如`"file://\\\Documents\MyDoc.doc"`
 
-- Html 片段，如\<"MSHTML： html >\<BODY > 这是一/BODY >\</HTML >"\<的文本行
+- HTML 片段，如`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > "MSHTML：" 必须在 HTML 片段之前，才能指定为 MSHTML 流。
+   > `"MSHTML:"`必须在 HTML 片段之前，才能指定为 MSHTML 流。
 
 *hWnd*<br/>
 控件将附加到的窗口的句柄。
@@ -321,18 +321,18 @@ ATLAPI AtlAxCreateControlLicEx(
 *lpszName*<br/>
 指向要传递到控件的字符串的指针。 必须采用下列方式之一进行格式化：
 
-- ProgID，如 "MSCAL"。Calendar. 7 "
+- ProgID，如`"MSCAL.Calendar.7"`
 
-- CLSID，如 "{8E27C92B-1264-101C-8A2F-040224009C02}"
+- CLSID，如`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- URL，如 "<http://www.microsoft.com>"
+- URL，如`"<https://www.microsoft.com>"`
 
-- 对活动文档的引用，例如 "file://\\\Documents\MyDoc.doc"
+- 对活动文档的引用，例如`"file://\\\Documents\MyDoc.doc"`
 
-- Html 片段，如\<"MSHTML： html >\<BODY > 这是一/BODY >\</HTML >"\<的文本行
+- HTML 片段，如`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > "MSHTML：" 必须在 HTML 片段之前，才能指定为 MSHTML 流。
+   > `"MSHTML:"`必须在 HTML 片段之前，才能指定为 MSHTML 流。
 
 *hWnd*<br/>
 控件将附加到的窗口的句柄。
