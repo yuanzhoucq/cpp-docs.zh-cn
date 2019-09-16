@@ -24,7 +24,7 @@ ms.locfileid: "68452259"
 ---
 # <a name="vectorltboolgt-class"></a>vector&lt;bool&gt; 类
 
-类是类型为**bool**的元素的矢量的部分专用化。 [](../standard-library/vector-class.md) `vector<bool>` 它具有用于专用化的基础类型的分配器, 此分配器通过每个位存储一个**布尔**值来提供空间优化。
+`vector<bool>`类是类型为**bool**的元素的[矢量](../standard-library/vector-class.md)的部分专用化。 它具有用于专用化的基础类型的分配器，此分配器通过每个位存储一个**布尔**值来提供空间优化。
 
 ## <a name="syntax"></a>语法
 
@@ -152,7 +152,7 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 
 ### <a name="remarks"></a>备注
 
-如果使用 _ITERATOR_DEBUG_LEVEL 集进行编译, 则当你尝试访问矢量边界之外的元素时, 将发生运行时错误。  有关更多信息，请参见 [Checked Iterators](../standard-library/checked-iterators.md)。
+如果使用 _ITERATOR_DEBUG_LEVEL 集进行编译，则当你尝试访问矢量边界之外的元素时，将发生运行时错误。  有关更多信息，请参见 [Checked Iterators](../standard-library/checked-iterators.md)。
 
 ### <a name="example"></a>示例
 

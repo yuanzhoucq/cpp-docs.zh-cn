@@ -93,7 +93,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68448688"
 ---
-# <a name="hashmultiset-class"></a>hash_multiset 类
+# <a name="hash_multiset-class"></a>hash_multiset 类
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
@@ -113,7 +113,7 @@ class hash_multiset
 要存储在 hash_multiset 中的元素数据类型。
 
 *特征*\
-包含两个函数对象的类型, 这是一个用于将两个元素值作为排序键进行比较以确定其相对顺序和一个哈希函数 (即元素到无符号的一元谓词映射键值) 的二进制谓词。类型`size_t`的整数。 此自变量是可选自变量，默认值为 `hash_compare<Key, less<Key> >`。
+包含两个函数对象的类型，这是一个用于将两个元素值作为排序键进行比较以确定其相对顺序和一个哈希函数（即元素到无符号的一元谓词映射键值）的二进制谓词。类型`size_t`的整数。 此自变量是可选自变量，默认值为 `hash_compare<Key, less<Key> >`。
 
 *器*\
 一种类型，它表示存储的分配器对象，该分配器对象封装有关 hash_multiset 的内存分配和解除分配的详细信息。 此参数是可选参数，默认值为 `allocator<Key>`。
@@ -138,7 +138,7 @@ hash_multiset 是：
 
 当应用程序满足将值与其键关联的条件时，应选择 hash_multiset 作为关联容器。 hash_multiset 的元素可以是多个，并用作其自己的排序键，因此键不是唯一的。 此类结构的模型是排序列表，如关键字排序列表，其中关键字可以出现多次。 如果不允许关键字多次出现，则应使用 hash_set 作为适当的容器结构。 如果将唯一定义作为值附加到唯一关键字的列表，则 hash_map 应为包含此数据的适当结构。 如果定义不唯一，则应选择 hash_multimap 作为容器。
 
-hash_multiset 通过调用所存储的 [value_compare](#value_compare) 类型的哈希特征对象，对其控制的序列进行排序。 此存储对象可通过调用成员函数 [key_comp](#key_comp) 进行访问。 此类函数对象的行为必须与类`hash_compare<Key, less<Key> >`的对象的行为相同。 具体而言, 对于类型 `Key`的所有值键, 调用`Trait(Key)`会生成类型`size_t`为的值的分布。
+hash_multiset 通过调用所存储的 [value_compare](#value_compare) 类型的哈希特征对象，对其控制的序列进行排序。 此存储对象可通过调用成员函数 [key_comp](#key_comp) 进行访问。 此类函数对象的行为必须与类`hash_compare<Key, less<Key> >`的对象的行为相同。 具体而言，对于类型 `Key`的所有值键，调用`Trait(Key)`会生成类型`size_t`为的值的分布。
 
 通常，元素仅需小于比较元素即可建立此顺序；因此，给定任意两个元素，可以确定这两个元素等效（即两者均不小于对方）或其中一个小于另一个。 这将导致在非等效元素之间进行排序。 在技术性更强的说明中，比较函数是一个二元谓词，在标准数学的意义上引发严格弱排序。 二元谓词 *f*( *x*, *y*) 是包含两个参数对象（x 和 y）以及一个返回值（true 或 false）的函数对象。 如果二元谓词具有自反性、反对称性和传递性且等效可传递，对 hash_multiset 进行的排序将为严格弱排序，其中在 *f*( *x*, *y*) 和 *f*( *y*, *x*) 均为 false 时两个对象 x 和 y 定义为等效。 如果键之间的更强相等条件取代了等效性，则排序将为总排序（即所有元素彼此排序），并且匹配的键将难以彼此辨别。
 
@@ -157,10 +157,10 @@ hash_multiset 类提供的迭代器是双向迭代器，但类成员函数 inser
 |类型名称|描述|
 |-|-|
 |[allocator_type](#allocator_type)|一种类型，此类型表示 `allocator` 对象的 `hash_multiset` 类。|
-|[const_iterator](#const_iterator)|一种类型, 它提供可读取中`hash_multiset`的**const**元素的双向迭代器。|
-|[const_pointer](#const_pointer)|一种类型, 它提供指向中 `hash_multiset`的 const 元素的指针。|
-|[const_reference](#const_reference)|一种类型, 它提供对存储在中`hash_multiset`的 const 元素的引用, 以便读取和执行**const**运算。|
-|[const_reverse_iterator](#const_reverse_iterator)|一种类型, 它提供可读取中`hash_multiset`任何**const**元素的双向迭代器。|
+|[const_iterator](#const_iterator)|一种类型，它提供可读取中`hash_multiset`的**const**元素的双向迭代器。|
+|[const_pointer](#const_pointer)|一种类型，它提供指向中 `hash_multiset`的 const 元素的指针。|
+|[const_reference](#const_reference)|一种类型，它提供对存储在中`hash_multiset`的 const 元素的引用，以便读取和执行**const**运算。|
+|[const_reverse_iterator](#const_reverse_iterator)|一种类型，它提供可读取中`hash_multiset`任何**const**元素的双向迭代器。|
 |[difference_type](#difference_type)|一种带符号的整数类型，它提供发现同一 `hash_multiset` 中的元素的两个迭代器之间的差异。|
 |[Iterator](#iterator)|一种类型，它提供可读取或修改 `hash_multiset` 中任何元素的双向迭代器。|
 |[key_compare](#key_compare)|一种提供函数对象的类型，该函数对象可比较两个排序键以确定 `hash_multiset` 中两个元素的相对顺序。|
@@ -248,7 +248,7 @@ iterator begin();
 
 ### <a name="remarks"></a>备注
 
-如果将的`begin`返回值分配`const_iterator`给, 则无法修改 hash_multiset 对象中的元素。 如果将的`begin`返回值分配`iterator`给, 则可以修改 hash_multiset 对象中的元素。
+如果将的`begin`返回值分配`const_iterator`给，则无法修改 hash_multiset 对象中的元素。 如果将的`begin`返回值分配`iterator`给，则可以修改 hash_multiset 对象中的元素。
 
 ### <a name="example"></a>示例
 
@@ -555,7 +555,7 @@ size_type count(const Key& key) const;
 
 成员函数返回在以下范围内的元素数目：
 
-\[lower_bound (*key*)、upper_bound (*key*))。
+\[lower_bound （*key*）、upper_bound （*key*））。
 
 ### <a name="example"></a>示例
 
@@ -848,7 +848,7 @@ iterator insert(
 |参数|描述|
 |-|-|
 |*val*|要插入 [hash_multiset](../standard-library/hash-multiset-class.md) 的元素的值，除非 `hash_multiset` 已包含该元素，或更宽泛地说，包含其键经过等效排序的元素。|
-|*_Where*|开始搜索正确插入点的位置。 (如果插入点紧跟 *_Where*, 则可能会在分期常量时间内 (而不是对数时间) 进行插入。|
+|*_Where*|开始搜索正确插入点的位置。 （如果插入点紧跟 *_Where*，则可能会在分期常量时间内（而不是对数时间）进行插入。|
 
 ### <a name="return-value"></a>返回值
 
@@ -856,7 +856,7 @@ iterator insert(
 
 ### <a name="remarks"></a>备注
 
-如果插入点紧随 *_Where*, 则可能会在分期常量时间内 (而不是对数时间) 进行插入。
+如果插入点紧随 *_Where*，则可能会在分期常量时间内（而不是对数时间）进行插入。
 
 ### <a name="example"></a>示例
 
@@ -1230,9 +1230,9 @@ const_iterator find(const Key& key) const;
 
 ### <a name="remarks"></a>备注
 
-此成员函数返回一个迭代器, 该迭代器将 hash_multiset 中其排序键`equivalent`与二元谓词下的参数键相对应的元素, 该谓词基于小于比较关系进行排序。
+此成员函数返回一个迭代器，该迭代器将 hash_multiset 中其排序键`equivalent`与二元谓词下的参数键相对应的元素，该谓词基于小于比较关系进行排序。
 
-如果将的`find`返回值分配`const_iterator`给, 则无法修改 hash_multiset 对象。 如果将的`find`返回值分配`iterator`给, 则可以修改 hash_multiset 对象。
+如果将的`find`返回值分配`const_iterator`给，则无法修改 hash_multiset 对象。 如果将的`find`返回值分配`iterator`给，则可以修改 hash_multiset 对象。
 
 ### <a name="example"></a>示例
 
@@ -1428,7 +1428,7 @@ hash_multiset(
 
 所有构造函数会存储类型 `Traits` 的函数对象，此对象用于在 `hash_multiset` 的键之间建立顺序，且稍后可通过调用 [hash_multiset::key_comp](#key_comp) 进行返回。 有关 `Traits` 的详细信息，请参阅 [hash_multiset 类](../standard-library/hash-multiset-class.md)主题。
 
-前三个构造函数指定一个空`hash_multiset`的初始, 第二个指定用于建立元素顺序的比较函数 (*Comp*) 的类型, 第三个构造函数显式指定分配器类型 (*Al*)要使用的。 关键字 **explicit** 取消某些种类的自动类型转换。
+前三个构造函数指定一个空`hash_multiset`的初始，第二个指定用于建立元素顺序的比较函数（*Comp*）的类型，第三个构造函数显式指定分配器类型（*Al*）要使用的。 关键字 **explicit** 取消某些种类的自动类型转换。
 
 第四个构造函数`hash_multiset`移动`Right`。
 
@@ -1498,7 +1498,7 @@ iterator insert(
 
 ### <a name="remarks"></a>备注
 
-插入提示版本 (而不是对数时间), 如果插入点紧随其后, 则插入可能发生在分期常量时间*内。*
+插入提示版本（而不是对数时间），如果插入点紧随其后，则插入可能发生在分期常量时间*内。*
 
 ## <a name="iterator"></a>hash_multiset::iterator
 
@@ -1517,7 +1517,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 
 ### <a name="example"></a>示例
 
-有关如何声明[](#begin)和使用`iterator`的示例, 请参阅 begin 的示例。
+有关如何声明和使用`iterator`的示例，请参阅 [begin](#begin) 的示例。
 
 ## <a name="key_comp"></a>hash_multiset::key_comp
 
@@ -1532,9 +1532,9 @@ key_compare key_comp() const;
 
 ### <a name="return-value"></a>返回值
 
-返回 hash_multiset 模板参数*特征*, 其中包含用于对容器元素进行哈希处理和排序的函数对象。
+返回 hash_multiset 模板参数*特征*，其中包含用于对容器元素进行哈希处理和排序的函数对象。
 
-有关*特征*的详细信息, 请参阅[hash_multiset 类](../standard-library/hash-multiset-class.md)主题。
+有关*特征*的详细信息，请参阅[hash_multiset 类](../standard-library/hash-multiset-class.md)主题。
 
 ### <a name="remarks"></a>备注
 
@@ -1610,7 +1610,7 @@ typedef Traits key_compare;
 
 `key_compare`是模板参数*特征*的同义词。
 
-有关*特征*的详细信息, 请参阅[hash_multiset 类](../standard-library/hash-multiset-class.md)主题。
+有关*特征*的详细信息，请参阅[hash_multiset 类](../standard-library/hash-multiset-class.md)主题。
 
 请注意，`key_compare` 和 value_compare 皆是模板参数 *Traits* 的同义词。 对于 hash_set 和 hash_multiset 类，会同时提供这两种类型，且二者相同，但为实现与 hash_map 和 hash_multimap 类的兼容性时，二者则不同。
 
@@ -1635,7 +1635,7 @@ typedef Key key_type;
 
 请注意，`key_type` 和 [value_type](../standard-library/hash-set-class.md#value_type) 皆是模板参数 *Key* 的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。
 
-有关*密钥*的详细信息, 请参阅[hash_multiset 类](../standard-library/hash-multiset-class.md)主题的 "备注" 部分。
+有关*密钥*的详细信息，请参阅[hash_multiset 类](../standard-library/hash-multiset-class.md)主题的 "备注" 部分。
 
 ### <a name="example"></a>示例
 
@@ -1767,7 +1767,7 @@ hash_multiset& operator=(hash_multiset&& right);
 
 ### <a name="remarks"></a>备注
 
-清除中的`hash_multiset`任何现有元素后, `operator=`会将的`hash_multiset`内容复制或移动*到。*
+清除中`hash_multiset`的任何现有元素后， `operator=`会将的`hash_multiset`内容复制或移动*到。*
 
 ### <a name="example"></a>示例
 
@@ -2291,9 +2291,9 @@ value_compare value_comp() const;
 
 ### <a name="return-value"></a>返回值
 
-返回 hash_multiset 模板参数*特征*, 其中包含用于对容器元素进行哈希处理和排序的函数对象。
+返回 hash_multiset 模板参数*特征*，其中包含用于对容器元素进行哈希处理和排序的函数对象。
 
-有关*特征*的详细信息, 请参阅[hash_multiset 类](../standard-library/hash-multiset-class.md)主题。
+有关*特征*的详细信息，请参阅[hash_multiset 类](../standard-library/hash-multiset-class.md)主题。
 
 ### <a name="remarks"></a>备注
 
@@ -2374,9 +2374,9 @@ typedef key_compare value_compare;
 
 `value_compare`是模板参数*特征*的同义词。
 
-有关*特征*的详细信息, 请参阅[hash_multiset 类](../standard-library/hash-multiset-class.md)主题。
+有关*特征*的详细信息，请参阅[hash_multiset 类](../standard-library/hash-multiset-class.md)主题。
 
-请注意, [key_compare](#key_compare)和`value_compare`是模板参数*特征*的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。
+请注意， [key_compare](#key_compare)和`value_compare`是模板参数*特征*的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。
 
 ### <a name="example"></a>示例
 

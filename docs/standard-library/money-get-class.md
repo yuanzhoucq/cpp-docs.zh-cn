@@ -23,7 +23,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68455556"
 ---
-# <a name="moneyget-class"></a>money_get 类
+# <a name="money_get-class"></a>money_get 类
 
 此模板类描述可用作区域设置 facet 的对象，此对象用于控制 `CharType` 类型序列到货币值的转换。
 
@@ -129,9 +129,9 @@ virtual iter_type do_get(iter_type first,
 
 ### <a name="remarks"></a>备注
 
-第一个受保护的虚拟成员函数首先会在序列 [ `first`, `last`) 中尝试匹配序列连续元素，直到识别到完整的非空货币输入字段。 如果成功, 它会将此字段转换为一个或多个十进制数字的序列, 可选择前面加一个`-`减号 (), 以表示数量, 并将结果存储[](#string_type)在 string_type*对象值*中。 它将返回一个迭代器，指定第一个超出货币输入字段的元素。 否则, 该函数将按*val*和`ios_base::failbit` in*状态*存储空序列。 它将返回一个迭代器，指定第一个超出有效货币输入字段的任何前缀的元素。 在任一情况下，如果返回的值等于 `last`，该函数在 `State` 中设置 `ios_base::eofbit`。
+第一个受保护的虚拟成员函数首先会在序列 [ `first`, `last`) 中尝试匹配序列连续元素，直到识别到完整的非空货币输入字段。 如果成功，它会将此字段转换为一个或多个十进制数字的序列，可选择前面加一个减号（`-`），以表示数量，并将结果存储在 [string_type](#string_type) 对象*值*中。 它将返回一个迭代器，指定第一个超出货币输入字段的元素。 否则，该函数将按*val*和`ios_base::failbit` in*状态*存储空序列。 它将返回一个迭代器，指定第一个超出有效货币输入字段的任何前缀的元素。 在任一情况下，如果返回的值等于 `last`，该函数在 `State` 中设置 `ios_base::eofbit`。
 
-第二个受保护的虚拟成员函数的行为与第一个相同, 不同之处在于, 如果成功, 它会将可选的带符号数字序列转换为**long double**类型的值, 并将该值存储在*val*中。
+第二个受保护的虚拟成员函数的行为与第一个相同，不同之处在于，如果成功，它会将可选的带符号数字序列转换为**long double**类型的值，并将该值存储在*val*中。
 
 货币输入字段的格式由[区域设置 facet](../standard-library/locale-class.md#facet_class)**fac** 决定，而后者又有有效调用 [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, **intl**>>( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)) 返回。
 
@@ -289,7 +289,7 @@ explicit money_get(size_t _Refs = 0);
 
 ### <a name="remarks"></a>备注
 
-*_Refs*参数的可能值及其重要性为:
+*_Refs*参数的可能值及其重要性为：
 
 - 0对象的生存期由包含该对象的区域设置管理。
 
@@ -299,7 +299,7 @@ explicit money_get(size_t _Refs = 0);
 
 由于该析构函数受到保护，可能没有直接的示例。
 
-构造函数通过**locale::** [facet](../standard-library/locale-class.md#facet_class)( *_Refs*) 初始化其基对象。
+构造函数通过**locale：：** [facet](../standard-library/locale-class.md#facet_class)（ *_Refs*）初始化其基对象。
 
 ## <a name="string_type"></a>  money_get::string_type
 

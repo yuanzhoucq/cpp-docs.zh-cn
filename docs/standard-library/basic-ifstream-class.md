@@ -23,7 +23,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68455519"
 ---
-# <a name="basicifstream-class"></a>basic_ifstream 类
+# <a name="basic_ifstream-class"></a>basic_ifstream 类
 
 描述一个对象，该对象可控制从 [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> 类的流缓冲区提取元素和编码对象，其中 `Elem` 类型的元素的字符特征由 `Tr` 类确定。
 
@@ -71,7 +71,7 @@ int main(int argc, char **argv)
 }
 ```
 
-## <a name="input-basicifstreamclasstxt"></a>Input: basic_ifstream_class.txt
+## <a name="input-basic_ifstream_classtxt"></a>Input: basic_ifstream_class.txt
 
 ```cpp
 This is the contents of basic_ifstream_class.txt.
@@ -248,11 +248,11 @@ void open(
 
 ### <a name="remarks"></a>备注
 
-成员函数调用 [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode` &#124; **ios_base::in**). 如果打开失败, 该函数将[](../standard-library/basic-ios-class.md#setstate)调用 setstate`failbit`(), 这可能会引发 ios_base:: 失败异常。
+成员函数调用 [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode` &#124; **ios_base::in**). 如果打开失败，该函数将调用 [setstate](../standard-library/basic-ios-class.md#setstate)（`failbit`），这可能会引发 ios_base：：失败异常。
 
 ### <a name="example"></a>示例
 
-有关使用`open`的示例, 请参阅[basic_filebuf:: open](../standard-library/basic-filebuf-class.md#open) 。
+有关使用`open`的示例，请参阅[basic_filebuf：： open](../standard-library/basic-filebuf-class.md#open) 。
 
 ## <a name="op_eq"></a>  basic_ifstream::operator=
 
@@ -273,7 +273,7 @@ basic_ifstream& operator=(basic_ifstream&& right);
 
 ### <a name="remarks"></a>备注
 
-成员运算符使用*right*的内容替换对象的内容, 并将其视为右值引用。 有关详细信息，请参阅[左值和右值](../cpp/lvalues-and-rvalues-visual-cpp.md)。
+成员运算符使用*right*的内容替换对象的内容，并将其视为右值引用。 有关详细信息，请参阅[左值和右值](../cpp/lvalues-and-rvalues-visual-cpp.md)。
 
 ## <a name="rdbuf"></a>  basic_ifstream::rdbuf
 

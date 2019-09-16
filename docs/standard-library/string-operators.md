@@ -115,7 +115,7 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="remarks"></a>备注
 
-每个函数均重载 `operator+` 以连接模板类 [basic_string 类](../standard-library/basic-string-class.md)的两个对象。 所有有效的`basic_string< CharType, Traits, Allocator>(Left).append(right)`返回。 有关详细信息, 请参阅[append](../standard-library/basic-string-class.md#append)。
+每个函数均重载 `operator+` 以连接模板类 [basic_string 类](../standard-library/basic-string-class.md)的两个对象。 所有有效的`basic_string< CharType, Traits, Allocator>(Left).append(right)`返回。 有关详细信息，请参阅[append](../standard-library/basic-string-class.md#append)。
 
 ### <a name="example"></a>示例
 
@@ -804,13 +804,13 @@ basic_istream<CharType, Traits>& operator>>(
 
 ### <a name="return-value"></a>返回值
 
-从 *_Istr*读取指定字符串的值, 并将其返回到*右侧*。
+从 *_Istr*读取指定字符串的值，并将其返回到*右侧*。
 
 ### <a name="remarks"></a>备注
 
 除非已设置 `skipws` 标志，否则运算符将跳过前导空白字符。 它读取以下所有字符，直到下一个字符是空格或到达文件末尾。
 
-模板函数重载**运算符 > >** , 以将由*权限*控制的序列替换为从 stream *_Istr*中提取的一系列元素。 提取将在以下位置停止：
+模板函数重载**运算符 > >** ，以将由*权限*控制的序列替换为从 stream *_Istr*中提取的一系列元素。 提取将在以下位置停止：
 
 - 文件末尾。
 
@@ -820,7 +820,7 @@ basic_istream<CharType, Traits>& operator>>(
 
 - 函数提取 *ch* 元素之后并且该元素的 [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **CharType**> >( `getloc`). **is**( **ctype**\< **CharType**>:: **space**, *ch*) 为 true 时，放回字符。
 
-如果该函数未提取任何元素, 则[](../standard-library/basic-ios-class.md#setstate)它将`ios_base::failbit`调用 setstate ()。 在任何情况下，函数都会调用 **istr**. **width** (0)，并返回 \***this**。
+如果该函数未提取任何元素，则它将调用 [setstate](../standard-library/basic-ios-class.md#setstate) （`ios_base::failbit`）。 在任何情况下，函数都会调用 **istr**. **width** (0)，并返回 \***this**。
 
 ### <a name="example"></a>示例
 

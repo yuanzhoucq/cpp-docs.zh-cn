@@ -38,7 +38,7 @@ bool operator==(
 
 ## <a name="return-value"></a>返回值
 
-返回`left.` [](../standard-library/container-class-size.md)大小开始` == right.size && equal(left.` [](../standard-library/container-class-begin.md)[端。](../standard-library/container-class-end.md)`, left.``, right.begin)`
+返回 `left.`[大小](../standard-library/container-class-size.md) ` == right.size && equal(left.`[开始](../standard-library/container-class-begin.md)`, left.`[ 端](../standard-library/container-class-end.md)`, right.begin)`。
 
 ## <a name="see-also"></a>请参阅
 
