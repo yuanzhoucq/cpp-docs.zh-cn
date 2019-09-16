@@ -1,9 +1,9 @@
 ---
 title: bsearch
 ms.date: 11/04/2016
-apiname:
+api_name:
 - bsearch
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,19 +16,22 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - bsearch
 helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch function
 ms.assetid: e0ad2f47-e7dd-49ed-8288-870457a14a2c
-ms.openlocfilehash: e170ce67d22c0d97825a7eb754546a29daac6d89
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e44e85d1c6d73a68da2edd099cdeb6156f9759d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347751"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939440"
 ---
 # <a name="bsearch"></a>bsearch
 
@@ -65,19 +68,19 @@ void *bsearch(
 
 ## <a name="return-value"></a>返回值
 
-**bsearch**的匹配项返回一个指针*密钥*指向的数组中*基*。 如果*键*未找到，则该函数将返回**NULL**。 如果数组不是以升序排序的，或包含具有相同键的重复记录，则不可预知结果。
+**bsearch**返回一个指针，该指针指向由*base*指向的数组中的*键*的匹配项。 如果未找到*键*，则该函数返回**NULL**。 如果数组不是以升序排序的，或包含具有相同键的重复记录，则不可预知结果。
 
 ## <a name="remarks"></a>备注
 
-**Bsearch**函数执行的已排序数组的二进制搜索*数量*，每个元素*宽度*字节的大小。 *基*值是指向待搜索数组基的指针和*密钥*是要搜索的值。 *比较*参数是指向用户提供的例程，它比较所需的键的数组元素并返回指定其关系的以下值之一：
+**Bsearch**函数对*数字*元素的已排序数组执行二进制搜索，其中每个大小均为大小的*宽度*字节。 *基值*是指向要搜索的数组的基的指针，而*键*是正在查找的值。 *Compare*参数是指向用户提供的例程的指针，它将所请求的密钥与数组元素进行比较，并返回以下指定其关系的值之一：
 
-|返回值*比较*例程|描述|
+|*比较*例程返回的值|描述|
 |-----------------------------------------|-----------------|
 |\< 0|键小于数组元素。|
 |0|键等于数组元素。|
 |> 0|键大于数组元素。|
 
-此函数验证其参数。 如果*比较*，*密钥*或*数*是**NULL**，或者如果*基*是**NULL**并*数*不为零，或者如果*宽度*为零，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为`EINVAL`和该函数将返回**NULL**。
+此函数验证其参数。 如果为*compare*、 *key*或*number*为**null**，或者*base*为**null**且*number*为非零，或者*width*为零，则调用无效参数处理程序，如[参数验证中所述](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则将**errno**设置为`EINVAL` ，并且该函数将返回**NULL**。
 
 ## <a name="requirements"></a>要求
 
