@@ -1,9 +1,9 @@
 ---
 title: _lfind
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _lfind
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lfind
 - _lfind
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - finding keys in arrays
 - _lfind function
 ms.assetid: a40ece70-1674-4b75-94bd-9f57cfff18f2
-ms.openlocfilehash: 1508d54d6b2f2566e4aee3afef02af45b28e4f48
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8fd2141caf8311844a90a6d12226bb7797ac4734
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286487"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953388"
 ---
-# <a name="lfind"></a>_lfind
+# <a name="_lfind"></a>_lfind
 
 用于针对指定的键执行线性搜索。 此函数有一个更安全的版本；请参阅 [_lfind_s](lfind-s.md)。
 
@@ -69,13 +72,13 @@ void *_lfind(
 
 ## <a name="return-value"></a>返回值
 
-如果找到该键，则 **_lfind**处的数组的元素返回指向*基*相匹配*密钥*。 如果未找到该键， **_lfind**返回**NULL**。
+如果找到该键，则 **_lfind**将返回一个指针，该指针指向与*键*匹配的*基*中的数组元素。 如果找不到该密钥， **_lfind**将返回**NULL**。
 
 ## <a name="remarks"></a>备注
 
-**_Lfind**函数执行值的线性搜索*密钥*数组中的*数*，每个元素*宽度*字节。 与不同**bsearch**， **_lfind**不需要要进行排序的数组。 *基*参数是指向待搜索数组基的指针。 *比较*参数是指向用户提供的比较两个数组元素，然后返回一个值，指定其关系的例程的指针。 **_lfind**调用*比较*期间搜索，将指针传递给两个数组元素，在每次调用例程的一个或多个时间。 *比较*例程必须比较这些元素，然后返回非零值 （表示元素不同） 或 0 （表示元素相同）。
+**_Lfind**函数对*数字*元素数组中的值*键*执行线性搜索，其中每个*宽度*字节。 与**bsearch**不同， **_lfind**不需要对数组进行排序。 *Base*参数是指向要搜索的数组的基的指针。 *Compare*参数是指向用户提供的例程的指针，它比较两个数组元素，然后返回指定其关系的值。 **_lfind**在搜索过程中一次或多次调用*比较*例程，同时将指针传递到每个调用上的两个数组元素。 *比较*例程必须比较这些元素，然后返回非零值（表示元素不同）或0（表示元素相同）。
 
-此函数验证其参数。 如果*比较*，*密钥*或*数*是**NULL**，或者如果*基*是**NULL**并*数*不为零，或者如果*宽度*小于零，无效参数处理程序调用，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**并且该函数返回**NULL**。
+此函数验证其参数。 如果为*compare*、 *key*或*number*为**null**，或者*base*为**null**且*number*为非零，或者*width*小于零，则调用无效参数处理程序，如参数中所述。 [验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则将**errno**设置为**EINVAL** ，并且该函数将返回**NULL**。
 
 ## <a name="requirements"></a>要求
 
