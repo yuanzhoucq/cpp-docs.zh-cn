@@ -1,7 +1,7 @@
 ---
 title: _ismbb 例程
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr110.dll
 - msvcrt.dll
 - msvcr80.dll
@@ -9,7 +9,10 @@ apilocation:
 - msvcr120.dll
 - msvcr90.dll
 - msvcr100.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbb
 - ismbb
@@ -17,14 +20,14 @@ helpviewer_keywords:
 - ismbb routines
 - _ismbb routines
 ms.assetid: d63c232e-3fe4-4844-aafd-2133846ece4b
-ms.openlocfilehash: d70604ce71d74bd73a3fea1b99beaf93f052e344
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 374c78ca222f9c63f6b37f26d4cf3a00f48f845e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750502"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944532"
 ---
-# <a name="ismbb-routines"></a>_ismbb 例程
+# <a name="_ismbb-routines"></a>_ismbb 例程
 
 使用当前区域设置或指定 LC_CTYPE 转换状态类别，针对特定条件测试给定整数值 `c` 。
 

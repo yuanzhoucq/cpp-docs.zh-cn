@@ -1,14 +1,17 @@
 ---
 title: 字符串到数值函数
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr80.dll
 - msvcr110.dll
 - msvcr120.dll
 - msvcr100.dll
 - msvcr110_clr0400.dll
 - msvcr90.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcstoui64
 - _tcstoi64
@@ -16,12 +19,12 @@ helpviewer_keywords:
 - parsing, numeric strings
 - string conversion, to numeric values
 ms.assetid: 11cbd9ce-033b-4914-bf66-029070e7e385
-ms.openlocfilehash: 3f24b75c2fdb3aa0d84b16874d2d01f1cb96d4b9
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: b9d8218bd5a3151e17b7ac380bb86c85dac3e6a3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743884"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944725"
 ---
 # <a name="string-to-numeric-value-functions"></a>字符串到数值函数
 
@@ -49,7 +52,7 @@ ms.locfileid: "57743884"
 
 `wcstod`、`wcstol`、`wcstoul` 和 `_wcstoi64` 分别是 `strtod`、`strtol`、`strtoul` 和 `_strtoi64` 的宽字符版本。 每个宽字符函数的字符串参数都是一个宽字符串；每个函数的行为与其对应的单字节字符相同。
 
-`strtod` 函数有两个参数：第一个是输入字符串，第二个是结束转换过程的字符的指针。 `strtol`、`strtoul`、**_strtoi64** 和 **_strtoui64** 将第三个参数作为在转换过程中使用的数基。
+`strtod` 函数有两个参数：第一个是输入字符串，第二个是结束转换过程的字符的指针。 `strtol`、`strtoul`、 **_strtoi64** 和 **_strtoui64** 将第三个参数作为在转换过程中使用的数基。
 
 输入字符串是一系列字符，可以解释为指定类型的数值。 每个函数在首个无法识别为数字一部分的字符处停止读取字符串。 这可能是终止 null 字符。 对于 `strtol`、`strtoul`、`_strtoi64` 和 `_strtoui64`，该终止字符也可以是大于或等于用户提供的数基的第一个数字字符。
 
@@ -57,15 +60,15 @@ ms.locfileid: "57743884"
 
 `strtod` 应为以下形式的字符串：
 
-[*whitespace*] [*sign*] [`digits`] [**.**`digits`] [ {**d** &#124; **D** &#124; **e** &#124; **E**}[*sign*]`digits`]
+[*whitespace*] [*sign*] [`digits`] [ **.** `digits`] [ {**d** &#124; **D** &#124; **e** &#124; **E**}[*sign*]`digits`]
 
-*whitespace* 可能包含被忽略的空格或制表符；*sign* 是加号 (**+**) 或减号 (**-**)；`digits` 是一个或多个十进制数字。 如果基数字符前没有任何数字，则基数字符后必须至少有一个数字。 十进制数字可以后跟一个指数，其中包含介绍性字母（**d**、**D**、**e** 或 **E**）和可选的带符号整数。 如果指数部分和基数字符都没有出现，则假定基数字符跟随字符串中的最后一个数字。 不符合此形式的第一个字符停止扫描。
+*whitespace* 可能包含被忽略的空格或制表符；*sign* 是加号 ( **+** ) 或减号 ( **-** )；`digits` 是一个或多个十进制数字。 如果基数字符前没有任何数字，则基数字符后必须至少有一个数字。 十进制数字可以后跟一个指数，其中包含介绍性字母（**d**、**D**、**e** 或 **E**）和可选的带符号整数。 如果指数部分和基数字符都没有出现，则假定基数字符跟随字符串中的最后一个数字。 不符合此形式的第一个字符停止扫描。
 
 `strtol`、`strtoul`、`_strtoi64` 和 `_strtoui64` 函数应为以下形式的字符串：
 
-[*whitespace*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [`digits`]
+[*whitespace*] [{ **+** &#124; **-** }] [**0** [{ **x** &#124; **X** }]] [`digits`]
 
-如果 base 参数在 2 和 36 之间，则将其用作数字的基数。 如果为 0，则转换结束指针引用的初始字符将用于确定基数。 如果第一个字符为 0，且第二个字符不为“x”或“X”，则将该字符串视为八进制整数；否则将其视为十进制数。 如果第一个字符为“0”，且第二个字符为“x”或“X”，则将该字符串视为十六进制整数。 如果第一个字符是“1”至“9”，则将该字符串视为十进制整数。 为字母“a”到“z”（或“A”到“Z”）分配了 10 到 35 的值；仅允许分配的值小于 *base* 的字母。 `strtoul` 和 `_strtoui64` 允许加号 (**+**) 或减号 (**-**) 前缀；前导减号表示返回值不起作用。
+如果 base 参数在 2 和 36 之间，则将其用作数字的基数。 如果为 0，则转换结束指针引用的初始字符将用于确定基数。 如果第一个字符为 0，且第二个字符不为“x”或“X”，则将该字符串视为八进制整数；否则将其视为十进制数。 如果第一个字符为“0”，且第二个字符为“x”或“X”，则将该字符串视为十六进制整数。 如果第一个字符是“1”至“9”，则将该字符串视为十进制整数。 为字母“a”到“z”（或“A”到“Z”）分配了 10 到 35 的值；仅允许分配的值小于 *base* 的字母。 `strtoul` 和 `_strtoui64` 允许加号 ( **+** ) 或减号 ( **-** ) 前缀；前导减号表示返回值不起作用。
 
 输出值受区域设置的 `LC_NUMERIC` 类别设置影响；有关详细信息，请参阅 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。
 

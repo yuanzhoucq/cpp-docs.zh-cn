@@ -1,9 +1,9 @@
 ---
 title: _CIpow
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CIpow
-apilocation:
+api_location:
 - msvcr100.dll
 - msvcr110.dll
 - msvcr120.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcrt.dll
 - msvcr90.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CIpow
 - _CIpow
@@ -20,14 +23,14 @@ helpviewer_keywords:
 - CIpow intrinsic
 - _CIpow intrinsic
 ms.assetid: 477aaf0c-ac58-4252-89dd-9f3e35d47536
-ms.openlocfilehash: 0131a813f43f2d18b5d66313cd368a911fd1fbbe
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: b32d7c550d465052f7c1dcd4a81baab803ec28f0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742008"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940520"
 ---
-# <a name="cipow"></a>_CIpow
+# <a name="_cipow"></a>_CIpow
 
 基于堆栈中的顶部值，计算提升到 *y* 电源的 *x*。
 
