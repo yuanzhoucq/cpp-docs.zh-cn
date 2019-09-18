@@ -4,12 +4,12 @@ ms.date: 05/14/2019
 helpviewer_keywords:
 - code wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
-ms.openlocfilehash: efced3be3a0bcc7efe16aef1061c4cd9ec1ed21c
-ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
+ms.openlocfilehash: 360f206ff4dae0b49650e131ccd86ecf9a0ed87d
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66741643"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907490"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>用代码向导添加功能 (C++)
 
@@ -29,13 +29,13 @@ ms.locfileid: "66741643"
 
 
 > [!NOTE]
->  现在可以添加消息处理程序并将消息映射到它们，然后使用[属性窗口](/visualstudio/ide/reference/properties-window)替代 MFC 虚函数。
+>  可以添加消息处理程序并将消息映射到它们，然后使用[MFC 经典向导](../mfc/reference/mfc-class-wizard.md)替代 MFC 虚拟函数。
 
 ## <a name="accessing-c-code-wizards"></a>访问 C++ 代码向导
 
 可从三个位置访问 C++ 代码向导：
 
-- 使用“项目”菜单上的“添加新项”命令打开 `Add New Item` 对话框，此对话框有助于将新文件添加到你的项目   。 “添加类”命令显示[添加类](../ide/add-class-dialog-box.md)对话框，对于可以添加到项目的每个类类型，此对话框可为依次打开向导  。 “添加资源”命令显示[添加资源](../windows/add-resource-dialog-box.md)对话框，可以从该对话框创建或选择要添加到项目的资源  。
+- 使用“项目”菜单上的“添加新项”命令打开 `Add New Item` 对话框，此对话框有助于将新文件添加到你的项目   。 “添加类”命令显示[添加类](../ide/add-class-dialog-box.md)对话框，对于可以添加到项目的每个类类型，此对话框可为依次打开向导  。 对于 MFC 类，使用 [MFC 类向导](../mfc/reference/mfc-class-wizard.md)。 “添加资源”命令显示[添加资源](../windows/add-resource-dialog-box.md)对话框，可以从该对话框创建或选择要添加到项目的资源  。
 
    如果在类视图中突出显示项目中的一个类或接口，则“项目”菜单还会显示以下命令  ：
 
