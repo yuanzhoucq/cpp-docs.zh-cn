@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4335
 ms.assetid: e66467ad-a10b-4438-8c7c-e8e8d11d39bb
-ms.openlocfilehash: 43c2f5d9092cdbad14e429349bd7d04e236b75e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d44a1ae5354e8d22e41694f4d6df42ad22c3986d
+ms.sourcegitcommit: 76cc69b482ada8ebf0837e8cdfd4459661f996dd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62151846"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127169"
 ---
 # <a name="compiler-warning-c4335"></a>编译器警告 C4335
 
-检测到 Mac 文件格式： 请将源文件转换为 DOS 或 UNIX 格式
+检测到 Mac 文件格式：请将源文件转换为 DOS 格式或 UNIX 格式
 
-源文件的第一行的行终止字符是 Macintosh 样式 ('\r') 而不是 UNIX ('\n') 或 DOS ('\r\n')。
+源文件第一行的行终止字符为 Macintosh 样式（' \r '），而不是 UNIX （' \n '）或 DOS （' \r\n '）。
 
-作为错误发出始终发出此警告。  请参阅[警告](../../preprocessor/warning.md)了解如何禁用此警告的杂注。  此外，将发出此警告仅一次每个编译单位。 因此，如果有多个`#include`Macintosh 格式指定文件的指令，C4335 将才会发出一次。
+此警告总是作为错误发出。  有关如何禁用此警告的信息，请参阅[警告](../../preprocessor/warning.md)杂注。  此外，此警告只会针对每个编译单位发出一次。 因此，如果有多个`#include`指令指定了 Macintosh 格式的文件，则将只颁发 C4335 一次。
 
-适用于目标系统中生成文件的一种方法是使用**高级保存选项**(在**文件**菜单) 在 Visual Studio 中。
+以 Macintosh 格式生成文件的一种方法是使用 Visual Studio 中的 "**高级保存选项**" （位于 "**文件**" 菜单上）。
 
 ## <a name="example"></a>示例
 
