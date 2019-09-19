@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - message handling [MFC], adding handlers
 ms.assetid: 4251cfce-76ca-443d-bd2f-6303afa6d942
-ms.openlocfilehash: cf46c4f388c4607dbb8fb0e7f439603e5964ea03
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 1287c8166e02c3aa7696a3a0d79ecc1a240e3032
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907663"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095865"
 ---
 # <a name="adding-an-mfc-message-handler"></a>添加 MFC 消息处理程序
 
-您可以使用 "[类视图" 或 "](mfc-class-wizard.md) **类视图**" 中的 "**属性**" 窗口向类添加消息处理程序（处理 windows 消息的成员函数），并将 windows 消息映射到消息处理程序。 还可以[为任何对话框控件添加事件处理程序](../../windows/adding-event-handlers-for-dialog-box-controls.md)。 
+您可以使用 "[类视图" 或 "](mfc-class-wizard.md) **类视图**" 中的 "**属性**" 窗口向类添加消息处理程序（处理 windows 消息的成员函数），并将 windows 消息映射到消息处理程序。 还可以[为任何对话框控件添加事件处理程序](../../windows/adding-event-handlers-for-dialog-box-controls.md)。
 
 通过使用**类向导**或 "**属性**" 窗口（在**类视图**中）来定义消息处理函数和事件处理函数，可以自动更新消息调度表（或消息映射）和类头文件。
 

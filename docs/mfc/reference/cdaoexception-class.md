@@ -1,6 +1,6 @@
 ---
 title: CDaoException 类
-ms.date: 11/04/2016
+ms.date: 09/17/2019
 f1_keywords:
 - CDaoException
 - AFXDAO/CDaoException
@@ -18,16 +18,17 @@ helpviewer_keywords:
 - CDaoException [MFC], m_pErrorInfo
 - CDaoException [MFC], m_scode
 ms.assetid: b2b01fa9-7ce2-42a1-842e-40f13dc50da4
-ms.openlocfilehash: e5f28b8896fc9e7e5c6a656a64b938cd7af39f42
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 262c9b75771611dc04938fa5d9f58c3f7e5fc2ef
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507065"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096132"
 ---
 # <a name="cdaoexception-class"></a>CDaoException 类
 
 表示由基于数据访问对象 (DAO) 的 MFC 数据库类引起的异常条件。
+DAO 3.6 是最终版本，被视为已过时。
 
 ## <a name="syntax"></a>语法
 

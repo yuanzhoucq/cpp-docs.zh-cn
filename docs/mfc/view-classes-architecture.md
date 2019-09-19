@@ -1,6 +1,6 @@
 ---
 title: 视图类（体系结构）
-ms.date: 11/04/2016
+ms.date: 09/17/2019
 f1_keywords:
 - vc.classes.view
 helpviewer_keywords:
@@ -9,64 +9,64 @@ helpviewer_keywords:
 - control views [MFC]
 - view classes [MFC], architecture
 ms.assetid: 8894579a-1436-441e-b985-83711061e495
-ms.openlocfilehash: 15b120f0354c483480351b8d3abf995334779411
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c6c1272d41eb7a01ec5a7ee10fadb4ab21547ce7
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352666"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096047"
 ---
 # <a name="view-classes-architecture"></a>视图类（体系结构）
 
-`CView` 和其派生的类是表示框架窗口的工作区的子窗口。 视图显示数据，并接受输入文档。
+`CView`及其派生类是表示框架窗口的工作区的子窗口。 视图显示数据并接受文档输入。
 
-视图类是与文档类和使用文档模板对象的框架窗口类相关联。
+视图类与文档类和框架窗口类关联，使用文档模板对象。
 
 [CView](../mfc/reference/cview-class.md)<br/>
-特定于应用程序的数据视图的文档的基类。 视图显示数据，并接受用户输入来编辑或选择的数据。 派生从在视图类`CView`。
+文档数据的应用程序特定视图的基类。 视图显示数据并接受用户输入以编辑或选择数据。 从`CView`派生视图类。
 
 [CScrollView](../mfc/reference/cscrollview-class.md)<br/>
-带滚动功能的视图的基类。 派生视图类从`CScrollView`的自动滚动。
+具有滚动功能的视图的基类。 从`CScrollView`派生您的视图类以便自动滚动。
 
 ## <a name="form-and-record-views"></a>窗体和记录视图
 
-窗体视图也滚动视图。 它们基于对话框模板。
+窗体视图还会滚动查看。 它们基于对话框模板。
 
-记录视图派生自窗体视图。 除了对话框模板，它们还具有与数据库的连接。
+记录视图派生自窗体视图。 除了对话框模板以外，它们还具有到数据库的连接。
 
 [CFormView](../mfc/reference/cformview-class.md)<br/>
-在对话框模板中定义其布局滚动视图。 从派生类`CFormView`以实现基于对话框模板的用户界面。
+其布局在对话框模板中定义的滚动视图。 从`CFormView`派生一个类，以实现基于对话框模板的用户界面。
 
 [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)<br/>
-提供了一种直接连接到数据访问对象 (DAO) 记录集对象的视图。 像所有窗体视图中，`CDaoRecordView`基于对话框模板。
+提供直接连接到数据访问对象（DAO）记录集对象的窗体视图。 与所有窗体视图一样`CDaoRecordView` ，是基于对话框模板的。 DAO 与 Access 数据库结合使用，并受 Office 2013 的支持。 3.6 是最终版本，被视为已过时。
 
 [CHtmlView](../mfc/reference/chtmlview-class.md)<br/>
-为 Web 浏览应用程序中支持的控件。 该控件在 MFC 中支持动态 HTML。
+支持应用程序中的 Web 浏览控件。 控件支持 MFC 中的动态 HTML。
 
 [COLEDBRecordView](../mfc/reference/coledbrecordview-class.md)<br/>
 为窗体视图提供 MFC OLE DB 支持。
 
 [CRecordView](../mfc/reference/crecordview-class.md)<br/>
-提供了一种直接连接到开放式数据库连接 (ODBC) 记录集对象的视图。 像所有窗体视图中，`CRecordView`基于对话框模板。
+提供直接连接到开放式数据库连接（ODBC）记录集对象的窗体视图。 与所有窗体视图一样`CRecordView` ，是基于对话框模板的。
 
 ## <a name="control-views"></a>控件视图
 
-控件视图显示为其视图的控件。
+控件视图将控件显示为其视图。
 
 [CCtrlView](../mfc/reference/cctrlview-class.md)<br/>
-与 Windows 控件相关联的所有视图的基类。 根据控件的视图如下所述。
+与 Windows 控件关联的所有视图的基类。 下面介绍了基于控件的视图。
 
 [CEditView](../mfc/reference/ceditview-class.md)<br/>
-包含 Windows 标准的视图编辑控件 (请参阅[CEdit](../mfc/reference/cedit-class.md))。 编辑控件支持文本编辑、 搜索、 替换和滚动功能。
+包含 Windows 标准编辑控件的视图（请参阅[CEdit](../mfc/reference/cedit-class.md)）。 编辑控件支持文本编辑、搜索、替换和滚动功能。
 
 [CRichEditView](../mfc/reference/cricheditview-class.md)<br/>
-一个包含 Windows 丰富视图编辑控件 (请参阅[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md))。 一个编辑控件的功能，除了格式文本编辑控件支持字体、 颜色、 段落格式设置，和嵌入的 OLE 对象。
+包含 Windows rich edit 控件的视图（请参阅[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)）。 除了编辑控件的功能外，丰富的编辑控件还支持字体、颜色、段落格式和嵌入的 OLE 对象。
 
 [CListView](../mfc/reference/clistview-class.md)<br/>
-包含 Windows 列表控件的视图 (请参阅[CListCtrl](../mfc/reference/clistctrl-class.md))。 列表控件中的文件资源管理器的方式类似于右窗格中显示的图标和字符串。
+包含 Windows 列表控件的视图（请参阅[CListCtrl](../mfc/reference/clistctrl-class.md)）。 列表控件以类似于文件资源管理器右窗格的方式显示图标和字符串。
 
 [CTreeView](../mfc/reference/ctreeview-class.md)<br/>
-包含 Windows 树控件的视图 (请参阅[CTreeCtrl](../mfc/reference/ctreectrl-class.md))。 树控件显示的图标和排列在文件资源管理器的方式类似于左窗格中的层次结构中的字符串。
+包含 Windows 树控件的视图（请参阅[CTreeCtrl](../mfc/reference/ctreectrl-class.md)）。 树形控件以与文件资源管理器左窗格类似的方式显示在层次结构中排列的图标和字符串。
 
 ## <a name="see-also"></a>请参阅
 
