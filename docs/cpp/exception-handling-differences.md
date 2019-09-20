@@ -1,6 +1,7 @@
 ---
-title: 处理中的结构化的异常C++
-ms.date: 08/14/2018
+title: 处理 C++ 中的结构性异常
+description: 如何使用C++异常处理模型处理结构化异常。
+ms.date: 09/19/2019
 helpviewer_keywords:
 - structured exception handling [C++], vs. C++ exception handling
 - structured exception handling [C++], vs. unstructured
@@ -8,24 +9,24 @@ helpviewer_keywords:
 - C++ exception handling [C++], vs. structured exception handling
 - wrapper classes [C++], C exception
 ms.assetid: f21d1944-4810-468e-b02a-9f77da4138c9
-ms.openlocfilehash: 2c4f1a8c3729e2b4d49a0152425e57717f7e9997
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0c0e458f576325034d77676d247020adedfa33e5
+ms.sourcegitcommit: f907b15f50a6b945d0b87c03af0050946157d701
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154396"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71158731"
 ---
-# <a name="handle-structured-exceptions-in-c"></a>处理中的结构化的异常C++
+# <a name="handle-structured-exceptions-in-c"></a>处理 C++ 中的结构性异常
 
-C 之间的主要区别结构化异常处理 (SEH) 和C++，异常处理是指C++类型中处理的异常处理模型，而 C 结构化的异常处理模型的处理是一种类型; 的异常具体而言，**无符号的 int**。即，C 异常由无符号整数值标识，而 C++ 异常由数据类型标识。 当在 C 中引发结构化的异常时，每个可能的处理程序执行的筛选器检查 C 异常上下文并确定是否接受该异常、 将其传递给其他处理，或将其忽略。 当 C++ 中引发了异常时，该异常可以是任何类型。
+C 结构化异常处理（SEH）和C++异常处理之间的主要区别在于C++异常处理模型处理类型，而 C 结构化异常处理模型处理一种类型的异常;具体而言，为**无符号整数**。即，C 异常由无符号整数值标识，而 C++ 异常由数据类型标识。 如果 C 中引发了结构化异常，则每个可能的处理程序将执行一个筛选器，该筛选器检查 C 异常上下文并确定是否接受异常、将其传递给其他处理程序或忽略它。 当 C++ 中引发了异常时，该异常可以是任何类型。
 
-第二个区别是，C 结构化的异常处理模型被称为*异步*，因为次要的正常控制流发生的异常。 C++异常处理机制是完全*同步*，这意味着，会发生异常，仅在被引发。
+第二个差异是 C 结构化异常处理模型称为 "*异步*"，因为异常发生在正常的控制流中。 C++异常处理机制是完全*同步*的，这意味着异常仅在引发时才会发生。
 
-当你使用[/EHs 或 /EHsc](../build/reference/eh-exception-handling-model.md)编译器选项，则不C++异常处理程序处理结构化的异常。 仅可由处理这些异常 **__catch**结构化异常处理程序或 **__finally**结构化终止处理程序。 有关信息，请参阅[结构化异常处理 (C /C++)](structured-exception-handling-c-cpp.md)。
+使用[/ehs 或/ehsc](../build/reference/eh-exception-handling-model.md)编译器选项时，没有C++异常处理程序会处理结构化异常。 这些异常仅由 **__except**结构化异常处理程序或 **__finally**结构化终止处理程序处理。 有关信息，请参阅[结构化异常处理（C++C/）](structured-exception-handling-c-cpp.md)。
 
-下[/EHa](../build/reference/eh-exception-handling-model.md)编译器选项时，如果在引发 C 异常，则C++程序，它可以处理结构化的异常处理程序与其关联筛选器或通过C++**捕获**处理程序，无论是动态接近异常上下文。 例如，下面的 C++ 程序引发了 C 异常在 C++**重**上下文：
+在[/eha](../build/reference/eh-exception-handling-model.md)编译器选项下，如果C++程序中引发了 C 异常，则它可以由结构化异常处理程序（与其关联的筛选器或C++ **catch**处理程序）处理，以动态接近异常快捷. 例如，下面的示例C++程序在C++ **try**上下文中引发了 C 异常：
 
-## <a name="example---catch-a-c-exception-in-a-c-catch-block"></a>示例-在 Catch C 异常C++catch 块
+## <a name="example---catch-a-c-exception-in-a-c-catch-block"></a>示例-捕获C++ catch 块中的 C 异常
 
 ```cpp
 // exceptions_Exception_Handling_Differences.cpp
@@ -62,9 +63,9 @@ Caught a C exception.
 
 ## <a name="c-exception-wrapper-classes"></a>C 异常包装器类
 
-可以在类似上面的简单示例中，捕获的 C 异常只能由省略号 (**...**)**捕获**处理程序。 有关类型或异常性质的信息不传递给该处理程序。 尽管此方法有效，在某些情况下您可能想要定义两个异常处理模式之间进行转换，使每个 C 异常不与特定的类相关联。 为此，您可以定义 C 异常“包装器”类，可以使用该类或从中进行派生以将特定类类型特性化为 C 异常。 通过此操作，每个 C 异常可以单独处理由特定C++**捕获**处理程序，而不是所有这些单个处理程序中。
+在类似上述的简单示例中，C 异常只能由省略号（ **...** ）捕获**catch**处理程序。 有关类型或异常性质的信息不传递给该处理程序。 尽管此方法有效，但在某些情况下，您可能需要在两个异常处理模型之间定义转换，以便每个 C 异常与一个特定类关联。 若要转换一个，可以定义一个 C 异常 "包装" 类，该类可用于将特定类类型属性为 C 异常。 这样，每个 C 异常都可以由特定C++的**catch**处理程序单独处理，而不是在单个处理程序中单独处理。
 
-您的包装器类可能有一个接口，该接口包含一些成员函数，用来确定异常的值以及访问 C 异常模型提供的扩展异常上下文信息。 您可能还需要定义默认构造函数和构造函数接受**无符号的 int**参数 （用于提供基础 C 异常表示形式），和一个按位复制构造函数。 下面是可能的 C 异常包装器类实现：
+您的包装器类可能有一个接口，该接口包含一些成员函数，用来确定异常的值以及访问 C 异常模型提供的扩展异常上下文信息。 你可能还需要定义默认构造函数和接受**无符号 int**自变量的构造函数（以提供基础 C 异常表示形式）和按位复制构造函数。 下面是 C 异常包装器类的可能实现：
 
 ```cpp
 // exceptions_Exception_Handling_Differences2.cpp
@@ -83,9 +84,9 @@ public:
 };
 ```
 
-若要使用此类，请安装由内部异常处理机制每次引发 C 异常时调用的自定义 C 异常转换函数。 在你的转换函数，你可以引发任何类型化的异常 (可能是`SE_Exception`类型或类类型派生自`SE_Exception`)，可由适当匹配 C++ 捕获**捕获**处理程序。 转换函数可能直接返回，这表示它没有处理异常。 如果转换功能本身引起了 C 异常，[终止](../c-runtime-library/reference/terminate-crt.md)调用。
+若要使用此类，请安装自定义 C 异常转换函数，该函数在每次引发 C 异常时由内部异常处理机制调用。 在你的转换函数，你可以引发任何类型化的异常 (可能是`SE_Exception`类型或类类型派生自`SE_Exception`)，可由适当匹配 C++ 捕获**捕获**处理程序。 转换函数可以返回，这表示它不处理异常。 如果转换函数本身引发 C 异常，则调用[终止](../c-runtime-library/reference/terminate-crt.md)。
 
-若要指定自定义转换函数，请调用[_set_se_translator](../c-runtime-library/reference/set-se-translator.md)函数和转换函数作为其单个参数的名称。 您编写的转换函数的堆栈上的具有每个函数调用一次**尝试**块。 没有默认转换函数;如果未指定某个通过调用 **_set_se_translator**，仅可由省略号捕获到 C 异常**捕获**处理程序。
+若要指定自定义转换函数，请使用您的转换函数的名称作为其单个参数来调用[_set_se_translator](../c-runtime-library/reference/set-se-translator.md)函数。 对于包含**try**块的堆栈上的每个函数调用，将调用您编写的转换函数一次。 没有默认的转换函数;如果未通过调用 **_set_se_translator**指定一个，则只能通过省略号**catch**处理程序捕获 C 异常。
 
 ## <a name="example---use-a-custom-translation-function"></a>示例-使用自定义转换函数
 
@@ -145,4 +146,4 @@ nSE = 0xc0000094
 
 ## <a name="see-also"></a>请参阅
 
-[混合 C （结构化） 和C++异常](../cpp/mixing-c-structured-and-cpp-exceptions.md)
+[混合 C （结构化） C++和异常](../cpp/mixing-c-structured-and-cpp-exceptions.md)
