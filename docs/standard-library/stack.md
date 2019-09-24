@@ -7,12 +7,12 @@ helpviewer_keywords:
 - stack, stack header
 - stack header
 ms.assetid: 89d8999e-c773-46f2-86c1-4b3b5aedb1c1
-ms.openlocfilehash: 8a31ccd553638b9b548db89a191da40bc513a05f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f6c51d85aa4a9f5516fe08dad163274051d94c13
+ms.sourcegitcommit: b3d19b5f59f3a5d90c24f9f16c73bad4c5eb6944
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453775"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71195832"
 ---
 # <a name="ltstackgt"></a>&lt;stack&gt;
 
@@ -39,12 +39,6 @@ ms.locfileid: "68453775"
 |[operator==](../standard-library/stack-operators.md#op_eq_eq)|测试运算符左侧的堆栈对象是否等于右侧的堆栈对象。|
 |[operator>](../standard-library/stack-operators.md#op_gt)|测试运算符左侧的堆栈对象是否大于右侧的堆栈对象。|
 |[operator>=](../standard-library/stack-operators.md#op_gt_eq)|测试运算符左侧的堆栈对象是否大于或等于右侧的堆栈对象。|
-
-### <a name="functions"></a>函数
-
-|||
-|-|-|
-|[swap]()||
 
 ### <a name="classes"></a>类
 
