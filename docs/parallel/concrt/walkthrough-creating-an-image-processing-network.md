@@ -6,10 +6,10 @@ helpviewer_keywords:
 - creating image-processing networks [Concurrency Runtime]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
 ms.openlocfilehash: 680037e0e14c3ebd9171cacf477520e025eecebe
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69512160"
 ---
 # <a name="walkthrough-creating-an-image-processing-network"></a>演练：创建图像处理网络
@@ -138,7 +138,7 @@ ms.locfileid: "69512160"
 
 在此示例中，对象使图像处理网络可以在处理完所有图像后通知主应用程序。`countdown_event` 当计数器值达到零时， `countdown_event` 类使用[concurrency：：event](../../parallel/concrt/reference/event-class.md)对象进行信号。 主应用程序每次向网络发送文件名时都会递增计数器的值。 在处理每个图像后，网络的终端节点会递减计数器。 在主应用程序遍历指定的目录后，它会等待`countdown_event`对象通知其计数器已达到零。
 
-下面的示例演示`countdown_event`了类：
+下面的示例演示`countdown_event`了类:
 
 [!code-cpp[concrt-image-processing-filter#14](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_13.cpp)]
 

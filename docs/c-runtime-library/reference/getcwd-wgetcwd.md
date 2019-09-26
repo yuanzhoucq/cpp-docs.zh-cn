@@ -1,6 +1,7 @@
 ---
 title: _getcwd、_wgetcwd
-ms.date: 11/04/2016
+description: C 运行时库函数 _getcwd，_wgetcwd 获取当前工作目录。
+ms.date: 09/24/2019
 api_name:
 - _wgetcwd
 - _getcwd
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - wgetcwd function
 - directories [C++], current working
 ms.assetid: 888dc8c6-5595-4071-be55-816b38e3e739
-ms.openlocfilehash: 78b02871aafca85db50df2eea74a2210c578c204
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 27cfdc1eb59c2de788bbe5963a6fccffcb62cba0
+ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955249"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274630"
 ---
 # <a name="_getcwd-_wgetcwd"></a>_getcwd、_wgetcwd
 
@@ -62,10 +63,10 @@ wchar_t *_wgetcwd(
 
 ### <a name="parameters"></a>参数
 
-*buffer*<br/>
+*宽限*\
 路径的存储位置。
 
-*maxlen*<br/>
+*maxlen*\
 路径的最大长度（字符）： **char** for **_getcwd** ， **wchar_t**用于 **_wgetcwd**。
 
 ## <a name="return-value"></a>返回值
@@ -78,7 +79,7 @@ wchar_t *_wgetcwd(
 
 **_Getcwd**函数获取默认驱动器的当前工作目录的完整路径，并将其存储在*缓冲区*中。 整数参数*maxlen*指定路径的最大长度。 如果路径长度（包括终止 null 字符）超过*maxlen*，则会出现错误。 *Buffer*参数可以为**NULL**;使用**malloc**自动分配*maxlen*大小至少为（仅在必要时更多）的缓冲区，以存储路径。 稍后可通过调用**free**并向其传递 **_getcwd**返回值（指向已分配缓冲区的指针）来释放此缓冲区。
 
-**_getcwd**返回一个字符串，该字符串表示当前工作目录的路径。 如果当前工作目录是根，则字符串以反斜杠（ **\\** ）结尾。 如果当前工作目录为根目录之外的目录，则字符串以目录名称结尾，而不是以反斜杠结尾。
+**_getcwd**返回一个字符串，该字符串表示当前工作目录的路径。 如果当前工作目录是根，则字符串以反斜杠（`\`）结尾。 如果当前工作目录为根目录之外的目录，则字符串以目录名称结尾，而不是以反斜杠结尾。
 
 **_wgetcwd**是 **_getcwd**的宽字符版本; **_wgetcwd**的*buffer*参数和返回值是宽字符字符串。 否则， **_wgetcwd**和 **_getcwd**的行为相同。
 
@@ -103,26 +104,28 @@ wchar_t *_wgetcwd(
 
 ```C
 // crt_getcwd.c
+// Compile with: cl /W4 crt_getcwd.c
 // This program places the name of the current directory in the
 // buffer array, then displays the name of the current directory
 // on the screen. Passing NULL as the buffer forces getcwd to allocate
 // memory for the path, which allows the code to support file paths
 // longer than _MAX_PATH, which are supported by NTFS.
 
-#include <direct.h>
-#include <stdlib.h>
-#include <stdio.h>
+#include <direct.h> // _getcwd
+#include <stdlib.h> // free, perror
+#include <stdio.h>  // printf
+#include <string.h> // strlen
 
 int main( void )
 {
    char* buffer;
 
    // Get the current working directory:
-   if( (buffer = _getcwd( NULL, 0 )) == NULL )
+   if ( (buffer = _getcwd( NULL, 0 )) == NULL )
       perror( "_getcwd error" );
    else
    {
-      printf( "%s \nLength: %d\n", buffer, strnlen(buffer) );
+      printf( "%s \nLength: %zu\n", buffer, strlen(buffer) );
       free(buffer);
    }
 }
@@ -134,7 +137,7 @@ C:\Code
 
 ## <a name="see-also"></a>请参阅
 
-[目录控制](../../c-runtime-library/directory-control.md)<br/>
-[_chdir、_wchdir](chdir-wchdir.md)<br/>
-[_mkdir、_wmkdir](mkdir-wmkdir.md)<br/>
-[_rmdir、_wrmdir](rmdir-wrmdir.md)<br/>
+[目录控制](../../c-runtime-library/directory-control.md)\
+[_chdir、_wchdir](chdir-wchdir.md)\
+[_mkdir、_wmkdir](mkdir-wmkdir.md)\
+[_rmdir、_wrmdir](rmdir-wrmdir.md)

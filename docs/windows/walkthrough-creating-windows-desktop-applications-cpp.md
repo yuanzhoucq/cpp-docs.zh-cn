@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Windows Desktop applications [C++]
 - Windows API [C++]
 ms.openlocfilehash: 8bc2a42c5a9006065e2f0f4ecb70911e0055823e
-ms.sourcegitcommit: bf724dfc639b16d5410fab72183f8e6b781338bc
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "71062072"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>演练：创建传统的 Windows 桌面应用程序C++（）
@@ -583,7 +583,7 @@ Windows API （也称为 Win32 API、Windows 桌面 API 和 Windows Classic API�
    }
    ```
 
-1. 在“生成”菜单上，选择“生成解决方案”。 编译的结果应出现在 Visual Studio 的“输出”窗口中。
+1. 在 **“生成”** 菜单上，选择 **“生成解决方案”** 。 编译的结果应出现在 Visual Studio 的“输出”窗口中。
 
    ![生成 DesktopApp 项目](../build/media/desktop-app-project-build-150.gif "生成 DesktopApp 项目")
 
