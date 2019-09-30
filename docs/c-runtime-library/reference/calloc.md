@@ -1,6 +1,7 @@
 ---
 title: calloc
-ms.date: 11/04/2016
+description: C 运行时库函数 calloc 分配零初始化内存。
+ms.date: 09/27/2019
 api_name:
 - calloc
 api_location:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - memory allocation, arrays
 - calloc function
 ms.assetid: 17bb79a1-98cf-4096-90cb-1f9365cd6829
-ms.openlocfilehash: ba498b35106f9ff1636bb1bc0764088a434b5b01
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 228ec6d01a6f57ff98a9030f5a6d82e4c57388cd
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939329"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685368"
 ---
 # <a name="calloc"></a>calloc
 
@@ -40,12 +41,12 @@ ms.locfileid: "70939329"
 
 ```C
 void *calloc(
-   size_t num,
+   size_t number,
    size_t size
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>Parameters
 
 *number*<br/>
 元素数量。
@@ -63,17 +64,19 @@ void *calloc(
 
 如果内存分配失败或请求的内存量超过 **_HEAP_MAXREQ**， **calloc**将**errno**设置为**ENOMEM** 。 有关此代码及其他错误代码的信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-**calloc**调用**malloc**来使用C++ [_set_new_mode](set-new-mode.md)函数设置新的处理程序模式。 新处理程序模式指示在失败时， **malloc**是否调用由[_set_new_handler](set-new-handler.md)设置的新处理程序例程。 默认情况下，在无法分配内存时， **malloc**不会调用新的处理程序例程。 您可以重写此默认行为，以便在**calloc**无法分配内存时， **malloc**会调用新的处理程序例程，其方式与在同一原因下**新**运算符失败时相同。 若要重写默认值，请在程序的早期调用：
+在 Microsoft 实现中，如果*数字*或*大小*为零，则**calloc**将返回指向分配的非零大小块的指针。 尝试通过返回指针读取或写入会导致未定义的行为。
+
+**calloc**使用C++ [_set_new_mode](set-new-mode.md)函数设置*新的处理程序模式*。 新处理程序模式指示在失败时， **calloc**是否调用由[_set_new_handler](set-new-handler.md)设置的新处理程序例程。 默认情况下， **calloc**不会在失败时调用新的处理程序例程来分配内存。 您可以重写此默认行为，以便在**calloc**无法分配内存时，它将调用新的处理程序例程，其方式与在同一原因下**新**运算符失败时相同。 若要重写默认值，请在程序的早期调用：
 
 ```C
 _set_new_mode(1);
 ```
 
-或链接到 NEWMODE.OBJ（请参阅[链接选项](../../c-runtime-library/link-options.md)）。
+早于程序，或与 Newmode.obj 链接 *。OBJ* （请参阅[链接选项](../../c-runtime-library/link-options.md)）。
 
 当应用程序与调试版的 C 运行时库链接时， **calloc**解析为[_calloc_dbg](calloc-dbg.md)。 有关在调试过程中如何托管堆的详细信息，请参阅 [CRT 调试堆](/visualstudio/debugger/crt-debug-heap-details)。
 
-**calloc**被标记`__declspec(noalias)` `__declspec(restrict)`为，这意味着该函数保证不修改全局变量，并且返回的指针没有化名。 有关详细信息，请参阅 [noalias](../../cpp/noalias.md) 和[限制](../../cpp/restrict.md)。
+**calloc**标记为 `__declspec(noalias)` 和 `__declspec(restrict)`，这意味着该函数保证不修改全局变量，并且返回的指针没有化名。 有关详细信息，请参阅 [noalias](../../cpp/noalias.md) 和[限制](../../cpp/restrict.md)。
 
 ## <a name="requirements"></a>要求
 
