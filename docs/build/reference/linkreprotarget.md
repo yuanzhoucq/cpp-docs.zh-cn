@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /LINKREPROTARGET linker option
 - -LINKREPROTARGET linker option
 - linker repro reporting
-ms.openlocfilehash: 4912e8bc64d31e3ecc97ea25783c7329e7d7861c
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: d629c4c2665239d03f38569677fa579b6c8d37e0
+ms.sourcegitcommit: a361362354f6ce51eda4ffdb016b81c24cd225cb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71686904"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712689"
 ---
 # <a name="linkreprotarget-link-repro-file-name"></a>/LINKREPROTARGET （链接重现文件名）
 
@@ -38,6 +38,8 @@ ms.locfileid: "71686904"
 有关如何以及何时创建链接重现的详细信息，请参阅[如何使用 Microsoft C++工具集报告问题](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md)的[链接重现](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md#link-repros)部分。
 
 必须设置 **/LINKREPRO**和[/Out](out-output-file-name.md)选项， **/LINKREPROTARGET**选项才能生效。
+
+**/LINKREPROTARGET**可从 Visual Studio 2019 版本16.1 开始使用。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 

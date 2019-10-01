@@ -5,12 +5,12 @@ helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: ac6ad3b5bbe5f3a738dc0019a43ff08a17cf27ca
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: f74c413a81a1da6398666a0c15936cb76b5a7144
+ms.sourcegitcommit: a361362354f6ce51eda4ffdb016b81c24cd225cb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685710"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712674"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>默认关闭的编译器警告
 
@@ -150,13 +150,13 @@ ms.locfileid: "71685710"
 |C5042 （等级3）|"*function*"：不能在标准C++中指定块范围内的函数声明;删除 "inline" 说明符<sup>15.5</sup>|
 |[C5045](../error-messages/compiler-warnings/c5045.md)|如果/Qspectre 开关指定<sup>15.7</sup> ，编译器将插入内存加载的 Spectre 缓解|
 
-<sup>14.1</sup>从 Visual Studio 2015 Update 1 开始提供此警告。 <br/>
-<sup>14.3</sup>从 Visual Studio 2015 Update 3 开始提供此警告。 <br/>
-<sup>15.3</sup>从 Visual Studio 2017 版本15.3 开始，此警告已推出。 <br/>
-<sup>15.5</sup>从 Visual Studio 2017 版本15.5 开始，此警告已推出。 <br/>
-<sup>15.7</sup>从 Visual Studio 2017 版本15.7 开始，此警告已推出。 <br/>
-<sup>15.8</sup>从 Visual Studio 2017 版本15.8 开始，此警告已推出。 <br/>
-<sup>16.0</sup>从 Visual STUDIO 2019 RTM 开始，此警告已推出。 <br/>
+<sup>14.1</sup>从 Visual Studio 2015 Update 1 开始提供此警告。 \
+<sup>14.3</sup>从 Visual Studio 2015 Update 3 开始提供此警告。 \
+<sup>15.3</sup>从 Visual Studio 2017 版本15.3 开始，此警告已推出。
+<sup>15.5</sup>从 Visual Studio 2017 版本15.5 开始，此警告已推出。
+<sup>15.7</sup>从 Visual Studio 2017 版本15.7 开始，此警告已推出。
+<sup>15.8</sup>从 Visual Studio 2017 版本15.8 开始，此警告已推出。
+<sup>16.0</sup>在 Visual STUDIO 2019 RTM 中开始提供此警告。 \
 <sup>永久状态</sup>除非设置了[/permissive-](../build/reference/permissive-standards-conformance.md)编译器选项，否则将关闭此警告。
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>默认情况下，在早期版本中关闭警告
