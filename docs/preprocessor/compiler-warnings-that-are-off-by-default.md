@@ -150,13 +150,13 @@ ms.locfileid: "71712674"
 |C5042 （等级3）|"*function*"：不能在标准C++中指定块范围内的函数声明;删除 "inline" 说明符<sup>15.5</sup>|
 |[C5045](../error-messages/compiler-warnings/c5045.md)|如果/Qspectre 开关指定<sup>15.7</sup> ，编译器将插入内存加载的 Spectre 缓解|
 
-<sup>14.1</sup>从 Visual Studio 2015 Update 1 开始提供此警告。 \
-<sup>14.3</sup>从 Visual Studio 2015 Update 3 开始提供此警告。 \
-<sup>15.3</sup>从 Visual Studio 2017 版本15.3 开始，此警告已推出。
-<sup>15.5</sup>从 Visual Studio 2017 版本15.5 开始，此警告已推出。
-<sup>15.7</sup>从 Visual Studio 2017 版本15.7 开始，此警告已推出。
-<sup>15.8</sup>从 Visual Studio 2017 版本15.8 开始，此警告已推出。
-<sup>16.0</sup>在 Visual STUDIO 2019 RTM 中开始提供此警告。 \
+<sup>14.1</sup>从 Visual Studio 2015 Update 1 开始提供此警告。\
+<sup>14.3</sup>从 Visual Studio 2015 Update 3 开始提供此警告。\
+<sup>15.3</sup>从 Visual Studio 2017 版本15.3 开始，此警告已推出。\
+<sup>15.5</sup>从 Visual Studio 2017 版本15.5 开始，此警告已推出。\
+<sup>15.7</sup>从 Visual Studio 2017 版本15.7 开始，此警告已推出。\
+<sup>15.8</sup>从 Visual Studio 2017 版本15.8 开始，此警告已推出。\
+<sup>16.0</sup>在 Visual STUDIO 2019 RTM 中开始提供此警告。\
 <sup>永久状态</sup>除非设置了[/permissive-](../build/reference/permissive-standards-conformance.md)编译器选项，否则将关闭此警告。
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>默认情况下，在早期版本中关闭警告
