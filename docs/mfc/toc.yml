@@ -1023,7 +1023,7 @@
             - name: 对话框的生命周期
               expanded: false
               items:
-                - name: 对话框的生命周期
+                - name: 在 MFC 中使用对话框
                   href: life-cycle-of-a-dialog-box.md
                 - name: 创建并显示对话框
                   href: creating-and-displaying-dialog-boxes.md
