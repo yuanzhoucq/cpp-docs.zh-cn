@@ -25,7 +25,7 @@ ms.locfileid: "70220196"
 
 ## <a name="syntax"></a>语法
 
-> **#using***文件*[**as_friend**]
+> **#using** *文件* [ **as_friend**]
 
 ### <a name="parameters"></a>参数
 
