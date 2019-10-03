@@ -3,12 +3,12 @@ title: 按字母顺序列出的编译器选项
 ms.date: 08/08/2019
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 90c7ee5637a5d1e0f9d48c0f128364ee0df73dab
-ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
+ms.openlocfilehash: 39dd11245ef88d1d59d3eda8cbeaa5fc4494b9a8
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70273637"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685332"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>按字母顺序列出的编译器选项
 
@@ -36,8 +36,8 @@ ms.locfileid: "70273637"
 |[/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|将预处理器输出复制到标准输出。|
 |[/errorReport](errorreport-report-internal-compiler-errors.md)|允许你将内部编译器错误（ICE）信息直接提供给 Microsoft C++团队。|
 |[/execution-charset](execution-charset-set-execution-character-set.md)|设置执行字符集。|
-|[/experimental： module](experimental-module.md)|启用实验性模块支持。|
-|[/experimental：预处理器](experimental-preprocessor.md)|启用实验相容预处理器支持。|
+|[/experimental:module](experimental-module.md)|启用实验性模块支持。|
+|[/experimental:preprocessor](experimental-preprocessor.md)|启用实验相容预处理器支持。|
 |[/F](f-set-stack-size.md)|设置堆栈大小。|
 |[/favor](favor-optimize-for-architecture-specifics.md)|生成针对特定 x64 体系结构或适用于 AMD64 和扩展内存64技术（EM64T）体系结构中的微体系结构的详细信息进行优化的代码。|
 |[/FA](fa-fa-listing-file.md)|创建列表文件。|
@@ -99,7 +99,7 @@ ms.locfileid: "70273637"
 |[/Od](od-disable-debug.md)|禁用优化。|
 |[/Og](og-global-optimizations.md)|已否决。 使用全局优化。|
 |[/Oi](oi-generate-intrinsic-functions.md)|生成内部函数。|
-|[/openmp](openmp-enable-openmp-2-0-support.md)|启用源代码[`#pragma omp`](../../preprocessor/omp.md)中的指令。|
+|[/openmp](openmp-enable-openmp-2-0-support.md)|在源代码中启用[`#pragma omp`](../../preprocessor/omp.md)指令。|
 |[/Os](os-ot-favor-small-code-favor-fast-code.md)|代码大小优先。|
 |[/Ot](os-ot-favor-small-code-favor-fast-code.md)|代码速度优先。|
 |[/Ox](ox-full-optimization.md)|不包含/GF 或/Gy. 的/O2 子集|
@@ -157,6 +157,7 @@ ms.locfileid: "70273637"
 |[/Ze](za-ze-disable-language-extensions.md)|已否决。 启用语言扩展。|
 |[/Zf](zf.md)|在并行生成中改善 PDB 生成时间。|
 |[/Zg](zg-generate-function-prototypes.md)|在 Visual Studio 2015 中移除。 生成函数原型。|
+|[/ZH](zh.md)|为调试信息中的校验和指定 MD5、SHA-1 或 SHA-256。|
 |[/ZI](z7-zi-zi-debug-information-format.md)|将调试信息包含在与“编辑并继续”兼容的程序数据库中。|
 |[/Zi](z7-zi-zi-debug-information-format.md)|生成完整的调试信息。|
 |[/Zl](zl-omit-default-library-name.md)|从 .obj 文件中移除默认库名（仅限 x86）。|

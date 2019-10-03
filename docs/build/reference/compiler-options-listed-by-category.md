@@ -4,12 +4,12 @@ ms.date: 08/08/2019
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: bfc9bb17100a3ee5c662062963c71ee532487239
-ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
+ms.openlocfilehash: 8c99b2dd60e6c2266d5095a477ee4a5b2e0c8bd0
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70273721"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685196"
 ---
 # <a name="compiler-options-listed-by-category"></a>按类别列出的编译器选项
 
@@ -122,6 +122,7 @@ ms.locfileid: "70273721"
 |[/Zc](zc-conformance.md)|指定在 [/Ze](za-ze-disable-language-extensions.md)下的标准行为。|
 |[/Ze](za-ze-disable-language-extensions.md)|已否决。 启用 C89 语言扩展。|
 |[/Zf](zf.md)|在并行生成中改善 PDB 生成时间。|
+|[/ZH](zh.md)|为调试信息中的校验和指定 MD5、SHA-1 或 SHA-256。|
 |[/ZI](z7-zi-zi-debug-information-format.md)|将调试信息包含在与“编辑并继续”兼容的程序数据库中。 (仅限 x86)|
 |[/Zi](z7-zi-zi-debug-information-format.md)|生成完整的调试信息。|
 |[/Zl](zl-omit-default-library-name.md)|从 .obj 文件中移除默认库名。|
@@ -171,7 +172,7 @@ ms.locfileid: "70273721"
 |[/TP](tc-tp-tc-tp-specify-source-file-type.md)|指定所有源文件C++。|
 |[/V](v-version-number.md)|已否决。 设置版本字符串。|
 |[/w](compiler-option-warning-level.md)|禁用所有警告。|
-|[/W0、/W1、/W2、/W3、/W4](compiler-option-warning-level.md)|设置输出警告级别。|
+|[/W0, /W1, /W2, /W3, /W4](compiler-option-warning-level.md)|设置输出警告级别。|
 |[/W1、/W2、/W3、/W4](compiler-option-warning-level.md)|针对指定的警告设置警告级别。|
 |[/Wall](compiler-option-warning-level.md)|启用所有警告，包括默认情况下禁用的警告。|
 |[/wd](compiler-option-warning-level.md)|禁用指定的警告。|
@@ -201,7 +202,7 @@ ms.locfileid: "70273721"
 
 |选项|用途|
 |------------|-------------|
-|[/experimental： module](experimental-module.md)|启用实验性模块支持。|
+|[/experimental:module](experimental-module.md)|启用实验性模块支持。|
 |[/experimental：预处理器](experimental-preprocessor.md)|启用实验相容预处理器支持。|
 
 ## <a name="deprecated-and-removed-compiler-options"></a>弃用并删除的编译器选项
