@@ -4,12 +4,12 @@ ms.date: 10/01/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 52ca34ef8522ada1881e2f7f5df212167c64c919
-ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
+ms.openlocfilehash: 168f5b0aac34757a9c2d73bcebc908a0d58721fe
+ms.sourcegitcommit: b85e1db6b7d4919852ac6843a086ba311ae97d40
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816419"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71925577"
 ---
 # <a name="cmake-projects-in-visual-studio"></a>Visual Studio 中的 CMake 项目
 
@@ -58,12 +58,6 @@ Visual Studio 使用名为**CMakeSettings**的文件来存储 cmake 的环境变
 
 > [!NOTE]
 > 对于其他类型的打开文件夹项目，使用另外两个 JSON 文件：**Cppproperties.json**和**任务。** 这些都与 CMake 项目无关。
-
-## <a name="import-an-existing-cache"></a>导入现有缓存
-
-导入现有 CMakeCache.txt 文件时，Visual Studio 自动提取自定义的变量，并基于这些变量创建一个预填充的 **CMakeSettings.json** 文件。 不会以任何方式修改原始缓存，并且仍可从命令行或者借助用于生成原始缓存的工具或 IDE 使用该原始缓存。 新的**CMakeSettings**文件与项目的根 cmakelists.txt 放置在一起。 Visual Studio 基于设置文件生成新的缓存。 可以在 "**工具" > 选项 "> CMake" > "常规**" 对话框中覆盖自动缓存生成。
-
-并非缓存中的所有内容都会被导入。 生成器和编译器的位置等属性替换为已知适合用于 IDE 的默认值。
 
 ## <a name="open-an-existing-cache"></a>打开现有缓存
 
