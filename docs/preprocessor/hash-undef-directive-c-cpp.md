@@ -21,7 +21,7 @@ ms.locfileid: "70220213"
 
 ## <a name="syntax"></a>语法
 
-> **#undef***标识符*
+> **#undef** *标识符*
 
 ## <a name="remarks"></a>备注
 
