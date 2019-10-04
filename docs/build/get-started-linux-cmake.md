@@ -4,12 +4,12 @@ description: 本教程介绍如何在同时面向 Linux 和 Windows 的 Visual S
 author: mikeblome
 ms.topic: tutorial
 ms.date: 03/05/2019
-ms.openlocfilehash: f184cc2ce3eaf3adcc936bd723019956b5b23dc9
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: cd01d5e389bda46fbb05d297ece8e68ef2265725
+ms.sourcegitcommit: c53a3efcc5d51fc55fa57ac83cca796b33ae888f
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220857"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71960730"
 ---
 # <a name="tutorial-create-c-cross-platform-projects-in-visual-studio"></a>教程：在 Visual Studio 中创建 C++ 跨平台项目 
 
@@ -24,16 +24,16 @@ Visual Studio C 和 C++ 开发不再仅适用于 Windows。 本教程介绍如�
 > * 添加与 Linux 计算机的连接
 > * 在 Linux 上生成和调试相同的目标
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 - 设置适用于跨平台 C++ 开发的 Visual Studio
     - 首先你需要[安装 Visual Studio](https://visualstudio.microsoft.com/vs/)。 接下来，确认安装了“使用 C++ 的桌面开发”和“使用 C++ 的 Linux 开发”工作负载。 此最小安装仅有 3 GB，根据下载速度安装不应超过 10 分钟。
 - 设置适用于跨平台 C++ 开发的 Linux 计算机
     - Visual Studio 不需要任何特定的 Linux 发行版。 OS 可以在物理计算机、VM 种、云或 Linux Windows 子系统 (WSL) 上运行。 但是，本教程需要一个图形环境；因此不推荐 WSL，因为它主要用于命令行操作。
-    - Visual Studio 在 Linux 计算机上需要的工具是：C++ 编译器、GDB、ssh 和 zip。 在基于 Debian 的系统上，可以按如下方式安装这些依赖项。
+    - Visual Studio 在 Linux 计算机上需要的工具是：C++编译器、GDB、ssh、rsync 和 zip。 在基于 Debian 的系统上，可以按如下方式安装这些依赖项。
     
     ```cmd
-        sudo apt install -y openssh-server build-essential gdb zip
+        sudo apt install -y openssh-server build-essential gdb rsync zip
     ```
     - Visual Studio 要求 Linux 计算机具有启用服务器模式的最新版 CMake（至少为 3.8 版）。 Microsoft 生成可以在任何 Linux 发行版上安装的通用 CMake 版本。 建议使用此版本以确保拥有最新功能。 可从 GitHub 上的 [CMake 存储库 Microsoft 分支](https://github.com/Microsoft/CMake/releases)获得 CMake 二进制文件。 转到该页面并下载与 Linux 计算机上的系统架构匹配的版本，然后将其标记为可执行文件：
     
@@ -95,7 +95,21 @@ git clone https://github.com/bulletphysics/bullet3.git
 
 3. 在 CMake 目标视图中展开节点以查看其源代码文件，无论这些文件位于磁盘上的哪个位置。
 
-## <a name="set-a-breakpoint-build-and-run"></a>设置断点、生成和运行
+## <a name="add-an-explicit-windows-x64-debug-configuration"></a>添加显式的 Windows x64-Debug 配置
+
+Visual Studio 将为 Windows 创建默认的**x64-调试**配置。 Visual Studio 可借助配置了解将在 CMake 中使用的平台目标。 磁盘上未显示默认配置。 显式添加配置时，Visual Studio 会创建一个名为 CMakeSettings.json 的文件，该文件将填充指定的所有配置的设置。 
+
+1. 单击工具栏中的“配置”下拉列表，然后选择“管理配置...”，添加新配置
+
+    ![“管理配置”下拉列表](media/cmake-bullet3-manage-configurations.png)
+
+    这将打开 " [CMake 设置编辑器](customize-cmake-settings.md)"。 选择编辑器左侧的绿色加号，以添加新配置。 随即将出现“将配置添加到 CMakeSettings”对话框。
+
+    ![将配置添加到 CMakeSettings 对话框](media/cmake-bullet3-add-configuration-x64-debug.png)
+
+    此对话框显示 Visual Studio 附带的所有配置，以及可能创建的任何自定义配置。 如果要继续使用**x64-调试**配置，则应为添加的第一个配置。 选择“x64-Debug”，然后单击“选择”。 这会创建 CMakeSettings 文件，其中包含**X64 调试**的配置，并将配置保存到磁盘。 可通过直接在 CMakeSettings.json 中更改名称参数来使用你喜欢的任何名称。
+
+## <a name="set-a-breakpoint-build-and-run-on-windows"></a>设置断点，在 Windows 上生成和运行 
 
 在此步骤中，我们将调试一个演示 Bullet Physics 库的示例程序。
   
@@ -121,23 +135,9 @@ git clone https://github.com/bulletphysics/bullet3.git
 
 6. 将鼠标移动到应用程序窗口，然后单击按钮以触发断点。 此操作会将 Visual Studio 带回到前台，其中编辑器显示执行暂停的行。 你将能够检查应用程序变量、对象、线程和内存。 可以以交互方式单步执行代码。 可以单击“继续”，让应用程序恢复并正常退出或使用“停止”按钮停止在 Visual Studio 中执行。
 
-## <a name="add-an-explicit-windows-x64-debug-configuration"></a>添加显式的 Windows x64-Debug 配置
-
-到目前为止，一直使用的是 Windows 的默认“x64-Debug”配置。 Visual Studio 可借助配置了解将在 CMake 中使用的平台目标。 磁盘上未显示默认配置。 显式添加配置时，Visual Studio 会创建一个名为 CMakeSettings.json 的文件，该文件将填充指定的所有配置的设置。 
-
-1. 单击工具栏中的“配置”下拉列表，然后选择“管理配置...”，添加新配置
-
-    ![“管理配置”下拉列表](media/cmake-bullet3-manage-configurations.png)
-
-    随即将出现“将配置添加到 CMakeSettings”对话框。
-
-    ![将配置添加到 CMakeSettings 对话框](media/cmake-bullet3-add-configuration-x64-debug.png)
-
-    此对话框显示 Visual Studio 附带的所有配置，以及可能创建的任何自定义配置。 如果要继续使用默认的“x64-Debug”配置，首先就应添加该配置。 通过添加该配置，将能够在 Windows 和 Linux 配置之间来回切换。 选择“x64-Debug”，然后单击“选择”。 这将创建具有“x64-Debug”配置的 CMakeSettings.json 文件，并切换 Visual Studio 以使用该配置而不是默认配置。 你将看到配置下拉列表不再显示“(默认)”作为名称的一部分。 可通过直接在 CMakeSettings.json 中更改名称参数来使用你喜欢的任何名称。
-
 ##  <a name="add-a-linux-configuration-and-connect-to-the-remote-machine"></a>添加 Linux 配置并连接到远程计算机
 
-1. 现在，添加 Linux 配置。 右键单击“解决方案资源管理器”视图中的 CMakeSettings.json 文件，然后选择“添加配置”。 此时将出现与之前相同的“将配置添加到 CMakeSettings”对话框。 选择“Linux-Debug”，然后保存 CMakeSettings.json 文件。 
+1. 现在，添加 Linux 配置。 右键单击“解决方案资源管理器”视图中的 CMakeSettings.json 文件，然后选择“添加配置”。 此时将出现与之前相同的“将配置添加到 CMakeSettings”对话框。 选择 " **Linux-调试**时间"，然后保存 CMakeSettings 文件（ctrl + s）。 
 2. 现在在配置下拉列表中选择“Linux-Debug”。
 
     ![使用“X64-Debug”和“Linux-Debug”选项启动配置下拉列表](media/cmake-bullet3-linux-configuration-item.png)
@@ -148,7 +148,7 @@ git clone https://github.com/bulletphysics/bullet3.git
 
     如果已添加远程连接，则可以通过导航到“工具”>“选项”>“跨平台”>“连接管理器”来打开此窗口。
  
-3. 提供 Linux 计算机的连接信息，然后单击“连接”。 Visual Studio 会将该计算机添加为 CMakeSettings.json 作为“Linux-Debug”的默认值。 它还会从远程计算机中下拉标头，以便在使用时获得特定于该计算机的 IntelliSense。 现在，Visual Studio 会将文件发送到远程计算机，然后在那里生成 CMake 缓存，完成后，Visual Studio 将配置为使用与该远程 Linux 计算机相同的源代码库。 这些步骤可能需要一些时间，具体取决于网络速度和远程计算机的功率。 当 CMake 输出窗口中出现“目标信息提取完成”消息时，你将知道这已完成。
+3. 向 Linux 计算机提供 [连接信息] （连接到 computer.md），然后单击 "**连接**"。 Visual Studio 会将该计算机作为 CMakeSettings 的默认连接添加到**Linux-调试**的默认连接。 它还将从远程计算机中请求标头，以便获取[特定于该远程连接的 IntelliSense](https://docs.microsoft.com/en-us/cpp/linux/configure-a-linux-project?view=vs-2019#remote_intellisense)。 现在，Visual Studio 会将文件发送到远程计算机，并在远程系统上生成 CMake 缓存。 这些步骤可能需要一些时间，具体取决于网络速度和远程计算机的功率。 当 CMake 输出窗口中出现“目标信息提取完成”消息时，你将知道这已完成。
 
 ## <a name="set-a-breakpoint-build-and-run-on-linux"></a>在 Linux 上设置断点、生成和运行
 
