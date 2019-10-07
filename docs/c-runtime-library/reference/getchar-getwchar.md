@@ -1,10 +1,10 @@
 ---
 title: getchar、getwchar
 ms.date: 11/04/2016
-apiname:
+api_name:
 - getchar
 - getwchar
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - getwchar
 - GetChar
@@ -27,12 +30,12 @@ helpviewer_keywords:
 - _gettchar function
 - standard input, reading from
 ms.assetid: 19fda588-3e33-415c-bb60-dd73c028086a
-ms.openlocfilehash: 5f8d7dbeb35c8818706eb6070df613df8654feb6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b969dc48e949efa02b807ec0ea442da7cb793e15
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287236"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955419"
 ---
 # <a name="getchar-getwchar"></a>getchar、getwchar
 
@@ -47,11 +50,11 @@ wint_t getwchar();
 
 ## <a name="return-value"></a>返回值
 
-返回读取的字符。 若要指示读取的错误或文件结尾条件**getchar**返回**EOF**，并**getwchar**返回**WEOF**。 有关**getchar**，使用**ferror**或**feof**来检查是否有错误或文件尾。
+返回读取的字符。 若要指示读取错误或文件尾条件， **getchar**将返回**EOF**，并且**getwchar**将返回**WEOF**。 对于**getchar**，请使用**ferror**或**feof**检查是否有错误或文件结束。
 
 ## <a name="remarks"></a>备注
 
-每个例程读取中的单个字符**stdin**并递增关联的文件指针以指向下一个字符。 **getchar**等同于[_fgetchar](fgetc-fgetwc.md)，但作为函数和宏实现。
+每个例程从**stdin**中读取单个字符，并递增关联的文件指针，使之指向下一个字符。 **getchar**与[_fgetchar](fgetc-fgetwc.md)相同，但它作为函数和宏实现。
 
 这些函数会锁定调用线程，因此是线程安全的。 有关非锁定版本，请参阅 [_getchar_nolock、_getwchar_nolock](getchar-nolock-getwchar-nolock.md)。
 
@@ -68,7 +71,7 @@ wint_t getwchar();
 |**getchar**|\<stdio.h>|
 |**getwchar**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台 (UWP) 应用中不支持控制台。 控制台中，与关联的标准流句柄**stdin**， **stdout**，并**stderr**，C 运行时函数可以在 UWP 应用中使用它们之前，必须重定向. 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台 (UWP) 应用中不支持控制台。 与控制台、 **stdin**、 **stdout**和**stderr**关联的标准流句柄必须重定向, 然后 C 运行时函数才能在 UWP 应用中使用它们。 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 

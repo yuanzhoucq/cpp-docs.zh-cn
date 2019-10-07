@@ -1,12 +1,12 @@
 ---
 title: isblank、iswblank、_isblank_l、_iswblank_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - isblank
 - _isblank_l
 - iswblank
 - _iswblank_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _iswblank_l
 - isblank
@@ -27,14 +30,14 @@ f1_keywords:
 - _isblank_l
 - iswblank
 ms.assetid: 33ce96c0-f387-411a-8283-c3d2a69e56bd
-ms.openlocfilehash: eb088c4056e2277e188d7f98a57dd36216d013ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 022eba0335facc597f0608d63cfb58e0146e0f23
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287070"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954522"
 ---
-# <a name="isblank-iswblank-isblankl-iswblankl"></a>isblank、iswblank、_isblank_l、_iswblank_l
+# <a name="isblank-iswblank-_isblank_l-_iswblank_l"></a>isblank、iswblank、_isblank_l、_iswblank_l
 
 确定整数是否表示空格字符。
 
@@ -67,11 +70,11 @@ int _iswblank_l(
 
 ## <a name="return-value"></a>返回值
 
-这些例程返回非零值如果*c*是空格或水平制表符的特定表示形式，或者是特定于区域设置的一系列用于文本行中分隔单词字符之一。 **isblank**返回非零值，如果*c*是空格字符 (0x20) 或水平制表符 (0x09)。 测试条件的结果**isblank**取决于函数**LC_CTYPE**类别设置的区域设置; 有关详细信息，请参阅[setlocale、 _wsetlocale](setlocale-wsetlocale.md). 不具有这些函数的版本 **_l**后缀，请使用当前区域设置的任何依赖于区域设置的行为; 具有的版本 **_l**后缀完全相同，只不过它们使用改用已传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+如果*c*是空格或水平制表符的特定表示形式，或者是用于在文本行中分隔单词的特定于区域设置的字符集中，则每个例程将返回非零值。 如果*c*是空格字符（0x20）或水平制表符（0x09），则**isblank**将返回一个非零值。 **Isblank**函数的测试条件的结果取决于区域设置的**LC_CTYPE**类别设置;有关详细信息，请参阅[setlocale、_wsetlocale](setlocale-wsetlocale.md)。 这些不带 **_l**后缀的函数的版本对与区域设置相关的行为使用当前区域设置;具有 **_l**后缀的版本是相同的，只不过它们使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-**iswblank**返回非零值，如果*c*是对应于标准空间的宽字符或水平制表符字符。
+如果*c*是对应于标准空格或水平制表符的宽字符，则**iswblank**将返回一个非零值。
 
-行为**isblank**并 **_isblank_l**未定义当*c*不是 EOF 或在范围 0 到 0xff 内，非独占。 使用调试 CRT 库时， *c*是不包含其中一个值，函数将引发断言。
+如果*c*不是 EOF 或介于0到0xff （含0和0xff），则**isblank**和 **_isblank_l**的行为是不确定的。 当使用调试 CRT 库并且*c*不是这些值之一时，函数将引发断言。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

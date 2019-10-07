@@ -1,42 +1,42 @@
 ---
 title: /DISASM
-ms.date: 1/17/2018
+ms.date: 01/17/2018
 f1_keywords:
 - /disasm
 helpviewer_keywords:
 - -DISASM dumpbin option
 - DISASM dumpbin option
 - /DISASM dumpbin option
-ms.openlocfilehash: 10e8187e896b3922438a8cf2dafa0aec4c91f904
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fb394b2266470e77c50ce5398aea961c37ac34fb
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272056"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927720"
 ---
 # <a name="disasm"></a>/DISASM
 
-打印 DUMPBIN 输出中的代码段的反汇编。
+在 DUMPBIN 输出中打印代码部分的反汇编。
 
 ## <a name="syntax"></a>语法
 
-> **/DISASM**{**:**\[**BYTES**|**NOBYTES**]}
+> **/DISASM**{ **：** \[BYTESNOBYTES|]}
 
 ### <a name="arguments"></a>自变量
 
 **BYTES**<br/>
-反汇编输出中包括与已解释的操作码和自变量的指令字节。 这是默认选项。
+包含指令字节以及反汇编输出中解释的操作码和参数。 这是默认选项。
 
 **NOBYTES**<br/>
-不反汇编输出中包括的指令的字节数。
+不会在反汇编输出中包含指令字节。
 
 ## <a name="remarks"></a>备注
 
-**/DISASM**选项显示代码段的反汇编文件中。 如果它们存在的文件中，它使用调试符号。
+**/DISASM**选项显示文件中代码段的反汇编。 如果文件中存在调试符号，则使用调试符号。
 
-**/DISASM**仅用于本机、 未托管的映像上。 托管代码的等效工具是[ILDASM](/dotnet/framework/tools/ildasm-exe-il-disassembler)。
+**/DISASM**应仅用于本机、非托管映像。 托管代码的等效工具是[ILDASM](/dotnet/framework/tools/ildasm-exe-il-disassembler)。
 
-仅[/HEADERS](headers.md) DUMPBIN 选项是可用于生成的文件[/GL （全程序优化）](gl-whole-program-optimization.md)编译器选项。
+只有[/HEADERS](headers.md) DUMPBIN 选项可用于由[/gl （全程序优化）](gl-whole-program-optimization.md)编译器选项生成的文件。
 
 ## <a name="see-also"></a>请参阅
 

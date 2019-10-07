@@ -1,10 +1,10 @@
 ---
 title: _execvpe，_wexecvpe
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _execvpe
 - _wexecvpe
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wexecvpe
 - execvpe
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - _wexecvpe function
 - _execvpe function
 ms.assetid: c0c3c986-d9c0-4814-a96c-10f0b3092766
-ms.openlocfilehash: 064f8b94a9a97795015c09c11cd56e0370dcc60c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eab63cd54d410daf1dd4d09fb3d904feca0a230d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339398"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941743"
 ---
-# <a name="execvpe-wexecvpe"></a>_execvpe，_wexecvpe
+# <a name="_execvpe-_wexecvpe"></a>_execvpe，_wexecvpe
 
 加载并运行新的子进程。
 
@@ -70,7 +73,7 @@ intptr_t _wexecvpe(
 
 ## <a name="return-value"></a>返回值
 
-如果成功，这些函数不返回到调用进程。 返回值-1 指示错误，在这种情况下**errno**设置全局变量。
+如果成功，这些函数不返回到调用进程。 返回值-1 表示错误，在这种情况下，将设置**errno**全局变量。
 
 |**errno**值|描述|
 |-------------------|-----------------|
@@ -85,9 +88,9 @@ intptr_t _wexecvpe(
 
 ## <a name="remarks"></a>备注
 
-其中每个函数都将加载并执行一个新进程，同时将一个指针数组传递给命令行自变量，并将一个指针数组传递给环境设置。 这些函数将使用**路径**环境变量查找要执行的文件。
+其中每个函数都将加载并执行一个新进程，同时将一个指针数组传递给命令行自变量，并将一个指针数组传递给环境设置。 这些函数使用**PATH**环境变量查找要执行的文件。
 
-**_Execvpe**函数验证其参数。 如果*cmdname*是空指针，或者如果*argv*为 null 指针、 指向一个空数组的指针或指向包含一个空字符串作为第一个参数的数组的指针，则这些函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许继续执行，这些函数将设置**errno**到**EINVAL**并返回-1。 不启动任何进程。
+**_Execvpe**函数验证其参数。 如果*cmdname*为 null 指针，或者*argv*为空指针、指向空数组的指针或指向包含空字符串作为第一个参数的数组的指针，则这些函数将调用无效参数处理程序，如中[所述。参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续, 则这些函数会将**errno**设置为**EINVAL** , 并返回-1。 不启动任何进程。
 
 ## <a name="requirements"></a>要求
 

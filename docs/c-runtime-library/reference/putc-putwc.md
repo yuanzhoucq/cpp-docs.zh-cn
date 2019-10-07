@@ -1,10 +1,10 @@
 ---
 title: putc、putwc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - putwc
 - putc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _puttc
 - putwc
@@ -29,12 +32,12 @@ helpviewer_keywords:
 - _puttc function
 - puttc function
 ms.assetid: a37b2e82-9d88-4565-8190-ff8d04c0ddb9
-ms.openlocfilehash: de87ca4996540737dad319fc920f4c76415250b9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2fcd0ea2263cd858b0b4ce855f96c0389956ccc3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62284860"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950101"
 ---
 # <a name="putc-putwc"></a>putc、putwc
 
@@ -63,13 +66,13 @@ wint_t putwc(
 
 ## <a name="return-value"></a>返回值
 
-返回写入的字符。 若要指示错误或文件结尾条件**putc**并**putchar**返回**EOF**;**putwc**并**putwchar**返回**WEOF**。 对于所有四种例程，使用 [ferror](ferror.md) 或 [feof](feof.md) 来检查是否存在错误或文件结尾。 如果为传递 null 指针*流*，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，这些函数将返回**EOF**或**WEOF**并设置**errno**到**EINVAL**。
+返回写入的字符。 若要指示错误或文件尾条件， **putc**和**putchar**返回**EOF**;**putwc**和**putwchar**返回**WEOF**。 对于所有四种例程，使用 [ferror](ferror.md) 或 [feof](feof.md) 来检查是否存在错误或文件结尾。 如果为*stream*传递了 null 指针，则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回**EOF**或**WEOF** ，并将**errno**设置为**EINVAL**。
 
 有关这些代码以及其他错误代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**Putc**例程将单个字符写入*c*到输出*流*当前位置。 可以将任何整数传递给**putc**，但写入低 8 位。 **Putchar**例程等同于`putc( c, stdout )`。 对于每个例程，如果发生读取错误，则会设置流的错误指示器。 **putc**和**putchar**类似于**fputc**并 **_fputchar**分别，但同时作为函数和宏实现 (请参阅[选择函数和宏](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md))。 **putwc**并**putwchar**宽字符版本的**putc**并**putchar**分别。 **putwc**并**putc**如果在 ANSI 模式下打开流，则行为相同。 **putc**当前不到 UNICODE 流支持输出。
+**Putc**例程将单个字符*c*写入当前位置的输出*流*中。 任何整数都可以传递到**putc**，但仅写入较低的8位。 **Putchar**例程与完全相同`putc( c, stdout )`。 对于每个例程，如果发生读取错误，则会设置流的错误指示器。 **putc**和**putchar**分别与**fputc**和 **_fputchar**相似，但同时作为函数和宏实现（请参阅在[函数和宏之间选择](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)）。 **putwc**和**putwchar**分别是**putc**和**putchar**的宽字符版本。 如果在 ANSI 模式下打开流，则**putwc**和**putc**的行为相同。 **putc**当前不支持输出到 UNICODE 流中。
 
 后缀为 **_nolock** 的版本是相同的，只不过它们可能会受到其他线程的影响。 有关详细信息，请参阅 **_putc_nolock、_putwc_nolock**。
 
@@ -86,7 +89,7 @@ wint_t putwc(
 |**putc**|\<stdio.h>|
 |**putwc**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台 (UWP) 应用中不支持控制台。 控制台中，与关联的标准流句柄**stdin**， **stdout**，并**stderr**，C 运行时函数可以在 UWP 应用中使用它们之前，必须重定向. 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台 (UWP) 应用中不支持控制台。 与控制台、 **stdin**、 **stdout**和**stderr**关联的标准流句柄必须重定向, 然后 C 运行时函数才能在 UWP 应用中使用它们。 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>库
 

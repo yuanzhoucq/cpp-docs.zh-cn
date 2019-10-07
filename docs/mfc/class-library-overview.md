@@ -1,6 +1,6 @@
 ---
 title: 类库概述
-ms.date: 11/04/2016
+ms.date: 09/17/2019
 f1_keywords:
 - vc.classes.mfc
 helpviewer_keywords:
@@ -10,18 +10,18 @@ helpviewer_keywords:
 - class libraries, MFC
 - class libraries
 ms.assetid: 9b0e3152-ac39-4f52-91b4-f20aa3a674aa
-ms.openlocfilehash: aec295ea93868ff1fe6e0d3d1d2370a344e47c73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23097c0bf3399a4dced6640f41c0d46dba101b26
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327309"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095947"
 ---
 # <a name="class-library-overview"></a>类库概述
 
-本概述分类并介绍在 Microsoft 基础类库 (MFC) 9.0 版的类。 在 MFC 中，集合在一起的类构成的应用程序框架 — 为 Windows API 编写的应用程序的框架。 您的编程任务是填充特定于你的应用程序的代码中。
+此概述分类并描述 Microsoft 基础类库（MFC）版本9.0 中的类。 MFC 中的类共同构成应用程序框架-应用程序框架是为 Windows API 编写的应用程序框架。 编程任务是在特定于应用程序的代码中进行填充。
 
-库的类是此处介绍以下类别：
+库的类在以下类别中提供：
 
 - [根类：CObject](../mfc/root-class-cobject.md)
 
@@ -71,7 +71,7 @@ ms.locfileid: "62327309"
 
 - [文件和数据库类](../mfc/file-and-database-classes.md)
 
-   - [文件 I/O 类](../mfc/file-i-o-classes.md)
+   - [文件 i/o 类](../mfc/file-i-o-classes.md)
 
    - [DAO 类](../mfc/dao-classes.md)
 
@@ -109,13 +109,13 @@ ms.locfileid: "62327309"
 
    - [异常类](../mfc/exception-classes.md)
 
-部分[常规类设计理念](../mfc/general-class-design-philosophy.md)介绍 MFC 库的设计方式。
+"[常规类设计](../mfc/general-class-design-philosophy.md)" 一节介绍了 MFC 库的设计方式。
 
-有关框架的概述，请参阅[使用为 Windows 编写应用程序类](../mfc/using-the-classes-to-write-applications-for-windows.md)。 上面列出的类的一些是通用类，可以在框架外使用，并提供有用的抽象，如集合、 异常、 文件和字符串。
+有关框架的概述，请参阅[使用类编写适用于 Windows 的应用程序](../mfc/using-the-classes-to-write-applications-for-windows.md)。 上面列出的某些类是通用类，可在框架外使用，并提供有用的抽象，如集合、异常、文件和字符串。
 
-若要查看类继承，请使用[类层次结构图表](../mfc/hierarchy-chart.md)。
+若要查看类的继承，请使用[类层次结构图](../mfc/hierarchy-chart.md)。
 
-除了本概述中列出的类，MFC 库还包含许多全局函数、 全局变量和宏。 概述和详细的列表，这些主题中[MFC 宏和全局](../mfc/reference/mfc-macros-and-globals.md)，后者按照字母顺序参考 MFC 选件类。
+除了本概述中列出的类之外，MFC 库还包含许多全局函数、全局变量和宏。 主题[Mfc Macros 和 Globals](../mfc/reference/mfc-macros-and-globals.md)中提供了这些方法的概述和详细列表，它们遵循对 mfc 类的字母引用。
 
 ## <a name="see-also"></a>请参阅
 

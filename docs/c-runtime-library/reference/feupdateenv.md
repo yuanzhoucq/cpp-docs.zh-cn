@@ -1,9 +1,9 @@
 ---
 title: feupdateenv
 ms.date: 04/05/2018
-apiname:
+api_name:
 - feupdateenv
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,19 +14,20 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: HeaderDef
+api_type:
+- HeaderDef
 f1_keywords:
 - feupdateenv
 - fenv/feupdateenv
 helpviewer_keywords:
 - feupdateenv function
 ms.assetid: 3d170042-dfd5-4e4f-a55f-038cf2296cc9
-ms.openlocfilehash: 6d553d6899f55f5bdfb3ff313e88abfcb56ab4ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f40cab42e4a89b1fc5a100587b11b0e2aeeb55c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334069"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940979"
 ---
 # <a name="feupdateenv"></a>feupdateenv
 
@@ -43,7 +44,7 @@ int feupdateenv(
 ### <a name="parameters"></a>参数
 
 *penv*<br/>
-指向**fenv_t**对象，其中包含作为组的浮点环境，通过调用[fegetenv](fegetenv1.md)或[feholdexcept](feholdexcept2.md)。 此外，也可以通过使用 FE_DFL_ENV 宏指定默认启动浮点环境。
+指向**fenv_t**对象的指针，该对象包含通过调用[fegetenv](fegetenv1.md)或[feholdexcept](feholdexcept2.md)设置的浮点环境。 此外，也可以通过使用 FE_DFL_ENV 宏指定默认启动浮点环境。
 
 ## <a name="return-value"></a>返回值
 
@@ -51,7 +52,7 @@ int feupdateenv(
 
 ## <a name="remarks"></a>备注
 
-**Feupdateenv**函数执行多个操作。 首先，它在自动存储中存储当前引发的浮点异常状态标志。 然后，它设置当前浮点环境中存储的值从**fenv_t**指向对象*penv*。 如果*penv*不是**FE_DFL_ENV**或不指向有效**fenv_t**对象，则未定义后续行为。 最后， **feupdateenv**引发本地存储的浮点异常。
+**Feupdateenv**函数执行多个操作。 首先，它在自动存储中存储当前引发的浮点异常状态标志。 然后，它将从存储在由*penv*指向的**fenv_t**对象中的值设置当前浮点环境。 如果*penv*不是**FE_DFL_ENV**或未指向有效的**fenv_t**对象，则不定义后续行为。 最后， **feupdateenv**将引发本地存储的浮点异常。
 
 若要使用此函数，必须在调用前先使用 `#pragma fenv_access(on)` 指令关闭可能会阻止访问的浮点优化。 有关详细信息，请参阅 [fenv_access](../../preprocessor/fenv-access.md)。
 

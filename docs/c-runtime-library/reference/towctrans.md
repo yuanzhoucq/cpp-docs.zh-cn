@@ -1,9 +1,9 @@
 ---
 title: towctrans
 ms.date: 11/04/2016
-apiname:
+api_name:
 - towctrans
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,18 +15,21 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - towctrans
 helpviewer_keywords:
 - towctrans function
 ms.assetid: 1ed1e70d-7b31-490f-a7d9-42564b5924ca
-ms.openlocfilehash: b814c65d2f5d0bb18b19d97a539d79dd6df8a1c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d63fc343647cd0f949f282e2a64d4a0636e62bd7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62269158"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957424"
 ---
 # <a name="towctrans"></a>towctrans
 
@@ -51,11 +54,11 @@ wint_t towctrans(
 
 ## <a name="return-value"></a>返回值
 
-字符*c*后面**towctrans**使用中的转换规则*类别*。
+**Towctrans**在*类*中使用转换规则后的字符*c*。
 
 ## <a name="remarks"></a>备注
 
-值*类别*必须对之前成功调用返回[wctrans](wctrans.md)。
+此*类别*的值必须已由之前对[wctrans](wctrans.md)的成功调用返回。
 
 ## <a name="requirements"></a>要求
 
@@ -67,7 +70,7 @@ wint_t towctrans(
 
 ## <a name="example"></a>示例
 
-请参阅**wctrans**有关的示例，使用**towctrans**。
+有关使用**towctrans**的示例，请参阅**wctrans** 。
 
 ## <a name="see-also"></a>请参阅
 

@@ -21,7 +21,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68456715"
 ---
-# <a name="autoptr-class"></a>auto_ptr 类
+# <a name="auto_ptr-class"></a>auto_ptr 类
 
 在资源周围包装智能指针，确保在块失去控制权时自动销毁该资源。
 
@@ -63,7 +63,7 @@ class auto_ptr {
 
 ## <a name="remarks"></a>备注
 
-此模板类描述一个已分配对象的智能`auto_ptr`指针 (名为)。 指针必须为 null 或指定由**新**分配的对象。 如果 `auto_ptr` 的存储值已分配给其他对象，则它将转移所有权。 （它在与 Null 指针进行转移后替换存储值。）`auto_ptr<Type>` 的析构函数将删除已分配的对象。 `auto_ptr<Type>` 可确保在块失去控制权时（甚至在已引发异常的情况下）自动删除已分配的对象。 不应构造两个拥有相同对象的 `auto_ptr<Type>` 对象。
+此模板类描述一个已分配对象的智能`auto_ptr`指针（名为）。 指针必须为 null 或指定由**新**分配的对象。 如果 `auto_ptr` 的存储值已分配给其他对象，则它将转移所有权。 （它在与 Null 指针进行转移后替换存储值。）`auto_ptr<Type>` 的析构函数将删除已分配的对象。 `auto_ptr<Type>` 可确保在块失去控制权时（甚至在已引发异常的情况下）自动删除已分配的对象。 不应构造两个拥有相同对象的 `auto_ptr<Type>` 对象。
 
 可以将 `auto_ptr<Type>` 对象作为函数调用的参数按值传递。 `auto_ptr` 不能是任何标准库容器的元素。 你无法使用 C++ 标准库容器可靠地管理一系列 `auto_ptr<Type>` 对象。
 
@@ -124,11 +124,11 @@ auto _ptr(auto _ptr<Other>& right) throw();
 
 #### <a name="remarks"></a>备注
 
-第一个构造函数在中`myptr`存储 ptr, 并将存储的指针存储到所分配的对象。 第二个构造函数通过存储*权限*来传输存储在*右侧*的指针的所有权。 [](#release) 版本`myptr`。
+第一个构造函数在中`myptr`存储 ptr，并将存储的指针存储到所分配的对象。 第二个构造函数通过存储*权限*来传输存储在*右侧*的指针的所有权。 `myptr`[ 版本](#release)。
 
-第三个构造函数的行为与第二个相同, 只不过`right`它会存储。 `ref`。 `release`在`myptr`中, `ref`其中是存储在中`right`的引用。
+第三个构造函数的行为与第二个相同，只不过`right`它会存储。 `ref`。 `release`在`myptr`中， `ref`其中是存储在中`right`的引用。
 
-如果指向的指针`Other`可以隐式转换为指向`Type`的指针, 则模板构造函数的行为与第二个构造函数的行为相同。
+如果指向的指针`Other`可以隐式转换为指向`Type`的指针，则模板构造函数的行为与第二个构造函数的行为相同。
 
 #### <a name="example"></a>示例
 
@@ -278,11 +278,11 @@ auto_ptr<Type>& operator=(auto_ptr_ref<Type> right) throw();
 
 #### <a name="remarks"></a>备注
 
-赋值将计算表达式`delete myptr`的值, 但仅在存储的指针`myptr`由于赋值而更改时才会发生。 然后, 它会通过存储*权限*来转移存储在*右侧*的指针的所有权。[](#release) 版本`myptr`。 该函数返回 __\*this__。
+赋值将计算表达式`delete myptr`的值，但仅在存储的指针`myptr`由于赋值而更改时才会发生。 然后，它会通过存储权限来转移存储在右侧的指针的所有权。`myptr`[版本](#release)。 该函数返回 __\*this__。
 
 #### <a name="example"></a>示例
 
-有关使用成员运算符的示例, 请参阅[auto_ptr](#auto_ptr)。
+有关使用成员运算符的示例，请参阅[auto_ptr](#auto_ptr)。
 
 ### <a name="op_star"></a>操作员
 
@@ -302,7 +302,7 @@ Type& operator*() const throw();
 
 #### <a name="example"></a>示例
 
-有关如何使用成员函数的示例, 请参阅[auto_ptr](#auto_ptr)。
+有关如何使用成员函数的示例，请参阅[auto_ptr](#auto_ptr)。
 
 ### <a name="op_arrow"></a>操作员&gt;
 
@@ -318,11 +318,11 @@ Type * operator->() const throw();
 
 #### <a name="remarks"></a>备注
 
-选择运算符返回 [get](#get)`( )`，以便让表达式 *ap*-> **member** 的行为与 ( *ap* 相同。 **get**( ) )-> **member**，其中 *ap* 是类 `auto_ptr`\< **Type**> 的对象。 因此, 存储的指针不能为 null, 并且`Type`必须是`member`包含成员的类、结构或联合类型。
+选择运算符返回 [get](#get)`( )`，以便让表达式 *ap*-> **member** 的行为与 ( *ap* 相同。 **get**( ) )-> **member**，其中 *ap* 是类 `auto_ptr`\< **Type**> 的对象。 因此，存储的指针不能为 null，并且`Type`必须是`member`包含成员的类、结构或联合类型。
 
 #### <a name="example"></a>示例
 
-有关如何使用成员函数的示例, 请参阅[auto_ptr](#auto_ptr)。
+有关如何使用成员函数的示例，请参阅[auto_ptr](#auto_ptr)。
 
 ### <a name="op_auto_ptr_lt_other_gt"></a>运算符 auto_ptr&lt;其他&gt;
 
@@ -479,7 +479,7 @@ Destructing 00311B88 Value: 6
 
 ### <a name="reset"></a>&
 
-成员函数计算表达式`delete myptr`的值, 但仅在存储的指针值`myptr`因函数调用而更改时才计算。 然后它将存储的指针替换为 `ptr`。
+成员函数计算表达式`delete myptr`的值，但仅在存储的指针值`myptr`因函数调用而更改时才计算。 然后它将存储的指针替换为 `ptr`。
 
 ```cpp
 void reset(Type* ptr = 0);

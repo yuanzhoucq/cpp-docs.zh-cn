@@ -1,6 +1,6 @@
 ---
 title: __rdtsc
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __rdtsc
 helpviewer_keywords:
@@ -8,28 +8,28 @@ helpviewer_keywords:
 - rdtsc instruction
 - Read Time Stamp Counter instruction
 ms.assetid: e31d0e51-c9bb-42ca-bbe9-a81ffe662387
-ms.openlocfilehash: 6f30be3340ae1be237bb2f8a008a8cb60c7351f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 837b68ca6ac63587cd43a7e8828777221c677e3c
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396569"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217147"
 ---
-# <a name="rdtsc"></a>__rdtsc
+# <a name="__rdtsc"></a>__rdtsc
 
 **Microsoft 专用**
 
-生成`rdtsc`指令，返回的处理器时间戳。 处理器时间戳记录上次重置后的时钟周期数。
+`rdtsc`生成指令, 该指令返回处理器时间戳。 处理器时间戳记录自上次重置以来的时钟周期数。
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 unsigned __int64 __rdtsc();
 ```
 
 ## <a name="return-value"></a>返回值
 
-表示的计时周期计数的 64 位无符号的整数。
+表示滴答计数的64位无符号整数。
 
 ## <a name="requirements"></a>要求
 
@@ -37,17 +37,17 @@ unsigned __int64 __rdtsc();
 |---------------|------------------|
 |`__rdtsc`|x86、x64|
 
-**标头文件** \<intrin.h >
+**标头文件**\<intrin.h >
 
 ## <a name="remarks"></a>备注
 
-此例程只能用作内部函数。
+此例程仅作为内部函数提供。
 
-在这一代硬件 TSC 值的解释不同于在早期版本的 x64。 请参阅硬件手册，以获得详细信息。
+在更高版本的硬件中, 对 TSC 值的解释不同于早期版本的 x64。 有关详细信息, 请参阅硬件手册。
 
 ## <a name="example"></a>示例
 
-```
+```cpp
 // rdtsc.cpp
 // processor: x86, x64
 #include <stdio.h>

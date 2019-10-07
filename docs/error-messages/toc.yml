@@ -3852,12 +3852,16 @@
           href: compiler-warnings/compiler-warning-level-4-c4571.md
         - name: 编译器警告（等级 1）C4572
           href: compiler-warnings/compiler-warning-level-1-c4572.md
+        - name: 编译器警告（等级 1）C4577
+          href: compiler-warnings/compiler-warning-level-1-c4577.md
         - name: 编译器警告（等级 3）C4580
           href: compiler-warnings/compiler-warning-level-3-c4580.md
         - name: 编译器警告（等级 1）C4581
           href: compiler-warnings/compiler-warning-level-1-c4581.md
         - name: 编译器警告（等级 1）C4584
           href: compiler-warnings/compiler-warning-level-1-c4584.md
+        - name: 编译器警告（等级 4）C4596
+          href: compiler-warnings/c4596.md
     - name: 编译器警告 C4600 - C4799
       expanded: false
       items:
@@ -4226,6 +4230,8 @@
           href: compiler-warnings/compiler-warning-level-1-c4965.md
         - name: 编译器警告 C4972
           href: compiler-warnings/compiler-warning-c4972.md
+        - name: 编译器警告 C4984
+          href: compiler-warnings/compiler-warning-c4984.md
         - name: 编译器警告（等级 4）C4985
           href: compiler-warnings/compiler-warning-level-4-c4985.md
         - name: 编译器警告 C4986
@@ -4244,6 +4250,8 @@
           href: compiler-warnings/c5045.md
         - name: 编译器警告（等级 2）C5046
           href: compiler-warnings/c5046.md
+        - name: 编译器警告（等级 1）C5105
+          href: compiler-warnings/c5105.md
 - name: 因编译器版本生成的编译器警告
   href: compiler-warnings/compiler-warnings-by-compiler-version.md
 - name: 默认关闭的编译器警告
@@ -4550,6 +4558,8 @@
       href: tool-errors/linker-tools-error-lnk1318.md
     - name: 链接器工具错误 LNK1332
       href: tool-errors/linker-tools-error-lnk1332.md
+    - name: 链接器工具错误 LNK1352
+      href: tool-errors/linker-tools-error-lnk1352.md
     - name: 链接器工具错误 LNK1561
       href: tool-errors/linker-tools-error-lnk1561.md
     - name: 链接器工具错误 LNK2001

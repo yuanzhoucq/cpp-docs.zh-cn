@@ -1,9 +1,9 @@
 ---
 title: quick_exit1
 ms.date: 11/04/2016
-apiname:
+api_name:
 - quick_exit
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - quick_exit
 - process/quick_exit
@@ -23,14 +26,14 @@ f1_keywords:
 helpviewer_keywords:
 - quick_exit function
 ms.assetid: ecfbdae6-01c4-45fa-aaeb-b368e1de2a9c
-ms.openlocfilehash: 50f1ee72cce04c2bebc8f7396a2b6fad98301dd7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 86246ed7a32dcd2f12b38aa4148570fc5fb3b7a6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358029"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949675"
 ---
-# <a name="quickexit"></a>quick_exit
+# <a name="quick_exit"></a>quick_exit
 
 导致产生正常程序终止。
 
@@ -49,15 +52,15 @@ __declspec(noreturn) void quick_exit(
 
 ## <a name="return-value"></a>返回值
 
-**Quick_exit**函数不能返回给调用方。
+**Quick_exit**函数无法返回到其调用方。
 
 ## <a name="remarks"></a>备注
 
-**Quick_exit**函数导致正常程序终止。 它将调用注册的任何函数**atexit**， **_onexit**或信号处理程序由注册**信号**函数。 行为是不确定，如果**quick_exit**称为超过一次，或如果**退出**还调用函数。
+**Quick_exit**函数导致正常程序终止。 它不调用由**atexit**、 **_onexit**或**信号**函数注册的信号处理程序注册的任何函数。 如果多次调用了**quick_exit**或者也调用了**exit**函数，则行为是不确定的。
 
-**Quick_exit**函数中最后一个单元中、 先进先出 (LIFO) 顺序、 已注册的函数调用**at_quick_exit**，但为时已调用这些函数注册的函数。  如果在已注册函数的调用过程中进行会终止该函数调用的 [longjmp](longjmp.md) 调用，则行为不确定。
+**Quick_exit**函数按后进先出（LIFO）顺序调用由**at_quick_exit**注册的函数，但在注册该函数时已调用的函数除外。  如果在已注册函数的调用过程中进行会终止该函数调用的 [longjmp](longjmp.md) 调用，则行为不确定。
 
-调用已注册的函数之后， **quick_exit**调用 **_Exit**通过*状态*控制权返回给主机环境的值。
+调用了已注册的函数后， **quick_exit**将使用*状态值*调用 **_Exit** ，以将控制权返回给主机环境。
 
 ## <a name="requirements"></a>要求
 

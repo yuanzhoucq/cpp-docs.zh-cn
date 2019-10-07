@@ -1,12 +1,12 @@
 ---
 title: ato，_atol_l，_wtol，_wtol_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - atol
 - _wtol_l
 - _wtol
 - _atol_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _atol_l
 - _ttol_l
@@ -43,14 +46,14 @@ helpviewer_keywords:
 - wtol function
 - _wtol function
 ms.assetid: cedfc21c-2d64-4e9c-bd04-bdf60b12db46
-ms.openlocfilehash: 486b6dc3bdfbbaf4b7becadde76768a0bb1c7c00
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 04a2951a48e6dd2c3820551e0fc603ad4ed81086
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347803"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943583"
 ---
-# <a name="atol-atoll-wtol-wtoll"></a>ato，_atol_l，_wtol，_wtol_l
+# <a name="atol-_atol_l-_wtol-_wtol_l"></a>ato，_atol_l，_wtol，_wtol_l
 
 将字符串转换为长整型。
 
@@ -83,25 +86,25 @@ long _wtol_l(
 
 ## <a name="return-value"></a>返回值
 
-每个函数返回**长**产生的输入的字符解释为数字值。 返回值为 0l **atol**如果输入不能转换为该类型的值。
+每个函数都返回通过将输入字符解释为数字而产生的**长整型**值。 如果输入不能转换为该类型的值，则返回值为**atol**的0L。
 
-对于大量正整数值，溢出**atol**返回**LONG_MAX**; 对于大量负整数值的溢出**LONG_MIN**是返回。 在所有超出范围情况下， **errno**设置为**ERANGE**。 如果传入的参数是**NULL**，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许继续执行，这些函数将设置**errno**到**EINVAL** ，返回 0。
+对于具有大量正整数值的溢出， **atol**返回**LONG_MAX**;对于具有较大负整数值的溢出，将返回**LONG_MIN** 。 在所有超出范围的情况下， **errno**设置为**ERANGE**。 如果传入的参数为**NULL**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数会将**errno**设置为**EINVAL** ，并返回0。
 
 ## <a name="remarks"></a>备注
 
-这些函数将字符串转换为长整型值 (**atol**)。
+这些函数将字符串转换为长整型值（**atol**）。
 
 输入字符串是一系列字符，可以解释为指定类型的数值。 该函数在首个它无法无法识别为数字一部分的字符处停止读取输入字符串。 此字符可能是终止字符串的空字符（'\0' 或 L'\0'）。
 
-*Str*自变量**atol**具有以下形式：
+**Atol**的*str*参数具有以下形式：
 
-> [*whitespace*] [*sign*] [*digits*]]
+> [*空格*][*sign*][*数字*]]
 
-一个*空格*包含的空格或制表符字符，将被忽略;*符号*可以是加号 （+） 或减号 （–）; 并且*数字*是一个或多个数字。
+*空白*包含被忽略的空格或制表符;*sign*为加号（+）或减号（-）;和*数字*是一个或多个数字。
 
-**_wtol**等同于**atol** ，只不过它采用一个宽字符字符串。
+**_wtol**与**atol**相同，只不过它采用宽字符字符串。
 
-使用这些函数的版本 **_l**后缀完全相同，只不过它们使用传递中而不是当前区域设置的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+使用 **_l**后缀的这些函数的版本是相同的，只不过它们使用传入的区域设置参数而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -115,11 +118,11 @@ long _wtol_l(
 |例程|必需的标头|
 |--------------|---------------------|
 |**atol**|\<stdlib.h>|
-|**_atol_l**， **_wtol**， **_wtol_l**|\<stdlib.h> 和 \<wchar.h>|
+|**_atol_l**、 **_wtol**、 **_wtol_l**|\<stdlib.h> 和 \<wchar.h>|
 
 ## <a name="example"></a>示例
 
-此程序说明如何将存储为字符串的数字转换为数字值使用**atol**函数。
+此程序说明如何使用**atol**函数将存储为字符串的数字转换为数值。
 
 ```C
 // crt_atol.c

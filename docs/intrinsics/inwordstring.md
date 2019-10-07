@@ -1,6 +1,6 @@
 ---
 title: __inwordstring
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __inwordstring
 - __inwordstring_cpp
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - __inwordstring intrinsic
 - rep insw instruction
 ms.assetid: 6de37939-017a-4740-9e3d-7de78a30daba
-ms.openlocfilehash: 52c36754e1eea56b84eeb494e82e37a5b043246e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a6f67e15bc5eef9fbe9cc8d12e95afcdf869e3b1
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263446"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221876"
 ---
-# <a name="inwordstring"></a>__inwordstring
+# <a name="__inwordstring"></a>__inwordstring
 
 **Microsoft 专用**
 
-从指定的端口使用读取数据`rep insw`指令。
+使用`rep insw`指令从指定端口读取数据。
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 void __inwordstring(
    unsigned short Port,
    unsigned short* Buffer,
@@ -31,16 +31,16 @@ void __inwordstring(
 );
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-*端口*<br/>
-[in]要读取的端口。
+*口*\
+中要从其读取的端口。
 
-*Buffer*<br/>
-[out]读取从端口将数据写入此处。
+*宽限*\
+弄此处写入从端口读取的数据。
 
-“计数”<br/>
-[in]要读取的数据的单词数。
+*计*\
+中要读取的数据的字数。
 
 ## <a name="requirements"></a>要求
 
@@ -48,7 +48,7 @@ void __inwordstring(
 |---------------|------------------|
 |`__inwordstring`|x86、x64|
 
-**标头文件** \<intrin.h >
+**标头文件**\<intrin.h >
 
 ## <a name="remarks"></a>备注
 

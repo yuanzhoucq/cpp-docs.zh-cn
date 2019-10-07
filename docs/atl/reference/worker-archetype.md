@@ -1,58 +1,58 @@
 ---
-title: 辅助原型
+title: 工作原型
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Worker archetype
 ms.assetid: 834145cd-09d3-4149-bc99-620e1871cbfb
-ms.openlocfilehash: 790cf064fcffe1f0cd3c191c28ed0a0614062406
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f28b9e64c88a5be440417dd9d22f129ee7d6edf
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274494"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495267"
 ---
-# <a name="worker-archetype"></a>辅助原型
+# <a name="worker-archetype"></a>工作原型
 
-类符合*辅助*原型提供线程池上排队进程的工作项的代码。
+符合*辅助*原型的类提供用于处理线程池上排队的工作项的代码。
 
 **实现**
 
-若要实现符合此原型的类，类必须提供以下功能：
+若要实现符合此原型的类, 类必须提供以下功能:
 
 |方法|描述|
 |------------|-----------------|
-|[Initialize](#initialize)|调用以初始化辅助对象之前的任何请求传递给[Execute](#execute)。|
+|[Initialize](#initialize)|调用以初始化辅助对象, 然后将请求传递给[执行](#execute)。|
 |[Execute](#execute)|调用以处理工作项。|
-|[Terminate](#terminate)|被调用的所有请求都传递给后取消初始化辅助对象[Execute](#execute)。|
+|[Terminate](#terminate)|调用以在所有请求都传递到[执行](#execute)之后对工作对象进行初始化。|
 
 |Typedef|描述|
 |-------------|-----------------|
-|[RequestType](#requesttype)|可以由辅助类处理的工作项类型的 typedef。|
+|[RequestType](#requesttype)|可由 worker 类处理的工作项类型的 typedef。|
 
-典型*辅助*类如下所示：
+典型的*辅助角色*类如下所示:
 
 [!code-cpp[NVC_ATL_Utilities#137](../../atl/codesnippet/cpp/worker-archetype_1.cpp)]
 
-**现有的实现**
+**现有实现**
 
-这些类符合此原型：
+这些类符合以下原型:
 
 |类|描述|
 |-----------|-----------------|
-|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|从线程池接收请求并将它们传递到一个辅助角色对象的创建和销毁为每个请求。|
+|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|接收来自线程池的请求, 并将其传递给为每个请求创建并销毁的辅助角色对象。|
 
-**使用**
+**用法**
 
-这些模板参数预期要符合此原型的类：
+这些模板参数需要类符合以下原型:
 
 |参数名称|通过者|
 |--------------------|-------------|
-|*Worker*|[CThreadPool](../../atl/reference/cthreadpool-class.md)|
-|*Worker*|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|
+|*工人*|[CThreadPool](../../atl/reference/cthreadpool-class.md)|
+|*工人*|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|
 
 ### <a name="requirements"></a>要求
 
-**标头：** atlutil.h
+**标头:** atlutil
 
 ## <a name="execute"></a>WorkerArchetype::Execute
 
@@ -68,17 +68,17 @@ void Execute(
 #### <a name="parameters"></a>参数
 
 *request*<br/>
-要处理的工作项。 工作项是与相同类型的`RequestType`。
+要处理的工作项。 工作项的类型`RequestType`与相同。
 
 *pvWorkerParam*<br/>
-理解辅助类的一个自定义参数。 此外传递给`WorkerArchetype::Initialize`和`Terminate`。
+辅助类理解的自定义参数。 也传递给`WorkerArchetype::Initialize`和`Terminate`。
 
 *pOverlapped*<br/>
-一个指向[OVERLAPPED](/windows/desktop/api/minwinbase/ns-minwinbase-_overlapped)用来创建的队列的工作项排队等待的结构。
+指向用于创建在其上排队工作项的队列的[重叠](/windows/win32/api/minwinbase/ns-minwinbase-overlapped)结构的指针。
 
-## <a name="initialize"></a> WorkerArchetype::Initialize
+## <a name="initialize"></a>WorkerArchetype:: Initialize
 
-调用以初始化辅助对象之前的任何请求传递给`WorkerArchetype::Execute`。
+调用以在将任何请求传递到`WorkerArchetype::Execute`之前初始化辅助对象。
 ```
 BOOL Initialize(void* pvParam) throw();
 ```
@@ -86,15 +86,15 @@ BOOL Initialize(void* pvParam) throw();
 #### <a name="parameters"></a>参数
 
 *pvParam*<br/>
-理解辅助类的一个自定义参数。 此外传递给`WorkerArchetype::Terminate`和`WorkerArchetype::Execute`。
+辅助类理解的自定义参数。 也传递给`WorkerArchetype::Terminate`和`WorkerArchetype::Execute`。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，返回 TRUE FALSE 失败。
+如果成功, 则返回 TRUE, 否则返回 FALSE。
 
-## <a name="requesttype"></a> WorkerArchetype::RequestType
+## <a name="requesttype"></a>WorkerArchetype:: RequestType
 
-可以由辅助类处理的工作项类型的 typedef。
+可由 worker 类处理的工作项类型的 typedef。
 
 ```
 typedef MyRequestType RequestType;
@@ -102,11 +102,11 @@ typedef MyRequestType RequestType;
 
 ### <a name="remarks"></a>备注
 
-此类型必须使用作为第一个参数`WorkerArchetype::Execute`，并且必须能够与 ULONG_PTR 要强制转换。
+此类型必须用作的第一个参数`WorkerArchetype::Execute` , 并且必须能够在 ULONG_PTR 中进行转换。
 
-## <a name="terminate"></a> WorkerArchetype::Terminate
+## <a name="terminate"></a>WorkerArchetype:: Terminate
 
-被调用的所有请求都传递给后取消初始化辅助对象`WorkerArchetype::Execute`)。
+调用以在所有请求都被传递到`WorkerArchetype::Execute`后对工作对象进行初始化。
 
 ```
 void Terminate(void* pvParam) throw();
@@ -115,7 +115,7 @@ void Terminate(void* pvParam) throw();
 #### <a name="parameters"></a>参数
 
 *pvParam*<br/>
-理解辅助类的一个自定义参数。 此外传递给`WorkerArchetype::Initialize`和`WorkerArchetype::Execute`。
+辅助类理解的自定义参数。 也传递给`WorkerArchetype::Initialize`和`WorkerArchetype::Execute`。
 
 ## <a name="see-also"></a>请参阅
 

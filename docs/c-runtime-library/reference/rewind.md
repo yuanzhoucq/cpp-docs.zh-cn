@@ -1,9 +1,9 @@
 ---
 title: rewind
 ms.date: 11/04/2016
-apiname:
+api_name:
 - rewind
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - rewind
 helpviewer_keywords:
@@ -24,12 +27,12 @@ helpviewer_keywords:
 - file pointers [C++], repositioning
 - file pointers [C++]
 ms.assetid: 1a460ce1-28d8-4b5e-83a6-633dca29c28a
-ms.openlocfilehash: d2e50c34d48b5a9570691a8a702cd05c1a48242d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 084a6f3d7e817498bffb510d865f4a32021e4ce8
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357559"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949277"
 ---
 # <a name="rewind"></a>rewind
 
@@ -50,15 +53,15 @@ void rewind(
 
 ## <a name="remarks"></a>备注
 
-**Rewind**函数与关联的文件指针重新定位*流*到该文件的开头。 对 **rewind** 的调用类似于
+**倒带**函数将与*stream*关联的文件指针重新定位到文件的开头。 对 **rewind** 的调用类似于
 
-**(void) fseek(** _stream_**, 0L, SEEK_SET );**
+**(void) fseek(** _stream_ **, 0L, SEEK_SET );**
 
-但是，与不同[fseek](fseek-fseeki64.md)， **rewind**清除流的错误指示符和文件尾指示符。 此外，与不同[fseek](fseek-fseeki64.md)， **rewind**不返回指示是否已成功移动指针的值。
+但是，与[fseek](fseek-fseeki64.md)不同，**倒带**会清除流的错误指示符和文件尾指示符。 另外，与[fseek](fseek-fseeki64.md)不同的是，**倒带**不会返回一个值以指示是否已成功移动指针。
 
-若要清除键盘缓冲区，使用**rewind**与流**stdin**，这是默认情况下与键盘相关联。
+若要清除键盘缓冲区，请在默认情况下，使用与键盘关联的流**stdin**来**倒带**。
 
-如果流**NULL**指针，无效参数处理程序调用，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数返回并**errno**设置为**EINVAL**。
+如果 stream 为**空**指针，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数返回并将**errno**设置为**EINVAL**。
 
 有关这些代码及其他错误代码的信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 

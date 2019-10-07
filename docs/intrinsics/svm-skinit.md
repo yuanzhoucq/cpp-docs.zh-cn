@@ -1,46 +1,45 @@
 ---
 title: __svm_skinit
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __svm_skinit
 helpviewer_keywords:
 - SKINIT instruction
 - __svm_skinit intrinsic
 ms.assetid: 787ec781-4cf2-40a2-aa20-5192334b131a
-ms.openlocfilehash: 199cba2623f9d8e47c08be642ec485599b87976e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6657921d647a23bf027a5800702527951f7f6831
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390238"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219866"
 ---
-# <a name="svmskinit"></a>__svm_skinit
+# <a name="__svm_skinit"></a>__svm_skinit
 
 **Microsoft 专用**
 
-启动加载的可验证安全软件，如虚拟机监视器。
+启动已验证的安全软件（例如虚拟机监视器）的加载。
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 void __svm_skinit(
-   int SLB
+   int block_address
 );
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-|参数|描述|
-|---------------|-----------------|
-|`SLB`|32 位物理地址的 64k 字节安全加载程序块 (SLB)。|
+*block_address*\
+64K 字节安全加载器块（SLB）的32位物理地址。
 
 ## <a name="remarks"></a>备注
 
-`__svm_skinit` 函数等同于 `SKINIT` 计算机指令。 此函数是使用处理器和受信任平台模块 (TPM) 来验证并加载名为安全内核 (SK) 受信任的软件安全系统的一部分。 虚拟机监视器是安全内核的示例。 安全系统将验证程序组件初始化过程中加载，并防止篡改被中断，设备的访问或另一个程序，如果计算机是多处理器组件。
+`__svm_skinit` 函数等同于 `SKINIT` 计算机指令。 此函数是安全系统的一部分，该系统使用处理器和受信任的平台模块（TPM）来验证和加载受信任的软件（称为*安全内核*（SK））。 虚拟机监视器是一个安全内核的示例。 安全系统将验证在初始化过程中加载的程序组件。 它可以防止组件被中断、设备访问或其他程序（如果计算机是多处理器）篡改。
 
-`SLB`参数指定的内存中，调用 64k 块的物理地址*安全加载程序块*(SLB)。 SLB 包含一个名为建立操作环境的计算机，并随后将加载安全内核安全加载程序程序。
+*Block_address*参数指定名为*安全加载器块*（SLB）的64k 内存块的物理地址。 SLB 包含名为*安全加载*程序的程序。 它为计算机建立操作环境，然后加载安全内核。
 
-此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索文档中，"AMD64 体系结构编程人员手动卷 2:系统编程，"文档数 24593，3.11，修订[AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/)站点。
+此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，请搜索 "AMD64 体系结构程序员手册卷2：[AMD 公司](https://developer.amd.com/resources/developer-guides-manuals/)网站的系统编程 "。
 
 ## <a name="requirements"></a>要求
 
@@ -48,7 +47,7 @@ void __svm_skinit(
 |---------------|------------------|
 |`__svm_skinit`|x86、x64|
 
-**标头文件** \<intrin.h >
+**标头文件**\<intrin.h >
 
 **结束 Microsoft 专用**
 

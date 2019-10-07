@@ -1,15 +1,15 @@
 ---
 title: 按类别列出的编译器选项
-ms.date: 05/06/2019
+ms.date: 08/08/2019
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 0d12c0f82d3595ee6b61edcd21fb01dd7f49163b
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 8c99b2dd60e6c2266d5095a477ee4a5b2e0c8bd0
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221762"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685196"
 ---
 # <a name="compiler-options-listed-by-category"></a>按类别列出的编译器选项
 
@@ -27,7 +27,7 @@ ms.locfileid: "65221762"
 |[/Oi](oi-generate-intrinsic-functions.md)|生成内部函数。|
 |[/Os](os-ot-favor-small-code-favor-fast-code.md)|代码大小优先。|
 |[/Ot](os-ot-favor-small-code-favor-fast-code.md)|代码速度优先。|
-|[/Ox](ox-full-optimization.md)|使用最大优化 (/Ob2gity /Gs)。|
+|[/Ox](ox-full-optimization.md)|不包含/GF 或/Gy. 的/O2 子集|
 |[/Oy](oy-frame-pointer-omission.md)|省略帧指针。 (仅限 x86)|
 |[/favor](favor-optimize-for-architecture-specifics.md)|生成针对一个指定体系结构或一系列体系结构进行优化的代码。|
 
@@ -59,7 +59,7 @@ ms.locfileid: "65221762"
 |[/Gy](gy-enable-function-level-linking.md)|启用函数级链接。|
 |[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|已否决。 启用快速检查。 （与 [/RTC1](rtc-run-time-error-checks.md)相同）|
 |[/Gz](gd-gr-gv-gz-calling-convention.md)|使用 `__stdcall` 调用约定。 (仅限 x86)|
-|[/homeparams](homeparams-copy-register-parameters-to-stack.md)|强制将传入寄存器的参数写入其在函数入口的堆栈上的位置。 此编译器选项是仅针对 x64 编译器 （本机编译和跨平台编译）。|
+|[/homeparams](homeparams-copy-register-parameters-to-stack.md)|强制将传入寄存器的参数写入其在函数入口的堆栈上的位置。 此编译器选项仅适用于 x64 编译器（本机编译和跨平台编译）。|
 |[/hotpatch](hotpatch-create-hotpatchable-image.md)|创建可热修补的映像。|
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|生成快速先验。|
 |[/QIfist](qifist-suppress-ftol.md)|已否决。 当需要从浮点型转换为整型时，取消调用 Helper 函数 `_ftol` 。 (仅限 x86)|
@@ -67,7 +67,7 @@ ms.locfileid: "65221762"
 |[/Qpar](qpar-auto-parallelizer.md)|启用循环的自动并行化。|
 |[/Qpar-report](qpar-report-auto-parallelizer-reporting-level.md)|启用自动并行化的报告级别。|
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|将整数移动指令用于浮点值，并禁用特定浮点加载优化。|
-|[/Qspectre](qspectre.md)|启用 CVE 2017-5753，针对一类 Spectre 攻击的缓解措施。|
+|[/Qspectre](qspectre.md)|为 CVE 2017-5753 启用缓解，适用于一类 Spectre 攻击。|
 |[/Qvec-report](qvec-report-auto-vectorizer-reporting-level.md)|启用自动矢量化的报告级别。|
 |[/RTC](rtc-run-time-error-checks.md)|启用运行时错误检查。|
 |[/volatile](volatile-volatile-keyword-interpretation.md)|选择如何解释 volatile 关键字。|
@@ -85,7 +85,7 @@ ms.locfileid: "65221762"
 |[/Fm](fm-name-mapfile.md)|创建映射文件。|
 |[/Fo](fo-object-file-name.md)|创建对象文件。|
 |[/Fp](fp-name-dot-pch-file.md)|指定预编译头文件名。|
-|[/FR, /Fr](fr-fr-create-dot-sbr-file.md)|生成浏览器的.sbr 文件的名称。|
+|[/FR, /Fr](fr-fr-create-dot-sbr-file.md)|名称生成的 .sbr 浏览器文件。|
 
 ## <a name="preprocessor"></a>预处理器
 
@@ -121,7 +121,8 @@ ms.locfileid: "65221762"
 |[/Za](za-ze-disable-language-extensions.md)|禁用 C89 语言扩展。|
 |[/Zc](zc-conformance.md)|指定在 [/Ze](za-ze-disable-language-extensions.md)下的标准行为。|
 |[/Ze](za-ze-disable-language-extensions.md)|已否决。 启用 C89 语言扩展。|
-|[/Zf](zf.md)|改进了 PDB 中并行生成的生成时间。|
+|[/Zf](zf.md)|在并行生成中改善 PDB 生成时间。|
+|[/ZH](zh.md)|为调试信息中的校验和指定 MD5、SHA-1 或 SHA-256。|
 |[/ZI](z7-zi-zi-debug-information-format.md)|将调试信息包含在与“编辑并继续”兼容的程序数据库中。 (仅限 x86)|
 |[/Zi](z7-zi-zi-debug-information-format.md)|生成完整的调试信息。|
 |[/Zl](zl-omit-default-library-name.md)|从 .obj 文件中移除默认库名。|
@@ -143,7 +144,7 @@ ms.locfileid: "65221762"
 |[/MT](md-mt-ld-use-run-time-library.md)|使用 LIBCMT.lib 编译以创建多线程可执行文件。|
 |[/MTd](md-mt-ld-use-run-time-library.md)|使用 LIBCMTD.lib 编译以创建调试多线程可执行文件。|
 
-## <a name="miscellaneous"></a>杂项
+## <a name="miscellaneous"></a>其他
 
 |选项|用途|
 |------------|-------------|
@@ -153,7 +154,7 @@ ms.locfileid: "65221762"
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|增加 .obj 文件中可寻址节的数目。|
 |[/c](c-compile-without-linking.md)|编译但不链接。|
 |[/cgthreads](cgthreads-code-generation-threads.md)|指定 cl.exe 线程数以用于优化和代码生成。|
-|[/errorReport](errorreport-report-internal-compiler-errors.md)|使你可以直接向 Microsoft 提供内部编译器错误 (ICE) 信息C++团队。|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)|使你能够将内部编译器错误（ICE）信息直接提供给 Microsoft C++团队。|
 |[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|在诊断文本中显示传递给 cl.exe 的源代码文件的完整路径。|
 |[/FS](fs-force-synchronous-pdb-writes.md)|强制写入到程序数据库 (PDB) 文件以通过 MSPDBSRV.EXE 序列化。|
 |[/H](h-restrict-length-of-external-names.md)|已否决。 限制外部（公共）名称的长度。|
@@ -166,12 +167,12 @@ ms.locfileid: "65221762"
 |[/sdl](sdl-enable-additional-security-checks.md)|启用更多安全功能和警告。|
 |[/showIncludes](showincludes-list-include-files.md)|在编译期间显示所有包含文件的列表。|
 |[/Tc](tc-tp-tc-tp-specify-source-file-type.md)|指定 C 源文件。|
-|[/TC](tc-tp-tc-tp-specify-source-file-type.md)|指定源的所有文件都都 c。|
+|[/TC](tc-tp-tc-tp-specify-source-file-type.md)|指定所有源文件均为 C。|
 |[/Tp](tc-tp-tc-tp-specify-source-file-type.md)|指定 C++ 源文件。|
-|[/TP](tc-tp-tc-tp-specify-source-file-type.md)|指定源的所有文件都都C++。|
+|[/TP](tc-tp-tc-tp-specify-source-file-type.md)|指定所有源文件C++。|
 |[/V](v-version-number.md)|已否决。 设置版本字符串。|
 |[/w](compiler-option-warning-level.md)|禁用所有警告。|
-|[/W0、/W1、/W2、/W3、/W4](compiler-option-warning-level.md)|设置输出警告级别。|
+|[/W0, /W1, /W2, /W3, /W4](compiler-option-warning-level.md)|设置输出警告级别。|
 |[/W1、/W2、/W3、/W4](compiler-option-warning-level.md)|针对指定的警告设置警告级别。|
 |[/Wall](compiler-option-warning-level.md)|启用所有警告，包括默认情况下禁用的警告。|
 |[/wd](compiler-option-warning-level.md)|禁用指定的警告。|
@@ -180,22 +181,31 @@ ms.locfileid: "65221762"
 |[/wo](compiler-option-warning-level.md)|仅显示指定的警告一次。|
 |[/Wv](compiler-option-warning-level.md)|禁用更高版本的编译器引入的警告。|
 |[/WX](compiler-option-warning-level.md)|将警告视为错误。|
-|[/Yc](yc-create-precompiled-header-file.md)|创建。PCH 文件。|
+|[/Yc](yc-create-precompiled-header-file.md)|创建.PCH 文件。|
 |[/Yd](yd-place-debug-information-in-object-file.md)|已否决。 将完整的调试信息放在所有对象文件中。 改为使用 [/Zi](z7-zi-zi-debug-information-format.md) 。|
 |[/Yl](yl-inject-pch-reference-for-debug-library.md)|创建调试库时插入 PCH 引用。|
 |[/Yu](yu-use-precompiled-header-file.md)|在生成期间使用预编译头文件。|
 |[/Y-](y-ignore-precompiled-header-options.md)|忽略当前生成中的所有其他预编译头编译器选项。|
 |[/Zm](zm-specify-precompiled-header-memory-allocation-limit.md)|指定预编译头内存分配限制。|
-|[/await](await-enable-coroutine-support.md)|启用协同程序 （可恢复函数） 的扩展。|
+|[/await](await-enable-coroutine-support.md)|启用协同程序（可恢复函数）扩展。|
 |[/source-charset](source-charset-set-source-character-set.md)|设置源字符集。|
 |[/execution-charset](execution-charset-set-execution-character-set.md)|设置执行字符集。|
-|[/utf-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|设置源和执行字符集设置为 utf-8。|
-|[/validate-charset](validate-charset-validate-for-compatible-characters.md)|验证 utf-8 文件兼容的字符。|
+|[/utf-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|将源和执行字符集设置为 UTF-8。|
+|[/validate-charset](validate-charset-validate-for-compatible-characters.md)|仅验证 UTF-8 文件的兼容字符。|
 |[/diagnostics](diagnostics-compiler-diagnostic-options.md)|控制诊断消息的格式。|
-|[/permissive-](permissive-standards-conformance.md)|将标准符合性模式设置。|
-|[/std](std-specify-language-standard-version.md)|C++标准版本兼容性的选择器。|
+|[/permissive-](permissive-standards-conformance.md)|设置标准一致性模式。|
+|[/std](std-specify-language-standard-version.md)|C++标准版本兼容性选择器。|
 
-## <a name="deprecated-and-removed-compiler-options"></a>已弃用并删除编译器选项
+## <a name="experimental-options"></a>实验性选项
+
+实验性选项只能由某些版本的编译器支持，并可能在不同的编译器版本中具有不同的行为。 对于试验性选项，通常是最好的文档，如[ C++ Microsoft 团队博客](https://devblogs.microsoft.com/cppblog/)。
+
+|选项|用途|
+|------------|-------------|
+|[/experimental:module](experimental-module.md)|启用实验性模块支持。|
+|[/experimental：预处理器](experimental-preprocessor.md)|启用实验相容预处理器支持。|
+
+## <a name="deprecated-and-removed-compiler-options"></a>弃用并删除的编译器选项
 
 |选项|用途|
 |------------|-------------|
@@ -213,7 +223,7 @@ ms.locfileid: "65221762"
 |[/Yd](yd-place-debug-information-in-object-file.md)|已否决。 将完整的调试信息放在所有对象文件中。 改为使用 [/Zi](z7-zi-zi-debug-information-format.md) 。|
 |[/Zc:forScope-](zc-forscope-force-conformance-in-for-loop-scope.md)|已否决。 在 for 循环范围中禁用一致性。|
 |[/Ze](za-ze-disable-language-extensions.md)|已否决。 启用语言扩展。|
-|[/Zg](zg-generate-function-prototypes.md)|在 Visual Studio 2015 中删除。 生成函数原型。|
+|[/Zg](zg-generate-function-prototypes.md)|在 Visual Studio 2015 中移除。 生成函数原型。|
 
 ## <a name="see-also"></a>请参阅
 

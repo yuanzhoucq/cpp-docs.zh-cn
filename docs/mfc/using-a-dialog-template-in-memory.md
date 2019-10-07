@@ -7,17 +7,17 @@ helpviewer_keywords:
 - dialog templates [MFC], in memory
 - MFC dialog boxes [MFC], dialog templates
 ms.assetid: edb443bb-e614-4f77-8a3b-74d93871e9bd
-ms.openlocfilehash: de694f6561dfe1423c7758ae572ccf6be1c8fd17
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7250ea628f371cac16e0a34e81d8bab0828db73e
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180552"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685023"
 ---
 # <a name="using-a-dialog-template-in-memory"></a>在内存中使用对话框模板
 
-而不是使用中提供的方法[对话框创建表](../mfc/creating-a-dialog-class-with-code-wizards.md)，您可以从内存中的对话框模板间接创建两种类型的对话框。 有关详细信息，请参阅类[CDialog](../mfc/reference/cdialog-class.md)中*MFC 参考*。
+不使用在[对话框创建表](../mfc/creating-a-dialog-class-with-code-wizards.md)中指定的方法，您可以从内存中的对话框模板间接创建这两种对话框。 有关详细信息，请参阅*MFC 参考*中的[CDialog](../mfc/reference/cdialog-class.md)类。
 
 ## <a name="see-also"></a>请参阅
 
-[对话框的生命周期](../mfc/life-cycle-of-a-dialog-box.md)
+[使用 MFC 中的对话框](../mfc/life-cycle-of-a-dialog-box.md)

@@ -1,10 +1,10 @@
 ---
 title: wctomb、_wctomb_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wctomb_l
 - wctomb
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wctomb
 helpviewer_keywords:
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 4a543f0e-5516-4d81-8ff2-3c5206f02ed5
-ms.openlocfilehash: df0abdd644027f9bab8cd177dfd4d0af4c98df35
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 195105618c75bd2a3a493f169fca4c2d3d4ebd62
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188540"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945004"
 ---
-# <a name="wctomb-wctombl"></a>wctomb、_wctomb_l
+# <a name="wctomb-_wctomb_l"></a>wctomb、_wctomb_l
 
 将宽字符转换为对应的多字节字符。 提供这些函数的更多安全版本；请参阅 [wctomb_s、_wctomb_s_l](wctomb-s-wctomb-s-l.md)。
 
@@ -64,13 +67,13 @@ int _wctomb_l(
 
 ## <a name="return-value"></a>返回值
 
-如果**wctomb**将宽字符转换为多字节字符，它返回的字节数 (即永远不会大于**MB_CUR_MAX**) 中的宽字符。 如果*wchar*是宽字符 null 字符 (L '\0)， **wctomb**返回 1。 如果目标指针*mbchar*是**NULL**， **wctomb**返回 0。 如果在当前区域设置中不支持转换，则**wctomb**将返回-1 并**errno**设置为**EILSEQ**。
+如果**wctomb**将宽字符转换为多字节字符，它将返回宽字符中的字节数（从不大于**MB_CUR_MAX**）。 如果*wchar*为宽字符 null 字符（L ' \ 0 '），则**wctomb**将返回1。 如果目标指针*mbchar*为**NULL**，则**wctomb**返回0。 如果当前区域设置中不能进行转换，则**wctomb**将返回-1，并将**Errno**设置为**eilseq 且**。
 
 ## <a name="remarks"></a>备注
 
-**Wctomb**函数将其*wchar*参数的相应多字节字符，并将存储在结果*mbchar*。 可以从任何程序的任何程序点调用该函数。 **wctomb**的任何区域设置相关的行为; 使用当前区域设置 **_wctomb_l**等同于**wctomb**只不过它改用已传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**Wctomb**函数将其*wchar*参数转换为相应的多字节字符，并将结果存储在*mbchar*。 可以从任何程序的任何程序点调用该函数。 **wctomb**为任何与区域设置相关的行为使用当前区域设置; **_wctomb_l**与**wctomb**相同，只不过它使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-**wctomb**验证其参数。 如果*mbchar*是**NULL**，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**和该函数将返回-1。
+**wctomb**验证其参数。 如果*mbchar*为**NULL**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将**errno**设置为**EINVAL** ，并且该函数将返回-1。
 
 ## <a name="requirements"></a>要求
 
@@ -118,4 +121,4 @@ Convert a wide character:
 [mbstowcs、_mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wcstombs、_wcstombs_l](wcstombs-wcstombs-l.md)<br/>
-[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>
+[WideCharToMultiByte](/windows/win32/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

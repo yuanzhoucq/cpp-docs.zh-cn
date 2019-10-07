@@ -1,10 +1,10 @@
 ---
 title: getc、getwc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - getwc
 - getc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _gettc
 - getwc
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - getwc function
 - gettc function
 ms.assetid: 354ef514-d0c7-404b-92f5-995f6a834bb3
-ms.openlocfilehash: bbaee79eac6802959a11f7f1ba30eaf590ecf2f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ceb3ca117271e7074c6cb72c9c1f9e74ebe3bc10
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331865"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955495"
 ---
 # <a name="getc-getwc"></a>getc、getwc
 
@@ -61,13 +64,13 @@ wint_t getwc(
 
 ## <a name="return-value"></a>返回值
 
-返回读取的字符。 若要指示读取的错误或文件结尾条件**getc**返回**EOF**，并**getwc**返回**WEOF**。 有关**getc**，使用**ferror**或**feof**来检查是否有错误或文件尾。 如果*流*是**NULL**， **getc**并**getwc**将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，这些函数将返回**EOF** (或**WEOF**有关**getwc**) 并设置**errno**到**EINVAL**。
+返回读取的字符。 若要指示读取错误或文件尾条件， **getc**将返回**EOF**，并且**getwc**将返回**WEOF**。 对于**getc**，请使用**ferror**或**feof**检查是否有错误或文件结束。 如果*stream*为**NULL**，则**getc**和**getwc**将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回**EOF** （或**getwc**的**WEOF** ），并将**errno**设置为**EINVAL**。
 
 有关这些代码以及其他错误代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-每个例程从文件的当前位置读取单个字符，并增量关联的文件指针（如果已定义）以指向下一个字符。 与文件关联*流*。
+每个例程从文件的当前位置读取单个字符，并增量关联的文件指针（如果已定义）以指向下一个字符。 文件与*stream*关联。
 
 这些函数会锁定调用线程，因此是线程安全的。 有关非锁定版本，请参阅 [_getc_nolock、_getwc_nolock](getc-nolock-getwc-nolock.md)。
 
@@ -75,8 +78,8 @@ wint_t getwc(
 
 |例程所返回的值|备注|
 |-------------|-------------|
-|**getc**|与相同**fgetc**，但作为函数和宏实现。|
-|**getwc**|宽字符版本**getc**。 读取多字节字符或宽字符根据是否*流*以文本模式还是二进制模式下打开。|
+|**getc**|与**fgetc**相同，但作为函数和宏实现。|
+|**getwc**|**Getc**的宽字符版本。 根据*流*是在文本模式还是二进制模式中打开，读取多字节字符或宽字符。|
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -130,7 +133,7 @@ int main()
 }
 ```
 
-### <a name="input-crtgetctxt"></a>输入：crt_getc.txt
+### <a name="input-crt_getctxt"></a>输入：crt_getc.txt
 
 ```Input
 Line one.

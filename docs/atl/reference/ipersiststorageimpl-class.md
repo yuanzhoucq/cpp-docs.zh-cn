@@ -15,19 +15,19 @@ helpviewer_keywords:
 - storage, ATL
 - IPersistStorageImpl class
 ms.assetid: d652f02c-239c-47c7-9a50-3e9fc3014fff
-ms.openlocfilehash: 3239ed22e37ff694c9f399b05e765d63e97e99ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a5b5dd4e5be43d01f00687ed9b96a3f27abcad0f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276141"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495693"
 ---
 # <a name="ipersiststorageimpl-class"></a>IPersistStorageImpl 类
 
-此类实现[IPersistStorage](/windows/desktop/api/objidl/nn-objidl-ipersiststorage)接口。
+此类实现[IPersistStorage](/windows/win32/api/objidl/nn-objidl-ipersiststorage)接口。
 
 > [!IMPORTANT]
->  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
+>  此类及其成员不能用于在 Windows 运行时中执行的应用程序。
 
 ## <a name="syntax"></a>语法
 
@@ -39,7 +39,7 @@ class ATL_NO_VTABLE IPersistStorageImpl : public IPersistStorage
 #### <a name="parameters"></a>参数
 
 *T*<br/>
-您的类，派生自`IPersistStorageImpl`。
+派生自`IPersistStorageImpl`的类。
 
 ## <a name="members"></a>成员
 
@@ -48,20 +48,20 @@ class ATL_NO_VTABLE IPersistStorageImpl : public IPersistStorage
 |名称|描述|
 |----------|-----------------|
 |[IPersistStorageImpl::GetClassID](#getclassid)|检索对象的 CLSID。|
-|[IPersistStorageImpl::HandsOffStorage](#handsoffstorage)|指示要释放所有存储对象并进入 HandsOff 模式的对象。 ATL 实现返回 S_OK。|
+|[IPersistStorageImpl::HandsOffStorage](#handsoffstorage)|指示对象释放所有存储对象并进入 HandsOff 模式。 ATL 实现返回 S_OK。|
 |[IPersistStorageImpl::InitNew](#initnew)|初始化新的存储。|
-|[IPersistStorageImpl::IsDirty](#isdirty)|检查对象的数据是否自上次保存以来已更改。|
-|[IPersistStorageImpl::Load](#load)|从指定的存储中加载对象的属性。|
+|[IPersistStorageImpl::IsDirty](#isdirty)|检查对象的数据自上次保存后是否已更改。|
+|[IPersistStorageImpl::Load](#load)|从指定的存储加载对象的属性。|
 |[IPersistStorageImpl::Save](#save)|将对象的属性保存到指定的存储。|
-|[IPersistStorageImpl::SaveCompleted](#savecompleted)|通知它可以返回到正常模式下要写入到它的存储对象的对象。 ATL 实现返回 S_OK。|
+|[IPersistStorageImpl::SaveCompleted](#savecompleted)|通知对象它可以返回到正常模式以写入其存储对象。 ATL 实现返回 S_OK。|
 
 ## <a name="remarks"></a>备注
 
-`IPersistStorageImpl` 实现[IPersistStorage](/windows/desktop/api/objidl/nn-objidl-ipersiststorage)接口，它允许客户端请求的对象加载和保存使用存储其持久性数据。
+`IPersistStorageImpl`实现[IPersistStorage](/windows/win32/api/objidl/nn-objidl-ipersiststorage)接口, 该接口允许客户端使用存储来请求对象加载和保存其持久性数据。
 
-此类的实现需要类`T`进行的实现`IPersistStreamInit`接口可通过`QueryInterface`。 通常这意味着该类`T`应派生自[IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md)，提供的条目`IPersistStreamInit`中[COM 映射](com-map-macros.md)，并使用[属性映射](property-map-macros.md)来描述类的持久性数据。
+此类的实现需要类`T` , 以便通过`QueryInterface`实现`IPersistStreamInit`接口的实现。 通常, 这意味着类`T`应从[IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md)派生, `IPersistStreamInit`在[COM 映射](com-map-macros.md)中提供一个条目, 并使用[属性映射](property-map-macros.md)来描述类的持久性数据。
 
-**相关文章** [ATL 教程](../../atl/active-template-library-atl-tutorial.md)，[创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)
+**相关文章**[Atl 教程](../../atl/active-template-library-atl-tutorial.md),[创建 atl 项目](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -71,9 +71,9 @@ class ATL_NO_VTABLE IPersistStorageImpl : public IPersistStorage
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlcom.h
+**标头:** atlcom。h
 
-##  <a name="getclassid"></a>  IPersistStorageImpl::GetClassID
+##  <a name="getclassid"></a>IPersistStorageImpl:: GetClassID
 
 检索对象的 CLSID。
 
@@ -83,11 +83,11 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 
 ### <a name="remarks"></a>备注
 
-请参阅[IPersist::GetClassID](/windows/desktop/api/objidl/nf-objidl-ipersist-getclassid) Windows SDK 中。
+请参阅 Windows SDK 中的[IPersist:: GetClassID](/windows/win32/api/objidl/nf-objidl-ipersist-getclassid) 。
 
-##  <a name="handsoffstorage"></a>  IPersistStorageImpl::HandsOffStorage
+##  <a name="handsoffstorage"></a>IPersistStorageImpl::HandsOffStorage
 
-指示要释放所有存储对象并进入 HandsOff 模式的对象。
+指示对象释放所有存储对象并进入 HandsOff 模式。
 
 ```
 STDMETHOD(HandsOffStorage)(void);
@@ -99,9 +99,9 @@ STDMETHOD(HandsOffStorage)(void);
 
 ### <a name="remarks"></a>备注
 
-请参阅[IPersistStorage::HandsOffStorage](/windows/desktop/api/objidl/nf-objidl-ipersiststorage-handsoffstorage) Windows SDK 中。
+请参阅 Windows SDK 中的[IPersistStorage:: HandsOffStorage](/windows/win32/api/objidl/nf-objidl-ipersiststorage-handsoffstorage) 。
 
-##  <a name="initnew"></a>  IPersistStorageImpl::InitNew
+##  <a name="initnew"></a>IPersistStorageImpl:: InitNew
 
 初始化新的存储。
 
@@ -111,13 +111,13 @@ STDMETHOD(InitNew)(IStorage*);
 
 ### <a name="remarks"></a>备注
 
-ATL 实现委托给[IPersistStreamInit](/windows/desktop/api/ocidl/nn-ocidl-ipersiststreaminit)接口。
+ATL 实现委托给[IPersistStreamInit](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit)接口。
 
-请参阅[IPersistStorage:InitNew](/windows/desktop/api/objidl/nf-objidl-ipersiststorage-initnew) Windows SDK 中。
+请参阅 Windows SDK 中的[IPersistStorage: InitNew](/windows/win32/api/objidl/nf-objidl-ipersiststorage-initnew) 。
 
-##  <a name="isdirty"></a>  IPersistStorageImpl::IsDirty
+##  <a name="isdirty"></a>IPersistStorageImpl:: IsDirty
 
-检查对象的数据是否自上次保存以来已更改。
+检查对象的数据自上次保存后是否已更改。
 
 ```
 STDMETHOD(IsDirty)(void);
@@ -125,13 +125,13 @@ STDMETHOD(IsDirty)(void);
 
 ### <a name="remarks"></a>备注
 
-ATL 实现委托给[IPersistStreamInit](/windows/desktop/api/ocidl/nn-ocidl-ipersiststreaminit)接口。
+ATL 实现委托给[IPersistStreamInit](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit)接口。
 
-请参阅[IPersistStorage:IsDirty](/windows/desktop/api/objidl/nf-objidl-ipersiststorage-isdirty) Windows SDK 中。
+请参阅 Windows SDK 中的[IPersistStorage: IsDirty](/windows/win32/api/objidl/nf-objidl-ipersiststorage-isdirty) 。
 
-##  <a name="load"></a>  IPersistStorageImpl::Load
+##  <a name="load"></a>IPersistStorageImpl:: Load
 
-从指定的存储中加载对象的属性。
+从指定的存储加载对象的属性。
 
 ```
 STDMETHOD(Load)(IStorage* pStorage);
@@ -139,11 +139,11 @@ STDMETHOD(Load)(IStorage* pStorage);
 
 ### <a name="remarks"></a>备注
 
-ATL 实现委托给[IPersistStreamInit](/windows/desktop/api/ocidl/nn-ocidl-ipersiststreaminit)接口。 `Load` 使用名为"内容"的流中检索对象的数据。 [保存](#save)方法最初创建此流。
+ATL 实现委托给[IPersistStreamInit](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit)接口。 `Load`使用名为 "内容" 的流检索对象的数据。 [Save](#save)方法最初创建该流。
 
-请参阅[IPersistStorage:Load](/windows/desktop/api/objidl/nf-objidl-ipersiststorage-load) Windows SDK 中。
+请参阅 Windows SDK 中的[IPersistStorage: Load](/windows/win32/api/objidl/nf-objidl-ipersiststorage-load) 。
 
-##  <a name="save"></a>  IPersistStorageImpl::Save
+##  <a name="save"></a>IPersistStorageImpl:: Save
 
 将对象的属性保存到指定的存储。
 
@@ -153,13 +153,13 @@ STDMETHOD(Save)(IStorage* pStorage, BOOL fSameAsLoad);
 
 ### <a name="remarks"></a>备注
 
-ATL 实现委托给[IPersistStreamInit](/windows/desktop/api/ocidl/nn-ocidl-ipersiststreaminit)接口。 当`Save`第一次调用，它将创建指定的存储上名为"内容"的流。 在更高版本调用然后使用此流`Save`并在调用[负载](#load)。
+ATL 实现委托给[IPersistStreamInit](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit)接口。 第`Save`一次调用时, 它会在指定的存储上创建一个名为 "内容" 的流。 然后, 在以后对和的调用中`Save`使用此流来进行[加载](#load)。
 
-请参阅[IPersistStorage:Save](/windows/desktop/api/objidl/nf-objidl-ipersiststorage-save) Windows SDK 中。
+请参阅[IPersistStorage:](/windows/win32/api/objidl/nf-objidl-ipersiststorage-save)在 Windows SDK 中保存。
 
-##  <a name="savecompleted"></a>  IPersistStorageImpl::SaveCompleted
+##  <a name="savecompleted"></a>IPersistStorageImpl::SaveCompleted
 
-通知它可以返回到正常模式下要写入到它的存储对象的对象。
+通知对象它可以返回到正常模式以写入其存储对象。
 
 ```
 STDMETHOD(SaveCompleted)(IStorage*);
@@ -171,11 +171,11 @@ STDMETHOD(SaveCompleted)(IStorage*);
 
 ### <a name="remarks"></a>备注
 
-请参阅[IPersistStorage:SaveCompleted](/windows/desktop/api/objidl/nf-objidl-ipersiststorage-savecompleted) Windows SDK 中。
+请参阅 Windows SDK 中的[IPersistStorage: SaveCompleted](/windows/win32/api/objidl/nf-objidl-ipersiststorage-savecompleted) 。
 
 ## <a name="see-also"></a>请参阅
 
-[存储和流](/windows/desktop/Stg/storages-and-streams)<br/>
+[存储和流](/windows/win32/Stg/storages-and-streams)<br/>
 [IPersistStreamInitImpl 类](../../atl/reference/ipersiststreaminitimpl-class.md)<br/>
 [IPersistPropertyBagImpl 类](../../atl/reference/ipersistpropertybagimpl-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

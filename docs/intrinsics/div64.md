@@ -1,20 +1,20 @@
 ---
 title: _div64
-ms.date: 04/17/2019
+ms.date: 09/02/2019
 f1_keywords:
 - _div64
 helpviewer_keywords:
 - _div64 intrinsic
-ms.openlocfilehash: a221cc7cf0655a41873c6777aecd8a9b27131b74
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d05c5d6e25540a5de1b2f8231697c9a738759ce
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264109"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216775"
 ---
-# <a name="div64"></a>_div64
+# <a name="_div64"></a>_div64
 
-`_div64`内部函数将由 32 位整数的 64 位整数。 返回值包含商和内部函数返回的指针参数通过余数。 `_div64` 是**特定于 Microsoft**。
+`_div64`内部函数将64位整数除以32位整数。 返回值保留商, 内部函数通过指针参数返回余数。 `_div64`**特定于 Microsoft**。
 
 ## <a name="syntax"></a>语法
 
@@ -28,24 +28,24 @@ int _div64(
 
 ### <a name="parameters"></a>参数
 
-*dividend* \
-[in]要除以的 64 位整数。
+*被除数* \
+中要相除的64位整数。
 
 *divisor* \
-[in]要除以的 32 位整数。
+中要除以的32位整数。
 
-*remainder* \
-[out]32 位整数位的其余部分。
+*剩下* \
+弄余数的32位整数位。
 
 ## <a name="return-value"></a>返回值
 
-商的 32 位。
+商的32位。
 
 ## <a name="remarks"></a>备注
 
-`_div64`内部函数划分*被除数*通过*除数*。 它将其余部分存储在由指向 32 位整数*余数*，并返回 32 位的商。
+内部函数除以*除数*。 `_div64` 它将余数存储在由*余数*指向的32位整数中, 并返回商的32位。
 
-`_div64`内部函数是在 Visual Studio 2019 RTM 中推出。
+从 Visual Studio 2019 RTM 开始可以使用内部函数。`_div64`
 
 ## <a name="requirements"></a>要求
 

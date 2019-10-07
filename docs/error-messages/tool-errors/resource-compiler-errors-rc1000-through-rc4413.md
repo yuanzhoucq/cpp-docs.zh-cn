@@ -2,16 +2,16 @@
 title: 资源编译器错误和警告
 ms.date: 04/17/2019
 ms.assetid: 0819f955-0561-491d-af3d-2453f4e2d035
-ms.openlocfilehash: c760e59e183b78122b7498ca8faf2c70ac454fd2
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: dec141723e911c09fc63d7868a2783fb399e6fc3
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857263"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509953"
 ---
 # <a name="resource-compiler-errors-and-warnings-rcxxxx-rwxxxx"></a>资源编译器错误和警告（RCxxxx、RWxxxx）
 
-本部分是对资源编译器生成的错误的引用。 资源编译器错误和警告具有窗体 RC*xxxx*或 RW*xxxx*，其中*xxxx*是一个四位数字。
+本部分是对资源编译器生成的错误的引用。 资源编译器错误和警告的形式为 RC*xxxx*或 RW*xxxx*, 其中*xxxx*为四位数字。
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
@@ -99,5 +99,5 @@ ms.locfileid: "64857263"
 
 ## <a name="see-also"></a>请参阅
 
-[C /C++编译器和生成工具错误和警告](../compiler-errors-1/c-cpp-build-errors.md)
-[资源编译器](/windows/desktop/menurc/resource-compiler)
+[C/C++编译器和生成工具错误和警告](../compiler-errors-1/c-cpp-build-errors.md)
+[资源编译器](/windows/win32/menurc/resource-compiler)

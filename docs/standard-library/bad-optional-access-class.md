@@ -1,25 +1,33 @@
 ---
 title: bad_optional_access 类
-ms.date: 11/04/2016
+ms.date: 08/06/2019
 f1_keywords:
 - optional/std::bad_optional_access
-ms.assetid: 89a3b805-ab60-4858-b772-5855130c11b1
-ms.openlocfilehash: f898d1e30dd173339192bdb3b75581d12b62fca7
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 043b0360c7e0be48267c8f406dbfea50eeb5a8e3
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68269139"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957103"
 ---
-# <a name="badoptionalaccess-class"></a>bad_optional_access 类
+# <a name="bad_optional_access-class"></a>bad_optional_access 类
 
-定义类型的对象为例外，以将情况汇报尝试访问的值，其中引发`optional`不包含值的对象。
+定义作为异常引发的对象的类型, 以报告尝试访问不包含值的`optional`对象的值时所发生的情况。
 
 ## <a name="syntax"></a>语法
 
 ```cpp
 class bad_optional_access : public exception
 {
-    public: bad_optional_access();
+public:
+    bad_optional_access() noexcept;
+    bad_optional_access(const bad_optional_access&) noexcept;
+    bad_optional_access& operator=(const bad_optional_access&) noexcept;
+    const char* what() const noexcept override;
 };
 ```
+
+## <a name="see-also"></a>请参阅
+
+[\<可选 >](optional.md)\
+[可选类](optional-class.md)

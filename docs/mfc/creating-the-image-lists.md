@@ -6,23 +6,23 @@ helpviewer_keywords:
 - image lists [MFC], creating for CListCtrl
 - lists [MFC], image
 ms.assetid: c2768515-deba-49e8-a6f3-5be6482afb19
-ms.openlocfilehash: 844bfe71f7b03f299f57b0fd4558b7e9eacf67c2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6687b62b70103894d957a21019008e8781385feb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242232"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508780"
 ---
 # <a name="creating-the-image-lists"></a>创建图像列表
 
-不管您是使用创建图像列表都相同[CListView](../mfc/reference/clistview-class.md)或[CListCtrl](../mfc/reference/clistctrl-class.md)。
+无论你使用的是[CListView](../mfc/reference/clistview-class.md)还是[CListCtrl](../mfc/reference/clistctrl-class.md), 创建图像列表都是相同的。
 
 > [!NOTE]
->  您仅需要图像列表如果列表控件包含`LVS_ICON`样式。
+>  如果列表控件包含`LVS_ICON`样式, 则仅需要图像列表。
 
-使用类`CImageList`若要创建一个或多个图像列表 （用于全尺寸图标、 小图标和状态）。 请参阅[CImageList](../mfc/reference/cimagelist-class.md)，并查看[列表视图图像列表](/windows/desktop/Controls/using-list-view-controls)Windows SDK 中。
+使用类`CImageList`创建一个或多个图像列表 (适用于全尺寸图标、小图标和状态)。 请参阅[CImageList](../mfc/reference/cimagelist-class.md), 然后查看 Windows SDK 中的[列表视图图像列表](/windows/win32/Controls/using-list-view-controls)。
 
-调用[CListCtrl::SetImageList](../mfc/reference/clistctrl-class.md#setimagelist)每个图像列表; 将指针传递到相应`CImageList`对象。
+为每个图像列表调用[CListCtrl:: SetImageList](../mfc/reference/clistctrl-class.md#setimagelist) ;将指针传递到适当`CImageList`的对象。
 
 ## <a name="see-also"></a>请参阅
 

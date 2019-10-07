@@ -1,12 +1,12 @@
 ---
 title: islower、iswlower、_islower_l、_iswlower_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - iswlower
 - _islower_l
 - islower
 - _iswlower_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _istlower
 - islower
@@ -42,14 +45,14 @@ helpviewer_keywords:
 - iswlower function
 - _islower_l function
 ms.assetid: fcc3b70a-2b47-45fd-944d-e5c1942e6457
-ms.openlocfilehash: b6b58522277b45fe8147dfa13a5930003f83c835
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 957bae12c718b0466c8e9f6d39dd57d7c0ccca7d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331566"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954324"
 ---
-# <a name="islower-iswlower-islowerl-iswlowerl"></a>islower、iswlower、_islower_l、_iswlower_l
+# <a name="islower-iswlower-_islower_l-_iswlower_l"></a>islower、iswlower、_islower_l、_iswlower_l
 
 确定整数是否表示小写字符。
 
@@ -82,11 +85,11 @@ int _iswlower_l(
 
 ## <a name="return-value"></a>返回值
 
-这些例程返回非零值如果*c*是小写字符的特定表示形式。 **islower**返回非零值，如果*c*是一个小写字符 (a-z)。 **iswlower**返回非零值，如果*c*是宽字符对应于一个小写字母，或者如果*c*是之一实现定义的宽字符，对于该宽**iswcntrl**， **iswdigit**， **iswpunct**，或者**iswspace**为非零值。 每个例程将返回 0，如果*c*不满足测试条件。
+如果*c*是小写字符的特定表示形式，则每个例程将返回非零值。 如果*c*是一个小写字符（a-z），则**islower**将返回一个非零值。 如果*c*是对应于小写字母的宽字符，或者如果*c*是实现定义的宽字符集（其中没有**iswcntrl**、 **iswdigit**、iswpunct），则**iswlower**将返回一个非零值。，或**iswspace**为非零值。 如果*c*不满足测试条件，则这些例程都将返回0。
 
-具有这些函数的版本 **_l**后缀为其区域设置相关的行为使用传入的区域设置而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+具有 **_l**后缀的这些函数的版本使用传入的区域设置，而不是其与区域设置相关的行为的当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-行为**islower**并 **_islower_l**未定义当*c*不是 EOF 或在范围 0 到 0xff 内，非独占。 使用调试 CRT 库时， *c*是不包含其中一个值，函数将引发断言。
+如果*c*不是 EOF 或介于0到0xff （含0和0xff），则**islower**和 **_islower_l**的行为是不确定的。 当使用调试 CRT 库并且*c*不是这些值之一时，函数将引发断言。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

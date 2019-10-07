@@ -1,12 +1,12 @@
 ---
 title: atof、_atof_l、_wtof、_wtof_l
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _wtof_l
 - atof
 - _atof_l
 - _wtof
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tstof
 - _ttof
@@ -46,14 +49,14 @@ helpviewer_keywords:
 - _wtof function
 - string conversion, to floating point values
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
-ms.openlocfilehash: 6c2ec158ac0b75a861b5b226d33de113d76988cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a624ae9f900395ed2117ed2bb89e2768c64daba9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341348"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939570"
 ---
-# <a name="atof-atofl-wtof-wtofl"></a>atof、_atof_l、_wtof、_wtof_l
+# <a name="atof-_atof_l-_wtof-_wtof_l"></a>atof、_atof_l、_wtof、_wtof_l
 
 将字符串转换为双精度型。
 
@@ -86,9 +89,9 @@ double _wtof_l(
 
 ## <a name="return-value"></a>返回值
 
-每个函数返回**double**产生的输入的字符解释为数字值。 如果输入无法转换为该类型的值，则返回值为 0.0。
+每个函数都返回通过将输入字符解释为数字而生成的**双精度**值。 如果输入无法转换为该类型的值，则返回值为 0.0。
 
-在所有超出范围情况下， **errno**设置为**ERANGE**。 如果传入的参数是**NULL**，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许继续执行，这些函数将设置**errno**到**EINVAL** ，返回 0。
+在所有超出范围的情况下， **errno**设置为**ERANGE**。 如果传入的参数为**NULL**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数会将**errno**设置为**EINVAL** ，并返回0。
 
 ## <a name="remarks"></a>备注
 
@@ -96,15 +99,15 @@ double _wtof_l(
 
 输入字符串是一系列字符，可以解释为指定类型的数值。 该函数在首个它无法无法识别为数字一部分的字符处停止读取输入字符串。 此字符可能是终止字符串的空字符（'\0' 或 L'\0'）。
 
-*Str*自变量**atof**并 **_wtof**具有以下形式：
+**Atof**和 **_wtof**的*str*参数具有以下形式：
 
-[*空格*] [*登录*] [*数字*] [__。__*位数*] [{**e** &#124; **E** } [*登录*]*数字*]
+[*空格*][*sign*][*数字*][ __.__ *数字*][{**e** &#124; **e** } [*sign*]*数字*]
 
-一个*空格*包含的空格或制表符字符，将被忽略;*符号*可以是加号 （+） 或减号 （–）; 并且*数字*是一个或多个十进制数字。 如果小数点前没有数字，则小数点后必须至少有一个数字。 十进制数字后面可能跟一个指数，其中包含介绍性字母 (**e**，或**E**) 和一个可选的带符号十进制整数。
+*空白*包含被忽略的空格或制表符;*sign*为加号（+）或减号（-）;和*数字*是一个或多个十进制数字。 如果小数点前没有数字，则小数点后必须至少有一个数字。 十进制数字后面可以跟一个指数，其中包含一个引导字母（**e**或**e**）和一个有符号的十进制整数。
 
-这些函数的 UCRT 版本不支持转换 Fortran 样式的 (**d**或**D**) 指数字母。 这个非标准扩展受早期版本的 CRT 支持，可能会为你的代码的带来重大变化。
+这些函数的 UCRT 版本不支持 Fortran 样式（**d**或**d**）指数字母的转换。 这个非标准扩展受早期版本的 CRT 支持，可能会为你的代码的带来重大变化。
 
-使用这些函数的版本 **_l**后缀完全相同，只不过它们使用*区域设置*而不是当前区域设置中传递参数。
+使用 **_l**后缀的这些函数的版本是相同的，只不过它们使用传入的*区域设置*参数而不是当前区域设置。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -117,12 +120,12 @@ double _wtof_l(
 
 |例程|必需的标头|
 |------------------|---------------------|
-|**atof**， **_atof_l**|C：\<math.h> 或 \<stdlib.h> C++：\<cstdlib>、\<stdlib.h>、\<cmath> 或 \<math.h>|
-|**_wtof**， **_wtof_l**|C：\<stdlib.h> 或 \<wchar.h> C++：\<cstdlib>、\<stdlib.h> 或 \<wchar.h>|
+|**atof**、 **_atof_l**|C：\<math.h> 或 \<stdlib.h> C++：\<cstdlib>、\<stdlib.h>、\<cmath> 或 \<math.h>|
+|**_wtof**、 **_wtof_l**|C：\<stdlib.h> 或 \<wchar.h> C++：\<cstdlib>、\<stdlib.h> 或 \<wchar.h>|
 
 ## <a name="example"></a>示例
 
-此程序说明如何将存储为字符串的数字转换为数字值使用**atof**并 **_atof_l**函数。
+此程序说明如何使用**atof**和 **_atof_l**函数将存储为字符串的数字转换为数值。
 
 ```C
 // crt_atof.c

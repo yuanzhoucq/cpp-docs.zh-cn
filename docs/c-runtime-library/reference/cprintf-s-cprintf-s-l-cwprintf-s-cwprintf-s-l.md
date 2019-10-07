@@ -1,12 +1,12 @@
 ---
 title: _cprintf_s、_cprintf_s_l、_cwprintf_s、_cwprintf_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cwprintf_s_l
 - _cprintf_s_l
 - _cprintf_s
 - _cwprintf_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _cwprintf_s_l
 - _cprintf_s
@@ -43,14 +46,14 @@ helpviewer_keywords:
 - cprintf_s_l function
 - cwprintf_s_l function
 ms.assetid: c28504fe-0d20-4f06-8f97-ee33225922ad
-ms.openlocfilehash: 3652587c9622c2eb9fe316782d1b1c7c9644dc8f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c14da7158a3e15a74a01630a8a1b475d3e496de9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606514"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938971"
 ---
-# <a name="cprintfs-cprintfsl-cwprintfs-cwprintfsl"></a>_cprintf_s、_cprintf_s_l、_cwprintf_s、_cwprintf_s_l
+# <a name="_cprintf_s-_cprintf_s_l-_cwprintf_s-_cwprintf_s_l"></a>_cprintf_s、_cprintf_s_l、_cwprintf_s、_cwprintf_s_l
 
 格式化并打印到控制台。 这些版本的 [_cprintf、_cprintf_l、_cwprintf、_cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md) 具有安全增强功能，如 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述。
 
@@ -85,7 +88,7 @@ int _cwprintf_s_l(
 *format*<br/>
 窗体控件字符串。
 
-*自变量*<br/>
+*实际*<br/>
 可选参数。
 
 *locale*<br/>
@@ -97,16 +100,16 @@ int _cwprintf_s_l(
 
 ## <a name="remarks"></a>备注
 
-这些函数会格式化并打印一系列字符和值直接向控制台中，使用 **_putch**函数 (**_putwch**有关 **_cwprintf_s**) 到输出字符。 每个*自变量*（如果有） 进行转换和输出中的相应格式规范根据*格式*。 格式具有相同的形式和函数与*格式*参数[printf_s](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)函数。 与不同**fprintf_s**， **printf_s**，并**sprintf_s**函数，既不 **_cprintf_s**也不 **_cwprintf_s**换行字符转换为回车符和换行符 (CR-LF) 组合时输出。
+这些函数将一系列字符和值直接格式化并输出到控制台，并使用 **_putch**函数（ **_putwch** for **_cwprintf_s**）来输出字符。 每个*自变量*（如果有）根据*格式*规范的相应格式规范进行转换和输出。 格式具有与[printf_s](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)函数的*format*参数相同的形式和函数。 与**fprintf_s**、 **printf_s**和**sprintf_s**函数不同，在输出时， **_cprintf_s**和 **_cwprintf_s**都不会将换行符转换为回车换行符（CR-LF）组合。
 
-一个重要的区别在于 **_cwprintf_s**显示 Unicode 字符时在 Windows NT 中使用。 与不同 **_cprintf_s**， **_cwprintf_s**使用当前控制台区域设置
+一个重要的区别在于，在 Windows NT 中使用时， **_cwprintf_s**会显示 Unicode 字符。 与 **_cprintf_s**不同， **_cwprintf_s**使用当前的控制台区域设置
 
-使用这些函数的版本 **_l**后缀完全相同，只不过它们使用传递中而不是当前区域设置的区域设置参数。
+使用 **_l**后缀的这些函数的版本是相同的，只不过它们使用传入的区域设置参数而不是当前区域设置。
 
 > [!IMPORTANT]
-> 确保 format 不是用户定义的字符串。
+> 确保 format不是用户定义的字符串。
 
-与不安全版本一样 (请参阅[_cprintf、 _cprintf_l、 _cwprintf、 _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md))，这些函数验证其参数并调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)，如果*格式*是 null 指针。 这些函数与不安全版本的不同之处在于，格式字符串本身也需进行验证。 如果有任何未知或格式错误的格式化说明符，则这些函数将调用无效参数处理程序。 在所有情况下，如果允许执行继续，则这些函数返回-1 并设置**errno**到**EINVAL**。
+与不安全版本一样（请参阅[_cprintf、_cprintf_l、_cwprintf、_cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)），这些函数将验证其参数并调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述，如果*format*为 null变为. 这些函数与不安全版本的不同之处在于，格式字符串本身也需进行验证。 如果有任何未知或格式错误的格式化说明符，则这些函数将调用无效参数处理程序。 在所有情况下，如果允许执行继续，则函数将返回-1，并将**errno**设置为**EINVAL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -119,8 +122,8 @@ int _cwprintf_s_l(
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**_cprintf_s**， **_cprintf_s_l**|\<conio.h>|
-|**_cwprintf_s**， **_cwprintf_s_l**|\<conio.h>|
+|**_cprintf_s**、 **_cprintf_s_l**|\<conio.h>|
+|**_cwprintf_s**、 **_cwprintf_s_l**|\<conio.h>|
 
 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

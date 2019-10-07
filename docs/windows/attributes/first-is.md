@@ -1,19 +1,19 @@
 ---
-title: first_is (C++ COM 属性)
+title: first_is (C++ COM 特性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.first_is
 helpviewer_keywords:
 - first_is attribute
 ms.assetid: 89acbf56-3b38-4d44-83e8-1ce2f6f74ffd
-ms.openlocfilehash: 79ddcb3a3ca256af4c7c30536d65c820dcef2afe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d06435caaeb53beb76bd145c92c470446cae3a7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409598"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501554"
 ---
-# <a name="firstis"></a>first_is
+# <a name="first_is"></a>first_is
 
 指定要传输的第一个数组元素的索引。
 
@@ -25,16 +25,16 @@ ms.locfileid: "62409598"
 
 ### <a name="parameters"></a>参数
 
-*expression*<br/>
-一个或多个 C 语言表达式。 允许使用空参数槽。
+expression<br/>
+一个或多个 C 语言表达式。 允许空参数槽。
 
 ## <a name="remarks"></a>备注
 
-**First_is** C++属性具有相同的功能[first_is](/windows/desktop/Midl/first-is) MIDL 特性。
+**First_is** C++特性具有与[first_is](/windows/win32/Midl/first-is) MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
-下面的代码演示一个部分指定数组中的各种方法：
+下面的代码演示了在数组中指定节的各种方式:
 
 ```cpp
 // cpp_attr_ref_first_is.cpp
@@ -62,10 +62,10 @@ requestedit] HRESULT get_I([out, retval]long *i);
 
 |||
 |-|-|
-|**适用对象**|中的字段**struct**或**union**，接口参数，接口方法|
-|**可重复**|否|
-|**必需的特性**|None|
-|**无效的特性**|None|
+|**适用于**|**结构**或**联合**中的字段, 接口参数, 接口方法|
+|**可重复**|No|
+|**必需的特性**|无|
+|**无效的特性**|无|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

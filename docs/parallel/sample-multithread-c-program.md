@@ -1,28 +1,76 @@
 ---
 title: 多线程 C 程序示例
-ms.date: 11/04/2016
+ms.date: 08/09/2019
 ms.assetid: 4706f6cd-ff9c-4dbf-99a2-1c999b568f17
-ms.openlocfilehash: 560fdd9e1d5633a240ada8979dc059a901690476
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eb1a07558dd9446e167c27ad08891f88c37fb4ec
+ms.sourcegitcommit: b3d19b5f59f3a5d90c24f9f16c73bad4c5eb6944
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363019"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71195814"
 ---
 # <a name="sample-multithread-c-program"></a>多线程 C 程序示例
 
-Bounce.c 是一个示例多线程程序创建新的线程每次以字母`a`或`A`类型化。 每个线程在屏幕上四处不同颜色的笑脸。 可以创建多达 32 个线程。 发生程序的正常终止时`q`或`Q`类型化。 有关编译和链接 Bounce.c 的信息，请参阅[编译和链接多线程程序](compiling-and-linking-multithread-programs.md)。
+反弹是一个示例多线程程序，每次键入字母`a`或`A`时都会创建一个新线程。 每个线程都在屏幕上弹跳不同颜色的字母。 最多可以创建32个线程。 此程序的正常终止发生在`q`键入`Q`或时。
+
+## <a name="compile-and-link-a-multithread-program"></a>编译和链接多线程程序
+
+默认情况下，程序被编译为多线程。
+
+### <a name="to-compile-and-link-the-multithread-program-bouncec-from-within-the-development-environment"></a>从开发环境中编译和链接多线程程序弹跳
+
+::: moniker range=">=vs-2019"
+
+1. 在“文件”菜单上，选择“新建”>“项目”。
+
+1. 在 "**创建新项目**" 对话框中，选择具有**C++** 、 **Windows**和**控制台**标记的**控制台应用程序**模板。 选择“下一步” 继续。
+
+1. 在 "**配置新项目**" 对话框中，输入项目的名称，例如 "弹跳"。 选择 "**创建**" 以继续。
+
+1. 在 "**解决方案资源管理器**" 窗口中，打开项目下的 "**源文件**" 文件夹，并将源文件的名称更改为扩展名 .c。
+
+1. 在编辑窗口中，删除现有源代码，并将其替换为示例代码。
+
+1. 在 **“生成”** 菜单上，选择 **“生成解决方案”** 。
+
+1. 按**F5**在调试器中启动程序。
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+1. 在“文件”菜单上，选择“新建”>“项目”。
+
+1. 在 "**新建项目**" 对话框中，选择左窗格中的 "**视觉对象C++**  "，然后在中间窗格中选择 "**空项目**"。
+
+1. 在 "**名称**" 编辑框中，输入项目的名称，例如 "弹跳"。 选择 **"确定"** 以创建空项目。
+
+1. 在 "**解决方案资源管理器**" 窗口中，打开项目下的 "**源文件**" 文件夹，并将包含 C 源代码的文件添加到项目。
+
+1. 在 "**生成**" 菜单上，通过选择 "**生成解决方案**" 命令来生成项目。
+
+1. 按**F5**在调试器中启动程序。
+
+::: moniker-end
+
+### <a name="to-compile-and-link-the-multithread-program-bouncec-from-the-command-line"></a>从命令行编译和链接多线程程序弹跳
+
+1. 编译和链接程序：
+
+    ```cmd
+    cl bounce.c
+    ```
 
 ## <a name="example"></a>示例
 
-### <a name="code"></a>代码
+若要在命令行上生成，请将此示例复制并保存到扩展名为 .c 的源文件中。 在 IDE 中，将模板创建的任何源代码替换为以下示例：
 
-```c
+```C
 // sample_multithread_c_program.c
 // compile with: /c
 //
 //  Bounce - Creates a new thread each time the letter 'a' is typed.
-//  Each thread bounces a happy face of a different color around
+//  Each thread bounces a character of a different color around
 //  the screen. All threads are terminated when the letter 'Q' is
 //  entered.
 //
@@ -41,121 +89,133 @@ Bounce.c 是一个示例多线程程序创建新的线程每次以字母`a`或`A
 #define getrandom( min, max ) (SHORT)((rand() % (int)(((max) + 1) - \
                                (min))) + (min))
 
-int main( void );                    // Thread 1: main
-void KbdFunc( void  );               // Keyboard input, thread dispatch
-void BounceProc( void * MyID );      // Threads 2 to n: display
-void ClearScreen( void );            // Screen clear
-void ShutDown( void );               // Program shutdown
-void WriteTitle( int ThreadNum );    // Display title bar information
+int main(void);                    // Thread 1: main
+void KbdFunc(void);                // Keyboard input, thread dispatch
+void BounceProc(void* MyID);       // Threads 2 to n: display
+void ClearScreen(void);            // Screen clear
+void ShutDown(void);               // Program shutdown
+void WriteTitle(int ThreadNum);    // Display title bar information
 
 HANDLE  hConsoleOut;                 // Handle to the console
 HANDLE  hRunMutex;                   // "Keep Running" mutex
 HANDLE  hScreenMutex;                // "Screen update" mutex
 int     ThreadNr;                    // Number of threads started
 CONSOLE_SCREEN_BUFFER_INFO csbiInfo; // Console information
+COORD   consoleSize;
+BOOL    bTrails;
 
 int main() // Thread One
 {
     // Get display screen information & clear the screen.
-    hConsoleOut = GetStdHandle( STD_OUTPUT_HANDLE );
-    GetConsoleScreenBufferInfo( hConsoleOut, &csbiInfo );
+    hConsoleOut = GetStdHandle(STD_OUTPUT_HANDLE);
+    GetConsoleScreenBufferInfo(hConsoleOut, &csbiInfo);
+    consoleSize.X = csbiInfo.srWindow.Right;
+    consoleSize.Y = csbiInfo.srWindow.Bottom;
     ClearScreen();
-    WriteTitle( 0 );
+    WriteTitle(0);
 
     // Create the mutexes and reset thread count.
-    hScreenMutex = CreateMutex( NULL, FALSE, NULL );  // Cleared
-    hRunMutex = CreateMutex( NULL, TRUE, NULL );      // Set
+    hScreenMutex = CreateMutexW(NULL, FALSE, NULL);  // Cleared
+    hRunMutex = CreateMutexW(NULL, TRUE, NULL);      // Set
     ThreadNr = 0;
+    bTrails = FALSE;
 
     // Start waiting for keyboard input to dispatch threads or exit.
     KbdFunc();
 
     // All threads done. Clean up handles.
-    CloseHandle( hScreenMutex );
-    CloseHandle( hRunMutex );
-    CloseHandle( hConsoleOut );
+    if (hScreenMutex) CloseHandle(hScreenMutex);
+    if (hRunMutex) CloseHandle(hRunMutex);
+    if (hConsoleOut) CloseHandle(hConsoleOut);
 }
 
-void ShutDown( void ) // Shut down threads
+void ShutDown(void) // Shut down threads
 {
-    while ( ThreadNr > 0 )
+    while (ThreadNr > 0)
     {
         // Tell thread to die and record its death.
-        ReleaseMutex( hRunMutex );
+        ReleaseMutex(hRunMutex);
         ThreadNr--;
     }
 
     // Clean up display when done
-    WaitForSingleObject( hScreenMutex, INFINITE );
+    WaitForSingleObject(hScreenMutex, INFINITE);
     ClearScreen();
 }
 
-void KbdFunc( void ) // Dispatch and count threads.
+void KbdFunc(void) // Dispatch and count threads.
 {
     int         KeyInfo;
 
     do
     {
         KeyInfo = _getch();
-        if ( tolower( KeyInfo ) == 'a' &&
-             ThreadNr < MAX_THREADS )
+        if (tolower(KeyInfo) == 'a' &&
+            ThreadNr < MAX_THREADS)
         {
             ThreadNr++;
-            _beginthread( BounceProc, 0, &ThreadNr );
-            WriteTitle( ThreadNr );
+            _beginthread(BounceProc, 0, &ThreadNr);
+            WriteTitle(ThreadNr);
         }
-    } while( tolower( KeyInfo ) != 'q' );
+        if (tolower(KeyInfo) == 't')
+        {
+            bTrails = !bTrails;
+        }
+    } while (tolower(KeyInfo) != 'q');
 
     ShutDown();
 }
 
-void BounceProc( void *pMyID )
+void BounceProc(void* pMyID)
 {
-    char    MyCell, OldCell;
-    WORD    MyAttrib, OldAttrib;
-    char    BlankCell = 0x20;
+    wchar_t MyCell, OldCell;
+    WORD    MyAttrib, OldAttrib = 0;
+    wchar_t BlankCell = 0x20;
     COORD   Coords, Delta;
-    COORD   Old = {0,0};
+    COORD   Old = { 0,0 };
     DWORD   Dummy;
-    char    *MyID = (char*)pMyID;
+    char* MyID = (char*)pMyID;
 
     // Generate update increments and initial
     // display coordinates.
-    srand( (unsigned int) *MyID * 3 );
+    srand((unsigned int)* MyID * 3);
 
-    Coords.X = getrandom( 0, csbiInfo.dwSize.X - 1 );
-    Coords.Y = getrandom( 0, csbiInfo.dwSize.Y - 1 );
-    Delta.X = getrandom( -3, 3 );
-    Delta.Y = getrandom( -3, 3 );
+    Coords.X = getrandom(0, consoleSize.X - 1);
+    Coords.Y = getrandom(0, consoleSize.Y - 1);
+    Delta.X = getrandom(-3, 3);
+    Delta.Y = getrandom(-3, 3);
 
-    // Set up "happy face" & generate color
+    // Set up character & generate color
     // attribute from thread number.
-    if( *MyID > 16)
-        MyCell = 0x01;          // outline face
+    if (*MyID > 16)
+        MyCell = 0x60 + *MyID - 16; // lower case
     else
-        MyCell = 0x02;          // solid face
-    MyAttrib =  *MyID & 0x0F;   // force black background
+        MyCell = 0x40 + *MyID;      // upper case
+    MyAttrib = *MyID & 0x0f;   // force black background
 
     do
     {
         // Wait for display to be available, then lock it.
-        WaitForSingleObject( hScreenMutex, INFINITE );
+        WaitForSingleObject(hScreenMutex, INFINITE);
 
-        // If we still occupy the old screen position, blank it out.
-        ReadConsoleOutputCharacter( hConsoleOut, &OldCell, 1,
-                                    Old, &Dummy );
-        ReadConsoleOutputAttribute( hConsoleOut, &OldAttrib, 1,
-                                    Old, &Dummy );
-        if (( OldCell == MyCell ) && (OldAttrib == MyAttrib))
-            WriteConsoleOutputCharacter( hConsoleOut, &BlankCell, 1,
-                                         Old, &Dummy );
+        if (!bTrails)
+        {
+            // If we still occupy the old screen position, blank it out.
+            ReadConsoleOutputCharacterW(hConsoleOut, &OldCell, 1,
+                Old, &Dummy);
+            ReadConsoleOutputAttribute(hConsoleOut, &OldAttrib, 1,
+                Old, &Dummy);
+            if ((OldCell == MyCell) && (OldAttrib == MyAttrib))
+                WriteConsoleOutputCharacterW(hConsoleOut, &BlankCell, 1,
+                    Old, &Dummy);
+        }
 
-        // Draw new face, then clear screen lock
-        WriteConsoleOutputCharacter( hConsoleOut, &MyCell, 1,
-                                     Coords, &Dummy );
-        WriteConsoleOutputAttribute( hConsoleOut, &MyAttrib, 1,
-                                     Coords, &Dummy );
-        ReleaseMutex( hScreenMutex );
+        // Draw new character, then clear screen lock
+        WriteConsoleOutputCharacterW(hConsoleOut, &MyCell, 1,
+            Coords, &Dummy);
+        WriteConsoleOutputAttribute(hConsoleOut, &MyAttrib, 1,
+            Coords, &Dummy);
+        ReleaseMutex(hScreenMutex);
 
         // Increment the coordinates for next placement of the block.
         Old.X = Coords.X;
@@ -164,49 +224,44 @@ void BounceProc( void *pMyID )
         Coords.Y += Delta.Y;
 
         // If we are about to go off the screen, reverse direction
-        if( Coords.X < 0 || Coords.X >= csbiInfo.dwSize.X )
+        if (Coords.X < 0 || Coords.X >= consoleSize.X)
         {
             Delta.X = -Delta.X;
-            Beep( 400, 50 );
+            Beep(400, 50);
         }
-        if( Coords.Y < 0 || Coords.Y > csbiInfo.dwSize.Y )
+        if (Coords.Y < 0 || Coords.Y > consoleSize.Y)
         {
             Delta.Y = -Delta.Y;
-            Beep( 600, 50 );
+            Beep(600, 50);
         }
     }
     // Repeat while RunMutex is still taken.
-    while ( WaitForSingleObject( hRunMutex, 75L ) == WAIT_TIMEOUT );
+    while (WaitForSingleObject(hRunMutex, 75L) == WAIT_TIMEOUT);
 }
 
-void WriteTitle( int ThreadNum )
+void WriteTitle(int ThreadNum)
 {
-    enum {
-        sizeOfNThreadMsg = 80
+    enum
+    {
+        sizeOfNThreadMsg = 120
     };
-    char    NThreadMsg[sizeOfNThreadMsg];
+    wchar_t    NThreadMsg[sizeOfNThreadMsg] = { L"" };
 
-    sprintf_s( NThreadMsg, sizeOfNThreadMsg,
-               "Threads running: %02d.  Press 'A' "
-               "to start a thread,'Q' to quit.", ThreadNum );
-    SetConsoleTitle( NThreadMsg );
+    swprintf_s(NThreadMsg, sizeOfNThreadMsg,
+        L"Threads running: %02d.  Press 'A' "
+        L"to start a thread, 'T' to toggle "
+        L"trails, 'Q' to quit.", ThreadNum);
+    SetConsoleTitleW(NThreadMsg);
 }
 
-void ClearScreen( void )
+void ClearScreen(void)
 {
-    DWORD    dummy;
+    DWORD    dummy = 0;
     COORD    Home = { 0, 0 };
-    FillConsoleOutputCharacter( hConsoleOut, ' ',
-                                csbiInfo.dwSize.X * csbiInfo.dwSize.Y,
-                                Home, &dummy );
+    FillConsoleOutputCharacterW(hConsoleOut, L' ',
+        consoleSize.X * consoleSize.Y,
+        Home, &dummy);
 }
-```
-
-### <a name="input"></a>输入
-
-```
-a
-q
 ```
 
 ## <a name="see-also"></a>请参阅

@@ -2,12 +2,12 @@
 title: 移植指南：Spy++
 ms.date: 11/19/2018
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: bca5e912d28124e8d5d6e56cc234ef7bf9bceb89
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 175f3fbba7e18f625dc3425c236162737689f068
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451121"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630450"
 ---
 # <a name="porting-guide-spy"></a>移植指南：Spy++
 
@@ -65,9 +65,9 @@ C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afxv_w32.h
 
 Microsoft 不再为 Windows XP 提供支持，因此，即使 Visual Studio 中允许面向 Windows XP，你仍应在应用程序中逐步取消对此版本的支持，并鼓励你的用户采用新版本的 Windows。
 
-若要消除此错误，请将“项目属性”  设置更新为当前要面向的最低版本的 Windows，以定义 WINVER。 [此处](/windows/desktop/WinProg/using-the-windows-headers)可找到包含各种 Windows 版本的值的表。
+若要消除此错误，请将“项目属性”  设置更新为当前要面向的最低版本的 Windows，以定义 WINVER。 [此处](/windows/win32/WinProg/using-the-windows-headers)可找到包含各种 Windows 版本的值的表。
 
-Stdafx.h 文件包含一些宏定义。
+stdafx.h  文件包含了一些宏定义。
 
 ```cpp
 #define WINVER       0x0500  // these defines are set so that we get the
@@ -373,7 +373,7 @@ DECODEPARM(CB_GETLBTEXT)
 #define PARM(var, type, src)type var = (type)src
 ```
 
-因此，`lpszBuffer` 变量在相同的函数中进行了两次声明。 如果代码未使用宏（只需删除第二个类型声明），则修复这个问题并不容易。 事实上，我们面对的选择很艰难，必须决定是将宏代码重写为普通代码（单调乏味并且可能出错的任务）还是禁用该警告。
+因此，`lpszBuffer` 变量在相同的函数中进行了两次声明。 如果代码未使用宏，那么修复这个问题就没有只需删除第二个类型声明那么简单了。 事实上，我们面对的选择很艰难，必须决定是将宏代码重写为普通代码（单调乏味并且可能出错的任务）还是禁用该警告。
 
 在本例中，我们选择禁用该警告。 可以通过添加如下杂注实现此操作：
 
@@ -404,7 +404,7 @@ DWORD dwWindowsVersion = GetVersion();
 
 后面紧跟检查 dwWindowsVersion 值以确定是否在 Windows 95 上运行以及确定 Windows NT 版本的大量代码。 由于这已过时，我们将删除代码并处理对这些变量的所有引用。
 
-文章 [Operating system version changes in Windows 8.1 and Windows Server 2012 R2](https://msdn.microsoft.com/library/windows/desktop/dn302074.aspx)（Windows 8.1 和 Windows Server 2012 R2中的操作系统版本更改）解释了这一情况。
+文章 [Operating system version changes in Windows 8.1 and Windows Server 2012 R2](/windows/win32/w8cookbook/operating-system-version-changes-in-windows-8-1)（Windows 8.1 和 Windows Server 2012 R2中的操作系统版本更改）解释了这一情况。
 
 `CSpyApp` 类中有一些查询操作系统版本的方法：`IsWindows9x`、`IsWindows4x` 和 `IsWindows5x`。 对于旧应用程序使用的技术而言，良好的开端在于假定我们计划支持的 Windows 版本（Windows 7 和更高版本）都非常接近 Windows NT 5。 这些方法用于应对旧操作系统的限制。 因此，我们更改了这些方法，以对 `IsWindows5x` 返回 TRUE，对其他返回 FALSE。
 
@@ -502,7 +502,7 @@ warning C4211: nonstandard extension used: redefined extern to static
 
 ##  <a name="porting_to_unicode"></a>步骤 11. 从 MBCS 移植到 Unicode
 
-注意，在 Windows 世界中，当说到 Unicode 时，通常是指 UTF-16。 其他操作系统（如 Linux）使用 UTF-8，但 Windows 通常不使用。 Visual Studio 2013 和 Visual Studio 2015 中弃用了 MFC 的 MBCS 版本，但是 Visual Studio 2017 将不再弃用它。 如果使用的是 Visual Studio 2013 或 Visual Studio 2015，在执行实际将 MBCS 代码移植到 UTF-16 Unicode 的步骤之前，我们可能需要暂时消除已弃用 MBCS 的警告，以便执行其他工作或将移植推迟到方便的时间。 当前的代码使用 MBCS，若要继续使用，则需要安装 ANSI/MBCS 版本的 MFC。 Visual Studio 使用 C++ 的桌面开发的默认安装内容并不包括较大的 MFC 库，因此需要在安装程序的可选组件中将其选中  。 请参阅 [MFC MBCS DLL 加载项](../mfc/mfc-mbcs-dll-add-on.md)。 完成下载并重启 Visual Studio 后，可以使用 MBCS 版本的 MFC 进行编译和链接，但若要在使用 Visual Studio 2013 和 Visual Studio 2015 时完全删除关于 MBCS 的警告，则还应将 NO_WARN_MBCS_MFC_DEPRECATION 添加到项目属性预处理器部分的预定义宏列表，或者添加到 stdafx.h 头文件或其他常见头文件的开头  。
+注意，在 Windows 世界中，当说到 Unicode 时，通常是指 UTF-16。 其他操作系统（如 Linux）使用 UTF-8，但 Windows 通常不使用。 Visual Studio 2013 和 Visual Studio 2015 中弃用了 MFC 的 MBCS 版本，但是 Visual Studio 2017 将不再弃用它。 如果使用的是 Visual Studio 2013 或 Visual Studio 2015，在执行实际将 MBCS 代码移植到 UTF-16 Unicode 的步骤之前，我们可能需要暂时消除已弃用 MBCS 的警告，以便执行其他工作或将移植推迟到方便的时间。 当前的代码使用 MBCS，若要继续使用，则需要安装 ANSI/MBCS 版本的 MFC。 Visual Studio 使用 C++ 的桌面开发的默认安装内容并不包括较大的 MFC 库，因此需要在安装程序的可选组件中将其选中  。 请参阅 [MFC MBCS DLL 加载项](../mfc/mfc-mbcs-dll-add-on.md)。 下载并重启 Visual Studio 后，就可以编译并关联到 MBCS 版本的 MFC；但若要在使用 Visual Studio 2013 或 2015 时消除关于 MBCS 的警告，还应将 NO_WARN_MBCS_MFC_DEPRECATION 添加到项目属性的“预处理器”  部分中的预定义宏列表，或添加到 stdafx.h  头文件或其他常见头文件的开头。
 
 现在我们将获得一些链接器错误。
 
@@ -520,7 +520,7 @@ msvcrtd.lib;msvcirtd.lib;kernel32.lib;user32.lib;gdi32.lib;advapi32.lib;Debug\Sp
 
 移植到 UTF-16 Unicode 时，必须决定是否仍然需要编译为 MBCS 的选项。  如果需要具有支持 MBCS 的选项，则应将 TCHAR 宏用作字符类型，它将解析为 char 或 wchar_t，具体取决于是否在编译期间定义了 \_MBCS 或 \_UNICODE   。 切换到 TCHAR 及 TCHAR 版本的各种 API 而不是 wchar_t 及其关联 API 意味着你能够重回 MBCS 版本的代码，只需定义 \_MBCS 宏而不是 \_UNICODE 即可  。 除 TCHAR 外，还存在各种 TCHAR 版本，如广泛使用的 typedef、宏和函数。 例如，LPCTSTR 而非 LPCSTR，等等。 在项目属性对话框中，在“配置属性”  的“常规”  部分，将“字符集”  属性从“使用 MBCS 字符集”  更改为“使用 Unicode 字符集”  。 此设置会影响编译期间预定义的宏。 同时存在 UNICODE 宏和 \_UNICODE 宏。 项目属性对两者的影响一致。 Windows 头文件使用 UNICODE，而 Visual C++ 头文件（如 MFC）则使用 \_UNICODE，但定义其中一个后，另一个也将得到定义。
 
-有一个使用 TCHAR 从 MBCS 移植到 UTF-16 Unicode 的好[方法](https://msdn.microsoft.com/library/cc194801.aspx)。 选择此路由。 首先，将“字符集”  属性设置为“使用 Unicode 字符集”  并重新生成项目。
+有一个使用 TCHAR 从 MBCS 移植到 UTF-16 Unicode 的好[方法](/previous-versions/cc194801(v=msdn.10))。 选择此路由。 首先，将“字符集”  属性设置为“使用 Unicode 字符集”  并重新生成项目。
 
 代码中的一些地方已经使用 TCHAR，显然预期最终支持 Unicode。 有些不使用。 我们搜索 CHAR 的实例，即 char 的 typedef，并将大多数实例替换为了 TCHAR   。 此外，我们还搜索了 `sizeof(CHAR)`。 每当从 CHAR 更改为 TCHAR 时，通常不得不更改为 `sizeof(TCHAR)`，因为这通常用于确定字符串中的字符数。 此处使用错误的类型不会产生编译器错误，因此需要注意此情况。
 
@@ -544,7 +544,7 @@ wsprintf(szTmp, _T("%d.%2.2d.%4.4d"), rmj, rmm, rup);
 
 \_T 宏可以使字符串文本编译为 char 字符串或 wchar_t 字符串，具体取决于 MBCS 或 UNICODE 的设置   。 若要将 Visual Studio 中的所有字符串替换为 \_T，首先请打开“快速替换”（键盘  ：Ctrl+F）框或“在文件中替换”（键盘    ：Ctrl+Shift+H），然后选择“使用正则表达式”复选框     。 输入 `((\".*?\")|('.+?'))` 作为搜索文本，输入 `_T($1)` 作为替换文本。 如果某些字符串周围已存在 \_T 宏，此过程将重新添加该宏，并且可能还会发现不需要 \_T 的情况（例如使用 `#include` 时），因此最好使用“替换下一个”而不是“全部替换”   。
 
-此特定函数 [wsprintf](/windows/desktop/api/winuser/nf-winuser-wsprintfa) 实际上在 Windows 标头中已定义，相关文档建议不使用此函数，因为可能会发生缓冲区溢出。 `szTmp` 缓冲区未给定大小，因此函数无法检查该缓冲区是否可容纳要写入的所有数据。 请参阅下一节有关移植到安全 CRT 的内容，我们将在下一节修复其他类似的问题。 最终使用 [_stprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md) 进行替换。
+此特定函数 [wsprintf](/windows/win32/api/winuser/nf-winuser-wsprintfw) 实际上在 Windows 标头中已定义，相关文档建议不使用此函数，因为可能会发生缓冲区溢出。 `szTmp` 缓冲区未给定大小，因此函数无法检查该缓冲区是否可容纳要写入的所有数据。 请参阅下一节有关移植到安全 CRT 的内容，我们将在下一节修复其他类似的问题。 最终使用 [_stprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md) 进行替换。
 
 这是转换为 Unicode 时的另一个常见错误。
 

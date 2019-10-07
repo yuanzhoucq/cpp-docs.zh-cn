@@ -1,11 +1,11 @@
 ---
 title: remquo、remquof、remquol
 ms.date: 04/05/2018
-apiname:
+api_name:
 - remquof
 - remquo
 - remquol
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - remquof
 - remquol
@@ -27,12 +30,12 @@ helpviewer_keywords:
 - remquof function
 - remquo function
 ms.assetid: a1d3cb8b-8027-4cd3-8deb-04eb17f299fc
-ms.openlocfilehash: 4c7e93806600ff674baf186a66662aafdeceeaca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c96357dda007e9bf12ddaf6091af47794bfc0630
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357546"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949362"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo、remquof、remquol
 
@@ -53,30 +56,30 @@ long double remquo( long double numer, long double denom, int* quo ); /* C++ onl
 
 ### <a name="parameters"></a>参数
 
-*numer*<br/>
+*收藏*<br/>
 分子。
 
 *denom*<br/>
 分母。
 
-*quo*<br/>
+*现状*<br/>
 指向整数值的指针，以存储带有商的符号和近似值的值。
 
 ## <a name="return-value"></a>返回值
 
-**remquo**返回的浮点余数*x* / *y*。 如果的值*y*为 0.0， **remquo**返回静态 NaN。 有关安静 NaN 的表示形式**printf**系列，请参阅[printf、 _printf_l、 wprintf、 _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)。
+**remquo**返回*x* / *y*的浮点余数。 如果*y*的值为0.0，则**remquo**将返回静默的 NaN。 有关**printf**系列的 quiet NaN 表示形式的信息，请参阅[printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)。
 
 ## <a name="remarks"></a>备注
 
-**Remquo**函数计算的浮点余数*f*的*x* / *y*以便*x*  = *我* \* *y* + *f*，其中*我*是一个整数*f*具有相同的符号*x*，和值的绝对值*f*是值的绝对值小于*y*。
+**Remquo**函数计算*x* / *y*的浮点余数*f* ，以便*x* = *i* \* *y* + *f*，其中*i*为整数， *f*与*x*具有相同的符号，而*f*的绝对值小于*y*的绝对值。
 
-C++允许重载，因此可以调用的重载**remquo**采用并返回**float**或**长** **double**值。 在 C 程序中， **remquo**始终采用两个**double**自变量并返回**double**。
+C++允许重载，因此你可以调用**remquo**的重载，该重载采用并返回**浮点**或**长** **双精度**值。 在 C 程序中， **remquo**始终采用两个**双精度**参数并返回**double**。
 
 ## <a name="requirements"></a>要求
 
 |函数|必需的标头 (C)|必需的标头 (C++)|
 |--------------|---------------------|-|
-|**remquo**， **remquof**， **remquol**|\<math.h>|\<cmath> 或 \<math.h>|
+|**remquo**、 **remquof**、 **remquol**|\<math.h>|\<cmath> 或 \<math.h>|
 
 有关兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

@@ -1,9 +1,9 @@
 ---
 title: _getw
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getw
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _getw
 helpviewer_keywords:
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - integers, getting from streams
 - getw function
 ms.assetid: ef75facc-b84e-470f-9f5f-8746c90822a0
-ms.openlocfilehash: 615d3ac9bdc73ad200368eaeabf7c84951bc91ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ad03c92ce90542ecae13609ee228ad094f64fc07
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157625"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954879"
 ---
-# <a name="getw"></a>_getw
+# <a name="_getw"></a>_getw
 
 从流中获取整数。
 
@@ -49,11 +52,11 @@ int _getw(
 
 ## <a name="return-value"></a>返回值
 
-**_getw**返回读取的整数值。 返回值**EOF**指示存在错误或文件结尾。 但是，由于**EOF**值也是合法的整数值，请使用**feof**或**ferror**若要验证文件尾或错误条件。 如果*流*是**NULL**，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**并且该函数返回**EOF**。
+**_getw**返回读取的整数值。 **EOF**的返回值指示错误或文件尾。 但是，因为**EOF**值也是合法的整数值，请使用**feof**或**ferror**来验证文件尾或错误条件。 如果*stream*为**NULL**，则会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将**errno**设置为**EINVAL** ，并且该函数将返回**EOF**。
 
 ## <a name="remarks"></a>备注
 
-**_Getw**函数将读取类型的下一个二进制值**int**与关联的文件从*流*并递增关联的文件指针 （如果有） 以点到下一个未读字符。 **_getw**不会假定任何特定的对齐方式的流中的项。 移植问题可能会出现 **_getw**因为的大小**int**类型和中的字节顺序**int**类型系统而异。
+**_Getw**函数从与*流*关联的文件中读取**int**类型的下一个二进制值，并递增关联的文件指针（如果有）以指向下一个未读字符。 **_getw**不假定流中项的任何特殊对齐方式。 由于 int 类型的**int**类型的大小和**int**类型中的字节顺序在不同系统之间不同，因此可能会出现与 **_getw**有关的问题。
 
 ## <a name="requirements"></a>要求
 
@@ -98,7 +101,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crtgetwtxt"></a>输入：crt_getw.txt
+### <a name="input-crt_getwtxt"></a>输入：crt_getw.txt
 
 ```Input
 Line one.

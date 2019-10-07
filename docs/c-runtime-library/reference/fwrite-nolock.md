@@ -1,9 +1,9 @@
 ---
 title: _fwrite_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fwrite_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fwrite_nolock
 - fwrite_nolock
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - streams, writing data to
 - _fwrite_nolock function
 ms.assetid: 2b4ec6ce-742e-4615-8407-44a0a18ec1d7
-ms.openlocfilehash: 1c899e34e19547b30a42135f3f818f220f1bc5b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 035ee1d958c6ea6a13481d92311733ded9ed5f2c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332658"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956206"
 ---
-# <a name="fwritenolock"></a>_fwrite_nolock
+# <a name="_fwrite_nolock"></a>_fwrite_nolock
 
 将数据写入流，但不锁定线程。
 
@@ -66,7 +69,7 @@ size_t _fwrite_nolock(
 
 ## <a name="remarks"></a>备注
 
-此函数是的非锁定版本**fwrite**。 它等同于**fwrite** ，只不过它不受干扰从其他线程。 它可能更快，因为它不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用此函数，如单线程应用程序或调用范围已处理线程隔离的区域。
+此函数是**fwrite**的非锁定版本。 它与**fwrite**完全相同，只不过它不会受到其他线程的干扰。 它可能更快，因为它不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用此函数，如单线程应用程序或调用范围已处理线程隔离的区域。
 
 ## <a name="requirements"></a>要求
 

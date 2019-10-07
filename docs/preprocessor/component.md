@@ -1,6 +1,6 @@
 ---
-title: 组件
-ms.date: 04/08/2019
+title: component 杂注
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.component
 - component_CPP
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - component pragma
 - pragmas, component
 ms.assetid: 7b66355e-3201-4c14-8190-f4a2a81a604a
-ms.openlocfilehash: 4870860650a39d27639ad18100ba37ba14aa15c0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 578c590bdb4223f173e0249c18d0eea4e78a18db
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366909"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220480"
 ---
-# <a name="component"></a>组件
+# <a name="component-pragma"></a>component 杂注
 
-控件的浏览信息或从源文件中的依赖关系信息的集合。
+控制源文件内浏览信息或依赖项信息的集合。
 
 ## <a name="syntax"></a>语法
 
-> **#pragma component( browser,** { **on** | **off** }[**,** **references** [**,** *name* ]] **)** \
-> **#pragma 组件 (minrebuild 上** | **关闭)** \
-> **#pragma 组件 (mintypeinfo 上** | **关闭)**
+> **#pragma 组件 (浏览器,** { **on** | **off** } [ **,** **引用**[ **,** *名称*]] **)**  \
+> **#pragma 组件 (minrebuild** ) |  \
+> **#pragma 组件 (mintypeinfo** ) | 
 
 ## <a name="remarks"></a>备注
 
@@ -40,9 +40,9 @@ ms.locfileid: "62366909"
 停止编译器收集浏览信息。
 
 > [!NOTE]
-> 若要启用的带此杂注的浏览信息的收集[必须先启用浏览信息](../build/reference/building-browse-information-files-overview.md)。
+> 若要启用通过此杂注收集浏览信息,[必须先启用浏览信息](../build/reference/building-browse-information-files-overview.md)。
 
-`references`可以使用选项，带或不带*名称*参数。 使用`references`而无需*名称*打开或关闭的引用的收集 （其他浏览信息仍是收集，但是）。 例如：
+**引用**选项可与或不带*name*参数一起使用。 使用不带*名称*的**引用**将打开或关闭引用的收集 (但仍会收集其他浏览信息)。 例如:
 
 ```cpp
 #pragma component(browser, off, references)
@@ -50,21 +50,21 @@ ms.locfileid: "62366909"
 
 停止编译器收集引用信息。
 
-使用`references`与*名称*并`off`可防止对引用*名称*使其不显示浏览信息窗口。 使用此语法可忽略您不感兴趣的名称和类型，并减小浏览信息文件的大小。 例如：
+使用*名称*和**off** **引用**可防止在 "浏览信息" 窗口中显示*名称*引用。 使用此语法可忽略您不感兴趣的名称和类型，并减小浏览信息文件的大小。 例如：
 
 ```cpp
 #pragma component(browser, off, references, DWORD)
 ```
 
-将忽略对 DWORD 从该时间点的引用。 您可以启用对 DWORD 的引用重新使用收集的`on`:
+忽略从该点开始对 DWORD 值的引用。 可以通过使用**在**上打开对 DWORD 的引用的收集:
 
 ```cpp
 #pragma component(browser, on, references, DWORD)
 ```
 
-这是唯一的方法，若要恢复到引用的收集*名称*; 你必须显式打开任何*名称*已处于关闭状态。
+这是继续收集*名称*引用的唯一方法;您必须显式打开已关闭的任何*名称*。
 
-若要防止预处理器扩展*名称*（例如 0 到展开为 NULL），加上双引号它：
+若要防止预处理器扩展*名称*(如将 NULL 扩展到 0), 请在其两侧加上引号:
 
 ```cpp
 #pragma component(browser, off, references, "NULL")
@@ -72,18 +72,18 @@ ms.locfileid: "62366909"
 
 ### <a name="minimal-rebuild"></a>最小重新生成
 
-已弃用[/Gm （启用最小重新生成）](../build/reference/gm-enable-minimal-rebuild.md)功能要求编译器创建并存储C++类依赖关系信息，将占用磁盘空间。 若要节省磁盘空间，可以使用`#pragma component( minrebuild, off )`时不需要收集依赖关系信息，例如，不变的标头文件中。 插入`#pragma component(minrebuild, on)`后重新启用依赖项收集不变的类。
+弃用的[/gm (启用最小重新生成)](../build/reference/gm-enable-minimal-rebuild.md)功能要求编译器创建并存储C++类依赖关系信息, 这会占用磁盘空间。 若要节省磁盘空间, 可以在`#pragma component( minrebuild, off )`不需要收集依赖项信息时使用, 例如, 在不变的标头文件中。 在`#pragma component( minrebuild, on )`不变的类后插入, 以重新打开依赖项集合。
 
-### <a name="reduce-type-information"></a>减少类型信息
+### <a name="reduce-type-information"></a>减小类型信息
 
-`mintypeinfo`选项可减少指定的区域的调试信息。 此信息的量相当大，会影响 .pdb 和 .obj 文件。 您不能在 mintypeinfo 区域中调试类和结构。 使用 mintypeinfo 选项可帮助避免以下警告：
+`mintypeinfo`选项可减少指定区域的调试信息。 此信息的量相当大，会影响 .pdb 和 .obj 文件。 您不能在 mintypeinfo 区域中调试类和结构。 使用 mintypeinfo 选项可帮助避免以下警告：
 
 ```cmd
 LINK : warning LNK4018: too many type indexes in PDB "filename", discarding subsequent type information
 ```
 
-有关详细信息，请参阅[/Gm （启用最小重新生成）](../build/reference/gm-enable-minimal-rebuild.md)编译器选项。
+有关详细信息, 请参阅[/gm (启用最小重新生成)](../build/reference/gm-enable-minimal-rebuild.md)编译器选项。
 
 ## <a name="see-also"></a>请参阅
 
-[Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Pragma 指令和 __pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -2,12 +2,12 @@
 title: 如何：在通用 Windows 平台应用中使用现有 C++ 代码
 ms.date: 04/08/2019
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-ms.openlocfilehash: b46cbdc088908f59d6cbdc0ecd7cd6475da370d8
-ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.openlocfilehash: 5050a9773eea55549958195efa624743f44ed031
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67861135"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630426"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>如何：在通用 Windows 平台应用中使用现有 C++ 代码
 
@@ -19,13 +19,13 @@ UWP 应用在受保护的环境中运行，结果，很多可能危及平台安�
 
 如果源代码可用于库，则你可能能够消除禁止的 API 调用。 有关详细信息（包括允许或禁止的 API 的列表），请参阅[用于 UWP 应用的 Win32 和 COM API](/uwp/win32-and-com/win32-and-com-for-uwp-apps) 以及[通用 Windows 平台应用中不支持的 CRT 函数](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。 可通过 [UWP 应用中的 Windows API 替代项](/uwp/win32-and-com/alternatives-to-windows-apis-uwp)，找到一些替代项。
 
-如果只是尝试从通用 Windows 项目添加引用到经典桌面库，你将得到一条显示库不兼容的错误消息。 如果是静态库，你只需通过将库（.lib 文件）添加到链接器输入就可以链接到库，类似在经典 Win32 应用程序中的操作。 对于仅二进制可用的库，这是唯一的选项。 静态库链接到应用的可执行文件中，但在 UWP 应用中使用的 Win32 DLL 必须通过将其包括在项目中并标记为“内容”来打包到应用中。 要在 UWP 应用中加载 Win32 DLL，还需要调用 [LoadPackagedLibrary](/windows/desktop/api/winbase/nf-winbase-loadpackagedlibrary)，而不是 `LoadLibrary` 或 `LoadLibraryEx`。
+如果只是尝试从通用 Windows 项目添加引用到经典桌面库，你将得到一条显示库不兼容的错误消息。 如果是静态库，你只需通过将库（.lib 文件）添加到链接器输入就可以链接到库，类似在经典 Win32 应用程序中的操作。 对于仅二进制可用的库，这是唯一的选项。 静态库链接到应用的可执行文件中，但在 UWP 应用中使用的 Win32 DLL 必须通过将其包括在项目中并标记为“内容”来打包到应用中。 要在 UWP 应用中加载 Win32 DLL，还需要调用 [LoadPackagedLibrary](/windows/win32/api/winbase/nf-winbase-loadpackagedlibrary)，而不是 `LoadLibrary` 或 `LoadLibraryEx`。
 
 如果你有 DLL 或静态库的源代码，可使用 `/ZW` 重新编译为 UWP 项目。 如果要这样做，可使用解决方案资源管理器添加引用并在 C++ UWP 应用中使用它  。 在 DLL 的情况下，与导出库链接。
 
 若要向其他语言中的调用方公开功能，则可以将库转换为 Windows 运行时组件。 Windows 运行时组件与普通的 DLL 的不同之处在于它们包括 .winmd 文件格式的元数据，这些元数据以 .NET 和 JavaScript 的使用者需要的方式介绍内容。 若要向其他语言公开 API 元素，你可以添加 C++/CX 构造（如 ref 类）并将其设置为公共，或使用 [Windows 运行时 C++ 模板库 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)。  在 Windows 10 以及更高版本中，可使用 [C++/WinRT 库](https://github.com/microsoft/cppwinrt)，而不是 C++/CX。
 
-前面的讨论不适用于 COM 组件案例，COM 组件必须以不同方式处理。 如果在 EXE 或 DLL 中具有 COM 服务器，只要将其作为[免注册 COM 组件](/windows/desktop/sbscs/creating-registration-free-com-objects)打包，将其作为内容文件添加到你的项目，并使用 [CoCreateInstanceFromApp](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstancefromapp) 将其实例化，就可以在通用 Windows 项目中使用它。 有关详细信息，请参阅[在 Windows 应用商店 C++ 项目中使用 Free-COM DLL](https://blogs.msdn.microsoft.com/win8devsupport/2013/05/19/using-free-com-dll-in-windows-store-c-project/)。
+前面的讨论不适用于 COM 组件案例，COM 组件必须以不同方式处理。 如果在 EXE 或 DLL 中具有 COM 服务器，只要将其作为[免注册 COM 组件](/windows/win32/sbscs/creating-registration-free-com-objects)打包，将其作为内容文件添加到你的项目，并使用 [CoCreateInstanceFromApp](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstancefromapp) 将其实例化，就可以在通用 Windows 项目中使用它。 有关详细信息，请参阅[在 Windows 应用商店 C++ 项目中使用 Free-COM DLL](https://blogs.msdn.microsoft.com/win8devsupport/2013/05/19/using-free-com-dll-in-windows-store-c-project/)。
 
 如果想要将现有 COM 库移植到 UWP，可通过使用 [Windows 运行时 C++ 模板库 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md) 将其转换为 Windows 运行时组件。 WRL 不支持 ATL 和 OLE的所有功能，因此这种端口是否可行取决于 COM 代码多少，取决于你的组件需要 COM、ATL 以及 OLE 的哪些功能。
 
@@ -151,7 +151,7 @@ UWP 应用在受保护的环境中运行，结果，很多可能危及平台安�
 
    现在，解决方案资源管理器会将该项目标识为通用 Windows 项目  。
 
-5. 请确保预编译的头文件的名称正确。 在“预编译标头”部分中，将预编译头文件从 pch.h 更改为 stdafx.h   。 如果没有这样操作，将出现以下错误。
+5. 请确保预编译的头文件的名称正确。 在“预编译标头”  部分中，将“预编译标头文件”  从“pch.h”  更改为“stdafx.h”  。 如果没有这样操作，将出现以下错误。
 
    > 错误 C2857：在源文件中没有找到用 /Ycpch.h 命令行选项指定的“#include”语句
 
@@ -165,7 +165,7 @@ UWP 应用在受保护的环境中运行，结果，很多可能危及平台安�
 
    在“项目” > “解决方案”下，选中 DLL 项目旁边的复选框，然后选择“确定”按钮    。
 
-8. 将库的标头文件包含在 UWP 应用的 pch.h 文件中。
+8. 将库的一个或多个头文件添加到 UWP 应用的 pch.h  文件中。
 
     ```cpp
     #include "..\MyNativeDLL\giraffe.h"
@@ -195,7 +195,7 @@ UWP 应用在受保护的环境中运行，结果，很多可能危及平台安�
 
 1. 在 UWP 项目的项目属性中，在左窗格中依次选择“配置属性” > “链接器” > “输入”    。 在右窗格中，将路径添加到库中的“其他依赖项”  属性中。 例如，对于将其输出放置在 *SolutionFolder*\Debug\MyNativeLibrary\MyNativeLibrary.lib 中的项目中的库，则添加相对路径 `Debug\MyNativeLibrary\MyNativeLibrary.lib`。
 
-2. 添加一个 include 语句，将头文件引用到 pch.h 文件（如果存在），或按需要引用到任何所需的 .cpp 文件中，并开始添加使用库的代码。
+2. 添加 include 语句，以将头文件引用到 pch.h  文件（若有）或所需的任何 .cpp 文件中，并开始添加使用库的代码。
 
    ```cpp
    #include "..\MyNativeLibrary\giraffe.h"
@@ -219,7 +219,7 @@ UWP 应用在受保护的环境中运行，结果，很多可能危及平台安�
 
 5. 从原始项目中选择要添加的所有文件，然后选择“确定”  。 如果子文件夹需要，则重复。
 
-6. 你现在可能有一些重复代码。 如果你有多个预编译的标头（假设 stdafx.h 和 pch.h），选择一个保留。 将任何所需的代码（比如 include 语句）复制到你要保留的标头中。 然后，删除另一个，并在“预编译标头”  下的项目属性中，请确保头文件的名称正确。
+6. 你现在可能有一些重复代码。 如果有多个预编译标头（例如 stdafx.h  和 pch.h  ），请选择一个保留。 将任何所需的代码（比如 include 语句）复制到你要保留的标头中。 然后，删除另一个，并在“预编译标头”  下的项目属性中，请确保头文件的名称正确。
 
    如果更改了要用作预编译标头的文件，请确保预编译标头选项适用于每个文件。 依次选择每个 .cpp 文件，打开其属性窗口，并确保所有项都设置为“使用 (/Yu)”  （所需的预编译标头除外，其应设置为“创建 (/Yc)”  ）。
 

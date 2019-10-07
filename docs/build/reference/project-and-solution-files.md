@@ -9,18 +9,18 @@ helpviewer_keywords:
 - browsing database file, .sdf
 - file types [C++], project files
 ms.assetid: 5823b954-36cf-42d3-8fd5-25bab3ef63d9
-ms.openlocfilehash: 37bfd1a6db2087e97ab76d3d06ed6f56e59b96e3
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 73d1733afde9dd62081d071df025c76bba5729d1
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707417"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492657"
 ---
 # <a name="project-and-solution-files"></a>项目和解决方案文件
 
 在 Visual Studio 中创建项目时，会创建以下文件。 它们用于管理解决方案中的项目文件。
 
-|Filename|目录位置|解决方案资源管理器位置|说明|
+|Filename|目录位置|解决方案资源管理器位置|描述|
 |--------------|------------------------|--------------------------------|-----------------|
 |Solname.sln|Projname|在解决方案资源管理器中不显示|*解决方案*文件。 它将一个或多个项目的所有元素组织到一个解决方案中。|
 |Projname.suo|Projname|在解决方案资源管理器中不显示|解决方案选项文件。 它存储解决方案的自定义项，以便每次打开解决方案中的项目或文件时，都具有所需的外观和行为。|
@@ -29,7 +29,7 @@ ms.locfileid: "65707417"
 |Projname.sdf|Projname|在解决方案资源管理器中不显示|浏览数据库文件。 它支持浏览和导航功能，如“转到定义”、“查找所有引用”和“类视图”。 它是通过分析头文件生成的。|
 |Projname.vcxproj.filters|Projname|在解决方案资源管理器中不显示|筛选器文件。 它指定在何处放置添加到解决方案的文件。 例如，.h 文件置于“头文件”节点中。|
 |Projname.vcxproj.user|Projname|在解决方案资源管理器中不显示|迁移用户文件。 从 Visual Studio 2008 迁移项目之后，此文件包含从任何 .vsprops 文件转换的信息。|
-|Projname.idl|Projname|源|（特定于项目）包含控件类型库的接口描述语言 (IDL) 源代码。 此文件由 Visual C++ 用于生成类型库。 生成的库会向其他自动化客户端公开控件的接口。 有关详细信息，请参阅 Windows SDK 中的[接口定义 (IDL) 文件](/windows/desktop/Rpc/the-interface-definition-language-idl-file)。|
+|Projname.idl|Projname|Source|（特定于项目）包含控件类型库的接口描述语言 (IDL) 源代码。 此文件由 Visual C++ 用于生成类型库。 生成的库会向其他自动化客户端公开控件的接口。 有关详细信息，请参阅 Windows SDK 中的[接口定义 (IDL) 文件](/windows/win32/Rpc/the-interface-definition-language-idl-file)。|
 |Readme.txt|Projname|项目|自述文件。 它由应用程序向导生成，描述项目中的文件。|
 
 ## <a name="see-also"></a>请参阅

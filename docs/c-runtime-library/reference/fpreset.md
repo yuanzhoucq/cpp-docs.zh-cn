@@ -1,9 +1,9 @@
 ---
 title: _fpreset
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _fpreset
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fpreset
 - fpreset
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - floating-point numbers, resetting math package
 - _fpreset function
 ms.assetid: f31c6a04-b464-4f07-a7c4-42133360e328
-ms.openlocfilehash: 0b3ea4289cd0ff031fd2828e3c4183911459297c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 842b9c794d04d71f8f6ca97e35fb3cac2f7bb1ec
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333230"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957015"
 ---
-# <a name="fpreset"></a>_fpreset
+# <a name="_fpreset"></a>_fpreset
 
 重置浮点包。
 
@@ -43,9 +46,9 @@ void _fpreset( void );
 
 ## <a name="remarks"></a>备注
 
-**_Fpreset**函数重新初始化浮点数学包。 **_fpreset**通常用于**信号**，**系统**，或 **_exec**或 **_spawn**函数。 如果某个程序捕获浮点错误信号 (**SIGFPE**) 与**信号**，它可以安全地从错误中恢复浮点通过调用 **_fpreset**和使用**longjmp**。
+**_Fpreset**函数重新初始化浮点数学包。 **_fpreset**通常与**信号**、**系统**或 **_exec**或 **_spawn**函数一起使用。 如果程序使用**信号**捕获浮点错误信号（**SIGFPE**），则它可以通过调用 **_fpreset**并使用**longjmp**从浮点错误中安全地恢复。
 
-使用编译时，此函数已弃用[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)因为公共语言运行时仅支持默认浮点精度。
+使用[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)进行编译时，不推荐使用此函数，因为公共语言运行时仅支持默认的浮点精度。
 
 ## <a name="requirements"></a>要求
 

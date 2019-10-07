@@ -1,12 +1,12 @@
 ---
 title: _ismbclower、_ismbclower_l、_ismbcupper、_ismbcupper_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbclower
 - _ismbclower_l
 - _ismbcupper_l
 - _ismbcupper
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbcupper
 - _ismbclower
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - ismbclower_l function
 - _ismbcupper_l function
 ms.assetid: 17d89587-65bc-477c-ba8f-a84e63cf59e7
-ms.openlocfilehash: 29a1e97f4583808931e5228a6905aed7c0a62702
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a64a0d9be83733fa5482eee84ce6576dd32c221
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157262"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953787"
 ---
-# <a name="ismbclower-ismbclowerl-ismbcupper-ismbcupperl"></a>_ismbclower、_ismbclower_l、_ismbcupper、_ismbcupper_l
+# <a name="_ismbclower-_ismbclower_l-_ismbcupper-_ismbcupper_l"></a>_ismbclower、_ismbclower_l、_ismbcupper、_ismbcupper_l
 
 检查多字节字符是大写还是小写。
 
@@ -75,20 +78,20 @@ int _ismbcupper_l(
 
 ## <a name="return-value"></a>返回值
 
-其中每个例程在字符满足测试条件时返回一个非零值，在不满足测试条件时回 0。 如果*c*< = 255 且存在相应 **_ismbb**例程 (例如， **_ismbcalnum**对应于 **_ismbbalnum**)，则结果是相应的返回值 **_ismbb**例程。
+其中每个例程在字符满足测试条件时返回一个非零值，在不满足测试条件时回 0。 如果*c*< = 255 且存在相应的 **_ismbb**例程（例如， **_ismbcalnum**对应于 **_ismbbalnum**），则结果为相应 **_ismbb**例程的返回值。
 
 ## <a name="remarks"></a>备注
 
 其中每个函数都针对给定的条件测试给定的多字节字符。
 
-使用这些函数的版本 **_l**后缀完全相同，只不过它们使用为其区域设置相关的行为而不是当前区域设置传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+这些带有 **_l**后缀的函数的版本相同，只不过它们使用传入的区域设置，而不是其与区域设置相关的行为的当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 |例程所返回的值|测试条件|代码页 932 示例|
 |-------------|--------------------|---------------------------|
-|**_ismbclower**|小写字母|返回非零值，当且仅当*c*是 ASCII 小写英文字母的单字节表示形式：0x61<=*c*<=0x7A.|
-|**_ismbclower_l**|小写字母|返回非零值，当且仅当*c*是 ASCII 小写英文字母的单字节表示形式：0x61<=*c*<=0x7A.|
-|**_ismbcupper**|大写字母|返回非零值，当且仅当*c*是 ASCII 大写英文字母的单字节表示形式：0x41<=*c*<=0x5A.|
-|**_ismbcupper_l**|大写字母|返回非零值，当且仅当*c*是 ASCII 大写英文字母的单字节表示形式：0x41<=*c*<=0x5A.|
+|**_ismbclower**|小写字母|当且仅当*c*是 ASCII 小写英文字母的单字节表示形式时返回非零值：0x61<=*c*<=0x7A.|
+|**_ismbclower_l**|小写字母|当且仅当*c*是 ASCII 小写英文字母的单字节表示形式时返回非零值：0x61<=*c*<=0x7A.|
+|**_ismbcupper**|大写字母|当且仅当*c*是 ASCII 大写字母英文字母的单字节表示形式时返回非零值：0x41<=*c*<=0x5A.|
+|**_ismbcupper_l**|大写字母|当且仅当*c*是 ASCII 大写字母英文字母的单字节表示形式时返回非零值：0x41<=*c*<=0x5A.|
 
 ## <a name="requirements"></a>要求
 

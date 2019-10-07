@@ -1,6 +1,6 @@
 ---
 title: Visual C++ 项目类型
-ms.date: 07/02/2019
+ms.date: 08/13/2019
 helpviewer_keywords:
 - programs [C++], projects
 - project templates [Visual Studio], C++
@@ -10,23 +10,23 @@ helpviewer_keywords:
 - applications [C++], projects
 - C++ projects, types
 ms.assetid: 7337987e-1e7b-4120-9a4b-94f0401f15e7
-ms.openlocfilehash: 98f8ea11cce61ca91fbdc8f8afb900a7ba5b42c9
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.openlocfilehash: f234f9a05a871fe474b783a68f644cb4f2b1c2e7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552215"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498432"
 ---
 # <a name="c-project-templates"></a>C++ 项目模板
 
-Visual Studio 项目模板生成源代码文件、 编译器选项、 菜单、 工具栏、 图标、 引用和`#include`适用于你想要创建的项目类型的语句。 Visual Studio 提供了几种类型的C++项目模板，然后为其中的许多提供了向导，以便您可以自定义你的项目创建它们。 在创建项目之后，可以立即生成它并运行应用程序；在开发应用程序时最好间歇性生成该项目。
+Visual Studio 项目模板生成源代码文件、编译器选项、菜单、工具栏、图标、引用以及`#include`适合要创建的项目类型的语句。 Visual Studio 包括多种类型的C++项目模板, 并为其中许多项目模板提供了向导, 以便可以在创建项目时对其进行自定义。 在创建项目之后，可以立即生成它并运行应用程序；在开发应用程序时最好间歇性生成该项目。
 
 > [!NOTE]
-> 你可以使用 C++ 项目模板来创建 C 语言项目。 在生成的项目中，找到文件扩展名为 .cpp 的文件并将它更改为 .c。 然后，在该项目（而非解决方案）的“项目属性”  页上，依次展开“配置属性”  和“C/C++”  ，然后选择“高级”  。 将“编译为”  设置更改为“编译为 C 代码 (/TC)”  。
+> 你可以使用 C++ 项目模板来创建 C 语言项目。 在生成的项目中，找到文件扩展名为 .cpp 的文件并将它更改为 .c。 然后，在该项目（而非解决方案）的“项目属性” 页上，依次展开“配置属性”和“C/C++” ，然后选择“高级”。 将“编译为” 设置更改为“编译为 C 代码 (/TC)”。
 
 ## <a name="project-templates"></a>项目模板
 
-Visual Studio 中包含的项目模板取决于安装的产品版本和工作负载。 如果已安装的桌面开发C++Visual Studio 的工作负荷，具有这些C++项目模板。
+Visual Studio 中包含的项目模板取决于安装的产品版本和工作负载。 如果已安装了具有C++工作负载的桌面开发, 则 Visual Studio C++将包含这些项目模板。
 
 ### <a name="windows-desktop"></a>Windows 桌面
 
@@ -36,15 +36,15 @@ Visual Studio 中包含的项目模板取决于安装的产品版本和工作负
 |[Windows 桌面应用程序](../../windows/walkthrough-creating-windows-desktop-applications-cpp.md)|用于创建 Windows 桌面 (Win32) 应用程序的项目。|
 |[动态链接库](../walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)|用于创建动态链接库 (DLL) 的项目。|
 |[静态库](../../windows/walkthrough-creating-and-using-a-static-library-cpp.md)|用于创建静态库 (LIB) 的项目。|
-|Windows 桌面向导|用于通过其他选项创建 Windows 桌面应用程序和库的向导。|
+|[Windows 桌面向导](../../windows/windows-desktop-wizard.md)|用于通过其他选项创建 Windows 桌面应用程序和库的向导。|
 
 ### <a name="general"></a>常规
 
 |项目模板|描述|
 |----------------------|-----------------------------|
 |空项目|用于创建应用程序、库和 DLL 的空项目。 必须添加任何必需的代码或资源。|
-|[生成文件项目](creating-a-makefile-project.md)|在 Visual Studio 项目中包装 Windows 生成文件项目。 (若要打开作为生成文件-是在 Visual Studio 中，使用[打开文件夹](../open-folder-projects-cpp.md)。|
-|“共享项”项目|用于共享代码文件或多个项目之间的资源文件项目。 此项目类型不会生成可执行文件。|
+|[生成文件项目](creating-a-makefile-project.md)|在 Visual Studio 项目中包装 Windows makefile 的项目。 (若要在 Visual Studio 中按原样打开生成文件, 请使用 "[打开文件夹](../open-folder-projects-cpp.md)"。|
+|“共享项”项目|用于在多个项目之间共享代码文件或资源文件的项目。 此项目类型不会生成可执行文件。|
 
 ### <a name="atl"></a>ATL
 

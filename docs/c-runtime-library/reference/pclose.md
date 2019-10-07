@@ -1,9 +1,9 @@
 ---
 title: _pclose
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _pclose
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _pclose
 - pclose
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - pclose function
 - pipes, closing
 ms.assetid: e2e31a9e-ba3a-4124-bcbb-c4040110b3d3
-ms.openlocfilehash: eb0f54ec27992cd0e62b11d8fec5bd54c3daea4b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 383dd96553463a2619537cf06fc6534770ed88d5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156001"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951087"
 ---
-# <a name="pclose"></a>_pclose
+# <a name="_pclose"></a>_pclose
 
 等待新命令处理器并关闭关联管道上的流。
 
@@ -49,17 +52,17 @@ FILE *stream
 ### <a name="parameters"></a>参数
 
 *stream*<br/>
-以前调用的返回值 **_popen**。
+对 **_popen**的前一次调用的返回值。
 
 ## <a name="return-value"></a>返回值
 
-如果发生错误，则返回终止命令处理器，则为-1 的退出状态。 返回值的格式是，对于相同 **_cwait**，只是交换的低顺序和高位字节。 如果流**NULL**， **_pclose**设置**errno**到**EINVAL**并返回-1。
+返回终止命令处理器的退出状态，如果出现错误，则返回-1。 返回值的格式与 **_cwait**的格式相同，不同之处在于，将交换低序位和高位字节。 如果 stream 为**NULL**，则 **_pclose**将**errno**设置为**EINVAL**并返回-1。
 
 有关这些及其他错误代码的信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**_Pclose**函数查找命令处理器 (Cmd.exe)，启动由关联的进程 ID **_popen**调用，将执行[_cwait](cwait.md)调用新的命令处理器，并关闭关联管道上的流。
+**_Pclose**函数查找由关联的 **_popen**调用启动的命令处理器（CMD.EXE）的进程 ID，在新的命令处理器上执行[_cwait](cwait.md)调用，并关闭关联管道上的流。
 
 ## <a name="requirements"></a>要求
 

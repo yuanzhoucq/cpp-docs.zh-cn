@@ -1,6 +1,6 @@
 ---
-title: C++项目属性页引用-Visual Studio
-ms.date: 07/24/2019
+title: Windows C++项目属性页引用-Visual Studio
+ms.date: 08/28/2019
 helpviewer_keywords:
 - project-file macro
 - project properties [C++], default values
@@ -12,16 +12,20 @@ helpviewer_keywords:
 - build macro
 - user-defined macros
 ms.assetid: 13ffe3ea-1bc3-4bee-be5e-053a8a99cce4
-ms.openlocfilehash: d425cc6c5c6a2a8934c026174f396cb01bc3a9b7
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: c9fd4fc00e86e0660972fc0bd37b66b2fea02ee0
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68606390"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177464"
 ---
-# <a name="c-project-property-page-reference"></a>C++项目属性页引用
+# <a name="windows-c-project-property-page-reference"></a>Windows C++项目属性页引用
 
-在 Visual Studio 中, 通过项目的属性页指定编译器和链接器选项、文件路径和其他生成设置。 若要打开**属性页**, 请从主菜单中选择 "**项目** > **属性**", 或右键单击 "**解决方案资源管理器**中的项目节点, 然后选择"**属性**"。 有关项目属性的详细信息, 请[参阅C++在 Visual Studio 中设置编译器和生成属性](../working-with-project-properties.md)。
+在 Visual Studio 中, 通过项目的属性页指定编译器和链接器选项、文件路径和其他生成设置。 可用的属性页和属性页取决于项目类型。 例如, 生成文件项目具有一个不在 MFC 或 Win32 控制台项目中的 NMake 属性页。 若要打开**属性页**, 请从主菜单中选择 "**项目** > **属性**", 或右键单击 "**解决方案资源管理器**中的项目节点, 然后选择"**属性**"。 单个文件还具有属性页, 使您可以为该文件设置编译和生成选项。 下图显示了 MFC 项目的属性页。
+
+![C++项目属性页](media/example-prop-page.png)
+
+本部分提供属性页本身的快速参考。 在属性页中公开的选项和设置已更完整地记录在各自的主题中, 并从属性页主题链接。 有关项目属性的详细信息, 请[参阅C++在 Visual Studio 中设置编译器和生成属性](../working-with-project-properties.md)。
 
 对于 Linux 项目中的属性页, 请参阅[linux C++属性页引用](../../linux/prop-pages-linux.md)。
 
@@ -48,4 +52,5 @@ ms.locfileid: "68606390"
 ## <a name="see-also"></a>请参阅
 
 [如何：创建和删除项目依赖项](/visualstudio/ide/how-to-create-and-remove-project-dependencies)<br/>
-[如何：创建和编辑配置](/visualstudio/ide/how-to-create-and-edit-configurations)
+[如何：创建和编辑配置](/visualstudio/ide/how-to-create-and-edit-configurations)<br/>
+[Linux C++属性页引用](../../linux/prop-pages-linux.md)

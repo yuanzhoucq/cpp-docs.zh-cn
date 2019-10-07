@@ -1,6 +1,6 @@
 ---
 title: Platform::Collections::Map 类
-ms.date: 03/27/2019
+ms.date: 10/01/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Map::Map
@@ -15,16 +15,16 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: ce50290217c7c06e26f26fc50564d3e37c873157
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 81721d719a424250beed89f4a5656b3f2fc27922
+ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161753"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816298"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map 类
 
-表示一个 *映射*，它是键值对的集合。
+表示一个 *映射*，它是键值对的集合。 实现[Windows：： Foundation：：集合：： IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap_k_v_)以帮助 XAML[数据绑定](/windows/uwp/data-binding/data-binding-in-depth)。
 
 ## <a name="syntax"></a>语法
 
@@ -36,7 +36,7 @@ template <
 ref class Map sealed;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>Parameters
 
 *K*<br/>
 键值对中键的类型。
@@ -45,9 +45,9 @@ ref class Map sealed;
 键值对中值的类型。
 
 *C*<br/>
-提供一个函数对象的类型，该对象可以将两个元素值作为排序键加以比较，以决定它们在映射中的相对顺序。 默认情况下[std:: less\<K >](../standard-library/less-struct.md)。
+提供一个函数对象的类型，该对象可以将两个元素值作为排序键加以比较，以决定它们在映射中的相对顺序。 默认情况下， [std：： less @ no__t-1k >](../standard-library/less-struct.md)。
 
-*__is_valid_winrt_type()* 编译器生成的函数，用于验证的类型*K*并*V*和此类型不能存储在映射中时提供友好错误消息。
+*__is_valid_winrt_type （）* 编译器生成的函数，用于验证*K*和*V*类型，并在此类型无法存储在映射中时提供友好错误消息。
 
 ### <a name="remarks"></a>备注
 
@@ -63,7 +63,7 @@ ref class Map sealed;
 
 - 公共枚举类
 
-映射基本上是 [std::map](../standard-library/map-class.md)的包装器。 它是C++的具体实现[Windows::Foundation::Collections::IMap < Windows::Foundation::Collections::IKeyValuePair\<K，V >>](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)并[IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_)Windows 运行时接口公共之间传递的类型。 如果你尝试在公共返回值或参数中使用 `Platform::Collections::Map` 类型，则将引发编译器错误 C3986。 可通过更改参数或返回值的类型来修复该错误[Windows::Foundation::Collections::IMap\<K，V >](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)。
+映射基本上是 [std::map](../standard-library/map-class.md)的包装器。 它是C++ [Windows：： Foundation：：集合：： IMap < Windows：： Foundation：：集合：： IKeyValuePair @ no__t-2k，V >](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)跨公共 Windows 传递的 > 和[IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_)类型的具体实现运行时接口。 如果你尝试在公共返回值或参数中使用 `Platform::Collections::Map` 类型，则将引发编译器错误 C3986。 可以通过将参数或返回值的类型更改为[Windows：： Foundation：：集合：： IMap @ no__t-1k，V >](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)来修复此错误。
 
 有关详细信息，请参阅[集合](../cppcx/collections-c-cx.md)。
 
@@ -88,12 +88,12 @@ ref class Map sealed;
 |[Map::Remove](#remove)|从当前 Map 对象中删除指定的键值对。|
 |[Map::Size](#size)|返回当前 Map 对象中的元素数目。|
 
-### <a name="events"></a>事件
+### <a name="events"></a>Events
 
 |||
 |-|-|
-|名称|描述|
-|[Map:: mapchanged](#mapchanged)事件|当映射更改时发生。|
+|name|描述|
+|[Map：： MapChanged](#mapchanged)事件|当映射更改时发生。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -105,7 +105,7 @@ ref class Map sealed;
 
 **命名空间：** Platform::Collections
 
-## <a name="clear"></a>  Map:: clear 方法
+## <a name="clear"></a>Map：： Clear 方法
 
 从当前 Map 对象中移除所有键值对。
 
@@ -115,7 +115,7 @@ ref class Map sealed;
 virtual void Clear();
 ```
 
-## <a name="first"></a>  Map:: first 方法
+## <a name="first"></a>Map：： First 方法
 
 返回指定映射中第一个元素的迭代器，如果映射为空，则返回 `nullptr`。
 
@@ -132,11 +132,11 @@ Windows::Foundation::Collections::IKeyValuePair<K, V>^>^ First();
 
 ### <a name="remarks"></a>备注
 
-保留 first （） 返回的迭代器的简便方法是将返回值分配为使用声明的变量**自动**类型推导关键字。 例如 `auto x = myMap->First();`。
+保存第一个（）返回的迭代器的一种简便方法是将返回值分配给用**auto**类型推导关键字声明的变量。 例如， `auto x = myMap->First();` 。
 
-## <a name="getview"></a>  Map:: getview 方法
+## <a name="getview"></a>Map：： GetView 方法
 
-返回当前映射的只读视图即[& 类](../cppcx/platform-collections-mapview-class.md)，它可以实现 [Windows::Foundation::Collections::IMapView\<K，V >] / uwp/api/Windows.Foundation.Collections.IMapView_K_V_) 接口。
+返回当前映射的只读视图;也就是说， [Platform：： IMapView：： MapView 类，该类](../cppcx/platform-collections-mapview-class.md)实现 [Windows：： Foundation：：集合：： @ No__t，V >]/uwp/api/Windows.Foundation.Collections.IMapView_K_V_）接口。
 
 ### <a name="syntax"></a>语法
 
@@ -148,7 +148,7 @@ Windows::Foundation::Collections::IMapView<K, V>^ GetView();
 
 一个 `MapView` 对象。
 
-## <a name="haskey"></a>  Map:: haskey 方法
+## <a name="haskey"></a>Map：： HasKey 方法
 
 确定当前 Map 中是否包含指定键。
 
@@ -158,16 +158,16 @@ Windows::Foundation::Collections::IMapView<K, V>^ GetView();
 bool HasKey(K key);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>Parameters
 
 *key*<br/>
-用于定位 Map 元素的键。 类型*键*是 typename *K*。
+用于定位 Map 元素的键。 *键*类型为 typename *K*。
 
 ### <a name="return-value"></a>返回值
 
-**true**如果该键; 否则为**false**。
+如果找到该键，则为**true** ;否则**为 false**。
 
-## <a name="insert"></a>  Map:: insert 方法
+## <a name="insert"></a>Map：： Insert 方法
 
 将指定的键值对添加到当前 Map 对象中。
 
@@ -177,19 +177,19 @@ bool HasKey(K key);
 virtual bool Insert(K key, V value);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>Parameters
 
 *key*<br/>
-键值对中的键部分。 类型*键*是 typename *K*。
+键值对中的键部分。 *键*类型为 typename *K*。
 
-*值*<br/>
-键值对中的值部分。 类型*值*是 typename *V*。
+*value*<br/>
+键值对中的值部分。 *值*的类型为 typename *V*。
 
 ### <a name="return-value"></a>返回值
 
-**true**如果当前映射中的现有元素的键匹配*密钥*，该元素的值部分设置为*值*。 **false**如果当前映射中的没有任何现有元素匹配*密钥*并且*密钥*并*值*参数构成键值对并随后将添加到当前映射。
+如果当前映射中现有元素的键与*键*匹配，并且该元素的值部分设置为*值*，**则为 true** 。 如果当前映射中没有任何现有元素匹配*键*，并且*键*和*值*参数设置为键值对并随后添加到当前映射中，则**为 false** 。
 
-## <a name="lookup"></a>  Map:: lookup 方法
+## <a name="lookup"></a>Map：： Lookup 方法
 
 检索与类型 K 的指定键关联的类型 V 的值（如果键存在）。
 
@@ -199,20 +199,20 @@ virtual bool Insert(K key, V value);
 V Lookup(K key);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>Parameters
 
 *key*<br/>
-用于定位映射中的元素的键。 类型*键*是 typename *K*。
+用于定位映射中的元素的键。 *键*类型为 typename *K*。
 
 ### <a name="return-value"></a>返回值
 
-与成对的值*密钥*。 返回值的类型是 typename *V*。
+与*键*配对的值。 返回值的类型为 typename *V*。
 
 ### <a name="remarks"></a>备注
 
-如果不存在该键，则[platform:: outofboundsexception](../cppcx/platform-outofboundsexception-class.md)引发。
+如果该键不存在，则将引发[Platform：： OutOfBoundsException](../cppcx/platform-outofboundsexception-class.md) 。
 
-## <a name="ctor"></a>  Map:: map 构造函数
+## <a name="ctor"></a>Map：： Map 构造函数
 
 初始化 Map 类的新实例。
 
@@ -229,7 +229,7 @@ Map(
    const C& comp = C());
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>Parameters
 
 *InIt*<br/>
 当前映射的类型名称。
@@ -238,15 +238,15 @@ Map(
 提供一个函数对象的类型，该对象可以将两个元素值作为排序键加以比较，以决定它们在映射中的相对顺序。
 
 *m*<br/>
-引用或[rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md)到`map Class`用于初始化当前映射。
+用于初始化当前映射的 @no__t 的[引用或值](../cpp/lvalues-and-rvalues-visual-cpp.md)为-1。
 
 *first*<br/>
 用于初始化当前映射的一系列元素中的第一个元素的输入迭代器。
 
-*last*<br/>
+*时间*<br/>
 用于初始化当前映射的一系列元素之后的第一个元素的输入迭代器。
 
-## <a name="mapchanged"></a>  Map:: mapchanged 事件
+## <a name="mapchanged"></a>Map：： MapChanged 事件
 
 项目插入到映射中或从映射中移除时引发。
 
@@ -258,13 +258,13 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>属性值/返回值
 
-一个[MapChangedEventHandler\<K，V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler)包含引发事件，并已发生更改的类型的对象有关的信息。 另请参阅[IMapChangedEventArgs\<K >](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_)并[CollectionChange 枚举](/uwp/api/windows.foundation.collections.collectionchange)。
+[MapChangedEventHandler @ no__t，V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) ，其中包含有关引发事件的对象的信息，以及发生的更改类型。 另请参阅[imapchangedeventargs<k> @ no__t-1k >](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_)和[CollectionChange 枚举](/uwp/api/windows.foundation.collections.collectionchange)。
 
 ## <a name="net-framework-equivalent"></a>.NET Framework 等效项
 
-项目使用 C# 或 Visual Basic 的 Windows 运行时应用的 IMap\<K，V > 作为 IDictionary\<K，V >。
+Windows 运行时使用C#或 Visual Basic project IMap @ No__t-1K，v > 作为 IDictionary @ No__t，v > 的应用。
 
-## <a name="remove"></a>  Map:: remove 方法
+## <a name="remove"></a>Map：： Remove 方法
 
 从当前 Map 对象中删除指定的键值对。
 
@@ -274,14 +274,14 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 virtual void Remove(K key);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>Parameters
 
 *key*<br/>
-键值对中的键部分。 类型*键*是 typename *K*。
+键值对中的键部分。 *键*类型为 typename *K*。
 
-## <a name="size"></a>  Map:: size 方法
+## <a name="size"></a>Map：： Size 方法
 
-返回的数[Windows::Foundation::Collections::IKeyValuePair\<K，V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_)映射中的元素。
+返回映射中[Windows：： Foundation：：集合：： IKeyValuePair @ no__t，V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_)元素的数目。
 
 ### <a name="syntax"></a>语法
 
@@ -295,5 +295,6 @@ Map 中的元素数目。
 
 ## <a name="see-also"></a>请参阅
 
-[平台 Namespace](platform-namespace-c-cx.md)<br/>
+[集合 (C++/CX)](collections-c-cx.md)<br/>
+[平台命名空间](platform-namespace-c-cx.md)<br/>
 [用 C++ 创建 Windows 运行时组件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

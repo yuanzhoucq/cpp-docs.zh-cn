@@ -1,9 +1,9 @@
 ---
 title: _gcvt_s
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _gcvt_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _gcvt_s
 - gcvt_s
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 0a8d8a26-5940-4ae3-835e-0aa6ec1b0744
-ms.openlocfilehash: 168e0657150d072bbe41cd0ad6e914ca1f53e512
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7ecb6fe105d8a976979f91d38c9e536b10989310
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332284"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956113"
 ---
-# <a name="gcvts"></a>_gcvt_s
+# <a name="_gcvt_s"></a>_gcvt_s
 
 将浮点值转换为字符串。 这是 [_gcvt](gcvt.md) 版本，具有 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)所述的安全增强功能。
 
@@ -65,7 +68,7 @@ errno_t _gcvt_s(
 *sizeInBytes*<br/>
 缓冲区的大小。
 
-*值*<br/>
+*value*<br/>
 要转换的值。
 
 *digits*<br/>
@@ -77,19 +80,19 @@ errno_t _gcvt_s(
 
 ### <a name="error-conditions"></a>错误条件
 
-|*buffer*|*sizeInBytes*|*值*|*digits*|返回|中的值*缓冲区*|
+|*buffer*|*sizeInBytes*|*value*|*digits*|返回|*缓冲区*中的值|
 |--------------|-------------------|-------------|--------------|------------|-----------------------|
 |**NULL**|任何|任何|任何|**EINVAL**|未修改。|
-|不**NULL** （指向有效内存）|零|任何|任何|**EINVAL**|未修改。|
-|不**NULL** （指向有效内存）|任何|任何|>= *sizeInBytes*|**EINVAL**|未修改。|
+|Not **NULL** （指向有效内存）|零|任何|任何|**EINVAL**|未修改。|
+|Not **NULL** （指向有效内存）|任何|任何|>= *sizeInBytes*|**EINVAL**|未修改。|
 
 **安全问题**
 
-**_gcvt_s**如果可以生成访问冲突*缓冲区*不指向有效内存且不**NULL**。
+如果*缓冲区*未指向有效内存且不为**NULL**，则 **_gcvt_s**会生成访问冲突。
 
 ## <a name="remarks"></a>备注
 
-**_Gcvt_s**函数将转换浮点*值*转换为字符串 （其中包括小数点和可能的登录字节），并将存储中的字符串*缓冲区*. *缓冲区*应足够大以容纳转换后的值加上会自动追加终止 null 字符。 缓冲区长度 **_CVTBUFSIZE**足以满足任何浮点值。 如果缓冲区大小为*位数*+ 1，则该函数将不会覆盖结束时的缓冲区，因此请确保提供足够的缓冲区用于此操作。 **_gcvt_s**尝试生成*数字*以十进制格式的数字。 如果不能则会生成*位数*指数格式的数字。 在转换过程中，可以取消零结尾。
+**_Gcvt_s**函数将浮点*值*转换为字符串（包含一个小数点和一个可能的符号字节），并将该字符串存储在*buffer*中。 *缓冲区*应足够大以容纳转换后的值加上自动追加的终止 null 字符。 长度为 **_CVTBUFSIZE**的缓冲区足以满足任何浮点值。 如果使用了*数字*+ 1 的缓冲区大小，该函数将不会覆盖缓冲区的末尾，因此请确保为此操作提供足够的缓冲区。 **_gcvt_s**尝试以十进制格式生成*数字*位数。 如果不能，则它将以指数格式生成*位数*。 在转换过程中，可以取消零结尾。
 
 在 C++ 中，通过模板重载简化此函数的使用；重载可以自动推导出缓冲区长度，不再需要指定大小参数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 

@@ -1,9 +1,9 @@
 ---
 title: fsetpos
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fsetpos
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fsetpos
 helpviewer_keywords:
 - streams, setting position indicators
 - fsetpos function
 ms.assetid: 6d19ff48-1a2b-47b3-9f23-ed0a47b5a46e
-ms.openlocfilehash: 9854c71e381da6ec9a75d440b9588e2476bada7c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f44ab1b35c9e598f82dbc0af96979476ee353541
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287555"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956524"
 ---
 # <a name="fsetpos"></a>fsetpos
 
@@ -47,18 +50,18 @@ int fsetpos(
 *stream*<br/>
 指向**文件**结构的指针。
 
-*pos*<br/>
+*位置*<br/>
 位置指示器存储。
 
 ## <a name="return-value"></a>返回值
 
-如果成功， **fsetpos**返回 0。 在失败时，该函数返回非零值，并设置**errno**下列任一清单常量 （在 ERRNO 中定义。H):**EBADF**，这意味着文件不可访问或该对象的*流*指向不是一种有效的文件结构; 或**EINVAL**，这意味着一个无效值*流*或*pos*传递。 如果传入了无效参数，这些函数则会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。
+如果成功， **fsetpos**将返回0。 如果失败，函数将返回一个非零值，并将**errno**设置为以下清单常量之一（在 errno 中定义。H）：**Ebadf (** ，这意味着文件不可访问，或者*流*指向的对象不是有效的文件结构;或**EINVAL**，这意味着传递的*流*或*pos*的值无效。 如果传入了无效参数，这些函数则会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。
 
 有关这些代码以及其他返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**Fsetpos**函数设置的文件位置指示符*流*的值*pos*，从中获取在调用之前**fgetpos**针对*流*。 该函数清除文件结尾指示器，并撤消的任何影响[ungetc](ungetc-ungetwc.md)上*流*。 在调用**fsetpos**，在下一步操作*流*可能为输入或输出。
+**Fsetpos**函数将*流*的文件位置指示器设置为*pos*的值，此值是在先前对**fgetpos**的调用中获取*的。* 函数会清除文件尾指示器，并撤消[ungetc](ungetc-ungetwc.md)对*流*的任何影响。 在调用**fsetpos**之后，*对流*的下一个操作可能是输入或输出。
 
 ## <a name="requirements"></a>要求
 

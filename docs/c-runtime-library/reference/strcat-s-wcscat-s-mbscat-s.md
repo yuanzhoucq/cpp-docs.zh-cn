@@ -1,12 +1,12 @@
 ---
-title: strcat_s、 wcscat_s、 _mbscat_s、 _mbscat_s_l
+title: strcat_s、wcscat_s、_mbscat_s、_mbscat_s_l
 ms.date: 01/22/2019
-apiname:
+api_name:
 - strcat_s
 - _mbscat_s
 - _mbscat_s_l
 - wcscat_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - strcat_s
 - wcscat_s
@@ -35,19 +38,19 @@ helpviewer_keywords:
 - _mbscat_s_l function
 - appending strings
 ms.assetid: 0f2f9901-c5c5-480b-98bc-f8f690792fc0
-ms.openlocfilehash: bd7894ba77e7fa67fa3844587394bd3e2e821391
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4449ec788b33a541a04a46d972f56f792797a16e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354374"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957981"
 ---
-# <a name="strcats-wcscats-mbscats-mbscatsl"></a>strcat_s、 wcscat_s、 _mbscat_s、 _mbscat_s_l
+# <a name="strcat_s-wcscat_s-_mbscat_s-_mbscat_s_l"></a>strcat_s、wcscat_s、_mbscat_s、_mbscat_s_l
 
 追加字符串。 如 [CRT 中的安全性增强功能](../../c-runtime-library/security-features-in-the-crt.md)所述，这些版本的 [strcat、wcscat、_mbscat](strcat-wcscat-mbscat.md) 具有安全性增强功能。
 
 > [!IMPORTANT]
-> **_mbscat_s**并 **_mbscat_s_l**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbscat_s**和 **_mbscat_s_l**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -116,15 +119,15 @@ Null 终止的目标字符串缓冲区。
 
 ### <a name="error-conditions"></a>错误条件
 
-|*strDestination*|*numberOfElements*|*strSource*|返回值|内容*strDestination*|
+|*strDestination*|*numberOfElements*|*strSource*|返回值|*StrDestination*的内容|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
 |**NULL**或未终止|任何|任何|**EINVAL**|未修改|
-|任何|任何|**NULL**|**EINVAL**|*strDestination*[0] 设置为 0|
-|任何|0 或过小|任何|**ERANGE**|*strDestination*[0] 设置为 0|
+|任何|任何|**NULL**|**EINVAL**|*strDestination*[0] 设置为0|
+|任何|0 或过小|任何|**ERANGE**|*strDestination*[0] 设置为0|
 
 ## <a name="remarks"></a>备注
 
-**Strcat_s**函数将追加*strSource*到*strDestination*和终止 null 字符生成的字符串。 初始字符*strSource*覆盖的终止 null 字符*strDestination*。 行为**strcat_s**如果源和目标字符串重叠，则是未定义。
+**Strcat_s**函数将*StrSource*追加到*strDestination* ，并使用空字符终止结果字符串。 *StrSource*的初始字符将覆盖*strDestination*的终止 null 字符。 如果源和目标字符串重叠，则**strcat_s**的行为是不确定的。
 
 注意，第二个参数是缓冲区的总大小，而不是剩余大小：
 
@@ -135,11 +138,11 @@ strcat_s(buf, 16, " End");               // Correct
 strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
 ```
 
-**wcscat_s**并 **_mbscat_s**宽字符及多字节字符版本的**strcat_s**。 参数和返回值**wcscat_s**是宽字符字符串; **_mbscat_s**是多字节字符字符串。 否则这三个函数否则具有相同行为。
+**wcscat_s**和 **_mbscat_s**是**strcat_s**的宽字符和多字节字符版本。 **Wcscat_s**的参数和返回值是宽字符字符串; **_mbscat_s**的这些字符串是多字节字符字符串。 否则这三个函数否则具有相同行为。
 
-如果*strDestination*是空指针，或不是以 null 结尾，或者如果*strSource*是**NULL**指针，或如果目标字符串过小，无效的参数调用处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，这些函数将返回**EINVAL**并设置**errno**到**EINVAL**。
+如果*strDestination*是 null 指针，或不是以 null 结尾的，或者如果*strSource*为**null**指针，或者如果目标字符串过小，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回**EINVAL** ，并将**Errno**设置为**EINVAL**。
 
-有的函数的版本 **_l**后缀具有相同的行为，但使用而不是当前区域设置传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+具有 **_l**后缀的函数的版本具有相同的行为，但使用传入的区域设置参数而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 

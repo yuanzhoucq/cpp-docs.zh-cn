@@ -1,28 +1,28 @@
 ---
 title: __nop
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __nop
 helpviewer_keywords:
 - nop instruction
 - __nop intrinsic
 ms.assetid: 7a2a938b-87e0-476d-a348-03ea7635b6b9
-ms.openlocfilehash: 1e76110c1ef0c4b98c295578189eedc99d76eeb9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4561bcb84063f3707825c8ca164867d41500e2db
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396621"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221670"
 ---
-# <a name="nop"></a>__nop
+# <a name="__nop"></a>__nop
 
 **Microsoft 专用**
 
-生成特定于平台的机器代码，会执行任何操作。
+生成不执行任何操作的特定于平台的计算机代码。
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 void __nop();
 ```
 
@@ -30,17 +30,17 @@ void __nop();
 
 |内部函数|体系结构|
 |---------------|------------------|
-|`__nop`|x86、 ARM、 x64、 ARM64|
+|`__nop`|x86、ARM、x64、ARM64|
 
-**标头文件** \<intrin.h >
+**标头文件**\<intrin.h >
 
 **结束 Microsoft 专用**
 
 ## <a name="remarks"></a>备注
 
-`__nop` 函数等同于 `NOP` 计算机指令。 X86 和 x64 的详细信息，搜索文档中，"Intel 体系结构软件开发人员手册，卷 2:指令设置参考，"在[Intel Corporation](https://software.intel.com/articles/intel-sdm)站点。
+`__nop` 函数等同于 `NOP` 计算机指令。 有关 x86 和 x64 的详细信息，请搜索文档 "Intel 体系结构软件开发人员手册，第2卷：说明集[参考 "。](https://software.intel.com/articles/intel-sdm)
 
 ## <a name="see-also"></a>请参阅
 
-[编译器内部函数](../intrinsics/compiler-intrinsics.md)<br/>
+[编译器内部函数](../intrinsics/compiler-intrinsics.md)\
 [__noop](../intrinsics/noop.md)

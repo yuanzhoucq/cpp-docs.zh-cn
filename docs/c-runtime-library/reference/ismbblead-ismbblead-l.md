@@ -1,10 +1,10 @@
 ---
 title: _ismbblead、_ismbblead_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbblead_l
 - _ismbblead
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ismbblead_l
 - istlead
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - ismbblead_l function
 - _istlead function
 ms.assetid: 2abc6f75-ed5c-472e-bfd0-e905a1835ccf
-ms.openlocfilehash: 7bf8e8c88153e2f22cfa08bb35ff8d4ba01a8804
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0f9ec748a86d5d1413cf4f881234d786c2a2d78
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157206"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954056"
 ---
-# <a name="ismbblead-ismbbleadl"></a>_ismbblead、_ismbblead_l
+# <a name="_ismbblead-_ismbblead_l"></a>_ismbblead、_ismbblead_l
 
 测试字符，以确定它是否是多字节字符的前导字节。
 
@@ -65,13 +68,13 @@ int _ismbblead_l(
 
 ## <a name="return-value"></a>返回值
 
-如果返回非零值的整数*c*是多字节字符的第一个字节。
+如果整数*c*是多字节字符的第一个字节，则返回一个非零值。
 
 ## <a name="remarks"></a>备注
 
-多字节字符由前导字节后跟尾随字节构成。 通过在给定字符集中的特定范围来辨别前导字节。 例如，在代码页 932 唯一，前导字节范围为 0x81-0x9F 和 0xE0-0xFC。
+多字节字符由前导字节后跟尾随字节构成。 通过在给定字符集中的特定范围来辨别前导字节。 例如，仅在代码页932中，前导字节范围为 0x81-0x9F 和 0xE0-0xFC。
 
-**_ismbblead**区域设置相关的行为使用当前区域设置。 **_ismbblead_l**是完全相同，只不过它改用已传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**_ismbblead**对与区域设置相关的行为使用当前区域设置。 **_ismbblead_l**是相同的，只不过它使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

@@ -1,9 +1,9 @@
 ---
 title: _query_new_handler
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _query_new_handler
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _query_new_handler
 - query_new_handler
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - error handling
 - _query_new_handler function
 ms.assetid: 9a84b5c3-fe33-4c01-83a0-be87dc3ec518
-ms.openlocfilehash: febefbe46d95b7e5c8de026806a20d7eff74e7cc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0cbd434ee0b75f78a2492bd6239bd89f584215ff
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357871"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949697"
 ---
-# <a name="querynewhandler"></a>_query_new_handler
+# <a name="_query_new_handler"></a>_query_new_handler
 
 返回当前新处理程序例程的地址。
 
@@ -46,11 +49,11 @@ _PNH _query_new_handler(
 
 ## <a name="return-value"></a>返回值
 
-以集的形式返回当前新处理程序例程的地址 **_set_new_handler**。
+返回由 **_set_new_handler**设置的当前新处理程序例程的地址。
 
 ## <a name="remarks"></a>备注
 
-C++ **_Query_new_handler**函数返回当前设置的异常处理函数的地址C++ [_set_new_handler](set-new-handler.md)函数。 **_set_new_handler**用于指定如果获取控制权的异常处理函数**新**运算符无法分配内存。 有关详细信息，请参阅“C++ 语言参考”中的 [new 和 delete 运算符](../../cpp/new-and-delete-operators.md)的讨论。
+C++ **_Query_new_handler**函数返回C++ [_set_new_handler](set-new-handler.md)函数设置的当前异常处理函数的地址。 **_set_new_handler**用于指定一个异常处理函数，该函数在**新**运算符无法分配内存时获得控制权。 有关详细信息，请参阅“C++ 语言参考”中的 [new 和 delete 运算符](../../cpp/new-and-delete-operators.md)的讨论。
 
 ## <a name="requirements"></a>要求
 

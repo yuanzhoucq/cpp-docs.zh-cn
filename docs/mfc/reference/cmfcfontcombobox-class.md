@@ -16,16 +16,16 @@ helpviewer_keywords:
 - CMFCFontComboBox [MFC], Setup
 - CMFCFontComboBox [MFC], m_bDrawUsingFont
 ms.assetid: 9a53fb0c-7b45-486d-8187-2a4c723d9fbb
-ms.openlocfilehash: ccc4e545b2274d6dbb9989cfb9c047de819b8d32
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 69e8f81e7e01d0610f3cbf88ac1725a21d59838f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237465"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505302"
 ---
 # <a name="cmfcfontcombobox-class"></a>CMFCFontComboBox 类
 
-`CMFCFontComboBox`类创建包含字体列表的一个组合框控件。
+`CMFCFontComboBox`类创建包含字体列表的组合框控件。
 
 ## <a name="syntax"></a>语法
 
@@ -46,23 +46,23 @@ class CMFCFontComboBox : public CComboBox
 
 |名称|描述|
 |----------|-----------------|
-|`CMFCFontComboBox::CompareItem`|由框架调用以确定新项的当前字体组合框控件的已排序的列表框中的相对位置。 (重写[CComboBox::CompareItem](../../mfc/reference/ccombobox-class.md#compareitem)。)|
-|`CMFCFontComboBox::DrawItem`|由框架调用以在当前的字体组合框控件中绘制指定的项。 (重写[CComboBox::DrawItem](../../mfc/reference/ccombobox-class.md#drawitem)。)|
-|[CMFCFontComboBox::GetSelFont](#getselfont)|检索有关当前所选字体的信息。|
-|`CMFCFontComboBox::MeasureItem`|由框架调用以通知 Windows 列表框中当前的字体组合框控件的维度。 (重写[CComboBox::MeasureItem](../../mfc/reference/ccombobox-class.md#measureitem)。)|
-|`CMFCFontComboBox::PreTranslateMessage`|将窗口消息调度到之前[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)并[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函数。 （重写 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。）|
-|[CMFCFontComboBox::SelectFont](#selectfont)|选择符合指定的条件从字体组合框的字体。|
-|[CMFCFontComboBox::Setup](#setup)|初始化字体组合框中项的列表。|
+|`CMFCFontComboBox::CompareItem`|由框架调用, 以确定新项在当前字体组合框控件的已排序列表框中的相对位置。 (重写[CComboBox:: CompareItem](../../mfc/reference/ccombobox-class.md#compareitem)。)|
+|`CMFCFontComboBox::DrawItem`|由框架调用, 用于绘制当前字体组合框控件中的指定项。 (重写[CComboBox::D rawitem](../../mfc/reference/ccombobox-class.md#drawitem)。)|
+|[CMFCFontComboBox::GetSelFont](#getselfont)|检索当前选定字体的相关信息。|
+|`CMFCFontComboBox::MeasureItem`|由框架调用, 以通知窗口当前字体组合框控件中列表框的尺寸。 (重写[CComboBox:: MeasureItem](../../mfc/reference/ccombobox-class.md#measureitem)。)|
+|`CMFCFontComboBox::PreTranslateMessage`|转换窗口消息, 然后将其调度到[TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage)和[DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) Windows 函数。 （重写 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。）|
+|[CMFCFontComboBox::SelectFont](#selectfont)|从 "字体" 组合框中选择与指定条件匹配的字体。|
+|[CMFCFontComboBox::Setup](#setup)|初始化字体组合框中的项列表。|
 
 ### <a name="data-members"></a>数据成员
 
 |名称|描述|
 |----------|-----------------|
-|[CMFCFontComboBox::m_bDrawUsingFont](#m_bdrawusingfont)|框架中，指示要使用当前的字体组合框中绘制项标签的字体。|
+|[CMFCFontComboBox::m_bDrawUsingFont](#m_bdrawusingfont)|向框架指示在当前字体组合框中绘制项标签所使用的字体。|
 
 ## <a name="remarks"></a>备注
 
-若要使用`CMFCFontComboBox`对象在对话框中，将添加`CMFCFontComboBox`到对话框类变量。 然后在`OnInitDialog`方法的对话框类，调用[CMFCFontComboBox::Setup](#setup)方法来初始化组合框控件中的项列表。
+若要在`CMFCFontComboBox`对话框中使用对象, 请`CMFCFontComboBox`将变量添加到对话框类。 然后, 在`OnInitDialog`对话框类的方法中调用[CMFCFontComboBox:: Setup](#setup)方法以初始化组合框控件中的项列表。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -78,9 +78,9 @@ class CMFCFontComboBox : public CComboBox
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxfontcombobox.h
+**标头:** afxfontcombobox
 
-##  <a name="cmfcfontcombobox"></a>  CMFCFontComboBox::CMFCFontComboBox
+##  <a name="cmfcfontcombobox"></a>CMFCFontComboBox:: CMFCFontComboBox
 
 构造 `CMFCFontComboBox` 对象。
 
@@ -92,9 +92,9 @@ CMFCFontComboBox();
 
 ### <a name="remarks"></a>备注
 
-##  <a name="getselfont"></a>  CMFCFontComboBox::GetSelFont
+##  <a name="getselfont"></a>CMFCFontComboBox:: GetSelFont
 
-检索有关当前所选字体的信息。
+检索当前选定字体的相关信息。
 
 ```
 CMFCFontInfo* GetSelFont() const;
@@ -102,13 +102,13 @@ CMFCFontInfo* GetSelFont() const;
 
 ### <a name="return-value"></a>返回值
 
-一个指向[CMFCFontInfo 类](../../mfc/reference/cmfcfontinfo-class.md)对象，描述一种字体。 如果在组合框中不选择任何字体，它可以为 NULL。
+指向描述字体的[CMFCFontInfo 类](../../mfc/reference/cmfcfontinfo-class.md)对象的指针。 如果未在组合框中选择字体, 则可以为 NULL。
 
 ### <a name="remarks"></a>备注
 
-##  <a name="m_bdrawusingfont"></a>  CMFCFontComboBox::m_bDrawUsingFont
+##  <a name="m_bdrawusingfont"></a>CMFCFontComboBox:: m_bDrawUsingFont
 
-框架中，指示要使用当前的字体组合框中绘制项标签的字体。
+向框架指示在当前字体组合框中绘制项标签所使用的字体。
 
 ```
 static BOOL m_bDrawUsingFont;
@@ -116,11 +116,11 @@ static BOOL m_bDrawUsingFont;
 
 ### <a name="remarks"></a>备注
 
-将此成员设置为 TRUE 以指示框架使用相同的字体绘制每个项的标签。 将此成员设置为 FALSE，以指示要绘制每个项的标签与名称等同于标签的字体的框架。 此成员的默认值为 FALSE。
+将此成员设置为 TRUE 可指示框架使用相同的字体绘制每个项标签。 将此成员设置为 FALSE 可指示框架用其名称与标签相同的字体绘制每个项标签。 此成员的默认值为 FALSE。
 
-##  <a name="selectfont"></a>  CMFCFontComboBox::SelectFont
+##  <a name="selectfont"></a>CMFCFontComboBox:: SelectFont
 
-选择符合指定的条件从字体组合框的字体。
+从 "字体" 组合框中选择与指定条件匹配的字体。
 
 ```
 BOOL SelectFont(CMFCFontInfo* pDesc);
@@ -133,32 +133,32 @@ BOOL SelectFont(
 ### <a name="parameters"></a>参数
 
 *pDesc*<br/>
-[in]指向字体描述对象。
+中指向字体说明对象。
 
 *lpszName*<br/>
-[in]指定的字体名称。
+中指定字体名称。
 
 *nCharSet*<br/>
-[in]指定字符组。 默认值为 DEFAULT_CHARSET。 有关详细信息，请参阅`lfCharSet`的成员[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)结构。
+中指定字符集。 默认值为 DEFAULT_CHARSET。 有关详细信息, 请参阅`lfCharSet` [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw)结构的成员。
 
 ### <a name="return-value"></a>返回值
 
-如果字体组合框中的项匹配的说明对象指定的字体或字体名称和字符集; 则为 TRUE否则为 FALSE。
+如果字体组合框中的项与指定的字体说明对象或字体名称和字符集相匹配, 则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-使用此方法来选择并滚动到对应于指定的字体的字体组合框中的项。
+使用此方法可选择并滚动到与指定字体相对应的 "字体" 组合框中的项。
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何使用`SelectFont`中的方法`CMFCFontComboBox`类。 此示例摘自[新的控件示例](../../overview/visual-cpp-samples.md)。
+下面的示例演示如何使用`SelectFont` `CMFCFontComboBox`类中的方法。 此示例是[新控件示例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_NewControls#34](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#35](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_2.cpp)]
 
-##  <a name="setup"></a>  CMFCFontComboBox::Setup
+##  <a name="setup"></a>CMFCFontComboBox:: Setup
 
-初始化字体组合框中项的列表。
+初始化字体组合框中的项列表。
 
 ```
 BOOL Setup(
@@ -170,25 +170,25 @@ BOOL Setup(
 ### <a name="parameters"></a>参数
 
 *nFontType*<br/>
-[in]指定字体类型。 默认值是 DEVICE_FONTTYPE、 RASTER_FONTTYPE 和 TRUETYPE_FONTTYPE 的按位组合 (OR)。
+中指定字体类型。 默认值为 DEVICE_FONTTYPE、RASTER_FONTTYPE 和 TRUETYPE_FONTTYPE 的按位组合 (OR)。
 
 *nCharSet*<br/>
-[in]指定字体的字符集。 默认值为 DEFAULT_CHARSET。
+中指定字体字符集。 默认值为 DEFAULT_CHARSET。
 
 *nPitchAndFamily*<br/>
-[in]指定的字体间距和系列。 默认值为 DEFAULT_PITCH。
+中指定字体间距和系列。 默认值为 DEFAULT_PITCH。
 
 ### <a name="return-value"></a>返回值
 
-如果字体组合框初始化成功，则为 TRUE否则为 FALSE。
+如果已成功初始化字体组合框, 则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-此方法通过枚举与指定的参数匹配的当前已安装的字体和字体组合框中插入这些字体名称初始化字体组合框。
+此方法通过枚举当前已安装的与指定参数匹配的字体并在 "字体" 组合框中插入这些字体名称, 初始化字体组合框。
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何使用`Setup`中的方法`CMFCFontComboBox`类。 此示例摘自[新的控件示例](../../overview/visual-cpp-samples.md)。
+下面的示例演示如何使用`Setup` `CMFCFontComboBox`类中的方法。 此示例是[新控件示例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_NewControls#34](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#36](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_3.cpp)]

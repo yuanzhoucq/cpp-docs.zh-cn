@@ -1,9 +1,9 @@
 ---
 title: rand_s
-ms.date: 1/02/2018
-apiname:
+ms.date: 01/02/2018
+api_name:
 - rand_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - rand_s
 helpviewer_keywords:
@@ -27,16 +30,16 @@ helpviewer_keywords:
 - cryptographically secure random numbers
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: d196a6f5d7483deb9a7e1b8d7fa929532b6197db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 652521ab472736783ba1b4498ca7d7c3f297e7ee
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358120"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949655"
 ---
-# <a name="rands"></a>rand_s
+# <a name="rand_s"></a>rand_s
 
-生成一个伪随机数。 这是一个更安全的函数版本[rand](rand.md)，具有安全增强功能，如中所述[CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)。
+生成一个伪随机数。 这是函数[rand](rand.md)的更安全版本，具有[CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增强功能。
 
 ## <a name="syntax"></a>语法
 
@@ -47,24 +50,24 @@ errno_t rand_s(unsigned int* randomValue);
 ### <a name="parameters"></a>参数
 
 *randomValue*<br/>
-指向一个整数，用于保存所生成的值的指针。
+指向用于保存生成值的整数的指针。
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则返回零，否则返回错误代码。 如果输入的指针_randomValue_是空指针，该函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，该函数返回**EINVAL** ，并设置**errno**到**EINVAL**。 如果函数失败的任何其他原因，*_randomValue_设置为 0。
+如果成功，则返回零，否则返回错误代码。 如果输入指针_randomValue_为空指针，则函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将返回**EINVAL** ，并将**Errno**设置为**EINVAL**。 如果函数因任何其他原因而失败，则 *_randomValue_将设置为0。
 
 ## <a name="remarks"></a>备注
 
-**Rand_s**函数将介于 0 到写入一个伪随机整数**UINT_MAX**输入指针。 **Rand_s**函数使用操作系统生成加密型安全随机数。 它不使用由生成的种子[srand](srand.md)函数，也不会影响使用的随机数字序列[rand](rand.md)。
+**Rand_s**函数将0到**UINT_MAX**范围内的伪随机整数写入输入指针。 **Rand_s**函数使用操作系统生成加密型安全随机数字。 它不使用由[srand](srand.md)函数生成的种子，也不会影响[rand](rand.md)使用的随机数字序列。
 
-**Rand_s**函数要求该常量 **_CRT_RAND_S**函数声明，如以下示例所示的包含语句之前定义：
+**Rand_s**函数要求在要声明的函数的包含语句之前定义常量 **_CRT_RAND_S** ，如以下示例中所示：
 
 ```C
 #define _CRT_RAND_S
 #include <stdlib.h>
 ```
 
-**rand_s**取决于[RtlGenRandom](/windows/desktop/api/ntsecapi/nf-ntsecapi-rtlgenrandom) API，它才可在 Windows XP 及更高版本。
+**rand_s**依赖于[RtlGenRandom](/windows/win32/api/ntsecapi/nf-ntsecapi-rtlgenrandom) API，后者仅在 Windows XP 和更高版本中可用。
 
 ## <a name="requirements"></a>要求
 

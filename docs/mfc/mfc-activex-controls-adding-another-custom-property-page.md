@@ -7,105 +7,105 @@ helpviewer_keywords:
 - ActiveX controls [MFC], property pages
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: fcf7e119-9f29-41a9-908d-e9b1607e08af
-ms.openlocfilehash: 87b71fdddc5b52f66c34cdbcdb234c83616d0850
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09d85d69efc4c6cf0bf253099bae78c1e570f8a5
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160336"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907383"
 ---
 # <a name="mfc-activex-controls-adding-another-custom-property-page"></a>MFC ActiveX 控件：添加另一个自定义属性页
 
-有时，ActiveX 控件将具有多个属性比正常可以容纳的一个属性页。 在这种情况下，可以将属性页添加到 ActiveX 控件以显示这些属性。
+有时，ActiveX 控件的属性数比可合理容纳在一个属性页上的属性多。 在这种情况下，您可以将属性页添加到 ActiveX 控件以显示这些属性。
 
-本文介绍将新的属性页添加到已具有至少一个属性页的 ActiveX 控件。 添加常用属性的详细信息页 （字体、 图片或颜色），请参阅文章[MFC ActiveX 控件：使用常用属性页](../mfc/mfc-activex-controls-using-stock-property-pages.md)。
+本文讨论如何向已至少具有一个属性页面的 ActiveX 控件添加新属性页。 有关添加常用属性页（字体、图片或颜色）的详细信息，请参阅[MFC ActiveX 控件：使用常用属性页](../mfc/mfc-activex-controls-using-stock-property-pages.md)。
 
-以下过程使用 ActiveX 控件向导创建的一个示例 ActiveX 控件框架。 因此，类名称和标识符是唯一的此示例。
+以下过程使用 ActiveX 控件向导创建的示例 ActiveX 控件框架。 因此，此示例中的类名称和标识符是唯一的。
 
-使用 ActiveX 控件中的属性页面的详细信息，请参阅以下文章：
+有关在 ActiveX 控件中使用属性页的详细信息，请参阅以下文章：
 
 - [MFC ActiveX 控件：属性页](../mfc/mfc-activex-controls-property-pages.md)
 
-- [MFC ActiveX 控件：使用常用属性页](../mfc/mfc-activex-controls-using-stock-property-pages.md)
+- [MFC ActiveX 控件：使用内置属性页](../mfc/mfc-activex-controls-using-stock-property-pages.md)
 
     > [!NOTE]
-    >  强烈建议页遵循标准的 ActiveX 控件属性页大小的新属性。 常用的图片和颜色属性页面度量值 250 x 62 对话框单元 (DLU)。 标准字体属性页是 250 x 110 Dlu。 ActiveX 控件向导创建的默认属性页使用 250 x 62 DLU 标准。
+    >  强烈建议新属性页遵循 ActiveX 控件属性页的大小标准。 "股价图" 和 "颜色" 属性页度量250x62 对话框单位（DLU）。 标准字体属性页为 250x110 Dlu。 ActiveX 控件向导创建的默认属性页使用 250x62 DLU 标准。
 
-### <a name="to-insert-a-new-property-page-template-into-your-project"></a>若要向项目中插入新的属性页模板
+### <a name="to-insert-a-new-property-page-template-into-your-project"></a>将新属性页模板插入到项目中
 
-1. 打开控件项目，在项目工作区中打开资源视图。
+1. 打开控件项目后，打开 "项目" 工作区中的资源视图。
 
-1. 右键单击在若要打开快捷菜单，然后单击资源视图**添加资源**。
+1. 右键单击资源视图打开快捷菜单，然后单击 "**添加资源**"。
 
-1. 展开**对话框中**节点，然后选择**IDD_OLE_PROPPAGE_SMALL**。
+1. 展开**对话框**节点，然后选择 " **IDD_OLE_PROPPAGE_SMALL**"。
 
-1. 单击**新建**若要将资源添加到你的项目。
+1. 单击 "**新建**" 将资源添加到项目。
 
-1. 选择要刷新属性窗口的新属性页面模板。
+1. 选择 "新建" 属性页模板以刷新 "**属性**" 窗口（在**资源视图**中）。
 
-1. 输入一个新值**ID**属性。 此示例使用**IDD_PROPPAGE_NEWPAGE**。
+1. 为 " **ID** " 属性输入新值。 此示例使用**IDD_PROPPAGE_NEWPAGE**。
 
-1. 单击**保存**工具栏上。
+1. 单击工具栏上的 "**保存**"。
 
-### <a name="to-associate-the-new-template-with-a-class"></a>若要将新模板与类相关联
+### <a name="to-associate-the-new-template-with-a-class"></a>将新模板与类相关联
 
 1. 打开类视图。
 
-1. 右键单击要打开快捷菜单的类视图中。
+1. 右键单击 "类视图" 以打开快捷菜单。
 
-1. 从快捷菜单中，单击**外**，然后单击**添加类**。
+1. 在快捷菜单中，依次单击“添加”和“添加类”。
 
-   这将打开[添加类](../ide/add-class-dialog-box.md)对话框。
+   这将打开 "[添加类](../ide/add-class-dialog-box.md)" 对话框。
 
-1. 双击**MFC 类**模板。
+1. 双击 " **MFC 类**" 模板。
 
-1. 在中**类名**框中[MFC 类向导](../mfc/reference/mfc-add-class-wizard.md)，键入新的对话框类的名称。 (在此示例中， `CAddtlPropPage`。)
+1. 在[MFC 类向导](../mfc/reference/mfc-add-class-wizard.md)的 "**类名称**" 框中，键入新对话框类的名称。 （在此示例`CAddtlPropPage`中为。）
 
-1. 如果你想要更改文件的名称，请单击**更改**。 键入你的实现和标头文件的名称或接受默认名称。
+1. 如果要更改文件名，请单击 "**更改**"。 键入实现和标头文件的名称，或接受默认名称。
 
-1. 在中**基类**框中，选择`COlePropertyPage`。
+1. 在 "**基类**" 对话框中， `COlePropertyPage`选择。
 
-1. 在中**对话框 ID**框中，选择**IDD_PROPPAGE_NEWPAGE**。
+1. 在**对话框**中，选择 " **IDD_PROPPAGE_NEWPAGE**"。
 
-9. 单击**完成**创建类。
+9. 单击 "**完成**" 以创建类。
 
-若要允许控件的用户访问此新的属性页，请对控件的属性页 Id 宏部分 （位于控件实现文件） 进行以下更改：
+若要允许控件的用户访问此新属性页，请对控件的属性页 Id 宏部分（位于控件实现文件中）进行以下更改：
 
 [!code-cpp[NVC_MFC_AxUI#32](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_1.cpp)]
 
-请注意，您必须增加 BEGIN_PROPPAGEIDS 宏 （属性页计数） 从 1 到 2 的第二个参数。
+请注意，必须将 BEGIN_PROPPAGEIDS 宏的第二个参数（属性页计数）从1增加到2。
 
-您还必须修改控件实现文件 (。CPP) 文件以包括标头 (。H） 新的属性页类的文件。
+还必须修改控件实现文件（。CPP）文件来包含标头（。H）文件。
 
-下一步涉及创建两个新的字符串资源将为新的属性页中提供类型名称和标题。
+接下来的步骤涉及创建两个新的字符串资源，这些资源将为新属性页提供类型名称和标题。
 
-#### <a name="to-add-new-string-resources-to-a-property-page"></a>若要将新字符串资源添加到属性页
+#### <a name="to-add-new-string-resources-to-a-property-page"></a>向属性页中添加新的字符串资源
 
-1. 打开控件项目，打开资源视图。
+1. 打开控件项目后，打开资源视图。
 
-1. 双击**字符串表**文件夹，然后再双击现有字符串表你想要添加字符串资源。
+1. 双击 "**字符串表**" 文件夹，然后双击要向其添加字符串的现有字符串表资源。
 
-   这将在窗口中打开字符串表。
+   这会在窗口中打开字符串表。
 
-1. 选择在字符串表末尾的空白行并键入文本或标题的字符串： 例如，"其他属性页。"
+1. 选择字符串表末尾的空行，然后键入字符串的文本或标题，例如 "附加属性页"。
 
-   这将打开**字符串属性**页显示**标题**并**ID**框。 **标题**框包含您键入的字符串。
+   这会打开一个显示 "**标题**" 和 " **ID** " 框的**字符串 "属性**" 页。 "**标题**" 框包含您键入的字符串。
 
-1. 在中**ID**框中，选择或输入的字符串 ID。 完成后，请按 Enter。
+1. 在 " **id** " 框中，选择或键入字符串的 ID。 完成后，按 Enter。
 
-   此示例使用**IDS_SAMPLE_ADDPAGE**为新的属性页的类型名称。
+   此示例使用**IDS_SAMPLE_ADDPAGE**作为新属性页的类型名称。
 
-1. 重复步骤 3 和 4 使用**IDS_SAMPLE_ADDPPG_CAPTION** ID 和"其他属性页"的标题。
+1. 对于 ID，使用**IDS_SAMPLE_ADDPPG_CAPTION**和标题的 "附加属性页" 重复步骤3和4。
 
-1. 在。新的属性页类的 CPP 文件 (在此示例中， `CAddtlPropPage`) 修改`CAddtlPropPage::CAddtlPropPageFactory::UpdateRegistry`，以便通过传递 IDS_SAMPLE_ADDPAGE [AfxOleRegisterPropertyPageClass](../mfc/reference/registering-ole-controls.md#afxoleregisterpropertypageclass)，如下面的示例：
+1. 在。新属性页类的 CPP 文件（在此示例`CAddtlPropPage`中） `CAddtlPropPage::CAddtlPropPageFactory::UpdateRegistry`修改，以便[AfxOleRegisterPropertyPageClass](../mfc/reference/registering-ole-controls.md#afxoleregisterpropertypageclass)传递 IDS_SAMPLE_ADDPAGE，如以下示例中所示：
 
    [!code-cpp[NVC_MFC_AxUI#33](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_2.cpp)]
 
-1. 修改的构造函数`CAddtlPropPage`以便 IDS_SAMPLE_ADDPPG_CAPTION 传递到`COlePropertyPage`构造函数中的，按如下所示：
+1. 修改的构造函数`CAddtlPropPage` ，以便将 IDS_SAMPLE_ADDPPG_CAPTION 传递`COlePropertyPage`到构造函数，如下所示：
 
    [!code-cpp[NVC_MFC_AxUI#34](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_3.cpp)]
 
-之后进行必要的修改后重新生成项目并使用测试容器测试新的属性页。 请参阅 [使用测试容器测试属性和事件](../mfc/testing-properties-and-events-with-test-container.md) 了解有关如何访问测试容器的信息。
+进行所需修改后，重新生成项目，并使用测试容器来测试新属性页。 请参阅 [使用测试容器测试属性和事件](../mfc/testing-properties-and-events-with-test-container.md) 了解有关如何访问测试容器的信息。
 
 ## <a name="see-also"></a>请参阅
 

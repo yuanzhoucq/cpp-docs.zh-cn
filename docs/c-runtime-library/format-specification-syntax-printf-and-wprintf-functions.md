@@ -1,6 +1,6 @@
 ---
 title: 格式规范语法：printf 和 wprintf 函数
-ms.date: 07/02/2019
+ms.date: 07/30/2019
 helpviewer_keywords:
 - format specification fields for printf function
 - printf function format specification fields
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-ms.openlocfilehash: 07565da17eb53274e0c3203abbc8cddb9e61da90
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.openlocfilehash: db144703a89fe1a6a76ed15f1cf77395c4565fab
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552256"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500094"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>格式规范语法：printf 和 wprintf 函数
 
-各种 `printf` 和 `wprintf` 函数采用格式字符串和可选参数，并生成用于输出的格式化字符序列。 格式字符串包含零个或多个指令  ，这些指令是用于输出的文本字符或描述如何在输出中设置参数格式的已编码的转换规范  。 本主题介绍用于对格式字符串中的转换规范进行编码的语法。 有关这些函数的列表，请参阅[流 I/O](../c-runtime-library/stream-i-o.md)。
+各种 `printf` 和 `wprintf` 函数采用格式字符串和可选参数，并生成用于输出的格式化字符序列。 格式字符串包含零个或多个指令  ，这些指令是用于输出的文本字符或描述如何在输出中设置参数格式的已编码的转换规范  。 本文介绍用于对格式字符串中的转换规范进行编码的语法。 有关这些函数的列表，请参阅[流 I/O](../c-runtime-library/stream-i-o.md)。
 
 一个转换规范由以下形式的可选和必需字段组成：
 
@@ -62,7 +62,7 @@ ms.locfileid: "67552256"
 |**u**|整数|无符号十进制整数。|
 |**x**|整数|无符号十六进制整数；使用“abcdef.”|
 |**X**|整数|无符号十六进制整数；使用“ABCDEF.”|
-|**e**|浮点|有符号的值，形式为 [-]*d.dddd*__e±__*dd*[*d*]，其中 *d* 是一个十进制数，*dddd* 是一个或多个十进制数（具体取决于指定的精度），或为默认的六个数，*dd*[*d*] 是两个或三个十进制数（具体取决于[输出格式](../c-runtime-library/set-output-format.md)和指数大小）。|
+|**e**|浮点|有符号的值，形式为 [-]*d.dddd*__e±__*dd*\[*d*]，其中 *d* 是一个十进制数，*dddd* 是一个或多个十进制数（具体取决于指定的精度），或为默认的六个数，*dd*\[*d*] 是两个或三个十进制数（具体取决于[输出格式](../c-runtime-library/set-output-format.md)和指数大小）。|
 |**E**|浮点|与 **e** 格式相同，只不过指数由 **E** 引入，而不是由 **e** 引入。|
 |**f**|浮点|有符号的值，形式为 [-]*dddd* __.__ *dddd*，其中 *dddd* 是一个或多个十进制数。 小数点前的数字位数取决于数字的度量值，小数点后的数字位数取决于请求的精度，或为默认的六位数。|
 |**F**|浮点|与 **f** 格式相同，只不过 infinity 和 nan 输出为大写形式。|
@@ -74,7 +74,7 @@ ms.locfileid: "67552256"
 |**p**|指针类型|将自变量显示为十六进制数中的地址。|
 |**s**|String|与 `printf` 函数一起使用时，指定单字节或多字节字符串；与 `wprintf` 函数一起使用时，指定宽字符字符串。 将于第一个空字符之前或达到精度  值时显示字符。|
 |**S**|String|与 `printf` 函数一起使用时，指定宽字符字符串；与 `wprintf` 函数一起使用时，指定单字节或多字节字符串。 将于第一个空字符之前或达到精度  值时显示字符。|
-|**Z**|`ANSI_STRING` 或 `UNICODE_STRING` 结构|将 [ANSI_STRING](/windows/desktop/api/ntdef/ns-ntdef-_string) 或 [UNICODE_STRING](/windows/win32/api/ntdef/ns-ntdef-_unicode_string) 结构的地址作为参数传递时，会显示包含在由结构的 `Buffer` 字段指向的缓冲区中的字符串。 使用 **w** 的大小  修饰符前缀指定 `UNICODE_STRING` 参数，例如 `%wZ`。 结构的 `Length` 字段必须设置为字符串的长度（以字节为单位）。 结构的 `MaximumLength` 字段必须设置为缓冲区的长度（以字节为单位）。<br /><br /> 通常情况下，**Z** 类型字符仅在使用转换规范的驱动程序调试函数（如 `dbgPrint` 和 `kdPrint`）中使用。|
+|**Z**|`ANSI_STRING` 或 `UNICODE_STRING` 结构|将 [ANSI_STRING](/windows/win32/api/ntdef/ns-ntdef-string) 或 [UNICODE_STRING](/windows/win32/api/ntdef/ns-ntdef-_unicode_string) 结构的地址作为参数传递时，会显示包含在由结构的 `Buffer` 字段指向的缓冲区中的字符串。 使用 **w** 的大小  修饰符前缀指定 `UNICODE_STRING` 参数，例如 `%wZ`。 结构的 `Length` 字段必须设置为字符串的长度（以字节为单位）。 结构的 `MaximumLength` 字段必须设置为缓冲区的长度（以字节为单位）。<br /><br /> 通常情况下，**Z** 类型字符仅在使用转换规范的驱动程序调试函数（如 `dbgPrint` 和 `kdPrint`）中使用。|
 
 从 Visual Studio 2015 开始，如果对应浮点转换说明符（**a**、**A**、**e**、**E**、**f**、**F**、**g**、**G**）的参数为无穷大、不定或 NaN，格式化的输出则符合 C99 标准。 下表列出了格式化的输出：
 
@@ -82,7 +82,7 @@ ms.locfileid: "67552256"
 |-----------|------------|
 |infinity|`inf`|
 |静默 NaN|`nan`|
-|信号 NaN|`nan(snan)`|
+|信令 NaN|`nan(snan)`|
 |不定 NaN|`nan(ind)`|
 
 可能以符号作为其中任何一个值的前缀。 如果浮点类型  转换说明符字符是一个大写字母，则输出也将使用大写字母格式。 例如，如果格式说明符是 `%F`而不是 `%f`，则 infinity 的格式将被设置为 `INF`，而不是 `inf`。 `scanf` 函数也可以分析这些字符串，使这些值可以通过 `printf` 和 `scanf` 函数进行往返。
@@ -135,7 +135,7 @@ ms.locfileid: "67552256"
 
 如果宽度规范是一个星号 (`*`)，则参数列表中的 `int` 参数将提供此值。 宽度  参数必须先于在参数列表中要设置其格式的值，如以下示例中所示：
 
-`printf("%0*f", 5, 3);  /* 00003 is output */`
+`printf("%0*d", 5, 3);  /* 00003 is output */`
 
 转换规范中缺少宽度  值或此值较小将不会导致截断输出值。 如果转换结果的宽度大于宽度  值，则字段将扩展以包含转换结果。
 
@@ -171,7 +171,7 @@ ms.locfileid: "67552256"
 
 ## <a name="argument-size-specification"></a>参数大小规范
 
-在转换规范中，大小  字段是类型  转换说明符的参数长度修饰符。 大小  字段作为类型  字段（**hh**、**h**、**j**、**l**（小写的 L）、**L**、**ll**、**t**、**w**、**z**、**I**（大写的 i）、**I32** 和 **I64**）的前缀，根据它们修饰的转换说明符，指定对应参数的“大小”（长型或短型、32 位或 64 位、单字节字符或宽字符）。 这些大小前缀在 `printf` 和 `wprintf` 系列函数中与 *类型* 字符一起使用，以指定参数大小的解释（如下表中所示）。 大小  字段对于某些参数类型是可选的。 未指定任何大小前缀时，格式化程序使用整数参数（例如，有符号或无符号的 `char`、`short`、`int`、`long` 和枚举类型）作为 32 位 `int` 类型，而使用 `float`、`double` 和 `long double` 浮点参数作为 64 位 `double` 类型。 这与变量自变量列表的默认自变量提升规则相匹配。 有关自变量提升的详细信息，请参阅[后缀表达式](../cpp/postfix-expressions.md)中的“省略号和默认自变量”。 在 32 位和 64 位系统上，64 位整数参数的转换规范必须包含 **ll** 或 **I64** 大小前缀。 否则，格式化程序的行为是不明确的。
+在转换规范中，大小  字段是类型  转换说明符的参数长度修饰符。 大小  字段作为类型  字段（**hh**、**h**、**j**、**l**（小写的 L）、**L**、**ll**、**t**、**w**、**z**、**I**（大写的 i）、**I32** 和 **I64**）的前缀，根据它们修饰的转换说明符，指定对应参数的“大小”（长型或短型、32 位或 64 位、单字节字符或宽字符）。 这些大小前缀在 `printf` 和 `wprintf` 系列函数中与 *类型* 字符一起使用，以指定参数大小的解释（如下表中所示）。 大小  字段对于某些参数类型是可选的。 未指定任何大小前缀时，格式化程序使用整数参数（例如，有符号或无符号的 `char`、`short`、`int`、`long` 和枚举类型）作为 32 位 `int` 类型，而使用 `float`、`double` 和 `long double` 浮点参数作为 64 位 `double` 类型。 此行为与变量自变量列表的默认自变量提升规则相匹配。 有关自变量提升的详细信息，请参阅[后缀表达式](../cpp/postfix-expressions.md)中的“省略号和默认自变量”。 在 32 位和 64 位系统上，64 位整数参数的转换规范必须包含 **ll** 或 **I64** 大小前缀。 否则，格式化程序的行为是不明确的。
 
 某些类型在 32 位和 64 位代码中具有不同大小。 例如，`size_t` 在针对 x86 编译的代码中是 32 位长，而在针对 x64 编译的代码中是 64 位。 若要为宽度可变的类型创建与平台无关的格式设置代码，可以使用宽度可变的参数大小修饰符。 或者，使用 64 位参数大小修饰符，并将宽度可变的参数类型显式提升为 64 位。 特定于 Microsoft 的 **I**（大写的 i）参数大小修饰符可处理宽度可变的整数参数，但我们建议使用特定于类型的 **j**、**t** 和 **z** 修饰符以确保可移植性。
 

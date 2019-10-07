@@ -1,13 +1,13 @@
 ---
 title: snprintf、_snprintf、_snprintf_l、_snwprintf、_snwprintf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _snwprintf
 - _snprintf
 - _snprintf_l
 - _snwprintf_l
 - snprintf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _snprintf
 - snprintf_l
@@ -48,14 +51,14 @@ helpviewer_keywords:
 - sntprintf function
 - formatted text [C++]
 ms.assetid: 5976c9c8-876e-4ac9-a515-39f3f7fd0925
-ms.openlocfilehash: 202f2f12de3955a2c9b0f785c3e89280d91a4a95
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1d11efebad57bdcf44ca959384f449640dad701
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62355713"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948005"
 ---
-# <a name="snprintf-snprintf-snprintfl-snwprintf-snwprintfl"></a>snprintf、_snprintf、_snprintf_l、_snwprintf、_snwprintf_l
+# <a name="snprintf-_snprintf-_snprintf_l-_snwprintf-_snwprintf_l"></a>snprintf、_snprintf、_snprintf_l、_snwprintf、_snwprintf_l
 
 将格式化的数据写入字符串。 提供这些函数的更多安全版本，请参阅 [_snprintf_s、_snprintf_s_l、_snwprintf_s、_snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)。
 
@@ -137,7 +140,7 @@ int _snwprintf_l(
 *format*<br/>
 窗体控件字符串。
 
-*argument*<br/>
+*实际*<br/>
 可选参数。
 
 *locale*<br/>
@@ -147,32 +150,32 @@ int _snwprintf_l(
 
 ## <a name="return-value"></a>返回值
 
-让**len**为不包括终止 null 的带格式的数据字符串的长度。 这两**len**并*计数*中的字节数**snprintf**并 **_snprintf**的宽字符 **_snwprintf**.
+让**len**成为带格式的数据字符串的长度，不包括终止 null。 对于**snprintf**和 **_snprintf**，**长度**和*计数*都以字节为单位， **_snwprintf**为宽字符。
 
-对于所有函数，如果**len** < *计数*， **len**个字符存储在*缓冲区*，附加 null 终止符，并**len**返回。
+对于所有函数，如果**len** < *计数*、 **len**字符存储在*缓冲区*中，则追加一个 null 终止符，并返回**len** 。
 
-**Snprintf**函数将截断输出时**len**大于或等于*计数*，通过将放置在一个 null 终止符`buffer[count-1]`。 返回的值为**len**，可能会输出如果的字符数*计数*是否足够大。 **Snprintf**函数返回一个负值，如果发生编码错误。
+通过在处 `buffer[count-1]`放置 null 终止符，snprintf 函数将在**len**大于或等于 count 时截断输出。 返回的值为**len**，如果*count*足够大，则将输出的字符数。 如果出现编码错误， **snprintf**函数将返回一个负值。
 
-用于所有函数以外**snprintf**，则**len** = *计数*， **len**个字符存储在*缓冲区*，不附加任何 null 终止符，并**len**返回。 如果**len** > *计数*，*计数*个字符存储在*缓冲区*，任何 null 终止符已追加，以及负返回值。
+对于除**snprintf**以外的所有函数，如果**len** = *计数*、 **len**字符存储在*缓冲区*中，则不追加 null 终止符，并且返回**len** 。 如果**len** > *count*、 *count*个字符存储在*缓冲区*中，则不会附加 null 终止符，并返回负值。
 
-如果*缓冲区*为 null 指针并且*计数*为零， **len**以格式化输出，不包括终止 null 所需的字符计数的形式返回。 若要进行成功调用具有相同*自变量*并*区域设置*参数，分配至少容纳缓冲区**len** + 1 个字符。
+如果*buffer*为 null 指针且*计数*为零，则将返回**长度**为格式化输出所需的字符数，不包括终止 null。 若要使用相同的*参数*和*区域设置*参数进行成功调用，请分配至少包含**len** + 1 个字符的缓冲区。
 
-如果*缓冲区*为 null 指针和*计数*为零，或者，如果*格式*是 null 指针，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，这些函数将返回-1 并设置**errno**到**EINVAL**。
+如果*buffer*为 null 指针且*计数*不为零，或者如果*format*为空指针，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回-1，并将**errno**设置为**EINVAL**。
 
 有关这些及其他错误代码的信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**Snprintf**函数和 **_snprintf**系列函数格式和应用商店*计数*或更少字符中的*缓冲区*。 **Snprintf**函数始终存储终止 null 字符，如有必要截断输出。 **_Snprintf**系列函数才附加终止 null 字符，当格式化的字符串的长度严格小于*计数*字符。 每个*自变量*（如果有） 转换和输出中的相应格式规范根据*格式*。 该格式包括普通字符，其形式和函数与相同*格式*参数[printf](printf-printf-l-wprintf-wprintf-l.md)。 如果在重叠的字符串之间发生复制，则此行为不确定。
+**Snprintf**函数和 **_snprintf**系列函数在*缓冲区*中格式化和存储*计数*或更少字符。 **Snprintf**函数始终存储终止 null 字符，并在必要时截断输出。 仅当格式化字符串的长度严格小于*count*个字符时， **_snprintf**系列函数才会附加一个终止 null 字符。 每个*自变量*（如果有）都将被转换，并根据*格式*的相应格式规范进行输出。 该格式包括普通字符，其形式和函数与[printf](printf-printf-l-wprintf-wprintf-l.md)的*format*参数相同。 如果在重叠的字符串之间发生复制，则此行为不确定。
 
 > [!IMPORTANT]
-> 确保 format 不是用户定义的字符串。 因为 **_snprintf**函数不保证 null 终止，特别是，当返回值是*计数*— 请确保，在其后添加 null 终止符的代码。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
+> 确保 format不是用户定义的字符串。 由于 **_snprintf**函数不保证 null 终止，特别是当返回值为*count*时，请确保它们后跟添加 null 终止符的代码。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
-从 Visual Studio 2015 和 Windows 10 中的 UCRT 开始**snprintf**不再等同于 **_snprintf**。 **Snprintf**函数行为现在是符合 C99 标准。
+从 Visual Studio 2015 和 Windows 10 中的 UCRT 开始， **snprintf**不再与 **_snprintf**相同。 **Snprintf**函数行为现在符合 C99 标准。
 
-**_snwprintf**是宽字符版本 **_snprintf**; 的指针参数 **_snwprintf**都是宽字符字符串。 检测到的编码中的错误 **_snwprintf**可能不同于在 **_snprintf**。 **_snwprintf**，就像**swprintf**，将输出写入到字符串而不是类型的目标**文件**。
+**_snwprintf**是 **_snprintf**的宽字符版本; **_snwprintf**的指针参数是宽字符字符串。 **_Snwprintf**中的编码错误检测可能与 **_snprintf**中的错误不同。 与**swprintf**一样， **_snwprintf**将输出写入字符串，而不是**文件**类型的目标。
 
-具有这些函数的版本 **_l**后缀完全相同，只不过它们使用传递中而不是当前线程区域设置的区域设置参数。
+具有 **_l**后缀的这些函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
 
 在 C++ 中，这些函数具有模板重载，可调用更新、更安全的版本。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -187,8 +190,8 @@ int _snwprintf_l(
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**snprintf**， **_snprintf**， **_snprintf_l**|\<stdio.h>|
-|**_snwprintf**， **_snwprintf_l**|\<stdio.h> 或 \<wchar.h>|
+|**snprintf**、 **_snprintf**、 **_snprintf_l**|\<stdio.h>|
+|**_snwprintf**、 **_snwprintf_l**|\<stdio.h> 或 \<wchar.h>|
 
 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

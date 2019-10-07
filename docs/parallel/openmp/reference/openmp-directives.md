@@ -29,46 +29,46 @@ helpviewer_keywords:
 - single OpenMP directive
 - threadprivate OpenMP directive
 ms.assetid: 0562c263-344c-466d-843e-de830d918940
-ms.openlocfilehash: d644b612c0c326692786c94046d799163dfbce8d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 108e23a91b2bd0041d95a2262007ce4f684fc671
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362681"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69512193"
 ---
 # <a name="openmp-directives"></a>OpenMP 指令
 
-提供指向 OpenMP API 中使用的指令。
+提供 OpenMP API 中使用的指令的链接。
 
-VisualC++支持以下 OpenMP 指令。
+Visual C++支持以下 OpenMP 指令。
 
-有关并行工作共享：
+对于并行工作共享：
 
 |指令|描述|
 |---------|-----------|
-|[parallel](#parallel)|定义并行区域，这是由多个线程并行执行的代码。|
-|[for](#for-openmp)|导致中完成的工作`for`要在线程之间划分的并行区域内的循环。|
-|[sections](#sections-openmp)|标识代码段来分担所有线程。|
-|[single](#single)|可以指定一段代码应在单个线程，不一定是主线程上执行。|
+|[parallel](#parallel)|定义一个并行区域，这是将由多个线程并行执行的代码。|
+|[for](#for-openmp)|导致在并行区域内的`for`循环中完成的工作被拆分到多个线程中。|
+|[个](#sections-openmp)|标识要在所有线程间划分的代码段。|
+|[single](#single)|允许您指定应在单个线程上执行代码部分，而不一定是主线程。|
 
 对于 master 和同步：
 
 |指令|描述|
 |---------|-----------|
-|[master](#master)|指定只有主线程应执行的程序部分。|
-|[critical](#critical)|指定代码仅执行一个线程上一次。|
-|[barrier](#barrier)|同步团队; 中的所有线程所有线程在屏障，都暂停，直到所有线程都执行屏障。|
+|[master](#master)|指定仅主线程应执行程序的某个部分。|
+|[critical](#critical)|指定代码每次只能在一个线程上执行。|
+|[barrier](#barrier)|同步团队中的所有线程;所有线程都在关卡处暂停，直到所有线程都执行关卡为止。|
 |[atomic](#atomic)|指定将以原子方式更新的内存位置。|
-|[flush](#flush-openmp)|指定的所有线程都都共享的所有对象的内存的相同视图。|
-|[ordered](#ordered-openmp-directives)|指定该代码在并行化`for`应如顺序循环执行循环。|
+|[flush](#flush-openmp)|指定所有线程都具有与所有共享对象相同的内存视图。|
+|[排序](#ordered-openmp-directives)|指定并行`for`化循环下的代码应按照顺序循环执行。|
 
 对于数据环境：
 
 |指令|描述|
 |---------|-----------|
-|[threadprivate](#threadprivate)|指定一个变量是线程私有的。|
+|[threadprivate](#threadprivate)|指定变量对于线程是私有的。|
 
-## <a name="atomic"></a>atomic
+## <a name="atomic"></a>原子
 
 指定将以原子方式更新的内存位置。
 
@@ -79,14 +79,14 @@ VisualC++支持以下 OpenMP 指令。
 
 ### <a name="parameters"></a>参数
 
-*expression*<br/>
-包含的语句*左值*，你想要防止多个写入其内存位置。
+expression<br/>
+具有*lvalue*的语句，其内存位置要针对多个写入进行保护。
 
 ### <a name="remarks"></a>备注
 
-`atomic`指令支持任何子句。
+`atomic`指令不支持子句。
 
-有关详细信息，请参阅[2.6.4 atomic 构造](../../../parallel/openmp/2-6-4-atomic-construct.md)。
+有关详细信息，请参阅[2.6.4 原子构造](../../../parallel/openmp/2-6-4-atomic-construct.md)。
 
 ### <a name="example"></a>示例
 
@@ -113,9 +113,9 @@ int main() {
 Number of threads: 10
 ```
 
-## <a name="barrier"></a>barrier
+## <a name="barrier"></a>关卡
 
-同步团队; 中的所有线程所有线程在屏障，都暂停，直到所有线程都执行屏障。
+同步团队中的所有线程;所有线程都在关卡处暂停，直到所有线程都执行关卡为止。
 
 ```
 #pragma omp barrier
@@ -123,17 +123,17 @@ Number of threads: 10
 
 ### <a name="remarks"></a>备注
 
-`barrier`指令支持任何子句。
+`barrier`指令不支持子句。
 
-有关详细信息，请参阅[2.6.3 barrier 指令](../../../parallel/openmp/2-6-3-barrier-directive.md)。
+有关详细信息，请参阅[2.6.3 关卡指令](../../../parallel/openmp/2-6-3-barrier-directive.md)。
 
 ### <a name="example"></a>示例
 
-有关如何使用的示例`barrier`，请参阅[主](#master)。
+有关如何使用`barrier`的示例，请参阅[master](#master)。
 
-## <a name="critical"></a>关键
+## <a name="critical"></a>来说
 
-指定代码仅执行一个线程上一次。
+指定代码每次只能在一个线程上执行。
 
 ```
 #pragma omp critical [(name)]
@@ -145,13 +145,13 @@ Number of threads: 10
 ### <a name="parameters"></a>参数
 
 *name*<br/>
-（可选）用于标识关键代码的名称。 名称必须括在括号中。
+可有可无用于标识关键代码的名称。 名称必须括在括号中。
 
 ### <a name="remarks"></a>备注
 
-`critical`指令支持任何子句。
+`critical`指令不支持子句。
 
-有关详细信息，请参阅[2.6.2 关键构造](../../../parallel/openmp/2-6-2-critical-construct.md)。
+有关详细信息，请参阅[2.6.2 临界构造](../../../parallel/openmp/2-6-2-critical-construct.md)。
 
 ### <a name="example"></a>示例
 
@@ -213,7 +213,7 @@ max = 29358
 
 ## <a name="flush-openmp"></a>flush
 
-指定的所有线程都都共享的所有对象的内存的相同视图。
+指定所有线程都具有与所有共享对象相同的内存视图。
 
 ```
 #pragma omp flush [(var)]
@@ -222,11 +222,11 @@ max = 29358
 ### <a name="parameters"></a>参数
 
 *var*<br/>
-（可选）逗号分隔的变量表示你想要同步的对象的列表。 如果*var*未指定，刷新所有内存。
+可有可无以逗号分隔的变量列表，表示要同步的对象。 如果未指定*变量*，则会刷新所有内存。
 
 ### <a name="remarks"></a>备注
 
-`flush`指令支持任何子句。
+`flush`指令不支持子句。
 
 有关详细信息，请参阅[2.6.5 flush 指令](../../../parallel/openmp/2-6-5-flush-directive.md)。
 
@@ -287,9 +287,9 @@ Thread 1: process data
 data = 2
 ```
 
-## <a name="for-openmp"></a>for
+## <a name="for-openmp"></a>进行
 
-导致中完成的工作`for`要在线程之间划分的并行区域内的循环。
+导致在并行区域内的`for`循环中完成的工作被拆分到多个线程中。
 
 ```
 #pragma omp [parallel] for [clauses]
@@ -298,11 +298,11 @@ data = 2
 
 ### <a name="parameters"></a>参数
 
-*clauses*<br/>
-（可选）零个或多个子句，请参阅**备注**部分。
+*分组*<br/>
+可有可无零个或多个子句的详细信息，请参阅 "**备注**" 部分。
 
 *for_statement*<br/>
-一个`for`循环。 如果用户代码中，将会导致未定义的行为`for`循环更改索引变量。
+一个`for`循环。 如果循环中的用户代码更改索引变量`for` ，将导致未定义的行为。
 
 ### <a name="remarks"></a>备注
 
@@ -312,11 +312,11 @@ data = 2
 - [firstprivate](openmp-clauses.md#firstprivate)
 - [lastprivate](openmp-clauses.md#lastprivate)
 - [reduction](openmp-clauses.md#reduction)
-- [ordered](openmp-clauses.md#ordered-openmp-clauses)
+- [排序](openmp-clauses.md#ordered-openmp-clauses)
 - [schedule](openmp-clauses.md#schedule)
 - [nowait](openmp-clauses.md#nowait)
 
-如果`parallel`同时指定，则`clauses`可以由接受的任何子句`parallel`或`for`指令，除`nowait`。
+如果`parallel`还指定了， `clauses`则可以是`parallel`或`for`指令接受的任何子句（除外`nowait`）。
 
 有关详细信息，请参阅[2.4.1 for 构造](../../../parallel/openmp/2-4-1-for-construct.md)。
 
@@ -384,9 +384,9 @@ int main() {
 The sum of 1 through 10 is 55
 ```
 
-## <a name="master"></a>master
+## <a name="master"></a>主从
 
-指定只有主线程应执行的程序部分。
+指定仅主线程应执行程序的某个部分。
 
 ```
 #pragma omp master
@@ -397,11 +397,11 @@ The sum of 1 through 10 is 55
 
 ### <a name="remarks"></a>备注
 
-`master`指令支持任何子句。
+`master`指令不支持子句。
 
-[单个](#single)指令，可以指定一段代码应在单个线程，不一定是主线程上执行。
+使用[单个](#single)指令可以指定应在单个线程上执行代码部分，而不一定是主线程。
 
-有关详细信息，请参阅[2.6.1 master 构造](../../../parallel/openmp/2-6-1-master-construct.md)。
+有关详细信息，请参阅[2.6.1 主构造](../../../parallel/openmp/2-6-1-master-construct.md)。
 
 ### <a name="example"></a>示例
 
@@ -446,9 +446,9 @@ a[3] = 9
 a[4] = 16
 ```
 
-## <a name="ordered-openmp-directives"></a>ordered
+## <a name="ordered-openmp-directives"></a>排序
 
-指定该代码在并行化`for`应如顺序循环执行循环。
+指定并行`for`化循环下的代码应按照顺序循环执行。
 
 ```
 #pragma omp ordered
@@ -457,11 +457,11 @@ a[4] = 16
 
 ### <a name="remarks"></a>备注
 
-`ordered`指令必须是动态的范围内[有关](#for-openmp)或`parallel for`构造与`ordered`子句。
+指令必须在[for](#for-openmp)的动态范围内， `parallel for` `ordered`或使用子句进行构造。 `ordered`
 
-`ordered`指令支持任何子句。
+`ordered`指令不支持子句。
 
-有关详细信息，请参阅[2.6.6 ordered 构造](../../../parallel/openmp/2-6-6-ordered-construct.md)。
+有关详细信息，请参阅[2.6.6 顺序构造](../../../parallel/openmp/2-6-6-ordered-construct.md)。
 
 ### <a name="example"></a>示例
 
@@ -517,9 +517,9 @@ test2() iteration 3
 test2() iteration 4
 ```
 
-## <a name="parallel"></a>parallel
+## <a name="parallel"></a>并行
 
-定义并行区域，这是由多个线程并行执行的代码。
+定义一个并行区域，这是将由多个线程并行执行的代码。
 
 ```
 #pragma omp parallel [clauses]
@@ -530,8 +530,8 @@ test2() iteration 4
 
 ### <a name="parameters"></a>参数
 
-*clauses*<br/>
-（可选）零个或多个子句，请参阅**备注**部分。
+*分组*<br/>
+可有可无零个或多个子句的详细信息，请参阅 "**备注**" 部分。
 
 ### <a name="remarks"></a>备注
 
@@ -546,13 +546,13 @@ test2() iteration 4
 - [reduction](openmp-clauses.md#reduction)
 - [num_threads](openmp-clauses.md#num-threads)
 
-`parallel` 也可以用于[有关](#for-openmp)并[部分](#sections-openmp)指令。
+`parallel`还可与[for](#for-openmp)和[sections](#sections-openmp)指令一起使用。
 
-有关详细信息，请参阅[2.3 parallel 构造](../../../parallel/openmp/2-3-parallel-construct.md)。
+有关详细信息，请参阅[2.3 并行构造](../../../parallel/openmp/2-3-parallel-construct.md)。
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何设置的线程数，并定义某个并行区域。 默认情况下在计算机上的逻辑处理器数相等的线程数。 例如，如果必须具有一个已启用超线程的物理处理器的计算机，它将具有两个逻辑处理器和两个线程。 输出的顺序不同计算机上而异。
+下面的示例演示如何设置线程数并定义并行区域。 默认情况下，线程数等于计算机上的逻辑处理器的数目。 例如，如果有一台具有启用了超线程的物理处理器的计算机，则该计算机将有两个逻辑处理器和两个线程。 不同计算机上的输出顺序可能有所不同。
 
 ```cpp
 // omp_parallel.cpp
@@ -576,9 +576,9 @@ Hello from thread 2
 Hello from thread 3
 ```
 
-## <a name="sections-openmp"></a>部分
+## <a name="sections-openmp"></a>个
 
-标识代码段来分担所有线程。
+标识要在所有线程间划分的代码段。
 
 ```
 #pragma omp [parallel] sections [clauses]
@@ -592,12 +592,12 @@ Hello from thread 3
 
 ### <a name="parameters"></a>参数
 
-*clauses*<br/>
-（可选）零个或多个子句，请参阅**备注**部分。
+*分组*<br/>
+可有可无零个或多个子句的详细信息，请参阅 "**备注**" 部分。
 
 ### <a name="remarks"></a>备注
 
-`sections`指令可以包含零个或多`section`指令。
+指令可包含零个或多`section`个指令。 `sections`
 
 `sections`指令支持以下子句：
 
@@ -607,9 +607,9 @@ Hello from thread 3
 - [reduction](openmp-clauses.md#reduction)
 - [nowait](openmp-clauses.md#nowait)
 
-如果`parallel`同时指定，则`clauses`可以由接受的任何子句`parallel`或`sections`指令，除`nowait`。
+如果`parallel`还指定了， `clauses`则可以是`parallel`或`sections`指令接受的任何子句（除外`nowait`）。
 
-有关详细信息，请参阅[2.4.2 sections 构造](../../../parallel/openmp/2-4-2-sections-construct.md)。
+有关详细信息，请参阅[2.4.2 sections 节构造](../../../parallel/openmp/2-4-2-sections-construct.md)。
 
 ### <a name="example"></a>示例
 
@@ -634,9 +634,9 @@ Hello from thread 0
 Hello from thread 0
 ```
 
-## <a name="single"></a>single
+## <a name="single"></a>单个
 
-可以指定一段代码应在单个线程，不一定是主线程上执行。
+允许您指定应在单个线程上执行代码部分，而不一定是主线程。
 
 ```
 #pragma omp single [clauses]
@@ -647,8 +647,8 @@ Hello from thread 0
 
 ### <a name="parameters"></a>参数
 
-*clauses*<br/>
-（可选）零个或多个子句，请参阅**备注**部分。
+*分组*<br/>
+可有可无零个或多个子句的详细信息，请参阅 "**备注**" 部分。
 
 ### <a name="remarks"></a>备注
 
@@ -659,9 +659,9 @@ Hello from thread 0
 - [copyprivate](openmp-clauses.md#copyprivate)
 - [nowait](openmp-clauses.md#nowait)
 
-[主](#master)指令，可以指定应仅在主线程上执行的代码段。
+[Master](#master)指令允许您指定仅应在主线程上执行一部分代码。
 
-有关详细信息，请参阅[2.4.3 单一构造](../../../parallel/openmp/2-4-3-single-construct.md)。
+有关详细信息，请参阅[2.4.3 单构造](../../../parallel/openmp/2-4-3-single-construct.md)。
 
 ### <a name="example"></a>示例
 
@@ -697,7 +697,7 @@ write output
 
 ## <a name="threadprivate"></a>threadprivate
 
-指定一个变量是线程私有的。
+指定变量对于线程是私有的。
 
 ```
 #pragma omp threadprivate(var)
@@ -706,17 +706,17 @@ write output
 ### <a name="parameters"></a>参数
 
 *var*<br/>
-你想要对线程进行私有变量的以逗号分隔列表。 *var*必须是全局或命名空间的范围变量或静态局部变量。
+要使其专用于线程的以逗号分隔的变量列表。 *var*必须是全局或命名空间范围的变量或局部静态变量。
 
 ### <a name="remarks"></a>备注
 
-`threadprivate`指令支持任何子句。
+`threadprivate`指令不支持子句。
 
-`threadprivate`指令基于[线程](../../../cpp/thread.md)属性使用[__declspec](../../../cpp/declspec.md)关键字; 限制`__declspec(thread)`适用于`threadprivate`。 例如，`threadprivate`变量将在任何线程已启动的过程中，而不仅仅是这些线程属于按并行区域生成一个线程团队中存在。 请注意此实现详细信息;您可能注意到，构造函数`threadprivate`通常则预期更多调用用户定义的类型。
+`threadprivate` 指令基于使用 [__declspec](../../../cpp/declspec.md)关键字的[线程](../../../cpp/thread.md)属性; 适用于`threadprivate`的限制`__declspec(thread)`。 例如， `threadprivate`变量将存在于进程启动的任何线程中，而不只是作为并行区域生成的线程组的一部分的线程。 请注意此实现的详细信息;你可能会注意到， `threadprivate`用户定义类型的构造函数被多次调用。
 
-可以使用`threadprivate`在以静态方式在进程启动时加载的 DLL，但是您不能使用`threadprivate`中将通过加载任意 DLL [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya)如与加载的 Dll [/DELAYLOAD （延迟加载导入）](../../../build/reference/delayload-delay-load-import.md)，该列也会使用`LoadLibrary`。
+你可以在`threadprivate`进程启动时静态加载的 dll 中使用，但是，你`threadprivate`不能在将通过[LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw)加载的任何 dll （如使用[/DELAYLOAD （延迟负载导入）](../../../build/reference/delayload-delay-load-import.md)加载的 dll）中使用，后者也使用`LoadLibrary`.
 
-一个`threadprivate`的变量*易损坏*类型不能保证具有调用其析构函数。 例如：
+不保证*易损坏*类型的变量调用其析构函数。`threadprivate` 例如:
 
 ```
 struct MyType
@@ -733,10 +733,10 @@ int main()
 }
 ```
 
-用户具有关于构成并行区域的线程将终止时无法控制。 如果这些线程存在时在进程退出，线程不会告知进程退出，并且不会为调用的析构函数`threaded_var`除退出任何线程上 （此处，主线程）。 使代码不应依靠的正确析构`threadprivate`变量。
+当并行区域构成的线程终止时，用户不会进行任何控制。 如果在进程退出时这些线程存在，则将不会通知线程有关进程退出的情况，并且不会对任何`threaded_var`线程调用析构函数（在此处，主线程除外）。 因此，代码不应计算正确的`threadprivate`变量析构。
 
 有关详细信息，请参阅[2.7.1 threadprivate 指令](../../../parallel/openmp/2-7-1-threadprivate-directive.md)。
 
 ### <a name="example"></a>示例
 
-有关使用的示例`threadprivate`，请参阅[专用](openmp-clauses.md#private-openmp)。
+有关使用`threadprivate`的示例，请参阅[private](openmp-clauses.md#private-openmp)。

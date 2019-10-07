@@ -1,14 +1,14 @@
 ---
 title: _strlwr_s、_strlwr_s_l、_mbslwr_s、_mbslwr_s_l、_wcslwr_s、_wcslwr_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _strlwr_s_l
 - _mbslwr_s_l
 - _mbslwr_s
 - _wcslwr_s
 - _strlwr_s
 - _wcslwr_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -21,7 +21,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _strlwr_s_l
 - _strlwr_s
@@ -60,19 +63,19 @@ helpviewer_keywords:
 - tcslwr_s_l function
 - strings [C++], converting case
 ms.assetid: 4883d31b-bdac-4049-83a1-91dfdeceee79
-ms.openlocfilehash: b7eb9d81b1269018cd41c80c1f9c15aa92a4f85a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 70009f1d7d0230b37c6a59da20996842f976d02f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210048"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947592"
 ---
-# <a name="strlwrs-strlwrsl-mbslwrs-mbslwrsl-wcslwrs-wcslwrsl"></a>_strlwr_s、_strlwr_s_l、_mbslwr_s、_mbslwr_s_l、_wcslwr_s、_wcslwr_s_l
+# <a name="_strlwr_s-_strlwr_s_l-_mbslwr_s-_mbslwr_s_l-_wcslwr_s-_wcslwr_s_l"></a>_strlwr_s、_strlwr_s_l、_mbslwr_s、_mbslwr_s_l、_wcslwr_s、_wcslwr_s_l
 
 通过使用当前区域设置或传递的区域设置对象将字符串转换为小写。 如 [CRT 的安全性增强功能](../../c-runtime-library/security-features-in-the-crt.md)中所述，这些版本的 [_strlwr、_wcslwr, _mbslwr、_strlwr_l、_wcslwr_l、_mbslwr_l](strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md) 具有安全性增强功能。
 
 > [!IMPORTANT]
-> **_mbslwr_s**并 **_mbslwr_s_l**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbslwr_s**和 **_mbslwr_s_l**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -148,11 +151,11 @@ null 终止的字符串转换为小写。
 
 如果成功，则返回零；如果失败，则返回非零错误代码。
 
-这些函数验证其参数。 如果*str*不是有效的以 null 终止字符串，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，这些函数返回**EINVAL**并设置**errno**到**EINVAL**。 如果*numberOfElements*是字符串的长度小于该函数也返回**EINVAL**并设置**errno**到**EINVAL**。
+这些函数验证其参数。 如果*str*不是有效的以 null 结尾的字符串，则会调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则函数返回**EINVAL** ，并将**Errno**设置为**EINVAL**。 如果*numberOfElements*小于字符串的长度，则函数也会返回**EINVAL** ，并将**errno**设置为**EINVAL**。
 
 ## <a name="remarks"></a>备注
 
-**_Strlwr_s**就地情况下，函数转换的任何大写字母中*str*为小写。 **_mbslwr_s**是多字节字符版本的 **_strlwr_s**。 **_wcslwr_s**是宽字符版本 **_strlwr_s**。
+**_Strlwr_s**函数将*字符串*中的所有大写字母转换为小写字母。 **_mbslwr_s**是 **_strlwr_s**的多字节字符版本。 **_wcslwr_s**是 **_strlwr_s**的宽字符版本。
 
 输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
@@ -171,9 +174,9 @@ null 终止的字符串转换为小写。
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**_strlwr_s**， **_strlwr_s_l**|\<string.h>|
-|**_mbslwr_s**， **_mbslwr_s_l**|\<mbstring.h>|
-|**_wcslwr_s**， **_wcslwr_s_l**|\<string.h> 或 \<wchar.h>|
+|**_strlwr_s**、 **_strlwr_s_l**|\<string.h>|
+|**_mbslwr_s**、 **_mbslwr_s_l**|\<mbstring.h>|
+|**_wcslwr_s**、 **_wcslwr_s_l**|\<string.h> 或 \<wchar.h>|
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

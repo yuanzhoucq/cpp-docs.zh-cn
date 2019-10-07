@@ -1,6 +1,6 @@
 ---
 title: __debugbreak
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __debugbreak_cpp
 - __debugbreak
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - breakpoints, __debugbreak intrinsic
 - __debugbreak intrinsic
 ms.assetid: 1d1e1c0c-891a-4613-ae4b-d790094ba830
-ms.openlocfilehash: 97932dfe0e187a13b72ae5fe70d761224721c3ff
-ms.sourcegitcommit: 1acb6755e11379026a96f63facac4d33f4dc47ae
+ms.openlocfilehash: e4cf2c85818a878417c560ddb5a80f8690e60a93
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67314260"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217922"
 ---
-# <a name="debugbreak"></a>__debugbreak
+# <a name="__debugbreak"></a>__debugbreak
 
 **Microsoft 专用**
 
@@ -23,7 +23,7 @@ ms.locfileid: "67314260"
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 void __debugbreak();
 ```
 
@@ -31,18 +31,18 @@ void __debugbreak();
 
 |内部函数|体系结构|Header|
 |---------------|------------------|------------|
-|`__debugbreak`|x86、 x64、 ARM，ARM64|\<intrin.h>|
+|`__debugbreak`|x86、x64、ARM、ARM64|\<intrin.h>|
 
 ## <a name="remarks"></a>备注
 
-`__debugbreak`编译器内部函数，类似于[DebugBreak](https://msdn.microsoft.com/library/windows/desktop/ms679297.aspx)，是会导致断点的可移植 Win32 方式。
+`__debugbreak`编译器内部函数（类似于 [DebugBreak](/windows/win32/api/debugapi/nf-debugapi-debugbreak)）是导致断点的可移植 Win32 方法。
 
 > [!NOTE]
->  使用编译时 **/clr**，一个函数，其中包含`__debugbreak`将编译为 MSIL。 `asm int 3` 可将函数编译为本机函数。 有关详细信息，请参阅[__asm](../assembler/inline/asm.md)。
+> 使用 **/clr**进行编译时，包含`__debugbreak`的函数将编译为 MSIL。 `asm int 3` 可将函数编译为本机函数。 有关详细信息，请参阅[__asm](../assembler/inline/asm.md)。
 
-例如：
+例如:
 
-```
+```C
 main() {
    __debugbreak();
 }
@@ -50,7 +50,7 @@ main() {
 
 类似于：
 
-```
+```C
 main() {
    __asm {
       int 3
@@ -60,7 +60,7 @@ main() {
 
 在 x86 计算机上。
 
-ARM64 上,`__debugbreak`内部函数编译为指令`brk #0xF000`。
+在 ARM64 上， `__debugbreak`将内部函数编译到指令`brk #0xF000`中。
 
 此例程仅可用作内部函数。
 
@@ -68,5 +68,5 @@ ARM64 上,`__debugbreak`内部函数编译为指令`brk #0xF000`。
 
 ## <a name="see-also"></a>请参阅
 
-[编译器内部函数](../intrinsics/compiler-intrinsics.md)<br/>
+[编译器内部函数](../intrinsics/compiler-intrinsics.md)\
 [关键字](../cpp/keywords-cpp.md)

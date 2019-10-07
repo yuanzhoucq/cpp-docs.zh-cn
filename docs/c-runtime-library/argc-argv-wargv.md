@@ -1,13 +1,16 @@
 ---
 title: __argc、__argv、__wargv
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __wargv
 - __argv
 - __argc
-apilocation:
+api_location:
 - msvcrt120.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __argv
 - __argc
@@ -17,14 +20,14 @@ helpviewer_keywords:
 - __wargv
 - __argc
 ms.assetid: 17001b0a-04ad-4762-b3a6-c54847f02d7c
-ms.openlocfilehash: f428d81215193361a409473a411eb5c4d91fa997
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 59ab1f5ba52e6dc84d44e8cb5465cfa412d01895
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743307"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940626"
 ---
-# <a name="argc-argv-wargv"></a>__argc、__argv、__wargv
+# <a name="__argc-__argv-__wargv"></a>__argc、__argv、__wargv
 
 `__argc` 全局变量是传递给程序的命令行参数的数量计数。 `__argv` 是一个指向包含程序参数的单字节字符或多字节字符字符串的数组的指针，`__wargv` 是一个指向包含程序参数的宽字符字符串的数组的指针。 这些全局变量提供了 `main` 或 `wmain` 参数。
 

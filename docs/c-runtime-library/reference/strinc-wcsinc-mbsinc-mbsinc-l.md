@@ -1,12 +1,12 @@
 ---
 title: _strinc、_wcsinc、_mbsinc、_mbsinc_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsinc
 - _wcsinc
 - _mbsinc_l
 - _strinc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsinc_l
 - _strinc
@@ -40,19 +43,19 @@ helpviewer_keywords:
 - _tcsinc function
 - tcsinc function
 ms.assetid: 54685943-8e2c-45e9-a559-2d94930dc6b4
-ms.openlocfilehash: dae14fc7b66b9be4e1016c5409a93cd172691fed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a468438d747a9497e974b10f9974bb79ffef1add
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365200"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958251"
 ---
-# <a name="strinc-wcsinc-mbsinc-mbsincl"></a>_strinc、_wcsinc、_mbsinc、_mbsinc_l
+# <a name="_strinc-_wcsinc-_mbsinc-_mbsinc_l"></a>_strinc、_wcsinc、_mbsinc、_mbsinc_l
 
 比字符串指针提前一个字符。
 
 > [!IMPORTANT]
-> **_mbsinc**并 **_mbsinc_l**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbsinc**和 **_mbsinc_l**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -84,18 +87,18 @@ unsigned char *_mbsinc_l(
 
 ## <a name="return-value"></a>返回值
 
-每个例程将指针返回到紧跟在后面的字符*当前*。
+其中每个例程都将返回一个指向紧跟在*当前*后面的字符的指针。
 
 ## <a name="remarks"></a>备注
 
-**_Mbsinc**函数返回一个指向紧跟在后面的多字节字符的第一个字节*当前*。 **_mbsinc**识别多字节字符序列根据[多字节代码页](../../c-runtime-library/code-pages.md)当前正在使用;**_mbsinc_l**具有完全相同，只不过它改用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**_Mbsinc**函数返回一个指针，该指针指向紧跟在*当前*后面的多字节字符的第一个字节。 **_mbsinc**根据当前正在使用的[多字节代码页](../../c-runtime-library/code-pages.md)识别多字节字符序列; **_mbsinc_l**是相同的，只不过它改用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-一般文本函数 **_tcsinc**映射到 Tchar.h 中定义 **_mbsinc**如果 **_MBCS**已经定义，或设置为 **_wcsinc**如果 **_UNICODE**已定义。 否则为 **_tcsinc**映射到 **_strinc**。 **_strinc**并 **_wcsinc**单字节字符和宽字符版本的 **_mbsinc**。 **_strinc**并 **_wcsinc**仅为此映射提供，否则不应使用。 有关详细信息，请参阅[使用一般文本映射](../../c-runtime-library/using-generic-text-mappings.md)和[一般文本映射](../../c-runtime-library/generic-text-mappings.md)。
+在 Tchar 中定义的一般文本函数 **_tcsinc**映射到 **_mbsinc** （如果已定义 **_MBCS** ）; 如果定义了 **_wcsinc** ，则映射到 **_UNICODE** 。 否则， **_tcsinc**将映射到 **_strinc**。 **_strinc**和 **_wcsinc**是 **_mbsinc**的单字节字符和宽字符版本。 仅为此映射提供了 **_strinc**和 **_wcsinc** ，否则不应使用它。 有关详细信息，请参阅[使用一般文本映射](../../c-runtime-library/using-generic-text-mappings.md)和[一般文本映射](../../c-runtime-library/generic-text-mappings.md)。
 
-如果*当前*是**NULL**，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数返回**EINVAL** ，并设置**errno**到**EINVAL**。
+如果*current*为**NULL**，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数将返回**EINVAL** ，并将**Errno**设置为**EINVAL**。
 
 > [!IMPORTANT]
-> 这些函数可能容易受到的缓冲区溢出的威胁。 缓冲区溢出可以用于系统攻击，因为它们可能使权限的提升不能确保。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
+> 这些函数可能容易受到的缓冲区溢出的威胁。 缓冲区溢出可以用于系统攻击，因为它们可能使权限的提升不能确保。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 ## <a name="requirements"></a>要求
 

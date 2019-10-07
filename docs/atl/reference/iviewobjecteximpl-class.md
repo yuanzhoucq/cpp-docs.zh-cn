@@ -22,19 +22,19 @@ helpviewer_keywords:
 - advise sinks
 - IViewObjectExImpl class
 ms.assetid: ad6de760-1ee5-4883-b033-ae57beffc369
-ms.openlocfilehash: 4ed7a7e4a6070ba52c54c4dace687111cf7d33d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3aead41f317d175eac9dcb094aa2070d82dc6185
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62198208"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495500"
 ---
 # <a name="iviewobjecteximpl-class"></a>IViewObjectExImpl 类
 
-此类实现`IUnknown`并提供的默认实现[IViewObject](/windows/desktop/api/oleidl/nn-oleidl-iviewobject)， [IViewObject2](/windows/desktop/api/oleidl/nn-oleidl-iviewobject2)，并且[IViewObjectEx](/windows/desktop/api/ocidl/nn-ocidl-iviewobjectex)接口。
+此类实现`IUnknown`并提供[IViewObject](/windows/win32/api/oleidl/nn-oleidl-iviewobject)、 [IViewObject2](/windows/win32/api/oleidl/nn-oleidl-iviewobject2)和[IViewObjectEx](/windows/win32/api/ocidl/nn-ocidl-iviewobjectex)接口的默认实现。
 
 > [!IMPORTANT]
->  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
+>  此类及其成员不能用于在 Windows 运行时中执行的应用程序。
 
 ## <a name="syntax"></a>语法
 
@@ -47,7 +47,7 @@ class ATL_NO_VTABLE IViewObjectExImpl
 #### <a name="parameters"></a>参数
 
 *T*<br/>
-您的类，派生自`IViewObjectExImpl`。
+派生自`IViewObjectExImpl`的类。
 
 ## <a name="members"></a>成员
 
@@ -55,22 +55,22 @@ class ATL_NO_VTABLE IViewObjectExImpl
 
 |名称|描述|
 |----------|-----------------|
-|[IViewObjectExImpl::Draw](#draw)|绘制到设备上下文上的控件的表示形式。|
-|[IViewObjectExImpl::Freeze](#freeze)|冻结控件绘制表示形式，因此它不会更改直到`Unfreeze`。 ATL 实现返回 E_NOTIMPL。|
-|[IViewObjectExImpl::GetAdvise](#getadvise)|如果有一个，检索现有的通知接收器连接在控件上。|
-|[IViewObjectExImpl::GetColorSet](#getcolorset)|返回由该控件用于绘图的逻辑调色板。 ATL 实现返回 E_NOTIMPL。|
-|[IViewObjectExImpl::GetExtent](#getextent)|检索以 HIMETRIC 为单位 （每个单位为 0.01 毫米） 的控件的显示大小从控件类数据成员[CComControlBase::m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent)。|
-|[IViewObjectExImpl::GetNaturalExtent](#getnaturalextent)|提供要使用，因为在用户调整它的对象的容器的大小调整提示。|
-|[IViewObjectExImpl::GetRect](#getrect)|返回描述请求的绘图方位的矩形。 ATL 实现返回 E_NOTIMPL。|
-|[IViewObjectExImpl::GetViewStatus](#getviewstatus)|返回对象和支持的哪些绘图方位的信息不透明度。|
-|[IViewObjectExImpl::QueryHitPoint](#queryhitpoint)|如果指定的点在指定的矩形，并返回将检查[HITRESULT](/windows/desktop/api/ocidl/ne-ocidl-taghitresult)中的值`pHitResult`。|
-|[IViewObjectExImpl::QueryHitRect](#queryhitrect)|检查是否显示控件的矩形重叠指定的位置矩形中的任何点，并返回中的 HITRESULT 值`pHitResult`。|
-|[IViewObjectExImpl::SetAdvise](#setadvise)|设置控件和通知接收器之间的连接，以便可以在控件的视图中的更改通知接收器。|
-|[IViewObjectExImpl::Unfreeze](#unfreeze)|取消冻结该控件的绘制表示形式。 ATL 实现返回 E_NOTIMPL。|
+|[IViewObjectExImpl::Draw](#draw)|在设备上下文中绘制控件的表示形式。|
+|[IViewObjectExImpl::Freeze](#freeze)|冻结控件的绘制表示形式，以便在之前`Unfreeze`不会发生更改。 ATL 实现返回 E_NOTIMPL。|
+|[IViewObjectExImpl::GetAdvise](#getadvise)|检索控件上的现有通知接收器连接（如果有）。|
+|[IViewObjectExImpl::GetColorSet](#getcolorset)|返回控件用于绘制的逻辑调色板。 ATL 实现返回 E_NOTIMPL。|
+|[IViewObjectExImpl::GetExtent](#getextent)|从控件类数据成员[CComControlBase：： m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent)按 HIMETRIC 单位（0.01 毫米/单位）检索控件的显示大小。|
+|[IViewObjectExImpl::GetNaturalExtent](#getnaturalextent)|提供容器的大小调整提示，供对象在用户调整其大小时使用。|
+|[IViewObjectExImpl::GetRect](#getrect)|返回描述所请求的绘图方位的矩形。 ATL 实现返回 E_NOTIMPL。|
+|[IViewObjectExImpl::GetViewStatus](#getviewstatus)|返回有关对象的不透明度和所支持的绘图方位的信息。|
+|[IViewObjectExImpl::QueryHitPoint](#queryhitpoint)|检查指定的点是否在指定的矩形中，并返回`pHitResult`中的 [HITRESULT](/windows/win32/api/ocidl/ne-ocidl-hitresult) 值。|
+|[IViewObjectExImpl::QueryHitRect](#queryhitrect)|检查控件的显示矩形是否与指定位置矩形中的任何点重叠，并返回中`pHitResult`的 HITRESULT 值。|
+|[IViewObjectExImpl::SetAdvise](#setadvise)|设置控件和通知接收器之间的连接，以便可以通知接收器控件视图中的更改。|
+|[IViewObjectExImpl::Unfreeze](#unfreeze)|Unfreezes 控件绘制的表示形式。 ATL 实现返回 E_NOTIMPL。|
 
 ## <a name="remarks"></a>备注
 
-[IViewObject](/windows/desktop/api/oleidl/nn-oleidl-iviewobject)， [IViewObject2](/windows/desktop/api/oleidl/nn-oleidl-iviewobject2)，并[IViewObjectEx](/windows/desktop/api/ocidl/nn-ocidl-iviewobjectex)接口可以使控件以显示本身直接，还可以创建和管理通知接收器通知容器中的控件显示的更改。 `IViewObjectEx`接口扩展的控件功能，如闪烁绘图、 非矩形的透明控件和命中测试 （例如，如何关闭鼠标单击必须要考虑在控件上) 提供支持。 类`IViewObjectExImpl`提供默认实现这些接口并实现`IUnknown`信息发送给转储调试中的设备生成。
+使用[IViewObject](/windows/win32/api/oleidl/nn-oleidl-iviewobject)、 [IViewObject2](/windows/win32/api/oleidl/nn-oleidl-iviewobject2)和[IViewObjectEx](/windows/win32/api/ocidl/nn-ocidl-iviewobjectex)接口，控件可以直接显示自身，以及创建和管理建议接收器，以通知容器控件显示中的更改。 `IViewObjectEx`接口提供对扩展控制功能的支持，例如无闪烁的绘图、非矩形和透明的控件，以及命中测试（例如，必须在控件上考虑如何关闭鼠标单击）。 类`IViewObjectExImpl`提供这些接口的默认实现，并通过`IUnknown`在调试版本中将信息发送到转储设备来实现。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -80,11 +80,11 @@ class ATL_NO_VTABLE IViewObjectExImpl
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlctl.h
+**标头：** atlctl
 
-##  <a name="draw"></a>  IViewObjectExImpl::Draw
+##  <a name="draw"></a>IViewObjectExImpl：:D raw
 
-绘制到设备上下文上的控件的表示形式。
+在设备上下文中绘制控件的表示形式。
 
 ```
 STDMETHOD(Draw)(
@@ -101,13 +101,13 @@ STDMETHOD(Draw)(
 
 ### <a name="remarks"></a>备注
 
-此方法调用`CComControl::OnDrawAdvanced`从而又会调用您的控件类的`OnDraw`方法。 `OnDraw`方法自动添加到你的控件类，当使用 ATL 控件向导创建您的控件。 向导的默认`OnDraw`用"ATL 3.0"的标签绘制矩形。
+此方法调用`CComControl::OnDrawAdvanced` ，进而调用控件类的`OnDraw`方法。 使用`OnDraw` ATL 控件向导创建控件时，会自动将一个方法添加到控件类中。 向导的默认值`OnDraw`绘制一个带有 "ATL 3.0" 标签的矩形。
 
-请参阅[iviewobject:: Draw](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-draw) Windows SDK 中。
+请参阅 Windows SDK 中的[IViewObject：:D raw](/windows/win32/api/oleidl/nf-oleidl-iviewobject-draw) 。
 
-##  <a name="freeze"></a>  IViewObjectExImpl::Freeze
+##  <a name="freeze"></a>IViewObjectExImpl：：冻结
 
-冻结控件绘制表示形式，因此它不会更改直到`Unfreeze`。 ATL 实现返回 E_NOTIMPL。
+冻结控件的绘制表示形式，以便在之前`Unfreeze`不会发生更改。 ATL 实现返回 E_NOTIMPL。
 
 ```
 STDMETHOD(Freeze)(
@@ -119,11 +119,11 @@ STDMETHOD(Freeze)(
 
 ### <a name="remarks"></a>备注
 
-请参阅[IViewObject::Freeze](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-freeze) Windows SDK 中。
+请参阅 Windows SDK 中的[IViewObject：：冻结](/windows/win32/api/oleidl/nf-oleidl-iviewobject-freeze)。
 
-##  <a name="getadvise"></a>  IViewObjectExImpl::GetAdvise
+##  <a name="getadvise"></a>IViewObjectExImpl::GetAdvise
 
-如果有一个，检索现有的通知接收器连接在控件上。
+检索控件上的现有通知接收器连接（如果有）。
 
 ```
 STDMETHOD(GetAdvise)(
@@ -134,13 +134,13 @@ STDMETHOD(GetAdvise)(
 
 ### <a name="remarks"></a>备注
 
-在控件类数据成员中存储的通知接收器[CComControlBase::m_spAdviseSink](../../atl/reference/ccomcontrolbase-class.md#m_spadvisesink)。
+通知接收器存储在 control 类数据成员[CComControlBase：： m_spAdviseSink](../../atl/reference/ccomcontrolbase-class.md#m_spadvisesink)中。
 
-请参阅[IViewObject::GetAdvise](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-getadvise) Windows SDK 中。
+请参阅 Windows SDK 中的[IViewObject：： GetAdvise](/windows/win32/api/oleidl/nf-oleidl-iviewobject-getadvise) 。
 
-##  <a name="getcolorset"></a>  IViewObjectExImpl::GetColorSet
+##  <a name="getcolorset"></a>IViewObjectExImpl::GetColorSet
 
-返回由该控件用于绘图的逻辑调色板。 ATL 实现返回 E_NOTIMPL。
+返回控件用于绘制的逻辑调色板。 ATL 实现返回 E_NOTIMPL。
 
 ```
 STDMETHOD(GetColorSet)(
@@ -154,11 +154,11 @@ STDMETHOD(GetColorSet)(
 
 ### <a name="remarks"></a>备注
 
-请参阅[IViewObject::GetColorSet](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-getcolorset) Windows SDK 中。
+请参阅 Windows SDK 中的[IViewObject：： GetColorSet](/windows/win32/api/oleidl/nf-oleidl-iviewobject-getcolorset) 。
 
-##  <a name="getextent"></a>  IViewObjectExImpl::GetExtent
+##  <a name="getextent"></a>IViewObjectExImpl::GetExtent
 
-检索以 HIMETRIC 为单位 （每个单位为 0.01 毫米） 的控件的显示大小从控件类数据成员[CComControlBase::m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent)。
+从控件类数据成员[CComControlBase：： m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent)按 HIMETRIC 单位（0.01 毫米/单位）检索控件的显示大小。
 
 ```
 STDMETHOD(GetExtent)(
@@ -170,11 +170,11 @@ STDMETHOD(GetExtent)(
 
 ### <a name="remarks"></a>备注
 
-请参阅[IViewObject2::GetExtent](/windows/desktop/api/oleidl/nf-oleidl-iviewobject2-getextent) Windows SDK 中。
+请参阅 Windows SDK 中的[IViewObject2：： GetExtent](/windows/win32/api/oleidl/nf-oleidl-iviewobject2-getextent) 。
 
-##  <a name="getnaturalextent"></a>  IViewObjectExImpl::GetNaturalExtent
+##  <a name="getnaturalextent"></a>IViewObjectExImpl::GetNaturalExtent
 
-提供要使用，因为在用户调整它的对象的容器的大小调整提示。
+提供容器的大小调整提示，供对象在用户调整其大小时使用。
 
 ```
 STDMETHOD(GetNaturalExtent)(
@@ -188,13 +188,13 @@ STDMETHOD(GetNaturalExtent)(
 
 ### <a name="remarks"></a>备注
 
-如果`dwAspect`是 DVASPECT_CONTENT 并*pExtentInfo-> dwExtentMode* DVEXTENT_CONTENT，设置 *`psizel`到控件类数据成员[CComControlBase::m_sizeNatural](../../atl/reference/ccomcontrolbase-class.md#m_sizenatural)。 否则，返回的错误 HRESULT。
+如果`dwAspect`为 DVASPECT_CONTENT， *pExtentInfo-> dwExtentMode*为 DVEXTENT_CONTENT，则将`psizel` * 设置为控件类的数据成员[CComControlBase：： m_sizeNatural](../../atl/reference/ccomcontrolbase-class.md#m_sizenatural)。 否则，将返回错误 HRESULT。
 
-请参阅[IViewObjectEx::GetNaturalExtent](/windows/desktop/api/ocidl/nf-ocidl-iviewobjectex-getnaturalextent) Windows SDK 中。
+请参阅 Windows SDK 中的[IViewObjectEx：： GetNaturalExtent](/windows/win32/api/ocidl/nf-ocidl-iviewobjectex-getnaturalextent) 。
 
-##  <a name="getrect"></a>  IViewObjectExImpl::GetRect
+##  <a name="getrect"></a>IViewObjectExImpl::GetRect
 
-返回描述请求的绘图方位的矩形。 ATL 实现返回 E_NOTIMPL。
+返回描述所请求的绘图方位的矩形。 ATL 实现返回 E_NOTIMPL。
 
 ```
 STDMETHOD(GetRect)(DWORD /* dwAspect */, LPRECTL /* pRect */);
@@ -202,11 +202,11 @@ STDMETHOD(GetRect)(DWORD /* dwAspect */, LPRECTL /* pRect */);
 
 ### <a name="remarks"></a>备注
 
-请参阅[IViewObjectEx::GetRect](/windows/desktop/api/ocidl/nf-ocidl-iviewobjectex-getrect) Windows SDK 中。
+请参阅 Windows SDK 中的[IViewObjectEx：： GetRect](/windows/win32/api/ocidl/nf-ocidl-iviewobjectex-getrect) 。
 
-##  <a name="getviewstatus"></a>  IViewObjectExImpl::GetViewStatus
+##  <a name="getviewstatus"></a>IViewObjectExImpl::GetViewStatus
 
-返回对象和支持的哪些绘图方位的信息不透明度。
+返回有关对象的不透明度和所支持的绘图方位的信息。
 
 ```
 STDMETHOD(GetViewStatus)(DWORD* pdwStatus);
@@ -214,13 +214,13 @@ STDMETHOD(GetViewStatus)(DWORD* pdwStatus);
 
 ### <a name="remarks"></a>备注
 
-默认情况下，设置 ATL`pdwStatus`以指示该控件支持 VIEWSTATUS_OPAQUE (在可能的值为[VIEWSTATUS](/windows/desktop/api/ocidl/ne-ocidl-tagviewstatus)枚举)。
+默认情况下，ATL `pdwStatus`设置为指示该控件支持 VIEWSTATUS_OPAQUE （可能值在[VIEWSTATUS](/windows/win32/api/ocidl/ne-ocidl-viewstatus)枚举中）。
 
-请参阅[IViewObjectEx::GetViewStatus](/windows/desktop/api/ocidl/nf-ocidl-iviewobjectex-getviewstatus) Windows SDK 中。
+请参阅 Windows SDK 中的[IViewObjectEx：： GetViewStatus](/windows/win32/api/ocidl/nf-ocidl-iviewobjectex-getviewstatus) 。
 
-##  <a name="queryhitpoint"></a>  IViewObjectExImpl::QueryHitPoint
+##  <a name="queryhitpoint"></a>IViewObjectExImpl::QueryHitPoint
 
-如果指定的点在指定的矩形，并返回将检查[HITRESULT](/windows/desktop/api/ocidl/ne-ocidl-taghitresult)中的值`pHitResult`。
+检查指定的点是否在指定的矩形中，并返回`pHitResult`中的 [HITRESULT](/windows/win32/api/ocidl/ne-ocidl-hitresult) 值。
 
 ```
 STDMETHOD(QueryHitPoint)(
@@ -233,15 +233,15 @@ STDMETHOD(QueryHitPoint)(
 
 ### <a name="remarks"></a>备注
 
-值可以是 HITRESULT_HIT 或 HITRESULT_OUTSIDE。
+该值可以是 HITRESULT_HIT 或 HITRESULT_OUTSIDE。
 
-如果`dwAspect`等于[DVASPECT_CONTENT](/windows/desktop/api/wtypes/ne-wtypes-tagdvaspect)，该方法将返回 S_OK。 否则，该方法返回 E_FAIL。
+如果`dwAspect`等于[DVASPECT_CONTENT](/windows/win32/api/wtypes/ne-wtypes-dvaspect)，则该方法返回 S_OK。 否则，此方法将返回 E_FAIL。
 
-请参阅[IViewObjectEx::QueryHitPoint](/windows/desktop/api/ocidl/nf-ocidl-iviewobjectex-queryhitpoint) Windows SDK 中。
+请参阅 Windows SDK 中的[IViewObjectEx：： QueryHitPoint](/windows/win32/api/ocidl/nf-ocidl-iviewobjectex-queryhitpoint) 。
 
-##  <a name="queryhitrect"></a>  IViewObjectExImpl::QueryHitRect
+##  <a name="queryhitrect"></a>IViewObjectExImpl::QueryHitRect
 
-检查是否显示控件的矩形重叠指定的位置矩形中的任何点，并返回[HITRESULT](/windows/desktop/api/ocidl/ne-ocidl-taghitresult)中的值`pHitResult`。
+检查控件的显示矩形是否与指定位置矩形中的任何点重叠，并返回`pHitResult`中的 [HITRESULT](/windows/win32/api/ocidl/ne-ocidl-hitresult) 值。
 
 ```
 STDMETHOD(QueryHitRect)(
@@ -254,15 +254,15 @@ STDMETHOD(QueryHitRect)(
 
 ### <a name="remarks"></a>备注
 
-值可以是 HITRESULT_HIT 或 HITRESULT_OUTSIDE。
+该值可以是 HITRESULT_HIT 或 HITRESULT_OUTSIDE。
 
-如果`dwAspect`等于[DVASPECT_CONTENT](/windows/desktop/api/wtypes/ne-wtypes-tagdvaspect)，该方法将返回 S_OK。 否则，该方法返回 E_FAIL。
+如果`dwAspect`等于[DVASPECT_CONTENT](/windows/win32/api/wtypes/ne-wtypes-dvaspect)，则该方法返回 S_OK。 否则，此方法将返回 E_FAIL。
 
-请参阅[IViewObjectEx::QueryHitRect](/windows/desktop/api/ocidl/nf-ocidl-iviewobjectex-queryhitrect) Windows SDK 中。
+请参阅 Windows SDK 中的[IViewObjectEx：： QueryHitRect](/windows/win32/api/ocidl/nf-ocidl-iviewobjectex-queryhitrect) 。
 
-##  <a name="setadvise"></a>  IViewObjectExImpl::SetAdvise
+##  <a name="setadvise"></a>IViewObjectExImpl::SetAdvise
 
-设置控件和通知接收器之间的连接，以便可以在控件的视图中的更改通知接收器。
+设置控件和通知接收器之间的连接，以便可以通知接收器控件视图中的更改。
 
 ```
 STDMETHOD(SetAdvise)(
@@ -273,13 +273,13 @@ STDMETHOD(SetAdvise)(
 
 ### <a name="remarks"></a>备注
 
-指向指针[IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink)通知接收器上的接口存储在控件类数据成员[CComControlBase::m_spAdviseSink](ccomcontrolbase-class.md#m_spadvisesink)。
+指向通知接收器上的[IAdviseSink](/windows/win32/api/objidl/nn-objidl-iadvisesink)接口的指针存储在 control 类数据成员[CComControlBase：： m_spAdviseSink](ccomcontrolbase-class.md#m_spadvisesink)中。
 
-请参阅[IViewObject::SetAdvise](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-setadvise) Windows SDK 中。
+请参阅 Windows SDK 中的[IViewObject：： SetAdvise](/windows/win32/api/oleidl/nf-oleidl-iviewobject-setadvise) 。
 
-##  <a name="unfreeze"></a>  IViewObjectExImpl::Unfreeze
+##  <a name="unfreeze"></a>IViewObjectExImpl：：解冻
 
-取消冻结该控件的绘制表示形式。 ATL 实现返回 E_NOTIMPL。
+Unfreezes 控件绘制的表示形式。 ATL 实现返回 E_NOTIMPL。
 
 ```
 STDMETHOD(Unfreeze)(DWORD /* dwFreeze */);
@@ -287,11 +287,11 @@ STDMETHOD(Unfreeze)(DWORD /* dwFreeze */);
 
 ### <a name="remarks"></a>备注
 
-请参阅[IViewObject::Unfreeze](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-unfreeze) Windows SDK 中。
+请参阅 Windows SDK 中的[IViewObject：：解冻](/windows/win32/api/oleidl/nf-oleidl-iviewobject-unfreeze)。
 
-##  <a name="closehandle"></a>  IWorkerThreadClient::CloseHandle
+##  <a name="closehandle"></a>IWorkerThreadClient：： CloseHandle
 
-实现此方法以关闭与此对象关联的句柄。
+实现此方法可关闭与此对象关联的句柄。
 
 ```
 HRESULT CloseHandle(HANDLE hHandle);
@@ -300,25 +300,25 @@ HRESULT CloseHandle(HANDLE hHandle);
 ### <a name="parameters"></a>参数
 
 *hHandle*<br/>
-要关闭句柄。
+要关闭的句柄。
 
 ### <a name="return-value"></a>返回值
 
-返回成功或失败时的错误 HRESULT，则为 S_OK。
+如果成功，则返回 S_OK，否则返回错误 HRESULT。
 
 ### <a name="remarks"></a>备注
 
-传递给此方法的句柄是以前通过调用与此对象关联[CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle)。
+传递给此方法的句柄以前通过调用[CWorkerThread：： AddHandle](../../atl/reference/cworkerthread-class.md#addhandle)与此对象相关联。
 
 ### <a name="example"></a>示例
 
-下面的代码演示的简单实现`IWorkerThreadClient::CloseHandle`。
+下面的代码演示的`IWorkerThreadClient::CloseHandle`简单实现。
 
 [!code-cpp[NVC_ATL_Utilities#135](../../atl/codesnippet/cpp/iviewobjecteximpl-class_1.cpp)]
 
-##  <a name="execute"></a>  IWorkerThreadClient::Execute
+##  <a name="execute"></a>IWorkerThreadClient：： Execute
 
-实现此方法以执行代码时与此对象关联的句柄发出信号。
+实现此方法以在与此对象关联的句柄变为已终止时执行代码。
 
 ```
 HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
@@ -327,29 +327,29 @@ HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
 ### <a name="parameters"></a>参数
 
 *dwParam*<br/>
-User 参数中。
+User 参数。
 
 *hObject*<br/>
-已收到信号的句柄。
+已发出信号的句柄。
 
 ### <a name="return-value"></a>返回值
 
-返回成功或失败时的错误 HRESULT，则为 S_OK。
+如果成功，则返回 S_OK，否则返回错误 HRESULT。
 
 ### <a name="remarks"></a>备注
 
-句柄和双字节/指针传递给此方法是以前通过调用与此对象关联[CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle)。
+传递给此方法的句柄和 DWORD/指针以前通过调用[CWorkerThread：： AddHandle](../../atl/reference/cworkerthread-class.md#addhandle)与此对象相关联。
 
 ### <a name="example"></a>示例
 
-下面的代码演示的简单实现`IWorkerThreadClient::Execute`。
+下面的代码演示的`IWorkerThreadClient::Execute`简单实现。
 
 [!code-cpp[NVC_ATL_Utilities#136](../../atl/codesnippet/cpp/iviewobjecteximpl-class_2.cpp)]
 
 ## <a name="see-also"></a>请参阅
 
 [CComControl 类](../../atl/reference/ccomcontrol-class.md)<br/>
-[ActiveX 控件接口](/windows/desktop/com/activex-controls-interfaces)<br/>
+[ActiveX 控件接口](/windows/win32/com/activex-controls-interfaces)<br/>
 [教程](../../atl/active-template-library-atl-tutorial.md)<br/>
 [创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

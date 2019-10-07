@@ -5,40 +5,40 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], creating
 - header controls [MFC], creating
 ms.assetid: 7864d9d2-4a2c-4622-b58b-7b110a1e28d2
-ms.openlocfilehash: 669b13cf566f24bfcd5a29ae41af1cdb90513f73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 22739e5671fb0300011de84d976eff0ce26eaedb
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242310"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907584"
 ---
 # <a name="creating-the-header-control"></a>创建标题控件
 
-标头控件不是直接在对话框编辑器中可用的 （尽管您可以添加一个列表控件，其中包括标头控件）。
+标头控件不能直接在对话框编辑器中使用（尽管可以添加包含标题控件的列表控件）。
 
-### <a name="to-put-a-header-control-in-a-dialog-box"></a>若要将标头控件放在一个对话框
+### <a name="to-put-a-header-control-in-a-dialog-box"></a>在对话框中放置标头控件
 
-1. 手动嵌入类型的成员变量[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)对话框类中。
+1. 在对话框类中手动嵌入类型为[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)的成员变量。
 
-1. 在中[OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)、 创建和设置的样式`CHeaderCtrl`、 定位它，并将其显示。
+1. 在[OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)中，创建并设置的`CHeaderCtrl`样式，定位它并显示它。
 
-1. 将项添加到标头控件。
+1. 向标题控件添加项。
 
-1. 使用属性窗口对于任何标头控件通知消息您映射对话框类中的处理程序函数需要处理 (请参阅[消息映射到函数](../mfc/reference/mapping-messages-to-functions.md))。
+1. 使用[类向导](reference/mfc-class-wizard.md)可以在对话框类中映射您需要处理的任何标头控件通知消息（请参阅[将消息映射到函数](../mfc/reference/mapping-messages-to-functions.md)）。
 
-### <a name="to-put-a-header-control-in-a-view-not-a-clistview"></a>若要将标头控件放在视图 (不 CListView)
+### <a name="to-put-a-header-control-in-a-view-not-a-clistview"></a>将标头控件置于视图中（不是 CListView）
 
-1. 嵌入[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)在视图类中的对象。
+1. 在视图类中嵌入一个[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)对象。
 
-1. 设置样式、 位置，并在视图中显示标头控件窗口[OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate)成员函数。
+1. 样式、位置，并显示视图的[OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate)成员函数中的标题控件窗口。
 
-1. 将项添加到标头控件。
+1. 向标题控件添加项。
 
-1. 使用属性窗口的任何标头控件通知消息映射的 view 类中的处理程序函数需要处理 (请参阅[消息映射到函数](../mfc/reference/mapping-messages-to-functions.md))。
+1. 使用[类向导](reference/mfc-class-wizard.md)可以在视图类中映射您需要处理的任何标头控件通知消息（请参阅[将消息映射到函数](../mfc/reference/mapping-messages-to-functions.md)）。
 
-在任一情况下，创建视图或对话框对象时创建嵌入的控件对象。 然后必须调用[CHeaderCtrl::Create](../mfc/reference/cheaderctrl-class.md#create)创建控件窗口。 若要定位的控件，调用[CHeaderCtrl::Layout](../mfc/reference/cheaderctrl-class.md#layout)来确定控件的初始大小和位置以及[SetWindowPos](../mfc/reference/cwnd-class.md#setwindowpos)设置所需的位置。 然后添加项，如中所述[将项添加到标头控件](../mfc/adding-items-to-the-header-control.md)。
+在任一情况下，都将在创建视图或对话框对象时创建嵌入控件对象。 然后，必须调用[CHeaderCtrl：： create](../mfc/reference/cheaderctrl-class.md#create)来创建控件窗口。 若要确定控件的位置，可调用[CHeaderCtrl：： Layout](../mfc/reference/cheaderctrl-class.md#layout)来确定控件的初始大小和位置，并将[SetWindowPos](../mfc/reference/cwnd-class.md#setwindowpos)设置为所需的位置。 然后按向[标题控件添加项](../mfc/adding-items-to-the-header-control.md)中所述添加项。
 
-有关详细信息，请参阅[创建标头控件](/windows/desktop/Controls/header-controls)Windows SDK 中。
+有关详细信息，请参阅在 Windows SDK 中[创建标题控件](/windows/win32/Controls/header-controls)。
 
 ## <a name="see-also"></a>请参阅
 

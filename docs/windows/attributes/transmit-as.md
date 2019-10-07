@@ -1,21 +1,21 @@
 ---
-title: transmit_as (C++ COM 属性)
+title: transmit_as (C++ COM 特性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.transmit_as
 helpviewer_keywords:
 - transmit_as attribute
 ms.assetid: 53d0b8ab-5b06-423e-83eb-3d01a10424b2
-ms.openlocfilehash: e432d1a8f39cbc5e12f192ed7b07c29421bc403e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 939013e43f08aeda788e468c995f1736cf6b6928
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407167"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513909"
 ---
-# <a name="transmitas"></a>transmit_as
+# <a name="transmit_as"></a>transmit_as
 
-指示编译器将客户端和服务器应用程序操作，提供的类型与传输类型关联。
+指示编译器将客户端和服务器应用程序操作的显示类型与传输类型相关联。
 
 ## <a name="syntax"></a>语法
 
@@ -26,15 +26,15 @@ ms.locfileid: "62407167"
 ### <a name="parameters"></a>参数
 
 *type*<br/>
-指定客户端和服务器之间传输的数据类型。
+指定在客户端和服务器之间传输的数据类型。
 
 ## <a name="remarks"></a>备注
 
-**Transmit_as** C++属性具有相同的功能[transmit_as](/windows/desktop/Midl/transmit-as) MIDL 特性。
+**Transmit_as** C++特性具有与[transmit_as](/windows/win32/Midl/transmit-as) MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
-下面的代码演示的一种用法**transmit_as**属性：
+下面的代码演示如何使用**transmit_as**属性:
 
 ```cpp
 // cpp_attr_ref_transmit_as.cpp
@@ -70,10 +70,10 @@ struct _TREE_NODE_TYPE * right;
 
 |||
 |-|-|
-|**适用对象**|**typedef**|
-|**可重复**|否|
-|**必需的特性**|None|
-|**无效的特性**|None|
+|**适用于**|**typedef**|
+|**可重复**|No|
+|**必需的特性**|无|
+|**无效的特性**|无|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

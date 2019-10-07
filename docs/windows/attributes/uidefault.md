@@ -1,21 +1,21 @@
 ---
-title: uidefault (C++ COM 属性)
+title: uidefault (C++ COM 特性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.uidefault
 helpviewer_keywords:
 - uidefault attribute
 ms.assetid: 200de0e0-2e34-40a2-bae4-8d485a62264d
-ms.openlocfilehash: a5bb8d3ad869d9ee60b2ab04743f5a926a10dd2a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b4090011aade4ebab2f5c07a8e56e91253cc7c49
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407089"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513899"
 ---
 # <a name="uidefault"></a>uidefault
 
-指示该类型信息成员是用户界面中显示的默认成员。
+指示类型信息成员是在用户界面中显示的默认成员。
 
 ## <a name="syntax"></a>语法
 
@@ -25,11 +25,11 @@ ms.locfileid: "62407089"
 
 ## <a name="remarks"></a>备注
 
-**Uidefault** C++属性具有相同的功能[uidefault](/windows/desktop/Midl/uidefault) MIDL 特性。
+**Uidefault** C++特性具有与[uidefault](/windows/win32/Midl/uidefault) MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
-下面的代码演示的示例**uidefault**:
+下面的代码演示**uidefault**的示例:
 
 ```cpp
 // cpp_attr_ref_uidefault.cpp
@@ -54,10 +54,10 @@ __interface ICustom{
 
 |||
 |-|-|
-|**适用对象**|接口方法|
-|**可重复**|否|
-|**必需的特性**|None|
-|**无效的特性**|None|
+|**适用于**|接口方法|
+|**可重复**|No|
+|**必需的特性**|无|
+|**无效的特性**|无|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

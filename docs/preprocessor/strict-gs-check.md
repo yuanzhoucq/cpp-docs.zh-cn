@@ -1,44 +1,41 @@
 ---
-title: strict_gs_check
-ms.date: 11/04/2016
+title: strict_gs_check 杂注
+ms.date: 08/29/2019
 f1_keywords:
 - strict_gs_check
 - strict_gs_check_CPP
 helpviewer_keywords:
 - strict_gs_check pragma
 ms.assetid: decfec81-c916-42e0-a07f-8cc26df6a7ce
-ms.openlocfilehash: b62e1be466e65c0de6fb4eaa33ac6e99915529e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b66e87f2280c923d05103fccfcbbc8d32daf3fd
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179940"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216584"
 ---
-# <a name="strictgscheck"></a>strict_gs_check
+# <a name="strict_gs_check-pragma"></a>strict_gs_check 杂注
 
 此杂注提供了增强的安全检查。
 
 ## <a name="syntax"></a>语法
 
-```
-#pragma strict_gs_check([push,] on )
-#pragma strict_gs_check([push,] off )
-#pragma strict_gs_check(pop)
-```
+> **#pragma strict_gs_check (** [**推送,** ] { **on** | } **)** \
+> **#pragma strict_gs_check (pop)**
 
 ## <a name="remarks"></a>备注
 
-指示编译器在函数堆栈中插入随机 Cookie 以帮助检测基于堆栈的缓冲区溢出的某些类别。 默认情况下， `/GS` （缓冲区安全检查） 编译器选项不会插入的所有函数的 cookie。 有关详细信息，请参阅 [/GS（缓冲区安全检查）](../build/reference/gs-buffer-security-check.md)。
+指示编译器在函数堆栈中插入随机 Cookie 以帮助检测基于堆栈的缓冲区溢出的某些类别。 默认情况下, `/GS` "(缓冲区安全检查) 编译器" 选项不会为所有函数插入 cookie。 有关详细信息，请参阅 [/GS（缓冲区安全检查）](../build/reference/gs-buffer-security-check.md)。
 
-必须使用进行编译`/GS`（缓冲区安全检查） 以启用**strict_gs_check**。
+使用`/GS`进行编译, 以启用**strict_gs_check**。
 
-请在公开给可能有害的数据的代码模块中使用此杂注。 此杂注攻击性非常强，应用于可能不需要此防御的函数，但它为了最大程度降低其对生成的应用程序的性能的影响而进行优化。
+请在公开给可能有害的数据的代码模块中使用此杂注。 **strict_gs_check**是一个攻击性的杂注, 适用于可能不需要这种防御的函数, 但经过了优化, 可以最大程度地降低其对生成的应用程序性能的影响。
 
-即使您使用此杂注，也应尽可能写入安全的代码。 也就是说，请确保你的代码具有没有缓冲区溢出。 **strict_gs_check**可能会从你的代码中仍存在缓冲区溢出保护你的应用程序。
+即使您使用此杂注，也应尽可能写入安全的代码。 也就是说, 请确保代码没有缓冲区溢出。 **strict_gs_check**可能会保护应用程序不受代码中保留的缓冲区溢出的保护。
 
 ## <a name="example"></a>示例
 
-在以下代码中，缓冲区溢出出现在我们将数组复制到本地数组时。 当编译此代码与`/GS`，因为数组数据类型为一个指针，在堆栈中插入任何 cookie。 添加**strict_gs_check**杂注会将堆栈 cookie 强制插入函数堆栈。
+在此示例中, 当我们将数组复制到本地数组时, 会发生缓冲区溢出。 使用`/GS`编译此代码时, 不会在堆栈中插入 cookie, 因为数组数据类型是一个指针。 添加**strict_gs_check**杂注会强制堆栈 cookie 进入函数堆栈中。
 
 ```cpp
 // pragma_strict_gs_check.cpp
@@ -67,5 +64,5 @@ void ** ReverseArray(void **pData,
 
 ## <a name="see-also"></a>请参阅
 
-[Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
-[/GS（缓冲区安全检查）](../build/reference/gs-buffer-security-check.md)
+[Pragma 指令和 __pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)\
+[/GS (缓冲区安全检查)](../build/reference/gs-buffer-security-check.md)

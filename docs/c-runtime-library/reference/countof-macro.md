@@ -1,7 +1,7 @@
 ---
 title: _countof 宏
 ms.date: 03/22/2018
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _countof
 - countof
@@ -20,16 +23,16 @@ helpviewer_keywords:
 - countof macro
 - _countof macro
 ms.assetid: 86198767-f7e5-4beb-898d-3cbbf60350a3
-ms.openlocfilehash: 60b4350d6cf14a545de67de0bdaee70ee2099006
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3debd63da7d218e29f31847034c69d89b4691643
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335342"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942691"
 ---
-# <a name="countof-macro"></a>_countof 宏
+# <a name="_countof-macro"></a>_countof 宏
 
-计算中静态分配的数组的元素数。
+计算静态分配的数组中的元素数目。
 
 ## <a name="syntax"></a>语法
 
@@ -44,13 +47,13 @@ ms.locfileid: "62335342"
 
 ## <a name="return-value"></a>返回值
 
-表示为数组中的元素数**size_t**。
+数组中的元素数，表示为**size_t**。
 
 ## <a name="remarks"></a>备注
 
-**_countof**为类似于函数的预处理器宏实现。 C++版本都具有额外的模板的机制来检测在编译时，如果将指针传递而不是静态声明数组。
+**_countof**实现为类似于函数的预处理器宏。 如果C++传递的是指针而不是静态声明的数组，则该版本具有要在编译时检测的额外的模板机械。
 
-絋粄*数组*实际上是一个数组，不是指针。 在 C 中， **_countof**生成错误的结果，如果*数组*的指针。 在C++， **_countof**无法编译如果*数组*是指针。  一个数组作为参数传递给函数*为指针 decays*，这意味着，在函数内，您不能使用 **_countof**以确定数组的范围。
+确保*数组*实际上是数组，而不是指针。 在 C 中，如果*数组*是指针， **_countof**将生成错误的结果。 在C++中，如果*array*为指针，则 **_countof**无法编译。  作为参数传递给*decays 到指针*的函数的数组，这意味着在函数内，不能使用 **_countof**来确定数组的范围。
 
 ## <a name="requirements"></a>要求
 

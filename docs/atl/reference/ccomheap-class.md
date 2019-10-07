@@ -11,19 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - CComHeap class
 ms.assetid: c74183ce-98ae-46fb-b186-93ea4cf0222b
-ms.openlocfilehash: 1a8618bd5146f2906f18cfbaa33894d34598776a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1ded73047b895a44a22bdd5730886f7fc088c77a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259373"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497346"
 ---
 # <a name="ccomheap-class"></a>CComHeap 类
 
-此类实现[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)使用 COM 内存分配函数。
+此类使用 COM 内存分配函数实现[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) 。
 
 > [!IMPORTANT]
->  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
+>  此类及其成员不能用于在 Windows 运行时中执行的应用程序。
 
 ## <a name="syntax"></a>语法
 
@@ -38,17 +38,17 @@ class CComHeap : public IAtlMemMgr
 |名称|描述|
 |----------|-----------------|
 |[CComHeap::Allocate](#allocate)|调用此方法来分配内存块。|
-|[CComHeap::Free](#free)|调用此方法来释放此内存管理器分配的内存块。|
-|[CComHeap::GetSize](#getsize)|调用此方法以获取此内存管理器分配的内存块的分配的大小。|
+|[CComHeap:: Free](#free)|调用此方法可释放此内存管理器分配的内存块。|
+|[CComHeap::GetSize](#getsize)|调用此方法可获取此内存管理器分配的内存块的分配大小。|
 |[CComHeap::Reallocate](#reallocate)|调用此方法以重新分配由该内存管理器分配的内存。|
 
 ## <a name="remarks"></a>备注
 
-`CComHeap` 实现内存分配函数使用 COM 分配函数，包括[CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc)， [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree)， [IMalloc::GetSize](/windows/desktop/api/objidlbase/nf-objidlbase-imalloc-getsize)，以及[CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc)。 最大可分配的内存量等于 INT_MAX (2147483647) 字节。
+`CComHeap`使用 COM 分配函数实现内存分配函数, 包括[CoTaskMemAlloc](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemalloc)、 [CoTaskMemFree](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree)、 [IMalloc:: GetSize](/windows/win32/api/objidlbase/nf-objidlbase-imalloc-getsize)和[CoTaskMemRealloc](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemrealloc)。 可分配的最大内存量等于 INT_MAX (2147483647) 字节。
 
 ## <a name="example"></a>示例
 
-有关示例，请参阅[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)。
+请参阅[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)的示例。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -60,7 +60,7 @@ class CComHeap : public IAtlMemMgr
 
 **标头：** ATLComMem.h
 
-##  <a name="allocate"></a>  CComHeap::Allocate
+##  <a name="allocate"></a>CComHeap:: Allocate
 
 调用此方法来分配内存块。
 
@@ -79,13 +79,13 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 
 ### <a name="remarks"></a>备注
 
-调用[ccomheap:: Free](#free)或[ccomheap:: Reallocate](#reallocate)来释放由此方法分配的内存。
+调用[CComHeap:: Free](#free)或[CComHeap:: 重新分配](#reallocate)以释放此方法分配的内存。
 
-使用实现[CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc)。
+使用[CoTaskMemAlloc](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemalloc)实现。
 
-##  <a name="free"></a>  Ccomheap:: Free
+##  <a name="free"></a>CComHeap:: Free
 
-调用此方法来释放此内存管理器分配的内存块。
+调用此方法可释放此内存管理器分配的内存块。
 
 ```
 virtual void Free(void* p) throw();
@@ -94,15 +94,15 @@ virtual void Free(void* p) throw();
 ### <a name="parameters"></a>参数
 
 *p*<br/>
-指向此内存管理器以前分配的内存的指针。 NULL 是一个有效的值，不执行任何操作。
+指向此内存管理器以前分配的内存的指针。 NULL 是有效的值并且不执行任何操作。
 
 ### <a name="remarks"></a>备注
 
-使用实现[CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree)。
+使用[CoTaskMemFree](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree)实现。
 
-##  <a name="getsize"></a>  CComHeap::GetSize
+##  <a name="getsize"></a>CComHeap:: GetSize
 
-调用此方法以获取此内存管理器分配的内存块的分配的大小。
+调用此方法可获取此内存管理器分配的内存块的分配大小。
 
 ```
 virtual size_t GetSize(void* p) throw();
@@ -115,13 +115,13 @@ virtual size_t GetSize(void* p) throw();
 
 ### <a name="return-value"></a>返回值
 
-以字节为单位返回已分配的内存块的大小。
+返回分配的内存块的大小 (以字节为单位)。
 
 ### <a name="remarks"></a>备注
 
-使用实现[IMalloc::GetSize](/windows/desktop/api/objidlbase/nf-objidlbase-imalloc-getsize)。
+使用[IMalloc:: GetSize](/windows/win32/api/objidlbase/nf-objidlbase-imalloc-getsize)实现。
 
-##  <a name="reallocate"></a>  Ccomheap:: Reallocate
+##  <a name="reallocate"></a>CComHeap:: 重新分配
 
 调用此方法以重新分配由该内存管理器分配的内存。
 
@@ -143,9 +143,9 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="remarks"></a>备注
 
-调用[ccomheap:: Free](#free)来释放由此方法分配的内存。
+调用[CComHeap:: free](#free)可释放由此方法分配的内存。
 
-使用实现[CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc)。
+使用[CoTaskMemRealloc](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemrealloc)实现。
 
 ## <a name="see-also"></a>请参阅
 

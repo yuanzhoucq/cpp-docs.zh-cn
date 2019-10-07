@@ -1,6 +1,7 @@
 ---
 title: MSVC 链接器选项
-ms.date: 08/20/2018
+description: Microsoft LINK 链接器支持的选项的列表。
+ms.date: 09/24/2019
 f1_keywords:
 - link
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - libraries [C++], linking to COFF
 - LINK tool [C++], linker options
 ms.assetid: c1d51b8a-bd23-416d-81e4-900e02b2c129
-ms.openlocfilehash: 7ff8ecd6a607aac59fca6d32fa2784e7e3e4268f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c7a44be5bb21bf83d621bd57c45713bd01e22cb6
+ms.sourcegitcommit: a361362354f6ce51eda4ffdb016b81c24cd225cb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301755"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712692"
 ---
 # <a name="linker-options"></a>链接器选项
 
@@ -30,9 +31,11 @@ LINK.exe 将通用对象文件格式 (COFF) 对象文件和库链接起来，以
 
 - [保留字](reserved-words.md)
 
-在命令行中，不区分大小写; 链接器选项例如，/base 和 /BASE 的含义相同的操作。 有关如何在命令行或 Visual Studio 中指定每个选项的详细信息，请参阅适用于该选项的文档。
+在命令行上，链接器选项不区分大小写;例如，/base 和/BASE 的含义相同。 有关如何在命令行或 Visual Studio 中指定每个选项的详细信息，请参阅适用于该选项的文档。
 
 可以使用 [注释](../../preprocessor/comment-c-cpp.md) 杂注指定一些链接器选项。
+
+## <a name="linker-options-listed-alphabetically"></a>按字母顺序列出的链接器选项
 
 |选项|用途|
 |------------|-------------|
@@ -58,14 +61,14 @@ LINK.exe 将通用对象文件格式 (COFF) 对象文件和库链接起来，以
 |[/DELAY](delay-delay-load-import-settings.md)|控制 DLL 的延迟加载。|
 |[/DELAYLOAD](delayload-delay-load-import.md)|导致延迟加载指定的 DLL。|
 |[/DELAYSIGN](delaysign-partially-sign-an-assembly.md)|对程序集进行部分签名。|
-|[/DEPENDENTLOADFLAG](dependentloadflag.md)|设置依赖 DLL 加载默认标志。|
+|[/DEPENDENTLOADFLAG](dependentloadflag.md)|设置依赖 DLL 加载的默认标志。|
 |[/DLL](dll-build-a-dll.md)|生成 DLL。|
 |[/DRIVER](driver-windows-nt-kernel-mode-driver.md)|创建内核模式驱动程序。|
 |[/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)|使用地址空间布局随机化 (ASLR) 功能，指定是否生成可在加载时随机重新设定基址的可执行文件映像。|
 |[/ENTRY](entry-entry-point-symbol.md)|设置起始地址。|
 |[/errorReport](errorreport-report-internal-linker-errors.md)|向 Microsoft 报告内部链接器错误。|
 |[/EXPORT](export-exports-a-function.md)|导出函数。|
-|[/FILEALIGN](filealign.md)|对齐指定值的序列图上的输出文件中的部分。|
+|[/FILEALIGN](filealign.md)|将输出文件中的部分与指定值的倍数对齐。|
 |[/FIXED](fixed-fixed-base-address.md)|创建只能在其首选基址加载的程序。|
 |[/FORCE](force-force-file-output.md)|强制完成链接，即使符号无法解析或已定义多次。|
 |[/FUNCTIONPADMIN](functionpadmin-create-hotpatchable-image.md)|创建可进行热修补的映像。|
@@ -84,10 +87,12 @@ LINK.exe 将通用对象文件格式 (COFF) 对象文件和库链接起来，以
 |[/KEYFILE](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)|指定用来对程序集进行签名的密钥或密钥对。|
 |[/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md)|通知编译器应用程序支持大于 2 GB 的地址|
 |[/LIBPATH](libpath-additional-libpath.md)|指定要在环境库路径之前搜索的路径。|
+|[/LINKREPRO](linkrepro.md)|指定要在其中生成链接重现项目的路径。|
+|[/LINKREPROTARGET](linkreprotarget.md)|仅在生成指定的目标时才生成链接重现。<sup>16.1</sup>|
 |[/LTCG](ltcg-link-time-code-generation.md)|指定链接时间代码生成。|
 |[/MACHINE](machine-specify-target-platform.md)|指定目标平台。|
 |[/MANIFEST](manifest-create-side-by-side-assembly-manifest.md)|创建并行清单文件，也可以选择将其嵌入二进制文件。|
-|[/MANIFESTDEPENDENCY](manifestdependency-specify-manifest-dependencies.md)|指定\<dependentAssembly > 清单文件中的部分。|
+|[/MANIFESTDEPENDENCY](manifestdependency-specify-manifest-dependencies.md)|指定清单文件中的 @no__t 0dependentAssembly > 部分。|
 |[/MANIFESTFILE](manifestfile-name-manifest-file.md)|更改清单文件的默认名称。|
 |[/MANIFESTINPUT](manifestinput-specify-manifest-input.md)|指定链接器要进行处理并嵌入二进制文件的清单输入文件。 可以多次使用此选项以指定多个清单输入文件。|
 |[/MANIFESTUAC](manifestuac-embeds-uac-information-in-manifest.md)|指定是否将用户帐户控制 (UAC) 信息嵌入到程序清单中。|
@@ -95,7 +100,7 @@ LINK.exe 将通用对象文件格式 (COFF) 对象文件和库链接起来，以
 |[/MAPINFO](mapinfo-include-information-in-mapfile.md)|包括映射文件中的指定信息。|
 |[/MERGE](merge-combine-sections.md)|合并节。|
 |[/MIDL](midl-specify-midl-command-line-options.md)|指定 MIDL 命令行选项。|
-|[/NATVIS](natvis-add-natvis-to-pdb.md)|将调试器可视化工具中的 Natvis 文件添加到 PDB。|
+|[/NATVIS](natvis-add-natvis-to-pdb.md)|将 Natvis 文件中的调试器可视化工具添加到 PDB。|
 |[/NOASSEMBLY](noassembly-create-a-msil-module.md)|取消创建 .NET Framework 程序集。|
 |[/NODEFAULTLIB](nodefaultlib-ignore-libraries.md)|在解析外部引用时忽略所有（或指定的）默认库。|
 |[/NOENTRY](noentry-no-entry-point.md)|创建纯资源 DLL。|
@@ -108,7 +113,7 @@ LINK.exe 将通用对象文件格式 (COFF) 对象文件和库链接起来，以
 |[/PDBALTPATH](pdbaltpath-use-alternate-pdb-path.md)|使用备用位置来保存 PDB 文件。|
 |[/PDBSTRIPPED](pdbstripped-strip-private-symbols.md)|创建没有私有符号的程序数据库 (PDB) 文件。|
 |[/PGD](pgd-specify-database-for-profile-guided-optimizations.md)|为按配置文件优化指定 .pgd 文件。|
-|[/POGOSAFEMODE](pogosafemode-linker-option.md)|**已过时**创建线程安全 PGO 检测生成。|
+|[/POGOSAFEMODE](pogosafemode-linker-option.md)|**过时**创建线程安全的 PGO 检测生成。|
 |[/PROFILE](profile-performance-tools-profiler.md)|生成一个可与“性能工具”探查器结合使用的输出文件。|
 |[/RELEASE](release-set-the-checksum.md)|在 .exe 标头中设置校验和。|
 |[/SAFESEH](safeseh-image-has-safe-exception-handlers.md)|指定映像将包含安全异常处理程序表。|
@@ -121,10 +126,10 @@ LINK.exe 将通用对象文件格式 (COFF) 对象文件和库链接起来，以
 |[/TLBID](tlbid-specify-resource-id-for-typelib.md)|指定链接器生成的类型库的资源 ID。|
 |[/TLBOUT](tlbout-name-dot-tlb-file.md)|指定 .tlb 文件和其他 MIDL 输出文件的名称。|
 |[/TSAWARE](tsaware-create-terminal-server-aware-application.md)|创建专为在终端服务器下运行而设计的应用程序。|
-|[/USEPROFILE](useprofile.md)|使用按配置优化训练数据来创建优化的映像。|
+|[/USEPROFILE](useprofile.md)|使用按配置文件优化定型数据创建优化的映像。|
 |[/VERBOSE](verbose-print-progress-messages.md)|打印链接器进度消息。|
 |[/VERSION](version-version-information.md)|分配版本号。|
-|[/WHOLEARCHIVE](wholearchive-include-all-library-object-files.md)|包含指定的静态库中的每个对象文件。|
+|[/WHOLEARCHIVE](wholearchive-include-all-library-object-files.md)|包括指定静态库中的每个对象文件。|
 |[/WINMD](winmd-generate-windows-metadata.md)|允许生成 Windows 运行时元数据文件。|
 |[/WINMDFILE](winmdfile-specify-winmd-file.md)|指定由 [/WINMD](winmd-generate-windows-metadata.md) 链接器选项生成的 Windows 运行时元数据 (winmd) 输出文件的文件名。|
 |[/WINMDKEYFILE](winmdkeyfile-specify-winmd-key-file.md)|指定用来对 Windows 运行时元数据文件进行签名的密钥或密钥对。|
@@ -132,9 +137,9 @@ LINK.exe 将通用对象文件格式 (COFF) 对象文件和库链接起来，以
 |[/WINMDDELAYSIGN](winmddelaysign-partially-sign-a-winmd.md)|通过将公钥放置在 winmd 文件中，对 Windows 运行时元数据 (winmd) 文件进行部分签名。|
 |[/WX](wx-treat-linker-warnings-as-errors.md)|将链接器警告视为错误。|
 
-有关详细信息，请参阅 [Compiler-Controlled LINK Options](compiler-controlled-link-options.md)。
+<sup>16.1</sup>从 Visual Studio 2019 版本16.1 开始，此选项可用。
 
 ## <a name="see-also"></a>请参阅
 
-[C/C++ 生成参考](c-cpp-building-reference.md)<br/>
+[C/C++ 生成参考](c-cpp-building-reference.md)\
 [MSVC 链接器参考](linking.md)

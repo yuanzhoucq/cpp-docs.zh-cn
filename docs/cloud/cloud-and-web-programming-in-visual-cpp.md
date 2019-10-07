@@ -2,12 +2,13 @@
 title: Visual C++ 中的云和 Web 编程
 ms.date: 05/14/2019
 ms.assetid: b63611f1-9723-44d0-ba7f-c3ebef341313
-ms.openlocfilehash: 677e9da18e8d171f523994d21bfbd0411270e3c8
-ms.sourcegitcommit: bc1b14f29a02685f97c7ef5c098d16db6eaf369f
+ms.topic: overview
+ms.openlocfilehash: 4e50557733d474d68b8e503d00b28b2ae8cb7f09
+ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65790364"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274646"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Visual C++ 中的云和 Web 编程
 
@@ -48,11 +49,11 @@ C++ 中有多种选项可使你连接到 Web 和云。
 
   Windows 运行时 HTTP 客户端类在 .NET Framework 类上建模，后者在 System.Web 命名空间中具有相同的名称。 `HttpClient` 完全支持通过 HTTP 异步上载和下载，还完全支持可将自定义 HTTP 处理程序插入到管道中的管道筛选器。 Windows SDK 包括用于按流量计费的网络和 OAuth 身份验证等的样本筛选器。 对于仅面向通用 Windows 平台的应用，我们建议使用 `Windows::Web:HttpClient` 类。
 
-- [IXMLHTTPRequest2 接口](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2)
+- [IXMLHTTPRequest2 接口](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2)
 
   提供可在 Windows 运行时应用或 Windows 桌面应用中使用的本机 COM 接口，用于通过 HTTP 连接到 Internet，并发布 GET、PUT 和其他 HTTP 命令。 有关详细信息，请参见[演练：使用任务和 XML HTTP 请求进行连接](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)。
 
-- [Windows Internet (WinInet)](/windows/desktop/WinInet/portal)
+- [Windows Internet (WinInet)](/windows/win32/WinInet/portal)
 
   可以在 Windows 桌面应用中使用以连接到 Internet 的 Windows API。
 

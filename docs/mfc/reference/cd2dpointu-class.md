@@ -1,6 +1,6 @@
 ---
 title: CD2DPointU 类
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 f1_keywords:
 - CD2DPointU
 - AFXRENDERTARGET/CD2DPointU
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CD2DPointU [MFC], CD2DPointU
 ms.assetid: 04733f96-b6de-4a89-82e3-caad1e8087a9
-ms.openlocfilehash: d66793abbb83015891df348eef8384e5c97baf2c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6289d33aa0672d1ee423d91b11527dccfc868da7
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396309"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177174"
 ---
 # <a name="cd2dpointu-class"></a>CD2DPointU 类
 
@@ -31,13 +31,13 @@ class CD2DPointU : public D2D1_POINT_2U;
 
 |名称|描述|
 |----------|-----------------|
-|[CD2DPointU::CD2DPointU](#cd2dpointu)|已重载。 构造`CD2DPointU`从对象`D2D1_POINT_2U`对象。|
+|[CD2DPointU::CD2DPointU](#cd2dpointu)|已重载。 构造 from 对象`D2D1_POINT_2U`对象。 `CD2DPointU`|
 
 ### <a name="public-operators"></a>公共运算符
 
 |名称|描述|
 |----------|-----------------|
-|[CD2DPointU::operator CPoint](#operator_cpoint)|将转换`CD2DPointU`到`CPoint`对象。|
+|[CD2DPointU:: operator CPoint](#operator_cpoint)|转换`CD2DPointU` 为`CPoint`对象。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -47,16 +47,16 @@ class CD2DPointU : public D2D1_POINT_2U;
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxrendertarget.h
+**标头:** afxrendertarget
 
-##  <a name="cd2dpointu"></a>  CD2DPointU::CD2DPointU
+##  <a name="cd2dpointu"></a>CD2DPointU:: CD2DPointU
 
-构造 CPoint 对象从一个 CD2DPointU 对象。
+从 CPoint 对象构造 CD2DPointU 对象。
 
 ```
 CD2DPointU(const CPoint& pt);
 CD2DPointU(const D2D1_POINT_2U& pt);
-  CD2DPointU(const D2D1_POINT_2U* pt);
+CD2DPointU(const D2D1_POINT_2U* pt);
 CD2DPointU(UINT32 uX = 0, UINT32 uY = 0);
 ```
 
@@ -69,9 +69,9 @@ CD2DPointU(UINT32 uX = 0, UINT32 uY = 0);
 源 X
 
 *uY*<br/>
-source Y
+源 Y
 
-##  <a name="operator_cpoint"></a>  CD2DPointU::operator CPoint
+##  <a name="operator_cpoint"></a>CD2DPointU:: operator CPoint
 
 将 CD2DPointU 转换为 CPoint 对象。
 

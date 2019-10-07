@@ -1,12 +1,12 @@
 ---
-title: _mbclen、 mblen、 _mblen_l、 _mbclen_l
+title: _mbclen、mblen、_mblen_l、_mbclen_l
 ms.date: 01/22/2019
-apiname:
+api_name:
 - _mbclen
 - mblen
 - _mblen_l
 - _mbclen_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mblen
 - ftclen
@@ -39,14 +42,14 @@ helpviewer_keywords:
 - mbclen function
 - mblen function
 ms.assetid: d5eb92a0-b7a3-464a-aaf7-9890a8e3ed70
-ms.openlocfilehash: b7888b0b8c87a632dcbb63f54ade11080c7a309a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 96775f513b33eb407981480c17cb609dd85383f6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156780"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952561"
 ---
-# <a name="mbclen-mblen-mblenl-mbclenl"></a>_mbclen、 mblen、 _mblen_l、 _mbclen_l
+# <a name="_mbclen-mblen-_mblen_l-_mbclen_l"></a>_mbclen、mblen、_mblen_l、_mbclen_l
 
 获取长度并确定多字节字符的有效性。
 
@@ -90,15 +93,15 @@ int _mblen_l(
 
 ## <a name="return-value"></a>返回值
 
-**_mbclen**返回 1 或 2，根据多字节字符*c*为 1 或 2 个字节长。 没有返回的错误 **_mbclen**。 如果*mbstr*不是**NULL**， **mblen**返回的长度，以字节为单位的多字节字符。 如果*mbstr*是**NULL**指向宽字符 null 字符，或**mblen**返回 0。 当该对象的*mbstr*指向不会形成第一部分中的有效多字节字符*计数*字符， **mblen**返回-1。
+根据多字节字符*c*的长度是否为1或2字节， **_mbclen**返回1或2。 **_Mbclen**不会返回错误。 如果*mbstr*不**为 NULL**，则**mblen**将返回多字节字符的长度（以字节为单位）。 如果*mbstr*为**null**或它指向宽字符 null 字符，则**mblen**将返回0。 当*mbstr*指向的对象未形成第一个*计数*字符内的有效多字节字符时， **mblen**将返回-1。
 
 ## <a name="remarks"></a>备注
 
-**_Mbclen**函数返回的长度，以字节为单位的多字节字符*c*。 如果*c*没有指向由确定隐式调用的多字节字符的前导字节 **_ismbblead**的结果 **_mbclen**是不可预知的。
+**_Mbclen**函数返回多字节字符*c*的长度（以字节为单位）。 如果*c*不指向由隐式调用 **_ismbblead**确定的多字节字符的前导字节，则 **_mbclen**的结果是不可预知的。
 
-**mblen**返回以字节为单位的长度*mbstr*如果它是有效的多字节字符，并确定与代码页关联的多字节字符有效性。 **mblen**检查*计数*或更少的字节中包含*mbstr*，但不是能超过**MB_CUR_MAX**字节。
+如果是有效的多字节字符，则**mblen**返回*mbstr*的长度（以字节为单位），并确定与代码页相关的多字节字符有效性。 **mblen**检查*mbstr*中包含的字节*数*或更少的字节数，但不能超过**MB_CUR_MAX**个字节。
 
-输出值受**LC_CTYPE**的区域设置的类别设置影响; 请参阅[setlocale](setlocale-wsetlocale.md)有关详细信息。 无需这些函数的版本 **_l**后缀的区域设置相关的行为使用当前区域设置。 **_L**后缀的版本的行为相同，但它们使用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的**LC_CTYPE**类别设置影响;有关详细信息，请参阅[setlocale](setlocale-wsetlocale.md) 。 这些不带 **_l**后缀的函数的版本对与区域设置相关的行为使用当前区域设置。 **_L**后缀版本的行为相同，但它们使用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

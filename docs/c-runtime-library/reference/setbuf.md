@@ -1,9 +1,9 @@
 ---
 title: setbuf
 ms.date: 04/08/2019
-apiname:
+api_name:
 - setbuf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - setbuf
 helpviewer_keywords:
 - setbuf function
 - stream buffering
 ms.assetid: 13beda22-7b56-455d-8a6c-f2eb636885b9
-ms.openlocfilehash: 89f8a4d8eb853c774f4f7299ceaa9b9eb6177b42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c6c78297b1818131dcfcb10f4f2eaadd752d8ef4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356378"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948280"
 ---
 # <a name="setbuf"></a>setbuf
 
@@ -52,9 +55,9 @@ void setbuf(
 
 ## <a name="remarks"></a>备注
 
-**Setbuf**函数控制缓冲*流*。 *流*参数必须引用打开的文件没有读取或写入。 如果*缓冲区*自变量是**NULL**，流是无缓冲。 如果不是，缓冲区必须指向字符数组的长度**BUFSIZ**，其中**BUFSIZ**是 STDIO 中定义的缓冲区大小。H. 用户指定的缓冲区（而不是给定流的默认系统分配的缓冲区）用于 I/O 缓存。 **Stderr**流缓冲默认情况下，但你可以使用**setbuf**若要将分配到的缓冲区**stderr**。
+**Setbuf**函数控制*对流*的缓冲。 *流*参数必须引用未读取或写入的打开文件。 如果*缓冲区*参数为**NULL**，则流未缓冲。 如果不是，则缓冲区必须指向长度为**BUFSIZ**的字符数组，其中**BUFSIZ**是 stdio.h 中定义的缓冲区大小。高. 用户指定的缓冲区（而不是给定流的默认系统分配的缓冲区）用于 I/O 缓存。 默认情况下， **stderr**流是无缓冲的，但您可以使用**setbuf**为**stderr**分配缓冲区。
 
-**setbuf**已被取代[setvbuf](setvbuf.md)，对于新代码的首选例程。 与不同**setvbuf**， **setbuf**无法报告错误。 **setvbuf**还允许您控制缓冲模式和缓冲区大小。 **setbuf**存在的与现有代码兼容性。
+**setbuf**已替换为[setvbuf](setvbuf.md)，这是新代码的首选例程。 与**setvbuf**不同， **setbuf**无法报告错误。 **setvbuf**还允许同时控制缓冲模式和缓冲区大小。 存在**setbuf** ，以便与现有代码兼容。
 
 ## <a name="requirements"></a>要求
 

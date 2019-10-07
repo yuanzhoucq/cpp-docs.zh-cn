@@ -1,12 +1,12 @@
 ---
 title: fscanf、_fscanf_l、fwscanf、_fwscanf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fscanf
 - _fwscanf_l
 - _fscanf_l
 - fwscanf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fscanf
 - fwscanf
@@ -40,14 +43,14 @@ helpviewer_keywords:
 - _ftscanf function
 - fwscanf_l function
 ms.assetid: 9004e978-6c5f-4bb2-98fd-51e5948933f2
-ms.openlocfilehash: 5be3f4107d2f05c1863c9c8303ac89e184590baa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c143cbc1bf642e7efc6f10b9615fdaca8a236d1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287832"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956619"
 ---
-# <a name="fscanf-fscanfl-fwscanf-fwscanfl"></a>fscanf、_fscanf_l、fwscanf、_fwscanf_l
+# <a name="fscanf-_fscanf_l-fwscanf-_fwscanf_l"></a>fscanf、_fscanf_l、fwscanf、_fwscanf_l
 
 从流中读取带格式的数据。 这些函数的更安全版本已发布。请参阅 [fscanf_s、_fscanf_s_l、fwscanf_s、_fwscanf_s_l](fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md)。
 
@@ -86,7 +89,7 @@ int _fwscanf_l(
 *format*<br/>
 窗体控件字符串。
 
-*argument*<br/>
+*实际*<br/>
 可选参数。
 
 *locale*<br/>
@@ -94,17 +97,17 @@ int _fwscanf_l(
 
 ## <a name="return-value"></a>返回值
 
-每个函数都将返回成功转换并分配的字段数；返回值不包括已读取但未分配的字段。 返回值为 0 表示没有分配任何字段。 如果发生错误，或如果在第一次转换前达到文件流的末尾，则返回值是**EOF**有关**fscanf**并**fwscanf**。
+每个函数都将返回成功转换并分配的字段数；返回值不包括已读取但未分配的字段。 返回值为 0 表示没有分配任何字段。 如果发生错误，或者在第一次转换之前到达文件流的末尾，则返回值为**fscanf**和**fwscanf**的**EOF** 。
 
-这些函数验证其参数。 如果*流*或*格式*是 null 指针，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，这些函数将返回**EOF**并设置**errno**到**EINVAL**。
+这些函数验证其参数。 如果*stream*或*format*为空指针，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回**EOF** ，并将**Errno**设置为**EINVAL**。
 
 ## <a name="remarks"></a>备注
 
-**Fscanf**函数将从当前的位置读取数据*流*到给定的位置*参数*（如果有）。 每个*自变量*必须是指向类型中的类型说明符相对应的变量的指针*格式*。 *格式*控制字段输入的解释，并且具有相同格式和函数作为*格式*自变量**scanf**; 请参阅[scanf](scanf-scanf-l-wscanf-wscanf-l.md)为说明*格式*。
+**Fscanf**函数从*流*的当前位置将数据读取到由*参数*（如果有）指定的位置。 每个*参数*都必须是指向类型的变量的指针，该类型与*格式*中的类型说明符对应。 *format*控制输入字段的解释，其形式和函数与**scanf**的*格式*参数相同;有关*格式*的说明，请参阅[scanf](scanf-scanf-l-wscanf-wscanf-l.md) 。
 
-**fwscanf**是宽字符版本**fscanf**; 的格式参数**fwscanf**是宽字符字符串。 如果在 ANSI 模式下打开流，则这些函数行为相同。 **fscanf**当前不支持 UNICODE 流的输入。
+**fwscanf**是**fscanf**的宽字符版本;**fwscanf**的格式参数是宽字符字符串。 如果在 ANSI 模式下打开流，则这些函数行为相同。 **fscanf**当前不支持 UNICODE 流的输入。
 
-使用这些函数的版本 **_l**后缀完全相同，只不过它们使用传递中而不是当前线程区域设置的区域设置参数。
+这些带有 **_l**后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -113,14 +116,14 @@ int _fwscanf_l(
 |**_ftscanf**|**fscanf**|**fscanf**|**fwscanf**|
 |**_ftscanf_l**|**_fscanf_l**|**_fscanf_l**|**_fwscanf_l**|
 
-有关详细信息，请参阅[格式规范字段 — scanf 函数和 wscanf 函数](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)。
+有关详细信息，请参阅[格式规范字段-scanf 函数和 Wscanf 函数](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)。
 
 ## <a name="requirements"></a>要求
 
 |函数|必需的标头|
 |--------------|---------------------|
-|**fscanf**， **_fscanf_l**|\<stdio.h>|
-|**fwscanf**， **_fwscanf_l**|\<stdio.h> 或 \<wchar.h>|
+|**fscanf**、 **_fscanf_l**|\<stdio.h>|
+|**fwscanf**、 **_fwscanf_l**|\<stdio.h> 或 \<wchar.h>|
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

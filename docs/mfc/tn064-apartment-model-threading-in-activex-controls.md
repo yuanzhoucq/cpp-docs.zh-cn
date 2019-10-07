@@ -1,5 +1,5 @@
 ---
-title: TN064:单元模型线程中的 ActiveX 控件
+title: TN064：ActiveX 控件中的单元模型线程处理
 ms.date: 11/04/2016
 f1_keywords:
 - vc.controls.activex
@@ -10,39 +10,39 @@ helpviewer_keywords:
 - multithread container [MFC]
 - apartment model threading [MFC]
 ms.assetid: b2ab4c88-6954-48e2-9a74-01d4a60df073
-ms.openlocfilehash: d6f02b2106693226f6380e935a54e04e10d5b4f8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2c6b9dd3ed244f7169e5055eebe7a34e3345e841
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351821"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513322"
 ---
-# <a name="tn064-apartment-model-threading-in-activex-controls"></a>TN064:单元模型线程中的 ActiveX 控件
+# <a name="tn064-apartment-model-threading-in-activex-controls"></a>TN064：ActiveX 控件中的单元模型线程处理
 
 > [!NOTE]
 >  以下技术说明在首次包括在联机文档中后未更新。 因此，某些过程和主题可能已过时或不正确。 要获得最新信息，建议你在联机文档索引中搜索热点话题。
 
-此技术说明介绍如何启用 ActiveX 控件中的单元模型线程。 请注意，单元模型线程处理仅支持在视觉对象中C++版本 4.2 或更高版本。
+本技术说明介绍了如何在 ActiveX 控件中启用单元模型线程处理。 请注意, 仅在 Visual C++版本4.2 或更高版本中支持单元模型线程处理。
 
-## <a name="what-is-apartment-model-threading"></a>什么是单元模型线程处理
+## <a name="what-is-apartment-model-threading"></a>什么是单元模型线程
 
-单元模型是一种支持嵌入的对象，例如 ActiveX 控件，在多线程的容器应用程序中的方法。 尽管应用程序可能有多个线程，嵌入对象的每个实例将分配给一个"apartment，"这将在只有一个线程上执行。 换而言之，对控件的实例的所有调用将都发生在同一线程上。
+单元模型是一种在多线程容器应用程序中支持嵌入对象 (如 ActiveX 控件) 的方法。 尽管应用程序可能有多个线程, 但嵌入对象的每个实例都将分配给一个 "单元", 后者将只在一个线程上执行。 换句话说, 对控件实例的所有调用都将在同一线程上发生。
 
-但是，相同类型的控件的不同实例可能会分配到不同的单元。 因此，如果控件的多个实例共享常见 （例如，静态或全局数据） 中的任何数据，然后对此共享数据的访问需要保护的同步对象，如关键部分。
+但是, 可以将相同类型的控件的不同实例分配给不同的单元。 因此, 如果控件的多个实例共享公共数据 (例如静态数据或全局数据), 则对此共享数据的访问需要由同步对象 (如临界区) 来保护。
 
-有关单元线程处理模型的完整详细信息，请参阅[进程和线程](/windows/desktop/ProcThread/processes-and-threads)中*OLE 程序员参考*。
+有关单元线程模型的完整详细信息, 请参阅*OLE 程序员参考*中的[进程和线程](/windows/win32/ProcThread/processes-and-threads)。
 
 ## <a name="why-support-apartment-model-threading"></a>为什么支持单元模型线程
 
-可在多线程的容器应用程序还支持单元模型的支持的单元模型线程的控件。 如果未启用的单元模型线程，将限制可以在其中使用您的控件的容器的潜在一组。
+支持单元模型线程的控件可用于也支持单元模型的多线程容器应用程序。 如果未启用单元模型线程处理, 则将限制可在其中使用控件的可能的容器集。
 
-启用单元模型线程很容易对大多数控件，尤其是当它们具有很少或没有共享的数据。
+为大多数控件启用单元模型线程处理非常简单, 特别是在这些控件有少量或没有共享数据的情况下。
 
 ## <a name="protecting-shared-data"></a>保护共享数据
 
-如果您的控件使用共享的数据的静态成员变量，如访问数据应受到保护的关键部分，以防止多个线程同时修改的数据。 若要实现此目的设置临界区，请声明类的静态成员变量`CCriticalSection`中控件的类。 使用`Lock`和`Unlock`此临界区的成员函数对象，无论你的代码访问的共享的数据。
+如果控件使用共享数据 (如静态成员变量), 则应使用临界区保护对该数据的访问, 以防止多个线程同时修改数据。 若要为此目的设置关键部分, 请在控件的类中声明类`CCriticalSection`的静态成员变量。 如果代码访问`Unlock`共享数据,请使用此临界区对象的和成员函数。`Lock`
 
-例如，考虑需要维护的所有实例都共享的字符串的控件类。 此字符串可在静态成员变量中维护和保护的关键部分。 控件的类声明将包含以下信息：
+例如, 请考虑需要维护所有实例共享的字符串的控件类。 此字符串可在静态成员变量中进行维护并受临界区的保护。 控件的类声明将包含以下内容:
 
 ```
 class CSampleCtrl : public COleControl
@@ -53,14 +53,14 @@ class CSampleCtrl : public COleControl
 };
 ```
 
-类的实现将包含这些变量的定义：
+类的实现将包括这些变量的定义:
 
 ```
 int CString CSampleCtrl::_strShared;
 CCriticalSection CSampleCtrl::_critSect;
 ```
 
-访问`_strShared`静态成员然后受关键部分：
+然后, 可以`_strShared`通过临界区保护对静态成员的访问:
 
 ```
 void CSampleCtrl::SomeMethod()
@@ -74,9 +74,9 @@ if (_strShared.Empty())
 }
 ```
 
-## <a name="registering-an-apartment-model-aware-control"></a>注册一个可识别单元模型的控件
+## <a name="registering-an-apartment-model-aware-control"></a>注册单元模型感知控件
 
-支持的单元模型线程的控件应在注册表中，此功能通过添加命名的值"ThreadingModel"指示的"Apartment"下其类 ID 注册表项中的值*类 id* \\ **InprocServer32**密钥。 若要使此密钥会自动注册为您的控件，请将传递*afxregapartmentthreading 改*中的第六个参数的标志`AfxOleRegisterControlClass`:
+支持单元模型线程的控件应通过在*类 id* \\ **下的类 id 注册表项中添加值为 "单元" 的命名值 "ThreadingModel" 来指示此功能。InprocServer32**键。 若要使此密钥自动注册到你的控件, 请将第六个参数中的 afxregapartmentthreading 改`AfxOleRegisterControlClass`标志传递给:
 
 ```
 BOOL CSampleCtrl::CSampleCtrlFactory::UpdateRegistry(BOOL bRegister)
@@ -101,11 +101,11 @@ else
 }
 ```
 
-如果由控件的视觉对象中的向导生成控件项目的C++4.1 或更高版本，此标志已将会出现在你的代码。 需要注册的线程模型不不进行任何更改。
+如果你的控件项目是在 Visual C++版本4.1 或更高版本中由 ControlWizard 生成的, 则你的代码中已存在此标志。 无需进行任何更改即可注册线程模型。
 
-如果由早期版本的 controlwizard 可生成你的项目，您的现有代码将作为第六个参数具有一个布尔值。 如果现有的参数为 TRUE，将其更改为*afxRegInsertable | afxregapartmentthreading 改*。 如果现有的参数为 FALSE，将其更改为*afxregapartmentthreading 改*。
+如果你的项目是由早期版本的 ControlWizard 生成的, 则你的现有代码将包含一个布尔值作为第六个参数。 如果现有参数为 TRUE, 则将其更改为*afxRegInsertable | afxregapartmentthreading 改*。 如果现有参数为 FALSE, 请将其更改为*afxregapartmentthreading 改*。
 
-如果您的控件不遵循对单元模型线程处理规则，您必须通过*afxregapartmentthreading 改*此参数中。
+如果控件未遵循单元模型线程处理规则, 则不能在此参数中传递*afxregapartmentthreading 改*。
 
 ## <a name="see-also"></a>请参阅
 

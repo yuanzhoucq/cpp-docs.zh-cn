@@ -1,9 +1,9 @@
 ---
 title: _CrtSetDebugFillThreshold
 ms.date: 03/21/2018
-apiname:
+api_name:
 - _CrtSetDebugFillThreshold
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CrtSetDebugFillThreshold
 - CrtSetDebugFillThreshold
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - buffer-filling behavior
 - 0xFD
 ms.assetid: 6cb360e8-56ae-4248-b17f-e28aee3e0ed7
-ms.openlocfilehash: ebe958ddc1c9a5c372f4ae68336e0dea3144e8b4
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: fe7d998a44502709edde33d22c1b1e88cf5ecbee
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342972"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942300"
 ---
-# <a name="crtsetdebugfillthreshold"></a>_CrtSetDebugFillThreshold
+# <a name="_crtsetdebugfillthreshold"></a>_CrtSetDebugFillThreshold
 
 在调试函数中检索或修改控制缓冲区填充行为的阈值。
 
@@ -45,17 +48,17 @@ size_t _CrtSetDebugFillThreshold( size_t newThreshold );
 ### <a name="parameters"></a>参数
 
 *newThreshold*<br/>
-新阈值大小 （字节）。
+新阈值大小（字节）。
 
 ## <a name="return-value"></a>返回值
 
-以前的阈值。
+上一个阈值。
 
 ## <a name="remarks"></a>备注
 
-某些安全性已增强的 CRT 函数的调试版本填充传递给它们使用特殊字符的缓冲区 (0xFE)。 这有助于查找为函数传递错误大小的情况。 遗憾的是，这样也会降低性能。 若要提高性能，请使用 **_CrtSetDebugFillThreshold**若要禁用大于缓冲区的缓冲区填满*newThreshold*阈值。 一个*newThreshold*值为 0 将禁用它为所有缓冲区。
+某些安全增强型 CRT 函数的调试版本将使用特殊字符（0xFE）来填充传递给它们的缓冲区。 这有助于查找为函数传递错误大小的情况。 遗憾的是，这样也会降低性能。 若要提高性能，请使用 **_CrtSetDebugFillThreshold**对大于*newThreshold*阈值的缓冲区禁用缓冲区填充。 如果*newThreshold*的值为0，则将对所有缓冲区禁用该值。
 
-默认阈值**SIZE_T_MAX**。
+默认阈值为**SIZE_T_MAX**。
 
 下面列出了受影响的函数。
 
@@ -101,11 +104,11 @@ size_t _CrtSetDebugFillThreshold( size_t newThreshold );
 |-------------|---------------------|
 |**_CrtSetDebugFillThreshold**|\<crtdbg.h>|
 
-此函数是 Microsoft 特定的。 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+此函数是 Microsoft 特定函数。 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>库
 
-调试版本[C 运行时库](../../c-runtime-library/crt-library-features.md)仅。
+仅限[C 运行时库](../../c-runtime-library/crt-library-features.md)的调试版本。
 
 ## <a name="example"></a>示例
 

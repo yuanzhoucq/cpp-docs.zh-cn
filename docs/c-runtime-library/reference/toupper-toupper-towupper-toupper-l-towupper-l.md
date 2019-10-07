@@ -1,13 +1,13 @@
 ---
 title: toupper、_toupper、towupper、_toupper_l、_towupper_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _toupper_l
 - towupper
 - toupper
 - _towupper_l
 - _toupper
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - towupper
 - _toupper
@@ -42,14 +45,14 @@ helpviewer_keywords:
 - characters, converting
 - toupper function
 ms.assetid: cdef1b0f-b19c-4d11-b7d2-cf6334c9b6cc
-ms.openlocfilehash: 6dd564a27ee7f3c2bb095564e5c9423249d6babc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e17f139789b2c37292764f2e4508b59cddd2c03e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155493"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957910"
 ---
-# <a name="toupper-toupper-towupper-toupperl-towupperl"></a>toupper、_toupper、towupper、_toupper_l、_towupper_l
+# <a name="toupper-_toupper-towupper-_toupper_l-_towupper_l"></a>toupper、_toupper、towupper、_toupper_l、_towupper_l
 
 将字符转换为大写。
 
@@ -85,19 +88,19 @@ int _towupper_l(
 
 ## <a name="return-value"></a>返回值
 
-每个例程将转换的副本*c*，如果可能，并返回结果。
+其中每个例程都转换*c*的副本（如果可能），并返回结果。
 
-如果*c*是宽字符为其**iswlower**为非零值，并且没有为其相应的宽字符[iswupper](isupper-isupper-l-iswupper-iswupper-l.md)不为零， **towupper**返回相应的宽字符;否则为**towupper**返回*c*不变。
+如果*c*是一个宽字符，其中**iswlower**为非零，并且有一个对应的宽字符，其中[iswupper](isupper-isupper-l-iswupper-iswupper-l.md)为非零值，则**towupper**将返回相应的宽字符;否则， **towupper**将返回*c* 。
 
 没有保留任何返回值以指示错误。
 
-为了使**toupper**来提供预期的结果[__isascii](isascii-isascii-iswascii.md)并[islower](islower-iswlower-islower-l-iswlower-l.md)必须均返回非零值。
+为了使**toupper**能够提供预期的结果， [__isascii](isascii-isascii-iswascii.md)和[islower](islower-iswlower-islower-l-iswlower-l.md)必须均返回非零值。
 
 ## <a name="remarks"></a>备注
 
-如果可行且恰当，则其中的各个例程将指定小写字母转换为大写字母。 大小写转换**towupper**是特定于区域设置的。 只改变与当前区域设置相关的字符的大小写。 功能而无需 **_l**后缀使用当前设置的区域设置。 使用这些函数的版本 **_l**后缀将区域设置用作参数并使用它而不是当前设置的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+如果可行且恰当，则其中的各个例程将指定小写字母转换为大写字母。 **Towupper**的大小写转换是特定于区域设置的。 只改变与当前区域设置相关的字符的大小写。 不带 **_l**后缀的函数使用当前设置的区域设置。 这些使用 **_l**后缀的函数的版本将区域设置用作参数，并使用该区域设置，而不是使用当前设置的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-为了使**toupper**来提供预期的结果[__isascii](isascii-isascii-iswascii.md)并[isupper](isupper-isupper-l-iswupper-iswupper-l.md)必须均返回非零值。
+为了使**toupper**能够提供预期的结果， [__isascii](isascii-isascii-iswascii.md)和[isupper](isupper-isupper-l-iswupper-iswupper-l.md)必须均返回非零值。
 
 [数据转换例程](../../c-runtime-library/data-conversion.md)
 
@@ -109,7 +112,7 @@ int _towupper_l(
 |**_totupper_l**|**_toupper_l**|**_mbctoupper_l**|**_towupper_l**|
 
 > [!NOTE]
-> **_toupper_l**并 **_towupper_l**没有区域设置相关性，并且不应直接调用。 它们提供供内部使用 **_totupper_l**。
+> **_toupper_l**和 **_towupper_l**没有区域设置依赖关系，因此不应直接调用。 它们供 **_totupper_l**内部使用。
 
 ## <a name="requirements"></a>要求
 

@@ -21,7 +21,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68457646"
 ---
-# <a name="numget-class"></a>num_get 类
+# <a name="num_get-class"></a>num_get 类
 
 一种模板类，用于描述一个对象来充当区域设置 facet，以便控制 `CharType` 类型的序列向数值的转换。
 
@@ -199,9 +199,9 @@ virtual iter_type do_get(
     long& val) const;
 ```
 
-匹配顺序元素, 从序列`[first, last)`中的*第一个*开始直到识别完整的非空整数输入字段。 如果成功, 它会将此字段转换为其等效的值作为类型**long**, 并将结果存储为*val*。 它将返回一个迭代器，指定第一个超出数字输入字段的元素。 否则, 该函数将不存储*val*中的`ios_base::failbit`任何`state`内容, 并在中设置。 它将返回一个迭代器，指定第一个超出有效整数输入字段的任何前缀的元素。 在任一情况下，如果返回的值等于 `last`，该函数在 `state` 中设置 `ios_base::eofbit`。
+匹配顺序元素，从序列`[first, last)`中的*第一个*开始直到识别完整的非空整数输入字段。 如果成功，它会将此字段转换为其等效的值作为类型**long**，并将结果存储为*val*。 它将返回一个迭代器，指定第一个超出数字输入字段的元素。 否则，该函数将不存储*val*中的`ios_base::failbit`任何`state`内容，并在中设置。 它将返回一个迭代器，指定第一个超出有效整数输入字段的任何前缀的元素。 在任一情况下，如果返回的值等于 `last`，该函数在 `state` 中设置 `ios_base::eofbit`。
 
-整数输入字段由扫描函数使用的相同规则进行转换, 以便对文件中的一系列**char**元素进行匹配和转换。 (假定每个**char**元素都按简单的一对一映射映射到类型`Elem`的等效元素。)确定等效的扫描转换规格，如下所示：
+整数输入字段由扫描函数使用的相同规则进行转换，以便对文件中的一系列**char**元素进行匹配和转换。 （假定每个**char**元素都按简单的一对一映射映射到类型`Elem`的等效元素。）确定等效的扫描转换规格，如下所示：
 
 如果 `iosbase.`[ios_base::flags](../standard-library/ios-base-class.md#flags)`() & ios_base::basefield == ios_base::`[oct](../standard-library/ios-functions.md#oct)，则转换规格为 `lo`。
 
@@ -230,7 +230,7 @@ virtual iter_type do_get(
     unsigned long& val) const;
 ```
 
-行为与第一个相同，只不过它将转换规格 `ld` 替换为 `lu`。 如果成功, 它会将数字输入字段转换为类型为 "**无符号**" 的值, 并将该值存储在*val*中。
+行为与第一个相同，只不过它将转换规格 `ld` 替换为 `lu`。 如果成功，它会将数字输入字段转换为类型为 "**无符号**" 的值，并将该值存储在*val*中。
 
 第五个受保护的虚拟成员函数：
 
@@ -243,7 +243,7 @@ virtual iter_type do_get(
     long long& val) const;
 ```
 
-行为与第一个相同，只不过它将转换规格 `ld` 替换为 `lld`。 如果成功, 它会将数字输入字段转换为**long**类型的值, 并将该值存储在*val*中。
+行为与第一个相同，只不过它将转换规格 `ld` 替换为 `lld`。 如果成功，它会将数字输入字段转换为**long**类型的值，并将该值存储在*val*中。
 
 第六个受保护的虚拟成员函数：
 
@@ -256,7 +256,7 @@ virtual iter_type do_get(
     unsigned long long& val) const;
 ```
 
-行为与第一个相同，只不过它将转换规格 `ld` 替换为 `llu`。 如果成功, 它会将数字输入字段转换为类型为**无符号长**的值, 并将该值存储在*val*中。
+行为与第一个相同，只不过它将转换规格 `ld` 替换为 `llu`。 如果成功，它会将数字输入字段转换为类型为**无符号长**的值，并将该值存储在*val*中。
 
 第七个受保护的虚拟成员函数：
 
@@ -297,7 +297,7 @@ virtual iter_type do_get(
 
 行为与第八个相同，只不过等效的扫描转换说明符为 `Lf`。
 
-第10个受保护的虚拟成员函数:
+第10个受保护的虚拟成员函数：
 
 ```cpp
 virtual iter_type do_get(
@@ -321,7 +321,7 @@ virtual iter_type do_get(
     bool& val) const;
 ```
 
-行为与第一个相同，只不过它旨在匹配完整的非空布尔输入字段。 如果成功, 它会将布尔输入字段转换为**bool**类型的值, 并将该值存储在*val*中。
+行为与第一个相同，只不过它旨在匹配完整的非空布尔输入字段。 如果成功，它会将布尔输入字段转换为**bool**类型的值，并将该值存储在*val*中。
 
 布尔输入字段采用以下两种形式之一。 如果 `iosbase.flags() & ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) 为 false，则它与整数输入字段相同，只不过转换的值必须为 0（若为 false）或 1（若为 true）。 否则，该序列必须匹配 `fac.`[numpunct::falsename](../standard-library/numpunct-class.md#falsename)`()`（若为 false）或 `fac.`[numpunct::truename](../standard-library/numpunct-class.md#truename)`()`（若为 true）。
 
@@ -437,13 +437,13 @@ iter_type get(
 
 所有成员函数都返回 [do_get](#do_get)( `first`, `last`, `_Iosbase`, `_State`, `val`)。
 
-第一个受保护的虚拟成员函数首先会在序列 [ `first`, `last`) 中尝试匹配序列连续元素，直到识别到完整的非空整数输入字段。 如果成功, 它会将此字段转换为其等效的值作为类型**long** , 并将结果存储在*val*中。 它将返回一个迭代器，指定第一个超出数字输入字段的元素。 否则, 该函数将不存储*val*中的`ios_base::failbit`任何内容并将其设置为 _*状态*。 它将返回一个迭代器，指定第一个超出有效整数输入字段的任何前缀的元素。 在任一情况下, 如果返回值等于*last*, 则函数将`ios_base::eofbit`在 *_State*中设置。
+第一个受保护的虚拟成员函数首先会在序列 [ `first`, `last`) 中尝试匹配序列连续元素，直到识别到完整的非空整数输入字段。 如果成功，它会将此字段转换为其等效的值作为类型**long** ，并将结果存储在*val*中。 它将返回一个迭代器，指定第一个超出数字输入字段的元素。 否则，该函数将不存储*val*中的`ios_base::failbit`任何内容并将其设置为 _*状态*。 它将返回一个迭代器，指定第一个超出有效整数输入字段的任何前缀的元素。 在任一情况下，如果返回值等于*last*，则函数将`ios_base::eofbit`在 *_State*中设置。
 
-整数输入字段由扫描函数使用的相同规则进行转换, 以便对文件中的一系列**char**元素进行匹配和转换。 假定每个**char**元素都按简单的一对一映射映射到类型`CharType`的等效元素。 确定等效的扫描转换规格，如下所示：
+整数输入字段由扫描函数使用的相同规则进行转换，以便对文件中的一系列**char**元素进行匹配和转换。 假定每个**char**元素都按简单的一对一映射映射到类型`CharType`的等效元素。 确定等效的扫描转换规格，如下所示：
 
-- 如果 `iosbase`. [标志](../standard-library/ios-base-class.md#flags) & oct,转换规格[](../standard-library/ios-functions.md#oct)为。 `lo``ios_base::basefield` == `ios_base::`
+- 如果 `iosbase`. [标志](../standard-library/ios-base-class.md#flags) & `ios_base::basefield` == `ios_base::`[oct](../standard-library/ios-functions.md#oct)，转换规格为`lo`。
 
-- 如果**iosbase** & **ios_base:: basefield** == `ios_base::`[hex](../standard-library/ios-functions.md#hex), 则转换规格为`lx`。
+- 如果**iosbase** & **ios_base：： basefield** == `ios_base::`[hex](../standard-library/ios-functions.md#hex)，则转换规格为`lx`。
 
 - 如果 **iosbase.flags** & **ios_base::basefield** == 0，则转换规格为 `li`。
 
@@ -467,7 +467,7 @@ virtual iter_type do_get(iter_type first,
     unsigned long& val) const;
 ```
 
-行为与第一个相同，只不过它将转换规格 `ld` 替换为 `lu`。 如果成功, 它会将数字输入字段转换为类型为 "**无符号**" 的值, 并将该值存储在*val*中。
+行为与第一个相同，只不过它将转换规格 `ld` 替换为 `lu`。 如果成功，它会将数字输入字段转换为类型为 "**无符号**" 的值，并将该值存储在*val*中。
 
 第三个受保护的虚拟成员函数：
 
@@ -491,7 +491,7 @@ virtual iter_type do_get(iter_type first,
     long double& val) const;
 ```
 
-的行为与第三个相同, 不同之处在于等效的`Lf`扫描转换说明符为。
+的行为与第三个相同，不同之处在于等效的`Lf`扫描转换说明符为。
 
 第五个受保护的虚拟成员函数：
 
@@ -515,7 +515,7 @@ virtual iter_type do_get(iter_type first,
     bool& val) const;
 ```
 
-行为与第一个相同，只不过它尝试匹配完整的非空布尔输入字段。 如果成功, 它会将布尔输入字段转换为**bool**类型的值, 并将该值存储在*val*中。
+行为与第一个相同，只不过它尝试匹配完整的非空布尔输入字段。 如果成功，它会将布尔输入字段转换为**bool**类型的值，并将该值存储在*val*中。
 
 布尔输入字段采用以下两种形式之一。 如果 **iosbase**. **flags** & `ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) 为 **false**，则它与整数输入字段相同，只不过转换的值必须为 0（若为 **false**）或 1（若为 **true**）。 否则，该序列必须匹配 **fac**. [falsename](../standard-library/numpunct-class.md#falsename)（若为 **false**）或 **fac**. [truename](../standard-library/numpunct-class.md#truename)（若为**true**）。
 
@@ -578,7 +578,7 @@ explicit num_get(size_t _Refs = 0);
 
 ### <a name="remarks"></a>备注
 
-*_Refs*参数的可能值及其重要性为:
+*_Refs*参数的可能值及其重要性为：
 
 - 0对象的生存期由包含该对象的区域设置管理。
 

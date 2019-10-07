@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CDockablePaneAdapter [MFC], SaveState
 - CDockablePaneAdapter [MFC], SetWrappedWnd
 ms.assetid: 6ed6cf82-f39c-4d0c-bf7c-8641495cf8f3
-ms.openlocfilehash: 8f184bab564b4867138608b735c67b328e1a21cc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88c125c63f9dbfe272f5d543e996366575fc533b
+ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391239"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68866220"
 ---
 # <a name="cdockablepaneadapter-class"></a>CDockablePaneAdapter 类
 
@@ -38,31 +38,33 @@ class CDockablePaneAdapter : public CDockablePane
 |名称|描述|
 |----------|-----------------|
 |[CDockablePaneAdapter::GetWrappedWnd](#getwrappedwnd)|返回包装的窗口。|
-|[CDockablePaneAdapter::LoadState](#loadstate)|(重写[cdockablepane:: Loadstate](cdockablepane-class.md#loadstate)。)|
-|[CDockablePaneAdapter::SaveState](#savestate)|(重写[cdockablepane:: Savestate](cdockablepane-class.md)。)|
+|[CDockablePaneAdapter::LoadState](#loadstate)|(重写[CDockablePane:: LoadState](cdockablepane-class.md#loadstate)。)|
+|[CDockablePaneAdapter::SaveState](#savestate)|(重写[CDockablePane:: SaveState](cdockablepane-class.md)。)|
 |[CDockablePaneAdapter::SetWrappedWnd](#setwrappedwnd)||
 
 ## <a name="remarks"></a>备注
 
-通常情况下，该框架实例化此类的对象时使用[cmfcbasetabctrl:: Addtab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab)或[cmfcbasetabctrl:: Inserttab](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab)方法。
+通常, 当你使用[CMFCBaseTabCtrl:: AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab)或[CMFCBaseTabCtrl:: InsertTab](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab)方法时, 框架将实例化此类的对象。
 
-如果你想要自定义`CDockablePaneAdapter`行为，只需从其派生新类并使用运行时类信息设置为选项卡式窗口[:: Setdockingbarwrapperrtc](../../mfc/reference/cmfcbasetabctrl-class.md#setdockingbarwrapperrtc)。
+如果要自定义`CDockablePaneAdapter`行为, 只需从其派生新类, 并通过使用[CMFCBaseTabCtrl:: SetDockingBarWrapperRTC](../../mfc/reference/cmfcbasetabctrl-class.md#setdockingbarwrapperrtc)将运行时类信息设置为选项卡式窗口。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
-[CObject](../../mfc/reference/cobject-class.md) [CCmdTarget](../../mfc/reference/ccmdtarget-class.md) [CWnd](../../mfc/reference/cwnd-class.md)
-
-[CBasePane](../../mfc/reference/cbasepane-class.md) [CPane](../../mfc/reference/cpane-class.md) [CDockablePane](../../mfc/reference/cdockablepane-class.md)
-
-[CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md)
+[CObject](../../mfc/reference/cobject-class.md)\
+└&nbsp;[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CWnd](../../mfc/reference/cwnd-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CBasePane](../../mfc/reference/cbasepane-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CPane](../../mfc/reference/cpane-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CDockablePane](../../mfc/reference/cdockablepane-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md)
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxDockablePaneAdapter.h
+**标头:** afxDockablePaneAdapter
 
-##  <a name="getwrappedwnd"></a>  CDockablePaneAdapter::GetWrappedWnd
+##  <a name="getwrappedwnd"></a>CDockablePaneAdapter:: GetWrappedWnd
 
-返回可停靠窗格适配器的底层窗口。
+返回可停靠窗格适配器的基础窗口。
 
 ```
 virtual CWnd* GetWrappedWnd() const;
@@ -70,11 +72,11 @@ virtual CWnd* GetWrappedWnd() const;
 
 ### <a name="return-value"></a>返回值
 
-指向已包装的窗口的指针。
+指向已包装窗口的指针。
 
 ### <a name="remarks"></a>备注
 
-使用此函数来访问包装的窗口。
+使用此函数可访问包装的窗口。
 
 ##  <a name="loadstate"></a>  CDockablePaneAdapter::LoadState
 
@@ -90,21 +92,21 @@ virtual BOOL LoadState(
 ### <a name="parameters"></a>参数
 
 *lpszProfileName*<br/>
-[in]配置文件名称。
+中配置文件名称。
 
 *nIndex*<br/>
-[in]配置文件的索引。
+中配置文件索引。
 
 *uiID*<br/>
-[in]窗格 id。
+中窗格 ID。
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="savestate"></a>  CDockablePaneAdapter::SaveState
+##  <a name="savestate"></a>CDockablePaneAdapter:: SaveState
 
-将窗格的状态保存到注册表。
+将窗格状态保存到注册表。
 
 ```
 virtual BOOL SaveState(
@@ -116,21 +118,21 @@ virtual BOOL SaveState(
 ### <a name="parameters"></a>参数
 
 *lpszProfileName*<br/>
-[in]配置文件名称。
+中配置文件名称。
 
 *nIndex*<br/>
-[in]配置文件的索引 （默认为窗口的控件 ID）。
+中配置文件索引 (默认为窗口的控件 ID)。
 
 *uiID*<br/>
-[in]窗格 id。
+中窗格 ID。
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="setwrappedwnd"></a>  CDockablePaneAdapter::SetWrappedWnd
+##  <a name="setwrappedwnd"></a>CDockablePaneAdapter:: SetWrappedWnd
 
-设置可停靠窗格适配器的底层窗口。
+为可停靠的窗格适配器设置基础窗口。
 
 ```
 virtual BOOL SetWrappedWnd(CWnd* pWnd);
@@ -139,7 +141,7 @@ virtual BOOL SetWrappedWnd(CWnd* pWnd);
 ### <a name="parameters"></a>参数
 
 *pWnd*<br/>
-[in]指向要包装的窗格中适配器的窗口的指针。
+中指向要包装的窗格适配器的窗口的指针。
 
 ### <a name="return-value"></a>返回值
 

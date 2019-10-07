@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-ms.openlocfilehash: 885cce09707e1c067efdeb0bdc8b7d8a40841c02
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9cc48687eb083ea4fab53380f62856b747c9d86a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337708"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69512814"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>将并发运行时与其他并发模型进行比较
 
@@ -33,7 +33,7 @@ ms.locfileid: "62337708"
 
 ### <a name="preemptive-and-cooperative-scheduling"></a>抢先式和协作式计划
 
-*抢先式计划* 是一种基于优先级的轮循机制，它在给定时间内为每个任务提供单独访问计算资源的权限，并在之后切换到其他任务。 抢先式计划是在 Windows 等多任务操作系统中常见的。 *协作式计划*是一种机制，为每个任务的独占访问权限提供计算资源，直到任务结束或任务生成对资源的访问权限。 并发运行时将操作系统的抢先式计划程序与协作式计划配合使用，以达到处理资源的最大使用率。
+*抢先式计划* 是一种基于优先级的轮循机制，它在给定时间内为每个任务提供单独访问计算资源的权限，并在之后切换到其他任务。 抢先式计划在多任务操作系统 (例如 Windows) 中很常见。 *协作式计划*是一种机制, 它为每个任务提供对计算资源的独占访问权限, 直到任务完成或任务生成对资源的访问权限为止。 并发运行时将操作系统的抢先式计划程序与协作式计划配合使用，以达到处理资源的最大使用率。
 
 ### <a name="differences-between-preemptive-and-cooperative-schedulers"></a>抢先式和协作式计划程序之间的差异
 
@@ -63,7 +63,7 @@ Windows API 使用 C 编程语言来公开编程模型。 并发运行时提供�
 
 ### <a name="threads-and-thread-pools"></a>线程和线程池
 
-Windows API 中的中心并发机制是线程。 通常使用 [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) 函数来创建线程。 尽管线程的创建和使用相对简单，但操作系统需要分配大量的时间和其他资源来对管理它们。 此外，虽然每个线程都保证能够收到与其他任何同一优先级的线程相同的执行时间，但相关开销要求你创建足够大的任务。 对于更小或更精细的任务，与并发相关的开销会超过并行运行任务的收益。
+Windows API 中的中心并发机制是线程。 通常使用 [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) 函数来创建线程。 尽管线程的创建和使用相对简单，但操作系统需要分配大量的时间和其他资源来对管理它们。 此外，虽然每个线程都保证能够收到与其他任何同一优先级的线程相同的执行时间，但相关开销要求你创建足够大的任务。 对于更小或更精细的任务，与并发相关的开销会超过并行运行任务的收益。
 
 线程池是一种降低线程管理成本的方式。 Windows API 提供的自定义线程池和线程池实现都使小型工作项可以高效并行运行。 Windows 线程池维护先入先出 (FIFO) 队列中的工作项。 每个工作项都按其添加到池的顺序依次启动。
 
@@ -77,7 +77,7 @@ Windows API 中的中心并发机制是线程。 通常使用 [CreateThread](/wi
 
 在 Windows 7 和 Windows Server 2008 R2 中，操作系统进一步支持并发和可伸缩性。 例如，这些操作系统支持具有 64 个以上硬件线程的计算机。 使用 Windows API 的现有应用程序必须进行修改才能利用这些新功能。 然而，使用并发运行时的应用程序无需修改就能自动使用这些功能。
 
-[base.user-mode_scheduling](https://msdn.microsoft.com/library/windows/desktop/dd627187)
+[base.user-mode_scheduling](/windows/win32/procthread/user-mode-scheduling)
 
 [[返回页首](#top)]
 

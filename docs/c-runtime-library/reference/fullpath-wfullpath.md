@@ -1,10 +1,10 @@
 ---
 title: _fullpath、_wfullpath
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fullpath
 - _wfullpath
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wfullpath
 - fullpath
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - _fullpath function
 - fullpath function
 ms.assetid: 4161ec17-0d22-45dd-b07d-0222553afae9
-ms.openlocfilehash: aeacaf581b7f33ee893754c192ae547376ce73ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 30e62716c496ebb1a39b53a420f372a6e743c2c0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287637"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956269"
 ---
-# <a name="fullpath-wfullpath"></a>_fullpath、_wfullpath
+# <a name="_fullpath-_wfullpath"></a>_fullpath、_wfullpath
 
 创建指定相对路径名称的绝对或完整路径名称。
 
@@ -65,15 +68,15 @@ wchar_t *_wfullpath(
 相对路径名称。
 
 *maxLength*<br/>
-绝对路径名称缓冲区的最大长度 (*absPath*)。 此长度以字节为单位的 **_fullpath**但以宽字符 (**wchar_t**) 的 **_wfullpath**。
+绝对路径名称缓冲区的最大长度（*absPath*）。 对于 **_fullpath** ，此长度以字节为单位，但是对于 **_wfullpath**，则以宽字符（**wchar_t**）表示。
 
 ## <a name="return-value"></a>返回值
 
-每个函数返回指向包含绝对路径名称的缓冲区的指针 (*absPath*)。 如果出现错误 (例如，如果中传递的值*relPath*包含一个驱动器号无效或找不到，或者，如果创建的绝对路径名称的长度 (*absPath*) 大于*maxLength*)，该函数将返回**NULL**。
+其中每个函数都会返回指向包含绝对路径名称（*absPath*）的缓冲区的指针。 如果出现错误（例如，如果在*relPath*中传递的值包含一个无效或无法找到的驱动器号，或者创建的绝对路径名称（*absPath*）的长度大于*maxLength*，则该函数将返回**NULL**。
 
 ## <a name="remarks"></a>备注
 
-**_Fullpath**函数可展开中的相对路径名称*relPath*到其完全限定或绝对路径和中存储此名称*absPath*。 如果*absPath*是**NULL**， **malloc**用于分配的缓冲区长度足以容纳路径名称。 调用方负责释放此缓冲区。 相对路径名称指定从当前位置到另一个位置的路径（如当前工作目录："."）。 绝对路径名称是相对路径名称的扩展，表示需要采用完整路径才能从文件系统的根达到所需的位置。 与不同 **_makepath**， **_fullpath**可用于获取相对路径的绝对路径名称 (*relPath*)，包括"。 /".../"在其名称中。
+**_Fullpath**函数将*relPath*中的相对路径名称展开为其完全限定的路径或绝对路径，并将此名称存储在*absPath*中。 如果*absPath*为**NULL**，则使用**malloc**分配足够长度的缓冲区来容纳路径名称。 调用方负责释放此缓冲区。 相对路径名称指定从当前位置到另一个位置的路径（如当前工作目录："."）。 绝对路径名称是相对路径名称的扩展，表示需要采用完整路径才能从文件系统的根达到所需的位置。 与 **_makepath**不同， **_fullpath**可用于获取相对路径的绝对路径名称（*relPath*），其中包括 "./" 或 "."。/"。
 
 例如，若要使用 C 运行时例程，该应用程序必须包括包含例程声明的头文件。 每个头文件包括以相对方式（从应用程序的工作目录）引用文件位置的语句：
 
@@ -85,11 +88,11 @@ wchar_t *_wfullpath(
 
 `\\machine\shareName\msvcSrc\crt\headerFiles\stdlib.h`
 
-**_fullpath**自动处理多字节字符字符串参数，根据需要，根据当前正在使用的多字节代码页识别多字节字符序列。 **_wfullpath**是宽字符版本 **_fullpath**; 的字符串参数 **_wfullpath**都是宽字符字符串。 **_wfullpath**并 **_fullpath**行为方式相同，只不过 **_wfullpath**不处理多字节字符字符串。
+**_fullpath**会根据需要自动处理多字节字符串参数，根据当前使用的多字节代码页识别多字节字符序列。 **_wfullpath**是 **_fullpath**的宽字符版本; **_wfullpath**的字符串参数是宽字符字符串。 **_wfullpath**和 **_fullpath**的行为相同，只不过 **_wfullpath**不处理多字节字符字符串。
 
-如果 **_DEBUG**并 **_CRTDBG_MAP_ALLOC**都是定义，对调用 **_fullpath**并 **_wfullpath** 对的调用替换为 **_fullpath_dbg**并 **_wfullpath_dbg**以便调试内存分配。 有关详细信息，请参阅 [_fullpath_dbg、_wfullpath_dbg](fullpath-dbg-wfullpath-dbg.md)。
+如果同时定义了 **_debug**和 **_CRTDBG_MAP_ALLOC** ，则对 **_fullpath**和 **_wfullpath**的调用将替换为对 **_fullpath_dbg**和 **_wfullpath_dbg**的调用，以允许调试内存分配。 有关详细信息，请参阅 [_fullpath_dbg、_wfullpath_dbg](fullpath-dbg-wfullpath-dbg.md)。
 
-此函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)，则*maxlen*小于或等于 0。 如果允许执行继续，此函数可设置**errno**到**EINVAL** ，并返回**NULL**。
+如果*maxlen*小于或等于0，此函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数会将**errno**设置为**EINVAL** ，并返回**NULL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -97,7 +100,7 @@ wchar_t *_wfullpath(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tfullpath**|**_fullpath**|**_fullpath**|**_wfullpath**|
 
-如果*absPath*缓冲区**NULL**， **_fullpath**调用[malloc](malloc.md)来分配缓冲区，并忽略*maxLength*参数。 调用方负责视情况解除分配此缓冲区（使用 [free](free.md)）。 如果*relPath*参数指定的磁盘驱动器，此驱动器的当前目录结合使用的路径。
+如果*absPath*缓冲区为**NULL**，则 **_fullpath**会调用[Malloc](malloc.md)来分配缓冲区，并忽略*maxLength*参数。 调用方负责视情况解除分配此缓冲区（使用 [free](free.md)）。 如果*relPath*参数指定了磁盘驱动器，则该驱动器的当前目录将与路径组合在一起。
 
 ## <a name="requirements"></a>要求
 

@@ -1,9 +1,9 @@
 ---
 title: _get_heap_handle
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _get_heap_handle
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _get_heap_handle
 - get_heap_handle
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - _get_heap_handle function
 - get_heap_handle function
 ms.assetid: a4d05049-8528-494a-8281-a470d1e1115c
-ms.openlocfilehash: 82ea108a41bec1d0276e2c952b3f509f36bab8ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5f53569db6cf99eb8f91e9a8668280b135097ce
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332112"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955869"
 ---
-# <a name="getheaphandle"></a>_get_heap_handle
+# <a name="_get_heap_handle"></a>_get_heap_handle
 
 返回 C 运行时系统所用堆的句柄。
 
@@ -48,7 +51,7 @@ intptr_t _get_heap_handle( void );
 
 ## <a name="remarks"></a>备注
 
-如果想要针对 CRT 堆调用 [HeapSetInformation](/windows/desktop/api/heapapi/nf-heapapi-heapsetinformation) 并启用低分片堆，请使用此函数。
+如果想要针对 CRT 堆调用 [HeapSetInformation](/windows/win32/api/heapapi/nf-heapapi-heapsetinformation) 并启用低分片堆，请使用此函数。
 
 ## <a name="requirements"></a>要求
 

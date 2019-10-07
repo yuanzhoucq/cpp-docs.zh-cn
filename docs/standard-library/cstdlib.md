@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - cstdlib header
 ms.assetid: 0a6aaebf-84e9-4b60-ae90-17e11981cf54
-ms.openlocfilehash: 298d6a512b2863a326bda0670f33fe8f1bda0688
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 0b4f24f50c78d9a079e2c7d0c8e3d3c5bfe952c2
+ms.sourcegitcommit: 76cc69b482ada8ebf0837e8cdfd4459661f996dd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449398"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127216"
 ---
 # <a name="ltcstdlibgt"></a>&lt;cstdlib&gt;
 
@@ -22,7 +22,7 @@ ms.locfileid: "68449398"
 
 ## <a name="requirements"></a>要求
 
-**标头**: \<b >
+**标头**： \<b >
 
 **命名空间：** std
 
@@ -56,10 +56,10 @@ extern "C++" using compare-pred = int(const void*, const void*);
 
 |函数|描述|
 |-|-|
-|[_Exit](#_exit)|终止程序, 而不使用析构函数或已注册的函数。|
-|[abort](#abort)|终止程序, 而不使用析构函数。|
+|[_Exit](#_exit)|终止程序，而不使用析构函数或已注册的函数。|
+|[abort](#abort)|终止程序，而不使用析构函数。|
 |[atexit](#atexit)|注册程序终止函数。|
-|[exit](#exit)|用线程和静态存储销毁对象, 然后返回 control。|
+|[exit](#exit)|用线程和静态存储销毁对象，然后返回 control。|
 |[at_quick_exit](#at_quick_exit)|在程序终止时注册不带参数的函数。|
 |[quick_exit](#quick_exit)|用保留的对象注册程序终止函数。|
 |[getenv](#getenv)|请参阅 C 标准库参考。|
@@ -73,7 +73,7 @@ extern "C++" using compare-pred = int(const void*, const void*);
 
 #### <a name="remarks"></a>备注
 
-如果没有为自动、线程或静态存储持续时间的对象执行析构函数, 并且没有调用传递到`atexit()`的函数, 程序将终止。 函数`_Exit`的信号安全。
+如果没有为自动、线程或静态存储持续时间的对象执行析构函数，并且没有调用传递到`atexit()`的函数，程序将终止。 函数`_Exit`的信号安全。
 
 ### <a name="abort"></a>中断
 
@@ -83,7 +83,7 @@ extern "C++" using compare-pred = int(const void*, const void*);
 
 #### <a name="remarks"></a>备注
 
-如果没有为自动、线程或静态存储持续时间的对象执行析构函数, 并且没有调用传递到`atexit()`的函数, 程序将终止。 函数`abort`的信号安全。
+如果没有为自动、线程或静态存储持续时间的对象执行析构函数，并且没有调用传递到`atexit()`的函数，程序将终止。 函数`abort`的信号安全。
 
 ### <a name="at_quick_exit"></a>at_quick_exit
 
@@ -94,11 +94,11 @@ int at_quick_exit(atexit-handler * func) noexcept;
 
 #### <a name="return-value"></a>返回值
 
-如果注册成功, 则为零; 如果失败, 则为非零。
+如果注册成功，则为零; 如果失败，则为非零。
 
 #### <a name="remarks"></a>备注
 
-调用`at_quick_exit()`时 ,函数将注册func所指向的函数,以便在不使用参数的情况下`quick_exit`调用。 未指定是否对`at_quick_exit()`的调用不`quick_exit`会成功, 并且`at_quick_exit()`函数不会引入数据争用。 如果`at_quick_exit`从多个线程调用`at_quick_exit` , 并且注册不同于`atexit`注册, 则注册的顺序可能不确定, 应用程序可能需要将这两个注册函数与参数相同。 实现应支持至少32个函数的注册。
+函数将注册函数*func*，调用时`quick_exit` ，该函数不带参数调用。 `at_quick_exit()` 对`at_quick_exit()`的调用在对的所有`quick_exit`调用都不会成功之前不会发生。 `at_quick_exit()`函数不会引入数据争用。 如果`at_quick_exit`从多个线程调用，则注册顺序可能不确定。 由于`at_quick_exit`注册不同`atexit`于注册，因此应用程序可能需要使用相同的参数调用这两个注册函数。 MSVC 支持至少32个函数的注册。
 
 ### <a name="atexit"></a>atexit
 
@@ -109,11 +109,11 @@ int atexit(atexit-handler * func) noexcept;
 
 #### <a name="remarks"></a>备注
 
-函数在正常程序终止时注册要在没有参数的情况下调用的函数所指向的函数。  `atexit()` 未指定调用是否`atexit()` `exit()`会成功, 并且`atexit()`函数不会引入数据争用, 这一点未指定。实现应支持至少32个函数的注册。
+函数在正常程序终止时注册要在没有参数*的情况下调用的函数*所指向的函数。 `atexit()` 对`atexit()`的调用在`exit()`调用可能失败之前不会发生。 `atexit()`函数不会引入数据争用。
 
 #### <a name="return-value"></a>返回值
 
-如果注册成功, 则返回零; 如果失败, 则返回非零值。
+如果注册成功，则返回零; 如果失败，则返回非零值。
 
 ### <a name="exit"></a>离开
 
@@ -123,13 +123,13 @@ int atexit(atexit-handler * func) noexcept;
 
 #### <a name="remarks"></a>备注
 
-首先, 将销毁线程存储持续时间和与当前线程关联的对象。
+首先，将销毁线程存储持续时间和与当前线程关联的对象。
 
-接下来, 将销毁具有静态存储持续时间的对象, 并`atexit`调用通过调用注册的函数。 由于调用`exit()`, 自动对象不会被销毁。 如果控件离开由调用的`exit`已注册函数, 因为函数不提供引发的异常的处理程序, `std::terminate()`所以应调用。 每次注册某个函数时, 都会调用该函数。 具有自动存储持续时间的对象将在其 main 函数不包含自动对象的程序中销毁, 并执行`exit()`对的调用。 通过引发在 main 中捕获的异常, 可以直接将控件传输到此类 main 函数。
+接下来，将销毁具有静态存储持续时间的对象，并`atexit`调用通过调用注册的函数。 调用时`exit()` ，自动对象不会被销毁。 如果控件离开由调用的`exit`已注册函数，因为函数不提供引发的异常的处理程序， `std::terminate()`则会调用。 每次注册函数时，都会调用一次函数。 具有自动存储持续时间的对象全部在其`main`函数不包含自动对象并执行对`exit()`的程序中销毁。 控件可以通过引发中`main` `main`捕获的异常直接传输到此类函数。
 
-接下来, 将刷新所有打开的 c 流 (如中<cstdio>用声明的函数签名经过调谐), 并关闭所有打开的 c 流, 并删除通过调用`tmpfile()`创建的所有文件。
+接下来，将刷新所有打开的 c 流（通过 cstdio> > 中\<声明的函数签名经过调谐）和未写入缓冲数据，并关闭所有打开的 c 流，并删除通过调用`tmpfile()`创建的所有文件。
 
-最后, 控制将返回到主机环境。 如果 status 为零或 EXIT_SUCCESS, 则返回实现定义形式的状态成功终止。 如果 status 为 EXIT_FAILURE, 则返回实现定义形式的状态不成功终止。 否则, 返回的状态是实现定义的。
+最后，控制将返回到主机环境。 如果*status*为零或 EXIT_SUCCESS，则返回实现定义形式的状态成功终止。 MSVC 返回的值为零。 如果*status*为 EXIT_FAILURE，则 MSVC 返回的值为3。 否则，MSVC 将返回*status*参数值。
 
 ### <a name="getenv"></a>getenv
 
@@ -145,7 +145,7 @@ char* getenv(const char* name);
 
 #### <a name="remarks"></a>备注
 
-对的调用`at_quick_exit`注册的函数将按其注册的相反顺序调用, 只不过函数应在注册后调用的任何以前注册的函数后调用。 由于调用`quick_exit`, 不应销毁对象。 如果控件离开由调用的`quick_exit`已注册函数, 因为函数不提供引发的异常的处理程序, `std::terminate()`所以应调用。 通过注册`at_quick_exit`的函数由调用`quick_exit`的线程调用, 后者可以是与注册它的线程不同的线程, 因此, 已注册的函数不应依赖于具有线程存储持续时间的对象的标识。 调用已注册的函数`quick_exit`后, `_Exit(status)`应调用。 标准文件缓冲区不会刷新。 `quick_exit` 当`at_quick_exit`向注册的函数为时, 函数为信号安全函数。
+通常，通过调用`at_quick_exit`注册的函数将按其注册的相反顺序调用。 此顺序并不适用于已调用其他已注册函数后注册的函数。 调用时`quick_exit`不会销毁任何对象。 如果控件离开由调用的`quick_exit`已注册函数，因为函数不提供引发的异常的处理程序， `std::terminate()`则会调用。 通过注册`at_quick_exit`的函数由调用`quick_exit`的线程调用，后者可以是与注册它的线程不同的线程。 这意味着注册的函数不应依赖于具有线程存储持续时间的对象的标识。 调用注册的函数后`quick_exit` ， `_Exit(status)`调用。 标准文件缓冲区不会刷新。 `quick_exit` 当`at_quick_exit`向注册的函数为时，函数为信号安全函数。
 
 ### <a name="system"></a>主板
 
@@ -156,11 +156,20 @@ int system(const char* string);
 ## <a name="memory-allocation-functions"></a>内存分配函数
 
 ```cpp
-void* aligned_alloc(size_t alignment, size_t size);
+// void* aligned_alloc(size_t alignment, size_t size); // Unsupported in MSVC
 void* calloc(size_t nmemb, size_t size);
 void free(void* ptr);
 void* malloc(size_t size);
 void* realloc(void* ptr, size_t size);
+```
+
+### <a name="remarks"></a>备注
+
+这些函数具有 C 标准库中指定的语义。 MSVC 不支持`aligned_alloc`函数。 C11 指定`aligned_alloc()`的方式与的 Microsoft `free()`实现（即`free()` ，必须能够处理高度对齐的分配）不兼容。
+
+## <a name="numeric-string-conversions"></a>数值字符串转换
+
+```cpp
 double atof(const char* nptr);
 int atoi(const char* nptr);
 long int atol(const char* nptr);
@@ -174,11 +183,11 @@ unsigned long int strtoul(const char* nptr, char** endptr, int base);
 unsigned long long int strtoull(const char* nptr, char** endptr, int base);
 ```
 
-#### <a name="remarks"></a>备注
+### <a name="remarks"></a>备注
 
 这些函数具有 C 标准库中指定的语义。
 
-##  <a name="multibyte--wide-string-and-character-conversion-functions"></a>多字节/宽字符串和字符转换函数
+## <a name="multibyte--wide-string-and-character-conversion-functions"></a>多字节/宽字符串和字符转换函数
 
 ```cpp
 int mblen(const char* s, size_t n);
@@ -227,6 +236,15 @@ double abs(double j);
 long double abs(long double j);
 long int labs(long int j);
 long long int llabs(long long int j);
+```
+
+### <a name="remarks"></a>备注
+
+这些函数具有 C 标准库中指定的语义。
+
+## <a name="integer-division"></a>整数除法
+
+```cpp
 div_t div(int numer, int denom);
 ldiv_t div(long int numer, long int denom);
 lldiv_t div(long long int numer, long long int denom);
@@ -237,17 +255,6 @@ lldiv_t lldiv(long long int numer, long long int denom);
 ### <a name="remarks"></a>备注
 
 这些函数具有 C 标准库中指定的语义。
-
-## <a name="functions"></a>函数
-
-```cpp
-void* bsearch(const void* key, const void* base, size_t nmemb, size_t size,
-c-compare-pred * compar);
-void* bsearch(const void* key, const void* base, size_t nmemb, size_t size,
-compare-pred * compar);
-void qsort(void* base, size_t nmemb, size_t size, c-compare-pred * compar);
-void qsort(void* base, size_t nmemb, size_t size, compare-pred * compar);
-```
 
 ## <a name="see-also"></a>请参阅
 

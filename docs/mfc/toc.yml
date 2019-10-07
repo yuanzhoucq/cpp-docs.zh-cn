@@ -11,22 +11,7 @@
         - name: 常规 MFC 主题
           href: general-mfc-topics.md
         - name: 使用 MFC 源文件
-          expanded: false
-          items:
-            - name: 使用 MFC 源文件
-              href: using-the-mfc-source-files.md
-            - name: 注释示例
-              href: an-example-of-the-comments.md
-            - name: '-- Implementation 注释'
-              href: decrement-implementation-comment.md
-            - name: '-- Constructors 注释'
-              href: decrement-constructors-comment.md
-            - name: '-- Attributes 注释'
-              href: decrement-attributes-comment.md
-            - name: '-- Operations 注释'
-              href: decrement-operations-comment.md
-            - name: '-- Overridables 注释'
-              href: decrement-overridables-comment.md
+          href: using-the-mfc-source-files.md
         - name: MFC 库版本
           expanded: false
           items:
@@ -1016,7 +1001,7 @@
           items:
             - name: 对话框
               href: dialog-boxes.md
-            - name: '示例:通过菜单命令显示对话框'
+            - name: 示例：通过菜单命令显示对话框
               href: example-displaying-a-dialog-box-via-a-menu-command.md
             - name: 对话框示例列表
               href: dialog-sample-list.md
@@ -1038,7 +1023,7 @@
             - name: 对话框的生命周期
               expanded: false
               items:
-                - name: 对话框的生命周期
+                - name: 在 MFC 中使用对话框
                   href: life-cycle-of-a-dialog-box.md
                 - name: 创建并显示对话框
                   href: creating-and-displaying-dialog-boxes.md
@@ -2856,8 +2841,6 @@
               href: reference/application-type-mfc-application-wizard.md
             - name: MFC 应用程序向导的复合文档支持
               href: reference/compound-document-support-mfc-application-wizard.md
-            - name: MFC 应用程序向导的文档模板字符串
-              href: reference/document-template-strings-mfc-application-wizard.md
             - name: MFC 应用程序向导的数据库支持
               href: reference/database-support-mfc-application-wizard.md
             - name: MFC 应用程序向导的用户界面功能
@@ -2900,8 +2883,6 @@
           items:
             - name: MFC 添加类向导
               href: reference/mfc-add-class-wizard.md
-            - name: MFC 添加类向导的文档模板字符串
-              href: reference/document-template-strings-mfc-add-class-wizard.md
     - name: 从类型库添加 MFC 类
       expanded: false
       items:

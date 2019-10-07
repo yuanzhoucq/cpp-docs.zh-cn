@@ -1,6 +1,6 @@
 ---
 title: __readfsbyte、__readfsdword、__readfsqword、__readfsword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __readfsword
 - __readfsdword
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - readfsqword intrinsic
 - __readfsqword intrinsic
 ms.assetid: f6ee7203-4179-402c-a464-0746c84ce6ac
-ms.openlocfilehash: f291747d1f46ebdf3ea1f71cd9ab7e074058201d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 30040b33fe8c686bc0cda585c525ae2926cdf314
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262724"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222361"
 ---
-# <a name="readfsbyte-readfsdword-readfsqword-readfsword"></a>__readfsbyte、__readfsdword、__readfsqword、__readfsword
+# <a name="__readfsbyte-__readfsdword-__readfsqword-__readfsword"></a>__readfsbyte、__readfsdword、__readfsqword、__readfsword
 
 **Microsoft 专用**
 
-从指定相对于 FS 段的开头的偏移量的位置读取内存。
+从相对于 FS 段开头的偏移量指定的位置读取内存。
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 unsigned char __readfsbyte(
    unsigned long Offset
 );
@@ -46,14 +46,14 @@ unsigned __int64 __readfsqword(
 );
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-*Offset*<br/>
-[in]从开始处的偏移量`FS`读取。
+*抵销*\
+中从开始读取的`FS`偏移量。
 
 ## <a name="return-value"></a>返回值
 
-内存内容的字节、 字、 双字或四字 （如所示的调用的函数名称） 的位置`FS:[Offset]`。
+位置`FS:[Offset]`处的字节、字、双字或四个字节的内存内容 (由调用的函数的名称指示)。
 
 ## <a name="requirements"></a>要求
 
@@ -64,15 +64,15 @@ unsigned __int64 __readfsqword(
 |`__readfsqword`|x86|
 |`__readfsword`|x86|
 
-**标头文件** \<intrin.h >
+**标头文件**\<intrin.h >
 
 ## <a name="remarks"></a>备注
 
-这些例程只能用作内部函数可使用。
+这些例程只能用作内部函数。
 
 **结束 Microsoft 专用**
 
 ## <a name="see-also"></a>请参阅
 
-[__writefsbyte， \__writefsdword， \__writefsqword， \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)<br/>
+[__writefsbyte、 \__writefsdword、 \__writefsqword、 \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)\
 [编译器内部函数](../intrinsics/compiler-intrinsics.md)

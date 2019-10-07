@@ -1,11 +1,11 @@
 ---
 title: difftime, _difftime32, _difftime64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _difftime32
 - difftime
 - _difftime64
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _difftime64
 - difftime
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - _difftime64 function
 - difftime32 function
 ms.assetid: 4cc0ac2b-fc7b-42c0-8283-8c9d10c566d0
-ms.openlocfilehash: 80aaac1696fc82db248b097e73a2d89d81a20346
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 51d74ae447e87e91e9be3c27864b8dfe7f490b14
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288518"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937644"
 ---
-# <a name="difftime-difftime32-difftime64"></a>difftime, _difftime32, _difftime64
+# <a name="difftime-_difftime32-_difftime64"></a>difftime, _difftime32, _difftime64
 
 查找两次时间之间的差异。
 
@@ -61,17 +64,17 @@ double _difftime64( __time64_t timeEnd, __time64_t timeStart );
 
 ## <a name="return-value"></a>返回值
 
-**difftime**返回经过的时间以秒为单位，从*timeStart*到*时间结束*。 返回值为双精度浮点数字。 返回值可能为 0，表示错误。
+**difftime**返回从*timeStart*到*timeEnd*的运行时间（以秒为单位）。 返回值为双精度浮点数字。 返回值可能为 0，表示错误。
 
 ## <a name="remarks"></a>备注
 
-**Difftime**函数计算两个提供的时间值之间的差异*timeStart*并*时间结束*。
+**Difftime**函数计算两个提供的时间值*timeStart*和*timeEnd*之间的差异。
 
-提供的时间值必须在范围内的范围**time_t**。 **time_t**是 64 位值。 因此，范围的末尾已从 2038 年 1 月 18 日 23:59:59（UTC 时间）延至 3000 年 12 月 31 日 23:59:59。 范围的下限**time_t**仍为 1970 年 1 月 1 日午夜。
+提供的时间值必须在**time_t**范围内。 **time_t**是64位值。 因此，范围的末尾已从 2038 年 1 月 18 日 23:59:59（UTC 时间）延至 3000 年 12 月 31 日 23:59:59。 **Time_t**的下限仍为1970年1月1日午夜。
 
-**difftime**是内联函数的计算结果为任一 **_difftime32**或 **_difftime64**具体取决于是否 **_USE_32BIT_TIME_T**定义。 _difftime32 和 _difftime64 可直接用于强制使用数据类型的特定大小。
+**difftime**是一种内联函数，其计算结果为 **_difftime32**或 **_difftime64** ，具体取决于是否定义了 **_USE_32BIT_TIME_T** 。 _difftime32 和 _difftime64 可直接用于强制使用数据类型的特定大小。
 
-这些函数验证其参数。 如果参数为零或负值，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，这些函数将返回 0 并设置**errno**到**EINVAL**。
+这些函数验证其参数。 如果参数为零或负值，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回0，并将**errno**设置为**EINVAL**。
 
 ## <a name="requirements"></a>要求
 

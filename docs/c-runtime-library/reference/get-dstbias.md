@@ -1,10 +1,10 @@
 ---
 title: _get_dstbias
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _get_dstbias
 - __dstbias
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __dstbias
 - _get_dstbias
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - get_dstbias function
 - _get_dstbias function
 ms.assetid: e751358c-1ecc-411b-ae2c-81b2ec54ea45
-ms.openlocfilehash: 61807f854dc9c2f7de6f0acd5bbf4668987ce49e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a48cc4fe35a1bbd18342750571214ed0977cf3ee
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332372"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955941"
 ---
-# <a name="getdstbias"></a>_get_dstbias
+# <a name="_get_dstbias"></a>_get_dstbias
 
 检索夏令时偏移量（以秒为单位）。
 
@@ -46,20 +49,20 @@ error_t _get_dstbias( int* seconds );
 
 ### <a name="parameters"></a>参数
 
-*seconds*<br/>
+*计算*<br/>
 夏令时偏移量（以秒为单位）。
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则将为零; **errno**如果发生错误，则值。
+如果成功，则为零; 如果发生错误，则为**errno**值。
 
 ## <a name="remarks"></a>备注
 
-**_Get_dstbias**函数检索中夏时制整数形式的秒数。 如果夏令时有效，则默认偏移量为 3600 秒，这也是一个小时包含的秒数（但是少数地区遵守两小时的偏移量）。
+**_Get_dstbias**函数将夏令时中的秒数作为整数进行检索。 如果夏令时有效，则默认偏移量为 3600 秒，这也是一个小时包含的秒数（但是少数地区遵守两小时的偏移量）。
 
-如果*秒*是**NULL**，如中所述，将调用无效的参数处理程序[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数可设置**errno**到**EINVAL** ，并返回**EINVAL**。
+如果*seconds*为**NULL**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数会将**errno**设置为**EINVAL**并返回**EINVAL**。
 
-我们建议你使用此函数而不是宏 **_dstbias**或不推荐使用的函数 **__dstbias**。
+建议使用此函数，而不是宏 **_dstbias**或弃用的函数 **__dstbias**。
 
 ## <a name="requirements"></a>要求
 

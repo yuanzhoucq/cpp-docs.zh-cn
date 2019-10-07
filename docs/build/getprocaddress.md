@@ -8,18 +8,18 @@ helpviewer_keywords:
 - ordinal exports [C++]
 - GetProcAddress method
 ms.assetid: 48d14ae0-47ea-4c5d-96b1-2c158f1a26af
-ms.openlocfilehash: 7b480314d195f50e4867f646208f2d9c70ce9b14
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 2d322cfe7d3bd60d8d702a226e181eb7b4ede963
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220803"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493252"
 ---
 # <a name="getprocaddress"></a>GetProcAddress
 
-显式链接到 DLL 调用的进程[GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)获取 DLL 中导出函数的地址。 使用返回的函数指针调用 DLL 函数。 **GetProcAddress** DLL 模块句柄将作为参数 (通过以下任一方法返回**LoadLibrary**， `AfxLoadLibrary`，或**GetModuleHandle**) 和采用的所需的函数名称到调用或函数的导出序号。
+进程显式链接到 DLL 调用[GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) , 以获取 dll 中导出函数的地址。 使用返回的函数指针调用 DLL 函数。 **GetProcAddress**使用 DLL 模块处理的参数 (由**LoadLibrary**、 `AfxLoadLibrary`或**GetModuleHandle**返回), 并采用要调用的函数的名称或函数的导出序号。
 
-因为调用 DLL 函数通过指针并且没有任何编译时类型检查，请确保函数的参数正确，以便不超出在堆栈上分配的内存，并导致访问冲突。 帮助提供类型安全的一种方法是查看导出的函数的函数原型，并创建函数指针的匹配 typedef。 例如：
+因为您通过指针调用 DLL 函数, 并且没有编译时类型检查, 所以请确保函数的参数是正确的, 以便不 overstep 在堆栈上分配的内存并导致访问冲突。 提供类型安全的一种方法是查看导出函数的函数原型, 并为函数指针创建匹配的 typedef。 例如:
 
 ```
 typedef UINT (CALLBACK* LPFNDLLFUNC1)(DWORD,UINT);
@@ -49,9 +49,9 @@ if (hDLL != NULL)
 }
 ```
 
-如何指定所需时调用的函数**GetProcAddress**取决于 DLL 的生成。
+调用**GetProcAddress**时指定所需函数的方式取决于 DLL 的生成方式。
 
-如果要链接到 DLL 生成与模块定义 (.def) 文件，并列出中的函数的序号，仅可以获取导出序号**导出**DLL 的.def 文件的部分。 调用**GetProcAddress**与导出序号，而不是函数名称，会稍微快一点如果 DLL 具有许多导出的函数，因为导出序号用作索引到 DLL 的导出表。 使用导出序号**GetProcAddress**可以找到而比较指定的名称与 DLL 的导出表中的函数名称不是直接函数。 但是，应调用**GetProcAddress**使用导出序号仅当你可以控制的序号分配到.def 文件中导出的函数。
+如果要链接到的 DLL 是使用模块定义 (.def) 文件生成的, 并且在 DLL 的 .def 文件的 "**导出**" 部分中列出了这些函数, 则只能获取导出序号。 如果 DLL 具有许多导出函数, 则使用导出序号调用**GetProcAddress**会稍微快一些, 因为导出序号充当 DLL 导出表中的索引。 使用导出序号, **GetProcAddress**可以直接查找函数, 而不是将指定的名称与 DLL 的导出表中的函数名进行比较。 但是, 仅当您控制将序号分配给 .def 文件中导出的函数时, 才应使用导出序号调用**GetProcAddress** 。
 
 ## <a name="what-do-you-want-to-do"></a>你希望做什么？
 
@@ -63,10 +63,10 @@ if (hDLL != NULL)
 
 - [LoadLibrary 和 AfxLoadLibrary](loadlibrary-and-afxloadlibrary.md)
 
-- [FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary)
+- [FreeLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary)
 
 - [使用 DEF 文件从 DLL 导出](exporting-from-a-dll-using-def-files.md)
 
 ## <a name="see-also"></a>请参阅
 
-[创建 C /C++ Visual Studio 中的 Dll](dlls-in-visual-cpp.md)
+[在 Visual Studio 中创建 C/C++ DLL](dlls-in-visual-cpp.md)

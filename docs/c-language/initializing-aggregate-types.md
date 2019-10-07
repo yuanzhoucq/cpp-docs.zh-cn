@@ -9,35 +9,35 @@ helpviewer_keywords:
 - aggregates [C++], initializing
 ms.assetid: a8f8ed75-39db-4592-93b9-d3920d915810
 ms.openlocfilehash: f6816a6f63de262b927a3c5aeed8774ba29c2eaa
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151489"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "62326074"
 ---
 # <a name="initializing-aggregate-types"></a>初始化聚合类型
 
-聚合类型是结构、联合或数组类型。 如果聚合类型包含聚合类型的成员，则初始化规则将以递归方式应用。
+聚合  类型是结构、联合或数组类型。 如果聚合类型包含聚合类型的成员，则初始化规则将以递归方式应用。
 
 ## <a name="syntax"></a>语法
 
 *initializer*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{**  *initializer-list*  **}** /* 用于聚合初始化 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{**  *initializer-list*  **, }**
+&nbsp;&nbsp;&nbsp;&nbsp; **{**  *initializer-list*  **}** /* 用于聚合初始化 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **{**  *initializer-list*  **, }**
 
 *initializer-list*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*initializer*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*initializer-list*  **,**  *initializer*
 
-initializer-list 是用逗号分隔的初始值设定项的列表。 列表中的每个初始值设定项是常量表达式或初始值设定项列表。 因此，可以嵌入初始值设定项列表。 此形式对于初始化聚合类型的聚合成员很有用，如本节中的示例所示。 但是，如果自动标识符的初始值设定项是一个表达式，则它无需是常量表达式；它只需要针对标识符的适当类型的赋值。
+initializer-list  是用逗号分隔的初始值设定项的列表。 列表中的每个初始值设定项是常量表达式或初始值设定项列表。 因此，可以嵌入初始值设定项列表。 此形式对于初始化聚合类型的聚合成员很有用，如本节中的示例所示。 但是，如果自动标识符的初始值设定项是一个表达式，则它无需是常量表达式；它只需要针对标识符的适当类型的赋值。
 
 对于每个初始值设定项列表，常量表达式的值将按顺序赋给聚合变量的相应成员。
 
-如果 initializer-list 具有的值少于聚合类型，则聚合类型的其余成员或元素将初始化为 0。 未显式初始化的自动标识符的初始值是不确定的。 如果 initializer-list 具有的值多于聚合类型，则会导致错误。 这些规则适用于每个嵌入的初始值设定项列表以及整个聚合。
+如果 initializer-list  具有的值少于聚合类型，则聚合类型的其余成员或元素将初始化为 0。 未显式初始化的自动标识符的初始值是不确定的。 如果 initializer-list  具有的值多于聚合类型，则会导致错误。 这些规则适用于每个嵌入的初始值设定项列表以及整个聚合。
 
-结构的初始值设定项要么是同一类型的表达式，要么是其成员包含在大括号 ({ }) 中的初始值设定项的列表。 未命名的位域成员是未初始化的。
+结构的初始值设定项要么是同一类型的表达式，要么是其成员包含在大括号 ({ }  ) 中的初始值设定项的列表。 未命名的位域成员是未初始化的。
 
-在初始化联合时，initializer-list 必须是单个常量表达式。 常量表达式的值将赋给联合的第一个成员。
+在初始化联合时，initializer-list  必须是单个常量表达式。 常量表达式的值将赋给联合的第一个成员。
 
 如果数组的大小未知，则初始值设定项的数目将确定数组的大小，并且其类型将变为已完成。 无法在 C 中指定初始值设定项的重复，也无法在数组中间初始化元素而不提供前面的所有值。 如果您的程序中需要此操作，请使用汇编语言编写该例程。
 
@@ -51,7 +51,7 @@ int x[ ] = { 0, 1, 2 }
 
 **Microsoft 专用**
 
-数组的最大大小由 size_t 定义。 头文件 STDDEF.H 中定义的 size_t 是一个 `unsigned int`，其范围从 0x00000000 到 0x7CFFFFFF。
+数组的最大大小由 size_t  定义。 头文件 STDDEF.H 中定义的 size_t  是一个 `unsigned int`，其范围从 0x00000000 到 0x7CFFFFFF。
 
 **结束 Microsoft 专用**
 

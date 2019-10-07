@@ -1,11 +1,11 @@
 ---
 title: ctan、ctanf、ctanl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ctan
 - ctanf
 - ctanl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ctan
 - ctanf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - ctanf function
 - ctanl function
 ms.assetid: d3cbd25c-1e93-4a6d-8154-da42921f7223
-ms.openlocfilehash: 2d4da5a39658e46bc633ae3bd9c8f6f0a01555aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d1275f795ae68777515e833a19f2b90f4fedf93
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288749"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938448"
 ---
 # <a name="ctan-ctanf-ctanl"></a>ctan、ctanf、ctanl
 
@@ -68,22 +71,22 @@ _Lcomplex ctanl(
 
 ## <a name="return-value"></a>返回值
 
-正切*z*。
+*Z*的正切值。
 
 |输入|SEH 异常|**_matherr**异常|
 |-----------|-------------------|--------------------------|
-|为 ∞，QNAN IND|无|_DOMAIN|
-|为 ∞ (**tan**， **tanf**)|INVALID|_DOMAIN|
+|±∞、QNAN、IND|无|_DOMAIN|
+|±∞（**tan**， **tanf**）|INVALID|_DOMAIN|
 
 ## <a name="remarks"></a>备注
 
-因为C++允许重载，可以调用的重载**ctan**采用并返回 **_Fcomplex**并 **_Lcomplex**的值。 在 C 程序中， **ctan**始终采用并返回 **_Dcomplex**值。
+由于C++允许重载，因此可以调用**ctan**的重载，该重载采用并返回 **_Fcomplex**和 **_Lcomplex**值。 在 C 程序中， **ctan**始终采用并返回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|C 标头|C++ 标头|
 |-------------|--------------|------------------|
-|**ctan**,               **ctanf**, **ctanl**|\<complex.h>|\<ccomplex>|
+|**ctan**、 **ctanf**、 **ctanl**|\<complex.h>|\<ccomplex>|
 
 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

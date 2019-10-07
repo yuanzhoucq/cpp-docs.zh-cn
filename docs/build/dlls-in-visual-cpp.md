@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DLLs [C++]
 - DLLs [C++], about DLLs
 ms.assetid: 5216bca4-51e2-466b-b221-0e3e776056f0
-ms.openlocfilehash: 9f5b34fda8a429f8e55631e1e0125ed6f79d5bae
-ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
+ms.openlocfilehash: 33f002143e306c99b4d17b7a01ddd4a9738e38e7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68341070"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493274"
 ---
 # <a name="create-cc-dlls-in-visual-studio"></a>在 Visual StudioC++中创建 C/dll
 
@@ -80,15 +80,15 @@ ms.locfileid: "68341070"
 描述运行库如何执行 DLL 启动序列。
 
 [LoadLibrary 和 AfxLoadLibrary](loadlibrary-and-afxloadlibrary.md)<br/>
-讨论如何  在运行`AfxLoadLibrary`时使用 LoadLibrary 和显式链接到 DLL。
+讨论如何在运行`AfxLoadLibrary`时使用 LoadLibrary 和显式链接到 DLL。
 
 [GetProcAddress](getprocaddress.md)<br/>
 讨论如何使用**GetProcAddress**获取 DLL 中导出函数的地址。
 
 [FreeLibrary 和 AfxFreeLibrary](freelibrary-and-afxfreelibrary.md)<br/>
-讨论如何  使用 FreeLibrary `AfxFreeLibrary`以及何时不再需要 DLL 模块。
+讨论如何使用 FreeLibrary `AfxFreeLibrary`以及何时不再需要 DLL 模块。
 
-[动态链接库搜索顺序](/windows/desktop/Dlls/dynamic-link-library-search-order)<br/>
+[动态链接库搜索顺序](/windows/win32/Dlls/dynamic-link-library-search-order)<br/>
 描述 Windows 操作系统用来定位系统上的 DLL 的搜索路径。
 
 [动态链接到 MFC 的规则 MFC DLL 的模块状态](module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)<br/>

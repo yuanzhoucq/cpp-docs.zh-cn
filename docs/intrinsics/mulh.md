@@ -1,40 +1,40 @@
 ---
 title: __mulh
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __mulh
 helpviewer_keywords:
 - __mulh intrinsic
 ms.assetid: cd2ab093-9ef6-404d-ac34-0bee033882f3
-ms.openlocfilehash: 122d7ff28a01c0b95c16c6a0f4cd20e883744d2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c3a421cdda1c62620d4c933436fd0b5bab589c0e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263069"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221677"
 ---
-# <a name="mulh"></a>__mulh
+# <a name="__mulh"></a>__mulh
 
 **Microsoft 专用**
 
-返回两个 64 位有符号整数的产品的高 64 位。
+返回 2 64 位有符号整数的乘积的高64位。
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 __int64 __mulh(
    __int64 a,
    __int64 b
 );
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-*a*<br/>
-[in]要相乘的第一个数字。
+*的*\
+[输入] 要相乘的第一个数字。
 
-*b*<br/>
-[in]要相乘的第二个数字。
+*b*\
+[输入] 要相乘的第二个数字。
 
 ## <a name="return-value"></a>返回值
 
@@ -46,7 +46,7 @@ __int64 __mulh(
 |---------------|------------------|
 |`__mulh`|X64|
 
-**标头文件** \<intrin.h >
+**标头文件**\<intrin.h >
 
 ## <a name="remarks"></a>备注
 
@@ -54,7 +54,7 @@ __int64 __mulh(
 
 ## <a name="example"></a>示例
 
-```
+```cpp
 // mulh.cpp
 // processor: x64
 #include <stdio.h>

@@ -1,9 +1,9 @@
 ---
 title: fwrite
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fwrite
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fwrite
 helpviewer_keywords:
 - streams, writing data to
 - fwrite function
 ms.assetid: 7afacf3a-72d7-4a50-ba2e-bea1ab9f4124
-ms.openlocfilehash: f05e39390f3a2d0ad41627f6aed1aecd77b57cca
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: 8149e0f2cbc84c2c28093d86fecd5ff2a9db7aba
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376062"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956193"
 ---
 # <a name="fwrite"></a>fwrite
 
@@ -52,7 +55,7 @@ size_t fwrite(
 *size*<br/>
 项大小（以字节为单位）。
 
-*计数*<br/>
+*count*<br/>
 要写入的项的最大数量。
 
 *stream*<br/>
@@ -66,9 +69,9 @@ size_t fwrite(
 
 **Fwrite**函数将每个项的*大小*从*缓冲区*写入到输出*流*, 并对其进行*计算*。 与*流*关联的文件指针 (如果有) 以实际写入的字节数为增量递增。 如果在文本模式下打开*流*, 则会将每个换行符替换为回车换行符对。 该替换不会影响返回值。
 
-在 Unicode 转换模式下打开*流*时 (例如, 如果通过调用**fopen**打开*流*, 并使用包含**ccs = Unicode**、 **ccs = utf-utf-16le**或**ccs = utf-8**的模式参数), 或者如果模式为, 则为通过使用 **_setmode**和包含 **_O_WTEXT**、 **_O_U16TEXT**或 **_O_U8TEXT**的模式参数更改为 Unicode 转换模式,*缓冲区*被解释为指向包含  UTF-16 数据。 尝试在此模式下写入奇数个字节会导致参数验证错误。
+在 Unicode 转换模式下打开*流*时（例如，如果通过调用**fopen**打开*流*，并使用包含**ccs = Unicode**、 **ccs = utf-utf-16le**或**ccs = utf-8**的模式参数），或者如果模式为，则为通过使用 **_setmode**和包含 **_O_WTEXT**、 **_O_U16TEXT**或 **_O_U8TEXT**的模式参数更改为 Unicode 转换模式，*缓冲区*被解释为指向包含UTF-16 数据。 尝试在此模式下写入奇数个字节会导致参数验证错误。
 
-因为此函数会锁定调用线程，因此它是线程安全的。 有关非锁定版本, 请参阅 **_fwrite_nolock**。
+因为此函数会锁定调用线程，因此它是线程安全的。 有关非锁定版本，请参阅 **_fwrite_nolock**。
 
 ## <a name="requirements"></a>要求
 

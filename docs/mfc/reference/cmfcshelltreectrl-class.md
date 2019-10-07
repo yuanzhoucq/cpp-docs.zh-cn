@@ -28,18 +28,18 @@ helpviewer_keywords:
 - CMFCShellTreeCtrl [MFC], SetFlags
 - CMFCShellTreeCtrl [MFC], SetRelatedList
 ms.assetid: 3d1da715-9554-4ed7-968c-055c48146267
-ms.openlocfilehash: 1fc422c3aca3efe1fb177e7a3567530d70c27119
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 97136342049a54d45af893962025f01eda4366d4
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410056"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504910"
 ---
 # <a name="cmfcshelltreectrl-class"></a>CMFCShellTreeCtrl 类
 
-`CMFCShellTreeCtrl`类用于扩展[CTreeCtrl 类](../../mfc/reference/ctreectrl-class.md)通过显示 Shell 项的层次结构的功能。
+类通过显示 Shell 项的层次结构扩展[CTreeCtrl 类](../../mfc/reference/ctreectrl-class.md)的功能。 `CMFCShellTreeCtrl`
 
-有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。
+有关更多详细信息, 请参阅位于 Visual Studio 安装的**VC\\atlmfc\\src\\mfc**文件夹中的源代码。
 ## <a name="syntax"></a>语法
 
 ```
@@ -52,21 +52,21 @@ class CMFCShellTreeCtrl : public CTreeCtrl
 
 |名称|描述|
 |----------|-----------------|
-|[CMFCShellTreeCtrl::EnableShellContextMenu](#enableshellcontextmenu)|启用或禁用的快捷菜单。|
-|[CMFCShellTreeCtrl::GetFlags](#getflags)|返回传递给的标志的组合[IShellFolder::EnumObjects](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-enumobjects)。|
+|[CMFCShellTreeCtrl::EnableShellContextMenu](#enableshellcontextmenu)|启用或禁用快捷菜单。|
+|[CMFCShellTreeCtrl::GetFlags](#getflags)|返回传递给[IShellFolder:: EnumObjects](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ishellfolder-enumobjects)的标志的组合。|
 |[CMFCShellTreeCtrl::GetItemPath](#getitempath)|检索项的路径。|
-|[CMFCShellTreeCtrl::GetRelatedList](#getrelatedlist)|返回一个指向[CMFCShellListCtrl 类](../../mfc/reference/cmfcshelllistctrl-class.md)与这一起使用的对象`CMFCShellTreeCtrl`对象来创建类似于资源管理器的窗口。|
-|[CMFCShellTreeCtrl::OnChildNotify](#onchildnotify)|接收应用于该窗口的通知消息时，将通过此窗口的父窗口调用此成员函数。 (重写[CWnd::OnChildNotify](../../mfc/reference/cwnd-class.md#onchildnotify)。)|
+|[CMFCShellTreeCtrl::GetRelatedList](#getrelatedlist)|返回一个指向[CMFCShellListCtrl 类](../../mfc/reference/cmfcshelllistctrl-class.md)对象的指针, 该对象与此`CMFCShellTreeCtrl`对象一起用于创建类似资源管理器的窗口。|
+|[CMFCShellTreeCtrl::OnChildNotify](#onchildnotify)|此成员函数在收到应用于该窗口的通知消息时由该窗口的父窗口调用。 (重写[CWnd:: OnChildNotify](../../mfc/reference/cwnd-class.md#onchildnotify)。)|
 |[CMFCShellTreeCtrl::OnGetItemIcon](#ongetitemicon)||
 |[CMFCShellTreeCtrl::OnGetItemText](#ongetitemtext)||
 |[CMFCShellTreeCtrl::Refresh](#refresh)|刷新并重新绘制当前`CMFCShellTreeCtrl`对象。|
-|[CMFCShellTreeCtrl::SelectPath](#selectpath)|选择相应的树控件项基于提供的 PIDL 或字符串路径。|
-|[CMFCShellTreeCtrl::SetFlags](#setflags)|设置标志以筛选器树中上下文 (类似于使用的标志`IShellFolder::EnumObjects`)。|
-|[CMFCShellTreeCtrl::SetRelatedList](#setrelatedlist)|设置当前之间的关系`CMFCShellTreeCtrl`对象和一个`CMFCShellListCtrl`对象。|
+|[CMFCShellTreeCtrl::SelectPath](#selectpath)|基于所提供的 PIDL 或字符串路径选择适当的树控件项。|
+|[CMFCShellTreeCtrl::SetFlags](#setflags)|设置用于筛选树上下文的标志 (类似于使用`IShellFolder::EnumObjects`的标志)。|
+|[CMFCShellTreeCtrl::SetRelatedList](#setrelatedlist)|设置当前`CMFCShellTreeCtrl`对象`CMFCShellListCtrl`和对象之间的关系。|
 
 ## <a name="remarks"></a>备注
 
-此类扩展`CTreeCtrl`通过启用程序以将 Windows Shell 项包含在树中的类。 此类可以与之关联`CMFCShellListCtrl`对象来创建完整的资源管理器窗口。 然后，在树中选择一项将显示 Windows Shell 项的列表的关联列表中。
+此类通过使`CTreeCtrl`您的程序能够在树中包含 Windows Shell 项来扩展类。 此类可以与`CMFCShellListCtrl`对象相关联, 以创建完整的资源管理器窗口。 然后, 在树中选择一项将在关联列表中显示 Windows Shell 项的列表。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -82,18 +82,18 @@ class CMFCShellTreeCtrl : public CTreeCtrl
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxshelltreeCtrl.h
+**标头:** afxshelltreeCtrl
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何创建 `CMFCShellTreeCtrl` 类的对象。 此代码片段属于[资源管理器示例](../../overview/visual-cpp-samples.md)。
+下面的示例演示如何创建 `CMFCShellTreeCtrl` 类的对象。 此代码片段是[资源管理器示例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_Explorer#4](../../mfc/reference/codesnippet/cpp/cmfcshelltreectrl-class_1.h)]
 [!code-cpp[NVC_MFC_Explorer#5](../../mfc/reference/codesnippet/cpp/cmfcshelltreectrl-class_2.cpp)]
 
-##  <a name="enableshellcontextmenu"></a>  CMFCShellTreeCtrl::EnableShellContextMenu
+##  <a name="enableshellcontextmenu"></a>CMFCShellTreeCtrl::EnableShellContextMenu
 
-启用的快捷菜单。
+启用快捷菜单。
 
 ```
 void EnableShellContextMenu(BOOL bEnable = TRUE);
@@ -102,11 +102,11 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 ### <a name="parameters"></a>参数
 
 *bEnable*<br/>
-[in]一个布尔值，指定是否启用的快捷菜单。
+中一个布尔值, 指定是否启用快捷菜单。
 
-##  <a name="getflags"></a>  CMFCShellTreeCtrl::GetFlags
+##  <a name="getflags"></a>CMFCShellTreeCtrl:: GetFlags
 
-返回为设置的标志[CMFCShellTreeCtrl 类](../../mfc/reference/cmfcshelltreectrl-class.md)对象。
+返回为[CMFCShellTreeCtrl 类](../../mfc/reference/cmfcshelltreectrl-class.md)对象设置的标志。
 
 ```
 DWORD GetFlags() const;
@@ -114,15 +114,15 @@ DWORD GetFlags() const;
 
 ### <a name="return-value"></a>返回值
 
-设置指定标志的组合当前为 DWORD 值。
+一个 DWORD 值, 指定当前设置的标志的组合。
 
 ### <a name="remarks"></a>备注
 
-设置的标志`CMFCShellTreeCtrl`发送到方法[IShellFolder::EnumObjects](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-enumobjects)每当刷新对象。 你可以使用的标志[CMFCShellTreeCtrl::SetFlags](#setflags)方法。
+每次刷新对象时`CMFCShellTreeCtrl` , 将在中设置的标志发送到方法[IShellFolder:: EnumObjects](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ishellfolder-enumobjects) 。 可以用[CMFCShellTreeCtrl:: SetFlags](#setflags)方法更改标志。
 
-##  <a name="getitempath"></a>  CMFCShellTreeCtrl::GetItemPath
+##  <a name="getitempath"></a>CMFCShellTreeCtrl::GetItemPath
 
-检索中的项的路径[CMFCShellTreeCtrl 类](../../mfc/reference/cmfcshelltreectrl-class.md)对象。
+检索[CMFCShellTreeCtrl 类](../../mfc/reference/cmfcshelltreectrl-class.md)对象中的项的路径。
 
 ```
 BOOL GetItemPath(
@@ -133,24 +133,24 @@ BOOL GetItemPath(
 ### <a name="parameters"></a>参数
 
 *strPath*<br/>
-[out]对字符串参数的引用。 该方法将写入此参数的项的路径。
+弄对字符串参数的引用。 方法将项的路径写入此参数。
 
 *htreeItem*<br/>
-[in]方法检索此树控件项的路径。
+中方法检索此树控件项的路径。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则非零值否则为 0。
+如果成功, 则为非零值;否则为0。
 
 ### <a name="remarks"></a>备注
 
-如果此方法失败， *strPath*包含空字符串。
+如果此方法失败, *strPath*将包含空字符串。
 
-如果未指定*hTreeItem*，此方法尝试获取当前选定项的字符串。 如果未不选择任何项并*hTreeItem*为 NULL，此方法将失败。
+如果未指定*hTreeItem*, 则此方法将尝试获取当前选定项的字符串。 如果未选择任何项并且*hTreeItem*为 NULL, 则此方法将失败。
 
-##  <a name="getrelatedlist"></a>  CMFCShellTreeCtrl::GetRelatedList
+##  <a name="getrelatedlist"></a>CMFCShellTreeCtrl::GetRelatedList
 
-返回一个指向[CMFCShellListCtrl 类](../../mfc/reference/cmfcshelllistctrl-class.md)对象，它是与此相关联[CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md)对象。
+返回一个指向与此[CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md)对象关联的[CMFCShellListCtrl 类](../../mfc/reference/cmfcshelllistctrl-class.md)对象的指针。
 
 ```
 CMFCShellListCtrl* GetRelatedList() const;
@@ -158,13 +158,13 @@ CMFCShellListCtrl* GetRelatedList() const;
 
 ### <a name="return-value"></a>返回值
 
-一个指向`CMFCShellListCtrl`与此树控件对象相关联的对象。
+指向与此树`CMFCShellListCtrl`控件对象关联的对象的指针。
 
 ### <a name="remarks"></a>备注
 
-通过使用`CMFCShellListCtrl`对象一起使用`CMFCShellTreeCtrl`对象，可以创建一个类似于资源管理器的窗口。 使用方法[CMFCShellTreeCtrl::SetRelatedList](#setrelatedlist)要关联两个类。 它们相关联后，框架会自动更新`CMFCShellListCtrl`如果在所选内容`CMFCShellTreeCtrl`更改。
+通过将`CMFCShellListCtrl`对象`CMFCShellTreeCtrl`与对象一起使用, 你可以创建类似资源管理器的窗口。 使用方法[CMFCShellTreeCtrl:: SetRelatedList](#setrelatedlist)将两个类关联起来。 关联后, 框架会自动更新`CMFCShellListCtrl` , 前提是`CMFCShellTreeCtrl`更改了中的选定内容。
 
-##  <a name="onchildnotify"></a>  CMFCShellTreeCtrl::OnChildNotify
+##  <a name="onchildnotify"></a>CMFCShellTreeCtrl:: OnChildNotify
 
 ```
 virtual BOOL OnChildNotify(
@@ -176,16 +176,16 @@ virtual BOOL OnChildNotify(
 
 ### <a name="parameters"></a>参数
 
-[in] *message*<br/>
+中*消息*<br/>
 [in] *wParam*<br/>
 [in] *lParam*<br/>
-[in] *pLResult*<br/>
+中*pLResult*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ongetitemicon"></a>  CMFCShellTreeCtrl::OnGetItemIcon
+##  <a name="ongetitemicon"></a>CMFCShellTreeCtrl::OnGetItemIcon
 
 ```
 virtual int OnGetItemIcon(
@@ -196,7 +196,7 @@ virtual int OnGetItemIcon(
 ### <a name="parameters"></a>参数
 
 [in] *pItem*<br/>
-[in] *bSelected*<br/>
+中*bSelected*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -226,11 +226,11 @@ void Refresh();
 
 ### <a name="remarks"></a>备注
 
-调用此方法来刷新中显示的项的层次结构`CMFCShellTreeCtrl`。
+调用此方法以刷新中`CMFCShellTreeCtrl`显示的项的层次结构。
 
-##  <a name="selectpath"></a>  CMFCShellTreeCtrl::SelectPath
+##  <a name="selectpath"></a>CMFCShellTreeCtrl::SelectPath
 
-选择中的项[CMFCShellTreeCtrl 类](../../mfc/reference/cmfcshelltreectrl-class.md)基于提供的路径。
+基于所提供的路径, 在[CMFCShellTreeCtrl 类](../../mfc/reference/cmfcshelltreectrl-class.md)中选择一个项。
 
 ```
 BOOL SelectPath(LPCTSTR lpszPath);
@@ -240,18 +240,18 @@ BOOL SelectPath(LPCITEMIDLIST lpidl);
 ### <a name="parameters"></a>参数
 
 *lpszPath*<br/>
-[in]一个字符串，指定项的路径。
+中一个字符串, 指定项的路径。
 
 *lpidl*<br/>
-[in]指定的项 PIDL
+中指定项的 PIDL
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则为 S_OK否则为 E_FAIL。
+如果成功, 则为 S_OK;否则为 E_FAIL。
 
-##  <a name="setflags"></a>  CMFCShellTreeCtrl::SetFlags
+##  <a name="setflags"></a>CMFCShellTreeCtrl::SetFlags
 
-设置标志以筛选器树中上下文。
+设置用于筛选树上下文的标志。
 
 ```
 void SetFlags(
@@ -262,18 +262,18 @@ void SetFlags(
 ### <a name="parameters"></a>参数
 
 *dwFlags*<br/>
-[in]要设置的标志。
+中要设置的标志。
 
 *bRefresh*<br/>
-[in]一个布尔值，指定是否`CMFCShellTreeCtrl`应立即进行刷新。
+中一个布尔值, 指定是否`CMFCShellTreeCtrl`应立即刷新。
 
 ### <a name="remarks"></a>备注
 
-`CMFCShellTreeCtrl`传递所有标志设置为[IShellFolder::EnumObjects](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-enumobjects)。 有关不同的标志的值的详细信息，请参阅[IShellFolder::EnumObjects](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-enumobjects)。
+将`CMFCShellTreeCtrl`所有 set 标志传递给[IShellFolder:: EnumObjects](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ishellfolder-enumobjects)。 有关不同标志的值的详细信息, 请参阅[IShellFolder:: EnumObjects](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ishellfolder-enumobjects)。
 
-##  <a name="setrelatedlist"></a>  CMFCShellTreeCtrl::SetRelatedList
+##  <a name="setrelatedlist"></a>CMFCShellTreeCtrl::SetRelatedList
 
-将相关联[CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)对象[CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md)对象。
+将[CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)对象与[CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md)对象相关联。
 
 ```
 void SetRelatedList(CMFCShellListCtrl* pShellList);
@@ -282,13 +282,13 @@ void SetRelatedList(CMFCShellListCtrl* pShellList);
 ### <a name="parameters"></a>参数
 
 *pShellList*<br/>
-[in]一个指向`CMFCShellListCtrl`对象。
+中指向`CMFCShellListCtrl`对象的指针。
 
 ### <a name="remarks"></a>备注
 
-此方法将相关联`CMFCShellListCtrl`与`CMFCShellTreeCtrl`。 这些对象可能显示为一个类似于资源管理器的窗口： 如果用户选择中的对象`CMFCShellTreeCtrl`、 关联中的项`CMFCShellListCtrl`将自动更新。
+此方法将`CMFCShellListCtrl` `CMFCShellTreeCtrl`与相关联。 这些对象可能会显示为类似浏览器的窗口: 如果用户在`CMFCShellTreeCtrl`中选择对象, `CMFCShellListCtrl`将自动更新中的关联项。
 
-使用方法[CMFCShellTreeCtrl::GetRelatedList](#getrelatedlist)检索`CMFCShellListCtrl`与关联`CMFCShellTreeCtrl`。
+使用方法[CMFCShellTreeCtrl:: GetRelatedList](#getrelatedlist)来检索与`CMFCShellListCtrl` `CMFCShellTreeCtrl`关联的。
 
 ## <a name="see-also"></a>请参阅
 

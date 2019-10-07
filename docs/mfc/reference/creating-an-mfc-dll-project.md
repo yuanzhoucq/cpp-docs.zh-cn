@@ -1,6 +1,6 @@
 ---
 title: 创建 MFC DLL 项目
-ms.date: 11/04/2016
+ms.date: 08/19/2019
 f1_keywords:
 - vc.appwiz.mfcdll.project
 helpviewer_keywords:
@@ -9,38 +9,36 @@ helpviewer_keywords:
 - projects [MFC], creating
 - DLLs [MFC], creating
 ms.assetid: 05540b93-4781-4a90-aadf-55158313f5b2
-ms.openlocfilehash: cd1d7910d95fa7e412f9843da2cec7ae10a38ef6
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 649a47abea23aedb9aa97bb4923e7a800348e27e
+ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708228"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70108482"
 ---
 # <a name="creating-an-mfc-dll-project"></a>创建 MFC DLL 项目
 
-非 MFC DLL 是作为可同时由多个应用程序的函数的共享库的二进制文件。 若要创建非 MFC DLL 项目的最简单方法是使用 MFC DLL 向导。
+MFC DLL 是一个二进制文件, 它充当可由多个应用程序同时使用的共享函数库。 创建 MFC DLL 项目的最简单方法是使用 MFC DLL 向导。
 
 > [!NOTE]
->  在 IDE 中的功能的外观可以取决于您现用的设置或版本，并且可能不同于帮助中所述。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。
+>  IDE 中的功能的外观可能取决于您的活动设置或版本, 可能与帮助中描述的不同。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。
 
-### <a name="to-create-an-mfc-dll-project-using-the-mfc-dll-wizard"></a>若要创建 MFC DLL 项目使用 MFC DLL 向导
+### <a name="to-create-an-mfc-dll-project-using-the-mfc-dll-wizard"></a>使用 MFC DLL 向导创建 MFC DLL 项目
 
-1. 按照帮助主题中的说明[创建C++控制台应用程序项目](../../get-started/tutorial-console-cpp.md)。
+1. 按照帮助主题[创建 Mfc 应用程序](creating-an-mfc-application.md)中的说明操作, 但从可用模板列表中选择**Mfc 动态链接库**或**mfc DLL** 。
 
-**请注意**中**新建项目**对话框中，选择`MFC DLL`模板窗格打开 MFC DLL 向导中的图标。
-
-1. 定义使用应用程序设置[应用程序设置](../../mfc/reference/application-settings-mfc-dll-wizard.md)页[MFC DLL 向导](../../mfc/reference/mfc-dll-wizard.md)。
+1. 使用[MFC DLL 向导](../../mfc/reference/mfc-dll-wizard.md)的 "[应用程序设置](../../mfc/reference/application-settings-mfc-dll-wizard.md)" 页定义应用程序设置。
 
     > [!NOTE]
     >  跳过此步骤可保留向导的默认设置。
 
-1. 单击**完成**以关闭向导并打开新项目中的**解决方案资源管理器**。
+1. 单击 "**完成**" 关闭向导并在**解决方案资源管理器**中打开新项目。
 
-你的项目创建后，可以查看中创建的文件**解决方案资源管理器**。 有关向导为项目创建的文件的更多信息，请参见项目生成的文件 ReadMe.txt。 有关文件类型的详细信息，请参阅[用于 Visual Studio 创建的文件类型C++项目](../../build/reference/file-types-created-for-visual-cpp-projects.md)。
+创建项目后，可以在“解决方案资源管理器”中查看创建的文件。 有关向导为项目创建的文件的更多信息，请参见项目生成的文件 ReadMe.txt。 有关文件类型的详细信息，请参阅[为 Visual Studio C++ 项目创建的文件类型](../../build/reference/file-types-created-for-visual-cpp-projects.md)。
 
 ## <a name="see-also"></a>请参阅
 
-[C++在 Visual Studio 中的项目类型](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)<br/>
+[Visual Studio 中的 C++ 项目类型](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)<br/>
 [用代码向导添加功能](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [属性页](../../build/reference/property-pages-visual-cpp.md)
 

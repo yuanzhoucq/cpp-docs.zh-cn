@@ -1,11 +1,11 @@
 ---
 title: cproj、cprojf、cprojl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - cproj
 - cprojf
 - cprojl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cproj
 - cprojf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - cprojf function
 - cprojl function
 ms.assetid: 32b49623-13bf-4cae-802e-7912d75030fe
-ms.openlocfilehash: f1054172a7b5afde134ce9fa735a7eeda3bddafb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fdeefe10814b887af04d6f4adbb01300785e8b46
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445664"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938955"
 ---
 # <a name="cproj-cprojf-cprojl"></a>cproj、cprojf、cprojl
 
@@ -68,17 +71,17 @@ _Lcomplex cprojl(
 
 ## <a name="return-value"></a>返回值
 
-投影*z* Reimann 球体上。
+Reimann 球体上*z*的投影。
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，可以调用的重载**cproj**采用并返回 **_Fcomplex**并 **_Lcomplex**值。 在 C 程序中， **cproj**始终采用并返回 **_Dcomplex**值。
+由于C++允许重载，因此可以调用**cproj**的重载，该重载采用并返回 **_Fcomplex**和 **_Lcomplex**值。 在 C 程序中， **cproj**始终采用并返回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|C 标头|C++ 标头|
 |-------------|--------------|------------------|
-|**cproj**， **cprojf**， **cprojl**|\<complex.h>|\<ccomplex>|
+|**cproj**、 **cprojf**、 **cprojl**|\<complex.h>|\<ccomplex>|
 
 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

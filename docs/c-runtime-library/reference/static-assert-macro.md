@@ -1,7 +1,7 @@
 ---
 title: _STATIC_ASSERT 宏
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -12,22 +12,25 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _STATIC_ASSERT
 helpviewer_keywords:
 - _STATIC_ASSERT macro
 ms.assetid: 89b0350c-2c2f-4be6-9786-8b1f0780a5da
-ms.openlocfilehash: 5d3aa1d9665b48a0690d8eb62353fc98c5a550f7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ac609fc7af937b6f56cd5b310341409187df7de4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354684"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957934"
 ---
-# <a name="staticassert-macro"></a>_STATIC_ASSERT 宏
+# <a name="_static_assert-macro"></a>_STATIC_ASSERT 宏
 
-计算在编译时表达式，并生成错误时的结果是**FALSE**。
+在编译时计算表达式，并在结果为**FALSE**时生成错误。
 
 ## <a name="syntax"></a>语法
 
@@ -40,15 +43,15 @@ _STATIC_ASSERT(
 ### <a name="parameters"></a>参数
 
 *booleanExpression*<br/>
-表达式 （包括指针） 的计算结果不为零 (**，则返回 TRUE**) 或 0 (**FALSE**)。
+计算结果为非零值（**TRUE**）或0（**FALSE**）的表达式（包括指针）。
 
 ## <a name="remarks"></a>备注
 
-此宏类似于[_ASSERT 和 _ASSERTE 宏](assert-asserte-assert-expr-macros.md)，只不过*布尔表达式*在而不是在运行时的编译时计算。 如果*布尔表达式*的计算结果为**FALSE** (0)，[编译器错误 C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md)生成。
+此宏类似于[_ASSERT 和 _ASSERTE 宏](assert-asserte-assert-expr-macros.md)，只不过*booleanExpression*在编译时（而不是在运行时）进行计算。 如果*booleanExpression*的计算结果为**FALSE** （0），则会生成[编译器错误 C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) 。
 
 ## <a name="example"></a>示例
 
-在此示例中，我们检查是否[sizeof](../../c-language/sizeof-operator-c.md) **int**大于或等于 2 字节和是否[sizeof](../../c-language/sizeof-operator-c.md) **长**是 1 个字节。 程序将不进行编译，它将生成[编译器错误 C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md)因为**长**大于 1 个字节。
+在此示例中，我们将检查[sizeof](../../c-language/sizeof-operator-c.md) **int**是否大于或等于2字节以及[sizeof](../../c-language/sizeof-operator-c.md) **是否为 1**字节。 程序将不会进行编译，并且它将生成[编译器错误 C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) ，因为**long**大于1字节。
 
 ```C
 // crt__static_assert.c

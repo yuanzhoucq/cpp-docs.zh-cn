@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleDocObjectItem [MFC], QueryCommand
 - COleDocObjectItem [MFC], Release
 ms.assetid: d150d306-8fd3-4831-b06d-afbe71d8fc9b
-ms.openlocfilehash: 382960b4dc4dcfa61c836a87044dd14585756174
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c6e00bf42cf20b46c949c218efe1820cc7ce0f9b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62225508"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504013"
 ---
 # <a name="coledocobjectitem-class"></a>COleDocObjectItem 类
 
@@ -47,36 +47,36 @@ class COleDocObjectItem : public COleClientItem
 
 |名称|描述|
 |----------|-----------------|
-|[COleDocObjectItem::COleDocObjectItem](#coledocobjectitem)|构造`COleDocObject`项。|
+|[COleDocObjectItem::COleDocObjectItem](#coledocobjectitem)|`COleDocObject`构造项。|
 
 ### <a name="public-methods"></a>公共方法
 
 |名称|描述|
 |----------|-----------------|
-|[COleDocObjectItem::DoDefaultPrinting](#dodefaultprinting)|将容器应用程序的文档使用的默认打印机设置打印。|
-|[COleDocObjectItem::ExecCommand](#execcommand)|执行由用户指定的命令。|
+|[COleDocObjectItem::DoDefaultPrinting](#dodefaultprinting)|使用默认打印机设置打印容器应用程序的文档。|
+|[COleDocObjectItem::ExecCommand](#execcommand)|执行用户指定的命令。|
 |[COleDocObjectItem::GetActiveView](#getactiveview)|检索文档的活动视图。|
-|[COleDocObjectItem::GetPageCount](#getpagecount)|检索容器应用程序的文档中的页面数。|
-|[COleDocObjectItem::OnPreparePrinting](#onprepareprinting)|准备容器应用程序的文档进行打印。|
-|[COleDocObjectItem::OnPrint](#onprint)|输出容器应用程序的文档。|
+|[COleDocObjectItem::GetPageCount](#getpagecount)|检索容器应用程序的文档中的页数。|
+|[COleDocObjectItem::OnPreparePrinting](#onprepareprinting)|准备要打印的容器应用程序文档。|
+|[COleDocObjectItem::OnPrint](#onprint)|打印容器应用程序的文档。|
 |[COleDocObjectItem::QueryCommand](#querycommand)|查询由用户界面事件生成的一个或多个命令的状态。|
-|[COleDocObjectItem::Release](#release)|释放为 OLE 链接项连接并关闭它，如果它处于打开状态。 不会销毁的客户端项。|
+|[COleDocObjectItem::Release](#release)|释放到 OLE 链接项的连接并在打开时将其关闭。 不会销毁客户端项。|
 
 ## <a name="remarks"></a>备注
 
-在 MFC 中，活动文档被处理方法类似于常规、 就地编辑嵌入，具有以下差异：
+在 MFC 中, 活动文档的处理方式类似于常规的就地可编辑嵌入, 具有以下差异:
 
-- `COleDocument`的派生的类仍然保留当前嵌入的项的列表; 不过，这些项可能`COleDocObjectItem`-派生的项。
+- 派生的类仍保留当前嵌入项的列表; 但是, 这些项可能是`COleDocObjectItem`派生项。 `COleDocument`
 
-- 活动文档处于活动状态，它会占据整个工作区的视图，处于就地活动状态时。
+- 活动文档处于活动状态时, 它会占用视图的整个工作区 (当它处于就地活动状态时)。
 
-- 活动文档容器拥有完全控制权**帮助**菜单。
+- 活动文档容器对 "**帮助**" 菜单具有完全控制。
 
-- **帮助**菜单包含的活动文档容器和服务器的菜单项。
+- "**帮助**" 菜单包含活动文档容器和服务器的菜单项。
 
-由于活动文档容器拥有**帮助**菜单中，容器负责转发服务器**帮助**菜单消息到服务器。 这种集成处理通过`COleDocObjectItem`。
+由于活动文档容器拥有 "**帮助**" 菜单, 因此容器负责将服务器**帮助**菜单消息转发到服务器。 此集成由`COleDocObjectItem`处理。
 
-菜单合并功能和活动文档激活的详细信息，请参阅概述[活动文档包容](../../mfc/active-document-containment.md)。
+有关菜单合并和活动文档激活的详细信息, 请参阅[活动文档包含](../../mfc/active-document-containment.md)的概述。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -92,9 +92,9 @@ class COleDocObjectItem : public COleClientItem
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxole.h
+**标头:** afxole
 
-##  <a name="coledocobjectitem"></a>  COleDocObjectItem::COleDocObjectItem
+##  <a name="coledocobjectitem"></a>COleDocObjectItem:: COleDocObjectItem
 
 调用此成员函数以初始化`COleDocObjectItem`对象。
 
@@ -105,11 +105,11 @@ COleDocObjectItem(COleDocument* pContainerDoc = NULL);
 ### <a name="parameters"></a>参数
 
 *pContainerDoc*<br/>
-一个指向`COleDocument`充当活动文档容器的对象。 此参数必须为 NULL 以启用 IMPLEMENT_SERIALIZE。 通常情况下使用非 NULL 文档指针构造 OLE 项。
+指向作为活动文档`COleDocument`容器的对象的指针。 若要启用 IMPLEMENT_SERIALIZE, 此参数必须为 NULL。 通常使用非 NULL 文档指针构造 OLE 项。
 
-##  <a name="dodefaultprinting"></a>  COleDocObjectItem::DoDefaultPrinting
+##  <a name="dodefaultprinting"></a>COleDocObjectItem::D oDefaultPrinting
 
-由框架调用到使用默认设置的文档。
+由框架由使用默认设置的文档调用。
 
 ```
 static HRESULT DoDefaultPrinting(
@@ -120,14 +120,14 @@ static HRESULT DoDefaultPrinting(
 ### <a name="parameters"></a>参数
 
 *pCaller*<br/>
-一个指向[CView](../../mfc/reference/cview-class.md)发送打印命令的对象。
+指向发送打印命令的[CView](../../mfc/reference/cview-class.md)对象的指针。
 
 *pInfo*<br/>
-一个指向[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)对象，描述要打印的作业。
+指向描述要打印的作业的[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)对象的指针。
 
-##  <a name="execcommand"></a>  COleDocObjectItem::ExecCommand
+##  <a name="execcommand"></a>COleDocObjectItem:: ExecCommand
 
-调用此成员函数以执行用户指定的命令。
+调用此成员函数可执行用户指定的命令。
 
 ```
 HRESULT ExecCommand(
@@ -139,36 +139,36 @@ HRESULT ExecCommand(
 ### <a name="parameters"></a>参数
 
 *nCmdID*<br/>
-要执行的命令标识符。 必须在由标识的组*pguidCmdGroup*。
+要执行的命令的标识符。 必须位于由*pguidCmdGroup*标识的组中。
 
 *nCmdExecOpt*<br/>
-指定命令执行选项。 默认情况下，设置为不提示用户执行命令。 请参阅[OLECMDEXECOPT](/windows/desktop/api/docobj/ne-docobj-olecmdexecopt)有关值的列表。
+指定命令执行选项。 默认情况下, 将设置为在不提示用户的情况下执行命令。 有关值的列表, 请参阅[OLECMDEXECOPT](/windows/win32/api/docobj/ne-docobj-olecmdexecopt) 。
 
 *pguidCmdGroup*<br/>
-命令组的唯一标识符。 默认情况下，NULL，指定标准的组。 该命令中传递*nCmdID*必须属于的组。
+命令组的唯一标识符。 默认情况下, 为 NULL, 它指定标准组。 传入*nCmdID*的命令必须属于组。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则为 S_OK 返回否则，返回以下错误代码之一。
+如果成功, 则返回 S_OK;否则, 将返回以下错误代码之一。
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
-|E_UNEXPECTED|出现意外的错误。|
+|E_UNEXPECTED|出现意外错误。|
 |E_FAIL|出现错误。|
-|E_NOTIMPL|指示 MFC 本身应尝试转换并将其分派命令。|
-|OLECMDERR_E_UNKNOWNGROUP|*pguidCmdGroup*非 null 值，但未指定已识别的命令组。|
+|E_NOTIMPL|指示 MFC 本身应尝试转换和调度命令。|
+|OLECMDERR_E_UNKNOWNGROUP|*pguidCmdGroup*为非 NULL, 但未指定可识别的命令组。|
 |OLECMDERR_E_NOTSUPPORTED|*nCmdID*未被识别为组 pGroup 中的有效命令。|
-|OLECMDERR_DISABLED|该命令由标识*nCmdID*被禁用，并且不能执行。|
-|OLECMDERR_NOHELP|由标识命令的帮助请求调用方*nCmdID*但没有帮助可用。|
-|OLECMDERR_CANCELLED|用户已取消执行。|
+|OLECMDERR_DISABLED|*NCmdID*标识的命令已禁用, 无法执行。|
+|OLECMDERR_NOHELP|调用方请求有关由*nCmdID*标识的命令的帮助, 但没有可用的帮助。|
+|OLECMDERR_CANCELLED|用户取消了执行。|
 
 ### <a name="remarks"></a>备注
 
-*PguidCmdGroup*并*nCmdID*参数一起唯一地标识要调用的命令。 *NCmdExecOpt*参数指定要执行的具体操作。
+*PguidCmdGroup*和*nCmdID*参数一起唯一标识要调用的命令。 *NCmdExecOpt*参数指定要执行的确切操作。
 
 ##  <a name="getactiveview"></a>  COleDocObjectItem::GetActiveView
 
-调用此成员函数可获取一个指向`IOleDocumentView`当前处于活动状态的视图的接口。
+调用此成员函数以获取指向`IOleDocumentView`当前活动视图的接口的指针。
 
 ```
 LPOLEDOCUMENTVIEW GetActiveView() const;
@@ -176,15 +176,15 @@ LPOLEDOCUMENTVIEW GetActiveView() const;
 
 ### <a name="return-value"></a>返回值
 
-一个指向[IOleDocumentView](/windows/desktop/api/docobj/nn-docobj-ioledocumentview)当前处于活动状态的视图的接口。 如果没有当前视图，则返回 NULL。
+指向当前活动视图的[IOleDocumentView](/windows/win32/api/docobj/nn-docobj-ioledocumentview)接口的指针。 如果没有当前视图, 它将返回 NULL。
 
 ### <a name="remarks"></a>备注
 
-对返回的引用计数`IOleDocumentView`此函数返回之前，不会增加指针。
+返回`IOleDocumentView`的指针上的引用计数在此函数返回之前不会递增。
 
 ##  <a name="getpagecount"></a>  COleDocObjectItem::GetPageCount
 
-调用此成员函数可检索的文档中的页数。
+调用此成员函数以检索文档中的页数。
 
 ```
 BOOL GetPageCount(
@@ -195,18 +195,18 @@ BOOL GetPageCount(
 ### <a name="parameters"></a>参数
 
 *pnFirstPage*<br/>
-一个指向文档的第一页的页码。 可以为 NULL，指示调用方不需要此数字。
+指向文档的第一页的页码的指针。 可以为 NULL, 指示调用方不需要此数字。
 
 *pcPages*<br/>
-指向文档中的页总数的指针。 可以为 NULL，指示调用方不需要此数字。
+一个指针, 指向文档中的总页数。 可以为 NULL, 指示调用方不需要此数字。
 
 ### <a name="return-value"></a>返回值
 
 如果成功，则不为 0；否则为 0。
 
-##  <a name="onprepareprinting"></a>  COleDocObjectItem::OnPreparePrinting
+##  <a name="onprepareprinting"></a>COleDocObjectItem:: OnPreparePrinting
 
-准备用于打印的文档框架调用此成员函数。
+框架调用此成员函数来准备要打印的文档。
 
 ```
 static BOOL OnPreparePrinting(
@@ -218,21 +218,21 @@ static BOOL OnPreparePrinting(
 ### <a name="parameters"></a>参数
 
 *pCaller*<br/>
-一个指向[CView](../../mfc/reference/cview-class.md)发送打印命令的对象。
+指向发送打印命令的[CView](../../mfc/reference/cview-class.md)对象的指针。
 
 *pInfo*<br/>
-一个指向[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)对象，描述要打印的作业。
+指向描述要打印的作业的[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)对象的指针。
 
 *bPrintAll*<br/>
-指定是否要打印整个文档。
+指定是否打印整个文档。
 
 ### <a name="return-value"></a>返回值
 
 如果成功，则不为 0；否则为 0。
 
-##  <a name="onprint"></a>  COleDocObjectItem::OnPrint
+##  <a name="onprint"></a>COleDocObjectItem:: OnPrint
 
-此成员函数调用由框架对文档进行打印。
+框架调用此成员函数来打印文档。
 
 ```
 static void OnPrint(
@@ -244,15 +244,15 @@ static void OnPrint(
 ### <a name="parameters"></a>参数
 
 *pCaller*<br/>
-指向正在发送打印命令的 CView 对象的指针。
+指向发送打印命令的 CView 对象的指针。
 
 *pInfo*<br/>
-一个指向[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)对象，描述要打印的作业。
+指向描述要打印的作业的[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)对象的指针。
 
 *bPrintAll*<br/>
-指定是否要打印整个文档。
+指定是否打印整个文档。
 
-##  <a name="querycommand"></a>  COleDocObjectItem::QueryCommand
+##  <a name="querycommand"></a>COleDocObjectItem:: QueryCommand
 
 查询由用户界面事件生成的一个或多个命令的状态。
 
@@ -267,28 +267,28 @@ HRESULT QueryCommand(
 ### <a name="parameters"></a>参数
 
 *nCmdID*<br/>
-对其进行查询的命令标识符。
+正在查询的命令的标识符。
 
 *pdwStatus*<br/>
-指向作为查询结果返回的标志的指针。 有关可能的值的列表，请参阅[OLECMDF](/windows/desktop/api/docobj/ne-docobj-olecmdf)。
+一个指针, 指向作为查询结果返回的标志。 有关可能值的列表, 请参阅[OLECMDF](/windows/win32/api/docobj/ne-docobj-olecmdf)。
 
 *pCmdText*<br/>
-指向[OLECMDTEXT](/windows/desktop/api/docobj/ns-docobj-_tagolecmdtext)中要返回其单个命令的名称和状态信息的结构。 可以为 NULL 以指示调用方不需要此信息。
+指向[OLECMDTEXT](/windows/win32/api/docobj/ns-docobj-olecmdtext)结构的指针, 将在该结构中返回单个命令的名称和状态信息。 可以为 NULL, 以指示调用方不需要此信息。
 
 *pguidCmdGroup*<br/>
-命令组; 的唯一标识符可以为 NULL，以指定标准的组。
+命令组的唯一标识符;可以为 NULL 以指定标准组。
 
 ### <a name="return-value"></a>返回值
 
-返回值的完整列表，请参阅[IOleCommandTarget::QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) Windows SDK 中。
+有关返回值的完整列表, 请参阅 Windows SDK 中的[IOleCommandTarget:: QueryStatus](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-querystatus) 。
 
 ### <a name="remarks"></a>备注
 
-此成员函数模拟的功能[IOleCommandTarget::QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus)方法，如 Windows SDK 中所述。
+此成员函数模拟[IOleCommandTarget:: QueryStatus](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-querystatus)方法的功能, 如 Windows SDK 中所述。
 
 ##  <a name="release"></a>  COleDocObjectItem::Release
 
-释放为 OLE 链接项连接并关闭它，如果它处于打开状态。 不会销毁的客户端项。
+释放到 OLE 链接项的连接并在打开时将其关闭。 不会销毁客户端项。
 
 ```
 virtual void Release(OLECLOSE dwCloseOption = OLECLOSE_NOSAVE);
@@ -297,11 +297,11 @@ virtual void Release(OLECLOSE dwCloseOption = OLECLOSE_NOSAVE);
 ### <a name="parameters"></a>参数
 
 *dwCloseOption*<br/>
-标志，指定何种情况下向加载状态返回时保存 OLE 项。 有关可能的值的列表，请参阅[COleClientItem::Close](../../mfc/reference/coleclientitem-class.md#close)。
+指定在 OLE 项返回到已加载状态时, 该 OLE 项保存在什么情况下的标志。 有关可能值的列表, 请参阅[COleClientItem:: Close](../../mfc/reference/coleclientitem-class.md#close)。
 
 ### <a name="remarks"></a>备注
 
-不会销毁的客户端项。
+不会销毁客户端项。
 
 ## <a name="see-also"></a>请参阅
 

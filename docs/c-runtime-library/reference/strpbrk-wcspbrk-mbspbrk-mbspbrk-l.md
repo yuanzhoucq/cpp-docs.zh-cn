@@ -1,12 +1,12 @@
 ---
 title: strpbrk、wcspbrk、_mbspbrk、_mbspbrk_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbspbrk
 - wcspbrk
 - _mbspbrk_l
 - strpbrk
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fstrpbrk
 - _mbspbrk
@@ -44,14 +47,14 @@ helpviewer_keywords:
 - _mbspbrk function
 - mbspbrk_l function
 ms.assetid: 80b504f7-a167-4dde-97ad-4ae3000dc810
-ms.openlocfilehash: 059b0659a8088783c6d169288de486b41a6e8d82
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d6b18ab6dabfb1181f3e65507d27f6afe98a5b9f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209562"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947153"
 ---
-# <a name="strpbrk-wcspbrk-mbspbrk-mbspbrkl"></a>strpbrk、wcspbrk、_mbspbrk、_mbspbrk_l
+# <a name="strpbrk-wcspbrk-_mbspbrk-_mbspbrk_l"></a>strpbrk、wcspbrk、_mbspbrk、_mbspbrk_l
 
 扫描字符串以查找指定字符集中的字符。
 
@@ -127,21 +130,21 @@ null 终止的字符集。
 
 ## <a name="return-value"></a>返回值
 
-返回指向从任何字符的第一个匹配项的指针*strCharSet*中*str*，或如果两个字符串参数的 NULL 指针的共同点没有字符。
+返回一个指针，该指针指向字符串中*strCharSet*的第一个匹配*项，如果*这两个字符串参数没有共同的字符，则返回空指针。
 
 ## <a name="remarks"></a>备注
 
-`strpbrk`函数中的字符的第一个匹配项返回一个指针*str*属于组中的字符*strCharSet*。 搜索不包括终止 null 字符。
+函数返回一个指针，该指针指向*str*中某个字符的第一个匹配项，该字符属于 strCharSet 中的字符集。 `strpbrk` 搜索不包括终止 null 字符。
 
 `wcspbrk` 和 `_mbspbrk` 分别是 `strpbrk`的宽字符及多字节字符版本。 `wcspbrk` 的参数和返回值是宽字符字符串；而 `_mbspbrk` 的则是多字节字符字符串。
 
-`_mbspbrk` 会验证其参数。 如果*str*或*strCharSet*为 NULL，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则`_mbspbrk`返回 NULL，并设置`errno`EINVAL 到。 `strpbrk` 和 `wcspbrk` 不会验证其参数。 否则这三个函数否则具有相同行为。
+`_mbspbrk` 会验证其参数。 如果*str*或*strCharSet*为 NULL，则会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续， `_mbspbrk`则返回 NULL，并将设置`errno`为 EINVAL。 `strpbrk` 和 `wcspbrk` 不会验证其参数。 否则这三个函数否则具有相同行为。
 
 `_mbspbrk` 类似于 `_mbscspn`，只不过 `_mbspbrk` 返回一个指针，而不是 [size_t](../../c-runtime-library/standard-types.md) 类型的值。
 
-在 C 中，这些函数采用**const**的第一个参数的指针。 在 C++ 中，有两个重载可用。 采用指向的重载**const**返回一个指向**const**; 将指针传递到非版本**const**返回一个指向非**常量**. 如果这两个定义宏 _CRT_CONST_CORRECT_OVERLOADS **const**和非-**const**提供了这些函数的版本。 如果需要非**const**两个行为C++重载，定义符号 _CONST_RETURN。
+在 C 中，这些函数使用第一个参数的**常量**指针。 在 C++ 中，有两个重载可用。 采用指向**const**的指针的重载返回指向**const**的指针;采用指向非常**量**的指针的版本返回指向非常**量**的指针。 如果这些函数的**常量**和非常**量**版本都可用，则会定义宏 _CRT_CONST_CORRECT_OVERLOADS。 如果这两个重载都 C++需要非常量行为，请定义符号 _CONST_RETURN。
 
-输出值受区域设置; 的 LC_CTYPE 类别设置的设置有关详细信息，请参阅[setlocale](setlocale-wsetlocale.md)。 无需这些函数的版本 **_l**后缀，请使用当前区域设置的区域设置相关的行为; 使用版本 **_l**后缀是完全相同，只不过它使用的区域设置参数改为传入。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的 LC_CTYPE 类别设置的影响;有关详细信息，请参阅[setlocale](setlocale-wsetlocale.md)。 这些不带 **_l**后缀的函数的版本对与区域设置相关的行为使用当前区域设置;带有 **_l**后缀的版本是相同的，只不过它使用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

@@ -1,12 +1,12 @@
 ---
 title: atoi、_atoi_l、_wtoi、_wtoi_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wtoi
 - _wtoi_l
 - atoi
 - _atoi_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tstoi
 - _wtoi
@@ -41,14 +44,14 @@ helpviewer_keywords:
 - atoi function
 - wtoi function
 ms.assetid: ad7fda30-28ab-421f-aaad-ef0b8868663a
-ms.openlocfilehash: b6a1f52e6c83f53230c736db3a506aed4b52e434
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d66a219aea1451e745e32f7affbfb59b73ff796
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347842"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943739"
 ---
-# <a name="atoi-atoil-wtoi-wtoil"></a>atoi、_atoi_l、_wtoi、_wtoi_l
+# <a name="atoi-_atoi_l-_wtoi-_wtoi_l"></a>atoi、_atoi_l、_wtoi、_wtoi_l
 
 将字符串转换为整数。
 
@@ -81,21 +84,21 @@ int _wtoi_l(
 
 ## <a name="return-value"></a>返回值
 
-每个函数返回**int**产生的输入的字符解释为数字值。 返回值为 0 **atoi**并 **_wtoi**，如果输入不能转换为该类型的值。
+每个函数都返回通过将输入字符解释为数字而产生的**int**值。 如果输入不能转换为该类型的值，则**atoi**和 **_wtoi**的返回值为0。
 
-对于大量负整数值的溢出**LONG_MIN**返回。 **atoi**并 **_wtoi**返回**INT_MAX**并**INT_MIN**在这些情况。 在所有超出范围情况下， **errno**设置为**ERANGE**。 如果传入的参数是**NULL**，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许继续执行，这些函数将设置**errno**到**EINVAL** ，返回 0。
+对于具有较大负整数值的溢出，将返回**LONG_MIN** 。 在这些情况中， **atoi**和 **_wtoi**返回**INT_MAX**和**INT_MIN** 。 在所有超出范围的情况下， **errno**设置为**ERANGE**。 如果传入的参数为**NULL**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数会将**errno**设置为**EINVAL** ，并返回0。
 
 ## <a name="remarks"></a>备注
 
-这些函数将字符串转换为整数值 (**atoi**并 **_wtoi**)。 输入字符串是一系列字符，可以解释为指定类型的数值。 该函数在首个它无法无法识别为数字一部分的字符处停止读取输入字符串。 此字符可能是终止字符串的空字符（'\0' 或 L'\0'）。
+这些函数将字符串转换为整数值（**atoi**和 **_wtoi**）。 输入字符串是一系列字符，可以解释为指定类型的数值。 该函数在首个它无法无法识别为数字一部分的字符处停止读取输入字符串。 此字符可能是终止字符串的空字符（'\0' 或 L'\0'）。
 
-*Str*自变量**atoi**并 **_wtoi**具有以下形式：
+**Atoi**和 **_wtoi**的*str*参数具有以下形式：
 
-> [*whitespace*] [*sign*] [*digits*]]
+> [*空格*][*sign*][*数字*]]
 
-一个*空格*包含的空格或制表符字符，将被忽略;*符号*可以是加号 （+） 或减号 （–）; 并且*数字*是一个或多个数字。
+*空白*包含被忽略的空格或制表符;*sign*为加号（+）或减号（-）;和*数字*是一个或多个数字。
 
-使用这些函数的版本 **_l**后缀完全相同，只不过它们使用传递中而不是当前区域设置的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+使用 **_l**后缀的这些函数的版本是相同的，只不过它们使用传入的区域设置参数而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -109,11 +112,11 @@ int _wtoi_l(
 |例程|必需的标头|
 |--------------|---------------------|
 |**atoi**|\<stdlib.h>|
-|**_atoi_l**， **_wtoi**， **_wtoi_l**|\<stdlib.h> 或 \<wchar.h>|
+|**_atoi_l**、 **_wtoi**、 **_wtoi_l**|\<stdlib.h> 或 \<wchar.h>|
 
 ## <a name="example"></a>示例
 
-此程序说明如何将存储为字符串的数字转换为数字值使用**atoi**函数。
+此程序说明如何使用**atoi**函数将存储为字符串的数字转换为数值。
 
 ```C
 // crt_atoi.c

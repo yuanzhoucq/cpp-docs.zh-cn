@@ -1,14 +1,17 @@
 ---
 title: to 函数
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr120.dll
 - msvcr90.dll
 - msvcr110.dll
 - msvcr110_clr0400.dll
 - msvcr80.dll
 - msvcr100.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - To
 helpviewer_keywords:
@@ -20,12 +23,12 @@ helpviewer_keywords:
 - case, converting
 - characters, converting
 ms.assetid: f636a4c6-8c9f-4be2-baac-064f9dbae300
-ms.openlocfilehash: 17d80507462b3eb0fdfb5d9e41da6162947bd3de
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: f7a898d70e506ed4707ea718faa0ed618682c2c7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742533"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944814"
 ---
 # <a name="to-functions"></a>to 函数
 
@@ -45,10 +48,10 @@ ms.locfileid: "57742533"
 |`__toascii`|`__toascii`|将 `c` 转换为 ASCII 字符|
 |`tolower`|`tolower`|如适用，将 `c` 转换为小写|
 |`_tolower`|`_tolower`|将 `c` 转换为小写|
-|`towlower`|None|将 `c` 转换为相应的宽字符小写字母|
+|`towlower`|无|将 `c` 转换为相应的宽字符小写字母|
 |`toupper`|`toupper`|如适用，将 `c` 转换为大写|
 |`_toupper`|`_toupper`|将 `c` 转换为大写|
-|`towupper`|None|将 c 转换为相应的宽字符大写字母|
+|`towupper`|无|将 c 转换为相应的宽字符大写字母|
 
 若要将 **的函数版本用于同时定义为宏的** 例程，或者使用 `#undef` 指令移除宏定义或不包括 CTYPE.H。 如果使用 /Za 编译器选项，编译器将使用 `toupper` 或 `tolower` 的函数版本。 `toupper` 和 `tolower` 函数的声明位于 STDLIB.H 中。
 
@@ -64,7 +67,7 @@ ms.locfileid: "57742533"
 
 - 是 `tolower` 和 **toupper** 区域设置独立的、速度更快的版本。
 
-- 仅当 **isascii(**`c`**)** 和 **isupper(**`c`**)** 或 **islower(**`c`**)** 分别不为零时可用。
+- 仅当 **isascii(** `c` **)** 和 **isupper(** `c` **)** 或 **islower(** `c` **)** 分别不为零时可用。
 
 - 如果 `c` 不是用于转换的正确大小写的 ASCII 字母，则结果不确定。
 

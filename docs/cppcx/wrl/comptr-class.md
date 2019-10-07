@@ -51,12 +51,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ComPtr::Swap method
 - Microsoft::WRL::ComPtr::~ComPtr, destructor
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
-ms.openlocfilehash: 889b722c91fd56613c5902eb4ce6439763a49bd9
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: 1e20a991c8f32027aeea6a17df0534aa6e1c2c43
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68606489"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498411"
 ---
 # <a name="comptr-class"></a>ComPtr 类
 
@@ -84,13 +84,13 @@ friend class ComPtr;
 
 `ComPtr<>`声明表示基础接口指针的类型。 使用`ComPtr<>`声明变量, 然后使用箭头成员访问运算符 (`->`) 访问接口成员函数。
 
-有关智能指针的详细信息, 请参阅 MSDN Library 中[Com 编码实践](/windows/desktop/LearnWin32/com-coding-practices)主题的 "Com 智能指针" 部分。
+有关智能指针的详细信息, 请参阅 MSDN Library 中[Com 编码实践](/windows/win32/LearnWin32/com-coding-practices)主题的 "Com 智能指针" 部分。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-名称            | 描述
+name            | 描述
 --------------- | ---------------------------------------------------------------
 `InterfaceType` | *T*模板参数指定的类型的同义词。
 

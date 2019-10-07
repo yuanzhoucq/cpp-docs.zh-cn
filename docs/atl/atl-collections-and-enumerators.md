@@ -7,33 +7,33 @@ helpviewer_keywords:
 - enumerators, ATL classes
 - collection interfaces
 ms.assetid: b2d37119-3ab2-4e0a-b65b-f377f07e4098
-ms.openlocfilehash: ebf7be8b2c80a714a27567ce0334475519a69454
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 502bedb1773dc2a6edbd6679d50e9c5946228283
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252360"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491905"
 ---
 # <a name="atl-collections-and-enumerators"></a>ATL 集合和枚举数
 
-一个`collection`是提供一个允许对一组数据 （原始数据或其他对象） 的项的访问接口的 COM 对象。 为提供对一组对象的访问被称为遵循标准的接口*集合接口*。
+`collection`是一个 COM 对象, 它提供了一个接口, 该接口允许访问一组数据项 (原始数据或其他对象)。 遵循提供对一组对象的访问的标准的接口称为*集合接口*。
 
-集合接口必须提供至少`Count`属性，用于在集合中，返回的项数`Item`从基于索引的集合返回一个项的属性和一个`_NewEnum`返回的属性集合的枚举器。 （可选） 可以提供集合接口`Add`和`Remove`方法以允许要插入到或从集合中删除项和一个`Clear`方法中删除所有项。
+集合接口至少必须提供一个`Count`属性, 该属性可返回集合中的项的数目`Item` , 该属性根据索引从集合返回一个项, 并`_NewEnum`返回一个属性, 该属性返回集合的枚举器。 (可选) 集合接口可以`Add`提供`Remove`和方法, 以允许在集合中插入或删除项, 使用`Clear`方法可以移除所有项。
 
-`enumerator`是一个用于遍历集合中的项提供一个接口的 COM 对象。 枚举器接口提供串行访问通过四个所需的方法集合的元素： `Next`， `Skip`， `Reset`，和`Clone`。
+`enumerator`是一个 COM 对象, 它提供用于循环访问集合中的项的接口。 枚举器接口通过四个所需的方法, 提供对集合的元素`Next`的`Skip`串行访问: `Clone`、、 `Reset`和。
 
-你可以了解有关通过阅读的枚举器接口的详细信息如参考内容[IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring)接口。
+可以通过读取引用内容 (如[IEnumString](/windows/win32/api/objidl/nn-objidl-ienumstring)接口) 来了解有关枚举器接口的详细信息。
 
 ## <a name="in-this-section"></a>本节内容
 
 [ATL 集合和枚举器类](../atl/atl-collection-and-enumerator-classes.md)<br/>
-简要介绍并提供指向 ATL 类，这样有助于实现集合和枚举数。
+简要描述并提供指向 ATL 类的链接, 它们可帮助您实现集合和枚举器。
 
 [集合和枚举器接口的设计原则](../atl/design-principles-for-collection-and-enumerator-interfaces.md)<br/>
-讨论了每种类型的接口的不同的设计原则。
+讨论每种接口的各种设计原则。
 
 [实现基于 C++ 标准库的集合](../atl/implementing-an-stl-based-collection.md)<br/>
-将指导你完成的实现的扩展的示例C++基于标准库的集合。
+一个扩展示例, 指导你完成基于库的C++标准集合的实现。
 
 ## <a name="related-sections"></a>相关章节
 
@@ -41,7 +41,7 @@ ms.locfileid: "62252360"
 提供了关于如何使用 Active Template Library 进行编程的概念性主题的链接。
 
 [ATLCollections 示例](../overview/visual-cpp-samples.md)<br/>
-一个示例，演示如何使用`ICollectionOnSTLImpl`和`CComEnumOnSTL`，和自定义复制策略类的实现。
+演示如何使用`ICollectionOnSTLImpl`和`CComEnumOnSTL`的示例, 以及如何实现自定义复制策略类。
 
 ## <a name="see-also"></a>请参阅
 

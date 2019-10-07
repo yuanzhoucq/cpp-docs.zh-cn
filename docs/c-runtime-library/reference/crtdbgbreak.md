@@ -1,9 +1,9 @@
 ---
 title: _CrtDbgBreak
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtDbgBreak
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CrtDbgBreak
 - CrtDbgBreak
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - CrtDbgBreak function
 - _CrtDbgBreak function
 ms.assetid: 01f8b4a2-a2c7-4e1f-9f39-e573b4a7871f
-ms.openlocfilehash: 4cf64daaea3193f7cf6b3aaa0b1aab031f104704
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9471b1a93abd9777c3a53c54c2517e59896d8160
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340165"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942586"
 ---
-# <a name="crtdbgbreak"></a>_CrtDbgBreak
+# <a name="_crtdbgbreak"></a>_CrtDbgBreak
 
 在特定代码行上设置断点。 （仅限调试模式。）
 
@@ -45,7 +48,7 @@ void _CrtDbgBreak( void );
 
 ## <a name="remarks"></a>备注
 
-**_CrtDbgBreak**函数调试断点上设置特定的代码行函数所在的位置。 此函数在调试模式下使用以及什么依赖于 **_DEBUG**之前未定义的。
+**_CrtDbgBreak**函数在函数所在的特定代码行上设置调试断点。 此函数仅在调试模式下使用，并且依赖于先前定义的 **_debug** 。
 
 有关使用其他具有挂钩功能的运行时函数和编写你自己的客户端定义挂钩函数的详细信息，请参阅[编写你自己的调试挂钩函数](/visualstudio/debugger/debug-hook-function-writing)。
 

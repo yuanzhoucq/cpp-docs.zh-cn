@@ -1,10 +1,10 @@
 ---
 title: _mktemp、_wmktemp
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wmktemp
 - _mktemp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tmktemp
 - wmktemp
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - mktemp function
 - temporary files [C++]
 ms.assetid: 055eb539-a8c2-4a7d-be54-f5b6d1eb5c85
-ms.openlocfilehash: c1c5f0ee12c9e07d76405014bb4a6a6ecc7d97e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7cfca04d4f0df2673a2221f00a1263f73e8516ec
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156507"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951580"
 ---
-# <a name="mktemp-wmktemp"></a>_mktemp、_wmktemp
+# <a name="_mktemp-_wmktemp"></a>_mktemp、_wmktemp
 
 创建唯一的文件名。 提供这些函数的更多安全版本，请参阅 [_mktemp_s、_wmktemp_s](mktemp-s-wmktemp-s.md)。
 
@@ -70,11 +73,11 @@ wchar_t *_wmktemp(
 
 ## <a name="return-value"></a>返回值
 
-每个函数返回指向修改后的 nameTemplate 的指针。 该函数将返回**NULL**如果*nameTemplate*格式不正确，或者可以从给定 nameTemplate 创建没有更多的唯一名称。
+其中每个函数都会返回指向修改后的 nameTemplate 的指针。 如果*nameTemplate*的格式不正确，或者无法从给定的 nameTemplate 创建更多唯一名称，则函数将返回**NULL** 。
 
 ## <a name="remarks"></a>备注
 
-**_Mktemp**函数创建唯一的文件名通过修改*nameTemplate*参数。 **_mktemp**自动处理多字节字符字符串参数，根据需要，通过运行时系统识别根据当前正在使用的多字节代码页的多字节字符序列。 **_wmktemp**是宽字符版本 **_mktemp**; 的自变量和返回值 **_wmktemp**都是宽字符字符串。 **_wmktemp**并 **_mktemp**行为方式相同，不同之处在于 **_wmktemp**不处理多字节字符字符串。
+**_Mktemp**函数通过修改*nameTemplate*参数创建唯一的文件名。 **_mktemp**会根据需要自动处理多字节字符串参数，根据运行时系统当前使用的多字节代码页识别多字节字符序列。 **_wmktemp**是 **_mktemp**的宽字符版本; **_wmktemp**的参数和返回值是宽字符字符串。 **_wmktemp**和 **_mktemp**的行为方式相同，但 **_wmktemp**不处理多字节字符字符串。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -82,17 +85,17 @@ wchar_t *_wmktemp(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmktemp**|**_mktemp**|**_mktemp**|**_wmktemp**|
 
-*NameTemplate*自变量具有窗体*基*XXXXXX，其中*基*为您提供的新文件名称的一部分并且每个 X 为提供的字符的占位符 **_mktemp**。 中的每个占位符字符*nameTemplate*必须是大写 x。 **_mktemp**保留*基*并将第一个尾随 X 替换为字母字符。 **_mktemp**替换将后面的尾随 five 位数字值; 此值是标识调用进程中，或在多线程程序中，调用线程的唯一编号。
+*NameTemplate*参数的格式为*base*XXXXXX，其中*base*是你提供的新文件名的一部分，每个 X 是 **_mktemp**提供的字符的占位符。 *NameTemplate*中的每个占位符字符都必须是大写的 x。 **_mktemp**保留*基数*，并将第一个尾随 X 替换为字母字符。 **_mktemp**将以下尾随 X 替换为五位值;此值是标识调用进程的唯一数字，或在多线程程序中调用线程。
 
-每次成功调用 **_mktemp**修改*nameTemplate*。 在每个后续调用中从同一个进程或线程具有相同*nameTemplate*自变量， **_mktemp**检查返回的名称匹配的文件名称 **_mktemp**中以前的调用。 如果给定名称的文件不存在 **_mktemp**返回该名称。 如果文件存在之前返回的所有名称， **_mktemp**通过将它与下一个可用小写字母，按顺序，从 a 到 z 的以前返回名称中使用的字母字符替换为创建的新名称。 例如，如果*基*是：
+对 **_mktemp**的每次成功调用都将修改*nameTemplate*。 在来自具有相同*nameTemplate*参数的相同进程或线程的每个后续调用中， **_mktemp**将检查与以前的调用中的 **_mktemp**返回的名称匹配的文件名。 如果给定名称的文件不存在，则 **_mktemp**将返回该名称。 如果所有以前返回的名称都存在文件， **_mktemp**将通过将之前返回的名称中使用的字母字符替换为下一个可用小写字母（按顺序从 "a" 到 "z"）来创建新名称。 例如，如果*base*为：
 
 > **fn**
 
-和提供的五位数值 **_mktemp**为 12345，返回的第一个名称为：
+**_mktemp**提供的五位数值为12345，返回的第一个名称为：
 
 > **fna12345**
 
-如果此名称用于创建文件 FNA12345 并且此文件仍然存在，从相同进程或线程具有相同调用返回的下一个名称*基*有关*nameTemplate*是：
+如果此名称用于创建文件 FNA12345，但该文件仍然存在，则在调用时返回的下一个名称与*nameTemplate*具有相同*基准*的相同进程或线程相同：
 
 > **fnb12345**
 
@@ -100,9 +103,9 @@ wchar_t *_wmktemp(
 
 > **fna12345**
 
-**_mktemp**可以创建最多 26 的唯一文件名的任意给定组合*基*并*nameTemplate*值。 因此，FNZ12345 是最后一个唯一的文件名 **_mktemp**可以为创建*基*并*nameTemplate*在此示例中使用的值。
+**_mktemp**可以为任何给定的*base*和*nameTemplate*值组合创建最多26个唯一文件名。 因此，FNZ12345 是 **_mktemp**可为此示例中使用的*base*和*nameTemplate*值创建的最后一个唯一文件名。
 
-在失败时， **errno**设置。 如果*nameTemplate*具有无效的格式 (例如，少于 6 个 X)， **errno**设置为**EINVAL**。 如果 **_mktemp**不能创建唯一的名称，因为所有 26 可能的文件名称已存在，所以 **_mktemp** nameTemplate 设置为空字符串并返回**EEXIST**。
+失败时，将设置**errno** 。 如果*nameTemplate*具有无效的格式（例如，少于6个 X），则**errno**将设置为**EINVAL**。 如果 **_mktemp**无法创建唯一名称，因为所有26个可能的文件名都已存在，则 **_Mktemp**会将 nameTemplate 设置为空字符串并返回**EEXIST**。
 
 在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - robustness [CRT]
 ms.assetid: 7f1a87f8-eff9-4b76-ae9b-d133d3de6adf
-ms.openlocfilehash: c70c9a2bf0b95063fa3f679ca6c3053d2a4f2df5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 108b4c9dde08adf1a3c54c810f68be69bf150472
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744574"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739602"
 ---
 # <a name="robustness"></a>稳定性
 
@@ -21,7 +21,7 @@ ms.locfileid: "57744574"
 
 |函数|使用|
 |--------------|---------|
-|[_set_new_handler](../c-runtime-library/reference/set-new-handler.md)|如果 new 运算符无法分配内存，则将控制权传输到错误处理机制。|
+|[_set_new_handler](../c-runtime-library/reference/set-new-handler.md)|如果 new 运算符无法分配内存，则将控制权传输到错误处理机制  。|
 |[_set_se_translator](../c-runtime-library/reference/set-se-translator.md)|将 Win32 异常（C 结构的异常）处理为 C++ 类型的异常。|
 |[set_terminate](../c-runtime-library/reference/set-terminate-crt.md)|安装要由 [terminate](../c-runtime-library/reference/terminate-crt.md) 调用的自身的终止函数。|
 |[set_unexpected](../c-runtime-library/reference/set-unexpected-crt.md)|安装要由 [unexpected](../c-runtime-library/reference/unexpected-crt.md) 调用的自身的终止函数。|
@@ -29,4 +29,4 @@ ms.locfileid: "57744574"
 ## <a name="see-also"></a>请参阅
 
 [按类别分的通用 C 运行时例程](../c-runtime-library/run-time-routines-by-category.md)<br/>
-[SetUnhandledExceptionFilter](https://msdn.microsoft.com/library/windows/desktop/ms680634.aspx)<br/>
+[SetUnhandledExceptionFilter](/windows/win32/api/errhandlingapi/nf-errhandlingapi-setunhandledexceptionfilter)<br/>

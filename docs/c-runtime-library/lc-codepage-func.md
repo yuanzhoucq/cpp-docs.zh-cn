@@ -1,9 +1,9 @@
 ---
 title: ___lc_codepage_func
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ___lc_codepage_func
-apilocation:
+api_location:
 - msvcr120.dll
 - msvcr110_clr0400.dll
 - msvcr80.dll
@@ -11,21 +11,24 @@ apilocation:
 - msvcr90.dll
 - msvcr110.dll
 - msvcrt.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lc_codepage_func
 - ___lc_codepage_func
 helpviewer_keywords:
 - ___lc_codepage_func
 ms.assetid: 6a663bd0-5a63-4a2f-9507-872ec1582aae
-ms.openlocfilehash: aebd978839cc59c94c01e9c24432b69add72c4dc
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: dbadf8239652f5c96e7177dedd91d340e545b9fe
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751322"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944928"
 ---
-# <a name="lccodepagefunc"></a>___lc_codepage_func
+# <a name="___lc_codepage_func"></a>___lc_codepage_func
 
 内部 CRT 函数。 检索线程的当前代码页。
 

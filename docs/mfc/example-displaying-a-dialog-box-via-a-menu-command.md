@@ -1,6 +1,6 @@
 ---
-title: 示例:显示一个对话框，通过菜单命令
-ms.date: 11/04/2016
+title: 示例：通过菜单命令显示对话框
+ms.date: 09/07/2019
 helpviewer_keywords:
 - MFC dialog boxes [MFC], examples
 - MFC dialog boxes [MFC], displaying
@@ -10,78 +10,78 @@ helpviewer_keywords:
 - examples [MFC], dialog boxes
 - menu items [MFC], examples
 ms.assetid: e8692549-acd7-478f-9c5e-ba310ce8cccd
-ms.openlocfilehash: 1e730125e47609f0bf87814b32962336cb752b04
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 12c919c1c79a3e40a1322f3f73398b90af2fad5f
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173276"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095925"
 ---
-# <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>示例:显示一个对话框，通过菜单命令
+# <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>示例：通过菜单命令显示对话框
 
-本主题包含到过程：
+本主题包含以下过程：
 
-- 显示模式对话框通过菜单命令。
+- 通过菜单命令显示模式对话框。
 
-- 显示无模式对话框通过菜单命令。
+- 通过菜单命令显示无模式对话框。
 
-这两个示例过程是 MFC 应用程序，将使用创建的应用程序中工作[MFC 应用程序向导](../mfc/reference/mfc-application-wizard.md)。
+这两个示例过程都适用于 MFC 应用程序，并可在使用[MFC 应用程序向导](../mfc/reference/mfc-application-wizard.md)创建的应用程序中使用。
 
-过程使用以下名称和值：
+这些过程使用以下名称和值：
 
 |项|名称或值|
 |----------|-------------------|
 |应用程序|DisplayDialog|
-|菜单命令|视图菜单; 上的命令进行测试命令 ID = ID_VIEW_TEST|
-|对话框|测试对话框;类 = CTestDialog;标头文件 = TestDialog.h;变量 = testdlg，ptestdlg|
+|菜单命令|"视图" 菜单上的测试命令;命令 ID = ID_VIEW_TEST|
+|对话框|"测试" 对话框;类 = CTestDialog;头文件 = TestDialog;Variable = testdlg，ptestdlg|
 |命令处理程序|OnViewTest|
 
-### <a name="to-display-a-modal-dialog-box"></a>若要显示模式对话框
+### <a name="to-display-a-modal-dialog-box"></a>显示模式对话框
 
 1. 创建菜单命令;请参阅[创建菜单或菜单项](../windows/creating-a-menu.md)。
 
 1. 创建对话框;请参阅[启动对话框编辑器](../windows/creating-a-new-dialog-box.md)。
 
-1. 添加对话框中的类。 请参阅[添加类](../ide/adding-a-class-visual-cpp.md)有关详细信息。
+1. 为您的对话框添加一个类。 有关详细信息，请参阅[添加类](../ide/adding-a-class-visual-cpp.md)。
 
-1. 在中**类视图**，选择文档类 (CDisplayDialogDoc)。 在 **“属性”** 窗口中，单击 **“事件”** 按钮。 双击的左窗格中的菜单命令 (ID_VIEW_TEST) 的 ID**属性**窗口，然后选择**命令**。 在右窗格中，单击向下箭头，然后选择 **\<添加 > OnViewTest** 。
+1. 在**类视图**中，选择 "文档类" （CDisplayDialogDoc）。 在 **“属性”** 窗口中，单击 **“事件”** 按钮。 双击菜单命令的 ID （ID_VIEW_TEST）。 接下来，单击向下箭头，然后选择 **\<"添加 > OnViewTest**"。
 
-   如果与大型机的 MDI 应用程序添加菜单命令，请改为选择应用程序类 (CDisplayDialogApp)。
+   如果已将菜单命令添加到 MDI 应用程序的大型机，请改为选择应用程序类（CDisplayDialogApp）。
 
-1. 将以下 include 语句 CDisplayDialogDoc.cpp （或 CDisplayDialogApp.cpp） 添加现有包含语句之后：
+1. 将以下 include 语句添加到 CDisplayDialogDoc （或 CDisplayDialogApp）中的现有 include 语句之后：
 
    ```cpp
    #include "TestDialog.h"
    ```
 
-1. 将以下代码添加到`OnViewTest`来实现该函数：
+1. 将以下代码添加到`OnViewTest`以实现函数：
 
    ```cpp
    CTestDialog testdlg;
-   testdlg.DoModal();  
+   testdlg.DoModal(); 
    ```
 
-### <a name="to-display-a-modeless-dialog-box"></a>若要显示无模式对话框
+### <a name="to-display-a-modeless-dialog-box"></a>显示无模式对话框
 
-1. 执行前四个步骤，以显示模式对话框中，但在步骤 4 中选择的视图类 (CDisplayDialogView)。
+1. 执行前四个步骤以显示模式对话框，只不过在步骤4中选择视图类（CDisplayDialogView）。
 
-1. 编辑 DisplayDialogView.h:
+1. 编辑 DisplayDialogView：
 
-   - 声明声明前面的第一类的对话框类：
+   - 在第一个类声明之前声明对话框类：
 
    ```cpp
    class CTestDialog;
    ```
 
-   - 将指针声明为对话框的后的 public 节中的属性：
+   - 声明一个指向对话框的指针，并在 public 节后：
 
    ```cpp
    CTestDialog* m_pTestDlg;
    ```
 
-1. 编辑 DisplayDialogView.cpp:
+1. 编辑 DisplayDialogView：
 
-   - 添加以下 include 语句后现有 include 语句：
+   - 将以下 include 语句添加到现有 include 语句之后：
 
    ```cpp
    #include "TestDialog.h"
@@ -99,7 +99,7 @@ ms.locfileid: "62173276"
    delete m_pTestDlg;
    ```
 
-   - 将以下代码添加到`OnViewTest`来实现该函数：
+   - 将以下代码添加到`OnViewTest`以实现函数：
 
    ```cpp
    if (NULL == m_pTestDlg)
@@ -107,7 +107,7 @@ ms.locfileid: "62173276"
       m_pTestDlg = new CTestDialog(this);
       m_pTestDlg->Create(CTestDialog::IDD, this);
    }
-   m_pTestDlg->ShowWindow(SW_SHOW); 
+   m_pTestDlg->ShowWindow(SW_SHOW);
    ```
 
 ## <a name="see-also"></a>请参阅

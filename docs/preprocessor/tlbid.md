@@ -1,40 +1,38 @@
 ---
-title: tlbid
-ms.date: 10/18/2018
+title: tlbid 导入属性
+ms.date: 08/29/2019
 f1_keywords:
 - tlbid
 helpviewer_keywords:
 - tlbid attribute
 ms.assetid: 54b06785-191b-4e77-a9a5-485f2b4acb09
-ms.openlocfilehash: ae79ce9245bb1c0425c3e9b92dd27b52fa443dba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 364fb224b0f2769cb0933e71d18ff70768189328
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179602"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216534"
 ---
-# <a name="tlbid"></a>tlbid
+# <a name="tlbid-import-attribute"></a>tlbid 导入属性
 
-**C++特定**
+**C++相关**
 
 允许加载主类型库之外的库。
 
 ## <a name="syntax"></a>语法
 
-```
-tlbid(number)
-```
+> **#import***类型库-dll***tlbid (** *数字* **)**
 
 ### <a name="parameters"></a>参数
 
-*number*<br/>
-`filename` 中的类型库的编号。
+*多种*\
+类型库中的类型库的编号 *(dll)* 。
 
 ## <a name="remarks"></a>备注
 
-如果多个类型库内置于一个 dll，它可以加载非主类型库使用**tlbid**。
+如果有多个类型库内置于一个 DLL 中, 则可以使用**tlbid**加载主类型库以外的库。
 
-例如：
+例如:
 
 ```cpp
 #import <MyResource.dll> tlbid(2)
@@ -50,5 +48,5 @@ LoadTypeLib("MyResource.dll\\2");
 
 ## <a name="see-also"></a>请参阅
 
-[#import 属性](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import 特性](../preprocessor/hash-import-attributes-cpp.md)\
 [#import 指令](../preprocessor/hash-import-directive-cpp.md)

@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: 1f2c0387cd0a78ad0179e251654d2fa82b1eef13
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 68b4aaef06e40a8ec7b00f9ba744d83ce3388da2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707103"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492384"
 ---
 # <a name="example-implementing-a-property-page"></a>示例:实现属性页
 
@@ -51,7 +51,7 @@ ATL 属性页向导不适用于 Visual Studio 2019 及更高版本。
 
 |项|值|
 |----------|-----------|
-|Title|TextDocument|
+|标题|TextDocument|
 |文档字符串|VCUE TextDocument 属性|
 |帮助文件|blank>\<|
 
@@ -71,7 +71,7 @@ ATL 属性页向导不适用于 Visual Studio 2019 及更高版本。
 这些控件用于显示文档的文件名及其只读状态。
 
 > [!NOTE]
->  对话框资源既没有框架或命令按钮，也没有你可能期望的选项卡式外观。 这些功能由属性页框架提供。例如，通过调用 [OleCreatePropertyFrame](/windows/desktop/api/olectl/nf-olectl-olecreatepropertyframe) 创建的属性页框架。
+>  对话框资源既没有框架或命令按钮，也没有你可能期望的选项卡式外观。 这些功能由属性页框架提供。例如，通过调用 [OleCreatePropertyFrame](/windows/win32/api/olectl/nf-olectl-olecreatepropertyframe) 创建的属性页框架。
 
 ##  <a name="vcconadding_message_handlers"></a> 添加消息处理程序
 

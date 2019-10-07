@@ -1,21 +1,21 @@
 ---
-title: 导出 (C++ COM 属性)
+title: 导出 (C++ COM 特性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.export
 helpviewer_keywords:
 - export attribute
 ms.assetid: 70b3e848-fad6-4e09-8c72-be60ca72a4df
-ms.openlocfilehash: 5ffa4283b8a2b265809d06b72be96e217cf8bf9f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 771bfdfe4eab2acf31e97a606795066e8938a8a1
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409611"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501605"
 ---
 # <a name="export"></a>export
 
-导致要放置在.idl 文件中的数据结构。
+导致将数据结构放置在 .idl 文件中。
 
 ## <a name="syntax"></a>语法
 
@@ -25,17 +25,17 @@ ms.locfileid: "62409611"
 
 ## <a name="remarks"></a>备注
 
-**导出**C++属性将导致置于.idl 文件中，然后，可使其可用于任何语言的二进制兼容格式的类型库中的数据结构。
+**导出** C++特性会导致将数据结构放置在 .idl 文件中, 然后在类型库中以与二进制兼容的格式提供, 使其可用于任何语言。
 
-无法应用**导出**属性为一个类，即使类仅具有公共成员 (等效于**结构**)。
+即使该类只有公共成员 (等效于**结构**), 也不能将**导出**特性应用于类。
 
-如果要将导出未命名**enum**或**结构**，其指定一个名称以与 **__unnamed**<em>x</em>，其中*x*是一个顺序号。
+如果导出未命名的**枚举**或**结构**, 则会为其指定一个以 **__unnamed**<em>x</em>开头的名称, 其中*x*是一个序列号。
 
-对导出有效的 typedef 的基类型、 结构、 联合、 枚举或类型标识符。  请参阅[typedef](/windows/desktop/Midl/typedef)有关详细信息。
+用于导出的 typedef 是基类型、结构、联合、枚举或类型标识符。  有关详细信息, 请参阅[typedef](/windows/win32/Midl/typedef) 。
 
 ## <a name="example"></a>示例
 
-下面的代码演示如何使用**导出**属性：
+下面的代码演示如何使用**export**特性:
 
 ```cpp
 // cpp_attr_ref_export.cpp
@@ -54,10 +54,10 @@ struct MyStruct {
 
 |||
 |-|-|
-|**适用对象**|**union**， **typedef**，**枚举**，**结构**，或**接口**|
-|**可重复**|否|
-|**必需的特性**|None|
-|**无效的特性**|None|
+|**适用于**|**union**、 **typedef**、 **enum**、 **struct**或**interface**|
+|**可重复**|No|
+|**必需的特性**|无|
+|**无效的特性**|无|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

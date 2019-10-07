@@ -1,26 +1,26 @@
 ---
 title: C++ 的符合性改进
-ms.date: 06/14/2019
+ms.date: 09/25/2019
 description: Visual Studio 中的 Microsoft C++ 正朝着完全符合 C++20 语言标准的方向发展。
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 1652c7ab9a48de65b32123b34c3231a0b06a410a
-ms.sourcegitcommit: 0ad35b26e405bbde17dc0bd0141e72f78f0a38fb
+ms.openlocfilehash: 4825317b07535d98b1b5db4442f935e9b2cfb632
+ms.sourcegitcommit: b4572ffcc71e6bdb0ca23221f9476cfaf4528406
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67194772"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314481"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Visual Studio 中的 C++ 符合性改进
 
-Microsoft C++ 在每个版本中进行了符合性改进和 bug 修复。 本文按主要版本然后次要版本列出了改进之处。 还按版本列出了主要 bug 修复。 若要直接跳转到特定版本的更改，请使用“本文中”  列表。
+Microsoft C++ 在每个版本中进行了符合性改进和 bug 修复。 本文按主要版本然后次要版本列出了改进之处。 还按版本列出了主要 bug 修复。 若要直接跳转到特定版本的更改，请使用“本文中”列表。
 
-::: moniker range=">=vs-2019"
+::: moniker range="vs-2019"
 
-## <a name="improvements_160"></a> Visual Studio 2019 RTW（版本 16.0）中的改进之处
+## <a name="improvements_160"></a>Visual Studio 2019 RTW（版本 16.0）中的符合性改进
 
-Visual Studio 2019 RTW 包含 Microsoft C++ 编译器 (MSVC) 的以下符合性改进、bug 修复和行为变更。
+Visual Studio 2019 RTW 包含 Microsoft C++ 编译器 (MSVC) 的以下符合性改进、bug 修复和行为变更
 
 **注意：** C++20 功能将在 `/std:c++latest` 模式下提供，直到编译器和 IntelliSense 的 C++20 实现完成。 届时，将推出 `/std:c++20` 编译器模式。
 
@@ -93,9 +93,9 @@ int main()
 }
 ```
 
-### <a name="reinterpretcast-from-an-overloaded-function"></a>来自重载函数的 `reinterpret_cast`
+### <a name="reinterpret_cast-from-an-overloaded-function"></a>来自重载函数的 `reinterpret_cast`
 
-`reinterpret_cast` 的参数不属于允许使用重载函数地址的上下文。 在 Visual Studio 2017 中编译以下代码时不会引发错误，但在 Visual Studio 2019 中，它会引发 *C2440: 无法从 “overloaded-function” 转换为 “fp”* ：
+`reinterpret_cast` 的参数不属于允许使用重载函数地址的上下文。 在 Visual Studio 2017 中编译以下代码时不会引发错误，但在 Visual Studio 2019 中，它会引发 *C2440: 无法从 “overloaded-function” 转换为 “fp”*：
 
 ```cpp
 int f(int) { return 1; }
@@ -123,7 +123,7 @@ int main()
 
 ### <a name="lambda-closures"></a>Lambda 闭包
 
-在 C++14 中，lambda 闭包类型不是文本。 此规则的主要后果是 lambda 可能不会分配给 `constexpr` 变量。 在 Visual Studio 2017 中编译以下代码时不会引发错误，但在 Visual Studio 2019 中，它会引发“C2127：‘l’：使用非常量表达式非法初始化‘constexpr’实体”  ：
+在 C++14 中，lambda 闭包类型不是文本。 此规则的主要后果是 lambda 可能不会分配给 constexpr 变量。 在 Visual Studio 2017 中编译以下代码时不会引发错误，但在 Visual Studio 2019 中，它会引发“C2127：‘l’：使用非常量表达式非法初始化‘constexpr’实体” ：
 
 ```cpp
 int main()
@@ -132,9 +132,9 @@ int main()
 }
 ```
 
-若要避免该错误，请删除 `constexpr` 限定符，或将符合性模式更改为 `/std:c++17`。
+要避免该错误，请删除 constexpr 限定符，或将符合性模式更改为 `/std:c++17`。
 
-### <a name="stdcreatedirectory-failure-codes"></a>`std::create_directory` 失败代码
+### <a name="stdcreate_directory-failure-codes"></a>`std::create_directory` 失败代码
 
 根据 C++20 无条件地实现了 [P1164](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1164r1.pdf)。 这会更改 `std::create_directory` 来检查目标是否已经为故障目录。 之前，所有 ERROR_ALREADY_EXISTS 类型错误都会转换为成功但未创建目录的代码。
 
@@ -148,9 +148,9 @@ int main()
 
 ### <a name="atomic-initialization"></a>原子初始化
 
-[P0883“修复原子初始化”](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0883r1.pdf)将 `std::atomic` 更改为对包含的 T 进行值初始化，而不是默认初始化。 将 Clang/LLVM 与 Microsoft 标准库配合使用时，将启用此修复。 当前对 Microsoft C++ 编译器禁用此修复，以用作 `constexpr` 处理中 bug 的解决方法。
+[P0883“修复原子初始化”](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0883r1.pdf)将 `std::atomic` 更改为对包含的 T 进行值初始化，而不是默认初始化。 将 Clang/LLVM 与 Microsoft 标准库配合使用时，将启用此修复。 当前对 Microsoft C++ 编译器禁用此修复，以用作 constexpr 处理中 bug 的解决方法。
 
-### <a name="removecvref-and-removecvreft"></a>`remove_cvref` 和 `remove_cvref_t`
+### <a name="remove_cvref-and-remove_cvref_t"></a>`remove_cvref` 和 `remove_cvref_t`
 
 根据 [P0550](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0550r2.pdf) 实现了 `remove_cvref` 和 `remove_cvref_t` 类型特征。 这些类型特征可从类型移除引用性和 cv 限定，而无需将函数和数组衰减为指针（与 `std::decay` 和 `std::decay_t` 不同）。
 
@@ -162,9 +162,9 @@ int main()
 
 [C++20 P1008R1 - 禁止使用用户声明的构造函数进行聚合](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p1008r1.pdf)已完成。
 
-## <a name="improvements_161"></a>Visual Studio 2019 版本 16.1 中的改进
+## <a name="improvements_161"></a> 16.1 中的符合性改进
 
-### <a name="char8t"></a>char8_t
+### <a name="char8_t"></a>char8_t
 
 [P0482r6](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0482r6.html)。 C++20 增加了新的字符类型，可用于表示 UTF-8 代码单元。 C++20 中的 `u8` 字符串文本具有 `const char8_t[N]` 类型而不是 `const char[N]` 类型，这是之前的情况。 在 [N2231](http://www.open-std.org/jtc1/sc22/wg14/www/docs/n2231.htm) 中已针对 C 标准提出了类似的更改。 在 [P1423r0](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1423r0.html) 中给出了有关 `char8_t` 后向兼容性修正的建议。 如果指定 **/Zc:char8_t** 编译器选项，Microsoft C++ 编译器会在 Visual Studio 2019 版本 16.1 中添加对 `char8_t` 的支持。 将来，[/std:c++latest](../build/reference/std-specify-language-standard-version.md) 将支持它，其可通过 **/Zc:char8_t-** 还原为 C++17 行为。 为 IntelliSense 提供支持的 EDG 编译器尚不支持它，因此将看到虚假的仅限于 IntelliSense 的错误，这些错误不会影响实际编译。
 
@@ -175,7 +175,7 @@ const char* s = u8"Hello"; // C++17
 const char8_t* s = u8"Hello"; // C++20
 ```
 
-### <a name="stdtypeidentity-metafunction-and-stdidentity-function-object"></a>std::type_identity 元函数和  std::identity 函数对象
+### <a name="stdtype_identity-metafunction-and-stdidentity-function-object"></a>std::type_identity 元函数和  std::identity 函数对象
 
 [P0887R1 type_identity](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0887r1.pdf)。 弃用的 `std::identity` 类模板扩展已删除，并替换为 C++20 `std::type_identity` 元函数和 `std::identity` 函数对象。 两者仅在 [/std:c++latest](../build/reference/std-specify-language-standard-version.md) 下可用。
 
@@ -206,7 +206,7 @@ long j = static_cast<long>(i);
 
 在 [/std:c++latest](../build/reference/std-specify-language-standard-version.md) 下或在 **/experimental:newLambdaProcessor** 的任何其他语言模式下，新的 lambda 处理器在泛型 lambda 中启用部分符合性模式语法检查。
 
-在 Visual Studio 2017 中编译此代码时不会出现警告，但在 Visual Studio 2019 中，它会生成错误 *C2760 语法错误: 意外令牌 “\<id-expr>”，需要 “id-expression”* ：
+在 Visual Studio 2017 中编译此代码时不会出现警告，但在 Visual Studio 2019 中，它会生成错误 *C2760 语法错误: 意外令牌 “\<id-expr>”，需要 “id-expression”*：
 
 ```cpp
 void f() {
@@ -241,11 +241,240 @@ void f() {
 - `list` 和 `forward_list` 的 `remove()`、`remove_if()` 和 `unique()` 现在返回 `size_type`。
 - `shift_left()` 和 `shift_right()` 已添加到 \<algorithm> 中。
 
-## <a name="bug-fixes-and-behavior-changes-in-visual-studio-2019"></a>Visual Studio 2019 中的 bug 修复和行为变更
 
-### <a name="correct-diagnostics-for-basicstring-range-constructor"></a>basic_string 范围构造函数的正确诊断
+## <a name="improvements_162"></a> 16.2 中的符合性改进
 
-在 Visual Studio 2019 中，`basic_string` 范围构造函数不再禁止显示包含 `static_cast` 的编译器诊断。 尽管在初始化 `out` 时可能会丢失从 `wchar_t` 到 `char` 的数据，但在 Visual Studio 2017 中编译以下代码时不会出现警告：
+### <a name="noexcept-constexpr-functions"></a>noexcept constexpr 函数
+
+在常量表达式中使用时，Constexpr 函数默认不再被视为“noexcept”。 此行为更改来自解决方法 [CWG 1351](http://www.open-std.org/jtc1/sc22/wg21/docs/cwg_defects.html#1351)，并已在 [/permissive-](../build/reference/permissive-standards-conformance.md) 中启用。 以下示例在 Visual Studio 2019 版本 16.1 和更早版本中编译，但在 Visual Studio 2019 版本 16.2 中生成 C2338：
+
+```cpp
+constexpr int f() { return 0; }
+
+int main() {
+    static_assert(noexcept(f()), "f should be noexcept"); // C2338 in 16.2
+}
+```
+
+要修复此错误，请将 noexcept 表达式添加到函数声明中：
+
+```cpp
+constexpr int f() noexcept { return 0; }
+
+int main() {
+    static_assert(noexcept(f()), "f should be noexcept");
+}
+```
+
+### <a name="binary-expressions-with-different-enum-types"></a>具有不同枚举类型的二进制表达式
+
+C++20 ([P1120R0](https://wg21.link/p1120r0)) 中已弃用以下功能：针对操作数（其中一个为枚举类型，另一个为其他枚举类型或浮点类型）应用常见算术转换。 在 Visual Studio 2019 版本 16.2 和更高版本中，以下代码在启用 [/std:c++latest](../build/reference/std-specify-language-standard-version.md) 编译器选项的情况下，生成级别 4 警告：
+
+```cpp
+enum E1 { a };
+enum E2 { b };
+int main() {
+    int i = a | b; // warning C5054: operator '|': deprecated between enumerations of different types
+}
+```
+
+要避免出现此警告，使用 [static_cast](../cpp/static-cast-operator.md) 转换第二个操作数：
+
+```cpp
+enum E1 { a };
+enum E2 { b };
+int main() {
+  int i = a | static_cast<int>(b);
+}
+```
+
+### <a name="binary-expressions-with-enumeration-and-floating-point-types"></a>具有枚举和浮点类型的二进制表达式
+
+C++20 中已弃用以下功能：针对操作数（其中一个为枚举类型，另一个为其他枚举类型或浮点类型）应用常见算术转换 ([P1120R0](https://wg21.link/p1120r0))。 换言之，在启用 [/std:c++latest](../build/reference/std-specify-language-standard-version.md) 编译器选项的情况下，使用枚举和浮点类型之间的二进制运算现在会发出警告：
+
+```cpp
+enum E1 { a };
+int main() {
+  double i = a * 1.1;
+}
+```
+
+要避免出现此警告，使用 [static_cast](../cpp/static-cast-operator.md) 转换第二个操作数：
+
+```cpp
+enum E1 { a };
+int main() {
+   double i = static_cast<int>(a) * 1.1;
+}
+```
+
+### <a name="equality-and-relational-comparisons-of-arrays"></a>数组的相等性和关系比较
+
+C++20 中已弃用数组类型的两个操作数之间的相等性和关系比较 ([P1120R0](https://wg21.link/p1120r0))。 换句话说，两个数组之间的比较运算（与级别和范围相似性无关）现在会引发警告。 从 Visual Studio 2019 版本 16.2 开始，以下代码生成 C5056：如果启用 [/std:c++latest](../build/reference/std-specify-language-standard-version.md) 编译器选项，数组类型会弃用运算符“==”：
+
+```cpp
+int main() {
+    int a[] = { 1, 2, 3 };
+    int b[] = { 1, 2, 3 };
+    if (a == b) { return 1; }
+}
+```
+
+要避免出现此警告，可以比较第一个元素的地址：
+
+```cpp
+int main() {
+    int a[] = { 1, 2, 3 };
+    int b[] = { 1, 2, 3 };
+    if (&a[0] == &b[0]) { return 1; }
+}
+```
+
+要确定两个数组内容是否相等，可以使用 [std::equal](../standard-library/algorithm-functions.md#equal) 函数：
+
+```cpp
+std::equal(std::begin(a), std::end(a), std::begin(b), std::end(b));
+```
+
+### <a name="effect-of-defining-spaceship-operator-on--and-"></a>对 == 和 != 定义宇宙飞船运算符的效果
+
+仅定义宇宙飞船运算符 (<=>) 将不再重写涉及 == 或 **!=** 的表达式，除非宇宙飞船运算符标记为 `= default` ([P1185R2](https://wg21.link/p1185r2))。 以下示例在 Visual Studio 2019 RTW 和版本 16.1 中编译，但在 Visual Studio 2019 版本 16.2 中生成 C2678：
+
+```cpp
+#include <compare>
+
+struct S {
+  int a;
+  auto operator<=>(const S& rhs) const {
+    return a <=> rhs.a;
+  }
+};
+bool eq(const S& lhs, const S& rhs) {
+  return lhs == rhs;
+}
+bool neq(const S& lhs, const S& rhs) {
+    return lhs != rhs;
+}
+```
+
+要避免此错误，请定义运算符 == 或将其声明为默认值：
+
+```cpp
+#include <compare>
+
+struct S {
+  int a;
+  auto operator<=>(const S& rhs) const {
+    return a <=> rhs.a;
+  }
+  bool operator==(const S&) const = default;
+};
+bool eq(const S& lhs, const S& rhs) {
+  return lhs == rhs;
+}
+bool neq(const S& lhs, const S& rhs) {
+    return lhs != rhs;
+}
+```
+
+### <a name="standard-library-improvements"></a>标准库改进
+
+- 具有固定/科学精度的 \<charconv> `to_chars()`。 （一般精度目前为 16.4 计划。）
+- [P0020R6](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0020r6.html)：atomic\<float>、atomic\<double>、atomic\<long double>
+- [P0463R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0463r1.html)：endian
+- [P0482R6](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0482r6.html)：char8_t 的库支持
+- [P0600R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0600r1.pdf)：[\[nodiscard]] 针对 STL，第 1 部分
+- [P0653R2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0653r2.html)：to_address()
+- [P0754R2](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0754r2.pdf)：\<version>
+- [P0771R1](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0771r1.pdf)：用于 std::function 的移动构造函数的 noexcept
+
+## <a name="improvements_163"></a>Visual Studio 2019 版本 16.3 的符合性改进
+
+### <a name="stream-extraction-operators-for-char-removed"></a>删除了 char* 的流提取运算符
+
+指针到字符的流提取运算符已删除，并替换为数组到字符的提取运算符（按照 [P0487R1](http://http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0487r1.html)）。 WG21 认为删除的重载不安全。 在 [/std:c++latest](../build/reference/std-specify-language-standard-version.md) 模式下，下面的示例现在生成 C2679: 二进制 ">>": 找不到获取类型 "char\*" 右侧操作数的运算符(或没有可接受的转换)：
+
+```cpp
+   char x[42];
+   char* p = x;
+   std::cin >> std::setw(42);
+   std::cin >> p;
+```
+
+要避免该错误，请将提取运算符与 char[] 变量一起使用：
+
+```cpp
+char x[42];
+std::cin >> x;
+```
+
+### <a name="new-keywords-requires-and-concept"></a>新关键字 requires 和 concept
+
+已向 Microsoft C++ 编译器添加新关键字 requires 和 concept。 如果尝试在 [/std:c++latest](../build/reference/std-specify-language-standard-version.md) 模式下将任一关键字用作标识符，编译器将引发 C2059: 语法错误。
+
+### <a name="constructors-as-type-names-disallowed"></a>不允许将构造函数作为类型名称
+
+当构造函数名出现在类模板特殊化的别名之后的限定名中时，它们不再被认为是注入类名。 这之前允许使用构造函数作为类型名称来声明其他实体。 下面的示例现在生成 C3646:"TotalDuration": 未知替代说明符：
+
+```cpp
+#include <chrono>
+
+class Foo {
+   std::chrono::milliseconds::duration TotalDuration{};
+};
+
+```
+
+要避免该错误，请将 `TotalDuration` 声明为以下形式：
+
+```cpp
+#include <chrono>
+
+class Foo {
+  std::chrono::milliseconds TotalDuration {};
+};
+```
+
+### <a name="stricter-checking-of-extern-c-functions"></a>严格检查外部“C”函数
+
+如果在不同的命名空间中声明了外部“C”函数，则以前版本的 Microsoft C++ 编译器不会检查这些声明是否兼容。 在 Visual Studio 2019 版本 16.3 中，编译器会执行此类检查。 在 [/permissive-](../build/reference/permissive-standards-conformance.md) 模式下，以下代码生成“C2371: 重新定义；不同基本类型”和“C2733 无法使用 C 链接重载函数”：
+
+```cpp
+using BOOL = int;
+
+namespace N
+{
+   extern "C" void f(int, int, int, bool);
+}
+
+void g()
+{
+   N::f(0, 1, 2, false);
+}
+
+extern "C" void f(int, int, int, BOOL){}
+```
+
+要避免上一示例中的错误，请在 `f` 的两个声明中一致地使用 bool 而非 BOOL。
+
+## <a name="update_160"></a>Visual Studio 2019 中的 bug 修复和行为变更
+
+### <a name="reinterpret_cast-in-a-constexpr-function"></a>constexpr 函数中的 reinterpret_cast
+
+在 constexpr 函数中，reinterpret_cast 是非法的。 Microsoft C++ 编译器以前仅拒绝在 constexpr 上下文中使用的 reinterpret_cast。 在 Visual Studio 2019 中，在所有语言标准模式下，编译器可正确诊断 constexpr 函数定义中的 reinterpret_cast。 以下代码现在生成 C3615: constexpr 函数 "f" 无法得出常数表达式。
+
+```cpp
+long long i = 0;
+constexpr void f() {
+    int* a = reinterpret_cast<int*>(i);
+}
+```
+
+要避免该错误，请从函数声明中删除 constexpr。
+
+### <a name="correct-diagnostics-for-basic_string-range-constructor"></a>basic_string 范围构造函数的正确诊断
+
+在 Visual Studio 2019 中，`basic_string` 范围构造函数不再禁止显示包含 `static_cast` 的编译器诊断。 尽管在初始化 `out` 时可能会丢失从 `wchar_t` 到 char 的数据，但在 Visual Studio 2017 中编译以下代码时不会出现警告：
 
 ```cpp
 std::wstring ws = /* … */;
@@ -280,7 +509,7 @@ void f(System::String ^s)
 
 ### <a name="initializers-for-inline-static-data-members"></a>内联静态数据成员的初始化表达式
 
-现在可正确检测到 `inline` 和 `static constexpr` 初始化表达式中的无效成员访问。 在 Visual Studio 2017 中编译以下示例时不会引发错误，但在 `/std:c++17` 模式下的 Visual Studio 2019 中，它会引发错误 *C2248: 无法访问在 “X” 类中声明的私有成员*。
+现在可正确检测到 inline 和 static constexpr 初始化表达式中的无效成员访问。 在 Visual Studio 2017 中编译以下示例时不会引发错误，但在 `/std:c++17` 模式下的 Visual Studio 2019 中，它会引发错误 *C2248: 无法访问在 “X” 类中声明的私有成员*。
 
 ```cpp
 struct X
@@ -307,7 +536,7 @@ struct X
 
 ### <a name="c4800-reinstated"></a>C4800 已恢复
 
-MSVC 曾有一个关于隐式转换为 `bool` 的性能警告 C4800。 该警告存在太多干扰且无法禁止显示，这导致我们在 Visual Studio 2017 中将其删除。 但是，在 Visual Studio 2017 的生命周期中，我们收到了大量关于解决该问题的有用案例的反馈。 我们在 Visual Studio 2019 中重新推出了精心定制的 C4800 及说明性 C4165。 两个警告都可以通过显式强制转换或与相应类型的 0 进行比较来轻松地禁止显示。 C4800 是默认关闭的 4 级警告，C4165 是默认关闭的 3 级警告。 使用 `/Wall` 编译器选项可以发现这两个警告。
+MSVC 曾有一个关于隐式转换为 bool 的性能警告 C4800。 该警告存在太多干扰且无法禁止显示，这导致我们在 Visual Studio 2017 中将其删除。 但是，在 Visual Studio 2017 的生命周期中，我们收到了大量关于解决该问题的有用案例的反馈。 我们在 Visual Studio 2019 中重新推出了精心定制的 C4800 及说明性 C4165。 两个警告都可以通过显式强制转换或与相应类型的 0 进行比较来轻松地禁止显示。 C4800 是默认关闭的 4 级警告，C4165 是默认关闭的 3 级警告。 使用 `/Wall` 编译器选项可以发现这两个警告。
 
 以下示例在 `/Wall` 下引发 C4800 和 C4165：
 
@@ -349,7 +578,7 @@ void example()
 
 ### <a name="function-template-bodies-containing-constexpr-if-statements"></a>包含 constexpr if 语句的函数模板体
 
-包含 `if constexpr` 语句的模板函数体启用了一些与 `/permissive-` 分析相关的检查。 例如，在 Visual Studio 2017 中，以下代码生成 *C7510:“Type”：使用依赖类型名称时必须使用 “typename”作为前缀*，但仅当未设置 `/permissive-` 选项时才会生成此错误。 在 Visual Studio 2019 中，即使设置了 `/permissive-` 选项，相同的代码也会引发错误：
+包含 if constexpr 语句的模板函数体启用了一些与 [/permissive-](../build/reference/permissive-standards-conformance.md) 分析相关的检查。 例如，在 Visual Studio 2017 中，以下代码生成 C7510:"Type": 仅当未设置 /permissive- 选项时，使用依赖类型名称时才必须使用 "typename" 作为前缀。 在 Visual Studio 2019 中，即使设置了 /permissive- 选项，相同的代码也会引发错误：
 
 ```cpp
 template <typename T>
@@ -380,11 +609,11 @@ int main()
 }
 ```
 
-若要避免该错误，请将 `typename` 关键字添加到 `a` 的声明中：`typename T::Type a;`。
+要避免该错误，请将 typename 关键字添加到 `a` 的声明中：`typename T::Type a;`。
 
 ### <a name="inline-assembly-code-isnt-supported-in-a-lambda-expression"></a>lambda 表达式不支持内联程序集代码
 
-Visual C++ 团队最近获悉一个安全问题，即在 lambda 中使用内联汇编程序可能会导致 `ebp`（返回地址寄存器）在运行时损坏。 恶意攻击者可能能够利用此方案。 鉴于问题的本质、内联汇编程序仅在 x86 上受到支持这一事实，以及内联汇编程序与编译器其余部分之间的交互性较差，这一问题可能的最安全解决方案是在 lambda 表达式中禁用内联汇编程序。
+Microsoft C++ 团队最近获悉一个安全问题，即在 lambda 中使用内联汇编程序可能会导致 `ebp`（返回地址寄存器）在运行时损坏。 恶意攻击者可能能够利用此方案。 鉴于问题的本质、内联汇编程序仅在 x86 上受到支持这一事实，以及内联汇编程序与编译器其余部分之间的交互性较差，这一问题可能的最安全解决方案是在 lambda 表达式中禁用内联汇编程序。
 
 我们发现“自然情况下”，在 lambda 表达式内使用内联汇编程序的唯一一种情况是用于捕获返回地址。 在此方案中，只需使用编译器内部函数 `_ReturnAddress()` 即可在所有平台上捕获返回地址。
 
@@ -443,7 +672,7 @@ int main()
 }
 ```
 
-### <a name="iterator-debugging-and-stdmoveiterator"></a>迭代器调试和 `std::move_iterator`
+### <a name="iterator-debugging-and-stdmove_iterator"></a>迭代器调试和 `std::move_iterator`
 
 已讲解如何使用迭代器调试功能来正确解包 `std::move_iterator`。 例如，`std::copy(std::move_iterator<std::vector<int>::iterator>, std::move_iterator<std::vector<int>::iterator>, int*)` 现在可占用 `memcpy` 快速路径。
 
@@ -475,11 +704,11 @@ int main()
 
 并行算法库现在可以在 Windows 8 及更高版本上正确使用真实的 `WaitOnAddress` 系列，而不是始终使用 Windows 7 及早期虚假版本。
 
-### <a name="stdsystemcategorymessage-whitespace"></a>`std::system_category::message()` whitespace
+### <a name="stdsystem_categorymessage-whitespace"></a>`std::system_category::message()` whitespace
 
 `std::system_category::message()` 现在会截断返回消息的尾随空格。
 
-### <a name="stdlinearcongruentialengine-divide-by-zero"></a>`std::linear_congruential_engine` 被零除
+### <a name="stdlinear_congruential_engine-divide-by-zero"></a>`std::linear_congruential_engine` 被零除
 
 导致 `std::linear_congruential_engine` 触发被 0 除的一些条件已得到修复。
 
@@ -505,7 +734,7 @@ int main()
 
 - 根据 [P0083“拼接映射和集”](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0083r3.pdf)，为容器合并以及接受右值容器的提取成员函数添加了重载
 
-### <a name="stdbasicistreamread-processing-of-rn--n"></a>`std::basic_istream::read` 处理 \\r\\n => \\n
+### <a name="stdbasic_istreamread-processing-of-rn--n"></a>`std::basic_istream::read` 处理 \\r\\n => \\n
 
 `std::basic_istream::read` 已修复为不作为 \\r\\n => \\n 处理的一部分临时写入提供的缓冲区部分。 此更改导致在读取大小超过 4K 的文件时，放弃了一些在 Visual Studio 2017 15.8 中获得的性能优势。 但是，仍存在从避免每个字符三个虚拟调用的效率改进。
 
@@ -517,57 +746,107 @@ int main()
 
 修复了在实现 [LWG 2729 “std::pair::operator= 上缺少 SFINAE”](https://cplusplus.github.io/LWG/issue2729)时引入的 `std::pair` 赋值运算符回归问题。 它现在能够再次正确接受可转换为 `std::pair` 的类型。
 
-### <a name="non-deduced-contexts-for-addconstt"></a>`add_const_t` 的非导出上下文
+### <a name="non-deduced-contexts-for-add_const_t"></a>`add_const_t` 的非导出上下文
 
 修复了一个有关类型特征的小 bug，其中 `add_const_t` 和相关函数应该是非导出上下文。 换而言之，`typename add_const<T>::type` 的别名应该是 `add_const_t`，而不是 `const T`。
 
+## <a name="update_162"></a> 16.2 中的 Bug 修补程序和行为更改
+
+### <a name="const-comparators-for-associative-containers"></a>相关容器的 Const 比较运算符
+
+[集](../standard-library/set-class.md)、[地图](../standard-library/map-class.md)、[多集](../standard-library/multiset-class.md)和[多地图](../standard-library/multimap-class.md)中的用于搜索和插入的代码已合并，以减少代码。 插入操作现在针对 const 比较运算符调用小于比较，方式与之前的搜索操作相同。 以下代码在 Visual Studio 2019 版本 16.1 和更早版本中编译，但在 Visual Studio 2019 版本 16.2 中引发 C3848：
+
+```cpp
+#include <iostream>
+#include <map>
+
+using namespace std;
+
+struct K
+{
+   int a;
+   string b = "label";
+};
+
+struct Comparer  {
+   bool operator() (K a, K b) {
+      return a.a < b.a;
+   }
+};
+
+map<K, double, Comparer> m;
+
+K const s1{1};
+K const s2{2};
+K const s3{3};
+
+int main() {
+
+   m.emplace(s1, 1.08);
+   m.emplace(s2, 3.14);
+   m.emplace(s3, 5.21);
+
+}
+```
+
+要避免该错误，请设置比较运算符 const：
+
+```cpp
+struct Comparer  {
+   bool operator() (K a, K b) const {
+      return a.a < b.a;
+   }
+};
+
+```
+
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range="vs-2017"
 
-## <a name="improvements_150"></a> Visual Studio 2017 RTW（版本 15.0）中的改进之处
+## <a name="improvements_150"></a>Visual Studio 2017 RTW（版本 15.0）中的符合性改进
 
-Microsoft C++ 编译器支持通用 `constexpr` 和用于聚合的非静态数据成员初始化 (NSDMI)，现具有 Visual Studio 2017 中的 C++14 标准中的全部新增功能。 但编译器仍缺少 C++11 和 C++98 标准版中的一些功能。 请参阅 [Visual C++ 语言合规性](../visual-cpp-language-conformance.md)中显示编译器当前状态的表。
+Visual Studio 2017 中的 Microsoft C++ 编译器支持通用 constexpr 和用于聚合的非静态数据成员初始化 (NSDMI)，现具有 C++14 标准中的全部新增功能。 但编译器仍缺少 C++11 和 C++98 标准版中的一些功能。 请参阅 [Visual C++ 语言合规性](../visual-cpp-language-conformance.md)中显示编译器当前状态的表。
 
 ### <a name="c11-expression-sfinae-support-in-more-libraries"></a>C++11：在更多库中支持表达式 SFINAE
 
-编译器持续改进对表达式 SFINAE 的支持，SFINAE 是模板参数推导和替换所必需的，其中 `decltype` 和 `constexpr` 表达式可能显示为模板参数。 有关详细信息，请参阅 [Visual Studio 2017 RC 中的表达式 SFINAE 改进之处](https://blogs.msdn.microsoft.com/vcblog/2016/06/07/expression-sfinae-improvements-in-vs-2015-update-3)。
+编译器持续改进对表达式 SFINAE 的支持，SFINAE 是模板参数推导和替换所必需的，其中 decltype 和 constexpr 表达式可能显示为模板参数。 有关详细信息，请参阅 [Visual Studio 2017 RC 中的表达式 SFINAE 改进之处](https://blogs.msdn.microsoft.com/vcblog/2016/06/07/expression-sfinae-improvements-in-vs-2015-update-3)。
 
 ### <a name="c14-nsdmi-for-aggregates"></a>C++14：用于聚合的 NSDMI
 
 聚合是一个数组或类，不包含用户提供的构造函数、专用或受保护的非静态数据成员、基类，也不包含虚拟函数。 从 C++14 开始，聚合可能包含成员初始值设定项。 有关详细信息，请参阅 [Member initializers and aggregates](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3605.html)（成员初始值设定项和聚合）。
 
-### <a name="c14-extended-constexpr"></a>C++14：扩展 `constexpr`
+### <a name="c14-extended-constexpr"></a>C++14：扩展的 constexpr
 
-现在允许声明为 `constexpr` 的表达式包含某些种类的声明：if 和 switch 语句、loop 语句，以及某些对象的突变，这些对象的生命期开始时间处于 constexpr 表达式计算范围内。 此外，`constexpr` 非静态成员函数不再必须为隐式 `const`。 有关详细信息，请参阅 [Relaxing constraints on constexpr functions](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3652.html)（放松对 constexpr 函数的约束）。
+现在允许声明为 constexpr 的表达式包含某些种类的声明：if 和 switch 语句、loop 语句，以及某些对象的突变，这些对象的生命期开始时间处于 constexpr 表达式计算范围内。 此外，不再要求 constexpr 非静态成员函数必须为隐式 const。 有关详细信息，请参阅 [Relaxing constraints on constexpr functions](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3652.html)（放松对 constexpr 函数的约束）。
 
-### <a name="c17-terse-staticassert"></a>C++17：简要 `static_assert`
+### <a name="c17-terse-static_assert"></a>C++17：简要 `static_assert`
 
 `static_assert` 的消息参数是可选的。 有关详细信息，请参阅 [Extending static_assert, v2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3928.pdf)（扩展 static_assert, v2）。
 
 ### <a name="c17-fallthrough-attribute"></a>C++17：`[[fallthrough]]` 属性
 
-在 /std:c++17  模式下，`[[fallthrough]]` 属性可以在 switch 语句的上下文中用作对预期发生贯穿行为的编译器的提示。 此属性可防止编译器在这类情况下发出警告。 有关详细信息，请参阅 [\[\[fallthrough\]\] 属性的用词](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0188r0.pdf)。
+在 /std:c++17 模式下，`[[fallthrough]]` 属性可以在 switch 语句的上下文中用作对预期发生贯穿行为的编译器的提示。 此属性可防止编译器在这类情况下发出警告。 有关详细信息，请参阅 [\[\[fallthrough\]\] 属性的用词](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0188r0.pdf)。
 
 ### <a name="generalized-range-based-for-loops"></a>一般化的基于范围的 for 循环
 
 基于范围的 for 循环不再需要 `begin()` 和 `end()` 返回相同类型的对象。 此更改使 `end()` 能够返回 [range-v3](https://github.com/ericniebler/range-v3) 中的范围和完成但尚未发布的范围技术规范使用的 sentinel。 有关详细信息，请参阅 [Generalizing the Range-Based For Loop](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html)（通用化基于范围的 for 循环）。
 
-## <a name="improvements_153"></a>Visual Studio 2017 版本 15.3 中的改进
+## <a name="improvements_153"></a> 15.3 中的符合性改进
 
 ### <a name="constexpr-lambdas"></a>constexpr lambda
 
 现在可以在常数表达式中使用 Lambda 表达式。 有关详细信息，请参阅 [C++ 中的常量表达式 lambda 表达式](../cpp/lambda-expressions-constexpr.md)。
 
-### <a name="if-constexpr-in-function-templates"></a>函数模板中的 `if constexpr`
+### <a name="if-constexpr-in-function-templates"></a>函数模板中的 if constexpr
 
-函数模板可能包含 `if constexpr` 语句，用于启用编译时创建分支。 有关详细信息，请参阅 [if constexpr 语句](../cpp/if-else-statement-cpp.md#if_constexpr)。
+函数模板可能包含 if constexpr 语句，用于启用编译时分支。 有关详细信息，请参阅 [if constexpr 语句](../cpp/if-else-statement-cpp.md#if_constexpr)。
 
 ### <a name="selection-statements-with-initializers"></a>具有初始化表达式的选择语句
 
-`if` 语句可以包括在该语句本身所含块范围中引入变量的初始化表达式。 有关详细信息，请参阅[具有初始化表达式的 if 语句](../cpp/if-else-statement-cpp.md#if_with_init)。
+if 语句可以包括在该语句本身所含块范围中引入变量的初始化表达式。 有关详细信息，请参阅[具有初始化表达式的 if 语句](../cpp/if-else-statement-cpp.md#if_with_init)。
 
-### <a name="maybeunused-and-nodiscard-attributes"></a>`[[maybe_unused]]` 和 `[[nodiscard]]` 属性
+### <a name="maybe_unused-and-nodiscard-attributes"></a>`[[maybe_unused]]` 和 `[[nodiscard]]` 属性
 
 实体未使用时，将出现新属性 `[[maybe_unused]]` 静默处理警告。 如果放弃函数调用的返回值，`[[nodiscard]]` 属性将创建一条警告。 有关详细信息，请参阅 [C++ 中的属性](../cpp/attributes.md)。
 
@@ -579,7 +858,7 @@ Microsoft C++ 编译器支持通用 `constexpr` 和用于聚合的非静态数�
 
 现在可以在一个声明中存储包含组件的各个名称的值，前提是值为数组、`std::tuple` 或 `std::pair` 或者包含所有公共非静态数据成员。 有关详细信息，请参阅[结构化绑定](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf)和[从一个函数返回多个值](../cpp/functions-cpp.md#multi_val)。
 
-### <a name="construction-rules-for-enum-class-values"></a>`enum class` 值的构造规则
+### <a name="construction-rules-for-enum-class-values"></a>枚举类值的构造规则
 
 现在有一种从作用域内枚举的基础类型到该枚举本身的隐式/非收缩转换，前提是它的定义不引入枚举器，并且源使用列表初始化语法。 有关详细信息，请参阅[枚举类值的构造规则](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0138r2.pdf)和[枚举](../cpp/enumerations-cpp.md#no_enumerators)。
 
@@ -587,21 +866,21 @@ Microsoft C++ 编译器支持通用 `constexpr` 和用于聚合的非静态数�
 
 Lambda 表达式中的 `*this` 对象现在可按值捕获。 此更改可以在并行和异步操作中实现调用 lambda 的情况，特别是在较新的计算机体系结构中。 有关详细信息，请参阅[通过值执行的 \*this 的 Lambda 捕获为 \[=,\*this\]](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0018r3.html)。
 
-### <a name="removing-operator-for-bool"></a>为 `bool` 删除 `operator++`
+### <a name="removing-operator-for-bool"></a>为 bool 删除 `operator++`
 
-`bool` 类型上不再支持 `operator++`。 有关详细信息，请参阅[删除弃用的 operator++(bool)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0002r1.html)。
+`operator++` 在 bool 类型上不再受支持。 有关详细信息，请参阅[删除弃用的 operator++(bool)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0002r1.html)。
 
-### <a name="removing-deprecated-register-keyword"></a>删除弃用的 `register` 关键字
+### <a name="removing-deprecated-register-keyword"></a>删除弃用的 register 关键字
 
-之前弃用（且被编译器忽略的）`register` 关键字现已从语言中删除。 有关详细信息，请参阅[删除弃用的 register 关键字](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0001r1.html)。
+之前弃用（且被编译器忽略的）register 关键字现已从语言中删除。 有关详细信息，请参阅[删除弃用的 register 关键字](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0001r1.html)。
 
-## <a name="improvements_155"></a>Visual Studio 2017 版本 15.5 中的改进
+## <a name="improvements_155"></a> 15.5 中的符合性改进
 
-标有 \[14] 的功能即使是在 /std:c++14  模式中也无条件提供。
+标有 \[14] 的功能即使是在 /std:c++14 模式中也无条件提供。
 
-### <a name="new-compiler-switch-for-extern-constexpr"></a>`extern constexpr` 的新编译器开关
+### <a name="new-compiler-switch-for-extern-constexpr"></a>extern constexpr 的新编译器开关
 
-在早期版本的 Visual Studio 中，编译器常常提供 `constexpr` 变量内部链接，甚至是在变量标记为 `extern` 的时候。 在 Visual Studio 2017 版本 15.5 中，新编译器开关 [/Zc:externConstexpr](../build/reference/zc-externconstexpr.md) 启用符合标准的正确行为。 有关详细信息，请参阅 [extern constexpr 链接](#extern_linkage)。
+在早期版本的 Visual Studio 中，编译器常常提供 constexpr 变量内部链接，甚至是在变量标记为 extern 时。 在 Visual Studio 2017 版本 15.5 中，新编译器开关 [/Zc:externConstexpr](../build/reference/zc-externconstexpr.md) 启用符合标准的正确行为。 有关详细信息，请参阅 [extern constexpr 链接](#extern_linkage)。
 
 ### <a name="removing-dynamic-exception-specifications"></a>删除动态异常规范
 
@@ -611,7 +890,7 @@ Lambda 表达式中的 `*this` 对象现在可按值捕获。 此更改可以在
 
 [P0005R4](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0005r4.html) `not_fn` 替换了 `not1` 和 `not2`。
 
-### <a name="rewording-enablesharedfromthis"></a>改写 `enable_shared_from_this`
+### <a name="rewording-enable_shared_from_this"></a>改写 `enable_shared_from_this`
 
 在 C++11 中添加 [P0033R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0033r1.html) `enable_shared_from_this`。 C++17 标准更新规范以更好地处理某些特殊情况。 [14]
 
@@ -627,19 +906,19 @@ Lambda 表达式中的 `*this` 对象现在可按值捕获。 此更改可以在
 
 [P0302R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0302r1.html) 在 C++17 之前，经典模板 `std::function` 有多个采用分配器参数的构造函数。 但是，在此上下文中，分配器的使用出现了问题并且语义不明。 已删除问题构造函数。
 
-### <a name="fixes-for-notfn"></a>`not_fn()` 的修复
+### <a name="fixes-for-not_fn"></a>`not_fn()` 的修复
 
 [P0358R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0358r1.html) `std::not_fn` 的新措词提供对在调用包装器时传播值类别的支持。
 
-### <a name="sharedptrt-sharedptrtn"></a>`shared_ptr<T[]>`， `shared_ptr<T[N]>`
+### <a name="shared_ptrt-shared_ptrtn"></a>`shared_ptr<T[]>`， `shared_ptr<T[N]>`
 
 [P0414R2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0414r2.html) 将库基础知识中的 `shared_ptr` 更改合并到 C++17。 [14]
 
-### <a name="fixing-sharedptr-for-arrays"></a>修复数组的 `shared_ptr`
+### <a name="fixing-shared_ptr-for-arrays"></a>修复数组的 `shared_ptr`
 
 [P0497R0](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0497r0.html) 修复数组的 shared_ptr 支持。 [14]
 
-### <a name="clarifying-insertreturntype"></a>阐明 `insert_return_type`
+### <a name="clarifying-insert_return_type"></a>阐明 `insert_return_type`
 
 [P0508R0](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0508r0.html) 有唯一键的关联容器和有唯一键的无序容器均有一个返回嵌套类型 `insert_return_type` 的成员函数 `insert`。 该返回类型现在定义为在容器 Iterator 和 NodeType 上参数化的类型的专用化。
 
@@ -649,7 +928,7 @@ Lambda 表达式中的 `*this` 对象现在可按值捕获。 此更改可以在
 
 ### <a name="annex-d-features-deprecated"></a>弃用的 Annex D 功能
 
-C++ 标准的 Annex D 包含所有已弃用的功能，包括 `shared_ptr::unique()`、`<codecvt>` 和 `namespace std::tr1`。 设置 /std:c++17  编译器开关时，Annex D 中几乎所有的标准库功能都被标记为已弃用。 有关详细信息，请参阅 [Annex D 中的标准库功能被标记为已弃用](#annex_d)。
+C++ 标准的 Annex D 包含所有已弃用的功能，包括 `shared_ptr::unique()`、`<codecvt>` 和 `namespace std::tr1`。 设置 /std:c++17 编译器开关时，Annex D 中几乎所有的标准库功能都被标记为已弃用。 有关详细信息，请参阅 [Annex D 中的标准库功能被标记为已弃用](#annex_d)。
 
 现在，`<experimental/filesystem>` 中的 `std::tr2::sys` 命名空间在 **/std:c++14** 下默认发出弃用警告，在 **/std:c++17** 下默认删除。
 
@@ -657,9 +936,9 @@ C++ 标准的 Annex D 包含所有已弃用的功能，包括 `shared_ptr::uniqu
 
 标准库现在在内部使用变量模板。
 
-标准库已随 C++17 编译器的更改更新，包括在类型系统中添加 `noexcept` 和删除动态异常规范。
+标准库已随 C++17 编译器的更改更新，包括在类型系统中添加 noexcept 和删除动态异常规范。
 
-## <a name="improvements_156"></a>Visual Studio 2017 版本 15.6 中的改进
+## <a name="improvements_156"></a> 15.6 中的符合性改进
 
 ### <a name="c17-library-fundamentals-v1"></a>C++17 Library Fundamentals V1
 
@@ -669,11 +948,11 @@ C++ 标准的 Annex D 包含所有已弃用的功能，包括 `shared_ptr::uniqu
 
 [P0739R0](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0739r0.html) 将 `adopt_lock_t` 移动到 `scoped_lock` 参数列表的前面，以启用对 `scoped_lock` 的一致使用。 允许 `std::variant` 构造函数在更多事例中参与重载解析，以便启用副本分配。
 
-## <a name="improvements_157"></a>Visual Studio 2017 版本 15.7 中的改进
+## <a name="improvements_157"></a> 15.7 中的符合性改进
 
 ### <a name="c17-rewording-inheriting-constructors"></a>C++17：重新组织继承构造函数
 
-[P0136R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0136r1.html) 指定命名构造函数的 using  声明现在可使相应的基类构造函数对派生类的初始化可见，而不是声明额外的派生类构造函数。 此重新组织是从 C++14 更改的。 在 Visual Studio 2017 版本 15.7 及更高版本中，C++14 中有效且使用继承构造函数的代码在 /std:c + + 17  模式下可能无效或具有不同的语义。
+[P0136R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0136r1.html) 指定命名构造函数的 using 声明现在可使相应的基类构造函数对派生类的初始化可见，而不是声明额外的派生类构造函数。 此重新组织是从 C++14 更改的。 在 Visual Studio 2017 版本 15.7 及更高版本中，C++14 中有效且使用继承构造函数的代码在 /std:c + + 17 模式下可能无效或具有不同的语义。
 
 以下示例演示 C++14 行为：
 
@@ -693,7 +972,7 @@ B b(42L); // Calls B<long>(long), which calls A(int)
           //  due to substitution failure in A<long>(long).
 ```
 
-以下示例演示 Visual Studio 15.7 中的 /std:c++17  行为：
+以下示例演示 Visual Studio 15.7 中的 /std:c++17 行为：
 
 ```cpp
 struct A {
@@ -719,7 +998,7 @@ B b(42L); // now calls B(int)
 
 [P0017R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0017r1.html)
 
-如果基类的构造函数非公有但可由派生类进行访问，则在 Visual Studio 版本 15.7 的 /std:c++17  模式下，将不再能够使用空括号来初始化派生类型的对象。
+如果基类的构造函数非公有但可由派生类进行访问，则在 Visual Studio 版本 15.7 的 /std:c++17 模式下，将不再能够使用空括号来初始化派生类型的对象。
 
 以下示例演示 C++14 一致行为：
 
@@ -741,7 +1020,7 @@ Derived d2 {}; // OK in C++14: Calls Derived::Derived()
 
 在 C++17，`Derived` 现被视作聚合类型。 这意味着 `Base` 通过私有默认构造函数进行的初始化将作为扩展的聚合初始化规则的一部分而直接发生。 以前，`Base` 私有构造函数通过 `Derived` 构造函数调用，它之所以能够成功是因为友元声明。
 
-以下示例演示 Visual Studio 版本 15.7 中 /std:c++17  模式下的 C++17 行为：
+以下示例演示 Visual Studio 版本 15.7 中 /std:c++17 模式下的 C++17 行为：
 
 ```cpp
 struct Derived;
@@ -767,7 +1046,7 @@ Derived d2 {}; // error C2248: 'Base::Base': cannot access
 
 [P0127R2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0127r2.html)
 
-在 /std:c++17  模式下，编译器现在可以推导通过 auto  声明的非类型模板参数的类型：
+在 /std:c++17 模式下，编译器现在可以推导通过 auto 声明的非类型模板参数的类型：
 
 ```cpp
 template <auto x> constexpr auto constant = x;
@@ -777,7 +1056,7 @@ auto v2 = constant<true>;   // v2 == true, decltype(v2) is bool
 auto v3 = constant<'a'>;    // v3 == 'a', decltype(v3) is char
 ```
 
-此新功能的一个影响是有效的 C++14 代码可能无效或具有不同的语义。 例如，某些以前无效的重载现在变得有效。 以下示例演示由于对 `example(p)` 的调用绑定到 `example(void*);` 而编译的 C++14 代码。 在 Visual Studio 2017 版本 15.7 的 /std:c++17  模式下，`example` 函数模板是最佳匹配。
+此新功能的一个影响是有效的 C++14 代码可能无效或具有不同的语义。 例如，某些以前无效的重载现在变得有效。 以下示例演示由于对 `example(p)` 的调用绑定到 `example(void*);` 而编译的 C++14 代码。 在 Visual Studio 2017 版本 15.7 的 /std:c++17 模式下，`example` 函数模板是最佳匹配。
 
 ```cpp
 template <int N> struct A;
@@ -791,7 +1070,7 @@ void sample(A<0> *p)
 }
 ```
 
-以下示例演示 Visual Studio 15.7 中 /std:c++17  模式下的 C++17 代码：
+以下示例演示 Visual Studio 15.7 中 /std:c++17 模式下的 C++17 代码：
 
 ```cpp
 template <int N> struct A;
@@ -837,11 +1116,11 @@ void sample(A<0> *p)
 
 [P0682R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0682r1.html) 将新的基本字符串转换函数从 P0067R5 移动到新的 \<charconv> 标头，并进行了其他改进，包括更改错误处理以使用 `std::errc` 而非 `std::error_code`。
 
-### <a name="c17-constexpr-for-chartraits-partial"></a>C++17：`char_traits` 为 `constexpr`（部分）
+### <a name="c17-constexpr-for-char_traits-partial"></a>C++17：`char_traits` 的 constexpr（部分）
 
 [P0426R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html) 对 `std::traits_type` 成员函数 `length`、`compare` 和 `find` 进行了更改，以便使 `std::string_view` 在常数表达式中可用。 （在 Visual Studio 2017 版本 15.6 中，仅支持 Clang/LLVM。 在版本 15.7 预览版 2 中，也几乎完全支持 ClXX。）
 
-## <a name="improvements_159"></a>Visual Studio 2017 版本 15.9 中的改进
+## <a name="improvements_159"></a> 15.9 中的符合性改进
 
 ### <a name="left-to-right-evaluation-order-for-operators-----and-"></a>运算符 `->*`、`[]`、`>>` 和 `<<` 从左到右的计算顺序
 
@@ -849,9 +1128,9 @@ void sample(A<0> *p)
 
 - 其中一个操作数表达式是由值传递的对象或包含由值传递的对象时，或
 
-- 使用 /clr  进行编译，且其中的一个操作数是对象的字段或数组元素时。
+- 使用 /clr 进行编译，且其中的一个操作数是对象的字段或数组元素时。
 
-当编译器无法保证从左到右计算时，它将发出警告 [C4866](https://docs.microsoft.com/cpp/error-messages/compiler-warnings/c4866?view=vs-2017)。 编译器只有在指定 /std:c++17  或更高版本时才会生成此警告，因为这些运算符的从左到右顺序要求是在 C++17 中引入的。
+当编译器无法保证从左到右计算时，它将发出警告 [C4866](https://docs.microsoft.com/cpp/error-messages/compiler-warnings/c4866?view=vs-2017)。 编译器只有在指定 /std:c++17 或更高版本时才会生成此警告，因为这些运算符的从左到右顺序要求是在 C++17 中引入的。
 
 若要解决此警告，首先考虑操作数的从左到右计算是否是必需的，例如，操作数的计算可能会生成依赖于顺序的副作用的情况。 在许多情况下，操作数计算的顺序不会有什么明显的影响。 如果计算顺序必须是从左到右，则考虑是否可以改为通过常量引用来传递操作数。 此更改可消除以下代码示例中的警告：
 
@@ -972,7 +1251,7 @@ int main()
 }
 ```
 
-### `constexpr`
+### <a name="constexpr"></a>**constexpr**
 
 当条件性运算的左侧操作数在 constexpr 上下文中无效时，Visual Studio 2017 会正确引发错误。 以下代码在 Visual Studio 2015 中编译，但在 Visual Studio 2017 中不编译（C3615 constexpr 函数 “f” 无法得出常数表达式）：
 
@@ -989,7 +1268,7 @@ constexpr bool f(const array<1> &arr)
 }
 ```
 
-要更正此错误，请将 `array::size()` 函数声明为 `constexpr`，或者从 `f` 中删除 `constexpr` 限定符。
+要更正错误，可将 `array::size()` 函数声明为 constexpr 或从 `f` 中删除 constexpr 限定符。
 
 ### <a name="class-types-passed-to-variadic-functions"></a>传递给 variadic 函数的类类型
 
@@ -1058,7 +1337,7 @@ struct S
 int i = (const S)0; // error C2440
 ```
 
-要更正此错误，请将 `operator int()` 声明为 `const`。
+要更正此错误，请将 `operator int()` 声明为 const。
 
 ### <a name="access-checking-on-qualified-names-in-templates"></a>对模板中限定名称的访问检查
 
@@ -1095,7 +1374,7 @@ template <class T, ListNodeMember M> class ListHead; // C2955: 'ListNodeMember':
 
 ### <a name="expression-sfinae"></a>表达式 SFINAE
 
-为了支持表达式 SFINAE，编译器现在会在声明模板而不是实例化模板时分析 `decltype` 参数。 因此，如果在 decltype 参数中找到非依赖专用化，则它不会被推迟到实例化时间。 而是被立即处理，并且在当时诊断产生的所有错误。
+为了支持表达式 SFINAE，编译器现在会在声明模板而不是实例化模板时分析 decltype 参数。 因此，如果在 decltype 参数中找到非依赖专用化，则它不会被推迟到实例化时间。 而是被立即处理，并且在当时诊断产生的所有错误。
 
 以下示例显示了在声明时引发的这类编译器错误：
 
@@ -1144,7 +1423,7 @@ value struct V
 
 ### <a name="default-indexers-ccli"></a>默认索引器 (C++/CLI)
 
-在 Visual Studio 2015 及更早版本中，编译器在某些情况下将默认属性误识别为默认索引器。 可通过使用标识符 `default` 访问该属性来解决这个问题。 在 C++11 中将 `default` 引入为关键字后，解决方法本身会出现问题。 在 Visual Studio 2017 中，需要解决方法的 Bug 都已修复，现在将 `default` 用于访问类的默认属性时，编译器会引发错误。
+在 Visual Studio 2015 及更早版本中，编译器在某些情况下将默认属性误识别为默认索引器。 有可能通过使用标识符“default”访问该属性来解决这个问题。 在 C++11 中将“default”引入为关键字后，解决方法本身会出现问题。 在 Visual Studio 2017 中，需要解决方法的 Bug 都已修复，现在将“default”用于访问类的默认属性时，编译器会引发错误。
 
 ```cpp
 //class1.cs
@@ -1198,7 +1477,7 @@ void f(ClassLibrary1::Class1 ^r1, ClassLibrary1::Class2 ^r2)
 }
 ```
 
-## <a name="update_153"></a> Visual Studio 2017 版本 15.3 中的 Bug 修复
+## <a name="update_153"></a> 15.3 中的 bug 修补程序
 
 ### <a name="calls-to-deleted-member-templates"></a>调用的成员模板已遭删除
 
@@ -1216,7 +1495,7 @@ void g()
 }
 ```
 
-若要修复此错误，请将 `i` 声明为 `int`。
+要修复该错误，请将 `i` 声明为 int。
 
 ### <a name="pre-condition-checks-for-type-traits"></a>类型特征的前提条件检查
 
@@ -1311,9 +1590,9 @@ template <typename T>
 void S::f(T t) {}
 ```
 
-### <a name="attempting-to-take-the-address-of-this-pointer"></a>尝试使用 `this` 指针的地址
+### <a name="attempting-to-take-the-address-of-this-pointer"></a>尝试使用“this”指针的地址
 
-在 C++ 中，`this` 是指向 X 的类型指针的 prvalue。不能使用 `this` 的地址，也不能将其绑定到左值引用。 在旧版 Visual Studio 中，编译器允许通过使用强制转换来规避此限制。 在 Visual Studio 2017 版本 15.3 中，编译器会生成错误 C2664。
+在 C++ 中，“this”是指向 X 的类型指针的 prvalue。不能使用“this”的地址，也不能将其绑定到 lvalue 引用。 在旧版 Visual Studio 中，编译器允许通过使用强制转换来规避此限制。 在 Visual Studio 2017 版本 15.3 中，编译器会生成错误 C2664。
 
 ### <a name="conversion-to-an-inaccessible-base-class"></a>转换成不可访问的基类
 
@@ -1333,7 +1612,7 @@ void f()
 
 ### <a name="default-arguments-arent-allowed-on-out-of-line-definitions-of-member-functions"></a>不允许对成员函数的外部定义使用默认自变量
 
-不允许对模板类中成员函数的外部定义使用默认自变量。 编译器会在 /permissive  下发出警告，在 /permissive-  下发出硬错误。
+不允许对模板类中成员函数的外部定义使用默认自变量。 编译器会在 /permissive 下发出警告，在 [/permissive-](../build/reference/permissive-standards-conformance.md) 下发出硬错误。
 
 在以前版本的 Visual Studio 中，以下格式错误的代码可能会导致发生运行时故障。 Visual Studio 2017 版本 15.3 发出警告 C5034：“A\<T>::f”：类模板的成员的外部定义不得具有默认参数：
 
@@ -1354,7 +1633,7 @@ T A<T>::f(T t, bool b = false) // C5034
 
 ### <a name="use-of-offsetof-with-compound-member-designator"></a>将 `offsetof` 与复合成员指示符结合使用
 
-在 Visual Studio 2017 版本 15.3 中，使用 /Wall 选项进行编译时，如果使用 `offsetof(T, m)`（其中 m 是“复合成员指示符”），会生成警告   。 下面的代码格式错误，可能会导致运行时发生故障。 Visual Studio 2017 版本 15.3 生成“警告 C4841: 使用了非标准扩展: offsetof 中的复合成员指示符”：
+在 Visual Studio 2017 版本 15.3 中，使用 /Wall 选项进行编译时，如果使用 `offsetof(T, m)`（其中 m 是“复合成员指示符”），会生成警告。 下面的代码格式错误，可能会导致运行时发生故障。 Visual Studio 2017 版本 15.3 生成“警告 C4841: 使用了非标准扩展: offsetof 中的复合成员指示符”：
 
 ```cpp
 struct A {
@@ -1376,7 +1655,7 @@ constexpr auto off = offsetof(A, arr[2]);
 
 ### <a name="using-offsetof-with-static-data-member-or-member-function"></a>将 `offsetof` 与静态数据成员或成员函数结合使用
 
-在 Visual Studio 2017 版本 15.3 中，使用 `offsetof(T, m)`（其中 m 表示静态数据成员或成员函数）会导致出现错误  。 下面的代码生成“错误 C4597：未定义的行为：offsetof 应用于成员函数‘example’”和“错误 C4597：未定义的行为：offsetof 应用于静态数据成员‘example’”：
+在 Visual Studio 2017 版本 15.3 中，使用 `offsetof(T, m)`（其中 m 表示静态数据成员或成员函数）会导致出现错误。 下面的代码生成“错误 C4597：未定义的行为：offsetof 应用于成员函数‘example’”和“错误 C4597：未定义的行为：offsetof 应用于静态数据成员‘example’”：
 
 ```cpp
 #include <cstddef>
@@ -1394,7 +1673,7 @@ constexpr auto off2 = offsetof(A, two);
 
 ### <a name="declspec"></a>有关 `__declspec` 属性的新警告
 
-在 Visual Studio 2017 版本 15.3 中，如果在 `extern "C"` 链接规范前应用了 `__declspec(...)`，则编译器不再忽略此特性。 以前，编译器会忽略此特性，进而可能会产生运行时影响。 设置 /Wall 和 /WX 选项后，下面的代码生成“警告 C4768: 已忽略链接规范前的 __declspec 特性”   ：
+在 Visual Studio 2017 版本 15.3 中，如果在 `extern "C"` 链接规范前应用了 `__declspec(...)`，则编译器不再忽略此特性。 以前，编译器会忽略此特性，进而可能会产生运行时影响。 设置 /Wall 和 /WX 选项后，下面的代码生成“警告 C4768: 已忽略链接规范前的 __declspec 特性”：
 
 ```cpp
 __declspec(noinline) extern "C" HRESULT __stdcall //C4768
@@ -1406,11 +1685,11 @@ __declspec(noinline) extern "C" HRESULT __stdcall //C4768
 extern "C" __declspec(noinline) HRESULT __stdcall
 ```
 
-此警告在 15.3 中默认关闭，但在 15.5 中默认打开，只影响使用 /Wall 和 /WX 编译的代码   。
+此警告在 15.3 中默认关闭，但在 15.5 中默认打开，只影响使用 /Wall 和 /WX 编译的代码。
 
-### <a name="decltype-and-calls-to-deleted-destructors"></a>`decltype` 和调用的析构函数已删除
+### <a name="decltype-and-calls-to-deleted-destructors"></a>decltype 和调用的析构函数已删除
 
-在旧版 Visual Studio 中，在 `decltype` 相关表达式的上下文中，编译器无法检测对已删除析构函数的调用。 Visual Studio 2017 版本 15.3 中，以下代码生成错误“C2280：'A\<T>::~A(void)'：尝试引用已删除的函数”：
+在旧版 Visual Studio 中，在“decltype”相关表达式的上下文中，编译器无法检测对已删除析构函数的调用。 Visual Studio 2017 版本 15.3 中，以下代码生成错误“C2280：'A\<T>::~A(void)'：尝试引用已删除的函数”：
 
 ```cpp
 template<typename T>
@@ -1433,7 +1712,7 @@ void h()
 
 ### <a name="uninitialized-const-variables"></a>未初始化的 const 变量
 
-Visual Studio 2017 RTW 版本包含一个回归，即如果未初始化 `const` 变量，C++ 编译器不会发出诊断提醒。 Visual Studio 2017 版本 15.3 修复了此回归。 下面的代码现在生成“警告 C4132：'Value'：应初始化 const 对象”：
+Visual Studio 2017 RTW 版本包含一个回归，即如果未初始化 const 变量，C++ 编译器不会发出诊断提醒。 Visual Studio 2017 版本 15.3 修复了此回归。 下面的代码现在生成“警告 C4132：'Value'：应初始化 const 对象”：
 
 ```cpp
 const int Value; //C4132
@@ -1458,9 +1737,9 @@ C;      // warning C4091 : '' : ignored on left of 'C' when no variable is decla
 
 若要移除这些警告，请注释掉或删除空声明。 如果未命名的对象会造成副作用（如 RAII），应命名对象。
 
-在 /Wv:18 下此警告被排除在外，而在警告等级 W2 下此警告默认启用  。
+在 /Wv:18 下此警告被排除在外，而在警告等级 W2 下此警告默认启用。
 
-### <a name="stdisconvertible-for-array-types"></a>`std::is_convertible` 为数组类型
+### <a name="stdis_convertible-for-array-types"></a>`std::is_convertible` 为数组类型
 
 早期版本的编译器为数组类型提供了不正确的 [std::is_convertible](../standard-library/is-convertible-class.md) 结果。 这要求库编写者在使用 `std::is_convertible<...>` 类型特征时，将 Microsoft C++ 编译器作为特例处理。 在以下示例中，静态断言在早期版本的 Visual Studio 中是通过的，但在 Visual Studio 2017 版本 15.3 中不通过：
 
@@ -1481,7 +1760,7 @@ static_assert(std::is_convertible<Array, Array&>::value, "");
    To test() { return std::declval<From>(); }
 ```
 
-### <a name="private-destructors-and-stdisconstructible"></a>私有析构函数和 `std::is_constructible`
+### <a name="private-destructors-and-stdis_constructible"></a>私有析构函数和 `std::is_constructible`
 
 在决定 [std::is_constructible](../standard-library/is-constructible-class.md) 的结果时，早期版本的编译器忽略了析构函数是否是私有的。 现在会考虑这一点。 在以下示例中，静态断言在早期版本的 Visual Studio 中是通过的，但在 Visual Studio 2017 版本 15.3 中不通过：
 
@@ -1555,7 +1834,7 @@ void g()
 
 ### <a name="c5038-order-of-initialization-in-initializer-lists"></a>C5038：初始值设定项列表中的初始化顺序
 
-类成员按它们声明的顺序，而非按它们在初始值设定项列表中出现的顺序进行初始化。 如果初始值设定项列表的顺序不同于声明顺序，早期版本的编译器不会发出警告。 如果列表中为另一成员初始化所依赖的某成员已被初始化，则此问题可能会造成未定义的运行时行为。 在以下示例中，Visual Studio 2017 版本 15.3（具有 /Wall）引发了“警告 C5038: 数据成员 "A::y" 将在数据成员 "A::x" 之后被初始化”  ：
+类成员按它们声明的顺序，而非按它们在初始值设定项列表中出现的顺序进行初始化。 如果初始值设定项列表的顺序不同于声明顺序，早期版本的编译器不会发出警告。 如果列表中为另一成员初始化所依赖的某成员已被初始化，则此问题可能会造成未定义的运行时行为。 在以下示例中，Visual Studio 2017 版本 15.3（具有 /Wall）引发了“警告 C5038: 数据成员 "A::y" 将在数据成员 "A::x" 之后被初始化”：
 
 ```cpp
 struct A
@@ -1568,9 +1847,9 @@ struct A
 
 要修复此问题，请将初始值设定项列表的顺序设置为与声明顺序相同。 如果一个或两个初始化表达式同时引用基类成员，则会引发类似警告。
 
-此警告默认为关闭，它仅会影响通过 /Wall 编译的代码  。
+此警告默认为关闭，它仅会影响通过 /Wall 编译的代码。
 
-## <a name="update_155"></a>Visual Studio 2017 版本 15.5 中的 Bug 修复和其他行为更改
+## <a name="update_155"></a> 15.5 中的 Bug 修补程序和其他行为更改
 
 ### <a name="partial-ordering-change"></a>部分排序更改
 
@@ -1632,7 +1911,7 @@ int main()
 
 ### <a name="exception-handlers"></a>异常处理程序
 
-对数组或函数类型的引用的处理程序从不匹配任意异常对象。 现在，编译器正确遵循此规则并引发第 4 级警告。 使用 /Zc:strictStrings 时，它也不再将 `char*` 或 `wchar_t*` 的处理程序与字符串文本相匹配  。
+对数组或函数类型的引用的处理程序从不匹配任意异常对象。 现在，编译器正确遵循此规则并引发第 4 级警告。 使用 /Zc:strictStrings 时，它也不再将 `char*` 或 `wchar_t*` 的处理程序与字符串文本相匹配。
 
 ```cpp
 int main()
@@ -1695,7 +1974,7 @@ int main() {
 
 ### <a name="annex_d"></a> Annex D 中的标准库功能标记为已弃用
 
-当设置了 /std:c++17  模式编译器开关时，Annex D 中的几乎所有标准库功能都标记为已弃用。
+当设置了 /std:c++17 模式编译器开关时，Annex D 中的几乎所有标准库功能都标记为已弃用。
 
 在 Visual Studio 2017 版本 15.5 中，以下代码引发错误 C4996：
 
@@ -1755,7 +2034,7 @@ warning C4189: 's': local variable is initialized but not referenced
 
 ### <a name="single-line-comments"></a>单行注释
 
-在 Visual Studio 2017 版本 15.5 中，警告 C4001 和 C4179 不再由 C 编译器发出。 以前，仅在 /Za 编译器开关下发出这两个警告  。  不再需要这些警告，因为单行注释自 C99 以来已成为 C 标准的一部分。
+在 Visual Studio 2017 版本 15.5 中，警告 C4001 和 C4179 不再由 C 编译器发出。 以前，仅在 /Za 编译器开关下发出这两个警告。  不再需要这些警告，因为单行注释自 C99 以来已成为 C 标准的一部分。
 
 ```cpp
 /* C only */
@@ -1783,7 +2062,7 @@ warning C4619: #pragma warning: there is no warning number '4001'
 /* single line comment */
 ```
 
-### <a name="declspec-attributes-with-extern-c-linkage"></a>带 `extern "C"` 链接的 `__declspec` 属性
+### <a name="__declspec-attributes-with-extern-c-linkage"></a>带 `extern "C"` 链接的 `__declspec` 属性
 
 在 Visual Studio 的早期版本中，在 `extern "C"` 链接规范之前应用 `__declspec(...)` 时，编译器会忽略 `__declspec(...)` 属性。 此行为导致生成用户意料之外的代码并且可能产生运行时影响。 Visual Studio 版本 15.3 中添加了此警告，但是默认关闭。 Visual Studio 2017 版本 15.5 默认启用此警告。
 
@@ -1816,7 +2095,7 @@ extern "C" __declspec(noinline) HRESULT __stdcall
 
 ### <a name="extern_linkage"></a>extern constexpr 链接
 
-在早期版本的 Visual Studio 中，编译器常常提供 `constexpr` 变量内部链接，甚至是在变量标记为 `extern` 的时候。 在 Visual Studio 2017 版本 15.5 中，新编译器开关 (/Zc:externConstexpr) 启用符合标准的正确行为  。 此行为最终将成为默认设置。
+在早期版本的 Visual Studio 中，编译器常常提供 constexpr 变量内部链接，甚至是在变量标记为 extern 时。 在 Visual Studio 2017 版本 15.5 中，新编译器开关 (/Zc:externConstexpr) 启用符合标准的正确行为。 此行为最终将成为默认设置。
 
 ```cpp
 extern constexpr int x = 10;
@@ -1826,13 +2105,13 @@ extern constexpr int x = 10;
 error LNK2005: "int const x" already defined
 ```
 
-如果头文件包含声明 `extern constexpr` 的变量，需将它标记为 `__declspec(selectany)`，以便正确组合其重复声明：
+如果头文件包含声明 extern constexpr 的变量，需将它标记为 `__declspec(selectany)`，以便正确组合其重复声明：
 
 ```cpp
 extern constexpr __declspec(selectany) int x = 10;
 ```
 
-### <a name="typeid-cant-be-used-on-incomplete-class-type"></a>不能在不完整的类类型上使用 `typeid`
+### <a name="typeid-cant-be-used-on-incomplete-class-type"></a>不能在不完整的类类型上使用 typeid
 
 在早期版本的 Visual Studio 中，编译器不正确地允许以下代码，导致可能不正确的类型信息。 在 Visual Studio 2017 版本 15.5 中，编译器正确引发错误：
 
@@ -1848,7 +2127,7 @@ void f() { typeid(S); } //C2027 in 15.5
 error C2027: use of undefined type 'S'
 ```
 
-### <a name="stdisconvertible-target-type"></a>`std::is_convertible` 目标类型
+### <a name="stdis_convertible-target-type"></a>`std::is_convertible` 目标类型
 
 `std::is_convertible` 要求目标类型为有效返回类型。 在早期版本的 Visual Studio 中，编译器不正确地允许抽象类型，这可能导致不正确的重载决策和意外的运行时行为。  现在，以下代码正确引发错误 C2338：
 
@@ -1872,13 +2151,13 @@ struct D : public B { virtual ~D(); };
 static_assert(std::is_convertible<D *, B *>::value, "fail");
 ```
 
-### <a name="noexcept_removal"></a> 动态异常规范的删除和 `noexcept`
+### <a name="noexcept_removal"></a>动态异常规范的删除和 noexcept
 
-在 C++17 中，`throw()` 是 `noexcept` 的别名，删除了 `throw(<type list>)` 和 `throw(...)`，并且某些类型可能包含 `noexcept`。 此更改可能导致符合 C++14 或更低版本的代码的源兼容性问题。 通常，使用 C++17 模式时，可以使用“/Zc:noexceptTypes-”开关还原为 `noexcept` 的 C++14 版本  。 这样可以将源代码更新为符合 C++17，而无需在同时重写所有 `throw()` 代码。
+在 C++17 中，`throw()` 是 noexcept 的别名，删除了 `throw(<type list>)` 和 `throw(...)`，并且某些类型可能包含 noexcept。 此更改可能导致符合 C++14 或更低版本的代码的源兼容性问题。 通常，使用 C++17 模式时，可以使用“/Zc:noexceptTypes-”开关还原为 noexcept 的 C++14 版本。 这样可以将源代码更新为符合 C++17，而无需在同时重写所有 `throw()` 代码。
 
-现在，编译器还诊断 C++17 模式声明中或者带有新警告 C5043 的“/permissive-”  所具有的更多不匹配的异常规范。
+现在，编译器还诊断 C++17 模式声明中或者带有新警告 C5043 的“[/permissive-](../build/reference/permissive-standards-conformance.md)”所具有的更多不匹配的异常规范。
 
-应用 /std:c++17 开关时，以下代码在 Visual Studio 2017 版本 15.5 中生成 C5043 和 C5040  ：
+应用 /std:c++17 开关时，以下代码在 Visual Studio 2017 版本 15.5 中生成 C5043 和 C5040：
 
 ```cpp
 void f() throw(); // equivalent to void f() noexcept;
@@ -1894,7 +2173,7 @@ struct B : A {
 };
 ```
 
-要在使用“/std:c++17”的同时删除错误，请将“/Zc:noexceptTypes-”开关添加到命令行，或者更新代码以使用 `noexcept`，如以下示例中所示   ：
+要在使用“/std:c++17”的同时删除错误，请将“/Zc:noexceptTypes-”开关添加到命令行，或者更新代码以使用 noexcept，如以下示例中所示：
 
 ```cpp
 void f() noexcept;
@@ -1912,7 +2191,7 @@ struct B : A {
 
 ### <a name="inline-variables"></a>内联变量
 
-现在，静态 constexpr 数据成员是隐式内联的，这意味着它们在类中的声明现在是它们的定义。 使用静态 constexpr 数据成员的外部定义是冗余的，现已弃用。 在 Visual Studio 2017 版本 15.5 中应用 /std:c++17 开关时，以下代码现在生成警告 C5041：“size”：不需要对 constexpr 静态数据成员进行外部定义，且在 C + + 17 中弃用了该类定义   ：
+现在，静态 constexpr 数据成员是隐式内联的，这意味着它们在类中的声明现在是它们的定义。 使用静态 constexpr 数据成员的外部定义是冗余的，现已弃用。 在 Visual Studio 2017 版本 15.5 中应用 /std:c++17 开关时，以下代码现在生成警告 C5041：“size”：不需要对 constexpr 静态数据成员进行外部定义，且在 C + + 17 中弃用了该类定义：
 
 ```cpp
 struct X {
@@ -1921,13 +2200,13 @@ struct X {
 const int X::size; // C5041
 ```
 
-### <a name="extern-c-declspec-warning-c4768-now-on-by-default"></a>现在默认打开 `extern "C" __declspec(...)` 警告 C4768
+### <a name="extern-c-__declspec-warning-c4768-now-on-by-default"></a>现在默认打开 `extern "C" __declspec(...)` 警告 C4768
 
 Visual Studio 2017 版本 15.3 中添加了此警告，但是默认关闭。 Visual Studio 2017 版本 15.5 默认启用此警告。 有关详细信息，请参阅[有关 \_\_declspec 属性的新警告](#declspec)。
 
-### <a name="defaulted-functions-and-declspecnothrow"></a>默认函数和 `__declspec(nothrow)`
+### <a name="defaulted-functions-and-__declspecnothrow"></a>默认函数和 `__declspec(nothrow)`
 
-以前，当相应基/成员函数允许异常时，编译器允许使用 `__declspec(nothrow)` 声明默认函数。 此行为与 C++ 标准冲突，可能导致在运行时发生未定义的行为。 如果有异常规范不匹配，标准要求此类函数定义为已删除。  在 /std:c++17 下，以下代码引发错误 C2280: 尝试引用已删除的函数  *。因为显式异常规范与隐式声明的异常规范不兼容，所以已隐式删除函数。*
+以前，当相应基/成员函数允许异常时，编译器允许使用 `__declspec(nothrow)` 声明默认函数。 此行为与 C++ 标准冲突，可能导致在运行时发生未定义的行为。 如果有异常规范不匹配，标准要求此类函数定义为已删除。  在 /std:c++17 下，以下代码引发错误 C2280: 尝试引用已删除的函数 *。因为显式异常规范与隐式声明的异常规范不兼容，所以已隐式删除函数。*
 
 ```cpp
 struct A {
@@ -1967,13 +2246,13 @@ int main()
 }
 ```
 
-### <a name="noexcept-and-partial-specializations"></a>`noexcept` 和部分专用化
+### <a name="noexcept-and-partial-specializations"></a>noexcept 和部分专用化
 
-由于类型系统中有 `noexcept`，缺少 noexcept 函数指针的部分专用化，所以匹配特定“可调用”类型的部分专业化可能无法编译或选择主模板。
+由于类型系统中有 noexcept，且缺少 noexcept 函数指针的部分专用化，所以匹配特定“可调用”类型的部分专业化可能无法编译或选择主模板。
 
-在这种情况下，可能需要添加额外的部分专用化以处理 `noexcept` 函数指针和成员函数的 `noexcept` 指针。 这些重载仅在 /std:c++17 模式中合规  。 如果必须维持与 C++14 的向后兼容性，并且正在编写他人将使用的代码，那么应该保证这些新重载位于 `#ifdef` 指令内。 如果在自包含模块中工作，那么可以仅使用“/Zc:noexceptTypes-”开关进行编译，而不是使用 `#ifdef` 临界子句  。
+在这种情况下，可能需要添加额外的部分专用化以处理 noexcept 函数指针和成员函数的 noexcept 指针。 这些重载仅在 /std:c++17 模式中合规。 如果必须维持与 C++14 的向后兼容性，并且正在编写他人将使用的代码，那么应该保证这些新重载位于 `#ifdef` 指令内。 如果在自包含模块中工作，那么可以仅使用“/Zc:noexceptTypes-”开关进行编译，而不是使用 `#ifdef` 临界子句。
 
-以下代码在 /std:c++14 下编译；但不能在 /std:c++17 下编译，会出现“错误 C2027: 使用了未定义的类型 "A\<T>"”   ：
+以下代码在 /std:c++14 下编译；但不能在 /std:c++17 下编译，会出现“错误 C2027: 使用了未定义的类型 "A\<T>"”：
 
 ```cpp
 template <typename T> struct A;
@@ -1998,7 +2277,7 @@ int main()
 }
 ```
 
-以下代码在 /std:c++17 下成功，因为编译器选择新的部分专用化 `A<void (*)() noexcept>`  ：
+以下代码在 /std:c++17 下成功，因为编译器选择新的部分专用化 `A<void (*)() noexcept>`：
 
 ```cpp
 template <typename T> struct A;
@@ -2029,7 +2308,7 @@ int main()
 }
 ```
 
-## <a name="update_157"></a>Visual Studio 2017 版本 15.7 中的 bug 修复和其他行为更改
+## <a name="update_157"></a> 15.7 中的 Bug 修补程序和其他行为更改
 
 ### <a name="c17-default-argument-in-the-primary-class-template"></a>C++17：主类模板中的默认参数
 
@@ -2047,7 +2326,7 @@ template<typename T>
 void S<T>::f(int = 0) {} // Re-definition necessary
 ```
 
-在 Visual Studio 2017 版本 15.7 中的 /std:c++17  模式下，将不会忽略默认参数：
+在 Visual Studio 2017 版本 15.7 中的 /std:c++17 模式下，将不会忽略默认参数：
 
 ```cpp
 template<typename T>
@@ -2077,7 +2356,7 @@ struct D : B<T*> {
 };
 ```
 
-Visual Studio 2017 版本 15.7 为 /std:c++17 模式，需要 D 中 `using` 语句中的 `typename` 关键字。如果没有 `typename`，编译器会引发警告 C4346：  （B<T>::type”：依赖项名称不是类型）和错误 C2061（语法错误：标识符“type”） *\**  ：
+在 /std:c++17 模式下，Visual Studio 2017 版本 15.7 需要 D 中 using 语句中的 typename 关键字。如果没有 typename，编译器会引发警告 C4346:（B<T>::type”：依赖项名称不是类型）和错误 C2061（语法错误：标识符“type”）*\**：
 
 ```cpp
 template<typename T>
@@ -2093,7 +2372,7 @@ struct D : B<T*> {
 
 ### <a name="c17-nodiscard-attribute---warning-level-increase"></a>C++17：`[[nodiscard]]` 属性 - 警告级别增加
 
-在 Visual Studio 2017 版本 15.7 的 /std:c + + 17  模式下，C4834 的警告级别（“放弃具有 'nodiscard' 属性的函数的返回值”）从 W3 增加到 W1。 可通过强制转换到 `void` 或将 /wd:4834  传递到编译器来禁用警告。
+在 Visual Studio 2017 版本 15.7 的 /std:c + + 17 模式下，C4834 的警告级别（“放弃具有 'nodiscard' 属性的函数的返回值”）从 W3 增加到 W1。 可通过强制转换为 void 或将 /wd:4834 传递到编译器来禁用警告
 
 ```cpp
 [[nodiscard]] int f() { return 0; }
@@ -2127,9 +2406,9 @@ D<int> d;
 
 若要修复此错误，请将 B() 表达式更改为 B\<T>()。
 
-### <a name="constexpr-aggregate-initialization"></a>`constexpr` 聚合初始化
+### <a name="constexpr-aggregate-initialization"></a>constexpr 聚合初始化
 
-先前版本的 C++ 编译器错误处理了 `constexpr` 聚合初始化；它接受了无效代码，其中 aggregate-init-list 拥有太多元素并为其生成了错误的 codegen。 以下代码是一个此类代码的示例：
+先前版本的 C++ 编译器错误处理了 constexpr 聚合初始化；它接受了无效代码，其中 aggregate-init-list 拥有太多元素并为其生成了错误的 codegen。 以下代码是一个此类代码的示例：
 
 ```cpp
 #include <array>
@@ -2147,7 +2426,7 @@ int main() {
 }
 ```
 
-在 Visual Studio 2017 版本 15.7 更新 3 及更高版本中，前面的示例现在引发“C2078 初始值设定项太多”  。 以下示例演示了如何修复此代码。 在使用嵌套 brace-init-lists 初始化 `std::array` 时，给予内部数组一个自己的 braced-list：
+在 Visual Studio 2017 版本 15.7 更新 3 及更高版本中，前面的示例现在引发“C2078 初始值设定项太多”。 以下示例演示了如何修复此代码。 在使用嵌套 brace-init-lists 初始化 `std::array` 时，给予内部数组一个自己的 braced-list：
 
 ```cpp
 #include <array>
@@ -2165,13 +2444,13 @@ int main() {
 }
 ```
 
-## <a name="update_158"></a>Visual Studio 2017 版本 15.8 中的 bug 修复和行为更改
+## <a name="update_158"></a> 15.8 中的 Bug 修补程序和行为更改
 
 Visual Studio 2017 版本 15.8 中的编译器更改全部归为 Bug 修复和行为更改类别，如下所示：
 
-### <a name="typename-on-unqualified-identifiers"></a>非限定标识符的 `typename`
+###<a name="typename-on-unqualified-identifiers"></a>非限定标识符的 typename
 
-在 [/permissive-](../build/reference/permissive-standards-conformance.md) 模式下，编译器不再接受别名模板定义中非限定标识符上的虚假 `typename` 关键字。 现在，以下代码生成 C7511“T”：“typename”关键字后必须有限定名称  ：
+在 [/permissive-](../build/reference/permissive-standards-conformance.md) 模式下，编译器不再接受别名模板定义中非限定标识符上的虚假 typename 关键字。 现在，以下代码生成 C7511“T”：“typename”关键字后必须有限定名称：
 
 ```cpp
 template <typename T>
@@ -2180,11 +2459,11 @@ using  X = typename T;
 
 要修复此错误，将第二行更改为 `using  X = T;`。
 
-### <a name="declspec-on-right-side-of-alias-template-definitions"></a>别名模板定义右侧的 `__declspec()`
+### <a name="__declspec-on-right-side-of-alias-template-definitions"></a>别名模板定义右侧的 `__declspec()`
 
 别名模板定义的右侧不再允许 [__declspec](../cpp/declspec.md)。 编译器以前接受但忽略了此代码，且在使用别名时从不会发出弃用警告。
 
-可改用标准 C++ 属性[\[\[已弃用\]\]](../cpp/attributes.md)，并从 Visual Studio 2017 版本 15.6 开始遵循。 现在，以下代码生成 C2760 语法错误：意外令牌“__declspec”，需要“类型说明符”  ：
+可改用标准 C++ 属性[\[\[已弃用\]\]](../cpp/attributes.md)，并从 Visual Studio 2017 版本 15.6 开始遵循。 现在，以下代码生成 C2760 语法错误：意外令牌“__declspec”，需要“类型说明符”：
 
 ```cpp
 template <typename T>
@@ -2204,7 +2483,7 @@ using  X [[deprecated("msg")]] = T;
 
 这其中一个表现是查找相关基类。 以前，编译器允许使用相关基类中定义的名称，因为解析所有类型后会在实例化时查找它们。 现在将该代码视为错误。 在这些情况下，可在实例化时强制查找变量，方法是使用基类类型对其进行限定或将其设置为相关，例如添加 `this->` 指针。
 
-在 /permissive- 模式下，现在以下代码会引发 C3861：找不到“base_value”标识符   ：
+在 /permissive- 模式下，现在以下代码会引发 C3861：找不到“base_value”标识符[](../build/reference/permissive-standards-conformance.md)：
 
 ```cpp
 template <class T>
@@ -2222,15 +2501,15 @@ struct S : Base<T> {
 
 要修复此错误，将 `return` 语句更改为 `return this->base_value;`。
 
-**注意：** 在 Boost python 库中，针对 [unwind_type.hpp](https://github.com/boostorg/python/blame/develop/include/boost/python/detail/unwind_type.hpp) 中的模板前向声明，一直存在特定于 MVSV 的解决方法。 从 Visual Studio 2017 版本 15.8 (_MSC_VER=1915) 开始，在 [/permissive-](../build/reference/permissive-standards-conformance.md) 模式下，MSVC 编译器正确执行依赖于参数的名称查找 (ADL) 并与其他编译器保持一致，不再需要此解决方法保护功能。 为避免出现错误 C3861：“unwind_type”：找不到标识符  ，请参阅 Boost 存储库中的 [PR 229](https://github.com/boostorg/python/pull/229) 以更新标头文件。 我们已经修补了 [vcpkg](../build/vcpkg.md) Boost 包，所以，如果从 vcpkg 获取或升级 Boost 源，则无需单独应用此修补。
+**注意：** 在 Boost python 库中，针对 [unwind_type.hpp](https://github.com/boostorg/python/blame/develop/include/boost/python/detail/unwind_type.hpp) 中的模板前向声明，一直存在特定于 MVSV 的解决方法。 从 Visual Studio 2017 版本 15.8 (_MSC_VER=1915) 开始，在 [/permissive-](../build/reference/permissive-standards-conformance.md) 模式下，MSVC 编译器正确执行依赖于参数的名称查找 (ADL) 并与其他编译器保持一致，不再需要此解决方法保护功能。 为避免出现错误 C3861：“unwind_type”：找不到标识符，请参阅 Boost 存储库中的 [PR 229](https://github.com/boostorg/python/pull/229) 以更新标头文件。 我们已经修补了 [vcpkg](../build/vcpkg.md) Boost 包，所以，如果从 vcpkg 获取或升级 Boost 源，则无需单独应用此修补。
 
 ### <a name="forward-declarations-and-definitions-in-namespace-std"></a>命名空间 `std` 中的转发声明和定义
 
 C++ 标准不允许用户将转发声明或定义添加到命名空间 `std`。 如果将声明或定义添加到命名空间 `std` 或命名空间 `std` 中的命名空间，会导致未定义的行为。
 
-未来的某个时间，Microsoft 将移动定义一些标准库类型的位置。 此更改会破坏将转发声明添加到命名空间 `std` 的现有代码。 新警告 C4643 有助于识别此类源问题。 **/default** 模式下启用此警告，默认关闭此警告。 它会影响使用 /Wall 或 /WX 编译的程序   。
+未来的某个时间，Microsoft 将移动定义一些标准库类型的位置。 此更改会破坏将转发声明添加到命名空间 `std` 的现有代码。 新警告 C4643 有助于识别此类源问题。 **/default** 模式下启用此警告，默认关闭此警告。 它会影响使用 /Wall 或 /WX 编译的程序。
 
-现在，以下代码引发 C4643：C++ 标准不允许转发命名空间中的声明“vector”  。
+现在，以下代码引发 C4643：C++ 标准不允许转发命名空间中的声明“vector”。
 
 ```cpp
 namespace std {
@@ -2238,7 +2517,7 @@ namespace std {
 }
 ```
 
-要修复此错误，使用 include 指令，而不是转发声明  ：
+要修复此错误，使用 include 指令，而不是转发声明：
 
 ```cpp
 #include <vector>
@@ -2246,7 +2525,7 @@ namespace std {
 
 ### <a name="constructors-that-delegate-to-themselves"></a>对自身进行委托的构造函数
 
-C++ Standard 建议当委托构造函数对自身进行委托时，编译器应发出诊断。 [/std:c++17](../build/reference/std-specify-language-standard-version.md) 和 [/std:c++latest](../build/reference/std-specify-language-standard-version.md) 模式的 Microsoft C++ 编译器现引发 C7535：X::X”：委托构造函数调用自身  。
+C++ Standard 建议当委托构造函数对自身进行委托时，编译器应发出诊断。 [/std:c++17](../build/reference/std-specify-language-standard-version.md) 和 [/std:c++latest](../build/reference/std-specify-language-standard-version.md) 模式的 Microsoft C++ 编译器现引发 C7535：X::X”：委托构造函数调用自身。
 
 如果不出现此错误，以下程序将编译，但会生成无限循环：
 
@@ -2271,11 +2550,11 @@ public:
 
 ### <a name="offsetof-with-constant-expressions"></a>带常量表达式的 `offsetof`
 
-传统上，使用需要 [reinterpret_cast](../cpp/reinterpret-cast-operator.md) 的宏实现 [offsetof](../c-runtime-library/reference/offsetof-macro.md)。 在需要常量表达式的上下文中，此用法是非法的，但从传统上，Microsoft C++ 编译器允许此操作。 标准库中附带的 `offsetof` 宏正确使用内部编译器 (__builtin_offsetof  )，但许多人使用此宏来定义自己的 `offsetof`。
+传统上，使用需要 [reinterpret_cast](../cpp/reinterpret-cast-operator.md) 的宏实现 [offsetof](../c-runtime-library/reference/offsetof-macro.md)。 在需要常量表达式的上下文中，此用法是非法的，但从传统上，Microsoft C++ 编译器允许此操作。 标准库中附带的 `offsetof` 宏正确使用内部编译器 (__builtin_offsetof)，但许多人使用此宏来定义自己的 `offsetof`。
 
-在 Visual Studio 2017 版本 15.8 中，编译器限制默认模式下出现这些 `reinterpret_cast` 运算符的位置，以帮助代码符合标准 C++ 行为。 在 [/permissive-](../build/reference/permissive-standards-conformance.md) 下，此类限制更严格。 在需要常量表达式的位置使用 `offsetof` 的结果会引发警告 C4644：在常量表达式中使用基于宏的 offsetof 模式是不标准的；请改用 C++ 标准库中定义的 offsetof，或引发 C2975：模板参数无效，需要编译时常量表达式   。
+在 Visual Studio 2017 版本 15.8 中，编译器限制默认模式下出现这些 `reinterpret_cast` 运算符的位置，以帮助代码符合标准 C++ 行为。 在 [/permissive-](../build/reference/permissive-standards-conformance.md) 下，此类限制更严格。 在需要常量表达式的位置使用 `offsetof` 的结果会引发警告 C4644：在常量表达式中使用基于宏的 offsetof 模式是不标准的；请改用 C++ 标准库中定义的 offsetof，或引发 C2975：模板参数无效，需要编译时常量表达式。
 
-以下代码在 /default 和 /std:c++17 模式下引发 C4644，在 /permissive- 模式下引发 C2975    ：
+以下代码在 /default 和 /std:c++17 模式下引发 C4644，在 [/permissive-](../build/reference/permissive-standards-conformance.md) 模式下引发 C2975：
 
 ```cpp
 struct Data {
@@ -2317,7 +2596,7 @@ int main()
 
 Microsoft C++ 编译器的以前版本不会检测基类是否有 cv 限定符，如果它也受包扩展约束。
 
-在 Visual Studio 2017 版本 15.8 中的 /permissive- 模式下，以下代码引发 C3770：“const S”不是有效基类   ：
+在 Visual Studio 2017 版本 15.8 中的 [/permissive-](../build/reference/permissive-standards-conformance.md) 模式下，以下代码引发 C3770：“const S”不是有效基类：
 
 ```cpp
 template<typename... T>
@@ -2331,11 +2610,11 @@ int main()
 }
 ```
 
-### <a name="template-keyword-and-nested-name-specifiers"></a>`template` 关键字和嵌套名称说明符
+### <a name="template-keyword-and-nested-name-specifiers"></a>template 关键字和嵌套名称说明符
 
-在 /permissive- 模式下，编译器现在要求 `template` 关键字添加在模板名称前（如果该关键字是在依赖的嵌套名称说明符之后）  。
+在 [/permissive-](../build/reference/permissive-standards-conformance.md) 模式下，编译器现在要求 template 关键字添加在模板名称前（如果该关键字位于依赖的嵌套名称说明符之后）。
 
-在 /permissive- 模式下，以下代码现在引发 C7510：“example”：相关的模板名称前必须添加“template”前缀。请注意：请参阅有关编译类模板实例化“X<T>”的参考   ：
+在 [/permissive-](../build/reference/permissive-standards-conformance.md) 模式下，以下代码现在引发 C7510：“example”：相关的模板名称前必须添加“template”前缀。请注意：请参阅有关编译类模板实例化“X<T>”的参考：
 
 ```cpp
 template<typename T> struct Base
@@ -2353,7 +2632,7 @@ struct X : Base<T>
 };
 ```
 
-要修复此错误，将 `template` 关键字添加到 `Base<T>::example<int>();` 语句，如以下示例所示：
+要修复该错误，请将 template 关键字添加到 `Base<T>::example<int>();` 语句，如以下示例所示：
 
 ```cpp
 template<typename T> struct Base
@@ -2372,7 +2651,7 @@ struct X : Base<T>
 };
 ```
 
-## <a name="update_159"></a>Visual Studio 2017 版本 15.9 中的 bug 修复和行为更改
+## <a name="update_159"></a> 15.9 中的 Bug 修补程序和行为更改
 
 ### <a name="identifiers-in-member-alias-templates"></a>成员别名模板中的标识符
 
@@ -2396,7 +2675,7 @@ struct A
 A<>::from_template_t<A<int>> a;
 ```
 
-在 Visual Studio 2017 版本 15.9 的 /permissive- 模式下，编译器引发 C3861：“来自模板”：找不到标识符   。
+在 Visual Studio 2017 版本 15.9 的 [/permissive-](../build/reference/permissive-standards-conformance.md) 模式下，编译器引发 C3861：“来自模板”：找不到标识符。
 
 若要修复此错误，请在 `from_template_t` 之前声明 `from_template`。
 
@@ -2404,22 +2683,22 @@ A<>::from_template_t<A<int>> a;
 
 在 Visual Studio 2017 版本 15.9 中，每当模块的命令行选项在模块创建端和模块消耗端之间不一致时，编译器会引发 C5050。 以下示例中存在两个问题：
 
-- 消耗端 (main.cpp) 上未指定 /EHsc 选项  。
+- 消耗端 (main.cpp) 上未指定 /EHsc 选项。
 
-- 创建端上的 C++ 版本为 /std:c++17，而消耗端上的版本则为 /std:c++14   。
+- 创建端上的 C++ 版本为 /std:c++17，而消耗端上的版本则为 /std:c++14。
 
 ```cmd
 cl /EHsc /std:c++17 m.ixx /experimental:module
 cl /experimental:module /module:reference m.ifc main.cpp /std:c++14
 ```
 
-在这两种情况下编译器均引发 C5050。警告 C5050：导入模块“m”时可能不兼容的环境：C++ 版本不匹配。当前版本为“201402”，模块版本为“201703”  。
+在这两种情况下编译器均引发 C5050。警告 C5050：导入模块“m”时可能不兼容的环境：C++ 版本不匹配。当前版本为“201402”，模块版本为“201703”。
 
-每当篡改 .ifc 文件时，编译器还会引发 C7536。 模块接口的标头包含它下面内容的 SHA2 哈希。 在导入时，.ifc 文件以相同方式进行哈希处理，然后检查标头中提供的哈希。 如果这些不匹配，将引发错误 C7536：*ifc 未通过完整性检查。预期为 SHA2：“66d5c8154df0c71d4cab7665bab4a125c7ce5cb9a401a4d8b461b706ddd771c6”  。
+每当篡改 .ifc 文件时，编译器还会引发 C7536。 模块接口的标头包含它下面内容的 SHA2 哈希。 在导入时，.ifc 文件以相同方式进行哈希处理，然后检查标头中提供的哈希。 如果这些不匹配，将引发错误 C7536：*ifc 未通过完整性检查。预期为 SHA2：“66d5c8154df0c71d4cab7665bab4a125c7ce5cb9a401a4d8b461b706ddd771c6”。
 
 ### <a name="partial-ordering-involving-aliases-and-non-deduced-contexts"></a>部分排序涉及别名和非推导上下文
 
-涉及非推导上下文中别名的部分排序规则出现实现分歧。 下面的示例中，在 Clang 接受代码时，GCC 和 Microsoft C++ 编译器（在 /permissive- 模式下）引发错误  。
+涉及非推导上下文中别名的部分排序规则出现实现分歧。 下面的示例中，在 Clang 接受代码时，GCC 和 Microsoft C++ 编译器（在 [/permissive-](../build/reference/permissive-standards-conformance.md) 模式下）引发错误。
 
 ```cpp
 #include <utility>
@@ -2537,7 +2816,7 @@ struct S
 {
     constexpr void f();
 };
-  
+ 
 template<>
 constexpr void S<int>::f()
 {
@@ -2553,13 +2832,17 @@ note: failure was caused by call of undefined function or one not declared 'cons
 note: see usage of 'g'.
 ```
 
-要避免该错误，请从函数 `f()` 的显式实例化中删除 `constexpr` 限定符。
+要避免该错误，请从函数 `f()` 的显式实例化中删除 constexpr 限定符。
 
 ::: moniker-end
+
+::: moniker range="vs-2015"
 
 ## <a name="c-conformance-improvements-in-visual-studio-2015"></a>Visual Studio 2015 中的 C++ 符合性改进
 
 有关 Visual Studio 2015 Update 3 及之前的版本中一致性改进的完整列表，请参阅 [Visual C++ What's New 2003 through 2015](/cpp/porting/visual-cpp-what-s-new-2003-through-2015)（Visual C++ 2003 至 2015 中的新增功能）。
+
+::: moniker-end
 
 ## <a name="see-also"></a>请参阅
 

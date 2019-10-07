@@ -1,11 +1,11 @@
 ---
 title: gmtime、_gmtime32、_gmtime64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _gmtime32
 - gmtime
 - _gmtime64
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - gmtime
 - _gmtime32
@@ -31,16 +34,16 @@ helpviewer_keywords:
 - gmtime64 function
 - time structure conversion
 ms.assetid: 315501f3-477e-475d-a414-ef100ee0db27
-ms.openlocfilehash: 4f32da5920a0cb892619195207d6501a4b1fd874
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca5f424ac7006d2976ea03bbae9f0ad3a96abf6c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157612"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954857"
 ---
-# <a name="gmtime-gmtime32-gmtime64"></a>gmtime、_gmtime32、_gmtime64
+# <a name="gmtime-_gmtime32-_gmtime64"></a>gmtime、_gmtime32、_gmtime64
 
-将转换**time_t**时间值到**tm**结构。 提供这些函数的更安全版本；请参阅 [gmtime_s、_gmtime32_s、_gmtime64_s](gmtime-s-gmtime32-s-gmtime64-s.md)。
+将**time_t**的时间值转换为**tm**结构。 提供这些函数的更安全版本；请参阅 [gmtime_s、_gmtime32_s、_gmtime64_s](gmtime-s-gmtime32-s-gmtime64-s.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -57,31 +60,31 @@ struct tm *_gmtime64( const __time64_t *sourceTime );
 
 ## <a name="return-value"></a>返回值
 
-指向类型 [tm](../../c-runtime-library/standard-types.md) 的结构的指针。 返回的结构的字段包含的计算的值*sourceTime* UTC 而不是本地时间中的参数。 每个结构字段的类型是**int**，按如下所示：
+指向类型 [tm](../../c-runtime-library/standard-types.md) 的结构的指针。 返回的结构的字段以 UTC 而不是本地时间保存*sourceTime*参数的计算值。 每个结构字段的类型均为**int**，如下所示：
 
 |字段|描述|
 |-|-|
-|**tm_sec**|分钟后的秒数 (0-59)。|
-|**tm_min**|小时后的分钟数 (0-59)。|
-|**tm_hour**|午夜以后的小时数 (0-23)。|
-|**tm_mday**|月份 (1-31) 日期。|
-|**tm_mon**|月 (0-11;年 1 月 = 0）。|
+|**tm_sec**|每分钟的秒数（0-59）。|
+|**tm_min**|每小时后的分钟数（0-59）。|
+|**tm_hour**|午夜（0-23）。|
+|**tm_mday**|每月的某一日（1-31）。|
+|**tm_mon**|Month （0-11;1月 = 0）。|
 |**tm_year**|年（当前年份减去 1900）。|
-|**tm_wday**|星期几 (0-6;星期天 = 0）。|
-|**tm_yday**|某一日 (0-365;1 月 1 日 = 0)。|
-|**tm_isdst**|始终为 0 的**gmtime**。|
+|**tm_wday**|一周中的某一日（0-6;星期日 = 0）。|
+|**tm_yday**|一年的某一日（0-365;1月1日 = 0）。|
+|**tm_isdst**|对于**gmtime**，始终为0。|
 
-32 位和 64 位版本**gmtime**， [mktime](mktime-mktime32-mktime64.md)， [mkgmtime](mkgmtime-mkgmtime32-mkgmtime64.md)，以及[localtime](localtime-localtime32-localtime64.md)使用一个常用**tm**结构每个线程的转换。 对这些函数的每次调用都会破坏以前调用的结果。 如果*sourceTime*表示自 1970 年 1 月 1 日午夜前的日期**gmtime**返回**NULL**。 无错误返回。
+32位和64位版本的**gmtime**、 [mktime](mktime-mktime32-mktime64.md)、 [mkgmtime](mkgmtime-mkgmtime32-mkgmtime64.md)和[localtime](localtime-localtime32-localtime64.md)都为转换使用每个线程一个公共**tm**结构。 对这些函数的每次调用都会破坏以前调用的结果。 如果*sourceTime*表示在1970年1月1日午夜之前的日期， **Gmtime**将返回**NULL**。 无错误返回。
 
-**_gmtime64**，使用该 **__time64_t**结构，允许日期最大表示为 23:59:59，3000 年 12 月 31 日，UTC，而 **_gmtime32**只能表示截至 23:59:592038 年 1 月 18 日，UTC。 1970 年 1 月 1 日午夜是这两个函数的日期范围下限。
+使用 **__time64_t**结构的 **_gmtime64**允许日期最大表示为23:59:59 年12月31日3000，utc，而 **_gmtime32**只表示日期到23:59:59 年1月 2038 18 日，即 utc。 1970 年 1 月 1 日午夜是这两个函数的日期范围下限。
 
-**gmtime**是内联函数的计算结果为 **_gmtime64**，和**time_t**等效于 **__time64_t**除非 **_USE_32BIT_TIME_T**定义。 如果必须强制编译器将解释**time_t**为旧的 32 位**time_t**，可以定义 **_USE_32BIT_TIME_T**，但执行操作会导致**gmtime**为内联到 **_gmtime32**并**time_t**定义为 **__time32_t**。 我们建议，不执行上述操作，因为 64 位平台上不允许使用它，并且应用程序会在 2038 年 1 月 18 日之后失效。
+**gmtime**是计算结果为 **_gmtime64**的内联函数，除非定义了 **_USE_32BIT_TIME_T** ，否则**time_t**等效于 **__time64_t** 。 如果必须强制编译器将**time_t**解释为旧的32位**time_t**，则可以定义 **_USE_32BIT_TIME_T**，但这样做会导致**gmtime**在 **_gmtime32**和**time_t**定义为 **__time32_t**。 我们建议，不执行上述操作，因为 64 位平台上不允许使用它，并且应用程序会在 2038 年 1 月 18 日之后失效。
 
-这些函数验证其参数。 如果*sourceTime*是空指针，或者如果*sourceTime*值为负，则这些函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md). 如果允许执行继续，这些函数返回**NULL**并设置**errno**到**EINVAL**。
+这些函数验证其参数。 如果*sourceTime*为 null 指针，或*sourceTime*值为负，则这些函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则函数将返回**NULL** ，并将**Errno**设置为**EINVAL**。
 
 ## <a name="remarks"></a>备注
 
-**_Gmtime32**函数将分解*sourceTime*值，并将其存储在类型的静态分配结构**tm**，在时间中定义。H. 值*sourceTime*通常通过调用获取[时间](time-time32-time64.md)函数。
+**_Gmtime32**函数打破了*sourceTime*值，并将其存储在以 TIME 定义的类型**tm**的静态分配的结构中。高. 通常， *sourceTime*的值是通过调用[time](time-time32-time64.md)函数获取的。
 
 > [!NOTE]
 > 在大多数情况下，目标环境尝试确定夏令时是否生效。 C 运行时库假设使用美国规则实现夏令时 (DST) 的计算。
@@ -90,7 +93,7 @@ struct tm *_gmtime64( const __time64_t *sourceTime );
 
 |例程所返回的值|必需的 C 标头|必需的 C++ 标头|
 |-------------|---------------------|-|
-|**gmtime**， **_gmtime32**， **_gmtime64**|\<time.h>|\<ctime > 或\<time.h >|
+|**gmtime**、 **_gmtime32**、 **_gmtime64**|\<time.h>|\<ctime > 或\<time .h >|
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

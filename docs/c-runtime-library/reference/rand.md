@@ -1,9 +1,9 @@
 ---
 title: rand
-ms.date: 1/02/2018
-apiname:
+ms.date: 01/02/2018
+api_name:
 - rand
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - rand
 helpviewer_keywords:
@@ -26,16 +29,16 @@ helpviewer_keywords:
 - rand function
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: 868c6239ac1b86dfc9ac72cc8cc83d1ba3002b4a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6042ab917083cf4131c16012b84afbbe43a7d834
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357767"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949551"
 ---
 # <a name="rand"></a>rand
 
-通过使用已知且完全可重现的算法生成一个伪随机数。 此函数的以编程方式更安全版本可用，请参阅[rand_s](rand-s.md)。 由生成编号**rand**不是安全加密。 有关详细信息进行了安全加密随机数字生成，使用[rand_s](rand-s.md)函数中声明的或C++中的标准库[\<随机 >](../../standard-library/random.md)。
+使用众所周知且完全可重复的算法生成一个伪随机数。 提供此函数的更具编程的安全版本;请参阅[rand_s](rand-s.md)。 **Rand**生成的数字不是加密安全的。 若要进行更安全的安全随机数生成，请使用[rand_s](rand-s.md)或在C++标准库中[ \<](../../standard-library/random.md)声明的函数 > 随机声明。
 
 ## <a name="syntax"></a>语法
 
@@ -45,13 +48,13 @@ int rand( void );
 
 ## <a name="return-value"></a>返回值
 
-**rand**返回伪随机数字，如上文所述。 无错误返回。
+**rand**返回伪随机数，如上所述。 无错误返回。
 
 ## <a name="remarks"></a>备注
 
-**Rand**函数在范围 0 到返回一个伪随机整数**RAND_MAX** (32767)。 使用[srand](srand.md)函数之前调用伪随机数生成器的种子**rand**。
+**Rand**函数返回0到**RAND_MAX** （32767）范围内的一个随机整数。 在调用**rand**之前，使用[srand](srand.md)函数对伪随机数生成器进行种子设定。
 
-**Rand**函数生成的已知序列并不适合用作加密功能。 有关详细信息进行了安全加密随机数字生成，使用[rand_s](rand-s.md)函数中声明的或C++中的标准库[\<随机 >](../../standard-library/random.md)。 有关什么是不妥**rand**以及如何\<随机 > 处理这些不足，请参阅本视频中标题为[rand 视为有害](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful)。
+**Rand**函数生成一个众所周知的序列，它不适合用作加密函数。 若要进行更安全的安全随机数生成，请使用[rand_s](rand-s.md)或在C++标准库中[ \<](../../standard-library/random.md)声明的函数 > 随机声明。 有关**rand**错误以及随机 > 如何\<处理这些缺点的信息，请参阅此带标题的[rand 视为有害](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful)的视频。
 
 ## <a name="requirements"></a>要求
 

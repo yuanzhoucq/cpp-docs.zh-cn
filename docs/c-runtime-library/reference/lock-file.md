@@ -1,9 +1,9 @@
 ---
 title: _lock_file
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _lock_file
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _lock_file
 - lock_file
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - _lock_file function
 - lock_file function
 ms.assetid: 75c7e0e6-efff-4747-b6ed-9bcf2b0894c3
-ms.openlocfilehash: 4c6d9ef3ae9e2f63e702dd3fc6b01f7edea40626
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43030030d1674cfba24c1300487f576b7a2085ea
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157430"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953305"
 ---
-# <a name="lockfile"></a>_lock_file
+# <a name="_lock_file"></a>_lock_file
 
-锁定**文件**对象，以确保一致性线程访问**文件**同时对象。
+锁定**文件**对象，以确保线程同时访问**文件**对象的一致性。
 
 ## <a name="syntax"></a>语法
 
@@ -48,7 +51,7 @@ void _lock_file( FILE* file );
 
 ## <a name="remarks"></a>备注
 
-**_Lock_file**函数锁定**文件**由指定的对象*文件*。 基础文件未被锁定 **_lock_file**。 使用 [_unlock_file](unlock-file.md) 解除对该文件的锁定。 调用 **_lock_file**并 **_unlock_file**必须匹配在线程中。
+**_Lock_file**函数锁定*文件*指定的**文件**对象。 **_Lock_file**未锁定基础文件。 使用 [_unlock_file](unlock-file.md) 解除对该文件的锁定。 在线程中，对 **_lock_file**和 **_unlock_file**的调用必须匹配。
 
 ## <a name="requirements"></a>要求
 

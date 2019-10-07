@@ -1,46 +1,33 @@
 ---
 title: 将消息映射到函数
-ms.date: 11/04/2016
+ms.date: 09/06/2019
 f1_keywords:
 - vc.codewiz.mapping.msg.function
 helpviewer_keywords:
 - Windows messages [MFC], adding message handlers
 - message maps [MFC], mapping messages to functions
 ms.assetid: a7727a62-f638-4b20-b7f5-131f47200d6a
-ms.openlocfilehash: 33aa12626e92eb40606e3ec9b12ebb7bcac571ec
-ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
+ms.openlocfilehash: 4a76e28bddda0ad3385ab2110e201d652c0623df
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66741653"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907865"
 ---
 # <a name="mapping-messages-to-functions"></a>将消息映射到函数
 
-属性窗口，可将消息处理程序 （MFC 用户界面类的成员函数） 绑定到应用程序的资源生成的消息。 它们使用[MFC 消息映射](../../mfc/messages-and-commands-in-the-framework.md)以创建绑定。
+使用[类向导](mfc-class-wizard.md)可以将消息处理程序（MFC 用户界面类的成员函数）绑定到应用程序资源生成的消息。 它们使用[MFC 消息映射](../../mfc/messages-and-commands-in-the-framework.md)来创建绑定。
 
-当你使用类视图创建从框架类之一派生的新类时，它自动添加一个完整且实用类标头 (.h) 和实现 (.cpp) 中指定的文件。
+当你使用类视图创建从一个框架类派生的新类时，它会自动在你指定的标头（.h）和实现（.cpp）文件中放置一个完整的功能类。
 
 > [!NOTE]
->  若要添加一个新类，不处理消息，请直接在文本编辑器中创建的类。
+>  若要添加不处理消息的新类，请在文本编辑器中直接创建类。
 
-### <a name="to-define-or-remove-a-message-handler-using-the-properties-window"></a>若要定义或删除消息处理程序使用属性窗口
+### <a name="to-define-or-remove-a-message-handler-using-the-class-wizard"></a>使用类向导定义或移除消息处理程序
 
-1. 在“类视图”中，单击此类。
+1. 在**类视图**中，右键单击类。
 
-1. 在属性窗口中，单击**消息**按钮。
-
-    > [!NOTE]
-    >  **消息**在类视图或源窗口中单击时选择的类名称时，按钮才可用。
-
-   如果你的项目具有一条消息的处理程序，则会在消息旁的右侧列中显示处理程序的名称。
-
-1. 如果消息没有处理程序，然后单击属性窗口来作为处理程序的建议的名称显示在右侧的列中的单元格\<添加 >*HandlerName*。 (例如，WM_TIMER 消息处理程序建议\<添加 >`OnTimer`)。
-
-1. 单击建议名称，为函数添加存根代码。
-
-1. 若要编辑消息处理程序，双击类视图中的消息和编辑源窗口中的代码。
-
-若要删除的消息处理程序，请双击右列中的处理程序，然后选择\<删除 >*HandlerName*。 即注释掉函数的代码。
+1. 在上下文菜单中，选择 "[类向导](mfc-class-wizard.md)"。
 
 ## <a name="see-also"></a>请参阅
 
@@ -50,5 +37,4 @@ ms.locfileid: "66741653"
 [添加成员函数](../../ide/adding-a-member-function-visual-cpp.md)<br/>
 [添加成员变量](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
 [重写虚函数](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
-[添加对话框控件的事件处理程序](../../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
 [导航类结构](../../ide/navigate-code-cpp.md)

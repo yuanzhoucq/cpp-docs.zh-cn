@@ -1,45 +1,45 @@
 ---
 title: _mm_cvtsi64x_ss
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _mm_cvtsi64x_ss
 helpviewer_keywords:
 - cvtsi2ss instruction
 - _mm_cvtsi64x_ss intrinsic
 ms.assetid: 01e5d321-c18a-46fd-a6f6-324364514e1f
-ms.openlocfilehash: 3ba9dc56cbb027e8cf9f31d293b3f96908aff5e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0e9bacc56f212e804467d1c6e0159a1749235976
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264408"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217453"
 ---
-# <a name="mmcvtsi64xss"></a>_mm_cvtsi64x_ss
+# <a name="_mm_cvtsi64x_ss"></a>_mm_cvtsi64x_ss
 
 **Microsoft 专用**
 
-生成扩展的 x64 版本的标量单精度浮点值将转换的 64 位整数 (`cvtsi2ss`) 指令。
+生成 x64 扩展版本的将64位整数转换为标量单精度浮点值 (`cvtsi2ss`) 指令。
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 __m128 _mm_cvtsi64x_ss(
    __m128 a,
    __int64 b
 );
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-*a*<br/>
-[in]`__m128`结构，它包含四个单精度浮点值。
+*的*\
+中一个`__m128`包含四个单精度浮点值的结构。
 
-*b*<br/>
-[in]要转换为浮点值 64 位整数。
+*b*\
+中要转换为浮点值的64位整数。
 
 ## <a name="return-value"></a>返回值
 
-`__m128`结构，其第一个浮点值是转换的结果。 其他三个值复制相比并无变化`a`。
+一个`__m128`结构, 其第一个浮点值为转换的结果。 其他三个值从中复制不变。
 
 ## <a name="requirements"></a>要求
 
@@ -47,17 +47,17 @@ __m128 _mm_cvtsi64x_ss(
 |---------------|------------------|
 |`_mm_cvtsi64x_ss`|X64|
 
-**标头文件** \<intrin.h >
+**标头文件**\<intrin.h >
 
 ## <a name="remarks"></a>备注
 
-`__m128`结构表示 XMM 寄存器，因此此内部函数，允许的值`b`从系统内存，无法移动到 XMM 注册。
+结构表示一个 xmm 寄存器, 因此内部函数允许将值 b 从系统内存移到一个 xmm 寄存器中。 `__m128`
 
 此例程仅可用作内部函数。
 
 ## <a name="example"></a>示例
 
-```
+```cpp
 // _mm_cvtsi64x_ss.cpp
 // processor: x64
 
@@ -91,5 +91,5 @@ int main()
 
 ## <a name="see-also"></a>请参阅
 
-[__m128](../cpp/m128.md)<br/>
+[__m128](../cpp/m128.md)\
 [编译器内部函数](../intrinsics/compiler-intrinsics.md)

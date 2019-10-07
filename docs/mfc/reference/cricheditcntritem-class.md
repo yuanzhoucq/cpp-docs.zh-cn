@@ -10,16 +10,16 @@ helpviewer_keywords:
 - CRichEditCntrItem [MFC], CRichEditCntrItem
 - CRichEditCntrItem [MFC], SyncToRichEditObject
 ms.assetid: 6c0b4efe-0fb8-4621-b5e1-fdcb8ec48c3b
-ms.openlocfilehash: 674937df9b4ecef0d159a47a45a716d1175ad5d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8e242504c8ab0f59f6dec0602d4a5352a2d84867
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372109"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502731"
 ---
 # <a name="cricheditcntritem-class"></a>CRichEditCntrItem 类
 
-与[CRichEditView](../../mfc/reference/cricheditview-class.md)并[CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)，提供 MFC 文档视图体系结构的上下文中 rich edit 控件的功能。
+对于[CRichEditView](../../mfc/reference/cricheditview-class.md)和[CRICHEDITDOC](../../mfc/reference/cricheditdoc-class.md), 提供 MFC 文档视图体系结构上下文中 rich edit 控件的功能。
 
 ## <a name="syntax"></a>语法
 
@@ -39,17 +39,17 @@ class CRichEditCntrItem : public COleClientItem
 
 |名称|描述|
 |----------|-----------------|
-|[CRichEditCntrItem::SyncToRichEditObject](#synctoricheditobject)|作为另一种类型将激活该项。|
+|[CRichEditCntrItem::SyncToRichEditObject](#synctoricheditobject)|激活项作为另一种类型。|
 
 ## <a name="remarks"></a>备注
 
-"格式文本编辑控件"是一个窗口，用户可以输入和编辑文本。 文本字符和段落格式设置，可以分配，并且可以包含嵌入的 OLE 对象。 Rich edit 控件提供用于设置文本格式的编程接口。 但是，应用程序必须实现使用户可进行格式设置操作所需的任何用户界面组件。
+"Rich edit 控件" 是用户可在其中输入和编辑文本的窗口。 可以为文本分配字符和段落格式, 还可以包括嵌入的 OLE 对象。 Rich edit 控件提供了用于设置文本格式的编程接口。 但是，应用程序必须实现使用户可进行格式设置操作所需的任何用户界面组件。
 
-`CRichEditView` 保留文本及其格式特征。 `CRichEditDoc` 维护视图中的 OLE 客户端项目的列表。 `CRichEditCntrItem` 提供对 OLE 客户端项的容器端访问。
+`CRichEditView` 保留文本及其格式特征。 `CRichEditDoc`维护视图中的 OLE 客户端项的列表。 `CRichEditCntrItem` 提供对 OLE 客户端项的容器端访问。
 
-此 Windows 公共控件 (并因此[CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)和相关类) 仅适用于在 Windows 95/98 和 Windows NT 版本 3.51 下运行的程序和更高版本。
+此 Windows 公共控件 (以及[CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)和相关类) 仅适用于在 windows 95/98 和 windows NT 版本3.51 及更高版本下运行的程序。
 
-在 MFC 应用程序中使用格式文本编辑容器项的示例，请参阅[写字板](../../overview/visual-cpp-samples.md)示例应用程序。
+有关在 MFC 应用程序中使用 rich edit 容器项的示例, 请参阅[写字板](../../overview/visual-cpp-samples.md)示例应用程序。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -65,11 +65,11 @@ class CRichEditCntrItem : public COleClientItem
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxrich.h
+**标头:** afxrich
 
-##  <a name="cricheditcntritem"></a>  CRichEditCntrItem::CRichEditCntrItem
+##  <a name="cricheditcntritem"></a>CRichEditCntrItem:: CRichEditCntrItem
 
-调用此函数可创建`CRichEditCntrItem`对象，并将其添加到容器文档。
+调用此函数可创建`CRichEditCntrItem`对象并将其添加到容器文档中。
 
 ```
 CRichEditCntrItem(
@@ -80,20 +80,20 @@ CRichEditCntrItem(
 ### <a name="parameters"></a>参数
 
 *preo*<br/>
-指向[REOBJECT](/windows/desktop/api/richole/ns-richole-_reobject)结构描述 OLE 项。 新`CRichEditCntrItem`此 OLE 项的周围构造对象。 如果*preo*为 NULL，客户端项为空。
+指向描述 OLE 项的[REOBJECT](/windows/win32/api/richole/ns-richole-reobject)结构的指针。 围绕此`CRichEditCntrItem` OLE 项构造新的对象。 如果*preo*为 NULL, 则客户端项为空。
 
 *pContainer*<br/>
-指向将包含此项的容器文档的指针。 如果*pContainer*为 NULL，必须显式调用[COleDocument::AddItem](../../mfc/reference/coledocument-class.md#additem)若要将此客户端项目添加到文档。
+指向将包含此项的容器文档的指针。 如果*允许 pcontainer*为 NULL, 则必须显式调用[COleDocument:: AddItem](../../mfc/reference/coledocument-class.md#additem)将此客户端项添加到文档中。
 
 ### <a name="remarks"></a>备注
 
 此函数不执行任何 OLE 初始化。
 
-有关详细信息，请参阅[REOBJECT](/windows/desktop/api/richole/ns-richole-_reobject) Windows SDK 中的结构。
+有关详细信息, 请参阅 Windows SDK 中的[REOBJECT](/windows/win32/api/richole/ns-richole-reobject)结构。
 
-##  <a name="synctoricheditobject"></a>  CRichEditCntrItem::SyncToRichEditObject
+##  <a name="synctoricheditobject"></a>CRichEditCntrItem:: SyncToRichEditObject
 
-调用此函数可同步设备方面[DVASPECT](/windows/desktop/api/wtypes/ne-wtypes-tagdvaspect)，此`CRichEditCntrltem`到指定的*reo*。
+调用此函数可将此`CRichEditCntrltem`的设备方面[DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect)同步到*reo*指定的。
 
 ```
 void SyncToRichEditObject(REOBJECT& reo);
@@ -102,11 +102,11 @@ void SyncToRichEditObject(REOBJECT& reo);
 ### <a name="parameters"></a>参数
 
 *reo*<br/>
-引用[REOBJECT](/windows/desktop/api/richole/ns-richole-_reobject)结构描述 OLE 项。
+对描述 OLE 项的[REOBJECT](/windows/win32/api/richole/ns-richole-reobject)结构的引用。
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[DVASPECT](/windows/desktop/api/wtypes/ne-wtypes-tagdvaspect) Windows SDK 中。
+有关详细信息, 请参阅 Windows SDK 中的[DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect) 。
 
 ## <a name="see-also"></a>请参阅
 

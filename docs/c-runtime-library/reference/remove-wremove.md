@@ -1,10 +1,10 @@
 ---
 title: remove、_wremove
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wremove
 - remove
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - remove
 - _wremove
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - wremove function
 - remove function
 ms.assetid: b6345ec3-3289-4645-93a4-28b9e478cc19
-ms.openlocfilehash: 05f1c5b6760520e5a982777faa903b3c5116ad05
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ceedcf9d3cc2b26a8d91ca923f81f0ce539b64a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357678"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949439"
 ---
-# <a name="remove-wremove"></a>remove、_wremove
+# <a name="remove-_wremove"></a>remove、_wremove
 
 删除文件。
 
@@ -59,13 +62,13 @@ int _wremove(
 
 ## <a name="return-value"></a>返回值
 
-如果成功删除文件，则这些函数将返回 0。 否则，它将返回-1，并设置**errno**到**EACCES**以指示该路径指定只读文件中，指定一个目录，或该文件已打开，或设置为**ENOENT**若要指示未找到文件名或路径。
+如果成功删除文件，则这些函数将返回 0。 否则，它将返回-1，并将**errno**设置为**EACCES** ，以指示路径指定只读文件、指定目录或文件已打开，或设置为**ENOENT**以指示未找到文件名或路径。
 
 有关这些代码以及其他返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**remove** 函数删除由  *路径指定的文件。* **_wremove**是宽字符版本**删除 （_r)**;*路径*参数 **_wremove**是宽字符字符串。 **_wremove**并**删除 （_r)** 行为相同。 必须先结束对文件的所有处理，然后才能删除文件。
+**remove** 函数删除由  *路径指定的文件。* **_wremove**是宽字符**版本的分隔符**; **_wremove**的*path*参数是宽字符字符串。 否则， **_wremove 和**的行为相同。 必须先结束对文件的所有处理，然后才能删除文件。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -103,7 +106,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crtremovetxt"></a>输入：crt_remove.txt
+### <a name="input-crt_removetxt"></a>输入：crt_remove.txt
 
 ```Input
 This file will be deleted.

@@ -7,28 +7,28 @@ helpviewer_keywords:
 - rich edit controls [MFC], notifications
 - notifications [MFC], from CRichEditCtrl
 ms.assetid: eb5304fe-f4f3-4557-9ebf-3095dea383c4
-ms.openlocfilehash: fcb1dda1d915dc13e01effed9ba99070b825a15e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d097996e61a3d461dacd3d30e13b9262c7d32434
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62238205"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508049"
 ---
 # <a name="notifications-from-a-rich-edit-control"></a>来自 Rich Edit 控件的通知
 
-通知消息报告事件影响 rich edit 控件 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md))。 它们可以处理由父窗口或者，可使用消息反射通过丰富的编辑控件本身的方法。 Rich edit 控件支持的所有使用与编辑控件，以及几个附加的通知消息。 您可以确定哪些通知消息格式文本编辑控件将发送其父窗口设置其"事件掩码"。
+通知消息报告影响 rich edit 控件 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) 的事件。 它们可以通过父窗口处理, 也可以通过使用消息反射来处理。 Rich edit 控件支持用于编辑控件以及多个其他通知消息。 可以通过设置 "事件掩码" 来确定富格编辑控件发送其父窗口的通知消息。
 
-若要设置事件掩码 rich edit 控件，请使用[SetEventMask](../mfc/reference/cricheditctrl-class.md#seteventmask)成员函数。 Rich edit 控件使用，可以检索当前事件掩码[GetEventMask](../mfc/reference/cricheditctrl-class.md#geteventmask)成员函数。
+若要为超文本编辑控件设置事件掩码, 请使用[SetEventMask](../mfc/reference/cricheditctrl-class.md#seteventmask)成员函数。 您可以使用[GetEventMask](../mfc/reference/cricheditctrl-class.md#geteventmask)成员函数检索 rich edit 控件的当前事件掩码。
 
-以下各段列出几个特定的通知和它们的用途：
+以下段落列出了几个具体的通知及其用法:
 
-- EN_MSGFILTER 处理 EN_MSGFILTER 通知允许一个类，或者格式文本编辑控件或其父窗口中，筛选所有键盘和鼠标输入到控件。 处理程序可以防止键盘或鼠标消息正在处理或可以通过修改指定更改消息[MSGFILTER](/windows/desktop/api/richedit/ns-richedit-_msgfilter)结构。
+- EN_MSGFILTER 处理 EN_MSGFILTER 通知后, 类 (rich edit 控件或其父窗口) 可以筛选控件的所有键盘和鼠标输入。 处理程序可以通过修改指定的[MSGFILTER](/windows/win32/api/richedit/ns-richedit-msgfilter)结构来阻止对键盘或鼠标消息进行处理, 也可以更改该消息。
 
-- EN_PROTECTED 处理 EN_PROTECTED 通知消息来检测在用户尝试修改受保护的文本。 若要将范围内的文本标记为受保护，可以设置受保护的字符的效果。 有关详细信息，请参阅[Rich Edit 控件中的字符格式](../mfc/character-formatting-in-rich-edit-controls.md)。
+- EN_PROTECTED 处理 EN_PROTECTED 通知消息, 以便在用户尝试修改受保护的文本时进行检测。 若要将某个范围内的文本标记为受保护, 可以设置受保护的字符效果。 有关详细信息, 请参阅[Rich Edit 控件中的字符格式设置](../mfc/character-formatting-in-rich-edit-controls.md)。
 
-- EN_DROPFILES 你可以让用户通过将删除 rich edit 控件中的文件处理 EN_DROPFILES 通知消息。 指定[ENDROPFILES](/windows/desktop/api/richedit/ns-richedit-_endropfiles)结构包含有关要删除的文件的信息。
+- EN_DROPFILES 可以通过处理 EN_DROPFILES 通知消息, 使用户能够在 rich edit 控件中删除文件。 指定的[ENDROPFILES](/windows/win32/api/richedit/ns-richedit-endropfiles)结构包含有关要删除的文件的信息。
 
-- 当前所选内容更改通过处理 EN_SELCHANGE 通知消息时，可以检测到 EN_SELCHANGE 应用程序。 通知消息指定[SELCHANGE](/windows/desktop/api/richedit/ns-richedit-_selchange)结构，它包含有关新选择信息。
+- EN_SELCHANGE 应用程序可以通过处理 EN_SELCHANGE 通知消息来检测当前选定内容的更改时间。 通知消息指定包含有关新选择的信息的[SELCHANGE](/windows/win32/api/richedit/ns-richedit-selchange)结构。
 
 ## <a name="see-also"></a>请参阅
 

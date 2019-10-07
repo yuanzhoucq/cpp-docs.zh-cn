@@ -1,7 +1,7 @@
 ---
 title: _ismbcgraph、_ismbcgraph_l、_ismbcprint、_ismbcprint_l、_ismbcpunct、_ismbcpunct_l、_ismbcblank、_ismbcblank_l、_ismbcspace、_ismbcspace_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbcpunct_l
 - _ismbcblank
 - _ismbcprint
@@ -12,7 +12,7 @@ apiname:
 - _ismbcspace_l
 - _ismbcspace
 - _ismbcgraph
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -24,7 +24,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbcspace
 - _ismbcgraph
@@ -56,14 +59,14 @@ helpviewer_keywords:
 - _ismbcgraph_l function
 - _ismbcspace function
 ms.assetid: 8e0a5f47-ba64-4411-92a3-3c525d16e3be
-ms.openlocfilehash: 05946def8c4d832751554a1653afa98c9965fee9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 25136896555128339aaa4c79cec2ca9bf3ded43c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286870"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953910"
 ---
-# <a name="ismbcgraph-ismbcgraphl-ismbcprint-ismbcprintl-ismbcpunct-ismbcpunctl-ismbcblank-ismbcblankl-ismbcspace-ismbcspacel"></a>_ismbcgraph、_ismbcgraph_l、_ismbcprint、_ismbcprint_l、_ismbcpunct、_ismbcpunct_l、_ismbcblank、_ismbcblank_l、_ismbcspace、_ismbcspace_l
+# <a name="_ismbcgraph-_ismbcgraph_l-_ismbcprint-_ismbcprint_l-_ismbcpunct-_ismbcpunct_l-_ismbcblank-_ismbcblank_l-_ismbcspace-_ismbcspace_l"></a>_ismbcgraph、_ismbcgraph_l、_ismbcprint、_ismbcprint_l、_ismbcpunct、_ismbcpunct_l、_ismbcblank、_ismbcblank_l、_ismbcspace、_ismbcspace_l
 
 确定字符是图形字符、显示字符、标点字符还是空格字符。
 
@@ -120,9 +123,9 @@ int _ismbcspace_l(
 
 ## <a name="return-value"></a>返回值
 
-其中每个例程在字符满足测试条件时返回一个非零值，在不满足测试条件时返回 0。 如果*c* < = 255 且存在相应 **_ismbb**例程 (例如， **_ismbcalnum**对应于 **_ismbbalnum**)，则结果是相应的返回值 **_ismbb**例程。
+其中每个例程在字符满足测试条件时返回一个非零值，在不满足测试条件时返回 0。 如果*c* < = 255 且存在相应的 **_ismbb**例程（例如， **_ismbcalnum**对应于 **_ismbbalnum**），则结果为相应 **_ismbb**例程的返回值。
 
-这些函数的版本是相同的只不过功能，具有 **_l**后缀使用为其区域设置相关的行为，而不是当前区域设置传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+这些函数的版本相同，不同之处在于具有 **_l**后缀的函数使用传入的区域设置的区域设置，而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="remarks"></a>备注
 
@@ -130,11 +133,11 @@ int _ismbcspace_l(
 
 |例程所返回的值|测试条件|代码页 932 示例|
 |-------------|--------------------|---------------------------|
-|**_ismbcgraph**|图形|返回非零值，当且仅当*c*是除空格 （） 之外任何 ASCII 或片假名可打印字符的单字节表示形式。|
-|**_ismbcprint**|可打印|返回非零值，当且仅当*c*是包括空格 （） 任何 ASCII 或片假名可打印字符的单字节表示形式。|
-|**_ismbcpunct**|标点|返回非零值，当且仅当*c*是任何 ASCII 或片假名标点字符的单字节表示形式。|
-|**_ismbcblank**|空格或水平制表符|返回非零值，当且仅当*c*是空格或水平制表符字符： *c*= 0x20 或*c*= 0x09。|
-|**_ismbcspace**|空格|返回非零值，当且仅当*c*是空白字符： *c*= 0x20 或 0x09&lt < =*c*< = 0x0D。|
+|**_ismbcgraph**|图形|当且仅当*c*是除空格（）之外的任何 ASCII 或片假名可打印字符的单字节表示形式时返回非零值。|
+|**_ismbcprint**|可打印|当且仅当*c*是任何 ASCII 或片假名可打印字符（包括空格（））的单字节表示形式时返回非零值。|
+|**_ismbcpunct**|标点|当且仅当*c*是任何 ASCII 或片假名标点字符的单字节表示形式时返回非零值。|
+|**_ismbcblank**|空格或水平制表符|当且仅当*c*是空格或水平制表符时返回非零值： *c*= 0x20 或*c*= 0x09。|
+|**_ismbcspace**|空格|当且仅当*c*为空白字符时返回非零值： *c*= 0x20 或 0x09 < =*c*< = 0x0D。|
 
 ## <a name="requirements"></a>要求
 

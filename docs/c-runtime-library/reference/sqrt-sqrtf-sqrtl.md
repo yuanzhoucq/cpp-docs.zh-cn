@@ -1,11 +1,11 @@
 ---
 title: sqrt、sqrtf、sqrtl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - sqrtl
 - sqrtf
 - sqrt
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - sqrt
 - sqrtf
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-ms.openlocfilehash: 7c17c973b98638195e2e2d2a5f793578437d11ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9805141a630afc123c19416595b2a96bc801eee3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354894"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958098"
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt、sqrtf、sqrtl
 
@@ -69,15 +72,15 @@ long double sqrtl(
 
 ## <a name="remarks"></a>备注
 
-因为C++允许重载，可以调用的重载**sqrt**采用**float**或**长** **double**类型。 在 C 程序中， **sqrt**始终采用并返回**double**。
+由于C++允许重载，因此可以调用采用**浮点**或**长** **双精度**类型的**sqrt**的重载。 在 C 程序中， **sqrt**始终采用并返回**double**。
 
 ## <a name="return-value"></a>返回值
 
-**Sqrt**函数返回的平方根*x*。 默认情况下，如果*x*为负， **sqrt**返回不定的 NaN。
+**Sqrt**函数返回*x*的平方根。 默认情况下，如果*x*为负数， **sqrt**将返回一个无限的 NaN。
 
 |输入|SEH 异常|**_matherr**异常|
 |-----------|-------------------|--------------------------|
-|± QNAN,IND|无|_DOMAIN|
+|± QNAN，IND|无|_DOMAIN|
 |- ∞|无|_DOMAIN|
 |x<0|无|_DOMAIN|
 
@@ -85,7 +88,7 @@ long double sqrtl(
 
 |函数|C 标头|C++ 标头|
 |--------------|--------------|------------------|
-|**sqrt**， **sqrtf**， **sqrtl**|\<math.h>|\<cmath>|
+|**sqrt**、 **sqrtf**、 **sqrtl**|\<math.h>|\<cmath>|
 
 有关兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

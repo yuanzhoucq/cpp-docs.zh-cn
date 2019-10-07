@@ -1,10 +1,10 @@
 ---
 title: memchr、wmemchr
 ms.date: 03/31/2019
-apiname:
+api_name:
 - wmemchr
 - memchr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - memchr
 - wmemchr
@@ -24,12 +27,12 @@ helpviewer_keywords:
 - memchr function
 - wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
-ms.openlocfilehash: 00a1f0d12047cc388b56074a657ffd739e986827
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c951716d623d900f975e9d6f8a1c762a155b1a7a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285256"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951942"
 ---
 # <a name="memchr-wmemchr"></a>memchr、wmemchr
 
@@ -83,13 +86,13 @@ const wchar_t *wmemchr(
 
 ## <a name="return-value"></a>返回值
 
-如果成功，返回的第一个位置指向*c*中*缓冲区*。 否则，它返回 NULL。
+如果成功，则返回指向*缓冲区*中第一个*c*位置的指针。 否则，它将返回 NULL。
 
 ## <a name="remarks"></a>备注
 
-`memchr` 和`wmemchr`的第一个匹配项看起来*c*在第一个*计数*字符*缓冲区*。 它将停止时找到*c*或检查第一个*计数*字符。
+`memchr`并`wmemchr`在*缓冲区*的第一个*计数*字符中查找*c*的第一个匹配项。 它在找到*c*或已检查第一个*计数*字符时停止。
 
-在 C 中，这些函数采用**const**的第一个参数的指针。 在 C++ 中，有两个重载可用。 采用指向的重载**const**返回一个指向**const**; 将指针传递到非版本**const**返回一个指向非**常量**. 该宏\_CRT\_CONST\_更正\_如果这两个定义重载**const**和非-**const**提供了这些函数的版本。 如果需要非**const**两个行为C++重载中C++，请定义符号\_CONST\_返回。
+在 C 中，这些函数使用第一个参数的**常量**指针。 在 C++ 中，有两个重载可用。 采用指向**const**的指针的重载返回指向**const**的指针;采用指向非常**量**的指针的版本返回指向非常**量**的指针。 如果这些\_函数\_的\_**常量**和非常**量**版本都可用，则会定义宏 CRT 常量正确\_重载。 如果对C++中C++的两个重载都需要非常**量**行为，请定义符号\_const\_返回。
 
 ## <a name="requirements"></a>要求
 

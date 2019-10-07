@@ -1,40 +1,40 @@
 ---
 title: __writedr
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __writedr
 helpviewer_keywords:
 - __writedr intrinsic
 ms.assetid: ac55c1ee-df2f-41d4-a429-6f369d2a934d
-ms.openlocfilehash: c495e8c80029680512358198ca8fb0ce6e65414d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 715ef7432d506c2758c9c3da913e9c0ebb24e13f
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389861"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219220"
 ---
-# <a name="writedr"></a>__writedr
+# <a name="__writedr"></a>__writedr
 
-将指定的值写入到指定的调试注册。
+将指定的值写入指定的调试寄存器。
 
 ## <a name="syntax"></a>语法
 
+```C
+void __writedr(unsigned DebugRegister, unsigned DebugValue); /* x86 */
+void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue); /* x64 */
 ```
-void __writedr(unsigned DebugRegister, unsigned DebugValue);
-void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue);
-```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-*DebugRegister*<br/>
-[in]一个介于 0 到 7 标识调试注册。
+*DebugRegister*\
+中标识调试寄存器的从0到7的数字。
 
-*DebugValue*<br/>
-[in]一个值，以写入调试注册。
+*DebugValue*\
+中要写入调试寄存器的值。
 
 ## <a name="remarks"></a>备注
 
-这些内部函数仅在内核模式中可用，例程只能用作内部函数。
+这些内部函数仅在内核模式下可用, 且这些例程只能用作内部函数。
 
 ## <a name="requirements"></a>要求
 
@@ -42,11 +42,11 @@ void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue);
 |---------------|------------------|
 |`__writedr`|x86、x64|
 
-**标头文件** \<intrin.h >
+**标头文件**\<intrin.h >
 
 **结束 Microsoft 专用**
 
 ## <a name="see-also"></a>请参阅
 
-[编译器内部函数](../intrinsics/compiler-intrinsics.md)<br/>
+[编译器内部函数](../intrinsics/compiler-intrinsics.md)\
 [__readdr](../intrinsics/readdr.md)

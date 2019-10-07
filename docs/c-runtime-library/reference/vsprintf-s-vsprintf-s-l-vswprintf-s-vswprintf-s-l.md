@@ -1,12 +1,12 @@
 ---
 title: vsprintf_s、_vsprintf_s_l、vswprintf_s、_vswprintf_s_l
-ms.date: 03/26/2019
-apiname:
+ms.date: 09/12/2019
+api_name:
 - _vswprintf_s_l
 - vsprintf_s
 - vswprintf_s
 - _vsprintf_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - vswprintf_s
 - vsprintf_s
@@ -36,16 +39,16 @@ helpviewer_keywords:
 - formatted text [C++]
 - _vswprintf_s_l function
 ms.assetid: 60e90518-57f0-4f1b-b732-f62a69702833
-ms.openlocfilehash: 469a823d0f033a2f140d78a65cb0e69a3ef16d5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 84e85885acf671b49e1e3226234a1d3337577768
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383446"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945278"
 ---
-# <a name="vsprintfs-vsprintfsl-vswprintfs-vswprintfsl"></a>vsprintf_s、_vsprintf_s_l、vswprintf_s、_vswprintf_s_l
+# <a name="vsprintf_s-_vsprintf_s_l-vswprintf_s-_vswprintf_s_l"></a>vsprintf_s、_vsprintf_s_l、vswprintf_s、_vswprintf_s_l
 
-使用指向参数列表的指针写入格式化的输出。 这些版本的 [vsprintf、_vsprintf_l、vswprintf、_vswprintf_l、\__vswprintf_l](vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md) 具有安全增强功能，如 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)所述。
+使用指向参数列表的指针写入格式化的输出。 这些函数是具有安全增强功能的[vsprintf、_vsprintf_l、vswprintf \_、_vswprintf_l、_vswprintf_l](vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md)版本，如[CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述。
 
 ## <a name="syntax"></a>语法
 
@@ -96,7 +99,7 @@ int vswprintf_s(
 输出的存储位置
 
 *numberOfElements*<br/>
-大小*缓冲区*以字符为单位。
+*缓冲区*的大小（以字符为限）。
 
 *format*<br/>
 格式规范。
@@ -109,21 +112,21 @@ int vswprintf_s(
 
 ## <a name="return-value"></a>返回值
 
-**vsprintf_s**并**vswprintf_s**返回写入的字符，不包括终止 null 字符，则为负值，如果发生输出错误数。 如果*缓冲区*或*格式*是 null 指针，如果*numberOfElements*为零，或如果格式字符串包含无效格式字符，无效参数处理程序调用，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，函数将返回-1 并设置**errno**到**EINVAL**。
+**vsprintf_s**和**vswprintf_s**返回写入的字符数，不包括终止 null 字符，或在出现输出错误时返回一个负值。 如果*缓冲区*或*格式*为 Null 指针，如果*numberOfElements*为零，或者格式字符串包含无效的格式字符，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则函数将返回-1，并将**errno**设置为**EINVAL**。
 
 有关这些代码及其他错误代码的信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-每个函数采用一个指向参数列表，然后设置格式并将给定的数据写入到指向的内存*缓冲区*。
+其中每个函数都采用一个指向参数列表的指针，然后将给定数据格式化并写入*缓冲区*指向的内存。
 
-**vswprintf_s**符合 ISO C 标准**vswprintf**，这要求第二个参数*计数*，类型的**size_t**。
+**vswprintf_s**符合**Vswprintf**的 ISO C 标准，该标准需要类型为**size_t**的第二个参数*count*。
 
 这些函数与不安全版本的差异仅在于安全版本支持位置参数。 有关详细信息，请参阅 [printf_p 位置参数](../../c-runtime-library/printf-p-positional-parameters.md)。
 
-使用这些函数的版本 **_l**后缀完全相同，只不过它们使用传递中而不是当前线程区域设置的区域设置参数。
+这些带有 **_l**后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
 
-在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在C++中，模板重载简化了这些函数的使用。 重载可以自动推断缓冲区长度，从而无需指定大小自变量。 而且，它们可以自动将不安全的函数替换为其安全的对应函数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -136,8 +139,8 @@ int vswprintf_s(
 
 |例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|----------------------|
-|**vsprintf_s**， **_vsprintf_s_l**|\<stdio.h> 和 \<stdarg.h>|\<varargs.h>*|
-|**vswprintf_s**， **_vswprintf_s_l**|\<stdio.h> 或 \<wchar.h> 和 \<stdarg.h>|\<varargs.h>*|
+|**vsprintf_s**、 **_vsprintf_s_l**|\<stdio.h> 和 \<stdarg.h>|\<varargs.h>*|
+|**vswprintf_s**、 **_vswprintf_s_l**|\<stdio.h> 或 \<wchar.h> 和 \<stdarg.h>|\<varargs.h>*|
 
 \* 仅对 UNIX V 兼容性是必需的。
 
@@ -147,13 +150,15 @@ int vswprintf_s(
 
 ```C
 // crt_vsprintf_s.c
+// Compile with: cl /W4 crt_vsprintf_s.c
 // This program uses vsprintf_s to write to a buffer.
 // The size of the buffer is determined by _vscprintf.
 
 #include <stdlib.h>
+#include <stdio.h>
 #include <stdarg.h>
 
-void test( char * format, ... )
+void test( char const * const format, ... )
 {
    va_list args;
    int len;
@@ -162,10 +167,13 @@ void test( char * format, ... )
    va_start( args, format );
    len = _vscprintf( format, args ) // _vscprintf doesn't count
                                + 1; // terminating '\0'
-   buffer = malloc( len * sizeof(char) );
-   vsprintf_s( buffer, len, format, args );
-   puts( buffer );
-   free( buffer );
+   buffer = (char *) malloc( len * sizeof(char) );
+   if ( NULL != buffer )
+   {
+      vsprintf_s( buffer, len, format, args );
+      puts( buffer );
+      free( buffer );
+   }
    va_end( args );
 }
 
@@ -189,4 +197,4 @@ This is a string
 [fprintf、_fprintf_l、fwprintf、_fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
 [sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
-[va_arg、va_copy、va_end、va_start](va-arg-va-copy-va-end-va-start.md)<br/>
+[va_arg、va_copy、va_end、va_start](va-arg-va-copy-va-end-va-start.md)

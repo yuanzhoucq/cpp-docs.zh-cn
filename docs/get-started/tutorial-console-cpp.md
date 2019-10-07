@@ -2,16 +2,16 @@
 title: 创建 C++ 控制台应用项目
 description: 在 Visual C++ 中创建 Hello World 控制台应用和计算器应用
 ms.custom: mvc
-ms.date: 05/28/2019
+ms.date: 08/19/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 9fc5508b68c8e206e76ead08ddb8015dd5133256
-ms.sourcegitcommit: 18f535a6c4cfe58362ed56599b1a875ee71ff6aa
+ms.openlocfilehash: ff1b5295f9fefd681ea76d09349415b59ceac1f2
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66410767"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631310"
 ---
 # <a name="create-a-c-console-app-project"></a>创建 C++ 控制台应用项目
 
@@ -81,7 +81,7 @@ Visual Studio 使用项目来组织应用的代码，使用解决方案来组织
 
    ![启动项目](./media/calc-vs2019-hello-world-console.png "Start the project")
 
-   随即将打开控制台窗口，然后运行你的应用。 在 Visual Studio 中启动控制台应用时，它会运行代码，然后输出“按任意键关闭此窗口。 . 。” 让你有机会看到输出。 祝贺你！ 你在 Visual Studio 中已创建首个“Hello, world!” 控制台应用！
+   随即将打开控制台窗口，然后运行你的应用。 在 Visual Studio 中启动控制台应用时，它会运行代码，然后输出“按任意键关闭此窗口。 。 。” 让你有机会看到输出。 祝贺你！ 你在 Visual Studio 中已创建首个“Hello, world!” 控制台应用！
 
 1. 按任意键关闭该控制台窗口并返回到 Visual Studio。
 
@@ -443,7 +443,7 @@ Visual Studio 使用项目来组织应用的代码，使用解决方案来组织
 
    ![启动项目](./media/calculator-hello-world-console.png "Start the project")
 
-   随即将打开控制台窗口，然后运行你的应用。 在 Visual Studio 中启动控制台应用时，它会运行代码，然后输出“按任意键继续。 . 。” 让你有机会看到输出。 祝贺你！ 你在 Visual Studio 中已创建首个“Hello, world!” 控制台应用！
+   随即将打开控制台窗口，然后运行你的应用。 在 Visual Studio 中启动控制台应用时，它会运行代码，然后输出“按任意键继续。 。 。” 让你有机会看到输出。 祝贺你！ 你在 Visual Studio 中已创建首个“Hello, world!” 控制台应用！
 
 1. 按任意键关闭该控制台窗口并返回到 Visual Studio。
 
@@ -486,7 +486,7 @@ Visual Studio 使用项目来组织应用的代码，使用解决方案来组织
    > 了解代码：
    >
    > - `#include` 语句允许引用位于其他文件中的代码。 有时，文件名使用尖括号 ( **\<\>** ) 包围；其他情况下，使用引号 ( **" "** ) 包围。 通常，引用 C++ 标准库时使用尖括号，引用其他文件时使用引号。
-   > - `#include "pch.h"`（或在旧版本的 Visual Studio 中为 `#include "stdafx.h"`）行引用名为预编译标头的内容。 专业程序员经常使用它们来缩短编译时间，但它们超出了本教程的范围。
+   > - `#include "pch.h"`（或 Visual Studio 2017 及更低版本中的 `#include "stdafx.h"`）行引用预编译标头。 专业程序员经常使用它们来缩短编译时间，但它们超出了本教程的范围。
    > - `using namespace std;` 行提示编译器期望在此文件中使用 C++ 标准库中的内容。 如果没有此行，库中的每个关键字都必须以 `std::` 开头，以表示其范围。 例如，如果没有该行，则对 `cout` 的每个引用都必须写为 `std::cout`。 `using` 语句的使用是为了使代码看起来更干净。
    > - `cout` 关键字用于在 C++ 中打印到标准输出。 “\<\<”运算符提示编译器将其右侧的任何内容发送到标准输出  。
    > - “endl”关键字与 Enter 键类似；用于结束该行并将光标移动到下一行  。 如果要执行相同的操作，最好在字符串中使用 `\n`用 "" 包含），因为使用 `endl` 会始终刷新缓冲，进而可能影响程序的性能，但由于这是一个非常小的应用，所以改为使用 `endl` 以提高可读性。

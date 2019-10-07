@@ -1,10 +1,10 @@
 ---
 title: mbtowc、_mbtowc_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - mbtowc
 - _mbtowc_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - api-ms-win-crt-convert-l1-1-0.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbtowc
 helpviewer_keywords:
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - _mbtowc_l function
 - mbtowc_l function
 ms.assetid: dfd1c8a7-e73a-4307-9353-53b70b45d4d1
-ms.openlocfilehash: c02d1a636db75b4a26891a93fa20327b7430443d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 655f5288738d2f2329b50a27381c00cb06e35e6d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156611"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952023"
 ---
-# <a name="mbtowc-mbtowcl"></a>mbtowc、_mbtowc_l
+# <a name="mbtowc-_mbtowc_l"></a>mbtowc、_mbtowc_l
 
 将多字节字符转换为相应的宽字符。
 
@@ -56,7 +59,7 @@ int _mbtowc_l(
 ### <a name="parameters"></a>参数
 
 *wchar*<br/>
-宽字符的地址 (类型**wchar_t**)。
+宽字符（ **wchar_t**类型）的地址。
 
 *mbchar*<br/>
 字节（多字节字符）序列的地址。
@@ -69,11 +72,11 @@ int _mbtowc_l(
 
 ## <a name="return-value"></a>返回值
 
-如果**mbchar**不是**NULL** ; 如果该对象的*mbchar*指向窗体是有效的多字节字符**mbtowc**返回的长度以多字节字符的字节数。 如果*mbchar*是**NULL**或它指向的对象是宽字符 null 字符 (L '\0)，则函数返回 0。 如果该对象的*mbchar*指向未构成有效多字节字符中第一个*计数*字符，则返回-1。
+如果**mbchar**不为**NULL** ，并且*mbchar*指向的对象构成有效的多字节字符，则**mbtowc**将返回多字节字符的长度（以字节为单位）。 如果*mbchar*为**null**或它所指向的对象为宽字符 null 字符（L "\ 0"），则该函数返回0。 如果*mbchar*指向的对象未形成第一个*计数*字符内的有效多字节字符，则返回-1。
 
 ## <a name="remarks"></a>备注
 
-**Mbtowc**函数转换*计数*或更少的字节由指向*mbchar*，如果*mbchar*不是**NULL**，为相应的宽字符。 **mbtowc**存储生成的宽字符*wchar*如果*wchar*不是**NULL**。 **mbtowc**不检查多个**MB_CUR_MAX**字节。 **mbtowc**的区域设置相关的行为; 使用当前区域设置 **_mbtowc_l**是完全相同，只不过它改用已传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+如果*mbchar*不为**NULL**，则**mbtowc**函数将*mbchar*指向的*计数*或更少的字节转换为相应的宽字符。 如果*wchar*不为**NULL**，则**mbtowc**会将生成的宽字符存储在*wchar 中*。 **mbtowc**不检查超过**MB_CUR_MAX**个字节。 **mbtowc**对与区域设置相关的行为使用当前区域设置; **_mbtowc_l**是相同的，只不过它使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -147,7 +150,7 @@ Attempt to convert a NULL pointer to a wide character:
 ## <a name="see-also"></a>请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
-[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
+[MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
 [区域设置](../../c-runtime-library/locale.md)<br/>
 [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)<br/>

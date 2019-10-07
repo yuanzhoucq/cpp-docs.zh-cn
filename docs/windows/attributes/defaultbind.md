@@ -1,21 +1,21 @@
 ---
-title: defaultbind (C++ COM 属性)
+title: defaultbind (C++ COM 特性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.defaultbind
 helpviewer_keywords:
 - defaultbind attribute
 ms.assetid: b20a8437-24e6-4b6d-a2df-09fe5e1006e0
-ms.openlocfilehash: f0dd9101966f22253e6c4098c3c64d22d0a0cba6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a2f612c4869a62a84a6a2af99057ced365f875f2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148063"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490995"
 ---
 # <a name="defaultbind"></a>defaultbind
 
-指示最能代表对象的单个、 可绑定属性。
+指示最能表示对象的单个可绑定属性。
 
 ## <a name="syntax"></a>语法
 
@@ -25,11 +25,11 @@ ms.locfileid: "62148063"
 
 ## <a name="remarks"></a>备注
 
-**Defaultbind** C++属性具有相同的功能[defaultbind](/windows/desktop/Midl/defaultbind) MIDL 特性。
+**Defaultbind** C++特性具有与[defaultbind](/windows/win32/Midl/defaultbind) MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
-有关示例，请参阅[可绑定](bindable.md)有关如何使用的示例**defaultbind**。
+有关如何使用**defaultbind**的示例, 请参阅可[绑定](bindable.md)的示例。
 
 ## <a name="requirements"></a>要求
 
@@ -37,10 +37,10 @@ ms.locfileid: "62148063"
 
 |||
 |-|-|
-|**适用对象**|接口方法|
-|**可重复**|否|
-|**必需的特性**|None|
-|**无效的特性**|None|
+|**适用于**|接口方法|
+|**可重复**|No|
+|**必需的特性**|无|
+|**无效的特性**|无|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

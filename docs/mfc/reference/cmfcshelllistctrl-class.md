@@ -42,16 +42,16 @@ helpviewer_keywords:
 - CMFCShellListCtrl [MFC], Refresh
 - CMFCShellListCtrl [MFC], SetItemTypes
 ms.assetid: ad472958-5586-4c50-aadf-1844c30bf6e7
-ms.openlocfilehash: a513a5e85ae5cf00f7ea874967a709245e016b34
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 02d4883c6b5445515d891c5e76ccf10b6bb35bba
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58772106"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504924"
 ---
 # <a name="cmfcshelllistctrl-class"></a>CMFCShellListCtrl 类
 
-`CMFCShellListCtrl`类提供 Windows 列表控件功能并通过包含显示 shell 项的列表的功能会将其展开。
+`CMFCShellListCtrl`类提供 Windows 列表控件功能, 并通过包含显示 shell 项列表的功能进行扩展。
 
 ## <a name="syntax"></a>语法
 
@@ -65,34 +65,34 @@ class CMFCShellListCtrl : public CMFCListCtrl
 
 |名称|描述|
 |----------|-----------------|
-|[CMFCShellListCtrl::DisplayFolder](#displayfolder)|显示包含在提供的文件夹中的项的列表。|
-|[CMFCShellListCtrl::DisplayParentFolder](#displayparentfolder)|显示包含在当前显示的文件夹的父文件夹中的项的列表。|
-|[CMFCShellListCtrl::EnableShellContextMenu](#enableshellcontextmenu)|启用或禁用的快捷菜单。|
+|[CMFCShellListCtrl::DisplayFolder](#displayfolder)|显示所提供文件夹中包含的项的列表。|
+|[CMFCShellListCtrl::DisplayParentFolder](#displayparentfolder)|显示作为当前显示文件夹的父文件夹的文件夹中包含的项的列表。|
+|[CMFCShellListCtrl::EnableShellContextMenu](#enableshellcontextmenu)|启用或禁用快捷菜单。|
 |[CMFCShellListCtrl::GetCurrentFolder](#getcurrentfolder)|检索当前文件夹的路径。|
 |[CMFCShellListCtrl::GetCurrentFolderName](#getcurrentfoldername)|检索当前文件夹的名称。|
 |[CMFCShellListCtrl::GetCurrentItemIdList](#getcurrentitemidlist)|返回当前列表控件项的 PIDL。|
-|[CMFCShellListCtrl::GetCurrentShellFolder](#getcurrentshellfolder)|返回一个指向当前命令行程序文件夹。|
+|[CMFCShellListCtrl::GetCurrentShellFolder](#getcurrentshellfolder)|返回指向当前 Shell 文件夹的指针。|
 |[CMFCShellListCtrl::GetItemPath](#getitempath)|返回项的文本路径。|
-|[CMFCShellListCtrl::GetItemTypes](#getitemtypes)|返回由列表控件显示 Shell 项类型。|
-|[CMFCShellListCtrl::IsDesktop](#isdesktop)|检查当前所选的文件夹是否处于桌面文件夹。|
-|[CMFCShellListCtrl::OnCompareItems](#oncompareitems)|比较两个项时，框架将调用此方法。 (重写[CMFCListCtrl::OnCompareItems](../../mfc/reference/cmfclistctrl-class.md#oncompareitems)。)|
+|[CMFCShellListCtrl::GetItemTypes](#getitemtypes)|返回列表控件显示的 Shell 项类型。|
+|[CMFCShellListCtrl::IsDesktop](#isdesktop)|检查当前选择的文件夹是否为 "桌面" 文件夹。|
+|[CMFCShellListCtrl::OnCompareItems](#oncompareitems)|框架在比较两个项时调用此方法。 (重写[CMFCListCtrl:: OnCompareItems](../../mfc/reference/cmfclistctrl-class.md#oncompareitems)。)|
 |[CMFCShellListCtrl::OnFormatFileDate](#onformatfiledate)|当框架检索列表控件显示的文件日期时调用。|
-|[CMFCShellListCtrl::OnFormatFileSize](#onformatfilesize)|当框架将转换的文件大小的列表控件时调用。|
-|[CMFCShellListCtrl::OnGetItemIcon](#ongetitemicon)|当框架检索列表控件项的图标时调用。|
-|[CMFCShellListCtrl::OnGetItemText](#ongetitemtext)|当框架将列表控件项的文本转换时调用。|
-|[CMFCShellListCtrl::OnSetColumns](#onsetcolumns)|集的列的名称时由框架调用。|
+|[CMFCShellListCtrl::OnFormatFileSize](#onformatfilesize)|在框架转换列表控件的文件大小时调用。|
+|[CMFCShellListCtrl::OnGetItemIcon](#ongetitemicon)|在框架检索列表控件项的图标时调用。|
+|[CMFCShellListCtrl::OnGetItemText](#ongetitemtext)|当框架转换列表控件项的文本时调用。|
+|[CMFCShellListCtrl::OnSetColumns](#onsetcolumns)|在设置列的名称时由框架调用。|
 |[CMFCShellListCtrl::Refresh](#refresh)|刷新并重新绘制列表控件。|
-|[CMFCShellListCtrl::SetItemTypes](#setitemtypes)|设置由列表控件中显示的项的类型。|
+|[CMFCShellListCtrl::SetItemTypes](#setitemtypes)|设置列表控件显示的项的类型。|
 
 ## <a name="remarks"></a>备注
 
-`CMFCShellListCtrl`类用于扩展的功能[CMFCListCtrl 类](../../mfc/reference/cmfclistctrl-class.md)，从而您可以列出 Windows shell 项的程序。 使用的显示格式是类似的资源管理器窗口的列表视图。
+类通过使程序能够列出 Windows shell 项来扩展[CMFCListCtrl 类](../../mfc/reference/cmfclistctrl-class.md)的功能。 `CMFCShellListCtrl` 所使用的显示格式类似于 "资源管理器" 窗口的列表视图。
 
-一个[CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md)对象可以关联`CMFCShellListCtrl`对象来创建完整的资源管理器窗口。 然后，选择中的项`CMFCShellTreeCtrl`将导致`CMFCShellListCtrl`对象列出选定项的内容。
+[CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md)对象可以与`CMFCShellListCtrl`对象相关联, 以创建完整的资源管理器窗口。 然后, 在中`CMFCShellTreeCtrl`选择一项将`CMFCShellListCtrl`导致对象列出选定项的内容。
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何创建的对象`CMFCShellListCtrl`类以及如何显示当前所显示的文件夹的父文件夹。 此代码片段属于[资源管理器示例](../../overview/visual-cpp-samples.md)。
+下面的示例演示如何创建`CMFCShellListCtrl`类的对象以及如何显示当前显示文件夹的父文件夹。 此代码片段是[资源管理器示例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_Explorer#1](../../mfc/reference/codesnippet/cpp/cmfcshelllistctrl-class_1.h)]
 [!code-cpp[NVC_MFC_Explorer#2](../../mfc/reference/codesnippet/cpp/cmfcshelllistctrl-class_2.cpp)]
@@ -114,11 +114,11 @@ class CMFCShellListCtrl : public CMFCListCtrl
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxshelllistCtrl.h
+**标头:** afxshelllistCtrl
 
 ##  <a name="displayfolder"></a>  CMFCShellListCtrl::DisplayFolder
 
-显示包含在提供的文件夹中的项的列表。
+显示所提供文件夹中包含的项的列表。
 
 ```
 virtual HRESULT DisplayFolder(LPCTSTR lpszPath);
@@ -128,18 +128,18 @@ virtual HRESULT DisplayFolder(LPAFX_SHELLITEMINFO lpItemInfo);
 ### <a name="parameters"></a>参数
 
 *lpszPath*<br/>
-[in]一个字符串，包含一个文件夹的路径。
+中包含文件夹路径的字符串。
 
 *lpItemInfo*<br/>
-[in]一个指向`LPAFX_SHELLITEMINFO`结构描述要显示的文件夹。
+中指向`LPAFX_SHELLITEMINFO`结构的指针, 该结构描述要显示的文件夹。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则为 S_OK否则为 E_FAIL。
+如果成功, 则为 S_OK;否则为 E_FAIL。
 
 ##  <a name="displayparentfolder"></a>  CMFCShellListCtrl::DisplayParentFolder
 
-更新[CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)对象来显示当前所显示的文件夹的父文件夹。
+更新[CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)对象以显示当前显示文件夹的父文件夹。
 
 ```
 virtual HRESULT DisplayParentFolder();
@@ -147,11 +147,11 @@ virtual HRESULT DisplayParentFolder();
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则为 S_OK否则为 E_FAIL。
+如果成功, 则为 S_OK;否则为 E_FAIL。
 
-##  <a name="enableshellcontextmenu"></a>  CMFCShellListCtrl::EnableShellContextMenu
+##  <a name="enableshellcontextmenu"></a>CMFCShellListCtrl::EnableShellContextMenu
 
-启用的快捷菜单。
+启用快捷菜单。
 
 ```
 void EnableShellContextMenu(BOOL bEnable = TRUE);
@@ -160,11 +160,11 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 ### <a name="parameters"></a>参数
 
 *bEnable*<br/>
-[in]一个布尔值，指定是否使用此框架，快捷菜单。
+中一个布尔值, 该值指定框架是否启用快捷菜单。
 
-##  <a name="getcurrentfolder"></a>  CMFCShellListCtrl::GetCurrentFolder
+##  <a name="getcurrentfolder"></a>CMFCShellListCtrl::GetCurrentFolder
 
-检索当前所选文件夹中的路径[CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)对象。
+检索[CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)对象中当前选定文件夹的路径。
 
 ```
 BOOL GetCurrentFolder(CString& strPath) const;
@@ -173,19 +173,19 @@ BOOL GetCurrentFolder(CString& strPath) const;
 ### <a name="parameters"></a>参数
 
 *strPath*<br/>
-[out]对，则该方法将路径的字符串参数的引用。
+弄对字符串参数的引用, 其中方法将写入路径。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则非零值否则为 0。
+如果成功, 则为非零值;否则为0。
 
 ### <a name="remarks"></a>备注
 
-此方法失败，如果有任何文件夹中选择`CMFCShellListCtrl`。
+如果中`CMFCShellListCtrl`未选择任何文件夹, 则此方法将失败。
 
-##  <a name="getcurrentfoldername"></a>  CMFCShellListCtrl::GetCurrentFolderName
+##  <a name="getcurrentfoldername"></a>CMFCShellListCtrl::GetCurrentFolderName
 
-检索当前所选文件夹中的名称[CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)对象。
+检索[CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)对象中当前选定文件夹的名称。
 
 ```
 BOOL GetCurrentFolderName(CString& strName) const;
@@ -194,17 +194,17 @@ BOOL GetCurrentFolderName(CString& strName) const;
 ### <a name="parameters"></a>参数
 
 *strName*<br/>
-[out]对，则该方法将名称的字符串参数的引用。
+弄对字符串参数的引用, 其中方法会写入名称。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则非零值否则为 0。
+如果成功, 则为非零值;否则为0。
 
 ### <a name="remarks"></a>备注
 
-此方法失败，如果有任何文件夹中选择`CMFCShellListCtrl`。
+如果中`CMFCShellListCtrl`未选择任何文件夹, 则此方法将失败。
 
-##  <a name="getcurrentitemidlist"></a>  CMFCShellListCtrl::GetCurrentItemIdList
+##  <a name="getcurrentitemidlist"></a>CMFCShellListCtrl::GetCurrentItemIdList
 
 返回当前选定项的 PIDL。
 
@@ -216,9 +216,9 @@ LPITEMIDLIST GetCurrentItemIdList() const;
 
 当前项的 PIDL。
 
-##  <a name="getcurrentshellfolder"></a>  CMFCShellListCtrl::GetCurrentShellFolder
+##  <a name="getcurrentshellfolder"></a>CMFCShellListCtrl::GetCurrentShellFolder
 
-获取一个指针指向中当前选定的项[CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)对象。
+获取一个指针, 该指针指向[CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)对象中当前选定的项。
 
 ```
 const IShellFolder* GetCurrentShellFolder() const;
@@ -226,13 +226,13 @@ const IShellFolder* GetCurrentShellFolder() const;
 
 ### <a name="return-value"></a>返回值
 
-一个指向[IShellFolder 接口](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellfolder)为所选对象。
+指向所选对象的[IShellFolder 接口](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ishellfolder)的指针。
 
 ### <a name="remarks"></a>备注
 
-如果当前没有选定任何对象，此方法将返回 NULL。
+如果当前未选择任何对象, 则此方法返回 NULL。
 
-##  <a name="getitempath"></a>  CMFCShellListCtrl::GetItemPath
+##  <a name="getitempath"></a>CMFCShellListCtrl::GetItemPath
 
 检索项的路径。
 
@@ -245,22 +245,22 @@ BOOL GetItemPath(
 ### <a name="parameters"></a>参数
 
 *strPath*<br/>
-[out]对接收路径的字符串的引用。
+弄对接收路径的字符串的引用。
 
 *iItem*<br/>
-[in]列表项的索引。
+中列表项的索引。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则为 TRUEFALSE 否则为。
+如果成功, 则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-通过提供索引*iItem*根据当前显示的项[CMFCShellListCtrl 类](../../mfc/reference/cmfcshelllistctrl-class.md)对象。
+*IItem*提供的索引基于[CMFCShellListCtrl 类](../../mfc/reference/cmfcshelllistctrl-class.md)对象当前显示的项。
 
-##  <a name="getitemtypes"></a>  CMFCShellListCtrl::GetItemTypes
+##  <a name="getitemtypes"></a>CMFCShellListCtrl::GetItemTypes
 
-返回的情况下显示的项的类型[CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)对象。
+返回由[CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)对象显示的项的类型。
 
 ```
 SHCONTF GetItemTypes() const;
@@ -268,15 +268,15 @@ SHCONTF GetItemTypes() const;
 
 ### <a name="return-value"></a>返回值
 
-一个[SHCONTF](/windows/desktop/api/shobjidl_core/ne-shobjidl_core-_shcontf)值，该值包含的项中列出的类型`CMFCShellListCtrl`。
+一个[SHCONTF](/windows/win32/api/shobjidl_core/ne-shobjidl_core-_shcontf)值, 该值包含中`CMFCShellListCtrl`列出的项的类型。
 
 ### <a name="remarks"></a>备注
 
-若要设置的项中列出的类型`CMFCShellListCtrl`，调用[CMFCShellListCtrl::SetItemTypes](#setitemtypes)。
+若要设置中`CMFCShellListCtrl`列出的项的类型, 请调用[CMFCShellListCtrl:: SetItemTypes](#setitemtypes)。
 
-##  <a name="isdesktop"></a>  CMFCShellListCtrl::IsDesktop
+##  <a name="isdesktop"></a>CMFCShellListCtrl::IsDesktop
 
-确定文件夹是否显示在[CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)对象是桌面文件夹。
+确定[CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)对象中显示的文件夹是否为 "桌面" 文件夹。
 
 ```
 BOOL IsDesktop() const;
@@ -284,11 +284,11 @@ BOOL IsDesktop() const;
 
 ### <a name="return-value"></a>返回值
 
-如果显示的文件夹桌面文件夹; 则为 TRUEFALSE 否则为。
+如果显示的文件夹是桌面文件夹, 则为 TRUE;否则为 FALSE。
 
-##  <a name="oncompareitems"></a>  CMFCShellListCtrl::OnCompareItems
+##  <a name="oncompareitems"></a>CMFCShellListCtrl::OnCompareItems
 
-有关更多详细信息，请参阅中的源代码**VC\\atlmfc\\src\\mfc**的 Visual Studio 安装文件夹。
+有关更多详细信息, 请参阅位于 Visual Studio 安装的**VC\\atlmfc\\src\\mfc**文件夹中的源代码。
 
 ```
 virtual int OnCompareItems(
@@ -301,15 +301,15 @@ virtual int OnCompareItems(
 
 [in] *lParam1*<br/>
 [in] *lParam2*<br/>
-[in] *iColumn*<br/>
+中*iColumn*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-##  <a name="onformatfiledate"></a>  CMFCShellListCtrl::OnFormatFileDate
+##  <a name="onformatfiledate"></a>CMFCShellListCtrl::OnFormatFileDate
 
-它必须将转换为字符串与对象关联的日期时，框架将调用此方法。
+当框架必须将与对象关联的日期转换为字符串时, 框架会调用此方法。
 
 ```
 virtual void OnFormatFileDate(
@@ -320,18 +320,18 @@ virtual void OnFormatFileDate(
 ### <a name="parameters"></a>参数
 
 *tmFile*<br/>
-[in]与文件相关联的日期。
+中与文件关联的日期。
 
 *str*<br/>
-[out]一个字符串，包含格式的文件的日期。
+弄一个包含格式化文件日期的字符串。
 
 ### <a name="remarks"></a>备注
 
-当[CMFCShellListCtrl 类](../../mfc/reference/cmfcshelllistctrl-class.md)对象显示与文件相关联的日期时，它必须将该日期转换为字符串格式。 `CMFCShellListCtrl`使用此方法来执行该转换。 默认情况下，此方法使用当前区域设置来设置日期格式转换为字符串。
+当[CMFCShellListCtrl 类](../../mfc/reference/cmfcshelllistctrl-class.md)对象显示与文件关联的日期时, 它必须将该日期转换为字符串格式。 `CMFCShellListCtrl`使用此方法进行该转换。 默认情况下, 此方法使用当前区域设置将日期格式设置为字符串。
 
-##  <a name="onformatfilesize"></a>  CMFCShellListCtrl::OnFormatFileSize
+##  <a name="onformatfilesize"></a>CMFCShellListCtrl::OnFormatFileSize
 
-它将对象大小转换为字符串时，框架将调用此方法。
+框架在将对象的大小转换为字符串时调用此方法。
 
 ```
 virtual void OnFormatFileSize(
@@ -342,18 +342,18 @@ virtual void OnFormatFileSize(
 ### <a name="parameters"></a>参数
 
 *lFileSize*<br/>
-[in]该框架将显示文件的大小。
+中框架将显示的文件的大小。
 
 *str*<br/>
-[out]一个字符串，包含格式的文件大小。
+弄一个包含格式化文件大小的字符串。
 
 ### <a name="remarks"></a>备注
 
-当[CMFCShellListCtrl 类](../../mfc/reference/cmfcshelllistctrl-class.md)对象需要显示文件的大小，它必须转换为字符串格式的文件大小。 `CMFCShellListCtrl`使用此方法来执行该转换。 默认情况下，此方法将文件大小从字节转换为千字节为单位，并使用当前区域设置可以设置为字符串的大小。
+当[CMFCShellListCtrl 类](../../mfc/reference/cmfcshelllistctrl-class.md)对象需要显示文件的大小时, 需要将文件大小转换为字符串格式。 `CMFCShellListCtrl`使用此方法进行该转换。 默认情况下, 此方法将文件大小从字节转换为 kb, 并使用当前区域设置将大小设置为字符串格式。
 
-##  <a name="ongetitemicon"></a>  CMFCShellListCtrl::OnGetItemIcon
+##  <a name="ongetitemicon"></a>CMFCShellListCtrl::OnGetItemIcon
 
-框架调用此方法以检索与 shell 列表项关联的图标。
+框架调用此方法来检索与 shell 列表项关联的图标。
 
 ```
 virtual int OnGetItemIcon(
@@ -364,24 +364,24 @@ virtual int OnGetItemIcon(
 ### <a name="parameters"></a>参数
 
 *iItem*<br/>
-[in]项索引。
+中项索引。
 
 *pItem*<br/>
-[in]LPAFX_SHELLITEMINFO 参数，用于描述项。
+中描述该项的 LPAFX_SHELLITEMINFO 参数。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则图标图像的索引如果函数失败，为-1。
+如果成功, 则为图标图像的索引;如果函数失败, 则为-1。
 
 ### <a name="remarks"></a>备注
 
-图标图像索引基于系统映像列表。
+图标图像索引基于 "系统映像" 列表。
 
-默认情况下，此方法依赖*pItem*参数。 值*iItem*中的默认实现不使用。 可以使用*iItem*来实现自定义行为。
+默认情况下, 此方法依赖于*pItem*参数。 默认实现中不使用*iItem*的值。 您可以使用*iItem*来实现自定义行为。
 
 ##  <a name="ongetitemtext"></a>  CMFCShellListCtrl::OnGetItemText
 
-它必须检索 shell 项的文本时，框架将调用此方法。
+当框架必须检索 shell 项的文本时, 框架会调用此方法。
 
 ```
 virtual CString OnGetItemText(
@@ -393,27 +393,27 @@ virtual CString OnGetItemText(
 ### <a name="parameters"></a>参数
 
 *iItem*<br/>
-[in]项索引。
+中项索引。
 
 *iColumn*<br/>
-[in]感兴趣的列。
+中相关列。
 
 *pItem*<br/>
-[in]LPAFX_SHELLITEMINFO 参数，用于描述项。
+中描述该项的 LPAFX_SHELLITEMINFO 参数。
 
 ### <a name="return-value"></a>返回值
 
-一个`CString`，包含与项关联的文本。
+一个`CString` , 其中包含与项关联的文本。
 
 ### <a name="remarks"></a>备注
 
-中的每项`CMFCShellListCtrl`对象可能具有一个或多个列中的文本。 当框架调用此方法时，它指定对感兴趣的列。 如果您手动调用此函数，还必须指定你感兴趣的列。
+对象中的`CMFCShellListCtrl`每一项都有一个或多个列中的文本。 当框架调用此方法时, 它将指定所需的列。 如果手动调用此函数, 则还必须指定所需的列。
 
-默认情况下，此方法依赖*pItem*参数，以确定哪一项到进程。 值*iItem*中的默认实现不使用。
+默认情况下, 此方法依赖于*pItem*参数来确定要处理的项。 默认实现中不使用*iItem*的值。
 
-##  <a name="onsetcolumns"></a>  CMFCShellListCtrl::OnSetColumns
+##  <a name="onsetcolumns"></a>CMFCShellListCtrl::OnSetColumns
 
-框架调用此方法时设置的列的名称。
+框架在设置列的名称时调用此方法。
 
 ```
 virtual void OnSetColumns();
@@ -421,7 +421,7 @@ virtual void OnSetColumns();
 
 ### <a name="remarks"></a>备注
 
-默认情况下，框架将创建四个列中的`CMFCShellListCtrl`对象。 这些列的名称是**名称**，**大小**，**类型**，以及**Modified**。 您可以重写此方法以自定义它们的名称和列数。
+默认情况下, 框架在`CMFCShellListCtrl`对象中创建四个列。 这些列的名称为 "**名称**"、"**大小**"、"**类型**" 和 "**已修改**"。 您可以重写此方法以自定义列数和列名称。
 
 ##  <a name="refresh"></a>  CMFCShellListCtrl::Refresh
 
@@ -433,15 +433,15 @@ virtual HRESULT Refresh();
 
 ### <a name="return-value"></a>返回值
 
-`S_OK` 如果成功，则，否则为一个错误值。
+`S_OK`如果成功, 则为;否则为错误值。
 
 ### <a name="remarks"></a>备注
 
-调用此方法以刷新显示的项列表`CMFCShellListCtrl`对象。
+调用此方法可刷新由`CMFCShellListCtrl`对象显示的项的列表。
 
 ##  <a name="setitemtypes"></a>  CMFCShellListCtrl::SetItemTypes
 
-设置中列出的项的类型[CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)对象。
+设置[CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)对象中列出的项的类型。
 
 ```
 void SetItemTypes(SHCONTF nTypes);
@@ -450,11 +450,11 @@ void SetItemTypes(SHCONTF nTypes);
 ### <a name="parameters"></a>参数
 
 *nTypes*<br/>
-[in]项的列表类型`CMFCShellListCtrl`对象支持。
+中`CMFCShellListCtrl`对象支持的项类型的列表。
 
 ### <a name="remarks"></a>备注
 
-项类型的列表的详细信息，请参阅[SHCONTF](/windows/desktop/api/shobjidl_core/ne-shobjidl_core-_shcontf)。
+有关项类型列表的详细信息, 请参阅[SHCONTF](/windows/win32/api/shobjidl_core/ne-shobjidl_core-_shcontf)。
 
 ## <a name="see-also"></a>请参阅
 

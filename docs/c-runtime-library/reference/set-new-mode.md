@@ -1,9 +1,9 @@
 ---
 title: _set_new_mode
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _set_new_mode
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - set_new_mode
 - _set_new_mode
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - _set_new_mode function
 - set_new_mode function
 ms.assetid: 4d14039a-e54e-4689-8c70-74a4b9834768
-ms.openlocfilehash: 0228170e4ab5b55b4b061fa61a412766de77a063
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b248f1c97b1ec334b7441f33862b90473e08993f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356597"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948446"
 ---
-# <a name="setnewmode"></a>_set_new_mode
+# <a name="_set_new_mode"></a>_set_new_mode
 
-设置新的处理程序模式**malloc**。
+为**malloc**设置新的处理程序模式。
 
 ## <a name="syntax"></a>语法
 
@@ -44,15 +47,15 @@ int _set_new_mode( int newhandlermode );
 ### <a name="parameters"></a>参数
 
 *newhandlermode*<br/>
-新处理程序模式**malloc**有效; 值为 0 或 1。
+**Malloc**的新处理程序模式;有效值为0或1。
 
 ## <a name="return-value"></a>返回值
 
-返回上一个处理程序模式设置为**malloc**。 返回值为 1 表示，在分配内存失败**malloc**以前调用过的新的处理程序例程; 返回值 0 指示未。 如果*newhandlermode*参数不等于 0 或 1，则返回-1。
+返回为**malloc**设置的前一个处理程序模式。 返回值1表示在分配内存失败时， **malloc**之前称为新的处理程序例程;如果返回值为0，则表示它不是。 如果*newhandlermode*参数不等于0或1，则返回-1。
 
 ## <a name="remarks"></a>备注
 
-C++ **_set_new_mode** 函数将为 [malloc](malloc.md) 设置新的处理程序模式。 新的处理程序模式将指示是否在失败时， **malloc**是所设置的调用新处理程序例程[_set_new_handler](set-new-handler.md)。 默认情况下**malloc**不会调用新处理程序例程上分配内存失败。 可以重写此默认行为，以便，当**malloc**无法分配内存， **malloc**调用新处理程序例程中相同的方式**新**运算符执行当出于相同原因。 有关详细信息，请参阅 *C++ 语言参考*中的 [new](../../cpp/new-operator-cpp.md) 和 [delete](../../cpp/delete-operator-cpp.md) 运算符。 若要重写默认值，请调用：
+C++ **_set_new_mode** 函数将为 [malloc](malloc.md) 设置新的处理程序模式。 新处理程序模式指示在失败时， **malloc**是否调用由[_set_new_handler](set-new-handler.md)设置的新处理程序例程。 默认情况下，在无法分配内存时， **malloc**不会调用新的处理程序例程。 您可以重写此默认行为，以便在**malloc**无法分配内存时， **malloc**会调用新的处理程序例程，其方式与在同一原因下**新**运算符失败时相同。 有关详细信息，请参阅 *C++ 语言参考*中的 [new](../../cpp/new-operator-cpp.md) 和 [delete](../../cpp/delete-operator-cpp.md) 运算符。 若要重写默认值，请调用：
 
 ```cpp
 _set_new_mode(1);
@@ -60,7 +63,7 @@ _set_new_mode(1);
 
 在程序的早期进行调用，或链接到 Newmode.obj（请参阅[链接选项](../../c-runtime-library/link-options.md)）。
 
-此函数验证其参数。 如果*newhandlermode*任何其他比 0 或 1，此函数调用无效参数处理程序，作为内容中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则<strong>_set_new_mode</strong>将返回-1 并设置**errno**到`EINVAL`。
+此函数验证其参数。 如果*newhandlermode*不是0或1，则函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则<strong>_set_new_mode</strong>将返回-1，并将**errno**设置为`EINVAL`。
 
 ## <a name="requirements"></a>要求
 

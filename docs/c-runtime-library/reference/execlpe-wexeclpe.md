@@ -1,10 +1,10 @@
 ---
 title: _execlpe，_wexeclpe
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _execlpe
 - _wexeclpe
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wexeclpe
 - execlpe
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - _execlpe function
 - execlpe function
 ms.assetid: 07b861da-3e7e-4f1d-bb80-ad69b55e5162
-ms.openlocfilehash: e3aa4189d2a384a0092c742909e97c5efc52b5ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 960d148963aa9c6410fec03b5a6f265a6e4ab9d5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339359"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941901"
 ---
-# <a name="execlpe-wexeclpe"></a>_execlpe，_wexeclpe
+# <a name="_execlpe-_wexeclpe"></a>_execlpe，_wexeclpe
 
 加载和执行新的子进程。
 
@@ -66,7 +69,7 @@ intptr_t _wexeclpe(
 *cmdname*<br/>
 要执行的文件的路径。
 
-*arg0*，...*argn*<br/>
+*arg0*，.。。*argn*<br/>
 指向参数的指针的列表。
 
 *envp*<br/>
@@ -74,7 +77,7 @@ intptr_t _wexeclpe(
 
 ## <a name="return-value"></a>返回值
 
-如果成功，这些函数不返回到调用进程。 返回值-1 指示错误，在这种情况下**errno**设置全局变量。
+如果成功，这些函数不返回到调用进程。 返回值-1 表示错误，在这种情况下，将设置**errno**全局变量。
 
 |**errno**值|描述|
 |-------------------|-----------------|
@@ -90,9 +93,9 @@ intptr_t _wexeclpe(
 
 ## <a name="remarks"></a>备注
 
-这些函数将加载并执行一个新进程，并将每个命令行自变量作为独立的参数传递，还将传递指向环境设置的指针的数组。 这些函数将使用**路径**环境变量查找要执行的文件。
+这些函数将加载并执行一个新进程，并将每个命令行自变量作为独立的参数传递，还将传递指向环境设置的指针的数组。 这些函数使用**PATH**环境变量查找要执行的文件。
 
-**_Execlpe**函数验证其参数。 如果任一*cmdname*或*arg0*为 null 指针或空字符串，这些函数将调用无效参数处理程序中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许继续执行，这些函数将设置**errno**到**EINVAL**并返回-1。 将不启动新进程。
+**_Execlpe**函数验证其参数。 如果*cmdname*或*arg0*为空指针或空字符串，这些函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续, 则这些函数会将**errno**设置为**EINVAL** , 并返回-1。 将不启动新进程。
 
 ## <a name="requirements"></a>要求
 

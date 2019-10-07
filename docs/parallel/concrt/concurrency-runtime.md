@@ -6,28 +6,28 @@ helpviewer_keywords:
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-ms.openlocfilehash: fa64e2536fd1697e839f1b4921a290e1b7a30a35
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: a96c54a01788f03158b9fcdcd0bf72eb2b1ce84d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449691"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510548"
 ---
 # <a name="concurrency-runtime"></a>并发运行时
 
 适用于 C++ 的并发运行时可帮助你编写可靠、可伸缩且响应迅速的并行应用程序。 它提升了抽象级别，因此无需管理与并发相关的基础结构详细信息。 你还可以使用它来指定符合应用程序服务要求质量的计划策略。 使用这些资源帮助你开始使用并发运行时。
 
-有关参考文档，请参阅[引用](../../parallel/concrt/reference/reference-concurrency-runtime.md)。
+有关参考文档, 请参阅[参考](../../parallel/concrt/reference/reference-concurrency-runtime.md)。
 
 > [!TIP]
->  并发运行时十分依赖 C++11 功能，并采用更现代的 C++ 样式。 要了解详细信息，请阅读[欢迎回到C++ ](../../cpp/welcome-back-to-cpp-modern-cpp.md)。
+>  并发运行时十分依赖 C++11 功能，并采用更现代的 C++ 样式。 若要了解详细信息, 请参阅[欢迎回到C++ ](../../cpp/welcome-back-to-cpp-modern-cpp.md)。
 
 ## <a name="choosing-concurrency-runtime-features"></a>选择并发运行时功能
 
 |||
 |-|-|
 |[概述](../../parallel/concrt/overview-of-the-concurrency-runtime.md)|讲解并发运行时之所以重要的原因并介绍它的主要功能。|
-|[将与其他并发模型进行比较](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md)|演示并发运行时如何与其他并发模型（例如 Windows 线程池和 OpenMP）进行比较，以便你能够使用最适合你应用程序需求的并发模型。|
+|[与其他并发模型进行比较](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md)|演示并发运行时如何与其他并发模型（例如 Windows 线程池和 OpenMP）进行比较，以便你能够使用最适合你应用程序需求的并发模型。|
 |[从 OpenMP 迁移至并发运行时](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)|将 OpenMP 与并发运行时进行比较，并提供有关如何迁移现有 OpenMP 代码以使用并发运行时的示例。|
 |[并行模式库 (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|向你介绍 PPL，它提供并行循环、任务和并行容器。|
 |[异步代理库](../../parallel/concrt/asynchronous-agents-library.md)|向你介绍如何使用异步代理和消息传递来轻松地将数据流和流水线操作任务合并到应用程序中。|
@@ -61,9 +61,9 @@ ms.locfileid: "66449691"
 
 |||
 |-|-|
-|[用 C++ 为 UWP 应用创建异步操作](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|介绍了一些使用并发运行时生成 UWP 应用中的异步操作时，需要注意的关键点。|
-|[演练：使用任务和 XML HTTP 请求进行连接](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|演示如何组合使用 PPL 任务`IXMLHTTPRequest2`和`IXMLHTTPRequest2Callback`接口将 HTTP GET 和 POST 请求发送到 UWP 应用中的 web 服务。|
-|[Windows 运行时应用示例](https://code.msdn.microsoft.com/windowsapps)|包含可下载的代码示例和演示适用于 Windows 的应用 8.x。 C++ 示例使用 PPL 任务等并发运行时功能在后台处理数据，以保持 UX 随时响应。|
+|[用 C++ 为 UWP 应用创建异步操作](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|描述在使用并发运行时在 UWP 应用中生成异步操作时要记住的一些要点。|
+|[演练：使用任务和 XML HTTP 请求进行连接](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|演示如何将 PPL 任务与`IXMLHTTPRequest2`和`IXMLHTTPRequest2Callback`接口结合使用, 以将 HTTP GET 和 POST 请求发送到 UWP 应用中的 web 服务。|
+|[Windows 运行时应用示例](https://code.msdn.microsoft.com/windowsapps)|包含适用于 Windows 3.x 的可下载代码示例和演示应用。 C++ 示例使用 PPL 任务等并发运行时功能在后台处理数据，以保持 UX 随时响应。|
 
 ## <a name="dataflow-programming-in-the-asynchronous-agents-library"></a>异步代理库中的数据流编程
 
@@ -98,10 +98,10 @@ ms.locfileid: "66449691"
 
 |||
 |-|-|
-|[Hilo（使用 C++ 和 XAML 的 Windows 应用商店应用）中的异步编程模式和提示](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|了解我们如何使用并发运行时在 Hilo，实现异步操作 Windows 运行时应用使用C++和 XAML。|
+|[Hilo（使用 C++ 和 XAML 的 Windows 应用商店应用）中的异步编程模式和提示](/previous-versions/windows/apps/jj160321(v=win.10))|了解如何使用并发运行时在 Hilo 中实现异步操作, 使用C++和 XAML 的 Windows 运行时应用。|
 |[本机代码中的并行编程博客](https://go.microsoft.com/fwlink/p/?linkid=183873)|提供有关并发运行时中的并行编程的其他深度博客文章。|
 |[C++ 和本机代码中的并行计算论坛](https://go.microsoft.com/fwlink/p/?linkid=183874)|使你能够参与关于并发运行时的社区讨论。|
-|[并行编程](/dotnet/standard/parallel-programming/index)|介绍了有关在.NET Framework 中可用的并行编程模型。|
+|[并行编程](/dotnet/standard/parallel-programming/index)|讲授 .NET Framework 中可用的并行编程模型。|
 
 ## <a name="see-also"></a>请参阅
 

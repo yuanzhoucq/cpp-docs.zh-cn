@@ -1,10 +1,10 @@
 ---
 title: _strtime、_wstrtime
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wstrtime
 - _strtime
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wstrtime
 - _strtime
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _tstrtime function
 - time, copying
 ms.assetid: 9e538161-cf49-44ec-bca5-c0ab0b9e4ca3
-ms.openlocfilehash: 9d874321418854a703886eb80ee23ac1cba57fa4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ea4a2b304dc30ec167f8a9094bcf278ff0d31f77
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223080"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946564"
 ---
-# <a name="strtime-wstrtime"></a>_strtime、_wstrtime
+# <a name="_strtime-_wstrtime"></a>_strtime、_wstrtime
 
 将时间复制到缓冲区。 这些函数的更安全版本已经发布；请参阅 [_strtime_s、_wstrtime_s](strtime-s-wstrtime-s.md)。
 
@@ -70,13 +73,13 @@ wchar_t *_wstrtime(
 
 ## <a name="return-value"></a>返回值
 
-返回指向结果字符串的指针*timestr*。
+返回一个指向生成的字符串*timestr*的指针。
 
 ## <a name="remarks"></a>备注
 
-**_Strtime**函数将当前的本地时间复制到由指向的缓冲区*timestr*。 时间格式为**hh: mm:** 其中**hh**是两位数字，表示 24 小时制的小时**mm**是两位数表示小时，并且分钟**ss**是两位数表示秒。 例如，字符串**18:23:44**表示 23 分 44 秒下午 6 点 缓冲区长度必须至少为 9 个字节。
+**_Strtime**函数将当前的本地时间复制到*timestr*指向的缓冲区中。 此时间的格式为**hh： mm： ss** ，其中， **hh**是表示小时的两位数字，以24小时表示法表示， **mm**是表示分钟后的分钟数的两位数， **ss**是表示秒的两位数。 例如，字符串**18:23:44**表示23分钟到 6 p.m 之前的44秒。 缓冲区长度必须至少为 9 个字节。
 
-**_wstrtime**是宽字符版本 **_strtime**; 的自变量和返回值 **_wstrtime**都是宽字符字符串。 否则这些函数具有相同行为。 如果*timestr*是**NULL**指针或者如果*timestr*格式不正确，无效参数处理程序将调用，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许异常继续，这些函数将返回**NULL**并设置**errno**到**EINVAL**如果*timestr*已**NULL** ，或者设置**errno**到**ERANGE**如果*timestr*的格式不正确。
+**_wstrtime**是 **_strtime**的宽字符版本; **_wstrtime**的参数和返回值是宽字符字符串。 否则这些函数具有相同行为。 如果*timestr*为**NULL**指针或*timestr*的格式不正确，则会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行此操作，则这些函数将返回**null** ，并**将 Errno**设置为**EINVAL**如果*timestr*为**null** ，则将设置为，如果*ERANGE*的格式不正确，则将**errno**设置为**timestr** 。
 
 在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 

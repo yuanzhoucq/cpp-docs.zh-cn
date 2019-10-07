@@ -1,10 +1,10 @@
 ---
 title: vscanf、vwscanf
 ms.date: 11/04/2016
-apiname:
+api_name:
 - vscanf
 - vwscanf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,18 +15,21 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - vscanf
 - vwscanf
 - _vtscanf
 ms.assetid: d1df595b-11bc-4682-9441-a92616301e3b
-ms.openlocfilehash: 936dcc34fb0d2ed73919ca59c7419f2090c54e28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 86e6588f6309989317c4cee7ec398cfa809afe9b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383498"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945436"
 ---
 # <a name="vscanf-vwscanf"></a>vscanf、vwscanf
 
@@ -57,18 +60,18 @@ int vwscanf(
 
 返回已成功转换和分配的字段数量；返回值不包括已读取但未分配的字段。 返回值为 0 表示没有分配任何字段。
 
-如果*格式*是**NULL**调用指针，无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，这些函数将返回**EOF**并设置**errno**到**EINVAL**。
+如果*format*为**空**指针，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回**EOF** ，并将**Errno**设置为**EINVAL**。
 
 有关这些及其他错误代码的信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**Vscanf**函数从标准输入流中读取数据**stdin**并将数据写入到由给定的位置*arglist*参数列表。 列表中的每个参数必须是指向类型中的类型说明符相对应的变量的指针*格式*。 如果在重叠的字符串之间发生复制，则此行为不确定。
+**Vscanf**函数从标准输入流**stdin**中读取数据，并将数据写入*arglist*参数列表给定的位置。 列表中的每个自变量都必须是指向类型的变量的指针，该类型与*格式*中的类型说明符对应。 如果在重叠的字符串之间发生复制，则此行为不确定。
 
 > [!IMPORTANT]
-> 当你使用**vscanf**若要读取一个字符串，始终指定的宽度 **%s**格式 (例如， **"%32 秒"** 而不是 **"%s"**);否则，输入格式不正确可能导致缓冲区溢出。 可以使用 [vscanf_s、vwscanf_s](vscanf-s-vwscanf-s.md) 或 [fgets](fgets-fgetws.md) 作为替代方法。
+> 使用**vscanf**读取字符串时，请始终指定 **% s**格式的宽度（例如， **"% 32s"** 而不是 **"% s"** ）;否则，格式错误的输入会导致缓冲区溢出。 可以使用 [vscanf_s、vwscanf_s](vscanf-s-vwscanf-s.md) 或 [fgets](fgets-fgetws.md) 作为替代方法。
 
-**vwscanf**是宽字符版本**vscanf**;*格式*参数**vwscanf**是宽字符字符串。 **vwscanf**并**vscanf**如果在 ANSI 模式下打开流，则行为相同。 **vscanf**不支持 UNICODE 流输入。
+**vwscanf**是**vscanf**的宽字符版本;**vwscanf**的*格式*参数是宽字符字符串。 如果在 ANSI 模式下打开流，则**vwscanf**和**vscanf**的行为相同。 **vscanf**不支持 UNICODE 流的输入。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -85,7 +88,7 @@ int vwscanf(
 |**vscanf**|\<stdio.h>|
 |**vwscanf**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台 (UWP) 应用中不支持控制台。 控制台中，与关联的标准流句柄**stdin**， **stdout**，并**stderr**，C 运行时函数可以在 UWP 应用中使用它们之前，必须重定向. 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台 (UWP) 应用中不支持控制台。 与控制台、 **stdin**、 **stdout**和**stderr**关联的标准流句柄必须重定向, 然后 C 运行时函数才能在 UWP 应用中使用它们。 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 

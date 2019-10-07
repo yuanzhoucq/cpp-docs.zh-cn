@@ -1,9 +1,9 @@
 ---
 title: qsort_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - qsort_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - qsort_s
 helpviewer_keywords:
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - qsort_s function
 - sorting arrays
 ms.assetid: 6ee817b0-4408-4355-a5d4-6605e419ab91
-ms.openlocfilehash: f3b8bbfeb8079322a174233f3d8048a6d1b51804
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa911dbf2990bb976341a19cdb1eb88707c90e79
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358107"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949760"
 ---
-# <a name="qsorts"></a>qsort_s
+# <a name="qsort_s"></a>qsort_s
 
 执行快速排序。 这是 [qsort](qsort.md) 版本，具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增强功能。
 
@@ -60,14 +63,14 @@ void qsort_s(
 元素大小（字节）。
 
 *compare*<br/>
-比较函数。 第一个参数是*上下文*指针。 第二个参数是一个指向*密钥*搜索。 第三个参数是指向要与进行比较的数组元素的指针*密钥*。
+比较函数。 第一个参数是*上下文*指针。 第二个参数是指向搜索*键*的指针。 第三个参数是指向要与*该键*进行比较的数组元素的指针。
 
 *context*<br/>
-指向上下文，它可以是任何对象*比较*例程需要访问。
+指向上下文的指针，它可以是*比较*例程需要访问的任何对象。
 
 ## <a name="remarks"></a>备注
 
-**Qsort_s**函数可实现一种快速排序算法进行排序的数组*数量*，每个元素*宽度*字节。 自变量*基*是指向要进行排序的数组的基的指针。 **qsort_s**使用已排序元素覆盖此数组。 自变量*比较*是指向用户提供的例程，它比较两个数组元素并返回一个值，指定其关系。 **qsort_s**调用*比较*期间排序，将指针传递给两个数组元素，在每次调用例程的一个或多个时间：
+**Qsort_s**函数实现了一种快速排序算法，用于对*数字*元素数组（每个*宽度*字节）进行排序。 参数*基*是指向要排序的数组基的指针。 **qsort_s**用已排序的元素覆盖此数组。 参数*比较*是指向用户提供的例程的指针，它比较两个数组元素，并返回指定其关系的值。 **qsort_s**在排序过程中一次或多次调用*比较*例程，将指针传递给每个调用上的两个数组元素：
 
 ```C
 compare( context, (void *) & elem1, (void *) & elem2 );
@@ -83,7 +86,7 @@ compare( context, (void *) & elem1, (void *) & elem2 );
 
 数组按比较函数中定义的升序进行排序。 若要以降序对数组进行排序，请反转比较函数中的“大于”和“小于”的意义。
 
-如果传递到此函数的参数无效，则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将返回并**errno**设置为**EINVAL**。 有关详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如果传递到此函数的参数无效，则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则函数将返回，并且**errno**设置为**EINVAL**。 有关详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ### <a name="error-conditions"></a>错误条件
 
@@ -94,7 +97,7 @@ compare( context, (void *) & elem1, (void *) & elem2 );
 |任何|任何|任何|任何|<= 0|**EINVAL**|
 |任何|任何|**NULL**|任何|任何|**EINVAL**|
 
-**qsort_s**具有相同的行为**qsort**却*上下文*参数并设置**errno**。 通过传递*上下文*参数，比较函数可以使用一个对象指针访问对象功能或无法访问其他信息通过一个元素的指针。 添加了*上下文*参数将使得**qsort_s**更加安全，因为*上下文*可用于避免重新进入 bug 引入使用静态变量以使共享信息供*比较*函数。
+**qsort_s**具有与**qsort**相同的行为，但具有*上下文*参数并设置**errno**。 通过传递*上下文*参数，比较函数可以使用对象指针访问对象功能或无法通过元素指针访问的其他信息。 添加*上下文*参数会使**qsort_s**更安全，因为*上下文*可用于避免使用静态变量引入的重入 bug，以使共享信息可用于*比较*函数。
 
 ## <a name="requirements"></a>要求
 
@@ -104,11 +107,11 @@ compare( context, (void *) & elem1, (void *) & elem2 );
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
-**库：** 所有版本的[CRT 库功能](../../c-runtime-library/crt-library-features.md)。
+**库**所有版本的[CRT 库功能](../../c-runtime-library/crt-library-features.md)。
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何使用*上下文*中的参数**qsort_s**函数。 *上下文*参数使其更方便地执行线程安全排序。 而不是使用必须进行同步以确保线程安全的静态变量，传递不同*上下文*中每个排序的参数。 在此示例中，区域设置对象用作*上下文*参数。
+下面的示例演示如何在**qsort_s**函数中使用*上下文*参数。 通过*上下文*参数，可更轻松地执行线程安全排序。 不要使用必须同步以确保线程安全的静态变量，而应在每个排序中传递一个不同的*上下文*参数。 在此示例中，区域设置对象用作*上下文*参数。
 
 ```cpp
 // crt_qsort_s.cpp

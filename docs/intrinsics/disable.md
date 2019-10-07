@@ -1,6 +1,6 @@
 ---
 title: _disable
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _disable_cpp
 - _disable
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - rsm instruction
 - disable intrinsic
 ms.assetid: 52da3df9-815c-4524-9839-6d1742cff5c6
-ms.openlocfilehash: 93db063c6b53f0bec739ba134728b83379a21f53
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94be850e1d494ff62df84922b46f28481be68314
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264161"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216817"
 ---
-# <a name="disable"></a>_disable
+# <a name="_disable"></a>_disable
 
 **Microsoft 专用**
 
@@ -24,7 +24,7 @@ ms.locfileid: "62264161"
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 void _disable(void);
 ```
 
@@ -32,9 +32,9 @@ void _disable(void);
 
 |内部函数|体系结构|
 |---------------|------------------|
-|`_disable`|x86、 ARM、 x64|
+|`_disable`|x86、ARM、x64、ARM64|
 
-**标头文件** \<intrin.h >
+**标头文件**\<intrin.h >
 
 ## <a name="remarks"></a>备注
 
@@ -42,7 +42,7 @@ void _disable(void);
 
 此函数只有在内核模式下才可用。 如果在用户模式下使用，运行时会出现特权指令异常。
 
-在 ARM 平台上，此例程只能用作内部函数。
+在 ARM 和 ARM64 平台上, 此例程仅作为内部函数提供。
 
 **结束 Microsoft 专用**
 

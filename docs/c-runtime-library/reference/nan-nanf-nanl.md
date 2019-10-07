@@ -1,11 +1,11 @@
 ---
 title: nan、nanf、nanl
 ms.date: 01/31/2019
-apiname:
+api_name:
 - nanf
 - nan
 - nanl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - nan
 - nanl
@@ -27,12 +30,12 @@ helpviewer_keywords:
 - nanf function
 - nanl function
 ms.assetid: 790e9158-80ab-43e0-8f5a-096198553fd9
-ms.openlocfilehash: df3985a28bc351bdf196c0a1561bd3e25b661c87
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9574eb0382f3bb7fc3c51d504aba9e29d0692c09
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156261"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951421"
 ---
 # <a name="nan-nanf-nanl"></a>nan、nanf、nanl
 
@@ -53,17 +56,17 @@ long double nanl( const char* input );
 
 ## <a name="return-value"></a>返回值
 
-**Nan**函数将返回 quiet NaN 值。
+**Nan**函数返回一个静默 nan 值。
 
 ## <a name="remarks"></a>备注
 
-**Nan**函数返回 quiet (非 signalling) NaN 对应的浮点值。 *输入*值将被忽略。 有关如何表示用于输出的 NaN 的信息，请参阅 [printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)。
+**Nan**函数返回对应于 quiet （非信式） nan 的浮点值。 *输入*值将被忽略。 有关如何表示用于输出的 NaN 的信息，请参阅 [printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)。
 
 ## <a name="requirements"></a>要求
 
 |函数|C 标头|C++ 标头|
 |--------------|--------------|------------------|
-|**nan**， **nanf**， **nanl**|\<math.h>|\<cmath> 或 \<math.h>|
+|**nan**、 **nanf**、 **nanl**|\<math.h>|\<cmath> 或 \<math.h>|
 
 ## <a name="see-also"></a>请参阅
 

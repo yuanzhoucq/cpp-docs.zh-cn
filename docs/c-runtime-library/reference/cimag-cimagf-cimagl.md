@@ -1,11 +1,11 @@
 ---
 title: cimag、cimagf、cimagl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - cimag
 - cimagf
 - cimagl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cimagf
 - cimagl
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - cimagf function
 - cimagl function
 ms.assetid: 0d8836f5-d61d-44cd-8731-6f75cb776def
-ms.openlocfilehash: 6f5067967aa62894abb5316f60074b5125b1cba1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38eef416afb078614ef26ab5d7c8810f46dd9a85
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347595"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939167"
 ---
 # <a name="cimag-cimagf-cimagl"></a>cimag、cimagf、cimagl
 
@@ -61,17 +64,17 @@ long double cimag( _Lcomplex z );  // C++
 
 ## <a name="return-value"></a>返回值
 
-虚部*z*。
+*Z*的虚部。
 
 ## <a name="remarks"></a>备注
 
-因为C++允许重载，可以调用的重载**cimag**采用 **_Fcomplex**或 **_Lcomplex**值，并返回**float**或**长** **double**值。 在 C 程序中， **cimag**始终采用 **_Dcomplex**值并返回**double**值。
+由于C++允许重载，因此可以调用采用 **_Fcomplex**或 **_Lcomplex**值的**cimag**重载，并返回**float**或**long** **double**值。 在 C 程序中， **cimag**始终采用 **_Dcomplex**值并返回一个**双精度**值。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|C 标头|C++ 标头|
 |-------------|--------------|------------------|
-|**cimag**， **cimagf**， **cimagl**|\<complex.h>|\<ccomplex>|
+|**cimag**、 **cimagf**、 **cimagl**|\<complex.h>|\<ccomplex>|
 
 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

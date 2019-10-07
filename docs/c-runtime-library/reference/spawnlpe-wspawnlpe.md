@@ -1,10 +1,10 @@
 ---
 title: _spawnlpe、_wspawnlpe
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _spawnlpe
 - _wspawnlpe
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - spawnlpe
 - _wspawnlpe
@@ -31,14 +34,14 @@ helpviewer_keywords:
 - processes, executing new
 - process creation
 ms.assetid: e171ebfa-70e7-4c44-8331-2a291fc17bd6
-ms.openlocfilehash: fa390c039a3d663cb79cb311667e568a6a053131
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe82d52418683d414ffbdd0f4fb0efd9bfd709cb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62355154"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947653"
 ---
-# <a name="spawnlpe-wspawnlpe"></a>_spawnlpe、_wspawnlpe
+# <a name="_spawnlpe-_wspawnlpe"></a>_spawnlpe、_wspawnlpe
 
 创建并执行更新过程。
 
@@ -76,20 +79,20 @@ intptr_t _wspawnlpe(
 *cmdname*<br/>
 要执行的文件的路径。
 
-*arg0*， *arg1*，...*argn*<br/>
-指向参数的指针的列表。 *Arg0*参数通常是一个指向*cmdname*。 自变量*arg1*通过*argn*是指向构成新参数列表的字符串。 遵循*argn*，必须有**NULL**指针，用以标记参数列表的末尾。
+*arg0*， *arg1*，.。。*argn*<br/>
+指向参数的指针的列表。 *Arg0*参数通常是指向*cmdname*的指针。 参数*arg1*到*argn*是指向构成新参数列表的字符串的指针。 在*argn*之后，必须有一个**NULL**指针，用于标记参数列表的末尾。
 
 *envp*<br/>
 指向环境设置的指针的数组。
 
 ## <a name="return-value"></a>返回值
 
-从同步的返回值 **_spawnlpe**或 **_wspawnlpe** (**_P_WAIT**指定为*模式*) 是新的退出状态过程。 异步的返回值 **_spawnlpe**或 **_wspawnlpe** (**_P_NOWAIT**或者 **_P_NOWAITO**指定为*模式*) 是进程句柄。 如果进程正常终止，则退出状态为 0。 如果生成的进程专门使用非零参数调用时将退出状态设置为非零值**退出**例程。 如果更新过程未显式设置正退出状态，则正退出状态指示因中止或中断而造成的异常退出。 返回值-1 指示的错误 （未启动新进程）。 在这种情况下， **errno**设置为以下值之一。
+同步 **_spawnlpe**或 **_wspawnlpe** （为*mode*指定的 **_P_WAIT** ）的返回值是新进程的退出状态。 异步 **_spawnlpe**或 **_wspawnlpe** （为*Mode*指定的 **_P_NOWAIT**或 **_P_NOWAITO** ）的返回值是进程句柄。 如果进程正常终止，则退出状态为 0。 如果生成进程专门使用非零参数调用**退出**例程，则可以将退出状态设置为一个非零值。 如果更新过程未显式设置正退出状态，则正退出状态指示因中止或中断而造成的异常退出。 返回值-1 表示错误（不启动新进程）。 在这种情况下， **errno**设置为以下值之一。
 
 |||
 |-|-|
 | **E2BIG** | 参数列表超过 1024 个字节。 |
-| **EINVAL** | *模式*参数无效。 |
+| **EINVAL** | *mode*参数无效。 |
 | **ENOENT** | 未找到文件或路径。 |
 | **ENOEXEC** | 指定的文件不是可执行文件或者有无效的可执行文件格式。 |
 | **ENOMEM** | 没有足够的内存可用于执行新进程。 |
@@ -98,9 +101,9 @@ intptr_t _wspawnlpe(
 
 ## <a name="remarks"></a>备注
 
-其中每个函数都创建并执行一个新进程，将每个命令行自变量作为单独的参数进行传递，并将一个数组指针传递给环境设置。 这些函数将使用**路径**环境变量查找要执行的文件。
+其中每个函数都创建并执行一个新进程，将每个命令行自变量作为单独的参数进行传递，并将一个数组指针传递给环境设置。 这些函数使用**PATH**环境变量查找要执行的文件。
 
-这些函数验证其参数。 如果任一*cmdname*或*arg0*是一个空字符串或 null 指针，无效参数处理程序调用，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许继续执行，这些函数将设置**errno**到**EINVAL**，并返回-1。 不生成任何新进程。
+这些函数验证其参数。 如果*cmdname*或*arg0*为空字符串或 null 指针，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数会将**errno**设置为**EINVAL**，并返回-1。 不生成任何新进程。
 
 ## <a name="requirements"></a>要求
 

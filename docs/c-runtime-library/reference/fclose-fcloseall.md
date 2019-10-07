@@ -1,10 +1,10 @@
 ---
 title: fclose、_fcloseall
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fclose
 - _fcloseall
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fclose
 - _fcloseall
@@ -25,16 +28,16 @@ helpviewer_keywords:
 - streams, closing
 - _fcloseall function
 ms.assetid: c3c6ea72-92c6-450a-a33e-3e568d2784a4
-ms.openlocfilehash: 4713ffb7ecdf8da73e5f949bbef7be124dfaf28a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 215925fb16f5d51e481ae92cbb45b0270bd5ebd4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334874"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941504"
 ---
-# <a name="fclose-fcloseall"></a>fclose、_fcloseall
+# <a name="fclose-_fcloseall"></a>fclose、_fcloseall
 
-关闭流 (**fclose**) 或关闭所有打开的流 (**_fcloseall**)。
+关闭流（**fclose**）或关闭所有打开的流（ **_fcloseall**）。
 
 ## <a name="syntax"></a>语法
 
@@ -52,19 +55,19 @@ int _fcloseall( void );
 
 ## <a name="return-value"></a>返回值
 
-**fclose**如果流已成功关闭，则返回 0。 **_fcloseall**返回已关闭流的总数。 这两个函数返回**EOF**表示出现错误。
+如果流已成功关闭， **fclose**将返回0。 **_fcloseall**返回已关闭的流总数。 这两个函数都返回**EOF**来指示错误。
 
 ## <a name="remarks"></a>备注
 
-**Fclose**函数关闭*流*。 如果*流*是**NULL**，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**fclose**设置**errno**到**EINVAL** ，并返回**EOF**。 建议*流*指针始终在调用此函数之前检查。
+**Fclose**函数关闭*流*。 如果*stream*为**NULL**，则会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则**fclose**会将**Errno**设置为**EINVAL**并返回**EOF**。 建议在调用此函数之前始终检查*流*指针。
 
 有关这些代码以及其他错误代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-**_Fcloseall**函数将关闭所有打开的流，除了**stdin**， **stdout**， **stderr** (以及在 MS-DOS， **_stdaux**并 **_stdprn**)。 它还将关闭并删除创建的任何临时文件**tmpfile**。 在这两个函数中，与流相关联的所有缓冲区在关闭前都会进行刷新。 系统分配的缓冲区在流关闭时释放。 使用用户分配的缓冲区**setbuf**并**setvbuf**不会自动释放。
+**_Fcloseall**函数关闭所有打开的流，除了**stdin**、 **stdout**、 **stderr** （在 MS-DOS、 **_stdaux**和 **_stdprn**中）。 它还关闭并删除由**tmpfile**创建的所有临时文件。 在这两个函数中，与流相关联的所有缓冲区在关闭前都会进行刷新。 系统分配的缓冲区在流关闭时释放。 用户使用**setbuf**和**setvbuf**分配的缓冲区不会自动释放。
 
-**注意：** 当这些函数用于关闭流时，基础文件描述符和 OS 文件句柄 （或套接字） 都将关闭，以及流。 因此，如果最初打开该文件作为文件处理文件描述符和关闭或与**fclose**，不要同时调用 **_close**到关闭的文件描述符; 不要调用 Win32 函数**CloseHandle**关闭文件句柄。
+**注意：** 当使用这些函数关闭流时，基础文件描述符和操作系统文件句柄（或套接字）以及流都将关闭。 因此，如果最初以文件句柄或文件描述符的形式打开该文件，并使用**fclose**关闭该文件，则也不要调用 **_close**来关闭文件描述符;请勿调用 Win32 函数**CloseHandle**来关闭文件句柄。
 
-**fclose**并 **_fcloseall**包含代码，从而防止出现来自其他线程的干扰。 有关非锁定版本的**fclose**，请参阅 **_fclose_nolock**。
+**fclose**和 **_fcloseall**包括用于防范来自其他线程的干扰的代码。 有关**fclose**的非锁定版本，请参阅 **_fclose_nolock**。
 
 ## <a name="requirements"></a>要求
 

@@ -1,11 +1,11 @@
 ---
 title: ccosh、ccoshf、ccoshl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ccosh
 - ccoshf
 - ccoshl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ccosh
 - ccoshf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - ccoshf function
 - ccoshl function
 ms.assetid: 79667449-4edf-4948-bf6b-720adf2b3f3b
-ms.openlocfilehash: c25441d4f25f9e77a0cb71d942e132f34c4c1f5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 978db0141ecd6799c3a8d19a3b4621ae1a2e8b43
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335550"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943279"
 ---
 # <a name="ccosh-ccoshf-ccoshl"></a>ccosh、ccoshf、ccoshl
 
@@ -68,17 +71,17 @@ _Lcomplex ccoshl(
 
 ## <a name="return-value"></a>返回值
 
-双曲余弦值*z*，以弧度为单位。
+*Z*的双曲余弦值（以弧度表示）。
 
 ## <a name="remarks"></a>备注
 
-因为C++允许重载，可以调用的重载**ccosh**采用并返回 **_Fcomplex**并 **_Lcomplex**的值。 在 C 程序中， **ccosh**始终采用并返回 **_Dcomplex**值。
+由于C++允许重载，因此可以调用**ccosh**的重载，该重载采用并返回 **_Fcomplex**和 **_Lcomplex**值。 在 C 程序中， **ccosh**始终采用并返回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|C 标头|C++ 标头|
 |-------------|--------------|------------------|
-|**ccosh**,               **ccoshf**, **ccoshl**|\<complex.h>|\<ccomplex>|
+|**ccosh**、 **ccoshf**、 **ccoshl**|\<complex.h>|\<ccomplex>|
 
 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

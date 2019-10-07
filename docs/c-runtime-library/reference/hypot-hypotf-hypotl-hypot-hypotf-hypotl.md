@@ -1,14 +1,14 @@
 ---
 title: hypot、hypotf、hypotl、_hypot、_hypotf、_hypotl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _hypotf
 - hypot
 - hypotf
 - _hypot
 - _hypotl
 - hypotl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - hypotf
 - hypotl
@@ -37,14 +40,14 @@ helpviewer_keywords:
 - calculating hypotenuses
 - _hypot function
 ms.assetid: 6a13887f-bd53-43fc-9d77-5b42d6e49925
-ms.openlocfilehash: ea25ea87a0ec23a0e98dbdc7bb92ce691fc2fa0f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8cee9e217b23c43a9ce5a1521b52215301b932fe
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157391"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954793"
 ---
-# <a name="hypot-hypotf-hypotl-hypot-hypotf-hypotl"></a>hypot、hypotf、hypotl、_hypot、_hypotf、_hypotl
+# <a name="hypot-hypotf-hypotl-_hypot-_hypotf-_hypotl"></a>hypot、hypotf、hypotl、_hypot、_hypotf、_hypotl
 
 计算斜边。
 
@@ -79,18 +82,18 @@ long double _hypotl(
 
 ### <a name="parameters"></a>参数
 
-*x*， *y*<br/>
+*x*、 *y*<br/>
 浮点值。
 
 ## <a name="return-value"></a>返回值
 
-如果成功， **hypot**返回斜边的; 在溢出时，长度**hypot**返回 INF （无穷大） 和**errno**变量设置为**ERANGE**. 可以使用 **_matherr**来修改错误处理。
+如果成功， **hypot**将返回斜边的长度;在溢出时， **hypot**返回 INF （无限大）， **errno**变量设置为**ERANGE**。 您可以使用 **_matherr**来修改错误处理。
 
 有关返回代码的详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**Hypot**函数计算直角三角形而言，给定的两个方面的长度的斜边长度*x*并*y* （换而言之，平方根*x*<sup>2</sup> + *y*<sup>2</sup>)。
+**Hypot**函数计算直角三角形的斜边的长度（给定两个边*x*和*y*的长度（即， *x*<sup>2</sup> + *y*<sup>2</sup>的平方根）。
 
 提供的带有前导下划线的函数版本便于与早期的标准兼容。 它们的行为与没有前导下划线的版本相同。 我们建议将不带前导下划线的版本用于新代码。
 
@@ -98,7 +101,7 @@ long double _hypotl(
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**hypot**， **hypotf**， **hypotl**， **_hypot**， **_hypotf**， **_hypotl**|\<math.h>|
+|**hypot**、 **hypotf**、 **hypotl**、 **_hypot**、 **_hypotf**、 **_hypotl**|\<math.h>|
 
 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

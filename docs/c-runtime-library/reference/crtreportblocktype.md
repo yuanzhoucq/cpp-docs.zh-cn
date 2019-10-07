@@ -1,9 +1,9 @@
 ---
 title: _CrtReportBlockType
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtReportBlockType
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CrtReportBlockType
 - CrtReportBlockType
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - _BLOCK_SUBTYPE macro
 - BLOCK_TYPE macro
 ms.assetid: 0f4b9da7-bebb-4956-9541-b2581640ec6b
-ms.openlocfilehash: 186c63ce1619d6427436ff1458ca551e464d0bce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd50de1d1ade1d83b97bc465ff7e4c73b52fba2d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347410"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942339"
 ---
-# <a name="crtreportblocktype"></a>_CrtReportBlockType
+# <a name="_crtreportblocktype"></a>_CrtReportBlockType
 
 返回与给定调试堆块指针相关联的块类型/子类型。
 
@@ -52,11 +55,11 @@ int _CrtReportBlockType(
 
 ## <a name="return-value"></a>返回值
 
-当传递有效的调试堆指针时， **_CrtReportBlockType**函数的形式返回块类型和子类型**int**。当传递了无效的指针时，该函数返回 -1。
+传递有效的调试堆指针时， **_CrtReportBlockType**函数以**int**的形式返回块类型和子类型。当传递了无效的指针时，该函数返回 -1。
 
 ## <a name="remarks"></a>备注
 
-提取类型和子类型返回 **_CrtReportBlockType**，使用宏 **_BLOCK_TYPE**并 **_BLOCK_SUBTYPE** （两者均在 Crtdbg.h 中定义） 返回的值上。
+若要提取 **_CrtReportBlockType**返回的类型和子类型，请在返回值上使用宏 **_BLOCK_TYPE**和 **_BLOCK_SUBTYPE** （都在 crtdbg.h 中定义）。
 
 有关分配块类型及其使用方式的信息，请参阅[调试堆上的块类型](/visualstudio/debugger/crt-debug-heap-details)。
 

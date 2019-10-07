@@ -2,16 +2,16 @@
 title: 与其他语言的互操作性 (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: f74db99f-7dbd-421e-99e6-c34bbebf5cea
-ms.openlocfilehash: 72e1f08464085197bd3581405f6b8d31749dbeff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bfd4509a55b969aa6a120a8d2c75cddc87d715e2
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375231"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740485"
 ---
 # <a name="interoperating-with-other-languages-ccx"></a>与其他语言的互操作性 (C++/CX)
 
-文档的此部分介绍如何使用C++/CX 创作可供其他编程语言和库的 Windows 运行时组件。 你还可以编写不能供所有语言使用的组件。 本部分介绍不同方面时要考虑在C++通过使用 JavaScript、.NET Framework 托管语言中或 Windows 运行时编写的组件互操作 /CX 应用程序C++模板库。
+文档的此部分介绍如何使用C++/cx 创作可由其他编程语言和库使用的 Windows 运行时组件。 你还可以编写不能供所有语言使用的组件。 本部分介绍当C++/cx 应用程序与使用 JavaScript、.NET Framework 托管语言或 Windows 运行时C++模板库编写的组件进行互操作时，要考虑的不同方面。
 
 ## <a name="related-topics"></a>相关主题
 
@@ -21,4 +21,4 @@ ms.locfileid: "62375231"
 
 - [WRL 集成](../cppcx/wrl-integration-c-cx.md)
 
-- [VisualC++语言参考](../cppcx/visual-c-language-reference-c-cx.md)
+- [C++/CX 语言参考](../cppcx/visual-c-language-reference-c-cx.md)

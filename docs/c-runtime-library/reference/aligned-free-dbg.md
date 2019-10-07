@@ -1,9 +1,9 @@
 ---
 title: _aligned_free_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _aligned_free_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _aligned_free_dbg
 - aligned_free_dbg
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - _aligned_free_dbg function
 - aligned_free_dbg function
 ms.assetid: eb0cb3c8-0992-4db8-bac3-65f1b8311ca6
-ms.openlocfilehash: f51b9b9573ab2e23a0a60979c55a33d2e5cff747
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b510d16b6e784202094bb05e6364f7af1b1fff97
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341892"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939923"
 ---
-# <a name="alignedfreedbg"></a>_aligned_free_dbg
+# <a name="_aligned_free_dbg"></a>_aligned_free_dbg
 
 释放使用 [_aligned_malloc](aligned-malloc.md) 或 [_aligned_offset_malloc](aligned-offset-malloc.md) 分配的内存块（仅限调试）。
 
@@ -44,13 +47,13 @@ void _aligned_free_dbg(
 ### <a name="parameters"></a>参数
 
 *memblock*<br/>
-返回到的内存块的指针[_aligned_malloc](aligned-malloc.md)或[_aligned_offset_malloc](aligned-offset-malloc.md)函数。
+指向已返回到[_aligned_malloc](aligned-malloc.md)或[_aligned_offset_malloc](aligned-offset-malloc.md)函数的内存块的指针。
 
 ## <a name="remarks"></a>备注
 
-**_Aligned_free_dbg**函数是调试版[_aligned_free](aligned-free.md)函数。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，则每次调用 **_aligned_free_dbg**缩减为调用`_aligned_free`。 这两`_aligned_free`并 **_aligned_free_dbg**释放基堆中的内存块，但 **_aligned_free_dbg**还包含一种调试功能： 能够保留已释放的块中的堆链接列表模拟内存不足的情况。
+**_Aligned_free_dbg**函数是[_aligned_free](aligned-free.md)函数的调试版本。 未定义[_debug](../../c-runtime-library/debug.md)时，对 **_aligned_free_dbg** `_aligned_free`的每次调用都会减少到对的调用。 和`_aligned_free`都**可释放基**堆中的内存块，但 **_aligned_free_dbg**可容纳调试功能：能够在堆的链接列表中保留已释放的块，以模拟内存不足的情况。
 
-**_aligned_free_dbg**执行有效性检查所有指定的文件和块位置上执行释放操作之前。 应用程序不应该提供此信息。 当释放内存块时，调试堆管理器自动检查用户部分两侧的缓冲区的完整性，如果发生覆盖，将发出错误报告。 如果 _CRTDBG_DELAY_FREE_MEM_DF 位字段[_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)设置标志，则将使用值 0xDD 填充、 分配 _FREE_BLOCK 块类型，并保留在堆链接列表的内存块释放的块。
+在执行免费操作之前， **_aligned_free_dbg**对所有指定的文件和块位置执行有效性检查。 应用程序不应该提供此信息。 当释放内存块时，调试堆管理器自动检查用户部分两侧的缓冲区的完整性，如果发生覆盖，将发出错误报告。 如果设置了[_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)标志的 _CRTDBG_DELAY_FREE_MEM_DF 位字段，则会用值0xDD 填充已释放的块，并为其分配 _FREE_BLOCK 块类型，并将其保留在堆的链接内存块列表中。
 
 如果在释放内存时发生错误，则根据操作系统中关于错误性质的信息设置 `errno`。 有关详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 

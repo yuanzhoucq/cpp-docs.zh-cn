@@ -12,19 +12,19 @@ helpviewer_keywords:
 - inactive objects
 - IPointerInactiveImpl class
 ms.assetid: e1fe9ea6-d38a-4527-9112-eb344771e0b7
-ms.openlocfilehash: d7d9f048fceb3a569b024d7fe2b87f30a828b68e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6fb5d9f2bcbdeda61f32947bf339d134c4924b72
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274823"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495656"
 ---
 # <a name="ipointerinactiveimpl-class"></a>IPointerInactiveImpl 类
 
-此类实现`IUnknown`并[IPointerInactive](/windows/desktop/api/ocidl/nn-ocidl-ipointerinactive)接口方法。
+此类实现`IUnknown`和[IPointerInactive](/windows/win32/api/ocidl/nn-ocidl-ipointerinactive)接口方法。
 
 > [!IMPORTANT]
->  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
+>  此类及其成员不能用于在 Windows 运行时中执行的应用程序。
 
 ## <a name="syntax"></a>语法
 
@@ -36,7 +36,7 @@ class IPointerInactiveImpl
 #### <a name="parameters"></a>参数
 
 *T*<br/>
-您的类，派生自`IPointerInactiveImpl`。
+派生自`IPointerInactiveImpl`的类。
 
 ## <a name="members"></a>成员
 
@@ -45,18 +45,18 @@ class IPointerInactiveImpl
 |名称|描述|
 |----------|-----------------|
 |[IPointerInactiveImpl::GetActivationPolicy](#getactivationpolicy)|检索对象的当前激活策略。 ATL 实现返回 E_NOTIMPL。|
-|[IPointerInactiveImpl::OnInactiveMouseMove](#oninactivemousemove)|通知鼠标指针移动到它上面，指示该对象的对象可触发鼠标事件。 ATL 实现返回 E_NOTIMPL。|
-|[IPointerInactiveImpl::OnInactiveSetCursor](#oninactivesetcursor)|设置鼠标指针处于非活动状态的对象。 ATL 实现返回 E_NOTIMPL。|
+|[IPointerInactiveImpl::OnInactiveMouseMove](#oninactivemousemove)|通知对象: 鼠标指针已移动到该对象, 指示对象可以引发鼠标事件。 ATL 实现返回 E_NOTIMPL。|
+|[IPointerInactiveImpl::OnInactiveSetCursor](#oninactivesetcursor)|设置非活动对象的鼠标指针。 ATL 实现返回 E_NOTIMPL。|
 
 ## <a name="remarks"></a>备注
 
-非活动状态的对象是指只需加载或运行。 与活动的对象，不同的非活动状态的对象不能接收 Windows 鼠标和键盘消息。 因此，处于非活动状态的对象使用较少的资源，并且通常效率更高。
+非活动对象是一个简单的加载或运行的对象。 与活动对象不同, 非活动对象不能接收 Windows 鼠标和键盘消息。 因此, 非活动对象使用更少的资源, 通常更有效。
 
-[IPointerInactive](/windows/desktop/api/ocidl/nn-ocidl-ipointerinactive)接口允许对象支持鼠标交互，同时保持非活动状态的最低级别。 此功能是特别有用的控件。
+[IPointerInactive](/windows/win32/api/ocidl/nn-ocidl-ipointerinactive)接口允许对象支持最小级别的鼠标交互, 同时保持不活动状态。 此功能对控件特别有用。
 
-类`IPointerInactiveImpl`实现`IPointerInactive`方法只返回 E_NOTIMPL。 但是，它实现`IUnknown`信息发送给转储调试中的设备生成。
+类`IPointerInactiveImpl`只需`IPointerInactive`返回 E_NOTIMPL 即可实现这些方法。 但是, 它通过`IUnknown`在调试版本中将信息发送到转储设备来实现。
 
-**相关文章** [ATL 教程](../../atl/active-template-library-atl-tutorial.md)，[创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)
+**相关文章**[Atl 教程](../../atl/active-template-library-atl-tutorial.md),[创建 atl 项目](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -66,9 +66,9 @@ class IPointerInactiveImpl
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlctl.h
+**标头:** atlctl
 
-##  <a name="getactivationpolicy"></a>  IPointerInactiveImpl::GetActivationPolicy
+##  <a name="getactivationpolicy"></a>IPointerInactiveImpl::GetActivationPolicy
 
 检索对象的当前激活策略。
 
@@ -82,11 +82,11 @@ HRESULT GetActivationPolicy(DWORD* pdwPolicy);
 
 ### <a name="remarks"></a>备注
 
-请参阅[IPointerInactive::GetActivationPolicy](/windows/desktop/api/ocidl/nf-ocidl-ipointerinactive-getactivationpolicy) Windows SDK 中。
+请参阅 Windows SDK 中的[IPointerInactive:: GetActivationPolicy](/windows/win32/api/ocidl/nf-ocidl-ipointerinactive-getactivationpolicy) 。
 
 ##  <a name="oninactivemousemove"></a>  IPointerInactiveImpl::OnInactiveMouseMove
 
-通知鼠标指针移动到它上面，指示该对象的对象可触发鼠标事件。
+通知对象: 鼠标指针已移动到该对象, 指示对象可以引发鼠标事件。
 
 ```
 HRESULT OnInactiveMouseMove(
@@ -102,11 +102,11 @@ HRESULT OnInactiveMouseMove(
 
 ### <a name="remarks"></a>备注
 
-请参阅[IPointerInactive::OnInactiveMouseMove](/windows/desktop/api/ocidl/nf-ocidl-ipointerinactive-oninactivemousemove) Windows SDK 中。
+请参阅 Windows SDK 中的[IPointerInactive:: OnInactiveMouseMove](/windows/win32/api/ocidl/nf-ocidl-ipointerinactive-oninactivemousemove) 。
 
-##  <a name="oninactivesetcursor"></a>  IPointerInactiveImpl::OnInactiveSetCursor
+##  <a name="oninactivesetcursor"></a>IPointerInactiveImpl::OnInactiveSetCursor
 
-设置鼠标指针处于非活动状态的对象。
+设置非活动对象的鼠标指针。
 
 ```
 HRESULT OnInactiveSetCursor(
@@ -123,7 +123,7 @@ HRESULT OnInactiveSetCursor(
 
 ### <a name="remarks"></a>备注
 
-请参阅[IPointerInactive::OnInactiveSetCursor](/windows/desktop/api/ocidl/nf-ocidl-ipointerinactive-oninactivesetcursor) Windows SDK 中。
+请参阅 Windows SDK 中的[IPointerInactive:: OnInactiveSetCursor](/windows/win32/api/ocidl/nf-ocidl-ipointerinactive-oninactivesetcursor) 。
 
 ## <a name="see-also"></a>请参阅
 

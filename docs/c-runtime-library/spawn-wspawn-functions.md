@@ -1,7 +1,7 @@
 ---
 title: _spawn, _wspawn 函数
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr80.dll
 - msvcr110_clr0400.dll
 - msvcr110.dll
@@ -9,7 +9,10 @@ apilocation:
 - msvcr120.dll
 - msvcr100.dll
 - msvcr90.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _spawn
 - _tspawnlp
@@ -45,14 +48,14 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-ms.openlocfilehash: 044aaee376be02d0d3734ea8982a8c4db47f7d39
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: c4a8b33c2233dc0c680ddbe5063ab6fe25a729b0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748042"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957266"
 ---
-# <a name="spawn-wspawn-functions"></a>_spawn, _wspawn 函数
+# <a name="_spawn-_wspawn-functions"></a>_spawn, _wspawn 函数
 
 每个 `_spawn` 函数将创建并执行一个新进程：
 
@@ -117,17 +120,17 @@ ms.locfileid: "57748042"
 >  嵌入字符串中的空格可能导致意外行为；例如，将字符串 `_spawn` 传递给 `"hi there"` 会导致新进程获得两个参数：`"hi"` 和 `"there"`。 如果想要让新进程打开名为“hi there”的文件，则该进程将失败。 你可以通过引用字符串 `"\"hi there\""` 来避免此问题。
 
 > [!IMPORTANT]
->  如果没有显式地检查其内容，请不要将用户输入传递给 `_spawn`。 `_spawn` 将导致调用 [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa)，因此请牢记，未限定的路径名称可能会导致潜在的安全漏洞。
+>  如果没有显式地检查其内容，请不要将用户输入传递给 `_spawn`。 `_spawn` 将导致调用 [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw)，因此请牢记，未限定的路径名称可能会导致潜在的安全漏洞。
 
 您可以将参数指针作为不同的参数传递（在 `_spawnl`、`_spawnle`、`_spawnlp` 和 `_spawnlpe` 中）或作为指针数组传递（在 `_spawnv`、`_spawnve`、`_spawnvp` 和 `_spawnvpe` 中）。 您必须至少将一个参数 `arg0` 或 `argv`[0] 传递到生成进程。 按照约定，此参数是程序的名称，因为您将在命令行上键入该名称。 不同的值不会生成错误。
 
-一般将在提前知道参数数量的情况下使用 `_spawnl`、`_spawnle`、`_spawnlp` 和 `_spawnlpe` 调用。 `arg0` 参数通常是指向 `cmdname`的指针。 参数 `arg1` 到 `argn` 是指向构成新参数列表的字符字符串的指针。 在 `argn` 之后，必须是一个 NULL 指针，用以标记参数列表的末尾。
+一般将在提前知道参数数量的情况下使用 `_spawnl`、`_spawnle`、`_spawnlp` 和 `_spawnlpe` 调用。 `arg0` 参数通常是指向 `cmdname`的指针。 参数 `arg1` 到 `argn` 是指向构成新参数列表的字符字符串的指针。 在 `argn` 之后，必须是一个 NULL 指针，用以标记参数列表的末尾  。
 
-`_spawnv`、`_spawnve`、`_spawnvp` 和 `_spawnvpe` 调用在新进程具有数量可变的参数时很有用。 指向参数的指针将作为数组 `argv` *传递。* 参数 `argv`[0] 通常是一个指向实际模式中的路径或保护模式中的程序的指针，从 `argv`[1] 到 `argv`[`n`] 都是指向构成新参数列表的字符串的指针。 参数 `argv`[`n` +1] 必须是一个 NULL 指针，用以标记参数列表的末尾。
+`_spawnv`、`_spawnve`、`_spawnvp` 和 `_spawnvpe` 调用在新进程具有数量可变的参数时很有用。 指向参数的指针将作为数组 `argv` *传递。* 参数 `argv`[0] 通常是一个指向实际模式中的路径或保护模式中的程序的指针，从 `argv`[1] 到 `argv`[`n`] 都是指向构成新参数列表的字符串的指针。 参数 `argv`[`n` +1] 必须是一个 NULL 指针，用以标记参数列表的末尾  。
 
 ## <a name="environment-of-the-spawned-process"></a>生成进程的环境
 
-调用 `_spawn` 时打开的文件在新进程中仍处于打开状态。 在 `_spawnl`、`_spawnlp`、`_spawnv` 和 `_spawnvp` 调用中，新进程将继承调用进程的环境。 您可以使用 `_spawnle`、`_spawnlpe`、`_spawnve` 和 `_spawnvpe` 调用更改新进程的环境，方式为通过 `envp` 参数传递环境设置的列表。 参数 `envp` 是字符指针的数组，其中每个元素（除了最后一个元素）均指向一个定义环境变量的不以 null 结尾的字符串。 此类字符串通常具有 `NAME`=`value` 格式，其中 `NAME` 是环境变量的名称，`value` 是为该变量设置的字符串值。 （请注意，`value` 并未括在双引号中。）`envp` 数组的最后一个元素应该是 NULL。 当 `envp` 本身为 NULL 时，生成进程将继承父进程的环境设置。
+调用 `_spawn` 时打开的文件在新进程中仍处于打开状态。 在 `_spawnl`、`_spawnlp`、`_spawnv` 和 `_spawnvp` 调用中，新进程将继承调用进程的环境。 您可以使用 `_spawnle`、`_spawnlpe`、`_spawnve` 和 `_spawnvpe` 调用更改新进程的环境，方式为通过 `envp` 参数传递环境设置的列表。 参数 `envp` 是字符指针的数组，其中每个元素（除了最后一个元素）均指向一个定义环境变量的不以 null 结尾的字符串。 此类字符串通常具有 `NAME`=`value` 格式，其中 `NAME` 是环境变量的名称，`value` 是为该变量设置的字符串值。 （请注意，`value` 并未括在双引号中。）`envp` 数组的最后一个元素应该是 NULL  。 当 `envp` 本身为 NULL 时，生成进程将继承父进程的环境设置  。
 
 `_spawn` 函数可将所有有关打开的文件（包括转换模式）的信息传递到新进程。 此信息将在实模式下通过环境中的 `C_FILE_INFO` 条目传递。 启动代码通常会处理此条目，然后将其从环境中删除。 但是，如果 `_spawn` 函数生成一个非 C 进程，则此条目仍将保留在环境中。 打印环境将在此条目的定义字符串中显示图形字符，因为环境信息在实模式下是以二进制格式传递的。 它不应对正常操作具有任何其他影响。 在保护模式下，环境信息是以文本形式传递的，因此不包含图形字符。
 
@@ -139,7 +142,7 @@ ms.locfileid: "57748042"
 
 如果从 DLL 或 GUI 应用程序调用 `_spawn` 并希望将输出重定向至管道，则您具有两个选择：
 
-- 使用 Win32 API 创建管道，然后调用 [AllocConsole](/windows/console/allocconsole)，在启动结构中设置句柄值，然后调用 [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa)。
+- 使用 Win32 API 创建管道，然后调用 [AllocConsole](/windows/console/allocconsole)，在启动结构中设置句柄值，然后调用 [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw)。
 
 - 调用 [_popen、_wpopen](../c-runtime-library/reference/popen-wpopen.md) 以创建管道，并使用 **cmd.exe /c**（或 **command.exe /c**）调用应用。
 

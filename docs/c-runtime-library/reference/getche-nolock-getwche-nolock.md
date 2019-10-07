@@ -1,10 +1,10 @@
 ---
 title: _getche_nolock、_getwche_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getche_nolock
 - _getwche_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _getche_nolock
 - _gettche_nolock
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - _getwche_nolock function
 - gettche_nolock function
 ms.assetid: 9e853ad4-4d8a-4442-9ae5-da4b434f0b8c
-ms.openlocfilehash: b5745d85ec1a7338a4625d0c3eaf54da498e2af4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23f16199314ef1c9834e559631b7299dd1c55c2e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287249"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955300"
 ---
-# <a name="getchenolock-getwchenolock"></a>_getche_nolock、_getwche_nolock
+# <a name="_getche_nolock-_getwche_nolock"></a>_getche_nolock、_getwche_nolock
 
 从具有回显且不锁定线程的控制台获取字符。
 
@@ -61,7 +64,7 @@ wint_t _getwche_nolock( void );
 
 ## <a name="remarks"></a>备注
 
-**_getche_nolock**并 **_getwche_nolock**等于 **_getche**并 **_getwche** ，只不过它们不受干扰从其他线程。 它们可能更快，因为它们不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用这些函数，如单线程应用程序或调用范围已经处理线程隔离。
+**_getche_nolock**和 **_getwche_nolock**与 **_getche**和 **_getwche**相同，不同之处在于它们不会受到其他线程的干扰。 它们可能更快，因为它们不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用这些函数，如单线程应用程序或调用范围已经处理线程隔离。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

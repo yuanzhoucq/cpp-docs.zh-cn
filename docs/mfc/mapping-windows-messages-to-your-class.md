@@ -1,6 +1,6 @@
 ---
 title: 将 Windows 消息映射到您的类
-ms.date: 11/04/2016
+ms.date: 09/06/2019
 helpviewer_keywords:
 - MFC dialog boxes [MFC], Windows messages
 - message maps [MFC], in dialog class
@@ -9,29 +9,30 @@ helpviewer_keywords:
 - mappings [MFC], messages to dialog class [MFC]
 - message maps [MFC], mapping Windows messages to classes
 - messages to dialog class [MFC], mapping
+- Class Wizard [MFC]
 ms.assetid: a4c6fd1f-1d33-47c9-baa0-001755746d6d
-ms.openlocfilehash: 7e15f52e41d4ac91a839629342258128db86e2d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0f1207faca56acd709db86478722eba85eeb284a
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363838"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685606"
 ---
 # <a name="mapping-windows-messages-to-your-class"></a>将 Windows 消息映射到您的类
 
-如果您需要处理 Windows 消息在对话框中，重写相应的处理程序函数。 若要执行此操作，请使用属性窗口[映射消息](../mfc/reference/mapping-messages-to-functions.md)到对话框类。 这将为每个消息的消息映射项，并向类添加消息处理程序成员函数。 使用视觉对象C++若要在消息处理程序中编写代码的源代码编辑器。
+如果需要对话框来处理 Windows 消息，请重写适当的处理程序函数。 为此，请在**解决方案资源管理器**中选择 "**类视图**" 选项卡，右键单击表示对话框的类，然后选择 "[类向导](reference/mfc-class-wizard.md)"。 使用向导将[消息映射](../mfc/reference/mapping-messages-to-functions.md)到对话框类。 这会为每条消息编写消息映射项，并将消息处理程序成员函数添加到类中。 使用代码编辑器在消息处理程序中编写代码。
 
-此外可以重写的成员函数[CDialog](../mfc/reference/cdialog-class.md)及其基类，尤其是[CWnd](../mfc/reference/cwnd-class.md)。
+还可以重写[CDialog](../mfc/reference/cdialog-class.md)及其基类的成员函数（特别是[CWnd](../mfc/reference/cwnd-class.md)）。
 
-## <a name="what-do-you-want-to-know-more-about"></a>你想要了解更多信息
+## <a name="what-do-you-want-to-know-more-about"></a>要了解有关的详细信息
 
 - [消息处理和映射](../mfc/message-handling-and-mapping.md)
 
-- [经常重写成员函数](../mfc/commonly-overridden-member-functions.md)
+- [经常重写的成员函数](../mfc/commonly-overridden-member-functions.md)
 
 - [经常添加的成员函数](../mfc/commonly-added-member-functions.md)
 
 ## <a name="see-also"></a>请参阅
 
 [对话框](../mfc/dialog-boxes.md)<br/>
-[对话框的生命周期](../mfc/life-cycle-of-a-dialog-box.md)
+[使用 MFC 中的对话框](../mfc/life-cycle-of-a-dialog-box.md)

@@ -1,13 +1,13 @@
 ﻿---
 title: 容器（现代 C++）
-ms.date: 1/18/2018
+ms.date: 01/18/2018
 ms.topic: conceptual
-ms.openlocfilehash: 2da57bfca8b04f50a223dddfb886835c69f746a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37b540132fc9ddc03d5eaafd33c545b5db5e7935
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392331"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926249"
 ---
 # <a name="containers-modern-c"></a>容器（现代 C++）
 
@@ -26,7 +26,7 @@ map<string, string> apple_color;
 apple_color["Granny Smith"] = "Green";
 ```
 
-当需要性能优化时，请考虑使用：
+需要性能优化时，请考虑使用：
 
 - [数组](../standard-library/array-class-stl.md)，前提是当嵌入很重要时，例如，作为类成员。
 

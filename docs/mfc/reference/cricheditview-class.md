@@ -100,16 +100,16 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-ms.openlocfilehash: 60eeaa2a37dd824ae418b25e95743c21c65ae7ce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b32578cc3c9ad4f7a89b8ee76449259c0fa0b43b
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372070"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741514"
 ---
 # <a name="cricheditview-class"></a>CRichEditView 类
 
-与[CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)并[CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)，提供 MFC 文档视图体系结构的上下文中 rich edit 控件的功能。
+对于[CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)和[CRICHEDITCNTRITEM](../../mfc/reference/cricheditcntritem-class.md)，提供 MFC 文档视图体系结构上下文中 rich edit 控件的功能。
 
 ## <a name="syntax"></a>语法
 
@@ -129,72 +129,72 @@ class CRichEditView : public CCtrlView
 
 |名称|描述|
 |----------|-----------------|
-|[CRichEditView::AdjustDialogPosition](#adjustdialogposition)|移动一个对话框，使它不会隐藏当前所选内容。|
-|[CRichEditView::CanPaste](#canpaste)|指示剪贴板是否包含可以粘贴到 rich edit 视图的数据。|
-|[CRichEditView::DoPaste](#dopaste)|将 OLE 项粘贴到此 rich edit 视图。|
-|[CRichEditView::FindText](#findtext)|查找指定的文本，调用将等待光标。|
+|[CRichEditView::AdjustDialogPosition](#adjustdialogposition)|移动对话框，使其不会遮盖当前选定内容。|
+|[CRichEditView::CanPaste](#canpaste)|指示剪贴板是否包含可粘贴到富编辑视图中的数据。|
+|[CRichEditView::DoPaste](#dopaste)|在此 rich edit 视图中粘贴 OLE 项。|
+|[CRichEditView::FindText](#findtext)|查找指定的文本，并调用等待光标。|
 |[CRichEditView::FindTextSimple](#findtextsimple)|查找指定的文本。|
-|[CRichEditView::GetCharFormatSelection](#getcharformatselection)|检索格式设置特性的当前所选内容的字符。|
-|[CRichEditView::GetDocument](#getdocument)|检索指向相关[CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)。|
-|[CRichEditView::GetInPlaceActiveItem](#getinplaceactiveitem)|检索当前处于就地活动状态在 rich edit 视图中的 OLE 项。|
-|[CRichEditView::GetMargins](#getmargins)|检索此 rich edit 视图的边距。|
-|[CRichEditView::GetPageRect](#getpagerect)|检索此 rich edit 视图页矩形。|
-|[CRichEditView::GetPaperSize](#getpapersize)|检索此 rich edit 视图的纸张大小。|
-|[CRichEditView::GetParaFormatSelection](#getparaformatselection)|检索段落格式设置为当前所选内容的属性。|
-|[CRichEditView::GetPrintRect](#getprintrect)|检索此 rich edit 视图的打印矩形。|
-|[CRichEditView::GetPrintWidth](#getprintwidth)|检索此 rich edit 视图的打印宽度。|
-|[CRichEditView::GetRichEditCtrl](#getricheditctrl)|检索格式文本编辑控件。|
-|[CRichEditView::GetSelectedItem](#getselecteditem)|从 rich edit 视图中检索所选的项。|
-|[CRichEditView::GetTextLength](#gettextlength)|检索 rich edit 视图中的文本的长度。|
-|[CRichEditView::GetTextLengthEx](#gettextlengthex)|检索字符或 rich edit 视图中的字节的数。 确定长度的方法的扩展的标志列表。|
-|[CRichEditView::InsertFileAsObject](#insertfileasobject)|作为 OLE 项插入文件。|
-|[CRichEditView::InsertItem](#insertitem)|将作为 OLE 项插入新项。|
-|[CRichEditView::IsRichEditFormat](#isricheditformat)|指示剪贴板是否包含带格式文本或文本格式中的数据。|
-|[CRichEditView::OnCharEffect](#onchareffect)|切换当前所选内容的格式设置的字符。|
-|[CRichEditView::OnParaAlign](#onparaalign)|更改段落对齐方式。|
-|[CRichEditView::OnUpdateCharEffect](#onupdatechareffect)|更新命令 UI 对于字符公共成员函数。|
-|[CRichEditView::OnUpdateParaAlign](#onupdateparaalign)|更新命令 UI 的段落公共成员函数。|
-|[CRichEditView::PrintInsideRect](#printinsiderect)|设置给定矩形内的指定的文本的格式。|
-|[CRichEditView::PrintPage](#printpage)|设置给定页中指定的文本的格式。|
-|[CRichEditView::SetCharFormat](#setcharformat)|设置字符格式设置为当前所选内容的属性。|
-|[CRichEditView::SetMargins](#setmargins)|设置此丰富的边距编辑视图。|
-|[CRichEditView::SetPaperSize](#setpapersize)|设置此 rich edit 视图的纸张大小。|
-|[CRichEditView::SetParaFormat](#setparaformat)|设置段落格式设置为当前所选内容的属性。|
+|[CRichEditView::GetCharFormatSelection](#getcharformatselection)|检索当前所选内容的字符格式特性。|
+|[CRichEditView::GetDocument](#getdocument)|检索指向相关[CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)的指针。|
+|[CRichEditView::GetInPlaceActiveItem](#getinplaceactiveitem)|检索在 rich edit 视图中当前就地活动的 OLE 项。|
+|[CRichEditView::GetMargins](#getmargins)|检索此富编辑视图的边距。|
+|[CRichEditView::GetPageRect](#getpagerect)|检索此富编辑视图的页面矩形。|
+|[CRichEditView::GetPaperSize](#getpapersize)|检索此富编辑视图的纸张大小。|
+|[CRichEditView::GetParaFormatSelection](#getparaformatselection)|检索当前所选内容的段落格式特性。|
+|[CRichEditView::GetPrintRect](#getprintrect)|检索此富编辑视图的打印矩形。|
+|[CRichEditView::GetPrintWidth](#getprintwidth)|检索此富编辑视图的打印宽度。|
+|[CRichEditView::GetRichEditCtrl](#getricheditctrl)|检索 rich edit 控件。|
+|[CRichEditView::GetSelectedItem](#getselecteditem)|从 rich edit 视图中检索选定项。|
+|[CRichEditView::GetTextLength](#gettextlength)|检索 rich edit 视图中的文本长度。|
+|[CRichEditView::GetTextLengthEx](#gettextlengthex)|检索 rich edit 视图中的字符数或字节数。 用于确定长度的方法的扩展标志列表。|
+|[CRichEditView::InsertFileAsObject](#insertfileasobject)|将文件作为 OLE 项插入。|
+|[CRichEditView::InsertItem](#insertitem)|将新项作为 OLE 项插入。|
+|[CRichEditView::IsRichEditFormat](#isricheditformat)|说明剪贴板是否包含以丰富的编辑格式或文本格式显示的数据。|
+|[CRichEditView::OnCharEffect](#onchareffect)|为当前所选内容切换字符格式设置。|
+|[CRichEditView::OnParaAlign](#onparaalign)|更改段落的对齐方式。|
+|[CRichEditView::OnUpdateCharEffect](#onupdatechareffect)|更新字符公共成员函数的命令用户界面。|
+|[CRichEditView::OnUpdateParaAlign](#onupdateparaalign)|更新段落公共成员函数的命令 UI。|
+|[CRichEditView::PrintInsideRect](#printinsiderect)|设置给定矩形内的指定文本格式。|
+|[CRichEditView::PrintPage](#printpage)|设置给定页面内的指定文本格式。|
+|[CRichEditView::SetCharFormat](#setcharformat)|为当前所选内容设置字符格式特性。|
+|[CRichEditView::SetMargins](#setmargins)|设置此 rich edit 视图的边距。|
+|[CRichEditView::SetPaperSize](#setpapersize)|设置此富编辑视图的纸张大小。|
+|[CRichEditView::SetParaFormat](#setparaformat)|为当前所选内容设置段落格式特性。|
 |[CRichEditView::TextNotFound](#textnotfound)|重置控件的内部搜索状态。|
 
 ### <a name="protected-methods"></a>受保护的方法
 
 |名称|描述|
 |----------|-----------------|
-|[CRichEditView::GetClipboardData](#getclipboarddata)|检索 Clipboard 对象以在此 rich edit 视图中的范围。|
-|[CRichEditView::GetContextMenu](#getcontextmenu)|检索一个上下文菜单上右鼠标左键按下使用。|
-|[CRichEditView::IsSelected](#isselected)|指示是否选择给定的 OLE 项。|
+|[CRichEditView::GetClipboardData](#getclipboarddata)|为此富编辑视图中的范围检索剪贴板对象。|
+|[CRichEditView::GetContextMenu](#getcontextmenu)|检索要在鼠标右键下使用的上下文菜单。|
+|[CRichEditView::IsSelected](#isselected)|指示是否选择了给定的 OLE 项。|
 |[CRichEditView::OnFindNext](#onfindnext)|查找子字符串的下一个匹配项。|
-|[CRichEditView::OnInitialUpdate](#oninitialupdate)|刷新视图首次附加到文档。|
+|[CRichEditView::OnInitialUpdate](#oninitialupdate)|当视图第一次附加到文档时，刷新视图。|
 |[CRichEditView::OnPasteNativeObject](#onpastenativeobject)|从 OLE 项检索本机数据。|
-|[CRichEditView::OnPrinterChanged](#onprinterchanged)|将打印特性设置为给定的设备。|
-|[CRichEditView::OnReplaceAll](#onreplaceall)|给定字符串的所有匹配项替换为新的字符串。|
-|[CRichEditView::OnReplaceSel](#onreplacesel)|将替换当前所选内容。|
-|[CRichEditView::OnTextNotFound](#ontextnotfound)|找不到请求的文本的句柄用户通知。|
-|[CRichEditView::QueryAcceptData](#queryacceptdata)|若要查看有关将数据上的查询`IDataObject`。|
-|[CRichEditView::WrapChanged](#wrapchanged)|调整此 rich edit 视图中，值的基础的目标输出设备`m_nWordWrap`。|
+|[CRichEditView::OnPrinterChanged](#onprinterchanged)|将打印特性设置到给定的设备。|
+|[CRichEditView::OnReplaceAll](#onreplaceall)|将出现的所有给定字符串替换为新字符串。|
+|[CRichEditView::OnReplaceSel](#onreplacesel)|替换当前选定内容。|
+|[CRichEditView::OnTextNotFound](#ontextnotfound)|处理找不到请求的文本的用户通知。|
+|[CRichEditView::QueryAcceptData](#queryacceptdata)|查询查看上`IDataObject`的数据。|
+|[CRichEditView::WrapChanged](#wrapchanged)|基于的值`m_nWordWrap`调整此 rich edit 视图的目标输出设备。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
 |名称|描述|
 |----------|-----------------|
 |[CRichEditView::m_nBulletIndent](#m_nbulletindent)|指示项目符号列表的缩进量。|
-|[CRichEditView::m_nWordWrap](#m_nwordwrap)|指示 word 自动换行约束。|
+|[CRichEditView::m_nWordWrap](#m_nwordwrap)|指示换行约束。|
 
 ## <a name="remarks"></a>备注
 
-"格式文本编辑控件"是一个窗口，用户可以输入和编辑文本。 文本字符和段落格式设置，可以分配，并且可以包含嵌入的 OLE 对象。 Rich edit 控件提供用于设置文本格式的编程接口。 但是，应用程序必须实现使用户可进行格式设置操作所需的任何用户界面组件。
+"Rich edit 控件" 是用户可在其中输入和编辑文本的窗口。 可以为文本分配字符和段落格式，还可以包括嵌入的 OLE 对象。 Rich edit 控件提供了用于设置文本格式的编程接口。 但是，应用程序必须实现使用户可进行格式设置操作所需的任何用户界面组件。
 
-`CRichEditView` 保留文本及其格式特征。 `CRichEditDoc` 维护视图中的 OLE 客户端项目的列表。 `CRichEditCntrItem` 提供对 OLE 客户端项的容器端访问。
+`CRichEditView` 保留文本及其格式特征。 `CRichEditDoc`维护视图中的 OLE 客户端项的列表。 `CRichEditCntrItem` 提供对 OLE 客户端项的容器端访问。
 
-此 Windows 公共控件 (并因此[CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)和相关类) 仅适用于在 Windows 95/98 和 Windows NT 版本 3.51 下运行的程序和更高版本。
+此 Windows 公共控件（以及[CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)和相关类）仅适用于在 windows 95/98 和 windows NT 版本3.51 及更高版本下运行的程序。
 
-在 MFC 应用程序中使用 rich edit 视图的示例，请参阅[写字板](../../overview/visual-cpp-samples.md)示例应用程序。
+有关在 MFC 应用程序中使用 rich edit 视图的示例，请参阅[写字板](../../overview/visual-cpp-samples.md)示例应用程序。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -212,11 +212,11 @@ class CRichEditView : public CCtrlView
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxrich.h
+**标头：** afxrich
 
-##  <a name="adjustdialogposition"></a>  CRichEditView::AdjustDialogPosition
+##  <a name="adjustdialogposition"></a>CRichEditView：： AdjustDialogPosition
 
-调用此函数来移动给定的对话框，以便它不会遮盖当前所选内容。
+调用此函数可移动给定对话框，使其不会掩盖当前选定内容。
 
 ```
 void AdjustDialogPosition(CDialog* pDlg);
@@ -227,9 +227,9 @@ void AdjustDialogPosition(CDialog* pDlg);
 *pDlg*<br/>
 指向 `CDialog` 对象的指针。
 
-##  <a name="canpaste"></a>  CRichEditView::CanPaste
+##  <a name="canpaste"></a>CRichEditView：： CanPaste
 
-调用此函数可确定剪贴板是否包含可以粘贴到此 rich edit 视图的信息。
+调用此函数可确定剪贴板是否包含可粘贴到此富编辑视图中的信息。
 
 ```
 BOOL CanPaste() const;
@@ -237,9 +237,9 @@ BOOL CanPaste() const;
 
 ### <a name="return-value"></a>返回值
 
-如果剪贴板中包含了可接受此 rich edit 视图; 格式的数据，非零值否则为为 0。
+如果剪贴板包含的数据格式是此富编辑视图可以接受的格式，则为非零值;否则为0。
 
-##  <a name="cricheditview"></a>  CRichEditView::CRichEditView
+##  <a name="cricheditview"></a>CRichEditView：： CRichEditView
 
 调用此函数可创建`CRichEditView`对象。
 
@@ -247,9 +247,9 @@ BOOL CanPaste() const;
 CRichEditView();
 ```
 
-##  <a name="dopaste"></a>  CRichEditView::DoPaste
+##  <a name="dopaste"></a>CRichEditView：:D oPaste
 
-调用此函数可将中的 OLE 项粘贴*dataobj*到此丰富编辑文档/视图。
+调用此函数可将*dataobj*中的 OLE 项粘贴到此丰富的编辑文档/视图中。
 
 ```
 void DoPaste(
@@ -261,23 +261,23 @@ void DoPaste(
 ### <a name="parameters"></a>参数
 
 *dataobj*<br/>
-[COleDataObject](../../mfc/reference/coledataobject-class.md)包含要粘贴的数据。
+包含要粘贴的数据的[COleDataObject](../../mfc/reference/coledataobject-class.md) 。
 
 *cf*<br/>
 所需的剪贴板格式。
 
 *hMetaPict*<br/>
-表示要粘贴的项图元文件。
+表示要粘贴的项的图元文件。
 
 ### <a name="remarks"></a>备注
 
-框架调用此函数的默认实现的一部分[QueryAcceptData](#queryacceptdata)。
+框架将此函数作为[QueryAcceptData](#queryacceptdata)的默认实现的一部分进行调用。
 
-此函数确定粘贴为选择性粘贴基于处理程序的结果的类型。 如果*cf*为 0，则新项使用当前的图标表示形式。 如果*cf*为非零值和*hMetaPict*不为 NULL，新项使用*hMetaPict*为它的表示形式。
+此函数根据选择性粘贴的处理程序结果来确定粘贴类型。 如果*cf*为0，则新项使用当前的图标表示形式。 如果*cf*为非零值并且*hMetaPict*不为 NULL，则新项使用*hMetaPict*作为其表示形式。
 
-##  <a name="findtext"></a>  CRichEditView::FindText
+##  <a name="findtext"></a>CRichEditView：： FindText
 
-调用此函数可查找指定的文本并将其设置为当前所选内容。
+调用此函数可查找指定的文本，并将其设置为当前选择。
 
 ```
 BOOL FindText(
@@ -296,14 +296,14 @@ BOOL FindText(
 指示搜索是否区分大小写。
 
 *bWord*<br/>
-指示搜索应匹配整个单词，而非单词的一部分。
+指示搜索是否应仅匹配全字，而不匹配单词的部分。
 
 *bNext*<br/>
-指示搜索方向。 如果为 TRUE，搜索方向为向缓冲区末尾的方向。 如果为 FALSE，则搜索方向是缓冲区的开头。
+指示搜索的方向。 如果为 TRUE，则搜索方向朝向缓冲区的末尾。 如果为 FALSE，则搜索方向朝向缓冲区的开头。
 
 ### <a name="return-value"></a>返回值
 
-如果非零*lpszFind*找到文本; 否则为 0。
+如果找到*lpszFind*文本，则为非零值;否则为0。
 
 ### <a name="remarks"></a>备注
 
@@ -313,9 +313,9 @@ BOOL FindText(
 
 [!code-cpp[NVC_MFCDocView#151](../../mfc/codesnippet/cpp/cricheditview-class_1.cpp)]
 
-##  <a name="findtextsimple"></a>  CRichEditView::FindTextSimple
+##  <a name="findtextsimple"></a>CRichEditView：： FindTextSimple
 
-调用此函数可查找指定的文本并将其设置为当前所选内容。
+调用此函数可查找指定的文本，并将其设置为当前选择。
 
 ```
 BOOL FindTextSimple(
@@ -334,22 +334,22 @@ BOOL FindTextSimple(
 指示搜索是否区分大小写。
 
 *bWord*<br/>
-指示搜索应匹配整个单词，而非单词的一部分。
+指示搜索是否应仅匹配全字，而不匹配单词的部分。
 
 *bNext*<br/>
-指示搜索方向。 如果为 TRUE，搜索方向为向缓冲区末尾的方向。 如果为 FALSE，则搜索方向是缓冲区的开头。
+指示搜索的方向。 如果为 TRUE，则搜索方向朝向缓冲区的末尾。 如果为 FALSE，则搜索方向朝向缓冲区的开头。
 
 ### <a name="return-value"></a>返回值
 
-如果非零*lpszFind*找到文本; 否则为 0。
+如果找到*lpszFind*文本，则为非零值;否则为0。
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CRichEditView::FindText](#findtext)。
+  请参阅[CRichEditView：： FindText](#findtext)的示例。
 
-##  <a name="getcharformatselection"></a>  CRichEditView::GetCharFormatSelection
+##  <a name="getcharformatselection"></a>CRichEditView：： GetCharFormatSelection
 
-调用此函数可获取的字符格式设置的当前所选内容的属性。
+调用此函数可获取当前所选内容的字符格式设置特性。
 
 ```
 CHARFORMAT2& GetCharFormatSelection();
@@ -357,19 +357,19 @@ CHARFORMAT2& GetCharFormatSelection();
 
 ### <a name="return-value"></a>返回值
 
-一个[CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a)结构，其中包含的字符格式设置的当前所选内容的属性。
+一个[CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w)结构，其中包含当前选定内容的字符格式设置特性。
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[EM_GETCHARFORMAT](/windows/desktop/Controls/em-getcharformat)消息并[CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) Windows SDK 中的结构。
+有关详细信息，请参阅 Windows SDK 中的[EM_GETCHARFORMAT](/windows/win32/Controls/em-getcharformat)消息和[CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w)结构。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFCDocView#152](../../mfc/codesnippet/cpp/cricheditview-class_2.cpp)]
 
-##  <a name="getclipboarddata"></a>  CRichEditView::GetClipboardData
+##  <a name="getclipboarddata"></a>CRichEditView：： GetClipboardData
 
-框架调用此函数的处理的一部分[IRichEditOleCallback::GetClipboardData](/windows/desktop/api/richole/nf-richole-iricheditolecallback-getclipboarddata)。
+在处理[IRichEditOleCallback：： GetClipboardData](/windows/win32/api/richole/nf-richole-iricheditolecallback-getclipboarddata)时，框架会调用此函数。
 
 ```
 virtual HRESULT GetClipboardData(
@@ -382,7 +382,7 @@ virtual HRESULT GetClipboardData(
 ### <a name="parameters"></a>参数
 
 *lpchrg*<br/>
-指向[CHARRANGE](/windows/desktop/api/richedit/ns-richedit-_charrange)结构，它指定范围的字符 （和 OLE 项） 复制到指定的数据对象*lplpdataobj*。
+指向[CHARRANGE](/windows/win32/api/richedit/ns-richedit-charrange)结构的指针，该结构指定要复制到*lplpdataobj*指定的数据对象的字符（和 OLE 项）范围。
 
 *dwReco*<br/>
 剪贴板操作标志。 可以是下列值之一。
@@ -391,33 +391,33 @@ virtual HRESULT GetClipboardData(
 
 - RECO_CUT 剪切到剪贴板。
 
-- RECO_DRAG 拖动 （拖放） 的操作。
+- RECO_DRAG 拖动操作（拖放）。
 
-- RECO_DROP 删除 （拖放） 的操作。
+- RECO_DROP Drop operation （拖放）。
 
-- 从剪贴板粘贴时 RECO_PASTE。
+- 从剪贴板中粘贴 RECO_PASTE。
 
 *lpRichDataObj*<br/>
-指向[IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject)对象，其中包含剪贴板数据从丰富的编辑控件 ( [IRichEditOle::GetClipboardData](/windows/desktop/api/richole/nf-richole-iricheditole-getclipboarddata))。
+指向包含富编辑控件（ [IRichEditOle：： GetClipboardData](/windows/win32/api/richole/nf-richole-iricheditole-getclipboarddata)）中剪贴板数据的[IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject)对象的指针。
 
 *lplpdataobj*<br/>
-指向接收的地址的指针变量`IDataObject`对象，表示中指定的范围*lpchrg*参数。 值*lplpdataobj*如果返回错误，则忽略。
+一个指针，指向用于接收`IDataObject`对象地址的指针变量，该对象表示在*lpchrg*参数中指定的范围。 如果返回错误，则忽略*lplpdataobj*的值。
 
 ### <a name="return-value"></a>返回值
 
-报告操作的成功的 HRESULT 值。 HRESULT 的详细信息，请参阅[COM 错误代码的结构](/windows/desktop/com/structure-of-com-error-codes)Windows SDK 中。
+报告操作成功的 HRESULT 值。 有关 HRESULT 的详细信息，请参阅 Windows SDK 中[COM 错误代码的结构](/windows/win32/com/structure-of-com-error-codes)。
 
 ### <a name="remarks"></a>备注
 
-如果返回值表示成功，`IRichEditOleCallback::GetClipboardData`返回`IDataObject`访问*lplpdataobj*; 否则为它将返回一个由访问*lpRichDataObj*。 重写此函数可提供你自己的剪贴板数据。 此函数的默认实现返回 E_NOTIMPL。
+如果返回`IRichEditOleCallback::GetClipboardData`值指示 success，则返回由`IDataObject` *lplpdataobj*访问的; 否则，它将返回*lpRichDataObj*访问的值。 重写此函数以提供您自己的剪贴板数据。 此函数的默认实现将返回 E_NOTIMPL。
 
-这是一种高级可重写。
+这是一种高级的可重写。
 
-有关详细信息，请参阅[IRichEditOle::GetClipboardData](/windows/desktop/api/richole/nf-richole-iricheditole-getclipboarddata)， [IRichEditOleCallback::GetClipboardData](/windows/desktop/api/richole/nf-richole-iricheditolecallback-getclipboarddata)，并[CHARRANGE](/windows/desktop/api/richedit/ns-richedit-_charrange)中的 Windows SDK 和，请参阅[IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject) Windows SDK 中。
+有关详细信息，请参阅 Windows SDK 中的[IRichEditOle：： GetClipboardData](/windows/win32/api/richole/nf-richole-iricheditole-getclipboarddata)、 [IRichEditOleCallback：： GetClipboardData](/windows/win32/api/richole/nf-richole-iricheditolecallback-getclipboarddata)和[CHARRANGE](/windows/win32/api/richedit/ns-richedit-charrange) ，并在 Windows SDK 中查看[IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) 。
 
-##  <a name="getcontextmenu"></a>  CRichEditView::GetContextMenu
+##  <a name="getcontextmenu"></a>CRichEditView：： GetContextMenu
 
-框架调用此函数的处理的一部分[IRichEditOleCallback::GetContextMenu](/windows/desktop/api/richole/nf-richole-iricheditolecallback-getcontextmenu)。
+在处理[IRichEditOleCallback：： GetContextMenu](/windows/win32/api/richole/nf-richole-iricheditolecallback-getcontextmenu)时，框架会调用此函数。
 
 ```
 virtual HMENU GetContextMenu(
@@ -429,13 +429,13 @@ virtual HMENU GetContextMenu(
 ### <a name="parameters"></a>参数
 
 *seltyp*<br/>
-所选内容类型。 备注部分所述的所选内容类型的值。
+选择类型。 "备注" 部分中介绍了选择类型值。
 
 *lpoleobj*<br/>
-指向`OLEOBJECT`结构，它指定所选的第一个 OLE 对象，如果所选内容包含一个或多个 OLE 项。 如果所选内容不包含任何项， *lpoleobj*为 NULL。 `OLEOBJECT`结构保存到 OLE 对象 v-表指针。
+指向`OLEOBJECT`结构的指针，该结构指定选定的第一个 ole 对象（如果选定内容包含一个或多个 ole 项）。 如果所选内容不包含任何项，则*lpoleobj*为 NULL。 `OLEOBJECT`结构保存指向 OLE 对象 v 表的指针。
 
 *lpchrg*<br/>
-指向[CHARRANGE](/windows/desktop/api/richedit/ns-richedit-_charrange)结构，它包含当前所选内容。
+指向包含当前所选内容的[CHARRANGE](/windows/win32/api/richedit/ns-richedit-charrange)结构的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -443,27 +443,27 @@ virtual HMENU GetContextMenu(
 
 ### <a name="remarks"></a>备注
 
-此函数是典型正确按下鼠标处理的一部分。
+此函数是鼠标右键按下鼠标按钮的典型部分。
 
-所选内容类型可以是下列标志的任意组合：
+选择类型可以是以下标志的任意组合：
 
 - SEL_EMPTY 指示当前没有选定内容。
 
 - SEL_TEXT 指示当前所选内容包含文本。
 
-- SEL_OBJECT 指示当前所选内容包含至少一个 OLE 项。
+- SEL_OBJECT 指示当前所选内容至少包含一个 OLE 项。
 
-- SEL_MULTICHAR 指示当前所选内容包含多个字符的文本。
+- SEL_MULTICHAR 指示当前所选内容包含多个文本字符。
 
 - SEL_MULTIOBJECT 指示当前所选内容包含多个 OLE 对象。
 
-默认实现返回 NULL。 这是一种高级可重写。
+默认实现返回 NULL。 这是一种高级的可重写。
 
-有关详细信息，请参阅[IRichEditOleCallback::GetContextMenu](/windows/desktop/api/richole/nf-richole-iricheditolecallback-getcontextmenu)并[CHARRANGE](/windows/desktop/api/richedit/ns-richedit-_charrange) Windows SDK 中。
+有关详细信息，请参阅 Windows SDK 中的[IRichEditOleCallback：： GetContextMenu](/windows/win32/api/richole/nf-richole-iricheditolecallback-getcontextmenu)和[CHARRANGE](/windows/win32/api/richedit/ns-richedit-charrange) 。
 
-##  <a name="getdocument"></a>  CRichEditView::GetDocument
+##  <a name="getdocument"></a>CRichEditView：： GetDocument
 
-调用此函数可获取一个指向`CRichEditDoc`与此视图关联。
+调用此函数可获取一个指针，该`CRichEditDoc`指针指向与此视图关联的。
 
 ```
 CRichEditDoc* GetDocument() const;
@@ -471,11 +471,11 @@ CRichEditDoc* GetDocument() const;
 
 ### <a name="return-value"></a>返回值
 
-指向[CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)与关联的对象在`CRichEditView`对象。
+指向与您 `CRichEditView`的对象相关联的 [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md) 对象的指针。
 
-##  <a name="getinplaceactiveitem"></a>  CRichEditView::GetInPlaceActiveItem
+##  <a name="getinplaceactiveitem"></a>CRichEditView：： GetInPlaceActiveItem
 
-调用此函数可获取 OLE 项当前在此就地激活`CRichEditView`对象。
+调用此函数可获取此`CRichEditView`对象中当前就地激活的 OLE 项。
 
 ```
 CRichEditCntrItem* GetInPlaceActiveItem() const;
@@ -483,11 +483,11 @@ CRichEditCntrItem* GetInPlaceActiveItem() const;
 
 ### <a name="return-value"></a>返回值
 
-为单个、 就地活动状态的指针[CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)此 rich edit 视图; 中的对象如果没有 OLE 项当前处于就地活动状态，则为 NULL。
+指向此富编辑视图中单一的就地活动[CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)对象的指针;如果当前没有 OLE 项处于就地活动状态，则为 NULL。
 
-##  <a name="getmargins"></a>  CRichEditView::GetMargins
+##  <a name="getmargins"></a>CRichEditView：： GetMargins
 
-调用此函数可检索当前边距打印时使用。
+调用此函数可检索打印中使用的当前边距。
 
 ```
 CRect GetMargins() const;
@@ -495,11 +495,11 @@ CRect GetMargins() const;
 
 ### <a name="return-value"></a>返回值
 
-在打印中使用的边距，以 MM_TWIPS 单位。
+打印时使用的边距，以 MM_TWIPS 度量。
 
-##  <a name="getpagerect"></a>  CRichEditView::GetPageRect
+##  <a name="getpagerect"></a>CRichEditView：： GetPageRect
 
-调用此函数可获取在打印中使用的页的尺寸。
+调用此函数可获取打印中使用的页的尺寸。
 
 ```
 CRect GetPageRect() const;
@@ -507,15 +507,15 @@ CRect GetPageRect() const;
 
 ### <a name="return-value"></a>返回值
 
-在打印中使用的页的边界，以 MM_TWIPS 单位。
+用于打印的页面的边界，以 MM_TWIPS 度量。
 
 ### <a name="remarks"></a>备注
 
 此值基于纸张大小。
 
-##  <a name="getpapersize"></a>  CRichEditView::GetPaperSize
+##  <a name="getpapersize"></a>CRichEditView：： GetPaperSize
 
-调用此函数可检索当前的纸张大小。
+调用此函数可检索当前纸张大小。
 
 ```
 CSize GetPaperSize() const;
@@ -523,15 +523,15 @@ CSize GetPaperSize() const;
 
 ### <a name="return-value"></a>返回值
 
-在打印中使用的纸张大小单位 MM_TWIPS。
+打印时使用的纸张大小，以 MM_TWIPS 度量。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFCDocView#153](../../mfc/codesnippet/cpp/cricheditview-class_3.cpp)]
 
-##  <a name="getparaformatselection"></a>  CRichEditView::GetParaFormatSelection
+##  <a name="getparaformatselection"></a>CRichEditView：： GetParaFormatSelection
 
-调用此函数可获取的段落格式的当前所选内容的属性。
+调用此函数可获取当前所选内容的段落格式特性。
 
 ```
 PARAFORMAT2& GetParaFormatSelection();
@@ -539,15 +539,15 @@ PARAFORMAT2& GetParaFormatSelection();
 
 ### <a name="return-value"></a>返回值
 
-一个[PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2)包含段落格式设置属性的当前所选内容的结构。
+一个[PARAFORMAT2](/windows/win32/api/richedit/ns-richedit-paraformat2)结构，其中包含当前选定内容的段落格式特性。
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[EM_GETPARAFORMAT](/windows/desktop/Controls/em-getparaformat)消息并[PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) Windows SDK 中的结构。
+有关详细信息，请参阅 Windows SDK 中的[EM_GETPARAFORMAT](/windows/win32/Controls/em-getparaformat)消息和[PARAFORMAT2](/windows/win32/api/richedit/ns-richedit-paraformat2)结构。
 
-##  <a name="getprintrect"></a>  CRichEditView::GetPrintRect
+##  <a name="getprintrect"></a>CRichEditView：： GetPrintRect
 
-调用此函数可检索页矩形内的打印区域的边界。
+调用此函数可在页矩形内检索打印区域的边界。
 
 ```
 CRect GetPrintRect() const;
@@ -555,15 +555,15 @@ CRect GetPrintRect() const;
 
 ### <a name="return-value"></a>返回值
 
-在打印中使用的图像区域的边界，以 MM_TWIPS 单位。
+用于打印的图像区域的边界，以 MM_TWIPS 度量。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFCDocView#154](../../mfc/codesnippet/cpp/cricheditview-class_4.cpp)]
 
-##  <a name="getprintwidth"></a>  CRichEditView::GetPrintWidth
+##  <a name="getprintwidth"></a>CRichEditView：： GetPrintWidth
 
-调用此函数可确定的打印区域的宽度。
+调用此函数可确定打印区域的宽度。
 
 ```
 int GetPrintWidth() const;
@@ -571,11 +571,11 @@ int GetPrintWidth() const;
 
 ### <a name="return-value"></a>返回值
 
-以 MM_TWIPS 度量的打印区域的宽度。
+打印区域的宽度，以 MM_TWIPS 度量。
 
 ##  <a name="getricheditctrl"></a>  CRichEditView::GetRichEditCtrl
 
-调用此函数可检索[CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)与关联的对象`CRichEditView`对象。
+调用此函数可检索与 `CRichEditView`对象关联的 [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) 对象。
 
 ```
 CRichEditCtrl& GetRichEditCtrl() const;
@@ -583,15 +583,15 @@ CRichEditCtrl& GetRichEditCtrl() const;
 
 ### <a name="return-value"></a>返回值
 
-`CRichEditCtrl`此视图的对象。
+此`CRichEditCtrl`视图的对象。
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CRichEditView::FindText](#findtext)。
+  请参阅[CRichEditView：： FindText](#findtext)的示例。
 
-##  <a name="getselecteditem"></a>  CRichEditView::GetSelectedItem
+##  <a name="getselecteditem"></a>CRichEditView：： GetSelectedItem
 
-调用此函数可检索 OLE 项 (`CRichEditCntrItem`对象) 中这当前所选`CRichEditView`对象。
+调用此函数可检索此`CRichEditCntrItem` `CRichEditView`对象中当前选定的 OLE 项（对象）。
 
 ```
 CRichEditCntrItem* GetSelectedItem() const;
@@ -599,11 +599,11 @@ CRichEditCntrItem* GetSelectedItem() const;
 
 ### <a name="return-value"></a>返回值
 
-指向[CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)中所选对象`CRichEditView`对象;如果在此视图中不选择任何项，则为 NULL。
+指向`CRichEditView`对象中选定的[CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)对象的指针;如果未在此视图中选择任何项，则为 NULL。
 
-##  <a name="gettextlength"></a>  CRichEditView::GetTextLength
+##  <a name="gettextlength"></a>CRichEditView：： GetTextLength
 
-调用此函数可检索在此文本的长度`CRichEditView`对象。
+调用此函数可检索此对象中文本`CRichEditView`的长度。
 
 ```
 long GetTextLength() const;
@@ -611,11 +611,11 @@ long GetTextLength() const;
 
 ### <a name="return-value"></a>返回值
 
-在此文本的长度`CRichEditView`对象。
+此对象中文本`CRichEditView`的长度。
 
-##  <a name="gettextlengthex"></a>  CRichEditView::GetTextLengthEx
+##  <a name="gettextlengthex"></a>CRichEditView：： GetTextLengthEx
 
-调用此成员函数以计算在此文本的长度`CRichEditView`对象。
+调用此成员函数以计算此对象中文本`CRichEditView`的长度。
 
 ```
 long GetTextLengthEx(
@@ -626,22 +626,22 @@ long GetTextLengthEx(
 ### <a name="parameters"></a>参数
 
 *dwFlags*<br/>
-值，该值指定要在确定文本长度时使用的方法。 此成员可以是一个或多个值中的标志成员列出[GETTEXTLENGTHEX](/windows/desktop/api/richedit/ns-richedit-_gettextlengthex) Windows SDK 中所述。
+值，用于指定确定文本长度时使用的方法。 此成员可以是 Windows SDK 中所述的[GETTEXTLENGTHEX](/windows/win32/api/richedit/ns-richedit-gettextlengthex) flags 成员中列出的一个或多个值。
 
 *uCodePage*<br/>
-翻译 (CP_ACP ANSI 代码页，对 Unicode 的 1200年) 的代码页。
+用于转换的代码页（对于 ANSI 代码页为 CP_ACP，对于 Unicode 为1200）。
 
 ### <a name="return-value"></a>返回值
 
-字符或编辑控件中的字节数。 如果中的设置不兼容的标志*dwFlags*，此成员函数将返回 E_INVALIDARG。
+编辑控件中的字符数或字节数。 如果*dwFlags*中设置了不兼容的标志，此成员函数将返回 E_INVALIDARG。
 
 ### <a name="remarks"></a>备注
 
-`GetTextLengthEx` 提供了其他方法，来确定文本的长度。 它支持的 Rich Edit 2.0 功能。 有关详细信息，请参阅[有关 Rich Edit 控件](/windows/desktop/Controls/about-rich-edit-controls)Windows SDK 中。
+`GetTextLengthEx`提供确定文本长度的其他方法。 它支持丰富的编辑2.0 功能。 有关详细信息，请参阅关于 Windows SDK 中的[丰富编辑控件](/windows/win32/Controls/about-rich-edit-controls)。
 
-##  <a name="insertfileasobject"></a>  CRichEditView::InsertFileAsObject
+##  <a name="insertfileasobject"></a>CRichEditView：： InsertFileAsObject
 
-调用此函数可插入指定的文件 (作为[CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)对象) 到丰富的编辑视图。
+调用此函数可将指定的文件（作为[CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)对象）插入到丰富的编辑视图中。
 
 ```
 void InsertFileAsObject(LPCTSTR lpszFileName);
@@ -652,9 +652,9 @@ void InsertFileAsObject(LPCTSTR lpszFileName);
 *lpszFileName*<br/>
 包含要插入的文件的名称的字符串。
 
-##  <a name="insertitem"></a>  CRichEditView::InsertItem
+##  <a name="insertitem"></a>CRichEditView：： InsertItem
 
-调用此函数可插入[CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)到 rich edit 视图的对象。
+调用此函数可将[CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)对象插入到丰富的编辑视图中。
 
 ```
 HRESULT InsertItem(CRichEditCntrItem* pItem);
@@ -663,19 +663,19 @@ HRESULT InsertItem(CRichEditCntrItem* pItem);
 ### <a name="parameters"></a>参数
 
 *pItem*<br/>
-指向要插入的项。
+指向要插入的项的指针。
 
 ### <a name="return-value"></a>返回值
 
-HRESULT 值，该值指示成功插入。
+HRESULT 值，指示插入是否成功。
 
 ### <a name="remarks"></a>备注
 
-HRESULT 的详细信息，请参阅[COM 错误代码的结构](/windows/desktop/com/structure-of-com-error-codes)Windows SDK 中。
+有关 HRESULT 的详细信息，请参阅 Windows SDK 中[COM 错误代码的结构](/windows/win32/com/structure-of-com-error-codes)。
 
-##  <a name="isricheditformat"></a>  CRichEditView::IsRichEditFormat
+##  <a name="isricheditformat"></a>CRichEditView：： IsRichEditFormat
 
-调用此函数可确定是否*cf*是一种剪贴板格式，这是文本、 格式文本或与 OLE 项的多格式文本。
+调用此函数可确定*cf*是否为文本、格式文本或带有 OLE 项的多格式文本的剪贴板格式。
 
 ```
 static BOOL AFX_CDECL IsRichEditFormat(CLIPFORMAT cf);
@@ -684,15 +684,15 @@ static BOOL AFX_CDECL IsRichEditFormat(CLIPFORMAT cf);
 ### <a name="parameters"></a>参数
 
 *cf*<br/>
-感兴趣的剪贴板格式。
+所需的剪贴板格式。
 
 ### <a name="return-value"></a>返回值
 
-如果非零*cf*为丰富的编辑或文本剪贴板格式。
+如果*cf*是丰富的编辑或文本剪贴板格式，则为非零值。
 
-##  <a name="isselected"></a>  CRichEditView::IsSelected
+##  <a name="isselected"></a>CRichEditView：： IsSelected
 
-调用此函数可确定当前未在此视图中选择是否指定的 OLE 项。
+调用此函数可确定当前是否在此视图中选择了指定的 OLE 项。
 
 ```
 virtual BOOL IsSelected(const CObject* pDocItem) const;
@@ -701,27 +701,27 @@ virtual BOOL IsSelected(const CObject* pDocItem) const;
 ### <a name="parameters"></a>参数
 
 *pDocItem*<br/>
-指针指向在视图中的对象。
+指向视图中的对象的指针。
 
 ### <a name="return-value"></a>返回值
 
-如果该对象处于选中状态，非零值否则为 0。
+如果选择对象，则为非零值;否则为0。
 
 ### <a name="remarks"></a>备注
 
-如果您的派生的视图类具有用于处理 OLE 项的选择不同的方法，重写此函数。
+如果派生视图类有不同的方法来处理 OLE 项的选择，则重写此函数。
 
-##  <a name="m_nbulletindent"></a>  CRichEditView::m_nBulletIndent
+##  <a name="m_nbulletindent"></a>CRichEditView：： m_nBulletIndent
 
-项目符号列表中的项目; 缩进默认情况下，720 单位，即 1/2 英寸。
+列表中项目符号项的缩进;默认值为720个单位，即1/2 英寸。
 
 ```
 int m_nBulletIndent;
 ```
 
-##  <a name="m_nwordwrap"></a>  CRichEditView::m_nWordWrap
+##  <a name="m_nwordwrap"></a>CRichEditView：： m_nWordWrap
 
-指示此 rich edit 视图的自动换行的类型。
+指示此富编辑视图的自动换行类型。
 
 ```
 int m_nWordWrap;
@@ -731,19 +731,19 @@ int m_nWordWrap;
 
 以下值之一：
 
-- `WrapNone` 指示没有自动的自动换行。
+- `WrapNone`指示不自动换行。
 
-- `WrapToWindow` 指示基于窗口的宽度的自动换行。
+- `WrapToWindow`指示基于窗口宽度的自动换行。
 
-- `WrapToTargetDevice` 指示目标设备的特征的自动换行。
+- `WrapToTargetDevice`指示基于目标设备特性的自动换行。
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CRichEditView::WrapChanged](#wrapchanged)。
+  请参阅[CRichEditView：： WrapChanged](#wrapchanged)的示例。
 
-##  <a name="onchareffect"></a>  CRichEditView::OnCharEffect
+##  <a name="onchareffect"></a>CRichEditView：： OnCharEffect
 
-调用此函数可切换的字符格式设置为当前所选内容的效果。
+调用此函数可为当前所选内容切换字符格式设置效果。
 
 ```
 void OnCharEffect(
@@ -754,24 +754,24 @@ void OnCharEffect(
 ### <a name="parameters"></a>参数
 
 *dwMask*<br/>
-字符格式设置要修改当前选定内容中的效果。
+要在当前选定内容中修改的字符格式设置效果。
 
 *dwEffect*<br/>
-字符格式设置要切换的效果所需的列表。
+要切换的字符格式设置效果的所需列表。
 
 ### <a name="remarks"></a>备注
 
-每次调用此函数切换当前所选内容指定格式设置的效果。
+对此函数的每个调用都将为当前选择切换指定的格式设置效果。
 
-有关详细信息*dwMask*并*dwEffect*参数及其可能值，请参阅的相应数据成员[CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) Windows SDK 中。
+有关*dwMask*和*dwEffect*参数及其潜在值的详细信息，请参阅 Windows SDK 中[CHARFORMAT](/windows/win32/api/richedit/ns-richedit-charformata)的对应数据成员。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFCDocView#155](../../mfc/codesnippet/cpp/cricheditview-class_5.cpp)]
 
-##  <a name="onfindnext"></a>  CRichEditView::OnFindNext
+##  <a name="onfindnext"></a>CRichEditView：： OnFindNext
 
-处理查找/替换对话框中的命令时，由框架调用。
+当处理 "查找/替换" 对话框中的命令时由框架调用。
 
 ```
 virtual void OnFindNext(
@@ -787,21 +787,21 @@ virtual void OnFindNext(
 要查找的字符串。
 
 *bNext*<br/>
-要搜索的方向：TRUE 表示下;为 FALSE，最高。
+搜索方向：TRUE 表示向下;FALSE。
 
 *bCase*<br/>
 指示搜索是否区分大小写。
 
 *bWord*<br/>
-指示是否仅或不全字匹配搜索。
+指示搜索是否全字匹配。
 
 ### <a name="remarks"></a>备注
 
-调用此函数可查找中的文本`CRichEditView`。 重写此函数可更改搜索特征派生的视图类。
+调用此函数可在中`CRichEditView`查找文本。 重写此函数以更改派生视图类的搜索特性。
 
-##  <a name="oninitialupdate"></a>  CRichEditView::OnInitialUpdate
+##  <a name="oninitialupdate"></a>CRichEditView：： OnInitialUpdate
 
-该视图首次附加到文档中之后, 但在最初显示的视图之前由框架调用。
+在视图第一次附加到文档之后但最初显示视图之前由框架调用。
 
 ```
 virtual void OnInitialUpdate();
@@ -809,15 +809,15 @@ virtual void OnInitialUpdate();
 
 ### <a name="remarks"></a>备注
 
-此函数的默认实现调用[CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate)而不提示信息的成员函数 (即，使用默认值为 0 表示*lHint*参数，NULL 表示*pHint*参数)。 重写此函数以执行任何需要有关文档的信息的一次性初始化。 例如，如果你的应用程序具有固定大小的文档，您可以使用此函数来初始化视图的滚动限制基于文档大小。 如果你的应用程序支持大小可变的文档，使用`OnUpdate`更新滚动限制每次文档发生更改。
+此函数的默认实现将调用[CView：： OnUpdate](../../mfc/reference/cview-class.md#onupdate)成员函数，该函数不包含提示信息（也就是说，对于*lHint*参数使用默认值0，对*pHint*参数使用 NULL）。 重写此函数以执行需要文档相关信息的任何一次性初始化。 例如，如果应用程序具有固定大小的文档，则可以使用此函数根据文档大小初始化视图的滚动限制。 如果你的应用程序支持可变大小的文档`OnUpdate` ，请使用在每次更改文档时更新滚动限制。
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CRichEditView::m_nWordWrap](#m_nwordwrap)。
+  请参阅[CRichEditView：： m_nWordWrap](#m_nwordwrap)的示例。
 
-##  <a name="onpastenativeobject"></a>  CRichEditView::OnPasteNativeObject
+##  <a name="onpastenativeobject"></a>CRichEditView：： OnPasteNativeObject
 
-使用此函数中嵌入项的本机数据加载。
+使用此函数加载嵌入项中的本机数据。
 
 ```
 virtual BOOL OnPasteNativeObject(LPSTORAGE lpStg);
@@ -826,21 +826,21 @@ virtual BOOL OnPasteNativeObject(LPSTORAGE lpStg);
 ### <a name="parameters"></a>参数
 
 *lpStg*<br/>
-指向[IStorage](/windows/desktop/api/objidl/nn-objidl-istorage)对象。
+指向[IStorage](/windows/win32/api/objidl/nn-objidl-istorage)对象的指针。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则非零值否则为 0;
+如果成功，则为非零值;否则为 0;
 
 ### <a name="remarks"></a>备注
 
-通常情况下，您将执行此操作通过创建[COleStreamFile](../../mfc/reference/colestreamfile-class.md)围绕`IStorage`。 `COleStreamFile`可以附加到存档并[cobject:: Serialize](../../mfc/reference/cobject-class.md#serialize)调用以将数据加载。
+通常，可以通过创建[COleStreamFile](../../mfc/reference/colestreamfile-class.md) `IStorage`来实现此目的。 可以附加到存档和[CObject：：串行化](../../mfc/reference/cobject-class.md#serialize)以加载数据。 `COleStreamFile`
 
-这是一种高级可重写。
+这是一种高级的可重写。
 
-有关详细信息，请参阅[IStorage](/windows/desktop/api/objidl/nn-objidl-istorage) Windows SDK 中。
+有关详细信息，请参阅 Windows SDK 中的[IStorage](/windows/win32/api/objidl/nn-objidl-istorage) 。
 
-##  <a name="onparaalign"></a>  CRichEditView::OnParaAlign
+##  <a name="onparaalign"></a>CRichEditView：： OnParaAlign
 
 调用此函数可更改所选段落的段落对齐方式。
 
@@ -851,21 +851,21 @@ void OnParaAlign(WORD wAlign);
 ### <a name="parameters"></a>参数
 
 *wAlign*<br/>
-所需的段落对齐方式。 以下值之一：
+所需段落对齐方式。 以下值之一：
 
-- PFA_LEFT 对齐带有左边距段落。
+- PFA_LEFT 将段落与左边距对齐。
 
-- PFA_RIGHT 对齐带有右边距段落。
+- PFA_RIGHT 对齐段落和右边距。
 
-- PFA_CENTER 中心之间的边距的段落。
+- PFA_CENTER 使边距之间的段落居中。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFCDocView#156](../../mfc/codesnippet/cpp/cricheditview-class_6.cpp)]
 
-##  <a name="onprinterchanged"></a>  CRichEditView::OnPrinterChanged
+##  <a name="onprinterchanged"></a>CRichEditView：： OnPrinterChanged
 
-重写此函数可打印机发生更改时更改此 rich edit 视图的特征。
+重写此函数以在打印机更改时更改此富编辑视图的特征。
 
 ```
 virtual void OnPrinterChanged(const CDC& dcPrinter);
@@ -874,15 +874,15 @@ virtual void OnPrinterChanged(const CDC& dcPrinter);
 ### <a name="parameters"></a>参数
 
 *dcPrinter*<br/>
-一个[CDC](../../mfc/reference/cdc-class.md)新打印机的对象。
+新打印机的[CDC](../../mfc/reference/cdc-class.md)对象。
 
 ### <a name="remarks"></a>备注
 
-默认实现将纸张大小设置为物理高度和宽度为输出设备 （打印机）。 如果没有任何设备上下文与相关联*dcPrinter*的默认实现将纸张大小设置为 8.5 × 11 英寸。
+默认实现将纸张大小设置为输出设备（打印机）的物理高度和宽度。 如果没有与*dcPrinter*关联的设备上下文，则默认实现会将纸张大小设置为 8.5 x 11 英寸。
 
-##  <a name="onreplaceall"></a>  CRichEditView::OnReplaceAll
+##  <a name="onreplaceall"></a>CRichEditView：： OnReplaceAll
 
-处理全部替换替换对话框中的命令时，由框架调用。
+当处理 "替换" 对话框中的 "替换所有命令" 时由框架调用。
 
 ```
 virtual void OnReplaceAll(
@@ -904,19 +904,19 @@ virtual void OnReplaceAll(
 指示搜索是否区分大小写。
 
 *bWord*<br/>
-指示是否搜索必须选择全字或不。
+指示搜索是否必须选择整个单词。
 
 ### <a name="remarks"></a>备注
 
-调用此函数可使用其他字符串替换所有出现的一些给定的文本。 重写此函数可更改此视图的搜索特征。
+调用此函数可将出现的所有给定文本替换为其他字符串。 重写此函数以更改此视图的搜索特性。
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CRichEditView::FindText](#findtext)。
+  请参阅[CRichEditView：： FindText](#findtext)的示例。
 
-##  <a name="onreplacesel"></a>  CRichEditView::OnReplaceSel
+##  <a name="onreplacesel"></a>CRichEditView：： OnReplaceSel
 
-处理替换对话框中的替换命令时，由框架调用。
+在处理替换对话框中的替换命令时由框架调用。
 
 ```
 virtual void OnReplaceSel(
@@ -933,24 +933,24 @@ virtual void OnReplaceSel(
 要替换的文本。
 
 *bNext*<br/>
-指示搜索方向：TRUE 已关闭;为 FALSE，最高。
+指示搜索方向：如果为 TRUE，则为 TRUE;FALSE。
 
 *bCase*<br/>
 指示搜索是否区分大小写。
 
 *bWord*<br/>
-指示是否搜索必须选择全字或不。
+指示搜索是否必须选择整个单词。
 
 *lpszReplace*<br/>
 替换文本。
 
 ### <a name="remarks"></a>备注
 
-调用此函数可使用其他字符串替换一些给定文本的一个匹配项。 重写此函数可更改此视图的搜索特征。
+调用此函数可将某个给定文本的一个匹配项替换为其他字符串。 重写此函数以更改此视图的搜索特性。
 
-##  <a name="ontextnotfound"></a>  CRichEditView::OnTextNotFound
+##  <a name="ontextnotfound"></a>CRichEditView：： OnTextNotFound
 
-搜索失败时由框架调用。
+在搜索失败时由框架调用。
 
 ```
 virtual void OnTextNotFound(LPCTSTR lpszFind);
@@ -963,17 +963,17 @@ virtual void OnTextNotFound(LPCTSTR lpszFind);
 
 ### <a name="remarks"></a>备注
 
-重写此函数可更改从输出通知[MessageBeep](/windows/desktop/api/winuser/nf-winuser-messagebeep)。
+重写此函数以更改[MessageBeep](/windows/win32/api/winuser/nf-winuser-messagebeep)的输出通知。
 
-有关详细信息，请参阅[MessageBeep](/windows/desktop/api/winuser/nf-winuser-messagebeep) Windows SDK 中。
+有关详细信息，请参阅 Windows SDK 中的[MessageBeep](/windows/win32/api/winuser/nf-winuser-messagebeep) 。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFCDocView#157](../../mfc/codesnippet/cpp/cricheditview-class_7.cpp)]
 
-##  <a name="onupdatechareffect"></a>  CRichEditView::OnUpdateCharEffect
+##  <a name="onupdatechareffect"></a>CRichEditView：： OnUpdateCharEffect
 
-框架调用此函数可更新命令 UI 字符效果命令。
+框架调用此函数来更新字符效果命令的命令用户界面。
 
 ```
 void OnUpdateCharEffect(
@@ -985,27 +985,27 @@ void OnUpdateCharEffect(
 ### <a name="parameters"></a>参数
 
 *pCmdUI*<br/>
-指向[CCmdUI](../../mfc/reference/ccmdui-class.md)对象。
+指向[CCmdUI](../../mfc/reference/ccmdui-class.md)对象的指针。
 
 *dwMask*<br/>
-指示的字符格式设置掩码。
+指示字符格式掩码。
 
 *dwEffect*<br/>
-指示的字符格式设置的效果。
+指示字符格式设置效果。
 
 ### <a name="remarks"></a>备注
 
-掩码*dwMask*指定的字符要检查的格式设置属性。 标志*dwEffect*列出的字符格式设置属性组/清除。
+掩码*dwMask*指定要检查的字符格式设置特性。 Flags *dwEffect*列出要设置/清除的字符格式设置属性。
 
-有关详细信息*dwMask*并*dwEffect*参数及其可能值，请参阅的相应数据成员[CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) Windows SDK 中。
+有关*dwMask*和*dwEffect*参数及其潜在值的详细信息，请参阅 Windows SDK 中[CHARFORMAT](/windows/win32/api/richedit/ns-richedit-charformata)的对应数据成员。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFCDocView#158](../../mfc/codesnippet/cpp/cricheditview-class_8.cpp)]
 
-##  <a name="onupdateparaalign"></a>  CRichEditView::OnUpdateParaAlign
+##  <a name="onupdateparaalign"></a>CRichEditView：： OnUpdateParaAlign
 
-框架调用此函数可更新命令 UI 的段落效果命令。
+框架调用此函数来更新段落效果命令的命令 UI。
 
 ```
 void OnUpdateParaAlign(
@@ -1016,24 +1016,24 @@ void OnUpdateParaAlign(
 ### <a name="parameters"></a>参数
 
 *pCmdUI*<br/>
-指向[CCmdUI](../../mfc/reference/ccmdui-class.md)对象。
+指向[CCmdUI](../../mfc/reference/ccmdui-class.md)对象的指针。
 
 *wAlign*<br/>
 要检查的段落对齐方式。 以下值之一：
 
-- PFA_LEFT 对齐带有左边距段落。
+- PFA_LEFT 将段落与左边距对齐。
 
-- PFA_RIGHT 对齐带有右边距段落。
+- PFA_RIGHT 对齐段落和右边距。
 
-- PFA_CENTER 中心之间的边距的段落。
+- PFA_CENTER 使边距之间的段落居中。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFCDocView#159](../../mfc/codesnippet/cpp/cricheditview-class_9.cpp)]
 
-##  <a name="printinsiderect"></a>  CRichEditView::PrintInsideRect
+##  <a name="printinsiderect"></a>CRichEditView：:P rintInsideRect
 
-调用此函数可设置一系列中 rich edit 控件以适合文本的格式*rectLayout*为指定的设备*pDC*。
+调用此函数可在 rich edit 控件中设置文本范围的格式，使其适合*pDC*指定的设备的*rectLayout* 。
 
 ```
 long PrintInsideRect(
@@ -1047,35 +1047,35 @@ long PrintInsideRect(
 ### <a name="parameters"></a>参数
 
 *pDC*<br/>
-指向输出区的设备上下文指针。
+指向输出区域的设备上下文的指针。
 
 *rectLayout*<br/>
-[RECT](/windows/desktop/api/windef/ns-windef-tagrect)或[CRect](../../atl-mfc-shared/reference/crect-class.md)定义输出区域。
+[矩形](/windows/win32/api/windef/ns-windef-rect)或[CRect](../../atl-mfc-shared/reference/crect-class.md) ，定义输出区域。
 
 *nIndexStart*<br/>
-要设置格式的第一个字符的从零开始索引。
+要设置格式的第一个字符的从零开始的索引。
 
 *nIndexStop*<br/>
-要设置格式的最后一个字符的从零开始索引。
+要进行格式设置的最后一个字符的从零开始的索引。
 
 *bOutput*<br/>
-指示是否应呈现的文本。 如果为 FALSE，则只需度量文本。
+指示是否应呈现文本。 如果为 FALSE，则仅度量文本。
 
 ### <a name="return-value"></a>返回值
 
-适合在输出区域加 1 中的最后一个字符的索引。
+输出区域中的最后一个字符的索引加一。
 
 ### <a name="remarks"></a>备注
 
-通常情况下，此调用对的调用后面[CRichEditCtrl::DisplayBand](../../mfc/reference/cricheditctrl-class.md#displayband)这将生成的输出。
+通常，此调用后跟对[CRichEditCtrl：:D isplayband](../../mfc/reference/cricheditctrl-class.md#displayband)的调用，该调用生成输出。
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CRichEditView::GetPaperSize](#getpapersize)。
+  请参阅[CRichEditView：： GetPaperSize](#getpapersize)的示例。
 
-##  <a name="printpage"></a>  CRichEditView::PrintPage
+##  <a name="printpage"></a>CRichEditView：:P rintPage
 
-调用此函数可设置为指定的输出设备 rich edit 控件中的文本范围的格式*pDC*。
+调用此函数可为*pDC*指定的输出设备设置超文本编辑控件中的文本范围。
 
 ```
 long PrintPage(
@@ -1087,27 +1087,27 @@ long PrintPage(
 ### <a name="parameters"></a>参数
 
 *pDC*<br/>
-页面输出的设备上下文的指针。
+指向页面输出的设备上下文的指针。
 
 *nIndexStart*<br/>
-要设置格式的第一个字符的从零开始索引。
+要设置格式的第一个字符的从零开始的索引。
 
 *nIndexStop*<br/>
-要设置格式的最后一个字符的从零开始索引。
+要进行格式设置的最后一个字符的从零开始的索引。
 
 ### <a name="return-value"></a>返回值
 
-页面以及一个可以容纳的最后一个字符的索引。
+在页面上容纳的最后一个字符的索引。
 
 ### <a name="remarks"></a>备注
 
-由控制每个页的布局[GetPageRect](#getpagerect)并[GetPrintRect](#getprintrect)。 通常情况下，此调用对的调用后面[CRichEditCtrl::DisplayBand](../../mfc/reference/cricheditctrl-class.md#displayband)这将生成的输出。
+每页的布局由[GetPageRect](#getpagerect)和[GetPrintRect](#getprintrect)控制。 通常，此调用后跟对[CRichEditCtrl：:D isplayband](../../mfc/reference/cricheditctrl-class.md#displayband)的调用，该调用生成输出。
 
-请注意，边距相对于物理页，而不是在逻辑页面。 因此，为零的边距通常将剪辑文本，因为许多打印机有不可打印的页上的区域。 若要避免剪辑文本，应调用[SetMargins](#setmargins)和设置合理再进行打印边距。
+请注意，边距相对于物理页面，而不是逻辑页面。 因此，零的边距经常会剪裁文本，因为许多打印机在页面上都有不可打印的区域。 若要避免剪裁文本，应在打印之前调用[SetMargins](#setmargins)并设置合理的边距。
 
 ##  <a name="queryacceptdata"></a>  CRichEditView::QueryAcceptData
 
-由框架调用以将对象粘贴到文本编辑。
+由框架调用以将对象粘贴到丰富的编辑中。
 
 ```
 virtual HRESULT QueryAcceptData(
@@ -1121,37 +1121,37 @@ virtual HRESULT QueryAcceptData(
 ### <a name="parameters"></a>参数
 
 *lpdataobj*<br/>
-指向[IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject)查询。
+指向要查询的[IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject)的指针。
 
 *lpcfFormat*<br/>
-为可接受的数据格式的指针。
+指向可接受的数据格式的指针。
 
 *dwReco*<br/>
 未使用。
 
 *bReally*<br/>
-指示是否应继续粘贴操作，或不。
+指示粘贴操作是否应继续。
 
 *hMetaFile*<br/>
-用于绘制项的图标的图元文件句柄。
+用于绘制项的图标的图元文件的句柄。
 
 ### <a name="return-value"></a>返回值
 
-报告操作的成功的 HRESULT 值。
+报告操作成功的 HRESULT 值。
 
 ### <a name="remarks"></a>备注
 
-重写此函数来处理 COM 中的项派生的文档类不同的组织。 这是一种高级可重写。
+重写此函数可处理派生文档类中的不同 COM 项的组织。 这是一种高级的可重写。
 
-有关详细信息的 HRESULT 和`IDataObject`，请参阅[COM 错误代码的结构](/windows/desktop/com/structure-of-com-error-codes)并[IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject)分别，Windows SDK 中。
+有关 HRESULT 和`IDataObject`的详细信息，请参阅 Windows SDK 中的[COM 错误代码](/windows/win32/com/structure-of-com-error-codes)和[IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject)的结构。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFCDocView#160](../../mfc/codesnippet/cpp/cricheditview-class_10.cpp)]
 
-##  <a name="setcharformat"></a>  CRichEditView::SetCharFormat
+##  <a name="setcharformat"></a>CRichEditView：： SetCharFormat
 
-调用此函数可设置的字符格式设置在此新文本的特性`CRichEditView`对象。
+调用此函数可设置此`CRichEditView`对象中新文本的字符格式设置特性。
 
 ```
 void SetCharFormat(CHARFORMAT2 cf);
@@ -1160,21 +1160,21 @@ void SetCharFormat(CHARFORMAT2 cf);
 ### <a name="parameters"></a>参数
 
 *cf*<br/>
-[CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a)结构，它包含新的默认字符格式设置属性。
+包含新的默认字符格式设置属性的[CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w)结构。
 
 ### <a name="remarks"></a>备注
 
-指定的属性`dwMask`的成员*cf*更改此函数。
+此函数只更改`dwMask` *cf*成员指定的属性。
 
-有关详细信息，请参阅[EM_SETCHARFORMAT](/windows/desktop/Controls/em-setcharformat)消息并[CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) Windows SDK 中的结构。
+有关详细信息，请参阅 Windows SDK 中的[EM_SETCHARFORMAT](/windows/win32/Controls/em-setcharformat)消息和[CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w)结构。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFCDocView#152](../../mfc/codesnippet/cpp/cricheditview-class_2.cpp)]
 
-##  <a name="setmargins"></a>  CRichEditView::SetMargins
+##  <a name="setmargins"></a>CRichEditView：： SetMargins
 
-调用此函数可将此 rich edit 视图的打印边距设置。
+调用此函数可设置此 rich edit 视图的打印边距。
 
 ```
 void SetMargins(const CRect& rectMargin);
@@ -1183,21 +1183,21 @@ void SetMargins(const CRect& rectMargin);
 ### <a name="parameters"></a>参数
 
 *rectMargin*<br/>
-用于打印，新的边距值，以 MM_TWIPS 单位。
+用于打印的新边距值，以 MM_TWIPS 度量。
 
 ### <a name="remarks"></a>备注
 
-如果[m_nWordWrap](#m_nwordwrap)是`WrapToTargetDevice`，则应调用[WrapChanged](#wrapchanged)后使用此函数调整打印特性。
+如果[m_nWordWrap](#m_nwordwrap)为`WrapToTargetDevice`，则在使用此函数调整打印特征后，应调用[WrapChanged](#wrapchanged) 。
 
-请注意，通过使用边距[PrintPage](#printpage)相对于物理页上，而不是在逻辑页面。 因此，为零的边距通常将剪辑文本，因为许多打印机有不可打印的页上的区域。 若要避免剪辑文本，应调用使用`SetMargins`设置合理的打印机在打印前的边距。
+请注意， [system.drawing.printing.printdocument.printpage>](#printpage)使用的边距相对于物理页，而不是逻辑页。 因此，零的边距经常会剪裁文本，因为许多打印机在页面上都有不可打印的区域。 若要避免剪裁文本，应在打印之前`SetMargins`调用 "使用设置合理的打印机边距"。
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CRichEditView::GetPaperSize](#getpapersize)。
+  请参阅[CRichEditView：： GetPaperSize](#getpapersize)的示例。
 
-##  <a name="setpapersize"></a>  CRichEditView::SetPaperSize
+##  <a name="setpapersize"></a>CRichEditView：： SetPaperSize
 
-调用此函数可设置纸张大小的打印此 rich edit 视图。
+调用此函数可设置打印此富编辑视图的纸张大小。
 
 ```
 void SetPaperSize(CSize sizePaper);
@@ -1206,19 +1206,19 @@ void SetPaperSize(CSize sizePaper);
 ### <a name="parameters"></a>参数
 
 *sizePaper*<br/>
-用于打印，新的纸张大小值，以 MM_TWIPS 单位。
+用于打印的新纸张大小值，以 MM_TWIPS 度量。
 
 ### <a name="remarks"></a>备注
 
-如果[m_nWordWrap](#m_nwordwrap)是`WrapToTargetDevice`，则应调用[WrapChanged](#wrapchanged)后使用此函数调整打印特性。
+如果[m_nWordWrap](#m_nwordwrap)为`WrapToTargetDevice`，则在使用此函数调整打印特征后，应调用[WrapChanged](#wrapchanged) 。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFCDocView#161](../../mfc/codesnippet/cpp/cricheditview-class_11.cpp)]
 
-##  <a name="setparaformat"></a>  CRichEditView::SetParaFormat
+##  <a name="setparaformat"></a>CRichEditView：： SetParaFormat
 
-调用此函数可设置段落格式设置当前选定内容中此特性`CRichEditView`对象。
+调用此函数可设置此`CRichEditView`对象中当前选定内容的段落格式特性。
 
 ```
 BOOL SetParaFormat(PARAFORMAT2& pf);
@@ -1227,25 +1227,25 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 ### <a name="parameters"></a>参数
 
 *pf*<br/>
-[PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2)结构，它包含新的默认段落格式设置属性。
+[PARAFORMAT2](/windows/win32/api/richedit/ns-richedit-paraformat2)结构，其中包含新的默认段落格式特性。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则非零值否则为为 0。
+如果成功，则为非零值;否则为0。
 
 ### <a name="remarks"></a>备注
 
-指定的属性`dwMask`的成员*pf*更改此函数。
+此函数只更改由`dwMask` *pf*的成员指定的属性。
 
-有关详细信息，请参阅[EM_SETPARAFORMAT](/windows/desktop/Controls/em-setparaformat)消息并[PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) Windows SDK 中的结构。
+有关详细信息，请参阅 Windows SDK 中的[EM_SETPARAFORMAT](/windows/win32/Controls/em-setparaformat)消息和[PARAFORMAT2](/windows/win32/api/richedit/ns-richedit-paraformat2)结构。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFCDocView#162](../../mfc/codesnippet/cpp/cricheditview-class_12.cpp)]
 
-##  <a name="textnotfound"></a>  CRichEditView::TextNotFound
+##  <a name="textnotfound"></a>CRichEditView：： TextNotFound
 
-调用此函数的内部搜索状态重置[CRichEditView](../../mfc/reference/cricheditview-class.md)后的失败调用控制[FindText](#findtext)。
+调用此函数可在调用[FindText](#findtext)后重置[CRichEditView](../../mfc/reference/cricheditview-class.md)控件的内部搜索状态。
 
 ```
 void TextNotFound(LPCTSTR lpszFind);
@@ -1254,21 +1254,21 @@ void TextNotFound(LPCTSTR lpszFind);
 ### <a name="parameters"></a>参数
 
 *lpszFind*<br/>
-包含找不到的文本字符串。
+包含未找到的文本字符串。
 
 ### <a name="remarks"></a>备注
 
-建议的失败调用后立即调用此方法[FindText](#findtext) ，以便正确重置控件的内部搜索状态。
+建议在调用[FindText](#findtext)之后立即调用此方法，以便正确重置控件的内部搜索状态。
 
-*LpszFind*参数应包含相同的内容作为字符串提供给[FindText](#findtext)。 重置后内部搜索状态，此方法将调用[OnTextNotFound](#ontextnotfound)方法使用提供的搜索字符串。
+*LpszFind*参数应包含与提供给[FindText](#findtext)的字符串相同的内容。 重置内部搜索状态后，此方法将调用具有所提供的搜索字符串的[OnTextNotFound](#ontextnotfound)方法。
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CRichEditView::FindText](#findtext)。
+  请参阅[CRichEditView：： FindText](#findtext)的示例。
 
-##  <a name="wrapchanged"></a>  CRichEditView::WrapChanged
+##  <a name="wrapchanged"></a>CRichEditView：： WrapChanged
 
-打印特性已更改时调用此函数 ( [SetMargins](#setmargins)或[SetPaperSize](#setpapersize))。
+当打印特征发生更改时调用此函数（ [SetMargins](#setmargins)或[SetPaperSize](#setpapersize)）。
 
 ```
 virtual void WrapChanged();
@@ -1276,7 +1276,7 @@ virtual void WrapChanged();
 
 ### <a name="remarks"></a>备注
 
-重写此函数可修改丰富的编辑视图的方式响应变化[m_nWordWrap](#m_nwordwrap)或打印的特征 ( [OnPrinterChanged](#onprinterchanged))。
+重写此函数以修改 rich edit 视图响应[m_nWordWrap](#m_nwordwrap)或打印特征（ [OnPrinterChanged](#onprinterchanged)）的更改的方式。
 
 ### <a name="example"></a>示例
 

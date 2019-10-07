@@ -1,6 +1,6 @@
 ---
 title: /Zc:inline（移除未引用的 COMDAT）
-ms.date: 03/01/2018
+ms.date: 09/05/2019
 f1_keywords:
 - /Zc:inline
 - VC.Project.VCCLCompilerTool.RemoveUnreferencedCodeData
@@ -10,32 +10,32 @@ helpviewer_keywords:
 - Zc compiler options (C++)
 - /Zc:inline
 ms.assetid: a4c94224-1d73-4bea-a9d5-4fa73dc924df
-ms.openlocfilehash: 06bdb3300aae88c6c4c8f7e66af658f47548ac5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0c0d9a4e5e5f52d239f1a8591006b3d9e369778
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316049"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740111"
 ---
 # <a name="zcinline-remove-unreferenced-comdat"></a>/Zc:inline（移除未引用的 COMDAT）
 
-移除为 COMDAT 或只具有内部链接的未引用函数或数据。 当 **/zc: inline**指定，则编译器会要求使用内联数据或内联函数的翻译单元还必须包括数据或函数的定义。
+移除为 COMDAT 或只具有内部链接的未引用函数或数据。 指定 **/zc： inline**后，编译器要求使用内联数据或内联函数的翻译单元也必须包含数据或函数的定义。
 
 ## <a name="syntax"></a>语法
 
-> **/Zc:inline**[**-**]
+> **/Zc:inline**[ **-** ]
 
 ## <a name="remarks"></a>备注
 
-当 **/zc: inline**指定，则编译器不会发出符号信息的未引用的 COMDAT 函数或数据，或只具有内部链接的函数或数据。 此优化将简化某些发布版本中，链接器所执行的工作时，或者当链接器选项[/opt: ref](opt-optimizations.md)指定。 编译器执行此优化后，可显著减小 .obj 文件大小并提高链接器速度。 当禁用优化未启用此编译器选项 ([/Od](od-disable-debug.md))，或者当[/GL （全程序优化）](gl-whole-program-optimization.md)指定。
+指定 **/zc： inline**后，编译器不会为未引用的 COMDAT 函数或数据发出符号信息，也不会为仅具有内部链接的函数或数据发出符号信息。 此优化简化了发布版本中的链接器执行的某些工作，或在指定链接器选项[/opt： REF](opt-optimizations.md)时执行的工作。 编译器执行此优化后，可显著减小 .obj 文件大小并提高链接器速度。 如果已禁用优化（[/od](od-disable-debug.md)）或指定了[/Gl （全程序优化）](gl-whole-program-optimization.md) ，则不启用此编译器选项。
 
-默认情况下，此选项处于关闭状态 (**/Zc:inline-**)。 [触发-](permissive-standards-conformance.md)选项不会启用 **/zc: inline**。
+默认情况下，在命令行生成中，此选项处于关闭状态（ **/zc： inline**）。 [/Permissive-](permissive-standards-conformance.md)选项不启用 **/zc： inline**。 在 MSBuild 项目中，选项由**配置属性** >  > **C/C++** **语言** > "**删除未引用的代码和数据**属性" 设置，该属性设置为 **"是"** 。缺省值.
 
-如果 **/zc: inline**编译器强制执行 C + + 11 要求所有函数声明的指定`inline`必须具有可用在同一个翻译单元中的定义，如果使用了这些。 Microsoft 编译器时不指定该选项，允许调用声明的函数的不符合规范代码`inline`即使没有定义是否可见。 有关详细信息，请参阅 3.2 节和 7.1.2 节中的 C++11 标准。 Visual Studio 2013 Update 2 中引入了此编译器选项。
+如果指定了 **/zc： inline** ，则编译器强制执行 c + + 11 要求，如果`inline`所声明的所有函数都必须具有相同翻译单元中可用的定义，则为。 如果未指定选项，则 Microsoft 编译器允许不符合标准的代码，该代码可调用`inline`即使没有可见定义也声明的函数。 有关详细信息，请参阅 3.2 节和 7.1.2 节中的 C++11 标准。 Visual Studio 2013 Update 2 中引入了此编译器选项。
 
-若要使用 **/zc: inline**选项，更新不符合标准代码。
+若要使用 **/zc： inline**选项，请更新不兼容的代码。
 
-此示例演示如何将不符合标准没有定义的内联函数声明仍将编译并链接时默认值 **/Zc:inline-** 使用选项：
+此示例演示当使用默认 **/zc： inline**选项时，不符合定义的内联函数声明的不符合使用情况仍会进行编译和链接：
 
 ```cpp
 // example.h
@@ -77,7 +77,7 @@ void main() {
 }
 ```
 
-当 **/zc: inline**已启用，相同的代码会导致[LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)错误，因为编译器不会发出非内联代码体`Example::inline_call`在 example.obj 中发出。这会导致 `main` 中的非内联调用以引用未定义的外部符号。
+当 **/zc： inline**处于启用状态时，相同的代码会导致[LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)错误，因为编译器不会`Example::inline_call`在示例 .obj 中发出非内联代码体。这会导致 `main` 中的非内联调用以引用未定义的外部符号。
 
 若要解决此错误，可从 `inline` 的声明中移除 `Example::inline_call` 关键字、将 `Example::inline_call` 的定义移到头文件中，或将 `Example` 的实现移到 main.cpp 中。 下一个示例将定义移到头文件中，其中该定义对包含该头文件的所有调用方都可见。
 
@@ -123,11 +123,11 @@ void main() {
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页” 对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择**配置属性** > **C /C++** > **语言**属性页。
+1. 选择 "**配置属性** > " " > **C/C++** **语言**" 属性页。
 
-1. 修改**删除未引用的代码和数据**属性，然后选择**确定**。
+1. 修改 "**删除未引用的代码和数据**" 属性，然后选择 **"确定"** 。
 
 ## <a name="see-also"></a>请参阅
 

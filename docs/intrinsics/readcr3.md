@@ -1,27 +1,27 @@
 ---
 title: __readcr3
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __readcr3
 helpviewer_keywords:
 - __readcr3 intrinsic
 ms.assetid: e24392c3-cad7-4788-8f31-94bf2e9e0053
-ms.openlocfilehash: 8b5839d233154b6ddb69d2bbe0b13497c3b66305
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b03ff46fabc99839d9c0bbd5c72e1b76d25814c0
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396530"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221261"
 ---
-# <a name="readcr3"></a>__readcr3
+# <a name="__readcr3"></a>__readcr3
 
 **Microsoft 专用**
 
-读取 CR3 寄存器并返回其值。
+读取 CR3 注册并返回其值。
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 unsigned __int64 __readcr3(void);
 ```
 
@@ -35,11 +35,11 @@ CR3 寄存器中的值。
 |---------------|------------------|
 |`__readcr3`|x86、x64|
 
-**标头文件** \<intrin.h >
+**标头文件**\<intrin.h >
 
 ## <a name="remarks"></a>备注
 
-此内部函数只在内核模式下可用，例程只能用作内部函数。
+内部函数仅在内核模式下可用, 且例程仅可用作内部函数。
 
 **结束 Microsoft 专用**
 

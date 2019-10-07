@@ -1,18 +1,18 @@
 ---
-title: Microsoft C++ 语言符合性表
-ms.date: 07/02/2019
+title: Microsoft C++ 语言一致性表
+ms.date: 08/12/2019
 ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 2b5d7774734eae992935af9bd4abd408dd387d7d
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.openlocfilehash: 17ed76551102653e2f05e9731834f4787198db49
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552364"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631647"
 ---
-# <a name="microsoft-c-language-conformance-table"></a>Microsoft C++ 语言符合性表
+# <a name="microsoft-c-language-conformance-table"></a>Microsoft C++ 语言一致性表
 
 本主题总结了 Visual Studio 2019 及更低版本中 Microsoft C++ 编译器的编译器功能和标准库功能的 ISO C++03、C++11、C++14、C++17 和 C++20 语言标准符合性。 每个编译器和标准库功能名称都可链接到介绍该功能的 ISO C++ 标准建议文章（如果在发布时可用）。 “支持”列中列出了首次出现在其中并支持该功能的 Visual Studio 版本。
 
@@ -23,14 +23,14 @@ ms.locfileid: "67552364"
 
 ## <a name="compiler-features"></a>编译器功能
 
-|功能区域| |
+| | |
 |----|---|
 |__C++03/11 核心语言功能__|__支持__|
 |&nbsp;&nbsp;其他所有内容|VS 2015 <sup>[A](#note_A)</sup>|
 |&nbsp;&nbsp;两阶段名称查找|VS 2017 15.7 <sup>[B](#note_B)</sup>|
 |&nbsp;&nbsp;[N2634 表达式 SFINAE](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2008/n2634.html)|VS 2017 15.7|
 |&nbsp;&nbsp;[N1653 C99 预处理器](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2004/n1653.htm)|部分 <sup>[C](#note_C)</sup>|
-|__C++ 14 核心语言功能__|__支持__|
+|__C++14 核心语言功能__|__支持__|
 |&nbsp;&nbsp;[N3323 上下文转换的已调整 wording](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3323.pdf)|VS 2013|
 |&nbsp;&nbsp;[N3472 二进制文本](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3472.pdf)|VS 2015|
 |&nbsp;&nbsp;[N3638 auto 和 decltype(auto) 返回类型](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3638.html)|VS 2015|
@@ -42,7 +42,7 @@ ms.locfileid: "67552364"
 |&nbsp;&nbsp;[N3651 变量模板](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3651.pdf)|VS 2015.2|
 |&nbsp;&nbsp;[N3652 扩展的 constexpr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3652.html)|VS 2017 15.0|
 |&nbsp;&nbsp;[N3653 用于聚合的默认成员初始值设定项](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3653.html)|VS 2017 15.0|
-|__C++ 17 核心语言功能__|__支持__|
+|__C++17 核心语言功能__|__支持__|
 |&nbsp;&nbsp;[N4086 删除三字符组](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4086.html)|VS 2010 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[N3922 针对自动使用大括号内的初始值设定项列表的新建规则](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3922.html)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[N4051 模板-参数模板的类型名称](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4051.html)|VS 2015 <sup>[14](#note_14)</sup>|
@@ -83,10 +83,6 @@ ms.locfileid: "67552364"
 |&nbsp;&nbsp;[P0145R3 改进表达式计算顺序](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0145r3.pdf)<br/>&nbsp;&nbsp;[P0400R0 函数参数的计算顺序](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0400r0.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0195R2 using 声明中的包扩展](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0195r2.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0283R2 忽略无法识别的属性](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0283r2.html)|VS 2015 <sup>[14](#note_14)</sup>|
-
-
-|功能区域| |
-|----|---|
 |__C++17 核心语言功能（缺陷报告）__|__支持__|
 |&nbsp;&nbsp;[P0702R1 修复 initializer-list ctor 的类模板参数推导](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0702r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0961R1 放宽结构化绑定自定义点查找规则](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0961r1.html)|VS 2019 16.0 <sup>[17](#note_17)</sup>|
@@ -96,15 +92,11 @@ ms.locfileid: "67552364"
 |&nbsp;&nbsp;[P0929R2 检查是否有抽象类类型](https://wg21.link/P0929R2)|No|
 |&nbsp;&nbsp;[P1009R2 new 表达式中的数组大小推导](https://wg21.link/P1009R2)|No|
 |&nbsp;&nbsp;[P1286R2 协定 CWG DR1778](https://wg21.link/P1286R2)|No|
-|功能区域| |
-|----|---|
 |__C++20 核心语言功能__|__支持__|
 |&nbsp;&nbsp;[P0704R1 修复指向成员的 const 左值引用限定的指针](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0704r1.html)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P1041R4 将 char16_t/char32_t 字符串文本设为 UTF-16/32](https://wg21.link/P1041R4)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P1330R0 在常量表达式内更改联合的活动成员](https://wg21.link/P1330R0)|VS 2017 15.0 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P0972R0 用于 \<chrono> zero()、min()、max() 的 noexcept](https://wg21.link/P0972R0)|VS 2017 15.7 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0515R3 三向（太空船）比较运算符 <=>](https://wg21.link/P0515R3)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
-|&nbsp;&nbsp;[P1008R1 禁止聚合包含用户声明的构造函数](https://wg21.link/P1008R1)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0329R4 指定的初始化](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0329r4.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0409R2 允许 lambda 捕获 \[=, this\]](http://open-std.org/JTC1/SC22/WG21/docs/papers/2017/p0409r2.html)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0515R3 三向（太空船）比较运算符 <=>](https://wg21.link/P0515R3)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
@@ -114,7 +106,6 @@ ms.locfileid: "67552364"
 |&nbsp;&nbsp;[P0641R2 常量与默认复制构造函数不匹配](https://wg21.link/P0641R2)|部分|
 |&nbsp;&nbsp;[P0306R4 添加 \_\_VA_OPT\_\_ 用于逗号省略和逗号删除](https://wg21.link/P0306R4)|No|
 |&nbsp;&nbsp;[P0315R4 允许在未求值的上下文中使用 lambda](https://wg21.link/P0315R4)|No|
-|&nbsp;&nbsp;[P0409R2 允许 lambda 捕获 \[=, this\]](https://wg21.link/P0409R2)|No|
 |&nbsp;&nbsp;[P0428R2 泛型 lambda 的熟悉模板语法](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0428r2.pdf)|No|
 |&nbsp;&nbsp;[P0479R5 \[\[likely\]\] 和 \[\[unlikely\]\] 属性](https://wg21.link/P0479R5)|No|
 |&nbsp;&nbsp;[P0542R5 协定](https://wg21.link/P0542R5)|No|
@@ -153,7 +144,7 @@ ms.locfileid: "67552364"
 
 ## <a name="standard-library-features"></a>标准库功能
 
-|功能区域| |
+| | |
 |---|---|
 |__C++20 标准库功能__|__支持__|
 |&nbsp;&nbsp;[P0809R0 比较无序容器](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0809r0.pdf)| VS 2010 <sup>[14](#note_14)</sup>|
@@ -357,7 +348,7 @@ __VS 2017 15.7__ 表示 Visual Studio 2017 15.7 版中支持的功能。<br/>
 
 <a name="note_C"></a>__C__：编译器对 C99 预处理器规则的支持在 Visual Studio 2017 中不完整。 Variadic 宏受支持，但预处理器的行为存在很多 Bug。 我们正在修改预处理器，并且很快将在 [/permissive-](../build/reference/permissive-standards-conformance.md) 模式下发布实验版的改进内容。
 
-<a name="note_D"></a>__D__：在 [/std:c++14](../build/reference/std-specify-language-standard-version.md) 下受支持，并且出现可取消的警告 C4984。
+<a name="note_D"></a>__D__：在 [/std:c++14](../build/reference/std-specify-language-standard-version.md) 下受支持，并且出现可取消的警告 [C4984](../error-messages/compiler-warnings/compiler-warning-c4984.md)。
 
 <a name="note_E"></a>__E__：此为全新实现，与之前的 `std::experimental` 版本不兼容，这对符号链接支持、bug 修复以及更改必须符合标准的行为而言是必不可少的。 目前，添加 \<filesystem> 可提供新 `std::filesystem` 和旧 `std::experimental::filesystem`，而添加 \<experimental/filesystem> 则仅提供旧实验性实现。 在下一突破性 ABI 版本的库中，实验性实现将会被删除。
 

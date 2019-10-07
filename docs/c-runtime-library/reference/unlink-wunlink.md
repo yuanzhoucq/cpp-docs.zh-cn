@@ -1,10 +1,10 @@
 ---
 title: _unlink、_wunlink
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _unlink
 - _wunlink
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tunlink
 - _unlink
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - files [C++], removing
 - _tunlink function
 ms.assetid: 5e4f5f1b-1e99-4391-9b18-9ac63c32fae8
-ms.openlocfilehash: ec59a02f1302fe4a2149889cf1b48090d061d6b2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 878a1b4aa009bc8528dfac1908ed26c7e3b269ae
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62268767"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957394"
 ---
-# <a name="unlink-wunlink"></a>_unlink、_wunlink
+# <a name="_unlink-_wunlink"></a>_unlink、_wunlink
 
 删除文件。
 
@@ -61,13 +64,13 @@ int _wunlink(
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则这些函数均返回 0。 否则，该函数返回-1 并设置**errno**到**EACCES**，表示路径指定只读文件或目录，或设置为**ENOENT**，这意味着，文件或路径未找到。
+如果成功，则这些函数均返回 0。 否则，该函数将返回-1 并将**errno**设置为**EACCES**，这意味着路径指定了只读文件或目录，或**ENOENT**，这意味着找不到文件或路径。
 
 有关这些代码以及其他返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**_Unlink**函数将删除指定的文件*filename*。 **_wunlink**是宽字符版本 **_unlink**; *filename*参数 **_wunlink**是宽字符字符串。 否则这些函数具有相同行为。
+**_Unlink**函数删除*filename*指定的文件。 **_wunlink**是 **_unlink**的宽字符版本; **_wunlink**的*filename*参数是宽字符字符串。 否则这些函数具有相同行为。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -102,7 +105,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crtunlinktxt"></a>输入：crt_unlink.txt
+### <a name="input-crt_unlinktxt"></a>输入：crt_unlink.txt
 
 ```Input
 This file will be deleted.

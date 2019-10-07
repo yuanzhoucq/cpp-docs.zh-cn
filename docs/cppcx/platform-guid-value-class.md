@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Guid Struct
 ms.assetid: 25c0bfb2-7f93-44d8-bdf4-ef4fbac3424a
-ms.openlocfilehash: 8d6c71028e4f93064c7b4df978678b5f7c26d6bc
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: f63b2bb4fd5f809861622a4f6b255ee3725564b6
+ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504523"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816593"
 ---
 # <a name="platformguid-value-class"></a>Platform::Guid 值类
 
-代表 Windows 运行时类型系统中的 [GUID](/previous-versions/aa373931\(v=vs.80\)) 类型。
+代表 Windows 运行时类型系统中的 [GUID](/previous-versions/cc317743(v%3dmsdn.10)) 类型。
 
 ## <a name="syntax"></a>语法
 
@@ -26,7 +26,7 @@ public value struct Guid
 
 ### <a name="members"></a>成员
 
-`Platform::Guid` 具有`Equals()`， `GetHashCode()`，并`ToString()`方法派生自[platform:: object 类](../cppcx/platform-object-class.md)，并且`GetTypeCode()`方法派生自[platform:: type 类](../cppcx/platform-type-class.md)。 `Platform::Guid` 此外具有以下成员。
+@no__t 的 @no__t 具有从[platform：： Object 类](../cppcx/platform-object-class.md)派生的1、`GetHashCode()` 和 @no__t 3 方法，以及派生自[Platform：： Type 类](../cppcx/platform-type-class.md)的 `GetTypeCode()` 方法。 `Platform::Guid` 也具有以下成员。
 
 |成员|描述|
 |------------|-----------------|
@@ -38,7 +38,7 @@ public value struct Guid
 
 ### <a name="remarks"></a>备注
 
-若要生成一个新`Platform::Guid`，使用[Windows::Foundation::GuidHelper::CreateNewGuid](/uwp/api/windows.foundation.guidhelper.createnewguid#Windows_Foundation_GuidHelper_CreateNewGuid)静态方法。
+若要生成新的 `Platform::Guid`，请使用[Windows：： Foundation：： GuidHelper：： CreateNewGuid](/uwp/api/windows.foundation.guidhelper.createnewguid#Windows_Foundation_GuidHelper_CreateNewGuid)静态方法。
 
 ### <a name="requirements"></a>要求
 
@@ -50,7 +50,7 @@ public value struct Guid
 
 **元数据：** platform.winmd
 
-## <a name="ctor"></a> Guid:: guid 构造函数
+## <a name="ctor"></a>Guid：： Guid 构造函数
 
 初始化 `Platform::Guid` 的新实例。
 
@@ -79,48 +79,48 @@ Guid(
     Array<unsigned char>^ n );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>Parameters
 
 *a*<br/>
-前 4 个字节的`GUID`。
+@No__t 的前4个字节。
 
 *b*<br/>
-接下来的 2 个字节的`GUID`。
+@No__t 的下2个字节。
 
 *c*<br/>
-接下来的 2 个字节的`GUID`。
+@No__t 的下2个字节。
 
 *d*<br/>
-下一个字节`GUID`。
+@No__t 的下一个字节。
 
 *e*<br/>
-下一个字节`GUID`。
+@No__t 的下一个字节。
 
 *f*<br/>
-下一个字节`GUID`。
+@No__t 的下一个字节。
 
 *g*<br/>
-下一个字节`GUID`。
+@No__t 的下一个字节。
 
 *h*<br/>
-下一个字节`GUID`。
+@No__t 的下一个字节。
 
 *i*<br/>
-下一个字节`GUID`。
+@No__t 的下一个字节。
 
 *j*<br/>
-下一个字节`GUID`。
+@No__t 的下一个字节。
 
 *k*<br/>
-下一个字节`GUID`。
+@No__t 的下一个字节。
 
 *m*<br/>
-一个`GUID`形式[GUID 结构](/previous-versions/aa373931\(v=vs.80\))。
+形式为的 @no__t 0，格式为[GUID 结构](/previous-versions/cc317743(v%3dmsdn.10))。
 
 *n*<br/>
-其余 8 个字节`GUID`。
+@No__t 的其余8个字节。
 
-## <a name="operator-equality"></a> Guid::operator = = 运算符
+## <a name="operator-equality"></a>Guid：： operator = = 运算符
 
 比较两个 `Platform::Guid` 实例是否相等。
 
@@ -130,7 +130,7 @@ Guid(
 static bool Platform::Guid::operator==(Platform::Guid guid1, Platform::Guid guid2);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>Parameters
 
 *guid1*<br/>
 要比较的第一个 `Platform::Guid`。
@@ -140,15 +140,15 @@ static bool Platform::Guid::operator==(Platform::Guid guid1, Platform::Guid guid
 
 ### <a name="return-value"></a>返回值
 
-如果两个`Platform::Guid`实例是否相等。
+如果两个 `Platform::Guid` 实例相等，则为 True。
 
 ### <a name="remarks"></a>备注
 
-更倾向于使用`==`而不是运算符[Windows::Foundation::GuidHelper::Equals](/uwp/api/windows.foundation.guidhelper.equals)静态方法。
+首选使用 `==` 运算符而不是[Windows：： Foundation：： GuidHelper：： Equals](/uwp/api/windows.foundation.guidhelper.equals)静态方法。
 
-## <a name="operator-inequality"></a> Guid::operator ！ = 运算符
+## <a name="operator-inequality"></a>Guid：： operator！ = 运算符
 
-比较两个`Platform::Guid`实例是否不相等。
+比较两个 @no__t 0 个实例是否不相等。
 
 ### <a name="syntax"></a>语法
 
@@ -156,7 +156,7 @@ static bool Platform::Guid::operator==(Platform::Guid guid1, Platform::Guid guid
 static bool Platform::Guid::operator!=(Platform::Guid guid1, Platform::Guid guid2);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>Parameters
 
 *guid1*<br/>
 要比较的第一个 `Platform::Guid`。
@@ -166,11 +166,11 @@ static bool Platform::Guid::operator!=(Platform::Guid guid1, Platform::Guid guid
 
 ### <a name="return-value"></a>返回值
 
-如果两个`Platform::Guid`实例是否不相等。
+如果两个 `Platform::Guid` 实例不相等，则为 True。
 
-## <a name="operator-less"></a> Guid::operator&lt;运算符
+## <a name="operator-less"></a>Guid：： operator @ no__t-1 运算符
 
-比较两个`Platform::Guid`实例进行排序。
+比较两个 @no__t 0 个实例进行排序。
 
 ### <a name="syntax"></a>语法
 
@@ -178,7 +178,7 @@ static bool Platform::Guid::operator!=(Platform::Guid guid1, Platform::Guid guid
 static bool Platform::Guid::operator<(Platform::Guid guid1, Platform::Guid guid2);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>Parameters
 
 *guid1*<br/>
 要比较的第一个 `Platform::Guid`。
@@ -188,13 +188,13 @@ static bool Platform::Guid::operator<(Platform::Guid guid1, Platform::Guid guid2
 
 ### <a name="return-value"></a>返回值
 
-则为 true *guid1*进行排序之前*guid2*。 将每个后的顺序是按字典顺序`Platform::Guid`像它是四个 32 位无符号值的数组。 这不是由 SQL Server 或.NET Framework 中，使用的顺序也不是按字典编辑顺序排序的字符串表示形式相同。
+如果在*guid2*之前对*guid1*进行排序，则为 True。 将每个 @no__t 视为 4 32 位无符号值的数组之后，排序将为字典。 这并不是 SQL Server 或 .NET Framework 使用的顺序，也不是按字符串表示形式按字典排序的顺序。
 
-提供此运算符，以便`Guid`对象可以更轻松地使用C++标准库。
+提供此运算符是为了使C++标准库能够更轻松地使用 `Guid` 对象。
 
-## <a name="operator-call"></a> Guid::operator() 运算符
+## <a name="operator-call"></a>Guid：： operator （）运算符
 
-将隐式转换`Platform::Guid`到[GUID 结构](/previous-versions/aa373931\(v=vs.80\))。
+将 @no__t 0 隐式转换为[GUID 结构](/previous-versions/cc317743(v%3dmsdn.10))。
 
 ### <a name="syntax"></a>语法
 
@@ -204,7 +204,7 @@ const GUID& Platform::Guid::operator();
 
 ### <a name="return-value"></a>返回值
 
-一个[GUID 结构](/previous-versions/aa373931\(v=vs.80\))。
+[GUID 结构](/previous-versions/cc317743(v%3dmsdn.10))。
 
 ## <a name="see-also"></a>请参阅
 

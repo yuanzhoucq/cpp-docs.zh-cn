@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetFile [MFC], WriteString
 - CInternetFile [MFC], m_hFile
 ms.assetid: 96935681-ee71-4a8d-9783-5abc7b3e6f10
-ms.openlocfilehash: facd1c10781546fc692e8896e463d70637a33630
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 68a0a0f35d1a1f4519401080f9f207bf76c87079
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503486"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505901"
 ---
 # <a name="cinternetfile-class"></a>CInternetFile 类
 
@@ -53,7 +53,7 @@ class CInternetFile : public CStdioFile
 
 ### <a name="protected-constructors"></a>受保护的构造函数
 
-|名称|描述|
+|name|描述|
 |----------|-----------------|
 |[CInternetFile::CInternetFile](#cinternetfile)|构造 `CInternetFile` 对象。|
 
@@ -61,23 +61,23 @@ class CInternetFile : public CStdioFile
 
 |名称|描述|
 |----------|-----------------|
-|[CInternetFile::Abort](#abort)|关闭该文件，忽略所有警告和错误。|
-|[CInternetFile::Close](#close)|关闭`CInternetFile`并释放其资源。|
-|[CInternetFile::Flush](#flush)|刷新写入缓冲区的内容，并确保内存中的数据写入到目标计算机。|
+|[CInternetFile::Abort](#abort)|关闭文件，忽略所有警告和错误。|
+|[CInternetFile::Close](#close)|`CInternetFile`关闭并释放其资源。|
+|[CInternetFile::Flush](#flush)|刷新写入缓冲区的内容，确保内存中的数据写入目标计算机。|
 |[CInternetFile::GetLength](#getlength)|返回文件的大小。|
-|[CInternetFile::Read](#read)|读取指定的字节数。|
-|[CInternetFile::ReadString](#readstring)|读取字符的流。|
-|[CInternetFile::Seek](#seek)|在打开的文件指针重新定位。|
-|[CInternetFile::SetReadBufferSize](#setreadbuffersize)|设置要从中读取数据的缓冲区的大小。|
-|[CInternetFile::SetWriteBufferSize](#setwritebuffersize)|设置缓冲区的大小将在其中写入数据。|
-|[CInternetFile::Write](#write)|写入指定的字节数。|
-|[CInternetFile::WriteString](#writestring)|以 null 结尾的字符串写入文件。|
+|[CInternetFile::Read](#read)|读取指定字节数。|
+|[CInternetFile::ReadString](#readstring)|读取字符流。|
+|[CInternetFile::Seek](#seek)|重新定位打开文件中的指针。|
+|[CInternetFile::SetReadBufferSize](#setreadbuffersize)|设置将读取数据的缓冲区的大小。|
+|[CInternetFile::SetWriteBufferSize](#setwritebuffersize)|设置将写入数据的缓冲区的大小。|
+|[CInternetFile::Write](#write)|写入指定字节数。|
+|[CInternetFile::WriteString](#writestring)|将以 null 结尾的字符串写入文件。|
 
 ### <a name="public-operators"></a>公共运算符
 
 |名称|描述|
 |----------|-----------------|
-|[CInternetFile::operator HINTERNET](#operator_hinternet)|Internet 句柄的的强制转换运算符。|
+|[CInternetFile：： operator HINTERNET](#operator_hinternet)|Internet 句柄的转换运算符。|
 
 ### <a name="protected-data-members"></a>受保护的数据成员
 
@@ -87,11 +87,11 @@ class CInternetFile : public CStdioFile
 
 ## <a name="remarks"></a>备注
 
-提供了基类的类[CHttpFile](../../mfc/reference/chttpfile-class.md)并[CGopherFile](../../mfc/reference/cgopherfile-class.md)文件类。 永远不会创建`CInternetFile`直接对象。 相反，通过调用创建的对象及其派生类之一[CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile)或[chttpconnection::](../../mfc/reference/chttpconnection-class.md#openrequest)。 您还可以创建`CInternetFile`对象通过调用[CFtpConnection::OpenFile](../../mfc/reference/cftpconnection-class.md#openfile)。
+提供[CHttpFile](../../mfc/reference/chttpfile-class.md)和[CGopherFile](../../mfc/reference/cgopherfile-class.md)文件类的基类。 永远不会直接`CInternetFile`创建对象。 而是通过调用[CGopherConnection：： OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile)或[CHttpConnection：： OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest)来创建其派生类之一的对象。 还可以通过调用`CInternetFile` [CFtpConnection：： OpenFile](../../mfc/reference/cftpconnection-class.md#openfile)来创建对象。
 
-`CInternetFile`成员函数`Open`， `LockRange`， `UnlockRange`，并`Duplicate`未实现的`CInternetFile`。 如果你对调用这些函数`CInternetFile`对象，则将会出现[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)。
+`LockRange` `Open` `UnlockRange` `Duplicate`不为`CInternetFile` 实现的成员函数`CInternetFile`、、和。 如果在`CInternetFile`对象上调用这些函数，则将获得一个[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)。
 
-若要详细了解如何`CInternetFile`适用于其他 MFC Internet 类，请参阅文章[Internet 编程与 WinInet](../../mfc/win32-internet-extensions-wininet.md)。
+若要了解有关如何`CInternetFile`使用其他 MFC Internet 类的详细信息，请参阅文章[使用 WinInet 进行 Internet 编程](../../mfc/win32-internet-extensions-wininet.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -105,11 +105,11 @@ class CInternetFile : public CStdioFile
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxinet.h
+**标头：** afxinet。h
 
-##  <a name="abort"></a>  CInternetFile::Abort
+##  <a name="abort"></a>CInternetFile：： Abort
 
-关闭与此对象关联的文件，并使该文件进行读取或写入不可用。
+关闭与此对象关联的文件，并使该文件不可用于读取或写入。
 
 ```
 virtual void Abort();
@@ -117,13 +117,13 @@ virtual void Abort();
 
 ### <a name="remarks"></a>备注
 
-如果您未销毁对象之前关闭该文件，析构函数将关闭它。
+如果在销毁对象之前未关闭文件，析构函数将关闭该文件。
 
-在处理异常时,`Abort`不同于[关闭](#close)在两个重要方面。 首先，`Abort`因为它会忽略故障函数不会在失败引发异常。 第二个，`Abort`却不**ASSERT**如果文件未打开或以前已关闭。
+在处理异常时`Abort` ，与[关闭](#close)在两个重要方面有所不同。 首先， `Abort`函数不会对失败引发异常，因为它忽略失败。 其次， `Abort`不**断言**文件是否已打开或之前已关闭。
 
-##  <a name="cinternetfile"></a>  CInternetFile::CInternetFile
+##  <a name="cinternetfile"></a>CInternetFile：： CInternetFile
 
-此成员函数调用时`CInternetFile`创建对象。
+当创建`CInternetFile`对象时，将调用此成员函数。
 
 ```
 CInternetFile(
@@ -144,33 +144,33 @@ CInternetFile(
 ### <a name="parameters"></a>参数
 
 *hFile*<br/>
-Internet 文件句柄。
+Internet 文件的句柄。
 
 *pstrFileName*<br/>
-指向包含文件名称的字符串的指针。
+指向包含文件名的字符串的指针。
 
 *pConnection*<br/>
-一个指向[CInternetConnection](../../mfc/reference/cinternetconnection-class.md)对象。
+指向[CInternetConnection](../../mfc/reference/cinternetconnection-class.md)对象的指针。
 
 *bReadMode*<br/>
-指示该文件是只读的。
+指示文件是否为只读。
 
 *hSession*<br/>
-一个 Internet 会话句柄。
+Internet 会话的句柄。
 
 *pstrServer*<br/>
-指向包含的服务器的名称的字符串的指针。
+指向包含服务器名称的字符串的指针。
 
 *dwContext*<br/>
-上下文标识符`CInternetFile`对象。 请参阅[WinInet 基础知识](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。
+`CInternetFile`对象的上下文标识符。 有关上下文标识符的详细信息，请参阅[WinInet 基础知识](../../mfc/wininet-basics.md)。
 
 ### <a name="remarks"></a>备注
 
-永远不会创建`CInternetFile`直接对象。 相反，通过调用创建的对象及其派生类之一[CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile)或[chttpconnection::](../../mfc/reference/chttpconnection-class.md#openrequest)。 您还可以创建`CInternetFile`对象通过调用[CFtpConnection::OpenFile](../../mfc/reference/cftpconnection-class.md#openfile)。
+永远不会直接`CInternetFile`创建对象。 而是通过调用[CGopherConnection：： OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile)或[CHttpConnection：： OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest)来创建其派生类之一的对象。 还可以通过调用`CInternetFile` [CFtpConnection：： OpenFile](../../mfc/reference/cftpconnection-class.md#openfile)来创建对象。
 
-##  <a name="close"></a>  CInternetFile::Close
+##  <a name="close"></a>CInternetFile：： Close
 
-关闭`CInternetFile`并释放其任何资源。
+`CInternetFile`关闭并释放其任何资源。
 
 ```
 virtual void Close();
@@ -178,7 +178,7 @@ virtual void Close();
 
 ### <a name="remarks"></a>备注
 
-如果文件已打开进行写入，则隐式调用[刷新](#flush)以确保所有缓冲数据写入到主机。 应调用`Close`完后使用一个文件。
+如果文件已打开以进行写入，则会进行隐式调用[以确保](#flush)所有缓冲的数据都写入主机。 使用完文件`Close`后，应调用。
 
 ##  <a name="flush"></a>  CInternetFile::Flush
 
@@ -190,9 +190,9 @@ virtual void Flush();
 
 ### <a name="remarks"></a>备注
 
-使用`Flush`以确保内存中的所有数据实际上已都写入到目标计算机，并确保您使用主机计算机的事务已完成。 `Flush` 才会生效上`CInternetFile`对象打开以进行写入。
+使用`Flush`以确保内存中的所有数据都已实际写入目标计算机，并确保您的主计算机上的事务已完成。 `Flush`仅对`CInternetFile`打开以进行写入的对象有效。
 
-##  <a name="getlength"></a>  CInternetFile::GetLength
+##  <a name="getlength"></a>CInternetFile：： GetLength
 
 返回文件的大小。
 
@@ -200,25 +200,25 @@ virtual void Flush();
 virtual ULONGLONG GetLength() const;
 ```
 
-##  <a name="m_hfile"></a>  CInternetFile::m_hFile
+##  <a name="m_hfile"></a>CInternetFile：： m_hFile
 
-与此对象关联的文件句柄。
+与此对象关联的文件的句柄。
 
 ```
 HINTERNET m_hFile;
 ```
 
-##  <a name="operator_hinternet"></a>  CInternetFile::operator HINTERNET
+##  <a name="operator_hinternet"></a>CInternetFile：： operator HINTERNET
 
-此运算符用于获取当前的 Internet 会话的 Windows 句柄。
+使用此运算符可获取当前 Internet 会话的 Windows 句柄。
 
 ```
 operator HINTERNET() const;
 ```
 
-##  <a name="read"></a>  CInternetFile::Read
+##  <a name="read"></a>CInternetFile：： Read
 
-调用此成员函数以读取到给定的内存，开始*lpvBuf*，则指定的字节数*nCount*。
+调用此成员函数以读取给定的内存（从*lpvBuf*开始，到指定的字节数， *nCount*）。
 
 ```
 virtual UINT Read(
@@ -236,17 +236,17 @@ virtual UINT Read(
 
 ### <a name="return-value"></a>返回值
 
-传输到缓冲区的字节数。 返回值可能小于*nCount*如果已达到文件结尾。
+传输到缓冲区的字节数。 如果已到达文件末尾，则返回值可能小于*nCount* 。
 
 ### <a name="remarks"></a>备注
 
-该函数返回实际读取的字节数，可能是一个数字小于*nCount*在文件结束时。 如果读取的文件时出错，则函数将引发[CInternetException](../../mfc/reference/cinternetexception-class.md)描述错误的对象。 请注意，不会将越过文件末尾的读取视为错误，不会引发异常。
+函数返回实际读取的字节数，如果文件结束，则为可能小于*nCount*的数字。 如果读取文件时出现错误，该函数将引发描述错误的[CInternetException](../../mfc/reference/cinternetexception-class.md)对象。 请注意，不会将越过文件末尾的读取视为错误，不会引发异常。
 
 若要确保检索所有数据，应用程序必须继续调用`CInternetFile::Read`方法，直到该方法返回零。
 
-##  <a name="readstring"></a>  CInternetFile::ReadString
+##  <a name="readstring"></a>CInternetFile：： ReadString
 
-调用此成员函数来读取字符流，直到它找到一个换行符。
+调用此成员函数以读取字符流，直到它找到一个换行符。
 
 ```
 virtual BOOL ReadString(CString& rString);
@@ -259,29 +259,29 @@ virtual LPTSTR ReadString(
 ### <a name="parameters"></a>参数
 
 *pstr*<br/>
-指向将接收所读取的行的字符串的指针。
+指向将接收正在读取的行的字符串的指针。
 
 *nMax*<br/>
-要读取的字符数目上限。
+要读取的最大字符数。
 
 *rString*<br/>
-对引用[CString](../../atl-mfc-shared/reference/cstringt-class.md)对象，它接收读取的行。
+对接收读取行的[CString](../../atl-mfc-shared/reference/cstringt-class.md)对象的引用。
 
 ### <a name="return-value"></a>返回值
 
-指向包含从检索到的纯数据的缓冲区的指针[CInternetFile](../../mfc/reference/cinternetfile-class.md)对象。 传递给此方法的缓冲区的数据类型，无论它执行任何操作 （例如，转换为 Unicode） 的数据，因此必须将返回的数据映射到结构希望，如同**void** <strong>\*</strong> 返回类型。
+指向缓冲区的指针，该缓冲区包含从[CInternetFile](../../mfc/reference/cinternetfile-class.md)对象检索到的普通数据。 无论传递到此方法的缓冲区的数据类型如何，它都不会对数据执行任何操作（例如，转换为 Unicode），因此必须将返回的数据映射到所需的结构，就像**void** <strong>\*</strong>类型为返回.
 
-如果未读取任何数据; 已达到文件结尾，则为 NULL或者，如果布尔值，则为 FALSE 的文件结束已达到未读取任何数据。
+如果在未读取任何数据的情况下到达文件尾，则为 NULL;或者，如果已到达文件尾但未读取任何数据，则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-该函数会将生成线放到所引用的内存*pstr*参数。 它将停止读取字符时达到的最大中指定的字符数*最*。 缓冲区始终接收终止 null 字符。
+函数将生成的行放入*pstr*参数所引用的内存。 它在达到最大字符数（由*n 每天*指定）时，它将停止读取字符。 缓冲区始终接收一个终止 null 字符。
 
-如果您调用`ReadString`没有首先调用[SetReadBufferSize](#setreadbuffersize)，则会 4096 个字节的缓冲区。
+如果在不`ReadString`首先调用[SetReadBufferSize](#setreadbuffersize)的情况下调用，将得到4096字节的缓冲区。
 
-##  <a name="seek"></a>  CInternetFile::Seek
+##  <a name="seek"></a>CInternetFile：： Seek
 
-调用此成员函数可将指针重新定位以前打开的文件中。
+调用此成员函数以将指针重定位到以前打开的文件中。
 
 ```
 virtual ULONGLONG Seek(
@@ -292,39 +292,39 @@ virtual ULONGLONG Seek(
 ### <a name="parameters"></a>参数
 
 *lOffset*<br/>
-以字节为单位以读/写将指针移动到文件中的偏移量。
+偏移量（以字节为单位），用于移动文件中的读/写指针。
 
 *nFrom*<br/>
-偏移量的相对引用。 必须是以下值之一：
+偏移量的相对引用。 必须是下列值之一：
 
-- `CFile::begin` 将文件指针移*lOff*转发从文件开头的字节数。
+- `CFile::begin`将文件指针*lOff*字节从文件开头向前移动。
 
-- `CFile::current` 将文件指针移*lOff*个字节从文件中的当前位置。
+- `CFile::current`将文件指针从文件中的当前位置移*lOff*字节。
 
-- `CFile::end` 将文件指针移*lOff*从文件末尾的字节数。 *lOff*必须是负值以查找现有文件; 正值将查找文件的末尾。
+- `CFile::end`将文件指针*lOff*字节移到文件末尾。 要查找现有文件， *lOff*必须为负数;正值将在文件末尾进行查找。
 
 ### <a name="return-value"></a>返回值
 
-新字节偏移量从文件开头，如果请求的位置是合法的;否则，值是不确定和一个[CInternetException](../../mfc/reference/cinternetexception-class.md)引发对象。
+如果请求的位置合法，则为从文件开头开始的新字节偏移量;否则，该值为 undefined，并引发[CInternetException](../../mfc/reference/cinternetexception-class.md)对象。
 
 ### <a name="remarks"></a>备注
 
-`Seek`函数允许随机访问文件的内容通过移动指针指定的量，绝对或相对。 在查找期间实际不读取任何数据。
+`Seek`函数可通过将指针移动到指定的量（绝对或相对）来允许对文件内容进行随机访问。 在查找期间，不会实际读取任何数据。
 
-在此期间，对此成员函数的调用仅支持与相关联的数据`CHttpFile`对象。 不支持 FTP 或 gopher 请求。 如果调用`Seek`的其中一种不受支持的服务，它将传递回您的 Win32 错误代码 ERROR_INTERNET_INVALID_OPERATION。
+目前，只有与`CHttpFile`对象相关联的数据才支持调用此成员函数。 FTP 或 gopher 请求不支持此方法。 如果对其中`Seek`一项不受支持的服务进行调用，则会将你传回 Win32 错误代码 ERROR_INTERNET_INVALID_OPERATION。
 
-打开文件，文件指针时，按偏移量 0，该文件的开头。
+打开文件时，文件指针将在偏移量0处（文件开头）。
 
 > [!NOTE]
->  使用`Seek`可能会导致隐式调用[刷新](#flush)。
+>  使用`Seek`可能导致隐式调用[刷新](#flush)。
 
 ### <a name="example"></a>示例
 
-  基类实现示例，请参阅 ( [CFile::Seek](../../mfc/reference/cfile-class.md#seek))。
+  请参阅基类实现（ [CFile：： Seek](../../mfc/reference/cfile-class.md#seek)）的示例。
 
-##  <a name="setreadbuffersize"></a>  CInternetFile::SetReadBufferSize
+##  <a name="setreadbuffersize"></a>CInternetFile：： SetReadBufferSize
 
-调用此成员函数以设置使用的临时读取缓冲区的大小`CInternetFile`-派生的对象。
+调用此成员函数可设置由`CInternetFile`派生对象使用的临时读取缓冲区的大小。
 
 ```
 BOOL SetReadBufferSize(UINT nReadSize);
@@ -337,19 +337,19 @@ BOOL SetReadBufferSize(UINT nReadSize);
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)可能调用以确定错误的原因。
+如果成功，则不为 0；否则为 0。 如果调用失败，则可以调用 Win32 函数[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)来确定错误的原因。
 
 ### <a name="remarks"></a>备注
 
-基础的 WinInet Api 不要执行缓冲，因此请选择使应用程序能够高效地读取数据，而不考虑要读取的数据量的缓冲区大小。 如果每个调用[读取](#read)通常涉及大型 aount 的数据 （例如，四个或多个千字节为单位），则无需使用一个缓冲区。 但是，如果您调用`Read`以获取小区的数据，或者如果您使用[ReadString](#readstring)来一次读取单独的行，则读取的缓冲区可提高应用程序的性能。
+底层 WinInet Api 不会执行缓冲，因此，请选择允许应用程序有效读取数据的缓冲区大小，而不考虑要读取的数据量。 如果对[读取](#read)的每次调用通常都涉及到大 aount 的数据（例如，4 kb 或更大），则不应使用缓冲区。 但是，如果调用`Read`来获取小块数据，或者使用[ReadString](#readstring)一次读取单独的行，则读取缓冲区会提高应用程序性能。
 
-默认情况下，`CInternetFile`对象未提供读取任何缓冲。 如果调用此成员函数，您必须确保已打开文件进行读取访问权限。
+默认情况下， `CInternetFile`对象不提供任何要读取的缓冲。 如果调用此成员函数，则必须确保已打开该文件以进行读访问。
 
-您可以在任何时候，增加缓冲区大小，但收缩缓冲区会产生任何效果。 如果您调用[ReadString](#readstring)而无需第一个调用`SetReadBufferSize`，则会 4096 个字节的缓冲区。
+您可以随时增加缓冲区大小，但收缩缓冲区将不起作用。 如果调用[ReadString](#readstring)而不先调用`SetReadBufferSize`，则会收到4096字节的缓冲区。
 
-##  <a name="setwritebuffersize"></a>  CInternetFile::SetWriteBufferSize
+##  <a name="setwritebuffersize"></a>CInternetFile：： SetWriteBufferSize
 
-调用此成员函数以设置使用的临时写入缓冲区的大小`CInternetFile`-派生的对象。
+调用此成员函数可设置由`CInternetFile`派生对象使用的临时写入缓冲区的大小。
 
 ```
 BOOL SetWriteBufferSize(UINT nWriteSize);
@@ -362,17 +362,17 @@ BOOL SetWriteBufferSize(UINT nWriteSize);
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)可能调用以确定错误的原因。
+如果成功，则不为 0；否则为 0。 如果调用失败，则可以调用 Win32 函数[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)来确定错误的原因。
 
 ### <a name="remarks"></a>备注
 
-基础 WinInet Api 不执行缓冲，因此选择使应用程序能够写入数据，无论要写入的数据量的有效数据的缓冲区大小。 如果每个调用[编写](#write)通常涉及到大量的数据 （例如，四个或多个千字节为单位一次），则无需使用一个缓冲区。 但是，如果您调用[编写](#write)编写小块数据，写入缓冲区，可提高应用程序的性能。
+底层 WinInet Api 不会执行缓冲，因此选择允许应用程序有效写入数据的缓冲区大小，而不考虑要写入的数据量。 如果对[写入](#write)的每个调用通常涉及大量数据（例如，一次使用四个或更多的 kb），则不应需要缓冲区。 但是，如果调用[write](#write)来写入少量数据块，则写入缓冲区会提高应用程序的性能。
 
-默认情况下，`CInternetFile`对象不提供任何缓冲以进行写入。 如果调用此成员函数，您必须确保已打开文件进行写访问权限。 可以在任何时候，更改将写入缓冲区的大小，但这样会导致隐式调用[刷新](#flush)。
+默认情况下， `CInternetFile`对象不提供任何要写入的缓冲。 如果调用此成员函数，则必须确保已打开文件以进行写入访问。 你可以随时更改写入缓冲区的大小，但这样做会导致隐式调用[刷新](#flush)。
 
-##  <a name="write"></a>  CInternetFile::Write
+##  <a name="write"></a>CInternetFile：： Write
 
-调用此成员函数以写入给定的内存中， *lpvBuf*，则指定的字节数*nCount*。
+调用此成员函数以写入给定的内存*lpvBuf*，指定的字节数*nCount*。
 
 ```
 virtual void Write(
@@ -390,11 +390,11 @@ virtual void Write(
 
 ### <a name="remarks"></a>备注
 
-如果写入数据时出现任何错误，该函数将引发[CInternetException](../../mfc/reference/cinternetexception-class.md)描述错误的对象。
+如果在写入数据时出现任何错误，函数将引发描述错误的[CInternetException](../../mfc/reference/cinternetexception-class.md)对象。
 
-##  <a name="writestring"></a>  CInternetFile::WriteString
+##  <a name="writestring"></a>CInternetFile：： WriteString
 
-此函数将以 null 结尾的字符串写入到关联的文件。
+此函数将以 null 结尾的字符串写入关联的文件。
 
 ```
 virtual void WriteString(LPCTSTR pstr);
@@ -403,11 +403,11 @@ virtual void WriteString(LPCTSTR pstr);
 ### <a name="parameters"></a>参数
 
 *pstr*<br/>
-指向包含要写入的内容的字符串的指针。
+指向字符串的指针，该字符串包含要写入的内容。
 
 ### <a name="remarks"></a>备注
 
-如果写入数据时出现任何错误，该函数将引发[CInternetException](../../mfc/reference/cinternetexception-class.md)描述错误的对象。
+如果在写入数据时出现任何错误，函数将引发描述错误的[CInternetException](../../mfc/reference/cinternetexception-class.md)对象。
 
 ## <a name="see-also"></a>请参阅
 

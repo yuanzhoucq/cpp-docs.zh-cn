@@ -1,9 +1,9 @@
 ---
 title: _RTC_GetErrDesc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _RTC_GetErrDesc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - RTC_GetErrDesc
 - _RTC_GetErrDesc
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - _RTC_GetErrDesc function
 - RTC_GetErrDesc function
 ms.assetid: 7994ec2b-5488-4fd4-806d-a166c9a9f927
-ms.openlocfilehash: d164626ea89bbe10f5b2ffe4224bf6381e40bab0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7174e9242b77a904df817886df4f8c763e3e0b2c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357377"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949059"
 ---
-# <a name="rtcgeterrdesc"></a>_RTC_GetErrDesc
+# <a name="_rtc_geterrdesc"></a>_RTC_GetErrDesc
 
 返回运行时错误检查 (RTC) 类型的简要描述。
 
@@ -49,7 +52,7 @@ const char * _RTC_GetErrDesc(
 
 ## <a name="return-value"></a>返回值
 
-一个字符串，其中包含由运行时错误检查系统检测到的一个错误类型的简短描述。 如果错误小于零或大于或等于返回的值[_RTC_NumErrors](rtc-numerrors.md)， **_RTC_GetErrDesc**返回**NULL**。
+一个字符串，其中包含由运行时错误检查系统检测到的一个错误类型的简短描述。 如果错误小于零或大于或等于[_RTC_NumErrors](rtc-numerrors.md)返回的值，则 **_RTC_GetErrDesc**将返回**NULL**。
 
 ## <a name="requirements"></a>要求
 

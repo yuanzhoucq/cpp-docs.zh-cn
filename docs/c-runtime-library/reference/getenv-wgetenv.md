@@ -1,10 +1,10 @@
 ---
 title: getenv、_wgetenv
 ms.date: 11/04/2016
-apiname:
+api_name:
 - getenv
 - _wgetenv
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wgetenv
 - getenv
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - _tgetenv function
 - _wgetenv function
 ms.assetid: 3b9cb9ab-a126-4e0e-a44f-6c5a7134daf4
-ms.openlocfilehash: 79c685fef8d6a4b966c53bb7d94b423d16971976
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7cacd8588bcc74c6d064da370ce6254aada56c12
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157664"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955060"
 ---
-# <a name="getenv-wgetenv"></a>getenv、_wgetenv
+# <a name="getenv-_wgetenv"></a>getenv、_wgetenv
 
 从当前环境中获取值。 提供这些函数的更安全版本；请参阅 [getenv_s、_wgetenv_s](getenv-s-wgetenv-s.md)。
 
@@ -62,27 +65,27 @@ wchar_t *_wgetenv(
 
 ## <a name="return-value"></a>返回值
 
-返回一个指向包含的环境表条目*varname*。 使用返回的指针修改环境变量并不安全。 使用[_putenv](putenv-wputenv.md)函数修改环境变量的值。 返回值是**NULL**如果*varname*环境表中找不到。
+返回一个指向包含*varname*的环境表项的指针。 使用返回的指针修改环境变量并不安全。 使用[_putenv](putenv-wputenv.md)函数修改环境变量的值。 如果在环境表中找不到*varname* ，则返回值为**NULL** 。
 
 ## <a name="remarks"></a>备注
 
-**Getenv**函数的环境变量列表中搜索*varname*。 **getenv**不区分大小写，在 Windows 操作系统中。 **getenv**并 **_putenv**使用全局变量指向该环境的副本 **_environ**来访问该环境。 **getenv**操作仅在可访问运行时库的数据结构和不能在环境"段"由操作系统对进程创建。 因此，程序使用*envp*自变量[主要](../../cpp/main-program-startup.md)或[wmain](../../cpp/main-program-startup.md)可能会检索无效信息。
+**Getenv**函数搜索*varname*的环境变量列表。 Windows 操作系统中的**getenv**不区分大小写。 **getenv**和 **_putenv**使用全局变量 **_environ**指向的环境副本来访问该环境。 **getenv**仅对运行库可访问的数据结构执行，而不是由操作系统为进程创建的环境 "段" 运行。 因此，使用[main](../../cpp/main-program-startup.md)或[wmain](../../cpp/main-program-startup.md)的*envp*参数的程序可能会检索无效信息。
 
-如果*varname*是**NULL**，此函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，此函数可设置**errno**到**EINVAL** ，并返回**NULL**。
+如果*varname*为**NULL**，则此函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数会将**errno**设置为**EINVAL** ，并返回**NULL**。
 
-**_wgetenv**是宽字符版本**getenv**; 的自变量和返回值 **_wgetenv**都是宽字符字符串。 **_Wenviron**全局变量是宽字符版本 **_environ**。
+**_wgetenv**是**getenv**的宽字符版本; **_wgetenv**的参数和返回值是宽字符字符串。 **_Wenviron**全局变量是 **_environ**的宽字符版本。
 
-在 MBCS 程序中 （例如，在 SBCS ASCII 程序中）， **_wenviron**最初**NULL**因为环境多字节字符字符串组成。 然后，在首次调用[_wputenv](putenv-wputenv.md)，或在首次调用 **_wgetenv**如果 (MBCS) 环境已存在，创建并并指向对应的宽字符字符串环境 **_wenviron**。
+在 MBCS 程序中（例如，在 SBCS ASCII 程序中）， **_wenviron**最初为**NULL** ，因为环境是由多字节字符字符串组成的。 然后，在第一次调用[_wputenv](putenv-wputenv.md)时，或在第一次调用 **_wgetenv**时，如果（MBCS）环境已存在，则会创建相应的宽字符字符串环境，并由 **_wenviron**指向该环境。
 
-同样，在 Unicode (**_wmain**) 程序中， **_environ**最初**NULL**因为环境宽字符字符串组成。 然后，在首次调用 **_putenv**，或在首次调用**getenv**如果 (Unicode) 环境已存在，创建并通过指向相应的 MBCS 环境 **_environ**。
+同样，在 Unicode （ **_wmain**）程序中， **_Environ**最初为**NULL** ，因为环境是由宽字符字符串组成的。 然后，在首次调用 **_putenv**时，或在第一次调用**getenv**时，如果（Unicode）环境已存在，则会创建相应的 MBCS 环境，并由 **_environ**指向该环境。
 
-当程序中同时存在环境的两个副本（MBCS 和 Unicode）时，运行时系统必须保留这两个副本，而这将减慢执行时间。 例如，当您调用 **_putenv**，调用 **_wputenv**还自动执行，以便两个环境字符串相对应。
+当程序中同时存在环境的两个副本（MBCS 和 Unicode）时，运行时系统必须保留这两个副本，而这将减慢执行时间。 例如，每次调用 **_putenv**时，也会自动执行对 **_wputenv**的调用，以便两个环境字符串相对应。
 
 > [!CAUTION]
 > 在极少数情况下，当运行时系统同时保留环境的 Unicode 版本和多字节版本时，两个环境版本可能不完全对应。 这是因为，虽然任何唯一的多字节字符字符串将映射到唯一的 Unicode 字符串，但从唯一的 Unicode 字符串到多字节字符字符串的映射却不一定是唯一的。 有关详细信息，请参阅 [_environ、_wenviron](../../c-runtime-library/environ-wenviron.md)。
 
 > [!NOTE]
-> **_Putenv**并 **_getenv**系列函数不是线程安全。 **_getenv**返回时字符串指针 **_putenv**修改字符串，从而导致随机性失败。 确保对这些函数的调用同步。
+> **_Putenv**和 **_getenv**系列的函数不是线程安全的。 当 **_putenv**正在修改字符串时， **_getenv**可能会返回字符串指针，从而导致随机失败。 确保对这些函数的调用同步。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -90,7 +93,7 @@ wchar_t *_wgetenv(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tgetenv**|**getenv**|**getenv**|**_wgetenv**|
 
-若要检查或更改的值**TZ**环境变量，使用**getenv**， **_putenv**并 **_tzset**根据需要。 有关详细信息**TZ**，请参阅[_tzset](tzset.md)并[_daylight、 timezone 和 _tzname](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md)。
+若要检查或更改**TZ**环境变量的值，请使用**getenv**、 **_putenv**和 **_tzset** （如有必要）。 有关**TZ**的详细信息，请参阅[_tzset](tzset.md)和[_daylight、时区和 _tzname](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md)。
 
 ## <a name="requirements"></a>要求
 

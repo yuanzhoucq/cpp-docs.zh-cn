@@ -1,11 +1,11 @@
 ---
 title: cabs、cabsf、cabsl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - cabs
 - cabsf
 - cabsl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cabs
 - cabsf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - cabsf function
 - cabsl function
 ms.assetid: 6b8eb453-cc8f-4972-bebf-351cbdfdfc15
-ms.openlocfilehash: cfa437a5d248a83568032d4c9ef8d4f938074dfe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 62f297bba116550f572725a6bde094e5407777a4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623953"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939404"
 ---
 # <a name="cabs-cabsf-cabsl"></a>cabs、cabsf、cabsl
 
@@ -68,17 +71,17 @@ long double cabsl(
 
 ## <a name="return-value"></a>返回值
 
-值的绝对值*z*。
+*Z*的绝对值。
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，可以调用的重载**cabs**采用 **_Fcomplex**或 **_Lcomplex**的值，并返回**float**或**长** **double**值。 在 C 程序中， **cabs**始终采用 **_Dcomplex**值并返回**double**值。
+由于C++允许重载，因此你可以调用采用 **_Fcomplex**或 **_Lcomplex**值的**cab**的重载，并返回**浮点**或**长** **双精度**值。 在 C 程序中， **cab**始终使用 **_Dcomplex**值并返回一个**双精度**值。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|C 标头|C++ 标头|
 |-------------|--------------|------------------|
-|**cabs**， **cabsf**， **cabsl**|\<complex.h>|\<ccomplex>|
+|**cab**、 **cabsf**、 **cabsl**|\<complex.h>|\<ccomplex>|
 
 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

@@ -1,23 +1,26 @@
 ---
 title: _set_app_type
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _set_app_type
-apilocation:
+api_location:
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _set_app_type
 - corecrt_startup/_set_app_type
 ms.assetid: 1e7fe786-b587-4116-8c05-f7d762350100
-ms.openlocfilehash: 5a29fd94cca7fdbf6bbb24699b7f510bf1465f15
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 7e04d88d9e9981e35b7d4c80c11d27c868219f65
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749186"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957928"
 ---
-# <a name="setapptype"></a>_set_app_type
+# <a name="_set_app_type"></a>_set_app_type
 
 在启动时使用的内部函数告知 CRT，应用属于控制台应用程序还是 GUI 应用。
 
@@ -41,7 +44,7 @@ void __cdecl _set_app_type(
 *appType*<br/>
 表示应用程序类型的值。 可能的值为：
 
-|“值”|说明|
+|值|说明|
 |----------------|-----------------|
 |_crt_unknown_app|未知应用程序类型。|
 |_crt_console_app|控制台（命令行）应用程序。|

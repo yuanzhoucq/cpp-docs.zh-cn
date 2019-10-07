@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stock properties, about stock properties
 - stock properties
 ms.assetid: 37bd4db7-efd3-4faa-87ad-64902ed16a36
-ms.openlocfilehash: 79938cb5c762292c5e1802832477c3a568ae2fdb
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 5c472b74fee690c0cf33f78eca9e2e8462930eb8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504474"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509526"
 ---
 # <a name="add-a-property"></a>添加属性
 
@@ -149,15 +149,15 @@ ms.locfileid: "66504474"
 
 - `id`
 
-  设置标识属性的数字 ID。 此选项不适用于自定义接口的属性。 请参阅 MIDL 引用中的 [ID](/windows/desktop/Midl/id)  。
+  设置标识属性的数字 ID。 此选项不适用于自定义接口的属性。 请参阅 MIDL 引用中的 [ID](/windows/win32/Midl/id)  。
 
 - `helpcontext`
 
-  指定一个上下文 ID，使用户在帮助文件中查看关于此属性的信息。 请参阅 MIDL 引用中的 [helpcontext](/windows/desktop/Midl/helpcontext)  。
+  指定一个上下文 ID，使用户在帮助文件中查看关于此属性的信息。 请参阅 MIDL 引用中的 [helpcontext](/windows/win32/Midl/helpcontext)  。
 
 - `helpstring`
 
-  指定一个字符串，用于描述该字符串适用的元素。 默认情况下，会将它设置为 `property`&nbsp; 属性 &nbsp; 名称  。 请参阅 MIDL 引用中的 [helpstring](/windows/desktop/Midl/helpstring)  。
+  指定一个字符串，用于描述该字符串适用的元素。 默认情况下，会将它设置为 `property`&nbsp; 属性 &nbsp; 名称  。 请参阅 MIDL 引用中的 [helpstring](/windows/win32/Midl/helpstring)  。
 
 ### <a name="other-options"></a>其他选项
 
@@ -165,17 +165,17 @@ ms.locfileid: "66504474"
 
 |选项|说明|
 |------------|-----------------|
-|`bindable`|指示该属性支持数据绑定。 请参阅 MIDL 引用中的 [bindable](/windows/desktop/Midl/bindable)  。 对于该属性的常用实现，此选项已默认设置，且不可更改。|
-|`defaultbind`|指示此单一、可绑定属性最好地表示了该对象。 请参阅 MIDL 引用中的 [defaultbind](/windows/desktop/Midl/defaultbind)  。|
-|`displaybind`|指示应作为可绑定属性显示给用户的属性。 请参阅 MIDL 引用中的 [displaybind](/windows/desktop/Midl/displaybind)  。|
-|`immediatebind`|指示将立即通知数据库对数据绑定对象的此属性所做的所有更改。 请参阅 MIDL 引用中的 [immediatebind](/windows/desktop/Midl/immediatebind)  。|
-|`defaultcollelem`|指示该属性是默认集合的某个元素的访问器函数。 请参阅 MIDL 引用中的 [defaultcollelem](/windows/desktop/Midl/defaultcollelem)  。|
-|`nonbrowsable`|标记不应显示在属性浏览器中的接口或调度接口成员。 请参阅 MIDL 引用中的 [nonbrowsable](/windows/desktop/Midl/nonbrowsable)  。|
-|`requestedit`|指示该属性支持 `OnRequestEdit` 通知。 请参阅 MIDL 参考中的 [requestedit](/windows/desktop/Midl/requestedit)  。 对于该属性的常用实现，此选项已默认设置，且不可更改。|
-|`source`|指示该属性的成员是事件的源。 请参阅 MIDL 引用中的 [source](/windows/desktop/Midl/source)  。|
-|`hidden`|指示该属性存在，但不应在面向用户的浏览器中显示。 请参阅 MIDL 引用中的 [hidden](/windows/desktop/Midl/hidden)  。|
-|`restricted`|指定此属性不能任意调用。 请参阅 MIDL 引用中的 [restricted](/windows/desktop/Midl/restricted)  。|
-|`local`|向 MIDL 编译器指出该属性不是远程的。 请参阅 MIDL 引用中的 [local](/windows/desktop/Midl/local)  。|
+|`bindable`|指示该属性支持数据绑定。 请参阅 MIDL 引用中的 [bindable](/windows/win32/Midl/bindable)  。 对于该属性的常用实现，此选项已默认设置，且不可更改。|
+|`defaultbind`|指示此单一、可绑定属性最好地表示了该对象。 请参阅 MIDL 引用中的 [defaultbind](/windows/win32/Midl/defaultbind)  。|
+|`displaybind`|指示应作为可绑定属性显示给用户的属性。 请参阅 MIDL 引用中的 [displaybind](/windows/win32/Midl/displaybind)  。|
+|`immediatebind`|指示将立即通知数据库对数据绑定对象的此属性所做的所有更改。 请参阅 MIDL 引用中的 [immediatebind](/windows/win32/Midl/immediatebind)  。|
+|`defaultcollelem`|指示该属性是默认集合的某个元素的访问器函数。 请参阅 MIDL 引用中的 [defaultcollelem](/windows/win32/Midl/defaultcollelem)  。|
+|`nonbrowsable`|标记不应显示在属性浏览器中的接口或调度接口成员。 请参阅 MIDL 引用中的 [nonbrowsable](/windows/win32/Midl/nonbrowsable)  。|
+|`requestedit`|指示该属性支持 `OnRequestEdit` 通知。 请参阅 MIDL 参考中的 [requestedit](/windows/win32/Midl/requestedit)  。 对于该属性的常用实现，此选项已默认设置，且不可更改。|
+|`source`|指示该属性的成员是事件的源。 请参阅 MIDL 引用中的 [source](/windows/win32/Midl/source)  。|
+|`hidden`|指示该属性存在，但不应在面向用户的浏览器中显示。 请参阅 MIDL 引用中的 [hidden](/windows/win32/Midl/hidden)  。|
+|`restricted`|指定此属性不能任意调用。 请参阅 MIDL 引用中的 [restricted](/windows/win32/Midl/restricted)  。|
+|`local`|向 MIDL 编译器指出该属性不是远程的。 请参阅 MIDL 引用中的 [local](/windows/win32/Midl/local)  。|
 
 ## <a name="stock-properties"></a>常用属性
 

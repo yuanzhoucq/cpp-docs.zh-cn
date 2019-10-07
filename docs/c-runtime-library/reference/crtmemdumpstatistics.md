@@ -1,9 +1,9 @@
 ---
 title: _CrtMemDumpStatistics
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtMemDumpStatistics
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtMemDumpStatistics
 - _CrtMemDumpStatistics
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - _CrtMemDumpStatistics function
 - CrtMemDumpStatistics function
 ms.assetid: 27b9d731-3184-4a2d-b9a7-6566ab28a9fe
-ms.openlocfilehash: 66eb58b65f3fa20e01ad16d68f3fe1baafd8cd04
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7aba82e3dfea220f2edc3bd3a689a48e316a0087
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605117"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938690"
 ---
-# <a name="crtmemdumpstatistics"></a>_CrtMemDumpStatistics
+# <a name="_crtmemdumpstatistics"></a>_CrtMemDumpStatistics
 
 以用户可读的形式转储指定堆状态的调试标头信息（仅限调试版本）。
 
@@ -43,16 +46,16 @@ void _CrtMemDumpStatistics(
 
 ### <a name="parameters"></a>参数
 
-*state*<br/>
+State<br/>
 指向要转储的堆状态的指针。
 
 ## <a name="remarks"></a>备注
 
-**_CrtMemDumpStatistics**函数转储指定堆状态的用户可读的窗体中的调试标头信息。 应用程序可以使用转储统计信息来跟踪分配并检测内存问题。 内存状态可以包含特定的堆状态或两个状态之间的差异。 当[_DEBUG](../../c-runtime-library/debug.md)未定义，则调用 **_CrtMemDumpStatistics**在预处理过程中删除。
+**_CrtMemDumpStatistics**函数以用户可读的形式转储指定堆状态的调试标头信息。 应用程序可以使用转储统计信息来跟踪分配并检测内存问题。 内存状态可以包含特定的堆状态或两个状态之间的差异。 未定义[_debug](../../c-runtime-library/debug.md)时，将在预处理过程中删除对 **_CrtMemDumpStatistics**的调用。
 
-*状态*参数必须是指向指针 **_CrtMemState**由填充中的结构[_CrtMemCheckpoint](crtmemcheckpoint.md)或者由[_CrtMemDifference](crtmemdifference.md)之前 **_CrtMemDumpStatistics**调用。 如果*状态*是**NULL**，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则**errno**设置为**EINVAL**和不执行任何操作。 有关详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+*State*参数必须是指向 **_CrtMemState**结构的指针，该结构已由[_CrtMemCheckpoint](crtmemcheckpoint.md)填充或在调用 **_CrtMemDumpStatistics**之前由[_CrtMemDifference](crtmemdifference.md)返回。 如果*state*为**NULL**，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将**errno**设置为**EINVAL** ，并且不执行任何操作。 有关详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-有关详细信息，有关堆状态函数和 **_CrtMemState**结构，请参阅[堆状态报告函数](/visualstudio/debugger/crt-debug-heap-details)。 有关如何在基堆的调试版本中分配、初始化和管理内存块的详细信息，请参阅 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。
+有关堆状态函数和 **_CrtMemState**结构的详细信息，请参阅[堆状态报告函数](/visualstudio/debugger/crt-debug-heap-details)。 有关如何在基堆的调试版本中分配、初始化和管理内存块的详细信息，请参阅 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。
 
 ## <a name="requirements"></a>要求
 
@@ -62,7 +65,7 @@ void _CrtMemDumpStatistics(
 
 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
-**库：** 仅限 [CRT 库功能](../../c-runtime-library/crt-library-features.md)的调试版本。
+**库**仅限[CRT 库功能](../../c-runtime-library/crt-library-features.md)的调试版本。
 
 ## <a name="see-also"></a>请参阅
 

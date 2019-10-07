@@ -1,10 +1,10 @@
 ---
 title: memmove、wmemmove
 ms.date: 11/04/2016
-apiname:
+api_name:
 - memmove
 - wmemmove
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ntdll.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - memmove
 - wmemmove
@@ -25,12 +28,12 @@ helpviewer_keywords:
 - wmemmove function
 - memmove function
 ms.assetid: 3a906114-9cf3-40d7-bd99-ee452004f218
-ms.openlocfilehash: 988af1c2678e20ea40ce4dfe331a3b6c49db0547
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bca0badb13dbbc754b6546f62cdd865eacd14fbc
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156559"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951776"
 ---
 # <a name="memmove-wmemmove"></a>memmove、wmemmove
 
@@ -53,26 +56,26 @@ wchar_t *wmemmove(
 
 ### <a name="parameters"></a>参数
 
-*dest*<br/>
+dest<br/>
 目标对象。
 
 *src*<br/>
 源对象。
 
 *count*<br/>
-字节数 (**memmove**) 或多个字符 (**wmemmove**) 复制。
+要复制的字节数（**memmove**）或字符数（**wmemmove**）。
 
 ## <a name="return-value"></a>返回值
 
-值*dest*。
+*Dest*的值。
 
 ## <a name="remarks"></a>备注
 
-副本*计数*字节 (**memmove**) 或多个字符 (**wmemmove**) 从*src*到*dest*。 如果源区域的某些区域和目标重叠，则两个函数都可确保在重叠区域中的原始源字节被覆盖之前对其进行复制。
+将*计数*字节（**memmove**）或字符（**wmemmove**）从*src*复制到*目标*。 如果源区域的某些区域和目标重叠，则两个函数都可确保在重叠区域中的原始源字节被覆盖之前对其进行复制。
 
-**安全说明** 确保目标缓冲区的大小等于或大于源缓冲区的大小。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
+**安全说明** 确保目标缓冲区的大小等于或大于源缓冲区的大小。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
-**Memmove**并**wmemmove**函数将仅会弃用常量 **_CRT_SECURE_DEPRECATE_MEMORY**顺序中的包含语句之前定义要为不推荐使用，例如以下示例所示的函数：
+仅当在包含语句之前定义了常量 **_CRT_SECURE_DEPRECATE_MEMORY** ，才能弃用**memmove**和**wmemmove**函数，如以下示例中所示：
 
 ```C
 #define _CRT_SECURE_DEPRECATE_MEMORY

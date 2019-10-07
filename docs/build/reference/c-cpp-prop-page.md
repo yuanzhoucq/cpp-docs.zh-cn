@@ -1,14 +1,14 @@
 ---
 title: C/C++项目属性 (Visual Studio)
-ms.date: 7/18/2019
+ms.date: 07/18/2019
 ms.topic: article
 ms.assetid: 16375038-4917-4bd0-9a2a-26343c1708b7
-ms.openlocfilehash: 91edf30ef0e5f38088727c0280d2edf07cdebfa5
-ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
+ms.openlocfilehash: 2f7fe025eb69fc1977713c638eef0742074bd9fb
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537566"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927751"
 ---
 # <a name="cc-property-pages"></a>C/C++属性页
 
@@ -120,7 +120,7 @@ ms.locfileid: "68537566"
 - **默认**
 - **Disabled** -禁用默认情况下打开的内联展开。
 - **仅限 __inline** -仅展开在类声明中定义的C++成员函数中标记为 inline、__inline、__forceinline 或 __inline 的函数。
-- **任何适用于**标记为 inline 或 __inline 的任何合适的函数以及编译器选择的任何其他函数 (在编译器自行进行扩展, 通常称为自动内联)。
+- **任何适用于**标记为 inline 或 __inline 的任何合适的函数以及编译器选择的任何其他函数（在编译器自行进行扩展，通常称为自动内联）。
 
 ### <a name="enable-intrinsic-functions"></a>启用内部函数
 
@@ -223,7 +223,7 @@ ms.locfileid: "68537566"
 - **多线程**-使应用程序使用多线程的静态运行时库版本。
 - **多线程调试**-定义 _DEBUG 和 _MT。 此选项还会让编译器将库名称 LIBCMTD.lib 放置到 .obj 文件中，以便链接器将使用 LIBCMTD.lib 来解析外部符号。
 - **多线程 DLL** -使应用程序使用多线程和 DLL 特定版本的运行时库。 定义 _MT 和 _DLL，并使编译器将库名 MSVCRT.lib 放入 .obj 文件中。
-- **多线程调试 DLL** -定义 _DEBUG、_MT 和 _DLL, 并使应用程序使用调试多线程和 DLL 特定版本的运行时库。 它还会让编译器将库名称 MSVCRTD.lib 放入 .obj 文件中。
+- **多线程调试 DLL** -定义 _DEBUG、_MT 和 _DLL，并使应用程序使用调试多线程和 DLL 特定版本的运行时库。 它还会让编译器将库名称 MSVCRTD.lib 放入 .obj 文件中。
 
 ### <a name="struct-member-alignment"></a>结构成员对齐
 
@@ -262,7 +262,7 @@ ms.locfileid: "68537566"
 
 ### <a name="enable-parallel-code-generation"></a>启用并行代码生成
 
-启用优化时, 允许编译器为使用 #pragma loop (hint_parallel\[(n)]) 标识的循环生成并行代码。
+启用优化时，允许编译器为使用 #pragma loop （hint_parallel\[（n）]）标识的循环生成并行代码。
 
 ### <a name="enable-enhanced-instruction-set"></a>启用增强指令集
 
@@ -284,7 +284,7 @@ ms.locfileid: "68537566"
 **方案**
 
 - **精确**-默认值。 提高了相等性和不相等性的浮点测试的一致性。
-- **严格**-最严格的浮点模型。 /fp: strict 导致 fp_contract 为 OFF, fenv_access 为 ON。 /fp: except 是隐含的, 可以通过显式指定/fp: except-来禁用。 与/fp: except、/fp: strict 一起使用时, 将强制实施严格的浮点语义, 但不考虑异常事件。
+- **严格**-最严格的浮点模型。 /fp： strict 导致 fp_contract 为 OFF，fenv_access 为 ON。 /fp: except 是隐含的, 可以通过显式指定/fp: except-来禁用。 与/fp: except、/fp: strict 一起使用时, 将强制实施严格的浮点语义, 但不考虑异常事件。
 - **Fast** -在大多数情况下创建最快的代码。
 
 ### <a name="enable-floating-point-exceptions"></a>启用浮点异常
@@ -314,9 +314,9 @@ ms.locfileid: "68537566"
 
 启用或取消一致性模式。 设置[/permissive-](permissive-standards-conformance.md)。
 
-### <a name="treat-wchart-as-built-in-type"></a>将 WChar_t 视为内置类型
+### <a name="treat-wchar_t-as-built-in-type"></a>将 WChar_t 视为内置类型
 
-指定时, 类型 wchar_t 会成为一种映射到 __wchar_t 的本机类型, 其方式与短映射到 __int16 的方式相同。 [/Zc:](zc-wchar-t-wchar-t-is-native-type.md)默认情况下, wchar_t 为 on。
+指定时，类型 wchar_t 会成为一种映射到 __wchar_t 的本机类型，其方式与短映射到 __int16 的方式相同。 [/Zc：](zc-wchar-t-wchar-t-is-native-type.md)默认情况下，wchar_t 为 on。
 
 ### <a name="force-conformance-in-for-loop-scope"></a>强制 For 循环范围中的一致性
 
@@ -367,7 +367,7 @@ C++模块 TS 和标准库模块的实验性支持。
 
 ### <a name="precompiled-header-file"></a>预编译标头文件
 
-指定创建或使用预编译头文件时要使用的头文件名。 设置[/yc](yc-create-precompiled-header-file.md), [/yu]] (file.md)。
+指定创建或使用预编译头文件时要使用的头文件名。 设置[/yc](yc-create-precompiled-header-file.md)，[/yu]] （file.md）。
 
 ### <a name="precompiled-header-output-file"></a>预编译头输出文件
 
@@ -474,14 +474,14 @@ C++模块 TS 和标准库模块的实验性支持。
 
 ### <a name="internal-compiler-error-reporting"></a>内部编译器错误报告
 
-指定应如何将内部工具错误报告给 Microsoft。  IDE 中的默认值为 prompt。  命令行生成中的默认值是 queue。 设置 [/errorReport:\[method]] (errorReport-errors.md)。
+指定应如何将内部工具错误报告给 Microsoft。  IDE 中的默认值为 prompt。  命令行生成中的默认值是 queue。 设置 [/errorReport：\[method]] （errorReport-errors.md）。
 
 **方案**
 
 - 不**发送报告**-不会收集有关内部编译器错误的报告, 也不会将其发送给 Microsoft。
 - **立即提示**-当您收到内部编译器错误时, 提示您发送报告。
-- **排队等待下一次登录**-将错误报告排队。 使用管理员权限登录时, 将显示一个弹出窗口, 使您能够报告自上次登录后发生的任何故障 (系统不会提示您每三天发送一次失败的报告)。 当在命令行上编译应用程序时, queue 为默认值。
-- **自动发送**-自动向 Microsoft 发送内部编译器错误报告。 若要启用此选项, 必须先同意 Microsoft% 27s 数据收集策略。 首次在计算机上指定/errorReport: send 时, 编译器消息将向你介绍包含 Microsoft% 27s 数据收集策略的网站。
+- **排队等待下一次登录**-将错误报告排队。 使用管理员权限登录时，将显示一个弹出窗口，使您能够报告自上次登录后发生的任何故障（系统不会提示您每三天发送一次失败的报告）。 当在命令行上编译应用程序时, queue 为默认值。
+- **自动发送**-自动向 Microsoft 发送内部编译器错误报告。 若要启用此选项，必须先同意 Microsoft% 27s 数据收集策略。 首次在计算机上指定/errorReport： send 时，编译器消息将向你介绍包含 Microsoft% 27s 数据收集策略的网站。
 
 ### <a name="treat-specific-warnings-as-errors"></a>将特定的警告视为错误
 

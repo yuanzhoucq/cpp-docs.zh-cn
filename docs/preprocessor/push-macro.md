@@ -1,6 +1,6 @@
 ---
-title: push_macro
-ms.date: 11/04/2016
+title: push_macro 杂注
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.push_macro
 - push_macro_CPP
@@ -8,30 +8,27 @@ helpviewer_keywords:
 - pragmas, push_macro
 - push_macro pragma
 ms.assetid: ac89efc9-afd1-4dfe-bfd1-497229b3e81d
-ms.openlocfilehash: 5602dd91b7d017c49a122524e469100b0ec6debf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe890350811649402e284cd3ec81ddb68ac7cbc0
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179823"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216256"
 ---
-# <a name="pushmacro"></a>push_macro
-将值保存*macro_name*为此宏堆栈顶部的宏。
+# <a name="push_macro-pragma"></a>push_macro 杂注
+
+将*宏名称*宏的值保存在此宏的堆栈顶部。
 
 ## <a name="syntax"></a>语法
 
-```
-#pragma push_macro("
-macro_name
-")
-```
+> **#pragma push_macro ("** _宏名_ **")**
 
 ## <a name="remarks"></a>备注
 
-可以检索的值*macro_name*与`pop_macro`。
+可以通过`pop_macro`检索的*宏名*的值。
 
-请参阅[pop_macro](../preprocessor/pop-macro.md)有关的示例。
+有关示例, 请参阅[pop_macro](../preprocessor/pop-macro.md) 。
 
 ## <a name="see-also"></a>请参阅
 
-[Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Pragma 指令和 __pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -1,12 +1,12 @@
 ---
 title: _scprintf_p、_scprintf_p_l、_scwprintf_p、_scwprintf_p_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _scwprintf_p
 - _scprintf_p_l
 - _scwprintf_p_l
 - _scprintf_p
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _scwprintf_p_l
 - _sctprintf_p
@@ -43,14 +46,14 @@ helpviewer_keywords:
 - scwprintf_p_l function
 - _sctprintf_p_l function
 ms.assetid: 8390d1e1-2826-47a4-851f-6635a88087cc
-ms.openlocfilehash: 818dc5c24cca178fa03d08d1f609c23abbc7a013
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 79744ee814583b5b5c15fbf51d2822c6e4bfe1fa
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357052"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949490"
 ---
-# <a name="scprintfp-scprintfpl-scwprintfp-scwprintfpl"></a>_scprintf_p、_scprintf_p_l、_scwprintf_p、_scwprintf_p_l
+# <a name="_scprintf_p-_scprintf_p_l-_scwprintf_p-_scwprintf_p_l"></a>_scprintf_p、_scprintf_p_l、_scwprintf_p、_scwprintf_p_l
 
 返回格式化字符串的字符数量，并且能够指定参数在格式字符串中的使用顺序。
 
@@ -82,7 +85,7 @@ int _scwprintf_p _l(
 *format*<br/>
 窗体控件字符串。
 
-*argument*<br/>
+*实际*<br/>
 可选参数。
 
 *locale*<br/>
@@ -90,22 +93,22 @@ int _scwprintf_p _l(
 
 ## <a name="return-value"></a>返回值
 
-返回在使用指定的格式化代码打印字符串或将其发送到文件或缓冲区时生成的字符的数目。 返回的值不包括终止 null 字符。 **_scwprintf_p**对于宽字符执行相同的功能。
+返回在使用指定的格式化代码打印字符串或将其发送到文件或缓冲区时生成的字符的数目。 返回的值不包括终止 null 字符。 **_scwprintf_p**对宽字符执行相同的功能。
 
-之间的差异 **_scprintf_p**并 **_scprintf**在于 **_scprintf_p**支持位置参数，这允许在其中指定顺序参数格式字符串中使用。 有关详细信息，请参阅 [printf_p 位置参数](../../c-runtime-library/printf-p-positional-parameters.md)。
+**_Scprintf_p**和 **_scprintf**之间的区别在于 **_scprintf_p**支持位置参数，这允许指定在格式字符串中使用参数的顺序。 有关详细信息，请参阅 [printf_p 位置参数](../../c-runtime-library/printf-p-positional-parameters.md)。
 
-如果*格式*是**NULL**调用指针，无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，这些函数将返回-1 并设置**errno**到**EINVAL**。
+如果*format*为**空**指针，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回-1，并将**errno**设置为**EINVAL**。
 
 有关这些及其他错误代码的信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-每个*自变量*（如果有） 根据中的相应格式规范转换*格式*。 该格式包括普通字符，其形式和函数与相同*格式*参数[printf](printf-printf-l-wprintf-wprintf-l.md)。
+每个*自变量*（如果有）都根据*格式*的相应格式规范进行转换。 该格式包括普通字符，其形式和函数与[printf](printf-printf-l-wprintf-wprintf-l.md)的*format*参数相同。
 
-使用这些函数的版本 **_l**后缀完全相同，只不过它们使用传递中而不是当前线程区域设置的区域设置参数。
+这些带有 **_l**后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
 
 > [!IMPORTANT]
-> 确保 format 不是用户定义的字符串。
+> 确保 format不是用户定义的字符串。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -118,8 +121,8 @@ int _scwprintf_p _l(
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**_scprintf_p**， **_scprintf_p_l**|\<stdio.h>|
-|**_scwprintf_p**， **_scwprintf_p_l**|\<stdio.h> 或 \<wchar.h>|
+|**_scprintf_p**、 **_scprintf_p_l**|\<stdio.h>|
+|**_scwprintf_p**、 **_scwprintf_p_l**|\<stdio.h> 或 \<wchar.h>|
 
 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

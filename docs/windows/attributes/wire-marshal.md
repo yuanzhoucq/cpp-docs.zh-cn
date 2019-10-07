@@ -1,21 +1,21 @@
 ---
-title: wire_marshal (C++ COM 属性)
+title: wire_marshal (C++ COM 特性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.wire_marshal
 helpviewer_keywords:
 - wire_marshal attribute
 ms.assetid: 244f9d72-776d-4ebd-b60a-cee600a126b5
-ms.openlocfilehash: d1d18336a20644338a50ab66c7fcb06959e5760a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e1067b74191dcde98dd9c85a246db2acd26eff9c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407011"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514851"
 ---
-# <a name="wiremarshal"></a>wire_marshal
+# <a name="wire_marshal"></a>wire_marshal
 
-指定将用于传输而不是特定于应用程序的数据类型的数据类型。
+指定将用于传输的数据类型, 而不是特定于应用程序的数据类型。
 
 ## <a name="syntax"></a>语法
 
@@ -25,11 +25,11 @@ ms.locfileid: "62407011"
 
 ## <a name="remarks"></a>备注
 
-**Wire_marshal** C++属性具有相同的功能[wire_marshal](/windows/desktop/Midl/wire-marshal) MIDL 特性。
+**Wire_marshal** C++特性具有与[wire_marshal](/windows/win32/Midl/wire-marshal) MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
-下面的代码演示的一种用法**wire_marshal**:
+下面的代码演示**wire_marshal**的用法:
 
 ```cpp
 // cpp_attr_ref_wire_marshal.cpp
@@ -53,10 +53,10 @@ ms.locfileid: "62407011"
 
 |||
 |-|-|
-|**适用对象**|**typedef**|
-|**可重复**|否|
-|**必需的特性**|None|
-|**无效的特性**|None|
+|**适用于**|**typedef**|
+|**可重复**|No|
+|**必需的特性**|无|
+|**无效的特性**|无|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

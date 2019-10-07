@@ -1,6 +1,6 @@
 ---
-title: region、endregion
-ms.date: 10/18/2018
+title: region、endregion 杂注
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.endregion
 - endregion_CPP
@@ -12,37 +12,35 @@ helpviewer_keywords:
 - endregion pragma
 - region pragma
 ms.assetid: c697f807-622f-4796-851b-68a42bbecd84
-ms.openlocfilehash: c73a90aa2be83d643b74dde4645081e89da3ff73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a01e04582ac81d678aa0702945c62ee974a4428
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179745"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222374"
 ---
-# <a name="region-endregion"></a>region、endregion
+# <a name="region-endregion-pragmas"></a>region、endregion 杂注
 
-`#pragma region` 允许您指定的可以展开或折叠时使用的代码块[大纲功能](/visualstudio/ide/outlining)的 Visual Studio 代码编辑器中。
+`#pragma region`允许你指定一个代码块, 当使用 Visual Studio Code 编辑器的[大纲显示功能](/visualstudio/ide/outlining)时, 可以展开或折叠该代码块。
 
 ## <a name="syntax"></a>语法
 
-```
-#pragma region name
-#pragma endregion comment
-```
+> **#pragma 区域***名称*\
+> **#pragma endregion***注释*
 
 ### <a name="parameters"></a>参数
 
-*comment*<br/>
-（可选）在代码编辑器中将显示注释。
+*条*\
+可有可无要在代码编辑器中显示的注释。
 
-*name*<br/>
-（可选）区域的名称。  此名称将显示在代码编辑器中。
+*路径名*\
+可有可无区域的名称。 此名称显示在代码编辑器中。
 
 ## <a name="remarks"></a>备注
 
-`#pragma endregion` 标记的末尾`#pragma region`块。
+`#pragma endregion`标记`#pragma region`块的结尾。
 
-一个`#region`块必须终止与`#pragma endregion`。
+`#region`块必须`#pragma endregion`由指令终止。
 
 ## <a name="example"></a>示例
 
@@ -59,4 +57,4 @@ int main() {}
 
 ## <a name="see-also"></a>请参阅
 
-[Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Pragma 指令和 __pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

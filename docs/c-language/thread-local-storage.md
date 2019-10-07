@@ -8,18 +8,18 @@ helpviewer_keywords:
 - thread-local storage
 - storage, thread local storage
 ms.assetid: a0f1b109-c953-4079-aa10-e47f5483173d
-ms.openlocfilehash: 4b1aa32b384f3a5db5203883c1cc03bd61de7b19
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: a1099228e072a772ee7d8e7e93253b674d0cd24b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152126"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500259"
 ---
 # <a name="thread-local-storage"></a>线程本地存储
 
 **Microsoft 专用**
 
-线程本地存储 (TLS) 是给定的多线程进程中的每个线程为线程特定的数据分配存储时所采用的机制。 在标准多线程程序中，数据在给定进程的所有线程间共享，而线程本地存储是用于分配每个线程数据的机制。 有关线程的完整讨论，请参阅 Windows SDK 中的[进程和线程](/windows/desktop/ProcThread/processes-and-threads)。
+线程本地存储 (TLS) 是给定的多线程进程中的每个线程为线程特定的数据分配存储时所采用的机制。 在标准多线程程序中，数据在给定进程的所有线程间共享，而线程本地存储是用于分配每个线程数据的机制。 有关线程的完整讨论，请参阅 Windows SDK 中的[进程和线程](/windows/win32/ProcThread/processes-and-threads)。
 
 Microsoft C 语言包括扩展的存储类特性 thread，可将它与 __declspec 关键字一起使用来声明线程本地变量。 例如，以下代码声明了一个整数线程局部变量，并用一个值对其进行初始化：
 
@@ -86,7 +86,7 @@ __declspec( thread ) int tls_i = 1;
 
    请注意，包含正在初始化的变量的 sizeof 表达式不构成对自身的引用，并且允许使用该表达式。
 
-- 使用 \_\_declspec(thread) 可能会干扰 DLL 导入的[延迟加载](../build/reference/linker-support-for-delay-loaded-dlls.md)。
+- 使用 \_\_declspec(thread)  可能会干扰 DLL 导入的[延迟加载](../build/reference/linker-support-for-delay-loaded-dlls.md)。
 
 有关使用 thread 特性的详细信息，请参阅[多线程主题](../parallel/multithreading-support-for-older-code-visual-cpp.md)。
 

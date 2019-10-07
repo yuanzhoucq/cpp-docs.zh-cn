@@ -1,10 +1,10 @@
 ---
 title: puts、_putws
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _putws
 - puts
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _putts
 - _putws
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - putts function
 - _putws function
 ms.assetid: 32dada12-ed45-40ac-be06-3feeced9ecd6
-ms.openlocfilehash: 0151d29f627a8f6b91142d619f64921333bb48f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1cd38678b321853cb229d86f9554bb76efbc84d6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358081"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949803"
 ---
-# <a name="puts-putws"></a>puts、_putws
+# <a name="puts-_putws"></a>puts、_putws
 
 将字符串写入 **stdout**。
 
@@ -59,15 +62,15 @@ int _putws(
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则返回一个非负值。 如果**放入**失败，则返回**EOF**; 如果 **_putws**失败，则返回**WEOF**。 如果*str*是空指针，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则函数将设置**errno**到**EINVAL**并返回**EOF**或者**WEOF**。
+如果成功，则返回一个非负值。 如果**put 失败，则**返回**EOF**;如果 **_putws**失败，则返回**WEOF**。 如果*str*为空指针，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则函数将**errno**设置为**EINVAL** ，并返回**EOF**或**WEOF**。
 
 有关这些代码及其他错误代码的信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**放入**函数写入*str*到标准输出流**stdout**，替换字符串中的终止 null 字符 (\0) 的换行字符 ('\n')输出流。
+Put**函数将** *str*写入标准输出流**stdout**，将字符串的终止 null 字符（"\ 0"）替换为输出流中的换行符（"\n"）。
 
-**_putws**是宽字符版本**放入**; 如果在 ANSI 模式下打开流，则两个函数行为相同。 **放入**当前不到 UNICODE 流支持输出。
+**_putws**是的宽字符**版本;** 如果在 ANSI 模式下打开流，则这两个函数的行为相同。 put**当前不支持**到 UNICODE 流中的输出。
 
 **_putwch**使用当前控制台区域设置写入 Unicode 字符。
 
@@ -84,7 +87,7 @@ int _putws(
 |**puts**|\<stdio.h>|
 |**_putws**|\<stdio.h>|
 
-通用 Windows 平台 (UWP) 应用中不支持控制台。 控制台中，与关联的标准流句柄**stdin**， **stdout**，并**stderr**，C 运行时函数可以在 UWP 应用中使用它们之前，必须重定向. 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台 (UWP) 应用中不支持控制台。 与控制台、 **stdin**、 **stdout**和**stderr**关联的标准流句柄必须重定向, 然后 C 运行时函数才能在 UWP 应用中使用它们。 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>库
 

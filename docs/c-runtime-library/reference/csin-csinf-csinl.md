@@ -1,11 +1,11 @@
 ---
 title: csin、csinf、csinl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - csin
 - csinf
 - csinl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - csin
 - csinf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - csinf function
 - csinl function
 ms.assetid: 3ed475e8-9aae-42ba-a25c-7ae656a0fd4d
-ms.openlocfilehash: 66483c9121750c3333850d6244704b89b8893cad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0e0c57596ac36dbe3c0b72f79177b8df7b15af0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288844"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941992"
 ---
 # <a name="csin-csinf-csinl"></a>csin、csinf、csinl
 
@@ -68,17 +71,17 @@ _Lcomplex csinl(
 
 ## <a name="return-value"></a>返回值
 
-正弦*z*，以弧度为单位。
+*Z*的正弦值（以弧度表示）。
 
 ## <a name="remarks"></a>备注
 
-因为C++允许重载，可以调用的重载**csin**采用并返回 **_Fcomplex**并 **_Lcomplex**的值。 在 C 程序中， **csin**始终采用并返回 **_Dcomplex**值。
+由于C++允许重载，因此可以调用**csin**的重载，该重载采用并返回 **_Fcomplex**和 **_Lcomplex**值。 在 C 程序中， **csin**始终采用并返回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|C 标头|C++ 标头|
 |-------------|--------------|------------------|
-|**csin**,               **csinf**, **csinl**|\<complex.h>|\<ccomplex>|
+|**csin**、 **csinf**、 **csinl**|\<complex.h>|\<ccomplex>|
 
 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

@@ -1,6 +1,6 @@
 ---
-title: TN054:使用 MFC DAO 类时直接调用 DAO
-ms.date: 06/28/2018
+title: TN054：使用 MFC DAO 类时直接调用 DAO
+ms.date: 09/17/2019
 helpviewer_keywords:
 - MFC, DAO and
 - passwords [MFC], calling DAO
@@ -11,79 +11,75 @@ helpviewer_keywords:
 - TN054
 - DAO (Data Access Objects), and MFC
 ms.assetid: f7de7d85-8d6c-4426-aa05-2e617c0da957
-ms.openlocfilehash: b6aae8929e2840791e8d629378a0ec2261a2cda9
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: cef9852f762a64579e11fe4b0d8606bfc9d36709
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65610959"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095980"
 ---
-# <a name="tn054-calling-dao-directly-while-using-mfc-dao-classes"></a>TN054:使用 MFC DAO 类时直接调用 DAO
+# <a name="tn054-calling-dao-directly-while-using-mfc-dao-classes"></a>TN054：使用 MFC DAO 类时直接调用 DAO
 
 > [!NOTE]
-> 视觉对象C++环境和向导不支持 DAO （尽管 DAO 类包含并且仍可以使用它们）。 Microsoft 建议您使用[OLE DB 模板](../data/oledb/ole-db-templates.md)或[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)为新项目。 仅应在维护现有应用程序使用 DAO。
+> DAO 与 Access 数据库结合使用，并受 Office 2013 的支持。 3.6 是最终版本，被视为已过时。视觉对象C++环境和向导不支持 dao （尽管包含 dao 类，但你仍可以使用它）。 Microsoft 建议你将[OLE DB 模板](../data/oledb/ole-db-templates.md)或[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)用于新项目。 只应在维护现有应用程序时使用 DAO。
 
-使用 MFC DAO 数据库类时，可能必须要直接使用 DAO 的情况。 通常情况下，这将不是这种情况，但 MFC 提供了一些帮助程序机制以便进行直接 DAO 调用简单时将使用 MFC 类与 DAO 的直接调用相结合。 进行直接的 DAO MFC 托管 DAO 对象的方法调用应需要仅几行代码。 如果需要创建和使用的 DAO 对象*不*由 MFC 管理，您将只需稍微复杂一点的实际调用`Release`对象上。 此技术说明介绍了你可能想要直接调用 DAO、 MFC 帮助程序可以如何帮助你，以及如何使用 DAO OLE 接口。 最后，此说明提供了显示如何 DAO 安全功能直接调用 DAO 一些示例函数。
+使用 MFC DAO 数据库类时，可能会出现需要直接使用 DAO 的情况。 通常情况下，不会出现这种情况，但 MFC 提供了一些 helper 机制，以便在结合使用 MFC 类和直接 DAO 调用时，使直接 DAO 调用更简单。 直接对 MFC 托管 DAO 对象的方法进行 DAO 调用时，只需编写几行代码。 如果需要创建并使用*不*由 MFC 管理的 DAO 对象，则必须通过对对象进行实际调用`Release`来完成一些工作。 本技术说明说明了当你可能想要直接调用 DAO 时，MFC 帮助器可以执行哪些操作来帮助你，以及如何使用 DAO OLE 接口。 最后，此注释提供一些示例函数，演示如何直接为 DAO 安全功能调用 DAO。
 
-## <a name="when-to-make-direct-dao-calls"></a>何时进行直接的 DAO 调用
+## <a name="when-to-make-direct-dao-calls"></a>何时进行直接 DAO 调用
 
-在最常见的情况下进行直接调用 DAO 或时，集合需要刷新时要实现功能不使用 MFC 的包装。 由 MFC 不公开的最重要功能是安全性。 如果你想要实现安全功能，您需要直接使用的 DAO 个用户和组对象。 除了安全，有仅几个其他 DAO 功能不支持的 MFC。 其中包括记录集克隆和数据库复制功能，以及几个后期添加到 DAO。
+当需要刷新集合或实现 MFC 未包装的功能时，进行直接 DAO 调用的最常见情况。 MFC 未公开的最重要功能是安全的。 如果要实现安全功能，您将需要直接使用 DAO 用户和组的对象。 除了安全性，MFC 还不支持其他几个 DAO 功能。 其中包括记录集克隆和数据库复制功能，以及一些到 DAO 的后期补充。
 
-## <a name="a-brief-overview-of-dao-and-mfcs-implementation"></a>DAO 和 MFC 的实现的简要概述
+## <a name="a-brief-overview-of-dao-and-mfcs-implementation"></a>DAO 和 MFC 实现的简要概述
 
-MFC 的 DAO 使使用 DAO 通过处理的许多细节，因此不需要担心在小的事情更轻松的换行。 这包括 OLE、 创建和管理的 DAO 对象 （尤其是集合对象），错误检查，并提供强类型化、 更简单的接口的初始化 (没有**VARIANT**或`BSTR`自变量）。 可以直接 DAO 呼叫并仍要利用这些功能。 你的代码必须做的全部操作是调用`Release`对于直接 DAO 所创建的任何对象调用并*不*修改任何 MFC 可能依赖于在内部接口指针。 例如，不要修改*m_pDAORecordset*成员的一种开放`CDaoRecordset`对象，除非你了解*所有*内部的后果。 但是，您可以使用*m_pDAORecordset*接口来调用 DAO 直接以获取字段集合。 在这种情况下*m_pDAORecordset*成员将不能修改。 您只需调用`Release`字段集合对象与对象完成后。
+通过处理许多详细信息，DAO 包装的 DAO 使 DAO 的使用更加简单，因此您无需担心这些问题。 这包括： OLE 的初始化，创建和管理 DAO 对象（特别是集合对象），错误检查，并提供强类型的、更简单的接口（无**变体**或`BSTR`参数）。 您可以直接进行 DAO 调用，并且仍可以利用这些功能。 所有代码都必须为直接 DAO `Release`调用创建的任何对象调用，而*不*会修改 MFC 可能在内部依赖的任何接口指针。 例如，除非你了解*所有*内部后果，否则请不要`CDaoRecordset`修改开放式对象的*m_pDAORecordset*成员。 不过，您可以使用*m_pDAORecordset*接口直接调用 DAO 来获取字段集合。 在这种情况下，不会修改*m_pDAORecordset*成员。 使用完对象后， `Release`只需在 Fields 集合对象上调用。
 
-## <a name="description-of-helpers-to-make-dao-calls-easier"></a>帮助程序以使 DAO 说明调用更容易
+## <a name="description-of-helpers-to-make-dao-calls-easier"></a>简化 DAO 调用的帮助程序的说明
 
-提供了可使调用 DAO 更轻松的帮助器是在 MFC DAO 数据库类在内部使用的同一个帮助器。 这些帮助程序用于检查返回代码时进行直接的 DAO 调用，检查预期错误，并引发相应异常，如有必要，日志记录调试输出。 有两个基础的 helper 函数，将映射到这两个帮助之一的四个宏。 只需读取的代码是最佳的说明。 请参阅**DAO_CHECK**， **DAO_CHECK_ERROR**， **DAO_CHECK_MEM**，以及**DAO_TRACE** AFXDAO 中。H，若要查看的宏，并查看**AfxDaoCheck**并**AfxDaoTrace** DAOCORE 中。CPP。
+为了使调用 DAO 更简单，提供的帮助程序与在 MFC DAO 数据库类内部使用的帮助程序相同。 这些帮助程序用于在进行直接 DAO 调用时检查返回代码，记录调试输出，检查预期错误，并在必要时引发相应的异常。 有两个基础 helper 函数和四个宏映射到这两个帮助器中的一个。 最好的方法是阅读代码。 请参阅 AFXDAO 中的**DAO_CHECK**、 **DAO_CHECK_ERROR**、 **DAO_CHECK_MEM**和**DAO_TRACE** 。H 若要查看宏，请参阅**AfxDaoCheck** and **AfxDaoTrace** in DAOCORE.CPP.
 
 ## <a name="using-the-dao-ole-interfaces"></a>使用 DAO OLE 接口
 
-标头文件 DBDAOINT 中定义的 DAO 对象层次结构中每个对象的 OLE 接口。H，在 Visual Studio.NET 2003\VC7\include \Program Files\Microsoft 目录中找到。 这些接口提供使你可以操作整个 DAO 层次结构的方法。
+DAO 对象层次结构中每个对象的 OLE 接口在标头文件 DBDAOINT 中定义。H，在 \Program Files\Microsoft Visual Studio .NET 2003 \ VC7\include 目录中。 这些接口提供允许您操作整个 DAO 层次结构的方法。
 
-对于许多 DAO 接口中的方法，您将需要处理`BSTR`对象 （长度前缀的字符串在 OLE 自动化中使用）。 `BSTR`对象通常封装在**变体**数据类型。 MFC 类`COleVariant`本身继承自**变体**数据类型。 具体取决于是否为 ANSI 或 Unicode 生成项目，DAO 接口将返回 ANSI 或 Unicode `BSTR`s。 两个宏，V_BSTR 和 V_BSTRT，可用于在确保 DAO 接口获取`BSTR`的预期类型。
+对于 DAO 接口中的许多方法，您需要操作一个`BSTR`对象（在 OLE 自动化中使用长度为前缀的字符串）。 对象通常封装在变量数据类型中。 `BSTR` MFC 类`COleVariant`本身继承自**变量**数据类型。 根据您是为 ansi 或 unicode 生成项目，DAO 接口将返回 ansi 或 unicode `BSTR`。 V_BSTR 和 V_BSTRT 两个宏有助于确保 DAO 接口获取`BSTR`预期类型的。
 
-将提取 V_BSTR *bstrVal*的成员`COleVariant`。 当您需要传递的内容时，通常使用此宏`COleVariant`DAO 接口的方法。 下面的代码段显示了声明和实际使用的 DAO DAOUser 接口充分利用 V_BSTR 宏的两个方法：
+V_BSTR 将提取的*bstrVal*成员`COleVariant`。 当你需要将的内容`COleVariant`传递到 DAO 接口的方法时，通常使用此宏。 以下代码片段显示了使用 V_BSTR 宏的 DAO DAOUser 接口的两种方法的声明和实际用法：
 
 ```cpp
 COleVariant varOldName;
 COleVariant varNewName(_T("NewUser"), VT_BSTRT);
 
-// Code to assign pUser to a valid value omitted
-DAOUser *pUser = NULL;
+// Code to assign pUser to a valid value omitted DAO 3.6 is the final version and it is considered obsolete.User *pUser = NULL;
 
 // These method declarations were taken from DBDAOINT.H
 // STDMETHOD(get_Name) (THIS_ BSTR FAR* pbstr) PURE;
 // STDMETHOD(put_Name) (THIS_ BSTR bstr) PURE;
-
-DAO_CHECK(pUser->get_Name(&V_BSTR (&varOldName)));
-DAO_CHECK(pUser->put_Name(V_BSTR (&varNewName)));
+DAO 3.6 is the final version and it is considered obsolete._CHECK(pUser->get_Name(&V_BSTR (&varOldName))); DAO 3.6 is the final version and it is considered obsolete._CHECK(pUser->put_Name(V_BSTR (&varNewName)));
 ```
 
-请注意，`VT_BSTRT`参数中指定`COleVariant`构造函数更高版本可确保将采用 ANSI`BSTR`中`COleVariant`如果构建的应用程序和 Unicode 的 ANSI 版本`BSTR`Unicode 版本的你的应用程序。 这是 DAO 的需要。
+`COleVariant` `BSTR` `COleVariant`请注意，在上面的构造函数中指定的`BSTR` 参数可确保如果生成应用程序的ansi版本和unicode版本的，将在中有ansi`VT_BSTRT`应用程序。 这正是 DAO 所期望的。
 
-其他宏，V_BSTRT，将提取的 ANSI 或 Unicode *bstrVal*的成员`COleVariant`具体取决于生成 （ANSI 或 Unicode） 类型。 下面的代码演示如何提取`BSTR`值从`COleVariant`到`CString`:
+另一个宏 V_BSTRT 将提取 ANSI 或 unicode *bstrVal*成员`COleVariant` ，具体取决于生成的类型（ansi 或 unicode）。 下面的代码演示如何将`BSTR` `COleVariant`中的值提取到`CString`中：
 
 ```cpp
 COleVariant varName(_T("MyName"), VT_BSTRT);
 CString str = V_BSTRT(&varName);
 ```
 
-V_BSTRT 宏，以及其他方法来打开存储在其他类型`COleVariant`，DAOVIEW 示例所示。 具体而言，在执行此转换`CCrack::strVARIANT`方法。 此方法，如有可能，将转换的值`COleVariant`的实例到`CString`。
+DAOVIEW 示例演示了 V_BSTRT 宏以及用于打开存储在中`COleVariant`的其他类型的其他方法。 具体而言，此转换在`CCrack::strVARIANT`方法中执行。 如果可能，此方法会将的值`COleVariant`转换为的`CString`实例。
 
 ## <a name="simple-example-of-a-direct-call-to-dao"></a>直接调用 DAO 的简单示例
 
-需要刷新基础 DAO 集合对象时，可能会出现的情况。 通常情况下，这应该不是有必要，但如有必要，它是一个简单过程。 要刷新可能需要集合的一个示例是在多用户环境中具有多个用户创建新 tabledefs 操作时。 在这种情况下 tabledefs 集合可能会变得陈旧。 若要刷新集合，只需调用`Refresh`特定集合对象并检查是否有错误的方法：
+当需要刷新基础 DAO 集合对象时，可能会出现这种情况。 通常，这不是必需的，但它是一个简单的过程（如有必要）。 例如，在多个用户创建新 tabledefs 的多用户环境中操作时，可能需要刷新集合。 在这种情况下，tabledefs 收集可能会过时。 若要刷新集合，只需调用`Refresh`特定集合对象的方法并检查错误：
 
-```cpp
-DAO_CHECK(pMyDaoDatabase->m_pDAOTableDefs->Refresh());
+```cpp DAO 3.6 is the final version and it is considered obsolete._CHECK(pMyDaoDatabase->m_pDAOTableDefs->Refresh());
 ```
 
-请注意，目前所有 DAO 集合对象接口的 MFC DAO 数据库类的未记录的实现详细信息。
+请注意，当前所有 DAO 集合对象接口都是 MFC DAO 数据库类的未记录实现细节。
 
-## <a name="using-dao-directly-for-dao-security-features"></a>使用 DAO 直接用于 DAO 的安全功能
+## <a name="using-dao-directly-for-dao-security-features"></a>直接将 DAO 用于 DAO 安全功能
 
-MFC DAO 数据库类不换行 DAO 安全功能。 您必须调用 DAO 的接口来使用某些 DAO 安全功能的方法。 下面的函数设置的系统数据库，然后将更改用户的密码。 此函数将调用其他三个随后定义的函数。
+MFC DAO 数据库类不包装 DAO 安全功能。 您必须调用 DAO 接口的方法才能使用某些 DAO 安全功能。 以下函数设置系统数据库，然后更改用户的密码。 此函数将调用其他三个函数，这些函数随后定义。
 
 ```cpp
 void ChangeUserPassword()
@@ -133,19 +129,19 @@ void ChangeUserPassword()
 }
 ```
 
-接下来的四个示例演示了如何：
+接下来的四个示例演示了如何执行以下操作：
 
-- 设置系统 DAO 数据库 (。MDW 文件）。
+- 设置系统 DAO 数据库（。MDW 文件）。
 
-- 设置默认用户和密码。
+- 设置默认的 "用户" 和 "密码"。
 
 - 更改用户的密码。
 
 - 更改的密码。MDB 文件。
 
-### <a name="setting-the-system-database"></a>系统数据库设置
+### <a name="setting-the-system-database"></a>设置系统数据库
 
-下面是示例函数将由应用程序将系统数据库设置。 进行任何其他 DAO 调用之前，必须调用此函数。
+下面是一个示例函数，用于设置将由应用程序使用的系统数据库。 在进行任何其他 DAO 调用之前，必须先调用此函数。
 
 ```cpp
 // Set the system database that the
@@ -168,7 +164,7 @@ void SetSystemDB(CString& strSystemMDB)
 
 ### <a name="setting-the-default-user-and-password"></a>设置默认用户和密码
 
-若要设置的默认用户和系统数据库的密码，请使用以下函数：
+若要为系统数据库设置默认用户和密码，请使用以下函数：
 
 ```cpp
 void SetDefaultUser(CString& strUserName,
@@ -256,7 +252,7 @@ void ChangePassword(CString &strUserName,
 
 ### <a name="changing-the-password-of-an-mdb-file"></a>更改的密码。MDB 文件
 
-若要更改的密码。MDB 文件，请使用以下函数：
+更改的密码。MDB 文件，请使用以下函数：
 
 ```cpp
 void SetDBPassword(LPCTSTR pDB,

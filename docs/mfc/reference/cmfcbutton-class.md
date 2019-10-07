@@ -80,16 +80,16 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nAlignStyle
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
-ms.openlocfilehash: 0659e5335e1ebc495280a4e0cb5c0167f3b45e1d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7628ac353d01c2a6853e35a35bd1f702d3bb041e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403823"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505864"
 ---
 # <a name="cmfcbutton-class"></a>CMFCButton 类
 
-`CMFCButton`类添加了功能[CButton](../../mfc/reference/cbutton-class.md)如对齐按钮文本、 组合按钮文本和图像、 选择光标以及指定工具提示的类。
+`CMFCButton`类向 [CButton](../../mfc/reference/cbutton-class.md) 类添加功能，如对齐按钮文本、组合按钮文本和图像、选择光标以及指定工具提示。
 
 ## <a name="syntax"></a>语法
 
@@ -110,46 +110,46 @@ class CMFCButton : public CButton
 
 |名称|描述|
 |----------|-----------------|
-|[CMFCButton::CleanUp](#cleanup)|重置内部变量，并释放已分配的资源，例如图像、 位图和图标。|
+|[CMFCButton::CleanUp](#cleanup)|重置内部变量并释放已分配的资源，如图像、位图和图标。|
 |`CMFCButton::CreateObject`|由框架用于创建此类类型的动态实例。|
-|`CMFCButton::DrawItem`|所有者描述的按钮的可视特征发生更改时由框架调用。 (重写[CButton::DrawItem](../../mfc/reference/cbutton-class.md#drawitem)。)|
-|[CMFCButton::EnableFullTextTooltip](#enablefulltexttooltip)|指定是否在大型的工具提示窗口或小工具提示窗口中的文本的截断的版本中显示完整的工具提示文本。|
-|[CMFCButton::EnableMenuFont](#enablemenufont)|指定按钮的文本字体是否是应用程序菜单字体相同。|
-|[CMFCButton::EnableWindowsTheming](#enablewindowstheming)|指定按钮边框的样式是否对应于当前 Windows 主题。|
-|`CMFCButton::GetThisClass`|由框架用于获取一个指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)与此类类型相关联的对象。|
-|[CMFCButton::GetToolTipCtrl](#gettooltipctrl)|返回到基础的工具提示控件的引用。|
-|[CMFCButton::IsAutoCheck](#isautocheck)|指示复选框或单选按钮是一个自动按钮。|
-|[CMFCButton::IsAutorepeatCommandMode](#isautorepeatcommandmode)|指示是否将一个按钮设置为自动重复模式。|
-|[CMFCButton::IsCheckBox](#ischeckbox)|指示 button 是否是复选框按钮。|
-|[CMFCButton::IsChecked](#ischecked)|指示是否检查当前的按钮。|
-|[CMFCButton::IsHighlighted](#ishighlighted)|指示是否突出显示一个按钮。|
-|[CMFCButton::IsPressed](#ispressed)|指示按钮是否被推送和突出显示。|
-|[CMFCButton::IsPushed](#ispushed)|指示是否按下按钮。|
-|[CMFCButton::IsRadioButton](#isradiobutton)|指示 button 是否是单选按钮。|
-|[CMFCButton::IsWindowsThemingEnabled](#iswindowsthemingenabled)|指示按钮边框的样式是否对应于当前 Windows 主题。|
-|`CMFCButton::OnDrawParentBackground`|在指定区域中绘制按钮的父项的背景。 (重写[AFX_GLOBAL_DATA::DrawParentBackground](../../mfc/reference/afx-global-data-structure.md)|
-|`CMFCButton::PreTranslateMessage`|将窗口消息调度到之前[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)并[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函数。 （重写 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。）|
-|[CMFCButton::SetAutorepeatMode](#setautorepeatmode)|将一个按钮设置为自动重复模式。|
-|[CMFCButton::SetCheckedImage](#setcheckedimage)|设置选中的按钮的图像。|
+|`CMFCButton::DrawItem`|当所有者描述的按钮的视觉方面发生更改时由框架调用。 （重写[CButton：:D rawitem](../../mfc/reference/cbutton-class.md#drawitem)。）|
+|[CMFCButton::EnableFullTextTooltip](#enablefulltexttooltip)|指定是在大的工具提示窗口中显示工具提示的完整文本还是在小工具提示窗口中显示文本的截断版本。|
+|[CMFCButton::EnableMenuFont](#enablemenufont)|指定按钮文本字体是否与应用程序菜单字体相同。|
+|[CMFCButton::EnableWindowsTheming](#enablewindowstheming)|指定按钮边框的样式是否对应于当前的 Windows 主题。|
+|`CMFCButton::GetThisClass`|由框架用于获取指向与此类类型相关联的[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)对象的指针。|
+|[CMFCButton::GetToolTipCtrl](#gettooltipctrl)|返回对基础工具提示控件的引用。|
+|[CMFCButton::IsAutoCheck](#isautocheck)|指示复选框或单选按钮是否为 "自动" 按钮。|
+|[CMFCButton::IsAutorepeatCommandMode](#isautorepeatcommandmode)|指示按钮是否设置为自动重复模式。|
+|[CMFCButton::IsCheckBox](#ischeckbox)|指示按钮是否为复选框按钮。|
+|[CMFCButton::IsChecked](#ischecked)|指示是否选中当前按钮。|
+|[CMFCButton::IsHighlighted](#ishighlighted)|指示是否突出显示某个按钮。|
+|[CMFCButton::IsPressed](#ispressed)|指示按钮是否已按下并突出显示。|
+|[CMFCButton::IsPushed](#ispushed)|指示是否推送按钮。|
+|[CMFCButton::IsRadioButton](#isradiobutton)|指示按钮是否为单选按钮。|
+|[CMFCButton::IsWindowsThemingEnabled](#iswindowsthemingenabled)|指示按钮边框的样式是否对应于当前的 Windows 主题。|
+|`CMFCButton::OnDrawParentBackground`|在指定区域中绘制按钮的父级的背景。 （重写[AFX_GLOBAL_DATA：:D rawparentbackground](../../mfc/reference/afx-global-data-structure.md)|
+|`CMFCButton::PreTranslateMessage`|转换窗口消息，然后将其调度到[TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage)和[DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) Windows 函数。 （重写 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。）|
+|[CMFCButton::SetAutorepeatMode](#setautorepeatmode)|将按钮设置为自动重复模式。|
+|[CMFCButton::SetCheckedImage](#setcheckedimage)|设置选中按钮的图像。|
 |[CMFCButton::SetFaceColor](#setfacecolor)|设置按钮文本的背景色。|
 |[CMFCButton::SetImage](#setimage)|设置按钮的图像。|
-|[CMFCButton::SetMouseCursor](#setmousecursor)|设置光标图像。|
-|[CMFCButton::SetMouseCursorHand](#setmousecursorhand)|将光标设置到手的形状的图像。|
-|[CMFCButton::SetStdImage](#setstdimage)|使用`CMenuImages`对象来设置按钮的图像。|
-|[CMFCButton::SetTextColor](#settextcolor)|设置未选择的按钮的按钮文本的颜色。|
-|[CMFCButton::SetTextHotColor](#settexthotcolor)|设置处于选中状态的按钮的按钮文本的颜色。|
+|[CMFCButton::SetMouseCursor](#setmousecursor)|设置游标图像。|
+|[CMFCButton::SetMouseCursorHand](#setmousecursorhand)|将光标设置为指针的图像。|
+|[CMFCButton::SetStdImage](#setstdimage)|`CMenuImages`使用对象设置按钮图像。|
+|[CMFCButton::SetTextColor](#settextcolor)|为未选中的按钮设置按钮文本的颜色。|
+|[CMFCButton::SetTextHotColor](#settexthotcolor)|设置所选按钮的按钮文本颜色。|
 |[CMFCButton::SetTooltip](#settooltip)|将工具提示与按钮相关联。|
-|[CMFCButton::SizeToContent](#sizetocontent)|调整大小以包含其按钮文本和图像的按钮。|
+|[CMFCButton::SizeToContent](#sizetocontent)|调整按钮的大小以包含其按钮文本和图像。|
 
 ### <a name="protected-methods"></a>受保护的方法
 
 |名称|描述|
 |----------|-----------------|
 |[CMFCButton::OnDraw](#ondraw)|由框架调用以绘制一个按钮。|
-|[CMFCButton::OnDrawBorder](#ondrawborder)|由框架调用以绘制边框的按钮。|
-|[CMFCButton::OnDrawFocusRect](#ondrawfocusrect)|由框架调用以绘制聚焦框的按钮。|
-|[CMFCButton::OnDrawText](#ondrawtext)|由框架调用以绘制按钮文本。|
-|[CMFCButton::OnFillBackground](#onfillbackground)|由框架调用以绘制控件背景的按钮文本。|
+|[CMFCButton::OnDrawBorder](#ondrawborder)|由框架调用，用于绘制按钮的边框。|
+|[CMFCButton::OnDrawFocusRect](#ondrawfocusrect)|由框架调用，用于绘制按钮的聚焦框。|
+|[CMFCButton::OnDrawText](#ondrawtext)|由框架调用，用于绘制按钮文本。|
+|[CMFCButton::OnFillBackground](#onfillbackground)|由框架调用，用于绘制按钮文本的背景。|
 |[CMFCButton::SelectFont](#selectfont)|检索与指定的设备上下文关联的字体。|
 
 ### <a name="data-members"></a>数据成员
@@ -158,29 +158,29 @@ class CMFCButton : public CButton
 |----------|-----------------|
 |[CMFCButton::m_nAlignStyle](#m_nalignstyle)|指定按钮文本的对齐方式。|
 |[CMFCButton::m_bDontUseWinXPTheme](#m_bDontUseWinXPTheme)|指定是否使用 Windows XP 主题。|
-|[CMFCButton::m_bDrawFocus](#m_bdrawfocus)|指示是否绘制一个聚焦框按钮周围。|
-|[CMFCButton::m_nFlatStyle](#m_nflatstyle)|指定的按钮，如无边距、 平面的以平面或 3D 样式。|
-|[CMFCButton::m_bGrayDisabled](#m_bGrayDisabled)|为 TRUE 时，启用已禁用的按钮绘制为灰显。|
-|[CMFCButton::m_bHighlightChecked](#m_bhighlightchecked)|指示是否在光标悬停时突出显示 BS_CHECKBOX 样式的按钮。|
-|[CMFCButton::m_bResponseOnButtonDown](#m_bResponseOnButtonDown)|指示是否对按钮按下事件做出响应。|
-|[CMFCButton::m_bRightImage](#m_brightimage)|指示是否在按钮的右侧显示的图像。|
-|[CMFCButton::m_bTopImage](#m_bTopImage)| 指示图像是否为该按钮上。|
-|[CMFCButton::m_bTransparent](#m_btransparent)|指示按钮是否是透明的。|
-|[CMFCButton::m_bWasDblClk](#m_bWasDblClk)| 指示最后一个单击事件是一次双击。|
+|[CMFCButton::m_bDrawFocus](#m_bdrawfocus)|指示是否在按钮周围绘制聚焦框。|
+|[CMFCButton::m_nFlatStyle](#m_nflatstyle)|指定按钮的样式，例如无边框、平面、半平面或三维。|
+|[CMFCButton::m_bGrayDisabled](#m_bGrayDisabled)|如果为 TRUE，则允许将禁用的按钮绘制为灰显。|
+|[CMFCButton::m_bHighlightChecked](#m_bhighlightchecked)|指示当光标悬停在 BS_CHECKBOX 按钮上时是否突出显示该按钮。|
+|[CMFCButton::m_bResponseOnButtonDown](#m_bResponseOnButtonDown)|指示是否响应按钮按下事件。|
+|[CMFCButton::m_bRightImage](#m_brightimage)|指示是否在按钮右侧显示图像。|
+|[CMFCButton::m_bTopImage](#m_bTopImage)| 指示图像是否位于按钮的顶部。|
+|[CMFCButton::m_bTransparent](#m_btransparent)|指示按钮是否透明。|
+|[CMFCButton::m_bWasDblClk](#m_bWasDblClk)| 指示最后一个 click 事件是否是双击事件。|
 
 ## <a name="remarks"></a>备注
 
-其他类型的按钮派生自`CMFCButton`类，如[CMFCURLLinkButton](../../mfc/reference/cmfclinkctrl-class.md)类，该类支持超链接，并`CMFCColorButton`类，该类支持颜色选取器对话框。
+其他类型的按钮是从`CMFCButton`类派生的，如支持`CMFCColorButton`超链接的[CMFCURLLinkButton](../../mfc/reference/cmfclinkctrl-class.md)类以及支持颜色选取器对话框的类。
 
-样式`CMFCButton`对象可以是*3D*，*平面*，*半平面*或*没有边框*。 可以在左侧、 顶部或一个按钮的中心对齐按钮文本。 在运行时，可以控制该按钮显示的文本、 图像或文本和图像。 此外可以指定将光标悬停在按钮上时，显示特定光标图像。
+`CMFCButton`对象的样式可以是*三维*、*平*、*半平面*或*无边框*。 按钮文本可以在按钮的左侧、顶部或中心对齐。 在运行时，您可以控制按钮是显示文本、图像、文本还是显示图像。 还可以指定在光标悬停在按钮上时显示特定的光标图像。
 
-在代码中直接或通过使用创建的按钮控件**MFC 类向导**工具和对话框模板。 如果直接创建一个按钮控件，请添加`CMFCButton`应用程序，然后调用构造函数与变量和`Create`方法的`CMFCButton`对象。 如果您使用**MFC 类向导**，添加`CButton`变量到应用程序，然后将更改从变量的类型`CButton`到`CMFCButton`。
+直接在代码中或使用 " **MFC 类向导**" 工具和对话框模板创建一个按钮控件。 如果直接创建一个按钮控件，请在应用`CMFCButton`程序中添加一个变量，然后调用该`CMFCButton`对象的`Create`构造函数和方法。 如果使用**MFC 类向导**，请向应用程序`CButton`中添加一个变量，然后将该变量的类型从`CButton`更改为`CMFCButton`。
 
-若要处理对话框 box 应用程序中的通知消息，添加消息映射条目和每个通知的事件处理程序。 由发送的通知`CMFCButton`对象将与发送的那些相同`CButton`对象。
+若要在对话框应用程序中处理通知消息，请为每个通知添加消息映射项和事件处理程序。 `CMFCButton`对象发送的通知与`CButton`对象发送的通知相同。
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何使用各种方法中的配置按钮属性`CMFCButton`类。 此示例摘自[新的控件示例](../../overview/visual-cpp-samples.md)。
+下面的示例演示如何使用`CMFCButton`类中的各种方法配置按钮的属性。 该示例是[新控件示例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#31](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_2.cpp)]
@@ -201,11 +201,11 @@ class CMFCButton : public CButton
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxbutton.h
+**标头：** afxbutton
 
-##  <a name="cleanup"></a>  CMFCButton::CleanUp
+##  <a name="cleanup"></a>CMFCButton：：清理
 
-重置内部变量，并释放已分配的资源，例如图像、 位图和图标。
+重置内部变量并释放已分配的资源，如图像、位图和图标。
 
 ```
 virtual void CleanUp();
@@ -213,7 +213,7 @@ virtual void CleanUp();
 
 ##  <a name="enablefulltexttooltip"></a>  CMFCButton::EnableFullTextTooltip
 
-指定是否在大型的工具提示窗口或小工具提示窗口中的文本的截断的版本中显示完整的工具提示文本。
+指定是在大的工具提示窗口中显示工具提示的完整文本还是在小工具提示窗口中显示文本的截断版本。
 
 ```
 void EnableFullTextTooltip(BOOL bOn=TRUE);
@@ -222,13 +222,13 @@ void EnableFullTextTooltip(BOOL bOn=TRUE);
 ### <a name="parameters"></a>参数
 
 *bOn*<br/>
-[in]为 TRUE，则显示所有属性。FALSE 截断的显示文本。
+中若要显示所有文本，则为 TRUE;如果显示截断的文本，则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-##  <a name="enablemenufont"></a>  CMFCButton::EnableMenuFont
+##  <a name="enablemenufont"></a>CMFCButton::EnableMenuFont
 
-指定按钮的文本字体是否是应用程序菜单字体相同。
+指定按钮文本字体是否与应用程序菜单字体相同。
 
 ```
 void EnableMenuFont(
@@ -239,18 +239,18 @@ void EnableMenuFont(
 ### <a name="parameters"></a>参数
 
 *bOn*<br/>
-[in]若要为按钮文本字体; 使用的应用程序菜单字体，则返回 TRUE为 FALSE，则使用系统字体。 默认值为 TRUE。
+中若要使用应用程序菜单字体作为按钮文本字体，则为 TRUE;如果使用系统字体，则为 FALSE。 默认值为 TRUE。
 
 *bRedraw*<br/>
-[in]为 TRUE，则立即重绘屏幕上。否则为 FALSE。 默认值为 TRUE。
+中若要立即重绘屏幕，则为 TRUE;否则为 FALSE。 默认值为 TRUE。
 
 ### <a name="remarks"></a>备注
 
-如果此方法不执行用于指定按钮文本字体，则可以指定与字体[CWnd::SetFont](../../mfc/reference/cwnd-class.md#setfont)方法。 如果您根本不指定一种字体，框架将设置默认字体。
+如果不使用此方法指定按钮文本字体，则可以使用[CWnd：： SetFont](../../mfc/reference/cwnd-class.md#setfont)方法指定字体。 如果根本不指定字体，框架将设置默认字体。
 
-##  <a name="enablewindowstheming"></a>  CMFCButton::EnableWindowsTheming
+##  <a name="enablewindowstheming"></a>CMFCButton::EnableWindowsTheming
 
-指定按钮边框的样式是否对应于当前 Windows 主题。
+指定按钮边框的样式是否对应于当前的 Windows 主题。
 
 ```
 static void EnableWindowsTheming(BOOL bEnable = TRUE);
@@ -259,15 +259,15 @@ static void EnableWindowsTheming(BOOL bEnable = TRUE);
 ### <a name="parameters"></a>参数
 
 *bEnable*<br/>
-[in]为 TRUE，则使用当前 Windows 主题来绘制按钮边框。为 FALSE，则不使用 Windows 主题。 默认值为 TRUE。
+中如果为 TRUE，则使用当前的 Windows 主题绘制按钮边框;如果不使用 Windows 主题，则为 FALSE。 默认值为 TRUE。
 
 ### <a name="remarks"></a>备注
 
-此方法会影响派生自应用程序中的所有按钮`CMFCButton`类。
+此方法会影响您的应用程序中从`CMFCButton`类派生的所有按钮。
 
 ##  <a name="gettooltipctrl"></a>  CMFCButton::GetToolTipCtrl
 
-返回到基础的工具提示控件的引用。
+返回对基础工具提示控件的引用。
 
 ```
 CToolTipCtrl& GetToolTipCtrl();
@@ -275,13 +275,13 @@ CToolTipCtrl& GetToolTipCtrl();
 
 ### <a name="return-value"></a>返回值
 
-对基础的工具提示控件的引用。
+对基础工具提示控件的引用。
 
 ### <a name="remarks"></a>备注
 
-##  <a name="isautocheck"></a>  CMFCButton::IsAutoCheck
+##  <a name="isautocheck"></a>CMFCButton::IsAutoCheck
 
-指示复选框或单选按钮是一个自动按钮。
+指示复选框或单选按钮是否为 "自动" 按钮。
 
 ```
 BOOL IsAutoCheck() const;
@@ -289,13 +289,13 @@ BOOL IsAutoCheck() const;
 
 ### <a name="return-value"></a>返回值
 
-如果该按钮具有样式为 BS_AUTOCHECKBOX 或 BS_AUTORADIOBUTTON;否则为 FALSE。
+如果该按钮具有 style BS_AUTOCHECKBOX 或 BS_AUTORADIOBUTTON，则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-##  <a name="isautorepeatcommandmode"></a>  CMFCButton::IsAutorepeatCommandMode
+##  <a name="isautorepeatcommandmode"></a>CMFCButton::IsAutorepeatCommandMode
 
-指示是否将一个按钮设置为自动重复模式。
+指示按钮是否设置为自动重复模式。
 
 ```
 BOOL IsAutorepeatCommandMode() const;
@@ -303,15 +303,15 @@ BOOL IsAutorepeatCommandMode() const;
 
 ### <a name="return-value"></a>返回值
 
-如果该按钮设置为自动重复模式，则为 TRUE否则为 FALSE。
+如果按钮设置为自动重复模式，则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-使用[CMFCButton::SetAutorepeatMode](#setautorepeatmode)方法将一个按钮设置为自动重复模式。
+使用[CMFCButton：： SetAutorepeatMode](#setautorepeatmode)方法可将按钮设置为自动重复模式。
 
-##  <a name="ischeckbox"></a>  CMFCButton::IsCheckBox
+##  <a name="ischeckbox"></a>CMFCButton::IsCheckBox
 
-指示 button 是否是复选框按钮。
+指示按钮是否为复选框按钮。
 
 ```
 BOOL IsCheckBox() const;
@@ -319,13 +319,13 @@ BOOL IsCheckBox() const;
 
 ### <a name="return-value"></a>返回值
 
-如果该按钮具有 BS_CHECKBOX 或 BS_AUTOCHECKBOX 样式; 则为 TRUE否则为 FALSE。
+如果该按钮具有 BS_CHECKBOX 或 BS_AUTOCHECKBOX 样式，则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ischecked"></a>  CMFCButton::IsChecked
+##  <a name="ischecked"></a>CMFCButton：： IsChecked
 
-指示是否检查当前的按钮。
+指示是否选中当前按钮。
 
 ```
 BOOL IsChecked() const;
@@ -333,15 +333,15 @@ BOOL IsChecked() const;
 
 ### <a name="return-value"></a>返回值
 
-如果当前按钮被选中; 则为 TRUE否则为 FALSE。
+如果选中 "当前" 按钮，则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-框架将使用不同的方式，以指示检查了不同类型的按钮。 当它包含一个句点; 例如，选中单选按钮包含时选中复选框**X**。
+框架使用不同的方法来指示检查不同种类的按钮。 例如，当单选按钮包含点时将其选中;如果复选框包含**X**，则选中复选框。
 
-##  <a name="ishighlighted"></a>  CMFCButton::IsHighlighted
+##  <a name="ishighlighted"></a>CMFCButton::IsHighlighted
 
-指示是否突出显示一个按钮。
+指示是否突出显示某个按钮。
 
 ```
 BOOL IsHighlighted() const;
@@ -349,15 +349,15 @@ BOOL IsHighlighted() const;
 
 ### <a name="return-value"></a>返回值
 
-如果该按钮将突出显示; 则为 TRUE否则为 FALSE。
+如果按钮突出显示，则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-当鼠标悬停在按钮上时，将突出显示一个按钮。
+当鼠标悬停在按钮上时，将突出显示某个按钮。
 
-##  <a name="ispressed"></a>  CMFCButton::IsPressed
+##  <a name="ispressed"></a>CMFCButton::IsPressed
 
-指示按钮是否被推送和突出显示。
+指示按钮是否已按下并突出显示。
 
 ```
 BOOL IsPressed() const;
@@ -365,13 +365,13 @@ BOOL IsPressed() const;
 
 ### <a name="return-value"></a>返回值
 
-如果按下按钮; 则为 TRUE否则为 FALSE。
+如果按下了按钮，则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ispushed"></a>  CMFCButton::IsPushed
+##  <a name="ispushed"></a>CMFCButton::IsPushed
 
-指示是否按下按钮。
+指示是否推送按钮。
 
 ```
 BOOL IsPushed() const;
@@ -379,13 +379,13 @@ BOOL IsPushed() const;
 
 ### <a name="return-value"></a>返回值
 
-如果按钮; 则为 TRUE否则为 FALSE。
+如果按钮被推送，则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-##  <a name="isradiobutton"></a>  CMFCButton::IsRadioButton
+##  <a name="isradiobutton"></a>CMFCButton::IsRadioButton
 
-指示 button 是否是单选按钮。
+指示按钮是否为单选按钮。
 
 ```
 BOOL IsRadioButton() const;
@@ -393,13 +393,13 @@ BOOL IsRadioButton() const;
 
 ### <a name="return-value"></a>返回值
 
-按钮样式 BS_RADIOBUTTON 或 BS_AUTORADIOBUTTON; 如果为 TRUE否则为 FALSE。
+如果按钮样式为 BS_RADIOBUTTON 或 BS_AUTORADIOBUTTON，则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-##  <a name="iswindowsthemingenabled"></a>  CMFCButton::IsWindowsThemingEnabled
+##  <a name="iswindowsthemingenabled"></a>CMFCButton::IsWindowsThemingEnabled
 
-指示按钮边框的样式是否对应于当前 Windows 主题。
+指示按钮边框的样式是否对应于当前的 Windows 主题。
 
 ```
 static BOOL IsWindowsThemingEnabled();
@@ -407,11 +407,11 @@ static BOOL IsWindowsThemingEnabled();
 
 ### <a name="return-value"></a>返回值
 
-如果按钮边框的样式对应于当前的 Windows 主题; 则为 TRUE否则为 FALSE。
+如果按钮边框的样式与当前的 Windows 主题相对应，则为 TRUE;否则为 FALSE。
 
-## <a name="a-namembdontusewinxptheme-cmfcbuttonmbdontusewinxptheme"></a><a name="m_bDontUseWinXPTheme"/> CMFCButton::m_bDontUseWinXPTheme
+## <a name="a-namem_bdontusewinxptheme-cmfcbuttonm_bdontusewinxptheme"></a><a name="m_bDontUseWinXPTheme"/>CMFCButton::m_bDontUseWinXPTheme
 
-指定是否在绘制按钮时使用 Windows XP 主题。
+指定在绘制按钮时是否使用 Windows XP 主题。
 
 ```
 BOOL m_bDontUseWinXPTheme;
@@ -419,7 +419,7 @@ BOOL m_bDontUseWinXPTheme;
 
 ##  <a name="m_bdrawfocus"></a>  CMFCButton::m_bDrawFocus
 
-指示是否绘制一个聚焦框按钮周围。
+指示是否在按钮周围绘制聚焦框。
 
 ```
 BOOL m_bDrawFocus;
@@ -427,21 +427,21 @@ BOOL m_bDrawFocus;
 
 ### <a name="remarks"></a>备注
 
-设置`m_bDrawFocus`为 TRUE 的成员才能指定该框架将周围绘制聚焦框按钮的文本和图像，如果该按钮将接收焦点。
+将 " `m_bDrawFocus`成员" 设置为 "TRUE"，以指定框架将在按钮的文本和图像周围绘制聚焦框（如果按钮接收到焦点）。
 
-`CMFCButton`构造函数初始化此成员为 TRUE。
+`CMFCButton`构造函数将此成员初始化为 TRUE。
 
-##  <a name="m_bGrayDisabled"></a>  CMFCButton::m_bGrayDisabled
+##  <a name="m_bGrayDisabled"></a>CMFCButton::m_bGrayDisabled
 
-为 TRUE 时，启用已禁用的按钮绘制为灰显。
+如果为 TRUE，则允许将禁用的按钮绘制为灰显。
 
 ```
 BOOL m_bGrayDisabled;
 ```
 
-##  <a name="m_bhighlightchecked"></a>  CMFCButton::m_bHighlightChecked
+##  <a name="m_bhighlightchecked"></a>CMFCButton::m_bHighlightChecked
 
-指示是否在光标悬停时突出显示 BS_CHECKBOX 样式的按钮。
+指示当光标悬停在 BS_CHECKBOX 按钮上时是否突出显示该按钮。
 
 ```
 BOOL m_bHighlightChecked;
@@ -449,19 +449,19 @@ BOOL m_bHighlightChecked;
 
 ### <a name="remarks"></a>备注
 
-设置`m_bHighlightChecked`为 TRUE，框架将时突出显示 BS_CHECKBOX 样式的按钮的鼠标悬停在其上指定的成员。
+`m_bHighlightChecked`将成员设置为 TRUE，以指定框架在鼠标悬停在 BS_CHECKBOX 按钮上时，将突出显示该按钮。
 
-##  <a name="m_bResponseOnButtonDown"></a> CMFCButton::m_bResponseOnButtonDown
+##  <a name="m_bResponseOnButtonDown"></a>CMFCButton::m_bResponseOnButtonDown
 
-指示是否对按钮按下事件做出响应。
+指示是否响应按钮按下事件。
 
 ```
 BOOL m_bResponseOnButtonDown;
 ```
 
-##  <a name="m_brightimage"></a>  CMFCButton::m_bRightImage
+##  <a name="m_brightimage"></a>CMFCButton::m_bRightImage
 
-指示是否在按钮的右侧显示的图像。
+指示是否在按钮右侧显示图像。
 
 ```
 BOOL m_bRightImage;
@@ -469,7 +469,7 @@ BOOL m_bRightImage;
 
 ##  <a name="m_bTopImage"></a>  CMFCButton::m_bTopImage](#m_bTopImage)
 
-指示图像是否为该按钮上。
+指示图像是否位于按钮的顶部。
 
 ```
 BOOL m_bTopImage;
@@ -477,11 +477,11 @@ BOOL m_bTopImage;
 
 ### <a name="remarks"></a>备注
 
-设置`m_bRightImage`为 TRUE 来指定该框架将右侧的按钮的文本标签中显示按钮的图像的成员。
+`m_bRightImage`将成员设置为 TRUE，以指定框架将在按钮的文本标签右侧显示该按钮的图像。
 
 ##  <a name="m_btransparent"></a>  CMFCButton::m_bTransparent
 
-指示按钮是否是透明的。
+指示按钮是否透明。
 
 ```
 BOOL m_bTransparent;
@@ -489,9 +489,9 @@ BOOL m_bTransparent;
 
 ### <a name="remarks"></a>备注
 
-设置`m_bTransparent`为 TRUE 来指定，该框架将使按钮透明的成员。 `CMFCButton`构造函数初始化此成员为 FALSE。
+`m_bTransparent`将成员设置为 TRUE，以指定该框架将使该按钮透明。 `CMFCButton`构造函数将此成员初始化为 FALSE。
 
-##  <a name="m_nalignstyle"></a>  CMFCButton::m_nAlignStyle
+##  <a name="m_nalignstyle"></a>CMFCButton::m_nAlignStyle
 
 指定按钮文本的对齐方式。
 
@@ -501,19 +501,19 @@ AlignStyle m_nAlignStyle;
 
 ### <a name="remarks"></a>备注
 
-使用下列任一`CMFCButton::AlignStyle`枚举值，以指定按钮文本的对齐方式：
+使用下列`CMFCButton::AlignStyle`枚举值之一来指定按钮文本的对齐方式：
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
-|ALIGN_CENTER|（默认值）对齐到按钮的中心的按钮文本。|
-|ALIGN_LEFT|对齐到左侧和右侧的按钮的按钮文本。|
-|ALIGN_RIGHT|对齐到右侧的按钮的按钮文本。|
+|ALIGN_CENTER|缺省值将按钮文本与按钮中心对齐。|
+|ALIGN_LEFT|将按钮文本与按钮的左侧对齐。|
+|ALIGN_RIGHT|将按钮文本与按钮右侧对齐。|
 
-`CMFCButton`构造函数初始化到 ALIGN_CENTER 此成员。
+`CMFCButton`构造函数将此成员初始化为 ALIGN_CENTER。
 
-##  <a name="m_bWasDblClk"></a>  CMFCButton::m_bWasDblClk](#m_bWasDblClk)|
+##  <a name="m_bWasDblClk"></a>CMFCButton：： m_bWasDblClk] （#m_bWasDblClk） |
 
-指示最后一个单击事件是一次双击。 |
+指示最后一个 click 事件是否是双击。 |
 
 ```
 BOOL m_bWasDblClk;
@@ -521,7 +521,7 @@ BOOL m_bWasDblClk;
 
 ##  <a name="m_nflatstyle"></a>  CMFCButton::m_nFlatStyle
 
-指定的按钮，如无边距、 平面的以平面或 3D 样式。
+指定按钮的样式，例如无边框、平面、半平面或三维。
 
 ```
 FlatStyle  m_nFlatStyle;
@@ -529,20 +529,20 @@ FlatStyle  m_nFlatStyle;
 
 ### <a name="remarks"></a>备注
 
-下表列出了`CMFCButton::m_nFlatStyle`指定按钮的外观的枚举值。
+下表列出`CMFCButton::m_nFlatStyle`了用于指定按钮外观的枚举值。
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
-|BUTTONSTYLE_3D|（默认值）该按钮显示为具有高的三维边。 单击该按钮，该按钮显示到有深度的缩进按下。|
-|BUTTONSTYLE_FLAT|当鼠标置于按钮上，但不暂停时，按钮将显示为二维，且不具有凸起的边。 当鼠标悬停在按钮上时，按钮将显示具有较低的三维边。 单击该按钮，该按钮显示为浅表缩进按下。|
-|BUTTONSTYLE_SEMIFLAT|该按钮显示为具有较低的三维边。 单击该按钮，该按钮显示到有深度的缩进按下。|
-|BUTTONSTYLE_NOBORDERS|该按钮不会不引发边，并始终显示二维。 该按钮不会显示单击时到缩进按下。|
+|BUTTONSTYLE_3D|缺省值此按钮显示为具有较高的三维边。 单击该按钮时，该按钮将显示为深缩进。|
+|BUTTONSTYLE_FLAT|当鼠标不停留在按钮上时，按钮显示为二维并且不具有凸起边。 当鼠标悬停在按钮上时，按钮显示为具有低三维边。 单击该按钮时，该按钮将看上去按浅浅缩进。|
+|BUTTONSTYLE_SEMIFLAT|按钮显示为具有较低的三维边。 单击该按钮时，该按钮将显示为深缩进。|
+|BUTTONSTYLE_NOBORDERS|此按钮不具有凸起边并且始终显示为二维。 在单击按钮时，该按钮看起来不是缩进的。|
 
-`CMFCButton`构造函数初始化到 BUTTONSTYLE_3D 此成员。
+`CMFCButton`构造函数将此成员初始化为 BUTTONSTYLE_3D。
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何设置的值`m_nFlatStyle`中的成员变量`CMFCButton`类。 此示例摘自[新的控件示例](../../overview/visual-cpp-samples.md)。
+下面的示例演示如何`m_nFlatStyle` `CMFCButton`在类中设置成员变量的值。 此示例是[新控件示例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#29](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_5.cpp)]
@@ -561,21 +561,21 @@ virtual void OnDraw(
 ### <a name="parameters"></a>参数
 
 *pDC*<br/>
-[in]指向设备上下文的指针。
+中指向设备上下文的指针。
 
 *rect*<br/>
-[in]对限定按钮的矩形的引用。
+中对限定按钮的矩形的引用。
 
 *uiState*<br/>
-[in]当前的按钮状态。 有关详细信息，请参阅`itemState`的成员[DRAWITEMSTRUCT 结构](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct)主题。
+中当前按钮状态。 有关详细信息，请参阅`itemState` [DRAWITEMSTRUCT 结构](/windows/win32/api/winuser/ns-winuser-drawitemstruct)主题的成员。
 
 ### <a name="remarks"></a>备注
 
-重写此方法以使用你自己的代码来绘制一个按钮。
+重写此方法以使用自己的代码绘制按钮。
 
 ##  <a name="ondrawborder"></a>  CMFCButton::OnDrawBorder
 
-由框架调用以绘制边框的按钮。
+由框架调用，用于绘制按钮的边框。
 
 ```
 virtual void OnDrawBorder(
@@ -587,21 +587,21 @@ virtual void OnDrawBorder(
 ### <a name="parameters"></a>参数
 
 *pDC*<br/>
-[in]指向设备上下文的指针。
+中指向设备上下文的指针。
 
 *rectClient*<br/>
-[in]对限定按钮的矩形的引用。
+中对限定按钮的矩形的引用。
 
 *uiState*<br/>
-[in]当前的按钮状态。 有关详细信息，请参阅`itemState`的成员[DRAWITEMSTRUCT 结构](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct)主题。
+中当前按钮状态。 有关详细信息，请参阅`itemState` [DRAWITEMSTRUCT 结构](/windows/win32/api/winuser/ns-winuser-drawitemstruct)主题的成员。
 
 ### <a name="remarks"></a>备注
 
-重写此方法以使用你自己的代码来绘制边框。
+重写此方法以使用自己的代码绘制边框。
 
 ##  <a name="ondrawfocusrect"></a>  CMFCButton::OnDrawFocusRect
 
-由框架调用以绘制聚焦框的按钮。
+由框架调用，用于绘制按钮的聚焦框。
 
 ```
 virtual void OnDrawFocusRect(
@@ -612,18 +612,18 @@ virtual void OnDrawFocusRect(
 ### <a name="parameters"></a>参数
 
 *pDC*<br/>
-[in]指向设备上下文的指针。
+中指向设备上下文的指针。
 
 *rectClient*<br/>
-[in]对限定按钮的矩形的引用。
+中对限定按钮的矩形的引用。
 
 ### <a name="remarks"></a>备注
 
-重写此方法以使用你自己的代码来绘制聚焦框。
+重写此方法以使用自己的代码绘制聚焦框。
 
 ##  <a name="ondrawtext"></a>  CMFCButton::OnDrawText
 
-由框架调用以绘制按钮文本。
+由框架调用，用于绘制按钮文本。
 
 ```
 virtual void OnDrawText(
@@ -637,27 +637,27 @@ virtual void OnDrawText(
 ### <a name="parameters"></a>参数
 
 *pDC*<br/>
-[in]指向设备上下文的指针。
+中指向设备上下文的指针。
 
 *rect*<br/>
-[in]对限定按钮的矩形的引用。
+中对限定按钮的矩形的引用。
 
 *strText*<br/>
-[in]要绘制的文本。
+中要绘制的文本。
 
 *uiDTFlags*<br/>
-[in]指定如何设置文本格式的标志。 有关详细信息，请参阅*nFormat*的参数[CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)方法。
+中指定如何设置文本格式的标志。 有关详细信息，请参阅[CDC：:D rawtext](../../mfc/reference/cdc-class.md#drawtext)方法的*nFormat*参数。
 
 *uiState*<br/>
 [in] 保留。
 
 ### <a name="remarks"></a>备注
 
-重写此方法以使用你自己的代码来绘制按钮文本。
+重写此方法以使用自己的代码绘制按钮文本。
 
 ##  <a name="onfillbackground"></a>  CMFCButton::OnFillBackground
 
-由框架调用以绘制控件背景的按钮文本。
+由框架调用，用于绘制按钮文本的背景。
 
 ```
 virtual void OnFillBackground(
@@ -668,14 +668,14 @@ virtual void OnFillBackground(
 ### <a name="parameters"></a>参数
 
 *pDC*<br/>
-[in]指向设备上下文的指针。
+中指向设备上下文的指针。
 
 *rectClient*<br/>
-[in]对限定按钮的矩形的引用。
+中对限定按钮的矩形的引用。
 
 ### <a name="remarks"></a>备注
 
-重写此方法以使用你自己的代码用于绘制背景的按钮。
+重写此方法以使用自己的代码绘制按钮的背景。
 
 ##  <a name="selectfont"></a>  CMFCButton::SelectFont
 
@@ -688,17 +688,17 @@ virtual CFont* SelectFont(CDC* pDC);
 ### <a name="parameters"></a>参数
 
 *pDC*<br/>
-[in]指向设备上下文的指针。
+中指向设备上下文的指针。
 
 ### <a name="return-value"></a>返回值
 
-重写此方法以使用你自己的代码来检索字体的字体。
+重写此方法以使用自己的代码来检索字体。
 
 ### <a name="remarks"></a>备注
 
-##  <a name="setautorepeatmode"></a>  CMFCButton::SetAutorepeatMode
+##  <a name="setautorepeatmode"></a>CMFCButton::SetAutorepeatMode
 
-将一个按钮设置为自动重复模式。
+将按钮设置为自动重复模式。
 
 ```
 void SetAutorepeatMode(int nTimeDelay=500);
@@ -707,15 +707,15 @@ void SetAutorepeatMode(int nTimeDelay=500);
 ### <a name="parameters"></a>参数
 
 *nTimeDelay*<br/>
-[in]一个非负数字，指定发送到父窗口的消息之间的间隔。 以毫秒为单位的时间间隔，其默认值为 500 毫秒。 指定零以禁用自动重复消息模式。
+中指定发送到父窗口的消息间间隔的非负数。 间隔以毫秒为单位，其默认值为500毫秒。 指定零以禁用自动重复消息模式。
 
 ### <a name="remarks"></a>备注
 
-此方法会导致该按钮以不断向父窗口发送 WM_COMMAND 消息，直到释放按钮，或*nTimeDelay*参数设置为零。
+此方法会导致按钮持续向父窗口发送 WM_COMMAND 消息，直到释放该按钮，或将*nTimeDelay*参数设置为零。
 
 ##  <a name="setcheckedimage"></a>  CMFCButton::SetCheckedImage
 
-设置选中的按钮的图像。
+设置选中按钮的图像。
 
 ```
 void SetCheckedImage(
@@ -741,40 +741,40 @@ void SetCheckedImage(
 ### <a name="parameters"></a>参数
 
 *hIcon*<br/>
-[in]包含位图和掩码为新映像的图标的句柄。
+中包含新图像的位图和掩码的图标的句柄。
 
 *bAutoDestroy*<br/>
-[in]为 TRUE，则指定位图资源被销毁自动保存功能。否则为 FALSE。 默认值为 TRUE。
+中如果指定自动销毁位图资源，则为 TRUE;否则为 FALSE。 默认值为 TRUE。
 
 *hIconHot*<br/>
-[in]包含此图像可查看所选状态的图标的句柄。
+中包含所选状态的图像的图标的句柄。
 
 *hBitmap*<br/>
-[in]包含未选定状态的图像的位图的句柄。
+中包含未选中状态图像的位图的句柄。
 
 *hBitmapHot*<br/>
-[in]包含所选状态的图像的位图的句柄。
+中包含所选状态的图像的位图的句柄。
 
 *bMap3dColors*<br/>
-[in]指定按钮背景; 透明的颜色也就是说，该按钮的人脸。 若要使用的颜色值 RGB （192，192，192）;如果为 FALSE，使用定义的颜色值`AFX_GLOBAL_DATA::clrBtnFace`。
+中指定按钮背景的透明颜色;即按钮的图符。 若要使用颜色值 RGB （192，192，192），则为 TRUE;若为 FALSE，则使用由`AFX_GLOBAL_DATA::clrBtnFace`定义的颜色值。
 
 *uiBmpResId*<br/>
-[in]非选择图像的资源 ID。
+中未选择的映像的资源 ID。
 
 *uiBmpHotResId*<br/>
-[in]所选图像的资源 ID。
+中所选映像的资源 ID。
 
 *hIconDisabled*<br/>
-[in]禁用图像的图标的句柄。
+中已禁用图像的图标的句柄。
 
 *hBitmapDisabled*<br/>
-[in]包含已禁用的图像的位图的句柄。
+中包含已禁用图像的位图的句柄。
 
 *uiBmpDsblResID*<br/>
-[in]已禁用的位图的资源 ID。
+中已禁用位图的资源 ID。
 
 *bAlphaBlend*<br/>
-[in]为 true，则使用 alpha 通道; 的使用仅 32 位映像如果为 FALSE，不使用仅 alpha 通道的图像。 默认值为 FALSE。
+中如果仅使用使用 alpha 通道的32位映像，则为 TRUE;FALSE，则不只使用 alpha 通道图像。 默认值为 FALSE。
 
 ### <a name="remarks"></a>备注
 
@@ -791,16 +791,16 @@ void SetFaceColor(
 ### <a name="parameters"></a>参数
 
 *crFace*<br/>
-[in]RGB 颜色值。
+中RGB 颜色值。
 
 *bRedraw*<br/>
-[in]为 TRUE，则立即; 重绘屏幕否则为 FALSE。
+中若要立即重绘屏幕，则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-此方法用于定义新的填充颜色按钮背景 （人脸）。 请注意，在后台不填充何时[CMFCButton::m_bTransparent](#m_btransparent)成员变量为 TRUE。
+使用此方法可为按钮背景（面部）定义一种新的填充颜色。 请注意，当[CMFCButton：： m_bTransparent](#m_btransparent)成员变量为 TRUE 时，不填充背景。
 
-##  <a name="setimage"></a>  CMFCButton::SetImage
+##  <a name="setimage"></a>CMFCButton::SetImage
 
 设置按钮的图像。
 
@@ -828,53 +828,53 @@ void SetImage(
 ### <a name="parameters"></a>参数
 
 *hIcon*<br/>
-[in]包含位图和掩码为新映像的图标的句柄。
+中包含新图像的位图和掩码的图标的句柄。
 
 *bAutoDestroy*<br/>
-[in]为 TRUE，则指定位图资源被销毁自动保存功能。否则为 FALSE。 默认值为 TRUE。
+中如果指定自动销毁位图资源，则为 TRUE;否则为 FALSE。 默认值为 TRUE。
 
 *hIconHot*<br/>
-[in]包含此图像可查看所选状态的图标的句柄。
+中包含所选状态的图像的图标的句柄。
 
 *hBitmap*<br/>
-[in]包含未选定状态的图像的位图的句柄。
+中包含未选中状态图像的位图的句柄。
 
 *hBitmapHot*<br/>
-[in]包含所选状态的图像的位图的句柄。
+中包含所选状态的图像的位图的句柄。
 
 *uiBmpResId*<br/>
-[in]非选择图像的资源 ID。
+中未选择的映像的资源 ID。
 
 *uiBmpHotResId*<br/>
-[in]所选图像的资源 ID。
+中所选映像的资源 ID。
 
 *bMap3dColors*<br/>
-[in]指定按钮背景; 透明的颜色也就是说，该按钮的人脸。 若要使用的颜色值 RGB （192，192，192）;如果为 FALSE，使用定义的颜色值`AFX_GLOBAL_DATA::clrBtnFace`。
+中指定按钮背景的透明颜色;即按钮的图符。 若要使用颜色值 RGB （192，192，192），则为 TRUE;若为 FALSE，则使用由`AFX_GLOBAL_DATA::clrBtnFace`定义的颜色值。
 
 *hIconDisabled*<br/>
-[in]禁用图像的图标的句柄。
+中已禁用图像的图标的句柄。
 
 *hBitmapDisabled*<br/>
-[in]包含已禁用的图像的位图的句柄。
+中包含已禁用图像的位图的句柄。
 
 *uiBmpDsblResID*<br/>
-[in]已禁用的位图的资源 ID。
+中已禁用位图的资源 ID。
 
 *bAlphaBlend*<br/>
-[in]为 true，则使用 alpha 通道; 的使用仅 32 位映像如果为 FALSE，不使用仅 alpha 通道的图像。 默认值为 FALSE。
+中如果仅使用使用 alpha 通道的32位映像，则为 TRUE;FALSE，则不只使用 alpha 通道图像。 默认值为 FALSE。
 
 ### <a name="remarks"></a>备注
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何使用各种版本的`SetImage`中的方法`CMFCButton`类。 此示例摘自[新的控件示例](../../overview/visual-cpp-samples.md)。
+下面的示例演示如何`SetImage` `CMFCButton`在类中使用方法的各种版本。 该示例是[新控件示例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#31](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_2.cpp)]
 
-##  <a name="setmousecursor"></a>  CMFCButton::SetMouseCursor
+##  <a name="setmousecursor"></a>CMFCButton::SetMouseCursor
 
-设置光标图像。
+设置游标图像。
 
 ```
 void SetMouseCursor(HCURSOR hcursor);
@@ -883,22 +883,22 @@ void SetMouseCursor(HCURSOR hcursor);
 ### <a name="parameters"></a>参数
 
 *hcursor*<br/>
-[in]光标的句柄。
+中游标的句柄。
 
 ### <a name="remarks"></a>备注
 
-使用此方法将光标图像，如手形光标与按钮相关联。 从应用程序资源加载光标。
+使用此方法可将光标图像（如手形光标）与按钮相关联。 将从应用程序资源加载光标。
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何使用`SetMouseCursor`中的方法`CMFCButton`类。 中的代码示例摘自[新的控件示例](../../overview/visual-cpp-samples.md)。
+下面的示例演示如何使用`SetMouseCursor` `CMFCButton`类中的方法。 示例是[新控件示例](../../overview/visual-cpp-samples.md)中的代码的一部分。
 
 [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#30](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_6.cpp)]
 
-##  <a name="setmousecursorhand"></a>  CMFCButton::SetMouseCursorHand
+##  <a name="setmousecursorhand"></a>CMFCButton::SetMouseCursorHand
 
-将光标设置到手的形状的图像。
+将光标设置为指针的图像。
 
 ```
 void SetMouseCursorHand();
@@ -906,11 +906,11 @@ void SetMouseCursorHand();
 
 ### <a name="remarks"></a>备注
 
-使用此方法将手形光标图像与按钮相关联。 从应用程序资源加载光标。
+使用此方法将手的光标图像与按钮相关联。 将从应用程序资源加载光标。
 
-##  <a name="setstdimage"></a>  CMFCButton::SetStdImage
+##  <a name="setstdimage"></a>CMFCButton::SetStdImage
 
-使用`CMenuImages`对象来设置按钮的图像。
+`CMenuImages`使用对象设置按钮图像。
 
 ```
 void SetStdImage(
@@ -922,19 +922,19 @@ void SetStdImage(
 ### <a name="parameters"></a>参数
 
 *id*<br/>
-[in]一个按钮的图像标识符中定义的`CMenuImage::IMAGES_IDS`枚举。 Image 值指定如箭头、 pin 和单选按钮的图像。
+中`CMenuImage::IMAGES_IDS`枚举中定义的一个按钮图像标识符。 图像值指定图像，如箭头、pin 和单选按钮。
 
-*state*<br/>
-[in]在中定义的按钮图像状态标识符之一`CMenuImages::IMAGE_STATE`枚举。 映像状态指定按钮的颜色，例如黑色、 灰色、 浅灰色，白色和暗灰色。 默认值为 `CMenuImages::ImageBlack`。
+State<br/>
+中`CMenuImages::IMAGE_STATE`枚举中定义的按钮图像状态标识符之一。 图像状态指定按钮颜色，如黑色、灰色、浅灰色、白色和暗灰色。 默认值为 `CMenuImages::ImageBlack`。
 
 *idDisabled*<br/>
-[in]一个按钮的图像标识符中定义的`CMenuImage::IMAGES_IDS`枚举。 图指示了该按钮被禁用。 默认值是第一个按钮图像 ( `CMenuImages::IdArrowDown`)。
+中`CMenuImage::IMAGES_IDS`枚举中定义的一个按钮图像标识符。 图像指示该按钮已禁用。 默认值为第一个按钮图像（ `CMenuImages::IdArrowDown`）。
 
 ### <a name="remarks"></a>备注
 
-##  <a name="settextcolor"></a>  CMFCButton::SetTextColor
+##  <a name="settextcolor"></a>CMFCButton::SetTextColor
 
-设置未选择的按钮的按钮文本的颜色。
+为未选中的按钮设置按钮文本的颜色。
 
 ```
 void SetTextColor(COLORREF clrText);
@@ -943,13 +943,13 @@ void SetTextColor(COLORREF clrText);
 ### <a name="parameters"></a>参数
 
 *clrText*<br/>
-[in]RGB 颜色值。
+中RGB 颜色值。
 
 ### <a name="remarks"></a>备注
 
-##  <a name="settexthotcolor"></a>  CMFCButton::SetTextHotColor
+##  <a name="settexthotcolor"></a>CMFCButton::SetTextHotColor
 
-设置处于选中状态的按钮的按钮文本的颜色。
+设置所选按钮的按钮文本颜色。
 
 ```
 void SetTextHotColor(COLORREF clrTextHot);
@@ -958,11 +958,11 @@ void SetTextHotColor(COLORREF clrTextHot);
 ### <a name="parameters"></a>参数
 
 *clrTextHot*<br/>
-[in]RGB 颜色值。
+中RGB 颜色值。
 
 ### <a name="remarks"></a>备注
 
-##  <a name="settooltip"></a>  CMFCButton::SetTooltip
+##  <a name="settooltip"></a>CMFCButton::SetTooltip
 
 将工具提示与按钮相关联。
 
@@ -973,13 +973,13 @@ void SetTooltip(LPCTSTR lpszToolTipText);
 ### <a name="parameters"></a>参数
 
 *lpszToolTipText*<br/>
-[in]为工具提示的文本指针。 指定 NULL 可禁用工具提示。
+中指向工具提示的文本的指针。 指定 NULL 可禁用工具提示。
 
 ### <a name="remarks"></a>备注
 
-##  <a name="sizetocontent"></a>  CMFCButton::SizeToContent
+##  <a name="sizetocontent"></a>CMFCButton：： System.windows.window.sizetocontent
 
-调整大小以包含其按钮文本和图像的按钮。
+调整按钮的大小以包含其按钮文本和图像。
 
 ```
 virtual CSize SizeToContent(BOOL bCalcOnly=FALSE);
@@ -988,15 +988,15 @@ virtual CSize SizeToContent(BOOL bCalcOnly=FALSE);
 ### <a name="parameters"></a>参数
 
 *bCalcOnly*<br/>
-[in]若要计算，但不是更改按钮; 的新大小，则返回 TRUE如果为 FALSE，则若要更改按钮的大小。 默认值为 FALSE。
+中如果计算，但不更改按钮的新大小，则为 TRUE;若要更改按钮大小，则为 FALSE。 默认值为 FALSE。
 
 ### <a name="return-value"></a>返回值
 
-一个`CSize`对象，其中包含新按钮的大小。
+一个`CSize`对象，该对象包含按钮的新大小。
 
 ### <a name="remarks"></a>备注
 
-默认情况下，此方法计算新的大小，其中包括的水平边距为 10 个像素和 5 个像素的垂直边距。
+默认情况下，此方法将计算新的大小，该大小包含10像素的水平边距和5像素的垂直边距。
 
 ## <a name="see-also"></a>请参阅
 

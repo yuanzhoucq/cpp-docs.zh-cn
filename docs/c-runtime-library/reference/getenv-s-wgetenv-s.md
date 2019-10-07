@@ -1,10 +1,10 @@
 ---
 title: getenv_s、_wgetenv_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - getenv_s
 - _wgetenv_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - getenv_s
 - _tgetenv_s
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - environment variables
 - tgetenv_s function
 ms.assetid: c3ae1ffe-d4cd-4bae-bcb1-3afa754c613a
-ms.openlocfilehash: eac3c036e2f4f271c7bc2d77c8ae82bec28d3617
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7cbd1feab14ac29c46bb8851ff94a48c67bc6014
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331735"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955053"
 ---
-# <a name="getenvs-wgetenvs"></a>getenv_s、_wgetenv_s
+# <a name="getenv_s-_wgetenv_s"></a>getenv_s、_wgetenv_s
 
 从当前环境中获取值。 这些版本的 [getenv、_wgetenv](getenv-wgetenv.md) 具有安全增强功能，如 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)所述。
 
@@ -81,7 +84,7 @@ errno_t _wgetenv_s(
 用于存储环境变量值的缓冲区。
 
 *numberOfElements*<br/>
-大小*缓冲区*。
+*缓冲区*的大小。
 
 *varname*<br/>
 环境变量名称。
@@ -98,27 +101,27 @@ errno_t _wgetenv_s(
 |任何|**NULL**|>0|任何|**EINVAL**|
 |任何|任何|任何|**NULL**|**EINVAL**|
 
-如[参数验证](../../c-runtime-library/parameter-validation.md)中所述，这些错误条件调用无效参数处理程序。 如果允许执行继续，则函数将设置**errno**到**EINVAL**并返回**EINVAL**。
+如[参数验证](../../c-runtime-library/parameter-validation.md)中所述，这些错误条件调用无效参数处理程序。 如果允许执行继续，则这些函数会将**errno**设置为**EINVAL**并返回**EINVAL**。
 
-此外，如果缓冲区太小，这些函数将返回**ERANGE**。 它们不会调用无效的参数处理程序。 它们是写出所需的缓冲区大小，以*pReturnValue*，从而使程序以使用较大的缓冲区再次调用函数。
+此外，如果缓冲区太小，这些函数将返回**ERANGE**。 它们不会调用无效的参数处理程序。 它们在*pReturnValue*中写出所需的缓冲区大小，从而使程序能够使用较大的缓冲区再次调用函数。
 
 ## <a name="remarks"></a>备注
 
-**Getenv_s**函数的环境变量列表中搜索*varname*。 **getenv_s**不区分大小写，在 Windows 操作系统中。 **getenv_s**并[_putenv_s](putenv-s-wputenv-s.md)使用由全局变量指向该环境的副本 **_environ**来访问该环境。 **getenv_s**操作仅在运行时库访问的数据结构和不能在环境"段"为该进程创建的操作系统。 因此，程序使用*envp*自变量[主要](../../cpp/main-program-startup.md)或[wmain](../../cpp/main-program-startup.md)可能会检索无效信息。
+**Getenv_s**函数搜索*varname*的环境变量列表。 Windows 操作系统中的**getenv_s**不区分大小写。 **getenv_s**和[_putenv_s](putenv-s-wputenv-s.md)使用全局变量 **_environ**指向的环境副本来访问该环境。 **getenv_s**仅对运行库可访问的数据结构执行，而不是由操作系统为进程创建的环境 "段" 运行。 因此，使用[main](../../cpp/main-program-startup.md)或[wmain](../../cpp/main-program-startup.md)的*envp*参数的程序可能会检索无效信息。
 
-**_wgetenv_s**是宽字符版本**getenv_s**; 的自变量和返回值 **_wgetenv_s**都是宽字符字符串。 **_Wenviron**全局变量是宽字符版本 **_environ**。
+**_wgetenv_s**是**getenv_s**的宽字符版本; **_wgetenv_s**的参数和返回值是宽字符字符串。 **_Wenviron**全局变量是 **_environ**的宽字符版本。
 
-在 MBCS 程序中 （例如，在 SBCS ASCII 程序中）， **_wenviron**最初**NULL**因为环境多字节字符字符串组成。 然后，在首次调用[_wputenv](putenv-wputenv.md)，或在首次调用 **_wgetenv_s**，如果 (MBCS) 环境已存在，创建并通过指向相应的宽字符字符串环境 **_wenviron**。
+在 MBCS 程序中（例如，在 SBCS ASCII 程序中）， **_wenviron**最初为**NULL** ，因为环境是由多字节字符字符串组成的。 然后，在首次调用[_wputenv](putenv-wputenv.md)时，或在第一次调用 **_wgetenv_s**时，如果（MBCS）环境已存在，则将创建一个对应的宽字符字符串环境，并由 **_wenviron**指向该环境。
 
-同样，在 Unicode (**_wmain**) 程序中， **_environ**最初**NULL**因为环境宽字符字符串组成。 然后，在首次调用[_putenv](putenv-wputenv.md)，或在首次调用**getenv_s**如果 (Unicode) 环境已存在，创建并通过指向相应的 MBCS 环境 **_environ**。
+同样，在 Unicode （ **_wmain**）程序中， **_Environ**最初为**NULL** ，因为环境是由宽字符字符串组成的。 然后，在首次调用[_putenv](putenv-wputenv.md)时，或在第一次调用**getenv_s**时，如果（Unicode）环境已存在，则会创建相应的 MBCS 环境，并由 **_environ**指向该环境。
 
-当程序中同时存在环境的两个副本（MBCS 和 Unicode）时，运行时系统必须保留这两个副本，而这将减慢执行时间。 例如，当您调用 **_putenv**，调用 **_wputenv**还自动执行，以便两个环境字符串相对应。
+当程序中同时存在环境的两个副本（MBCS 和 Unicode）时，运行时系统必须保留这两个副本，而这将减慢执行时间。 例如，在调用 **_putenv**时，还会自动执行对 **_wputenv**的调用，以便两个环境字符串相对应。
 
 > [!CAUTION]
 > 在极少数情况下，当运行时系统同时保留环境的 Unicode 版本和多字节版本时，两个环境版本可能不完全对应。 这是因为，虽然任何唯一的多字节字符字符串将映射到唯一的 Unicode 字符串，但从唯一的 Unicode 字符串到多字节字符字符串的映射却不一定是唯一的。 有关详细信息，请参阅 [_environ、_wenviron](../../c-runtime-library/environ-wenviron.md)。
 
 > [!NOTE]
-> **_Putenv_s**并 **_getenv_s**系列函数不是线程安全。 **_getenv_s**返回时字符串指针 **_putenv_s**修改字符串，从而导致随机失败。 确保对这些函数的调用同步。
+> **_Putenv_s**和 **_getenv_s**系列的函数不是线程安全的。 当 **_putenv_s**正在修改字符串时， **_getenv_s**可能会返回字符串指针，从而导致随机失败。 确保对这些函数的调用同步。
 
 在 C++ 中，这些函数的使用由模板重载简化；重载可以自动推导出缓冲区长度，从而不再需要指定大小自变量。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -128,7 +131,7 @@ errno_t _wgetenv_s(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tgetenv_s**|**getenv_s**|**getenv_s**|**_wgetenv_s**|
 
-若要检查或更改的值**TZ**环境变量，使用**getenv_s**， **_putenv**，以及 **_tzset**、 所需的方式。 有关详细信息**TZ**，请参阅[_tzset](tzset.md)并[_daylight、 _dstbias、 _timezone 和 _tzname](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md)。
+若要检查或更改**TZ**环境变量的值，请使用**getenv_s**、 **_putenv**和 **_tzset**（根据需要）。 有关**TZ**的详细信息，请参阅[_tzset](tzset.md)和[_daylight、_dstbias、_timezone 和 _tzname](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md)。
 
 ## <a name="requirements"></a>要求
 

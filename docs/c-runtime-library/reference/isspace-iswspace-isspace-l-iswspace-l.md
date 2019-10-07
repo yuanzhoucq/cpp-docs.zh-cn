@@ -1,12 +1,12 @@
 ---
 title: isspace、iswspace、_isspace_l、_iswspace_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - iswspace
 - _isspace_l
 - _iswspace_l
 - isspace
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - iswspace
 - _istspace
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - _istspace function
 - istspace function
 ms.assetid: b851e0c0-36bb-4dac-a1a3-533540939035
-ms.openlocfilehash: bb3d18e5034be50d69531d2686b6c270ba55a1cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b01aaf29ff0cd3994c45433db9ff0b9f4ca7481c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157378"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953648"
 ---
-# <a name="isspace-iswspace-isspacel-iswspacel"></a>isspace、iswspace、_isspace_l、_iswspace_l
+# <a name="isspace-iswspace-_isspace_l-_iswspace_l"></a>isspace、iswspace、_isspace_l、_iswspace_l
 
 确定整数是否表示空格字符。
 
@@ -74,11 +77,11 @@ int _iswspace_l(
 
 ## <a name="return-value"></a>返回值
 
-这些例程返回非零值如果*c*是空格字符的特定表示形式。 **isspace**返回非零值，如果*c*是空白字符 (0x09-0x0d 或 0x20)。 测试条件的结果**isspace**函数取决于**LC_CTYPE**区域设置类别设置影响; 请参阅[setlocale、 _wsetlocale](setlocale-wsetlocale.md)有关详细信息。 不具有这些函数的版本 **_l**后缀，请使用当前区域设置的任何依赖于区域设置的行为; 具有的版本 **_l**后缀完全相同，只不过它们使用改用已传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+如果*c*是空白字符的特定表示形式，则每个例程将返回非零值。 如果*c*是空白字符（0X09-0x0D 或0x20），则**isspace**将返回一个非零值。 **Isspace**函数的测试条件的结果取决于区域设置的**LC_CTYPE**类别设置;有关详细信息，请参阅[setlocale、_wsetlocale](setlocale-wsetlocale.md) 。 这些不带 **_l**后缀的函数的版本对与区域设置相关的行为使用当前区域设置;具有 **_l**后缀的版本是相同的，只不过它们使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-**iswspace**返回非零值，如果*c*是对应于标准空白字符的宽字符。
+如果*c*是对应于标准空白字符的宽字符，则**iswspace**将返回一个非零值。
 
-行为**isspace**并 **_isspace_l**未定义当*c*不是 EOF 或在范围 0 到 0xff 内，非独占。 使用调试 CRT 库时， *c*是不包含其中一个值，函数将引发断言。
+如果*c*不是 EOF 或介于0到0xff （含0和0xff），则**isspace**和 **_isspace_l**的行为是不确定的。 当使用调试 CRT 库并且*c*不是这些值之一时，函数将引发断言。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

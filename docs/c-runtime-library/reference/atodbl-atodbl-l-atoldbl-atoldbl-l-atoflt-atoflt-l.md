@@ -1,14 +1,14 @@
 ---
 title: _atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _atoldbl
 - _atoldbl_l
 - _atodbl
 - _atoflt
 - _atoflt_l
 - _atodbl_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _atoflt
 - _atoflt_l
@@ -49,16 +52,16 @@ helpviewer_keywords:
 - _atoflt function
 - _atodbl_l function
 ms.assetid: 2d2530f4-4bd4-42e3-8083-f2d2fbc8432a
-ms.openlocfilehash: bb8d711dc8dfa912333f34603ad607f0a74143bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3f3b164042006cab22d0dfd9a7968e2d2e494f5c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349272"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943628"
 ---
-# <a name="atodbl-atodbll-atoldbl-atoldbll-atoflt-atofltl"></a>_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
+# <a name="_atodbl-_atodbl_l-_atoldbl-_atoldbl_l-_atoflt-_atoflt_l"></a>_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
 
-将字符串转换为双精度 (**_atodbl**)、 长双精度 (**_atoldbl**)，或 float (**_atoflt**)。
+将字符串转换为双精度（ **_atodbl**）、long double （ **_atoldbl**）或 float （ **_atoflt**）。
 
 ## <a name="syntax"></a>语法
 
@@ -73,7 +76,7 @@ int _atoflt_l( _CRT_FLOAT * value, const char * str, locale_t locale );
 
 ### <a name="parameters"></a>参数
 
-*值*<br/>
+*value*<br/>
 通过将字符串转换为浮点值生成的双精度型、长双精度型或浮点型值。 这些值都包装在一个结构中。
 
 *str*<br/>
@@ -84,21 +87,21 @@ int _atoflt_l( _CRT_FLOAT * value, const char * str, locale_t locale );
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则返回 0。 可能的错误代码是 **_UNDERFLOW**或 **_OVERFLOW**，该标头文件中定义\<math.h >。
+如果成功，则返回 0。 可能的错误代码是标头文件\<_UNDERFLOW 中定义的或 _OVERFLOW >。
 
 ## <a name="remarks"></a>备注
 
-这些函数将字符串转换为浮点值。 这些函数之间的差异并**atof**系列函数是这些函数不会生成浮点代码并不会导致硬件异常。 改为将错误条件报告为错误代码。
+这些函数将字符串转换为浮点值。 这些函数与**atof**系列函数之间的区别是：这些函数不生成浮点代码，也不会导致硬件异常。 改为将错误条件报告为错误代码。
 
-如果字符串不具有浮点值形式的有效解释*值*设置为零，且返回值为零。
+如果字符串不具有作为浮点值的有效解释，则*value*设置为零，返回值为零。
 
-具有这些函数的版本 **_l**后缀是相同，只不过它们使用不带后缀，版本*区域设置*而不是当前线程中传递的参数区域设置。
+这些具有 **_l**后缀的函数的版本与没有后缀的版本相同，只不过它们使用传入的*区域设置*参数而不是当前线程区域设置。
 
 ## <a name="requirements"></a>要求
 
 |例程|必需的标头|
 |--------------|---------------------|
-|**_atodbl**， **_atoldbl**， **_atoflt**<br /><br /> **_atodbl_l**， **_atoldbl_l**， **_atoflt_l**|\<stdlib.h>|
+|**_atodbl**、 **_atoldbl**、 **_atoflt**<br /><br /> **_atodbl_l**、 **_atoldbl_l**、 **_atoflt_l**|\<stdlib.h>|
 
 ## <a name="example"></a>示例
 

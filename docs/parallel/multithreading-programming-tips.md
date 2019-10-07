@@ -16,16 +16,16 @@ helpviewer_keywords:
 - troubleshooting [C++], multithreading
 - Windows handle maps [C++]
 ms.assetid: ad14cc70-c91c-4c24-942f-13a75e58bf8a
-ms.openlocfilehash: e89d0d534638f7216f142bc3f86633a59b8b0ff7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: deaf53d7b337fd33214bbcc4567e73bd33345d49
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212420"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511715"
 ---
 # <a name="multithreading-mfc-programming-tips"></a>多线程处理：MFC 编程提示
 
-多线程应用程序要比单线程应用程序以确保操作会以预期顺序，并且未损坏的多个线程访问任何数据的更加小心。 本主题介绍使用 Microsoft 基础类 (MFC) 库的多线程应用程序进行编程时避免潜在问题的技术。
+多线程应用程序需要比单线程应用程序更严格的关注, 以确保按预期顺序执行操作, 并且由多个线程访问的任何数据都不会损坏。 本主题介绍在通过 Microsoft 基础类 (MFC) 库对多线程应用程序进行编程时可能出现的问题的方法。
 
 - [从多个线程访问对象](#_core_accessing_objects_from_multiple_threads)
 
@@ -33,31 +33,31 @@ ms.locfileid: "62212420"
 
 - [Windows 句柄映射](#_core_windows_handle_maps)
 
-- [在线程之间进行通信](#_core_communicating_between_threads)
+- [线程间通信](#_core_communicating_between_threads)
 
-##  <a name="_core_accessing_objects_from_multiple_threads"></a> 从多个线程访问对象
+##  <a name="_core_accessing_objects_from_multiple_threads"></a>从多个线程访问对象
 
-MFC 对象不是单独线程安全。 两个单独的线程无法处理同一对象，除非您使用 MFC 同步类和/或适当的 Win32 同步对象，如临界区。 有关更多有关临界区及其他相关对象，请参阅[同步](/windows/desktop/Sync/synchronization)Windows SDK 中。
+MFC 对象本身不是线程安全的。 两个单独的线程不能操作同一个对象, 除非您使用 MFC 同步类和/或适当的 Win32 同步对象 (如临界区)。 有关关键部分和其他相关对象的详细信息, 请参阅 Windows SDK 中的[同步](/windows/win32/Sync/synchronization)。
 
-类库在内部使用临界区以保护全局数据结构，如所使用的调试内存分配。
+类库在内部使用关键部分来保护全局数据结构, 例如调试内存分配使用的结构。
 
-##  <a name="_core_accessing_mfc_objects_from_non.2d.mfc_threads"></a> 从非 MFC 线程访问 MFC 对象
+##  <a name="_core_accessing_mfc_objects_from_non.2d.mfc_threads"></a>从非 MFC 线程访问 MFC 对象
 
-如果已创建的线程，而不是使用一种方法中的多线程应用程序[CWinThread](../mfc/reference/cwinthread-class.md)对象，不能从该线程访问其他 MFC 对象。 换而言之，如果你想要从辅助线程访问任何 MFC 对象，则必须创建该线程中所述的方法之一[多线程处理：创建用户界面线程](multithreading-creating-user-interface-threads.md)或[多线程处理：创建辅助线程](multithreading-creating-worker-threads.md)。 这些方法是允许类库，用于初始化内部变量处理多线程应用程序的需要是唯一的。
+如果你的多线程应用程序以与使用[CWinThread](../mfc/reference/cwinthread-class.md)对象不同的方式创建线程, 则无法从该线程访问其他 MFC 对象。 换言之, 如果您想要从辅助线程访问任何 MFC 对象, 则必须使用多线程处理中[所述的方法之一创建该线程:创建用户界面线程](multithreading-creating-user-interface-threads.md)或[多线程:正在创建工作](multithreading-creating-worker-threads.md)线程。 这些方法是允许类库初始化处理多线程应用程序所需的内部变量的唯一方法。
 
-##  <a name="_core_windows_handle_maps"></a> Windows 句柄映射
+##  <a name="_core_windows_handle_maps"></a>Windows 句柄映射
 
-作为一般规则是，线程可以访问它创建的 MFC 对象。 这是因为临时和永久的 Windows 句柄映射保留在线程本地存储，以帮助保护，从多个线程同时访问。 例如，一个工作线程不能执行计算并调用文档的`UpdateAllViews`成员函数来包含视图上修改的新数据的窗口。 这没有任何影响，因为从映射`CWnd`对象与 Hwnd 是主线程的本地。 这意味着一个线程可能必须从 Windows 句柄的映射C++对象，而另一个线程可能会将该句柄映射到不同C++对象。 在一个线程中所做的更改将不会反映在其他。
+作为一般规则, 线程只能访问它创建的 MFC 对象。 这是因为, 临时和永久的 Windows 句柄映射保存在线程本地存储中, 以帮助防止同时访问多个线程。 例如, 工作线程无法执行计算, 然后调用文档的`UpdateAllViews`成员函数, 使包含修改的新数据的窗口。 这根本不会有任何影响, 因为从对象`CWnd`到 hwnd 的映射在主线程中是本地的。 这意味着一个线程可能具有从 Windows 句柄到C++对象的映射, 但其他线程可能会将该相同句柄映射到不同C++的对象。 在一个线程中所做的更改不会反映在另一个线程中。
 
-有几种方法解决此问题。 第一种是传递 （例如 HWND) 的各个句柄而不是C++对象与工作线程。 工作线程然后将这些对象添加到其临时映射，通过调用适当`FromHandle`成员函数。 您还可以将该对象通过调用添加到线程的永久映射`Attach`，但仅当可以保证该对象将存在时间超过该线程时，才应进行此操作。
+有多种方法可以解决此问题。 第一种方式是将各个句柄 (如 HWND) 而不C++是对象传递到工作线程。 然后, 工作线程通过调用相应`FromHandle`的成员函数将这些对象添加到其临时映射。 你还可以通过调用`Attach`将对象添加到线程的永久映射, 但仅当你确保对象的长度超过线程时才应执行此操作。
 
-另一种方法是创建用户定义的新消息对应于不同的任务工作线程将执行，并将这些消息发布到应用程序的主窗口使用`::PostMessage`。 此方法是通信的类似于对话，只不过这两个线程正在执行的相同地址空间中的两个不同应用程序。
+另一种方法是创建新的用户定义的消息, 这些消息与工作线程要执行的不同任务相对应, 并使用`::PostMessage`将这些消息发布到应用程序的主窗口。 这种通信方法与两个不同的应用程序对话类似, 不同之处在于这两个线程在同一地址空间中执行。
 
-有关句柄映射的详细信息，请参阅[技术说明 3](../mfc/tn003-mapping-of-windows-handles-to-objects.md)。 有关线程本地存储区的详细信息，请参阅[线程本地存储区](/windows/desktop/ProcThread/thread-local-storage)并[使用线程本地存储](/windows/desktop/ProcThread/using-thread-local-storage)Windows SDK 中。
+有关句柄映射的详细信息, 请参阅[技术说明 3](../mfc/tn003-mapping-of-windows-handles-to-objects.md)。 有关线程本地存储的详细信息, 请参阅[线程本地存储](/windows/win32/ProcThread/thread-local-storage)和使用 Windows SDK 中的[线程本地存储](/windows/win32/ProcThread/using-thread-local-storage)。
 
-##  <a name="_core_communicating_between_threads"></a> 在线程之间进行通信
+##  <a name="_core_communicating_between_threads"></a>线程间通信
 
-MFC 提供了多个类，使线程可以同步对对象以维护线程安全的访问。 中描述了这些类的用法[多线程处理：如何使用同步类](multithreading-how-to-use-the-synchronization-classes.md)和[多线程处理：何时使用同步类](multithreading-when-to-use-the-synchronization-classes.md)。 有关这些对象的详细信息，请参阅[同步](/windows/desktop/Sync/synchronization)Windows SDK 中。
+MFC 提供了多个类, 这些类允许线程同步对对象的访问以保持线程安全。 多线程处理中[描述了这些类的用法:如何使用同步类](multithreading-how-to-use-the-synchronization-classes.md)和[多线程:使用同步类](multithreading-when-to-use-the-synchronization-classes.md)的时间。 有关这些对象的详细信息, 请参阅 Windows SDK 中的[同步](/windows/win32/Sync/synchronization)。
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,12 +1,12 @@
 ---
 title: strerror、_strerror、_wcserror、__wcserror
 ms.date: 11/04/2016
-apiname:
+api_name:
 - strerror
 - _strerror
 - _wcserror
 - __wcserror
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __sys_errlist
 - wcserror
@@ -43,16 +46,16 @@ helpviewer_keywords:
 - __wcserror function
 - error messages, getting
 ms.assetid: 27b72255-f627-43c0-8836-bcda8b003e14
-ms.openlocfilehash: 4038fcc29c18e5d73024cbe5688c674e00d1409e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b4d70687bc2f428162d035c80d6bc8525a8fb9e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353854"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958143"
 ---
-# <a name="strerror-strerror-wcserror-wcserror"></a>strerror、_strerror、_wcserror、__wcserror
+# <a name="strerror-_strerror-_wcserror-__wcserror"></a>strerror、_strerror、_wcserror、__wcserror
 
-获取系统错误消息字符串 (**strerror**， **_wcserror**) 或设置用户提供的错误消息字符串的格式 (**_strerror**， **__wcserror**). 这些函数的更安全版本已经发布，请参阅 [strerror_s、_strerror_s、_wcserror_s、\__wcserror_s](strerror-s-strerror-s-wcserror-s-wcserror-s.md)。
+获取系统错误消息字符串（**strerror**， **_wcserror**），或设置用户提供的错误消息字符串（ **_strerror**， **__wcserror**）的格式。 这些函数的更安全版本已经发布，请参阅 [strerror_s、_strerror_s、_wcserror_s、\__wcserror_s](strerror-s-strerror-s-wcserror-s-wcserror-s.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -85,22 +88,22 @@ wchar_t * __wcserror(
 
 ## <a name="remarks"></a>备注
 
-**Strerror**函数映射*errnum*到错误消息字符串并返回指向字符串的指针。 既不**strerror**也不 **_strerror**实际打印的消息：为此，必须调用输出函数，如[fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
+**Strerror**函数将*errnum*映射到错误消息字符串，并返回指向该字符串的指针。 **Strerror**和 **_strerror**都不会实际打印消息：为此，必须调用输出函数，例如[fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md)：
 
 ```C
 if (( _access( "datafile",2 )) == -1 )
    fprintf( stderr, _strerror(NULL) );
 ```
 
-如果*strErrMsg*作为传递**NULL**， **_strerror**返回指向包含产生错误的最后一个库调用的系统错误消息的字符串的指针。 错误消息字符串以换行符 ('\n') 结尾。 如果*strErrMsg*不等于**NULL**，然后 **_strerror**将指针返回到你的字符串消息、 冒号、 空格、 系统错误包含 （按顺序） 的字符串生成错误，并换行字符的最后一个库调用的消息。 你的字符串消息长度最多可达 94 个字符。
+如果*strErrMsg*传递为**NULL**，则 **_strerror**将返回一个指向字符串的指针，该字符串包含产生错误的最后一个库调用的系统错误消息。 错误消息字符串以换行符 ('\n') 结尾。 如果*strErrMsg*不等于**NULL**，则 **_strerror**将返回一个指向字符串的指针，该字符串包含（按顺序）你的字符串消息、一个冒号、一个空格、产生错误的最后一个库调用的系统错误消息，以及一个换行符字符. 你的字符串消息长度最多可达 94 个字符。
 
-有关的实际错误编号 **_strerror**存储在变量[errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。 若要生成准确的结果，调用 **_strerror**后立即在库例程将返回错误消息。 否则为后续调用**strerror**或 **_strerror**可以覆盖**errno**值。
+**_Strerror**的实际错误号存储在变量[errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)中。 若要生成准确的结果，请在库例程返回错误后立即调用 **_strerror** 。 否则，对**strerror**或 **_strerror**的后续调用可能会覆盖**errno**值。
 
-**_wcserror**并 **__wcserror**宽字符版本的**strerror**并 **_strerror**分别。
+**_wcserror**和 **__wcserror**分别是**strerror**和 **_strerror**的宽字符版本。
 
-**_strerror**， **_wcserror**，和 **__wcserror**不是 ANSI 定义的一部分; 它们是 Microsoft 扩展，我们建议您不要使用它们需要可移植代码。 对于 ANSI 兼容性，使用**strerror**相反。
+**_strerror**、 **_wcserror**和 **__wcserror**不是 ANSI 定义的一部分;它们是 Microsoft 扩展，我们建议你不要在需要可移植代码的位置使用它们。 对于 ANSI 兼容性，请改用**strerror** 。
 
-若要获取错误字符串，我们建议**strerror**或 **_wcserror**而不是已弃用的宏[_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)并[_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)和已弃用的内部函数 **__sys_errlist**并 **__sys_nerr**。
+若要获取错误字符串，我们建议使用**strerror**或 **_wcserror** ，而不是已弃用的宏[_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)和[_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)以及弃用的内部函数 **__sys_errlist**和 **__sys_nerr**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -114,7 +117,7 @@ if (( _access( "datafile",2 )) == -1 )
 |-------------|---------------------|
 |**strerror**|\<string.h>|
 |**_strerror**|\<string.h>|
-|**_wcserror**， **__wcserror**|\<string.h>|
+|**_wcserror**、 **__wcserror**|\<string.h>|
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

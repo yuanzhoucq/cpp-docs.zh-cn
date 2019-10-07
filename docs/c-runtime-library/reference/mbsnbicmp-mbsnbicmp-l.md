@@ -1,10 +1,10 @@
 ---
 title: _mbsnbicmp、_mbsnbicmp_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnbicmp_l
 - _mbsnbicmp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _strnicmp
 - _wcsnicmp_l
@@ -40,16 +43,16 @@ helpviewer_keywords:
 - mbsnbicmp function
 - _wcsnicmp function
 ms.assetid: ddb44974-8b0c-42f0-90d0-56c9350bae0c
-ms.openlocfilehash: 059d0781e465f6491f27fd634bbc4479104bc12f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19ffa4c47f0144ba136607fe5cef09e9bd65374f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331293"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952191"
 ---
-# <a name="mbsnbicmp-mbsnbicmpl"></a>_mbsnbicmp、_mbsnbicmp_l
+# <a name="_mbsnbicmp-_mbsnbicmp_l"></a>_mbsnbicmp、_mbsnbicmp_l
 
-比较**n**字节的两个多字节字符字符串，并忽略大小写。
+比较两个多字节字符字符串的**n**个字节，忽略大小写。
 
 > [!IMPORTANT]
 > 此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
@@ -66,7 +69,7 @@ int _mbsnbicmp(
 
 ### <a name="parameters"></a>参数
 
-*string1*， *string2*<br/>
+*string1*、 *string2*<br/>
 要比较的 null 终止的字符串。
 
 *count*<br/>
@@ -78,23 +81,23 @@ int _mbsnbicmp(
 
 |返回值|描述|
 |------------------|-----------------|
-|< 0|*string1*的子字符串小于*string2*子字符串。|
-|0|*string1*子字符串等于*string2*子字符串。|
-|> 0|*string1*子字符串大于*string2*子字符串。|
+|< 0|*string1*子串小于*string2*子串。|
+|0|*string1*子字符串与*string2*子字符串相同。|
+|> 0|大于*string2*子字符串的*string1*子串。|
 
-发生错误时， **_mbsnbicmp**返回 **_NLSCMPERROR**，String.h 和 Mbstring.h 中定义。
+出现错误时， **_mbsnbicmp**返回 **_NLSCMPERROR**，它是在字符串 .h 和 mbstring.h 中定义的。
 
 ## <a name="remarks"></a>备注
 
-**_Mbsnbicmp**函数执行的最多前的序号比较*计数*字节*string1*并*string2*。 通过将转换为小写; 每个字符进行比较[_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md)是区分大小写的版本 **_mbsnbicmp**。 如果在任一字符串中到达终止 null 字符，则比较停止*计数*字符进行比较。 如果字符串是否相等时终止 null 字符已到达字符串之前*计数*字符进行比较，较短的字符串是较小者。
+**_Mbsnbicmp**函数最多可执行*string1*和*string2*的第一个*计数*字节的序号比较。 通过将每个字符转换为小写来执行比较;[_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md)是 **_mbsnbicmp**的区分大小写的版本。 如果在比较*计数*字符之前的任一字符串中达到终止 null 字符，则比较结束。 如果在比较*计数*字符之前的任一字符串中达到终止 null 字符时字符串相等，则较短的字符串较小。
 
-**_mbsnbicmp**类似于[_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md)，只不过它将进行比较的字符串最多*计数*而不是由字符的字节数。
+**_mbsnbicmp**类似于[_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md)，只不过它将字符串向上比较，而不是按字符进行*计数*。
 
-两个包含位于 ASCII 表中“Z”和“a”之间的字符（“[”、“\\”、“]”、“^”、“_”和“\`”）的字符串将有不同的比较结果，具体取决于它们的大小写形式。 例如，两个字符串"ABCDE"和"ABCD ^"进行比较的一种方法，如果比较采用小写形式 ("abcde">"abcd ^") 和另一种方法 ("ABCDE"<"ABCD ^") 如果采用大写形式。
+两个包含位于 ASCII 表中“Z”和“a”之间的字符（“[”、“\\”、“]”、“^”、“_”和“\`”）的字符串将有不同的比较结果，具体取决于它们的大小写形式。 例如，如果比较采用小写形式（"abcde...z" > "abcd ^"），则两个字符串 "ABCDE...Z" 和 "ABCD ^" 比较一种方式（"ABCDE...Z" < "ABCD ^"）（如果它为大写）。
 
-**_mbsnbicmp**识别多字节字符序列根据[多字节代码页](../../c-runtime-library/code-pages.md)当前正在使用。 它不受当前区域设置影响。
+**_mbsnbicmp**根据当前使用的[多字节代码页](../../c-runtime-library/code-pages.md)识别多字节字符序列。 它不受当前区域设置影响。
 
-如果任一*string1*或*string2*是 null 指针 **_mbsnbicmp**调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md). 如果允许执行继续，该函数返回 **_NLSCMPERROR** ，并设置**errno**到**EINVAL**。
+如果*string1*或*string2*是 null 指针， **_mbsnbicmp**将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将返回 **_NLSCMPERROR** ，并将**Errno**设置为**EINVAL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

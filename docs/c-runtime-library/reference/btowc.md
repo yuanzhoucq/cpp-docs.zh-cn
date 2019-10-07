@@ -1,9 +1,9 @@
 ---
 title: btowc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - btowc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,18 +15,21 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - btowc
 helpviewer_keywords:
 - btowc function
 ms.assetid: 99a46e02-6f86-4569-af79-5feca012add8
-ms.openlocfilehash: 399f56fe133a9f67ed457b435ae6c0496e1ecaa5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1f03fce8686f919af85ee3751cb9a0a3fca1ede7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514669"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943470"
 ---
 # <a name="btowc"></a>btowc
 
@@ -47,7 +50,7 @@ wint_t btowc(
 
 ## <a name="return-value"></a>返回值
 
-如果整数表示初始位移状态中的有效单字节字符，则将返回字符的宽字符表示形式。 如果整数是 EOF 或不是初始位移状态中的有效单字节字符，则返回 WEOF。 此函数的输出受当前**LC_TYPE**区域设置。
+如果整数表示初始位移状态中的有效单字节字符，则将返回字符的宽字符表示形式。 如果整数是 EOF 或不是初始位移状态中的有效单字节字符，则返回 WEOF。 此函数的输出受当前**LC_TYPE**区域设置的影响。
 
 ## <a name="requirements"></a>要求
 

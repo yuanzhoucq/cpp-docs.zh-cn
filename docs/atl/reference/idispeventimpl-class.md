@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - IDispEventImpl class
 ms.assetid: a64b5288-35cb-4638-aad6-2d15b1c7cf7b
-ms.openlocfilehash: 8de620cd6e2433375284f6493b5117c40a356603
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e82a397b6d2abb66f773908c72a287c979e5ae1d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275316"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495923"
 ---
 # <a name="idispeventimpl-class"></a>IDispEventImpl 类
 
-此类提供的实现`IDispatch`方法。
+此类提供`IDispatch`方法的实现。
 
 > [!IMPORTANT]
->  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
+>  此类及其成员不能用于在 Windows 运行时中执行的应用程序。
 
 ## <a name="syntax"></a>语法
 
@@ -42,16 +42,16 @@ class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
 #### <a name="parameters"></a>参数
 
 *nID*<br/>
-源对象的唯一标识符。 当`IDispEventImpl`类的基类为复合控件，此参数使用所需的所包含控件的资源 ID。 在其他情况下，使用任意的正整数。
+源对象的唯一标识符。 当`IDispEventImpl`是复合控件的基类时, 为此参数使用所需包含控件的资源 ID。 在其他情况下, 请使用任意正整数。
 
 *T*<br/>
-用户的类，该类派生自`IDispEventImpl`。
+用户的类, 它派生自`IDispEventImpl`。
 
 *pdiid*<br/>
-指向此类实现的事件调度接口的 IID 的指针。 此接口必须由表示类型库中定义*plibid*， *wMajor*，并*wMinor*。
+指向由此类实现的事件调度接口的 IID 的指针。 此接口必须在由*plibid*、 *wMajor*和*wMinor*表示的类型库中定义。
 
 *plibid*<br/>
-对类型库，用于定义调度接口的指针指向的*pdiid*。 如果 **& GUID_NULL**，将从溯源事件的对象加载类型库。
+一个指针, 指向用于定义*pdiid*指向的调度接口的类型库。 如果 **&AMP; GUID_NULL**, 将从获得事件的对象中加载类型库。
 
 *wMajor*<br/>
 类型库的主版本。 默认值为 0。
@@ -60,15 +60,15 @@ class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
 类型库的次版本。 默认值为 0。
 
 *tihclass*<br/>
-用于管理的类型信息的类*T*。默认值为类型的类`CComTypeInfoHolder`; 但是，您可以通过提供一种类型的类而不覆盖此模板参数`CComTypeInfoHolder`。
+用于管理*T*的类型信息的类。默认值为类型`CComTypeInfoHolder`的类; 但是, 可以通过提供除之外`CComTypeInfoHolder`的类型的类来重写此模板参数。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|描述|
+|name|描述|
 |----------|-----------------|
-|[IDispEventImpl::_tihclass](../../atl/reference/idispeventimpl-class.md)|用于管理的类型信息的类。 默认情况下， `CComTypeInfoHolder`。|
+|[IDispEventImpl::_tihclass](../../atl/reference/idispeventimpl-class.md)|用于管理类型信息的类。 默认情况下`CComTypeInfoHolder`,。|
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -80,30 +80,30 @@ class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
 
 |名称|描述|
 |----------|-----------------|
-|[IDispEventImpl::GetFuncInfoFromId](#getfuncinfofromid)|查找指定的调度标识符的函数的索引。|
-|[IDispEventImpl::GetIDsOfNames](#getidsofnames)|将单个成员和一组可选的参数名称映射到一组对应的整数 Dispid。|
+|[IDispEventImpl::GetFuncInfoFromId](#getfuncinfofromid)|查找指定调度标识符的函数索引。|
+|[IDispEventImpl::GetIDsOfNames](#getidsofnames)|将一个成员和一组可选的参数名称映射到一组相应的整数 Dispid。|
 |[IDispEventImpl::GetTypeInfo](#gettypeinfo)|检索对象的类型信息。|
 |[IDispEventImpl::GetTypeInfoCount](#gettypeinfocount)|检索类型信息接口的数量。|
 |[IDispEventImpl::GetUserDefinedType](#getuserdefinedtype)|检索用户定义类型的基本类型。|
 
 ## <a name="remarks"></a>备注
 
-`IDispEventImpl` 提供一种而无需创建实现事件调度接口的方式，提供针对该接口上每个方法/事件的实现代码。 `IDispEventImpl` 提供的实现`IDispatch`方法。 只需提供你感兴趣处理的事件的实现。
+`IDispEventImpl`提供实现事件调度接口的方法, 无需为该接口上的每个方法/事件提供实现代码。 `IDispEventImpl`提供`IDispatch`方法的实现。 你只需为你感兴趣处理的事件提供实现。
 
-`IDispEventImpl` 结合使用与事件路由到相应的处理程序函数在类中的事件接收器映射。 若要使用此类：
+`IDispEventImpl`与类中的事件接收器映射结合使用, 以将事件路由到适当的处理程序函数。 使用此类:
 
-添加[SINK_ENTRY](composite-control-macros.md#sink_entry)或[SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex)宏为你想要处理的每个对象的每个事件的事件接收器映射。 使用时`IDispEventImpl`作为复合控件的基类，可以调用[AtlAdviseSinkMap](connection-point-global-functions.md#atladvisesinkmap)建立和断开与事件源的连接的所有项在事件都接收器映射。 在其他情况下，或者对于更强的控制，调用[DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise)之间建立连接的源对象和类的基类。 调用[DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise)断开连接。
+向要处理的每个对象上的每个事件的事件接收器映射添加[SINK_ENTRY](composite-control-macros.md#sink_entry)或[SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex)宏。 使用`IDispEventImpl`作为复合控件的基类时, 可以调用[AtlAdviseSinkMap](connection-point-global-functions.md#atladvisesinkmap)来建立和中断与事件接收器映射中所有项的事件源的连接。 在其他情况下, 或者为了更好地控制, 请调用[DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise)以建立源对象与基类之间的连接。 调用[DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise)断开连接。
 
-您必须派生自`IDispEventImpl`(使用的值是唯一*nID*) 为每个需要处理事件的对象。 通过对一个源对象对不同的源对象，然后告知取消通知，可以重用类的基类，但可以一次处理由单个对象的源对象的最大数目受数`IDispEventImpl`基类。
+对于需要处理事件`IDispEventImpl`的每个对象, 必须从 (为*nID*使用唯一值) 派生。 您可以通过 unadvising 对一个源对象重复使用基类, 然后针对不同的源对象进行通知, 但是单个对象可以同时处理的最大源对象数受`IDispEventImpl`基类的数目限制。
 
-`IDispEventImpl` 提供与相同的功能[IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)，但它获取从类型库，而不是让它作为一个指向提供有关接口的类型信息[_ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md)结构。 使用`IDispEventSimpleImpl`时目前不具有一个类型库描述事件接口，或者想要避免与使用类型库相关的开销。
+`IDispEventImpl`提供与[IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)相同的功能, 不同之处在于从类型库获取有关接口的类型信息, 而不是将其作为指向[_ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md)结构的指针提供。 如果`IDispEventSimpleImpl`你没有用于描述事件接口的类型库, 或者想要避免使用类型库关联的开销, 请使用。
 
 > [!NOTE]
-> `IDispEventImpl` 并`IDispEventSimpleImpl`提供其自己的实现`IUnknown::QueryInterface`启用每个`IDispEventImpl`和`IDispEventSimpleImpl`基类，以充当不同的 COM 标识，同时仍允许在您主要的 COM 对象的直接访问类成员。
+> `IDispEventImpl`和`IDispEventSimpleImpl`提供自己的`IUnknown::QueryInterface`实现来使每`IDispEventImpl`个`IDispEventSimpleImpl`和基类充当单独的 com 标识, 同时仍然允许直接访问主 com 对象中的类成员。
 
-CE ATL 实现 ActiveX 事件接收器仅支持返回类型的值的 HRESULT 或 void 从在事件处理程序方法; 这些方法任何其他返回值是不受支持，而且其行为是未定义。
+ActiveX 事件接收器的 CE ATL 实现仅支持事件处理程序方法中类型为 HRESULT 或 void 的返回值;不支持任何其他返回值, 并且其行为不确定。
 
-有关详细信息，请参阅[支持 IDispEventImpl](../../atl/supporting-idispeventimpl.md)。
+有关详细信息, 请参阅[支持 IDispEventImpl](../../atl/supporting-idispeventimpl.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -117,11 +117,11 @@ CE ATL 实现 ActiveX 事件接收器仅支持返回类型的值的 HRESULT 或 
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlcom.h
+**标头:** atlcom。h
 
-##  <a name="getfuncinfofromid"></a>  IDispEventImpl::GetFuncInfoFromId
+##  <a name="getfuncinfofromid"></a>IDispEventImpl:: GetFuncInfoFromId
 
-查找指定的调度标识符的函数的索引。
+查找指定调度标识符的函数索引。
 
 ```
 HRESULT GetFuncInfoFromId(
@@ -134,24 +134,24 @@ HRESULT GetFuncInfoFromId(
 ### <a name="parameters"></a>参数
 
 *iid*<br/>
-[in]对函数的 ID 的引用。
+中对函数 ID 的引用。
 
 *dispidMember*<br/>
-[in]函数的调度 ID。
+中函数的调度 ID。
 
 *lcid*<br/>
-[in]区域设置上下文的函数 id。
+中函数 ID 的区域设置上下文。
 
 info<br/>
-[in]结构，该值指示如何调用该函数。
+中指示如何调用函数的结构。
 
 ### <a name="return-value"></a>返回值
 
 标准的 HRESULT 值。
 
-##  <a name="getidsofnames"></a>  IDispEventImpl::GetIDsOfNames
+##  <a name="getidsofnames"></a>IDispEventImpl:: Idispatch.getidsofnames
 
-单个成员和一组可选的参数名称映射到一组对应的整数 Dispid，可以在后续调用使用[idispatch:: Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke)。
+将一个成员和一组可选的自变量名称映射到一组相应的整数 Dispid, 后者可用于后续调用[IDispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke)。
 
 ```
 STDMETHOD(GetIDsOfNames)(
@@ -164,9 +164,9 @@ STDMETHOD(GetIDsOfNames)(
 
 ### <a name="remarks"></a>备注
 
-请参阅[IDispatch::GetIDsOfNames](/windows/desktop/api/oaidl/nf-oaidl-idispatch-getidsofnames) Windows SDK 中。
+请参阅 Windows SDK 中的[IDispatch:: idispatch.getidsofnames](/windows/win32/api/oaidl/nf-oaidl-idispatch-getidsofnames) 。
 
-##  <a name="gettypeinfo"></a>  IDispEventImpl::GetTypeInfo
+##  <a name="gettypeinfo"></a>IDispEventImpl:: GetTypeInfo
 
 检索对象的类型信息，然后可以使用该信息获取接口的类型信息。
 
@@ -179,7 +179,7 @@ STDMETHOD(GetTypeInfo)(
 
 ### <a name="remarks"></a>备注
 
-##  <a name="gettypeinfocount"></a>  IDispEventImpl::GetTypeInfoCount
+##  <a name="gettypeinfocount"></a>IDispEventImpl:: GetTypeInfoCount
 
 检索对象提供的类型信息接口的数量（0 或 1）。
 
@@ -189,9 +189,9 @@ STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
 
 ### <a name="remarks"></a>备注
 
-请参阅[IDispatch::GetTypeInfoCount](/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfocount) Windows SDK 中。
+请参阅 Windows SDK 中的[IDispatch:: GetTypeInfoCount](/windows/win32/api/oaidl/nf-oaidl-idispatch-gettypeinfocount) 。
 
-##  <a name="getuserdefinedtype"></a>  IDispEventImpl::GetUserDefinedType
+##  <a name="getuserdefinedtype"></a>IDispEventImpl:: GetUserDefinedType
 
 检索用户定义类型的基本类型。
 
@@ -204,30 +204,30 @@ VARTYPE GetUserDefinedType(
 ### <a name="parameters"></a>参数
 
 *pTI*<br/>
-[in]一个指向[ITypeInfo](/windows/desktop/api/oaidl/nn-oaidl-itypeinfo)包含用户定义类型的接口。
+中指向包含用户定义类型的[ITypeInfo](/windows/win32/api/oaidl/nn-oaidl-itypeinfo)接口的指针。
 
 *hrt*<br/>
-[in]要检索的类型说明的句柄。
+中要检索的类型说明的句柄。
 
 ### <a name="return-value"></a>返回值
 
-变体类型。
+变体的类型。
 
 ### <a name="remarks"></a>备注
 
-请参阅[ITypeInfo::GetRefTypeInfo](/windows/desktop/api/oaidl/nf-oaidl-itypeinfo-getreftypeinfo)。
+请参阅[ITypeInfo:: GetRefTypeInfo](/windows/win32/api/oaidl/nf-oaidl-itypeinfo-getreftypeinfo)。
 
-##  <a name="idispeventimpl"></a>  IDispEventImpl::IDispEventImpl
+##  <a name="idispeventimpl"></a>IDispEventImpl:: IDispEventImpl
 
-构造函数。 存储类模板参数的值*plibid*， *pdiid*， *wMajor*，以及*wMinor*。
+构造函数。 存储类模板参数*plibid*、 *pdiid*、 *wMajor*和*wMinor*的值。
 
 ```
 IDispEventImpl();
 ```
 
-##  <a name="tihclass"></a>  IDispEventImpl::tihclass
+##  <a name="tihclass"></a>IDispEventImpl:: tihclass
 
-此 typedef 是类模板参数的实例*tihclass*。
+此 typedef 是类模板参数*tihclass*的实例。
 
 ```
 typedef tihclass _tihclass;
@@ -235,7 +235,7 @@ typedef tihclass _tihclass;
 
 ### <a name="remarks"></a>备注
 
-默认情况下，类是`CComTypeInfoHolder`。 `CComTypeInfoHolder` 管理类的类型信息。
+默认情况下, 类为`CComTypeInfoHolder`。 `CComTypeInfoHolder`管理类的类型信息。
 
 ## <a name="see-also"></a>请参阅
 

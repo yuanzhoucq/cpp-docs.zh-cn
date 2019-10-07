@@ -1,9 +1,9 @@
 ---
 title: _resetstkoflw
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _resetstkoflw
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - resetstkoflw
 - _resetstkoflw
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - stack, recovering
 - _resetstkoflw function
 ms.assetid: 319529cd-4306-4d22-810b-2063f3ad9e14
-ms.openlocfilehash: ad8c9b470c33a4c84f46ac7758d368917e7938e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 55ac25cda5e6c442e96cae025657454747d571d9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357533"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949293"
 ---
-# <a name="resetstkoflw"></a>_resetstkoflw
+# <a name="_resetstkoflw"></a>_resetstkoflw
 
 从堆栈溢出恢复。
 
@@ -50,9 +53,9 @@ int _resetstkoflw( void );
 
 ## <a name="remarks"></a>备注
 
-**_Resetstkoflw**函数从堆栈溢出的情况，从而使程序继续而不会出现致命异常错误中恢复。 如果 **_resetstkoflw**不调用函数，在前一个异常后没有任何保护页。 下次发生堆栈溢出时，将不会有任何异常，且进程会在无警告的情况下终止。
+**_Resetstkoflw**函数从堆栈溢出情况恢复，使程序可以继续，而不会因出现严重异常错误而失败。 如果未调用 **_resetstkoflw**函数，则在前一个异常后不会有任何防护页。 下次发生堆栈溢出时，将不会有任何异常，且进程会在无警告的情况下终止。
 
-如果应用程序中的线程导致 **EXCEPTION_STACK_OVERFLOW** 异常，则该线程的堆栈将处于损坏状态。 这与其他异常（如 **EXCEPTION_ACCESS_VIOLATION** 或 **EXCEPTION_INT_DIVIDE_BY_ZERO**）不同，在那些异常中，堆栈是未损坏的。 首次加载程序时，堆栈将设置为任意的较小的值。 然后，堆栈会根据需要增长以满足线程的需求。 这将通过在当前堆栈的结尾处放置一个带 PAGE_GUARD 访问权的页面来实现。 有关更多信息，请参见[创建保护页](/windows/desktop/Memory/creating-guard-pages)。
+如果应用程序中的线程导致 **EXCEPTION_STACK_OVERFLOW** 异常，则该线程的堆栈将处于损坏状态。 这与其他异常（如 **EXCEPTION_ACCESS_VIOLATION** 或 **EXCEPTION_INT_DIVIDE_BY_ZERO**）不同，在那些异常中，堆栈是未损坏的。 首次加载程序时，堆栈将设置为任意的较小的值。 然后，堆栈会根据需要增长以满足线程的需求。 这将通过在当前堆栈的结尾处放置一个带 PAGE_GUARD 访问权的页面来实现。 有关更多信息，请参见[创建保护页](/windows/win32/Memory/creating-guard-pages)。
 
 当代码导致堆栈指针指向此页上的一个地址时，会发生异常，并且系统将执行以下三个操作：
 
@@ -74,7 +77,7 @@ int _resetstkoflw( void );
 
 请注意，此时堆栈不再具有保护页。 当程序下一次将堆栈增大到堆栈结尾（此处应有一个保护页）时，程序将在堆栈结尾之外写入并导致访问冲突。
 
-调用 **_resetstkoflw**只要恢复执行堆栈溢出异常后还原保护页。 此函数可以从调用的主体内部 **__except**块或外部 **__except**块。 但是，对于何时使用该函数有一些限制。 **_resetstkoflw**应永远不会从调用：
+调用 **_resetstkoflw** ，以便在发生堆栈溢出异常后恢复时还原保护页。 此函数可从 **__except**块的主体内部或 **__except**块外调用。 但是，对于何时使用该函数有一些限制。 绝不应从以下内容调用 **_resetstkoflw** ：
 
 - 筛选器表达式。
 
@@ -84,17 +87,17 @@ int _resetstkoflw( void );
 
 - **catch** 块。
 
-- 一个 **__finally**块。
+- **__Finally**块。
 
 在这些点上，堆栈尚未充分展开。
 
-堆栈溢出异常生成为结构化异常而不C++异常，因此 **_resetstkoflw**没有用于普通**捕获**阻止，因为它不会捕获堆栈溢出异常。 但是，如果使用 [_set_se_translator](set-se-translator.md) 来实现引发 C++ 异常的结构化异常转换器（如第二个示例所示），则堆栈溢出异常会导致可由 C++ catch 块处理的 C++ 异常。
+堆栈溢出异常生成为结构化异常，而C++不是异常，因此 **_resetstkoflw**在普通**catch**块中不起作用，因为它不会捕获堆栈溢出异常。 但是，如果使用 [_set_se_translator](set-se-translator.md) 来实现引发 C++ 异常的结构化异常转换器（如第二个示例所示），则堆栈溢出异常会导致可由 C++ catch 块处理的 C++ 异常。
 
 在 C++ catch 块中调用 **_resetstkoflw** 是不安全的，因为这是从通过结构化的异常转换器函数引发的异常到达的。 在这种情况下，不会释放堆栈空间，并且堆栈指针只有在 catch 块之外才会重置，即使已先于 catch 块对任何易损坏的对象调用析构函数。 在释放堆栈空间并且已重置堆栈指针之前，不应调用此函数。 因此，仅在退出 catch 块之后才调用它。 catch 块中应尽可能少地使用堆栈空间，因为在 catch 块自行尝试从上一个堆栈溢出中恢复时出现的堆栈溢出是不可恢复的，并且在 catch 块中的溢出触发其本身由同一个 catch 处理的异常时可能会导致程序停止响应。
 
 在某些情况下，即使在正确的位置（例如，在 **__except** 块中）使用 **_resetstkoflw**，它也会失败。 甚至在展开堆栈后，如果仍未留下足够的堆栈空间来执行 **_resetstkoflw**，而且未写入到堆栈的最后一页，则 **_resetstkoflw** 无法将堆栈的最后一页重置为保护页并且将返回 0（这指示失败）。 因此，此函数的安全用法应包括检查返回值而不是假定可安全使用堆栈。
 
-将不会捕获结构化的异常处理**STATUS_STACK_OVERFLOW**与编译应用程序时出现异常 **/clr** (请参阅[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)).
+使用 **/clr**编译应用程序时，结构化异常处理将不会捕获**STATUS_STACK_OVERFLOW**异常（请参阅[/Clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)）。
 
 ## <a name="requirements"></a>要求
 
@@ -104,11 +107,11 @@ int _resetstkoflw( void );
 
 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
-**库：** 所有版本的[CRT 库功能](../../c-runtime-library/crt-library-features.md)。
+**库**所有版本的[CRT 库功能](../../c-runtime-library/crt-library-features.md)。
 
 ## <a name="example"></a>示例
 
-下面的示例演示的推荐的用法 **_resetstkoflw**函数。
+下面的示例演示 **_resetstkoflw**函数的推荐用法。
 
 ```C
 // crt_resetstkoflw.c
@@ -177,7 +180,7 @@ int main(int ac)
 }
 ```
 
-没有程序参数输出的示例：
+没有程序参数的示例输出：
 
 ```Output
 loop #1
@@ -212,7 +215,7 @@ resetting stack overflow
 
 ### <a name="description"></a>描述
 
-下面的示例演示的建议的用法 **_resetstkoflw**在程序中的结构化的异常转换为C++异常。
+下面的示例演示了在将结构化异常转换为C++异常的程序中，建议使用 _resetstkoflw。
 
 ### <a name="code"></a>代码
 

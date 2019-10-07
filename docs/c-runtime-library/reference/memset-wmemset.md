@@ -1,10 +1,10 @@
 ---
 title: memset、wmemset
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wmemset
 - memset
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - memset
 - wmemset
@@ -26,12 +29,12 @@ helpviewer_keywords:
 - wmemset function
 - memset function
 ms.assetid: e7ceb01b-df69-49c2-b294-a39358ad4699
-ms.openlocfilehash: d517c5565ef07a834d7ef864e495a4bb33351007
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e1db021da70f0af7b045e2a3100dbaaa81e5a50
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285138"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951742"
 ---
 # <a name="memset-wmemset"></a>memset、wmemset
 
@@ -65,13 +68,13 @@ wchar_t *wmemset(
 
 ## <a name="return-value"></a>返回值
 
-值*dest*。
+*Dest*的值。
 
 ## <a name="remarks"></a>备注
 
-设置第一个*计数*个字符*dest*的字符*c*。
+将*dest*的第一个*计数*字符设置为字符*c*。
 
-**安全说明**请确保目标缓冲区至少具有足够的空间存放*计数*字符。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
+**安全说明**请确保目标缓冲区有足够的空间来容纳至少*数量*的字符。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 ## <a name="requirements"></a>要求
 

@@ -1,5 +1,5 @@
 ---
-title: 如何：管理资源 (C++)
+title: 如何：管理资源（C++）
 ms.date: 02/14/2019
 f1_keywords:
 - vc.resvw.resource.copying
@@ -30,57 +30,57 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 28678b560387fa6b111d60a7487ed44f9244a821
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 718de310bc4fb0cb0072065bc4e7b7adadb182aa
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65449057"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740652"
 ---
-# <a name="how-to-manage-resources-c"></a>如何：管理资源 (C++)
+# <a name="how-to-manage-resources-c"></a>如何：管理资源（C++）
 
 ## <a name="copy-and-edit-resources"></a>复制和编辑资源
 
-可以复制资源从一个文件到另一个不更改它们，或将其复制时更改语言或资源的条件。
+你可以在不更改资源的情况下将资源从一个文件复制到另一个文件，或者在复制资源时更改资源的语言或条件。
 
-可以轻松地从现有的资源或可执行文件的资源复制到当前的资源文件。 若要复制的资源，您打开这两个文件同时包含资源和将项从一个文件拖动到另一种或复制并粘贴在两个文件之间。 此方法适用于资源脚本 (.rc) 文件和资源模板 (.rct) 文件，以及作为可执行文件 (.exe) 文件。
+可以轻松地将资源从现有资源或可执行文件复制到当前资源文件。 若要复制资源，请同时打开包含资源的两个文件，并将项从一个文件拖动到另一个文件，或者在这两个文件之间进行复制和粘贴。 此方法适用于资源脚本（.rc）文件和资源模板（.rct）文件，以及作为可执行文件（.exe）文件。
 
 > [!NOTE]
-> VisualC++包括可以在自己的应用程序中使用的示例资源文件。 有关详细信息，请参阅[剪贴画：公共资源](https://github.com/Microsoft/VCSamples)。
+> 视觉C++对象包括可以在自己的应用程序中使用的示例资源文件。 有关详细信息，请[参阅剪贴画：常见资源](https://github.com/Microsoft/VCSamples)。
 
-您不能拖放、 复制、 剪切、 或在项目中的资源文件之间粘贴 (**资源视图**) 并在文档窗口中打开独立.rc 文件。 无法在以前版本的产品来执行此操作。 仅在项目外部打开.rc 文件之间使用拖放方法。
+不能在项目中的资源文件之间进行拖放、复制、剪切或粘贴（**资源视图**）和文档窗口中打开的独立 .rc 文件。 你可以在以前版本的产品中执行此操作。 仅在项目外部打开的 .rc 文件之间使用拖放方法。
 
-### <a name="to-copy-resources"></a>若要将资源复制
+### <a name="to-copy-resources"></a>复制资源
 
-1. 同时单独打开这两个资源文件。 (请参阅[使用资源脚本文件](how-to-create-a-resource-script-file.md#use-resource-script-files))。 例如，打开*Source1.rc*并*Source2.rc*。
+1. 同时单独打开这两个资源文件。 （请参阅[使用资源脚本文件](how-to-create-a-resource-script-file.md#use-resource-script-files)）。 例如，打开 " *Source1* " 和 " *Source2*"。
 
-1. 在第一个.rc 文件，可以：
+1. 在第一个 .rc 文件中，可以是：
 
    - 使用拖放方法
 
-      1. 选择你想要复制的资源。 例如，在*Source1.rc*，选择**IDD_DIALOG1**。
+      1. 选择要复制的资源。 例如，在*Source1*中，选择**IDD_DIALOG1**。
 
-      1. 按住**Ctrl**密钥，然后将资源拖到第二个.rc 文件。 例如，拖动**IDD_DIALOG1**从*Source1.rc*到*Source2.rc*。
+      1. 按住**Ctrl**键并将资源拖到第二个 .rc 文件。 例如，将**IDD_DIALOG1**从*Source1*拖到*Source2*。
 
          > [!TIP]
-         > 无需按拖动资源**Ctrl**键在移动资源，而不是复制它。
+         > 不按住**Ctrl**键的同时拖动资源会移动资源，而不是复制资源。
 
    - 使用复制和粘贴方法
 
-      1. 右键单击该资源与你要复制 (例如， *Source1.rc*)，然后选择**副本**。
+      1. 右键单击要复制的资源（例如*Source1*），然后选择 "**复制**"。
 
-      1. 右键单击要在其中粘贴该资源的资源文件 (例如， *Source2.rc*)，然后选择**粘贴**。
+      1. 右键单击要将资源粘贴到的资源文件（例如*Source2*），然后选择 "**粘贴**"。
 
 > [!NOTE]
-> 若要避免发生冲突的符号名或在现有的文件中，视觉对象的值C++时可能会更改传输的资源的符号值或符号名称和值将其复制到新文件。
+> 若要避免与现有文件中的符号名或值冲突， C++在将已传输资源的符号值或符号名称和值复制到新文件时，视觉对象可能会更改这些值。
 
 在资源中进行复制时，你可以更改其语言属性和/或条件属性。
 
-- 资源的语言指定使用的语言[FindResource](/windows/desktop/api/winbase/nf-winbase-findresourcea)以帮助识别要查找的资源。 资源可能存在的每种语言不与文本相关的差异，例如，可能仅适用于日语键盘的加速器或仅将适用于中文本地化的位图生成。
+- 资源的语言指定[system.windows.frameworkelement.findresource](/windows/win32/api/winbase/nf-winbase-findresourcea)使用的语言，以帮助确定要查找的资源。 对于与文本无关的每种语言，资源可能有不同之处，例如，只能在日语键盘或仅适用于中文本地化版本的位图上工作的快捷键。
 
 - 资源的条件是定义的符号，后者标识了使用资源的此特定副本的条件。
 
-语言和资源的条件都显示在括号中的中的资源名称后**工作区**窗口。 此处指定的资源`IDD_AboutBox`使用`Finnish`作为其语言和它的条件是`XX33`:
+资源的语言和条件显示在**工作区**窗口中资源名称后的括号中。 此处名`IDD_AboutBox`为的资源使用`Finnish`作为其语言，其条件是`XX33`：
 
 ```cpp
 IDD_AboutBox (Finnish - XX33)
@@ -88,39 +88,39 @@ IDD_AboutBox (Finnish - XX33)
 
 ### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>复制的现有资源并更改其语言或条件
 
-在中 *.rc*文件中或在[资源视图](how-to-create-a-resource-script-file.md#create-resources)窗口中，右键单击你想要复制，并选择的资源**插入副本**。 然后设置以下各项：
+在 *.rc*文件或 "[资源视图](how-to-create-a-resource-script-file.md#create-resources)" 窗口中，右键单击要复制的资源，然后选择 "**插入副本**"。 然后，设置以下各项：
 
-- 有关**语言**列表框中，选择的语言。
+- 对于 "**语言**" 列表框，请选择语言。
 
-- 在中**条件**框中，键入条件。
+- 在 "**条件**" 框中，键入条件。
 
-### <a name="to-edit-resources"></a>若要编辑的资源
+### <a name="to-edit-resources"></a>编辑资源
 
-托管的资源 (.resx) 文件是 XML 文件。 当将托管的资源文件添加到你的项目从**添加新项**对话框中，**托管资源编辑器**默认情况下打开。
+托管资源（.resx）文件是 XML 文件。 将托管资源文件从 "**添加新项**" 对话框添加到项目时，默认情况下将打开 "**托管资源编辑器**"。
 
 ## <a name="import-and-export-resources"></a>导入和导出资源
 
-可以导入图形资源（位图、图标、光标和工具栏）、HTML 文件和自定义资源以便在 Visual C++ 中使用。 你可以从 Visual Studio 导出相同类型的文件C++项目以单独的文件可以在开发环境外部使用。
+可以导入图形资源（位图、图标、光标和工具栏）、HTML 文件和自定义资源以便在 Visual C++ 中使用。 你可以从 Visual Studio C++项目中导出相同类型的文件，以便在开发环境之外使用单独的文件。
 
 > [!NOTE]
-> 无法导入或导出，因为它们不是独立的文件类型的资源类型，如加速器、 对话框和字符串表。
+> 不能导入或导出资源类型（如加速器、对话框和字符串表），因为它们不是独立的文件类型。
 
-### <a name="to-import-a-resource-into-the-resource-script-file"></a>若要将资源导入到资源脚本文件
+### <a name="to-import-a-resource-into-the-resource-script-file"></a>将资源导入资源脚本文件
 
-1. 在中[资源视图](how-to-create-a-resource-script-file.md#create-resources)右键单击你想要将资源添加，然后选择资源脚本 (.rc) 文件的节点**导入**。
+1. 在[资源视图](how-to-create-a-resource-script-file.md#create-resources)右键单击要向其添加资源的资源脚本（.rc）文件的节点，然后选择 "**导入**"。
 
-1. 找到并选择位图 (.bmp)、 图标 (.ico)、 光标 (.cur)、 html 文件 (.htm) 或要导入其他文件的文件名。
+1. 找到并选择位图（.bmp）、图标（.ico）、光标（当前）、html 文件（.htm）或其他要导入的文件的文件名。
 
-1. 选择**确定**若要将资源添加到资源脚本文件。
+1. 选择 **"确定"** 以将资源添加到资源脚本文件中。
 
 > [!NOTE]
-> 导入过程的工作方式相同的资源类型的无论所选。 导入的资源自动添加到该资源类型的正确节点。
+> 无论选择哪种资源类型，导入过程都是相同的。 导入的资源会自动添加到该资源类型的正确节点。
 
-### <a name="to-export-a-resource-for-use-outside-of-visual-c"></a>若要导出 Visual 以外使用的资源C++
+### <a name="to-export-a-resource-for-use-outside-of-visual-c"></a>导出用于视觉对象外的资源C++
 
-1. 在中[资源视图](how-to-create-a-resource-script-file.md#create-resources)，右键单击你想要导出，然后选择的资源**导出**。 您可以接受当前文件的名称或键入一个新。
+1. 在[资源视图](how-to-create-a-resource-script-file.md#create-resources)中，右键单击要导出的资源，然后选择 "**导出**"。 您可以接受当前文件名，也可以键入一个新名称。
 
-1. 导航到要保存该文件并选择的文件夹**导出**。
+1. 导航到要在其中保存该文件的文件夹，然后选择 "**导出**"。
 
 ## <a name="requirements"></a>要求
 

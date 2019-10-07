@@ -1,11 +1,11 @@
 ---
 title: _strdup、_wcsdup、_mbsdup
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _strdup
 - _mbsdup
 - _wcsdup
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcsdup
 - mbsdup
@@ -42,19 +45,19 @@ helpviewer_keywords:
 - tcsdup function
 - _tcsdup function
 ms.assetid: 8604f8bb-95e9-45d3-93ef-20397ebf247a
-ms.openlocfilehash: 094843fdb1432aa58ec04b3b4e39ac8861b928ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c96e0a8f9f72b811f891217deabe758626b03186
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353871"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958182"
 ---
-# <a name="strdup-wcsdup-mbsdup"></a>_strdup、_wcsdup、_mbsdup
+# <a name="_strdup-_wcsdup-_mbsdup"></a>_strdup、_wcsdup、_mbsdup
 
 复制字符串。
 
 > [!IMPORTANT]
-> **_mbsdup**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbsdup**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -77,13 +80,13 @@ null 终止的源字符串。
 
 ## <a name="return-value"></a>返回值
 
-每个函数返回指向复制字符串的存储位置的指针或**NULL**如果不能将存储分配。
+其中每个函数都将返回一个指向复制字符串的存储位置的指针，如果无法分配存储，则返回**NULL** 。
 
 ## <a name="remarks"></a>备注
 
-**_Strdup**函数调用[malloc](malloc.md)为副本分配存储空间*strSource* ，然后将复制*strSource*到已分配空间。
+**_Strdup**函数调用[malloc](malloc.md)为*strSource*的副本分配存储空间，然后将*strSource*复制到分配的空间。
 
-**_wcsdup**并 **_mbsdup**宽字符及多字节字符版本的 **_strdup**。 参数和返回值 **_wcsdup**是宽字符字符串; **_mbsdup**是多字节字符字符串。 否则这三个函数否则具有相同行为。
+**_wcsdup**和 **_mbsdup**是 **_strdup**的宽字符和多字节字符版本。 **_Wcsdup**的参数和返回值是宽字符字符串; **_mbsdup**的这些字符串是多字节字符字符串。 否则这三个函数否则具有相同行为。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -91,9 +94,9 @@ null 终止的源字符串。
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsdup**|**_strdup**|**_mbsdup**|**_wcsdup**|
 
-因为 **_strdup**调用**malloc**为副本分配存储空间*strSource*，所以最好始终来释放此内存通过调用[免费](free.md)例程的指针上的调用返回 **_strdup**。
+因为 **_strdup**调用**malloc**为*strSource*的副本分配存储空间，所以最好始终通过调用 **_strdup**调用返回的指针上的[自由](free.md)例程来释放此内存。
 
-如果 **_DEBUG**并 **_CRTDBG_MAP_ALLOC**定义了， **_strdup**并 **_wcsdup**对的调用替换为 **_strdup_dbg**并 **_wcsdup_dbg**以便调试内存分配。 有关详细信息，请参阅 [_strdup_dbg, _wcsdup_dbg](strdup-dbg-wcsdup-dbg.md)。
+如果定义了 **_debug**和 **_CRTDBG_MAP_ALLOC** ，则 **_strdup**和 **_wcsdup**的调用将替换为对 **_strdup_dbg**和 **_wcsdup_dbg**的调用，以允许调试内存分配。 有关详细信息，请参阅 [_strdup_dbg, _wcsdup_dbg](strdup-dbg-wcsdup-dbg.md)。
 
 ## <a name="requirements"></a>要求
 

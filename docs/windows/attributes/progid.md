@@ -1,17 +1,17 @@
 ---
-title: progid (C++ COM 属性)
+title: progid (C++ COM 特性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.progid
 helpviewer_keywords:
 - progid attribute
 ms.assetid: afcf559c-e432-481f-aa9a-bd3bb72c02a8
-ms.openlocfilehash: 5b0c688ad4d9b607cc1f5fb6b1c6d536a1c7888e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d529d7362dc62207cfd72576159f560a3e04c221
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407427"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514247"
 ---
 # <a name="progid"></a>progid
 
@@ -25,26 +25,26 @@ ms.locfileid: "62407427"
 
 ### <a name="parameters"></a>参数
 
-*name*<br/>
-表示的对象的 ProgID。
+*名称*<br/>
+表示对象的 ProgID。
 
-Progid 提供用来标识 COM/ActiveX 对象的类标识符 (CLSID) 的用户可读版本。
+Progid 提供用于标识 COM/ActiveX 对象的类标识符 (CLSID) 的可读版本。
 
 ## <a name="remarks"></a>备注
 
-**Progid** C++属性允许您指定 COM 对象的 ProgID。 ProgID 具有窗体*name1.name2.version*。 如果未指定*版本*ProgID 的默认版本为 1。 如果未指定*name1.name2*，默认名称是*classname.classname*。 如果未指定**progid**并且你指定`vi_progid`， *name1.name2*取自`vi_progid`和 （下一个序列号） 追加版本。
+使用**progid** C++特性可以指定 COM 对象的 progid。 ProgID 的格式为*name1*。 如果未指定 ProgID 的*版本*, 则默认版本为1。 如果未指定*name1*, 则默认名称为*classname。* 如果未指定**progid**并且指定`vi_progid`了, 则将从 `vi_progid`获取 name1, 并追加 (下一个序列号) 版本。
 
-如果使用的特性块**progid**还使用**uuid**，编译器将检查注册表以查看是否**uuid**存在指定**progid**. 如果**progid**未指定，则将使用的版本 （和组件类名称，如果创建组件类） 来生成**progid**。
+如果使用**progid**的特性块不同时使用**uuid**, 则编译器将检查注册表以查看指定的**progid**是否存在**uuid** 。 如果未指定**progid** , 则将使用版本 (如果创建组件类, 则为 coclass 名称) 来生成**progid**。
 
-**progid**意味着`coclass`属性，也就是说，如果您指定**progid**，它是与指定相同的功能`coclass`并**progid**属性。
+**progid**隐含`coclass`属性, 也就是说, 如果指定**progid**, 则与指定`coclass`和**progid**属性相同。
 
-**Progid**属性会导致自动注册的指定名称的类。 生成的.idl 文件将不会显示**progid**值。
+**Progid**特性使类在指定的名称下自动注册。 生成的 .idl 文件将不会显示**progid**值。
 
-当使用 ATL 的项目中使用此属性时，该属性的行为更改。 除了上述行为，在使用用此特性指定的信息`GetProgID`函数，由注入`coclass`属性。 有关详细信息，请参阅[组件类](coclass.md)属性。
+如果在使用 ATL 的项目中使用此属性, 则该属性的行为将发生更改。 除了上述行为, 使用此属性指定的信息在`GetProgID`函数中使用, 并`coclass`由属性注入。 有关详细信息, 请参阅[coclass](coclass.md)特性。
 
 ## <a name="example"></a>示例
 
-有关示例，请参阅[组件类](coclass.md)的示例使用**progid**。
+有关**progid**的示例用法, 请参阅[coclass](coclass.md)的示例。
 
 ## <a name="requirements"></a>要求
 
@@ -52,10 +52,10 @@ Progid 提供用来标识 COM/ActiveX 对象的类标识符 (CLSID) 的用户可
 
 |||
 |-|-|
-|**适用对象**|**类**，**结构**|
-|**可重复**|否|
-|**必需的特性**|None|
-|**无效的特性**|None|
+|**适用于**|**class**、 **struct**|
+|**可重复**|No|
+|**必需的特性**|无|
+|**无效的特性**|无|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
@@ -64,4 +64,4 @@ Progid 提供用来标识 COM/ActiveX 对象的类标识符 (CLSID) 的用户可
 [IDL 特性](idl-attributes.md)<br/>
 [类特性](class-attributes.md)<br/>
 [Typedef、Enum、Union 和 Struct 特性](typedef-enum-union-and-struct-attributes.md)<br/>
-[ProgID 密钥](/windows/desktop/com/-progid--key)
+[ProgID 密钥](/windows/win32/com/-progid--key)

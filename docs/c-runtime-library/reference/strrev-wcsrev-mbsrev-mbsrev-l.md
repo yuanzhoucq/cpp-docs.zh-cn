@@ -1,12 +1,12 @@
 ---
 title: _strrev、_wcsrev、_mbsrev、_mbsrev_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wcsrev
 - _mbsrev
 - _strrev
 - _mbsrev_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _strrev
 - _ftcsrev
@@ -47,19 +50,19 @@ helpviewer_keywords:
 - tcsrev function
 - _tcsrev function
 ms.assetid: 87863e89-4fa0-421c-af48-25d8516fe72f
-ms.openlocfilehash: a8794177f4f92a1928ffeaaa1d7e183aa67cf886
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3a7255d173e369b4269459a0cea4de8e7867c7c0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366649"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946837"
 ---
-# <a name="strrev-wcsrev-mbsrev-mbsrevl"></a>_strrev、_wcsrev、_mbsrev、_mbsrev_l
+# <a name="_strrev-_wcsrev-_mbsrev-_mbsrev_l"></a>_strrev、_wcsrev、_mbsrev、_mbsrev_l
 
 反转字符串的字符。
 
 > [!IMPORTANT]
-> **_mbsrev**并 **_mbsrev_l**不能在 Windows 运行时中执行的应用程序中使用。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbsrev**和 **_mbsrev_l**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -93,14 +96,14 @@ unsigned char *_mbsrev_l(
 
 ## <a name="remarks"></a>备注
 
-**_Strrev**函数中的字符的顺序反转*str*。 终止 null 字符保留在原位。 **_wcsrev**并 **_mbsrev**宽字符及多字节字符版本的 **_strrev**。 参数和返回值 **_wcsrev**是宽字符字符串; **_mbsrev**是多字节字符字符串。 有关 **_mbsrev**，在每个多字节字符中的字节顺序*str*不会更改。 否则这三个函数否则具有相同行为。
+**_Strrev**函数将*字符串*中的字符顺序反转。 终止 null 字符保留在原位。 **_wcsrev**和 **_mbsrev**是 **_strrev**的宽字符和多字节字符版本。 **_Wcsrev**的参数和返回值是宽字符字符串; **_mbsrev**的这些字符串是多字节字符字符串。 对于 **_mbsrev**，不会更改*str*中每个多字节字符中的字节顺序。 否则这三个函数否则具有相同行为。
 
-**_mbsrev**验证其参数。 如果任一*string1*或*string2*是 null 指针，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则 **_mbsrev**返回**NULL**并设置**errno**到**EINVAL**。 **_strrev**并 **_wcsrev**不会验证其参数。
+**_mbsrev**验证其参数。 如果*string1*或*string2*为空指针，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则 **_mbsrev**将返回**NULL** ，并将**errno**设置为**EINVAL**。 **_strrev**和 **_wcsrev**不会验证其参数。
 
-输出值受的设置**LC_CTYPE**的区域设置的类别设置影响; 请参阅[setlocale、 _wsetlocale](setlocale-wsetlocale.md)有关详细信息。 这些函数的版本是相同的不同之处在于不具有 **_l**后缀使用当前区域设置以及是否有那些 **_l**后缀改为使用区域设置参数的传入。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的**LC_CTYPE**类别设置的影响;有关详细信息，请参阅[setlocale、_wsetlocale](setlocale-wsetlocale.md) 。 这些函数的版本相同，不同之处在于没有 **_l**后缀的函数使用当前区域设置，而使用的是 **_l**后缀，而是使用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 > [!IMPORTANT]
-> 这些函数可能容易受到的缓冲区溢出的威胁。 缓冲区溢出可以用于系统攻击，因为它们可能使权限的提升不能确保。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
+> 这些函数可能容易受到的缓冲区溢出的威胁。 缓冲区溢出可以用于系统攻击，因为它们可能使权限的提升不能确保。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -115,7 +118,7 @@ unsigned char *_mbsrev_l(
 |-------------|---------------------|
 |**_strrev**|\<string.h>|
 |**_wcsrev**|\<string.h> 或 \<wchar.h>|
-|**_mbsrev**， **_mbsrev_l**|\<mbstring.h>|
+|**_mbsrev**、 **_mbsrev_l**|\<mbstring.h>|
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

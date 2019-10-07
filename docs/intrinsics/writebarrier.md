@@ -1,31 +1,31 @@
 ---
 title: _WriteBarrier
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _WriteBarrier
 helpviewer_keywords:
 - WriteBarrier intrinsic
 - _WriteBarrier intrinsic
 ms.assetid: a5ffdad9-0ca1-4eb7-b2f3-0f092c4bf4b5
-ms.openlocfilehash: d2db648c9f41bd4f773f5bf152f31cf990a75c8e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a41f4c6c5cdd6b72e76a596622912e88fbd03f34
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389965"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219312"
 ---
-# <a name="writebarrier"></a>_WriteBarrier
+# <a name="_writebarrier"></a>_WriteBarrier
 
 **Microsoft 专用**
 
 限制可重新排列调用点上的内存访问操作的编译器优化。
 
 > [!CAUTION]
->  已全部弃用且不应使用 `_ReadBarrier`、`_WriteBarrier` 和 `_ReadWriteBarrier` 编译器内部函数和 `MemoryBarrier` 宏。 对于线程间的通信，如使用机制[atomic_thread_fence](../standard-library/atomic-functions.md#atomic_thread_fence)并[std:: atomic\<T >](../standard-library/atomic.md)，其定义中[ C++ 标准库](../standard-library/cpp-standard-library-reference.md). 对于硬件访问，使用[/volatile: iso](../build/reference/volatile-volatile-keyword-interpretation.md)编译器选项一起使用[易失性](../cpp/volatile-cpp.md)关键字。
+> 已全部弃用且不应使用 `_ReadBarrier`、`_WriteBarrier` 和 `_ReadWriteBarrier` 编译器内部函数和 `MemoryBarrier` 宏。 对于线程间的通信, 请使用[ C++标准库](../standard-library/cpp-standard-library-reference.md)中定义的机制, 例如[atomic_thread_fence](../standard-library/atomic-functions.md#atomic_thread_fence)和[std::\<原子 T >](../standard-library/atomic.md)。 对于硬件访问, 请将[/volatile: iso](../build/reference/volatile-volatile-keyword-interpretation.md)编译器选项与[volatile](../cpp/volatile-cpp.md)关键字一起使用。
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 void _WriteBarrier(void);
 ```
 
@@ -35,7 +35,7 @@ void _WriteBarrier(void);
 |---------------|------------------|
 |`_WriteBarrier`|x86、x64|
 
-**标头文件** \<intrin.h >
+**标头文件**\<intrin.h >
 
 ## <a name="remarks"></a>备注
 
@@ -45,7 +45,7 @@ void _WriteBarrier(void);
 
 ## <a name="see-also"></a>请参阅
 
-[_ReadBarrier](../intrinsics/readbarrier.md)<br/>
-[_ReadWriteBarrier](../intrinsics/readwritebarrier.md)<br/>
-[编译器内部函数](../intrinsics/compiler-intrinsics.md)<br/>
+[_ReadBarrier](../intrinsics/readbarrier.md)\
+[_ReadWriteBarrier](../intrinsics/readwritebarrier.md)\
+[编译器内部函数](../intrinsics/compiler-intrinsics.md)\
 [关键字](../cpp/keywords-cpp.md)

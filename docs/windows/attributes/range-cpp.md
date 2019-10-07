@@ -1,21 +1,21 @@
 ---
-title: 范围 (C++ COM 属性)
+title: range (C++ COM 特性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.range
 helpviewer_keywords:
 - range attribute
 ms.assetid: f352f79e-ecb3-4cdd-9cdd-8406ef473594
-ms.openlocfilehash: 9ce941fe95f2bbef3895c039984db1e1d2985ae1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1221192eb1813d759f293fe5555d7aaa5b367ab
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407479"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514142"
 ---
 # <a name="range-c"></a>range (C++)
 
-指定参数或在运行时设置其值的字段的允许值的范围。
+为其值在运行时设置的参数或字段指定一系列允许的值。
 
 ## <a name="syntax"></a>语法
 
@@ -26,14 +26,14 @@ ms.locfileid: "62407479"
 ### <a name="parameters"></a>参数
 
 *low*<br/>
-范围下限值。
+低范围值。
 
 *high*<br/>
 高范围值。
 
 ## <a name="remarks"></a>备注
 
-**范围**C++属性具有相同的功能[范围](/windows/desktop/Midl/range)MIDL 特性。
+**Range** C++特性具有与[范围](/windows/win32/Midl/range)MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
@@ -57,10 +57,10 @@ __interface ICustom {
 
 |||
 |-|-|
-|**适用对象**|接口方法，接口参数|
-|**可重复**|否|
-|**必需的特性**|None|
-|**无效的特性**|None|
+|**适用于**|接口方法, 接口参数|
+|**可重复**|No|
+|**必需的特性**|无|
+|**无效的特性**|无|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

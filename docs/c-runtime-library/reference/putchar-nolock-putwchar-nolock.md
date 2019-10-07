@@ -1,10 +1,10 @@
 ---
 title: _putchar_nolock、_putwchar_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _putchar_nolock
 - _putwchar_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - putwchar_nolock
 - _puttchar_nolock
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - _putwchar_nolock function
 - puttchar_nolock function
 ms.assetid: 9ac68092-bfc3-4352-b486-c3e780220575
-ms.openlocfilehash: 2a70c2363b5ae35faab9a0167200366b286408b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4dba6537c5fb7ec66a812f2c34831b1b908fc3e4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358141"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949957"
 ---
-# <a name="putcharnolock-putwcharnolock"></a>_putchar_nolock、_putwchar_nolock
+# <a name="_putchar_nolock-_putwchar_nolock"></a>_putchar_nolock、_putwchar_nolock
 
 将字符写入 **stdout** 而不锁定线程。
 
@@ -65,7 +68,7 @@ wint_t _putwchar_nolock(
 
 ## <a name="remarks"></a>备注
 
-**putchar_nolock**并 **_putwchar_nolock**相同的版本而无需 **_nolock**后缀，只不过它们不受干扰从其他线程。 它们可能更快，因为它们不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用这些函数，如单线程应用程序或调用范围已经处理线程隔离。
+**putchar_nolock**和 **_putwchar_nolock**与没有 **_nolock**后缀的版本相同，只不过它们不会受到其他线程的干扰。 它们可能更快，因为它们不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用这些函数，如单线程应用程序或调用范围已经处理线程隔离。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -80,7 +83,7 @@ wint_t _putwchar_nolock(
 |**_putchar_nolock**|\<stdio.h>|
 |**_putwchar_nolock**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台 (UWP) 应用中不支持控制台。 控制台中，与关联的标准流句柄**stdin**， **stdout**，并**stderr**，C 运行时函数可以在 UWP 应用中使用它们之前，必须重定向. 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台 (UWP) 应用中不支持控制台。 与控制台、 **stdin**、 **stdout**和**stderr**关联的标准流句柄必须重定向, 然后 C 运行时函数才能在 UWP 应用中使用它们。 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>库
 

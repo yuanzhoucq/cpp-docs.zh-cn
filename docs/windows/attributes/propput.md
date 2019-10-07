@@ -1,17 +1,17 @@
 ---
-title: propput (C++ COM 属性)
+title: propput (C++ COM 特性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.propput
 helpviewer_keywords:
 - propput attribute
 ms.assetid: 1f84dda9-9cce-4e16-aaf0-b2c5219827f2
-ms.openlocfilehash: c9853b38675abfa0a94a319ac752eb2ef61a48e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e10edba60832112a9023f796be56d88afd52042
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407518"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514194"
 ---
 # <a name="propput"></a>propput
 
@@ -25,11 +25,11 @@ ms.locfileid: "62407518"
 
 ## <a name="remarks"></a>备注
 
-**Propput** C++属性具有相同的功能[propput](/windows/desktop/Midl/propput) MIDL 特性。
+**Propput** C++特性具有与[propput](/windows/win32/Midl/propput) MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
-有关示例，请参阅[可绑定](bindable.md)的示例使用**propput**。
+有关**propput**的示例用法, 请参阅可[绑定](bindable.md)的示例。
 
 ## <a name="requirements"></a>要求
 
@@ -37,9 +37,9 @@ ms.locfileid: "62407518"
 
 |||
 |-|-|
-|**适用对象**|方法|
-|**可重复**|否|
-|**必需的特性**|None|
+|**适用于**|方法|
+|**可重复**|No|
+|**必需的特性**|无|
 |**无效的特性**|`propget`， `propputref`|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。

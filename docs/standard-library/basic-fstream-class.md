@@ -23,7 +23,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68459590"
 ---
-# <a name="basicfstream-class"></a>basic_fstream 类
+# <a name="basic_fstream-class"></a>basic_fstream 类
 
 描述一个对象，该对象使用类 [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> 的流缓冲区来控制元素和编码对象的插入和提取，该流缓冲区具有 `Elem` 类型的元素，其字符特征由类 `Tr` 确定。
 
@@ -134,13 +134,13 @@ basic_fstream(basic_fstream&& right);
 [ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的枚举之一。
 
 *_Prot*\
-默认的文件打开保护, 等效于[_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)中的*shflag*参数。
+默认的文件打开保护，等效于[_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)中的*shflag*参数。
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数通过调用[basic_iostream](../standard-library/basic-iostream-class.md)`sb`( `sb` ) 初始化基类, 其中是[basic_filebuf](../standard-library/basic-filebuf-class.md) \< **Elem**, **Tr**> 类的存储对象。 它还通过`sb` `basic_filebuf`调用\< **Elem**, **Tr**> 来进行初始化。
+第一个构造函数通过调用[basic_iostream](../standard-library/basic-iostream-class.md)`sb`（ `sb` ）初始化基类，其中是[basic_filebuf](../standard-library/basic-filebuf-class.md) \< **Elem**， **Tr**> 类的存储对象。 它还通过`sb` `basic_filebuf`调用\< **Elem**， **Tr**> 来进行初始化。
 
-通过调用 `basic_iostream`( **sb**)，第二个和第三个构造函数可初始化基类。 它还通过`sb`调用`basic_filebuf`  `_Mode` [](../standard-library/basic-filebuf-class.md#open)  Elem、Tr >, 然后使用 sb. open (_ Filename,) 来进行初始化。 \< 如果后一个函数返回一个空指针, 则构造函数[](../standard-library/basic-ios-class.md#setstate)将调用`failbit`setstate ()。
+通过调用 `basic_iostream`( **sb**)，第二个和第三个构造函数可初始化基类。 它还通过调用 `basic_filebuf`\< **Elem** **Tr**>，然后 **sb.** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode`) 来进行初始化 `sb`。 如果后一个函数返回一个空指针，则构造函数将调用[setstate](../standard-library/basic-ios-class.md#setstate) （`failbit`）。
 
 第四个构造函数初始化具有 `right` 的内容的对象，将其视为右值引用。
 
@@ -217,15 +217,15 @@ void open(
 [ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的枚举之一。
 
 *_Prot*\
-默认的文件打开保护, 等效于[_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)中的*shflag*参数。
+默认的文件打开保护，等效于[_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)中的*shflag*参数。
 
 ### <a name="remarks"></a>备注
 
-此成员函数调用 [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode`)。 如果该函数返回 null 指针, 该函数将调用[setstate](../standard-library/basic-ios-class.md#setstate)( `failbit`)。
+此成员函数调用 [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode`)。 如果该函数返回 null 指针，该函数将调用[setstate](../standard-library/basic-ios-class.md#setstate)（ `failbit`）。
 
 ### <a name="example"></a>示例
 
-有关如何使用`open`的示例, 请参阅[basic_filebuf:: open](../standard-library/basic-filebuf-class.md#open) 。
+有关如何使用`open`的示例，请参阅[basic_filebuf：： open](../standard-library/basic-filebuf-class.md#open) 。
 
 ## <a name="op_eq"></a>  basic_fstream::operator=
 
@@ -246,7 +246,7 @@ basic_fstream& operator=(basic_fstream&& right);
 
 ### <a name="remarks"></a>备注
 
-成员运算符使用*right*的内容替换对象的内容, 并将其视为右值引用。
+成员运算符使用*right*的内容替换对象的内容，并将其视为右值引用。
 
 ## <a name="rdbuf"></a>  basic_fstream::rdbuf
 

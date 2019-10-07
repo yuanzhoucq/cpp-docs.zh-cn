@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleDropTarget [MFC], Register
 - COleDropTarget [MFC], Revoke
 ms.assetid: a58c9a48-6a93-4357-b078-4594df258311
-ms.openlocfilehash: 9a1633ed48c763b986f3421c33589a05f8bba126
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 891b19112c8baf2efb088f064892e1ea19a7deab
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224784"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69503969"
 ---
 # <a name="coledroptarget-class"></a>COleDropTarget 类
 
@@ -54,21 +54,21 @@ class COleDropTarget : public CCmdTarget
 |名称|描述|
 |----------|-----------------|
 |[COleDropTarget::OnDragEnter](#ondragenter)|当光标首次进入窗口时调用。|
-|[COleDropTarget::OnDragLeave](#ondragleave)|将光标拖出窗口时调用。|
-|[COleDropTarget::OnDragOver](#ondragover)|当光标拖至窗口上重复调用。|
-|[COleDropTarget::OnDragScroll](#ondragscroll)|调用以确定是否将光标拖到窗口的滚动区域。|
-|[COleDropTarget::OnDrop](#ondrop)|当数据放入窗口中，默认处理程序时调用。|
-|[COleDropTarget::OnDropEx](#ondropex)|当数据放入窗口中，初始处理程序时调用。|
-|[COleDropTarget::Register](#register)|将窗口注册为有效的放置目标。|
-|[COleDropTarget::Revoke](#revoke)|使窗口停止正在有效的放置目标。|
+|[COleDropTarget::OnDragLeave](#ondragleave)|当将光标拖出窗口时调用。|
+|[COleDropTarget::OnDragOver](#ondragover)|将光标拖动到窗口上时, 将重复调用。|
+|[COleDropTarget::OnDragScroll](#ondragscroll)|调用以确定光标是否拖到窗口的滚动区域。|
+|[COleDropTarget::OnDrop](#ondrop)|在将数据放入窗口时调用, 默认处理程序。|
+|[COleDropTarget::OnDropEx](#ondropex)|在将数据放入窗口时调用, 初始处理程序。|
+|[COleDropTarget::Register](#register)|将窗口注册为有效的拖放目标。|
+|[COleDropTarget::Revoke](#revoke)|使窗口停止为有效的拖放目标。|
 
 ## <a name="remarks"></a>备注
 
-创建此类的对象可让在窗口中通过 OLE 拖放机制接受的数据。
+通过创建此类的对象, 窗口可以通过 OLE 拖放机制接受数据。
 
-若要在窗口中接受 drop 命令，应首先创建的对象`COleDropTarget`类，然后调用[注册](#register)用一个指针指向所需的函数`CWnd`对象作为唯一参数。
+若要获取窗口以接受 drop 命令, 你应该首先创建`COleDropTarget`类的对象, 然后使用指向所需`CWnd`对象的指针作为唯一参数调用[Register](#register)函数。
 
-拖放操作的详细信息使用 OLE，请参阅文章[拖放 (OLE)](../../mfc/drag-and-drop-ole.md)。
+有关使用 OLE 拖放操作的详细信息, 请参阅[拖放 (OLE)](../../mfc/drag-and-drop-ole.md)一文。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -80,11 +80,11 @@ class COleDropTarget : public CCmdTarget
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxole.h
+**标头:** afxole
 
 ##  <a name="coledroptarget"></a>  COleDropTarget::COleDropTarget
 
-构造一个对象，类的`COleDropTarget`。
+构造类`COleDropTarget`的对象。
 
 ```
 COleDropTarget();
@@ -92,11 +92,11 @@ COleDropTarget();
 
 ### <a name="remarks"></a>备注
 
-调用[注册](#register)将此对象与窗口相关联。
+调用[Register](#register)将此对象与窗口关联。
 
 ##  <a name="ondragenter"></a>  COleDropTarget::OnDragEnter
 
-当光标首次拖动到窗口时由框架调用。
+当游标第一次拖动到窗口中时由框架调用。
 
 ```
 virtual DROPEFFECT OnDragEnter(
@@ -109,40 +109,40 @@ virtual DROPEFFECT OnDragEnter(
 ### <a name="parameters"></a>参数
 
 *pWnd*<br/>
-输入指向窗口的光标。
+指向光标进入的窗口。
 
 *pDataObject*<br/>
-指向包含要删除的数据的数据对象。
+指向包含可以删除的数据的数据对象。
 
 *dwKeyState*<br/>
-包含修改键的状态。 这是以下任意数量的组合：MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。
+包含修改键的状态。 这是以下任意数量的组合:MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON 和 MK_RBUTTON。
 
 *point*<br/>
-包含当前工作区坐标中的光标位置。
+包含光标在工作区坐标中的当前位置。
 
 ### <a name="return-value"></a>返回值
 
-放置已尝试在指定的位置时所产生的效果*点*。 它可以是一个或多项操作：
+尝试在*点*指定的位置处放置时将产生的效果。 它可以是下列一项或多项:
 
-- 不允许放置 DROPEFFECT_NONE。
+- DROPEFFECT_NONE 不允许删除。
 
-- DROPEFFECT_COPY 会执行复制操作。
+- DROPEFFECT_COPY 将执行复制操作。
 
-- DROPEFFECT_MOVE 会执行移动操作。
+- DROPEFFECT_MOVE 将执行移动操作。
 
-- 将建立 DROPEFFECT_LINK 链接放置的数据从原始数据。
+- DROPEFFECT_LINK 会建立从已删除数据到原始数据的链接。
 
-- DROPEFFECT_SCROLL A 拖动滚动操作即将发生或目标中不存在。
+- DROPEFFECT_SCROLL 将发生拖动滚动操作, 或在目标中发生。
 
 ### <a name="remarks"></a>备注
 
-重写此函数，以允许删除操作发生在窗口中。 默认实现调用[CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter)，这只是默认情况下返回 DROPEFFECT_NONE。
+重写此函数以允许在窗口中执行放置操作。 默认实现调用[CView:: system.windows.uielement.ondragenter](../../mfc/reference/cview-class.md#ondragenter), 后者在默认情况下只返回 DROPEFFECT_NONE。
 
-有关详细信息，请参阅[IDropTarget::DragEnter](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragenter) Windows SDK 中。
+有关详细信息, 请参阅 IDropTarget: Windows SDK 中的[::D ragenter](/windows/win32/api/oleidl/nf-oleidl-idroptarget-dragenter) 。
 
 ##  <a name="ondragleave"></a>  COleDropTarget::OnDragLeave
 
-当光标离开在窗口实际上拖放操作时由框架调用。
+当光标离开窗口且拖动操作有效时由框架调用。
 
 ```
 virtual void OnDragLeave(CWnd* pWnd);
@@ -151,17 +151,17 @@ virtual void OnDragLeave(CWnd* pWnd);
 ### <a name="parameters"></a>参数
 
 *pWnd*<br/>
-指向以窗口中光标离开。
+指向光标离开的窗口。
 
 ### <a name="remarks"></a>备注
 
-如果要使用特殊行为拖放操作离开指定的窗口时，重写此函数。 此函数的默认实现调用[CView::OnDragLeave](../../mfc/reference/cview-class.md#ondragleave)。
+如果要在拖动操作离开指定窗口时有特殊行为, 请重写此函数。 此函数的默认实现调用[CView:: system.windows.uielement.ondragleave](../../mfc/reference/cview-class.md#ondragleave)。
 
-有关详细信息，请参阅[IDropTarget::DragLeave](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragleave) Windows SDK 中。
+有关详细信息, 请参阅 IDropTarget: Windows SDK 中的[::D ragleave](/windows/win32/api/oleidl/nf-oleidl-idroptarget-dragleave) 。
 
 ##  <a name="ondragover"></a>  COleDropTarget::OnDragOver
 
-当光标拖至窗口上时，由框架调用。
+当光标拖动到窗口上时由框架调用。
 
 ```
 virtual DROPEFFECT OnDragOver(
@@ -174,36 +174,36 @@ virtual DROPEFFECT OnDragOver(
 ### <a name="parameters"></a>参数
 
 *pWnd*<br/>
-光标位于窗口的点。
+指向光标所在的窗口。
 
 *pDataObject*<br/>
 指向包含要删除的数据的数据对象。
 
 *dwKeyState*<br/>
-包含修改键的状态。 这是以下任意数量的组合：MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。
+包含修改键的状态。 这是以下任意数量的组合:MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON 和 MK_RBUTTON。
 
 *point*<br/>
-包含当前工作区坐标中的光标位置。
+包含光标在工作区坐标中的当前位置。
 
 ### <a name="return-value"></a>返回值
 
-放置已尝试在指定的位置时所产生的效果*点*。 它可以是一个或多项操作：
+尝试在*点*指定的位置处放置时将产生的效果。 它可以是下列一项或多项:
 
-- 不允许放置 DROPEFFECT_NONE。
+- DROPEFFECT_NONE 不允许删除。
 
-- DROPEFFECT_COPY 会执行复制操作。
+- DROPEFFECT_COPY 将执行复制操作。
 
-- DROPEFFECT_MOVE 会执行移动操作。
+- DROPEFFECT_MOVE 将执行移动操作。
 
-- 将建立 DROPEFFECT_LINK 链接放置的数据从原始数据。
+- DROPEFFECT_LINK 会建立从已删除数据到原始数据的链接。
 
-- DROPEFFECT_SCROLL 指示拖动滚动操作即将发生或目标中不存在。
+- DROPEFFECT_SCROLL 指示将要发生或在目标中发生拖动滚动操作。
 
 ### <a name="remarks"></a>备注
 
-应重写此函数以允许删除操作发生在窗口中。 此函数的默认实现调用[CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover)，其默认情况下返回 DROPEFFECT_NONE。 因为在拖放操作频繁调用此函数时，应尽可能多地进行优化。
+应重写此函数, 以允许在窗口中执行 drop 操作。 此函数的默认实现将调用[CView:: system.windows.uielement.ondragover](../../mfc/reference/cview-class.md#ondragover), 这将默认返回 DROPEFFECT_NONE。 由于在拖放操作过程中频繁调用此函数, 因此应尽可能优化此函数。
 
-有关详细信息，请参阅[IDropTarget::DragOver](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragover) Windows SDK 中。
+有关详细信息, 请参阅 IDropTarget: Windows SDK 中的[::D ragover](/windows/win32/api/oleidl/nf-oleidl-idroptarget-dragover) 。
 
 ### <a name="example"></a>示例
 
@@ -211,7 +211,7 @@ virtual DROPEFFECT OnDragOver(
 
 ##  <a name="ondragscroll"></a>  COleDropTarget::OnDragScroll
 
-由框架调用之前调用[OnDragEnter](#ondragenter)或[OnDragOver](#ondragover)以确定是否*点*滚动区域。
+在调用[system.windows.uielement.ondragenter](#ondragenter)或[system.windows.uielement.ondragover](#ondragover)之前由框架调用, 以确定*点*是否在滚动区域中。
 
 ```
 virtual DROPEFFECT OnDragScroll(
@@ -223,35 +223,35 @@ virtual DROPEFFECT OnDragScroll(
 ### <a name="parameters"></a>参数
 
 *pWnd*<br/>
-光标位于当前窗口的点。
+指向光标当前悬停的窗口。
 
 *dwKeyState*<br/>
-包含修改键的状态。 这是以下任意数量的组合：MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。
+包含修改键的状态。 这是以下任意数量的组合:MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON 和 MK_RBUTTON。
 
 *point*<br/>
-包含以像素为单位，相对于屏幕光标的位置。
+包含光标相对于屏幕的位置 (以像素为单位)。
 
 ### <a name="return-value"></a>返回值
 
-放置已尝试在指定的位置时所产生的效果*点*。 它可以是一个或多项操作：
+尝试在*点*指定的位置处放置时将产生的效果。 它可以是下列一项或多项:
 
-- 不允许放置 DROPEFFECT_NONE。
+- DROPEFFECT_NONE 不允许删除。
 
-- DROPEFFECT_COPY 会执行复制操作。
+- DROPEFFECT_COPY 将执行复制操作。
 
-- DROPEFFECT_MOVE 会执行移动操作。
+- DROPEFFECT_MOVE 将执行移动操作。
 
-- 将建立 DROPEFFECT_LINK 链接放置的数据从原始数据。
+- DROPEFFECT_LINK 会建立从已删除数据到原始数据的链接。
 
-- DROPEFFECT_SCROLL 指示拖动滚动操作即将发生或目标中不存在。
+- DROPEFFECT_SCROLL 指示将要发生或在目标中发生拖动滚动操作。
 
 ### <a name="remarks"></a>备注
 
-当你想要为此事件提供特殊行为时，重写此函数。 此函数的默认实现调用[CView::OnDragScroll](../../mfc/reference/cview-class.md#ondragscroll)，它返回 DROPEFFECT_NONE 并将光标拖到该窗口的边框内的默认滚动区域时滚动窗口。
+如果要为此事件提供特殊行为, 请重写此函数。 此函数的默认实现将调用[CView:: OnDragScroll](../../mfc/reference/cview-class.md#ondragscroll), 这将返回 DROPEFFECT_NONE, 并在光标拖动到窗口边框内的默认滚动区域内时滚动窗口。
 
 ##  <a name="ondrop"></a>  COleDropTarget::OnDrop
 
-发生放置操作时由框架调用。
+当发生放置操作时由框架调用。
 
 ```
 virtual BOOL OnDrop(
@@ -264,38 +264,38 @@ virtual BOOL OnDrop(
 ### <a name="parameters"></a>参数
 
 *pWnd*<br/>
-光标位于当前窗口的点。
+指向光标当前悬停的窗口。
 
 *pDataObject*<br/>
 指向包含要删除的数据的数据对象。
 
 *dropEffect*<br/>
-用户选择为删除操作的效果。 它可以是一个或多项操作：
+用户为放置操作选择的效果。 它可以是下列一项或多项:
 
-- DROPEFFECT_COPY 会执行复制操作。
+- DROPEFFECT_COPY 将执行复制操作。
 
-- DROPEFFECT_MOVE 会执行移动操作。
+- DROPEFFECT_MOVE 将执行移动操作。
 
-- 将建立 DROPEFFECT_LINK 链接放置的数据从原始数据。
+- DROPEFFECT_LINK 会建立从已删除数据到原始数据的链接。
 
 *point*<br/>
-包含以像素为单位，相对于屏幕光标的位置。
+包含光标相对于屏幕的位置 (以像素为单位)。
 
 ### <a name="return-value"></a>返回值
 
-如果下拉成功; 非零值否则为 0。
+如果删除成功, 则为非零值;否则为0。
 
 ### <a name="remarks"></a>备注
 
-框架将第一个调用[OnDropEx](#ondropex)。 如果`OnDropEx`函数不会处理拖放、 框架然后调用此成员函数， `OnDrop`。 通常情况下，应用程序的重写[OnDropEx](../../mfc/reference/cview-class.md#ondropex)在视图类来处理鼠标右键拖放。 通常情况下，视图类[OnDrop](../../mfc/reference/cview-class.md#ondrop)用于处理简单的拖放功能。
+框架首先调用[OnDropEx](#ondropex)。 如果该`OnDrop`函数不处理放置, 则框架将调用此成员函数。 `OnDropEx` 通常, 应用程序会重写视图类中的[OnDropEx](../../mfc/reference/cview-class.md#ondropex) , 以处理鼠标右键拖放。 通常, 视图类[system.windows.uielement.ondrop](../../mfc/reference/cview-class.md#ondrop)用于处理简单的拖放。
 
-默认实现`COleDropTarget::OnDrop`调用[CView::OnDrop](../../mfc/reference/cview-class.md#ondrop)，这只是默认情况下返回 FALSE。
+的`COleDropTarget::OnDrop`默认实现调用[CView:: system.windows.uielement.ondrop](../../mfc/reference/cview-class.md#ondrop), 后者在默认情况下只返回 FALSE。
 
-有关详细信息，请参阅[IDropTarget::Drop](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-drop) Windows SDK 中。
+有关详细信息, 请参阅 IDropTarget: Windows SDK 中的[::D rop](/windows/win32/api/oleidl/nf-oleidl-idroptarget-drop) 。
 
 ##  <a name="ondropex"></a>  COleDropTarget::OnDropEx
 
-发生放置操作时由框架调用。
+当发生放置操作时由框架调用。
 
 ```
 virtual DROPEFFECT OnDropEx(
@@ -309,47 +309,47 @@ virtual DROPEFFECT OnDropEx(
 ### <a name="parameters"></a>参数
 
 *pWnd*<br/>
-光标位于当前窗口的点。
+指向光标当前悬停的窗口。
 
 *pDataObject*<br/>
 指向包含要删除的数据的数据对象。
 
 *dropDefault*<br/>
-用户选择基于当前的关键状态的默认拖放操作效果。 它可以是 DROPEFFECT_NONE。 放置效果备注部分所述。
+用户根据当前键状态选择的默认删除操作的效果。 它可以是 DROPEFFECT_NONE。 "备注" 部分讨论了 Drop 效果。
 
 *dropList*<br/>
-放置源支持拖放效果的列表。 可以使用的按位 OR 组合放置效果值 (**&#124;**) 操作。 放置效果备注部分所述。
+放置源所支持的放置效果的列表。 可以使用按位 "或" ( **&#124;** ) 运算组合删除效果值。 "备注" 部分讨论了 Drop 效果。
 
 *point*<br/>
-包含以像素为单位，相对于屏幕光标的位置。
+包含光标相对于屏幕的位置 (以像素为单位)。
 
 ### <a name="return-value"></a>返回值
 
-由于在指定的位置删除尝试而导致的放效果*点*。 放置效果备注部分所述。
+由于放置尝试在*点*指定的位置导致的放置效果。 "备注" 部分讨论了 Drop 效果。
 
 ### <a name="remarks"></a>备注
 
-首先，框架调用此函数。 如果它无法处理下拉菜单，然后调用框架[OnDrop](#ondrop)。 通常情况下，您将重写[OnDropEx](../../mfc/reference/cview-class.md#ondropex)在视图类，以支持鼠标右键拖放。 通常情况下，视图类[OnDrop](../../mfc/reference/cview-class.md#ondrop)用于处理对简单的拖放功能的支持情况。
+框架首先调用此函数。 如果它未处理 drop, 则框架将调用[system.windows.uielement.ondrop](#ondrop)。 通常, 您将重写 view 类中的[OnDropEx](../../mfc/reference/cview-class.md#ondropex)以支持鼠标右键拖放。 通常, 视图类[system.windows.uielement.ondrop](../../mfc/reference/cview-class.md#ondrop)用于处理简单拖放支持的情况。
 
-默认实现`COleDropTarget::OnDropEx`调用[CView::OnDropEx](../../mfc/reference/cview-class.md#ondropex)。 默认情况下[CView::OnDropEx](../../mfc/reference/cview-class.md#ondropex)只需返回虚拟值以指示[OnDrop](#ondrop)应调用成员函数。
+的`COleDropTarget::OnDropEx`默认实现调用[CView:: OnDropEx](../../mfc/reference/cview-class.md#ondropex)。 默认情况下, [CView:: OnDropEx](../../mfc/reference/cview-class.md#ondropex)只返回一个虚拟值, 以指示应调用[system.windows.uielement.ondrop](#ondrop)成员函数。
 
-放置效果描述与拖放操作相关联的操作。 请参阅下面放置效果的列表：
+Drop 效果描述与删除操作相关联的操作。 请参阅下面的删除效果列表:
 
-- 不允许放置 DROPEFFECT_NONE。
+- DROPEFFECT_NONE 不允许删除。
 
-- DROPEFFECT_COPY 会执行复制操作。
+- DROPEFFECT_COPY 将执行复制操作。
 
-- DROPEFFECT_MOVE 会执行移动操作。
+- DROPEFFECT_MOVE 将执行移动操作。
 
-- 将建立 DROPEFFECT_LINK 链接放置的数据从原始数据。
+- DROPEFFECT_LINK 会建立从已删除数据到原始数据的链接。
 
-- DROPEFFECT_SCROLL 指示拖动滚动操作即将发生或目标中不存在。
+- DROPEFFECT_SCROLL 指示将要发生或在目标中发生拖动滚动操作。
 
-有关详细信息，请参阅[IDropTarget::Drop](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-drop) Windows SDK 中。
+有关详细信息, 请参阅 IDropTarget: Windows SDK 中的[::D rop](/windows/win32/api/oleidl/nf-oleidl-idroptarget-drop) 。
 
 ##  <a name="register"></a>  COleDropTarget::Register
 
-调用此函数向 OLE Dll 作为有效的放置目标注册您的窗口。
+调用此函数可将您的窗口和 OLE Dll 注册为有效的放置目标。
 
 ```
 BOOL Register(CWnd* pWnd);
@@ -358,21 +358,21 @@ BOOL Register(CWnd* pWnd);
 ### <a name="parameters"></a>参数
 
 *pWnd*<br/>
-指向要注册为放置目标的窗口。
+指向要注册为拖放目标的窗口。
 
 ### <a name="return-value"></a>返回值
 
-如果注册成功，则非零值否则为 0。
+如果注册成功, 则为非零值;否则为0。
 
 ### <a name="remarks"></a>备注
 
-拖放操作可以被接受，必须调用此函数。
+若要接受 drop 操作, 必须调用此函数。
 
-有关详细信息，请参阅[RegisterDragDrop](/windows/desktop/api/ole2/nf-ole2-registerdragdrop) Windows SDK 中。
+有关详细信息, 请参阅 Windows SDK 中的[RegisterDragDrop](/windows/win32/api/ole2/nf-ole2-registerdragdrop) 。
 
 ##  <a name="revoke"></a>  COleDropTarget::Revoke
 
-销毁已注册为放置目标，通过调用任何窗口之前调用此函数[注册](#register)从放置目标的列表中删除它。
+在销毁已通过调用[Register](#register)注册为拖放目标的任何窗口之前调用此函数, 以将其从拖放目标列表中删除。
 
 ```
 virtual void Revoke();
@@ -380,9 +380,9 @@ virtual void Revoke();
 
 ### <a name="remarks"></a>备注
 
-从自动调用此函数[OnDestroy](../../mfc/reference/cwnd-class.md#ondestroy)处理程序已注册，因此通常需要显式调用此函数的窗口。
+此函数是从已注册窗口的[OnDestroy](../../mfc/reference/cwnd-class.md#ondestroy)处理程序自动调用的, 因此通常不需要显式调用此函数。
 
-有关详细信息，请参阅[RevokeDragDrop](/windows/desktop/api/ole2/nf-ole2-revokedragdrop) Windows SDK 中。
+有关详细信息, 请参阅 Windows SDK 中的[RevokeDragDrop](/windows/win32/api/ole2/nf-ole2-revokedragdrop) 。
 
 ## <a name="see-also"></a>请参阅
 

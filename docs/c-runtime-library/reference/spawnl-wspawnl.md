@@ -1,10 +1,10 @@
 ---
 title: _spawnl、_wspawnl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wspawnl
 - _spawnl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - spawnl
 - wspawnl
@@ -31,14 +34,14 @@ helpviewer_keywords:
 - wspawnl function
 - process creation
 ms.assetid: dd4584c9-7173-4fc5-b93a-6e7d3c2316d7
-ms.openlocfilehash: 11ff3447487fcaf1a4225825c222b873005b2a1c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b39e76b010fd0d3b9ae3dc8d0104c69ce97ac87e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62355271"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947826"
 ---
-# <a name="spawnl-wspawnl"></a>_spawnl、_wspawnl
+# <a name="_spawnl-_wspawnl"></a>_spawnl、_wspawnl
 
 创建并执行更新过程。
 
@@ -74,24 +77,24 @@ intptr_t _wspawnl(
 *cmdname*<br/>
 要执行的文件的路径。
 
-*arg0*， *arg1*，...*argn*<br/>
-指向参数的指针的列表。 *Arg0*参数通常是一个指向*cmdname*。 自变量*arg1*通过*argn*是指向构成新参数列表的字符串。 遵循*argn*，必须有**NULL**指针，用以标记参数列表的末尾。
+*arg0*， *arg1*，.。。*argn*<br/>
+指向参数的指针的列表。 *Arg0*参数通常是指向*cmdname*的指针。 参数*arg1*到*argn*是指向构成新参数列表的字符串的指针。 在*argn*之后，必须有一个**NULL**指针，用于标记参数列表的末尾。
 
 ## <a name="return-value"></a>返回值
 
-从同步的返回值 **_spawnl**或 **_wspawnl** (**_P_WAIT**指定为*模式*) 是新进程的退出状态。 异步的返回值 **_spawnl**或 **_wspawnl** (**_P_NOWAIT**或者 **_P_NOWAITO**指定为*模式*) 是进程句柄。 如果进程正常终止，则退出状态为 0。 如果生成的进程专门调用时将退出状态设置为非零值**退出**例程具有非零参数。 如果更新过程没有显式设置正退出状态，则正退出状态指示因中止或中断而异常退出。 返回值-1 指示的错误 （未启动新进程）。 在这种情况下， **errno**设置为以下值之一。
+同步 **_spawnl**或 **_wspawnl** （为*mode*指定的 **_P_WAIT** ）的返回值是新进程的退出状态。 异步 **_spawnl**或 **_wspawnl** （为*Mode*指定的 **_P_NOWAIT**或 **_P_NOWAITO** ）的返回值是进程句柄。 如果进程正常终止，则退出状态为 0。 如果生成的进程专门使用非零参数调用**exit**例程，则可以将退出状态设置为一个非零值。 如果更新过程没有显式设置正退出状态，则正退出状态指示因中止或中断而异常退出。 返回值-1 表示错误（不启动新进程）。 在这种情况下， **errno**设置为以下值之一。
 
 |||
 |-|-|
 | **E2BIG** | 参数列表超过 1024 个字节。 |
-| **EINVAL** | *模式*参数无效。 |
+| **EINVAL** | *mode*参数无效。 |
 | **ENOENT** | 未找到文件或路径。 |
 | **ENOEXEC** | 指定的文件不是可执行文件或者有无效的可执行文件格式。 |
 | **ENOMEM** | 没有足够的内存可用于执行新进程。 |
 
 有关这些属性和其他的更多信息返回代码示例，请参见 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-这些函数验证其参数。 如果任一*cmdname*或*arg0*是一个空字符串或 null 指针，无效参数处理程序调用，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许继续执行，这些函数将设置**errno**到**EINVAL**，并返回-1。 不生成任何新进程。
+这些函数验证其参数。 如果*cmdname*或*arg0*为空字符串或 null 指针，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数会将**errno**设置为**EINVAL**，并返回-1。 不生成任何新进程。
 
 ## <a name="remarks"></a>备注
 

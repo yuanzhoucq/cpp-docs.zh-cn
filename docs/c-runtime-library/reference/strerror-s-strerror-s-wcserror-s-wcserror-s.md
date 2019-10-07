@@ -1,12 +1,12 @@
 ---
 title: strerror_s、_strerror_s、_wcserror_s、__wcserror_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __wcserror_s
 - _strerror_s
 - _wcserror_s
 - strerror_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcserror_s
 - __wcserror_s
@@ -39,16 +42,16 @@ helpviewer_keywords:
 - wcserror_s function
 - error messages, getting
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
-ms.openlocfilehash: 00ff9d0df1a78d07eaa509201fb998b30396cc4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8d461566f748ce5af3d4b2aab443b5966c27dd7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353815"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958153"
 ---
-# <a name="strerrors-strerrors-wcserrors-wcserrors"></a>strerror_s、_strerror_s、_wcserror_s、__wcserror_s
+# <a name="strerror_s-_strerror_s-_wcserror_s-__wcserror_s"></a>strerror_s、_strerror_s、_wcserror_s、__wcserror_s
 
-获取系统错误信息 (**strerror_s**， **_wcserror_s**) 或打印用户提供的错误消息 (**_strerror_s**， **__wcserror_s**). 如 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述，这些版本的 [strerror、_strerror、_wcserror、\__wcserror](strerror-strerror-wcserror-wcserror.md) 具有安全性增强功能。
+获取系统错误消息（**strerror_s**、 **_wcserror_s**）或打印用户提供的错误消息（ **_strerror_s**、 **__wcserror_s**）。 如 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述，这些版本的 [strerror、_strerror、_wcserror、\__wcserror](strerror-strerror-wcserror-wcserror.md) 具有安全性增强功能。
 
 ## <a name="syntax"></a>语法
 
@@ -115,14 +118,14 @@ errno_t __wcserror_s(
 
 ### <a name="error-condtions"></a>错误条件
 
-|*buffer*|*numberOfElements*|*strErrMsg*|内容*缓冲区*|
+|*buffer*|*numberOfElements*|*strErrMsg*|*缓冲区*内容|
 |--------------|------------------------|-----------------|--------------------------|
 |**NULL**|任何|任何|n/a|
 |任何|0|任何|未修改|
 
 ## <a name="remarks"></a>备注
 
-**Strerror_s**函数映射*errnum*到错误消息字符串，并返回中的字符串*缓冲区*。 **_strerror_s**不采用错误编号; 它使用的当前值**errno**以确定相应的消息。 既不**strerror_s**也不 **_strerror_s**实际打印的消息：为此，您需要调用输出函数，如[fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
+**Strerror_s**函数将*errnum*映射到错误消息字符串，并返回*缓冲区*中的字符串。 **_strerror_s**不接受错误号;它使用**errno**的当前值来确定相应的消息。 **Strerror_s**和 **_strerror_s**都不会实际打印消息：为此，需要调用输出函数，例如[fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md)：
 
 ```C
 if (( _access( "datafile",2 )) == -1 )
@@ -132,17 +135,17 @@ if (( _access( "datafile",2 )) == -1 )
 }
 ```
 
-如果*strErrMsg*是**NULL**， **_strerror_s**返回的字符串*缓冲区*包含最后一个库调用的系统错误消息生成了错误的。 错误消息字符串以换行符 ('\n') 结尾。 如果*strErrMsg*不等于**NULL**，然后 **_strerror_s**返回的字符串*缓冲区*（按顺序） 包含你的字符串消息，冒号、 空格、 生成错误，并换行字符的最后一个库调用的系统错误消息。 你的字符串消息长度最多可达 94 个字符。
+如果*strErrMsg*为**NULL**，则 **_strerror_s**将在*缓冲区*中返回一个字符串，该字符串包含产生错误的最后一个库调用的系统错误消息。 错误消息字符串以换行符 ('\n') 结尾。 如果*strErrMsg*不等于**NULL**，则 **_strerror_s**将返回*缓冲区*中的字符串，该字符串包含（按顺序）你的字符串消息、冒号、空格、生成错误的最后一个库调用的系统错误消息，以及一个换行符字符. 你的字符串消息长度最多可达 94 个字符。
 
-如果长度超出了这些函数将截断错误消息*numberOfElements* -1。 中的结果字符串*缓冲区*始终 null 值结束。
+如果错误消息的长度超过*numberOfElements* -1，则这些函数将截断错误消息。 *缓冲区*中生成的字符串始终以 null 结尾。
 
-有关的实际错误编号 **_strerror_s**存储在变量[errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。 通过变量 [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 访问系统错误消息，该变量是按错误编号排序的消息数组。 **_strerror_s**通过使用来访问相应的错误消息**errno**为该变量的索引值 **_sys_errlist**。 变量的值[_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)定义为中的元素的最大数 **_sys_errlist**数组。 若要生成准确的结果，调用 **_strerror_s**后立即在库例程将返回错误消息。 否则为后续调用**strerror_s**或 **_strerror_s**可以覆盖**errno**值。
+**_Strerror_s**的实际错误号存储在变量[errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)中。 通过变量 [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 访问系统错误消息，该变量是按错误编号排序的消息数组。 **_strerror_s**通过使用**errno**值作为变量 **_sys_errlist**的索引来访问相应的错误消息。 变量[_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)的值定义为 **_sys_errlist**数组中的最大元素数。 若要生成准确的结果，请在库例程返回错误后立即调用 **_strerror_s** 。 否则，对**strerror_s**或 **_strerror_s**的后续调用可能会覆盖**errno**值。
 
-**_wcserror_s**并 **__wcserror_s**宽字符版本的**strerror_s**并 **_strerror_s**分别。
+**_wcserror_s**和 **__wcserror_s**分别是**strerror_s**和 **_strerror_s**的宽字符版本。
 
-这些函数验证其参数。 如果缓冲区**NULL**或者如果大小参数为 0，将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，这些函数返回**EINVAL**并设置**errno**到**EINVAL**。
+这些函数验证其参数。 如果缓冲区为**NULL**或大小参数为0，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则函数返回**EINVAL** ，并将**Errno**设置为**EINVAL**。
 
-**_strerror_s**， **_wcserror_s**，和 **__wcserror_s**不是 ANSI 定义的一部分，而是其 Microsoft 扩展。 不要使用它们在需要时可移植性;对于 ANSI 兼容性，使用**strerror_s**相反。
+**_strerror_s**、 **_wcserror_s**和 **__wcserror_s**不是 ANSI 定义的一部分，而是 Microsoft 扩展。 请不要在需要可移植性的情况下使用它们;对于 ANSI 兼容性，请改用**strerror_s** 。
 
 在 C++ 中，通过模板重载简化这些函数的使用；重载可以自动推导出缓冲区长度，不再需要指定大小参数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -158,8 +161,8 @@ if (( _access( "datafile",2 )) == -1 )
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**strerror_s**， **_strerror_s**|\<string.h>|
-|**_wcserror_s**， **__wcserror_s**|\<string.h> 或 \<wchar.h>|
+|**strerror_s**、 **_strerror_s**|\<string.h>|
+|**_wcserror_s**、 **__wcserror_s**|\<string.h> 或 \<wchar.h>|
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

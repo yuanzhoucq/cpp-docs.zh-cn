@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CRT_REPORT_HOOK type
 - _finddata_t type
 ms.assetid: 23312dd2-4a6a-4d70-9b48-2a5d0d8c9f28
-ms.openlocfilehash: 85ebe9052d9e8bd18dfc9b3b123871e2e5acda4e
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: c93cf4bf138fc6bc648d33c180edbed0dbe5014e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740471"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500642"
 ---
 # <a name="standard-types"></a>标准类型
 
@@ -198,11 +198,11 @@ Microsoft 运行库定义下列标准类型和 typedef。
 |`_CrtMemState` 结构|提供有关 C 运行时调试堆的当前状态的信息。|CRTDBG.H|
 |`_CRT_REPORT_HOOK`,<br /><br /> `_CRT_REPORT_HOOKW`,<br /><br /> `_CRT_REPORT_HOOKW_M`|将在 [_CrtDbgReport](../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) 中调用的回调函数的类型定义。<br /><br /> 此函数的参数包括：报告类型、输出消息和回调函数的返回值。|CRTDBG.H|
 |`dev_t`、`_dev_t` short 或 unsigned integer|表示设备句柄。|SYS\TYPES.H|
-|`_diskfree_t` 结构|包含有关磁盘驱动器的信息。 由 [_getdiskfree](../c-runtime-library/reference/getdiskfree.md) 使用。|DOS.H 和 DIRECT.H|
+|`_diskfree_t` 结构|包含有关磁盘驱动器的信息。 由 [_getdiskfree](../c-runtime-library/reference/getdiskfree.md)  使用。|DOS.H 和 DIRECT.H|
 |`div_t`、`ldiv_t` 和 `lldiv_t` 结构|存储由 [div](../c-runtime-library/reference/div.md)、[ldiv](../c-runtime-library/reference/ldiv-lldiv.md) 和 [lldiv](../c-runtime-library/reference/ldiv-lldiv.md) 分别返回的值。|STDLIB.H|
 |`errno_t` integer|用于处理 `errno` 的错误代码的函数返回类型或参数。|STDDEF.H、<br /><br /> CRTDEFS.H|
 |`_exception` 结构|存储 [_matherr](../c-runtime-library/reference/matherr.md) 的错误信息。|MATH.H|
-|`_EXCEPTION_POINTERS`|包含一个异常记录。 有关详细信息，请参阅 [EXCEPTION_POINTERS](/windows/desktop/api/winnt/ns-winnt-_exception_pointers)。|FPIEEE.H|
+|`_EXCEPTION_POINTERS`|包含一个异常记录。 有关详细信息，请参阅 [EXCEPTION_POINTERS](/windows/win32/api/winnt/ns-winnt-exception_pointers)。|FPIEEE.H|
 |`FILE` 结构|存储有关流的当前状态的信息；在所有流 I/O 操作中使用。|STDIO.H|
 |`_finddata_t`、`_wfinddata_t`、`_finddata32_t`、`_wfinddata32_t`、`_finddatai64_t`、`_wfinddatai64_t`、`__finddata64_t`、`__wfinddata64_t`、`__finddata32i64_t`、`__wfinddata32i64_t`、`__finddata64i32_t`、`__wfinddata64i32_t` 结构|存储由 [_findfirst、_wfindfirst 和相关函数](../c-runtime-library/reference/findfirst-functions.md)及 [_findnext、_wfindnext 和相关函数](../c-runtime-library/reference/findnext-functions.md)返回的文件特性信息。 有关结构成员的信息，请参阅[文件名称搜索函数](../c-runtime-library/filename-search-functions.md)。|IO.H、WCHAR.H|
 |`_FPIEEE_RECORD` 结构|包含有关 IEEE 浮点异常的信息；由 [_fpieee_flt](../c-runtime-library/reference/fpieee-flt.md) 传递给用户定义的陷阱处理程序。|FPIEEE.H|

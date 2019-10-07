@@ -1,9 +1,9 @@
 ---
 title: _cwait
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cwait
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,21 +15,24 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _cwait
 helpviewer_keywords:
 - cwait function
 - _cwait function
 ms.assetid: d9b596b5-45f4-4e03-9896-3f383cb922b8
-ms.openlocfilehash: f7a49497ac71ec15261e1215bd2bbed2e49f42ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b4be342ef528959bae22917bc59eef5a953aa4ae
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288779"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937751"
 ---
-# <a name="cwait"></a>_cwait
+# <a name="_cwait"></a>_cwait
 
 请等待，直到另一个进程终止。
 
@@ -49,34 +52,34 @@ intptr_t _cwait(
 ### <a name="parameters"></a>参数
 
 *termstat*<br/>
-指向将存储指定进程的结果代码的位置，缓冲区的指针或**NULL**。
+指向将存储指定进程的结果代码的缓冲区的指针，或为**NULL**。
 
 *procHandle*<br/>
-要等待的进程的句柄 (即之前, 必须终止的进程 **_cwait**可以返回)。
+要等待的进程的句柄（即，在 **_cwait**可以返回之前必须终止的进程）。
 
 *action*<br/>
-NULL Windows 操作系统应用程序; 被忽略对于其他应用程序： 若要执行的操作代码*procHandle*。
+NULL 被 Windows 操作系统应用程序忽略;对于其他应用程序：要在*procHandle*上执行的操作代码。
 
 ## <a name="return-value"></a>返回值
 
-已成功完成指定的进程后，返回指定的进程的句柄，并设置*termstat*到指定的进程返回的结果代码。 否则为返回-1，并设置**errno** ，如下所示。
+成功完成指定的进程后，将返回指定进程的句柄，并将*termstat*设置为指定进程返回的结果代码。 否则，将返回-1，并按如下所示设置**errno** 。
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
-|**ECHILD**|指定的进程不存在， *procHandle*无效，或在调用[GetExitCodeProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess)或[WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) API 失败。|
+|**ECHILD**|不存在指定的进程， *procHandle*无效或调用[GetExitCodeProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess)或[WaitForSingleObject](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject) API 失败。|
 |**EINVAL**|*操作*无效。|
 
 有关这些代码及其他返回代码的详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**_Cwait**函数等待提供的指定进程的进程 ID 终止*procHandle*。 值*procHandle*传递给 **_cwait**应通过调用返回的值[_spawn](../../c-runtime-library/spawn-wspawn-functions.md)创建指定的进程的函数。 如果进程 ID 终止之前 **_cwait**调用时， **_cwait**立即返回。 **_cwait**任何进程可用于等待任何其他已知的进程，为其有效的句柄 (*procHandle*) 存在。
+**_Cwait**函数等待*procHandle*提供的指定进程的进程 ID 终止。 传递给 **_cwait**的*procHandle*的值应为对创建指定进程的[_spawn](../../c-runtime-library/spawn-wspawn-functions.md)函数的调用所返回的值。 如果进程 ID 在调用 **_cwait**之前终止，则 **_cwait**将立即返回。 任何进程都可以使用 **_cwait**等待存在有效句柄（*procHandle*）的任何其他已知进程。
 
-*termstat*指向将存储指定进程的返回代码的缓冲区。 值*termstat*指示是否指定正常终止了进程通过调用 Windows [ExitProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitprocess) API。 **ExitProcess**如果指定的进程调用在内部调用**退出**或 **_exit**，从返回**主要**，或到达末尾**主要**. 详细了解通过传递的值*termstat*，请参阅[GetExitCodeProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess)。 如果 **_cwait**通过使用调用**NULL**值*termstat*，不存储指定进程的返回代码。
+*termstat*指向将存储指定进程的返回代码的缓冲区。 *Termstat*的值指示是否通过调用 Windows [ExitProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-exitprocess) API 正常终止了指定进程。 如果指定进程调用**exit**或 **_exit**、从**main**返回或到达**main**末尾，则会在内部调用**ExitProcess** 。 有关通过*termstat*传递回的值的详细信息，请参阅[GetExitCodeProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess)。 如果使用*termstat*的**NULL**值调用 **_cwait** ，则不会存储指定进程的返回代码。
 
-*操作*由 Windows 操作系统忽略参数，因为在这些环境中未实现父-子关系。
+由于在这些环境中没有实现父子关系，因此 Windows 操作系统会忽略*操作*参数。
 
-除非*procHandle*为-1 或-2 （句柄的当前进程或线程），将关闭此句柄。 因此，在这种情况下，请不要使用返回的句柄。
+除非*procHandle*为-1 或-2 （对当前进程或线程的句柄），否则将关闭句柄。 因此，在这种情况下，请不要使用返回的句柄。
 
 ## <a name="requirements"></a>要求
 

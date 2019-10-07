@@ -1,11 +1,11 @@
 ---
 title: trunc、truncf、truncl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - trunc
 - truncf
 - truncl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - trunc
 - truncf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - truncf function
 - truncl function
 ms.assetid: de2038ac-ac0b-483e-870c-e8992dcd4fd0
-ms.openlocfilehash: 6e023b9d894ea1b40a0e056e73b7c32f1e3cbed7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b0c615c91e562fa45f791d8cc20f39a830013aeb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62268931"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945998"
 ---
 # <a name="trunc-truncf-truncl"></a>trunc、truncf、truncl
 
@@ -61,7 +64,7 @@ float trunc( float x ); //C++ only
 
 ## <a name="return-value"></a>返回值
 
-如果成功，返回的整数值*x*向零舍入。
+如果成功，则返回舍入到零的整数值*x*。
 
 否则，可能返回以下值之一：
 
@@ -75,7 +78,7 @@ float trunc( float x ); //C++ only
 
 ## <a name="remarks"></a>备注
 
-因为C++允许重载，可以调用的重载**trunc**采用并返回**float**并**长** **double**类型。 在 C 程序中， **trunc**始终采用并返回**double**。
+由于C++允许重载，因此可以调用**trunc**的重载，该重载采用和返回**float**和**long** **double**类型。 在 C 程序中， **trunc**始终采用并返回**双精度型**。
 
 由于最大的浮点值是精确的整数，因此该函数不会自行溢出。 但是，将值还原为整型时可能会导致此函数溢出。
 
@@ -85,7 +88,7 @@ float trunc( float x ); //C++ only
 
 |函数|C 标头|C++ 标头|
 |--------------|--------------|------------------|
-|**trunc**， **truncf**， **truncl**|\<math.h>|\<cmath>|
+|**trunc**、 **truncf**、 **truncl**|\<math.h>|\<cmath>|
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

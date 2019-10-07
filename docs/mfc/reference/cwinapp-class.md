@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: a4ec6c976b6611563eb95cce1173d7c77c3b5ef0
-ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
+ms.openlocfilehash: e65ad8b5d8b14ff747adc55b517d9e695d9cbb66
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67894494"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095750"
 ---
 # <a name="cwinapp-class"></a>CWinApp 类
 
@@ -221,76 +221,76 @@ class CWinApp : public CWinThread
 
 |名称|描述|
 |----------|-----------------|
-|[CWinApp::AddDocTemplate](#adddoctemplate)|将文档模板添加到可用的文档模板的应用程序的列表。|
-|[CWinApp::AddToRecentFileList](#addtorecentfilelist)|将文件名添加到最近使用 (过的 MRU) 文件列表。|
-|[CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)|应用程序意外退出时由框架调用。|
+|[CWinApp::AddDocTemplate](#adddoctemplate)|向应用程序的可用文档模板列表添加文档模板。|
+|[CWinApp::AddToRecentFileList](#addtorecentfilelist)|将文件名添加到最近使用的（MRU）文件列表。|
+|[CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)|当应用程序意外退出时由框架调用。|
 |[CWinApp::CloseAllDocuments](#closealldocuments)|关闭所有打开的文档。|
 |[CWinApp::CreatePrinterDC](#createprinterdc)|创建打印机设备上下文。|
-|[CWinApp::DelRegTree](#delregtree)|删除指定的项及其所有子项。|
-|[CWinApp::DoMessageBox](#domessagebox)|实现[AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox)应用程序。|
-|[CWinApp::DoWaitCursor](#dowaitcursor)|打开和关闭将等待光标。|
+|[CWinApp::DelRegTree](#delregtree)|删除指定的键及其所有子项。|
+|[CWinApp::DoMessageBox](#domessagebox)|实现应用程序的[AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox) 。|
+|[CWinApp::DoWaitCursor](#dowaitcursor)|打开和关闭等待光标。|
 |[CWinApp::EnableD2DSupport](#enabled2dsupport)|启用应用程序 D2D 支持。 在初始化主窗口之前调用此方法。|
-|[CWinApp::EnableHtmlHelp](#enablehtmlhelp)|实现用于将应用程序，而不是 WinHelp HTMLHelp。|
+|[CWinApp::EnableHtmlHelp](#enablehtmlhelp)|实现应用程序的 HTMLHelp，而不是 WinHelp。|
 |[CWinApp::EnableTaskbarInteraction](#enabletaskbarinteraction)|启用任务栏交互。|
-|[CWinApp::ExitInstance](#exitinstance)|若要清理你的应用程序终止时的重写。|
-|[CWinApp::GetApplicationRecoveryParameter](#getapplicationrecoveryparameter)|检索应用程序恢复方法的输入的参数。|
-|[CWinApp::GetApplicationRecoveryPingInterval](#getapplicationrecoverypinginterval)|返回有关恢复回调函数以返回等待重新启动管理器的时间长度。|
-|[CWinApp::GetApplicationRestartFlags](#getapplicationrestartflags)|重新启动管理器返回的标志。|
-|[CWinApp::GetAppRegistryKey](#getappregistrykey)|返回键 HKEY_CURRENT_USER\\"简称软件"\RegistryKey\ProfileName。|
-|[CWinApp::GetDataRecoveryHandler](#getdatarecoveryhandler)|获取此实例的应用程序的数据恢复处理程序。|
-|[CWinApp::GetFirstDocTemplatePosition](#getfirstdoctemplateposition)|检索的第一个文档模板的位置。|
-|[CWinApp::GetHelpMode](#gethelpmode)|检索帮助应用程序使用的类型。|
-|[CWinApp::GetNextDocTemplate](#getnextdoctemplate)|检索文档模板的位置。 可以使用以递归方式。|
+|[CWinApp::ExitInstance](#exitinstance)|重写以在应用程序终止时进行清理。|
+|[CWinApp::GetApplicationRecoveryParameter](#getapplicationrecoveryparameter)|检索应用程序恢复方法的输入参数。|
+|[CWinApp::GetApplicationRecoveryPingInterval](#getapplicationrecoverypinginterval)|返回重新启动管理器等待恢复回调函数返回的时间长度。|
+|[CWinApp::GetApplicationRestartFlags](#getapplicationrestartflags)|返回重新启动管理器的标志。|
+|[CWinApp::GetAppRegistryKey](#getappregistrykey)|返回 HKEY_CURRENT_USER\\"Software" \RegistryKey\ProfileName. 的密钥|
+|[CWinApp::GetDataRecoveryHandler](#getdatarecoveryhandler)|获取此应用程序实例的数据恢复处理程序。|
+|[CWinApp::GetFirstDocTemplatePosition](#getfirstdoctemplateposition)|检索第一个文档模板的位置。|
+|[CWinApp::GetHelpMode](#gethelpmode)|检索应用程序使用的帮助的类型。|
+|[CWinApp::GetNextDocTemplate](#getnextdoctemplate)|检索文档模板的位置。 可以递归使用。|
 |[CWinApp::GetPrinterDeviceDefaults](#getprinterdevicedefaults)|检索打印机设备默认值。|
-|[CWinApp::GetProfileBinary](#getprofilebinary)|从应用程序中的条目中检索二进制数据。INI 文件。|
-|[CWinApp::GetProfileInt](#getprofileint)|从应用程序中的条目中检索一个整数。INI 文件。|
-|[CWinApp::GetProfileString](#getprofilestring)|从应用程序中的条目中检索的字符串。INI 文件。|
-|[CWinApp::GetSectionKey](#getsectionkey)|返回键 HKEY_CURRENT_USER\\"简称软件"\RegistryKey\AppName\lpszSection。|
-|[CWinApp::HideApplication](#hideapplication)|隐藏应用程序，然后关闭所有文档。|
-|[CWinApp::HtmlHelp](#htmlhelp)|调用`HTMLHelp`Windows 函数。|
+|[CWinApp::GetProfileBinary](#getprofilebinary)|从应用程序的中的项检索二进制数据。INI 文件。|
+|[CWinApp::GetProfileInt](#getprofileint)|检索应用程序的项中的一个整数。INI 文件。|
+|[CWinApp::GetProfileString](#getprofilestring)|从应用程序的中的项检索字符串。INI 文件。|
+|[CWinApp::GetSectionKey](#getsectionkey)|返回 HKEY_CURRENT_USER\\"Software" \RegistryKey\AppName\lpszSection. 的密钥|
+|[CWinApp::HideApplication](#hideapplication)|关闭所有文档之前，隐藏应用程序。|
+|[CWinApp::HtmlHelp](#htmlhelp)|`HTMLHelp`调用 Windows 函数。|
 |[CWinApp::InitInstance](#initinstance)|重写以执行 Windows 实例初始化，如创建窗口对象。|
-|[CWinApp::IsTaskbarInteractionEnabled](#istaskbarinteractionenabled)|指示是否启用了 Windows 7 任务栏交互。|
-|[CWinApp::LoadCursor](#loadcursor)|加载光标资源。|
+|[CWinApp::IsTaskbarInteractionEnabled](#istaskbarinteractionenabled)|指示是否启用 Windows 7 任务栏交互。|
+|[CWinApp::LoadCursor](#loadcursor)|加载游标资源。|
 |[CWinApp::LoadIcon](#loadicon)|加载图标资源。|
-|[CWinApp::LoadOEMCursor](#loadoemcursor)|加载 Windows OEM 预定义的游标， **OCR_** 常量指定在 WINDOWS 中。H.|
-|[CWinApp::LoadOEMIcon](#loadoemicon)|加载 Windows OEM 预定义的图标， **OIC_** 常量指定在 WINDOWS 中。H.|
-|[CWinApp::LoadStandardCursor](#loadstandardcursor)|加载 Windows 预定义的游标， **IDC_** 常量指定在 WINDOWS 中。H.|
-|[CWinApp::LoadStandardIcon](#loadstandardicon)|加载 Windows 预定义的图标， **IDI_** 常量指定在 WINDOWS 中。H.|
-|[CWinApp::OnDDECommand](#onddecommand)|调用由框架响应动态数据交换 (DDE) 执行命令。|
-|[CWinApp::OnIdle](#onidle)|重写以执行特定于应用程序空闲时处理。|
-|[CWinApp::OpenDocumentFile](#opendocumentfile)|由框架调用以从文件打开文档。|
-|[CWinApp::ParseCommandLine](#parsecommandline)|分析每个参数和命令行中的标志。|
-|[CWinApp::PreTranslateMessage](#pretranslatemessage)|发送到 Windows 函数之前筛选消息[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)并[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage)。|
-|[CWinApp::ProcessMessageFilter](#processmessagefilter)|到达应用程序之前截获某些消息。|
+|[CWinApp::LoadOEMCursor](#loadoemcursor)|加载**OCR_** 常量在 windows 中指定的 windows OEM 预定义光标。高.|
+|[CWinApp::LoadOEMIcon](#loadoemicon)|加载**OIC_** 常量在 windows 中指定的 windows OEM 预定义图标。高.|
+|[CWinApp::LoadStandardCursor](#loadstandardcursor)|加载**IDC_** 常量在 windows 中指定的 windows 预定义游标。高.|
+|[CWinApp::LoadStandardIcon](#loadstandardicon)|加载**IDI_** 常量在 windows 中指定的 windows 预定义图标。高.|
+|[CWinApp::OnDDECommand](#onddecommand)|由框架调用以响应动态数据交换（DDE）执行命令。|
+|[CWinApp::OnIdle](#onidle)|重写以执行应用程序特定的空闲时间处理。|
+|[CWinApp::OpenDocumentFile](#opendocumentfile)|由框架调用，以从文件打开文档。|
+|[CWinApp::ParseCommandLine](#parsecommandline)|分析命令行中的单个参数和标志。|
+|[CWinApp::PreTranslateMessage](#pretranslatemessage)|在将消息调度到 Windows 函数[TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage)和[DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage)之前筛选消息。|
+|[CWinApp::ProcessMessageFilter](#processmessagefilter)|在某些消息到达应用程序之前截获这些消息。|
 |[CWinApp::ProcessShellCommand](#processshellcommand)|处理命令行参数和标志。|
-|[CWinApp::ProcessWndProcException](#processwndprocexception)|截获由应用程序的消息和命令处理程序引发的所有未处理的异常。|
-|[CWinApp::Register](#register)|执行自定义的注册。|
-|[CWinApp::RegisterWithRestartManager](#registerwithrestartmanager)|与重新启动管理器注册该应用程序。|
-|[CWinApp::ReopenPreviousFilesAtRestart](#reopenpreviousfilesatrestart)|确定是否重新启动管理器重新打开该应用程序意外退出时，打开了文件。|
-|[CWinApp::RestartInstance](#restartinstance)|处理重新启动管理器启动应用程序重启。|
-|[CWinApp::RestoreAutosavedFilesAtRestart](#restoreautosavedfilesatrestart)|确定是否重新启动管理器还原自动保存的文件，重新启动该应用程序时。|
-|[CWinApp::Run](#run)|运行默认消息循环。 重写自定义消息循环。|
-|[CWinApp::RunAutomated](#runautomated)|测试应用程序的命令行 **/Automation**选项。 已过时。 相反，使用中的值[CCommandLineInfo::m_bRunAutomated](../../mfc/reference/ccommandlineinfo-class.md#m_brunautomated)后调用[ParseCommandLine](#parsecommandline)。|
-|[CWinApp::RunEmbedded](#runembedded)|测试应用程序的命令行 **/嵌入**选项。 已过时。 相反，使用中的值[CCommandLineInfo::m_bRunEmbedded](../../mfc/reference/ccommandlineinfo-class.md#m_brunembedded)后调用[ParseCommandLine](#parsecommandline)。|
+|[CWinApp::ProcessWndProcException](#processwndprocexception)|截获应用程序的消息和命令处理程序引发的所有未经处理的异常。|
+|[CWinApp::Register](#register)|执行自定义注册。|
+|[CWinApp::RegisterWithRestartManager](#registerwithrestartmanager)|向重新启动管理器注册应用程序。|
+|[CWinApp::ReopenPreviousFilesAtRestart](#reopenpreviousfilesatrestart)|确定重新启动管理器是否重新打开应用程序意外退出时打开的文件。|
+|[CWinApp::RestartInstance](#restartinstance)|处理重新启动管理器启动的应用程序重启。|
+|[CWinApp::RestoreAutosavedFilesAtRestart](#restoreautosavedfilesatrestart)|确定重新启动管理器是否在重新启动应用程序时还原自动保存的文件。|
+|[CWinApp::Run](#run)|运行默认消息循环。 重写以自定义消息循环。|
+|[CWinApp::RunAutomated](#runautomated)|测试应用程序的命令行中的 **/Automation**选项。 已过时。 请改为在调用[ParseCommandLine](#parsecommandline)后使用[CCommandLineInfo：： m_bRunAutomated](../../mfc/reference/ccommandlineinfo-class.md#m_brunautomated)中的值。|
+|[CWinApp::RunEmbedded](#runembedded)|测试应用程序的命令行中的 **/Embedding**选项。 已过时。 请改为在调用[ParseCommandLine](#parsecommandline)后使用[CCommandLineInfo：： m_bRunEmbedded](../../mfc/reference/ccommandlineinfo-class.md#m_brunembedded)中的值。|
 |[CWinApp::SaveAllModified](#saveallmodified)|提示用户保存所有已修改的文档。|
-|[CWinApp::SelectPrinter](#selectprinter)|选择打印机之前由用户完成一个打印对话框。|
-|[CWinApp::SetHelpMode](#sethelpmode)|设置和初始化的帮助应用程序使用的类型。|
-|[CWinApp::SupportsApplicationRecovery](#supportsapplicationrecovery)|确定是否重新启动管理器恢复的应用程序意外退出。|
-|[CWinApp::SupportsAutosaveAtInterval](#supportsautosaveatinterval)|确定是否重新启动管理器则自动保存在固定时间间隔打开文档。|
-|[CWinApp::SupportsAutosaveAtRestart](#supportsautosaveatrestart)|确定是否重新启动管理器则自动保存任何打开文档时应用程序重新启动。|
+|[CWinApp::SelectPrinter](#selectprinter)|选择先前由用户通过 "打印" 对话框指示的打印机。|
+|[CWinApp::SetHelpMode](#sethelpmode)|设置和初始化应用程序使用的帮助的类型。|
+|[CWinApp::SupportsApplicationRecovery](#supportsapplicationrecovery)|确定重新启动管理器是否恢复意外退出的应用程序。|
+|[CWinApp::SupportsAutosaveAtInterval](#supportsautosaveatinterval)|确定重新启动管理器是否自动保存按固定间隔打开文档。|
+|[CWinApp::SupportsAutosaveAtRestart](#supportsautosaveatrestart)|确定在应用程序重新启动时重新启动管理器是否自动保存任何打开的文档。|
 |[CWinApp::SupportsRestartManager](#supportsrestartmanager)|确定应用程序是否支持重新启动管理器。|
-|[CWinApp::Unregister](#unregister)|注销的一切已知要注册的内容`CWinApp`对象。|
-|[CWinApp::WinHelp](#winhelp)|调用`WinHelp`Windows 函数。|
-|[CWinApp::WriteProfileBinary](#writeprofilebinary)|将二进制数据写入到应用程序中的条目。INI 文件。|
-|[CWinApp::WriteProfileInt](#writeprofileint)|将整数写入到应用程序中的条目。INI 文件。|
-|[CWinApp::WriteProfileString](#writeprofilestring)|将字符串写入到应用程序中的条目。INI 文件。|
+|[CWinApp::Unregister](#unregister)|注销`CWinApp`对象注册的所有已知内容。|
+|[CWinApp::WinHelp](#winhelp)|`WinHelp`调用 Windows 函数。|
+|[CWinApp::WriteProfileBinary](#writeprofilebinary)|将二进制数据写入应用程序的中的条目。INI 文件。|
+|[CWinApp::WriteProfileInt](#writeprofileint)|在应用程序的中将整数写入项。INI 文件。|
+|[CWinApp::WriteProfileString](#writeprofilestring)|向应用程序的中的项写入一个字符串。INI 文件。|
 
 ### <a name="protected-methods"></a>受保护的方法
 
 |名称|描述|
 |----------|-----------------|
-|[CWinApp::EnableShellOpen](#enableshellopen)|允许用户从 Windows 文件管理器中打开数据文件。|
-|[CWinApp::LoadStdProfileSettings](#loadstdprofilesettings)|加载标准。INI 文件设置和启用 MRU 文件列表功能。|
+|[CWinApp::EnableShellOpen](#enableshellopen)|允许用户从 Windows 文件管理器打开数据文件。|
+|[CWinApp::LoadStdProfileSettings](#loadstdprofilesettings)|加载 standard。INI 文件设置并启用 MRU 文件列表功能。|
 |[CWinApp::OnContextHelp](#oncontexthelp)|处理应用程序中的 SHIFT + F1 帮助。|
 |[CWinApp::OnFileNew](#onfilenew)|实现 ID_FILE_NEW 命令。|
 |[CWinApp::OnFileOpen](#onfileopen)|实现 ID_FILE_OPEN 命令。|
@@ -299,22 +299,22 @@ class CWinApp : public CWinThread
 |[CWinApp::OnHelpFinder](#onhelpfinder)|处理 ID_HELP_FINDER 和 ID_DEFAULT_HELP 命令。|
 |[CWinApp::OnHelpIndex](#onhelpindex)|处理 ID_HELP_INDEX 命令并提供默认帮助主题。|
 |[CWinApp::OnHelpUsing](#onhelpusing)|处理 ID_HELP_USING 命令。|
-|[CWinApp::RegisterShellFileTypes](#registershellfiletypes)|注册应用程序的所有文档类型与 Windows 文件管理器。|
-|[CWinApp::SetAppID](#setappid)|显式设置为应用程序的应用程序用户模型 ID。 任何用户界面呈现给用户 （的最佳位置是应用程序构造函数） 之前，应调用此方法。|
-|[CWinApp::SetRegistryKey](#setregistrykey)|导致应用程序设置存储在注册表中而不是。INI 文件。|
-|[CWinApp::UnregisterShellFileTypes](#unregistershellfiletypes)|取消注册应用程序的所有文档类型与 Windows 文件管理器。|
+|[CWinApp::RegisterShellFileTypes](#registershellfiletypes)|将所有应用程序的文档类型注册到 Windows 文件管理器。|
+|[CWinApp::SetAppID](#setappid)|显式设置应用程序的应用程序用户模型 ID。 应在向用户显示任何用户界面之前调用此方法（最佳位置是应用程序构造函数）。|
+|[CWinApp::SetRegistryKey](#setregistrykey)|导致应用程序设置存储在注册表中，而不是存储在中。INI 文件。|
+|[CWinApp::UnregisterShellFileTypes](#unregistershellfiletypes)|通过 Windows 文件管理器注销所有应用程序的文档类型。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
 |名称|描述|
 |----------|-----------------|
-|[CWinApp::m_bHelpMode](#m_bhelpmode)|指示用户是否正在帮助上下文模式 （通常使用 SHIFT + F1 调用）。|
-|[CWinApp::m_eHelpType](#m_ehelptype)|指定的帮助应用程序使用的类型。|
+|[CWinApp::m_bHelpMode](#m_bhelpmode)|指示用户是否处于帮助上下文模式（通常用 SHIFT + F1 调用）。|
+|[CWinApp::m_eHelpType](#m_ehelptype)|指定应用程序使用的帮助的类型。|
 |[CWinApp::m_hInstance](#m_hinstance)|标识应用程序的当前实例。|
-|[CWinApp::m_lpCmdLine](#m_lpcmdline)|指向以 null 终止的字符串，指定应用程序的命令行。|
-|[CWinApp::m_nCmdShow](#m_ncmdshow)|指定窗口的初始显示方式。|
-|[CWinApp::m_pActiveWnd](#m_pactivewnd)|指向 OLE 服务器处于就地活动状态时的容器应用程序的主窗口的指针。|
-|[CWinApp::m_pszAppID](#m_pszappid)|应用程序用户模型 id。|
+|[CWinApp::m_lpCmdLine](#m_lpcmdline)|指向以 null 结尾的字符串，它指定应用程序的命令行。|
+|[CWinApp::m_nCmdShow](#m_ncmdshow)|指定最初显示窗口的方式。|
+|[CWinApp::m_pActiveWnd](#m_pactivewnd)|OLE 服务器处于就地活动状态时，指向容器应用程序的主窗口的指针。|
+|[CWinApp::m_pszAppID](#m_pszappid)|应用程序用户模型 ID。|
 |[CWinApp::m_pszAppName](#m_pszappname)|指定应用程序的名称。|
 |[CWinApp::m_pszExeName](#m_pszexename)|应用程序的模块名称。|
 |[CWinApp::m_pszHelpFilePath](#m_pszhelpfilepath)|应用程序的帮助文件的路径。|
@@ -326,38 +326,38 @@ class CWinApp : public CWinThread
 |name|描述|
 |----------|-----------------|
 |[CWinApp::m_dwRestartManagerSupportFlags](#m_dwrestartmanagersupportflags)|确定重新启动管理器的行为方式的标志。|
-|[CWinApp::m_nAutosaveInterval](#m_nautosaveinterval)|以毫秒为单位，则自动保存之间的时间长度。|
-|[CWinApp::m_pDataRecoveryHandler](#m_pdatarecoveryhandler)|指向应用程序的数据恢复处理程序。|
+|[CWinApp::m_nAutosaveInterval](#m_nautosaveinterval)|自动保存之间的时间长度（以毫秒为单位）。|
+|[CWinApp::m_pDataRecoveryHandler](#m_pdatarecoveryhandler)|指向应用程序的数据恢复处理程序的指针。|
 
 ## <a name="remarks"></a>备注
 
-应用程序对象用于初始化你的应用程序 （和它的每个实例） 以及用于运行应用程序提供成员函数。
+应用程序对象提供用于初始化应用程序的成员函数（及其每个实例）以及运行应用程序的成员函数。
 
-使用 Microsoft 基础类每个应用程序只能包含一个对象派生自`CWinApp`。 将构造此对象时其他C++全局对象构造，并调用 Windows 时已提供`WinMain`函数，由 Microsoft 基础类库提供。 声明你派生`CWinApp`在全局级别的对象。
+使用 Microsoft 基础类的每个应用程序只能包含一个派生自`CWinApp`的对象。 当构造其他C++全局对象并在 Windows 调用`WinMain`由 Microsoft 基础类库提供的函数时，将构造此对象。 在全局级别`CWinApp`声明派生的对象。
 
-从应用程序类派生时`CWinApp`，重写[InitInstance](#initinstance)成员函数来创建应用程序的主窗口对象。
+从`CWinApp`派生应用程序类时，请重写[InitInstance](#initinstance)成员函数，以创建应用程序的主窗口对象。
 
-除了`CWinApp`成员函数，Microsoft 基础类库提供了以下全局函数，以访问您`CWinApp`对象和其他全局信息：
+除了`CWinApp`成员函数外，Microsoft 基础类库还提供以下全局函数来`CWinApp`访问对象和其他全局信息：
 
-- [AfxGetApp](application-information-and-management.md#afxgetapp)获取指向的`CWinApp`对象。
+- [AfxGetApp](application-information-and-management.md#afxgetapp)获取指向`CWinApp`对象的指针。
 
 - [AfxGetInstanceHandle](application-information-and-management.md#afxgetinstancehandle)获取当前应用程序实例的句柄。
 
-- [AfxGetResourceHandle](application-information-and-management.md#afxgetresourcehandle)获取应用程序的资源的句柄。
+- [AfxGetResourceHandle](application-information-and-management.md#afxgetresourcehandle)获取应用程序资源的句柄。
 
-- [AfxGetAppName](application-information-and-management.md#afxgetappname)获取指向包含应用程序的名称的字符串的指针。 或者，如果有一个指针指向`CWinApp`对象，请使用`m_pszExeName`若要获取应用程序的名称。
+- [AfxGetAppName](application-information-and-management.md#afxgetappname)获取一个指针，该指针指向包含应用程序名称的字符串。 或者，如果有指向`CWinApp`对象的指针，请使用`m_pszExeName`获取应用程序的名称。
 
-请参阅[CWinApp:应用程序类](../../mfc/cwinapp-the-application-class.md)有关详细信息`CWinApp`类，包括以下概述：
+请[参阅 CWinApp：类的`CWinApp`详细信息，包括以下概述：](../../mfc/cwinapp-the-application-class.md)
 
-- `CWinApp`-派生应用程序向导编写的代码。
+- `CWinApp`-由应用程序向导编写的派生代码。
 
-- `CWinApp`执行顺序的应用程序角色。
+- `CWinApp`在应用程序的执行顺序中的角色。
 
-- `CWinApp`默认成员函数实现。
+- `CWinApp`的默认成员函数实现。
 
-- `CWinApp`密钥可重写。
+- `CWinApp`的键可重写。
 
-`m_hPrevInstance`数据成员不再存在。 若要确定是否正在运行的应用程序的另一个实例，请使用已命名的互斥体。 如果打开该互斥体失败，则没有其他实例运行的应用程序。
+`m_hPrevInstance`数据成员不再存在。 若要确定应用程序的另一个实例是否正在运行，请使用已命名的 mutex。 如果打开互斥体失败，则没有应用程序的其他实例正在运行。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -375,7 +375,7 @@ class CWinApp : public CWinThread
 
 ##  <a name="adddoctemplate"></a>  CWinApp::AddDocTemplate
 
-调用此成员函数以将文档模板添加到该应用程序维护的可用文档模板的列表。
+调用此成员函数可将文档模板添加到应用程序维护的可用文档模板列表。
 
 ```
 void AddDocTemplate(CDocTemplate* pTemplate);
@@ -384,19 +384,19 @@ void AddDocTemplate(CDocTemplate* pTemplate);
 ### <a name="parameters"></a>参数
 
 *pTemplate*<br/>
-一个指向`CDocTemplate`要添加。
+指向要添加的`CDocTemplate`的指针。
 
 ### <a name="remarks"></a>备注
 
-应添加所有文档的应用程序的模板，然后再调用[RegisterShellFileTypes](#registershellfiletypes)。
+在调用[RegisterShellFileTypes](#registershellfiletypes)之前，应将所有文档模板添加到应用程序。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFCWindowing#35](../../mfc/reference/codesnippet/cpp/cwinapp-class_1.cpp)]
 
-##  <a name="addtorecentfilelist"></a>  CWinApp::AddToRecentFileList
+##  <a name="addtorecentfilelist"></a>CWinApp：： AddToRecentFileList
 
-调用此成员函数以添加*lpszPathName*到 MRU 文件列表。
+调用此成员函数以将*lpszPathName*添加到 MRU 文件列表。
 
 ```
 virtual void AddToRecentFileList(LPCTSTR lpszPathName);
@@ -409,9 +409,9 @@ virtual void AddToRecentFileList(LPCTSTR lpszPathName);
 
 ### <a name="remarks"></a>备注
 
-应调用[LoadStdProfileSettings](#loadstdprofilesettings)成员函数以加载当前的 MRU 文件列表，然后使用此成员函数。
+在使用此成员函数之前，应调用[LoadStdProfileSettings](#loadstdprofilesettings)成员函数以加载当前的 MRU 文件列表。
 
-在打开的文件或执行另存为命令，以使用新名称保存文件时，框架将调用此成员函数。
+框架在打开文件或执行 "另存为" 命令以使用新名称保存文件时调用此成员函数。
 
 ### <a name="example"></a>示例
 
@@ -419,7 +419,7 @@ virtual void AddToRecentFileList(LPCTSTR lpszPathName);
 
 ##  <a name="applicationrecoverycallback"></a>  CWinApp::ApplicationRecoveryCallback
 
-应用程序意外退出时由框架调用。
+当应用程序意外退出时由框架调用。
 
 ```
 virtual DWORD ApplicationRecoveryCallback(LPVOID lpvParam);
@@ -428,23 +428,23 @@ virtual DWORD ApplicationRecoveryCallback(LPVOID lpvParam);
 ### <a name="parameters"></a>参数
 
 *lpvParam*<br/>
-[in]保留供将来使用。
+中保留供将来使用。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则此方法，则为 0如果发生错误，非零值。
+如果此方法成功，则为 0;如果发生错误，则为非零值。
 
 ### <a name="remarks"></a>备注
 
-如果你的应用程序支持重新启动管理器，框架将调用此函数，当你的应用程序意外退出。
+如果你的应用程序支持重新启动管理器，则在应用程序意外退出时，框架会调用此函数。
 
-默认实现`ApplicationRecoveryCallback`使用`CDataRecoveryHandler`将保存到注册表的当前打开的文档的列表。 此方法执行不自动保存的任何文件。
+的`ApplicationRecoveryCallback`默认实现`CDataRecoveryHandler`使用将当前打开的文档的列表保存到注册表中。 此方法不自动保存任何文件。
 
-若要自定义行为，请重写此函数在派生[CWinApp 类](../../mfc/reference/cwinapp-class.md)或将您自己应用程序的恢复方法作为参数传递[CWinApp::RegisterWithRestartManager](#registerwithrestartmanager)。
+若要自定义行为，请在派生的[CWinApp 类](../../mfc/reference/cwinapp-class.md)中重写此函数，或将您自己的应用程序恢复方法作为参数传递给[CWinApp：： RegisterWithRestartManager](#registerwithrestartmanager)。
 
-##  <a name="closealldocuments"></a>  CWinApp::CloseAllDocuments
+##  <a name="closealldocuments"></a>CWinApp：： CloseAllDocuments
 
-调用此成员函数以在退出之前关闭所有打开的文档。
+在退出之前调用此成员函数以关闭所有打开的文档。
 
 ```
 void CloseAllDocuments(BOOL bEndSession);
@@ -453,15 +453,15 @@ void CloseAllDocuments(BOOL bEndSession);
 ### <a name="parameters"></a>参数
 
 *bEndSession*<br/>
-指定在正在结束 Windows 会话。 它，则会话正在结束; 如果为 TRUE否则为 FALSE。
+指定是否将结束 Windows 会话。 如果会话正在结束，则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-调用[HideApplication](#hideapplication)然后才能调用`CloseAllDocuments`。
+在调用`CloseAllDocuments`之前调用 [HideApplication](#hideapplication)。
 
-##  <a name="createprinterdc"></a>  CWinApp::CreatePrinterDC
+##  <a name="createprinterdc"></a>CWinApp：： CreatePrinterDC
 
-调用此成员函数以创建从所选打印机的打印机设备上下文 (DC)。
+调用此成员函数以从所选打印机创建打印机设备上下文（DC）。
 
 ```
 BOOL CreatePrinterDC(CDC& dc);
@@ -474,17 +474,17 @@ BOOL CreatePrinterDC(CDC& dc);
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则创建打印机设备上下文，非零值否则为 0。
+如果成功创建打印机设备上下文，则为非零值;否则为0。
 
 ### <a name="remarks"></a>备注
 
-`CreatePrinterDC` 初始化在通过引用传递，因此可以使用它来打印设备上下文。
+`CreatePrinterDC`初始化按引用传入的设备上下文，以便可以使用它进行打印。
 
-如果函数成功，在完成打印时，您必须销毁设备上下文。 可以让的析构函数[CDC](../../mfc/reference/cdc-class.md)对象执行此操作，或通过调用，可以显式执行它[CDC::DeleteDC](../../mfc/reference/cdc-class.md#deletedc)。
+如果此函数成功，则在完成打印后，必须销毁设备上下文。 可以让[CDC](../../mfc/reference/cdc-class.md)对象的析构函数执行该操作，也可以通过调用[Cdc：:D eletedc](../../mfc/reference/cdc-class.md#deletedc)来显式执行此操作。
 
 ##  <a name="cwinapp"></a>  CWinApp::CWinApp
 
-构造`CWinApp`对象并传递*lpszAppName*存储为应用程序名称。
+构造一个`CWinApp`对象，并传递要存储为应用程序名称的*lpszAppName* 。
 
 ```
 CWinApp(LPCTSTR lpszAppName = NULL);
@@ -493,13 +493,13 @@ CWinApp(LPCTSTR lpszAppName = NULL);
 ### <a name="parameters"></a>参数
 
 *lpszAppName*<br/>
-以 null 结尾的字符串，其中包含 Windows 使用的应用程序名称。 如果此参数未提供或为 NULL，`CWinApp`使用资源字符串 AFX_IDS_APP_TITLE 或可执行文件的文件名。
+一个以 null 结尾的字符串，其中包含 Windows 使用的应用程序名称。 如果此参数未提供或为 NULL， `CWinApp`则将使用资源字符串 AFX_IDS_APP_TITLE 或可执行文件的文件名。
 
 ### <a name="remarks"></a>备注
 
-你应构造的一个全局对象在`CWinApp`-派生的类。 只能有一个`CWinApp`在应用程序中的对象。 构造函数存储一个指向`CWinApp`对象，以便`WinMain`可调用对象的成员函数来初始化和运行应用程序。
+应构造派生类的`CWinApp`一个全局对象。 您的应用程序中`CWinApp`只能有一个对象。 构造函数存储指向`CWinApp`对象的指针`WinMain` ，以便可以调用该对象的成员函数来初始化并运行该应用程序。
 
-##  <a name="delregtree"></a>  CWinApp::DelRegTree
+##  <a name="delregtree"></a>CWinApp：:D elRegTree
 
 删除特定的注册表项及其所有子项。
 
@@ -527,15 +527,15 @@ LONG DelRegTree(
 
 ### <a name="return-value"></a>返回值
 
-如果函数成功，返回值为 ERROR_SUCCESS。 如果函数失败，返回值是在 Winerror.h 中定义一个非零错误代码。
+如果该函数成功，则返回值为 ERROR_SUCCESS。 如果函数失败，则返回值为 Winerror.h 中定义的非零错误代码。
 
 ### <a name="remarks"></a>备注
 
-调用此函数可删除指定的项及其子项。
+调用此函数可删除指定的键及其子项。
 
-##  <a name="domessagebox"></a>  CWinApp::DoMessageBox
+##  <a name="domessagebox"></a>CWinApp：:D oMessageBox
 
-框架调用此成员函数以实现全局函数的消息框[AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox)。
+框架调用此成员函数来实现全局函数[AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox)的消息框。
 
 ```
 virtual int DoMessageBox(
@@ -547,7 +547,7 @@ virtual int DoMessageBox(
 ### <a name="parameters"></a>参数
 
 *lpszPrompt*<br/>
-在消息框文本的地址。
+消息框中的文本地址。
 
 *nType*<br/>
 消息框[样式](../../mfc/reference/styles-used-by-mfc.md#message-box-styles)。
@@ -561,13 +561,13 @@ virtual int DoMessageBox(
 
 ### <a name="remarks"></a>备注
 
-不调用此成员函数以打开一个消息框;使用`AfxMessageBox`相反。
+不要调用此成员函数来打开消息框;改`AfxMessageBox`为使用。
 
-重写此成员函数以自定义你的应用程序范围内处理的`AfxMessageBox`调用。
+重写此成员函数以自定义应用程序范围内`AfxMessageBox`的调用处理。
 
 ##  <a name="dowaitcursor"></a>  CWinApp::DoWaitCursor
 
-由框架来实现调用此成员函数[CWaitCursor](../../mfc/reference/cwaitcursor-class.md)， [CCmdTarget::BeginWaitCursor](../../mfc/reference/ccmdtarget-class.md#beginwaitcursor)， [CCmdTarget::EndWaitCursor](../../mfc/reference/ccmdtarget-class.md#endwaitcursor)，和[CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor)。
+框架调用此成员函数来实现[CWaitCursor](../../mfc/reference/cwaitcursor-class.md)、 [CCmdTarget：： BeginWaitCursor](../../mfc/reference/ccmdtarget-class.md#beginwaitcursor)、 [CCmdTarget：： EndWaitCursor](../../mfc/reference/ccmdtarget-class.md#endwaitcursor)和[CCmdTarget：： RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor)。
 
 ```
 virtual void DoWaitCursor(int nCode);
@@ -576,21 +576,21 @@ virtual void DoWaitCursor(int nCode);
 ### <a name="parameters"></a>参数
 
 *nCode*<br/>
-如果此参数为 1，将显示等待光标。 如果为 0，而无需递增引用计数还原将等待光标。 如果为-1，结束等待光标。
+如果此参数为1，则将显示等待光标。 如果为0，则在不递增引用计数的情况下还原等待光标。 如果为-1，则等待光标结束。
 
 ### <a name="remarks"></a>备注
 
-默认实现沙漏光标。 `DoWaitCursor` 维护引用计数。 在为正时, 将显示沙漏光标。
+默认实现沙漏光标。 `DoWaitCursor`维护引用计数。 如果为正，则显示沙漏光标。
 
-尽管您通常不会调用`DoWaitCursor`直接，可以重写此成员函数以更改将等待光标或执行附加的处理时显示等待光标。
+虽然通常不会直接调用`DoWaitCursor` ，但你可以重写此成员函数以更改等待游标，或在显示等待光标时执行其他处理。
 
-有关的更简单、 更流畅地方法来实现等待光标，使用`CWaitCursor`。
+对于实现等待光标的更简单、更简单的方法，请`CWaitCursor`使用。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFCWindowing#37](../../mfc/reference/codesnippet/cpp/cwinapp-class_3.cpp)]
 
-##  <a name="enabled2dsupport"></a>  CWinApp::EnableD2DSupport
+##  <a name="enabled2dsupport"></a>CWinApp：： EnableD2DSupport
 
 需要 Visual Studio 2010 SP1。
 
@@ -605,18 +605,18 @@ BOOL EnableD2DSupport(
 ### <a name="parameters"></a>参数
 
 *d2dFactoryType*<br/>
-它创建 D2D 工厂和资源的线程模型。
+D2D 工厂及其创建的资源的线程模型。
 
 *writeFactoryType*<br/>
-一个值，指定是否将共享或隔离写工厂对象
+一个值，该值指定是共享还是隔离写入工厂对象
 
 ### <a name="return-value"></a>返回值
 
-D2D 支持是否已启用，FALSE-否则将返回 TRUE
+如果支持 D2D，则返回 TRUE; 否则返回 FALSE
 
-##  <a name="enablehtmlhelp"></a>  CWinApp::EnableHtmlHelp
+##  <a name="enablehtmlhelp"></a>CWinApp：： EnableHtmlHelp
 
-调用此成员函数的构造函数中你`CWinApp`的派生类 HTMLHelp 用于应用程序的帮助。
+从派生类的构造函数`CWinApp`中调用此成员函数，以使用 HTMLHelp 作为应用程序的帮助。
 
 ```
 void EnableHtmlHelp();
@@ -624,9 +624,9 @@ void EnableHtmlHelp();
 
 ### <a name="remarks"></a>备注
 
-##  <a name="enableshellopen"></a>  CWinApp::EnableShellOpen
+##  <a name="enableshellopen"></a>CWinApp：： EnableShellOpen
 
-调用此函数中，通常从你`InitInstance`替代，用于启用应用程序的用户打开数据文件时它们双击在 Windows 文件管理器中的文件。
+通常从`InitInstance`重写中调用此函数，以使应用程序的用户在双击 Windows 文件管理器中的文件时可以打开数据文件。
 
 ```
 void EnableShellOpen();
@@ -634,13 +634,13 @@ void EnableShellOpen();
 
 ### <a name="remarks"></a>备注
 
-调用`RegisterShellFileTypes`成员函数结合使用此函数，或提供。REG 文件，你的应用程序的文档类型的手动注册。
+与此函数一起调用成员函数，或提供。`RegisterShellFileTypes`注册文件和应用程序，用于手动注册文档类型。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFCWindowing#38](../../mfc/reference/codesnippet/cpp/cwinapp-class_4.cpp)]
 
-##  <a name="enabletaskbarinteraction"></a>  CWinApp::EnableTaskbarInteraction
+##  <a name="enabletaskbarinteraction"></a>CWinApp：： EnableTaskbarInteraction
 
 启用任务栏交互。
 
@@ -651,19 +651,19 @@ BOOL EnableTaskbarInteraction(BOOL bEnable = TRUE);
 ### <a name="parameters"></a>参数
 
 *bEnable*<br/>
-指定与 Windows 7 任务栏交互 (TRUE)，应启用还是禁用 (FALSE)。
+指定应启用（TRUE）还是禁用（FALSE）与 Windows 7 任务栏的交互。
 
 ### <a name="return-value"></a>返回值
 
-如果任务栏交互可以启用或禁用，则返回 TRUE。
+如果可以启用或禁用任务栏交互，则返回 TRUE。
 
 ### <a name="remarks"></a>备注
 
-必须创建主窗口之前调用此方法，否则为它断言并返回 FALSE。
+必须先调用此方法，然后才能创建主窗口，否则它将断言并返回 FALSE。
 
-##  <a name="exitinstance"></a>  CWinApp::ExitInstance
+##  <a name="exitinstance"></a>CWinApp：： ExitInstance
 
-由框架调用内`Run`成员函数以退出应用程序的此实例。
+由框架在`Run`成员函数内调用以退出应用程序实例。
 
 ```
 virtual int ExitInstance();
@@ -671,13 +671,13 @@ virtual int ExitInstance();
 
 ### <a name="return-value"></a>返回值
 
-应用程序的退出代码;0 表示没有错误，而大于 0 的值指示错误。 此值用作从返回的值`WinMain`。
+应用程序的退出代码;0表示没有错误，大于0的值表示错误。 此值用作来自`WinMain`的返回值。
 
 ### <a name="remarks"></a>备注
 
-不要调用此成员函数从任何位置之内`Run`成员函数。
+不要在`Run`成员函数内的任何位置调用此成员函数。
 
-此函数的默认实现将写入应用程序的框架选项。INI 文件。 重写此函数来清理您的应用程序终止时。
+此函数的默认实现将框架选项写入应用程序的。INI 文件。 重写此函数以在应用程序终止时进行清理。
 
 ### <a name="example"></a>示例
 
@@ -685,7 +685,7 @@ virtual int ExitInstance();
 
 ##  <a name="getapplicationrecoveryparameter"></a>  CWinApp::GetApplicationRecoveryParameter
 
-检索应用程序恢复方法的输入的参数。
+检索应用程序恢复方法的输入参数。
 
 ```
 virtual LPVOID GetApplicationRecoveryParameter();
@@ -693,17 +693,17 @@ virtual LPVOID GetApplicationRecoveryParameter();
 
 ### <a name="return-value"></a>返回值
 
-应用程序恢复方法的默认输入的参数。
+应用程序恢复方法的默认输入参数。
 
 ### <a name="remarks"></a>备注
 
-此函数的默认行为，则返回 NULL。
+此函数的默认行为返回 NULL。
 
-有关详细信息，请参阅[CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)。
+有关详细信息，请参阅[CWinApp：： ApplicationRecoveryCallback](#applicationrecoverycallback)。
 
 ##  <a name="getapplicationrecoverypinginterval"></a>  CWinApp::GetApplicationRecoveryPingInterval
 
-返回有关恢复回调函数以返回等待重新启动管理器的时间长度。
+返回重新启动管理器等待恢复回调函数返回的时间长度。
 
 ```
 virtual DWORD GetApplicationRecoveryPingInterval();
@@ -711,17 +711,17 @@ virtual DWORD GetApplicationRecoveryPingInterval();
 
 ### <a name="return-value"></a>返回值
 
-以毫秒为单位的时间长度。
+时间长度（以毫秒为单位）。
 
 ### <a name="remarks"></a>备注
 
-当使用重新启动管理器退出意外注册应用程序时、 应用程序尝试保存打开的文档，并调用恢复的回调函数。 默认恢复回调函数是[CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)。
+当向重新启动管理器注册的应用程序意外退出时，应用程序会尝试保存打开的文档并调用恢复回叫函数。 默认恢复回调函数为[CWinApp：： ApplicationRecoveryCallback](#applicationrecoverycallback)。
 
-有关恢复回调函数以返回框架等待的时间长度为 ping 时间间隔。 可以通过重写自定义的 ping 间隔`CWinApp::GetApplicationRecoveryPingInterval`或通过提供自定义值到`RegisterWithRestartManager`。
+框架等待恢复回调函数返回的时间长度为 ping 间隔。 可以通过重写`CWinApp::GetApplicationRecoveryPingInterval`或向`RegisterWithRestartManager`提供自定义值来自定义 ping 间隔。
 
 ##  <a name="getapplicationrestartflags"></a>  CWinApp::GetApplicationRestartFlags
 
-重新启动管理器返回的标志。
+返回重新启动管理器的标志。
 
 ```
 virtual DWORD GetApplicationRestartFlags();
@@ -729,15 +729,15 @@ virtual DWORD GetApplicationRestartFlags();
 
 ### <a name="return-value"></a>返回值
 
-重新启动管理器的标志。 默认实现将返回 0。
+重新启动管理器的标志。 默认实现返回0。
 
 ### <a name="remarks"></a>备注
 
-重新启动管理器的标志不会影响使用的默认实现。 它们提供以供将来使用。
+重新启动管理器的标志不会对默认实现产生任何影响。 它们供将来使用。
 
-与重新启动管理器中使用注册应用程序时设置的标志[CWinApp::RegisterWithRestartManager](#registerwithrestartmanager)。
+使用[CWinApp：： RegisterWithRestartManager](#registerwithrestartmanager)将应用程序注册到重新启动管理器时，可以设置标志。
 
-重新启动管理器标志的可能值如下所示：
+重新启动管理器标志的可能值如下：
 
 - RESTART_NO_CRASH
 
@@ -747,9 +747,9 @@ virtual DWORD GetApplicationRestartFlags();
 
 - RESTART_NO_REBOOT
 
-##  <a name="getappregistrykey"></a>  CWinApp::GetAppRegistryKey
+##  <a name="getappregistrykey"></a>CWinApp：： GetAppRegistryKey
 
-返回的键为 HKEY_CURRENT_USER\\"简称软件"\RegistryKey\ProfileName。
+返回 HKEY_CURRENT_USER\\"Software" \RegistryKey\ProfileName. 的密钥。
 
 ```
 HKEY GetAppRegistryKey(CAtlTransactionManager* pTM = NULL);
@@ -762,13 +762,13 @@ HKEY GetAppRegistryKey(CAtlTransactionManager* pTM = NULL);
 
 ### <a name="return-value"></a>返回值
 
-如果函数成功，则应用程序密钥否则为，为 NULL。
+如果函数成功，则为应用程序键;否则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-##  <a name="getdatarecoveryhandler"></a>  CWinApp::GetDataRecoveryHandler
+##  <a name="getdatarecoveryhandler"></a>CWinApp：： GetDataRecoveryHandler
 
-获取此实例的应用程序的数据恢复处理程序。
+获取此应用程序实例的数据恢复处理程序。
 
 ```
 virtual CDataRecoveryHandler *GetDataRecoveryHandler();
@@ -776,19 +776,19 @@ virtual CDataRecoveryHandler *GetDataRecoveryHandler();
 
 ### <a name="return-value"></a>返回值
 
-此实例的应用程序的数据恢复处理程序。
+此应用程序实例的数据恢复处理程序。
 
 ### <a name="remarks"></a>备注
 
-使用重新启动管理器每个应用程序必须具有的一个实例[CDataRecoveryHandler 类](../../mfc/reference/cdatarecoveryhandler-class.md)。 此类负责监视打开的文档和自动保存文件。 行为`CDataRecoveryHandler`重新启动管理器的配置决定的。 有关详细信息，请参阅[CDataRecoveryHandler 类](../../mfc/reference/cdatarecoveryhandler-class.md)。
+使用重启管理器的每个应用程序都必须具有[CDataRecoveryHandler 类](../../mfc/reference/cdatarecoveryhandler-class.md)的一个实例。 此类负责监视打开的文档和正在文件。 的行为`CDataRecoveryHandler`取决于重新启动管理器的配置。 有关详细信息，请参阅[CDataRecoveryHandler 类](../../mfc/reference/cdatarecoveryhandler-class.md)。
 
-此方法上的操作系统早于 Windows Vista 返回 NULL。 重新启动管理器不是支持的操作系统早于 Windows Vista。
+在早于 Windows Vista 的操作系统上，此方法返回 NULL。 Windows Vista 之前的操作系统不支持重新启动管理器。
 
-如果应用程序当前不具有数据恢复处理程序，此方法将创建一个，并返回的指针。
+如果应用程序当前没有数据恢复处理程序，则此方法将创建一个，并返回指向它的指针。
 
 ##  <a name="getfirstdoctemplateposition"></a>  CWinApp::GetFirstDocTemplatePosition
 
-获取应用程序中的第一个文档模板的位置。
+获取应用程序中第一个文档模板的位置。
 
 ```
 POSITION GetFirstDocTemplatePosition() const;
@@ -796,15 +796,15 @@ POSITION GetFirstDocTemplatePosition() const;
 
 ### <a name="return-value"></a>返回值
 
-可用于迭代或检索对象指针; 一个位置值如果列表为空，则为 NULL。
+可用于迭代或对象指针检索的位置值;如果列表为空，则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-使用位置值对的调用中返回[GetNextDocTemplate](#getnextdoctemplate)若要获取第一个[CDocTemplate](../../mfc/reference/cdoctemplate-class.md)对象。
+使用在对[GetNextDocTemplate](#getnextdoctemplate)的调用中返回的位置值获取第一个[CDocTemplate](../../mfc/reference/cdoctemplate-class.md)对象。
 
-##  <a name="gethelpmode"></a>  CWinApp::GetHelpMode
+##  <a name="gethelpmode"></a>CWinApp：： GetHelpMode
 
-检索帮助应用程序使用的类型。
+检索应用程序使用的帮助的类型。
 
 ```
 AFX_HELP_TYPE GetHelpMode();
@@ -812,11 +812,11 @@ AFX_HELP_TYPE GetHelpMode();
 
 ### <a name="return-value"></a>返回值
 
-使用应用程序的帮助类型。 请参阅[CWinApp::m_eHelpType](#m_ehelptype)有关详细信息。
+应用程序使用的帮助类型。 有关详细信息，请参阅[CWinApp：： m_eHelpType](#m_ehelptype) 。
 
 ##  <a name="getnextdoctemplate"></a>  CWinApp::GetNextDocTemplate
 
-获取由标识的文档模板*pos*，然后设置*pos*为位置值。
+获取由*pos*标识的文档模板，然后将 " *pos* " 设置为 "位置" 值。
 
 ```
 CDocTemplate* GetNextDocTemplate(POSITION& pos) const;
@@ -824,24 +824,24 @@ CDocTemplate* GetNextDocTemplate(POSITION& pos) const;
 
 ### <a name="parameters"></a>参数
 
-*pos*<br/>
-对以前调用返回的位置值的引用`GetNextDocTemplate`或[GetFirstDocTemplatePosition](#getfirstdoctemplateposition)。 通过此调用到下一个位置更新的值。
+*位置*<br/>
+对`GetNextDocTemplate`或[GetFirstDocTemplatePosition](#getfirstdoctemplateposition)的前一次调用返回的位置值的引用。 此调用会将值更新到下一个位置。
 
 ### <a name="return-value"></a>返回值
 
-一个指向[CDocTemplate](../../mfc/reference/cdoctemplate-class.md)对象。
+指向[CDocTemplate](../../mfc/reference/cdoctemplate-class.md)对象的指针。
 
 ### <a name="remarks"></a>备注
 
-可以使用`GetNextDocTemplate`如果建立调用一次的初始位置的向前迭代循环中`GetFirstDocTemplatePosition`。
+如果使用对`GetNextDocTemplate` `GetFirstDocTemplatePosition`的调用建立初始位置，则可以在向前迭代循环中使用。
 
-您必须确保你的位置值有效。 如果无效，Microsoft 基础类库的调试版本断言。
+您必须确保您的位置值有效。 如果无效，则 Microsoft 基础类库断言的调试版本。
 
-如果检索到的文档模板是最后一个可用的新值然后*pos*设置为 NULL。
+如果检索到的文档模板是最后一个可用的模板，则*pos*的新值将设置为 NULL。
 
-##  <a name="getprinterdevicedefaults"></a>  CWinApp::GetPrinterDeviceDefaults
+##  <a name="getprinterdevicedefaults"></a>CWinApp：： GetPrinterDeviceDefaults
 
-调用此成员函数以准备用于打印的打印机设备上下文。
+调用此成员函数以为打印提供打印机设备上下文。
 
 ```
 BOOL GetPrinterDeviceDefaults(struct tagPDA* pPrintDlg);
@@ -850,7 +850,7 @@ BOOL GetPrinterDeviceDefaults(struct tagPDA* pPrintDlg);
 ### <a name="parameters"></a>参数
 
 *pPrintDlg*<br/>
-一个指向[PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda)结构。
+指向[PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga)结构的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -858,15 +858,15 @@ BOOL GetPrinterDeviceDefaults(struct tagPDA* pPrintDlg);
 
 ### <a name="remarks"></a>备注
 
-从 Windows 中检索当前打印机默认值。INI 文件，必要时，或使用用户在打印设置中设置的最后一个打印机配置。
+从 Windows 检索当前打印机默认值。INI 文件，或者在打印设置中使用用户设置的最后一个打印机配置。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFCWindowing#40](../../mfc/reference/codesnippet/cpp/cwinapp-class_6.cpp)]
 
-##  <a name="getprofilebinary"></a>  CWinApp::GetProfileBinary
+##  <a name="getprofilebinary"></a>CWinApp：： GetProfileBinary
 
-调用此成员函数可从应用程序的注册表项的指定部分中的条目中检索二进制数据或。INI 文件。
+调用此成员函数以从应用程序的注册表的指定部分或中的项检索二进制数据。INI 文件。
 
 ```
 BOOL GetProfileBinary(
@@ -885,10 +885,10 @@ BOOL GetProfileBinary(
 指向以 null 结尾的字符串，该字符串包含要检索其值的条目。
 
 *ppData*<br/>
-指向将接收的数据的地址的指针。
+指向将接收数据地址的指针。
 
 *pBytes*<br/>
-指向将接收的大小 （以字节为单位） 的数据是 UINT。
+指向将接收数据大小（以字节为单位）的 UINT。
 
 ### <a name="return-value"></a>返回值
 
@@ -896,21 +896,21 @@ BOOL GetProfileBinary(
 
 ### <a name="remarks"></a>备注
 
-此成员函数不区分大小写，因此中的字符串*lpszSection*并*lpszEntry*写可能不同的参数。
+此成员函数不区分大小写，因此*lpszSection*和*lpszEntry*参数中的字符串可能会有所不同。
 
 > [!NOTE]
-> `GetProfileBinary` 分配一个缓冲区，并返回其地址中的\* *ppData*。 调用方负责释放缓冲区使用**delete []** 。
+> `GetProfileBinary`分配一个缓冲区并在\* *ppData*中返回其地址。 调用方负责使用**delete []** 释放缓冲区。
 
 > [!IMPORTANT]
-> 此函数返回的数据不一定是以 NULL 结尾的，并且调用方必须执行验证。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
+> 此函数返回的数据不一定是以 NULL 结尾的，并且调用方必须执行验证。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFCWindowing#41](../../mfc/reference/codesnippet/cpp/cwinapp-class_7.cpp)]
 
-有关其他示例，请参阅[CWinApp::WriteProfileBinary](#writeprofilebinary)。
+有关其他示例，请参阅[CWinApp：： WriteProfileBinary](#writeprofilebinary)。
 
-##  <a name="getprofileint"></a>  CWinApp::GetProfileInt
+##  <a name="getprofileint"></a>CWinApp：： GetProfileInt
 
 调用此成员函数以检索应用程序的注册表或 .INI 文件的指定部分中条目的整数的值。
 
@@ -934,26 +934,26 @@ UINT GetProfileInt(
 
 ### <a name="return-value"></a>返回值
 
-如果函数成功，则为指定条目后面的字符串的整数值。 返回值为的值*n 默认*参数如果函数未找到该条目。 如果与指定条目对应的值不为整数，则返回值为 0。
+如果函数成功，则为指定条目后面的字符串的整数值。 如果该函数找不到该条目，则返回值为*nDefault*参数的值。 如果与指定条目对应的值不为整数，则返回值为 0。
 
-在 .INI 文件中，此成员函数支持值的十六进制表示法。 当您检索有符号的整数时，您应将值强制转换到**int**。
+在 .INI 文件中，此成员函数支持值的十六进制表示法。 检索带符号的整数时，应将值强制转换为**int**。
 
 ### <a name="remarks"></a>备注
 
-此成员函数不区分大小写，因此中的字符串*lpszSection*并*lpszEntry*写可能不同的参数。
+此成员函数不区分大小写，因此*lpszSection*和*lpszEntry*参数中的字符串可能会有所不同。
 
 > [!IMPORTANT]
-> 此函数返回的数据不一定是以 NULL 结尾的，并且调用方必须执行验证。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
+> 此函数返回的数据不一定是以 NULL 结尾的，并且调用方必须执行验证。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFCWindowing#42](../../mfc/reference/codesnippet/cpp/cwinapp-class_8.cpp)]
 
-有关其他示例，请参阅[cwinapp:: Writeprofileint](#writeprofileint)。
+有关其他示例，请参阅[CWinApp：： WriteProfileInt](#writeprofileint)。
 
-##  <a name="getprofilestring"></a>  CWinApp::GetProfileString
+##  <a name="getprofilestring"></a>CWinApp：： GetProfileString
 
-调用此成员函数以检索应用程序的注册表中指定的节中的条目相关联的字符串或。INI 文件。
+调用此成员函数以检索与应用程序的注册表或中指定节内的条目关联的字符串。INI 文件。
 
 ```
 CString GetProfileString(
@@ -968,29 +968,29 @@ CString GetProfileString(
 指向以 null 结尾的字符串，该字符串指定包含条目的部分。
 
 *lpszEntry*<br/>
-指向包含其字符串是要检索的条目的以 null 结尾的字符串。 此值不能为 NULL。
+指向以 null 结尾的字符串，该字符串包含要检索其字符串的项。 此值不得为 NULL。
 
 *lpszDefault*<br/>
-指向以给定的项目如果初始化文件中找不到该条目的默认字符串值。
+如果在初始化文件中找不到该项，则指向给定项的默认字符串值。
 
 ### <a name="return-value"></a>返回值
 
-返回值是从应用程序的字符串。INI 文件或*lpszDefault*如果无法找到该字符串。 框架支持的最大字符串长度为 _MAX_PATH。 如果*lpszDefault*为 NULL，则返回值为空字符串。
+返回值为应用程序的中的字符串。INI 文件或*lpszDefault* （如果找不到该字符串）。 该框架支持的最大字符串长度为 _MAX_PATH。 如果*lpszDefault*为 NULL，则返回值为空字符串。
 
 ### <a name="remarks"></a>备注
 
 > [!IMPORTANT]
-> 此函数返回的数据不一定是以 NULL 结尾的，并且调用方必须执行验证。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/desktop/SecBP/avoiding-buffer-overruns)。
+> 此函数返回的数据不一定是以 NULL 结尾的，并且调用方必须执行验证。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFCWindowing#43](../../mfc/reference/codesnippet/cpp/cwinapp-class_9.cpp)]
 
-有关其他示例，请参阅示例[CWinApp::GetProfileInt](#getprofileint)。
+对于另一个示例，请参阅[CWinApp：： GetProfileInt](#getprofileint)的示例。
 
-##  <a name="getsectionkey"></a>  CWinApp::GetSectionKey
+##  <a name="getsectionkey"></a>CWinApp：： GetSectionKey
 
-返回的键为 HKEY_CURRENT_USER\\"简称软件"\RegistryKey\AppName\lpszSection。
+返回 HKEY_CURRENT_USER\\"Software" \RegistryKey\AppName\lpszSection. 的密钥。
 
 ```
 HKEY GetSectionKey(
@@ -1001,26 +1001,26 @@ HKEY GetSectionKey(
 ### <a name="parameters"></a>参数
 
 *lpszSection*<br/>
-要获取的键的名称。
+要获取的密钥的名称。
 
 *pTM*<br/>
 指向 `CAtlTransactionManager` 对象的指针。
 
 ### <a name="return-value"></a>返回值
 
-如果函数成功，则部分密钥否则为，为 NULL。
+如果函数成功，则为节键;否则为 NULL。
 
 ### <a name="remarks"></a>备注
 
 ##  <a name="hideapplication"></a>  CWinApp::HideApplication
 
-调用此成员函数可隐藏应用程序之前关闭打开的文档。
+在关闭打开的文档之前，调用此成员函数以隐藏应用程序。
 
 ```
 void HideApplication();
 ```
 
-##  <a name="htmlhelp"></a>  CWinApp::HtmlHelp
+##  <a name="htmlhelp"></a>CWinApp：： HtmlHelp
 
 调用此成员函数以调用 HTMLHelp 应用程序。
 
@@ -1033,20 +1033,20 @@ virtual void HtmlHelp(
 ### <a name="parameters"></a>参数
 
 *dwData*<br/>
-指定其他数据。 使用的值取决于的值*nCmd*参数。 默认情况下`0x000F`这意味着[HH_HELP_CONTEXT](/previous-versions/windows/desktop/htmlhelp/hh-help-context-command)。
+指定其他数据。 使用的值取决于*nCmd*参数的值。 默认值`0x000F`为，表示[HH_HELP_CONTEXT](/previous-versions/windows/desktop/htmlhelp/hh-help-context-command)。
 
 *nCmd*<br/>
-指定请求的帮助的类型。 有关一系列可能的值以及它们如何影响*dwData*参数，请参阅*uCommand*参数中所述[HtmlHelpW](/windows/desktop/api/htmlhelp/nf-htmlhelp-htmlhelpw)或[HtmlHelpA](/windows/desktop/api/htmlhelp/nf-htmlhelp-htmlhelpa)Windows SDK 中的 API 函数。  
+指定请求的帮助的类型。 有关可能值的列表以及这些值如何影响*dwData*参数，请参阅 Windows SDK 中的[HtmlHelpW](/windows/win32/api/htmlhelp/nf-htmlhelp-htmlhelpw)或[HtmlHelpA](/windows/win32/api/htmlhelp/nf-htmlhelp-htmlhelpa) API 函数中描述的*uCommand*参数。 
 
 ### <a name="remarks"></a>备注
 
-该框架还会调用此函数可调用 HTMLHelp 应用程序。
+框架还调用此函数来调用 HTMLHelp 应用程序。
 
-当你的应用程序终止时，框架会自动关闭 HTMLHelp 应用程序。
+当应用程序终止时，框架将自动关闭 HTMLHelp 应用程序。
 
-##  <a name="initinstance"></a>  CWinApp::InitInstance
+##  <a name="initinstance"></a>CWinApp：： InitInstance
 
-Windows 允许要在同一时间运行的相同程序的多个副本。
+Windows 允许同时运行同一程序的多个副本。
 
 ```
 virtual BOOL InitInstance();
@@ -1054,24 +1054,24 @@ virtual BOOL InitInstance();
 
 ### <a name="return-value"></a>返回值
 
-如果初始化成功，则非零值否则为 0。
+如果初始化成功, 则为非零值;否则为0。
 
 ### <a name="remarks"></a>备注
 
-应用程序初始化从概念上讲划分为两个部分： 首先执行的一次性应用程序初始化时间运行的程序，并在每个运行的实例初始化的时间运行的程序，包括第一次的副本。 框架的实现`WinMain`调用此函数。
+应用程序初始化在概念上分为两部分：首次运行程序时执行的一次性应用程序初始化，以及在每次运行程序副本时运行的实例初始化（包括第一次）。 的框架的实现`WinMain`将调用此函数。
 
-重写`InitInstance`初始化在 Windows 下运行的应用程序的每个新实例。 通常情况下，重写`InitInstance`来构造您的主窗口对象和设置`CWinThread::m_pMainWnd`数据成员，使其指向该窗口。 重写此成员函数的详细信息，请参阅[CWinApp:应用程序类](../../mfc/cwinapp-the-application-class.md)。
+重`InitInstance`写以初始化在 Windows 下运行的应用程序的每个新实例。 通常，重写`InitInstance`以构造主窗口对象并`CWinThread::m_pMainWnd`将数据成员设置为指向该窗口。 有关重写此成员函数的详细信息， [请参阅 CWinApp：应用程序类](../../mfc/cwinapp-the-application-class.md)。
 
 > [!NOTE]
-> MFC 应用程序必须初始化为单线程单元 (STA)。 如果您调用[CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex)在你`InitInstance`重写中，指定 COINIT_APARTMENTTHREADED （而非 COINIT_MULTITHREADED）。
+> MFC 应用程序必须初始化为单线程单元（STA）。 如果在`InitInstance`重写中调用[CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) ，请指定 COINIT_APARTMENTTHREADED （而不是 COINIT_MULTITHREADED）。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFCListView#9](../../atl/reference/codesnippet/cpp/cwinapp-class_10.cpp)]
 
-##  <a name="istaskbarinteractionenabled"></a>  CWinApp::IsTaskbarInteractionEnabled
+##  <a name="istaskbarinteractionenabled"></a>CWinApp：： IsTaskbarInteractionEnabled
 
-指示是否启用了 Windows 7 任务栏交互。
+指示是否启用 Windows 7 任务栏交互。
 
 ```
 virtual BOOL IsTaskbarInteractionEnabled();
@@ -1079,15 +1079,15 @@ virtual BOOL IsTaskbarInteractionEnabled();
 
 ### <a name="return-value"></a>返回值
 
-返回 true; 否则`EnableTaskbarInteraction`已调用和操作系统是 Windows 7 或更高版本。
+如果`EnableTaskbarInteraction`已调用，并且操作系统是 Windows 7 或更高版本，则返回 TRUE。
 
 ### <a name="remarks"></a>备注
 
-任务栏交互意味着 MDI 应用程序在鼠标指针位于应用程序的任务栏按钮时显示的单独选项卡式缩略图中显示 MDI 子窗体的内容。
+任务栏交互是指在鼠标指针位于应用程序任务栏按钮上时，MDI 应用程序会在单独的选项卡式缩略图中显示 MDI 子级的内容。
 
 ##  <a name="loadcursor"></a>  CWinApp::LoadCursor
 
-加载由名为的光标资源*lpszResourceName*或者指定*nIDResource*从当前的可执行文件。
+从当前可执行文件加载由*lpszResourceName*命名的或由*nIDResource*指定的游标资源。
 
 ```
 HCURSOR LoadCursor(LPCTSTR lpszResourceName) const;  HCURSOR LoadCursor(UINT nIDResource) const;
@@ -1096,20 +1096,20 @@ HCURSOR LoadCursor(LPCTSTR lpszResourceName) const;  HCURSOR LoadCursor(UINT nID
 ### <a name="parameters"></a>参数
 
 *lpszResourceName*<br/>
-指向包含游标资源的名称的以 null 结尾的字符串。 可以使用`CString`为此参数。
+指向以 null 结尾的字符串，该字符串包含游标资源的名称。 可以将`CString`用于此参数。
 
 *nIDResource*<br/>
-游标资源的 ID。 有关资源的列表，请参阅[LoadCursor](/windows/desktop/api/winuser/nf-winuser-loadcursora) Windows SDK 中。
+游标资源的 ID。 有关资源列表，请参阅 Windows SDK 中的[LoadCursor](/windows/win32/api/winuser/nf-winuser-loadcursorw) 。
 
 ### <a name="return-value"></a>返回值
 
-句柄游标，如果成功，则否则为，为 NULL。
+如果成功，则为游标的句柄;否则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-`LoadCursor` 将光标加载到内存中，仅当它以前加载;否则，它将检索现有资源的句柄。
+`LoadCursor`仅当游标之前未加载，才将其加载到内存中;否则，它将检索现有资源的句柄。
 
-使用[LoadStandardCursor](#loadstandardcursor)或[LoadOEMCursor](#loadoemcursor)成员函数来访问预定义的 Windows 游标。
+使用[LoadStandardCursor](#loadstandardcursor)或[LoadOEMCursor](#loadoemcursor)成员函数访问预定义的 Windows 游标。
 
 ### <a name="example"></a>示例
 
@@ -1117,7 +1117,7 @@ HCURSOR LoadCursor(LPCTSTR lpszResourceName) const;  HCURSOR LoadCursor(UINT nID
 
 ##  <a name="loadicon"></a>  CWinApp::LoadIcon
 
-加载由名为的图标资源*lpszResourceName*或者指定*nIDResource*从可执行文件。
+从可执行文件加载*lpszResourceName*或*nIDResource*指定的图标资源。
 
 ```
 HICON LoadIcon(LPCTSTR lpszResourceName) const;  HICON LoadIcon(UINT nIDResource) const;
@@ -1126,27 +1126,27 @@ HICON LoadIcon(LPCTSTR lpszResourceName) const;  HICON LoadIcon(UINT nIDResource
 ### <a name="parameters"></a>参数
 
 *lpszResourceName*<br/>
-指向包含图标资源的名称的以 null 结尾的字符串。 此外可以使用`CString`为此参数。
+指向以 null 结尾的字符串，该字符串包含图标资源的名称。 还可以`CString`对此参数使用。
 
 *nIDResource*<br/>
 图标资源的 ID 号。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则为图标的句柄否则为，为 NULL。
+如果成功，则为图标的句柄;否则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-`LoadIcon` 仅当它以前加载; 加载的图标否则，它将检索现有资源的句柄。
+`LoadIcon`仅在以前未加载图标时加载它;否则，它将检索现有资源的句柄。
 
-可以使用[LoadStandardIcon](#loadstandardicon)或[LoadOEMIcon](#loadoemicon)成员函数来访问预定义的 Windows 图标。
+可以使用[LoadStandardIcon](#loadstandardicon)或[LoadOEMIcon](#loadoemicon)成员函数访问预定义的 Windows 图标。
 
 > [!NOTE]
-> 此成员函数将调用 Win32 API 函数[LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadicona)，其中只能加载 SM_CXICON 和 SM_CYICON 系统指标值符合其大小的图标。
+> 此成员函数调用 Win32 API 函数[LoadIcon](/windows/win32/api/winuser/nf-winuser-loadiconw)，该函数只能加载其大小符合 SM_CXICON 和 SM_CYICON 系统指标值的图标。
 
-##  <a name="loadoemcursor"></a>  CWinApp::LoadOEMCursor
+##  <a name="loadoemcursor"></a>CWinApp：： LoadOEMCursor
 
-加载 Windows 预定义的指定游标资源*nIDCursor*。
+加载*nIDCursor*指定的 Windows 预定义游标资源。
 
 ```
 HCURSOR LoadOEMCursor(UINT nIDCursor) const;
@@ -1155,15 +1155,15 @@ HCURSOR LoadOEMCursor(UINT nIDCursor) const;
 ### <a name="parameters"></a>参数
 
 *nIDCursor*<br/>
-**OCR_** 清单常量指定预定义的 Windows 光标的标识符。 您必须具有`#define OEMRESOURCE`之前`#include \<afxwin.h>`若要获取访问权限**OCR_** WINDOWS 中的常量。H.
+**OCR_** 清单常量标识符，它指定预定义的 Windows 光标。 您必须有`#define OEMRESOURCE` `#include \<afxwin.h>`权访问 WINDOWS 中的**OCR_** 常量。高.
 
 ### <a name="return-value"></a>返回值
 
-句柄游标，如果成功，则否则为，为 NULL。
+如果成功，则为游标的句柄;否则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-使用`LoadOEMCursor`或[LoadStandardCursor](#loadstandardcursor)成员函数来访问预定义的 Windows 游标。
+使用或 [LoadStandardCursor](#loadstandardcursor) 成员函数访问预定义的 Windows 游标。  `LoadOEMCursor`
 
 ### <a name="example"></a>示例
 
@@ -1171,9 +1171,9 @@ HCURSOR LoadOEMCursor(UINT nIDCursor) const;
 
 [!code-cpp[NVC_MFCWindowing#46](../../mfc/reference/codesnippet/cpp/cwinapp-class_13.cpp)]
 
-##  <a name="loadoemicon"></a>  CWinApp::LoadOEMIcon
+##  <a name="loadoemicon"></a>CWinApp：： LoadOEMIcon
 
-加载 Windows 预定义的指定图标资源*nIDIcon*。
+加载*nIDIcon*指定的 Windows 预定义图标资源。
 
 ```
 HICON LoadOEMIcon(UINT nIDIcon) const;
@@ -1182,19 +1182,19 @@ HICON LoadOEMIcon(UINT nIDIcon) const;
 ### <a name="parameters"></a>参数
 
 *nIDIcon*<br/>
-**OIC_** 清单常量指定预定义的 Windows 图标的标识符。 您必须具有`#define OEMRESOURCE`之前`#include \<afxwin.h>`访问**OIC_** WINDOWS 中的常量。H.
+**OIC_** 清单常量标识符，它指定预定义的 Windows 图标。 必须先`#define OEMRESOURCE` `#include \<afxwin.h>`有，才能访问 WINDOWS 中的**OIC_** 常量。高.
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则为图标的句柄否则为，为 NULL。
+如果成功，则为图标的句柄;否则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-使用`LoadOEMIcon`或[LoadStandardIcon](#loadstandardicon)成员函数来访问预定义的 Windows 图标。
+使用或 [LoadStandardIcon](#loadstandardicon) 成员函数访问预定义的 Windows 图标。  `LoadOEMIcon`
 
 ##  <a name="loadstandardcursor"></a>  CWinApp::LoadStandardCursor
 
-加载 Windows 预定义的游标资源的*lpszCursorName*指定。
+加载*lpszCursorName*指定的 Windows 预定义光标资源。
 
 ```
 HCURSOR LoadStandardCursor(LPCTSTR lpszCursorName) const;
@@ -1203,39 +1203,39 @@ HCURSOR LoadStandardCursor(LPCTSTR lpszCursorName) const;
 ### <a name="parameters"></a>参数
 
 *lpszCursorName*<br/>
-**IDC_** 清单常量指定预定义的 Windows 光标的标识符。 这些标识符是在 WINDOWS 中定义的。H. 以下列表显示了可能的预定义的值和含义*lpszCursorName*:
+**IDC_** 清单常量标识符，它指定预定义的 Windows 光标。 这些标识符在 WINDOWS 中定义。高. 以下列表显示了可能的预定义值和*lpszCursorName*的含义：
 
 - IDC_ARROW 标准箭头光标
 
-- IDC_IBEAM 标准文本插入光标
+- IDC_IBEAM 标准文本-插入光标
 
-- 使用 Windows 执行耗时任务时 IDC_WAIT 沙漏光标
+- 当 Windows 执行耗时的任务时使用的 IDC_WAIT 沙漏光标
 
-- 所选内容的 IDC_CROSS 十字线光标
+- IDC_CROSS 所选内容的十字线光标
 
-- 垂直向上 IDC_UPARROW 箭头
+- IDC_UPARROW 的直箭头
 
-- IDC_SIZE 过时和不受支持;使用 IDC_SIZEALL
+- IDC_SIZE 已过时且不受支持;使用 IDC_SIZEALL
 
-- IDC_SIZEALL 一个四指向箭头。 要用于调整窗口大小的光标。
+- IDC_SIZEALL 四向箭头。 用于调整窗口大小的光标。
 
-- IDC_ICON 过时和不受支持。 使用 IDC_ARROW。
+- IDC_ICON 已过时且不受支持。 请使用 IDC_ARROW。
 
-- 在左上角和右下方的端点为 IDC_SIZENWSE 的双向箭头
+- IDC_SIZENWSE 的双向箭头，以左上角和右下角结束
 
-- 使用较低和右左上为止 IDC_SIZENESW 的双向箭头
+- IDC_SIZENESW 的双向箭头，以右上和左下对齐
 
 - IDC_SIZEWE 水平双向箭头
 
-- IDC_SIZENS 垂直双向箭头
+- IDC_SIZENS 竖双头箭头
 
 ### <a name="return-value"></a>返回值
 
-句柄游标，如果成功，则否则为，为 NULL。
+如果成功，则为游标的句柄;否则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-使用`LoadStandardCursor`或[LoadOEMCursor](#loadoemcursor)成员函数来访问预定义的 Windows 游标。
+使用或 [LoadOEMCursor](#loadoemcursor) 成员函数访问预定义的 Windows 游标。  `LoadStandardCursor`
 
 ### <a name="example"></a>示例
 
@@ -1243,7 +1243,7 @@ HCURSOR LoadStandardCursor(LPCTSTR lpszCursorName) const;
 
 ##  <a name="loadstandardicon"></a>  CWinApp::LoadStandardIcon
 
-加载 Windows 预定义的图标资源的*lpszIconName*指定。
+加载*lpszIconName*指定的 Windows 预定义图标资源。
 
 ```
 HICON LoadStandardIcon(LPCTSTR lpszIconName) const;
@@ -1252,19 +1252,19 @@ HICON LoadStandardIcon(LPCTSTR lpszIconName) const;
 ### <a name="parameters"></a>参数
 
 *lpszIconName*<br/>
-指定预定义的 Windows 图标清单常量标识符。 这些标识符是在 WINDOWS 中定义的。H. 预定义的可能值及其说明的列表，请参阅*lpIconName*中的参数[LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadicona) Windows SDK 中。
+一个清单常量标识符，它指定预定义的 Windows 图标。 这些标识符在 WINDOWS 中定义。高. 有关可能的预定义值及其说明的列表，请参阅 Windows SDK 的[LoadIcon](/windows/win32/api/winuser/nf-winuser-loadiconw)中的*lpIconName*参数。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则为图标的句柄否则为，为 NULL。
+如果成功，则为图标的句柄;否则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-使用`LoadStandardIcon`或[LoadOEMIcon](#loadoemicon)成员函数来访问预定义的 Windows 图标。
+使用或 [LoadOEMIcon](#loadoemicon) 成员函数访问预定义的 Windows 图标。  `LoadStandardIcon`
 
 ##  <a name="loadstdprofilesettings"></a>  CWinApp::LoadStdProfileSettings
 
-在调用此成员函数[InitInstance](#initinstance)成员函数来启用和加载最近使用 (过的 MRU) 文件的列表和上一次预览状态。
+从[InitInstance](#initinstance)成员函数中调用此成员函数，以启用和加载最近使用的（MRU）文件和上次预览状态的列表。
 
 ```
 void LoadStdProfileSettings(UINT nMaxMRU = _AFX_MRU_COUNT);
@@ -1273,15 +1273,15 @@ void LoadStdProfileSettings(UINT nMaxMRU = _AFX_MRU_COUNT);
 ### <a name="parameters"></a>参数
 
 *nMaxMRU*<br/>
-最近使用要跟踪的文件数。
+要跟踪的最近使用的文件数。
 
 ### <a name="remarks"></a>备注
 
-如果*nMaxMRU*为 0，则没有 MRU 列表将保持不变。
+如果*nMaxMRU*为0，则不保留 MRU 列表。
 
-##  <a name="m_bhelpmode"></a>  CWinApp::m_bHelpMode
+##  <a name="m_bhelpmode"></a>CWinApp：： m_bHelpMode
 
-应用程序中的帮助上下文模式 （按传统方法调用使用了 SHIFT + F1）; 如果为 TRUE否则为 FALSE。
+如果应用程序处于帮助上下文模式（采用 SHIFT + F1 的逆调用），则为 TRUE;否则为 FALSE。
 
 ```
 BOOL m_bHelpMode;
@@ -1289,9 +1289,9 @@ BOOL m_bHelpMode;
 
 ### <a name="remarks"></a>备注
 
-在帮助上下文模式下，光标将变为一个问号和用户可以将其移动屏幕信息。 如果您想要实现特殊处理，在帮助模式时，请检查此标志。 `m_bHelpMode` BOOL 类型的公共变量。
+在帮助上下文模式下，光标变成问号，用户可以在屏幕上移动它。 如果要在帮助模式下实现特殊处理，请检查此标志。 `m_bHelpMode`是 BOOL 类型的公共变量。
 
-##  <a name="m_dwrestartmanagersupportflags"></a>  CWinApp::m_dwRestartManagerSupportFlags
+##  <a name="m_dwrestartmanagersupportflags"></a>CWinApp：： m_dwRestartManagerSupportFlags
 
 确定重新启动管理器的行为方式的标志。
 
@@ -1301,25 +1301,25 @@ DWORD m_dwRestartManagerSupportFlags;
 
 ### <a name="remarks"></a>备注
 
-若要重新启动管理器，设置`m_dwRestartManagerSupportFlags`到所需的行为。 下表显示了可用的标志。
+若要启用重新启动管理器`m_dwRestartManagerSupportFlags` ，请将设置为所需的行为。 下表显示了可用的标志。
 
 |||
 |-|-|
 |Flag|描述|
-|AFX_RESTART_MANAGER_SUPPORT_RESTART|使用注册应用程序[CWinApp::RegisterWithRestartManager](#registerwithrestartmanager)。 重新启动管理器负责重新启动应用程序，如果意外退出。|
-|- AFX_RESTART_MANAGER_SUPPORT_RECOVERY|重新启动管理器注册该应用程序，并且重新启动该应用程序时，重新启动管理器调用恢复的回调函数。 默认恢复回调函数是[CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)。|
-|- AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART|启用了自动保存和重新启动管理器则自动保存任何打开文档时应用程序重新启动。|
-|- AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL|启用了自动保存和重新启动管理器则自动保存任何打开文档的定期时间间隔。 通过定义间隔[CWinApp::m_nAutosaveInterval](#m_nautosaveinterval)。|
-|- AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES|在重新启动从意外的退出应用程序后，重新启动管理器打开以前打开的文档。 [CDataRecoveryHandler 类](../../mfc/reference/cdatarecoveryhandler-class.md)处理存储的打开的文档列表并将它们还原。|
-|- AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES|重新启动管理器会提示用户重新启动该应用程序后还原自动保存文件。 `CDataRecoveryHandler`类会询问用户。|
-|- AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE|AFX_RESTART_MANAGER_SUPPORT_RESTART、 AFX_RESTART_MANAGER_SUPPORT_RECOVER 和 AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES 的并集。|
-|- AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS|AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE、 AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART、 AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL 和 AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES 的联合。|
-|- AFX_RESTART_MANAGER_SUPPORT_RESTART_ASPECTS|AFX_RESTART_MANAGER_SUPPORT_RESTART、 AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART、 AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES 和 AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES 的联合。|
-|- AFX_RESTART_MANAGER_SUPPORT_RECOVERY_ASPECTS|联合 ofAFX_RESTART_MANAGER_SUPPORT_RECOVERY、 AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL、 AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES 和 AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES。|
+|AFX_RESTART_MANAGER_SUPPORT_RESTART|使用[CWinApp：： RegisterWithRestartManager](#registerwithrestartmanager)注册应用程序。 如果应用程序意外退出，则重新启动管理器负责重新启动该应用程序。|
+|- AFX_RESTART_MANAGER_SUPPORT_RECOVERY|该应用程序在重新启动管理器中注册，重新启动管理器将在重新启动该应用程序时调用恢复回调函数。 默认恢复回调函数为[CWinApp：： ApplicationRecoveryCallback](#applicationrecoverycallback)。|
+|- AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART|启用自动保存后，在应用程序重新启动时，重新启动管理器将自动保存任何打开的文档。|
+|- AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL|启用自动保存，然后重新启动管理器定期自动保存任何打开的文档。 间隔由[CWinApp：： m_nAutosaveInterval](#m_nautosaveinterval)定义。|
+|- AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES|重新启动应用程序后，重新启动管理器将打开以前打开的文档。 [CDataRecoveryHandler 类](../../mfc/reference/cdatarecoveryhandler-class.md)处理打开的文档的列表并将其还原。|
+|- AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES|重新启动管理器后，重新启动管理器会提示用户还原自动保存的文件。 `CDataRecoveryHandler`类查询用户。|
+|- AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE|AFX_RESTART_MANAGER_SUPPORT_RESTART、AFX_RESTART_MANAGER_SUPPORT_RECOVER 和 AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES 的联合。|
+|- AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS|AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE、AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART、AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL 和 AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES 的联合。|
+|- AFX_RESTART_MANAGER_SUPPORT_RESTART_ASPECTS|AFX_RESTART_MANAGER_SUPPORT_RESTART、AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART、AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES 和 AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES 的联合。|
+|- AFX_RESTART_MANAGER_SUPPORT_RECOVERY_ASPECTS|联合 ofAFX_RESTART_MANAGER_SUPPORT_RECOVERY、AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL、AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES 和 AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES。|
 
 ##  <a name="m_ehelptype"></a>  CWinApp::m_eHelpType
 
-此数据成员的类型是枚举的类型 AFX_HELP_TYPE，在其中定义`CWinApp`类。
+此数据成员的类型是在`CWinApp`类中定义的枚举类型 AFX_HELP_TYPE。
 
 ```
 AFX_HELP_TYPE m_eHelpType;
@@ -1327,7 +1327,7 @@ AFX_HELP_TYPE m_eHelpType;
 
 ### <a name="remarks"></a>备注
 
-AFX_HELP_TYPE 枚举定义，如下所示：
+AFX_HELP_TYPE 枚举定义如下：
 
 ```
 enum AFX_HELP_TYPE {
@@ -1336,13 +1336,13 @@ enum AFX_HELP_TYPE {
     };
 ```
 
-- 若要设置到 HTML 帮助应用程序的帮助，请调用[SetHelpMode](#sethelpmode)并指定`afxHTMLHelp`。
+- 若要将应用程序的帮助设置为 HTML 帮助 , 请调用`afxHTMLHelp`[SetHelpMode](#sethelpmode) 并指定。
 
-- 若要设置到 WinHelp 的应用程序的帮助，请调用`SetHelpMode`并指定`afxWinHelp`。
+- 若要将应用程序的帮助设置为 WinHelp `SetHelpMode` ，请`afxWinHelp`调用并指定。
 
-##  <a name="m_hinstance"></a>  CWinApp::m_hInstance
+##  <a name="m_hinstance"></a>CWinApp：： m_hInstance
 
-对应于*hInstance*参数传递到 Windows `WinMain`。
+对应于 Windows传递到`WinMain`的 hInstance 参数。
 
 ```
 HINSTANCE m_hInstance;
@@ -1350,7 +1350,7 @@ HINSTANCE m_hInstance;
 
 ### <a name="remarks"></a>备注
 
-`m_hInstance`数据成员是在 Windows 下运行的应用程序的当前实例的句柄。 这由全局函数返回[AfxGetInstanceHandle](application-information-and-management.md#afxgetinstancehandle)。 `m_hInstance` 是类型 HINSTANCE 的公共变量。
+`m_hInstance`数据成员是在 Windows 下运行的应用程序的当前实例的句柄。 这是由全局函数[AfxGetInstanceHandle](application-information-and-management.md#afxgetinstancehandle)返回的。 `m_hInstance`是 HINSTANCE 类型的公共变量。
 
 ### <a name="example"></a>示例
 
@@ -1358,7 +1358,7 @@ HINSTANCE m_hInstance;
 
 ##  <a name="m_lpcmdline"></a>  CWinApp::m_lpCmdLine
 
-对应于*lpCmdLine*参数传递到 Windows `WinMain`。
+对应于 Windows传递到`WinMain`的 lpCmdLine 参数。
 
 ```
 LPTSTR m_lpCmdLine;
@@ -1366,15 +1366,15 @@ LPTSTR m_lpCmdLine;
 
 ### <a name="remarks"></a>备注
 
-指向以 null 终止的字符串，指定应用程序的命令行。 使用`m_lpCmdLine`访问用户在应用程序启动时输入的任何命令行参数。 `m_lpCmdLine` 是公共类型的变量的 LPTSTR。
+指向以 null 结尾的字符串，它指定应用程序的命令行。 使用`m_lpCmdLine`可访问用户在启动应用程序时输入的任何命令行参数。 `m_lpCmdLine`是 LPTSTR 类型的公共变量。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFCWindowing#52](../../mfc/reference/codesnippet/cpp/cwinapp-class_16.cpp)]
 
-##  <a name="m_nautosaveinterval"></a>  CWinApp::m_nAutosaveInterval
+##  <a name="m_nautosaveinterval"></a>CWinApp：： m_nAutosaveInterval
 
-以毫秒为单位，则自动保存之间的时间长度。
+自动保存之间的时间长度（以毫秒为单位）。
 
 ```
 int m_nAutosaveInterval;
@@ -1382,11 +1382,11 @@ int m_nAutosaveInterval;
 
 ### <a name="remarks"></a>备注
 
-可以按设置的间隔配置为自动保存打开的文档的重新启动管理器。 如果你的应用程序不自动保存文件，则此参数无效。
+可以将重新启动管理器配置为按设置的时间间隔自动保存打开的文档。 如果应用程序未自动保存文件，此参数不起作用。
 
 ##  <a name="m_ncmdshow"></a>  CWinApp::m_nCmdShow
 
-对应于*nCmdShow*参数传递到 Windows `WinMain`。
+对应于 Windows传递到`WinMain`的 nCmdShow 参数。
 
 ```
 int m_nCmdShow;
@@ -1394,25 +1394,25 @@ int m_nCmdShow;
 
 ### <a name="remarks"></a>备注
 
-应传递`m_nCmdShow`作为参数调用时[CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow)的应用程序的主窗口。 `m_nCmdShow` 是类型的公共变量**int**。
+为应用程序`m_nCmdShow`的主窗口调用[CWnd：： ShowWindow](../../mfc/reference/cwnd-class.md#showwindow)时，应将作为参数传递。 `m_nCmdShow`是**int**类型的公共变量。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFCWindowing#56](../../mfc/reference/codesnippet/cpp/cwinapp-class_17.cpp)]
 
-##  <a name="m_pactivewnd"></a>  CWinApp::m_pActiveWnd
+##  <a name="m_pactivewnd"></a>CWinApp：： m_pActiveWnd
 
-使用此数据成员来存储指向 OLE 容器应用程序在 OLE 服务器应用程序的就地激活的主窗口的指针。
+使用此数据成员可以存储一个指针，该指针指向 ole 容器应用程序的主窗口，该窗口就地激活 OLE 服务器应用程序。
 
 ### <a name="remarks"></a>备注
 
-如果此数据成员为 NULL，该应用程序不是处于就地活动状态。
+如果此数据成员为 NULL，则该应用程序不是就地活动应用程序。
 
-就地激活的 OLE 容器应用程序框架窗口时，框架将设置此成员变量。
+当框架窗口就地由 OLE 容器应用程序激活时，框架将设置此成员变量。
 
-##  <a name="m_pdatarecoveryhandler"></a>  CWinApp::m_pDataRecoveryHandler
+##  <a name="m_pdatarecoveryhandler"></a>CWinApp：： m_pDataRecoveryHandler
 
-指向应用程序的数据恢复处理程序。
+指向应用程序的数据恢复处理程序的指针。
 
 ```
 CDataRecoveryHandler* m_pDataRecoveryHandler;
@@ -1420,7 +1420,7 @@ CDataRecoveryHandler* m_pDataRecoveryHandler;
 
 ### <a name="remarks"></a>备注
 
-数据恢复处理程序的应用程序监视打开的文档和则自动保存它们。 框架使用的数据恢复处理程序时意外退出后，重新启动应用程序还原自动保存文件。 有关详细信息，请参阅[CDataRecoveryHandler 类](../../mfc/reference/cdatarecoveryhandler-class.md)。
+应用程序的数据恢复处理程序监视打开的文档并自动保存它们。 当应用程序意外退出后重新启动时，框架使用数据恢复处理程序还原自动保存的文件。 有关详细信息，请参阅[CDataRecoveryHandler 类](../../mfc/reference/cdatarecoveryhandler-class.md)。
 
 ##  <a name="m_pszappname"></a>  CWinApp::m_pszAppName
 
@@ -1432,12 +1432,12 @@ LPCTSTR m_pszAppName;
 
 ### <a name="remarks"></a>备注
 
-应用程序名称可以来自参数传递给[CWinApp](#cwinapp)构造函数，或者，如果未指定，到使用 AFX_IDS_APP_TITLE ID 的资源字符串。 如果在资源中找不到应用程序名称，它将来自该程序。EXE 文件名。
+应用程序名称可以来自传递到[CWinApp](#cwinapp)构造函数的参数，如果未指定，则返回到 ID 为 AFX_IDS_APP_TITLE 的资源字符串。 如果在资源中找不到应用程序名称，则它来自程序的。EXE 文件名。
 
-全局函数返回[AfxGetAppName](application-information-and-management.md#afxgetappname)。 `m_pszAppName` 是类型的公共变量**const char**<strong>\*</strong>。
+由全局函数[AfxGetAppName](application-information-and-management.md#afxgetappname)返回。 `m_pszAppName`是**常量 char**<strong>\*</strong>类型的公共变量。
 
 > [!NOTE]
-> 如果你将值赋给`m_pszAppName`，它必须动态分配堆上。 `CWinApp`析构函数调用**免费**（与此指针)。 很多想要使用`_tcsdup`（） 运行时库函数来执行分配。 此外，释放分配新值之前将其与当前指针相关联的内存。 例如:
+> 如果向`m_pszAppName`赋值，则必须在堆上动态分配该值。 析构函数通过此指针调用 free （）。 `CWinApp` 很多时候需要使用`_tcsdup`（）运行时库函数来执行分配。 此外，在分配新值之前，释放与当前指针关联的内存。 例如:
 
 [!code-cpp[NVC_MFCWindowing#57](../../mfc/reference/codesnippet/cpp/cwinapp-class_18.cpp)]
 
@@ -1447,7 +1447,7 @@ LPCTSTR m_pszAppName;
 
 ##  <a name="m_pszexename"></a>  CWinApp::m_pszExeName
 
-包含不带扩展名的应用程序的可执行文件的名称。
+包含应用程序的可执行文件的名称，但不包含扩展名。
 
 ```
 LPCTSTR m_pszExeName;
@@ -1455,10 +1455,10 @@ LPCTSTR m_pszExeName;
 
 ### <a name="remarks"></a>备注
 
-与不同[m_pszAppName](#m_pszappname)，此名称不能包含空格。 `m_pszExeName` 是类型的公共变量**const char**<strong>\*</strong>。
+与[m_pszAppName](#m_pszappname)不同，此名称不能包含空格。 `m_pszExeName`是**常量 char**<strong>\*</strong>类型的公共变量。
 
 > [!NOTE]
-> 如果你将值赋给`m_pszExeName`，它必须动态分配堆上。 `CWinApp`析构函数调用**免费**（与此指针)。 很多想要使用`_tcsdup`（） 运行时库函数来执行分配。 此外，释放分配新值之前将其与当前指针相关联的内存。 例如：
+> 如果向`m_pszExeName`赋值，则必须在堆上动态分配该值。 析构函数通过此指针调用 free （）。 `CWinApp` 很多时候需要使用`_tcsdup`（）运行时库函数来执行分配。 此外，在分配新值之前，释放与当前指针关联的内存。 例如:
 
 [!code-cpp[NVC_MFCWindowing#58](../../mfc/reference/codesnippet/cpp/cwinapp-class_20.cpp)]
 
@@ -1472,16 +1472,16 @@ LPCTSTR m_pszHelpFilePath;
 
 ### <a name="remarks"></a>备注
 
-默认情况下，框架初始化`m_pszHelpFilePath`到与应用程序的名称"。HLP"追加。 若要更改的帮助文件的名称，设置`m_pszHelpFilePath`以指向包含所需的帮助文件的完整名称的字符串。 若要执行此操作方便位置是在应用程序的[InitInstance](#initinstance)函数。 `m_pszHelpFilePath` 是类型的公共变量**const char**<strong>\*</strong>。
+默认情况下，框架使用`m_pszHelpFilePath` "" 初始化为应用程序的名称。尚未附加。 若要更改帮助文件的名称，请将`m_pszHelpFilePath`设置为指向包含所需帮助文件的完整名称的字符串。 用于执行此操作的一个方便的位置是在应用程序的[InitInstance](#initinstance)函数中。 `m_pszHelpFilePath`是**常量 char**<strong>\*</strong>类型的公共变量。
 
 > [!NOTE]
-> 如果你将值赋给`m_pszHelpFilePath`，它必须动态分配堆上。 `CWinApp`析构函数调用**免费**（与此指针)。 很多想要使用`_tcsdup`（） 运行时库函数来执行分配。 此外，释放分配新值之前将其与当前指针相关联的内存。 例如:
+> 如果向`m_pszHelpFilePath`赋值，则必须在堆上动态分配该值。 析构函数通过此指针调用 free （）。 `CWinApp` 很多时候需要使用`_tcsdup`（）运行时库函数来执行分配。 此外，在分配新值之前，释放与当前指针关联的内存。 例如:
 
 [!code-cpp[NVC_MFCWindowing#59](../../mfc/reference/codesnippet/cpp/cwinapp-class_21.cpp)]
 
 ##  <a name="m_pszprofilename"></a>  CWinApp::m_pszProfileName
 
-包含在应用程序的名称。INI 文件。
+包含应用程序的名称。INI 文件。
 
 ```
 LPCTSTR m_pszProfileName;
@@ -1489,16 +1489,16 @@ LPCTSTR m_pszProfileName;
 
 ### <a name="remarks"></a>备注
 
-`m_pszProfileName` 是类型的公共变量**const char**<strong>\*</strong>。
+`m_pszProfileName`是**常量 char**<strong>\*</strong>类型的公共变量。
 
 > [!NOTE]
-> 如果你将值赋给`m_pszProfileName`，它必须动态分配堆上。 `CWinApp`析构函数调用**免费**（与此指针)。 很多想要使用`_tcsdup`（） 运行时库函数来执行分配。 此外，释放分配新值之前将其与当前指针相关联的内存。 例如:
+> 如果向`m_pszProfileName`赋值，则必须在堆上动态分配该值。 析构函数通过此指针调用 free （）。 `CWinApp` 很多时候需要使用`_tcsdup`（）运行时库函数来执行分配。 此外，在分配新值之前，释放与当前指针关联的内存。 例如:
 
 [!code-cpp[NVC_MFCWindowing#60](../../mfc/reference/codesnippet/cpp/cwinapp-class_22.cpp)]
 
-##  <a name="m_pszregistrykey"></a>  CWinApp::m_pszRegistryKey
+##  <a name="m_pszregistrykey"></a>CWinApp：： m_pszRegistryKey
 
-用于确定，在注册表或 INI 文件中，应用程序配置文件设置的存储位置。
+用于确定在注册表或 INI 文件中存储应用程序配置文件设置的位置。
 
 ```
 LPCTSTR m_pszRegistryKey;
@@ -1506,17 +1506,17 @@ LPCTSTR m_pszRegistryKey;
 
 ### <a name="remarks"></a>备注
 
-通常情况下，此数据成员将被处理为只读的。
+通常，此数据成员被视为只读。
 
-- 值存储到注册表项。 应用程序配置文件设置的名称追加到以下注册表项：HKEY_CURRENT_USER/软件/LocalAppWizard 生成 /。
+- 值存储在注册表项中。 应用程序配置文件设置的名称将追加到以下注册表项：HKEY_CURRENT_USER/Software/LocalAppWizard。
 
-如果你将值赋给`m_pszRegistryKey`，它必须动态分配堆上。 `CWinApp`析构函数调用**免费**（与此指针)。 很多想要使用`_tcsdup`（） 运行时库函数来执行分配。 此外，释放分配新值之前将其与当前指针相关联的内存。 例如：
+如果向`m_pszRegistryKey`赋值，则必须在堆上动态分配该值。 析构函数通过此指针调用 free （）。 `CWinApp` 很多时候需要使用`_tcsdup`（）运行时库函数来执行分配。 此外，在分配新值之前，释放与当前指针关联的内存。 例如:
 
 [!code-cpp[NVC_MFCWindowing#61](../../mfc/reference/codesnippet/cpp/cwinapp-class_23.cpp)]
 
 ##  <a name="m_pszappid"></a>  CWinApp::m_pszAppID
 
-应用程序用户模型 id。
+应用程序用户模型 ID。
 
 ```
 LPCTSTR m_pszAppID;
@@ -1524,7 +1524,7 @@ LPCTSTR m_pszAppID;
 
 ### <a name="remarks"></a>备注
 
-##  <a name="oncontexthelp"></a>  CWinApp::OnContextHelp
+##  <a name="oncontexthelp"></a>CWinApp：： OnContextHelp
 
 处理应用程序中的 SHIFT + F1 帮助。
 
@@ -1534,13 +1534,13 @@ afx_msg void OnContextHelp();
 
 ### <a name="remarks"></a>备注
 
-必须添加`ON_COMMAND( ID_CONTEXT_HELP, OnContextHelp )`语句在`CWinApp`类消息映射，还将添加快捷键对应表项，通常 SHIFT + F1，若要启用此成员函数。
+您必须将`ON_COMMAND( ID_CONTEXT_HELP, OnContextHelp )`语句添加`CWinApp`到类消息映射，同时添加快捷键对应表项（通常为 SHIFT + F1）来启用此成员函数。
 
-`OnContextHelp` 将应用程序进入帮助模式。 然后，光标更改为一个箭头和问号，以及用户可以将鼠标指针移动，并按鼠标左键选择对话框、 窗口、 菜单或命令按钮。 此成员函数检索光标下的对象的帮助上下文，并调用 Windows 函数 WinHelp 与该帮助上下文。
+`OnContextHelp`将应用程序置于帮助模式。 光标更改为箭头和问号，然后用户可以移动鼠标指针并按鼠标左键以选择对话框、窗口、菜单或命令按钮。 此成员函数检索光标下的对象的帮助上下文，并通过该帮助上下文调用 Windows 函数 WinHelp。
 
-##  <a name="onddecommand"></a>  CWinApp::OnDDECommand
+##  <a name="onddecommand"></a>CWinApp：： OnDDECommand
 
-由框架调用，当主框架窗口收到 DDE 执行消息。
+在主框架窗口接收 DDE 执行消息时由框架调用。
 
 ```
 virtual BOOL OnDDECommand(LPTSTR lpszCommand);
@@ -1549,21 +1549,21 @@ virtual BOOL OnDDECommand(LPTSTR lpszCommand);
 ### <a name="parameters"></a>参数
 
 *lpszCommand*<br/>
-指向以对应用程序收到的 DDE 命令字符串。
+指向应用程序收到的 DDE 命令字符串。
 
 ### <a name="return-value"></a>返回值
 
-如果处理该命令; 非零值否则为 0。
+如果处理该命令，则为非零值;否则为0。
 
 ### <a name="remarks"></a>备注
 
-默认实现检查命令是否打开的文档的请求，是否是这样，将打开指定的文档。 当用户双击数据文件时，Windows 文件管理器通常将发送此类 DDE 命令字符串。 重写此函数以处理其他 DDE 执行命令，如要打印的命令。
+默认实现检查命令是否是打开文档的请求，如果是，则打开指定的文档。 当用户双击数据文件时，Windows 文件管理器通常会发送此类 DDE 命令字符串。 重写此函数可处理其他 DDE 执行命令，如要打印的命令。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFCWindowing#48](../../mfc/reference/codesnippet/cpp/cwinapp-class_24.cpp)]
 
-##  <a name="onfilenew"></a>  CWinApp::OnFileNew
+##  <a name="onfilenew"></a>CWinApp：： OnFileNew
 
 实现 ID_FILE_NEW 命令。
 
@@ -1573,9 +1573,9 @@ afx_msg void OnFileNew();
 
 ### <a name="remarks"></a>备注
 
-必须添加`ON_COMMAND( ID_FILE_NEW, OnFileNew )`语句在`CWinApp`类消息映射，若要启用此成员函数。 如果启用，此函数将处理新文件的命令的执行。
+必须将`ON_COMMAND( ID_FILE_NEW, OnFileNew )`语句添加`CWinApp`到类消息映射，才能启用此成员函数。 如果启用，此函数将处理 File New 命令的执行。
 
-请参阅[技术说明 22](../../mfc/tn022-standard-commands-implementation.md)有关默认行为，并指导如何重写此成员函数的信息。
+有关默认行为的信息以及有关如何重写此成员函数的指导信息，请参阅[技术说明 22](../../mfc/tn022-standard-commands-implementation.md) 。
 
 ### <a name="example"></a>示例
 
@@ -1583,7 +1583,7 @@ afx_msg void OnFileNew();
 
 [!code-cpp[NVC_MFCWindowing#50](../../mfc/reference/codesnippet/cpp/cwinapp-class_26.cpp)]
 
-##  <a name="onfileopen"></a>  CWinApp::OnFileOpen
+##  <a name="onfileopen"></a>CWinApp：： OnFileOpen
 
 实现 ID_FILE_OPEN 命令。
 
@@ -1593,9 +1593,9 @@ afx_msg void OnFileOpen();
 
 ### <a name="remarks"></a>备注
 
-必须添加`ON_COMMAND( ID_FILE_OPEN, OnFileOpen )`语句在`CWinApp`类消息映射，若要启用此成员函数。 如果启用，此函数将处理的文件打开命令的执行。
+必须将`ON_COMMAND( ID_FILE_OPEN, OnFileOpen )`语句添加`CWinApp`到类消息映射，才能启用此成员函数。 如果启用，此函数将处理文件打开命令的执行。
 
-默认行为的信息和如何重写此成员函数的指南，请参阅[技术说明 22](../../mfc/tn022-standard-commands-implementation.md)。
+有关如何重写此成员函数的默认行为和指南的信息，请参阅[技术说明 22](../../mfc/tn022-standard-commands-implementation.md)。
 
 ### <a name="example"></a>示例
 
@@ -1603,7 +1603,7 @@ afx_msg void OnFileOpen();
 
 [!code-cpp[NVC_MFCWindowing#50](../../mfc/reference/codesnippet/cpp/cwinapp-class_26.cpp)]
 
-##  <a name="onfileprintsetup"></a>  CWinApp::OnFilePrintSetup
+##  <a name="onfileprintsetup"></a>CWinApp：： OnFilePrintSetup
 
 实现 ID_FILE_PRINT_SETUP 命令。
 
@@ -1613,9 +1613,9 @@ afx_msg void OnFilePrintSetup();
 
 ### <a name="remarks"></a>备注
 
-必须添加`ON_COMMAND( ID_FILE_PRINT_SETUP, OnFilePrintSetup )`语句在`CWinApp`类消息映射，若要启用此成员函数。 如果启用，此函数将处理文件打印命令的执行。
+必须将`ON_COMMAND( ID_FILE_PRINT_SETUP, OnFilePrintSetup )`语句添加`CWinApp`到类消息映射，才能启用此成员函数。 如果启用，此函数将处理文件打印命令的执行。
 
-默认行为的信息和如何重写此成员函数的指南，请参阅[技术说明 22](../../mfc/tn022-standard-commands-implementation.md)。
+有关如何重写此成员函数的默认行为和指南的信息，请参阅[技术说明 22](../../mfc/tn022-standard-commands-implementation.md)。
 
 ### <a name="example"></a>示例
 
@@ -1623,7 +1623,7 @@ afx_msg void OnFilePrintSetup();
 
 [!code-cpp[NVC_MFCWindowing#50](../../mfc/reference/codesnippet/cpp/cwinapp-class_26.cpp)]
 
-##  <a name="onhelp"></a>  CWinApp::OnHelp
+##  <a name="onhelp"></a>CWinApp：： OnHelp
 
 处理应用程序中的 F1 帮助（使用当前上下文）。
 
@@ -1633,15 +1633,15 @@ afx_msg void OnHelp();
 
 ### <a name="remarks"></a>备注
 
-通常，您还将添加 F1 键的加速键条目。 启用 F1 键是仅使用约定，不是要求。
+通常还会为 F1 键添加快捷键输入。 启用 F1 键只是一种约定，而不是要求。
 
-必须添加`ON_COMMAND( ID_HELP, OnHelp )`语句在`CWinApp`类消息映射，若要启用此成员函数。 如果启用，，在用户按 F1 键时由框架调用。
+必须将`ON_COMMAND( ID_HELP, OnHelp )`语句添加`CWinApp`到类消息映射，才能启用此成员函数。 如果启用，则在用户按 F1 键时由框架调用。
 
-此消息处理程序函数的默认实现确定对应于当前窗口、 对话框或菜单项，然后调用 WINHELP 的帮助上下文。EXE。 如果目前没有上下文，该函数将使用默认上下文。
+此消息处理函数的默认实现确定与当前窗口、对话框或菜单项对应的帮助上下文，然后调用 WINHELP.EXE. 如果当前没有可用的上下文，则函数将使用默认上下文。
 
-重写此成员函数设置为窗口、 对话框、 菜单项或当前具有焦点的工具栏按钮以外的帮助上下文。 调用`WinHelp`与所需帮助上下文 id。
+重写此成员函数以将帮助上下文设置为当前具有焦点的窗口、对话框、菜单项或工具栏按钮以外的内容。 用`WinHelp`所需的帮助上下文 ID 调用。
 
-##  <a name="onhelpfinder"></a>  CWinApp::OnHelpFinder
+##  <a name="onhelpfinder"></a>CWinApp：： OnHelpFinder
 
 处理 ID_HELP_FINDER 和 ID_DEFAULT_HELP 命令。
 
@@ -1651,9 +1651,9 @@ afx_msg void OnHelpFinder();
 
 ### <a name="remarks"></a>备注
 
-必须添加`ON_COMMAND( ID_HELP_FINDER, OnHelpFinder )`语句在`CWinApp`类消息映射，若要启用此成员函数。 如果启用，框架将调用此消息处理程序函数，当应用程序的用户选择要调用的帮助查找器命令`WinHelp`与标准**HELP_FINDER**主题。
+必须将`ON_COMMAND( ID_HELP_FINDER, OnHelpFinder )`语句添加`CWinApp`到类消息映射，才能启用此成员函数。 如果启用，则当应用程序的用户选择要通过标准`WinHelp` **HELP_FINDER**主题调用的帮助查找程序命令时，框架会调用此消息处理程序函数。
 
-##  <a name="onhelpindex"></a>  CWinApp::OnHelpIndex
+##  <a name="onhelpindex"></a>CWinApp：： OnHelpIndex
 
 处理 ID_HELP_INDEX 命令并提供默认帮助主题。
 
@@ -1663,9 +1663,9 @@ afx_msg void OnHelpIndex();
 
 ### <a name="remarks"></a>备注
 
-必须添加`ON_COMMAND( ID_HELP_INDEX, OnHelpIndex )`语句在`CWinApp`类消息映射，若要启用此成员函数。 如果启用，框架将调用此消息处理程序函数，当应用程序的用户选择要调用的帮助索引命令`WinHelp`与标准**HELP_INDEX**主题。
+必须将`ON_COMMAND( ID_HELP_INDEX, OnHelpIndex )`语句添加`CWinApp`到类消息映射，才能启用此成员函数。 如果启用，则当应用程序的用户选择要通过标准`WinHelp` **HELP_INDEX**主题调用的帮助索引命令时，框架会调用此消息处理程序函数。
 
-##  <a name="onhelpusing"></a>  CWinApp::OnHelpUsing
+##  <a name="onhelpusing"></a>CWinApp：： OnHelpUsing
 
 处理 ID_HELP_USING 命令。
 
@@ -1675,11 +1675,11 @@ afx_msg void OnHelpUsing();
 
 ### <a name="remarks"></a>备注
 
-必须添加`ON_COMMAND( ID_HELP_USING, OnHelpUsing )`语句在`CWinApp`类消息映射，若要启用此成员函数。 你的应用程序在用户选择要调用的帮助使用命令时，框架将调用此消息处理程序函数`WinHelp`应用程序与标准**HELP_HELPONHELP**主题。
+必须将`ON_COMMAND( ID_HELP_USING, OnHelpUsing )`语句添加`CWinApp`到类消息映射，才能启用此成员函数。 当你的应用程序的用户使用命令调用`WinHelp`具有标准**HELP_HELPONHELP**主题的应用程序时，框架会调用此消息处理程序函数。
 
-##  <a name="onidle"></a>  CWinApp::OnIdle
+##  <a name="onidle"></a>CWinApp：： OnIdle
 
-重写此成员函数以执行空闲处理。
+重写此成员函数以执行空闲时处理。
 
 ```
 virtual BOOL OnIdle(LONG lCount);
@@ -1688,44 +1688,44 @@ virtual BOOL OnIdle(LONG lCount);
 ### <a name="parameters"></a>参数
 
 *lCount*<br/>
-每次增加计数器的数值`OnIdle`当应用程序的消息队列为空时调用。 每次处理新消息时，此计数是置为 0。 可以使用*lCount*参数，以确定的相对应用程序而不会处理一条消息处于空闲状态的时间长度。
+当应用程序的消息`OnIdle`队列为空时，每次调用一个计数器。 每次处理新消息时，此计数都将重置为0。 你可以使用*lCount*参数来确定应用程序处于空闲状态的时间，而不处理消息。
 
 ### <a name="return-value"></a>返回值
 
-非零值，接收更多空闲处理时间;如果需要没有更多空闲时间为 0。
+若要接收更多空闲处理时间，则为非零值;如果不再需要空闲时间，则为0。
 
 ### <a name="remarks"></a>备注
 
-`OnIdle` 默认消息循环中应用程序的消息队列为空时调用。 使用重写调用您自己的背景空闲处理程序的任务。
+`OnIdle`当应用程序的消息队列为空时，在默认消息循环中调用。 使用替代来调用自己的后台空闲处理程序任务。
 
-`OnIdle` 应返回 0 以指示需要没有空闲的处理时间。 *LCount*参数会在每次递增`OnIdle`时消息队列为空，并且将重置为 0 每次处理新消息时调用。 您可以调用基于此计数将不同的空闲例程。
+`OnIdle`应返回0以指示不需要空闲处理时间。 每次在消息队列为空`OnIdle`时调用 lCount 参数，并在每次处理新消息时重置为0。 可以根据此计数调用不同的空闲例程。
 
-下面概述了空闲循环处理：
+下面汇总了空闲循环处理：
 
-1. 如果 Microsoft 基础类库中的消息循环检查消息队列，并找到不挂起消息，则会调用`OnIdle`应用程序对象和提供 0 作为*lCount*参数。
+1. 如果 Microsoft 基础类库中的消息循环检查消息队列并找不到任何挂起消息，它将`OnIdle`调用应用程序对象，并将0作为*lCount*参数提供。
 
-2. `OnIdle` 执行一些处理，并返回一个非零值以指示它应再次调用，以执行进一步处理。
+2. `OnIdle`执行一些处理并返回一个非零值，以指示应再次调用它以执行进一步处理。
 
-3. 消息循环再次检查消息队列。 如果没有消息处于挂起状态，则会调用`OnIdle`同样，递增*lCount*参数。
+3. 消息循环再次检查消息队列。 如果没有挂起的消息，则会`OnIdle`再次调用，从而递增*lCount*参数。
 
-4. 最终，`OnIdle`完成处理其空闲状态的所有任务，并返回 0。 这将告知消息循环来停止调用`OnIdle`直到从消息队列接收到下一条消息，此时空闲周期会重新启动并将参数设置为 0。
+4. 最终， `OnIdle`处理完所有空闲任务并返回0。 这会告知消息循环停止调用`OnIdle` ，直到从消息队列接收到下一条消息为止，此时空闲周期会在参数设置为0的情况下重新启动。
 
-不执行耗时较长的任务期间`OnIdle`因为您的应用程序无法处理用户输入，直到`OnIdle`返回。
+不会在过程中执行`OnIdle`漫长的任务，因为应用程序在`OnIdle`返回之前无法处理用户输入。
 
 > [!NOTE]
-> 默认实现`OnIdle`更新命令用户界面对象，如菜单项和工具栏按钮，它执行内部数据结构清理。 因此，如果重写`OnIdle`，必须调用`CWinApp::OnIdle`与`lCount`中重写版本。 首先调用所有基类空闲处理 (即，直到基类`OnIdle`返回 0)。 如果需要执行的工作，基类处理完成前，查看要选择适当的基类实现*lCount*来完成工作年限。
+> 的`OnIdle`默认实现将更新命令用户界面对象（如菜单项和工具栏按钮），并执行内部数据结构清理。 因此，如果重写`OnIdle`，则必须在`CWinApp::OnIdle`重写`lCount`的版本中调用。 首先调用所有基类空闲处理（即，在基类`OnIdle`返回0之前）。 如果需要在基本类处理完成之前执行工作，请查看基类实现，以选择要在其中执行工作的适当*lCount* 。
 
-如果不希望`OnIdle`若要从消息队列检索消息时调用，可以重写[CWinThreadIsIdleMessage](../../mfc/reference/cwinthread-class.md#isidlemessage)。 如果应用程序设置非常短的计时器，或系统将要发送 WM_SYSTIMER 消息，然后`OnIdle`将重复调用，会降低性能。
+如果您不希望`OnIdle`每次从消息队列检索消息时都要调用，则可以重写[CWinThreadIsIdleMessage](../../mfc/reference/cwinthread-class.md#isidlemessage)。 如果应用程序设置了非常短的计时器，或者系统正在发送 WM_SYSTIMER 消息，则`OnIdle`会反复调用并降低性能。
 
 ### <a name="example"></a>示例
 
-以下两个示例演示如何使用`OnIdle`。 第一个示例处理使用的两个空闲任务*lCount*自变量确定任务的优先顺序。 第一个任务是高优先级，这时应执行它只要有可能。 第二个任务是不太重要，只有在没有用户输入中的长时间暂停时应完成。 请注意到基类版本的调用`OnIdle`。 第二个示例管理一组具有不同优先级的空闲任务。
+下面两个示例演示如何使用`OnIdle`。 第一个示例使用*lCount*参数处理两个空闲任务，以确定任务的优先级。 第一个任务的优先级较高，应尽可能执行此任务。 第二个任务不太重要，只应在用户输入中存在长时间暂停时才执行。 请注意对的基类版本`OnIdle`的调用。 第二个示例管理一组具有不同优先级的空闲任务。
 
 [!code-cpp[NVC_MFCWindowing#51](../../mfc/reference/codesnippet/cpp/cwinapp-class_27.cpp)]
 
-##  <a name="opendocumentfile"></a>  CWinApp::OpenDocumentFile
+##  <a name="opendocumentfile"></a>CWinApp：： OpenDocumentFile
 
-框架调用此方法打开的命名[CDocument](../../mfc/reference/cdocument-class.md)应用程序文件。
+框架调用此方法以打开应用程序的命名[CDocument](../../mfc/reference/cdocument-class.md)文件。
 
 ```
 virtual CDocument* OpenDocumentFile(
@@ -1736,26 +1736,26 @@ virtual CDocument* OpenDocumentFile(
 ### <a name="parameters"></a>参数
 
 *lpszFileName*<br/>
-[in]要打开的文件的名称。
+中要打开的文件的名称。
 
 *bAddToMRU*<br/>
-[in]TRUE 表示的文档是一个最新的文件;FALSE 表示该文档不是最新的文件之一。
+中如果为 TRUE，则表示文档是最新的文件之一;FALSE 表示文档不是最新的文件之一。
 
 ### <a name="return-value"></a>返回值
 
-一个指向`CDocument`如果成功，否则该值为 NULL。
+如果成功，则`CDocument`为指向的指针; 否则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-如果具有该名称的文档已打开，包含该文档的第一个框架窗口将成为焦点。 如果应用程序支持多个文档模板，框架将使用的文件扩展名以查找相应的文档模板尝试加载该文档。 如果成功，文档模板然后创建框架窗口和文档的视图。
+如果具有该名称的文档已打开，则包含该文档的第一个框架窗口将获得焦点。 如果应用程序支持多个文档模板，则框架将使用文件扩展名查找适当的文档模板以尝试加载文档。 如果成功，文档模板将为文档创建框架窗口和视图。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFCWindowing#52](../../mfc/reference/codesnippet/cpp/cwinapp-class_16.cpp)]
 
-##  <a name="parsecommandline"></a>  CWinApp::ParseCommandLine
+##  <a name="parsecommandline"></a>CWinApp：:P arseCommandLine
 
-调用此成员函数以分析命令行并为发送参数，一次一个地[CCommandLineInfo::ParseParam](../../mfc/reference/ccommandlineinfo-class.md#parseparam)。
+调用此成员函数以分析命令行，并一次将参数发送到[CCommandLineInfo：:P arseparam](../../mfc/reference/ccommandlineinfo-class.md#parseparam)。
 
 ```
 void ParseCommandLine(CCommandLineInfo& rCmdInfo);
@@ -1764,27 +1764,27 @@ void ParseCommandLine(CCommandLineInfo& rCmdInfo);
 ### <a name="parameters"></a>参数
 
 *rCmdInfo*<br/>
-对引用[CCommandLineInfo](../../mfc/reference/ccommandlineinfo-class.md)对象。
+对[CCommandLineInfo](../../mfc/reference/ccommandlineinfo-class.md)对象的引用。
 
 ### <a name="remarks"></a>备注
 
-当你启动新的 MFC 项目使用应用程序向导时，应用程序向导将创建的本地实例`CCommandLineInfo`，然后调用`ProcessShellCommand`并`ParseCommandLine`中[InitInstance](#initinstance)成员函数。 命令行如下所示如下所述的路由：
+使用应用程序向导启动新的 MFC 项目时，应用程序向导将创建`CCommandLineInfo`的本地实例，然后在[InitInstance](#initinstance)成员函数中调用`ProcessShellCommand`和`ParseCommandLine` 。 命令行遵循如下所述的路由：
 
-1. 在创建后`InitInstance`，则`CCommandLineInfo`对象传递给`ParseCommandLine`。
+1. 在中`InitInstance`创建之后`CCommandLineInfo` ，对象将传递`ParseCommandLine`给。
 
-2. `ParseCommandLine` 然后，调用`CCommandLineInfo::ParseParam`重复一次针对每个参数。
+2. `ParseCommandLine`然后， `CCommandLineInfo::ParseParam`对每个参数重复调用一次。
 
-3. `ParseParam` 填充`CCommandLineInfo`对象，然后传递给[processshellcommand 之后发生](#processshellcommand)。
+3. `ParseParam`填充对象，然后将该对象传递给[ProcessShellCommand。](#processshellcommand) `CCommandLineInfo`
 
-4. `ProcessShellCommand` 处理命令行参数和标志。
+4. `ProcessShellCommand`处理命令行参数和标志。
 
-请注意，可以调用`ParseCommandLine`直接根据需要。
+请注意，你可以`ParseCommandLine`根据需要直接调用。
 
-有关命令行标志的说明，请参阅[CCommandLineInfo::m_nShellCommand](../../mfc/reference/ccommandlineinfo-class.md#m_nshellcommand)。
+有关命令行标志的说明，请参阅[CCommandLineInfo：： m_nShellCommand](../../mfc/reference/ccommandlineinfo-class.md#m_nshellcommand)。
 
-##  <a name="pretranslatemessage"></a>  CWinApp::PreTranslateMessage
+##  <a name="pretranslatemessage"></a>CWinApp：:P reTranslateMessage
 
-重写此函数可对筛选器窗口消息发送到 Windows 函数之前[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)并[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage)默认实现将执行加速键转换，因此您必须调用`CWinApp::PreTranslateMessage`成员函数在重写版本。
+重写此函数以筛选窗口消息，然后将其调度到 Windows 函数[TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage)和[DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) 。默认实现将执行快捷键转换，因此必须调用`CWinApp::PreTranslateMessage`重写的版本中的成员函数。
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -1793,15 +1793,15 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>参数
 
 *pMsg*<br/>
-一个指向[MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg)结构，其中包含要处理的消息。
+指向包含要处理的消息的[MSG](/windows/win32/api/winuser/ns-winuser-msg)结构的指针。
 
 ### <a name="return-value"></a>返回值
 
-如果消息已完全处理，在非零`PreTranslateMessage`，并且不应进一步处理。 如果应以正常方式处理消息，则为零。
+如果消息完全在中`PreTranslateMessage`处理并且不应进一步处理，则为非零值。 如果应以正常方式处理消息，则为零。
 
 ##  <a name="processmessagefilter"></a>  CWinApp::ProcessMessageFilter
 
-框架的挂钩函数调用此成员函数来筛选和响应特定 Windows 消息。
+框架的挂钩函数调用此成员函数来筛选和响应某些 Windows 消息。
 
 ```
 virtual BOOL ProcessMessageFilter(
@@ -1815,21 +1815,21 @@ virtual BOOL ProcessMessageFilter(
 指定挂钩代码。 此成员函数使用代码来确定如何处理*lpMsg。*
 
 *lpMsg*<br/>
-指向 Windows [MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg)结构。
+指向 Windows [MSG](/windows/win32/api/winuser/ns-winuser-msg)结构的指针。
 
 ### <a name="return-value"></a>返回值
 
-如果处理了消息; 非零值否则为 0。
+如果处理消息，则为非零值;否则为0。
 
 ### <a name="remarks"></a>备注
 
-挂钩函数处理事件发送到应用程序的正常消息之前处理。
+挂钩函数在将事件发送到应用程序的正常消息处理之前处理这些事件。
 
-如果重写此高级的功能，请务必调用基类版本，才能保持框架的挂钩处理。
+如果重写此高级功能，请确保调用基类版本以维护框架的挂钩处理。
 
 ##  <a name="processshellcommand"></a>  CWinApp::ProcessShellCommand
 
-调用此成员函数[InitInstance](#initinstance)以接受从传递的参数`CCommandLineInfo`标识的对象*rCmdInfo*，并执行指示的操作。
+此成员函数由[InitInstance](#initinstance)调用，以接受从`CCommandLineInfo` *rCmdInfo*标识的对象传递的参数，并执行指定的操作。
 
 ```
 BOOL ProcessShellCommand(CCommandLineInfo& rCmdInfo);
@@ -1838,25 +1838,25 @@ BOOL ProcessShellCommand(CCommandLineInfo& rCmdInfo);
 ### <a name="parameters"></a>参数
 
 *rCmdInfo*<br/>
-对引用[CCommandLineInfo](../../mfc/reference/ccommandlineinfo-class.md)对象。
+对[CCommandLineInfo](../../mfc/reference/ccommandlineinfo-class.md)对象的引用。
 
 ### <a name="return-value"></a>返回值
 
-如果已成功处理 shell 命令时，非零值。 如果 0，则返回从 FALSE [InitInstance](#initinstance)。
+如果成功处理 shell 命令，则为非零值。 如果为0，则从[InitInstance](#initinstance)返回 FALSE。
 
 ### <a name="remarks"></a>备注
 
-当你启动新的 MFC 项目使用应用程序向导时，应用程序向导将创建的本地实例`CCommandLineInfo`，然后调用`ProcessShellCommand`并[ParseCommandLine](#parsecommandline)中`InitInstance`成员函数。 命令行如下所示如下所述的路由：
+使用应用程序向导启动新的 MFC 项目时，应用程序向导将创建的`CCommandLineInfo`本地实例，然后在`InitInstance`成员函数中`ProcessShellCommand`调用和[ParseCommandLine](#parsecommandline) 。 命令行遵循如下所述的路由：
 
-1. 在创建后`InitInstance`，则`CCommandLineInfo`对象传递给`ParseCommandLine`。
+1. 在中`InitInstance`创建之后`CCommandLineInfo` ，对象将传递`ParseCommandLine`给。
 
-2. `ParseCommandLine` 然后调用[CCommandLineInfo::ParseParam](../../mfc/reference/ccommandlineinfo-class.md#parseparam)重复一次针对每个参数。
+2. `ParseCommandLine`然后，对每个参数重复调用[CCommandLineInfo：:P arseparam](../../mfc/reference/ccommandlineinfo-class.md#parseparam) 。
 
-3. `ParseParam` 填充`CCommandLineInfo`对象，然后传递给`ProcessShellCommand`。
+3. `ParseParam`填充对象，然后将该对象`ProcessShellCommand`传递给。 `CCommandLineInfo`
 
-4. `ProcessShellCommand` 处理命令行参数和标志。
+4. `ProcessShellCommand`处理命令行参数和标志。
 
-数据成员`CCommandLineInfo`标识的对象[CCommandLineInfo::m_nShellCommand](../../mfc/reference/ccommandlineinfo-class.md#m_nshellcommand)，将以下中定义的枚举类型的`CCommandLineInfo`类。
+`CCommandLineInfo`对象的数据成员（由[CCommandLineInfo：： m_nShellCommand](../../mfc/reference/ccommandlineinfo-class.md#m_nshellcommand)标识）是以下枚举类型，它`CCommandLineInfo`是在类中定义的。
 
 ```
 enum {
@@ -1868,11 +1868,11 @@ enum {
     };
 ```
 
-每个值的简要说明，请参阅`CCommandLineInfo::m_nShellCommand`。
+有关其中每个值的简要说明，请参阅`CCommandLineInfo::m_nShellCommand`。
 
 ##  <a name="processwndprocexception"></a>  CWinApp::ProcessWndProcException
 
-框架调用此成员函数，每当该处理程序不会捕获在某个应用程序的消息或命令处理程序引发的异常。
+每当处理程序未捕获某个应用程序的消息或命令处理程序中引发的异常时，框架都会调用此成员函数。
 
 ```
 virtual LRESULT ProcessWndProcException(
@@ -1883,26 +1883,26 @@ virtual LRESULT ProcessWndProcException(
 ### <a name="parameters"></a>参数
 
 *e*<br/>
-一个指向未捕获的异常。
+指向未捕获的异常的指针。
 
 *pMsg*<br/>
-一个[MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg)结构，它包含导致引发异常的 framework 的 windows 消息有关的信息。
+一种[MSG](/windows/win32/api/winuser/ns-winuser-msg)结构，其中包含导致框架引发异常的 windows 消息的相关信息。
 
 ### <a name="return-value"></a>返回值
 
-应返回到 Windows 的值。 通常这是 0 L 的 windows 消息，1 L (TRUE) 的命令消息。
+应返回给 Windows 的值。 通常，这是适用于 windows 消息的0L，是命令消息的1L （TRUE）。
 
 ### <a name="remarks"></a>备注
 
 请勿直接调用此成员函数。
 
-此成员函数的默认实现将创建一个消息框。 如果未捕获的异常源自菜单、 工具栏或快捷键命令失败，消息框将显示"命令失败"消息;否则，会显示"内部应用程序错误"消息。
+此成员函数的默认实现将创建一个消息框。 如果未捕获的异常是由菜单、工具栏或快捷键命令失败产生的，则消息框将显示 "命令失败" 消息;否则，它会显示 "内部应用程序错误" 消息。
 
-重写此成员函数以提供全局处理的异常。 如果你想要显示的消息框，只能调用的基本功能。
+重写此成员函数以提供异常的全局处理。 如果希望显示消息框，请仅调用基本功能。
 
-##  <a name="register"></a>  CWinApp::Register
+##  <a name="register"></a>CWinApp：： Register
 
-执行未由任何注册任务`RegisterShellFileTypes`。
+执行不由处理的`RegisterShellFileTypes`任何注册任务。
 
 ```
 virtual BOOL Register();
@@ -1914,11 +1914,11 @@ virtual BOOL Register();
 
 ### <a name="remarks"></a>备注
 
-默认实现只需返回 TRUE。 重写此函数可提供任何自定义的注册步骤。
+默认实现只返回 TRUE。 重写此函数以提供任何自定义注册步骤。
 
-##  <a name="registershellfiletypes"></a>  CWinApp::RegisterShellFileTypes
+##  <a name="registershellfiletypes"></a>CWinApp：： RegisterShellFileTypes
 
-调用此成员函数以使用 Windows 文件管理器注册的所有应用程序的文档类型。
+调用此成员函数以通过 Windows 文件管理器注册应用程序的所有文档类型。
 
 ```
 void RegisterShellFileTypes(BOOL bCompat = FALSE);
@@ -1927,22 +1927,22 @@ void RegisterShellFileTypes(BOOL bCompat = FALSE);
 ### <a name="parameters"></a>参数
 
 *bCompat*<br/>
-[in]TRUE 添加打印和打印到，允许用户直接从 shell 中，或通过将文件拖到打印机对象打印文件的 shell 命令的注册条目。 它还添加 DefaultIcon 密钥。 默认情况下，此参数为 FALSE 的向后兼容性。
+中如果为 TRUE，则会向打印和打印 shell 命令的注册项，允许用户从 shell 直接打印文件，或通过将文件拖动到打印机对象。 它还会添加一个 DefaultIcon 键。 默认情况下，此参数为 FALSE，以便向后兼容。
 
 ### <a name="remarks"></a>备注
 
-这允许用户以打开通过文件管理器中双击从您的应用程序创建的数据文件。 调用`RegisterShellFileTypes`调用之后[AddDocTemplate](#adddoctemplate)为每个应用程序中的文档模板。 此外调用[EnableShellOpen](#enableshellopen)成员函数调用时`RegisterShellFileTypes`。
+这样，用户就可以通过在文件管理器中双击应用程序来打开它创建的数据文件。 为`RegisterShellFileTypes`应用程序中的每个文档模板调用[AddDocTemplate](#adddoctemplate)后调用。 调用`RegisterShellFileTypes`时，还应调用[EnableShellOpen](#enableshellopen)成员函数。
 
-`RegisterShellFileTypes` 循环的列表[CDocTemplate](../../mfc/reference/cdoctemplate-class.md)应用程序维护和，为每个文档模板，将项添加到注册数据库的 Windows 维护文件关联的对象。 文件管理器使用这些条目以打开数据文件，当用户双击它。 这消除了需要寄送。REG 文件，其应用程序。
+`RegisterShellFileTypes`循环访问应用程序维护的[CDocTemplate](../../mfc/reference/cdoctemplate-class.md)对象列表，并在每个文档模板中将条目添加到 Windows 为文件关联而维护的注册数据库。 用户双击时，文件管理器使用这些项打开数据文件。 这样就无需寄送。应用程序的 REG 文件。
 
 > [!NOTE]
-> `RegisterShellFileTypes` 仅适用于用户具有管理员权限运行程序。 如果程序不具有管理员权限，它不能更改注册表项。
+> `RegisterShellFileTypes`仅当用户使用管理员权限运行该程序时才起作用。 如果该程序没有管理员权限，则它不能更改注册表项。
 
-如果注册数据库已将给定的文件扩展名与另一种文件类型相关联，则会不创建任何新的关联。 请参阅`CDocTemplate`格式的字符串必须注册此信息的类。
+如果注册数据库已将给定的文件扩展名与其他文件类型关联，则不会创建新的关联。 有关注册此信息所需的字符串格式的信息，请参见类。`CDocTemplate`
 
-##  <a name="registerwithrestartmanager"></a>  CWinApp::RegisterWithRestartManager
+##  <a name="registerwithrestartmanager"></a>CWinApp：： RegisterWithRestartManager
 
-与重新启动管理器注册该应用程序。
+向重新启动管理器注册应用程序。
 
 ```
 virtual HRESULT RegisterWithRestartManager(
@@ -1963,30 +1963,30 @@ virtual HRESULT RegisterWithRestartManager(
 |||
 |-|-|
 |参数|描述|
-|*bRegisterRecoveryCallback*|[in]TRUE 表示应用程序的此实例使用恢复回调函数;FALSE 表示它没有。 应用程序意外退出时，框架将调用恢复回调函数。 有关详细信息，请参阅[CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)。|
-|*strRestartIdentifier*|[in]用于标识此重新启动管理器实例的唯一字符串。 重新启动管理器标识符是唯一的应用程序的每个实例。|
-|*pwzCommandLineArgs*|[in]一个字符串，包含从命令行的任何额外参数。|
-|*dwRestartFlags*|[in]重新启动管理器的可选标志。 有关详细信息，请参阅“备注”部分。|
-|*pRecoveryCallback*|[in]恢复回调函数。 此函数必须采用 LPVOID 参数作为输入并返回一个 dword 值。 默认恢复回调函数是`CWinApp::ApplicationRecoveryCallback`。|
-|*lpvParam*|[in]恢复回调函数的输入的参数。 有关详细信息，请参阅[CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)。|
-|*dwPingInterval*|[in]有关恢复回调函数以返回等待重新启动管理器的时间长度。 此参数是以毫秒为单位。|
-|*dwCallbackFlags*|[in]标志传递给恢复回调函数。 留待将来使用。|
+|*bRegisterRecoveryCallback*|中如果为 TRUE，则表示应用程序的此实例使用恢复回调函数;FALSE 指示它不存在。 当应用程序意外退出时，框架将调用恢复回调函数。 有关详细信息，请参阅[CWinApp：： ApplicationRecoveryCallback](#applicationrecoverycallback)。|
+|*strRestartIdentifier*|中标识重新启动管理器实例的唯一字符串。 重新启动管理器标识符对于应用程序的每个实例都是唯一的。|
+|*pwzCommandLineArgs*|中一个字符串，其中包含命令行中的任何额外参数。|
+|*dwRestartFlags*|中重新启动管理器的可选标志。 有关详细信息，请参阅“备注”部分。|
+|*pRecoveryCallback*|中恢复回调函数。 此函数必须采用 LPVOID 参数作为输入并返回 DWORD。 默认恢复回调函数为`CWinApp::ApplicationRecoveryCallback`。|
+|*lpvParam*|中恢复回调函数的输入参数。 有关详细信息，请参阅[CWinApp：： ApplicationRecoveryCallback](#applicationrecoverycallback)。|
+|*dwPingInterval*|中重新启动管理器等待恢复回调函数返回的时间长度。 此参数以毫秒为单位。|
+|*dwCallbackFlags*|中传递给恢复回调函数的标志。 留待将来使用。|
 
 ### <a name="return-value"></a>返回值
 
-如果此方法成功，则为 S_OK否则为错误代码。
+如果方法成功，则为 S_OK;否则为错误代码。
 
 ### <a name="remarks"></a>备注
 
-如果应用程序使用的默认 MFC 实现自动保存文件，则应使用的简单版本`RegisterWithRestartManager`。 使用简单的版本`RegisterWithRestartManager`如果你想要自定义应用程序的自动保存行为。
+如果你的应用程序使用正在文件的默认 MFC 实现，则应使用的简单版本`RegisterWithRestartManager`。 `RegisterWithRestartManager`如果要自定义应用程序的自动保存行为，请使用的复杂版本。
 
-如果调用此方法替换为空字符串*strRestartIdentifier*，`RegisterWithRestartManager`创建管理器的重新启动此实例的唯一标识符字符串。
+如果使用*strRestartIdentifier*的空字符串调用此方法， `RegisterWithRestartManager`则将为重新启动管理器的此实例创建唯一标识符字符串。
 
-当应用程序意外退出时，请重新启动管理器重新启动应用程序从命令行，并提供重新启动的唯一标识符作为可选参数。 在此方案中，框架将调用`RegisterWithRestartManager`两次。 第一个调用是来自[cwinapp:: Initinstance](#initinstance)用空字符串的字符串标识符。 然后，该方法[CWinApp::ProcessShellCommand](#processshellcommand)调用`RegisterWithRestartManager`具有唯一的重启标识符。
+当应用程序意外退出时，重新启动管理器将从命令行重启应用程序，并提供唯一的重新启动标识符作为可选参数。 在此方案中，框架调用`RegisterWithRestartManager`了两次。 第一次调用来自[CWinApp：： InitInstance](#initinstance) ，字符串标识符的字符串为空。 然后，方法[CWinApp：:P rocessshellcommand](#processshellcommand)调用`RegisterWithRestartManager`具有唯一重新启动标识符的。
 
-重新启动管理器中注册应用程序后，重新启动管理器监视应用程序。 如果应用程序意外退出，请重新启动管理器在关闭过程中调用恢复回调函数。 重新启动管理器等待*dwPingInterval*恢复回调函数的响应。 如果在此时间内未响应恢复回调函数，该应用程序退出时不执行恢复的回调函数。
+使用重新启动管理器注册应用程序之后，重新启动管理器将监视该应用程序。 如果应用程序意外退出，则重新启动管理器会在关闭过程中调用恢复回调函数。 重新启动管理器将等待*dwPingInterval*响应恢复回调函数的响应。 如果恢复回调函数在这段时间内没有响应，则会退出应用程序，而不执行恢复回调函数。
 
-默认情况下，dwRestartFlags 不受支持，但提供以供将来使用。 可能的值*dwRestartFlags*如下所示：
+默认情况下，不支持 dwRestartFlags，但可供将来使用。 *DwRestartFlags*的可能值如下：
 
 - RESTART_NO_CRASH
 
@@ -1996,9 +1996,9 @@ virtual HRESULT RegisterWithRestartManager(
 
 - RESTART_NO_REBOOT
 
-##  <a name="reopenpreviousfilesatrestart"></a>  CWinApp::ReopenPreviousFilesAtRestart
+##  <a name="reopenpreviousfilesatrestart"></a>CWinApp：： ReopenPreviousFilesAtRestart
 
-确定是否重新启动管理器重新打开该应用程序意外退出时，打开了文件。
+确定重新启动管理器是否重新打开应用程序意外退出时打开的文件。
 
 ```
 virtual BOOL ReopenPreviousFilesAtRestart() const;
@@ -2006,11 +2006,11 @@ virtual BOOL ReopenPreviousFilesAtRestart() const;
 
 ### <a name="return-value"></a>返回值
 
-TRUE 表示重新启动管理器重新打开以前打开的文件;FALSE 表示不重新启动管理器。
+TRUE 表示重新启动管理器重新打开以前打开的文件;FALSE 表示重新启动管理器未执行。
 
-##  <a name="restartinstance"></a>  CWinApp::RestartInstance
+##  <a name="restartinstance"></a>CWinApp：： RestartInstance
 
-处理重新启动管理器启动应用程序重启。
+处理重新启动管理器启动的应用程序重启。
 
 ```
 virtual BOOL CWinApp::RestartInstance();
@@ -2018,17 +2018,17 @@ virtual BOOL CWinApp::RestartInstance();
 
 ### <a name="return-value"></a>返回值
 
-数据恢复处理程序将打开以前打开的文档; 如果为 TRUE如果数据恢复处理程序中有错误，或者如果不有任何以前打开的文档，则为 FALSE。
+如果数据恢复处理程序打开以前打开的文档，则为 TRUE;如果数据恢复处理程序出现错误，或者没有以前打开的文档，则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-重新启动管理器重新启动时应用程序，框架将调用此方法。 此方法将检索的数据恢复处理程序并还原自动保存文件。 此方法调用[CDataRecoveryHandler::RestoreAutosavedDocuments](../../mfc/reference/cdatarecoveryhandler-class.md#restoreautosaveddocuments)来确定用户是否想要还原自动保存文件。
+当重新启动管理器重新启动应用程序时，框架会调用此方法。 此方法检索数据恢复处理程序并还原自动保存的文件。 此方法调用[CDataRecoveryHandler：： RestoreAutosavedDocuments](../../mfc/reference/cdatarecoveryhandler-class.md#restoreautosaveddocuments)来确定用户是否要还原自动保存的文件。
 
-如果此方法返回 FALSE [CDataRecoveryHandler](../../mfc/reference/cdatarecoveryhandler-class.md)确定没有任何打开的文档。 如果没有任何打开的文档，在应用程序通常启动。
+如果[CDataRecoveryHandler](../../mfc/reference/cdatarecoveryhandler-class.md)确定没有打开的文档，则此方法返回 FALSE。 如果没有打开的文档，应用程序将正常启动。
 
-##  <a name="restoreautosavedfilesatrestart"></a>  CWinApp::RestoreAutosavedFilesAtRestart
+##  <a name="restoreautosavedfilesatrestart"></a>CWinApp：： RestoreAutosavedFilesAtRestart
 
-确定是否重新启动管理器还原自动保存的文件，重新启动该应用程序时。
+确定重新启动管理器是否在重新启动应用程序时还原自动保存的文件。
 
 ```
 virtual BOOL RestoreAutosavedFilesAtRestart() const;
@@ -2036,11 +2036,11 @@ virtual BOOL RestoreAutosavedFilesAtRestart() const;
 
 ### <a name="return-value"></a>返回值
 
-TRUE 表示重新启动管理器还原自动保存设置文件。FALSE 表示不重新启动管理器。
+TRUE 表示重新启动管理器还原自动保存的文件;FALSE 表示重新启动管理器未执行。
 
-##  <a name="run"></a>  CWinApp::Run
+##  <a name="run"></a>CWinApp：： Run
 
-提供默认消息循环。
+提供默认的消息循环。
 
 ```
 virtual int Run();
@@ -2048,17 +2048,17 @@ virtual int Run();
 
 ### <a name="return-value"></a>返回值
 
-**Int**由返回值`WinMain`。
+返回`WinMain`的**整数**值。
 
 ### <a name="remarks"></a>备注
 
-`Run` 获取并将 Windows 消息调度之前应用程序收到取消 WM_QUIT 消息。 如果应用程序的消息队列当前不包含任何消息，`Run`调用[OnIdle](#onidle)来执行空闲处理。 传入消息转到[PreTranslateMessage](#pretranslatemessage)成员函数以进行特殊处理，然后对 Windows 函数`TranslateMessage`标准键盘翻译; 最后，`DispatchMessage`调用 Windows 函数。
+`Run`获取并调度 Windows 消息，直到应用程序收到 WM_QUIT 消息。 如果应用程序的消息队列当前不包含任何消息`Run` ，则会调用[OnIdle](#onidle)来执行空闲时处理。 传入消息将进入[PreTranslateMessage](#pretranslatemessage)成员函数进行特殊处理，然后进入 windows 函数`TranslateMessage`进行标准键盘转换`DispatchMessage` ; 最后，调用 windows 函数。
 
-`Run` 很少被重写，但您可以重写它以提供特殊行为。
+`Run`很少会重写，但你可以重写它以提供特殊行为。
 
-##  <a name="runautomated"></a>  CWinApp::RunAutomated
+##  <a name="runautomated"></a>CWinApp：： RunAutomated
 
-调用此函数可确定是否" **/Automation**" **-自动化**"选项是否存在，指示是否通过客户端应用程序启动服务器应用程序。
+调用此函数可确定是否存在 " **/Automation**" 或 " **-Automation**" 选项，该选项指示服务器应用程序是否已由客户端应用程序启动。
 
 ```
 BOOL RunAutomated();
@@ -2066,15 +2066,15 @@ BOOL RunAutomated();
 
 ### <a name="return-value"></a>返回值
 
-如果选项; 如果未找到非零值否则为 0。
+如果找到该选项，则为非零值;否则为0。
 
 ### <a name="remarks"></a>备注
 
-如果存在，是从命令行删除的选项。 OLE 自动化的详细信息，请参阅文章[自动化服务器](../../mfc/automation-servers.md)。
+如果存在，则从命令行中删除该选项。 有关 OLE 自动化的详细信息，请参阅[自动化服务器](../../mfc/automation-servers.md)一文。
 
-##  <a name="runembedded"></a>  CWinApp::RunEmbedded
+##  <a name="runembedded"></a>CWinApp：： RunEmbedded
 
-调用此函数可确定是否" **/嵌入**" **-Embedding**"选项是否存在，指示是否通过客户端应用程序启动服务器应用程序。
+调用此函数可确定是否存在 " **/Embedding**" 或 " **-嵌入**" 选项，该选项指示服务器应用程序是否已由客户端应用程序启动。
 
 ```
 BOOL RunEmbedded();
@@ -2082,15 +2082,15 @@ BOOL RunEmbedded();
 
 ### <a name="return-value"></a>返回值
 
-如果选项; 如果未找到非零值否则为 0。
+如果找到该选项，则为非零值;否则为0。
 
 ### <a name="remarks"></a>备注
 
-如果存在，是从命令行删除的选项。 嵌入的详细信息，请参阅文章[服务器：实现服务器](../../mfc/servers-implementing-a-server.md)。
+如果存在，则从命令行中删除该选项。 有关嵌入的详细信息，请参阅文章[服务器：实现服务器](../../mfc/servers-implementing-a-server.md)。
 
-##  <a name="saveallmodified"></a>  CWinApp::SaveAllModified
+##  <a name="saveallmodified"></a>CWinApp：： SaveAllModified
 
-调用由框架以保存所有文档时应用程序的主框架窗口将会关闭，或通过 WM_QUERYENDSESSION 消息。
+当应用程序的主框架窗口关闭或 WM_QUERYENDSESSION 消息时，由框架调用以保存所有文档。
 
 ```
 virtual BOOL SaveAllModified();
@@ -2098,15 +2098,15 @@ virtual BOOL SaveAllModified();
 
 ### <a name="return-value"></a>返回值
 
-如果可以安全地终止该应用程序; 非零值如果不安全，终止该应用程序为 0。
+如果终止应用程序，则为非零值;如果终止应用程序不安全，则为0。
 
 ### <a name="remarks"></a>备注
 
-此成员函数的默认实现调用[CDocument::SaveModified](../../mfc/reference/cdocument-class.md#savemodified)反过来的应用程序中的所有修改后文档的成员函数。
+此成员函数的默认实现为应用程序中的所有已修改的文档依次调用[CDocument：： SaveModified](../../mfc/reference/cdocument-class.md#savemodified)成员函数。
 
-##  <a name="selectprinter"></a>  CWinApp::SelectPrinter
+##  <a name="selectprinter"></a>CWinApp：： SelectPrinter
 
-调用此成员函数以选择特定打印机，然后释放以前在打印对话框中选定的打印机。
+调用此成员函数以选择特定打印机，并释放之前在 "打印" 对话框中选择的打印机。
 
 ```
 void SelectPrinter(
@@ -2118,19 +2118,19 @@ void SelectPrinter(
 ### <a name="parameters"></a>参数
 
 *hDevNames*<br/>
-句柄[DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames)标识驱动程序、 设备和特定打印机的输出端口名称的结构。
+标识特定打印机的驱动程序、设备和输出端口名称的[DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames)结构的句柄。
 
 *hDevMode*<br/>
-句柄[DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)结构，它指定有关设备初始化和环境的打印机信息。
+[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)结构的句柄，它指定有关打印机的设备初始化和环境的信息。
 
 *bFreeOld*<br/>
-释放以前选定的打印机。
+释放以前选择的打印机。
 
 ### <a name="remarks"></a>备注
 
-如果这两个*hDevMode*并*hDevNames*均为 NULL，`SelectPrinter`使用当前的默认打印机。
+如果*hDevMode*和*hDevNames*都为 NULL， `SelectPrinter`则使用当前的默认打印机。
 
-##  <a name="sethelpmode"></a>  CWinApp::SetHelpMode
+##  <a name="sethelpmode"></a>CWinApp：： SetHelpMode
 
 设置应用程序的帮助类型。
 
@@ -2141,17 +2141,17 @@ void SetHelpMode(AFX_HELP_TYPE eHelpType);
 ### <a name="parameters"></a>参数
 
 *eHelpType*<br/>
-指定要使用帮助的类型。 请参阅[CWinApp::m_eHelpType](#m_ehelptype)有关详细信息。
+指定要使用的帮助的类型。 有关详细信息，请参阅[CWinApp：： m_eHelpType](#m_ehelptype) 。
 
 ### <a name="remarks"></a>备注
 
 设置应用程序的帮助类型。
 
-若要将应用程序的帮助类型设置为 HTMLHelp，可以调用[EnableHTMLHelp](#enablehtmlhelp)。 一旦调用`EnableHTMLHelp`，应用程序必须使用 HTMLHelp 作为其帮助应用程序。 如果你想要改为使用 WinHelp，则可以调用`SetHelpMode`并设置*eHelpType*到`afxWinHelp`。
+若要将应用程序的帮助类型设置为 HTMLHelp，可以调用[EnableHTMLHelp](#enablehtmlhelp)。 调用`EnableHTMLHelp`后，应用程序必须使用 HTMLHelp 作为其帮助应用程序。 如果要更改为使用 WinHelp，可以调用`SetHelpMode` ，并将*eHelpType*设置为。 `afxWinHelp`
 
-##  <a name="setregistrykey"></a>  CWinApp::SetRegistryKey
+##  <a name="setregistrykey"></a>CWinApp：： SetRegistryKey
 
-导致应用程序设置存储在注册表中而不是 INI 文件。
+导致应用程序设置存储在注册表中而不是 INI 文件中。
 
 ```
 void SetRegistryKey(LPCTSTR lpszRegistryKey);
@@ -2161,18 +2161,18 @@ void SetRegistryKey(UINT nIDRegistryKey);
 ### <a name="parameters"></a>参数
 
 *lpszRegistryKey*<br/>
-包含密钥的名称的字符串指针。
+指向包含密钥名称的字符串的指针。
 
 *nIDRegistryKey*<br/>
-包含的注册表项名称的字符串资源的 ID。
+包含注册表项名称的字符串资源的 ID。
 
 ### <a name="remarks"></a>备注
 
-此函数将*m_pszRegistryKey*，然后使用`GetProfileInt`， `GetProfileString`， `WriteProfileInt`，并且`WriteProfileString`的成员函数`CWinApp`。 如果已调用此函数，是也在注册表中存储的最近使用 (过的 MRU) 文件的列表。 注册表项通常是一家公司的名称。 它存储在以下形式的密钥：HKEY_CURRENT_USER\Software\\< 公司名称\>\\< 应用程序名称\>\\< 部分名称\>\\< 值名称\>。
+此函数设置*m_pszRegistryKey*， `GetProfileInt`然后由的、 `WriteProfileInt` `GetProfileString`、和`WriteProfileString`成员函数`CWinApp`使用。 如果调用了此函数，则最近使用的（MRU）文件列表也会存储在注册表中。 注册表项通常是公司的名称。 它存储在以下形式的键中：HKEY_CURRENT_USER\Software\\< 公司名称\>\>\><应用\\程序名称\\< 节名称 < 值名称\>。\\
 
 ##  <a name="supportsapplicationrecovery"></a>  CWinApp::SupportsApplicationRecovery
 
-确定是否重新启动管理器恢复的应用程序意外退出。
+确定重新启动管理器是否恢复意外退出的应用程序。
 
 ```
 virtual BOOL SupportsApplicationRecovery() const;
@@ -2180,11 +2180,11 @@ virtual BOOL SupportsApplicationRecovery() const;
 
 ### <a name="return-value"></a>返回值
 
-TRUE 表示重新启动管理器将恢复该应用程序;FALSE 表示不重新启动管理器。
+如果为 TRUE，则表示重新启动管理器恢复应用程序;FALSE 表示重新启动管理器未执行。
 
 ##  <a name="supportsautosaveatinterval"></a>  CWinApp::SupportsAutosaveAtInterval
 
-确定是否重新启动管理器则自动保存在固定时间间隔打开文档。
+确定重新启动管理器是否自动保存按固定间隔打开文档。
 
 ```
 virtual BOOL SupportsAutosaveAtInterval() const;
@@ -2192,11 +2192,11 @@ virtual BOOL SupportsAutosaveAtInterval() const;
 
 ### <a name="return-value"></a>返回值
 
-TRUE 表示重新启动管理器则自动保存打开的文档;FALSE 表示不重新启动管理器。
+TRUE 表示重新启动管理器自动保存打开的文档;FALSE 表示重新启动管理器未执行。
 
-##  <a name="supportsautosaveatrestart"></a>  CWinApp::SupportsAutosaveAtRestart
+##  <a name="supportsautosaveatrestart"></a>CWinApp：： SupportsAutosaveAtRestart
 
-确定是否重新启动管理器则自动保存任何打开文档时应用程序重新启动。
+确定在应用程序重新启动时重新启动管理器是否自动保存任何打开的文档。
 
 ```
 virtual BOOL SupportsAutosaveAtRestart() const;
@@ -2204,9 +2204,9 @@ virtual BOOL SupportsAutosaveAtRestart() const;
 
 ### <a name="return-value"></a>返回值
 
-TRUE 表示该应用程序重新启动; 时重新启动管理器则自动保存打开的文档FALSE 表示不重新启动管理器。
+TRUE 表示在应用程序重新启动时重新启动管理器自动保存打开文档;FALSE 表示重新启动管理器未执行。
 
-##  <a name="supportsrestartmanager"></a>  CWinApp::SupportsRestartManager
+##  <a name="supportsrestartmanager"></a>CWinApp：： SupportsRestartManager
 
 确定应用程序是否支持重新启动管理器。
 
@@ -2216,11 +2216,11 @@ virtual BOOL SupportsRestartManager() const;
 
 ### <a name="return-value"></a>返回值
 
-TRUE 表示该应用程序支持重新启动管理器;FALSE 表示应用程序不。
+如果为 TRUE，则表示应用程序支持重新启动管理器;FALSE 指示该应用程序不存在。
 
 ##  <a name="unregister"></a>  CWinApp::Unregister
 
-注销注册的应用程序对象的所有文件。
+注销应用程序对象注册的所有文件。
 
 ```
 virtual BOOL Unregister();
@@ -2232,19 +2232,19 @@ virtual BOOL Unregister();
 
 ### <a name="remarks"></a>备注
 
-`Unregister`函数撤消注册执行的应用程序对象和[注册](#register)函数。 通常情况下，这两个函数由 MFC 隐式调用，并因此不会出现在你的代码。
+函数将撤消应用程序对象和 [Register](#register) 函数执行的注册。  `Unregister` 通常，这两个函数都是由 MFC 隐式调用的，因此不会显示在代码中。
 
-重写此函数可执行的自定义注销步骤。
+重写此函数以执行自定义注销步骤。
 
-##  <a name="unregistershellfiletypes"></a>  CWinApp::UnregisterShellFileTypes
+##  <a name="unregistershellfiletypes"></a>CWinApp：： UnregisterShellFileTypes
 
-调用此成员函数以取消注册的所有应用程序的文档类型与 Windows 文件管理器。
+调用此成员函数可通过 Windows 文件管理器注销应用程序的所有文档类型。
 
 ```
 void UnregisterShellFileTypes();
 ```
 
-##  <a name="winhelp"></a>  CWinApp::WinHelp
+##  <a name="winhelp"></a>CWinApp：： WinHelp
 
 调用此成员函数以调用 WinHelp 应用程序。
 
@@ -2257,24 +2257,24 @@ virtual void WinHelp(
 ### <a name="parameters"></a>参数
 
 *dwData*<br/>
-指定其他数据。 使用的值取决于的值*nCmd*参数。
+指定其他数据。 使用的值取决于*nCmd*参数的值。
 
 *nCmd*<br/>
-指定请求的帮助的类型。 有关一系列可能的值以及它们如何影响*dwData*参数，请参阅[WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) Windows 函数。
+指定请求的帮助的类型。 有关可能值的列表以及这些值如何影响*dwData*参数，请参阅[WinHelp](/windows/win32/api/winuser/nf-winuser-winhelpw) Windows 函数。
 
 ### <a name="remarks"></a>备注
 
-该框架还会调用此函数以调用 WinHelp 应用程序。
+框架还调用此函数来调用 WinHelp 应用程序。
 
-当你的应用程序终止时，框架会自动关闭 WinHelp 应用程序。
+当应用程序终止时，框架将自动关闭 WinHelp 应用程序。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFCWindowing#53](../../mfc/reference/codesnippet/cpp/cwinapp-class_28.cpp)]
 
-##  <a name="writeprofilebinary"></a>  CWinApp::WriteProfileBinary
+##  <a name="writeprofilebinary"></a>CWinApp：： WriteProfileBinary
 
-调用此成员函数可将二进制数据写入到应用程序的注册表项的指定部分或。INI 文件。
+调用此成员函数将二进制数据写入应用程序的注册表或的指定部分。INI 文件。
 
 ```
 BOOL WriteProfileBinary(
@@ -2287,10 +2287,10 @@ BOOL WriteProfileBinary(
 ### <a name="parameters"></a>参数
 
 *lpszSection*<br/>
-指向以 null 结尾的字符串，该字符串指定包含条目的部分。 如果该节不存在，则创建它。 节的名称是用例无关;字符串可以是任何组合的大写和小写字母。
+指向以 null 结尾的字符串，该字符串指定包含条目的部分。 如果该节不存在，则创建它。 部分的名称独立于大小写;字符串可以是大写字母和小写字母的任意组合。
 
 *lpszEntry*<br/>
-指向包含到其中的值是要写入的条目的以 null 结尾的字符串。 如果该条目不存在指定的节中，将创建它。
+指向以 null 结尾的字符串，该字符串包含要将值写入到其中的项。 如果该条目不存在于指定的节中，则会创建它。
 
 *pData*<br/>
 指向要写入的数据。
@@ -2304,15 +2304,15 @@ BOOL WriteProfileBinary(
 
 ### <a name="example"></a>示例
 
-此示例使用`CWinApp* pApp = AfxGetApp();`CWinApp 类演示一种方法获取，`WriteProfileBinary`和`GetProfileBinary`可以从 MFC 应用程序中的任何函数使用。
+此示例使用`CWinApp* pApp = AfxGetApp();`来获取 CWinApp 类`WriteProfileBinary` ，说明如何在 MFC 应用程序`GetProfileBinary`中的任何函数中使用和。
 
 [!code-cpp[NVC_MFCWindowing#54](../../mfc/reference/codesnippet/cpp/cwinapp-class_29.cpp)]
 
-有关其他示例，请参阅示例[CWinApp::GetProfileBinary](#getprofilebinary)。
+对于另一个示例，请参阅[CWinApp：： GetProfileBinary](#getprofilebinary)的示例。
 
 ##  <a name="writeprofileint"></a>  CWinApp::WriteProfileInt
 
-调用此成员函数可将指定的值写入到应用程序的注册表项的指定部分或。INI 文件。
+调用此成员函数以将指定的值写入应用程序的注册表的指定部分或。INI 文件。
 
 ```
 BOOL WriteProfileInt(
@@ -2324,10 +2324,10 @@ BOOL WriteProfileInt(
 ### <a name="parameters"></a>参数
 
 *lpszSection*<br/>
-指向以 null 结尾的字符串，该字符串指定包含条目的部分。 如果该节不存在，则创建它。 节的名称是用例无关;字符串可以是任何组合的大写和小写字母。
+指向以 null 结尾的字符串，该字符串指定包含条目的部分。 如果该节不存在，则创建它。 部分的名称独立于大小写;字符串可以是大写字母和小写字母的任意组合。
 
 *lpszEntry*<br/>
-指向包含到其中的值是要写入的条目的以 null 结尾的字符串。 如果该条目不存在指定的节中，将创建它。
+指向以 null 结尾的字符串，该字符串包含要将值写入到其中的项。 如果该条目不存在于指定的节中，则会创建它。
 
 *nValue*<br/>
 包含要写入的值。
@@ -2338,15 +2338,15 @@ BOOL WriteProfileInt(
 
 ### <a name="example"></a>示例
 
-此示例使用`CWinApp* pApp = AfxGetApp();`CWinApp 类演示一种方法获取， `WriteProfileString`， `WriteProfileInt`， `GetProfileString`，和`GetProfileInt`可以从 MFC 应用程序中的任何函数使用。
+此示例使用`CWinApp* pApp = AfxGetApp();`来获取 CWinApp 类`WriteProfileString`，说明如何从 MFC 应用程序`WriteProfileInt`中的任何`GetProfileInt`函数使用、、 `GetProfileString`和。
 
 [!code-cpp[NVC_MFCWindowing#43](../../mfc/reference/codesnippet/cpp/cwinapp-class_9.cpp)]
 
-有关其他示例，请参阅示例[CWinApp::GetProfileInt](#getprofileint)。
+对于另一个示例，请参阅[CWinApp：： GetProfileInt](#getprofileint)的示例。
 
 ##  <a name="writeprofilestring"></a>  CWinApp::WriteProfileString
 
-调用此成员函数可将指定的字符串写入到应用程序的注册表项的指定部分或。INI 文件。
+调用此成员函数以将指定的字符串写入到应用程序的注册表的指定部分或。INI 文件。
 
 ```
 BOOL WriteProfileString(
@@ -2358,13 +2358,13 @@ BOOL WriteProfileString(
 ### <a name="parameters"></a>参数
 
 *lpszSection*<br/>
-指向以 null 结尾的字符串，该字符串指定包含条目的部分。 如果该节不存在，则创建它。 节的名称是用例无关;字符串可以是任何组合的大写和小写字母。
+指向以 null 结尾的字符串，该字符串指定包含条目的部分。 如果该节不存在，则创建它。 部分的名称独立于大小写;字符串可以是大写字母和小写字母的任意组合。
 
 *lpszEntry*<br/>
-指向包含到其中的值是要写入的条目的以 null 结尾的字符串。 如果该条目不存在指定的节中，将创建它。 如果此参数为 NULL，部分中指定的*lpszSection*被删除。
+指向以 null 结尾的字符串，该字符串包含要将值写入到其中的项。 如果该条目不存在于指定的节中，则会创建它。 如果此参数为 NULL，则将删除由*lpszSection*指定的节。
 
 *lpszValue*<br/>
-指向要写入的字符串。 如果此参数为 NULL，由指定的项*lpszEntry*删除参数。
+指向要写入的字符串。 如果此参数为 NULL，则删除由*lpszEntry*参数指定的条目。
 
 ### <a name="return-value"></a>返回值
 
@@ -2374,11 +2374,11 @@ BOOL WriteProfileString(
 
 [!code-cpp[NVC_MFCWindowing#43](../../mfc/reference/codesnippet/cpp/cwinapp-class_9.cpp)]
 
-有关其他示例，请参阅示例[CWinApp::GetProfileInt](#getprofileint)。
+对于另一个示例，请参阅[CWinApp：： GetProfileInt](#getprofileint)的示例。
 
 ##  <a name="setappid"></a>  CWinApp::SetAppID
 
-显式设置为应用程序的应用程序用户模型 ID。 任何用户界面显示给用户 （的最佳位置是应用程序构造函数） 之前，应调用此方法。
+显式设置应用程序的应用程序用户模型 ID。 应在向用户显示任何用户界面之前调用此方法（最佳位置是应用程序构造函数）。
 
 ```
 void SetAppID(LPCTSTR lpcszAppID);
@@ -2387,7 +2387,7 @@ void SetAppID(LPCTSTR lpcszAppID);
 ### <a name="parameters"></a>参数
 
 *lpcszAppID*<br/>
-指定应用程序用户模型 id。
+指定应用程序用户模型 ID。
 
 ### <a name="remarks"></a>备注
 

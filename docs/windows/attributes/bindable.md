@@ -1,17 +1,17 @@
 ---
-title: 可绑定 (C++ COM 属性)
+title: 可绑定C++ (COM 特性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.bindable
 helpviewer_keywords:
 - bindable attribute
 ms.assetid: a2360f92-927b-4af8-98cc-6eca7f4ec954
-ms.openlocfilehash: 07f446b946d6703c4a8b9ae59ae0edd8172c6879
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a74531a40bcacdae4ef98c292884e7a43fa82fe
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148388"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501828"
 ---
 # <a name="bindable"></a>bindable
 
@@ -25,19 +25,19 @@ ms.locfileid: "62148388"
 
 ## <a name="remarks"></a>备注
 
-**可绑定**C++属性具有相同的功能[可绑定](/windows/desktop/Midl/bindable)MIDL 特性。 可以使用它具有定义的属性上[propget](propget.md)， [propput](propput.md)，或[propputref](propputref.md)属性，或者你可以手动定义一个可绑定的方法。
+可**绑定** C++特性具有与可[绑定](/windows/win32/Midl/bindable)MIDL 特性相同的功能。 可以在使用[propget](propget.md)、 [propput](propput.md)或[propputref](propputref.md)特性定义的属性上使用该属性, 也可以手动定义可绑定方法。
 
-以下的 MFC 示例显示了如何使用**可绑定**:
+以下 MFC 示例显示了如何使用可**绑定**的:
 
-- [控件示例：基于 MFC 的 ActiveX 控件](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [控制示例:基于 MFC 的 ActiveX 控件](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
-- [CIRC 示例：ActiveX 控件](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [CIRC 示例:ActiveX 控件](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
-- [TESTHELP 示例：ActiveX 控件与工具提示和帮助](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [TESTHELP 示例:具有工具提示和帮助的 ActiveX 控件](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
 ## <a name="example"></a>示例
 
-下面的代码演示如何使用**可绑定**属性上：
+下面的代码演示如何对属性使用可**绑定**的:
 
 ```cpp
 // cpp_attr_ref_bindable.cpp
@@ -64,10 +64,10 @@ __interface IPropDemo : IDispatch {
 
 |||
 |-|-|
-|**适用对象**|接口方法|
-|**可重复**|否|
-|**必需的特性**|None|
-|**无效的特性**|None|
+|**适用于**|接口方法|
+|**可重复**|No|
+|**必需的特性**|无|
+|**无效的特性**|无|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

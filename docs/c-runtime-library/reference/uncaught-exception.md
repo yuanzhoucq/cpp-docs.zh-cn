@@ -1,9 +1,9 @@
 ---
 title: __uncaught_exception
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __uncaught_exception
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,22 +14,25 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __uncaught_exception
 helpviewer_keywords:
 - __uncaught_exception
 ms.assetid: 4d9b75c6-c9c7-4876-b761-ea9ab1925e96
-ms.openlocfilehash: 19d1e18af27722d6f9da39ebaaf6c9415c281849
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0130776ec2511aefd42d1700f950d97738e9fb14
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62268892"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945953"
 ---
-# <a name="uncaughtexception"></a>__uncaught_exception
+# <a name="__uncaught_exception"></a>__uncaught_exception
 
-指示是否已抛出一个或多个异常，但未处理的相应**捕获**块[try catch](../../cpp/try-throw-and-catch-statements-cpp.md)语句。
+指示是否已引发一个或多个异常，但尚未由[try-catch](../../cpp/try-throw-and-catch-statements-cpp.md)语句的相应**catch**块处理。
 
 ## <a name="syntax"></a>语法
 
@@ -40,7 +43,7 @@ bool __uncaught_exception(
 
 ## <a name="return-value"></a>返回值
 
-**true**从时将引发异常**尝试**块，直到匹配**catch**块已初始化; 否则为**false**。
+**如果**在初始化匹配**catch**块之前，在**try**块中引发异常，则为 true;否则**为 false**。
 
 ## <a name="remarks"></a>备注
 

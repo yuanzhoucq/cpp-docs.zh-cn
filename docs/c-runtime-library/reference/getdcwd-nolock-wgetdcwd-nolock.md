@@ -1,10 +1,10 @@
 ---
 title: _getdcwd_nolock、_wgetdcwd_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wgetdcwd_nolock
 - _getdcwd_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wgetdcwd_nolock
 - tgetdcwd_nolock
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - _wgetdcwd_nolock function
 - directories [C++], current working
 ms.assetid: d9bdf712-43f8-4173-8f9a-844e82beaa97
-ms.openlocfilehash: 47938c387ba30d7bcba038145c2dff9c7b59b750
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cef2c39d3cfcb7690a644d9d2db68f25259b8162
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157703"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955191"
 ---
-# <a name="getdcwdnolock-wgetdcwdnolock"></a>_getdcwd_nolock、_wgetdcwd_nolock
+# <a name="_getdcwd_nolock-_wgetdcwd_nolock"></a>_getdcwd_nolock、_wgetdcwd_nolock
 
 在指定的驱动器上获取当前工作目录的完整路径。
 
@@ -72,7 +75,7 @@ wchar_t *_wgetdcwd_nolock(
 路径的存储位置。
 
 *maxlen*<br/>
-以字符为单位的路径的最大长度： **char**有关 **_getdcwd**并**wchar_t**有关 **_wgetdcwd**。
+字符中的最大路径长度： **_getdcwd**的**char**和 **_wgetdcwd**的**wchar_t** 。
 
 ## <a name="return-value"></a>返回值
 
@@ -80,7 +83,7 @@ wchar_t *_wgetdcwd_nolock(
 
 ## <a name="remarks"></a>备注
 
-**_getdcwd_nolock**和 **_wgetdcwd_nolock**等于 **_getdcwd**并 **_wgetdcwd**分别，只不过它们不从受保护由其他线程的干扰。 它们可能更快，因为它们不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用这些函数，如单线程应用程序或调用范围已经处理线程隔离。
+**_getdcwd_nolock**和 **_wgetdcwd_nolock**分别与 **_getdcwd**和 **_wgetdcwd**相同，不同之处在于它们不会受到其他线程的干扰。 它们可能更快，因为它们不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用这些函数，如单线程应用程序或调用范围已经处理线程隔离。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComGITPtr class
 ms.assetid: af895acb-525a-4555-bb67-b241b7df515b
-ms.openlocfilehash: bf509d027833610e4251c009d4e444dad3fdd5ce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 00265cc445191a5a539ab21d6f64b255849495e9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246468"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497263"
 ---
 # <a name="ccomgitptr-class"></a>CComGITPtr 类
 
-此类提供用于处理接口指针的方法和全局接口表 (GIT)。
+此类提供用于处理接口指针和全局接口表 (GIT) 的方法。
 
 ## <a name="syntax"></a>语法
 
@@ -50,18 +50,18 @@ class CComGITPtr
 
 |名称|描述|
 |----------|-----------------|
-|[CComGITPtr::Attach](#attach)|调用此方法以在全局接口表 (GIT) 中注册的接口指针。|
-|[CComGITPtr::CopyTo](#copyto)|调用此方法将接口从全局接口表 (GIT) 复制到传递的指针。|
-|[CComGITPtr::Detach](#detach)|调用此方法来取消关联的接口从`CComGITPtr`对象。|
-|[CComGITPtr::GetCookie](#getcookie)|调用此方法以返回从 cookie`CComGITPtr`对象。|
-|[CComGITPtr::Revoke](#revoke)|调用此方法以从全局接口表 (GIT) 中删除接口。|
+|[CComGITPtr::Attach](#attach)|调用此方法可在全局接口表 (GIT) 中注册接口指针。|
+|[CComGITPtr::CopyTo](#copyto)|调用此方法可将接口从全局接口表 (GIT) 复制到传递的指针。|
+|[CComGITPtr::Detach](#detach)|调用此方法可将接口与`CComGITPtr`对象解除关联。|
+|[CComGITPtr::GetCookie](#getcookie)|调用此方法可从`CComGITPtr`对象返回 cookie。|
+|[CComGITPtr::Revoke](#revoke)|调用此方法可从全局接口表 (GIT) 中删除接口。|
 
 ### <a name="public-operators"></a>公共运算符
 
 |名称|描述|
 |----------|-----------------|
-|[CComGITPtr::operator DWORD](#operator_dword)|返回从 cookie`CComGITPtr`对象。|
-|[CComGITPtr::operator =](#operator_eq)|赋值运算符。|
+|[CComGITPtr:: operator DWORD](#operator_dword)|从`CComGITPtr`对象返回 cookie。|
+|[CComGITPtr:: operator =](#operator_eq)|赋值运算符。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
@@ -71,18 +71,18 @@ class CComGITPtr
 
 ## <a name="remarks"></a>备注
 
-聚合自由线程封送处理程序，并需要使用从其他对象中获得的接口指针的对象必须采取额外步骤来确保正确封送的接口。 这通常涉及将接口指针存储在 GIT 并使用它每次从 GIT 获取指针。 类`CComGITPtr`提供可帮助你使用存储在 GIT 中的接口指针。
+聚合自由线程封送拆收器并需要使用从其他对象获取的接口指针的对象必须执行额外的步骤, 以确保正确封送接口。 通常, 这涉及到将接口指针存储在 GIT 中, 并在每次使用时从 GIT 获取指针。 提供类`CComGITPtr`以帮助你使用存储在 GIT 中的接口指针。
 
 > [!NOTE]
->  全局接口表工具才使用 DCOM 1.1 版 Windows 95 和更高版本、 Windows 98、 Windows NT 4.0 Service Pack 3 和更高版本和 Windows 2000 上可用。
+>  仅在带有 DCOM 版本1.1 和更高版本、Windows 98、Windows NT 4.0 Service Pack 3 及更高版本以及 Windows 2000 的 Windows 95 上, 全局接口表功能才可用。
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlbase.h
+**标头:** atlbase。h
 
-##  <a name="attach"></a>  CComGITPtr::Attach
+##  <a name="attach"></a>CComGITPtr:: Attach
 
-调用此方法以在全局接口表 (GIT) 中注册的接口指针。
+调用此方法可在全局接口表 (GIT) 中注册接口指针。
 
 ```
 HRESULT Attach(T* p) throw();
@@ -96,17 +96,17 @@ HRESULT Attach(DWORD dwCookie) throw();
 要添加到 GIT 的接口指针。
 
 *dwCookie*<br/>
-用于标识的接口指针的 cookie。
+用于标识接口指针的 cookie。
 
 ### <a name="return-value"></a>返回值
 
-返回成功，则为 S_OK 或失败时的错误 HRESULT。
+如果成功, 则返回 S_OK, 否则返回错误 HRESULT。
 
 ### <a name="remarks"></a>备注
 
-在调试版本中，如果 GIT 无效，或如果 cookie 为空，将会出错断言。
+在调试版本中, 如果 GIT 无效, 或者 cookie 等于 NULL, 则将发生断言错误。
 
-##  <a name="ccomgitptr"></a>  CComGITPtr::CComGITPtr
+##  <a name="ccomgitptr"></a>CComGITPtr::CComGITPtr
 
 构造函数。
 
@@ -121,24 +121,24 @@ CComGITPtr(CComGITPtr&& rv);
 ### <a name="parameters"></a>参数
 
 *p*<br/>
-[in]要存储在全局接口表 (GIT) 中一个接口指针。
+中要存储在全局接口表 (GIT) 中的接口指针。
 
 *git*<br/>
-[in]向现有的引用`CComGITPtr`对象。
+中对现有`CComGITPtr`对象的引用。
 
 *dwCookie*<br/>
-[in]一个用于标识的接口指针的 cookie。
+中用于标识接口指针的 cookie。
 
 *rv*<br/>
-[in]源`CComGITPtr`对象移动中的数据。
+中要从中`CComGITPtr`移动数据的源对象。
 
 ### <a name="remarks"></a>备注
 
-创建一个新`CComGITPtr`对象，可以选择使用现有`CComGITPtr`对象。
+使用现有`CComGITPtr` `CComGITPtr`对象创建一个新的对象。
 
-构造函数利用*rv*是移动构造函数。 源中的数据移动数据*rv*，然后*rv*清除。
+使用*rv*的构造函数是移动构造函数。 数据从源*rv*移动, 然后清除*rv* 。
 
-##  <a name="dtor"></a>  CComGITPtr:: ~ CComGITPtr
+##  <a name="dtor"></a>CComGITPtr:: ~ CComGITPtr
 
 析构函数。
 
@@ -148,11 +148,11 @@ CComGITPtr(CComGITPtr&& rv);
 
 ### <a name="remarks"></a>备注
 
-从全局接口表 (GIT)，删除接口使用[CComGITPtr::Revoke](#revoke)。
+使用[CComGITPtr:: Revoke](#revoke)从全局接口表 (GIT) 中删除接口。
 
-##  <a name="copyto"></a>  CComGITPtr::CopyTo
+##  <a name="copyto"></a>CComGITPtr:: CopyTo
 
-调用此方法将接口从全局接口表 (GIT) 复制到传递的指针。
+调用此方法可将接口从全局接口表 (GIT) 复制到传递的指针。
 
 ```
 HRESULT CopyTo(T** pp) const throw();
@@ -161,19 +161,19 @@ HRESULT CopyTo(T** pp) const throw();
 ### <a name="parameters"></a>参数
 
 *pp*<br/>
-它将接收接口指针。
+用于接收接口的指针。
 
 ### <a name="return-value"></a>返回值
 
-返回成功，则为 S_OK 或失败时的错误 HRESULT。
+如果成功, 则返回 S_OK, 否则返回错误 HRESULT。
 
 ### <a name="remarks"></a>备注
 
-从 GIT 接口复制到传递的指针。 当不再需要时，必须由调用方释放指针。
+将 GIT 中的接口复制到传递的指针。 当不再需要指针时, 它必须由调用方释放。
 
-##  <a name="detach"></a>  CComGITPtr::Detach
+##  <a name="detach"></a>CComGITPtr::D etach
 
-调用此方法来取消关联的接口从`CComGITPtr`对象。
+调用此方法可将接口与`CComGITPtr`对象解除关联。
 
 ```
 DWORD Detach() throw();
@@ -181,15 +181,15 @@ DWORD Detach() throw();
 
 ### <a name="return-value"></a>返回值
 
-返回从 cookie`CComGITPtr`对象。
+从`CComGITPtr`对象返回 cookie。
 
 ### <a name="remarks"></a>备注
 
-由调用方将删除从 GIT，该接口使用[CComGITPtr::Revoke](#revoke)。
+由调用方使用[CComGITPtr:: Revoke](#revoke)从 GIT 中删除接口。
 
-##  <a name="getcookie"></a>  CComGITPtr::GetCookie
+##  <a name="getcookie"></a>CComGITPtr:: System.windows.application.getcookie
 
-调用此方法以返回从 cookie`CComGITPtr`对象。
+调用此方法可从`CComGITPtr`对象返回 cookie。
 
 ```
 DWORD GetCookie() const;
@@ -201,9 +201,9 @@ DWORD GetCookie() const;
 
 ### <a name="remarks"></a>备注
 
-Cookie 是用于标识接口，并且其位置的变量。
+Cookie 是用于标识接口及其位置的变量。
 
-##  <a name="m_dwcookie"></a>  CComGITPtr::m_dwCookie
+##  <a name="m_dwcookie"></a>CComGITPtr::m_dwCookie
 
 Cookie。
 
@@ -213,9 +213,9 @@ DWORD m_dwCookie;
 
 ### <a name="remarks"></a>备注
 
-Cookie 是用于标识接口，并且其位置的成员变量。
+Cookie 是用于标识接口及其位置的成员变量。
 
-##  <a name="operator_eq"></a>  CComGITPtr::operator =
+##  <a name="operator_eq"></a>CComGITPtr:: operator =
 
 赋值运算符。
 
@@ -229,28 +229,28 @@ CComGITPtr& operator= (CComGITPtr&& rv);
 ### <a name="parameters"></a>参数
 
 *p*<br/>
-[in]指向一个接口的指针。
+中指向接口的指针。
 
 *git*<br/>
-[in]对引用`CComGITPtr`对象。
+中对`CComGITPtr`对象的引用。
 
 *dwCookie*<br/>
-[in]一个用于标识的接口指针的 cookie。
+中用于标识接口指针的 cookie。
 
 *rv*<br/>
-[in]`CComGITPtr`移动中的数据。
+中要`CComGITPtr`从中移动数据的。
 
 ### <a name="return-value"></a>返回值
 
-返回已更新`CComGITPtr`对象。
+返回已更新`CComGITPtr`的对象。
 
 ### <a name="remarks"></a>备注
 
-将一个新值赋给`CComGITPtr`对象，从现有对象或对全局接口表的引用。
+将新值分配给`CComGITPtr`对象, 无论是从现有对象还是对全局接口表的引用。
 
-##  <a name="operator_dword"></a>  CComGITPtr::operator DWORD
+##  <a name="operator_dword"></a>CComGITPtr:: operator DWORD
 
-返回与关联的 cookie`CComGITPtr`对象。
+返回与`CComGITPtr`对象关联的 cookie。
 
 ```
 operator DWORD() const;
@@ -258,11 +258,11 @@ operator DWORD() const;
 
 ### <a name="remarks"></a>备注
 
-Cookie 是用于标识接口，并且其位置的变量。
+Cookie 是用于标识接口及其位置的变量。
 
-##  <a name="revoke"></a>  CComGITPtr::Revoke
+##  <a name="revoke"></a>CComGITPtr:: Revoke
 
-调用此方法以从全局接口表 (GIT) 中删除当前接口。
+调用此方法可从全局接口表 (GIT) 中删除当前接口。
 
 ```
 HRESULT Revoke() throw();
@@ -270,7 +270,7 @@ HRESULT Revoke() throw();
 
 ### <a name="return-value"></a>返回值
 
-返回成功，则为 S_OK 或失败时的错误 HRESULT。
+如果成功, 则返回 S_OK, 否则返回错误 HRESULT。
 
 ### <a name="remarks"></a>备注
 
@@ -278,7 +278,7 @@ HRESULT Revoke() throw();
 
 ## <a name="see-also"></a>请参阅
 
-[自由线程封送处理程序](../../atl/atl-and-the-free-threaded-marshaler.md)<br/>
-[各个单元访问接口](/windows/desktop/com/accessing-interfaces-across-apartments)<br/>
-[何时使用全局接口表](/windows/desktop/com/when-to-use-the-global-interface-table)<br/>
+[自由线程封送拆收器](../../atl/atl-and-the-free-threaded-marshaler.md)<br/>
+[跨单元访问接口](/windows/win32/com/accessing-interfaces-across-apartments)<br/>
+[何时使用全局接口表](/windows/win32/com/when-to-use-the-global-interface-table)<br/>
 [类概述](../../atl/atl-class-overview.md)

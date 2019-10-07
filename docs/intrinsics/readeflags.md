@@ -1,36 +1,36 @@
 ---
 title: __readeflags
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __readeflags
 helpviewer_keywords:
 - __readeflags intrinsic
 ms.assetid: f9d2f4d8-c428-491f-b8de-04d0566b2b6b
-ms.openlocfilehash: 9913fb4287e673faf79b2c352bb42eda7f590fdd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe2365c2837b6c583810bb9fc908fe98486a2d38
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396478"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221230"
 ---
-# <a name="readeflags"></a>__readeflags
+# <a name="__readeflags"></a>__readeflags
 
 读取程序状态和控制 (EFLAGS) 注册。
 
 ## <a name="syntax"></a>语法
 
-```
-unsigned     int __readeflags(void);
-unsigned __int64 __readeflags(void);
+```C
+unsigned     int __readeflags(void); /* x86 */
+unsigned __int64 __readeflags(void); /* x64 */
 ```
 
 ## <a name="return-value"></a>返回值
 
-EFLAGS 寄存器的值。 返回值为 32 位长时间在 32 位平台上和 64 位的 64 位平台上长时间。
+EFLAGS 寄存器的值。 32位平台上的返回值为32位长, 而在64位平台上为64位长。
 
 ## <a name="remarks"></a>备注
 
-这些例程只能用作内部函数可使用。
+这些例程只能用作内部函数。
 
 ## <a name="requirements"></a>要求
 
@@ -38,11 +38,11 @@ EFLAGS 寄存器的值。 返回值为 32 位长时间在 32 位平台上和 64 
 |---------------|------------------|
 |`__readeflags`|x86、x64|
 
-**标头文件** \<intrin.h >
+**标头文件**\<intrin.h >
 
 **结束 Microsoft 专用**
 
 ## <a name="see-also"></a>请参阅
 
-[编译器内部函数](../intrinsics/compiler-intrinsics.md)<br/>
+[编译器内部函数](../intrinsics/compiler-intrinsics.md)\
 [__writeeflags](../intrinsics/writeeflags.md)

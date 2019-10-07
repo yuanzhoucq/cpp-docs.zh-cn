@@ -2,12 +2,13 @@
 title: Visual C++ 移植和升级指南
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-ms.openlocfilehash: 5659ca362204c62ab8fb21a74dccf8e29f33912c
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
-ms.translationtype: HT
+ms.topic: overview
+ms.openlocfilehash: 55bfb9a1ad23a0e4a3efa7f0a9361523c6c9754d
+ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450377"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274693"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++ 移植和升级指南
 
@@ -67,13 +68,13 @@ Visual Studio 中的生成系统和项目文件格式从 Visual Studio 2008 及�
 
 你的用户界面呢？ 如果你正在使用 MFC，可能会想要更新 UI。 你是否正在使用在 2008 年作为功能包引入的任何更新的 MFC 功能？ 如果只是想要让应用获得更新的外观和感觉，而不重写整个应用，则可以考虑使用 MFC 中的功能区 API 或使用 MFC 的一些新功能。
 
-如果想要为程序提供 XAML 用户界面，但不想创建 UWP 应用，可以将 C# 与 WPF 搭配使用以创建 UI 层，并将标准 C ++ 逻辑重构到 DLL。 在 C++/CLI 中创建互操作性层，以连接 C# 和本机代码。 创建 UWP 应用的另一种方法是使用 [C++/CX](https://msdn.microsoft.com/library/windows/apps/xaml/hh699871.aspx) 或 [C++/WinRT](https://github.com/microsoft/cppwinrt)。 在 Windows 10 中，可以使用 [Desktop App Converter](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-run-desktop-app-converter) 将现有桌面应用程序打包为 UWP 应用，而无需修改任何代码。
+如果想要为程序提供 XAML 用户界面，但不想创建 UWP 应用，可以将 C# 与 WPF 搭配使用以创建 UI 层，并将标准 C ++ 逻辑重构到 DLL。 在 C++/CLI 中创建互操作性层，以连接 C# 和本机代码。 创建 UWP 应用的另一种方法是使用 [C++/CX](../cppcx/visual-c-language-reference-c-cx.md) 或 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/)。 在 Windows 10 中，可以使用 [Desktop App Converter](/windows/msix/desktop/desktop-to-uwp-run-desktop-app-converter) 将现有桌面应用程序打包为 UWP 应用，而无需修改任何代码。
 
 或者，也许你现在有新的需求，或可以预见到需要面向除 Windows 桌面外的平台，如 Windows Phone 或 Android 设备。 你可以将你的用户界面代码移植到跨平台的 UI 库。 通过这些 UI 框架，可以面向多个设备并仍然使用 Visual Studio 和 Visual Studio 调试器作为开发环境。
 
 ## <a name="related-topics"></a>相关主题
 
-|Title|说明|
+|Title|描述|
 |-----------|-----------------|
 |[从 Visual C++ 早期版本升级项目](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|讨论如何使用在早期版本的 Visual Studio 中创建的项目。|
 |[Visual Studio 中的 C++ 编译器新变化](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)|当前版本 Visual Studio 的 IDE 和工具更改|

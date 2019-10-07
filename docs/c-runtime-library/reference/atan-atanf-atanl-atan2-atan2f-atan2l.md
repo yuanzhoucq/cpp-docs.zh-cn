@@ -1,14 +1,14 @@
 ---
 title: atan、atanf、atanl、atan2、atan2f、atan2l
 ms.date: 04/05/2018
-apiname:
+api_name:
 - atan2f
 - atan2l
 - atan2
 - atanf
 - atan
 - atanl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - atan
 - atan2l
@@ -38,16 +41,16 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-ms.openlocfilehash: 59a67b0d213a11630f551fd7582b44aab60e314f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c485dea281d2b754628c9663e38ea10a9b6ab57
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341712"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939611"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan、atanf、atanl、atan2、atan2f、atan2l
 
-计算反正切值**x** (**atan**， **atanf**，以及**atanl**) 或的反正切值**y** /**x** (**atan2**， **atan2f**，以及**atan2l**)。
+计算**x**的反正切值 **（atan**、 **atanf**和**atanl**）或**y**/**x**的反正切值（**atan2**、 **atan2f**和**atan2l**）。
 
 ## <a name="syntax"></a>语法
 
@@ -71,32 +74,32 @@ long double atan2( long double y, long double x );  // C++ only
 
 ### <a name="parameters"></a>参数
 
-*x*， *y*<br/>
+*x*、 *y*<br/>
 任意数字。
 
 ## <a name="return-value"></a>返回值
 
-**atan**返回的反正切*x*中范围-π/2 到 π/2 弧度。 **atan2**返回的反正切*y*/*x*中范围-π 到 π 弧度。 如果*x*为 0， **atan**返回 0。 如果这两个参数的**atan2**均为 0，则函数返回 0。 所有结果都都以弧度为单位。
+**atan**返回*x*的反正切值，范围为-π/2 到π/2 弧度。 **atan2**返回范围-π到π弧度的*y*/*x*的反正切值。 如果*x*为0，则**atan**将返回0。 如果**atan2**的两个参数均为0，则该函数返回0。 所有结果都都以弧度为单位。
 
-**atan2**使用这两个参数符号来确定返回值的象限。
+**atan2**使用两个参数的符号来确定返回值的象限。
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
-|为**QNAN**， **IND**|无|**_DOMAIN**|
+|± **QNAN**， **IND**|无|**_DOMAIN**|
 
 ## <a name="remarks"></a>备注
 
-**Atan**函数可用于计算反正切值 （反正切函数） 的*x*。 **atan2**计算反正切值*y*/*x* (如果*x*等于 0， **atan2**返回 π/2，如果*y*为正，因此-π/2; 如果*y*是负数，或者，如果*y*为 0。)
+**Atan**函数计算*x*的反正切值（反切线函数）。 **atan2**计算*y*/*x*的反正切值（如果*x*等于 0 *，如果 y 为正值*，则**atan2**返回π/2; 如果 y*为负数*，则返回-π/2; 如果*y*为0，则返回0。）
 
-**atan**具有使用流式处理 SIMD 扩展 2 (SSE2) 的实现。 有关使用 SSE2 实现的信息和限制，请参阅 [_set_SSE2_enable](set-sse2-enable.md)。
+**atan**具有使用流式处理 simd 扩展2（SSE2）的实现。 有关使用 SSE2 实现的信息和限制，请参阅 [_set_SSE2_enable](set-sse2-enable.md)。
 
-因为C++允许重载，可以调用的重载**atan**并**atan2**采用**float**或**长** **双精度**参数。 在 C 程序中， **atan**并**atan2**始终采用**double**参数和返回**double**。
+由于C++允许重载，因此可以调用**atan**和**atan2**的重载，该重载采用**float**或**long** **双**参数。 在 C 程序中， **atan**和**atan2**始终采用**双重**参数并返回**double**。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|必需的标头 (C)|必需的标头 (C++)|
 |-------------|---------------------|-|
-|**atan**， **atan2**， **atanf**， **atan2f**， **atanl**， **atan2l**|\<math.h>|\<cmath> 或 \<math.h>|
+|**atan**、 **atan2**、 **atanf**、 **atan2f**、 **atanl**、 **atan2l**|\<math.h>|\<cmath> 或 \<math.h>|
 
 ## <a name="example"></a>示例
 

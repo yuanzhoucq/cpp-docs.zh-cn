@@ -5,20 +5,20 @@ helpviewer_keywords:
 - image-processing networks, creating [Concurrency Runtime]
 - creating image-processing networks [Concurrency Runtime]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
-ms.openlocfilehash: ff5e0bcae3d23dc914d93a062ec36ea1435ce1b2
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 680037e0e14c3ebd9171cacf477520e025eecebe
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64856304"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "69512160"
 ---
 # <a name="walkthrough-creating-an-image-processing-network"></a>演练：创建图像处理网络
 
 本文档演示如何创建执行图像处理的异步消息块网络。
 
-网络确定基于其特征对图像执行哪些操作。 此示例使用*数据流*模型通过网络路由图像。 在数据流模型中，程序的独立组件之间通过发送消息进行通信。 当某个组件收到一条消息时，它可以执行特定操作，然后将该操作的结果传递给另一个组件。 将此与比较*控制流*模型中，在其中应用程序使用控制结构，例如、 条件语句、 循环和等等，以控制在程序中的操作的顺序。
+网络根据其特征确定要对映像执行哪些操作。 此示例使用*数据流*模型通过网络来路由图像。 在数据流模型中，程序的独立组件之间通过发送消息进行通信。 当组件收到消息时，它可以执行某些操作，然后将该操作的结果传递到另一个组件。 将此与*控制流*模型进行比较，在此模型中，应用程序使用控制结构（例如，条件语句、循环等）控制程序中操作的顺序。
 
-基于数据流的网络创建*管道*的任务。 在管道的每个阶段同时执行整个任务的一部分。 这就好比是汽车制造装配线。 每辆汽车通过装配线时，一站组装车架，另一个安装引擎，依次类推。 通过启用同时装配多辆汽车，程序集行提供了比一次装配整辆车拥有一个更好的吞吐量。
+基于数据流的网络创建任务*管道*。 管道的每个阶段都同时执行整个任务的一部分。 这就好比是汽车制造装配线。 每辆车通过组装行时，一个工作站组装帧，另一个站安装引擎，依此类推。 通过启用多个车辆同时进行组合，程序集线提供的吞吐量比一次组装一个完整车辆提供更好的吞吐量。
 
 ## <a name="prerequisites"></a>系统必备
 
@@ -30,7 +30,7 @@ ms.locfileid: "64856304"
 
 - [演练：创建数据流代理](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)
 
-我们还建议在开始本演练之前了解 GDI + 的基础知识。
+在开始本演练之前，我们还建议你了解 GDI + 的基本知识。
 
 ##  <a name="top"></a> 部分
 
@@ -42,75 +42,75 @@ ms.locfileid: "64856304"
 
 - [完整示例](#complete)
 
-##  <a name="functionality"></a> 定义图像处理功能
+##  <a name="functionality"></a>定义图像处理功能
 
-本部分演示图像处理网络用来处理从磁盘读取的映像的支持函数。
+本部分介绍图像处理网络用于处理从磁盘读取的图像的支持函数。
 
-以下函数`GetRGB`和`MakeColor`、 提取和分别组合给定颜色的各个组件。
+以下函数`GetRGB`和`MakeColor`分别提取和合并给定颜色的各个组件。
 
 [!code-cpp[concrt-image-processing-filter#2](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_1.cpp)]
 
-以下函数， `ProcessImage`，调用给定[std:: function](../../standard-library/function-class.md)要转换的 GDI + 中的每个像素的颜色值对象[位图](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-bitmap)对象。 `ProcessImage`函数使用[concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for)算法处理并行位图的每一行。
+以下函数`ProcessImage`调用给定的[std：： function](../../standard-library/function-class.md)对象，以转换 gdi +[位图](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-bitmap)对象中每个像素的颜色值。 函数使用[concurrency：:p arallel_for](reference/concurrency-namespace-functions.md#parallel_for)算法并行处理位图的每一行。 `ProcessImage`
 
 [!code-cpp[concrt-image-processing-filter#3](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_2.cpp)]
 
-以下函数`Grayscale`， `Sepiatone`， `ColorMask`，和`Darken`，调用`ProcessImage`函数来转换中的每个像素的颜色值`Bitmap`对象。 每个函数使用 lambda 表达式来定义一个像素的颜色转换。
+`Grayscale`以下函数（ `Sepiatone`、、和`Darken`） `Bitmap`调用`ProcessImage`函数来转换对象中每个像素的颜色值。 `ColorMask` 其中每个函数都使用 lambda 表达式来定义一个像素的颜色转换。
 
 [!code-cpp[concrt-image-processing-filter#4](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_3.cpp)]
 
-以下函数， `GetColorDominance`，还会调用`ProcessImage`函数。 但是，而不是更改每个颜色值，此函数使用[concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md)对象计算红色、 绿色还是蓝色颜色组件是否是图像。
+下面的函数`GetColorDominance`还`ProcessImage`调用函数。 但是，此函数不会更改每个颜色的值，而是使用[concurrency：：可组合](../../parallel/concrt/reference/combinable-class.md)对象计算红色、绿色或蓝色分量是否支配图像。
 
 [!code-cpp[concrt-image-processing-filter#5](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_4.cpp)]
 
-以下函数， `GetEncoderClsid`，检索指定的 MIME 类型的编码器的类标识符。 应用程序使用此函数检索位图的编码器。
+下面的函数`GetEncoderClsid`检索编码器的给定 MIME 类型的类标识符。 应用程序使用此函数检索位图的编码器。
 
 [!code-cpp[concrt-image-processing-filter#6](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_5.cpp)]
 
 [[返回页首](#top)]
 
-##  <a name="network"></a> 创建图像处理网络
+##  <a name="network"></a>创建图像处理网络
 
-本部分介绍如何创建执行图像处理给定目录中每个 JPEG (.jpg) 映像的异步消息块网络。 网络执行下面的图像处理操作：
+本部分介绍如何创建异步消息块网络，这些消息块在给定目录中的每个 JPEG （.jpg）图像上执行图像处理。 网络执行以下图像处理操作：
 
-1. Tom 创作的任何图像，将转换为灰度。
+1. 对于 Tom 创作的任何图像，将转换为灰度。
 
-1. 对于任何具有主色为红色的映像，请删除对绿色和蓝色分量，然后变暗。
+1. 对于具有红色作为基准颜色的任何图像，请删除绿色和蓝色分量，然后使其变暗。
 
-1. 对于任何其他映像，请应用棕褐色调。
+1. 对于任何其他图像，应用棕色色调。
 
-仅第一个图像处理操作之一相匹配的这些条件应用网络。 例如，如果图像作者 Tom，主要颜色为红色，映像只能转换为灰度。
+网络仅应用与其中一个条件相匹配的第一个图像处理操作。 例如，如果图像由 Tom 创作并且具有红色作为其基准颜色，则该图像只转换为灰度。
 
-网络执行每个图像处理操作后，它将图像保存到磁盘为位图 (.bmp) 文件。
+网络执行每个图像处理操作后，会将图像作为位图（.bmp）文件保存到磁盘。
 
-以下步骤说明如何创建实现此图像处理网络并将该网络应用到给定目录中每个 JPEG 图像的函数。
+以下步骤说明如何创建一个函数来实现此图像处理网络，并将该网络应用于给定目录中的每个 JPEG 图像。
 
-#### <a name="to-create-the-image-processing-network"></a>若要创建图像处理网络
+#### <a name="to-create-the-image-processing-network"></a>创建图像处理网络
 
-1. 创建一个函数， `ProcessImages`，采用在磁盘上目录的名称。
+1. 创建一个函数， `ProcessImages`该函数采用磁盘上的目录的名称。
 
    [!code-cpp[concrt-image-processing-filter#7](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_6.cpp)]
 
-1. 在中`ProcessImages`函数中，创建`countdown_event`变量。 `countdown_event`类稍后在本演练中所示。
+1. 在函数中，创建一个`countdown_event`变量。 `ProcessImages` 此演练稍后将演示类。`countdown_event`
 
    [!code-cpp[concrt-image-processing-filter#8](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_7.cpp)]
 
-1. 创建[std:: map](../../standard-library/map-class.md)相关联的对象`Bitmap`带有其原始文件名称的对象。
+1. 创建一个[std：： map](../../standard-library/map-class.md)对象，该对象`Bitmap`将对象与其原始文件名关联。
 
    [!code-cpp[concrt-image-processing-filter#9](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_8.cpp)]
 
-1. 添加以下代码来定义图像处理网络的成员。
+1. 添加以下代码以定义图像处理网络的成员。
 
    [!code-cpp[concrt-image-processing-filter#10](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_9.cpp)]
 
-1. 添加以下代码以将网络连接。
+1. 添加以下代码以连接到网络。
 
    [!code-cpp[concrt-image-processing-filter#11](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_10.cpp)]
 
-1. 添加以下代码将发送到网络的每个 JPEG 文件的完整路径的目录中。
+1. 添加以下代码，以将目录中每个 JPEG 文件的完整路径发送到网络的开头。
 
    [!code-cpp[concrt-image-processing-filter#12](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_11.cpp)]
 
-1. 等待`countdown_event`变量归零。
+1. `countdown_event`等待变量达到零。
 
    [!code-cpp[concrt-image-processing-filter#13](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_12.cpp)]
 
@@ -118,51 +118,51 @@ ms.locfileid: "64856304"
 
 |成员|描述|
 |------------|-----------------|
-|`load_bitmap`|一个[concurrency:: transformer](../../parallel/concrt/reference/transformer-class.md)对象，它将加载`Bitmap`从磁盘对象，并添加一个条目`map`对象以将图像与其原始文件名与相关联。|
-|`loaded_bitmaps`|一个[concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md)将加载的图像发送到图像处理筛选器的对象。|
-|`grayscale`|一个`transformer`对象，它将转换为灰度作者 Tom 的映像。 它使用的图像的元数据来确定它的作者。|
-|`colormask`|一个`transformer`绿色和蓝色分量解除对主色为红色的图像的对象。|
-|`darken`|一个`transformer`会变暗红色主流色的映像的对象。|
-|`sepiatone`|一个`transformer`适用棕褐色调到不由 Tom 创作，而不是红色的映像的对象。|
-|`save_bitmap`|一个`transformer`保存已处理对象`image`到磁盘作为位图。 `save_bitmap` 检索从原始文件名`map`对象，并更改其文件扩展名为.bmp。|
-|`delete_bitmap`|一个`transformer`释放的图像的内存的对象。|
-|`decrement`|一个[concurrency:: call](../../parallel/concrt/reference/call-class.md)充当网络中的终端节点的对象。 它递减`countdown_event`将信号发送到主应用程序映像已处理的对象。|
+|`load_bitmap`|一个[concurrency：：变压器](../../parallel/concrt/reference/transformer-class.md)对象，它从`Bitmap`磁盘加载对象，并向`map`对象添加一个条目，以将该图像与其原始文件名关联。|
+|`loaded_bitmaps`|[Concurrency：： unbounded_buffer](reference/unbounded-buffer-class.md)对象，用于将加载的图像发送到图像处理筛选器。|
+|`grayscale`|一个`transformer`对象，它将由 Tom 创作的图像转换为灰度。 它使用图像的元数据来确定其作者。|
+|`colormask`|一个`transformer`对象，该对象从红色作为主导色的图像中删除绿色和蓝色组件。|
+|`darken`|一个`transformer`对象，它使具有红色的图像变暗为主导色。|
+|`sepiatone`|一个`transformer`对象，该对象将棕褐色调应用于不是由 Tom 创作的图像，而不是主要的红色。|
+|`save_bitmap`|将`transformer` 处理`image`的保存到磁盘的对象保存为位图。 `save_bitmap`从`map`对象中检索原始文件名，并将其文件扩展名更改为 .bmp。|
+|`delete_bitmap`|释放图像内存的对象。`transformer`|
+|`decrement`|一个[concurrency：： call](../../parallel/concrt/reference/call-class.md)对象，充当网络中的终端节点。 它会递减`countdown_event`对象，以向主应用程序发送图像已处理的信号。|
 
-`loaded_bitmaps`消息缓冲区很重要，因为作为`unbounded_buffer`对象，它提供了`Bitmap`到多个接收方对象。 当目标块接受`Bitmap`对象，`unbounded_buffer`对象不提供`Bitmap`到任何其他目标的对象。 因此，在该链接的顺序对象添加到`unbounded_buffer`对象很重要。 `grayscale`， `colormask`，并`sepiatone`每个块使用筛选器来接受消息只有某些特定`Bitmap`对象。 `decrement`消息缓冲区是重要的目标`loaded_bitmaps`因为它接受所有消息缓冲区`Bitmap`拒绝的其他消息缓冲区的对象。 `unbounded_buffer`传播消息按顺序所需的对象。 因此，`unbounded_buffer`对象被阻止，直至新的目标块链接到它，并接受消息，如果没有当前的目标块接受此消息。
+消息缓冲区很重要，因为`unbounded_buffer`作为对象，它将对象提供`Bitmap`给多个接收方。 `loaded_bitmaps` 当目标块接受`Bitmap`对象时，该`unbounded_buffer`对象不会为任何其他`Bitmap`目标提供该对象。 因此，将对象链接到`unbounded_buffer`对象的顺序非常重要。 、和消息块均使用筛选器来仅接受某些`Bitmap`对象。 `sepiatone` `colormask` `grayscale` 消息缓冲区是`loaded_bitmaps`消息缓冲区的重要目标，因为它接受其他消息缓冲区`Bitmap`拒绝的所有对象。 `decrement` 需要`unbounded_buffer`对象才能按顺序传播消息。 因此，在`unbounded_buffer`将新的目标块链接到该目标块之前，对象将被阻止，并且如果当前目标块未接受该消息，则接受该消息。
 
-如果应用程序需要多个消息块处理该消息，而不是只是一条消息块的第一个接受消息，你可以使用另一个消息块类型，如`overwrite_buffer`。 `overwrite_buffer`类包含一条消息一次，但它可传播到其每个目标的消息。
+如果你的应用程序需要多个消息块处理消息，而不是只使用第一条接受消息的消息块，则可以使用另一种消息块`overwrite_buffer`类型，如。 `overwrite_buffer`类一次只保存一条消息，但会将该消息传播到其每个目标。
 
 下图显示图像处理网络：
 
 ![图像处理网络](../../parallel/concrt/media/concrt_imageproc.png "图像处理网络")
 
-`countdown_event`对象在此示例中，图像处理网络来通知主应用程序时已处理的所有映像。 `countdown_event`类使用[concurrency:: event](../../parallel/concrt/reference/event-class.md)对象时的计数器值达到零时发出信号通知。 主应用程序每次它发送到网络的文件名称时递增的计数器。 网络递减的终端节点处理的每个图像后的计数器。 主应用程序会遍历指定的目录后，它将等待`countdown_event`对象发出信号的计数器归零。
+在此示例中，对象使图像处理网络可以在处理完所有图像后通知主应用程序。`countdown_event` 当计数器值达到零时， `countdown_event` 类使用[concurrency：：event](../../parallel/concrt/reference/event-class.md)对象进行信号。 主应用程序每次向网络发送文件名时都会递增计数器的值。 在处理每个图像后，网络的终端节点会递减计数器。 在主应用程序遍历指定的目录后，它会等待`countdown_event`对象通知其计数器已达到零。
 
-下面的示例演示`countdown_event`类：
+下面的示例演示`countdown_event`了类:
 
 [!code-cpp[concrt-image-processing-filter#14](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_13.cpp)]
 
 [[返回页首](#top)]
 
-##  <a name="complete"></a> 完整示例
+##  <a name="complete"></a>完整的示例
 
-以下代码显示完整示例。 `wmain`函数管理 GDI + 库，然后调用`ProcessImages`中的函数来处理 JPEG 文件`Sample Pictures`目录。
+以下代码显示完整示例。 函数管理 gdi + 库，并`ProcessImages`调用函数来处理`Sample Pictures`目录中的 JPEG 文件。 `wmain`
 
 [!code-cpp[concrt-image-processing-filter#15](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_14.cpp)]
 
-下图显示了示例输出。 每个源映像高于其相应的修改后的映像。
+下图显示了示例输出。 每个源图像都高于其相应的已修改映像。
 
-![该示例的输出示例](../../parallel/concrt/media/concrt_imageout.png "示例的示例输出")
+![示例输出]示例(../../parallel/concrt/media/concrt_imageout.png "示例输出")示例
 
-`Lighthouse` 通过 Tom Alphin 创作的因此将转换为灰度。 `Chrysanthemum``Desert`， `Koala`，和`Tulips`红色主流色因此删除了蓝色和绿色颜色组件并调暗。 `Hydrangeas``Jellyfish`，和`Penguins`与默认条件匹配，因此转换为棕褐色。
+`Lighthouse`由 Tom Alphin 创作，因此转换为灰度。 `Chrysanthemum`、 `Desert`、和`Tulips`具有红色作为主导颜色，因此会删除蓝色和绿色颜色组件并使其变暗。 `Koala` `Hydrangeas`、 `Jellyfish`和`Penguins`匹配默认条件，因此为棕色 toned。
 
 [[返回页首](#top)]
 
 ### <a name="compiling-the-code"></a>编译代码
 
-复制示例代码并将其粘贴到 Visual Studio 项目中，或将其粘贴在文件中名为`image-processing-network.cpp`然后在 Visual Studio 命令提示符窗口中运行以下命令。
+复制代码示例并将其粘贴到 visual studio 项目中，或粘贴到一个名`image-processing-network.cpp`为的文件中，然后在 Visual Studio 命令提示符窗口中运行以下命令。
 
-**cl.exe /DUNICODE /EHsc image-processing-network.cpp /link gdiplus.lib**
+**cl .exe/DUNICODE/EHsc image-processing-network/link gdiplus**
 
 ## <a name="see-also"></a>请参阅
 

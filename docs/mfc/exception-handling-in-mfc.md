@@ -33,29 +33,29 @@ helpviewer_keywords:
 - function calls [MFC], results
 - out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
-ms.openlocfilehash: 69bb5a9478120db322b5727af491be7943f44cbe
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: e8c0f1feba566ef9b961edcfacb9124830f9851d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449726"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508620"
 ---
 # <a name="exception-handling-in-mfc"></a>MFC 中的异常处理
 
-本文介绍 MFC 中可用的异常处理机制。 提供了两种机制：
+本文介绍 MFC 中可用的异常处理机制。 提供两种机制:
 
-- C++提供 MFC 版本 3.0 和更高版本的异常
+- C++MFC 版本3.0 及更高版本中提供的异常
 
-- MFC 异常宏，可用在 MFC 版本 1.0 及更高版本
+- Mfc 版本1.0 及更高版本中提供的 MFC 异常宏
 
-如果您正在编写新的应用程序使用 MFC，则应使用C++机制。 如果你的现有应用程序已广泛使用该机制，可以使用基于宏的机制。
+如果要使用 MFC 编写新应用程序, 则应使用C++机制。 如果现有应用程序已广泛使用该机制, 则可以使用基于宏的机制。
 
-可以轻松地将转换现有代码以使用C++而不是 MFC 异常宏的异常。 文章中所述将转换你的代码和执行此操作的指导原则的优点[异常：从 MFC 异常宏转换](../mfc/exceptions-converting-from-mfc-exception-macros.md)。
+可以轻松地将现有代码转换为C++使用异常, 而不是使用 MFC 异常宏。 本文的 "异常" 一文[中介绍了转换代码和执行此操作的准则的优点:从 MFC 异常宏](../mfc/exceptions-converting-from-mfc-exception-macros.md)转换。
 
-如果您已开发了使用 MFC 异常宏的应用程序，则可以继续使用这些宏在现有代码中，同时使用C++你的新代码中的异常。 文章[异常：将更改为版本 3.0 中的异常宏](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)提供的指导可用于执行此操作。
+如果已使用 MFC 异常宏开发了应用程序, 则可以继续在现有代码中使用这些宏, 同时在新代码C++中使用异常。 文章[例外:版本 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)中的异常宏的更改提供了执行此操作的指导原则。
 
 > [!NOTE]
->  若要启用C++异常处理在代码中，选择启用C++在 C 中页的代码生成的异常 /C++项目的文件夹[属性页](../build/reference/property-pages-visual-cpp.md)对话框中或使用[/EHsc](../build/reference/eh-exception-handling-model.md)编译器选项。
+>  若要C++在代码中启用异常处理, 请C++在项目的 "[属性页](../build/reference/property-pages-visual-cpp.md)" 对话框的 CC++ /文件夹中选择 "代码生成" 页上的 "启用异常", 或使用[/ehsc](../build/reference/eh-exception-handling-model.md)编译器选项。
 
 本文介绍了以下主题：
 
@@ -63,51 +63,51 @@ ms.locfileid: "66449726"
 
 - [MFC 异常支持](#_core_mfc_exception_support)
 
-- [有关异常的更多参考资料](#_core_further_reading_about_exceptions)
+- [有关异常的详细信息](#_core_further_reading_about_exceptions)
 
-##  <a name="_core_when_to_use_exceptions"></a> 何时使用异常
+##  <a name="_core_when_to_use_exceptions"></a>何时使用异常
 
-在程序执行期间调用的函数时，可能出现的结果的三个类别： 常规执行、 错误执行或不正常执行。 下面描述了每个类别。
+在程序执行过程中调用函数时, 可能会发生三种类型的结果: 正常执行、错误执行或异常执行。 下面介绍了每个类别。
 
 - 正常执行
 
-   该函数可能正常执行，并返回。 一些函数返回给调用方指示该函数的结果的结果代码。 可能的结果代码严格定义的函数，表示函数的可能结果的范围。 结果代码可以指示成功或失败，或甚至可以指示特定类型的故障，期望在正常范围内。 例如，文件状态函数可以返回代码，指示该文件不存在。 请注意因为结果代码表示很多预期的结果中的一个未使用术语"错误代码"。
+   函数可以正常执行, 并返回。 某些函数将结果代码返回给调用方, 指示函数的结果。 为函数严格定义可能的结果代码, 并表示函数可能的结果范围。 结果代码可以指示成功或失败, 甚至可以指示处于正常范围内的特定类型的故障。 例如, 文件状态函数可以返回指示该文件不存在的代码。 请注意, 不使用术语 "错误代码", 因为结果代码表示多个预期结果中的一个。
 
-- 错误的执行
+- 执行错误
 
-   调用方是犯一些在将参数传递给函数或调用不适当的上下文中的函数。 这种情况下导致错误，并且应检测到通过在程序开发过程中的断言。 (有关断言的详细信息，请参阅[C /C++断言](/visualstudio/debugger/c-cpp-assertions)。)
+   调用方在将自变量传递给函数或在不适当的上下文中调用函数时, 将会出错。 这种情况会导致错误, 并应在程序开发过程中由断言来检测。 (有关断言的详细信息, 请参阅[CC++ /断言](/visualstudio/debugger/c-cpp-assertions)。)
 
-- 不正常执行
+- 异常执行
 
-   不正常执行包括其中外部程序的控制，例如低内存或 I/O 错误条件会影响函数的结果的情况。 应通过捕获和引发异常处理异常情况。
+   异常执行包括程序控件之外的条件 (如内存不足或 i/o 错误) 对函数的结果产生影响的情况。 异常情况应通过捕获并引发异常来处理。
 
-使用异常是尤其适用于不正常执行。
+使用异常特别适用于异常的执行。
 
-##  <a name="_core_mfc_exception_support"></a> MFC 异常支持
+##  <a name="_core_mfc_exception_support"></a>MFC 异常支持
 
-是否使用C++异常直接或使用 MFC 异常宏，则将使用[CException 类](../mfc/reference/cexception-class.md)或`CException`-派生的对象的框架或您的应用程序可能会引发。
+无论是直接使用C++异常还是使用 MFC 异常宏, 都将使用可能由框架或应用`CException`程序引发的[CException 类](../mfc/reference/cexception-class.md)或派生对象。
 
-下表显示了由 MFC 提供的预定义的异常。
+下表显示了 MFC 提供的预定义异常。
 
 |Exception 类|含义|
 |---------------------|-------------|
 |[CMemoryException 类](../mfc/reference/cmemoryexception-class.md)|内存不足|
 |[CFileException 类](../mfc/reference/cfileexception-class.md)|文件异常|
 |[CArchiveException 类](../mfc/reference/carchiveexception-class.md)|存档/序列化异常|
-|[CNotSupportedException 类](../mfc/reference/cnotsupportedexception-class.md)|若要为不支持的服务请求的响应|
+|[CNotSupportedException 类](../mfc/reference/cnotsupportedexception-class.md)|响应不受支持服务的请求|
 |[CResourceException 类](../mfc/reference/cresourceexception-class.md)|Windows 资源分配异常|
-|[CDaoException 类](../mfc/reference/cdaoexception-class.md)|数据库异常 （DAO 类）|
-|[CDBException 类](../mfc/reference/cdbexception-class.md)|数据库异常 （ODBC 类）|
+|[CDaoException 类](../mfc/reference/cdaoexception-class.md)|数据库异常 (DAO 类)|
+|[CDBException 类](../mfc/reference/cdbexception-class.md)|数据库异常 (ODBC 类)|
 |[COleException 类](../mfc/reference/coleexception-class.md)|OLE 异常|
-|[COleDispatchException 类](../mfc/reference/coledispatchexception-class.md)|调度 （自动化） 异常|
-|[CUserException 类](../mfc/reference/cuserexception-class.md)|异常可提示用户提供一个消息框，然后引发泛型[CException 类](../mfc/reference/cexception-class.md)|
+|[COleDispatchException 类](../mfc/reference/coledispatchexception-class.md)|调度 (自动化) 异常|
+|[CUserException 类](../mfc/reference/cuserexception-class.md)|使用消息框向用户发出警报的异常, 然后引发一般的[CException 类](../mfc/reference/cexception-class.md)|
 
 > [!NOTE]
->  MFC 两者都支持C++异常和 MFC 异常宏。 MFC 不直接支持 Windows NT 结构化异常处理程序 (SEH) 中所述[结构化异常处理](/windows/desktop/debug/structured-exception-handling)。
+>  MFC 同时C++支持异常和 mfc 异常宏。 MFC 不直接支持 Windows NT 结构化异常处理程序 (SEH), 如[结构化异常处理](/windows/win32/debug/structured-exception-handling)中所述。
 
-##  <a name="_core_further_reading_about_exceptions"></a> 有关异常的更多参考资料
+##  <a name="_core_further_reading_about_exceptions"></a>有关异常的详细信息
 
-以下文章说明了使用 MFC 库进行异常处理：
+以下文章说明了如何使用 MFC 库进行异常处理:
 
 - [异常：捕获和删除异常](../mfc/exceptions-catching-and-deleting-exceptions.md)
 
@@ -121,7 +121,7 @@ ms.locfileid: "66449726"
 
 - [异常：OLE 异常](../mfc/exceptions-ole-exceptions.md)
 
-以下文章比较 MFC 异常宏使用C++异常关键字并解释如何调整你的代码：
+下面的文章将 MFC exception 宏与C++异常关键字进行比较, 并说明如何改编你的代码:
 
 - [异常：版本 3.0 中对异常宏的更改](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)
 

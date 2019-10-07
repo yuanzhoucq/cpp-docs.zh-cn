@@ -1,6 +1,6 @@
 ---
 title: __invlpg
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __invlpg
 - __invlpg_cpp
@@ -8,31 +8,31 @@ helpviewer_keywords:
 - invlpg instruction
 - __invlpg intrinsic
 ms.assetid: 3fb3633f-d9b7-4ec0-9e7f-a7f2fa8ed794
-ms.openlocfilehash: b4f941baae9f03ed288a99d59e2b06262962e339
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba8bd81498f805992336b0dc4163fe18fa157a2c
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348739"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221894"
 ---
-# <a name="invlpg"></a>__invlpg
+# <a name="__invlpg"></a>__invlpg
 
 **Microsoft 专用**
 
-生成 x86`invlpg`指令，这会转换旁路缓冲器 (TLB) 使指向的内存与关联的页为`Address`。
+生成 x86 `invlpg`指令, 该指令使与按*地址*指向的内存关联的页面的翻译后备链表缓冲区 (TLB) 失效。
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 void __invlpg(
    void* Address
 );
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-*地址*<br/>
-[in]一个 64 位地址。
+*地址*\
+中64位地址。
 
 ## <a name="requirements"></a>要求
 
@@ -40,11 +40,11 @@ void __invlpg(
 |---------------|------------------|
 |`__invlpg`|x86、x64|
 
-**标头文件** \<intrin.h >
+**标头文件**\<intrin.h >
 
 ## <a name="remarks"></a>备注
 
-内部函数`__invlpg`发出特权的指令和选项仅适用于内核模式权限级别 (CPL) 为 0。
+内部函数`__invlpg`发出特权指令, 仅在权限级别 (CPL) 为0的内核模式下可用。
 
 此例程仅可用作内部函数。
 

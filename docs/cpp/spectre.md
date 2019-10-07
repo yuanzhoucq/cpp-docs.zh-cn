@@ -1,6 +1,6 @@
 ---
 title: spectre
-ms.date: 1/23/2018
+ms.date: 01/23/2018
 f1_keywords:
 - spectre_cpp
 - spectre
@@ -8,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - __declspec keyword (C++), spectre
 - spectre __declspec keyword
-ms.openlocfilehash: 2377a3c23be1e27bfe4f2df23eb00823635fa05d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40eee25dec867ae3fce7a6b2d4715f0be81bfe76
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267253"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926371"
 ---
 # <a name="spectre"></a>spectre
 
 **Microsoft 专用**
 
-告知编译器不要插入 Spectre 变体 1 推理执行屏障的函数的说明。
+告诉编译器不要插入函数的 Spectre 变体1推理执行关卡说明。
 
 ## <a name="syntax"></a>语法
 
@@ -27,12 +27,12 @@ ms.locfileid: "62267253"
 
 ## <a name="remarks"></a>备注
 
-[/Qspectre](../build/reference/qspectre.md)编译器选项将导致编译器插入推理执行屏障说明的分析表明存在 Spectre 变体 1 安全漏洞。 发出的具体说明取决于处理器。 这些说明应该对代码大小或性能的影响最小，可能有你的代码不受此漏洞，并且需要最大性能。
+[/Qspectre](../build/reference/qspectre.md)编译器选项将导致编译器插入推理执行关卡说明。 它们是在分析表明存在 Spectre 变体1安全漏洞的位置插入的。 发出的具体说明取决于处理器。 尽管这些说明对代码大小或性能的影响最小，但在某些情况下，你的代码不受此漏洞的影响，并且需要最高的性能。
 
-专家分析可能确定函数是安全从 Spectre 变体 1 边界检查绕过缺陷。 在这种情况下，可以通过应用取消生成函数内的缓解代码`__declspec(spectre(nomitigation))`至函数声明。
+专家分析可能会确定函数从 Spectre 变体1界限检查绕过缺陷中是安全的。 在这种情况下，可以通过将应用`__declspec(spectre(nomitigation))`到函数声明来禁止在函数内生成缓解代码。
 
 > [!CAUTION]
-> **/Qspectre**推理执行屏障指令提供重要的安全保护，并且对性能的影响微不足道。 因此，我们建议您不要取消它们，但在以下罕见的情况下除外：函数的性能至关重要，并且已经知道函数是安全的。
+> **/Qspectre**推理执行屏障指令提供重要的安全保护，对性能的影响可以忽略不计。 因此，我们建议您不要取消它们，但在以下罕见的情况下除外：函数的性能至关重要，并且已经知道函数是安全的。
 
 ## <a name="example"></a>示例
 

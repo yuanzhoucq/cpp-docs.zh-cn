@@ -1,18 +1,18 @@
 ---
 title: '&lt;memory&gt;'
-ms.date: 04/04/2019
+ms.date: 08/04/2019
 f1_keywords:
 - memory/std::<memory>
 - <memory>
 - std::<memory>
 helpviewer_keywords:
 - memory header
-ms.openlocfilehash: 7c30a44de70675af69648fdba79325a173ab62fc
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 869a7590d880beba7ccc1d324fd1ba227eeac4e0
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451892"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957085"
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
 
@@ -93,7 +93,7 @@ ms.locfileid: "68451892"
 |-|-|
 |[allocator](../standard-library/allocator-class.md)|此模板类描述一个对象，用于管理 **Type** 类对象数组的存储分配和释放。|
 |[allocator_traits](../standard-library/allocator-traits-class.md)|描述一个对象，用于确定支持分配器的容器所需要的全部信息。|
-|[auto_ptr](../standard-library/auto-ptr-class.md)|此模板类描述一个对象, 该对象存储一个指向类型<strong>\*</strong>为 type 的已分配对象的指针, 该指针可确保当它的封闭 auto_ptr 被销毁时, 它指向的对象将被删除。|
+|[auto_ptr](../standard-library/auto-ptr-class.md)|此模板类描述一个对象, 该对象存储一个指向类型 <strong>\*</strong>为 type 的已分配对象的指针, 该指针可确保当它的封闭 auto_ptr 被销毁时, 它指向的对象将被删除。|
 |[bad_weak_ptr](../standard-library/bad-weak-ptr-class.md)|报告不良的 weak_ptr 异常。|
 |[enabled_shared_from_this](../standard-library/enable-shared-from-this-class.md)|帮助生成一个 `shared_ptr`。|
 |[pointer_traits](../standard-library/pointer-traits-struct.md)|提供模板类 `allocator_traits` 对象所需信息，用于描述一个采用指针类型 `Ptr` 的分配器。|
@@ -108,7 +108,7 @@ ms.locfileid: "68451892"
 |-|-|
 |[allocator_arg_t](../standard-library/allocator-class.md#allocator_arg_t)||
 |[default_delete](../standard-library/default-delete-struct.md)||
-|[hash]()||
+|hash|提供专用于和`unique_ptr` `shared_ptr`的重载。|
 |[owner_less](../standard-library/memory-functions.md#owner_less)|允许对共享指针和弱指针进行基于所有权的混合比较。|
 |[uses_allocator](../standard-library/allocator-class.md#uses_allocator)||
 
@@ -116,7 +116,7 @@ ms.locfileid: "68451892"
 
 |||
 |-|-|
-|[allocator\<void>](../standard-library/allocator-void-class.md)|一种针对 void 类型进行的模板类分配器专用化，用于定义在此专用化上下文中有意义的成员类型。|
+|[allocator\<void>](../standard-library/allocator-void-class.md)|将模板类分配器专用化到类型**void**, 并仅定义在此专用化上下文中有意义的成员类型。|
 
 ## <a name="see-also"></a>请参阅
 

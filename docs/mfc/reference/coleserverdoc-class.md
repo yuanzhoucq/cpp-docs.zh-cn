@@ -82,12 +82,12 @@ helpviewer_keywords:
 - COleServerDoc [MFC], OnSetItemRects
 - COleServerDoc [MFC], OnShowDocument
 ms.assetid: a9cdd96a-e0ac-43bb-9203-2c29237e965c
-ms.openlocfilehash: 4cada70723c7fadc9c91c40380b8a7e9fc46a07a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eec94a32fa0963d4cf2eccae0fb9e2423e75ffdc
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224215"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69503814"
 ---
 # <a name="coleserverdoc-class"></a>COleServerDoc 类
 
@@ -112,63 +112,63 @@ class AFX_NOVTABLE COleServerDoc : public COleLinkingDoc
 |名称|描述|
 |----------|-----------------|
 |[COleServerDoc::ActivateDocObject](#activatedocobject)|激活关联的 DocObject 文档。|
-|[COleServerDoc::ActivateInPlace](#activateinplace)|激活就地编辑的文档。|
+|[COleServerDoc::ActivateInPlace](#activateinplace)|激活文档以便进行就地编辑。|
 |[COleServerDoc::DeactivateAndUndo](#deactivateandundo)|停用服务器的用户界面。|
-|[COleServerDoc::DiscardUndoState](#discardundostate)|放弃撤消状态信息。|
-|[COleServerDoc::GetClientSite](#getclientsite)|检索指向基础`IOleClientSite`接口。|
-|[COleServerDoc::GetEmbeddedItem](#getembeddeditem)|返回一个指向一个表示整个文档项。|
-|[COleServerDoc::GetItemClipRect](#getitemcliprect)|返回当前的剪辑矩形以进行就地编辑。|
-|[COleServerDoc::GetItemPosition](#getitemposition)|返回当前 position rectangle，相对于容器应用程序的客户端区域，以进行就地编辑。|
+|[COleServerDoc::DiscardUndoState](#discardundostate)|丢弃撤消状态信息。|
+|[COleServerDoc::GetClientSite](#getclientsite)|检索指向基础`IOleClientSite`接口的指针。|
+|[COleServerDoc::GetEmbeddedItem](#getembeddeditem)|返回一个指向表示整个文档的项的指针。|
+|[COleServerDoc::GetItemClipRect](#getitemcliprect)|返回当前用于就地编辑的剪辑矩形。|
+|[COleServerDoc::GetItemPosition](#getitemposition)|对于就地编辑，返回相对于容器应用程序工作区的当前位置矩形。|
 |[COleServerDoc::GetZoomFactor](#getzoomfactor)|返回以像素为单位的缩放系数。|
-|[COleServerDoc::IsDocObject](#isdocobject)|确定文档是否 DocObject。|
-|[COleServerDoc::IsEmbedded](#isembedded)|指示文档是否为容器文档中嵌入的或独立运行。|
-|[COleServerDoc::IsInPlaceActive](#isinplaceactive)|如果当前就地激活项，则，返回 TRUE。|
-|[COleServerDoc::NotifyChanged](#notifychanged)|通知用户已更改文档的容器。|
-|[COleServerDoc::NotifyClosed](#notifyclosed)|通知用户已关闭文档容器。|
-|[COleServerDoc::NotifyRename](#notifyrename)|通知用户已重命名该文档的容器。|
-|[COleServerDoc::NotifySaved](#notifysaved)|通知用户已保存文档的容器。|
-|[COleServerDoc::OnDeactivate](#ondeactivate)|当用户将就地激活项，由框架调用。|
-|[COleServerDoc::OnDeactivateUI](#ondeactivateui)|由框架调用以销毁控件和创建就地激活的其他用户界面元素。|
-|[COleServerDoc::OnDocWindowActivate](#ondocwindowactivate)|激活或停用容器的文档框架窗口时由框架调用。|
-|[COleServerDoc::OnResizeBorder](#onresizeborder)|容器应用程序的框架窗口或文档窗口调整大小时，由框架调用。|
-|[COleServerDoc::OnShowControlBars](#onshowcontrolbars)|由框架调用以显示或隐藏用于就地编辑的控件条。|
-|[COleServerDoc::OnUpdateDocument](#onupdatedocument)|更新项的容器的副本保存为嵌入的项的服务器文档时，由框架调用。|
+|[COleServerDoc::IsDocObject](#isdocobject)|确定文档是否为 DocObject。|
+|[COleServerDoc::IsEmbedded](#isembedded)|指示文档是嵌入到容器文档中还是独立运行。|
+|[COleServerDoc::IsInPlaceActive](#isinplaceactive)|如果当前正在就地激活该项，则返回 TRUE。|
+|[COleServerDoc::NotifyChanged](#notifychanged)|通知容器用户已更改文档。|
+|[COleServerDoc::NotifyClosed](#notifyclosed)|通知容器用户已关闭文档。|
+|[COleServerDoc::NotifyRename](#notifyrename)|通知容器：用户已将文档重命名为。|
+|[COleServerDoc::NotifySaved](#notifysaved)|通知容器用户用户已保存文档。|
+|[COleServerDoc::OnDeactivate](#ondeactivate)|当用户停用就地激活的项时由框架调用。|
+|[COleServerDoc::OnDeactivateUI](#ondeactivateui)|由框架调用，用于销毁为就地激活创建的控件和其他用户界面元素。|
+|[COleServerDoc::OnDocWindowActivate](#ondocwindowactivate)|当激活或停用容器的文档框架窗口时由框架调用。|
+|[COleServerDoc::OnResizeBorder](#onresizeborder)|当调整容器应用程序的框架窗口或文档窗口大小时，由框架调用。|
+|[COleServerDoc::OnShowControlBars](#onshowcontrolbars)|由框架调用，用于显示或隐藏用于就地编辑的控件条。|
+|[COleServerDoc::OnUpdateDocument](#onupdatedocument)|当保存作为嵌入项的服务器文档时由框架调用，它更新项的容器副本。|
 |[COleServerDoc::RequestPositionChange](#requestpositionchange)|更改就地编辑框的位置。|
-|[COleServerDoc::SaveEmbedding](#saveembedding)|指示要保存文档的容器应用程序。|
+|[COleServerDoc::SaveEmbedding](#saveembedding)|通知容器应用程序保存文档。|
 |[COleServerDoc::ScrollContainerBy](#scrollcontainerby)|滚动容器文档。|
-|[COleServerDoc::UpdateAllItems](#updateallitems)|通知用户已更改文档的容器。|
+|[COleServerDoc::UpdateAllItems](#updateallitems)|通知容器用户已更改文档。|
 
 ### <a name="protected-methods"></a>受保护的方法
 
 |名称|描述|
 |----------|-----------------|
-|[COleServerDoc::CreateInPlaceFrame](#createinplaceframe)|由框架调用以创建以进行就地编辑框架窗口。|
-|[COleServerDoc::DestroyInPlaceFrame](#destroyinplaceframe)|由框架调用以销毁就地编辑框架窗口。|
-|[COleServerDoc::GetDocObjectServer](#getdocobjectserver)|重写此函数可创建一个新`CDocObjectServer`对象，并指示此文档是 DocObject 容器。|
-|[COleServerDoc::OnClose](#onclose)|当容器请求关闭文档时，由框架调用。|
-|[COleServerDoc::OnExecOleCmd](#onexecolecmd)|执行指定的命令或显示有关命令的帮助。|
-|[COleServerDoc::OnFrameWindowActivate](#onframewindowactivate)|激活或停用容器的框架窗口时由框架调用。|
-|[COleServerDoc::OnGetEmbeddedItem](#ongetembeddeditem)|调用以获取`COleServerItem`，表示整个文档; 用于获取嵌入的项。 所需的实现。|
-|[COleServerDoc::OnReactivateAndUndo](#onreactivateandundo)|由框架调用以撤消的就地编辑期间所做的更改。|
-|[COleServerDoc::OnSetHostNames](#onsethostnames)|当容器设置为嵌入对象的窗口标题时由框架调用。|
-|[COleServerDoc::OnSetItemRects](#onsetitemrects)|由框架调用以在容器应用程序的窗口内定位就地编辑框架窗口。|
+|[COleServerDoc::CreateInPlaceFrame](#createinplaceframe)|由框架调用，用于创建就地编辑的框架窗口。|
+|[COleServerDoc::DestroyInPlaceFrame](#destroyinplaceframe)|由框架调用，用于销毁框架窗口以进行就地编辑。|
+|[COleServerDoc::GetDocObjectServer](#getdocobjectserver)|重写此函数以创建新`CDocObjectServer`的对象，并指示此文档是 DocObject 容器。|
+|[COleServerDoc::OnClose](#onclose)|当容器请求关闭文档时由框架调用。|
+|[COleServerDoc::OnExecOleCmd](#onexecolecmd)|执行指定的命令或显示该命令的帮助。|
+|[COleServerDoc::OnFrameWindowActivate](#onframewindowactivate)|当激活或停用容器的框架窗口时由框架调用。|
+|[COleServerDoc::OnGetEmbeddedItem](#ongetembeddeditem)|调用以获取一个`COleServerItem`表示整个文档的; 用于获取嵌入项。 需要实现。|
+|[COleServerDoc::OnReactivateAndUndo](#onreactivateandundo)|由框架调用以撤消就地编辑过程中所做的更改。|
+|[COleServerDoc::OnSetHostNames](#onsethostnames)|当容器为嵌入的对象设置窗口标题时由框架调用。|
+|[COleServerDoc::OnSetItemRects](#onsetitemrects)|由框架调用，以在容器应用程序的窗口中定位就地编辑框架窗口。|
 |[COleServerDoc::OnShowDocument](#onshowdocument)|由框架调用以显示或隐藏文档。|
 
 ## <a name="remarks"></a>备注
 
-服务器文档可以包含[COleServerItem](../../mfc/reference/coleserveritem-class.md) ，这些对象表示对嵌入或链接项的服务器界面。 通过编辑嵌入的项的容器启动服务器应用程序时，作为其自己的服务器文档; 加载项`COleServerDoc`对象包含一个`COleServerItem`包括对整个文档的对象。 通过编辑链接的项的容器启动服务器应用程序时，从磁盘; 加载现有文档突出显示文档的内容的一部分，指示链接的项。
+服务器文档可以包含[COleServerItem](../../mfc/reference/coleserveritem-class.md)对象，这些对象表示嵌入或链接项的服务器接口。 如果容器启动服务器应用程序以编辑嵌入项，则会将该项作为其自己的服务器文档加载;对象只包含一个`COleServerItem`对象，其中包含整个文档。 `COleServerDoc` 当容器启动服务器应用程序以编辑链接项时，将从磁盘加载现有文档;文档内容的一部分将突出显示以指示链接项。
 
-`COleServerDoc` 对象还可以包含的项[COleClientItem](../../mfc/reference/coleclientitem-class.md)类。 这样即可创建容器-服务器应用程序。 该框架提供了函数能正确地存储`COleClientItem`项，但服务`COleServerItem`对象。
+`COleServerDoc`对象也可以包含[COleClientItem](../../mfc/reference/coleclientitem-class.md)类的项。 这允许您创建容器-服务器应用程序。 在为`COleServerItem`对象提供服务时，框架`COleClientItem`提供用于正确存储项的函数。
 
-如果服务器应用程序不支持链接，服务器文档将始终包含只有一个服务器项目，它表示为文档的整个嵌入的对象。 如果服务器应用程序不支持链接，它必须创建的服务器项每次选择复制到剪贴板。
+如果你的服务器应用程序不支持链接，则服务器文档将始终只包含一个服务器项，这会将整个嵌入对象表示为文档。 如果你的服务器应用程序支持链接，则每次将选定内容复制到剪贴板时，它都必须创建一个服务器项。
 
-若要使用`COleServerDoc`、 从其派生一个类并实现[OnGetEmbeddedItem](#ongetembeddeditem)成员函数，允许你的服务器以支持嵌入的项。 从派生类`COleServerItem`实现在文档中的项并返回从该类的对象`OnGetEmbeddedItem`。
+若要`COleServerDoc`使用，请从中派生类并实现[OnGetEmbeddedItem](#ongetembeddeditem)成员函数，使服务器能够支持嵌入项。 从中`COleServerItem`派生一个类，以实现文档中的项，并从`OnGetEmbeddedItem`返回该类的对象。
 
-若要支持链接的项`COleServerDoc`提供了[OnGetLinkedItem](../../mfc/reference/colelinkingdoc-class.md#ongetlinkeditem)成员函数。 可以使用的默认实现，或如果你有自己的方式管理文档项的重写它。
+为支持链接项， `COleServerDoc`提供[OnGetLinkedItem](../../mfc/reference/colelinkingdoc-class.md#ongetlinkeditem)成员函数。 如果你有自己的管理文档项的方式，则可以使用默认实现或重写它。
 
-需要一个`COleServerDoc`-对于每种类型的服务器记录您的应用程序支持派生类。 例如，如果服务器应用程序支持的工作表和图表，必须有两个`COleServerDoc`-派生的类。
+您的应用`COleServerDoc`程序支持的每种服务器文档都需要一个派生类。 例如，如果您的服务器应用程序支持工作表和图表，则`COleServerDoc`需要两个派生类。
 
-服务器上的详细信息，请参阅文章[服务器：实现服务器](../../mfc/servers-implementing-a-server.md)。
+有关服务器的详细信息，请参阅文章[服务器：实现服务器](../../mfc/servers-implementing-a-server.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -186,7 +186,7 @@ class AFX_NOVTABLE COleServerDoc : public COleLinkingDoc
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxole.h
+**标头：** afxole
 
 ##  <a name="activatedocobject"></a>  COleServerDoc::ActivateDocObject
 
@@ -198,11 +198,11 @@ void ActivateDocObject();
 
 ### <a name="remarks"></a>备注
 
-默认情况下，`COleServerDoc`不支持活动文档 （也称为 DocObjects）。 若要启用此支持，请参阅[GetDocObjectServer](#getdocobjectserver)和类[CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md)。
+默认情况下`COleServerDoc` ，不支持活动文档（也称为 DocObjects）。 若要启用此支持，请参阅[GetDocObjectServer](#getdocobjectserver)和类[CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md)。
 
 ##  <a name="activateinplace"></a>  COleServerDoc::ActivateInPlace
 
-激活就地编辑的项。
+为就地编辑激活该项。
 
 ```
 BOOL ActivateInPlace();
@@ -210,17 +210,17 @@ BOOL ActivateInPlace();
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则非零值否则为 0，指示该项目已完全打开。
+如果成功，则为非零值;否则为0，指示该项已完全打开。
 
 ### <a name="remarks"></a>备注
 
-此函数执行就地激活所需的所有操作。 它创建就地框架窗口、 激活它和大小的项、 设置共享的菜单和其他控件、 将项滚动到视图，并将焦点设置到的就地框架窗口。
+此函数执行就地激活所需的所有操作。 它将创建一个就地框架窗口，将其激活并调整为该项，设置共享菜单和其他控件，将该项滚动到视图中，并将焦点设置到就地框架窗口中。
 
-默认实现调用此函数[COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow)。 如果你的应用程序支持就地激活 （如播放） 另一个谓词，则调用此函数。
+此函数由[COleServerItem：： OnShow](../../mfc/reference/coleserveritem-class.md#onshow)的默认实现调用。 如果你的应用程序支持用于就地激活（如播放）的另一个谓词，则调用此函数。
 
 ##  <a name="coleserverdoc"></a>  COleServerDoc::COleServerDoc
 
-构造`COleServerDoc`对象而无需连接使用 OLE 系统 Dll。
+构造一个`COleServerDoc`对象，而不与 OLE 系统 dll 连接。
 
 ```
 COleServerDoc();
@@ -228,11 +228,11 @@ COleServerDoc();
 
 ### <a name="remarks"></a>备注
 
-必须调用[COleLinkingDoc::Register](../../mfc/reference/colelinkingdoc-class.md#register) ole 打开通信。 如果使用的[COleTemplateServer](../../mfc/reference/coletemplateserver-class.md)在应用程序中`COleLinkingDoc::Register`为您通过调用`COleLinkingDoc`的实现`OnNewDocument`， `OnOpenDocument`，和`OnSaveDocument`。
+必须调用[COleLinkingDoc：： Register](../../mfc/reference/colelinkingdoc-class.md#register)才能打开与 OLE 的通信。 如果在应用程序中使用[COleTemplateServer](../../mfc/reference/coletemplateserver-class.md) ， `COleLinkingDoc::Register`则`OnNewDocument`通过`COleLinkingDoc`的、 `OnOpenDocument`和`OnSaveDocument`实现调用。
 
 ##  <a name="createinplaceframe"></a>  COleServerDoc::CreateInPlaceFrame
 
-框架调用此函数可创建以进行就地编辑框架窗口。
+框架调用此函数来创建一个用于就地编辑的框架窗口。
 
 ```
 virtual COleIPFrameWnd* CreateInPlaceFrame(CWnd* pParentWnd);
@@ -241,21 +241,21 @@ virtual COleIPFrameWnd* CreateInPlaceFrame(CWnd* pParentWnd);
 ### <a name="parameters"></a>参数
 
 *pParentWnd*<br/>
-向容器应用程序的父窗口的指针。
+指向容器应用程序的父窗口的指针。
 
 ### <a name="return-value"></a>返回值
 
-就地框架窗口中或如果不成功则为 NULL 的指针。
+指向就地框架窗口的指针，如果不成功，则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-默认实现使用文档模板中指定的信息创建框架。 使用的视图是为文档创建的第一个视图。 此视图是暂时从原始帧中分离和附加到新创建的框架。
+默认实现使用文档模板中指定的信息来创建框架。 使用的视图是为文档创建的第一个视图。 此视图与原始帧暂时分离，并附加到新创建的帧。
 
-这是一种高级可重写。
+这是一种高级的可重写。
 
 ##  <a name="deactivateandundo"></a>  COleServerDoc::DeactivateAndUndo
 
-如果您的应用程序支持撤消，并且用户选择撤消激活项后但在编辑之前，调用此函数。
+如果你的应用程序支持撤消，并且用户在激活项后，但在编辑之前选择 "撤消"，则调用此函数。
 
 ```
 BOOL DeactivateAndUndo();
@@ -267,11 +267,11 @@ BOOL DeactivateAndUndo();
 
 ### <a name="remarks"></a>备注
 
-如果容器应用程序使用 Microsoft 基础类库编写的调用此函数会导致[COleClientItem::OnDeactivateAndUndo](../../mfc/reference/coleclientitem-class.md#ondeactivateandundo)调用，这将停用服务器的用户界面。
+如果使用 Microsoft 基础类库编写容器应用程序，调用此函数将导致调用[COleClientItem：： OnDeactivateAndUndo](../../mfc/reference/coleclientitem-class.md#ondeactivateandundo) ，这将停用服务器的用户界面。
 
 ##  <a name="destroyinplaceframe"></a>  COleServerDoc::DestroyInPlaceFrame
 
-框架调用此函数以销毁就地框架窗口，并将该服务器应用程序的文档窗口返回到之前的就地激活的状态。
+框架调用此函数以销毁就地框架窗口，并将服务器应用程序的文档窗口返回到就地激活之前的状态。
 
 ```
 virtual void DestroyInPlaceFrame(COleIPFrameWnd* pFrameWnd);
@@ -284,11 +284,11 @@ virtual void DestroyInPlaceFrame(COleIPFrameWnd* pFrameWnd);
 
 ### <a name="remarks"></a>备注
 
-这是一种高级可重写。
+这是一种高级的可重写。
 
-##  <a name="discardundostate"></a>  COleServerDoc::DiscardUndoState
+##  <a name="discardundostate"></a>COleServerDoc：:D iscardUndoState
 
-如果用户执行编辑操作无法被撤消，调用此函数可强制容器应用程序，可以放弃其撤消状态信息。
+如果用户执行的编辑操作无法撤消，请调用此函数以强制容器应用程序放弃其撤消状态信息。
 
 ```
 BOOL DiscardUndoState();
@@ -300,11 +300,11 @@ BOOL DiscardUndoState();
 
 ### <a name="remarks"></a>备注
 
-提供此函数，以便支持撤消服务器可以释放资源，否则将由不能使用的撤消状态信息。
+提供此函数的目的是，支持 Undo 的服务器可以释放不能使用的撤消状态信息所使用的资源。
 
-##  <a name="getclientsite"></a>  COleServerDoc::GetClientSite
+##  <a name="getclientsite"></a>COleServerDoc：： GetClientSite
 
-检索指向基础`IOleClientSite`接口。
+检索指向基础`IOleClientSite`接口的指针。
 
 ```
 LPOLECLIENTSITE GetClientSite() const;
@@ -312,11 +312,11 @@ LPOLECLIENTSITE GetClientSite() const;
 
 ### <a name="return-value"></a>返回值
 
-检索对基础指针[IOleClientSite](/windows/desktop/api/oleidl/nn-oleidl-ioleclientsite)接口。
+检索指向基础[IOleClientSite](/windows/win32/api/oleidl/nn-oleidl-ioleclientsite)接口的指针。
 
 ##  <a name="getdocobjectserver"></a>  COleServerDoc::GetDocObjectServer
 
-重写此函数可创建一个新`CDocObjectServer`项，然后返回一个指向。
+重写此函数以创建新`CDocObjectServer`项并返回指向它的指针。
 
 ```
 virtual CDocObjectServer* GetDocObjectServer(LPOLEDOCUMENTSITE pDocSite);
@@ -325,23 +325,23 @@ virtual CDocObjectServer* GetDocObjectServer(LPOLEDOCUMENTSITE pDocSite);
 ### <a name="parameters"></a>参数
 
 *pDocSite*<br/>
-指向`IOleDocumentSite`将连接到服务器的本文档的接口。
+指向`IOleDocumentSite`接口的指针，该接口将此文档连接到服务器。
 
 ### <a name="return-value"></a>返回值
 
-一个指向`CDocObjectServer`;如果操作失败，则为 NULL。
+指向的`CDocObjectServer`指针;如果操作失败，则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-激活 DocObject 服务器时，返回非 NULL 指针显示的客户端可以支持 DocObjects。 默认实现返回 NULL。
+激活 DocObject 服务器后，返回非 NULL 指针将显示客户端可以支持 DocObjects。 默认实现返回 NULL。
 
-支持 DocObjects 的文档的典型实现只需将分配一个新`CDocObjectServer`对象，并将其返回给调用方。 例如：
+支持 DocObjects 的文档的典型实现只是分配新`CDocObjectServer`的对象并将其返回给调用方。 例如：
 
 [!code-cpp[NVC_MFCOleServer#3](../../mfc/codesnippet/cpp/coleserverdoc-class_1.cpp)]
 
-##  <a name="getembeddeditem"></a>  COleServerDoc::GetEmbeddedItem
+##  <a name="getembeddeditem"></a>COleServerDoc：： GetEmbeddedItem
 
-调用此函数可获得到一个表示整个文档项的指针。
+调用此函数可获取指向表示整个文档的项的指针。
 
 ```
 COleServerItem* GetEmbeddedItem();
@@ -349,15 +349,15 @@ COleServerItem* GetEmbeddedItem();
 
 ### <a name="return-value"></a>返回值
 
-一个表示整个文档; 项指向的指针如果操作失败，则为 NULL。
+指向表示整个文档的项的指针;如果操作失败，则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-它将调用[COleServerDoc::OnGetEmbeddedItem](#ongetembeddeditem)，没有默认实现的虚拟函数。
+它调用[COleServerDoc：： OnGetEmbeddedItem](#ongetembeddeditem)，这是一个没有默认实现的虚函数。
 
 ##  <a name="getitemcliprect"></a>  COleServerDoc::GetItemClipRect
 
-调用`GetItemClipRect`成员函数以在位置获取正在编辑的项的剪辑矩形坐标。
+`GetItemClipRect`调用成员函数以获取正在就地编辑的项的剪辑矩形坐标。
 
 ```
 void GetItemClipRect(LPRECT lpClipRect) const;
@@ -366,17 +366,17 @@ void GetItemClipRect(LPRECT lpClipRect) const;
 ### <a name="parameters"></a>参数
 
 *lpClipRect*<br/>
-指向`RECT`结构或`CRect`对象以接收项的剪辑矩形坐标。
+指向`RECT`结构的指针， `CRect`或用于接收项的剪辑矩形坐标的对象。
 
 ### <a name="remarks"></a>备注
 
-坐标是相对于容器应用程序窗口的工作区以像素为单位。
+坐标以像素为单位，相对于容器应用程序窗口的工作区。
 
-剪辑矩形外，不应发生绘图。 通常情况下，绘制是自动限制。 使用此函数可确定用户是否已经滚动外部文档; 的可见部分如果是这样，滚动容器文档，根据需要通过调用[ScrollContainerBy](#scrollcontainerby)。
+绘图不应出现在剪辑矩形的外部。 通常，绘图会自动受到限制。 使用此函数可确定用户是否已在文档的可见部分之外滚动;如果是这样，可以通过调用[ScrollContainerBy](#scrollcontainerby)来按需滚动容器文档。
 
 ##  <a name="getitemposition"></a>  COleServerDoc::GetItemPosition
 
-调用`GetItemPosition`成员函数以获取正在就地编辑的项的坐标。
+`GetItemPosition`调用成员函数以获取正在就地编辑的项的坐标。
 
 ```
 void GetItemPosition(LPRECT lpPosRect) const;
@@ -385,17 +385,17 @@ void GetItemPosition(LPRECT lpPosRect) const;
 ### <a name="parameters"></a>参数
 
 *lpPosRect*<br/>
-指向`RECT`结构或`CRect`对象以接收项的坐标。
+指向`RECT`结构的指针， `CRect`或用于接收该项坐标的对象。
 
 ### <a name="remarks"></a>备注
 
-坐标是相对于容器应用程序窗口的工作区以像素为单位。
+坐标以像素为单位，相对于容器应用程序窗口的工作区。
 
-可以与当前的剪辑矩形，以确定该项可见 （或不可见） 的范围进行比较项的位置在屏幕上。
+项的位置可以与当前的剪辑矩形进行比较，以确定项在屏幕上可见（或不可见）的程度。
 
 ##  <a name="getzoomfactor"></a>  COleServerDoc::GetZoomFactor
 
-`GetZoomFactor`成员函数将确定已激活以进行就地编辑项"缩放系数"。
+`GetZoomFactor`成员函数确定已为就地编辑激活的项的 "缩放系数"。
 
 ```
 BOOL GetZoomFactor(
@@ -407,27 +407,27 @@ BOOL GetZoomFactor(
 ### <a name="parameters"></a>参数
 
 *lpSizeNum*<br/>
-指向类的对象指针`CSize`，将存放缩放系数的分子。 可以为 NULL。
+指向类`CSize`的对象的指针，它将保存缩放系数的分子。 可以为 NULL。
 
 *lpSizeDenom*<br/>
-指向类的对象指针`CSize`，将存放缩放系数的分母。 可以为 NULL。
+指向类`CSize`的对象的指针，它将保存缩放系数的分母。 可以为 NULL。
 
 *lpPosRect*<br/>
-指向类的对象指针`CRect`，描述项的新位置。 如果此参数为 NULL，则函数将使用项的当前位置。
+指向类的对象的指针`CRect` ，该类描述项的新位置。 如果此参数为 NULL，则函数将使用项的当前位置。
 
 ### <a name="return-value"></a>返回值
 
-非零，如果为就地激活项编辑和其缩放系数不是 100%(1:1);否则为 0。
+如果为就地编辑激活项并且其缩放系数不是 100% （1:1），则为非零值;否则为0。
 
 ### <a name="remarks"></a>备注
 
-缩放系数，以像素为单位，为其当前范围内的项的大小的比例。 如果容器应用程序没有设置项的范围内，其原始大小 (由[COleServerItem::OnGetExtent](../../mfc/reference/coleserveritem-class.md#ongetextent)) 使用。
+缩放系数（以像素为单位）是项大小与当前范围的比例。 如果容器应用程序未设置项的区，则使用其自然范围（如[COleServerItem：： OnGetExtent](../../mfc/reference/coleserveritem-class.md#ongetextent)所确定）。
 
-该函数将其前两个参数设置为分子和分母的项的"缩放系数。" 如果未正在就地编辑项，该函数将这些参数设置为默认值为 100%（或 1:1），并将返回零。 有关详细信息，请参阅技术注意 40 [MFC/OLE 就地调整大小和缩放](../../mfc/tn040-mfc-ole-in-place-resizing-and-zooming.md)。
+函数将它的前两个参数设置为项的 "缩放系数" 的分子和分母。 如果未就地编辑项，则函数会将这些参数设置为默认值 100% （或1:1），并返回零。 有关详细信息，请参阅技术说明40：[就地调整大小和缩放](../../mfc/tn040-mfc-ole-in-place-resizing-and-zooming.md)。
 
 ##  <a name="isdocobject"></a>  COleServerDoc::IsDocObject
 
-确定文档是否 DocObject。
+确定文档是否为 DocObject。
 
 ```
 BOOL IsDocObject() const;
@@ -435,11 +435,11 @@ BOOL IsDocObject() const;
 
 ### <a name="return-value"></a>返回值
 
-如果文档是 DocObject; 则为 TRUE否则为 FALSE。
+如果文档是 DocObject，则为 TRUE;否则为 FALSE。
 
-##  <a name="isembedded"></a>  COleServerDoc::IsEmbedded
+##  <a name="isembedded"></a>COleServerDoc：： IsEmbedded
 
-调用`IsEmbedded`成员函数来确定文档是否表示嵌入在容器中的对象。
+`IsEmbedded`调用成员函数以确定文档是否表示嵌入到容器中的对象。
 
 ```
 BOOL IsEmbedded() const;
@@ -447,15 +447,15 @@ BOOL IsEmbedded() const;
 
 ### <a name="return-value"></a>返回值
 
-如果非零`COleServerDoc`对象是表示的对象的文档嵌入在容器中; 否则为 0。
+如果`COleServerDoc`对象是表示嵌入到容器中的对象的文档，则为非零; 否则为0。
 
 ### <a name="remarks"></a>备注
 
-尽管它可能由容器应用程序作为链接操作，不被嵌入从文件加载的文档。 容器文档中嵌入的文档被视为嵌入。
+从文件加载的文档不是嵌入的，尽管它可能由容器应用程序作为链接进行操作。 嵌入到容器文档中的文档被视为嵌入文档。
 
 ##  <a name="isinplaceactive"></a>  COleServerDoc::IsInPlaceActive
 
-调用`IsInPlaceActive`成员函数以确定该项当前是否处于就地活动状态。
+`IsInPlaceActive`调用成员函数以确定项当前是否处于就地活动状态。
 
 ```
 BOOL IsInPlaceActive() const;
@@ -463,11 +463,11 @@ BOOL IsInPlaceActive() const;
 
 ### <a name="return-value"></a>返回值
 
-如果非零`COleServerDoc`对象是就地活动状态; 否则为 0。
+如果`COleServerDoc`对象处于活动状态，则为非零; 否则为0。
 
-##  <a name="notifychanged"></a>  COleServerDoc::NotifyChanged
+##  <a name="notifychanged"></a>COleServerDoc：： NotifyChanged
 
-调用此函数来通知所有链接的项目连接到的文档的文档已更改。
+调用此函数可通知连接到文档的所有链接项文档已更改。
 
 ```
 void NotifyChanged();
@@ -475,14 +475,14 @@ void NotifyChanged();
 
 ### <a name="remarks"></a>备注
 
-通常情况下，用户更改一些全局属性，例如服务器文档的维度之后调用此函数。 如果 OLE 项与自动链接到文档链接，更新项目以反映所做的更改。 在容器应用程序中使用 Microsoft 基础类库编写[OnChange](../../mfc/reference/coleclientitem-class.md#onchange)成员函数的`COleClientItem`调用。
+通常，在用户更改某些全局属性（如服务器文档的维度）后，调用此函数。 如果某个 OLE 项已链接到带有自动链接的文档，则该项将更新以反映所做的更改。 在用 Microsoft 基础类库编写的容器应用程序中 `COleClientItem`，调用的 [OnChange](../../mfc/reference/coleclientitem-class.md#onchange) 成员函数。
 
 > [!NOTE]
->  此函数是为了与 OLE 1 的兼容性。 新的应用程序应使用[UpdateAllItems](#updateallitems)。
+>  提供此函数是为了与 OLE 1 兼容。 新应用程序应使用[UpdateAllItems](#updateallitems)。
 
 ##  <a name="notifyclosed"></a>  COleServerDoc::NotifyClosed
 
-调用此函数，以通知容器文档已关闭。
+调用此函数可通知容器文档已关闭。
 
 ```
 void NotifyClosed();
@@ -490,11 +490,11 @@ void NotifyClosed();
 
 ### <a name="remarks"></a>备注
 
-当用户从文件菜单中，选择关闭命令`NotifyClosed`由调用`COleServerDoc`的实现[OnCloseDocument](../../mfc/reference/cdocument-class.md#onclosedocument)成员函数。 在容器应用程序中使用 Microsoft 基础类库编写[OnChange](../../mfc/reference/coleclientitem-class.md#onchange)成员函数的`COleClientItem`调用。
+当用户从 "文件" 菜单中选择 "关闭" `NotifyClosed`命令时， `COleServerDoc`将调用[OnCloseDocument](../../mfc/reference/cdocument-class.md#onclosedocument)成员函数的实现。 在用 Microsoft 基础类库编写的容器应用程序中 `COleClientItem`，调用的 [OnChange](../../mfc/reference/coleclientitem-class.md#onchange) 成员函数。
 
 ##  <a name="notifyrename"></a>  COleServerDoc::NotifyRename
 
-调用此函数后用户重命名服务器文档。
+在用户重命名服务器文档后调用此函数。
 
 ```
 void NotifyRename(LPCTSTR lpszNewName);
@@ -503,15 +503,15 @@ void NotifyRename(LPCTSTR lpszNewName);
 ### <a name="parameters"></a>参数
 
 *lpszNewName*<br/>
-指定服务器文档; 的新名称的字符串指针这通常是完全限定的路径。
+指向指定服务器文档的新名称的字符串的指针;这通常是一个完全限定的路径。
 
 ### <a name="remarks"></a>备注
 
-当用户从文件菜单中，选择另存为命令`NotifyRename`由调用`COleServerDoc`的实现[OnSaveDocument](../../mfc/reference/cdocument-class.md#onsavedocument)成员函数。 此函数会通知 OLE 系统 Dll，又通知容器。 在容器应用程序中使用 Microsoft 基础类库编写[OnChange](../../mfc/reference/coleclientitem-class.md#onchange)成员函数的`COleClientItem`调用。
+当用户从 "文件" 菜单中选择 "另存为`NotifyRename` " 命令时`COleServerDoc`，将调用[onopendocument](../../mfc/reference/cdocument-class.md#onsavedocument)成员函数的实现。 此函数通知 OLE 系统 Dll，进而通知容器。 在用 Microsoft 基础类库编写的容器应用程序中 `COleClientItem`，调用的 [OnChange](../../mfc/reference/coleclientitem-class.md#onchange) 成员函数。
 
 ##  <a name="notifysaved"></a>  COleServerDoc::NotifySaved
 
-调用此函数后在用户保存服务器文档。
+用户保存服务器文档后调用此函数。
 
 ```
 void NotifySaved();
@@ -519,11 +519,11 @@ void NotifySaved();
 
 ### <a name="remarks"></a>备注
 
-当用户从文件菜单中，选择保存命令`NotifySaved`为您通过调用`COleServerDoc`的实现[OnSaveDocument](../../mfc/reference/cdocument-class.md#onsavedocument)。 此函数会通知 OLE 系统 Dll，又通知容器。 在容器应用程序中使用 Microsoft 基础类库编写[OnChange](../../mfc/reference/coleclientitem-class.md#onchange)成员函数的`COleClientItem`调用。
+当用户从 "文件" 菜单中选择 "保存" `NotifySaved`命令时，将通过`COleServerDoc`的[onopendocument](../../mfc/reference/cdocument-class.md#onsavedocument)实现来调用。 此函数通知 OLE 系统 Dll，进而通知容器。 在用 Microsoft 基础类库编写的容器应用程序中 `COleClientItem`，调用的 [OnChange](../../mfc/reference/coleclientitem-class.md#onchange) 成员函数。
 
 ##  <a name="onclose"></a>  COleServerDoc::OnClose
 
-当容器请求关闭服务器文档时，由框架调用。
+当容器请求关闭服务器文档时由框架调用。
 
 ```
 virtual void OnClose(OLECLOSE dwCloseOption);
@@ -532,23 +532,23 @@ virtual void OnClose(OLECLOSE dwCloseOption);
 ### <a name="parameters"></a>参数
 
 *dwCloseOption*<br/>
-枚举 OLECLOSE 中的值。 此参数可以具有下列值之一：
+枚举 OLECLOSE 中的一个值。 此参数可以具有下列值之一：
 
-- OLECLOSE_SAVEIFDIRTY 文件将保存，如果已修改。
+- OLECLOSE_SAVEIFDIRTY 如果文件已被修改，则保存该文件。
 
-- OLECLOSE_NOSAVE 文件关闭而不保存。
+- OLECLOSE_NOSAVE 文件在不保存的情况下关闭。
 
-- OLECLOSE_PROMPTSAVE 如果文件已被修改，则会提示用户有关保存它。
+- OLECLOSE_PROMPTSAVE 如果文件已被修改，则系统会提示用户保存该文件。
 
 ### <a name="remarks"></a>备注
 
-默认实现将调用`CDocument::OnCloseDocument`。
+默认实现调用`CDocument::OnCloseDocument`。
 
-有关详细信息和其他值，请参阅[OLECLOSE](/windows/desktop/api/oleidl/ne-oleidl-tagoleclose) Windows SDK 中。
+有关详细信息和其他值，请参阅 Windows SDK 中的[OLECLOSE](/windows/win32/api/oleidl/ne-oleidl-oleclose) 。
 
 ##  <a name="ondeactivate"></a>  COleServerDoc::OnDeactivate
 
-当用户将是当前处于就地活动状态的嵌入或链接项，由框架调用。
+当用户停用当前就地活动的嵌入项或链接项时由框架调用。
 
 ```
 virtual void OnDeactivate();
@@ -556,15 +556,15 @@ virtual void OnDeactivate();
 
 ### <a name="remarks"></a>备注
 
-此函数将容器应用程序的用户界面还原到其原始状态，并销毁任何菜单和其他控件创建就地激活。
+此函数将容器应用程序的用户界面还原到其原始状态，并销毁为就地激活创建的所有菜单和其他控件。
 
-撤消状态信息应无条件地释放此位置。
+此时应无条件释放撤消状态信息。
 
-有关详细信息，请参阅文章[激活](../../mfc/activation-cpp.md)...
+有关详细信息，请参阅文章[激活](../../mfc/activation-cpp.md)。
 
 ##  <a name="ondeactivateui"></a>  COleServerDoc::OnDeactivateUI
 
-当用户将就地激活项时调用。
+当用户停用就地激活的项时调用。
 
 ```
 virtual void OnDeactivateUI(BOOL bUndoable);
@@ -573,17 +573,17 @@ virtual void OnDeactivateUI(BOOL bUndoable);
 ### <a name="parameters"></a>参数
 
 *bUndoable*<br/>
-指定是否可撤消的编辑更改。
+指定是否可以撤消编辑更改。
 
 ### <a name="remarks"></a>备注
 
-此函数将还原到其原始状态，隐藏任何菜单和创建就地激活其他控件的容器应用程序的用户界面。
+此函数将容器应用程序的用户界面还原到其原始状态，并隐藏为就地激活创建的任何菜单和其他控件。
 
-框架将始终设置*bUndoable*为 FALSE。 如果服务器支持撤消，并且没有可撤消的操作，则调用与基类实现*bUndoable*设置为 TRUE。
+框架始终将*bUndoable*设置为 FALSE。 如果服务器支持撤消并且有可撤消的操作，请调用*bUndoable*设置为 TRUE 的基类实现。
 
 ##  <a name="ondocwindowactivate"></a>  COleServerDoc::OnDocWindowActivate
 
-框架调用此函数可激活或停用一个文档窗口，以就地编辑。
+框架调用此函数以激活或停用文档窗口进行就地编辑。
 
 ```
 virtual void OnDocWindowActivate(BOOL bActivate);
@@ -592,17 +592,17 @@ virtual void OnDocWindowActivate(BOOL bActivate);
 ### <a name="parameters"></a>参数
 
 *bActivate*<br/>
-指定是否要激活或停用文档窗口。
+指定是否激活或停用文档窗口。
 
 ### <a name="remarks"></a>备注
 
-默认实现中删除，或根据需要添加框架级别的用户界面元素。 如果你想要激活或停用文档，其中包含你的项时执行其他操作，重写此函数。
+默认实现将删除或添加相应的帧级用户界面元素。 如果要在包含项目的文档被激活或停用时执行其他操作，请重写此函数。
 
-有关详细信息，请参阅文章[激活](../../mfc/activation-cpp.md)...
+有关详细信息，请参阅文章[激活](../../mfc/activation-cpp.md)。
 
 ##  <a name="onexecolecmd"></a>  COleServerDoc::OnExecOleCmd
 
-框架调用此函数可执行指定的命令或显示有关命令的帮助。
+框架调用此函数来执行指定的命令或显示该命令的帮助。
 
 ```
 virtual HRESULT OnExecOleCmd(
@@ -616,13 +616,13 @@ virtual HRESULT OnExecOleCmd(
 ### <a name="parameters"></a>参数
 
 *pguidCmdGroup*<br/>
-指向标识一系列命令的 GUID 的指针。 可以为 NULL 以指示默认命令组。
+指向标识一组命令的 GUID 的指针。 可以为 NULL，以指示默认命令组。
 
 *nCmdID*<br/>
-要执行的命令。 必须在由标识的组*pguidCmdGroup*。
+要执行的命令。 必须位于由*pguidCmdGroup*标识的组中。
 
 *nCmdExecOut*<br/>
-该对象的方法应从 OLECMDEXECOPT 枚举执行命令、 一个或多个以下值：
+对象执行命令的方式为 OLECMDEXECOPT 枚举中的一个或多个以下值：
 
 OLECMDEXECOPT_DODEFAULT
 
@@ -633,41 +633,41 @@ OLECMDEXECOPT_DONTPROMPTUSER
 OLECMDEXECOPT_SHOWHELP
 
 *pvarargIn*<br/>
-指向包含命令的输入的参数 VARIANTARG 指针。 可以为 NULL。
+指向包含命令的输入参数的 VARIANTARG 的指针。 可以为 NULL。
 
 *pvarargOut*<br/>
-指向用于接收输出 VARIANTARG 从该命令返回值。 可以为 NULL。
+指向 VARIANTARG 的指针，用于接收来自命令的输出返回值。 可以为 NULL。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则为 S_OK 返回否则为台以下的错误代码：
+如果成功，则返回 S_OK;否则，会出现以下错误代码之一：
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
-|E_UNEXPECTED|出现意外的错误|
+|E_UNEXPECTED|发生了意外错误|
 |E_FAIL|出现错误|
-|E_NOTIMPL|指示 MFC 本身应尝试转换并将其分派命令|
-|OLECMDERR_E_UNKNOWNGROUP|*pguidCmdGroup*非 null 值，但未指定已识别的命令组|
-|OLECMDERR_E_NOTSUPPORTED|*nCmdID*未被识别为组中的有效命令*pguidCmdGroup*|
-|OLECMDERR_DISABLED|该命令由标识*nCmdID*被禁用，并且不能执行|
-|OLECMDERR_NOHELP|由标识命令的帮助请求调用方*nCmdID*但没有帮助可用|
-|OLECMDERR_CANCELED|用户已取消执行|
+|E_NOTIMPL|指示 MFC 本身应尝试转换和调度命令|
+|OLECMDERR_E_UNKNOWNGROUP|*pguidCmdGroup*为非 NULL，但未指定可识别的命令组|
+|OLECMDERR_E_NOTSUPPORTED|*nCmdID*未被识别为组*pguidCmdGroup*中的有效命令。|
+|OLECMDERR_DISABLED|*NCmdID*标识的命令已禁用，无法执行|
+|OLECMDERR_NOHELP|调用方请求有关由*nCmdID*标识的命令的帮助，但没有可用的帮助|
+|OLECMDERR_CANCELED|用户取消了执行|
 
 ### <a name="remarks"></a>备注
 
-`COleCmdUI` 可用于启用、 更新和设置其他属性 DocObject 用户界面命令。 初始化命令之后，您可以执行这些与`OnExecOleCmd`。
+`COleCmdUI`可用于启用、更新和设置 DocObject 用户界面命令的其他属性。 初始化命令后，可以通过`OnExecOleCmd`执行这些命令。
 
-框架尝试转换并将其分派 OLE 文档命令之前调用该函数。 无需重写此函数来处理标准 OLE 文档命令，但如果你想要处理自己的自定义命令或处理命令接受参数或返回的结果，则必须提供此函数的重写。
+框架在尝试转换和调度 OLE 文档命令之前调用函数。 不需要重写此函数来处理标准 OLE 文档命令，但是，如果您想要处理您自己的自定义命令或处理接受参数或返回结果的命令，则必须提供此函数的重写。
 
-大多数命令执行不带参数或返回值。 调用方可以 null 值传入大部分命令*pvarargIn*并*pvarargOut*。 对于预期输入的值的命令，调用方可以声明和初始化 VARIANTARG 变量并将指针传递到该变量*pvarargIn*。 对于需要单个值的命令，可以直接存储在 VARIANTARG 并传递给函数的参数。 必须在使用受支持的类型之一 VARIANTARG 打包多个自变量 (如`IDispatch`和 SAFEARRAY)。
+大多数命令不采用参数或返回值。 对于大多数命令，调用方可以传递*pvarargIn*和*PvarargOut*的 null 值。 对于需要输入值的命令，调用方可以声明和初始化 VARIANTARG 变量，并将指针传递到*pvarargIn*中的变量。 对于需要单个值的命令，可以直接将参数存储在 VARIANTARG 中并将其传递给函数。 必须使用支持的类型之一（如`IDispatch`和 SAFEARRAY）在 VARIANTARG 内打包多个参数。
 
-同样，如果命令返回调用方应声明 VARIANTARG 参数，将其初始化为 VT_EMPTY，并将在其地址传递*pvarargOut*。 如果命令返回单个值，该对象可以将该值直接在存储*pvarargOut*。 必须以某种方式适用于 VARIANTARG 打包多个输出值。
+同样，如果命令返回参数，调用方应声明 VARIANTARG，将其初始化为 VT_EMPTY，并在*pvarargOut*中传递其地址。 如果命令返回单个值，则对象可以直接将该值存储在*pvarargOut*中。 必须以某种适用于 VARIANTARG 的方式打包多个输出值。
 
-此函数的基类实现将遍历与命令目标相关联的 OLE_COMMAND_MAP 结构，并尝试调度到相应的处理程序的命令。 基类实现仅适用于命令不接受参数或返回值。 如果您需要处理命令接受参数或返回值，必须重写此函数并处理*pvarargIn*并*pvarargOut*参数自己。
+此函数的基类实现将遍历与命令目标相关联的 OLE_COMMAND_MAP 结构，并尝试将命令调度到适当的处理程序。 基类实现仅适用于不接受参数或返回值的命令。 如果需要处理接受参数或返回值的命令，则必须重写此函数，并自行处理*pvarargIn*和*pvarargOut*参数。
 
 ##  <a name="onframewindowactivate"></a>  COleServerDoc::OnFrameWindowActivate
 
-激活或停用容器应用程序的框架窗口时，框架将调用此函数。
+当激活或停用容器应用程序的框架窗口时，框架会调用此函数。
 
 ```
 virtual void OnFrameWindowActivate(BOOL bActivate);
@@ -676,17 +676,17 @@ virtual void OnFrameWindowActivate(BOOL bActivate);
 ### <a name="parameters"></a>参数
 
 *bActivate*<br/>
-指定是否要激活或停用的框架窗口。
+指定是否激活或停用框架窗口。
 
 ### <a name="remarks"></a>备注
 
-默认实现取消框架窗口可能在任何帮助模式。 如果你想要执行特殊处理激活或停用的框架窗口时，重写此函数。
+默认实现取消框架窗口可能位于的任何帮助模式。 如果要在框架窗口被激活或停用时执行特殊处理，请重写此函数。
 
-有关详细信息，请参阅文章[激活](../../mfc/activation-cpp.md)...
+有关详细信息，请参阅文章[激活](../../mfc/activation-cpp.md)。
 
 ##  <a name="ongetembeddeditem"></a>  COleServerDoc::OnGetEmbeddedItem
 
-当容器应用程序调用要创建或编辑嵌入的项的服务器应用程序时由框架调用。
+当容器应用程序调用服务器应用程序以创建或编辑嵌入项时，由框架调用。
 
 ```
 virtual COleServerItem* OnGetEmbeddedItem() = 0;
@@ -694,15 +694,15 @@ virtual COleServerItem* OnGetEmbeddedItem() = 0;
 
 ### <a name="return-value"></a>返回值
 
-一个表示整个文档; 项指向的指针如果操作失败，则为 NULL。
+指向表示整个文档的项的指针;如果操作失败，则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-没有默认实现。 必须重写此函数可返回一个表示整个文档项。 此返回值应为的对象`COleServerItem`-派生的类。
+没有默认实现。 必须重写此函数才能返回表示整个文档的项。 此返回值应为派生类的对象`COleServerItem`。
 
 ##  <a name="onreactivateandundo"></a>  COleServerDoc::OnReactivateAndUndo
 
-当用户选择撤消对已就地激活，更改，并且随后停用的项目所做的更改时，框架将调用此函数。
+当用户选择撤消对已激活的项所做的更改时，框架会调用此函数，已更改，随后将其停用。
 
 ```
 virtual BOOL OnReactivateAndUndo();
@@ -714,13 +714,13 @@ virtual BOOL OnReactivateAndUndo();
 
 ### <a name="remarks"></a>备注
 
-默认实现没有任何影响只返回 FALSE 来指示失败。
+默认实现不执行任何操作，除非返回 FALSE，以指示失败。
 
-如果你的应用程序支持撤消重写此函数。 通常您需要执行撤消操作，然后通过调用激活项`ActivateInPlace`。 如果容器应用程序使用 Microsoft 基础类库编写的则调用`COleClientItem::ReactivateAndUndo`会导致将调用此函数。
+如果你的应用程序支持撤消，则重写此函数。 通常，您将执行撤消操作，然后通过调用`ActivateInPlace`来激活该项。 如果容器应用程序是用 Microsoft 基础类库编写的，则`COleClientItem::ReactivateAndUndo`调用将导致调用此函数。
 
 ##  <a name="onresizeborder"></a>  COleServerDoc::OnResizeBorder
 
-当容器应用程序的框架窗口大小更改时，框架将调用此函数。
+当容器应用程序的框架窗口更改大小时，框架将调用此函数。
 
 ```
 virtual void OnResizeBorder(
@@ -732,25 +732,25 @@ virtual void OnResizeBorder(
 ### <a name="parameters"></a>参数
 
 *lpRectBorder*<br/>
-指向`RECT`结构或`CRect`对象，它指定边框的坐标。
+指向`RECT`结构的指针`CRect`或指定边框坐标的对象。
 
 *lpUIWindow*<br/>
-指向类的对象指针`IOleInPlaceUIWindow`拥有当前的就地编辑会话。
+指向拥有当前就地编辑会话`IOleInPlaceUIWindow`的类的对象的指针。
 
 *bFrame*<br/>
-则为 TRUE *lpUIWindow*指向容器应用程序的顶级框架窗口中或 false *lpUIWindow*指向容器应用程序的文档级框架窗口。
+如果*lpUIWindow*指向容器应用程序的顶级框架窗口，则为 TRUE; 如果*lpUIWindow*指向容器应用程序的文档级框架窗口，则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-此函数调整大小，并调整工具栏和其他用户界面元素根据新的窗口大小。
+此函数根据新的窗口大小调整工具栏和其他用户界面元素的大小并调整其大小。
 
-有关详细信息，请参阅[IOleInPlaceUIWindow](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceuiwindow) Windows SDK 中。
+有关详细信息，请参阅 Windows SDK 中的[IOleInPlaceUIWindow](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceuiwindow) 。
 
-这是一种高级可重写。
+这是一种高级的可重写。
 
-##  <a name="onsethostnames"></a>  COleServerDoc::OnSetHostNames
+##  <a name="onsethostnames"></a>COleServerDoc：： OnSetHostNames
 
-当容器设置或更改本文档的主机名时由框架调用。
+当容器设置或更改此文档的主机名时由框架调用。
 
 ```
 virtual void OnSetHostNames(
@@ -761,20 +761,20 @@ virtual void OnSetHostNames(
 ### <a name="parameters"></a>参数
 
 *lpszHost*<br/>
-指定的容器应用程序名称的字符串指针。
+指向字符串的指针，该字符串指定容器应用程序的名称。
 
 *lpszHostObj*<br/>
-指定文档的容器的名称的字符串指针。
+指向字符串的指针，该字符串指定文档的容器名称。
 
 ### <a name="remarks"></a>备注
 
-默认实现更改本文档引用的所有视图的文档标题。
+默认实现更改引用此文档的所有视图的文档标题。
 
-如果你的应用程序通过不同机制设置标题，重写此函数。
+如果你的应用程序通过其他机制设置标题，则重写此函数。
 
 ##  <a name="onsetitemrects"></a>  COleServerDoc::OnSetItemRects
 
-框架调用此函数可在容器应用程序的框架窗口内定位就地编辑框架窗口。
+框架调用此函数以将就地编辑框架窗口放置在容器应用程序的框架窗口中。
 
 ```
 virtual void OnSetItemRects(
@@ -785,20 +785,20 @@ virtual void OnSetItemRects(
 ### <a name="parameters"></a>参数
 
 *lpPosRect*<br/>
-指向`RECT`结构或`CRect`对象，它指定相对于容器应用程序的客户端区域的就地框架窗口的位置。
+指向`RECT`结构的指针`CRect`或指定就地框架窗口相对于容器应用程序工作区的位置的对象。
 
 *lpClipRect*<br/>
-指向`RECT`结构或`CRect`对象，它指定相对于容器应用程序的客户端区域的就地框架窗口的剪辑矩形。
+指向`RECT`结构的指针`CRect`或指定就地框架窗口相对于容器应用程序的工作区的剪辑矩形的对象。
 
 ### <a name="remarks"></a>备注
 
-如有必要，重写此函数可更新视图的缩放系数。
+如果需要，请重写此函数以更新视图的缩放系数。
 
-此函数通常调用以响应`RequestPositionChange`调用，虽然它可以调用在任何时间由容器请求的就地项的位置更改。
+此函数通常是为了响应`RequestPositionChange`调用而调用的，不过，它可以随时调用此函数以请求就地项的位置更改。
 
-##  <a name="onshowcontrolbars"></a>  COleServerDoc::OnShowControlBars
+##  <a name="onshowcontrolbars"></a>COleServerDoc：： OnShowControlBars
 
-框架调用此函数可显示或隐藏与框架窗口由标识相关联的服务器应用程序的控件条*pFrameWnd*。
+框架调用此函数以显示或隐藏与由*pFrameWnd*标识的框架窗口关联的服务器应用程序的控制条。
 
 ```
 virtual void OnShowControlBars(
@@ -809,18 +809,18 @@ virtual void OnShowControlBars(
 ### <a name="parameters"></a>参数
 
 *pFrameWnd*<br/>
-到框架窗口应显示或隐藏其控件条的指针。
+指向其控制条应隐藏或显示的框架窗口的指针。
 
 *bShow*<br/>
-确定是否显示或隐藏控件条。
+确定是显示还是隐藏控件条。
 
 ### <a name="remarks"></a>备注
 
-默认实现枚举该框架窗口所拥有的所有控件条和隐藏或显示它们。
+默认实现将枚举该框架窗口拥有的所有控制条，并隐藏或显示它们。
 
-##  <a name="onshowdocument"></a>  COleServerDoc::OnShowDocument
+##  <a name="onshowdocument"></a>COleServerDoc：： OnShowDocument
 
-框架将调用`OnShowDocument`函数时必须显示或隐藏服务器文档。
+当必须隐藏或`OnShowDocument`显示服务器文档时，框架将调用函数。
 
 ```
 virtual void OnShowDocument(BOOL bShow);
@@ -829,15 +829,15 @@ virtual void OnShowDocument(BOOL bShow);
 ### <a name="parameters"></a>参数
 
 *bShow*<br/>
-指定是否对文档的用户界面是显示还是隐藏。
+指定是否显示或隐藏文档的用户界面。
 
 ### <a name="remarks"></a>备注
 
-如果*bShow*为 TRUE 时，激活服务器应用程序，如有必要的默认实现，并会导致要滚动其窗口，以便使该项是可见的容器应用程序。 如果*bShow*为 FALSE 时，默认实现将停用的项通过调用`OnDeactivate`、 销毁或隐藏文档中，除第一个已创建的所有框架窗口。 如果没有可见的文档保持的默认实现将隐藏服务器应用程序。
+如果*bShow*为 TRUE，则默认实现将激活服务器应用程序（如有必要），并使容器应用程序滚动其窗口，使项可见。 如果*bShow*为 FALSE，则默认实现通过调用来`OnDeactivate`停用项，然后销毁或隐藏已为文档创建的所有框架窗口（第一个除外）。 如果没有任何可见文档，则默认实现将隐藏服务器应用程序。
 
-##  <a name="onupdatedocument"></a>  COleServerDoc::OnUpdateDocument
+##  <a name="onupdatedocument"></a>COleServerDoc：： OnUpdateDocument
 
-当保存的文档是嵌入复合文档项时由框架调用。
+当保存作为复合文档中嵌入项的文档时，由框架调用。
 
 ```
 virtual BOOL OnUpdateDocument();
@@ -845,15 +845,15 @@ virtual BOOL OnUpdateDocument();
 
 ### <a name="return-value"></a>返回值
 
-已成功更新文档; 如果非零值否则为 0。
+如果成功更新了文档，则为非零值;否则为0。
 
 ### <a name="remarks"></a>备注
 
-默认实现调用[COleServerDoc::NotifySaved](#notifysaved)并[COleServerDoc::SaveEmbedding](#saveembedding)成员函数，然后将标记为干净的文档。 如果你想要执行的特殊处理更新嵌入的项时，重写此函数。
+默认实现将调用[COleServerDoc：： NotifySaved](#notifysaved)和[COleServerDoc：： SaveEmbedding](#saveembedding)成员函数，然后将该文档标记为 clean。 如果要在更新嵌入项时执行特殊处理，请重写此函数。
 
-##  <a name="requestpositionchange"></a>  COleServerDoc::RequestPositionChange
+##  <a name="requestpositionchange"></a>COleServerDoc：： RequestPositionChange
 
-调用此成员函数可更改项的位置的容器应用程序。
+调用此成员函数以使容器应用程序更改项的位置。
 
 ```
 void RequestPositionChange(LPCRECT lpPosRect);
@@ -862,15 +862,15 @@ void RequestPositionChange(LPCRECT lpPosRect);
 ### <a name="parameters"></a>参数
 
 *lpPosRect*<br/>
-指向`RECT`结构或`CRect`对象，其中包含项的新位置。
+指向`RECT`结构的指针`CRect`或包含该项的新位置的对象。
 
 ### <a name="remarks"></a>备注
 
-此函数通常称为 (结合`UpdateAllItems`) 中的就地活动项的数据已更改时。 此调用，容器可能会或可能通过调用执行更改`OnSetItemRects`。 结果的位置可能不同于所请求。
+当就地活动项中的数据更改时`UpdateAllItems`，通常会调用此函数（与一起）。 在此调用之后，容器可能会或不会通过调用`OnSetItemRects`来执行更改。 生成的位置可能与请求的位置不同。
 
-##  <a name="saveembedding"></a>  COleServerDoc::SaveEmbedding
+##  <a name="saveembedding"></a>COleServerDoc：： SaveEmbedding
 
-调用此函数可告知容器应用程序保存嵌入的对象。
+调用此函数可通知容器应用程序保存嵌入的对象。
 
 ```
 void SaveEmbedding();
@@ -878,11 +878,11 @@ void SaveEmbedding();
 
 ### <a name="remarks"></a>备注
 
-从自动调用此函数`OnUpdateDocument`。 请注意，此函数会导致要更新在磁盘上，因此它通常称为仅由于特定的用户操作的项。
+此函数由自动`OnUpdateDocument`调用。 请注意，此函数会导致在磁盘上更新项，因此通常仅作为特定用户操作的结果调用。
 
-##  <a name="scrollcontainerby"></a>  COleServerDoc::ScrollContainerBy
+##  <a name="scrollcontainerby"></a>COleServerDoc：： ScrollContainerBy
 
-调用`ScrollContainerBy`成员函数可滚动容器文档的数量，以像素为单位，由`sizeScroll`。
+调用成员函数以按`sizeScroll`所指示的量（以像素为单位）滚动容器文档。 `ScrollContainerBy`
 
 ```
 BOOL ScrollContainerBy(CSize sizeScroll);
@@ -891,7 +891,7 @@ BOOL ScrollContainerBy(CSize sizeScroll);
 ### <a name="parameters"></a>参数
 
 *sizeScroll*<br/>
-指示延伸的范围容器文档是滚动。
+指示容器文档滚动的距离。
 
 ### <a name="return-value"></a>返回值
 
@@ -899,11 +899,11 @@ BOOL ScrollContainerBy(CSize sizeScroll);
 
 ### <a name="remarks"></a>备注
 
-正值指示向下和向右; 滚动负值表示向上和向左滚动。
+正值表示向下和向右滚动;负值指示向上和向左滚动。
 
 ##  <a name="updateallitems"></a>  COleServerDoc::UpdateAllItems
 
-调用此函数来通知所有链接的项目连接到的文档的文档已更改。
+调用此函数可通知连接到文档的所有链接项文档已更改。
 
 ```
 void UpdateAllItems(
@@ -916,30 +916,30 @@ void UpdateAllItems(
 ### <a name="parameters"></a>参数
 
 *pSender*<br/>
-指向的项的修改文档，则所有项都是要更新为 null。
+指向修改文档的项的指针; 如果要更新所有项，则为 NULL。
 
 *lHint*<br/>
-包含有关修改信息。
+包含有关修改的信息。
 
 *pHint*<br/>
-指针指向的对象存储有关修改信息。
+指向存储有关修改信息的对象的指针。
 
 *nDrawAspect*<br/>
-确定如何对项目进行绘制。 这是来自 DVASPECT 枚举的值。 此参数可以具有下列值之一：
+确定如何绘制项。 这是 DVASPECT 枚举中的一个值。 此参数可以具有下列值之一：
 
-- DVASPECT_CONTENT 项可以显示为其容器内的嵌入对象的方式表示。
+- DVASPECT_CONTENT 项以这种方式表示，它可以在其容器中显示为嵌入的对象。
 
-- DVASPECT_THUMBNAIL 项将呈现在"缩略图"表示形式，以便它可以显示在浏览工具。
+- DVASPECT_THUMBNAIL 项以 "缩略图" 表示形式呈现，以便可以在浏览工具中显示它。
 
-- DVASPECT_ICON 项由一个图标表示。
+- DVASPECT_ICON 项由图标表示。
 
-- DVASPECT_DOCPRINT 项表现为似乎打印出的使用文件菜单中的打印命令。
+- DVASPECT_DOCPRINT 项表示为使用 "文件" 菜单中的 "打印" 命令打印项。
 
 ### <a name="remarks"></a>备注
 
-用户更改服务器文档之后，通常会调用此函数。 如果 OLE 项与自动链接到文档链接，更新项目以反映所做的更改。 在容器应用程序中使用 Microsoft 基础类库编写[OnChange](../../mfc/reference/coleclientitem-class.md#onchange)成员函数的`COleClientItem`调用。
+通常在用户更改服务器文档后调用此函数。 如果某个 OLE 项已链接到带有自动链接的文档，则该项将更新以反映所做的更改。 在用 Microsoft 基础类库编写的容器应用程序中 `COleClientItem`，调用的 [OnChange](../../mfc/reference/coleclientitem-class.md#onchange) 成员函数。
 
-此函数将调用`OnUpdate`成员函数为每个文档的项，但发送的项，传递*pHint*， *lHint*，并且*nDrawAspect*。 使用这些参数将信息传递给有关对文档进行修改的项。 您可以使用信息进行编码*lHint*也可以定义`CObject`的派生类来存储有关所做的修改的信息并传递一个对象的类使用*pHint*。 重写`OnUpdate`成员函数在你`COleServerItem`的派生类，以优化具体取决于是否已更改其表示每个项的更新。
+此函数为文档`OnUpdate`的每个项（发送项除外，传递*pHint*、 *lHint*和*nDrawAspect*）调用成员函数。 使用这些参数将信息传递到有关对文档所做的修改的项。 您可以使用*lHint*对信息进行编码，也可以`CObject`定义一个派生类，用于存储有关修改的信息并使用*pHint*传递该类的对象。 重写`OnUpdate`派生类`COleServerItem`中的成员函数，以优化每个项的更新，具体取决于其演示是否已更改。
 
 ## <a name="see-also"></a>请参阅
 

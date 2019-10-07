@@ -6,20 +6,20 @@ helpviewer_keywords:
 - access keys [MFC], hot keys
 - CHotKeyCtrl class [MFC], setting hot key
 ms.assetid: 6f3bc141-e346-4dce-9ca7-3e6b2c453f3f
-ms.openlocfilehash: a77aad4881acd04c6dabb6dce90acc01be2cfbc8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b49f24039b130f74693e7567f5287476126f225
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62307778"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511219"
 ---
 # <a name="setting-a-hot-key"></a>设置热键
 
-你的应用程序可以使用提供的热键的信息 ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) 中有两种控件：
+应用程序可以通过以下两种方式之一使用热键 ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) 控件提供的信息:
 
-- 设置用于通过发送激活非子窗口的全局热键[WM_SETHOTKEY](/windows/desktop/inputdev/wm-sethotkey)到窗口的消息激活。
+- 通过向要激活的窗口发送[WM_SETHOTKEY](/windows/win32/inputdev/wm-sethotkey)消息, 设置用于激活 nonchild 窗口的全局热键。
 
-- 通过调用 Windows 函数来设置特定于线程的热键[RegisterHotKey](/windows/desktop/api/winuser/nf-winuser-registerhotkey)。
+- 通过调用 Windows 函数[RegisterHotKey](/windows/win32/api/winuser/nf-winuser-registerhotkey)设置线程特定的热键。
 
 ## <a name="see-also"></a>请参阅
 

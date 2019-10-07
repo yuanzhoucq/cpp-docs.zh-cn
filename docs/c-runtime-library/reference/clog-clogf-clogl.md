@@ -1,11 +1,11 @@
 ---
 title: clog、clogf、clogl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - clog
 - clogf
 - clogl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - clog
 - clogf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - clogf function
 - clogl function
 ms.assetid: 870b9b0b-6618-46f3-bfcf-da595cbd5e18
-ms.openlocfilehash: fcbc9ba7984898d51f7a3d0beb5ef7c8b6d6892c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 76ee6e4e81c275c8cbed0f74914521c0b44499bb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340630"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942922"
 ---
 # <a name="clog-clogf-clogl"></a>clog、clogf、clogl
 
@@ -68,7 +71,7 @@ _Lcomplex clogl(
 
 ## <a name="return-value"></a>返回值
 
-自然对数*z*。 结果为无限沿实轴并位于的间隔 [-i π，+ i π] 沿虚轴。
+*Z*的自然对数。 沿实轴，并沿虚轴的间隔 [-i π，+ i π] 中，结果是无限的。
 
 可能的返回值为：
 
@@ -82,13 +85,13 @@ _Lcomplex clogl(
 
 ## <a name="remarks"></a>备注
 
-因为C++允许重载，可以调用的重载**clog**采用并返回 **_Fcomplex**并 **_Lcomplex**的值。 在 C 程序中， **clog**始终采用并返回 **_Dcomplex**值。
+由于C++允许重载，因此你可以调用采用并返回 **_Fcomplex**和 **_Lcomplex**值的**阻塞**的重载。 在 C 程序中，**堵塞**始终采用并返回一个 **_Dcomplex**值。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|C 标头|C++ 标头|
 |-------------|--------------|------------------|
-|**clog**， **clogf**， **clogl**|\<complex.h>|\<ccomplex>|
+|**阻塞**、 **clogf**、 **clogl**|\<complex.h>|\<ccomplex>|
 
 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

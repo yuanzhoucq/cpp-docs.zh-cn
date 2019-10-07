@@ -1,10 +1,10 @@
 ---
 title: _putenv、_wputenv
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _putenv
 - _wputenv
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tputenv
 - _wputenv
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - _tputenv function
 - environment variables, modifying
 ms.assetid: 9ba9b7fd-276e-45df-8420-d70c4204b8bd
-ms.openlocfilehash: 952a4d62f6ceb6b689091ac09f6ca338d0b10864
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8fe699a476ea1dd09a6ce9922294bce398df16b2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357877"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949886"
 ---
-# <a name="putenv-wputenv"></a>_putenv、_wputenv
+# <a name="_putenv-_wputenv"></a>_putenv、_wputenv
 
 创建、修改或删除环境变量。 提供这些函数的更多安全版本；请参阅 [_putenv_s、_wputenv_s](putenv-s-wputenv-s.md)。
 
@@ -66,11 +69,11 @@ int _wputenv(
 
 ## <a name="return-value"></a>返回值
 
-返回成功时为 0 或-1，如果出现错误。
+如果成功，则返回 0; 如果出现错误，则返回-1。
 
 ## <a name="remarks"></a>备注
 
-**_Putenv**函数将新环境变量添加或修改现有环境变量的值。 环境变量定义过程执行的环境（例如待与程序链接的库的默认搜索路径）。 **_wputenv**是宽字符版本 **_putenv**; *envstring*参数 **_wputenv**是宽字符字符串。
+**_Putenv**函数添加了新的环境变量，或修改了现有环境变量的值。 环境变量定义过程执行的环境（例如待与程序链接的库的默认搜索路径）。 **_wputenv**是 **_putenv**的宽字符版本; **_wputenv**的*envstring*参数是宽字符字符串。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -78,16 +81,16 @@ int _wputenv(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tputenv**|**_putenv**|**_putenv**|**_wputenv**|
 
-*Envstring*参数必须是指向窗体的字符串的指针*varname*=*value_string*，其中*varname*是要添加或修改的环境变量的名称和*value_string*是变量的值。 如果*varname*已经是环境，其值将替换为*value_string*; 否则为新*varname*变量并将其*value_string*值添加到环境。 可以从环境中删除变量通过指定一个空*value_string*，或换句话说，通过仅指定*varname*=。
+*Envstring*参数必须是指向*varname*=*value_string*形式的字符串的指针，其中*varname*是要添加或修改的环境变量的名称， *value_string*是变量的负值. 如果*varname*已是环境的一部分，则其值将替换为*value_string*;否则，新的*varname*变量及其*value_string*值将添加到环境中。 您可以通过指定一个空的*value_string*，或通过仅指定*varname*= 从环境中删除变量。
 
-**_putenv**并 **_wputenv**影响的当前进程局部环境; 不能用于修改命令级别环境。 也就是说，这些函数只在可由运行时库访问的数据结构上操作，并不在操作系统为进程创建的环境段上操作。 在当前进程终止时，环境将还原到调用进程的级别（在大多数情况下，为操作系统级别）。 但是，修改后的环境可以传递到创建的任何新进程 **_spawn**， **_exec**，或**系统**，这些新进程将获取由添加任何新项 **_putenv**并 **_wputenv**。
+**_putenv**和 **_wputenv**仅影响当前进程的本地环境;不能使用它们来修改命令级别环境。 也就是说，这些函数只在可由运行时库访问的数据结构上操作，并不在操作系统为进程创建的环境段上操作。 在当前进程终止时，环境将还原到调用进程的级别（在大多数情况下，为操作系统级别）。 但是，可以将修改后的环境传递到 **_spawn**、 **_exec**或**系统**创建的任何新进程，这些新进程将获取 **_putenv**和 **_wputenv**添加的任何新项。
 
-不要直接更改环境条目： 请改用 **_putenv**或 **_wputenv**若要对其进行更改。 具体而言，直接释放的元素 **_environ []** 全局数组可能会导致寻址无效的内存。
+不要直接更改环境条目：改为使用 **_putenv**或 **_wputenv**对其进行更改。 具体而言，直接释放 **_environ []** 全局数组的元素可能会导致无效的内存被寻址。
 
-**getenv**并 **_putenv**使用全局变量 **_environ**访问环境表;**_wgetenv**并 **_wputenv**使用 **_wenviron**。 **_putenv**并 **_wputenv**可能会更改的值 **_environ**并 **_wenviron**，从而使 **_envp**自变量**主要**并 **_wenvp**参数**wmain**。 因此，它是使用更为安全的做法 **_environ**或 **_wenviron**访问环境信息。 有关之间关系的详细信息 **_putenv**并 **_wputenv**与全局变量，请参阅[_environ、 _wenviron](../../c-runtime-library/environ-wenviron.md)。
+**getenv**和 **_putenv**使用全局变量 **_environ**访问环境表; **_wgetenv**和 **_wputenv**使用 **_wenviron**。 **_putenv**和 **_wputenv**可能会更改 **_environ**和 **_wenviron**的值，从而使 **_envp**参数失效，**并使**_wenvp**参数失效**。 因此，使用 **_environ**或 **_wenviron**来访问环境信息更安全。 有关 **_putenv**和 **_wputenv**与全局变量的关系的详细信息，请参阅[_environ，_wenviron](../../c-runtime-library/environ-wenviron.md)。
 
 > [!NOTE]
-> **_Putenv**并 **_getenv**系列函数不是线程安全。 **_getenv**返回时字符串指针 **_putenv**修改字符串，从而导致随机性失败。 确保对这些函数的调用同步。
+> **_Putenv**和 **_getenv**系列的函数不是线程安全的。 当 **_putenv**正在修改字符串时， **_getenv**可能会返回字符串指针，从而导致随机失败。 确保对这些函数的调用同步。
 
 ## <a name="requirements"></a>要求
 
@@ -100,7 +103,7 @@ int _wputenv(
 
 ## <a name="example"></a>示例
 
-有关如何使用的示例 **_putenv**，请参阅[getenv、 _wgetenv](getenv-wgetenv.md)。
+有关如何使用 **_putenv**的示例，请参阅[getenv、_wgetenv](getenv-wgetenv.md)。
 
 ## <a name="see-also"></a>请参阅
 

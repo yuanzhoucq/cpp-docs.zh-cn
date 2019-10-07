@@ -1,7 +1,7 @@
 ---
 title: 已过时的函数
 ms.date: 01/22/2019
-apiname:
+api_name:
 - _beep
 - _sleep
 - _loaddll
@@ -10,7 +10,7 @@ apiname:
 - is_wctype
 - _getsystime
 - _setsystime
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -25,7 +25,10 @@ apilocation:
 - api-ms-win-crt-runtime-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - is_wctype
 - _loaddll
@@ -50,12 +53,12 @@ helpviewer_keywords:
 - _sleep function
 - _seterrormode function
 ms.assetid: 8e14c2d4-1481-4240-8586-47eb43db02b0
-ms.openlocfilehash: edac8fde530752c911058acdaccccea6d0318b8c
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: da5bd0569e7116bfd45e6112da8231d6fc2c9b44
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55702669"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940140"
 ---
 # <a name="obsolete-functions"></a>已过时的函数
 
@@ -66,14 +69,14 @@ ms.locfileid: "55702669"
 |已过时的函数|替代项|
 |-----------------------|-----------------|
 |`is_wctype`|[iswctype](../c-runtime-library/reference/isctype-iswctype-isctype-l-iswctype-l.md)|
-|`_loaddll`|[LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya)、 [LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa)或 [LoadPackagedLibrary](/windows/desktop/api/winbase/nf-winbase-loadpackagedlibrary)|
-|`_unloaddll`|[FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary)|
+|`_loaddll`|[LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw)、 [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw)或 [LoadPackagedLibrary](/windows/win32/api/winbase/nf-winbase-loadpackagedlibrary)|
+|`_unloaddll`|[FreeLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary)|
 |`_getdllprocaddr`|[GetProcAddress](../build/getprocaddress.md)|
-|`_seterrormode`|[SetErrorMode](https://msdn.microsoft.com/library/windows/desktop/ms680621)|
-|`_beep`|[提示音](/windows/desktop/api/utilapiset/nf-utilapiset-beep)|
-|`_sleep`|[休眠](/windows/desktop/api/synchapi/nf-synchapi-sleep)|
-|`_getsystime`|[GetLocalTime](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getlocaltime)|
-|`_setsystime`|[SetLocalTime](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-setlocaltime)|
+|`_seterrormode`|[SetErrorMode](/windows/win32/api/errhandlingapi/nf-errhandlingapi-seterrormode)|
+|`_beep`|[提示音](/windows/win32/api/utilapiset/nf-utilapiset-beep)|
+|`_sleep`|[休眠](/windows/win32/api/synchapi/nf-synchapi-sleep)|
+|`_getsystime`|[GetLocalTime](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getlocaltime)|
+|`_setsystime`|[SetLocalTime](/windows/win32/api/sysinfoapi/nf-sysinfoapi-setlocaltime)|
 
 ## <a name="removed-from-the-crt-in-visual-studio-2015"></a>已从 Visual Studio 2015 的 CRT 中删除
 

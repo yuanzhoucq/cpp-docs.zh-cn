@@ -1,9 +1,9 @@
 ---
 title: malloc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - malloc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - malloc
 helpviewer_keywords:
 - malloc function
 - memory allocation
 ms.assetid: 144fcee2-be34-4a03-bb7e-ed6d4b99eea0
-ms.openlocfilehash: e6a007fb6f089ebf1c9f5fc9ce59cbcbf0b13888
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8001726bcc2f1b384d527c6f4edcbf8eb92b0d2a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157173"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952822"
 ---
 # <a name="malloc"></a>malloc
 
@@ -48,15 +51,15 @@ void *malloc(
 
 ## <a name="return-value"></a>返回值
 
-**malloc**到分配的空间，将返回 void 的指针或**NULL**如果没有足够的内存可用。 若要返回一个指向类型而不**void**，使用类型强制转换返回值上。 返回值指向的存储空间确保可以正好与对齐要求小于或等于基本对齐要求的任意对象类型的存储对齐。 (在视觉对象C++，基本对齐是所需的对齐方式**双精度**，或 8 个字节。 在针对 64 位平台的代码中，是 16 个字节。）使用[_aligned_malloc](aligned-malloc.md)若要为具有更大对齐要求的对象分配存储空间 — 例如，SSE 类型[__m128](../../cpp/m128.md)并 **__m256**，和的类型使用声明`__declspec(align( n ))`其中**n**大于 8。 如果*大小*为 0， **malloc**分配零长度的项在堆中并向该项返回有效的指针。 始终检查从返回**malloc**，即使请求的内存量很小。
+**malloc**返回指向已分配空间的 void 指针; 如果可用内存不足，则返回**NULL** 。 若要返回指向**void**之外的类型的指针，请在返回值上使用类型转换。 返回值指向的存储空间确保可以正好与对齐要求小于或等于基本对齐要求的任意对象类型的存储对齐。 （在视觉C++对象中，基本对齐方式是**double**或8字节所需的对齐方式。 在针对 64 位平台的代码中，是 16 个字节。）对于具有较大对齐要求的对象（例如，SSE 类型[__m128](../../cpp/m128.md)和 **__m256**），以及使用`__declspec(align( n ))` **n**大于8的声明的类型，使用[_aligned_malloc](aligned-malloc.md)为其分配存储空间。 如果*size*为0，则**malloc**将在堆中分配一个长度为零的项，并返回指向该项的有效指针。 即使请求的内存量较小，也始终检查**malloc**的返回值。
 
 ## <a name="remarks"></a>备注
 
-**Malloc**函数分配的内存块至少*大小*字节。 块可能会大于*大小*由于空间所需的对齐方式和维护信息的字节数。
+**Malloc**函数分配的内存块的*大小*至少为个字节。 由于对齐和维护信息所需的空间，块可能大于*大小*字节。
 
-**malloc**设置**errno**到**ENOMEM**如果内存分配失败或请求的内存量超过 **_HEAP_MAXREQ**。 有关此代码及其他错误代码的信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如果内存分配失败或请求的内存量超过 **_HEAP_MAXREQ**， **malloc**会将**errno**设置为**ENOMEM** 。 有关此代码及其他错误代码的信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-启动代码使用**malloc**来分配的存储空间 **_environ**， *envp*，以及*argv*变量。 此外调用以下函数和对应的宽字符**malloc**。
+启动代码使用**malloc**为 **_environ**、 *envp*和*argv*变量分配存储。 以下函数及其宽字符对应项也调用**malloc**。
 
 |||||
 |-|-|-|-|
@@ -71,11 +74,11 @@ void *malloc(
 |[fputs](fputs-fputws.md)|[_getdcwd](getcwd-wgetcwd.md)|[scanf](scanf-scanf-l-wscanf-wscanf-l.md)||
 |[fread](fread.md)|[gets](../../c-runtime-library/gets-getws.md)|[_searchenv](searchenv-wsearchenv.md)||
 
-C++ [_set_new_mode](set-new-mode.md) 函数将为 **malloc** 设置新的处理程序模式。 新的处理程序模式将指示是否在失败时， **malloc**是所设置的调用新处理程序例程[_set_new_handler](set-new-handler.md)。 默认情况下**malloc**不会调用新处理程序例程上分配内存失败。 可以重写此默认行为，以便，当**malloc**无法分配内存， **malloc**调用新处理程序例程中相同的方式**新**运算符执行当出于相同原因。 若要重写默认值，调用`_set_new_mode(1)`早期的程序或与 NEWMODE 链接中。OBJ (请参阅[Link 选项](../../c-runtime-library/link-options.md))。
+C++ [_set_new_mode](set-new-mode.md) 函数将为 **malloc** 设置新的处理程序模式。 新处理程序模式指示在失败时， **malloc**是否调用由[_set_new_handler](set-new-handler.md)设置的新处理程序例程。 默认情况下，在无法分配内存时， **malloc**不会调用新的处理程序例程。 您可以重写此默认行为，以便在**malloc**无法分配内存时， **malloc**会调用新的处理程序例程，其方式与在同一原因下**新**运算符失败时相同。 若要重写默认值`_set_new_mode(1)` ，请在程序的早期调用，或与 newmode.obj 链接。OBJ （请参阅[链接选项](../../c-runtime-library/link-options.md)）。
 
-当与 C 运行时库的调试版本链接应用程序**malloc**解析为[_malloc_dbg](malloc-dbg.md)。 有关堆在调试过程中如何托管的详细信息，请参阅 [CRT 调试堆详细信息](/visualstudio/debugger/crt-debug-heap-details)。
+当应用程序与调试版的 C 运行时库链接时， **malloc**解析为[_malloc_dbg](malloc-dbg.md)。 有关堆在调试过程中如何托管的详细信息，请参阅 [CRT 调试堆详细信息](/visualstudio/debugger/crt-debug-heap-details)。
 
-**malloc**砆`__declspec(noalias)`和`__declspec(restrict)`; 也就是说，确保该函数不能修改全局变量，并且指针返回不使用别名。 有关详细信息，请参阅 [noalias](../../cpp/noalias.md) 和[限制](../../cpp/restrict.md)。
+**malloc**标记`__declspec(noalias)`为和`__declspec(restrict)`; 这意味着函数保证不修改全局变量，并且返回的指针没有化名。 有关详细信息，请参阅 [noalias](../../cpp/noalias.md) 和[限制](../../cpp/restrict.md)。
 
 ## <a name="requirements"></a>要求
 

@@ -1,11 +1,11 @@
 ---
 title: carg、cargf、cargl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - carg
 - cargf
 - cargl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - carg
 - cargf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - cargf function
 - cargl function
 ms.assetid: 610d6a93-b929-46ab-a966-b77db0b804be
-ms.openlocfilehash: 584732594cd9ca9579907986e3dc3b5f3dbf52c0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e66b0b3545b3f28a8f7b4ca14c29ffe1e0fc260c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340711"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939303"
 ---
 # <a name="carg-cargf-cargl"></a>carg、cargf、cargl
 
@@ -68,17 +71,17 @@ long double cargl(
 
 ## <a name="return-value"></a>返回值
 
-参数 （也称为阶段） *z*。 结果是在间隔 [-π，+ π]。
+*Z*的参数（也称为阶段）。 结果以 [-π，+ π] 为间隔。
 
 ## <a name="remarks"></a>备注
 
-因为C++允许重载，可以调用的重载**carg**采用 **_Fcomplex**或 **_Lcomplex**值，并返回**float**或**长** **double**值。 在 C 程序中， **carg**始终采用 **_Dcomplex**值并返回**double**值。
+由于C++允许重载，因此可以调用采用 **_Fcomplex**或 **_Lcomplex**值的**carg**重载，并返回**float**或**long** **double**值。 在 C 程序中， **carg**始终采用 **_Dcomplex**值并返回一个**双精度**值。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|C 标头|C++ 标头|
 |-------------|--------------|------------------|
-|**carg**,               **cargf**, **cargl**|\<complex.h>|\<ccomplex>|
+|**carg**、 **cargf**、 **cargl**|\<complex.h>|\<ccomplex>|
 
 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 

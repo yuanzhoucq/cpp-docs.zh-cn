@@ -1,11 +1,11 @@
 ---
 title: cexp、cexpf、cexpl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - cexp
 - cexpf
 - cexpl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cexp
 - cexpf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - cexpl function
 - cexpf function
 ms.assetid: f27fd5a9-70c7-4957-a7ee-5256d19bd1da
-ms.openlocfilehash: 401dd30b326fcd6caef7cae6f1ecbdc43ed5dd5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0dd6c9deddfe93cf044985f93b2129695d0770f0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335452"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943172"
 ---
 # <a name="cexp-cexpf-cexpl"></a>cexp、cexpf、cexpl
 
@@ -61,17 +64,17 @@ _Lcomplex cexp( _Lcomplex z );  // C++ only
 
 ## <a name="return-value"></a>返回值
 
-值**e**次的幂*z*。
+**E**的值加上*z*的幂。
 
 ## <a name="remarks"></a>备注
 
-因为C++允许重载，可以调用的重载**cexp**采用并返回 **_Fcomplex**并 **_Lcomplex**的值。 在 C 程序中， **cexp**始终采用并返回 **_Dcomplex**值。
+由于C++允许重载，因此可以调用**cexp**的重载，该重载采用并返回 **_Fcomplex**和 **_Lcomplex**值。 在 C 程序中， **cexp**始终采用并返回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|C 标头|C++ 标头|
 |-------------|--------------|------------------|
-|**cexp**， **cexpf**， **cexpl**|\<complex.h>|\<complex.h>|
+|**cexp**、 **cexpf**、 **cexpl**|\<complex.h>|\<complex.h>|
 
 有关兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
