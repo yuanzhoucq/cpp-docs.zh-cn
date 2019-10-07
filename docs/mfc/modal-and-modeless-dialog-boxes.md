@@ -7,34 +7,34 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], modal
 - modal dialog boxes [MFC]
 ms.assetid: e83df336-5994-4b8f-8233-7942f997315b
-ms.openlocfilehash: c3a5263736324d7fe25066e8879d13b3a41768de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 886229a2b66968bf76129ecb1da838bd36e66215
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62238404"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685184"
 ---
 # <a name="modal-and-modeless-dialog-boxes"></a>模式和无模式对话框
 
 可以使用类[CDialog](../mfc/reference/cdialog-class.md)来管理两种类型的对话框：
 
-- *模式对话框*，此操作需要用户响应后再继续执行程序
+- *模式对话框*，要求用户在继续之前做出响应
 
-- *无模式对话框*，这均可在任何时间使用屏幕上都只允许用户执行其他活动
+- *无模式对话框*，可随时停留在屏幕上，但允许其他用户活动使用
 
-资源编辑和创建对话框模板的过程是相同的模式和无模式对话框。
+用于创建对话框模板的资源编辑和过程对于模式对话框和无模式对话框是相同的。
 
-创建您的程序的对话框需要执行以下步骤：
+为程序创建对话框需要执行以下步骤：
 
-1. 使用[对话框编辑器](../windows/dialog-editor.md)设计对话框并创建其对话框模板资源。
+1. 使用[对话框编辑器](../windows/dialog-editor.md)设计对话框，并创建其对话框模板资源。
 
 1. 创建对话框类。
 
-1. 连接[向消息处理程序的对话框资源控件](../windows/adding-event-handlers-for-dialog-box-controls.md)对话框类中。
+1. 将[对话框资源的控件连接到](../windows/adding-event-handlers-for-dialog-box-controls.md)对话框类中的消息处理程序。
 
-1. 添加数据成员关联的对话框的控件，并指定[对话框数据交换](../mfc/dialog-data-exchange.md)并[对话框数据验证](../mfc/dialog-data-validation.md)的控件。
+1. 添加与对话框控件关联的数据成员，并为控件指定[对话框数据交换](../mfc/dialog-data-exchange.md)和[对话框数据验证](../mfc/dialog-data-validation.md)。
 
 ## <a name="see-also"></a>请参阅
 
 [对话框](../mfc/dialog-boxes.md)<br/>
-[对话框的生命周期](../mfc/life-cycle-of-a-dialog-box.md)
+[使用 MFC 中的对话框](../mfc/life-cycle-of-a-dialog-box.md)

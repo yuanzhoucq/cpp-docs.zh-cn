@@ -11,12 +11,12 @@ helpviewer_keywords:
 - messages to dialog class [MFC], mapping
 - Class Wizard [MFC]
 ms.assetid: a4c6fd1f-1d33-47c9-baa0-001755746d6d
-ms.openlocfilehash: 49d1a888b148793f82cf214637956589d6b8ff07
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 0f1207faca56acd709db86478722eba85eeb284a
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907477"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685606"
 ---
 # <a name="mapping-windows-messages-to-your-class"></a>将 Windows 消息映射到您的类
 
@@ -35,4 +35,4 @@ ms.locfileid: "70907477"
 ## <a name="see-also"></a>请参阅
 
 [对话框](../mfc/dialog-boxes.md)<br/>
-[对话框的生命周期](../mfc/life-cycle-of-a-dialog-box.md)
+[使用 MFC 中的对话框](../mfc/life-cycle-of-a-dialog-box.md)

@@ -1,6 +1,6 @@
 ---
-title: TN053:DAO 数据库类的自定义 DFX 例程
-ms.date: 11/04/2016
+title: TN053：DAO 数据库类的自定义 DFX 例程
+ms.date: 09/17/2019
 helpviewer_keywords:
 - MFC, DAO and
 - database classes [MFC], DAO
@@ -11,27 +11,27 @@ helpviewer_keywords:
 - DFX (DAO record field exchange) [MFC]
 - custom DFX routines [MFC]
 ms.assetid: fdcf3c51-4fa8-4517-9222-58aaa4f25cac
-ms.openlocfilehash: 262da283f20df1fe7af6aa02785e8c1ceb09dfda
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 949e1a07b2b45b01b08efb368046e0c65b1264e1
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611094"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095990"
 ---
-# <a name="tn053-custom-dfx-routines-for-dao-database-classes"></a>TN053:DAO 数据库类的自定义 DFX 例程
+# <a name="tn053-custom-dfx-routines-for-dao-database-classes"></a>TN053：DAO 数据库类的自定义 DFX 例程
 
 > [!NOTE]
->  视觉对象C++环境和向导不支持 DAO （尽管 DAO 类包含并且仍可以使用它们）。 Microsoft 建议您使用[OLE DB 模板](../data/oledb/ole-db-templates.md)或[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)为新项目。 仅应在维护现有应用程序使用 DAO。
+>  DAO 与 Access 数据库结合使用，并受 Office 2013 的支持。 3.6 是最终版本，被视为已过时。 视觉对象C++环境和向导不支持 dao （尽管包含 dao 类，但你仍可以使用它）。 Microsoft 建议你将[OLE DB 模板](../data/oledb/ole-db-templates.md)或[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)用于新项目。 只应在维护现有应用程序时使用 DAO。
 
-此技术说明描述的 DAO 记录字段交换 (DFX) 机制。 若要帮助您了解 DFX 例程中发生的情况`DFX_Text`函数将作为示例的详细信息中所述。 作为附加到此技术说明的信息源，您可以检查的代码适用于其他各个 DFX 函数。 您可能不需要自定义 DFX 例程通常可能需要自定义 RFX 例程 （与 ODBC 数据库类一起使用）。
+本技术说明介绍了 DAO 记录字段交换（DFX）机制。 为了帮助了解 DFX 例程中发生的情况，该`DFX_Text`函数将详细说明为示例。 作为此技术说明的其他信息源，你可以检查其他每个 DFX 函数的代码。 您可能不需要自定义 DFX 例程，因为您可能需要自定义 RFX 例程（与 ODBC 数据库类一起使用）。
 
-此技术说明包含：
+本技术说明包含：
 
 - DFX 概述
 
-- [示例](#_mfcnotes_tn053_examples)使用 DAO 记录字段交换和动态绑定
+- 使用 DAO 记录字段交换和动态绑定的[示例](#_mfcnotes_tn053_examples)
 
-- [DFX 的工作原理](#_mfcnotes_tn053_how_dfx_works)
+- [DFX 的工作方式](#_mfcnotes_tn053_how_dfx_works)
 
 - [自定义 DFX 例程的作用](#_mfcnotes_tn053_what_your_custom_dfx_routine_does)
 
@@ -39,14 +39,14 @@ ms.locfileid: "65611094"
 
 **DFX 概述**
 
-DAO 记录字段交换机制 (DFX) 用于简化检索和更新数据时使用该过程`CDaoRecordset`类。 使用数据成员的简化过程`CDaoRecordset`类。 通过派生自`CDaoRecordset`，可以将数据成员添加到表示表或查询中的每个字段的派生类。 此"静态绑定"机制非常简单，但它可能无法数据提取/更新选择的方法的所有应用程序。 DFX 检索每个绑定的字段的当前记录更改每个时间。 如果你正在开发的高性能应用程序不需要提取每个字段，更改货币后，"动态绑定"通过`CDaoRecordset::GetFieldValue`和`CDaoRecordset::SetFieldValue`可能选择的数据访问方法。
+DAO 记录字段交换机制（DFX）用于简化在使用`CDaoRecordset`类时检索和更新数据的过程。 使用`CDaoRecordset`类的数据成员可简化此过程。 通过从`CDaoRecordset`派生，你可以将数据成员添加到表示表或查询中的每个字段的派生类。 这种 "静态绑定" 机制很简单，但它可能不是所有应用程序的所选数据提取/更新方法。 每次更改当前记录时，DFX 都将检索每个绑定字段。 如果你正在开发一个性能敏感的应用程序，该应用程序在货币更改时不需要提取每个字段，则`CDaoRecordset::GetFieldValue`通过`CDaoRecordset::SetFieldValue`和的 "动态绑定" 可能是选择的数据访问方法。
 
 > [!NOTE]
->  DFX 和动态绑定不是绑定的互斥的因此可以使用混合使用静态和动态。
+>  DFX 和动态绑定并不互相排斥，因此可以使用静态和动态绑定的混合使用。
 
-## <a name="_mfcnotes_tn053_examples"></a> DAO 记录字段交换仅的示例 1-用法
+## <a name="_mfcnotes_tn053_examples"></a>示例 1-仅使用 DAO 记录字段交换
 
-(假定`CDaoRecordset`— 派生类`CMySet`尚未打开)
+（假定`CDaoRecordset` ：派生类`CMySet`已打开）
 
 ```
 // Add a new record to the customers table
@@ -59,9 +59,9 @@ myset.m_strCustName = _T("Microsoft");
 myset.Update();
 ```
 
-**示例 2-使用动态绑定仅**
+**示例 2-仅使用动态绑定**
 
-(假定使用`CDaoRecordset`类， `rs`，并已打开)
+（假定使用`CDaoRecordset`类， `rs`并且它已打开）
 
 ```
 // Add a new record to the customers table
@@ -84,9 +84,9 @@ rs.SetFieldValue(_T("Customer_Name"),
 rs.Update();
 ```
 
-**示例 3-使用的 DAO 记录字段交换和动态绑定**
+**示例 3-使用 DAO 记录字段交换和动态绑定**
 
-(假定使用的浏览员工数据`CDaoRecordset`的派生类`emp`)
+（假定浏览具有派生类`CDaoRecordset` `emp`的员工数据）
 
 ```
 // Get the employee's data so that it can be displayed
@@ -105,99 +105,98 @@ PopUpEmployeeData(emp.m_strFirstName,
     varPhoto);
 ```
 
-## <a name="_mfcnotes_tn053_how_dfx_works"></a> DFX 的工作原理
+## <a name="_mfcnotes_tn053_how_dfx_works"></a>DFX 的工作方式
 
-DFX 机制的工作中使用 MFC ODBC 类的记录字段交换 (RFX) 机制以类似的方式。 DFX 和 RFX 的原理是相同，但有多个内部差异。 DFX 函数设计的是，几乎所有的代码共享通过单个 DFX 例程。 在最高级别 DFX 仅将执行一些操作。
+DFX 机制的工作方式类似于 MFC ODBC 类使用的记录字段交换（RFX）机制。 DFX 和 RFX 的原则相同，但有许多内部差异。 DFX 函数的设计是指几乎所有代码都由各个 DFX 例程共享。 在最高级别，DFX 仅执行几项任务。
 
-- DFX 构造 SQL**选择**子句和 SQL**参数**子句，如有必要。
+- 如果需要，DFX 将构造 SQL **SELECT**子句和 sql**参数**子句。
 
-- DFX 构造 DAO 的使用将绑定结构`GetRows`函数 （稍后将详细介绍）。
+- DFX 构造 DAO `GetRows`函数使用的绑定结构（稍后将对此进行详细介绍）。
 
-- DFX 管理用来检测已更新的字段 （如果正在使用双缓冲） 的数据缓冲区
+- DFX 管理用于检测脏字段（如果正在使用双缓冲）的数据缓冲区
 
-- 管理 DFX **NULL**并**繁琐**状态数组和设置的值如有必要的更新。
+- DFX 管理**NULL**和**DIRTY**状态数组，并在更新时设置值。
 
-DFX 核心机制是`CDaoRecordset`派生类的`DoFieldExchange`函数。 此函数将调度到相应的操作类型的各个 DFX 函数的调用。 然后再调用`DoFieldExchange`内部 MFC 函数设置的操作类型。 以下列表显示的各种操作类型和简短说明。
+DFX 机制的核心是`CDaoRecordset`派生类的`DoFieldExchange`函数。 此函数将调用调度到相应操作类型的单个 DFX 函数。 在调用`DoFieldExchange`内部 MFC 函数之前，请设置操作类型。 以下列表显示了各种操作类型和简短说明。
 
 |操作|描述|
 |---------------|-----------------|
-|`AddToParameterList`|生成参数子句|
+|`AddToParameterList`|Build PARAMETERS 子句|
 |`AddToSelectList`|生成 SELECT 子句|
-|`BindField`|将绑定结构设置|
+|`BindField`|设置绑定结构|
 |`BindParam`|设置参数值|
 |`Fixup`|设置 NULL 状态|
 |`AllocCache`|为脏检查分配缓存|
 |`StoreField`|将当前记录保存到缓存|
-|`LoadField`|为成员值还原缓存|
+|`LoadField`|将缓存还原到成员值|
 |`FreeCache`|释放缓存|
-|`SetFieldNull`|设置字段状态和为 NULL 的值|
-|`MarkForAddNew`|将标记字段脏如果不是伪 NULL|
-|`MarkForEdit`|标记字段脏如果与缓存不匹配|
-|`SetDirtyField`|设置字段值标记为已更新|
+|`SetFieldNull`|将字段状态 & 值设置为 NULL|
+|`MarkForAddNew`|如果不是伪 NULL，则将字段标记为脏|
+|`MarkForEdit`|如果不匹配缓存，则标记字段的更新|
+|`SetDirtyField`|设置标记为已更新的字段值|
 
-在下一部分中，每个操作将介绍的更详细地`DFX_Text`。
+在下一部分中，将更详细地`DFX_Text`说明每个操作。
 
-要了解有关 DAO 记录字段交换过程的最重要功能是它使用`GetRows`函数的`CDaoRecordset`对象。 DAO`GetRows`函数可通过多种方式在工作。 将只简要介绍一下此技术说明`GetRows`原样本技术说明的范围之外。
+了解 DAO 记录字段交换过程的最重要的功能是使用`GetRows` `CDaoRecordset`对象的函数。 DAO `GetRows`函数可以通过多种方式工作。 本技术说明只是简要介绍`GetRows` ，因为它不在本技术说明的讨论范围内。
+DAO 3.6 是最终版本，被视为已过时。 `GetRows`可以通过多种方式工作。
 
-DAO`GetRows`可通过多种方式在工作。
+- 它可以一次提取多个记录和多个字段。 这样，就可以更快地访问数据，同时处理大型数据结构，并为结构中的每个字段和每个数据记录提供相应的偏移量。 MFC 不利用此多记录提取机制。
 
-- 它可以一次提取多个记录和多个字段的数据。 这允许将数据访问速度加快了复杂的处理大型数据结构和适当的偏移量为每个字段和数据结构中的每个记录。 MFC 不会提取机制此多个记录的使用。
+- 另一`GetRows`种可行方法是允许程序员为数据的每个字段的已检索数据指定绑定地址。
 
-- 另一种方法`GetRows`可以工作，使程序员可以指定每个字段的数据的一条记录检索到的数据的绑定地址。
+- DAO 还向调用方提供可变长度列，以允许调用方分配内存。 第二个功能的优点是最大限度地减少了数据副本的数量，并允许将数据直接存储到类（ `CDaoRecordset`派生类）的成员中。 第二种机制是 MFC 用于绑定到派生类中`CDaoRecordset`的数据成员的方法。
 
-- DAO 将还"回调"到调用方为可变长度列以允许调用方分配的内存。 此第二个功能具有的最大程度减少数据的副本数，以及允许的数据直接存储到类的成员权益 (`CDaoRecordset`派生类)。 此第二种机制是 MFC 使用要绑定到中的数据成员的方法`CDaoRecordset`派生的类。
+##  <a name="_mfcnotes_tn053_what_your_custom_dfx_routine_does"></a>自定义 DFX 例程的作用
 
-##  <a name="_mfcnotes_tn053_what_your_custom_dfx_routine_does"></a> 自定义 DFX 例程的作用
+从这个讨论中可以看出，在任何 DFX 函数中实现的最重要的操作都必须能够设置所需的数据结构以成功调用`GetRows`。 DFX 函数还必须支持其他一些操作，但并不像正确准备`GetRows`调用那样非常重要或复杂。
 
-虽然从讨论中的任何 DFX 函数中实现的最重要操作必须能够设置所需的数据结构，若要成功调用显然`GetRows`。 有多种 DFX 函数必须也支持其他操作，但没有为重要或复杂正确准备`GetRows`调用。
+联机文档中介绍了如何使用 DFX。 实质上，有两个要求。 首先，必须将成员添加到每`CDaoRecordset`个绑定字段和参数的派生类中。 应覆盖`CDaoRecordset::DoFieldExchange`此项。 请注意，成员的数据类型非常重要。 它应该与数据库中字段的数据匹配，或者至少能够转换为该类型。 例如，数据库中的数字字段（如长整数）始终可以转换为文本并绑定到`CString`成员，但是数据库中的文本字段可能不一定转换为数字表示形式，如 long 整数和绑定到长集成er 成员。 DAO 和 Microsoft Jet 数据库引擎负责转换（而不是 MFC）。
 
-使用 DFX 是联机文档中所述。 从根本上来说，有两个要求。 首先，必须将成员添加到`CDaoRecordset`派生类为每个绑定的字段和参数。 遵循此`CDaoRecordset::DoFieldExchange`应重写。 请注意该成员的数据类型很重要。 它应匹配数据库中字段的数据，或至少可以转换为该类型。 例如在数据库中，例如一个长整型数值字段始终可以转换为文本并绑定到`CString`成员，但在数据库中的文本字段可能不一定是可转换为数值的表示形式，如长整型，绑定到长集成er 成员。 DAO 和 Microsoft Jet 数据库引擎是负责转换 （而非 MFC）。
+##  <a name="_mfcnotes_tn053_details_of_dfx_text"></a>DFX_Text 的详细信息
 
-##  <a name="_mfcnotes_tn053_details_of_dfx_text"></a> DFX_Text 的详细信息
-
-正如前面提到，说明 DFX 是如何工作的最佳方式是通过一个示例。 为此目的的内部结构通过`DFX_Text`应该很好地工作以帮助提供 DFX 至少一个基本了解。
+如前所述，解释 DFX 工作方式的最佳方式是通过示例。 为了实现这一`DFX_Text`目的，应充分发挥其作用，以帮助至少提供对 DFX 的基本了解。
 
 - `AddToParameterList`
 
-   此操作生成 SQL**参数**子句 ("`Parameters <param name>, <param type> ... ;`") 所需的 Jet。 每个参数是名为和类型 （如 RFX 调用中指定）。 请参阅函数`CDaoFieldExchange::AppendParamType`函数查看各类型的名称。 情况下`DFX_Text`，使用的类型是**文本**。
+   此操作生成 Jet 所需的 SQL 参数`Parameters <param name>, <param type> ... ;`子句（""）。 每个参数的名称和类型（在 RFX 调用中指定）。 请参见函数`CDaoFieldExchange::AppendParamType`函数以查看各个类型的名称。 对于`DFX_Text`，使用的类型为**文本**。
 
 - `AddToSelectList`
 
-   生成 SQL**选择**子句。 这相当直观如 DFX 调用指定的列名称只是追加 ("`SELECT <column name>, ...`")。
+   生成 SQL **SELECT**子句。 这相当简单，因为 DFX 调用指定的列名称只追加了（"`SELECT <column name>, ...`"）。
 
 - `BindField`
 
-   最复杂的操作。 正如前面提到这是 DAO 绑定结构由`GetRows`设置。 您可以从代码中看到`DFX_Text`类型的结构中的信息包括所使用的 DAO 类型 (**DAO_CHAR**或**DAO_WCHAR**的情况下`DFX_Text`)。 此外，使用的绑定类型是还设置。 在前面部分`GetRows`只能简单地说，是描述但很足以解释 MFC 使用的绑定的类型始终是直接寻址绑定 (**DAOBINDING_DIRECT**)。 除了为可变长度列绑定 (如`DFX_Text`)，以便 MFC 可控制的内存分配，并指定正确的长度的地址使用回调绑定。 这意味着该 MFC，则可以始终掌握 DAO"where"放置的数据，从而允许直接绑定到成员变量。 将绑定结构的其余部分填充的内存分配回调函数和类型的列绑定 （按列名称绑定） 的地址等内容。
+   最复杂的操作。 如前所述，这是由使用`GetRows`的 DAO 绑定结构的设置。 从结构中的信息类型的代码`DFX_Text`中可以看到，包含所使用的 DAO 类型（对于，则为**DAO_CHAR**或`DFX_Text` **DAO_WCHAR** ）。 此外，还设置了所使用的绑定类型。 在前面的部分`GetRows`中，只是短暂说明，但足以说明 MFC 使用的绑定类型始终是直接地址绑定（**DAOBINDING_DIRECT**）。 除了使用可变长度列绑定（如`DFX_Text`）回调绑定外，使 MFC 可以控制内存分配，并指定正确长度的地址。 这意味着 MFC 始终可以指示 DAO "where" 放置数据，从而允许直接绑定到成员变量。 绑定结构的其余部分填入了内存分配回调函数的地址和列绑定的类型（按列名绑定）等内容。
 
 - `BindParam`
 
-   这是一个简单的操作调用`SetParamValue`参数成员中指定的参数值。
+   这是一个使用参数成员中`SetParamValue`指定的参数值调用的简单操作。
 
 - `Fixup`
 
-   填写**NULL**每个字段的状态。
+   填充每个字段的**NULL**状态。
 
 - `SetFieldNull`
 
-   此操作仅将标记作为每个字段状态**NULL**并将成员变量的值设置为**PSEUDO_NULL**。
+   此操作仅将每个字段状态标记为**NULL** ，并将成员变量的值设置为**PSEUDO_NULL**。
 
 - `SetDirtyField`
 
-   调用`SetFieldValue`每个字段标记为已更新。
+   调用`SetFieldValue`标记为 "已更新" 的每个字段。
 
-所有剩余操作只需处理使用的数据缓存。 数据缓存是用于进一步简化某些操作的当前记录中的数据的额外缓冲区。 例如，可以自动检测"脏"字段。 它可以完全或关闭在字段级别的联机文档中所述。 缓冲区的实现利用一个映射。 使用此映射来匹配数据的"绑定"字段的地址的动态分配副本 (或`CDaoRecordset`派生的数据成员)。
+所有剩余操作仅处理数据缓存。 数据缓存是当前记录中数据的额外缓冲区，用来使某些功能变得更简单。 例如，可以自动检测到 "更新" 的字段。 如联机文档中所述，可以完全关闭或在字段级别关闭。 缓冲区的实现利用映射。 此映射用于将数据的动态分配副本与 "绑定" 字段（或`CDaoRecordset`派生数据成员）的地址进行匹配。
 
 - `AllocCache`
 
-   动态分配的缓存的字段值并将其添加到地图。
+   动态分配缓存的字段值，并将其添加到地图中。
 
 - `FreeCache`
 
-   删除缓存的字段的值并将其从映射中删除。
+   删除缓存的字段值并将其从映射中删除。
 
 - `StoreField`
 
-   将当前的字段值复制到数据缓存。
+   将当前字段值复制到数据缓存中。
 
 - `LoadField`
 
@@ -205,14 +204,14 @@ DAO`GetRows`可通过多种方式在工作。
 
 - `MarkForAddNew`
 
-   检查是否当前字段值为非**NULL**并将其标记脏如有必要。
+   检查当前字段值是否为非**NULL** ，并在必要时将其标记为已更新。
 
 - `MarkForEdit`
 
-   将数据缓存的当前字段值进行比较，并将标记已更新，如有必要。
+   将当前字段值与数据缓存进行比较，并在必要时标记为已更新。
 
 > [!TIP]
-> 在标准的数据类型的现有 DFX 例程的模型在自定义 DFX 例程。
+> 对标准数据类型的现有 DFX 例程的自定义 DFX 例程建模。
 
 ## <a name="see-also"></a>请参阅
 

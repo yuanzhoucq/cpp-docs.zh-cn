@@ -191,7 +191,7 @@ wchar_t * _ui64tow( unsigned long long value, wchar_t (&buffer)[size],
 > [!IMPORTANT]
 > 这些函数可以写入超过太小缓冲区末尾的部分。 若要防止缓冲区溢出，请确保*缓冲区*的大小足以容纳转换后的数字加上尾随的 null 字符和符号字符。 这些函数的误用可能导致代码中出现严重的安全问题。
 
-由于可能存在安全问题，因此默认情况下，这些函数会导致弃用警告[C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)：**此函数或变量可能不安全。请考虑改用*safe_function* **。** 若要禁用弃用，请使用 _CRT_SECURE_NO_WARNINGS。** 建议更改源代码，以使用警告消息建议的*safe_function* 。 更安全的函数不能写入超过指定缓冲区大小的字符。 有关详细信息，请参阅[_itoa_s、_itow_s 函数](itoa-s-itow-s.md)。
+由于可能存在安全问题，因此默认情况下，这些函数会导致弃用警告[C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)：**此函数或变量可能不安全。请考虑改用** *safe_function* **。若要禁用弃用，请使用 _CRT_SECURE_NO_WARNINGS。** 建议更改源代码，以使用警告消息建议的 *safe_function* 。 更安全的函数不能写入超过指定缓冲区大小的字符。 有关详细信息，请参阅[_itoa_s、_itow_s 函数](itoa-s-itow-s.md)。
 
 若要在不使用弃用警告的情况下使用这些函数，请在包含任何 CRT 标头之前定义 **_CRT_SECURE_NO_WARNINGS**预处理器宏。 可以在开发人员命令提示符下的命令行中执行此操作，方法是将 **/D_CRT_SECURE_NO_WARNINGS**编译器选项添加到**cl**命令。 否则，在源文件中定义宏。 如果使用预编译标头，请在预编译标头包含文件、 *pch* （Visual Studio 2017 及更早版本）的顶部定义宏（*stdafx.h* ）。 若要在源代码中定义宏，请在包含任何 CRT 标头之前使用 **#define**指令，如以下示例中所示：
 

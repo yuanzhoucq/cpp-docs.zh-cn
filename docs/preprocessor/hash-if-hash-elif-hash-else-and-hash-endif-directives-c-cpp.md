@@ -41,9 +41,9 @@ ms.locfileid: "70220344"
 &nbsp;&nbsp;&nbsp;&nbsp;*if-line 文本*
 
 *如果为-line* : \
-&nbsp;&nbsp;&nbsp;&nbsp; **#if***常量表达式*\
-&nbsp;&nbsp;&nbsp;&nbsp; **#ifdef***标识符*\
-&nbsp;&nbsp;&nbsp;&nbsp; **#ifndef***标识符*
+&nbsp;&nbsp;&nbsp;&nbsp; **#if** *常量表达式*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifdef** *标识符*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifndef** *标识符*
 
 *elif* :
 &nbsp;&nbsp;&nbsp;&nbsp;*elif 文本*\
@@ -100,7 +100,7 @@ ms.locfileid: "70220344"
 **定义**的预处理器运算符可用于特殊常量表达式, 如以下语法所示:
 
 > **定义 (** *标识符* **)** \
-> **定义***标识符*
+> **定义** *标识符*
 
 如果当前定义了*标识符*, 则将此常量表达式视为 true (非零)。 否则，条件为 false (0)。 定义为空文本的标识符被视为已定义。 **定义**的运算符可用于 **#if**和 **#elif**指令中, 但其他地方不能使用。
 

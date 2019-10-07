@@ -21,7 +21,7 @@ ms.locfileid: "70216119"
 
 ## <a name="syntax"></a>语法
 
-> **#error***标记-字符串*
+> **#error** *标记-字符串*
 
 ## <a name="remarks"></a>备注
 

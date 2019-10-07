@@ -2,13 +2,13 @@
 title: C/C++语言和标准库参考
 ms.date: 08/13/2019
 ms.assetid: c26a6682-961a-43ef-ad33-2adc612f69ac
-ms.topic: landing-page
-ms.openlocfilehash: 177bd01ec1564d3a0f3be4c66b9e528796c66e6f
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.topic: overview
+ms.openlocfilehash: 15285b2741167e8c873ac0a45514e7d05e259375
+ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218401"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274715"
 ---
 # <a name="cc-language-and-standard-libraries-reference"></a>C/C++语言和标准库参考
 
@@ -19,7 +19,7 @@ ms.locfileid: "70218401"
 ## <a name="language-reference"></a>语言参考
 
 [C 语言](../c-language/c-language-reference.md)\
-关于 Microsoft 实现的 C 语言的参考内容。
+Microsoft 实现 C 语言的参考内容。
 
 [C++语言](../cpp/cpp-language-reference.md)\
 C++语言的 Microsoft 实现的参考内容。
@@ -34,17 +34,17 @@ C 和C++使用的预处理器的参考内容。
 解释如何使用具有 x86 处理器的 Visual C/C++ 内联汇编。
 
 [ARM 汇编程序参考](../assembler/arm/arm-assembler-reference.md)\
-提供 Microsoft ARM 汇编程序 (ARMASM) 和相关工具的参考资料。
+提供 Microsoft ARM 汇编程序（ARMASM）和相关工具的参考资料。
 
 [Microsoft 宏汇编程序参考](../assembler/masm/microsoft-macro-assembler-reference.md)\
-提供 Microsoft 宏汇编程序 (MASM) 的参考材料。
+提供 Microsoft 宏汇编程序（MASM）的参考材料。
 
 ## <a name="libraries-reference"></a>库参考
 
 ### <a name="standard-libraries"></a>标准库
 
 [C 运行时库](../c-runtime-library/c-run-time-library-reference.md)\
-C 运行时库 (CRT) 的 Microsoft 实现的引用, 有时称为通用 CRT。
+C 运行时库（CRT）的 Microsoft 实现的引用，有时称为通用 CRT。
 
 [C++标准库](../standard-library/cpp-standard-library-reference.md)\
 C++标准库的 Microsoft 实现的引用。
@@ -52,11 +52,11 @@ C++标准库的 Microsoft 实现的引用。
 ### <a name="libraries-for-windows-applications"></a>用于 Windows 应用程序的库
 
 [MFC/ATL](../mfc/mfc-and-atl.md)\
-Microsoft 基础类 (MFC) 和活动模板库 (ATL) 类库的文档。
+Microsoft 基础类（MFC）和活动模板库（ATL）类库的文档。
 
 ### <a name="additional-libraries"></a>其他库
 
-[C++AMP (C++加速的大规模并行度)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)\
+[C++AMP （C++加速的大规模并行度）](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)\
 支持使用新式图形处理器进行常规用途编程的类。
 
 [并发运行时](../parallel/concrt/concurrency-runtime.md)\
@@ -66,14 +66,14 @@ Microsoft 基础类 (MFC) 和活动模板库 (ATL) 类库的文档。
 适用于 OpenMP API 的 Microsoft 实现的参考。
 
 [SafeInt 库](../safeint/safeint-library.md)\
-可与 MSVC、GCC 或 Clang 一起使用的可移植库, 有助于防止整数溢出。
+可与 MSVC、GCC 或 Clang 一起使用的可移植库，有助于防止整数溢出。
 
-[数据访问库](../data/data-access-in-cpp.md)使用 ATL 或 MFC 支持数据访问的库, 以及 OLE DB 和 ODBC 等旧服务。
+[数据访问库](../data/data-access-in-cpp.md)使用 ATL 或 MFC 支持数据访问的库，以及 OLE DB 和 ODBC 等旧服务。
 
 ## <a name="related-articles"></a>相关文章
 
-[Windows 运行时 (WinRT)C++](/windows/uwp/cpp-and-winrt-apis/index)\
+[Windows 运行时（WinRT）C++](/windows/uwp/cpp-and-winrt-apis/index)\
 C++/WinRT 是一种完全标准的新式 c + + 17 语言投影, 用于 Windows 运行时 (WinRT) Api, 实现为基于标头文件的库。
 
-[Windows 运行时C++模板库 (WRL)](../cppcx/wrl/windows-runtime-cpp-template-library-wrl.md)\
-Windows 运行时的旧模板库, 由C++/WinRT. 替换
+[Windows 运行时C++模板库（WRL）](../cppcx/wrl/windows-runtime-cpp-template-library-wrl.md)\
+Windows 运行时的旧模板库，由C++/WinRT. 替换

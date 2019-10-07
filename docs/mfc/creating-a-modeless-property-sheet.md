@@ -6,29 +6,29 @@ helpviewer_keywords:
 - property sheets, modeless
 - Create method [MFC], property sheets
 ms.assetid: eafd8a92-cc67-4a69-a5fb-742c920d1ae8
-ms.openlocfilehash: 39285927b67091f5b8762dab56009712d806d259
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90f6dcd5659d308a4b39d6a7d5a42003fc1f2111
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407986"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685685"
 ---
 # <a name="creating-a-modeless-property-sheet"></a>创建无模式属性表
 
-通常情况下，创建属性表将为模式对话框。 当使用模式属性表时，用户必须使用应用程序的任何其他部分之前关闭属性表。 本文介绍可用于创建允许用户属性表保持处于打开状态时使用的应用程序的其他部分无模式属性表的方法。
+通常，您创建的属性表将是模式的。 使用模式属性表时，用户必须先关闭属性表，然后才能使用应用程序的任何其他部分。 本文介绍可用于创建无模式属性表的方法，使用该属性表，用户可以在使用应用程序的其他部分时使属性表保持打开状态。
 
-若要显示属性表作为无模式对话框而不是为模式对话框，请调用[CPropertySheet::Create](../mfc/reference/cpropertysheet-class.md#create)而不是[DoModal](../mfc/reference/cpropertysheet-class.md#domodal)。 此外必须实现一些额外的任务，以支持无模式属性表。
+若要将属性表显示为无模式对话框而不是模式对话框，请调用[CPropertySheet：： Create](../mfc/reference/cpropertysheet-class.md#create)而不是[DoModal](../mfc/reference/cpropertysheet-class.md#domodal)。 还必须实现一些额外的任务来支持无模式属性表。
 
-其他任务之一之间交换数据的属性表和它修改的属性表处于打开状态时的外部对象。 这通常是相同的任务与标准的无模式对话框。 此任务的一部分实现无模式属性表和外部对象的属性设置将应用之间的通信的通道。 此实现是容易得多，如果派生的类从[CPropertySheet](../mfc/reference/cpropertysheet-class.md)为无模式属性表。 本文假定你这样做。
+其中一项任务是在属性表打开时，在属性表与它正在修改的外部对象之间交换数据。 这通常是与标准无模式对话框相同的任务。 此任务的一部分是在无模式属性表和将属性设置应用到的外部对象之间实现通信通道。 如果从[CPropertySheet](../mfc/reference/cpropertysheet-class.md)为无模式属性表派生类，则此实现会更容易。 本文假设已完成此操作。
 
-无模式属性表和外部之间进行通信的一种方法是定义从属性表为外部对象的指针对象 （在视图中，例如当前的选择）。 定义函数 (名为类似`SetMyExternalObject`) 中`CPropertySheet`-派生的类将指针更改时将焦点从一个外部对象更改为另一个。 `SetMyExternalObject`函数需要重置每个属性页的设置以反映新选择的外部对象。 若要完成此操作，请`SetMyExternalObject`函数必须能够访问[CPropertyPage](../mfc/reference/cpropertypage-class.md)属于对象`CPropertySheet`类。
+在无模式属性表与外部对象（例如，视图中的当前选定内容）之间进行通信的一种方法是定义从属性表到外部对象的指针。 在 `CPropertySheet` 派生类中定义一个函数（称为 `SetMyExternalObject`），以便在焦点从一个外部对象更改为另一对象时更改指针。 @No__t-0 函数需要重置每个属性页的设置以反映新选定的外部对象。 为此，`SetMyExternalObject` 函数必须能够访问属于 @no__t 2 类的[CPropertyPage](../mfc/reference/cpropertypage-class.md)对象。
 
-提供对属性表中的属性页的访问的最简便方法是将嵌入`CPropertyPage`中的对象`CPropertySheet`-派生的对象。 嵌入`CPropertyPage`中的对象`CPropertySheet`-派生的对象不同于模式对话框，其中属性表的所有者创建的典型设计`CPropertyPage`对象，并将其传递到属性表通过[Cpropertysheet:: Addpage](../mfc/reference/cpropertysheet-class.md#addpage)。
+提供对属性表中的属性页访问的最便捷方法是将 `CPropertyPage` 对象嵌入 `CPropertySheet` 派生的对象。 嵌入 `CPropertySheet` 派生对象中的 @no__t 0 对象不同于模式对话框的典型设计，其中属性表的所有者创建 @no__t 2 对象，并通过[CPropertySheet：： AddPage](../mfc/reference/cpropertysheet-class.md#addpage)将这些对象传递给属性表。
 
-有许多可用于确定何时应无模式属性表的设置应用于外部对象的用户界面选项。 一种替代方法是将当前的属性页的设置应用在用户更改任何值。 另一种方法是提供应用按钮，这样用户就可以将它们提交给外部对象之前积累的属性页中的更改。 有关处理应用按钮的方法的信息，请参阅文章[处理应用按钮](../mfc/handling-the-apply-button.md)。
+有许多用户界面替代方法可用于确定何时应将无模式属性表的设置应用于外部对象。 一种替代方法是在用户更改任何值时应用当前属性页的设置。 另一种方法是提供 "应用" 按钮，该按钮允许用户在将更改提交到外部对象之前，在属性页中累积更改。 有关处理 "应用" 按钮的方法的信息，请参阅[处理应用按钮](../mfc/handling-the-apply-button.md)一文。
 
 ## <a name="see-also"></a>请参阅
 
 [属性表](../mfc/property-sheets-mfc.md)<br/>
 [交换数据](../mfc/exchanging-data.md)<br/>
-[对话框的生命周期](../mfc/life-cycle-of-a-dialog-box.md)
+[使用 MFC 中的对话框](../mfc/life-cycle-of-a-dialog-box.md)

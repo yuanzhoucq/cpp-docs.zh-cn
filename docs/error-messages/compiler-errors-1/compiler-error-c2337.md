@@ -1,27 +1,27 @@
 ---
 title: 编译器错误 C2337
-ms.date: 11/04/2016
+ms.date: 09/19/2019
 f1_keywords:
 - C2337
 helpviewer_keywords:
 - C2337
 ms.assetid: eccc9178-a15e-42cd-bbd0-3cea7cf2d55b
-ms.openlocfilehash: 63f18a12ccd1962dd221324f5557c29be89eb04c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf9b3e782804add13aeaef0e6672d2dd66d193be
+ms.sourcegitcommit: f907b15f50a6b945d0b87c03af0050946157d701
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188265"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71158777"
 ---
 # <a name="compiler-error-c2337"></a>编译器错误 C2337
 
-“attribute name”：未找到特性
+> "*attribute-name*"：找不到属性
 
-你使用了此版本的 Visual c++ 不支持的特性。
+你的代码使用此上下文中不支持的属性。 或者，该特性在此版本的编译器中不可用。 若要解决此问题，请删除不支持的属性。
 
 以下示例生成 C2337：
 
-```
+```cpp
 // C2337.cpp
 // compile with: /c
 [emitidl];

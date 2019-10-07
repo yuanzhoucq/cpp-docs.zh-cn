@@ -4,12 +4,12 @@ ms.date: 04/25/2019
 helpviewer_keywords:
 - shell controls (MFC)
 ms.assetid: f0015caa-199d-4aaf-9501-5a239fce9095
-ms.openlocfilehash: cf0a6bd230364b48c78c72b8e453e7e641fb2d0e
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: e371368d4e588de5f94f6a252c6db291ec851e0a
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907410"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096014"
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>演练：使用新的 MFC Shell 控件
 
@@ -31,14 +31,14 @@ ms.locfileid: "70907410"
 
 1. 在主菜单中，选择“文件”>“新建”>“项目”，打开“创建新项目”对话框。
 
-1. 在顶部的 "搜索" 框中，键入 " **mfc** "，然后从 "结果" 列表中选择 " **mfc 应用**"。 
+1. 在顶部的 "搜索" 框中，键入 " **mfc** "，然后从 "结果" 列表中选择 " **mfc 应用**"。
 
 1. 单击 **“下一步”** 。 在下一页中，输入项目的名称，并指定项目位置（如果需要）。
 
 1. 选择“创建”按钮创建项目。
 
    显示**MFC 应用程序向导**后，使用以下选项：
- 
+
    1. 选择左侧的 "**应用程序类型**"。 然后选择 "**单个文档**"，并选择 "**文档/视图体系结构支持**"。 在 "**项目样式**" 下，选择 " **visual Studio**"，然后从 "**视觉样式和颜色**" 下拉列表中选择 " **Office 2007 （蓝色主题）** "。
 
    1. 在 "**复合文档支持**" 窗格上，选择 "**无**"。
@@ -59,7 +59,7 @@ ms.locfileid: "70907410"
 
 1. 使用**Mfc 应用程序向导**创建新的 MFC 应用程序。 若要运行该向导，请从 "**文件**" 菜单中选择 "**新建**"，然后选择 "**项目**"。 将显示 "**新建项目**" 对话框。
 
-1. 在 "**新建项目**" 对话框中，展开 "**项目类型**" 窗格中的 **C++可视**节点，然后选择 " **MFC**"。 然后，在 "**模板**" 窗格中选择 " **MFC 应用程序**"。 键入项目的名称，例如`MFCShellControls` ，然后单击 **"确定"** 。 
+1. 在 "**新建项目**" 对话框中，展开 "**项目类型**" 窗格中的 **C++可视**节点，然后选择 " **MFC**"。 然后，在 "**模板**" 窗格中选择 " **MFC 应用程序**"。 键入项目的名称，例如`MFCShellControls` ，然后单击 **"确定"** 。
 
    显示**MFC 应用程序向导**后，使用以下选项：
 

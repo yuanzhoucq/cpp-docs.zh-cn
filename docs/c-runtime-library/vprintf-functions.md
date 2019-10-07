@@ -1,26 +1,29 @@
 ---
 title: vprintf 函数
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr110.dll
 - msvcr120.dll
 - msvcr90.dll
 - msvcr100.dll
 - msvcr110_clr0400.dll
 - msvcr80.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - vprintf
 helpviewer_keywords:
 - vprintf function
 - formatted text [C++]
 ms.assetid: 02ac7c51-eab1-4bf0-bf4c-77065e3fa744
-ms.openlocfilehash: eb8a2829540876936f6c57745fb56e7d19f16394
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 3c04879c7ec90aaba1199264c0c2128b9d1ea27c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498874"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957239"
 ---
 # <a name="vprintf-functions"></a>vprintf 函数
 

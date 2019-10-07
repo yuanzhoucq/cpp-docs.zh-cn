@@ -21,25 +21,25 @@ helpviewer_keywords:
 - DDX (dialog data exchange) [MFC], retrieving data from Dialog object
 - GetWindowText method [MFC]
 ms.assetid: bdca2b61-6b53-4c2e-b426-8712c7a38ec0
-ms.openlocfilehash: b376edc3ee7d8abbca43da6d823e71abad99bc5d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 903d76a1e672d05a3c093e528f7153562df8e3e5
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62308896"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685568"
 ---
 # <a name="retrieving-data-from-the-dialog-object"></a>从对话框对象检索数据
 
-该框架提供的简单方法来初始化对话框中的控件的值和从控件检索值。 更费力的手动方法是调用函数，例如`SetDlgItemText`并`GetDlgItemText`类的成员函数`CWnd`，这不适用于控制 windows。 使用这些函数，您访问每个控件分别来设置或获取它的值，如调用函数`SetWindowText`和`GetWindowText`。 框架的方法会自动初始化并检索。
+框架提供了一种简单的方法来初始化对话框中的控件值并从控件中检索值。 更费力的手动方法是调用函数，例如类 `CWnd` 的 @no__t 0 和 @no__t 成员函数，这些函数适用于控件窗口。 使用这些函数，可以单独访问每个控件以设置或获取其值，调用函数（如 `SetWindowText` 和 `GetWindowText`）。 框架的方法自动执行初始化和检索。
 
-对话框数据交换 (DDX) 可让你更轻松地交换数据之间的对话框对象中的对话框框和成员变量中的控件。 此交换适用于这两种方式。 若要初始化的控件在对话框中，可以在对话框对象中设置数据成员的值和框架将这些值传输给控件之前显示的对话框。 然后可以在任何时候更新对话框数据成员的用户输入的数据。 此时，您可以使用数据： 数据成员变量引用。
+对话框数据交换（DDX）使您可以更轻松地在对话框中的控件和对话框对象中的成员变量之间交换数据。 这种交换的工作方式。 若要初始化对话框中的控件，可以在对话框对象中设置数据成员的值，框架将在显示对话框之前将值传输到控件。 然后，你可以随时使用用户输入的数据更新对话框数据成员。 此时，可以通过引用数据成员变量来使用数据。
 
-您还可以安排对话框控件与对话框数据验证 (DDV) 自动进行验证的值。
+您还可以安排对话框控件的值自动验证对话框数据验证（DDV）。
 
-中更详细地介绍 DDX 和 DDV[对话框数据交换和验证](../mfc/dialog-data-exchange-and-validation.md)。
+[对话框数据交换和验证](../mfc/dialog-data-exchange-and-validation.md)中更详细地介绍了 DDX 和 DDV。
 
-对于模式对话框，可以检索用户输入时的任何数据`DoModal`返回 IDOK 但对话框之前在销毁对象。 对于无模式对话框，您可以从检索数据的对话框对象在任何时候通过调用`UpdateData`使用参数**TRUE** ，然后访问对话框类成员变量。 中更详细地讨论了此主题[对话框数据交换和验证](../mfc/dialog-data-exchange-and-validation.md)。
+对于模式对话框，可以检索用户在 `DoModal` 返回 IDOK 时，但在销毁对话框对象之前输入的任何数据。 对于无模式对话框，您可以通过在参数**为 TRUE**的情况下调用 `UpdateData`，然后访问对话框类成员变量，随时从对话框对象检索数据。 [对话框数据交换和验证](../mfc/dialog-data-exchange-and-validation.md)中更详细地讨论了此主题。
 
 ## <a name="see-also"></a>请参阅
 
-[对话框的生命周期](../mfc/life-cycle-of-a-dialog-box.md)
+[使用 MFC 中的对话框](../mfc/life-cycle-of-a-dialog-box.md)

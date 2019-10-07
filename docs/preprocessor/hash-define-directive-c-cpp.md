@@ -23,8 +23,8 @@ ms.locfileid: "70216277"
 
 ## <a name="syntax"></a>语法
 
-> **#define***标识符* *标记-字符串*<sub>opt</sub>\
-> **#define***标识符* **(** *标识符*<sub>opt</sub> **,** ... **,** *标识符*<sub>opt</sub> **)** *令牌字符串*<sub>选择</sub>
+> **#define** *标识符* *标记-字符串*<sub>opt</sub>\
+> **#define** *标识符* **(** *标识符*<sub>opt</sub> **,** ... **,** *标识符*<sub>opt</sub> **)** *令牌字符串*<sub>选择</sub>
 
 ## <a name="remarks"></a>备注
 

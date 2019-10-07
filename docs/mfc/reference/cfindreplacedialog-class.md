@@ -32,16 +32,16 @@ helpviewer_keywords:
 - CFindReplaceDialog [MFC], SearchDown
 - CFindReplaceDialog [MFC], m_fr
 ms.assetid: 610f0b5d-b398-4ef6-8c05-e9d6641e50a8
-ms.openlocfilehash: de48d8f495802bdf1c5f69e7a4edc41153c9599f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71234adec214bcbf5d42090edb582a7e5dd552b0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62206008"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506530"
 ---
 # <a name="cfindreplacedialog-class"></a>CFindReplaceDialog 类
 
-可以在你的应用程序中实现的标准字符串查找/替换对话框。
+允许你在应用程序中实现标准字符串 "查找/替换" 对话框。
 
 ## <a name="syntax"></a>语法
 
@@ -55,51 +55,51 @@ class CFindReplaceDialog : public CCommonDialog
 
 |名称|描述|
 |----------|-----------------|
-|[CFindReplaceDialog::CFindReplaceDialog](#cfindreplacedialog)|调用此函数来构造`CFindReplaceDialog`对象。|
+|[CFindReplaceDialog::CFindReplaceDialog](#cfindreplacedialog)|调用此函数可构造`CFindReplaceDialog`对象。|
 
 ### <a name="public-methods"></a>公共方法
 
 |名称|描述|
 |----------|-----------------|
-|[CFindReplaceDialog::Create](#create)|创建并显示`CFindReplaceDialog`对话框。|
-|[CFindReplaceDialog::FindNext](#findnext)|调用此函数可确定用户是否想要查找查找字符串的下一个匹配项。|
+|[CFindReplaceDialog::Create](#create)|创建并显示一个`CFindReplaceDialog`对话框。|
+|[CFindReplaceDialog::FindNext](#findnext)|调用此函数可确定用户是否要查找查找字符串的下一个匹配项。|
 |[CFindReplaceDialog::GetFindString](#getfindstring)|调用此函数可检索当前查找字符串。|
-|[CFindReplaceDialog::GetNotifier](#getnotifier)|调用此函数可检索`FINDREPLACE`中已注册的消息处理程序的结构。|
-|[CFindReplaceDialog::GetReplaceString](#getreplacestring)|调用此函数可检索当前的替换字符串。|
-|[CFindReplaceDialog::IsTerminating](#isterminating)|调用此函数可确定是否终止对话框。|
-|[CFindReplaceDialog::MatchCase](#matchcase)|调用此函数可确定用户是否想要完全匹配查找字符串的大小写。|
-|[CFindReplaceDialog::MatchWholeWord](#matchwholeword)|调用此函数可确定用户是否想要与全字匹配。|
-|[CFindReplaceDialog::ReplaceAll](#replaceall)|调用此函数可确定用户是否想要替换的字符串的所有匹配项。|
-|[CFindReplaceDialog::ReplaceCurrent](#replacecurrent)|调用此函数可确定用户是否想要替换的当前单词。|
-|[CFindReplaceDialog::SearchDown](#searchdown)|调用此函数可确定用户是否想继续向下搜索。|
+|[CFindReplaceDialog::GetNotifier](#getnotifier)|调用此函数可检索已`FINDREPLACE`注册消息处理程序中的结构。|
+|[CFindReplaceDialog::GetReplaceString](#getreplacestring)|调用此函数可检索当前替换字符串。|
+|[CFindReplaceDialog::IsTerminating](#isterminating)|调用此函数可确定对话框是否正在终止。|
+|[CFindReplaceDialog::MatchCase](#matchcase)|调用此函数可确定用户是否需要完全匹配查找字符串的大小写。|
+|[CFindReplaceDialog::MatchWholeWord](#matchwholeword)|调用此函数可确定用户是否只需要匹配整个单词。|
+|[CFindReplaceDialog::ReplaceAll](#replaceall)|调用此函数可确定用户是否需要替换字符串的所有匹配项。|
+|[CFindReplaceDialog::ReplaceCurrent](#replacecurrent)|调用此函数可确定用户是否需要替换当前单词。|
+|[CFindReplaceDialog::SearchDown](#searchdown)|调用此函数可确定用户是否希望在向下进行搜索。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
 |名称|描述|
 |----------|-----------------|
-|[CFindReplaceDialog::m_fr](#m_fr)|用于自定义的结构`CFindReplaceDialog`对象。|
+|[CFindReplaceDialog::m_fr](#m_fr)|用于自定义`CFindReplaceDialog`对象的结构。|
 
 ## <a name="remarks"></a>备注
 
-与其他 Windows 公共对话框，不同`CFindReplaceDialog`对象是无模式，允许用户屏幕上，则与其他 windows 进行交互。 有两种类型的`CFindReplaceDialog`对象：查找对话框和查找/替换对话框。 尽管该对话框允许用户输入的搜索和搜索/替换字符串，但它们不执行任何搜索或替换函数。 您必须将它们添加到应用程序。
+不同于其他 windows 公共对话框， `CFindReplaceDialog`对象是无模式的，允许用户在屏幕上与其他窗口交互。 有两种类型的`CFindReplaceDialog`对象："查找" 对话框和 "查找/替换" 对话框。 虽然对话框允许用户输入搜索和搜索/替换字符串，但它们不执行任何搜索或替换函数。 必须将它们添加到应用程序。
 
-若要构造`CFindReplaceDialog`对象，请使用提供的构造函数 （它具有无参数）。 由于这是一个无模式对话框中，分配上堆使用的对象**新**运算符，而不是在堆栈上。
+若要构造`CFindReplaceDialog`对象，请使用提供的构造函数（没有参数）。 由于这是无模式对话框，因此，请使用**new**运算符而不是堆栈上的来分配堆上的对象。
 
-一次`CFindReplaceDialog`构造对象，必须调用[创建](#create)成员函数来创建和显示该对话框。
+构造`CFindReplaceDialog`对象之后，必须调用 [create](#create) 成员函数以创建并显示该对话框。
 
-使用[m_fr](#m_fr)结构初始化之前，调用对话框`Create`。 `m_fr`结构属于类型[FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea)。 此结构的详细信息，请参阅 Windows SDK。
+在调用 [之前，请使用 ](#m_fr)m_fr`Create` 结构来初始化对话框。 结构的类型为[FINDREPLACE。](/windows/win32/api/commdlg/ns-commdlg-findreplacew) `m_fr` 有关此结构的详细信息，请参阅 Windows SDK。
 
-为了使父窗口的查找/替换请求通知，必须使用 Windows [RegisterWindowMessage](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea)函数，并使用[ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message)在帧中的消息映射宏处理此已注册的消息的窗口。
+为了让父窗口收到 "查找/替换" 请求的通知，您必须使用 Windows [RegisterWindowMessage](/windows/win32/api/winuser/nf-winuser-registerwindowmessagew)函数，并使用您的框架窗口中的[ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message)消息映射宏来处理此已注册的消息。
 
-您可以确定用户是否已决定终止使用对话框`IsTerminating`成员函数。
+您可以确定用户是否已决定通过`IsTerminating`成员函数终止对话框。
 
-`CFindReplaceDialog` 依赖于 COMMDLG。随 Windows 3.1 及更高版本的 DLL 文件。
+`CFindReplaceDialog`依赖于 COMMDLG。Windows 版本3.1 及更高版本附带的 DLL 文件。
 
-若要自定义对话框中，派生的类从`CFindReplaceDialog`，提供自定义对话框模板，并添加消息映射来处理从扩展控件的通知消息。 任何未处理的消息应传递给类的基类。
+若要自定义对话框，从`CFindReplaceDialog`派生类，提供自定义对话框模板，并添加消息映射以处理来自扩展控件的通知消息。 所有未处理的消息都应传递到基类。
 
 不需要自定义挂钩函数。
 
-有关使用的详细信息`CFindReplaceDialog`，请参阅[通用对话框类](../../mfc/common-dialog-classes.md)。
+有关使用`CFindReplaceDialog`的详细信息，请参阅[通用对话框类](../../mfc/common-dialog-classes.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -117,9 +117,9 @@ class CFindReplaceDialog : public CCommonDialog
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxdlgs.h
+**标头：** afxdlgs
 
-##  <a name="cfindreplacedialog"></a>  CFindReplaceDialog::CFindReplaceDialog
+##  <a name="cfindreplacedialog"></a>CFindReplaceDialog：： CFindReplaceDialog
 
 构造 `CFindReplaceDialog` 对象。
 
@@ -129,19 +129,19 @@ CFindReplaceDialog();
 
 ### <a name="remarks"></a>备注
 
-因为`CFindReplaceDialog`对象是无模式对话框中，必须通过使用构造它在堆上**新**运算符。
+因为对象是无模式对话框，所以必须使用 new 运算符在堆上构造该对象。 `CFindReplaceDialog`
 
-在析构过程框架尝试执行**删除此**上指向对话框中的指针。 如果在堆栈上创建的对话框**这**指针不存在，并且可能导致未定义的行为。
+在析构期间，框架尝试在指向对话框的指针上执行 "**删除**"。 如果在堆栈上创建了对话框，则**此**指针不存在，可能会导致未定义的行为。
 
-有关详细信息的构造`CFindReplaceDialog`对象，请参阅[CFindReplaceDialog](../../mfc/reference/cfindreplacedialog-class.md)概述。 使用[CFindReplaceDialog::Create](#create)成员函数以显示该对话框。
+有关对象构造的`CFindReplaceDialog`详细信息，请参阅[CFindReplaceDialog](../../mfc/reference/cfindreplacedialog-class.md)概述。 使用[CFindReplaceDialog：： Create](#create)成员函数来显示对话框。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFCDocView#170](../../mfc/codesnippet/cpp/cfindreplacedialog-class_1.cpp)]
 
-##  <a name="create"></a>  CFindReplaceDialog::Create
+##  <a name="create"></a>CFindReplaceDialog：： Create
 
-创建并显示的查找或查找/替换对话框对象，具体取决于值`bFindDialogOnly`。
+根据的值`bFindDialogOnly`，创建并显示 "查找" 或 "查找/替换" 对话框对象。
 
 ```
 virtual BOOL Create(
@@ -155,27 +155,27 @@ virtual BOOL Create(
 ### <a name="parameters"></a>参数
 
 *bFindDialogOnly*<br/>
-将此参数设置为 TRUE 以显示**查找**对话框。 将其设置为 FALSE，则显示**查找/替换**对话框。
+将此参数设置为 TRUE 可显示 "**查找**" 对话框。 将其设置为 FALSE 可显示 "**查找/替换**" 对话框。
 
 *lpszFindWhat*<br/>
-指向对话框出现时的默认搜索字符串的指针。 如果为 NULL，则对话框的不包含默认搜索字符串。
+当对话框出现时指向默认搜索字符串的指针。 如果为 NULL，则对话框不包含默认搜索字符串。
 
 *lpszReplaceWith*<br/>
-在对话框出现时的默认值替换字符串的指针。 如果为 NULL，则对话框的不包含默认替换字符串。
+当对话框出现时，为默认替换字符串的指针。 如果为 NULL，则对话框不包含默认的替换字符串。
 
 *dwFlags*<br/>
-可以使用自定义对话框中，使用按位 OR 运算符组合的设置的一个或多个标志。 默认值为 FR_DOWN，指定要向下继续执行搜索。 请参阅[FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea)适用于这些标志的详细信息的 Windows SDK 中的结构。
+可用于自定义对话框的设置的一个或多个标志，使用按位 "或" 运算符组合在一起。 默认值为 FR_DOWN，该值指定搜索将按向下进行。 有关这些标志的详细信息，请参阅 Windows SDK 中的[FINDREPLACE](/windows/win32/api/commdlg/ns-commdlg-findreplacew)结构。
 
 *pParentWnd*<br/>
-指向对话框的父级或所有者窗口的指针。 这是将收到指示请求的查找/替换操作的特殊消息的窗口。 如果为 NULL，则使用该应用程序的主窗口。
+指向对话框的父窗口或所有者窗口的指针。 此窗口将接收特定消息，指示已请求查找/替换操作。 如果为 NULL，则使用应用程序的主窗口。
 
 ### <a name="return-value"></a>返回值
 
-已成功创建对话框对象; 如果非零值否则为 0。
+如果已成功创建对话框对象，则为非零值;否则为0。
 
 ### <a name="remarks"></a>备注
 
-为了使父窗口的查找/替换请求通知，必须使用 Windows [RegisterWindowMessage](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea)函数的返回值是唯一的应用程序的实例的消息号。 框架窗口应具有一个声明回调函数的消息映射条目 (`OnFindReplace`后面的示例中) 用于处理此已注册的消息。 下面的代码片段示范了如何执行此操作的名为的框架窗口类`CMyRichEditView`:
+为了让父窗口收到查找/替换请求的通知，您必须使用 Windows [RegisterWindowMessage](/windows/win32/api/winuser/nf-winuser-registerwindowmessagew)函数，该函数的返回值为应用程序实例特有的消息号。 框架窗口应具有一个消息映射条目，该条目声明处理此已`OnFindReplace`注册消息的回调函数（在下面的示例中）。 下面的代码片段举例说明如何为名为`CMyRichEditView`的框架窗口类执行此操作：
 
 [!code-cpp[NVC_MFCDocView#171](../../mfc/codesnippet/cpp/cfindreplacedialog-class_2.h)]
 
@@ -183,15 +183,15 @@ virtual BOOL Create(
 
 [!code-cpp[NVC_MFCDocView#173](../../mfc/codesnippet/cpp/cfindreplacedialog-class_4.cpp)]
 
-在你`OnFindReplace`函数，通过使用解释用户的意图[CFindReplaceDialog::FindNext](#findnext)和[CFindReplaceDialog::IsTerminating](#isterminating)方法和你创建的代码查找/替换操作。
+在函数中，通过使用[CFindReplaceDialog：： FindNext](#findnext)和[CFindReplaceDialog：： IsTerminating](#isterminating)方法解释用户的意图，并为查找/替换操作创建代码。 `OnFindReplace`
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CFindReplaceDialog::CFindReplaceDialog](#cfindreplacedialog)。
+  请参阅[CFindReplaceDialog：： CFindReplaceDialog](#cfindreplacedialog)的示例。
 
-##  <a name="findnext"></a>  CFindReplaceDialog::FindNext
+##  <a name="findnext"></a>CFindReplaceDialog：： FindNext
 
-调用此函数从回调函数来确定用户是否想要查找搜索字符串的下一个匹配项。
+从回调函数调用此函数，以确定用户是否要查找搜索字符串的下一个匹配项。
 
 ```
 BOOL FindNext() const;
@@ -199,11 +199,11 @@ BOOL FindNext() const;
 
 ### <a name="return-value"></a>返回值
 
-如果用户想要查找的搜索字符串中; 下一个匹配项，非零值否则为 0。
+如果用户想要查找搜索字符串的下一个匹配项，则为非零值;否则为0。
 
-##  <a name="getfindstring"></a>  CFindReplaceDialog::GetFindString
+##  <a name="getfindstring"></a>CFindReplaceDialog：： GetFindString
 
-调用此函数从回调函数来检索要查找的默认字符串。
+从回调函数调用此函数以检索要查找的默认字符串。
 
 ```
 CString GetFindString() const;
@@ -217,9 +217,9 @@ CString GetFindString() const;
 
 [!code-cpp[NVC_MFCDocView#69](../../mfc/codesnippet/cpp/cfindreplacedialog-class_5.cpp)]
 
-##  <a name="getnotifier"></a>  CFindReplaceDialog::GetNotifier
+##  <a name="getnotifier"></a>CFindReplaceDialog：： GetNotifier
 
-调用此函数可检索指向当前查找替换对话框。
+调用此函数可检索指向当前 "查找替换" 对话框的指针。
 
 ```
 static CFindReplaceDialog* PASCAL GetNotifier(LPARAM lParam);
@@ -228,25 +228,25 @@ static CFindReplaceDialog* PASCAL GetNotifier(LPARAM lParam);
 ### <a name="parameters"></a>参数
 
 *lParam*<br/>
-*Lparam*值传递到框架窗口的`OnFindReplace`成员函数。
+传递到框架窗口`OnFindReplace`成员函数的 lparam 值。
 
 ### <a name="return-value"></a>返回值
 
-指向当前的对话框中的指针。
+指向当前对话框的指针。
 
 ### <a name="remarks"></a>备注
 
-它应该用于回调函数内访问当前的对话框，请调用其成员函数和访问`m_fr`结构。
+它应在回调函数中用于访问当前对话框、调用其成员函数和访问`m_fr`结构。
 
 ### <a name="example"></a>示例
 
-请参阅[CFindReplaceDialog::Create](#create)有关如何注册 OnFindReplace 处理程序以从查找替换对话框中接收通知的示例。
+有关如何注册 OnFindReplace 处理程序以从 "查找替换" 对话框接收通知的示例，请参阅[CFindReplaceDialog：： Create](#create) 。
 
 [!code-cpp[NVC_MFCDocView#69](../../mfc/codesnippet/cpp/cfindreplacedialog-class_5.cpp)]
 
-##  <a name="getreplacestring"></a>  CFindReplaceDialog::GetReplaceString
+##  <a name="getreplacestring"></a>CFindReplaceDialog：： GetReplaceString
 
-调用此函数可检索当前的替换字符串。
+调用此函数可检索当前替换字符串。
 
 ```
 CString GetReplaceString() const;
@@ -254,15 +254,15 @@ CString GetReplaceString() const;
 
 ### <a name="return-value"></a>返回值
 
-用来替换找到的字符串默认字符串。
+用于替换所找到字符串的默认字符串。
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CFindReplaceDialog::GetFindString](#getfindstring)。
+  请参阅[CFindReplaceDialog：： GetFindString](#getfindstring)的示例。
 
-##  <a name="isterminating"></a>  CFindReplaceDialog::IsTerminating
+##  <a name="isterminating"></a>CFindReplaceDialog：： IsTerminating
 
-调用此回调函数来确定用户是否已决定终止对话框框中的函数。
+在回调函数中调用此函数，以确定用户是否已决定终止对话框。
 
 ```
 BOOL IsTerminating() const;
@@ -270,17 +270,17 @@ BOOL IsTerminating() const;
 
 ### <a name="return-value"></a>返回值
 
-如果用户已决定终止对话框; 非零值否则为 0。
+如果用户已决定终止对话框，则为非零值;否则为0。
 
 ### <a name="remarks"></a>备注
 
-如果此函数返回非零值，则应调用`DestroyWindow`成员函数的当前对话框框，并将任何对话框指针变量设置为 NULL。 （可选） 你也可以存储上次输入的查找/替换文本和使用它来初始化下一步查找/替换对话框。
+如果此函数返回非零值，则应`DestroyWindow`调用当前对话框的成员函数，并将任何对话框指针变量设置为 NULL。 （可选）还可以存储上次输入的 "查找/替换" 文本，并使用它来初始化下一个 "查找/替换" 对话框。
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CFindReplaceDialog::GetFindString](#getfindstring)。
+  请参阅[CFindReplaceDialog：： GetFindString](#getfindstring)的示例。
 
-##  <a name="m_fr"></a>  CFindReplaceDialog::m_fr
+##  <a name="m_fr"></a>CFindReplaceDialog：： m_fr
 
 用于自定义`CFindReplaceDialog`对象。
 
@@ -290,17 +290,17 @@ FINDREPLACE m_fr;
 
 ### <a name="remarks"></a>备注
 
-`m_fr` 是一种类型的结构[FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea)。 其成员存储对话框对象的特征。 构造后`CFindReplaceDialog`对象，可以使用`m_fr`修改在对话框中的各种值。
+`m_fr`是[FINDREPLACE](/windows/win32/api/commdlg/ns-commdlg-findreplacew)类型的结构。 其成员存储对话框对象的特性。 构造`CFindReplaceDialog`对象之后，您可以使用`m_fr`修改对话框中的各种值。
 
-此结构的详细信息，请参阅`FINDREPLACE`Windows SDK 中的结构。
+有关此结构的详细信息，请参阅`FINDREPLACE` Windows SDK 中的结构。
 
 ### <a name="example"></a>示例
 
-  有关示例，请参阅[CFindReplaceDialog::CFindReplaceDialog](#cfindreplacedialog)。
+  请参阅[CFindReplaceDialog：： CFindReplaceDialog](#cfindreplacedialog)的示例。
 
-##  <a name="matchcase"></a>  CFindReplaceDialog::MatchCase
+##  <a name="matchcase"></a>CFindReplaceDialog：： MatchCase
 
-调用此函数可确定用户是否想要完全匹配查找字符串的大小写。
+调用此函数可确定用户是否需要完全匹配查找字符串的大小写。
 
 ```
 BOOL MatchCase() const;
@@ -308,11 +308,11 @@ BOOL MatchCase() const;
 
 ### <a name="return-value"></a>返回值
 
-如果用户想要查找完全匹配; 在搜索字符串的大小写的搜索字符串匹配项，非零值否则为 0。
+如果用户想要查找与搜索字符串大小写完全匹配的搜索字符串的匹配项，则为非零值;否则为0。
 
-##  <a name="matchwholeword"></a>  CFindReplaceDialog::MatchWholeWord
+##  <a name="matchwholeword"></a>CFindReplaceDialog：： MatchWholeWord
 
-调用此函数可确定用户是否想要与全字匹配。
+调用此函数可确定用户是否只需要匹配整个单词。
 
 ```
 BOOL MatchWholeWord() const;
@@ -320,11 +320,11 @@ BOOL MatchWholeWord() const;
 
 ### <a name="return-value"></a>返回值
 
-如果用户想要匹配的搜索字符串; 仅完整的字词，非零值否则为 0。
+如果用户只想匹配搜索字符串的整个单词，则为非零值;否则为0。
 
 ##  <a name="replaceall"></a>  CFindReplaceDialog::ReplaceAll
 
-调用此函数可确定用户是否想要替换的字符串的所有匹配项。
+调用此函数可确定用户是否需要替换字符串的所有匹配项。
 
 ```
 BOOL ReplaceAll() const;
@@ -332,11 +332,11 @@ BOOL ReplaceAll() const;
 
 ### <a name="return-value"></a>返回值
 
-如果用户已请求替换所有匹配的替换字符串的字符串; 非零值否则为 0。
+如果用户已请求与替换字符串匹配的所有字符串都被替换，则为非零值;否则为0。
 
 ##  <a name="replacecurrent"></a>  CFindReplaceDialog::ReplaceCurrent
 
-调用此函数可确定用户是否想要替换的当前单词。
+调用此函数可确定用户是否需要替换当前单词。
 
 ```
 BOOL ReplaceCurrent() const;
@@ -344,11 +344,11 @@ BOOL ReplaceCurrent() const;
 
 ### <a name="return-value"></a>返回值
 
-如果用户已请求的当前所选的字符串替换的替换字符串; 非零值否则为 0。
+如果用户已请求将当前选定的字符串替换为替换字符串，则为非零值;否则为0。
 
-##  <a name="searchdown"></a>  CFindReplaceDialog::SearchDown
+##  <a name="searchdown"></a>CFindReplaceDialog：： SearchDown
 
-调用此函数可确定用户是否想继续向下搜索。
+调用此函数可确定用户是否希望在向下进行搜索。
 
 ```
 BOOL SearchDown() const;
@@ -356,7 +356,7 @@ BOOL SearchDown() const;
 
 ### <a name="return-value"></a>返回值
 
-如果用户想要搜索以向下的方向; 来执行非零值如果用户想要继续向上搜索，则为 0。
+如果用户希望搜索在向下进行，则为非零值;如果用户希望搜索按向上进行，则为0。
 
 ## <a name="see-also"></a>请参阅
 

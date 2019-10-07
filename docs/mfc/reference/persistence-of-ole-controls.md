@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE controls [MFC], persistence
 - persistence, OLE controls
 ms.assetid: 64f8dc80-f110-41af-b3ea-14948f6bfdf7
-ms.openlocfilehash: 639a5a98da03307e3edf22deb6d32956c3f73374
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 42e70f9e48339eddb2a5af4fa288400cce01f490
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611764"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502032"
 ---
 # <a name="persistence-of-ole-controls"></a>OLE 控件的持久性
 
@@ -21,27 +21,27 @@ OLE 控件的一项功能是属性持久化（或称为“序列化”），它�
 |||
 |-|-|
 |[PX_Blob](#px_blob)|交换存储二进制大型对象 (BLOB) 数据的控件属性。|
-|[PX_Bool](#px_bool)|交换类型的控件属性**BOOL**。|
+|[PX_Bool](#px_bool)|交换类型为**BOOL**的控件属性。|
 |[PX_Color](#px_color)|交换控件的颜色属性。|
-|[PX_Currency](#px_currency)|交换类型的控件属性**CY**。|
+|[PX_Currency](#px_currency)|交换类型为**CY**的控件属性。|
 |[PX_DataPath](#px_datapath)|交换 `CDataPathProperty` 类型的控件属性。|
-|[PX_Double](#px_double)|交换类型的控件属性**double**。|
+|[PX_Double](#px_double)|交换类型为**double**的控件属性。|
 |[PX_Font](#px_font)|交换控件的字体属性。|
-|[PX_Float](#px_float)|交换类型的控件属性**float**。|
+|[PX_Float](#px_float)|交换**float**类型的控件属性。|
 |[PX_IUnknown](#px_iunknown)|交换未定义类型的控件属性。|
-|[PX_Long](#px_long)|交换类型的控件属性**长**。|
+|[PX_Long](#px_long)|交换**long**类型的控件属性。|
 |[PX_Picture](#px_picture)|交换控件的图片属性。|
-|[PX_Short](#px_short)|交换类型的控件属性**短**。|
-|[PX_ULong](#px_ulong)|交换类型的控件属性**ULONG**。|
-|[PX_UShort](#px_ushort)|交换类型的控件属性**USHORT**。|
+|[PX_Short](#px_short)|交换**short**类型的控件属性。|
+|[PX_ULong](#px_ulong)|交换类型为**ULONG**的控件属性。|
+|[PX_UShort](#px_ushort)|交换类型为**USHORT**的控件属性。|
 |[PXstring](#px_string)|交换字符字符串控件属性。|
 |[PX_VBXFontConvert](#px_vbxfontconvert)|将 VBX 控件的字体相关属性交换到 OLE 控件字体属性中。|
 
-此外，`AfxOleTypeMatchGuid`提供全局函数来测试 TYPEDESC 与给定的 GUID 相匹配。
+此外，还提供`AfxOleTypeMatchGuid`了全局函数来测试 TYPEDESC 和给定 GUID 之间的匹配。
 
 ##  <a name="px_blob"></a>  PX_Blob
 
-调用此函数在控件内的`DoPropExchange`成员函数要序列化或初始化存储二进制大型对象 (BLOB) 数据的属性。
+在控件的`DoPropExchange`成员函数中调用此函数，以序列化或初始化存储二进制大型对象（BLOB）数据的属性。
 
 ```
 BOOL PX_Blob(
@@ -54,36 +54,36 @@ BOOL PX_Blob(
 ### <a name="parameters"></a>参数
 
 *pPX*<br/>
-指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象 (通常作为参数传递给`DoPropExchange`)。
+指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象的指针（通常作为参数传递给`DoPropExchange`）。
 
 *pszPropName*<br/>
-正在交换的属性的名称。
+要交换的属性的名称。
 
 *hBlob*<br/>
-该属性的存储位置的变量的引用 （通常在类的成员变量）。
+对存储属性的变量的引用（通常为类的成员变量）。
 
 *hBlobDefault*<br/>
 属性的默认值。
 
 ### <a name="return-value"></a>返回值
 
-如果交换成功，则非零值如果不成功，则为 0。
+如果交换成功，则为非零值;如果不成功，则为0。
 
 ### <a name="remarks"></a>备注
 
-属性的值将无法读取或写入到由所引用的变量*hBlob*根据。 最初调用之前，应将此变量初始化为 NULL`PX_Blob`第一次 （通常情况下，这可以在控件的构造函数中）。 如果*hBlobDefault*指定，它将用作该属性的默认值。 如果出于任何原因，该控件的初始化或序列化进程将失败，则使用此值。
+根据需要，将从*hBlob*引用的变量读取或写入属性的值。 第一次调用`PX_Blob`之前，应将此变量初始化为 NULL （通常情况下，可以在控件的构造函数中完成此操作）。 如果指定了*hBlobDefault* ，则它将用作属性的默认值。 如果出于任何原因导致控件的初始化或序列化进程失败，则使用此值。
 
-句柄*hBlob*并*hBlobDefault*到其中包含以下内存块，请参阅：
+句柄*hBlob*和*hBlobDefault*指的是内存块，其中包含以下内容：
 
-- 一个 dword 值，其中包含之后的二进制数据的长度，以字节为单位后, 跟来
+- 一个 DWORD，其中包含后面紧跟的二进制数据的长度（以字节为单位）
 
-- 包含实际的二进制数据的内存块。
+- 包含实际二进制数据的内存块。
 
-请注意，`PX_Blob`将分配内存，使用 Windows [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) API，当加载 BLOB 类型属性。 你负责释放此内存。 因此，您的控件的析构函数应调用[GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree)句柄，以释放 BLOB 类型的任何属性上向上分配到控件中的任何内存。
+请注意，在加载 BLOB 类型属性时 ，`PX_Blob`将使用Windows[GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc)API分配内存。 你负责释放此内存。 因此，控件的析构函数应调用任何 BLOB 类型属性句柄上的[GlobalFree](/windows/win32/api/winbase/nf-winbase-globalfree) ，以释放分配给控件的任何内存。
 
 ##  <a name="px_bool"></a>  PX_Bool
 
-调用此函数在控件内的`DoPropExchange`成员函数要序列化或初始化类型 BOOL 的属性。
+在控件的`DoPropExchange`成员函数中调用此函数，以序列化或初始化 BOOL 类型的属性。
 
 ```
 BOOL PX_Bool(
@@ -101,28 +101,28 @@ BOOL PX_Bool(
 ### <a name="parameters"></a>参数
 
 *pPX*<br/>
-指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象 (通常作为参数传递给`DoPropExchange`)。
+指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象的指针（通常作为参数传递给`DoPropExchange`）。
 
 *pszPropName*<br/>
-正在交换的属性的名称。
+要交换的属性的名称。
 
 *bValue*<br/>
-该属性的存储位置的变量的引用 （通常在类的成员变量）。
+对存储属性的变量的引用（通常为类的成员变量）。
 
 *bDefault*<br/>
 属性的默认值。
 
 ### <a name="return-value"></a>返回值
 
-如果交换成功，则非零值如果不成功，则为 0。
+如果交换成功，则为非零值;如果不成功，则为0。
 
 ### <a name="remarks"></a>备注
 
-属性的值将无法读取或写入到由所引用的变量*bValue*根据。 如果*bDefault*指定，它将用作该属性的默认值。 如果出于任何原因，该控件的序列化进程将失败，则使用此值。
+根据需要，将从*bValue*引用的变量读取或写入属性的值。 如果指定了*bDefault* ，则它将用作属性的默认值。 如果出于任何原因导致控件的序列化过程失败，则使用此值。
 
 ##  <a name="px_color"></a>  PX_Color
 
-调用此函数在控件内的`DoPropExchange`成员函数要序列化或初始化类型 OLE_COLOR 的属性。
+在控件的`DoPropExchange`成员函数中调用此函数，以序列化或初始化 OLE_COLOR 类型的属性。
 
 ```
 BOOL PX_Color(
@@ -140,28 +140,28 @@ BOOL PX_Color(
 ### <a name="parameters"></a>参数
 
 *pPX*<br/>
-指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象 (通常作为参数传递给`DoPropExchange`)。
+指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象的指针（通常作为参数传递给`DoPropExchange`）。
 
 *pszPropName*<br/>
-正在交换的属性的名称。
+要交换的属性的名称。
 
 *clrValue*<br/>
-该属性的存储位置的变量的引用 （通常在类的成员变量）。
+对存储属性的变量的引用（通常为类的成员变量）。
 
 *clrDefault*<br/>
-由控件开发人员定义的属性的默认值。
+属性的默认值，由控件开发人员定义。
 
 ### <a name="return-value"></a>返回值
 
-如果交换成功，则非零值如果不成功，则为 0。
+如果交换成功，则为非零值;如果不成功，则为0。
 
 ### <a name="remarks"></a>备注
 
-属性的值将无法读取或写入到由所引用的变量*clrValue*根据。 如果*clrDefault*指定，它将用作该属性的默认值。 如果出于任何原因，该控件的序列化进程将失败，则使用此值。
+根据需要，将从*clrValue*引用的变量读取或写入属性的值。 如果指定了*clrDefault* ，则它将用作属性的默认值。 如果出于任何原因导致控件的序列化过程失败，则使用此值。
 
 ##  <a name="px_currency"></a>  PX_Currency
 
-调用此函数在控件内的`DoPropExchange`成员函数要序列化或初始化类型的属性**货币**。
+在控件的`DoPropExchange`成员函数中调用此函数，以序列化或初始化**货币**类型的属性。
 
 ```
 BOOL PX_Currency(
@@ -179,28 +179,28 @@ BOOL PX_Currency(
 ### <a name="parameters"></a>参数
 
 *pPX*<br/>
-指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象 (通常作为参数传递给`DoPropExchange`)。
+指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象的指针（通常作为参数传递给`DoPropExchange`）。
 
 *pszPropName*<br/>
-正在交换的属性的名称。
+要交换的属性的名称。
 
 *cyValue*<br/>
-该属性的存储位置的变量的引用 （通常在类的成员变量）。
+对存储属性的变量的引用（通常为类的成员变量）。
 
 *cyDefault*<br/>
 属性的默认值。
 
 ### <a name="return-value"></a>返回值
 
-如果交换成功，则非零值如果不成功，则为 0。
+如果交换成功，则为非零值;如果不成功，则为0。
 
 ### <a name="remarks"></a>备注
 
-属性的值将无法读取或写入到由所引用的变量*cyValue*根据。 如果*cyDefault*指定，它将用作该属性的默认值。 如果出于任何原因，该控件的序列化进程将失败，则使用此值。
+根据需要，将从*cyValue*引用的变量读取或写入属性的值。 如果指定了*cyDefault* ，则它将用作属性的默认值。 如果出于任何原因导致控件的序列化过程失败，则使用此值。
 
 ##  <a name="px_datapath"></a>  PX_DataPath
 
-调用此函数在控件内的`DoPropExchange`成员函数要序列化或初始化类型的数据路径属性[CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md)。
+在控件的`DoPropExchange`成员函数中调用此函数，以序列化或初始化[CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md)类型的数据路径属性。
 
 ```
 BOOL PX_DataPath(
@@ -216,25 +216,25 @@ BOOL PX_DataPath(
 ### <a name="parameters"></a>参数
 
 *pPX*<br/>
-指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象 (通常作为参数传递给`DoPropExchange`)。
+指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象的指针（通常作为参数传递给`DoPropExchange`）。
 
 *pszPropName*<br/>
-正在交换的属性的名称。
+要交换的属性的名称。
 
 *dataPathProperty*<br/>
-该属性的存储位置的变量的引用 （通常在类的成员变量）。
+对存储属性的变量的引用（通常为类的成员变量）。
 
 ### <a name="return-value"></a>返回值
 
-如果交换成功，则非零值如果不成功，则为 0。
+如果交换成功，则为非零值;如果不成功，则为0。
 
 ### <a name="remarks"></a>备注
 
-数据路径属性实现异步控件属性。 属性的值将无法读取或写入到由所引用的变量*dataPathProperty*根据。
+数据路径属性实现异步控件属性。 根据需要，将从*dataPathProperty*引用的变量读取或写入属性的值。
 
 ##  <a name="px_double"></a>  PX_Double
 
-调用此函数在控件内的`DoPropExchange`成员函数要序列化或初始化类型的属性**double**。
+在控件的`DoPropExchange`成员函数中调用此函数，以序列化或初始化**double**类型的属性。
 
 ```
 BOOL PX_Double(
@@ -252,28 +252,28 @@ BOOL PX_Double(
 ### <a name="parameters"></a>参数
 
 *pPX*<br/>
-指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象 (通常作为参数传递给`DoPropExchange`)。
+指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象的指针（通常作为参数传递给`DoPropExchange`）。
 
 *pszPropName*<br/>
-正在交换的属性的名称。
+要交换的属性的名称。
 
 *doubleValue*<br/>
-该属性的存储位置的变量的引用 （通常在类的成员变量）。
+对存储属性的变量的引用（通常为类的成员变量）。
 
 *doubleDefault*<br/>
 属性的默认值。
 
 ### <a name="return-value"></a>返回值
 
-如果交换成功，则非零值如果不成功，则为 0。
+如果交换成功，则为非零值;如果不成功，则为0。
 
 ### <a name="remarks"></a>备注
 
-读取或写入变量引用的属性的值*doubleValue*根据。 如果*doubleDefault*指定，它将用作该属性的默认值。 如果出于任何原因，该控件的序列化进程将失败，则使用此值。
+根据需要，从*doubleValue*引用的变量读取或写入属性的值。 如果指定了*doubleDefault* ，则它将用作属性的默认值。 如果出于任何原因导致控件的序列化过程失败，则使用此值。
 
 ##  <a name="px_font"></a>  PX_Font
 
-调用此函数在控件内的`DoPropExchange`成员函数要序列化或初始化类型字体的属性。
+在控件的`DoPropExchange`成员函数中调用此函数，以便序列化或初始化类型字体的属性。
 
 ```
 BOOL PX_Font(
@@ -287,31 +287,31 @@ BOOL PX_Font(
 ### <a name="parameters"></a>参数
 
 *pPX*<br/>
-指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象 (通常作为参数传递给`DoPropExchange`)。
+指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象的指针（通常作为参数传递给`DoPropExchange`）。
 
 *pszPropName*<br/>
-正在交换的属性的名称。
+要交换的属性的名称。
 
 *font*<br/>
-对引用`CFontHolder`对象，其中包含字体属性。
+对包含 font 属性`CFontHolder`的对象的引用。
 
 *pFontDesc*<br/>
-一个指向`FONTDESC`结构，它包含要初始化的字体属性，在这种情况中的默认状态使用的值， *pFontDispAmbient*为 NULL。
+指向`FONTDESC`结构的指针，该结构包含在初始化 font 属性的默认状态时要使用的值（在*pFontDispAmbient*为 NULL 的情况下）。
 
 *pFontDispAmbient*<br/>
-一个指向`IFontDisp`接口的一种字体用于初始化的字体属性的默认状态。
+一个指针，指向`IFontDisp`用于初始化 font 属性的默认状态的字体的接口。
 
 ### <a name="return-value"></a>返回值
 
-如果交换成功，则非零值如果不成功，则为 0。
+如果交换成功，则为非零值;如果不成功，则为0。
 
 ### <a name="remarks"></a>备注
 
-读取或写入属性的值`font`、`CFontHolder`引用，在适当的时候。 如果*pFontDesc*并*pFontDispAmbient*指定，它们用于在需要时初始化该属性的默认值。 如果出于任何原因，该控件的序列化进程将失败，则使用这些值。 通常情况下，传递 NULL， *pFontDesc*返回的环境值`COleControl::AmbientFont`有关*pFontDispAmbient*。 请注意，返回字体对象`COleControl::AmbientFont`必须通过调用释放`IFontDisp::Release`成员函数。
+适当时，属性的值将在`font` `CFontHolder`引用中进行读取或写入。 如果指定了*pFontDesc*和*pFontDispAmbient* ，则在需要时，它们用于初始化属性的默认值。 如果出于任何原因导致控件的序列化过程失败，则使用这些值。 通常，为*pFontDesc*传递 NULL，并`COleControl::AmbientFont`为*pFontDispAmbient*传递返回的环境值。 请注意，由返回`COleControl::AmbientFont`的 font 对象必须通过调用`IFontDisp::Release`成员函数来释放。
 
 ##  <a name="px_float"></a>  PX_Float
 
-调用此函数在控件内的`DoPropExchange`成员函数要序列化或初始化类型的属性**float**。
+在控件的`DoPropExchange`成员函数中调用此函数，以序列化或初始化**float**类型的属性。
 
 ```
 BOOL PX_Float(
@@ -329,28 +329,28 @@ BOOL PX_Float(
 ### <a name="parameters"></a>参数
 
 *pPX*<br/>
-指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象 (通常作为参数传递给`DoPropExchange`)。
+指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象的指针（通常作为参数传递给`DoPropExchange`）。
 
 *pszPropName*<br/>
-正在交换的属性的名称。
+要交换的属性的名称。
 
 *floatValue*<br/>
-该属性的存储位置的变量的引用 （通常在类的成员变量）。
+对存储属性的变量的引用（通常为类的成员变量）。
 
 *floatDefault*<br/>
 属性的默认值。
 
 ### <a name="return-value"></a>返回值
 
-如果交换成功，则非零值如果不成功，则为 0。
+如果交换成功，则为非零值;如果不成功，则为0。
 
 ### <a name="remarks"></a>备注
 
-读取或写入变量引用的属性的值*floatValue*根据。 如果*floatDefault*指定，它将用作该属性的默认值。 如果出于任何原因，该控件的序列化进程将失败，则使用此值。
+根据需要，从*floatValue*引用的变量读取或写入属性的值。 如果指定了*floatDefault* ，则它将用作属性的默认值。 如果出于任何原因导致控件的序列化过程失败，则使用此值。
 
-##  <a name="px_iunknown"></a>  PX_IUnknown
+##  <a name="px_iunknown"></a>PX_IUnknown
 
-调用此函数在控件内的`DoPropExchange`成员函数要序列化或初始化对象具有所表示的属性`IUnknown`-派生接口。
+在控件的`DoPropExchange`成员函数中调用此函数，以序列化或初始化`IUnknown`具有派生接口的对象所表示的属性。
 
 ```
 BOOL PX_IUnknown(
@@ -364,31 +364,31 @@ BOOL PX_IUnknown(
 ### <a name="parameters"></a>参数
 
 *pPX*<br/>
-指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象 (通常作为参数传递给`DoPropExchange`)。
+指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象的指针（通常作为参数传递给`DoPropExchange`）。
 
 *pszPropName*<br/>
-正在交换的属性的名称。
+要交换的属性的名称。
 
 *pUnk*<br/>
-对包含该对象表示的属性值的接口的变量的引用。
+对变量的引用，该变量包含表示属性值的对象的接口。
 
 *iid*<br/>
-接口 ID，指示由控件使用的属性对象的接口。
+一个接口 ID，指示控件使用的属性对象的接口。
 
 *pUnkDefault*<br/>
 属性的默认值。
 
 ### <a name="return-value"></a>返回值
 
-如果交换成功，则非零值如果不成功，则为 0。
+如果交换成功，则为非零值;如果不成功，则为0。
 
 ### <a name="remarks"></a>备注
 
-读取或写入变量引用的属性的值*pUnk*根据。 如果*pUnkDefault*指定，它将用作该属性的默认值。 如果出于任何原因，该控件的序列化进程将失败，则使用此值。
+根据需要，从*pUnk*引用的变量读取或写入属性的值。 如果指定了*pUnkDefault* ，则它将用作属性的默认值。 如果出于任何原因导致控件的序列化过程失败，则使用此值。
 
 ##  <a name="px_long"></a>  PX_Long
 
-调用此函数在控件内的`DoPropExchange`成员函数要序列化或初始化类型的属性**长**。
+在控件的`DoPropExchange`成员函数中调用此函数，以便序列化或初始化**long**类型的属性。
 
 ```
 BOOL PX_Long(
@@ -406,28 +406,28 @@ BOOL PX_Long(
 ### <a name="parameters"></a>参数
 
 *pPX*<br/>
-指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象 (通常作为参数传递给`DoPropExchange`)。
+指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象的指针（通常作为参数传递给`DoPropExchange`）。
 
 *pszPropName*<br/>
-正在交换的属性的名称。
+要交换的属性的名称。
 
 *lValue*<br/>
-该属性的存储位置的变量的引用 （通常在类的成员变量）。
+对存储属性的变量的引用（通常为类的成员变量）。
 
 *lDefault*<br/>
 属性的默认值。
 
 ### <a name="return-value"></a>返回值
 
-如果交换成功，则非零值如果不成功，则为 0。
+如果交换成功，则为非零值;如果不成功，则为0。
 
 ### <a name="remarks"></a>备注
 
-读取或写入变量引用的属性的值*左值*根据。 如果*lDefault*指定，它将用作该属性的默认值。 如果出于任何原因，该控件的序列化进程将失败，则使用此值。
+根据需要，从*lValue*引用的变量读取或写入属性的值。 如果指定了*lDefault* ，则它将用作属性的默认值。 如果出于任何原因导致控件的序列化过程失败，则使用此值。
 
 ##  <a name="px_picture"></a>  PX_Picture
 
-调用此函数在控件内的`DoPropExchange`成员函数要序列化或初始化您的控件的图片属性。
+在控件的`DoPropExchange`成员函数中调用此函数，以便序列化或初始化控件的图片属性。
 
 ```
 BOOL PX_Picture(
@@ -445,28 +445,28 @@ BOOL PX_Picture(
 ### <a name="parameters"></a>参数
 
 *pPX*<br/>
-指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象 (通常作为参数传递给`DoPropExchange`)。
+指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象的指针（通常作为参数传递给`DoPropExchange`）。
 
 *pszPropName*<br/>
-正在交换的属性的名称。
+要交换的属性的名称。
 
 *pict*<br/>
-引用[CPictureHolder](../../mfc/reference/cpictureholder-class.md)对象属性的存储位置 （通常在类的成员变量）。
+对存储属性的[CPictureHolder](../../mfc/reference/cpictureholder-class.md)对象的引用（通常为类的成员变量）。
 
 *pictDefault*<br/>
 属性的默认值。
 
 ### <a name="return-value"></a>返回值
 
-如果交换成功，则非零值如果不成功，则为 0。
+如果交换成功，则为非零值;如果不成功，则为0。
 
 ### <a name="remarks"></a>备注
 
-读取或写入变量引用的属性的值*pict*根据。 如果*pictDefault*指定，它将用作该属性的默认值。 如果出于任何原因，该控件的序列化进程将失败，则使用此值。
+根据需要，从*pict*引用的变量读取或写入属性的值。 如果指定了*pictDefault* ，则它将用作属性的默认值。 如果出于任何原因导致控件的序列化过程失败，则使用此值。
 
 ##  <a name="px_short"></a>  PX_Short
 
-调用此函数在控件内的`DoPropExchange`成员函数要序列化或初始化类型的属性**短**。
+在控件的`DoPropExchange`成员函数中调用此函数，以序列化或初始化**short**类型的属性。
 
 ```
 BOOL PX_Short(
@@ -484,28 +484,28 @@ BOOL PX_Short(
 ### <a name="parameters"></a>参数
 
 *pPX*<br/>
-指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象 (通常作为参数传递给`DoPropExchange`)。
+指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象的指针（通常作为参数传递给`DoPropExchange`）。
 
 *pszPropName*<br/>
-正在交换的属性的名称。
+要交换的属性的名称。
 
 *sValue*<br/>
-该属性的存储位置的变量的引用 （通常在类的成员变量）。
+对存储属性的变量的引用（通常为类的成员变量）。
 
 *sDefault*<br/>
 属性的默认值。
 
 ### <a name="return-value"></a>返回值
 
-如果交换成功，则非零值如果不成功，则为 0。
+如果交换成功，则为非零值;如果不成功，则为0。
 
 ### <a name="remarks"></a>备注
 
-读取或写入变量引用的属性的值*sValue*根据。 如果*sDefault*指定，它将用作该属性的默认值。 如果出于任何原因，该控件的序列化进程将失败，则使用此值。
+根据需要，从*sValue*引用的变量读取或写入属性的值。 如果指定了*sDefault* ，则它将用作属性的默认值。 如果出于任何原因导致控件的序列化过程失败，则使用此值。
 
 ##  <a name="px_ulong"></a>  PX_ULong
 
-调用此函数在控件内的`DoPropExchange`成员函数要序列化或初始化类型的属性**ULONG**。
+在控件的`DoPropExchange`成员函数中调用此函数，以序列化或初始化类型为**ULONG**的属性。
 
 ```
 BOOL PX_ULong(
@@ -523,28 +523,28 @@ BOOL PX_ULong(
 ### <a name="parameters"></a>参数
 
 *pPX*<br/>
-指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象 (通常作为参数传递给`DoPropExchange`)。
+指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象的指针（通常作为参数传递给`DoPropExchange`）。
 
 *pszPropName*<br/>
-正在交换的属性名称。
+正在交换的属性的名称。
 
 *ulValue*<br/>
-该属性的存储位置的变量的引用 （通常在类的成员变量）。
+对存储属性的变量的引用（通常为类的成员变量）。
 
 *ulDefault*<br/>
 属性的默认值。
 
 ### <a name="return-value"></a>返回值
 
-如果交换成功，则非零值如果不成功，则为 0。
+如果交换成功，则为非零值;如果不成功，则为0。
 
 ### <a name="remarks"></a>备注
 
-读取或写入变量引用的属性的值*ulValue*根据。 如果*ulDefault*指定，它将用作该属性的默认值。 如果出于任何原因，该控件的序列化进程将失败，则使用此值。
+根据需要，从*ulValue*引用的变量读取或写入属性的值。 如果指定了*ulDefault* ，则它将用作属性的默认值。 如果出于任何原因导致控件的序列化过程失败，则使用此值。
 
 ##  <a name="px_ushort"></a>  PX_UShort
 
-调用此函数在控件内的`DoPropExchange`成员函数要序列化或初始化类型的属性**unsigned short**。
+在控件的`DoPropExchange`成员函数中调用此函数，以序列化或初始化类型为**short**的类型的属性。
 
 ```
 BOOL PX_UShort(
@@ -562,28 +562,28 @@ BOOL PX_UShort(
 ### <a name="parameters"></a>参数
 
 *pPX*<br/>
-指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象 (通常作为参数传递给`DoPropExchange`)。
+指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象的指针（通常作为参数传递给`DoPropExchange`）。
 
 *pszPropName*<br/>
-正在交换的属性名称。
+正在交换的属性的名称。
 
 *usValue*<br/>
-该属性的存储位置的变量的引用 （通常在类的成员变量）。
+对存储属性的变量的引用（通常为类的成员变量）。
 
 *usDefault*<br/>
 属性的默认值。
 
 ### <a name="return-value"></a>返回值
 
-如果交换成功，则非零值如果不成功，则为 0。
+如果交换成功，则为非零值;如果不成功，则为0。
 
 ### <a name="remarks"></a>备注
 
-读取或写入变量引用的属性的值*usValue*根据。 如果*usDefault*指定，它将用作该属性的默认值。 如果出于任何原因，该控件的序列化进程将失败，则使用此值。
+根据需要，从*usValue*引用的变量读取或写入属性的值。 如果指定了*usDefault* ，则它将用作属性的默认值。 如果出于任何原因导致控件的序列化过程失败，则使用此值。
 
 ##  <a name="px_string"></a>  PXstring
 
-调用此函数在控件内的`DoPropExchange`成员函数要序列化或初始化字符字符串属性。
+在控件的`DoPropExchange`成员函数中调用此函数，以序列化或初始化字符串属性。
 
 ```
 BOOL PXstring(
@@ -601,28 +601,28 @@ BOOL PXstring(
 ### <a name="parameters"></a>参数
 
 *pPX*<br/>
-指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象 (通常作为参数传递给`DoPropExchange`)。
+指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象的指针（通常作为参数传递给`DoPropExchange`）。
 
 *pszPropName*<br/>
-正在交换的属性的名称。
+要交换的属性的名称。
 
 *strValue*<br/>
-该属性的存储位置的变量的引用 （通常在类的成员变量）。
+对存储属性的变量的引用（通常为类的成员变量）。
 
 *strDefault*<br/>
 属性的默认值。
 
 ### <a name="return-value"></a>返回值
 
-如果交换成功，则非零值如果不成功，则为 0。
+如果交换成功，则为非零值;如果不成功，则为0。
 
 ### <a name="remarks"></a>备注
 
-读取或写入变量引用的属性的值*strValue*根据。 如果*strDefault*指定，它将用作该属性的默认值。 如果出于任何原因，该控件的序列化进程将失败，则使用此值。
+根据需要，从*strValue*引用的变量读取或写入属性的值。 如果指定了*strDefault* ，则它将用作属性的默认值。 如果出于任何原因导致控件的序列化过程失败，则使用此值。
 
 ##  <a name="px_vbxfontconvert"></a>  PX_VBXFontConvert
 
-调用此函数在控件内的`DoPropExchange`成员函数以初始化通过转换将 VBX 控件的字体相关属性的字体属性。
+通过转换 VBX 控件的字体相关`DoPropExchange`属性，在控件的成员函数中调用此函数以初始化字体属性。
 
 ```
 BOOL PX_VBXFontConvert(
@@ -633,24 +633,24 @@ BOOL PX_VBXFontConvert(
 ### <a name="parameters"></a>参数
 
 *pPX*<br/>
-指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象 (通常作为参数传递给`DoPropExchange`)。
+指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象的指针（通常作为参数传递给`DoPropExchange`）。
 
 *font*<br/>
-将包含转换后的 VBX 与字体相关属性的 OLE 控件字体属性。
+OLE 控件的 "字体" 属性，将包含已转换的 VBX 字体相关属性。
 
 ### <a name="return-value"></a>返回值
 
-如果交换成功，则非零值如果不成功，则为 0。
+如果交换成功，则为非零值;如果不成功，则为0。
 
 ### <a name="remarks"></a>备注
 
-此函数应使用仅由 OLE 控件的设计为将 VBX 控件的直接替代品。 当 Visual Basic 开发环境将包含该 VBX 控件使用相应替换 OLE 控件的窗体时，它将调用控件的`IDataObject::SetData`函数，并传入包含该 VBX 控件的属性数据的属性集。 此操作，又会导致该控件的`DoPropExchange`要调用的函数。 `DoPropExchange` 可以调用`PX_VBXFontConvert`将 VBX 控件的字体相关属性 (例如，"字体名称，""FontSize，"，等等) 到 OLE 控件的字体属性的对应分量。
+此函数应仅由设计为 VBX 控件的直接替换的 OLE 控件使用。 当 Visual Basic 开发环境转换包含 VBX 控件的窗体以使用相应的替换 OLE 控件时，它将调用控件的`IDataObject::SetData`函数，并传入包含 VBX 控件的属性数据的属性集。 此操作反过来会导致调用控件的`DoPropExchange`函数。 `DoPropExchange`可以调用`PX_VBXFontConvert` ，将 VBX 控件的字体相关属性（例如，"FontName"、"FontSize" 等）转换为 OLE 控件的 "字体" 属性的相应组件。
 
-`PX_VBXFontConvert` 时，应仅调用该控件实际上正在转换从 VBX 窗体应用程序。 例如：
+`PX_VBXFontConvert`只应在实际从 VBX 窗体应用程序转换控件时调用。 例如:
 
 [!code-cpp[NVC_MFCActiveXControl#14](../../mfc/codesnippet/cpp/persistence-of-ole-controls_1.cpp)]
 [!code-cpp[NVC_MFCActiveXControl#15](../../mfc/codesnippet/cpp/persistence-of-ole-controls_2.cpp)]
 
 ## <a name="see-also"></a>请参阅
 
-[宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)
+[宏和全局](../../mfc/reference/mfc-macros-and-globals.md)

@@ -1,6 +1,6 @@
 ---
-title: TN055:MFC ODBC 数据库类应用程序迁移到 MFC DAO 类
-ms.date: 06/20/2018
+title: TN055：将 MFC ODBC 数据库类应用程序迁移到 MFC DAO 类
+ms.date: 09/17/2019
 helpviewer_keywords:
 - DAO [MFC], migration
 - TN055
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - porting ODBC database applications to DAO
 - migrating database applications [MFC]
 ms.assetid: 0f858bd1-e168-4e2e-bcd1-8debd82856e4
-ms.openlocfilehash: 7a1d3436a9b19c40df2a08576d797de49833f14f
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 7107964cc894a0aa45be5de362c9edd166dc0af1
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611237"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095960"
 ---
-# <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055:MFC ODBC 数据库类应用程序迁移到 MFC DAO 类
+# <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055：将 MFC ODBC 数据库类应用程序迁移到 MFC DAO 类
 
 > [!NOTE]
-> 视觉对象C++环境和向导不支持 DAO （尽管 DAO 类包含并且仍可以使用它们）。 Microsoft 建议您使用[OLE DB 模板](../data/oledb/ole-db-templates.md)或[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)为新项目。 仅应在维护现有应用程序使用 DAO。
+> DAO 与 Access 数据库结合使用，并受 Office 2013 的支持。 3.6 是最终版本，被视为已过时。 视觉对象C++环境和向导不支持 dao （尽管包含 dao 类，但你仍可以使用它）。 Microsoft 建议你将[OLE DB 模板](../data/oledb/ole-db-templates.md)或[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)用于新项目。 只应在维护现有应用程序时使用 DAO。
 
 ## <a name="overview"></a>概述
 
@@ -74,12 +74,12 @@ DAO 类包括更多对象和更丰富的方法集，但本节将仅详述相似�
 ||`DFX_Currency`|
 |`RFX_Single`|`DFX_Single`|
 |`RFX_Double`|`DFX_Double`|
-|`RFX_Date`<sup>1</sup>|`DFX_Date` (`COleDateTime`-基于)|
+|`RFX_Date`<sup>1</sup>|`DFX_Date`（`COleDateTime`基于）|
 |`RFX_Text`|`DFX_Text`|
 |`RFX_Binary`|`DFX_Binary`|
 |`RFX_LongBinary`|`DFX_LongBinary`|
 
-<sup>1</sup> `RFX_Date`函数基于`CTime`和`TIMESTAMP_STRUCT`。
+<sup>1</sup>此`RFX_Date` 函数基于`TIMESTAMP_STRUCT`和。 `CTime`
 
 下面列出了对可能影响您的应用程序和需要多次简单名称更改的函数的主要更改。
 
@@ -87,9 +87,9 @@ DAO 类包括更多对象和更丰富的方法集，但本节将仅详述相似�
 
    对于 ODBC 类，MFC 需要通过宏或枚举类型定义这些选项。
 
-   对于 DAO 类，DAO 在标头文件 (DBDAOINT.H) 中提供了对这些选项的定义。 因此，记录集类型是 `CRecordset` 的枚举成员，但对于 DAO，此类型是一个常量。 例如，你将使用**快照**指定的类型时`CRecordset`ODBC 中，但**DB_OPEN_SNAPSHOT**指定的类型时`CDaoRecordset`。
+   对于 DAO 类，DAO 在标头文件 (DBDAOINT.H) 中提供了对这些选项的定义。 因此，记录集类型是 `CRecordset` 的枚举成员，但对于 DAO，此类型是一个常量。 例如，在 ODBC `CRecordset`中指定类型时将使用**snapshot** ，而在指定类型`CDaoRecordset`时将使用 DB_OPEN_SNAPSHOT。
 
-- 默认记录集类型`CRecordset`是**快照**时的默认记录集类型`CDaoRecordset`是**动态集**（请参阅下面有关 ODBC 类快照的其他问题的说明）。
+- 的默认记录集类型`CRecordset`为**snapshot** ，而的`CDaoRecordset`默认记录集类型为**动态**集类型（有关 ODBC 类快照的其他问题，请参阅下面的注释）。
 
 - ODBC `CRecordset` 类具有创建仅前移记录集类型的选项。 在 `CDaoRecordset` 类中，仅前移不是记录集类型，而是记录集特定类型的属性（或选项）。
 
@@ -97,12 +97,12 @@ DAO 类包括更多对象和更丰富的方法集，但本节将仅详述相似�
 
 - ODBC 类的事务成员函数是 `CDatabase` 的成员，充当数据库级别。 在 DAO 类中，事务成员函数是高级类 (`CDaoWorkspace`) 的成员，因此可能影响共享同一工作区（事务区）的多个 `CDaoDatabase` 对象。
 
-- 异常类已更改。 `CDBExceptions` ODBC 类中引发和`CDaoExceptions`DAO 类中。
+- 异常类已更改。 `CDBExceptions`在 ODBC 类和`CDaoExceptions` DAO 类中引发。
 
-- `RFX_Date` 使用`CTime`并`TIMESTAMP_STRUCT`对象，而`DFX_Date`使用`COleDateTime`。 `COleDateTime`几乎等同于`CTime`，但基于 8 字节 OLE**日期**而不是一个 4 字节**time_t**以便它可以保存更大范围的数据。
+- `RFX_Date`使用`CTime`和`TIMESTAMP_STRUCT`对象时`DFX_Date` 使用。`COleDateTime` 几乎完全相同 **，但**基于8字节的 OLE 日期而不是4字节的 time_t，因此它可以容纳更多的数据。 `COleDateTime` `CTime`
 
    > [!NOTE]
-   > DAO (`CDaoRecordset`) 快照为只读，而 ODBC (`CRecordset`) 快照是可根据驱动程序和 ODBC 光标库的使用进行更新的。 如果您使用的是光标库，则可更新 `CRecordset` 快照。 如果您使用的是 Desktop Driver Pack 3.0 中的任何 Microsoft 驱动程序，则 `CRecordset` 快照为只读。 如果使用的另一个驱动程序，检查驱动程序的文档，查看快照 (`STATIC_CURSORS`) 是只读的。
+   > DAO (`CDaoRecordset`) 快照为只读，而 ODBC (`CRecordset`) 快照是可根据驱动程序和 ODBC 光标库的使用进行更新的。 如果您使用的是光标库，则可更新 `CRecordset` 快照。 如果您使用的是 Desktop Driver Pack 3.0 中的任何 Microsoft 驱动程序，则 `CRecordset` 快照为只读。 如果使用的是其他驱动程序，请查看驱动程序的文档，查看快照`STATIC_CURSORS`（）是否为只读。
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,10 +1,10 @@
 ---
 title: __set_app_type
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __set_app_type
 - _set_app_type
-apilocation:
+api_location:
 - msvcr90.dll
 - msvcr100.dll
 - msvcr110.dll
@@ -13,20 +13,23 @@ apilocation:
 - msvcr120.dll
 - msvcr110_clr0400.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __set_app_type
 helpviewer_keywords:
 - __set_app_type
 ms.assetid: f0ac0f4d-70e6-4e96-9e43-eb9d1515490c
-ms.openlocfilehash: f42ac1c173637cf85d727adf25ebf9079f4cb37c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4d72eecd454e6c01e88c6869c96b628902690383
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50457481"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940230"
 ---
-# <a name="setapptype"></a>__set_app_type
+# <a name="__set_app_type"></a>__set_app_type
 
 设置当前应用程序类型。
 
@@ -43,7 +46,7 @@ void __set_app_type (
 *at*<br/>
 表示应用程序类型的值。 可能的值为：
 
-|“值”|描述|
+|值|说明|
 |-----------|-----------------|
 |_UNKNOWN_APP|未知应用程序类型。|
 |_CONSOLE_APP|控制台（命令行）应用程序。|

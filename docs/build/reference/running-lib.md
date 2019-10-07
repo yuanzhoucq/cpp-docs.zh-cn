@@ -1,6 +1,7 @@
 ---
 title: 运行 LIB
-ms.date: 09/28/2018
+description: 描述可与 node.js 一起使用的命令行选项。
+ms.date: 09/25/2019
 f1_keywords:
 - VC.Project.VCLibrarianTool.TargetMachine
 - Lib
@@ -26,73 +27,75 @@ helpviewer_keywords:
 - semicolon, command files
 - / command files
 ms.assetid: d54f5c81-7147-4b2c-a8db-68ce6eb1eabd
-ms.openlocfilehash: e95427b571cd14ad39a7ba4f368b90e806f13862
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d65c8d8b3b0cd28c7cccda25bfd9512321172f9
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318688"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685552"
 ---
 # <a name="running-lib"></a>运行 LIB
 
-可以控制 LIB 使用各种命令行选项。
+可以使用各种命令行选项控制 LIB。
 
 ## <a name="lib-command-line"></a>LIB 命令行
 
-若要运行 LIB，键入命令`lib`跟选项和任务的文件名称使用 LIB 来执行。 LIB 还接受命令行输入命令文件，以下部分所述。 LIB 不使用环境变量。
-
-> [!NOTE]
-> 如果您习惯于 LINK32.exe 和 LIB32.exe 工具提供与 Microsoft Win32 软件开发工具包的 Windows NT 中，您可能一直使用这两个命令`link32 -lib`或命令`lib32`来管理库和创建导入的库。 请务必更改你的生成文件和批处理文件使用`lib`命令。
+若要运行 LIB，请键入命令 `lib`，然后键入要使用 LIB 执行的任务的选项和文件名。 LIB 还接受命令文件中的命令行输入，如下一节中所述。 LIB 不使用环境变量。
 
 ## <a name="lib-command-files"></a>LIB 命令文件
 
-可以将命令行参数传递到 LIB 在命令文件中使用以下语法：
+可以使用以下语法将命令行参数传递到命令文件中的 LIB：
 
-> **LIB \@**  <em>commandfile</em>
+> **LIB \@** <em>命令文件</em>
 
-该文件*commandfile*是一个文本文件。 无空格或制表符之间允许 at 符号 (**\@**) 和文件名称。 没有默认扩展名;必须指定完整的文件名，包括任何扩展。 不能使用通配符。 可以使用的文件的名称来指定绝对或相对路径。
+文件*命令-文件*是文本文件。 在 @ 符号（ **\@** ）和文件名之间不允许有空格或制表符。 *命令文件名*没有默认扩展名;您必须指定完整的文件名，包括任何扩展名。 不能使用通配符。 您可以使用文件名指定绝对路径或相对路径。
 
-在命令文件中，参数可以分隔空格或制表符，因为它们可以在命令行;它们还可以由换行符分隔。 使用分号 (**;**) 来标记注释。 LIB 忽略从分号到行尾的所有文本。
+在命令文件中，可以通过空格或制表符分隔参数，就像在命令行上一样。 还可以用换行符分隔参数。 使用分号（ **;** ）标记注释。 LIB 忽略从分号到行尾的所有文本。
 
-您可以在命令文件中，指定所有或命令行的一部分，并且可以使用多个 LIB 命令中的命令文件。 LIB 接受命令文件输入，如同它命令行上该位置中指定。 不能嵌套命令文件。 LIB 回显命令文件的内容，除非使用 /NOLOGO 选项。
+可以在命令文件中指定命令行的全部或部分，并且可以在 LIB 命令中使用多个命令文件。 LIB 接受命令文件输入，就如同在命令行的该位置中指定的一样。 命令文件不能嵌套。 LIB 会回显命令文件的内容，除非使用 **/nologo**选项。
 
 ## <a name="using-lib-options"></a>使用 LIB 选项
 
-选项包括为任一短划线选项说明符 (**-**) 或正斜杠 (**/**) 后, 跟的选项的名称。 不能缩写选项名称。 某些选项带自变量，指定在冒号 (**:**)。 中的选项规范允许空格或制表符。 使用一个或多个空格或制表符分隔命令行上的选项规范。 选项名及其关键字或文件的参数不区分大小写，但使用作为参数的标识符区分大小写。 LIB 处理选项和命令文件中的命令行上指定的顺序。 如果使用不同的参数重复一个选项，要处理的最后一个优先。
+选项包括一个选项说明符，该说明符为短划线（ **-** ）或正斜杠（ **/** ），后跟选项的名称。 不能缩写选项名称。 某些选项采用一个自变量，在冒号（ **：** ）后指定。 选项规范内不允许有空格或制表符。 在命令行上使用一个或多个空格或制表符分隔选项规范。 选项名及其关键字或文件名参数不区分大小写，但用作参数的标识符区分大小写。 LIB 按命令行和命令文件中指定的顺序处理选项。 如果使用不同的参数重复选项，则将优先处理最后一个选项。
 
-以下选项适用于所有 LIB 的模式：
+下列选项适用于所有 LIB 模式：
 
-> **/ERRORREPORT** [**NONE** &#124; **PROMPT** &#124; **QUEUE** &#124; **SEND**]
+> **/ERRORREPORT** \[**无** &#124; **提示** &#124; **队列** &#124; **发送**]
 
-如果 lib.exe 在运行时失败，则可以使用 **/ERRORREPORT**有关这些内部错误向 Microsoft 发送信息。
+如果 lib 在运行时失败，则可以使用 **/ERRORREPORT**向 Microsoft 发送有关这些内部错误的信息。
 
-有关详细信息 **/ERRORREPORT**，请参阅[/errorReport （报告内部编译器错误）](errorreport-report-internal-compiler-errors.md)。
+有关 **/ERRORREPORT**的详细信息，请参阅[/ERRORREPORT （报告内部编译器错误）](errorreport-report-internal-compiler-errors.md)。
+
+> **/LINKREPRO：** _目录-路径_ \
+> **/LINKREPROTARGET：** _文件名_
+
+若要帮助 Microsoft 诊断 lib 崩溃和内部错误，可以使用[/LINKREPRO](linkrepro.md)选项。 它会生成*链接重现*，这是一组生成项目，可让 Microsoft 再现在库操作期间出现的问题。 可以将[/LINKREPROTARGET](linkreprotarget.md)选项与 **/LINKREPRO**选项一起使用。 当 lib 生成指定的文件时，它只生成链接重现项目。 有关详细信息，请参阅[如何使用 Microsoft C++工具集报告问题](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md)。
 
 > **/LTCG**
 
-"LTCG"代表*链接时间代码生成*。 此功能要求编译器之间的合作 ([cl.exe](compiler-options.md))，LIB 和链接器 ([链接](linker-options.md)) 以优化受任何组件可以单独执行的操作的代码。
+"LTCG" 代表*链接时间代码生成*。 此功能要求在编译器（[node.js）、](compiler-options.md)LIB 和链接器（[链接](linker-options.md)）之间进行协作，以便优化除任何组件自身可以执行的操作之外的代码。
 
-为 LIB **/LTCG**选项指定 cl.exe 的输入，包括使用生成的对象文件[/GL](gl-whole-program-optimization.md)编译器选项。 如果 LIB 遇到这种输入并 **/LTCG**未指定，则它将使用显示信息性消息后，将启用 /LTCG 重新启动。 换而言之，不需要显式设置此选项，但它可以提高生成性能，若要这样做，因为不需要重启 LIB。
+对于 LIB， **/ltcg**选项指定 mage.exe 中的输入包含使用[/gl](gl-whole-program-optimization.md)编译器选项生成的对象文件。 如果 LIB 遇到此类输入，并且 **/ltcg**未指定，则在显示信息性消息后，它将在启用/ltcg 的情况下重新启动。 换言之，无需显式设置此选项，但它会提高生成性能，因为 LIB 无需重新启动。
 
-在生成过程中，LIB 的输出发送到链接。 链接都有其自己单独 **/LTCG**它用于执行各种优化，包括全程序优化和配置文件按配置优化 (PGO) 检测的选项。 有关链接选项的详细信息，请参阅[/LTCG](ltcg-link-time-code-generation.md)。
+在生成过程中，将从 LIB 输出发送到 LINK。 LINK 具有其自己的单独 **/ltcg**选项。 它用于执行各种优化，包括全程序优化和按配置优化（PGO）检测。 有关 LINK 选项的详细信息，请参阅[/ltcg](ltcg-link-time-code-generation.md)。
 
 > **/MACHINE**
 
-指定程序的目标平台。 通常情况下，不需要指定 /MACHINE。 LIB 推断出的.obj 文件中的计算机类型。 但是，在某些情况下，LIB 无法确定计算机类型，并发出一条错误消息。 如果发生此类错误，则指定 /MACHINE。 在 /EXTRACT 模式下，此选项适用于仅限验证。 使用`lib /?`在命令行以查看可用的计算机类型。
+指定程序的目标平台。 通常，无需指定 **/MACHINE**。 LIB 从 .obj 文件中推断出计算机类型。 但是，在某些情况下，LIB 无法确定计算机类型并发出错误消息。 如果出现这种错误，请指定 **/MACHINE**。 在 **/EXTRACT**模式下，此选项仅用于验证。 在命令行中使用 `lib /?` 来查看可用的计算机类型。
 
 > **/NOLOGO**
 
-取消显示 LIB 版权消息和版本，并防止回显命令文件。
+禁止显示 LIB 版权消息和版本号，并防止命令文件回显。
 
 > **/VERBOSE**
 
-显示有关进度的会话，包括要添加的.obj 文件的名称的详细信息。 信息被发送到标准输出，并可重定向到文件。
+显示有关会话进度的详细信息，包括正在添加的 .obj 文件的名称。 信息被发送到标准输出，并可重定向到文件。
 
-> **/WX**[**:NO**]
+> **/WX**[ **:NO**]
 
-将警告视为错误。 请参阅[/WX （将链接器警告视为错误）](wx-treat-linker-warnings-as-errors.md)有关详细信息。
+将警告视为错误。 有关详细信息，请参阅 [/WX（将链接器警告视为错误）](wx-treat-linker-warnings-as-errors.md)。
 
-其他选项仅适用于特定的 LIB 模式。 这些选项描述每种模式的各节所述。
+其他选项仅适用于特定的 LIB 模式。 描述每个模式部分介绍了这些选项。
 
 ## <a name="see-also"></a>请参阅
 

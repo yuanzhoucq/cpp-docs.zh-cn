@@ -1,25 +1,28 @@
 ---
 title: scanf 类型字段字符
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr90.dll
 - msvcr80.dll
 - msvcr100.dll
 - msvcr110_clr0400.dll
 - msvcr110.dll
 - msvcr120.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - scanf
 helpviewer_keywords:
 - scanf function, type field characters
 ms.assetid: 5d546a84-715b-44ca-b1c5-bbe997f9ff62
-ms.openlocfilehash: 10783ffd6b4f343e4dd768a01396878c186503fa
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 86b57aff9cba5065c7c8053dc26e63e3c0cae169
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747665"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957828"
 ---
 # <a name="scanf-type-field-characters"></a>scanf 类型字段字符
 

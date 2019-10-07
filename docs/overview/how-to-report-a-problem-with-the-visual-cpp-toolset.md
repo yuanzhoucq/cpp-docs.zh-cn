@@ -1,15 +1,16 @@
 ---
 title: 如何使用 Microsoft C++ 工具集报告问题
-ms.date: 06/21/2019
+description: 如何为 Microsoft C++工具集创建良好的问题报告和重现信息。
+ms.date: 09/24/2019
 ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 13826349836e4c58b7d6a7ce8936186930bc7100
-ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
+ms.openlocfilehash: 350e902501aca5cbe2b4022ec1f977719844644b
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67344382"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685698"
 ---
 # <a name="how-to-report-a-problem-with-the-microsoft-c-toolset-or-documentation"></a>如何使用 Microsoft C++ 工具集或文档报告问题
 
@@ -317,9 +318,9 @@ CONTEXT:
 
 ### <a name="link-repros"></a>链接重现
 
-*链接重现*是链接器生成的内容，该内容是 link\_repro 环境变量指定的目录的内容  。 它包含共同说明链接时所出现问题的生成项目。 示例包括涉及链接时间代码生成 (LTCG) 的后端故障或链接器故障。 需要将这些生成项目用作链接器输入，以便重现问题。 通过使用此环境变量，可以轻松创建链接重现。 它可启用链接器的内置重现生成功能。
+链接重现是链接器生成的目录内容，该目录内容由 link\_repro 环境变量指定，或指定为 [/LINKREPRO](../build/reference/linkrepro.md) 链接器选项的参数   。 它包含共同说明链接时所出现问题的生成项目。 示例包括涉及链接时间代码生成 (LTCG) 的后端故障或链接器故障。 需要将这些生成工件用作链接器输入，以便重现问题。 通过使用此环境变量，可以轻松创建链接重现。 它可启用链接器的内置重现生成功能。
 
-#### <a name="to-generate-a-link-repro"></a>生成链接重现
+#### <a name="to-generate-a-link-repro-using-the-link_repro-environment-variable"></a>使用 link_repro 环境变量生成链接重现
 
 1. 捕获用于生成重现的命令行参数，如[报告命令行的内容](#to-report-the-contents-of-the-command-line)中所述。
 
@@ -327,9 +328,9 @@ CONTEXT:
 
 1. 在开发人员命令提示控制台窗口中，转到包含重现项目的目录。
 
-1. 输入 mkdir linkrepro，创建链接重现的目录  。
+1. 输入 mkdir linkrepro，为链接重现创建名为 linkrepro 的目录   。 可以使用不同的名称来捕获另一个链接重现。
 
-1. 输入命令 set link\_repro=linkrepro，将 link\_repro 环境变量设置为你创建的目录   。 如果生成从其他目录中运行（更加复杂的项目通常如此），则转而将 ink\_repro 设置为 linkrepro 目录的完整路径  。
+1. 输入命令 set link\_repro=linkrepro，将 link\_repro 环境变量设置为你创建的目录   。 如果生成从其他目录中运行（更加复杂的项目通常如此），则转而将 ink\_repro 设置为链接重现目录的完整路径  。
 
 1. 要在 Visual Studio 中生成重现项目，请在开发人员命令提示控制台窗口中输入命令 devenv  。 这可确保 link\_repro 环境变量的值对 Visual Studio 可见  。 要在命令行生成项目，请使用前面捕获的命令行参数来复制重现生成。
 
@@ -340,6 +341,18 @@ CONTEXT:
 1. 在开发人员命令提示控制台窗口中，输入命令 set link\_repro=，清除 link\_repro 环境变量   。
 
 最后，通过将整个 linkrepro 目录压缩为 .zip 文件或类似的文件来打包重现，并将其附加到报告中。
+
+/LINKREPRO 链接器选项与 link\_repro 环境变量具有同样的作用   。 可以使用 [/LINKREPROTARGET](../build/reference/linkreprotarget.md) 选项来为生成的链接重现指定要筛选的名称。 要使用 /LINKREPROTARGET，还必须指定 /OUT 链接器选项   。
+
+#### <a name="to-generate-a-link-repro-using-the-linkrepro-option"></a>使用 /LINKREPRO 选项生成链接重现
+
+1. 创建目录以保存链接重现。 我们将创建的完整目录路径称作 directory-path  。 如果路径包含空格，请使用双引号。
+
+1. 将 /LINKREPRO:directory-path 命令添加到链接器命令行   。 在 Visual Studio 中，打开项目的“属性页”对话框  。 选择“配置属性” > “链接器” > “命令行”属性页    。 在“附加选项”框中输入 /LINKREPRO:directory-path 选项    。 选择“确定”以保存更改  。
+
+1. 生成重现项目，并确认预期问题已发生。
+
+最后，通过将整个 directory-path 链接重现目录压缩为 .zip 文件或类似的文件来打包重现，并将其附加到报告中  。
 
 ### <a name="other-repros"></a>其他重现
 

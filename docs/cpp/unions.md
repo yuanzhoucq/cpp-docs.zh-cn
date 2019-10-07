@@ -7,19 +7,19 @@ helpviewer_keywords:
 - class types [C++], unions as
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
-ms.openlocfilehash: c15ec782d16aebab85d57de2dea1e91b91620c74
-ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
+ms.openlocfilehash: 8a4ea3ae325eb5882c2f8b2524bbc156d12ffcc6
+ms.sourcegitcommit: bf724dfc639b16d5410fab72183f8e6b781338bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67894474"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71062058"
 ---
 # <a name="unions"></a>Unions
 
 > [!NOTE]
-> 在 C + + 17 中及更高版本， **std::variant**类是联合的类型安全的替代方法。
+> 在 c + + 17 和更高版本中， **std：： variant**类是联合的一种类型安全的替代类。
 
-一个**union**是用户定义的类型中的所有成员都共享相同的内存位置。 这意味着在任何给定时间，联合都不能包含来自其成员列表的多个对象。 这还意味着无论联合具有多少成员，它始终仅使用足以存储最大成员的内存。
+**联合**是用户定义的类型，其中的所有成员共享相同的内存位置。 这意味着在任何给定时间，联合都不能包含来自其成员列表的多个对象。 这还意味着无论联合具有多少成员，它始终仅使用足以存储最大成员的内存。
 
 具有大量对象和/或内存有限时，联合可用于节省内存。 但是，需要格外小心才能正确使用它们，因为由你负责确保可始终访问写入的最后一个成员。 如果任何成员类型具有不常用构造函数，则必须编写附加代码来显式构造和销毁该成员。 使用联合之前，应考虑是否可以使用基类和派生类来更好地表示尝试解决的问题。
 
@@ -31,7 +31,7 @@ union [name]  { member-list };
 
 ### <a name="parameters"></a>参数
 
-*名称*<br/>
+*name*<br/>
 为联合提供的类型名称。
 
 *member-list*<br/>
@@ -41,7 +41,7 @@ union [name]  { member-list };
 
 ## <a name="declaring-a-union"></a>声明联合
 
-开始使用联合的声明**union**关键字，并将成员列表括在大括号中：
+使用**union**关键字开始联合的声明，并将成员列表括在大括号中：
 
 ```cpp
 // declaring_a_union.cpp
@@ -58,13 +58,13 @@ int main()
 {
     RecordType t;
     t.i = 5; // t holds an int
-    t.f = 7.25 // t now holds a float
+    t.f = 7.25; // t now holds a float
 }
 ```
 
 ## <a name="using-unions"></a>使用联合
 
-在前面的示例中，任何访问联合的代码都需要了解保存数据的成员。 此问题最常见的解决方案是将联合以及其他枚举成员（指示当前存储在联合中的数据的类型）放入一个结构中。 这称为*可区分联合*和下面的示例演示了基本模式。
+在前面的示例中，任何访问联合的代码都需要了解保存数据的成员。 此问题最常见的解决方案是将联合以及其他枚举成员（指示当前存储在联合中的数据的类型）放入一个结构中。 这称为可*区分联合*，下面的示例演示基本模式。
 
 ```cpp
 #include <queue>
@@ -636,9 +636,9 @@ int main()
 ![数值类型联合中的数据存储](../cpp/media/vc38ul1.png "NumericType 联合中的数据存储") <br/>
 NumericType 联合中的数据存储
 
-## <a name="anonymous_unions"></a> 匿名联合
+## <a name="anonymous_unions"></a>匿名联合
 
-匿名联合还未声明的联合*类名*或*声明符列表*。
+匿名联合是在没有*类名称*或*声明符列表*的情况下声明的联合。
 
 ```cpp
 union  {  member-list  }
@@ -646,11 +646,11 @@ union  {  member-list  }
 
 匿名联合中声明的名称可直接使用，就像非成员变量一样。 因此，匿名联合中声明的名称必须在周边范围中是唯一的。
 
-除了命名联合的限制，匿名联合还受下列其他限制：
+除了对命名联合的限制之外，匿名联合还服从以下附加限制：
 
-- 它们还必须声明为**静态**如果在文件或命名空间范围中声明。
+- 如果在文件或命名空间范围内声明，则还必须将它们声明为**static** 。
 
-- 它们可以只有**公共**成员;**私有**并**保护**匿名联合中的成员会生成错误。
+- 它们只能有**公共**成员;匿名联合中的**私有**和**受保护**成员会产生错误。
 
 - 它们不能具有函数成员。
 

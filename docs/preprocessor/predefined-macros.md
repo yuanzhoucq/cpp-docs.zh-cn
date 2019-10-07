@@ -1,12 +1,17 @@
 ---
 title: 预定义宏
 ms.custom: update_every_version
-ms.date: 04/05/2019
+ms.date: 10/01/2019
 f1_keywords:
 - _ATL_VER
 - __ATOM__
 - __AVX__
 - __AVX2__
+- __AVX512BW__
+- __AVX512CD__
+- __AVX512DQ__
+- __AVX512F__
+- __AVX512VL__
 - _CHAR_UNSIGNED
 - __CLR_VER
 - _CONTROL_FLOW_GUARD
@@ -80,6 +85,11 @@ helpviewer_keywords:
 - __ATOM__ macro
 - __AVX__ macro
 - __AVX2__ macro
+- __AVX512BW__ macro
+- __AVX512CD__ macro
+- __AVX512DQ__ macro
+- __AVX512F__ macro
+- __AVX512VL__ macro
 - _CHAR_UNSIGNED macro
 - __CLR_VER macro
 - _CONTROL_FLOW_GUARD macro
@@ -143,12 +153,12 @@ helpviewer_keywords:
 - _WINRT_DLL macro
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
-ms.openlocfilehash: 15b70b0292f671d99b320c8d23598e68b47adb0d
-ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
+ms.openlocfilehash: eb75273bc8cbe5ccbf62edc82a1e7deccc605757
+ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70273823"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816605"
 ---
 # <a name="predefined-macros"></a>预定义宏
 
@@ -178,7 +188,7 @@ MSVC 支持 ANSI/ISO C99 标准所需的预定义预处理器宏，以及 ISO c 
 
 - **&#95;文件&#95; &#95;** 当前源文件的名称。 文件扩展到字符串文字。 **&#95; &#95;&#95;** 若要确保显示文件的完整路径，请使用[/FC （诊断中源代码文件的完整路径）](../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md)。 始终定义此宏。
 
-- **&#95;行&#95; &#95;** 定义为当前源文件中的整数行号。 可以使用`#line`指令更改 **&#95; &#95;行&#95;** 宏的值。 始终定义此宏。
+- **&#95;行&#95; &#95;** 定义为当前源文件中的整数行号。 可以使用 @no__t 5 指令更改 **&#95; &#95;行&#95;** 宏的值。 始终定义此宏。
 
 - **&#95; STDC &#95; &#95;** 仅在编译为 C 和指定[/za](../build/reference/za-ze-disable-language-extensions.md)编译器选项时定义为1。 否则为 undefined。
 
@@ -194,13 +204,23 @@ MSVC 支持这些其他预定义的宏。
 
 - **&#95; ATOM &#95; &#95;** 如果设置了[/favor： ATOM](../build/reference/favor-optimize-for-architecture-specifics.md)编译器选项并且编译器目标为 x86 或 x64，则定义为1。 否则为 undefined。
 
-- **&#95; AVX &#95; &#95;** 如果设置了[/arch： AVX](../build/reference/arch-x86.md)或[/arch： AVX2](../build/reference/arch-x86.md)编译器选项，并且编译器目标为 x86 或 x64，则定义为1。 否则为 undefined。
+- **&#95; AVX &#95; &#95;** 如果设置了[/arch： AVX](../build/reference/arch-x86.md)、 [/arch： AVX2](../build/reference/arch-x86.md)或[/arch： AVX512](../build/reference/arch-x86.md)编译器选项，并且编译器目标为 x86 或 x64，则定义为1。 否则为 undefined。
 
-- **&#95; AVX2 &#95; &#95;** 如果设置了[/arch： AVX2](../build/reference/arch-x86.md)编译器选项并且编译器目标为 x86 或 x64，则定义为1。 否则为 undefined。
+- **&#95; AVX2 &#95; &#95;** 如果设置了[/arch： AVX2](../build/reference/arch-x86.md)或[/arch： AVX512](../build/reference/arch-x86.md)编译器选项，并且编译器目标为 x86 或 x64，则定义为1。 否则为 undefined。
+
+- **&#95; AVX512BW &#95; &#95;** 如果设置了[/arch： AVX512](../build/reference/arch-x86.md)编译器选项并且编译器目标为 x86 或 x64，则定义为1。 否则为 undefined。
+
+- **&#95; AVX512CD &#95; &#95;** 如果设置了[/arch： AVX512](../build/reference/arch-x86.md)编译器选项并且编译器目标为 x86 或 x64，则定义为1。 否则为 undefined。
+
+- **&#95; AVX512DQ &#95; &#95;** 如果设置了[/arch： AVX512](../build/reference/arch-x86.md)编译器选项并且编译器目标为 x86 或 x64，则定义为1。 否则为 undefined。
+
+- **&#95; AVX512F &#95; &#95;** 如果设置了[/arch： AVX512](../build/reference/arch-x86.md)编译器选项并且编译器目标为 x86 或 x64，则定义为1。 否则为 undefined。
+
+- **&#95; AVX512VL &#95; &#95;** 如果设置了[/arch： AVX512](../build/reference/arch-x86.md)编译器选项并且编译器目标为 x86 或 x64，则定义为1。 否则为 undefined。
 
 - **&#95;如果&#95;** 默认**char**类型为无符号，则将 CHAR 无符号定义为1。 此值在设置了[/j （默认 Char 类型为无符号）](../build/reference/j-default-char-type-is-unsigned.md)编译器选项时定义。 否则为 undefined。
 
-- **&#95;CLR 版本&#95;&#95;** 定义为一个整数文本，表示用于编译应用程序的公共语言运行时（CLR）的版本。 值以形式`Mmmbbbbb`进行编码，其中`M`是运行时的主版本， `mm`是运行时`bbbbb`的次版本，是生成号。 **&#95;&#95;如果&#95;** 设置了[/clr](../build/reference/clr-common-language-runtime-compilation.md)编译器选项，则定义 CLR 版本。 否则为 undefined。
+- **&#95;CLR 版本&#95;&#95;** 定义为一个整数文本，表示用于编译应用程序的公共语言运行时（CLR）的版本。 此值的编码格式为 `Mmmbbbbb`，其中 @no__t 为运行时的主版本，`mm` 为运行时的次版本，`bbbbb` 为生成号。 **&#95;&#95;如果&#95;** 设置了[/clr](../build/reference/clr-common-language-runtime-compilation.md)编译器选项，则定义 CLR 版本。 否则为 undefined。
 
     ```cpp
     // clr_ver.cpp
@@ -215,7 +235,7 @@ MSVC 支持这些其他预定义的宏。
 
 - **&#95;计数器&#95; &#95;** 展开为从0开始的整数文本。 每次将该值用于源文件或源文件的包含标头时，该值将递增1。 当使用预编译头时， **&#95;计数器会记住其状态。 &#95; &#95;** 始终定义此宏。
 
-  此示例使用`__COUNTER__`将唯一标识符分配给同一类型的三个不同对象。 `exampleClass`构造函数采用整数作为参数。 在`main`中，应用程序声明类型`exampleClass` `__COUNTER__`为的三个对象，并将用作唯一标识符参数：
+  此示例使用 `__COUNTER__` 将唯一标识符分配给同一类型的三个不同对象。 @No__t-0 构造函数采用整数作为参数。 在 `main` 中，应用程序声明类型为 @no__t 的三个对象，并使用 `__COUNTER__` 作为唯一标识符参数：
 
     ```cpp
     // macro__COUNTER__.cpp
@@ -284,13 +304,13 @@ MSVC 支持这些其他预定义的宏。
 
 - **&#95; FUNCDNAME &#95; &#95;** 定义为包含封闭函数的[修饰名](../build/reference/decorated-names.md)的字符串文字。 仅在函数中定义宏。 如果使用[/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)或[/p](../build/reference/p-preprocess-to-a-file.md)编译器选项，则不会扩展 **&#95;FUNCDNAME&#95;宏。 &#95;**
 
-   此示例使用`__FUNCDNAME__`、 `__FUNCSIG__`和`__FUNCTION__`宏显示函数信息。
+   此示例使用 `__FUNCDNAME__`、`__FUNCSIG__` 和 `__FUNCTION__` 宏来显示函数信息。
 
    [!code-cpp[NVC_Predefined_Macros_Examples#1](../preprocessor/codesnippet/CPP/predefined-macros_1.cpp)]
 
-- **&#95; FUNCSIG &#95; &#95;** 定义为包含封闭函数的签名的字符串文字。 仅在函数中定义宏。 如果使用[/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)或[/p](../build/reference/p-preprocess-to-a-file.md)编译器选项，则不会扩展 **&#95;FUNCSIG&#95;宏。 &#95;** 为64位目标编译时，默认情况下，调用约定`__cdecl`是。 有关用法的示例，请参见`__FUNCDNAME__`宏。
+- **&#95; FUNCSIG &#95; &#95;** 定义为包含封闭函数的签名的字符串文字。 仅在函数中定义宏。 如果使用[/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)或[/p](../build/reference/p-preprocess-to-a-file.md)编译器选项，则不会扩展 **&#95;FUNCSIG&#95;宏。 &#95;** 为64位目标编译时，默认情况下，调用约定 `__cdecl`。 有关用法的示例，请参阅 @no__t 的宏。
 
-- **&#95;函数&#95; &#95;** 定义为包含封闭函数的未修饰名的字符串文字。 仅在函数中定义宏。 如果使用[/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)或[/p](../build/reference/p-preprocess-to-a-file.md)编译器选项，则不扩展 **&#95;函数&#95;宏。 &#95;** 有关用法的示例，请参见`__FUNCDNAME__`宏。
+- **&#95;函数&#95; &#95;** 定义为包含封闭函数的未修饰名的字符串文字。 仅在函数中定义宏。 如果使用[/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)或[/p](../build/reference/p-preprocess-to-a-file.md)编译器选项，则不扩展 **&#95;函数&#95;宏。 &#95;** 有关用法的示例，请参阅 @no__t 的宏。
 
 - **整数&#95;最&#95;大位&#95;** 定义为整数文本值64，非向量整型的最大大小（位）。 始终定义此宏。
 
@@ -316,9 +336,9 @@ MSVC 支持这些其他预定义的宏。
 
 - **&#95;M&#95;ARM&#95;FP**定义为整数文本值，该值指示为 ARM 处理器目标设置了哪个[/arch](../build/reference/arch-arm.md)编译器选项。 否则为 undefined。
 
-  - 如果未`/arch`指定 arm 选项，则为30-39 范围内的一个值，它指示设置了 arm 的默认`VFPv3`体系结构（）。
+  - 如果未指定 `/arch` ARM 选项，则为30-39 范围内的一个值，指示已设置 ARM 的默认体系结构（@no__t 为-1）。
 
-  - 如果`/arch:VFPv4`已设置，则为40-49 范围内的值。
+  - 如果设置了 `/arch:VFPv4`，则为40-49 范围内的值。
 
   - 有关详细信息，请参阅[/arch （ARM）](../build/reference/arch-arm.md)。
 
@@ -342,11 +362,11 @@ MSVC 支持这些其他预定义的宏。
 
 - **&#95;M&#95;IX86&#95;FP**定义为整数文本值，该值指示已设置的[/arch](../build/reference/arch-arm.md)编译器选项或默认值。 当编译目标为 x86 处理器时，将始终定义此宏。 否则为 undefined。 定义后，值为：
 
-  - 如果设置了`/arch:IA32`编译器选项，则为0。
+  - 如果已设置 `/arch:IA32` 编译器选项，则为0。
 
-  - 如果设置了`/arch:SSE`编译器选项，则为1。
+  - 如果已设置 `/arch:SSE` 编译器选项，则为1。
 
-  - 如果已设置`/arch:SSE2`、 `/arch:AVX`或`/arch:AVX2`编译器选项，则为2。 如果未指定`/arch`编译器选项，则此值为默认值。 指定`/arch:AVX`时，还将定义 **&#95; &#95;宏&#95; AVX** 。 如果`/arch:AVX2`指定了， **&#95; &#95;&#95;** 则同时定义 AVX 和 **&#95; &#95;AVX2&#95;** 。
+  - 如果已设置 `/arch:SSE2`、`/arch:AVX`、`/arch:AVX2` 或 `/arch:AVX512` 编译器选项，则为2。 如果未指定 `/arch` 编译器选项，则此值为默认值。 如果指定 `/arch:AVX`，还将定义 **&#95; &#95;宏&#95; AVX** 。 如果指定 `/arch:AVX2`， **&#95; &#95;&#95;** 则同时定义 AVX  **&#95; &#95;和&#95; AVX2** 。 如果指定 **&#95; &#95;&#95;** `/arch:AVX512`，AVX，  **&#95; &#95;AVX2&#95;** ，  **&#95; &#95;AVX512BW&#95;** ， **&#95;AVX512CD， &#95; &#95;**  **&#95;还定义了&#95;AVX512DQ、AVX512F 和 AVX512VL。 &#95;** **&#95; &#95;&#95;** **&#95; &#95;&#95;**
 
   - 有关详细信息，请参阅 [/arch (x86)](../build/reference/arch-x86.md)。
 
@@ -358,9 +378,9 @@ MSVC 支持这些其他预定义的宏。
 
 - **&#95;如果&#95;** 设置了默认的[/Ze （启用语言扩展）](../build/reference/za-ze-disable-language-extensions.md)编译器选项，则将 services.msc 扩展定义为1。 否则为 undefined。
 
-- **MSC&#95;完整&#95;版&#95;** 定义为一个整数文本，用于对编译器版本号的主要版本号、次要版本号和内部版本号元素进行编码。 主编号是句点分隔版本号的第一个元素，次版本号是第二个元素，而生成号是第三个元素。 例如，如果 MicrosoftC++ C/编译器的版本号为15.00.20706.01，则 **&#95;MSC&#95;FULL&#95;VER**宏的计算结果为150020706。 在`cl /?`命令行中输入以查看编译器的版本号。 始终定义此宏。
+- **MSC&#95;完整&#95;版&#95;** 定义为一个整数文本，用于对编译器版本号的主要版本号、次要版本号和内部版本号元素进行编码。 主编号是句点分隔版本号的第一个元素，次版本号是第二个元素，而生成号是第三个元素。 例如，如果 MicrosoftC++ C/编译器的版本号为15.00.20706.01，则 **&#95;MSC&#95;FULL&#95;VER**宏的计算结果为150020706。 在命令行中输入 `cl /?` 以查看编译器的版本号。 始终定义此宏。
 
-- **&#95;MSC&#95;VER**定义为一个整数文本，用于对编译器版本号的主要和次要元素进行编码。 主编号是句点分隔版本号的第一个元素，次版本号是第二个元素。 例如，如果 Microsoft C/C++编译器的版本号为17.00.51106.1，则 **&#95;MSC&#95;VER**宏的计算结果为1700。 在`cl /?`命令行中输入以查看编译器的版本号。 始终定义此宏。
+- **&#95;MSC&#95;VER**定义为一个整数文本，用于对编译器版本号的主要和次要元素进行编码。 主编号是句点分隔版本号的第一个元素，次版本号是第二个元素。 例如，如果 Microsoft C/C++编译器的版本号为17.00.51106.1，则 **&#95;MSC&#95;VER**宏的计算结果为1700。 在命令行中输入 `cl /?` 以查看编译器的版本号。 始终定义此宏。
 
    |Visual Studio 版本|**&#95;MSC&#95;VER**|
    |-|-|
@@ -430,7 +450,7 @@ MSVC 支持这些其他预定义的宏。
 
 - **&#95;PREFAST&#95;** 如果设置了[/analyze](../build/reference/analyze-code-analysis.md)编译器选项，则定义为1。 否则为 undefined。
 
-- **&#95; TIMESTAMP &#95; &#95;** 定义为一个字符串文字，其中包含上次修改当前源文件的日期和时间，格式为 CRT [asctime](../c-runtime-library/reference/asctime-wasctime.md)函数返回的缩写的常量长度窗体，例如`Fri 19 Aug 13:32:58 2016`。 始终定义此宏。
+- **&#95; TIMESTAMP &#95; &#95;** 定义为一个字符串文字，其中包含上次修改当前源文件的日期和时间，格式为 CRT [asctime](../c-runtime-library/reference/asctime-wasctime.md)函数返回的缩写的常量长度窗体，例如 `Fri 19 Aug 13:32:58 2016`。 始终定义此宏。
 
 - **&#95;如果&#95;** 设置了[/Zl （省略默认库名称）](../build/reference/zl-omit-default-library-name.md)编译器选项，则将 VC NODEFAULTLIB 定义为1。 否则为 undefined。
 
@@ -444,9 +464,9 @@ MSVC 支持这些其他预定义的宏。
 
 编译器未预定义用于识别 ATL 或 MFC 库版本的预处理器宏。 ATL 和 MFC 库标头在内部定义这些版本宏。 它们在包含所需标头之前所做的预处理器指令中未定义。
 
-- **&#95;在&#95;** atldef 中\<定义的 ATL VER > 为编码 ATL 版本号的整数文本。
+- **&#95;ATL&#95;VER**在 @no__t 中定义 > 为编码 ATL 版本号的整数文本。
 
-- **&#95;在&#95;** afxver_ 中\<定义的 MFC VER > 为对 MFC 版本号进行编码的整数文本。
+- **&#95;MFC&#95;VER**在 \<afxver_ > 中定义为对 MFC 版本号进行编码的整数文本。
 
 ## <a name="see-also"></a>请参阅
 

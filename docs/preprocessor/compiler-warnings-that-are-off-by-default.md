@@ -5,16 +5,16 @@ helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: a8b203c94d4a5af28837627fda1b8e1631dfb0c0
-ms.sourcegitcommit: 7babce70714242cf498ca811eec3695fad3abd03
+ms.openlocfilehash: f74c413a81a1da6398666a0c15936cb76b5a7144
+ms.sourcegitcommit: a361362354f6ce51eda4ffdb016b81c24cd225cb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70220483"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712674"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>默认关闭的编译器警告
 
-编译器支持默认情况下处于关闭状态的警告，因为大多数开发人员都不会发现它们很有用。 在某些情况下，它们会警告样式选择，或者有关较旧代码中的常见惯例。 其他警告涉及到使用 Microsoft 扩展语言。 在其他情况下，它们表示程序员经常做出错误假设的区域，这可能导致意外或未定义的行为。 如果启用，某些警告可能会在库标头中出现多次。 C 运行时库和C++标准库旨在仅在警告级别[/W4](../build/reference/compiler-option-warning-level.md)发出警告。
+编译器支持默认情况下处于关闭状态的警告，因为大多数开发人员都不会发现它们很有用。 在某些情况下，它们会警告样式选择，或者有关较旧代码中的常见惯例。 其他警告涉及到使用 Microsoft 扩展语言。 某些警告表明程序员经常做出错误假设，这可能导致意外或未定义的行为。 如果所有这些警告均已启用，则其中一些警告可能会在库标头中出现多次。 C 运行时库和C++标准库旨在仅在警告级别[/W4](../build/reference/compiler-option-warning-level.md)发出警告。
 
 ## <a name="enable-warnings-that-are-off-by-default"></a>启用默认情况下处于关闭状态的警告
 
@@ -89,7 +89,7 @@ ms.locfileid: "70220483"
 |C4587 （等级1）|"*anonymous_structure*"：行为更改：不再隐式调用构造函数|
 |C4588 （等级1）|"*anonymous_structure*"：行为更改：不再隐式调用析构函数|
 |[C4596](../error-messages/compiler-warnings/c4596.md)（级别4）|"*identifier*"：成员声明中的非法限定名<sup>14.3</sup> <sup>永久状态</sup>|
-|C4598 （等级1和等级3）|"#include"*标头*""：预编译标头中的标头编号*号*与该位置的当前编译不匹配<sup>14.3</sup>|
+|C4598 （等级1和等级3）|"#include"*标头*""：预编译标头中的标头数字*标*头不匹配该位置的当前编译<sup>14.3</sup>|
 |C4599 （等级3）|'*选项* *路径*： 命令行参数号*数*与预编译标头不匹配<sup>14.3</sup>|
 |C4605 （等级1）|在当前命令行上指定了 "/d*宏*"，但未在生成预编译标头时指定|
 |[C4608](../error-messages/compiler-warnings/compiler-warning-level-3-c4608.md)（等级3）|"*union_member*" 已被初始值设定项列表 "*union_member*" 中的另一个联合成员初始化<sup>永久状态</sup>|
@@ -108,7 +108,7 @@ ms.locfileid: "70220483"
 |[C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md)（等级1）|"*function*"：非私有成员的签名包含程序集私有本机类型 "*native_type*"|
 |[C4710](../error-messages/compiler-warnings/compiler-warning-level-4-c4710.md)（级别4）|"*function*"：函数未内联|
 |[C4738](../error-messages/compiler-warnings/compiler-warning-level-3-c4738.md)（等级3）|将 32 位浮点型结果存储在内存中，可能会降低性能|
-|[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|"*expression*" 的可变访问受/volatile：\<iso&#124;ms > 设置的限制; 请考虑使用 __iso_volatile_load/存储内部函数|
+|[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|"*expression*" 的可变访问服从于/volatile： \<iso&#124;ms > 设置;请考虑使用 __iso_volatile_load/store 内部函数|
 |C4749 （级别4）|有条件支持： offsetof 应用于非标准布局类型 "*type*"|
 |C4767 （级别4）|节名称 "*symbol*" 的长度超过8个字符，将被链接器截断|
 |C4768 （等级3）|忽略链接规范前的 __declspec 特性|
@@ -142,21 +142,21 @@ ms.locfileid: "70220483"
 |C5029 （级别4）|使用了非标准扩展：中C++的对齐特性仅适用于变量、数据成员和标记类型|
 |C5031 （级别4）|#pragma warning （pop）：可能不匹配，正在弹出的警告状态已推送到不同文件<sup>14.1</sup>|
 |C5032 （级别4）|检测到 #pragma warning （push），没有对应的 #pragma 警告（pop） <sup>14.1</sup>|
-|C5034|使用内部 "*内部*" 导致函数*函数*编译为来宾代码<sup>15.3</sup>|
-|C5035|使用功能 "*feature*" 会导致函数*函数*编译为来宾代码<sup>15.3</sup>|
+|C5034|使用内部 "*内部*" 导致函数*函数名称*编译为来宾代码<sup>15.3</sup>|
+|C5035|使用功能 "*feature*" 会导致函数*函数名*编译为来宾代码<sup>15.3</sup>|
 |C5036 （等级1）|将/hybrid： x86arm64 "*type1*" 编译为 "*type2*" <sup>15.3</sup>时，varargs 函数指针转换|
 |[C5038](../error-messages/compiler-warnings/c5038.md)（级别4）|数据成员 "*member1*" 将在数据成员 "*member2*" <sup>15.3</sup>后初始化|
 |C5039 （级别4）|"*function*"：指向在-EHc 下传递到 extern C 函数的可能引发函数的指针或引用。 如果此函数引发异常，则可能出现未定义的行为。 <sup>15.5</sup>|
 |C5042 （等级3）|"*function*"：不能在标准C++中指定块范围内的函数声明;删除 "inline" 说明符<sup>15.5</sup>|
 |[C5045](../error-messages/compiler-warnings/c5045.md)|如果/Qspectre 开关指定<sup>15.7</sup> ，编译器将插入内存加载的 Spectre 缓解|
 
-<sup>14.1</sup>从 Visual Studio 2015 Update 1 开始提供此警告。 \
-<sup>14.3</sup>从 Visual Studio 2015 Update 3 开始提供此警告。 \
-<sup>15.3</sup>从 Visual Studio 2017 版本15.3 开始，此警告已推出。
-<sup>15.5</sup>从 Visual Studio 2017 版本15.5 开始，此警告已推出。
-<sup>15.7</sup>从 Visual Studio 2017 版本15.7 开始，此警告已推出。
-<sup>15.8</sup>从 Visual Studio 2017 版本15.8 开始，此警告已推出。
-<sup>16.0</sup>在 Visual STUDIO 2019 RTM 中开始提供此警告。 \
+<sup>14.1</sup>从 Visual Studio 2015 Update 1 开始提供此警告。\
+<sup>14.3</sup>从 Visual Studio 2015 Update 3 开始提供此警告。\
+<sup>15.3</sup>从 Visual Studio 2017 版本15.3 开始，此警告已推出。\
+<sup>15.5</sup>从 Visual Studio 2017 版本15.5 开始，此警告已推出。\
+<sup>15.7</sup>从 Visual Studio 2017 版本15.7 开始，此警告已推出。\
+<sup>15.8</sup>从 Visual Studio 2017 版本15.8 开始，此警告已推出。\
+<sup>16.0</sup>在 Visual STUDIO 2019 RTM 中开始提供此警告。\
 <sup>永久状态</sup>除非设置了[/permissive-](../build/reference/permissive-standards-conformance.md)编译器选项，否则将关闭此警告。
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>默认情况下，在早期版本中关闭警告

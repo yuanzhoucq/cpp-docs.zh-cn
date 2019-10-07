@@ -1,10 +1,10 @@
 ---
 title: gets、_getws
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getws
 - gets
-apilocation:
+api_location:
 - msvcr80.dll
 - msvcr90.dll
 - msvcr120.dll
@@ -13,7 +13,10 @@ apilocation:
 - msvcrt.dll
 - msvcr100.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _getts
 - gets
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - gets function
 - standard input, reading from
 ms.assetid: 1ec2dd4b-f801-48ea-97c2-892590f16024
-ms.openlocfilehash: bd5f4e885c0291be963320610942415fc7b61172
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 722d67336e11250f6a5459078dcea173f69bc2af
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738530"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944339"
 ---
-# <a name="gets-getws"></a>gets、_getws
+# <a name="gets-_getws"></a>gets、_getws
 
 从 `stdin` 流中获取行。 提供这些函数的更多安全版本；请参阅 [gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)。
 
@@ -71,7 +74,7 @@ wchar_t *_getws(
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则返回其参数。 NULL 指针指示错误或文件尾条件。 使用 [ferror](../c-runtime-library/reference/ferror.md) 或 [feof](../c-runtime-library/reference/feof.md) 确定已发生哪种情况。 如果 `buffer` 为 NULL，这些函数则会调用无效的参数处理程序，如[参数验证](../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数返回 NULL 并将 errno 设置为 `EINVAL`。
+如果成功，则返回其参数。 NULL 指针指示错误或文件尾条件  。 使用 [ferror](../c-runtime-library/reference/ferror.md) 或 [feof](../c-runtime-library/reference/feof.md) 确定已发生哪种情况。 如果 `buffer` 为 NULL，这些函数则会调用无效的参数处理程序，如[参数验证](../c-runtime-library/parameter-validation.md)中所述  。 如果允许执行继续，则这些函数返回 NULL 并将 errno 设置为 `EINVAL`  。
 
 ## <a name="remarks"></a>备注
 

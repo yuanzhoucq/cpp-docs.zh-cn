@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCPropertyPage [MFC], CMFCPropertyPage
 ms.assetid: d279d7f2-2d81-418d-9f23-6147d6e8df09
-ms.openlocfilehash: 62e33da998f1e5332436d887c38d3fd65526561b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4be584135ef789d7fbe3b1743ac0ad6ce66ac5b1
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310482"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505045"
 ---
 # <a name="cmfcpropertypage-class"></a>CMFCPropertyPage 类
 
-`CMFCPropertyPage`类支持的属性页上的弹出菜单显示。
+`CMFCPropertyPage`类支持在属性页上显示弹出菜单。
 
 ## <a name="syntax"></a>语法
 
@@ -39,15 +39,15 @@ class CMFCPropertyPage : public CPropertyPage
 |名称|描述|
 |----------|-----------------|
 |`CMFCPropertyPage::CreateObject`|由框架用于创建此类类型的动态实例。|
-|`CMFCPropertyPage::GetThisClass`|由框架用于获取一个指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)与此类类型相关联的对象。|
-|`CMFCPropertyPage::OnSetActive`|用户选择和成为活动页的页时，由框架调用此成员函数。 (重写[cpropertypage:: Onsetactive](../../mfc/reference/cpropertypage-class.md#onsetactive)。)|
-|`CMFCPropertyPage::PreTranslateMessage`|将窗口消息调度到之前[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)并[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函数。 有关详细信息和方法语法，请参阅[cwnd:: Pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。 （重写 `CPropertyPage::PreTranslateMessage`。）|
+|`CMFCPropertyPage::GetThisClass`|由框架用于获取指向与此类类型相关联的[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)对象的指针。|
+|`CMFCPropertyPage::OnSetActive`|当用户选择页面并成为活动页面时，框架会调用此成员函数。 （重写[CPropertyPage：： OnSetActive](../../mfc/reference/cpropertypage-class.md#onsetactive)。）|
+|`CMFCPropertyPage::PreTranslateMessage`|转换窗口消息，然后将其调度到[TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage)和[DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) Windows 函数。 有关详细信息和方法语法，请参阅[CWnd：:P retranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。 （重写 `CPropertyPage::PreTranslateMessage`。）|
 
 ## <a name="remarks"></a>备注
 
-`CMFCPropertyPage`类表示属性表，也称为选项卡对话框中的各个页。
+`CMFCPropertyPage`类表示属性表的各个页，也称为选项卡对话框。
 
-使用`CMFCPropertyPage`类一起[CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md)类。 若要使用的属性页上的菜单，替换出现的所有`CPropertyPage`类的`CMFCPropertyPage`类。
+将`CMFCPropertyPage`类与 [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) 类一起使用。 若要在属性页上使用菜单，请将出现`CPropertyPage`的所有类`CMFCPropertyPage`替换为类。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -65,9 +65,9 @@ class CMFCPropertyPage : public CPropertyPage
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxpropertypage.h
+**标头：** afxpropertypage
 
-##  <a name="cmfcpropertypage"></a>  CMFCPropertyPage::CMFCPropertyPage
+##  <a name="cmfcpropertypage"></a>CMFCPropertyPage：： CMFCPropertyPage
 
 构造 `CMFCPropertyPage` 对象。
 
@@ -84,19 +84,19 @@ CMFCPropertyPage(
 ### <a name="parameters"></a>参数
 
 *nIDTemplate*<br/>
-此页的模板的资源 ID。
+此页面的模板的资源 ID。
 
 *nIDCaption*<br/>
-资源的标签的 ID 以放入此页的选项卡。 如果为 0，则从的此页的对话框模板获取名称。 默认值为 0。
+要放在此页的选项卡中的标签的资源 ID。 如果为0，则从该页的对话框模板获取该名称。 默认值为 0。
 
 *lpszTemplateName*<br/>
-指向此页面的模板的名称。 不能为 NULL。
+指向此页面的模板名称。 不能为 NULL。
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-有关构造函数参数的详细信息，请参阅[CPropertyPage::CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage)。
+有关构造函数参数的详细信息，请参阅[CPropertyPage：： CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage)。
 
 ## <a name="see-also"></a>请参阅
 

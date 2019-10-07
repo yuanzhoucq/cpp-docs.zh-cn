@@ -409,6 +409,8 @@
                   href: build/reference/vcxproj-file-structure.md
                 - name: 示例项目文件
                   href: build/reference/project-files.md
+                - name: .vcxproj.filters 文件结构
+                  href: build/reference/vcxproj-filters-files.md
             - name: C++ 项目属性页
               expanded: false
               items:
@@ -430,7 +432,7 @@
                   href: build/reference/linker-property-pages.md
                 - name: “命令行”属性页
                   href: build/reference/command-line-property-pages.md
-                - name: “Nmake”属性页
+                - name: “NMake”属性页
                   href: build/reference/nmake-property-page.md
                 - name: 清单工具属性页
                   href: build/reference/manifest-tool-property-pages.md
@@ -794,6 +796,8 @@
                       href: build/reference/zf.md
                     - name: /Zg（生成函数原型）
                       href: build/reference/zg-generate-function-prototypes.md
+                    - name: /ZH（调试信息中校验和的哈希算法）
+                      href: build/reference/zh.md
                     - name: /Zl（省略默认库名）
                       href: build/reference/zl-omit-default-library-name.md
                     - name: /Zm（指定预编译标头的内存分配限额）
@@ -952,6 +956,10 @@
                   href: build/reference/largeaddressaware-handle-large-addresses.md
                 - name: /LIBPATH（附加的 Libpath）
                   href: build/reference/libpath-additional-libpath.md
+                - name: /LINKREPRO（链接重现目录名称）
+                  href: build/reference/linkrepro.md
+                - name: /LINKREPROTARGET（链接重现文件名称）
+                  href: build/reference/linkreprotarget.md
                 - name: /LTCG（链接时间代码生成）
                   href: build/reference/ltcg-link-time-code-generation.md
                 - name: /MACHINE（指定目标平台）
@@ -1521,6 +1529,8 @@
           href: ide/writing-and-refactoring-code-cpp.md
         - name: 导航 C++ 代码
           href: ide/navigate-code-cpp.md
+        - name: 设置 C++ 编码首选项
+          href: ide/how-to-set-preferences.md
         - name: 使用用于 C++ 的 Live Share 协作
           href: ide/live-share-cpp.md
         - name: 更改签名
@@ -3765,7 +3775,7 @@
                       href: cpp/const-cpp.md
                     - name: constexpr
                       href: cpp/constexpr-cpp.md
-                    - name: 易失
+                    - name: volatile
                       href: cpp/volatile-cpp.md
                     - name: auto
                       href: cpp/auto-cpp.md
@@ -3985,7 +3995,7 @@
                     - name: 强制转换运算符
                       expanded: false
                       items:
-                        - name: 强制转换运算符
+                        - name: 转换运算符
                           href: cpp/casting-operators.md
                         - name: dynamic_cast 运算符
                           href: cpp/dynamic-cast-operator.md
