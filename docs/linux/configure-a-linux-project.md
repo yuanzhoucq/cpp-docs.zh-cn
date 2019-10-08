@@ -2,12 +2,12 @@
 title: 在 Visual Studio 中配置 C++ Linux 项目
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: a4e20222cc0b04f496989bf2d51fc12c85f5d162
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.openlocfilehash: 1cfaeb6611a27af498325739271d4dba38581dd6
+ms.sourcegitcommit: c53a3efcc5d51fc55fa57ac83cca796b33ae888f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042630"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71960670"
 ---
 # <a name="configure-a-linux-project"></a>配置 Linux 项目
 
@@ -93,12 +93,6 @@ Visual Studio 2019 版本 16.1：
 ![生成事件](media/settings_buildevents.png)
 
 ## <a name="remote_intellisense"></a> 远程系统上标头的 IntelliSense
-
-::: moniker range="vs-2019"
-
-在以 WSL 为目标时，本部分不适用。
-
-::: moniker-end
 
 在连接管理器中添加新连接时，Visual Studio 会自动为远程系统上的编译器检测包含目录  。 随后 Visual Studio 压缩这些文件压缩，并将其复制到本地 Windows 计算机上的目录中。 此后，每当在 Visual Studio 或 CMake 项目中使用该连接时，都会使用这些目录中的标头来提供 IntelliSense。
 
