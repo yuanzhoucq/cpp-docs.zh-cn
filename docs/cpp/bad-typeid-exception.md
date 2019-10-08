@@ -1,6 +1,6 @@
 ---
 title: bad_typeid 异常
-ms.date: 11/04/2016
+ms.date: 10/04/2019
 f1_keywords:
 - bad_typeid
 - bad_typeid_cpp
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - bad_typeid exception
 - exceptions [C++], bad_typeid
 ms.assetid: 5963ed58-4ede-4597-957d-f7bbd06299c2
-ms.openlocfilehash: 2ff7339b02cfe8c21cebfa7d9bb0cc98b3e08799
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 6410f27342ed40300ff236ee1c47ada740255f84
+ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68242265"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71998800"
 ---
-# <a name="badtypeid-exception"></a>bad_typeid 异常
+# <a name="bad_typeid-exception"></a>bad_typeid 异常
 
-**Bad_typeid**引发异常[typeid 运算符](../cpp/typeid-operator.md)时的操作数**typeid**是 NULL 指针。
+当**typeid**的操作数为 NULL 指针时， [typeid 运算符](../cpp/typeid-operator.md)将引发**bad_typeid**异常。
 
 ## <a name="syntax"></a>语法
 
@@ -28,7 +28,7 @@ catch (bad_typeid)
 
 ## <a name="remarks"></a>备注
 
-接口**bad_typeid**是：
+**Bad_typeid**的接口是：
 
 ```cpp
 class bad_typeid : public exception
@@ -44,12 +44,12 @@ public:
 };
 ```
 
-下面的示例演示**typeid**运算符引发**bad_typeid**异常。
+下面的示例演示了引发**bad_typeid**异常的**typeid**运算符。
 
 ```cpp
 // expre_bad_typeid.cpp
 // compile with: /EHsc /GR
-#include <typeinfo.h>
+#include <typeinfo>
 #include <iostream>
 
 class A{
@@ -80,5 +80,5 @@ Object is NULL
 
 ## <a name="see-also"></a>请参阅
 
-[运行时类型信息](../cpp/run-time-type-information.md)<br/>
+[运行时类型信息](../cpp/run-time-type-information.md)\
 [关键字](../cpp/keywords-cpp.md)
