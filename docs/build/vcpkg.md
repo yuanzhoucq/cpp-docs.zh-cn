@@ -153,7 +153,7 @@ zlib:x86-windows        1.2.11   A compression library
 
 ### <a name="upgrade-example"></a>升级示例
 
-以下示例演示如何只升级指定的库。 请注意，必要时 vcpgk 会自动拉取依赖项。
+以下示例演示如何只升级指定的库。 请注意，必要时 vcpkg 会自动拉取依赖项。
 
 ```cmd
 c:\users\satyan\vcpkg> vcpkg upgrade tiny-dnn:x86-windows zlib
