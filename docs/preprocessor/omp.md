@@ -21,7 +21,7 @@ ms.locfileid: "70220587"
 
 ## <a name="syntax"></a>语法
 
-> **#pragma omp***指令*
+> **#pragma omp** *指令*
 
 ## <a name="remarks"></a>备注
 

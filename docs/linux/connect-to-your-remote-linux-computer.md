@@ -3,12 +3,12 @@ title: 在 Visual Studio 中连接到你的目标 Linux 系统
 description: 如何从 Visual Studio C++ 项目内连接到远程 Linux 计算机或 WSL。
 ms.date: 09/04/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: 75d8b3db64d9b1f3562d6730685b7c29fe4982f4
-ms.sourcegitcommit: a42d3b0408f02138dcd6fabcb98d50b0cb159191
+ms.openlocfilehash: 2f4e6311493f2b29ba6911ec1b76225b6c7abe6d
+ms.sourcegitcommit: b85e1db6b7d4919852ac6843a086ba311ae97d40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383405"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71925559"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>在 Visual Studio 中连接到你的目标 Linux 系统
 
@@ -72,13 +72,13 @@ Linux 支持在 Visual Studio 2017 及更高版本中提供。
 
    ::: moniker range="vs-2019"
 
-   转到“工具”>“选项”>“跨平台”>“日志记录”  以启用日志记录，帮助故障排除连接问题：
+   转到“工具”>“选项”>“跨平台”>“日志记录”以启用日志记录，帮助故障排除连接问题：
 
    ![远程日志记录](media/remote-logging-vs2019.png)
 
    日志包括连接、发送到远程计算机的所有命令（其文本、退出代码和执行时间）以及从 Visual Studio 到 shell 的所有输出。 日志记录适用于 Visual Studio 中的任何跨平台 CMake 项目或基于 MSBuild 的 Linux 项目。
 
-   你可以配置输出，以转到一个文件或转到“输出窗口”中的“跨平台日志记录”  窗格。 对于基于 MSBuild 的 Linux 项目，MSBuild 发出到远程计算机的命令不会路由到“输出窗口”  ，因为它们发出到进程外。 相反，它们将记录到前缀为“msbuild_”的文件。
+   你可以配置输出，以转到一个文件或转到“输出窗口”中的“跨平台日志记录”窗格。 对于基于 MSBuild 的 Linux 项目，MSBuild 发出到远程计算机的命令不会路由到“输出窗口”，因为它们发出到进程外。 相反，它们将记录到前缀为“msbuild_”的文件。
 
    ::: moniker-end
 
@@ -86,7 +86,7 @@ Linux 支持在 Visual Studio 2017 及更高版本中提供。
 
 ::: moniker range="vs-2017"
 
-在 Visual Studio 2017 中，使用如本文前面部分中所述的连接到远程 Linux 计算机的相同步骤连接到 WSL。 使用 localhost  作为主机名  。
+在 Visual Studio 2017 中，使用如本文前面部分中所述的连接到远程 Linux 计算机的相同步骤连接到 WSL。 使用 localhost 作为主机名。
 
 ::: moniker-end
 
@@ -94,11 +94,12 @@ Linux 支持在 Visual Studio 2017 及更高版本中提供。
 
 对结合使用 C++ 与[适用于 Linux 的 Windows 子系统 (WSL)](https://docs.microsoft.com/windows/wsl/about)，Visual Studio 2019 版本 16.1 添加了本机支持。  这意味着在本地 WSL 安装上进行生成和调试不再需要添加远程连接或配置 SSH。 可在此处找到有关[如何安装 WSL](https://docs.microsoft.com/windows/wsl/install-win10)的详细信息。
 
-要将 WSL 安装配置为使用 Visual Studio，需要安装以下工具：gcc、gdb、make、rsync 和 zip。 可使用以下命令在使用 apt 的发行版上安装这些工具： 
+要将 WSL 安装配置为可与 Visual Studio 结合使用，需要安装以下工具：gcc 或 clang、gdb、make、rsync 和 zip。 你可以使用此命令将它们安装在使用 apt 的发行版上，这还将安装 g++ 编译器： 
 
 ```bash
 sudo apt install g++ gdb make rsync zip
 ```
+有关详细信息，请参阅[下载、安装和设置 Linux 工作负荷](download-install-and-setup-the-linux-development-workload.md)。
 
 若要为 WSL 配置项目，请参阅[配置 Linux 项目](configure-a-linux-project.md)或[配置 Linux CMake 项目](cmake-linux-project.md)，具体取决于你的项目类型。 要按照分步说明使用 WSL 创建简单的控制台应用程序，请参阅关于 [C++ with Visual Studio 2019 and the Windows Subsystem for Linux (WSL)](https://devblogs.microsoft.com/cppblog/c-with-visual-studio-2019-and-windows-subsystem-for-linux-wsl/)（结合使用 C++ 和 Visual Studio 2019 及适用于 Linux 的 Windows 子系统 (WSL)）的介绍性博客文章。
 
