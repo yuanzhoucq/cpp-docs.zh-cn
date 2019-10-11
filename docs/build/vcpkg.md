@@ -40,7 +40,7 @@ vcpkg 是一种命令行包管理器，可极大简化 Windows、Linux 和 MacOS
 
 ## <a name="search-the-list-of-available-libraries"></a>在列表中搜索可用库
 
-要查看哪些包可用，请在命令提示符中键入：vcpkg search
+要查看哪些包可用，请在命令提示符中键入：vcpkg search 
 
 此命令枚举 vcpkg/ports 子文件夹中的控件文件。 将出现如下的文件列表：
 
@@ -55,7 +55,7 @@ atk       2.24.0  GNOME Accessibility Toolkit
 ...
 ```
 
-可以根据模式筛选，例如 vcpkg search ta：
+ 可以根据模式筛选，例如 vcpkg search ta：
 
 ```cmd
 botan       2.0.1      A cryptography library written in C++11
@@ -65,7 +65,7 @@ taglib      1.11.1-2   TagLib Audio Meta-Data Library
 
 ### <a name="install-a-library-on-your-local-machine"></a>在本地计算机上安装库
 
-在使用 vcpkg search 获取库的名称后，可使用 vcpkg install 下载库并对其进行编译。 vcpkg 在端口目录中使用库的端口文件。 如果未指定三元组，则 vcpkg 将针对目标平台的默认三元组进行安装和编译：x86-windows、x64-linux.cmake 或 x64-osx.cmake。
+在使用 vcpkg search 获取库的名称后，可使用 vcpkg install 下载库并对其进行编译   。 vcpkg 在端口目录中使用库的端口文件。 如果未指定三元组，则 vcpkg 将针对目标平台的默认三元组进行安装和编译：x86-windows、x64-linux.cmake 或 x64-osx.cmake。
 
 对于 Linux 库，vcpkg 取决于本地计算机上安装的 gcc。 在 MacOS 上，vcpkg 使用 Clang。
 
@@ -90,7 +90,7 @@ cmake .. -DCMAKE_TOOLCHAIN_FILE=vcpkg\scripts\buildsystems\vcpkg.cmake (Windows)
 
 ## <a name="list-the-libraries-already-installed"></a>列出已安装的库
 
-在安装某些库以后，可使用 vcpkg list 来查看所获得的内容：
+在安装某些库以后，可使用 vcpkg list 来查看所获得的内容  ：
 
 ```cmd
 > vcpkg list
@@ -107,9 +107,9 @@ zlib:x86-windows        1.2.11   A compression library
 
 ### <a name="per-user"></a>按用户
 
-运行 vcpkg integrate install 来配置 Visual Studio，以便按用户找到所有 vcpkg 头文件和二进制文件，同时还无需手动编辑 VC++ 目录路径。 如果有多个克隆，则运行此命令的克隆将成为新的默认位置。
+运行 vcpkg integrate install 来配置 Visual Studio，以便按用户找到所有 vcpkg 头文件和二进制文件，同时还无需手动编辑 VC++ 目录路径  。 如果有多个克隆，则运行此命令的克隆将成为新的默认位置。
 
-现在，只需键入文件夹/标头就可轻松加入标头，自动完成功能将帮助你完成这一切。 在链接到 lib 或添加项目引用时，无需额外步骤。 下图演示了 Visual Studio 查找 azure-storage-cpp 标头的方法。 vcpkg 将其标头放置在 /installed 子文件夹中，由目标平台予以分区。 下图显示库的 /was 子文件夹中包含文件的列表：
+现在，只需键入文件夹/标头就可轻松加入标头，自动完成功能将帮助你完成这一切。 在链接到 lib 或添加项目引用时，无需额外步骤。 下图演示了 Visual Studio 查找 azure-storage-cpp 标头的方法。 vcpkg 将其标头放置在 /installed 子文件夹中，由目标平台予以分区  。 下图显示库的 /was 子文件夹中包含文件的列表  ：
 
 ![vcpkg IntelliSense 集成](media/vcpkg-intellisense.png "vcpkg 和 IntelliSense")
 
@@ -119,12 +119,12 @@ zlib:x86-windows        1.2.11   A compression library
 
 1. 新建 vcpkg 克隆
 1. 修改库的端口文件以获取所需版本
-1. 运行 vcpkg install \<library>。
-1. 使用 vcpkg integrate project 创建 NuGet 包，它会按项目来引用该库。
+1. 运行 vcpkg install \<library>  。
+1.  使用 vcpkg integrate project 创建 NuGet 包，它会按项目来引用该库。
 
 ## <a name="integrate-with-visual-studio-code-linuxmacos"></a>与 Visual Studio Code (Linux/MacOS) 集成
 
-运行“vcpkg integrate install”，使用 vcpkg 登记的位置在 Linux/MacOS 上配置 Visual Studio Code，并在源文件上启用 IntelliSense。
+运行“vcpkg integrate install”，使用 vcpkg 登记的位置在 Linux/MacOS 上配置 Visual Studio Code，并在源文件上启用 IntelliSense  。
 
 ## <a name="target-linux-from-windows-via-wsl"></a>通过 WSL 从 Windows 指向 Linux
 
@@ -132,13 +132,13 @@ zlib:x86-windows        1.2.11   A compression library
 
 ## <a name="export_binaries_per_project"></a>导出已编译的二进制文件和标头
 
-让团队中的每个成员都去下载和生成库可能会造成效率低下。 一个团队成员就可完成该工作，然后使用 vcpkg export 创建二进制文件和标头的 zip 文件或 NuGet 包（各种格式均可），将其与其他团队成员进行轻松共享。
+让团队中的每个成员都去下载和生成库可能会造成效率低下。 一个团队成员就可完成该工作，然后使用 vcpkg export 创建二进制文件和标头的 zip 文件或 NuGet 包（各种格式均可），将其与其他团队成员进行轻松共享  。
 
 ## <a name="updateupgrade-installed-libraries"></a>更新/升级已安装的库
 
-公共目录始终与最新版本的库保持一致。 要判断哪个本地库已过期，请使用 vcpkg update。 准备好将端口集合更新为公共目录的最新版本后，运行 vcpkg upgrade 命令以自动下载和重新生成任一或所有已安装的过期库。
+公共目录始终与最新版本的库保持一致。 要判断哪个本地库已过期，请使用 vcpkg update  。 准备好将端口集合更新为公共目录的最新版本后，运行 vcpkg upgrade 命令以自动下载和重新生成任一或所有已安装的过期库  。
 
-默认情况下，upgrade 命令仅列出过期库；而不会对它们进行升级。 要执行升级操作，请使用 --no-dry-run 选项。
+ 默认情况下，upgrade 命令仅列出过期库；而不会对它们进行升级。 要执行升级操作，请使用 --no-dry-run 选项  。
 
 ```cmd
   vcpkg upgrade --no-dry-run
@@ -174,7 +174,7 @@ If you are sure you want to rebuild the above packages, run this command with th
 
 ## <a name="remove-a-library"></a>删除库
 
-键入 vcpkg remove 可删除已安装的库。 如果存在任何其他依赖于它的库，则系统会提示通过 --recurse 重新运行命令，如执行此操作，则下游的所有库都会被删除。
+键入 vcpkg remove  可删除已安装的库。 如果存在任何其他依赖于它的库，则系统会提示通过 --recurse 重新运行命令，如执行此操作，则下游的所有库都会被删除  。
 
 ## <a name="customize-vcpkg"></a>自定义 vcpkg
 
@@ -186,7 +186,7 @@ If you are sure you want to rebuild the above packages, run this command with th
 
 ## <a name="send-feedback-about-vcpkg"></a>发送关于 vcpkg 反馈
 
-使用 vcpkg contact --survey 命令向 Microsoft 发送关于 vcpkg 的反馈，包括 Bug 报告和功能上的建议。
+使用 vcpkg contact --survey 命令向 Microsoft 发送关于 vcpkg 的反馈，包括 Bug 报告和功能上的建议  。
 
 ## <a name="the-vcpkg-folder-hierarchy"></a>vcpkg 文件夹层次结构
 
@@ -230,5 +230,5 @@ vcpkg 实例的内容如下：
 
 |选项|说明|
 |---------|---------|
-|**--triplet \<t>**|指定目标体系结构三元组。 （默认：`%VCPKG_DEFAULT_TRIPLET%`，另请参阅“vcpkg help triplet”）|
+|**--triplet \<t>**|指定目标体系结构三元组。 （默认：`%VCPKG_DEFAULT_TRIPLET%`，另请参阅“vcpkg help triplet”  ）|
 |**--vcpkg-root \<path>**|指定 vcpkg 根目录（默认：`%VCPKG_ROOT%`）|

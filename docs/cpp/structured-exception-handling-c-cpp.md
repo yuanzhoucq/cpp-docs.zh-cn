@@ -28,7 +28,7 @@ ms.locfileid: "69498483"
 &nbsp;&nbsp;&nbsp;&nbsp; **__try** *compound-statement* **__except** **(** *expression* **)** *compound-statement*
 
 *try-finally-语句*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__try***复合语句* **__finally***复合语句*
+&nbsp;&nbsp;&nbsp;&nbsp; **__try** *复合语句* **__finally** *复合语句*
 
 ## <a name="remarks"></a>备注
 

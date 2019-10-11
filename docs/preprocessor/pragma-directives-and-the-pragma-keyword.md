@@ -26,7 +26,7 @@ ms.locfileid: "70222303"
 
 ## <a name="syntax"></a>语法
 
-> **#pragma***标记-字符串*\
+> **#pragma** *标记-字符串*\
 > **__pragma (** *标记字符串* **)**
 
 ## <a name="remarks"></a>备注
