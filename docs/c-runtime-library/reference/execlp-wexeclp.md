@@ -66,7 +66,7 @@ intptr_t _wexeclp(
 *cmdname*<br/>
 要执行的文件的路径。
 
-*arg0*，.。。*argn*<br/>
+*arg0*， ... *argn*<br/>
 指向参数的指针的列表。
 
 ## <a name="return-value"></a>返回值
