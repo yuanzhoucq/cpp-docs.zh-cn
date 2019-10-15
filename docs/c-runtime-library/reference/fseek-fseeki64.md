@@ -1,10 +1,10 @@
 ---
 title: fseek、_fseeki64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fseeki64
 - fseek
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fseek
 - _fseeki64
@@ -28,12 +31,12 @@ helpviewer_keywords:
 - file pointers [C++]
 - seek file pointers
 ms.assetid: f6bb1f8b-891c-426e-9e14-0e7e5c62df70
-ms.openlocfilehash: 4cfb4bcea4a110cf8a9c9db664c42d6603328cf0
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
-ms.translationtype: HT
+ms.openlocfilehash: e3da603c3c7f1b083ddb7f7f9577adae9be5e4f1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376082"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956566"
 ---
 # <a name="fseek-_fseeki64"></a>fseek、_fseeki64
 
@@ -67,7 +70,7 @@ int _fseeki64(
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则**fseek**和 **_fseeki64**返回0。 否则，返回一个非零值。 在无法查找的设备上，返回值是未定义的。 如果*stream*为空指针，或*源*不是下述允许的值之一，则**fseek**和 **_fseeki64**将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数会将**errno**设置为**EINVAL** ，并返回-1。
+如果成功，则**fseek**和 **_fseeki64**返回0。 否则，返回一个非零值。 在无法查找的设备上，返回值是未定义的。 如果*stream*为空指针，或*源*不是下述允许的值之一，则**fseek**和 **_fseeki64**将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续, 则这些函数会将**errno**设置为**EINVAL** , 并返回-1。
 
 ## <a name="remarks"></a>备注
 
@@ -87,11 +90,11 @@ int _fseeki64(
 
 - 使用相对于任何原始值的偏移 0 进行查找。
 
-- 当使用[ftell](ftell-ftelli64.md) **fseek** 或 [](ftell-ftelli64.md) **_fseeki64** 时，使用或从文件开头开始查找偏移量值。
+- 当使用**fseek** 或 [_ftelli64](ftell-ftelli64.md) 时，使用或从文件开头开始查找偏移量值。调用 [ftell](ftell-ftelli64.md) **_fseeki64**
 
-此外，在文本模式中，CTRL+Z 将在输入时解释为文件结尾字符。 在打开以进行读取/写入的文件中， [fopen](fopen-wfopen.md)和所有相关例程检查文件末尾的 CTRL + Z，并在可能的情况下将其删除。 完成此操作的原因是，使用**fseek**和[ftell](ftell-ftelli64.md)或 **_fseeki64**和[_Ftelli64](ftell-ftelli64.md)的组合在以 CTRL + Z 结尾的文件中移动可能导致**fseek**或 **_fseeki64**在靠近文件.
+此外，在文本模式中，CTRL+Z 将在输入时解释为文件结尾字符。 在打开以进行读取/写入的文件中, [fopen](fopen-wfopen.md)和所有相关例程检查文件末尾的 CTRL + Z, 并在可能的情况下将其删除。 完成此操作的原因是，使用**fseek**和[ftell](ftell-ftelli64.md)或 **_fseeki64**和[_Ftelli64](ftell-ftelli64.md)的组合在以 CTRL + Z 结尾的文件中移动可能导致**fseek**或 **_fseeki64**在靠近文件.
 
-当 CRT 打开以字节顺序标记 (BOM) 开头的文件时，文件指针位于 BOM 后面（即，位于文件实际内容的开头）。 如果必须**fseek**到文件的开头，请使用[ftell](ftell-ftelli64.md)来获取初始位置并**fseek**到该位置，而不是将其定位到0。
+当 CRT 打开以字节顺序标记 (BOM) 开头的文件时，文件指针位于 BOM 后面（即，位于文件实际内容的开头）。 如果必须**fseek**到文件的开头, 请使用[ftell](ftell-ftelli64.md)来获取初始位置并**fseek**到该位置, 而不是将其定位到0。
 
 此函数在执行期间将锁定其他线程，因此是线程安全的。 有关非锁定版本，请参阅 [_fseek_nolock、_fseeki64_nolock](fseek-nolock-fseeki64-nolock.md)。
 
