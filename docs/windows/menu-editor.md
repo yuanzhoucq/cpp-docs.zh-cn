@@ -39,12 +39,12 @@ helpviewer_keywords:
 - commands [C++], deleting from menus
 - menus [C++], deleting
 ms.assetid: 421fb215-6e12-4ec9-a3af-82d77f87bfa6
-ms.openlocfilehash: f2a5f1ac63007bf44dc331e2104c6e9e5cac23da
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: a21ff3ba736bd345e4b8399a761b5a8d9db531ac
+ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "69514823"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72444982"
 ---
 # <a name="menu-editor-c"></a>菜单编辑器（C++）
 
@@ -59,7 +59,7 @@ ms.locfileid: "69514823"
 
 ### <a name="to-create-a-standard-menu"></a>创建标准菜单
 
-1. **资源视图**"中转到" 菜单**视图** > "，然后右键单击**菜单**标题。 选择 "**添加资源**"，然后选择 "**菜单**"。
+1. 请参阅菜单**视图** > **其他 Windows** > **资源视图**，然后右键单击**菜单**标题。 选择 "**添加资源**"，然后选择 "**菜单**"。
 
 1. 在菜单栏上选择 "**新建项**" 框（此处包含 "*类型*" 的矩形）。
 
@@ -104,7 +104,7 @@ ms.locfileid: "69514823"
    > 键入的文本将同时出现在**菜单编辑器**和 "[属性" 窗口](/visualstudio/ide/reference/properties-window)的 "**标题**" 框中。 你可以在任一位置编辑新菜单的属性。
 
    > [!TIP]
-   > 你可以定义一个允许用户选择菜单命令的助记键（热键）。 在字母前面键入`&`与号（），将其指定为助记键。 用户可以通过键入该字母来选择菜单命令。
+   > 你可以定义一个允许用户选择菜单命令的助记键（热键）。 在字母前面键入与号（`&`），将其指定为助记键。 用户可以通过键入该字母来选择菜单命令。
 
 1. 在 "**属性**" 窗口中，选择适用的菜单命令属性。 有关详细信息，请参阅[菜单命令属性](../windows/menu-command-properties.md)。
 
