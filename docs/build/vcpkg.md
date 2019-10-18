@@ -38,7 +38,7 @@ vcpkg 是一种命令行包管理器，可极大简化 Windows、Linux 和 MacOS
 - **bootstrap-vcpkg.bat** (Windows)
 - **./bootstrap-vcpkg.sh** (Linux、MacOS)
 
-## <a name="search-the-list-of-available-libraries"></a>在列表中搜索可用库
+## <a name="search-the-list-of-available-libraries"></a>搜索可用库列表
 
 要查看哪些包可用，请在命令提示符中键入：vcpkg search 
 
@@ -81,7 +81,7 @@ The following packages will be built and installed:
 Additional packages (*) will be installed to complete this operation.
 ```
 
-对于 CMAKE 项目，通过 CMAKE_TOOLCHAIN_FILE 来配合使用库和 `find_package()`。 例如:
+对于 CMAKE 项目，通过 CMAKE_TOOLCHAIN_FILE 来配合使用库和 `find_package()`。 例如：
 
 ```cmd
 cmake .. -DCMAKE_TOOLCHAIN_FILE=vcpkg/scripts/buildsystems/vcpkg.cmake (Linux/MacOS)
@@ -184,7 +184,7 @@ If you are sure you want to rebuild the above packages, run this command with th
 
 只需删除目录。
 
-## <a name="send-feedback-about-vcpkg"></a>发送关于 vcpkg 反馈
+## <a name="send-feedback-about-vcpkg"></a>发送关于 vcpkg 的反馈
 
 使用 vcpkg contact --survey 命令向 Microsoft 发送关于 vcpkg 的反馈，包括 Bug 报告和功能上的建议  。
 
