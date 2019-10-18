@@ -3,24 +3,28 @@ title: 在 Visual Studio 中配置 CMake 调试会话
 ms.date: 03/21/2019
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: 9899f99994935ec419fff400670644b7d78a190a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 41f53c0c3ea46a8a1aa11215968aaee6c13c2dea
+ms.sourcegitcommit: e33126222c418daf977533ea9e2819d99e0d7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195506"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72534107"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>配置 CMake 调试会话
 
 所有可执行的 CMake 目标都显示在“常规”工具栏的“启动项”下拉列表中。 要启动调试会话，只需选择一个调试会话并启动调试程序。
 
-![CMake“启动项”下拉列表](media/cmake-startup-item-dropdown.png "CMake“启动项”下拉列表")
+![CMake 启动项下拉列表](media/cmake-startup-item-dropdown.png "CMake 启动项下拉列表")
 
-也可以从 CMake 菜单启动调试会话。
+还可以从解决方案资源管理器启动调试会话。 首先，切换到 "**解决方案资源管理器**" 窗口中的 " **CMake 目标" 视图**。
+
+![CMake 目标视图按钮](media/cmake-targets-view.png  "CMake 目标视图菜单项")
+
+然后，右键单击任何可执行文件，然后选择 "**调试**" 或 "**调试和启动设置**"。 **调试**基于活动配置自动开始调试所选目标。 "**调试" 和 "启动设置**" 将打开 "*启动*" 文件，并为所选目标添加新的 "调试" 配置。
 
 ## <a name="customize-debugger-settings"></a>自定义调试器设置
 
-要自定义项目中任何可执行 CMake 目标的调试程序设置，请右键单击特定 CMakeLists.txt 文件，并选择“调试和启动设置”。 (或选择中的目标**目标视图**中**解决方案资源管理器**。)文件在子菜单中选择 CMake 目标，称为**launch.vs.json**创建。 此文件预填充了所选 CMake 目标的相关信息，且允许指定程序参数或调试程序类型等其他参数。 若要引用中的任意键**CMakeSettings.json**文件中，前面加上其与`cmake.`中**launch.vs.json**。 下面的示例演示一个简单**launch.vs.json**的值中提取的文件`remoteCopySources`中的键**CMakeSettings.json**当前所选配置文件：
+要自定义项目中任何可执行 CMake 目标的调试程序设置，请右键单击特定 CMakeLists.txt 文件，并选择“调试和启动设置”。 （或在**解决方案资源管理器**中的 "**目标" 视图**中选择目标。）当你在子菜单中选择 CMake 目标时 **，将创建一个名为**的文件。 此文件预填充了所选 CMake 目标的相关信息，且允许指定程序参数或调试程序类型等其他参数。 若要引用**CMakeSettings**文件中的任何密钥，**请在该**文件的开头加上 `cmake.`。 下面的示例显示一个简单的**启动**文件，该文件将在**CMakeSettings**文件中提取当前所选配置的 `remoteCopySources` 项的值：
 
 ```json
 {
@@ -38,11 +42,11 @@ ms.locfileid: "62195506"
 }
 ```
 
-一旦您保存**launch.vs.json**文件中，在创建一个条目**启动项**下拉列表中使用新名称。 通过编辑**launch.vs.json**文件中，您可以创建任意数量的 CMake 目标的任意数量的调试配置。
+一旦您保存了**启动. vs json**文件，就会在 "**启动项**" 下拉列表中创建一个具有新名称的条目。 通过编辑 CMake**文件，** 可为任意数量的目标创建任意数量的调试配置。
 
 ## <a name="support-for-cmakesettings-variables"></a>对 CMakeSettings 变量的支持
 
- **Launch.vs.json**支持中声明的变量**CMakeSettings.json** （见下文） 和适用于当前所选的配置。 它还具有一个名为密钥`currentDir`，用于设置适用于本地项目的启动应用的当前目录：
+ **启动. 与 json**支持在**CMakeSettings**中声明的变量（请参阅下文）和适用于当前所选配置的变量。 它还具有一个名为 `currentDir` 的密钥，该密钥为本地项目设置正在启动的应用程序的当前目录：
 
 ```json
 {
@@ -60,7 +64,7 @@ ms.locfileid: "62195506"
 C:\Users\satyan\7f14809a-2626-873e-952e-cdf038211175\
 ```
 
-注册表项 cwd 设置为远程项目启动应用程序的当前目录。 默认值为 ${debugInfo.defaultWorkingDirectory} 的计算结果为 
+键 "cwd" 为远程项目设置启动应用程序的当前目录。 默认值为 "$ {debugInfo. System.defaultworkingdirectory}"，其计算结果为 
 
 ```cmd
 /var/tmp/src/bfc6f7f4-4f0f-8b35-80d7-9198fa973fb9/Linux-Debug
