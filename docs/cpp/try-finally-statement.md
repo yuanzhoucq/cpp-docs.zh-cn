@@ -21,10 +21,10 @@ helpviewer_keywords:
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
 ms.openlocfilehash: c26b72f7c675a4130f38c515cf71ecc290328ccc
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "69498610"
 ---
 # <a name="try-finally-statement"></a>try-finally 语句
@@ -33,26 +33,26 @@ ms.locfileid: "69498610"
 
 以下语法介绍了**try finally**语句：
 
-> **\_\_然后**<br/>
+> **\_ \_try**<br/>
 > {<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;受保护代码<br/>
+> &nbsp; &nbsp; &nbsp; &nbsp;//受保护代码<br/>
 > }<br/>
-> **\_\_最后**<br/>
+> **\_ \_finally**<br/>
 > {<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;终止代码<br/>
+> &nbsp; &nbsp; &nbsp; &nbsp;//终止代码<br/>
 > }
 
 ## <a name="grammar"></a>语法
 
 try-finally-statement:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **\_\_请尝试** *复合语句* **\_\_最后** *复合语句*
+&nbsp; &nbsp; &nbsp; &nbsp; **\_** \_try *\_ 复合语句* **0finally**
 
 **Try-catch**语句是 C 和C++语言的 Microsoft 扩展，使目标应用程序能够在代码块的执行被中断时保证清理代码的执行。 清理包括多个任务，如释放内存、关闭文件和释放文件句柄。 对于有多个位置的例程，使用**try finally**语句对于可能导致例程提前返回的错误，特别有用。
 
 有关相关信息和代码示例，请参阅[try-Except 语句](../cpp/try-except-statement.md)。 有关结构化异常处理的一般详细信息，请参阅[结构化异常处理](../cpp/structured-exception-handling-c-cpp.md)。 有关通过C++/cli 处理托管应用程序中的异常的详细信息，请参阅[/Clr 下的异常处理](../extensions/exception-handling-cpp-component-extensions.md)。
 
 > [!NOTE]
-> 结构化异常处理适用于 Win32 中的 C 和 C++ 源文件。 但是，这不是专门为 C++ 设计的。 您可通过使用 C++ 异常处理来确保提高代码的可移植性。 此外，C++ 异常处理更为灵活，因此它可以处理任何类型的异常。 对于 C++ 程序，建议你使用 C++ 异常处理机制 ([try、 catch 和 throw](../cpp/try-throw-and-catch-statements-cpp.md)语句)。
+> 结构化异常处理适用于 Win32 中的 C 和 C++ 源文件。 但是，这不是专门为 C++ 设计的。 您可通过使用 C++ 异常处理来确保提高代码的可移植性。 此外，C++ 异常处理更为灵活，因此它可以处理任何类型的异常。 对于C++程序，建议使用C++异常处理机制（[try、catch 和 throw](../cpp/try-throw-and-catch-statements-cpp.md)语句）。
 
 **__Try**子句后的复合语句是受保护的部分。 **__Finally**子句后的复合语句是终止处理程序。 处理程序指定了在退出受保护部分时执行的一组操作，无论受保护部分是因异常（不正常终止）还是因标准失效（正常终止）导致退出。
 
@@ -66,15 +66,15 @@ Control 通过简单的顺序执行（贯穿）到达 **__try**语句。 当控�
 
 如果 **__try**块中发生异常，则操作系统必须查找异常的处理程序，否则程序将失败。 如果找到处理程序，则将执行任何和所有 **__finally**块并在处理程序中恢复执行。
 
-例如，假设一个函数调用系列将函数 A 链接到函数 D，如下图所示。 每个函数均有一个终止处理程序。 如果在函数 D 中引发了异常并在中进行了处理，则终止处理程序将按此顺序调用，因为系统将展开堆栈：D、C、B。
+例如，假设一个函数调用系列将函数 A 链接到函数 D，如下图所示。 每个函数均有一个终止处理程序。 如果异常在函数 D 中引发并在函数 A 中得到处理，则当系统展开堆栈时，按以下顺序调用终止处理程序：D、C、B。
 
-![&#45;]终止处理程序执行顺序终止处理程序执行(../cpp/media/vc38cx1.gif "顺序&#45;") <br/>
+![终止&#45;处理程序执行顺序](../cpp/media/vc38cx1.gif "终止&#45;处理程序执行顺序") <br/>
 终止处理程序执行顺序
 
 > [!NOTE]
 > Try-finally 的行为不同于支持**最终**使用的其他一些语言，如C#。  单个 **__try**可以有，而不能同时具有 **__finally**和 **__except**。  如果同时使用二者，则外部 try-except 语句必须包含内部 try-finally 语句。  指定何时执行每个块的规则也有所不同。
 
-为了与早期版本兼容， **_try**、 **_finally**和 **_leave**是 **__try**、 **__finally**和 **__leave**的同义词，除非编译器选项[/za \(禁用语言扩展）](../build/reference/za-ze-disable-language-extensions.md)已指定。
+为了与早期版本兼容， **_try**、 **_finally**和 **_leave**是 **__try**、 **__finally**和 **__leave**的同义词，除非编译器选项[/za \(Disable 语言扩展）](../build/reference/za-ze-disable-language-extensions.md)是规定.
 
 ## <a name="the-__leave-keyword"></a>__leave 关键字
 
