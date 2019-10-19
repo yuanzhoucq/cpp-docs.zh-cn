@@ -1,26 +1,26 @@
 ---
 title: 可变参数宏
-ms.date: 08/29/2019
+ms.date: 10/17/2019
 helpviewer_keywords:
 - variadic macros [C++]
 - __VA_ARGS__ variadic macro specifier
 ms.assetid: 51e757dc-0134-4bb2-bb74-64ea5ad75134
-ms.openlocfilehash: 171ea797adc1e407a8b7ef0592508653f758df64
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: de4d3a7f03f613cb058e564664f01837df23aefb
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216516"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72587882"
 ---
 # <a name="variadic-macros"></a>可变参数宏
 
-可变参数宏是类似于函数的宏, 其中包含可变数量的参数。
+可变参数宏是类似于函数的宏，其中包含可变数量的参数。
 
 ## <a name="remarks"></a>备注
 
-若要使用可变参数宏, 可以在宏定义中将省略号指定为最后一个形参, 并且可以在定义中使用`__VA_ARGS__`替换标识符来插入额外参数。  `__VA_ARGS__`替换为与省略号匹配的所有参数, 其中包括它们之间的逗号。
+若要使用可变参数宏，可以在宏定义中将省略号指定为最后一个形参，并且可以在定义中使用替换标识符 `__VA_ARGS__` 来插入额外参数。  `__VA_ARGS__` 替换为与省略号匹配的所有参数，其中包括它们之间的逗号。
 
-C 标准指定必须至少将一个参数传递给省略号, 以确保宏不会解析为带有尾随逗号的表达式。 如果没有参数C++传递给省略号, 则传统的 Microsoft 实现会禁止使用尾随逗号。
+C 标准指定必须至少将一个参数传递给省略号，以确保宏不会解析为带有尾随逗号的表达式。 如果没有参数C++传递给省略号，则传统的 Microsoft 实现会禁止使用尾随逗号。 如果设置了 `/experimental:preprocessor` 编译器选项，则不会取消尾部的逗号。
 
 ## <a name="example"></a>示例
 

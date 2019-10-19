@@ -1,18 +1,18 @@
 ---
 title: Platform::ArrayReference 类
-ms.date: 12/30/2016
+ms.date: 10/16/2019
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::ArrayReference::ArrayReference
 helpviewer_keywords:
 - Platform::ArrayReference Class
 ms.assetid: 9ab3b15e-8a60-4600-8fcb-7d6c86284f4b
-ms.openlocfilehash: 923f60e90517e377b99d5e29f38c48b2633c3c46
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f7e587902f1c99b294ed79255397aeffccee26b5
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161566"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72587912"
 ---
 # <a name="platformarrayreference-class"></a>Platform::ArrayReference 类
 
@@ -24,22 +24,22 @@ ms.locfileid: "62161566"
 class ArrayReference
 ```
 
-### <a name="members"></a>成员
+### <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|“属性”|描述|
 |----------|-----------------|
-|[ArrayReference::ArrayReference](#ctor)|初始化 `ArrayReference` 类的新实例。|
+|[ArrayReference：： ArrayReference](#ctor)|初始化 `ArrayReference` 类的新实例。|
 
 ### <a name="public-operators"></a>公共运算符
 
-|名称|描述|
+|“属性”|描述|
 |----------|-----------------|
 |[ArrayReference::operator() 运算符](#operator-call)|将此 `ArrayReference` 转换为 `Platform::Array<T>^*`。|
 |[ArrayReference::operator= 运算符](#operator-assign)|将另一 `ArrayReference` 的内容分配给此实例。|
 
-## <a name="exceptions"></a>Exceptions
+## <a name="exceptions"></a>异常
 
 ### <a name="remarks"></a>备注
 
@@ -55,9 +55,9 @@ class ArrayReference
 
 **标头：** vccorlib.h
 
-## <a name="ctor"></a>  Arrayreference:: Arrayreference 构造函数
+## <a name="ctor"></a>ArrayReference：： ArrayReference 构造函数
 
-初始化的新实例[platform:: arrayreference](../cppcx/platform-arrayreference-class.md)类。
+初始化[Platform：： ArrayReference](../cppcx/platform-arrayreference-class.md)类的新实例。
 
 ### <a name="syntax"></a>语法
 
@@ -79,9 +79,9 @@ ArrayReference(ArrayReference&& otherArg)
 
 ### <a name="remarks"></a>备注
 
-## <a name="operator-assign"></a>  Arrayreference:: Operator = 运算符
+## <a name="operator-assign"></a>ArrayReference：： operator = 运算符
 
-将指定的对象分配给当前[platform:: arrayreference](../cppcx/platform-arrayreference-class.md)通过使用移动语义的对象。
+使用移动语义将指定对象分配给当前[Platform：： ArrayReference](../cppcx/platform-arrayreference-class.md)对象。
 
 ### <a name="syntax"></a>语法
 
@@ -102,9 +102,9 @@ ArrayReference& operator=(ArrayReference&& otherArg);
 
 `Platform::ArrayReference` 是标准 C++ 类模板，而不是 ref 类。
 
-## <a name="operator-call"></a>  ArrayReference::operator() 运算符
+## <a name="operator-call"></a>ArrayReference：： operator （）运算符
 
-将当前[platform:: arrayreference](../cppcx/platform-arrayreference-class.md)对象返回到[platform:: array](../cppcx/platform-array-class.md)类。
+将当前[Platform：： ArrayReference](../cppcx/platform-arrayreference-class.md)对象转换回[Platform：： Array](../cppcx/platform-array-class.md)类。
 
 ### <a name="syntax"></a>语法
 
@@ -118,7 +118,7 @@ Array<TArg>^ operator ();
 
 ### <a name="remarks"></a>备注
 
-[Platform:: arrayreference](../cppcx/platform-arrayreference-class.md)并[platform:: array](../cppcx/platform-array-class.md)标准C++类模板，而不是 ref 类。
+[Platform：： ArrayReference](../cppcx/platform-arrayreference-class.md)是标准C++类模板， [platform：： Array](../cppcx/platform-array-class.md)是 ref 类。
 
 ## <a name="see-also"></a>请参阅
 
