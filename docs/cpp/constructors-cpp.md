@@ -1,23 +1,23 @@
 ---
 title: 构造函数 (C++)
-ms.date: 09/05/2019
+ms.date: 10/17/2019
 helpviewer_keywords:
 - constructors [C++]
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: 0e2e3536c8eb0a5b111ff18e43044783ea684f1f
-ms.sourcegitcommit: bf724dfc639b16d5410fab72183f8e6b781338bc
+ms.openlocfilehash: 799be6cfd4b14061ba61586f361dd884ad59224c
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71062033"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72587939"
 ---
 # <a name="constructors-c"></a>构造函数 (C++)
 
 若要自定义类成员的初始化方式，或在创建类的对象时调用函数，请定义*构造函数*。 构造函数具有与类相同的名称，没有返回值。 你可以根据需要定义任意多个重载构造函数，以各种方式自定义初始化。 通常，构造函数具有公共可访问性，以便类定义或继承层次结构外的代码可以创建类的对象。 但也可以将构造函数声明为**受保护**或**私有**。
 
-构造函数可以选择采用成员 init list。 这是一种更有效的方法来初始化类成员，而不是在构造函数主体中赋值。 下面的示例演示具有三`Box`个重载构造函数的类。 最后两个使用成员 init 列表：
+构造函数可以选择采用成员 init list。 这是一种更有效的方法来初始化类成员，而不是在构造函数主体中赋值。 下面的示例演示一个具有三个重载构造函数的类 `Box`。 最后两个使用成员 init 列表：
 
 ```cpp
 class Box {
@@ -64,11 +64,11 @@ int main()
 
 - 构造函数可以声明为**内联**、[显式](#explicit_constructors)、**友元**或[constexpr](#constexpr_constructors)。
 - 构造函数可以初始化已声明为**const**、 **volatile**或**const volatile**的对象。 构造函数完成后，对象成为**const**对象。
-- 若要在实现文件中定义构造函数，请为它提供一个与任何其他成员函数相同`Box::Box(){...}`的限定名称：。
+- 若要在实现文件中定义构造函数，请为其指定一个与任何其他成员函数相同的限定名称： `Box::Box(){...}`。
 
 ## <a name="member_init_list"></a>成员初始值设定项列表
 
-构造函数可以选择具有成员初始值设定项列表，该列表在执行构造函数正文之前初始化类成员。 （请注意，成员初始值设定项列表与[std：： initializer_list\<T >](../standard-library/initializer-list-class.md)类型的*初始值设定项列表*不同。）
+构造函数可以选择具有成员初始值设定项列表，该列表在执行构造函数正文之前初始化类成员。 （请注意，成员初始值设定项列表与[std：： initializer_list](../standard-library/initializer-list-class.md)的类型的*初始值设定项列表*不同 \<T >。）
 
 首选使用成员初始值设定项列表，而不是在构造函数的主体中赋值，因为它直接初始化成员。 在下面的示例中，成员初始值设定项列表由冒号后面的所有**标识符（自变量）** 表达式组成：
 
@@ -78,7 +78,7 @@ int main()
     {}
 ```
 
-标识符必须引用类成员;它是用参数的值初始化的。 参数可以是构造函数参数之一、函数调用或[std：： initializer_list\<T >](../standard-library/initializer-list-class.md)。
+标识符必须引用类成员;它是用参数的值初始化的。 参数可以是构造函数参数之一、函数调用或[std：： initializer_list \<T >](../standard-library/initializer-list-class.md)。
 
 必须在成员初始值设定项列表中初始化**常量**成员和引用类型的成员。
 
@@ -180,7 +180,7 @@ Box boxes[3]{ { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
 
 ## <a name="copy_and_move_constructors"></a>复制构造函数
 
-A*复制构造函数*是特殊成员函数，将作为输入的相同对象的引用类型，并使它的一个副本。 如果类成员是所有简单类型（如标量值），则编译器生成的复制构造函数便已足够，无需自行定义。 如果你的类需要更复杂的初始化，则需要实现自定义复制构造函数。 例如，如果类成员是一个指针，则需要定义一个复制构造函数以分配新内存并从另一个指向对象复制值。 编译器生成的复制构造函数只复制指针，使新指针仍指向另一个内存位置。
+*复制构造函数*通过从同一类型的对象复制成员值来初始化对象。 如果类成员是所有简单类型（如标量值），则编译器生成的复制构造函数便已足够，无需自行定义。 如果你的类需要更复杂的初始化，则需要实现自定义复制构造函数。 例如，如果类成员是一个指针，则需要定义一个复制构造函数以分配新内存并从另一个指向对象复制值。 编译器生成的复制构造函数只复制指针，使新指针仍指向另一个内存位置。
 
 复制构造函数可能具有以下其中一个签名：
 
@@ -194,7 +194,7 @@ A*复制构造函数*是特殊成员函数，将作为输入的相同对象的�
     Box(Box& other, int i = 42, string label = "Box");
 ```
 
-定义复制构造函数时，还应定义复制赋值运算符（=）。 有关更多信息，请参见[赋值](assignment.md)和[复制构造函数和复制赋值运算符](copy-constructors-and-copy-assignment-operators-cpp.md)。
+定义复制构造函数时，还应定义复制赋值运算符（=）。 有关详细信息，请参阅[分配](assignment.md)和[复制构造函数和复制赋值运算符](copy-constructors-and-copy-assignment-operators-cpp.md)。
 
 可以通过将复制构造函数定义为已删除，阻止复制对象：
 
@@ -206,13 +206,13 @@ A*复制构造函数*是特殊成员函数，将作为输入的相同对象的�
 
 ## <a name="move_constructors"></a>移动构造函数
 
-*移动构造函数*是一种特殊的成员函数，它将现有对象的数据的所有权转移到新的变量，而不复制原始数据。 它采用右值引用作为其第一个参数，任何其他参数都必须具有默认值。 移动构造函数可在传递大型对象时显著提高程序的效率。 移动构造函数采用右值引用作为其第一个参数。 任何其他参数都必须具有默认值。
+*移动构造函数*是一种特殊的成员函数，它将现有对象的数据的所有权转移到新的变量，而不复制原始数据。 它采用右值引用作为其第一个参数，任何其他参数都必须具有默认值。 移动构造函数可在传递大型对象时显著提高程序的效率。
 
 ```cpp
 Box(Box&& other);
 ```
 
-在某些情况下，编译器将在以下情况下选择移动构造函数：对象正由与要销毁的同一类型的另一个对象进行初始化，而不再需要使用资源。 下面的示例演示了通过重载决策选择移动构造函数时的一种情况。 Get_Box （）返回的变量*框*是即将超出范围的*xvalue* （即将过期值）。 若要为此示例提供动机，我们将提供一个表示其内容的大型字符串矢量。 移动构造函数将其从 "过期" 值 "box" 中删除，以便向量现在属于新对象，而不是复制向量及其字符串。 对`std::move`的调用是所需的全部， `vector`因为和`string`类实现其自己的移动构造函数。
+在某些情况下，编译器将在以下情况下选择移动构造函数：对象正由与要销毁的同一类型的另一个对象进行初始化，不再需要其资源。 下面的示例演示了通过重载决策选择移动构造函数时的一种情况。 在调用 `get_Box()` 的构造函数中，返回的值为*xvalue* （值过期）。 它未分配给任何变量，因此即将超出范围。 若要为此示例提供动机，我们将提供一个表示其内容的大型字符串矢量。 移动构造函数将其从 "过期" 值 "box" 中删除，以便向量现在属于新对象，而不是复制向量及其字符串。 对 `std::move` 的调用都是必需的，因为 `vector` 和 `string` 类都实现自己的移动构造函数。
 
 ```cpp
 #include <iostream>
@@ -283,7 +283,7 @@ int main()
 
 如果任何属于类类型的成员缺少析构函数，或者编译器无法确定要用于移动操作的构造函数，则将隐式声明的移动构造函数定义为已删除。
 
-有关如何编写非普通移动构造函数的详细信息，请参阅[移动构造函数和移动赋值运算符 （C++）](../cpp/move-constructors-and-move-assignment-operators-cpp.md)。
+有关如何编写非普通移动构造函数的详细信息，请参阅[移动构造函数和移动赋值运算符（C++）](../cpp/move-constructors-and-move-assignment-operators-cpp.md)。
 
 ## <a name="explicitly_defaulted_and_deleted_constructors"></a>显式默认的和删除的构造函数
 
@@ -318,7 +318,7 @@ public:
 
 ## <a name="init_list_constructors"></a>初始值设定项列表构造函数
 
-如果构造函数采用[std：：\<initializer_list T\> ](../standard-library/initializer-list-class.md)作为参数，并且任何其他参数都具有默认参数，则当通过 direct 实例化类时，将在重载解析中选择该构造函数。起始. 您可以使用 initializer_list 初始化可以接受它的任何成员。 例如，假设 Box 类（前面所示）具有`std::vector<string>`成员。 `m_contents` 可以提供如下所示的构造函数：
+如果构造函数采用[std：： initializer_list \<T \>](../standard-library/initializer-list-class.md)作为其参数，并且任何其他参数都具有默认参数，则当通过 direct 实例化类时，将在重载决策中选择该构造函数：起始. 您可以使用 initializer_list 初始化可以接受它的任何成员。 例如，假设 Box 类（前面所示）具有 `std::vector<string>` 成员 `m_contents`。 可以提供如下所示的构造函数：
 
 ```cpp
     Box(initializer_list<string> list, int w = 0, int h = 0, int l = 0)
@@ -435,7 +435,7 @@ Contained3 ctor
 DerivedContainer ctor
 ```
 
-派生类构造函数始终调用基类构造函数，因此，在完成任何额外任务之前，它可以依赖于完全构造的基类。 按派生顺序调用基类构造函数`ClassA` ，例如，如果派生自`ClassB` `ClassC` `ClassC` ，派生自，则先调用构造函数，然后`ClassB`调用构造函数，然后调用`ClassA`构造函数。
+派生类构造函数始终调用基类构造函数，因此，在完成任何额外任务之前，它可以依赖于完全构造的基类。 基类构造函数按派生顺序调用-例如，如果 `ClassA` 派生自 `ClassB` 派生自 `ClassC`，则先调用 `ClassC` 构造函数，然后调用 `ClassB` 构造函数，然后调用 `ClassA` 构造函数。
 
 如果基类没有默认构造函数，则必须在派生类构造函数中提供基类构造函数参数：
 
@@ -544,7 +544,7 @@ public:
 
 所有构造函数完成后，完全初始化的构造函数将立即创建对象。 有关详细信息，请参阅[统一初始化和委托构造函数](../cpp/uniform-initialization-and-delegating-constructors.md)。
 
-## <a name="inheriting_constructors"></a> 继承构造函数 (C++ 11)
+## <a name="inheriting_constructors"></a>继承构造函数（c + + 11）
 
 派生类可以使用**using**声明从直接基类继承构造函数，如下面的示例中所示：
 
@@ -597,7 +597,7 @@ Derived d4 calls: Base()*/
 
 ::: moniker range=">=vs-2017"
 
-**Visual Studio 2017 版本 15.7 及更高版本**： **/Std： c + + 17**模式中的**using**语句可将基类中的所有构造函数作为作用域，但具有与派生类中的构造函数相同的签名的类除外。 一般而言，当派生类未声明新数据成员或构造函数时，最好使用继承构造函数。 另请参阅[Visual Studio 2017 版本15.7 中的改进](https://docs.microsoft.com/cpp/overview/cpp-conformance-improvements?view=vs-2017#improvements_157)。
+**Visual Studio 2017 版本15.7 及更高版本**：/Std 中的**Using**语句 **： c + + 17**模式使基类中的所有构造函数的作用域除外，但具有与派生类中的构造函数相同的签名的类除外。 一般而言，当派生类未声明新数据成员或构造函数时，最好使用继承构造函数。 另请参阅[Visual Studio 2017 版本15.7 中的改进](https://docs.microsoft.com/cpp/overview/cpp-conformance-improvements?view=vs-2017#improvements_157)。
 
 ::: moniker-end
 

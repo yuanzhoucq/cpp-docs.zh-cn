@@ -40,10 +40,10 @@ helpviewer_keywords:
 - erfc function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
 ms.openlocfilehash: df724ed056c02d79b5b51f97ae4aaf8ae267fde5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "70937620"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf、erff、erfl、erfc、erfcf、erfcl
@@ -98,7 +98,7 @@ long double erfcl(
 
 **Erf**函数计算*x*的高斯错误函数，该函数定义为：
 
-![X 的 error 函数](media/crt_erf_formula.PNG "X 的 error 函数")
+![X 的 error 函数](media/crt_erf_formula.PNG "x 的错误函数")
 
 互补高斯错误函数定义为 erf （x）。 **Erf**函数返回的值范围为-1.0 到1.0。 无错误返回。 **Erfc**函数返回0到2范围内的值。 如果*x*对于**erfc**太大，则将**errno**变量设置为**ERANGE**。
 
@@ -110,7 +110,7 @@ long double erfcl(
 |--------------|---------------------|
 |**erf**、 **erff**、 **erfl**、 **erfc**、 **erfcf**、 **erfcl**|\<math.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参见 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>请参阅
 
