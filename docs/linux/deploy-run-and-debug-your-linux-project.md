@@ -18,7 +18,7 @@ Linux 支持在 Visual Studio 2017 及更高版本中提供。
 
 ::: moniker-end
 
-在 Visual Studio 中创建 Linux C++ 项目，并使用 [Linux 连接管理器](connect-to-your-remote-linux-computer.md)连接到该项目，即可运行和调试该项目。 在远程目标上编译、执行和调试代码。
+在 Visual Studio 中创建 Linux C++ 项目，并使用 [Linux 连接管理器](connect-to-your-remote-linux-computer.md)连接到该项目后，即可运行和调试该项目。 在远程目标上编译、执行和调试代码。
 
 ::: moniker range="vs-2019"
 
@@ -108,7 +108,7 @@ Visual Studio 2019 版本 16.1：可以面向不同 Linux 系统进行调试和�
 
 ## <a name="debug-with-attach-to-process"></a>使用“附加到进程”进行调试
 
-Visual Studio 项目的[调试](prop-pages/debugging-linux.md)属性页和 CMake 项目的Launch.vs.json 设置具有允许附加到正在运行的进程的设置  。 如果需要除了这些设置中提供的控制外的其他控制，则可以将名为 `Microsoft.MIEngine.Options.xml` 的文件置于解决方案或工作区的根路径中。 下面是一个简单的示例：
+Visual Studio 项目的[调试](prop-pages/debugging-linux.md)属性页和 CMake 项目的 Launch.vs.json 设置具有允许附加到正在运行的进程的设置  。 如果需要除了这些设置中提供的控制外的其他控制，则可以将名为 `Microsoft.MIEngine.Options.xml` 的文件置于解决方案或工作区的根路径中。 下面是一个简单的示例：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
