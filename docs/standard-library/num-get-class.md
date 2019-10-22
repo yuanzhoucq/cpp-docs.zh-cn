@@ -14,16 +14,16 @@ helpviewer_keywords:
 - std::num_get [C++], do_get
 - std::num_get [C++], get
 ms.assetid: 9933735d-3918-4b17-abad-5fca2adc62d7
-ms.openlocfilehash: 67aef1ce52b6717ce6d6381429982cf660aa5e20
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 5c6fec7002541b519d7cf7d043eed3e5c932bcb9
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457646"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689235"
 ---
 # <a name="num_get-class"></a>num_get 类
 
-一种模板类，用于描述一个对象来充当区域设置 facet，以便控制 `CharType` 类型的序列向数值的转换。
+一个类模板，用于描述一个对象，该对象可充当区域设置 facet，以控制 `CharType` 类型为数值的序列的转换。
 
 ## <a name="syntax"></a>语法
 
@@ -34,10 +34,10 @@ class num_get : public locale::facet;
 
 ### <a name="parameters"></a>参数
 
-*CharType*\
+*CharType* \
 在程序中用于对区域设置中的字符进行编码的类型。
 
-*InputIterator*\
+*InputIterator* \
 数值获取函数从中读取其输入的迭代器类型。
 
 ## <a name="remarks"></a>备注
@@ -68,7 +68,7 @@ class num_get : public locale::facet;
 
 **标头：** \<locale>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="char_type"></a>  num_get::char_type
 
@@ -167,19 +167,19 @@ virtual iter_type do_get(
 
 ### <a name="parameters"></a>参数
 
-*1*\
+*第一个*\
 从其中读取数字的字符范围的起始处。
 
-*时间*\
+*最后*\
 从其中读取数字的字符范围的末尾处。
 
-*_Iosbase*\
+*_Iosbase* \
 [Ios_base](../standard-library/ios-base-class.md)，其标志由转换使用。
 
-*_State*\
+*_State* \
 发生故障时向其添加 failbit（请参阅 [ios_base::iostate](../standard-library/ios-base-class.md#iostate)）的状态。
 
-*初始值*\
+*val* \
 读取的值。
 
 ### <a name="return-value"></a>返回值
@@ -199,9 +199,9 @@ virtual iter_type do_get(
     long& val) const;
 ```
 
-匹配顺序元素，从序列`[first, last)`中的*第一个*开始直到识别完整的非空整数输入字段。 如果成功，它会将此字段转换为其等效的值作为类型**long**，并将结果存储为*val*。 它将返回一个迭代器，指定第一个超出数字输入字段的元素。 否则，该函数将不存储*val*中的`ios_base::failbit`任何`state`内容，并在中设置。 它将返回一个迭代器，指定第一个超出有效整数输入字段的任何前缀的元素。 在任一情况下，如果返回的值等于 `last`，该函数在 `state` 中设置 `ios_base::eofbit`。
+匹配序列中的*第一个*序列元素，`[first, last)` 直到它识别完整的非空整数输入字段。 如果成功，它会将此字段转换为其等效的值作为类型**long**，并将结果存储为*val*。 它将返回一个迭代器，指定第一个超出数字输入字段的元素。 否则，该函数在*val*中存储任何内容，并在 `state` 中设置 `ios_base::failbit`。 它将返回一个迭代器，指定第一个超出有效整数输入字段的任何前缀的元素。 在任一情况下，如果返回的值等于 `last`，该函数在 `state` 中设置 `ios_base::eofbit`。
 
-整数输入字段由扫描函数使用的相同规则进行转换，以便对文件中的一系列**char**元素进行匹配和转换。 （假定每个**char**元素都按简单的一对一映射映射到类型`Elem`的等效元素。）确定等效的扫描转换规格，如下所示：
+整数输入字段由扫描函数使用的相同规则进行转换，以便对文件中的一系列**char**元素进行匹配和转换。 （假定每个此类**char**元素都映射到一个由简单的一对一映射 `Elem` 的类型的等效元素。）确定等效的扫描转换规范，如下所示：
 
 如果 `iosbase.`[ios_base::flags](../standard-library/ios-base-class.md#flags)`() & ios_base::basefield == ios_base::`[oct](../standard-library/ios-functions.md#oct)，则转换规格为 `lo`。
 
@@ -414,19 +414,19 @@ iter_type get(
 
 ### <a name="parameters"></a>参数
 
-*1*\
+*第一个*\
 从其中读取数字的字符范围的起始处。
 
-*时间*\
+*最后*\
 从其中读取数字的字符范围的末尾处。
 
-*_Iosbase*\
+*_Iosbase* \
 [Ios_base](../standard-library/ios-base-class.md)，其标志由转换使用。
 
-*_State*\
+*_State* \
 发生故障时向其添加 failbit（请参阅 [ios_base::iostate](../standard-library/ios-base-class.md#iostate)）的状态。
 
-*初始值*\
+*val* \
 读取的值。
 
 ### <a name="return-value"></a>返回值
@@ -437,13 +437,13 @@ iter_type get(
 
 所有成员函数都返回 [do_get](#do_get)( `first`, `last`, `_Iosbase`, `_State`, `val`)。
 
-第一个受保护的虚拟成员函数首先会在序列 [ `first`, `last`) 中尝试匹配序列连续元素，直到识别到完整的非空整数输入字段。 如果成功，它会将此字段转换为其等效的值作为类型**long** ，并将结果存储在*val*中。 它将返回一个迭代器，指定第一个超出数字输入字段的元素。 否则，该函数将不存储*val*中的`ios_base::failbit`任何内容并将其设置为 _*状态*。 它将返回一个迭代器，指定第一个超出有效整数输入字段的任何前缀的元素。 在任一情况下，如果返回值等于*last*，则函数将`ios_base::eofbit`在 *_State*中设置。
+第一个受保护的虚拟成员函数首先会在序列 [ `first`, `last`) 中尝试匹配序列连续元素，直到识别到完整的非空整数输入字段。 如果成功，它会将此字段转换为其等效的值作为类型**long** ，并将结果存储在*val*中。 它将返回一个迭代器，指定第一个超出数字输入字段的元素。 否则，该函数将不会在*val*中存储任何内容，并将 `ios_base::failbit` 设置为 _*状态*。 它将返回一个迭代器，指定第一个超出有效整数输入字段的任何前缀的元素。 在任一情况下，如果返回值等于*last*，则函数将在 *_State*中设置 `ios_base::eofbit`。
 
-整数输入字段由扫描函数使用的相同规则进行转换，以便对文件中的一系列**char**元素进行匹配和转换。 假定每个**char**元素都按简单的一对一映射映射到类型`CharType`的等效元素。 确定等效的扫描转换规格，如下所示：
+整数输入字段由扫描函数使用的相同规则进行转换，以便对文件中的一系列**char**元素进行匹配和转换。 假定每个**char**元素都映射到一个由简单的一对一映射 `CharType` 的类型的等效元素。 确定等效的扫描转换规格，如下所示：
 
-- 如果 `iosbase`. [标志](../standard-library/ios-base-class.md#flags) & `ios_base::basefield` == `ios_base::`[oct](../standard-library/ios-functions.md#oct)，转换规格为`lo`。
+- 如果 `iosbase`. [标记](../standard-library/ios-base-class.md#flags) &  `ios_base::basefield`  ==  `ios_base::`[10 月](../standard-library/ios-functions.md#oct)，则转换规范为 `lo`。
 
-- 如果**iosbase** & **ios_base：： basefield** == `ios_base::`[hex](../standard-library/ios-functions.md#hex)，则转换规格为`lx`。
+- 如果**iosbase**  & **ios_base：： basefield**  ==  `ios_base::`[hex](../standard-library/ios-functions.md#hex)，则 `lx` 转换规范。
 
 - 如果 **iosbase.flags** & **ios_base::basefield** == 0，则转换规格为 `li`。
 
@@ -491,7 +491,7 @@ virtual iter_type do_get(iter_type first,
     long double& val) const;
 ```
 
-的行为与第三个相同，不同之处在于等效的`Lf`扫描转换说明符为。
+的行为与第三个相同，只不过等效的扫描转换说明符是 `Lf` 的。
 
 第五个受保护的虚拟成员函数：
 
@@ -561,7 +561,7 @@ typedef InputIterator iter_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数 `InputIterator` 的同义词。
+类型是模板参数 `InputIterator` 的同义词。
 
 ## <a name="num_get"></a>  num_get::num_get
 
@@ -573,18 +573,18 @@ explicit num_get(size_t _Refs = 0);
 
 ### <a name="parameters"></a>参数
 
-*_Refs*\
+*_Refs* \
 用于指定对象的内存管理类型的整数值。
 
 ### <a name="remarks"></a>备注
 
 *_Refs*参数的可能值及其重要性为：
 
-- 0对象的生存期由包含该对象的区域设置管理。
+- 0：对象的生存期由包含该对象的区域设置管理。
 
-- 1:必须手动管理对象的生存期。
+- 1：必须手动管理对象的生存期。
 
-- \>2未定义这些值。
+- \> 1：未定义这些值。
 
 由于该析构函数受到保护，可能没有直接的示例。
 

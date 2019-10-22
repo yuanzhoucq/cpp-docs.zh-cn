@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - time_get_byname class
 ms.assetid: 6e54153e-da40-4bb9-a942-1a6ce57b30c9
-ms.openlocfilehash: b466f8a893a14f7a94ee7b9e54b72e43aa6cf6e3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 9df3831e085f1dea1df45ff9368479fa516b944e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460028"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685756"
 ---
-# <a name="timegetbyname-class"></a>time_get_byname 类
+# <a name="time_get_byname-class"></a>time_get_byname 类
 
-一种派生模板类，用于描述一个可充当类型 `time_get`\< CharType、InputIterator > 的区域设置 facet 的对象。
+派生类模板描述一个对象，该对象可充当类型 `time_get` \<CharType，InputIterator > 的区域设置 facet。
 
 ## <a name="syntax"></a>语法
 
@@ -40,10 +40,10 @@ protected:
 
 ### <a name="parameters"></a>参数
 
-*_Locname*\
+*_Locname* \
 已命名的区域设置。
 
-*_Refs*\
+*_Refs* \
 初始引用计数。
 
 ## <a name="requirements"></a>要求
@@ -54,7 +54,7 @@ protected:
 
 **标头：** \<locale>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="see-also"></a>请参阅
 

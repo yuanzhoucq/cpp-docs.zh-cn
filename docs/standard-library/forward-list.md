@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - <forward_list>
 ms.assetid: 8b4ab09e-1475-434a-b4e0-fdbc07a08b5b
-ms.openlocfilehash: a8b343fbe5e175828b4b8470da486a6dea9f3455
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 708e16cb4b8a1640f4978b806bc52beed24decd4
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457011"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688061"
 ---
-# <a name="ltforwardlistgt"></a>&lt;forward_list&gt;
+# <a name="ltforward_listgt"></a>&lt;forward_list&gt;
 
-定义容器模板类 forward_list 和几个支持模板。
+定义容器类模板 forward_list 和多个支持模板。
 
 ## <a name="requirements"></a>要求
 
 **标头：** \<forward_list>
 
-**命名空间：** std
+**命名空间:** std
 
 > [!NOTE]
-> Forward_list > 库还使用该`#include <initializer_list>`语句。 \<
+> > 库 \<forward_list 也使用了 `#include <initializer_list>` 语句。
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="operators"></a>运算符
 

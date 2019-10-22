@@ -21,14 +21,14 @@ helpviewer_keywords:
 - std::student_t_distribution [C++], max
 - std::student_t_distribution [C++], param_type
 ms.assetid: 87b48127-9311-4d07-95df-833ed46bf0b1
-ms.openlocfilehash: 42e7337a2a0803af51e7dd11f53c482dbfc2aa0f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ebf9324d478a12476b548dc62455e205b9261430
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458993"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685865"
 ---
-# <a name="studenttdistribution-class"></a>student_t_distribution 类
+# <a name="student_t_distribution-class"></a>student_t_distribution 类
 
 生成学生的 *t*-分布。
 
@@ -64,12 +64,12 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*RealType*\
-浮点结果类型, 默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*RealType* \
+浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
-模板类描述产生用户指定的整型值的分布, 或者 **, 如果未**提供任何值, 则根据学生的*t*-分布来分布。 下表链接到有关各个成员的文章。
+类模板描述产生用户指定的整型值的分布，或者，如果未提供任何值 **，则根据**学生的*t*-分布来分布。 下表链接到有关各个成员的文章。
 
 ||||
 |-|-|-|
@@ -78,7 +78,7 @@ public:
 
 属性函数 `n()` 将返回存储的分布参数 `n` 的值。
 
-若要深入了解分布类及其成员，请参阅 [\<random>](../standard-library/random.md)。
+有关分布类及其成员的详细信息，请参阅 [\<random>](../standard-library/random.md)。
 
 有关学生的 *t* 分布的详细信息，请参阅 Wolfram MathWorld 文章[学生的 t-分布](http://mathworld.wolfram.com/Studentst-Distribution.html)。
 
@@ -161,7 +161,7 @@ Distribution for 10 samples:
 
 **标头：** \<random>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="student_t_distribution"></a>  student_t_distribution::student_t_distribution
 
@@ -177,7 +177,7 @@ explicit student_t_distribution(const param_type& parm);
 *n*\
 `n` 分布参数。
 
-*parm*\
+*parm* \
 用于构造分布的参数包。
 
 ### <a name="remarks"></a>备注
@@ -208,7 +208,7 @@ struct param_type {
 *n*\
 `n` 分布参数。
 
-*然后*\
+*right* \
 要与它进行比较的 `param_type` 对象。
 
 ### <a name="remarks"></a>备注

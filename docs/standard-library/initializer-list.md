@@ -2,16 +2,16 @@
 title: '&lt;initializer_list&gt;'
 ms.date: 11/04/2016
 ms.assetid: 820b6448-fb01-49a4-aeaa-546ad7576ea4
-ms.openlocfilehash: 5d0778fde6b7a7b6182b8e57cd4c663ec77ca85a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d04eb7e20a989fe310835250c6e51af754edbaf8
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455331"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687906"
 ---
-# <a name="ltinitializerlistgt"></a>&lt;initializer_list&gt;
+# <a name="ltinitializer_listgt"></a>&lt;initializer_list&gt;
 
-定义容器模板类 `initializer_list` 和几个支持模板。
+定义容器类模板 `initializer_list` 和多个支持模板。
 
 ## <a name="syntax"></a>语法
 
@@ -21,7 +21,7 @@ ms.locfileid: "68455331"
 
 ### <a name="classes"></a>类
 
-|类|描述|
+|实例|描述|
 |-|-|
 |[initializer_list](../standard-library/initializer-list-class.md)|提供访问元素数组的权限，其中数组的每个成员均具有指定的类型。|
 

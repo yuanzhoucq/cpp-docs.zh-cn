@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - ostream header
 ms.assetid: 90c3b6fb-57cd-4ae7-99b8-8512f24a67d2
-ms.openlocfilehash: 8de66718dab10b5c95e8c1ab7fd0bd17e9b4ee5e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3838e215ffac42ec6902ab6a9837f638153cf184
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448172"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689167"
 ---
 # <a name="ltostreamgt"></a>&lt;ostream&gt;
 
-定义模板类 [basic_ostream](../standard-library/basic-ostream-class.md)，此模板类可调解 iostreams 的插入。 此标头还定义了若干相关的操控程序。 （此标头通常包含在另一个 iostream 标头中。 很少会直接包含它。）
+定义类模板[basic_ostream](../standard-library/basic-ostream-class.md)，它可调节 iostreams 的插入。 此标头还定义了若干相关的操控程序。 （此标头通常包含在另一个 iostream 标头中。 很少会直接包含它。）
 
 ## <a name="syntax"></a>语法
 
@@ -29,8 +29,8 @@ ms.locfileid: "68448172"
 
 |类型名称|描述|
 |-|-|
-|[ostream](../standard-library/ostream-typedefs.md#ostream)|创建一个类型`basic_ostream` , 该类型在**char**上专用`char_traits`化并专用于**字符**。|
-|[wostream](../standard-library/ostream-typedefs.md#wostream)|创建一个类型`basic_ostream` , 该类型在**wchar_t**上专用`char_traits`化并专用于**wchar_t**。|
+|[ostream](../standard-library/ostream-typedefs.md#ostream)|从 `basic_ostream` 创建一个类型，该类型在**char**上专用化并 `char_traits` 专用**化。**|
+|[wostream](../standard-library/ostream-typedefs.md#wostream)|从 `basic_ostream` 创建一个类型，该类型在**wchar_t**上特殊化并专用于**wchar_t**`char_traits`。|
 
 ### <a name="manipulators"></a>操控器
 
@@ -49,13 +49,13 @@ ms.locfileid: "68448172"
 
 ### <a name="classes"></a>类
 
-|类|描述|
+|实例|描述|
 |-|-|
-|[basic_ostream](../standard-library/basic-ostream-class.md)|模板类描述控制元素和编码对象插入到流缓存区中的对象。|
+|[basic_ostream](../standard-library/basic-ostream-class.md)|类模板描述了控制元素和编码对象插入流缓冲区的对象。|
 
 ## <a name="see-also"></a>请参阅
 
 [头文件引用](../standard-library/cpp-standard-library-header-files.md)\
-[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream 编程](../standard-library/iostream-programming.md)\
 [iostreams 约定](../standard-library/iostreams-conventions.md)

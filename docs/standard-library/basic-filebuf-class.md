@@ -40,16 +40,16 @@ helpviewer_keywords:
 - std::basic_filebuf [C++], uflow
 - std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
-ms.openlocfilehash: ae72523c5c0a769a0267da94fead5ea29664276e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f162545f28af3e2720dceace6c604b5e2441cf48
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459484"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690021"
 ---
-# <a name="basicfilebuf-class"></a>basic_filebuf 类
+# <a name="basic_filebuf-class"></a>basic_filebuf 类
 
-描述一个流缓冲区, 该缓冲区控制*Elem*类型的元素 (其字符特征由类*Tr*确定) 与外部文件中存储的元素序列之间的传输。
+描述一个流缓冲区，该缓冲区控制*Elem*类型的元素（其字符特征由类*Tr*确定）与外部文件中存储的元素序列之间的传输。
 
 ## <a name="syntax"></a>语法
 
@@ -60,18 +60,18 @@ class basic_filebuf : public basic_streambuf<Elem, Tr>
 
 ### <a name="parameters"></a>参数
 
-*Elem*\
+*Elem* \
 文件缓冲区的基本元素。
 
-*Tr*\
+*Tr* \
 文件缓冲区的基本元素的特征（通常是 `char_traits`< `Elem`>）。
 
 ## <a name="remarks"></a>备注
 
-该模板类描述对 *Elem* 类型的元素（其字符特征由类 *Tr* 确定）与外部文件中存储的元素序列之间的来回传输进行控制的流缓冲区。
+类模板描述了一个流缓冲区，该缓冲区控制*Elem*类型的元素（其字符特征由类*Tr*确定）与外部文件中存储的元素序列之间的传输。
 
 > [!NOTE]
-> 类型`basic_filebuf`的对象使用类型`char *`的内部缓冲区创建, 而不考虑`char_type`类型参数*Elem*指定的。 这意味着 Unicode 字符串 (包含**wchar_t**个字符) 将在写入内部缓冲区之前转换为 ANSI 字符串 **(包含字符**)。 若要在缓冲区中存储 Unicode 字符串, 请创建一个类型为**wchar_t**的新缓冲区, 并使用[basic_streambuf::p ubsetbuf](../standard-library/basic-streambuf-class.md#pubsetbuf) `()`方法对其进行设置。 若要查看演示此行为的示例，请参阅下面的内容。
+> @No__t_0 类型的对象是使用 `char *` 类型的内部缓冲区创建的，而不考虑类型参数*Elem*指定的 `char_type`。 这意味着 Unicode 字符串（包含**wchar_t**个字符）将在写入内部缓冲区之前转换为 ANSI 字符串 **（包含字符**）。 若要在缓冲区中存储 Unicode 字符串，请创建一个类型为**wchar_t**的新缓冲区，并使用[basic_streambuf：:p ubsetbuf](../standard-library/basic-streambuf-class.md#pubsetbuf) `()` 方法对其进行设置。 若要查看演示此行为的示例，请参阅下面的内容。
 
 类 `basic_filebuf`< `Elem`, `Tr`> 的对象会存储文件指针，它指定的 `FILE` 对象控制与打开的文件关联的流。 另外，它还存储指向两个文件转换方面的指针，以供受保护的成员函数 [overflow](#overflow) 和 [underflow](#underflow) 使用。 有关详细信息，请参阅 [basic_filebuf::open](#open)。
 
@@ -231,7 +231,7 @@ Hex Dump of wwHello.txt - note that output is wchar_t chars:
 
 **标头：** \<fstream>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="basic_filebuf"></a>  basic_filebuf::basic_filebuf
 
@@ -271,9 +271,9 @@ basic_filebuf<Elem, Tr> *close();
 
 ### <a name="remarks"></a>备注
 
-`close`调用`fclose`( **fp**)。 如果该函数返回一个非零值，则该函数返回 null 指针。 否则，它将返回 **this** 以指示已成功关闭文件。
+`close` 调用 `fclose` （ **fp**）。 如果该函数返回一个非零值，则该函数返回 null 指针。 否则，它将返回 **this** 以指示已成功关闭文件。
 
-对于宽流，如果自打开流后，或者自上次调用 `streampos` 后发生任何插入，该函数都将调用 [overflow](#overflow)。 它还会插入还原初始转换状态所需的任何序列, 方法是使用文件转换`fac`方面根据`fac.unshift`需要调用。 这样, `byte`将生成类型为**char**的每个元素, 并将其写入由文件`fp`指针指定的关联流, 就像`fputc`连续调用窗体 ( **byte**, **fp**) 一样。 如果对`fac.unshift`或的调用失败, 则该函数不会成功。
+对于宽流，如果自打开流后，或者自上次调用 `streampos` 后发生任何插入，该函数都将调用 [overflow](#overflow)。 它还会插入还原初始转换状态所需的任何序列，方法是使用文件转换方面 `fac` 按需调用 `fac.unshift`。 因此生成的类型为**char**的每个元素 `byte` 都将写入文件指针所指定的关联流 `fp` 就像通过连续的形式调用 `fputc` （ **byte**， **fp**）一样。 如果对 `fac.unshift` 或任何写入操作失败，则该函数不会成功。
 
 ### <a name="example"></a>示例
 
@@ -326,7 +326,7 @@ s
 
 ## <a name="int_type"></a>  basic_filebuf::int_type
 
-在 basic_filebuf's 范围内使此类型等效于`Tr`范围中具有相同名称的类型。
+使此类型在与 `Tr` 范围中具有相同名称的类型的 basic_filebuf's 范围内。
 
 ```cpp
 typedef typename traits_type::int_type int_type;
@@ -370,7 +370,7 @@ true
 
 ## <a name="off_type"></a>  basic_filebuf::off_type
 
-在 basic_filebuf's 范围内使此类型等效于`Tr`范围中具有相同名称的类型。
+使此类型在与 `Tr` 范围中具有相同名称的类型的 basic_filebuf's 范围内。
 
 ```cpp
 typedef typename traits_type::off_type off_type;
@@ -402,14 +402,14 @@ basic_filebuf<Elem, Tr> *open(
 
 ### <a name="parameters"></a>参数
 
-*_Filename*\
+*_Filename* \
 要打开的文件的名称。
 
-*_Mode*\
+*_Mode* \
 [ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的枚举之一。
 
-*_Prot*\
-默认的文件打开保护, 等效于[_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)中的*shflag*参数。
+*_Prot* \
+默认的文件打开保护，等效于[_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)中的*shflag*参数。
 
 ### <a name="return-value"></a>返回值
 
@@ -417,9 +417,9 @@ basic_filebuf<Elem, Tr> *open(
 
 ### <a name="remarks"></a>备注
 
-成员函数通过调用 [fopen](../c-runtime-library/reference/fopen-wfopen.md)( *filename*, **strmode**)，打开文件名为 *filename* 的文件。 `strmode`由**模式 &** ~ ( [ate](../standard-library/ios-base-class.md#openmode) & &#124; [二进制](../standard-library/ios-base-class.md#openmode)) 确定:
+成员函数通过调用 [fopen](../c-runtime-library/reference/fopen-wfopen.md)( *filename*, **strmode**)，打开文件名为 *filename* 的文件。 `strmode` 是从**模式 &** ~ （ [ate](../standard-library/ios-base-class.md#openmode) & &#124; [二进制](../standard-library/ios-base-class.md#openmode)）确定的：
 
-- `ios_base::in`变为 **"r"** (打开现有文件以进行读取)。
+- `ios_base::in` 变成 **"r"** （打开现有文件以进行读取）。
 
 - [ios_base::out](../standard-library/ios-base-class.md#fmtflags) 或 **ios_base::out &#124; ios_base::trunc** 变为 **"w"** （截断现有文件或者创建以进行写入）。
 
@@ -431,9 +431,9 @@ basic_filebuf<Elem, Tr> *open(
 
 - **ios_base::in &#124; ios_base::out &#124; ios_base::app** 变为 **"a+"** （打开现有文件以读取和追加所有写入）。
 
-如果**mode & ios_base:: binary**为非零, 则该`b`函数`strmode`将附加到以打开二进制流而不是文本流。 然后, 它会将返回`fopen`的值存储在文件指针`fp`中。 如果 **mode & ios_base::ate** 为非零值，并且文件指针不是 null 指针，则函数调用 `fseek`( **fp**, 0, `SEEK_END`) 将流定位至文件的末尾。 如果该定位操作失败, 该函数将[](#close)调用 close `fp`(), 并将 null 指针存储在文件指针中。
+如果**mode & ios_base：： binary**为非零，则函数会将 `b` 追加到 `strmode`，以打开二进制流而不是文本流。 然后，它将 `fopen` 返回的值存储 `fp` 的文件指针中。 如果 **mode & ios_base::ate** 为非零值，并且文件指针不是 null 指针，则函数调用 `fseek`( **fp**, 0, `SEEK_END`) 将流定位至文件的末尾。 如果该定位操作失败，则该函数将调用[close](#close)（`fp`），并将 null 指针存储在文件指针中。
 
-如果文件指针不是 null 指针, 该函数将确定文件转换方面:`use_facet`< `codecvt`< **Elem**、 `char`、 **traits_type::** [state_type](../standard-library/char-traits-struct.md#state_type)> > ( [getloc](../standard-library/basic-streambuf-class.md#getloc)), 供[下溢](#underflow)和[溢出](#overflow)使用。
+如果文件指针不是 null 指针，此函数将确定文件转换方面：`use_facet`< `codecvt`< **Elem**, `char`, **traits_type::** [state_type](../standard-library/char-traits-struct.md#state_type)> >( [getloc](../standard-library/basic-streambuf-class.md#getloc))，以供 [underflow](#underflow) 和 [overflow](#overflow) 使用。
 
 如果文件指针为 null 指针，则该函数返回 null 指针。 否则，返回 **this**。
 
@@ -451,7 +451,7 @@ basic_filebuf& operator=(basic_filebuf&& right);
 
 ### <a name="parameters"></a>参数
 
-*然后*\
+*right* \
 对 [basic_filebuf](../standard-library/basic-filebuf-class.md) 对象的右值引用。
 
 ### <a name="return-value"></a>返回值
@@ -460,7 +460,7 @@ basic_filebuf& operator=(basic_filebuf&& right);
 
 ### <a name="remarks"></a>备注
 
-成员运算符使用*right*的内容替换对象的内容, 并将其视为右值引用。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
+成员运算符使用*right*的内容替换对象的内容，并将其视为右值引用。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
 ## <a name="overflow"></a>  basic_filebuf::overflow
 
@@ -472,8 +472,8 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
 
 ### <a name="parameters"></a>参数
 
-*_Meta*\
-要插入到缓冲区中的字符或`traits_type::eof`。
+*_Meta* \
+要插入到缓冲区或 `traits_type::eof` 中的字符。
 
 ### <a name="return-value"></a>返回值
 
@@ -481,13 +481,13 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
 
 ### <a name="remarks"></a>备注
 
-如果 *_Meta* **! = traits_type::** [eof](../standard-library/char-traits-struct.md#eof), 则受保护的虚拟成员函数会将元素**ch = traits_type::** [to_char_type](../standard-library/char-traits-struct.md#to_char_type)( *_Meta*) 插入到输出缓冲区。 它可以用多种方法执行此操作：
+如果 *_Meta* **！ = traits_type：：** [eof](../standard-library/char-traits-struct.md#eof)，则受保护的虚拟成员函数会将元素**ch = traits_type：：** [to_char_type](../standard-library/char-traits-struct.md#to_char_type)（ *_Meta*）插入到输出缓冲区。 它可以用多种方法执行此操作：
 
 - 如果写入位置可用，它可将元素存储到写入位置并递增输出缓冲区的下一个指针。
 
 - 它可以通过为输出缓冲区分配新的或额外的存储空间，提供写入位置。
 
-- 它可以在输出缓冲区中转换任何挂起的输出, 然后`ch`在需要时使用文件转换方面`fac`调用`fac.out` 。 这样, `ch`将生成类型为*char*的每个元素, 并将其写入由文件`fp`指针指定的关联流, 就像`fputc`连续调用形式 ( **ch**, **fp**) 一样。 如果任何转换或写入失败，该函数不会成功。
+- 它可以在输出缓冲区中转换任何挂起的输出，然后在 `ch` 的情况下，使用文件转换方面 `fac` 根据需要调用 `fac.out`。 因此生成的类型为*char*的每个元素 `ch` 都将写入文件指针所指定的关联流 `fp` 就像通过连续的形式调用 `fputc` （ **ch**， **fp**）一样。 如果任何转换或写入失败，该函数不会成功。
 
 ## <a name="pbackfail"></a>  basic_filebuf::pbackfail
 
@@ -499,26 +499,26 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 
 ### <a name="parameters"></a>参数
 
-*_Meta*\
+*_Meta* \
 要插入到缓冲区的字符或 `traits_type::eof`。
 
 ### <a name="return-value"></a>返回值
 
-如果该函数不成功，它将返回 `traits_type::eof`。 否则, 它将返回**traits_type::** [not_eof](../standard-library/char-traits-struct.md#not_eof)( *\_Meta*)。
+如果该函数不成功，它将返回 `traits_type::eof`。 否则，它将返回**traits_type：：** [not_eof](../standard-library/char-traits-struct.md#not_eof)（ *\_Meta*）。
 
 ### <a name="remarks"></a>备注
 
-受保护虚拟成员函数将元素放回到输入缓冲区中，随后使它成为当前元素（由下一个指针指向）。 *如果\_Meta* **= = traits_type::** [eof](../standard-library/char-traits-struct.md#eof), 要推送回的元素在当前元素之前实际上已是流中的一个元素。 否则, 该元素将替换为**ch = traits_type::** [to_char_type](../standard-library/char-traits-struct.md#to_char_type)( *\_Meta*)。 该函数可以用多种方法放回元素：
+受保护虚拟成员函数将元素放回到输入缓冲区中，随后使它成为当前元素（由下一个指针指向）。 如果 *\_Meta* **= = traits_type：：** [eof](../standard-library/char-traits-struct.md#eof)，要推送回的元素在当前元素之前实际上已是流中的一个元素。 否则，该元素将替换为**ch = traits_type：：** [to_char_type](../standard-library/char-traits-struct.md#to_char_type)（ *\_Meta*）。 该函数可以用多种方法放回元素：
 
-- 如果放回位置可用, 且存储在该位置的元素与相等`ch`, 则它可以递减输入缓冲区的下一个指针。
+- 如果放回位置可用，且存储在该位置的元素与 `ch` 相等，则它可以递减输入缓冲区的下一个指针。
 
-- 如果函数可以使`putback`位置可用, 则可以执行此操作, 将下一个指针设置为指向该位置的点, 并将其存储`ch`在该位置。
+- 如果函数可以使 `putback` 位置可用，则可以执行此操作，将下一个指针设置为指向该位置的点，并将 `ch` 存储在该位置。
 
-- 如果函数可以将元素推送回输入流, 则它可以执行此操作, 例如通过调用`ungetc` **char**类型的元素。
+- 如果函数可以将某个元素推送回输入流，则它可以执行此操作，例如通过对**char**类型的元素调用 `ungetc`。
 
 ## <a name="pos_type"></a>  basic_filebuf::pos_type
 
-在 basic_filebuf's 范围内使此类型等效于`Tr`范围中具有相同名称的类型。
+使此类型在与 `Tr` 范围中具有相同名称的类型的 basic_filebuf's 范围内。
 
 ```cpp
 typedef typename traits_type::pos_type pos_type;
@@ -536,14 +536,14 @@ virtual pos_type seekoff(off_type _Off,
 
 ### <a name="parameters"></a>参数
 
-*_Off*\
+*_Off* \
 要查找的相对于 *_Way*的位置。
 
-*_Way*\
+*_Way* \
 偏移操作的起点。 请参阅 [seekdir](../standard-library/ios-base-class.md#seekdir)，查看可能的值。
 
-*_Which*\
-指定指针位置的模式。 默认允许修改读取和写入位置。
+*_Which* \
+指定指针位置的模式。 默认值允许修改读取和写入位置。
 
 ### <a name="return-value"></a>返回值
 
@@ -551,11 +551,11 @@ virtual pos_type seekoff(off_type _Off,
 
 ### <a name="remarks"></a>备注
 
-受保护虚拟成员函数尝试更改受控流的当前位置。 对于类 [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> 的对象，流位置可以通过类型为 `fpos_t` 的对象表示，它存储偏移量以及分析宽流所需的任何状态信息。 如果偏移量为零，则将指定流的第一个元素。 （类型为 [pos_type](../standard-library/basic-streambuf-class.md#pos_type) 的对象存储至少一个 `fpos_t` 对象。）
+受保护虚拟成员函数更改受控流的当前位置。 对于类 [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> 的对象，流位置可以通过类型为 `fpos_t` 的对象表示，它存储偏移量以及分析宽流所需的任何状态信息。 如果偏移量为零，则将指定流的第一个元素。 （类型为 [pos_type](../standard-library/basic-streambuf-class.md#pos_type) 的对象存储至少一个 `fpos_t` 对象。）
 
 对于打开供读取和写入的文件，输入流和输出流串联放置。 若要在插入和提取之间切换，你必须调用 [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff) 或 [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos)。 调用 `pubseekoff`（因而调用 `seekoff`）对于[文本流](../c-runtime-library/text-and-binary-streams.md)、[二进制流](../c-runtime-library/text-and-binary-streams.md)和[宽流](../c-runtime-library/byte-and-wide-streams.md)有各种限制。
 
-如果文件指针`fp`为 null 指针, 则函数将失败。 否则，它尝试通过调用 `fseek`( **fp**, `_Off`, `_Way`) 更改流位置。 如果该函数成功并且可以通过调用`fposn` `fgetpos`( **fp**, **& fposn**) 确定生成的位置, 则该函数将成功。 如果该函数成功, 则它将返回类型`pos_type` `fposn`为的值。 否则，返回一个无效的流位置。
+如果文件指针 `fp` 为 null 指针，则函数将失败。 否则，它尝试通过调用 `fseek`( **fp**, `_Off`, `_Way`) 更改流位置。 如果该函数成功并且可以通过调用 `fgetpos` （ **fp**， **& fposn**）来确定结果位置 `fposn`，则该函数将成功。 如果函数成功，则返回包含 `fposn` 的类型 `pos_type` 的值。 否则，返回一个无效的流位置。
 
 ## <a name="seekpos"></a>  basic_filebuf::seekpos
 
@@ -567,23 +567,23 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
 
 ### <a name="parameters"></a>参数
 
-*_Sp*\
+*_Sp* \
 要搜寻的位置。
 
-*_Which*\
-指定指针位置的模式。 默认允许修改读取和写入位置。
+*_Which* \
+指定指针位置的模式。 默认值允许修改读取和写入位置。
 
 ### <a name="return-value"></a>返回值
 
-如果文件指针`fp`为 null 指针, 则函数将失败。 `fsetpos`否则, 它会通过调用 ( **fp**, **& fposn**) 更改流位置, 其中`fposn`是存储在中`fpos_t` `pos`的对象。 如果该函数成功，则该函数将返回 `pos`。 否则，返回一个无效的流位置。 若要确定流位置是否有效，请比较返回值和 `pos_type(off_type(-1))`。
+如果文件指针 `fp` 为 null 指针，则函数将失败。 否则，它会通过调用 `fsetpos` （ **fp**， **& fposn**）（其中 `fposn` 是存储在 `pos` 中的 `fpos_t` 对象）来更改流位置。 如果该函数成功，则该函数将返回 `pos`。 否则，返回一个无效的流位置。 若要确定流位置是否有效，请比较返回值和 `pos_type(off_type(-1))`。
 
 ### <a name="remarks"></a>备注
 
-受保护虚拟成员函数尝试更改受控流的当前位置。 对于类 [basic_filebuf](../standard-library/basic-filebuf-class.md)\< **Elem**, **Tr**> 的对象，流位置可以通过类型 `fpos_t` 的对象表示，它存储偏移量以及分析宽流所需的任何状态信息。 如果偏移量为零，则将指定流的第一个元素。 （类型为 `pos_type` 的对象存储至少一个 `fpos_t` 对象。）
+受保护虚拟成员函数更改受控流的当前位置。 对于类 [basic_filebuf](../standard-library/basic-filebuf-class.md)\< **Elem**, **Tr**> 的对象，流位置可以通过类型 `fpos_t` 的对象表示，它存储偏移量以及分析宽流所需的任何状态信息。 如果偏移量为零，则将指定流的第一个元素。 （类型为 `pos_type` 的对象存储至少一个 `fpos_t` 对象。）
 
 对于打开供读取和写入的文件，输入流和输出流串联放置。 若要在插入和提取之间切换，你必须调用 [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff) 或 [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos)。 调用 `pubseekoff`（因而调用 `seekoff`）对于文本流、二进制流和宽流有各种限制。
 
-对于宽流，如果自打开流后，或者自上次调用 `streampos` 后发生任何插入，该函数都将调用 [overflow](#overflow)。 它还会插入还原初始转换状态所需的任何序列, 方法是根据需要使用`fac`文件转换方面调用**fac** `.unshift` 。 这样, `byte`将生成类型为**char**的每个元素, 并将其写入由文件`fp`指针指定的关联流, 就像`fputc`连续调用窗体 ( **byte**, **fp**) 一样。 如果对`fac.unshift`或的调用失败, 则该函数不会成功。
+对于宽流，如果自打开流后，或者自上次调用 `streampos` 后发生任何插入，该函数都将调用 [overflow](#overflow)。 它还通过使用 "文件转换" facet `fac` 按需调用**fac** `.unshift` 来插入还原初始转换状态所需的任何序列。 因此生成的类型为**char**的每个元素 `byte` 都将写入文件指针所指定的关联流 `fp` 就像通过连续的形式调用 `fputc` （ **byte**， **fp**）一样。 如果对 `fac.unshift` 或任何写入操作失败，则该函数不会成功。
 
 ## <a name="setbuf"></a>  basic_filebuf::setbuf
 
@@ -597,10 +597,10 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 
 ### <a name="parameters"></a>参数
 
-*_Buffer*\
+*_Buffer* \
 指向缓冲区的指针。
 
-*计*\
+*计数*\
 缓冲区的大小。
 
 ### <a name="return-value"></a>返回值
@@ -621,7 +621,7 @@ void swap(basic_filebuf& right);
 
 ### <a name="parameters"></a>参数
 
-*然后*\
+*right* \
 对另一个 `basic_filebuf` 的 `lvalue` 引用。
 
 ## <a name="sync"></a>  basic_filebuf::sync
@@ -634,7 +634,7 @@ virtual int sync();
 
 ### <a name="return-value"></a>返回值
 
-如果文件指针`fp`为 null 指针, 则返回零。 否则，仅当调用 [overflow](#overflow) 和 `fflush`( **fp**) 成功刷新流的任何挂起输出时，才返回零。
+如果文件指针 `fp` 为 null 指针，则返回零。 否则，仅当调用 [overflow](#overflow) 和 `fflush`( **fp**) 成功刷新流的任何挂起输出时，才返回零。
 
 ## <a name="traits_type"></a>  basic_filebuf::traits_type
 
@@ -654,19 +654,19 @@ virtual int_type underflow();
 
 ### <a name="return-value"></a>返回值
 
-如果该函数不成功，它将返回 **traits_type::** [eof](../standard-library/char-traits-struct.md#eof)。 否则, 它将`ch`返回, 如 "备注" 部分所述。
+如果该函数不成功，它将返回 **traits_type::** [eof](../standard-library/char-traits-struct.md#eof)。 否则，它将返回 `ch`，如 "备注" 部分中所述进行转换。
 
 ### <a name="remarks"></a>备注
 
-受保护的虚拟成员函数致力于从输入流`ch`中提取当前元素, 并返回元素作为**traits_type::** [to_int_type](../standard-library/char-traits-struct.md#to_int_type)(`ch`)。 它可以用多种方法执行此操作：
+受保护的虚拟成员函数致力于从输入流中提取当前元素 `ch`，并将该元素作为**traits_type：：** [to_int_type](../standard-library/char-traits-struct.md#to_int_type)（`ch`）返回。 它可以用多种方法执行此操作：
 
-- 如果读取位置可用, 则它`ch`将作为存储在读取位置中的元素, 并提升输入缓冲区的下一个指针。
+- 如果读取位置可用，则它会将 `ch` 用作读取位置中存储的元素，并提升输入缓冲区的下一个指针。
 
-- 它可以读取**char**类型的一个或多个元素, 就像通过连续调用窗体`fgetc`(**fp**) 一样, 并使用文件转换方面 fac, `fac.in`根据`Elem`需要将其转换为类型的元素**ch** 。 如果任何读取或转换失败，该函数不会成功。
+- 它可以读取**char**类型的一个或多个元素，就像通过对形式的连续调用 `fgetc` （**fp**）一样，并使用文件转换方面 fac 根据需要调用 `fac.in`，将它们转换为类型 `Elem` 的元素**ch** 。 如果任何读取或转换失败，该函数不会成功。
 
 ## <a name="see-also"></a>请参阅
 
 [\<fstream>](../standard-library/fstream.md)\
-[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream 编程](../standard-library/iostream-programming.md)\
 [iostreams 约定](../standard-library/iostreams-conventions.md)

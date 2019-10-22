@@ -2,15 +2,15 @@
 title: C++ 标准库容器
 ms.date: 11/04/2016
 helpviewer_keywords:
-- C++ Standard Library, template class containers
+- C++ Standard Library, class template containers
 - containers, C++ Standard Library
 ms.assetid: 8e915ca1-19ba-4f0d-93c8-e2c3bfd638eb
-ms.openlocfilehash: 6077ff76e04e6f078946eed0856723e2a9998f58
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 1119947534c030afaad64e4905e58365ffffd05e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449600"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686093"
 ---
 # <a name="c-standard-library-containers"></a>C++ 标准库容器
 
@@ -121,7 +121,7 @@ int main()
 
 已重载下列映射、多重映射、集与多重集中的成员函数来支持异类查找：
 
-1. find
+1. 查找
 
 1. count
 
@@ -155,7 +155,7 @@ int main()
 
 ## <a name="accessing-container-elements"></a>正在访问容器元素
 
-使用迭代器访问容器的元素。 有关更多信息，请参见 [迭代器](../standard-library/iterators.md)。
+使用迭代器访问容器的元素。 有关详细信息，请参阅[迭代器](../standard-library/iterators.md)。
 
 > [!NOTE]
 > 还可以使用[基于范围的 for 循环](../cpp/range-based-for-statement-cpp.md)来循环访问 C++ 标准库集合。
@@ -166,7 +166,7 @@ int main()
 
 ### <a name="comparing-dissimilar-containers-c14"></a>比较不同的容器 (C++14)
 
-在 c + + 14 及更高版本中, 可以通过使用`std::equal`、 `std::mismatch`或`std::is_permutation`函数重载之一来比较不同的容器和/或不同的元素类型, 这些重载采用两个完整范围。 这些重载使你能够比较具有不同长度的容器。 这些重载使用户非常不易遭受错误，并进行了优化，当比较不同长度的容器时会在固定时间内返回错误。 因此，我们建议使用这些重载，除非 (1) 有很明确的理由不这么做，或者 (2) 正在使用 [std::list](../standard-library/list-class.md) 容器，它不会从双范围优化中受益。
+在 c + + 14 及更高版本中，你可以通过使用采用两个完整范围的 `std::equal`、`std::mismatch` 或 `std::is_permutation` 函数重载之一来比较不同的容器和/或不同的元素类型。 这些重载使你能够比较具有不同长度的容器。 这些重载使用户非常不易遭受错误，并进行了优化，当比较不同长度的容器时会在固定时间内返回错误。 因此，我们建议使用这些重载，除非 (1) 有很明确的理由不这么做，或者 (2) 正在使用 [std::list](../standard-library/list-class.md) 容器，它不会从双范围优化中受益。
 
 ## <a name="see-also"></a>请参阅
 

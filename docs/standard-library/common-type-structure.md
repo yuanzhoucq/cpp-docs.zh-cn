@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 f1_keywords:
 - chrono/std::common_type
 ms.assetid: 2b42722c-c3dc-4d62-8613-0271e52b6f00
-ms.openlocfilehash: 1f2a329894af88dfafc0616655bdf8c2ca91cf0a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: cef9b1fb6bc2723de1202b63ddc711ddd39f0d97
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453201"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689805"
 ---
-# <a name="commontype-structure"></a>common_type 结构
+# <a name="common_type-structure"></a>common_type 结构
 
-介绍 [duration](../standard-library/duration-class.md) 和 [time_point](../standard-library/time-point-class.md) 的实例化的模板类 [common_type](../standard-library/common-type-class.md) 的专用化。
+介绍[common_type](../standard-library/common-type-class.md)和[time_point](../standard-library/time-point-class.md)[的实例](../standard-library/duration-class.md)化类模板的专用化。
 
 ## <a name="syntax"></a>语法
 
@@ -33,9 +33,9 @@ chrono::time_point<Clock, Duration2>>;
 
 ## <a name="requirements"></a>要求
 
-**标头:** \<chrono >
+**标头：** \<chrono >
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="see-also"></a>请参阅
 

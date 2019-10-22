@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - tuple class
 ms.assetid: c38749be-ae4d-41f3-98ea-6aa3250de9a3
-ms.openlocfilehash: aca5cc90566fb1fa602b96568d4cda9dd5ab26b9
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 1727d3a12b7186d3cc868ef6bb78711774057407
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68241826"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688862"
 ---
 # <a name="tuple-class"></a>tuple 类
 
@@ -41,12 +41,12 @@ class tuple {
 
 ### <a name="parameters"></a>参数
 
-*TN*\
+*TN* \
 第 N 个元组元素的类型。
 
 ## <a name="remarks"></a>备注
 
-此模板类描述的对象将存储 N 个对象的类型`T1`， `T2`、...、`TN`分别，其中`0 <= N <= Nmax`。 元组实例的程度`tuple<T1, T2, ..., TN>`是数字`N`的其模板自变量。 模板参数的索引`Ti`和相应的存储值的该类型是`i - 1`。 因此时都进行编号的类型从 1 到 N 本文档中，, 相应的索引值的范围介于 0 至 N – 1。
+类模板描述了一个对象，该对象在 `0 <= N <= Nmax` 的位置分别存储 `T1`、`T2`、`TN` 的 N 个对象。 元组实例的范围 `tuple<T1, T2, ..., TN>` 是其模板参数 `N` 的数量。 模板参数 `Ti` 和该类型的相应存储值的索引 `i - 1`。 因此，虽然我们将此文档中的类型从1到 N 进行编号，但相应的索引值的范围介于0到 N-1 之间。
 
 ## <a name="example"></a>示例
 
@@ -116,7 +116,7 @@ The tuples in the vector are
 ( 3, 0.033, three ).
 ```
 
-## <a name="op_eq"></a> 运算符 =
+## <a name="op_eq"></a>operator =
 
 分配一个 `tuple` 对象。
 
@@ -140,12 +140,12 @@ template <class U1, class U2>
 *取消*\
 第 N 个复制的元组元素的类型。
 
-*右侧*\
+*right* \
 要从其进行复制的元组。
 
 ### <a name="remarks"></a>备注
 
-前两个成员运算符分配的元素*右*的对应元素`*this`。 第三个成员运算符将 `right.first` 分配到 `*this` 的索引 0 处的元素，将 `right.second` 分配到索引 1 处的元素。 所有三个成员运算符都将返回 `*this`。
+前两个成员运算符将*right*的元素分配给 `*this` 的相应元素。 第三个成员运算符将 `right.first` 分配到 `*this` 的索引 0 处的元素，将 `right.second` 分配到索引 1 处的元素。 所有三个成员运算符都将返回 `*this`。
 
 剩余的成员运算符类似于之前的构造函数，但具有[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
@@ -198,7 +198,7 @@ int main()
 x 4
 ```
 
-## <a name="tuple_swap"></a> 交换
+## <a name="tuple_swap"></a>购
 
 交换两个元组的元素。
 
@@ -209,17 +209,17 @@ template <class... Types>
 
 ### <a name="parameters"></a>参数
 
-*左侧*\
-其元素将要进行交换与元组的元组*右*。
+*左*\
+一个元组，其元素将与元组*权限*的元素进行交换。
 
-*右侧*\
-其元素将要进行交换与元组的元组*左*。
+*right* \
+一个元组，其元素将与要*留下*的元组的元素进行交换。
 
 ### <a name="remarks"></a>备注
 
 函数执行 `left.swap(right)`。
 
-## <a name="tuple"></a> 元组
+## <a name="tuple"></a>聚合
 
 构造 `tuple` 对象。
 
@@ -249,7 +249,7 @@ template <class U1, class U2>
 *取消*\
 第 N 个复制的元组元素的类型。
 
-*右侧*\
+*right* \
 要从其进行复制的元组。
 
 ### <a name="remarks"></a>备注
@@ -258,7 +258,7 @@ template <class U1, class U2>
 
 第二个构造函数将构造一个对象，该对象的元素是从参数 `P1`、`P2`、...、`PN` 复制构造的，其中每个 `Pi`都将初始化 `i - 1` 索引处的元素。
 
-第三个和第四个构造函数构造一个对象，其元素是从相应的元素构造的副本*右*。
+第三个和第四个构造函数构造一个对象，该对象的元素是从*右*的相应元素构造而来的。
 
 第五个构造函数将构造一个对象，该对象在索引 0 处的元素是从`right.first` 复制构造的，在索引 1 处的元素是从 `right.second` 复制构造的。
 
