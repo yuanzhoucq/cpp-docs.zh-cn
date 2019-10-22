@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - iosfwd header
 ms.assetid: 964442eb-17f1-43ef-a0e0-c5bb77f9c187
-ms.openlocfilehash: e66c3e869f01775512419c877cd52c7f0e0fa2c4
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 8d257a57100615e592f6ebd62b5c91c6c59df408
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449075"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687872"
 ---
 # <a name="ltiosfwdgt"></a>&lt;iosfwd&gt;
 
-声明对 iostreams 中使用的数个模板类的向前引用。 所有这些模板类都定义在其他标准标头中。 仅在需要其中一个声明而不是定义时将此标头明确包含在内。
+声明对在整个 iostreams 中使用的多个类模板的前向引用。 所有此类模板都是在其他标准标头中定义的。 仅在需要其中一个声明而不是定义时将此标头明确包含在内。
 
 ## <a name="syntax"></a>语法
 
@@ -62,7 +62,7 @@ typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
 };
 ```
 
-## <a name="forward-declarationstemplate-classes"></a>向前声明/模板类
+## <a name="forward-declarations-and-class-templates"></a>前向声明和类模板
 
 ```cpp
 template <class _Statetype>
@@ -129,6 +129,6 @@ class basic_fstream;
 ## <a name="see-also"></a>请参阅
 
 [头文件引用](../standard-library/cpp-standard-library-header-files.md)\
-[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream 编程](../standard-library/iostream-programming.md)\
 [iostreams 约定](../standard-library/iostreams-conventions.md)

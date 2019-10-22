@@ -23,14 +23,14 @@ helpviewer_keywords:
 - std::exponential_distribution [C++], param_type
 - std::exponential_distribution [C++], param_type
 ms.assetid: d54f3126-a09b-45f9-a30b-0d94d03bcdc9
-ms.openlocfilehash: 8fd47b6acd4d991741f7ae45332d6cacc1903977
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 7418c0316f98f633d229b3bb544bd34d2ac0fb07
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457884"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688088"
 ---
-# <a name="exponentialdistribution-class"></a>exponential_distribution 类
+# <a name="exponential_distribution-class"></a>exponential_distribution 类
 
 生成指数分布。
 
@@ -67,15 +67,15 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*RealType*\
-浮点结果类型, 默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*RealType* \
+浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
-*URNG*\
+*URNG* \
 随机数生成器引擎。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
-此模板类描述产生用户指定的整型值的分布, 或者 **, 如果未**提供任何值, 则根据指数分布进行分布。 下表链接到有关各个成员的文章。
+类模板描述产生用户指定的整型值的分布，或者，如果未提供任何值 **，则根据**指数分布进行分布。 下表链接到有关各个成员的文章。
 
 ||||
 |-|-|-|
@@ -86,7 +86,7 @@ public:
 
 属性成员函数 `param()` 将设置或返回 `param_type` 存储分布参数包。
 
-若要深入了解分布类及其成员，请参阅 [\<random>](../standard-library/random.md)。
+有关分布类及其成员的详细信息，请参阅 [\<random>](../standard-library/random.md)。
 
 有关指数分布的详细信息，请参阅 Wolfram MathWorld 文章[指数分布](https://go.microsoft.com/fwlink/p/?linkid=401098)。
 
@@ -169,7 +169,7 @@ Distribution for 10 samples:
 
 **标头：** \<random>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="exponential_distribution"></a>  exponential_distribution::exponential_distribution
 
@@ -182,10 +182,10 @@ explicit exponential_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-*lambda*\
+*lambda* \
 `lambda` 分布参数。
 
-*parm*\
+*parm* \
 用于构造分布的参数包。
 
 ### <a name="remarks"></a>备注
@@ -213,10 +213,10 @@ struct param_type {
 
 ### <a name="parameters"></a>参数
 
-*lambda*\
+*lambda* \
 `lambda` 分布参数。
 
-*然后*\
+*right* \
 要与它进行比较的 `param_type` 对象。
 
 ### <a name="remarks"></a>备注

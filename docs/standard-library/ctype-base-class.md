@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - ctype_base class
 ms.assetid: ccffe891-d7ab-4d22-baf8-8eb6d438a96d
-ms.openlocfilehash: f23b9528cf9a921e1d005756aa82751f3fdb745e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 4fac75d90c4e40a22e8ceae974c3f49c3d50a1d3
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449350"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688194"
 ---
-# <a name="ctypebase-class"></a>ctype_base 类
+# <a name="ctype_base-class"></a>ctype_base 类
 
-该类用作模板类 [ctype](../standard-library/ctype-class.md) 的 facet 基类。 一种 ctype 类的基类，用于定义枚举类型来分类或测试单个字符或整个范围内的字符。
+类用作类模板[ctype](../standard-library/ctype-class.md)的各个方面的基类。 一种 ctype 类的基类，用于定义枚举类型来分类或测试单个字符或整个范围内的字符。
 
 ## <a name="syntax"></a>语法
 
@@ -69,13 +69,13 @@ struct ctype_base : public locale::facet
 
 - **graph**（函数 [isgraph](../standard-library/locale-functions.md#isgraph)）
 
-通过实现或运算这些常量，可以确定分类组合的特征。 特别是, **alnum** = = (**字母** &#124; **数字**\)和**graph** \= \= \(  alnum &#124; **punct**) 始终为 true。
+通过实现或运算这些常量，可以确定分类组合的特征。 具体而言， **alnum** = **= （** &#124;  \) 和**graph** \= \= \( **alnum** &#124; **punct**）始终为 true。
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<locale>
+**标头：**\<locale>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="see-also"></a>请参阅
 

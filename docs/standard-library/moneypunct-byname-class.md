@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - moneypunct_byname class
 ms.assetid: e8a544d2-6aee-420d-b513-deb385c9b416
-ms.openlocfilehash: 47c9d2281973cb57288bfdcf865926fb6dd9ed0e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c687bc870e4d78cfe9174eb04ea09c34d6a9c955
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460209"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687655"
 ---
-# <a name="moneypunctbyname-class"></a>moneypunct_byname 类
+# <a name="moneypunct_byname-class"></a>moneypunct_byname 类
 
-一种派生模板类，用于描述可充当给定区域设置的 `moneypunct` facet 的对象，从而能够格式化货币输入字段或货币输出字段。
+一个派生类模板，用于描述一个对象，该对象可充当给定区域设置的 `moneypunct` 方面，同时启用格式货币输入字段或货币输出字段。
 
 ## <a name="syntax"></a>语法
 
@@ -46,7 +46,7 @@ protected:
 
 **标头：** \<locale>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="see-also"></a>请参阅
 

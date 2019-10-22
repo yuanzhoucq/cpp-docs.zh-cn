@@ -20,14 +20,14 @@ helpviewer_keywords:
 - std::move_iterator [C++], reference
 - std::move_iterator [C++], base
 ms.assetid: a5e5cdd8-a264-4c6b-9f9c-68b0e8edaab7
-ms.openlocfilehash: 4a173ea022f21c454d8edd66f94d2d9b14faa4e1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 9e8334db52e05f4a61adb7256e87ed611f0d3ecb
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460226"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689287"
 ---
-# <a name="moveiterator-class"></a>move_iterator 类
+# <a name="move_iterator-class"></a>move_iterator 类
 
 类模板 `move_iterator` 是迭代器的包装器。 move_iterator 的行为与其包装（存储）的迭代器相同，但它将存储的迭代器的取消引用运算符转换为右值引用，将副本转换为移动。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
@@ -39,7 +39,7 @@ class move_iterator;
 
 ## <a name="remarks"></a>备注
 
-模板类描述在行为上与迭代器类似（取消引用时除外）的对象。 它存储 `Iterator` 类型的随机访问迭代器，可通过成员函数 `base()` 访问此迭代器。 对于 `move_iterator` 的所有操作将直接对存储的迭代器执行，但 `operator*` 的结果将隐式强制转换为 `value_type&&` 以进行右值引用。
+类模板描述的行为与迭代器类似（取消引用时除外）的对象。 它存储 `Iterator` 类型的随机访问迭代器，可通过成员函数 `base()` 访问此迭代器。 对于 `move_iterator` 的所有操作将直接对存储的迭代器执行，但 `operator*` 的结果将隐式强制转换为 `value_type&&` 以进行右值引用。
 
 `move_iterator` 可以进行包装的迭代器未定义的操作。 不应使用这些操作。
 
@@ -54,10 +54,10 @@ class move_iterator;
 |类型名称|描述|
 |-|-|
 |[iterator_type](#iterator_type)|模板参数 `RandomIterator` 的同义词。|
-|[iterator_category](#iterator_category)|同一名称`iterator_category`的较长**typename**表达式的同义词用于标识迭代器的常规功能。|
-|[value_type](#value_type)|具有相同名称的较长**typename**表达式的同义词, `value_type`用于描述迭代器元素的类型。|
-|[difference_type](#difference_type)|同一名称的较长**typename**表达式的同义词, `difference_type`描述了在元素间表达差异值所需的整型类型。|
-|[pointer](#pointer)|模板参数 `RandomIterator` 的同义词。|
+|[iterator_category](#iterator_category)|同一名称的较长**typename**表达式的同义词 `iterator_category` 标识迭代器的常规功能。|
+|[value_type](#value_type)|同一名称的较长**typename**表达式的同义词 `value_type` 描述迭代器元素的类型。|
+|[difference_type](#difference_type)|同一名称的较长**typename**表达式的同义词 `difference_type` 描述了在元素间表达不同值所需的整型类型。|
+|[指针](#pointer)|模板参数 `RandomIterator` 的同义词。|
 |[reference](#reference)|`rvalue` 引用 `value_type&&` 的同义词。|
 
 ### <a name="member-functions"></a>成员函数
@@ -84,7 +84,7 @@ class move_iterator;
 
 **标头：** \<iterator>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="base"></a>  move_iterator::base
 
@@ -132,7 +132,7 @@ typedef RandomIterator iterator_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数 `RandomIterator` 的同义词。
+类型是模板参数 `RandomIterator` 的同义词。
 
 ## <a name="move_iterator"></a>  move_iterator::move_iterator
 
@@ -147,7 +147,7 @@ move_iterator(const move_iterator<Type>& right);
 
 ### <a name="parameters"></a>参数
 
-*然后*\
+*right* \
 将用作存储的迭代器的迭代器。
 
 ### <a name="remarks"></a>备注
@@ -164,7 +164,7 @@ move_iterator& operator+=(difference_type _Off);
 
 ### <a name="parameters"></a>参数
 
-*_Off*\
+*_Off* \
 将偏移量添加到当前位置，以确定新的当前位置。
 
 ### <a name="return-value"></a>返回值
@@ -291,7 +291,7 @@ pointer operator->() const;
 
 ## <a name="pointer"></a>  move_iterator::pointer
 
-类型`pointer`是基于的随机迭代器`RandomIterator` `move_iterator`的 typedef, 可互换使用。
+类型 `pointer` 是基于 `move_iterator` 的随机迭代器 `RandomIterator` 的**typedef** ，可互换使用。
 
 ```cpp
 typedef RandomIterator  pointer;
@@ -299,11 +299,11 @@ typedef RandomIterator  pointer;
 
 ### <a name="remarks"></a>备注
 
-该类型是 `RandomIterator` 的同义词。
+该类型是 `RandomIterator`的同义词。
 
 ## <a name="reference"></a>  move_iterator::reference
 
-`reference`类型是基于`value_type&&` for 的`move_iterator`typedef, 可与`value_type&&`一起使用。
+类型 `reference` 是基于 `move_iterator` 的 `value_type&&` 的**typedef** ，可与 `value_type&&` 互换使用。
 
 ```cpp
 typedef value_type&& reference;

@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::lognormal_distribution [C++], param_type
 - std::lognormal_distribution [C++], param_type
 ms.assetid: f2d6a431-6c3a-4370-b12e-4adb4ddf6cc4
-ms.openlocfilehash: 20967204d1df40d2b8dbb21c499e45404f44a4ae
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: bcf587c5029fdf0b61da45dbd4ee9250f4c3a43b
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453810"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687789"
 ---
-# <a name="lognormaldistribution-class"></a>lognormal_distribution 类
+# <a name="lognormal_distribution-class"></a>lognormal_distribution 类
 
 生成对数正态分布。
 
@@ -68,12 +68,12 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*RealType*\
-浮点结果类型, 默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*RealType* \
+浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
-此模板类描述产生用户指定的整型值的分布, 或者 **, 如果未**提供任何值, 则根据日志正态分布分配值。 下表链接到有关各个成员的文章。
+类模板描述产生用户指定的整型值的分布，或者，如果未提供任何值 **，则根据**日志正态分布分配值。 下表链接到有关各个成员的文章。
 
 ||||
 |-|-|-|
@@ -90,7 +90,7 @@ public:
 
 `operator()` 成员函数将根据 URNG 引擎，从当前参数包或指定参数包返回下一个生成的值。
 
-若要深入了解分布类及其成员，请参阅 [\<random>](../standard-library/random.md)。
+有关分布类及其成员的详细信息，请参阅 [\<random>](../standard-library/random.md)。
 
 有关对数正态分布的详细信息，请参阅 Wolfram MathWorld 文章[对数正态分布](https://go.microsoft.com/fwlink/p/?linkid=400917)。
 
@@ -182,7 +182,7 @@ Distribution for 10 samples:
 
 **标头：** \<random>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="lognormal_distribution"></a>lognormal_distribution::lognormal_distribution
 
@@ -195,13 +195,13 @@ explicit lognormal_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-*年*\
+*m* \
 `m` 分布参数。
 
-*些*\
+*s* \
 `s` 分布参数。
 
-*parm*\
+*parm* \
 用于构造分布的 `param_type` 结构。
 
 ### <a name="remarks"></a>备注
@@ -230,13 +230,13 @@ struct param_type {
 
 ### <a name="parameters"></a>参数
 
-*年*\
+*m* \
 `m` 分布参数。
 
-*些*\
+*s* \
 `s` 分布参数。
 
-*然后*\
+*right* \
 用于比较的 `param_type` 结构。
 
 ### <a name="remarks"></a>备注

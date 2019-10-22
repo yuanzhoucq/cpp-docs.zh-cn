@@ -7,28 +7,28 @@ f1_keywords:
 helpviewer_keywords:
 - limits header
 ms.assetid: e07d6379-5b00-4a3d-a789-40d41538b59e
-ms.openlocfilehash: de8f815cd59b84a1e63c231e18e4882d0b5d6f09
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3ad740975cfff4f65f9e1c800a709cfaca3367db
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447573"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687809"
 ---
 # <a name="ltlimitsgt"></a>&lt;limits&gt;
 
-定义模板类 `numeric_limits` 以及两个有关浮点表示形式和舍入的枚举。
+定义类模板 `numeric_limits` 和两个有关浮点表示形式和舍入的枚举。
 
 ## <a name="requirements"></a>要求
 
 **标头：** \<limits>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="remarks"></a>备注
 
-`numeric_limits`类的显式专用化描述基本类型的多个属性, 包括字符、整数、浮点类型和由实现定义的**布尔**值, 而不是由C++语言。 \<limits> 中描述的属性包括准确性、最小和最大尺寸表示形式、舍入和信号类型错误。
+@No__t_0 类的显式专用化描述基本类型的多个属性，包括字符、整数、浮点类型和由实现定义的**布尔**值，而不是由C++语言. \<limits> 中描述的属性包括准确性、最小和最大尺寸表示形式、舍入和信号类型错误。
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="enumerations"></a>枚举
 
@@ -41,7 +41,7 @@ ms.locfileid: "68447573"
 
 |||
 |-|-|
-|[numeric_limits 类](../standard-library/numeric-limits-class.md)|该模板类描述内置数字类型的算术属性。|
+|[numeric_limits 类](../standard-library/numeric-limits-class.md)|类模板描述内置数值类型的算术属性。|
 
 ## <a name="see-also"></a>请参阅
 
