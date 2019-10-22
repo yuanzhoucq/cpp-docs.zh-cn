@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::money_put [C++], do_put
 - std::money_put [C++], put
 ms.assetid: f439fd56-c9b1-414c-95e1-66c918c6eee6
-ms.openlocfilehash: b9dff8a871895eee6774b75ca1c83dca6fd42ff3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: aafa6f9498ee315c25e73833baf3c13d99d36743
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460237"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689302"
 ---
-# <a name="moneyput-class"></a>money_put 类
+# <a name="money_put-class"></a>money_put 类
 
-此模板类描述一个对象来充当区域设置 facet，以便控制货币值向 `CharType` 类型序列的转换。
+类模板描述可用作区域设置 facet 的对象，以便控制货币值到 `CharType` 类型序列的转换。
 
 ## <a name="syntax"></a>语法
 
@@ -37,10 +37,10 @@ class money_put : public locale::facet;
 
 ### <a name="parameters"></a>参数
 
-*CharType*\
+*CharType* \
 在程序中用于对区域设置中的字符进行编码的类型。
 
-*OutputIterator*\
+*OutputIterator* \
 供货币放置函数写入其输出结果的迭代器类型。
 
 ## <a name="remarks"></a>备注
@@ -72,7 +72,7 @@ class money_put : public locale::facet;
 
 **标头：** \<locale>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="char_type"></a>  money_put::char_type
 
@@ -108,19 +108,19 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>参数
 
-*一个*\
+*下一*\
 发现插入的字符串中第一个元素的迭代器。
 
-*_Intl*\
+*_Intl* \
 一个布尔值，该值指示在序列中预期的货币符号的类型：如果为国际，则为 **true**，如果为国内，则为 **false**。
 
-*_Iosbase*\
+*_Iosbase* \
 一种格式标志，设定时表示货币符号是可选项；否则，它是必需项
 
-*_Fill*\
+*_Fill* \
 用于调整间距的字符。
 
-*初始值*\
+*val* \
 要转换的字符串对象。
 
 ### <a name="return-value"></a>返回值
@@ -129,9 +129,9 @@ virtual iter_type do_put(
 
 ### <a name="remarks"></a>备注
 
-第一个受保护的虚拟成员函数生成从 " [string_type](#string_type) " 对象*val*生成货币输出*字段时开始*的连续元素。 由*val*控制的序列必须以一个或多个十进制数字开头, 可选择前面带有一个减号 (-), 表示数量。 该函数返回一个迭代器，指定超出生成货币输出字段的第一个元素。
+第一个受保护的虚拟成员函数生成从 " [string_type](#string_type) " 对象*val*生成货币输出*字段时开始的连续*元素。 由*val*控制的序列必须以一个或多个十进制数字开头，可选择前面带有一个减号（-），表示数量。 该函数返回一个迭代器，指定超出生成货币输出字段的第一个元素。
 
-第二个受保护的虚拟成员函数的行为与第一个相同, 不同之处在于, 它会有效地将*val*转换为十进制数字的序列, 可选择前面加上负号, 然后将其转换为上述顺序。
+第二个受保护的虚拟成员函数的行为与第一个相同，不同之处在于，它会有效地将*val*转换为十进制数字的序列，可选择前面加上负号，然后将其转换为上述顺序。
 
 货币输出字段的格式由[区域设置 facet](../standard-library/locale-class.md#facet_class) fac 决定，而后者又由（有效）调用 [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, **intl**> >( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)) 返回。
 
@@ -155,7 +155,7 @@ virtual iter_type do_put(
 
 - **fac**. [frac_digits](../standard-library/moneypunct-class.md#frac_digits) 确定任何小数点右侧的有效位数。
 
-如果符号字符串（**fac**. `negative_sign` 或 **fac**. `positive_sign`具有多个元素，则第一个元素会在等于 **money_base::sign** 的元素在 ( **fac**. `neg_format` 或 **fac**. `pos_format`）格式模式中出现的位置生成。 剩余所有元素在货币输出字段的末尾生成。
+如果符号字符串（**fac**. `negative_sign` 或 **fac**. `positive_sign`具有多个元素，则第一个元素会在等于 **money_base::sign** 的元素在 ( **fac**. `neg_format` 或 **fac**. `pos_format`) 格式模式中出现的位置匹配。 剩余所有元素在货币输出字段的末尾生成。
 
 如果 **iosbase**. [flags](../standard-library/ios-base-class.md#flags) & [showbase](../standard-library/ios-functions.md#showbase) 不为零，则字符串 **fac**. `curr_symbol` 将在等于 **money_base::symbol** 的元素在此格式模式中出现的位置处生成。 否则，将不生成货币符号。
 
@@ -191,18 +191,18 @@ explicit money_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>参数
 
-*_Refs*\
+*_Refs* \
 用于指定对象的内存管理类型的整数值。
 
 ### <a name="remarks"></a>备注
 
-*_Refs*参数的可能值及其重要性为:
+*_Refs*参数的可能值及其重要性为：
 
 - 0：对象的生存期由包含该对象的区域设置管理。
 
 - 1：必须手动管理对象的生存期。
 
-- \>1: 未定义这些值。
+- \> 1：未定义这些值。
 
 由于该析构函数受到保护，可能没有直接的示例。
 
@@ -230,19 +230,19 @@ iter_type put(
 
 ### <a name="parameters"></a>参数
 
-*一个*\
+*下一*\
 发现插入的字符串中第一个元素的迭代器。
 
-*_Intl*\
+*_Intl* \
 一个布尔值，该值指示在序列中预期的货币符号的类型：如果为国际，则为 **true**，如果为国内，则为 **false**。
 
-*_Iosbase*\
+*_Iosbase* \
 一种格式标志，设定时表示货币符号是可选项；否则，它是必需项
 
-*_Fill*\
+*_Fill* \
 用于调整间距的字符。
 
-*初始值*\
+*val* \
 要转换的字符串对象。
 
 ### <a name="return-value"></a>返回值
@@ -291,7 +291,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>备注
 
-此类型描述 [basic_string](../standard-library/basic-string-class.md) 模板类的专用化，该模板类的对象可存储来自源序列的元素序列。
+该类型描述了类模板[basic_string](../standard-library/basic-string-class.md)的专用化，其对象可以存储源序列中的元素序列。
 
 ## <a name="see-also"></a>请参阅
 

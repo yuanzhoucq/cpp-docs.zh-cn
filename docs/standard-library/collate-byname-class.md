@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - collate_byname class
 ms.assetid: 3dc380df-867c-4763-b60e-ba62a8e63ca7
-ms.openlocfilehash: b8ed428da05e706796a981b8ca9d601033156c6f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3e9a256ac7bdb5f6d077746fe2a08990ed41e931
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458623"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688274"
 ---
-# <a name="collatebyname-class"></a>collate_byname 类
+# <a name="collate_byname-class"></a>collate_byname 类
 
-一种派生模板类，用于描述一个对象来充当给定区域设置的排序规则 facet，从而检索与字符串排序约定有关的文化区域特定信息。
+一个派生类模板，用于描述一个对象，该对象可充当给定区域设置的排序规则 facet，从而能够检索特定于涉及字符串排序约定的区域性区域的信息。
 
 ## <a name="syntax"></a>语法
 
@@ -39,21 +39,21 @@ protected:
 
 ### <a name="parameters"></a>参数
 
-*_Locname*\
+*_Locname* \
 已命名的区域设置。
 
-*_Refs*\
+*_Refs* \
 初始引用计数。
 
 ## <a name="remarks"></a>备注
 
-一种模板类，用于描述一个可充当类型 [collate](../standard-library/collate-class.md#collate)\<CharType> 的[区域设置 facet](../standard-library/locale-class.md#facet_class) 的对象。 其行为由已[命名](../standard-library/locale-class.md#name)的区域设置 *_Locname*确定。 每个构造函数通过 [collate](../standard-library/collate-class.md#collate)\<CharType>( `_Refs`) 初始化其基对象。
+类模板描述了一个对象，该对象可充当类型为[collate](../standard-library/collate-class.md#collate) \<CharType > 的[区域设置 facet](../standard-library/locale-class.md#facet_class) 。 其行为由已[命名](../standard-library/locale-class.md#name)的区域设置 *_Locname*确定。 每个构造函数通过 [collate](../standard-library/collate-class.md#collate)\<CharType>( `_Refs`) 初始化其基对象。
 
 ## <a name="requirements"></a>要求
 
 **标头：** \<locale>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="see-also"></a>请参阅
 

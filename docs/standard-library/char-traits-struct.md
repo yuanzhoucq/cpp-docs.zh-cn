@@ -27,14 +27,14 @@ helpviewer_keywords:
 - char_traits struct
 - char_traits class
 ms.assetid: 568e59f0-4521-4207-9223-9dcf6a16d620
-ms.openlocfilehash: ea5f53fd77545713dfcc6a969f1c172d89f8e460
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: efb926bc8c2ae55835391f884a0e3430e3da8aca
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459026"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689904"
 ---
-# <a name="chartraits-struct"></a>char_traits 结构
+# <a name="char_traits-struct"></a>char_traits 结构
 
 Char_traits 结构描述与一个字符相关联的特性。
 
@@ -47,12 +47,12 @@ struct char_traits;
 
 ### <a name="parameters"></a>参数
 
-*CharType*\
+*CharType* \
 元素数据类型。
 
 ## <a name="remarks"></a>备注
 
-模板结构描述类型`CharType`的各种字符特征。 模板类[basic_string](../standard-library/basic-string-class.md)以及若干 iostream 模板类 (包括[basic_ios](../standard-library/basic-ios-class.md)) 使用此信息来操作类型`CharType`为的元素。 此元素类型不得要求显式构造或析构。 它必须提供带预期语义的默认构造函数、复制构造函数和赋值运算符。 按位复制必须具有与赋值相同的效果。 结构 char_traits 的任何成员函数均无法引发异常。
+模板结构描述类型 `CharType` 的各种字符特征。 类模板[basic_string](../standard-library/basic-string-class.md)和多个 iostream 类模板（包括[basic_ios](../standard-library/basic-ios-class.md)）使用此信息来操作类型 `CharType` 的元素。 此元素类型不得要求显式构造或析构。 它必须提供带预期语义的默认构造函数、复制构造函数和赋值运算符。 按位复制必须具有与赋值相同的效果。 结构 char_traits 的任何成员函数均无法引发异常。
 
 ### <a name="typedefs"></a>Typedef
 
@@ -88,7 +88,7 @@ struct char_traits;
 
 **标头：** \<string>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="assign"></a>  char_traits::assign
 
@@ -107,18 +107,18 @@ static char_type *assign(char_type* strTo,
 
 **_** *CharFrom*要分配其值的字符。
 
-*_CharTo*\
+*_CharTo* \
 要为其分配字符值的元素。
 
-*strTo*\
+*strTo* \
 要对其初始元素分配字符值的字符串或字符数组。
 
-*_Num*\
+*_Num* \
 要为其分配值的元素数目。
 
 ### <a name="return-value"></a>返回值
 
-第二个成员函数返回一个指向字符串的指针, 该字符串的第一个 *_Num*元素的值为 *_CharFrom*。
+第二个成员函数返回一个指向字符串的指针，该字符串的第一个 *_Num*元素的值为 *_CharFrom*。
 
 ### <a name="example"></a>示例
 
@@ -171,7 +171,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数 `CharType` 的同义词。
+类型是模板参数 `CharType` 的同义词。
 
 ### <a name="example"></a>示例
 
@@ -189,13 +189,13 @@ static int compare(const char_type* str1,
 
 ### <a name="parameters"></a>参数
 
-*str1*\
+*str1* \
 要进行比较的两个字符串中的第一个。
 
-*str2*\
+*str2* \
 要进行比较的两个字符串中的第二个。
 
-*_Num*\
+*_Num* \
 要比较的字符串中的元素数。
 
 ### <a name="return-value"></a>返回值
@@ -258,10 +258,10 @@ static char_type *copy(char_type* _To,
 *待办*\
 用于接收复制的字符序列的字符串或字符数组的开头处的元素。
 
-*_From*\
+*_From* \
 要复制的源字符串或字符数组的开头处的元素。
 
-*_Num*\
+*_Num* \
 要复制的元素的数量。
 
 ### <a name="return-value"></a>返回值
@@ -317,16 +317,16 @@ static char_type *_Copy_s(
 
 ### <a name="parameters"></a>参数
 
-*目的*\
+*dest* \
 用于接收复制的字符序列的字符串或字符数组。
 
-*dest_size*\
-*Dest*的大小。 如果`char_type`为**char**, 则此大小以字节为单位。 如果`char_type`为**wchar_t**, 则此大小为单词。
+*dest_size* \
+*Dest*的大小。 如果 `char_type` 为**char**，则此大小以字节为单位。 如果 `char_type` 为**wchar_t**，则此大小为词。
 
-*_From*\
+*_From* \
 要复制的源字符串或字符数组。
 
-*计*\
+*计数*\
 要复制的元素的数量。
 
 ### <a name="return-value"></a>返回值
@@ -382,9 +382,9 @@ EOF 字符。
 
 ### <a name="remarks"></a>备注
 
-一个表示文件结尾的值 (例如 EOF 或 WEOF)。
+一个表示文件结尾的值（例如 EOF 或 WEOF）。
 
-C++ 标准声明此值不能对应于有效的 `char_type` 值。 Microsoft C++编译器对类型**char**强制实施此约束, 但不对类型**wchar_t**强制此约束。 下面的示例将说明这一点。
+C++ 标准声明此值不能对应于有效的 `char_type` 值。 Microsoft C++编译器对类型**char**强制实施此约束，但不对类型**wchar_t**强制此约束。 下面的示例将说明这一点。
 
 ### <a name="example"></a>示例
 
@@ -429,10 +429,10 @@ static bool eq(const char_type& _Ch1, const char_type& _Ch2);
 
 ### <a name="parameters"></a>参数
 
-*_Ch1*\
+*_Ch1* \
 要测试是否相等的两个字符中的第一个。
 
-*_Ch2*\
+*_Ch2* \
 要测试是否相等的两个字符中的第二个。
 
 ### <a name="return-value"></a>返回值
@@ -489,10 +489,10 @@ static bool eq_int_type(const int_type& _Ch1, const int_type& _Ch2);
 
 ### <a name="parameters"></a>参数
 
-*_Ch1*\
-要测试是否相等`int_type`的两个字符中的第一个字符。
+*_Ch1* \
+要测试是否与 `int_type`s 相等的两个字符中的第一个字符。
 
-*_Ch2*\
+*_Ch2* \
 要测试是否等于 `int_type` 的两个字符中的第二个。
 
 ### <a name="return-value"></a>返回值
@@ -576,13 +576,13 @@ static const char_type* find(const char_type* str,
 
 ### <a name="parameters"></a>参数
 
-*字符串*\
+*str* \
 要搜索的字符串中的第一个字符。
 
-*_Num*\
+*_Num* \
 要搜索范围内的位置数，从第一位开始计数。
 
-*_Ch*\
+*_Ch* \
 要在范围中搜索的字符。
 
 ### <a name="return-value"></a>返回值
@@ -641,7 +641,7 @@ typedef long int_type;
 
 ### <a name="remarks"></a>备注
 
-必须能够将类型`CharType`的值强制转换为类型, `int_type`然后返回到`CharType` , 而不会更改原始值。
+必须能够将类型 `CharType` 的值强制转换为类型，然后 `int_type` 返回到 `CharType`，而不会更改原始值。
 
 ### <a name="example"></a>示例
 
@@ -657,7 +657,7 @@ static size_t length(const char_type* str);
 
 ### <a name="parameters"></a>参数
 
-*字符串*\
+*str* \
 要测量其长度的 C 字符串。
 
 ### <a name="return-value"></a>返回值
@@ -700,10 +700,10 @@ static bool lt(const char_type& _Ch1, const char_type& _Ch2);
 
 ### <a name="parameters"></a>参数
 
-*_Ch1*\
+*_Ch1* \
 要测试是否小于的两个字符中的第一个。
 
-*_Ch2*\
+*_Ch2* \
 要测试是否小于的两个字符中的第二个。
 
 ### <a name="return-value"></a>返回值
@@ -766,10 +766,10 @@ static char_type *move(char_type* _To,
 *待办*\
 用于接收复制的字符序列的字符串或字符数组的开头处的元素。
 
-*_From*\
+*_From* \
 要复制的源字符串或字符数组的开头处的元素。
 
-*_Num*\
+*_Num* \
 要从源字符串复制的元素数。
 
 ### <a name="return-value"></a>返回值
@@ -840,21 +840,21 @@ static char_type *_Move_s(
 
 ### <a name="parameters"></a>参数
 
-*目的*\
+*dest* \
 用于接收复制的字符序列的字符串或字符数组的开头处的元素。
 
-*dest_size*\
-*Dest*的大小。 如果`char_type`为**char**, 则以字节为单位。 如果`char_type`为**wchar_t**, 则采用词。
+*dest_size* \
+*Dest*的大小。 如果 `char_type` 为**char**，则以字节为单位。 如果 `char_type` 为**wchar_t**，则采用词。
 
-*_From*\
+*_From* \
 要复制的源字符串或字符数组的开头处的元素。
 
-*计*\
+*计数*\
 要从源字符串复制的元素数。
 
 ### <a name="return-value"></a>返回值
 
-复制到字符串或字符数组的第一个元素*dest* , 用于接收复制的字符序列。
+复制到字符串或字符数组的第一个元素*dest* ，用于接收复制的字符序列。
 
 ### <a name="remarks"></a>备注
 
@@ -916,12 +916,12 @@ static int_type not_eof(const int_type& _Ch);
 
 ### <a name="parameters"></a>参数
 
-*_Ch*\
+*_Ch* \
 表示为 `int_type` 且要测试其是否为 EOF 字符的字符。
 
 ### <a name="return-value"></a>返回值
 
-如果字符的不等于 EOF 字符的, 则为已测试字符的表示形式。`int_type` `int_type`
+如果字符的 `int_type` 不等于 EOF 字符的，则为已测试字符的 `int_type` 表示形式。
 
 如果字符 `int_type` 值等于 EOF `int_type` 值，则为 **false**。
 
@@ -1024,7 +1024,7 @@ static char_type to_char_type(const int_type& _Ch);
 
 ### <a name="parameters"></a>参数
 
-*_Ch*\
+*_Ch* \
 要表示为 `char_type` 的 `int_type` 字符。
 
 ### <a name="return-value"></a>返回值
@@ -1130,7 +1130,7 @@ static int_type to_int_type(const char_type& _Ch);
 
 ### <a name="parameters"></a>参数
 
-*_Ch*\
+*_Ch* \
 表示为 `int_type` 的 `char_type` 字符。
 
 ### <a name="return-value"></a>返回值

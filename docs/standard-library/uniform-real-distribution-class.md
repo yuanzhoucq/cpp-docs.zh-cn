@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::uniform_real_distribution [C++], param_type
 - std::uniform_real_distribution [C++], param_type
 ms.assetid: 5cf906fd-0319-4984-b21b-98425cd7532d
-ms.openlocfilehash: 752226c9cacfdd36b93890502d62187f7b44a8da
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 1c63002db7de4ebce348505c4e757e6901861a93
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454940"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688813"
 ---
-# <a name="uniformrealdistribution-class"></a>uniform_real_distribution 类
+# <a name="uniform_real_distribution-class"></a>uniform_real_distribution 类
 
 在包含起始值不包含结束值的输出范围中生成均匀的（每个值的概率都均等）浮点分布。
 
@@ -71,12 +71,12 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*RealType*\
-浮点结果类型, 默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*RealType* \
+浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
-模板类描述了包含起始值不包含结束值的分布，该分布使用某个分布产生用户指定的浮点整型值，以便每个值的概率都均等。 下表链接到有关各个成员的文章。
+类模板描述了一个包含专用分布，该分布使用一个分布生成用户指定的整型浮点类型的值，以便每个值都可能相同。 下表链接到有关各个成员的文章。
 
 ||||
 |-|-|-|
@@ -93,7 +93,7 @@ public:
 
 `operator()` 成员函数将根据 URNG 引擎，从当前参数包或指定参数包返回下一个生成的值。
 
-若要深入了解分布类及其成员，请参阅 [\<random>](../standard-library/random.md)。
+有关分布类及其成员的详细信息，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="example"></a>示例
 
@@ -176,7 +176,7 @@ Distribution for 10 samples:
 
 **标头：** \<random>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="uniform_real_distribution"></a>uniform_real_distribution::uniform_real_distribution
 
@@ -189,20 +189,20 @@ explicit uniform_real_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-*的*\
+*一个*\
 随机值的下限（包含下限）。
 
-*b*\
+*b* \
 随机值的上限（不包含上限）。
 
-*parm*\
+*parm* \
 用于构造分布的 `param_type` 结构。
 
 ### <a name="remarks"></a>备注
 
 **前置条件：** `a < b`
 
-第一个构造函数将构造一个对象, 其存储*的*值保留值*a* , 并且存储的*b*值保留值*b*。
+第一个构造函数将构造一个对象，其存储*的*值保留值*a* ，并且存储的*b*值保留值*b*。
 
 第二个构造函数将构造一个从 parm 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
 
@@ -224,13 +224,13 @@ struct param_type {
 
 ### <a name="parameters"></a>参数
 
-*的*\
+*一个*\
 随机值的下限（包含下限）。
 
-*b*\
+*b* \
 随机值的上限（不包含上限）。
 
-*然后*\
+*right* \
 要与它进行比较的 `param_type` 对象。
 
 ### <a name="remarks"></a>备注

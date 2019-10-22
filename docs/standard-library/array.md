@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - array header
 ms.assetid: 084147c1-e805-478e-8201-76846020f187
-ms.openlocfilehash: 4c35d34c9c51c8ebd6885b1a1cd07c28bcb61d1b
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: bdf9209b18328735f15393687528a40a94198730
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456752"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690044"
 ---
 # <a name="ltarraygt"></a>&lt;array&gt;
 
-定义容器模板类**数组**和多个支持模板。
+定义容器类模板**数组**和多个支持模板。
 
 ## <a name="requirements"></a>要求
 
 **Header:** \<array>
 
-**命名空间：** std
+**命名空间:** std
 
 > [!NOTE]
-> 数组 > 库也`#include <initializer_list>`使用语句。 \<
+> > 库 \<array 也使用了 `#include <initializer_list>` 语句。
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="classes"></a>类
 

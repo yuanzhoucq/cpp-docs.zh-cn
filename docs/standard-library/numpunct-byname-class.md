@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - numpunct_byname class
 ms.assetid: 18412924-e085-4771-b5e9-7a200cbdd7c0
-ms.openlocfilehash: 0c9eb565c2dbf54da449411aa11a4c5661debf1d
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: da9259df8c527e44a4adea3a53be31b3c3ffc10b
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452316"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687606"
 ---
-# <a name="numpunctbyname-class"></a>numpunct_byname 类
+# <a name="numpunct_byname-class"></a>numpunct_byname 类
 
-一种派生模板类，用于描述一个对象来充当给定区域设置的 `numpunct` facet，从而对数字和布尔表达式进行格式化和标点设置。
+派生类模板描述了一个对象，该对象可充当给定区域设置的 `numpunct` 方面，启用数值和布尔表达式的格式和标点。
 
 ## <a name="syntax"></a>语法
 
@@ -45,7 +45,7 @@ protected:
 
 **标头：** \<locale>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="see-also"></a>请参阅
 

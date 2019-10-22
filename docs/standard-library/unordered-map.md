@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - unordered_map header
 ms.assetid: eb90ecb2-250a-4be1-83d2-f66b2917edde
-ms.openlocfilehash: 1ac1bf2772e7eb6b2f61aa7b4f79de21fb675afe
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e77fd79375fa7f636f551c1246be4f0d8f309ffd
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454763"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688832"
 ---
-# <a name="ltunorderedmapgt"></a>&lt;unordered_map&gt;
+# <a name="ltunordered_mapgt"></a>&lt;unordered_map&gt;
 
-定义容器模板类 [unordered_map](../standard-library/unordered-map-class.md) 和 [unordered_multimap](../standard-library/unordered-multimap-class.md) 及其支持的模板。
+定义容器类模板[unordered_map](../standard-library/unordered-map-class.md)和[unordered_multimap](../standard-library/unordered-multimap-class.md)及其支持的模板。
 
 ## <a name="syntax"></a>语法
 
@@ -24,11 +24,11 @@ ms.locfileid: "68454763"
 ```
 
 > [!NOTE]
-> Unordered_map > 库还使用该`#include <initializer_list>`语句。 \<
+> > 库 \<unordered_map 也使用了 `#include <initializer_list>` 语句。
 
 ### <a name="classes"></a>类
 
-|类|描述|
+|实例|描述|
 |-|-|
 |[unordered_map 类](../standard-library/unordered-map-class.md)|存储 {key, mapped} 对的哈希表。|
 |[unordered_multimap 类](../standard-library/unordered-multimap-class.md)|存储 {key, mapped} 对的哈希表。|

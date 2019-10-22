@@ -7,14 +7,14 @@ helpviewer_keywords:
 - iterator_traits struct
 - iterator_traits class
 ms.assetid: 8b92c2c5-f658-402f-8ca1-e7ae301b8514
-ms.openlocfilehash: 9d2f9d79d200579f539f7d9edc49d4a907e6cdb2
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 924ca5ae1d32753bbe315252d942425712962639
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455581"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689455"
 ---
-# <a name="iteratortraits-struct"></a>iterator_traits 结构
+# <a name="iterator_traits-struct"></a>iterator_traits 结构
 
 用于指定迭代器应具有的所有关键类型定义的模板帮助器结构。
 
@@ -35,19 +35,19 @@ struct iterator_traits {
 
 此模板结构定义成员类型
 
-- `iterator_category`: 的同义词`Iterator::iterator_category`。
+- `iterator_category`： `Iterator::iterator_category` 的同义词。
 
-- `value_type`: 的同义词`Iterator::value_type`。
+- `value_type`： `Iterator::value_type` 的同义词。
 
-- `difference_type`: 的同义词`Iterator::difference_type`。
+- `difference_type`： `Iterator::difference_type` 的同义词。
 
-- `distance_type`: 一个同义词, 用于`Iterator::difference_type.`
+- `distance_type`： `Iterator::difference_type.` 的同义词
 
-- `pointer`: 的同义词`Iterator::pointer`。
+- `pointer`： `Iterator::pointer` 的同义词。
 
-- `reference`: 的同义词`Iterator::reference`。
+- `reference`： `Iterator::reference` 的同义词。
 
-部分专用化确定与类型为**类型** <strong>\*</strong>或**const 类型** <strong>\*</strong>的对象指针关联的关键类型。
+部分专用化确定**与类型** <strong>\*</strong>或**常量类型** <strong>\*</strong>的对象指针关联的关键类型。
 
 在此实现中，还可使用几个不会使用部分专用化的模板函数：
 
@@ -71,7 +71,7 @@ template <class Ty>
 ptrdiff_t *_Dist_type(const Ty *);
 ```
 
-它更加间接地决定其中几个相同类型。 函数调用时将这些函数用作参数。 其唯一目的是向被调用函数提供有用的模板类参数。
+它更加间接地决定其中几个相同类型。 函数调用时将这些函数用作参数。 其唯一目的是向被调用函数提供一个有用的类模板参数。
 
 ## <a name="example"></a>示例
 
@@ -120,10 +120,10 @@ struct std::bidirectional_iterator_tag
 
 **标头：** \<iterator>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="see-also"></a>请参阅
 
 [\<iterator>](../standard-library/iterator.md)\
-[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

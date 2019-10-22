@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::cauchy_distribution [C++], param_type
 - std::cauchy_distribution [C++], param_type
 ms.assetid: 21522351-f2f1-46d9-97f0-d358c932356c
-ms.openlocfilehash: 628d79c8026c11c7583448ce021a6aaee4ace6d9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6a2bbdc9cc5ef8b633842bca3d94e0d8073c9abb
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449865"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688339"
 ---
-# <a name="cauchydistribution-class"></a>cauchy_distribution 类
+# <a name="cauchy_distribution-class"></a>cauchy_distribution 类
 
 生成柯西分布。
 
@@ -70,15 +70,15 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*RealType*\
-浮点结果类型, 默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*RealType* \
+浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
-*URNG*\
+*URNG* \
 统一随机数生成器引擎。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
-此模板类描述产生用户指定的浮点类型的值的分布, 或者 **, 如果未**提供任何值, 则根据柯西分布进行分布。 下表链接到有关各个成员的文章。
+类模板描述产生用户指定的浮点类型的值的分布，或者，如果未提供任何值 **，则根据**柯西分布进行分布。 下表链接到有关各个成员的文章。
 
 ||||
 |-|-|-|
@@ -95,7 +95,7 @@ public:
 
 `operator()` 成员函数将根据 URNG 引擎，从当前参数包或指定参数包返回下一个生成的值。
 
-若要深入了解分布类及其成员，请参阅 [\<random>](../standard-library/random.md)。
+有关分布类及其成员的详细信息，请参阅 [\<random>](../standard-library/random.md)。
 
 有关柯西分布的详细信息，请参阅 Wolfram MathWorld 文章[柯西分布](https://go.microsoft.com/fwlink/p/?linkid=400523)。
 
@@ -238,7 +238,7 @@ Distribution for 10 samples:
 
 **标头：** \<random>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="cauchy_distribution"></a>  cauchy_distribution::cauchy_distribution
 
@@ -251,13 +251,13 @@ explicit cauchy_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-*的*\
+*一个*\
 `a` 分布参数。
 
-*b*\
+*b* \
 `b` 分布参数。
 
-*parm*\
+*parm* \
 用于构造分布的 `param_type` 结构。
 
 ### <a name="remarks"></a>备注
@@ -286,13 +286,13 @@ struct param_type {
 
 ### <a name="parameters"></a>参数
 
-*的*\
+*一个*\
 `a` 分布参数。
 
-*b*\
+*b* \
 `b` 分布参数。
 
-*然后*\
+*right* \
 要与它进行比较的 `param_type` 对象。
 
 ### <a name="remarks"></a>备注

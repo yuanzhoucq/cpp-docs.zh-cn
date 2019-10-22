@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - const_mem_fun_t class
 ms.assetid: f169d381-019b-4a0e-a9a3-54da6d948270
-ms.openlocfilehash: 0bdfdbac7a23a4b0e3b830b05990bf028c7bb316
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 5263612a26b2bcb606ad712a2a8e0a521ce9437a
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244551"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688211"
 ---
-# <a name="constmemfunt-class"></a>const_mem_fun_t 类
+# <a name="const_mem_fun_t-class"></a>const_mem_fun_t 类
 
-一种适配器类，在使用引用自变量进行初始化的情况下，该类允许将不带任何自变量的 const 成员函数作为一元函数对象调用。 在 C + + 11 中，在 C + + 17 中删除不推荐使用。
+一种适配器类，在使用引用自变量进行初始化的情况下，该类允许将不带任何自变量的 const 成员函数作为一元函数对象调用。 在 c + + 11 中已弃用，在 c + + 17 中删除。
 
 ## <a name="syntax"></a>语法
 
@@ -30,11 +30,11 @@ class const_mem_fun_t : public unary_function <Type *, Result>
 
 ### <a name="parameters"></a>参数
 
-*Pm*\
+*Pm* \
 一个指针，指向要转换为函数对象的 `Type` 类成员函数。
 
-*Pleft*\
-该对象的*Pm*上调用成员函数。
+*Pleft* \
+在其上调用*Pm*成员函数的对象。
 
 ## <a name="return-value"></a>返回值
 
@@ -42,7 +42,7 @@ class const_mem_fun_t : public unary_function <Type *, Result>
 
 ## <a name="remarks"></a>备注
 
-此模板类存储一份*Pm*，它必须是指向类的成员函数的指针`Type`，私有成员对象中。 它定义其成员函数`operator()`为返回 (`Pleft` -> \* `Pm`) （) **const**。
+类模板存储*Pm*的副本，该副本必须是指向私有成员对象中 `Type` 类的成员函数的指针。 它将其成员函数定义 `operator()` 为返回（`Pleft` -> \* `Pm`）（） **const**。
 
 ## <a name="example"></a>示例
 

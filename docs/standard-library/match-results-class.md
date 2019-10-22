@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - match_results class
 ms.assetid: b504fdca-e5dd-429d-9960-6e27c9167fa6
-ms.openlocfilehash: 72a948c7f8422b36b94a16cdb2c815bca92d20c7
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c282791fb0ff85c0c8818c6905c51703614f4675
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456390"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689388"
 ---
-# <a name="matchresults-class"></a>match_results 类
+# <a name="match_results-class"></a>match_results 类
 
 包含一系列子匹配项。
 
@@ -26,7 +26,7 @@ class match_results
 
 ## <a name="parameters"></a>参数
 
-*BidIt*\
+*BidIt* \
 子匹配项的迭代器类型。
 
 *分配*\
@@ -34,7 +34,7 @@ class match_results
 
 ## <a name="remarks"></a>备注
 
-模板类描述一个对象，该对象用于控制由正则表达式搜索生成的 `sub_match<BidIt>` 类型元素不可修改的序列。 每个元素指向与该元素对应的捕获组匹配的子序列。
+类模板描述了一个对象，该对象用于控制由正则表达式搜索生成的类型 `sub_match<BidIt>` 的元素的不可修改序列。 每个元素指向与该元素对应的捕获组匹配的子序列。
 
 ### <a name="constructors"></a>构造函数
 
@@ -51,7 +51,7 @@ class match_results
 |[const_iterator](#const_iterator)|子匹配项的常量迭代器类型。|
 |[const_reference](#const_reference)|元素常量引用的类型。|
 |[difference_type](#difference_type)|迭代器差异的类型。|
-|[Iterator](#iterator)|子匹配项的迭代器类型。|
+|[迭代器](#iterator)|子匹配项的迭代器类型。|
 |[reference](#reference)|元素引用的类型。|
 |[size_type](#size_type)|子匹配项计数的类型。|
 |[string_type](#string_type)|字符串的类型。|
@@ -64,15 +64,15 @@ class match_results
 |[begin](#begin)|指定子匹配序列的开头。|
 |[empty](#empty)|测试是否无子匹配项。|
 |[end](#end)|指定子匹配序列的末尾。|
-|[format](#format)|设置子匹配项格式。|
+|[格式](#format)|设置子匹配项格式。|
 |[get_allocator](#get_allocator)|返回存储的分配器。|
 |[length](#length)|返回子匹配项的长度。|
 |[max_size](#max_size)|获取子匹配项的最大数目。|
 |[置于](#position)|获取子组的起始偏移量。|
-|[prefix](#prefix)|获取第一个子匹配项之前的序列。|
+|[作为](#prefix)|获取第一个子匹配项之前的序列。|
 |[size](#size)|计算子匹配项的数目。|
 |[str](#str)|返回子匹配项。|
-|[suffix](#suffix)|获取最后一个子匹配项后的序列。|
+|[后缀](#suffix)|获取最后一个子匹配项后的序列。|
 |[swap](#swap)|交换两个 match_results 对象。|
 
 ### <a name="operators"></a>运算符
@@ -86,7 +86,7 @@ class match_results
 
 **标头：** \<regex 1>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="example"></a>示例
 
@@ -298,21 +298,21 @@ string_type format(const string_type& fmt, match_flag_type flags = format_defaul
 
 ### <a name="parameters"></a>参数
 
-*OutIt*\
+*OutIt* \
 输出迭代器类型。
 
 *out*\
 要写入到的输出流。
 
-*bcp.fmt*\
+*bcp.fmt* \
 格式字符串。
 
-*随意*\
+*标志*\
 格式标志。
 
 ### <a name="remarks"></a>备注
 
-每个成员函数在*bcp.fmt*格式的控制下生成格式化文本。 第一个成员函数将带格式的文本写入到*其参数定义*的序列, 并*返回。* 第二个成员函数返回保存了带格式文本的副本的字符串对象。
+每个成员函数在*bcp.fmt*格式的控制下生成格式化文本。 第一个成员函数*将带格式*的文本写入到其参数定义的序列，并*返回。* 第二个成员函数返回保存带格式文本的副本的字符串对象。
 
 生成格式化文本。 格式字符串中的文字文本通常会复制到目标序列。 格式字符串中的每个转义序列均由它表示的文本替换。 复制和替换的详细信息由传递到函数的格式标志控制。
 
@@ -350,12 +350,12 @@ difference_type length(size_type sub = 0) const;
 
 ### <a name="parameters"></a>参数
 
-*该子*\
+*sub* \
 子匹配项的索引。
 
 ### <a name="remarks"></a>备注
 
-成员函数返回 `(*this)[sub].length()`。
+此成员函数返回 `(*this)[sub].length()`。
 
 ## <a name="match_results"></a>match_results::match_results
 
@@ -372,12 +372,12 @@ match_results(const match_results& right);
 *分配*\
 要存储的分配器对象。
 
-*然后*\
+*right* \
 要复制的 match_results 对象。
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数构造 `match_results` 对象，其中不包含子匹配项。 第二个构造函数`match_results`构造一个对象, 该对象是*权限*的副本。
+第一个构造函数构造 `match_results` 对象，其中不包含子匹配项。 第二个构造函数构造作为*权限*副本的 `match_results` 对象。
 
 ## <a name="max_size"></a>match_results::max_size
 
@@ -401,12 +401,12 @@ match_results& operator=(const match_results& right);
 
 ### <a name="parameters"></a>参数
 
-*然后*\
+*right* \
 要复制的 match_results 对象。
 
 ### <a name="remarks"></a>备注
 
-成员运算符将控制`*this`的序列替换为由*right*控制的序列副本。
+成员运算符将 `*this` 控制的序列替换为由*right*控制的序列副本。
 
 ## <a name="op_at"></a>match_results::operator[]
 
@@ -423,7 +423,7 @@ const_reference operator[](size_type n) const;
 
 ### <a name="remarks"></a>备注
 
-成员函数返回对受控序列的元素*n*的引用; 如果`size() <= n`或捕获组*n*不是匹配`sub_match`项的一部分, 则返回对空对象的引用。
+成员函数返回对受控序列的元素*n*的引用，如果 `size() <= n` 或捕获组*n*不是匹配项的一部分，则返回对空 `sub_match` 对象的引用。
 
 ## <a name="position"></a>match_results::position
 
@@ -435,7 +435,7 @@ difference_type position(size_type sub = 0) const;
 
 ### <a name="parameters"></a>参数
 
-*该子*\
+*sub* \
 子匹配项的索引。
 
 ### <a name="remarks"></a>备注
@@ -500,12 +500,12 @@ string_type str(size_type sub = 0) const;
 
 ### <a name="parameters"></a>参数
 
-*该子*\
+*sub* \
 子匹配项的索引。
 
 ### <a name="remarks"></a>备注
 
-成员函数返回 `string_type((*this)[sub])`。
+此成员函数返回 `string_type((*this)[sub])`。
 
 ## <a name="string_type"></a>match_results::string_type
 
@@ -541,12 +541,12 @@ void swap(const match_results& right) throw();
 
 ### <a name="parameters"></a>参数
 
-*然后*\
+*right* \
 要交换的 match_results 对象。
 
 ### <a name="remarks"></a>备注
 
-成员*函数在常量*时间内交换`*this`的内容, 不会引发异常。
+成员函数在固定时间内交换 `*this` 的*内容，而*不会引发异常。
 
 ## <a name="value_type"></a>match_results::value_type
 

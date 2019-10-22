@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - ctype<char> class
 ms.assetid: ee30acb4-a743-405e-b3d4-13602092da84
-ms.openlocfilehash: 7fe1eef32741d63e7b2e2c2320d18f445784c44f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 08bf2c5c814eaed7b409295fcf50c66577f6a5d9
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455458"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688152"
 ---
 # <a name="ctypeltchargt-class"></a>ctype&lt;char&gt; 类
 
-类是用于类型`ctype\<CharType>` **char**的模板类的显式专用化, 它描述可用作区域设置 facet 的对象, 以描述类型为**char**的字符的各种属性。
+类是类模板 `ctype\<CharType>` 向类型**char**的显式专用化，它描述可用作区域设置 facet 的对象，以描述类型为**char**的字符的各种属性。
 
 ## <a name="syntax"></a>语法
 
@@ -106,17 +106,17 @@ protected:
 
 ## <a name="remarks"></a>备注
 
-显式专用化与模板类存在以下几个方面的差异：
+显式专用化的不同之处在于类模板：
 
-- 类 ctype < `char`的对象 > 存储指向 ctype 掩码表的第一个元素的指针, 这是类型`ctype_base::mask`为 UCHAR_MAX + 1 的元素的数组。 它还存储布尔对象，指明当 ctype\< **Elem**> 对象被销毁时是否应（使用 `operator delete[]`）删除数组。
+- 类 ctype < 的对象 `char` > 存储指向 ctype 掩码表中第一个元素的指针，该数组为类型 `ctype_base::mask` 的 UCHAR_MAX + 1 元素数组。 它还存储布尔对象，指明当 ctype\< **Elem**> 对象被销毁时是否应（使用 `operator delete[]`）删除数组。
 
-- 它的唯一公共构造函数允许`tab`你指定、ctype 掩码表和`del`布尔对象, 如果应在 > 对象的 ctype < `char`被销毁时删除数组, 则为 true; 对于引用计数, 则为 true参数引用。
+- 它的唯一公共构造函数使你能够指定 `tab`、ctype 掩码表和 `del`，这是一个布尔值对象，如果应在 > `char` < 该对象被销毁时删除数组，则为 true; 如果应删除该数组，则该对象的引用计数参数将引用。
 
-- 受保护的成员`table`函数返回存储的 ctype 掩码表。
+- 受保护的成员函数 `table` 返回存储的 ctype 掩码表。
 
-- 静态成员对象`table_size`指定 ctype 掩码表中元素的最小数目。
+- 静态成员对象 `table_size` 指定 ctype 掩码表中元素的最小数目。
 
-- 受保护的静态成员`classic_table`函数 (返回对应于 "C" 区域设置的 ctype 掩码表。
+- 受保护的静态成员函数 `classic_table` （返回对应于 "C" 区域设置的 ctype 掩码表。
 
 - 没有受保护的虚拟成员函数 [do_is](../standard-library/ctype-class.md#do_is)、[do_scan_is](../standard-library/ctype-class.md#do_scan_is)，或 [do_scan_not](../standard-library/ctype-class.md#do_scan_not)。 相应的公共成员函数自身执行等效操作。
 
@@ -126,7 +126,7 @@ protected:
 
 **标头：** \<locale>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="see-also"></a>请参阅
 

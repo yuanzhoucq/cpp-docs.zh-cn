@@ -116,16 +116,16 @@ helpviewer_keywords:
 - std::basic_string [C++], substr
 - std::basic_string [C++], swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
-ms.openlocfilehash: b78796fd8f10506afb696f28cb36b235be9297b1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6983baacd9cc40d916f2e1e6213dde1f92e23ea3
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447977"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689955"
 ---
 # <a name="basic_string-class"></a>basic_string 类
 
-由模板类 `basic_string` 的一个对象控制的序列是标准 C++ 字符串类且通常作为字符串被引用，但不应将它们与以 null 结尾的通用于 C++ 标准库的 C 样式字符串相混淆。 标准 C++ 字符串是一个容器，它可使字符串作为普通类型使用，例如，比较和连接操作、迭代器、C++ 标准库算法以及复制由类分配器管理的内存和使用它进行分配。 如需要将标准 C++ 字符串转换为以 null 结尾的 C 样式字符串，请使用 [basic_string::c_str](#c_str) 成员。
+@No__t_0 类型的对象控制的序列是标准C++字符串类，通常称为字符串，但不应与在整个C++标准库中使用的以 null 结尾的 C 样式字符串相混淆。 标准 C++ 字符串是一个容器，它可使字符串作为普通类型使用，例如，比较和连接操作、迭代器、C++ 标准库算法以及复制由类分配器管理的内存和使用它进行分配。 如需要将标准 C++ 字符串转换为以 null 结尾的 C 样式字符串，请使用 [basic_string::c_str](#c_str) 成员。
 
 ## <a name="syntax"></a>语法
 
@@ -136,13 +136,13 @@ class basic_string;
 
 ### <a name="parameters"></a>参数
 
-*CharType*\
-要存储在字符串中的单个字符的数据类型。 C++标准库提供了此模板类的专用化，其中包含类型为**char**、 [wstring](../standard-library/string-typedefs.md#wstring)、for **wchar_t**、为[u16string](../standard-library/string-typedefs.md#u16string)`char16_t`的元素的类型定义[字符串](../standard-library/string-typedefs.md#string)和的[u32string](../standard-library/string-typedefs.md#u32string)`char32_t`。
+*CharType* \
+要存储在字符串中的单个字符的数据类型。 C++标准库提供了此类模板的专用化，其中包含**char**、 [wstring](../standard-library/string-typedefs.md#wstring)、 **wchar_t**类型的元素的类型定义[字符串](../standard-library/string-typedefs.md#string)、用于 `char16_t` 的[u16string](../standard-library/string-typedefs.md#u16string)和[u32string](../standard-library/string-typedefs.md#u32string)用于 `char32_t`。
 
 *特征*\
-Basic_string 专用化中`CharType`元素的各种重要属性由类`Traits`进行描述。 默认值为 `char_traits`< `CharType`>。
+Basic_string 专用化中 `CharType` 元素的各种重要属性由类 `Traits` 描述。 默认值为 `char_traits`< `CharType`>。
 
-*器*\
+*分配*器 \
 一种表示存储的分配器对象的类型，该分配器对象封装有关字符串的内存分配和解除分配的详细信息。 默认值为 **allocator**< `CharType`>。
 
 ### <a name="constructors"></a>构造函数
@@ -161,9 +161,9 @@ Basic_string 专用化中`CharType`元素的各种重要属性由类`Traits`进�
 |[const_reference](#const_reference)|提供对存储于字符串中供读取和执行 **const** 操作的 **const** 元素的引用的类型。|
 |[const_reverse_iterator](#const_reverse_iterator)|提供可读取字符串中任何 **const** 元素的随机访问迭代器的类型。|
 |[difference_type](#difference_type)|提供引用同一字符串中的元素的两个迭代器之间的差异的类型。|
-|[Iterator](#iterator)|提供可读取或修改字符串中任何元素的随机访问迭代器的类型。|
+|[迭代器](#iterator)|提供可读取或修改字符串中任何元素的随机访问迭代器的类型。|
 |[npos](#npos)|一个无符号整数值，在搜索功能失败时指示 "找不到" 或 "所有剩余字符"。|
-|[pointer](#pointer)|提供指向字符串中或字符数组中字符元素的指针的类型。|
+|[指针](#pointer)|提供指向字符串中或字符数组中字符元素的指针的类型。|
 |[reference](#reference)|提供对存储在字符串中的元素的引用的类型。|
 |[reverse_iterator](#reverse_iterator)|提供可读取或修改反向字符串中元素的随机访问迭代器的类型。|
 |[size_type](#size_type)|字符串中元素的数目的无符号整数类型。|
@@ -234,7 +234,7 @@ Basic_string 专用化中`CharType`元素的各种重要属性由类`Traits`进�
 
 **标头：** \<string>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="allocator_type"></a>  basic_string::allocator_type
 
@@ -246,7 +246,7 @@ typedef Allocator allocator_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数 `Allocator` 的同义词。
+类型是模板参数 `Allocator` 的同义词。
 
 ### <a name="example"></a>示例
 
@@ -307,25 +307,25 @@ basic_string<CharType, Traits, Allocator>& append(
 
 ### <a name="parameters"></a>参数
 
-*ptr*\
+*ptr* \
 要追加的 C 字符串。
 
-*字符串*\
+*str* \
 要追加字符的字符串。
 
-*_Off*\
+*_Off* \
 提供要追加的字符的源字符串部分的索引。
 
-*计*\
+*计数*\
 要从源字符串追加的字符的最大数目。
 
-*_Ch*\
+*_Ch* \
 要追加的字符值。
 
-*1*\
+*第一个*\
 一种输入迭代器。用于寻址要追加的范围中的第一个元素。
 
-*时间*\
+*最后*\
 一种输入迭代器（const_pointer 或 const_iterator），用于寻址要追加的范围中超出最后一个元素的元素位置。
 
 ### <a name="return-value"></a>返回值
@@ -334,7 +334,7 @@ basic_string<CharType, Traits, Allocator>& append(
 
 ### <a name="remarks"></a>备注
 
-可以使用[运算符 + =](#op_add_eq)或成员函数`append`或[push_back](#push_back)将字符追加到字符串。 `operator+=`追加单参数值，而多参数`append`成员函数允许指定字符串的特定部分用于添加。
+可以使用[运算符 + =](#op_add_eq)或成员函数 `append` 或[push_back](#push_back)将字符追加到字符串。 `operator+=` 追加了单参数值，而多参数 `append` 成员函数允许指定字符串的特定部分用于添加。
 
 ### <a name="example"></a>示例
 
@@ -468,25 +468,25 @@ basic_string<CharType, Traits, Allocator>& assign(
 
 ### <a name="parameters"></a>参数
 
-*ptr*\
+*ptr* \
 指向要分配给目标字符串的 C 字符串字符的指针。
 
-*计*\
+*计数*\
 要从源字符串指定的字符数。
 
-*字符串*\
+*str* \
 要分配给目标字符串的字符的源字符串。
 
-*_Ch*\
+*_Ch* \
 要分配的字符值。
 
-*1*\
+*第一个*\
 一种输入迭代器（const_pointer 或 const_iterator），用于寻址要分配给目标范围的源字符串范围中的第一个字符。
 
-*时间*\
+*最后*\
 一种输入迭代器（const_pointer 或 const_iterator），用于寻址要分配给目标范围的源字符串范围中超出最后一个字符的字符。
 
-*非*\
+*关闭*\
 开始分配新字符的位置。
 
 ### <a name="return-value"></a>返回值
@@ -495,7 +495,7 @@ basic_string<CharType, Traits, Allocator>& assign(
 
 ### <a name="remarks"></a>备注
 
-可为这些字符串分配新字符值。 新值可以是字符串和 C 字符串或单个字符。 如果可以通过单个参数描述新值，则可以使用[operator =](#op_eq) ;否则，可以使用`assign`具有多个参数的成员函数指定要将字符串的哪一部分分配给目标字符串。
+可为这些字符串分配新字符值。 新值可以是字符串和 C 字符串或单个字符。 如果可以通过单个参数描述新值，则可以使用[operator =](#op_eq) ;否则，可以使用包含多个参数的成员函数 `assign` 来指定要将字符串的哪一部分分配给目标字符串。
 
 ### <a name="example"></a>示例
 
@@ -601,7 +601,7 @@ reference at(size_type _Off);
 
 ### <a name="parameters"></a>参数
 
-*_Off*\
+*_Off* \
 要引用的元素的位置索引。
 
 ### <a name="return-value"></a>返回值
@@ -612,9 +612,9 @@ reference at(size_type _Off);
 
 字符串的第一个元素的索引为零，以下元素按正整数连续索引，以便长度为*n*的字符串具有由数字*n-* 1 索引的第*n*个元素。
 
-成员[运算符&#91; ](#op_at)比用于提供对字符串元素的`at`读取和写入访问权限的成员函数快。
+成员[运算符&#91; ](#op_at)比用于提供对字符串元素的读取和写入访问权限的成员函数 `at` 快。
 
-成员`operator[]`不检查作为参数传递的索引是否有效，但成员函数`at`是否有效，如果有效性不确定，则应使用此索引。 传递给成员函数`at`的索引（索引小于零或大于或等于字符串大小的索引）引发[out_of_range 类](../standard-library/out-of-range-class.md)异常。 传递给 `operator[]` 的无效索引导致未定义行为，但是等于字符串长度的索引对于常量字符串而言是有效索引，且运算符在传递此索引时返回空字符。
+成员 `operator[]` 不检查作为参数传递的索引是否有效，但成员函数 `at` 是否有效，如果有效性不确定，则使用。 无效的索引，索引小于零或大于或等于字符串的大小，传递给成员函数 `at` 引发[Out_of_range 类](../standard-library/out-of-range-class.md)异常。 传递给 `operator[]` 的无效索引导致未定义行为，但是等于字符串长度的索引对于常量字符串而言是有效索引，且运算符在传递此索引时返回空字符。
 
 重新分配字符串或修改非 **const** 字符串可能使返回的引用无效。
 
@@ -747,28 +747,28 @@ basic_string(
 
 ### <a name="parameters"></a>参数
 
-*ptr*\
+*ptr* \
 C 字符串，其字符将用于初始化正在构造的 `string`。 此值不能为 null 指针。
 
-*_Al*\
+*_Al* \
 正在构造的字符串对象的存储分配器类。
 
-*计*\
+*计数*\
 要初始化的字符数。
 
-*然后*\
+*right* \
 用于初始化正在构造的字符串的字符串。
 
-*_Roff*\
+*_Roff* \
 字符串中字符的索引，该字符串会最先用于初始化正在构造的字符串的字符值。
 
-*_Ch*\
+*_Ch* \
 要复制到正在构造的字符串中的字符值。
 
-*1*\
+*第一个*\
 输入迭代器（const_pointer 或 const_iterator），用于寻址要插入的源范围中的第一个元素。
 
-*时间*\
+*最后*\
 输入迭代器（const_pointer 或 const_iterator），用于寻址要插入的源范围中超出最后一个元素的元素的位置。
 
 ### <a name="return-value"></a>返回值
@@ -894,7 +894,7 @@ const value_type *c_str() const;
 
 ### <a name="remarks"></a>备注
 
-属于 C++ 模板类 basic_string\<char> 的字符串类型对象并不一定是以 null 结尾的。 空字符“\0”用作 C 字符串中的特殊字符，以标记字符串的末尾，但在类型字符串对象中并无特殊含义，且可能像其他字符一样是字符串的一部分。 将从**const char** <strong>\*</strong>自动转换为字符串，但字符串类不提供从 C 样式字符串到 **\<basic_string char >** 类型对象的自动转换。
+属于类模板 basic_string \<char > 的类型字符串的对象不一定要终止 null。 空字符“\0”用作 C 字符串中的特殊字符，以标记字符串的末尾，但在类型字符串对象中并无特殊含义，且可能像其他字符一样是字符串的一部分。 有一个从**const char**  <strong>\*</strong>到字符串的自动转换，但字符串类不提供从 C 样式字符串到类型为**basic_string \<char >** 的对象的自动转换。
 
 不应修改返回的 C 样式字符串，这可能使指向字符串的指针无效；也不应将其删除，因为该字符串具有有限的生存期且归属于类字符串。
 
@@ -1024,13 +1024,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>返回值
 
-一个**常量**随机访问迭代器，指向范围的第一个元素，或刚超出空范围末尾的位置（对于空范围， `cbegin() == cend()`）。
+**常量**随机访问迭代器，指向范围的第一个元素，或刚超出空范围末尾的位置（对于空范围，则为 `cbegin() == cend()`）。
 
 ### <a name="remarks"></a>备注
 
 由于使用 `cbegin` 的返回值，因此不能修改范围中的元素。
 
-可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中， `Container`将视为支持`begin()`和`cbegin()`的任何类型的可修改（非常**量**）容器。
+可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，请考虑 `Container` 为支持 `begin()` 和 `cbegin()` 的任何类型的可修改（非常**量**）容器。
 
 ```cpp
 auto i1 = Container.begin();
@@ -1056,7 +1056,7 @@ const_iterator cend() const;
 
 `cend` 用于测试迭代器是否超过了其范围的末尾。
 
-可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中， `Container`将视为支持`end()`和`cend()`的任何类型的可修改（非常**量**）容器。
+可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，请考虑 `Container` 为支持 `end()` 和 `cend()` 的任何类型的可修改（非常**量**）容器。
 
 ```cpp
 auto i1 = Container.end();
@@ -1156,25 +1156,25 @@ int compare(
 
 ### <a name="parameters"></a>参数
 
-*字符串*\
+*str* \
 要与操作数字符串比较的字符串。
 
-*_Pos1*\
+*_Pos1* \
 开始进行比较的操作数字符串的索引。
 
-*_Num1*\
+*_Num1* \
 要比较的操作数字符串的最大字符数。
 
-*_Num2*\
+*_Num2* \
 要比较的参数字符串的最大字符数。
 
-*_Off*\
+*_Off* \
 开始进行比较的参数字符串的索引。
 
-*计*\
+*计数*\
 要比较的参数字符串的最大字符数。
 
-*ptr*\
+*ptr* \
 要与操作数字符串比较的 C 字符串。
 
 ### <a name="return-value"></a>返回值
@@ -1183,7 +1183,7 @@ int compare(
 
 ### <a name="remarks"></a>备注
 
-`compare`成员函数会比较参数和操作数字符串的全部或部分，具体取决于所使用的。
+@No__t_0 成员函数会比较参数和操作数字符串的全部或部分，具体取决于所使用的。
 
 执行的比较区分大小写。
 
@@ -1406,9 +1406,9 @@ typedef typename allocator_type::const_pointer const_pointer;
 
 ### <a name="remarks"></a>备注
 
-该类型是 `allocator_type::const_pointer` 的同义词。
+该类型是 `allocator_type::const_pointer`的同义词。
 
-对于类型`string`，它等效于`char*`。
+对于类型 `string`，它等效于 `char*`。
 
 对声明为常量的指针声明时，必须对其初始化。 Const 指针始终指向同一内存位置，且可能指向常量或非常量数据。
 
@@ -1448,7 +1448,7 @@ typedef typename allocator_type::const_reference const_reference;
 
 `const_reference` 类型不能用于修改元素的值。
 
-该类型是 `allocator_type::const_reference` 的同义词。 对于字符串`type`，它等效于 const `char&`。
+该类型是 `allocator_type::const_reference`的同义词。 对于字符串 `type`，它等效于 const `char&`。
 
 ### <a name="example"></a>示例
 
@@ -1485,12 +1485,12 @@ size_type copy(
 
 ### <a name="parameters"></a>参数
 
-*ptr*\
+*ptr* \
 要复制的元素的目标字符数组。
 
 _*计算*要从源字符串复制的最多字符数。
 
-*_Off*\
+*_Off* \
 要进行复制的源字符串中的开始位置。
 
 ### <a name="return-value"></a>返回值
@@ -1590,15 +1590,15 @@ size_type _Copy_s(
 
 ### <a name="parameters"></a>参数
 
-*目的*\
+*dest* \
 要复制的元素的目标字符数组。
 
-*dest_size*\
+*dest_size* \
 *Dest*的大小。
 
 _*计算*要从源字符串复制的最多字符数。
 
-*_Off*\
+*_Off* \
 要进行复制的源字符串中的开始位置。
 
 ### <a name="return-value"></a>返回值
@@ -1670,9 +1670,9 @@ const value_type *data() const;
 
 ### <a name="remarks"></a>备注
 
-属于 C++ 模板类 basic_string\<char> 的字符串类型对象并不一定是以 null 结尾的。 的返回类型`data`不是有效的 C 字符串，因为不追加 null 字符。 空字符“\0”用作 C 字符串中的特殊字符，以标记字符串的末尾，但在字符串类型对象中并无特殊含义，且可能像其他字符一样是字符串对象的一部分。
+属于类模板 basic_string \<char > 的类型字符串的对象不一定要终止 null。 @No__t_0 的返回类型不是有效的 C 字符串，因为不追加 null 字符。 空字符“\0”用作 C 字符串中的特殊字符，以标记字符串的末尾，但在字符串类型对象中并无特殊含义，且可能像其他字符一样是字符串对象的一部分。
 
-将从**const char** <strong>\*</strong>自动转换为字符串，但字符串类不提供从 C 样式字符串到 **\<basic_string char >** 类型对象的自动转换。
+有一个从**const char**  <strong>\*</strong>到字符串的自动转换，但字符串类不提供从 C 样式字符串到类型为**basic_string \<char >** 的对象的自动转换。
 
 不应修改返回的字符串，这可能使指向字符串的指针无效或将其删除，原因是字符串具有有限的生存期且归类字符串所有。
 
@@ -1734,7 +1734,7 @@ typedef typename allocator_type::difference_type difference_type;
 
 带符号的整数类型描述一个可表示受控序列中任意两个元素的地址之间的差异的对象。
 
-对于类型`string`，它等效于`ptrdiff_t`。
+对于类型 `string`，它等效于 `ptrdiff_t`。
 
 ### <a name="example"></a>示例
 
@@ -1834,9 +1834,9 @@ iterator end();
 
 ### <a name="remarks"></a>备注
 
-`end`通常用于测试迭代器是否已到达其字符串的末尾。 不应对 `end` 返回的值取消引用。
+`end` 通常用于测试迭代器是否已到达其字符串的末尾。 不应对 `end` 返回的值取消引用。
 
-如果将 `end` 的返回值分配给 `const_iterator`，则不能修改字符串对象。 如果将的`end`返回值分配`iterator`给，则可以修改字符串对象。
+如果将 `end` 的返回值分配给 `const_iterator`，则不能修改字符串对象。 如果 `end` 的返回值分配给某个 `iterator`，则可以修改该字符串对象。
 
 ### <a name="example"></a>示例
 
@@ -1910,19 +1910,19 @@ basic_string<CharType, Traits, Allocator>& erase(
 
 ### <a name="parameters"></a>参数
 
-*1*\
+*第一个*\
 一种迭代器，用于寻址要清除范围中的第一个元素的位置。
 
-*时间*\
+*最后*\
 一种迭代器，用于寻址要清除范围中最后一个元素之后下一个元素的位置。
 
-*_It*\
+*_It* \
 一种迭代器，用于寻址要清除字符串中的元素位置。
 
-*_Pos*\
+*_Pos* \
 要删除的字符串中的第一个字符的索引。
 
-*计*\
+*计数*\
 如果在字符串范围中有同样数量的以 *_Pos*.开头的元素，将删除该元素数目。
 
 ### <a name="return-value"></a>返回值
@@ -2019,19 +2019,19 @@ size_type find(
 
 ### <a name="parameters"></a>参数
 
-*_Ch*\
+*_Ch* \
 成员函数要搜索的字符值。
 
-*_Off*\
+*_Off* \
 搜索开始处的索引。
 
-*ptr*\
+*ptr* \
 成员函数要搜索的 C 字符串。
 
-*计*\
+*计数*\
 在成员函数要搜索的 C 字符串中从第一个字符开始计数的字符数。
 
-*字符串*\
+*str* \
 成员函数要搜索的字符串。
 
 ### <a name="return-value"></a>返回值
@@ -2194,19 +2194,19 @@ size_type find_first_not_of(
 
 ### <a name="parameters"></a>参数
 
-*_Ch*\
+*_Ch* \
 成员函数要搜索的字符值。
 
-*_Off*\
+*_Off* \
 搜索开始处的索引。
 
-*ptr*\
+*ptr* \
 成员函数要搜索的 C 字符串。
 
-*计*\
+*计数*\
 在成员函数要搜索的 C 字符串中从第一个字符开始计数的字符数。
 
-*字符串*\
+*str* \
 成员函数要搜索的字符串。
 
 ### <a name="return-value"></a>返回值
@@ -2382,19 +2382,19 @@ size_type find_first_of(
 
 ### <a name="parameters"></a>参数
 
-*_Ch*\
+*_Ch* \
 成员函数要搜索的字符值。
 
-*_Off*\
+*_Off* \
 搜索开始处的索引。
 
-*ptr*\
+*ptr* \
 成员函数要搜索的 C 字符串。
 
-*计*\
+*计数*\
 在成员函数要搜索的 C 字符串中从第一个字符开始计数的字符数。
 
-*字符串*\
+*str* \
 成员函数要搜索的字符串。
 
 ### <a name="return-value"></a>返回值
@@ -2569,19 +2569,19 @@ size_type find_last_not_of(
 
 ### <a name="parameters"></a>参数
 
-*_Ch*\
+*_Ch* \
 成员函数要搜索的字符值。
 
-*_Off*\
+*_Off* \
 搜索结束位置的索引。
 
-*ptr*\
+*ptr* \
 成员函数要搜索的 C 字符串。
 
-*计*\
+*计数*\
 在成员函数要搜索的 C 字符串中从第一个字符开始计数的字符数。
 
-*字符串*\
+*str* \
 成员函数要搜索的字符串。
 
 ### <a name="return-value"></a>返回值
@@ -2758,19 +2758,19 @@ size_type find_last_of(
 
 ### <a name="parameters"></a>参数
 
-*_Ch*\
+*_Ch* \
 成员函数要搜索的字符值。
 
-*_Off*\
+*_Off* \
 搜索结束位置的索引。
 
-*ptr*\
+*ptr* \
 成员函数要搜索的 C 字符串。
 
-*计*\
+*计数*\
 在成员函数要搜索的 C 字符串中从第一个字符开始计数的字符数。
 
-*字符串*\
+*str* \
 成员函数要搜索的字符串。
 
 ### <a name="return-value"></a>返回值
@@ -3025,31 +3025,31 @@ void insert(
 
 ### <a name="parameters"></a>参数
 
-*_P0*\
+*_P0* \
 新字符插入点之后的位置的索引。
 
-*ptr*\
+*ptr* \
 将要完全或部分插入到字符串中的 C 字符串。
 
-*计*\
+*计数*\
 要插入的字符数。
 
-*字符串*\
+*str* \
 将要完全或部分插入到目标字符串中的字符串。
 
-*_Off*\
+*_Off* \
 提供要追加的字符的源字符串部分的索引。
 
-*_Ch*\
+*_Ch* \
 要插入的元素的字符值。
 
-*_It*\
+*_It* \
 对要在其后插入一个字符的位置进行寻址的迭代器。
 
-*1*\
+*第一个*\
 输入迭代器（const_pointer 或 const_iterator），用于寻址要插入的源范围中的第一个元素。
 
-*时间*\
+*最后*\
 输入迭代器（const_pointer 或 const_iterator），用于寻址要插入的源范围中超出最后一个元素的元素的位置。
 
 ### <a name="return-value"></a>返回值
@@ -3155,7 +3155,7 @@ typedef implementation-defined iterator;
 
 ### <a name="remarks"></a>备注
 
-类型`iterator`可用于修改字符的值，并用于在正方向上循环访问字符串。
+类型 `iterator` 可用于修改字符的值，并用于在正方向上循环访问字符串。
 
 ### <a name="example"></a>示例
 
@@ -3307,7 +3307,7 @@ static const size_type npos = -1;
 
 ### <a name="remarks"></a>备注
 
-`npos`如果要检查值的返回值，则它可能无法工作，除非返回值的类型为[size_type](#size_type) ，而不是**int**或**无符号**。
+如果要检查 `npos` 值的返回值，则它可能无法工作，除非返回值为[size_type](#size_type)类型且不是**int**或**无符号**。
 
 ### <a name="example"></a>示例
 
@@ -3330,13 +3330,13 @@ basic_string<CharType, Traits, Allocator>& operator+=(
 
 ### <a name="parameters"></a>参数
 
-*_Ch*\
+*_Ch* \
 要追加的字符。
 
-*ptr*\
+*ptr* \
 要追加的 C 字符串的字符。
 
-*然后*\
+*right* \
 要追加的字符串的字符。
 
 ### <a name="return-value"></a>返回值
@@ -3422,13 +3422,13 @@ basic_string<CharType, Traits, Allocator>& operator=(
 
 ### <a name="parameters"></a>参数
 
-*_Ch*\
+*_Ch* \
 要分配的字符值。
 
-*ptr*\
+*ptr* \
 指向要分配给目标字符串的 C 字符串字符的指针。
 
-*然后*\
+*right* \
 要分配给目标字符串的字符的源字符串。
 
 ### <a name="return-value"></a>返回值
@@ -3507,7 +3507,7 @@ reference operator[](size_type _Off);
 
 ### <a name="parameters"></a>参数
 
-*_Off*\
+*_Off* \
 要引用的元素的位置索引。
 
 ### <a name="return-value"></a>返回值
@@ -3520,7 +3520,7 @@ reference operator[](size_type _Off);
 
 `operator[]` 比成员函数 [at](#at) 更快，以提供对字符串元素的读取和写入访问权限。
 
-`operator[]`不检查作为参数传递的索引是否有效，但成员函数`at`的作用并不一定是有效的。 传递给成员函数`at`的无效索引（小于零或大于或等于字符串大小的索引）引发[out_of_range 类](../standard-library/out-of-range-class.md)异常。 传递给 `operator[]` 的无效索引导致未定义行为，但是等于字符串长度的索引对于常量字符串而言是有效索引，且运算符在传递此索引时返回空字符。
+`operator[]` 不会检查作为参数传递的索引是否有效，但成员函数 `at` 会这样做，因此应在有效性中使用。 传递给成员函数的无效索引（小于零或大于或等于字符串大小的索引） `at` 引发[Out_of_range 类](../standard-library/out-of-range-class.md)异常。 传递给 `operator[]` 的无效索引导致未定义行为，但是等于字符串长度的索引对于常量字符串而言是有效索引，且运算符在传递此索引时返回空字符。
 
 重新分配字符串或修改非 **const** 字符串可能使返回的引用无效。
 
@@ -3575,9 +3575,9 @@ typedef typename allocator_type::pointer pointer;
 
 ### <a name="remarks"></a>备注
 
-该类型是 `allocator_type::pointer` 的同义词。
+该类型是 `allocator_type::pointer`的同义词。
 
-对于类型`string`，它等效于**char**<strong>\*</strong>。
+对于类型 `string`，它等效于**char**  <strong>\*</strong>。
 
 ### <a name="example"></a>示例
 
@@ -3624,7 +3624,7 @@ void push_back(value_type _Ch);
 
 ### <a name="parameters"></a>参数
 
-*_Ch*\
+*_Ch* \
 要添加到字符串末尾的字符。
 
 ### <a name="remarks"></a>备注
@@ -3755,11 +3755,11 @@ typedef typename allocator_type::reference reference;
 
 ### <a name="remarks"></a>备注
 
-类型`reference`可用于修改元素的值。
+类型 `reference` 可用于修改元素的值。
 
-该类型是 `allocator_type::reference` 的同义词。
+该类型是 `allocator_type::reference`的同义词。
 
-对于类型`string`，它等效于`chr&`。
+对于类型 `string`，它等效于 `chr&`。
 
 ### <a name="example"></a>示例
 
@@ -3921,40 +3921,40 @@ basic_string<CharType, Traits, Allocator>& replace(
 
 ### <a name="parameters"></a>参数
 
-*字符串*\
+*str* \
 要作为操作数字符串字符的源的字符串。
 
-*_Pos1*\
+*_Pos1* \
 开始进行替换的操作数字符串的索引。
 
-*_Num1*\
+*_Num1* \
 操作数字符串中要替换的最大字符数。
 
-*_Pos2*\
+*_Pos2* \
 开始进行复制的参数字符串的索引。
 
-*_Num2*\
+*_Num2* \
 要从参数 C 字符串使用的最大字符数。
 
-*ptr*\
+*ptr* \
 要作为操作数字符串字符的源的 C 字符串。
 
-*_Ch*\
+*_Ch* \
 要复制到操作数字符串的字符。
 
-*first0*\
+*first0* \
 一种迭代器，用于寻址操作数字符串中要删除的第一个字符。
 
-*last0*\
+*last0* \
 一种迭代器，用于寻址操作数字符串中要删除的最后一个字符。
 
-*1*\
+*第一个*\
 一种迭代器（const_pointer 或 const_iterator），用于寻址参数字符串中进行复制的第一个字符。
 
-*时间*\
+*最后*\
 一种迭代器（const_pointer 或 const_iterator），用于寻址参数字符串中进行复制的最后一个字符。
 
-*计*\
+*计数*\
 将 *_Ch*复制到操作数字符串的次数。
 
 ### <a name="return-value"></a>返回值
@@ -4150,14 +4150,14 @@ void reserve(size_type count = 0);
 
 ### <a name="parameters"></a>参数
 
-*计*\
+*计数*\
 具有保留内存的字符数。
 
 ### <a name="remarks"></a>备注
 
 具有足够的容量很重要，因为重新分配是一个耗时的过程，并会使引用字符串中字符的所有引用、指针和迭代器无效。
 
-字符串类型对象的容量的概念与矢量类型对象的容量的概念相同。 与 vector 不同，可以调用`reserve`成员函数来收缩对象的容量。 这是非绑定请求，不一定会发生。 由于参数的默认值为零，对的`reserve`调用是一种非绑定请求，用来收缩字符串的容量，使之符合当前字符串中的字符数。 该容量永远不会减少到当前字符数以下。
+字符串类型对象的容量的概念与矢量类型对象的容量的概念相同。 与 vector 不同，可以调用成员函数 `reserve` 来收缩对象的容量。 这是非绑定请求，不一定会发生。 由于参数的默认值为零，因此调用 `reserve` 是一种非绑定请求，用于收缩字符串的容量以适应字符串中当前的字符数。 该容量永远不会减少到当前字符数以下。
 
 调用 `reserve` 是减小字符串容量的唯一可能方法。 但是，如上文所述，这是非绑定请求，可能不会发生。
 
@@ -4245,10 +4245,10 @@ void resize(
 
 ### <a name="parameters"></a>参数
 
-*计*\
+*计数*\
 字符串的新大小。
 
-*_Ch*\
+*_Ch* \
 在需要其他元素的情况下，用于初始化追加字符的值。
 
 ### <a name="remarks"></a>备注
@@ -4381,19 +4381,19 @@ size_type rfind(
 
 ### <a name="parameters"></a>参数
 
-*_Ch*\
+*_Ch* \
 成员函数要搜索的字符值。
 
-*_Off*\
+*_Off* \
 搜索开始处的索引。
 
-*ptr*\
+*ptr* \
 成员函数要搜索的 C 字符串。
 
-*计*\
+*计数*\
 在成员函数要搜索的 C 字符串中从第一个字符开始计数的字符数。
 
-*字符串*\
+*str* \
 成员函数要搜索的字符串。
 
 ### <a name="return-value"></a>返回值
@@ -4621,7 +4621,7 @@ typedef typename allocator_type::size_type size_type;
 
 它相当于 `allocator_type::size_type`。
 
-对于类型`string`，它等效于`size_t`。
+对于类型 `string`，它等效于 `size_t`。
 
 ### <a name="example"></a>示例
 
@@ -4664,10 +4664,10 @@ basic_string<CharType, Traits, Allocator> substr(
 
 ### <a name="parameters"></a>参数
 
-*_Off*\
+*_Off* \
 从进行字符串复制所在的位置查找元素的索引，默认值为 0。
 
-*计*\
+*计数*\
 要复制的字符数（如果存在）。
 
 ### <a name="return-value"></a>返回值
@@ -4722,7 +4722,7 @@ void swap(
 
 ### <a name="parameters"></a>参数
 
-*字符串*\
+*str* \
 要与目标字符串中的元素进行交换的元素的源字符串。
 
 ### <a name="remarks"></a>备注
@@ -4782,9 +4782,9 @@ typedef Traits traits_type;
 
 ### <a name="remarks"></a>备注
 
-类型是第二个模板参数`Traits`的同义词。
+该类型是 `Traits` 的第二个模板参数的同义词。
 
-对于类型`string`，它等效于 **\<char_traits char >** 。
+对于类型 `string`，它等效于**char_traits \<char >** 。
 
 ### <a name="example"></a>示例
 
@@ -4800,7 +4800,7 @@ typedef typename allocator_type::value_type value_type;
 
 ### <a name="remarks"></a>备注
 
-它等效于`traits_type::char_type`并且等效于类型`string`为的对象的**char** 。
+它等效于 `traits_type::char_type` 并且等效于 `string` 类型的对象的**char** 。
 
 ### <a name="example"></a>示例
 

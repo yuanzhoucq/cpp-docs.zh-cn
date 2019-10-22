@@ -46,16 +46,16 @@ helpviewer_keywords:
 - std::moneypunct [C++], positive_sign
 - std::moneypunct [C++], thousands_sep
 ms.assetid: cf2650da-3e6f-491c-95d5-23e57f582ee6
-ms.openlocfilehash: b6cd2524f8ae010e81d06a30d9a001398a106622
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 7960ee8b5e9ce6b27494e896e38bbf6b5256fe7e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460193"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689300"
 ---
 # <a name="moneypunct-class"></a>moneypunct 类
 
-此模板类描述可用作区域设置 facet 的对象, 以描述用于表示货币输入字段或货币输出字段的*CharType*类型的序列。 如果模板参数*国际*为*true*, 则遵守国际约定。
+类模板描述可用作区域设置 facet 的对象，用于描述用于表示货币输入字段或货币输出字段的*CharType*类型的序列。 如果模板参数*国际*为*true*，则遵守国际约定。
 
 ## <a name="syntax"></a>语法
 
@@ -66,10 +66,10 @@ class moneypunct;
 
 ### <a name="parameters"></a>参数
 
-*CharType*\
+*CharType* \
 在程序中用于对字符进行编码的类型。
 
-*区号*\
+*国际*\
 一种用于指定是否遵守国际约定的标志。
 
 ## <a name="remarks"></a>备注
@@ -118,7 +118,7 @@ class moneypunct;
 
 **标头：** \<locale>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="char_type"></a>moneypunct::char_type
 
@@ -277,7 +277,7 @@ virtual string do_grouping() const;
 
 ### <a name="example"></a>示例
 
-请参阅[分组](#grouping)的示例, 其中虚拟成员函数由`grouping`调用。
+请参阅[分组](#grouping)的示例，其中虚拟成员函数由 `grouping` 调用。
 
 ## <a name="do_neg_format"></a>  moneypunct::do_neg_format
 
@@ -289,19 +289,19 @@ virtual pattern do_neg_format() const;
 
 ### <a name="return-value"></a>返回值
 
-此受保护的虚拟成员函数可返回一个区域设置特定规则，用于确定生成负金额的货币输出字段的方式。 的四个元素`pattern::field`中的每一个都可以具有以下值:
+此受保护的虚拟成员函数可返回一个区域设置特定规则，用于确定生成负金额的货币输出字段的方式。 @No__t_0 的四个元素中的每一个都可以具有以下值：
 
-- `none`匹配零个或多个空格, 或不生成任何内容。
+- `none` 匹配零个或多个空格，或不生成任何空格。
 
-- `sign`匹配或生成正号或负号。
+- `sign` 匹配或生成正号或负号。
 
-- `space`匹配零个或多个空格或生成空格。
+- `space` 匹配零个或多个空格或生成空格。
 
-- `symbol`匹配或生成货币符号。
+- `symbol` 匹配或生成货币符号。
 
-- `value`若要匹配或生成货币值, 则为。
+- `value` 匹配或生成货币值。
 
-生成货币输出字段的组件, 并按这些元素出现`pattern::field`的顺序匹配货币输入字段的组成部分。 每`sign`个值 ( `value` 、和`none` ) 都必须仅出现一次。`space` `symbol` 该值`none`不能首先显示。 值 **space** 不能第一个或最后一个出现。 如果`Intl`为 true, 则顺序为`symbol`, `sign` `none`,, then `value`。
+生成货币输出字段的组件，并按这些元素在 `pattern::field` 中的显示顺序来匹配货币输入字段的组成部分。 @No__t_0、`symbol`、`value` 和 `none` 或 `space` 的每个值必须只出现一次。 值 `none` 不得首先显示。 值 **space** 不能第一个或最后一个出现。 如果 `Intl` 为 true，则顺序为 `symbol`、`sign`、`none`，然后 `value`。
 
 `moneypunct`\< **CharType**, **Intl**> 的模板版本返回 `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`。
 
@@ -335,7 +335,7 @@ virtual pattern do_pos_format() const;
 
 ### <a name="return-value"></a>返回值
 
-此受保护的虚拟成员函数可返回一个区域设置特定规则，用于确定生成正金额的货币输出字段的方式。 （它还确定如何匹配货币输入字段的组件。）该编码与 [do_neg_format](#do_neg_format) 的编码相同。
+此受保护的虚拟成员函数可返回一个区域设置特定规则，用于确定生成正金额的货币输出字段的方式。 （它还确定如何匹配货币输入字段的组件。）编码与[do_neg_format](#do_neg_format)相同。
 
 moneypunct\< **CharType**, **Inputlterator**> 的模板版本返回 `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`。
 
@@ -523,18 +523,18 @@ explicit moneypunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>参数
 
-*_Refs*\
+*_Refs* \
 用于指定对象的内存管理类型的整数值。
 
 ### <a name="remarks"></a>备注
 
-*_Refs*参数的可能值及其重要性为:
+*_Refs*参数的可能值及其重要性为：
 
-- 0对象的生存期由包含该对象的区域设置管理。
+- 0：对象的生存期由包含该对象的区域设置管理。
 
-- 1:必须手动管理对象的生存期。
+- 1：必须手动管理对象的生存期。
 
-- \>2未定义这些值。
+- \> 1：未定义这些值。
 
 由于该析构函数受到保护，可能没有直接的示例。
 
@@ -770,7 +770,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>备注
 
-此类型描述 [basic_string](../standard-library/basic-string-class.md) 模板类的专用化，该模板类的对象可存储标点序列的副本。
+该类型描述类模板[basic_string](../standard-library/basic-string-class.md)的专用化，其对象可以存储标点符号序列的副本。
 
 ## <a name="thousands_sep"></a>  moneypunct::thousands_sep
 

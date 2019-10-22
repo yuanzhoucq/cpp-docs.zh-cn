@@ -13,19 +13,19 @@ helpviewer_keywords:
 - operator==, containers
 - == operator, with specific standard C++ objects
 ms.assetid: d3d8754e-5157-4b8b-bf9c-da41856f5eed
-ms.openlocfilehash: 168785abb09ca198435c301040d7628a6dd12b26
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3f84e8e5f7d0c09a865fe47d7493daecf68cf60c
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460158"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689209"
 ---
 # <a name="operator-ltsample-containergt"></a>operator== (&lt;sample container&gt;)
 
 > [!NOTE]
 > 本主题在 Microsoft C++文档中作为在C++标准库中使用的容器的非功能性示例。 有关详细信息，请参阅 [C++ 标准库容器](../standard-library/stl-containers.md)。
 
-重载 `operator==` 以比较 [Container](../standard-library/sample-container-class.md) 模板类的两个对象。
+重载 `operator==` 比较类模板[容器](../standard-library/sample-container-class.md)的两个对象。
 
 ## <a name="syntax"></a>语法
 
@@ -38,7 +38,7 @@ bool operator==(
 
 ## <a name="return-value"></a>返回值
 
-返回 `left.`[大小](../standard-library/container-class-size.md) ` == right.size && equal(left.`[开始](../standard-library/container-class-begin.md)`, left.`[ 端](../standard-library/container-class-end.md)`, right.begin)`。
+返回 `left.`[大小](../standard-library/container-class-size.md)` == right.size && equal(left.`[开始](../standard-library/container-class-begin.md)`, left.` `, right.begin)`[结束](../standard-library/container-class-end.md)。
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,5 +1,5 @@
 ---
-title: '&lt;cvt-wbuffer&gt;'
+title: '&lt;cvt-wbuffer &gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - stdext.cvt.<cvt/wbuffer>
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - cvt/wbuffer header
 ms.assetid: 6e6eb44c-1bc4-4d8c-a4bd-b39c753ce725
-ms.openlocfilehash: f2ed70eb85a26b5b3e7039b4d430ca85f3131a14
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a360b9cd0b163615bed71ee4b070f8d97848fa66
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455417"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688140"
 ---
 # <a name="ltcvtwbuffergt"></a>&lt;cvt/wbuffer&gt;
 
-Visual Studio 早期版本中的标头 `<cvt/wstring>` 在 stdext::cvt 命名空间中定义模板类 [wbuffer_convert Class](../standard-library/wbuffer-convert-class.md)。 保留标头以实现向后兼容性。 新代码应使用在 `std` 命名空间的 [\<locale>](../standard-library/locale.md) 中定义的类版本
+Visual Studio 早期版本中的标头 `<cvt/wstring>` 在 stdext：： cvt 命名空间中定义了类模板[Wbuffer_convert 类](../standard-library/wbuffer-convert-class.md)。 保留标头以实现向后兼容性。 新代码应使用在 `std` 命名空间的 [\<locale>](../standard-library/locale.md) 中定义的类版本
 
 ## <a name="syntax"></a>语法
 

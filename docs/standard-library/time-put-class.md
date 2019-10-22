@@ -14,16 +14,16 @@ helpviewer_keywords:
 - std::time_put [C++], do_put
 - std::time_put [C++], put
 ms.assetid: df79493e-3331-48d2-97c3-ac3a745f0791
-ms.openlocfilehash: 73f4cdd0028164ce5f8215258c517c2e59eb7538
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2c0ae501693a8abffc72a23be9c427f31bad65b6
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459941"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685423"
 ---
-# <a name="timeput-class"></a>time_put 类
+# <a name="time_put-class"></a>time_put 类
 
-此模板类描述一个对象来充当区域设置 facet，以便控制时间值向 `CharType` 类型序列的转换。
+类模板描述可用作区域设置 facet 的对象，以便控制时间值到 `CharType` 类型序列的转换。
 
 ## <a name="syntax"></a>语法
 
@@ -35,10 +35,10 @@ class time_put : public locale::facet;
 
 ### <a name="parameters"></a>参数
 
-*CharType*\
+*CharType* \
 在程序中用于对字符进行编码的类型。
 
-*OutputIterator*\
+*OutputIterator* \
 供时间放置函数写入其输出结果的迭代器类型。
 
 ## <a name="remarks"></a>备注
@@ -69,7 +69,7 @@ class time_put : public locale::facet;
 
 **标头：** \<locale>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="char_type"></a>  time_put::char_type
 
@@ -81,7 +81,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数 `CharType` 的同义词。
+类型是模板参数 `CharType` 的同义词。
 
 ## <a name="do_put"></a>  time_put::do_put
 
@@ -98,19 +98,19 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>参数
 
-*一个*\
+*下一*\
 一个输出迭代器，其中字符序列表示要插入的时间和日期。
 
-*_Iosbase*\
+*_Iosbase* \
 未使用。
 
-*_Pt*\
+*_Pt* \
 输出的时间和日期信息。
 
-*_Fmt*\
+*_Fmt* \
 输出格式。 有关有效值的范围，请参阅 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。
 
-*_Mod*\
+*_Mod* \
 格式的修饰符。 有关有效值的范围，请参阅 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。
 
 ### <a name="return-value"></a>返回值
@@ -119,9 +119,9 @@ virtual iter_type do_put(
 
 ### <a name="remarks"></a>备注
 
-受保护的虚拟成员函数`next`将从存储在对象\* `_Pt`的类型`tm`为的值开始生成连续元素。 该函数返回一个迭代器，指定在生成的输出外下一个要插入元素的位置。
+受保护的虚拟成员函数将从存储在对象 \* `_Pt` 类型的 `tm` 中的时间值 `next` 生成连续元素。 该函数返回一个迭代器，指定在生成的输出外下一个要插入元素的位置。
 
-输出由使用`strftime`的相同规则生成, 其中最后一个参数为 *_Pt*, 用于生成一系列**char**元素到数组中。 假定每个**char**元素都按简单的一对一映射映射到类型`CharType`的等效元素。 如果 *_Mod*等于零, 则有效格式为 "% F", 其中 F 替换为 *_Fmt*。 否则, 有效格式为 "% MF", 其中 M 替换为 *_Mod*。
+输出由 `strftime` 使用的相同规则生成，其中最后一个参数为 *_Pt*，用于生成一系列**char**元素到数组中。 假定每个**char**元素都映射到一个由简单的一对一映射 `CharType` 的类型的等效元素。 如果 *_Mod*等于零，则有效格式为 "% F"，其中 F 替换为 *_Fmt*。 否则，有效格式为 "% MF"，其中 M 替换为 *_Mod*。
 
 ### <a name="example"></a>示例
 
@@ -137,7 +137,7 @@ typedef OutputIterator iter_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数 `OutputIterator` 的同义词。
+类型是模板参数 `OutputIterator` 的同义词。
 
 ## <a name="put"></a>  time_put::put
 
@@ -161,28 +161,28 @@ iter_type put(iter_type next,
 
 ### <a name="parameters"></a>参数
 
-*一个*\
+*下一*\
 一个输出迭代器，其中字符序列表示要插入的时间和日期。
 
-*_Iosbase*\
+*_Iosbase* \
 未使用。
 
-*_Fill*\
-用于间距的类型`CharType`的字符。
+*_Fill* \
+用于间距的 `CharType` 类型的字符。
 
-*_Pt*\
+*_Pt* \
 输出的时间和日期信息。
 
-*_Fmt*\
+*_Fmt* \
 输出格式。 有关有效值的范围，请参阅 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。
 
-*_Mod*\
+*_Mod* \
 格式的修饰符。 有关有效值的范围，请参阅 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。
 
-*1*\
+*第一个*\
 输出格式字符串的开头。 有关有效值的范围，请参阅 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。
 
-*时间*\
+*最后*\
 输出格式字符串的末尾。 有关有效值的范围，请参阅 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。
 
 ### <a name="return-value"></a>返回值
@@ -191,7 +191,7 @@ iter_type put(iter_type next,
 
 ### <a name="remarks"></a>备注
 
-第一个成员函数返回[do_put](#do_put)(`next`、 `_Iosbase`、 `_Fill`、 `_Pt`、 `_Fmt`、 `_Mod`)。 第二个成员函数复制到 \* `next` ++ [ `first`, `last`) 间隔中的任何元素而不是百分号 (%)。 在间隔 [ `first`, `last`) 中，对于后跟字符 *C* 的百分号，函数会改为评估 `next` = `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, *C*, 0) 并跳过 *C*。但如果 *C* 是集 EOQ # 中的限定符字符（后跟 [ `first`, `last`) 间隔中的字符 `C2`），此函数会改为评估 `next` = `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, `C2`, *C*) 并跳过 `C2`。
+第一个成员函数返回[do_put](#do_put)（`next`、`_Iosbase`、`_Fill`、`_Pt`、`_Fmt`、`_Mod`）。 第二个成员函数复制到 \* `next` ++ [ `first`, `last`) 间隔中的任何元素而不是百分号 (%)。 对于间隔 [`first`，`last`）中后跟字符*C*的百分比，该函数将计算 `next`  =  `do_put` （`next`、`_Iosbase`、`_Fill`、`_Pt`、 *C*、0），并跳过*C*。然而，如果*C*是 set EOQ # 中的限定符字符，后跟间隔 [4，5）中的字符 3，则该函数将计算 6 7 8 （9 0、1、2、3、 *C*）和跳过 5。
 
 ### <a name="example"></a>示例
 
@@ -247,20 +247,20 @@ explicit time_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>参数
 
-*_Refs*\
+*_Refs* \
 用于指定对象的内存管理类型的整数值。
 
 ### <a name="remarks"></a>备注
 
-*_Refs*参数的可能值及其重要性为:
+*_Refs*参数的可能值及其重要性为：
 
-- 0对象的生存期由包含该对象的区域设置管理。
+- 0：对象的生存期由包含该对象的区域设置管理。
 
-- 1:必须手动管理对象的生存期。
+- 1：必须手动管理对象的生存期。
 
-- \>2未定义这些值。
+- \> 1：未定义这些值。
 
-构造函数通过[locale:: facet](../standard-library/locale-class.md#facet_class)( *_Refs*) 初始化其基对象。
+构造函数通过[locale：： facet](../standard-library/locale-class.md#facet_class)（ *_Refs*）初始化其基对象。
 
 ## <a name="see-also"></a>请参阅
 

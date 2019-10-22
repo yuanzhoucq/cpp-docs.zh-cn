@@ -7,54 +7,54 @@ f1_keywords:
 helpviewer_keywords:
 - complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
-ms.openlocfilehash: 585f970f1a3482412ff225454b7acce9060e2d7c
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 071e9369cdd0469d8ddc1c6649a3801732d8e23f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449428"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688221"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
-定义容器模板类`complex`及其支持的模板。
+定义容器类模板 `complex` 及其支持的模板。
 
 ## <a name="requirements"></a>要求
 
 **标头**：\<complex>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="remarks"></a>备注
 
 一个复数是有序的实数对。 在纯粹几何术语中，复平面是真实的二维平面。 将复平面与实平面区分开来的特质在于它具有其他代数结构。 这种代数结构有两个基本操作：
 
-- 加法定义为 (*a*, *b*) + (*c*, *d*) = (*a* + *c*, *b* + *d*)
+- 加法定义为（*a*， *b*） + （*c*， *d*） = （*a*  + *c*， *b*  + *d*）
 
-- 乘法定义为 (*a*, *b*) \* (*c*, *d*) = (*ac* - *bd*, *ad* + *bc*)
+- 乘法定义为（*a*， *b*） \* （*c*， *d*） = （*ac*  - *bd*， *ad*  + *bc*）
 
 带复数加法和复数乘法操作的复数集在标准代数意义上为域：
 
 - 加法和乘法的操作是可交换且相关联的，并且乘法通过加法分配的方式与在实数域上进行的实数加法和乘法完全相同。
 
-- 复数 (0, 0) 是加法标识, (1, 0) 是乘法标识。
+- 复数（0，0）是加法标识，（1，0）是乘法标识。
 
-- 复数 (*a*, *b*) 的加法逆元是 (-*a*,-*b*), 除 (0, 0) 外的所有此类复数的乘法倒数是
+- 复数（*a*， *b*）的加法逆元是（-*a*，-*b*），除（0，0）外的所有此类复数的乘法倒数是
 
-   (*a*/(*a*<sup>2</sup> + *b*<sup>2</sup>), -*b*/(*a*<sup>2</sup> + *b*<sup>2</sup>))
+   （*a*/（*a*<sup>2</sup>  + *b*<sup>2</sup>），-*b*/（*a*<sup>2</sup>  + *b*<sup>2</sup>））
 
-通过以*z*a =     <sup></sup> bi 形式表示一个复数 z = (a, b), 其中 i 2 =-1, 可以将一组实数的代数的规则应用于 + 复数及其组件的集合。 例如：
+通过将*z* = （*a*，b）中的复数*z* = （a， *b* *）  =   + * *bi*，其中*i*<sup>2</sup> =-1，实数集的代数规则可应用于一组复杂的数字及其组件。 例如:
 
-   (1 + 2*i*) \* \* <sup></sup>    (2 + 3 i) = 1 (2 + 3 i) + 2 i (2 + 3 i) = (2 + 3 i) + (4 i + 6 i 2) = (2-6) + (3 + 4) i =-4 + 7 i \*
+   （1 + 2*i*） \* （2 + 3*i*） = 1 \* （2 + 3*i*） + 2*i* \* （2 *+ 3 i*） = （2 + 3*i*） + （4*i* + 6*i*<sup>2</sup>） = （2-6） + （3 + 4）*i* =-4 + 7*i*
 
-复数的系统是一个域，但它不是一个有序域。 对于实数及其子集的字段, 不能进行复数排序, 因此不相等不能应用于复数, 因为它是实际数字。
+复数的系统是一个域，但它不是一个有序域。 对于实数及其子集的字段，不能进行复数排序，因此不相等不能应用于复数，因为它是实际数字。
 
 表示复数 *z* 有三种常见形式：
 
-- 笛卡尔: *z* = a*bi*  + 
+- 笛卡尔： *z*  =  * + * *bi*
 
-- 极坐标 *: z* = *r* ( *cos p* + *i* sin *p*)
+- 极坐标： *z*  = *r* （cos *p*  + *i* sin *p*）
 
-- 指数: *z* = *r* \* *e*<sup>*ip*</sup>
+- 指数： *z*  = *r* \* *e*<sup>*ip*</sup>
 
 在复数的这些标准表示形式中使用的术语请参照如下内容：
 
@@ -64,11 +64,11 @@ ms.locfileid: "68449428"
 
 - 复数*r*的模数或绝对值。
 
-- 参数或相位角度*p* (以弧度表示)。
+- 参数或相位角度*p* （以弧度表示）。
 
-除非另外指定, 否则, 可以返回多个值的函数需要返回大于-π且小于或等于 + π的参数的主体值, 以使其保持单值。 所有角度必须以弧度表示, 其中有2π弧度 (360 度)。
+除非另外指定，否则，可以返回多个值的函数需要返回大于-π且小于或等于 + π的参数的主体值，以使其保持单值。 所有角度必须以弧度表示，其中有2π弧度（360度）。
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="functions"></a>函数
 
@@ -117,10 +117,10 @@ ms.locfileid: "68449428"
 
 |||
 |-|-|
-|[complex\<double>](../standard-library/complex-double.md)|显式专用化的模板类描述一个对象, 该对象存储一对有序的对象 (两个均为**double**类型), 第一个对象表示复数的实部, 第二个对象表示虚部。|
-|[complex\<float>](../standard-library/complex-float.md)|显式专用化的模板类描述一个对象, 该对象存储有序对象对, 这两种类型都是**float**类型, 第一个对象表示复数的实部, 第二个对象表示虚部。|
-|[complex\<long double>](../standard-library/complex-long-double.md)|显式专用化的模板类描述一个对象, 该对象存储一对有序的对象对, 这两种类型都是**long double**类型, 其中第一个对象表示复数的实部, 第二个对象表示虚部。|
-|[complex](../standard-library/complex-class.md)|此模板类描述一个对象，该对象用于表示复数系统和执行复杂算术运算。|
+|[complex\<double>](../standard-library/complex-double.md)|显式专用化的类模板描述了一个对象，该对象存储两个类型的对象（均为**double**类型），第一个对象表示复数的实部，第二个对象表示虚部。|
+|[complex\<float>](../standard-library/complex-float.md)|显式专用化的类模板描述了一个对象，该对象存储有序对象对，这两种类型都是**float**类型，第一个对象表示复数的实部，第二个对象表示虚部。|
+|[complex\<long double>](../standard-library/complex-long-double.md)|显式专用化的类模板描述了一个对象，该对象存储两个类型为**long double**的有序对象对，第一个对象表示复数的实部，第二个对象表示复数的虚部。|
+|[complex](../standard-library/complex-class.md)|类模板描述了一个对象，该对象用于表示复数系统和执行复杂算术运算。|
 
 ### <a name="literals"></a>文本
 
@@ -128,7 +128,7 @@ ms.locfileid: "68449428"
 
 |||
 |-|-|
-|`constexpr complex<long double> operator""il(long double d)`<br />`constexpr complex<long double> operator""il(unsigned long long d)`|返回`complex<long double>{0.0L, static_cast<long double>(d)}`|
+|`constexpr complex<long double> operator""il(long double d)`<br />`constexpr complex<long double> operator""il(unsigned long long d)`|返回： `complex<long double>{0.0L, static_cast<long double>(d)}`|
 |`constexpr complex<double> operator""i(long double d)`<br />`constexpr complex<double> operator""i(unsigned long long d)`|返回：`complex<double>{0.0, static_cast<double>(d)}`。|
 |`constexpr complex<float> operator""if(long double d)`<br />`constexpr complex<float> operator""if(unsigned long long d)`|返回：`complex<float>{0.0f, static_cast<float>(d)}`。|
 
