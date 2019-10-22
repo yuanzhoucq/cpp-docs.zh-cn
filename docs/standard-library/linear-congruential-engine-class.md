@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - linear_congruential_engine class
 ms.assetid: 30e00ca6-1933-4701-9561-54f3e810a5a1
-ms.openlocfilehash: f5b448fbf158cf9e9cfb8331c6ec7a228859fffc
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3c1824eb22ed97e65e0556bc63b374f705f5c591
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447585"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689437"
 ---
-# <a name="linearcongruentialengine-class"></a>linear_congruential_engine 类
+# <a name="linear_congruential_engine-class"></a>linear_congruential_engine 类
 
 通过线性同余算法生成随机序列。
 
@@ -45,19 +45,19 @@ class linear_congruential_engine{
 
 ### <a name="parameters"></a>参数
 
-*UIntType*\
+*UIntType* \
 无符号的整数结果类型。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
-*的*\
-**乘数**。 **前提条件**:请参阅备注部分。
+*一个*\
+**乘数**。 **前置条件**：请参阅“备注”部分。
 
-*ANSI-C*\
-**递增**。 **前提条件**:请参阅备注部分。
+*C* \
+**递增**。 **前置条件**：请参阅“备注”部分。
 
-*年*\
-**取模**。 **前提条件**:请参阅 "备注"。
+*M* \
+**取模**。 **前置条件**：请参阅“备注”。
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ||||
 |-|-|-|
@@ -70,13 +70,13 @@ class linear_congruential_engine{
 
 ## <a name="remarks"></a>备注
 
-`linear_congruential_engine` 模板类是最简单的生成器引擎，但不是最快速或质量最好的生成器引擎。 [substract_with_carry_engine](../standard-library/subtract-with-carry-engine-class.md) 是对此引擎的改进。 这两个引擎的速度和结果的质量都不如 [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md)。
+@No__t_0 类模板是最简单的生成器引擎，但不是最快或最高的质量。 [substract_with_carry_engine](../standard-library/subtract-with-carry-engine-class.md) 是对此引擎的改进。 这两个引擎的速度和结果的质量都不如 [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md)。
 
 此引擎使用重复关系( *period*) `x(i) = (A * x(i-1) + C) mod M` 产生用户指定的无符号整型值。
 
-如果*M*为零, 则用于此取模运算的值`numeric_limits<result_type>::max() + 1`是。 引擎的状态是返回的最后一个值，或是种子值（如果尚未对 `operator()` 进行调用）。
+如果*M*为零，则 `numeric_limits<result_type>::max() + 1` 用于此取模运算的值。 引擎的状态是返回的最后一个值，或是种子值（如果尚未对 `operator()` 进行调用）。
 
-如果*M*不为零, 则模板参数*A*和*C*的值必须小于*M*。
+如果*M*不为零，则模板参数*A*和*C*的值必须小于*M*。
 
 虽然可以从此引擎直接构造生成器，但也可以使用其中一个预定义的 typedef。
 
@@ -98,7 +98,7 @@ typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_ra
 
 **标头：** \<random>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="see-also"></a>请参阅
 

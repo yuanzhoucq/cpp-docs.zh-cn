@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - queue header
 ms.assetid: 24fcf350-eb0e-48cf-9fef-978be1aeda1f
-ms.openlocfilehash: 506ab5fccd44ad37a08a9f741f44f24d3a85b87d
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: ee35f880ddf40561cacb5c4d519f2e6291ad77a8
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68956994"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689115"
 ---
 # <a name="ltqueuegt"></a>&lt;queue&gt;
 
-定义模板类 priority_queue 和 queue 以及多个支持模板。
+定义类模板 priority_queue 和 queue 以及多个支持模板。
 
 ## <a name="requirements"></a>要求
 
 **标头：** \<queue>
 
-**命名空间：** std
+**命名空间:** std
 
 > [!NOTE]
-> 队列 > 库也使用该`#include <initializer_list>`语句。 \<
+> > 库 \<queue 也使用了 `#include <initializer_list>` 语句。
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="operators"></a>运算符
 
@@ -49,5 +49,5 @@ ms.locfileid: "68956994"
 ## <a name="see-also"></a>请参阅
 
 [头文件引用](../standard-library/cpp-standard-library-header-files.md)\
-[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

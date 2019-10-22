@@ -23,14 +23,14 @@ helpviewer_keywords:
 - std::regex_token_iterator [C++], pointer
 - std::regex_token_iterator [C++], reference
 ms.assetid: a213ba48-8e4e-4b6b-871a-2637acf05f15
-ms.openlocfilehash: 78d01ed8606e65e55af7e0c8dc24c02b51c53a39
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 57fac1d9d5c73c2644a679402809933290dd3fc3
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451543"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689061"
 ---
-# <a name="regextokeniterator-class"></a>regex_token_iterator 类
+# <a name="regex_token_iterator-class"></a>regex_token_iterator 类
 
 子匹配项的迭代器类。
 
@@ -45,22 +45,22 @@ class regex_token_iterator
 
 ## <a name="parameters"></a>参数
 
-*BidIt*\
+*BidIt* \
 子匹配项的迭代器类型。
 
-*Elem*\
+*Elem* \
 要匹配的元素的类型。
 
-*RXtraits*\
+*RXtraits* \
 元素的特征类。
 
 ## <a name="remarks"></a>备注
 
-此模板类描述常量前向迭代器对象。 从概念上讲，它承载 `regex_iterator` 对象，并用于搜索字符序列中正则表达式的匹配项。 它提取 `sub_match<BidIt>` 类型的对象，这些对象表示由每个正则表达式匹配项的存储向量 `subs` 中的索引值标识的子匹配项。
+类模板描述常量向前迭代器对象。 从概念上讲，它承载 `regex_iterator` 对象，并用于搜索字符序列中正则表达式的匹配项。 它提取 `sub_match<BidIt>` 类型的对象，这些对象表示由每个正则表达式匹配项的存储向量 `subs` 中的索引值标识的子匹配项。
 
 -1 索引值指定在上一个正则表达式匹配项末尾后立即开始（如果不存在上一个正则表达式匹配项，则为从字符序列的起始处开始）的字符序列，并扩展到但不包含当前正则表达式匹配项的第一个字符（如果不存在当前匹配项，则扩展到字符序列末尾）。 任何其他索引值 `idx` 指定承载于 `it.match[idx]`中捕获组的内容。
 
-### <a name="members"></a>成员
+### <a name="members"></a>Members
 
 |成员|默认值|
 |-|-|
@@ -80,7 +80,7 @@ class regex_token_iterator
 |-|-|
 |[difference_type](#difference_type)|迭代器差异的类型。|
 |[iterator_category](#iterator_category)|迭代器类别的类型。|
-|[pointer](#pointer)|指向一个匹配的指针的类型。|
+|[指针](#pointer)|指向一个匹配的指针的类型。|
 |[reference](#reference)|对子匹配项的引用的类型。|
 |[regex_type](#regex_type)|要匹配的正则表达式类型。|
 |[value_type](#value_type)|子匹配项的类型。|
@@ -99,7 +99,7 @@ class regex_token_iterator
 
 **标头：** \<regex 1>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="example"></a>示例
 
@@ -207,7 +207,7 @@ typedef std::ptrdiff_t difference_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是 `std::ptrdiff_t` 的同义词。
+该类型是 `std::ptrdiff_t`的同义词。
 
 ## <a name="iterator_category"></a>  regex_token_iterator::iterator_category
 
@@ -219,7 +219,7 @@ typedef std::forward_iterator_tag iterator_category;
 
 ### <a name="remarks"></a>备注
 
-该类型是 `std::forward_iterator_tag` 的同义词。
+该类型是 `std::forward_iterator_tag`的同义词。
 
 ## <a name="op_neq"></a>regex_token_iterator::operator!=
 
@@ -231,12 +231,12 @@ bool operator!=(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>参数
 
-*然后*\
+*right* \
 要进行比较的迭代器。
 
 ### <a name="remarks"></a>备注
 
-成员函数返回 `!(*this == right)`。
+此成员函数返回 `!(*this == right)`。
 
 ## <a name="op_star"></a>regex_token_iterator::operator*
 
@@ -276,12 +276,12 @@ bool operator==(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>参数
 
-*然后*\
+*right* \
 要进行比较的迭代器。
 
 ### <a name="remarks"></a>备注
 
-成员函数返回 `it == right.it && subs == right.subs && pos == right.pos`。
+此成员函数返回 `it == right.it && subs == right.subs && pos == right.pos`。
 
 ## <a name="op_arrow"></a>regex_token_iterator::operator-&gt;
 
@@ -317,7 +317,7 @@ typedef sub_match<BidIt>& reference;
 
 ### <a name="remarks"></a>备注
 
-类型是 `sub_match<BidIt>&` 的同义词，其中 `BidIt` 是模板参数。
+该类型是 `sub_match<BidIt>&`的同义词，其中 `BidIt` 是模板参数。
 
 ## <a name="regex_token_iterator"></a>  regex_token_iterator::regex_token_iterator
 
@@ -342,16 +342,16 @@ regex_token_iterator(BidIt first, BidIt last,
 
 ### <a name="parameters"></a>参数
 
-*1*\
+*第一个*\
 要匹配的序列的开头。
 
-*时间*\
+*最后*\
 要匹配的序列的结尾。
 
-*&* \
+*重新*\
 匹配项正则表达式。
 
-*果*\
+*f* \
 匹配标志。
 
 ### <a name="remarks"></a>备注
@@ -374,7 +374,7 @@ typedef basic_regex<Elem, RXtraits> regex_type;
 
 ### <a name="remarks"></a>备注
 
-typedef 是 `basic_regex<Elem, RXtraits>`的同义词。
+typedef 是 `basic_regex<Elem, RXtraits>` 的同义词。
 
 ## <a name="value_type"></a>  regex_token_iterator::value_type
 
@@ -386,15 +386,15 @@ typedef sub_match<BidIt> value_type;
 
 ### <a name="remarks"></a>备注
 
-类型是 `sub_match<BidIt>` 的同义词，其中 `BidIt` 是模板参数。
+该类型是 `sub_match<BidIt>`的同义词，其中 `BidIt` 是模板参数。
 
 ## <a name="see-also"></a>请参阅
 
 [\<regex>](../standard-library/regex.md)\
-[regex_constants 类](../standard-library/regex-constants-class.md)\
-[regex_error 类](../standard-library/regex-error-class.md)\
+[Regex_constants 类](../standard-library/regex-constants-class.md)\
+[Regex_error 类](../standard-library/regex-error-class.md)\
 [\<regex > 函数](../standard-library/regex-functions.md)\
-[regex_iterator 类](../standard-library/regex-iterator-class.md)\
+[Regex_iterator 类](../standard-library/regex-iterator-class.md)\
 [\<regex > 运算符](../standard-library/regex-operators.md)\
-[regex_traits 类](../standard-library/regex-traits-class.md)\
+[Regex_traits 类](../standard-library/regex-traits-class.md)\
 [\<regex> typedefs](../standard-library/regex-typedefs.md)

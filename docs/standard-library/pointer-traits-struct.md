@@ -14,16 +14,16 @@ f1_keywords:
 - xmemory0/std::pointer_traits::rebind
 - memory/std::pointer_traits::pointer_to
 ms.assetid: 545aecf1-3561-4859-8b34-603c079fe1b3
-ms.openlocfilehash: 109e51ad9eba54f31b90da9b8b85bec105c7dce6
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 6d89348867982bfb86c0bf2404a017f6a448d1a1
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240423"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687141"
 ---
-# <a name="pointertraits-struct"></a>pointer_traits 结构
+# <a name="pointer_traits-struct"></a>pointer_traits 结构
 
-提供模板类 `allocator_traits` 对象所需信息，用于描述一个采用指针类型 `Ptr` 的分配器。
+提供 `allocator_traits` 类型的对象所需的信息，以描述指针类型为 `Ptr` 的分配器。
 
 ## <a name="syntax"></a>语法
 
@@ -48,7 +48,7 @@ struct Ptr
 };
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="typedefs"></a>Typedef
 
@@ -66,11 +66,11 @@ struct Ptr
 
 ### <a name="methods"></a>方法
 
-|名称|描述|
+|“属性”|描述|
 |----------|-----------------|
 |[pointer_to](#pointer_to)|将任意引用转换为 `Ptr` 类的对象。|
 
-### <a name="pointer_to"></a> pointer_to
+### <a name="pointer_to"></a>pointer_to
 
 存在 `Ptr::pointer_to(obj)` 时，则为返回该函数的静态方法。 否则，无法将任意引用转换为 `Ptr` 类的对象。 如果 `Ptr` 是原始指针，则此方法将返回 `addressof(obj)`。
 

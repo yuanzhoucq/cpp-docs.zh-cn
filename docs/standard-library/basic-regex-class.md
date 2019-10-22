@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - basic_regex class
 ms.assetid: 8a18c6b4-f22a-4cfd-bc16-b4267867ebc3
-ms.openlocfilehash: 8df9e927c430f3b94f5857bf18f575e79d6b922a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 45776754bd0854aeb85382eda95891a6832ca09e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453440"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689965"
 ---
-# <a name="basicregex-class"></a>basic_regex 类
+# <a name="basic_regex-class"></a>basic_regex 类
 
 包装正则表达式。
 
@@ -26,21 +26,21 @@ class basic_regex
 
 ## <a name="parameters"></a>参数
 
-*Elem*\
+*Elem* \
 要匹配的元素的类型。
 
-*RXtraits*\
+*RXtraits* \
 元素的特征类。
 
 ## <a name="remarks"></a>备注
 
-此模板类描述包含正则表达式的对象。 此模板类的对象可以传递给模板函数[regex_match](../standard-library/regex-functions.md#regex_match)、 [regex_search](../standard-library/regex-functions.md#regex_search)和[regex_replace](../standard-library/regex-functions.md#regex_replace), 以及适当的文本字符串参数, 以搜索与正则表达式匹配的文本。 此模板类有两种专用化, 类型定义[regex](../standard-library/regex-typedefs.md#regex)适用于**char**类型的元素, [wregex](../standard-library/regex-typedefs.md#wregex)用于类型为**wchar_t**的元素。
+类模板描述包含正则表达式的对象。 此类模板的对象可以传递给模板函数[regex_match](../standard-library/regex-functions.md#regex_match)、 [regex_search](../standard-library/regex-functions.md#regex_search)和[regex_replace](../standard-library/regex-functions.md#regex_replace)，以及适当的文本字符串参数，以搜索与正则表达式匹配的文本。 此类模板有两种专用化，类型定义[regex](../standard-library/regex-typedefs.md#regex)适用于**char**类型的元素， [wregex](../standard-library/regex-typedefs.md#wregex)用于类型为**wchar_t**的元素。
 
-模板参数*RXtraits*描述模板类支持的正则表达式的语法的各种重要属性。 一个指定这些正则表达式特征的外部接口必须与模板类 [regex_traits Class](../standard-library/regex-traits-class.md) 的对象相同的类。
+模板参数*RXtraits*描述类模板支持的正则表达式语法的各种重要属性。 指定这些正则表达式特征的类必须与[Regex_traits 类](../standard-library/regex-traits-class.md)类型的对象具有相同的外部接口。
 
 某些函数使用操作数序列来定义正则表达式。 可以通过多种方式指定此操作数序列：
 
-`ptr`-从`ptr` (不能为 null 指针) 开始、以 null 结尾的序列 (如 C**字符串),** 其中终止元素是值`value_type()`并且不是操作数序列的一部分
+从 `ptr` （不能为 null**指针）开始**以 null 结尾的序列（如 C 字符串形式的*Elem* ），其中终止元素为值 `value_type()`，并且不是操作数序列的一部分 `ptr`
 
 `ptr`, `count` - 从 `count`（不能为 null 指针）开始的 `ptr` 元素序列
 
@@ -50,22 +50,22 @@ class basic_regex
 
 `right` - `basic_regex` 对象 `right`
 
-这些成员函数还使用参数`flags`指定用于解释正则表达式的各个选项, 以及*RXtraits*类型描述的选项。
+这些成员函数还采用参数 `flags`，它指定用于解释正则表达式的各种选项，以及*RXtraits*类型描述的选项。
 
-### <a name="members"></a>成员
+### <a name="members"></a>Members
 
 |成员|默认值|
 |-|-|
 |public static const flag_type icase|regex_constants::icase|
 |public static const flag_type nosubs|regex_constants::nosubs|
-|public static const flag_type optimize|regex_constants::optimize|
-|公共静态 const flag_type collate|regex_constants::collate|
-|public static const flag_type ECMAScript|regex_constants::ECMAScript|
-|公共静态 const flag_type 基本|regex_constants::basic|
-|已扩展公共静态 const flag_type|regex_constants::extended|
-|public static const flag_type awk|regex_constants::awk|
-|公共静态 const flag_type grep|regex_constants::grep|
-|public static const flag_type egrep|regex_constants::egrep|
+|public static const flag_type optimize|regex_constants：： optimize|
+|公共静态 const flag_type collate|regex_constants：： collate|
+|public static const flag_type ECMAScript|regex_constants：： ECMAScript|
+|公共静态 const flag_type 基本|regex_constants：： basic|
+|已扩展公共静态 const flag_type|regex_constants：： extended|
+|public static const flag_type awk|regex_constants：： awk|
+|公共静态 const flag_type grep|regex_constants：： grep|
+|public static const flag_type egrep|regex_constants：： egrep|
 |私有 RXtraits 特征||
 
 ### <a name="constructors"></a>构造函数
@@ -103,7 +103,7 @@ class basic_regex
 
 **标头：** \<regex 1>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="example"></a>示例
 
@@ -230,37 +230,37 @@ basic_regex& assign(
 
 ### <a name="parameters"></a>参数
 
-*STtraits*\
+*STtraits* \
 字符串源的特征类。
 
-*STalloc*\
+*STalloc* \
 字符串源的分配器类。
 
-*InIt*\
+*InIt* \
 范围源的输入迭代器类型。
 
-*然后*\
+*right* \
 要复制的正则表达式源。
 
-*ptr*\
+*ptr* \
 指向要复制的序列开头的指针。
 
-*随意*\
+*标志*\
 复制时要添加的语法选项标志。
 
 *len/TD >* \
 要复制的序列的长度。
 
-*字符串*\
+*str* \
 要复制的字符串。
 
-*1*\
+*第一个*\
 要复制的序列的开头。
 
-*时间*\
+*最后*\
 要复制的序列的结尾。
 
-*IList*\
+*IList* \
 要复制的 initializer_list。
 
 ### <a name="remarks"></a>备注
@@ -304,37 +304,37 @@ explicit basic_regex(
 
 ### <a name="parameters"></a>参数
 
-*STtraits*\
+*STtraits* \
 字符串源的特征类。
 
-*STalloc*\
+*STalloc* \
 字符串源的分配器类。
 
-*InIt*\
+*InIt* \
 范围源的输入迭代器类型。
 
-*然后*\
+*right* \
 要复制的正则表达式源。
 
-*ptr*\
+*ptr* \
 指向要复制的序列开头的指针。
 
-*随意*\
+*标志*\
 复制时要添加的语法选项标志。
 
 *len/TD >* \
 要复制的序列的长度。
 
-*字符串*\
+*str* \
 要复制的字符串。
 
-*1*\
+*第一个*\
 要复制的序列的开头。
 
-*时间*\
+*最后*\
 要复制的序列的结尾。
 
-*IList*\
+*IList* \
 要复制的 initializer_list。
 
 ### <a name="remarks"></a>备注
@@ -343,7 +343,7 @@ explicit basic_regex(
 
 第一个构造函数构造一个空 `basic_regex` 对象。 其他构造函数构造 `basic_regex` 对象，其中包含由操作数序列描述的正则表达式。
 
-空`basic_regex`对象在传递到[regex_match](../standard-library/regex-functions.md#regex_match)、 [regex_search](../standard-library/regex-functions.md#regex_search)或[regex_replace](../standard-library/regex-functions.md#regex_replace)时不匹配任何字符序列。
+空的 `basic_regex` 对象在传递到[regex_match](../standard-library/regex-functions.md#regex_match)、 [regex_search](../standard-library/regex-functions.md#regex_search)或[regex_replace](../standard-library/regex-functions.md#regex_replace)时不匹配任何字符序列。
 
 ## <a name="flag_type"></a>  basic_regex::flag_type
 
@@ -355,7 +355,7 @@ typedef regex_constants::syntax_option_type flag_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是 [regex_constants::syntax_option_type](../standard-library/regex-constants-class.md#syntax_option_type) 的同义词。
+该类型是 [regex_constants::syntax_option_type](../standard-library/regex-constants-class.md#syntax_option_type)的同义词。
 
 ## <a name="flags"></a>  basic_regex::flags
 
@@ -391,7 +391,7 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>参数
 
-*loc*\
+*loc* \
 要存储的区域设置对象。
 
 ### <a name="remarks"></a>备注
@@ -408,7 +408,7 @@ typedef typename RXtraits::locale_type locale_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是 [regex_traits::locale_type](../standard-library/regex-traits-class.md#locale_type) 的同义词。
+该类型是 [regex_traits::locale_type](../standard-library/regex-traits-class.md#locale_type)的同义词。
 
 ## <a name="mark_count"></a>  basic_regex::mark_count
 
@@ -437,16 +437,16 @@ basic_regex& operator=(const basic_string<Elem, STtraits, STalloc>& str);
 
 ### <a name="parameters"></a>参数
 
-*STtraits*\
+*STtraits* \
 字符串源的特征类。
 
-*STalloc*\
+*STalloc* \
 字符串源的分配器类。
 
-*然后*\
+*right* \
 要复制的正则表达式源。
 
-*字符串*\
+*str* \
 要复制的字符串。
 
 ### <a name="remarks"></a>备注
@@ -463,12 +463,12 @@ void swap(basic_regex& right) throw();
 
 ### <a name="parameters"></a>参数
 
-*然后*\
+*right* \
 要交换的正则表达式对象。
 
 ### <a name="remarks"></a>备注
 
-成员函数交换和`*this` *右*之间的正则表达式。 它定时执行此操作且不引发异常。
+成员函数在 `*this` 和*右*之间交换正则表达式。 它定时执行此操作且不引发异常。
 
 ## <a name="value_type"></a>  basic_regex::value_type
 
@@ -485,9 +485,9 @@ typedef Elem value_type;
 ## <a name="see-also"></a>请参阅
 
 [\<regex>](../standard-library/regex.md)\
-[regex_match](../standard-library/regex-functions.md#regex_match)\
-[regex_search](../standard-library/regex-functions.md#regex_search)\
-[regex_replace](../standard-library/regex-functions.md#regex_replace)\
+[regex_match](../standard-library/regex-functions.md#regex_match) \
+[regex_search](../standard-library/regex-functions.md#regex_search) \
+[regex_replace](../standard-library/regex-functions.md#regex_replace) \
 [regex](../standard-library/regex-typedefs.md#regex)\
 [wregex](../standard-library/regex-typedefs.md#wregex)\
 [regex_traits 类](../standard-library/regex-traits-class.md)

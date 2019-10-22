@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - istream header
 ms.assetid: efcf24e4-05d1-4719-ab0b-9e7ebe845d89
-ms.openlocfilehash: 0ad27bf849e8d4b9188868b9a29bf423b4cafafa
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 8e9675a673462c8eaab94d29a3ae36a4786737b7
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458734"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687856"
 ---
 # <a name="ltistreamgt"></a>&lt;istream&gt;
 
-定义调解 iostreams 提取的模板类 basic_istream，以及调解插入和提取的模板类 basic_iostream。 标头还定义了一个相关的操控程序。 通常会由另一个 iostreams 标头为你包括此头文件；几乎不需要直接包括它。
+定义用于调节 iostreams 提取的类模板 basic_istream，以及用于调节插入和提取的类模板 basic_iostream。 标头还定义了一个相关的操控程序。 通常会由另一个 iostreams 标头为你包括此头文件；几乎不需要直接包括它。
 
 ## <a name="syntax"></a>语法
 
@@ -29,8 +29,8 @@ ms.locfileid: "68458734"
 
 |类型名称|描述|
 |-|-|
-|[iostream](../standard-library/istream-typedefs.md#iostream)|在`basic_iostream` **char**上专用化的类型。|
-|[istream](../standard-library/istream-typedefs.md#istream)|在`basic_istream` **char**上专用化的类型。|
+|[iostream](../standard-library/istream-typedefs.md#iostream)|在**char**`basic_iostream` 专用化的类型。|
+|[istream](../standard-library/istream-typedefs.md#istream)|在**char**`basic_istream` 专用化的类型。|
 |[wiostream](../standard-library/istream-typedefs.md#wiostream)|专用于 **wchar** 的类型 `basic_iostream`。|
 |[wistream](../standard-library/istream-typedefs.md#wistream)|专用于 **wchar** 的类型 `basic_istream`。|
 
@@ -49,13 +49,13 @@ ms.locfileid: "68458734"
 
 ### <a name="classes"></a>类
 
-|类|描述|
+|实例|描述|
 |-|-|
 |[basic_iostream](../standard-library/basic-iostream-class.md)|可以完成输入和输出的流类。|
-|[basic_istream](../standard-library/basic-istream-class.md)|此模板类描述一个对象, 该对象控制从流缓冲区提取元素和编码对象, 该缓冲区包含`Elem`类型为的元素, 也称为[char_type](../standard-library/basic-ios-class.md#char_type), 其字符特征由类`Tr`确定。称为[traits_type](../standard-library/basic-ios-class.md#traits_type)。|
+|[basic_istream](../standard-library/basic-istream-class.md)|类模板描述了一个对象，该对象可控制从流缓冲区提取元素和编码对象，其元素类型为 `Elem` （也称为[char_type](../standard-library/basic-ios-class.md#char_type)），其字符特征由类 `Tr` （也称为[traits_type](../standard-library/basic-ios-class.md#traits_type)。|
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream 编程](../standard-library/iostream-programming.md)\
 [iostreams 约定](../standard-library/iostreams-conventions.md)

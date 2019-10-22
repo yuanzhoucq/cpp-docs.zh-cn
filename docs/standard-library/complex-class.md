@@ -10,16 +10,16 @@ helpviewer_keywords:
 - std::complex [C++], imag
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
-ms.openlocfilehash: 44d44d48f66c9bdbf03d4e36e752ea3dee5ff9c9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 687665d2ad8bf80f4f2db07ce11c4866ff1ee903
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453178"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688253"
 ---
 # <a name="complex-class"></a>complex 类
 
-此模板类描述一个对象, 该对象存储两个`Type`类型的对象, 一个对象表示复数的实部, 另一个表示复数的实部。
+类模板描述了一个对象，该对象存储两个类型的对象 `Type`，一个对象表示复数的实部，另一个对象表示复数的虚部。
 
 ## <a name="syntax"></a>语法
 
@@ -30,7 +30,7 @@ class complex
 
 ## <a name="remarks"></a>备注
 
-类`Type`的对象:
+类 `Type` 的对象：
 
 - 具有公共默认构造函数、析构函数、复制构造函数、赋值运算符和常规行为。
 
@@ -38,11 +38,11 @@ class complex
 
 - 根据需要，定义适用于浮点类型的算术运算符、数学函数和常规行为。
 
-具体而言，复制构造和后跟分配的默认构造之间可能不存在任何细微的差异。 对类`Type`的对象的操作都不会引发异常。
+具体而言，复制构造和后跟分配的默认构造之间可能不存在任何细微的差异。 对类 `Type` 的对象的操作都不会引发异常。
 
-对三个浮点类型的模板类复杂存在的显式专用化。 在此实现中, `Type`任何其他类型的值都转换为**double**进行计算, 并将**双精度**值分配回类型`Type`为的存储对象。
+对于三个浮点类型，类模板的显式专用化存在。 在此实现中，`Type` 的任何其他类型的值都转换为**double**进行计算，并将**double**结果赋回 `Type` 类型的存储对象。
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="constructors"></a>构造函数
 
@@ -91,18 +91,18 @@ constexpr complex(
 
 ### <a name="parameters"></a>参数
 
-*_RealVal*\
+*_RealVal* \
 用于初始化正在构造的复数的实部值。
 
-*_ImagVal*\
+*_ImagVal* \
 用于初始化正在构造的复数的虚部值。
 
-*complexNum*\
+*complexNum* \
 一个复数，其实部和虚部用于初始化正在构造的复数。
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数将存储的实部初始化为 *\_RealVal* , 将 *\_* 存储的虚部初始化为 Imagval。 第二个构造函数将存储的实`complexNum.real()`部初始化为, 将存储`complexNum.imag()`的虚部初始化为。
+第一个构造函数将存储的实部初始化为 *\_RealVal* ，将存储的虚部部分初始化为 *\_Imagval*。 第二个构造函数将存储的实部初始化为 `complexNum.real()`，将存储的虚部部分初始化为 `complexNum.imag()`。
 
 在此实现中，如果转换器不支持成员模板函数，则模板：
 
@@ -171,7 +171,7 @@ T imag(const T& right);
 
 ### <a name="parameters"></a>参数
 
-*然后*\
+*right* \
 要提取其虚数值的复数。
 
 ### <a name="return-value"></a>返回值
@@ -180,7 +180,7 @@ T imag(const T& right);
 
 ### <a name="remarks"></a>备注
 
-对于复数*a + bi*, 虚部或 Component 是*Im (a + bi) = b*。
+对于复数*a + bi*，虚部或 Component 是*Im （a + bi） = b*。
 
 ### <a name="example"></a>示例
 
@@ -228,7 +228,7 @@ complex<Type>& operator*=(const complex<Type>& right);
 
 ### <a name="parameters"></a>参数
 
-*然后*\
+*right* \
 复数或与目标复数的参数具有相同类型的数。
 
 ### <a name="return-value"></a>返回值
@@ -313,7 +313,7 @@ complex<Type>& operator+=(const complex<Type>& right);
 
 ### <a name="parameters"></a>参数
 
-*然后*\
+*right* \
 复数或与目标复数的参数具有相同类型的数。
 
 ### <a name="return-value"></a>返回值
@@ -416,10 +416,10 @@ complex<Type>& operator-=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>参数
 
-*complexNum*\
+*complexNum* \
 要从目标复数减去的复数。
 
-*_RealPart*\
+*_RealPart* \
 要从目标复数减去的实数。
 
 ### <a name="return-value"></a>返回值
@@ -524,10 +524,10 @@ complex<Type>& operator/=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>参数
 
-*complexNum*\
+*complexNum* \
 要从目标复数减去的复数。
 
-*_RealPart*\
+*_RealPart* \
 要从目标复数减去的实数。
 
 ### <a name="return-value"></a>返回值
@@ -626,7 +626,7 @@ complex<Type>& operator=(const Type& right);
 
 ### <a name="parameters"></a>参数
 
-*然后*\
+*right* \
 复数或与目标复数的参数具有相同类型的数。
 
 ### <a name="return-value"></a>返回值
@@ -703,7 +703,7 @@ T real(const T& right);
 
 ### <a name="parameters"></a>参数
 
-*然后*\
+*right* \
 要提取其实数值的复数。
 
 ### <a name="return-value"></a>返回值
@@ -712,7 +712,7 @@ T real(const T& right);
 
 ### <a name="remarks"></a>备注
 
-对于复数*a + bi*, 实部或组件是*Re (a + bi) = a*。
+对于复数*a + bi*，实部或组件是*Re （a + bi） = a*。
 
 ### <a name="example"></a>示例
 
@@ -745,7 +745,7 @@ The real part of c1 is c1.real() = 4.
 The imaginary part of c1 is c1.imag() = 3.
 ```
 
-## <a name="value_type"></a> value_type
+## <a name="value_type"></a>value_type
 
 该类型代表用于表示复数的实部和虚部的数据类型。
 
@@ -755,7 +755,7 @@ typedef Type value_type;
 
 ### <a name="remarks"></a>备注
 
-`value_type`是类复杂`Type`模板参数的同义词。
+`value_type` 是类复杂 `Type` 模板参数的同义词。
 
 ### <a name="example"></a>示例
 

@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - deque header
 ms.assetid: 4521fe92-5a91-4853-9e9f-59600bf9e46f
-ms.openlocfilehash: 145ce22091ea1a42619ad7b1fd25507c6315a9ec
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a5fea8f4a1bc1612a35db71cc515ba4799e95da6
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454488"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689730"
 ---
 # <a name="ltdequegt"></a>&lt;deque&gt;
 
-定义容器模板类 deque 和几个支持的模板。
+定义容器类模板 deque 和多个支持模板。
 
 ## <a name="requirements"></a>要求
 
 **标头**：\<deque>
 
 > [!NOTE]
-> Deque > 库还使用该`#include <initializer_list>`语句。 \<
+> > 库 \<deque 也使用了 `#include <initializer_list>` 语句。
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="operators"></a>运算符
 
@@ -47,10 +47,10 @@ ms.locfileid: "68454488"
 
 |||
 |-|-|
-|[deque 类](../standard-library/deque-class.md)|序列容器的模板类，可对线性排列中指定类型的元素进行排序，并且和矢量一样，也允许快速随机访问任何元素和在容器后面高效插入和删除。|
+|[deque 类](../standard-library/deque-class.md)|序列容器的类模板，用于排列线性排列中给定类型的元素，例如向量，允许快速随机访问任何元素和在容器后面高效插入和删除。|
 
 ## <a name="see-also"></a>请参阅
 
 [头文件引用](../standard-library/cpp-standard-library-header-files.md)\
-[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

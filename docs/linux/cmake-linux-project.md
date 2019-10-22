@@ -88,11 +88,11 @@ add_executable(hello-cmake hello.cpp)
 
 ## <a name="choose-a-linux-target"></a>选择 Linux 目标
 
-只要打开文件夹，Visual Studio 就会分析 CMakeLists.txt 文件，并指定“x86 调试”  以定目标到 Windows。 要以远程 Linux 系统为目标，请将项目设置更改为“Linux 调试”或“Linux 发布”   。 （请参阅下面的[配置适用于 Linux 的 CMake 设置](#configure_cmake_linux)。）
+只要打开文件夹，Visual Studio 就会分析 CMakeLists.txt 文件，并指定 Windows 目标“x86 调试”  。 要以远程 Linux 系统为目标，请将项目设置更改为“Linux 调试”或“Linux 发布”   。 （请参阅下面的[配置适用于 Linux 的 CMake 设置](#configure_cmake_linux)。）
 
 ::: moniker range="vs-2019"
 
-若要以适用于 Linux 的 Windows 子系统为目标，请单击主工具栏配置下拉列表中的“管理配置”  。 然后，如果使用 GCC，请按“添加配置”**Manage Configurations**按钮，选择“WSL 调试”  或“WSL 发布”  ；如果使用 Clang/LLVM 工具集，则选择 Clang 变体。 
+若要以适用于 Linux 的 Windows 子系统为目标，请单击主工具栏配置下拉列表中的“管理配置”  。 如果使用 GCC，请按“添加配置”  按钮，选择“WSL 调试”  或“WSL 发布”  ；如果使用 Clang/LLVM 工具集，则选择 Clang 变体。 
 
 Visual Studio 2019 版本 16.1：在以 WSL 为目标时，无需复制源或标头，因为 Linux 上的编译器可以直接访问源文件所在的 Windows 文件系统  。 （在 Windows 版本 1903 或更高版本中，Windows 应用程序同样可以直接访问 Linux 头文件，但 Visual Studio 还不能利用此功能）。
 
@@ -102,7 +102,7 @@ Visual Studio 2019 版本 16.1：在以 WSL 为目标时，无需复制源或标
 
 如果指定远程 Linux 目标，则会将源复制到远程系统。
 
-选择目标后，CMake 会在 Linux 系统上自动运行，以为项目生成 CMake 缓存。 
+选择目标后，CMake 会在 Linux 系统上自动运行，以便为项目生成 CMake 缓存。 
 
 ![在 Linux 上生成 CMake 缓存](media/cmake-linux-1.png "Generate the CMake cache on Linux")
 
@@ -112,7 +112,7 @@ Visual Studio 2019 版本 16.1：在以 WSL 为目标时，无需复制源或标
 
 若要在指定调试目标系统上调试代码，请设置断点，并在项目设置旁边的工具栏菜单中选择“CMake 目标”作为启动项，再选择工具栏中的“&#x23f5; 开始”，或按 F5  。
 
-若要自定义项目的命令行参数，请按“解决方案资源管理器”顶部的“切换目标”按钮，然后选择“目标视图”    。 然后右键单击一个目标并选择“调试和启动设置”  。 这会打开或创建 launch.vs.json 配置文件，其中包含程序信息。 要指定源文件的位置，请将 sourceFileMap 属性添加到该文件中，如以下示例中所示： 
+若要自定义程序的命令行参数，请按“解决方案资源管理器”顶部的“切换目标”按钮，然后选择“目标视图”    。 然后右键单击一个目标并选择“调试和启动设置”  。 这会打开或创建 launch.vs.json 配置文件，其中包含程序信息。 要指定源文件的位置，请将 sourceFileMap 属性添加到该文件中，如以下示例中所示： 
 
 ```json
 "MIMode": "gdb",

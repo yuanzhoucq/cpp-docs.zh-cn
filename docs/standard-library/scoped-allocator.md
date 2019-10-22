@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - scoped_allocator Header
 ms.assetid: d20175b8-96be-4896-8141-3faba45e0005
-ms.openlocfilehash: 8e1a51f1f9f5693b422ec1e680784a199541bb4a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 403a05a75fe3ce7bc006c903af00e7536f4a6ea2
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451796"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686477"
 ---
-# <a name="ltscopedallocatorgt"></a>&lt;scoped_allocator&gt;
+# <a name="ltscoped_allocatorgt"></a>&lt;scoped_allocator&gt;
 
-定义容器模板类 scoped_allocator。
+定义容器类模板 scoped_allocator。
 
 ## <a name="syntax"></a>语法
 
@@ -32,12 +32,12 @@ ms.locfileid: "68451796"
 
 ### <a name="classes"></a>类
 
-|类|描述|
+|实例|描述|
 |-|-|
-|[scoped_allocator_adaptor 类](../standard-library/scoped-allocator-adaptor-class.md)|封装一个或多个分配器嵌套的模板类。|
+|[scoped_allocator_adaptor 类](../standard-library/scoped-allocator-adaptor-class.md)|一个类模板，它封装一个或多个分配器的嵌套。|
 
 ## <a name="see-also"></a>请参阅
 
 [头文件引用](../standard-library/cpp-standard-library-header-files.md)\
-[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

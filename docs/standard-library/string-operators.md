@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: bb66e7c0120da9f140ce33da7ecc61299a4d2867
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f9aa07f7ca30ded5f61e77a327efafe91aa5c269
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459259"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685995"
 ---
 # <a name="ltstringgt-operators"></a>&lt;string&gt; 运算符
 
@@ -35,7 +35,7 @@ ms.locfileid: "68459259"
 |[operator&gt;=](#op_gt_eq)|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|
 |[operator&lt;=](#op_lt_eq)|[operator+](#op_add)|[operator==](#op_eq_eq)|
 
-## <a name="op_add"></a>  operator+
+## <a name="op_add"></a>operator+
 
 连接两个字符串对象。
 
@@ -103,10 +103,10 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="parameters"></a>参数
 
-*左中*\
+*左*\
 要连接的 C 样式字符串或类型 `basic_string` 的对象。
 
-*然后*\
+*right* \
 要连接的 C 样式字符串或类型 `basic_string` 的对象。
 
 ### <a name="return-value"></a>返回值
@@ -115,7 +115,7 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="remarks"></a>备注
 
-每个函数均重载 `operator+` 以连接模板类 [basic_string 类](../standard-library/basic-string-class.md)的两个对象。 所有有效的`basic_string< CharType, Traits, Allocator>(Left).append(right)`返回。 有关详细信息，请参阅[append](../standard-library/basic-string-class.md#append)。
+每个函数都 `operator+` 用于连接类模板[Basic_string 类](../standard-library/basic-string-class.md)的两个对象。 所有有效返回 `basic_string< CharType, Traits, Allocator>(Left).append(right)`。 有关详细信息，请参阅[append](../standard-library/basic-string-class.md#append)。
 
 ### <a name="example"></a>示例
 
@@ -192,10 +192,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>参数
 
-*左中*\
+*左*\
 要比较的 C 样式字符串或类型 `basic_string` 的对象。
 
-*然后*\
+*right* \
 要比较的 C 样式字符串或类型 `basic_string` 的对象。
 
 ### <a name="return-value"></a>返回值
@@ -260,7 +260,7 @@ The strings s1 & s3 are equal.
 The strings s3 & s2 are not equal.
 ```
 
-## <a name="op_eq_eq"></a>operator==
+## <a name="op_eq_eq"></a>  operator==
 
 测试运算符左侧的字符串对象是否等于右侧的字符串对象。
 
@@ -283,10 +283,10 @@ bool operator==(
 
 ### <a name="parameters"></a>参数
 
-*左中*\
+*左*\
 要比较的 C 样式字符串或类型 `basic_string` 的对象。
 
-*然后*\
+*right* \
 要比较的 C 样式字符串或类型 `basic_string` 的对象。
 
 ### <a name="return-value"></a>返回值
@@ -374,10 +374,10 @@ bool operator<(
 
 ### <a name="parameters"></a>参数
 
-*左中*\
+*左*\
 要比较的 C 样式字符串或类型 `basic_string` 的对象。
 
-*然后*\
+*right* \
 要比较的 C 样式字符串或类型 `basic_string` 的对象。
 
 ### <a name="return-value"></a>返回值
@@ -447,7 +447,7 @@ The string s1 is not less than the string s3.
 The string s3 is less than the string s2.
 ```
 
-## <a name="op_lt_eq"></a>  operator&lt;=
+## <a name="op_lt_eq"></a>operator&lt;=
 
 测试运算符左侧的字符串对象是否小于或等于右侧的字符串对象。
 
@@ -470,10 +470,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>参数
 
-*左中*\
+*左*\
 要比较的 C 样式字符串或类型 `basic_string` 的对象。
 
-*然后*\
+*right* \
 要比较的 C 样式字符串或类型 `basic_string` 的对象。
 
 ### <a name="return-value"></a>返回值
@@ -550,7 +550,7 @@ The string s1 is less than or equal to the string s3.
 The string s2 is greater than the string s3.
 ```
 
-## <a name="op_lt_lt"></a>  operator&lt;&lt;
+## <a name="op_lt_lt"></a>operator&lt;&lt;
 
 一个模板函数，用于向输出流写入字符串。
 
@@ -563,10 +563,10 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>参数
 
-*_Ostr*\
+*_Ostr* \
 正在写入的输出流。
 
-*字符串*\
+*str* \
 要输入到输出流的字符串。
 
 ### <a name="return-value"></a>返回值
@@ -575,7 +575,7 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="remarks"></a>备注
 
-模板函数重载**运算符 < <** 将模板类[basic_string](../standard-library/basic-string-class.md)的对象*str*插入 stream  *\_Ostr*中。 该函数有效返回`_Ostr.write( str.c_str, str.size )`。
+模板函数重载**运算符 < <** 将类模板[basic_string](../standard-library/basic-string-class.md)的对象*str*插入到流 *\_Ostr*中。 函数会有效地返回 `_Ostr.write( str.c_str, str.size )`。
 
 ## <a name="op_gt"></a>operator&gt;
 
@@ -600,10 +600,10 @@ bool operator>(
 
 ### <a name="parameters"></a>参数
 
-*左中*\
+*左*\
 要比较的 C 样式字符串或类型 `basic_string` 的对象。
 
-*然后*\
+*right* \
 要比较的 C 样式字符串或类型 `basic_string` 的对象。
 
 ### <a name="return-value"></a>返回值
@@ -680,7 +680,7 @@ The string s3 is greater than the string s1.
 The string s2 is greater than the string s3.
 ```
 
-## <a name="op_gt_eq"></a>  operator&gt;=
+## <a name="op_gt_eq"></a>operator&gt;=
 
 测试运算符左侧的字符串对象是否大于或等于右侧的字符串对象。
 
@@ -703,10 +703,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>参数
 
-*左中*\
+*左*\
 要比较的 C 样式字符串或类型 `basic_string` 的对象。
 
-*然后*\
+*right* \
 要比较的 C 样式字符串或类型 `basic_string` 的对象。
 
 ### <a name="return-value"></a>返回值
@@ -783,7 +783,7 @@ The string s3 is greater than or equal to the string s1.
 The string s2 is greater than or equal to the string s3.
 ```
 
-## <a name="op_gt_gt"></a>  operator&gt;&gt;
+## <a name="op_gt_gt"></a>operator&gt;&gt;
 
 一个模板函数，用于从输入流读取字符串。
 
@@ -796,10 +796,10 @@ basic_istream<CharType, Traits>& operator>>(
 
 ### <a name="parameters"></a>参数
 
-*_Istr*\
+*_Istr* \
 用来提取序列的输入流
 
-*然后*\
+*right* \
 正在从输入流提取的字符串。
 
 ### <a name="return-value"></a>返回值
@@ -812,7 +812,7 @@ basic_istream<CharType, Traits>& operator>>(
 
 模板函数重载**运算符 > >** ，以将由*权限*控制的序列替换为从 stream *_Istr*中提取的一系列元素。 提取将在以下位置停止：
 
-- 文件末尾。
+- 在文件结尾。
 
 - 函数提取 `_Istr`. **width** 元素之后（如果该值不为零）。
 
@@ -820,7 +820,7 @@ basic_istream<CharType, Traits>& operator>>(
 
 - 函数提取 *ch* 元素之后并且该元素的 [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **CharType**> >( `getloc`). **is**( **ctype**\< **CharType**>:: **space**, *ch*) 为 true 时，放回字符。
 
-如果该函数未提取任何元素，则它将调用 [setstate](../standard-library/basic-ios-class.md#setstate) （`ios_base::failbit`）。 在任何情况下，函数都会调用 **istr**. **width** (0)，并返回 \***this**。
+如果该函数未提取任何元素，则它将调用[setstate](../standard-library/basic-ios-class.md#setstate)（`ios_base::failbit`）。 在任何情况下，函数都会调用 **istr**. **width** (0)，并返回 \***this**。
 
 ### <a name="example"></a>示例
 

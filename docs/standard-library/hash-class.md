@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::hash [C++]
 - std::hash [C++]
 ms.assetid: e1b500c6-a5c8-4f6f-ad33-7ec52eb8e2e4
-ms.openlocfilehash: 61446ab6b79496024d44a99fcf5f500bb871bb80
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e30810412db29473597da144d2dd42bdb8184f7e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448823"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687992"
 ---
 # <a name="hash-class"></a>hash 类
 
@@ -45,7 +45,7 @@ struct hash {
 
 ## <a name="remarks"></a>备注
 
-此成员对象定义一个哈希函数，适合将 Ty 类型的值映射到索引值的分布。 成员 `operator()` 会返回 *val* 的一个哈希代码，适合用于模板类 `unordered_map`、`unordered_multimap`、`unordered_set` 和 `unordered_multiset`。 标准库提供基本类型的专用化:*Ty*可以是任何标量类型, 包括指针类型和枚举类型。 此外，还具有库类型 `string`、`wstring`、`u16string`、`u32string`、`string_view`、`wstring_view`、`u16string_view`、`u32string_view`、`bitset`、`error_code`、`error_condition`、`optional`、`shared_ptr`、`thread` `type_index`、`unique_ptr`、`variant` 和 `vector<bool>` 的专用化。
+此成员对象定义一个哈希函数，适合将 Ty 类型的值映射到索引值的分布。 成员 `operator()` 返回*val*的哈希代码，适合用于类模板 `unordered_map`、`unordered_multimap`、`unordered_set` 和 `unordered_multiset`。 此标准库对基本类型提供专用化：Ty 可能为任何标量类型，包括指针类型和枚举类型。 此外，还具有库类型 `string`、`wstring`、`u16string`、`u32string`、`string_view`、`wstring_view`、`u16string_view`、`u32string_view`、`bitset`、`error_code`、`error_condition`、`optional`、`shared_ptr`、`thread` `type_index`、`unique_ptr`、`variant` 和 `vector<bool>` 的专用化。
 
 ## <a name="example"></a>示例
 
@@ -74,7 +74,7 @@ int main()
 
 **标头：** \<functional>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="see-also"></a>请参阅
 

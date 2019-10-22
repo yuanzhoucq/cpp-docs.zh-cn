@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - decay class
 ms.assetid: 96baa2fd-c8e0-49af-be91-ba375ba7f9dc
-ms.openlocfilehash: 73b9e2d8ef9a14830c13ee3f6566137bb51e939d
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3b22dfecb1162ce67a0d648197465115acb044ba
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450642"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688119"
 ---
 # <a name="decay-class"></a>decay 类
 
@@ -29,12 +29,12 @@ using decay_t = typename decay<T>::type;
 
 ### <a name="parameters"></a>参数
 
-*关心*\
+*T* \
 要修改的类型。
 
 ## <a name="remarks"></a>备注
 
-Decay 模板用于生成结果的类型，就像按值作为参数传递的类型。 模板类成员 typedef `type` 包含在以下几个阶段中定义的修改类型：
+Decay 模板用于生成结果的类型，就像按值作为参数传递的类型。 类模板成员 typedef `type` 包含在以下阶段中定义的修改类型：
 
 - 类型 `U` 定义为 `remove_reference<T>::type`。
 
@@ -48,7 +48,7 @@ Decay 模板用于生成结果的类型，就像按值作为参数传递的类�
 
 **标头：** \<type_traits>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="see-also"></a>请参阅
 

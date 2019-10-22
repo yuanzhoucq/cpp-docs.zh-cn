@@ -879,7 +879,7 @@ LRESULT EnableGroupView(BOOL fEnable);
 
 此成员函数模拟[LVM_ENABLEGROUPVIEW](/windows/win32/Controls/lvm-enablegroupview)消息的功能，如 Windows SDK 中所述。
 
-## <a name="ensurevisible"></a>CListCtrl：： Ensurevisible\
+## <a name="ensurevisible"></a>CListCtrl::Ensurevisible
 
 确保列表视图项至少部分可见。
 

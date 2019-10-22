@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - wbuffer_convert class
 ms.assetid: 4a56f9bf-4138-4612-b516-525fea401358
-ms.openlocfilehash: d19abf74bd9f794bc39ce04e5ed22e360cde75b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8de0091af93120290105ce7603fae5acff257b76
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410871"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688546"
 ---
-# <a name="wbufferconvert-class"></a>wbuffer_convert 类
+# <a name="wbuffer_convert-class"></a>wbuffer_convert 类
 
 描述用于控制元素与字节流缓冲区之间的来回传输的流缓冲区。
 
@@ -35,11 +35,11 @@ class wbuffer_convert
 
 ## <a name="remarks"></a>备注
 
-此模板类描述对 `_Elem` 类型的元素（其字符特征由类 `Traits` 描述）与 `std::streambuf` 类型的字节流缓冲区之间的来回传输进行控制的流缓冲区。
+此类模板描述了一个流缓冲区，该缓冲区控制 `_Elem` 的类型的元素（其字符特征由类 `Traits`、和从类型 `std::streambuf` 的字节流缓冲区中进行描述）的传输。
 
 一系列 `Elem` 值与多字节序列之间的转换由类 `Codecvt<Elem, char, std::mbstate_t>` 的对象执行，这符合标准代码转换方面 `std::codecvt<Elem, char, std::mbstate_t>` 的要求。
 
-此模板类的对象存储：
+此类模板的对象存储：
 
 - 指向其基础字节流缓冲区的指针
 

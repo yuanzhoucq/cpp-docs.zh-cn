@@ -1,6 +1,6 @@
 ---
 title: Platform::String 类
-ms.date: 12/30/2016
+ms.date: 10/16/2019
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::String::String
@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-ms.openlocfilehash: 0b8a29efc5b18432eabfeddc75af12737538281c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3c8c179c416ca744cace26cff3def0829f425664
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330201"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72587910"
 ---
 # <a name="platformstring-class"></a>Platform::String 类
 
@@ -48,7 +48,7 @@ public ref class String sealed : Object,
 |`const char16* begin(String^ s)`|返回指向指定字符串对象开头的指针。|
 |`const char16* end(String^ s)`|返回通过指定字符串对象末尾的指针。|
 
-### <a name="members"></a>成员
+### <a name="members"></a>Members
 
 此字符串类从对象、IDisposable、IEquatable 和 IPrintable 接口继承。
 
@@ -58,7 +58,7 @@ public ref class String sealed : Object,
 
 |成员|描述|
 |------------|-----------------|
-|[String::String](#ctor)|初始化字符串类的新实例。|
+|[String：： String](#ctor)|初始化字符串类的新实例。|
 
 **方法**
 
@@ -66,31 +66,31 @@ public ref class String sealed : Object,
 
 |方法|描述|
 |------------|-----------------|
-|[String::Begin](#begin)|返回指向当前字符串开头的指针。|
-|[String::CompareOrdinal](#compareordinal)|通过估计对象所表示的两个字符值中相应字符的数字值来比较两个 `String` 对象。|
-|[String::Concat](#concat)|连接两个字符串对象的值。|
-|[String::Data](#data)|返回指向当前字符串开头的指针。|
-|[String::Dispose](#dispose)|释放资源。|
-|[String::End](#end)|返回通过当前字符串末尾的指针。|
-|[String::Equals](#equals)|指示指定对象是否等于当前对象。|
-|[String::GetHashCode](#gethashcode)|返回此实例的哈希代码。|
-|[String::IsEmpty](#isempty)|指示当前字符串对象是否为空。|
-|[String::IsFastPass](#isfastpass)|指示当前字符串对象是否参与*快速传递*操作。 在快速传递操作中，将挂起引用计数。|
-|[String::Length](#length)|检索当前字符串对象的长度。|
-|[String::ToString](#tostring)|返回一个字符串对象，其值与当前字符串相同。|
+|[String：： Begin](#begin)|返回指向当前字符串开头的指针。|
+|[String：： CompareOrdinal](#compareordinal)|通过估计对象所表示的两个字符值中相应字符的数字值来比较两个 `String` 对象。|
+|[String：： Concat](#concat)|连接两个字符串对象的值。|
+|[String：:D ata](#data)|返回指向当前字符串开头的指针。|
+|[String：:D ispose](#dispose)|释放资源。|
+|[String：： End](#end)|返回通过当前字符串末尾的指针。|
+|[String：： Equals](#equals)|指示指定对象是否等于当前对象。|
+|[String：： GetHashCode](#gethashcode)|返回此实例的哈希代码。|
+|[String：： IsEmpty](#isempty)|指示当前字符串对象是否为空。|
+|[String：： IsFastPass](#isfastpass)|指示当前字符串对象是否正在参与*快速传递*操作。 在快速传递操作中，将挂起引用计数。|
+|[String：： Length](#length)|检索当前字符串对象的长度。|
+|[String：： ToString](#tostring)|返回一个字符串对象，其值与当前字符串相同。|
 
 **运算符**
 
-此字符串类具有以下运算符。
+String 类具有以下运算符。
 
 |成员|描述|
 |------------|-----------------|
-|[String:: operator = = 运算符](#operator-equality)|指示两个指定的字符串对象是否具有相同的值。|
+|[String：： operator = = 运算符](#operator-equality)|指示两个指定的字符串对象是否具有相同的值。|
 |[operator+ 运算符](#operator-plus)|将两个字符串对象串联成一个新的字符串对象。|
-|[String:: operator > 运算符](#operator-greater-than)|指示一个字符串对象的值是否大于或等于第二个字符串对象的值。|
-|[String:: operator > = 运算符](#operator-greater-than-or-equals)|指示一个字符串对象的值是否大于或等于第二个字符串对象的值。|
-|[String:: operator ！ = 运算符](#operator-inequality)|指示两个指定的字符串对象是否具有不同的值。|
-|[String:: operator < 运算符](#operator-less-than)|指示一个字符串对象的值是否小于第二个字符串对象的值。|
+|[String：： operator > 运算符](#operator-greater-than)|指示一个字符串对象的值是否大于或等于第二个字符串对象的值。|
+|[String：： operator > = 运算符](#operator-greater-than-or-equals)|指示一个字符串对象的值是否大于或等于第二个字符串对象的值。|
+|[String：： operator！ = 运算符](#operator-inequality)|指示两个指定的字符串对象是否具有不同的值。|
+|[String：： operator < 运算符](#operator-less-than)|指示一个字符串对象的值是否小于第二个字符串对象的值。|
 
 ### <a name="requirements"></a>要求
 
@@ -102,7 +102,7 @@ public ref class String sealed : Object,
 
 **头文件** vccorlib.h（默认包含在内）
 
-## <a name="begin"></a>  String:: begin 方法
+## <a name="begin"></a>String：： Begin 方法
 
 返回指向当前字符串开头的指针。
 
@@ -116,14 +116,14 @@ char16* Begin();
 
 指向当前字符串开头的指针。
 
-## <a name="compareordinal"></a>  String:: compareordinal 方法
+## <a name="compareordinal"></a>String：： CompareOrdinal 方法
 
-通过估计对象所表示的两个字符值中相应字符的数字值来比较两个 `String` 对象。
+通过计算对象表示的两个字符串值中相应字符的数字值来比较两个 `String` 对象的静态方法。
 
 ### <a name="syntax"></a>语法
 
 ```cpp
-int CompareOrdinal( String^ str1, String^ str2 );
+static int CompareOrdinal( String^ str1, String^ str2 );
 ```
 
 ### <a name="parameters"></a>参数
@@ -144,7 +144,7 @@ int CompareOrdinal( String^ str1, String^ str2 );
 |0|`str1` 等于 `str2`。|
 |1|`str1` 大于 `str2`。|
 
-## <a name="concat"></a>  String:: concat 方法
+## <a name="concat"></a>String：： Concat 方法
 
 连接两个字符串对象的值。
 
@@ -168,7 +168,7 @@ String^ Concat( String^ str1, String^ str2);
 
 如果 `str1` 是 `null` 而 `str2` 不是，则返回 `str1`。 如果 `str2` 是 `null` 而 `str1` 不是，则返回 `str2`。 如果 `str1` 和 `str2` 都是 `null`，则返回空字符串 (L "")。
 
-## <a name="data"></a>  String:: data 方法
+## <a name="data"></a>String：:D ata 方法
 
 以 C 样式 `char16` (`wchar_t`) 元素数组的形式返回指向对象的数据缓冲区开头的指针。
 
@@ -180,13 +180,13 @@ const char16* Data();
 
 ### <a name="return-value"></a>返回值
 
-开头的指针`const char16`的 Unicode 字符数组 (`char16`是一个的 typedef `wchar_t`)。
+指向 `const char16` Unicode 字符数组的开头的指针（`char16` 是 `wchar_t` 的 typedef）。
 
 ### <a name="remarks"></a>备注
 
-使用此方法可从 `Platform::String^` 转换为 `wchar_t*`。 当 `String` 对象超出范围时，数据指针不再保证有效。 用于存储数据的原始生存期超出`String`对象，请使用[wcscpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)数组复制到你已分配了自己的内存。
+使用此方法可从 `Platform::String^` 转换为 `wchar_t*`。 当 `String` 对象超出范围时，数据指针不再保证有效。 若要在原始 `String` 对象的生存期之外存储数据，请使用[wcscpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)将数组复制到自己分配的内存。
 
-## <a name="dispose"></a>  String:: dispose 方法
+## <a name="dispose"></a>String：:D ispose 方法
 
 释放资源。
 
@@ -196,7 +196,7 @@ const char16* Data();
 virtual override void Dispose();
 ```
 
-## <a name="end"></a>  String:: end 方法
+## <a name="end"></a>String：： End 方法
 
 返回通过当前字符串末尾的指针。
 
@@ -212,9 +212,9 @@ char16* End();
 
 ### <a name="remarks"></a>备注
 
-End （） 返回 begin （） + 长度。
+End （）返回 Begin （） + Length。
 
-## <a name="equals"></a>  String:: equals 方法
+## <a name="equals"></a>String：： Equals 方法
 
 指示指定的字符串是否具有和当前对象相同的值。
 
@@ -232,13 +232,13 @@ bool String::Equals(String^ str);
 
 ### <a name="return-value"></a>返回值
 
-**true**如果`str`等于当前对象; 否则为**false**。
+如果 `str` 等于当前对象，则为**true** ; 否则为。否则**为 false**。
 
 ### <a name="remarks"></a>备注
 
-此方法等效于[string:: compareordinal](#compareordinal)。 在第一个重载中，`str` 参数应能够转换为 String^ 对象。
+此方法等效于静态[String：： CompareOrdinal](#compareordinal)。 在第一个重载中，`str` 参数应能够转换为 String^ 对象。
 
-## <a name="gethashcode"></a>  String:: gethashcode 方法
+## <a name="gethashcode"></a>String：： GetHashCode 方法
 
 返回此实例的哈希代码。
 
@@ -252,7 +252,7 @@ virtual override int GetHashCode();
 
 此实例的哈希代码。
 
-## <a name="isempty"></a>  String:: isempty 方法
+## <a name="isempty"></a>String：： IsEmpty 方法
 
 指示当前字符串对象是否为空。
 
@@ -264,11 +264,11 @@ bool IsEmpty();
 
 ### <a name="return-value"></a>返回值
 
-**true**如果当前`String`对象是**null**或空字符串 (L""); 否则为**false**。
+如果当前 `String` 对象为**null**或为空字符串（L ""），**则为 true** ;否则**为 false**。
 
-## <a name="isfastpass"></a>  String:: isfastpass 方法
+## <a name="isfastpass"></a>String：： IsFastPass 方法
 
-指示当前字符串对象是否参与*快速传递*操作。 在快速传递操作中，将挂起引用计数。
+指示当前字符串对象是否正在参与*快速传递*操作。 在快速传递操作中，将挂起引用计数。
 
 ### <a name="syntax"></a>语法
 
@@ -278,15 +278,15 @@ bool IsFastPass();
 
 ### <a name="return-value"></a>返回值
 
-**true**如果当前`String`对象是快速传递; 否则为**false**。
+如果当前 `String` 对象快过去，则**为 true** ;否则**为 false**。
 
 ### <a name="remarks"></a>备注
 
 在引用计数对象作为参数并且被调用的函数只读取该对象的函数调用中，编译器可以安全地挂起引用计数并改进调用性能。 没有可供你的代码对此属性执行的任何操作。 系统处理所有详细信息。
 
-## <a name="length"></a>  String:: length 方法
+## <a name="length"></a>String：： Length 方法
 
-检索当前中的字符数`String`对象。
+检索当前 `String` 对象中的字符数。
 
 ### <a name="syntax"></a>语法
 
@@ -296,7 +296,7 @@ unsigned int Length();
 
 ### <a name="return-value"></a>返回值
 
-在当前的字符数`String`对象。
+当前 `String` 对象中的字符数。
 
 ### <a name="remarks"></a>备注
 
@@ -307,11 +307,11 @@ String^ str = "Hello";
 int len = str->Length(); //len = 5
 ```
 
-返回的字符数组[string:: data](#data)具有一个附加字符，这是终止 NULL 或 \0。 该字符也是两个字节长。
+字符串返回的字符数组[：:D ata](#data)具有一个附加字符，该字符是终止 NULL 或 "\ 0"。 该字符也是两个字节长。
 
-## <a name="operator-plus"></a>  String:: operator + 运算符
+## <a name="operator-plus"></a>String：： operator + 运算符
 
-串联两个[字符串](../cppcx/platform-string-class.md)到一个新对象[字符串](../cppcx/platform-string-class.md)对象。
+将两个[字符串](../cppcx/platform-string-class.md)对象串联成一个新的[字符串](../cppcx/platform-string-class.md)对象。
 
 ### <a name="syntax"></a>语法
 
@@ -329,13 +329,13 @@ bool String::operator+( String^ str1, String^ str2);
 
 ### <a name="return-value"></a>返回值
 
-**true**如果*str1*等于*str2*; 否则为**false**。
+如果*str1*等于*str2*，则**为 true** ;否则**为 false**。
 
 ### <a name="remarks"></a>备注
 
 此运算符创建一个 `String^` 对象，用以包含两个操作数中的数据。 在极端性能并不重要时，使用它只是为了方便。 函数中有些对“`+`”的调用可能不明显，但如果在紧凑循环中操作大对象或文本数据，则使用标准 C++ 机制和类型。
 
-##  <a name="operator-equality"></a> String:: operator = = 运算符
+##  <a name="operator-equality"></a>String：： operator = = 运算符
 
 指示指定的字符串对象是否具有相同的文本值。
 
@@ -355,15 +355,15 @@ bool String::operator==( String^ str1, String^ str2);
 
 ### <a name="return-value"></a>返回值
 
-**true**如果的内容`str1`等于`str2`; 否则为**false**。
+如果 `str1` 的内容等于 `str2`，则**为 true** ;否则**为 false**。
 
 ### <a name="remarks"></a>备注
 
-此运算符等效于[string:: compareordinal](#compareordinal)。
+此运算符等效于[String：： CompareOrdinal](#compareordinal)。
 
-##  <a name="operator-greater-than"></a>  String::operator&gt;
+##  <a name="operator-greater-than"></a>String：： operator &gt;
 
-指示是否有一个的值`String`对象是否大于第二个值`String`对象。
+指示一个 `String` 对象的值是否大于第二个 `String` 对象的值。
 
 ### <a name="syntax"></a>语法
 
@@ -381,15 +381,15 @@ bool String::operator>( String^ str1, String^ str2);
 
 ### <a name="return-value"></a>返回值
 
-**true**如果的值`str1`的值大于`str2`; 否则为**false**。
+如果 `str1` 的值大于 `str2` 的值，**则为 true** ; 否则为 false。否则**为 false**。
 
 ### <a name="remarks"></a>备注
 
-此运算符等效于显式调用[string:: compareordinal](#compareordinal)并得到大于零的结果。
+此运算符等效于显式调用[String：： CompareOrdinal](#compareordinal)并获得一个大于零的结果。
 
-## <a name="operator-greater-than-or-equals"></a> String::operator&gt;=
+## <a name="operator-greater-than-or-equals"></a>String：： operator &gt; =
 
-指示是否有一个的值`String`对象是否大于或等于第二个值`String`对象。
+指示一个 `String` 对象的值是否大于或等于另一个 `String` 对象的值。
 
 ### <a name="syntax"></a>语法
 
@@ -407,11 +407,11 @@ bool String::operator>=( String^ str1, String^ str2);
 
 ### <a name="return-value"></a>返回值
 
-**true**如果的值`str1`大于或等于的值`str2`; 否则为**false**。
+如果 `str1` 的值大于或等于 `str2` 的值，**则为 true** ;否则**为 false**。
 
-## <a name="operator-inequality"></a> String:: operator ！ =
+## <a name="operator-inequality"></a>String：： operator！ =
 
-指示两个`String`对象具有不同的值。
+指示两个指定的 `String` 对象是否具有不同的值。
 
 ### <a name="syntax"></a>语法
 
@@ -429,11 +429,11 @@ bool String::operator!=( String^ str1, String^ str2);
 
 ### <a name="return-value"></a>返回值
 
-**true**如果`str1`不等于`str2`; 否则为**false**。
+如果 `str1` 不等于 `str2`，则为**true** ;否则**为 false**。
 
-## <a name="operator-less-than"></a> String:: operator&lt;
+## <a name="operator-less-than"></a>String：： operator &lt;
 
-指示是否有一个的值`String`对象是否小于第二个值`String`对象。
+指示一个 `String` 对象的值是否小于第二个 `String` 对象的值。
 
 ### <a name="syntax"></a>语法
 
@@ -451,11 +451,11 @@ bool String::operator<( String^ str1, String^ str2);
 
 ### <a name="return-value"></a>返回值
 
-**true**如果的值*str1*的值少于*str2*; 否则为**false**。
+如果*str1*的值小于*str2*的值，**则为 true** ; 否则为 false。否则**为 false**。
 
-## <a name="ctor"></a> String:: string 构造函数
+## <a name="ctor"></a>String：： String 构造函数
 
-初始化的新实例`String`副本的输入的字符串数据的类。
+使用输入字符串数据的副本初始化 `String` 类的新实例。
 
 ### <a name="syntax"></a>语法
 
@@ -467,7 +467,7 @@ String(char16* s, unsigned int n);
 
 ### <a name="parameters"></a>参数
 
-*s*<br/>
+*秒*<br/>
 初始化字符串的一系列宽字符。 char16
 
 *n*<br/>
@@ -475,16 +475,16 @@ String(char16* s, unsigned int n);
 
 ### <a name="remarks"></a>备注
 
-如果性能非常重要而且你控制源字符串的生存期，则可以使用[platform:: stringreference](../cppcx/platform-stringreference-class.md)代替 String。
+如果性能非常重要，并且您控制源字符串的生存期，则可以使用[Platform：： StringReference](../cppcx/platform-stringreference-class.md)来替换字符串。
 ### <a name="example"></a>示例
 
 ```cpp
 String^ s = L"Hello!";
 ```
 
-## <a name="tostring"></a> String::ToString
+## <a name="tostring"></a>String：： ToString
 
-返回`String`对象，其值是与当前字符串相同。
+返回一个 `String` 对象，该对象的值与当前字符串相同。
 
 ### <a name="syntax"></a>语法
 
@@ -494,7 +494,7 @@ String^ String::ToString();
 
 ### <a name="return-value"></a>返回值
 
-一个`String`对象，其值是与当前字符串相同。
+一个 `String` 对象，其值与当前字符串相同。
 
 ## <a name="see-also"></a>请参阅
 

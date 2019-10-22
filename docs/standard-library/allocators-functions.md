@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::CACHE_FREELIST [C++]
 - std::CACHE_SUBALLOC [C++]
 - std::SYNC_DEFAULT [C++]
-ms.openlocfilehash: 10cd1d51c2cd6053dcbaa0f5bf1548f80ed01659
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 5355661e370daf8826541c036f7301e5c25788d7
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448229"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690056"
 ---
 # <a name="ltallocatorsgt-macros"></a>&lt;allocators&gt; 宏
 
@@ -30,7 +30,7 @@ ms.locfileid: "68448229"
 
 ## <a name="allocator_decl"></a>  ALLOCATOR_DECL
 
-生成一个分配器模板类。
+生成分配器类模板。
 
 ```cpp
 #define ALLOCATOR_DECL(cache, sync, name) <alloc_template>
@@ -38,7 +38,7 @@ ms.locfileid: "68448229"
 
 ### <a name="remarks"></a>备注
 
-宏生成一个模板定义 `template <class Type> class name {.....}` 和一个专用化 `template <> class name<void> {.....}`，它们一同定义使用同步筛选器 `sync` 和缓存类型为 `cache` 的分配器模板类。
+该宏将生成一个模板定义 `template <class Type> class name {.....}` 和一个特殊化 `template <> class name<void> {.....}`，这两者共同定义一个分配器类模板，该模板使用同步筛选器 `sync` 和 `cache` 类型的缓存。
 
 对于可以编译重新绑定的编译器，其生成的模板定义如下所示：
 

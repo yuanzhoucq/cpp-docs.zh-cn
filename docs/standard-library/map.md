@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - map header
 ms.assetid: bbf76680-7362-456e-88fa-ecda93561b6a
-ms.openlocfilehash: 3c3c7fc34e75772c10ba39ecc51f6d2ac59d7ad5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2e861d2250585fbcdf3e1ef63d92f18185fc7f1c
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456293"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687777"
 ---
 # <a name="ltmapgt"></a>&lt;map&gt;
 
-定义容器模板类 map 和 multimap 及其支持的模板。
+定义容器类模板 map 和多重映射及其支持的模板。
 
 ## <a name="requirements"></a>要求
 
 **Header:** \<map>
 
-**命名空间：** std
+**命名空间:** std
 
 > [!NOTE]
-> Map > 库还使用该`#include <initializer_list>`语句。 \<
+> > 库 \<map 也使用了 `#include <initializer_list>` 语句。
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="operators"></a>运算符
 
@@ -56,5 +56,5 @@ ms.locfileid: "68456293"
 ## <a name="see-also"></a>请参阅
 
 [头文件引用](../standard-library/cpp-standard-library-header-files.md)\
-[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

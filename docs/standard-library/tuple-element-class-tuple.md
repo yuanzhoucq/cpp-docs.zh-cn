@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - std::tuple_element
 ms.assetid: 4c51a6c1-ce81-462f-8c6c-291d69f2b77c
-ms.openlocfilehash: 0836ed683b398981e95e401a73ded6367c7ab472
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 21efed39fdaabe0f95f83e9dc5cdfcc508a147c5
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68241808"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684465"
 ---
-# <a name="tupleelement-class"></a>tuple_element 类
+# <a name="tuple_element-class"></a>tuple_element 类
 
 包装 `tuple` 元素。 专用化包装 `array` 元素和 `pair` 元素。
 
@@ -62,29 +62,29 @@ template <class T1, class T2>
 *元组*\
 元组的类型。
 
-*Elem*\
+*Elem* \
 数组元素的类型。
 
 *大小*\
 数组大小。
 
-*T1*\
-一对中的第一个元素的类型。
+*T1* \
+对中第一个元素的类型。
 
-*T2*\
+*T2* \
 一对中第二个元素的类型。
 
 ## <a name="remarks"></a>备注
 
-此模板类`tuple_element`具有嵌套的 typedef`type`索引位置的类型的同义词*索引*元组类型的*元组*。
+类模板 `tuple_element` 具有嵌套的 typedef `type`，它是元组类型*元组*的索引*索引*处的类型的同义词。
 
 此 typedef `tuple_element_t` 是 `tuple_element<Index, Tuple>::type` 的方便别名。
 
-数组的模板类专用化为接口提供 `array` 作为 `Size` 元素的元组，其中每个元素都具有相同的类型。 每个专用化具有嵌套的 typedef`type`的类型的同义词*索引*元素的`array`，保留有任何常量易失性限定。
+数组的类模板特殊化提供作为 `Size` 元素的元组 `array` 的接口，其中每个元素具有相同的类型。 每个特殊化都有一个嵌套的 typedef `type`，它是 `array` 的*Index*元素类型的同义词，保留了任何常量可变的限定。
 
 每个 `pair` 类型的模板专用化都具有一个成员 typedef `type`，它是对中指定位置处元素类型的同义词，保留有任何恒定和/或可变的限定。 此 typedef `tuple_element_t` 是 `tuple_element<N, pair<T1, T2>>::type` 的方便别名。
 
-使用[get 函数&lt;实用工具&gt;](../standard-library/utility-functions.md#get)要返回的元素中指定的位置，或指定类型。
+使用[Get 函数 &lt;utility &gt;](../standard-library/utility-functions.md#get)返回指定位置或指定类型的元素。
 
 ## <a name="example"></a>示例
 
@@ -178,6 +178,6 @@ int main() {
 
 **标头：** \<array>（适用于数组专用化）
 
-**标头：** \<实用程序 > （适用于对专用化）
+**标头：** \<utility > （用于对专用化）
 
-**命名空间：** std
+**命名空间:** std

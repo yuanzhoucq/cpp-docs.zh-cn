@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - list header
 ms.assetid: 2345823b-5612-44d8-95d3-aa96ed076d17
-ms.openlocfilehash: 8eb497e6a4380affd0f13f41c7b55990c562b7d3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c81990f14c6f9dc2400362015b838df5aed86429
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453661"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689429"
 ---
 # <a name="ltlistgt"></a>&lt;list&gt;
 
-定义容器模板类列表和几个支持模板。
+定义容器类模板列表和多个支持模板。
 
 ## <a name="syntax"></a>语法
 
@@ -25,9 +25,9 @@ ms.locfileid: "68453661"
 ```
 
 > [!NOTE]
-> > \<库的列表也使用该`#include <initializer_list>`语句。
+> > 库 \<list 也使用了 `#include <initializer_list>` 语句。
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="operators"></a>运算符
 
@@ -50,10 +50,10 @@ ms.locfileid: "68453661"
 
 |||
 |-|-|
-|[list 类](../standard-library/list-class.md)|用于保持其元素为线性排列并允许在序列内任何位置上的高效插入和删除的序列容器的模板类。|
+|[list 类](../standard-library/list-class.md)|序列容器的类模板，它以线性方式维护其元素，并允许在序列内的任何位置高效插入和删除。|
 
 ## <a name="see-also"></a>请参阅
 
 [头文件引用](../standard-library/cpp-standard-library-header-files.md)\
-[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

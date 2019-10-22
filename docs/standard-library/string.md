@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: 80d5d297cc28cfb019dae99e9e9736e4b2eb654f
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: 0b8ca5744418860cc6b4868dda9174ae2eb68a98
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957138"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685894"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
-定义容器模板类 `basic_string` 和各种支持模板。
+定义容器类模板 `basic_string` 和各种支持模板。
 
 有关 `basic_string` 的详细信息，请参阅[basic_string Class](../standard-library/basic-string-class.md)
 
@@ -32,16 +32,16 @@ C++ 语言和 C++ 标准库支持两种类型的字符串：
 
 - 以 null 结尾的字符数组通常作为 C 字符串被引用。
 
-- 类型`basic_string`为的模板类对象, 它处理所有类似于**字符**的模板参数。
+- 类型 `basic_string` 的类模板对象，用于处理所有类似于**字符**的模板参数。
 
 ### <a name="typedefs"></a>Typedef
 
 |类型名称|描述|
 |-|-|
-|[string](../standard-library/string-typedefs.md#string)|一种类型, 该类型描述模板类的`basic_string`专用化, 该模板类的`string`元素为**char**类型的元素。|
-|[wstring](../standard-library/string-typedefs.md#wstring)|一种类型, 该类型描述模板类的`basic_string`专用化, 该模板类的`wstring`元素为**wchar_t**类型的元素。|
-|[u16string](../standard-library/string-typedefs.md#u16string)|基于 `basic_string` 类型的元素描述模板类 `char16_t` 的专用化的类型。|
-|[u32string](../standard-library/string-typedefs.md#u32string)|基于 `basic_string` 类型的元素描述模板类 `char32_t` 的专用化的类型。|
+|[string](../standard-library/string-typedefs.md#string)|一种类型，用于描述类模板的专用化，`basic_string` 将**char**类型的元素作为 `string`。|
+|[wstring](../standard-library/string-typedefs.md#wstring)|一种类型，用于描述类模板的专用**化，`basic_string` 将 `wstring` 类型的**元素作为。|
+|[u16string](../standard-library/string-typedefs.md#u16string)|一种类型，该类型描述基于 `char16_t` 类型的元素 `basic_string` 类模板的专用化。|
+|[u32string](../standard-library/string-typedefs.md#u32string)|一种类型，该类型描述基于 `char32_t` 类型的元素 `basic_string` 类模板的专用化。|
 
 ### <a name="operators"></a>运算符
 
@@ -81,10 +81,10 @@ C++ 语言和 C++ 标准库支持两种类型的字符串：
 
 ### <a name="classes"></a>类
 
-|类|描述|
+|实例|描述|
 |-|-|
-|[basic_string 类](../standard-library/basic-string-class.md)|一个模板类，用于描述可存储任意字符类对象序列的对象。|
-|[char_traits 结构](../standard-library/char-traits-struct.md)|一个模板类，用于描述与类型 CharType 的字符关联的特性。|
+|[basic_string 类](../standard-library/basic-string-class.md)|一个类模板，用于描述可存储任意类似于字符的对象序列的对象。|
+|[char_traits 结构](../standard-library/char-traits-struct.md)|一个类模板，用于描述与类型 CharType 的字符关联的特性。|
 
 ### <a name="specializations"></a>专用化
 
@@ -99,7 +99,7 @@ C++ 语言和 C++ 标准库支持两种类型的字符串：
 
 - **标头：** \<string>
 
-- **命名空间：** std
+- **命名空间:** std
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,5 +1,5 @@
 ---
-title: Visual StudioC++中的 C/项目和生成系统
+title: Visual Studio 中的 C/C++ 项目和生成系统
 ms.description: Use Visual Studio to compile and build C++ projects for Windows, ARM or Linux based on any project system.
 ms.date: 07/17/2019
 helpviewer_keywords:
@@ -17,7 +17,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 09/25/2019
 ms.locfileid: "71274742"
 ---
-# <a name="cc-projects-and-build-systems-in-visual-studio"></a>Visual StudioC++中的 C/项目和生成系统
+# <a name="cc-projects-and-build-systems-in-visual-studio"></a>Visual Studio 中的 C/C++ 项目和生成系统
 
 你可以使用 Visual Studio 来编辑、编译和生成任何C++具有完整 IntelliSense 支持的基本代码, 而无需将该代码转换为 Visual Studio 项目, 也无需使用 MSVC 工具集进行编译。 例如, 你可以在 Windows 计算机上的 Visual Studio 中编辑跨平台的 CMake 项目, 然后在远程 Linux 计算机上使用 g + + 为 Linux 编译该项目。
 

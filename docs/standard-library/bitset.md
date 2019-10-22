@@ -7,24 +7,24 @@ helpviewer_keywords:
 - <bitset> header
 - bitset header
 ms.assetid: af30a9b9-489e-46e3-9d29-5f3ea07ae6dc
-ms.openlocfilehash: 5de13e66523ee5a5dbcb4c2c54d38037909a4c95
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e017cad251f57cb477b0bf711cdd6243d7fd9893
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449707"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689927"
 ---
 # <a name="ltbitsetgt"></a>&lt;bitset&gt;
 
-定义模板类位组和两个支持模板函数（用于表示和处理固定大小的位序列）。
+定义用于表示和处理固定大小的位序列的类模板位组和两个支持模板函数。
 
 ## <a name="requirements"></a>要求
 
 **标头：** \<bitset>
 
-**命名空间：** std
+**命名空间:** std
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="operators"></a>运算符
 
@@ -34,13 +34,13 @@ ms.locfileid: "68449707"
 |[operator<\<](../standard-library/bitset-operators.md#op_lt_lt)|将位序列的文本表示形式插入标准输出流中。|
 |[operator>>](../standard-library/bitset-operators.md#op_gt_gt)|将位序列的文本表示形式插入标准输入流中。|
 |[operator^](../standard-library/bitset-operators.md#op_xor)|执行两个位组间的按位“异或”。|
-|[operator&#124;](../standard-library/bitset-operators.md#op_or)|执行两个位组间的按位“或”。|
+|[operator|](../standard-library/bitset-operators.md#op_or)|执行两个位组间的按位“或”。|
 
 ### <a name="classes"></a>类
 
 |||
 |-|-|
-|[bitset](../standard-library/bitset-class.md)|模板类介绍一种类型的对象，该对象存储由固定数量的位构成的序列，这些位提供一种紧凑方式来保留一组项或条件的标志。|
+|[bitset](../standard-library/bitset-class.md)|类模板描述了一种对象类型，该对象存储由固定数量的位构成的序列，这些位提供一种压缩方法来保留一组项或条件的标志。|
 
 ## <a name="see-also"></a>请参阅
 

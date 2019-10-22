@@ -3,13 +3,13 @@ title: 在 Visual Studio 中编辑和重构 C++ 代码
 description: 使用 Visual Studio 中的 C++ 代码编辑器来设置代码格式以及导航、理解和重构代码。
 ms.date: 05/31/2019
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
-ms.topic: landing-page
-ms.openlocfilehash: 255576bfc4a7eb78a660e5bfb05b0a97a7eb4c34
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
-ms.translationtype: HT
+ms.topic: overview
+ms.openlocfilehash: 2da1b38d2f5bb61edb473e5909b76225f214a116
+ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221489"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274778"
 ---
 # <a name="edit-and-refactor-c-code-in-visual-studio"></a>在 Visual Studio 中编辑和重构 C++ 代码
 
@@ -183,7 +183,7 @@ Visual Studio 2017 及更高版本还支持工作方式类似的 [EditorConfig](
 
 在[文本编辑器 C++ 实验](/visualstudio/ide/reference/options-text-editor-c-cpp-experimental)对话框中可找到实验性功能，未来版本的 Visual Studio 中不一定包含这些功能。 在 Visual Studio 2017 及更高版本中，可在此对话框中启用“预测 IntelliSense”  。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [阅读并理解 C++ 代码](read-and-understand-code-cpp.md)</br>
 [在 Visual Studio 中导航 C++ 代码库](navigate-code-cpp.md)</br>

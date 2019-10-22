@@ -23,14 +23,14 @@ helpviewer_keywords:
 - std::poisson_distribution [C++], param_type
 - std::poisson_distribution [C++], param_type
 ms.assetid: 09614281-349a-45f7-8e95-c0196be0a937
-ms.openlocfilehash: 19fab66c3ffca428114e4586c4ad6d6de3fdbf83
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 180b84c6ac7bef94a93f73c0bdefc6a6f95164f0
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458469"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689125"
 ---
-# <a name="poissondistribution-class"></a>poisson_distribution 类
+# <a name="poisson_distribution-class"></a>poisson_distribution 类
 
 生成泊松分布。
 
@@ -67,12 +67,12 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*IntType*\
-整数结果类型, 默认为**int**。有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*IntType* \
+整数结果类型，默认为**int**。有关可能的类型，请参阅[\<random >](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
-模板类将描述使用泊松分布产生用户指定的整型值的分布。 下表链接到有关各个成员的文章。
+类模板介绍使用泊松分布产生用户指定的整型值的分布。 下表链接到有关各个成员的文章。
 
 ||||
 |-|-|-|
@@ -89,7 +89,7 @@ public:
 
 `operator()` 成员函数将根据 URNG 引擎，从当前参数包或指定参数包返回下一个生成的值。
 
-若要深入了解分布类及其成员，请参阅 [\<random>](../standard-library/random.md)。
+有关分布类及其成员的详细信息，请参阅 [\<random>](../standard-library/random.md)。
 
 有关泊松分布的详细信息，请参阅 Wolfram MathWorld 文章[泊松分布](https://go.microsoft.com/fwlink/p/?linkid=401112)。
 
@@ -194,7 +194,7 @@ Distribution for 100 samples:
 
 **标头：** \<random>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="poisson_distribution"></a>poisson_distribution::poisson_distribution
 
@@ -207,10 +207,10 @@ explicit binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-*格林威治时间*\
+*平均*\
 `mean` 分布参数。
 
-*parm*\
+*parm* \
 用于构造分布的参数结构。
 
 ### <a name="remarks"></a>备注

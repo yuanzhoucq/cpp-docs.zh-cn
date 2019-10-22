@@ -14,7 +14,7 @@ ms.locfileid: "70740870"
 C++/CX 是一组C++语言的扩展，使你能够在尽可能接近新式C++的用法中创建 Windows 应用和 Windows 运行时组件。 使用C++/cx 编写本机代码中的 Windows 应用和组件，以便与视觉对象C#、Visual Basic 和 JavaScript 以及其他支持 Windows 运行时的语言轻松交互。 在那些需要直接访问原始 COM 接口或非异常代码的罕见情况下，可以使用[Windows 运行时C++模板库（WRL）](../windows/windows-runtime-cpp-template-library-wrl.md)。
 
 > [!NOTE]
-> **建议使用/WinRT 作为C++/cx 替代方法。 [ C++](/windows/uwp/cpp-and-winrt-apis/index) 它是新的标准 c + + 17 语言投影，适用于 Windows 运行时 Api，可从版本1803的最新 Windows 10 SDK 获得。 C++/WinRT 完全在标头文件中实现，旨在向您提供对新式 Windows API 的第一类访问。
+> **建议使用/WinRT 作为C++/cx 替代方法。 [ C++](/windows/uwp/cpp-and-winrt-apis/index)** 它是新的标准 c + + 17 语言投影，适用于 Windows 运行时 Api，可从版本1803的最新 Windows 10 SDK 获得。 C++/WinRT 完全在标头文件中实现，旨在向您提供对新式 Windows API 的第一类访问。
 >
 > 使用C++/WinRT，可以使用任何符合标准的 c + + 17 编译器来使用和创作 Windows 运行时 api。 C++与 Windows 运行时的任何其他语言选项相比，/WinRT 通常性能更好，生成的二进制文件更小。 我们将继续支持 C++/CX 和 WRL，但强烈建议新应用程序使用 C++/WinRT。 有关详细信息，请参阅 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/index)。
 

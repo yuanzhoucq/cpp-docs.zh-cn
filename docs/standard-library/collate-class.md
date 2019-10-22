@@ -22,16 +22,16 @@ helpviewer_keywords:
 - std::collate [C++], hash
 - std::collate [C++], transform
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
-ms.openlocfilehash: c506a6a2e1e2c0610f8a6129d2bfb42f762e998a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 88b04ad4f14faf4d152c0ce2b9c3477928263c52
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458611"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689811"
 ---
 # <a name="collate-class"></a>collate 类
 
-一种模板类，用于描述一个对象来充当区域设置 facet，以控制字符串中字符的排序和分组、这些字符之间的比较以及字符串的哈希处理。
+一个类模板，用于描述一个对象，该对象可充当区域设置 facet，以控制字符串中字符的排序和分组、这些字符之间的比较以及字符串的哈希处理。
 
 ## <a name="syntax"></a>语法
 
@@ -42,7 +42,7 @@ class collate : public locale::facet;
 
 ### <a name="parameters"></a>参数
 
-*CharType*\
+*CharType* \
 在程序中用于对字符进行编码的类型。
 
 ## <a name="remarks"></a>备注
@@ -77,7 +77,7 @@ class collate : public locale::facet;
 
 **标头：** \<locale>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="char_type"></a>  collate::char_type
 
@@ -89,7 +89,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数 `CharType` 的同义词。
+类型是模板参数 `CharType` 的同义词。
 
 ## <a name="collate"></a>  collate::collate
 
@@ -108,23 +108,23 @@ const char* _Locname,
 
 ### <a name="parameters"></a>参数
 
-*_Refs*\
+*_Refs* \
 用于指定对象的内存管理类型的整数值。
 
-*_Locname*\
+*_Locname* \
 区域设置的名称。
 
 ### <a name="remarks"></a>备注
 
-*_Refs*参数的可能值及其重要性为:
+*_Refs*参数的可能值及其重要性为：
 
-- 0对象的生存期由包含该对象的区域设置管理。
+- 0：对象的生存期由包含该对象的区域设置管理。
 
-- 1:必须手动管理对象的生存期。
+- 1：必须手动管理对象的生存期。
 
-- \>2未定义这些值。
+- \> 1：未定义这些值。
 
-构造函数通过**locale::** [facet](../standard-library/locale-class.md#facet_class)(`_Refs`) 初始化其基对象。
+构造函数通过**locale：：** [facet](../standard-library/locale-class.md#facet_class)（`_Refs`）初始化其基对象。
 
 ## <a name="compare"></a>  collate::compare
 
@@ -139,16 +139,16 @@ int compare(const CharType* first1,
 
 ### <a name="parameters"></a>参数
 
-*first1*\
+*first1* \
 指向第一个序列中要比较的第一个元素的指针。
 
-*last1*\
+*last1* \
 指向第一个序列中要比较的最后一个元素的指针。
 
-*first2*\
+*first2* \
 指向第二个序列中要比较的第一个元素的指针。
 
-*last2*\
+*last2* \
 指向第二个序列中要比较的最后一个元素的指针。
 
 ### <a name="return-value"></a>返回值
@@ -205,16 +205,16 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="parameters"></a>参数
 
-*first1*\
+*first1* \
 指向第一个序列中要比较的第一个元素的指针。
 
-*last1*\
+*last1* \
 指向第一个序列中要比较的最后一个元素的指针。
 
-*first2*\
+*first2* \
 指向第二个序列中要比较的第一个元素的指针。
 
-*last2*\
+*last2* \
 指向第二个序列中要比较的最后一个元素的指针。
 
 ### <a name="return-value"></a>返回值
@@ -229,7 +229,7 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="remarks"></a>备注
 
-受保护的虚拟成员函数将 [* first1, Last1) * 上的序列与 *[first2, last2*) 上的序列进行比较。 它通过应用`operator<`类型`CharType`的对应元素对之间的来比较值。 如果序列中的最早不相等对存在较小元素，或如果不存在不相等对，但第一个序列长度较短，则第一个序列相对较小。
+受保护的虚拟成员函数将 [* first1，Last1） * 上的序列与 *[first2，last2*）上的序列进行比较。 它通过在类型 `CharType` 的相应元素对之间应用 `operator<` 来比较值。 如果序列中的最早不相等对存在较小元素，或如果不存在不相等对，但第一个序列长度较短，则第一个序列相对较小。
 
 ### <a name="example"></a>示例
 
@@ -245,10 +245,10 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>参数
 
-*1*\
+*第一个*\
 一个指向序列中具有待定值的第一个字符的指针。
 
-*时间*\
+*最后*\
 一个指向序列中具有待定值的最后一个字符的指针。
 
 ### <a name="return-value"></a>返回值
@@ -273,10 +273,10 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 
 ### <a name="parameters"></a>参数
 
-*1*\
+*第一个*\
 指向序列中要转换的第一个字符的指针。
 
-*时间*\
+*最后*\
 指向序列中要转换的最后一个字符的指针。
 
 ### <a name="return-value"></a>返回值
@@ -301,10 +301,10 @@ long hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>参数
 
-*1*\
+*第一个*\
 一个指向序列中具有待定值的第一个字符的指针。
 
-*时间*\
+*最后*\
 一个指向序列中具有待定值的最后一个字符的指针。
 
 ### <a name="return-value"></a>返回值
@@ -355,7 +355,7 @@ typedef basic_string<CharType> string_type;
 
 ### <a name="remarks"></a>备注
 
-此类型描述 [basic_string](../standard-library/basic-string-class.md) 模板类的专用化，该模板类的对象可存储源序列的副本。
+该类型描述类模板[basic_string](../standard-library/basic-string-class.md)的专用化，其对象可以存储源序列的副本。
 
 ### <a name="example"></a>示例
 
@@ -371,10 +371,10 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>参数
 
-*1*\
+*第一个*\
 指向序列中要转换的第一个字符的指针。
 
-*时间*\
+*最后*\
 指向序列中要转换的最后一个字符的指针。
 
 ### <a name="return-value"></a>返回值
@@ -383,7 +383,7 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="remarks"></a>备注
 
-此成员函数返回[do_transform](#do_transform)(`first`, `last`)。
+此成员函数返回[do_transform](#do_transform)（`first`，`last`）。
 
 ### <a name="example"></a>示例
 

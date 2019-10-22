@@ -3,10 +3,10 @@ title: 动态布局
 ms.date: 09/09/2019
 ms.assetid: 8598cfb2-c8d4-4f5a-bf2b-59dc4653e042
 ms.openlocfilehash: 1b0d035d3c551fd309d515ccb8b22159218c1b0a
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "70907549"
 ---
 # <a name="dynamic-layout"></a>动态布局
@@ -17,13 +17,13 @@ ms.locfileid: "70907549"
 
 当用户调整对话框大小时，该对话框中的控件可以调整大小，或沿 X 和 Y 方向移动。 用户重新调整对话框大小时控件大小或位置的更改称为动态布局。 例如，以下是调整大小之前的对话框：
 
-![调整大小之前的对话框。](../mfc/media/mfcdynamiclayout4.png "调整大小之前的对话框。")
+![调整大小之前的对话框。](../mfc/media/mfcdynamiclayout4.png "调整大小前的对话框。")
 
 调整大小后，列表框区域会增大，以显示更多项，并且以下按钮将沿右下角移动：
 
 ![调整大小后的对话框。](../mfc/media/mfcdynamiclayout5.png "调整大小后的对话框。")
 
-可以通过在 IDE 的资源编辑器中指定每个控件的详细信息来控制动态布局，也可以通过访问`CMFCDynamicLayout`特定控件的对象并设置属性以编程方式来控制动态布局。
+可以通过在 IDE 的资源编辑器中指定每个控件的详细信息来控制动态布局，也可以通过访问特定控件的 `CMFCDynamicLayout` 对象并设置属性以编程方式执行此操作。
 
 ### <a name="setting-dynamic-layout-properties-in-the-resource-editor"></a>在资源编辑器中设置动态布局属性
 
@@ -55,13 +55,13 @@ ms.locfileid: "70907549"
 
 1. 在自己对话框类的实现代码中查找或创建一个想要为该对话指定动态布局的位置。 例如，你可能希望在对话框中添加一个方法（如 `AdjustLayout`），并从不要更改布局的位置进行调用。 你可能会首先从构造函数中调用，也可能在对对话框进行更改之后调用。
 
-1. 对于对话框，请调用[GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout)，它是`CWnd`类的方法。 `GetDynamicLayout` 返回一个指向 `CMFCDynamicLayout` 对象的指针。
+1. 对于对话框，请调用[GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout)，它是 `CWnd` 类的方法。 `GetDynamicLayout` 返回一个指向 `CMFCDynamicLayout` 对象的指针。
 
     ```cpp
     CMFCDynamicLayout* dynamicLayout = pDialog->GetDynamicLayout();
     ```
 
-1. 对于要向其添加动态行为的第一个控件，请使用动态布局类上的静态方法来创建[MoveSettings](../mfc/reference/cmfcdynamiclayout-class.md#movesettings_structure)结构，以便对控件的调整方式进行编码。 为此，请先选择适当的静态方法：[CMFCDynamicLayout：： MoveHorizontal](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontal)、 [CMFCDynamicLayout：： MoveVertical](../mfc/reference/cmfcdynamiclayout-class.md#movevertical)、 [CMFCDynamicLayout：： MoveNone](../mfc/reference/cmfcdynamiclayout-class.md#movenone)或[CMFCDynamicLayout：： MoveHorizontalAndVertical](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontalandvertical)。 对移动的水平和/或垂直特性传入一个百分比。 这些静态方法都将返回新创建的 MoveSettings 对象，你可以使用该对象来指定控件的移动行为。
+1. 对于要向其添加动态行为的第一个控件，请使用动态布局类上的静态方法来创建[MoveSettings](../mfc/reference/cmfcdynamiclayout-class.md#movesettings_structure)结构，以便对控件的调整方式进行编码。 为此，请先选择适当的静态方法： [CMFCDynamicLayout：： MoveHorizontal](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontal)、 [CMFCDynamicLayout：： MoveVertical](../mfc/reference/cmfcdynamiclayout-class.md#movevertical)、 [CMFCDynamicLayout：： MoveNone](../mfc/reference/cmfcdynamiclayout-class.md#movenone)或[CMFCDynamicLayout：： MoveHorizontalAndVertical](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontalandvertical). 对移动的水平和/或垂直特性传入一个百分比。 这些静态方法都将返回新创建的 MoveSettings 对象，你可以使用该对象来指定控件的移动行为。
 
    记住，100 表示完全根据该对话框更改的大小进行移动，这会导致控件的边缘与新边框保持固定的距离。
 

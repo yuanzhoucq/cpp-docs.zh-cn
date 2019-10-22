@@ -23,14 +23,14 @@ helpviewer_keywords:
 - std::geometric_distribution [C++], param_type
 - std::geometric_distribution [C++], param_type
 ms.assetid: 38f933af-3b49-492e-9d26-b6b272a60013
-ms.openlocfilehash: ead6382e61066a72f97eacea91bba5b38aa00677
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 66af7aba99d1510b6d4416543e54890a9e891f7e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453925"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688009"
 ---
-# <a name="geometricdistribution-class"></a>geometric_distribution 类
+# <a name="geometric_distribution-class"></a>geometric_distribution 类
 
 生成几何分布。
 
@@ -66,15 +66,15 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*IntType*\
-整数结果类型, 默认为**int**。有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*IntType* \
+整数结果类型，默认为**int**。有关可能的类型，请参阅[\<random >](../standard-library/random.md)。
 
-*URNG*\
+*URNG* \
 统一随机数生成器引擎。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
-模板类描述了使用几何分布产生用户指定的整型值的分布。 下表链接到有关各个成员的文章。
+类模板描述了使用几何分布产生用户指定的整型值的分布。 下表链接到有关各个成员的文章。
 
 ||||
 |-|-|-|
@@ -91,7 +91,7 @@ public:
 
 `operator()` 成员函数将根据 URNG 引擎，从当前参数包或指定参数包返回下一个生成的值。
 
-若要深入了解分布类及其成员，请参阅 [\<random>](../standard-library/random.md)。
+有关分布类及其成员的详细信息，请参阅 [\<random>](../standard-library/random.md)。
 
 有关卡方分布的详细信息，请参阅 Wolfram MathWorld 文章[几何分布](https://go.microsoft.com/fwlink/p/?linkid=400529)。
 
@@ -207,7 +207,7 @@ Distribution for 100 samples:
 
 **标头：** \<random>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="geometric_distribution"></a>geometric_distribution::geometric_distribution
 
@@ -220,10 +220,10 @@ explicit geometric_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-*h-p*\
+*p* \
 `p` 分布参数。
 
-*parm*\
+*parm* \
 用于构造分布的参数结构。
 
 ### <a name="remarks"></a>备注
@@ -251,10 +251,10 @@ struct param_type {
 
 ### <a name="parameters"></a>参数
 
-*h-p*\
+*p* \
 `p` 分布参数。
 
-*然后*\
+*right* \
 与此比较的 `param_type` 实例。
 
 ### <a name="remarks"></a>备注
