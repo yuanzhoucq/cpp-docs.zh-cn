@@ -38,14 +38,14 @@ helpviewer_keywords:
 - stdext::allocator_base [C++], destroy
 - stdext::allocator_base [C++], max_size
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
-ms.openlocfilehash: 115f5ad4461b98f24e3aa6756e501b91ae3a1566
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: cbc1a9eb9432a454ca5dc04205b9d0c7b631a430
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456431"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690095"
 ---
-# <a name="allocatorbase-class"></a>allocator_base 类
+# <a name="allocator_base-class"></a>allocator_base 类
 
 定义基类和常用函数需要从同步筛选器创建一个用户定义的分配器。
 
@@ -76,9 +76,9 @@ class allocator_base
 |[const_pointer](#const_pointer)|提供指向由分配器管理的对象类型的常量指针的类型。|
 |[const_reference](#const_reference)|提供对由分配器管理的对象类型的常量引用的类型。|
 |[difference_type](#difference_type)|有符号的整型，可以表示指向由分配器管理的对象类型的指针值之间的差异。|
-|[pointer](#pointer)|提供指向由分配器管理的对象类型的指针的类型。|
+|[指针](#pointer)|提供指向由分配器管理的对象类型的指针的类型。|
 |[reference](#reference)|提供指向对分配器管理的对象类型的引用的类型。|
-|[size_type](#size_type)|无符号整型，可以表示模板类 `allocator_base` 的对象可以分配的任何序列的长度。|
+|[size_type](#size_type)|一种无符号整数类型，该类型可以表示 `allocator_base` 类型的对象可以分配的任何序列的长度。|
 |[value_type](#value_type)|由分配器管理的类型。|
 
 ### <a name="member-functions"></a>成员函数
@@ -112,7 +112,7 @@ char *_Charalloc(size_type count);
 
 |参数|描述|
 |---------------|-----------------|
-|*计数*|数组中要分配的元素数目。|
+|*count*|数组中要分配的元素数目。|
 
 ### <a name="return-value"></a>返回值
 
@@ -135,7 +135,7 @@ void _Chardealloc(void* ptr, size_type count);
 |参数|描述|
 |---------------|-----------------|
 |*ptr*|指向要从存储中释放的第一个对象的指针。|
-|*计数*|要从存储中释放的对象数量。|
+|*count*|要从存储中释放的对象数量。|
 
 ### <a name="remarks"></a>备注
 
@@ -153,7 +153,7 @@ const_pointer address(const_reference val);
 
 ### <a name="parameters"></a>参数
 
-*初始值*\
+*val* \
 要搜索其地址的对象的常量或非常量值。
 
 ### <a name="return-value"></a>返回值
@@ -205,7 +205,7 @@ allocator_base(const allocator_base<Other, Sync>& right);
 
 |参数|描述|
 |---------------|-----------------|
-|*right*|要复制的分配器对象。|
+|right|要复制的分配器对象。|
 
 ### <a name="remarks"></a>备注
 
@@ -325,7 +325,7 @@ typedef Type& reference;
 
 ## <a name="size_type"></a>  allocator_base::size_type
 
-无符号整型，可以表示模板类 `allocator_base` 的对象可以分配的任何序列的长度。
+一种无符号整数类型，该类型可以表示 `allocator_base` 类型的对象可以分配的任何序列的长度。
 
 ```cpp
 typedef std::size_t size_type;

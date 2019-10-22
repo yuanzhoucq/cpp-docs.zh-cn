@@ -6,31 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - valarray header
 ms.assetid: 30835415-21c1-4801-8f24-6bbef7dd8ecd
-ms.openlocfilehash: c18b72017e4999e377bf8575f624f8fdda5b0caf
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ed90273fe293ae2e08c3c91762c12c42bb368c16
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448342"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688764"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
-定义模板类 valarray 和大量支持模板类和函数。
+定义类模板 valarray 和众多支持类模板和函数。
 
 ## <a name="requirements"></a>要求
 
 **标头：** \<valarray>
 
-**命名空间：** std
+**命名空间:** std
 
 > [!NOTE]
-> \<Valarray > 库使用 "#include < initializer_list >" 语句。
+> @No__t_0valarray > 库使用 "#include < initializer_list >" 语句。
 
 ## <a name="remarks"></a>备注
 
-为了提高性能，允许这些模板类和函数有异常的纬度。 具体而言, 返回类型`valarray<T1>`的任何函数都可能返回某个其他类型 T2 的对象。 在这种情况下, 任何接受类型`valarray<T2>`的一个或多个参数的函数必须具有接受这些参数的任意组合的重载, 每个重载都替换为类型 T2 的参数。
+这些类模板和函数允许使用异常纬度来提高性能。 具体而言，返回类型 `valarray<T1>` 的任何函数可能会返回某个其他类型 T2 的对象。 在这种情况下，任何接受类型 `valarray<T2>` 的一个或多个参数的函数必须具有接受这些参数的任意组合的重载，每个重载都替换为类型 T2 的参数。
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="functions"></a>函数
 
@@ -84,18 +84,18 @@ ms.locfileid: "68448342"
 |||
 |-|-|
 |[gslice 类](../standard-library/gslice-class.md)|用于定义 valarray 多维切分的 valarray 实用程序类。|
-|[gslice_array 类](../standard-library/gslice-array-class.md)|一个内部的辅助模板类，该类通过提供由 valarray 的泛切分定义的子集阵列之间的操作来支持泛切分对象。|
-|[indirect_array 类](../standard-library/indirect-array-class.md)|一个内部的辅助模板类，该类通过提供子集阵列（通过指定父级 valarray 的索引子集进行定义）之间的操作来支持作为 valarray 的子集的对象。|
-|[mask_array 类](../standard-library/mask-array-class.md)|一个内部的辅助模板类，该类通过提供子集阵列之间的操作来支持作为父级 valarray（使用布尔表达式指定）的子集的对象。|
+|[gslice_array 类](../standard-library/gslice-array-class.md)|一个内部的辅助类模板，它通过提供由 valarray 的常规切片定义的子集数组之间的操作来支持常规切片对象。|
+|[indirect_array 类](../standard-library/indirect-array-class.md)|一个内部的辅助类模板，它通过在通过指定父级 valarray 的索引子集定义的子集数组间提供操作来支持作为 valarray 子集的对象。|
+|[mask_array 类](../standard-library/mask-array-class.md)|一个内部的辅助类模板，它通过提供子集数组之间的操作来支持作为父 valarray 的子集的对象（使用布尔表达式指定）。|
 |[slice 类](../standard-library/slice-class.md)|一个用于定义 valarray 的一维矢量型子集的 valarray 实用程序类。|
-|[slice_array 类](../standard-library/slice-array-class.md)|一个内部的辅助模板类，该类通过提供由 valarray 的切分定义的子集阵列之间的操作来支持切分对象。|
-|[valarray 类](../standard-library/valarray-class.md)|此模板类描述一个对象, 该对象控制类型`Type`的元素的序列, 这些元素存储为数组并针对计算性能进行了优化。|
+|[slice_array 类](../standard-library/slice-array-class.md)|一个内部的辅助类模板，它通过提供由 valarray 的切片定义的子集数组之间的操作来支持切片对象。|
+|[valarray 类](../standard-library/valarray-class.md)|类模板描述了一个对象，该对象控制一个类型为 `Type` 的元素序列，这些元素存储为数组并针对计算性能进行了优化，用于执行高速数学运算。|
 
 ### <a name="specializations"></a>专用化
 
 |||
 |-|-|
-|[valarray\<bool> 类](../standard-library/valarray-bool-class.md)|模板类的专用版本 valarray\<**类型**> 为**bool**类型的元素。|
+|[valarray\<bool> 类](../standard-library/valarray-bool-class.md)|类模板的专用版本 valarray \<**类型**> 为**bool**类型的元素。|
 
 ## <a name="see-also"></a>请参阅
 

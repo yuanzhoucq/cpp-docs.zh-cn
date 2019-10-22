@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 f1_keywords:
 - <future>
 ms.assetid: 2f5830fc-455d-44f9-9e3d-94ea051596a2
-ms.openlocfilehash: d33b67ed17a95b6717878aaca2f61682b1807c15
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c852b3040a94035f6a84b1f717c3583fababbb2c
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454005"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688019"
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
 
-包含标准标头 \<future>，以定义模板类和支持模板，它们可简化（可能在单独线程中的）函数运行并检索其结果。 结果可以是由函数返回的值或由函数发出但函数中未捕获的异常。
+包含标准标头 \<future > 来定义类模板和支持模板，这些模板可简化运行函数（可能在单独的线程中）并检索其结果。 结果可以是由函数返回的值或由函数发出但函数中未捕获的异常。
 
 此标头使用并发运行时 (ConcRT)，以便可将其与其他 ConcRT 机制一起使用。 有关 ConcRT 的详细信息，请参阅[并发运行时](../parallel/concrt/concurrency-runtime.md)。
 
@@ -26,7 +26,7 @@ ms.locfileid: "68454005"
 ## <a name="remarks"></a>备注
 
 > [!NOTE]
-> 在使用 **/clr**编译的代码中, 此标头被阻止。
+> 在使用 **/clr**编译的代码中，此标头被阻止。
 
 异步提供程序存储函数调用的结果。 异步返回对象用于检索函数调用的结果。 关联异步状态提供一个异步提供程序和一个或多个异步返回对象之间的通信。
 
@@ -36,17 +36,17 @@ ms.locfileid: "68454005"
 
 只有当其异步提供程序存储了返回值或存储了异常时，关联的异步状态才会为准备就绪。
 
-模板函数 `async` 以及模板类 `promise` 和 `packaged_task` 是异步提供程序。 模板类 `future` 和 `shared_future` 描述异步返回对象。
+模板函数 `async` 和类模板 `promise` 并且 `packaged_task` 是异步提供程序。 类模板 `future` 和 `shared_future` 描述异步返回对象。
 
-每个模板`promise`类、 `future`和`shared_future`都具有类型**void**的专用化和按引用存储和检索值的部分专用化。 这些专用化与主模板的唯一区别是用于存储和检索返回值的函数的签名和语义。
+每个类模板 `promise`、`future` 和 `shared_future` 都具有类型**void**的专用化和按引用存储和检索值的部分专用化。 这些专用化与主模板的唯一区别是用于存储和检索返回值的函数的签名和语义。
 
-模板类`future`和`shared_future`决不会在其析构函数中阻止, 只是为了向后兼容而保留的一种情况:与所有其他先期情况不同 ( `future`对于, 或最后`shared_future` `std::async`一个), 如果任务尚未完成, 则析构函数将阻塞; 即, 如果此线程尚未调用`.get()`或`.wait()`任务仍在运行。 以下可用性说明已添加到草案标准版`std::async`中的说明: "[备注:如果将来从 std:: async 获得的内容移到了本地范围外, 则使用将来的其他代码必须注意未来的析构函数可能会阻塞共享状态。在所有其他情况下, `future` `shared_future`析构函数是必需的, 并且保证永远不会阻止。
+类模板 `future` 和 `shared_future` 永远不会在其析构函数中阻塞，只不过为实现向后兼容性而保留的一种情况除外：与所有其他先期情况不同，对于附加到任务的 `future` 或最后一个 `shared_future`，该任务使用 `std::async`如果任务尚未完成，则析构函数将阻塞;也就是说，如果此线程尚未调用 `.get()` 或 `.wait()` 并且任务仍在运行，它将会阻止。 如下可用性注释已添加到草案标准中 `std::async` 的描述中：“[注意：如果将从 std::async 获取的 future 移出本地范围外，则使用此 future 的其他代码必须意识到此 future 的析构函数可能阻塞，直到共享状态变为准备就绪。—尾注]”在其他所有情况下，需要使用 `future` 和 `shared_future` 析构函数，且需保证其永不阻塞。
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="classes"></a>类
 
-|name|描述|
+|“属性”|描述|
 |----------|-----------------|
 |[future 类](../standard-library/future-class.md)|描述异步返回对象。|
 |[future_error 类](../standard-library/future-error-class.md)|描述可由管理 `future` 对象的类型方法引发的异常对象。|
@@ -56,14 +56,14 @@ ms.locfileid: "68454005"
 
 ### <a name="structures"></a>结构
 
-|名称|描述|
+|“属性”|描述|
 |----------|-----------------|
 |[is_error_code_enum 结构](../standard-library/is-error-code-enum-structure.md)|指示 `future_errc` 适合存储 `error_code` 的专用化。|
 |[uses_allocator 结构](../standard-library/uses-allocator-structure.md)|始终保持 true 的专用化。|
 
 ### <a name="functions"></a>函数
 
-|名称|描述|
+|“属性”|描述|
 |----------|-----------------|
 |[async](../standard-library/future-functions.md#async)|表示一个异步提供程序。|
 |[future_category](../standard-library/future-functions.md#future_category)|返回一个描述与 `future` 对象相关联错误的 `error_category` 对象的引用。|
@@ -73,7 +73,7 @@ ms.locfileid: "68454005"
 
 ### <a name="enumerations"></a>枚举
 
-|名称|描述|
+|“属性”|描述|
 |----------|-----------------|
 |[future_errc](../standard-library/future-enums.md#future_errc)|为 `future_error` 类报告的错误提供符号名称。|
 |[future_status](../standard-library/future-enums.md#future_status)|为计时等待函数可返回的原因提供符号名称。|

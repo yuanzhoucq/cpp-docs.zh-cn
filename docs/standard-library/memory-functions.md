@@ -77,12 +77,12 @@ helpviewer_keywords:
 - std::uninitialized_copy_n [C++]
 - std::uninitialized_fill [C++]
 - std::uninitialized_fill_n [C++]
-ms.openlocfilehash: 4d33240edc326b03b0ef184ac14e233a90acd5f4
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
+ms.openlocfilehash: 2aceb96fcda49df8a1fd40a1bd8011170dccd8ef
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821325"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687726"
 ---
 # <a name="ltmemorygt-functions"></a>&lt;memory&gt; 函数
 
@@ -111,13 +111,13 @@ const T* addressof(
 
 ### <a name="return-value"></a>返回值
 
-*值*引用的对象或函数的实际地址, 即使存在重载`operator&()`的也是如此。
+*值*引用的对象或函数的实际地址，即使存在重载的 `operator&()` 也是如此。
 
 ### <a name="remarks"></a>备注
 
 ## <a name="align"></a>垂直
 
-将给定大小的存储空间 (按给定的对齐规范对齐) 放入给定存储的第一个可能地址。
+将给定大小的存储空间（按给定的对齐规范对齐）放入给定存储的第一个可能地址。
 
 ```cpp
 void* align(
@@ -130,27 +130,27 @@ void* align(
 
 ### <a name="parameters"></a>参数
 
-*关联*\
+*对齐*\
 要尝试的对齐边界。
 
-*规格*\
+*大小*\
 对齐存储的大小（以字节为单位）。
 
-*ptr*\
-要使用的可用连续存储池的起始地址。 此参数也是 output 参数, 如果对齐成功, 则设置为包含新的起始地址。 如果`align()`不成功, 则不修改此参数。
+*ptr* \
+要使用的可用连续存储池的起始地址。 此参数也是 output 参数，如果对齐成功，则设置为包含新的起始地址。 如果 `align()` 不成功，则不修改此参数。
 
-*space*\
+*空间*\
 供 `align()` 用于创建对齐存储的总空间。 此参数还是输出参数，并包含存储缓冲区中在减去对齐存储和任何关联系统开销后剩余的调整空间。
 
-如果`align()`不成功, 则不修改此参数。
+如果 `align()` 不成功，则不修改此参数。
 
 ### <a name="return-value"></a>返回值
 
-如果所请求的对齐缓冲区无法放入可用空间, 则为 null 指针;否则为*ptr*的新值。
+如果所请求的对齐缓冲区无法放入可用空间，则为 null 指针;否则为*ptr*的新值。
 
 ### <a name="remarks"></a>备注
 
-使用修改*的 ptr*和*空间*参数, 可以在`align()`同一缓冲区上重复调用, 可能有不同的值用于*对齐*和*调整大小*。 下面的代码片段演示 `align()` 的一种用法。
+使用修改的*ptr*和*空间*参数，可以在同一缓冲区上重复调用 `align()`，可能会有不同的值用于*对齐*和*调整大小*。 下面的代码片段演示 `align()` 的一种用法。
 
 ```cpp
 #include <type_traits> // std::alignment_of()
@@ -191,12 +191,12 @@ shared_ptr<T> allocate_shared(
 *分配*\
 用于创建对象的分配器。
 
-*args*\
+*args* \
 成为对象的零个或更多自变量。
 
 ### <a name="remarks"></a>备注
 
-函数将创建对象, `shared_ptr<T>`该对象是一个`T(args...)`指针, 指向由分配分配并构建。
+函数创建对象 `shared_ptr<T>`，该指针指向 `T(args...)`，它*由分配分配和构造。*
 
 ## <a name="atomic_compare_exchange_strong"></a>atomic_compare_exchange_strong
 
@@ -321,18 +321,18 @@ shared_ptr<T> const_pointer_cast(
 
 ### <a name="parameters"></a>参数
 
-*关心*\
+*T* \
 由返回的共享指针控制的类型。
 
-*以外*\
+*其他*\
 由自变量共享指针控制的类型。
 
-*sp*\
+*sp* \
 自变量共享指针。
 
 ### <a name="remarks"></a>备注
 
-如果`shared_ptr<T>` `shared_ptr` 返回`const_cast<T*>(sp.get())`空指针, 则模板函数将返回空对象; 否则, 它将返回拥有*sp*拥有的资源的对象。 表达式 `const_cast<T*>(sp.get())` 必须有效。
+如果 `const_cast<T*>(sp.get())` 返回空指针，则模板函数将返回空的 `shared_ptr` 对象;否则，它将返回拥有*sp*拥有的资源的 `shared_ptr<T>` 对象。 表达式 `const_cast<T*>(sp.get())` 必须有效。
 
 ### <a name="example"></a>示例
 
@@ -371,15 +371,15 @@ void declare_no_pointers(
 
 ### <a name="parameters"></a>参数
 
-*ptr*\
+*ptr* \
 第一个字符的地址，该字符不再包含可跟踪的指针。
 
-*规格*\
+*大小*\
 从不包含可跟踪指针的*ptr*开始的块大小。
 
 ### <a name="remarks"></a>备注
 
-函数通知任何垃圾回收器范围内`[ ptr, ptr + size)`的地址不再包含可跟踪的指针。 (除非变为可访问, 否则不能取消引用指向分配存储的任何指针。)
+函数通知任何垃圾回收器范围内的地址 `[ ptr, ptr + size)` 不再包含可跟踪的指针。 （除非变为可访问，否则不能取消引用指向分配存储的任何指针。）
 
 ## <a name="declare_reachable"></a>declare_reachable
 
@@ -392,12 +392,12 @@ void declare_reachable(
 
 ### <a name="parameters"></a>参数
 
-*ptr*\
+*ptr* \
 指向可访问、已分配且有效的存储区域的指针。
 
 ### <a name="remarks"></a>备注
 
-如果*ptr*不为 null, 则函数会通知任何垃圾回收器*ptr*现在可以访问, 也就是说, 它指向有效分配的存储。
+如果*ptr*不为 null，则函数会通知任何垃圾回收器*ptr*现在可以访问，也就是说，它指向有效分配的存储。
 
 ## <a name="default_delete"></a>default_delete
 
@@ -417,15 +417,15 @@ struct default_delete
 
 ### <a name="parameters"></a>参数
 
-*ptr*\
+*ptr* \
 指向要删除的对象的指针。
 
-*以外*\
+*其他*\
 要删除的数组中的元素类型。
 
 ### <a name="remarks"></a>备注
 
-此模板类描述了一个删除器, 该对象删除使用**new 运算符**分配的标量对象, 适合与`unique_ptr`模板类一起使用。 它还具有显式专用化 `default_delete<T[]>`。
+类模板描述了一个删除器，该对象删除使用**new 运算符**分配的标量对象，适合与类模板 `unique_ptr` 一起使用。 它还具有显式专用化 `default_delete<T[]>`。
 
 ## <a name="destroy_at"></a>destroy_at
 
@@ -446,7 +446,7 @@ void destroy(
     ForwardIterator last);
 ```
 
-与相同:
+与相同：
 
 ```cpp
 for (; first != last; ++first)
@@ -462,7 +462,7 @@ ForwardIterator destroy_n(
     Size count);
 ```
 
-与相同:
+与相同：
 
 ```cpp
 for (; count > 0; (void)++first, --count)
@@ -486,18 +486,18 @@ shared_ptr<T> dynamic_pointer_cast(
 
 ### <a name="parameters"></a>参数
 
-*关心*\
+*T* \
 由返回的共享指针控制的类型。
 
-*以外*\
+*其他*\
 由自变量共享指针控制的类型。
 
-*sp*\
+*sp* \
 自变量共享指针。
 
 ### <a name="remarks"></a>备注
 
-如果`shared_ptr<T>` `shared_ptr` 返回`dynamic_cast<T*>(sp.get())`空指针, 则模板函数将返回空对象; 否则, 它将返回拥有*sp*拥有的资源的对象。 表达式 `dynamic_cast<T*>(sp.get())` 必须有效。
+如果 `dynamic_cast<T*>(sp.get())` 返回空指针，则模板函数将返回空的 `shared_ptr` 对象;否则，它将返回拥有*sp*拥有的资源的 `shared_ptr<T>` 对象。 表达式 `dynamic_cast<T*>(sp.get())` 必须有效。
 
 ### <a name="example"></a>示例
 
@@ -550,15 +550,15 @@ Deleter* get_deleter(
 *删除器*\
 删除器的类型。
 
-*关心*\
+*T* \
 由共享指针控制的类型。
 
-*sp*\
+*sp* \
 共享的指针。
 
 ### <a name="remarks"></a>备注
 
-模板函数返回一个指针, 该指针指向属于`shared_ptr`对象*sp*的*删除器*类型的删除器。 如果*sp*没有删除器, 或者其删除器不是*删除器*类型, 则该函数返回0。
+模板函数返回指向*删除器*类型的删除器的指针，该类型属于 `shared_ptr` 对象*sp*。 如果*sp*没有删除器，或者其删除器不是*删除器*类型，则该函数返回0。
 
 ### <a name="example"></a>示例
 
@@ -628,7 +628,7 @@ pair<T *, ptrdiff_t> get_temporary_buffer(
 
 ### <a name="parameters"></a>参数
 
-*计*\
+*计数*\
 所请求的、要为其分配内存的元素的最大数目。
 
 ### <a name="return-value"></a>返回值
@@ -676,7 +676,7 @@ could store is given by: resultPair.second = 9.
 
 ## <a name="make_shared"></a>make_shared
 
-创建并返回一个[shared_ptr](shared-ptr-class.md) , 它指向通过使用默认分配器从零个或多个参数构造的分配对象。 分配并构造指定类型的对象和`shared_ptr`来管理对象的共享所有权，并返回`shared_ptr`。
+创建并返回一个[shared_ptr](shared-ptr-class.md) ，它指向通过使用默认分配器从零个或多个参数构造的分配对象。 分配并构造指定类型的对象和`shared_ptr`来管理对象的共享所有权，并返回`shared_ptr`。
 
 ```cpp
 template <class T, class... Args>
@@ -686,7 +686,7 @@ shared_ptr<T> make_shared(
 
 ### <a name="parameters"></a>参数
 
-*args*\
+*args* \
 零个或多个构造函数参数。 函数根据所提供的自变量来推断要调用的构造函数重载。
 
 ### <a name="remarks"></a>备注
@@ -698,9 +698,9 @@ auto sp = std::shared_ptr<Example>(new Example(argument));
 auto msp = std::make_shared<Example>(argument);
 ```
 
-但是，第一条语句进行了两个分配，如果在`shared_ptr`对象的分配成功后，`Example`的分配失败，则未命名的`Example`对象将被泄漏。 使用`make_shared`的语句更简单，因为只涉及到一个函数调用。 这样会更有效，因为库可能会对对象和智能指针进行一个分配。 此函数的速度更快, 导致内存碎片更少, 但在一次分配时不存在异常, 而不是在另一种分配上。 通过使引用对象和更新智能指针中的引用计数的代码具有的更好的地址来提高性能。
+但是，第一条语句进行了两个分配，如果在`shared_ptr`对象的分配成功后，`Example`的分配失败，则未命名的`Example`对象将被泄漏。 使用`make_shared`的语句更简单，因为只涉及到一个函数调用。 这样会更有效，因为库可能会对对象和智能指针进行一个分配。 此函数的速度更快，导致内存碎片更少，但在一次分配时不存在异常，而不是在另一种分配上。 通过使引用对象和更新智能指针中的引用计数的代码具有的更好的地址来提高性能。
 
-如果不需要对该对象具有共享访问权限, 请考虑使用[make_unique](memory-functions.md#make_unique) 。 如果需要为对象指定自定义的分配器，请使用 [allocate_shared](memory-functions.md#allocate_shared)。 如果对象需要`make_shared`自定义删除器, 则不能使用, 因为无法将删除器作为参数传递。
+如果不需要对该对象具有共享访问权限，请考虑使用[make_unique](memory-functions.md#make_unique) 。 如果需要为对象指定自定义的分配器，请使用 [allocate_shared](memory-functions.md#allocate_shared)。 如果您的对象需要自定义删除器，则不能使用 `make_shared`，因为无法将删除器作为参数传递。
 
 以下示例演示如何通过调用特定构造函数重载来创建指向类型的共享指针。
 
@@ -791,30 +791,30 @@ template <class T, class... Args>
 
 ### <a name="parameters"></a>参数
 
-*关心*\
+*T* \
 `unique_ptr` 将指向的对象的类型。
 
-*Args*\
+*Args* \
 *Args*指定的构造函数参数的类型。
 
-*args*\
+*args* \
 要传递给类型*T*的对象的构造函数的参数。
 
-*单元*\
+*元素*\
 类型为*T*的元素的数组。
 
-*规格*\
+*大小*\
 新数组中要为其分配空间的元素的数目。
 
 ### <a name="remarks"></a>备注
 
-第一个重载用于单个对象。 为数组调用第二个重载。 第三个重载阻止您在类型参数中指定数组大小 (make_unique\<T [N] >); 当前标准不支持此构造。 当使用 `make_unique` 将 `unique_ptr` 创建到数组时，必须分别初始化数组元素。 可能更好的选择是使用[std:: vector](vector-class.md), 而不是使用此重载。
+第一个重载用于单个对象。 为数组调用第二个重载。 第三个重载阻止您在类型参数中指定数组大小（make_unique \<T [N] >）;当前标准不支持此构造。 当使用 `make_unique` 将 `unique_ptr` 创建到数组时，必须分别初始化数组元素。 可能更好的选择是使用[std：： vector](vector-class.md)，而不是使用此重载。
 
 由于谨慎实现 `make_unique` 以获得异常安全，因此建议您使用 `make_unique` 而不是直接调用 `unique_ptr` 构造函数。
 
 ### <a name="example"></a>示例
 
-下面的示例说明如何使用 `make_unique`。 有关更多示例，请参见[如何：创建和使用 unique_ptr 实例](../cpp/how-to-create-and-use-unique-ptr-instances.md)。
+下面的示例说明如何使用 `make_unique`。 有关更多示例，请参阅[如何：创建和使用 unique_ptr 实例](../cpp/how-to-create-and-use-unique-ptr-instances.md)。
 
 [!code-cpp[stl_smart_pointers#214](../cpp/codesnippet/CPP/memory-functions_1.cpp)]
 
@@ -822,7 +822,7 @@ template <class T, class... Args>
 
 ## <a name="owner_less"></a>owner_less
 
-允许对共享指针和弱指针进行基于所有权的混合比较。 如果左侧参数按成员函数`owner_before`的右参数排序, 则返回 true。
+允许对共享指针和弱指针进行基于所有权的混合比较。 如果在成员函数 `owner_before` 的右参数之前对左侧参数进行排序，则返回**true** 。
 
 ```cpp
 template <class T>
@@ -885,19 +885,19 @@ template<> struct owner_less<void>
 
 ### <a name="parameters"></a>参数
 
-*左中*\
+*左*\
 共享指针或弱指针。
 
-*然后*\
+*right* \
 共享指针或弱指针。
 
 ### <a name="remarks"></a>备注
 
-该模板类将其所有成员运算符都定义为返回 `left.owner_before(right)`。
+类模板将其所有成员运算符定义为返回 `left.owner_before(right)`。
 
 ## <a name="reinterpret_pointer_cast"></a>reinterpret_pointer_cast
 
-使用强制转换`shared_ptr`通过现有共享指针创建新的。
+使用强制转换通过现有共享指针创建新 `shared_ptr`。
 
 ```cpp
 template<class T, class U>
@@ -911,12 +911,12 @@ shared_ptr<T> reinterpret_pointer_cast(
 
 ### <a name="parameters"></a>参数
 
-*ptr*\
-对的`shared_ptr<U>`引用。
+*ptr* \
+对 `shared_ptr<U>` 的引用。
 
 ### <a name="remarks"></a>备注
 
-如果*ptr*为空, 则新`shared_ptr`的也为空, 否则它将与*ptr*共享所有权。 新的共享指针是计算`reinterpret_cast<Y*>(ptr.get())`结果, 其中`Y`是`typename std::shared_ptr<T>::element_type`。 如果`reinterpret_cast<T*>((U*)nullptr)`的格式不正确, 则行为是不确定的。
+如果*ptr*为空，则新 `shared_ptr` 也为空，否则它将与*ptr*共享所有权。 新的共享指针是对 `reinterpret_cast<Y*>(ptr.get())` 进行计算的结果，其中 `Y` 是 `typename std::shared_ptr<T>::element_type` 的。 如果 `reinterpret_cast<T*>((U*)nullptr)` 的格式不正确，则行为是不确定的。
 
 采用左值引用的模板函数是 c + + 17 中的新增功能。 采用右值引用的模板函数是 c + + 20 中的新增功能。
 
@@ -932,7 +932,7 @@ void return_temporary_buffer(
 
 ### <a name="parameters"></a>参数
 
-*宽限*\
+*缓冲区*\
 指向要取消分配的内存的指针。
 
 ### <a name="remarks"></a>备注
@@ -993,18 +993,18 @@ shared_ptr<T> static_pointer_cast(
 
 ### <a name="parameters"></a>参数
 
-*关心*\
+*T* \
 由返回的共享指针控制的类型。
 
-*以外*\
+*其他*\
 由自变量共享指针控制的类型。
 
-*sp*\
+*sp* \
 自变量共享指针。
 
 ### <a name="remarks"></a>备注
 
-如果*sp* `shared_ptr`为空对象, `shared_ptr`则模板函数将返回空对象; 否则, 它将`shared_ptr<T>`返回拥有*sp*拥有的资源的对象。 表达式 `static_cast<T*>(sp.get())` 必须有效。
+如果*sp*为空 `shared_ptr` 对象，则模板函数将返回空的 `shared_ptr` 对象;否则，它将返回拥有*sp*拥有的资源的 `shared_ptr<T>` 对象。 表达式 `static_cast<T*>(sp.get())` 必须有效。
 
 ### <a name="example"></a>示例
 
@@ -1065,16 +1065,16 @@ void swap(
 
 ### <a name="parameters"></a>参数
 
-*关心*\
+*T* \
 由自变量指针控制的类型。
 
 *删除器*\
 唯一指针类型的删除器。
 
-*左中*\
+*左*\
 左指针。
 
-*然后*\
+*right* \
 右指针。
 
 ### <a name="remarks"></a>备注
@@ -1138,15 +1138,15 @@ void undeclare_no_pointers(
 
 ### <a name="parameters"></a>参数
 
-*ptr*\
+*ptr* \
 指向以前使用[declare_no_pointers](#declare_no_pointers)标记的内存地址的指针。
 
-*规格*\
-内存范围中的字节数。 此值必须等于在`declare_no_pointers`调用中使用的数字。
+*大小*\
+内存范围中的字节数。 此值必须等于 `declare_no_pointers` 调用中使用的数字。
 
 ### <a name="remarks"></a>备注
 
-函数通知任何垃圾回收器, 地址`[ptr, ptr + size)`范围现在可以包含可跟踪的指针。
+函数通知任何垃圾回收器 `[ptr, ptr + size)` 的地址范围现在可以包含可跟踪的指针。
 
 ## <a name="undeclare_reachable"></a>undeclare_reachable
 
@@ -1160,12 +1160,12 @@ T *undeclare_reachable(
 
 ### <a name="parameters"></a>参数
 
-*ptr*\
+*ptr* \
 指向以前使用[declare_reachable](#declare_reachable)标记的内存地址的指针。
 
 ### <a name="remarks"></a>备注
 
-如果*ptr*不为**nullptr**, 则函数会通知任何垃圾回收器, *ptr*将无法再访问。 它将返回与*ptr*比较的安全派生的指针。
+如果*ptr*不为**nullptr**，则函数会通知任何垃圾回收器， *ptr*将无法再访问。 它将返回与*ptr*比较的安全派生的指针。
 
 ## <a name="uninitialized_copy"></a>uninitialized_copy
 
@@ -1188,21 +1188,21 @@ ForwardIterator uninitialized_copy(
 
 ### <a name="parameters"></a>参数
 
-*政策*\
+*策略*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 确定源范围中第一个元素的地址的输入迭代器。
 
-*时间*\
+*最后*\
 确定源范围中最后一个元素的地址的输入迭代器。
 
-*目的*\
+*dest* \
 确定目标范围中第一个元素的地址的前向迭代器。
 
 ### <a name="return-value"></a>返回值
 
-用于寻址目标范围之外的第一个位置的前向迭代器, 除非源范围为空。
+用于寻址目标范围之外的第一个位置的前向迭代器，除非源范围为空。
 
 ### <a name="remarks"></a>备注
 
@@ -1308,25 +1308,25 @@ ForwardIterator uninitialized_copy_n(
 
 ### <a name="parameters"></a>参数
 
-*政策*\
+*策略*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 引用要复制的对象的输入迭代器。
 
-*计*\
+*计数*\
 指定复制对象的次数的带符号或无符号整数类型。
 
-*目的*\
+*dest* \
 引用新副本所在位置的向前迭代器。
 
 ### <a name="return-value"></a>返回值
 
-发现超出目标的第一个位置的向前迭代器。 如果源范围为空, 则迭代器*首先*寻址。
+发现超出目标的第一个位置的向前迭代器。 如果源范围为空，则迭代器*首先*寻址。
 
 ### <a name="remarks"></a>备注
 
-模板函数有效执行以下代码:
+模板函数有效执行以下代码：
 
 ```cpp
     for (; 0 < count; --count)
@@ -1341,7 +1341,7 @@ ForwardIterator uninitialized_copy_n(
 
 ## <a name="uninitialized_default_construct"></a>uninitialized_default_construct
 
-默认值`value_type`在指定范围内构造迭代器的对象。
+默认在指定范围内构造迭代器 "`value_type` 的对象。
 
 ```cpp
 template <class ForwardIterator>
@@ -1358,18 +1358,18 @@ void uninitialized_default_construct(
 
 ### <a name="parameters"></a>参数
 
-*政策*\
+*策略*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 用于寻址范围中要构造的第一个元素的迭代器。
 
-*时间*\
-一个迭代器, 用于寻址要构造的范围中最后一个元素之后的一个元素。
+*最后*\
+一个迭代器，用于寻址要构造的范围中最后一个元素之后的一个元素。
 
 ### <a name="remarks"></a>备注
 
-没有执行策略的版本实际上与相同:
+没有执行策略的版本实际上与相同：
 
 ```cpp
 for (; first != last; ++first)
@@ -1377,15 +1377,15 @@ for (; first != last; ++first)
         typename iterator_traits<ForwardIterator>::value_type;
 ```
 
-如果引发异常, 则将以未指定的顺序销毁以前构造的对象。
+如果引发异常，则将以未指定的顺序销毁以前构造的对象。
 
-具有执行策略的版本具有相同的结果, 但会根据指定的*策略*执行。
+具有执行策略的版本具有相同的结果，但会根据指定的*策略*执行。
 
 这些函数是 c + + 17 中的新增功能。
 
 ## <a name="uninitialized_default_construct_n"></a>uninitialized_default_construct_n
 
-默认情况下, 从指定位置开始构造迭代器`value_type`的指定数量的对象。
+默认情况下，从指定位置开始构造迭代器 `value_type` 的指定数目的对象。
 
 ```cpp
 template <class ForwardIterator, class Size>
@@ -1402,22 +1402,22 @@ ForwardIterator uninitialized_default_construct_n(
 
 ### <a name="parameters"></a>参数
 
-*政策*\
+*策略*\
 要使用的执行策略。
 
-*1*\
-一个迭代器, 用于寻址要构造的目标范围中的第一个元素。
+*第一个*\
+一个迭代器，用于寻址要构造的目标范围中的第一个元素。
 
-*计*\
+*计数*\
 要构造的目标范围中的元素计数。
 
 ### <a name="return-value"></a>返回值
 
-用于寻址目标范围之外的第一个位置的前向迭代器, 除非源范围为空。
+用于寻址目标范围之外的第一个位置的前向迭代器，除非源范围为空。
 
 ### <a name="remarks"></a>备注
 
-没有执行策略的版本实际上与相同:
+没有执行策略的版本实际上与相同：
 
 ```cpp
 for (; count>0; (void)++first, --count)
@@ -1426,9 +1426,9 @@ for (; count>0; (void)++first, --count)
 return first;
 ```
 
-如果引发异常, 则将以未指定的顺序销毁以前构造的对象。
+如果引发异常，则将以未指定的顺序销毁以前构造的对象。
 
-具有执行策略的版本具有相同的结果, 但会根据指定的*策略*执行。
+具有执行策略的版本具有相同的结果，但会根据指定的*策略*执行。
 
 这些函数是 c + + 17 中的新增功能。
 
@@ -1453,14 +1453,14 @@ void uninitialized_fill(
 
 ### <a name="parameters"></a>参数
 
-*政策*\
+*策略*\
 要使用的执行策略。
 
-*1*\
-一个向前迭代器, 用于寻址要初始化的目标范围中的第一个元素。
+*第一个*\
+一个向前迭代器，用于寻址要初始化的目标范围中的第一个元素。
 
-*时间*\
-一个向前迭代器, 用于寻址要初始化的目标范围中的最后一个元素。
+*最后*\
+一个向前迭代器，用于寻址要初始化的目标范围中的最后一个元素。
 
 *value*\
 用于初始化目标范围的值。
@@ -1541,13 +1541,13 @@ ForwardIterator uninitialized_fill_n(
 
 ### <a name="parameters"></a>参数
 
-*政策*\
+*策略*\
 要使用的执行策略。
 
-*1*\
-一个向前迭代器, 用于寻址要初始化的目标范围中的第一个元素。
+*第一个*\
+一个向前迭代器，用于寻址要初始化的目标范围中的第一个元素。
 
-*计*\
+*计数*\
 要初始化的元素的数目。
 
 *value*\
@@ -1623,21 +1623,21 @@ ForwardIterator uninitialized_move(
 
 ### <a name="parameters"></a>参数
 
-*政策*\
+*策略*\
 要使用的执行策略。
 
-*1*\
-一种输入迭代器, 用于寻址源范围中要移动的第一个元素。
+*第一个*\
+一种输入迭代器，用于寻址源范围中要移动的第一个元素。
 
-*时间*\
-一种输入迭代器, 用于寻址源范围中要移动的最后一个元素之后的一个元素。
+*最后*\
+一种输入迭代器，用于寻址源范围中要移动的最后一个元素之后的一个元素。
 
-*目的*\
+*dest* \
 目标范围的开头。
 
 ### <a name="remarks"></a>备注
 
-没有执行策略的版本实际上与相同:
+没有执行策略的版本实际上与相同：
 
 ```cpp
 for (; first != last; (void)++dest, ++first)
@@ -1646,9 +1646,9 @@ for (; first != last; (void)++dest, ++first)
 return dest;
 ```
 
-如果引发异常, 则可能会将源范围中的某些对象保留为有效但未指定的状态。 以前构造的对象将按未指定的顺序销毁。
+如果引发异常，则可能会将源范围中的某些对象保留为有效但未指定的状态。 以前构造的对象将按未指定的顺序销毁。
 
-具有执行策略的版本具有相同的结果, 但会根据指定的*策略*执行。
+具有执行策略的版本具有相同的结果，但会根据指定的*策略*执行。
 
 这些函数是 c + + 17 中的新增功能。
 
@@ -1673,21 +1673,21 @@ pair<InputIterator, ForwardIterator> uninitialized_move_n(
 
 ### <a name="parameters"></a>参数
 
-*政策*\
+*策略*\
 要使用的执行策略。
 
-*1*\
-一种输入迭代器, 用于寻址源范围中要移动的第一个元素。
+*第一个*\
+一种输入迭代器，用于寻址源范围中要移动的第一个元素。
 
-*计*\
+*计数*\
 要移动的源范围中的元素计数。
 
-*目的*\
+*dest* \
 目标范围的开头。
 
 ### <a name="remarks"></a>备注
 
-没有执行策略的版本实际上与相同:
+没有执行策略的版本实际上与相同：
 
 ```cpp
 for (; count > 0; ++dest, (void) ++first, --count)
@@ -1696,15 +1696,15 @@ for (; count > 0; ++dest, (void) ++first, --count)
 return {first, dest};
 ```
 
-如果引发异常, 则可能会将源范围中的某些对象保留为有效但未指定的状态。 以前构造的对象将按未指定的顺序销毁。
+如果引发异常，则可能会将源范围中的某些对象保留为有效但未指定的状态。 以前构造的对象将按未指定的顺序销毁。
 
-具有执行策略的版本具有相同的结果, 但会根据指定的*策略*执行。
+具有执行策略的版本具有相同的结果，但会根据指定的*策略*执行。
 
 这些函数是 c + + 17 中的新增功能。
 
 ## <a name="uninitialized_value_construct"></a>uninitialized_value_construct
 
-`value_type`通过值初始化在指定范围内构造迭代器的对象。
+用指定范围内的值初始化构造迭代器的对象 `value_type`。
 
 ```cpp
 template <class ForwardIterator>
@@ -1721,18 +1721,18 @@ void uninitialized_value_construct(
 
 ### <a name="parameters"></a>参数
 
-*政策*\
+*策略*\
 要使用的执行策略。
 
-*1*\
-一个迭代器, 用于寻址值构造范围内的第一个元素。
+*第一个*\
+一个迭代器，用于寻址值构造范围内的第一个元素。
 
-*时间*\
-一个迭代器, 用于寻址到值构造范围内最后一个元素之后的元素。
+*最后*\
+一个迭代器，用于寻址到值构造范围内最后一个元素之后的元素。
 
 ### <a name="remarks"></a>备注
 
-没有执行策略的版本实际上与相同:
+没有执行策略的版本实际上与相同：
 
 ```cpp
 for (; first != last; ++first)
@@ -1740,17 +1740,17 @@ for (; first != last; ++first)
         typename iterator_traits<ForwardIterator>::value_type();
 ```
 
-如果引发异常, 则将以未指定的顺序销毁以前构造的对象。
+如果引发异常，则将以未指定的顺序销毁以前构造的对象。
 
-具有执行策略的版本具有相同的结果, 但会根据指定的*策略*执行。
+具有执行策略的版本具有相同的结果，但会根据指定的*策略*执行。
 
-如果内存分配失败, `std::bad_alloc`则会引发异常。
+如果内存分配失败，则会引发 `std::bad_alloc` 异常。
 
 这些函数是 c + + 17 中的新增功能。
 
 ## <a name="uninitialized_value_construct_n"></a>uninitialized_value_construct_n
 
-从指定位置开始, 构造迭代器`value_type`的按值初始化指定数量的对象。
+从指定位置开始，从值初始化中构造迭代器 `value_type` 的指定数目的对象。
 
 ```cpp
 template <class ForwardIterator, class Size>
@@ -1767,18 +1767,18 @@ ForwardIterator uninitialized_value_construct_n(
 
 ### <a name="parameters"></a>参数
 
-*政策*\
+*策略*\
 要使用的执行策略。
 
-*1*\
-一个迭代器, 用于寻址要构造的目标范围中的第一个元素。
+*第一个*\
+一个迭代器，用于寻址要构造的目标范围中的第一个元素。
 
-*计*\
+*计数*\
 要构造的目标范围中的元素计数。
 
 ### <a name="remarks"></a>备注
 
-没有执行策略的版本实际上与相同:
+没有执行策略的版本实际上与相同：
 
 ```cpp
 for (; count > 0; (void)++first, --count)
@@ -1787,17 +1787,17 @@ for (; count > 0; (void)++first, --count)
 return first;
 ```
 
-如果引发异常, 则将以未指定的顺序销毁以前构造的对象。
+如果引发异常，则将以未指定的顺序销毁以前构造的对象。
 
-具有执行策略的版本具有相同的结果, 但会根据指定的*策略*执行。
+具有执行策略的版本具有相同的结果，但会根据指定的*策略*执行。
 
-如果内存分配失败, `std::bad_alloc`则会引发异常。
+如果内存分配失败，则会引发 `std::bad_alloc` 异常。
 
 这些函数是 c + + 17 中的新增功能。
 
 ## <a name="uses_allocator_v"></a>uses_allocator_v
 
-用于访问`uses_allocator`模板值的帮助器变量模板。
+用于访问 `uses_allocator` 模板的值的帮助器变量模板。
 
 ```cpp
 template <class T, class Alloc>

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - ctype_byname class
 ms.assetid: a5cec021-a1f8-425f-8757-08e6f064b604
-ms.openlocfilehash: 0b0f33781cc9f1f54661a44a5434c94316432a45
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: dcaaff45fb33155710f788af4ceb657eff97464e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457898"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689737"
 ---
-# <a name="ctypebyname-class"></a>ctype_byname 类
+# <a name="ctype_byname-class"></a>ctype_byname 类
 
-派生模板类描述一个对象，该对象可以充当给定区域设置的 ctype facet ，允许对字符进行分类，并在大小写之间以及本机字符集和区域设置指定的字符集之间进行转换。
+派生类模板描述了一个对象，该对象可充当给定区域设置的 ctype facet，启用字符分类以及区分大小写和本地和区域设置指定字符集之间的字符的转换。
 
 ## <a name="syntax"></a>语法
 
@@ -46,7 +46,7 @@ protected:
 
 **标头：** \<locale>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="see-also"></a>请参阅
 

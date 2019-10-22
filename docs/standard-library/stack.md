@@ -7,27 +7,27 @@ helpviewer_keywords:
 - stack, stack header
 - stack header
 ms.assetid: 89d8999e-c773-46f2-86c1-4b3b5aedb1c1
-ms.openlocfilehash: f6c51d85aa4a9f5516fe08dad163274051d94c13
-ms.sourcegitcommit: b3d19b5f59f3a5d90c24f9f16c73bad4c5eb6944
+ms.openlocfilehash: e8c468da35ae23e5a37c2dfc5ac3fbdf47408c71
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71195832"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686082"
 ---
 # <a name="ltstackgt"></a>&lt;stack&gt;
 
-定义模板类堆栈和两个支持模板。
+定义类模板堆栈和两个支持模板。
 
 ## <a name="requirements"></a>要求
 
 **标头：** \<堆栈>
 
-**命名空间：** std
+**命名空间:** std
 
 > [!NOTE]
-> 堆栈 > 库也使用该`#include <initializer_list>`语句。 \<
+> > 库 \<stack 也使用了 `#include <initializer_list>` 语句。
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="operators"></a>运算符
 
@@ -49,5 +49,5 @@ ms.locfileid: "71195832"
 ## <a name="see-also"></a>请参阅
 
 [头文件引用](../standard-library/cpp-standard-library-header-files.md)\
-[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - hash_set header
 ms.assetid: 6b556967-c808-4869-9b4d-f9e030864435
-ms.openlocfilehash: 559bbff00b8e5204dd4f381abaf9987b4752db48
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 00ca476816213d38b3c50c64e0978e65ac1a5ea1
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452021"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687949"
 ---
-# <a name="lthashsetgt"></a>&lt;hash_set&gt;
+# <a name="lthash_setgt"></a>&lt;hash_set&gt;
 
 > [!NOTE]
 > 此标头已废弃不用。 替代项为 [<unordered_set>](../standard-library/unordered-set.md)。
 
-定义容器模板类 hash_set 和 hash_multiset 及其支持的模板。
+定义容器类模板 hash_set 和 hash_multiset 及其支持的模板。
 
 ## <a name="syntax"></a>语法
 
@@ -44,14 +44,14 @@ ms.locfileid: "68452021"
 
 ### <a name="classes"></a>类
 
-|类|描述|
+|实例|描述|
 |-|-|
-|[hash_compare 类](../standard-library/hash-compare-class.md)|描述一个对象, 任何哈希关联容器 (hash_map、hash_multimap、hash_set 或 hash_multiset) 都可将该对象用作默认`Traits`参数对象, 以对其所包含的元素进行排序和哈希处理。|
+|[hash_compare 类](../standard-library/hash-compare-class.md)|描述一个对象，该对象可由任何哈希关联容器（hash_map、hash_multimap、hash_set 或 hash_multiset）用于默认 `Traits` 参数对象，以对其所包含的元素进行排序和哈希处理。|
 |[hash_set 类](../standard-library/hash-set-class.md)|用于存储和快速检索集合中的数据，此集合中包含的元素值是唯一的并且用作键值。|
 |[hash_multiset 类](../standard-library/hash-multiset-class.md)|用于存储和快速检索集合中的数据，此集合中包含的元素值是唯一的并且用作键值。|
 
 ## <a name="see-also"></a>请参阅
 
 [头文件引用](../standard-library/cpp-standard-library-header-files.md)\
-[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

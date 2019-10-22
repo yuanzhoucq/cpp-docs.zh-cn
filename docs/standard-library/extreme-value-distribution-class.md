@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::extreme_value_distribution [C++], param_type
 - std::extreme_value_distribution [C++], param_type
 ms.assetid: a0cd8370-0a54-4e26-9388-8b9678fb57da
-ms.openlocfilehash: 810a02e620e6b38732daf611d3b44a4a277322a5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a9d83bee5a9186ba35a7cce81600947dd1cf4141
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457762"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688071"
 ---
-# <a name="extremevaluedistribution-class"></a>extreme_value_distribution 类
+# <a name="extreme_value_distribution-class"></a>extreme_value_distribution 类
 
 生成极值分布。
 
@@ -71,15 +71,15 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*RealType*\
-浮点结果类型, 默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*RealType* \
+浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
-*URNG*\
+*URNG* \
 随机数生成器引擎。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
-此模板类描述产生用户指定的浮点类型的值的分布, 或者, 如果未提供任何值, 则根据极端值分布来分布类型**double** 。 下表链接到有关各个成员的文章。
+类模板描述产生用户指定的浮点类型的值的分布，或者，如果未提供任何值 **，则根据**极端值分布来分布该类型。 下表链接到有关各个成员的文章。
 
 ||||
 |-|-|-|
@@ -179,7 +179,7 @@ Distribution for 10 samples:
 
 **标头：** \<random>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="extreme_value_distribution"></a>  extreme_value_distribution::extreme_value_distribution
 
@@ -192,13 +192,13 @@ explicit extreme_value_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-*a_value*\
+*a_value* \
 `a` 分布参数。
 
-*b_value*\
+*b_value* \
 `b` 分布参数。
 
-*parm*\
+*parm* \
 用于构造分布的 `param_type` 结构。
 
 ### <a name="remarks"></a>备注
@@ -227,13 +227,13 @@ struct param_type {
 
 ### <a name="parameters"></a>参数
 
-*a_value*\
+*a_value* \
 `a` 分布参数。
 
-*b_value*\
+*b_value* \
 `b` 分布参数。
 
-*然后*\
+*right* \
 要与它进行比较的 `param_type` 对象。
 
 ### <a name="remarks"></a>备注

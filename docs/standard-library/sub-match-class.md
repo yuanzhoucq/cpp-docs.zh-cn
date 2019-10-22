@@ -20,14 +20,14 @@ helpviewer_keywords:
 - std::sub_match [C++], iterator
 - std::sub_match [C++], value_type
 ms.assetid: 804e2b9e-d16a-4c4c-ac60-024e0b2dd0e8
-ms.openlocfilehash: 07ec6f0dc9daaec19fa97a6220da4d4ea93b254b
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 776dfe67367b932435f76af94880111cad61341d
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447431"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685833"
 ---
-# <a name="submatch-class"></a>sub_match 类
+# <a name="sub_match-class"></a>sub_match 类
 
 介绍子匹配项。
 
@@ -41,12 +41,12 @@ class sub_match
 
 ## <a name="parameters"></a>参数
 
-*BidIt*\
+*BidIt* \
 子匹配项的迭代器类型。
 
 ## <a name="remarks"></a>备注
 
-此模板类描述指定字符序列的对象，该字符序列与调用 [regex_match](../standard-library/regex-functions.md#regex_match) 或 [regex_search](../standard-library/regex-functions.md#regex_search)的捕获组匹配。 [match_results Class](../standard-library/match-results-class.md) 类型的对象保存这些对象的数组，每个数组用于搜索中所用正则表达式中的每个捕获组。
+类模板描述一个对象，该对象指定在对[regex_match](../standard-library/regex-functions.md#regex_match)或[regex_search](../standard-library/regex-functions.md#regex_search)的调用中与捕获组相匹配的字符序列。 [match_results Class](../standard-library/match-results-class.md) 类型的对象保存这些对象的数组，每个数组用于搜索中所用正则表达式中的每个捕获组。
 
 如果捕获组不匹配，则对象的数据成员 `matched` 保持为 false，两个迭代器 `first` 和 `second` （继承自基类 `std::pair`）相等。 如果捕获组匹配，则 `matched` 保持为 true，迭代器 `first` 指向与捕获组匹配的目标序列中第一个字符，迭代器 `second` 与捕获组匹配的目标序列中最后一个字符后紧邻的位置。 请注意，对于长度为零的匹配项，成员 `matched` 保持为 true，两个迭代器将相等并将同时将指向匹配项的位置。
 
@@ -61,7 +61,7 @@ class sub_match
 |类型名称|描述|
 |-|-|
 |[difference_type](#difference_type)|迭代器差异的类型。|
-|[Iterator](#iterator)|迭代器的类型。|
+|[迭代器](#iterator)|迭代器的类型。|
 |[value_type](#value_type)|元素的类型。|
 
 ### <a name="member-functions"></a>成员函数
@@ -77,7 +77,7 @@ class sub_match
 
 |运算符|描述|
 |-|-|
-|[operator basic_string<value_type>](#op_basic_string_lt_value_type_gt)|将子匹配转换为字符串。|
+|[operator basic_string < value_type >](#op_basic_string_lt_value_type_gt)|将子匹配转换为字符串。|
 
 ## <a name="example"></a>示例
 
@@ -135,7 +135,7 @@ compare(sub) == 0
 
 **标头：** \<regex 1>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="compare"></a>  sub_match::compare
 
@@ -149,13 +149,13 @@ int compare(const value_type *ptr) const;
 
 ### <a name="parameters"></a>参数
 
-*然后*\
+*right* \
 要比较的子匹配项。
 
-*字符串*\
+*str* \
 要与之比较的字符串。
 
-*ptr*\
+*ptr* \
 要比较的以 null 结尾的序列。
 
 ### <a name="remarks"></a>备注
@@ -180,7 +180,7 @@ typedef typename iterator_traits<BidIt>::difference_type difference_type;
 
 ### <a name="remarks"></a>备注
 
-typedef 是 `iterator_traits<BidIt>::difference_type`的同义词。
+typedef 是 `iterator_traits<BidIt>::difference_type` 的同义词。
 
 ## <a name="iterator"></a>  sub_match::iterator
 
@@ -216,7 +216,7 @@ bool matched;
 
 ### <a name="remarks"></a>备注
 
-仅当与`*this`关联的捕获组是正则表达式匹配的一部分时, 成员才**为 true** 。
+仅当与 `*this` 关联的捕获组是正则表达式匹配的一部分时，成员才**为 true** 。
 
 ## <a name="op_basic_string_lt_value_type_gt"></a>sub_match::operator basic_string&lt;value_type&gt;
 
@@ -240,7 +240,7 @@ basic_string<value_type> str() const;
 
 ### <a name="remarks"></a>备注
 
-成员函数返回 `basic_string<value_type>(first, second)`。
+此成员函数返回 `basic_string<value_type>(first, second)`。
 
 ## <a name="value_type"></a>  sub_match::value_type
 
@@ -252,7 +252,7 @@ typedef typename iterator_traits<BidIt>::value_type value_type;
 
 ### <a name="remarks"></a>备注
 
-typedef 是 `iterator_traits<BidIt>::value_type`的同义词。
+typedef 是 `iterator_traits<BidIt>::value_type` 的同义词。
 
 ## <a name="see-also"></a>请参阅
 

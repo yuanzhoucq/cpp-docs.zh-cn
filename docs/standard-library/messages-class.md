@@ -22,16 +22,16 @@ helpviewer_keywords:
 - std::messages [C++], get
 - std::messages [C++], open
 ms.assetid: c4c71f40-4f24-48ab-9f7c-daccd8d5bd83
-ms.openlocfilehash: f417c33d5502f8e5bd247936c8a0f93007239924
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 704ee2ce40b4026cc066213181c96cf0f744d152
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449943"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687690"
 ---
 # <a name="messages-class"></a>messages 类
 
-此模板类描述一个对象来充当区域设置 facet，以便从给定区域设置的国际化消息目录中检索本地化消息。
+类模板描述可用作区域设置 facet 的对象，以便从给定区域设置的国际化消息目录中检索本地化消息。
 
 目前，虽然已实现消息类，但没有任何消息。
 
@@ -44,7 +44,7 @@ class messages : public messages_base;
 
 ### <a name="parameters"></a>参数
 
-*CharType*\
+*CharType* \
 在程序中用于对区域设置中的字符进行编码的类型。
 
 ## <a name="remarks"></a>备注
@@ -81,7 +81,7 @@ class messages : public messages_base;
 
 **标头：** \<locale>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="char_type"></a>messages::char_type
 
@@ -105,7 +105,7 @@ void close(catalog _Catval) const;
 
 ### <a name="parameters"></a>参数
 
-*_Catval*\
+*_Catval* \
 要关闭的目录。
 
 ### <a name="remarks"></a>备注
@@ -122,12 +122,12 @@ virtual void do_close(catalog _Catval) const;
 
 ### <a name="parameters"></a>参数
 
-*_Catval*\
+*_Catval* \
 要关闭的目录。
 
 ### <a name="remarks"></a>备注
 
-受保护的成员函数将关闭消息目录 *_Catval*, 此消息必须已由先前对[do_open](#do_open)的调用打开。
+受保护的成员函数将关闭消息目录 *_Catval*，此消息必须已由先前对[do_open](#do_open)的调用打开。
 
 必须从以前打开的且未关闭的目录获取 *_Catval*。
 
@@ -149,16 +149,16 @@ virtual string_type do_get(
 
 ### <a name="parameters"></a>参数
 
-*_Catval*\
+*_Catval* \
 指定要搜索的消息目录的标识值。
 
 *_ 设置*\
 用于在消息目录中查找消息的第一个标识。
 
-*_Message*\
+*_Message* \
 用于在消息目录中查找消息的第二个标识。
 
-*_Dfault*\
+*_Dfault* \
 失败时返回的字符串。
 
 ### <a name="return-value"></a>返回值
@@ -167,7 +167,7 @@ virtual string_type do_get(
 
 ### <a name="remarks"></a>备注
 
-受保护的成员函数尝试从消息目录 *_Catval*获取消息序列。 在此过程中, 它可以使用 *_ 设置*、 *_Message*和 *_Dfault* 。
+受保护的成员函数尝试从消息目录 *_Catval*获取消息序列。 在此过程中，它可以使用 *_ 设置*、 *_Message*和 *_Dfault* 。
 
 ### <a name="example"></a>示例
 
@@ -185,10 +185,10 @@ virtual catalog do_open(
 
 ### <a name="parameters"></a>参数
 
-*_Catname*\
+*_Catname* \
 要搜索的目录的名称。
 
-*_Loc*\
+*_Loc* \
 目录中要搜索的区域设置。
 
 ### <a name="return-value"></a>返回值
@@ -197,7 +197,7 @@ virtual catalog do_open(
 
 ### <a name="remarks"></a>备注
 
-受保护的成员函数尝试打开名称为 *_Catname*的消息目录。 在此过程中, 它可能会使用区域设置 *_Loc*
+受保护的成员函数尝试打开名称为 *_Catname*的消息目录。 在此过程中，它可能会使用区域设置 *_Loc*
 
 返回值应用作稍后对 [close](#close) 调用时的自变量。
 
@@ -219,16 +219,16 @@ string_type get(
 
 ### <a name="parameters"></a>参数
 
-*_Catval*\
+*_Catval* \
 指定要搜索的消息目录的标识值。
 
 *_ 设置*\
 用于在消息目录中查找消息的第一个标识。
 
-*_Message*\
+*_Message* \
 用于在消息目录中查找消息的第二个标识。
 
-*_Dfault*\
+*_Dfault* \
 失败时返回的字符串。
 
 ### <a name="return-value"></a>返回值
@@ -254,21 +254,21 @@ protected: messages(
 
 ### <a name="parameters"></a>参数
 
-*_Refs*\
+*_Refs* \
 用于指定对象的内存管理类型的整数值。
 
-*_Locname*\
+*_Locname* \
 区域设置的名称。
 
 ### <a name="remarks"></a>备注
 
-*_Refs*参数的可能值及其重要性为:
+*_Refs*参数的可能值及其重要性为：
 
-- 0对象的生存期由包含该对象的区域设置管理。
+- 0：对象的生存期由包含该对象的区域设置管理。
 
-- 1:必须手动管理对象的生存期。
+- 1：必须手动管理对象的生存期。
 
-- \>2未定义这些值。
+- \> 1：未定义这些值。
 
 由于该析构函数受到保护，可能没有直接的示例。
 
@@ -286,10 +286,10 @@ catalog open(
 
 ### <a name="parameters"></a>参数
 
-*_Catname*\
+*_Catname* \
 要搜索的目录的名称。
 
-*_Loc*\
+*_Loc* \
 目录中要搜索的区域设置。
 
 ### <a name="return-value"></a>返回值
@@ -310,7 +310,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>备注
 
-此类型描述 [basic_string](../standard-library/basic-string-class.md) 模板类的专用化，该模板类的对象可存储消息序列的副本。
+该类型描述类模板[basic_string](../standard-library/basic-string-class.md)的专用化，其对象可以存储消息序列的副本。
 
 ## <a name="see-also"></a>请参阅
 

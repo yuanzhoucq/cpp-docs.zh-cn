@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - allocators header
 ms.assetid: 4393a607-4df8-4278-bbb2-c8ec52e60b83
-ms.openlocfilehash: 5de872080bc02f4654f53d94928b5e44dbc36816
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3619f3810f167fef291ad3def4a2b94f9a6b9b1a
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453698"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688477"
 ---
 # <a name="ltallocatorsgt"></a>&lt;allocators&gt;
 
@@ -33,7 +33,7 @@ C++ 标准库中基于节点的容器（std::list、std::set、std::multiset、s
 
 在并非基于节点的容器中使用时（如 C++ 标准库容器 std::vector std::deque 和 std::basic_string），分配器模板将正确工作，但可能不会对默认分配器提供任何性能改进。
 
-分配器模板类描述一个对象，用于管理所指定类型的对象数组的存储分配和释放。 分配器对象由 C++ 标准库中的多个分配器模板类所使用。
+分配器是一个类模板，用于描述一个对象，该对象用于管理指定类型的对象和对象数组的存储分配和释放。 分配器对象由C++标准库中的多个容器类模板使用。
 
 分配器是此类型的所有模板：
 
@@ -42,7 +42,7 @@ template<class Type>
 class allocator;
 ```
 
-其中模板参数 `Type` 是由分配器实例所管理的类型。 C++ 标准库提供默认分配器和在 [\<memory>](../standard-library/memory.md) 中定义的模板类 [allocator](../standard-library/allocator-class.md)。 \<allocators> 标头提供以下分配器：
+其中模板参数 `Type` 是由分配器实例所管理的类型。 C++标准库提供了默认分配器（类模板[分配](../standard-library/allocator-class.md)器），该分配是在[\<memory >](../standard-library/memory.md)中定义的。 \<allocators> 标头提供以下分配器：
 
 - [allocator_newdel](../standard-library/allocator-newdel-class.md)
 
@@ -77,7 +77,7 @@ std::list<int, alloc<int> > _List1;
 
 _Lst1 使用 `allocator_chunklist` 和 [sync_per_thread](../standard-library/sync-per-thread-class.md) 同步筛选器来分配节点。
 
-块分配器是一个缓存或筛选器。 缓存是采用一种参数类型为 std::size_t 的模板类。 它定义分配和释放单个大小内存块的块分配器。 它必须使用运算符**new**获取内存, 但不需要对每个块单独调用 operator **new** 。 例如，从较大块或缓存释放分配块进行子分配，以用于后续的重新分配。
+块分配器是一个缓存或筛选器。 缓存是采用一个类型为 std：： size_t 的参数的类模板。 它定义分配和释放单个大小内存块的块分配器。 它必须使用运算符**new**获取内存，但不需要对每个块单独调用 operator **new** 。 例如，从较大块或缓存释放分配块进行子分配，以用于后续的重新分配。
 
 在不能编译重新绑定的编译器中，模板实例化时所使用的 std::size_t 参数的值并不一定是传递给缓存的成员函数 allocate 和 deallocate 的 argument _Sz 值。
 
@@ -121,7 +121,7 @@ _Lst1 使用 `allocator_chunklist` 和 [sync_per_thread](../standard-library/syn
 
 |宏|描述|
 |-|-|
-|[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)|生成一个分配器模板类。|
+|[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)|生成分配器类模板。|
 |[CACHE_CHUNKLIST](../standard-library/allocators-functions.md#cache_chunklist)|生成 `stdext::allocators::cache_chunklist<sizeof(Type)>`。|
 |[CACHE_FREELIST](../standard-library/allocators-functions.md#cache_freelist)|生成 `stdext::allocators::cache_freelist<sizeof(Type), max>`。|
 |[CACHE_SUBALLOC](../standard-library/allocators-functions.md#cache_suballoc)|生成 `stdext::allocators::cache_suballoc<sizeof(Type)>`。|
@@ -136,12 +136,12 @@ _Lst1 使用 `allocator_chunklist` 和 [sync_per_thread](../standard-library/syn
 
 ### <a name="classes"></a>类
 
-|类|描述|
+|实例|描述|
 |-|-|
 |[allocator_base](../standard-library/allocator-base-class.md)|定义基类和常用函数需要从同步筛选器创建一个用户定义的分配器。|
 |[allocator_chunklist](../standard-library/allocator-chunklist-class.md)|描述一个对象，用于管理使用缓存类型为 [cache_chunklist](../standard-library/cache-chunklist-class.md) 的对象的存储分配和释放。|
 |[allocator_fixed_size](../standard-library/allocator-fixed-size-class.md)|描述一个对象，用于管理由 [max_fixed_size](../standard-library/max-fixed-size-class.md) 所管理的长度的使用缓存类型 [cache_suballoc](../standard-library/cache-freelist-class.md) 的类型 `Type` 的对象的存储分配和释放。|
-|[allocator_newdel](../standard-library/allocator-newdel-class.md)|实现一个分配器, 该分配器使用**运算符 delete**来释放内存块, 使用**new 运算符**分配内存块。|
+|[allocator_newdel](../standard-library/allocator-newdel-class.md)|实现一个分配器，该分配器使用**运算符 delete**来释放内存块，使用**new 运算符**分配内存块。|
 |[allocator_suballoc](../standard-library/allocator-suballoc-class.md)|描述一个对象，用于管理使用类型 [cache_suballoc](../standard-library/cache-suballoc-class.md) 的缓存类型的类型 `Type` 的对象的存储分配和释放。|
 |[allocator_unbounded](../standard-library/allocator-unbounded-class.md)|描述一个对象，用于管理使用缓存类型为 [cache_freelist](../standard-library/cache-freelist-class.md) 的对象类型 `Type` 的存储分配和释放，其长度由 [max_unbounded](../standard-library/max-unbounded-class.md) 管理。|
 |[allocator_variable_size](../standard-library/allocator-variable-size-class.md)|描述一个对象，用于管理使用缓存类型为 [cache_freelist](../standard-library/cache-freelist-class.md) 的对象类型 `Type` 的存储分配和释放，其长度由 [max_variable_size](../standard-library/max-variable-size-class.md) 管理。|
@@ -153,7 +153,7 @@ _Lst1 使用 `allocator_chunklist` 和 [sync_per_thread](../standard-library/syn
 |[max_none](../standard-library/max-none-class.md)|描述 max 类对象，该对象将 [freelist](../standard-library/freelist-class.md) 对象限制为零的最大长度。|
 |[max_unbounded](../standard-library/max-unbounded-class.md)|描述 max 类对象，该对象不限制 [freelist](../standard-library/freelist-class.md) 对象的最大长度。|
 |[max_variable_size](../standard-library/max-variable-size-class.md)|描述 max 类对象，该对象将 [freelist](../standard-library/freelist-class.md) 对象限制为与已分配的内存块数大致成比例的最大长度。|
-|[rts_alloc](../standard-library/rts-alloc-class.md)|rts_alloc 模板类描述一种[筛选器](../standard-library/allocators-header.md)，它具有缓存实例数组，并确定运行时（而非编译时）用于分配和解除分配的实例。|
+|[rts_alloc](../standard-library/rts-alloc-class.md)|Rts_alloc 类模板描述了一个[筛选器，该筛选器](../standard-library/allocators-header.md)保存缓存实例的数组，并确定在运行时（而非编译时）用于分配和解除分配的实例。|
 |[sync_none](../standard-library/sync-none-class.md)|描述不提供同步的同步筛选器。|
 |[sync_per_container](../standard-library/sync-per-container-class.md)|描述为每个筛选器对象提供单独的缓存对象的同步筛选。|
 |[sync_per_thread](../standard-library/sync-per-thread-class.md)|描述为每个线程提供单独的缓存对象的同步筛选器。|

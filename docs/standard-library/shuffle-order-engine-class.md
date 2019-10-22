@@ -15,14 +15,14 @@ helpviewer_keywords:
 - std::shuffle_order_engine [C++], base_type
 - std::shuffle_order_engine [C++], seed
 ms.assetid: 0bcd1fb0-44d7-4e59-bb1b-4a9b673a960d
-ms.openlocfilehash: 972ba83afb5478cd89314817ba823b8d5657c9c8
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d72cfaae2e7f6768a68439fbc30aa5ab0d38f270
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450415"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686421"
 ---
-# <a name="shuffleorderengine-class"></a>shuffle_order_engine 类
+# <a name="shuffle_order_engine-class"></a>shuffle_order_engine 类
 
 通过对从其基引擎中返回的值进行重新排序，生成随机序列。
 
@@ -35,13 +35,13 @@ class shuffle_order_engine;
 
 ### <a name="parameters"></a>参数
 
-*搜索引擎优化*\
+*引擎*\
 基引擎类型。
 
-*温度*\
+*K* \
 **表大小**。 缓冲区（表）中的元素数。 **前提条件**：`0 < K`
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ||||
 |-|-|-|
@@ -52,13 +52,13 @@ class shuffle_order_engine;
 
 ## <a name="remarks"></a>备注
 
-此模板类描述了通过对其基引擎返回的值进行重新排序来产生值的引擎适配器。 每个构造函数使用基引擎返回的*K*值填充内部表, 并在请求值时从表中选择一个随机元素。
+此类模板介绍了通过对其基引擎返回的值进行重新排序来产生值的*引擎适配器*。 每个构造函数使用基引擎返回的*K*值填充内部表，并在请求值时从表中选择一个随机元素。
 
 ## <a name="requirements"></a>要求
 
 **标头：** \<random>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="see-also"></a>请参阅
 

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - indirect_array class
 ms.assetid: 10e1eaea-ba5a-405c-a25e-7bdd3eee7fc7
-ms.openlocfilehash: 5db5f2ce60038267b70ae8e77d9dd929d972af6a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6be0c5153cbc94d09b414fc9e14fa498c7a4cfa7
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456332"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687917"
 ---
-# <a name="indirectarray-class"></a>indirect_array 类
+# <a name="indirect_array-class"></a>indirect_array 类
 
-一个内部的辅助模板类，该类通过提供子集阵列（通过指定父级 valarray 的索引子集进行定义）之间的操作来支持作为 valarray 的子集的对象。
+一个内部的辅助类模板，它通过在通过指定父级 valarray 的索引子集定义的子集数组间提供操作来支持作为 valarray 子集的对象。
 
 ## <a name="syntax"></a>语法
 
 ## <a name="remarks"></a>备注
 
-此类描述一个`va`对象, 该对象存储对类[valarray](../standard-library/valarray-class.md) **\<类型**的对象的引用 > 以及类的对象`xa` , 该类`valarray<size_t>`描述要从中进行选择的元素的序列。`valarray<Type>`对象。
+此类描述一个对象，该对象存储对类[valarray](../standard-library/valarray-class.md)  **\<Type >** 的对象 `va`，以及类 `valarray<size_t>` 的对象 `xa`，该类描述要从 `valarray<Type>` 对象中选择的元素的序列。
 
-仅通过编写`indirect_array<Type>`窗体`va[xa]`的表达式来构造对象。 类 indirect_array 的成员函数的行为类似于为定义的`valarray<Type>`对应函数签名, 只不过只影响选定元素的序列。
+仅通过编写 `va[xa]` 形式的表达式来构造 `indirect_array<Type>` 的对象。 类 indirect_array 的成员函数的行为类似于为 `valarray<Type>` 定义的相应函数签名，只不过只影响选定元素的序列。
 
-序列由 xa 组成 **。** [size](../standard-library/valarray-class.md#size)元素, 其中元素`I`成为中`va`的索引 xa `I`[]。
+序列由 xa 组成 **。** [size](../standard-library/valarray-class.md#size)元素，其中元素 `I` 成为 `va` 内的索引**xa**[`I`]。
 
 ## <a name="example"></a>示例:
 
@@ -77,7 +77,7 @@ The modified operand valarray is:  (0 -1 10 -1 10 -1 10 -1 8 -1).
 
 **标头：** \<valarray>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="see-also"></a>请参阅
 

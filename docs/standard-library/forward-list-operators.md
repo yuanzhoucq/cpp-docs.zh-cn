@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operatoroperator&gt=; (forward_list)
 - std::operatoroperator&lt; (forward_list)
 - std::operatoroperator&lt;= (forward_list)
-ms.openlocfilehash: 64a49273cafd72158f176ee34ec271557ebee097
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 1ddfb56c7ff68ec10c7bb56af3495e4042acb83c
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240663"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689689"
 ---
-# <a name="ltforwardlistgt-operators"></a>&lt;forward_list&gt; 运算符
+# <a name="ltforward_listgt-operators"></a>&lt;forward_list&gt; 运算符
 
-## <a name="op_eq_eq"></a> 运算符 = =
+## <a name="op_eq_eq"></a>operator = =
 
 测试运算符左侧的转发列表对象是否等于右侧的转发列表对象。
 
@@ -37,17 +37,17 @@ bool operator==(
 
 ### <a name="parameters"></a>参数
 
-*左侧*\
+*左*\
 一个 `forward_list` 类型的对象。
 
-*右侧*\
+*right* \
 一个 `forward_list` 类型的对象。
 
 ### <a name="remarks"></a>备注
 
-该模板函数重载 `operator==` 以比较模板类 `forward_list` 的两个对象。 该函数返回 `distance(left.begin(), end()) == distance(right.begin(),right.end()) && equal(left. begin(),left. end(),right.begin())`。
+此模板函数重载 `operator==` 比较类模板 `forward_list` 的两个对象。 该函数返回 `distance(left.begin(), end()) == distance(right.begin(),right.end()) && equal(left. begin(),left. end(),right.begin())`。
 
-## <a name="op_neq"></a> 运算符 ！ =
+## <a name="op_neq"></a>operator！ =
 
 测试运算符左侧的转发列表对象是否不等于右侧的转发列表对象。
 
@@ -59,10 +59,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>参数
 
-*左侧*\
+*左*\
 一个 `forward_list` 类型的对象。
 
-*右侧*\
+*right* \
 一个 `forward_list` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -85,10 +85,10 @@ bool operator<(
 
 ### <a name="parameters"></a>参数
 
-*左侧*\
+*左*\
 一个 `forward_list` 类型的对象。
 
-*右侧*\
+*right* \
 一个 `forward_list` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -97,9 +97,9 @@ bool operator<(
 
 ### <a name="remarks"></a>备注
 
-该模板函数重载 `operator<` 以比较模板类 `forward_list` 的两个对象。 该函数返回 `lexicographical_compare(lhs. begin(), lhs. end(), rhs.begin(), rhs.end())`。
+此模板函数重载 `operator<` 比较类模板 `forward_list` 的两个对象。 该函数返回 `lexicographical_compare(lhs. begin(), lhs. end(), rhs.begin(), rhs.end())`。
 
-## <a name="op_lt_eq"></a> 运算符&lt;=
+## <a name="op_lt_eq"></a>操作员 &lt; =
 
 测试运算符左侧的转发列表对象是否小于或等于右侧的转发列表对象。
 
@@ -111,10 +111,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>参数
 
-*左侧*\
+*左*\
 一个 `forward_list` 类型的对象。
 
-*右侧*\
+*right* \
 一个 `forward_list` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -137,10 +137,10 @@ bool operator>(
 
 ### <a name="parameters"></a>参数
 
-*左侧*\
+*左*\
 一个 `forward_list` 类型的对象。
 
-*右侧*\
+*right* \
 一个 `forward_list` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -151,7 +151,7 @@ bool operator>(
 
 此模板函数返回 `right < left`。
 
-## <a name="op_gt_eq"></a> 运算符&gt;=
+## <a name="op_gt_eq"></a>操作员 &gt; =
 
 测试运算符左侧的转发列表对象是否大于或等于右侧的转发列表对象。
 
@@ -163,15 +163,15 @@ bool operator>=(
 
 ### <a name="parameters"></a>参数
 
-*左侧*\
+*左*\
 一个 `forward_list` 类型的对象。
 
-*右侧*\
+*right* \
 一个 `forward_list` 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-**true**如果运算符左侧的转发列表大于或等于运算符右侧的转发列表; 否则为**false**。
+如果运算符左侧的转发列表大于或等于运算符右侧的转发列表，**则为 true** ; 否则为。否则**为 false**。
 
 ### <a name="remarks"></a>备注
 

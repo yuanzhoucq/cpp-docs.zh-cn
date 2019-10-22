@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::weibull_distribution [C++], param_type
 - std::weibull_distribution [C++], param_type
 ms.assetid: f20b49d3-1b9a-41af-8db4-baf800eaa02b
-ms.openlocfilehash: f3c5a2a3d8e4b5f2c8a13ef7525b29683b94acc4
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2c1e53c529be8c589f51b9011cee42e5f6f1165b
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459615"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688516"
 ---
-# <a name="weibulldistribution-class"></a>weibull_distribution 类
+# <a name="weibull_distribution-class"></a>weibull_distribution 类
 
 生成韦伯分布。
 
@@ -70,12 +70,12 @@ class weibull_distribution
 
 ### <a name="parameters"></a>参数
 
-*RealType*\
-浮点结果类型, 默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*RealType* \
+浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
-此模板类描述了生成用户指定的浮点类型的值的分布, 或者 **, 如果未**提供任何值, 则根据韦伯分布来分布该类型。 下表链接到有关各个成员的文章。
+类模板描述产生用户指定的浮点类型的值的分布，或者，如果未提供任何值 **，则根据**韦伯分布来分发。 下表链接到有关各个成员的文章。
 
 ||||
 |-|-|-|
@@ -92,7 +92,7 @@ class weibull_distribution
 
 `operator()` 成员函数将根据 URNG 引擎，从当前参数包或指定参数包返回下一个生成的值。
 
-若要深入了解分布类及其成员，请参阅 [\<random>](../standard-library/random.md)。
+有关分布类及其成员的详细信息，请参阅 [\<random>](../standard-library/random.md)。
 
 有关韦伯分布的详细信息，请参阅 Wolfram MathWorld 文章[韦伯分布](http://mathworld.wolfram.com/WeibullDistribution.html)。
 
@@ -211,7 +211,7 @@ Distribution for 10 samples:
 
 **标头：** \<random>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="weibull_distribution"></a>weibull_distribution::weibull_distribution
 
@@ -222,18 +222,18 @@ explicit weibull_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>参数
 
-*的*\
+*一个*\
 `a` 分布参数。
 
-*b*\
+*b* \
 `b` 分布参数。
 
-*parm*\
+*parm* \
 用于构造分布的 `param_type` 结构。
 
 ### <a name="remarks"></a>备注
 
-**前置条件：** `0.0 < a` 和 `0.0 < b`
+**前提条件：** `0.0 < a` 和 `0.0 < b`
 
 第一个构造函数将构造一个对象，该对象存储的 `a` 值保留值 a，并且存储的 `b` 值保留值 b。
 
@@ -257,18 +257,18 @@ struct param_type {
 
 ### <a name="parameters"></a>参数
 
-*的*\
+*一个*\
 `a` 分布参数。
 
-*b*\
+*b* \
 `b` 分布参数。
 
-*然后*\
+*right* \
 要与它进行比较的 `param_type` 对象。
 
 ### <a name="remarks"></a>备注
 
-**前置条件：** `0.0 < a` 和 `0.0 < b`
+**前提条件：** `0.0 < a` 和 `0.0 < b`
 
 在实例化时，可将此结构传递给分布的类构造函数、传递给 `param()` 成员函数以设置现有分布的存储参数，并传递给 `operator()` 以代替存储参数使用。
 

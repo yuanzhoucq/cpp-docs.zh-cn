@@ -16,14 +16,14 @@ helpviewer_keywords:
 - std::regex_iterator::operator->
 - std::regex_iterator::operator++
 ms.assetid: 0cfd8fd0-5a95-4f3c-bf8e-6ef028c423d3
-ms.openlocfilehash: ccf806a7918100c58e04ab403f3a8b895e8dc256
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: fb609df2bf52873dac3cddaa6b12f82ea1b53237
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451563"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689089"
 ---
-# <a name="regexiterator-class"></a>regex_iterator 类
+# <a name="regex_iterator-class"></a>regex_iterator 类
 
 匹配项的迭代器类。
 
@@ -38,18 +38,18 @@ class regex_iterator
 
 ## <a name="parameters"></a>参数
 
-*BidIt*\
+*BidIt* \
 子匹配项的迭代器类型。
 
-*Elem*\
+*Elem* \
 要匹配的元素的类型。
 
-*RXtraits*\
+*RXtraits* \
 元素的特征类。
 
 ## <a name="remarks"></a>备注
 
-此模板类描述常量前向迭代器对象。 它将其正则表达式对象 `match_results<BidIt>` 重复应用到迭代器范围 `*pregex` 定义的字符序列，以提取 `[begin, end)`类型的对象。
+类模板描述常量向前迭代器对象。 它将其正则表达式对象 `match_results<BidIt>` 重复应用到迭代器范围 `*pregex` 定义的字符序列，以提取 `[begin, end)`类型的对象。
 
 ### <a name="constructors"></a>构造函数
 
@@ -63,7 +63,7 @@ class regex_iterator
 |-|-|
 |[difference_type](#difference_type)|迭代器差异的类型。|
 |[iterator_category](#iterator_category)|迭代器类别的类型。|
-|[pointer](#pointer)|指向一个匹配的指针的类型。|
+|[指针](#pointer)|指向一个匹配的指针的类型。|
 |[reference](#reference)|对匹配项的引用的类型。|
 |[regex_type](#regex_type)|要匹配的正则表达式类型。|
 |[value_type](#value_type)|匹配的类型。|
@@ -82,7 +82,7 @@ class regex_iterator
 
 **标头：** \<regex 1>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="examples"></a>示例
 
@@ -147,7 +147,7 @@ typedef std::ptrdiff_t difference_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是 `std::ptrdiff_t` 的同义词。
+该类型是 `std::ptrdiff_t`的同义词。
 
 ## <a name="iterator_category"></a>  regex_iterator::iterator_category
 
@@ -159,7 +159,7 @@ typedef std::forward_iterator_tag iterator_category;
 
 ### <a name="remarks"></a>备注
 
-该类型是 `std::forward_iterator_tag` 的同义词。
+该类型是 `std::forward_iterator_tag`的同义词。
 
 ## <a name="op_neq"></a>  regex_iterator::operator!=
 
@@ -171,12 +171,12 @@ bool operator!=(const regex_iterator& right);
 
 ### <a name="parameters"></a>参数
 
-*然后*\
+*right* \
 要进行比较的迭代器。
 
 ### <a name="remarks"></a>备注
 
-成员函数返回 `!(*this == right)`。
+此成员函数返回 `!(*this == right)`。
 
 ## <a name="op_star"></a>regex_iterator::operator*
 
@@ -215,12 +215,12 @@ bool operator==(const regex_iterator& right);
 
 ### <a name="parameters"></a>参数
 
-*然后*\
+*right* \
 要进行比较的迭代器。
 
 ### <a name="remarks"></a>备注
 
-`*this`如果和*right*均为序列末尾`begin == right.begin`迭代`pregex == right.pregex`器, `end == right.end`或者两者都不是序列结尾迭代器、、和`flags == right.flags`, 则该成员函数返回 true。 否则，返回 false。
+如果 `*this` 和*right*均为序列末迭代器，或者两者都不是序列结尾迭代器和 `begin == right.begin`、`end == right.end`、`pregex == right.pregex` 和 `flags == right.flags`，则成员函数返回 true。 否则，返回 false。
 
 ## <a name="op_arrow"></a>  regex_iterator::operator-&gt;
 
@@ -244,7 +244,7 @@ typedef match_results<BidIt> *pointer;
 
 ### <a name="remarks"></a>备注
 
-类型是 `match_results<BidIt>*` 的同义词，其中 `BidIt` 是模板参数。
+该类型是 `match_results<BidIt>*`的同义词，其中 `BidIt` 是模板参数。
 
 ## <a name="reference"></a>  regex_iterator::reference
 
@@ -256,7 +256,7 @@ typedef match_results<BidIt>& reference;
 
 ### <a name="remarks"></a>备注
 
-类型是 `match_results<BidIt>&` 的同义词，其中 `BidIt` 是模板参数。
+该类型是 `match_results<BidIt>&`的同义词，其中 `BidIt` 是模板参数。
 
 ## <a name="regex_iterator"></a>  regex_iterator::regex_iterator
 
@@ -273,21 +273,21 @@ regex_iterator(BidIt first,
 
 ### <a name="parameters"></a>参数
 
-*1*\
+*第一个*\
 要匹配的序列的开头。
 
-*时间*\
+*最后*\
 要匹配的序列的结尾。
 
-*&* \
+*重新*\
 匹配项正则表达式。
 
-*果*\
+*f* \
 匹配标志。
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数将构造序列末迭代器。 `begin`第二个构造函数将*首先*初始化存储的值、存储`end`的值和*最后一个*值`pregex` , `&re`并`flags`将存储的值与*f*一起存储。 然后，它调用 `regex_search(begin, end, match, *pregex, flags)`。 如果搜索失败，则构造函数会将对象设置为序列末迭代器。
+第一个构造函数将构造序列末迭代器。 第二个构造函数初始化存储的值 `begin`*首先*，存储的值 `end`，*最后*是，存储的值 `pregex` 与 `&re`，存储的值 `flags` *f*。 然后，它调用 `regex_search(begin, end, match, *pregex, flags)`。 如果搜索失败，则构造函数会将对象设置为序列末迭代器。
 
 ## <a name="regex_type"></a>  regex_iterator::regex_type
 
@@ -299,7 +299,7 @@ typedef basic_regex<Elem, RXtraits> regex_type;
 
 ### <a name="remarks"></a>备注
 
-typedef 是 `basic_regex<Elem, RXtraits>`的同义词。
+typedef 是 `basic_regex<Elem, RXtraits>` 的同义词。
 
 ## <a name="value_type"></a>  regex_iterator::value_type
 
@@ -311,16 +311,16 @@ typedef match_results<BidIt> value_type;
 
 ### <a name="remarks"></a>备注
 
-类型是 `match_results<BidIt>` 的同义词，其中 `BidIt` 是模板参数。
+该类型是 `match_results<BidIt>`的同义词，其中 `BidIt` 是模板参数。
 
 ## <a name="see-also"></a>请参阅
 
 [\<regex>](../standard-library/regex.md)\
-[regex_constants 类](../standard-library/regex-constants-class.md)\
-[regex_error 类](../standard-library/regex-error-class.md)\
+[Regex_constants 类](../standard-library/regex-constants-class.md)\
+[Regex_error 类](../standard-library/regex-error-class.md)\
 [\<regex > 函数](../standard-library/regex-functions.md)\
-[regex_iterator 类](../standard-library/regex-iterator-class.md)\
+[Regex_iterator 类](../standard-library/regex-iterator-class.md)\
 [\<regex > 运算符](../standard-library/regex-operators.md)\
-[regex_token_iterator 类](../standard-library/regex-token-iterator-class.md)\
-[regex_traits 类](../standard-library/regex-traits-class.md)\
+[Regex_token_iterator 类](../standard-library/regex-token-iterator-class.md)\
+[Regex_traits 类](../standard-library/regex-traits-class.md)\
 [\<regex> typedefs](../standard-library/regex-typedefs.md)

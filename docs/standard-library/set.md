@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - set header
 ms.assetid: 43cb1ab2-6383-48cf-8bdc-2b96d7203596
-ms.openlocfilehash: b947d9ba268c9b4028415216e4ad0813f2d71947
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: fed6219c483bdade0132d5faae8b6597bcc5d732
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450526"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686458"
 ---
 # <a name="ltsetgt"></a>&lt;set&gt;
 
-定义容器模板类 set 和 multiset 及其支持的模板。
+定义容器类模板集和多集及其支持的模板。
 
 ## <a name="requirements"></a>要求
 
 **标头：** \<set>
 
-**命名空间：** std
+**命名空间:** std
 
 > [!NOTE]
-> 集 > 库也使用该`#include <initializer_list>`语句。 \<
+> > 库 \<set 也使用了 `#include <initializer_list>` 语句。
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="operators"></a>运算符
 
@@ -55,5 +55,5 @@ ms.locfileid: "68450526"
 ## <a name="see-also"></a>请参阅
 
 [头文件引用](../standard-library/cpp-standard-library-header-files.md)\
-[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

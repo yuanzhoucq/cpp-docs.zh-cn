@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - complex<long double> function
 ms.assetid: 37591991-b385-46e9-b727-d534dbc10432
-ms.openlocfilehash: 280fb4c15219b11d2325ff37a296e133810bf2b5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: afd85321ee443359f17850384b06b854dfe89985
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449481"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688234"
 ---
 # <a name="complexltlong-doublegt"></a>complex&lt;long double&gt;
 
-此显式专用化的模板类描述一个对象, 该对象存储两个类型为**long double**的有序对象对, 第一个对象表示复数的实部, 第二个对象表示复数的虚部。
+此显式专用化的类模板描述了一个对象，该对象存储两个类型为**long double**的对象，第一个对象表示复数的实部，第二个对象表示复数的虚部。
 
 ## <a name="syntax"></a>语法
 
@@ -32,20 +32,20 @@ public:
 complex(
     constexpr complex<long double>& complexNum);
 
-// rest same as template class complex
+// rest same as class template complex
 };
 ```
 
 ### <a name="parameters"></a>参数
 
-*_RealVal*\
+*_RealVal* \
 正在构造的复数实部的 **long double** 类型值。
 
-*_ImagVal*\
+*_ImagVal* \
 正在构造的复数的虚部的**long double**类型值。
 
-*complexNum*\
-类型为**double**或**float**的复数, 其实部和虚部用于初始化正在构造的**long double**类型的复数。
+*complexNum* \
+类型为**double**或**float**的复数，其实部和虚部用于初始化正在构造的**long double**类型的复数。
 
 ## <a name="return-value"></a>返回值
 
@@ -53,11 +53,11 @@ complex(
 
 ## <a name="remarks"></a>备注
 
-模板类`complex`的显式专用化类型为**long double**的复杂类与模板类仅在它所定义的构造函数中不同。 **长度**为**float**的转换可以是隐式的, 但从**double**到**long double**的转换必须是**显式**的。 使用**显式**转换可排除使用赋值语法启动类型转换。
+类模板 `complex` 类模板的显式专用化只与它所定义的构造函数中的类**模板不同。** **长度**为**float**的转换可以是隐式的，但从**double**到**long double**的转换必须是**显式**的。 使用**显式**转换可排除使用赋值语法启动类型转换。
 
-有关模板类`complex`及其成员的详细信息, 请参阅[complex 类](../standard-library/complex-class.md)。
+有关类模板 `complex` 及其成员的详细信息，请参阅[Complex 类](../standard-library/complex-class.md)。
 
-**Microsoft 专用**:**长双精度**类型和**双精度**类型具有相同的表示形式, 但它们是不同的类型。 有关详细信息, 请参阅[基本类型](../cpp/fundamental-types-cpp.md)。
+**Microsoft 专用**：**长双精度**类型与**双精度**类型具有相同的表示形式，但它们是不同的类型。 有关详细信息，请参阅[基本类型](../cpp/fundamental-types-cpp.md)。
 
 ## <a name="example"></a>示例
 
@@ -119,7 +119,7 @@ arg( c3 ) = 0.927295 radians, which is 53.1301 degrees.
 
 **标头**：\<complex>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="see-also"></a>请参阅
 

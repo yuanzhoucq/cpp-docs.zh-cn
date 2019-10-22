@@ -1,20 +1,20 @@
 ---
-title: '&lt;memory_resource&gt;'
+title: '&lt;memory_resource &gt;'
 ms.date: 04/04/2019
 f1_keywords:
 - <memory_resource>
 helpviewer_keywords:
 - memory_resource header
-ms.openlocfilehash: d4b25c6ee575191f1e17b0202d33298e2e9e67f0
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 752396bb06b292ce29b7c6cd292287955b6066a7
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451906"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687714"
 ---
-# <a name="ltmemoryresourcegt"></a>&lt;memory_resource&gt;
+# <a name="ltmemory_resourcegt"></a>&lt;memory_resource &gt;
 
-定义容器模板类 memory_resource 及其支持的模板。
+定义容器类模板 memory_resource 及其支持的模板。
 
 ## <a name="syntax"></a>语法
 
@@ -22,7 +22,7 @@ ms.locfileid: "68451906"
 #include <memory_resource>
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="operators"></a>运算符
 
@@ -59,5 +59,5 @@ ms.locfileid: "68451906"
 ## <a name="see-also"></a>请参阅
 
 [头文件引用](../standard-library/cpp-standard-library-header-files.md)\
-[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

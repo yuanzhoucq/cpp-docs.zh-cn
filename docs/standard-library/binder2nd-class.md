@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - binder2nd class
 ms.assetid: b2a9c1d1-dfc4-4ca9-a10e-ae84e195a62d
-ms.openlocfilehash: 5f59887e6c9d2965a6c8680f17a40c5bd93869c0
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 46c8bb2ae450b3ef56f2729717fb9b5563a7c139
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243354"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689940"
 ---
 # <a name="binder2nd-class"></a>binder2nd 类
 
-一种模板类，用于提供构造函数，通过将二元函数的第二个自变量绑定到指定的值，将二元函数对象转换为一元函数对象。 在 C + + 11 中，在 C + + 17 中删除不推荐使用。
+一个类模板，它提供了一个构造函数，该构造函数通过将二元函数的第二个参数绑定到指定的值，将二元函数对象转换为一元函数对象。 在 c + + 11 中已弃用，在 c + + 17 中删除。
 
 ## <a name="syntax"></a>语法
 
@@ -38,24 +38,24 @@ class binder2nd
 
 ### <a name="parameters"></a>参数
 
-*Func*\
+*Func* \
 要转换为一元函数对象的二元函数对象。
 
-*右侧*\
+*right* \
 要将二元函数对象的第二个参数绑定到的值。
 
-*左侧*\
+*左*\
 改编的二元对象将其与第二个参数进行比较的参数值。
 
 ## <a name="return-value"></a>返回值
 
-将二元函数对象的第二个参数绑定到值而得出的一元函数对象*右*。
+将二元函数对象的第二个参数绑定到值*right*后得出的一元函数对象。
 
 ## <a name="remarks"></a>备注
 
-此模板类存储一份二元函数对象 _ *Func*中`op`，以及一份*右*中`value`。 它定义其成员函数`operator()`为返回**op**(`left`，**值**)。
+类模板在 `op` 中存储二元函数对象 _ *Func*的副本，并在 `value` 中存储*权限*的副本。 它将其成员函数定义 `operator()` 返回**op**（`left`， **value**）。
 
-如果`Func`是类型的对象`Operation`和 c 是常量，则[bind2nd](../standard-library/functional-functions.md#bind2nd) (`Func`， `c`) 等效于`binder2nd`类构造函数`binder2nd` \< **操作**> (`Func`， `c`) 且更为方便。
+如果 `Func` 是类型 `Operation` 的对象，并且 c 是常量，则[bind2nd](../standard-library/functional-functions.md#bind2nd) （`Func`，`c`）等效于 `binder2nd` 的类构造函数 `binder2nd` \<**操作**> （`Func`、0），更方便。
 
 ## <a name="example"></a>示例
 

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - std::basic_istringstream [C++], str
 - std::basic_istringstream [C++], swap
 ms.assetid: 1d5bb4b5-793d-4833-98e5-14676c451915
-ms.openlocfilehash: 685195b13960c325076f1a38461394ada374d4b1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b88411316ae247499100a044a0a2dfb3c53bc84f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452536"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689985"
 ---
-# <a name="basicistringstream-class"></a>basic_istringstream 类
+# <a name="basic_istringstream-class"></a>basic_istringstream 类
 
 描述了一个对象，该对象控制从 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`> 类的流缓冲区中提取元素和编码对象的操作。
 
@@ -37,15 +37,15 @@ class basic_istringstream : public basic_istream<Elem, Tr>
 *分配*\
 allocator 类。
 
-*Elem*\
+*Elem* \
 字符串的基本元素的类型。
 
-*Tr*\
+*Tr* \
 字符串的基本元素上专用的字符特征。
 
 ## <a name="remarks"></a>备注
 
-此模板类描述一个对象, 该对象控制从[basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`> 类的流缓冲区中提取元素和编码对象, 并具有*Elem*类型的元素。其字符特征由类*Tr*确定, 其元素由类*分配*的分配器进行分配。 该对象存储 basic_stringbuf< **Elem**, **Tr**, `Alloc`> 类的对象。
+类模板描述了一个对象，该对象控制从[basic_stringbuf](../standard-library/basic-stringbuf-class.md) < **Elem**， **Tr**，`Alloc` > 的流缓冲区中提取元素和编码对象，其元素类型为*Elem*，其字符特征由类*Tr*确定，其元素由类*分配*的分配器进行分配。 该对象存储 basic_stringbuf< **Elem**, **Tr**, `Alloc`> 类的对象。
 
 ### <a name="constructors"></a>构造函数
 
@@ -57,7 +57,7 @@ allocator 类。
 
 |类型名称|描述|
 |-|-|
-|[allocator_type](#allocator_type)|该类型是模板参数 `Alloc` 的同义词。|
+|[allocator_type](#allocator_type)|类型是模板参数 `Alloc` 的同义词。|
 
 ### <a name="member-functions"></a>成员函数
 
@@ -77,11 +77,11 @@ allocator 类。
 
 **标头：** \<sstream>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="allocator_type"></a>  basic_istringstream::allocator_type
 
-该类型是模板参数 `Alloc` 的同义词。
+类型是模板参数 `Alloc` 的同义词。
 
 ```cpp
 typedef Alloc allocator_type;
@@ -105,22 +105,22 @@ basic_istringstream(
 
 ### <a name="parameters"></a>参数
 
-*_Mode*\
+*_Mode* \
 [ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的枚举之一。
 
-*字符串*\
+*str* \
 一个 `basic_string` 类型的对象。
 
-*然后*\
+*right* \
 `basic_istringstream` 对象的右值引用。
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数通过调用[basic_istream](../standard-library/basic-istream-class.md)(`sb`) 初始化基类, 其中`sb`是[basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`、 `Tr`、 `Alloc`> 类的存储对象. 通过调用 `basic_stringbuf`< `Elem`, `Tr`, `Alloc`>( `_Mode` &#124; `ios_base::in`)，它还可以初始化 `sb`。
+第一个构造函数通过调用[basic_istream](../standard-library/basic-istream-class.md)（`sb`）来初始化基类，其中 `sb` 是类[basic_stringbuf](../standard-library/basic-stringbuf-class.md)的存储对象 <  `Elem`，`Tr` `Alloc` >。 通过调用 `basic_stringbuf`< `Elem`, `Tr`, `Alloc`>( `_Mode` &#124; `ios_base::in`)，它还可以初始化 `sb`。
 
 第二个构造函数通过调用 `basic_istream(sb)` 初始化基类。 通过调用 `basic_stringbuf`< `Elem`, `Tr`, `Alloc`>( `str`, `_Mode` &#124; `ios_base::in`)，它还可以初始化 `sb`。
 
-第三个构造函数使用*右侧*的内容来初始化对象, 该对象被视为右值引用。
+第三个构造函数使用*右侧*的内容来初始化对象，该对象被视为右值引用。
 
 ## <a name="op_eq"></a>  basic_istringstream::operator=
 
@@ -132,16 +132,16 @@ basic_istringstream& operator=(basic_istringstream&& right);
 
 ### <a name="parameters"></a>参数
 
-*然后*\
+*right* \
 对 `basic_istringstream` 对象的右值引用。
 
 ### <a name="remarks"></a>备注
 
-成员运算符将对象的内容替换为*右侧*的内容, 被视为右值引用移动赋值。
+成员运算符将对象的内容替换为*右侧*的内容，被视为右值引用移动赋值。
 
 ## <a name="rdbuf"></a>  basic_istringstream::rdbuf
 
-`pointer`将类型的已存储流缓冲区的地址返回到[basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>。
+返回 `pointer` 到[basic_stringbuf](../standard-library/basic-stringbuf-class.md) < **Elem**， **Tr**，`Alloc` > 的存储流缓冲区的地址。
 
 ```cpp
 basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
@@ -149,7 +149,7 @@ basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
 
 ### <a name="return-value"></a>返回值
 
-类型`pointer`为 basic_stringbuf < **Elem**, **Tr**, `Alloc`> 的存储流缓冲区的地址。
+@No__t_0 到 basic_stringbuf < **Elem**， **Tr**，`Alloc` > 的存储流缓冲区的地址。
 
 ### <a name="example"></a>示例
 
@@ -168,7 +168,7 @@ void str(
 
 ### <a name="parameters"></a>参数
 
-*_Newstr*\
+*_Newstr* \
 新字符串。
 
 ### <a name="return-value"></a>返回值
@@ -181,7 +181,7 @@ void str(
 
 ### <a name="example"></a>示例
 
-有关使用`str`的示例, 请参阅[basic_stringbuf:: str](../standard-library/basic-stringbuf-class.md#str) 。
+有关使用 `str` 的示例，请参阅[basic_stringbuf：： str](../standard-library/basic-stringbuf-class.md#str) 。
 
 ## <a name="swap"></a>  basic_istringstream::swap
 
@@ -195,7 +195,7 @@ void swap(basic_istringstream& right);
 
 |参数|描述|
 |---------------|-----------------|
-|*right*|对 `basic_istringstream` 对象的 `lvalue` 引用。|
+|right|对 `basic_istringstream` 对象的 `lvalue` 引用。|
 
 ### <a name="remarks"></a>备注
 
@@ -203,6 +203,6 @@ void swap(basic_istringstream& right);
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream 编程](../standard-library/iostream-programming.md)\
 [iostreams 约定](../standard-library/iostreams-conventions.md)

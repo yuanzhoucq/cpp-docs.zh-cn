@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_base class
 ms.assetid: 7e95c083-91b4-4b3f-8918-0d4ea244a040
-ms.openlocfilehash: 1a32ba5e583fdb20118a3397f1ddb326302f2de1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6fca9b2130407b165a7a7bfb1fb2a9ec81774e20
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459393"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689890"
 ---
-# <a name="codecvtbase-class"></a>codecvt_base 类
+# <a name="codecvt_base-class"></a>codecvt_base 类
 
-用于定义称为`result`的枚举类型的 codecvt 类的基类, 用作 facet 成员函数的返回类型, 以指示转换的结果。
+用于定义称为 `result` 的枚举类型的 codecvt 类的基类，此类枚举类型用作 facet 成员函数的返回类型，以指示转换的结果。
 
 ## <a name="syntax"></a>语法
 
@@ -38,13 +38,13 @@ protected:
 
 ## <a name="remarks"></a>备注
 
-此类会描述常用于所有模板类 [codecvt](../standard-library/codecvt-class.md) 专用化的枚举。 枚举结果描述了来自 [do_in](../standard-library/codecvt-class.md#do_in) 或 [do_out](../standard-library/codecvt-class.md#do_out) 可能的返回值：
+类描述类模板[codecvt](../standard-library/codecvt-class.md)的所有专用化所共有的枚举。 枚举结果描述了来自 [do_in](../standard-library/codecvt-class.md#do_in) 或 [do_out](../standard-library/codecvt-class.md#do_out) 可能的返回值：
 
-- `ok`如果内部和外部字符编码之间的转换成功, 则为。
+- `ok` 内部和外部字符编码之间的转换是否成功。
 
-- `partial`如果目标不够大, 则无法成功转换。
+- `partial` 如果目标不够大，则无法成功转换。
 
-- `error`如果源序列的格式不正确, 则为。
+- 如果源序列的格式不正确，则 `error`。
 
 - 如果函数不执行任何转换，则为 `noconv`。
 
@@ -52,7 +52,7 @@ protected:
 
 **标头：** \<locale>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="see-also"></a>请参阅
 
