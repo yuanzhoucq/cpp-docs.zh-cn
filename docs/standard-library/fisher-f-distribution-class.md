@@ -233,7 +233,7 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<random>
+**标头：** \<random>
 
 **命名空间:** std
 
@@ -259,7 +259,7 @@ explicit fisher_f_distribution(const param_type& parm);
 
 ### <a name="remarks"></a>备注
 
-**前提条件：**`0.0 < m` 和 `0.0 < n`
+**前提条件：** `0.0 < m` 和 `0.0 < n`
 
 第一个构造函数将构造一个其存储的 `m` 值保留值 *m*，而其存储的 `n` 值保留值 *n* 的对象。
 
@@ -294,7 +294,7 @@ struct param_type {
 
 ### <a name="remarks"></a>备注
 
-**前提条件：**`0.0 < m` 和 `0.0 < n`
+**前提条件：** `0.0 < m` 和 `0.0 < n`
 
 在实例化时，可将此结构传递给分布的类构造函数、传递给 `param()` 成员函数以设置现有分布的存储参数，并传递给 `operator()` 以代替存储参数使用。
 

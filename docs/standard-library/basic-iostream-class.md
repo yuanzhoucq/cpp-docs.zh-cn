@@ -57,7 +57,7 @@ public:
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<istream>
+**标头：** \<istream>
 
 **命名空间:** std
 
