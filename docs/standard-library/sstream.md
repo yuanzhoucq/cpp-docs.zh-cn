@@ -103,7 +103,7 @@ void swap (
 |实例|描述|
 |-|-|
 |[basic_stringbuf](../standard-library/basic-stringbuf-class.md)|描述对 `Elem` 类型的元素（其字符特征由类 `Tr` 确定）与数组对象中存储的元素序列之间的来回传输进行控制的流缓冲区。|
-|[basic_istringstream](../standard-library/basic-istringstream-class.md)|描述一个对象，该对象控制从 > `Alloc` < [basic_stringbuf](../standard-library/basic-stringbuf-class.md)类的流缓冲区提取元素和编码对象，并使用**`Elem` 类型的**元素（其**字符特征由**确定）类 `Tr`，其元素由类 `Alloc` 的分配器进行分配。|
+|[basic_istringstream](../standard-library/basic-istringstream-class.md)|描述一个对象，该对象控制从 > `Alloc` < [basic_stringbuf](../standard-library/basic-stringbuf-class.md)类的流缓冲区提取元素和编码对象，并使用 **`Elem` 类型的**元素（其**字符特征由**确定）类 `Tr`，其元素由类 `Alloc` 的分配器进行分配。|
 |[basic_ostringstream](../standard-library/basic-ostringstream-class.md)|描述一个对象，该对象控制将元素和编码对象插入到类[basic_stringbuf](../standard-library/basic-stringbuf-class.md) <**Elem**， **Tr**，`Alloc` >，并具有 `Elem` 类型的元素，其字符特征由类 `Tr`，其元素由类 `Alloc` 的分配器进行分配。|
 |[basic_stringstream](../standard-library/basic-stringstream-class.md)|描述一个对象，该对象使用类[basic_stringbuf](../standard-library/basic-stringbuf-class.md) <**Elem**， **Tr**，`Alloc` > 的流缓冲区控制元素和编码对象的插入和提取，并使用 `Elem` 类型的元素，其字符特征为由类 `Tr` 确定，其元素由类 `Alloc` 的分配器进行分配。|
 

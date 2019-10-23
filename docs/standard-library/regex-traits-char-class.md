@@ -30,7 +30,7 @@ class regex_traits<char>
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<regex 1>
+**标头：** \<regex 1>
 
 **命名空间:** std
 

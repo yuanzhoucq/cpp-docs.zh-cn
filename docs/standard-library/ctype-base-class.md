@@ -69,11 +69,11 @@ struct ctype_base : public locale::facet
 
 - **graph**（函数 [isgraph](../standard-library/locale-functions.md#isgraph)）
 
-通过实现或运算这些常量，可以确定分类组合的特征。 具体而言， **alnum** = **= （** &#124;  \) 和**graph** \= \= \( **alnum** &#124; **punct**）始终为 true。
+通过实现或运算这些常量，可以确定分类组合的特征。 具体而言， **alnum** = **= （** &#124; \) 和**graph** \= \= \( **alnum** &#124; **punct**）始终为 true。
 
 ## <a name="requirements"></a>要求
 
-**标头：**\<locale>
+**标头：** \<locale>
 
 **命名空间:** std
 
