@@ -7,12 +7,12 @@ helpviewer_keywords:
 - portability [C++], type int
 - signed integers
 ms.assetid: 0067ce9a-281e-491a-ae63-632952981e13
-ms.openlocfilehash: 848c9799e7ab5cfdfd2b25cc84e55de02c673f3e
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: c69d2308abe2ee3d7e6b392f5a9e78a004791501
+ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150007"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72778362"
 ---
 # <a name="type-int"></a>int 类型
 
@@ -22,7 +22,7 @@ ms.locfileid: "56150007"
 
 **Microsoft 专用**
 
-带符号整数以 2 的补数的形式表示。 最高有效位保留符号：1 表示负数，0 表示正数和零。 值的范围在 [C++ 整数限制](../c-language/cpp-integer-limits.md)中给定（摘自 LIMITS.H 头文件）。
+带符号整数以 2 的补数的形式表示。 最高有效位保存符号：1 表示负数，0 表示整数或零。 值的范围以[C 和C++整数限制](../c-language/cpp-integer-limits.md)提供，此限制取自限制。H 标头文件。
 
 **结束 Microsoft 专用**
 
