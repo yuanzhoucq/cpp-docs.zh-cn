@@ -299,7 +299,7 @@ ms.locfileid: "69631588"
 
    可以在 "**并行堆栈**" 窗口的丰富数据提示中检查 " **gpu 线程**" 窗口中可用的 gpu 线程的属性。 为此，请将鼠标指针停留在**sum_kernel_tiled**的堆栈帧上。 下图显示了数据提示。
 
-   "![并行堆栈" 窗口的数据提示]"(../../parallel/amp/media/campe.png "并行堆栈\" 窗口的数据提示") <br/>
+   ![并行堆栈" 窗口的数据提示](../../parallel/amp/media/campe.png "并行堆栈\" 窗口的数据提示") <br/>
    GPU 线程数据提示
 
    有关 "**并行堆栈**" 窗口的详细信息，请参阅[使用 "并行堆栈" 窗口](/visualstudio/debugger/using-the-parallel-stacks-window)。
