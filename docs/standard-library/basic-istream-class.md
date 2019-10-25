@@ -34,22 +34,22 @@ helpviewer_keywords:
 - std::basic_istream [C++], tellg
 - std::basic_istream [C++], unget
 ms.assetid: c7c27111-de6d-42b4-95a3-a7e65259bf17
-ms.openlocfilehash: d1a76e9c639ac56ca693527543ecff5c597456f0
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 68c7f7ffa9c32c16654e57c8249348d74cc83a5b
+ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452550"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72778520"
 ---
 # <a name="basic_istream-class"></a>basic_istream 类
 
-描述一个对象，它控制从具有类型为 `Elem` 的元素的流缓冲区提取元素和编码对象的操作，其中该类型也称为 [char_type](../standard-library/basic-ios-class.md#char_type)，其字符特征由类 *Tr*（也称为 [traits_type](../standard-library/basic-ios-class.md#traits_type)）决定。
+描述一个对象，它控制从具有类型为 `Char_T` 的元素的流缓冲区提取元素和编码对象的操作，其中该类型也称为 [char_type](../standard-library/basic-ios-class.md#char_type)，其字符特征由类 *Tr*（也称为 [traits_type](../standard-library/basic-ios-class.md#traits_type)）决定。
 
 ## <a name="syntax"></a>语法
 
 ```cpp
-template <class Elem, class Tr = char_traits<Elem>>
-class basic_istream : virtual public basic_ios<Elem, Tr>
+template <class Char_T, class Tr = char_traits<Char_T>>
+class basic_istream : virtual public basic_ios<Char_T, Tr>
 ```
 
 ## <a name="remarks"></a>备注
@@ -119,13 +119,13 @@ if (ok)
 setstate(state);
 ```
 
-如果两组函数在提取元素时遇到文件末尾，则会调用 [setstate](../standard-library/basic-ios-class.md#setstate) （`eofbit`）。
+如果两组函数在提取元素时遇到文件末尾，则调用[`setstate`](../standard-library/basic-ios-class.md#setstate)`(eofbit)`。
 
-类 `basic_istream`< `Elem`, *Tr*> 的对象将存储：
+`basic_istream<Char_T, Tr>` 存储的类的对象：
 
-- 类 [basic_ios](../standard-library/basic-ios-class.md)< `Elem`, *Tr*> `.` 的虚拟公共基对象
+- 类[`basic_ios`](../standard-library/basic-ios-class.md)`<Char_T, Tr>`的虚拟公共基对象。
 
-- 最后一个未格式化输入操作的提取计数（在`count`前面的代码中称为）。
+- 最后一个未格式化输入操作的提取计数（在前面的代码中称为 `count`）。
 
 ## <a name="example"></a>示例
 
@@ -152,7 +152,7 @@ setstate(state);
 |[seekg](#seekg)|在流中移动读取位置。|
 |[sentry](#sentry)|嵌套类描述一个其声明构造了格式化和未格式化的输入函数的对象。|
 |[swap](#swap)|将此 `basic_istream` 对象与所提供的 `basic_istream` 对象参数进行交换。|
-|[sync](#sync)|将与流关联的输入设备与流的缓冲区进行同步。|
+|[sync](#sync)|将流的关联输入设备与流的缓冲区进行同步。|
 |[tellg](#tellg)|报告流中的当前读取位置。|
 |[unget](#unget)|将最近读取的字符放回流中。|
 
@@ -161,13 +161,13 @@ setstate(state);
 |运算符|描述|
 |-|-|
 |[operator>>](#op_gt_gt)|调用输入流上的函数或从输入流中读取格式化数据。|
-|[operator=](#op_eq)|将运算符右侧上的 `basic_istream` 分配给此对象。 这是涉及不会留下副本的 `rvalue` 引用的移动赋值运算符。|
+|[operator=](#op_eq)|将运算符右侧上的 `basic_istream` 分配给此对象。 这是一种移动赋值，涉及不会留下副本的 `rvalue` 引用。|
 
 ## <a name="requirements"></a>要求
 
 **标头：** \<istream>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="basic_istream"></a>  basic_istream::basic_istream
 
@@ -175,7 +175,7 @@ setstate(state);
 
 ```cpp
 explicit basic_istream(
-    basic_streambuf<Elem, Tr>* strbuf,
+    basic_streambuf<Char_T, Tr>* strbuf,
     bool _Isstd = false);
 
 basic_istream(basic_istream&& right);
@@ -183,20 +183,20 @@ basic_istream(basic_istream&& right);
 
 ### <a name="parameters"></a>参数
 
-*strbuf*\
+*strbuf* \
 类型 [basic_streambuf](../standard-library/basic-streambuf-class.md) 的对象。
 
 *_Isstd*\
-如果这是标准流，**则为 true** ;否则**为 false**。
+如果它是标准流，则为**true** ;否则**为 false**。
 
-*然后*\
+*right* \
 要复制的 `basic_istream` 对象。
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数通过调用 [init](../standard-library/basic-ios-class.md#init)(_S `trbuf`) 初始化基类。 它还在提取计数中存储零。 有关此提取计数的详细信息，请参阅 [basic_istream 类](../standard-library/basic-istream-class.md)概述主题的“备注”部分。
+第一个构造函数通过调用[`init`](../standard-library/basic-ios-class.md#init)`(strbuf)`来初始化基类。 它还在提取计数中存储零。 有关此提取计数的详细信息，请参阅[Basic_istream 类](../standard-library/basic-istream-class.md)概述的 "备注" 部分。
 
-第二个构造函数通过调用 `move( right)` 初始化基类。 它还在提取计数中存储 _R `ight.gcount()`，并在 _R `ight` 的提取计数中存储零。
+第二个构造函数通过调用 `move(right)` 初始化基类。 它还在提取计数中存储 `right.gcount()`，并将零存储在 * right * * 的提取计数中。
 
 ### <a name="example"></a>示例
 
@@ -256,29 +256,29 @@ Type the letter 'a': a
 ```cpp
 int_type get();
 
-basic_istream<Elem, Tr>& get(Elem& Ch);
-basic_istream<Elem, Tr>& get(Elem* str, streamsize count);
-basic_istream<Elem, Tr>& get(Elem* str, streamsize count, Elem Delim);
+basic_istream<Char_T, Tr>& get(Char_T& Ch);
+basic_istream<Char_T, Tr>& get(Char_T* str, streamsize count);
+basic_istream<Char_T, Tr>& get(Char_T* str, streamsize count, Char_T delimiter);
 
-basic_istream<Elem, Tr>& get(basic_streambuf<Elem, Tr>& strbuf);
-basic_istream<Elem, Tr>& get(basic_streambuf<Elem, Tr>& strbuf, Elem Delim);
+basic_istream<Char_T, Tr>& get(basic_streambuf<Char_T, Tr>& strbuf);
+basic_istream<Char_T, Tr>& get(basic_streambuf<Char_T, Tr>& strbuf, Char_T delimiter);
 ```
 
 ### <a name="parameters"></a>参数
 
-*计*\
-要从 `strbuf` 读取的字符数。
+*计数*\
+要从 *strbuf* 读取的字符数。
 
-*Delim*\
-如果在*count*之前遇到，则应终止读取的字符。
+*分隔符*\
+在*count*之前应终止读取的字符。
 
-*字符串*\
+*str* \
 写入的字符串。
 
-*48*\
+*Ch*\
 要获取的字符。
 
-*strbuf*\
+*strbuf* \
 要写入的缓冲区。
 
 ### <a name="return-value"></a>返回值
@@ -287,25 +287,25 @@ get 的无参数形式返回作为整数或文件结尾读取的元素。 其余
 
 ### <a name="remarks"></a>备注
 
-如果可以，其中第一个未格式化的输入函数提取一个元素，如通过 `rdbuf`-> `sbumpc` 返回一样。 否则，它将返回 **traits_type::** [eof](../standard-library/char-traits-struct.md#eof)。 如果该函数未提取任何元素，则它将调用 [setstate](../standard-library/basic-ios-class.md#setstate) （`failbit`）。
+如果可能，第一个未格式化的输入函数将提取一个元素，就像返回 `rdbuf->sbumpc`。 否则，它将返回 `traits_type::`[ `eof`](../standard-library/char-traits-struct.md#eof)。 如果该函数未提取任何元素，则它将调用[`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`。
 
-第二个函数以相同的方式提取 [int_type](../standard-library/basic-ios-class.md#int_type) 元素 `meta`。 如果 `meta` 经比较等于 **traits_type::eof**，则此函数调用 `setstate`( **failbit**)。 否则，它将在 `Ch` 中存储 **traits_type::** [to_char_type](../standard-library/char-traits-struct.md#to_char_type)( `meta`)。 该函数返回 **\*this**。
+第二个函数以相同的方式提取 [int_type](../standard-library/basic-ios-class.md#int_type) 元素 `meta`。 如果 `meta` 与 `traits_type::eof`相等，则函数将调用 `setstate(failbit)`。 否则，它会将 `traits_type::`[`to_char_type`](../standard-library/char-traits-struct.md#to_char_type)`(meta)` 存储在*Ch*。 该函数返回 __* this__。
 
-第三个函数返回 **get**(_ *Str*, `count`, `widen`('\ **n**'))。
+第三个函数返回 `get(str, count, widen('\n'))`。
 
-第四个函数提取最多*计数*为1的元素，并将它们存储在以 _ *Str*开头的数组中。 在存储任何提取的元素后，它始终存储 `char_type`。 按测试顺序，提取在以下位置停止：
+第四个函数提取最多 `count - 1` 个元素，并将它们存储在从*str*开始的数组中。 在存储任何提取的元素后，它始终存储 `char_type`。 按测试顺序，提取在以下位置停止：
 
 - 在文件结尾。
 
-- 函数提取了与*Delim*进行比较的元素后，会将该元素放回受控序列。
+- 函数提取了比较等于*分隔符*的元素后。 在这种情况下，元素将返回到受控序列。
 
-- 函数提取*count* -1 个元素后。
+- 函数提取 `count - 1` 元素后。
 
-如果函数没有提取任何元素，则会调用 `setstate`( **failbit**)。 不管怎样，它均将返回 **\*this**。
+如果此函数没有提取任何元素，则会调用 `setstate(failbit)`. 在任何情况下，它都会返回 __* this__。
 
-第五个函数返回 **get**( **strbuf**, `widen`('\ **n**'))。
+第五个函数返回 `get(strbuf, widen('\n'))`。
 
-第六个`strbuf`函数提取并插入元素。 提取在文件结尾或在经比较等于 *Delim* 的元素（该元素未提取）上停止。 如果插入失败或引发异常（可捕获异常但不会再次引发），提取也会在未提取所讨论的元素的情况下停止。 如果函数没有提取任何元素，则会调用 `setstate`( **failbit**)。 不管怎样，该函数均将返回 **\*this**。
+第六个函数提取元素并将它们插入到 *strbuf*。 提取在文件结尾处或对等于*分隔符*的元素（未提取）停止。 如果插入失败或引发异常（可捕获异常但不会再次引发），提取也会在未提取所讨论的元素的情况下停止。 如果此函数没有提取任何元素，则会调用 `setstate(failbit)`. 在任何情况下，函数均返回 __* this__。
 
 ### <a name="example"></a>示例
 
@@ -337,44 +337,44 @@ int main( )
 从输入流中获取一行。
 
 ```cpp
-basic_istream<Elem, Tr>& getline(
+basic_istream<Char_T, Tr>& getline(
     char_type* str,
     streamsize count);
 
-basic_istream<Elem, Tr>& getline(
+basic_istream<Char_T, Tr>& getline(
     char_type* str,
     streamsize count,
-    char_type Delim);
+    char_type delimiter);
 ```
 
 ### <a name="parameters"></a>参数
 
-*计*\
-要从 `strbuf` 读取的字符数。
+*计数*\
+要从 *strbuf* 读取的字符数。
 
-*Delim*\
-如果在*count*之前遇到，则应终止读取的字符。
+*分隔符*\
+在*count*之前应终止读取的字符。
 
-*字符串*\
+*str* \
 写入的字符串。
 
 ### <a name="return-value"></a>返回值
 
-流 ( **\*this**)。
+流（ __* this__）。
 
 ### <a name="remarks"></a>备注
 
-其中第一个未格式化输入函数返回 **getline**(_ *Str*, `count`, `widen`(' `\`**n**'))。
+其中第一个未格式化的输入函数将返回 `getline(str, count, widen('\n'))`。
 
-第二个函数提取最多*计数*为1的元素，并将它们存储在以 _ *Str*开头的数组中。 在存储任何提取的元素后，它始终存储字符串终止字符。 按测试顺序，提取在以下位置停止：
+第二个函数提取最多 `count - 1` 个元素，并将它们存储在从*str*开始的数组中。 在存储任何提取的元素后，它始终存储字符串终止字符。 按测试顺序，提取在以下位置停止：
 
 - 在文件结尾。
 
-- 函数提取了与*Delim*进行比较的元素后，在这种情况下，元素既不放回受控序列，也不追加到受控序列。
+- 函数提取了比较等于*分隔符*的元素后。 在这种情况下，不会将元素放回，也不会将它追加到受控序列。
 
-- 函数提取*count* -1 个元素后。
+- 函数提取 `count - 1` 元素后。
 
-如果该函数未提取任何元素或*计数*-1 元素，则它将`failbit`调用[setstate](../standard-library/basic-ios-class.md#setstate)（）。 不管怎样，它均将返回 **\*this**。
+如果该函数未提取任何元素或 `count - 1` 元素，则它将调用`(failbit)`[`setstate`](../standard-library/basic-ios-class.md#setstate) 。 在任何情况下，它都会返回 __* this__。
 
 ### <a name="example"></a>示例
 
@@ -402,26 +402,26 @@ int main( )
 导致从当前读取位置跳过大量元素。
 
 ```cpp
-basic_istream<Elem, Tr>& ignore(
+basic_istream<Char_T, Tr>& ignore(
     streamsize count = 1,
-    int_type Delim = traits_type::eof());
+    int_type delimiter = traits_type::eof());
 ```
 
 ### <a name="parameters"></a>参数
 
-*计*\
+*计数*\
 要从当前读取位置跳过的元素数。
 
-*Delim*\
-如果在 count 之前遇到的元素，则会`ignore`导致返回并允许读取*Delim*后面的所有元素。
+*分隔符*\
+如果在 count 之前出现了元素，则会导致 `ignore` 返回，并允许读取*分隔符*后面的所有元素。
 
 ### <a name="return-value"></a>返回值
 
-流 ( **\*this**)。
+流（ __* this__）。
 
 ### <a name="remarks"></a>备注
 
-未格式化的输入函数提取多*个元素，并将其*丢弃。 如果*count*等于**numeric_limits\<int >：： max**，则将其视为任意大。 `Ch`提取在文件结尾或元素的末尾结束，使**traits_type：：** [to_int_type](../standard-library/char-traits-struct.md#to_int_type)（ `Ch`）与*Delim* （也已提取）进行比较。 该函数返回 **\*this**。
+未格式化的输入函数提取多*个元素，并将其*丢弃。 不过，如果*count*等于 `numeric_limits<int>::max`，则会被视为任意大。 提取在文件结尾或元素 `Ch` 上提前停止，这样 `traits_type::`[`to_int_type`](../standard-library/char-traits-struct.md#to_int_type)`(Ch)` 将等于*分隔符*（也提取）。 该函数返回 __* this__。
 
 ### <a name="example"></a>示例
 
@@ -445,15 +445,15 @@ Type 'abcdef': abcdef
 def
 ```
 
-## <a name="op_gt_gt"></a>  basic\_istream::operator>>
+## <a name="op_gt_gt"></a>基本\_istream：： operator > >
 
 调用输入流上的函数或从输入流中读取格式化数据。
 
 ```cpp
 basic_istream& operator>>(basic_istream& (* Pfn)(basic_istream&));
 basic_istream& operator>>(ios_base& (* Pfn)(ios_base&));
-basic_istream& operator>>(basic_ios<Elem, Tr>& (* Pfn)(basic_ios<Elem, Tr>&));
-basic_istream& operator>>(basic_streambuf<Elem, Tr>* strbuf);
+basic_istream& operator>>(basic_ios<Char_T, Tr>& (* Pfn)(basic_ios<Char_T, Tr>&));
+basic_istream& operator>>(basic_streambuf<Char_T, Tr>* strbuf);
 basic_istream& operator>>(bool& val);
 basic_istream& operator>>(short& val);
 basic_istream& operator>>(unsigned short& val);
@@ -471,33 +471,33 @@ basic_istream& operator>>(long double& val);
 
 ### <a name="parameters"></a>参数
 
-*Pfn*\
+*Pfn* \
 函数指针。
 
-*strbuf*\
+*strbuf* \
 一个 `stream_buf` 类型的对象。
 
-*初始值*\
+*val* \
 要从流中读取的值。
 
 ### <a name="return-value"></a>返回值
 
-流 ( **\*this**)。
+流（ __* this__）。
 
 ### <a name="remarks"></a>备注
 
-\<Istream > 标头还定义多个全局提取运算符。 有关详细信息，请参阅 [operator>> (\<istream>)](../standard-library/istream-operators.md#op_gt_gt)。
+\<istream > 标头还定义多个全局提取运算符。 有关详细信息，请参阅 [operator>> (\<istream>)](../standard-library/istream-operators.md#op_gt_gt)。
 
-第一个成员函数确保 **istr** >> `ws` 形式的表达式调用 [ws](../standard-library/istream-functions.md#ws)( **istr**)，然后返回 **\*this**。 第二个和第三个函数确保其他操控器（如 [hex ](../standard-library/ios-functions.md#hex)）表现相似。 其余功能构成格式化的输入函数。
+第一个成员函数确保 `istr >> ws` 形式的表达式[`ws`](../standard-library/istream-functions.md#ws)`(istr)`调用，然后返回 __* this__。 第二个和第三个函数确保其他操控器（如[`hex`](../standard-library/ios-functions.md#hex)）的行为类似。 其余函数是格式化的输入函数。
 
 函数：
 
 ```cpp
 basic_istream& operator>>(
-    basic_streambuf<Elem, Tr>* strbuf);
+    basic_streambuf<Char_T, Tr>* strbuf);
 ```
 
-如果 _ *Strbuf*不是 null 指针，则提取元素，并将其插入*Strbuf*中。 提取在文件结尾停止。 如果插入失败或引发异常（可捕获异常但不会再次引发），提取也会在未提取所讨论的元素的情况下停止。 如果该函数未提取任何元素，则它将调用 [setstate](../standard-library/basic-ios-class.md#setstate) （`failbit`）。 不管怎样，该函数均将返回 **\*this**。
+如果*strbuf*不是空指针，则提取元素，并将其插入*strbuf*中。 提取在文件结尾停止。 如果插入失败或引发异常（可捕获异常但不会再次引发），提取也会在未提取所讨论的元素的情况下停止。 如果该函数未提取任何元素，则它将调用[`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`。 在任何情况下，函数均返回 __* this__。
 
 函数：
 
@@ -505,9 +505,9 @@ basic_istream& operator>>(
 basic_istream& operator>>(bool& val);
 ```
 
-通过调用 [use_facet](../standard-library/basic-filebuf-class.md#open) < `num_get`\< **Elem**, **InIt**>( [getloc](../standard-library/ios-base-class.md#getloc)) 提取字段，并将其转换为布尔值。 [get](../standard-library/ios-base-class.md#getloc)( **InIt**( [rdbuf](../standard-library/basic-ios-class.md#rdbuf)), `Init`(0), **\*this**, `getloc`, `val`)。 此处，将 **InIt** 定义为 [istreambuf_iterator](../standard-library/istreambuf-iterator-class.md)\< **Elem**, **Tr**>。 该函数返回 **\*this**。
+提取字段，并通过调用[`use_facet`](../standard-library/basic-filebuf-class.md#open)`< num_get<Char_T, InIt>(`[`getloc`](../standard-library/ios-base-class.md#getloc)`).`[`get`](../standard-library/ios-base-class.md#getloc) [`( InIt(``rdbuf`](../standard-library/basic-ios-class.md#rdbuf)`), Init(0), *this, getloc, val)`来将其转换为布尔值。 此处，`InIt` 定义为[`istreambuf_iterator`](../standard-library/istreambuf-iterator-class.md)`<Char_T, Tr>`。 该函数返回 __* this__。
 
-函数：
+每个函数：
 
 ```cpp
 basic_istream& operator>>(short& val);
@@ -521,11 +521,11 @@ basic_istream& operator>>(unsigned long long& val);
 basic_istream& operator>>(void *& val);
 ```
 
-通过调用 `use_facet`< `num_get`\< **Elem**, **InIt**>( `getloc`)，每个函数均可提取字段，并将其转换为数字值。 [get](#get)( **InIt**( `rdbuf`), `Init`(0), **\*this**, `getloc`, `val`)。 此处， **InIt**定义`istreambuf_iterator`为`val` <strong>\*</strong>Elem、Tr >，并根据需要键入 long、无符号长或 void。 \<
+提取字段，并通过调用 `use_facet<num_get<Char_T, InIt>(getloc).`[`get`](#get)`(InIt(rdbuf), Init(0), *this, getloc, val)`将其转换为数值。 此处，`InIt` 定义为 `istreambuf_iterator<Char_T, Tr>`，并且根据需要， *val*的类型为**long**、**无符号长**或**void** <strong>\*</strong> 。
 
-如果转换后的值不能表示为的`val`类型，则函数将调用[setstate](../standard-library/basic-ios-class.md#setstate)（`failbit`）。 不管怎样，该函数均将返回 **\*this**。
+如果转换后的值不能表示为*值的类型，则*函数将调用[`setstate`](../standard-library/basic-ios-class.md#setstate) `(failbit)`。 在任何情况下，函数均返回 __* this__。
 
-函数：
+每个函数：
 
 ```cpp
 basic_istream& operator>>(float& val);
@@ -533,9 +533,9 @@ basic_istream& operator>>(double& val);
 basic_istream& operator>>(long double& val);
 ```
 
-通过调用 `use_facet`< `num_get`\< **Elem**, **InIt**>( `getloc`)，每个函数均可提取字段，并将其转换为数字值。 **get**( **InIt**( `rdbuf`), `Init`(0), **\*this**, `getloc`, `val`)。 此处， `InIt`定义为**Elem**、 **Tr**> `val` ，并根据需要将类型指定为 `istreambuf_iterator` \< double 或**long double** 。
+提取字段，并通过调用 `use_facet<num_get<Char_T, InIt>(getloc).get(InIt(rdbuf), Init(0), *this, getloc, val)` 将其转换为数值。 此处，`InIt` 定义为 `istreambuf_iterator<Char_T, Tr>`， *val*的类型为**double**或**long double** （根据需要）。
 
-如果转换的值不能表示为 `val` 类型，则函数调用 `setstate`( **failbit**)。 不管怎样，它均将返回 **\*this**。
+如果转换后的值不能表示为*值的类型，则*函数将调用 `setstate(failbit)`。 在任何情况下，它都会返回 __* this__。
 
 ### <a name="example"></a>示例
 
@@ -576,7 +576,7 @@ int main( )
 
 ## <a name="op_eq"></a>  basic_istream::operator=
 
-将运算符右侧上的 `basic_istream` 分配给此对象。 这是涉及不会留下副本的 `rvalue` 引用的移动赋值运算符。
+将运算符右侧上的 `basic_istream` 分配给此对象。 这是一种移动赋值，涉及不会留下副本的 `rvalue` 引用。
 
 ```cpp
 basic_istream& operator=(basic_istream&& right);
@@ -584,16 +584,16 @@ basic_istream& operator=(basic_istream&& right);
 
 ### <a name="parameters"></a>参数
 
-*然后*\
+*right* \
 对 `basic_ifstream` 对象的 `rvalue` 引用。
 
 ### <a name="return-value"></a>返回值
 
-返回 *this。
+返回 __* this__。
 
 ### <a name="remarks"></a>备注
 
-成员运算符调用 swap `( right)`。
+成员运算符调用 `swap(right)`。
 
 ## <a name="peek"></a>  basic_istream::peek
 
@@ -609,7 +609,7 @@ int_type peek();
 
 ### <a name="remarks"></a>备注
 
-如果可以，未格式化的输入函数提取一个元素，如通过 `rdbuf` -> [sgetc](../standard-library/basic-streambuf-class.md#sgetc) 返回一样。 否则，它将返回 **traits_type::** [eof](../standard-library/char-traits-struct.md#eof)。
+如果可能，无格式的输入函数提取元素，就像通过返回 `rdbuf->`[ `sgetc`](../standard-library/basic-streambuf-class.md#sgetc)一样。 否则，它将返回 `traits_type::`[ `eof`](../standard-library/char-traits-struct.md#eof)。
 
 ### <a name="example"></a>示例
 
@@ -645,22 +645,22 @@ a abcde
 将指定的字符放入流。
 
 ```cpp
-basic_istream<Elem, Tr>& putback(
+basic_istream<Char_T, Tr>& putback(
     char_type Ch);
 ```
 
 ### <a name="parameters"></a>参数
 
-*48*\
+*Ch*\
 要放回到流中的字符。
 
 ### <a name="return-value"></a>返回值
 
-流 ( **\*this**)。
+流（ __* this__）。
 
 ### <a name="remarks"></a>备注
 
-如果可能，未[格式化的输入函数](../standard-library/basic-istream-class.md)将返回*Ch*，就像调用[rdbuf](../standard-library/basic-ios-class.md#rdbuf)`->`[sputbackc](../standard-library/basic-streambuf-class.md#sputbackc)一样。 如果 rdbuf 为 null 指针，或如果对的`sputbackc`调用返回**traits_type：：** [eof](../standard-library/char-traits-struct.md#eof)，则函数调用[setstate](../standard-library/basic-ios-class.md#setstate)（`badbit`）。 不管怎样，它均将返回 **\*this**。
+如果可能，未[格式化的输入函数](../standard-library/basic-istream-class.md)将返回*Ch*，就像通过调用[`rdbuf`](../standard-library/basic-ios-class.md#rdbuf) `->`[ `sputbackc`](../standard-library/basic-streambuf-class.md#sputbackc)。 如果 `rdbuf` 是 null 指针，或者对 `sputbackc` 的调用返回 `traits_type::`[ `eof`](../standard-library/char-traits-struct.md#eof)，则函数将调用[`setstate`](../standard-library/basic-ios-class.md#setstate) `(badbit)`。 在任何情况下，它都会返回 __* this__。
 
 ### <a name="example"></a>示例
 
@@ -693,17 +693,17 @@ qwq
 此方法可能并不安全，因为它依赖于调用方检查所传递的值是否正确。
 
 ```cpp
-basic_istream<Elem, Tr>& read(
+basic_istream<Char_T, Tr>& read(
     char_type* str,
     streamsize count);
 ```
 
 ### <a name="parameters"></a>参数
 
-*字符串*\
+*str* \
 要从中读取字符的数组。
 
-*计*\
+*计数*\
 要读取的字符数。
 
 ### <a name="return-value"></a>返回值
@@ -712,7 +712,7 @@ basic_istream<Elem, Tr>& read(
 
 ### <a name="remarks"></a>备注
 
-未格式化的输入函数提取最多*个元素，并将它们*存储在从 _ `Str`开始的数组中。 提取在文件结尾的初期停止，在这种情况下， 该函数将调用 [setstate](../standard-library/basic-ios-class.md#setstate) （`failbit`）。 不管怎样，它均将返回 `*this`。
+未格式化的输入函数提取最多*个元素，并将它们*存储在从*str*开始的数组中。 提取在文件结尾的初期停止，在这种情况下，函数 `(failbit)` 调用[`setstate`](../standard-library/basic-ios-class.md#setstate) 。 在任何情况下，它都会返回 __* this__。
 
 ### <a name="example"></a>示例
 
@@ -761,15 +761,15 @@ streamsize readsome(
 
 ### <a name="parameters"></a>参数
 
-*字符串*\
+*str* \
 `readsome` 存储它所读取字符的数组。
 
-*计*\
+*计数*\
 要读取的字符数。
 
 ### <a name="return-value"></a>返回值
 
-实际读取的字符数 [gcount](#gcount)。
+实际读取的字符数， [`gcount`](#gcount)。
 
 ### <a name="remarks"></a>备注
 
@@ -811,25 +811,25 @@ int main( )
 在流中移动读取位置。
 
 ```cpp
-basic_istream<Elem, Tr>& seekg(pos_type pos);
+basic_istream<Char_T, Tr>& seekg(pos_type pos);
 
-basic_istream<Elem, Tr>& seekg(off_type off, ios_base::seekdir way);
+basic_istream<Char_T, Tr>& seekg(off_type off, ios_base::seekdir way);
 ```
 
 ### <a name="parameters"></a>参数
 
-*位置*\
+*pos* \
 要将读取指针移动到的绝对位置。
 
-*非*\
+*关闭*\
 用于相对于*方式*移动读取指针的偏移量。
 
-*同样*\
+*方法*\
 其中一个 [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) 枚举。
 
 ### <a name="return-value"></a>返回值
 
-流 ( **\*this**)。
+流（ __* this__）。
 
 ### <a name="remarks"></a>备注
 
@@ -838,9 +838,9 @@ basic_istream<Elem, Tr>& seekg(off_type off, ios_base::seekdir way);
 > [!NOTE]
 > 不要对文本文件使用第二个成员函数，因为标准 C++ 不支持在文本文件中进行相对查找。
 
-如果[fail](../standard-library/basic-ios-class.md#fail)为 false，则第一个成员函数 = 将为某些`pos_type`临时`pos`对象`newpos`调用 newpos[rdbuf](../standard-library/basic-ios-class.md#rdbuf) -> [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos)（）。 如果`fail`为 false，则第二个函数调用**newpos** = **rdbuf** -> [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)（ `off`， `way`）。 在任一情况下，if `off_type`（） **newpos** = = `off_type`（）（-1）（定位操作失败），该函数将`istr`调用。 [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`). 两个函数均返回 **\*this**。
+如果[`fail`](../standard-library/basic-ios-class.md#fail)为 false，则第一个成员函数将 `newpos = ` 的[`rdbuf`](../standard-library/basic-ios-class.md#rdbuf) `->`[ `pubseekpos`](../standard-library/basic-streambuf-class.md#pubseekpos) `(pos)` `pos_type`。 如果 `fail` 为 false，则第二个函数 `newpos = rdbuf->`[ `pubseekoff`](../standard-library/basic-streambuf-class.md#pubseekoff) `( off, way)` 调用。 在任一情况下，如果 `(off_type)newpos == (off_type)(-1)` （定位操作失败），该函数将调用[`setstate`](../standard-library/basic-ios-class.md#setstate) `(failbit)` `istr.`。 这两个函数都返回 __* this__。
 
-如果 [fail](../standard-library/basic-ios-class.md#fail) 为 true，则成员函数不执行任何操作。
+如果[`fail`](../standard-library/basic-ios-class.md#fail)为 true，则成员函数不执行任何操作。
 
 ### <a name="example"></a>示例
 
@@ -867,17 +867,25 @@ int main ( )
 
 嵌套类描述一个对象，其声明构造了格式化和未格式化的输入函数。
 
-类卫士 {public：显式卫士（basic_istream\<Elem，Tr > & _Istr，bool _Noskip = false）; operator bool （） const;};
+```cpp
+class sentry {
+   public:
+   explicit sentry(
+      basic_istream<Char_T, Tr>& _Istr,
+      bool _Noskip = false);
+   operator bool() const;
+   };
+```
 
 ### <a name="remarks"></a>备注
 
-如果 `_Istr.`[good](../standard-library/basic-ios-class.md#good) 为 true，则构造函数：
+如果 `_Istr.`[ `good`](../standard-library/basic-ios-class.md#good)为 true，则构造函数：
 
-- 调用 `_Istr`。 [tie](../standard-library/basic-ios-class.md#tie) -> [flush](../standard-library/basic-ostream-class.md#flush)，如果 `_Istr`. `tie` 不是空指针
+- 如果 `_Istr.tie` 不是 null 指针，则调用 `_Istr.`[ `tie`](../standard-library/basic-ios-class.md#tie) `->`[ `flush`](../standard-library/basic-ostream-class.md#flush) 。
 
-- 有效地调用 [ws](../standard-library/istream-functions.md#ws)( `_Istr`)，如果 `_Istr`. [flags](../standard-library/ios-base-class.md#flags) **&** [skipws](../standard-library/ios-functions.md#skipws) 为非零
+- 如果 `_Istr.`[ `flags`](../standard-library/ios-base-class.md#flags) ` & `[ `skipws`](../standard-library/ios-functions.md#skipws)为非零，则有效调用[`ws`](../standard-library/istream-functions.md#ws) `(_Istr)`。
 
-经过任何此类准备工作之后，如果 `_Istr`. `good`为 false，则构造函数`_Istr`调用。 [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`). 不管怎样，构造函数将由 `_Istr`. `good`在`status`中。 稍后调用`operator bool`传递此存储的值。
+如果在进行此类准备后 `_Istr.good` 为 false，则构造函数 `_Istr.`[ `setstate`](../standard-library/basic-ios-class.md#setstate) `(failbit)` 调用。 在任何情况下，构造函数都将 `_Istr.good` 返回的值存储在 `status` 中。 稍后对 `operator bool` 的调用会传递此存储的值。
 
 ## <a name="swap"></a>  basic_istream::swap
 
@@ -889,16 +897,16 @@ void swap(basic_istream& right);
 
 ### <a name="parameters"></a>参数
 
-*然后*\
+*right* \
 对 `basic_istream` 对象的左值引用。
 
 ### <a name="remarks"></a>备注
 
-此成员函数调用 [basic_ios::swap](../standard-library/basic-ios-class.md#swap)`(right)`。 它还会将提取计数与*右*提取计数进行交换。
+成员函数 `(right)` 调用[`basic_ios::swap`](../standard-library/basic-ios-class.md#swap) 。 它还会将提取计数与*右*提取计数进行交换。
 
 ## <a name="sync"></a>  basic_istream::sync
 
-将与流关联的输入设备与流的缓冲区进行同步。
+将流的关联输入设备与流的缓冲区进行同步。
 
 ```cpp
 int sync();
@@ -906,7 +914,7 @@ int sync();
 
 ### <a name="return-value"></a>返回值
 
-如果 [rdbuf](../standard-library/basic-ios-class.md#rdbuf) 是空指针，则该函数将返回 -1。 否则，该函数调用 `rdbuf` -> [pubsync](../standard-library/basic-streambuf-class.md#pubsync). 如果返回-1，则该函数将调用 [setstate](../standard-library/basic-ios-class.md#setstate)（`badbit`）并返回-1。 否则，该函数返回零。
+如果[`rdbuf`](../standard-library/basic-ios-class.md#rdbuf)为 null 指针，则该函数将返回-1。 否则，它会调用 `rdbuf->`[ `pubsync`](../standard-library/basic-streambuf-class.md#pubsync)。 如果该调用返回-1，则该函数将调用[`setstate`](../standard-library/basic-ios-class.md#setstate) `(badbit)` 并返回-1。 否则，该函数返回零。
 
 ## <a name="tellg"></a>  basic_istream::tellg
 
@@ -922,7 +930,7 @@ pos_type tellg();
 
 ### <a name="remarks"></a>备注
 
-如果 [fail](../standard-library/basic-ios-class.md#fail) 为 false，则成员函数返回 [rdbuf](../standard-library/basic-ios-class.md#rdbuf) -> [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)(0, `cur`, **in**)。 否则，将返回 `pos_type`(-1)。
+如果[`fail`](../standard-library/basic-ios-class.md#fail)为 false，则成员函数将返回[`rdbuf`](../standard-library/basic-ios-class.md#rdbuf) `->`[ `pubseekoff`](../standard-library/basic-streambuf-class.md#pubseekoff) `(0, cur, in)`。 否则，它将返回 `pos_type(-1)`。
 
 ### <a name="example"></a>示例
 
@@ -955,18 +963,18 @@ int main()
 将最近读取的字符放回流中。
 
 ```cpp
-basic_istream<Elem, Tr>& unget();
+basic_istream<Char_T, Tr>& unget();
 ```
 
 ### <a name="return-value"></a>返回值
 
-流 ( **\*this**)。
+流（ __* this__）。
 
 ### <a name="remarks"></a>备注
 
-如果可以，[未格式化的输入的函数](../standard-library/basic-istream-class.md)放回流中的上一个元素，如同通过调用 `rdbuf` -> [sungetc](../standard-library/basic-streambuf-class.md#sungetc) 一样。 如果[rdbuf](../standard-library/basic-ios-class.md#rdbuf)为 null 指针，或如果对的`sungetc`调用返回**traits_type：：** [eof](../standard-library/basic-ios-class.md#eof)，则函数调用[setstate](../standard-library/basic-ios-class.md#setstate)（`badbit`）。 不管怎样，它均将返回 **\*this**。
+未[格式化的输入函数](../standard-library/basic-istream-class.md)将返回流中的上一个元素（如果可能），就像通过调用 `rdbuf->`[ `sungetc`](../standard-library/basic-streambuf-class.md#sungetc)一样。 如果[`rdbuf`](../standard-library/basic-ios-class.md#rdbuf)是 null 指针，或者对 `sungetc` 的调用返回 `traits_type::`[ `eof`](../standard-library/basic-ios-class.md#eof)，则函数将调用[`setstate`](../standard-library/basic-ios-class.md#setstate) `(badbit)`。 在任何情况下，它都会返回 __* this__。
 
-有关 `unget` 可能的失败方式的详细信息，请参阅 [basic_streambuf::sungetc](../standard-library/basic-streambuf-class.md#sungetc)。
+有关 `unget` 可能失败的详细信息，请参阅[`basic_streambuf::sungetc`](../standard-library/basic-streambuf-class.md#sungetc)。
 
 ### <a name="example"></a>示例
 
@@ -999,6 +1007,6 @@ abc
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream 编程](../standard-library/iostream-programming.md)\
 [iostreams 约定](../standard-library/iostreams-conventions.md)

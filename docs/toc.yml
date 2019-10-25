@@ -2969,7 +2969,7 @@
                           href: c-language/c-integer-constants.md
                         - name: 整数类型
                           href: c-language/integer-types.md
-                        - name: C++ 整数限制
+                        - name: C 和 C++ 整数限制
                           href: c-language/cpp-integer-limits.md
                     - name: C 字符常量
                       expanded: false
