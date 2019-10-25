@@ -1,23 +1,25 @@
 ---
-title: C++ 整数限制
-ms.date: 01/29/2018
+title: C 和C++整数限制
+ms.date: 10/21/2019
 helpviewer_keywords:
 - limits, integer
 - limits, integer constants
 - integer limits
 ms.assetid: 0c23cbd6-29fb-4d9c-b689-5984e19748de
-ms.openlocfilehash: 057da1ac8e4549a05d10a01cc3aead678045d9c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 6940f36e37ec58ca8fe23c9062928cbf90b125bd
+ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548286"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72778377"
 ---
-# <a name="c-integer-limits"></a>C++ 整数限制
+# <a name="c-and-c-integer-limits"></a>C 和C++整数限制
 
 **Microsoft 专用**
 
-下表列出了整数类型的限制。 这些限制在标准标头文件 LIMITS.H 中定义。 Microsoft C 还允许声明固定大小的整数变量，即大小为 8 位、16 位、或 32 位的整数类型。 有关固定大小整数的详细信息，请参阅[固定大小整数类型](../c-language/c-sized-integer-types.md)。
+下表列出了 C 和C++中的整数类型限制。 这些限制是在 C 标准标头文件 `<limits.h>` 中定义的。 C++标准库标头 `<limits>` 包括 `<climits>`，其中包含 `<limits.h>`。
+
+Microsoft C 还允许声明大小可变的整数变量，即大小为8、16、32或64位的整数类型。 有关 C 中的大小整数的详细信息，请参阅[调整大小的整数类型](../c-language/c-sized-integer-types.md)。
 
 ## <a name="limits-on-integer-constants"></a>对整数常量的限制
 
@@ -39,6 +41,9 @@ ms.locfileid: "50548286"
 |**LONG_MIN**|**long** 类型的变量的最小值。|-2147483647 - 1|
 |**LONG_MAX**|**long** 类型的变量的最大值。|2147483647|
 |**ULONG_MAX**|unsigned long 类型的变量的最大值。|4294967295 (0xffffffff)|
+|**LLONG_MIN**|**Long**类型的变量的最小值。|-9223372036854775807-1|
+|**LLONG_MAX**|**Long**类型的变量的最大值。|9,223,372,036,854,775,807|
+|**ULLONG_MAX**|**无符号 long**类型的变量的最大值。|18446744073709551615（0xffffffffffffffff）|
 
 如果值超出了最大整数表示形式，则 Microsoft 编译器会产生错误。
 

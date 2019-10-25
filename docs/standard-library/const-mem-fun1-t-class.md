@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - const_mem_fun1_t class
 ms.assetid: 250fac30-9663-4133-9051-6303f76ea259
-ms.openlocfilehash: 8ccd9d7e58b9cadec83b64df5553564db20a5745
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 1af44635400037c6359b13c4f2925c3ac7f2d9d5
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244519"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689754"
 ---
-# <a name="constmemfun1t-class"></a>const_mem_fun1_t 类
+# <a name="const_mem_fun1_t-class"></a>const_mem_fun1_t 类
 
-一种适配器类，在使用指针自变量进行初始化的情况下，该类允许将仅带一个自变量的 **const** 成员函数作为二元函数对象调用。 在 C + + 11 中，在 C + + 17 中删除不推荐使用。
+一种适配器类，在使用指针自变量进行初始化的情况下，该类允许将仅带一个自变量的 **const** 成员函数作为二元函数对象调用。 在 c + + 11 中已弃用，在 c + + 17 中删除。
 
 ## <a name="syntax"></a>语法
 
@@ -30,14 +30,14 @@ class const_mem_fun1_t : public binary_function<const Type *, Arg, Result>
 
 ### <a name="parameters"></a>参数
 
-*member_ptr*\
+*member_ptr* \
 一个指针，指向要转换为函数对象的 `Type` 类成员函数。
 
-*左侧*\
-**Const**对象的*member_ptr*上调用成员函数。
+*左*\
+在其上调用*member_ptr*成员函数的**const**对象。
 
-*右侧*\
-为指定的参数*member_ptr*。
+*right* \
+要提供给*member_ptr*的参数。
 
 ## <a name="return-value"></a>返回值
 
@@ -45,8 +45,8 @@ class const_mem_fun1_t : public binary_function<const Type *, Arg, Result>
 
 ## <a name="remarks"></a>备注
 
-此模板类存储一份*member_ptr*，它必须是指向类的成员函数的指针`Type`，私有成员对象中。 它定义其成员函数`operator()`为返回`(left->member_ptr)(right) const`。
+类模板存储*member_ptr*的副本，该副本必须是指向私有成员对象中 `Type` 类的成员函数的指针。 它将其成员函数定义为返回 `(left->member_ptr)(right) const` `operator()`。
 
 ## <a name="example"></a>示例
 
-很少直接使用 `const_mem_fun1_t` 的构造函数。 `mem_fn` 用于调整成员函数。 请参阅[mem_fn](../standard-library/functional-functions.md#mem_fn)有关如何使用成员函数适配器的示例。
+很少直接使用 `const_mem_fun1_t` 的构造函数。 `mem_fn` 用于改编成员函数。 有关如何使用成员函数适配器的示例，请参阅[mem_fn](../standard-library/functional-functions.md#mem_fn) 。

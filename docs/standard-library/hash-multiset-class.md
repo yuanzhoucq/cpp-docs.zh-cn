@@ -86,12 +86,12 @@ helpviewer_keywords:
 - stdext::hash_multiset::upper_bound
 - stdext::hash_multiset::value_comp
 ms.assetid: 0580397a-a76e-40ad-aea2-5c6f3a9d0a21
-ms.openlocfilehash: 984e53a4662b8e3bc18cf06f9fc71d5a614b86ea
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6b3a57d110f2416f5539399ed087e0acbb156991
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448688"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689586"
 ---
 # <a name="hash_multiset-class"></a>hash_multiset 类
 
@@ -109,14 +109,14 @@ class hash_multiset
 
 ### <a name="parameters"></a>参数
 
-*按键*\
+*密钥*\
 要存储在 hash_multiset 中的元素数据类型。
 
 *特征*\
-包含两个函数对象的类型，这是一个用于将两个元素值作为排序键进行比较以确定其相对顺序和一个哈希函数（即元素到无符号的一元谓词映射键值）的二进制谓词。类型`size_t`的整数。 此自变量是可选自变量，默认值为 `hash_compare<Key, less<Key> >`。
+包含两个函数对象的类型，这是一个用于将两个元素值作为排序键进行比较以确定其相对顺序和一个哈希函数（即元素到无符号的一元谓词映射键值）的二进制谓词。`size_t` 类型的整数。 此自变量是可选自变量，默认值为 `hash_compare<Key, less<Key> >`。
 
-*器*\
-一种类型，它表示存储的分配器对象，该分配器对象封装有关 hash_multiset 的内存分配和解除分配的详细信息。 此参数是可选参数，默认值为 `allocator<Key>`。
+*分配*器 \
+一种类型，它表示存储的分配器对象，该分配器对象封装有关 hash_multiset{b> <b}的内存分配和解除分配的详细信息。 此参数是可选参数，默认值为 `allocator<Key>`。
 
 ## <a name="remarks"></a>备注
 
@@ -130,7 +130,7 @@ hash_multiset 是：
 
 - 唯一，每个元素必须具有唯一键。 由于 hash_multiset 还是简单的关联容器，因此其元素也是唯一的。
 
-- 一个模板类，由于其提供的功能是一般功能，因此与作为元素或键包含的特定数据类型无关。 用于元素和键的数据类型作为类模板以及比较函数和分配器中的参数指定。
+- 类模板，因为它提供的功能是通用的，因此与作为元素或键包含的特定数据类型无关。 用于元素和键的数据类型作为类模板以及比较函数和分配器中的参数指定。
 
 哈希算法相比于排序比较的主要优点是效率更高；在排序技术中，时间与容器中元素数的对数成正比，而成功的哈希算法可在恒定的平均时间内执行插入、删除和查找操作。 不能直接更改集中元素的值。 必须先删除旧值，才能插入具有新值的元素。
 
@@ -138,7 +138,7 @@ hash_multiset 是：
 
 当应用程序满足将值与其键关联的条件时，应选择 hash_multiset 作为关联容器。 hash_multiset 的元素可以是多个，并用作其自己的排序键，因此键不是唯一的。 此类结构的模型是排序列表，如关键字排序列表，其中关键字可以出现多次。 如果不允许关键字多次出现，则应使用 hash_set 作为适当的容器结构。 如果将唯一定义作为值附加到唯一关键字的列表，则 hash_map 应为包含此数据的适当结构。 如果定义不唯一，则应选择 hash_multimap 作为容器。
 
-hash_multiset 通过调用所存储的 [value_compare](#value_compare) 类型的哈希特征对象，对其控制的序列进行排序。 此存储对象可通过调用成员函数 [key_comp](#key_comp) 进行访问。 此类函数对象的行为必须与类`hash_compare<Key, less<Key> >`的对象的行为相同。 具体而言，对于类型 `Key`的所有值键，调用`Trait(Key)`会生成类型`size_t`为的值的分布。
+hash_multiset 通过调用所存储的 [value_compare](#value_compare) 类型的哈希特征对象，对其控制的序列进行排序。 此存储对象可通过调用成员函数 [key_comp](#key_comp) 进行访问。 此类函数对象的行为必须与类 `hash_compare<Key, less<Key> >` 的对象的行为相同。 具体而言，对于类型 `Key` 的所有值*键*，调用 `Trait(Key)` 会生成 `size_t` 类型的值的分布。
 
 通常，元素仅需小于比较元素即可建立此顺序；因此，给定任意两个元素，可以确定这两个元素等效（即两者均不小于对方）或其中一个小于另一个。 这将导致在非等效元素之间进行排序。 在技术性更强的说明中，比较函数是一个二元谓词，在标准数学的意义上引发严格弱排序。 二元谓词 *f*( *x*, *y*) 是包含两个参数对象（x 和 y）以及一个返回值（true 或 false）的函数对象。 如果二元谓词具有自反性、反对称性和传递性且等效可传递，对 hash_multiset 进行的排序将为严格弱排序，其中在 *f*( *x*, *y*) 和 *f*( *y*, *x*) 均为 false 时两个对象 x 和 y 定义为等效。 如果键之间的更强相等条件取代了等效性，则排序将为总排序（即所有元素彼此排序），并且匹配的键将难以彼此辨别。
 
@@ -157,15 +157,15 @@ hash_multiset 类提供的迭代器是双向迭代器，但类成员函数 inser
 |类型名称|描述|
 |-|-|
 |[allocator_type](#allocator_type)|一种类型，此类型表示 `allocator` 对象的 `hash_multiset` 类。|
-|[const_iterator](#const_iterator)|一种类型，它提供可读取中`hash_multiset`的**const**元素的双向迭代器。|
-|[const_pointer](#const_pointer)|一种类型，它提供指向中 `hash_multiset`的 const 元素的指针。|
-|[const_reference](#const_reference)|一种类型，它提供对存储在中`hash_multiset`的 const 元素的引用，以便读取和执行**const**运算。|
-|[const_reverse_iterator](#const_reverse_iterator)|一种类型，它提供可读取中`hash_multiset`任何**const**元素的双向迭代器。|
+|[const_iterator](#const_iterator)|一种类型，它提供可读取 `hash_multiset` 中的**const**元素的双向迭代器。|
+|[const_pointer](#const_pointer)|一种类型，它提供指向 `hash_multiset` 中的**const**元素的指针。|
+|[const_reference](#const_reference)|一种类型，它提供对存储在 `hash_multiset` 中用于读取和执行**const**操作的**const**元素的引用。|
+|[const_reverse_iterator](#const_reverse_iterator)|一种类型，它提供可读取 `hash_multiset` 中任何**const**元素的双向迭代器。|
 |[difference_type](#difference_type)|一种带符号的整数类型，它提供发现同一 `hash_multiset` 中的元素的两个迭代器之间的差异。|
-|[Iterator](#iterator)|一种类型，它提供可读取或修改 `hash_multiset` 中任何元素的双向迭代器。|
+|[迭代器](#iterator)|一种类型，它提供可读取或修改 `hash_multiset` 中任何元素的双向迭代器。|
 |[key_compare](#key_compare)|一种提供函数对象的类型，该函数对象可比较两个排序键以确定 `hash_multiset` 中两个元素的相对顺序。|
 |[key_type](#key_type)|一种类型，它描述当作为排序键存储为其容量中 `hash_set` 的元素的对象。|
-|[pointer](#pointer)|一种类型，它提供指向 `hash_multiset` 中的某个元素的指针。|
+|[指针](#pointer)|一种类型，它提供指向 `hash_multiset` 中的某个元素的指针。|
 |[reference](#reference)|一种类型，此类型提供对存储在 `hash_multiset` 中的元素的引用。|
 |[reverse_iterator](#reverse_iterator)|一种类型，此类型提供可读取或修改反向 `hash_multiset` 中的元素的双向迭代器。|
 |[size_type](#size_type)|可表示 `hash_multiset` 中元素数量的无符号整数类型。|
@@ -180,7 +180,7 @@ hash_multiset 类提供的迭代器是双向迭代器，但类成员函数 inser
 |[cbegin](#cbegin)|返回一个常量迭代器，此迭代器用于发现 `hash_multiset` 中的第一个元素。|
 |[cend](#cend)|返回一个常量迭代器，此迭代器用于发现 `hash_multiset` 中最后一个元素之后的位置。|
 |[clear](#clear)|清除 `hash_multiset` 的所有元素。|
-|[计数](#count)|返回 `hash_multiset` 中其键与参数指定键匹配的元素数量|
+|[count](#count)|返回 `hash_multiset` 中其键与参数指定键匹配的元素数量|
 |[crbegin](#crbegin)|返回一个常量迭代器，此迭代器用于发现反向 `hash_multiset` 中的第一个元素。|
 |[crend](#crend)|返回一个常量迭代器，此迭代器用于发现反向 `hash_multiset` 中最后一个元素之后的位置。|
 |[emplace](#emplace)|将就地构造的元素插入到 `hash_multiset`。|
@@ -248,7 +248,7 @@ iterator begin();
 
 ### <a name="remarks"></a>备注
 
-如果将的`begin`返回值分配`const_iterator`给，则无法修改 hash_multiset 对象中的元素。 如果将的`begin`返回值分配`iterator`给，则可以修改 hash_multiset 对象中的元素。
+如果 `begin` 的返回值分配给某个 `const_iterator`，则无法修改 hash_multiset 对象中的元素。 如果 `begin` 的返回值分配给某个 `iterator`，则可以修改 hash_multiset 对象中的元素。
 
 ### <a name="example"></a>示例
 
@@ -544,7 +544,7 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>参数
 
-*按键*\
+*密钥*\
 要从 hash_multiset 中进行匹配的元素的键。
 
 ### <a name="return-value"></a>返回值
@@ -555,7 +555,7 @@ size_type count(const Key& key) const;
 
 成员函数返回在以下范围内的元素数目：
 
-\[lower_bound （*key*）、upper_bound （*key*））。
+\[ lower_bound （*key*）、upper_bound （*key*））。
 
 ### <a name="example"></a>示例
 
@@ -952,7 +952,7 @@ iterator end();
 
 ### <a name="remarks"></a>备注
 
-`end`用于测试迭代器是否已到达其 hash_multiset 的末尾。 不应对 `end` 返回的值取消引用。
+`end` 用于测试迭代器是否已到达其 hash_multiset 的末尾。 不应对 `end` 返回的值取消引用。
 
 ### <a name="example"></a>示例
 
@@ -1011,7 +1011,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>参数
 
-*按键*\
+*密钥*\
 要与当前搜索的 hash_multiset 中元素的排序键进行比较的参数键。
 
 ### <a name="return-value"></a>返回值
@@ -1100,16 +1100,16 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>参数
 
-*_Where*\
+*_Where* \
 要从 hash_multiset 移除的元素的位置。
 
-*1*\
+*第一个*\
 要从 hash_multiset 中移除的第一个元素的位置。
 
-*时间*\
+*最后*\
 紧接要从 hash_multiset 中移除的最后一个元素的位置。
 
-*按键*\
+*密钥*\
 要从 hash_multiset 中移除的元素的键。
 
 ### <a name="return-value"></a>返回值
@@ -1221,7 +1221,7 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>参数
 
-*按键*\
+*密钥*\
 要与当前搜索的 hash_multiset 中元素的排序键匹配的参数键。
 
 ### <a name="return-value"></a>返回值
@@ -1230,9 +1230,9 @@ const_iterator find(const Key& key) const;
 
 ### <a name="remarks"></a>备注
 
-此成员函数返回一个迭代器，该迭代器将 hash_multiset 中其排序键`equivalent`与二元谓词下的参数键相对应的元素，该谓词基于小于比较关系进行排序。
+此成员函数返回一个迭代器，该迭代器用于寻址 hash_multiset 中其排序键与二元谓词下的参数键 `equivalent` 的元素，该谓词基于小于比较关系进行排序。
 
-如果将的`find`返回值分配`const_iterator`给，则无法修改 hash_multiset 对象。 如果将的`find`返回值分配`iterator`给，则可以修改 hash_multiset 对象。
+如果 `find` 的返回值分配给某个 `const_iterator`，则无法修改 hash_multiset 对象。 如果 `find` 的返回值分配给某个 `iterator`，则可以修改 hash_multiset 对象。
 
 ### <a name="example"></a>示例
 
@@ -1428,9 +1428,9 @@ hash_multiset(
 
 所有构造函数会存储类型 `Traits` 的函数对象，此对象用于在 `hash_multiset` 的键之间建立顺序，且稍后可通过调用 [hash_multiset::key_comp](#key_comp) 进行返回。 有关 `Traits` 的详细信息，请参阅 [hash_multiset 类](../standard-library/hash-multiset-class.md)主题。
 
-前三个构造函数指定一个空`hash_multiset`的初始，第二个指定用于建立元素顺序的比较函数（*Comp*）的类型，第三个构造函数显式指定分配器类型（*Al*）要使用的。 关键字 **explicit** 取消某些种类的自动类型转换。
+前三个构造函数指定一个空的初始 `hash_multiset`，第二个指定用于建立元素顺序的比较函数（*Comp*）的类型，第三个构造函数将分配器类型（*Al*）显式指定为广泛. 关键字 **explicit** 取消某些种类的自动类型转换。
 
-第四个构造函数`hash_multiset`移动`Right`。
+第四个构造函数将 `hash_multiset` `Right`。
 
 第五个、第六个和第七个构造函数使用 initializer_list。
 
@@ -1513,11 +1513,11 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 
 ### <a name="remarks"></a>备注
 
-类型`iterator`可用于修改元素的值。
+类型 `iterator` 可用于修改元素的值。
 
 ### <a name="example"></a>示例
 
-有关如何声明和使用`iterator`的示例，请参阅 [begin](#begin) 的示例。
+有关如何声明和使用 `iterator` 的示例，请参阅[begin](#begin)的示例。
 
 ## <a name="key_comp"></a>hash_multiset::key_comp
 
@@ -1608,7 +1608,7 @@ typedef Traits key_compare;
 
 ### <a name="remarks"></a>备注
 
-`key_compare`是模板参数*特征*的同义词。
+`key_compare` 是模板参数*特征*的同义词。
 
 有关*特征*的详细信息，请参阅[hash_multiset 类](../standard-library/hash-multiset-class.md)主题。
 
@@ -1631,7 +1631,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>备注
 
-`key_type`是模板参数*键*的同义词。
+`key_type` 是模板参数*键*的同义词。
 
 请注意，`key_type` 和 [value_type](../standard-library/hash-set-class.md#value_type) 皆是模板参数 *Key* 的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。
 
@@ -1656,7 +1656,7 @@ iterator lower_bound(const Key& key);
 
 ### <a name="parameters"></a>参数
 
-*按键*\
+*密钥*\
 要与当前搜索的 hash_multiset 中元素的排序键进行比较的参数键。
 
 ### <a name="return-value"></a>返回值
@@ -1763,11 +1763,11 @@ hash_multiset& operator=(hash_multiset&& right);
 
 |参数|描述|
 |-|-|
-|*right*|[hash_multiset](../standard-library/hash-multiset-class.md)，正在复制到 `hash_multiset`。|
+|right|[hash_multiset](../standard-library/hash-multiset-class.md)，正在复制到 `hash_multiset`。|
 
 ### <a name="remarks"></a>备注
 
-清除中`hash_multiset`的任何现有元素后， `operator=`会将的`hash_multiset`内容复制或移动*到。*
+擦除 `hash_multiset` 中的任何现有元素后，`operator=` 将*右侧*的内容复制或移动到 `hash_multiset` 中。
 
 ### <a name="example"></a>示例
 
@@ -1820,7 +1820,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::po
 
 ### <a name="remarks"></a>备注
 
-类型`pointer`可用于修改元素的值。
+类型 `pointer` 可用于修改元素的值。
 
 在大多数情况下，应使用 [iterator](#iterator) 访问多重集对象中的元素。
 
@@ -2139,7 +2139,7 @@ void swap(hash_multiset& right);
 
 ### <a name="parameters"></a>参数
 
-*然后*\
+*right* \
 参数 hash_multiset，提供要与目标 hash_multiset 进行交换的元素。
 
 ### <a name="remarks"></a>备注
@@ -2215,7 +2215,7 @@ iterator upper_bound(const Key& key);
 
 ### <a name="parameters"></a>参数
 
-*按键*\
+*密钥*\
 要与当前搜索的 hash_multiset 中元素的排序键进行比较的参数键。
 
 ### <a name="return-value"></a>返回值
@@ -2372,11 +2372,11 @@ typedef key_compare value_compare;
 
 ### <a name="remarks"></a>备注
 
-`value_compare`是模板参数*特征*的同义词。
+`value_compare` 是模板参数*特征*的同义词。
 
 有关*特征*的详细信息，请参阅[hash_multiset 类](../standard-library/hash-multiset-class.md)主题。
 
-请注意， [key_compare](#key_compare)和`value_compare`是模板参数*特征*的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。
+请注意， [key_compare](#key_compare)和 `value_compare` 都是模板参数*特征*的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。
 
 ### <a name="example"></a>示例
 
@@ -2435,5 +2435,5 @@ The hash_multiset has elements: 10 20.
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

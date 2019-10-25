@@ -11,12 +11,12 @@ f1_keywords:
 - fstream/std::wifstream
 - fstream/std::wofstream
 ms.assetid: 8dddef2d-7f17-42a6-ba08-6f6f20597d23
-ms.openlocfilehash: 6144826254c6acc509db2c0285b21811fe37bd4e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3f4104b28f5becfdbf62ede16faa81e855fcac8c
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454039"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689643"
 ---
 # <a name="ltfstreamgt-typedefs"></a>&lt;fstream&gt; typedef
 
@@ -28,7 +28,7 @@ ms.locfileid: "68454039"
 
 ## <a name="filebuf"></a>  filebuf
 
-专用于`basic_filebuf` **char**模板参数的类型。
+@No__t_0 专用于**char**模板参数的类型。
 
 ```cpp
 typedef basic_filebuf<char, char_traits<char>> filebuf;
@@ -36,11 +36,11 @@ typedef basic_filebuf<char, char_traits<char>> filebuf;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板类[basic_filebuf](../standard-library/basic-filebuf-class.md)的同义词, 专用于具有默认字符特征的**char**类型的元素。
+类型是类模板[basic_filebuf](../standard-library/basic-filebuf-class.md)的同义词，专用于具有默认字符特征的**char**类型的元素。
 
 ## <a name="fstream"></a>  fstream
 
-专用于`basic_fstream` **char**模板参数的类型。
+@No__t_0 专用于**char**模板参数的类型。
 
 ```cpp
 typedef basic_fstream<char, char_traits<char>> fstream;
@@ -48,13 +48,13 @@ typedef basic_fstream<char, char_traits<char>> fstream;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板类[basic_fstream](../standard-library/basic-fstream-class.md)的同义词, 专用于具有默认字符特征的**char**类型的元素。
+类型是类模板[basic_fstream](../standard-library/basic-fstream-class.md)的同义词，专用于具有默认字符特征的**char**类型的元素。
 
 ## <a name="ifstream"></a>  ifstream
 
-定义要用于从文件中按顺序读取单字节字符数据的流。 `ifstream`是用于对`basic_ifstream` **char**的模板类进行专用化的 typedef。
+定义要用于从文件中按顺序读取单字节字符数据的流。 `ifstream` 是一种为**char**的类模板 `basic_ifstream` 专用化的 typedef。
 
-此外, 还`wifstream`提供了一个专用`basic_ifstream`于读取**wchar_t**双重范围字符的 typedef。 有关详细信息，请参阅 [wifstream](../standard-library/fstream-typedefs.md#wifstream)。
+还有 `wifstream`，这是一种专用化 `basic_ifstream` 来读取**wchar_t**双范围字符的 typedef。 有关详细信息，请参阅 [wifstream](../standard-library/fstream-typedefs.md#wifstream)。
 
 ```cpp
 typedef basic_ifstream<char, char_traits<char>> ifstream;
@@ -62,7 +62,7 @@ typedef basic_ifstream<char, char_traits<char>> ifstream;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板类[basic_ifstream](../standard-library/basic-ifstream-class.md)的同义词, 专用于具有默认字符特征的 char 类型的元素。 例如
+类型是类模板[basic_ifstream](../standard-library/basic-ifstream-class.md)的同义词，专用于具有默认字符特征的 char 类型的元素。 例如
 
 ```cpp
 using namespace std;
@@ -78,7 +78,7 @@ if (!infile.bad())
 
 ## <a name="ofstream"></a>  ofstream
 
-专用于`basic_ofstream` **char**模板参数的类型。
+@No__t_0 专用于**char**模板参数的类型。
 
 ```cpp
 typedef basic_ofstream<char, char_traits<char>> ofstream;
@@ -86,11 +86,11 @@ typedef basic_ofstream<char, char_traits<char>> ofstream;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板类[basic_ofstream](../standard-library/basic-ofstream-class.md)的同义词, 专用于具有默认字符特征的**char**类型的元素。
+类型是类模板[basic_ofstream](../standard-library/basic-ofstream-class.md)的同义词，专用于具有默认字符特征的**char**类型的元素。
 
 ## <a name="wfstream"></a>  wfstream
 
-一个专用`basic_fstream`于**wchar_t**模板参数的类型。
+一个类型 `basic_fstream` 专用于**wchar_t**模板参数的类型。
 
 ```cpp
 typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
@@ -98,11 +98,11 @@ typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板类[basic_fstream](../standard-library/basic-fstream-class.md)的同义词, 专用于具有默认字符特征的**wchar_t**类型的元素。
+类型是类模板[basic_fstream](../standard-library/basic-fstream-class.md)的同义词，专用于具有默认字符特征的**wchar_t**类型的元素。
 
 ## <a name="wifstream"></a>  wifstream
 
-一个专用`basic_ifstream`于**wchar_t**模板参数的类型。
+一个类型 `basic_ifstream` 专用于**wchar_t**模板参数的类型。
 
 ```cpp
 typedef basic_ifstream<wchar_t, char_traits<wchar_t>> wifstream;
@@ -110,11 +110,11 @@ typedef basic_ifstream<wchar_t, char_traits<wchar_t>> wifstream;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板类[basic_ifstream](../standard-library/basic-ifstream-class.md)的同义词, 专用于具有默认字符特征的**wchar_t**类型的元素。
+类型是类模板[basic_ifstream](../standard-library/basic-ifstream-class.md)的同义词，专用于具有默认字符特征的**wchar_t**类型的元素。
 
 ## <a name="wofstream"></a>  wofstream
 
-一个专用`basic_ofstream`于**wchar_t**模板参数的类型。
+一个类型 `basic_ofstream` 专用于**wchar_t**模板参数的类型。
 
 ```cpp
 typedef basic_ofstream<wchar_t, char_traits<wchar_t>> wofstream;
@@ -122,11 +122,11 @@ typedef basic_ofstream<wchar_t, char_traits<wchar_t>> wofstream;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板类[basic_ofstream](../standard-library/basic-ofstream-class.md)的同义词, 专用于具有默认字符特征的**wchar_t**类型的元素。
+类型是类模板[basic_ofstream](../standard-library/basic-ofstream-class.md)的同义词，专用于具有默认字符特征的**wchar_t**类型的元素。
 
 ## <a name="wfilebuf"></a>  wfilebuf
 
-一个专用`basic_filebuf`于**wchar_t**模板参数的类型。
+一个类型 `basic_filebuf` 专用于**wchar_t**模板参数的类型。
 
 ```cpp
 typedef basic_filebuf<wchar_t, char_traits<wchar_t>> wfilebuf;
@@ -134,7 +134,7 @@ typedef basic_filebuf<wchar_t, char_traits<wchar_t>> wfilebuf;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板类[basic_filebuf](../standard-library/basic-filebuf-class.md)的同义词, 专用于具有默认字符特征的**wchar_t**类型的元素。
+类型是类模板[basic_filebuf](../standard-library/basic-filebuf-class.md)的同义词，专用于具有默认字符特征的**wchar_t**类型的元素。
 
 ## <a name="see-also"></a>请参阅
 

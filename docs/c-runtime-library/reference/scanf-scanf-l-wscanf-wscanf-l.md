@@ -1,6 +1,6 @@
 ﻿---
 title: scanf、_scanf_l、wscanf、_wscanf_l
-ms.date: 11/04/2016
+ms.date: 10/21/2019
 api_name:
 - _wscanf_l
 - scanf
@@ -43,16 +43,19 @@ helpviewer_keywords:
 - wscanf_l function
 - _wscanf_l function
 ms.assetid: 73eac607-117f-4be4-9ff0-4afd9cf3c848
-ms.openlocfilehash: 5c3b0f73561dcd41ef1643042baeac7fff0728b4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: acb336827a669a867b937806a6cdb9aa51d75cbe
+ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948836"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72778321"
 ---
 # <a name="scanf-_scanf_l-wscanf-_wscanf_l"></a>scanf、_scanf_l、wscanf、_wscanf_l
 
 读取标准输入流中的格式化数据。 提供这些函数的更多安全版本；请参阅 [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)。
+
+> [!NOTE] 
+> 在 Visual Studio 2015 中，`printf` 和 `scanf` 系列函数被声明为**内联**，并移到 `<stdio.h>` 和 `<conio.h>` 标头。 如果迁移的是较旧的代码，则与这些函数的连接可能会出现*LNK2019* 。 有关详细信息，请[参阅C++ Visual change history 2003-2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio)。
 
 ## <a name="syntax"></a>语法
 
@@ -79,7 +82,7 @@ int _wscanf_l(
 
 ### <a name="parameters"></a>参数
 
-*format*<br/>
+*格式*<br/>
 格式控制字符串。
 
 *实际*<br/>
@@ -101,7 +104,7 @@ int _wscanf_l(
 **Scanf**函数从标准输入流**stdin**中读取数据，并将数据写入到由*参数*给定的位置。 每个*参数*都必须是指向类型的变量的指针，该类型与*格式*中的类型说明符对应。 如果复制出现在重叠的字符串之间，则该行为不确定。
 
 > [!IMPORTANT]
-> 读取的字符串时**scanf**，始终指定的宽度 **%s**格式 (例如， **"%32s"** 而不是 **"%s"**); 否则为输入格式不正确很容易导致缓冲区溢出。 或者，可以考虑使用 [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) 或 [fgets](fgets-fgetws.md)。
+> 使用**scanf**读取字符串时，请始终指定 **% s**格式的宽度（例如， **"% 32s"** 而不是 **"% s"** ）;否则，输入格式不正确可能会导致缓冲区溢出。 或者，可以考虑使用 [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) 或 [fgets](fgets-fgetws.md)。
 
 **wscanf**是**scanf**的宽字符版本;**wscanf**的*格式*参数是宽字符字符串。 如果在 ANSI 模式下打开流，则**wscanf**和**scanf**的行为相同。 **scanf**当前不支持 UNICODE 流的输入。
 
@@ -123,7 +126,7 @@ int _wscanf_l(
 |**scanf**、 **_scanf_l**|\<stdio.h>|
 |**wscanf**、 **_wscanf_l**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台 (UWP) 应用中不支持控制台。 与控制台、 **stdin**、 **stdout**和**stderr**关联的标准流句柄必须重定向, 然后 C 运行时函数才能在 UWP 应用中使用它们。 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台（UWP）应用中不支持控制台。 与控制台、 **stdin**、 **stdout**和**stderr**关联的标准流句柄必须重定向，然后 C 运行时函数才能在 UWP 应用中使用它们。 有关其他兼容性信息，请参见 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 

@@ -14,19 +14,19 @@ helpviewer_keywords:
 - < operator
 - operator <, valarrays
 ms.assetid: 31027dd6-53be-428b-b950-1dcb25393597
-ms.openlocfilehash: a286833d96e913a66240d25798e1cc230adf58b0
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: fc2a14d882b5ccfbfdaae543c76ca673f9018a59
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458728"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687336"
 ---
 # <a name="operatorlt-ltsample-containergt"></a>operator&lt; (&lt;sample container&gt;)
 
 > [!NOTE]
 > 本主题在 Microsoft C++文档中作为在C++标准库中使用的容器的非功能性示例。 有关详细信息，请参阅 [C++ 标准库容器](../standard-library/stl-containers.md)。
 
-重载 **operator<** 以比较 [Container](../standard-library/sample-container-class.md) 模板类的两个对象。
+重载**运算符 <** 比较类模板[容器](../standard-library/sample-container-class.md)的两个对象。
 
 ## <a name="syntax"></a>语法
 
@@ -44,5 +44,5 @@ bool operator<(
 ## <a name="see-also"></a>请参阅
 
 [\<sample container>](../standard-library/sample-container.md)\
-[准备](../standard-library/container-class-begin.md)\
+[开始](../standard-library/container-class-begin.md)\
 [end](../standard-library/container-class-end.md)

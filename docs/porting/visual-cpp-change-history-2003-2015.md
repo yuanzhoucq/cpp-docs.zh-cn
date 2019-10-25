@@ -1,15 +1,15 @@
 ---
 title: Visual C++ 更改历史记录（2003 - 2015）
-ms.date: 08/30/2017
+ms.date: 10/21/2019
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: 9597f04781c9009cf6f8f284348f0831c347201d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: 6d994ca3af1386d9c2f94dbf6b9f972ee139613f
+ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510353"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72778532"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 更改历史记录（2003 - 2015）
 
@@ -42,9 +42,9 @@ ms.locfileid: "69510353"
 
 #### <a name="general-changes"></a>常规更改
 
-- 重构的二进制文件 
+- 重构的二进制文件
 
-   CRT 库已经重构为两个不同的二进制文件：包含大多数标准功能的通用 CRT (ucrtbase) 和 VC 运行时库 (vcruntime)。 Vcruntime 库包含与编译器相关的功能，例如异常处理和内部函数。 如果你使用的是默认项目设置，则此更改不会对你产生影响，因为链接器将自动使用新的默认库。 如果将项目的“链接器”属性“忽略所有默认库”设置为“是”，或使用的是命令行上的 `/NODEFAULTLIB` 链接器选项，则必须更新库的列表（位于“附加依赖项”属性）以包括新的重构库     。 将旧的 CRT 库（libcmt.lib、libcmtd.lib、msvcrt.lib、msvcrtd.lib）替换为等效的重构库。 对于两个中的每个重构库，都存在静态 (.lib) 和动态 (.dll) 版本，发行（无后缀）和调试版本（使用“d”后缀）。 动态版本具有与之链接的导入库。 两个重构库为通用 CRT（特别是 ucrtbase.dll 或 ucrtbase.lib、ucrtbased.dll 或 ucrtbased.lib）和 VC 运行时库（libvcruntime.lib、vcruntimeversion.dll、libvcruntimed.lib 和 vcruntimedversion.dll）   。 *version* 在 Visual Studio 2015 和 Visual Studio 2017 中均为 140。 请参阅 [CRT 库的功能](../c-runtime-library/crt-library-features.md)。
+   CRT 库已经重构为两个不同的二进制文件：包含大多数标准功能的通用 CRT (ucrtbase) 和 VC 运行时库 (vcruntime)。 Vcruntime 库包含与编译器相关的功能，例如异常处理和内部函数。 如果你使用的是默认项目设置，则此更改不会对你产生影响，因为链接器将自动使用新的默认库。 如果将项目的“链接器”属性“忽略所有默认库”设置为“是”，或使用的是命令行上的 `/NODEFAULTLIB` 链接器选项，则必须更新库的列表（位于“附加依赖项”属性）以包括新的重构库。 将旧的 CRT 库（libcmt.lib、libcmtd.lib、msvcrt.lib、msvcrtd.lib）替换为等效的重构库。 对于两个中的每个重构库，都存在静态 (.lib) 和动态 (.dll) 版本，发行（无后缀）和调试版本（使用“d”后缀）。 动态版本具有与之链接的导入库。 两个重构库为通用 CRT（特别是 ucrtbase.dll 或 ucrtbase.lib、ucrtbased.dll 或 ucrtbased.lib）和 VC 运行时库（libvcruntime.lib、vcruntimeversion.dll、libvcruntimed.lib 和 vcruntimedversion.dll）。 *version* 在 Visual Studio 2015 和 Visual Studio 2017 中均为 140。 请参阅 [CRT 库的功能](../c-runtime-library/crt-library-features.md)。
 
 #### <a name="localeh"></a>\<locale.h>
 
@@ -56,7 +56,7 @@ ms.locfileid: "69510353"
 
 #### <a name="mathh"></a>\<math.h>
 
-- 数学库函数的 C++ 重载 
+- 数学库函数的 C++ 重载
 
    在早期版本中，\<math.h> 定义了部分（而不是全部）数学库函数的 C++ 重载。 其余的重载位于 \<cmath> 标头中。 仅包含 \<math.h> 的代码可能会出现函数重载解析问题。 现在，C++ 重载已从 \<math.h> 中删除，并且只能在 \<cmath> 中找到。
 
@@ -76,7 +76,7 @@ ms.locfileid: "69510353"
 
   此警告的解决方法是将对 `abs` 的调用替换为浮点版本的 `abs`（例如双精度型参数的 `fabs` 或浮点型参数的 `fabsf`）或包含 \<cmath 标头并继续使用 `abs`。
 
-- 浮点一致性 
+- 浮点一致性
 
    对数学库所做的许多更改都用以使特例输入（如 NaN 和无穷大）更符合 IEEE-754 和 C11 附录 F 规范。 例如，在早期版本的库中通常被视为错误的 quiet NaN 输入已不再被视为错误。 请参阅 [IEEE 754 标准](https://standards.ieee.org/standard/754-2008.html) 和 [C11 标准](http://www.iso-9899.info/wiki/The_Standard)的附录 F。
 
@@ -88,7 +88,7 @@ ms.locfileid: "69510353"
 
 #### <a name="new-and-newh"></a>\<new> 和 \<new.h>
 
-- new 和 delete 
+- new 和 delete
 
    在早期版本的库中，实现定义的运算符 new 和 delete 函数已从运行时库 DLL（例如，msvcr120.dll）中导出。 这些运算符函数现在始终以静态方式链接到二进制文件，即使是使用运行时库 DLL 时也是如此。
 
@@ -96,25 +96,25 @@ ms.locfileid: "69510353"
 
 #### <a name="processh"></a>\<process.h>
 
-- _beginthread 和 _beginthreadex 
+- _beginthread 和 _beginthreadex
 
    现在，[_beginthread](../c-runtime-library/reference/beginthread-beginthreadex.md) 和 [_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md) 函数保存对模块的引用，在该模块中，已针对线程持续时间定义了线程过程。 这有助于确保线程在完成运行之后才卸载模块。
 
 #### <a name="stdargh"></a>\<stdarg.h>
 
-- va_start 和引用类型 
+- va_start 和引用类型
 
    编译 C++ 代码时，[va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) 现在会在编译时验证传递给它的参数是否为引用类型。 C++ 标准禁止引用类型的参数。
 
-#### <a name="stdioh-and-conioh"></a>\<stdio.h> 和 \<conio.h>
+#### <a name="stdio_and_conio"></a>\<stdio .h > 和 \<conio >
 
 - **Printf 和 scanf 系列函数现在采用内联方式进行定义。**
 
    所有 `printf` 和 `scanf` 函数的定义已以内联方式移动到 \<stdio.h>、\<conio.h> 及其他 CRT 标头中。 此中断性变更会导致本地声明这些函数（没有适当的 CRT 标头）的任何程序发生链接器错误（LNK2019、无法解析的外部符号）。 如果可能，应更新代码以包括 CRT 标头（即，添加 `#include <stdio.h>`）和内联函数，但如果不想修改代码以包括这些标头文件，则可以选择将其他库添加到链接器输入 (legacy_stdio_definitions.lib)。
 
-   若要将此库添加到 IDE 中的链接器输入，请打开项目节点的上下文菜单，选择“属性”，然后在“项目属性”对话框中选择“链接器”，编辑“链接器输入”以将 `legacy_stdio_definitions.lib` 添加到用分号隔开的列表     。
+   若要将此库添加到 IDE 中的链接器输入，请打开项目节点的上下文菜单，选择“属性”，然后在“项目属性”对话框中选择“链接器”，编辑“链接器输入”以将 `legacy_stdio_definitions.lib` 添加到用分号隔开的列表。
 
-   如果项目链接的静态库是使用早于 2015 版本的 Visual Studio 编译的，则链接器可能会报告无法解析的外部符号。 这些错误可能会以 imp\* 形式引用某些 \<stdio.h> 函数的 `_iob`、`_iob_func` 或相关导入内容的内部定义  。 Microsoft 建议在升级项目时使用最新版本的 C++ 编译器和库编译所有静态库。 如果库是第三方库并且第三方库的源不可用，则应请求来自第三方更新后的二进制文件，或者将你对此库的用法封装到使用旧版编译器和库编译的单独的 DLL。
+   如果项目链接的静态库是使用早于 2015 版本的 Visual Studio 编译的，则链接器可能会报告无法解析的外部符号。 这些错误可能会以 imp\* 形式引用某些 \<stdio.h> 函数的 `_iob`、`_iob_func` 或相关导入内容的内部定义。 Microsoft 建议在升级项目时使用最新版本的 C++ 编译器和库编译所有静态库。 如果库是第三方库并且第三方库的源不可用，则应请求来自第三方更新后的二进制文件，或者将你对此库的用法封装到使用旧版编译器和库编译的单独的 DLL。
 
     > [!WARNING]
     > 如果你链接的是 Windows SDK 8.1 或更早版本，可能会遇到这些无法解析的外部符号错误。 在这种情况下，应通过将 legacy_stdio_definitions.lib 添加到链接器输入（如上文所述）来解决该错误。
@@ -125,15 +125,15 @@ ms.locfileid: "69510353"
     dumpbin.exe /LINKERMEMBER somelibrary.lib
     ```
 
-- gets 和 _getws 
+- gets 和 _getws
 
    已删除 [gets](../c-runtime-library/gets-getws.md) 和 [_getws](../c-runtime-library/gets-getws.md) 函数。 已从 C11 中的 C 标准库删除 gets 函数，因为使用该函数不安全。 _getws 函数是与 gets 等效（但可用于宽字符串）的 Microsoft 扩展。 作为这些函数的替代，请考虑使用 [fgets](../c-runtime-library/reference/fgets-fgetws.md)、[fgetws](../c-runtime-library/reference/fgets-fgetws.md)、[gets_s](../c-runtime-library/reference/gets-s-getws-s.md) 和 [_getws_s](../c-runtime-library/reference/gets-s-getws-s.md)。
 
-- _cgets 和 _cgetws 
+- _cgets 和 _cgetws
 
    已删除 [_cgets](../c-runtime-library/cgets-cgetws.md) 和 [_cgetws](../c-runtime-library/cgets-cgetws.md) 函数。 作为这些函数替代，请考虑使用 [_cgets_s](../c-runtime-library/reference/cgets-s-cgetws-s.md) 和 [_cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)。
 
-- 无穷大和 NaN 格式设置 
+- 无穷大和 NaN 格式设置
 
    在早期版本中，可以使用 MSVC 特定的 sentinel 字符串集进行无穷大和 NaN 格式设置。
 
@@ -141,9 +141,9 @@ ms.locfileid: "69510353"
 
   - 静默 NaN：1.#QNAN
 
-  - 信令 NaN：1.#SNAN
+  - 信号 NaN：1.#SNAN
 
-  - 不定 NaN：1.#IND
+  - 无穷大 NaN：1.#IND
 
   这些格式的任何一种都可能已采用符号作为前缀并且格式设置也可能略有不同，具体取决于字段宽度和精度（有时会起到不寻常的作用，例如，`printf("%.2f\n", INFINITY)` 可以输出 1.#J，因为 #INF 会“四舍五入”为 2 位数的精度）。 C99 引入了有关如何设置无穷大和 NaN 格式的新要求。 现在，MSVC 实现符合这些要求。 新字符串如下所示：
 
@@ -159,7 +159,7 @@ ms.locfileid: "69510353"
 
   已修改 [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) 函数以便分析这些新的字符串，因此这些字符串现在通过 `printf` 和 `scanf` 往返。
 
-- 浮点格式设置和分析 
+- 浮点格式设置和分析
 
    引入了新浮点格式设置和分析算法以提高正确性。 此更改会影响 [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) 和 [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) 系列函数，以及像 [strtod](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md) 这样的函数。
 
@@ -183,33 +183,33 @@ ms.locfileid: "69510353"
 
    旧版本分析算法考虑的输入字符串中有效位数仅达 17，并将丢弃其余数位。 此方法不足以生成由字符串表示的近似值，结果通常是非常接近正确舍入的结果。 新版本的实现会考虑所有存在的数字，并生成所有输入（长度多达 768 位）的正确舍入的结果。 此外，这些函数现在遵循舍入模式（可通过 fesetround 控制）。  这可能是一种中断性行为变更，因为这些函数可能会输出不同的结果。 新版本的结果始终比旧版本的结果更准确。
 
-- 十六进制和无穷大/NaN 浮点分析 
+- 十六进制和无穷大/NaN 浮点分析
 
    浮点分析算法现在将分析十六进制浮点字符串（例如，由 %a 和 %A printf 格式说明符生成的字符串）和由 `printf` 函数生成的所有无穷大和 NaN 字符串（如上文所述）。
 
-- %A 和 %a 零填充 
+- %A 和 %a 零填充
 
    %a 和 %A 格式说明符将浮点数转化为十六进制的尾数和二进制指数。 在早期版本中，`printf` 函数可能会错误地用零填充字符串。 例如，`printf("%07.0a\n", 1.0)` 可能会打印 00x1p+0，而它本应打印 0x01p+0。 已修复此缺陷。
 
-- %A 和 %a 精度 
+- %A 和 %a 精度
 
    在早期版本的库中，%A 和 %a 格式说明符的默认精度是 6。 为了符合 C 标准，现在默认精度为 13。
 
    这是使用带 %A 或 %a 的格式字符串的任一函数输出中的运行时行为更改。 在旧版本行为中，使用 %A 说明符的输出可能是“1.1A2B3Cp+111”。 现在相同值的输出是“1.1A2B3C4D5E6F7p+111”。 若要获取旧版本行为，则可以指定精度（例如，%.6A）。 请参阅[精度规范](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md#precision)。
 
-- %F 说明符 
+- %F 说明符
 
    现在支持 %F 格式/转换说明符。 它在功能上等效于 %f 格式说明符，但使用大写字母形式进行格式设置的无穷大和 NaN 除外。
 
    在早期版本中，实现过去通常将 F 和 N 分析为长度修饰符。 此行为追溯到分段地址空间的时代：这些长度修饰符分别用于指示或近或远的指针（如 %Fp 或 %Ns 中所示）。 此行为已被删除。 如果遇到 %F，现在则将其视为 %F 格式说明符；如果遇到 %N，现在则将其视为无效的参数。
 
-- 指数格式设置 
+- 指数格式设置
 
    %e 和 %E 格式说明符将浮点数转化为十进制的尾数和指数。 %g 和 %G 格式说明符在某些情况下也以此形式设置格式位数。 在早期版本中，CRT 会始终生成具有三个数字指数的字符串。 例如，`printf("%e\n", 1.0)` 可能会输出 1.000000e+000，这是错误的。 根据 C 要求，如果可使用一个或两个数字表示指数，则仅打印两个数字。
 
    Visual Studio 2005 中添加了全局符合性切换：[_set_output_format](../c-runtime-library/set-output-format.md)。 程序可以调用参数为 _TWO_DIGIT_EXPONENT 的此函数，以启用符合标准的指数打印。 已将默认行为更改为符合标准的指数打印模式。
 
-- 格式字符串验证 
+- 格式字符串验证
 
    在早期版本中，`printf` 和 `scanf` 函数以静默方式接受许多无效格式字符串，有时会起到不寻常的作用。 例如，%hlhlhld 将被视为 %d。 现在所有无效格式字符串都被视为无效的参数。
 
@@ -223,39 +223,39 @@ ms.locfileid: "69510353"
 
    如果你的代码解释其中编码为 UTF-8 的流的 _O_WTEXT 模式，这则是一项重大更改。 如果你的应用程序不支持 UTF_8，请考虑为此越来越常见的编码添加支持。
 
-- snprintf 和 vsnprintf 
+- snprintf 和 vsnprintf
 
    现在已实现 [snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) 和 [vsnprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) 函数。 较旧的代码通常为宏版本的这些函数提供定义，因为它们未由 CRT 库实现，但在较新版本中则不再需要这些。 如果将 [snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) 或 [vsnprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) 在包括 \<stdio.h> 之前定义为宏，则现在编译失败并显示错误，该错误指示定义了宏的位置。
 
    通常情况下，解决此问题的方法是删除用户代码中 `snprintf` 或 `vsnprintf` 的任何声明。
 
-- tmpnam 生成可用文件名 
+- tmpnam 生成可用文件名
 
    在早期版本中，`tmpnam` 和 `tmpnam_s` 函数在驱动器根目录（如 \sd3c）中生成文件名。 这些函数现在在临时目录中生成可用的文件名路径。
 
-- 文件封装 
+- 文件封装
 
    在早期版本中，在 \<stdio.h> 中公开定义完整的文件类型，因此用户代码可以访问 FILE 并修改其内部结构。 该库已更改为隐藏实现细节。 作为此更改的一部分，\<stdio.h> 中所定义的 FILE 现在是不透明类型且无法从 CRT 自身的外部访问其成员。
 
-- _outp 和 _inp 
+- _outp 和 _inp
 
    已删除函数 [_outp](../c-runtime-library/outp-outpw-outpd.md)、[_outpw](../c-runtime-library/outp-outpw-outpd.md)、[_outpd](../c-runtime-library/outp-outpw-outpd.md)、[_inp](../c-runtime-library/inp-inpw-inpd.md)、[_inpw](../c-runtime-library/inp-inpw-inpd.md) 和 [_inpd](../c-runtime-library/inp-inpw-inpd.md)。
 
 #### <a name="stdlibh-malloch-and-sysstath"></a>\<stdlib.h>、\<malloc.h> 和 \<sys/stat.h>
 
-- strtof 和 wcstof 
+- strtof 和 wcstof
 
    当值不是以浮点形式表示时，`strtof` 和 `wcstof` 函数无法将 `errno` 设置为 ERANGE。 此错误只特定于这两个函数；`strtod`、`wcstod`、`strtold` 和 `wcstold` 函数不受影响。 此问题已修复，并且是运行时重大更改。
 
-- 对齐的分配函数 
+- 对齐的分配函数
 
    在早期版本中，对齐的分配函数（`_aligned_malloc`、`_aligned_offset_malloc` 等）以静默方式接受带 0 的对齐方式的块的请求。 请求的对齐必须是 2 的幂次方（而 0 不是）。 现在会将请求的对齐为 0 视为无效参数。 此问题已修复，并且是运行时重大更改。
 
-- 堆函数 
+- 堆函数
 
    已删除 `_heapadd`、`_heapset` 和 `_heapused` 函数。 这些函数已不起作用，因为 CRT 已更新为使用 Windows 堆。
 
-- smallheap 
+- smallheap
 
    已删除 `smallheap` 链接选项。 请参阅[链接选项](../c-runtime-library/link-options.md)。
 
@@ -279,43 +279,43 @@ ms.locfileid: "69510353"
 
    在早期版本中，已使用 Windows API [GetSystemTimeAsFileTime](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getsystemtimeasfiletime) 实现了 [clock](../c-runtime-library/reference/clock.md) 函数。 使用此实现，clock 函数对系统时间比较敏感，因此不一定是单一的。 已根据 [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) 重新实现了 clock 函数，现在它是单一的。
 
-- fstat 和 _utime 
+- fstat 和 _utime
 
    在早期版本中，[_stat](../c-runtime-library/reference/stat-functions.md)、[fstat](../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md) 和 [_utime](../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md) 函数对夏令时的处理方式不正确。 在 Visual Studio 2013 之前的版本中，所有这些函数错误调整标准时时间，就像处于夏时制时间内一样。
 
-   在 Visual Studio 2013 中，解决了 _stat 系列函数中的此问题，但未解决 fstat 和 _utime 系列函数中的类似问题    。 此部分修复导致了由于问题函数之间的不一致引起的问题。 现在已修复 fstat 和 _utime 系列函数，因此所有这些函数现在都可正确且一致地处理夏时制   。
+   在 Visual Studio 2013 中，解决了 _stat 系列函数中的此问题，但未解决 fstat 和 _utime 系列函数中的类似问题。 此部分修复导致了由于问题函数之间的不一致引起的问题。 现在已修复 fstat 和 _utime 系列函数，因此所有这些函数现在都可正确且一致地处理夏时制。
 
 - **asctime**
 
    在早期版本中，[asctime](../c-runtime-library/reference/asctime-wasctime.md) 函数会以前导零填充单位数的日期，例如：`Fri Jun 06 08:00:00 2014`。 规范要求此类日期应以前导空格填充，例如 `Fri Jun  6 08:00:00 2014`。 已修复此问题。
 
-- strftime 和 wcsftime 
+- strftime 和 wcsftime
 
    `strftime` 和 `wcsftime` 函数现在支持 %C、%D、%e、%F、%g、%G、%h、%n、%r、%R、%t、%T、%u 和 %V 格式说明符。 此外，分析但忽略了 E 和 O 修饰符。
 
    指定 %c 格式说明符生成当前区域设置的“相应的日期和时间表示形式”。 在 C 区域设置中，此表示形式必须与 `%a %b %e %T %Y` 相同，并且形式与 `asctime` 生成的形式相同。 在早期版本中，使用 `MM/DD/YY HH:MM:SS` 表示形式，%c 格式说明符设置的时间格式不正确。 已修复此问题。
 
-- timespec 和 TIME_UTC 
+- timespec 和 TIME_UTC
 
    \<time.h> 标头现在按照 C11 标准定义 `timespec` 类型和 `timespec_get` 函数。 此外，现在可定义与 `timespec_get` 函数连用的 TIME_UTC 宏。 对于具有任何这些标识符的冲突定义的代码而言，此更新是一项重大更改。
 
-- CLOCKS_PER_SEC 
+- CLOCKS_PER_SEC
 
    现在，CLOCKS_PER_SEC 宏根据 C 语言要求扩展为整数类型 `clock_t`。
 
 ####  <a name="BK_STL"></a>C++ 标准库
 
-为了实现新的优化和调试检查，C++ 标准库的 Visual Studio 实现特意破坏了连续两个版本之间的二进制兼容性。 因此，在使用 C++ 标准库时，使用不同版本编译的对象文件和静态库不能混合在同一二进制文件（EXE 或 DLL）中，并且不能在使用不同版本编译的二进制文件之间传递 C++ 标准库对象。 这样混合会发出关于 _MSC_VER 不匹配的链接器错误。 （_MSC_VER 是包含编译器主版本的宏，例如，Visual Studio 2013 的 1800。）此检查无法检测 DLL 混合，也无法检测涉及 Visual Studio 2008 或早期版本的混合。
+为了实现新的优化和调试检查，C++ 标准库的 Visual Studio 实现特意破坏了连续两个版本之间的二进制兼容性。 因此，在使用 C++ 标准库时，使用不同版本编译的对象文件和静态库不能混合在同一二进制文件（EXE 或 DLL）中，并且不能在使用不同版本编译的二进制文件之间传递 C++ 标准库对象。 这样混合会发出关于 _MSC_VER 不匹配的链接器错误。 （_MSC_VER 是包含编译器主版本的宏，例如，Visual Studio 2013 为1800。）此检查无法检测 DLL 混合，也无法检测涉及 Visual Studio 2008 或更早版本的混合。
 
-- C++ 标准库包含文件 
+- C++ 标准库包含文件
 
    对 C++ 标准库标头中的包含结构进行了一些更改。 允许 C++ 标准库标头以未指定的方式相互包含。 一般情况下，编写代码应根据 C++ 标准，谨慎包括需要的所有标头，而不是依赖于哪些 C++ 标准库标头包含哪些其他 C++ 标准库标头。 这使得代码可跨版本和平台进行移植。 至少更改 Visual Studio 2015 的两个标头才会影响用户代码。 首先，\<string> 不再包括 \<iterator>。 第二，\<tuple> 现在用于声明 `std::array` 但不包括所有 \<array>，这可能中断代码通过以下代码构造的组合：代码具有名为“array”的变量、你具有 using 指令“using namespace std;”，以及你包括了含有 \<tuple> 的 C++ 标准库标头（如 \<functional>），其现在用于声明 `std::array`。
 
-- steady_clock 
+- steady_clock
 
    已更改 [steady_clock](../standard-library/steady-clock-struct.md) 的 \<chrono> 实现，以便满足 C++ 标准对稳定性和单一性的需求。 `steady_clock` 现在基于 [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter)，且 `high_resolution_clock` 现在是 `steady_clock` 的 typedef。 因此，在 Visual Studio 中，`steady_clock::time_point` 现在是 `chrono::time_point<steady_clock>` 的 typedef；但是，其他实现不一定是这种情况。
 
-- 分配器和 const 
+- 分配器和 const
 
    现在，我们要求分配器进行相等/不等比较，以接受两端上的 const 自变量。 如果分配器定义了这样的运算符，
 
@@ -329,19 +329,19 @@ ms.locfileid: "69510353"
     bool operator==(const MyAlloc& other) const
     ```
 
-- const 元素 
+- const 元素
 
    C++ 标准始终禁止 const 元素（如 vector\<const T> 或 set\<const T>）的容器。 Visual Studio 2013 及更早版本接受此类容器。 在当前版本中，此类容器无法编译。
 
-- std::allocator::deallocate 
+- std::allocator::deallocate
 
-   在 Visual Studio 2013 和早期版本中，`std::allocator::deallocate(p, n)` 忽略了传入用于 n  的参数。  C++ 标准始终要求 n 必须等于作为第一个参数传递给返回 p 的 `allocate` 调用的值   。 但是，在当前版本中将检查 n 的值  。 在运行时，为 n 传递不同于标准要求的参数的代码可能会崩溃  。
+   在 Visual Studio 2013 和早期版本中，`std::allocator::deallocate(p, n)` 忽略了传入用于 n 的参数。  C++ 标准始终要求 n 必须等于作为第一个参数传递给返回 p 的 `allocate` 调用的值。 但是，在当前版本中将检查 n 的值。 在运行时，为 n 传递不同于标准要求的参数的代码可能会崩溃。
 
-- hash_map 和 hash_set 
+- hash_map 和 hash_set
 
    非标准标头文件 \<hash_map> 和 \<hash_set> 在 Visual Studio 2015 中已被弃用，并且将在未来版本中删除。 请改用 \<unordered_map> 和 \<unordered_set>。
 
-- 比较运算符和 operator() 
+- 比较运算符和 operator()
 
    关联容器（\<map> 系列）现在要求其比较运算符具有可调用 const 的函数调用运算符。 现在比较运算符类声明中的以下代码无法进行编译：
 
@@ -355,7 +355,7 @@ ms.locfileid: "69510353"
     bool operator()(const X& a, const X& b) const
     ```
 
-- 类型特征 
+- 类型特征
 
    早期版本的 C++ 草稿标准中删除了类型特征的旧名称。 C++11 中已对这些内容进行了更改，并且已更新为 Visual Studio 2015 中的 C++11 值。 下表显示了旧名称和新名称。
 
@@ -381,7 +381,7 @@ ms.locfileid: "69510353"
    |has_trivial_move_assign|is_trivially_move_assignable|
    |has_trivial_destructor|is_trivially_destructible|
 
-- launch::any 和 launch::sync 策略 
+- launch::any 和 launch::sync 策略
 
    删除了非标准的 `launch::any` 和 `launch::sync` 策略。 相反，对于 `launch::any`，使用 `launch:async | launch:deferred`。 对于 `launch::sync`，使用 `launch::deferred`。 请参阅 [launch 枚举](../standard-library/future-enums.md#launch)。
 
@@ -389,13 +389,13 @@ ms.locfileid: "69510353"
 
 - **Microsoft 基础类 (MFC)**
 
-   由于较大而不再包含在 Visual Studio 的“典型”安装中。 若要安装 MFC，请在 Visual Studio 2015 安装程序中选择“自定义”安装选项  。 如果已安装 Visual Studio 2015，可以通过再次运行 Visual Studio 安装程序来安装 MFC  。 选择“自定义”安装选项，然后选择“Microsoft 基础类”   。 可从“控制面板”控制“程序和功能”，或从安装介质运行 Visual Studio 安装程序    。
+   由于较大而不再包含在 Visual Studio 的“典型”安装中。 若要安装 MFC，请在 Visual Studio 2015 安装程序中选择“自定义”安装选项。 如果已安装 Visual Studio 2015，可以通过再次运行 Visual Studio 安装程序来安装 MFC。 选择“自定义”安装选项，然后选择“Microsoft 基础类”。 可从“控制面板”控制“程序和功能”，或从安装介质运行 Visual Studio 安装程序。
 
    Visual C++ 可再发行组件包仍包含此库。
 
 ####  <a name="BK_ConcRT"></a>并发运行时
 
-- 与 concurrency::Context::Yield 冲突的 Windows.h 中的 Yield 宏 
+- 与 concurrency::Context::Yield 冲突的 Windows.h 中的 Yield 宏
 
    并发运行时之前使用 `#undef` 来取消定义 Yield 宏，以避免 Windows.h h 中定义的 Yield 宏和 `concurrency::Context::Yield` 函数之间的冲突。 已删除此 `#undef`，并添加了新的非冲突等效 API 调用 [concurrency::Context::YieldExecution](../parallel/concrt/reference/context-class.md#yieldexecution)。 若要解决与 Yield 的冲突，可以改为更新代码以调用 `YieldExecution` 函数，或在调用站点用括号将 `Yield` 函数名括起来，如下例所示：
 
@@ -409,9 +409,9 @@ ms.locfileid: "69510353"
 
 在 Visual Studio 2015 中，对编译器符合性的持续改进有时会改变编译器理解现有源代码的方式。 因此，可能会在生成过程中遇到新的或不同的错误，甚至以前生成且似乎运行正常的代码也可能出现行为差异。
 
-幸运的是，这些差异对大多数源代码几乎没有影响。 需要源代码或其他更改来解决这些差异时，修复程序往往很小且简单。 我们列出了以前可接受、现在可能需要更改的许多源代码示例（之前）及其修补程序（之后）   。
+幸运的是，这些差异对大多数源代码几乎没有影响。 需要源代码或其他更改来解决这些差异时，修复程序往往很小且简单。 我们列出了以前可接受、现在可能需要更改的许多源代码示例（之前）及其修补程序（之后）。
 
-虽然这些差异可能会影响源代码或其他生成项目，但不会影响 Visual Studio 版本更新之间的二进制文件兼容性。 中断性变更的严重性更高，并且可能会影响二进制文件兼容性，但此类二进制文件兼容性中断问题仅发生在 Visual Studio 的主版本之间（例如，在 Visual Studio 2013 和 Visual Studio 2015 之间）  。 有关 Visual Studio 2013 和 Visual Studio 2015 之间的重大更改的详细信息，请参阅 [Visual Studio 2015 符合性更改](#VC_2015)。
+虽然这些差异可能会影响源代码或其他生成项目，但不会影响 Visual Studio 版本更新之间的二进制文件兼容性。 中断性变更的严重性更高，并且可能会影响二进制文件兼容性，但此类二进制文件兼容性中断问题仅发生在 Visual Studio 的主版本之间（例如，在 Visual Studio 2013 和 Visual Studio 2015 之间）。 有关 Visual Studio 2013 和 Visual Studio 2015 之间的重大更改的详细信息，请参阅 [Visual Studio 2015 符合性更改](#VC_2015)。
 
 - [Visual Studio 2015 的符合性改进](#VS_RTM)
 
@@ -431,7 +431,7 @@ ms.locfileid: "69510353"
     Command line warning  D9035: option 'Zc:forScope-' has been deprecated and will be removed in a future release
     ```
 
-   通常情况下，使用此选项是为了允许非标准代码在点的位置之后使用循环变量，根据标准规范，这些变量本应该在范围之外。 仅在使用 `/Za` 选项进行编译时才需要，因为如果没有 `/Za`，将始终允许在循环结束后使用 for 循环变量。 如果你不在乎标准符合性（例如，如果你的代码并不要移植到其他编译器），则可关闭 `/Za` 选项（或将“禁用语言扩展”属性设置为“否”）   。 如果你确实关心编写可移植且符合标准的代码，则应重写代码，以便通过将此类变量的声明移到循环以外的点使其符合标准。
+   通常情况下，使用此选项是为了允许非标准代码在点的位置之后使用循环变量，根据标准规范，这些变量本应该在范围之外。 仅在使用 `/Za` 选项进行编译时才需要，因为如果没有 `/Za`，将始终允许在循环结束后使用 for 循环变量。 如果你不在乎标准符合性（例如，如果你的代码并不要移植到其他编译器），则可关闭 `/Za` 选项（或将“禁用语言扩展”属性设置为“否”）。 如果你确实关心编写可移植且符合标准的代码，则应重写代码，以便通过将此类变量的声明移到循环以外的点使其符合标准。
 
     ```cpp
     // C2065 expected
@@ -451,7 +451,7 @@ ms.locfileid: "69510353"
 
 - **可变关键字**
 
-   在其之前正确编译的位置，不再允许存在可变存储类说明符  。 现在，编译器报告错误 C2071（非法存储类）。 根据标准，可变说明符仅可应用于类数据成员的名称，不能应用于声明为 const 或 static 的名称，也不能应用于引用成员  。
+   在其之前正确编译的位置，不再允许存在可变存储类说明符。 现在，编译器报告错误 C2071（非法存储类）。 根据标准，可变说明符仅可应用于类数据成员的名称，不能应用于声明为 const 或 static 的名称，也不能应用于引用成员。
 
    例如，考虑以下代码：
 
@@ -468,11 +468,11 @@ ms.locfileid: "69510353"
     error C2071: 'S::r': illegal storage class
     ```
 
-   要消除此错误，请删除冗余的可变关键字  。
+   要消除此错误，请删除冗余的可变关键字。
 
 - **char_16_t 和 char32_t**
 
-   不能再使用 `char16_t` 或 `char32_t` 作为 typedef 中的别名，因为这些类型现在被视为内置  。 用户和库作者过去通常将 `char16_t` 和 `char32_t` 分别定义为 `uint16_t` 和 `uint32_t` 的别名。
+   不能再使用 `char16_t` 或 `char32_t` 作为 typedef 中的别名，因为这些类型现在被视为内置。 用户和库作者过去通常将 `char16_t` 和 `char32_t` 分别定义为 `uint16_t` 和 `uint32_t` 的别名。
 
     ```cpp
     #include <cstdint>
@@ -489,7 +489,7 @@ ms.locfileid: "69510353"
     }
     ```
 
-   要更新代码，请删除 typedef 声明，并重命名与这些名称冲突的其他所有标识符  。
+   要更新代码，请删除 typedef 声明，并重命名与这些名称冲突的其他所有标识符。
 
 - **非类型模板参数**
 
@@ -551,7 +551,7 @@ ms.locfileid: "69510353"
     }
     ```
 
-   问题在于，复制构造函数是私有的，因此对象无法像处理异常的标准过程那样进行复制。 当复制构造函数声明为显式时，这同样适用  。
+   问题在于，复制构造函数是私有的，因此对象无法像处理异常的标准过程那样进行复制。 当复制构造函数声明为显式时，这同样适用。
 
     ```cpp
     struct S
@@ -566,7 +566,7 @@ ms.locfileid: "69510353"
     }
     ```
 
-   要更新代码，请确保异常对象的复制构造函数是公用的且未标记为显式   。
+   要更新代码，请确保异常对象的复制构造函数是公用的且未标记为显式。
 
    通过值捕获异常还要求异常对象可复制。 下列代码可在 Visual Studio 2013 中进行编译，但在 Visual Studio 2015 中不会进行编译：
 
@@ -592,7 +592,7 @@ ms.locfileid: "69510353"
     }
     ```
 
-   可通过将 catch 的参数类型更改为“引用”来解决此问题  。
+   可通过将 catch 的参数类型更改为“引用”来解决此问题。
 
     ```cpp
     catch (D& d)
@@ -641,28 +641,28 @@ ms.locfileid: "69510353"
 
 - **placement new 和 placement delete**
 
-   对 delete 运算符做出更改以使其符合 C++14 标准  。 标准更改的详细信息位于 [C++ 调整了大小的释放](https://isocpp.org/files/papers/n3778.html)。 这些更改将添加采用大小参数的全局 delete 运算符的形式  。 重大更改为，如果之前使用的是具有相同签名的运算符 delete（以与 placement new 运算符对应），则将收到编译器错误（C2956，在使用 placement new 的点位置出现，因为在代码中的该位置，编译器会尝试标识适当匹配的 delete 运算符）    。
+   对 delete 运算符做出更改以使其符合 C++14 标准。 标准更改的详细信息位于 [C++ 调整了大小的释放](https://isocpp.org/files/papers/n3778.html)。 这些更改将添加采用大小参数的全局 delete 运算符的形式。 重大更改为，如果之前使用的是具有相同签名的运算符 delete（以与 placement new 运算符对应），则将收到编译器错误（C2956，在使用 placement new 的点位置出现，因为在代码中的该位置，编译器会尝试标识适当匹配的 delete 运算符）。
 
-   函数 `void operator delete(void *, size_t)` 是与 C++11 中的 placement new 函数 `void * operator new(size_t, size_t)` 对应的 placement delete 运算符   。 使用 C++14 调整了大小的释放，此 delete 函数现在是常用释放函数（全局 delete 运算符）   。 标准要求为，如果使用 placement new 查找相应的 delete 函数和常用释放函数，则程序会出现格式错误。
+   函数 `void operator delete(void *, size_t)` 是与 C++11 中的 placement new 函数 `void * operator new(size_t, size_t)` 对应的 placement delete 运算符。 使用 C++14 调整了大小的释放，此 delete 函数现在是常用释放函数（全局 delete 运算符）。 标准要求为，如果使用 placement new 查找相应的 delete 函数和常用释放函数，则程序会出现格式错误。
 
-   例如，假设你的代码同时定义了 placement new 和 placement delete   ：
+   例如，假设你的代码同时定义了 placement new 和 placement delete：
 
     ```cpp
     void * operator new(std::size_t, std::size_t);
     void operator delete(void*, std::size_t) noexcept;
     ```
 
-   由于定义的 placement delete 运算符和新的全局调整大小的 delete 运算符之间的函数签名匹配，因此就会出现问题   。 考虑是否可使用任何 placement new 和 placement delete 运算符的其他类型（`size_t` 除外   ）。 `size_t` typedef 的类型取决于编译器；在 MSVC 中，它是一个无符号整型的 typedef    。 较好的解决办法就是使用如下的枚举类型：
+   由于定义的 placement delete 运算符和新的全局调整大小的 delete 运算符之间的函数签名匹配，因此就会出现问题。 考虑是否可使用任何 placement new 和 placement delete 运算符的其他类型（`size_t` 除外）。 `size_t` typedef 的类型取决于编译器；在 MSVC 中，它是一个无符号整型的 typedef。 较好的解决办法就是使用如下的枚举类型：
 
     ```cpp
     enum class my_type : size_t {};
     ```
 
-   然后，更改对 placement new 和 placement delete 的定义，以使用此类型作为第二个参数（而不是 `size_t`）   。 你还需要更新对 placement new 的调用以传递新类型（例如，通过使用 `static_cast<my_type>` 从整数值转换）并更新 new 和 delete 的定义以强制转换回整数类型   。 你无需为此使用枚举；具有 `size_t` 成员的类类型也将起作用  。
+   然后，更改对 placement new 和 placement delete 的定义，以使用此类型作为第二个参数（而不是 `size_t`）。 你还需要更新对 placement new 的调用以传递新类型（例如，通过使用 `static_cast<my_type>` 从整数值转换）并更新 new 和 delete 的定义以强制转换回整数类型。 你无需为此使用枚举；具有 `size_t` 成员的类类型也将起作用。
 
-   你还可以将 placement new 全部消除作为备选解决方案  。 如果你的代码使用 placement new 实现内存池，其中位置参数是分配或删除的对象的大小，则调整了大小的释放功能可能适合替换你自定义的内存池代码，且你可以去掉位置函数，仅使用自己两个参数的 delete 运算符（而不是位置函数）   。
+   你还可以将 placement new 全部消除作为备选解决方案。 如果你的代码使用 placement new 实现内存池，其中位置参数是分配或删除的对象的大小，则调整了大小的释放功能可能适合替换你自定义的内存池代码，且你可以去掉位置函数，仅使用自己两个参数的 delete 运算符（而不是位置函数）。
 
-   如果你不想立即更新代码，可通过编译器选项 `/Zc:sizedDealloc-` 还原到之前的行为。 如果使用此选项，则不存在两个参数的 delete 函数，并且也不会导致与 placement delete 运算符发生冲突  。
+   如果你不想立即更新代码，可通过编译器选项 `/Zc:sizedDealloc-` 还原到之前的行为。 如果使用此选项，则不存在两个参数的 delete 函数，并且也不会导致与 placement delete 运算符发生冲突。
 
 - **联合数据成员**
 
@@ -987,7 +987,7 @@ ms.locfileid: "69510353"
     //other partial specializations here
     ```
 
-   若要解决此问题，请在结构中包装值  ：
+   若要解决此问题，请在结构中包装值：
 
     ```cpp
     template <size_t some_value>
@@ -1004,7 +1004,7 @@ ms.locfileid: "69510353"
     //other partial specializations here
     ```
 
-- **对前向声明强制执行规则。（仅适用于 C。）**
+- **为前向声明强制执行的规则。（仅适用于 C。）**
 
    下面的代码现在生成错误 C2065：
 
@@ -1046,7 +1046,7 @@ ms.locfileid: "69510353"
 
 - **对重载函数的调用不明确**
 
-   下面的代码现在生成错误 C266：“N::bind”: 对重载函数的调用不明确
+   下面的代码现在生成错误 C266："N::bind":对重载函数的调用不明确
 
     ```cpp
     template<typename R, typename T, typename T1, typename A1>
@@ -1072,7 +1072,7 @@ ms.locfileid: "69510353"
     };
     ```
 
-   若要修复此错误，可以将调用完全限定为 `bind: N::bind(...)`。 不过，如果此更改是通过未声明的标识符 (C2065) 显现出来的，修复此错误的适当做法是改用“using”声明  。
+   若要修复此错误，可以将调用完全限定为 `bind: N::bind(...)`。 不过，如果此更改是通过未声明的标识符 (C2065) 显现出来的，修复此错误的适当做法是改用“using”声明。
 
    此模式的发生通常与 `Microsoft::WRL` 命名空间中的 ComPtr 和其他类型有关。
 
@@ -1189,7 +1189,7 @@ ms.locfileid: "69510353"
 
 - **值无法捕获 MFC 异常，因为此类异常无法复制**
 
-   MFC 应用程序中的下列代码现在会造成错误 C2316：“D”: 无法作为析构函数捕获，或者复制构造函数不可访问或已删除，或同时出现这两种情况
+   MFC 应用程序中的以下代码现在生成错误 C2316："D":无法被捕获，因为析构函数和/或复制构造函数不可访问或已遭删除
 
     ```cpp
     struct B {
@@ -1217,7 +1217,7 @@ ms.locfileid: "69510353"
 
 - **alignof 现在是关键字**
 
-   下面的代码现在生成错误 C2332："class":缺少标记名称。 若要修复此代码，必须重命名类；或者，如果类执行的工作与 alignof 相同，只需将类替换成新的关键字即可  。
+   下面的代码现在生成错误 C2332："class":缺少标记名称。 若要修复此代码，必须重命名类；或者，如果类执行的工作与 alignof 相同，只需将类替换成新的关键字即可。
 
     ```cpp
     class alignof{}
@@ -1233,7 +1233,7 @@ ms.locfileid: "69510353"
 
 - **可移动类型不能为常量**
 
-   当函数返回预期要移动的类型时，其返回类型不得为常量  。
+   当函数返回预期要移动的类型时，其返回类型不得为常量。
 
 - **已删除复制构造函数**
 
@@ -1335,7 +1335,7 @@ ms.locfileid: "69510353"
 
 - **修复非静态数据成员初始化 (NSDMI) 中的无效复制初始化**
 
-   下面的代码现在生成错误 C2664：“S1::S1(S1 &&)”: 无法将自变量 1 从 “bool” 转换为 “const S1 &”:
+   下面的代码现在生成错误 C2664："S1::S1(S1 &&)":无法将自变量 1 从 "bool" 转换成 "const S1 &"。
 
     ```cpp
     struct S1 {
@@ -1357,7 +1357,7 @@ ms.locfileid: "69510353"
 
 - **访问 decltype 语句内部的构造函数**
 
-   下面的代码现在会生成错误 C2248：“S::S”: 无法访问类 “S” 中声明的私有成员：
+   下面的代码现在生成错误 C2248："S::S":无法访问类 "S" 中声明的私有成员。
 
     ```cpp
     class S {
@@ -1479,7 +1479,7 @@ ms.locfileid: "69510353"
 
 - **无法在派生构造函数的主体中调用受保护的基构造函数。**
 
-   下面的代码现在会生成错误 C2248：“S1::S1”: 无法访问类 “S1” 中受保护的成员
+   下面的代码现在生成错误 C2248："S1::S1":无法访问类 "S1" 中声明的受保护成员
 
     ```cpp
     struct S1 {
@@ -1496,7 +1496,7 @@ ms.locfileid: "69510353"
 
    若要修复此错误，请在 `S2` 中删除构造函数对 `S1()` 的调用；如有必要，将其置于其他函数中。
 
-- {} 防止发生指针转换 
+- {} 防止发生指针转换
 
    下面的代码现在生成错误 C2439："S::p":无法初始化成员
 
@@ -1507,7 +1507,7 @@ ms.locfileid: "69510353"
     };
     ```
 
-   若要修复此错误，请删除 0 两边的大括号；否则，改用 `0`，如以下示例所示  ：
+   若要修复此错误，请删除 0 两边的大括号；否则，改用 `0`，如以下示例所示：
 
     ```cpp
     struct S {
@@ -1582,7 +1582,7 @@ ms.locfileid: "69510353"
     };
     ```
 
-   若要修复此错误，请删除 `j` 两边的括号。 如果为明确起见而需要使用括号，请使用 typedef  。
+   若要修复此错误，请删除 `j` 两边的括号。 如果为明确起见而需要使用括号，请使用 typedef。
 
 - **编译器生成的构造函数和 __declspec(novtable)**
 
@@ -1755,7 +1755,7 @@ ms.locfileid: "69510353"
 
 - **重载的 new 运算符和 delete 运算符**
 
-   早期版本的编译器允许非成员 new 运算符和非成员 delete 运算符声明为静态，并在全局命名空间之外的命名空间中声明   。  之前的这种行为存在风险，导致程序不调用程序员期望的 new 或 delete 运算符实现，进而导致无提示的运行时行为错误   。 编译器不再接受这种方式编写的代码，因此会发出编译器错误 C2323。
+   早期版本的编译器允许非成员 new 运算符和非成员 delete 运算符声明为静态，并在全局命名空间之外的命名空间中声明。  之前的这种行为存在风险，导致程序不调用程序员期望的 new 或 delete 运算符实现，进而导致无提示的运行时行为错误。 编译器不再接受这种方式编写的代码，因此会发出编译器错误 C2323。
 
     ```Output
     error C2323: 'operator new': non-member operator new or delete functions may not be declared static or in a namespace other than the global namespace.
@@ -1773,7 +1773,7 @@ ms.locfileid: "69510353"
     void * __cdecl operator new(size_t cb, const std::nothrow_t&)  // removed 'static inline'
     ```
 
-   此外，尽管编译器不能进行具体诊断，但内联运算符 new 会被视为格式不正确  。
+   此外，尽管编译器不能进行具体诊断，但内联运算符 new 会被视为格式不正确。
 
 - **对非类类型调用“operator *type*()”（用户定义的转换）**
 
@@ -1807,7 +1807,7 @@ ms.locfileid: "69510353"
 
 - **详细的类型说明符中的多余 typename**
 
-   早期版本的编译器允许详细的类型说明符中出现 typename，但是用这种方式编写的代码在语义上不正确  。 编译器不再接受这种方式编写的代码，因此会发出编译器错误 C3406。
+   早期版本的编译器允许详细的类型说明符中出现 typename，但是用这种方式编写的代码在语义上不正确。 编译器不再接受这种方式编写的代码，因此会发出编译器错误 C3406。
 
     ```Output
     error C3406: 'typename' cannot be used in an elaborated type specifier
@@ -1837,7 +1837,7 @@ ms.locfileid: "69510353"
     error C2668: 'function' : ambiguous call to overloaded function.
     ```
 
-   示例 1：对重载函数的调用不明确（之前）
+   示例 1： 对重载函数的调用不明确（之前）
 
     ```cpp
     // In previous versions of the compiler, code written in this way would unambiguously call f(int, Args...)
@@ -1915,7 +1915,7 @@ ms.locfileid: "69510353"
 
 - **switch 语句警告的还原**
 
-   前一个版本的编译器删除了一些与 switch 语句相关的警告；现在已还原所有这些警告  。 编译器现在将发出还原的警告，并且现在会在包含有问题用例的行中发出与特定用例（包括默认情况下）相关的警告，而不是在 switch 语句的最后一行发出。 因此，现在发出这些警告的行与过去不同，按照需要使用 `#pragma warning(disable:####)` 可不再禁止显示以前禁止显示的警告。 要按照需要禁止显示这些警告，可能需要将 `#pragma warning(disable:####)` 指令移到第一个有问题的用例上面的行。 以下是还原的警告：
+   前一个版本的编译器删除了一些与 switch 语句相关的警告；现在已还原所有这些警告。 编译器现在将发出还原的警告，并且现在会在包含有问题用例的行中发出与特定用例（包括默认情况下）相关的警告，而不是在 switch 语句的最后一行发出。 因此，现在发出这些警告的行与过去不同，按照需要使用 `#pragma warning(disable:####)` 可不再禁止显示以前禁止显示的警告。 要按照需要禁止显示这些警告，可能需要将 `#pragma warning(disable:####)` 指令移到第一个有问题的用例上面的行。 以下是还原的警告：
 
     ```Output
     warning C4060: switch statement contains no 'case' or 'default' labels
@@ -2009,7 +2009,7 @@ ms.locfileid: "69510353"
 
    在其文档中提供了其他还原警告的示例。
 
-- #include：在路径名中使用父目录说明符“..”（只影响 `/Wall` `/WX`） 
+- #include：在路径名中使用父目录说明符“..”（只影响 `/Wall` `/WX`）
 
    早期版本的编译器没有检测到使用父目录说明符“..” （在 `#include` 指令的路径名中）。 以这种方式编写的代码通常用于包含因不正确使用项目相对路径而留在项目外的标头。 这一旧行为会引发风险，导致编译程序时包含了程序员不需要的源文件来，或这些相对路径不能移植到其他生成环境中。 编译器现在会检测以这种方式编写的代码并通知程序员，并发出可选编译器警告 C4464（如果已启用）。
 
@@ -2031,7 +2031,7 @@ ms.locfileid: "69510353"
 
    此外，虽然编译器并不会进行具体诊断，但建议不应将父目录说明符“..”用于指定项目的包含目录。
 
-- #pragma optimize() 超出标头文件的末尾（只影响 `/Wall` `/WX`） 
+- #pragma optimize() 超出标头文件的末尾（只影响 `/Wall` `/WX`）
 
    早期版本的编译器无法检测到对转义翻译单元中包含的标头文件的优化标志设置的更改。 编译器现在会检测以这种方式编写的代码并通知程序员，并在有问题的 `#include`的位置发出可选编译器警告 C4426（如果已启用）。 只有更改与编译器命令行参数设置的优化标志发生冲突时，才发出此警告。
 
@@ -2064,7 +2064,7 @@ ms.locfileid: "69510353"
     #include "C4426.h"
     ```
 
-- #pragma warning(push) 和 #pragma warning(pop)（只影响 `/Wall` `/WX`）  
+- #pragma warning(push) 和 #pragma warning(pop)（只影响 `/Wall` `/WX`）
 
    早期版本的编译器无法检测到不同源文件中与 `#pragma warning(pop)` 状态更改配对的 `#pragma warning(push)` 状态更改，这并不是我们所预期的。 这种旧行为会引发风险，导致程序编译时会启用一组程序员不希望出现的警告，可能会导致无提示的运行时行为错误。 编译器现在能够检测以这种方式编写的代码并通知程序员，并在匹配 `#pragma warning(pop)` 位置发出可选编译器警告 C5031（如果已启用）。 此警告包括引用相应 #pragma warning(push) 的位置的注释。
 
@@ -2120,7 +2120,7 @@ ms.locfileid: "69510353"
 
    虽然不常见，但是有时会故意以这种方式编写代码。 以这种方式编写的代码对于 `#include` 顺序的更改比较敏感；如果可能，我们建议源代码文件以自包含的方式管理警告状态。
 
-- #pragma warning(push) 不匹配  （只影响 `/Wall` `/WX`）
+- #pragma warning(push) 不匹配（只影响 `/Wall` `/WX`）
 
    早期版本的编译器无法检测到翻译单元末尾出现的不匹配 `#pragma warning(push)` 状态更改。 而现在，编译器可检测按此方式编写的代码并通知程序员，还可在 `#pragma warning(push)` 不匹配的位置发出编译器警告 C5032（如已启用）。 只有翻译单元中没有任何编译错误时，才会发出此警告。
 
@@ -2173,7 +2173,7 @@ ms.locfileid: "69510353"
     warning C4720: unreachable code
     ```
 
-   在许多情况下，只有启用优化进行编译时，才会发出此警告，因为优化可能嵌入更多函数调用，消除冗余代码或者能够确定某些代码是否无法访问。 我们观察到，try/catch 块中频繁发生警告 C4720 的新实例，尤其是在使用 [std::find](assetId:///std::find?qualifyHint=False&autoUpgrade=True) 时  。
+   在许多情况下，只有启用优化进行编译时，才会发出此警告，因为优化可能嵌入更多函数调用，消除冗余代码或者能够确定某些代码是否无法访问。 我们观察到，try/catch 块中频繁发生警告 C4720 的新实例，尤其是在使用 [std::find](assetId:///std::find?qualifyHint=False&autoUpgrade=True) 时。
 
    示例（之前）
 
@@ -2205,9 +2205,9 @@ ms.locfileid: "69510353"
 
 - **可能会因对表达式 SFINAE 的部分支持而发出其他警告和错误**
 
-   由于缺少对表达式 SFINAE 的支持，编译器的早期版本无法分析 decltype 说明符中特定类型的表达式  。 这种旧行为不正确，也不符合 C++ 标准。 由于持续的符合性改进，此编译器现已可分析这些表达式，并能为表达式 SFINAE 提供部分支持。 因此，此编译器现在可发出在编译器的早期版本无法分析的表达式中找到的警告和错误。
+   由于缺少对表达式 SFINAE 的支持，编译器的早期版本无法分析 decltype 说明符中特定类型的表达式。 这种旧行为不正确，也不符合 C++ 标准。 由于持续的符合性改进，此编译器现已可分析这些表达式，并能为表达式 SFINAE 提供部分支持。 因此，此编译器现在可发出在编译器的早期版本无法分析的表达式中找到的警告和错误。
 
-   这种新行为分析包含尚未声明类型的 decltype 表达式时，将导致编译器发出编译器错误 C2039  。
+   这种新行为分析包含尚未声明类型的 decltype 表达式时，将导致编译器发出编译器错误 C2039。
 
     ```Output
     error C2039: 'type': is not a member of '`global namespace''
@@ -2241,7 +2241,7 @@ ms.locfileid: "69510353"
     }
     ```
 
-   当此新行为分析 decltype 表达式时（将依赖名称指定为类型时必须使用关键字 typename，而此表达式未使用），编译器将发出编译器警告 C4346 和编译器错误 C2923   。
+   当此新行为分析 decltype 表达式时（将依赖名称指定为类型时必须使用关键字 typename，而此表达式未使用），编译器将发出编译器警告 C4346 和编译器错误 C2923。
 
     ```Output
     warning C4346: 'S2<T>::Type': dependent name is not a type
@@ -2294,7 +2294,7 @@ ms.locfileid: "69510353"
 
 - `volatile` **成员变量将防止出现隐式定义的构造函数和赋值运算符**
 
-   编译器的早期版本允许具有可变成员变量的类自动生成默认复制/移动构造函数和默认复制/移动赋值运算符  。 这种旧行为不正确，也不符合 C++ 标准。 编译器现在认为拥有可变成员变量的类具有非常用构造函数和赋值运算符，这将防止自动生成这些运算符的默认实现  。 当此类为某一联合（或类中的匿名联合）的成员时，会将联合（或包含匿名联合的类）的复制/移动构造函数和复制/移动赋值运算符的隐式定义为已删除。 尝试构造或复制联合（或包含匿名联合的类）而不显式定义它们是错误的，将导致编译器发出编译器错误 C2280。
+   编译器的早期版本允许具有可变成员变量的类自动生成默认复制/移动构造函数和默认复制/移动赋值运算符。 这种旧行为不正确，也不符合 C++ 标准。 编译器现在认为拥有可变成员变量的类具有非常用构造函数和赋值运算符，这将防止自动生成这些运算符的默认实现。 当此类为某一联合（或类中的匿名联合）的成员时，会将联合（或包含匿名联合的类）的复制/移动构造函数和复制/移动赋值运算符的隐式定义为已删除。 尝试构造或复制联合（或包含匿名联合的类）而不显式定义它们是错误的，将导致编译器发出编译器错误 C2280。
 
     ```Output
     error C2280: 'B::B(const B &)': attempting to reference a deleted function
@@ -2380,7 +2380,7 @@ ms.locfileid: "69510353"
 
 - **WinRT 代码中不允许枚举的前向声明**（仅影响 `/ZW`）
 
-   为 Windows 运行时 (WinRT) 编译的代码不允许前向声明 enum 类型，这与使用 `/clr` 编译器开关为 .Net Framework 编译托管 C++ 代码时相似  。 此行为可确保枚举大小始终为已知，并可将其正确映射到 WinRT 类型系统。 编译器将拒绝接受以这种方式编写的代码，并发出编译器错误 C2599 和编译器错误 C3197。
+   为 Windows 运行时 (WinRT) 编译的代码不允许前向声明 enum 类型，这与使用 `/clr` 编译器开关为 .Net Framework 编译托管 C++ 代码时相似。 此行为可确保枚举大小始终为已知，并可将其正确映射到 WinRT 类型系统。 编译器将拒绝接受以这种方式编写的代码，并发出编译器错误 C2599 和编译器错误 C3197。
 
     ```Output
     error C2599: 'CustomEnum': the forward declaration of a WinRT enum is not allowed
@@ -2467,7 +2467,7 @@ ms.locfileid: "69510353"
 
 - **现在，std::is_convertable 可以检测自我赋值**（标准库）
 
-   以前版本的 `std::is_convertable` type-trait 在其复制构造函数被删除或私有时，无法正确检测类类型的自我赋值。 现在，当应用于具有已删除或私有复制构造函数的类类型时，`std::is_convertable<>::value` 已正确设置为 false  。
+   以前版本的 `std::is_convertable` type-trait 在其复制构造函数被删除或私有时，无法正确检测类类型的自我赋值。 现在，当应用于具有已删除或私有复制构造函数的类类型时，`std::is_convertable<>::value` 已正确设置为 false。
 
    没有与此更改相关联的编译器诊断。
 
@@ -2491,7 +2491,7 @@ ms.locfileid: "69510353"
     static_assert(std::is_convertible<X1&, X1>::value, "BOOM");static_assert(std::is_convertible<X2&, X2>::value, "BOOM");
     ```
 
-   在以前版本的编译器中，此示例底部的静态断言可传递，因为 `std::is_convertable<>::value` 错误地设置为 **true**。 现在，`std::is_convertable<>::value` 正确设置为 false，使静态断言失败  。
+   在以前版本的编译器中，此示例底部的静态断言可传递，因为 `std::is_convertable<>::value` 错误地设置为 **true**。 现在，`std::is_convertable<>::value` 正确设置为 false，使静态断言失败。
 
 - **默认设置或已删除的日常复制和移动构造函数遵从访问说明符**
 
@@ -2706,7 +2706,7 @@ ms.locfileid: "69510353"
 
 ### <a name="compiler"></a>编译器
 
-- “final”关键字现在会在它以前编译过的位置生成未解析的符号错误  ：
+- “final”关键字现在会在它以前编译过的位置生成未解析的符号错误：
 
     ```cpp
     struct S1 {
@@ -2723,7 +2723,7 @@ ms.locfileid: "69510353"
     }
     ```
 
-   在早期版本中，由于调用为虚调用，因此未发出错误；但程序可能在运行时崩溃  。 现在，由于类已知为最终的类，因此将发出链接器错误。 在此示例中，若要修复错误，请针对包含 `S2::f` 定义的对象进行链接。
+   在早期版本中，由于调用为虚调用，因此未发出错误；但程序可能在运行时崩溃。 现在，由于类已知为最终的类，因此将发出链接器错误。 在此示例中，若要修复错误，请针对包含 `S2::f` 定义的对象进行链接。
 
 - 在使用命名空间中的友元函数时，必须先重新声明该友元函数，然后再对其进行引用，否则将收到错误，因为编译器现在遵循 ISO C++ 标准。 例如，此示例不再编译：
 
@@ -2740,7 +2740,7 @@ ms.locfileid: "69510353"
     }
     ```
 
-   若要更正此代码，请声明友元函数  ：
+   若要更正此代码，请声明友元函数：
 
     ```cpp
     namespace NS {
@@ -2797,14 +2797,14 @@ ms.locfileid: "69510353"
     }
     ```
 
-- 在使编译器与 ISO C++11 兼容之前，必须先编译以下代码并使 `x` 解析为 int 类型  ：
+- 在使编译器与 ISO C++11 兼容之前，必须先编译以下代码并使 `x` 解析为 int 类型：
 
     ```cpp
     auto x = {0};
     int y = x;
     ```
 
-   此代码现在将 `x` 解析为 `std::initializer_list<int>` 类型并会导致在尝试将 `x` 分配到 int 类型的下一行上出错  。（默认情况下，不存在转换。）若要更正此代码，请使用 int 替换 auto   ：
+   此代码现在将 `x` 解析为某种类型的 `std::initializer_list<int>`，并在尝试将 `x` 赋给**int**类型的下一行上导致错误。（默认情况下不进行转换。）若要更正此代码，请使用**int**替换**auto**：
 
     ```cpp
     int x = {0};
@@ -2854,7 +2854,7 @@ ms.locfileid: "69510353"
 
    在 Visual Studio 2012 中，表达式 `E1::b` 中的 `E1` 在全局范围内解析为 `::E1`。 在 Visual Studio 2013 中，表达式 `E1::b` 中的 `E1` 在 `main()` 中解析为 `typedef E2` 定义且具有 `::E2` 类型。
 
-- 对象布局已发生更改。 在 x64 上，类的对象布局可能在早期版本基础上发生了更改。 如果它具有一个虚拟函数，但它不具有拥有虚拟函数的基类，则编译器的对象模型会将一个指针插入到数据成员布局之后的虚拟函数表    。 这意味着布局可能不会在所有情况下都达到最优。 在以前版本中，x64 优化会尝试改善布局，但由于它在复杂代码情况下不能正常运行，因此 Visual Studio 2013 中已将其删除。 例如，考虑此代码：
+- 对象布局已发生更改。 在 x64 上，类的对象布局可能在早期版本基础上发生了更改。 如果它具有一个虚拟函数，但它不具有拥有虚拟函数的基类，则编译器的对象模型会将一个指针插入到数据成员布局之后的虚拟函数表。 这意味着布局可能不会在所有情况下都达到最优。 在以前版本中，x64 优化会尝试改善布局，但由于它在复杂代码情况下不能正常运行，因此 Visual Studio 2013 中已将其删除。 例如，考虑此代码：
 
     ```cpp
     __declspec(align(16)) struct S1 {
@@ -2867,7 +2867,7 @@ ms.locfileid: "69510353"
     };
     ```
 
-- 在 Visual Studio 2013 中，x64 上 `sizeof(S2)` 的结果为 48，但在以前版本中，计算结果为 32。 若要使它在 x64 Visual Studio 2013 C++ 编译器中的计算结果为 32，请添加具有虚拟函数的虚拟基类  ：
+- 在 Visual Studio 2013 中，x64 上 `sizeof(S2)` 的结果为 48，但在以前版本中，计算结果为 32。 若要使它在 x64 Visual Studio 2013 C++ 编译器中的计算结果为 32，请添加具有虚拟函数的虚拟基类：
 
     ```cpp
     __declspec(align(16)) struct S1 {
@@ -2898,7 +2898,7 @@ ms.locfileid: "69510353"
     };
     ```
 
-   在 Visual Studio 2013 之前，此代码输出以下消息：“警告 C4370: “S2”: 为了更好地封装，类的布局与早期版本的编译器已有所不同”。
+   在 Visual Studio 2013 之前，此代码输出以下消息：“警告 C4370: 'S2' : 为了更好地封装，类的布局与早期版本的编译器已有所不同”。
 
    在所有版本的编译器中，x86 编译器具有相同的次优布局问题。 例如，如果为 x86 编译以下代码：
 
@@ -2938,7 +2938,7 @@ Visual Studio 2013 中的 C++ 编译器可以检测到 _ITERATOR_DEBUG_LEVEL 中
 
 - 现在已实现实际可变参数模板，_VARIADIC_MAX 和相关宏无效。 如果你仍在定义 _VARIADIC_MAX，请将其忽略。 如果确认了旨在以任何其他方式支持模拟的可变参数模板的宏机制，则必须更改代码。
 
-- 除普通关键字以外，C++ 标准库标头现在禁止宏替换上下文相关的关键字“override”和“final”   。
+- 除普通关键字以外，C++ 标准库标头现在禁止宏替换上下文相关的关键字“override”和“final”。
 
 - `reference_wrapper`、`ref()` 和 `cref()` 现在禁止绑定到临时对象。
 
@@ -2962,7 +2962,7 @@ Visual Studio 2013 中的 C++ 编译器可以检测到 _ITERATOR_DEBUG_LEVEL 中
 
 ### <a name="mfc-and-atl"></a>MFC 和 ATL
 
-- **仅 Visual Studio 2013**：Visual Studio 中不包括 MFC MBCS 库，因为 Unicode 很常用并且大大减少了 MBCS 的使用。 此更改也使 MFC 与 Windows SDK 本身更加紧密联合在一起，因为许多新控件和消息都仅支持 Unicode。 但是，如果必须继续使用 MFC MBCS 库，可以从 MSDN 下载中心下载，下载位置：[适用于 Visual Studio 2013 的多字节 MFC 库](https://www.microsoft.com/download/details.aspx?id=40770)（Multibyte MFC Library for Visual Studio 2013）。 Visual C++ 可再发行组件包仍包含此库。  （注意：Visual Studio 2015 及更高版本的 C++ 安装组件中包含 MBCS DLL）。
+- **仅 Visual Studio 2013**： MFC MBCS 库不包含在 Visual Studio 中，因为 Unicode 很受欢迎，且使用 MBCS 的使用已有重大拒绝。 此更改也使 MFC 与 Windows SDK 本身更加紧密联合在一起，因为许多新控件和消息都仅支持 Unicode。 但是，如果必须继续使用 MFC MBCS 库，可以从 MSDN 下载中心下载，下载位置：[适用于 Visual Studio 2013 的多字节 MFC 库](https://www.microsoft.com/download/details.aspx?id=40770)（Multibyte MFC Library for Visual Studio 2013）。 Visual C++ 可再发行组件包仍包含此库。  （请注意：Visual Studio 2015 及更高版本的 C++ 安装组件中包含 MBCS DLL）。
 
 - MFC 功能区的辅助功能已更改。  现在显示的是分层体系结构，而不是一级体系结构。 通过调用 `CRibbonBar::EnableSingleLevelAccessibilityMode()` 可继续使用旧有行为。
 
@@ -3000,7 +3000,7 @@ Visual Studio 2013 中的 C++ 编译器可以检测到 _ITERATOR_DEBUG_LEVEL 中
 
 - 已更改 `/Yl` 编译器选项。 默认情况下，编译器将使用此选项，这可能会导致在某些情况下出现 LNK2011 错误。 有关详细信息，请参阅 [/Yl（为调试库插入 PCH 引用）](../build/reference/yl-inject-pch-reference-for-debug-library.md)。
 
-- 在使用 `/clr` 编译的代码中，枚举类关键字定义 C++11 枚举，而不是公共语言运行时 (CLR) 枚举  。 若要定义 CLR 枚举，必须明确其可访问性。
+- 在使用 `/clr` 编译的代码中，枚举类关键字定义 C++11 枚举，而不是公共语言运行时 (CLR) 枚举。 若要定义 CLR 枚举，必须明确其可访问性。
 
 - 使用模板关键字显式消除依赖名称的歧义（遵从 C++ 语言标准）。 在以下示例中，突出显示的模板关键字是消除歧义所必需的。 有关详细信息，请参阅[依赖类型的名称解析](../cpp/name-resolution-for-dependent-types.md)。
 
@@ -3026,7 +3026,7 @@ Visual Studio 2013 中的 C++ 编译器可以检测到 _ITERATOR_DEBUG_LEVEL 中
 
 - 编译器可能会在以前未发出警告的位置发出警告[编译器警告（等级 4）C4703](../error-messages/compiler-warnings/compiler-warning-level-4-c4703.md) 和 C4701。 编译器对指针类型的未初始化局部变量的使用加强检查。
 
-- 指定新的链接器标志 `/HIGHENTROPYVA` 时，Windows 8 通常会导致内存分配返回 64 位地址。 （Windows 8 之前，此类分配通常会返回小于 2 GB 的地址。）此更改可能会暴露现有代码中的指针截断 bug。 默认情况下，此开关处于开启状态。 要禁用此行为，请指定 `/HIGHENTROPYVA:NO`。
+- 指定新的链接器标志 `/HIGHENTROPYVA` 时，Windows 8 通常会导致内存分配返回 64 位地址。 （在 Windows 8 之前，此类分配更常返回小于 2 GB 的地址。）此更改可能会在现有代码中公开指针截断错误。 默认情况下，此开关处于开启状态。 要禁用此行为，请指定 `/HIGHENTROPYVA:NO`。
 
 - 托管的编译器 (Visual Basic/C#) 还支持托管版本的 `/HIGHENTROPYVA`。  但是，在这种情况下，`/HIGHENTROPYVAswitch` 默认处于关闭状态。
 
@@ -3042,11 +3042,11 @@ Visual Studio 2013 中的 C++ 编译器可以检测到 _ITERATOR_DEBUG_LEVEL 中
 
 - 根据 C++98/03 和 C++11 标准之间的重大更改，在 Visual Studio 2012 的 Visual C++ 中，使用显式模板参数调用 `make_pair()`（正如在 `make_pair<int, int>(x, y)` 中那样）通常不编译。 相关解决方案是始终调用没有显式模板参数的 `make_pair() `，正如在 `make_pair(x, y)` 中那样。 提供显式模板参数会破坏函数的作用。 如果需要精确控制结果类型，请使用 `pair` 而不是 `make_pair` - 正如在 `pair<short, short>(int1, int2)` 中那样。
 
-- C++98/03 和 C++11 标准之间的另一重大更改：如果 A 可隐式转换为 B，B 可隐式转换为 C，但 A 不能隐式转换为 C，则 C++98/03 和 Visual Studio 2010 允许 `pair<A, X>`（隐式或显式）转换为 `pair<C, X>`。 （此处不关注另一种类型 X，并且不特定于该对中的第一种类型。）Visual Studio 2012 中的 C++ 编译器检测到 A 不能隐式转换为 C，并且从重载解析中删除对转换。 此更改对许多方案来说是有益的。 例如，重载 `func(const pair<int, int>&)` 和 `func(const pair<string, string>&)`，并使用 `pair<const char *, const char *>` 调用 `func()`，将使用此更改进行编译。 但是，此更改会中断依赖主动对转换的代码。 通常可以通过显式执行部分转换来修复这些代码，例如，将 `make_pair(static_cast<B>(a), x)` 传递给需要 `pair<C, X>` 的函数。
+- C + + 98/03 和 c + + 11 标准之间的另一重大更改：当可隐式转换为 B，而 B 隐式转换为 C 时，不能隐式转换为 C、c + + 98/03 和 Visual Studio 2010 `pair<A, X>` 可转换（隐式或显式）到 `pair<C, X>`。 （此处的另一种类型为 X，并不特定于对中的第一个类型。）Visual C++ Studio 2012 中的编译器检测到不能隐式转换为 C，并从重载解析中删除对的转换。 此更改对许多方案来说是有益的。 例如，重载 `func(const pair<int, int>&)` 和 `func(const pair<string, string>&)`，并使用 `pair<const char *, const char *>` 调用 `func()`，将使用此更改进行编译。 但是，此更改会中断依赖主动对转换的代码。 通常可以通过显式执行部分转换来修复这些代码，例如，将 `make_pair(static_cast<B>(a), x)` 传递给需要 `pair<C, X>` 的函数。
 
 - Visual Studio 2010 模拟可变参数模板（如 `make_shared<T>(arg1, arg2, argN)`）通过使用预处理器机制杜绝重载和专用化，将参数个数限制为最多 10 个。 在 Visual Studio 2012 中，此限制减少到 5 个参数，以减少大多数用户的编译时间和编译器内存消耗。 但是，可以通过在项目范围内将 _VARIADIC_MAX 显式定义为 10 来设置之前的限制。
 
-- C++11 17.6.4.3.1 [macro.names]/2 禁止在包含 C++ 标准库标头时对关键字进行宏替换。 如果检测到宏替换关键字，标头现将发出编译器错误。 （虽然通过定义 _ALLOW_KEYWORD_MACROS 可允许此类代码进行编译，但我们强烈建议不要这样做。）例外情况是，默认情况下允许使用 `new` 形式的宏，因为标头通过使用 `#pragma push_macro("new")`/`#undef new`/`#pragma pop_macro("new")` 全面保护自己。 定义 _ENFORCE_BAN_OF_MACRO_NEW 所执行的操作正如其名称所示。
+- C++11 17.6.4.3.1 [macro.names]/2 禁止在包含 C++ 标准库标头时对关键字进行宏替换。 如果检测到宏替换关键字，标头现将发出编译器错误。 （定义 _ALLOW_KEYWORD_MACROS 允许编译此类代码，但我们强烈反对这种用法。）默认情况下，默认情况下允许使用 `new` 宏形式，因为标头通过使用 `#pragma push_macro("new")` / `#undef new` / `#pragma pop_macro("new")` 来全面保护自己。 定义 _ENFORCE_BAN_OF_MACRO_NEW 所执行的操作正如其名称所示。
 
 - 为了实现各种优化和调试检查，C++ 标准库实现特意中断了 Visual Studio 各版本（2005、2008、2010、2012）中的二进制文件兼容性。 如果使用 C++ 标准库，则使用不同版本编译的对象文件和静态库无法混合在同一个二进制文件（EXE 或 DLL）中，并且无法在使用不同版本编译的二进制文件之间传递 C++ 标准库对象。 对象文件和静态库的混合（使用由 Visual Studio 2010 编译的 C++ 标准库和由 Visual Studio 2012 中的 C++ 编译器编译的库）会发出有关 _MSC_VER 不匹配的链接器错误，其中 _MSC_VER 是包含编译器主版本（对于 Visual Studio 2012 中的 Visual C++ 为 1700）的宏。 此检查无法检测 DLL 混合，也无法检测涉及 Visual Studio 2008 或早期版本的混合。
 
@@ -3232,9 +3232,9 @@ Visual Studio 2013 中的 C++ 编译器可以检测到 _ITERATOR_DEBUG_LEVEL 中
 
 ### <a name="compiler"></a>编译器
 
-- auto 关键字具有新的默认含义  。 因为使用旧含义的情况很少见，所以大多数应用程序不会受到此更改的影响。
+- auto 关键字具有新的默认含义。 因为使用旧含义的情况很少见，所以大多数应用程序不会受到此更改的影响。
 
-- 引入了新关键字 static_assert，如果代码中已经有该名称的标识符，则会导致名称冲突  。
+- 引入了新关键字 static_assert，如果代码中已经有该名称的标识符，则会导致名称冲突。
 
 - 对新的 lambda 表示法的支持不包括支持对 IDL uuid 属性中的未引用 GUID 进行编码。
 
@@ -3244,7 +3244,7 @@ Visual Studio 2013 中的 C++ 编译器可以检测到 _ITERATOR_DEBUG_LEVEL 中
 
 - 如果使用 `/GL`（全程序优化）和 `/clr`（公共语言运行时编译）编译器选项进行编译，则将忽略 `/GL` 选项。 进行此更改是因为组合编译器选项的作用微乎其微。 得益于此更改，生成的性能得到改进。
 
-- 默认情况下，Visual Studio 2010 中禁用对三元祖的支持。 使用 `/Zc:trigraphs` 编译器选项实现三字符组支持。 三元祖由两个连续的问号（“??”）后跟一个唯一的第三个字符组成。 编译器将三元祖替换为相应的标点字符。 例如，编译器会将三元祖 `??=` 替换为字符“#”。 可以在使用字符集的 C 源文件中使用三元祖，该字符集不包含一些标点字符的方便图形表示。
+- 默认情况下，Visual Studio 2010 中禁用对三元祖的支持。 使用 `/Zc:trigraphs` 编译器选项实现三元祖支持。 三元祖由两个连续的问号（“??”）后跟一个唯一的第三个字符组成。 编译器将三元祖替换为相应的标点字符。 例如，编译器会将三元祖 `??=` 替换为字符“#”。 可以在使用字符集的 C 源文件中使用三元祖，该字符集不包含一些标点字符的方便图形表示。
 
 - 链接器不再支持针对 Windows 98 的优化。 如果指定 `/OPT:WIN98` 或 `/OPT:NOWIN98`，则 `/OPT`（优化）选项将生成编译时错误。
 
@@ -3264,9 +3264,9 @@ Visual Studio 2013 中的 C++ 编译器可以检测到 _ITERATOR_DEBUG_LEVEL 中
 
 ### <a name="ide"></a>IDE
 
-- 应用程序终止对话框不再终止应用程序。 在早期版本中，当 `abort()` 或 `terminate()` 函数关闭应用程序的零售内部版本时，C 运行时库将在控制台窗口或对话框中显示应用程序终止消息。 此消息的一部分为“该应用程序已请求运行时以非常规方式终止它。 有关详细信息，请与应用程序的支持团队联系。” 应用程序终止消息是多余的，因为 Windows 随后会显示当前的终止处理程序，通常为 Windows 错误报告 (Dr.Watson) 对话框或 Visual Studio 调试程序。 从 Visual Studio 2010 开始，C 运行时库不显示此消息。 此外，运行时阻止应用程序在调试器启动前结束。 只有在依赖应用程序终止消息的以前行为的情况下，这才是一项重大更改。
+- 应用程序终止对话框不再终止应用程序。 在早期版本中，当 `abort()` 或 `terminate()` 函数关闭应用程序的零售内部版本时，C 运行时库将在控制台窗口或对话框中显示应用程序终止消息。 此消息的一部分为“该应用程序已请求运行时以非常规方式终止它。 有关详细信息，请与应用程序的支持团队联系。” 应用程序终止消息是冗余的，因为 Windows 随后显示当前终止处理程序，这通常是 Windows 错误报告（Dr. Watson）对话框或 Visual Studio 调试器。 从 Visual Studio 2010 开始，C 运行时库不显示此消息。 此外，运行时阻止应用程序在调试器启动前结束。 只有在依赖应用程序终止消息的以前行为的情况下，这才是一项重大更改。
 
-- 特别对于 Visual Studio 2010，IntelliSense 不适用于 C++/CLI 代码或属性，“查找所有引用”不适用于局部变量，并且代码模型不从导入的程序集中检索类型名称或将类型解析为其完全限定名称  。
+- 特别对于 Visual Studio 2010，IntelliSense 不适用于 C++/CLI 代码或属性，“查找所有引用”不适用于局部变量，并且代码模型不从导入的程序集中检索类型名称或将类型解析为其完全限定名称。
 
 ### <a name="libraries"></a>库
 
@@ -3284,7 +3284,7 @@ Visual Studio 2013 中的 C++ 编译器可以检测到 _ITERATOR_DEBUG_LEVEL 中
 
 - 已删除 `CComPtr::CComPtr(int)` 构造函数。 该构造函数允许从 NULL 宏构造 `CComPtr` 对象（但这是不必要的），并允许从非零整数构造无意义结构。
 
-   `CComPtr` 仍然可以从 NULL（其定义为 0）构造，但如果从文本 0 之外的整数构造，将失败。 请改用 nullptr  。
+   `CComPtr` 仍然可以从 NULL（其定义为 0）构造，但如果从文本 0 之外的整数构造，将失败。 请改用 nullptr。
 
 - 已删除以下 `ctype` 成员函数：`ctype::_Do_narrow_s`、`ctype::_Do_widen_s`、`ctype::_narrow_s`、`ctype::_widen_s`。 如果应用程序使用这些成员函数之一，必须将其替换为相应的非安全版本：`ctype::do_narrow`、`ctype::do_widen`、`ctype::narrow`、`ctype::widen`。
 
@@ -3408,25 +3408,25 @@ Visual Studio 2013 中的 C++ 编译器可以检测到 _ITERATOR_DEBUG_LEVEL 中
 
 - MFC 对话框中控件的 Tab 键顺序：如果按 Tab 键顺序插入 MFC ActiveX 控件，则 MFC 对话框中多个控件的正确 Tab 键顺序会受到干扰。 此更改可以解决该问题。
 
-   例如，创建具有 1 个 ActiveX 控件和多个编辑控件的 MFC 对话框应用程序。 将 ActiveX 控件放置在编辑控件的 Tab 键顺序的中间。 启动应用程序，单击其 Tab 键顺序在 ActiveX 控件之后的编辑控件，然后单击 Tab。在此更改前，焦点将转到 ActiveX 控件后的编辑控件，而不是 Tab 键顺序中的下一个编辑控件。
+   例如，创建具有 1 个 ActiveX 控件和多个编辑控件的 MFC 对话框应用程序。 将 ActiveX 控件放置在编辑控件的 Tab 键顺序的中间。 启动应用程序，单击其 tab 键顺序在 ActiveX 控件之后的编辑控件，然后单击 "选项卡"。在此更改之前，焦点转到 ActiveX 控件后的编辑控件，而不是 tab 键顺序中的下一个编辑控件。
 
-- `CFileDialog` 类：`CFileDialog` 类的自定义模板无法自动移植到 Windows Vista。 该模板仍然可用，但将不具有 Windows Vista 样式对话框的其他功能或外观。
+- `CFileDialog` 类： `CFileDialog` 类的自定义模板不能自动移植到 Windows Vista。 该模板仍然可用，但将不具有 Windows Vista 样式对话框的其他功能或外观。
 
-- `CWnd` 类和 `CFrameWnd` 类：`CWnd::GetMenuBarInfo` 方法已删除。
+- `CWnd` 类和 `CFrameWnd` 类：已删除 `CWnd::GetMenuBarInfo` 方法。
 
-   `CFrameWnd::GetMenuBarInfo` 方法现在是非虚拟方法。 有关详细信息，请参阅 Windows SDK 中的 GetMenuBarInfo 函数  。
+   `CFrameWnd::GetMenuBarInfo` 方法现在是非虚拟方法。 有关详细信息，请参阅 Windows SDK 中的 GetMenuBarInfo 函数。
 
 - MFC ISAPI 支持：MFC 不再支持使用 Internet 服务器应用程序编程接口 (ISAPI) 生成应用程序。 若要生成 ISAPI 应用程序，请直接调用 ISAPI 扩展。
 
-- 弃用了 ANSI API：已弃用某些 MFC 方法的 ANSI 版本。 请在以后的应用程序中使用这些方法的 Unicode 版本。 有关详细信息，请参阅“Windows Vista 公共控件的生成要求”  。
+- 弃用的 ANSI API：已弃用某些 MFC 方法的 ANSI 版本。 请在以后的应用程序中使用这些方法的 Unicode 版本。 有关详细信息，请参阅“Windows Vista 公共控件的生成要求”。
 
 ## <a name="visual-studio-2005-breaking-changes"></a>Visual Studio 2005 重大更改
 
 ### <a name="crt"></a>CRT
 
-- 已弃用许多函数。 请参阅“弃用的 CRT 函数”  。
+- 已弃用许多函数。 请参阅“弃用的 CRT 函数”。
 
-- 现在，许多函数验证其参数，如果给定参数无效，则停止执行。 此验证可能会中断传递无效参数并依赖函数将其忽略或返回错误代码的代码。 请参阅“参数验证”  。
+- 现在，许多函数验证其参数，如果给定参数无效，则停止执行。 此验证可能会中断传递无效参数并依赖函数将其忽略或返回错误代码的代码。 请参阅“参数验证”。
 
 - 文件描述符值 -2 现在用于指示 `stdout` 和 `stderr` 不可用于输出，例如，在没有控制台窗口的 Windows 应用程序中。 以前使用的值是 -1。 有关详细信息，请参阅 [_fileno](../c-runtime-library/reference/fileno.md)。
 
@@ -3470,7 +3470,7 @@ Visual Studio 2013 中的 C++ 编译器可以检测到 _ITERATOR_DEBUG_LEVEL 中
 
 - 调用 `valarray::resize()` 时，`valarray` 的内容将会丢失，并将替换为默认值。 `resize()` 方法旨在重新初始化 `valarray`，而不是使其像向量一样动态增长。
 
-- 调试迭代器：如果应用程序使用 C 运行时库的调试版本生成并且错误使用迭代器，则可能会在运行时开始看到断言。 若要禁用这些断言，必须将 _HAS_ITERATOR_DEBUGGING（Visual Studio 2010 之后由 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 取代）定义为 0。 有关详细信息，请参阅[调试迭代器支持](../standard-library/debug-iterator-support.md)
+- 调试迭代器：使用 C 运行时库的调试版本生成和错误使用迭代器的应用程序可能会在运行时开始看到断言。 若要禁用这些断言，必须将 _HAS_ITERATOR_DEBUGGING（Visual Studio 2010 之后由 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 取代）定义为 0。 有关详细信息，请参阅[调试迭代器支持](../standard-library/debug-iterator-support.md)
 
 ## <a name="visual-c-net-2003-breaking-changes"></a>Visual C++ .NET 2003 重大更改
 
@@ -3490,9 +3490,9 @@ Visual Studio 2013 中的 C++ 编译器可以检测到 _ITERATOR_DEBUG_LEVEL 中
 
 - 静态数据成员无法通过派生类初始化（[编译器错误 C2477](../error-messages/compiler-errors-1/compiler-error-c2477.md)）。
 
-- 根据标准，现在不允许 Typedef 的初始化，并且将生成编译器错误（[编译器错误 C2513](../error-messages/compiler-errors-2/compiler-error-c2513.md)）  。
+- 根据标准，现在不允许 Typedef 的初始化，并且将生成编译器错误（[编译器错误 C2513](../error-messages/compiler-errors-2/compiler-error-c2513.md)）。
 
-- 现在，bool 是正确的类型（[编译器错误 C2632](../error-messages/compiler-errors-2/compiler-error-c2632.md)）  。
+- 现在，bool 是正确的类型（[编译器错误 C2632](../error-messages/compiler-errors-2/compiler-error-c2632.md)）。
 
 - 现在，UDC 可以使用重载的运算符创建多义性 ([C2666](../error-messages/compiler-errors-2/compiler-error-c2666.md))。
 

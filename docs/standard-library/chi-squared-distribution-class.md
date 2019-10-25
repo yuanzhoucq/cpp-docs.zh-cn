@@ -23,14 +23,14 @@ helpviewer_keywords:
 - std::chi_squared_distribution [C++], param_type
 - std::chi_squared_distribution [C++], param_type
 ms.assetid: 9b603fbe-cafd-4a92-b8c5-a434d60b8122
-ms.openlocfilehash: 2eac3324516cf88a114064cf0145593c7bf4806b
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f7f6f038c0e8bc922874388065ce06d76854bc1b
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459471"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688309"
 ---
-# <a name="chisquareddistribution-class"></a>chi_squared_distribution 类
+# <a name="chi_squared_distribution-class"></a>chi_squared_distribution 类
 
 生成卡方分布。
 
@@ -66,15 +66,15 @@ public:
 
 ### <a name="parameters"></a>参数
 
-*RealType*\
-浮点结果类型, 默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*RealType* \
+浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
-*URNG*\
+*URNG* \
 统一随机数生成器引擎。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
-此模板类描述产生用户指定的浮点类型的值的分布, 或者 **, 如果未**提供任何值, 则根据χ2分布进行分布。 下表链接到有关各个成员的文章。
+类模板描述产生用户指定的浮点类型的值的分布，或者如果未提供，则根据χ2分布进行分布时，键入**double** 。 下表链接到有关各个成员的文章。
 
 ||||
 |-|-|-|
@@ -91,7 +91,7 @@ public:
 
 `operator()` 成员函数将根据 URNG 引擎，从当前参数包或指定参数包返回下一个生成的值。
 
-若要深入了解分布类及其成员，请参阅 [\<random>](../standard-library/random.md)。
+有关分布类及其成员的详细信息，请参阅 [\<random>](../standard-library/random.md)。
 
 有关卡方分布的详细信息，请参阅 Wolfram MathWorld 文章[卡方分布](https://go.microsoft.com/fwlink/p/?linkid=400528)。
 
@@ -222,7 +222,7 @@ Distribution for 10 samples:
 
 **标头：** \<random>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="chi_squared_distribution"></a>  chi_squared_distribution::chi_squared_distribution
 
@@ -238,7 +238,7 @@ explicit chi_squared_distribution(const param_type& parm);
 *n*\
 `n` 分布参数。
 
-*parm*\
+*parm* \
 用于构造分布的参数结构。
 
 ### <a name="remarks"></a>备注
@@ -269,7 +269,7 @@ struct param_type {
 *n*\
 `n` 分布参数。
 
-*然后*\
+*right* \
 要与它进行比较的 `param_type` 对象。
 
 ### <a name="remarks"></a>备注

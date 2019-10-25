@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - unordered_set header
 ms.assetid: a3364d54-147d-4796-8728-9e62a2e4c226
-ms.openlocfilehash: e03fc2f1c541caedfa9ac83bb9500e50a4b513b1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 71acab214d891c6139f21685e9368399b99e1657
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454678"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688793"
 ---
-# <a name="ltunorderedsetgt"></a>&lt;unordered_set&gt;
+# <a name="ltunordered_setgt"></a>&lt;unordered_set&gt;
 
-定义容器模板类 [unordered_multiset](../standard-library/unordered-multiset-class.md) 和 [unordered_set](../standard-library/unordered-set-class.md) 及其支持的模板。
+定义容器类模板[unordered_multiset](../standard-library/unordered-multiset-class.md)和[unordered_set](../standard-library/unordered-set-class.md)及其支持的模板。
 
 ## <a name="requirements"></a>要求
 
 **标头：** \<unordered_set>
 
-**命名空间：** std
+**命名空间:** std
 
 > [!NOTE]
-> Unordered_set > 库还使用该`#include <initializer_list>`语句。 \<
+> > 库 \<unordered_set 也使用了 `#include <initializer_list>` 语句。
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="classes"></a>类
 

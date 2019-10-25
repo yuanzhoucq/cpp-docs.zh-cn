@@ -1,6 +1,6 @@
 ---
 title: bsearch_s
-ms.date: 11/04/2016
+ms.date: 10/22/2019
 api_name:
 - bsearch_s
 api_location:
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
-ms.openlocfilehash: 9bcd18add216bb0fc2f203183d82e37ede65dba5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: fc86576dbbe73f63da6bf0e28e7166ef7c552e55
+ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943473"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72811140"
 ---
 # <a name="bsearch_s"></a>bsearch_s
 
-执行排序数组的二进制搜索。 这是 [bsearch](bsearch.md) 版本，具有 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全增强功能。
+执行排序数组的二进制搜索。 此函数是一种具有安全增强功能的[bsearch](bsearch.md)版本，如[CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述。
 
 ## <a name="syntax"></a>语法
 
@@ -52,39 +52,39 @@ void *bsearch_s(
 
 ### <a name="parameters"></a>参数
 
-*key*<br/>
-要搜索的对象。
+*密钥*\
+指向要搜索的键的指针。
 
-*base*<br/>
-指向搜索数据的基项的指针。
+*base*\
+指向搜索数据的基的指针。
 
-*number*<br/>
+*数字*\
 元素数量。
 
-*width*<br/>
+*width*\
 元素的宽度。
 
-*compare*<br/>
+*比较*\
 比较两个元素的回调函数。 第一个参数是*上下文*指针。 第二个参数是指向搜索*键*的指针。 第三个参数是指向要与*该键*进行比较的数组元素的指针。
 
-*context*<br/>
+*上下文*\
 指向可在比较函数中访问的对象的指针。
 
 ## <a name="return-value"></a>返回值
 
 **bsearch_s**返回一个指针，该指针指向由*base*指向的数组中的*键*的匹配项。 如果未找到*键*，则该函数返回**NULL**。 如果数组不是以升序排序的，或包含具有相同键的重复记录，则不可预知结果。
 
-如果传递到此函数的参数无效，则将调用无效的参数处理程序，如 [Parameter Validation](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将**errno**设置为**EINVAL** ，并且该函数将返回**NULL**。 有关详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如果向函数传递了无效参数，则它将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将**errno**设置为**EINVAL** ，并且该函数将返回**NULL**。 有关详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ### <a name="error-conditions"></a>错误条件
 
 |||||||
 |-|-|-|-|-|-|
-|*key*|*base*|*compare*|*number*|*width*|**errno**|
-|**NULL**|任何|任何|任何|任何|**EINVAL**|
-|任何|**NULL**|任何|!= 0|任何|**EINVAL**|
-|任何|任何|任何|任何|= 0|**EINVAL**|
-|任何|任何|**NULL**|一个|任何|**EINVAL**|
+|*key*|*base*|*compare*|*多种*|*width*|**errno**|
+|**NULL**|any|any|any|any|**EINVAL**|
+|any|**NULL**|any|!= 0|any|**EINVAL**|
+|any|any|any|any|= 0|**EINVAL**|
+|any|any|**NULL**|一个|any|**EINVAL**|
 
 ## <a name="remarks"></a>备注
 
@@ -104,7 +104,7 @@ void *bsearch_s(
 |-------------|---------------------|
 |**bsearch_s**|\<stdlib.h> 和 \<search.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参见 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -194,7 +194,7 @@ cat found at 002F0F04
 
 ## <a name="see-also"></a>请参阅
 
-[搜索和排序](../../c-runtime-library/searching-and-sorting.md)<br/>
-[_lfind](lfind.md)<br/>
-[_lsearch](lsearch.md)<br/>
-[qsort](qsort.md)<br/>
+[搜索和排序](../../c-runtime-library/searching-and-sorting.md)\
+[_lfind](lfind.md)\
+[_lsearch](lsearch.md)\
+[qsort](qsort.md)

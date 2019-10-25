@@ -30,16 +30,16 @@ helpviewer_keywords:
 - std::numpunct [C++], thousands_sep
 - std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
-ms.openlocfilehash: c23f23172894ce0b5adcbff1d2db58c78caf7a03
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 07285f5c014db1ddf419c372913cac0364538a55
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454182"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689210"
 ---
 # <a name="numpunct-class"></a>numpunct 类
 
-一种模板类，用于描述一个对象来充当区域设置 facet，以便描述 `CharType` 类型的序列，后者用于表示与数字和布尔表达式的格式化及标点有关的信息。
+一个类模板，用于描述一个对象，该对象可用作本地方面，以描述用于表示有关数值和布尔表达式的格式和标点的信息的类型 `CharType`。
 
 ## <a name="syntax"></a>语法
 
@@ -50,7 +50,7 @@ class numpunct : public locale::facet;
 
 ### <a name="parameters"></a>参数
 
-*CharType*\
+*CharType* \
 在程序中用于对区域设置中的字符进行编码的类型。
 
 ## <a name="remarks"></a>备注
@@ -76,7 +76,7 @@ class numpunct : public locale::facet;
 |-|-|
 |[decimal_point](#decimal_point)|返回要用作小数点的区域设置特定元素。|
 |[do_decimal_point](#do_decimal_point)|一种受保护的虚拟成员函数，通过调用此函数可返回要用作小数点的区域设置特定元素。|
-|[do_falsename](#do_falsename)|一种受保护的虚拟成员函数, 通过调用此函数可返回要用作值**false**的文本表示形式的字符串。|
+|[do_falsename](#do_falsename)|一种受保护的虚拟成员函数，通过调用此函数可返回要用作值**false**的文本表示形式的字符串。|
 |[do_grouping](#do_grouping)|一种受保护的虚拟成员函数，通过调用此函数可返回用于确定位数如何分组到任何小数点左边的区域设置特定规则。|
 |[do_thousands_sep](#do_thousands_sep)|一种受保护的虚拟成员函数，通过调用此函数可返回要用作千位分隔符的区域设置特定元素。|
 |[do_truename](#do_truename)|一种受保护的虚拟成员函数，通过调用此函数可返回要用作值 **true** 的文本表示形式的字符串。|
@@ -89,7 +89,7 @@ class numpunct : public locale::facet;
 
 **标头：** \<locale>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="char_type"></a>  numpunct::char_type
 
@@ -200,7 +200,7 @@ virtual string do_grouping() const;
 
 ### <a name="example"></a>示例
 
-请参阅[分组](#grouping)的示例, 其中虚拟成员函数由`grouping`调用。
+请参阅[分组](#grouping)的示例，其中虚拟成员函数由 `grouping` 调用。
 
 ## <a name="do_thousands_sep"></a>  numpunct::do_thousands_sep
 
@@ -216,7 +216,7 @@ virtual CharType do_thousands_sep() const;
 
 ### <a name="remarks"></a>备注
 
-受保护的虚拟成员函数返回类型`CharType`的特定于区域设置的元素, 以用作任何小数点左侧的组分隔符。
+受保护的虚拟成员函数将返回类型 `CharType` 的区域设置特定元素，以用作任何小数点左侧的组分隔符。
 
 ### <a name="example"></a>示例
 
@@ -250,7 +250,7 @@ string_type falsename() const;
 
 ### <a name="return-value"></a>返回值
 
-一个字符串, 包含要用作`CharType`值**false**的文本表示形式的序列。
+一个包含要用作值**false**的文本表示形式的 `CharType`s 序列的字符串。
 
 ### <a name="remarks"></a>备注
 
@@ -345,22 +345,22 @@ explicit numpunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>参数
 
-*_Refs*\
+*_Refs* \
 用于指定对象的内存管理类型的整数值。
 
 ### <a name="remarks"></a>备注
 
-*_Refs*参数的可能值及其重要性为:
+*_Refs*参数的可能值及其重要性为：
 
-- 0对象的生存期由包含该对象的区域设置管理。
+- 0：对象的生存期由包含该对象的区域设置管理。
 
-- 1:必须手动管理对象的生存期。
+- 1：必须手动管理对象的生存期。
 
-- \>2未定义这些值。
+- \> 1：未定义这些值。
 
 由于该析构函数受到保护，可能没有直接的示例。
 
-构造函数通过**locale::** [facet](../standard-library/locale-class.md#facet_class)(`_Refs`) 初始化其基对象。
+构造函数通过**locale：：** [facet](../standard-library/locale-class.md#facet_class)（`_Refs`）初始化其基对象。
 
 ## <a name="string_type"></a>  numpunct::string_type
 
@@ -372,7 +372,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>备注
 
-此类型描述 [basic_string](../standard-library/basic-string-class.md) 模板类的专用化，该模板类的对象可存储标点序列的副本。
+该类型描述类模板[basic_string](../standard-library/basic-string-class.md)的专用化，其对象可以存储标点符号序列的副本。
 
 ## <a name="thousands_sep"></a>  numpunct::thousands_sep
 
