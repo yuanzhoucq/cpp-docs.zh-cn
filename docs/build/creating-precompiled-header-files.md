@@ -1,22 +1,22 @@
 ---
 title: 预编译的头文件
-ms.date: 08/19/2019
+ms.date: 10/24/2019
 helpviewer_keywords:
 - precompiled header files, creating
 - PCH files, creating
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: 273d8cf996c2717339dd20dcbc7512f9c62afa8d
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: 071839df431071a7d8921d1b445094f886ad38e2
+ms.sourcegitcommit: 33a898bf976c65f998b4e88a84765a0cef4193a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "69630492"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920112"
 ---
 # <a name="precompiled-header-files"></a>预编译的头文件
 
-在 Visual Studio 中创建新项目时，会将名为 *.pch*的*预编译头文件*添加到项目。 （在 Visual Studio 2017 及更早版本中，该文件称为*stdafx.h*。）此文件的目的是加快生成过程。 任何稳定的标头文件（例如标准库标头`<vector>`）都应该包括在此处。 预编译标头仅在修改了它或它包含的任何文件时进行了编译。 如果只在项目源代码中进行更改，则生成将跳过预编译标头的编译。 
+在 Visual Studio 中创建新项目时，会将名为 *.pch*的*预编译头文件*添加到项目。 （在 Visual Studio 2017 及更早版本中，该文件称为*stdafx.h*。）此文件的目的是加快生成过程。 应在此处包含任何稳定的标头文件（例如 `<vector>`标准库标头）。 预编译标头仅在修改了它或它包含的任何文件时进行了编译。 如果只在项目源代码中进行更改，则生成将跳过预编译标头的编译。 
 
 预编译标头的编译器选项为[/y](reference/y-precompiled-headers.md)。 在项目属性页中，选项位于 "**配置属性" 下 > "CC++ /> 预编译标头**"。 您可以选择不使用预编译标头，也可以指定头文件名称以及输出文件的名称和路径。 
 
@@ -87,7 +87,7 @@ PCH 文件不包含有关在创建时生效的包含路径的信息。 当使用
 
 ### <a name="pragma-consistency"></a>Pragma 一致性
 
-在 PCH 文件创建期间处理的杂注通常会影响随后使用 PCH 文件时使用的文件。 `comment` 和`message`杂注不会影响编译的其余部分。
+在 PCH 文件创建期间处理的杂注通常会影响随后使用 PCH 文件时使用的文件。 `comment` 和 `message` 杂注不会影响编译的其余部分。
 
 这些杂注只影响 PCH 文件中的代码;它们不会影响随后使用 PCH 文件的代码：
 
@@ -116,13 +116,13 @@ PCH 文件不包含有关在创建时生效的包含路径的信息。 当使用
 
 此表列出了在使用预编译头时可能触发不一致性警告的编译器选项：
 
-|选项|name|规则|
+|选项|“属性”|规则|
 |------------|----------|----------|
 |/D|定义常数和宏|在创建预编译标头的编译和当前编译之间必须相同。 不检查已定义常量的状态，但如果您的文件依赖于更改的常量的值，则可能会出现不可预知的结果。|
 |/E 或/EP|将预处理器输出复制到标准输出|预编译标头不适用于/E 或/EP 选项。|
 |/Fr 或/FR|生成 Microsoft 源浏览器信息|为了使/Fr 和/FR 选项与/Yu 选项一起使用，在创建预编译标头时，它们也必须已生效。 使用预编译标头的后续编译还会生成源浏览器信息。 浏览器信息放置在单个 .sbr 文件中，由其他文件引用，其方式与 CodeView 信息相同。 不能重写源浏览器信息的位置。|
 |/GA、/GD、/GE、/Gw 或/GW|Windows 协议选项|在创建预编译标头的编译和当前编译之间必须相同。 如果这些选项不同，则会出现一条警告消息。|
-|/ZI|生成完整的调试信息|如果创建预编译标头时此选项生效，则使用预编译的后续编译可以使用该调试信息。 如果在创建预编译标头时/Zi 不起作用，则使用预编译和/Zi 选项的后续编译将触发警告。 调试信息放在当前的对象文件中，并且在预编译头中定义的本地符号不适用于调试器。|
+|/Zi|生成完整的调试信息|如果创建预编译标头时此选项生效，则使用预编译的后续编译可以使用该调试信息。 如果在创建预编译标头时/Zi 不起作用，则使用预编译和/Zi 选项的后续编译将触发警告。 调试信息放在当前的对象文件中，并且在预编译头中定义的本地符号不适用于调试器。|
 
 > [!NOTE]
 >  预编译标头功能仅适用于 C 和C++源文件。
@@ -179,9 +179,9 @@ UNSTABLEHDRS = unstable.h
 CLFLAGS = /c /W3
 # List all linker options common to both debug and final
 # versions of your code here:
-LINKFLAGS = /NOD /ONERROR:NOEXE
+LINKFLAGS = /nologo
 !IF "$(DEBUG)" == "1"
-CLFLAGS   = /D_DEBUG $(CLFLAGS) /Od /Zi /f
+CLFLAGS   = /D_DEBUG $(CLFLAGS) /Od /Zi
 LINKFLAGS = $(LINKFLAGS) /COD
 LIBS      = slibce
 !ELSE
@@ -257,7 +257,7 @@ void savetime( void );
 //
 #ifndef __UNSTABLE_H
 #define __UNSTABLE_H
-#include<iostream.h>
+#include<iostream>
 void notstable( void );
 #endif // __UNSTABLE_H
 ```
@@ -270,6 +270,7 @@ void notstable( void );
 #include"another.h"
 #include"stable.h"
 #include"unstable.h"
+using namespace std;
 // The following code represents code that is deemed stable and
 // not likely to change. The associated interface code is
 // precompiled. In this example, the header files STABLE.H and
