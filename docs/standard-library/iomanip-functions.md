@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: 09bb043c40774b102dee023773349223a2fbb4a9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 995ad9ae21d7f00a74a912436d599dfead2c9ebb
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449217"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890151"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt; 函数
 
@@ -48,20 +48,20 @@ ms.locfileid: "68449217"
 
 ```cpp
 template <class Money>
-T7 get_money(Money& _Amount, bool _Intl);
+T7 get_money(Money& amount, bool use_intl);
 ```
 
 ### <a name="parameters"></a>参数
 
-*所占*\
+\*量*
 提取的货币值。
 
-*_Intl*\
-如果**为 true**, 则使用国际格式。 默认值为“false”。
+*use_intl*\
+如果**为 true**，则使用国际格式。 默认值为“false”。
 
 ### <a name="remarks"></a>备注
 
-操控器会返回一个对象, 该对象在从流`str`中提取时, `formatted input function`其行为与一个, `get`它为与`str`关联`money_get`的区域设置 facet 调用成员函数, 并使用 *_Intl*来指示国际格式。 如果成功, 则调用会将提取的货币值存储在*所占*中。 此操控器随后返回 `str`。
+操控器返回一个对象，该对象在从流 `str`中提取时，将充当 `formatted input function`，该对象将调用与 `str`关联的区域设置 facet `money_get` 的成员函数 `get`，并使用*use_intl*来指示国际格式. 如果成功，则调用将按提取的货币值存储*量*。 此操控器随后返回 `str`。
 
 `Money` 必须为 `long double` 类型，或者是具有与 `str` 相同的元素和特征参数的 `basic_string` 的实例化。
 
@@ -71,15 +71,15 @@ T7 get_money(Money& _Amount, bool _Intl);
 
 ```cpp
 template <class Elem>
-T10 put_time(struct tm *_Tptr, const Elem *_Fmt);
+T10 put_time(struct tm *time_ptr, const Elem *time_format);
 ```
 
 ### <a name="parameters"></a>参数
 
-*_Tptr*\
+*time_ptr*\
 时间结构形式的时间。
 
-*_Fmt*\
+*time_format*\
 要用于获取时间值的所需格式。
 
 ### <a name="remarks"></a>备注
@@ -92,16 +92,16 @@ T10 put_time(struct tm *_Tptr, const Elem *_Fmt);
 
 ```cpp
 template <class Money>
-T8 put_money(const Money& _Amount, bool _Intl);
+T8 put_money(const Money& amount, bool use_intl);
 ```
 
 ### <a name="parameters"></a>参数
 
-*所占*\
+\*量*
 要插入到流中的货币金额。
 
-*_Intl*\
-如果操控器应使用国际格式, 则设置为**true** , 否则设置为**false** 。
+*use_intl*\
+如果操控器应使用国际格式，则设置为**true** ，否则设置为**false** 。
 
 ### <a name="return-value"></a>返回值
 
@@ -109,7 +109,7 @@ T8 put_money(const Money& _Amount, bool _Intl);
 
 ### <a name="remarks"></a>备注
 
-此操控器会返回一个对象，该对象在插入到流 `str` 中时会表现为一个格式化输出函数，该函数会对与 `str` 关联的区域设置 Facet `money_put` 调用成员函数 `put`。 如果成功, 则使用 * `amount` _Intl` to indicate international format and `str ()`, as the fill element. The manipulator then returns `str 来插入格式正确的调用。
+此操控器会返回一个对象，该对象在插入到流 `str` 中时会表现为一个格式化输出函数，该函数会对与 `str` 关联的区域设置 Facet `money_put` 调用成员函数 `put`。 如果成功，则调用插入 `amount` 的格式正确，使用*use_intl*指示国际格式，并将 `str.fill()`指定为填充元素。 此操控器随后返回 `str`。
 
 `Money` 必须为 `long double` 类型，或者是具有与 `str` 相同的元素和特征参数的 `basic_string` 的实例化。
 
@@ -119,20 +119,20 @@ T8 put_money(const Money& _Amount, bool _Intl);
 
 ```cpp
 template <class Elem>
-T10 put_time(struct tm* _Tptr, const Elem* _Fmt);
+T10 put_time(struct tm* time_ptr, const Elem* time_format);
 ```
 
 ### <a name="parameters"></a>参数
 
-*_Tptr*\
+*time_ptr*\
 时间结构中提供的要写入到流中的时间值。
 
-*_Fmt*\
+*time_format*\
 用来写入时间值的所需格式。
 
 ### <a name="remarks"></a>备注
 
-操控器返回一个对象，该对象在插入到流 `str` 中时会表现为 `formatted output function`。 此输出函数会对与 `str` 关联的区域设置 Facet `time_put` 调用成员函数 `put`。 Output 函数使用 *_Tptr*来指示时间结构, 并使用 *_Fmt*指示以 null 结尾的格式字符串的开头。 如果成功，则调用会从格式字符串插入文字文本，从时间结构插入转换的值。 此操控器随后返回 `str`。
+操控器返回一个对象，该对象在插入到流 `str` 中时会表现为 `formatted output function`。 此输出函数会对与 `str` 关联的区域设置 Facet `time_put` 调用成员函数 `put`。 Output 函数使用*time_ptr*来指示时间结构，并使用*time_format*指示以 null 结尾的格式字符串的开头。 如果成功，则调用会从格式字符串插入文字文本，从时间结构插入转换的值。 此操控器随后返回 `str`。
 
 ## <a name="quoted"></a>quoted
 
@@ -147,13 +147,13 @@ quoted(const char* str, char delimiter, char escape) // or wide versions
 
 ### <a name="parameters"></a>参数
 
-*字符串*\
-Std:: string、char\*、字符串文本或原始字符串文本或其中任何一个的宽版本 (例如 std:: wstring, wchar_t\*)。
+*str* \
+Std：： string、char\*、字符串文本或原始字符串文本或其中任何一个的宽版本（例如 std：： wstring，wchar_t\*）。
 
-*后面*\
+*分隔符*\
 一个用户指定的字符或宽字符，用作字符串开头和结尾的分隔符。
 
-*esc*\
+*转义*\
 一个用户指定的字符或宽字符，用作字符串内转义序列的转义字符。
 
 ### <a name="remarks"></a>备注
@@ -306,17 +306,17 @@ Press Enter to exit
 清除指定标志。
 
 ```cpp
-T1 resetiosflags(ios_base::fmtflags Mask);
+T1 resetiosflags(ios_base::fmtflags mask);
 ```
 
 ### <a name="parameters"></a>参数
 
-*掩盖*\
+*掩码*\
 要清除的标志。
 
 ### <a name="return-value"></a>返回值
 
-操控器返回一个对象, 该对象在从流中提取或插入`str`到流中时会调用**str**。 [setf](../standard-library/ios-base-class.md#setf)( `ios_base::` [fmtflags](../standard-library/ios-base-class.md#fmtflags), _ *Mask*), 然后返回`str`。
+操控器返回一个对象，该对象在从流中提取或插入到流 `str`时，将调用 `str.`[setf](../standard-library/ios-base-class.md#setf)`(ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags)`, mask)`，然后返回 `str`。
 
 ### <a name="example"></a>示例
 
@@ -327,25 +327,25 @@ T1 resetiosflags(ios_base::fmtflags Mask);
 为整数设置基数。
 
 ```cpp
-T3 setbase(int _Base);
+T3 setbase(int base);
 ```
 
 ### <a name="parameters"></a>参数
 
-*_Base*\
+*base*\
 数基。
 
 ### <a name="return-value"></a>返回值
 
-操控器返回一个对象, 该对象在从流中提取或插入`str`到流中时会调用**str**。 `setf`( **mask**, [ios_base:: basefield](../standard-library/ios-base-class.md#fmtflags)), 然后返回`str`。 此处确定`mask`了以下内容:
+操控器返回一个对象，该对象在从流中提取或插入到流 `str`时调用 `str.setf(mask, `[ios_base：： basefield](../standard-library/ios-base-class.md#fmtflags)`)`，然后返回 `str`。 此处 `mask` 确定如下：
 
-- 如果 _ *Base*是 8, 则`mask`为`ios_base::` [oct](../standard-library/ios-functions.md#oct)。
+- 如果*基数*为8，则 `mask` `ios_base::`[oct](../standard-library/ios-functions.md#oct)。
 
-- 如果 _ *Base* 是 10，则 mask 是 `ios_base::`[dec](../standard-library/ios-functions.md#dec)。
+- 如果*base*是10，则 mask `ios_base::`[dec](../standard-library/ios-functions.md#dec)。
 
-- 如果 _ *Base*是 16, 则`mask`是`ios_base::`[十六进制](../standard-library/ios-functions.md#hex)。
+- 如果*base*为16，则 `mask` `ios_base::`[十六进制](../standard-library/ios-functions.md#hex)。
 
-- 如果 _ *Base* 是其他任何值，则 mask 是 `ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags)(0)。
+- 如果*底数*为其他任何值，则 mask `ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags)`(0)`。
 
 ### <a name="example"></a>示例
 
@@ -362,12 +362,12 @@ T4 setfill(Elem Ch);
 
 ### <a name="parameters"></a>参数
 
-*48*\
+*Ch*\
 用于在右对齐显示中填充空格的字符。
 
 ### <a name="return-value"></a>返回值
 
-模板操控器返回一个对象, 该对象在从流中提取或插入`str`到流中时会调用**str**。 [填充](../standard-library/basic-ios-class.md#fill)(`Ch`), 然后返回`str`。 该类型`Elem`必须与流`str`的元素类型相同。
+模板操控器返回一个对象，该对象在从流中提取或插入到流 `str`时，将调用 `str.`[fill](../standard-library/basic-ios-class.md#fill)`(Ch)`，然后返回 `str`。 类型 `Elem` 必须与流 `str`的元素类型相同。
 
 ### <a name="example"></a>示例
 
@@ -378,17 +378,17 @@ T4 setfill(Elem Ch);
 设置指定标志。
 
 ```cpp
-T2 setiosflags(ios_base::fmtflags Mask);
+T2 setiosflags(ios_base::fmtflags mask);
 ```
 
 ### <a name="parameters"></a>参数
 
-*掩盖*\
+*掩码*\
 要设置的标志。
 
 ### <a name="return-value"></a>返回值
 
-操控器返回一个对象, 该对象在从流中提取或插入`str`到流中时会调用**str**。 [setf](../standard-library/ios-base-class.md#setf)(_ *Mask*), 然后返回`str`。
+操控器返回一个对象，该对象在从流中提取或插入到流 `str`时，将调用 `str.`[setf](../standard-library/ios-base-class.md#setf)`(mask)`，然后返回 `str`。
 
 ### <a name="example"></a>示例
 
@@ -409,7 +409,7 @@ T5 setprecision(streamsize Prec);
 
 ### <a name="return-value"></a>返回值
 
-操控器返回一个对象, 该对象在从流中提取或插入`str`到流中时会调用**str**。 [精度](../standard-library/ios-base-class.md#precision)(`Prec`), 然后返回`str`。
+操控器返回一个对象，该对象在从流中提取或插入到流 `str`时，调用 `str.`[precision](../standard-library/ios-base-class.md#precision)`(Prec)`，然后返回 `str`。
 
 ### <a name="example"></a>示例
 
@@ -425,12 +425,12 @@ T6 setw(streamsize Wide);
 
 ### <a name="parameters"></a>参数
 
-*种类*\
+*宽*\
 显示字段的宽度。
 
 ### <a name="return-value"></a>返回值
 
-操控器返回一个对象, 该对象在从流中提取或插入`str`到流中时会调用**str**。 [宽度](../standard-library/ios-base-class.md#width)(_*宽*), 然后返回`str`。
+操控器返回一个对象，该对象在从流中提取或插入到流 `str`时，将调用 `str.`[width](../standard-library/ios-base-class.md#width)`(Wide)`，然后返回 `str`。
 
 ### <a name="remarks"></a>备注
 
