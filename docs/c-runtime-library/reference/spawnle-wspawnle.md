@@ -79,7 +79,7 @@ intptr_t _wspawnle(
 *cmdname*<br/>
 要执行的文件的路径。
 
-*arg0*， *arg1*，.。。*argn*<br/>
+*arg0*， *arg1*， ... *argn*<br/>
 指向参数的指针的列表。 *Arg0*参数通常是指向*cmdname*的指针。 参数*arg1*到*argn*是指向构成新参数列表的字符串的指针。 在*argn*之后，必须有一个**NULL**指针，用于标记参数列表的末尾。
 
 *envp*<br/>
