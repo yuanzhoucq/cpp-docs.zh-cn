@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
-ms.openlocfilehash: 96e8588e72e864d5324e406859e5a39053a46ccf
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a322e517a4adb51879fc2a60f6c08f6561276de9
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449137"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689512"
 ---
 # <a name="ltiosgt"></a>&lt;ios&gt;
 
@@ -20,18 +20,18 @@ ms.locfileid: "68449137"
 
 ## <a name="requirements"></a>要求
 
-**标头**: \<ios >
+**标头**： \<ios >
 
 **命名空间：** std
 
 > [!NOTE]
-> Ios > 库`#include <iosfwd>`使用语句。 \<
+> \<ios > 库使用 `#include <iosfwd>` 语句。
 
 ## <a name="remarks"></a>备注
 
-一大组函数为操控器。 在 \<ios> 中声明的操控器可更改存储在其 [ios_base](../standard-library/ios-base-class.md) 类的自变量对象中的值。 其他操控器对由对象（其类型派生自此类）控制的流执行操作，如其中一个模板类 [basic_istream](../standard-library/basic-istream-class.md) 或 [basic_ostream](../standard-library/basic-ostream-class.md) 的专用化。 例如, [noskipws](../standard-library/ios-functions.md#noskipws)(**str**) 清除对象`ios_base::skipws` `str`中的格式标志, 该标志可以是以下类型之一。
+一大组函数为操控器。 在 \<ios> 中声明的操控器可更改存储在其 [ios_base](../standard-library/ios-base-class.md) 类的自变量对象中的值。 其他操控器对由派生自此类的类型的对象控制的流执行操作，如类模板[basic_istream](../standard-library/basic-istream-class.md)或[basic_ostream](../standard-library/basic-ostream-class.md)的专用化。 例如， [noskipws](../standard-library/ios-functions.md#noskipws)（**str**）清除对象 `str``ios_base::skipws` 的格式标志，该标志可以是以下类型之一。
 
-还可以通过将操控器插入到输出流中或从输入流提取操控器对其进行调用，原因是为派生自 `ios_base` 的类提供了专门的插入和提取操作。 例如：
+还可以通过将操控器插入到输出流中或从输入流提取操控器对其进行调用，原因是为派生自 `ios_base` 的类提供了专门的插入和提取操作。 例如:
 
 ```cpp
 istr>> noskipws;
@@ -95,8 +95,8 @@ istr>> noskipws;
 
 |||
 |-|-|
-|[basic_ios](../standard-library/basic-ios-class.md)|此模板类描述了依赖于模板参数的输入流（属于模板类 [basic_istream](../standard-library/basic-istream-class.md)）和输出流（属于模板类 [basic_ostream](../standard-library/basic-ostream-class.md)）通用的存储和成员函数。|
-|[fpos](../standard-library/fpos-class.md)|此模板类描述了一个对象，该对象可以存储还原任何流内的任意文件位置指示器所需的全部信息。|
+|[basic_ios](../standard-library/basic-ios-class.md)|类模板描述了依赖于模板参数的输入流（类模板[basic_istream](../standard-library/basic-istream-class.md)）和输出流（属于类模板[basic_ostream](../standard-library/basic-ostream-class.md)）所共有的存储和成员函数。|
+|[fpos](../standard-library/fpos-class.md)|类模板描述了一个对象，该对象可以存储还原任何流内的任意文件位置指示器所需的所有信息。|
 |[ios_base](../standard-library/ios-base-class.md)|此类描述了不依赖模板参数的输入和输出流通用的存储和成员函数。|
 
 ## <a name="see-also"></a>请参阅
