@@ -1157,34 +1157,7 @@
                     - name: 示例生成文件
                       href: build/reference/sample-makefile.md
                 - name: 描述块
-                  expanded: false
-                  items:
-                    - name: 描述块
-                      href: build/reference/description-blocks.md
-                    - name: 目标
-                      expanded: false
-                      items:
-                        - name: 目标
-                          href: build/reference/targets.md
-                        - name: 伪目标
-                          href: build/reference/pseudotargets.md
-                        - name: 多个目标
-                          href: build/reference/multiple-targets.md
-                        - name: 累计依赖项
-                          href: build/reference/cumulative-dependencies.md
-                        - name: 多个描述块中的目标
-                          href: build/reference/targets-in-multiple-description-blocks.md
-                        - name: 依赖项副作用
-                          href: build/reference/dependency-side-effects.md
-                    - name: 依赖项
-                      expanded: false
-                      items:
-                        - name: 依赖项
-                          href: build/reference/dependents.md
-                        - name: 推导出的依赖项
-                          href: build/reference/inferred-dependents.md
-                        - name: 依赖项的搜索路径
-                          href: build/reference/search-paths-for-dependents.md
+                  href: build/reference/description-blocks.md
                 - name: 生成文件中的命令
                   expanded: false
                   items:
@@ -1410,6 +1383,8 @@
                       href: build/reference/linkermember.md
                     - name: /LOADCONFIG
                       href: build/reference/loadconfig.md
+                    - name: /NOPDB
+                      href: build/reference/nopdb.md
                     - name: /OUT (DUMPBIN)
                       href: build/reference/out-dumpbin.md
                     - name: /PDATA
@@ -3995,7 +3970,7 @@
                     - name: 强制转换运算符
                       expanded: false
                       items:
-                        - name: 转换运算符
+                        - name: 强制转换运算符
                           href: cpp/casting-operators.md
                         - name: dynamic_cast 运算符
                           href: cpp/dynamic-cast-operator.md
