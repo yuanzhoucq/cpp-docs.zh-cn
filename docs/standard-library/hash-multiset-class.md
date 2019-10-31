@@ -86,17 +86,17 @@ helpviewer_keywords:
 - stdext::hash_multiset::upper_bound
 - stdext::hash_multiset::value_comp
 ms.assetid: 0580397a-a76e-40ad-aea2-5c6f3a9d0a21
-ms.openlocfilehash: 6b3a57d110f2416f5539399ed087e0acbb156991
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 7881b1d6775206fbea40c3ba4b15572a6d4b3580
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689586"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890088"
 ---
 # <a name="hash_multiset-class"></a>hash_multiset 类
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
+> 此 API 已过时。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
 
 容器类 hash_multiset 是 C++ 标准库的扩展，用于存储和快速检索集合中的数据，此集合中包含的元素值用作键值并且不要求具有唯一性。
 
@@ -113,10 +113,10 @@ class hash_multiset
 要存储在 hash_multiset 中的元素数据类型。
 
 *特征*\
-包含两个函数对象的类型，这是一个用于将两个元素值作为排序键进行比较以确定其相对顺序和一个哈希函数（即元素到无符号的一元谓词映射键值）的二进制谓词。`size_t` 类型的整数。 此自变量是可选自变量，默认值为 `hash_compare<Key, less<Key> >`。
+包含两个函数对象的类型，这是一个用于将两个元素值作为排序键进行比较以确定其相对顺序和一个哈希函数（即元素到无符号的一元谓词映射键值）的二进制谓词。`size_t`类型的整数。 此自变量是可选自变量，默认值为 `hash_compare<Key, less<Key> >`。
 
-*分配*器 \
-一种类型，它表示存储的分配器对象，该分配器对象封装有关 hash_multiset{b> <b}的内存分配和解除分配的详细信息。 此参数是可选参数，默认值为 `allocator<Key>`。
+*分配*器\
+一种类型，它表示存储的分配器对象，该分配器对象封装有关 hash_multiset 的内存分配和解除分配的详细信息。 此参数是可选参数，默认值为 `allocator<Key>`。
 
 ## <a name="remarks"></a>备注
 
@@ -138,7 +138,7 @@ hash_multiset 是：
 
 当应用程序满足将值与其键关联的条件时，应选择 hash_multiset 作为关联容器。 hash_multiset 的元素可以是多个，并用作其自己的排序键，因此键不是唯一的。 此类结构的模型是排序列表，如关键字排序列表，其中关键字可以出现多次。 如果不允许关键字多次出现，则应使用 hash_set 作为适当的容器结构。 如果将唯一定义作为值附加到唯一关键字的列表，则 hash_map 应为包含此数据的适当结构。 如果定义不唯一，则应选择 hash_multimap 作为容器。
 
-hash_multiset 通过调用所存储的 [value_compare](#value_compare) 类型的哈希特征对象，对其控制的序列进行排序。 此存储对象可通过调用成员函数 [key_comp](#key_comp) 进行访问。 此类函数对象的行为必须与类 `hash_compare<Key, less<Key> >` 的对象的行为相同。 具体而言，对于类型 `Key` 的所有值*键*，调用 `Trait(Key)` 会生成 `size_t` 类型的值的分布。
+hash_multiset 通过调用所存储的 [value_compare](#value_compare) 类型的哈希特征对象，对其控制的序列进行排序。 此存储对象可通过调用成员函数 [key_comp](#key_comp) 进行访问。 此类函数对象的行为必须与类 `hash_compare<Key, less<Key> >`的对象的行为相同。 具体而言，对于类型 `Key`的所有值*键*，调用 `Trait(Key)` 会生成 `size_t`类型的值的分布。
 
 通常，元素仅需小于比较元素即可建立此顺序；因此，给定任意两个元素，可以确定这两个元素等效（即两者均不小于对方）或其中一个小于另一个。 这将导致在非等效元素之间进行排序。 在技术性更强的说明中，比较函数是一个二元谓词，在标准数学的意义上引发严格弱排序。 二元谓词 *f*( *x*, *y*) 是包含两个参数对象（x 和 y）以及一个返回值（true 或 false）的函数对象。 如果二元谓词具有自反性、反对称性和传递性且等效可传递，对 hash_multiset 进行的排序将为严格弱排序，其中在 *f*( *x*, *y*) 和 *f*( *y*, *x*) 均为 false 时两个对象 x 和 y 定义为等效。 如果键之间的更强相等条件取代了等效性，则排序将为总排序（即所有元素彼此排序），并且匹配的键将难以彼此辨别。
 
@@ -148,24 +148,24 @@ hash_multiset 类提供的迭代器是双向迭代器，但类成员函数 inser
 
 ### <a name="constructors"></a>构造函数
 
-|构造函数|描述|
+|构造函数|说明|
 |-|-|
 |[hash_multiset](#hash_multiset)|构造一个空的或者是其他某个 `hash_multiset` 的全部或部分副本的 `hash_multiset`。|
 
 ### <a name="typedefs"></a>Typedef
 
-|类型名称|描述|
+|类型名称|说明|
 |-|-|
 |[allocator_type](#allocator_type)|一种类型，此类型表示 `allocator` 对象的 `hash_multiset` 类。|
-|[const_iterator](#const_iterator)|一种类型，它提供可读取 `hash_multiset` 中的**const**元素的双向迭代器。|
-|[const_pointer](#const_pointer)|一种类型，它提供指向 `hash_multiset` 中的**const**元素的指针。|
+|[const_iterator](#const_iterator)|一种类型，它提供可读取 `hash_multiset`中的**const**元素的双向迭代器。|
+|[const_pointer](#const_pointer)|一种类型，它提供指向 `hash_multiset`中的**const**元素的指针。|
 |[const_reference](#const_reference)|一种类型，它提供对存储在 `hash_multiset` 中用于读取和执行**const**操作的**const**元素的引用。|
-|[const_reverse_iterator](#const_reverse_iterator)|一种类型，它提供可读取 `hash_multiset` 中任何**const**元素的双向迭代器。|
+|[const_reverse_iterator](#const_reverse_iterator)|一种类型，它提供可读取 `hash_multiset`中任何**const**元素的双向迭代器。|
 |[difference_type](#difference_type)|一种带符号的整数类型，它提供发现同一 `hash_multiset` 中的元素的两个迭代器之间的差异。|
-|[迭代器](#iterator)|一种类型，它提供可读取或修改 `hash_multiset` 中任何元素的双向迭代器。|
+|[Iterator](#iterator)|一种类型，它提供可读取或修改 `hash_multiset` 中任何元素的双向迭代器。|
 |[key_compare](#key_compare)|一种提供函数对象的类型，该函数对象可比较两个排序键以确定 `hash_multiset` 中两个元素的相对顺序。|
 |[key_type](#key_type)|一种类型，它描述当作为排序键存储为其容量中 `hash_set` 的元素的对象。|
-|[指针](#pointer)|一种类型，它提供指向 `hash_multiset` 中的某个元素的指针。|
+|[pointer](#pointer)|一种类型，它提供指向 `hash_multiset` 中的某个元素的指针。|
 |[reference](#reference)|一种类型，此类型提供对存储在 `hash_multiset` 中的元素的引用。|
 |[reverse_iterator](#reverse_iterator)|一种类型，此类型提供可读取或修改反向 `hash_multiset` 中的元素的双向迭代器。|
 |[size_type](#size_type)|可表示 `hash_multiset` 中元素数量的无符号整数类型。|
@@ -174,7 +174,7 @@ hash_multiset 类提供的迭代器是双向迭代器，但类成员函数 inser
 
 ### <a name="member-functions"></a>成员函数
 
-|成员函数|描述|
+|成员函数|说明|
 |-|-|
 |[begin](#begin)|返回一个迭代器，此迭代器用于发现 `hash_multiset` 中的第一个元素。|
 |[cbegin](#cbegin)|返回一个常量迭代器，此迭代器用于发现 `hash_multiset` 中的第一个元素。|
@@ -204,7 +204,7 @@ hash_multiset 类提供的迭代器是双向迭代器，但类成员函数 inser
 
 ### <a name="operators"></a>运算符
 
-|运算符|描述|
+|运算符|说明|
 |-|-|
 |[hash_multiset::operator=](#op_eq)|将 hash_multiset 的元素替换为另一个 hash_multiset 的副本。|
 
@@ -217,7 +217,7 @@ hash_multiset 类提供的迭代器是双向迭代器，但类成员函数 inser
 ## <a name="allocator_type"></a>hash_multiset::allocator_type
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
+> 此 API 已过时。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
 
 一个类型，它代表 hash_multiset 对象的分配器类。
 
@@ -232,7 +232,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::allo
 ## <a name="begin"></a>hash_multiset::begin
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
+> 此 API 已过时。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
 
 返回一个迭代器，此迭代器用于发现 hash_multiset 中的第一个元素。
 
@@ -293,7 +293,7 @@ The first element of hms1 is now 2
 ## <a name="cbegin"></a>hash_multiset::cbegin
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
+> 此 API 已过时。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
 
 返回一个常量迭代器，此迭代器用于发现 hash_multiset 中的第一个元素。
 
@@ -340,7 +340,7 @@ The first element of hs1 is 1
 ## <a name="cend"></a>hash_multiset::cend
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
+> 此 API 已过时。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
 
 返回一个常量迭代器，此迭代器用于 hash_multiset 中最后一个元素之后的位置。
 
@@ -388,7 +388,7 @@ The last element of hs1 is 3
 ## <a name="clear"></a>hash_multiset::clear
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
+> 此 API 已过时。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
 
 清除 hash_multiset 的所有元素。
 
@@ -432,7 +432,7 @@ The size of the hash_multiset after clearing is 0.
 ## <a name="const_iterator"></a>hash_multiset::const_iterator
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
+> 此 API 已过时。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
 
 一个类型，用于提供可读取 hash_multiset 中 **const** 元素的双向迭代器。
 
@@ -451,7 +451,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 ## <a name="const_pointer"></a>hash_multiset::const_pointer
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
+> 此 API 已过时。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
 
 一种类型，此类型提供指向 hash_multiset 中的 **const** 元素的指针。
 
@@ -468,7 +468,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::co
 ## <a name="const_reference"></a>hash_multiset::const_reference
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
+> 此 API 已过时。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
 
 一种类型，此类型提供对用于读取和执行 **const** 操作的 hash_multiset 中存储的 **const** 元素的引用。
 
@@ -515,7 +515,7 @@ The first element in the hash_multiset is 10.
 ## <a name="const_reverse_iterator"></a>hash_multiset::const_reverse_iterator
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
+> 此 API 已过时。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
 
 一个类型，用于提供可读取 hash_multiset 中任何 **const** 元素的双向迭代器。
 
@@ -534,7 +534,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 ## <a name="count"></a>hash_multiset::count
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
+> 此 API 已过时。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
 
 返回 hash_multiset 中其键与指定了参数的键匹配的元素数量。
 
@@ -597,7 +597,7 @@ The number of elements in hms1 with a sort key of 2 is: 0.
 ## <a name="crbegin"></a>hash_multiset::crbegin
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
+> 此 API 已过时。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
 
 返回一个常量迭代器，此迭代器用于发现反向 hash_multiset 中的第一个元素的位置。
 
@@ -649,7 +649,7 @@ The first element in the reversed hash_multiset is 30.
 ## <a name="crend"></a>hash_multiset::crend
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
+> 此 API 已过时。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
 
 返回一个常量迭代器，此迭代器用于发现反向 hash_multiset 中最后一个元素之后的位置。
 
@@ -702,7 +702,7 @@ The last element in the reversed hash_multiset is 10.
 ## <a name="difference_type"></a>hash_multiset::difference_type
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
+> 此 API 已过时。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
 
 一种带符号的整数类型，它提供发现同一 hash_multiset 中的元素的两个迭代器之间的差异。
 
@@ -782,7 +782,7 @@ The number of elements in the hash_multiset hms1 is 3.
 ## <a name="emplace"></a>hash_multiset::emplace
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
+> 此 API 已过时。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
 
 将就地构造的元素插入到 hash_multiset 中。
 
@@ -793,7 +793,7 @@ iterator insert(ValTy&& val);
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |-|-|
 |*val*|要插入 [hash_multiset](../standard-library/hash-multiset-class.md) 的元素的值，除非 `hash_multiset` 已包含该元素，或更宽泛地说，包含其键经过等效排序的元素。|
 
@@ -832,23 +832,24 @@ After the emplace insertion, hms3 contains a.
 ## <a name="emplace_hint"></a>hash_multiset::emplace_hint
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
+> 此 API 已过时。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
 
 将就地构造的元素插入到 hash_multiset，并附带位置提示。
 
 ```cpp
 template <class ValTy>
 iterator insert(
-    const_iterator _Where,
+    const_iterator where,
     ValTy&& val);
 ```
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
-|-|-|
-|*val*|要插入 [hash_multiset](../standard-library/hash-multiset-class.md) 的元素的值，除非 `hash_multiset` 已包含该元素，或更宽泛地说，包含其键经过等效排序的元素。|
-|*_Where*|开始搜索正确插入点的位置。 （如果插入点紧跟 *_Where*，则可能会在分期常量时间内（而不是对数时间）进行插入。|
+*val*\
+要插入 [hash_multiset](../standard-library/hash-multiset-class.md) 的元素的值，除非 `hash_multiset` 已包含该元素，或更宽泛地说，包含其键经过等效排序的元素。
+
+*where*\
+开始搜索正确插入点的位置。 （如果插入点紧随其后*出现，则*在分期常量时间内（而不是对数时间）进行插入。
 
 ### <a name="return-value"></a>返回值
 
@@ -856,7 +857,7 @@ iterator insert(
 
 ### <a name="remarks"></a>备注
 
-如果插入点紧随 *_Where*，则可能会在分期常量时间内（而不是对数时间）进行插入。
+如果插入点紧随*其后，则*在分期常量时间内（而不是对数时间）进行插入。
 
 ### <a name="example"></a>示例
 
@@ -887,7 +888,7 @@ After the emplace insertion, hms1 contains a.
 ## <a name="empty"></a>hash_multiset::empty
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
+> 此 API 已过时。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
 
 测试 hash_multiset 是否为空。
 
@@ -936,7 +937,7 @@ The hash_multiset hms2 is empty.
 ## <a name="end"></a>hash_multiset::end
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
+> 此 API 已过时。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
 
 返回一个迭代器，此迭代器用于发现 hash_multiset 中最后一个元素之后的位置。
 
@@ -999,7 +1000,7 @@ The last element of hms1 is now 2
 ## <a name="equal_range"></a>hash_multiset::equal_range
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
+> 此 API 已过时。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
 
 返回一对迭代器，这两个迭代器分别用于发现 hash_multiset 中其键大于指定键的第一个元素，以及 hash_multiset 中其键等于或大于指定键的第一个元素。
 
@@ -1086,12 +1087,12 @@ The hash_multiset hms1 doesn't have an element with a key less than 40.
 ## <a name="erase"></a>hash_multiset::erase
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
+> 此 API 已过时。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
 
 从 hash_multiset 中的指定位置移除一个元素或元素范围，或者移除与指定键匹配的元素。
 
 ```cpp
-iterator erase(iterator _Where);
+iterator erase(iterator where);
 
 iterator erase(iterator first, iterator last);
 
@@ -1100,7 +1101,7 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>参数
 
-*_Where* \
+*where*\
 要从 hash_multiset 移除的元素的位置。
 
 *第一个*\
@@ -1209,7 +1210,7 @@ is deleted, the hash_multiset hms3 is: 0 3.
 ## <a name="find"></a>hash_multiset::find
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
+> 此 API 已过时。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
 
 返回一个迭代器，此迭代器用于发现 hash_multiset 中其键与指定键等效的元素的位置。
 
@@ -1287,7 +1288,7 @@ The element of hms1 with a key matching that of the last element is: 30.
 ## <a name="get_allocator"></a>hash_multiset::get_allocator
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
+> 此 API 已过时。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
 
 返回用于构造 hash_multiset 的分配器对象的一个副本。
 
@@ -1363,7 +1364,7 @@ int main( )
 ## <a name="hash_multiset"></a>hash_multiset::hash_multiset
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
+> 此 API 已过时。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
 
 构造一个空的或者是其他某个 `hash_multiset` 的全部或部分副本的 `hash_multiset`。
 
@@ -1392,33 +1393,42 @@ hash_multiset(
 
 template <class InputIterator>
 hash_multiset(
-    InputIterator First,
-    InputIterator Last);
+    InputIterator first,
+    InputIterator last);
 
 template <class InputIterator>
 hash_multiset(
-    InputIterator First,
-    InputIterator Last,
+    InputIterator first,
+    InputIterator last,
     const Traits& Comp);
 
 template <class InputIterator>
 hash_multiset(
-    InputIterator First,
-    InputIterator Last,
+    InputIterator first,
+    InputIterator last,
     const Traits& Comp,
     const Allocator& Al);
 ```
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
-|-|-|
-|*Fc-al*|要用于此 `hash_multiset` 对象的存储分配器类，默认为 `Allocator`。|
-|*压缩*|用于对 `hash_multiset` 中元素排序的类型 `const Traits` 的比较函数，默认为 `hash_compare`。|
-|右侧|所构造的 `hash_multiset` 要作为其副本的 `hash_multiset`。|
-|*1*|要复制的范围元素中的第一个元素的位置。|
-|*时间*|要复制的元素范围以外的第一个元素的位置。|
-|*IList*|包含要复制的元素的 initializer_list。|
+*Al*\
+要用于此 `hash_multiset` 对象的存储分配器类，默认为 `Allocator`。
+
+*Comp*\
+用于对 `hash_multiset` 中元素排序的类型 `const Traits` 的比较函数，默认为 `hash_compare`。
+
+*Right*\
+所构造的 `hash_multiset` 要作为其副本的 `hash_multiset`。
+
+*第一个*\
+要复制的范围元素中的第一个元素的位置。
+
+*最后*\
+要复制的元素范围以外的第一个元素的位置。
+
+*IList*\
+包含要复制的元素的 initializer_list。
 
 ### <a name="remarks"></a>备注
 
@@ -1434,7 +1444,7 @@ hash_multiset(
 
 第五个、第六个和第七个构造函数使用 initializer_list。
 
-最后三个构造函数复制 `hash_multiset` 的范围 [ `First`, `Last`)，其指定类 Compare 的比较函数类型和分配器的明确性更高。
+最后三个构造函数复制 `hash_multiset` 的范围 [ `first`, `last`)，其指定类 Compare 的比较函数类型和分配器的明确性更高。
 
 哈希集容器中元素的实际位置取决于哈希函数、ordering 函数和哈希表的当前大小，且通常无法像在 set 容器中那样可进行预测，因为在 set 容器中该位置仅由 ordering 函数决定。
 
@@ -1447,46 +1457,53 @@ hash_multiset(
 
 ```cpp
 iterator insert(
-    const Type& Val);
+    const Type& value);
 
 iterator insert(
-    iterator Where,
+    iterator where,
     const Type& Al);
 
 void insert(
     initializer_list<Type> IList);
 
 iterator insert(
-    const Type& Val);
+    const Type& value);
 
 iterator insert(
-    Iterator Where,
-    const Type& Val);
+    Iterator where,
+    const Type& value);
 
 template <class InputIterator>
 void insert(
-    InputIterator First,
-    InputIterator Last);
+    InputIterator first,
+    InputIterator last);
 
 template <class ValTy>
 iterator insert(
-    ValTy&& Val);
+    ValTy&& value);
 
 template <class ValTy>
 iterator insert(
-    const_iterator Where,
-    ValTy&& Val);
+    const_iterator where,
+    ValTy&& value);
 ```
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
-|-|-|
-|*初始值*|要插入 hash_multiset 的元素的值，除非 hash_multiset 已包含该元素，或更宽泛地说，包含其键经过等效排序的元素。|
-|*Where*|开始搜索正确插入点的位置。 （如果插入点紧随 `_Where`，则插入可发生在分期常量时间内，而非对数时间内。）|
-|*1*|要从 hash_multiset 复制的第一个元素的位置。|
-|*时间*|刚超出要从 hash_multiset 复制的最后一个元素的位置。|
-|*IList*|包含要复制的元素的 initializer_list。|
+*value*\
+要插入 hash_multiset 的元素的值，除非 hash_multiset 已包含该元素，或更宽泛地说，包含其键经过等效排序的元素。
+
+*where*\
+开始搜索正确插入点的位置。 （如果插入点紧随其后*出现，则*在分期常量时间内（而不是对数时间）进行插入。
+
+*第一个*\
+要从 hash_multiset 复制的第一个元素的位置。
+
+*最后*\
+刚超出要从 hash_multiset 复制的最后一个元素的位置。
+
+*IList*\
+包含要复制的元素的 initializer_list。
 
 ### <a name="return-value"></a>返回值
 
@@ -1494,7 +1511,7 @@ iterator insert(
 
 接下来的三个成员函数使用 initializer_list。
 
-第三个个成员函数将元素值序列插入到 hash_multiset，它对应于迭代器在指定的 hash_multiset 的范围 [ `First`, `Last`) 中所处理的每一个元素。
+第三个个成员函数将元素值序列插入到 hash_multiset，它对应于迭代器在指定的 hash_multiset 的范围 [ `first`, `last`) 中所处理的每一个元素。
 
 ### <a name="remarks"></a>备注
 
@@ -1503,7 +1520,7 @@ iterator insert(
 ## <a name="iterator"></a>hash_multiset::iterator
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
+> 此 API 已过时。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
 
 一种提供双向迭代器的类型，所提供的迭代器可读取或修改 hash_multiset 中的任何元素。
 
@@ -1517,12 +1534,12 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 
 ### <a name="example"></a>示例
 
-有关如何声明和使用 `iterator` 的示例，请参阅[begin](#begin)的示例。
+有关如何声明和使用`iterator`的示例，请参阅 [begin](#begin) 的示例。
 
 ## <a name="key_comp"></a>hash_multiset::key_comp
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
+> 此 API 已过时。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
 
 检索用于对 hash_multiset 中的键进行排序的比较对象的副本。
 
@@ -1540,7 +1557,7 @@ key_compare key_comp() const;
 
 存储对象用于定义成员函数：
 
-**bool operator**( **const Key&** *_xVal,* **const Key&** _ `yVal`);
+`bool operator<(const Key& _xVal, const Key& _yVal);`
 
 如果 `_xVal` 在排序顺序中先于且不等于 `_yVal`，则该函数会返回 **true**。
 
@@ -1598,7 +1615,7 @@ int main( )
 ## <a name="key_compare"></a>hash_multiset::key_compare
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
+> 此 API 已过时。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
 
 一种类型，它提供两个函数对象：一个是类比较二元谓词，可以比较 hash_multiset 的两个元素值以确定其相对顺序，另一个是一元谓词，可对元素进行哈希处理。
 
@@ -1621,7 +1638,7 @@ typedef Traits key_compare;
 ## <a name="key_type"></a>hash_multiset::key_type
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
+> 此 API 已过时。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
 
 一种提供函数对象的类型，该函数对象可比较排序键以确定 hash_multiset 中两个元素的相对顺序。
 
@@ -1644,7 +1661,7 @@ typedef Key key_type;
 ## <a name="lower_bound"></a>hash_multiset::lower_bound
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
+> 此 API 已过时。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
 
 返回一个迭代器，此迭代器指向 hash_multiset 中其键等于或大于指定键的第一个元素。
 
@@ -1711,7 +1728,7 @@ int main() {
 ## <a name="max_size"></a>hash_multiset::max_size
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
+> 此 API 已过时。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
 
 返回 hash_multiset 的最大长度。
 
@@ -1749,7 +1766,7 @@ int main( )
 ## <a name="op_eq"></a>hash_multiset::operator=
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
+> 此 API 已过时。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
 
 将 hash_multiset 的元素替换为另一个 hash_multiset 的副本。
 
@@ -1761,13 +1778,13 @@ hash_multiset& operator=(hash_multiset&& right);
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |-|-|
-|right|[hash_multiset](../standard-library/hash-multiset-class.md)，正在复制到 `hash_multiset`。|
+|*right*|[hash_multiset](../standard-library/hash-multiset-class.md)，正在复制到 `hash_multiset`。|
 
 ### <a name="remarks"></a>备注
 
-擦除 `hash_multiset` 中的任何现有元素后，`operator=` 将*右侧*的内容复制或移动到 `hash_multiset` 中。
+擦除 `hash_multiset`中的任何现有元素后，`operator=` 将*右侧*的内容复制或移动到 `hash_multiset`中。
 
 ### <a name="example"></a>示例
 
@@ -1810,7 +1827,7 @@ int main( )
 ## <a name="pointer"></a>hash_multiset::pointer
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
+> 此 API 已过时。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
 
 一种类型，此类型提供指向 hash_multiset 中元素的指针。
 
@@ -1827,7 +1844,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::po
 ## <a name="rbegin"></a>hash_multiset::rbegin
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
+> 此 API 已过时。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
 
 返回一个迭代器，此迭代器用于发现反向 hash_multiset 中的第一个元素。
 
@@ -1910,7 +1927,7 @@ After the erasure, the first element in the reversed hash_multiset is 20.
 ## <a name="reference"></a>hash_multiset::reference
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
+> 此 API 已过时。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
 
 一种类型，此类型提供对存储在 hash_multiset 中的元素的引用。
 
@@ -1960,7 +1977,7 @@ The first element in the hash_multiset is now 15.
 ## <a name="rend"></a>hash_multiset::rend
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
+> 此 API 已过时。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
 
 返回一个迭代器，此迭代器用于发现反向 hash_multiset 中最后一个元素之后的位置。
 
@@ -2046,7 +2063,7 @@ After the erasure, the last element in the reversed hash_multiset is 20.
 ## <a name="reverse_iterator"></a>hash_multiset::reverse_iterator
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
+> 此 API 已过时。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
 
 一种类型，此类型提供可读取或修改反向 hash_multiset 中的元素的双向迭代器。
 
@@ -2065,7 +2082,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::reve
 ## <a name="size"></a>hash_multiset::size
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
+> 此 API 已过时。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
 
 返回 hash_multiset 中的元素数量。
 
@@ -2112,7 +2129,7 @@ The hash_multiset length is now 2.
 ## <a name="size_type"></a>hash_multiset::size_type
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
+> 此 API 已过时。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
 
 一种无符号整数类型，此类型可表示 hash_multiset 中的元素数量。
 
@@ -2129,7 +2146,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::si
 ## <a name="swap"></a>hash_multiset::swap
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
+> 此 API 已过时。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
 
 交换两个 hash_multiset 的元素。
 
@@ -2139,7 +2156,7 @@ void swap(hash_multiset& right);
 
 ### <a name="parameters"></a>参数
 
-*right* \
+*right*\
 参数 hash_multiset，提供要与目标 hash_multiset 进行交换的元素。
 
 ### <a name="remarks"></a>备注
@@ -2203,7 +2220,7 @@ After swapping with hms3, list hms1 is: 300.
 ## <a name="upper_bound"></a>hash_multiset::upper_bound
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
+> 此 API 已过时。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
 
 返回一个迭代器，此迭代器指向 hash_multiset 中其键大于指定键的第一个元素。
 
@@ -2281,7 +2298,7 @@ that of the initial element of hms1 is: 20.
 ## <a name="value_comp"></a>hash_multiset::value_comp
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
+> 此 API 已过时。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
 
 检索用于对 hash_multiset 中的元素值进行排序的比较对象副本。
 
@@ -2362,7 +2379,7 @@ vc2( 2,3 ) returns value of false, where vc2 is the function object of hms2.
 ## <a name="value_compare"></a>hash_multiset::value_compare
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
+> 此 API 已过时。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
 
 一种类型，它提供两个函数对象：一个是类比较二元谓词，可以比较 hash_multiset 的两个元素值以确定其相对顺序，另一个是一元谓词，可对元素进行哈希处理。
 
@@ -2385,7 +2402,7 @@ typedef key_compare value_compare;
 ## <a name="value_type"></a>hash_multiset::value_type
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
+> 此 API 已过时。 替代项为 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
 
 一种类型，此类型将在其容量中存储为 hash_multiset 元素的对象描述为值。
 
@@ -2435,5 +2452,5 @@ The hash_multiset has elements: 10 20.
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
