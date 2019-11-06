@@ -1,15 +1,15 @@
 ---
-title: 移植指南：MFC Scribble
-ms.date: 11/19/2018
+title: 迁移指南：MFC Scribble
+ms.date: 10/23/2019
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: e808f67b1479653add27a54ddf91f6578c046734
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: c5e0e8fecd99e4f03077574da7b7fcb3e538762b
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511542"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627215"
 ---
-# <a name="porting-guide-mfc-scribble"></a>移植指南：MFC Scribble
+# <a name="porting-guide-mfc-scribble"></a>迁移指南：MFC Scribble
 
 本主题是介绍 Visual Studio C++ 项目升级过程的几个主题中的第一个主题，具体涉及将在旧版本的 Visual Studio 中创建的 Visual Studio C++ 项目升级到 Visual Studio 2017。 这些主题通过示例介绍升级过程，从非常简单的项目开始，过渡到稍微更复杂的项目。 在本主题中，我们将完成特定项目 (MFC Scribble) 的升级过程。 它很适合作为对 C++ 项目升级过程的基本介绍。
 
@@ -19,19 +19,19 @@ ms.locfileid: "69511542"
 
 MFC Scribble 是一个众所周知的示例，已包括在许多不同版本的 Visual C++ 中。 它是一个简单的绘图应用程序，展示了 MFC 的一些基本功能。 它有各种可用的版本，包括托管版本和本机代码版本。 针对此示例，我们发现本机代码中的旧版 Scribble 来自 Visual Studio 2005 并在 Visual Studio 2017 中打开。
 
-在尝试升级之前，请确保已安装 Windows Desktop 工作负载。 打开 Visual Studio 安装程序 (vs_installer.exe)。 要打开安装程序，一种方法是选择“文件” > “新建项目”，向下滚动已安装模板的列表，直到看到“打开 Visual Studio 安装程序”    。 打开安装程序后，将看到所有可用的工作负载。 如果未选择“Windows Desktop 工作负载”框，请将其选中，然后单击窗口底部的“修改”按钮   。
+在尝试升级之前，请确保已安装 Windows Desktop 工作负载。 打开 Visual Studio 安装程序 (vs_installer.exe)。 要打开安装程序，一种方法是选择“文件” > “新建项目”，向下滚动已安装模板的列表，直到看到“打开 Visual Studio 安装程序”。 打开安装程序后，将看到所有可用的工作负载。 如果未选择“Windows Desktop 工作负载”框，请将其选中，然后单击窗口底部的“修改”按钮。
 
 接下来，备份整个解决方案及其所有内容。
 
-最后，我们需要确定具体的升级方法。 对于更复杂的解决方案和长期未进行升级的项目，则应考虑一次升级一个 Visual Studio 版本。 这样一来，你可以对哪个 Visual Studio 版本引入了问题进行范围缩小。 对于简单的项目，值得在最新版的 Visual Studio 中尝试打开它，并允许向导将项目转换。 如果这不起作用，你可以尝试一次升级一个版本（如果你有权访问相应版本的 Visual Studio）。
+最后，在最新版本的 Visual Studio 中打开解决方案，并允许向导转换项目。 
 
 请注意，使用 `/Upgrade` 选项（而不是使用向导来升级项目），你还可以在命令行运行 devenv。 请参阅 [/Upgrade (devenv.exe)](/visualstudio/ide/reference/upgrade-devenv-exe)。 这在为大量项目自动执行升级过程中很有帮助。
 
 ### <a name="step-1-converting-the-project-file"></a>步骤 1。 转换项目文件
 
-在 Visual Studio 2017 中打开旧的项目文件时，Visual Studio 主动将项目文件转换为我们接受的最新版本。 出现了下面的对话框：
+在 Visual Studio 中打开旧的项目文件时，Visual Studio 会将项目文件转换为我们接受的最新版本。 出现了下面的对话框：
 
-![评审项目和解决方案更改](../porting/media/scribbleprojectupgrade.PNG "Review Project and Solution Changes")
+![查看项目和解决方案更改](../porting/media/scribbleprojectupgrade.PNG "复查项目和解决方案更改")
 
 出现了错误，通知我们 Itanium 目标不可用且不被转换。
 
@@ -43,15 +43,15 @@ Platform 'Itanium' is missing from this project. All the configurations and thei
 
 Visual Studio 随后将显示一个迁移报告，该报告列出旧项目文件中的所有问题。
 
-![升级报表](../porting/media/scribblemigrationreport.PNG "Upgrade Report")
+![升级报表](../porting/media/scribblemigrationreport.PNG "升级报告")
 
 在本例中，问题都是警告，并且 Visual Studio 在项目文件中进行了相应的更改。 项目关注的最大差别就在于生成工具从 vcbuild 更改为 msbuild。 在 Visual Studio 2010 中首先引入了此更改。 其他更改包括项目文件本身中元素序列的重新排列。 针对此简单项目，无需对这些问题进行深入关注。
 
 ### <a name="step-2-getting-it-to-build"></a>步骤 2。 开始生成
 
-在生成之前，我们检查平台工具集以便了解项目系统使用的是何种编译器版本。 在“配置属性”  之下的“项目属性”对话框中，请在“常规”  类别中查看“平台工具集”  属性。 它包含 Visual Studio 的版本和平台工具版本号，在本例中，Visual Studio 2017 版本的工具版本号为 v141。 转换使用 Visual Studio 2010、2012、2013 或 2015 进行初始编译的项目时，工具集不自动更新为 Visual Studio 2017 工具集。
+在生成之前，我们检查平台工具集以便了解项目系统使用的是何种编译器版本。 在“配置属性”之下的“项目属性”对话框中，请在“常规”类别中查看“平台工具集”属性。 它包含 Visual Studio 的版本和平台工具版本号，在本例中，Visual Studio 2017 版本的工具版本号为 v141。 转换最初使用 Visual Studio 2010、2012、2013或2015编译的项目时，工具集不会自动更新为最新的工具集。
 
-若要切换到 Unicode，请打开“配置属性”  之下的项目属性，选择“常规”  部分，然后找到“字符集”  属性。 将此项从“使用多字节字符集”  更改为“使用 Unicode 字符集”  。 此更改的效果：现在定义了 _UNICODE 和 UNICODE 宏，而未定义 _MBCS，这一点你可以在“命令行”  属性处的“C/C++”  类别之下的“属性”对话框中进行验证。
+若要切换到 Unicode，请打开“配置属性”之下的项目属性，选择“常规”部分，然后找到“字符集”属性。 将此项从“使用多字节字符集”更改为“使用 Unicode 字符集”。 此更改的效果：现在定义了 _UNICODE 和 UNICODE 宏，而未定义 _MBCS，这一点你可以在“命令行”属性处的“C/C++”类别之下的“属性”对话框中进行验证。
 
 ```Output
 /GS /analyze- /W4 /Zc:wchar_t /Zi /Gm- /Od /Fd".\Debug\vc141.pdb" /Zc:inline /fp:precise /D "_AFXDLL" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_UNICODE" /D "UNICODE" /errorReport:prompt /WX /Zc:forScope /Gd /Oy- /MDd /Fa".\Debug\" /EHsc /nologo /Fo".\Debug\" /Fp".\Debug\Scribble.pch" /diagnostics:classic

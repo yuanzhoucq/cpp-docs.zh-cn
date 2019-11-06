@@ -6,7 +6,6 @@ f1_keywords:
 - C1036
 - C1041
 - C1048
-- C1049
 - C1063
 - C1069
 - C1101
@@ -31,7 +30,6 @@ helpviewer_keywords:
 - C1036
 - C1041
 - C1048
-- C1049
 - C1063
 - C1069
 - C1101
@@ -52,16 +50,16 @@ helpviewer_keywords:
 - C1505
 - C1901
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
-ms.openlocfilehash: 5ffa1a2633877c8a16eb424f1ddc100bfd6142b8
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 395d7403ef4fe04b671a84a61d320b27ad8ad1c7
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857395"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626568"
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>编译器致命错误 C999 - C1999
 
-在本部分文档中的文章介绍了由 Microsoft C 生成错误消息的一个子集 /C++编译器。
+文档的本节中的文章介绍了由 Microsoft C/C++编译器生成的错误消息的子集。
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
@@ -74,11 +72,11 @@ ms.locfileid: "64857395"
 |[错误 C1002](../../error-messages/compiler-errors-1/fatal-error-c1002.md)|在第 2 遍中编译器的堆空间不足|
 |[错误 C1003](../../error-messages/compiler-errors-1/fatal-error-c1003.md)|错误计数超过 *number*；正在停止编译|
 |[错误 C1004](../../error-messages/compiler-errors-1/fatal-error-c1004.md)|发现意外的文件尾|
-|[错误 C1005](../../error-messages/compiler-errors-1/fatal-error-c1005.md)|字符串对于缓冲区太大|
+|[错误 C1005](../../error-messages/compiler-errors-1/fatal-error-c1005.md)|字符串过大，无法缓冲|
 |[错误 C1007](../../error-messages/compiler-errors-1/fatal-error-c1007.md)|无法识别的标志“*string*”（在“*option*”中）|
 |[错误 C1008](../../error-messages/compiler-errors-1/fatal-error-c1008.md)|没有指定输入文件|
 |[错误 C1009](../../error-messages/compiler-errors-1/fatal-error-c1009.md)|编译器限制: 宏嵌套太深|
-|[错误 C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|查找预编译头时意外的文件尾。 是否忘记添加 #include \<*文件*> 到您的源？|
+|[错误 C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|查找预编译头时意外的文件尾。 是否忘记将 "#include \<*文件*>" 添加到源？|
 |[错误 C1012](fatal-error-c1012.md)|括号不匹配：缺少“*character*”|
 |[错误 C1013](fatal-error-c1013.md)|编译器限制: 左括号太多|
 |[错误 C1014](fatal-error-c1014.md)|包含文件太多：深度 = *number*|
@@ -102,9 +100,9 @@ ms.locfileid: "64857395"
 |[错误 C1046](../../error-messages/compiler-errors-1/fatal-error-c1046.md)|编译器限制： *structure* 嵌套太深|
 |[错误 C1047](fatal-error-c1047.md)|对象或库文件“*file*”是使用比创建其他对象所用编译器旧的编译器创建的；请重新生成旧的对象和库|
 |错误 C1048|未知选项“*string*”（在“*option*”中）|
-|错误 C1049|无效的数值参数“*value*”|
+|[错误 C1049](fatal-error-c1049.md)|无效的数值参数“*value*”|
 |[错误 C1051](../../error-messages/compiler-errors-1/fatal-error-c1051.md)|程序数据库文件“*file*”具有过时的格式，将其删除并重新编译|
-|[错误 C1052](fatal-error-c1052.md)|程序数据库文件*文件名*，由带 /debug: fastlink; 链接器生成的编译器无法更新此类 PDB 文件; 请删除它或使用 /Fd 来指定不同的 PDB 文件名|
+|[错误 C1052](fatal-error-c1052.md)|程序数据库文件 "*filename*" 是使用/debug： fastlink 的链接器生成的。编译器无法更新此类 PDB 文件;请删除它或使用/Fd 来指定不同的 PDB 文件名|
 |[错误 C1053](fatal-error-c1053.md)|“*function*”：函数太大|
 |[错误 C1054](../../error-messages/compiler-errors-1/fatal-error-c1054.md)|编译器限制: 初始值设定项嵌套太深|
 |[错误 C1055](../../error-messages/compiler-errors-1/fatal-error-c1055.md)|编译器限制: 超出键范围|
@@ -114,7 +112,7 @@ ms.locfileid: "64857395"
 |错误 C1063|编译器限制: 编译器堆栈溢出|
 |[错误 C1064](../../error-messages/compiler-errors-1/fatal-error-c1064.md)|编译器限制: 标记已溢出内部缓冲区|
 |[错误 C1065](../../error-messages/compiler-errors-1/fatal-error-c1065.md)|编译器限制: 超出标记范围|
-|[错误 C1067](../../error-messages/compiler-errors-1/fatal-error-c1067.md)|编译器限制：已超出类型记录的大小的 64k 限制|
+|[错误 C1067](../../error-messages/compiler-errors-1/fatal-error-c1067.md)|编译器限制: 已超出类型记录的 64K 大小限制|
 |[错误 C1068](fatal-error-c1068.md)|无法打开文件“*file*”|
 |错误 C1069|无法读取编译器命令行|
 |[错误 C1070](fatal-error-c1070.md)|文件“*file*”中的 #if/#endif 对不匹配|
@@ -124,7 +122,7 @@ ms.locfileid: "64857395"
 |[错误 C1075](../../error-messages/compiler-errors-1/fatal-error-c1075.md)|左侧的 *token* 与文件结尾不匹配|
 |[错误 C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md)|编译器限制: 达到内部堆限制；使用 /Zm 指定更高的限制|
 |[错误 C1077](fatal-error-c1077.md)|编译器限制：不能有 *number* 个以上的命令行选项|
-|[错误 C1079](../../error-messages/compiler-errors-1/fatal-error-c1079.md)|编译器限制：超出 PCH 文件大小限制|
+|[错误 C1079](../../error-messages/compiler-errors-1/fatal-error-c1079.md)|编译器限制: 超出 PCH 文件大小限制|
 |[错误 C1080](../../error-messages/compiler-errors-1/fatal-error-c1080.md)|编译器限制：命令行选项超出 *number* 个字符的限制|
 |[错误 C1081](../../error-messages/compiler-errors-1/fatal-error-c1081.md)|“*file*”：文件名太长|
 |[错误 C1082](fatal-error-c1082.md)|无法关闭 *type* 文件：“*file*”： *message*|
@@ -155,7 +153,7 @@ ms.locfileid: "64857395"
 |错误 C1111|模板/泛型参数太多|
 |错误 C1112|编译器限制： `'number`”个宏参数（过多），只允许 *number* 个|
 |[错误 C1113](../../error-messages/compiler-errors-1/fatal-error-c1113.md)|在“*file*”上 #using 失败|
-|错误 C1114|'*文件*:WinRT 不支持 #using 的托管程序集|
+|错误 C1114|“*file*”：WinRT 不支持托管程序集的 #using|
 |[错误 C1120](../../error-messages/compiler-errors-1/fatal-error-c1120.md)|对于“*function*”，调用 GetProcAddress 失败|
 |[错误 C1121](../../error-messages/compiler-errors-1/fatal-error-c1121.md)|调用 CryptoAPI 失败|
 |[错误 C1126](../../error-messages/compiler-errors-1/fatal-error-c1126.md)|自动分配超过 *size*|
@@ -217,4 +215,4 @@ ms.locfileid: "64857395"
 
 ## <a name="see-also"></a>请参阅
 
-[C /C++编译器和生成工具错误和警告](../compiler-errors-1/c-cpp-build-errors.md)
+[C/C++编译器和生成工具错误和警告](../compiler-errors-1/c-cpp-build-errors.md)

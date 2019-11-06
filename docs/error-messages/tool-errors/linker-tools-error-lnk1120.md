@@ -1,22 +1,26 @@
 ---
 title: 链接器工具错误 LNK1120
-ms.date: 05/17/2017
+description: 描述 LNK1120 链接器错误，该错误报告链接中无法解析的外部符号错误的数目。
+ms.date: 10/31/2019
 f1_keywords:
 - LNK1120
 helpviewer_keywords:
 - LNK1120
 ms.assetid: 56aa7d36-921f-4daf-b44d-cca0d4fb1b51
-ms.openlocfilehash: b11318dcffb665d3b422fffcbd7e6275f35984dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 21a1ede07a69cdc065dd897715e243115529600d
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62255100"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626584"
 ---
 # <a name="linker-tools-error-lnk1120"></a>链接器工具错误 LNK1120
 
-> *数字*无法解析的外部对象
+> *无法解析*的外部
 
-错误 LNK1120 报告计数 (*数*) 的此链接操作的未解析的外部符号错误。 大多数无法解析的单独的报告的外部符号错误[链接器工具错误 LNK2001](../../error-messages/tool-errors/linker-tools-error-lnk2001.md)并[链接器工具错误 LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)，其中前加上此错误消息，一次为每个无法解析的外部符号时出错。
+错误 LNK1120 报告当前链接中[无法解析的外部符号](linker-tools-error-lnk2001.md#what-is-an-unresolved-external-symbol)错误的数目。
 
-若要修复此错误，更正所有其他的未解析的外部错误或其他生成输出中在其之前的链接器错误。 当不再有任何未解析的外部错误时，不报告此错误。
+每个无法解析的外部符号首先由[LNK2001](linker-tools-error-lnk2001.md)或[LNK2019](linker-tools-error-lnk2019.md)错误报告。 LNK1120 消息最后出现，并显示无法解析的符号错误计数。
+
+> [!IMPORTANT]
+> **不需要修复此错误。** 如果在生成输出中更正了所有 LNK2001 和 LNK2019 链接器错误，则此错误将消失。 始终从报告的第一个错误开始修复问题。 稍后的错误可能是由早期错误引起的，并且在修复了以前的错误时消失。

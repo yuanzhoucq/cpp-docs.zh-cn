@@ -1,29 +1,29 @@
 ---
-title: 编译器警告（等级 1）C4288
+title: 编译器警告（等级1） C4288
 ms.date: 11/04/2016
 f1_keywords:
 - C4288
 helpviewer_keywords:
 - C4288
 ms.assetid: 6aaeb139-90cd-457a-9d37-65687042736f
-ms.openlocfilehash: d8769f5663ca0bde9048e52d4579012dfccab0a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 81094bf019060b56337347f7d364ead7c78c8128
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207090"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626662"
 ---
-# <a name="compiler-warning-level-1-c4288"></a>编译器警告（等级 1）C4288
+# <a name="compiler-warning-level-1-c4288"></a>编译器警告（等级1） C4288
 
-使用了非标准扩展: var： 在 for 循环中声明的循环控制变量用外部 for 循环范围中;它与外部作用域中的声明冲突
+使用了非标准扩展： "var"：在 for 循环中声明的循环控制变量用在了 for 循环范围外;它与外部范围内的声明冲突
 
-使用编译时[/Ze](../../build/reference/za-ze-disable-language-extensions.md)和 **/zc: forscope-** 中, 声明的变量**有关**之后使用循环[为](../../cpp/for-statement-cpp.md)-循环作用域。 Microsoft 扩展，C++语言允许此变量，以保持在范围内，并且 C4288 提醒您未使用该变量的第一个声明。
+使用[/ze](../../build/reference/za-ze-disable-language-extensions.md)和 **/zc： forscope**[进行编译](../../cpp/for-statement-cpp.md)时，在 for 循环后使用在**for 循环中**声明的变量。 使用 Microsoft 对语言的C++扩展，此变量将保留在范围内，并且 C4288 会提醒你未使用该变量的第一个声明。
 
-请参阅[/zc: forscope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)有关如何指定中的 Microsoft 扩展的信息**为**使用 /Ze 循环。
+有关如何在**for**循环中为/Ze 指定 Microsoft 扩展的信息，请参阅[/zc： forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) 。
 
-下面的示例生成 C4288:
+下面的示例生成 C4288：
 
-```
+```cpp
 // C4288.cpp
 // compile with: /W1 /c /Zc:forScope-
 int main() {

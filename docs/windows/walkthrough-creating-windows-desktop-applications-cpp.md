@@ -1,17 +1,18 @@
 ---
 title: 演练：创建传统的 Windows 桌面应用程序C++（）
+description: 如何使用 Visual Studio、 C++和 Win32 API 创建最小的传统 Windows 桌面应用程序
 ms.custom: get-started-article
-ms.date: 10/21/2019
+ms.date: 11/03/2019
 helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: 080c4cd9612058a0a54f19e5d0f4b8add4a03bce
-ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.openlocfilehash: 6f219a0c199971b563b1c0ff291f2f5d12803023
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778540"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627480"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>演练：创建传统的 Windows 桌面应用程序C++（）
 
@@ -76,9 +77,7 @@ Windows API （也称为 Win32 API、Windows 桌面 API 和 Windows Classic API�
 
    ![为 DesktopApp 项目命名](../build/media/desktop-app-new-project-name-153.png "为 DesktopApp 项目命名")
 
-1. 在 " **Windows 桌面项目**" 对话框中的 "**应用程序类型**" 下，选择 " **Windows 应用程序（.exe）** "。 在“附加选项”下，选择“空项目”。 选择 **"确定"** 以创建项目。
-
-   ![在 Windows 桌面项目向导中创建 DesktopApp](../build/media/desktop-app-new-project-wizard-153.png "在 Windows 桌面项目向导中创建 DesktopApp")
+1. 在 " **Windows 桌面项目**" 对话框中的 "**应用程序类型**" 下，选择 " **Windows 应用程序（.exe）** "。 在“附加选项”下，选择“空项目”。 请确保未选择 "**预编译头**"。 选择 **"确定"** 以创建项目。
 
 1. 在**解决方案资源管理器**中，右键单击**DesktopApp**项目，选择 "**添加**"，然后选择 "**新建项**"。
 
@@ -108,9 +107,7 @@ Windows API （也称为 Win32 API、Windows 桌面 API 和 Windows Classic API�
 
    ![在 Win32 应用程序向导中创建 DesktopApp 概述](../build/media/desktop-app-win32-wizard-overview-150.png "在 Win32 应用程序向导中创建 DesktopApp 概述")
 
-1. 在 "**应用程序设置**" 页的 "**应用程序类型**" 下，选择 " **Windows 应用程序**"。 在“附加选项”下，选择“空项目”。 选择 "**完成**" 以创建项目。
-
-   ![在 Win32 应用程序向导设置中创建 DesktopApp](../build/media/desktop-app-win32-wizard-settings-150.png "在 Win32 应用程序向导设置中创建 DesktopApp")
+1. 在 "**应用程序设置**" 页的 "**应用程序类型**" 下，选择 " **Windows 应用程序**"。 在**其他选项**下，取消选中 "**预编译头**"，然后选择 "**空项目**"。 选择 "**完成**" 以创建项目。
 
 1. 在**解决方案资源管理器**中，右键单击 DesktopApp 项目，选择 "**添加**"，然后选择 "**新建项**"。
 
@@ -144,7 +141,7 @@ Windows API （也称为 Win32 API、Windows 桌面 API 和 Windows Classic API�
    有关此函数的参数和返回值的信息，请参阅[WinMain 入口点](/windows/win32/api/winbase/nf-winbase-winmain)。
 
    > [!NOTE]
-   > 这些额外的单词（例如 `CALLBACK`、`HINSTANCE` 或 `_In_`）有哪些？ 传统的 Windows API 广泛使用 typedef 和预处理器宏来抽象掉某些类型的详细信息和特定于平台的代码，例如调用约定、 **__declspec**声明和编译器杂注。 在 Visual Studio 中，可以使用 IntelliSense[快速信息](/visualstudio/ide/using-intellisense#quick-info)功能来查看这些 typedef 和宏定义的内容。 将鼠标悬停在感兴趣的字词上，或选择它，然后按**ctrl** +**K**， **ctrl** +**I**以包含定义的一个小的弹出窗口。 有关详细信息，请参阅[使用 IntelliSense](/visualstudio/ide/using-intellisense)。 参数和返回类型通常使用*SAL 批注*来帮助您捕获编程错误。 有关详细信息，请参阅[使用 SAL 注释减少 C/C++代码缺陷](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)。
+   > 这些额外的单词（例如 `CALLBACK`、`HINSTANCE`或 `_In_`）有哪些？ 传统的 Windows API 广泛使用 typedef 和预处理器宏来抽象掉某些类型的详细信息和特定于平台的代码，例如调用约定、 **__declspec**声明和编译器杂注。 在 Visual Studio 中，可以使用 IntelliSense[快速信息](/visualstudio/ide/using-intellisense#quick-info)功能来查看这些 typedef 和宏定义的内容。 将鼠标悬停在感兴趣的字词上，或选择它，然后按**ctrl** +**K**， **ctrl** +**I**以包含定义的一个小的弹出窗口。 有关详细信息，请参阅[使用 IntelliSense](/visualstudio/ide/using-intellisense)。 参数和返回类型通常使用*SAL 批注*来帮助您捕获编程错误。 有关详细信息，请参阅[使用 SAL 注释减少 C/C++代码缺陷](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)。
 
 1. Windows 桌面程序需要 &lt;windows .h >。 &lt;tchar > 定义 `TCHAR` 宏，如果在项目中定义了 UNICODE 符号，则该宏将最终解析为**wchar_t** ，否则它将解析为**char**。  如果你始终启用了 UNICODE 生成，则无需 TCHAR，只需直接使用**wchar_t**即可。
 
@@ -391,7 +388,7 @@ Windows API （也称为 Win32 API、Windows 桌面 API 和 Windows Classic API�
    }
    ```
 
-   代码中 `HDC` 是设备上下文的句柄，它是 Windows 用于使应用程序能够与图形子系统通信的数据结构。 @No__t_0 和 `EndPaint` 函数会使你的应用程序的行为类似于一个良好的公民，而不是将设备上下文用于所需的时间。 函数有助于使图形子系统可供其他应用程序使用。
+   代码中 `HDC` 是设备上下文的句柄，它是 Windows 用于使应用程序能够与图形子系统通信的数据结构。 `BeginPaint` 和 `EndPaint` 函数会使你的应用程序的行为类似于一个良好的公民，而不是将设备上下文用于所需的时间。 函数有助于使图形子系统可供其他应用程序使用。
 
 1. 应用程序通常会处理许多其他消息。 例如，当首次创建窗口时， [WM_CREATE](/windows/win32/winmsg/wm-create) ，当窗口关闭时[WM_DESTROY](/windows/win32/winmsg/wm-destroy) 。 以下代码显示基本但完整的 `WndProc` 函数。
 

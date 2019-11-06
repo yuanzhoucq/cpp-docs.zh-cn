@@ -1,31 +1,31 @@
 ---
-title: 编译器警告（等级 1）C4291
+title: 编译器警告（等级1） C4291
 ms.date: 11/04/2016
 f1_keywords:
 - C4291
 helpviewer_keywords:
 - C4291
 ms.assetid: c2b95dea-38f2-4609-9104-707c30798da4
-ms.openlocfilehash: e1b787e7149afe93fb50cc1e6ceaecba2e787876
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c8dc35a58d40d2619f6e035e07b4ad0b3351c45d
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384241"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626643"
 ---
-# <a name="compiler-warning-level-1-c4291"></a>编译器警告（等级 1）C4291
+# <a name="compiler-warning-level-1-c4291"></a>编译器警告（等级1） C4291
 
-declaration： 没有匹配的删除运算符; 如果找到如果初始化引发异常，不会释放内存
+"声明"：未找到匹配的运算符删除;如果初始化引发异常，则不会释放内存
 
-Placement[新](../../cpp/new-operator-cpp.md)使用它们没有任何放置[删除](../../cpp/delete-operator-cpp.md)。
+放置[新](../../cpp/new-operator-cpp.md)的用于没有位置[删除](../../cpp/delete-operator-cpp.md)。
 
-当为具有运算符的对象分配内存**新**，调用对象的构造函数。 如果构造函数引发了异常，应释放已分配给对象的任何内存。 这不会发生，除非操作员**删除**函数存在匹配运算符**新**。
+使用 operator **new**为对象分配内存时，将调用该对象的构造函数。 如果构造函数引发异常，则应释放为该对象分配的任何内存。 除非存在与运算符**new**匹配的 operator **delete**函数，否则不能进行此操作。
 
-如果使用运算符**新**而无需任何额外的参数和使用编译[/GX](../../build/reference/gx-enable-exception-handling.md)， [/EHs](../../build/reference/eh-exception-handling-model.md)，或 /EHa 选项启用异常处理，编译器将生成到代码调用运算符**删除**在构造函数引发异常。
+如果使用不带任何额外参数的**new**运算符，并使用[/gx](../../build/reference/gx-enable-exception-handling.md)、 [/ehs](../../build/reference/eh-exception-handling-model.md)或/eha 选项进行编译以启用异常处理，则编译器将在构造函数引发异常时生成代码来调用运算符**delete** 。
 
-如果使用的放置形式**新**运算符 （带参数的形式除了大小分配的） 和对象的构造函数引发了异常，编译器仍将生成代码来调用运算符**删除**; 但它仅会进行截断如果运算符的放置形式**删除**存在匹配的运算符的放置形式**新**分配内存。 例如：
+如果使用**new**运算符的放置窗体（除了分配的大小外，具有参数的窗体），并且对象的构造函数引发异常，则编译器仍会生成代码来调用运算符**delete**;但如果运算符**删除**的放置形式与分配了内存的运算符**new**的放置形式匹配，则它将仅执行此操作。 例如:
 
-```
+```cpp
 // C4291.cpp
 // compile with: /EHsc /W1
 #include <malloc.h>
@@ -74,7 +74,7 @@ int main(void)
 }
 ```
 
-上面的示例生成警告 C4291 因为运算符没有放置窗体**删除**已定义匹配运算符的放置形式**新**。 若要解决此问题，插入以下代码上述**主要**。 请注意，所有重载运算符**删除**函数的参数匹配的重载的运算符**新**，除第一个参数。
+上面的示例将生成警告 C4291，因为未定义与运算符**new**的放置形式匹配的运算符**删除**的放置形式。 若要解决此问题，请将以下代码插入到**main**之上。 请注意，除第一个参数外，所有重载的运算符**delete**函数参数都与重载运算符**new**的函数参数匹配。
 
 ```
 void operator delete(void* pMem, char* pszFilename, int nLine)

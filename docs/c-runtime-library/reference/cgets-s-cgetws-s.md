@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _cgetws_s function
 - cgetws_s function
 ms.assetid: 38b74897-afe6-4dd9-a43f-36a3c0d72c5c
-ms.openlocfilehash: 2039fc32cecb768c3c3fbc239446abedeb48f188
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: be2acefcf907ca9b908fa7f439b6e245a5e103d8
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939267"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624766"
 ---
 # <a name="_cgets_s-_cgetws_s"></a>_cgets_s、_cgetws_s
 
@@ -91,9 +91,9 @@ errno_t _cgetws_s(
 
 |*buffer*|*numberOfElements*|*pSizeRead*|返回|*缓冲区*内容|
 |--------------|------------------------|-----------------|------------|--------------------------|
-|**NULL**|任何|任何|**EINVAL**|n/a|
-|not **NULL**|零|任何|**EINVAL**|未修改|
-|not **NULL**|任何|**NULL**|**EINVAL**|零长度字符串|
+|**NULL**|any|any|**EINVAL**|不可用|
+|Not **NULL**|零|any|**EINVAL**|未修改|
+|Not **NULL**|any|**NULL**|**EINVAL**|零长度字符串|
 
 ## <a name="remarks"></a>备注
 
@@ -101,7 +101,9 @@ errno_t _cgetws_s(
 
 如果在操作期间或在参数验证中发生错误，则调用的参数处理程序无效，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将**errno**设置为**EINVAL** ，并返回**EINVAL** 。
 
-在 C++ 中，模板重载简化了这些函数的使用；重载可以自动推断缓冲区长度，从而无需指定大小自变量，并且它们可以自动将较旧、不安全的函数替换为更新、更安全的函数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，模板重载简化了这些函数的使用；重载可以自动推断缓冲区长度，从而无需指定大小自变量，并且它们可以自动将较旧、不安全的函数替换为更新、更安全的函数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
+
+这些函数的调试库版本首先用0xFE 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -116,7 +118,7 @@ errno_t _cgetws_s(
 |**_cgets_s**|\<conio.h>|
 |**_cgetws_s**|\<conio.h> 或 \<wchar.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>请参阅
 

@@ -34,12 +34,12 @@ helpviewer_keywords:
 - path names
 - wsplitpath_s function
 ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
-ms.openlocfilehash: f97c07ed01ae629fe3eb61346c6c0fcd8fa803f0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8eeb6a0f43827578c5d5ba900c35a3ac30f4ae7c
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958054"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625843"
 ---
 # <a name="_splitpath_s-_wsplitpath_s"></a>_splitpath_s、_wsplitpath_s
 
@@ -93,14 +93,14 @@ errno_t _wsplitpath_s(
 *path*<br/>
 完整路径。
 
-*drive*<br/>
+*光驱*<br/>
 驱动器号，后跟冒号（ **：** ）。 如果不需要驱动器号，则可以为此参数传递**NULL** 。
 
 *driveNumberOfElements*<br/>
 *驱动器*缓冲区大小（以单字节或宽字符为单位）。 如果*驱动器*为**空**，则此值必须为0。
 
 *目录*<br/>
-目录路径，包括尾部反斜杠。 可以使用正 **/** 斜杠（）、 **\\** 反斜杠（）或两者。 如果不需要目录路径，则可以为此参数传递**NULL** 。
+目录路径，包括尾部反斜杠。 可以使用正斜杠（ **/** ）、反斜杠（ **\\** ）或两者。 如果不需要目录路径，则可以为此参数传递**NULL** 。
 
 *dirNumberOfElements*<br/>
 *目录*缓冲区的大小（以单字节字符或宽字符为单位）。 如果*dir*为**NULL**，则此值必须为0。
@@ -111,7 +111,7 @@ errno_t _wsplitpath_s(
 *nameNumberOfElements*<br/>
 *Fname*缓冲区的大小（以单字节字符或宽字符为单位）。 如果*fname*为**NULL**，则此值必须为0。
 
-*ext*<br/>
+*宋体*<br/>
 文件扩展名，包括前导句点（ **.** ）。如果不需要文件扩展名，则可为此参数传递**NULL** 。
 
 *extNumberOfElements*<br/>
@@ -135,7 +135,7 @@ errno_t _wsplitpath_s(
 |*ext*为**NULL**， *extNumberOfElements*为非零值|**EINVAL**|
 |*ext*为非**NULL**， *extNumberOfElements*为零|**EINVAL**|
 
-如果发生上述情况之一，都会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续, 则这些函数会将**errno**设置为**EINVAL**并返回**EINVAL**。
+如果发生上述情况之一，都会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数会将**errno**设置为**EINVAL**并返回**EINVAL**。
 
 如果任何缓冲区太短而无法保存结果，则这些函数会将所有缓冲区清除为空字符串，将**errno**设置为**ERANGE**，并返回**ERANGE**。
 
@@ -153,7 +153,7 @@ errno_t _wsplitpath_s(
 
 下表列出了清单常量的值。
 
-|name|值|
+|“属性”|“值”|
 |----------|-----------|
 |_MAX_DRIVE|3|
 |_MAX_DIR|256|
@@ -162,9 +162,9 @@ errno_t _wsplitpath_s(
 
 如果完整路径不包含组件（例如，文件名），则 **_splitpath_s**会将空字符串分配给相应的缓冲区。
 
-在 C++ 中，通过模板重载简化这些函数的使用；重载可以自动推导出缓冲区长度，不再需要指定大小参数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，通过模板重载简化这些函数的使用；重载可以自动推导出缓冲区长度，不再需要指定大小参数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 
-这些函数的调试版本首先用 0xFD 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+这些函数的调试库版本首先用0xFE 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -173,7 +173,7 @@ errno_t _wsplitpath_s(
 |**_splitpath_s**|\<stdlib.h>|
 |**_wsplitpath_s**|\<stdlib.h> 或 \<wchar.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参见 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 

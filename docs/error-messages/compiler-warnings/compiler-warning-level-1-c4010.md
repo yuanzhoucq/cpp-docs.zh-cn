@@ -1,29 +1,29 @@
 ---
-title: 编译器警告 （等级 1） C4010
+title: 编译器警告（等级1） C4010
 ms.date: 11/04/2016
 f1_keywords:
 - C4010
 helpviewer_keywords:
 - C4010
 ms.assetid: d607a9ff-8f8f-45c0-b07b-3b2f439e5485
-ms.openlocfilehash: 40c6724daf17c1c0b546bb7bc64bb704f732e8d6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 045b3f6e615e11c24caa9a088baf6ea9f6448efb
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386546"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627315"
 ---
-# <a name="compiler-warning-level-1-c4010"></a>编译器警告 （等级 1） C4010
+# <a name="compiler-warning-level-1-c4010"></a>编译器警告（等级1） C4010
 
 单行注释包含行继续符
 
-单行注释，引入的 / / 包含反斜杠 (\\) 用作行继续符。 编译器会考虑延续的下一行，并将其视为一条注释。
+由//引入的单行注释包含一个作为行继续符的反斜杠（\\）。 编译器将下一行视为延续，并将其视为注释。
 
-某些语法导向型编辑器并不表示在后是继续符为注释的行。 忽略语法突出显示的任何行的会导致此警告。
+某些语法定向编辑器不将继续符后面的行指示为注释。 忽略导致此警告的任何行的语法着色。
 
-下面的示例生成 C4010:
+下面的示例生成 C4010：
 
-```
+```cpp
 // C4010.cpp
 // compile with: /WX
 int main() {

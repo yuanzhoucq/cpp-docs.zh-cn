@@ -16,14 +16,14 @@ helpviewer_keywords:
 - stdext::max_none [C++], released
 - stdext::max_none [C++], saved
 ms.assetid: 12ab5376-412e-479c-86dc-2c3d6a3559b6
-ms.openlocfilehash: 0d409928de4bf66bcc6d6dda3008131f87e790c3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b296c641be68efac7410328a448a4ad2bd0fa88e
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460173"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626827"
 ---
-# <a name="maxnone-class"></a>max_none 类
+# <a name="max_none-class"></a>max_none 类
 
 描述 [max 类](../standard-library/allocators-header.md) 对象，该对象将 [freelist](../standard-library/freelist-class.md) 对象的最大长度限制为零。
 
@@ -72,7 +72,7 @@ void allocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>备注
 
-此成员函数不执行任何操作。 每次成功调用`cache_freelist::allocate`后, 都将调用此方法来调用**new**运算符。 参数 *_Nx*是运算符**new**分配的区块中的内存块数。
+此成员函数不执行任何操作。 每次成功调用后，都将调用该方法，`cache_freelist::allocate` to **new**运算符。 参数 *_Nx*是运算符**new**分配的区块中的内存块数。
 
 ## <a name="deallocated"></a>max_none::deallocated
 
@@ -90,7 +90,7 @@ void deallocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>备注
 
-此成员函数不执行任何操作。 每次调用`cache_freelist::deallocate`后, 都将调用此成员函数以进行运算符**delete**。 参数 *_Nx*是运算符**delete**释放的块区中的内存块数。
+此成员函数不执行任何操作。 此成员函数将在每次调用后通过 `cache_freelist::deallocate` 到运算符**delete**调用。 参数 *_Nx*是运算符**delete**释放的块区中的内存块数。
 
 ## <a name="full"></a>max_none::full
 
@@ -106,7 +106,7 @@ bool full();
 
 ### <a name="remarks"></a>备注
 
-此成员函数由 `cache_freelist::deallocate` 调用。 如果调用返回**true** `deallocate` , 则将内存块置于可用列表中; 如果返回 false, `deallocate`则调用运算符**delete**来释放块。
+此成员函数由 `cache_freelist::deallocate` 调用。 如果调用返回**true**，`deallocate` 会将内存块置于可用列表中;如果它返回**false**，则 `deallocate` 调用 operator **delete**来释放块。
 
 ## <a name="released"></a>max_none::released
 

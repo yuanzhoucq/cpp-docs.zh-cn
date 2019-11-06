@@ -42,12 +42,12 @@ helpviewer_keywords:
 - wcserror_s function
 - error messages, getting
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
-ms.openlocfilehash: f8d461566f748ce5af3d4b2aab443b5966c27dd7
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 74caba0398fdb5cdd0f9c80270a42d2903200a5d
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958153"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625813"
 ---
 # <a name="strerror_s-_strerror_s-_wcserror_s-__wcserror_s"></a>strerror_s、_strerror_s、_wcserror_s、__wcserror_s
 
@@ -120,12 +120,12 @@ errno_t __wcserror_s(
 
 |*buffer*|*numberOfElements*|*strErrMsg*|*缓冲区*内容|
 |--------------|------------------------|-----------------|--------------------------|
-|**NULL**|任何|任何|n/a|
-|任何|0|任何|未修改|
+|**NULL**|any|any|不可用|
+|any|0|any|未修改|
 
 ## <a name="remarks"></a>备注
 
-**Strerror_s**函数将*errnum*映射到错误消息字符串，并返回*缓冲区*中的字符串。 **_strerror_s**不接受错误号;它使用**errno**的当前值来确定相应的消息。 **Strerror_s**和 **_strerror_s**都不会实际打印消息：为此，需要调用输出函数，例如[fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md)：
+**Strerror_s**函数将*errnum*映射到错误消息字符串，并返回*缓冲区*中的字符串。 **_strerror_s**不接受错误号;它使用**errno**的当前值来确定相应的消息。 **Strerror_s**和 **_strerror_s**都不会实际打印消息：为此，你需要调用输出函数，例如[fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md)：
 
 ```C
 if (( _access( "datafile",2 )) == -1 )
@@ -147,9 +147,9 @@ if (( _access( "datafile",2 )) == -1 )
 
 **_strerror_s**、 **_wcserror_s**和 **__wcserror_s**不是 ANSI 定义的一部分，而是 Microsoft 扩展。 请不要在需要可移植性的情况下使用它们;对于 ANSI 兼容性，请改用**strerror_s** 。
 
-在 C++ 中，通过模板重载简化这些函数的使用；重载可以自动推导出缓冲区长度，不再需要指定大小参数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，通过模板重载简化这些函数的使用；重载可以自动推导出缓冲区长度，不再需要指定大小参数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 
-这些函数的调试版本首先用 0xFD 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+这些函数的调试库版本首先用0xFE 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -164,7 +164,7 @@ if (( _access( "datafile",2 )) == -1 )
 |**strerror_s**、 **_strerror_s**|\<string.h>|
 |**_wcserror_s**、 **__wcserror_s**|\<string.h> 或 \<wchar.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参见 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 

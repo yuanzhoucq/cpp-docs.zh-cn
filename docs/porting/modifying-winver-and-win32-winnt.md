@@ -1,18 +1,18 @@
 ---
-title: 修改 WINVER 和 _WIN32_WINNT
+title: 更新 WINVER 和 _WIN32_WINNT
 ms.date: 09/04/2017
 helpviewer_keywords:
 - WINVER in an upgraded Visual Studio C++ project
 - _WIN32_WINNT in an upgraded Visual Studio C++ project
 ms.assetid: 6a1f1d66-ae0e-48a7-81c3-524d8e8f3447
-ms.openlocfilehash: a83e92444e7010e4d3b65153b2e60e1c5d952cef
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: 0cfdb3d065a85bd02ef21de9c4c5282cf54fcb2a
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511602"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627260"
 ---
-# <a name="modifying-winver-and-_win32_winnt"></a>修改 WINVER 和 _WIN32_WINNT
+# <a name="update-winver-and-_win32_winnt"></a>更新 WINVER 和 _WIN32_WINNT
 
 Visual C++ 不再支持面向 Windows 95、Windows 98、Windows ME、Windows NT 或 Windows 2000。 如果你的 **WINVER** 或 **_WIN32_WINNT** 宏分配给了这些 Windows 版本中的一个，则必须修改宏。 升级使用早期版本的 Visual C++ 创建的项目时，你可能会看到与 **WINVER** 或 **_WIN32_WINNT** 宏相关的编译错误（如果这些宏分配给了不再受支持的 Windows 版本）。
 
@@ -51,7 +51,7 @@ Visual C++ 不再支持面向 Windows 95、Windows 98、Windows ME、Windows NT 
 > [!NOTE]
 > 如果将内部 MFC 头文件包含到应用程序中，则无法保证这些值有效。
 
-你还可以使用 `/D` 编译器选项定义此宏。 有关详细信息，请参阅 [/D (Preprocessor Definitions)](../build/reference/d-preprocessor-definitions.md)。
+你还可以使用 `/D` 编译器选项定义此宏。 有关详细信息，请参阅 [/D（预处理器定义）](../build/reference/d-preprocessor-definitions.md)。
 
 若要深入了解这些宏的含义，请参阅 [使用 Windows 头文件](/windows/win32/WinProg/using-the-windows-headers)。
 
