@@ -1,25 +1,25 @@
 ---
 title: .STACK
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .STACK
 helpviewer_keywords:
 - .STACK directive
 ms.assetid: 70019463-5d4f-41b6-8464-023a8ac2466f
-ms.openlocfilehash: f97f10155894a86c9ddcd4cf8633712c458be386
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78c089c771e8e5a8c82905578ec2377246a44a0e
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178626"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73703530"
 ---
-# <a name="stack"></a>.STACK
+# <a name="stack-32-bit-masm"></a>.STACK （32位 MASM）
 
-与一起使用时[。模型](../../assembler/masm/dot-model.md)，定义一个堆栈段 （使用段名称堆栈）。 可选`size`指定的堆栈 （默认值为 1024） 的字节数。 `.STACK`指令会自动关闭堆栈语句。
+与一起使用时[。模型](../../assembler/masm/dot-model.md)，定义堆栈段（带有分段名称 stack）。 可选 `size` 为堆栈指定字节数（默认值为1024）。 `.STACK` 指令自动关闭 stack 语句。 （仅限32位 MASM。）
 
 ## <a name="syntax"></a>语法
 
-> .堆栈 [[size]]
+> .STACK [[size]]
 
 ## <a name="see-also"></a>请参阅
 

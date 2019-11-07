@@ -1,25 +1,25 @@
 ---
 title: .FARDATA?
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .FARDATA?
 helpviewer_keywords:
 - .FARDATA? directive
 ms.assetid: 3b416313-44b7-4724-a2cf-69d73871a10c
-ms.openlocfilehash: 72ca773c484f04250c7fc40763617694105e6c8c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b26da266671eb84b0015cb57c2d0dae11e9ac8d2
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185247"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73703837"
 ---
-# <a name="fardata"></a>.FARDATA?
+# <a name="fardata-32-bit-masm"></a>.FARDATA? （32位 MASM）
 
-与一起使用时[。模型](../../assembler/masm/dot-model.md)，启动未初始化的数据的远数据段 (段名称 FAR_BSS 或*名称*)。
+与一起使用时[。模型](../../assembler/masm/dot-model.md)，为未初始化的数据（段名 FAR_BSS 或*name*）启动较远的数据段。 （仅限32位 MASM。）
 
 ## <a name="syntax"></a>语法
 
-> .FARDATA? [[name]]
+> .FARDATA? [[名称]]
 
 ## <a name="see-also"></a>请参阅
 
