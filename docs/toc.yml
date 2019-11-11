@@ -4102,7 +4102,7 @@
                   href: cpp/binary-operators.md
                 - name: 赋值
                   href: cpp/assignment.md
-                - name: '函数调用 '
+                - name: 函数调用
                   href: cpp/function-call-cpp.md
                 - name: 下标
                   href: cpp/subscripting.md
@@ -4714,6 +4714,8 @@
               items:
                 - name: 预处理器
                   href: preprocessor/preprocessor.md
+                - name: 实验性预处理器概述
+                  href: preprocessor/preprocessor-experimental-overview.md
                 - name: 转换阶段
                   href: preprocessor/phases-of-translation.md
                 - name: 预处理器指令
