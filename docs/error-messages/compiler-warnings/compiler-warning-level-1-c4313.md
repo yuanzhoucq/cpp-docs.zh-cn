@@ -1,19 +1,19 @@
 ---
-title: 编译器警告（等级 1）C4313
+title: 编译器警告（等级1） C4313
 ms.date: 11/04/2016
 f1_keywords:
 - C4313
 helpviewer_keywords:
 - C4313
 ms.assetid: bcf64191-e2cf-452e-97b4-423fcec2d07c
-ms.openlocfilehash: 774af2d5d29112d56adf97e22d1bdd758a816ef1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4000ba2254c868bf9959a6f0fb6f8e76255f7590
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352931"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966079"
 ---
-# <a name="compiler-warning-level-1-c4313"></a>编译器警告（等级 1）C4313
+# <a name="compiler-warning-level-1-c4313"></a>编译器警告（等级1） C4313
 
 “function”：格式字符串中的“格式说明符”与类型“type”的参数数量发生冲突
 
@@ -23,7 +23,7 @@ ms.locfileid: "62352931"
 
 以下代码示例在其用于为 64 位目标进行编译时将生成 C4313。
 
-```
+```cpp
 // C4313.cpp
 // Compile by using: cl /W1 C4313.cpp
 #include <stdio.h>

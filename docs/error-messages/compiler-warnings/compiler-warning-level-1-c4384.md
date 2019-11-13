@@ -1,29 +1,29 @@
 ---
-title: 编译器警告（等级 1）C4384
+title: 编译器警告（等级1） C4384
 ms.date: 11/04/2016
 f1_keywords:
 - C4384
 helpviewer_keywords:
 - C4384
 ms.assetid: fafa8eb2-cbfc-4edb-8b0f-511ff5d37ac0
-ms.openlocfilehash: 0f2666011e88dfd59eaaca154f4407bece7c963c
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 467f15522503d16d3b023661ee339c986f74ddec
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344598"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73964890"
 ---
-# <a name="compiler-warning-level-1-c4384"></a>编译器警告（等级 1）C4384
+# <a name="compiler-warning-level-1-c4384"></a>编译器警告（等级1） C4384
 
-\#杂注 make_public 应仅使用在全局范围内
+\#杂注 "make_public" 只能在全局范围内使用
 
-[Make_public](../../preprocessor/make-public.md)杂注未正确应用。
+未正确应用[make_public](../../preprocessor/make-public.md)杂注。
 
 ## <a name="example"></a>示例
 
 下面的示例生成 C4384。
 
-```
+```cpp
 // C4384.cpp
 // compile with: /c /W1
 namespace n {

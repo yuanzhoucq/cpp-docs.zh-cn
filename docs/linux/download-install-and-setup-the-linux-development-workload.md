@@ -3,12 +3,12 @@ title: 在 Visual Studio 中安装 C++ Linux 工作负载
 description: 介绍如何在 Visual Studio 中下载、安装和设置用于 C++ 的 Linux 工作负荷。
 ms.date: 06/11/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: ad0fd856fc15ce9f787ba620463480bfe3e59d47
-ms.sourcegitcommit: b85e1db6b7d4919852ac6843a086ba311ae97d40
+ms.openlocfilehash: 68e347a4f90fc15f9d3846c82c3392213e1bd7bc
+ms.sourcegitcommit: eb254b4462a58d219376ff501bf768bd1adc07ae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71925423"
+ms.lasthandoff: 11/11/2019
+ms.locfileid: "73912904"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>下载、安装和设置 Linux 工作负载
 
@@ -48,7 +48,7 @@ Visual Studio 2017 及更高版本支持 Linux 项目。
 
 如果还没有 Linux 计算机，则可以在 Azure 上创建 Linux 虚拟机。 有关详细信息，请参阅[快速入门：在 Azure 门户中创建 Linux 虚拟机](/azure/virtual-machines/linux/quick-create-portal)。
 
-在 Windows 10 上，可以在适用于 Linux 的 Windows 子系统 (WSL) 上安装你最喜欢的 Linux 发行版以及使该发行版以之为目标。 有关详细信息，请参阅 [Windows 10 的适用于 Linux 的 Windows 子系统安装指南](/windows/wsl/install-win10)。 WSL 是一种方便的控制台环境，但不建议用于图形应用程序。 
+在 Windows 10 上，可以在适用于 Linux 的 Windows 子系统 (WSL) 上安装你最喜欢的 Linux 发行版以及使该发行版以之为目标。 有关详细信息，请参阅 [Windows 10 的适用于 Linux 的 Windows 子系统安装指南](/windows/wsl/install-win10)。 如果无法访问 Windows 应用商店，可以[手动下载 WSL 发行包](/windows/wsl/install-manual)。 WSL 是一种方便的控制台环境，但不建议用于图形应用程序。 
 
 ::: moniker-end
 
