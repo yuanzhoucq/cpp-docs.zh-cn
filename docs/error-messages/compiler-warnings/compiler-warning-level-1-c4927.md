@@ -1,27 +1,27 @@
 ---
-title: 编译器警告（等级 1）C4927
+title: 编译器警告（等级1） C4927
 ms.date: 11/04/2016
 f1_keywords:
 - C4927
 helpviewer_keywords:
 - C4927
 ms.assetid: 7009e740-a2ef-4130-96ba-482e092f717a
-ms.openlocfilehash: 59a39e4e695fdd161135cd70a74e1f3f6518e361
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8e56d185f6f87bc6e381ccec9ed8bd50ba3e2245
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393449"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052288"
 ---
-# <a name="compiler-warning-level-1-c4927"></a>编译器警告（等级 1）C4927
+# <a name="compiler-warning-level-1-c4927"></a>编译器警告（等级1） C4927
 
-转换非法;隐式应用了多个用户定义的转换
+非法转换;已隐式应用了多个用户定义的转换
 
-多个用户定义的转换隐式应用于单个值 — — 编译器找不到的显式转换，但未找到的转换，使用它。
+多个用户定义的转换将隐式应用于单个值，编译器未找到显式转换，但却找到了所使用的转换。
 
-下面的示例生成 C4927:
+下面的示例生成 C4927：
 
-```
+```cpp
 // C4927.cpp
 // compile with: /W1
 struct B

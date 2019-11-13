@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4620
 ms.assetid: fed29934-b797-47e8-bbea-c7e5f8dd6e93
-ms.openlocfilehash: 8e2d11d63704c86c824fd80e1c8a933c10e062d6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d03c7d845923b918fbb665933147d8ff97cda7ab
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404010"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051469"
 ---
 # <a name="compiler-warning-level-1-c4620"></a>编译器警告（等级 1）C4620
 
@@ -21,7 +21,7 @@ ms.locfileid: "62404010"
 
 可以通过定义后缀 `++` 运算符来避免此警告。 创建的 `++` 运算符的两个参数版本如下所示：
 
-```
+```cpp
 // C4620.cpp
 // compile with: /W1
 class A

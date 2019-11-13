@@ -1,29 +1,29 @@
 ---
-title: 编译器警告（等级 1）C4804
+title: 编译器警告（等级1） C4804
 ms.date: 11/04/2016
 f1_keywords:
 - C4804
 helpviewer_keywords:
 - C4804
 ms.assetid: 069e8f44-3ef6-43bb-8524-4116fc6eea83
-ms.openlocfilehash: 28b3e49717993a3bf20c8cfec5938d698266c0f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 97ad076325b11329896d98367fb3ac311ec5ded9
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406530"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051570"
 ---
-# <a name="compiler-warning-level-1-c4804"></a>编译器警告（等级 1）C4804
+# <a name="compiler-warning-level-1-c4804"></a>编译器警告（等级1） C4804
 
-operation： 不安全地使用操作中的 bool 类型
+"operation"：在操作中使用类型 "bool" 不安全
 
-在使用时，此警告是为`bool`变量或以意外方式的值。 例如，如果您使用的运算符，如负一元运算符生成 C4804 (**-**) 或二进制反码运算符 (`~`)。 编译器计算的表达式。
+当你以意外方式使用 `bool` 变量或值时，会出现此警告。 例如，如果使用运算符（如负一元运算符（ **-** ）或补码运算符（`~`）），则会生成 C4804。 编译器将计算表达式的值。
 
 ## <a name="example"></a>示例
 
-下面的示例生成 C4804:
+下面的示例生成 C4804：
 
-```
+```cpp
 // C4804.cpp
 // compile with: /W1
 

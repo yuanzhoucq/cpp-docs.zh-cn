@@ -1,29 +1,29 @@
 ---
-title: 编译器警告（等级 1）C4733
+title: 编译器警告（等级1） C4733
 ms.date: 11/04/2016
 f1_keywords:
 - C4733
 helpviewer_keywords:
 - C4733
 ms.assetid: 7ef4f577-772d-4b66-a7bf-8958a6b250bc
-ms.openlocfilehash: 0d0b0b912ef15294f9a4362a79dffd6d7eeabed8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fbecdda481748aa77eefdab8d61e50350804e09f
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221110"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051323"
 ---
-# <a name="compiler-warning-level-1-c4733"></a>编译器警告（等级 1）C4733
+# <a name="compiler-warning-level-1-c4733"></a>编译器警告（等级1） C4733
 
-内联 asm 分配到"fs: 0": 未注册为安全处理程序的处理程序
+内联 asm 分配到 "FS： 0"：处理程序未注册为安全处理程序
 
-安全异常，因为该处理程序可能未注册为有效的异常处理程序可能无法在修改 fs: 0 若要添加新的异常处理程序处的值的函数 (请参阅[/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md))。
+用于修改 FS 的值的函数：0若要添加新的异常处理程序，可能不会使用安全异常，因为该处理程序可能不会注册为有效的异常处理程序（请参阅[/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)）。
 
-若要解决此警告，请删除 fs: 0 定义或关闭此警告，然后使用[。SAFESEH](../../assembler/masm/dot-safeseh.md)指定安全异常处理程序。
+若要解决此警告，请删除 FS：0定义或关闭此警告并使用[。](../../assembler/masm/dot-safeseh.md)用于指定安全异常处理程序的 SAFESEH。
 
-下面的示例生成 C4733:
+下面的示例生成 C4733：
 
-```
+```cpp
 // C4733.cpp
 // compile with: /W1 /c
 // processor: x86

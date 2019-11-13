@@ -1,19 +1,19 @@
 ---
-title: 编译器警告（等级 3）C4267
+title: 编译器警告（等级3） C4267
 ms.date: 11/04/2016
 f1_keywords:
 - C4267
 helpviewer_keywords:
 - C4267
 ms.assetid: 2fa2f13f-fa4f-47bb-ad8f-6cb19cfc91e6
-ms.openlocfilehash: 31e5b9a9b8e7b25a0d54648ce808ff6266a27321
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b49696632fb567a943b42ac35b8fc244e6cc4fb4
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402172"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051700"
 ---
-# <a name="compiler-warning-level-3-c4267"></a>编译器警告（等级 3）C4267
+# <a name="compiler-warning-level-3-c4267"></a>编译器警告（等级3） C4267
 
 “var”：从“size_t”转换到“type”，可能丢失数据
 
@@ -25,7 +25,7 @@ ms.locfileid: "62402172"
 
 下面的示例生成 C4267。
 
-```
+```cpp
 // C4267.cpp
 // compile by using: cl /W4 C4267.cpp
 void Func1(short) {}

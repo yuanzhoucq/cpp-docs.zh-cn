@@ -1,31 +1,31 @@
 ---
-title: 编译器警告 （等级 1） C4838
+title: 编译器警告（等级1） C4838
 ms.date: 11/04/2016
 f1_keywords:
 - C4838
 helpviewer_keywords:
 - C4838
 ms.assetid: fea07924-5feb-4ed4-99b5-1a8c41d28db6
-ms.openlocfilehash: dcb7062c751320a9f9c612b42caf6d018047d8d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 552c7d9e868ae531b1ff2ef20db7adfa813a4fbe
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380833"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051224"
 ---
-# <a name="compiler-warning-level-1-c4838"></a>编译器警告 （等级 1） C4838
+# <a name="compiler-warning-level-1-c4838"></a>编译器警告（等级1） C4838
 
-从 type_1 转换为 type_2 需要收缩转换
+从 "type_1" 转换到 "type_2" 需要收缩转换
 
-使用聚合或列表初始化时找到的隐式收缩转换。
+使用聚合或列表初始化时发现隐式收缩转换。
 
-C 语言允许隐式收缩转换中赋值和初始化，并C++满足如下所示，即使意外收缩是很多代码错误的原因。 若要使代码更加安全，C++标准要求的诊断消息时初始化列表中将发生收缩转换。 视觉对象中C++，在诊断处于[编译器错误 C2397](../../error-messages/compiler-errors-1/compiler-error-c2397.md)时使用支持从 Visual Studio 2015 中的统一初始化语法。 编译器将生成警告 C4838 时使用的列表或通过 Visual Studio 2013 支持聚合初始化语法。
+C 语言允许在赋值和初始化中进行隐式收缩转换C++ ，并遵循这种方法，即使意外收缩是导致许多代码错误的原因。 为了使代码更加安全， C++在初始化列表中出现收缩转换时，标准需要诊断消息。 在 Visual C++Studio 2015 中，使用从 visual Studio 开始支持的统一初始化语法，在 visual Studio 中，诊断是[编译器错误 C2397](../../error-messages/compiler-errors-1/compiler-error-c2397.md) 。 当使用 Visual Studio 2013 支持的列表或聚合初始化语法时，编译器将生成警告 C4838。
 
-当你知道目标中可以容纳转换后的值的可能范围时，收缩转换可以是可行。 在这种情况下，您知道个以上的编译器执行的操作。 如果您有意进行收缩转换，使你的意图显式使用静态强制转换。 否则，此警告消息几乎总是指示在代码中存在 bug。 可以通过确保您初始化的对象具有足够大以处理输入的类型来修复此错误。
+如果知道目标中可以容纳转换后的值的可能范围，则可以进行收缩转换。 在这种情况下，您知道编译器的功能要多。 如果你有意进行收缩转换，则应使用静态强制转换使意图成为显式的。 否则，此警告消息几乎始终表示代码中有 bug。 您可以通过确保您初始化的对象具有足够大的类型来处理输入，从而修复此问题。
 
-下面的示例生成 C4838，并演示一种方法修复此错误：
+下面的示例生成 C4838，并显示修复此问题的一种方法：
 
-```
+```cpp
 // C4838.cpp -- C++ narrowing conversion diagnostics
 // Compile by using: cl /EHsc C4838.cpp
 

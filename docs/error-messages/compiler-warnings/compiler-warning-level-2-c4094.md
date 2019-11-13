@@ -1,27 +1,27 @@
 ---
-title: 编译器警告 （等级 2） C4094
+title: 编译器警告（等级2） C4094
 ms.date: 11/04/2016
 f1_keywords:
 - C4094
 helpviewer_keywords:
 - C4094
 ms.assetid: e68929fb-3a1c-4be7-920b-d5f79f534f99
-ms.openlocfilehash: 73805afc897d14c6d2cc87490dfa0769a8de5193
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c293522e5d60d0edb4cc2da289e0ece71f89329f
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350499"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052204"
 ---
-# <a name="compiler-warning-level-2-c4094"></a>编译器警告 （等级 2） C4094
+# <a name="compiler-warning-level-2-c4094"></a>编译器警告（等级2） C4094
 
-未标记 token 未声明符号
+未标记的 "token" 未声明符号
 
-编译器检测到使用标记的结构、 联合或类的空声明。 声明将被忽略。
+编译器检测到使用了未标记的结构、联合或类的空声明。 声明将被忽略。
 
 ## <a name="example"></a>示例
 
-```
+```cpp
 // C4094.cpp
 // compile with: /W2
 struct
@@ -33,4 +33,4 @@ int main()
 }
 ```
 
-这种情况会生成在 ANSI 兼容性错误 ([/Za](../../build/reference/za-ze-disable-language-extensions.md))。
+此条件在 ANSI 兼容性（[/za](../../build/reference/za-ze-disable-language-extensions.md)）下生成错误。

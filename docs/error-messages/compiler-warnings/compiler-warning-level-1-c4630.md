@@ -1,25 +1,25 @@
 ---
-title: 编译器警告（等级 1）C4630
+title: 编译器警告（等级1） C4630
 ms.date: 11/04/2016
 f1_keywords:
 - C4630
 helpviewer_keywords:
 - C4630
 ms.assetid: d8926376-7acc-4fc7-8438-6f0de3468870
-ms.openlocfilehash: 98ea72bef0cb95163604144c1069a13c3b27d81c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 893364183594782b825377f57fa4e525338d62d8
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324527"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052560"
 ---
-# <a name="compiler-warning-level-1-c4630"></a>编译器警告（等级 1）C4630
+# <a name="compiler-warning-level-1-c4630"></a>编译器警告（等级1） C4630
 
-symbol: extern 存储类说明符在成员定义上非法
+"symbol"：成员定义上的 "extern" 存储类说明符非法
 
-数据成员或成员函数定义为`extern`。 成员不能为外部，尽管可以整个对象。 编译器将忽略`extern`关键字。 下面的示例生成 C4630:
+数据成员或成员函数被定义为 `extern`。 成员不能是外部的，但整个对象都可以。 编译器将忽略 `extern` 关键字。 下面的示例生成 C4630：
 
-```
+```cpp
 // C4630.cpp
 // compile with: /W1 /LD
 class A {

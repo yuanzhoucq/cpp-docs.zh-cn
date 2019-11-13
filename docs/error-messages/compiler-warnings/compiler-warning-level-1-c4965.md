@@ -1,23 +1,23 @@
 ---
-title: 编译器警告（等级 1）C4965
+title: 编译器警告（等级1） C4965
 ms.date: 11/04/2016
 f1_keywords:
 - C4965
 helpviewer_keywords:
 - C4965
 ms.assetid: 47f3f6dc-459b-4a25-9947-f394c8966cb5
-ms.openlocfilehash: 2e93fdeba7f9b5b10340ccd1920807a3fcb345a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ac1ffc1626a8b72fd7c9026afb6c6a54bace3750
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383826"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052235"
 ---
-# <a name="compiler-warning-level-1-c4965"></a>编译器警告（等级 1）C4965
+# <a name="compiler-warning-level-1-c4965"></a>编译器警告（等级1） C4965
 
-整数 0; 的隐式装箱请使用 nullptr 或显式强制转换
+整数0的隐式框;使用 nullptr 或显式强制转换
 
-VisualC++功能的值类型隐式装箱。 导致使用的托管扩展分配空值的指令C++现在变成了分配给已装箱的 int。
+可视C++功能值类型的隐式装箱。 使用托管扩展导致空赋值的指令C++现在变为对装箱的 int 的赋值。
 
 有关更多信息，请参见 [装箱](../../extensions/boxing-cpp-component-extensions.md)中定义的接口的私有 C++ 特定实现。
 
@@ -25,7 +25,7 @@ VisualC++功能的值类型隐式装箱。 导致使用的托管扩展分配空�
 
 下面的示例生成 C4965。
 
-```
+```cpp
 // C4965.cpp
 // compile with: /clr /W1
 int main() {
