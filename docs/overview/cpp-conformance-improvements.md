@@ -5,12 +5,12 @@ description: Visual Studio 中的 Microsoft C++ 正朝着完全符合 C++20 语�
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: d313a9a1f9f2bc1aa091935658ca1214f929c048
-ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
+ms.openlocfilehash: 0bbfc364da217525251df0c5f09544ed1ccfe5b6
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71998885"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627091"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Visual Studio 中的 C++ 符合性改进
 
@@ -810,7 +810,7 @@ struct Comparer  {
 
 ## <a name="improvements_150"></a>Visual Studio 2017 RTW（版本 15.0）中的符合性改进
 
-Visual Studio 2017 中的 Microsoft C++ 编译器支持通用 constexpr 和用于聚合的非静态数据成员初始化 (NSDMI)，现具有 C++14 标准中的全部新增功能  。 但编译器仍缺少 C++11 和 C++98 标准版中的一些功能。 请参阅 [Visual C++ 语言合规性](../visual-cpp-language-conformance.md)中显示编译器当前状态的表。
+Visual Studio 2017 中的 Microsoft C++ 编译器支持通用 constexpr 和用于聚合的非静态数据成员初始化 (NSDMI)，现具有 C++14 标准中的全部新增功能  。 但编译器仍缺少 C++11 和 C++98 标准版中的一些功能。 请参阅 [Microsoft C++ 语言一致性表](../visual-cpp-language-conformance.md)，获取显示编译器当前状态的表。
 
 ### <a name="c11-expression-sfinae-support-in-more-libraries"></a>C++11：在更多库中支持表达式 SFINAE
 
@@ -2487,7 +2487,7 @@ using  X [[deprecated("msg")]] = T;
 
 这其中一个表现是查找相关基类。 以前，编译器允许使用相关基类中定义的名称，因为解析所有类型后会在实例化时查找它们。 现在将该代码视为错误。 在这些情况下，可在实例化时强制查找变量，方法是使用基类类型对其进行限定或将其设置为相关，例如添加 `this->` 指针。
 
-在 /permissive- 模式下，现在以下代码会引发 C3861：找不到“base_value”标识符[](../build/reference/permissive-standards-conformance.md)  ：
+在 [/permissive-](../build/reference/permissive-standards-conformance.md) 模式下，现在以下代码会引发 C3861：找不到“base_value”标识符  ：
 
 ```cpp
 template <class T>
@@ -2850,4 +2850,4 @@ note: see usage of 'g'.
 
 ## <a name="see-also"></a>请参阅
 
-[Visual C++ 语言一致性](../visual-cpp-language-conformance.md)
+[Microsoft C++ 语言一致性表](../visual-cpp-language-conformance.md)
