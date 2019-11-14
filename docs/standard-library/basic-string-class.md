@@ -1,6 +1,6 @@
 ---
 title: basic_string 类
-ms.date: 11/04/2016
+ms.date: 11/12/2019
 f1_keywords:
 - xstring/std::basic_string
 - xstring/std::basic_string::allocator_type
@@ -116,12 +116,12 @@ helpviewer_keywords:
 - std::basic_string [C++], substr
 - std::basic_string [C++], swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
-ms.openlocfilehash: c77c09394bb8997168d8a6756da69e9545dad0a2
-ms.sourcegitcommit: 4a0a108aa6f042576a777feb6dcb310dc0bb9230
+ms.openlocfilehash: 6919f2ece4ed846cd80f791af91797373dea33b2
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73842315"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051507"
 ---
 # <a name="basic_string-class"></a>basic_string 类
 
@@ -194,9 +194,9 @@ Basic_string 特殊化中 `CharType` 元素的各种重要属性由类 `Traits`�
 |[end](#end)|返回发现字符串中最后一个元素之后的位置的迭代器。|
 |[erase](#erase)|从字符串中的指定位置删除一个或一系列元素。|
 |[find](#find)|向前搜索字符串，搜索与指定字符序列匹配的第一个子字符串。|
-|[find_first_not_of](#find_first_not_of)|在字符串中搜索不属于指定字符串中元素的第一个字符。|
+|[find_first_not_of](#find_first_not_of)|在字符串中搜索不属于指定字符串中任何元素的第一个字符。|
 |[find_first_of](#find_first_of)|在字符串中搜索与指定字符串中任何元素匹配的第一个字符。|
-|[find_last_not_of](#find_last_not_of)|在字符串中搜索不属于指定字符串中任何元素的最后一个字符。|
+|[find_last_not_of](#find_last_not_of)|在字符串中搜索不属于指定字符串元素的最后一个字符。|
 |[find_last_of](#find_last_of)|在字符串中搜索属于指定字符串中一个元素的最后一个字符。|
 |[front](#front)|返回对字符串中第一个元素的引用。|
 |[get_allocator](#get_allocator)|返回用于构造字符串的 `allocator` 对象的副本。|
@@ -281,7 +281,7 @@ basic_string<CharType, Traits, Allocator>& append(
 
 basic_string<CharType, Traits, Allocator>& append(
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off,
+    size_type offset,
     size_type count);
 
 basic_string<CharType, Traits, Allocator>& append(
@@ -289,7 +289,7 @@ basic_string<CharType, Traits, Allocator>& append(
 
 basic_string<CharType, Traits, Allocator>& append(
     size_type count,
-    value_type _Ch);
+    value_type char_value);
 
 template <class InputIterator>
 basic_string<CharType, Traits, Allocator>& append(
@@ -313,13 +313,13 @@ basic_string<CharType, Traits, Allocator>& append(
 *str* \
 要追加字符的字符串。
 
-*_Off*\
+*偏移*\
 提供要追加的字符的源字符串部分的索引。
 
 *计数*\
 要从源字符串追加的字符的最大数目。
 
-*_Ch*\
+*char_value*\
 要追加的字符值。
 
 *第一个*\
@@ -450,7 +450,7 @@ basic_string<CharType, Traits, Allocator>& assign(
 
 basic_string<CharType, Traits, Allocator>& assign(
     size_type count,
-    value_type _Ch);
+    value_type char_value);
 
 template <class InIt>
 basic_string<CharType, Traits, Allocator>& assign(
@@ -477,7 +477,7 @@ basic_string<CharType, Traits, Allocator>& assign(
 *str* \
 要分配给目标字符串的字符的源字符串。
 
-*_Ch*\
+*char_value*\
 要分配的字符值。
 
 *第一个*\
@@ -594,14 +594,14 @@ The string str1 assigned a range of string str2f is: World.
 使用字符串中的指定索引提供对字符的引用。
 
 ```cpp
-const_reference at(size_type _Off) const;
+const_reference at(size_type offset) const;
 
-reference at(size_type _Off);
+reference at(size_type offset);
 ```
 
 ### <a name="parameters"></a>参数
 
-*_Off*\
+*偏移*\
 要引用的元素的位置索引。
 
 ### <a name="return-value"></a>返回值
@@ -681,7 +681,7 @@ reference back();
 basic_string();
 
 explicit basic_string(
-    const allocator_type& _Al);
+    const allocator_type& alloc_type);
 
 basic_string(
     const basic_string& right);
@@ -691,14 +691,14 @@ basic_string(
 
 basic_string(
     const basic_string& right,
-    size_type _Roff,
+    size_type right_offset,
     size_type count = npos);
 
 basic_string(
     const basic_string& right,
-    size_type _Roff,
+    size_type right_offset,
     size_type count,
-    const allocator_type& _Al);
+    const allocator_type& alloc_type);
 
 basic_string(
     const value_type* ptr,
@@ -707,23 +707,23 @@ basic_string(
 basic_string(
     const value_type* ptr,
     size_type count,
-    const allocator_type& _Al);
+    const allocator_type& alloc_type);
 
 basic_string(
     const value_type* ptr);
 
 basic_string(
     const value_type* ptr,
-    const allocator_type& _Al);
+    const allocator_type& alloc_type);
 
 basic_string(
     size_type count,
-    value_type _Ch);
+    value_type char_value);
 
 basic_string(
     size_type count,
-    value_type _Ch,
-    const allocator_type& _Al);
+    value_type char_value,
+    const allocator_type& alloc_type);
 
 template <class InputIterator>
 basic_string(
@@ -734,7 +734,7 @@ template <class InputIterator>
 basic_string(
     InputIterator first,
     InputIterator last,
-    const allocator_type& _Al);
+    const allocator_type& alloc_type);
 
 basic_string(
     const_pointer first,
@@ -750,7 +750,7 @@ basic_string(
 *ptr* \
 C 字符串，其字符将用于初始化正在构造的 `string`。 此值不能为 null 指针。
 
-*_Al*\
+*alloc_type*\
 正在构造的字符串对象的存储分配器类。
 
 *计数*\
@@ -759,10 +759,10 @@ C 字符串，其字符将用于初始化正在构造的 `string`。 此值不�
 *right* \
 用于初始化正在构造的字符串的字符串。
 
-*_Roff*\
+*right_offset*\
 字符串中字符的索引，该字符串会最先用于初始化正在构造的字符串的字符值。
 
-*_Ch*\
+*char_value*\
 要复制到正在构造的字符串中的字符值。
 
 *第一个*\
@@ -777,9 +777,9 @@ C 字符串，其字符将用于初始化正在构造的 `string`。 此值不�
 
 ### <a name="remarks"></a>备注
 
-所有构造函数都存储 [basic_string::allocator_type](#allocator_type) 并初始化受控序列。 分配器对象是参数 `al`（如果存在）。 对于复制构造函数，它是 `right.`[basic_string::get_allocator](#get_allocator)`()`。 否则，它是 `Alloc()`。
+所有构造函数都存储 [basic_string::allocator_type](#allocator_type) 并初始化受控序列。 分配器对象是参数 `al`（如果存在）。 对于复制构造函数，它 `right.`[basic_string：： get_allocator](#get_allocator)`()`中。 否则，分配器 `Alloc()`。
 
-受控序列初始化为剩余操作数指定的操作数序列的副本。 没有操作数序列的构造函数指定空的初始受控序列。 如果 `InputIterator` 是模板构造函数中的整数类型，则操作数序列 _F`irst,  last` 的行为与 `(size_type) first, (value_type) last` 相同。
+受控序列初始化为剩余操作数指定的操作数序列的副本。 没有操作数序列的构造函数指定空的初始受控序列。 如果 `InputIterator` 是模板构造函数中的整数类型，则操作数序列 `first,  last` 的行为与 `(size_type) first, (value_type) last`相同。
 
 ### <a name="example"></a>示例
 
@@ -890,13 +890,13 @@ const value_type *c_str() const;
 
 ### <a name="return-value"></a>返回值
 
-指向调用字符串的 C 样式版本的指针。  指针值在调用非常量函数（包括该对象上的 basic_string 类中的析构函数）后无效。
+指向调用字符串的 C 样式版本的指针。  在对象的 basic_string 类中调用非常量函数（包括析构函数）后，指针值无效。
 
 ### <a name="remarks"></a>备注
 
 属于类模板 basic_string 类型字符串的对象\<char > 不一定要终止 null。 空字符“\0”用作 C 字符串中的特殊字符，以标记字符串的末尾，但在类型字符串对象中并无特殊含义，且可能像其他字符一样是字符串的一部分。 将从**const char** <strong>\*</strong>自动转换为字符串，但字符串类不提供从 C 样式字符串到类型**basic_string\<char >** 的对象的自动转换。
 
-不应修改返回的 C 样式字符串，这可能使指向字符串的指针无效；也不应将其删除，因为该字符串具有有限的生存期且归属于类字符串。
+不应修改返回的 C 样式字符串，因为这可能会使指向字符串的指针无效，或被删除，因为字符串具有有限的生存期且由类字符串拥有。
 
 ### <a name="example"></a>示例
 
@@ -1066,7 +1066,7 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator
 ```
 
-不应对 `cend` 返回的值取消引用。
+不应取消引用 `cend` 返回的值。
 
 ## <a name="clear"></a>  basic_string::clear
 
@@ -1128,30 +1128,30 @@ int compare(
     const basic_string<CharType, Traits, Allocator>& str) const;
 
 int compare(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     const basic_string<CharType, Traits, Allocator>& str) const;
 
 int compare(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off,
+    size_type offset,
     size_type count) const;
 
 int compare(
     const value_type* ptr) const;
 
 int compare(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     const value_type* ptr) const;
 
 int compare(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     const value_type* ptr
-    size_type _Num2) const;
+    size_type number_2) const;
 ```
 
 ### <a name="parameters"></a>参数
@@ -1159,16 +1159,16 @@ int compare(
 *str* \
 要与操作数字符串比较的字符串。
 
-*_Pos1*\
+*position_1*\
 开始进行比较的操作数字符串的索引。
 
-*_Num1*\
+*number_1*\
 要比较的操作数字符串的最大字符数。
 
-*_Num2*\
+*number_2*\
 要比较的参数字符串的最大字符数。
 
-*_Off*\
+*偏移*\
 开始进行比较的参数字符串的索引。
 
 *计数*\
@@ -1480,7 +1480,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 size_type copy(
     value_type* ptr,
     size_type count,
-    size_type _Off = 0) const;
+    size_type offset = 0) const;
 ```
 
 ### <a name="parameters"></a>参数
@@ -1488,9 +1488,9 @@ size_type copy(
 *ptr* \
 要复制的元素的目标字符数组。
 
-_*计算*要从源字符串复制的最多字符数。
+*计数*最多从源字符串复制的字符数。
 
-*_Off*\
+*偏移*\
 要进行复制的源字符串中的开始位置。
 
 ### <a name="return-value"></a>返回值
@@ -1499,7 +1499,7 @@ _*计算*要从源字符串复制的最多字符数。
 
 ### <a name="remarks"></a>备注
 
-空字符不追加到副本的末尾。
+不在副本的末尾追加 null 字符。
 
 ### <a name="example"></a>示例
 
@@ -1585,7 +1585,7 @@ size_type _Copy_s(
     value_type* dest,
     size_type dest_size,
     size_type count,
-    size_type _Off = 0) const;
+    size_type offset = 0) const;
 ```
 
 ### <a name="parameters"></a>参数
@@ -1596,9 +1596,9 @@ size_type _Copy_s(
 *dest_size*\
 *Dest*的大小。
 
-_*计算*要从源字符串复制的最多字符数。
+*计数*最多从源字符串复制的字符数。
 
-*_Off*\
+*偏移*\
 要进行复制的源字符串中的开始位置。
 
 ### <a name="return-value"></a>返回值
@@ -1607,7 +1607,7 @@ _*计算*要从源字符串复制的最多字符数。
 
 ### <a name="remarks"></a>备注
 
-空字符不追加到副本的末尾。
+不在副本的末尾追加 null 字符。
 
 ### <a name="example"></a>示例
 
@@ -1837,7 +1837,7 @@ iterator end();
 
 ### <a name="remarks"></a>备注
 
-`end` 通常用于测试迭代器是否已到达其字符串的末尾。 不应对 `end` 返回的值取消引用。
+`end` 通常用于测试迭代器是否已到达其字符串的末尾。 不应取消引用 `end` 返回的值。
 
 如果将 `end` 的返回值分配给 `const_iterator`，则不能修改字符串对象。 如果 `end` 的返回值分配给某个 `iterator`，则可以修改该字符串对象。
 
@@ -1904,10 +1904,10 @@ iterator erase(
     iterator last);
 
 iterator erase(
-    iterator _It);
+    iterator iter);
 
 basic_string<CharType, Traits, Allocator>& erase(
-    size_type _Pos = 0,
+    size_type offset = 0,
     size_type count = npos);
 ```
 
@@ -1919,14 +1919,14 @@ basic_string<CharType, Traits, Allocator>& erase(
 *最后*\
 一种迭代器，用于寻址要清除范围中最后一个元素之后下一个元素的位置。
 
-*_It*\
+*iter*\
 一种迭代器，用于寻址要清除字符串中的元素位置。
 
-*_Pos*\
+*偏移*\
 要删除的字符串中的第一个字符的索引。
 
 *计数*\
-如果在字符串范围中有同样数量的以 *_Pos*.开头的元素，将删除该元素数目。
+如果在以*offset*开头的字符串范围内有多个，则将删除的元素的数目。
 
 ### <a name="return-value"></a>返回值
 
@@ -2003,29 +2003,29 @@ The modified string object str3m is: Hello .
 
 ```cpp
 size_type find(
-    value_type _Ch,
-    size_type _Off = 0) const;
+    value_type char_value,
+    size_type offset = 0) const;
 
 size_type find(
     const value_type* ptr,
-    size_type _Off = 0) const;
+    size_type offset = 0) const;
 
 size_type find(
     const value_type* ptr,
-    size_type _Off,
+    size_type offset,
     size_type count) const;
 
 size_type find(
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off = 0) const;
+    size_type offset = 0) const;
 ```
 
 ### <a name="parameters"></a>参数
 
-*_Ch*\
+*char_value*\
 成员函数要搜索的字符值。
 
-*_Off*\
+*偏移*\
 搜索开始处的索引。
 
 *ptr* \
@@ -2174,33 +2174,33 @@ The index of the 1st element of 'clear' in str4 is: 0
 
 ## <a name="find_first_not_of"></a>  basic_string::find_first_not_of
 
-在字符串中搜索不属于指定字符串中某元素的第一个字符。
+在字符串中搜索不属于指定字符串元素的第一个字符。
 
 ```cpp
 size_type find_first_not_of(
-    value_type _Ch,
-    size_type _Off = 0) const;
+    value_type char_value,
+    size_type offset = 0) const;
 
 size_type find_first_not_of(
     const value_type* ptr,
-    size_type _Off = 0) const;
+    size_type offset = 0) const;
 
 size_type find_first_not_of(
     const value_type* ptr,
-    size_type _Off,
+    size_type offset,
     size_type count) const;
 
 size_type find_first_not_of(
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off = 0) const;
+    size_type offset = 0) const;
 ```
 
 ### <a name="parameters"></a>参数
 
-*_Ch*\
+*char_value*\
 成员函数要搜索的字符值。
 
-*_Off*\
+*偏移*\
 搜索开始处的索引。
 
 *ptr* \
@@ -2366,29 +2366,29 @@ the 0th position is: 2
 
 ```cpp
 size_type find_first_of(
-    value_type _Ch,
-    size_type _Off = 0) const;
+    value_type char_value,
+    size_type offset = 0) const;
 
 size_type find_first_of(
     const value_type* ptr,
-    size_type _Off = 0) const;
+    size_type offset = 0) const;
 
 size_type find_first_of(
     const value_type* ptr,
-    size_type _Off,
+    size_type offset,
     size_type count) const;
 
 size_type find_first_of(
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off = 0) const;
+    size_type offset = 0) const;
 ```
 
 ### <a name="parameters"></a>参数
 
-*_Ch*\
+*char_value*\
 成员函数要搜索的字符值。
 
-*_Off*\
+*偏移*\
 搜索开始处的索引。
 
 *ptr* \
@@ -2549,33 +2549,33 @@ the 0th position is: 1
 
 ## <a name="find_last_not_of"></a>  basic_string::find_last_not_of
 
-在字符串中搜索不属于指定字符串中任何元素的最后一个字符。
+在字符串中搜索不属于指定字符串元素的最后一个字符。
 
 ```cpp
 size_type find_last_not_of(
-    value_type _Ch,
-    size_type _Off = npos) const;
+    value_type char_value,
+    size_type offset = npos) const;
 
 size_type find_last_not_of(
     const value_type* ptr,
-    size_type _Off = npos) const;
+    size_type offset = npos) const;
 
 size_type find_last_not_of(
     const value_type* ptr,
-    size_type _Off,
+    size_type offset,
     size_type count) const;
 
 size_type find_last_not_of(
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off = npos) const;
+    size_type offset = npos) const;
 ```
 
 ### <a name="parameters"></a>参数
 
-*_Ch*\
+*char_value*\
 成员函数要搜索的字符值。
 
-*_Off*\
+*偏移*\
 搜索结束位置的索引。
 
 *ptr* \
@@ -2742,29 +2742,29 @@ in str4 before the end position is: 10
 
 ```cpp
 size_type find_last_of(
-    value_type _Ch,
-    size_type _Off = npos) const;
+    value_type char_value,
+    size_type offset = npos) const;
 
 size_type find_last_of(
     const value_type* ptr,
-    size_type _Off = npos) const;
+    size_type offset = npos) const;
 
 size_type find_last_of(
     const value_type* ptr,
-    size_type _Off,
+    size_type offset,
     size_type count) const;
 
 size_type find_last_of(
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off = npos) const;
+    size_type offset = npos) const;
 ```
 
 ### <a name="parameters"></a>参数
 
-*_Ch*\
+*char_value*\
 成员函数要搜索的字符值。
 
-*_Off*\
+*偏移*\
 搜索结束位置的索引。
 
 *ptr* \
@@ -2975,60 +2975,60 @@ int main( )
 
 ```cpp
 basic_string<CharType, Traits, Allocator>& insert(
-    size_type _P0,
+    size_type position,
     const value_type* ptr);
 
 basic_string<CharType, Traits, Allocator>& insert(
-    size_type _P0,
+    size_type position,
     const value_type* ptr,
     size_type count);
 
 basic_string<CharType, Traits, Allocator>& insert(
-    size_type _P0,
+    size_type position,
     const basic_string<CharType, Traits, Allocator>& str);
 
 basic_string<CharType, Traits, Allocator>& insert(
-    size_type _P0,
+    size_type position,
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off,
+    size_type offset,
     size_type count);
 
 basic_string<CharType, Traits, Allocator>& insert(
-    size_type _P0,
+    size_type position,
     size_type count,
-    value_type _Ch);
+    value_type char_value);
 
 iterator insert(
-    iterator _It);
+    iterator iter);
 
 iterator insert(
-    iterator _It,
-    value_type _Ch)l
+    iterator iter,
+    value_type char_value)l
 template <class InputIterator>
 void insert(
-    iterator _It,
+    iterator iter,
     InputIterator first,
     InputIterator last);
 
 void insert(
-    iterator _It,
+    iterator iter,
     size_type count,
-    value_type _Ch);
+    value_type char_value);
 
 void insert(
-    iterator _It,
+    iterator iter,
     const_pointer first,
     const_pointer last);
 
 void insert(
-    iterator _It,
+    iterator iter,
     const_iterator first,
     const_iterator last);
 ```
 
 ### <a name="parameters"></a>参数
 
-*_P0*\
+*位置*\
 新字符插入点之后的位置的索引。
 
 *ptr* \
@@ -3040,13 +3040,13 @@ void insert(
 *str* \
 将要完全或部分插入到目标字符串中的字符串。
 
-*_Off*\
+*偏移*\
 提供要追加的字符的源字符串部分的索引。
 
-*_Ch*\
+*char_value*\
 要插入的元素的字符值。
 
-*_It*\
+*iter*\
 对要在其后插入一个字符的位置进行寻址的迭代器。
 
 *第一个*\
@@ -3322,7 +3322,7 @@ static const size_type npos = -1;
 
 ```cpp
 basic_string<CharType, Traits, Allocator>& operator+=(
-    value_type _Ch);
+    value_type char_value);
 
 basic_string<CharType, Traits, Allocator>& operator+=(
     const value_type* ptr);
@@ -3333,7 +3333,7 @@ basic_string<CharType, Traits, Allocator>& operator+=(
 
 ### <a name="parameters"></a>参数
 
-*_Ch*\
+*char_value*\
 要追加的字符。
 
 *ptr* \
@@ -3411,7 +3411,7 @@ The doubly appended strig str1 is: Hello Wide World.
 
 ```cpp
 basic_string<CharType, Traits, Allocator>& operator=(
-    value_type _Ch);
+    value_type char_value);
 
 basic_string<CharType, Traits, Allocator>& operator=(
     const value_type* ptr);
@@ -3425,7 +3425,7 @@ basic_string<CharType, Traits, Allocator>& operator=(
 
 ### <a name="parameters"></a>参数
 
-*_Ch*\
+*char_value*\
 要分配的字符值。
 
 *ptr* \
@@ -3504,13 +3504,13 @@ The string str1 reassigned with string str3c is: World.
 使用字符串中的指定索引提供对字符的引用。
 
 ```cpp
-const_reference operator[](size_type _Off) const;
-reference operator[](size_type _Off);
+const_reference operator[](size_type offset) const;
+reference operator[](size_type offset);
 ```
 
 ### <a name="parameters"></a>参数
 
-*_Off*\
+*偏移*\
 要引用的元素的位置索引。
 
 ### <a name="return-value"></a>返回值
@@ -3523,7 +3523,7 @@ reference operator[](size_type _Off);
 
 `operator[]` 比成员函数 [at](#at) 更快，以提供对字符串元素的读取和写入访问权限。
 
-`operator[]` 不会检查作为参数传递的索引是否有效，但成员函数 `at` 会这样做，因此应在有效性中使用。 传递给成员函数的无效索引（小于零或大于或等于字符串大小的索引） `at` 引发[Out_of_range 类](../standard-library/out-of-range-class.md)异常。 传递给 `operator[]` 的无效索引导致未定义行为，但是等于字符串长度的索引对于常量字符串而言是有效索引，且运算符在传递此索引时返回空字符。
+`operator[]` 不检查作为参数传递的索引是否有效，但成员函数 `at` 执行，因此不一定要在有效性中使用。 传递给成员函数的无效索引（小于零或大于或等于字符串大小的索引） `at` 引发[Out_of_range 类](../standard-library/out-of-range-class.md)异常。 传递给 `operator[]` 的无效索引导致未定义行为，但是等于字符串长度的索引对于常量字符串而言是有效索引，且运算符在传递此索引时返回空字符。
 
 重新分配字符串或修改非 **const** 字符串可能使返回的引用无效。
 
@@ -3580,7 +3580,7 @@ typedef typename allocator_type::pointer pointer;
 
 该类型是 `allocator_type::pointer`的同义词。
 
-对于类型 `string`，它等效于**char**  <strong>\*</strong>。
+对于类型 `string`，它等效于**char** <strong>\*</strong>。
 
 ### <a name="example"></a>示例
 
@@ -3622,17 +3622,17 @@ void pop_back();
 在字符串的末尾处添加一个元素。
 
 ```cpp
-void push_back(value_type _Ch);
+void push_back(value_type char_value);
 ```
 
 ### <a name="parameters"></a>参数
 
-*_Ch*\
+*char_value*\
 要添加到字符串末尾的字符。
 
 ### <a name="remarks"></a>备注
 
-成员函数实际上会调用 [insert](#insert)（[end](#end)、*Ch*）。
+成员函数有效地调用[insert](#insert)（ [end](#end)， *char_value* ）。
 
 ### <a name="example"></a>示例
 
@@ -3790,7 +3790,7 @@ reverse_iterator rend();
 
 `rend` 可用于测试反向迭代器是否已到达其字符串末尾。
 
-不应对 `rend` 返回的值取消引用。
+不应取消引用 `rend` 返回的值。
 
 ### <a name="example"></a>示例
 
@@ -3852,33 +3852,33 @@ The string str2 is empty.
 
 ```cpp
 basic_string<CharType, Traits, Allocator>& replace(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     const value_type* ptr);
 
 basic_string<CharType, Traits, Allocator>& replace(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     const basic_string<CharType, Traits, Allocator>& str);
 
 basic_string<CharType, Traits, Allocator>& replace(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     const value_type* ptr,
-    size_type _Num2);
+    size_type number_2);
 
 basic_string<CharType, Traits, Allocator>& replace(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Pos2,
-    size_type _Num2);
+    size_type position_2,
+    size_type number_2);
 
 basic_string<CharType, Traits, Allocator>& replace(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     size_type count,
-    value_type _Ch);
+    value_type char_value);
 
 basic_string<CharType, Traits, Allocator>& replace(
     iterator first0,
@@ -3894,13 +3894,13 @@ basic_string<CharType, Traits, Allocator>& replace(
     iterator first0,
     iterator last0,
     const value_type* ptr,
-    size_type _Num2);
+    size_type number_2);
 
 basic_string<CharType, Traits, Allocator>& replace(
     iterator first0,
     iterator last0,
-    size_type _Num2,
-    value_type _Ch);
+    size_type number_2,
+    value_type char_value);
 
 template <class InputIterator>
 basic_string<CharType, Traits, Allocator>& replace(
@@ -3927,22 +3927,22 @@ basic_string<CharType, Traits, Allocator>& replace(
 *str* \
 要作为操作数字符串字符的源的字符串。
 
-*_Pos1*\
+*position_1*\
 开始进行替换的操作数字符串的索引。
 
-*_Num1*\
+*number_1*\
 操作数字符串中要替换的最大字符数。
 
-*_Pos2*\
+*position_2*\
 开始进行复制的参数字符串的索引。
 
-*_Num2*\
+*number_2*\
 要从参数 C 字符串使用的最大字符数。
 
 *ptr* \
 要作为操作数字符串字符的源的 C 字符串。
 
-*_Ch*\
+*char_value*\
 要复制到操作数字符串的字符。
 
 *first0* \
@@ -3958,7 +3958,7 @@ basic_string<CharType, Traits, Allocator>& replace(
 一种迭代器（const_pointer 或 const_iterator），用于寻址参数字符串中进行复制的最后一个字符。
 
 *计数*\
-将 *_Ch*复制到操作数字符串的次数。
+将*char_value*复制到操作数字符串的次数。
 
 ### <a name="return-value"></a>返回值
 
@@ -4243,7 +4243,7 @@ void resize(
 
 void resize(
     size_type count,
-    _Elem _Ch);
+    value_type char_value);
 ```
 
 ### <a name="parameters"></a>参数
@@ -4251,7 +4251,7 @@ void resize(
 *计数*\
 字符串的新大小。
 
-*_Ch*\
+*char_value*\
 在需要其他元素的情况下，用于初始化追加字符的值。
 
 ### <a name="remarks"></a>备注
@@ -4365,29 +4365,29 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 ```cpp
 size_type rfind(
-    value_type _Ch,
-    size_type _Off = npos) const;
+    value_type char_value,
+    size_type offset = npos) const;
 
 size_type rfind(
     const value_type* ptr,
-    size_type _Off = npos) const;
+    size_type offset = npos) const;
 
 size_type rfind(
     const value_type* ptr,
-    size_type _Off,
+    size_type offset,
     size_type count) const;
 
 size_type rfind(
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off = npos) const;
+    size_type offset = npos) const;
 ```
 
 ### <a name="parameters"></a>参数
 
-*_Ch*\
+*char_value*\
 成员函数要搜索的字符值。
 
-*_Off*\
+*偏移*\
 搜索开始处的索引。
 
 *ptr* \
@@ -4622,7 +4622,7 @@ typedef typename allocator_type::size_type size_type;
 
 ### <a name="remarks"></a>备注
 
-它相当于 `allocator_type::size_type`。
+它等效于 `allocator_type::size_type`。
 
 对于类型 `string`，它等效于 `size_t`。
 
@@ -4661,13 +4661,13 @@ The capacity of string str1 is: 15.
 
 ```cpp
 basic_string<CharType, Traits, Allocator> substr(
-    size_type _Off = 0,
+    size_type offset = 0,
     size_type count = npos) const;
 ```
 
 ### <a name="parameters"></a>参数
 
-*_Off*\
+*偏移*\
 从进行字符串复制所在的位置查找元素的索引，默认值为 0。
 
 *计数*\
