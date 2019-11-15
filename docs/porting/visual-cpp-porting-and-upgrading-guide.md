@@ -1,15 +1,15 @@
 ---
 title: Microsoft C++移植和升级指南
 description: 将 Microsoft C++代码升级到最新版本的 Visual Studio。
-ms.date: 10/29/2019
+ms.date: 11/05/2019
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
 ms.topic: overview
-ms.openlocfilehash: d67c2665574242a46d697f6e9f24321556146958
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 04c3950d637c01031e78d0d95e13232143ceb232
+ms.sourcegitcommit: 4dde7914608508e47c21cae03ac58fe953a0c29b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625680"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119485"
 ---
 # <a name="microsoft-c-porting-and-upgrading-guide"></a>Microsoft C++移植和升级指南
 
@@ -25,7 +25,7 @@ Visual Studio 2015、Visual Studio 2017 和 Visual Studio 2019 中的工具集�
 
 - 由于改进了编译器优化，相同的代码可以更快地运行。
 
-- 新式C++功能和编程做法消除了许多常见的 bug 原因，并更易于维护旧的 C 样式惯例。
+- 新式C++功能和编程做法消除了许多常见的 bug 原因，并生成了比旧的 C 样式惯例更容易维护的代码。
 
 - 由于编译器和链接器中的性能改进，生成时间明显更快。
 
@@ -48,6 +48,7 @@ Visual Studio 2015、Visual Studio 2017 和 Visual Studio 2019 中的工具集�
 |Title|描述|
 |-----------|-----------------|
 |[从C++ Visual Studio 的早期版本升级项目](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|如何将基本代码升级到 Visual Studio 2019 和编译器的 v142。|
+|[用于升级C++代码的 IDE 工具](ide-tools-for-upgrading-code.md)|有助于升级过程的有用 IDE 功能。|
 |[C++2015和2019之间的二进制兼容性](binary-compat-2015-2017.md)|从 v142 项目按原样使用 v140 库。|
 |[使用 Visual Studio 中的本机多目标来生成旧项目](use-native-multi-targeting.md)|将 Visual Studio 2019 与较旧的编译器和库配合使用。|
 |[Visual C++ 更改历史记录（2003 - 2015）](visual-cpp-change-history-2003-2015.md)|Visual Studio 2003 到2015中的 Microsoft C++库和生成工具的所有更改列表，这些更改可能需要更改代码。|
