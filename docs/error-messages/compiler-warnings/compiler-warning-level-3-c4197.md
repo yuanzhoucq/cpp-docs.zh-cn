@@ -1,27 +1,27 @@
 ---
-title: 编译器警告 （等级 3） C4197
+title: 编译器警告（等级3） C4197
 ms.date: 11/04/2016
 f1_keywords:
 - C4197
 helpviewer_keywords:
 - C4197
 ms.assetid: f766feef-82b0-4d81-8a65-33628c7db196
-ms.openlocfilehash: 15b2fba94bfc956775a1e454893e7509a32000e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d7c8cee42f17ad3301980852b8333ea37f5ca6be
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402237"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051781"
 ---
-# <a name="compiler-warning-level-3-c4197"></a>编译器警告 （等级 3） C4197
+# <a name="compiler-warning-level-3-c4197"></a>编译器警告（等级3） C4197
 
-'type' : top-level volatile in cast is ignored
+"type"：忽略强制转换中的顶级 volatile
 
-编译器检测到强制转换为右值类型用限定[易失性](../../cpp/volatile-cpp.md)，或强制转换为易失性使用限定某些类型的右值类型。 根据 C 标准 (6.5.3)，与限定的类型相关联的属性是仅对左值表达式有意义。
+编译器检测到对使用[volatile](../../cpp/volatile-cpp.md)限定的 r 值类型的强制转换，或对使用 volatile 限定的某种类型的 r 值类型的强制转换。 根据 C 标准（6.5.3），与限定类型相关联的属性仅对左值表达式有意义。
 
-下面的示例生成 C4197:
+下面的示例生成 C4197：
 
-```
+```cpp
 // C4197.cpp
 // compile with: /W3
 #include <stdio.h>

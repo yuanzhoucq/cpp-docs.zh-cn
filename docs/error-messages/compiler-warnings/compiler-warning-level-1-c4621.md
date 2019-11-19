@@ -1,27 +1,27 @@
 ---
-title: 编译器警告（等级 1）C4621
+title: 编译器警告（等级1） C4621
 ms.date: 11/04/2016
 f1_keywords:
 - C4621
 helpviewer_keywords:
 - C4621
 ms.assetid: 40931bd9-cb89-497e-86f0-cec9f016c63c
-ms.openlocfilehash: d35c4143d5b90c7a6a49337931dad4ba73804f20
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9dd4defe18a94f65e265d02f6c26c715667cd696
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221351"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052589"
 ---
-# <a name="compiler-warning-level-1-c4621"></a>编译器警告（等级 1）C4621
+# <a name="compiler-warning-level-1-c4621"></a>编译器警告（等级1） C4621
 
-任何后缀形式的 operator--找到类型 type，使用前缀形式
+找不到类型 "type" 的 "operator--" 后缀形式，请使用前缀形式
 
-不没有为给定的类型定义任何后缀递减运算符。 编译器使用了重载的前缀运算符。
+没有为给定的类型定义后缀减量运算符。 编译器使用了重载的前缀运算符。
 
-可以通过定义后缀 `--` 运算符来避免此警告。 创建的两个参数版本`--`运算符，如下所示：
+可以通过定义后缀 `--` 运算符来避免此警告。 创建 `--` 运算符的两参数版本，如下所示：
 
-```
+```cpp
 // C4621.cpp
 // compile with: /W1
 class A

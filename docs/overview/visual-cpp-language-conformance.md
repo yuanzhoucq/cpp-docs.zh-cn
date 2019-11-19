@@ -1,16 +1,16 @@
 ---
 title: Microsoft C++ 语言一致性表
-ms.date: 08/12/2019
+ms.date: 10/31/2019
 ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 17ed76551102653e2f05e9731834f4787198db49
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: e3e86acb81120af1b663b56681ff0f8c41036b5a
+ms.sourcegitcommit: 2362d15b5eb18d27773c3f7522da3d0eed9e2571
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69631647"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73754074"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Microsoft C++ 语言一致性表
 
@@ -326,17 +326,17 @@ ms.locfileid: "69631647"
 ### <a name="supported-values"></a>支持的值
 
 __否__表示尚未实现。<br/>
-“部分”  表示实现不完整。 有关详细信息，请参阅注释部分。<br/>
+“部分”表示实现不完整。 有关详细信息，请参阅注释部分。<br/>
 __VS 2010__ 表示在 Visual Studio 2010 中支持的功能。<br/>
 __VS 2013__ 表示在 Visual Studio 2013 中支持的功能。<br/>
-“VS 2015”  表示 Visual Studio 2015 RTW 中支持的功能。<br/>
+“VS 2015”表示 Visual Studio 2015 RTW 中支持的功能。<br/>
 __VS 2015.2__ 和 __VS 2015.3__ 分别表示在 Visual Studio 2015 Update 2 和 Visual Studio 2015 Update 3 中支持的功能。<br/>
-“VS 2017 15.0”  表示 Visual Studio 2017 版本 15.0 (RTW) 中支持的功能。<br/>
+“VS 2017 15.0”表示 Visual Studio 2017 版本 15.0 (RTW) 中支持的功能。<br/>
 __VS 2017 15.3__表示 Visual Studio 2017 版本 15.3 中支持的功能。<br/>
 __VS 2017 15.5__ 表示 Visual Studio 2017 版本 15.5 中支持的功能。<br/>
 __VS 2017 15.7__ 表示 Visual Studio 2017 15.7 版中支持的功能。<br/>
-“VS 2019 16.0”  表示 Visual Studio 2019 版本 16.0 (RTW) 中支持的功能。<br/>
-“VS 2019 16.1”  表示 Visual Studio 2019 版本 16.1 中支持的功能。
+“VS 2019 16.0”表示 Visual Studio 2019 版本 16.0 (RTW) 中支持的功能。<br/>
+“VS 2019 16.1”表示 Visual Studio 2019 版本 16.1 中支持的功能。
 
 ### <a name="notes"></a>说明
 
@@ -346,7 +346,7 @@ __VS 2017 15.7__ 表示 Visual Studio 2017 15.7 版中支持的功能。<br/>
 
 <a name="note_B"></a>__B__：受 Visual Studio 2017 版本 15.7 中的 [/permissive-](../build/reference/permissive-standards-conformance.md) 模式支持。 有关详细信息，请参阅 [MSVC 引入两阶段名称查找支持](https://blogs.msdn.microsoft.com/vcblog/2017/09/11/two-phase-name-lookup-support-comes-to-msvc/)。
 
-<a name="note_C"></a>__C__：编译器对 C99 预处理器规则的支持在 Visual Studio 2017 中不完整。 Variadic 宏受支持，但预处理器的行为存在很多 Bug。 我们正在修改预处理器，并且很快将在 [/permissive-](../build/reference/permissive-standards-conformance.md) 模式下发布实验版的改进内容。
+<a name="note_C"></a>__C__：编译器对 C99 预处理器规则的支持在 Visual Studio 2017 中不完整。 我们正在修改预处理器，已开始在 Visual Studio 2017 版本 15.8 中交付这些更改，并提供 [/experimental:preprocessor](../build/reference/experimental-preprocessor.md) 编译器开关。
 
 <a name="note_D"></a>__D__：在 [/std:c++14](../build/reference/std-specify-language-standard-version.md) 下受支持，并且出现可取消的警告 [C4984](../error-messages/compiler-warnings/compiler-warning-c4984.md)。
 
@@ -354,7 +354,7 @@ __VS 2017 15.7__ 表示 Visual Studio 2017 15.7 版中支持的功能。<br/>
 
 <a name="note_G"></a>__G__：受编译器内部函数支持。
 
-<a name="note_14"></a>__14__ 即使指定了 [/std:c++14](../build/reference/std-specify-language-standard-version.md)（默认值），这些 C++17/20 功能也始终处于启用状态。 这是因为在引入 /std  选项之前实现了该功能，或者因为条件实现异常复杂。
+<a name="note_14"></a>__14__ 即使指定了 [/std:c++14](../build/reference/std-specify-language-standard-version.md)（默认值），这些 C++17/20 功能也始终处于启用状态。 这是因为在引入 /std 选项之前实现了该功能，或者因为条件实现异常复杂。
 
 <a name="note_17"></a>__17__ 这些功能由 [/std:c++17](../build/reference/std-specify-language-standard-version.md)（或 [/std:c++latest](../build/reference/std-specify-language-standard-version.md)）编译器选项启用。
 
@@ -366,7 +366,7 @@ __VS 2017 15.7__ 表示 Visual Studio 2017 15.7 版中支持的功能。<br/>
 
 指定 [/std:c++17](../build/reference/std-specify-language-standard-version.md)（或 [/std:c++latest](../build/reference/std-specify-language-standard-version.md)）编译器选项后会删除 <a name="note_rem"></a>__rem__ 功能。 可以重新启用这些功能，以使用下面这些宏轻松转换为较新的语言模式：`_HAS_AUTO_PTR_ETC`、`_HAS_FUNCTION_ALLOCATOR_SUPPORT`、`_HAS_OLD_IOSTREAMS_MEMBERS` 和 `_HAS_UNEXPECTED`。
 
-<a name="note_charconv"></a>charconv  `from_chars()` 和 `to_chars()` 适用于整数。 浮点 `from_chars()` 和浮点 `to_chars()` 的时间线如下所示：
+<a name="note_charconv"></a>charconv `from_chars()` 和 `to_chars()` 适用于整数。 浮点 `from_chars()` 和浮点 `to_chars()` 的时间线如下所示：
 - VS 2017 15.7：整数 `from_chars()` 和 `to_chars()`。
 - VS 2017 15.8：浮点 `from_chars()`。
 - VS 2017 15.9：浮点 `to_chars()` 重载，以实现最短十进制。

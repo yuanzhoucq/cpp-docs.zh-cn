@@ -1,5 +1,5 @@
 ---
-title: 演练：在命令行C++上编译本机程序
+title: 演练：在命令行上编译本机 C++ 程序
 description: 在命令提示符C++下使用 Microsoft 编译器。
 ms.custom: conceptual
 ms.date: 04/23/2019
@@ -9,28 +9,28 @@ helpviewer_keywords:
 - compiling programs [C++]
 - command-line applications [C++], native
 ms.assetid: b200cfd1-0440-498f-90ee-7ecf92492dc0
-ms.openlocfilehash: 36017b28ab91478da2515cd7c8588a998013171d
-ms.sourcegitcommit: c53a3efcc5d51fc55fa57ac83cca796b33ae888f
+ms.openlocfilehash: daab00768f8140869a8db39c73f4fec3ab6304c7
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71960716"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051516"
 ---
-# <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>演练：在命令行C++上编译本机程序
+# <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>演练：在命令行上编译本机 C++ 程序
 
 Visual Studio 包含一个命令行C++编译器，可用于创建从基本控制台应用到通用 Windows 平台应用、桌面应用、设备驱动程序和 .net 组件的所有内容。
 
-在本演练中，你将使用文本编辑器创建一个基本的 "Hello C++ ，World" 样式的程序，然后在命令行上对其进行编译。 若要尝试使用 Visual Studio IDE，而不是使用命令行，请参阅 [Walkthrough：使用项目和解决方案（C++） ](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) 或[使用 Visual Studio IDE 进行C++桌面开发](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)。
+在本演练中，你将使用文本编辑器创建一个基本的 "Hello C++ ，World" 样式的程序，然后在命令行上对其进行编译。 如果你想要尝试使用 visual studio ide 而不是使用命令行，请参阅[演练：使用项目和解决方案（C++）](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)或[使用 Visual Studio ide 进行C++桌面开发](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)。
 
 在此演练中，可使用你自己的 Visual C++ 程序（而非键入显示的程序），也可使用另一个帮助文章中的 Visual C++ 代码示例。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>Prerequisites
 
 若要完成本演练，你必须已安装 visual studio 和**使用C++** 工作负荷的可选桌面开发，或用于 Visual Studio 的命令行生成工具。
 
 Visual Studio 是一个功能强大的集成开发环境（IDE），它支持多种语言和平台的功能齐全的编辑器、资源管理器、调试器和编译器。 若要了解如何下载和安装 Visual Studio （包括免费 Visual Studio 社区版），并提供对 C/C++开发的支持，请参阅[在 Visual Studio 中安装C++支持](vscpp-step-0-installation.md)。
 
-Visual Studio 生成工具仅安装生成 C 和C++程序所需的命令行编译器、工具和库。 这相当于构建实验室或教室练习，安装速度相对较快。 若要仅安装命令行工具，请在[Visual Studio 下载](https://visualstudio.microsoft.com/downloads/)页上查找 visual Studio 的生成工具。
+Visual Studio 生成工具仅安装生成 C 和C++程序所需的命令行编译器、工具和库。 这相当于构建实验室或教室练习，安装速度相对较快。 若要仅安装命令行工具，请在[Visual Studio 下载](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019)页上查找 visual Studio 的生成工具。
 
 在命令行上生成 C 或C++程序之前，必须先验证是否已安装这些工具，并且是否可以从命令行访问它们。 对于C++命令行环境而言，视觉对象要求查找所使用的工具、标头和库。 如果没有进行某些准备 **，就不能在普通的命令提示符窗口中使用视觉对象C++**  。 幸运的是C++ ，Visual 安装的快捷方式可让你启动开发人员命令提示，该提示已为命令行生成设置环境。 遗憾的是，开发人员命令提示快捷方式的名称以及它们所在的位置在 Visual C++和不同版本的 Windows 上都是不同的。 第一项演练任务是查找正确的操作。
 
@@ -45,7 +45,7 @@ Visual Studio 生成工具仅安装生成 C 和C++程序所需的命令行编译
 
    你还可以使用 Windows search 函数搜索 "开发人员命令提示"，并选择与已安装的 Visual Studio 版本相匹配的工具。 使用快捷方式打开 "命令提示符" 窗口。
 
-1. 接下来，验证是否正确C++设置了 Visual developer 命令提示符。 在 "命令提示符" 窗口中，输入 `cl` 并验证输出如下所示：
+1. 接下来，验证是否正确C++设置了 Visual developer 命令提示符。 在 "命令提示符" 窗口中，输入 `cl`，并验证输出如下所示：
 
    ```Output
    C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise>cl
@@ -58,16 +58,16 @@ Visual Studio 生成工具仅安装生成 C 和C++程序所需的命令行编译
    根据视觉对象C++和安装的任何更新的版本，当前目录或版本号可能有所不同。 如果上面的输出类似于你所看到的内容，则可以在命令行上生成C++ C 或程序。
 
    > [!NOTE]
-   > 如果收到错误，如 "' cl ' 无法识别为内部或外部命令、可操作程序或批处理文件"、"错误 C1034" 或 "错误 LNK1104" （运行**cl**命令时），则可能是你未使用开发人员命令提示，或出现了错误安装您的视觉对象C++。 必须先解决此问题，然后才能继续。
+   > 如果收到错误，如 "' cl ' 无法识别为内部或外部命令、可操作程序或批处理文件"、"错误 C1034" 或 "错误 LNK1104" （运行**cl**命令时），则可能是未使用开发人员命令提示，或视觉C++对象安装有问题。 必须先解决此问题，然后才能继续。
 
-   如果你找不到 "开发人员命令提示" 快捷方式，或者当你输入 `cl` 时收到错误消息，则C++你的视觉对象安装可能有问题。 尝试在 Visual Studio C++中重新安装视觉组件，或重新安装 Microsoft C++ visual Build Tools。 请不要继续执行下一节，直到这样做。 若要详细了解如何安装视觉对象C++，请参阅[安装 visual Studio](/visualstudio/install/install-visual-studio)。
+   如果你找不到 "开发人员命令提示" 快捷方式，或者当你输入 `cl`时收到错误消息，则C++你的视觉对象安装可能有问题。 尝试在 Visual Studio C++中重新安装视觉组件，或重新安装 Microsoft C++ visual Build Tools。 请不要继续执行下一节，直到这样做。 若要详细了解如何安装视觉对象C++，请参阅[安装 visual Studio](/visualstudio/install/install-visual-studio)。
 
    > [!NOTE]
-   > 根据计算机上的 Windows 版本和系统安全配置，您可能必须右键单击以打开 "开发人员命令提示" 快捷方式的快捷菜单，然后选择 "以**管理员身份运行**" 才能成功生成并运行按照此演练创建的程序。
+   > 根据计算机上的 Windows 版本和系统安全配置，您可能必须右键单击以打开 "开发人员命令提示" 快捷方式的快捷菜单，然后选择 "以**管理员身份运行**"，以成功生成并运行您按照本演练创建的程序。
 
 ### <a name="create-a-visual-c-source-file-and-compile-it-on-the-command-line"></a>创建一个 Visual C++源文件，并在命令行上对其进行编译
 
-1. 在 "开发人员命令提示" 窗口中，输入 `md c:\hello` 创建目录，然后输入 `cd c:\hello` 以更改到该目录。 此目录是在其中创建源文件和已编译程序的位置。
+1. 在 "开发人员命令提示" 窗口中，输入 `md c:\hello` 以创建目录，然后输入 `cd c:\hello` 更改为该目录。 此目录是在其中创建源文件和已编译程序的位置。
 
 1. 在命令提示符窗口中输入 `notepad hello.cpp`。
 

@@ -1,29 +1,29 @@
 ---
-title: 编译器警告 （等级 3） C4018
+title: 编译器警告（等级3） C4018
 ms.date: 11/04/2016
 f1_keywords:
 - C4018
 helpviewer_keywords:
 - C4018
 ms.assetid: 6e8cbb04-d914-4319-b431-cbc2fbe40eb1
-ms.openlocfilehash: 6436f62a06cbe931ca5b42751d60507f21675c5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e136a82f8a0ecb3f5375d3a486dd017df7edb6e0
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402367"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051984"
 ---
-# <a name="compiler-warning-level-3-c4018"></a>编译器警告 （等级 3） C4018
+# <a name="compiler-warning-level-3-c4018"></a>编译器警告（等级3） C4018
 
-expression： 有符号/无符号不匹配
+"expression"：有符号/无符号不匹配
 
-比较符号和无符号数字所需的编译器将有符号的值转换为无符号。
+比较有符号和无符号数字需要编译器将有符号值转换为无符号值。
 
-如果要转换的两种类型一个测试签名和未签名的类型时，可能会修复此警告。
+如果在测试有符号和无符号类型时强制转换两种类型之一，则可能会修复此警告。
 
-下面的示例生成 C4018:
+下面的示例生成 C4018：
 
-```
+```cpp
 // C4018.cpp
 // compile with: /W3
 int main() {

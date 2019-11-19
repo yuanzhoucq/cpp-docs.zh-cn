@@ -1,29 +1,29 @@
 ---
-title: 编译器警告 （等级 1） C4047
+title: 编译器警告（等级1） C4047
 ms.date: 11/04/2016
 f1_keywords:
 - C4047
 helpviewer_keywords:
 - C4047
 ms.assetid: b75ad6fb-5c93-4434-a85f-c4083051a5de
-ms.openlocfilehash: 87c9e39e5dac40341adc63af45cc0e460806c736
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0bfbcb0e88380dfcc21eb724fc3682ac66b655e6
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388821"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624935"
 ---
-# <a name="compiler-warning-level-1-c4047"></a>编译器警告 （等级 1） C4047
+# <a name="compiler-warning-level-1-c4047"></a>编译器警告（等级1） C4047
 
 “运算符”:“identifier1”与“identifier2”的间接级别不同
 
-一个指针可以指向的变量 （一级间接寻址） 与另一个指针指向变量 （两层中间环节），依此类推。
+指针可指向变量（一级间接寻址）、指向变量的另一个指针（两个间接级别）等。
 
 ## <a name="example"></a>示例
 
-下面的示例生成 C4047:
+下面的示例生成 C4047：
 
-```
+```c
 // C4047.c
 // compile with: /W1
 
@@ -41,9 +41,9 @@ int main() {
 
 ## <a name="example"></a>示例
 
-下面的示例生成 C4047:
+下面的示例生成 C4047：
 
-```
+```c
 // C4047b.c
 // compile with: /W1
 #include <stdio.h>

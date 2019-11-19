@@ -1,39 +1,40 @@
 ---
-title: Visual Studio 2015 和 Visual Studio 2019 之间的 C++ 二进制兼容性
-ms.date: 10/17/2019
+title: C++Visual Studio 2015、2017和2019之间的二进制兼容性
+description: 介绍 Visual Studio 2015、2017和C++ 2019 中编译文件之间的二进制兼容性。 一个 Microsoft Visual C++可再发行组件包适用于所有三个版本。
+ms.date: 11/11/2019
 helpviewer_keywords:
 - binary compatibility, Visual C++
 ms.assetid: 591580f6-3181-4bbe-8ac3-f4fbaca949e6
-ms.openlocfilehash: 6365ded349ad08a167b76ca9f6ab43e6e7752987
-ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
+ms.openlocfilehash: 118ad0a32d5dc8c344967f9a67f2d5b05aa806c0
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72587901"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73965554"
 ---
-# <a name="c-binary-compatibility-between-visual-studio-2015-and-visual-studio-2019"></a>Visual Studio 2015 和 Visual Studio 2019 之间的 C++ 二进制兼容性
+# <a name="c-binary-compatibility-between-visual-studio-2015-2017-and-2019"></a>C++Visual Studio 2015、2017和2019之间的二进制兼容性
 
-在 Visual Studio 2013 及更低版本中，不能保证使用不同编译器工具集和运行时库版本生成的对象文件 (OBJ)、静态库 (LIB)、动态库 (DLL) 和可执行文件 (EXE) 之间的二进制兼容性。 
+Visual Studio 2013 和C++更早版本中的 Microsoft （MSVC）编译器工具集不保证各版本之间的二进制兼容性。 不能链接对象文件、静态库、动态库和由不同版本生成的可执行文件。 Abi、对象格式和运行库是不兼容的。
 
-在 Visual Studio 2015 及更高版本中，C++ 工具集的主版本号是 14（Visual Studio 2015 是 v140，Visual Studio 2017 是 v141，Visual Studio 2019 是 v142）。 这反映了这样的事实：使用这两个版本之一的编译器编译的运行时库和应用程序是二进制兼容的。 这意味着，如果拥有使用 Visual Studio 2015 生成的第三方库，则无需对其进行重新编译即可通过使用 Visual Studio 2017 或 Visual Studio 2019 生成的应用程序使用该库。
+我们已在 Visual Studio 2015、2017和2019中更改了此行为。 任何这些版本的编译器编译的运行时库和应用都是二进制兼容的。 它反映在C++工具集主编号中，这对于所有三个版本均为14。 （工具集版本是 v140 for Visual Studio 2015、v141 for 2017 和 v142 for 2019）。 假设你有 Visual Studio 2015 生成的第三方库。 你仍可以在 Visual Studio 2017 或2019生成的应用程序中使用它们。 无需使用匹配的工具集进行重新编译。 最新版本的 Microsoft Visual C++可再发行组件包（可再发行组件）适用于所有版本。
 
-此规则的唯一例外是，使用 `/GL` 编译器开关编译的静态库或对象文件不是二进制兼容的。 
+此规则有一个例外：使用 `/GL` 编译器开关编译的静态库或对象文件在不同版本之间*不*兼容二进制。
 
-混合使用通过 MSVC 工具集的不同受支持版本生成的二进制文件时，应用程序在其上运行的 Visual C++ 可再发行组件的版本不能低于用于生成应用或其使用的任何库的任何工具集版本。 
+应用使用的可再发行组件具有重要的二进制兼容性限制。 当混合使用不同的受支持版本的工具集生成的二进制文件时，它适用。 可再发行版本必须至少与任何应用组件所用的最新工具集相同。
 
-## <a name="upgrade-microsoft-visual-c-redistributable-from-visual-studio-2015-or-2017-to-visual-studio-2019"></a>从 Visual Studio C++ 2015 或2017升级到 visual studio 2019 的 Microsoft Visual 可再发行组件
+## <a name="upgrade-the-microsoft-visual-c-redistributable-from-visual-studio-2015-or-2017-to-visual-studio-2019"></a>将 Microsoft Visual C++ studio 2015 或2017中的可再发行组件升级到 visual studio 2019
 
-由于我们已保留二进制兼容性，并且保持与 visual Studio 2015、2017和2019的C++视觉可再发行组件相同的主版本（14），因此，任何时候C++都只能从这些位置安装一个 visual 可再发行组件版本。 较新版本将覆盖已安装的旧版本。 如果你有 visual Studio C++ 2015 或2017中的可再发行组件，然后再安装2019，则2019版本将覆盖较旧的版本。 由于我们确保最新版本将具有所有最新的功能和 bug 修补程序（包括安全修补程序），因此我们始终建议升级到最新的可用版本。
+我们为 Visual Studio 2015、 C++ 2017 和2019保留了相同的 Microsoft visual 可再发行组件主版本号。 这意味着一次只能安装一个可再发行的实例。 较新的版本将覆盖已安装的任何较旧版本。 例如，一个应用可以安装 Visual Studio 2015 中的可再发行组件。 然后，另一个应用从 Visual Studio 2019 安装可再发行组件。 2019版本覆盖了较旧的版本，但由于它们是二进制兼容的，所以前面的应用程序仍能正常工作。 我们确保最新版本的可再发行组件包含所有最新功能、安全更新和 bug 修复。 这就是我们始终建议升级到最新可用版本的原因。
 
-同样，我们不允许在已存在较新版本的C++计算机上安装旧版 Visual 可再发行版本。 在已有C++ 2019 的计算机上安装 visual Studio 2015 或2017中的可再发行组件会导致安装失败。 错误如下所示：
+同样，如果已安装较新版本，则无法安装较旧的可再发行组件。 如果尝试，安装程序将报告错误。 如果在已有2019版本的计算机上安装2015或2017可再发行组件，会看到类似于下面的错误：
 
+```Output
+0x80070666 - Another version of this product is already installed. Installation of this version cannot continue. To configure or remove the existing version of this product, use Add/Remove Programs on the Control Panel.
 ```
-*0x80070666 - Another version of this product is already installed. Installation of this version cannot continue. To configure or remove the existing version of this product, use Add/Remove Programs on the Control Panel.*.
-```
 
-此错误是由设计决定的。 建议保留最新的安装。
+此错误是由设计决定的。 建议保留最新版本。 请确保安装程序可在不提示的情况下从此错误恢复。
 
 ## <a name="see-also"></a>请参阅
 
-* [Visual C++ 更改历史记录](../porting/visual-cpp-change-history-2003-2015.md)
-* [最新支持的C++ Visual 可再发行组件下载](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads) 
+[视觉C++更改历史记录](../porting/visual-cpp-change-history-2003-2015.md)\
+[最新支持的C++ Visual 可再发行组件下载](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4191
 ms.assetid: 576d3bc6-95b7-448a-af31-5d798452df09
-ms.openlocfilehash: 72a485811647911207b6d048c686acdadd142b65
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd0d7dc57c8d3c94a52f72b536657bb3ea1c6b3a
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402250"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051880"
 ---
 # <a name="compiler-warning-level-3-c4191"></a>编译器警告（等级 3）C4191
 
@@ -27,7 +27,7 @@ ms.locfileid: "62402250"
 
 - 不同的参数列表长度（在 `__cdecl`上，仅在从较长列表到较短列表的强制转换中，即使较短的列表为 varargs）。
 
-- 指向数据的指针 (而不**void**<strong>\*</strong>) 的函数的指针作为别名。
+- 指向函数的指针的数据的指针（ **void** <strong>\*</strong>除外）。
 
 - 任何其他将在 `reinterpret_cast`上产生错误或警告的类型差异。
 
@@ -37,7 +37,7 @@ ms.locfileid: "62402250"
 
 以下示例生成 C4191：
 
-```
+```cpp
 // C4191.cpp
 // compile with: /W3 /clr
 #pragma warning(default: 4191)

@@ -1,29 +1,29 @@
 ---
-title: 编译器警告（等级 2）C4250
+title: 编译器警告（等级2） C4250
 ms.date: 11/04/2016
 f1_keywords:
 - C4250
 helpviewer_keywords:
 - C4250
 ms.assetid: d47f7249-6b5a-414b-b2d4-56e5d246a782
-ms.openlocfilehash: 8baf3c03c87dc70a80b785d7f81cbee4e1d828f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03826f10659cbdf6035cd4dedebecca3e3302e3a
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349706"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052118"
 ---
-# <a name="compiler-warning-level-2-c4250"></a>编译器警告（等级 2）C4250
+# <a name="compiler-warning-level-2-c4250"></a>编译器警告（等级2） C4250
 
-class1： 继承 class2::member 通过域控制
+"class1"：通过控制继承 "class2：： member"
 
-两个或多个成员具有相同的名称。 中的一个`class2`因为它是包含此成员的其他类的基类继承。
+两个或多个成员具有相同的名称。 `class2` 中的一个是继承的，因为它是包含此成员的其他类的基类。
 
-若要禁止 C4250，请使用[警告](../../preprocessor/warning.md)杂注。
+若要取消 C4250，请使用[警告](../../preprocessor/warning.md)杂注。
 
-因为在多个派生类之间共享虚拟基类，派生类中的名称决定在基类中的名称。 例如，给定以下类层次结构，有两个定义的菱形中可以继承 func： 通过弱类，并通过主导类基准:: func() vbc::func() 实例。 通过菱形类对象，func() 的非限定的调用始终调用主要:: func() 实例。  如果弱类要引入 func() 的实例，既不会控制定义，并且调用将会被标记为不明确。
+由于虚拟基类在多个派生类之间共享，因此派生类中的名称支配基类中的名称。 例如，假设有以下类层次结构，则在菱形中继承了两个 func 定义： vbc：： func （）实例通过弱类，并通过主导类实现了主导：： func （）。 通过菱形类对象的 func （）的非限定调用始终调用主导：： func （）实例。  如果弱类要引入 func （）的实例，则这两个定义都不会成为主导的，并且调用会被标记为不明确。
 
-```
+```cpp
 // C4250.cpp
 // compile with: /c /W2
 #include <stdio.h>
@@ -49,7 +49,7 @@ int main() {
 
 下面的示例生成 C4250。
 
-```
+```cpp
 // C4250_b.cpp
 // compile with: /W2 /EHsc
 #include <iostream>
@@ -80,9 +80,9 @@ int main() {
 
 ## <a name="example"></a>示例
 
-此示例演示更复杂的情况。 下面的示例生成 C4250。
+此示例显示了更复杂的情况。 下面的示例生成 C4250。
 
-```
+```cpp
 // C4250_c.cpp
 // compile with: /W2 /EHsc
 #include <iostream>

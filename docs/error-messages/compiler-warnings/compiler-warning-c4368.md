@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C4368
 ms.assetid: cb85bcee-fd3d-4aa5-b626-2324f07a4f1b
-ms.openlocfilehash: b2af1166738d867c84ff4ebae832f831af7940ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b1870d076d21c02574793a8079c4658b39ebf121
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311483"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73623635"
 ---
 # <a name="compiler-warning-c4368"></a>编译器警告 C4368
 
-不能定义为托管 type 的成员 member： 不支持混合的类型
+无法将 "member" 定义为托管 "type" 的成员：不支持混合类型
 
-不能在 CLR 类型中嵌入本机数据成员。
+不能将本机数据成员嵌入 CLR 类型中。
 
-但是，您可以声明一个指向本机类型的指针，并在托管类的构造函数、析构函数和终结器中控制其生命周期。 有关详细信息请参阅[析构函数和终结器](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)。
+但是，您可以声明一个指向本机类型的指针，并在托管类的构造函数、析构函数和终结器中控制其生命周期。 有关详细信息，请参阅[析构函数和终结](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)器。
 
-始终作为错误发出此警告。 使用[警告](../../preprocessor/warning.md)杂注来禁用 C4368。
+此警告总是作为错误发出。 使用[警告](../../preprocessor/warning.md)杂注禁用 C4368。
 
 ## <a name="example"></a>示例
 
 下面的示例生成 C4368。
 
-```
+```cpp
 // C4368.cpp
 // compile with: /clr /c
 struct N {};

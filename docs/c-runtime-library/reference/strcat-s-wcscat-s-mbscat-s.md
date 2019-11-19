@@ -38,12 +38,12 @@ helpviewer_keywords:
 - _mbscat_s_l function
 - appending strings
 ms.assetid: 0f2f9901-c5c5-480b-98bc-f8f690792fc0
-ms.openlocfilehash: 4449ec788b33a541a04a46d972f56f792797a16e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b0f2d1a295908ba2f0c8a89f57e81d6f822f3535
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957981"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625783"
 ---
 # <a name="strcat_s-wcscat_s-_mbscat_s-_mbscat_s_l"></a>strcat_s、wcscat_s、_mbscat_s、_mbscat_s_l
 
@@ -121,9 +121,9 @@ Null 终止的目标字符串缓冲区。
 
 |*strDestination*|*numberOfElements*|*strSource*|返回值|*StrDestination*的内容|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**NULL**或未终止|任何|任何|**EINVAL**|未修改|
-|任何|任何|**NULL**|**EINVAL**|*strDestination*[0] 设置为0|
-|任何|0 或过小|任何|**ERANGE**|*strDestination*[0] 设置为0|
+|**NULL**或未终止|any|any|**EINVAL**|未修改|
+|any|any|**NULL**|**EINVAL**|*strDestination*[0] 设置为0|
+|any|0 或过小|any|**ERANGE**|*strDestination*[0] 设置为0|
 
 ## <a name="remarks"></a>备注
 
@@ -144,9 +144,9 @@ strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
 
 具有 **_l**后缀的函数的版本具有相同的行为，但使用传入的区域设置参数而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 
-这些函数的调试版本首先用 0xFD 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+这些函数的调试库版本首先用0xFE 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -162,7 +162,7 @@ strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
 |**wcscat_s**|\<string.h> 或 \<wchar.h>|
 |**_mbscat_s**|\<mbstring.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参见 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 

@@ -3,12 +3,12 @@ title: 在 Visual Studio 中连接到你的目标 Linux 系统
 description: 如何从 Visual Studio C++ 项目内连接到远程 Linux 计算机或 WSL。
 ms.date: 09/04/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: 2f4e6311493f2b29ba6911ec1b76225b6c7abe6d
-ms.sourcegitcommit: b85e1db6b7d4919852ac6843a086ba311ae97d40
+ms.openlocfilehash: 3d91faa7aa83c86e8c2f3544ee61c16f75f8c346
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71925559"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626769"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>在 Visual Studio 中连接到你的目标 Linux 系统
 
@@ -72,13 +72,27 @@ Linux 支持在 Visual Studio 2017 及更高版本中提供。
 
    ::: moniker range="vs-2019"
 
-   转到“工具”>“选项”>“跨平台”>“日志记录”以启用日志记录，帮助故障排除连接问题：
+   转到“工具”>“选项”>“跨平台”>“日志记录”  以启用日志记录，帮助故障排除连接问题：
 
    ![远程日志记录](media/remote-logging-vs2019.png)
 
    日志包括连接、发送到远程计算机的所有命令（其文本、退出代码和执行时间）以及从 Visual Studio 到 shell 的所有输出。 日志记录适用于 Visual Studio 中的任何跨平台 CMake 项目或基于 MSBuild 的 Linux 项目。
 
-   你可以配置输出，以转到一个文件或转到“输出窗口”中的“跨平台日志记录”窗格。 对于基于 MSBuild 的 Linux 项目，MSBuild 发出到远程计算机的命令不会路由到“输出窗口”，因为它们发出到进程外。 相反，它们将记录到前缀为“msbuild_”的文件。
+   你可以配置输出，以转到一个文件或转到“输出窗口”中的“跨平台日志记录”  窗格。 对于基于 MSBuild 的 Linux 项目，MSBuild 发出到远程计算机的命令不会路由到“输出窗口”  ，因为它们发出到进程外。 相反，它们将记录到前缀为“msbuild_”的文件。
+   
+## <a name="tcp-port-forwarding"></a>TCP 端口转发
+
+Visual Studio 的 Linux 支持依赖于 TCP 端口转发。 如果在远程系统上禁用了 TCP 端口转发，则 Rsync  和 gdbserver  将会受到影响。 
+
+Rsync 由基于 MSBuild 的 Linux 项目和 CMake 项目用来[将标题从远程系统复制到 Windows，以用于 IntelliSense](configure-a-linux-project.md#remote_intellisense)。 如果无法启用 TCP 端口转发，则可以通过“工具”>“选项”>“跨平台”>“连接管理器”>“远程标头 IntelliSense 管理器”来禁用远程标头的自动下载。 如果你尝试连接的远程系统未启用 TCP 端口转发，则在开始下载 IntelliSense 的远程标头时，会看到以下错误。
+
+![标头错误](media/port-forwarding-headers-error.png)
+
+Visual Studio 的 CMake 支持也使用 Rsync 将源文件复制到远程系统。 如果无法启用 TCP 端口转发，则可以将 sftp 用作远程复制源方法。 sftp 通常会比 rsync 慢，但不依赖于 TCP 端口转发。 你可以在 [CMake 设置编辑器](../build/cmakesettings-reference.md#additional-settings-for-cmake-linux-projects)中，借助 remoteCopySourcesMethod 属性来管理远程复制源方法。 如果在远程系统上禁用了 TCP 端口转发，则在第一次调用 rsync 时，会在 CMake 输出窗口中看到一条错误。
+
+![rsync 错误](media/port-forwarding-copy-error.png)
+
+gdbserver 可用于在嵌入式设备上进行调试。 如果无法启用 TCP 端口转发，则需要对所有远程调试方案使用 gdb。 在远程系统上调试项目时，默认情况下使用 gdb。 
 
    ::: moniker-end
 
@@ -86,7 +100,7 @@ Linux 支持在 Visual Studio 2017 及更高版本中提供。
 
 ::: moniker range="vs-2017"
 
-在 Visual Studio 2017 中，使用如本文前面部分中所述的连接到远程 Linux 计算机的相同步骤连接到 WSL。 使用 localhost 作为主机名。
+在 Visual Studio 2017 中，使用如本文前面部分中所述的连接到远程 Linux 计算机的相同步骤连接到 WSL。 使用 localhost  作为主机名  。
 
 ::: moniker-end
 

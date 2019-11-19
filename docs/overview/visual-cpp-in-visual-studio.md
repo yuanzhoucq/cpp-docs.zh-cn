@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 67bed9a8ce9b5cfbe11a5383d2f67ea6c02d1106
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.openlocfilehash: ea047aca90b03179c0a39cb653e0b9bc08306c64
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552376"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626215"
 ---
 # <a name="c-in-visual-studio"></a>Visual Studio 中的 C++
 
@@ -36,7 +36,7 @@ Visual Studio 2003 到 2015 每个版本中的 C++ 新增功能。
 [Visual Studio 中的 C++ 符合性改进](cpp-conformance-improvements.md)<br/>
 了解 Visual Studio 中 C++ 的符合性改进情况。
 
-[Visual C++ 语言一致性](visual-cpp-language-conformance.md)<br/>
+[Microsoft C++ 语言一致性表](visual-cpp-language-conformance.md)<br/>
 MSVC C++ 编译器中按功能列出的符合性状态列表。
 
 [Visual C++ 更改历史记录（2003 - 2015）](../porting/visual-cpp-change-history-2003-2015.md)<br/>

@@ -1,35 +1,35 @@
 ---
-title: 编译器警告 （等级 1） C4114
+title: 编译器警告（等级1） C4114
 ms.date: 11/04/2016
 f1_keywords:
 - C4114
 helpviewer_keywords:
 - C4114
 ms.assetid: 3983e1c6-e8bb-46dc-8894-e1827db48797
-ms.openlocfilehash: 41e951e7c4a8b23ddbec14c5421f66702e70c937
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5662dba4339765db27d225eff2ad382ed56396ac
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300253"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626297"
 ---
-# <a name="compiler-warning-level-1-c4114"></a>编译器警告 （等级 1） C4114
+# <a name="compiler-warning-level-1-c4114"></a>编译器警告（等级1） C4114
 
 多次使用同一类型限定符
 
-类型声明或定义使用类型限定符 (**const**，**易失性**，**签名**，或者**无符号**) 不止一次。 这将导致具有 Microsoft 扩展 (/Ze) 的警告和 ANSI 兼容性 (/Za) 错误。
+类型声明或定义多次使用类型限定符（**const**、 **volatile**、**有符号**或**无符号**）。 这会导致 Microsoft 扩展（/Ze）出现警告，并在 ANSI 兼容性（/Za）下出错。
 
-下面的示例生成 C4114:
+下面的示例生成 C4114：
 
-```
+```cpp
 // C4114.cpp
 // compile with: /W1 /c
 volatile volatile int i;   // C4114
 ```
 
-下面的示例生成 C4114:
+下面的示例生成 C4114：
 
-```
+```cpp
 // C4114_b.cpp
 // compile with: /W1 /c
 static const int const * ii;   // C4114

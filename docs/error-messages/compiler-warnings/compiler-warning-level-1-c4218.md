@@ -1,27 +1,27 @@
 ---
-title: 编译器警告（等级 1）C4218
+title: 编译器警告（等级1） C4218
 ms.date: 11/04/2016
 f1_keywords:
 - C4218
 helpviewer_keywords:
 - C4218
 ms.assetid: d6c3cd90-4518-49e9-ae86-4ba9e2761d98
-ms.openlocfilehash: 36d5de3b1270b41edfc391df960a556aca207709
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1db3eabc3b614019676dc4494e83104c62fe579
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386468"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627305"
 ---
-# <a name="compiler-warning-level-1-c4218"></a>编译器警告（等级 1）C4218
+# <a name="compiler-warning-level-1-c4218"></a>编译器警告（等级1） C4218
 
-使用了非标准扩展： 必须指定至少一个存储类或类型
+使用了非标准扩展：必须至少指定一个存储类或一个类型
 
-使用默认的 Microsoft 扩展 (/Ze) 中，可以声明一个变量，而无需指定类型或存储类。 默认类型为 `int`。
+使用默认的 Microsoft 扩展（/Ze），可以在不指定类型或存储类的情况下声明变量。 默认类型为 `int`。
 
 ## <a name="example"></a>示例
 
-```
+```cpp
 // C4218.c
 // compile with: /W4
 i;  // C4218
@@ -31,4 +31,4 @@ int main()
 }
 ```
 
-此类声明是在 ANSI 兼容性无效 ([/Za](../../build/reference/za-ze-disable-language-extensions.md))。
+此类声明在 ANSI 兼容性（[/za](../../build/reference/za-ze-disable-language-extensions.md)）下无效。

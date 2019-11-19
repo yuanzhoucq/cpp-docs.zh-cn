@@ -1,33 +1,33 @@
 ---
-title: 编译器警告（等级 1）C4691
+title: 编译器警告（等级1） C4691
 ms.date: 11/04/2016
 f1_keywords:
 - C4691
 helpviewer_keywords:
 - C4691
 ms.assetid: 722133d9-87f6-46c1-9e86-9825453d6999
-ms.openlocfilehash: c194e19c8766b67eb7deef32e7228564cda5f1e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6124171bb5f257dac1dd972f7943d001fb54c9ca
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406374"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051359"
 ---
-# <a name="compiler-warning-level-1-c4691"></a>编译器警告（等级 1）C4691
+# <a name="compiler-warning-level-1-c4691"></a>编译器警告（等级1） C4691
 
-type： 在未引用程序集 file，而是使用了当前翻译单元中定义的类型应是引用类型
+"type"：引用的类型在未引用的程序集 "file" 中应为，而在当前使用的翻译单元中定义的类型为。
 
-不引用包含原始类型定义的元数据文件，且编译器所使用的本地类型定义。
+未引用包含原始类型定义的元数据文件，并且编译器正在使用本地类型定义。
 
-在您正在重新生成的情况下*文件*，可以忽略或使用杂注关闭 C4691[警告](../../preprocessor/warning.md)。  也就是说，如果要生成该文件是编译器希望查找的类型定义的文件同名，则可以忽略 C4691。
+在重新生成*文件*的情况下，可以忽略 C4691 或关闭杂注[警告](../../preprocessor/warning.md)。  也就是说，如果所生成的文件与编译器希望在其中查找类型定义的文件相同，则可以忽略 C4691。
 
-但是，可能发生意外的行为，如果编译器将使用不是来自同一元数据; 中引用的程序集的定义CLR 类型被类型不仅按类型的名称，还由程序集。  也就是说，从程序集 z.dll 类型 Z 为不同于从程序集 y.dll 类型 Z。
+但是，如果编译器使用的定义不是在元数据中引用的同一程序集，则可能会出现意外行为;CLR 类型不仅类型化，还会由程序集类型的名称键入。  也就是说，程序集 z 中的类型 Z 不同于程序集 y 的类型 Z。
 
 ## <a name="example"></a>示例
 
 此示例包含原始类型定义。
 
-```
+```cpp
 // C4691_a.cpp
 // compile with: /clr /LD /W1
 public ref class Original_Type {};
@@ -35,9 +35,9 @@ public ref class Original_Type {};
 
 ## <a name="example"></a>示例
 
-此示例引用 C4691_a.dll 和声明类型 Original_Type 的字段。
+此示例引用 C4691_a，并声明 Original_Type 类型的字段。
 
-```
+```cpp
 // C4691_b.cpp
 // compile with: /clr /LD
 #using "C4691_a.dll"
@@ -49,11 +49,11 @@ public:
 
 ## <a name="example"></a>示例
 
-下面的示例生成 C4691。  请注意，此示例包含 Original_Type 定义，并不引用 C4691a.dll。
+下面的示例生成 C4691。  请注意，此示例包含 Original_Type 的定义，并且不引用 C4691a。
 
-若要解决，引用包含原始类型定义的元数据文件和删除的局部声明和定义。
+若要解决此问题，请引用包含原始类型定义的元数据文件，并删除本地声明和定义。
 
-```
+```cpp
 // C4691_c.cpp
 // compile with: /clr /LD /W1
 // C4691 expected

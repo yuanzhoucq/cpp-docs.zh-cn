@@ -1,27 +1,27 @@
 ---
-title: 编译器警告（等级 3）C4240
+title: 编译器警告（等级3） C4240
 ms.date: 11/04/2016
 f1_keywords:
 - C4240
 helpviewer_keywords:
 - C4240
 ms.assetid: a2657cdb-18e1-493f-882b-4e10c0bca71d
-ms.openlocfilehash: fe5306cc7909138fea0159553b53c2adc6a46dc0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3636e902e8d6ecd34cdc3e1135761c8595dc5998
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402211"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051761"
 ---
-# <a name="compiler-warning-level-3-c4240"></a>编译器警告（等级 3）C4240
+# <a name="compiler-warning-level-3-c4240"></a>编译器警告（等级3） C4240
 
-使用了非标准扩展： 访问 classname 现定义为访问说明符，而以前它被定义为访问说明符
+使用了非标准扩展：对 "classname" 的访问现在被定义为 "访问说明符"，而以前被定义为 "access 说明符"
 
-在 ANSI 兼容性 ([/Za](../../build/reference/za-ze-disable-language-extensions.md))，不能用于嵌套类更改的访问权限。 在默认的 Microsoft 扩展 (/Ze) 中，您可以，并发出以下警告。
+在 ANSI 兼容性（[/za](../../build/reference/za-ze-disable-language-extensions.md)）下，不能更改对嵌套类的访问。 在默认的 Microsoft 扩展（/Ze）下，可以通过此警告。
 
 ## <a name="example"></a>示例
 
-```
+```cpp
 // C4240.cpp
 // compile with: /W3
 class X

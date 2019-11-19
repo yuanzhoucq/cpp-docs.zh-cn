@@ -5,12 +5,12 @@ ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: f02c5878f5f741c216499f619bfd1392483bfa86
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.openlocfilehash: bde8b8e17c3186d22493f099a5f7d1b5a2646a67
+ms.sourcegitcommit: 2362d15b5eb18d27773c3f7522da3d0eed9e2571
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552347"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73754138"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Visual Studio 中的 C++ 新变化
 
@@ -257,6 +257,10 @@ Visual Studio 2017 向 C++ 环境引入了许多更新和修补程序。 我们�
 
 Visual Studio 15.7 版中的 MSVC 编译器工具集现符合 C++ 标准。 有关详细信息，请参阅[公告：MSVC 符合 C++ 标准](https://devblogs.microsoft.com/cppblog/announcing-msvc-conforms-to-the-c-standard/)和 [Microsoft C++ 语言合规性](../visual-cpp-language-conformance.md)。
 
+##### <a name="visual-studio-2017-version-158"></a>Visual Studio 2017 版本 15.8
+
+[/experimental:preprocessor](../build/reference/experimental-preprocessor.md) 编译器开关启用了新的实验性 MSVC 预处理器，最终将符合所有适用的 C 和 C++ 标准。 有关详细信息，请参阅 [MSVC 试验性预处理器概述](../preprocessor/preprocessor-experimental-overview.md)。
+
 ### <a name="new-compiler-options"></a>新的编译器选项
 
 - [/permissive-](../build/reference/permissive-standards-conformance.md)：启用所有严格标准符合性编译器选项，并禁用大部分特定于 Microsoft 的编译器扩展（但有一些例外，比如 `__declspec(dllimport)`）。 在 Visual Studio 2017 15.5 版中此选项默认为开启状态。  /permissive- 符合性模式包括对两阶段名称查找的支持  。 有关详细信息，请参阅 [Visual Studio 中 C++ 的符合性改进](cpp-conformance-improvements.md)。
@@ -360,11 +364,11 @@ Microsoft C++ 编译器支持 Intel AVX-512，包括将 AVX-512 中的新函数�
 - 添加了 \<optional\>、\<variant\>、`shared_ptr::weak_type` 和 \<cstdalign\>。
 - 在 `min(initializer_list)`、`max(initializer_list)`、`minmax(initializer_list)`、`min_element()`, `max_element()` 和 `minmax_element()` 中实现了 C++14 `constexpr`。
 
-有关详细信息，请参阅 [Visual C++ 语言一致性](../visual-cpp-language-conformance.md)。
+有关详细信息，请参阅 [Microsoft C++ 语言一致性表](../visual-cpp-language-conformance.md)。
 
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 版本 15.3
 
-- 已经实现了几个其他的 C++17 功能。 有关详细信息，请参阅 [Visual C++ 语言一致性](cpp-conformance-improvements.md#improvements_153)。
+- 已经实现了几个其他的 C++17 功能。 有关详细信息，请参阅 [Microsoft C++ 语言一致性表](cpp-conformance-improvements.md#improvements_153)。
 - 实现了 P0602R0“变体和可选项应传播副本/移动琐碎事项”。
 - 现在，标准库正式允许通过 [/GR-](../build/reference/gr-enable-run-time-type-information.md) 选项禁用动态 RTTI。 `dynamic_pointer_cast()` 和 `rethrow_if_nested()` 必定需要 `dynamic_cast`，因此标准库现在 /GR- 下将其标记为 `=delete`  。
 - 即使已通过 /GR- 禁用了动态 RTTI，“静态 RTTI”（采用 `typeid(SomeType)` 形式）仍可用，并为多个标准库组件提供支持  。 现在，标准库也支持通过 /D\_HAS\_STATIC\_RTTI=0 禁用此功能  。 此标志还将禁用 `std::any`、`std::function` 的 `target()` 和 `target_type()` 成员函数，以及 `std::shared_ptr` 和 `std::weak_ptr` 的 `get_deleter()` 友元成员函数。
@@ -422,7 +426,7 @@ Microsoft C++ 编译器支持 Intel AVX-512，包括将 AVX-512 中的新函数�
 - `constexpr char_traits`
 - 标准库的推导指南
 
-有关详细信息，请参阅 [Visual C++ 语言一致性](../visual-cpp-language-conformance.md)。
+有关详细信息，请参阅 [Microsoft C++ 语言一致性表](../visual-cpp-language-conformance.md)。
 
 ### <a name="performance-and-throughput-fixes"></a>性能和吞吐量修复
 
@@ -570,7 +574,7 @@ Visual Studio 2017 支持在不转换为 MSBuild 项目文件 (.vcxproj) 的情�
 
 - 通过 CMakeLists.txt 文件所在的同一文件夹中的 CMakeSettings.json 文件提供进一步的配置支持。
 
-  ![Cmake 打开文件夹](media/cmake-cpp.png "CMake 打开文件夹")
+  ![Cmake 打开文件夹](media/cmake-cpp.png "Cmake 打开文件夹")
 
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 版本 15.3
 

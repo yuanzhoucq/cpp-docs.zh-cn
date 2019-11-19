@@ -1,25 +1,25 @@
 ---
-title: 编译器警告（等级 1）C4258
+title: 编译器警告（等级1） C4258
 ms.date: 11/04/2016
 f1_keywords:
 - C4258
 helpviewer_keywords:
 - C4258
 ms.assetid: bbb75e6d-6693-4e62-8ed3-b006a0ec55e3
-ms.openlocfilehash: a3ce4c81a86920baddfc1b277df0236a96254be4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75d706fafacc5c1524915d063a7fa392cea01b4c
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207391"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624879"
 ---
-# <a name="compiler-warning-level-1-c4258"></a>编译器警告（等级 1）C4258
+# <a name="compiler-warning-level-1-c4258"></a>编译器警告（等级1） C4258
 
-variable： 从定义忽略 for 循环;使用封闭范围中的定义"
+"variable"：忽略 for 循环中的定义;使用封闭范围中的定义 "
 
-下[/Ze](../../build/reference/za-ze-disable-language-extensions.md)并[/zc: forscope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)中, 定义的变量[有关](../../cpp/for-statement-cpp.md)循环之后超出范围**为**循环结束。 如果在作用域包含再次使用循环变量，但在封闭的循环中，定义与同名的变量，会出现此警告**为**循环。 例如：
+在[/ze](../../build/reference/za-ze-disable-language-extensions.md)和[/zc： forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)下， [for 循环中定义的变量](../../cpp/for-statement-cpp.md)将在**for**循环结束后超出范围。 如果在包含**for**循环的作用域中再次使用与循环变量同名但在封闭循环中定义的变量，则会出现此警告。 例如:
 
-```
+```cpp
 // C4258.cpp
 // compile with: /Zc:forScope /W1
 int main()

@@ -1,29 +1,29 @@
 ---
-title: 编译器警告 （等级 1） C4096
+title: 编译器警告（等级1） C4096
 ms.date: 11/04/2016
 f1_keywords:
 - C4096
 helpviewer_keywords:
 - C4096
 ms.assetid: abf3cca2-2f21-45d8-b025-6b513b00681e
-ms.openlocfilehash: 287465e9a3f5681f459f0823a4409b0906309a55
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f526b26eda4c02825d225aa007c6029cc4b03dd
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280448"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627076"
 ---
-# <a name="compiler-warning-level-1-c4096"></a>编译器警告 （等级 1） C4096
+# <a name="compiler-warning-level-1-c4096"></a>编译器警告（等级1） C4096
 
-a： 接口不是一个 COM 接口;不会发送到 IDL
+"a"：接口不是 COM 接口;不会发送到 IDL
 
-您可能打算为 COM 接口的接口定义未被定义为 COM 接口，因此将不会发送到 IDL 文件。
+你可能打算用作 COM 接口的接口定义未定义为 COM 接口，因此不会将其发送到 IDL 文件。
 
-请参阅[接口特性](../../windows/attributes/interface-attributes.md)指示接口是一个 COM 接口的列表属性。
+请参阅表示接口是 COM 接口的列表属性的[接口特性](../../windows/attributes/interface-attributes.md)。
 
-下面的示例生成 C4096:
+下面的示例生成 C4096：
 
-```
+```cpp
 // C4096.cpp
 // compile with: /W1 /LD
 #include "windows.h"

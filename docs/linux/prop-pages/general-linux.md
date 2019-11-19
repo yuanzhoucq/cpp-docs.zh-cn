@@ -2,12 +2,12 @@
 title: 常规属性（Linux C++ 项目）| Microsoft Docs
 ms.date: 06/07/2019
 ms.assetid: 56c800a9-3df9-4196-87b2-81adb00e4767
-ms.openlocfilehash: ce3683f11d80c253195b751b5eed364fbc04b68a
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: c17a5e0214e6365d604a80bd4b3891858f0f9186
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821281"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626818"
 ---
 # <a name="general-properties-linux-c"></a>常规属性 (Linux C++)
 
@@ -19,7 +19,7 @@ Linux 支持在 Visual Studio 2017 及更高版本中提供。
 
 ::: moniker range=">=vs-2017"
 
-Property | 说明 | 选项
+属性 | 说明 | 选项
 --- | ---| ---
 输出目录 | 指定输出文件目录的相对路径；可以包含环境变量。
 中间目录 | 指定中间文件目录的相对路径；可以包含环境变量。
@@ -35,4 +35,3 @@ Target Name | 指定此项目将生成的文件名。
 STL 的使用 | 指定要用于此配置的 C++ 标准库。 | **共享 GNU 标准 C++ 库**<br>**静态 GNU 标准 C++ 库 (-static)**<br>
 
 ::: moniker-end
-

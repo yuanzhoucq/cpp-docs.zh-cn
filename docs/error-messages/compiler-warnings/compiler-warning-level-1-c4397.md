@@ -1,29 +1,29 @@
 ---
-title: 编译器警告（等级 1）C4397
+title: 编译器警告（等级1） C4397
 ms.date: 11/04/2016
 f1_keywords:
 - C4397
 helpviewer_keywords:
 - C4397
 ms.assetid: 6346fdc2-dbbf-4fba-803a-32b0d0a707be
-ms.openlocfilehash: 7f0a3c31f460a66523ed1c327cee097dc890bbeb
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: fc13f83f79f8c8103184b4322a77866a78d149be
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447670"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73964930"
 ---
-# <a name="compiler-warning-level-1-c4397"></a>编译器警告（等级 1）C4397
+# <a name="compiler-warning-level-1-c4397"></a>编译器警告（等级1） C4397
 
 已忽略 DefaultCharSetAttribute
 
-<xref:System.Runtime.InteropServices.DefaultCharSetAttribute> Microsoft 将忽略C++编译器。 若要指定为 DLL 设置的字符，使用 DllImport 的 CharSet 选项。 有关详细信息，请参阅[使用C++互操作 (隐式 PInvoke)](../../dotnet/using-cpp-interop-implicit-pinvoke.md)。
+Microsoft C++编译器将忽略 <xref:System.Runtime.InteropServices.DefaultCharSetAttribute>。 若要为 DLL 指定字符集，请使用 DllImport 的字符集选项。 有关详细信息，请[参阅C++ Using 互操作（隐式 PInvoke）](../../dotnet/using-cpp-interop-implicit-pinvoke.md)。
 
 ## <a name="example"></a>示例
 
 下面的示例生成 C4397。
 
-```
+```cpp
 // C4397.cpp
 // compile with: /W1 /c /clr
 using namespace System;
