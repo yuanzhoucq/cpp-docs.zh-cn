@@ -153,12 +153,12 @@ helpviewer_keywords:
 - _WINRT_DLL macro
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
-ms.openlocfilehash: eb75273bc8cbe5ccbf62edc82a1e7deccc605757
-ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
+ms.openlocfilehash: 57982e32da75aa7f364c51146e50c3d75b4b7710
+ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816605"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74163336"
 ---
 # <a name="predefined-macros"></a>预定义宏
 
@@ -188,7 +188,7 @@ MSVC 支持 ANSI/ISO C99 标准所需的预定义预处理器宏，以及 ISO c 
 
 - **&#95;文件&#95; &#95;** 当前源文件的名称。 文件扩展到字符串文字。 **&#95; &#95;&#95;** 若要确保显示文件的完整路径，请使用[/FC （诊断中源代码文件的完整路径）](../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md)。 始终定义此宏。
 
-- **&#95;行&#95; &#95;** 定义为当前源文件中的整数行号。 可以使用 @no__t 5 指令更改 **&#95; &#95;行&#95;** 宏的值。 始终定义此宏。
+- **&#95;行&#95; &#95;** 定义为当前源文件中的整数行号。 可以使用 `#line` 指令 **&#95; &#95;更改&#95;行**宏的值。 始终定义此宏。
 
 - **&#95; STDC &#95; &#95;** 仅在编译为 C 和指定[/za](../build/reference/za-ze-disable-language-extensions.md)编译器选项时定义为1。 否则为 undefined。
 
@@ -220,7 +220,7 @@ MSVC 支持这些其他预定义的宏。
 
 - **&#95;如果&#95;** 默认**char**类型为无符号，则将 CHAR 无符号定义为1。 此值在设置了[/j （默认 Char 类型为无符号）](../build/reference/j-default-char-type-is-unsigned.md)编译器选项时定义。 否则为 undefined。
 
-- **&#95;CLR 版本&#95;&#95;** 定义为一个整数文本，表示用于编译应用程序的公共语言运行时（CLR）的版本。 此值的编码格式为 `Mmmbbbbb`，其中 @no__t 为运行时的主版本，`mm` 为运行时的次版本，`bbbbb` 为生成号。 **&#95;&#95;如果&#95;** 设置了[/clr](../build/reference/clr-common-language-runtime-compilation.md)编译器选项，则定义 CLR 版本。 否则为 undefined。
+- **&#95;CLR 版本&#95;&#95;** 定义为一个整数文本，表示用于编译应用程序的公共语言运行时（CLR）的版本。 此值的编码格式为 `Mmmbbbbb`，其中 `M` 为运行时的主版本，`mm` 为运行时的次版本，`bbbbb` 为生成号。 **&#95;&#95;如果&#95;** 设置了[/clr](../build/reference/clr-common-language-runtime-compilation.md)编译器选项，则定义 CLR 版本。 否则为 undefined。
 
     ```cpp
     // clr_ver.cpp
@@ -235,7 +235,7 @@ MSVC 支持这些其他预定义的宏。
 
 - **&#95;计数器&#95; &#95;** 展开为从0开始的整数文本。 每次将该值用于源文件或源文件的包含标头时，该值将递增1。 当使用预编译头时， **&#95;计数器会记住其状态。 &#95; &#95;** 始终定义此宏。
 
-  此示例使用 `__COUNTER__` 将唯一标识符分配给同一类型的三个不同对象。 @No__t-0 构造函数采用整数作为参数。 在 `main` 中，应用程序声明类型为 @no__t 的三个对象，并使用 `__COUNTER__` 作为唯一标识符参数：
+  此示例使用 `__COUNTER__` 将唯一标识符分配给同一类型的三个不同对象。 `exampleClass` 构造函数采用整数作为参数。 在 `main`中，应用程序声明类型为的三个对象 `exampleClass`，并使用 `__COUNTER__` 作为唯一标识符参数：
 
     ```cpp
     // macro__COUNTER__.cpp
@@ -304,13 +304,13 @@ MSVC 支持这些其他预定义的宏。
 
 - **&#95; FUNCDNAME &#95; &#95;** 定义为包含封闭函数的[修饰名](../build/reference/decorated-names.md)的字符串文字。 仅在函数中定义宏。 如果使用[/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)或[/p](../build/reference/p-preprocess-to-a-file.md)编译器选项，则不会扩展 **&#95;FUNCDNAME&#95;宏。 &#95;**
 
-   此示例使用 `__FUNCDNAME__`、`__FUNCSIG__` 和 `__FUNCTION__` 宏来显示函数信息。
+   此示例使用 `__FUNCDNAME__`、`__FUNCSIG__`和 `__FUNCTION__` 宏来显示函数信息。
 
    [!code-cpp[NVC_Predefined_Macros_Examples#1](../preprocessor/codesnippet/CPP/predefined-macros_1.cpp)]
 
-- **&#95; FUNCSIG &#95; &#95;** 定义为包含封闭函数的签名的字符串文字。 仅在函数中定义宏。 如果使用[/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)或[/p](../build/reference/p-preprocess-to-a-file.md)编译器选项，则不会扩展 **&#95;FUNCSIG&#95;宏。 &#95;** 为64位目标编译时，默认情况下，调用约定 `__cdecl`。 有关用法的示例，请参阅 @no__t 的宏。
+- **&#95; FUNCSIG &#95; &#95;** 定义为包含封闭函数的签名的字符串文字。 仅在函数中定义宏。 如果使用[/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)或[/p](../build/reference/p-preprocess-to-a-file.md)编译器选项，则不会扩展 **&#95;FUNCSIG&#95;宏。 &#95;** 为64位目标编译时，默认情况下 `__cdecl` 调用约定。 有关用法的示例，请参阅 `__FUNCDNAME__` 宏。
 
-- **&#95;函数&#95; &#95;** 定义为包含封闭函数的未修饰名的字符串文字。 仅在函数中定义宏。 如果使用[/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)或[/p](../build/reference/p-preprocess-to-a-file.md)编译器选项，则不扩展 **&#95;函数&#95;宏。 &#95;** 有关用法的示例，请参阅 @no__t 的宏。
+- **&#95;函数&#95; &#95;** 定义为包含封闭函数的未修饰名的字符串文字。 仅在函数中定义宏。 如果使用[/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)或[/p](../build/reference/p-preprocess-to-a-file.md)编译器选项，则不扩展 **&#95;函数&#95;宏。 &#95;** 有关用法的示例，请参阅 `__FUNCDNAME__` 宏。
 
 - **整数&#95;最&#95;大位&#95;** 定义为整数文本值64，非向量整型的最大大小（位）。 始终定义此宏。
 
@@ -336,9 +336,9 @@ MSVC 支持这些其他预定义的宏。
 
 - **&#95;M&#95;ARM&#95;FP**定义为整数文本值，该值指示为 ARM 处理器目标设置了哪个[/arch](../build/reference/arch-arm.md)编译器选项。 否则为 undefined。
 
-  - 如果未指定 `/arch` ARM 选项，则为30-39 范围内的一个值，指示已设置 ARM 的默认体系结构（@no__t 为-1）。
+  - 如果未指定 `/arch` ARM 选项，则为30-39 范围内的值，指示已设置 ARM 的默认架构（`VFPv3`）。
 
-  - 如果设置了 `/arch:VFPv4`，则为40-49 范围内的值。
+  - 如果设置 `/arch:VFPv4`，则为40-49 范围内的值。
 
   - 有关详细信息，请参阅[/arch （ARM）](../build/reference/arch-arm.md)。
 
@@ -362,11 +362,11 @@ MSVC 支持这些其他预定义的宏。
 
 - **&#95;M&#95;IX86&#95;FP**定义为整数文本值，该值指示已设置的[/arch](../build/reference/arch-arm.md)编译器选项或默认值。 当编译目标为 x86 处理器时，将始终定义此宏。 否则为 undefined。 定义后，值为：
 
-  - 如果已设置 `/arch:IA32` 编译器选项，则为0。
+  - 如果设置了 `/arch:IA32` 编译器选项，则为0。
 
-  - 如果已设置 `/arch:SSE` 编译器选项，则为1。
+  - 如果设置了 `/arch:SSE` 编译器选项，则为1。
 
-  - 如果已设置 `/arch:SSE2`、`/arch:AVX`、`/arch:AVX2` 或 `/arch:AVX512` 编译器选项，则为2。 如果未指定 `/arch` 编译器选项，则此值为默认值。 如果指定 `/arch:AVX`，还将定义 **&#95; &#95;宏&#95; AVX** 。 如果指定 `/arch:AVX2`， **&#95; &#95;&#95;** 则同时定义 AVX  **&#95; &#95;和&#95; AVX2** 。 如果指定 **&#95; &#95;&#95;** `/arch:AVX512`，AVX，  **&#95; &#95;AVX2&#95;** ，  **&#95; &#95;AVX512BW&#95;** ， **&#95;AVX512CD， &#95; &#95;**  **&#95;还定义了&#95;AVX512DQ、AVX512F 和 AVX512VL。 &#95;** **&#95; &#95;&#95;** **&#95; &#95;&#95;**
+  - 如果已设置 `/arch:SSE2`、`/arch:AVX`、`/arch:AVX2`或 `/arch:AVX512` 编译器选项，则为2。 如果未指定 `/arch` 编译器选项，则此值为默认值。 指定 `/arch:AVX` 时，还将定义 **&#95; &#95;宏&#95; AVX** 。 指定 `/arch:AVX2` 时， **&#95; &#95;&#95;** 同时也会定义 AVX 和 **&#95; &#95;AVX2&#95;** 。 指定 `/arch:AVX512` 时，  **&#95; &#95;&#95;** 还会定义 AVX、  **&#95; &#95;&#95;AVX2**、  **&#95; &#95;&#95;AVX512BW**、  **&#95;&#95;AVX512CD、 &#95;** **&#95;AVX512DQ &#95;、 &#95;** **AVX512F 和&#95;AVX512VL &#95;。&#95;**  **&#95; &#95;&#95;**
 
   - 有关详细信息，请参阅 [/arch (x86)](../build/reference/arch-x86.md)。
 
@@ -405,7 +405,7 @@ MSVC 支持这些其他预定义的宏。
    |Visual Studio 2019 版本 16.2|1922|
    |Visual Studio 2019 版本16。3|1923|
 
-   若要测试的编译器版本或更新的 Visual Studio 或之后的给定版本中，使用 **>=** 运算符。 可以在条件指令中使用它来比较 **&#95;MSC&#95;VER**和该已知版本。 如果要比较多个互相排斥的版本，请按版本号的降序顺序进行比较。 例如，以下代码将检查 Visual Studio 2017 和更高版本中发布的编译器。 接下来，它将检查 Visual Studio 2015 或之后发布的编译器。 然后，它会检查 Visual Studio 2015 之前发布的所有编译器：
+   若要在 Visual Studio 的给定版本或之后测试编译器版本或更新，请使用 **>=** 运算符。 可以在条件指令中使用它来比较 **&#95;MSC&#95;VER**和该已知版本。 如果要比较多个互相排斥的版本，请按版本号的降序顺序进行比较。 例如，以下代码将检查 Visual Studio 2017 和更高版本中发布的编译器。 接下来，它将检查 Visual Studio 2015 或之后发布的编译器。 然后，它会检查 Visual Studio 2015 之前发布的所有编译器：
 
    ```cpp
    #if _MSC_VER >= 1910
@@ -419,11 +419,11 @@ MSVC 支持这些其他预定义的宏。
 
    有关详细信息，请参阅 Microsoft C++团队博客中的[Visual C++编译器版本](https://devblogs.microsoft.com/cppblog/visual-c-compiler-version/)。
 
-- **&#95;MSVC&#95;** 语言定义为指定编译器所针对的C++语言标准的整数文本。 仅在编译为C++的代码中设置。 默认情况下，如果指定了[/std： c + + 14](../build/reference/std-specify-language-standard-version.md)编译器选项，则宏是整数文本值201402L。 如果指定了[/std： c + + 17](../build/reference/std-specify-language-standard-version.md)编译器选项，则宏将设置为201703L。 如果指定了[/std： c + + 最新](../build/reference/std-specify-language-standard-version.md)选项，则将其设置为较高的未指定值。 否则，宏将未定义。 **&#95;MSVC&#95;LANG**宏和[/std （指定语言标准版本）](../build/reference/std-specify-language-standard-version.md)编译器选项是在 Visual Studio 2015 Update 3 开始提供。
+- **&#95;MSVC&#95;** 语言定义为指定编译器所针对的C++语言标准的整数文本。 仅在编译为C++的代码中设置。 默认情况下，如果指定了[/std： c + + 14](../build/reference/std-specify-language-standard-version.md)编译器选项，则宏是整数文本值201402L。 如果指定了[/std： c + + 17](../build/reference/std-specify-language-standard-version.md)编译器选项，则宏将设置为201703L。 如果指定了[/std： c + + 最新](../build/reference/std-specify-language-standard-version.md)选项，则将其设置为较高的未指定值。 否则，宏将未定义。 从 Visual Studio 2015 Update 3 开始提供了 **&#95;MSVC&#95;LANG**宏和[/std （指定语言标准版本）](../build/reference/std-specify-language-standard-version.md)编译器选项。
 
 - **&#95;&#95;当&#95;设置&#95;** 了某个[/Rtc](../build/reference/rtc-run-time-error-checks.md)编译器选项时，MSVC 运行时检查定义为1。 否则为 undefined。
 
-- **&#95;如果&#95;** 设置了预处理器一致性模式[/experimental：预处理器](../build/reference/rtc-run-time-error-checks.md)编译器选项，则 MSVC 传统定义为0。 默认情况下，在设置为1时，或在设置[/experimental：预处理器](../build/reference/rtc-run-time-error-checks.md)时，指示正在使用传统预处理器。 从 Visual Studio 2017 版本15.8 开始，可以使用 **&#95;MSVC&#95;传统**宏 and [/experimental：预处理器（启用预处理器一致性模式）](../build/reference/experimental-preprocessor.md)编译器选项。
+- **&#95;如果&#95;** 设置了预处理器一致性模式[/experimental：预处理器](../build/reference/experimental-preprocessor.md)编译器选项，则 MSVC 传统定义为0。 默认情况下，在设置为1时，或在设置[/experimental：预处理器](../build/reference/experimental-preprocessor.md)时，指示正在使用传统预处理器。 从 Visual Studio 2017 版本15.8 开始，可以使用 **&#95;MSVC&#95;传统**宏 and [/experimental：预处理器（启用预处理器一致性模式）](../build/reference/experimental-preprocessor.md)编译器选项。
 
    ```cpp
    #if defined(_MSVC_TRADITIONAL) && _MSVC_TRADITIONAL
@@ -454,7 +454,7 @@ MSVC 支持这些其他预定义的宏。
 
 - **&#95;如果&#95;** 设置了[/Zl （省略默认库名称）](../build/reference/zl-omit-default-library-name.md)编译器选项，则将 VC NODEFAULTLIB 定义为1。 否则为 undefined。
 
-- **&#95;设置&#95;默认&#95;** 的[/zc： wchar_t](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)编译器选项时，WCHAR T 定义为1。 **&#95;WCHAR&#95;T&#95;定义**宏定义的但如果不具有任何值`/Zc:wchar_t-`编译器选项设置，并**wchar_t**中包含的系统标头文件中定义应用项目。 否则为 undefined。
+- **&#95;设置&#95;默认&#95;** 的[/zc： wchar_t](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)编译器选项时，WCHAR T 定义为1。 如果设置了 `/Zc:wchar_t-` 编译器选项，并且在项目中包括的系统头文件中定义了**wchar_t** ，则定义 **&#95;&#95;WCHAR T&#95;定义**的宏，但没有值。 否则为 undefined。
 
 - **&#95;WIN32**当编译目标为32位 ARM、64位 ARM、x86 或 x64 时，定义为1。 否则为 undefined。
 
@@ -464,9 +464,9 @@ MSVC 支持这些其他预定义的宏。
 
 编译器未预定义用于识别 ATL 或 MFC 库版本的预处理器宏。 ATL 和 MFC 库标头在内部定义这些版本宏。 它们在包含所需标头之前所做的预处理器指令中未定义。
 
-- **&#95;ATL&#95;VER**在 @no__t 中定义 > 为编码 ATL 版本号的整数文本。
+- **&#95;ATL&#95;VER**在 \<atldef 中定义 > 为编码 ATL 版本号的整数文本。
 
-- **&#95;MFC&#95;VER**在 \<afxver_ > 中定义为对 MFC 版本号进行编码的整数文本。
+- **&#95;MFC&#95;VER**在 \<afxver_ .h > 中定义为对 MFC 版本号进行编码的整数文本。
 
 ## <a name="see-also"></a>请参阅
 
