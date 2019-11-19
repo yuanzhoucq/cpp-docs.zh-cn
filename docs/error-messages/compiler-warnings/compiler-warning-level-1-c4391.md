@@ -1,29 +1,29 @@
 ---
-title: 编译器警告（等级 1）C4391
+title: 编译器警告（等级1） C4391
 ms.date: 11/04/2016
 f1_keywords:
 - C4391
 helpviewer_keywords:
 - C4391
 ms.assetid: 95c6182c-fae9-4174-8f7b-98aa352e68ca
-ms.openlocfilehash: d9d1cebe08a6a163d76271ab001ec91b7cee82a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 60b68906697f76d56ff6c0e13f1b4ec105ef1c25
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386455"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966114"
 ---
-# <a name="compiler-warning-level-1-c4391"></a>编译器警告（等级 1）C4391
+# <a name="compiler-warning-level-1-c4391"></a>编译器警告（等级1） C4391
 
-签名： 不正确的内部函数的返回类型预期 type
+"签名"：不正确的内部函数返回类型，应为 "type"
 
-编译器内部函数的函数声明必须返回类型错误。 生成的映像可能无法正常运行。
+编译器内部函数的函数声明具有错误的返回类型。 生成的图像可能无法正确运行。
 
-若要解决此警告，请更正的声明，或删除该声明，只需 #include 相应的头文件。
+若要修复此警告，请更正声明或删除声明，并只 #include 适当的标头文件。
 
-下面的示例生成 C4391:
+下面的示例生成 C4391：
 
-```
+```cpp
 // C4391.cpp
 // compile with: /W1
 // processor: x86

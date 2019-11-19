@@ -1,27 +1,27 @@
 ---
-title: 编译器警告（等级 1）C4358
+title: 编译器警告（等级1） C4358
 ms.date: 11/04/2016
 f1_keywords:
 - C4358
 helpviewer_keywords:
 - C4358
 ms.assetid: a9848f84-14b3-405e-81bf-ee3e91a51511
-ms.openlocfilehash: aebac17a343efedf678b55f8940004c85a2db708
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7fd3109df3ecd32933b5fc217dfc02181f43d97c
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408376"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966536"
 ---
-# <a name="compiler-warning-level-1-c4358"></a>编译器警告（等级 1）C4358
+# <a name="compiler-warning-level-1-c4358"></a>编译器警告（等级1） C4358
 
-operator： 返回组合委托的类型不是 void;返回的值是未定义
+"operator"：组合委托的返回类型不是 "void";返回值未定义
 
-组合两个委托和返回值不是 void。 如果具有非 void 返回值的两个委托结合使用，编译器不会再执行一次正确的分配，如果使用的委托的返回值。
+合并了两个委托，并且返回值不是 void。 如果组合了两个具有非 void 返回值的委托，则在使用委托的返回值时，编译器将无法进行适当的赋值。
 
-下面的示例生成 C4358:
+下面的示例生成 C4358：
 
-```
+```cpp
 // C4358.cpp
 // compile with: /clr /W1
 delegate int D();

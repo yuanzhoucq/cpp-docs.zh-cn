@@ -1,29 +1,29 @@
 ---
-title: 编译器警告（等级 1）C4677
+title: 编译器警告（等级1） C4677
 ms.date: 11/04/2016
 f1_keywords:
 - C4677
 helpviewer_keywords:
 - C4677
 ms.assetid: a8d656a1-e2ff-4f8b-9028-201765131026
-ms.openlocfilehash: 66b8d42b63bcbf328703523c4eeda7a047f4643c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8567e7392537507a25121977448ac47ec079316b
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374568"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051367"
 ---
-# <a name="compiler-warning-level-1-c4677"></a>编译器警告（等级 1）C4677
+# <a name="compiler-warning-level-1-c4677"></a>编译器警告（等级1） C4677
 
-function： 非私有成员的签名包含程序集私有类型 private_type
+"function"：非私有成员的签名包含程序集私有类型 "private_type"
 
-具有程序集外部的公共可访问性的类型使用的类型，具有程序集外部的私有访问权限。 引用的公共程序集类型的组件不能使用类型成员或引用程序集私有类型的成员。
+在程序集外具有公共可访问性的类型使用在程序集外部具有私有访问权限的类型。 引用公共程序集类型的组件将无法使用引用该程序集私有类型的类型成员。
 
 ## <a name="example"></a>示例
 
 下面的示例生成 C4677。
 
-```
+```cpp
 // C4677.cpp
 // compile with: /clr /c /W1
 delegate void TestDel();

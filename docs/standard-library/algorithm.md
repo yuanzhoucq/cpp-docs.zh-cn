@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Standard Library, algorithms
 - <algorithm> header
 ms.assetid: 19f97711-7a67-4a65-8fd1-9a2bd3ca327d
-ms.openlocfilehash: 0b9b259d49808002442492ce2912b4f9aa96d2b8
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f72969052ae3ecc0d9fb88382e1560c846e2167c
+ms.sourcegitcommit: eb254b4462a58d219376ff501bf768bd1adc07ae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456506"
+ms.lasthandoff: 11/11/2019
+ms.locfileid: "73912895"
 ---
 # <a name="ltalgorithmgt"></a>&lt;算法&gt;
 
@@ -26,7 +26,7 @@ ms.locfileid: "68456506"
 ```
 
 > [!NOTE]
-> > \<库的算法也`#include <initializer_list>`使用语句。
+> > 库 \<算法也使用 `#include <initializer_list>` 语句。
 
 ## <a name="remarks"></a>备注
 
@@ -36,11 +36,11 @@ C++ 标准库算法处理迭代器范围通常是由其开始或末尾位置指�
 
 C++ 标准库算法扩展了由每个 C++ 标准库容器的运算和成员函数支持的操作，并允许同时处理不同类型的容器对象。 两个后缀已用于传递与算法目的相关的信息。
 
-- `_if` 后缀指示将算法用于对元素的值（而非元素本身的值）产生作用的函数对象。 `find_if` 算法查找其值满足函数对象指定的条件的元素，`find` 算法搜索特定值。
+- `_if` 后缀指示将算法用于对元素的值（而非元素本身）进行操作的函数对象。 `find_if` 算法查找其值满足函数对象指定的条件的元素，`find` 算法搜索特定值。
 
 - _copy 后缀指示算法不仅操作元素的值，还将修改的值复制到目标范围。 `reverse` 算法反向排序范围中的元素，`reverse_copy` 算法还将结果复制到目标范围。
 
-C++ 标准库算法通常会按照其目的或需求相关指示信息进行分组。 这些包括更改元素值的修改算法和不更改元素值的非修改算法。 改变算法将更改元素顺序，但不更改其元素的值。 移除算法可将元素从范围或范围副本中消除。 排序算法将以各种方式对范围中的元素重新排序, 已排序范围算法只作用于其元素已按特定方式排序的范围。
+C++ 标准库算法通常会按照其目的或需求相关指示信息进行分组。 这些包括更改元素值的修改算法和不更改元素值的非修改算法。 改变算法将更改元素顺序，但不更改其元素的值。 移除算法可将元素从范围或范围副本中消除。 排序算法将以各种方式对范围中的元素重新排序，已排序范围算法只作用于其元素已按特定方式排序的范围。
 
 为数值处理提供的 C++ 标准库数值算法具有自己的标头文件 [\<numeric>](../standard-library/numeric.md)，而函数对象和适配器则在标头 [\<functional>](../standard-library/functional.md) 中定义。返回布尔值的函数对象称为谓词。 默认二元谓词是比较 `operator<`。 通常，排序的元素需小于比较元素，因此，给定任意两个元素，可以确定它们是等效的（即两者均不小于对方）或其中一个小于另一个。 这将导致在非等效元素之间进行排序。
 
@@ -49,15 +49,15 @@ C++ 标准库算法通常会按照其目的或需求相关指示信息进行分�
 |||
 |-|-|
 |[adjacent_find](../standard-library/algorithm-functions.md#adjacent_find)|搜索相等或满足指定条件的两个相邻元素。|
-|[all_of](../standard-library/algorithm-functions.md#all_of)|当给定范围内的每个元素都存在条件时, 返回**true** 。|
-|[any_of](../standard-library/algorithm-functions.md#any_of)|如果在指定的元素范围内至少出现一次条件,**则返回 true** 。|
+|[all_of](../standard-library/algorithm-functions.md#all_of)|当给定范围内的每个元素都存在条件时，返回**true** 。|
+|[any_of](../standard-library/algorithm-functions.md#any_of)|如果在指定的元素范围内至少出现一次条件，**则返回 true** 。|
 |[binary_search](../standard-library/algorithm-functions.md#binary_search)|测试已排序的范围中是否有等于指定值的元素，或在二元谓词指定的意义上与指定值等效的元素。|
-|[clamp](../standard-library/algorithm-functions.md#clamp)||
+|[固定](../standard-library/algorithm-functions.md#clamp)||
 |[copy](../standard-library/algorithm-functions.md#copy)|将一个源范围中的元素值分配到目标范围，循环访问元素的源序列并将它们分配在一个向前方向的新位置。|
 |[copy_backward](../standard-library/algorithm-functions.md#copy_backward)|将一个源范围中的元素值分配到目标范围，循环访问元素的源序列并将它们分配在一个向后方向的新位置。|
-|[copy_if](../standard-library/algorithm-functions.md#copy_if)|复制给定范围中的所有元素, 这些元素对指定条件测试**true**|
+|[copy_if](../standard-library/algorithm-functions.md#copy_if)|复制给定范围中的所有元素，这些元素对指定条件测试**true**|
 |[copy_n](../standard-library/algorithm-functions.md#copy_n)|复制指定数量的元素。|
-|[计数](../standard-library/algorithm-functions.md#count)|返回范围中其值与指定值匹配的元素的数量。|
+|[count](../standard-library/algorithm-functions.md#count)|返回范围中其值与指定值匹配的元素的数量。|
 |[count_if](../standard-library/algorithm-functions.md#count_if)|返回范围中其值与指定条件匹配的元素的数量。|
 |[equal](../standard-library/algorithm-functions.md#equal)|逐个元素比较两个范围是否相等或是否在二元谓词指定的意义上等效。|
 |[equal_range](../standard-library/algorithm-functions.md#equal_range)|在排序的范围中查找符合以下条件的位置对：第一个位置小于或等效于指定元素的位置，第二个位置大于此元素位置，等效意义或用于在序列中建立位置的排序可通过二元谓词指定。|
@@ -74,12 +74,12 @@ C++ 标准库算法通常会按照其目的或需求相关指示信息进行分�
 |[generate_n](../standard-library/algorithm-functions.md#generate_n)|将函数对象生成的值分配给范围中指定数量的元素，并返回到超出最后一个分配值的下一位置。|
 |[includes](../standard-library/algorithm-functions.md#includes)|测试一个排序的范围是否包含另一排序范围中的所有元素，其中元素之间的排序或等效条件可通过二元谓词指定。|
 |[inplace_merge](../standard-library/algorithm-functions.md#inplace_merge)|将两个连续的排序范围中的元素合并为一个排序范围，其中排序条件可通过二元谓词指定。|
-|[is_heap](../standard-library/algorithm-functions.md#is_heap)|如果指定范围中的元素形成堆,**则返回 true** 。|
-|[is_heap_until](../standard-library/algorithm-functions.md#is_heap_until)|如果指定的范围形成堆直到最后一个元素, 则返回**true** 。|
-|[is_partitioned](../standard-library/algorithm-functions.md#is_partitioned)|如果给定范围中对某个条件测试**true**的所有元素在任何测试**false**的元素之前, 则返回**true** 。|
+|[is_heap](../standard-library/algorithm-functions.md#is_heap)|如果指定范围中的元素形成堆，**则返回 true** 。|
+|[is_heap_until](../standard-library/algorithm-functions.md#is_heap_until)|如果指定的范围形成堆直到最后一个元素，则返回**true** 。|
+|[is_partitioned](../standard-library/algorithm-functions.md#is_partitioned)|如果给定范围中对某个条件测试**true**的所有元素在任何测试**false**的元素之前，则返回**true** 。|
 |[is_permutation](../standard-library/algorithm-functions.md#is_permutation)|确定给定范围的元素是否形成有效排列。|
-|[is_sorted](../standard-library/algorithm-functions.md#is_sorted)|如果指定范围中的元素按顺序排序,**则返回 true** 。|
-|[is_sorted_until](../standard-library/algorithm-functions.md#is_sorted_until)|如果指定范围中的元素按顺序排序,**则返回 true** 。|
+|[is_sorted](../standard-library/algorithm-functions.md#is_sorted)|如果指定范围中的元素按顺序排序，**则返回 true** 。|
+|[is_sorted_until](../standard-library/algorithm-functions.md#is_sorted_until)|如果指定范围中的元素按顺序排序，**则返回 true** 。|
 |[iter_swap](../standard-library/algorithm-functions.md#iter_swap)|交换由一对指定迭代器引用的两个值。|
 |[lexicographical_compare](../standard-library/algorithm-functions.md#lexicographical_compare)|逐个元素比较两个序列以确定其中的较小序列。|
 |[lower_bound](../standard-library/algorithm-functions.md#lower_bound)|在排序的范围中查找其值大于或等效于指定值的第一个元素的位置，其中排序条件可通过二元谓词指定。|
@@ -95,12 +95,12 @@ C++ 标准库算法通常会按照其目的或需求相关指示信息进行分�
 |[&lt;alg&gt; move](../standard-library/algorithm-functions.md#alg_move)|移动与指定范围关联的元素。|
 |[move_backward](../standard-library/algorithm-functions.md#move_backward)|将一个迭代器的元素移动到另一迭代器。 移动从指定范围的最后一个元素开始，并在此范围的第一个元素结束。|
 |[next_permutation](../standard-library/algorithm-functions.md#next_permutation)|重新排序范围中的元素，以便使用按字典顺序的下一个更大排列（如果有）替换原有排序，其中“下一个”的意义可通过二元谓词指定。|
-|[none_of](../standard-library/algorithm-functions.md#none_of)|当给定范围内的元素内从不出现条件时, 返回**true** 。|
+|[none_of](../standard-library/algorithm-functions.md#none_of)|当给定范围内的元素内从不出现条件时，返回**true** 。|
 |[nth_element](../standard-library/algorithm-functions.md#nth_element)|对范围内的元素分区，正确找到范围中序列的第 *n* 个元素，以使序列中位于此元素之前的所有元素小于或等于此元素，位于此元素之后的所有元素大于或等于此元素。|
 |[partial_sort](../standard-library/algorithm-functions.md#partial_sort)|将范围中指定数量的较小元素按非降序顺序排列，或根据二元谓词指定的排序条件排列。|
 |[partial_sort_copy](../standard-library/algorithm-functions.md#partial_sort_copy)|将源范围中的元素复制到目标范围，其中源元素按降序或二元谓词指定的其他顺序排序。|
 |[partition](../standard-library/algorithm-functions.md#partition)|将范围中的元素分为两个不相交的集，满足一元谓词的元素在不满足一元谓词的元素之前。|
-|[partition_copy](../standard-library/algorithm-functions.md#partition_copy)|将条件为**true**的元素复制到一个目标, 并将条件为**false**的元素复制到另一个目标。 元素必须来自于指定范围。|
+|[partition_copy](../standard-library/algorithm-functions.md#partition_copy)|将条件为**true**的元素复制到一个目标，并将条件为**false**的元素复制到另一个目标。 元素必须来自于指定范围。|
 |[partition_point](../standard-library/algorithm-functions.md#partition_point)|返回给定范围中不满足条件的第一个元素。 元素经过排序，满足条件的元素在不满足条件的元素之前。|
 |[pop_heap](../standard-library/algorithm-functions.md#pop_heap)|移除从堆顶到范围中倒数第二个位置之间的最大元素，然后将剩余元素形成新堆。|
 |[prev_permutation](../standard-library/algorithm-functions.md#prev_permutation)|重新排序范围中的元素，以便使用按字典顺序的下一个更大排列（如果有）替换原有排序，其中“下一个”的意义可通过二元谓词指定。|
@@ -118,7 +118,7 @@ C++ 标准库算法通常会按照其目的或需求相关指示信息进行分�
 |[reverse_copy](../standard-library/algorithm-functions.md#reverse_copy)|反转源范围中元素的顺序，同时将这些元素复制到目标范围|
 |[rotate](../standard-library/algorithm-functions.md#rotate)|交换两个相邻范围中的元素。|
 |[rotate_copy](../standard-library/algorithm-functions.md#rotate_copy)|交换源范围中两个相邻范围内的元素，并将结果复制到目标范围。|
-|[sample](../standard-library/algorithm-functions.md#sample)||
+|[范例](../standard-library/algorithm-functions.md#sample)||
 |[search](../standard-library/algorithm-functions.md#search)|在目标范围中搜索其元素与给定序列中的元素相等或在二元谓词指定的意义上等效于给定序列中的元素的序列的第一个匹配项。|
 |[search_n](../standard-library/algorithm-functions.md#search_n)|在范围中搜索具有特定值或按二元谓词的指定与此值相关的指定数量的元素。|
 |[set_difference](../standard-library/algorithm-functions.md#set_difference)|将属于一个排序的源范围、但不属于另一排序的源范围的所有元素相并到一个排序的目标范围，其中排序条件可通过二元谓词指定。|
@@ -140,5 +140,5 @@ C++ 标准库算法通常会按照其目的或需求相关指示信息进行分�
 ## <a name="see-also"></a>请参阅
 
 [头文件引用](../standard-library/cpp-standard-library-header-files.md)\
-[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

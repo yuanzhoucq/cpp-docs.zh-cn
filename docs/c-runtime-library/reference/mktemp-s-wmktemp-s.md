@@ -35,12 +35,12 @@ helpviewer_keywords:
 - wmktemp_s function
 - temporary files [C++]
 ms.assetid: 92a7e269-7f3d-4c71-bad6-14bc827a451d
-ms.openlocfilehash: b0db1a50f638c6130e4beb6798431179edec153b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 464f0dfbdb0b84e1fd29ec650e53f5c2543c4403
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951587"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624215"
 ---
 # <a name="_mktemp_s-_wmktemp_s"></a>_mktemp_s、_wmktemp_s
 
@@ -83,15 +83,17 @@ errno_t _wmktemp_s(
 
 |*nameTemplate*|*sizeInChars*|返回值|*NameTemplate*中的新值|
 |----------------|-------------------|----------------------|-------------------------------|
-|**NULL**|任何|**EINVAL**|**NULL**|
-|格式不正确（有关正确格式，请参阅 "备注" 部分）|任何|**EINVAL**|空字符串|
-|任何|<= X 的数量|**EINVAL**|空字符串|
+|**NULL**|any|**EINVAL**|**NULL**|
+|格式不正确（有关正确格式，请参阅 "备注" 部分）|any|**EINVAL**|空字符串|
+|any|<= X 的数量|**EINVAL**|空字符串|
 
 如果发生上述错误情况中的任何一个，都会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将**errno**设置为**EINVAL** ，并且函数将返回**EINVAL**。
 
 ## <a name="remarks"></a>备注
 
 **_Mktemp_s**函数通过修改*nameTemplate*参数创建唯一的文件名，因此，在调用后， *nameTemplate*指针指向包含新文件名的字符串。 **_mktemp_s**会根据需要自动处理多字节字符串参数，根据运行时系统当前使用的多字节代码页识别多字节字符序列。 **_wmktemp_s**是 **_mktemp_s**的宽字符版本; **_wmktemp_s**的参数是宽字符字符串。 **_wmktemp_s**和 **_mktemp_s**的行为方式相同，但 **_wmktemp_s**不处理多字节字符字符串。
+
+这些函数的调试库版本首先用0xFE 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -119,7 +121,7 @@ errno_t _wmktemp_s(
 
 **_mktemp_s**可以为任何给定的*base*和*nameTemplate*值组合创建最多26个唯一文件名。 因此，FNZ12345 是 **_mktemp_s**可为此示例中使用的*base*和*nameTemplate*值创建的最后一个唯一文件名。
 
-在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -128,7 +130,7 @@ errno_t _wmktemp_s(
 |**_mktemp_s**|\<io.h>|
 |**_wmktemp_s**|\<io.h> 或 \<wchar.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 

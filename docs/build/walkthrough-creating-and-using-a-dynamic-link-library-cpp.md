@@ -543,7 +543,7 @@ int main()
 
 客户端应用现在可以成功编译和链接，但它仍未具备运行所需的全部条件。 当操作系统加载应用时，它会查找 MathLibrary DLL。 如果在某些系统目录、环境路径或本地应用目录中找不到 DLL，则加载会失败。 根据操作系统的不同，你会看到如下所示的错误消息：
 
-"![找不到 MATHLIBRARY DLL" 错误]"(media/mathclient-system-error-mathlibrary-dll-not-found.png "找不到 MATHLIBRARY DLL\" 错误")
+![找不到 MATHLIBRARY DLL 错误](media/mathclient-system-error-mathlibrary-dll-not-found.png "找不到 MATHLIBRARY DLL\" 错误")
 
 避免此问题的一种方法是将 DLL 复制到包含客户端可执行文件的目录中，作为生成过程的一部分。 可以向项目添加**后期生成事件**，以添加将 DLL 复制到生成输出目录的命令。 此处指定的命令仅在 DLL 丢失或更改时才复制它。 它使用宏根据您的生成配置在调试或发布位置之间进行复制。
 

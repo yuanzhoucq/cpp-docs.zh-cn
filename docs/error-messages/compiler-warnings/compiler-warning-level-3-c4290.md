@@ -1,35 +1,35 @@
 ---
-title: 编译器警告（等级 3）C4290
+title: 编译器警告（等级3） C4290
 ms.date: 11/04/2016
 f1_keywords:
 - C4290
 helpviewer_keywords:
 - C4290
 ms.assetid: d1c6d85b-28e0-4a1f-9d48-23593337a6fb
-ms.openlocfilehash: c585294686298a1197d437d41a0d541f1268985f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5ccacd7d5f4dfd2e9ad8de3958d7aa43571091fe
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402081"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051652"
 ---
-# <a name="compiler-warning-level-3-c4290"></a>编译器警告（等级 3）C4290
+# <a name="compiler-warning-level-3-c4290"></a>编译器警告（等级3） C4290
 
-C++忽略但指示函数的异常规范不是 __declspec （nothrow）
+C++已忽略异常规范，但指示函数未 __declspec （nothrow）
 
-使用异常规范的视觉对象声明的函数C++接受，但未实现。 使用异常规范，将忽略在编译期间可能需要重新编译的代码和链接要重复使用在将来支持异常规范的版本。
+函数是使用异常规范声明的，它的C++视觉对象接受但不实现。 在编译过程中忽略具有异常规范的代码可能需要重新编译和链接，以便在支持异常规范的未来版本中重复使用。
 
-有关详细信息，请参阅[异常规范 (throw)](../../cpp/exception-specifications-throw-cpp.md) 。
+有关详细信息，请参阅[异常规范（throw）](../../cpp/exception-specifications-throw-cpp.md) 。
 
-通过使用来避免此警告[警告](../../preprocessor/warning.md)杂注：
+可以通过使用[警告](../../preprocessor/warning.md)杂注来避免此警告：
 
-```
+```cpp
 #pragma warning( disable : 4290 )
 ```
 
-下面的代码示例生成 C4290:
+下面的代码示例生成 C4290：
 
-```
+```cpp
 // C4290.cpp
 // compile with: /EHs /W3 /c
 void f1(void) throw(int) {}   // C4290

@@ -1,27 +1,27 @@
 ---
-title: 编译器警告（等级 3）C4414
+title: 编译器警告（等级3） C4414
 ms.date: 11/04/2016
 f1_keywords:
 - C4414
 helpviewer_keywords:
 - C4414
 ms.assetid: bc81d3ad-55dc-4a6b-a6f2-ec0ef38347df
-ms.openlocfilehash: 0a9ceb332888e306b8cb3bcbe1832f773d02d63d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43570cd43ca6e9d4f892dc577f615e9fa980e561
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401938"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051584"
 ---
-# <a name="compiler-warning-level-3-c4414"></a>编译器警告（等级 3）C4414
+# <a name="compiler-warning-level-3-c4414"></a>编译器警告（等级3） C4414
 
-function： 短跳转到函数转换为附近
+"function"：短跳转到转换为附近的函数
 
-短跳转生成 compact 指令从指令分支到限制范围之内的地址。 该指令包括表示该跳转的目标地址、 函数定义之间的距离的短偏移量。 在链接过程中一个函数可能会导致函数从短的偏移量超出了可访问范围要移动的已移动或受链接时间优化。 编译器必须生成跳转，这要求为近或远的 jmp 指令的特殊记录。 编译器进行转换。
+短跳转从指令的有限范围内生成分支到地址的精简指令。 指令包含一个短偏移量，该偏移量表示跳转与目标地址（函数定义）之间的距离。 在链接函数的过程中，可能会移动或服从链接时间优化，从而导致函数从短偏移量中可访问的范围内移出。 编译器必须为跳转生成特殊记录，这需要跳转指令接近或远远。 编译器进行了转换。
 
-例如，下面的代码生成 C4414:
+例如，下面的代码生成 C4414：
 
-```
+```cpp
 // C4414.cpp
 // compile with: /W3 /c
 // processor: x86

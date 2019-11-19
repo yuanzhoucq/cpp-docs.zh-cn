@@ -54,12 +54,12 @@ helpviewer_keywords:
 - _ctime32_s function
 - _tctime32_s function
 ms.assetid: 36ac419a-8000-4389-9fd8-d78b747a009b
-ms.openlocfilehash: d983ee4219985c7b213812a69f6f83f49dbf389b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a6329319be5d002c8f0a35ceb0258cb9081923f7
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942011"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624410"
 ---
 # <a name="ctime_s-_ctime32_s-_ctime64_s-_wctime_s-_wctime32_s-_wctime64_s"></a>ctime_s、_ctime32_s、_ctime64_s、_wctime_s、_wctime32_s、_wctime64_s
 
@@ -150,11 +150,11 @@ errno_t _wctime64_s(
 
 |*buffer*|*numberOfElements*|*sourceTime*|返回|*缓冲区*中的值|
 |--------------|------------------------|------------|------------|-----------------------|
-|**NULL**|任何|任何|**EINVAL**|未修改|
-|Not **NULL** （指向有效内存）|0|任何|**EINVAL**|未修改|
-|not **NULL**|0< 大小 < 26|任何|**EINVAL**|空字符串|
-|not **NULL**|>= 26|NULL|**EINVAL**|空字符串|
-|not **NULL**|>= 26|< 0|**EINVAL**|空字符串|
+|**NULL**|any|any|**EINVAL**|未修改|
+|Not **NULL** （指向有效内存）|0|any|**EINVAL**|未修改|
+|Not **NULL**|0< 大小 < 26|any|**EINVAL**|空字符串|
+|Not **NULL**|>= 26|NULL|**EINVAL**|空字符串|
+|Not **NULL**|>= 26|< 0|**EINVAL**|空字符串|
 
 ## <a name="remarks"></a>备注
 
@@ -168,9 +168,11 @@ errno_t _wctime64_s(
 
 **_wctime32_s**和 **_wctime64_s**是 **_ctime32_s**和 **_ctime64_s**的宽字符版本;返回指向宽字符字符串的指针。 否则， **_ctime64_s**、 **_wctime32_s**和 **_wctime64_s**的行为与 **_ctime32_s**完全相同。
 
-**ctime_s**是计算结果为 **_ctime64_s**且**time_t**等效于 **__time64_t**的内联函数。 如果需要强制编译器将**time_t**解释为旧的32位**time_t**，可定义 **_USE_32BIT_TIME_T**。 这样做会导致**ctime_s**计算为 **_ctime32_s**。 不建议这样做，因为应用程序可能会在 2038 年 1 月 18 日后失效；且在 64 位平台上不允许使用它。
+**ctime_s**是计算结果为 **_ctime64_s**且**time_t**等效于 **__time64_t**的内联函数。 如果需要强制编译器将**time_t**解释为旧的32位**time_t**，可定义 **_USE_32BIT_TIME_T**。 这样做会导致**ctime_s**计算为 **_ctime32_s**。 不建议这样做，因为应用程序可能会在 2038 年 1 月 18 日后失效；且在 64 位平台上不允许此操作。
 
-在 C++ 中，通过模板重载简化这些函数的使用；重载可以自动推导出缓冲区长度，不再需要指定大小参数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，通过模板重载简化这些函数的使用；重载可以自动推导出缓冲区长度，不再需要指定大小参数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
+
+这些函数的调试库版本首先用0xFE 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -187,7 +189,7 @@ errno_t _wctime64_s(
 |**ctime_s**、 **_ctime32_s**、 **_ctime64_s**|\<time.h>|
 |**_wctime_s**、 **_wctime32_s**、 **_wctime64_s**|\<time.h> 或 \<wchar.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参见 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>库
 

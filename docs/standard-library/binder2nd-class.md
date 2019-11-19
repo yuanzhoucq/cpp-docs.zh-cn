@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - binder2nd class
 ms.assetid: b2a9c1d1-dfc4-4ca9-a10e-ae84e195a62d
-ms.openlocfilehash: 46c8bb2ae450b3ef56f2729717fb9b5563a7c139
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 297f91dd9283b9f004247d2d1814b30a17e7ffa2
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689940"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890089"
 ---
 # <a name="binder2nd-class"></a>binder2nd 类
 
@@ -28,7 +28,7 @@ class binder2nd
     typedef typename Operation::argument_type argument_type;
     typedef typename Operation::result_type result_type;
     binder2nd(
-        const Operation& Func,
+        const Operation& func,
         const typename Operation::second_argument_type& right);
 
     result_type operator()(const argument_type& left) const;
@@ -38,7 +38,7 @@ class binder2nd
 
 ### <a name="parameters"></a>参数
 
-*Func* \
+*func*\
 要转换为一元函数对象的二元函数对象。
 
 *right* \
@@ -53,9 +53,9 @@ class binder2nd
 
 ## <a name="remarks"></a>备注
 
-类模板在 `op` 中存储二元函数对象 _ *Func*的副本，并在 `value` 中存储*权限*的副本。 它将其成员函数定义 `operator()` 返回**op**（`left`， **value**）。
+类模板在 `op`中存储二元函数对象*func*的副本，并在 `value`中存储*权限*的副本。 它将其成员函数定义为返回 `op(left, value)``operator()`。
 
-如果 `Func` 是类型 `Operation` 的对象，并且 c 是常量，则[bind2nd](../standard-library/functional-functions.md#bind2nd) （`Func`，`c`）等效于 `binder2nd` 的类构造函数 `binder2nd` \<**操作**> （`Func`、0），更方便。
+如果*func*是类型 `Operation` 的对象，并且 c 是常量，则[bind2nd](../standard-library/functional-functions.md#bind2nd)`(func, c)` 等效于 `binder2nd` 类构造函数 `binder2nd<Operation>(func, c)`，更方便。
 
 ## <a name="example"></a>示例
 

@@ -1,6 +1,6 @@
 ---
 title: Visual Studio Projects - C++
-ms.date: 12/12/2018
+ms.date: 10/25/2019
 helpviewer_keywords:
 - ATL projects, creating
 - Visual Studio C++ projects, creating
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Visual Studio C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-ms.openlocfilehash: 30d3b13ba4d392cdc5d1c7c611b61066503647a2
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: d6bfefdaa3dfc67f861cf116718f89c0e9766e47
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837054"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624469"
 ---
 # <a name="visual-studio-projects---c"></a>Visual Studio projects - C++
 
-Visual Studio 项目是基于 MSBuild 生成系统的项目。 MSBuild 是 Visual Studio 的本机生成系统，通常非常适合用于 UWP 应用以及使用 MFC 或 ATL 库、COM 组件和其他 Windows 特定程序的桌面应用程序。 MSBuild 与 Visual Studio 紧密集成，但也可从命令行使用它。 
+Visual Studio 项目是基于 MSBuild 生成系统的项目。 MSBuild 是 Visual Studio 的本机生成系统，通常是适用于 Windows 特定程序的最佳生成系统。 MSBuild 与 Visual Studio 紧密集成，但也可从命令行使用它。 对于跨平台项目或使用开放源代码库的项目，我们建议使用 visual studio 2017 和更高版本的[Visual studio 中的 CMake 项目](cmake-projects-in-visual-studio.md)。 有关从早期版本的 Visual Studio 升级 MSBuild 项目的信息，请参阅[Microsoft C++移植和升级指南](../porting/visual-cpp-porting-and-upgrading-guide.md)。
 
 ## <a name="create-a-project"></a>创建项目
 
@@ -25,7 +25,7 @@ Visual Studio 项目是基于 MSBuild 生成系统的项目。 MSBuild 是 Visua
 
 可通过选择“文件” > “新建” > “项目”，然后将“语言”设为 C++，创建 C++ 项目。 在结果列表中，可看到项目模板列表，可通过设置“平台”或“项目类型”以及通过在搜索框中键入关键字进行筛选。 
 
-   ![Visual Studio 2019 项目模板](../build/media/vs2019-choose-console-app.png "Visual Studio 2019 新建项目对话框")
+   ![Visual Studio 2019 项目模板](../build/media/vs2019-choose-console-app.png "Visual Studio 2019 "新建项目" 对话框")
 
 ::: moniker-end
 
@@ -33,7 +33,7 @@ Visual Studio 项目是基于 MSBuild 生成系统的项目。 MSBuild 是 Visua
 
 可通过选择“文件” > “新建” > “项目”，然后选择左侧窗格中的 C++，创建 C++ 项目。 可在中心窗格中看到项目模板列表：
 
-   ![项目模板](../overview/media/vs2017-new-project.png "Visual Studio 2017 新建项目对话框")
+   ![项目模板](../overview/media/vs2017-new-project.png "Visual Studio 2017 "新建项目" 对话框")
 
 ::: moniker-end
 
@@ -69,7 +69,7 @@ Visual Studio 项目是基于 MSBuild 生成系统的项目。 MSBuild 是 Visua
 
 ## <a name="in-this-section"></a>本节内容
 
-[在 Visual Studio 中设置 C++ 编译器和生成属性](working-with-project-properties.md)<br/>
+[在 Visual Studio 中设置 C++ 编译器并生成属性](working-with-project-properties.md)<br/>
 如何使用属性页和属性表来指定项目设置。
 
 [在生成时引用库和组件](adding-references-in-visual-cpp-projects.md)<br/>
@@ -87,3 +87,4 @@ Visual Studio 项目是基于 MSBuild 生成系统的项目。 MSBuild 是 Visua
 ## <a name="see-also"></a>请参阅
 
 [项目和生成系统](projects-and-build-systems-cpp.md)<br>
+[Microsoft C++移植和升级指南](../porting/visual-cpp-porting-and-upgrading-guide.md)

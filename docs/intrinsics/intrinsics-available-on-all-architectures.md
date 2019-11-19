@@ -4,12 +4,12 @@ ms.date: 09/02/2019
 helpviewer_keywords:
 - cl.exe compiler, intrinsics
 ms.assetid: 1fe3958e-d2fe-4188-8e34-5896738246eb
-ms.openlocfilehash: 93f53bf90bd8defaa4559e52c00cfcd6269edee4
-ms.sourcegitcommit: 499dfcb5622c4cd1b6afaf23b9de5b09b7751579
+ms.openlocfilehash: 0293daacd717b3ae85b993729090fe363f7e0b9b
+ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71012240"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74163467"
 ---
 # <a name="intrinsics-available-on-all-architectures"></a>在所有体系结构上都可用的内部函数
 
@@ -162,6 +162,7 @@ Microsoft C/C++编译器和通用 C 运行时库（UCRT）使某些内部函数�
 
 ## <a name="see-also"></a>请参阅
 
-[ARM 内部函数](../intrinsics/arm-intrinsics.md)<br/>
-[x86 内部函数列表](../intrinsics/x86-intrinsics-list.md)<br/>
-[x64 (amd64) 内部函数列表](../intrinsics/x64-amd64-intrinsics-list.md)<br/>
+[ARM 内部函数](../intrinsics/arm-intrinsics.md)\
+[ARM64 内部函数](../intrinsics/arm64-intrinsics.md)\
+[x86 内部函数列表](../intrinsics/x86-intrinsics-list.md)\
+[x64 （amd64）内部函数列表](../intrinsics/x64-amd64-intrinsics-list.md)

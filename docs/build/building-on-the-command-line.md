@@ -2,7 +2,7 @@
 title: 从命令行C++使用 Microsoft 工具集
 description: 通过 Visual Studio IDE 外部的命令行使用 Microsoft C++ 编译器工具链 (MSVC)。
 ms.custom: conceptual
-ms.date: 10/22/2019
+ms.date: 11/12/2019
 helpviewer_keywords:
 - command-line builds [C++]
 - compiling source code [C++], command line
@@ -10,16 +10,20 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-ms.openlocfilehash: 7aa8673b7bb29591c7cf1c26b96b48261db9fee4
-ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
+ms.openlocfilehash: ec30cba8e119f96efc5bca156fa565db77904520
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811155"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051483"
 ---
 # <a name="use-the-microsoft-c-toolset-from-the-command-line"></a>从命令行C++使用 Microsoft 工具集
 
-使用包含在 Visual Studio 中的工具，可在命令行上生成 C 和 C++ 应用程序。 Microsoft C++ （MSVC）编译器工具集也可下载为[Visual Studio 下载](https://visualstudio.microsoft.com/downloads/)页面上的独立包。 它是**Visual Studio 生成工具**包的一部分。 您可以选择仅下载所需的工具进行C++开发。
+使用包含在 Visual Studio 中的工具，可在命令行上生成 C 和 C++ 应用程序。 Microsoft C++ （MSVC）编译器工具集也可下载为不包括 VISUAL Studio IDE 的独立包。
+
+## <a name="download-and-install-the-tools"></a>下载并安装工具
+
+如果已安装 Visual Studio 和C++工作负荷，则可以使用所有命令行工具。 有关如何安装C++和 visual studio 的信息，请参阅[在C++ visual studio 中安装支持](vscpp-step-0-installation.md)。 如果只需要命令行工具集，请下载[用于 Visual Studio 的生成工具](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019)。 运行下载的可执行文件时，它会更新并运行 Visual Studio 安装程序。 若要仅安装C++开发所需的工具，请选择 "  **C++生成工具**" 工作负荷。 您可以选择要包含在 "**安装详细信息**" 下的可选库和工具集。 若要使用 Visual Studio 2015 或2017工具集生成代码，请选择可选的 MSVC v140 或 MSVC v141 生成工具。 如果对选择满意，请选择 "**安装**"。
 
 ## <a name="how-to-use-the-command-line-tools"></a>如何使用命令行工具
 
@@ -150,16 +154,16 @@ vcversion<br/>
 
 ::: moniker range=">= vs-2019"
 
-使用 **-vcvars_ver = 14.2 yyyyy**来指定 Visual Studio 2019 编译器工具集的特定版本。
+使用 **-vcvars_ver = 14.2 = yyyyy**指定 Visual Studio 2019 编译器工具集的特定版本。
 
-使用 **-vcvars_ver = 14.16**指定最新版本的 Visual Studio 2017 编译器工具集。
+使用 **-vcvars_ver = 14.16**来指定最新版本的 Visual Studio 2017 编译器工具集。
 
 ::: moniker-end
 ::: moniker range="= vs-2017"
 
-使用 **-vcvars_ver = 14.16**指定最新版本的 Visual Studio 2017 编译器工具集。
+使用 **-vcvars_ver = 14.16**来指定最新版本的 Visual Studio 2017 编译器工具集。
 
-使用 **-vcvars_ver = 14.1 x. yyyyy**指定 Visual Studio 2017 编译器工具集的特定版本。
+使用 **-vcvars_ver = 14.1 yyyyy**来指定 Visual Studio 2017 编译器工具集的特定版本。
 
 ::: moniker-end
 

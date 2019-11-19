@@ -1,29 +1,29 @@
 ---
-title: 编译器警告 （等级 1） C4162
+title: 编译器警告（等级1） C4162
 ms.date: 11/04/2016
 f1_keywords:
 - C4162
 helpviewer_keywords:
 - C4162
 ms.assetid: 21ae3c92-501d-4689-ad7d-13753cb65eff
-ms.openlocfilehash: 6c6b675fd47cb6e98255515c7cd77c6dd48ea02b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e70898065a40a965b08b090bc59263acd918515
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391811"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624853"
 ---
-# <a name="compiler-warning-level-1-c4162"></a>编译器警告 （等级 1） C4162
+# <a name="compiler-warning-level-1-c4162"></a>编译器警告（等级1） C4162
 
-identifier： 没有找到带 C 链接函数
+"identifier"：未找到带 C 链接的函数
 
-具有 C 链接的函数声明，但找不到。
+已声明带 C 链接的函数，但找不到该函数。
 
-若要解决此警告，编译.c 文件中 （调用 C 编译器）。  如果必须调用C++编译器，函数声明之前的位置 extern"C"。
+若要解决此警告，请在 .c 文件中编译（调用 C 编译器）。  如果必须调用C++编译器，请在函数声明之前放置 Extern "C"。
 
 下面的示例生成 C4162
 
-```
+```cpp
 // C4162.cpp
 // compile with: /c /W1
 unsigned char _bittest(long* a, long b);
@@ -38,7 +38,7 @@ int main() {
 
 可能的解决方法：
 
-```
+```cpp
 // C4162b.cpp
 // compile with: /c
 extern "C"

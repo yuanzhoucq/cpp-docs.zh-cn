@@ -1,29 +1,29 @@
 ---
-title: 编译器警告（等级 1）C4566
+title: 编译器警告（等级1） C4566
 ms.date: 11/04/2016
 f1_keywords:
 - C4566
 helpviewer_keywords:
 - C4566
 ms.assetid: 65f40730-e86f-447c-b37b-16caadcfe311
-ms.openlocfilehash: c864feb2478e9f99ad6e4c0087dcef72b55de601
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c6a62b399aa32ec6caf2e5a9ee6d4c5836601ba4
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397258"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73965963"
 ---
-# <a name="compiler-warning-level-1-c4566"></a>编译器警告（等级 1）C4566
+# <a name="compiler-warning-level-1-c4566"></a>编译器警告（等级1） C4566
 
-表示通用字符名称 'char' 字符不能出现在当前代码页 （页）
+由通用字符名称 "char" 表示的字符不能在当前代码页中表示（页）
 
-不是每个 Unicode 字符可表示当前的 ANSI 代码页中。
+并非每个 Unicode 字符都可以在当前 ANSI 代码页中表示。
 
-窄字符串 （单字节字符） 转换为多字节字符，而不是宽字符串 （双字节字符）。
+将窄字符串（单字节字符）转换为多字节字符，而不是宽字符串（双字节字符）。
 
-下面的示例生成 C4566:
+下面的示例生成 C4566：
 
-```
+```cpp
 // C4566.cpp
 // compile with: /W1
 int main() {

@@ -1,29 +1,29 @@
 ---
-title: 编译器警告 （等级 2） C4099
+title: 编译器警告（等级2） C4099
 ms.date: 11/04/2016
 f1_keywords:
 - C4099
 helpviewer_keywords:
 - C4099
 ms.assetid: 00bb803d-cae7-4ab8-8969-b46f54139ac8
-ms.openlocfilehash: 09ea9e2963735c1e011e25b42b04ad6d67d084a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d685f1f40826b975623dbedc2ba8115c6b3edc45
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349810"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052183"
 ---
-# <a name="compiler-warning-level-2-c4099"></a>编译器警告 （等级 2） C4099
+# <a name="compiler-warning-level-2-c4099"></a>编译器警告（等级2） C4099
 
-identifier： 类型名称以前使用 objecttype1 现在使用 objecttype2
+"identifier"：首次使用 "objecttype1" 查看的类型名称，现在使用 "objecttype2"
 
-对象声明为结构定义为一个类，或声明为类的对象定义为结构。 编译器将使用定义中提供的类型。
+声明为结构的对象被定义为类，或者声明为类的对象定义为结构。 编译器使用定义中给定的类型。
 
 ## <a name="example"></a>示例
 
 下面的示例生成 C4099。
 
-```
+```cpp
 // C4099.cpp
 // compile with: /W2 /c
 struct A;

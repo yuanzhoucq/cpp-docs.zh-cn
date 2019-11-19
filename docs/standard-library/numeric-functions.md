@@ -1,12 +1,21 @@
 ---
 title: '&lt;numeric&gt; 函数'
-ms.date: 11/04/2016
+description: 描述C++标准库中 &lt;数值&gt;标头提供的函数模板。
+ms.date: 10/30/2019
 f1_keywords:
 - numeric/std::accumulate
 - numeric/std::adjacent_difference
+- numeric/std::exclusive_scan
+- numeric/std::gcd
+- numeric/std::inclusive_scan
 - numeric/std::inner_product
 - numeric/std::iota
+- numeric/std::lcm
 - numeric/std::partial_sum
+- numeric/std::reduce
+- numeric/std::transform_exclusive_scan
+- numeric/std::transform_inclusive_scan
+- numeric/std::transform_reduce
 ms.assetid: a4b0449a-c80c-4a1d-8d9f-d7fcd0058f8b
 helpviewer_keywords:
 - std::accumulate [C++]
@@ -22,52 +31,55 @@ helpviewer_keywords:
 - std::transform_exclusive_scan [C++]
 - std::transform_inclusive_scan [C++]
 - std::transform_reduce [C++]
-ms.openlocfilehash: 0a9d0ce34b1dcd2dd9252f4b243db85118deabe6
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 88a97a3d110c684090b78570077927e32541eed7
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246726"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627451"
 ---
 # <a name="ltnumericgt-functions"></a>&lt;numeric&gt; 函数
 
-## <a name="accumulate"></a> 累积
+## <a name="accumulate"></a>持续
 
-通过计算连续部分总和来计算指定范围（包括一些初始值）中所有元素的和，或计算通过指定的二元运算（而不是求和运算）获得的类似的连续部分结果的结果。
+通过计算连续的部分和来计算指定范围内的所有元素的总和（包括一些初始值）。 或者，计算指定二元运算的连续部分结果的结果。
 
 ```cpp
 template <class InputIterator, class Type>
-Type accumulate(InputIterator first, InputIterator last, Type val);
+Type accumulate(
+    InputIterator first,
+    InputIterator last,
+    Type init);
 
 template <class InputIterator, class Type, class BinaryOperation>
 Type accumulate(
     InputIterator first,
     InputIterator last,
-    Type val,
+    Type init,
     BinaryOperation binary_op);
 ```
 
 ### <a name="parameters"></a>参数
 
 *第一个*\
-输入迭代器，此迭代器在要求和或根据指定二元运算合并的范围内发现第一个元素。
+一种输入迭代器，用于寻址范围中的第一个元素，使用*binary_op*进行求和或合并。
 
-*最后一个*\
-输入迭代器，此迭代器在要求和或根据指定二元运算合并的范围内发现最后一个元素，即迭代累计中实际包含的最后一个元素之外的一个位置。
+*最后*\
+一种输入迭代器，用于寻址范围内的最后一个元素，以使用*binary_op*进行求和或合并，而最后一个元素之外的一个位置实际上包含在循环中。
 
-*val*\
-向其依次添加每个元素或根据指定二元运算合并每个元素的初始值。
+*init*\
+通过使用*binary_op*，将每个元素添加或合并到的初始值。
 
 *binary_op*\
-要应用于指定范围内每个元素的二元运算及其上一应用的结果。
+要应用于指定范围内的每个元素及其以前应用程序的结果的二元运算。
 
 ### <a name="return-value"></a>返回值
 
-总和*val*并指定范围内第一个模板函数，或对于第二个模板函数应用，而不是求和运算中，为指定二元运算的结果中的所有元素 (*PartialResult， \*Iter*)，其中*PartialResult*是上一应用程序的操作结果和`Iter`是指向范围内的元素的迭代器。
+第一个模板函数的指定范围内*init*和所有元素的总和; 对于第二个模板函数，将二元运算*binary_op*而不是 sum 运算的结果，应用于（* PartialResult， *in_iter*），其中*PartialResult*是操作之前的应用程序的结果，而*in_iter*是一个迭代器，该迭代器指向范围中的下一个元素。
 
 ### <a name="remarks"></a>备注
 
-初始值确保，将有明确定义的结果时的范围为空，这种情况下*val*返回。 二元运算不需要具有关联性或可交换性。 结果将初始化为初始值*val* ，然后*结果* =  `binary_op` (*结果*， <strong>\*</strong>`Iter`) 范围内，通过以迭代方式计算其中`Iter`是指向范围内的连续元素的迭代器。 该范围必须有效，并且其复杂度与该范围的大小呈线性关系。 二元运算符的返回类型必须可转换为 **Type**，以确保在迭代期间闭包。
+初始值可确保当范围为空时具有明确定义的结果，在这种情况下，将返回*init* 。 二元运算不需要具有关联性或可交换性。 结果初始化为初始值*init* ，然后*结果* = *binary_op*（*result*， *in_iter*）通过范围以迭代方式进行计算，其中*in_iter*是指向每个范围中的连续元素。 范围必须有效，并且复杂性与范围大小为线性。 二元运算符的返回类型必须可转换为 **Type**，以确保在迭代期间闭包。
 
 ### <a name="example"></a>示例
 
@@ -168,9 +180,9 @@ The vector of partial products is:
 ( 1 2 6 24 120 720 5040 40320 362880 3628800 ).
 ```
 
-## <a name="adjacent_difference"></a> adjacent_difference
+## <a name="adjacent_difference"></a>adjacent_difference
 
-计算输入范围中每个元素与其前一元素之间的连续差值，并将结果输出到目标范围，或计算将差值运算替换为其他指定二元运算的一般化程序的结果。
+计算输入范围中每个元素与其前一元素之间的连续差异。 将结果输出到目标范围。 或者，计算通用化过程的结果，其中差异运算替换为其他指定的二元运算。
 
 ```cpp
 template <class InputIterator, class OutIterator>
@@ -205,31 +217,34 @@ ForwardIterator2 adjacent_difference(
 
 ### <a name="parameters"></a>参数
 
+*exec*\
+执行策略。
+
 *第一个*\
 输入迭代器，此迭代器在其中元素与各自前一元素不同的输入范围内或从中通过其他指定二元运算来操作值对的输入范围内发现第一个元素。
 
-*最后一个*\
+*最后*\
 输入迭代器，此迭代器在其中元素与各自前一元素不同的输入范围内或从中通过其他指定二元运算来操作值对的输入范围内发现最后一个元素。
 
 *结果*\
 输出迭代器，此迭代器在存储一系列差值或指定运算结果的目标范围内发现第一个元素。
 
 *binary_op*\
-在用于替换差分程序中减法运算的通用运算中应用的二元运算。
+要在通用化操作中应用的二元运算，替换差分过程中减法运算。
 
 ### <a name="return-value"></a>返回值
 
-发现目标范围末尾的输出迭代器： `result` + (`last` - `first`)。
+用于寻址目标范围末尾的输出迭代器： `result` + （`last` - `first`）。
 
 ### <a name="remarks"></a>备注
 
-输出迭代器 _*结果*可以是与输入迭代器相同的迭代器 * 第一，* 以便`adjacent_difference`s 可以就地计算。
+输出迭代器*结果*允许作为输入迭代器的*第一个*迭代器，以便可以就地计算 `adjacent_difference` 值。
 
-为一系列值  1，  2  3，第一个模板函数的输入范围中存储连续`partial_difference`s  1  2-  1，a3-  2，目标范围内的。
+对于输入范围中的*值 a*1 *，a*2， *a*3，第一个模板函数在目标范围中存储连续 `adjacent_difference` 值*为*1、 *2-* *a*1、a3- *a*2。
 
-为一系列值  1，  2  3，第二个模板函数的输入范围中存储连续`partial_difference`s  1，  2 `binary_op`  1，  3 `binary_op`  2，目标范围内的。
+对于输入范围中的值*a*1 *，a*2， *a*3，第二个模板函数存储连续 `adjacent_difference` 值*a*1， *a*2 *binary_op* *a*1， *a*3 *binary_op* *a*2，在目标范围。
 
-二元运算`binary_op`不需要具有关联性或可交换性，因为应用的运算顺序指定。
+二元运算*binary_op*不需要为关联或可交换性，因为指定了操作的顺序。
 
 ### <a name="example"></a>示例
 
@@ -292,70 +307,164 @@ int main( )
 }
 ```
 
-## <a name="exclusive_scan"></a> exclusive_scan
+## <a name="exclusive_scan"></a>exclusive_scan
+
+在给定初始值的情况下，通过使用 `std::plus<>()` 或指定的二元运算符来计算独占前缀 sum 运算。 将结果写入从指定的目标开始的范围。 *独占前缀*sum 意味着第*n*个输入元素不包含在第*n*个 sum 中。 包含执行策略参数的重载根据指定的策略执行。
 
 ```cpp
-template<class InputIterator, class OutputIterator, class T>
-OutputIterator exclusive_scan(InputIterator first, InputIterator last,
-OutputIterator result,
-T init);
-template<class InputIterator, class OutputIterator, class T, class BinaryOperation>
-OutputIterator exclusive_scan(InputIterator first, InputIterator last,
-OutputIterator result,
-T init, BinaryOperation binary_op);
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class T>
-ForwardIterator2 exclusive_scan(ExecutionPolicy&& exec, 
-ForwardIterator1 first, ForwardIterator1 last,
-ForwardIterator2 result,
-T init);
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class T,
-class BinaryOperation>
-ForwardIterator2 exclusive_scan(ExecutionPolicy&& exec, 
-ForwardIterator1 first, ForwardIterator1 last,
-ForwardIterator2 result,
-T init, BinaryOperation binary_op);
+template<class InputIterator, class OutputIterator, class Type>
+OutputIterator exclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    Type init);
+
+template<class InputIterator, class OutputIterator, class Type, class BinaryOperation>
+OutputIterator exclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    Type init,
+    BinaryOperation binary_op);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class Type>
+ForwardIterator2 exclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    Type init);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class Type, class BinaryOperation>
+ForwardIterator2 exclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    Type init,
+    BinaryOperation binary_op);
 ```
 
-## <a name="gcd"></a> gcd
+### <a name="parameters"></a>参数
+
+*exec*\
+执行策略。
+
+*第一个*\
+一种输入迭代器，用于寻址范围中的第一个元素，使用*binary_op*进行求和或合并。
+
+*最后*\
+一种输入迭代器，用于寻址范围内的最后一个元素，以使用*binary_op*进行求和或合并，而最后一个元素之外的一个位置实际上包含在循环中。
+
+*结果*\
+一种输出迭代器，用于寻址第一个元素的目标范围，其中的总和或指定操作的结果将存储在该范围内。
+
+*init*\
+通过使用*binary_op*，将每个元素添加或合并到的初始值。
+
+*binary_op*\
+要应用于指定范围内的每个元素及其以前应用程序的结果的二元运算。
+
+### <a name="return-value"></a>返回值
+
+用于寻址目标范围末尾的输出迭代器： *result* + （*最后* - *第一个*）。
+
+## <a name="gcd"></a>gcd
+
+计算整数 m 和 n 的最大公因数。
 
 ```cpp
 template <class M, class N>
 constexpr common_type_t<M,N> gcd(M m, N n);
 ```
 
-## <a name="inclusive_scan"></a> inclusive_scan
+### <a name="parameters"></a>参数
+
+*m*、 *n*\
+整数类型的值。
+
+### <a name="return-value"></a>返回值
+
+返回*m*和*n*的绝对值的最大公因数，如果*m*和*n*均为零，则返回零。 如果*m*或*n*的绝对值不能表示为类型 `common_type_t<M,N>`的值，则结果是不确定的。
+
+## <a name="inclusive_scan"></a>inclusive_scan
+
+在给定初始值的情况下，通过使用 `std::plus<>()` 或指定的二元运算符来计算包含前缀 sum 运算。 将结果写入从指定的目标开始的范围。 包含*前缀*sum 表示*n*次求和中包含第*n*个输入元素。 包含执行策略参数的重载根据指定的策略执行。
 
 ```cpp
 template<class InputIterator, class OutputIterator>
-OutputIterator inclusive_scan(InputIterator first, InputIterator last,
-OutputIterator result);
+OutputIterator inclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result);
+
 template<class InputIterator, class OutputIterator, class BinaryOperation>
-OutputIterator inclusive_scan(InputIterator first, InputIterator last,
-OutputIterator result,
-BinaryOperation binary_op);
-template<class InputIterator, class OutputIterator, class BinaryOperation, class T>
-OutputIterator inclusive_scan(InputIterator first, InputIterator last,
-OutputIterator result,
-BinaryOperation binary_op, T init);
+OutputIterator inclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    BinaryOperation binary_op);
+
+template<class InputIterator, class OutputIterator, class BinaryOperation, class Type>
+OutputIterator inclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    BinaryOperation binary_op,
+    Type init);
+
 template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
-ForwardIterator2 inclusive_scan(ExecutionPolicy&& exec, 
-ForwardIterator1 first, ForwardIterator1 last,
-ForwardIterator2 result);
+ForwardIterator2 inclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result);
+
 template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
 class BinaryOperation>
-ForwardIterator2 inclusive_scan(ExecutionPolicy&& exec, 
-ForwardIterator1 first, ForwardIterator1 last,
-ForwardIterator2 result,
-BinaryOperation binary_op);
+ForwardIterator2 inclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    BinaryOperation binary_op);
+
 template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class BinaryOperation, class T>
-ForwardIterator2 inclusive_scan(ExecutionPolicy&& exec, 
-ForwardIterator1 first, ForwardIterator1 last,
-ForwardIterator2 result,
-BinaryOperation binary_op, T init);
+class BinaryOperation, class Type>
+ForwardIterator2 inclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    BinaryOperation binary_op,
+    Type init);
 ```
 
-## <a name="inner_product"></a> inner_product
+### <a name="parameters"></a>参数
+
+*exec*\
+执行策略。
+
+*第一个*\
+一种输入迭代器，用于寻址范围中的第一个元素，使用*binary_op*进行求和或合并。
+
+*最后*\
+一种输入迭代器，用于寻址范围内的最后一个元素，以使用*binary_op*进行求和或合并，而最后一个元素之外的一个位置实际上包含在循环中。
+
+*结果*\
+一种输出迭代器，用于寻址第一个元素的目标范围，其中的总和或指定操作的结果将存储在该范围内。
+
+*init*\
+通过使用*binary_op*，将每个元素添加或合并到的初始值。
+
+*binary_op*\
+要应用于指定范围内的每个元素及其以前应用程序的结果的二元运算。
+
+### <a name="return-value"></a>返回值
+
+用于寻址目标范围末尾的输出迭代器： *result* + （*最后* - *第一个*）。
+
+## <a name="inner_product"></a>inner_product
 
 计算两个范围的逐元素集乘积的总和并将总和添加到指定初始值，或计算将求和与乘积二元运算替换为其他指定二元运算的一般化程序的结果。
 
@@ -365,30 +474,30 @@ Type inner_product(
     InputIterator1   first1,
     InputIterator1   last1,
     InputIterator2   first2,
-    Type             val);
+    Type             init);
 
 template <class InputIterator1, class InputIterator2, class Type, class BinaryOperation1, class BinaryOperation2>
 Type inner_product(
     InputIterator1   first1,
     InputIterator1   last1,
     InputIterator2   first2,
-    Type             val,
-    BinaryOperation1  binary_op1,
-    BinaryOperation2  binary_op2);
+    Type             init,
+    BinaryOperation1 binary_op1,
+    BinaryOperation2 binary_op2);
 ```
 
 ### <a name="parameters"></a>参数
 
-*First1*\
+*first1* \
 一个输入迭代器，该迭代器发现第一个范围内的第一个元素，该范围与第二个范围的内部乘积或一般化内部乘积将进行计算。
 
-*Last1*\
+*last1* \
 一个输入迭代器，该迭代器发现第一个范围内的最后一个元素，该范围与第二个范围的内部乘积或一般化内部乘积将进行计算。
 
-*First2*\
+*first2* \
 一个输入迭代器，该迭代器发现第二个范围内的第一个元素，该范围与第一个范围的内部乘积或一般化内部乘积将进行计算。
 
-*val*\
+*init*\
 一个初始值，将对该值添加两个范围间的内部乘积或一般化内部乘积。
 
 *binary_op1*\
@@ -401,19 +510,19 @@ Type inner_product(
 
 第一个成员函数返回逐元素集乘积的总和，并向其添加指定的初始值。 因此，对于值 *a*i 和 *b*i 的范围，它将返回：
 
-`val` + (  1 \* *b*1) + (  2 \* *b*2) +...+ (  n \* *b*n)
+*init* + （*a*1 \* *b*1） + （*a*2 \* *b*2） + ... + （*a*n \* *b*n）
 
-通过以迭代方式替换*val*与`val`+ (  我\* *b*我)。
+通过以迭代方式将*init*替换为*init* + （*a*i \* *b*i）。
 
 第二个成员函数返回：
 
-`val` *binary_op1* (  1 *binary_op2* *b*1) *binary_op1* (  2 *binary_op2* *b*2) *binary_op1* ...*binary_op1* (  n *binary_op2* *b*n)
+*init* *binary_op1* （*1* *binary_op2* *b*1） *binary_op1* （*a*2 *binary_op2* *b*2） *binary_op1* .。。*binary_op1* （*a*n *binary_op2* *b*n）
 
-通过以迭代方式替换*val*与`val` *binary_op1* (  我*binary_op2* *b*i)。
+通过以迭代方式*将* *init*替换为*init* *binary_op1* （ *binary_op2* *b*i）。
 
 ### <a name="remarks"></a>备注
 
-初始值可确保，将有明确定义的结果时的范围为空，这种情况下*val*返回。 二元运算不需要具有关联性或可交换性。 该范围必须有效，并且其复杂度与该范围的大小呈线性关系。 二元运算符的返回类型必须可转换为 **Type**，以确保在迭代期间闭包。
+初始值可确保在范围为空时具有明确定义的结果。 在这种情况下，将返回*init* 。 二元运算不需要具有关联性或可交换性。 范围必须有效，并且复杂性与范围大小为线性。 二元运算符的返回类型必须可转换为 **Type**，以确保在迭代期间闭包。
 
 ### <a name="example"></a>示例
 
@@ -505,9 +614,9 @@ int main()
 }
 ```
 
-## <a name="iota"></a> iota
+## <a name="iota"></a>iota
 
-存储一个起始值，从第一个元素开始，并填充该值的连续递增值 (` value++`) 中的每个间隔中元素`[first,  last)`。
+存储一个起始值，从第一个元素开始，并用间隔中的每个元素中的值的连续增量填充（`value++`） `[first,  last)`。
 
 ```cpp
 template <class ForwardIterator, class Type>
@@ -519,11 +628,11 @@ void iota(ForwardIterator first, ForwardIterator last, Type value);
 *第一个*\
 发现范围中要填充的第一个元素的输入迭代器。
 
-*最后一个*\
+*最后*\
 发现范围中要填充的最后一个元素的输入迭代器。
 
 *value*\
-要存储在第一个元素并连续增加更高版本的元素的起始值。
+要存储在第一个元素中的起始值，并且为后面的元素连续递增。
 
 ### <a name="example"></a>示例
 
@@ -567,16 +676,16 @@ int main(void)
 }
 ```
 
-## <a name="lcm"></a> lcm
+## <a name="lcm"></a>相连
 
 ```cpp
 template <class M, class N>
 constexpr common_type_t<M,N> lcm(M m, N n);
 ```
 
-## <a name="partial_sum"></a> partial_sum
+## <a name="partial_sum"></a>partial_sum
 
-计算输入范围中从第一个元素到第 *i* 个元素的一系列总和，并在目标范围的第 *i* 个元素中存储此类每个总和的结果，或计算将求和运算替换为其他指定二元运算的一般化程序的结果。
+计算输入范围中从第一个元素到第*n*个元素的一系列总和，并在目标范围的第*n*个元素中存储每个此类 sum 的结果。 或者，计算通用化过程的结果，其中 sum 操作替换为另一个指定的二元运算。
 
 ```cpp
 template <class InputIterator, class OutIt>
@@ -598,28 +707,28 @@ OutputIterator partial_sum(
 *第一个*\
 输入迭代器，此迭代器在要部分求和或根据指定二元运算合并的范围内发现第一个元素。
 
-*最后一个*\
+*最后*\
 输入迭代器，此迭代器在要部分求和或根据指定二元运算合并的范围内发现最后一个元素，即迭代累计中实际包含的最后一个元素之外的一个位置。
 
 *结果*\
-输出迭代器，此迭代器在存储一系列部分和或指定运算结果的目标范围内发现第一个元素。
+一种输出迭代器，用于寻址目标范围的第一个元素，以存储部分求和或指定二元运算的后续结果。
 
 *binary_op*\
-在用于替换部分求和程序中求和运算的通用运算中应用的二元运算。
+要在通用化操作中应用的二元运算，用来替换 partial sum 过程中的 sum 运算。
 
 ### <a name="return-value"></a>返回值
 
-发现目标范围末尾的输出迭代器： `result` + (`last` - `first`)，
+用于寻址目标范围末尾的输出迭代器： *result* + （*最后* - *第一个*）。
 
 ### <a name="remarks"></a>备注
 
-输出迭代器*结果*可以是与输入迭代器相同的迭代器*第一个*，以便可以就地计算部分总和。
+输出迭代器*结果*允许作为输入迭代器的*第一个*迭代器，以便可以就地计算部分总计。
 
-为一系列值  1，  2  3，在输入的范围内，第一个模板函数将存储连续部分和在目标范围内，其中*我*个元素，以提供通过 (((  1 +  2） +  3)  我)。
+对于值序列*a*1， *a*2 .。。在输入范围中，*第一个模板*函数在目标范围中存储连续部分求和。 第*n*个元素是由指定的（*a*+ *a*2 + *a*3 + ... + *a*n）。
 
-为一系列值  1，  2  3，在输入范围内，第二个模板函数将存储在目标范围内，其中第 i 个元素的连续部分总和通过给定 (((  1 `binary_op`  2) `binary_op`  3)  我)。
+对于输入范围内值*为*1、2*和3的值* *序列，第*二个模板函数在目标范围中存储连续的部分结果。 第*n*个元素由（（...）（（*a*1 *binary_op* *a*2） *binary_op* *a*3）*binary_op* ...）*binary_op* *n）* 。
 
-二元运算*binary_op*不需要具有关联性或可交换性，因为应用的运算顺序指定。
+二元运算*binary_op*不需要为关联或可交换性，因为指定了操作的顺序。
 
 ### <a name="example"></a>示例
 
@@ -681,125 +790,278 @@ int main( )
 }
 ```
 
-## <a name="reduce"></a> 减少
+## <a name="reduce"></a>降
+
+通过计算任意且可能置换的顺序来减少指定范围内的所有元素，可能包括一些初始值。 或者，通过计算指定二元运算的结果减少。 包含执行策略参数的重载根据指定的策略执行。
 
 ```cpp
 template<class InputIterator>
-typename iterator_traits<InputIterator>::value_type
-reduce(InputIterator first, InputIterator last);
-template<class InputIterator, class T>
-T reduce(InputIterator first, InputIterator last, T init);
-template<class InputIterator, class T, class BinaryOperation>
-T reduce(InputIterator first, InputIterator last, T init,
-BinaryOperation binary_op);
+typename iterator_traits<InputIterator>::value_type reduce(
+    InputIterator first,
+    InputIterator last);
+
+template<class InputIterator, class Type>
+Type reduce(
+    InputIterator first,
+    InputIterator last,
+    Type init);
+
+template<class InputIterator, class Type, class BinaryOperation>
+Type reduce(
+    InputIterator first,
+    InputIterator last,
+    Type init,
+    BinaryOperation binary_op);
+
 template<class ExecutionPolicy, class ForwardIterator>
-typename iterator_traits<ForwardIterator>::value_type
-reduce(ExecutionPolicy&& exec, 
-ForwardIterator first, ForwardIterator last);
-template<class ExecutionPolicy, class ForwardIterator, class T>
-T reduce(ExecutionPolicy&& exec, 
-ForwardIterator first, ForwardIterator last, T init);
-template<class ExecutionPolicy, class ForwardIterator, class T, class BinaryOperation>
-T reduce(ExecutionPolicy&& exec, 
-ForwardIterator first, ForwardIterator last, T init,
-BinaryOperation binary_op);
+typename iterator_traits<ForwardIterator>::value_type reduce(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last);
+
+template<class ExecutionPolicy, class ForwardIterator, class Type>
+Type reduce(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    Type init);
+
+template<class ExecutionPolicy, class ForwardIterator, class Type, class BinaryOperation>
+Type reduce(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    Type init,
+    BinaryOperation binary_op);
 ```
 
-## <a name="transform_exclusive_scan"></a> transform_exclusive_scan
+### <a name="parameters"></a>参数
+
+*exec*\
+执行策略。
+
+*第一个*\
+一种输入迭代器，用于寻址范围中的第一个元素，使用*binary_op*进行求和或合并。
+
+*最后*\
+一种输入迭代器，用于寻址范围内的最后一个元素，以使用*binary_op*进行求和或合并，而最后一个元素之外的一个位置实际上包含在循环中。
+
+*结果*\
+一种输出迭代器，用于寻址第一个元素的目标范围，其中的总和或指定操作的结果将存储在该范围内。
+
+*init*\
+通过使用*binary_op*，将每个元素添加或合并到的初始值。
+
+*binary_op*\
+要应用于指定范围内的每个元素及其以前应用程序的结果的二元运算。
+
+### <a name="return-value"></a>返回值
+
+将*binary_op*或 `std::plus<>()` 应用于*init*并将指定范围中的所有元素应用到（* PartialResult， *in_iter*），其中*PartialResult*是之前的操作应用程序的结果，而*in_iter*是指向范围内某个元素的迭代器。 在未指定*init*的重载中，使用的*init*值等效于 `typename iterator_traits<InputIterator>::value_type{}`。
+
+### <a name="remarks"></a>备注
+
+`reduce` 行为是不确定的，除非*binary_op*是关联的，并且可交换。 如果*binary_op*修改任何元素，或使间隔 \[*第一个*、*最后一个*] 的任何迭代器无效，则该行为是不确定的。
+
+## <a name="transform_exclusive_scan"></a>transform_exclusive_scan
+
+使用指定的一元运算符转换范围的元素，然后使用 `std::plus<>()` 或指定的二元运算符在该范围内计算独占前缀 sum 运算，给定初始值。 将结果写入从指定的目标开始的范围。 *独占前缀*sum 意味着第*n*个输入元素不包含在第*n*个 sum 中。 包含执行策略参数的重载根据指定的策略执行。 可以按任意顺序执行求和。
 
 ```cpp
-template<class InputIterator, class OutputIterator, class T,
-class BinaryOperation, class UnaryOperation>
-OutputIterator transform_exclusive_scan(InputIterator first, InputIterator last,
-OutputIterator result,
-T init,
-BinaryOperation binary_op,
-UnaryOperation unary_op);
-template<class ExecutionPolicy,
-class ForwardIterator1, class ForwardIterator2, class T,
-class BinaryOperation, class UnaryOperation>
-ForwardIterator2 transform_exclusive_scan(ExecutionPolicy&& exec, 
-ForwardIterator1 first, ForwardIterator1 last,
-ForwardIterator2 result,
-T init,
-BinaryOperation binary_op,
-UnaryOperation unary_op);
+template<class InputIterator, class OutputIterator, class Type, class BinaryOperation, class UnaryOperation>
+OutputIterator transform_exclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    Type init,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class Type, class BinaryOperation, class UnaryOperation>
+ForwardIterator2 transform_exclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    Type init,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op);
 ```
 
-## <a name="transform_inclusive_scan"></a> transform_inclusive_scan
+### <a name="parameters"></a>参数
+
+*exec*\
+执行策略。
+
+*第一个*\
+一种输入迭代器，用于寻址范围中的第一个元素，使用*binary_op*进行求和或合并。
+
+*最后*\
+一种输入迭代器，用于寻址范围内的最后一个元素，以使用*binary_op*进行求和或合并，而最后一个元素之外的一个位置实际上包含在循环中。
+
+*结果*\
+一种输出迭代器，用于寻址第一个元素的目标范围，其中的总和或指定操作的结果将存储在该范围内。
+
+*init*\
+通过使用*binary_op*，将每个元素添加或合并到的初始值。
+
+*binary_op*\
+要应用于指定范围内的每个元素及其以前应用程序的结果的二元运算。
+
+*unary_op*\
+要应用于指定范围内的每个元素的一元运算。
+
+## <a name="transform_inclusive_scan"></a>transform_inclusive_scan
+
+使用指定的一元运算符转换范围内的元素，然后使用 `std::plus<>()` 或指定的二元运算符在该范围内计算包含初始值。 将结果写入从指定的目标开始的范围。 包含*前缀*sum 表示*n*次求和中包含第*n*个输入元素。 包含执行策略参数的重载根据指定的策略执行。 可以按任意顺序执行求和。
 
 ```cpp
-template<class InputIterator, class OutputIterator,
-class BinaryOperation, class UnaryOperation>
-OutputIterator transform_inclusive_scan(InputIterator first, InputIterator last,
-OutputIterator result,
-BinaryOperation binary_op,
-UnaryOperation unary_op);
-template<class InputIterator, class OutputIterator,
-class BinaryOperation, class UnaryOperation, class T>
-OutputIterator transform_inclusive_scan(InputIterator first, InputIterator last,
-OutputIterator result,
-BinaryOperation binary_op,
-UnaryOperation unary_op,
-T init);
-template<class ExecutionPolicy,
-class ForwardIterator1, class ForwardIterator2,
-class BinaryOperation, class UnaryOperation>
-ForwardIterator2 transform_inclusive_scan(ExecutionPolicy&& exec, 
-ForwardIterator1 first, ForwardIterator1 last,
-ForwardIterator2 result,
-BinaryOperation binary_op,
-UnaryOperation unary_op);
-template<class ExecutionPolicy,
-class ForwardIterator1, class ForwardIterator2,
-class BinaryOperation, class UnaryOperation, class T>
-ForwardIterator2 transform_inclusive_scan(ExecutionPolicy&& exec, 
-ForwardIterator1 first, ForwardIterator1 last,
-ForwardIterator2 result,
-BinaryOperation binary_op,
-UnaryOperation unary_op,
-T init);
+template<class InputIterator, class OutputIterator, class BinaryOperation, class UnaryOperation>
+OutputIterator transform_inclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op);
+
+template<class InputIterator, class OutputIterator, class BinaryOperation, class UnaryOperation, class Type>
+OutputIterator transform_inclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op,
+    Type init);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class BinaryOperation, class UnaryOperation>
+ForwardIterator2 transform_inclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class BinaryOperation, class UnaryOperation, class Type>
+ForwardIterator2 transform_inclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op,
+    Type init);
 ```
 
-## <a name="transform_reduce"></a> transform_reduce
+### <a name="parameters"></a>参数
+
+*exec*\
+执行策略。
+
+*第一个*\
+一种输入迭代器，用于寻址范围中的第一个元素，使用*binary_op*进行求和或合并。
+
+*最后*\
+一种输入迭代器，用于寻址范围内的最后一个元素，以使用*binary_op*进行求和或合并，而最后一个元素之外的一个位置实际上包含在循环中。
+
+*结果*\
+一种输出迭代器，用于寻址第一个元素的目标范围，其中的总和或指定操作的结果将存储在该范围内。
+
+*binary_op*\
+要应用于指定范围内的每个元素及其以前应用程序的结果的二元运算。
+
+*unary_op*\
+要应用于指定范围内的每个元素的一元运算。
+
+*init*\
+通过使用*binary_op*，将每个元素添加或合并到的初始值。
+
+## <a name="transform_reduce"></a>transform_reduce
+
+转换一系列元素，然后应用一个函子，以任意顺序减少转换后的元素。 实际上，`transform` 后跟一个 `reduce`。
 
 ```cpp
-template<class InputIterator1, class InputIterator2, class T>
-T transform_reduce(InputIterator1 first1, InputIterator1 last1,
-InputIterator2 first2,
-T init);
-template<class InputIterator1, class InputIterator2, class T,
-class BinaryOperation1, class BinaryOperation2>
-T transform_reduce(InputIterator1 first1, InputIterator1 last1,
-InputIterator2 first2,
-T init,
-BinaryOperation1 binary_op1,
-BinaryOperation2 binary_op2);
-template<class InputIterator, class T,
-class BinaryOperation, class UnaryOperation>
-T transform_reduce(InputIterator first, InputIterator last,
-T init,
-BinaryOperation binary_op, UnaryOperation unary_op);
-template<class ExecutionPolicy,
-class ForwardIterator1, class ForwardIterator2, class T>
-T transform_reduce(ExecutionPolicy&& exec, 
-ForwardIterator1 first1, ForwardIterator1 last1,
-ForwardIterator2 first2,
-T init);
-template<class ExecutionPolicy,
-class ForwardIterator1, class ForwardIterator2, class T,
-class BinaryOperation1, class BinaryOperation2>
-T transform_reduce(ExecutionPolicy&& exec, 
-ForwardIterator1 first1, ForwardIterator1 last1,
-ForwardIterator2 first2,
-T init,
-BinaryOperation1 binary_op1,
-BinaryOperation2 binary_op2);
-template<class ExecutionPolicy,
-class ForwardIterator, class T,
-class BinaryOperation, class UnaryOperation>
-T transform_reduce(ExecutionPolicy&& exec, 
-ForwardIterator first, ForwardIterator last,
-T init,
-BinaryOperation binary_op, UnaryOperation unary_op);
+template<class InputIterator1, class InputIterator2, class Type>
+Type transform_reduce(
+    InputIterator1 first1,
+    InputIterator1 last1,
+    InputIterator2 first2,
+    Type init);
+
+template<class InputIterator1, class InputIterator2, class Type, class BinaryOperation1, class BinaryOperation2>
+Type transform_reduce(
+    InputIterator1 first1,
+    InputIterator1 last1,
+    InputIterator2 first2,
+    Type init,
+    BinaryOperation1 binary_op1,
+    BinaryOperation2 binary_op2);
+
+template<class InputIterator, class Type, class BinaryOperation, class UnaryOperation>
+Type transform_reduce(
+    InputIterator first,
+    InputIterator last,
+    Type init,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class Type>
+Type transform_reduce(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1,
+    ForwardIterator1 last1,
+    ForwardIterator2 first2,
+    Type init);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class Type, class BinaryOperation1, class BinaryOperation2>
+Type transform_reduce(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1,
+    ForwardIterator1 last1,
+    ForwardIterator2 first2,
+    Type init,
+    BinaryOperation1 binary_op1,
+    BinaryOperation2 binary_op2);
+
+template<class ExecutionPolicy, class ForwardIterator, class Type, class BinaryOperation, class UnaryOperation>
+Type transform_reduce(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    Type init,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op);
 ```
+
+### <a name="parameters"></a>参数
+
+*exec*\
+执行策略。
+
+*第一个*\
+一种输入迭代器，用于寻址范围中的第一个元素，使用*binary_op*进行求和或合并。
+
+*first1* \
+一种输入迭代器，用于寻址范围中的第一个元素，使用*binary_op1*进行求和或合并。
+
+*最后*\
+一种输入迭代器，用于寻址范围内的最后一个元素，以使用*binary_op*进行求和或合并，而最后一个元素之外的一个位置实际上包含在循环中。
+
+*last1* \
+一种输入迭代器，用于寻址范围内的最后一个元素，以使用*binary_op1*进行求和或合并，而最后一个元素之外的一个位置实际上包含在循环中。
+
+*结果*\
+一种输出迭代器，用于寻址第一个元素的目标范围，其中的总和或指定操作的结果将存储在该范围内。
+
+*init*\
+通过使用*binary_op*，将每个元素添加或合并到的初始值。
+
+*binary_op*\
+要应用于指定范围内的每个元素及其以前应用程序的结果的二元运算。
+
+*unary_op*\
+要应用于指定范围内的每个元素的一元运算。
+
+### <a name="return-value"></a>返回值
+
+转换后的结果减少。

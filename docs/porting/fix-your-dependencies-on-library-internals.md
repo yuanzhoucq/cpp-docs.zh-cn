@@ -1,24 +1,24 @@
 ---
-title: 在库的内部修复依赖项
+title: 解决库内部的C++依赖关系
 ms.date: 05/24/2017
 helpviewer_keywords:
 - library internals in an upgraded Visual Studio C++ project
 - _Hash_seq in an upgraded Visual Studio C++ project
 ms.assetid: 493e0452-6ecb-4edc-ae20-b6fce2d7d3c5
-ms.openlocfilehash: af395ea6f8c8e6a88bd2b003f0eee948bde8b6a9
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 5486cd65a34e3ef69f3b2e948ba0ad020e68b326
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65449101"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627003"
 ---
-# <a name="fix-your-dependencies-on-library-internals"></a>在库的内部修复依赖项
+# <a name="fix-your-dependencies-on-c-library-internals"></a>解决库内部的C++依赖关系
 
 Microsoft 为标准库、绝大多数 C 运行时库和众多 Visual Studio 版本中的其他 Microsoft 库发布了源代码。 这一举措旨在帮助你了解库行为，并帮助调试代码。 发布库源代码的一个副作用是它会暴露某些内部值、数据结构和函数，即使它们并非库接口的一部分。 它们的名称通常以两道下划线开头，或一道下划线后跟一个大写字母，这种名字在 C++ 标准中予以保留并实现。 这些值、结构和函数是实现细节，有可能随时间过去、随库的发展而有所更改，因此我们强烈建议对它们不要有任何依赖项。 如果执意如此，则将存在代码不可移植的风险，并且在将代码迁移至新版本的库时，还有可能出现问题。
 
 在大多数情况下，每个 Visual Studio 版本的“新增功能”或“重大更改”文档都不会提到对库内部的更改。 毕竟你不应该被这些实现细节所影响。 但有时，在要使用某些代码时，可以看见库的内部是十分大的。 本主题讨论 CRT 上的依赖项，或可能用到的标准库内部，以及如何更新代码以删除这些依赖项，从而使其更富可移植性，或使其得以迁移至新版本的库。
 
-## <a name="hashseq"></a>_Hash_seq
+## <a name="_hash_seq"></a>_Hash_seq
 
 在某些字符串类型上实现 `std::hash` 的内部哈希函数 `std::_Hash_seq(const unsigned char *, size_t)`，在最新版本的标准库中是可见的。 此函数在字符序列上实现了 [FNV-1a hash]( https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function)。
 
@@ -76,6 +76,6 @@ inline size_t fnv1a_hash_bytes(const unsigned char * first, size_t count) {
 
 ## <a name="see-also"></a>请参阅
 
-[从 Visual C++ 早期版本升级项目](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[从 Visual 早期版本升级项目C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [潜在的升级问题概述 (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
 [将代码升级到通用 CRT](upgrade-your-code-to-the-universal-crt.md)

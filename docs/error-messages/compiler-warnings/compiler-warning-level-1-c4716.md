@@ -1,33 +1,33 @@
 ---
-title: 编译器警告（等级 1）C4716
+title: 编译器警告（等级1） C4716
 ms.date: 11/04/2016
 f1_keywords:
 - C4716
 helpviewer_keywords:
 - C4716
 ms.assetid: d95ecfe5-870f-461f-a746-7913af98414b
-ms.openlocfilehash: 5ec0aea543053d699db7483df7dd7ea91b3af715
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5215e8fd0bdd44c9bdfc731d2b74499d38853e80
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363812"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052460"
 ---
-# <a name="compiler-warning-level-1-c4716"></a>编译器警告（等级 1）C4716
+# <a name="compiler-warning-level-1-c4716"></a>编译器警告（等级1） C4716
 
 “function”必须返回值
 
-给定的函数未返回一个值。
+给定函数未返回值。
 
-只有函数返回类型为 void 可以使用不附带的返回值返回的命令。
+只有返回类型为 void 的函数才能使用返回命令，而不会附带返回值。
 
-此函数调用时，将返回未定义的值。
+如果调用此函数，则将返回未定义的值。
 
-此警告被自动提升为错误。 如果你想要修改此行为，使用[#pragma 警告](../../preprocessor/warning.md)。
+此警告会自动提升为错误。 如果要修改此行为，请使用[#pragma 警告](../../preprocessor/warning.md)。
 
-下面的示例生成 C4716:
+下面的示例生成 C4716：
 
-```
+```cpp
 // C4716.cpp
 // compile with: /c /W1
 // C4716 expected

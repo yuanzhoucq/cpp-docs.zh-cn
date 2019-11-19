@@ -1,27 +1,27 @@
 ---
-title: 编译器警告（等级 1）C4526
+title: 编译器警告（等级1） C4526
 ms.date: 11/04/2016
 f1_keywords:
 - C4526
 helpviewer_keywords:
 - C4526
 ms.assetid: 490f8916-5fdc-4cad-b412-76c3382a5976
-ms.openlocfilehash: 892e6c37e54a868be48ced35354a1096aa7bf9d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 60ac01d6a118f37a22b39ab41fa60252866f3360
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160739"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966273"
 ---
-# <a name="compiler-warning-level-1-c4526"></a>编译器警告（等级 1）C4526
+# <a name="compiler-warning-level-1-c4526"></a>编译器警告（等级1） C4526
 
-function： 静态成员函数不能重写虚函数虚拟 function'override 被忽略，将隐藏虚函数
+"function"：静态成员函数不能重写虚函数 "virtual function'override 已忽略，虚函数将被隐藏
 
-静态成员函数可以满足用来重写虚函数，这使得虚拟和静态成员函数的条件。
+静态成员函数满足用于重写虚函数的条件，这使得成员函数成为虚函数和静态函数。
 
-下面的代码生成 C4526:
+下面的代码生成 C4526：
 
-```
+```cpp
 // C4526.cpp
 // compile with: /W1 /c
 // C4526 expected
@@ -34,8 +34,8 @@ struct myStruct2: public myStruct1 {
 };
 ```
 
-以下是可能的修复方法：
+下面是可能的修补程序：
 
-- 如果该函数用于重写基类的虚函数，则移除静态说明符。
+- 如果函数旨在重写基类虚函数，则移除静态说明符。
 
-- 如果该函数本来就是静态成员函数，重命名它，以便与基类虚函数不会发生冲突。
+- 如果函数旨在用作静态成员函数，请将其重命名，使其不会与基类虚函数冲突。

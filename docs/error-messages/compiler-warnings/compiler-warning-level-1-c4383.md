@@ -1,33 +1,33 @@
 ---
-title: 编译器警告（等级 1）C4383
+title: 编译器警告（等级1） C4383
 ms.date: 11/04/2016
 f1_keywords:
 - C4383
 helpviewer_keywords:
 - C4383
 ms.assetid: 96c0e52d-874e-4b57-a154-0e49b6a00fae
-ms.openlocfilehash: 2510dda59047632e2a4823f734feeffd0c0a5b02
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9681408841173bad4aca3305e727ddde6cd98f14
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390433"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966173"
 ---
-# <a name="compiler-warning-level-1-c4383"></a>编译器警告（等级 1）C4383
+# <a name="compiler-warning-level-1-c4383"></a>编译器警告（等级1） C4383
 
-instance_dereference_operator： 取消引用句柄的意义可以更改，用户定义 operator 运算符存在;将该运算符编写为有关操作数的显式静态函数
+"instance_dereference_operator"：当存在用户定义的 "operator" 运算符时，取消引用句柄的含义可能会更改;将运算符编写为静态函数，以显式了解操作数
 
-添加时的取消引用运算符是用户定义的实例的重写的托管类型中，可能会重写的类型的取消引用运算符返回句柄的对象的功能。 请考虑编写一个静态的、 用户定义取消引用运算符。
+当你在托管类型中添加取消引用运算符的用户定义的实例重写时，可能会重写该类型的取消引用运算符的功能以返回该句柄的对象。 请考虑编写静态的、用户定义的取消引用运算符。
 
-有关详细信息，请参阅[句柄对象运算符 (^)](../../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)并[跟踪引用运算符](../../extensions/tracking-reference-operator-cpp-component-extensions.md)。
+有关详细信息，请参阅[对象运算符（^）](../../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)和[跟踪引用运算符](../../extensions/tracking-reference-operator-cpp-component-extensions.md)的句柄。
 
-此外，实例运算符不供其他语言编译器通过引用的元数据。 有关详细信息，请参阅[用户定义的运算符 (C++/CLI)](../../dotnet/user-defined-operators-cpp-cli.md)。
+此外，实例运算符不适用于其他语言编译器通过引用元数据。 有关详细信息，请参阅[用户定义的运算符C++（/cli）](../../dotnet/user-defined-operators-cpp-cli.md)。
 
 ## <a name="example"></a>示例
 
 下面的示例生成 C4383。
 
-```
+```cpp
 // C4383.cpp
 // compile with: /clr /W1
 

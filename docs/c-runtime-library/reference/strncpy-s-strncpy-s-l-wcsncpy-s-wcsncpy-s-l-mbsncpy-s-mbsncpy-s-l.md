@@ -49,12 +49,12 @@ helpviewer_keywords:
 - _tcsncpy_s function
 - wcsncpy_s_l function
 ms.assetid: a971c800-94d1-4d88-92f3-a2fe236a4546
-ms.openlocfilehash: 196a3aac09db790da6b8137029383cca77c3d2ad
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2ccfde34d12dadb76bc8b4058a3f9b52c3d1f4bc
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947280"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626153"
 ---
 # <a name="strncpy_s-_strncpy_s_l-wcsncpy_s-_wcsncpy_s_l-_mbsncpy_s-_mbsncpy_s_l"></a>strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l
 
@@ -171,10 +171,10 @@ errno_t _mbsncpy_s_l(
 
 |*strDest*|*numberOfElements*|*strSource*|返回值|*StrDest*的内容|
 |---------------|------------------------|-----------------|------------------|---------------------------|
-|**NULL**|任何|任何|**EINVAL**|未修改|
-|任何|任何|**NULL**|**EINVAL**|*strDest*[0] 设置为0|
-|任何|0|任何|**EINVAL**|未修改|
-|not **NULL**|过小|任何|**ERANGE**|*strDest*[0] 设置为0|
+|**NULL**|any|any|**EINVAL**|未修改|
+|any|any|**NULL**|**EINVAL**|*strDest*[0] 设置为0|
+|any|0|any|**EINVAL**|未修改|
+|Not **NULL**|过小|any|**ERANGE**|*strDest*[0] 设置为0|
 
 ## <a name="remarks"></a>备注
 
@@ -208,9 +208,9 @@ strncpy_s(dst, 5, "a long string", 4);
 
 输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 
-这些函数的调试版本首先用 0xFD 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+这些函数的调试库版本首先用0xFE 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -230,7 +230,7 @@ strncpy_s(dst, 5, "a long string", 4);
 |**wcsncpy_s**、 **_wcsncpy_s_l**|\<string.h> 或 \<wchar.h>|
 |**_mbsncpy_s**、 **_mbsncpy_s_l**|\<mbstring.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参见 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 

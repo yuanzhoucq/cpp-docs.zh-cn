@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4484
 ms.assetid: 3d30e5b3-2297-45b7-a37a-1360056fdd0e
-ms.openlocfilehash: 29e99da02aa0144699d3c20e523b5e5e4b6b8f72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d3f72ddf7675ea7ad73022dc55a60fdc74d4390
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363526"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73623630"
 ---
 # <a name="compiler-warning-c4484"></a>编译器警告 C4484
 
-override_function： 匹配 ref 基类方法 base_class_function，但未标记为 virtual 一步、 上一 new 或 override;假定 new （而不是 virtual）
+"override_function"：匹配 ref 基类方法 "base_class_function"，但未标记为 "virtual"、"new" 或 "override";假定为 "new" （而不是 "virtual"）
 
-使用编译时 **/clr**，编译器将不会隐式重写基类函数，这意味着该函数将获取 vtable 中的新槽。 若要解决，请显式指定函数是否是重写。
+使用 **/clr**进行编译时，编译器不会隐式重写基类函数，这意味着该函数将获取 vtable 中的新槽。 若要解决此问题，请显式指定函数是否为重写。
 
 有关详细信息，请参见:
 
@@ -27,13 +27,13 @@ override_function： 匹配 ref 基类方法 base_class_function，但未标记�
 
 - [新（vtable 中的新槽）](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md)
 
-C4484 始终作为错误发出。 使用[警告](../../preprocessor/warning.md)杂注来禁止显示 C4484。
+C4484 始终作为错误发出。 使用[警告](../../preprocessor/warning.md)杂注取消 C4484。
 
 ## <a name="example"></a>示例
 
 下面的示例生成 C4484。
 
-```
+```cpp
 // C4484.cpp
 // compile with: /clr
 ref struct A {

@@ -64,7 +64,7 @@ class CNetAddressCtrl : public CEdit
 
 下图描绘了包含网络地址控件的对话框。 网络地址控件的文本框（1）包含无效的网络地址。 如果网络地址无效，则显示提示消息（2）。
 
-![带有网络地址控件和]信息提示的对话框。(../../mfc/reference/media/cnetaddctrl.png "带有网络地址控件和")信息提示的对话框。
+![带有网络地址控件和 信息提示的对话框。](../../mfc/reference/media/cnetaddctrl.png "带有网络地址控件和 信息提示的对话框。")
 
 ## <a name="example"></a>示例
 

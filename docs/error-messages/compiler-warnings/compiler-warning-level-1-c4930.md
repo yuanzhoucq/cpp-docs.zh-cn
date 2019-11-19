@@ -1,27 +1,27 @@
 ---
-title: 编译器警告（等级 1）C4930
+title: 编译器警告（等级1） C4930
 ms.date: 11/04/2016
 f1_keywords:
 - C4930
 helpviewer_keywords:
 - C4930
 ms.assetid: 89a206c9-c536-4186-8e81-1cde3e7f4f5b
-ms.openlocfilehash: 15cd1ed61c747e2c9168b9fc0fee03dca8403a24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b21cc6364692eb2f3b1d56b03d175df1f2ad7ee8
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242781"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74050285"
 ---
-# <a name="compiler-warning-level-1-c4930"></a>编译器警告（等级 1）C4930
+# <a name="compiler-warning-level-1-c4930"></a>编译器警告（等级1） C4930
 
-原型： 未调用原型函数 （是否有意用变量定义？）
+"原型"：未调用原型函数（是否是有意用变量定义的？）
 
-编译器检测到未使用的函数原型。 如果作为变量声明有意将该原型，删除左/右括号。
+编译器检测到未使用的函数原型。 如果原型旨在用作变量声明，请删除左/右括号。
 
-下面的示例生成 C4930:
+下面的示例生成 C4930：
 
-```
+```cpp
 // C4930.cpp
 // compile with: /W1
 class Lock {
@@ -39,11 +39,11 @@ int main() {
 }
 ```
 
-当编译器无法区分函数原型声明和函数调用时，也会出现 C4930。
+当编译器无法区分函数原型声明和函数调用时，也会发生 C4930。
 
-下面的示例生成 C4930:
+下面的示例生成 C4930：
 
-```
+```cpp
 // C4930b.cpp
 // compile with: /EHsc /W1
 
@@ -112,4 +112,4 @@ int main()
 }
 ```
 
-在上面的示例中，采用零个参数的方法的结果是作为参数传递给构造函数的未命名的本地类变量。 在调用可以通过命名本地变量或前缀与相应的指针到成员运算符以及对象实例的方法调用来消除歧义。
+在上面的示例中，采用零个参数的方法的结果将作为参数传递到未命名的局部类变量的构造函数。 通过命名局部变量或使用对象实例作为方法调用的前缀以及适当的指针到成员运算符，可以消除调用的歧义。

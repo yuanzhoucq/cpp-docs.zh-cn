@@ -2,12 +2,12 @@
 title: 将代码升级到通用 CRT
 ms.date: 03/31/2017
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
-ms.openlocfilehash: 68edcd57ee03ac861a6d2105456f4dbf699c1210
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 0554ff713b499f99e7e7508faf687c1635e6d912
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448996"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627178"
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>将代码升级到通用 CRT
 
@@ -25,17 +25,17 @@ UCRT 现为 Windows 组件，并作为 Windows 10 的一部分提供。 UCRT 支
 
 UCRT 静态库和动态链接存根库位于 Windows Kits\\10\\Lib\\_sdk-version_\\ucrt\\_architecture_ 下的 Program Files 或 Program Files (x86) 目录下，其中 _architecture_ 是 ARM、x86 或 X64。 零售和调试静态库分别是 libucrt.lib 和 libucrtd.lib，用于 UCRT DLL 的库是 ucrt.lib 和 ucrtd.lib。
 
-零售和调试 UCRT DLL 位于不同的位置。 零售 DLL 可再发行，可以在 Program Files 或 Program Files (x86) 目录的 Windows Kits\\10\\Redist\\ucrt\\DLLs\\architecture  \. 中找到 调试 UCRT 库不可再发行，可以在 Program Files 或 Program Files (x86) 目录的 Windows Kits\\10\\bin\\architecture  \\ucrt 文件夹中找到。
+零售和调试 UCRT DLL 位于不同的位置。 零售 DLL 可再发行，可以在 Program Files 或 Program Files (x86) 目录的 Windows Kits\\10\\Redist\\ucrt\\DLLs\\architecture\. 中找到 调试 UCRT 库不可再发行，可以在 Program Files 或 Program Files (x86) 目录的 Windows Kits\\10\\bin\\architecture\\ucrt 文件夹中找到。
 
 C 和 C++ 编译器特定的运行时支持库 **vcruntime**，包含支持程序启动所需的代码以及异常处理和内部函数等功能。 库及其头文件仍位于 Program Files 或 Program files (x86) 目录中特定于版本的 Microsoft Visual Studio 文件夹中。 在 Visual Studio 2017 中，标头位于 Microsoft Visual Studio\\2017\\_edition_\\VC\\Tools\\MSVC\\_lib-version_\\include 中，链接库位于 Microsoft Visual Studio\\2017\\_edition_\\VC\\Tools\\MSVC\\_lib-version_\\lib\\_architecture_ 中，其中 _edition_ 是安装的 Visual Studio 版本，_lib-version_ 是库的版本，而 _architecture_ 是处理器体系结构。 OneCore 和 Store 的链接库也位于库文件夹中。 静态库的零售和调试版本分别是 libvcruntime.lib 和 libvcruntimed.lib。 动态链接零售和调试存根库分别是 vcruntime.lib 和 vcruntimed.lib。
 
-更新 Visual Studio C++ 项目时，如果将项目的“链接器”属性“忽略所有默认库”设置为“是”，或在命令行上使用 `/NODEFAULTLIB` 链接器选项，则必须更新库的列表，使其包含新的重构库    。 将旧的 CRT 库（例如 libcmt.lib、libcmtd.lib、msvcrt.lib 或 msvcrtd.lib）替换为等效的重构库。 有关要使用的特定库的信息，请参阅 [CRT 库的功能](../c-runtime-library/crt-library-features.md)。
+更新 Visual Studio C++ 项目时，如果将项目的“链接器”属性“忽略所有默认库”设置为“是”，或在命令行上使用 `/NODEFAULTLIB` 链接器选项，则必须更新库的列表，使其包含新的重构库。 将旧的 CRT 库（例如 libcmt.lib、libcmtd.lib、msvcrt.lib 或 msvcrtd.lib）替换为等效的重构库。 有关要使用的特定库的信息，请参阅 [CRT 库的功能](../c-runtime-library/crt-library-features.md)。
 
 ## <a name="deployment-and-redistribution-of-the-universal-crt"></a>通用 CRT 的部署和重新分发
 
 因为 UCRT 现在是Microsoft Windows 操作系统组件，它作为操作系统的一部分包含在 Windows 10 中，可通过较旧操作系统（Windows Vista 到 Windows 8.1）的 Windows 更新获得。 有一个可重新分发的版本适用于 Windows XP。 作为操作系统组件，UCRT 更新和服务由 Windows 更新进行管理（独立于 Visual Studio 和 Microsoft C++ 编译器版本）。 由于 UCRT 是 Windows 组件，出于安全性、易于更新以及更小的映像大小的考虑，强烈建议为应用集中部署 UCRT。
 
-可以在 Visual Studio 2015 或 Visual Studio 2017 支持的任何 Windows 版本上使用 UCRT。 可以使用 vcredist 包重新分发它，以便支持 Windows 10 以外的 Windows 版本。 Vcredist 包包含 UCRT 组件，并自动将这些组件安装在默认情况下不安装它们的 Windows 操作系统上。 有关详细信息，请参阅[重新分发 Visual C++ 文件](../windows/redistributing-visual-cpp-files.md)。
+可以在 Visual Studio 2015 或 Visual Studio 2017 支持的任何 Windows 版本上使用 UCRT。 可以使用 vcredist 包重新分发它，以便支持 Windows 10 以外的 Windows 版本。 Vcredist 包包含 UCRT 组件，并自动将这些组件安装在默认情况下不安装它们的 Windows 操作系统上。 有关详细信息，请参阅 [Redistributing Visual C++ Files](../windows/redistributing-visual-cpp-files.md)。
 
 支持 UCRT 的本地应用部署（尽管由于性能和安全原因不推荐）。 用于本地应用部署的 DLL 作为 Windows SDK 的一部分包含在 **redist** 子目录下。 所需的 DLL 包括 ucrtbase.dll 和名为 api-ms-win-_subset_.dll. 的一组 **APISet forwarder** DLL。 每个操作系统所需的 DLL 集各不相同，因此建议在使用应用本地部署时包括所有 DLL。 有关应用本地部署的其他详细信息和注意事项，请参阅 [Visual C++ 中的部署](../windows/deployment-in-visual-cpp.md)。
 
@@ -47,6 +47,6 @@ C 和 C++ 编译器特定的运行时支持库 **vcruntime**，包含支持程�
 
 [Visual C++ 移植和升级指南](visual-cpp-porting-and-upgrading-guide.md)<br/>
 [潜在的升级问题概述 (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
-[从 Visual C++ 早期版本升级项目](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[从 Visual 早期版本升级项目C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Visual C++ 更改历史记录（2003 - 2015）](visual-cpp-change-history-2003-2015.md)<br/>
 [Visual Studio 中的 C++ 符合性改进](../overview/cpp-conformance-improvements.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: 799be6cfd4b14061ba61586f361dd884ad59224c
-ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
+ms.openlocfilehash: 8fa7f02f8537f60b71ff21a476589cab9fcf595b
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72587939"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625089"
 ---
 # <a name="constructors-c"></a>构造函数 (C++)
 
@@ -68,7 +68,7 @@ int main()
 
 ## <a name="member_init_list"></a>成员初始值设定项列表
 
-构造函数可以选择具有成员初始值设定项列表，该列表在执行构造函数正文之前初始化类成员。 （请注意，成员初始值设定项列表与[std：： initializer_list](../standard-library/initializer-list-class.md)的类型的*初始值设定项列表*不同 \<T >。）
+构造函数可以选择具有成员初始值设定项列表，该列表在执行构造函数正文之前初始化类成员。 （请注意，成员初始值设定项列表与[std：： initializer_list](../standard-library/initializer-list-class.md)类型的*初始值设定项列表*不同，\<t >。）
 
 首选使用成员初始值设定项列表，而不是在构造函数的主体中赋值，因为它直接初始化成员。 在下面的示例中，成员初始值设定项列表由冒号后面的所有**标识符（自变量）** 表达式组成：
 
@@ -78,7 +78,7 @@ int main()
     {}
 ```
 
-标识符必须引用类成员;它是用参数的值初始化的。 参数可以是构造函数参数之一、函数调用或[std：： initializer_list \<T >](../standard-library/initializer-list-class.md)。
+标识符必须引用类成员;它是用参数的值初始化的。 参数可以是构造函数参数之一、函数调用或[std：： initializer_list\<t >](../standard-library/initializer-list-class.md)。
 
 必须在成员初始值设定项列表中初始化**常量**成员和引用类型的成员。
 
@@ -212,7 +212,7 @@ Box boxes[3]{ { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
 Box(Box&& other);
 ```
 
-在某些情况下，编译器将在以下情况下选择移动构造函数：对象正由与要销毁的同一类型的另一个对象进行初始化，不再需要其资源。 下面的示例演示了通过重载决策选择移动构造函数时的一种情况。 在调用 `get_Box()` 的构造函数中，返回的值为*xvalue* （值过期）。 它未分配给任何变量，因此即将超出范围。 若要为此示例提供动机，我们将提供一个表示其内容的大型字符串矢量。 移动构造函数将其从 "过期" 值 "box" 中删除，以便向量现在属于新对象，而不是复制向量及其字符串。 对 `std::move` 的调用都是必需的，因为 `vector` 和 `string` 类都实现自己的移动构造函数。
+在某些情况下，编译器将在以下情况下选择移动构造函数：对象正由与要销毁的同一类型的另一个对象进行初始化，不再需要其资源。 下面的示例演示了通过重载决策选择移动构造函数时的一种情况。 在调用 `get_Box()`的构造函数中，返回的值为*xvalue* （值过期）。 它未分配给任何变量，因此即将超出范围。 若要为此示例提供动机，我们将提供一个表示其内容的大型字符串矢量。 移动构造函数将其从 "过期" 值 "box" 中删除，以便向量现在属于新对象，而不是复制向量及其字符串。 对 `std::move` 的调用都是必需的，因为 `vector` 和 `string` 类都实现自己的移动构造函数。
 
 ```cpp
 #include <iostream>
@@ -318,7 +318,7 @@ public:
 
 ## <a name="init_list_constructors"></a>初始值设定项列表构造函数
 
-如果构造函数采用[std：： initializer_list \<T \>](../standard-library/initializer-list-class.md)作为其参数，并且任何其他参数都具有默认参数，则当通过 direct 实例化类时，将在重载决策中选择该构造函数：起始. 您可以使用 initializer_list 初始化可以接受它的任何成员。 例如，假设 Box 类（前面所示）具有 `std::vector<string>` 成员 `m_contents`。 可以提供如下所示的构造函数：
+如果构造函数采用[std：： initializer_list\<t\>](../standard-library/initializer-list-class.md)作为其参数，任何其他参数都具有默认参数，则当通过 direct 实例化类时，将在重载决策中选择该构造函数：起始. 您可以使用 initializer_list 初始化可以接受它的任何成员。 例如，假设 Box 类（前面所示）具有 `std::vector<string>` 成员 `m_contents`。 可以提供如下所示的构造函数：
 
 ```cpp
     Box(initializer_list<string> list, int w = 0, int h = 0, int l = 0)
@@ -597,7 +597,7 @@ Derived d4 calls: Base()*/
 
 ::: moniker range=">=vs-2017"
 
-**Visual Studio 2017 版本15.7 及更高版本**：/Std 中的**Using**语句 **： c + + 17**模式使基类中的所有构造函数的作用域除外，但具有与派生类中的构造函数相同的签名的类除外。 一般而言，当派生类未声明新数据成员或构造函数时，最好使用继承构造函数。 另请参阅[Visual Studio 2017 版本15.7 中的改进](https://docs.microsoft.com/cpp/overview/cpp-conformance-improvements?view=vs-2017#improvements_157)。
+**Visual Studio 2017 版本15.7 及更高版本**：/Std 中的**using**语句 **： c + + 17**模式使基类中的所有构造函数的作用域除外，但具有与派生类中的构造函数相同的签名的类除外。 一般而言，当派生类未声明新数据成员或构造函数时，最好使用继承构造函数。 另请参阅[Visual Studio 2017 版本15.7 中的改进](https://docs.microsoft.com/cpp/overview/cpp-conformance-improvements?view=vs-2017#improvements_157)。
 
 ::: moniker-end
 

@@ -1,36 +1,36 @@
 ---
-title: 编译器警告（等级 1）C4667
+title: 编译器警告（等级1） C4667
 ms.date: 11/04/2016
 f1_keywords:
 - C4667
 helpviewer_keywords:
 - C4667
 ms.assetid: 5d2b7fe0-4f0e-4cd6-b432-ca02c3d194ab
-ms.openlocfilehash: 685cdc2577e1207360c793c82808919c39753f49
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 9ae0d5cdcc1f6cca25f55cd1d7c03cc345c39e5e
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344471"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051397"
 ---
-# <a name="compiler-warning-level-1-c4667"></a>编译器警告（等级 1）C4667
+# <a name="compiler-warning-level-1-c4667"></a>编译器警告（等级1） C4667
 
-function： 没有匹配的函数模板定义与强制实例化
+"function"：未定义与强制实例化匹配的函数模板
 
-无法实例化未声明的函数模板。
+不能实例化未声明的函数模板。
 
-下面的示例将导致 C4667:
+下面的示例将导致 C4667：
 
-```
+```cpp
 // C4667a.cpp
 // compile with: /LD /W1
 template
 void max(const int &, const int &); // C4667 expected
 ```
 
-若要避免此警告，首先要声明的函数模板：
+若要避免此警告，请首先声明函数模板：
 
-```
+```cpp
 // C4667b.cpp
 // compile with: /LD
 // Declare the function template
