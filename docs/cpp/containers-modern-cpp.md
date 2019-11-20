@@ -1,24 +1,24 @@
 ﻿---
 title: 容器（现代 C++）
-ms.date: 01/18/2018
+ms.date: 11/12/2019
 ms.topic: conceptual
-ms.openlocfilehash: 37b540132fc9ddc03d5eaafd33c545b5db5e7935
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 41b9d560ce827cee5c90467184ef5b2b729e0639
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926249"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74188906"
 ---
 # <a name="containers-modern-c"></a>容器（现代 C++）
 
-默认情况下，使用[向量](../standard-library/vector-class.md)作为 C++ 中的首选顺序容器。 这等同于.NET 语言中的`List<T>`。
+By default, use [std::vector](../standard-library/vector-class.md) as the preferred sequential container in C++. The performance of **std::vector** is comparable to C-style arrays in most scenarios and is far safer. **std::vector** is equivalent to `List<T>` in .NET languages.
 
 ```cpp
 vector<string> apples;
 apples.push_back("Granny Smith");
 ```
 
-使用[map](../standard-library/map-class.md)（而不是`unordered_map`）作为默认关联容器。 对于 degenerate 和 multi 的情况，使用[set](../standard-library/set-class.md)，[multimap](../standard-library/multimap-class.md)和[multiset](../standard-library/multiset-class.md)。
+Use [map](../standard-library/map-class.md) (not `unordered_map`) as the default associative container. Use [set](../standard-library/set-class.md), [multimap](../standard-library/multimap-class.md), and [multiset](../standard-library/multiset-class.md) for degenerate & multi cases.
 
 ```cpp
 map<string, string> apple_color;
@@ -26,17 +26,17 @@ map<string, string> apple_color;
 apple_color["Granny Smith"] = "Green";
 ```
 
-需要性能优化时，请考虑使用：
+When performance optimization is needed, consider using:
 
-- [数组](../standard-library/array-class-stl.md)，前提是当嵌入很重要时，例如，作为类成员。
+- The [array](../standard-library/array-class-stl.md) type when embedding is important, for example, as a class member.
 
-- 无序的关联容器，例如[unordered_map](../standard-library/unordered-map-class.md)。 这些容器具有较低的元素开销和定时查找特性，但可能很难正确有效地使用它们。
+- Unordered associative containers such as [unordered_map](../standard-library/unordered-map-class.md). These have lower per-element overhead and constant-time lookup, but they can be harder to use correctly and efficiently.
 
-- 经过排序的`vector`。 有关详细信息，请参阅[算法](../cpp/algorithms-modern-cpp.md)。
+- Sorted `vector`. 有关详细信息，请参阅[算法](../cpp/algorithms-modern-cpp.md)。
 
-不要使用 C 样式数组。 对于需要直接访问数据的较旧的 Api，请使用访问器方法，如`f(vec.data(), vec.size());`。
+Don’t use C-style arrays. For older APIs that need direct access to the data, use accessor methods such as `f(vec.data(), vec.size());` instead.
 
-有关容器的详细信息，请参阅[C++ 标准库容器](../standard-library/stl-containers.md)。
+For more information about containers, see [C++ Standard Library Containers](../standard-library/stl-containers.md).
 
 ## <a name="see-also"></a>请参阅
 
