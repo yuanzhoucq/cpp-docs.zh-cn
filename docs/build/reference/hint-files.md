@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: af28dac17c57c8c0699950cc1fdb542642c01722
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: ca111fcb8b0fc511fda3bbb3a4769ebc9fdd28bc
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707115"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74189006"
 ---
 # <a name="hint-files"></a>提示文件
 
@@ -36,8 +36,8 @@ C++ 浏览数据库分析器是一款模糊分析器，它可在很短的时间�
 
 > [!IMPORTANT]
 > 如果修改或添加提示文件，则需要采取额外的步骤才能使更改生效：
-> - 在 Visual Studio 2017 版本 15.6 之前的版本中：针对所有更改在解决方案中删除 .sdf 文件和/或 VC.db 文件。
-> - 在 Visual Studio 2017 版本 15.6 至 15.9 之间的版本中：关闭解决方案，并在添加新的提示文件后重新打开它。
+> - In versions before Visual Studio 2017 version 15.6: Delete the .sdf file and/or VC.db file in the solution for all changes.
+> - In Visual Studio 2017 version 15.6 and later: Close and reopen the solution after adding new hint files.
 
 ## <a name="scenario"></a>方案
 
@@ -92,13 +92,13 @@ void Function() NOEXCEPT
 
 - 有一个快速操作，可用于创建包含突出显示的宏的提示文件；如果现已存在提示文件，则用于将宏添加到提示文件。
 
-![突出显示的宏。](media/hint-squiggle-and-actions.png "提示波浪线和快速操作")
+![Highlighted Macro.](media/hint-squiggle-and-actions.png "Hint squiggle and Quick Actions")
 
 在执行任一快速操作之后，分析器会重新分析受提示文件影响的文件。
 
 默认情况下，问题宏突出显示为建议。 突出显示项可更改更醒目的效果，例如红色或绿色波浪线。 通过“工具” > “选项” > “文本编辑器” > “C/C++” > “视图”在“代码波浪线”部分内使用“跳过的浏览区域中的宏”。
 
-![“已跳过的浏览区域中的宏”选项。](media/skipped-regions-squiggle-option.png "“已跳过的区域波浪线”选项。")
+![Macros in Skipped Browsing Regions Option.](media/skipped-regions-squiggle-option.png "Skipped regions squiggle option.")
 
 ## <a name="display-browsing-database-errors"></a>显示浏览数据库错误
 
@@ -156,7 +156,7 @@ void Function() NOEXCEPT
 |`@>`|指示一组映射元素结束的提示文件特定的替换字符串。|
 |`#undef` *hint-name*|删除现有提示的预处理器指令。 提示的名称由 hint-name 标识符提供。|
 |`//` *comment*|单行注释。|
-|`/*` *注释* `*/`|多行注释。|
+|`/*`*comment*`*/`|多行注释。|
 
 ## <a name="example"></a>示例
 
@@ -166,7 +166,7 @@ void Function() NOEXCEPT
 
 ### <a name="hint-file-directories"></a>提示文件目录
 
-![通用的以及项目特定的提示文件目录。](media/hintfile.png "提示文件")
+![Common and project&#45;specific hint file directories.](media/hintfile.png "HintFile")
 
 ### <a name="directories-and-hint-file-contents"></a>目录和提示文件内容
 

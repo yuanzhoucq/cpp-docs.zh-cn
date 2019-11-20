@@ -1,29 +1,29 @@
 ---
-title: 编译器警告（等级 3）C4534
+title: Compiler Warning (level 3) C4534
 ms.date: 11/04/2016
 f1_keywords:
 - c4534
 helpviewer_keywords:
 - C4534
 ms.assetid: ec2adf3b-d7a1-4005-bb0c-5d219df78dc8
-ms.openlocfilehash: 81445ff42aca78a8e40e9c88eff4bb76a41a8669
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e617b18f2c7ed3b51d25eb44101629bbadcef9d
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401873"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74189086"
 ---
-# <a name="compiler-warning-level-3-c4534"></a>编译器警告（等级 3）C4534
+# <a name="compiler-warning-level-3-c4534"></a>Compiler Warning (level 3) C4534
 
-constructor 不会类 class 由于默认自变量的默认构造函数
+'constructor' will not be a default constructor for class 'class' due to the default argument
 
-非托管的类可以具有默认值的参数的构造函数，并且编译器将使用此为默认构造函数。 标记的类`value`关键字将不用作构造函数使用默认值对于其参数的默认构造函数。
+An unmanaged class can have a constructor with parameters that have default values and the compiler will use this as the default constructor. A class marked with the `value` keyword will not use a constructor with default values for its parameters as a default constructor.
 
-有关详细信息，请参阅[类和结构](../../extensions/classes-and-structs-cpp-component-extensions.md)。
+有关更多信息，请参阅[类和结构](../../extensions/classes-and-structs-cpp-component-extensions.md)。
 
-下面的示例生成 C4534:
+The following sample generates C4534:
 
-```
+```cpp
 // C4534.cpp
 // compile with: /W3 /clr /WX
 value class MyClass {

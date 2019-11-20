@@ -1,31 +1,31 @@
 ---
-title: 编译器警告（等级 3）C4522
+title: Compiler Warning (level 3) C4522
 ms.date: 11/04/2016
 f1_keywords:
 - C4522
 helpviewer_keywords:
 - C4522
 ms.assetid: 7065dc27-0b6c-4e68-a345-c51cdb99a20b
-ms.openlocfilehash: de163f0a3925b711f2f3437b700f75bbe994b3e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 84f4785c670c4cc5c167c18b9f15c2417b61df34
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401899"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74188969"
 ---
-# <a name="compiler-warning-level-3-c4522"></a>编译器警告（等级 3）C4522
+# <a name="compiler-warning-level-3-c4522"></a>Compiler Warning (level 3) C4522
 
-class： 指定的多个赋值运算符
+'class' : multiple assignment operators specified
 
-类具有一种类型的多个赋值运算符。 此警告是信息性;构造函数是可在程序中调用。
+The class has multiple assignment operators of a single type. This warning is informational; the constructors are callable in your program.
 
-使用[警告](../../preprocessor/warning.md)杂注来禁止显示此警告。
+Use the [warning](../../preprocessor/warning.md) pragma to suppress this warning.
 
 ## <a name="example"></a>示例
 
-下面的示例生成 C4522。
+The following sample generates C4522.
 
-```
+```cpp
 // C4522.cpp
 // compile with: /EHsc /W3
 #include <iostream>
