@@ -1,49 +1,49 @@
 ---
 title: 固定和可变指针
-ms.date: 11/04/2016
+ms.date: 11/19/2019
 helpviewer_keywords:
 - volatile keyword [C++], and pointers
 - pointers, and const
 - pointers, and volatile
 - const keyword [C++], volatile pointers
 ms.assetid: 0c92dc6c-400e-4342-b345-63ddfe649d7e
-ms.openlocfilehash: c869adbbdc8a5a17d315e64e5ac15545e0c46e26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0aafde9070275abcb270710e2d4a7a8d9806267
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399117"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246631"
 ---
 # <a name="const-and-volatile-pointers"></a>固定和可变指针
 
-[Const](../cpp/const-cpp.md)并[易失性](../cpp/volatile-cpp.md)关键字更改指针的方式。 **Const**关键字指定指针不能在初始化之后修改; 此后修改保护指针。
+The [const](const-cpp.md) and [volatile](volatile-cpp.md) keywords change how pointers are treated. The **const** keyword specifies that the pointer cannot be modified after initialization; the pointer is protected from modification thereafter.
 
-**易失性**关键字指定操作以外的用户应用程序中的操作可以修改与跟的名称关联的值。 因此，**易失性**关键字可用于声明可由多个进程或用于与中断服务例程通信的全局数据区域访问的共享内存中的对象。
+The **volatile** keyword specifies that the value associated with the name that follows can be modified by actions other than those in the user application. Therefore, the **volatile** keyword is useful for declaring objects in shared memory that can be accessed by multiple processes or global data areas used for communication with interrupt service routines.
 
-当名称声明为**易失性**，编译器重新加载内存中的值每次访问该程序。 这将显著减少可能的优化。 但是，当对象的状态可能意外更改时，这是保证可预见的程序性能的唯一方法。
+When a name is declared as **volatile**, the compiler reloads the value from memory each time it is accessed by the program. 这将显著减少可能的优化。 但是，当对象的状态可能意外更改时，这是保证可预见的程序性能的唯一方法。
 
-若要声明为指针指向的对象**const**或**易失性**，使用窗体的声明：
+To declare the object pointed to by the pointer as **const** or **volatile**, use a declaration of the form:
 
 ```cpp
 const char *cpch;
 volatile char *vpch;
 ```
 
-来声明指针的值 — 即指针中存储的实际地址 — 作为**const**或**易失性**，使用窗体的声明：
+To declare the value of the pointer — that is, the actual address stored in the pointer — as **const** or **volatile**, use a declaration of the form:
 
 ```cpp
 char * const pchc;
 char * volatile pchv;
 ```
 
-C++ 语言禁止将允许修改的对象的分配或指针声明为**const**。 此类赋值会移除用来声明对象或指针的信息，从而违反原始声明的意图。 请考虑以下声明：
+The C++ language prevents assignments that would allow modification of an object or pointer declared as **const**. 此类赋值会移除用来声明对象或指针的信息，从而违反原始声明的意图。 请考虑以下声明：
 
 ```cpp
 const char cch = 'A';
 char ch = 'B';
 ```
 
-假定前面声明的两个对象 (`cch`，类型的**const char**，和`ch`，类型的**char)**，以下声明/初始化存在有效：
+Given the preceding declarations of two objects (`cch`, of type **const char**, and `ch`, of type **char)** , the following declaration/initializations are valid:
 
 ```cpp
 const char *pch1 = &cch;
@@ -61,7 +61,7 @@ char *pch2 = &cch;   // Error
 char *const pch3 = &cch;   // Error
 ```
 
-`pch2` 的声明声明了一个可以用来修改常量对象的指针，因此不允许使用。 声明`pch3`指定指针是常量，不是对象; 不允许使用相同的原因`pch2`不允许使用。
+`pch2` 的声明声明了一个可以用来修改常量对象的指针，因此不允许使用。 The declaration of `pch3` specifies that the pointer is constant, not the object; the declaration is disallowed for the same reason the `pch2` declaration is disallowed.
 
 以下八个赋值显示了通过指针进行的赋值以及对前面的声明的指针值的更改；现在，假设 `pch1` 到 `pch8` 的初始化是正确的。
 
@@ -76,20 +76,20 @@ pch3 = &ch;   // Error: pointer declared const
 pch4 = &ch;   // Error: pointer declared const
 ```
 
-指针声明为**易失性**，或作为混合**const**并**易失性**，遵循相同的规则。
+Pointers declared as **volatile**, or as a mixture of **const** and **volatile**, obey the same rules.
 
-指向**const**对象通常用于函数声明中，如下所示：
+Pointers to **const** objects are often used in function declarations as follows:
 
 ```cpp
 errno_t strcpy_s( char *strDestination, size_t numberOfElements, const char *strSource );
 ```
 
-前面的语句声明一个函数[strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)，其中两个三个参数是指针类型的**char**。 因为通过引用传递的参数，并且不由值，该函数可以随意修改这两`strDestination`并`strSource`如果`strSource`未声明为**const**。 声明`strSource`作为**const**调用方保证`strSource`所调用的函数不能更改。
+The preceding statement declares a function, [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md), where two of the three arguments are of type pointer to **char**. Because the arguments are passed by reference and not by value, the function would be free to modify both `strDestination` and `strSource` if `strSource` were not declared as **const**. The declaration of `strSource` as **const** assures the caller that `strSource` cannot be changed by the called function.
 
 > [!NOTE]
-> 因为没有从的标准转换*typename* <strong>\*</strong>到**const** *typename*  <strong>\*</strong>，它是合法的类型的自变量传递`char *`到[strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)。 但是，反之不成立;删除的目的是隐式转换**const**从对象或指针的属性。
+> Because there is a standard conversion from *typename* <strong>\*</strong> to **const** *typename* <strong>\*</strong>, it is legal to pass an argument of type `char *` to [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md). However, the reverse is not true; no implicit conversion exists to remove the **const** attribute from an object or pointer.
 
-一个**const**给定类型的指针可以分配给同一类型的指针。 但是，指针的不是**const**不能分配给**const**指针。 以下代码显示了正确和错误的赋值：
+A **const** pointer of a given type can be assigned to a pointer of the same type. However, a pointer that is not **const** cannot be assigned to a **const** pointer. 以下代码显示了正确和错误的赋值：
 
 ```cpp
 // const_pointer.cpp
@@ -126,4 +126,5 @@ int main() {
 
 ## <a name="see-also"></a>请参阅
 
-[指针](../cpp/pointers-cpp.md)
+[Pointers](pointers-cpp.md)
+[Raw pointers](raw-pointers.md)

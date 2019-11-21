@@ -2854,7 +2854,7 @@
       href: porting/visual-cpp-change-history-2003-2015.md
     - name: Visual C++ 新增功能 (2003 - 2015)
       href: porting/visual-cpp-what-s-new-2003-through-2015.md
-    - name: 2015 版本和 2019 版本之间的 C++ 二进制兼容性
+    - name: C++ 二进制兼容性 (2015-2019)
       href: porting/binary-compat-2015-2017.md
     - name: 移植和升级：示例和案例研究
       items:
@@ -4215,22 +4215,7 @@
                 - name: constexpr Lambda 表达式
                   href: cpp/lambda-expressions-constexpr.md
             - name: 数组
-              expanded: false
-              items:
-                - name: 数组
-                  href: cpp/arrays-cpp.md
-                - name: 使用数组
-                  href: cpp/using-arrays-cpp.md
-                - name: 初始化数组
-                  href: cpp/initializing-arrays.md
-                - name: 表达式中的数组
-                  href: cpp/arrays-in-expressions.md
-                - name: 下标运算符的解释
-                  href: cpp/interpretation-of-subscript-operator.md
-                - name: 数组类型的间接寻址
-                  href: cpp/indirection-on-array-types.md
-                - name: C++ 数组的排序
-                  href: cpp/ordering-of-cpp-arrays.md
+              href: cpp/arrays-cpp.md
             - name: reference
               expanded: false
               items:

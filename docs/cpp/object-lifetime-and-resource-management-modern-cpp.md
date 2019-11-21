@@ -3,12 +3,12 @@ title: 对象生存期和资源管理（现代 C++）
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 8aa0e1a1-e04d-46b1-acca-1d548490700f
-ms.openlocfilehash: 5964078960a5b241cb5af369aeddba45a06e48ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 91229ea1b2d7a85f852138176d8cdb46dfa8c0df
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245006"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246434"
 ---
 # <a name="object-lifetime-and-resource-management-modern-c"></a>对象生存期和资源管理（现代 C++）
 
@@ -18,15 +18,15 @@ C++ 没有 GC 的主要原因是它不会处理非内存资源。 仅类似 C++ 
 
 ## <a name="concepts"></a>概念
 
-对象生存期管理中一个重要的事项是封装 - 使用对象不必知道对象拥有的资源，或如何摆脱资源，或者甚至它是否拥有任何资源。 它只需销毁对象即可。 C++ 核心语言旨在确保在正确的时间（即，当块退出时）以构造的倒序销毁对象。 销毁对象时，将按特定顺序销毁其基项和成员。  除非您进行诸如堆分配或放置新对象等特殊操作，否则此语言将自动销毁对象。  例如，[智能指针](../cpp/smart-pointers-modern-cpp.md)等`unique_ptr`并`shared_ptr`，和C++标准库容器类似`vector`，封装**新**/ **删除**并`new[]` / `delete[]`在对象中，其中具有析构函数。 这就是为什么因此，务必使用智能指针和 C++ 标准库容器。
+对象生存期管理中一个重要的事项是封装 - 使用对象不必知道对象拥有的资源，或如何摆脱资源，或者甚至它是否拥有任何资源。 它只需销毁对象即可。 C++ 核心语言旨在确保在正确的时间（即，当块退出时）以构造的倒序销毁对象。 销毁对象时，将按特定顺序销毁其基项和成员。  除非您进行诸如堆分配或放置新对象等特殊操作，否则此语言将自动销毁对象。  For example, [smart pointers](../cpp/smart-pointers-modern-cpp.md) like `unique_ptr` and `shared_ptr`, and C++ Standard Library containers like `vector`, encapsulate **new**/**delete** and `new[]`/`delete[]` in objects, which have destructors. That's why it's so important to use smart pointers and C++ Standard Library containers.
 
-生存期管理中另一个重要概念：析构函数。 析构函数封装资源释放。  （常用的助记键是 RRID，资源释放是析构。）资源是您从“系统”中获取并且之后必须归还的内容。  内存是最常见的资源，但还有文件、套接字、纹理和其他非内存资源。 “拥有”资源意味着您可以在需要时使用资源，但还必须在用完时释放。  销毁对象时，其析构函数将释放它拥有的资源。
+生存期管理中另一个重要概念：析构函数。 析构函数封装资源释放。  (The commonly used mnemonic is RRID, Resource Release Is Destruction.)  A resource is something that you get from "the system" and have to give back later.  内存是最常见的资源，但还有文件、套接字、纹理和其他非内存资源。 “拥有”资源意味着您可以在需要时使用资源，但还必须在用完时释放。  销毁对象时，其析构函数将释放它拥有的资源。
 
-最终概念是 DAG（定向非循环图形）。  程序的所有权结构构成 DAG。 无对象能拥有自身 - 不仅不可能而且本质上无意义。 但是两个对象可以共享第三个对象的所有权。  此类 DAG 中可能会几种类型的链接：A 是 B 的成员 （B 拥有 A），C 存储`vector<D>`（C 拥有每个 D 元素），E 存储`shared_ptr<F>`（E 共享 F 的所有权，可能与其他对象），依次类推。  只要没有循环，DAG 中的每个链接就将由具有析构函数（而不是原始指针、句柄或其他机制）的对象表示，然后不可能出现资源泄漏，因为此语言阻止泄漏。 在没有垃圾回收器运行的情况下，在不再需要资源后立即将其释放。 堆栈范围、基项、成员和相关案例的生存期跟踪无开销，而 `shared_ptr` 的生存期跟踪很便宜。
+最终概念是 DAG（定向非循环图形）。  程序的所有权结构构成 DAG。 无对象能拥有自身 - 不仅不可能而且本质上无意义。 但是两个对象可以共享第三个对象的所有权。  DAG 中可能存在的许多链接类型与下类似：A 是 B 的成员（B 拥有 A），C 存储 `vector<D>`（C 拥有每个 D 元素），E 存储 `shared_ptr<F>`（E 可能与其他对象一起共享 F 的所有权），以此类推。  只要没有循环，DAG 中的每个链接就将由具有析构函数（而不是原始指针、句柄或其他机制）的对象表示，然后不可能出现资源泄漏，因为此语言阻止泄漏。 在没有垃圾回收器运行的情况下，在不再需要资源后立即将其释放。 堆栈范围、基项、成员和相关案例的生存期跟踪无开销，而 `shared_ptr` 的生存期跟踪很便宜。
 
 ### <a name="heap-based-lifetime"></a>基于堆的生存期
 
-对于堆对象生存期，使用[智能指针](../cpp/smart-pointers-modern-cpp.md)。 将 `shared_ptr` 和 `make_shared` 分别用作默认指针和分配器。 使用 `weak_ptr` 中断循环、执行缓存并观察对象，而不影响或假定有关其生存期的任何内容。
+For heap object lifetime, use [smart pointers](../cpp/smart-pointers-modern-cpp.md). 将 `shared_ptr` 和 `make_shared` 分别用作默认指针和分配器。 使用 `weak_ptr` 中断循环、执行缓存并观察对象，而不影响或假定有关其生存期的任何内容。
 
 ```cpp
 void func() {
@@ -38,7 +38,7 @@ p->draw();
 } // no delete required, out-of-scope triggers smart pointer destructor
 ```
 
-使用`unique_ptr`为了唯一所有权，例如，在*pimpl*惯用语法。 (请参阅[用于编译时封装的 Pimpl](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md)。)请`unique_ptr`主目标的所有显式**新**表达式。
+Use `unique_ptr` for unique ownership, for example, in the *pimpl* idiom. (See [Pimpl For Compile-Time Encapsulation](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md).) Make a `unique_ptr` the primary target of all explicit **new** expressions.
 
 ```cpp
 unique_ptr<widget> p(new widget());
@@ -56,11 +56,11 @@ class node {
 node::node() : parent(...) { children.emplace_back(new node(...) ); }
 ```
 
-当需要性能优化时，您可能必须使用*完好封装*拥有指针和显式调用来删除。 例如，在实现自己的低级别数据结构时。
+When performance optimization is required, you might have to use *well-encapsulated* owning pointers and explicit calls to delete. 例如，在实现自己的低级别数据结构时。
 
 ### <a name="stack-based-lifetime"></a>基于堆栈的生存期
 
-在现代 C++，*基于堆栈的范围*是一种强大的方法，因为它将结合自动编写可靠代码*堆栈生存期*和*数据成员生存期*，同时高效-生存期跟踪绝对无开销。 堆对象生存期需要努力的手动管理，可能是资源泄露和无效的根源，尤其是在您使用原始指针时。 考虑此代码，其演示了基于堆栈的范围：
+In modern C++, *stack-based scope* is a powerful way to write robust code because it combines automatic *stack lifetime* and *data member lifetime* with high efficiency—lifetime tracking is essentially free of overhead. 堆对象生存期需要努力的手动管理，可能是资源泄露和无效的根源，尤其是在您使用原始指针时。 考虑此代码，其演示了基于堆栈的范围：
 
 ```cpp
 class widget {
@@ -85,6 +85,6 @@ void functionUsingWidget () {
 
 ## <a name="see-also"></a>请参阅
 
-[欢迎回到 C++（现代 C++）](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Welcome back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 语言参考](../cpp/cpp-language-reference.md)<br/>
 [C++ 标准库](../standard-library/cpp-standard-library-reference.md)

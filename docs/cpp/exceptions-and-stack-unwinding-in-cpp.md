@@ -1,31 +1,31 @@
 ---
 title: C++ 中的异常和堆栈展开
-ms.date: 11/04/2016
+ms.date: 11/19/2019
 ms.assetid: a1a57eae-5fc5-4c49-824f-3ce2eb8129ed
-ms.openlocfilehash: 5e094101557469a189311ce2c5344bb895696649
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 11657206e86dbc81eb62c1e11b49fd87777f11d8
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398883"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246570"
 ---
 # <a name="exceptions-and-stack-unwinding-in-c"></a>C++ 中的异常和堆栈展开
 
-在 C++ 异常机制中，控制从 throw 语句移至可处理引发类型的第一个 catch 语句。 Catch 语句到达时，throw 之间的范围内和 catch 语句的自动变量的所有名为的进程中销毁*堆栈展开*。 在堆栈展开中，执行将继续，如下所示：
+在 C++ 异常机制中，控制从 throw 语句移至可处理引发类型的第一个 catch 语句。 When the catch statement is reached, all of the automatic variables that are in scope between the throw and catch statements are destroyed in a process that is known as *stack unwinding*. 在堆栈展开中，执行将继续，如下所示：
 
-1. 控件到达**尝试**通过正常顺序执行的语句。 在受保护的节**尝试**执行块。
+1. Control reaches the **try** statement by normal sequential execution. The guarded section in the **try** block is executed.
 
-1. 如果在受保护节执行过程中不引发任何异常**捕获**子句，其遵循**尝试**块不会执行。 继续执行后的最后一个语句**捕获**子句后面关联**尝试**块。
+1. If no exception is thrown during execution of the guarded section, the **catch** clauses that follow the **try** block are not executed. Execution continues at the statement after the last **catch** clause that follows the associated **try** block.
 
-1. 如果在受保护节的或受保护的节调用的直接或间接的任何例程中的执行期间引发异常，从创建的对象创建的异常对象**引发**操作数。 （这意味着，可能会涉及复制构造函数。）此时，编译器会寻找**捕获**可以处理异常的类型的引发，或更高版本执行上下文中的子句**捕获**可以处理任何类型的异常处理程序。 **捕获**处理程序检查后面的显示顺序**尝试**块。 如果找到任何适当的处理程序，下一个动态封闭**尝试**检查块。 此过程将继续，直到最外面的封闭**尝试**检查块。
+1. If an exception is thrown during execution of the guarded section or in any routine that the guarded section calls either directly or indirectly, an exception object is created from the object that is created by the **throw** operand. (This implies that a copy constructor may be involved.) At this point, the compiler looks for a **catch** clause in a higher execution context that can handle an exception of the type that is thrown, or for a **catch** handler that can handle any type of exception. The **catch** handlers are examined in order of their appearance after the **try** block. If no appropriate handler is found, the next dynamically enclosing **try** block is examined. This process continues until the outermost enclosing **try** block is examined.
 
 1. 如果仍未找到匹配的处理程序，或者在展开过程中但在处理程序获得控制前发生异常，则调用预定义的运行时函数 `terminate`。 如果在引发异常后但在展开开始前发生异常，则调用 `terminate`。
 
-1. 如果匹配**捕获**找到处理程序，并且它通过值捕获，通过复制异常对象初始化其形参。 如果它通过引用进行捕获，则初始化参数以引用异常对象。 在初始化形参后，堆栈的展开过程将开始。 这涉及到完全构造的所有自动对象的析构 — 但尚未 — 开始之间经历的**尝试**与关联的块**捕获**处理程序和引发异常的站点。 析构按照与构造相反的顺序发生。 **捕获**执行处理程序，程序继续执行最后一个处理程序后的，即，在第一个语句或构造，它不是**捕获**处理程序。 只能输入控件**捕获**通过引发的异常处理程序永远不会通过**goto**语句或**用例**中的标签**切换**语句。
+1. If a matching **catch** handler is found, and it catches by value, its formal parameter is initialized by copying the exception object. 如果它通过引用进行捕获，则初始化参数以引用异常对象。 在初始化形参后，堆栈的展开过程将开始。 This involves the destruction of all automatic objects that were fully constructed—but not yet destructed—between the beginning of the **try** block that is associated with the **catch** handler and the throw site of the exception. 析构按照与构造相反的顺序发生。 The **catch** handler is executed and the program resumes execution after the last handler—that is, at the first statement or construct that is not a **catch** handler. Control can only enter a **catch** handler through a thrown exception, never through a **goto** statement or a **case** label in a **switch** statement.
 
-## <a name="stack-unwinding-example"></a>堆栈展开示例
+## <a name="stack-unwinding-example"></a>Stack unwinding example
 
-以下示例演示引发异常时如何展开堆栈。 线程执行将从 `C` 中的 throw 语句跳转到 `main` 中的 catch 语句，并在此过程中展开每个函数。 请注意创建 `Dummy` 对象的顺序，并且会在它们超出范围时将其销毁。 还请注意，除了包含 catch 语句的 `main` 之外，其他函数均未完成。 函数 `A` 绝不会从其对 `B()` 的调用返回，并且 `B` 绝不会从其对 `C()` 的调用返回。 如果取消注释 `Dummy` 指针和相应的 delete 语句的定义并运行程序，请注意绝不会删除该指针。 这说明了当函数不提供异常保证时会发生的情况。 有关详细信息，请参阅“操作说明：针对异常进行设计。 如果注释掉 catch 语句，则可以观察当程序因未经处理的异常而终止时将发生的情况。
+以下示例演示引发异常时如何展开堆栈。 线程执行将从 `C` 中的 throw 语句跳转到 `main` 中的 catch 语句，并在此过程中展开每个函数。 请注意创建 `Dummy` 对象的顺序，并且会在它们超出范围时将其销毁。 还请注意，除了包含 catch 语句的 `main` 之外，其他函数均未完成。 函数 `A` 绝不会从其对 `B()` 的调用返回，并且 `B` 绝不会从其对 `C()` 的调用返回。 如果取消注释 `Dummy` 指针和相应的 delete 语句的定义并运行程序，请注意绝不会删除该指针。 这说明了当函数不提供异常保证时会发生的情况。 有关详细信息，请参阅“如何：针对异常进行设计”。 如果注释掉 catch 语句，则可以观察当程序因未经处理的异常而终止时将发生的情况。
 
 ```cpp
 #include <string>

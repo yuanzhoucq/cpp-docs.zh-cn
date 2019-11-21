@@ -1,22 +1,22 @@
 ---
-title: 对象拥有资源 (RAII)
+title: 对象所有资源 (RAII)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: f86b484e-5a27-4c3b-a92a-dfaa5dd6d93a
-ms.openlocfilehash: 5705fc1996343141b13e37d1267b2e8c981c1eba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d100d4a9df5d829566e4856594c44dcf4057a329
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245084"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245580"
 ---
-# <a name="objects-own-resources-raii"></a>对象拥有资源 (RAII)
+# <a name="objects-own-resources-raii"></a>对象所有资源 (RAII)
 
-请确保对象拥有资源。 此原则也称“资源获取即是初始化”，简称“RAII”。
+Make sure that objects own resources. This principle is also known as “resource acquisition is initialization” or “RAII.”
 
 ## <a name="example"></a>示例
 
-将"新"的每个对象作为构造函数参数传递给另一个命名对象，该对象拥有它 (几乎总是 unique_ptr)。
+Pass every “new” object as a constructor argument to another named object that owns it (almost always unique_ptr).
 
 ```cpp
 void f() {
@@ -27,7 +27,7 @@ void f() {
   // automatic exception safety, as if "finally { p->dispose(); x.w.dispose(); }"
 ```
 
-一定会立即传递给拥有它的另一个对象的任何新的资源。
+Always immediately pass any new resource to another object that owns it.
 
 ```cpp
 void g() {
@@ -39,6 +39,6 @@ void g() {
 
 ## <a name="see-also"></a>请参阅
 
-[欢迎回到 C++（现代 C++）](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Welcome back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 语言参考](../cpp/cpp-language-reference.md)<br/>
 [C++ 标准库](../standard-library/cpp-standard-library-reference.md)

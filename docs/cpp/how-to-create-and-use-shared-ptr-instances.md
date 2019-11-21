@@ -1,23 +1,23 @@
 ---
-title: 如何：创建和使用 shared_ptr 实例
+title: 'How to: Create and use shared_ptr instances'
 ms.custom: how-to
-ms.date: 05/22/2019
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-ms.openlocfilehash: d0ee1a5e8c5d26e8e0bec060ffe3d5fea30ce0fa
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.openlocfilehash: 9820e4cd2d1b981d82760fc1cea4e07c85792177
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866140"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245834"
 ---
-# <a name="how-to-create-and-use-shared_ptr-instances"></a>如何：创建和使用 shared_ptr 实例
+# <a name="how-to-create-and-use-shared_ptr-instances"></a>How to: Create and Use shared_ptr instances
 
 `shared_ptr` 类型是 C++ 标准库中的一个智能指针，是为多个所有者可能必须管理对象在内存中的生命周期的方案设计的。 在您初始化一个 `shared_ptr` 之后，您可复制它，按值将其传入函数参数，然后将其分配给其他 `shared_ptr` 实例。 所有实例均指向同一个对象，并共享对一个“控制块”（每当新的 `shared_ptr` 添加、超出范围或重置时增加和减少引用计数）的访问权限。 当引用计数达到零时，控制块将删除内存资源和自身。
 
 下图显示了指向一个内存位置的几个 `shared_ptr` 实例。
 
-![共享指针图表](../cpp/media/shared_ptr.png "Shared pointer diagram")
+![Shared pointer diagram](media/shared_ptr.png "Shared pointer diagram")
 
 ## <a name="example-setup"></a>示例设置
 
@@ -74,25 +74,25 @@ int main()
 
 如有可能，第一次创建内存资源时，请使用 [make_shared](../standard-library/memory-functions.md#make_shared) 函数创建 `shared_ptr`。 `make_shared` 异常安全。 它使用同一调用为控制块和资源分配内存，这会减少构造开销。 如果不使用 `make_shared`，则必须先使用显式 `new` 表达式来创建对象，然后才能将其传递到 `shared_ptr` 构造函数。 以下示例演示了同时声明和初始化 `shared_ptr` 和新对象的各种方式。
 
-[!code-cpp[stl_smart_pointers#1](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_1.cpp)]
+[!code-cpp[stl_smart_pointers#1](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_1.cpp)]
 
 ## <a name="example-2"></a>示例 2
 
 以下示例演示如何声明和初始化对其他 `shared_ptr` 已分配的对象具有共享所有权的 `shared_ptr` 实例。 假设 `sp2` 是已初始化的 `shared_ptr`。
 
-[!code-cpp[stl_smart_pointers#2](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_2.cpp)]
+[!code-cpp[stl_smart_pointers#2](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_2.cpp)]
 
 ## <a name="example-3"></a>示例 3
 
 在你使用复制元素的算法时，`shared_ptr` 在 C++ 标准库容器中很有用。 您可以将元素包装在 `shared_ptr` 中，然后将其复制到其他容器中（请记住，只要您需要，基础内存就会一直有效）。 以下示例演示如何在向量中对 `remove_copy_if` 实例使用 `shared_ptr` 算法。
 
-[!code-cpp[stl_smart_pointers#4](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_3.cpp)]
+[!code-cpp[stl_smart_pointers#4](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_3.cpp)]
 
 ## <a name="example-4"></a>示例 4
 
 您可以使用 `dynamic_pointer_cast`、`static_pointer_cast` 和 `const_pointer_cast` 来转换 `shared_ptr`。 这些函数类似于 `dynamic_cast`、`static_cast` 和 `const_cast` 运算符。 以下示例演示如何测试基类的 `shared_ptr` 向量中每个元素的派生类型，然后复制元素并显示有关它们的信息。
 
-[!code-cpp[stl_smart_pointers#5](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_4.cpp)]
+[!code-cpp[stl_smart_pointers#5](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_4.cpp)]
 
 ## <a name="example-5"></a>示例 5
 
@@ -114,8 +114,8 @@ int main()
 
 以下示例演示 `shared_ptr` 如何重载各种比较运算符以在 `shared_ptr` 实例所有的内存上实现指针比较。
 
-[!code-cpp[stl_smart_pointers#3](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_6.cpp)]
+[!code-cpp[stl_smart_pointers#3](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_6.cpp)]
 
 ## <a name="see-also"></a>请参阅
 
-[智能指针（现代 C++）](../cpp/smart-pointers-modern-cpp.md)
+[智能指针（现代 C++）](smart-pointers-modern-cpp.md)

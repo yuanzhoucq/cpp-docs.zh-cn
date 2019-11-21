@@ -1,5 +1,5 @@
 ---
-title: 异常:捕捉和删除异常
+title: 异常：捕捉和删除异常
 ms.date: 11/04/2016
 helpviewer_keywords:
 - exceptions [MFC], deleting
@@ -9,47 +9,47 @@ helpviewer_keywords:
 - catch blocks [MFC], catching and deleting exceptions
 - execution [MFC], returns from within catch block
 ms.assetid: 7c233ff0-89de-4de0-a68a-9e9cdb164311
-ms.openlocfilehash: 511850c3c17a4eb70529202f4b0c2b36132fc8ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0142ffddfb391ae8da878d9e5fe34629cf16cb52
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173261"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246694"
 ---
-# <a name="exceptions-catching-and-deleting-exceptions"></a>异常:捕捉和删除异常
+# <a name="exceptions-catching-and-deleting-exceptions"></a>异常：捕捉和删除异常
 
-下列说明和示例演示如何捕获和删除异常。 有关详细信息**尝试**，**捕获**，并**引发**关键字，请参见[C++的异常处理](../cpp/cpp-exception-handling.md)。
+下列说明和示例演示如何捕获和删除异常。 For more information on the **try**, **catch**, and **throw** keywords, see [Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md).
 
 你的异常处理程序必须删除其处理的异常对象，因为如果未删除异常将导致在代码捕获异常时出现内存泄漏。
 
-你**捕获**块必须删除异常时：
+Your **catch** block must delete an exception when:
 
-- **捕获**块引发新异常。
+- The **catch** block throws a new exception.
 
    当然，如果您再次引发同一异常，则不得删除此异常：
 
    [!code-cpp[NVC_MFCExceptions#3](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_1.cpp)]
 
-- 执行返回内**捕获**块。
+- Execution returns from within the **catch** block.
 
 > [!NOTE]
->  删除时`CException`，使用`Delete`成员函数删除异常。 不要使用**删除**关键字，因为它可能会失败，如果异常不在堆上。
+>  When deleting a `CException`, use the `Delete` member function to delete the exception. Do not use the **delete** keyword, because it can fail if the exception is not on the heap.
 
 #### <a name="to-catch-and-delete-exceptions"></a>捕获和删除异常
 
-1. 使用**尝试**关键字设置**尝试**块。 执行可能引发异常中的任何程序语句**尝试**块。
+1. Use the **try** keyword to set up a **try** block. Execute any program statements that might throw an exception within a **try** block.
 
-   使用**捕获**关键字设置**捕获**块。 将异常处理代码中的放置**捕获**块。 中的代码**捕获**仅当执行块中的代码**尝试**该块引发一个异常中指定的类型**捕获**语句。
+   Use the **catch** keyword to set up a **catch** block. Place exception-handling code in a **catch** block. The code in the **catch** block is executed only if the code within the **try** block throws an exception of the type specified in the **catch** statement.
 
-   以下框架演示如何**尝试**并**捕获**正常排列基块：
+   The following skeleton shows how **try** and **catch** blocks are normally arranged:
 
    [!code-cpp[NVC_MFCExceptions#4](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_2.cpp)]
 
-   当引发异常时，控制权将传递给第一个**捕获**其异常声明匹配异常的类型的块。 您可以有选择地处理不同类型的异常和顺序**捕获**阻止如下所示：
+   When an exception is thrown, control passes to the first **catch** block whose exception-declaration matches the type of the exception. You can selectively handle different types of exceptions with sequential **catch** blocks as listed below:
 
    [!code-cpp[NVC_MFCExceptions#5](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_3.cpp)]
 
-有关详细信息，请参阅[异常：从 MFC 异常宏转换](../mfc/exceptions-converting-from-mfc-exception-macros.md)。
+For more information, see [Exceptions: Converting from MFC Exception Macros](../mfc/exceptions-converting-from-mfc-exception-macros.md).
 
 ## <a name="see-also"></a>请参阅
 

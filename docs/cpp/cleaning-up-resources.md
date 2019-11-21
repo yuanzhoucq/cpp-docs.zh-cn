@@ -9,28 +9,28 @@ helpviewer_keywords:
 - exception handling [C++], cleanup code
 - try-catch keyword [C++], termination handlers
 ms.assetid: 65753efe-6a27-4750-b90c-50635775c1b6
-ms.openlocfilehash: 0db21b20b94dc1a3f347bd848c999a961398759b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 225c3ccaf3342f11ad4eb6d6575ad3ac542acfd2
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386117"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246637"
 ---
 # <a name="cleaning-up-resources"></a>清理资源
 
-在终止处理程序执行期间，您在调用终止处理程序之前，可能无法知道实际分配的资源。 可能的 **__try**语句块已中断之前所分配的所有资源，以便打开并非所有资源。
+在终止处理程序执行期间，您在调用终止处理程序之前，可能无法知道实际分配的资源。 It is possible that the **__try** statement block was interrupted before all resources were allocated, so that not all resources were opened.
 
 因此，为安全起见，您应检查以查看哪些资源在终止处理清理之前已实际打开。 建议的过程是：
 
 1. 将句柄初始化为 NULL。
 
-1. 在中 **__try**语句块中，分配资源。 随着资源的分配，句柄将被设置为正值。
+1. In the **__try** statement block, allocate resources. 随着资源的分配，句柄将被设置为正值。
 
-1. 在中 **__finally**语句块释放其对应的句柄或标志变量为非零值的每个资源或 not NULL。
+1. In the **__finally** statement block, release each resource whose corresponding handle or flag variable is nonzero or not NULL.
 
 ## <a name="example"></a>示例
 
-例如，以下代码使用终止处理程序关闭三个文件和在期间分配的内存块 **__try**语句块。 在清理资源之前，代码应先检查是否已分配资源。
+For example, the following code uses a termination handler to close three files and a memory block that were allocated in the **__try** statement block. 在清理资源之前，代码应先检查是否已分配资源。
 
 ```cpp
 // exceptions_Cleaning_up_Resources.cpp
@@ -72,5 +72,5 @@ int main() {
 
 ## <a name="see-also"></a>请参阅
 
-[编写终止处理程序](../cpp/writing-a-termination-handler.md)<br/>
+[Writing a termination handler](../cpp/writing-a-termination-handler.md)<br/>
 [结构化异常处理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

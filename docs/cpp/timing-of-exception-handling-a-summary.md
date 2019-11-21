@@ -1,5 +1,5 @@
 ---
-title: 异常处理的计时：摘要
+title: 'Timing of exception handling: A summary'
 ms.date: 05/07/2019
 helpviewer_keywords:
 - sequence [C++]
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - handlers [C++], order of exception
 - structured exception handling [C++], timing
 ms.assetid: 5d1da546-73fd-4673-aa1a-7ac0f776c420
-ms.openlocfilehash: 7b52252454e27d622e412f490360a025dfc97838
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 870606c3661df3654581760214e48ef2bdfb1987
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221905"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246332"
 ---
-# <a name="timing-of-exception-handling-a-summary"></a>异常处理的计时：摘要
+# <a name="timing-of-exception-handling-a-summary"></a>Timing of exception handling: A summary
 
-终止处理程序执行了无论 **__try**终止语句块。 原因包括跳出 **__try**块中，`longjmp`语句将控制权传出块和异常处理而堆栈展开。
+A termination handler is executed no matter how the **__try** statement block is terminated. Causes include jumping out of the **__try** block, a `longjmp` statement that transfers control out of the block, and unwinding the stack due to exception handling.
 
 > [!NOTE]
->  MicrosoftC++编译器支持两种形式`setjmp`并`longjmp`语句。 快速版本会跳过终止处理，但更高效。 若要使用此版本，包括文件\<setjmp.h >。 另一个版本支持上一段中所述的终止处理。 若要使用此版本，包括文件\<setjmpex.h >。 快速版本的性能提升取决于硬件配置。
+>  The Microsoft C++ compiler supports two forms of the `setjmp` and `longjmp` statements. 快速版本会跳过终止处理，但更高效。 To use this version, include the file \<setjmp.h>. 另一个版本支持上一段中所述的终止处理。 To use this version, include the file \<setjmpex.h>. 快速版本的性能提升取决于硬件配置。
 
 在执行任何其他代码前，操作系统将以适当的顺序执行所有终止处理程序，包括异常处理程序的主体。
 
@@ -35,7 +35,7 @@ ms.locfileid: "65221905"
 
 1. 如果此筛选器传递控制权（返回 0），过程将继续，直到发现筛选器不传递控制权。
 
-1. 如果此筛选器返回-1，继续执行，其中引发了异常，并且不会发生终止。
+1. If this filter returns -1, execution continues where the exception was raised, and no termination takes place.
 
 1. 如果筛选器返回 1，则发生以下事件：
 
@@ -49,5 +49,5 @@ ms.locfileid: "65221905"
 
 ## <a name="see-also"></a>请参阅
 
-[编写终止处理程序](../cpp/writing-a-termination-handler.md)<br/>
+[Writing a termination handler](../cpp/writing-a-termination-handler.md)<br/>
 [结构化异常处理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
