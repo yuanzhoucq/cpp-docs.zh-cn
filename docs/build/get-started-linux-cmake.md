@@ -4,12 +4,12 @@ description: 如何在 Visual Studio 中设置、编译和调试C++面向 Linux 
 author: mikeblome
 ms.topic: tutorial
 ms.date: 11/08/2019
-ms.openlocfilehash: 05f120335180d27e84a99819ee97c233dd1b39a7
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 269c9e88133a492f66df7c7f81ab35424aff125d
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73965091"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303255"
 ---
 # <a name="tutorial-create-c-cross-platform-projects-in-visual-studio"></a>教程：在C++ Visual Studio 中创建跨平台项目
 
@@ -24,7 +24,7 @@ Visual Studio C 和 C++ 开发不再仅适用于 Windows。 本教程介绍如�
 > * 添加与 Linux 计算机的连接
 > * 在 Linux 上生成和调试相同的目标
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
 * 设置适用于跨平台 C++ 开发的 Visual Studio
   * 首先，请[安装 Visual Studio](https://visualstudio.microsoft.com/vs/) ，并选择与和 **C++ Linux 开发工作负荷**的**桌面开发C++**  。 此最小安装仅为 3 GB。 根据您的下载速度，安装不应超过10分钟。
@@ -155,7 +155,7 @@ Visual Studio 将为 Windows 创建默认的**x64-调试**配置。 Visual Studi
 
    如果已添加远程连接，则可以通过导航到 "**工具" > 选项 "> 跨平台 >" 连接管理器**"来打开此窗口。
 
-1. 向[Linux 计算机提供连接信息](/cpp/linux/connect-to-your-remote-linux-computer.md)，然后选择 "**连接**"。 Visual Studio 会将该计算机作为 CMakeSettings 的默认连接添加到**Linux-调试**的默认连接。 它还会从远程计算机中提取标头，以便获得[特定于该远程连接的 IntelliSense](/cpp/linux/configure-a-linux-project?view=vs-2019#remote_intellisense)。 接下来，Visual Studio 会将文件发送到远程计算机，并在远程系统上生成 CMake 缓存。 这些步骤可能需要一些时间，具体取决于你的网络速度和远程计算机的能力。 当 "CMake 输出" 窗口中出现 "目标信息提取完成" 消息时，您将知道此操作已完成。
+1. 向[Linux 计算机提供连接信息](/cpp/linux/connect-to-your-remote-linux-computer)，然后选择 "**连接**"。 Visual Studio 会将该计算机作为 CMakeSettings 的默认连接添加到**Linux-调试**的默认连接。 它还会从远程计算机中提取标头，以便获得[特定于该远程连接的 IntelliSense](/cpp/linux/configure-a-linux-project?view=vs-2019#remote_intellisense)。 接下来，Visual Studio 会将文件发送到远程计算机，并在远程系统上生成 CMake 缓存。 这些步骤可能需要一些时间，具体取决于你的网络速度和远程计算机的能力。 当 "CMake 输出" 窗口中出现 "目标信息提取完成" 消息时，您将知道此操作已完成。
 
 ## <a name="set-a-breakpoint-build-and-run-on-linux"></a>在 Linux 上设置断点、生成和运行
 

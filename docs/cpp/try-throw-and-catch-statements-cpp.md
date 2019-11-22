@@ -19,24 +19,24 @@ helpviewer_keywords:
 - throwing exceptions [C++]
 - throw keyword [C++], throw() vs. throw(...)
 ms.assetid: 15e6a87b-b8a5-4032-a7ef-946c644ba12a
-ms.openlocfilehash: a55c1f2d5c2e73028b337d17b74fe1280f670707
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 31ed5f7a17b9b45dbbecf5ccb29d2b51a7635eaa
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266774"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245145"
 ---
 # <a name="try-throw-and-catch-statements-c"></a>try、throw 和 catch 语句 (C++)
 
-若要实现中的异常处理C++，则使用**尝试**，**引发**，和**捕获**表达式。
+To implement exception handling in C++, you use **try**, **throw**, and **catch** expressions.
 
-首先，使用**尝试**块包含一个或多个可能引发异常的语句。
+First, use a **try** block to enclose one or more statements that might throw an exception.
 
-一个**引发**表达式发出信号，异常情况 — 通常是错误 — 中出现**尝试**块。 您可以使用任何类型的对象为操作数**引发**表达式。 该对象一般用于传达有关错误的信息。 在大多数情况下，我们建议你使用[std:: exception](../standard-library/exception-class.md)类或标准库中定义的派生类之一。 如果其中的类不合适，建议你从 `std::exception` 派生自己的异常类。
+A **throw** expression signals that an exceptional condition—often, an error—has occurred in a **try** block. You can use an object of any type as the operand of a **throw** expression. 该对象一般用于传达有关错误的信息。 In most cases, we recommend that you use the [std::exception](../standard-library/exception-class.md) class or one of the derived classes that are defined in the standard library. 如果其中的类不合适，建议你从 `std::exception` 派生自己的异常类。
 
-若要处理可能引发的异常，实现一个或多个**捕获**块之后立即**尝试**块。 每个**捕获**块指定它能处理的异常的类型。
+To handle exceptions that may be thrown, implement one or more **catch** blocks immediately following a **try** block. Each **catch** block specifies the type of exception it can handle.
 
-此示例演示**尝试**块和其处理程序。 假设 `GetNetworkResource()` 通过网络连接获取数据，并且两个异常类型是从 `std::exception` 派生的用户定义的类。 请注意，通过捕获异常**const**中引用**捕获**语句。 我们建议你通过值引发异常并通过常数引用将其捕获。
+This example shows a **try** block and its handlers. 假设 `GetNetworkResource()` 通过网络连接获取数据，并且两个异常类型是从 `std::exception` 派生的用户定义的类。 Notice that the exceptions are caught by **const** reference in the **catch** statement. 我们建议你通过值引发异常并通过常数引用将其捕获。
 
 ## <a name="example"></a>示例
 
@@ -74,9 +74,9 @@ MyData GetNetworkResource()
 
 ## <a name="remarks"></a>备注
 
-后面的代码**尝试**子句是受保护的代码部分。 **引发**表达式*引发*— 也就是说，将引发 — 异常。 后的代码块**捕获**子句是异常处理程序。 这是处理程序的*捕获*如果引发的异常中的类型**引发**并**捕获**表达式都兼容。 有关用于管理中的类型匹配规则的列表**捕获**块，请参阅[如何 Catch 块计算](../cpp/how-catch-blocks-are-evaluated-cpp.md)。 如果**捕获**语句指定省略号 （...） 而不是类型**捕获**块将处理每种类型的异常。 使用编译[/EHa](../build/reference/eh-exception-handling-model.md)选项，其中可以包括 C 结构化异常和系统生成或应用程序生成的异步异常，例如内存保护、 被零除和浮点冲突. 因为**捕获**块顺序进行处理程序以查找匹配类型，省略号处理程序必须是最后一个处理程序相关联**尝试**块。 请谨慎使用 `catch(...)`；除非 catch 块知道如何处理捕获的特定异常，否则禁止程序继续执行。 `catch(...)` 块一般用于在程序停止执行前记录错误和执行特殊的清理工作。
+The code after the **try** clause is the guarded section of code. The **throw** expression *throws*—that is, raises—an exception. The code block after the **catch** clause is the exception handler. This is the handler that *catches* the exception that's thrown if the types in the **throw** and **catch** expressions are compatible. For a list of rules that govern type-matching in **catch** blocks, see [How Catch Blocks are Evaluated](../cpp/how-catch-blocks-are-evaluated-cpp.md). If the **catch** statement specifies an ellipsis (...) instead of a type, the **catch** block handles every type of exception. When you compile with the [/EHa](../build/reference/eh-exception-handling-model.md) option, these can include C structured exceptions and system-generated or application-generated asynchronous exceptions such as memory protection, divide-by-zero, and floating-point violations. Because **catch** blocks are processed in program order to find a matching type, an ellipsis handler must be the last handler for the associated **try** block. 请谨慎使用 `catch(...)`；除非 catch 块知道如何处理捕获的特定异常，否则禁止程序继续执行。 `catch(...)` 块一般用于在程序停止执行前记录错误和执行特殊的清理工作。
 
-一个**引发**具有没有操作数表达式重新引发当前正在处理的异常。 我们建议在重新引发异常时采用该形式，是因为这将保留原始异常的多态类型信息。 此类表达式只应在**捕获**处理程序或在从调用的函数**捕获**处理程序。 重新引发的异常对象是原始异常对象，而不是副本。
+A **throw** expression that has no operand re-throws the exception currently being handled. 我们建议在重新引发异常时采用该形式，是因为这将保留原始异常的多态类型信息。 Such an expression should only be used in a **catch** handler or in a function that's called from a **catch** handler. 重新引发的异常对象是原始异常对象，而不是副本。
 
 ```cpp
 try {
@@ -93,7 +93,7 @@ catch(...) {
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 异常处理](../cpp/cpp-exception-handling.md)<br/>
+[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
 [关键字](../cpp/keywords-cpp.md)<br/>
 [未处理的 C++ 异常](../cpp/unhandled-cpp-exceptions.md)<br/>
 [__uncaught_exception](../c-runtime-library/reference/uncaught-exception.md)

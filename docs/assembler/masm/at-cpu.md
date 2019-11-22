@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@Cpu symbol'
 ms.assetid: 04f9fdf6-9772-407e-9c09-c12bed29087b
-ms.openlocfilehash: 022b8ae6a38026d360d0f553c6fa65a2430fe02d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 610ddf6a2650371029d61ecf131395767394ec16
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167058"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302876"
 ---
-# <a name="cpu"></a>@Cpu
+# <a name="cpu"></a>\@Cpu
 
-位掩码指定处理器模式下 （数字等同）。
+指定处理器模式（数值等同）的位掩码。
 
 ## <a name="syntax"></a>语法
 
-> @Cpu
+> **\@Cpu**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[符号参考](../../assembler/masm/symbols-reference.md)<br/>
+[符号参考](../../assembler/masm/symbols-reference.md)

@@ -1,23 +1,23 @@
 ---
 title: 构造函数 (C++)
-ms.date: 10/17/2019
+ms.date: 11/19/2019
 helpviewer_keywords:
 - constructors [C++]
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: 8fa7f02f8537f60b71ff21a476589cab9fcf595b
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 6cdf6241542c3f93484097c65015181a91647d49
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625089"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246620"
 ---
 # <a name="constructors-c"></a>构造函数 (C++)
 
-若要自定义类成员的初始化方式，或在创建类的对象时调用函数，请定义*构造函数*。 构造函数具有与类相同的名称，没有返回值。 你可以根据需要定义任意多个重载构造函数，以各种方式自定义初始化。 通常，构造函数具有公共可访问性，以便类定义或继承层次结构外的代码可以创建类的对象。 但也可以将构造函数声明为**受保护**或**私有**。
+To customize how class members are initialized, or to invoke functions when an object of your class is created, define a *constructor*. 构造函数具有与类相同的名称，没有返回值。 You can define as many overloaded constructors as needed to customize initialization in various ways. Typically, constructors have public accessibility so that code outside the class definition or inheritance hierarchy can create objects of the class. But you can also declare a constructor as **protected** or **private**.
 
-构造函数可以选择采用成员 init list。 这是一种更有效的方法来初始化类成员，而不是在构造函数主体中赋值。 下面的示例演示一个具有三个重载构造函数的类 `Box`。 最后两个使用成员 init 列表：
+Constructors can optionally take a member init list. This is a more efficient way to initialize class members than assigning values in the constructor body. The following example shows a class `Box` with three overloaded constructors. The last two use member init lists:
 
 ```cpp
 class Box {
@@ -46,7 +46,7 @@ private:
 };
 ```
 
-在声明类的实例时，编译器会根据重载决策的规则选择要调用的构造函数：
+When you declare an instance of a class, the compiler chooses which constructor to invoke based on the rules of overload resolution:
 
 ```cpp
 int main()
@@ -62,15 +62,15 @@ int main()
 }
 ```
 
-- 构造函数可以声明为**内联**、[显式](#explicit_constructors)、**友元**或[constexpr](#constexpr_constructors)。
-- 构造函数可以初始化已声明为**const**、 **volatile**或**const volatile**的对象。 构造函数完成后，对象成为**const**对象。
-- 若要在实现文件中定义构造函数，请为其指定一个与任何其他成员函数相同的限定名称： `Box::Box(){...}`。
+- Constructors may be declared as **inline**, [explicit](#explicit_constructors), **friend** or [constexpr](#constexpr_constructors).
+- A constructor can initialize an object that has been declared as **const**, **volatile** or **const volatile**. The object becomes **const** after the constructor completes.
+- To define a constructor in an implementation file, give it a qualified name as with any other member function: `Box::Box(){...}`.
 
-## <a name="member_init_list"></a>成员初始值设定项列表
+## <a name="member_init_list"></a> Member initializer lists
 
-构造函数可以选择具有成员初始值设定项列表，该列表在执行构造函数正文之前初始化类成员。 （请注意，成员初始值设定项列表与[std：： initializer_list](../standard-library/initializer-list-class.md)类型的*初始值设定项列表*不同，\<t >。）
+A constructor can optionally have a member initializer list, which initializes class members prior to execution of the constructor body. (Note that a member initializer list is not the same thing as an *initializer list* of type [std::initializer_list\<T>](../standard-library/initializer-list-class.md).)
 
-首选使用成员初始值设定项列表，而不是在构造函数的主体中赋值，因为它直接初始化成员。 在下面的示例中，成员初始值设定项列表由冒号后面的所有**标识符（自变量）** 表达式组成：
+Using a member initializer list is preferred over assigning values in the body of the constructor because it directly initializes the member. In the following example shows the member initializer list consists of all the **identifier(argument)** expressions after the colon:
 
 ```cpp
     Box(int width, int length, int height)
@@ -78,15 +78,15 @@ int main()
     {}
 ```
 
-标识符必须引用类成员;它是用参数的值初始化的。 参数可以是构造函数参数之一、函数调用或[std：： initializer_list\<t >](../standard-library/initializer-list-class.md)。
+The identifier must refer to a class member; it is initialized with the value of the argument. The argument can be one of the constructor parameters, a function call or a [std::initializer_list\<T>](../standard-library/initializer-list-class.md).
 
-必须在成员初始值设定项列表中初始化**常量**成员和引用类型的成员。
+**const** members and members of reference type must be initialized in the member initializer list.
 
-应在初始值设定项列表中对参数化基类构造函数进行调用，以确保在执行派生的构造函数之前完全初始化基类。
+Calls to parameterized base class constructors should be made in the initializer list to ensure the base class is fully initialized prior to execution of the derived constructor.
 
-## <a name="default_constructors"></a>默认构造函数
+## <a name="default_constructors"></a> Default constructors
 
-*默认构造函数*通常没有参数，但它们可以包含具有默认值的参数。
+*Default constructors* typically have no parameters, but they can have parameters with default values.
 
 ```cpp
 class Box {
@@ -99,7 +99,7 @@ public:
 }
 ```
 
-默认构造函数是一种[特殊的成员函数](special-member-functions.md)。 如果未在类中声明任何构造函数，则编译器将提供隐式**内联**默认构造函数。
+Default constructors are one of the [special member functions](special-member-functions.md). If no constructors are declared in a class, the compiler provides an implicit **inline** default constructor.
 
 ```cpp
 #include <iostream>
@@ -120,18 +120,18 @@ int main() {
 }
 ```
 
-如果依赖于隐式的默认构造函数，请务必在类定义中初始化成员，如前面的示例中所示。 如果没有这些初始值设定项，成员将未初始化，卷（）调用将产生一个垃圾值。 通常，使用这种方法初始化成员是一种很好的做法，即使不依赖于隐式默认构造函数也是如此。
+If you rely on an implicit default constructor, be sure to initialize members in the class definition, as shown in the previous example. Without those initializers, the members would be uninitialized and the Volume() call would produce a garbage value. In general, it is good practice to initialize members in this way even when not relying on an implicit default constructor.
 
-可以通过将其定义为[已删除](#explicitly_defaulted_and_deleted_constructors)，阻止编译器生成隐式默认构造函数：
+You can prevent the compiler from generating an implicit default constructor by defining it as [deleted](#explicitly_defaulted_and_deleted_constructors):
 
 ```cpp
     // Default constructor
     Box() = delete;
 ```
 
-如果任何类成员不是默认值可构造，则编译器生成的默认构造函数将定义为已删除。 例如，类类型的所有成员及其类类型成员必须具有可访问的默认构造函数和析构函数。 引用类型的所有数据成员以及**常量**成员必须具有默认成员初始值设定项。
+A compiler-generated default constructor will be defined as deleted if any class members are not default-constructible. For example, all members of class type, and their class-type members, must have a default constructor and destructors that are accessible. All data members of reference type, as well as **const** members must have a default member initializer.
 
-调用编译器生成的默认构造函数并尝试使用括号时，将发出警告：
+When you call a compiler-generated default constructor and try to use parentheses, a warning is issued:
 
 ```cpp
 class myclass{};
@@ -140,7 +140,7 @@ myclass mc();     // warning C4930: prototyped function not called (was a variab
 }
 ```
 
-这是“最棘手的解析”问题的示例。 这种示例表达式既可以解释为函数的声明，也可以解释为对默认构造函数的调用，而且 C++ 分析器更偏向于声明，因此表达式会被视为函数声明。 有关详细信息，请参阅[大多数棘手分析](https://en.wikipedia.org/wiki/Most_vexing_parse)。
+这是“最棘手的解析”问题的示例。 这种示例表达式既可以解释为函数的声明，也可以解释为对默认构造函数的调用，而且 C++ 分析器更偏向于声明，因此表达式会被视为函数声明。 For more information, see [Most Vexing Parse](https://en.wikipedia.org/wiki/Most_vexing_parse).
 
 如果声明了任何非默认构造函数，编译器不会提供默认构造函数：
 
@@ -170,19 +170,19 @@ int main(){
 Box boxes[3]; // C2512: no appropriate default constructor available
 ```
 
-但是，可以使用一组初始值设定项列表来初始化 Box 对象的数组：
+However, you can use a set of initializer lists to initialize an array of Box objects:
 
 ```cpp
 Box boxes[3]{ { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
 ```
 
-有关详细信息，请参阅[初始值设定项](initializers.md)。
+For more information, see [Initializers](initializers.md).
 
-## <a name="copy_and_move_constructors"></a>复制构造函数
+## <a name="copy_and_move_constructors"></a> Copy constructors
 
-*复制构造函数*通过从同一类型的对象复制成员值来初始化对象。 如果类成员是所有简单类型（如标量值），则编译器生成的复制构造函数便已足够，无需自行定义。 如果你的类需要更复杂的初始化，则需要实现自定义复制构造函数。 例如，如果类成员是一个指针，则需要定义一个复制构造函数以分配新内存并从另一个指向对象复制值。 编译器生成的复制构造函数只复制指针，使新指针仍指向另一个内存位置。
+A *copy constructor* initializes an object by copying the member values from an object of the same type. If your class members are all simple types such as scalar values, the compiler-generated copy constructor is sufficient and you do not need to define your own. If your class requires more complex initialization, then you need to implement a custom copy constructor. For example, if a class member is a pointer then you need to define a copy constructor to allocate new memory and copy the values from the other's pointed-to object. The compiler-generated copy constructor simply copies the pointer, so that the new pointer still points to the other's memory location.
 
-复制构造函数可能具有以下其中一个签名：
+A copy constructor may have one of these signatures:
 
 ```cpp
     Box(Box& other); // Avoid if possible--allows modification of other.
@@ -194,25 +194,25 @@ Box boxes[3]{ { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
     Box(Box& other, int i = 42, string label = "Box");
 ```
 
-定义复制构造函数时，还应定义复制赋值运算符（=）。 有关详细信息，请参阅[分配](assignment.md)和[复制构造函数和复制赋值运算符](copy-constructors-and-copy-assignment-operators-cpp.md)。
+When you define a copy constructor, you should also define a copy assignment operator (=). For more information, see [Assignment](assignment.md) and [Copy constructors and copy assignment operators](copy-constructors-and-copy-assignment-operators-cpp.md).
 
-可以通过将复制构造函数定义为已删除，阻止复制对象：
+You can prevent your object from being copied by defining the copy constructor as deleted:
 
 ```cpp
     Box (const Box& other) = delete;
 ```
 
-尝试复制对象会生成错误*C2280：正在尝试引用已删除的函数*。
+Attempting to copy the object produces error *C2280: attempting to reference a deleted function*.
 
-## <a name="move_constructors"></a>移动构造函数
+## <a name="move_constructors"></a> Move constructors
 
-*移动构造函数*是一种特殊的成员函数，它将现有对象的数据的所有权转移到新的变量，而不复制原始数据。 它采用右值引用作为其第一个参数，任何其他参数都必须具有默认值。 移动构造函数可在传递大型对象时显著提高程序的效率。
+A *move constructor* is a special member function that moves ownership of an existing object's data to a new variable without copying the original data. It takes an rvalue reference as its first parameter, and any additional parameters must have default values. Move constructors can significantly increase your program's efficiency when passing around large objects.
 
 ```cpp
 Box(Box&& other);
 ```
 
-在某些情况下，编译器将在以下情况下选择移动构造函数：对象正由与要销毁的同一类型的另一个对象进行初始化，不再需要其资源。 下面的示例演示了通过重载决策选择移动构造函数时的一种情况。 在调用 `get_Box()`的构造函数中，返回的值为*xvalue* （值过期）。 它未分配给任何变量，因此即将超出范围。 若要为此示例提供动机，我们将提供一个表示其内容的大型字符串矢量。 移动构造函数将其从 "过期" 值 "box" 中删除，以便向量现在属于新对象，而不是复制向量及其字符串。 对 `std::move` 的调用都是必需的，因为 `vector` 和 `string` 类都实现自己的移动构造函数。
+The compiler chooses a move constructor in certain situations where the object is being initialized by another object of the same type that is about to be destroyed and no longer needs its resources. The following example shows one case when a move constructor is selected by overload resolution. In the constructor that calls `get_Box()`, the returned value is an *xvalue* (eXpiring value). It is not assigned to any variable and is therefore about to go out of scope. To provide motivation for this example, let's give Box a large vector of strings that represent its contents. Rather than copying the vector and its strings, the move constructor "steals" it from the expiring value "box" so that the vector now belongs to the new object. The call to `std::move` is all that's needed because both `vector` and `string` classes implement their own move constructors.
 
 ```cpp
 #include <iostream>
@@ -279,15 +279,15 @@ int main()
 }
 ```
 
-如果类未定义移动构造函数，则编译器将生成隐式构造函数（如果没有用户声明的复制构造函数、复制赋值运算符、移动赋值运算符或析构函数）。 如果未定义显式或隐式移动构造函数，则使用移动构造函数的操作将改为使用复制构造函数。 如果类声明了移动构造函数或移动赋值运算符，则隐式声明的复制构造函数将定义为已删除。
+If a class does not define a move constructor, the compiler generates an implicit one if there is no user-declared copy constructor, copy assignment operator, move assignment operator, or destructor. If no explicit or implicit move constructor is defined, operations that would otherwise use a move constructor use the copy constructor instead. If a class declares a move constructor or move assignment operator, the implicitly declared copy constructor is defined as deleted.
 
-如果任何属于类类型的成员缺少析构函数，或者编译器无法确定要用于移动操作的构造函数，则将隐式声明的移动构造函数定义为已删除。
+An implicitly declared move constructor is defined as deleted if any members that are class types lack a destructor or the compiler cannot determine which constructor to use for the move operation.
 
-有关如何编写非普通移动构造函数的详细信息，请参阅[移动构造函数和移动赋值运算符（C++）](../cpp/move-constructors-and-move-assignment-operators-cpp.md)。
+For more information about how to write a non-trivial move constructor, see [Move Constructors and Move Assignment Operators (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md).
 
-## <a name="explicitly_defaulted_and_deleted_constructors"></a>显式默认的和删除的构造函数
+## <a name="explicitly_defaulted_and_deleted_constructors"></a> Explicitly defaulted and deleted constructors
 
-可以显式*默认*复制构造函数、默认构造函数、移动构造函数、复制赋值运算符、移动赋值运算符和析构函数。 您可以显式*删除*所有特殊成员函数。
+You can explicitly *default* copy constructors, default constructors, move constructors, copy assignment operators, move assignment operators, and destructors. You can explicitly *delete* all of the special member functions.
 
 ```cpp
 class Box
@@ -302,23 +302,23 @@ public:
 };
 ```
 
-有关详细信息，请参阅[显式默认和已删除的函数](../cpp/explicitly-defaulted-and-deleted-functions.md)。
+For more information, see [Explicitly Defaulted and Deleted Functions](../cpp/explicitly-defaulted-and-deleted-functions.md).
 
-## <a name="constexpr_constructors"></a>constexpr 构造函数
+## <a name="constexpr_constructors"></a> constexpr constructors
 
-构造函数可以声明为[constexpr](constexpr-cpp.md) （如果
+A constructor may be declared as [constexpr](constexpr-cpp.md) if
 
-- 它既可以声明为默认值，也可以满足所有的[constexpr 函数](constexpr-cpp.md#constexpr_functions)条件;
-- 类没有虚拟基类;
-- 每个参数都是[文本类型](trivial-standard-layout-and-pod-types.md#literal_types);
-- 主体不是函数 try 块;
-- 所有非静态数据成员和基类子对象均已初始化;
-- 如果类为（a）具有 variant 成员的联合，或（b）具有匿名联合，则只初始化其中一个联合成员;
-- 类类型的所有非静态数据成员和所有基类子对象都具有 constexpr 构造函数
+- it is either declared as defaulted or else it satisfies all the conditions for [constexpr functions](constexpr-cpp.md#constexpr_functions) in general;
+- the class has no virtual base classes;
+- each of the parameters is a [literal type](trivial-standard-layout-and-pod-types.md#literal_types);
+- the body is not a function try-block;
+- all non-static data members and base class sub-objects are initialized;
+- if the class is (a) a union having variant members, or (b) has anonymous unions, only one of the union members is initialized;
+- every non-static data member of class type, and all base-class sub-objects have a constexpr constructor
 
-## <a name="init_list_constructors"></a>初始值设定项列表构造函数
+## <a name="init_list_constructors"></a> Initializer list constructors
 
-如果构造函数采用[std：： initializer_list\<t\>](../standard-library/initializer-list-class.md)作为其参数，任何其他参数都具有默认参数，则当通过 direct 实例化类时，将在重载决策中选择该构造函数：起始. 您可以使用 initializer_list 初始化可以接受它的任何成员。 例如，假设 Box 类（前面所示）具有 `std::vector<string>` 成员 `m_contents`。 可以提供如下所示的构造函数：
+If a constructor takes a [std::initializer_list\<T\>](../standard-library/initializer-list-class.md) as its parameter, and any other parameters have default arguments, that constructor will be selected in overload resolution when the class is instantiated through direct initialization. You can use the initializer_list to initialize any member that can accept it. For example, assume the Box class (shown previously) has a `std::vector<string>` member `m_contents`. You can provide a constructor like this:
 
 ```cpp
     Box(initializer_list<string> list, int w = 0, int h = 0, int l = 0)
@@ -326,14 +326,14 @@ public:
 {}
 ```
 
-然后创建 Box 对象，如下所示：
+And then create Box objects like this:
 
 ```cpp
     Box b{ "apples", "oranges", "pears" }; // or ...
     Box b2(initializer_list<string> { "bread", "cheese", "wine" }, 2, 4, 6);
 ```
 
-## <a name="explicit_constructors"></a>显式构造函数
+## <a name="explicit_constructors"></a> Explicit constructors
 
 如果类具有带一个参数的构造函数，或是如果除了一个参数之外的所有参数都具有默认值，则参数类型可以隐式转换为类类型。 例如，如果 `Box` 类具有一个类似于下面这样的构造函数：
 
@@ -363,15 +363,15 @@ private:
     ShippingOrder so(42, 10.8);
 ```
 
-这类转换可能在某些情况下很有用，但更常见的是，它们可能会导致代码中发生细微但严重的错误。 作为一般规则，应对构造函数（和用户定义的运算符）使用**explicit**关键字，以防止这种类型的隐式类型转换：
+这类转换可能在某些情况下很有用，但更常见的是，它们可能会导致代码中发生细微但严重的错误。 As a general rule, you should use the **explicit** keyword on a constructor (and user-defined operators) to prevent this kind of implicit type conversion:
 
 ```cpp
 explicit Box(int size): m_width(size), m_length(size), m_height(size){}
 ```
 
-构造函数是显式函数时，此行会导致编译器错误：`ShippingOrder so(42, 10.8);`。  有关详细信息，请参阅[用户定义的类型转换](../cpp/user-defined-type-conversions-cpp.md)。
+构造函数是显式函数时，此行会导致编译器错误：`ShippingOrder so(42, 10.8);`。  For more information, see [User-Defined Type Conversions](../cpp/user-defined-type-conversions-cpp.md).
 
-## <a name="order_of_construction"></a>构造顺序
+## <a name="order_of_construction"></a> Order of construction
 
 构造函数按此顺序执行工作：
 
@@ -435,7 +435,7 @@ Contained3 ctor
 DerivedContainer ctor
 ```
 
-派生类构造函数始终调用基类构造函数，因此，在完成任何额外任务之前，它可以依赖于完全构造的基类。 基类构造函数按派生顺序调用-例如，如果 `ClassA` 派生自 `ClassB` 派生自 `ClassC`，则先调用 `ClassC` 构造函数，然后调用 `ClassB` 构造函数，然后调用 `ClassA` 构造函数。
+派生类构造函数始终调用基类构造函数，因此，在完成任何额外任务之前，它可以依赖于完全构造的基类。 The base class constructors are called in order of derivation—for example, if `ClassA` is derived from `ClassB`, which is derived from `ClassC`, the `ClassC` constructor is called first, then the `ClassB` constructor, then the `ClassA` constructor.
 
 如果基类没有默认构造函数，则必须在派生类构造函数中提供基类构造函数参数：
 
@@ -478,7 +478,7 @@ int main(){
 
 1. 如果是非委托构造函数，所有完全构造的基类对象和成员均将被销毁。 但是，对象本身不是完全构造的，因此析构函数不会运行。
 
-### <a name="constructors-for-classes-that-have-multiple-inheritance"></a>具有多重继承的类的构造函数
+### <a name="constructors-for-classes-that-have-multiple-inheritance"></a>Constructors for classes that have multiple inheritance
 
 如果类从多个基类派生，那么将按照派生类声明中列出的顺序调用基类构造函数：
 
@@ -520,9 +520,9 @@ BaseClass3 ctor
 DerivedClass ctor
 ```
 
-## <a name="delegating_constructors"></a>委托构造函数
+## <a name="delegating_constructors"></a> Delegating constructors
 
-*委托构造函数*调用同一类中的不同构造函数来执行某些初始化工作。 如果有多个构造函数需要执行类似的工作，则这非常有用。 可以在一个构造函数中编写主逻辑，并从其他构造函数调用它。 在下面的简单示例中，Box （int）将其工作委托给 Box （int，int，int）：
+A *delegating constructor* calls a different constructor in the same class to do some of the work of initialization. This is useful when you have multiple constructors that all have to perform similar work. You can write the main logic in one constructor and invoke it from others. In the following trivial example, Box(int) delegates its work to Box(int,int,int):
 
 ```cpp
 class Box {
@@ -542,11 +542,11 @@ public:
 };
 ```
 
-所有构造函数完成后，完全初始化的构造函数将立即创建对象。 有关详细信息，请参阅[统一初始化和委托构造函数](../cpp/uniform-initialization-and-delegating-constructors.md)。
+所有构造函数完成后，完全初始化的构造函数将立即创建对象。 For more information, see [Delegating Constructors](../cpp/delegating-constructors.md).
 
-## <a name="inheriting_constructors"></a>继承构造函数（c + + 11）
+## <a name="inheriting_constructors"></a> Inheriting constructors (C++11)
 
-派生类可以使用**using**声明从直接基类继承构造函数，如下面的示例中所示：
+A derived class can inherit the constructors from a direct base class by using a **using** declaration as shown in the following example:
 
 ```cpp
 #include <iostream>
@@ -597,7 +597,7 @@ Derived d4 calls: Base()*/
 
 ::: moniker range=">=vs-2017"
 
-**Visual Studio 2017 版本15.7 及更高版本**：/Std 中的**using**语句 **： c + + 17**模式使基类中的所有构造函数的作用域除外，但具有与派生类中的构造函数相同的签名的类除外。 一般而言，当派生类未声明新数据成员或构造函数时，最好使用继承构造函数。 另请参阅[Visual Studio 2017 版本15.7 中的改进](https://docs.microsoft.com/cpp/overview/cpp-conformance-improvements?view=vs-2017#improvements_157)。
+**Visual Studio 2017 and later**: The **using** statement in **/std:c++17** mode brings into scope all constructors from the base class except those that have an identical signature to constructors in the derived class. 一般而言，当派生类未声明新数据成员或构造函数时，最好使用继承构造函数。 See also [Improvements in Visual Studio 2017 version 15.7](https://docs.microsoft.com/cpp/overview/cpp-conformance-improvements?view=vs-2017#improvements_157).
 
 ::: moniker-end
 
@@ -613,9 +613,9 @@ class Derived : T {
 
 如果基类的构造函数具有相同签名，则派生类无法从多个基类继承。
 
-## <a name="constructors_in_composite_classes"></a>构造函数和复合类
+## <a name="constructors_in_composite_classes"></a> Constructors and composite classes
 
-包含类类型成员的类称为*复合类*。 创建复合类的类类型成员时，调用类自己的构造函数之前，先调用构造函数。 当包含的类没有默认构造函数是，必须使用复合类构造函数中的初始化列表。 在之前的 `StorageBox` 示例中，如果将 `m_label` 成员变量的类型更改为新的 `Label` 类，则必须调用基类构造函数，并且将 `m_label` 变量（位于 `StorageBox` 构造函数中）初始化：
+Classes that contain class-type members are known as *composite classes*. 创建复合类的类类型成员时，调用类自己的构造函数之前，先调用构造函数。 当包含的类没有默认构造函数是，必须使用复合类构造函数中的初始化列表。 在之前的 `StorageBox` 示例中，如果将 `m_label` 成员变量的类型更改为新的 `Label` 类，则必须调用基类构造函数，并且将 `m_label` 变量（位于 `StorageBox` 构造函数中）初始化：
 
 ```cpp
 class Label {
@@ -645,3 +645,13 @@ int main(){
     StorageBox sb3(1, 2, 3, {"myname", "myaddress"});
 }
 ```
+
+## <a name="in-this-section"></a>本节内容
+
+- [Copy constructors and copy assignment operators](copy-constructors-and-copy-assignment-operators-cpp.md)
+- [Move constructors and move assignment operators](move-constructors-and-move-assignment-operators-cpp.md)
+- [Delegating constructors](delegating-constructors.md)
+
+## <a name="see-also"></a>请参阅
+
+[Classes and structs](classes-and-structs-cpp.md)

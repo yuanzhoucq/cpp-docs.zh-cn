@@ -1,5 +1,5 @@
 ﻿---
-title: 混合 C （结构化） 和C++异常
+title: Mixing C (structured) and C++ exceptions
 ms.date: 08/14/2018
 helpviewer_keywords:
 - exceptions [C++], mixed C and C++
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - catch keyword [C++], mixed
 - try-catch keyword [C++], mixed-language
 ms.assetid: a149154e-36dd-4d1a-980b-efde2a563a56
-ms.openlocfilehash: 94d6dc249cb130aaf09d3202b9e8f437d00a9597
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: e49731f1c81057002eaae2bef16cda4a5cf86f8d
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345959"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246458"
 ---
-# <a name="mixing-c-structured-and-c-exceptions"></a>混合 C （结构化） 和C++异常
+# <a name="mixing-c-structured-and-c-exceptions"></a>Mixing C (structured) and C++ exceptions
 
-如果你想要编写可移植代码，使用在结构化异常处理 (SEH)C++不建议将程序。 但是，有时可能希望使用进行编译[/EHa](../build/reference/eh-exception-handling-model.md)和混合使用结构化的异常和C++源代码，并需要一些工具来处理这两种类型的异常。 由于结构化的异常处理程序的对象或类型化的异常没有概念，它不能处理引发的异常C++代码。 但是， C++ **捕获**处理程序可以处理结构化的异常。 C++异常处理语法 (**尝试**，**引发**，**捕获**) 不被接受由 C 编译器，但结构化的异常处理语法 (**__try**， **__except**， **__finally**) 支持的C++编译器。
+If you want to write portable code, the use of structured exception handling (SEH) in a C++ program isn't recommended. However, you may sometimes want to compile using [/EHa](../build/reference/eh-exception-handling-model.md) and mix structured exceptions and C++ source code, and need some facility for handling both kinds of exceptions. Because a structured exception handler has no concept of objects or typed exceptions, it can't handle exceptions thrown by C++ code. However, C++ **catch** handlers can handle structured exceptions. C++ exception handling syntax (**try**, **throw**, **catch**) isn't accepted by the C compiler, but structured exception handling syntax ( **__try**, **__except**, **__finally**) is supported by the C++ compiler.
 
-请参阅[_set_se_translator](../c-runtime-library/reference/set-se-translator.md)了解如何处理结构化的异常作为C++异常。
+See [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) for information on how to handle structured exceptions as C++ exceptions.
 
-如果混合使用结构化和C++异常，注意这些潜在的问题：
+If you mix structured and C++ exceptions, be aware of these potential issues:
 
 - 不能在同一函数中混合 C++ 异常和结构化异常。
 
-- 终止处理程序 (**__finally**块) 将始终执行，即使引发异常后的展开过程。
+- Termination handlers ( **__finally** blocks) are always executed, even during unwinding after an exception is thrown.
 
-- C++异常处理可以捕获并保留展开使用编译的所有模块中的语义[/EH](../build/reference/eh-exception-handling-model.md)编译器选项，哪些启用展开语义。
+- C++ exception handling can catch and preserve unwind semantics in all modules compiled with the [/EH](../build/reference/eh-exception-handling-model.md) compiler options, which enable unwind semantics.
 
-- 有时候，可能不会针对所有对象调用析构函数。 例如，如果尝试进行函数初始化的函数指针，通过调用时发生结构化的异常并且该函数将作为参数调用前构造的对象，这些对象的析构函数不调用在堆栈展开。
+- 可以存在一些不为所有对象调用析构函数的情况。 For example, if a structured exception occurs while attempting to make a function call through an uninitialized function pointer, and that function takes as parameters objects that were constructed before the call, the destructors of those objects are not called during stack unwind.
 
 ## <a name="next-steps"></a>后续步骤
 
-- [C++ 程序中使用 setjmp 或 longjmp](../cpp/using-setjmp-longjmp.md)
+- [Using setjmp or longjmp in C++ programs](../cpp/using-setjmp-longjmp.md)
 
-  查看有关使用详细信息`setjmp`并`longjmp`中C++程序。
+  See more information on the use of `setjmp` and `longjmp` in C++ programs.
 
 - [处理 C++ 中的结构性异常](../cpp/exception-handling-differences.md)
 
-  可以使用的方法的示例请参阅C++来处理结构化的异常。
+  See examples of the ways you can use C++ to handle structured exceptions.
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 异常处理](../cpp/cpp-exception-handling.md)
+[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)

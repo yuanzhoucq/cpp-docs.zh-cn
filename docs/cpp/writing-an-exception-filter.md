@@ -4,21 +4,21 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - exception handling [C++], filters
 ms.assetid: 47fc832b-a707-4422-b60a-aaefe14189e5
-ms.openlocfilehash: f0234d36fb70c646e2d97540cbfa6ce5ae1e0ba9
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: aaf0dc77207399d7c6be86127d7decf03895ced5
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498451"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245989"
 ---
 # <a name="writing-an-exception-filter"></a>编写异常筛选器
 
-您可以通过跳转到异常处理程序的级别或通过继续执行来处理异常。 您可以使用*filter*来清理问题, 然后在不清除堆栈的情况下恢复正常流, 而不是使用异常处理程序代码来处理异常并处理异常。
+您可以通过跳转到异常处理程序的级别或通过继续执行来处理异常。 Instead of using the exception handler code to handle the exception and falling through, you can use *filter* to clean up the problem and then, by returning -1, resume normal flow without clearing the stack.
 
 > [!NOTE]
->  有些异常无法继续。 如果对于此类异常,*筛选器*的计算结果为-1, 则系统将引发新的异常。 调用[RaiseException](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raiseexception)时, 将确定异常是否会继续。
+>  有些异常无法继续。 If *filter* evaluates to -1 for such an exception, the system raises a new exception. When you call [RaiseException](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raiseexception), you determine whether the exception will continue.
 
-例如, 下面的代码在*筛选器*表达式中使用函数调用: 此函数处理问题, 然后返回-1 以恢复正常的控制流:
+For example, the following code uses a function call in the *filter* expression: this function handles the problem and then returns -1 to resume normal flow of control:
 
 ```cpp
 // exceptions_Writing_an_Exception_Filter.cpp
@@ -45,11 +45,11 @@ int Eval_Exception ( int n_except ) {
 }
 ```
 
-每当*筛选器*需要执行复杂的操作时, 最好使用*筛选器*表达式中的函数调用。 计算表达式将导致函数的执行，在此示例中，`Eval_Exception`。
+It is a good idea to use a function call in the *filter* expression whenever *filter* needs to do anything complex. 计算表达式将导致函数的执行，在此示例中，`Eval_Exception`。
 
-请注意, 使用[GetExceptionCode](/windows/win32/Debug/getexceptioncode)来确定异常。 您必须在筛选器内部调用此函数。 `Eval_Exception`无法调用`GetExceptionCode`, 但它必须具有传递给它的异常代码。
+Note the use of [GetExceptionCode](/windows/win32/Debug/getexceptioncode) to determine the exception. 您必须在筛选器内部调用此函数。 `Eval_Exception` cannot call `GetExceptionCode`, but it must have the exception code passed to it.
 
-除非异常是整数或浮点溢出，否则此处理程序会将控制权传递给其他处理程序。 如果异常是整数或浮点溢出，则处理程序将调用一个函数（`ResetVars` 只是一个示例，不是 API 函数）以重置某些全局变量。 在此示例中为空, 不能执行, 因为`Eval_Exception`从不返回 EXCEPTION_EXECUTE_HANDLER (1)。
+除非异常是整数或浮点溢出，否则此处理程序会将控制权传递给其他处理程序。 如果异常是整数或浮点溢出，则处理程序将调用一个函数（`ResetVars` 只是一个示例，不是 API 函数）以重置某些全局变量。 *Statement-block-2*, which in this example is empty, can never be executed because `Eval_Exception` never returns EXCEPTION_EXECUTE_HANDLER (1).
 
 使用函数调用是处理复杂筛选器表达式的一个很好的通用方法。 其他两个有用的 C 语言功能是：
 
@@ -57,7 +57,7 @@ int Eval_Exception ( int n_except ) {
 
 - 逗号运算符
 
-条件运算符会经常用到，因为它可用于检查特定返回代码，然后返回两个不同值中的一个。 例如, 以下代码中的筛选器仅在异常 STATUS_INTEGER_OVERFLOW 时识别异常:
+条件运算符会经常用到，因为它可用于检查特定返回代码，然后返回两个不同值中的一个。 For example, the filter in the following code recognizes the exception only if the exception is STATUS_INTEGER_OVERFLOW:
 
 ```cpp
 __except( GetExceptionCode() == STATUS_INTEGER_OVERFLOW ? 1 : 0 ) {
@@ -69,7 +69,7 @@ __except( GetExceptionCode() == STATUS_INTEGER_OVERFLOW ? 1 : 0 ) {
 __except( GetExceptionCode() == STATUS_INTEGER_OVERFLOW ) {
 ```
 
-如果希望筛选器的计算结果为-1、EXCEPTION_CONTINUE_EXECUTION, 则条件运算符更有用。
+The conditional operator is more useful in situations where you might want the filter to evaluate to -1, EXCEPTION_CONTINUE_EXECUTION.
 
 利用逗号运算符，您可以在单个表达式中执行多个独立的运算。 效果大致是执行多个语句并返回最后一个表达式的值。 例如，下面的代码将异常代码存储在一个变量中，然后测试它：
 
@@ -79,5 +79,5 @@ __except( nCode = GetExceptionCode(), nCode == STATUS_INTEGER_OVERFLOW )
 
 ## <a name="see-also"></a>请参阅
 
-[编写异常处理程序](../cpp/writing-an-exception-handler.md)<br/>
+[Writing an exception handler](../cpp/writing-an-exception-handler.md)<br/>
 [结构化异常处理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

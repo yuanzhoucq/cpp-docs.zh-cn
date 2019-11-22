@@ -1,27 +1,27 @@
 ---
-title: 编译器警告（等级 3）C4633
+title: Compiler Warning (level 3) C4633
 ms.date: 11/04/2016
 f1_keywords:
 - C4633
 helpviewer_keywords:
 - C4633
 ms.assetid: 6d76f268-ba8c-448b-8e83-b903a18b583b
-ms.openlocfilehash: 039489a804bb5d2bd17186b22bcfb8bea644c377
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ea0a26e34ac72be1e8a9fb4cc7dd913ba7d1a742
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401730"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74189158"
 ---
-# <a name="compiler-warning-level-3-c4633"></a>编译器警告（等级 3）C4633
+# <a name="compiler-warning-level-3-c4633"></a>Compiler Warning (level 3) C4633
 
-XML 文档注释目标： 错误： 原因
+XML document comment target: error:  reason
 
-名称传递给[ \<param >](../../build/reference/param-visual-cpp.md)编译器找不到标记。
+A name passed to the [\<param>](../../build/reference/param-visual-cpp.md) tag was not found by the compiler.
 
-下面的示例生成 C4633:
+The following sample generates C4633:
 
-```
+```cpp
 // C4633.cpp
 // compile with: /clr /doc /LD /W3
 

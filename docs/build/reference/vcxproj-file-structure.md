@@ -4,12 +4,12 @@ ms.date: 05/16/2019
 helpviewer_keywords:
 - .vcxproj file structure
 ms.assetid: 14d0c552-29db-480e-80c1-7ea89d6d8e9c
-ms.openlocfilehash: 86c393796b1ce3efdb92d8aefd1f653390619ea4
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: a24349980e9395257f20fcfcc0987883060a7c1d
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837520"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303132"
 ---
 # <a name="vcxproj-and-props-file-structure"></a>.vcxproj 和 .props 文件结构
 
@@ -33,7 +33,7 @@ ms.locfileid: "65837520"
    <ClCompile Include="$(IntDir)\generated.cpp"/>
    ```
 
-   “不支持”表示不能保证宏适用于 IDE 中的所有操作。 未在不同配置中更改其值的宏应正常工作，但如果将某项移动到不同筛选器或项目，则可能不会保留宏。 为不同配置更改其值的宏会引起问题，因为 IDE 不希望不同的项目配置有不同的项目项路径。
+   “不支持”表示不能保证宏适用于 IDE 中的所有操作。 不会更改其在不同配置中的值的宏应该可以正常工作，但如果将项移动到不同的筛选器或项目，则可能不会保留这些宏。 为不同配置更改其值的宏会引起问题，因为 IDE 不希望不同的项目配置有不同的项目项路径。
 
 1. 为了确保能在“项目属性”对话框中正确地添加、删除或修改项目属性，该文件必须包含每个项目配置各自的组，且条件必须为这种形式：
 
@@ -55,7 +55,7 @@ ms.locfileid: "65837520"
 
 - 存在多个属性组，每个都带有唯一标签并按特定顺序显示。
 
-由于 MSBuild 基于按顺序的计算模型，所以项目文件中的元素顺序非常重要。  如果项目文件（包括导入的所有 .props 和 .targets 文件）包含多个属性定义，则最新的定义会覆盖前面的定义。 在下面的示例中，在编译期间会设置值“xyz”，因为它是 MSBuild 引擎在执行计算期间最后遇到的值。
+由于 MSBuild 基于按顺序的计算模型，所以项目文件中的元素顺序非常重要。  如果项目文件（包括导入的所有 .props 和 .targets 文件）包含多个属性定义，则最新的定义会覆盖前面的定义。 在下面的示例中，将在编译过程中设置值 "xyz"，因为 MSBUild 引擎最后在其计算过程中遇到它。
 
 ```xml
   <MyProperty>abc</MyProperty>
@@ -153,7 +153,7 @@ Microsoft.Cpp.default.props 属性表是 Visual Studio 附带的，且无法修�
 <PropertyGroup Label="Configuration" />
 ```
 
-`Configuration` 属性组具备附加的配置条件（例如 `Condition=”'$(Configuration)|$(Platform)'=='Debug|Win32'”`），并在多个副本中出现（每个配置各一个）。 此属性组承载着为特定配置设置的属性。 配置属性包括 PlatformToolset，并控制 Microsoft.Cpp.props 中的系统属性表所包含的内容。 例如，如果定义 `<CharacterSet>Unicode</CharacterSet>` 属性，则会包含系统属性表 microsoft.Cpp.unicodesupport.props。 如果检查 Microsoft.Cpp.props，会看到该行：`<Import Condition=”'$(CharacterSet)' == 'Unicode'”   Project=”$(VCTargetsPath)\microsoft.Cpp.unicodesupport.props”/>`。
+`Configuration` 属性组具备附加的配置条件（例如 `Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"`），并在多个副本中出现（每个配置各一个）。 此属性组承载着为特定配置设置的属性。 配置属性包括 PlatformToolset，并控制 Microsoft.Cpp.props 中的系统属性表所包含的内容。 例如，如果定义 `<CharacterSet>Unicode</CharacterSet>` 属性，则会包含系统属性表 microsoft.Cpp.unicodesupport.props。 如果检查 Microsoft.Cpp.props，会看到该行：`<Import Condition="'$(CharacterSet)' == 'Unicode'" Project="$(VCTargetsPath)\microsoft.Cpp.unicodesupport.props" />`。
 
 ### <a name="microsoftcppprops-import-element"></a>Microsoft.Cpp.props Import 元素
 
@@ -195,7 +195,7 @@ Microsoft.Cpp.props 属性表直接或通过导入操作为很多特定于工具
 
 此属性组有多个实例，所有项目配置都各有一个。 每个属性组必须具备一个附加的配置条件。 如果漏掉了任何配置，“项目属性”对话框将不会正常工作。 与上述属性组不同，此属性组没有标签。 此组包含项目配置级别的设置。 这些设置适用于所有属于该特定项组的文件。 在此处初始化生成自定义项定义元数据。
 
-PropertyGroup 必须位于 `<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />` 之后，并且在它之前不能存在其他不带标签的 PropertyGroup（否则项目属性的编辑工作将无法正确进行）。
+此 PropertyGroup 必须 `<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />` 之后，并且必须没有任何其他 PropertyGroup （否则，项目属性编辑将无法正常工作）。
 
 ### <a name="per-configuration-itemdefinitiongroup-elements"></a>按配置 ItemDefinitionGroup 元素
 
@@ -218,8 +218,8 @@ PropertyGroup 必须位于 `<Import Project="$(VCTargetsPath)\Microsoft.Cpp.prop
 ```xml
 <ItemGroup>
   <ClCompile Include="stdafx.cpp">
-    <TreatWarningAsError Condition="‘$(Configuration)|$(Platform)’==’Debug|Win32’">true</TreatWarningAsError>
-    <TreatWarningAsError Condition="‘$(Configuration)|$(Platform)’==’Debug|x64’">true</TreatWarningAsError>
+    <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</TreatWarningAsError>
+    <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</TreatWarningAsError>
   </ClCompile>
 </ItemGroup>
 ```
@@ -272,7 +272,7 @@ Visual Studio IDE 依赖于按上述顺序排列的项目文件。 例如，当�
 
 ## <a name="how-the-ide-uses-element-labels"></a>IDE 如何使用元素标签
 
-在 IDE 中，设置常规属性页中的 UseOfAtl 属性时，会将其写入项目文件中的 Configuration 属性组，但是同一属性页中的 TargetName 属性会写入无标签的按配置属性组。 Visual Studio 会在属性页的 xml 文件中查找关于属性写入位置的信息。 对于常规属性页（假设你有英文版的 Visual Studio 2019 Enterprise Edition），该文件则为 `%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\VC\VCTargets\1033\general.xml`。 属性页 XML 规则文件定义关于 Rule 及其所有属性的静态信息。 这类信息之一就是 Rule 属性在目标文件（也就是将要写入值的文件）中的首选位置。 首选位置由项目文件元素上的 Label 特性指定。
+在 IDE 中，设置常规属性页中的 UseOfAtl 属性时，会将其写入项目文件中的 Configuration 属性组，但是同一属性页中的 TargetName 属性会写入无标签的按配置属性组。 Visual Studio 会在属性页的 xml 文件中查找关于属性写入位置的信息。 对于常规属性页（假设你有英文版的 Visual Studio 2019 Enterprise Edition），该文件则为`%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\VC\VCTargets\1033\general.xml`。 属性页 XML 规则文件定义关于 Rule 及其所有属性的静态信息。 这类信息之一就是 Rule 属性在目标文件（也就是将要写入值的文件）中的首选位置。 首选位置由项目文件元素上的 Label 特性指定。
 
 ## <a name="property-sheet-layout"></a>属性表布局
 
@@ -290,7 +290,7 @@ Visual Studio IDE 依赖于按上述顺序排列的项目文件。 例如，当�
 
 若要制作自己的属性表，请复制 VCTargets 文件夹中的某个 .props 文件，并根据需要对它进行修改。 对于 Visual Studio 2019 Enterprise Edition，默认的 VCTargets 路径为 `%ProgramFiles%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\VC\VCTargets`。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)<br/>
+[在 Visual Studio 中设置 C++ 编译器并生成属性](../working-with-project-properties.md)<br/>
 [属性页 XML 文件](property-page-xml-files.md)
