@@ -1,12 +1,12 @@
 ---
 title: ARM64 ABI 约定概述
 ms.date: 03/27/2019
-ms.openlocfilehash: 3a3df475b8f814fcecaf2e67a0a62c7267a0de30
-ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
+ms.openlocfilehash: 07d58bbd64795235ad63a7b26b6f18fcffdcd1d2
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74163219"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303266"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>ARM64 ABI 约定概述
 
@@ -74,7 +74,7 @@ AArch64 体系结构支持32整数寄存器：
 | 寄存器 | 是否易失？ | 角色 |
 | - | - | - |
 | x0 | 易失的 | 参数/暂存注册1，结果注册 |
-| x1-x 7 | 易失的 | 参数/暂存注册2-8 |
+| x1-x7 | 易失的 | 参数/暂存注册2-8 |
 | x8-x15 | 易失的 | 暂存寄存器 |
 | x16-x17 | 易失的 | 过程内调用暂存注册 |
 | x18 | 非易失性的 | 平台注册：在内核模式下，指向当前处理器的 KPCR;在用户模式下，指向 TEB |
@@ -111,7 +111,7 @@ AArch64 体系结构还支持32浮点/SIMD 寄存器，如下所示：
 | 25 | DN | 非易失性 | 默认 NaN 模式控件。 |
 | 24 | FZ | 非易失性的 | 刷新到零模式控件。 |
 | 23-22 | RMode | 非易失性的 | 舍入模式控件。 |
-| 15、12-8 | IDE/IXE/等 | 非易失性 | 异常陷阱启用位，必须始终为0。 |
+| 15,12-8 | IDE/IXE/等 | 非易失性 | 异常陷阱启用位，必须始终为0。 |
 
 ## <a name="system-registers"></a>系统寄存器
 
@@ -253,7 +253,7 @@ ARM EABI 还指定了使用展开代码的异常展开模型。 但是，在 Win
 
 此处的循环计数器为 true 循环计数器，而不是时钟时钟。 计数频率将因处理器频率而异。 如果你认为必须知道周期计数器的频率，则不应使用周期计数器。 相反，你需要衡量时钟时间，你应该使用 `QueryPerformanceCounter`。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Visual C++ ARM 迁移的常见问题](common-visual-cpp-arm-migration-issues.md)<br/>
 [ARM64 异常处理](arm64-exception-handling.md)

@@ -7,20 +7,20 @@ helpviewer_keywords:
 - database classes [MFC], DAO
 - DAO [MFC], classes
 ms.assetid: b15d0cd6-328b-4288-9c19-d037a795db57
-ms.openlocfilehash: febd20971fd85275bd7ded0d2216fab0e05adbd1
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: cdd3fd9a733df73d36441693d049724878219df5
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095616"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303390"
 ---
 # <a name="dao-classes"></a>DAO 类
 
-DAO 与 Access 数据库结合使用，并受 Office 2013 的支持。 3.6 是最终版本，被视为已过时。
+DAO 与 Access 数据库结合使用，并受 Office 2013 的支持。 DAO 3.6 是最终版本，被视为已过时。
 
 这些类与其他应用程序框架类结合使用，以便轻松访问数据访问对象（DAO）数据库，该数据库使用与 Microsoft Visual Basic 和 Microsoft Access 相同的数据库引擎。 DAO 类还可以访问各种数据库，这些数据库提供开放式数据库连接（ODBC）驱动程序。
 
-使用 DAO 数据库的程序将至少具有一个`CDaoDatabase`对象和一个`CDaoRecordset`对象。
+使用 DAO 数据库的程序将至少具有一个 `CDaoDatabase` 对象和一个 `CDaoRecordset` 对象。
 
 > [!NOTE]
 >  视觉对象C++环境和向导不再支持 dao （尽管包含 dao 类，但您仍然可以使用它）。 Microsoft 建议对新的 MFC 项目使用 ODBC。 只应在维护现有应用程序时使用 DAO。
@@ -52,17 +52,17 @@ DAO 与 Access 数据库结合使用，并受 Office 2013 的支持。 3.6 是�
 ## <a name="related-classes"></a>相关类
 
 [CLongBinary](../mfc/reference/clongbinary-class.md)<br/>
-封装二进制大型对象（BLOB）（如位图）的存储句柄。 `CLongBinary`对象用于管理存储在数据库表中的大型数据对象。
+封装二进制大型对象（BLOB）（如位图）的存储句柄。 `CLongBinary` 对象用于管理存储在数据库表中的大型数据对象。
 
 [COleCurrency](../mfc/reference/colecurrency-class.md)<br/>
-OLE 自动化类型**货币**的包装，一个固定点算术类型，小数点前有15个数字，后接四位数字。
+OLE 自动化类型 **CURRENCY**（定点算数类型，小数点前有 15 位，小数点后有 4 位）的包装器。
 
 [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)<br/>
-OLE 自动化类型**日期**的包装。 表示日期和时间值。
+OLE 自动化类型 **DATE** 的包装器。 表示日期和时间值。
 
 [COleVariant](../mfc/reference/colevariant-class.md)<br/>
-OLE 自动化类型**变量**的包装。 **变体**中的数据可存储为多种格式。
+OLE 自动化类型 **VARIANT** 的包装器。 **VARIANT** 数据可用多种格式存储。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [类概述](../mfc/class-library-overview.md)

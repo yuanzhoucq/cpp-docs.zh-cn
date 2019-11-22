@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CDaoFieldExchange [MFC], m_nOperation
 - CDaoFieldExchange [MFC], m_prs
 ms.assetid: 350a663e-92ff-44ab-ad53-d94efa2e5823
-ms.openlocfilehash: 015fcdf0ece03bd52927196b6ff3cbe25f370e2b
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: cfffebd16c3c1d62dc4084b962c22911e4b46ae5
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096118"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303885"
 ---
 # <a name="cdaofieldexchange-class"></a>CDaoFieldExchange 类
 
@@ -27,32 +27,31 @@ ms.locfileid: "71096118"
 
 DAO 受 Office 2013 的支持。 DAO 3.6 是最终版本，被视为已过时。
 
-
 ## <a name="syntax"></a>语法
 
 ```
 class CDaoFieldExchange
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>公共方法
 
 |名称|描述|
 |----------|-----------------|
 |[CDaoFieldExchange::IsValidOperation](#isvalidoperation)|如果当前操作适合要更新的字段类型，则返回非零值。|
-|[CDaoFieldExchange::SetFieldType](#setfieldtype)|指定记录集数据成员的类型（列或参数），由对 DFX 函数的所有后续调用表示，直到下`SetFieldType`一次调用。|
+|[CDaoFieldExchange::SetFieldType](#setfieldtype)|指定记录集数据成员的类型（列或参数），由对 DFX 函数的所有后续调用表示，直到下一次调用 `SetFieldType`。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
 |名称|描述|
 |----------|-----------------|
-|[CDaoFieldExchange::m_nOperation](#m_noperation)|由当前对记录集的`DoFieldExchange`成员函数的调用执行的 DFX 操作。|
+|[CDaoFieldExchange::m_nOperation](#m_noperation)|由当前对记录集的 `DoFieldExchange` 成员函数的调用所执行的 DFX 操作。|
 |[CDaoFieldExchange::m_prs](#m_prs)|指向正在执行 DFX 操作的记录集的指针。|
 
 ## <a name="remarks"></a>备注
 
-`CDaoFieldExchange`没有基类。
+`CDaoFieldExchange` 没有基类。
 
 如果要为自定义数据类型编写数据交换例程，请使用此类;否则，你将不会直接使用此类。 DFX 在[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)对象的字段数据成员与数据源中的当前记录的对应字段之间交换数据。 DFX 从数据源和数据源管理两个方向的交换。 有关编写自定义 DFX 例程的信息，请参阅[技术说明 53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md) 。
 
@@ -60,13 +59,13 @@ class CDaoFieldExchange
 >  DAO 数据库类与基于开放式数据库连接（ODBC）的 MFC 数据库类不同。 所有 DAO 数据库类名称都具有 "CDao" 前缀。 你仍可以使用 DAO 类访问 ODBC 数据源。 通常，基于 DAO 的 MFC 类比基于 ODBC 的 MFC 类更强大。 基于 DAO 的类可以通过其自己的数据库引擎来访问数据，包括通过 ODBC 驱动程序。 它们还支持数据定义语言（DDL）操作，例如通过类添加表，而无需自行调用 DAO。
 
 > [!NOTE]
->  DAO 记录字段交换（DFX）与基于 ODBC 的 MFC 数据库类（ `CDatabase`， `CRecordset`）中的记录字段交换（RFX）非常相似。 如果你了解 RFX，则可以轻松使用 DFX。
+>  DAO 记录字段交换（DFX）与基于 ODBC 的 MFC 数据库类（`CDatabase`、`CRecordset`）中的记录字段交换（RFX）非常相似。 如果你了解 RFX，则可以轻松使用 DFX。
 
-`CDaoFieldExchange`对象提供要进行 DAO 记录字段交换所需的上下文信息。 `CDaoFieldExchange`对象支持许多操作，包括绑定参数和字段数据成员以及在当前记录的字段上设置各种标志。 DFX 操作对中`CDaoFieldExchange`由**枚举** **FieldType**定义的类型的记录集类数据成员执行。 可能的**FieldType**值包括：
+`CDaoFieldExchange` 对象提供了 DAO 记录字段交换所需的上下文信息。 `CDaoFieldExchange` 对象支持多个操作，包括绑定参数和字段数据成员以及在当前记录的字段上设置各种标志。 DFX 操作在 `CDaoFieldExchange`中由**枚举** **FieldType**定义的类型的记录集类数据成员上执行。 可能的**FieldType**值包括：
 
-- `CDaoFieldExchange::outputColumn`对于字段数据成员。
+- 字段数据成员的 `CDaoFieldExchange::outputColumn`。
 
-- `CDaoFieldExchange::param`对于参数数据成员。
+- 参数数据成员的 `CDaoFieldExchange::param`。
 
 提供[IsValidOperation](#isvalidoperation)成员函数来编写您自己的自定义 DFX 例程。 你将在 CDaoRecordset 中频繁使用[SetFieldType](#setfieldtype) [：:D ofieldexchange](../../mfc/reference/cdaorecordset-class.md#dofieldexchange)函数。 有关 DFX 全局函数的详细信息，请参阅[记录字段交换函数](../../mfc/reference/record-field-exchange-functions.md)。 有关为你自己的数据类型编写自定义 DFX 例程的信息，请参阅[技术说明 53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md)。
 
@@ -76,11 +75,11 @@ class CDaoFieldExchange
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxdao
+**标头：** afxdao.h
 
 ##  <a name="isvalidoperation"></a>CDaoFieldExchange：： IsValidOperation
 
-如果你编写自己的 DFX 函数，请`IsValidOperation`在函数的开始处调用，以确定是否可以在特定字段数据成员类型`CDaoFieldExchange::outputColumn` （或`CDaoFieldExchange::param`）上执行当前操作。
+如果你编写自己的 DFX 函数，请调用函数开头的 `IsValidOperation`，以确定是否可以对特定字段数据成员类型（`CDaoFieldExchange::outputColumn` 或 `CDaoFieldExchange::param`）执行当前操作。
 
 ```
 BOOL IsValidOperation();
@@ -102,12 +101,12 @@ DFX 机制执行的某些操作仅适用于其中一种可能的字段类型。 
 
 ### <a name="remarks"></a>备注
 
-`CDaoFieldExchange`对象为记录集的多个不同 DFX 操作提供上下文。
+`CDaoFieldExchange` 对象为记录集的多个不同 DFX 操作提供上下文。
 
 > [!NOTE]
 >  以下 MarkForAddNew 和 SetFieldNull 操作下描述的 PSEUDONULL 值是用于将字段标记为 Null 的值。 DAO 记录字段交换机制（DFX）使用此值来确定哪些字段已显式标记为 Null。 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)和[COleCurrency](../../mfc/reference/colecurrency-class.md)字段不需要 PSEUDONULL。
 
-的`m_nOperation`可能值为：
+`m_nOperation` 的可能值为：
 
 |操作|描述|
 |---------------|-----------------|
@@ -129,13 +128,13 @@ DFX 机制执行的某些操作仅适用于其中一种可能的字段类型。 
 
 ##  <a name="m_prs"></a>CDaoFieldExchange：： m_prs
 
-包含指向与`CDaoFieldExchange`对象关联的[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)对象的指针。
+包含指向与 `CDaoFieldExchange` 对象相关联的[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)对象的指针。
 
 ### <a name="remarks"></a>备注
 
 ##  <a name="setfieldtype"></a>CDaoFieldExchange：： SetFieldType
 
-在类的`SetFieldType` 重`DoFieldExchange`写中调用。 `CDaoRecordset`
+在 `CDaoRecordset` 类的 `DoFieldExchange` 重写中调用 `SetFieldType`。
 
 ```
 void SetFieldType(UINT nFieldType);
@@ -144,7 +143,7 @@ void SetFieldType(UINT nFieldType);
 ### <a name="parameters"></a>参数
 
 *nFieldType*<br/>
-在中`CDaoFieldExchange`声明的**枚举 FieldType**的值，可以是下列值之一：
+在 `CDaoFieldExchange`中声明的**枚举 FieldType**的值，可以是下列值之一：
 
 - `CDaoFieldExchange::outputColumn`
 
@@ -152,13 +151,13 @@ void SetFieldType(UINT nFieldType);
 
 ### <a name="remarks"></a>备注
 
-通常，ClassWizard 会为你编写此调用。 如果你编写自己的函数，并使用向导编写`DoFieldExchange`函数，则在字段映射外添加对你自己的函数的调用。 如果不使用该向导，则将不会有字段映射。 调用先调用 DFX 函数，对类的每个字段数据成员分别调用，并将字段类型标识为`CDaoFieldExchange::outputColumn`。
+通常，ClassWizard 会为你编写此调用。 如果您编写自己的函数并使用向导编写您的 `DoFieldExchange` 函数，则在字段映射之外添加对您自己的函数的调用。 如果不使用该向导，则将不会有字段映射。 调用先调用 DFX 函数，对类的每个字段数据成员分别调用，并将字段类型标识为 `CDaoFieldExchange::outputColumn`。
 
-如果对记录集类进行参数化，则应为所有参数数据成员（在字段映射外）添加 DFX 调用，并在调用之前调用`SetFieldType`。 传递值`CDaoFieldExchange::param`。 （您可以改为使用[CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)并设置其参数值。）
+如果参数化记录集类，则应为所有参数数据成员（在字段映射外）添加 DFX 调用，并在这些调用之前调用 `SetFieldType`。 传递值 `CDaoFieldExchange::param`。 （您可以改为使用[CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)并设置其参数值。）
 
-通常，与字段数据成员或参数数据成员关联的每组 DFX 函数调用都必须在调用`SetFieldType`之前进行。 每个`SetFieldType`调用的 nFieldType 参数标识按`SetFieldType`调用后的 DFX 函数调用所表示的数据成员的类型。
+通常，与字段数据成员或参数数据成员关联的每组 DFX 函数调用都必须在调用 `SetFieldType`之前。 每个 `SetFieldType` 调用的*nFieldType*参数标识按 `SetFieldType` 调用后的 DFX 函数调用所表示的数据成员的类型。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CDaoRecordset 类](../../mfc/reference/cdaorecordset-class.md)

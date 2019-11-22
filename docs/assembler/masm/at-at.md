@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@@: symbol'
 ms.assetid: 4c0aa730-d534-4efd-9608-54d683d78654
-ms.openlocfilehash: 539f2e143e50af8d8fbb0b2f61e49704d5dc8057
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 927837ae7089a042bc8b210ceecac929eb3862dc
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166381"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302925"
 ---
 # <a name=""></a>\@\@：
 
-定义代码标签仅之间可识别*label1*并*label2*，其中*label1*是代码的开始位置或上一个`@@:`标签和*label2*是代码的末尾，或者下一步是`@@:`标签。 请参阅[ \@B](../../assembler/masm/at-b.md)并[ \@F](../../assembler/masm/at-f.md)。
+定义只能在*label1*和*label2*之间识别的代码标签，其中*label1*是代码的开头或上一个 `@@:` 标签，而*label2*是代码的结尾或下一个 `@@:` 标签。 请参阅[\@B](../../assembler/masm/at-b.md)和[\@F](../../assembler/masm/at-f.md)。
 
 ## <a name="syntax"></a>语法
 
-> **\@\@:**
+> **\@\@：**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[符号参考](../../assembler/masm/symbols-reference.md)<br/>
+[符号参考](../../assembler/masm/symbols-reference.md)

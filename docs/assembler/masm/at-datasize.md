@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@DataSize symbol'
 ms.assetid: c31dd6ab-0706-43ed-9a5d-024730f7931b
-ms.openlocfilehash: b2c300bf7c616184ae928b4d07d8ccb93d5d37bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: be8495e609e5ca9cf45f7cac2e7d05c9298c4dcf
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166602"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302717"
 ---
-# <a name="datasize"></a>@DataSize
+# <a name="datasize"></a>\@DataSize
 
-0 表示**微小**，**小型**，**中等**，并**平面**模型，1 表示**COMPACT**和**大型**模型和 2 代表**非常巨大**模型 （数字等同）。
+**对于小型、** **小型**、**中型**和**平面**模型，为 0; 对于**COMPACT**和**大型**模型，则为 1; 对于**大**模型，则为2（数值等于）。
 
 ## <a name="syntax"></a>语法
 
-> @DataSize
+> **\@DataSize**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[符号参考](../../assembler/masm/symbols-reference.md)<br/>
+[符号参考](../../assembler/masm/symbols-reference.md)

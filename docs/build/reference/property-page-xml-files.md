@@ -4,12 +4,12 @@ ms.date: 05/06/2019
 helpviewer_keywords:
 - property page XML files
 ms.assetid: dd9d9734-4387-4098-8ba6-85b93507731d
-ms.openlocfilehash: 76378dc5ef9d7443045c329579cfa3c410dc262f
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: da9fa72419dc6971e90124b061da48493d7ca017
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630743"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303159"
 ---
 # <a name="property-page-xml-rule-files"></a>属性页 XML 规则文件
 
@@ -73,7 +73,7 @@ IDE 中的项目属性页是由 VCTargets 文件夹中的 XML 文件配置的。
 
 下一部分介绍每个主要元素以及可以附加到主要元素的一些元数据。
 
-1. **Rule：** Rule 通常是 xml 文件中的根节点，可能具有多个属性：
+1. **规则：** 规则通常是 xml 文件中的根节点，可能具有多个特性：
 
     ```xml
     <Rule Name="CL" PageTemplate="tool" SwitchPrefix="/" Order="10"
@@ -85,9 +85,9 @@ IDE 中的项目属性页是由 VCTargets 文件夹中的 XML 文件配置的。
       </Rule.DisplayName>
     ```
 
-   a. **Name：** Name 属性是规则的 ID。 在项目的所有属性页 xml 文件中，它必须是唯一的。
+   a. **Name：** Name 特性是规则的 ID。 在项目的所有属性页 xml 文件中，它必须是唯一的。
 
-   b. **PageTemplate：** UI 使用此属性的值从 UI 模板集合中进行选择。 “工具”模板以标准网格形式呈现属性。 此特性的其他内置值为“调试程序”和“通用”。 请分别查看“调试”节点和“常规”节点，以查看指定这些值所产生的 UI 格式。 “调试程序”页模板的 UI 使用下拉框在不同调试程序的属性之间进行切换，而“通用”模板在一个页面中显示所有不同属性类别，而不是在“规则”节点下包含多个类别子节点。 此特性只是针对 UI 的一项建议，xml 文件本质上独立于 UI。 不同的 UI 可能出于不同目的使用此特性。
+   b. **PageTemplate：** UI 使用此特性的值从 UI 模板集合中进行选择。 “工具”模板以标准网格形式呈现属性。 此特性的其他内置值为“调试程序”和“通用”。 请分别查看“调试”节点和“常规”节点，以查看指定这些值所产生的 UI 格式。 “调试程序”页模板的 UI 使用下拉框在不同调试程序的属性之间进行切换，而“通用”模板在一个页面中显示所有不同属性类别，而不是在“规则”节点下包含多个类别子节点。 此特性只是针对 UI 的一项建议，xml 文件本质上独立于 UI。 不同的 UI 可能出于不同目的使用此特性。
 
    c. **SwitchPrefix：** 这是命令行中用于开关的前缀。 “/”的值将产生类似于 /ZI、/nologo 和 /W3 的开关。
 
@@ -95,9 +95,9 @@ IDE 中的项目属性页是由 VCTargets 文件夹中的 XML 文件配置的。
 
    e. **xmlns：** 这是标准的 XAML 元素。 可以看到三个列出的命名空间。 这三个命名空间分别对应于 XAML 反序列化类命名空间、XAML 架构命名空间和系统命名空间。
 
-   f. **DisplayName：** 这是在规则节点的属性页 UI 上显示的名称。 此值已本地化。 由于内部本地化工具的要求，我们将 DisplayName 创建为规则的子元素，而不是特性（如 Name 或 SwitchPrefix）。 从 XAML 的角度来看，二者都是一样的。 因此，可以仅将其用作用于减少混乱或保持原样的特性。
+   f. **DisplayName：** 这是在规则节点的属性页 UI 上显示的名称。 此值已本地化。 由于内部本地化工具的要求，我们将 DisplayName 创建为规则的子元素，而不是特性（如 Name 或 SwitchPrefix）。 从 XAML 的角度来看，两者都是等效的。 因此，可以仅将其用作用于减少混乱或保持原样的特性。
 
-   g. **DataSource：** 这是一个非常重要的属性，指示项目系统应该在哪个属性值中读取和写入，以及其分组情况（如下所述）。 对于 cl.xml，这些值为：
+   g. **DataSource：** 这是一个非常重要的属性，指示项目系统应该在哪个属性值中读取和写入，及其分组（如下所述）。 对于 cl.xml，这些值为：
 
       ```xml
       <DataSource Persistence="ProjectFile" ItemType="ClCompile" Label="" HasConfigurationCondition="true" />
@@ -112,32 +112,32 @@ IDE 中的项目属性页是由 VCTargets 文件夹中的 XML 文件配置的。
    - `HasConfigurationCondition="true"` 指示项目系统为值附加配置条件，以便其仅对当前项目配置生效（该条件可以附加到父组或值本身）。 例如，打开项目节点的属性页，并将“配置属性”>“C/C++ 常规”下的“将警报视为错误”属性值设为“是”。 以下值将写入项目文件中。 请注意附加到父级 ItemDefinitionGroup 的配置条件。
 
       ```xml
-      <ItemDefinitionGroup Condition="‘$(Configuration)|$(Platform)’==’Debug|Win32’">
+      <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
         <ClCompile>
           <TreatWarningAsError>true</TreatWarningAsError>
         </ClCompile>
       </ItemDefinitionGroup>
       ```
 
-      如果此值是在特定文件 (如 stdafx.h) 的属性页中设置的, 则属性值将写入项目文件中的*stdafx.h*项下面, 如下所示。 请注意将配置条件直接附加到元数据本身的方式。
+      如果此值是在特定文件（如 stdafx.h）的属性页中设置的，则属性值将写入项目文件中的*stdafx.h*项下面，如下所示。 请注意将配置条件直接附加到元数据本身的方式。
 
       ```xml
       <ItemGroup>
         <ClCompile Include="stdafx.cpp">
-          <TreatWarningAsError Condition="‘$(Configuration)|$(Platform)’==’Debug|Win32’">true</TreatWarningAsError>
+          <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</TreatWarningAsError>
         </ClCompile>
       </ItemGroup>
       ```
 
-   上文未列出的另一个 DataSource 特性为 PersistedName。 通过此特性，可以使用不同的名称表示项目文件中的属性。 默认情况下，此特性设置为属性的 Name。
+   上文未列出的另一个 DataSource 特性为 PersistedName。 通过此特性，可以使用不同的名称表示项目文件中的属性。 默认情况下，此属性设置为属性的**名称**。
 
-   单个属性可以重写其父级规则的 DataSource。 在这种情况下，此属性值的位置将不同于规则中其他属性的位置。
+   单个属性可以重写其父规则的数据源。 在这种情况下，该属性的值的位置将与规则中的其他属性不同。
 
-   h. 还有一些其他规则属性（包括 Description 和 SupportsFileBatching），此处未介绍。 通过浏览这些类型的文档，可以获得适用于规则或任何其他元素的完整特性集。 或者，可以检查 `Microsoft.Build.Framework .dll` 程序集中 `Microsoft.Build.Framework.XamlTypes` 命名空间中的类型的公共属性。
+   h. 还有一些其他规则属性（包括 Description 和 SupportsFileBatching），此处未介绍。 通过浏览这些类型的文档，可以获得适用于规则或任何其他元素的完整特性集。 或者，可以检查 `Microsoft.Build.Framework.XamlTypes` 程序集中 `Microsoft.Build.Framework .dll` 命名空间中的类型的公共属性。
 
    i. DisplayName、PageTemplate 和 Order 是独立于 UI 的数据模型中存在的 UI 相关属性。 用于显示属性页的任何 UI 几乎肯定会使用这些属性。 DisplayName 和 Description 这两个属性几乎存在于 xml 文件中的所有元素上。 并且只有这两个属性经过了本地化（这些字符串的本地化将在后面的文章中进行讲解）。
 
-1. **类别：** 一个规则可以具有多个类别。 xml 文件中列出类别的顺序是让 UI 以相同顺序显示类别的建议。 例如，在 UI（“常规”、“优化”、“预处理器”...）中看到的 C/C++ 节点下的类别顺序  与在 cl.xml 中相同。 示例类别如下所示：
+1. **类别**一个规则可以具有多个类别。 xml 文件中列出类别的顺序是让 UI 以相同顺序显示类别的建议。 例如，在 UI（“常规”、“优化”、“预处理器”...）中看到的 C/C++ 节点下的类别顺序  与在 cl.xml 中相同。 示例类别如下所示：
 
     ```xml
     <Category Name="Optimization">
@@ -149,7 +149,7 @@ IDE 中的项目属性页是由 VCTargets 文件夹中的 XML 文件配置的。
 
    以上代码片段显示了之前介绍过的 Name 和 DisplayName 特性。 再次强调，“类别”还可能包含上文未使用的其他特性。 可以通过阅读文档或使用 ildasm.exe 检查程序集来了解相关信息。
 
-1. **Properties：** 这是 xml 文件的核心内容，包含此规则中所有属性的列表。 每个属性都可以是在上述 XAML 主干中显示的五种可能类型之一。 当然，文件中可能只有一些这些类型。 一个熟悉包含多个特性，可对属性进行详尽描述。 在此仅介绍 StringProperty。 其余的属性都非常相似。
+1. **Properties：** 这是 xml 文件的核心内容，包含此规则中所有属性的列表。 每个属性都可以是在上述 XAML 主干中显示的五种可能类型之一。 当然，文件中可能只有一些这些类型。 一个熟悉包含多个特性，可对属性进行详尽描述。 我将只在此处介绍**StringProperty** 。 其余的属性都非常相似。
 
     ```xml
     <StringProperty Subtype="file" Name="ObjectFileName" Category="Output Files" Switch="Fo">
@@ -164,16 +164,16 @@ IDE 中的项目属性页是由 VCTargets 文件夹中的 XML 文件配置的。
 
    此代码片段中的大部分特性上文前都已介绍过。 新的特性为 Subtype、Category 和 Switch。
 
-   a. Subtype 是仅适用于 StringProperty 和 StringListProperty 的特性；提供了上下文信息。 例如，“文件”的值指示该属性表示文件路径。 此类上下文信息通过提供 Windows 资源管理器作为属性的编辑器，允许用户直观地选择文件来提升编辑体验。
+   a. Subtype 是仅适用于 StringProperty 和 StringListProperty 的特性；提供了上下文信息。 例如，“文件”的值指示该属性表示文件路径。 此类上下文信息用于通过将 Windows 资源管理器作为属性的编辑器提供，使用户能够以可视方式选择文件，从而增强了编辑体验。
 
-   b. **类别：** 这声明此属性所属的类别。 尝试在 UI 的“输出文件”类别下查找此属性。
+   b. **Category：** 这声明此属性所属的类别。 尝试在 UI 的“输出文件”类别下查找此属性。
 
-   c. **Switch：** 当规则表示工具（例如本例中的编译器工具）时，规则的大多数属性在生成期间作为开关传递给工具可执行文件。 此特性的值指示要使用的开关文本。 以上属性指定其开关应为“Fo”。 结合父规则上的 SwitchPrefix 特性，此属性作为 /Fo"Debug\" 传递给可执行文件（在属性页 UI 的 C/C++ 命令行中可见）。
+   c. **Switch：** 当规则表示工具（例如本例中的编译器工具）时，规则的大多数属性在生成期间作为开关传递给工具可执行文件。 此特性的值指示要使用的开关文本。 以上属性指定其开关应为“Fo”。 结合父规则上的 SwitchPrefix 特性，此属性作为 /Fo"Debug **传递给可执行文件（在属性页 UI 的 C/C++ 命令行中可见）** **\"** 。
 
    其他属性特性包括：
 
-   d. **Visible：** 如果出于某种原因，不希望属性显示在属性页中（但可能在生成期间仍然可用），请将此特性设置为 false。
+   d. **可见：** 如果出于某种原因，您不希望属性显示在属性页中（但在生成时可能仍可用），请将此属性设置为 false。
 
-   e. **ReadOnly：** 如果想在属性页中提供此属性值的只读视图，请将此特性设置为 true。
+   e. **ReadOnly：** 如果要在属性页中提供此属性值的只读视图，请将此特性设置为 true。
 
    f. **IncludeInCommandLine：** 在生成期间，可能无需将某些属性传递给工具。 将此特性设为 false 可阻止传递。

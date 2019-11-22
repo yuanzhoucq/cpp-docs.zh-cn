@@ -1,22 +1,23 @@
 ---
-title: ABI 边界处的可移植性（现代 C++）
-ms.date: 11/04/2016
+title: ABI 边界的可移植性
+description: 在C++二进制接口边界将接口平展为 C 调用约定。
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: abbd405e-3038-427c-8c24-e00598f0936a
-ms.openlocfilehash: 379b402354c6f08e003dffb38366d1dce20e0987
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: b3b2b217739ff5900c8ef0329ff3e8909a3fe036
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246393"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303321"
 ---
-# <a name="portability-at-abi-boundaries-modern-c"></a>ABI 边界处的可移植性（现代 C++）
+# <a name="portability-at-abi-boundaries"></a>ABI 边界的可移植性
 
-Use sufficiently portable types and conventions at binary interface boundaries. “可迁移类型”是 C 内置类型或包含 C 内置类型的结构。 类类型只能在调用方和被调用方接受布局、调用约定等时使用。这仅在两者是使用相同的编译器和编译器设置编译时可能。
+在二进制接口边界使用足够的可移植类型和约定。 "可移植类型" 是 C 内置类型或仅包含 C 内置类型的结构。 类类型只能在调用方和被调用方同意布局、调用约定等时使用。仅当两者都用相同的编译器和编译器设置进行编译时，才可能出现这种情况。
 
 ## <a name="how-to-flatten-a-class-for-c-portability"></a>如何为了 C 可移植性平展类
 
-When callers may be compiled with another compiler/language, then “flatten” to an **extern "C"** API with a specific calling convention:
+如果调用方可以使用另一种编译器/语言编译，则使用特定的调用约定 "平展" 到**extern "C"** API：
 
 ```cpp
 // class widget {
@@ -32,8 +33,8 @@ extern "C" {        // functions using explicit "this"
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Welcome back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[欢迎返回到C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 语言参考](../cpp/cpp-language-reference.md)<br/>
 [C++ 标准库](../standard-library/cpp-standard-library-reference.md)
