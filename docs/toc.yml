@@ -1115,7 +1115,7 @@
                       href: build/reference/notification-hooks.md
                     - name: 失败挂钩
                       href: build/reference/failure-hooks.md
-                    - name: 异常 (C/C++)
+                    - name: DLL 加载异常代码 (C/C++)
                       href: build/reference/exceptions-c-cpp.md
                 - name: 转储延迟加载的导入
                   href: build/reference/dumping-delay-loaded-imports.md
@@ -2854,7 +2854,7 @@
       href: porting/visual-cpp-change-history-2003-2015.md
     - name: Visual C++ 新增功能 (2003 - 2015)
       href: porting/visual-cpp-what-s-new-2003-through-2015.md
-    - name: 2015 版本和 2019 版本之间的 C++ 二进制兼容性
+    - name: C++ 二进制兼容性 (2015-2019)
       href: porting/binary-compat-2015-2017.md
     - name: 移植和升级：示例和案例研究
       items:
@@ -3652,51 +3652,18 @@
               items:
                 - name: 欢迎回到 C++（现代 C++）
                   href: cpp/welcome-back-to-cpp-modern-cpp.md
-                - name: 类型系统（现代 C++）
-                  expanded: false
-                  items:
-                    - name: 类型系统（现代 C++）
-                      href: cpp/cpp-type-system-modern-cpp.md
-                    - name: 值类型（现代 C++）
-                      href: cpp/value-types-modern-cpp.md
-                    - name: 类型转换和类型安全（现代 C++）
-                      href: cpp/type-conversions-and-type-safety-modern-cpp.md
                 - name: 一致的初始化和委派构造函数
                   href: cpp/uniform-initialization-and-delegating-constructors.md
                 - name: 对象生存期和资源管理（现代 C++）
                   href: cpp/object-lifetime-and-resource-management-modern-cpp.md
                 - name: 对象所有资源 (RAII)
                   href: cpp/objects-own-resources-raii.md
-                - name: 智能指针（现代 C++）
-                  expanded: false
-                  items:
-                    - name: 智能指针（现代 C++）
-                      href: cpp/smart-pointers-modern-cpp.md
-                    - name: 如何：创建和使用 unique_ptr 实例
-                      href: cpp/how-to-create-and-use-unique-ptr-instances.md
-                    - name: 如何：创建和使用 shared_ptr 实例
-                      href: cpp/how-to-create-and-use-shared-ptr-instances.md
-                    - name: 如何：创建和使用 weak_ptr 实例
-                      href: cpp/how-to-create-and-use-weak-ptr-instances.md
-                    - name: 如何：创建和使用 CComPtr 和 CComQIPtr 实例
-                      href: cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md
-                - name: 用于编译时封装的 Pimpl（现代 C++）
-                  href: cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md
                 - name: 容器（现代 C++）
                   href: cpp/containers-modern-cpp.md
                 - name: 算法（现代 C++）
                   href: cpp/algorithms-modern-cpp.md
                 - name: 字符串和 I/O 格式化（现代 C++）
                   href: cpp/string-and-i-o-formatting-modern-cpp.md
-                - name: 错误和异常处理（现代 C++）
-                  expanded: false
-                  items:
-                    - name: 错误和异常处理（现代 C++）
-                      href: cpp/errors-and-exception-handling-modern-cpp.md
-                    - name: 如何：设计异常安全性
-                      href: cpp/how-to-design-for-exception-safety.md
-                    - name: 如何：异常和非异常代码之间的接口
-                      href: cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md
                 - name: ABI 边界处的可移植性（现代 C++）
                   href: cpp/portability-at-abi-boundaries-modern-cpp.md
             - name: 词法约定
@@ -3737,6 +3704,8 @@
                 - name: 声明和定义
                   expanded: false
                   items:
+                    - name: C++ 类型系统
+                      href: cpp/cpp-type-system-modern-cpp.md
                     - name: 声明和定义
                       href: cpp/declarations-and-definitions-cpp.md
                     - name: 声明符概述
@@ -3880,6 +3849,8 @@
                       href: cpp/floating-limits.md
                 - name: 标准转换
                   href: cpp/standard-conversions.md
+                - name: 类型转换和类型安全
+                  href: cpp/type-conversions-and-type-safety-modern-cpp.md
             - name: 内置运算符、优先级和关联性
               expanded: false
               items:
@@ -4134,7 +4105,7 @@
                       href: cpp/protected-cpp.md
                     - name: public
                       href: cpp/public-cpp.md
-                - name: 在没有构造函数的情况下初始化类和结构
+                - name: 大括号初始化
                   href: cpp/initializing-classes-and-structs-without-constructors-cpp.md
                 - name: 构造函数
                   expanded: false
@@ -4145,6 +4116,8 @@
                       href: cpp/copy-constructors-and-copy-assignment-operators-cpp.md
                     - name: 移动构造函数和移动赋值运算符
                       href: cpp/move-constructors-and-move-assignment-operators-cpp.md
+                    - name: 委托构造函数
+                      href: cpp/delegating-constructors.md
                 - name: 析构函数
                   href: cpp/destructors-cpp.md
                 - name: 成员函数概述
@@ -4189,6 +4162,8 @@
                   href: cpp/special-member-functions.md
                 - name: 静态成员
                   href: cpp/static-members-cpp.md
+                - name: 作为值类型的 C++ 类
+                  href: cpp/value-types-modern-cpp.md
                 - name: 用户定义的类型转换
                   href: cpp/user-defined-type-conversions-cpp.md
                 - name: 可变数据成员
@@ -4215,22 +4190,7 @@
                 - name: constexpr Lambda 表达式
                   href: cpp/lambda-expressions-constexpr.md
             - name: 数组
-              expanded: false
-              items:
-                - name: 数组
-                  href: cpp/arrays-cpp.md
-                - name: 使用数组
-                  href: cpp/using-arrays-cpp.md
-                - name: 初始化数组
-                  href: cpp/initializing-arrays.md
-                - name: 表达式中的数组
-                  href: cpp/arrays-in-expressions.md
-                - name: 下标运算符的解释
-                  href: cpp/interpretation-of-subscript-operator.md
-                - name: 数组类型的间接寻址
-                  href: cpp/indirection-on-array-types.md
-                - name: C++ 数组的排序
-                  href: cpp/ordering-of-cpp-arrays.md
+              href: cpp/arrays-cpp.md
             - name: reference
               expanded: false
               items:
@@ -4251,41 +4211,56 @@
               items:
                 - name: 指针
                   href: cpp/pointers-cpp.md
+                - name: 原始指针
+                  href: cpp/raw-pointers.md
                 - name: 固定和可变指针
                   href: cpp/const-and-volatile-pointers.md
                 - name: new 和 delete 运算符
                   href: cpp/new-and-delete-operators.md
+                - name: 智能指针
+                  href: cpp/smart-pointers-modern-cpp.md
+                - name: 如何：创建和使用 unique_ptr 实例
+                  href: cpp/how-to-create-and-use-unique-ptr-instances.md
+                - name: 如何：创建和使用 shared_ptr 实例
+                  href: cpp/how-to-create-and-use-shared-ptr-instances.md
+                - name: 如何：创建和使用 weak_ptr 实例
+                  href: cpp/how-to-create-and-use-weak-ptr-instances.md
+                - name: 如何：创建和使用 CComPtr 和 CComQIPtr 实例
+                  href: cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md
+                - name: 用于编译时封装的 Pimpl
+                  href: cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md
             - name: C++ 中的异常处理
               expanded: false
               items:
                 - name: C++ 中的异常处理
                   href: cpp/exception-handling-in-visual-cpp.md
-                - name: 异常处理
+                - name: 新式 C++ 最佳做法
+                  href: cpp/errors-and-exception-handling-modern-cpp.md
+                - name: 如何设计以实现异常安全性
+                  href: cpp/how-to-design-for-exception-safety.md
+                - name: 如何：异常和非异常代码之间的接口
+                  href: cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md
+                - name: try、throw 和 catch 语句
+                  href: cpp/try-throw-and-catch-statements-cpp.md
+                - name: Catch 块如何计算
+                  href: cpp/how-catch-blocks-are-evaluated-cpp.md
+                - name: 异常和堆栈展开
+                  href: cpp/exceptions-and-stack-unwinding-in-cpp.md
+                - name: 异常规范 (throw)
+                  href: cpp/exception-specifications-throw-cpp.md
+                - name: noexcept
+                  href: cpp/noexcept-cpp.md
+                - name: 未处理的 C++ 异常
+                  href: cpp/unhandled-cpp-exceptions.md
+                - name: 混合使用 C（结构化）和 C++ 异常
                   expanded: false
                   items:
-                    - name: 异常处理
-                      href: cpp/cpp-exception-handling.md
-                    - name: try、throw 和 catch 语句
-                      href: cpp/try-throw-and-catch-statements-cpp.md
-                    - name: Catch 块如何计算
-                      href: cpp/how-catch-blocks-are-evaluated-cpp.md
-                    - name: C++ 中的异常和堆栈展开
-                      href: cpp/exceptions-and-stack-unwinding-in-cpp.md
-                    - name: 异常规范 (throw)
-                      href: cpp/exception-specifications-throw-cpp.md
-                    - name: noexcept
-                      href: cpp/noexcept-cpp.md
-                    - name: 未处理的 C++ 异常
-                      href: cpp/unhandled-cpp-exceptions.md
                     - name: 混合使用 C（结构化）和 C++ 异常
-                      expanded: false
-                      items:
-                        - name: 混合使用 C（结构化）和 C++ 异常
-                          href: cpp/mixing-c-structured-and-cpp-exceptions.md
-                        - name: 使用 setjmp-longjmp
-                          href: cpp/using-setjmp-longjmp.md
-                        - name: 处理 C++ 中的结构性异常
-                          href: cpp/exception-handling-differences.md
+                      href: cpp/mixing-c-structured-and-cpp-exceptions.md
+                    - name: 使用 setjmp-longjmp
+                      href: cpp/using-setjmp-longjmp.md
+                    - name: 处理 C++ 中的结构性异常
+                      href: cpp/exception-handling-differences.md
                 - name: 结构化异常处理 (SEH) (C/C++)
                   expanded: false
                   items:

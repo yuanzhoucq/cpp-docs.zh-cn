@@ -1,6 +1,6 @@
 ---
 title: MFC 中的异常处理
-ms.date: 11/04/2016
+ms.date: 11/19/2019
 helpviewer_keywords:
 - DAO [MFC], exceptions
 - assertions [MFC], When to use exceptions
@@ -33,97 +33,96 @@ helpviewer_keywords:
 - function calls [MFC], results
 - out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
-ms.openlocfilehash: e8c0f1feba566ef9b961edcfacb9124830f9851d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 7d1be30edec598135eed2a74fca87f1e5444f55d
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69508620"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246733"
 ---
 # <a name="exception-handling-in-mfc"></a>MFC 中的异常处理
 
-本文介绍 MFC 中可用的异常处理机制。 提供两种机制:
+This article explains the exception-handling mechanisms available in MFC. Two mechanisms are available:
 
-- C++MFC 版本3.0 及更高版本中提供的异常
+- C++ exceptions, available in MFC version 3.0 and later
 
-- Mfc 版本1.0 及更高版本中提供的 MFC 异常宏
+- The MFC exception macros, available in MFC versions 1.0 and later
 
-如果要使用 MFC 编写新应用程序, 则应使用C++机制。 如果现有应用程序已广泛使用该机制, 则可以使用基于宏的机制。
+If you're writing a new application using MFC, you should use the C++ mechanism. You can use the macro-based mechanism if your existing application already uses that mechanism extensively.
 
-可以轻松地将现有代码转换为C++使用异常, 而不是使用 MFC 异常宏。 本文的 "异常" 一文[中介绍了转换代码和执行此操作的准则的优点:从 MFC 异常宏](../mfc/exceptions-converting-from-mfc-exception-macros.md)转换。
+You can readily convert existing code to use C++ exceptions instead of the MFC exception macros. Advantages of converting your code and guidelines for doing so are described in the article [Exceptions: Converting from MFC Exception Macros](../mfc/exceptions-converting-from-mfc-exception-macros.md).
 
-如果已使用 MFC 异常宏开发了应用程序, 则可以继续在现有代码中使用这些宏, 同时在新代码C++中使用异常。 文章[例外:版本 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)中的异常宏的更改提供了执行此操作的指导原则。
+If you have already developed an application using the MFC exception macros, you can continue using these macros in your existing code, while using C++ exceptions in your new code. The article [Exceptions: Changes to Exception Macros in Version 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md) gives guidelines for doing so.
 
 > [!NOTE]
->  若要C++在代码中启用异常处理, 请C++在项目的 "[属性页](../build/reference/property-pages-visual-cpp.md)" 对话框的 CC++ /文件夹中选择 "代码生成" 页上的 "启用异常", 或使用[/ehsc](../build/reference/eh-exception-handling-model.md)编译器选项。
+>  To enable C++ exception handling in your code, select Enable C++ Exceptions on the Code Generation page in the C/C++ folder of the project's [Property Pages](../build/reference/property-pages-visual-cpp.md) dialog box, or use the [/EHsc](../build/reference/eh-exception-handling-model.md) compiler option.
 
 本文介绍了以下主题：
 
-- [何时使用异常](#_core_when_to_use_exceptions)
+- [When to use exceptions](#_core_when_to_use_exceptions)
 
-- [MFC 异常支持](#_core_mfc_exception_support)
+- [MFC exception support](#_core_mfc_exception_support)
 
-- [有关异常的详细信息](#_core_further_reading_about_exceptions)
+- [Further reading about exceptions](#_core_further_reading_about_exceptions)
 
-##  <a name="_core_when_to_use_exceptions"></a>何时使用异常
+##  <a name="_core_when_to_use_exceptions"></a> When to Use Exceptions
 
-在程序执行过程中调用函数时, 可能会发生三种类型的结果: 正常执行、错误执行或异常执行。 下面介绍了每个类别。
+Three categories of outcomes can occur when a function is called during program execution: normal execution, erroneous execution, or abnormal execution. Each category is described below.
 
-- 正常执行
+- Normal execution
 
-   函数可以正常执行, 并返回。 某些函数将结果代码返回给调用方, 指示函数的结果。 为函数严格定义可能的结果代码, 并表示函数可能的结果范围。 结果代码可以指示成功或失败, 甚至可以指示处于正常范围内的特定类型的故障。 例如, 文件状态函数可以返回指示该文件不存在的代码。 请注意, 不使用术语 "错误代码", 因为结果代码表示多个预期结果中的一个。
+   The function may execute normally and return. Some functions return a result code to the caller, which indicates the outcome of the function. The possible result codes are strictly defined for the function and represent the range of possible outcomes of the function. The result code can indicate success or failure or can even indicate a particular type of failure that is within the normal range of expectations. For example, a file-status function can return a code that indicates that the file does not exist. Note that the term "error code" is not used because a result code represents one of many expected outcomes.
 
-- 执行错误
+- Erroneous execution
 
-   调用方在将自变量传递给函数或在不适当的上下文中调用函数时, 将会出错。 这种情况会导致错误, 并应在程序开发过程中由断言来检测。 (有关断言的详细信息, 请参阅[CC++ /断言](/visualstudio/debugger/c-cpp-assertions)。)
+   The caller makes some mistake in passing arguments to the function or calls the function in an inappropriate context. This situation causes an error, and it should be detected by an assertion during program development. (For more information on assertions, see [C/C++ Assertions](/visualstudio/debugger/c-cpp-assertions).)
 
-- 异常执行
+- Abnormal execution
 
-   异常执行包括程序控件之外的条件 (如内存不足或 i/o 错误) 对函数的结果产生影响的情况。 异常情况应通过捕获并引发异常来处理。
+   Abnormal execution includes situations where conditions outside the program's control, such as low memory or I/O errors, are influencing the outcome of the function. Abnormal situations should be handled by catching and throwing exceptions.
 
-使用异常特别适用于异常的执行。
+Using exceptions is especially appropriate for abnormal execution.
 
-##  <a name="_core_mfc_exception_support"></a>MFC 异常支持
+##  <a name="_core_mfc_exception_support"></a> MFC Exception Support
 
-无论是直接使用C++异常还是使用 MFC 异常宏, 都将使用可能由框架或应用`CException`程序引发的[CException 类](../mfc/reference/cexception-class.md)或派生对象。
+Whether you use the C++ exceptions directly or use the MFC exception macros, you will use [CException Class](../mfc/reference/cexception-class.md) or `CException`-derived objects that may be thrown by the framework or by your application.
 
-下表显示了 MFC 提供的预定义异常。
+The following table shows the predefined exceptions provided by MFC.
 
 |Exception 类|含义|
 |---------------------|-------------|
-|[CMemoryException 类](../mfc/reference/cmemoryexception-class.md)|内存不足|
-|[CFileException 类](../mfc/reference/cfileexception-class.md)|文件异常|
-|[CArchiveException 类](../mfc/reference/carchiveexception-class.md)|存档/序列化异常|
-|[CNotSupportedException 类](../mfc/reference/cnotsupportedexception-class.md)|响应不受支持服务的请求|
-|[CResourceException 类](../mfc/reference/cresourceexception-class.md)|Windows 资源分配异常|
-|[CDaoException 类](../mfc/reference/cdaoexception-class.md)|数据库异常 (DAO 类)|
-|[CDBException 类](../mfc/reference/cdbexception-class.md)|数据库异常 (ODBC 类)|
+|[CMemoryException 类](../mfc/reference/cmemoryexception-class.md)|Out-of-memory|
+|[CFileException 类](../mfc/reference/cfileexception-class.md)|File exception|
+|[CArchiveException 类](../mfc/reference/carchiveexception-class.md)|Archive/Serialization exception|
+|[CNotSupportedException 类](../mfc/reference/cnotsupportedexception-class.md)|Response to request for unsupported service|
+|[CResourceException 类](../mfc/reference/cresourceexception-class.md)|Windows resource allocation exception|
+|[CDaoException 类](../mfc/reference/cdaoexception-class.md)|Database exceptions (DAO classes)|
+|[CDBException 类](../mfc/reference/cdbexception-class.md)|Database exceptions (ODBC classes)|
 |[COleException 类](../mfc/reference/coleexception-class.md)|OLE 异常|
-|[COleDispatchException 类](../mfc/reference/coledispatchexception-class.md)|调度 (自动化) 异常|
-|[CUserException 类](../mfc/reference/cuserexception-class.md)|使用消息框向用户发出警报的异常, 然后引发一般的[CException 类](../mfc/reference/cexception-class.md)|
+|[COleDispatchException 类](../mfc/reference/coledispatchexception-class.md)|Dispatch (automation) exceptions|
+|[CUserException 类](../mfc/reference/cuserexception-class.md)|Exception that alerts the user with a message box, then throws a generic [CException Class](../mfc/reference/cexception-class.md)|
 
-> [!NOTE]
->  MFC 同时C++支持异常和 mfc 异常宏。 MFC 不直接支持 Windows NT 结构化异常处理程序 (SEH), 如[结构化异常处理](/windows/win32/debug/structured-exception-handling)中所述。
+自 3.0 版开始，MFC 已使用 C++ 异常，但仍支持其较早的异常处理宏，这些宏在形式上与 C++ 异常类似。 虽然建议不要将这些宏用于新编程，但仍可使用它们实现向后兼容。 在已使用宏的程序中，你也可以随意使用 C++ 异常。 During preprocessing, the macros evaluate to the exception handling keywords defined in the MSVC implementation of the C++ language as of Visual C++ version 2.0. 当你开始使用 C++ 异常时，可以保留现有异常宏。 For information on mixing macros and C++ exception handling and on converting old code to use the new mechanism, see the articles [Exceptions: Using MFC Macros and C++ Exceptions](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md) and [Exceptions: Converting from MFC Exception Macros](../mfc/exceptions-converting-from-mfc-exception-macros.md). 较早的 MFC 异常宏（如果你仍在使用它们）的计算结果为 C++ 异常关键字。 See [Exceptions: Changes to Exception Macros in Version 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md). MFC does not directly support Windows NT structured exception handlers (SEH), as discussed in [Structured Exception Handling](/windows/win32/debug/structured-exception-handling).
 
-##  <a name="_core_further_reading_about_exceptions"></a>有关异常的详细信息
+##  <a name="_core_further_reading_about_exceptions"></a> Further Reading About Exceptions
 
-以下文章说明了如何使用 MFC 库进行异常处理:
+The following articles explain using the MFC library for exception handing:
 
-- [异常：捕获和删除异常](../mfc/exceptions-catching-and-deleting-exceptions.md)
+- [异常：捕捉和删除异常](../mfc/exceptions-catching-and-deleting-exceptions.md)
 
 - [异常：检查异常内容](../mfc/exceptions-examining-exception-contents.md)
 
 - [异常：释放异常中的对象](../mfc/exceptions-freeing-objects-in-exceptions.md)
 
-- [异常：从你自己的函数中抛出异常](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md)
+- [异常：从自己的函数引发异常](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md)
 
 - [异常：数据库异常](../mfc/exceptions-database-exceptions.md)
 
 - [异常：OLE 异常](../mfc/exceptions-ole-exceptions.md)
 
-下面的文章将 MFC exception 宏与C++异常关键字进行比较, 并说明如何改编你的代码:
+The following articles compare the MFC exception macros with the C++ exception keywords and explain how you can adapt your code:
 
-- [异常：版本 3.0 中对异常宏的更改](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)
+- [异常：3.0 版本中对异常宏的修改](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)
 
 - [异常：从 MFC 异常宏转换](../mfc/exceptions-converting-from-mfc-exception-macros.md)
 
@@ -131,5 +130,5 @@ ms.locfileid: "69508620"
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 异常处理](../cpp/cpp-exception-handling.md)<br/>
-[如何实现:创建我自己的自定义异常类](https://go.microsoft.com/fwlink/p/?linkid=128045)
+[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
+[How Do I: Create my Own Custom Exception Classes](https://go.microsoft.com/fwlink/p/?linkid=128045)

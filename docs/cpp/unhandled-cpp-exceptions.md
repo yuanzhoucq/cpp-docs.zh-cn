@@ -8,16 +8,16 @@ helpviewer_keywords:
 - C++ exception handling, unhandled exceptions
 - unhandled exceptions [C++]
 ms.assetid: 13f09c53-9254-4407-9db9-14e730e047cc
-ms.openlocfilehash: 85227e0bd0ca33f925e8fe72b6489fa81305d031
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd5ce722c5159041ba8fb0a4a41b942a1bd4614f
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62312205"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246063"
 ---
 # <a name="unhandled-c-exceptions"></a>未处理的 C++ 异常
 
-如果匹配的处理程序 (或省略号**捕获**处理程序) 无法找到当前异常，预定义`terminate`调用运行时函数。 （您也可以在任意处理程序中显式调用 `terminate`。）`terminate` 的默认操作是调用 `abort`。 如果你希望 `terminate` 在退出应用程序之前调用程序中的某些其他函数，则用被调用函数的名称作为其单个自变量调用 `set_terminate` 函数。 您可以在程序的任何点调用 `set_terminate`。 `terminate`例程总是调用的最后一个函数的参数被当作`set_terminate`。
+If a matching handler (or ellipsis **catch** handler) cannot be found for the current exception, the predefined `terminate` run-time function is called. (You can also explicitly call `terminate` in any of your handlers.) The default action of `terminate` is to call `abort`. 如果你希望 `terminate` 在退出应用程序之前调用程序中的某些其他函数，则用被调用函数的名称作为其单个自变量调用 `set_terminate` 函数。 您可以在程序的任何点调用 `set_terminate`。 The `terminate` routine always calls the last function given as an argument to `set_terminate`.
 
 ## <a name="example"></a>示例
 
@@ -56,4 +56,4 @@ term_func was called by terminate.
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 异常处理](../cpp/cpp-exception-handling.md)
+[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)

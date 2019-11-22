@@ -4,12 +4,12 @@ ms.date: 10/31/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 6f8301c07f87feee80191f5db14fea5b16f02863
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 2233c0767fb7fac2fe496e744750f380e1c3b698
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624416"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303238"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>CMakeSettings.json 架构引用
 
@@ -71,9 +71,9 @@ Visual Studio 2017 及更高版本支持 CMake 项目。
 
 由于 Ninja 旨在加快生成速度，而不是为了提高灵活性和功能，因此它被设为默认生成器。 但是，某些 CMake 项目可能无法使用 Ninja 正确地进行生成。 如果出现这种情况，可以指示 CMake 生成 Visual Studio 项目。
 
-若要在 Visual Studio 2017 中指定 Visual Studio 生成器，请通过选择 "CMake" 在主菜单中打开。 **更改 CMake 设置**。 删除“Ninja”并键入“V”。 这可激活 IntelliSense，从而可让用户选择所需生成器。
+若要在 Visual Studio 2017 中指定 Visual Studio 生成器，请通过选择 "CMake" 在主菜单中打开。 **更改 CMake 设置**。 删除 "专家" 并键入 "V"。 这可激活 IntelliSense，从而可让用户选择所需生成器。
 
-若要在 Visual Studio 2019 中指定 Visual Studio 生成器，请在**解决方案资源管理器**中右键单击 " *cmakelists.txt* " 文件，然后选择 "**项目的 CMake 设置**" >**显示 "高级设置**" > **CMake生成器**。
+若要在 Visual Studio 2019 中指定 Visual Studio 生成器，请在**解决方案资源管理器**中右键单击 " *cmakelists.txt* " 文件，然后选择 "CMake **CMake 生成器**>**的** **高级 > 设置**"。
 
 当活动配置指定一个 Visual Studio 生成器时，默认情况下使用 `-m -v:minimal` 参数调用 MSBuild.exe。 若要自定义生成，请在*CMakeSettings*文件中，可以通过 `buildCommandArgs` 属性指定要传递到生成系统的其他[MSBuild 命令行参数](../build/reference/msbuild-visual-cpp-overview.md)：
 
@@ -88,7 +88,7 @@ Visual Studio 2017 及更高版本支持 CMake 项目。
   - MinSizeRel
   - RelWithDebInfo
  
-- `buildRoot`：指定 CMake 生成器要在其中为所选生成器生成脚本的目录。  映射到 **-DCMAKE_BINARY_DIR**开关并指定将创建*cmakecache.txt*的位置。 如果文件夹不存在，则会创建该文件夹。支持的宏包括 `${workspaceRoot}`、`${workspaceHash}`、`${projectFile}`、`${projectDir}`、`${thisFile}`、`${thisFileDir}`、`${name}`、`${generator}` 和 `${env.VARIABLE}`。
+- `buildRoot`：指定 CMake 生成器要在其中为所选生成器生成脚本的目录。  映射到 **-DCMAKE_BINARY_DIR**开关并指定将在其中创建*cmakecache.txt*的位置。 如果文件夹不存在，则会创建该文件夹。支持的宏包括 `${workspaceRoot}`、`${workspaceHash}`、`${projectFile}`、`${projectDir}`、`${thisFile}`、`${thisFileDir}`、`${name}`、`${generator}` 和 `${env.VARIABLE}`。
 - `installRoot`：指定 CMake 生成器要在其中为所选生成器安装目标的目录。 支持的宏包括 `${workspaceRoot}`、`${workspaceHash}`、`${projectFile}`、`${projectDir}`、`${thisFile}`、`${thisFileDir}`、`${name}`、`${generator}`、`${env.VARIABLE}`。
 - `cmakeCommandArgs`：指定在调用以生成项目文件时传递给 CMake 的附加命令行选项。
 - `cmakeToolchain`：指定工具链文件。 这通过 -DCMAKE_TOOLCHAIN_FILE 传递到 CMake。
@@ -140,7 +140,7 @@ Visual Studio 2017 及更高版本支持 CMake 项目。
 - `remotePreGenerateCommand`：指定运行 CMake 之前要运行的命令，以分析*cmakelists.txt*文件。
 - `remotePrebuildCommand`：指定生成前要在远程计算机上运行的命令。
 - `remotePostbuildCommand`：指定生成后要在远程计算机上运行的命令。
-- `variables`：包含将作为 -D name=value 传递到 CMake 的 CMake 变量的名称/值对。 如果你的 CMake 项目生成说明将任何变量直接添加到*cmakecache.txt*文件，则建议你将其添加到此处。 下面的示例演示如何为 14.14.26428 MSVC 工具集指定名称/值对：
+- `variables`：包含将作为 -D name**value 传递到 CMake 的 CMake 变量的名称/值对** *=* 。 如果你的 CMake 项目生成说明将任何变量直接添加到*cmakecache.txt*文件，则建议你将其添加到此处。 下面的示例演示如何为 14.14.26428 MSVC 工具集指定名称/值对：
 
 ```json
 "variables": [
@@ -161,19 +161,19 @@ Visual Studio 2017 及更高版本支持 CMake 项目。
 
 ## <a name="environments"></a>情形
 
-*环境*封装在 Visual Studio 用来调用 cmake 的进程中设置的环境变量。 对于 MSVC 项目，这些变量是在特定平台的[开发人员命令提示](building-on-the-command-line.md)中设置的变量。 例如，`msvc_x64_x64` 环境与运行**vs 2017 的开发人员命令提示**或**针对 vs 2019 的开发人员命令提示**，并具有 **-host_arch = amd64**参数。 您可以使用*CMakeSettings*中的 `env.{<variable_name>}` 语法来引用单个环境变量，例如构造到文件夹的路径。  提供以下预定义环境：
+*环境*封装在 Visual Studio 用来调用 cmake 的进程中设置的环境变量。 对于 MSVC 项目，这些变量是在特定平台的[开发人员命令提示](building-on-the-command-line.md)中设置的变量。 例如，`msvc_x64_x64` 环境与运行**vs 2017 的开发人员命令提示**或**针对 vs 2019 的开发人员命令提示**，并具有 **-拱 = amd64-host_arch = amd64**参数相同。 您可以使用*CMakeSettings*中的 `env.{<variable_name>}` 语法来引用单个环境变量，例如构造到文件夹的路径。  提供以下预定义环境：
 
 - linux_arm：远程面向 ARM Linux。
 - linux_x64：远程面向 x64 Linux。
 - linux_x86：远程面向 x86 Linux。
-- msvc_arm：具有 MSVC 编译器的目标 ARM 窗口。
-- msvc_arm_x64：目标 ARM Windows 具有64位 MSVC 编译器。
-- msvc_arm64：目标 ARM64 Windows，其中包含 MSVC 编译器。
-- msvc_arm64_x64：目标 ARM64 Windows，其中包含64位 MSVC 编译器。
+- msvc_arm： MSVC 编译器的目标 ARM 窗口。
+- msvc_arm_x64：具有64位 MSVC 编译器的目标 ARM 窗口。
+- msvc_arm64：目标 ARM64 Windows 与 MSVC 编译器。
+- msvc_arm64_x64：目标 ARM64 Windows 与64位 MSVC 编译器。
 - msvc_x64：通过 MSVC 编译器面向 x64 Windows。
-- msvc_x64_x64：目标 x64 Windows 带有64位 MSVC 编译器。
-- msvc_x86：用 MSVC 编译器面向 x86 Windows。
-- msvc_x86_x64：将 x86 Windows 的目标设定为64位 MSVC 编译器。
+- msvc_x64_x64：目标为 x64 Windows，其中包含64位 MSVC 编译器。
+- msvc_x86：通过 MSVC 编译器面向 x86 Windows。
+- msvc_x86_x64：面向具有64位 MSVC 编译器的 x86 Windows。
 
 ### <a name="accessing-environment-variables-from-cmakeliststxt"></a>从 Cmakelists.txt 访问环境变量
 
@@ -220,7 +220,7 @@ Visual Studio 2017 及更高版本支持 CMake 项目。
 }
 ```
 
-在下一个示例中，x86-Debug 配置为 BuildDir 属性定义其自己的值。 此值替代由全局 BuildDir 属性设置的值，以便 BuildRoot 评估为 `D:\custom-builddir\x86-Debug`。
+在下一个示例中，x86-Debug 配置为 BuildDir 属性定义其自己的值。 此值替代由全局 BuildDir 属性设置的值，以便 BuildRoot 评估为`D:\custom-builddir\x86-Debug`。
 
 ```json
 {
@@ -256,7 +256,7 @@ Visual Studio 2017 及更高版本支持 CMake 项目。
       "generator": "Ninja",
       "configurationType": "Debug",
       "inheritEnvironments": [ "msvc_x64" ],
-      // Since this configuration doesn’t modify BuildDir, it inherits
+      // Since this configuration doesn't modify BuildDir, it inherits
       // from the one defined globally.
       "buildRoot": "${env.BuildDir}\\${name}"
     }

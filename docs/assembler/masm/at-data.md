@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@data symbol'
 ms.assetid: d3e99fb0-4c9e-40a8-9e2d-15de3b01a2fe
-ms.openlocfilehash: 456a1f1e53fbcba47d1ef33a1fa89b0d4fdc6a37
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 50c8128697ab9d488be013bed10d6875ce8bd33a
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166862"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302738"
 ---
-# <a name="data"></a>@data
+# <a name="data"></a>\@数据
 
-默认数据组的名称。 除所有模型的计算都结果为 DGROUP**平面**。 计算结果为**平面**下**平面**内存模型 （text 宏）。
+默认数据组的名称。 对于所有模型（**平面**除外），计算结果为 DGROUP。 在**平面**内存模型（文本宏）下计算为**平面**。
 
 ## <a name="syntax"></a>语法
 
-> @data
+> **\@数据**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[符号参考](../../assembler/masm/symbols-reference.md)<br/>
+[符号参考](../../assembler/masm/symbols-reference.md)

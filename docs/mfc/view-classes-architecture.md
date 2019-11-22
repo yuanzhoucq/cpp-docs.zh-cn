@@ -9,24 +9,24 @@ helpviewer_keywords:
 - control views [MFC]
 - view classes [MFC], architecture
 ms.assetid: 8894579a-1436-441e-b985-83711061e495
-ms.openlocfilehash: c6c1272d41eb7a01ec5a7ee10fadb4ab21547ce7
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: fda4e968a4761fcf1e2245964bd5dca3f41a82ad
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096047"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302982"
 ---
 # <a name="view-classes-architecture"></a>视图类（体系结构）
 
-`CView`及其派生类是表示框架窗口的工作区的子窗口。 视图显示数据并接受文档输入。
+`CView` 及其派生类是表示框架窗口的工作区的子窗口。 视图显示数据并接受文档输入。
 
 视图类与文档类和框架窗口类关联，使用文档模板对象。
 
 [CView](../mfc/reference/cview-class.md)<br/>
-文档数据的应用程序特定视图的基类。 视图显示数据并接受用户输入以编辑或选择数据。 从`CView`派生视图类。
+文档数据的应用程序特定视图的基类。 视图显示数据并接受用户输入以编辑或选择数据。 从 `CView`派生视图类。
 
 [CScrollView](../mfc/reference/cscrollview-class.md)<br/>
-具有滚动功能的视图的基类。 从`CScrollView`派生您的视图类以便自动滚动。
+具有滚动功能的视图的基类。 从 `CScrollView` 派生视图类以便自动滚动。
 
 ## <a name="form-and-record-views"></a>窗体和记录视图
 
@@ -35,10 +35,10 @@ ms.locfileid: "71096047"
 记录视图派生自窗体视图。 除了对话框模板以外，它们还具有到数据库的连接。
 
 [CFormView](../mfc/reference/cformview-class.md)<br/>
-其布局在对话框模板中定义的滚动视图。 从`CFormView`派生一个类，以实现基于对话框模板的用户界面。
+其布局在对话框模板中定义的滚动视图。 从 `CFormView` 中派生一个类，以实现基于对话框模板的用户界面。
 
 [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)<br/>
-提供直接连接到数据访问对象（DAO）记录集对象的窗体视图。 与所有窗体视图一样`CDaoRecordView` ，是基于对话框模板的。 DAO 与 Access 数据库结合使用，并受 Office 2013 的支持。 3.6 是最终版本，被视为已过时。
+提供直接连接到数据访问对象（DAO）记录集对象的窗体视图。 与所有窗体视图一样，`CDaoRecordView` 基于对话框模板。 DAO 与 Access 数据库结合使用，并受 Office 2013 的支持。 DAO 3.6 是最终版本，被视为已过时。
 
 [CHtmlView](../mfc/reference/chtmlview-class.md)<br/>
 支持应用程序中的 Web 浏览控件。 控件支持 MFC 中的动态 HTML。
@@ -47,7 +47,7 @@ ms.locfileid: "71096047"
 为窗体视图提供 MFC OLE DB 支持。
 
 [CRecordView](../mfc/reference/crecordview-class.md)<br/>
-提供直接连接到开放式数据库连接（ODBC）记录集对象的窗体视图。 与所有窗体视图一样`CRecordView` ，是基于对话框模板的。
+提供直接连接到开放式数据库连接（ODBC）记录集对象的窗体视图。 与所有窗体视图一样，`CRecordView` 基于对话框模板。
 
 ## <a name="control-views"></a>控件视图
 
@@ -68,6 +68,6 @@ ms.locfileid: "71096047"
 [CTreeView](../mfc/reference/ctreeview-class.md)<br/>
 包含 Windows 树控件的视图（请参阅[CTreeCtrl](../mfc/reference/ctreectrl-class.md)）。 树形控件以与文件资源管理器左窗格类似的方式显示在层次结构中排列的图标和字符串。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [类概述](../mfc/class-library-overview.md)

@@ -1,6 +1,6 @@
 ---
 title: /GX（启用异常处理）
-ms.date: 11/04/2016
+ms.date: 11/19/2019
 f1_keywords:
 - /gx
 helpviewer_keywords:
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - enable exception handling compiler option [C++]
 - GX compiler option [C++]
 ms.assetid: 933b43ba-de77-4ff8-a48b-7074de90bc1c
-ms.openlocfilehash: 43be8f6d0f080f0d85568ce5b089751fc68f0e8e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 171ff0d0dfb1dec41bae5f6be63c941802c402a4
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291998"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245091"
 ---
 # <a name="gx-enable-exception-handling"></a>/GX（启用异常处理）
 
-已否决。 启用同步异常处理使用函数假设使用声明`extern "C"`永远不会引发异常。
+已否决。 Enables synchronous exception handling using the assumption that functions declared by using `extern "C"` never throw an exception.
 
 ## <a name="syntax"></a>语法
 
@@ -30,23 +30,21 @@ ms.locfileid: "62291998"
 
 ## <a name="remarks"></a>备注
 
-**/GX**已弃用。 使用等效[/EHsc](eh-exception-handling-model.md)选项。 有关不推荐使用的编译器选项的列表，请参阅**已弃用并删除的编译器选项**主题中[按类别列出的编译器选项](compiler-options-listed-by-category.md)。
+**/GX** is deprecated. Use the equivalent [/EHsc](eh-exception-handling-model.md) option instead. For a list of deprecated compiler options, see the **Deprecated and Removed Compiler Options** section in [Compiler Options Listed by Category](compiler-options-listed-by-category.md).
 
-默认情况下 **/EHsc**，则等效于 **/GX**，实际上是通过使用 Visual Studio 开发环境编译时。 使用命令行工具时，指定的异常处理。 此命令的等效 **/GX-**。
-
-有关详细信息，请参阅[C++的异常处理](../../cpp/cpp-exception-handling.md)。
+By default, **/EHsc**, the equivalent of **/GX**, is in effect when you compile by using the Visual Studio development environment. When using the command line tools, no exception handling is specified. This is the equivalent of **/GX-** .
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页” 对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
-1. 在导航窗格中，选择**配置属性**， **C /C++**，**命令行**。
+1. In the navigation pane, choose **Configuration Properties**, **C/C++** , **Command Line**.
 
 1. 在 **“附加选项”** 框中键入编译器选项。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
 
-- 请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。
+- 请参阅<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
 ## <a name="see-also"></a>请参阅
 
