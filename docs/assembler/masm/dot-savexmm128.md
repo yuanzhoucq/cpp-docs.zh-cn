@@ -6,29 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - .SAVEXMM128 directive
 ms.assetid: 551eb472-b8d0-47b1-8d82-995d1f485723
-ms.openlocfilehash: c29ec47170c5e0f46f02d53f23ab477a79bbdc32
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 08bc5ab50e15aa59e0c49992d1810c7de20f364e
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62205213"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397952"
 ---
 # <a name="savexmm128"></a>.SAVEXMM128
 
-生成任一`UWOP_SAVE_XMM128`或`UWOP_SAVE_XMM128_FAR`展开指定 XMM 寄存器的代码项以及使用当前的序言偏移的偏移量。 MASM 会选择最有效的编码。
+Generates either a `UWOP_SAVE_XMM128` or a `UWOP_SAVE_XMM128_FAR` unwind code entry for the specified XMM register and offset using the current prologue offset. MASM will choose the most efficient encoding.
 
 ## <a name="syntax"></a>语法
 
-> .savexmm128 xmmreg、 偏移量
+> **.SAVEXMM128** *xmmreg* , *offset*
 
 ## <a name="remarks"></a>备注
 
-.SAVEXMM128 允许 ml64.exe 用户指定帧函数如何将回退，并只允许在序言中，从扩展了[PROC](../../assembler/masm/proc.md)帧声明到[。ENDPROLOG](../../assembler/masm/dot-endprolog.md)指令。 这些指令不会生成代码;它们只能生成`.xdata`和`.pdata`。 .SAVEXMM128 前面应带有实际实现是展开的操作的说明。 它是包装展开指令和它们专门为在宏展开用于确保协议的代码的好办法。
+**.SAVEXMM128** allows ml64.exe users to specify how a frame function unwinds, and is only allowed within the prologue, which extends from the [PROC](../../assembler/masm/proc.md) FRAME declaration to the [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) directive. These directives do not generate code; they only generate `.xdata` and `.pdata`. .SAVEXMM128 should be preceded by instructions that actually implement the actions to be unwound. It is a good practice to wrap both the unwind directives and the code they are meant to unwind in a macro to ensure agreement.
 
-*偏移量*必须是 16 的倍数。
+*offset* must be a multiple of 16.
 
-有关详细信息，请参阅[MASM 的 x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)。
+For more information, see [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
 ## <a name="see-also"></a>请参阅
 
-[指令参考](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

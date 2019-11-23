@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - BYTE directive
 ms.assetid: 8dd94476-c069-4585-a478-3cb2e8e6ae54
-ms.openlocfilehash: 124e4491ff5242a8b1d4a1cd3b3ad503257139fc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef7d3f19203672822183f49b3e55e9c25053a660
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62204643"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398863"
 ---
 # <a name="byte-masm"></a>BYTE (MASM)
 
-分配并根据需要初始化每个字节的存储空间`initializer`。
+Allocates and optionally initializes a byte of storage for each *initializer*.
 
 ## <a name="syntax"></a>语法
 
-> [[name]]BYTEinitializer [[，初始值设定项]]...
+> ⟦*name*⟧ **BYTE** *initializer* ⟦ __,__ *initializer* ...⟧
 
 ## <a name="remarks"></a>备注
 
-也可以用作类型说明符类型是合法的任何位置。
+Can also be used as a type specifier anywhere a type is legal.
 
 ## <a name="see-also"></a>请参阅
 
-[指令参考](../../assembler/masm/directives-reference.md)<br/>
-[DB](../../assembler/masm/db.md)<br/>
-[SBYTE](../../assembler/masm/sbyte-masm.md)<br/>
+[Directives Reference](../../assembler/masm/directives-reference.md)\
+[DB](../../assembler/masm/db.md)\
+[SBYTE](../../assembler/masm/sbyte-masm.md)

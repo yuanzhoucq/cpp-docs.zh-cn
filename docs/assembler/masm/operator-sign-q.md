@@ -8,21 +8,21 @@ helpviewer_keywords:
 - SIGN? operator
 - operator SIGN?
 ms.assetid: bdc431db-4623-4c7f-9eb6-31aab62dcd79
-ms.openlocfilehash: 6b7547c846e0420e92086e7c1c8786c9433ef9a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd5958c173783e9863cc7dac9dadccdc8537a15b
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62200728"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74395874"
 ---
 # <a name="operator-sign"></a>运算符 SIGN?
 
-符号标志的状态。 仅在[。如果](../../assembler/masm/dot-if.md)， [。虽然](../../assembler/masm/dot-while.md)，或[。重复](../../assembler/masm/dot-repeat.md)阻止并在运行时，不是在程序集时计算。
+Status of sign flag. Used only within [.IF](../../assembler/masm/dot-if.md), [.WHILE](../../assembler/masm/dot-while.md), or [.REPEAT](../../assembler/masm/dot-repeat.md) blocks and evaluated at run time, not at assembly time.
 
 ## <a name="syntax"></a>语法
 
-> 登录？
+> **SIGN?**
 
 ## <a name="see-also"></a>请参阅
 
-[运算符参考](../../assembler/masm/operators-reference.md)<br/>
+[Operators reference](operators-reference.md)

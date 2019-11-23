@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@Model symbol'
 ms.assetid: a67c04ac-6ba7-458c-8138-0346e5b85eb6
-ms.openlocfilehash: 09e5663a8c3bfe0f2ce0a94bcb4006f2dd654cc2
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: d62026b02f476a19defc9ae6c8e9c83500bfe067
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301924"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398960"
 ---
-# <a name="model"></a>\@模型
+# <a name="model"></a>\@Model
 
-1适用**于小型模型，** 2 表示**小型**模型，3表示**精简**模型，4表示**中等**模型，5用于**大**模型，6**用于** **平面**模型（数值等于）。
+1 for **TINY** model, 2 for **SMALL** model, 3 for **COMPACT** model, 4 for **MEDIUM** model, 5 for **LARGE** model, 6 for **HUGE** model, and 7 for **FLAT** model (numeric equate).
 
 ## <a name="syntax"></a>语法
 
-> **\@模型**
+> **\@Model**
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[符号参考](../../assembler/masm/symbols-reference.md)
+[Symbols reference](symbols-reference.md)

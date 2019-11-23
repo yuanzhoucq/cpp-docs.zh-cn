@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - IRP directive
 ms.assetid: 055f746d-f422-43d1-b73d-d38979c593cb
-ms.openlocfilehash: 7cf54c6a6b0d145a7d7f999202559704b586e502
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 357bdb521829f371919b4bbec851d9f2cdcbf43a
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203597"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397296"
 ---
 # <a name="irp"></a>IRP
 
 ## <a name="syntax"></a>语法
 
-> IRP
+> **IRP**
 
 ## <a name="remarks"></a>备注
 
-请参阅[为](../../assembler/masm/for-masm.md)。
+See [FOR](../../assembler/masm/for-masm.md).
 
 ## <a name="see-also"></a>请参阅
 
-[指令参考](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

@@ -6,21 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - .ERR2 directive
 ms.assetid: ea8e0f14-cbdd-4576-9268-846527c27870
-ms.openlocfilehash: 41a7d43745cacacff3b7a957ca20e6edb3afc273
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 623a13ee8f5b2333f6e4b5278f1fa246110d596d
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185389"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398427"
 ---
 # <a name="err2"></a>.ERR2
 
-[.ERR](../../assembler/masm/dot-err.md)计算每个程序集传递上，如果块**选项： SETIF2**是 **，则返回 TRUE。**
+[.ERR](../../assembler/masm/dot-err.md) block evaluated on every assembly pass if **OPTION:SETIF2** is **TRUE.**
 
 ## <a name="syntax"></a>语法
 
-> .ERR2 [[message]]
+> **.ERR2** ⟦*message*⟧
+
+## <a name="remarks"></a>备注
+
+For more information about 2-pass behavior in MASM 5.1 vs MASM 6.1, see [IF1 and IF2](if2.md).
 
 ## <a name="see-also"></a>请参阅
 
-[指令参考](../../assembler/masm/directives-reference.md)<br/>
+[指令参考](../../assembler/masm/directives-reference.md)
