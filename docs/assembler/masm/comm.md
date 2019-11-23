@@ -6,34 +6,34 @@ f1_keywords:
 helpviewer_keywords:
 - COMM directive
 ms.assetid: a23548c4-ad04-41fa-91da-945f228de742
-ms.openlocfilehash: 342c8acd95fd45de1a21dc298325de9a7b40b717
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 063689087b6114f9a2d544ef0b459bf594da3cc4
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179102"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398827"
 ---
 # <a name="comm"></a>COMM
 
-创建一个微乎其微的变量中指定的属性与*定义*。
+Creates a communal variable with the attributes specified in *definition*.
 
 ## <a name="syntax"></a>语法
 
-> **COMM** *定义*[，*定义*]...
+> **COMM** *definition* ⟦ __,__ *definition* ...⟧
 
 ## <a name="remarks"></a>备注
 
-公用变量将分配由链接器，并且无法初始化。 这意味着您不能依赖于此类变量序列的位置。
+Communal variables are allocated by the linker, and can't be initialized. This means that you can't depend on the location or sequence of such variables.
 
-每个*定义*具有以下形式：
+Each *definition* has the following form:
 
-[*langtype*] [**NEAR** &#124; **FAR**] _label_**:**_type_[**:**_count_]
+⟦*langtype*⟧ ⟦⦃**NEAR** &#124; **FAR**⦄⟧ _label_ **:** _type_⟦ **:** _count_⟧
 
-可选*langtype*设置跟的名称的命名约定。 它将替代指定的任何语言 **。模型**指令。 可选**NEAR**或**FAR**重写当前的内存模型。 *标签*是变量的名称。 *类型*可以是任何类型说明符 ([字节](../../assembler/masm/byte-masm.md)， [WORD](../../assembler/masm/word.md)，依次类推) 或一个整数，指定的字节数。 可选*计数*指定的元素数中声明的数据的对象; 默认值为 1。
+The optional *langtype* sets the naming conventions for the name that follows. It overrides any language specified by the **.MODEL** directive. The optional **NEAR** or **FAR** override the current memory model. The *label* is the name of the variable. The *type* can be any type specifier ([BYTE](../../assembler/masm/byte-masm.md), [WORD](../../assembler/masm/word.md), and so on) or an integer specifying the number of bytes. The optional *count* specifies the number of elements in the declared data object; the default is one.
 
 ## <a name="example"></a>示例
 
-此示例创建一个 512 字节元素的数组：
+This example creates an array of 512 BYTE elements:
 
 ```asm
 COMM FAR ByteArray:BYTE:512
@@ -41,4 +41,4 @@ COMM FAR ByteArray:BYTE:512
 
 ## <a name="see-also"></a>请参阅
 
-[指令参考](../../assembler/masm/directives-reference.md)<br/>
+[指令参考](../../assembler/masm/directives-reference.md)
