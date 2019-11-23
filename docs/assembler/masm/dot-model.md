@@ -6,47 +6,47 @@ f1_keywords:
 helpviewer_keywords:
 - .MODEL directive
 ms.assetid: 057f00df-1515-4c55-852a-d936c8a34b53
-ms.openlocfilehash: b341cfaec35c08f5ac16447890c85570e9c9c0df
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: bfc114a6e71c0eb0ae70005c2657871b6c9e9692
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73703582"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398113"
 ---
-# <a name="model-32-bit-masm"></a>.模型（32位 MASM）
+# <a name="model-32-bit-masm"></a>.MODEL (32-bit MASM)
 
-初始化程序内存模型。 （仅限32位 MASM。）
+初始化程序内存模型。 (32-bit MASM only.)
 
 ## <a name="syntax"></a>语法
 
-> .MODEL memorymodel [[, langtype]] [[, stackoption]]
+> **.MODEL** *memory-model* ⟦ __,__ *language-type*⟧ ⟦ __,__ *stack-option*⟧
 
 ### <a name="parameters"></a>参数
 
-memorymodel<br/>
+*memory-model*\
 必需参数，确定代码和数据指针的大小。
 
-langtype<br/>
+*language-type*\
 可选参数，设置过程和公共符号的调用和命名约定。
 
-stackoption<br/>
+*stack-option*\
 可选参数。
 
-如果 memorymodel 为 `FLAT`，则不使用 stackoption。
+*stack-option* is not used if *memory-model* is **FLAT**.
 
-指定 `NEARSTACK` 将堆栈段以及数据组合至单个物理段 (`DGROUP`)。 假定堆栈段寄存器 (`SS`) 与数据段寄存器 (`DS`) 保留相同的地址。 `FARSTACK` 不会将堆栈与 `DGROUP` 组合；因此，`SS` 不等于 `DS`。
+Specifying **NEARSTACK** groups the stack segment into a single physical segment (**DGROUP**) along with data. The stack segment register (**SS**) is assumed to hold the same address as the data segment register (**DS**). **FARSTACK** does not group the stack with **DGROUP**; thus **SS** does not equal **DS**.
 
 ## <a name="remarks"></a>备注
 
-.`MODEL` 不在 [x64 的 MASM (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md) 中使用。
+**.MODEL** is not used in [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
 下表列出了在面向 16 位和 32 位平台时每个参数的可能的值：
 
 |参数|32 位值|16 位值（支持早期的 16 位开发）|
 |---------------|--------------------|----------------------------------------------------------------|
-|memorymodel|`FLAT`|`TINY`, `SMALL`, `COMPACT`, `MEDIUM`, `LARGE`, `HUGE`, `FLAT`|
-|langtype|`C`，`STDCALL`|`C`、 `BASIC`、 `FORTRAN`、 `PASCAL`、 `SYSCALL`、 `STDCALL`|
-|stackoption|未使用|`NEARSTACK`，`FARSTACK`|
+|*memory-model*|**FLAT**|**TINY**, **SMALL**, **COMPACT**, **MEDIUM**, **LARGE**, **HUGE**, **FLAT**|
+|*language-type*|**C**, **STDCALL**|**C**, **BASIC**, **FORTRAN**, **PASCAL**, **SYSCALL**, **STDCALL**|
+|*stack-option*|未使用|**NEARSTACK**, **FARSTACK**|
 
 ## <a name="code"></a>代码
 
@@ -88,4 +88,4 @@ end
 
 ## <a name="see-also"></a>请参阅
 
-[指令参考](../../assembler/masm/directives-reference.md)<br/>
+[指令参考](../../assembler/masm/directives-reference.md)

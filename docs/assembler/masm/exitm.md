@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - EXITM directive
 ms.assetid: a3484d33-04a9-4791-8d53-3fc3bc7b417c
-ms.openlocfilehash: 8d9b1e118e8afd8e2f001d5b2afca5c3d449fa4e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0fc40b6dad2785c02f097910f26b7465ddf5dbcc
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203141"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397573"
 ---
 # <a name="exitm"></a>EXITM
 
-终止当前的重复或宏块的扩展，并开始下一个语句块外的程序集。
+Terminates expansion of the current repeat or macro block and begins assembly of the next statement outside the block.
 
 ## <a name="syntax"></a>语法
 
-> EXITM [textitem]
+> **EXITM** ⟦*textitem*⟧
 
 ## <a name="remarks"></a>备注
 
-在宏函数中， *textitem*返回的值。
+In a macro function, *textitem* is the value returned.
 
 ## <a name="see-also"></a>请参阅
 
-[指令参考](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

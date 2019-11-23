@@ -8,21 +8,21 @@ helpviewer_keywords:
 - operator LOW
 - LOW operator
 ms.assetid: d09e1f6a-dcf5-444d-81fd-3670178d6885
-ms.openlocfilehash: f5c6d38a56d58a82784ac4778f7057ce631bd91d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f47bb98f06a9bd2e7fd46ac528f863aa8bf6765a
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176637"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396710"
 ---
 # <a name="operator-low"></a>运算符 LOW
 
-返回的低 8 位*表达式*。 MASM 表达式是 64 位值。
+Returns the low 8 bits of *expression*. MASM expressions are 64-bit values.
 
 ## <a name="syntax"></a>语法
 
-> 低表达式
+> **LOW** *expression*
 
 ## <a name="see-also"></a>请参阅
 
-[运算符参考](../../assembler/masm/operators-reference.md)<br/>
+[Operators reference](operators-reference.md)
