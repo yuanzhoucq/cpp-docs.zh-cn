@@ -32,7 +32,7 @@ ms.locfileid: "71816228"
 
 ## <a name="remarks"></a>备注
 
-**/Arch**选项允许使用某些指令集扩展，特别是对于矢量计算，适用于 INTEL 和 AMD 的处理器。 通常，在较旧的处理器上，最新引入的处理器可能支持更多的扩展，不过，你应该参考特定处理器的文档，或使用 __ 测试指令集扩展支持[cpuid](../../intrinsics/cpuid-cpuidex.md) ，然后再使用指令集扩展执行代码。
+**/Arch**选项允许使用某些指令集扩展，特别是对于矢量计算，适用于 INTEL 和 AMD 的处理器。 通常，在使用指令集扩展执行代码之前，更高版本的处理器可能支持更高版本的处理器，更高版本的处理器可能支持更高版本的处理器[__cpuid](../../intrinsics/cpuid-cpuidex.md) 。
 
 **/arch**仅影响本机函数的代码生成。 使用[/clr](clr-common-language-runtime-compilation.md)进行编译时， **/arch**不会影响托管函数的代码生成。
 
@@ -48,7 +48,7 @@ ms.locfileid: "71816228"
 
 每个 **/arch**选项还可以启用与该选项关联的其他非矢量指令的使用。 例如，在指定 **/arch： AVX2**时使用某些 BMI 指令。
 
-指定 **/arch： AVX**， **/arch： AVX2**或 **/arch： AVX512**编译器选项时，将定义 `__AVX__` 预处理器符号。 指定 **/arch： AVX2**或 **/arch： AVX512**编译器选项时，将定义 `__AVX2__` 预处理器符号。 指定 **/arch： AVX512**编译器选项时，将定义 `__AVX512F__`、@no__t `__AVX512BW__`、@no__t 和 @no__t 预处理器符号。 有关更多信息，请参见 [Predefined Macros](../../preprocessor/predefined-macros.md)。 版本 12.0.34567.1) Visual Studio 2013 中引入了 **/arch： AVX2**选项。 对/arch 的有限支持 **： AVX512**已添加到 visual studio 2017，并在 visual studio 2019 中扩展。
+当指定 **/arch： AVX**， **/arch： AVX2**或 **/arch： AVX512**编译器选项时，将定义 `__AVX__` 预处理器符号。 指定 **/arch： AVX2**或 **/arch： AVX512**编译器选项时，将定义 `__AVX2__` 预处理器符号。 指定 **/arch： AVX512**编译器选项时，将定义 `__AVX512F__`、`__AVX512CD__`、`__AVX512BW__`、`__AVX512DQ__` 和 `__AVX512VL__` 预处理器符号。 有关详细信息，请参阅 [Predefined Macros](../../preprocessor/predefined-macros.md)。 版本 12.0.34567.1) Visual Studio 2013 中引入了 **/arch： AVX2**选项。 对/arch 的有限支持 **： AVX512**已添加到 visual studio 2017，并在 visual studio 2019 中扩展。
 
 ### <a name="to-set-the-archavx-archavx2-or-archavx512-compiler-option-in-visual-studio"></a>在 Visual Studio 中设置/arch： AVX，/arch： AVX2 或/arch： AVX512 编译器选项
 
@@ -64,7 +64,7 @@ ms.locfileid: "71816228"
 
 - 请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableEnhancedInstructionSet%2A>。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [/arch（最小 CPU 体系结构）](arch-minimum-cpu-architecture.md)<br/>
 [MSVC 编译器选项](compiler-options.md)<br/>

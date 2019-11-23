@@ -32,11 +32,11 @@ ms.locfileid: "71816564"
 
 在文档窗口中，每个打开的文件都包含在选项卡式框架中。 可以浮动或锁定这些选项卡，就像工具窗口一样。 有关详细信息，请参阅[在 Visual Studio 中自定义窗口布局](/visualstudio/ide/customizing-window-layouts-in-visual-studio)。
 
-若要隐藏所有工具窗口并最大化 "代码编辑器" 窗口，请按**Alt** +  Shift **@no__t 以**切换*全屏模式*。
+若要隐藏所有工具窗口并最大化 "代码编辑器" 窗口，请按**Alt** + **Shift** + **enter**切换*全屏模式*。
 
 ## <a name="set-c-coding-styles-and-formatting"></a>设置C++编码样式和格式设置
 
-可以指定多个单独的代码格式设置选项，如缩进和大括号位置。 为此，请跳到 "**工具**"  >  "**选项**"  >  "**文本编辑器** > **C/C++**  > **格式**（或键入**Ctrl + Q**并搜索" 格式 "）。 或者，您可以指定一个[ClangFormat](https://clang.llvm.org/docs/ClangFormat.html)样式（或您自己的自定义 ClangFormat 样式）。
+可以指定多个单独的代码格式设置选项，如缩进和大括号位置。 为此，请在 "**工具**" > **选项**" > **文本编辑器**" > **C/C++**  > **格式设置**（或者按**Ctrl + Q**并搜索 "格式设置"）。 或者，您可以指定一个[ClangFormat](https://clang.llvm.org/docs/ClangFormat.html)样式（或您自己的自定义 ClangFormat 样式）。
 
 ![ClangFormat 选项的屏幕截图](media/clang-format-ide.png)
 
@@ -44,7 +44,7 @@ ms.locfileid: "71816564"
 
 ## <a name="set-the-color-theme"></a>设置颜色主题
 
-若要设置浅色或深色背景，请按**Ctrl + Q**并搜索 "颜色主题"。 你还可以通过转到 "**工具**"  >  "选项 @no__t 3"**环境**，并选择 "**颜色主题**" 来找到这些**选项**。
+若要设置浅色或深色背景，请按**Ctrl + Q**并搜索 "颜色主题"。 你还可以通过转到 "**工具**" > **选项**" > **环境**"，然后选择 "**颜色主题**" 来找到这些选项。
 
 ![颜色主题屏幕截图](media/tools-options-color-theme.png)
 
@@ -54,15 +54,15 @@ ms.locfileid: "71816564"
 
 ## <a name="customize-code-colorization"></a>自定义代码着色
 
-在 Visual Studio 2019 中，可以从三个预定义的*配色方案*中进行选择。 这些指定如何在编辑器中着色代码元素。 若要选择主题，请使用 "**工具**"  >  "**选项** > "**文本编辑器**" > **C/C++**  > **视图**，然后选择"**配色方案**：
+在 Visual Studio 2019 中，可以从三个预定义的*配色方案*中进行选择。 这些指定如何在编辑器中着色代码元素。 若要选择主题，请使用 "**工具**" > **选项**" > **文本编辑器**" > **C/C++**  > **视图**，并选择 "**配色方案**"：
 
 ![突出显示C++了突出显示的配色方案选项的屏幕截图](media/color-schemes.png)
 
-在名为**Visual Studio 2017**的配色方案中，大多数代码元素只是黑色。 在**增强**的配色方案中，函数、局部变量、宏和其他元素为着色。 在 @no__t 0Enhanced （Globals 与成员） ** 方案，全局函数和变量与类成员着色。 默认模式为 "**增强**"，它如下所示：
+在名为**Visual Studio 2017**的配色方案中，大多数代码元素只是黑色。 在**增强**的配色方案中，函数、局部变量、宏和其他元素为着色。 在**增强（Globals 和成员）** 方案中，全局函数和变量与类成员着色。 默认模式为 "**增强**"，它如下所示：
 
 ![增强的配色方案的屏幕截图](media/color-scheme-enhanced.png)
 
-无论哪个主题或配色方案处于活动状态，都可以为各个代码元素自定义字体和颜色。 为此，请在 "**工具**"  >  "**选项** > "**环境** >  "**字体和颜色**" 中（或键入**Ctrl + Q**并搜索 "Fonts"）。 向下滚动显示项的列表，直到看到C++选项。
+无论哪个主题或配色方案处于活动状态，都可以为各个代码元素自定义字体和颜色。 为此，请在 "**工具**" > **选项**" > **环境** > "**字体和颜色**"（或键入**Ctrl + Q**并搜索" Fonts "）。 向下滚动显示项的列表，直到看到C++选项。
 
 ![字体和C++颜色选项的屏幕截图](media/tools-options-cpp-colors.png)
 
@@ -80,7 +80,7 @@ ms.locfileid: "71816564"
 
 ![工具栏的屏幕截图，突出显示了向下箭头和虚线](media/toolbar-move-edit.png).
 
-有关详细信息，请参阅[如何：自定义 Visual Studio @ no__t 中的菜单和工具栏。
+有关详细信息，请参阅[如何：在 Visual Studio 中自定义菜单和工具栏](/visualstudio/ide/how-to-customize-menus-and-toolbars-in-visual-studio)。
 
 ## <a name="show-or-hide-line-numbers"></a>显示或隐藏行号
 
@@ -90,4 +90,4 @@ ms.locfileid: "71816564"
 
 ## <a name="create-keyboard-shortcuts"></a>创建键盘快捷方式
 
-Visual Studio 中的许多命令都具有*键盘快捷方式*、带 Ctrl、Alt 和 Shift 键的组合键。 你可以在 Visual Studio 中修改这些键盘快捷方式或创建自己的快捷方式。 中转到 "**工具**"  >  个**选项** > **环境** > **键盘**（或键入**Ctrl + Q**并搜索 "快捷方式"）。 有关详细信息，请参阅[在 Visual Studio 中标识并自定义键盘快捷方式](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio)。
+Visual Studio 中的许多命令都具有*键盘快捷方式*、带 Ctrl、Alt 和 Shift 键的组合键。 你可以在 Visual Studio 中修改这些键盘快捷方式或创建自己的快捷方式。 请在 "**工具**" > "**选项**" > **环境**" > **键盘**（或键入**Ctrl + Q**并搜索" 快捷方式 "）。 有关详细信息，请参阅[在 Visual Studio 中标识并自定义键盘快捷方式](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio)。

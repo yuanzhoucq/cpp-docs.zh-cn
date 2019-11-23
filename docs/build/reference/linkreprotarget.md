@@ -1,5 +1,5 @@
 ---
-title: /LINKREPROTARGET （链接重现文件名）
+title: /LINKREPROTARGET（链接重现文件名称）
 description: 链接器或库工具选项，用于设置链接重现的目标文件名。
 ms.date: 09/24/2019
 f1_keywords:
@@ -16,7 +16,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71712689"
 ---
-# <a name="linkreprotarget-link-repro-file-name"></a>/LINKREPROTARGET （链接重现文件名）
+# <a name="linkreprotarget-link-repro-file-name"></a>/LINKREPROTARGET（链接重现文件名称）
 
 仅当目标具有指定文件名时，通知链接器或库工具生成链接重现。
 
@@ -31,7 +31,7 @@ ms.locfileid: "71712689"
 
 ## <a name="remarks"></a>备注
 
-**/LINKREPROTARGET**选项用于指定要为其生成*链接重现*的目标文件名。 链接重现是一组生成项目，可让 Microsoft 再现链接时或库操作期间发生的问题。 当你指定[/LINKREPRO](linkrepro.md)选项时，或在命令行生成环境中设置 @no__t 1 环境变量时，链接器或库工具会生成一个链接重现。
+**/LINKREPROTARGET**选项用于指定要为其生成*链接重现*的目标文件名。 链接重现是一组生成项目，可让 Microsoft 再现链接时或库操作期间发生的问题。 当你指定[/LINKREPRO](linkrepro.md)选项时，或在命令行生成环境中设置 `link_repro` 环境变量时，链接器或库工具会生成链接重现。
 
 在多次调用链接器或库工具的复杂生成中， **/LINKREPROTARGET**选项非常有用。 它允许为链接重现指定特定目标，如 "*问题 .dll*"。 仅当工具生成特定文件时，它才允许生成链接重现。
 
@@ -45,15 +45,15 @@ ms.locfileid: "71712689"
 
 1. 打开项目的“属性页” 对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择 "**配置属性**"  > **链接器**@no__t "**命令行**" 属性页。
+1. 选择“配置属性” **“链接器”** “命令行”属性页 >  > 。
 
-1. 在 "**附加选项**" 框中输入 **/LINKREPROTARGET：** _文件名_选项。 选择**确定**以应用更改。
+1. 在 "**附加选项**" 框中输入 **/LINKREPROTARGET：** _文件名_选项。 选择“确定”应用更改。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项
 
 - 请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [MSVC 链接器引用](linking.md)\
 [MSVC 链接器选项](linker-options.md)\

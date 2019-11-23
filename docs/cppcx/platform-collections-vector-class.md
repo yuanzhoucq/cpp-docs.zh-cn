@@ -39,7 +39,7 @@ template <typename T, typename E>
    ref class Vector sealed;
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>参数
 
 *T*<br/>
 向量对象中包含的元素的类型。
@@ -55,9 +55,9 @@ template <typename T, typename E>
 
 1. 接口类 ^
 
-1. 公共 ref 类
+1. 公共 ref 类^
 
-1. value struct
+1. 值结构
 
 1. 公共枚举类
 
@@ -65,17 +65,17 @@ template <typename T, typename E>
 
 如果尝试在公共返回值或参数中使用**Vector**类型，则会引发编译器错误 C3986。 通过将参数或返回值的类型更改为 [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_)可修复该错误。 有关更多信息，请参见 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。
 
-### <a name="members"></a>成员
+### <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[Vector::Vector](#ctor)|初始化 Vector 类的新实例。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[Vector::Append](#append)|在当前向量中的最后一项后插入指定项。|
 |[Vector::Clear](#clear)|删除当前向量中的所有元素。|
@@ -91,12 +91,12 @@ template <typename T, typename E>
 |[Vector::SetAt](#setat)|将指定值分配给当前向量中指定索引标识的元素。|
 |[Vector::Size](#size)|返回当前向量对象中的元素数目。|
 
-### <a name="events"></a>Events
+### <a name="events"></a>事件
 
 |||
 |-|-|
-|name|描述|
-|事件[Windows：： Foundation：： Collection：： VectorChangedEventHandler @ no__t-1T > ^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|当向量更改时发生。|
+|名称|说明|
+|事件[Windows：： Foundation：： Collection：： VectorChangedEventHandler\<t > ^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|当向量更改时发生。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -118,7 +118,7 @@ template <typename T, typename E>
 virtual void Append(T item);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>参数
 
 *index*<br/>
 要插入到向量中的项。 *项*的类型由*T*类型名称定义。
@@ -149,7 +149,7 @@ virtual Windows::Foundation::Collections::IIterator <T>^ First();
 
 ### <a name="remarks"></a>备注
 
-保存第一个（）返回的迭代器的一种简便方法是将返回值分配给用**auto**类型推导关键字声明的变量。 例如， `auto x = myVector->First();` 。 此迭代器知道该集合的长度。
+保存第一个（）返回的迭代器的一种简便方法是将返回值分配给用**auto**类型推导关键字声明的变量。 例如 `auto x = myVector->First();`。 此迭代器知道该集合的长度。
 
 如果需要将一对迭代器传递到 STL 函数，请使用 free 函数[Windows：： foundation：：集合：： begin](../cppcx/begin-function.md)和[Windows：： Foundation：：集合：： end](../cppcx/end-function.md)
 
@@ -163,7 +163,7 @@ virtual Windows::Foundation::Collections::IIterator <T>^ First();
 virtual T GetAt(unsigned int index);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>参数
 
 *index*<br/>
 从零开始的无符号整数，用于指定 Vector 对象中的特定元素。
@@ -184,7 +184,7 @@ virtual unsigned int GetMany(
     Platform::WriteOnlyArray<T>^ dest);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>参数
 
 *startIndex*<br/>
 要检索的项开头从零开始的索引。
@@ -198,7 +198,7 @@ dest<br/>
 
 ### <a name="remarks"></a>备注
 
-此函数并非旨在由客户端代码直接使用。 它在内部用于[To_vector 函数](../cppcx/to-vector-function.md)，以实现平台：：向量实例所在到 std：： vector 实例的有效转换。
+此函数并非旨在由客户端代码直接使用。 它用于在[To_vector 函数](../cppcx/to-vector-function.md)内部使用，以启用 Platform：： vector 实例所在到 std：： vector 实例的有效转换。
 
 ## <a name="getview"></a>Vector：： GetView 方法
 
@@ -224,7 +224,7 @@ Windows::Foundation::Collections::IVectorView<T>^ GetView();
 virtual bool IndexOf(T value, unsigned int* index);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>参数
 
 *value*<br/>
 要查找的项。
@@ -252,7 +252,7 @@ IndexOf 使用 std::find_if 查找该项目。 因此，自定义元素类型应
 virtual void InsertAt(unsigned int index, T item)
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>参数
 
 *index*<br/>
 从零开始的无符号整数，用于指定 Vector 对象中的特定元素。
@@ -270,7 +270,7 @@ virtual void InsertAt(unsigned int index, T item)
 virtual void RemoveAt(unsigned int index);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>参数
 
 *index*<br/>
 从零开始的无符号整数，用于指定 Vector 对象中的特定元素。
@@ -295,7 +295,7 @@ virtual void RemoveAtEnd();
 virtual void ReplaceAll(const ::Platform::Array<T>^ arr);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>参数
 
 *arr*<br/>
 对象的数组，其类型由*T*类型名称定义。
@@ -310,7 +310,7 @@ virtual void ReplaceAll(const ::Platform::Array<T>^ arr);
 virtual void SetAt(unsigned int index, T item);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>参数
 
 *index*<br/>
 从零开始的无符号整数，用于指定 Vector 对象中的特定元素。
@@ -355,7 +355,7 @@ template <typename InIt> Vector(InIt first, InIt last);
 Vector(std::initializer_list<T> il);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>参数
 
 *a*<br/>
 将用于初始化向量的[std：： array](../standard-library/array-class-stl.md) 。
@@ -367,7 +367,7 @@ Vector(std::initializer_list<T> il);
 用于初始化当前向量的对象集合的类型。
 
 *il*<br/>
-将用于初始化向量的*T*类型对象的[std：： initializer_list](../standard-library/initializer-list-class.md) 。
+将用于初始化向量的类型为*T*的对象的[std：： initializer_list](../standard-library/initializer-list-class.md) 。
 
 *N*<br/>
 用于初始化当前向量的对象集合中的元素数。
@@ -390,7 +390,7 @@ Vector(std::initializer_list<T> il);
 *时间*<br/>
 用于初始化当前向量的对象序列中的最后一个元素。 *最后一*种方法是通过*完美转发*传递的。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [集合 (C++/CX)](collections-c-cx.md)<br/>
 [平台命名空间](platform-namespace-c-cx.md)<br/>

@@ -17,11 +17,11 @@ ms.locfileid: "72444915"
 
 在项目文件中指定自定义生成步骤（. .vcxproj）。 步骤可以指定要执行的命令行、任何其他输入文件或输出文件以及要显示的消息。 如果**MSBuild**确定你的输出文件对于输入文件来说已过期，它将显示该消息并执行命令。
 
-若要在生成目标序列中指定自定义生成步骤的位置，请使用项目文件中的一个或两个 @no__t @no__t 的 XML 元素。 例如，你可以指定自定义生成步骤在链接工具目标之后以及在清单工具目标之前运行。 实际的可用目标集取决于你的特定生成。
+若要在生成目标序列中指定自定义生成步骤的位置，请在项目文件中使用 `CustomBuildAfterTargets` 和 `CustomBuildBeforeTargets` XML 元素中的一个或两个。 例如，你可以指定自定义生成步骤在链接工具目标之后以及在清单工具目标之前运行。 实际的可用目标集取决于你的特定生成。
 
-指定在特定目标运行之前执行自定义生成步骤的 `CustomBuildBeforeTargets` 元素、在运行特定目标后执行步骤的 @no__t 1 元素，或执行两个元素以执行两个相邻目标之间的步骤。 如果这两个元素均未指定，则您的自定义生成工具会在其默认位置执行，该位置位于**链接**目标之后。
+指定 `CustomBuildBeforeTargets` 元素，以在特定目标运行之前执行自定义生成步骤，`CustomBuildAfterTargets` 元素在运行特定目标后执行步骤，或使用这两个元素来执行两个相邻目标之间的步骤。 如果这两个元素均未指定，则您的自定义生成工具会在其默认位置执行，该位置位于**链接**目标之后。
 
-自定义生成步骤和自定义生成工具共享 `CustomBuildBeforeTargets` 和 `CustomBuildAfterTargets` XML 元素中指定的信息。 因此，只需在项目文件中指定这些目标一次。
+自定义生成步骤和自定义生成工具共享在 `CustomBuildBeforeTargets` 和 `CustomBuildAfterTargets` XML 元素中指定的信息。 因此，只需在项目文件中指定这些目标一次。
 
 ### <a name="to-define-what-is-executed-by-the-custom-build-step"></a>定义自定义生成步骤执行的操作
 
@@ -48,7 +48,7 @@ ms.locfileid: "72444915"
     </PropertyGroup>
     ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [演练：使用 MSBuild 创建C++项目](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
 [如何：在 MSBuild 项目中使用生成事件](how-to-use-build-events-in-msbuild-projects.md)<br/>
