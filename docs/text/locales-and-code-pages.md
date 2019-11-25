@@ -15,32 +15,32 @@ helpviewer_keywords:
 - code pages [C++], locales
 - conventions [C++], international character support
 ms.assetid: bd937361-b6d3-4c98-af95-beb7c903187b
-ms.openlocfilehash: c0cfc7f192b65738984feb1933ea720fdf18fc6d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5821048363d92911f2902a580cb11f5b349f5e7c
+ms.sourcegitcommit: 4f15b69e35dd112001b24fe9dc836dd5d6902465
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410637"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74474071"
 ---
 # <a name="locales-and-code-pages"></a>区域设置和代码页
 
-区域设置 ID 反映了本地约定和特定地理区域的语言。 可能有一个以上的国家/地区说某种特定的语言，例如，巴西和葡萄牙都说葡萄牙语。 反之，一个国家/地区可能有一种以上的官方语言。 例如，加拿大有两种语言：英语和法语。 因此，加拿大有两种不同的区域设置：加拿大英语和加拿大法语。 一些与区域设置相关的类别包括日期的格式设置和货币值的显示格式。
+A locale ID reflects the local conventions and language for a particular geographical region. 可能有一个以上的国家/地区说某种特定的语言，例如，巴西和葡萄牙都说葡萄牙语。 反之，一个国家/地区可能有一种以上的官方语言。 For example, Canada has two languages: English and French. Thus, Canada has two distinct locales: Canadian-English and Canadian-French. 一些与区域设置相关的类别包括日期的格式设置和货币值的显示格式。
 
-语言确定文本和数据的格式约定，而国家/地区则确定本地约定。 每种语言具有唯一的映射，由代码页，其中包括在字母表中 （例如标点符号和数字） 字符。 代码页是一个字符集和与语言相关。 在这种情况下，[区域设置](../c-runtime-library/locale.md)是唯一的语言、 国家/地区和代码页。 通过调用，可在运行时更改区域设置和代码页设置[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)函数。
+语言确定文本和数据的格式约定，而国家/地区则确定本地约定。 Every language has a unique mapping, represented by code pages, which includes characters other than those in the alphabet (such as punctuation marks and numbers). A code page is a character set and is related to the language. As such, a [locale](../c-runtime-library/locale.md) is a unique combination of language, country/region, and code page. The locale and code page setting can be changed at run time by calling the [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) function.
 
-不同的语言可能使用不同的代码页。 例如，适用于英语和大多数欧洲语言中，使用 ANSI 代码页 1252年和适用于日本汉字使用 ANSI 代码页 932。 几乎所有代码页都共享 ASCII 字符集的最小 128 个字符 (0x00 到 0x7F)。
+Different languages might use different code pages. For example, the ANSI code page 1252 is used for English and most European languages, and the ANSI code page 932 is used for Japanese Kanji. Virtually all code pages share the ASCII character set for the lowest 128 characters (0x00 to 0x7F).
 
-可以在表 （带 256 条目） 中表示任何单字节代码页，为到字符 （包括数字和标点符号） 或标志符号的字节值的映射。 也可以作为双字节值与字符的非常大 （有 64k 项） 表表示任何多字节代码页。 在实践中，但是，它通常表示作为表的前 256 个 （单字节） 字符和双字节值的范围。
+Any single-byte code page can be represented in a table (with 256 entries) as a mapping of byte values to characters (including numbers and punctuation marks), or glyphs. Any multibyte code page can also be represented as a very large table (with 64K entries) of double-byte values to characters. In practice, however, it is usually represented as a table for the first 256 (single-byte) characters and as ranges for the double-byte values.
 
 有关代码页的详细信息，请参见 [Code Pages](../c-runtime-library/code-pages.md)。
 
-C 运行时库有两种类型的内部代码页： 区域设置和多字节。 可以在程序执行期间更改当前代码页 (请参阅的文档[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)并[_setmbcp](../c-runtime-library/reference/setmbcp.md)函数)。 此外，运行时库可能会获取和使用的操作系统代码页上，该程序的执行持续时间是常量值。
+The C run-time library has two types of internal code pages: locale and multibyte. You can change the current code page during program execution (see the documentation for the [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) and [_setmbcp](../c-runtime-library/reference/setmbcp.md) functions). Also, the run-time library might obtain and use the value of the operating system code page, which is constant for the duration of the program's execution.
 
-区域设置代码页发生更改时，函数更改为由所选的代码页的区域设置相关集的行为。 默认情况下，所有依赖于区域设置的函数开始执行使用唯一的"C"区域设置的区域设置代码页。 可以通过调用更改内部的区域设置代码页 （以及其他特定于区域设置的属性）`setlocale`函数。 调用`setlocale`(LC_ALL，"") 将区域设置设置为指示的操作系统用户区域设置。
+When the locale code page changes, the behavior of the locale-dependent set of functions changes to that dictated by the chosen code page. By default, all locale-dependent functions begin execution with a locale code page unique to the "C" locale. You can change the internal locale code page (as well as other locale-specific properties) by calling the `setlocale` function. A call to `setlocale`(LC_ALL, "") sets the locale to that indicated by the operating system user locale.
 
-同样，多字节代码页发生更改时，为由所选的代码页的多字节函数更改的行为。 默认情况下，多字节的所有函数都开始执行过程与为操作系统的默认代码页对应的多字节代码页。 可以通过调用更改内部的多字节代码页`_setmbcp`函数。
+Similarly, when the multibyte code page changes, the behavior of the multibyte functions changes to that dictated by the chosen code page. By default, all multibyte functions begin execution with a multibyte code page corresponding to the operating system's default code page. You can change the internal multibyte code page by calling the `_setmbcp` function.
 
-C 运行时函数`setlocale`设置、 更改或查询部分或全部当前程序区域设置信息。 [_Wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)例程是宽字符版本`setlocale`; 的参数和返回值`_wsetlocale`都是宽字符字符串。
+The C run-time function `setlocale` sets, changes, or queries some or all of the current program's locale information. The [_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) routine is a wide-character version of `setlocale`; the arguments and return values of `_wsetlocale` are wide-character strings.
 
 ## <a name="see-also"></a>请参阅
 
