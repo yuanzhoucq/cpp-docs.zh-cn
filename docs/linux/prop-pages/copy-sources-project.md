@@ -2,12 +2,12 @@
 title: 复制源项目属性 (Linux C++)
 ms.date: 10/16/2019
 ms.assetid: 1a44230d-5dd8-4d33-93b4-e77e03e00150
-ms.openlocfilehash: ceaa1240f08b83ebc83bd7fdc25a3215467eb3f1
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.openlocfilehash: bc99814e825cda091b6a0b00256ca2d8269ecdd3
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72444939"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74305395"
 ---
 # <a name="copy-sources-project-properties-linux-c"></a>复制源项目属性 (Linux C++)
 
@@ -31,9 +31,9 @@ Linux 支持在 Visual Studio 2017 及更高版本中提供。
 
 ```xml
 <ItemGroup>
-   <MyItems Include=“foo.txt” />
-   <MyItems Include=“bar.txt” />
-   <DataFilesToCopyRemotely Include=”@(MyItems)” />
+   <MyItems Include="foo.txt" />
+   <MyItems Include="bar.txt" />
+   <DataFilesToCopyRemotely Include="@(MyItems)" />
 </ItemGroup>
 ```
 
