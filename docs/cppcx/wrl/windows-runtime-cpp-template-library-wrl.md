@@ -109,17 +109,17 @@ Windows 运行时C++模板库提供了表示几个基本概念的类型。 以�
 
 ### <a name="comptr"></a>ComPtr
 
-[ComPtr](comptr-class.md) 是一种智能指针 类型，表示由模板参数指定的接口。 使用 `ComPtr` 可以声明能够访问从接口派生的对象成员的变量。 `ComPtr` 会自动维护基础接口指针的引用计数，并在引用计数变为零时释放接口。
+[ComPtr](comptr-class.md) 是一种智能指针 类型，表示由模板参数指定的接口。 使用 `ComPtr` 可以声明能够访问从接口派生的对象成员的变量。 `ComPtr` 会自动维护基础接口指针的引用计数，并在引用计数变为零时发布接口。
 
 ### <a name="runtimeclass"></a>RuntimeClass
 
 [RuntimeClass](runtimeclass-class.md) 表示继承一组指定接口的实例化类。 `RuntimeClass` 对象可以提供对一个或多个 Windows 运行时 COM 接口的支持或对组件的弱引用。
 
-### <a name="module"></a>模块
+### <a name="module"></a>Module
 
 [模块](module-class.md) 表示一组相关的对象。 `Module` 对象管理类工厂和注册。类工厂可以创建对象，注册则让其他应用程序能够使用对象。
 
-### <a name="callback"></a>回拨
+### <a name="callback"></a>回调
 
 [回调](callback-function-wrl.md) 函数可以创建对象，该对象的成员函数为事件处理程序（回调方法）。 使用 `Callback` 函数可以编写异步操作。
 
@@ -133,7 +133,7 @@ Windows 运行时C++模板库提供了表示几个基本概念的类型。 以�
 
 ### <a name="ftmbase"></a>FtmBase
 
-[FtmBase](ftmbase-class.md) 表示自由线程封送拆收器对象。 `FtmBase` 创建一个全局接口表（GIT），并帮助管理封送处理和代理对象。
+[FtmBase](ftmbase-class.md) 表示自由线程封送拆收器对象。 `FtmBase` 可以创建全局接口表 (GIT)，并帮助管理封送处理和代理对象。
 
 ### <a name="weakref"></a>WeakRef
 
