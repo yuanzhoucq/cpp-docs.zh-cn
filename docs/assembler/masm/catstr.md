@@ -15,16 +15,16 @@ ms.locfileid: "74398851"
 ---
 # <a name="catstr"></a>CATSTR
 
-Concatenates text items.
+连接文本项。
 
 ## <a name="syntax"></a>语法
 
-> *name* **CATSTR** ⟦*textitem1* ⟦ __,__ *textitem2* ...⟧⟧
+> *name* **CATSTR** ⟦*textitem1* ⟦ __，__ *textitem2* .。。⟧⟧
 
 ## <a name="remarks"></a>备注
 
-Each text item can be a literal string, a constant preceded by a **%** , or the string returned by a macro function. **CATSTR** is a synonym for [TEXTEQU](textequ.md).
+每个文本项可以是文本字符串、前面带有 **%** 的常量或宏函数返回的字符串。 **CATSTR**是[TEXTEQU](textequ.md)的同义词。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [指令参考](../../assembler/masm/directives-reference.md)

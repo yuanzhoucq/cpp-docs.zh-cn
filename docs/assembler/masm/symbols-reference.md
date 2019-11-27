@@ -13,49 +13,49 @@ ms.locfileid: "74393557"
 ---
 # <a name="symbols-reference"></a>符号参考
 
-## <a name="date-and-time-information"></a>Date and time information
+## <a name="date-and-time-information"></a>日期和时间信息
 
 |||
 |-|-|
-|[\@Date](../../assembler/masm/at-date.md)|[\@Time](../../assembler/masm/at-time.md)|
+|[\@日期](../../assembler/masm/at-date.md)|[\@时间](../../assembler/masm/at-time.md)|
 
-## <a name="environment-information"></a>Environment information
+## <a name="environment-information"></a>环境信息
 
 |||
 |-|-|
 |[\@Cpu](../../assembler/masm/at-cpu.md)|[\@Environ](../../assembler/masm/at-environ.md)|
-|[\@Interface](../../assembler/masm/at-interface.md)|[\@Version](../../assembler/masm/at-version.md)|
+|[\@接口](../../assembler/masm/at-interface.md)|[\@版本](../../assembler/masm/at-version.md)|
 
-## <a name="file-information"></a>File information
+## <a name="file-information"></a>文件信息
 
 |||
 |-|-|
-|[\@FileCur](../../assembler/masm/at-filecur.md)|[\@FileName](../../assembler/masm/at-filename.md)|
-|[\@Line](../../assembler/masm/at-line.md)||
+|[\@FileCur](../../assembler/masm/at-filecur.md)|[\@文件名](../../assembler/masm/at-filename.md)|
+|[\@行](../../assembler/masm/at-line.md)||
 
-## <a name="macro-functions"></a>Macro functions
+## <a name="macro-functions"></a>宏函数
 
 |||
 |-|-|
 |[\@CatStr](../../assembler/masm/at-catstr.md)|[\@InStr](../../assembler/masm/at-instr.md)|
 |[\@SizeStr](../../assembler/masm/at-sizestr.md)|[\@SubStr](../../assembler/masm/at-substr.md)|
 
-## <a name="miscellaneous"></a>杂项
+## <a name="miscellaneous"></a>其他
 
 ||||
 |-|-|-|
-|[\$](../../assembler/masm/dollar.md)|[\?](../../assembler/masm/q.md)|[\@\@:](../../assembler/masm/at-at.md)|
+|[\$](../../assembler/masm/dollar.md)|[\?](../../assembler/masm/q.md)|[\@\@：](../../assembler/masm/at-at.md)|
 |[\@B](../../assembler/masm/at-b.md)|[\@F](../../assembler/masm/at-f.md)||
 
-## <a name="segment-information"></a>Segment information
+## <a name="segment-information"></a>段信息
 
 ||||
 |-|-|-|
-|[\@code](../../assembler/masm/at-code.md)|[\@CodeSize](../../assembler/masm/at-codesize.md)|[\@CurSeg](../../assembler/masm/at-curseg.md)|
-|[\@data](../../assembler/masm/at-data.md)|[\@DataSize](../../assembler/masm/at-datasize.md)|[\@fardata](../../assembler/masm/at-fardata.md)|
-|[\@fardata?](../../assembler/masm/at-fardata-q.md)|[\@Model](../../assembler/masm/at-model.md)|[\@stack](../../assembler/masm/at-stack.md)|
+|[\@代码](../../assembler/masm/at-code.md)|[\@CodeSize](../../assembler/masm/at-codesize.md)|[\@CurSeg](../../assembler/masm/at-curseg.md)|
+|[\@数据](../../assembler/masm/at-data.md)|[\@DataSize](../../assembler/masm/at-datasize.md)|[\@fardata](../../assembler/masm/at-fardata.md)|
+|[\@fardata？](../../assembler/masm/at-fardata-q.md)|[\@模型](../../assembler/masm/at-model.md)|[\@堆栈](../../assembler/masm/at-stack.md)|
 |[\@WordSize](../../assembler/masm/at-wordsize.md)|||
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Microsoft Macro Assembler reference](../../assembler/masm/microsoft-macro-assembler-reference.md)
+[Microsoft 宏汇编程序参考](../../assembler/masm/microsoft-macro-assembler-reference.md)

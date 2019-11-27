@@ -17,12 +17,12 @@ ms.locfileid: "74395368"
 ---
 # <a name="operator-type"></a>运算符 TYPE
 
-Returns the type of *expression*.
+返回*表达式*的类型。
 
 ## <a name="syntax"></a>语法
 
-> **TYPE** *expression*
+> **类型***表达式*
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Operators reference](operators-reference.md)
+[运算符引用](operators-reference.md)

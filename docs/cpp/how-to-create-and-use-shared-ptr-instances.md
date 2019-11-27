@@ -1,5 +1,5 @@
 ---
-title: 'How to: Create and use shared_ptr instances'
+title: 如何：创建和使用 shared_ptr 实例
 ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
@@ -11,13 +11,13 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74245834"
 ---
-# <a name="how-to-create-and-use-shared_ptr-instances"></a>How to: Create and Use shared_ptr instances
+# <a name="how-to-create-and-use-shared_ptr-instances"></a>如何：创建和使用 shared_ptr 实例
 
 `shared_ptr` 类型是 C++ 标准库中的一个智能指针，是为多个所有者可能必须管理对象在内存中的生命周期的方案设计的。 在您初始化一个 `shared_ptr` 之后，您可复制它，按值将其传入函数参数，然后将其分配给其他 `shared_ptr` 实例。 所有实例均指向同一个对象，并共享对一个“控制块”（每当新的 `shared_ptr` 添加、超出范围或重置时增加和减少引用计数）的访问权限。 当引用计数达到零时，控制块将删除内存资源和自身。
 
 下图显示了指向一个内存位置的几个 `shared_ptr` 实例。
 
-![Shared pointer diagram](media/shared_ptr.png "Shared pointer diagram")
+![共享指针关系图](media/shared_ptr.png "共享指针关系图")
 
 ## <a name="example-setup"></a>示例设置
 
@@ -72,7 +72,7 @@ int main()
 
 ## <a name="example-1"></a>示例 1
 
-如有可能，第一次创建内存资源时，请使用 [make_shared](../standard-library/memory-functions.md#make_shared) 函数创建 `shared_ptr`。 `make_shared` 异常安全。 它使用同一调用为控制块和资源分配内存，这会减少构造开销。 如果不使用 `make_shared`，则必须先使用显式 `new` 表达式来创建对象，然后才能将其传递到 `shared_ptr` 构造函数。 以下示例演示了同时声明和初始化 `shared_ptr` 和新对象的各种方式。
+如有可能，第一次创建内存资源时，请使用 [make_shared](../standard-library/memory-functions.md#make_shared) 函数创建 `shared_ptr`。 `make_shared` 为异常安全。 它使用同一调用为控制块和资源分配内存，这会减少构造开销。 如果不使用 `make_shared`，则必须先使用显式 `new` 表达式来创建对象，然后才能将其传递到 `shared_ptr` 构造函数。 以下示例演示了同时声明和初始化 `shared_ptr` 和新对象的各种方式。
 
 [!code-cpp[stl_smart_pointers#1](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_1.cpp)]
 
@@ -116,6 +116,6 @@ int main()
 
 [!code-cpp[stl_smart_pointers#3](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_6.cpp)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [智能指针（现代 C++）](smart-pointers-modern-cpp.md)

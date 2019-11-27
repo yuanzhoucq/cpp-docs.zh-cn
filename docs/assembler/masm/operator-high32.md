@@ -17,12 +17,12 @@ ms.locfileid: "74396914"
 ---
 # <a name="operator-high32"></a>运算符 HIGH32
 
-Returns the high 32 bits of *expression*. MASM expressions are 64-bit values.
+返回*表达式*的高32位。 MASM 表达式为64位值。
 
 ## <a name="syntax"></a>语法
 
-> **HIGH32** *expression*
+> **HIGH32** *表达式*
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Operators reference](operators-reference.md)
+[运算符引用](operators-reference.md)

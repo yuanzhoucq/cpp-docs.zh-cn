@@ -15,7 +15,7 @@ ms.locfileid: "74398791"
 ---
 # <a name="directives-reference"></a>指令参考
 
-## <a name="x64"></a>X64
+## <a name="x64"></a>x64
 
 ||||
 |-|-|-|
@@ -23,23 +23,23 @@ ms.locfileid: "74398791"
 |[.PUSHFRAME](../../assembler/masm/dot-pushframe.md)|[.PUSHREG](../../assembler/masm/dot-pushreg.md)|[.SAVEREG](../../assembler/masm/dot-savereg.md)|
 |[.SAVEXMM128](../../assembler/masm/dot-savexmm128.md)|[.SETFRAME](../../assembler/masm/dot-setframe.md)||
 
-### <a name="code-labels"></a>Code Labels
+### <a name="code-labels"></a>代码标签
 
 |||
 |-|-|
-|[ALIGN](../../assembler/masm/align-masm.md)|[EVEN](../../assembler/masm/even.md)|
-|[LABEL](../../assembler/masm/label-masm.md)|[ORG](../../assembler/masm/org.md)|
+|[垂直](../../assembler/masm/align-masm.md)|[EVEN](../../assembler/masm/even.md)|
+|[标识](../../assembler/masm/label-masm.md)|[ORG](../../assembler/masm/org.md)|
 
-### <a name="conditional-assembly"></a>Conditional Assembly
+### <a name="conditional-assembly"></a>条件程序集
 
 ||||
 |-|-|-|
-|[ELSE](../../assembler/masm/else-masm.md)|[ELSEIF](../../assembler/masm/elseif-masm.md)|[ELSEIF2](../../assembler/masm/elseif2.md)|
-|[IF](../../assembler/masm/if-masm.md)|[IF2](../../assembler/masm/if2.md)|[IFB](../../assembler/masm/ifb.md)/[IFNB](../../assembler/masm/ifnb.md)|
-|[IFDEF](../../assembler/masm/ifdef.md)/[IFNDEF](../../assembler/masm/ifndef.md)|[IFDIF](../../assembler/masm/ifdif.md)/[IFDIF&#91;&#91;I&#93;&#93;](../../assembler/masm/ifdif.md)|[IFE](../../assembler/masm/ife.md)|
-|[IFIDN](../../assembler/masm/ifidn.md)/[IFIDN&#91;&#91;I&#93;&#93;](../../assembler/masm/ifidn.md)|||
+|[其它](../../assembler/masm/else-masm.md)|[ELSEIF](../../assembler/masm/elseif-masm.md)|[ELSEIF2](../../assembler/masm/elseif2.md)|
+|[如果](../../assembler/masm/if-masm.md)|[IF2](../../assembler/masm/if2.md)|[IFB](../../assembler/masm/ifb.md)/[IFNB](../../assembler/masm/ifnb.md)|
+|[IFDEF](../../assembler/masm/ifdef.md)/[IFNDEF](../../assembler/masm/ifndef.md)|[IFDIF](../../assembler/masm/ifdif.md)/[IFDIF&#91;&#91;I&#93; ](../../assembler/masm/ifdif.md)|[IFE](../../assembler/masm/ife.md)|
+|[IFIDN](../../assembler/masm/ifidn.md)/[IFIDN&#91;&#91;I&#93; ](../../assembler/masm/ifidn.md)|||
 
-### <a name="conditional-control-flow"></a>Conditional Control Flow
+### <a name="conditional-control-flow"></a>条件控制流
 
 ||||
 |-|-|-|
@@ -48,32 +48,32 @@ ms.locfileid: "74398791"
 |[.IF](../../assembler/masm/dot-if.md)|[.REPEAT](../../assembler/masm/dot-repeat.md)|[.UNTIL](../../assembler/masm/dot-until.md)|
 |[.UNTILCXZ](../../assembler/masm/dot-untilcxz.md)|[.WHILE](../../assembler/masm/dot-while.md)||
 
-### <a name="conditional-error"></a>Conditional Error
+### <a name="conditional-error"></a>条件错误
 
 ||||
 |-|-|-|
 |[.ERR](../../assembler/masm/dot-err.md)|[.ERR2](../../assembler/masm/dot-err2.md)|[.ERRB](../../assembler/masm/dot-errb.md)|
-|[.ERRDEF](../../assembler/masm/dot-errdef.md)|[.ERRDIF](../../assembler/masm/dot-errdif.md)/[.ERRDIF&#91;&#91;I&#93;&#93;&#93;](../../assembler/masm/dot-errdif.md)|[.ERRE](../../assembler/masm/dot-erre.md)|
-|[.ERRIDN](../../assembler/masm/dot-erridn.md)/[.ERRIDN&#91;&#91;I&#93;&#93;](../../assembler/masm/dot-erridn.md)|[.ERRNB](../../assembler/masm/dot-errnb.md)|[.ERRNDEF](../../assembler/masm/dot-errndef.md)|
+|[.ERRDEF](../../assembler/masm/dot-errdef.md)|[.ERRDIF](../../assembler/masm/dot-errdif.md)/[.ERRDIF&#91;I&#93; &#91;&#93; ](../../assembler/masm/dot-errdif.md)|[.ERRE](../../assembler/masm/dot-erre.md)|
+|[.ERRIDN](../../assembler/masm/dot-erridn.md)/[.ERRIDN&#91;I&#91;&#93; ](../../assembler/masm/dot-erridn.md)|[.ERRNB](../../assembler/masm/dot-errnb.md)|[.ERRNDEF](../../assembler/masm/dot-errndef.md)|
 |[.ERRNZ](../../assembler/masm/dot-errnz.md)|||
 
-### <a name="data-allocation"></a>Data Allocation
+### <a name="data-allocation"></a>数据分配
 
 ||||
 |-|-|-|
-|[ALIGN](../../assembler/masm/align-masm.md)|[BYTE](../../assembler/masm/byte-masm.md)/[SBYTE](../../assembler/masm/sbyte-masm.md)|[DWORD](../../assembler/masm/dword.md)/[SDWORD](../../assembler/masm/sdword.md)|
-|[EVEN](../../assembler/masm/even.md)|[FWORD](../../assembler/masm/fword.md)|[LABEL](../../assembler/masm/label-masm.md)|
+|[垂直](../../assembler/masm/align-masm.md)|[字节](../../assembler/masm/byte-masm.md)/[SBYTE](../../assembler/masm/sbyte-masm.md)|[DWORD](../../assembler/masm/dword.md)/[SDWORD](../../assembler/masm/sdword.md)|
+|[EVEN](../../assembler/masm/even.md)|[FWORD](../../assembler/masm/fword.md)|[标识](../../assembler/masm/label-masm.md)|
 |[ORG](../../assembler/masm/org.md)|[QWORD](../../assembler/masm/qword.md)|[REAL4](../../assembler/masm/real4.md)|
 |[REAL8](../../assembler/masm/real8.md)|[REAL10](../../assembler/masm/real10.md)|[TBYTE](../../assembler/masm/tbyte.md)|
-|[WORD](../../assembler/masm/word.md)/[SWORD](../../assembler/masm/sword.md)|||
+|[WORD](../../assembler/masm/word.md)/[剑](../../assembler/masm/sword.md)|||
 
-### <a name="equates"></a>Equates
+### <a name="equates"></a>等效
 
 ||||
 |-|-|-|
 |[=](../../assembler/masm/equal.md)|[EQU](../../assembler/masm/equ.md)|[TEXTEQU](../../assembler/masm/textequ.md)|
 
-### <a name="listing-control"></a>Listing Control
+### <a name="listing-control"></a>列表控件
 
 ||||
 |-|-|-|
@@ -87,17 +87,17 @@ ms.locfileid: "74398791"
 
 ||||
 |-|-|-|
-|[ENDM](../../assembler/masm/endm.md)|[EXITM](../../assembler/masm/exitm.md)|[GOTO](../../assembler/masm/goto-masm.md)|
-|[LOCAL](../../assembler/masm/local-masm.md)|[MACRO](../../assembler/masm/macro.md)|[PURGE](../../assembler/masm/purge.md)|
+|[ENDM](../../assembler/masm/endm.md)|[EXITM](../../assembler/masm/exitm.md)|[语句](../../assembler/masm/goto-masm.md)|
+|[地方](../../assembler/masm/local-masm.md)|[MACRO](../../assembler/masm/macro.md)|[PURGE](../../assembler/masm/purge.md)|
 
-### <a name="miscellaneous"></a>杂项
+### <a name="miscellaneous"></a>其他
 
 ||||
 |-|-|-|
-|[ALIAS](../../assembler/masm/alias-masm.md)|[ASSUME](../../assembler/masm/assume.md)|[COMMENT](../../assembler/masm/comment-masm.md)|
-|[ECHO](../../assembler/masm/echo.md)|[END](../../assembler/masm/end-masm.md)|[.FPO](../../assembler/masm/dot-fpo.md)|
-|[INCLUDE](../../assembler/masm/include-masm.md)|[INCLUDELIB](../../assembler/masm/includelib-masm.md)|[MMWORD](../../assembler/masm/mmword.md)|
-|[OPTION](../../assembler/masm/option-masm.md)|[POPCONTEXT](../../assembler/masm/popcontext.md)|[PUSHCONTEXT](../../assembler/masm/pushcontext.md)|
+|[A](../../assembler/masm/alias-masm.md)|[ASSUME](../../assembler/masm/assume.md)|[条](../../assembler/masm/comment-masm.md)|
+|[ECHO](../../assembler/masm/echo.md)|[端面](../../assembler/masm/end-masm.md)|[.FPO](../../assembler/masm/dot-fpo.md)|
+|[包括](../../assembler/masm/include-masm.md)|[INCLUDELIB](../../assembler/masm/includelib-masm.md)|[MMWORD](../../assembler/masm/mmword.md)|
+|[选](../../assembler/masm/option-masm.md)|[POPCONTEXT](../../assembler/masm/popcontext.md)|[PUSHCONTEXT](../../assembler/masm/pushcontext.md)|
 |[.RADIX](../../assembler/masm/dot-radix.md)|[.SAFESEH](../../assembler/masm/dot-safeseh.md)|[XMMWORD](../../assembler/masm/xmmword.md)|
 |[YMMWORD](../../assembler/masm/ymmword.md)|||
 
@@ -117,29 +117,29 @@ ms.locfileid: "74398791"
 |[.586P](../../assembler/masm/dot-586p.md)|[.686](../../assembler/masm/dot-686.md)|[.686P](../../assembler/masm/dot-686p.md)|
 |[.K3D](../../assembler/masm/dot-k3d.md)|[.MMX](../../assembler/masm/dot-mmx.md)|[.XMM](../../assembler/masm/dot-xmm.md)|
 
-### <a name="repeat-blocks"></a>Repeat Blocks
+### <a name="repeat-blocks"></a>重复块
 
 ||||
 |-|-|-|
-|[ENDM](../../assembler/masm/endm.md)|[FOR](../../assembler/masm/for-masm.md)|[FORC](../../assembler/masm/forc.md)|
-|[GOTO](../../assembler/masm/goto-masm.md)|[REPEAT](../../assembler/masm/repeat.md)|[WHILE](../../assembler/masm/while-masm.md)|
+|[ENDM](../../assembler/masm/endm.md)|[进行](../../assembler/masm/for-masm.md)|[FORC](../../assembler/masm/forc.md)|
+|[语句](../../assembler/masm/goto-masm.md)|[REPEAT](../../assembler/masm/repeat.md)|[下](../../assembler/masm/while-masm.md)|
 
 ### <a name="scope"></a>范围
 
 ||||
 |-|-|-|
-|[COMM](../../assembler/masm/comm.md)|[EXTERN](../../assembler/masm/extern-masm.md)|[EXTERNDEF](../../assembler/masm/externdef.md)|
-|[INCLUDELIB](../../assembler/masm/includelib-masm.md)|[PUBLIC](../../assembler/masm/public-masm.md)||
+|[COMM](../../assembler/masm/comm.md)|[部](../../assembler/masm/extern-masm.md)|[EXTERNDEF](../../assembler/masm/externdef.md)|
+|[INCLUDELIB](../../assembler/masm/includelib-masm.md)|[公布](../../assembler/masm/public-masm.md)||
 
-### <a name="segment"></a>Segment
+### <a name="segment"></a>细分
 
 ||||
 |-|-|-|
 |[.ALPHA](../../assembler/masm/dot-alpha.md)|[ASSUME](../../assembler/masm/assume.md)|[.DOSSEG](../../assembler/masm/dot-dosseg.md)|
-|[END](../../assembler/masm/end-masm.md)|[ENDS](../../assembler/masm/ends-masm.md)|[GROUP](../../assembler/masm/group.md)|
+|[端面](../../assembler/masm/end-masm.md)|[结尾](../../assembler/masm/ends-masm.md)|[GROUP](../../assembler/masm/group.md)|
 |[SEGMENT](../../assembler/masm/segment.md)|[.SEQ](../../assembler/masm/dot-seq.md)||
 
-### <a name="simplified-segment"></a>Simplified Segment
+### <a name="simplified-segment"></a>简化段
 
 ||||
 |-|-|-|
@@ -148,20 +148,20 @@ ms.locfileid: "74398791"
 |[.FARDATA](../../assembler/masm/dot-fardata.md)|[.FARDATA?](../../assembler/masm/dot-fardata-q.md)|[.MODEL](../../assembler/masm/dot-model.md)|
 |[.STACK](../../assembler/masm/dot-stack.md)|[.STARTUP](../../assembler/masm/dot-startup.md)||
 
-### <a name="string"></a>字符串
+### <a name="string"></a>String
 
 |||
 |-|-|
 |[CATSTR](../../assembler/masm/catstr.md)|[INSTR](../../assembler/masm/instr.md)|
 |[SIZESTR](../../assembler/masm/sizestr.md)|[SUBSTR](../../assembler/masm/substr.md)|
 
-### <a name="structure-and-record"></a>Structure and Record
+### <a name="structure-and-record"></a>结构和记录
 
 ||||
 |-|-|-|
-|[ENDS](../../assembler/masm/ends-masm.md)|[RECORD](../../assembler/masm/record-masm.md)|[STRUCT](../../assembler/masm/struct-masm.md)|
+|[结尾](../../assembler/masm/ends-masm.md)|[记录](../../assembler/masm/record-masm.md)|[结构](../../assembler/masm/struct-masm.md)|
 |[TYPEDEF](../../assembler/masm/typedef-masm.md)|[UNION](../../assembler/masm/union.md)||
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Microsoft Macro Assembler reference](../../assembler/masm/microsoft-macro-assembler-reference.md)
+[Microsoft 宏汇编程序参考](../../assembler/masm/microsoft-macro-assembler-reference.md)

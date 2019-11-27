@@ -15,18 +15,18 @@ ms.locfileid: "74398806"
 ---
 # <a name="db"></a>DB
 
-Allocates and optionally initializes a byte of storage for each *initializer*. **DB** is a synonym of [BYTE](../../assembler/masm/byte-masm.md).
+为每个*初始值设定项*分配一个字节的存储，并根据需要对其进行初始化。 **DB**是[字节](../../assembler/masm/byte-masm.md)的同义词。
 
 ## <a name="syntax"></a>语法
 
-> ⟦*name*⟧ **DB** *initializer* ⟦ __,__ *initializer* ...⟧
+> ⟦*name*⟧ **DB** *初始值设定项*⟦ __，__ *初始值设定项*.。。⟧
 
 ## <a name="remarks"></a>备注
 
-Can also be used as a type specifier anywhere a type is legal.
+在类型合法的任何位置，还可以用作类型说明符。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives Reference](../../assembler/masm/directives-reference.md)\
+[指令引用](../../assembler/masm/directives-reference.md)\
 [DB](../../assembler/masm/db.md)\
 [SBYTE](../../assembler/masm/sbyte-masm.md)

@@ -13,14 +13,14 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397858"
 ---
-# <a name="until-32-bit-masm"></a>.UNTIL (32-bit MASM)
+# <a name="until-32-bit-masm"></a>.直到（32位 MASM）
 
-(32-bit MASM only.) See [.REPEAT](../../assembler/masm/dot-repeat.md).
+（仅限32位 MASM。）请参阅[。重复](../../assembler/masm/dot-repeat.md)。
 
 ## <a name="syntax"></a>语法
 
 > **.UNTIL**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](directives-reference.md)
+[指令参考](directives-reference.md)

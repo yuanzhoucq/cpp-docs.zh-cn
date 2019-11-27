@@ -15,16 +15,16 @@ ms.locfileid: "74397597"
 ---
 # <a name=""></a>=
 
-Assigns the numeric value of *expression* to *name*.
+将*expression*的数值赋给*name*。
 
 ## <a name="syntax"></a>语法
 
-> *name* **=** *expression*
+> **=** *表达式*的名称
 
 ## <a name="remarks"></a>备注
 
-The symbol can be redefined later.
+以后可以重新定义该符号。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](directives-reference.md)
+[指令参考](directives-reference.md)

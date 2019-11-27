@@ -17,12 +17,12 @@ ms.locfileid: "74396843"
 ---
 # <a name="operator-length"></a>运算符 LENGTH
 
-Returns the number of data items in *variable* created by the first initializer.
+返回由第一个初始值设定项创建的*变量*中的数据项的数目。
 
 ## <a name="syntax"></a>语法
 
-> **LENGTH** *variable*
+> **LENGTH** *变量*
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Operators reference](operators-reference.md)
+[运算符引用](operators-reference.md)

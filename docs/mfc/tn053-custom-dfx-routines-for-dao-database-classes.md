@@ -21,7 +21,7 @@ ms.locfileid: "74303440"
 # <a name="tn053-custom-dfx-routines-for-dao-database-classes"></a>TN053：DAO 数据库类的自定义 DFX 例程
 
 > [!NOTE]
->  DAO 与 Access 数据库结合使用，并受 Office 2013 的支持。 DAO 3.6 是最终版本，被视为已过时。 视觉对象C++环境和向导不支持 dao （尽管包含 dao 类，但你仍可以使用它）。 Microsoft 建议您对新项目使用 [OLE DB 模板](../data/oledb/ole-db-templates.md)或 [ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)。 只应在维护现有应用程序时使用 DAO。
+>  DAO 与 Access 数据库结合使用，并受 Office 2013 的支持。 DAO 3.6 是最终版本，被视为已过时。 视觉对象C++环境和向导不支持 dao （尽管包含 dao 类，但你仍可以使用它）。 Microsoft 建议你将[OLE DB 模板](../data/oledb/ole-db-templates.md)或[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)用于新项目。 只应在维护现有应用程序时使用 DAO。
 
 本技术说明介绍了 DAO 记录字段交换（DFX）机制。 为了帮助了解 DFX 例程中发生的情况，将详细说明 `DFX_Text` 函数作为示例。 作为此技术说明的其他信息源，你可以检查其他每个 DFX 函数的代码。 您可能不需要自定义 DFX 例程，因为您可能需要自定义 RFX 例程（与 ODBC 数据库类一起使用）。
 
@@ -119,7 +119,7 @@ DFX 机制的工作方式类似于 MFC ODBC 类使用的记录字段交换（RFX
 
 DFX 机制的核心是 `CDaoRecordset` 派生类的 `DoFieldExchange` 函数。 此函数将调用调度到相应操作类型的单个 DFX 函数。 在调用 `DoFieldExchange` 内部 MFC 函数之前，请设置操作类型。 以下列表显示了各种操作类型和简短说明。
 
-|操作|描述|
+|操作|说明|
 |---------------|-----------------|
 |`AddToParameterList`|Build PARAMETERS 子句|
 |`AddToSelectList`|生成 SELECT 子句|

@@ -13,14 +13,14 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398245"
 ---
-# <a name="k3d-32-bit-masm"></a>.K3D (32-bit MASM)
+# <a name="k3d-32-bit-masm"></a>..K3D （32）
 
-Enables assembly of **K3D** instructions. (32-bit MASM only.)
+启用 **.k3d**指令的程序集。 （仅限32位 MASM。）
 
 ## <a name="syntax"></a>语法
 
 > **.K3D**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](directives-reference.md)
+[指令参考](directives-reference.md)

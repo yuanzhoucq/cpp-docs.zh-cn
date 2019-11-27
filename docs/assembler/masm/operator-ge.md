@@ -17,12 +17,12 @@ ms.locfileid: "74396968"
 ---
 # <a name="operator-ge"></a>运算符 GE
 
-Returns true (-1) if *expression1* is greater than or equal to *expression2*, or returns false (0) if it is not.
+如果*表达式*1 大于或等于*表达式*2，则返回 true （-1），如果不是，则返回 false （0）。
 
 ## <a name="syntax"></a>语法
 
-> *expression1* **GE** *expression2*
+> *表达式* 2
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Operators reference](operators-reference.md)
+[运算符引用](operators-reference.md)

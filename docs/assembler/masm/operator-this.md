@@ -17,12 +17,12 @@ ms.locfileid: "74395470"
 ---
 # <a name="operator-this"></a>运算符 THIS
 
-Returns an operand of specified *type* whose offset and segment values are equal to the current location counter value.
+返回指定*类型*的操作数，其偏移量和段值等于当前位置计数器的值。
 
 ## <a name="syntax"></a>语法
 
-> **THIS** *type*
+> **此***类型*
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Operators reference](operators-reference.md)
+[运算符引用](operators-reference.md)

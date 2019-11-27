@@ -17,14 +17,14 @@ ms.locfileid: "74396495"
 ---
 # <a name="operator-ptr"></a>运算符 PTR
 
-The first operator forces the *expression* to be treated as having the specified *type*. The second operator specifies a pointer to *type*.
+第一个运算符强制将*表达式*视为具有指定的*类型*。 第二个运算符指定指向*类型*的指针。
 
 ## <a name="syntax"></a>语法
 
-> *type* **PTR** *expression*
+> *类型* **PTR** *表达式*
 >
-> \[*distance*] **PTR** *type*
+> \[*距离*] **PTR** *类型*
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Operators reference](operators-reference.md)
+[运算符引用](operators-reference.md)

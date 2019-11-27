@@ -1,5 +1,5 @@
 ---
-title: operator dot
+title: 运算符点
 ms.date: 08/30/2018
 f1_keywords:
 - operator .
@@ -17,14 +17,14 @@ ms.locfileid: "74397017"
 ---
 # <a name="operator-"></a>运算符 .
 
-The first operator returns *expression* plus the offset of *field* within its structure or union. The second operator returns value at the location pointed to by *register* plus the offset of *field* within its structure or union.
+第一个运算符返回*表达式*以及*字段*在其结构或联合中的偏移量。 第二个运算符通过在其结构或联合中*注册*和*字段*的偏移量，在所指向的位置返回值。
 
 ## <a name="syntax"></a>语法
 
-> *expression* __.__ *field*⟦ __.__ *field* ...⟧
+> *表达式* __。__ *字段*⟦ __。__ *字段*.。。⟧
 >
-> **\[** _register_ **]** __.__ *field*⟦ __.__ *field* ...⟧
+> **\[** _注册_ **]** __。__ *字段*⟦ __。__ *字段*.。。⟧
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Operators reference](operators-reference.md)
+[运算符引用](operators-reference.md)

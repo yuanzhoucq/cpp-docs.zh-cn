@@ -27,7 +27,7 @@ Windows 识别的硬件异常在下表中进行了汇总：
 |--------------------|------------------------|
 |STATUS_ACCESS_VIOLATION|读取或写入不可访问的内存位置。|
 |STATUS_BREAKPOINT|遇到硬件定义的断点；仅由调试器使用。|
-|STATUS_DATATYPE_MISALIGNMENT|在没有正确对齐的地址上读取或写入数据；例如，16 位实体必须在 2 字节边界对齐。 (Not applicable to Intel 80*x*86 processors.)|
+|STATUS_DATATYPE_MISALIGNMENT|在没有正确对齐的地址上读取或写入数据；例如，16 位实体必须在 2 字节边界对齐。 （不适用于 Intel 80*x*86 处理器。）|
 |STATUS_FLOAT_DIVIDE_BY_ZERO|将浮点类型除以 0.0。|
 |STATUS_FLOAT_OVERFLOW|超过浮点类型的最大正指数。|
 |STATUS_FLOAT_UNDERFLOW|超过浮点类型的最小负指数的大小。|
@@ -38,9 +38,9 @@ Windows 识别的硬件异常在下表中进行了汇总：
 |STATUS_INTEGER_OVERFLOW|尝试超出整数的范围的操作。|
 |STATUS_SINGLE_STEP|以单步模式执行一条指令；仅由调试器使用。|
 
-上表中列出的很多异常应由调试器、操作系统或其他低级别代码处理。 你的代码不应处理这些错误（整数和浮点错误除外）。 因此，您通常应使用异常处理筛选器来忽略异常（计算结果为 0）。 否则，您可能阻止低级别机制进行适当的响应。 You can, however, take appropriate precautions against the potential effect of these low-level errors by [writing termination handlers](../cpp/writing-a-termination-handler.md).
+上表中列出的很多异常应由调试器、操作系统或其他低级别代码处理。 你的代码不应处理这些错误（整数和浮点错误除外）。 因此，您通常应使用异常处理筛选器来忽略异常（计算结果为 0）。 否则，您可能阻止低级别机制进行适当的响应。 不过，您可以通过[编写终止处理程序](../cpp/writing-a-termination-handler.md)来采取适当的预防措施来防范这些低级别错误的潜在影响。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Writing an exception handler](../cpp/writing-an-exception-handler.md)<br/>
-[结构化异常处理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[编写异常处理程序](../cpp/writing-an-exception-handler.md)<br/>
+[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

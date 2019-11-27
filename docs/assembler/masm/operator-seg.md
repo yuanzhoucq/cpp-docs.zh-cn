@@ -17,12 +17,12 @@ ms.locfileid: "74396465"
 ---
 # <a name="operator-seg"></a>运算符 SEG
 
-Returns the segment of *expression*.
+返回*表达式*段。
 
 ## <a name="syntax"></a>语法
 
-> **SEG** *expression*
+> **SEG** *表达式*
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Operators reference](operators-reference.md)
+[运算符引用](operators-reference.md)

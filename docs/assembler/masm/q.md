@@ -15,12 +15,12 @@ ms.locfileid: "74394645"
 ---
 # <a name=""></a>?
 
-In data declarations, a value that the assembler allocates but does not initialize.
+在数据声明中，汇编程序分配但不初始化的值。
 
 ## <a name="syntax"></a>语法
 
 > **?**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Symbols reference](symbols-reference.md)
+[符号引用](symbols-reference.md)

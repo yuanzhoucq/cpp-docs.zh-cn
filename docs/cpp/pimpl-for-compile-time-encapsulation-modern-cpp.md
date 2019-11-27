@@ -12,19 +12,19 @@ ms.locfileid: "74245179"
 ---
 # <a name="pimpl-for-compile-time-encapsulation-modern-c"></a>用于编译时封装的 Pimpl（现代 C++）
 
-The *pimpl idiom* is a modern C++ technique to hide implementation, to minimize coupling, and to separate interfaces. Pimpl is short for "pointer to implementation." You may already be familiar with the concept but know it by other names like Cheshire Cat or Compiler Firewall idiom.
+*用于 pimpl*方法是一种用于C++隐藏实现、最小化耦合和分隔接口的新式技术。 Pimpl 是"pointer to implementation"的缩写。 你可能已通过 Cheshire Cat 或 Compiler Firewall 惯用语法等名称了解了这一概念。
 
-## <a name="why-use-pimpl"></a>Why use pimpl?
+## <a name="why-use-pimpl"></a>为什么要使用 pimpl？
 
-Here's how the pimpl idiom can improve the software development lifecycle:
+下面是 pimpl 惯用语法优化软件开发生命周期的方式：
 
-- Minimization of compilation dependencies.
+- 编译依赖项的最小化。
 
-- Separation of interface and implementation.
+- 接口和实现的分离。
 
-- Portability.
+- 兼容.
 
-## <a name="pimpl-header"></a>Pimpl header
+## <a name="pimpl-header"></a>Pimpl 头文件
 
 ```cpp
 // my_class.h
@@ -35,11 +35,11 @@ private:
 };
 ```
 
-The pimpl idiom avoids rebuild cascades and brittle object layouts. It's well suited for (transitively) popular types.
+pimpl 可避免重新生成级联和脆弱的对象布局。 它非常适合（以及物方式）用于常见类型。
 
-## <a name="pimpl-implementation"></a>Pimpl implementation
+## <a name="pimpl-implementation"></a>用于 pimpl 实现
 
-Define the `impl` class in the .cpp file.
+在 .cpp 文件中定义 `impl` 类。
 
 ```cpp
 // my_class.cpp
@@ -55,10 +55,10 @@ my_class::my_class(): pimpl( new impl )
 
 ## <a name="best-practices"></a>最佳实践
 
-Consider whether to add support for non-throwing swap specialization.
+考虑是否添加对非引发交换专用化的支持。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Welcome back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[欢迎返回到C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 语言参考](../cpp/cpp-language-reference.md)<br/>
 [C++ 标准库](../standard-library/cpp-standard-library-reference.md)

@@ -15,7 +15,7 @@ ms.locfileid: "74397434"
 ---
 # <a name="ifb"></a>IFB
 
-Grants assembly if *textitem* is blank.
+如果*textitem*为空，则授予程序集。
 
 ## <a name="syntax"></a>语法
 
@@ -23,8 +23,8 @@ Grants assembly if *textitem* is blank.
 
 ## <a name="remarks"></a>备注
 
-See [IF](../../assembler/masm/if-masm.md) for complete syntax.
+[若](../../assembler/masm/if-masm.md)要获取完整的语法，请参阅。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](directives-reference.md)
+[指令参考](directives-reference.md)

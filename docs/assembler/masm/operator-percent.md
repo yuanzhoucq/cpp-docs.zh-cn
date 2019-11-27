@@ -17,12 +17,12 @@ ms.locfileid: "74396516"
 ---
 # <a name="operator-"></a>运算符 %
 
-Treats the value of *expression* in a macro argument as text.
+将宏参数中*expression*的值视为文本。
 
 ## <a name="syntax"></a>语法
 
-> **%** *expression*
+> **%** *表达式*
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Operators reference](operators-reference.md)
+[运算符引用](operators-reference.md)

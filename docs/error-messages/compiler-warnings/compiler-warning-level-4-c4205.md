@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4205
 ms.assetid: 39b5108c-7230-41b4-b2fe-2293eb6aae28
-ms.openlocfilehash: 1b165d2bdb2fb50df89fdd77c734c054a40b6e95
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e46642494e55769a0676f0e33af0ca40c31939ad
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401223"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541802"
 ---
 # <a name="compiler-warning-level-4-c4205"></a>编译器警告（等级 4）C4205
 
-使用了非标准扩展： 函数范围内的静态函数声明
+使用了非标准扩展：函数范围内的静态函数声明
 
-通过 Microsoft 扩展 (/Ze)**静态**可以在另一个函数内声明函数。 该函数具有全局作用域。
+利用 Microsoft 扩展（/Ze），可以在另一个函数内声明**静态**函数。 函数被赋予全局范围。
 
 ## <a name="example"></a>示例
 
-```
+```c
 // C4205.c
 // compile with: /W4
 void func1()
@@ -34,4 +34,4 @@ int main()
 }
 ```
 
-此类初始化将是无效 ANSI 兼容性 ([/Za](../../build/reference/za-ze-disable-language-extensions.md))。
+此类初始化在 ANSI 兼容性（[/za](../../build/reference/za-ze-disable-language-extensions.md)）下无效。

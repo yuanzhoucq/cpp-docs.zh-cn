@@ -15,16 +15,16 @@ ms.locfileid: "74398427"
 ---
 # <a name="err2"></a>.ERR2
 
-[.ERR](../../assembler/masm/dot-err.md) block evaluated on every assembly pass if **OPTION:SETIF2** is **TRUE.**
+[.](../../assembler/masm/dot-err.md)如果**选项： SETIF2**为 TRUE，则对每个程序集 pass 计算 ERR 块 **。**
 
 ## <a name="syntax"></a>语法
 
-> **.ERR2** ⟦*message*⟧
+> **.ERR2** ⟦*消息*⟧
 
 ## <a name="remarks"></a>备注
 
-For more information about 2-pass behavior in MASM 5.1 vs MASM 6.1, see [IF1 and IF2](if2.md).
+有关 MASM 5.1 与 MASM 6.1 中的2次通过行为的详细信息，请参阅[IF1 和 IF2](if2.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [指令参考](../../assembler/masm/directives-reference.md)

@@ -15,20 +15,20 @@ ms.locfileid: "74397615"
 ---
 # <a name="equ"></a>EQU
 
-The first directive assigns numeric value of *expression* to *name*.
+第一个指令将*expression*的数值赋给*name*。
 
 ## <a name="syntax"></a>语法
 
-> *name* **EQU** *expression*
+> *名称***等于***表达式*
 >
-> *name* **EQU** __\<__ *text* __>__
+> *名称***等于** __\<__ *文本* __>__
 
 ## <a name="remarks"></a>备注
 
-The *name* cannot be redefined later.
+稍后不能重定义该*名称*。
 
-The second directive assigns specified *text* to *name*. The *name* can be assigned a different *text* later. See [TEXTEQU](../../assembler/masm/textequ.md).
+第二个指令为*名称*分配指定的*文本*。 稍后可以为该*名称*分配不同的*文本*。 请参阅[TEXTEQU](../../assembler/masm/textequ.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](directives-reference.md)
+[指令参考](directives-reference.md)

@@ -15,16 +15,16 @@ ms.locfileid: "74397358"
 ---
 # <a name="ifndef"></a>IFNDEF
 
-Grants assembly if *name* has not been defined.
+如果尚未定义*名称*，则授予程序集。
 
 ## <a name="syntax"></a>语法
 
-> **IFNDEF** *name*
+> **IFNDEF** *名称*
 
 ## <a name="remarks"></a>备注
 
-See [IF](../../assembler/masm/if-masm.md) for complete syntax.
+[若](../../assembler/masm/if-masm.md)要获取完整的语法，请参阅。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](directives-reference.md)
+[指令参考](directives-reference.md)

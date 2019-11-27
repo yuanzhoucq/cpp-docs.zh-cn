@@ -15,12 +15,12 @@ ms.locfileid: "74397918"
 ---
 # <a name="sfcond"></a>.SFCOND
 
-See [.NOLISTIF](../../assembler/masm/dot-nolistif.md).
+请参阅[.NOLISTIF](../../assembler/masm/dot-nolistif.md)。
 
 ## <a name="syntax"></a>语法
 
 > **.SFCOND**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](directives-reference.md)
+[指令参考](directives-reference.md)

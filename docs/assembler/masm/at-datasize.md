@@ -15,12 +15,12 @@ ms.locfileid: "74399153"
 ---
 # <a name="datasize"></a>\@DataSize
 
-0 for **TINY**, **SMALL**, **MEDIUM**, and **FLAT** models, 1 for **COMPACT** and **LARGE** models, and 2 for **HUGE** model (numeric equate).
+**对于小型、** **小型**、**中型**和**平面**模型，为 0; 对于**COMPACT**和**大型**模型，则为 1; 对于**大**模型，则为2（数值等于）。
 
 ## <a name="syntax"></a>语法
 
 > **\@DataSize**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Symbols reference](symbols-reference.md)
+[符号引用](symbols-reference.md)

@@ -15,7 +15,7 @@ ms.locfileid: "74398172"
 ---
 # <a name="listall"></a>.LISTALL
 
-Starts listing of all statements.
+开始列出所有语句。
 
 ## <a name="syntax"></a>语法
 
@@ -23,8 +23,8 @@ Starts listing of all statements.
 
 ## <a name="remarks"></a>备注
 
-Equivalent to the combination of [.LIST](../../assembler/masm/dot-list.md), [.LISTIF](../../assembler/masm/dot-listif.md), and [.LISTMACROALL](../../assembler/masm/dot-listmacroall.md).
+等效于的组合[。列出](../../assembler/masm/dot-list.md)： [.LISTIF](../../assembler/masm/dot-listif.md)、和[.LISTMACROALL](../../assembler/masm/dot-listmacroall.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](directives-reference.md)
+[指令参考](directives-reference.md)

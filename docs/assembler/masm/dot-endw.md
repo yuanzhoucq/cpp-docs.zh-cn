@@ -13,7 +13,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398448"
 ---
-# <a name="endw-32-bit-masm"></a>.ENDW (32-bit MASM)
+# <a name="endw-32-bit-masm"></a>..ENDW （32）
 
 ## <a name="syntax"></a>语法
 
@@ -21,8 +21,8 @@ ms.locfileid: "74398448"
 
 ## <a name="remarks"></a>备注
 
-(32-bit MASM only.) See [.WHILE](../../assembler/masm/dot-while.md).
+（仅限32位 MASM。）请参阅[。WHILE](../../assembler/masm/dot-while.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [指令参考](../../assembler/masm/directives-reference.md)

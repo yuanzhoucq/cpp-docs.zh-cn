@@ -13,14 +13,14 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399191"
 ---
-# <a name="data"></a>\@data
+# <a name="data"></a>\@数据
 
-The name of the default data group. Evaluates to DGROUP for all models except **FLAT**. Evaluates to **FLAT** under the **FLAT** memory model (text macro).
+默认数据组的名称。 对于所有模型（**平面**除外），计算结果为 DGROUP。 在**平面**内存模型（文本宏）下计算为**平面**。
 
 ## <a name="syntax"></a>语法
 
-> **\@data**
+> **\@数据**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Symbols reference](symbols-reference.md)
+[符号引用](symbols-reference.md)

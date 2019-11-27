@@ -15,53 +15,53 @@ ms.locfileid: "74393729"
 ---
 # <a name="segment"></a>SEGMENT
 
-Defines a program segment called *name* having segment attributes
+定义名为*name*且带有段特性的程序段
 
 ## <a name="syntax"></a>语法
 
-> *name* **SEGMENT** ⟦**READONLY**⟧ ⟦*align*⟧ ⟦*combine*⟧ ⟦*use*⟧ ⟦*characteristics*⟧ **ALIAS(** _string_ **)** ⟦ __'__ *class* __'__ ⟧\
-> *statements*\
-> *name* **ENDS**
+> *名称***段**⟦**READONLY**⟧⟦*align*⟧⟦*合并*⟧⟦*use*⟧⟦*特征*⟧ **ALIAS （** _string_ **）** ⟦ __"__ *class* __"__ ⟧ \
+> *语句*\
+> *名称***结束**
 
 #### <a name="parameters"></a>参数
 
 *align*<br/>
-The range of memory addresses from which a starting address for the segment can be selected. The alignment type can be any one of the following:
+可以从中选择段的起始地址的内存地址范围。 对齐类型可以是以下任一项：
 
-|Align Type|Starting Address|
+|对齐类型|起始地址|
 |----------------|----------------------|
-|**BYTE**|Next available byte address.|
-|**WORD**|Next available word address (2 bytes per word).|
-|**DWORD**|Next available double word address (4 bytes per double word).|
-|**PARA**|Next available paragraph address (16 bytes per paragraph).|
-|**PAGE**|Next available page address (256 bytes per page).|
-|**ALIGN**(*n*)|Next available *n*th byte address. See Remarks section for more information.|
+|**BYTE**|下一个可用的字节地址。|
+|**WORD**|下一个可用的单词地址（每个单词2个字节）。|
+|**DWORD**|下一个可用的双字地址（每个双引号4个字节）。|
+|**分页**|下一个可用的段落地址（每段16个字节）。|
+|**PAGE**|下一个可用页面地址（每页256字节）。|
+|**ALIGN**（*n*）|下一个可用的第*n*个字节地址。 有关详细信息，请参阅备注部分。|
 
-If this parameter is not specified, **PARA** is used by default.
+如果未指定此参数，则默认情况下使用**段落**。
 
-*combine*\
-**PUBLIC**, **STACK**, **COMMON**, **MEMORY**, **AT**<em>address</em>, **PRIVATE**
+*合并*\
+**PUBLIC**、 **STACK**、 **COMMON**、 **MEMORY**、 **AT**<em>address</em>、 **PRIVATE**
 
-*use*\
-**USE16**, **USE32**, **FLAT**
+*使用*\
+**USE16**， **USE32**，**平面**
 
-*characteristics*\
-**INFO**, **READ**, **WRITE**, **EXECUTE**, **SHARED**, **NOPAGE**, **NOCACHE**, and **DISCARD**
+*特征*\
+**INFO**、 **READ**、 **WRITE**、 **EXECUTE**、 **SHARED**、 **NOPAGE**、 **NOCACHE**和**放弃**
 
-These are supported for COFF only and correspond to the COFF section characteristics of similar name (for example, **SHARED** corresponds to IMAGE_SCN_MEM_SHARED). READ sets the IMAGE_SCN_MEM_READ flag. The obsolete READONLY flag caused the section to clear the IMG_SCN_MEM_WRITE flag. If any *characteristics* are set, the default characteristics are not used and only the programmer-specified flags are in effect.
+这些支持仅适用于 COFF，并对应于类似名称的 COFF 部分特征（例如， **SHARED**与 IMAGE_SCN_MEM_SHARED）相对应。 READ 设置 IMAGE_SCN_MEM_READ 标志。 过时的 READONLY 标志导致部分清除 IMG_SCN_MEM_WRITE 标志。 如果设置了任何*特征*，则不会使用默认特征，并且只有程序员指定的标志才有效。
 
 _string_\
-This string is used as the section name in the emitted COFF object.  Creates multiple sections with the same external name, with distinct MASM segment names.
+此字符串用作发出的 COFF 对象中的节名。  用不同的 MASM 段名称创建多个具有相同外部名称的节。
 
-Not supported with **/omf**.
+不支持 **/omf**。
 
 *类*\
-Designates how segments should be combined and ordered in the assembled file. Typical values are, `'DATA'`, `'CODE'`, `'CONST'` and `'STACK'`
+指定应如何在已组合的文件中组合和排序段。 典型值为、`'DATA'`、`'CODE'`、`'CONST'` 和 `'STACK'`
 
 ## <a name="remarks"></a>备注
 
-For `ALIGN(n)`, *n* may be any power of 2 from 1 to 8192; not supported with **/omf**.
+对于 `ALIGN(n)`， *n*可以是从1到8192的2的任何幂;不支持 **/omf**。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](directives-reference.md)
+[指令参考](directives-reference.md)

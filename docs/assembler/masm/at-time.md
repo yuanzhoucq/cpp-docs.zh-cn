@@ -13,14 +13,14 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398904"
 ---
-# <a name="time"></a>\@Time
+# <a name="time"></a>\@时间
 
-The system time in 24-hour hh:mm:ss format (text macro).
+系统时间采用24小时 hh： mm： ss 格式（文本宏）。
 
 ## <a name="syntax"></a>语法
 
-> **\@Time**
+> **\@时间**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Symbols reference](symbols-reference.md)
+[符号引用](symbols-reference.md)

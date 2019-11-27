@@ -18,12 +18,12 @@ ms.locfileid: "74396446"
 ---
 # <a name="operator-"></a>运算符 ;
 
-Treats *text* as a comment.
+将*文本*视为注释。
 
 ## <a name="syntax"></a>语法
 
-> __;__ *text*
+> __;__ *文本*
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Operators reference](operators-reference.md)
+[运算符引用](operators-reference.md)

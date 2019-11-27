@@ -15,12 +15,12 @@ ms.locfileid: "74399166"
 ---
 # <a name="curseg"></a>\@CurSeg
 
-The name of the current segment (text macro).
+当前段（文本宏）的名称。
 
 ## <a name="syntax"></a>语法
 
 > **\@CurSeg**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Symbols reference](symbols-reference.md)
+[符号引用](symbols-reference.md)

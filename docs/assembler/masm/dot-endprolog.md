@@ -15,7 +15,7 @@ ms.locfileid: "74398456"
 ---
 # <a name="endprolog"></a>.ENDPROLOG
 
-Signals the end of the prologue declarations.
+指示序言声明的结尾。
 
 ## <a name="syntax"></a>语法
 
@@ -23,10 +23,10 @@ Signals the end of the prologue declarations.
 
 ## <a name="remarks"></a>备注
 
-It is an error to use any of the prologue declarations outside of the region between [PROC](../../assembler/masm/proc.md) **FRAME** and **.ENDPROLOG**.
+在[过程](../../assembler/masm/proc.md)**框架**和之间使用区域外的任何序言声明都是错误的 **。ENDPROLOG**。
 
-For more information, see [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+有关详细信息，请参阅[MASM for x64 （ml64.exe）](../../assembler/masm/masm-for-x64-ml64-exe.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [指令参考](../../assembler/masm/directives-reference.md)

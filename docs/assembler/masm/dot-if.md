@@ -13,24 +13,24 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398224"
 ---
-# <a name="if-32-bit-masm"></a>.IF (32-bit MASM)
+# <a name="if-32-bit-masm"></a>.IF （32位 MASM）
 
-Generates code that tests *condition1* (for example, AX > 7) and executes the *statements* if that condition is true. (32-bit MASM only.)
+生成测试*condition1*的代码（例如，AX > 7），如果该条件为 true，则执行*语句*。 （仅限32位 MASM。）
 
 ## <a name="syntax"></a>语法
 
-> **.IF** *condition1*\
-> *statements*\
-> ⟦ **.ELSEIF** *condition2*\
-> *statements*⟧\
-> ⟦ **.ELSE**\
-> *statements*⟧\
+> **.如果** *condition1*\
+> *语句*\
+> ⟦ **。ELSEIF** *condition2*\
+> *语句*⟧ \
+> ⟦ **。ELSE**\
+> *语句*⟧ \
 > **.ENDIF**
 
 ## <a name="remarks"></a>备注
 
-If a [.ELSE](../../assembler/masm/dot-else.md) follows, its statements are executed if the original condition was false. Note that the conditions are evaluated at run time.
+如果为[。否则](../../assembler/masm/dot-else.md)，如果原始条件为 false，则执行其语句。 请注意，将在运行时评估条件。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](directives-reference.md)
+[指令参考](directives-reference.md)

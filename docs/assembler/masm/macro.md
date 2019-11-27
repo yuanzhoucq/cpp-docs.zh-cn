@@ -15,18 +15,18 @@ ms.locfileid: "74397233"
 ---
 # <a name="macro"></a>MACRO
 
-Marks a macro block called *name* and establishes *parameter* placeholders for arguments passed when the macro is called.
+标记名为*name*的宏块，并为调用宏时传递的参数建立*参数*占位符。
 
 ## <a name="syntax"></a>语法
 
-> *name*  **MACRO** ⟦*parameter* ⟦ **:REQ** | :=*default* |  **:VARARG**⟧ ...⟧\
-> *statements*\
+> *name***宏**⟦*参数*⟦ **：** 请求 |： =*default* |  **： VARARG**⟧ .。。⟧\
+> *语句*\
 > **ENDM** ⟦*value*⟧
 
 ## <a name="remarks"></a>备注
 
-A macro function returns *value* to the calling statement.
+宏函数将*值*返回给调用语句。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](directives-reference.md)
+[指令参考](directives-reference.md)

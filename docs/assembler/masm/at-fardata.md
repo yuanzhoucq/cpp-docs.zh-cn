@@ -15,12 +15,12 @@ ms.locfileid: "74399071"
 ---
 # <a name="fardata"></a>\@fardata
 
-The name of the segment defined by the [.FARDATA](../../assembler/masm/dot-fardata.md) directive (text macro).
+定义的段的名称[。FARDATA](../../assembler/masm/dot-fardata.md)指令（文本宏）。
 
 ## <a name="syntax"></a>语法
 
 > **\@fardata**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Symbols reference](symbols-reference.md)
+[符号引用](symbols-reference.md)

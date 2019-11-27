@@ -15,7 +15,7 @@ ms.locfileid: "74398085"
 ---
 # <a name="nolist"></a>.NOLIST
 
-Suppresses program listing.
+取消程序列表。
 
 ## <a name="syntax"></a>语法
 
@@ -23,8 +23,8 @@ Suppresses program listing.
 
 ## <a name="remarks"></a>备注
 
-Same as [.XLIST](../../assembler/masm/dot-xlist.md).
+与相同[.XLIST](../../assembler/masm/dot-xlist.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](directives-reference.md)
+[指令参考](directives-reference.md)

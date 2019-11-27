@@ -15,12 +15,12 @@ ms.locfileid: "74399054"
 ---
 # <a name="filecur"></a>\@FileCur
 
-The name of the current file (text macro).
+当前文件的名称（文本宏）。
 
 ## <a name="syntax"></a>语法
 
 > **\@FileCur**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Symbols reference](symbols-reference.md)
+[符号引用](symbols-reference.md)

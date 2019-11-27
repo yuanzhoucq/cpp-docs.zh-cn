@@ -13,14 +13,14 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397943"
 ---
-# <a name="seq-32-bit-masm"></a>.SEQ (32-bit MASM)
+# <a name="seq-32-bit-masm"></a>.SEQ （32位 MASM）
 
-Orders segments sequentially (the default order). (32-bit MASM only.)
+按顺序（默认顺序）订单段。 （仅限32位 MASM。）
 
 ## <a name="syntax"></a>语法
 
 > **.SEQ**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](directives-reference.md)
+[指令参考](directives-reference.md)

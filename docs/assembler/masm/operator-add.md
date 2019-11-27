@@ -19,12 +19,12 @@ ms.locfileid: "74397138"
 ---
 # <a name="operator-"></a>运算符 +
 
-The first operator returns *expression1* plus *expression2*.
+第一个运算符返回*表达式*1 和*表达式*2。
 
 ## <a name="syntax"></a>语法
 
-> *expression1* + *expression2*
+> *表达式*2 + *表达式*2
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [运算符参考](../../assembler/masm/operators-reference.md)

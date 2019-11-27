@@ -13,14 +13,14 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398552"
 ---
-# <a name="continue-32-bit-masm"></a>.CONTINUE (32-bit MASM)
+# <a name="continue-32-bit-masm"></a>.CONTINUE （32位 MASM）
 
-Generates code to jump to the top of a [.WHILE](../../assembler/masm/dot-while.md) or [.REPEAT](../../assembler/masm/dot-repeat.md) block if *condition* is true. (32-bit MASM only.)
+生成要跳转到顶部的代码[。WHILE](../../assembler/masm/dot-while.md)或[。](../../assembler/masm/dot-repeat.md)如果*condition*为 TRUE，则重复 block。 （仅限32位 MASM。）
 
 ## <a name="syntax"></a>语法
 
-> **.CONTINUE** ⟦ **.IF** *condition*⟧
+> **.继续**⟦ **。如果***条件*⟧
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [指令参考](../../assembler/masm/directives-reference.md)

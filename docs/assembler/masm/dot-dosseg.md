@@ -13,9 +13,9 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398491"
 ---
-# <a name="dosseg-32-bit-masm"></a>.DOSSEG (32-bit MASM)
+# <a name="dosseg-32-bit-masm"></a>..DOSSEG （32）
 
-Orders the segments according to the MS-DOS segment convention: CODE first, then segments not in DGROUP, and then segments in DGROUP. (32-bit MASM only.)
+根据 MS-DOS 段约定对段进行排序：代码优先，然后是不在 DGROUP 中的段，然后是 DGROUP 中的段。 （仅限32位 MASM。）
 
 ## <a name="syntax"></a>语法
 
@@ -23,8 +23,8 @@ Orders the segments according to the MS-DOS segment convention: CODE first, then
 
 ## <a name="remarks"></a>备注
 
-The segments in DGROUP follow this order: segments not in BSS or STACK, then BSS segments, and finally STACK segments. Primarily used for ensuring CodeView support in MASM stand-alone programs. Same as [DOSSEG](../../assembler/masm/dosseg.md).
+DGROUP 中的段遵循以下顺序：段不在 BSS 或 STACK 中，然后是 BSS 段，最后是堆栈段。 主要用于确保 MASM 独立程序中的 CodeView 支持。 与[.dosseg](../../assembler/masm/dosseg.md)相同。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [指令参考](../../assembler/masm/directives-reference.md)

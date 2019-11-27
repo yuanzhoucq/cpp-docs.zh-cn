@@ -13,34 +13,34 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398246"
 ---
-# <a name="fpo-32-bit-masm"></a>.FPO (32-bit MASM)
+# <a name="fpo-32-bit-masm"></a>.FPO （32位 MASM）
 
-The **.FPO** directive controls the emission of debug records to the .debug$F segment or section. (32-bit MASM only.)
+**。FPO**指令控制将调试记录的辐射到. debug $ F 段或部分。 （仅限32位 MASM。）
 
 ## <a name="syntax"></a>语法
 
-> **.FPO** (*cdwLocals*, *cdwParams*, *cbProlog*, *cbRegs*, *fUseBP*, *cbFrame*)
+> **.FPO** （*cdwLocals*， *cdwParams*， *cbProlog*， *cbRegs*， *fUseBP*， *cbFrame*）
 
 ### <a name="parameters"></a>参数
 
 *cdwLocals*\
-Number of local variables, an unsigned 32 bit value.
+局部变量数，即无符号32位值。
 
 *cdwParams*\
-Size of the parameters in DWORDS, an unsigned 16 bit value.
+DWORD 中参数的大小，无符号的16位值。
 
 *cbProlog*\
-Number of bytes in the function prolog code, an unsigned 8 bit value.
+函数 prolog 代码中的字节数，无符号8位值。
 
 *cbRegs*\
-Number registers saved.
+已保存编号寄存器。
 
 *fUseBP*\
-Indicates whether the EBP register has been allocated. either 0 or 1.
+指示是否已分配 EBP 寄存器。 0或1。
 
 *cbFrame*\
-Indicates the frame type.  See [FPO_DATA](/windows/win32/api/winnt/ns-winnt-fpo_data) for more information.
+指示帧类型。  有关详细信息，请参阅[FPO_DATA](/windows/win32/api/winnt/ns-winnt-fpo_data) 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](directives-reference.md)
+[指令参考](directives-reference.md)

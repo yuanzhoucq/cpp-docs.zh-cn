@@ -27,7 +27,7 @@ ms.locfileid: "74305504"
 > **#pragma float_control （除** ** | ** **off** } [ **，push** ] **）** \
 > **#pragma float_control （** { **push** | **pop** } **）**
 
-## <a name="options"></a>选项
+## <a name="options"></a>Options
 
 **精确** |  **关闭**，**推送**\
 指定是启用（**on**）还是禁用（**关闭**）精确浮点语义。 有关此选项与类似的 " **/fp：精确**编译器" 选项的区别的信息，请参阅 "备注" 部分。 可选的**推送**标记告知编译器在内部编译器堆栈上推送**float_control**的当前设置。
@@ -37,7 +37,7 @@ ms.locfileid: "74305504"
 
 当 "**精确**" 也设置为 **"开**" 时，**仅可将**设置为 **"开"** 。
 
-**push**\
+**推送**\
 将当前**float_control**设置推送到内部编译器堆栈上。
 
 **pop**\
@@ -49,11 +49,11 @@ ms.locfileid: "74305504"
 
 | | float_control （精确、\*） | float_control （\*除外） | fp_contract （\*） | fenv_access （\*） |
 |-|-|-|-|-|
-| /fp:strict             | on  | on  | 非 | on  |
-| /fp:strict /fp:except- | on  | 非 | 非 | on  |
-| /fp:precise            | on  | 非 | on  | 非 |
-| /fp：精确/fp： except | on  | on  | on  | 非 |
-| /fp:fast               | 非 | 非 | on  | 非 |
+| /fp:strict             | 启用  | 启用  | 非 | 启用  |
+| /fp:strict /fp:except- | 启用  | 非 | 非 | 启用  |
+| /fp:precise            | 启用  | 非 | 启用  | 非 |
+| /fp：精确/fp： except | 启用  | 启用  | 启用  | 非 |
+| /fp:fast               | 非 | 非 | 启用  | 非 |
 
 换句话说，您必须结合使用多个杂注来模拟 **/fp： fast**、 **/fp：精确**、 **/fp： strict**和 **/fp：** 命令行选项除外。
 

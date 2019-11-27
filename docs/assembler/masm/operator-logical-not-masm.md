@@ -17,12 +17,12 @@ ms.locfileid: "74396740"
 ---
 # <a name="operator--masm"></a>运算符 ! (MASM)
 
-Treats *character* as a literal character rather than as an operator or symbol.
+将*字符*视为文本字符而不是运算符或符号。
 
 ## <a name="syntax"></a>语法
 
-> **!** *character*
+> **!** *字符*
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Operators reference](operators-reference.md)
+[运算符引用](operators-reference.md)

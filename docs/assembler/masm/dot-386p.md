@@ -13,9 +13,9 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398724"
 ---
-# <a name="386p-32-bit-masm"></a>.386P (32-bit MASM)
+# <a name="386p-32-bit-masm"></a>. .386P （32）
 
-Enables assembly of all instructions (including privileged) for the 80386 processor; disables assembly of instructions introduced with later processors. (32-bit MASM only.)
+启用80386处理器的所有说明的程序集（包括特权）;禁用由更高版本的处理器引入的指令的程序集。 （仅限32位 MASM。）
 
 ## <a name="syntax"></a>语法
 
@@ -23,8 +23,8 @@ Enables assembly of all instructions (including privileged) for the 80386 proces
 
 ## <a name="remarks"></a>备注
 
-Also enables 80387 instructions.
+还启用80387说明。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [指令参考](../../assembler/masm/directives-reference.md)

@@ -15,18 +15,18 @@ ms.locfileid: "74397528"
 ---
 # <a name="forc"></a>FORC
 
-Marks a block that will be repeated once for each character in *string*, with the current character replacing *parameter* on each repetition.
+将对*字符串*中的每个字符重复一次的块标记为每个重复的当前字符替换*参数*。
 
 ## <a name="syntax"></a>语法
 
-> **FORC** *parameter*, __\<__ *string* __>__ \
-> *statements*\
+> **强制***参数* __\<__ *string* __>__ \
+> *语句*\
 > **ENDM**
 
 ## <a name="remarks"></a>备注
 
-Same as [IRPC](../../assembler/masm/irpc.md).
+与[IRPC](../../assembler/masm/irpc.md)相同。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](directives-reference.md)
+[指令参考](directives-reference.md)

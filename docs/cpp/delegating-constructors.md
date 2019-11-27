@@ -1,6 +1,6 @@
 ---
-title: Delegating constructors (C++)
-description: Use delegating constructors in C++ to invoke other constructors and reduce code repetition.
+title: 委托构造函数C++（）
+description: 使用在中C++委托构造函数来调用其他构造函数并减少代码重复。
 ms.date: 11/19/2019
 ms.openlocfilehash: 533cdfbeb882f3770cc554b0633611a4ffc2cfbd
 ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e

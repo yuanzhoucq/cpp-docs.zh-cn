@@ -3,12 +3,12 @@ title: Windows 运行时 C++ 模板库 (WRL)
 ms.date: 11/04/2016
 ms.topic: overview
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-ms.openlocfilehash: 7b99f6429f620b56aec5adbc4b8f15d89cc54264
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: 7a7b37a32ebaa0bb6ad71c8f710300256589388d
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274673"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541200"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Windows 运行时 C++ 模板库 (WRL)
 
@@ -68,12 +68,12 @@ Windows 运行时C++模板库和C++/cx 提供了不同的优点。 下面是你�
 演示如何将[IXMLHTTPRequest2](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2)和[IXMLHTTPRequest2Callback](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2callback)接口与任务一起使用，以将 HTTP GET 和 POST 请求发送到 UWP 应用中的 web 服务。
 
 [必应地图行程优化器示例](https://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)<br/>
-使用在演练中[定义的类：`HttpRequest`在完整 UWP 应用的上下文中](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)使用任务和 XML HTTP 请求进行连接。
+使用在演练中定义的 `HttpRequest` 类：在完整 UWP 应用的上下文中[使用任务和 XML HTTP 请求进行连接](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)。
 
 [使用C++示例创建 Windows 运行时 DLL 组件](https://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)<br/>
 演示如何使用 Windows 运行时C++模板库创建进程内 DLL 组件，并从C++/cx、JavaScript 和C#使用该组件。
 
-[DirectX 大理石迷宫游戏示例](https://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)<br/>
+[DirectX 大理石迷宫游戏示例](https://docs.microsoft.com/samples/microsoft/windows-appsample-marble-maze/directx-marble-maze-game-sample/)<br/>
 演示如何使用 Windows 运行时C++模板库在完整的三维游戏上下文中管理 COM 组件（例如 DirectX 和媒体基础）的生存期。
 
 [从桌面应用发送 toast 通知示例](https://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)<br/>
@@ -109,23 +109,23 @@ Windows 运行时C++模板库提供了表示几个基本概念的类型。 以�
 
 ### <a name="comptr"></a>ComPtr
 
-[ComPtr](comptr-class.md) 是一种智能指针 类型，表示由模板参数指定的接口。 使用 `ComPtr` 可以声明能够访问从接口派生的对象成员的变量。 `ComPtr` 会自动维护基础接口指针的引用计数，并在引用计数变为零时发布接口。
+[ComPtr](comptr-class.md) 是一种智能指针 类型，表示由模板参数指定的接口。 使用 `ComPtr` 可以声明能够访问从接口派生的对象成员的变量。 `ComPtr` 会自动维护基础接口指针的引用计数，并在引用计数变为零时释放接口。
 
 ### <a name="runtimeclass"></a>RuntimeClass
 
-[RuntimeClass](runtimeclass-class.md) 表示继承一组指定接口的实例化类。 `RuntimeClass`对象可提供对一个或多个 Windows 运行时 COM 接口的支持，或对组件的弱引用。
+[RuntimeClass](runtimeclass-class.md) 表示继承一组指定接口的实例化类。 `RuntimeClass` 对象可以提供对一个或多个 Windows 运行时 COM 接口的支持或对组件的弱引用。
 
 ### <a name="module"></a>模块
 
 [模块](module-class.md) 表示一组相关的对象。 `Module` 对象管理类工厂和注册。类工厂可以创建对象，注册则让其他应用程序能够使用对象。
 
-### <a name="callback"></a>回调
+### <a name="callback"></a>回拨
 
 [回调](callback-function-wrl.md) 函数可以创建对象，该对象的成员函数为事件处理程序（回调方法）。 使用 `Callback` 函数可以编写异步操作。
 
 ### <a name="eventsource"></a>EventSource
 
-[EventSource](eventsource-class.md) 用于管理委托 事件处理程序。 使用 Windows 运行时C++模板库来实现委托，并使用`EventSource`来添加、移除和调用委托。
+[EventSource](eventsource-class.md) 用于管理委托 事件处理程序。 使用 Windows 运行时C++模板库来实现委托，并使用 `EventSource` 添加、移除和调用委托。
 
 ### <a name="asyncbase"></a>AsyncBase
 
@@ -133,11 +133,11 @@ Windows 运行时C++模板库提供了表示几个基本概念的类型。 以�
 
 ### <a name="ftmbase"></a>FtmBase
 
-[FtmBase](ftmbase-class.md) 表示自由线程封送拆收器对象。 `FtmBase` 可以创建全局接口表 (GIT)，并帮助管理封送处理和代理对象。
+[FtmBase](ftmbase-class.md) 表示自由线程封送拆收器对象。 `FtmBase` 创建一个全局接口表（GIT），并帮助管理封送处理和代理对象。
 
 ### <a name="weakref"></a>WeakRef
 
-[WeakRef](weakref-class.md) 是表示弱引用的智能指针类型。弱引用可引用能够访问或者不能访问的对象。 `WeakRef`对象只能由 Windows 运行时而不是经典 COM 使用。
+[WeakRef](weakref-class.md) 是表示弱引用的智能指针类型。弱引用可引用能够访问或者不能访问的对象。 `WeakRef` 对象只能由 Windows 运行时（而不是经典 COM）使用。
 
 `WeakRef` 对象通常表示由外部线程或应用程序控制其存在性的对象。 例如， `WeakRef` 对象可以引用文件对象。 当文件打开时， `WeakRef` 有效，并且引用的文件可以访问。 当文件关闭时， `WeakRef` 无效，并且文件不可访问。
 

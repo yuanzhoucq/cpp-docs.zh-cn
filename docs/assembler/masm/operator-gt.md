@@ -17,12 +17,12 @@ ms.locfileid: "74396932"
 ---
 # <a name="operator-gt"></a>运算符 GT
 
-Returns true (-1) if *expression1* is greater than *expression2*, or returns false (0) if it is not.
+如果*表达式* *1 大于 2-1，则*返回 true （-1），如果不是，则返回 false （0）。
 
 ## <a name="syntax"></a>语法
 
-> *expression1* **GT** *expression2*
+> *表达式* 2
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Operators reference](operators-reference.md)
+[运算符引用](operators-reference.md)

@@ -15,12 +15,12 @@ ms.locfileid: "74399172"
 ---
 # <a name="cpu"></a>\@Cpu
 
-A bit mask specifying the processor mode (numeric equate).
+指定处理器模式（数值等同）的位掩码。
 
 ## <a name="syntax"></a>语法
 
 > **\@Cpu**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Symbols reference](symbols-reference.md)
+[符号引用](symbols-reference.md)

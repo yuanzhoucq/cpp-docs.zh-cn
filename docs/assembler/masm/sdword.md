@@ -15,14 +15,14 @@ ms.locfileid: "74394150"
 ---
 # <a name="sdword"></a>SDWORD
 
-Allocates and optionally initializes a signed double word (4 bytes) of storage for each *initializer*. Also can be used as a type specifier anywhere a type is legal.
+分配并选择性地为每个*初始值设定项*初始化有符号双字（4字节）的存储。 还可在类型合法的任何位置用作类型说明符。
 
 ## <a name="syntax"></a>语法
 
-> *name* **SDWORD** *initializer* ⟦ __,__ *initializer* ...⟧
+> *名称* **SDWORD** *初始值设定项*⟦ __，__ *初始值设定项*.。。⟧
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives Reference](../../assembler/masm/directives-reference.md)\
+[指令引用](../../assembler/masm/directives-reference.md)\
 [DWORD](../../assembler/masm/dword.md)\
 [DD](../../assembler/masm/dd.md)

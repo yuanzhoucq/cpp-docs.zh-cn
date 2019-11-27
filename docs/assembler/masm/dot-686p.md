@@ -13,14 +13,14 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398613"
 ---
-# <a name="686p-32-bit-masm"></a>.686P (32-bit MASM)
+# <a name="686p-32-bit-masm"></a>. .686P （32）
 
-Enables assembly of all instructions (including privileged) for the Pentium Pro processor. (32-bit MASM only.)
+启用 Pentium Pro 处理器的所有说明的程序集（包括特权）。 （仅限32位 MASM。）
 
 ## <a name="syntax"></a>语法
 
 > **.686P**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [指令参考](../../assembler/masm/directives-reference.md)

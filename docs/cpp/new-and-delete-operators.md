@@ -17,38 +17,38 @@ ms.locfileid: "74246446"
 ---
 # <a name="new-and-delete-operators"></a>new 和 delete 运算符
 
-C++ supports dynamic allocation and deallocation of objects using the [new](new-operator-cpp.md) and [delete](delete-operator-cpp.md) operators. 这些运算符为来自称为“自由存储”的池中的对象分配内存。 The **new** operator calls the special function [operator new](new-operator-cpp.md), and the **delete** operator calls the special function [operator delete](delete-operator-cpp.md).
+C++支持使用[new](new-operator-cpp.md)和[delete](delete-operator-cpp.md)运算符动态分配和释放对象。 这些运算符为来自称为“自由存储”的池中的对象分配内存。 **New**运算符调用特殊函数[运算符 new](new-operator-cpp.md)， **delete**运算符调用特殊函数[运算符 delete](delete-operator-cpp.md)。
 
-The **new** function in the C++ Standard Library supports the behavior specified in the C++ standard, which is to throw a std::bad_alloc exception if the memory allocation fails. If you still want the non-throwing version of **new**, link your program with nothrownew.obj. However, when you link with nothrownew.obj, the default **operator new** in the C++ Standard Library no longer functions.
+标准库中的**新**函数支持在C++标准中指定的行为，如果内存分配失败，则将引发 std：： bad_alloc 异常。 C++ 如果仍需要**新**的非引发版本，请将程序与 nothrownew.obj 链接。但是，当你链接到 nothrownew.obj 时， C++标准库中的默认**运算符 new**将不再工作。
 
-For a list of the library files that comprise the C Runtime Library and the C++ Standard Library, see [CRT Library Features](../c-runtime-library/crt-library-features.md).
+有关包含 C 运行库和C++标准库的库文件的列表，请参阅[CRT 库功能](../c-runtime-library/crt-library-features.md)。
 
-##  <a id="new_operator"> </a> The new operator
+##  <a id="new_operator"></a> New 运算符
 
-When a statement such as the following is encountered in a program, it translates into a call to the function **operator new**:
+如果程序中遇到如下语句，它将转换为对函数**运算符 new**的调用：
 
 ```cpp
 char *pch = new char[BUFFER_SIZE];
 ```
 
-If the request is for zero bytes of storage, **operator new** returns a pointer to a distinct object (that is, repeated calls to **operator new** return different pointers). If there is insufficient memory for the allocation request, **operator new** throws a `std::bad_alloc` exception, or returns **nullptr** if you have linked in non-throwing **operator new** support.
+如果请求的存储空间为零字节，则**operator new**将返回指向不同对象的指针（即对**operator new**的重复调用将返回不同的指针）。 如果分配请求没有足够的内存，则**operator new**将引发 `std::bad_alloc` 异常，如果已链接到非引发**运算符的新**支持，则返回**nullptr** 。
 
-You can write a routine that attempts to free memory and retry the allocation; see [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) for more information. For more details on the recovery scheme, see the Handling insufficient memory section of this topic.
+可以编写一个例程来尝试释放内存，然后重试分配;有关详细信息，请参阅[_set_new_handler](../c-runtime-library/reference/set-new-handler.md) 。 有关恢复方案的更多详细信息，请参阅本主题的处理内存不足部分。
 
-The two scopes for **operator new** functions are described in the following table.
+下表描述了**operator new**函数的两个作用域。
 
-### <a name="scope-for-operator-new-functions"></a>Scope for operator new functions
+### <a name="scope-for-operator-new-functions"></a>Operator new 函数的作用域
 
 |运算符|范围|
 |--------------|-----------|
-|**::operator new**|Global|
-|*class-name* **::operator new**|实例|
+|**：： new 运算符**|Global|
+|*类名* **：： operator new**|实例|
 
-The first argument to **operator new** must be of type `size_t` (a type defined in \<stddef.h>), and the return type is always **void** <strong>\*</strong>.
+**Operator new**的第一个参数的类型必须为 `size_t` （在 \<stddef.h > 中定义的类型），并且返回类型始终为**void** <strong>\*</strong>。
 
-The global **operator new** function is called when the **new** operator is used to allocate objects of built-in types, objects of class type that do not contain user-defined **operator new** functions, and arrays of any type. When the **new** operator is used to allocate objects of a class type where an **operator new** is defined, that class's **operator new** is called.
+当使用**new**运算符分配内置类型的对象、不包含用户定义的**operator new**函数的类类型的对象和任何类型的数组时，将调用全局**operator new**函数。 当使用**new**运算符分配定义了 new**运算符**的类类型的对象时，将调用该类的**operator new** 。
 
-An **operator new** function defined for a class is a static member function (which cannot, therefore, be virtual) that hides the global **operator new** function for objects of that class type. Consider the case where **new** is used to allocate and set memory to a given value:
+为类定义的**operator new**函数是静态成员函数（因此，它不能是虚函数），该函数隐藏此类类型的对象的全局**operator new**函数。 请考虑使用**new**分配内存并将其设置为给定值的情况：
 
 ```cpp
 #include <malloc.h>
@@ -77,13 +77,13 @@ int main()
 }
 ```
 
-The argument supplied in parentheses to **new** is passed to `Blanks::operator new` as the `chInit` argument. However, the global **operator new** function is hidden, causing code such as the following to generate an error:
+向**new**括号中提供的参数将作为 `chInit` 参数传递给 `Blanks::operator new`。 但是，全局**operator new**函数是隐藏的，导致如下代码生成错误：
 
 ```cpp
 Blanks *SomeBlanks = new Blanks;
 ```
 
-The compiler supports member array **new** and **delete** operators in a class declaration. 例如:
+编译器在类声明中支持成员数组**new**和**delete**运算符。 例如：
 
 ```cpp
 class MyClass
@@ -107,7 +107,7 @@ int main()
 
 ### <a name="handling-insufficient-memory"></a>处理内存不足
 
-Testing for failed memory allocation can be done as shown here:
+可按如下所示对失败的内存分配进行测试：
 
 ```cpp
 #include <iostream>
@@ -122,28 +122,28 @@ int main() {
 }
 ```
 
-There is another way to handle failed memory allocation requests. Write a custom recovery routine to handle such a failure, then register your function by calling the [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) run-time function.
+还可以通过另一种方法来处理失败的内存分配请求。 编写自定义恢复例程来处理此类故障，并通过调用[_set_new_handler](../c-runtime-library/reference/set-new-handler.md)运行时函数来注册该函数。
 
-##  <a id="delete_operator"> </a> The delete operator
+##  <a id="delete_operator"></a> Delete 运算符
 
-Memory that is dynamically allocated using the **new** operator can be freed using the **delete** operator. The delete operator calls the **operator delete** function, which frees memory back to the available pool. Using the **delete** operator also causes the class destructor (if there is one) to be called.
+使用**new**运算符动态分配的内存可以使用**delete**运算符释放。 Delete 运算符调用**operator delete**函数，该函数将内存释放回可用池。 使用**delete**运算符还会导致调用类析构函数（如果有）。
 
-There are global and class-scoped **operator delete** functions. Only one **operator delete** function can be defined for a given class; if defined, it hides the global **operator delete** function. The global **operator delete** function is always called for arrays of any type.
+存在全局和类范围的**运算符 delete**函数。 只能为给定类定义一个**operator delete**函数;如果已定义，它将隐藏全局**operator delete**函数。 始终为任何类型的数组调用全局**operator delete**函数。
 
-The global **operator delete** function. Two forms exist for the  global **operator delete**  and class-member **operator delete** functions:
+全局**运算符 delete**函数。 全局**运算符 delete**和类成员**运算符 delete**函数有两种形式：
 
 ```cpp
 void operator delete( void * );
 void operator delete( void *, size_t );
 ```
 
-Only one of the preceding two forms can be present for a given class. The first form takes a single argument of type `void *`, which contains a pointer to the object to deallocate. The second form—sized deallocation—takes two arguments, the first of which is a pointer to the memory block to deallocate and the second of which is the number of bytes to deallocate. The return type of both forms is **void** (**operator delete** cannot return a value).
+对于给定的类，只能存在上述两个窗体中的一个。 第一种形式采用 `void *`类型的单个自变量，该参数包含指向要释放的对象的指针。 第二个窗体（大小释放）采用两个参数，第一个是指向要释放的内存块的指针，第二个是要释放的字节数。 这两个窗体的返回类型为**void** （**operator delete**无法返回值）。
 
-The intent of the second form is to speed up searching for the correct size category of the object to be deleted, which is often not stored near the allocation itself and likely uncached. The second form is useful when an **operator delete** function from a base class is used to delete an object of a derived class.
+第二种形式的目的是加快搜索要删除的对象的正确大小类别，这通常不会存储在分配本身附近并且可能未缓存。 当使用基类中的**operator delete**函数删除派生类的对象时，第二种形式很有用。
 
-The **operator delete** function is static; therefore, it cannot be virtual. The **operator delete** function obeys access control, as described in [Member-Access Control](member-access-control-cpp.md).
+**Operator delete**函数是静态的;因此，它不能是虚拟的。 **运算符 delete**函数服从访问控制，如[成员访问控制](member-access-control-cpp.md)中所述。
 
-The following example shows user-defined **operator new** and **operator delete** functions designed to log allocations and deallocations of memory:
+下面的示例演示用户定义的**operator new**和**operator delete**函数，旨在记录内存的分配和释放：
 
 ```cpp
 #include <iostream>
@@ -191,9 +191,9 @@ int main( int argc, char *argv[] ) {
 }
 ```
 
-前面的代码可用于检测“内存溢出”，即在自由储存中分配但从未释放过的内存。 To perform this detection, the global **new** and **delete** operators are redefined to count allocation and deallocation of memory.
+前面的代码可用于检测“内存溢出”，即在自由储存中分配但从未释放过的内存。 若要执行此检测，将重新定义全局**new**和**delete**运算符来计数分配和内存释放。
 
-The compiler supports member array **new** and **delete** operators in a class declaration. 例如:
+编译器在类声明中支持成员数组**new**和**delete**运算符。 例如：
 
 ```cpp
 // spec1_the_operator_delete_function2.cpp

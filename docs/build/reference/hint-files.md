@@ -36,8 +36,8 @@ C++ 浏览数据库分析器是一款模糊分析器，它可在很短的时间�
 
 > [!IMPORTANT]
 > 如果修改或添加提示文件，则需要采取额外的步骤才能使更改生效：
-> - In versions before Visual Studio 2017 version 15.6: Delete the .sdf file and/or VC.db file in the solution for all changes.
-> - In Visual Studio 2017 version 15.6 and later: Close and reopen the solution after adding new hint files.
+> - 在 Visual Studio 2017 版本15.6 之前的版本中：在解决方案中删除 .sdf 文件和/或 VC 文件以进行所有更改。
+> - 在 Visual Studio 2017 版本15.6 及更高版本中：添加新的提示文件后关闭并重新打开解决方案。
 
 ## <a name="scenario"></a>方案
 
@@ -92,17 +92,17 @@ void Function() NOEXCEPT
 
 - 有一个快速操作，可用于创建包含突出显示的宏的提示文件；如果现已存在提示文件，则用于将宏添加到提示文件。
 
-![Highlighted Macro.](media/hint-squiggle-and-actions.png "Hint squiggle and Quick Actions")
+![突出显示的宏。](media/hint-squiggle-and-actions.png "提示曲线和快速操作")
 
 在执行任一快速操作之后，分析器会重新分析受提示文件影响的文件。
 
-默认情况下，问题宏突出显示为建议。 突出显示项可更改更醒目的效果，例如红色或绿色波浪线。 通过“工具” > “选项” > “文本编辑器” > “C/C++” > “视图”在“代码波浪线”部分内使用“跳过的浏览区域中的宏”。
+默认情况下，问题宏突出显示为建议。 突出显示项可更改更醒目的效果，例如红色或绿色波浪线。 通过“工具” **“选项”** “文本编辑器” **“C/C++”** “视图”在“代码波浪线”部分内使用“跳过的浏览区域中的宏” >  >  >  > 。
 
-![Macros in Skipped Browsing Regions Option.](media/skipped-regions-squiggle-option.png "Skipped regions squiggle option.")
+!["跳过浏览区域中的宏" 选项。](media/skipped-regions-squiggle-option.png "跳过区域曲线选项。")
 
 ## <a name="display-browsing-database-errors"></a>显示浏览数据库错误
 
-“项目” > “显示浏览数据库错误”菜单命令会显示“错误列表”中分析失败的所有区域。 此命令旨在简化初始提示文件的生成。 但是，分析器无法分辨错误是否由中断型宏导致，因此你必须对每个错误进行评估。 运行“显示浏览数据库错误”命令，再导航到每个错误以在编辑器中加载受影响的文件。 文件加载后，如果该区域中存在任何宏，则将突出显示这些宏。 你可调用“快速操作”以将其添加到提示文件中。 提示文件更新后，错误列表自动更新。 或者，如果要手动修改提示文件，可使用“重新扫描解决方案”命令来触发更新。
+“项目” **“显示浏览数据库错误”菜单命令会显示“错误列表”中分析失败的所有区域** > 。 此命令旨在简化初始提示文件的生成。 但是，分析器无法分辨错误是否由中断型宏导致，因此你必须对每个错误进行评估。 运行“显示浏览数据库错误”命令，再导航到每个错误以在编辑器中加载受影响的文件。 文件加载后，如果该区域中存在任何宏，则将突出显示这些宏。 你可调用“快速操作”以将其添加到提示文件中。 提示文件更新后，错误列表自动更新。 或者，如果要手动修改提示文件，可使用“重新扫描解决方案”命令来触发更新。
 
 ## <a name="architecture"></a>体系结构
 
@@ -156,7 +156,7 @@ void Function() NOEXCEPT
 |`@>`|指示一组映射元素结束的提示文件特定的替换字符串。|
 |`#undef` *hint-name*|删除现有提示的预处理器指令。 提示的名称由 hint-name 标识符提供。|
 |`//` *comment*|单行注释。|
-|`/*`*comment*`*/`|多行注释。|
+|`/*` *注释* `*/`|多行注释。|
 
 ## <a name="example"></a>示例
 
@@ -166,7 +166,7 @@ void Function() NOEXCEPT
 
 ### <a name="hint-file-directories"></a>提示文件目录
 
-![Common and project&#45;specific hint file directories.](media/hintfile.png "HintFile")
+![公共和项目&#45;特定的提示文件目录。](media/hintfile.png "HintFile")
 
 ### <a name="directories-and-hint-file-contents"></a>目录和提示文件内容
 
@@ -236,13 +236,13 @@ void Function() NOEXCEPT
 
 - 有效提示来自 `vcpackages`、`Debug``A1` 和 `A2` 目录。
 
-- `Debug` 提示文件中的 #undef 指令删除了 `vcpackages` 目录提示文件中的 `#define _In_` 提示。
+- **提示文件中的 #undef 指令删除了** 目录提示文件中的 `Debug` 提示`#define _In_``vcpackages`。
 
 - `A1` 目录中的提示文件重新定义 `START_NAMESPACE`。
 
-- `A2` 目录中的 `#undef` 提示删除了 `Debug` 目录提示文件中 `OBRACE` 和 `CBRACE` 的提示。
+- `#undef` 目录中的 `A2` 提示删除了 `OBRACE` 目录提示文件中 `CBRACE` 和 `Debug` 的提示。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [为 Visual Studio C++ 项目创建的文件类型](file-types-created-for-visual-cpp-projects.md)<br>
 [#define 指令 (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)<br>

@@ -13,18 +13,18 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397299"
 ---
-# <a name="invoke-32-bit-masm"></a>INVOKE (32-bit MASM)
+# <a name="invoke-32-bit-masm"></a>INVOKE （32位 MASM）
 
-Calls the procedure at the address given by *expression*, passing the arguments on the stack or in registers according to the standard calling conventions of the language type. (32-bit MASM only.)
+调用由*expression*给定的地址处的过程，并根据语言类型的标准调用约定在堆栈上或在寄存器中传递参数。 （仅限32位 MASM。）
 
 ## <a name="syntax"></a>语法
 
-> **INVOKE** *expression* ⟦ __,__ *argument* ...⟧
+> **调用** *expression* ⟦ __，__ *argument* .。。⟧
 
 ## <a name="remarks"></a>备注
 
-Each argument passed to the procedure may be an expression, a register pair, or an address expression (an expression preceded by **ADDR**).
+传递给过程的每个参数可以是表达式、寄存器对或地址表达式（前面**是地址的表达式）。**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[指令参考](../../assembler/masm/directives-reference.md)

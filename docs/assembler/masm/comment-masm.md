@@ -15,14 +15,14 @@ ms.locfileid: "74398839"
 ---
 # <a name="comment-masm"></a>COMMENT (MASM)
 
-Treats all *text* between or on the same line as the delimiters as a comment.
+将与分隔符相同的行中的所有*文本*视为注释。
 
 ## <a name="syntax"></a>语法
 
-> **COMMENT** *delimiter* ⟦*text*⟧\
-> ⟦*text*⟧\
-> ⟦*text*⟧ *delimiter* ⟦*text*⟧
+> **注释***分隔符*⟦*text*⟧ \
+> ⟦*text*⟧ \
+> ⟦*text*⟧*分隔符*⟦*text*⟧
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives Reference](../../assembler/masm/directives-reference.md)\
+[指令引用](../../assembler/masm/directives-reference.md)\

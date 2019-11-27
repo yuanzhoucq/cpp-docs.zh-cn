@@ -15,7 +15,7 @@ ms.locfileid: "74398071"
 ---
 # <a name="nolistif"></a>.NOLISTIF
 
-Suppresses listing of conditional blocks whose condition evaluates to false (0).
+取消其条件计算结果为 false （0）的条件块的列表。
 
 ## <a name="syntax"></a>语法
 
@@ -23,8 +23,8 @@ Suppresses listing of conditional blocks whose condition evaluates to false (0).
 
 ## <a name="remarks"></a>备注
 
-这是默认设置。 Same as [.SFCOND](../../assembler/masm/dot-sfcond.md).
+这是默认设置。 与相同[.SFCOND](../../assembler/masm/dot-sfcond.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](directives-reference.md)
+[指令参考](directives-reference.md)

@@ -13,14 +13,14 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398966"
 ---
-# <a name="line"></a>\@Line
+# <a name="line"></a>\@行
 
-The source line number in the current file (numeric equate).
+当前文件中的源行号（数字等于）。
 
 ## <a name="syntax"></a>语法
 
-> **\@Line**
+> **\@行**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Symbols reference](symbols-reference.md)
+[符号引用](symbols-reference.md)

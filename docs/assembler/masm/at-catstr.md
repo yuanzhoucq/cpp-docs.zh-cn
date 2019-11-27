@@ -15,12 +15,12 @@ ms.locfileid: "74399221"
 ---
 # <a name="catstr"></a>\@CatStr
 
-Macro function that concatenates one or more strings. Returns a string.
+连接一个或多个字符串的宏函数。 返回一个字符串。
 
 ## <a name="syntax"></a>语法
 
-> **\@CatStr(** *string1* ⟦ __,__ *string2*...⟧ **)**
+> **\@CatStr （** *string1* ⟦ __，__ *string2*.。。⟧ **）**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Symbols reference](symbols-reference.md)
+[符号引用](symbols-reference.md)

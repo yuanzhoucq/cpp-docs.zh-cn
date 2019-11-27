@@ -15,33 +15,33 @@ ms.locfileid: "74397222"
 ---
 # <a name="masm-for-x64-ml64exe"></a>MASM for x64 (ml64.exe)
 
-Visual Studio includes both 32-bit and 64-bit hosted versions of Microsoft Assembler (MASM) to target x64 code. Named ml64.exe, this is the assembler that accepts x64 assembler language. The MASM command-line tools are installed when you choose a C++ workload during Visual Studio installation. The MASM tools are not available as a separate download. For instructions on how to download and install a copy of Visual Studio, see [Install Visual Studio](/visualstudio/install/install-visual-studio). If you do not want to install the complete Visual Studio IDE, but only want the command-line tools, download the [Build Tools for Visual Studio](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019).
+Visual Studio 同时包含面向x64 代码的 32 位和 64 位托管版本的 Microsoft Assembler (MASM)。 该汇编程序名为 ml64.exe，接受 x64 汇编语言。 在 Visual Studio 安装期间选择 C++ 工作负载时，会安装 MASM 命令行工具。 MASM 工具不可单独下载。 有关如何下载和安装 Visual Studio 副本的说明，请参阅[安装 Visual studio](/visualstudio/install/install-visual-studio)。 如果你不想安装完整的 Visual Studio IDE，但只需要命令行工具，请下载[Visual studio 的生成工具](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019)。
 
-To use MASM to build code for x64 targets on the command line, you must use a developer command prompt for x64 targets, which sets the required path and other environment variables. For information on how to start a developer command prompt, see [Build C/C++ code on the command line](../../build/building-on-the-command-line.md).
+若要在命令行上使用 MASM 生成 x64 目标的代码，必须为 x64 目标使用开发人员命令提示，这会设置所需的路径和其他环境变量。 有关如何启动开发人员命令提示的信息，请参阅在[命令行C++上生成 C/代码](../../build/building-on-the-command-line.md)。
 
-For information on ml64.exe command line options, see [ML and ML64 Command-Line Reference](../../assembler/masm/ml-and-ml64-command-line-reference.md).
+有关 ml64.exe 命令行选项的信息，请参阅[ML 和 Ml64.exe 命令行参考](../../assembler/masm/ml-and-ml64-command-line-reference.md)。
 
-Inline assembler or use of the ASM keyword is not supported for x64 or ARM targets. To port your x86 code that uses inline assembler to x64 or ARM, you can convert your code to C++, use compiler intrinsics, or create assembler-language source files. The Microsoft C++ compiler supports intrinsics to allow you to use special-function instructions, for example, privileged, bit scan/test, interlocked, and so on, in as close to a cross-platform manner as possible. For information on available intrinsics, see [Compiler Intrinsics](../../intrinsics/compiler-intrinsics.md).
+X64 或 ARM 目标不支持使用内联汇编程序或 ASM 关键字。 要将使用内联汇编程序的 x86 代码切换到 x64 或 ARM，可以将代码转换为 C++，使用编译器内部函数，或创建汇编语言的源文件。 Microsoft C++编译器支持内部函数，使你能够在接近跨平台的方式的情况下，使用特殊的函数说明，例如，特权、位扫描/测试、互锁等。 有关可用内部函数的信息，请参阅[编译器内部函数](../../intrinsics/compiler-intrinsics.md)。
 
-## <a name="add-an-assembler-language-file-to-a-visual-studio-c-project"></a>Add an assembler-language file to a Visual Studio C++ project
+## <a name="add-an-assembler-language-file-to-a-visual-studio-c-project"></a>将汇编程序语言文件添加到 Visual Studio C++项目
 
-The Visual Studio project system supports assembler-language files built by using MASM in your C++ projects. You can create x64 assembler-language source files and build them into object files by using MASM, which supports x64 fully. You can then link these object files to your C++ code built for x64 targets. This is one way to overcome the lack of an x64 inline assembler.
+Visual Studio 项目系统支持在 C + + 项目中使用 MASM 生成汇编程序语言文件。 可以使用 MASM 创建 x64 汇编语言源文件并将其构建为完全支持 x64 的对象文件。 然后可以将这些对象文件链接到专为 x64 目标生成的 C + + 代码。 这是一种可在缺少 x64 内联汇编程序时使用的方法。
 
-### <a name="to-add-an-assembler-language-file-to-an-existing-visual-studio-c-project"></a>To add an assembler-language file to an existing Visual Studio C++ project
+### <a name="to-add-an-assembler-language-file-to-an-existing-visual-studio-c-project"></a>向现有的 Visual Studio C++项目添加汇编程序语言文件
 
-1. 在解决方案资源管理器中，选择项目。 On the menu bar, choose **Project**, **Build Customizations**.
+1. 在解决方案资源管理器中，选择项目。 在菜单栏上，依次选择 "**项目**"、"**生成自定义**"。
 
-1. In the **Visual C++ Build Customization Files** dialog box, check the checkbox next to **masm(.targets,.props)** . Choose **OK** to save your selection and close the dialog box.
+1. 在 " **Visual C++ Build 自定义文件**" 对话框中，选中 " **masm （属性）** " 旁边的复选框。 选择 **"确定"** 以保存所做选择并关闭对话框。
 
-1. On the menu bar, choose **Project**, **Add New Item**.
+1. 在菜单栏上，依次选择 "**项目**"、"**添加新项**"。
 
-1. In the **Add New Item** dialog box, select **C++ file (.cpp)** in the center pane. In the **Name** edit control, enter a new file name that has a **.asm** extension instead of .cpp. Choose **Add** to add the file to your project and close the dialog box.
+1. 在 "**添加新项**" 对话框中，在中间窗格中选择 **C++ "文件（.cpp）** "。 在 "**名称**编辑控件" 中，输入具有 **.asm**扩展名的新文件名，而不是 .cpp。 选择 "**添加**" 将文件添加到项目中，并关闭对话框。
 
-Create your assembler-language code in the .asm file you added. When you build your solution, the MASM assembler is invoked to assemble the .asm file into an object file that is then linked into your project. To make symbol access easier, declare your assembler functions as `extern "C"` in your C++ source code, rather than using the C++ name decoration conventions in your assembler-language source files.
+在添加的 .asm 文件中创建汇编语言代码。 生成解决方案时，会调用 MASM 汇编程序，将该 .asm 文件汇编为一个之后要链接到项目的对象文件。 为了更轻松地访问符号，请在C++源代码中将汇编程序函数声明为 `extern "C"`，而不是C++在汇编程序语言源文件中使用名称修饰约定。
 
-## <a name="ml64-specific-directives"></a>ml64-Specific Directives
+## <a name="ml64-specific-directives"></a>ml64.exe 特定指令
 
-You can use the following ml64-specific directives in your assembler-language source code that targets x64:
+可以在面向 x64 在汇编语言源代码中使用以下特定于 ml64 的指令：
 
 - [.ALLOCSTACK](../../assembler/masm/dot-allocstack.md)
 
@@ -57,11 +57,11 @@ You can use the following ml64-specific directives in your assembler-language so
 
 - [.SETFRAME](../../assembler/masm/dot-setframe.md)
 
-In addition, the [PROC](../../assembler/masm/proc.md) directive has been updated for use with ml64.exe.
+此外， [PROC](../../assembler/masm/proc.md)指令已更新为与 ml64.exe 一起使用。
 
-## <a name="32-bit-address-mode-address-size-override"></a>32-Bit Address Mode (Address Size Override)
+## <a name="32-bit-address-mode-address-size-override"></a>32位地址模式（地址大小替代）
 
-MASM emits the 0x67 address size override if a memory operand includes 32-bit registers. For example, the following examples cause the address size override to be emitted:
+如果内存操作数包含32位寄存器，则 MASM 发出0x67 地址大小重写。 例如，以下示例将发出地址大小替代：
 
 ```asm
 mov rax, QWORD PTR [ecx]
@@ -71,15 +71,15 @@ prefetch [eax]
 movnti rax, QWORD PTR [r8d]
 ```
 
-MASM assumes that if a 32-bit displacement appears alone as a memory operand, 64-bit addressing is intended. There is currently no support for 32-bit addressing with such operands.
+MASM 假设如果32位置换单独显示为内存操作数，则应使用64位寻址。 目前尚不支持此类操作数的32位寻址。
 
-Finally, mixing register sizes within a memory operand, as demonstrated in the following code, generates an error.
+最后，在内存操作数内混合寄存器大小，如下面的代码所示，会生成错误。
 
 ```asm
 mov eax, DWORD PTR [rcx*2+r10d]
 mov eax, DWORD PTR [ecx*2+r10+0100h]
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Microsoft 宏汇编程序参考](../../assembler/masm/microsoft-macro-assembler-reference.md)

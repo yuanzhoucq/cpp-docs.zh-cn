@@ -15,22 +15,22 @@ ms.locfileid: "74397455"
 ---
 # <a name="if-masm"></a>IF (MASM)
 
-Grants assembly of *ifstatements* if *expression1* is true (nonzero) or *elseifstatements* if *expression1* is false (0) and *expression2* is true.
+*如果表达式1为 true* （非零） *，则授予* *ifstatements*的程序集; 如果*表达式*1 为 false （0 *），则*为 true。
 
 ## <a name="syntax"></a>语法
 
-> **IF** *expression1*\
-> *if-statements*\
-> ⟦**ELSEIF** *expression2*\
-> *elseif-statements*⟧\
+> **如果***表达式*=\
+> *if-语句*\
+> ⟦**ELSEIF** *表达式*2\
+> *elseif-语句*⟧ \
 > ⟦**ELSE**\
-> *else-statements*⟧\
+> *else-语句*⟧ \
 > **ENDIF**
 
 ## <a name="remarks"></a>备注
 
-The following directives may be substituted for [ELSEIF](../../assembler/masm/elseif-masm.md): **ELSEIFB**, **ELSEIFDEF**, **ELSEIFDIF**, **ELSEIFDIFI**, **ELSEIFE**, **ELSEIFIDN**, **ELSEIFIDNI**, **ELSEIFNB**, and **ELSEIFNDEF**. Optionally, assembles *else-statements* if the previous expression is false. Note that the expressions are evaluated at assembly time.
+以下指令可以替换为[ELSEIF](../../assembler/masm/elseif-masm.md)： **ELSEIFB**、 **ELSEIFDEF**、 **ELSEIFDIF**、 **ELSEIFDIFI**、 **ELSEIFE**、 **ELSEIFIDN**、 **ELSEIFIDNI**、 **ELSEIFNB**和**ELSEIFNDEF**。 （可选）如果上一个表达式为 false，则汇编*else 语句*。 请注意，将在程序集时间对表达式进行计算。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](directives-reference.md)
+[指令参考](directives-reference.md)

@@ -15,12 +15,12 @@ ms.locfileid: "74397584"
 ---
 # <a name="even"></a>EVEN
 
-Aligns the next variable or instruction on an even byte.
+在偶数上将下一个变量或指令对齐。
 
 ## <a name="syntax"></a>语法
 
 > **EVEN**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](directives-reference.md)
+[指令参考](directives-reference.md)

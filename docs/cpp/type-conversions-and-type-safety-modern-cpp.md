@@ -1,5 +1,5 @@
 ---
-title: Type conversions and type safety
+title: 类型转换和类型安全
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 629b361a-2ce1-4700-8b5d-ab4f57b245d5
@@ -10,29 +10,29 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74246115"
 ---
-# <a name="type-conversions-and-type-safety"></a>Type conversions and type safety
+# <a name="type-conversions-and-type-safety"></a>类型转换和类型安全
 
 本文档确定了一些常见的类型转换问题，并介绍了如何在 C++ 代码中避免它们。
 
-在编写 C++ 程序时，请务必确保它是类型安全的。 这意味着每个变量、函数自变量和函数返回值将存储一个可接受的类型的数据，并意味着涉及不同类型的值的操作“有意义”且不会导致数据丢失、位模式解释不正确或内存损坏。 从不显式或隐式地将值从一种类型转换为另一种类型的程序在定义上是类型安全的。 但是，有时需要进行类型转换，甚至需要进行不安全的类型转换。 For example, you might have to store the result of a floating point operation in a variable of type **int**, or you might have to pass the value in an unsigned **int** to a function that takes a signed **int**. Both examples illustrate unsafe conversions because they may cause data loss or re-interpretation of a value.
+在编写 C++ 程序时，请务必确保它是类型安全的。 这意味着每个变量、函数自变量和函数返回值将存储一个可接受的类型的数据，并意味着涉及不同类型的值的操作“有意义”且不会导致数据丢失、位模式解释不正确或内存损坏。 从不显式或隐式地将值从一种类型转换为另一种类型的程序在定义上是类型安全的。 但是，有时需要进行类型转换，甚至需要进行不安全的类型转换。 例如，你可能必须将浮点运算的结果存储在**int**类型的变量中，或者可能需要将无符号**int**中的值传递给采用有符号**int**的函数。这两个示例阐释了不安全的转换，因为它们可能会导致数据丢失或重入值。
 
 当编译器检测到不安全的转换时，它会发出错误或警告。 如果发出错误，则编译会停止；如果发出警告，则编译可以继续，但会指示代码中可能存在错误。 但是，即使您编译程序后没有收到警告，它仍然可能包含导致生成错误结果的隐式类型转换。 类型错误也可能由代码中的显式转换或强制转换引入。
 
 ## <a name="implicit-type-conversions"></a>隐式类型转换
 
-When an expression contains operands of different built-in types, and no explicit casts are present, the compiler uses built-in *standard conversions* to convert one of the operands so that the types match. 编译器将尝试按一个明确定义的顺序进行转换，直到有一个转换成功。 如果所选转换是提升转换，则编译器不会发出警告。 如果转换是收缩转换，则编译器会发出有关数据可能丢失的警告。 尽管是否真的发生数据丢失取决于涉及的实际值，但我们建议您将此警告视为错误。 如果涉及到用户定义的类型，则编译器将尝试使用您在类定义中指定的转换。 如果编译器找不到可接受的转换，则会发出错误且不会编译程序。 For more information about the rules that govern the standard conversions, see [Standard Conversions](../cpp/standard-conversions.md). For more information about user-defined conversions, see [User-Defined Conversions (C++/CLI)](../dotnet/user-defined-conversions-cpp-cli.md).
+如果表达式包含不同内置类型的操作数，并且不存在显式强制转换，则编译器将使用内置的*标准转换*来转换其中一个操作数，使这些类型匹配。 编译器将尝试按一个明确定义的顺序进行转换，直到有一个转换成功。 如果所选转换是提升转换，则编译器不会发出警告。 如果转换是收缩转换，则编译器会发出有关数据可能丢失的警告。 尽管是否真的发生数据丢失取决于涉及的实际值，但我们建议您将此警告视为错误。 如果涉及到用户定义的类型，则编译器将尝试使用您在类定义中指定的转换。 如果编译器找不到可接受的转换，则会发出错误且不会编译程序。 有关控制标准转换的规则的详细信息，请参阅[标准转换](../cpp/standard-conversions.md)。 有关用户定义的转换的详细信息，请参阅[用户定义的转换C++（/cli）](../dotnet/user-defined-conversions-cpp-cli.md)。
 
 ### <a name="widening-conversions-promotion"></a>扩大转换（提升）
 
 在扩大转换中，较小的变量中的值将赋给较大的变量，同时不会丢失数据。 由于扩大转换始终是安全的，编译器将在不提示的情况下执行它们且不会发出警告。 以下转换是扩大转换。
 
-|From|功能|
+|从|至|
 |----------|--------|
-|Any signed or unsigned integral type except **long long** or **__int64**|**双精度**|
-|**bool** or **char**|任何其他内置类型|
-|**short** or **wchar_t**|**int**, **long**, **long long**|
-|**int**, **long**|**long long**|
-|**float**|**双精度**|
+|任何带符号或无符号整数类型（**长**长或 **__int64**除外）|**double**|
+|**bool**或**char**|任何其他内置类型|
+|**short**或**wchar_t**|**int**、 **long**、 **long**|
+|**int**、 **long**|**long long**|
+|**float**|**double**|
 
 ### <a name="narrowing-conversions-coercion"></a>收缩转换（强制）
 
@@ -73,7 +73,7 @@ cout << "unsigned val = " << num << " signed val = " << num2 << endl;
 // Prints: unsigned val = 65535 signed val = -1
 ```
 
-请注意，值将在两个方向重新解释。 如果程序生成了奇怪的结果，其中的值的符号似乎与您预期的相反，请查找有符号和无符号整型之间的隐式转换。 In the following example, the result of the expression ( 0 - 1) is implicitly converted from **int** to **unsigned int** when it's stored in `num`. 这将导致位模式被重新解释。
+请注意，值将在两个方向重新解释。 如果程序生成了奇怪的结果，其中的值的符号似乎与您预期的相反，请查找有符号和无符号整型之间的隐式转换。 在下面的示例中，表达式（0-1）的结果在存储在 `num`中时从**int**隐式转换为**无符号整数**。 这将导致位模式被重新解释。
 
 ```cpp
 unsigned int u3 = 0 - 1;
@@ -84,7 +84,7 @@ cout << u3 << endl; // prints 4294967295
 
 ### <a name="pointer-conversions"></a>指针转换
 
-在很多表达式中，C 样式数组将隐式转换为指向该数组中的第一个元素的指针，并且可能在没有提示的情况下进行常量转换。 尽管此方法很方便，但它也可能容易出错。 For example, the following badly designed code example seems nonsensical, and yet it will compile and produces a result of 'p'. 首先，“Help”字符串常量将转换为指向数组的第一个元素的 `char*`；该指针随后递增 3 个元素，以便现在能够指向最后一个元素“p”。
+在很多表达式中，C 样式数组将隐式转换为指向该数组中的第一个元素的指针，并且可能在没有提示的情况下进行常量转换。 尽管此方法很方便，但它也可能容易出错。 例如，下面设计错误的代码示例似乎过程，但它会编译并生成 "p" 的结果。 首先，“Help”字符串常量将转换为指向数组的第一个元素的 `char*`；该指针随后递增 3 个元素，以便现在能够指向最后一个元素“p”。
 
 ```cpp
 char* s = "Help" + 3;
@@ -92,7 +92,7 @@ char* s = "Help" + 3;
 
 ## <a name="explicit-conversions-casts"></a>显式转换（强制转换）
 
-利用强制转换运算，您可以指示编译器将一种类型的值转换为另一种类型。 在某些情况下，如果两个类型完全无关，编译器将引发错误，但在其他情况下，即使运算不是类型安全的，编译器也不会引发错误。 应谨慎使用强制转换，因为从一种类型到另一个类型的任何转换都可能导致程序错误。 但是，强制转换有时是必需的，并且不是所有强制转换都同样危险。 强制转换的一个有效的使用情况是：当您的代码执行收缩转换并且您知道该转换不会导致程序生成错误的结果时。 实际上，这是在告诉编译器您知道自己在做什么，不要发出相关警告来打扰您。 另一种使用情况是从指向派生类的指针到指向基类的指针的强制转换。 Another use is to cast away the **const**-ness of a variable to pass it to a function that requires a non-**const** argument. 大多数强制转换运算都存在一定的风险。
+利用强制转换运算，您可以指示编译器将一种类型的值转换为另一种类型。 在某些情况下，如果两个类型完全无关，编译器将引发错误，但在其他情况下，即使运算不是类型安全的，编译器也不会引发错误。 应谨慎使用强制转换，因为从一种类型到另一个类型的任何转换都可能导致程序错误。 但是，强制转换有时是必需的，并且不是所有强制转换都同样危险。 强制转换的一个有效的使用情况是：当您的代码执行收缩转换并且您知道该转换不会导致程序生成错误的结果时。 实际上，这是在告诉编译器您知道自己在做什么，不要发出相关警告来打扰您。 另一种使用情况是从指向派生类的指针到指向基类的指针的强制转换。 另一种用法是强制转换为变量的**常量**性，以将其传递给需要非**const**参数的函数。 大多数强制转换运算都存在一定的风险。
 
 在 C 样式程序中，同一 C 样式强制转换运算符可用于所有类型的强制转换。
 
@@ -101,9 +101,9 @@ char* s = "Help" + 3;
 int(x); // old-style cast, functional syntax
 ```
 
-C 样式强制转换运算符与调用运算符 () 相同，因此在代码中不显眼，容易被忽略。 Both are bad because they're difficult to recognize at a glance or search for, and they're disparate enough to invoke any combination of **static**, **const**, and **reinterpret_cast**. 确定旧式强制转换的实际作用可能很困难并且容易出错。 基于所有这些原因，当需要进行强制转换时，我们建议使用以下 C++ 强制转换运算符之一。在某些情况下，它们更加类型安全，并且可以更加明确地表达编程目的：
+C 样式强制转换运算符与调用运算符 () 相同，因此在代码中不显眼，容易被忽略。 这两种方法都是错误的，因为它们难以一目了然地识别或搜索，它们完全不同于调用**静态**、**常量**和**reinterpret_cast**的任意组合。 确定旧式强制转换的实际作用可能很困难并且容易出错。 基于所有这些原因，当需要进行强制转换时，我们建议使用以下 C++ 强制转换运算符之一。在某些情况下，它们更加类型安全，并且可以更加明确地表达编程目的：
 
-- **static_cast**, for casts that are checked at compile time only. **static_cast** returns an error if the compiler detects that you are trying to cast between types that are completely incompatible. 您还可以使用它在指向基对象的指针和指向派生对象的指针之间强制转换，但编译器无法总是判断出此类转换在运行时是否安全。
+- **static_cast**，用于仅在编译时检查的强制转换。 如果编译器检测到您尝试在完全不兼容的类型之间强制转换， **static_cast**将返回错误。 您还可以使用它在指向基对象的指针和指向派生对象的指针之间强制转换，但编译器无法总是判断出此类转换在运行时是否安全。
 
     ```cpp
     double d = 1.58947;
@@ -117,9 +117,9 @@ C 样式强制转换运算符与调用运算符 () 相同，因此在代码中�
     Derived* d2 = static_cast<Derived*>(b);
     ```
 
-   For more information, see [static_cast](../cpp/static-cast-operator.md).
+   有关详细信息，请参阅[static_cast](../cpp/static-cast-operator.md)。
 
-- **dynamic_cast**, for safe, runtime-checked casts of pointer-to-base to pointer-to-derived. A **dynamic_cast** is safer than a **static_cast** for downcasts, but the runtime check incurs some overhead.
+- **dynamic_cast**，用于以安全的运行时检查的指针转换为指向派生的指针的指针。 **Dynamic_cast**比 type.2 的**static_cast**安全，但运行时检查会产生一些开销。
 
     ```cpp
     Base* b = new Base();
@@ -142,9 +142,9 @@ C 样式强制转换运算符与调用运算符 () 相同，因此在代码中�
     //Output: d3 is null;
     ```
 
-   For more information, see [dynamic_cast](../cpp/dynamic-cast-operator.md).
+   有关详细信息，请参阅[dynamic_cast](../cpp/dynamic-cast-operator.md)。
 
-- **const_cast**, for casting away the **const**-ness of a variable, or converting a non-**const** variable to be **const**. Casting away **const**-ness by using this operator is just as error-prone as is using a C-style cast, except that with **const-cast** you are less likely to perform the cast accidentally. Sometimes you have to cast away the **const**-ness of a variable, for example, to pass a **const** variable to a function that takes a non-**const** parameter. 下面的示例演示如何执行此操作。
+- **const_cast**，用于将变量强制转换**为常量，** 或将非常**量**变量转换为**常量**。 使用此运算符来强制转换为**const**型，就像使用 C 样式强制转换一样容易出错，只不过使用**const 强制转换**时，不太可能会意外地执行强制转换。 有时，您必须强制转换掉变量的**常量**类型，例如，将**const**变量传递到采用非常**量**参数的函数。 下面的示例演示如何执行此操作。
 
     ```cpp
     void Func(double& d) { ... }
@@ -155,14 +155,14 @@ C 样式强制转换运算符与调用运算符 () 相同，因此在代码中�
     }
     ```
 
-   For more information, see [const_cast](../cpp/const-cast-operator.md).
+   有关详细信息，请参阅[const_cast](../cpp/const-cast-operator.md)。
 
-- **reinterpret_cast**, for casts between unrelated types such as **pointer** to **int**.
+- **reinterpret_cast**，用于在不相关的类型之间进行转换，如指向**int**的**指针**。
 
     > [!NOTE]
     >  此强制转换运算符不像其他运算符一样常用，并且不能保证可将其移植到其它编译器。
 
-   The following example illustrates how **reinterpret_cast** differs from **static_cast**.
+   下面的示例说明**reinterpret_cast**与**static_cast**的不同之处。
 
     ```cpp
     const char* str = "hello";
@@ -174,11 +174,11 @@ C 样式强制转换运算符与调用运算符 () 相同，因此在代码中�
                                        // However, it is not 64-bit safe.
     ```
 
-   For more information, see [reinterpret_cast Operator](../cpp/reinterpret-cast-operator.md).
+   有关详细信息，请参阅[Reinterpret_cast 运算符](../cpp/reinterpret-cast-operator.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[C++ type system](../cpp/cpp-type-system-modern-cpp.md)<br/>
-[Welcome back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[C++类型系统](../cpp/cpp-type-system-modern-cpp.md)<br/>
+[欢迎返回到C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 语言参考](../cpp/cpp-language-reference.md)<br/>
 [C++ 标准库](../standard-library/cpp-standard-library-reference.md)

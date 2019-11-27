@@ -17,12 +17,12 @@ ms.locfileid: "74396563"
 ---
 # <a name="operator-opattr"></a>运算符 OPATTR
 
-Returns a word defining the mode and scope of *expression*. The low byte is identical to the byte returned by [.TYPE](../../assembler/masm/operator-dot-type.md). The high byte contains additional information.
+返回用于定义*表达式*的模式和作用域的单词。 低字节与返回的字节完全相同[。键入](../../assembler/masm/operator-dot-type.md)。 高字节包含附加信息。
 
 ## <a name="syntax"></a>语法
 
-> **OPATTR** *expression*
+> **OPATTR** *表达式*
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Operators reference](operators-reference.md)
+[运算符引用](operators-reference.md)

@@ -17,12 +17,12 @@ ms.locfileid: "74396577"
 ---
 # <a name="operator-offset"></a>运算符 OFFSET
 
-Returns the offset into the relevant segment of *expression*.
+返回*表达式*的相关段的偏移量。
 
 ## <a name="syntax"></a>语法
 
-> **OFFSET** *expression*
+> **偏移量***表达式*
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Operators reference](operators-reference.md)
+[运算符引用](operators-reference.md)

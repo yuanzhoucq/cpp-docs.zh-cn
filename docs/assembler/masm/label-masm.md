@@ -15,14 +15,14 @@ ms.locfileid: "74397261"
 ---
 # <a name="label-masm"></a>LABEL (MASM)
 
-Creates a new label by assigning the current location-counter value and the given *type* to *name*.
+通过将当前位置计数器值和给定*类型*分配给*名称*来创建新标签。
 
 ## <a name="syntax"></a>语法
 
-> *name* **LABEL** *type*
+> *名称***标签***类型*
 >
-> *name* **LABEL** ⟦**NEAR** | **FAR** | **PROC**⟧ **PTR** ⟦*type*⟧
+> *名称***标签**⟦**NEAR** | **远处** | **PROC**⟧ **PTR** ⟦*类型*⟧
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](directives-reference.md)
+[指令参考](directives-reference.md)

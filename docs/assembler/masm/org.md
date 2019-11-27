@@ -15,12 +15,12 @@ ms.locfileid: "74395583"
 ---
 # <a name="org"></a>ORG
 
-Sets the location counter to *expression*.
+将位置计数器设置为*expression*。
 
 ## <a name="syntax"></a>语法
 
-> **ORG** *expression*
+> **组织***表达式*
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](directives-reference.md)
+[指令参考](directives-reference.md)

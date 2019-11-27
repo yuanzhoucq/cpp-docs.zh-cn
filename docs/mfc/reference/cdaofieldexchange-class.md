@@ -37,17 +37,17 @@ class CDaoFieldExchange
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CDaoFieldExchange::IsValidOperation](#isvalidoperation)|如果当前操作适合要更新的字段类型，则返回非零值。|
-|[CDaoFieldExchange::SetFieldType](#setfieldtype)|指定记录集数据成员的类型（列或参数），由对 DFX 函数的所有后续调用表示，直到下一次调用 `SetFieldType`。|
+|[CDaoFieldExchange：： IsValidOperation](#isvalidoperation)|如果当前操作适合要更新的字段类型，则返回非零值。|
+|[CDaoFieldExchange：： SetFieldType](#setfieldtype)|指定记录集数据成员的类型（列或参数），由对 DFX 函数的所有后续调用表示，直到下一次调用 `SetFieldType`。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CDaoFieldExchange::m_nOperation](#m_noperation)|由当前对记录集的 `DoFieldExchange` 成员函数的调用所执行的 DFX 操作。|
-|[CDaoFieldExchange::m_prs](#m_prs)|指向正在执行 DFX 操作的记录集的指针。|
+|[CDaoFieldExchange：： m_nOperation](#m_noperation)|由当前对记录集的 `DoFieldExchange` 成员函数的调用所执行的 DFX 操作。|
+|[CDaoFieldExchange：： m_prs](#m_prs)|指向正在执行 DFX 操作的记录集的指针。|
 
 ## <a name="remarks"></a>备注
 
@@ -75,7 +75,7 @@ class CDaoFieldExchange
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxdao.h
+**标头：** afxdao
 
 ##  <a name="isvalidoperation"></a>CDaoFieldExchange：： IsValidOperation
 
@@ -108,7 +108,7 @@ DFX 机制执行的某些操作仅适用于其中一种可能的字段类型。 
 
 `m_nOperation` 的可能值为：
 
-|操作|描述|
+|操作|说明|
 |---------------|-----------------|
 |`AddToParameterList`|生成 SQL 语句的**参数**子句。|
 |`AddToSelectList`|生成 SQL 语句的**SELECT**子句。|

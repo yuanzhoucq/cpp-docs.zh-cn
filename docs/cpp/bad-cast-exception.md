@@ -17,7 +17,7 @@ ms.locfileid: "74245954"
 ---
 # <a name="bad_cast-exception"></a>bad_cast 异常
 
-The **bad_cast** exception is thrown by the **dynamic_cast** operator as the result of a failed cast to a reference type.
+由于转换为引用类型失败的结果， **dynamic_cast**运算符引发**bad_cast**异常。
 
 ## <a name="syntax"></a>语法
 
@@ -28,13 +28,13 @@ catch (bad_cast)
 
 ## <a name="remarks"></a>备注
 
-The interface for **bad_cast** is:
+**Bad_cast**的接口是：
 
 ```cpp
 class bad_cast : public exception
 ```
 
-The following code contains an example of a failed **dynamic_cast** that throws the **bad_cast** exception.
+下面的代码包含引发**bad_cast**异常的失败**dynamic_cast**的示例。
 
 ```cpp
 // expre_bad_cast_Exception.cpp
@@ -65,14 +65,14 @@ int main() {
 }
 ```
 
-The exception is thrown because the object being cast (a Shape) isn't derived from the specified cast type (Circle). 若要避免此异常，请将下列声明添加到 `main`：
+引发此异常的原因是，被强制转换（形状）的对象不是派生自指定的强制转换类型（圆圈）。 若要避免此异常，请将下列声明添加到 `main`：
 
 ```cpp
 Circle circle_instance;
 Circle& ref_circle = circle_instance;
 ```
 
-Then reverse the sense of the cast in the **try** block as follows:
+然后，在**try**块中反转强制转换的含义，如下所示：
 
 ```cpp
 Shape& ref_shape = dynamic_cast<Shape&>(ref_circle);
@@ -82,23 +82,23 @@ Shape& ref_shape = dynamic_cast<Shape&>(ref_circle);
 
 ### <a name="constructors"></a>构造函数
 
-|构造函数|描述|
+|构造函数|说明|
 |-|-|
 |[bad_cast](#bad_cast)|`bad_cast` 类型的对象的构造函数。|
 
 ### <a name="functions"></a>函数
 
-|函数|描述|
+|函数|说明|
 |-|-|
-|[what](#what)|待定|
+|[究竟](#what)|TBD|
 
 ### <a name="operators"></a>运算符
 
-|运算符|描述|
+|运算符|说明|
 |-|-|
-|[operator=](#op_eq)|An assignment operator that assigns one `bad_cast` object to another.|
+|[operator=](#op_eq)|一个赋值运算符，用于将一个 `bad_cast` 对象分配给另一个对象。|
 
-## <a name="bad_cast"></a> bad_cast
+## <a name="bad_cast"></a>bad_cast
 
 `bad_cast` 类型的对象的构造函数。
 
@@ -107,22 +107,22 @@ bad_cast(const char * _Message = "bad cast");
 bad_cast(const bad_cast &);
 ```
 
-## <a name="op_eq"></a> operator=
+## <a name="op_eq"></a>operator =
 
-An assignment operator that assigns one `bad_cast` object to another.
+一个赋值运算符，用于将一个 `bad_cast` 对象分配给另一个对象。
 
 ```cpp
 bad_cast& operator=(const bad_cast&) noexcept;
 ```
 
-## <a name="what"></a> what
+## <a name="what"></a>究竟
 
 ```cpp
 const char* what() const noexcept override;
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[dynamic_cast Operator](../cpp/dynamic-cast-operator.md)\
+[Dynamic_cast 运算符](../cpp/dynamic-cast-operator.md)\
 [关键字](../cpp/keywords-cpp.md)\
-[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)
+[异常C++和错误处理的新式最佳实践](../cpp/errors-and-exception-handling-modern-cpp.md)

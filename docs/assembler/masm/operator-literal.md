@@ -17,12 +17,12 @@ ms.locfileid: "74396790"
 ---
 # <a name="operator-ltgt"></a>operator &lt;&gt;
 
-Treats *text* as a single literal element.
+将*文本*视为单个文本元素。
 
 ## <a name="syntax"></a>语法
 
-> __\<__ *text* __>__
+> __\<__ *文本* __>__
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Operators reference](operators-reference.md)
+[运算符引用](operators-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: operator brackets
+title: 运算符括号
 ms.date: 08/30/2018
 f1_keywords:
 - operator []
@@ -17,12 +17,12 @@ ms.locfileid: "74397083"
 ---
 # <a name="operator-"></a>operator \[\]
 
-Returns *expression1* plus \[*expression2*\].
+返回*表达式*2 和 \[*表达式*2\]。
 
 ## <a name="syntax"></a>语法
 
-> *expression1* **[** expression2 **]**
+> *表达式*2 **[** 2 **]**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [运算符参考](../../assembler/masm/operators-reference.md)

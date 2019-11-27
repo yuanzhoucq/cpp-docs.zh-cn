@@ -17,16 +17,16 @@ ms.locfileid: "74396487"
 ---
 # <a name="operator-sectionrel"></a>运算符 SECTIONREL
 
-Returns the section relative offset of expression relative to the section containing the target in the final executable.
+返回相对于在最终可执行文件中包含目标的节的表达式相对偏移区。
 
 ## <a name="syntax"></a>语法
 
-> **SECTIONREL** *expression*
+> **SECTIONREL** *表达式*
 
 ## <a name="remarks"></a>备注
 
-**SECTIONREL** is available only with COFF object emission.
+**SECTIONREL**仅可用于显示 COFF 对象。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Operators reference](operators-reference.md)
+[运算符引用](operators-reference.md)

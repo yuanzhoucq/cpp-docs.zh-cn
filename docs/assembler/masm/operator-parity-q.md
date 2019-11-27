@@ -17,12 +17,12 @@ ms.locfileid: "74396524"
 ---
 # <a name="operator-parity"></a>运算符 PARITY?
 
-Status of parity flag. Used only within [.IF](../../assembler/masm/dot-if.md), [.WHILE](../../assembler/masm/dot-while.md), or [.REPEAT](../../assembler/masm/dot-repeat.md) blocks and evaluated at run time, not at assembly time.
+奇偶校验标志的状态。 仅在内使用[。如果](../../assembler/masm/dot-if.md)为，则为[。WHILE](../../assembler/masm/dot-while.md)或[。重复](../../assembler/masm/dot-repeat.md)块并在运行时计算，而不是在程序集时间计算。
 
 ## <a name="syntax"></a>语法
 
-> **PARITY?**
+> **性?**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Operators reference](operators-reference.md)
+[运算符引用](operators-reference.md)

@@ -15,12 +15,12 @@ ms.locfileid: "74394864"
 ---
 # <a name="real10"></a>REAL10
 
-Allocates and optionally initializes a 10-byte floating-point number for each *initializer*.
+分配每个*初始值设定项*并根据需要初始化10字节浮点数。
 
 ## <a name="syntax"></a>语法
 
-> *name* **REAL10** *initializer* ⟦ __,__ *initializer* ...⟧
+> *名称* **REAL10** *初始值设定项*⟦ __，__ *初始值设定项*.。。⟧
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[指令参考](../../assembler/masm/directives-reference.md)

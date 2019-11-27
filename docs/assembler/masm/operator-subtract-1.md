@@ -20,12 +20,12 @@ ms.locfileid: "74395497"
 ---
 # <a name="operator-"></a>运算符 /
 
-Returns *expression1* divided by *expression2*.
+返回*表达式*2 除以*表达式*2。
 
 ## <a name="syntax"></a>语法
 
 > *expression1* __/__ *expression2*
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Operators reference](operators-reference.md)
+[运算符引用](operators-reference.md)

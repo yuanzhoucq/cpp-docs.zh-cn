@@ -15,28 +15,28 @@ ms.locfileid: "74395170"
 ---
 # <a name="option-masm"></a>OPTION (MASM)
 
-Enables and disables features of the assembler.
+启用和禁用组装器的功能。
 
 ## <a name="syntax"></a>语法
 
-> **OPTION** *optionlist*
+> **选项** *optionlist*
 
 ## <a name="remarks"></a>备注
 
-Available options include:
+可用选项包括：
 
 |||||
 |-|-|-|-|
-|**CASEMAP**|**DOTNAME**|**NODOTNAME**|**EMULATOR**|
-|**NOEMULATOR**|**EPILOGUE**|**EXPR16**|**EXPR32**|
-|**LANGUAGE**|**LJMP**|**NOLJMP**|**M510**|
-|**NOM510**|**NOKEYWORD**|**NOSIGNEXTEND**|**OFFSET**|
+|**CASEMAP**|**DOTNAME**|**NODOTNAME**|**仿真**|
+|**NOEMULATOR**|**尾声**|**EXPR16**|**EXPR32**|
+|**语言**|**LJMP**|**NOLJMP**|**M510**|
+|**NOM510**|**NOKEYWORD**|**NOSIGNEXTEND**|**抵销**|
 |**OLDMACROS**|**NOOLDMACROS**|**OLDSTRUCTS**|**NOOLDSTRUCTS**|
-|**PROC**|**PROLOGUE**|**READONLY**|**NOREADONLY**|
-|**SCOPED**|**NOSCOPED**|**SEGMENT**|**SETIF2**.|
+|**PROC**|**序**|**只读**|**NOREADONLY**|
+|**划分**|**NOSCOPED**|**SEGMENT**|**SETIF2**。|
 
-The syntax for LANGUAGE is **OPTION LANGUAGE:** <em>x</em>, where *x* is one of C, SYSCALL, STDCALL, PASCAL, FORTRAN, or BASIC.  SYSCALL, PASCAL, FORTRAN, and BASIC are not supported with used with [.MODEL](../../assembler/masm/dot-model.md) FLAT.
+LANGUAGE 的语法是**OPTION LANGUAGE：** <em>x</em>，其中*x*是 C、SYSCALL、STDCALL、PASCAL、FORTRAN 或 BASIC。  与一起使用时，SYSCALL、PASCAL、FORTRAN 和 BASIC 不受支持[。模型](../../assembler/masm/dot-model.md)平面。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](directives-reference.md)
+[指令参考](directives-reference.md)

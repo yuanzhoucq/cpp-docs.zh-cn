@@ -15,12 +15,12 @@ ms.locfileid: "74395109"
 ---
 # <a name="oword"></a>OWORD
 
-Used as a type specifier when an 16-byte data type is required.
+当需要16字节的数据类型时，用作类型说明符。
 
 ## <a name="syntax"></a>语法
 
 > **OWORD**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](directives-reference.md)
+[指令参考](directives-reference.md)

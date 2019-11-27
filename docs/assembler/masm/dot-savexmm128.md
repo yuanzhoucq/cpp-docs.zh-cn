@@ -15,20 +15,20 @@ ms.locfileid: "74397952"
 ---
 # <a name="savexmm128"></a>.SAVEXMM128
 
-Generates either a `UWOP_SAVE_XMM128` or a `UWOP_SAVE_XMM128_FAR` unwind code entry for the specified XMM register and offset using the current prologue offset. MASM will choose the most efficient encoding.
+为指定的 XMM register 生成 `UWOP_SAVE_XMM128` 或 `UWOP_SAVE_XMM128_FAR` 展开代码项，并使用当前的序言偏移量偏移。 MASM 将选择最有效的编码。
 
 ## <a name="syntax"></a>语法
 
-> **.SAVEXMM128** *xmmreg* , *offset*
+> **.SAVEXMM128** *xmmreg* ，*偏移量*
 
 ## <a name="remarks"></a>备注
 
-**.SAVEXMM128** allows ml64.exe users to specify how a frame function unwinds, and is only allowed within the prologue, which extends from the [PROC](../../assembler/masm/proc.md) FRAME declaration to the [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) directive. These directives do not generate code; they only generate `.xdata` and `.pdata`. .SAVEXMM128 should be preceded by instructions that actually implement the actions to be unwound. It is a good practice to wrap both the unwind directives and the code they are meant to unwind in a macro to ensure agreement.
+**.SAVEXMM128**允许 ml64.exe 用户指定框架函数的展开方式，并且仅允许在序言中使用，该函数从[过程](../../assembler/masm/proc.md)框架声明扩展到[。ENDPROLOG](../../assembler/masm/dot-endprolog.md)指令。 这些指令不生成代码;它们仅生成 `.xdata` 和 `.pdata`。 .SAVEXMM128 后面应是实际实现要展开的操作的说明。 最好将展开指令和它们要展开的代码封装在一个宏中，以确保协议。
 
-*offset* must be a multiple of 16.
+*偏移量*必须是16的倍数。
 
-For more information, see [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+有关详细信息，请参阅[MASM for x64 （ml64.exe）](../../assembler/masm/masm-for-x64-ml64-exe.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](directives-reference.md)
+[指令参考](directives-reference.md)

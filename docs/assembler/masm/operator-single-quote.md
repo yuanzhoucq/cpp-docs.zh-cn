@@ -1,5 +1,5 @@
 ---
-title: operator &#39; &#39;
+title: 运算符&#39;&#39;
 ms.date: 08/30/2018
 f1_keywords:
 - operator ' '
@@ -15,14 +15,14 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74395852"
 ---
-# <a name="operator-39-39"></a>operator &#39; &#39;
+# <a name="operator-39-39"></a>运算符&#39;&#39;
 
-Treats '*text*' as a string.
+将 "*text*" 视为一个字符串。
 
 ## <a name="syntax"></a>语法
 
-> __'__ *text* __'__
+> __"__ *text* __"__
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Operators reference](operators-reference.md)
+[运算符引用](operators-reference.md)

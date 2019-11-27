@@ -17,12 +17,12 @@ ms.locfileid: "74396189"
 ---
 # <a name="operator-shl"></a>运算符 SHL
 
-Returns the result of shifting the bits of *expression* left *count* number of bits.
+返回将*表达式*的*位左移*的位的结果。
 
 ## <a name="syntax"></a>语法
 
-> *expression* **SHL** *count*
+> *expression* **SHL** *计数*
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Operators reference](operators-reference.md)
+[运算符引用](operators-reference.md)

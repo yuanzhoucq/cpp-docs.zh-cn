@@ -17,12 +17,12 @@ ms.locfileid: "74397110"
 ---
 # <a name="operator-and"></a>运算符 AND
 
-Returns the result of a bitwise AND operation for *expression1* and *expression2*.
+返回*表达式*2 和*表达式*2 的按位 and 运算的结果。
 
 ## <a name="syntax"></a>语法
 
-> *expression1* **AND** *expression2*
+> *表达式*2**和***表达式*2
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [运算符参考](../../assembler/masm/operators-reference.md)

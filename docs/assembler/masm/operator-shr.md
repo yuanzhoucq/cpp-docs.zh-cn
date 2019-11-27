@@ -17,12 +17,12 @@ ms.locfileid: "74396165"
 ---
 # <a name="operator-shr"></a>运算符 SHR
 
-Returns the result of shifting the bits of *expression* right *count* number of bits.
+返回将*表达式*的*位数右移位数*的结果。
 
 ## <a name="syntax"></a>语法
 
-> *expression* **SHR** *count*
+> *expression* **SHR** *计数*
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Operators reference](operators-reference.md)
+[运算符引用](operators-reference.md)

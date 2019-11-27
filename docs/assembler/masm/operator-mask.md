@@ -17,12 +17,12 @@ ms.locfileid: "74396642"
 ---
 # <a name="operator-mask"></a>运算符 MASK
 
-Returns a bit mask in which the bits in *recordfieldname* or *record* are set and all other bits are cleared.
+返回一个位掩码，其中设置了*recordfieldname*或*记录*中的位，并清除所有其他位。
 
 ## <a name="syntax"></a>语法
 
-> **MASK** {*recordfieldname* | *record*}
+> **掩码**{*recordfieldname* | *记录*}
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Operators reference](operators-reference.md)
+[运算符引用](operators-reference.md)

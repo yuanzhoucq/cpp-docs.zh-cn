@@ -17,17 +17,17 @@ ms.locfileid: "74397413"
 ---
 # <a name="ifdif-ifdifi"></a>IFDIF、IFDIFI
 
-Grants assembly if the text items are different.
+如果文本项不同，则授予程序集。
 
 ## <a name="syntax"></a>语法
 
-> **IFDIF** *textitem1* __,__ *textitem2*\
-> **IFDIFI** *textitem1* __,__ *textitem2*
+> **IFDIF** *textitem1* __，__ *textitem2*\
+> **IFDIFI** *textitem1* __，__ *textitem2*
 
 ## <a name="remarks"></a>备注
 
-If **IFDIFI** is given, the comparison is case insensitive. See [IF](../../assembler/masm/if-masm.md) for complete syntax.
+如果给定了**IFDIFI** ，则比较不区分大小写。 [若](../../assembler/masm/if-masm.md)要获取完整的语法，请参阅。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[指令参考](../../assembler/masm/directives-reference.md)

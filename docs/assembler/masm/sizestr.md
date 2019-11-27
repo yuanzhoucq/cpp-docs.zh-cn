@@ -15,12 +15,12 @@ ms.locfileid: "74393707"
 ---
 # <a name="sizestr"></a>SIZESTR
 
-Finds the size of a text item.
+查找文本项的大小。
 
 ## <a name="syntax"></a>语法
 
 > *name* **SIZESTR** *textitem*
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](directives-reference.md)
+[指令参考](directives-reference.md)

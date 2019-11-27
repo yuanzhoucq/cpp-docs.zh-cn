@@ -13,14 +13,14 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397895"
 ---
-# <a name="stack-32-bit-masm"></a>.STACK (32-bit MASM)
+# <a name="stack-32-bit-masm"></a>.STACK （32位 MASM）
 
-When used with [.MODEL](../../assembler/masm/dot-model.md), defines a stack segment (with segment name **STACK**). The optional *size* specifies the number of bytes for the stack (default 1,024). The **.STACK** directive automatically closes the stack statement. (32-bit MASM only.)
+与一起使用时[。模型](../../assembler/masm/dot-model.md)，定义堆栈段（带有分段名称**stack**）。 可选*大小*为堆栈指定字节数（默认值为1024）。 **。STACK**指令自动关闭 stack 语句。 （仅限32位 MASM。）
 
 ## <a name="syntax"></a>语法
 
 > **.STACK** ⟦*size*⟧
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](directives-reference.md)
+[指令参考](directives-reference.md)

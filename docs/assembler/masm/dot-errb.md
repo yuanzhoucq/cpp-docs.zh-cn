@@ -15,12 +15,12 @@ ms.locfileid: "74398398"
 ---
 # <a name="errb"></a>.ERRB
 
-Generates an error if *textitem* is blank.
+如果*textitem*为空，则生成错误。
 
 ## <a name="syntax"></a>语法
 
-> **.ERRB** *textitem* ⟦ __,__ *message*⟧
+> **..Errb** *textitem* ⟦ __，__ *message*⟧
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [指令参考](../../assembler/masm/directives-reference.md)

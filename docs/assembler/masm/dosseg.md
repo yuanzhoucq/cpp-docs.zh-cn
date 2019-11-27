@@ -13,14 +13,14 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398751"
 ---
-# <a name="dosseg-32-bit-masm"></a>DOSSEG (32-bit MASM)
+# <a name="dosseg-32-bit-masm"></a>.DOSSEG （32）
 
-Identical to [.DOSSEG](../../assembler/masm/dot-dosseg.md), which is the preferred form. (32-bit MASM only.)
+与相同[.DOSSEG](../../assembler/masm/dot-dosseg.md)，这是首选格式。 （仅限32位 MASM。）
 
 ## <a name="syntax"></a>语法
 
 > **DOSSEG**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [指令参考](../../assembler/masm/directives-reference.md)

@@ -15,22 +15,22 @@ ms.locfileid: "74395031"
 ---
 # <a name="proc"></a>PROC
 
-Marks start and end of a procedure block called *label*. The statements in the block can be called with the **CALL** instruction or [INVOKE](../../assembler/masm/invoke.md) directive.
+标记名为*label*的过程块的开头和结尾。 可以通过**调用**指令或[调用](../../assembler/masm/invoke.md)指令调用块中的语句。
 
 ## <a name="syntax"></a>语法
 
-> *label* **PROC** ⟦*distance*⟧ ⟦*language-type*⟧ ⟦*visibility*⟧ ⟦ __\<__ *prologuearg* __>__ ⟧ ⟦**USES** *reglist*⟧ ⟦ __,__ *parameter* ⟦ __:__ *tag*⟧ ...⟧\
-> ⟦**FRAME** ⟦ __:__ *ehandler-address*⟧ ⟧\
-> *statements*\
-> *label* **ENDP**
+> *标签* **PROC** ⟦*远处*⟧⟦*language-type*⟧⟦*visibility*⟧⟦ __\<__ *prologuearg* __>__ ⟧⟦**使用** *reglist*⟧⟦ __，__ *参数*⟦ __：__ *tag*⟧ .。。⟧\
+> ⟦**FRAME** ⟦ __：__ *ehandler-address*⟧⟧ \
+> *语句*\
+> *标签* **ENDP**
 
 ## <a name="remarks"></a>备注
 
-⟦**FRAME** ⟦ __:__ *ehandler-address*⟧ ⟧ is only valid with ml64.exe, and causes MASM to generate a function table entry in .pdata and unwind information in .xdata for a function's structured exception handling unwind behavior.
+⟦**FRAME** ⟦ __：__ *ehandler-address*⟧⟧仅对 ml64.exe 有效，并使 MASM 在 pdata 中生成函数表项，xdata 中的展开信息用于函数的结构化异常处理展开行为。
 
-When the **FRAME** attribute is used, it must be followed by an [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) directive.
+当使用**FRAME**属性时，它必须后跟[。ENDPROLOG](../../assembler/masm/dot-endprolog.md)指令。
 
-See [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md) for more information on using ml64.exe.
+有关使用 ml64.exe 的详细信息，请参阅[MASM （ml64.exe）](../../assembler/masm/masm-for-x64-ml64-exe.md) 。
 
 ## <a name="example"></a>示例
 
@@ -54,7 +54,7 @@ _text ENDS
 END
 ```
 
-The above code will emit the following function table and unwind information:
+上面的代码将发出以下函数表和展开信息：
 
 ```Output
 FileHeader->Machine 34404
@@ -77,6 +77,6 @@ Dumping Unwind Information for file ex2.exe
       Code offset: 0x01, PUSH_NONVOL, register=rbp
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[指令参考](../../assembler/masm/directives-reference.md)

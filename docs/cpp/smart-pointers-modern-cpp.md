@@ -12,11 +12,11 @@ ms.locfileid: "74303354"
 ---
 # <a name="smart-pointers-modern-c"></a>智能指针（现代 C++）
 
-在现代 C++ 编程中，标准库包含智能指针，该指针用于确保程序不存在内存和资源泄漏且是异常安全的。
+在新式C++编程中，标准库包含*智能指针*，这些指针用于帮助确保程序不会出现内存和资源泄漏，并具有异常安全。
 
 ## <a name="uses-for-smart-pointers"></a>智能指针的使用
 
-智能指针在[\<内存 >](../standard-library/memory.md)头文件的 `std` 命名空间中定义。 它们对 [RAII](objects-own-resources-raii.md)或*获取资源即初始化*编程惯用法至关重要。 此习惯用法的主要目的是确保资源获取与对象初始化同时发生，从而能够创建该对象的所有资源并在某行代码中准备就绪。 实际上，RAII 的主要原则是为将任何堆分配资源（例如，动态分配内存或系统对象句柄）的所有权提供给其析构函数包含用于删除或释放资源的代码以及任何相关清理代码的堆栈分配对象。
+智能指针在[\<内存 >](../standard-library/memory.md)头文件的 `std` 命名空间中定义。 它们对于[RAII](objects-own-resources-raii.md)或*资源获取是初始化*编程编程至关重要。 此习惯用法的主要目的是确保资源获取与对象初始化同时发生，从而能够创建该对象的所有资源并在某行代码中准备就绪。 实际上，RAII 的主要原则是为将任何堆分配资源（例如，动态分配内存或系统对象句柄）的所有权提供给其析构函数包含用于删除或释放资源的代码以及任何相关清理代码的堆栈分配对象。
 
 大多数情况下，当初始化原始指针或资源句柄以指向实际资源时，会立即将指针传递给智能指针。 在现代 C++ 中，原始指针仅用于范围有限的小代码块、循环或者性能至关重要且不会混淆所有权的 Helper 函数中。
 
@@ -33,7 +33,7 @@ C++ 智能指针思路类似于在语言（如 C#）中创建对象的过程：�
 > [!IMPORTANT]
 >  请始终在单独的代码行上创建智能指针，而绝不在参数列表中创建智能指针，这样就不会由于某些参数列表分配规则而发生轻微泄露资源的情况。
 
-下面的示例演示如何`unique_ptr`从 C++ 标准库智能指针类型无法用于将指针封装到大型对象。
+下面的示例演示如何使用C++标准库中的 `unique_ptr` 智能指针类型封装指向大型对象的指针。
 
 [!code-cpp[smart_pointers_intro#2](codesnippet/CPP/smart-pointers-modern-cpp_2.cpp)]
 
@@ -55,7 +55,7 @@ C++ 智能指针思路类似于在语言（如 C#）中创建对象的过程：�
 
 [!code-cpp[smart_pointers_intro#3](codesnippet/CPP/smart-pointers-modern-cpp_3.cpp)]
 
-智能指针通常提供直接访问其原始指针的方法。 C++ 标准库智能指针具有`get`用于此目的，成员函数和`CComPtr`具有公共`p`类成员。 通过提供对基础指针的直接访问，你可以使用智能指针管理你自己的代码中的内存，还能将原始指针传递给不支持智能指针的代码。
+智能指针通常提供直接访问其原始指针的方法。 C++标准库智能指针具有用于此目的的 `get` 成员函数，并且 `CComPtr` 具有公共 `p` 类成员。 通过提供对基础指针的直接访问，你可以使用智能指针管理你自己的代码中的内存，还能将原始指针传递给不支持智能指针的代码。
 
 [!code-cpp[smart_pointers_intro#4](codesnippet/CPP/smart-pointers-modern-cpp_4.cpp)]
 
@@ -68,7 +68,7 @@ C++ 智能指针思路类似于在语言（如 C#）中创建对象的过程：�
 使用这些智能指针作为将指针封装为纯旧 C++ 对象 (POCO) 的首选项。
 
 - `unique_ptr`<br/>
-   只允许基础指针的一个所有者。 除非你确信需要 `shared_ptr`，否则请将该指针用作 POCO 的默认选项。 可以移到新所有者，但不会复制或共享。 替换已弃用的 `auto_ptr`。 与 `boost::scoped_ptr` 比较。 `unique_ptr` 小巧高效;大小为一个指针且支持 rvalue 引用，实现快速插入和 C++ 标准库集合的检索。 头文件：`<memory>`。 有关详细信息，请参阅[如何： 创建和使用 unique_ptr 实例](how-to-create-and-use-unique-ptr-instances.md)和[unique_ptr 类](../standard-library/unique-ptr-class.md)。
+   只允许基础指针的一个所有者。 除非你确信需要 `shared_ptr`，否则请将该指针用作 POCO 的默认选项。 可以移到新所有者，但不会复制或共享。 替换已弃用的 `auto_ptr`。 与 `boost::scoped_ptr` 比较。 `unique_ptr` 较小且高效，大小是一个指针，它支持用于快速插入和检索C++标准库集合的右值引用。 头文件：`<memory>`。 有关详细信息，请参阅[如何：创建和使用 Unique_ptr 实例](how-to-create-and-use-unique-ptr-instances.md)和[unique_ptr 类](../standard-library/unique-ptr-class.md)。
 
 - `shared_ptr`<br/>
    采用引用计数的智能指针。 如果你想要将一个原始指针分配给多个所有者（例如，从容器返回了指针副本又想保留原始指针时），请使用该指针。 直至所有 `shared_ptr` 所有者超出了范围或放弃所有权，才会删除原始指针。 大小为两个指针；一个用于对象，另一个用于包含引用计数的共享控制块。 头文件：`<memory>`。 有关详细信息，请参阅[如何：创建和使用 Shared_ptr 实例](how-to-create-and-use-shared-ptr-instances.md)和[shared_ptr 类](../standard-library/shared-ptr-class.md)。

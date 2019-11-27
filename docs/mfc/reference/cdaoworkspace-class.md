@@ -83,46 +83,46 @@ class CDaoWorkspace : public CObject
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[CDaoWorkspace::CDaoWorkspace](#cdaoworkspace)|构造工作区对象。 然后，调用 `Create` 或 `Open`。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CDaoWorkspace::Append](#append)|将新创建的工作区追加到数据库引擎的工作区集合。|
-|[CDaoWorkspace::BeginTrans](#begintrans)|开始一个新事务，该事务应用于工作区中打开的所有数据库。|
-|[CDaoWorkspace::Close](#close)|关闭工作区及其包含的所有对象。 挂起的事务将回滚。|
-|[CDaoWorkspace::CommitTrans](#committrans)|完成当前事务，并保存所做的更改。|
+|[CDaoWorkspace：： Append](#append)|将新创建的工作区追加到数据库引擎的工作区集合。|
+|[CDaoWorkspace：： BeginTrans](#begintrans)|开始一个新事务，该事务应用于工作区中打开的所有数据库。|
+|[CDaoWorkspace：： Close](#close)|关闭工作区及其包含的所有对象。 挂起的事务将回滚。|
+|[CDaoWorkspace：： CommitTrans](#committrans)|完成当前事务，并保存所做的更改。|
 |[CDaoWorkspace::CompactDatabase](#compactdatabase)|压缩（或复制）数据库。|
-|[CDaoWorkspace::Create](#create)|创建新的 DAO 工作区对象。|
+|[CDaoWorkspace：： Create](#create)|创建新的 DAO 工作区对象。|
 |[CDaoWorkspace::GetDatabaseCount](#getdatabasecount)|返回工作区的数据库集合中的 DAO 数据库对象数。|
-|[CDaoWorkspace::GetDatabaseInfo](#getdatabaseinfo)|返回有关工作区的数据库集合中定义的指定 DAO 数据库的信息。|
+|[CDaoWorkspace：： Oomads.getdatabaseinfo](#getdatabaseinfo)|返回有关工作区的数据库集合中定义的指定 DAO 数据库的信息。|
 |[CDaoWorkspace::GetIniPath](#getinipath)|返回 Microsoft Jet 数据库引擎的初始化设置在 Windows 注册表中的位置。|
 |[CDaoWorkspace::GetIsolateODBCTrans](#getisolateodbctrans)|返回一个值，该值指示是否通过强制多个到数据源的连接隔离涉及同一 ODBC 数据源的多个事务。|
-|[CDaoWorkspace::GetLoginTimeout](#getlogintimeout)|返回当用户尝试登录到 ODBC 数据库时发生错误之前等待的秒数。|
-|[CDaoWorkspace::GetName](#getname)|返回工作区对象的用户定义名称。|
-|[CDaoWorkspace::GetUserName](#getusername)|返回在创建工作区时指定的用户名。 这是工作区所有者的名称。|
-|[CDaoWorkspace::GetVersion](#getversion)|返回一个字符串，该字符串包含与工作区关联的数据库引擎的版本。|
+|[CDaoWorkspace：： GetLoginTimeout](#getlogintimeout)|返回当用户尝试登录到 ODBC 数据库时发生错误之前等待的秒数。|
+|[CDaoWorkspace：： GetName](#getname)|返回工作区对象的用户定义名称。|
+|[CDaoWorkspace：： GetUserName](#getusername)|返回在创建工作区时指定的用户名。 这是工作区所有者的名称。|
+|[CDaoWorkspace：： GetVersion](#getversion)|返回一个字符串，该字符串包含与工作区关联的数据库引擎的版本。|
 |[CDaoWorkspace::GetWorkspaceCount](#getworkspacecount)|返回数据库引擎的工作区集合中 DAO 工作区对象的数量。|
 |[CDaoWorkspace::GetWorkspaceInfo](#getworkspaceinfo)|返回有关在数据库引擎的工作区集合中定义的指定 DAO 工作区的信息。|
-|[CDaoWorkspace::Idle](#idle)|允许数据库引擎执行后台任务。|
-|[CDaoWorkspace::IsOpen](#isopen)|如果工作区打开，则返回非零值。|
-|[CDaoWorkspace::Open](#open)|显式打开与 DAO 的默认工作区关联的工作区对象。|
+|[CDaoWorkspace：： Idle](#idle)|允许数据库引擎执行后台任务。|
+|[CDaoWorkspace：： IsOpen](#isopen)|如果工作区打开，则返回非零值。|
+|[CDaoWorkspace：： Open](#open)|显式打开与 DAO 的默认工作区关联的工作区对象。|
 |[CDaoWorkspace::RepairDatabase](#repairdatabase)|尝试修复已损坏的数据库。|
-|[CDaoWorkspace::Rollback](#rollback)|结束当前事务，不保存所做的更改。|
+|[CDaoWorkspace：： Rollback](#rollback)|结束当前事务，不保存所做的更改。|
 |[CDaoWorkspace::SetDefaultPassword](#setdefaultpassword)|设置在创建工作区对象时，如果没有特定密码，数据库引擎所使用的密码。|
 |[CDaoWorkspace::SetDefaultUser](#setdefaultuser)|设置在创建工作区对象时，数据库引擎使用的用户名没有特定的用户名。|
 |[CDaoWorkspace::SetIniPath](#setinipath)|设置 Microsoft Jet 数据库引擎的初始化设置在 Windows 注册表中的位置。|
 |[CDaoWorkspace::SetIsolateODBCTrans](#setisolateodbctrans)|指定是否隔离涉及同一 ODBC 数据源的多个事务，方法是强制执行到数据源的多个连接。|
-|[CDaoWorkspace::SetLoginTimeout](#setlogintimeout)|设置当用户尝试登录到 ODBC 数据源时发生错误之前等待的秒数。|
+|[CDaoWorkspace：： SetLoginTimeout](#setlogintimeout)|设置当用户尝试登录到 ODBC 数据源时发生错误之前等待的秒数。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CDaoWorkspace::m_pDAOWorkspace](#m_pdaoworkspace)|指向基础 DAO 工作区对象。|
+|[CDaoWorkspace：： m_pDAOWorkspace](#m_pdaoworkspace)|指向基础 DAO 工作区对象。|
 
 ## <a name="remarks"></a>备注
 
@@ -143,7 +143,7 @@ class CDaoWorkspace : public CObject
 
 - 访问数据库引擎的工作区集合，该集合存储追加到它的所有活动工作区。 你还可以创建和使用工作区，而无需将其追加到集合。
 
-## <a name="security"></a>安全
+## <a name="security"></a>安全性
 
 MFC 不实现 DAO 中的用户和组集合，这些集合用于安全控制。 如果需要 DAO 的这些方面，则必须通过直接调用 DAO 接口自行进行编程。 有关信息，请参阅[技术说明 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)。
 
@@ -191,7 +191,7 @@ MFC 在下列情况下隐式使用 DAO 的默认工作区：
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxdao.h
+**标头：** afxdao
 
 ##  <a name="append"></a>CDaoWorkspace：： Append
 
@@ -653,7 +653,7 @@ static void PASCAL Idle(int nAction = dbFreeLocks);
 
 ### <a name="parameters"></a>参数
 
-*nAction*<br/>
+*N 操作*<br/>
 在空闲处理期间要执行的操作。 目前 `dbFreeLocks`唯一有效的操作。
 
 ### <a name="remarks"></a>备注

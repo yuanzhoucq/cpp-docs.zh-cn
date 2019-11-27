@@ -15,7 +15,7 @@ ms.locfileid: "74392790"
 ---
 # <a name="xmmword"></a>XMMWORD
 
-Used for 128-bit multimedia operands with MMX and SSE (XMM) instructions.
+用于具有 MMX 和 SSE （XMM）说明的128位多媒体操作数。
 
 ## <a name="syntax"></a>语法
 
@@ -23,7 +23,7 @@ Used for 128-bit multimedia operands with MMX and SSE (XMM) instructions.
 
 ## <a name="remarks"></a>备注
 
-**XMMWORD** is intended to represent the same type as [__m128](../../cpp/m128.md).
+**XMMWORD**用于表示与[__m128](../../cpp/m128.md)相同的类型。
 
 ## <a name="example"></a>示例
 

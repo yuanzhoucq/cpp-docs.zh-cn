@@ -13,40 +13,40 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398113"
 ---
-# <a name="model-32-bit-masm"></a>.MODEL (32-bit MASM)
+# <a name="model-32-bit-masm"></a>.模型（32位 MASM）
 
-初始化程序内存模型。 (32-bit MASM only.)
+初始化程序内存模型。 （仅限32位 MASM。）
 
 ## <a name="syntax"></a>语法
 
-> **.MODEL** *memory-model* ⟦ __,__ *language-type*⟧ ⟦ __,__ *stack-option*⟧
+> **.模型***内存-模型*⟦ __，__ *语言类型*⟧⟦ __，__ *堆栈选项*⟧
 
 ### <a name="parameters"></a>参数
 
-*memory-model*\
+*内存模型*\
 必需参数，确定代码和数据指针的大小。
 
-*language-type*\
+*语言类型*\
 可选参数，设置过程和公共符号的调用和命名约定。
 
-*stack-option*\
+*堆栈选项*\
 可选参数。
 
-*stack-option* is not used if *memory-model* is **FLAT**.
+如果*内存模式*为**平面**，则不使用*堆栈选项*。
 
-Specifying **NEARSTACK** groups the stack segment into a single physical segment (**DGROUP**) along with data. The stack segment register (**SS**) is assumed to hold the same address as the data segment register (**DS**). **FARSTACK** does not group the stack with **DGROUP**; thus **SS** does not equal **DS**.
+指定**NEARSTACK**将堆栈段与数据一起分组到单个物理段（**DGROUP**）。 假定堆栈段寄存器（**SS**）包含与数据段寄存器（**DS**）相同的地址。 **FARSTACK**不会将堆栈分组到**DGROUP**;因此， **SS**不等于**DS**。
 
 ## <a name="remarks"></a>备注
 
-**.MODEL** is not used in [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+**.** 在[MASM for x64 （ml64.exe）](../../assembler/masm/masm-for-x64-ml64-exe.md)中不使用模型。
 
 下表列出了在面向 16 位和 32 位平台时每个参数的可能的值：
 
 |参数|32 位值|16 位值（支持早期的 16 位开发）|
 |---------------|--------------------|----------------------------------------------------------------|
-|*memory-model*|**FLAT**|**TINY**, **SMALL**, **COMPACT**, **MEDIUM**, **LARGE**, **HUGE**, **FLAT**|
-|*language-type*|**C**, **STDCALL**|**C**, **BASIC**, **FORTRAN**, **PASCAL**, **SYSCALL**, **STDCALL**|
-|*stack-option*|未使用|**NEARSTACK**, **FARSTACK**|
+|*内存模型*|**降**|小型、**小型、小型**、**中型**、**大型、大规模**、**平面**|
+|*语言类型*|**C**， **STDCALL**|**C**， **BASIC**， **FORTRAN**， **PASCAL**， **SYSCALL**， **STDCALL**|
+|*stack 选项*|未使用|**NEARSTACK**、 **FARSTACK**|
 
 ## <a name="code"></a>代码
 
@@ -86,6 +86,6 @@ fxn ENDP
 end
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [指令参考](../../assembler/masm/directives-reference.md)

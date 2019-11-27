@@ -1,5 +1,5 @@
 ---
-title: operator &amp;
+title: 运算符 &amp;
 ms.date: 08/30/2018
 f1_keywords:
 - '&'
@@ -16,14 +16,14 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397091"
 ---
-# <a name="operator-amp"></a>operator &amp;
+# <a name="operator-amp"></a>运算符 &amp;
 
-Bitwise **AND**. Used only within [.IF](../../assembler/masm/dot-if.md), [.WHILE](../../assembler/masm/dot-while.md), or [.REPEAT](../../assembler/masm/dot-repeat.md) blocks and evaluated at run time, not at assembly time.
+按位**and**。 仅在内使用[。如果](../../assembler/masm/dot-if.md)为，则为[。WHILE](../../assembler/masm/dot-while.md)或[。重复](../../assembler/masm/dot-repeat.md)块并在运行时计算，而不是在程序集时间计算。
 
 ## <a name="syntax"></a>语法
 
 > *expression1* **&** *expression2*
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [运算符参考](../../assembler/masm/operators-reference.md)

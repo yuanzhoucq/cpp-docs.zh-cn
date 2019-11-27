@@ -17,17 +17,17 @@ ms.locfileid: "74398370"
 ---
 # <a name="errdif-errdifi"></a>.ERRDIF、.ERRDIFI
 
-Generates an error if the text items are different.
+如果文本项不同，则生成错误。
 
 ## <a name="syntax"></a>语法
 
-> **.ERRDIF** *textitem1* __,__ *textitem2* ⟦ __,__ *message*⟧\
-> **.ERRDIFI** *textitem1* __,__ *textitem2* ⟦ __,__ *message*⟧
+> **..Errdif** *textitem1* __、__ *textitem2* ⟦ __、__ *message*⟧ \
+> **.ERRDIFI** *textitem1* __、__ *textitem2* ⟦ __、__ *message*⟧
 
 ## <a name="remarks"></a>备注
 
-If **.ERRDIFI** is given, the comparison is case insensitive.
+如果为 **。给定 ERRDIFI** ，比较不区分大小写。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[指令参考](../../assembler/masm/directives-reference.md)

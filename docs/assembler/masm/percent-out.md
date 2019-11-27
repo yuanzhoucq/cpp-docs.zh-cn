@@ -15,12 +15,12 @@ ms.locfileid: "74395052"
 ---
 # <a name="out"></a>%OUT
 
-See [ECHO](../../assembler/masm/echo.md).
+请参阅[ECHO](../../assembler/masm/echo.md)。
 
 ## <a name="syntax"></a>语法
 
 > **%OUT**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](directives-reference.md)
+[指令参考](directives-reference.md)

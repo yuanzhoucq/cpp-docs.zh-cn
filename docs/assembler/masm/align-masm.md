@@ -15,7 +15,7 @@ ms.locfileid: "74399275"
 ---
 # <a name="align-masm"></a>ALIGN (MASM)
 
-The **ALIGN** directive aligns the next data element or instruction on an address that is a multiple of its parameter. The parameter must be a power of 2 (for example, 1, 2, 4, and so on) that is less than or equal to the segment alignment.
+**ALIGN**指令将下一个数据元素或指令与作为其参数的倍数的地址对齐。 参数必须是2的幂（例如，1、2、4等等），小于或等于段对齐。
 
 ## <a name="syntax"></a>语法
 
@@ -23,13 +23,13 @@ The **ALIGN** directive aligns the next data element or instruction on an addres
 
 ## <a name="remarks"></a>备注
 
-The **ALIGN** directive allows you to specify the beginning offset of a data element or an instruction. Aligned data can improve performance, at the expense of wasted space between data elements. Large performance improvements can be seen when data accesses are on boundaries that fit within cache lines. Accesses on natural boundaries for native types means less time spent in internal hardware realignment microcode.
+**ALIGN**指令允许您指定数据元素或指令的开始偏移量。 对齐的数据可以提高性能，但代价是数据元素之间浪费的空间。 当数据访问位于缓存行内的边界时，可以查看较大的性能改进。 本机类型的自然边界访问意味着在内部硬件调整微码中花费的时间更少。
 
-The need for aligned instructions is rare on modern processors that use a flat addressing model, but may be required for jump targets in older code for other addressing models.
+在使用平面寻址模型的新式处理器上，很少需要对齐说明，但对于其他寻址模型，较旧代码中的跳转目标可能需要这些说明。
 
-When data is aligned, the skipped space is padded with zeroes. When instructions are aligned, the skipped space is filled with appropriately-sized NOP instructions.
+当数据对齐时，跳过的空间用零填充。 对齐指令时，将用适当大小的 NOP 指令填充跳过的空间。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[EVEN](even.md)\
-[Directives reference](directives-reference.md)
+[即使](even.md)\
+[指令参考](directives-reference.md)

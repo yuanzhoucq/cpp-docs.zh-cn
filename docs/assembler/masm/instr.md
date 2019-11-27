@@ -15,16 +15,16 @@ ms.locfileid: "74397315"
 ---
 # <a name="instr"></a>INSTR
 
-Finds the first occurrence of *textitem2* in *textitem1*.
+在*textitem1*中查找*textitem2*的第一个匹配项。
 
 ## <a name="syntax"></a>语法
 
-> *name* **INSTR** ⟦*position* __,__ ⟧ *textitem1* __,__ *textitem2*
+> *name* **INSTR** ⟦*position* __，__ ⟧ *textitem1* __，__ *textitem2*
 
 ## <a name="remarks"></a>备注
 
-The starting *position* is optional. Each text item can be a literal string, a constant preceded by a **%** , or the string returned by a macro function.
+起始*位置*是可选的。 每个文本项可以是文本字符串、前面带有 **%** 的常量或宏函数返回的字符串。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](directives-reference.md)
+[指令参考](directives-reference.md)

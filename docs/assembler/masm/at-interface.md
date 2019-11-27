@@ -13,14 +13,14 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398975"
 ---
-# <a name="interface"></a>\@Interface
+# <a name="interface"></a>\@接口
 
-Information about the language parameters (numeric equate).
+有关语言参数（数值等同）的信息。
 
 ## <a name="syntax"></a>语法
 
-> **\@Interface**
+> **\@接口**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Symbols reference](symbols-reference.md)
+[符号引用](symbols-reference.md)

@@ -16,12 +16,12 @@ ms.locfileid: "74396584"
 ---
 # <a name="operator-not"></a>运算符 NOT
 
-Returns *expression* with all bits reversed.
+返回所有位均反转的*expression* 。
 
 ## <a name="syntax"></a>语法
 
-> **NOT** *expression*
+> **NOT** *表达式*
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Operators reference](operators-reference.md)
+[运算符引用](operators-reference.md)

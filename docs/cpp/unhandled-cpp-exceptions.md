@@ -17,7 +17,7 @@ ms.locfileid: "74246063"
 ---
 # <a name="unhandled-c-exceptions"></a>未处理的 C++ 异常
 
-If a matching handler (or ellipsis **catch** handler) cannot be found for the current exception, the predefined `terminate` run-time function is called. (You can also explicitly call `terminate` in any of your handlers.) The default action of `terminate` is to call `abort`. 如果你希望 `terminate` 在退出应用程序之前调用程序中的某些其他函数，则用被调用函数的名称作为其单个自变量调用 `set_terminate` 函数。 您可以在程序的任何点调用 `set_terminate`。 The `terminate` routine always calls the last function given as an argument to `set_terminate`.
+如果在当前异常中找不到匹配的处理程序（或省略号**catch**处理程序），则调用预定义的 `terminate` 运行时函数。 （还可以在任何处理程序中显式调用 `terminate`。）`terminate` 的默认操作是调用 `abort`。 如果你希望 `terminate` 在退出应用程序之前调用程序中的某些其他函数，则用被调用函数的名称作为其单个自变量调用 `set_terminate` 函数。 您可以在程序的任何点调用 `set_terminate`。 `terminate` 例程始终调用作为 `set_terminate`参数提供的最后一个函数。
 
 ## <a name="example"></a>示例
 
@@ -54,6 +54,6 @@ term_func was called by terminate.
 
 `term_func` 函数最好是通过调用 `exit` 来终止程序或当前线程。 如果它没有这样做，而是返回到其调用方，则调用 `abort`。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)
+[异常C++和错误处理的新式最佳实践](../cpp/errors-and-exception-handling-modern-cpp.md)

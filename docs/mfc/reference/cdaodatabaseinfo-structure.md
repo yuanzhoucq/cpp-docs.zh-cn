@@ -102,7 +102,7 @@ struct CDaoDatabaseInfo
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxdao.h
+**标头：** afxdao
 
 ## <a name="see-also"></a>另请参阅
 

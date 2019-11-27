@@ -17,17 +17,17 @@ ms.locfileid: "74397381"
 ---
 # <a name="ifidn-ifidni"></a>IFIDN、IFIDNI
 
-Grants assembly if the text items are identical.
+如果文本项相同，则授予程序集。
 
 ## <a name="syntax"></a>语法
 
-> **IFIDN** *textitem1* __,__ *textitem2*\
-> **IFIDNI** *textitem1* __,__ *textitem2*
+> **IFIDN** *textitem1* __，__ *textitem2*\
+> **IFIDNI** *textitem1* __，__ *textitem2*
 
 ## <a name="remarks"></a>备注
 
-If **IFIDNI** is given, the comparison is case insensitive. See [IF](../../assembler/masm/if-masm.md) for complete syntax.
+如果给定了**IFIDNI** ，则比较不区分大小写。 [若](../../assembler/masm/if-masm.md)要获取完整的语法，请参阅。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[指令参考](../../assembler/masm/directives-reference.md)

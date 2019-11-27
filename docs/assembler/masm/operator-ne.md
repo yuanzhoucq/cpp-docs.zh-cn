@@ -17,12 +17,12 @@ ms.locfileid: "74396620"
 ---
 # <a name="operator-ne"></a>运算符 NE
 
-Returns true (-1) if *expression1* does not equal *expression2*, or returns false (0) if it does.
+如果*表达式*1 不等于*表达式*2，则返回 true （-1），如果它存在，则返回 false （0）。
 
 ## <a name="syntax"></a>语法
 
-> *expression1* **NE** *expression2*
+> *表达式*2 **NE** 2
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Operators reference](operators-reference.md)
+[运算符引用](operators-reference.md)

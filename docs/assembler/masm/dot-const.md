@@ -15,7 +15,7 @@ ms.locfileid: "74398569"
 ---
 # <a name="const"></a>.CONST
 
-When used with [.MODEL](../../assembler/masm/dot-model.md), starts a constant data segment (with segment name **CONST**).
+与一起使用时[。模型](../../assembler/masm/dot-model.md)，则启动常量数据段（带有段名**CONST**）。
 
 ## <a name="syntax"></a>语法
 
@@ -23,8 +23,8 @@ When used with [.MODEL](../../assembler/masm/dot-model.md), starts a constant da
 
 ## <a name="remarks"></a>备注
 
-This segment has the read-only attribute.
+此段具有只读特性。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [指令参考](../../assembler/masm/directives-reference.md)

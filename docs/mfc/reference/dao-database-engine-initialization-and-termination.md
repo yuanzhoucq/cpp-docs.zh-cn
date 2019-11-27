@@ -23,7 +23,7 @@ DAO 与 Access 数据库结合使用，并受 Office 2013 的支持。 DAO 3.6 �
 |[AfxDaoInit](#afxdaoinit)|初始化 DAO 数据库引擎。|
 |[AfxDaoTerm](#afxdaoterm)|终止 DAO 数据库引擎。|
 
-##  <a name="afxdaoinit"></a>  AfxDaoInit
+##  <a name="afxdaoinit"></a>AfxDaoInit
 
 此函数初始化 DAO 数据库引擎。
 
@@ -44,7 +44,7 @@ throw(CDaoException*);
 
   **标头**afxdao
 
-##  <a name="afxdaoterm"></a>  AfxDaoTerm
+##  <a name="afxdaoterm"></a>AfxDaoTerm
 
 此函数终止 DAO 数据库引擎。
 

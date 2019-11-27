@@ -13,14 +13,14 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398586"
 ---
-# <a name="break-32-bit-masm"></a>.BREAK (32-bit MASM)
+# <a name="break-32-bit-masm"></a>.BREAK （32位 MASM）
 
-Generates code to terminate a [.WHILE](../../assembler/masm/dot-while.md) or [.REPEAT](../../assembler/masm/dot-repeat.md) block if *condition* is true. (32-bit MASM only.)
+生成终止的代码[。WHILE](../../assembler/masm/dot-while.md)或[。](../../assembler/masm/dot-repeat.md)如果*condition*为 TRUE，则重复 block。 （仅限32位 MASM。）
 
 ## <a name="syntax"></a>语法
 
-> **.BREAK** ⟦ **.IF** *condition*⟧
+> **.断开**⟦ **。如果***条件*⟧
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [指令参考](../../assembler/masm/directives-reference.md)

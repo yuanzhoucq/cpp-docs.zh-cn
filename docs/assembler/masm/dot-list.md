@@ -15,7 +15,7 @@ ms.locfileid: "74398188"
 ---
 # <a name="list"></a>.LIST
 
-Starts listing of statements.
+开始语句列表。
 
 ## <a name="syntax"></a>语法
 
@@ -25,6 +25,6 @@ Starts listing of statements.
 
 这是默认设置。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](directives-reference.md)
+[指令参考](directives-reference.md)

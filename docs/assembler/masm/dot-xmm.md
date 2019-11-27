@@ -13,14 +13,14 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397790"
 ---
-# <a name="xmm-32-bit-masm"></a>.XMM (32-bit MASM)
+# <a name="xmm-32-bit-masm"></a>.XMM （32位 MASM）
 
-Enables assembly of Internet Streaming SIMD Extension instructions. (32-bit MASM only.)
+启用 Internet 流式处理 SIMD 扩展说明的程序集。 （仅限32位 MASM。）
 
 ## <a name="syntax"></a>语法
 
 > **.XMM**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](directives-reference.md)
+[指令参考](directives-reference.md)

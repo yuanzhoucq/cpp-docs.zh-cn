@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - C4235
 ms.assetid: d4214799-d62c-4674-b4e2-9e201c303303
-ms.openlocfilehash: 80ad388b26b2b972aa1301c1f335d0361a75f15f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e3cb2e40ed42b24ee52252003b26ec09cd86710
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401041"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541764"
 ---
 # <a name="compiler-warning-level-4-c4235"></a>编译器警告（等级 4）C4235
 
-使用了非标准扩展: keyword 关键字不支持此体系结构
+使用了非标准扩展：此体系结构不支持关键字 "关键字"
 
-编译器不支持您使用的关键字。
+编译器不支持所使用的关键字。
 
-此警告被自动提升为错误。 如果你想要修改此行为，使用[#pragma 警告](../../preprocessor/warning.md)。 例如，若要使 C4235 等级 2 警告，可使用以下代码行
+此警告会自动提升为错误。 如果要修改此行为，请使用[#pragma 警告](../../preprocessor/warning.md)。 例如，若要使 C4235 成为第2级警告，请使用以下代码行
 
-```
+```cpp
 #pragma warning(2:4235)
 ```
 
-在你的源代码文件。
+在源代码文件中。

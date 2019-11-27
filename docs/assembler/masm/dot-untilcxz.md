@@ -13,10 +13,10 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397855"
 ---
-# <a name="untilcxz-32-bit-masm"></a>.UNTILCXZ (32-bit MASM)
+# <a name="untilcxz-32-bit-masm"></a>..UNTILCXZ （32）
 
-(32-bit MASM only.) See [.REPEAT](../../assembler/masm/dot-repeat.md).
+（仅限32位 MASM。）请参阅[。重复](../../assembler/masm/dot-repeat.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](directives-reference.md)
+[指令参考](directives-reference.md)

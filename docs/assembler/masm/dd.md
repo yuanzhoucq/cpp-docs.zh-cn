@@ -15,16 +15,16 @@ ms.locfileid: "74398802"
 ---
 # <a name="dd"></a>DD
 
-Allocates and optionally initializes a double word (4 bytes) of storage for each *initializer*. **DD** is a synonym of [DWORD](../../assembler/masm/dword.md).
+为每个*初始值设定*分配和（可选）初始化双字（4字节）的存储。 **DD**是[DWORD](../../assembler/masm/dword.md)的同义词。
 
 ## <a name="syntax"></a>语法
 
-> ⟦*name*⟧ **DD** *initializer* ⟦ __,__ *initializer* ...⟧
+> ⟦*name*⟧ **DD** *初始值设定项*⟦ __，__ *初始值设定项*.。。⟧
 
 ## <a name="remarks"></a>备注
 
-Can also be used as a type specifier anywhere a type is legal.
+在类型合法的任何位置，还可以用作类型说明符。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [指令参考](../../assembler/masm/directives-reference.md)

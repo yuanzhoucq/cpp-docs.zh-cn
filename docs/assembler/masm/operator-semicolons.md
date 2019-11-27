@@ -17,12 +17,12 @@ ms.locfileid: "74396459"
 ---
 # <a name="operator-"></a>运算符 ;;
 
-Treats *text* as a comment in a macro that appears only in the macro definition. The listing does not show *text* where the macro is expanded.
+在宏中将*文本*视为仅出现在宏定义中的注释。 此列表不会显示宏展开的*文本*。
 
 ## <a name="syntax"></a>语法
 
-> **;;** *text*
+> **;;** *文本*
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Operators reference](operators-reference.md)
+[运算符引用](operators-reference.md)

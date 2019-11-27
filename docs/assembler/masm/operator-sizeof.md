@@ -16,12 +16,12 @@ ms.locfileid: "74395517"
 ---
 # <a name="operator-sizeof"></a>运算符 SIZEOF
 
-Returns the number of bytes in *variable* or *type*.
+返回*变量*或*类型*中的字节数。
 
 ## <a name="syntax"></a>语法
 
-> **SIZEOF** {*variable* | *type*}
+> **SIZEOF** {*variable* | *类型*}
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Operators reference](operators-reference.md)
+[运算符引用](operators-reference.md)

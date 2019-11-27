@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4131
 ms.assetid: 7903b3e1-454f-4be2-aa9b-230992f96a2d
-ms.openlocfilehash: 24872bb0b42de77dde358dc29f99826b41638628
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 266d62126d9154cd87706d3124e69e107bbdefde
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401340"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541579"
 ---
 # <a name="compiler-warning-level-4-c4131"></a>编译器警告（等级 4）C4131
 
@@ -23,7 +23,7 @@ ms.locfileid: "62401340"
 
 下面的示例展示一个旧样式的函数声明：
 
-```
+```c
 // C4131.c
 // compile with: /W4 /c
 void addrec( name, id ) // C4131 expected
@@ -34,7 +34,7 @@ int id;
 
 下面的示例展示一个原型形式：
 
-```
+```c
 void addrec( char *name, int id )
 { }
 ```

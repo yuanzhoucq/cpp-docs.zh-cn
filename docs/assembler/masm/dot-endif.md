@@ -13,7 +13,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398470"
 ---
-# <a name="endif-32-bit-masm"></a>.ENDIF (32-bit MASM)
+# <a name="endif-32-bit-masm"></a>.ENDIF （32位 MASM）
 
 ## <a name="syntax"></a>语法
 
@@ -21,8 +21,8 @@ ms.locfileid: "74398470"
 
 ## <a name="remarks"></a>备注
 
-(32-bit MASM only.) See [.IF](../../assembler/masm/dot-if.md).
+（仅限32位 MASM。）请参阅[。如果](../../assembler/masm/dot-if.md)为。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [指令参考](../../assembler/masm/directives-reference.md)

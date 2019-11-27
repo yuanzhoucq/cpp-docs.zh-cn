@@ -15,16 +15,16 @@ ms.locfileid: "74397643"
 ---
 # <a name="endp"></a>ENDP
 
-Marks the end of procedure *name* previously begun with **PROC**.
+标记前面以**PROC**开始的过程*名称*的结束。
 
 ## <a name="syntax"></a>语法
 
-> *name* **ENDP**
+> *名称* **ENDP**
 
 ## <a name="remarks"></a>备注
 
-See [PROC](../../assembler/masm/proc.md).
+请参阅[过程](../../assembler/masm/proc.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](directives-reference.md)
+[指令参考](directives-reference.md)

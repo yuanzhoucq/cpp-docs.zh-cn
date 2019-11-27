@@ -13,14 +13,14 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398601"
 ---
-# <a name="alpha-32-bit-masm"></a>.ALPHA (32-bit MASM)
+# <a name="alpha-32-bit-masm"></a>.ALPHA （32位 MASM）
 
-Orders segments alphabetically. (32-bit MASM only.)
+订单段按字母顺序排列。 （仅限32位 MASM。）
 
 ## <a name="syntax"></a>语法
 
 > **.ALPHA**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [指令参考](../../assembler/masm/directives-reference.md)

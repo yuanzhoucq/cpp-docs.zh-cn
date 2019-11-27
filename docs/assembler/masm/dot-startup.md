@@ -13,14 +13,14 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397891"
 ---
-# <a name="startup-32-bit-masm"></a>.STARTUP (32-bit MASM)
+# <a name="startup-32-bit-masm"></a>.启动（32位 MASM）
 
-Generates program start-up code. (32-bit MASM only.)
+生成程序启动代码。 （仅限32位 MASM。）
 
 ## <a name="syntax"></a>语法
 
 > **.STARTUP**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](directives-reference.md)
+[指令参考](directives-reference.md)

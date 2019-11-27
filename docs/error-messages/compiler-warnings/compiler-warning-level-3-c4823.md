@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4823
 ms.assetid: 8a77560d-dcea-4cae-aebb-8ebf1b4cef85
-ms.openlocfilehash: 28d490c341c4d14c2e6c03e13007b5a8be423622
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a96877252b0b7699f5e4033f8e695f4d9016a6c9
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401535"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541269"
 ---
 # <a name="compiler-warning-level-3-c4823"></a>编译器警告（等级 3）C4823
 
-function： 使用钉住指针但展开语义不会启用。 请考虑使用 /EHa
+"function"：使用钉住指针，但未启用展开语义。 考虑使用/EHa
 
-若要取消固定在块范围中声明钉住指针指向托管堆上的对象，编译器将模拟的"伪装"钉住指针具有析构函数，使该指针无效的局部类的析构函数的行为。 要启用对析构函数的调用引发异常后，你必须启用对象展开，可以通过执行此操作[/EHsc](../../build/reference/eh-exception-handling-model.md)。
+若要取消固定托管堆上的对象（由块范围中声明的固定指针所指向的对象），编译器将模拟局部类的析构函数的行为，"伪装" 钉住指针具有 nullifies 指针的析构函数。 若要在引发异常后启用对析构函数的调用，则必须启用对象展开，这可以通过使用[/ehsc](../../build/reference/eh-exception-handling-model.md)来执行。
 
-可以手动取消固定对象，并忽略该警告。
+你还可以手动取消固定对象并忽略该警告。
 
 ## <a name="example"></a>示例
 
 下面的示例生成 C4823。
 
-```
+```cpp
 // C4823.cpp
 // compile with: /clr /W3 /EHa-
 using namespace System;

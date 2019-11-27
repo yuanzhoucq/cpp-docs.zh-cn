@@ -16,12 +16,12 @@ ms.locfileid: "74396991"
 ---
 # <a name="operator-dup"></a>运算符 DUP
 
-Specifies *count* number of declarations of *initialvalue*.
+指定*initialvalue*的*声明数。*
 
 ## <a name="syntax"></a>语法
 
-> *count* **DUP** __(__ *initialvalue* ⟦ __,__ *initialvalue* ...⟧ __)__
+> *计数* **DUP** __（__ *initialvalue* ⟦ __，__ *initialvalue* .。。⟧ __）__
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Operators reference](../../assembler/masm/operators-reference.md)
+[运算符引用](../../assembler/masm/operators-reference.md)

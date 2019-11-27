@@ -79,44 +79,44 @@ class CDaoDatabase : public CObject
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CDaoDatabase::CDaoDatabase](#cdaodatabase)|构造 `CDaoDatabase` 对象。 调用 `Open` 将对象连接到数据库。|
+|[CDaoDatabase：： CDaoDatabase](#cdaodatabase)|构造 `CDaoDatabase` 对象。 调用 `Open` 将对象连接到数据库。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CDaoDatabase::CanTransact](#cantransact)|如果数据库支持事务，则返回非零值。|
-|[CDaoDatabase::CanUpdate](#canupdate)|如果 `CDaoDatabase` 对象可更新（非只读），则返回非零值。|
-|[CDaoDatabase::Close](#close)|关闭数据库连接。|
-|[CDaoDatabase::Create](#create)|创建基础 DAO 数据库对象并初始化 `CDaoDatabase` 的对象。|
-|[CDaoDatabase::CreateRelation](#createrelation)|定义数据库中的表之间的新关系。|
-|[CDaoDatabase::DeleteQueryDef](#deletequerydef)|删除保存在数据库的 QueryDefs 集合中的 querydef 对象。|
-|[CDaoDatabase::DeleteRelation](#deleterelation)|删除数据库中的表之间的现有关系。|
-|[CDaoDatabase::DeleteTableDef](#deletetabledef)|删除数据库中表的定义。 这会删除实际的表及其所有数据。|
-|[CDaoDatabase::Execute](#execute)|执行操作查询。 为返回结果的查询调用 `Execute` 会引发异常。|
-|[CDaoDatabase::GetConnect](#getconnect)|返回用于将 `CDaoDatabase` 对象连接到数据库的连接字符串。 用于 ODBC。|
-|[CDaoDatabase::GetName](#getname)|返回当前正在使用的数据库的名称。|
-|[CDaoDatabase::GetQueryDefCount](#getquerydefcount)|返回为数据库定义的查询数。|
-|[CDaoDatabase::GetQueryDefInfo](#getquerydefinfo)|返回有关在数据库中定义的指定查询的信息。|
-|[CDaoDatabase::GetQueryTimeout](#getquerytimeout)|返回数据库查询操作超时之前的秒数。影响 ODBC 数据源上的所有后续打开、添加新的、更新和编辑操作以及其他操作，例如 `Execute` 调用。|
-|[CDaoDatabase::GetRecordsAffected](#getrecordsaffected)|返回受上次更新、编辑或添加操作或通过调用 `Execute`影响的记录数。|
-|[CDaoDatabase::GetRelationCount](#getrelationcount)|返回数据库中的表之间定义的关系数。|
-|[CDaoDatabase::GetRelationInfo](#getrelationinfo)|返回有关在数据库中的表之间定义的指定关系的信息。|
-|[CDaoDatabase::GetTableDefCount](#gettabledefcount)|返回数据库中定义的表的数目。|
-|[CDaoDatabase::GetTableDefInfo](#gettabledefinfo)|返回有关数据库中的指定表的信息。|
-|[CDaoDatabase::GetVersion](#getversion)|返回与数据库关联的数据库引擎的版本。|
-|[CDaoDatabase::IsOpen](#isopen)|如果 `CDaoDatabase` 对象当前已连接到数据库，则返回非零值。|
-|[CDaoDatabase::Open](#open)|建立与数据库的连接。|
-|[CDaoDatabase::SetQueryTimeout](#setquerytimeout)|设置在多晚时间之后数据库查询操作（仅限 ODBC 数据源）将超时。影响所有后续的已打开、添加、更新和删除操作。|
+|[CDaoDatabase：： CanTransact](#cantransact)|如果数据库支持事务，则返回非零值。|
+|[CDaoDatabase：： CanUpdate](#canupdate)|如果 `CDaoDatabase` 对象可更新（非只读），则返回非零值。|
+|[CDaoDatabase：： Close](#close)|关闭数据库连接。|
+|[CDaoDatabase：： Create](#create)|创建基础 DAO 数据库对象并初始化 `CDaoDatabase` 的对象。|
+|[CDaoDatabase：： CreateRelation](#createrelation)|定义数据库中的表之间的新关系。|
+|[CDaoDatabase：:D eleteQueryDef](#deletequerydef)|删除保存在数据库的 QueryDefs 集合中的 querydef 对象。|
+|[CDaoDatabase：:D eleteRelation](#deleterelation)|删除数据库中的表之间的现有关系。|
+|[CDaoDatabase：:D eleteTableDef](#deletetabledef)|删除数据库中表的定义。 这会删除实际的表及其所有数据。|
+|[CDaoDatabase：： Execute](#execute)|执行操作查询。 为返回结果的查询调用 `Execute` 会引发异常。|
+|[CDaoDatabase：： GetConnect](#getconnect)|返回用于将 `CDaoDatabase` 对象连接到数据库的连接字符串。 用于 ODBC。|
+|[CDaoDatabase：： GetName](#getname)|返回当前正在使用的数据库的名称。|
+|[CDaoDatabase：： GetQueryDefCount](#getquerydefcount)|返回为数据库定义的查询数。|
+|[CDaoDatabase：： GetQueryDefInfo](#getquerydefinfo)|返回有关在数据库中定义的指定查询的信息。|
+|[CDaoDatabase：： GetQueryTimeout](#getquerytimeout)|返回数据库查询操作超时之前的秒数。影响 ODBC 数据源上的所有后续打开、添加新的、更新和编辑操作以及其他操作，例如 `Execute` 调用。|
+|[CDaoDatabase：： GetRecordsAffected](#getrecordsaffected)|返回受上次更新、编辑或添加操作或通过调用 `Execute`影响的记录数。|
+|[CDaoDatabase：： GetRelationCount](#getrelationcount)|返回数据库中的表之间定义的关系数。|
+|[CDaoDatabase：： GetRelationInfo](#getrelationinfo)|返回有关在数据库中的表之间定义的指定关系的信息。|
+|[CDaoDatabase：： GetTableDefCount](#gettabledefcount)|返回数据库中定义的表的数目。|
+|[CDaoDatabase：： GetTableDefInfo](#gettabledefinfo)|返回有关数据库中的指定表的信息。|
+|[CDaoDatabase：： GetVersion](#getversion)|返回与数据库关联的数据库引擎的版本。|
+|[CDaoDatabase：： IsOpen](#isopen)|如果 `CDaoDatabase` 对象当前已连接到数据库，则返回非零值。|
+|[CDaoDatabase：： Open](#open)|建立与数据库的连接。|
+|[CDaoDatabase：： SetQueryTimeout](#setquerytimeout)|设置在多晚时间之后数据库查询操作（仅限 ODBC 数据源）将超时。影响所有后续的已打开、添加、更新和删除操作。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CDaoDatabase::m_pDAODatabase](#m_pdaodatabase)|指向基础 DAO 数据库对象的指针。|
-|[CDaoDatabase::m_pWorkspace](#m_pworkspace)|指向[CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)对象的指针，该对象包含数据库并定义其事务空间。|
+|[CDaoDatabase：： m_pDAODatabase](#m_pdaodatabase)|指向基础 DAO 数据库对象的指针。|
+|[CDaoDatabase：： m_pWorkspace](#m_pworkspace)|指向[CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)对象的指针，该对象包含数据库并定义其事务空间。|
 
 ## <a name="remarks"></a>备注
 
@@ -159,7 +159,7 @@ class CDaoDatabase : public CObject
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxdao.h
+**标头：** afxdao
 
 ##  <a name="cantransact"></a>CDaoDatabase：： CanTransact
 

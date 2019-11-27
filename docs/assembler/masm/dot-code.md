@@ -15,7 +15,7 @@ ms.locfileid: "74398583"
 ---
 # <a name="code"></a>.CODE
 
-When used with [.MODEL](../../assembler/masm/dot-model.md), indicates the start of a code segment.
+与一起使用时[。模型](../../assembler/masm/dot-model.md)，指示代码段的开头。
 
 ## <a name="syntax"></a>语法
 
@@ -23,10 +23,10 @@ When used with [.MODEL](../../assembler/masm/dot-model.md), indicates the start 
 
 ### <a name="parameters"></a>参数
 
-*name*\
-Optional parameter that specifies the name of the code segment. The default name is **_TEXT** for tiny, small, compact, and flat [models](../../assembler/masm/dot-model.md). The default name is *modulename*_TEXT for other models.
+*名称*\
+可选参数，用于指定代码段的名称。 对于小型、小型、紧凑型和平面[模型](../../assembler/masm/dot-model.md)，默认名称是 **_TEXT** 。 对于其他模型，默认名称为*modulename*_TEXT。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives Reference](../../assembler/masm/directives-reference.md)\
+[指令引用](../../assembler/masm/directives-reference.md)\
 [.DATA](../../assembler/masm/dot-data.md)

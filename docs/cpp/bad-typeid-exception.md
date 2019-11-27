@@ -17,7 +17,7 @@ ms.locfileid: "74245920"
 ---
 # <a name="bad_typeid-exception"></a>bad_typeid 异常
 
-The **bad_typeid** exception is thrown by the [typeid operator](../cpp/typeid-operator.md) when the operand for **typeid** is a NULL pointer.
+当**typeid**的操作数为 NULL 指针时， [typeid 运算符](../cpp/typeid-operator.md)将引发**bad_typeid**异常。
 
 ## <a name="syntax"></a>语法
 
@@ -28,7 +28,7 @@ catch (bad_typeid)
 
 ## <a name="remarks"></a>备注
 
-The interface for **bad_typeid** is:
+**Bad_typeid**的接口是：
 
 ```cpp
 class bad_typeid : public exception
@@ -44,7 +44,7 @@ public:
 };
 ```
 
-The following example shows the **typeid** operator throwing a **bad_typeid** exception.
+下面的示例演示了引发**bad_typeid**异常的**typeid**运算符。
 
 ```cpp
 // expre_bad_typeid.cpp
@@ -78,7 +78,7 @@ catch (bad_typeid){
 Object is NULL
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [运行时类型信息](../cpp/run-time-type-information.md)\
 [关键字](../cpp/keywords-cpp.md)

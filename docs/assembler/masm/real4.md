@@ -15,12 +15,12 @@ ms.locfileid: "74394624"
 ---
 # <a name="real4"></a>REAL4
 
-Allocates and optionally initializes a single-precision (4-byte) floating-point number for each *initializer*.
+分配并选择性地为每个*初始值设定项*初始化单精度（4字节）浮点数。
 
 ## <a name="syntax"></a>语法
 
-> *name*  **REAL4** *initializer* ⟦ __,__ *initializer* ...⟧
+> *名称*  **REAL4** *初始值设定项*⟦ __，__ *初始值设定项*.。。⟧
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[指令参考](../../assembler/masm/directives-reference.md)

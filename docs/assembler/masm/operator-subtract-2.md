@@ -18,14 +18,14 @@ ms.locfileid: "74395482"
 ---
 # <a name="operator--"></a>运算符 -
 
-Returns *expression1* minus *expression2*. The second operator reverses the sign of *expression*.
+返回*表达式*2 减*表达式*。 第二个运算符反转*表达式*的符号。
 
 ## <a name="syntax"></a>语法
 
 > *expression1* **-** *expression2*
 >
-> __-__ *expression*
+> __-__ *表达式*
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Operators reference](operators-reference.md)
+[运算符引用](operators-reference.md)

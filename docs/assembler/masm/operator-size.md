@@ -17,12 +17,12 @@ ms.locfileid: "74395825"
 ---
 # <a name="operator-size"></a>运算符 SIZE
 
-Returns the number of bytes in *variable* allocated by the first initializer.
+返回由第一个初始值设定项分配的*变量*中的字节数。
 
 ## <a name="syntax"></a>语法
 
-> **SIZE** *variable*
+> **大小***变量*
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Operators reference](operators-reference.md)
+[运算符引用](operators-reference.md)

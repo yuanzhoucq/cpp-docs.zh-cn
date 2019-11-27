@@ -13,14 +13,14 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399044"
 ---
-# <a name="filename"></a>\@FileName
+# <a name="filename"></a>\@文件名
 
-The base name of the main file being assembled (text macro).
+要汇编的主文件的基名称（文本宏）。
 
 ## <a name="syntax"></a>语法
 
-> **\@FileName**
+> **\@文件名**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Symbols reference](symbols-reference.md)
+[符号引用](symbols-reference.md)

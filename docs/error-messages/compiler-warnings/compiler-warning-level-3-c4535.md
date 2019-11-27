@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4535
+title: 编译器警告（等级 3）C4535
 ms.date: 11/04/2016
 f1_keywords:
 - C4535
@@ -13,15 +13,15 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74189022"
 ---
-# <a name="compiler-warning-level-3-c4535"></a>Compiler Warning (level 3) C4535
+# <a name="compiler-warning-level-3-c4535"></a>编译器警告（等级 3）C4535
 
-calling _set_se_translator() requires /EHa
+调用 _set_se_translator （）需要/EHa
 
-The use of [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md) requires the [/EHa](../../build/reference/eh-exception-handling-model.md) compiler option and not **/EHs**.
+使用[_set_se_translator](../../c-runtime-library/reference/set-se-translator.md)需要[/eha](../../build/reference/eh-exception-handling-model.md)编译器选项，而不是 **/ehs**。
 
 ## <a name="example"></a>示例
 
-The following sample generates C4535.
+下面的示例生成 C4535。
 
 ```cpp
 // C4535.cpp

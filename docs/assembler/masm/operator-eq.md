@@ -17,12 +17,12 @@ ms.locfileid: "74397008"
 ---
 # <a name="operator-eq"></a>运算符 EQ
 
-Returns true (-1) if *expression1* equals *expression2*, or returns false (0) if it does not.
+如果*表达式*1 等于*表达式*2，则返回 true （-1）; 否则，返回 false （0）。
 
 ## <a name="syntax"></a>语法
 
-> *expression1* **EQ** *expression2*
+> *表达式* 2-2
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Operators reference](operators-reference.md)
+[运算符引用](operators-reference.md)

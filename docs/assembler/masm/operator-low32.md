@@ -17,12 +17,12 @@ ms.locfileid: "74396684"
 ---
 # <a name="operator-low32"></a>运算符 LOW32
 
-Returns the low 32 bits of *expression*. MASM expressions are 64-bit values.
+返回*表达式*的低32位。 MASM 表达式为64位值。
 
 ## <a name="syntax"></a>语法
 
-> **LOW32** *expression*
+> **LOW32** *表达式*
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Operators reference](operators-reference.md)
+[运算符引用](operators-reference.md)

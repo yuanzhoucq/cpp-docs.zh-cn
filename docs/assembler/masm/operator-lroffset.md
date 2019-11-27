@@ -17,12 +17,12 @@ ms.locfileid: "74396697"
 ---
 # <a name="operator-lroffset"></a>运算符 LROFFSET
 
-Returns the offset of *expression*. Same as **OFFSET**, but it generates a loader resolved offset, which allows Windows to relocate code segments.
+返回*表达式*的偏移量。 与**offset**相同，但它会生成加载器解析的偏移量，从而允许 Windows 重新定位代码段。
 
 ## <a name="syntax"></a>语法
 
-> **LROFFSET** *expression*
+> **LROFFSET** *表达式*
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Operators reference](operators-reference.md)
+[运算符引用](operators-reference.md)

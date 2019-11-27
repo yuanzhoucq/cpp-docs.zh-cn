@@ -15,7 +15,7 @@ ms.locfileid: "74397573"
 ---
 # <a name="exitm"></a>EXITM
 
-Terminates expansion of the current repeat or macro block and begins assembly of the next statement outside the block.
+终止当前重复或宏块的扩展，并在块外开始下一个语句的程序集。
 
 ## <a name="syntax"></a>语法
 
@@ -23,8 +23,8 @@ Terminates expansion of the current repeat or macro block and begins assembly of
 
 ## <a name="remarks"></a>备注
 
-In a macro function, *textitem* is the value returned.
+在宏函数中， *textitem*是返回的值。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](directives-reference.md)
+[指令参考](directives-reference.md)

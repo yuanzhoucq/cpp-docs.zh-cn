@@ -15,20 +15,20 @@ ms.locfileid: "74399294"
 ---
 # <a name="alias-masm"></a>ALIAS (MASM)
 
-The **ALIAS** directive creates an alternate name for a function.  This lets you create multiple names for a function, or create libraries that allow the linker (LINK.exe) to map an old function to a new function.
+**ALIAS**指令创建函数的替代名称。  这允许您为函数创建多个名称，或创建允许链接器（LINK）将旧函数映射到新函数的库。
 
 ## <a name="syntax"></a>语法
 
-> **ALIAS \<** _alias_ **> = \<** _actual-name_ **>**
+> **别名 \<** _别名_ **> = \<** _实际名称_ **>**
 
 #### <a name="parameters"></a>参数
 
-*actual-name*\
-The actual name of the function or procedure.  The angle brackets are required.
+*实际名称*\
+函数或过程的实际名称。  尖括号是必需的。
 
-*alias*\
-The alternate or alias name.  The angle brackets are required.
+*别名*\
+备用或别名。  尖括号是必需的。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [指令参考](../../assembler/masm/directives-reference.md)

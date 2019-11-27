@@ -19,8 +19,8 @@ ms.locfileid: "74397151"
 
 ## <a name="syntax"></a>语法
 
-> **NAME**
+> **路径名**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](directives-reference.md)
+[指令参考](directives-reference.md)

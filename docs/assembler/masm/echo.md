@@ -15,16 +15,16 @@ ms.locfileid: "74397717"
 ---
 # <a name="echo"></a>ECHO
 
-Displays *message* to the standard output device (by default, the screen).
+将*消息*显示到标准输出设备（默认情况下为屏幕）。
 
 ## <a name="syntax"></a>语法
 
-> **ECHO** *message*
+> **回显***消息*
 
 ## <a name="remarks"></a>备注
 
-Same as [%OUT](../../assembler/masm/percent-out.md).
+与[% OUT](../../assembler/masm/percent-out.md)相同。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](directives-reference.md)
+[指令参考](directives-reference.md)
