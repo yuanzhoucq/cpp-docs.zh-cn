@@ -35,4 +35,4 @@ public ref class Test {};
 
 请注意，此示例的输出显示： **结束标记“member”与开始标记“summary”不匹配。**
 
-The problem with this sample is that the end tag for \<summary> is poorly formed, and the compiler does not recognize it as the \<summary> end tag.  The \<member> tag is embedded in the .xdc file by the compiler in every /doc compilation.  So, the problem here is that the end tag \</member>, does not match the previous start tag that the compiler processed (\<summary>.
+此示例的问题在于 \<摘要 > 的结束标记的格式不正确，并且编译器不会将其识别为 \<summary > 结束标记。  编译器在每个/doc 编译中将 \<成员 > 标记嵌入在 .xdc 文件中。  因此，此处的问题是 \</member > 的结束标记与编译器处理的上一个开始标记（\<summary >。

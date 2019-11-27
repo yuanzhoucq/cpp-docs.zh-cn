@@ -41,7 +41,7 @@ ms.locfileid: "71816314"
 
 ## <a name="remarks"></a>备注
 
-**/Arch**选项启用或禁用特定指令集扩展的使用，特别是对于矢量计算，适用于 INTEL 和 AMD 的处理器。 通常，在较旧的处理器上，最新引入的处理器可能支持更多的扩展，不过，你应该参考特定处理器的文档，或使用 __ 测试指令集扩展支持[cpuid](../../intrinsics/cpuid-cpuidex.md) ，然后再使用指令集扩展执行代码。
+**/Arch**选项启用或禁用特定指令集扩展的使用，特别是对于矢量计算，适用于 INTEL 和 AMD 的处理器。 通常，在使用指令集扩展执行代码之前，更高版本的处理器可能支持更高版本的处理器，更高版本的处理器可能支持更高版本的处理器[__cpuid](../../intrinsics/cpuid-cpuidex.md) 。
 
 **/arch**仅影响本机函数的代码生成。 使用[/clr](clr-common-language-runtime-compilation.md)进行编译时， **/arch**不会影响托管函数的代码生成。
 
@@ -63,7 +63,7 @@ ms.locfileid: "71816314"
 
 除了矢量和浮点标量指令以外，每个 **/arch**选项还可以允许使用与该选项关联的其他非矢量指令。 例如，CMOVcc 指令系列首次出现在 Intel 奔腾 Pro 处理器上。 由于后面的 Intel Pentium III 处理器引入了 SSE 说明，因此，在指定 **/arch： IA32**时，可能会生成 CMOVcc 指令。
 
-浮点运算通常在 x87 代码中舍入为双精度（64位），但你可以使用 `_controlfp` 来修改 FP 控制字，包括将精度控件设置为扩展精度（80位）或单精度（32位）。 有关详细信息，请参阅 [_control87、_controlfp、\__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md)。 SSE 和 AVX 对于每个操作都有单独的单精度和双精度指令，因此对于 SSE/AVX 代码没有等效项。 在进一步计算中直接使用浮点运算的结果，而不是将其分配给用户变量时，这会改变结果的舍入方式。 考虑以下情况：
+浮点运算通常在 x87 代码中舍入为双精度（64位），但你可以使用 `_controlfp` 修改 FP 控制字，包括将精度控件设置为扩展精度（80位）或单精度（32位）。 有关详细信息，请参阅 [_control87、_controlfp、\__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md)。 SSE 和 AVX 对于每个操作都有单独的单精度和双精度指令，因此对于 SSE/AVX 代码没有等效项。 在进一步计算中直接使用浮点运算的结果，而不是将其分配给用户变量时，这会改变结果的舍入方式。 请考虑以下事项：
 
 ```cpp
 r = f1 * f2 + d;  // Different results are possible on SSE/SSE2.
@@ -89,7 +89,7 @@ int convert_double_to_int(double x) {
 }
 ```
 
-@No__t，`__AVX__`，`__AVX2__`，`__AVX512F__`，`__AVX512CD__`，`__AVX512BW__`，`__AVX512DQ__` 和 @no__t 7 宏指示使用了哪个 **/arch**编译器选项。 有关更多信息，请参见 [Predefined Macros](../../preprocessor/predefined-macros.md)。 **/Arch： AVX2**选项和 `__AVX2__` 宏在 Visual Studio 2013 Update 2，版本 12.0.34567.1) 中引入。 对/arch 的有限支持 **： AVX512**已添加到 visual studio 2017，并在 visual studio 2019 中扩展。
+`_M_IX86_FP`、`__AVX__`、`__AVX2__`、`__AVX512F__`、`__AVX512CD__`、`__AVX512BW__`、`__AVX512DQ__` 和 `__AVX512VL__` 宏指示使用了哪个 **/arch**编译器选项。 有关详细信息，请参阅 [Predefined Macros](../../preprocessor/predefined-macros.md)。 在版本 12.0.34567.1) Visual Studio 2013 Update 2 中引入了 **/arch： AVX2**选项和 `__AVX2__` 宏。 对/arch 的有限支持 **： AVX512**已添加到 visual studio 2017，并在 visual studio 2019 中扩展。
 
 ### <a name="to-set-this-compiler-option-for-avx-avx2-avx512-ia32-sse-or-sse2-in-visual-studio"></a>在 Visual Studio 中为 AVX、AVX2、AVX512、IA32、SSE 或 SSE2 设置此编译器选项
 
@@ -105,7 +105,7 @@ int convert_double_to_int(double x) {
 
 - 请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableEnhancedInstructionSet%2A>。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [/arch（最小 CPU 体系结构）](arch-minimum-cpu-architecture.md)<br/>
 [MSVC 编译器选项](compiler-options.md)<br/>

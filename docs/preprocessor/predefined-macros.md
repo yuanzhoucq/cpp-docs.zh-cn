@@ -259,7 +259,7 @@ MSVC 支持 ANSI/ISO C99 标准所需的预定义预处理器宏，以及 ISO c 
 
 - `__DATE__` 当前源文件的编译日期。 日期是以*Mmm dd yyyy*形式的常量长度字符串文本。 月份名称*Mmm*与 C 运行时库（CRT） [asctime](../c-runtime-library/reference/asctime-wasctime.md)函数生成的缩写月份名称相同。 如果值小于10，则日期*dd*的第一个字符为空格。 始终定义此宏。
 
-- `__FILE__` 当前源文件的名称。 `__FILE__` 扩展到字符串文字。 要确保显示文件的完整路径，请使用 [/FC（诊断中源代码文件的完整路径）](../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md)。 始终定义此宏。
+- `__FILE__` 当前源文件的名称。 `__FILE__` 扩展到字符串文字。 若要确保显示文件的完整路径，请使用[/FC （诊断中源代码文件的完整路径）](../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md)。 始终定义此宏。
 
 - `__LINE__` 在当前源文件中定义为整数行号。 可以通过使用 `#line` 指令更改 `__LINE__` 宏的值。 始终定义此宏。
 
@@ -306,7 +306,7 @@ MSVC 支持这些其他预定义的宏。
 
 - 设置[/guard： cf （启用控制流防护）](../build/reference/guard-enable-control-flow-guard.md)编译器选项时，`_CONTROL_FLOW_GUARD` 定义为1。 否则为 undefined。
 
-- `__COUNTER__` 扩展为从0开始的整数文本。 每次将该值用于源文件或源文件的包含标头时，该值将递增1。 当你使用预编译标头时，`__COUNTER__` 会记住其状态。 始终定义此宏。
+- `__COUNTER__` 扩展为从0开始的整数文本。 每次将该值用于源文件或源文件的包含标头时，该值将递增1。 当你使用预编译头时，`__COUNTER__` 会记住其状态。 始终定义此宏。
 
   此示例使用 `__COUNTER__` 将唯一标识符分配给同一类型的三个不同对象。 `exampleClass` 构造函数采用整数作为参数。 在 `main`中，应用程序声明类型为的三个对象 `exampleClass`，并使用 `__COUNTER__` 作为唯一标识符参数：
 
@@ -439,7 +439,7 @@ MSVC 支持这些其他预定义的宏。
 
   - 如果设置了 `/arch:SSE` 编译器选项，则为1。
 
-  - 如果已设置 `/arch:SSE2`、`/arch:AVX`、`/arch:AVX2`或 `/arch:AVX512` 编译器选项，则为2。 如果未指定 `/arch` 编译器选项，则此值为默认值。 当指定 `/arch:AVX` 时，也定义了宏 `__AVX__`。 指定 `/arch:AVX2` 时，同时也会定义 `__AVX__` 和 `__AVX2__`。 指定 `/arch:AVX512` 时，还将定义 `__AVX__`、`__AVX2__`、`__AVX512BW__`、`__AVX512CD__`、`__AVX512DQ__`、`__AVX512F__` 和 `__AVX512VL__`。
+  - 如果已设置 `/arch:SSE2`、`/arch:AVX`、`/arch:AVX2`或 `/arch:AVX512` 编译器选项，则为2。 如果未指定 `/arch` 编译器选项，则此值为默认值。 指定 `/arch:AVX` 时，还会定义宏 `__AVX__`。 指定 `/arch:AVX2` 时，同时也会定义 `__AVX__` 和 `__AVX2__`。 指定 `/arch:AVX512` 时，还将定义 `__AVX__`、`__AVX2__`、`__AVX512BW__`、`__AVX512CD__`、`__AVX512DQ__`、`__AVX512F__` 和 `__AVX512VL__`。
 
   - 有关详细信息，请参阅 [/arch (x86)](../build/reference/arch-x86.md)。
 

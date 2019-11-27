@@ -22,7 +22,7 @@ ms.locfileid: "74305366"
 # <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055：将 MFC ODBC 数据库类应用程序迁移到 MFC DAO 类
 
 > [!NOTE]
-> DAO 与 Access 数据库结合使用，并受 Office 2013 的支持。 DAO 3.6 是最终版本，被视为已过时。 视觉对象C++环境和向导不支持 dao （尽管包含 dao 类，但你仍可以使用它）。 Microsoft 建议您对新项目使用 [OLE DB 模板](../data/oledb/ole-db-templates.md)或 [ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)。 只应在维护现有应用程序时使用 DAO。
+> DAO 与 Access 数据库结合使用，并受 Office 2013 的支持。 DAO 3.6 是最终版本，被视为已过时。 视觉对象C++环境和向导不支持 dao （尽管包含 dao 类，但你仍可以使用它）。 Microsoft 建议你将[OLE DB 模板](../data/oledb/ole-db-templates.md)或[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)用于新项目。 只应在维护现有应用程序时使用 DAO。
 
 ## <a name="overview"></a>概述
 
@@ -87,9 +87,9 @@ DAO 类包括更多对象和更丰富的方法集，但本节将仅详述相似�
 
    对于 ODBC 类，MFC 需要通过宏或枚举类型定义这些选项。
 
-   对于 DAO 类，DAO 在标头文件 (DBDAOINT.H) 中提供了对这些选项的定义。 因此，记录集类型是 `CRecordset` 的枚举成员，但对于 DAO，此类型是一个常量。 例如，在 ODBC 中指定 **的类型时将使用**snapshot`CRecordset`，但在指定 **的类型时将使用**DB_OPEN_SNAPSHOT`CDaoRecordset`。
+   对于 DAO 类，DAO 在标头文件 (DBDAOINT.H) 中提供了对这些选项的定义。 因此，记录集类型是 `CRecordset` 的枚举成员，但对于 DAO，此类型是一个常量。 例如，在 ODBC 中指定 `CRecordset` 类型， **DB_OPEN_SNAPSHOT**但指定 `CDaoRecordset`类型时，将使用**snapshot** 。
 
-- `CRecordset` 的默认记录集类型为 **snapshot**，而 `CDaoRecordset` 的默认记录集类型为 **dynaset**（有关 ODBC 类快照的其他问题，请参阅下面的“注意”）。
+- `CRecordset` 的默认记录集类型为**snapshot** ，而 `CDaoRecordset` 的默认记录集类型为**动态**集类型（有关 ODBC 类快照的其他问题，请参阅下面的注释）。
 
 - ODBC `CRecordset` 类具有创建仅前移记录集类型的选项。 在 `CDaoRecordset` 类中，仅前移不是记录集类型，而是记录集特定类型的属性（或选项）。
 

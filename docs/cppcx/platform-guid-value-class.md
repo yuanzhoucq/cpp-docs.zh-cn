@@ -24,11 +24,11 @@ ms.locfileid: "71816593"
 public value struct Guid
 ```
 
-### <a name="members"></a>成员
+### <a name="members"></a>Members
 
-@no__t 的 @no__t 具有从[platform：： Object 类](../cppcx/platform-object-class.md)派生的1、`GetHashCode()` 和 @no__t 3 方法，以及派生自[Platform：： Type 类](../cppcx/platform-type-class.md)的 `GetTypeCode()` 方法。 `Platform::Guid` 也具有以下成员。
+`Platform::Guid` 具有从[platform：： Object 类](../cppcx/platform-object-class.md)派生的 `Equals()`、`GetHashCode()`和 `ToString()` 方法，以及派生自[Platform：： Type 类](../cppcx/platform-type-class.md)的 `GetTypeCode()` 方法。 `Platform::Guid` 还具有下列成员。
 
-|成员|描述|
+|成员|说明|
 |------------|-----------------|
 |[Guid](#ctor)|初始化 `Platform::Guid` 的新实例。|
 |[operator==](#operator-equality)|等于运算符。|
@@ -46,7 +46,7 @@ public value struct Guid
 
 **支持的最低服务器：** Windows Server 2012
 
-**命名空间：** 平台
+**命名空间：** Platform
 
 **元数据：** platform.winmd
 
@@ -79,46 +79,46 @@ Guid(
     Array<unsigned char>^ n );
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>参数
 
 *a*<br/>
-@No__t 的前4个字节。
+`GUID`的前4个字节。
 
 *b*<br/>
-@No__t 的下2个字节。
+`GUID`的下2个字节。
 
 *c*<br/>
-@No__t 的下2个字节。
+`GUID`的下2个字节。
 
 *d*<br/>
-@No__t 的下一个字节。
+`GUID`的下一个字节。
 
 *e*<br/>
-@No__t 的下一个字节。
+`GUID`的下一个字节。
 
 *f*<br/>
-@No__t 的下一个字节。
+`GUID`的下一个字节。
 
 *g*<br/>
-@No__t 的下一个字节。
+`GUID`的下一个字节。
 
 *h*<br/>
-@No__t 的下一个字节。
+`GUID`的下一个字节。
 
 *i*<br/>
-@No__t 的下一个字节。
+`GUID`的下一个字节。
 
 *j*<br/>
-@No__t 的下一个字节。
+`GUID`的下一个字节。
 
 *k*<br/>
-@No__t 的下一个字节。
+`GUID`的下一个字节。
 
 *m*<br/>
-形式为的 @no__t 0，格式为[GUID 结构](/previous-versions/cc317743(v%3dmsdn.10))。
+以[GUID 结构](/previous-versions/cc317743(v%3dmsdn.10))形式表示的 `GUID`。
 
 *n*<br/>
-@No__t 的其余8个字节。
+`GUID`的其余8个字节。
 
 ## <a name="operator-equality"></a>Guid：： operator = = 运算符
 
@@ -130,7 +130,7 @@ Guid(
 static bool Platform::Guid::operator==(Platform::Guid guid1, Platform::Guid guid2);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>参数
 
 *guid1*<br/>
 要比较的第一个 `Platform::Guid`。
@@ -148,7 +148,7 @@ static bool Platform::Guid::operator==(Platform::Guid guid1, Platform::Guid guid
 
 ## <a name="operator-inequality"></a>Guid：： operator！ = 运算符
 
-比较两个 @no__t 0 个实例是否不相等。
+比较两个 `Platform::Guid` 实例是否不相等。
 
 ### <a name="syntax"></a>语法
 
@@ -156,7 +156,7 @@ static bool Platform::Guid::operator==(Platform::Guid guid1, Platform::Guid guid
 static bool Platform::Guid::operator!=(Platform::Guid guid1, Platform::Guid guid2);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>参数
 
 *guid1*<br/>
 要比较的第一个 `Platform::Guid`。
@@ -168,9 +168,9 @@ static bool Platform::Guid::operator!=(Platform::Guid guid1, Platform::Guid guid
 
 如果两个 `Platform::Guid` 实例不相等，则为 True。
 
-## <a name="operator-less"></a>Guid：： operator @ no__t-1 运算符
+## <a name="operator-less"></a>Guid：： operator&lt; 运算符
 
-比较两个 @no__t 0 个实例进行排序。
+比较两个 `Platform::Guid` 实例进行排序。
 
 ### <a name="syntax"></a>语法
 
@@ -178,7 +178,7 @@ static bool Platform::Guid::operator!=(Platform::Guid guid1, Platform::Guid guid
 static bool Platform::Guid::operator<(Platform::Guid guid1, Platform::Guid guid2);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>参数
 
 *guid1*<br/>
 要比较的第一个 `Platform::Guid`。
@@ -188,13 +188,13 @@ static bool Platform::Guid::operator<(Platform::Guid guid1, Platform::Guid guid2
 
 ### <a name="return-value"></a>返回值
 
-如果在*guid2*之前对*guid1*进行排序，则为 True。 将每个 @no__t 视为 4 32 位无符号值的数组之后，排序将为字典。 这并不是 SQL Server 或 .NET Framework 使用的顺序，也不是按字符串表示形式按字典排序的顺序。
+如果在*guid2*之前对*guid1*进行排序，则为 True。 将每个 `Platform::Guid` 视为 4 32 位无符号值的数组之后，排序将字典。 这并不是 SQL Server 或 .NET Framework 使用的顺序，也不是按字符串表示形式按字典排序的顺序。
 
-提供此运算符是为了使C++标准库能够更轻松地使用 `Guid` 对象。
+提供此运算符是为了使 `Guid` 对象更易于由C++标准库使用。
 
 ## <a name="operator-call"></a>Guid：： operator （）运算符
 
-将 @no__t 0 隐式转换为[GUID 结构](/previous-versions/cc317743(v%3dmsdn.10))。
+将 `Platform::Guid` 隐式转换为[GUID 结构](/previous-versions/cc317743(v%3dmsdn.10))。
 
 ### <a name="syntax"></a>语法
 
@@ -206,6 +206,6 @@ const GUID& Platform::Guid::operator();
 
 [GUID 结构](/previous-versions/cc317743(v%3dmsdn.10))。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Platform 命名空间](../cppcx/platform-namespace-c-cx.md)

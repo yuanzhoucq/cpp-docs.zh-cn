@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - .NOLISTIF directive
 ms.assetid: 9243af7a-7221-4531-bbc3-281b6b292bfd
-ms.openlocfilehash: 43cde027f5c909b13e90255efccee3c8dac080c1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 80a5231d72ba8fe1458aa14c6b555228f8fd968a
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178678"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398071"
 ---
 # <a name="nolistif"></a>.NOLISTIF
 
-禁止显示其条件计算结果为 false (0) 的条件块的列表。
+取消其条件计算结果为 false （0）的条件块的列表。
 
 ## <a name="syntax"></a>语法
 
-> .NOLISTIF
+> **.NOLISTIF**
 
 ## <a name="remarks"></a>备注
 
-这是默认设置。 与相同[。SFCOND](../../assembler/masm/dot-sfcond.md)。
+这是默认设置。 与相同[.SFCOND](../../assembler/masm/dot-sfcond.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[指令参考](../../assembler/masm/directives-reference.md)<br/>
+[指令参考](directives-reference.md)

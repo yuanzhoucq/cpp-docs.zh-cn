@@ -23,7 +23,7 @@ ms.locfileid: "74246316"
 ---
 # <a name="transporting-exceptions-between-threads"></a>在线程之间传输异常
 
-The Microsoft C++ compiler (MSVC) supports *transporting an exception* from one thread to another. 通过传输异常，你可以在一个线程中捕获异常，然后使该异常看似是在另一个线程中引发的。 例如，你可以使用该功能编写多线程应用程序，其中主线程将处理其辅助线程引发的所有异常。 传输异常对创建并行编程库或系统的开发人员最有用处。 To implement transporting exceptions, MSVC provides the [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) type and the [current_exception](../standard-library/exception-functions.md#current_exception), [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception), and [make_exception_ptr](../standard-library/exception-functions.md#make_exception_ptr) functions.
+Microsoft C++编译器（MSVC）支持从一个线程向另一个线程*传输异常*。 通过传输异常，你可以在一个线程中捕获异常，然后使该异常看似是在另一个线程中引发的。 例如，你可以使用该功能编写多线程应用程序，其中主线程将处理其辅助线程引发的所有异常。 传输异常对创建并行编程库或系统的开发人员最有用处。 为了实现传输异常，MSVC 提供了[exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)类型和[current_exception](../standard-library/exception-functions.md#current_exception)、 [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception)和[make_exception_ptr](../standard-library/exception-functions.md#make_exception_ptr)函数。
 
 ## <a name="syntax"></a>语法
 
@@ -40,9 +40,9 @@ namespace std
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
-|*unspecified*|用于实现 `exception_ptr` 类型的未指定的内部类。|
+|*未指定*|用于实现 `exception_ptr` 类型的未指定的内部类。|
 |p|引用异常的 `exception_ptr` 对象。|
 |*E*|表示异常的类。|
 |*e*|参数 `E` 类的实例。|
@@ -51,7 +51,7 @@ namespace std
 
 `current_exception` 函数返回引用当前进行中的异常的 `exception_ptr` 对象。 如果没有进行中的异常，该函数将返回未与任何异常关联的 `exception_ptr` 对象。
 
-The `make_exception_ptr` function returns an `exception_ptr` object that references the exception specified by the *e* parameter.
+`make_exception_ptr` 函数返回一个 `exception_ptr` 对象，该对象引用由*e*参数指定的异常。
 
 ## <a name="remarks"></a>备注
 
@@ -63,86 +63,86 @@ The `make_exception_ptr` function returns an `exception_ptr` object that referen
 
 ### <a name="solution"></a>解决方案
 
-为处理先前的方案，C++ 标准支持在线程之间传输异常。 If a secondary thread throws an exception, that exception becomes the *current exception*. By analogy to the real world, the current exception is said to be *in flight*. 当前异常从引发之时到捕获它的异常处理程序返回之时就处于飞行状态。
+为处理先前的方案，C++ 标准支持在线程之间传输异常。 如果辅助线程引发异常，则该异常将成为*当前异常*。 与现实世界一样，当前异常被称为 "*正在*进行"。 当前异常从引发之时到捕获它的异常处理程序返回之时就处于飞行状态。
 
-The secondary thread can catch the current exception in a **catch** block, and then call the `current_exception` function to store the exception in an `exception_ptr` object. `exception_ptr` 对象必须可用于辅助线程和主线程。 例如，`exception_ptr` 对象可以是全局变量，由 mutex 控制对它的访问。 The term *transport an exception* means an exception in one thread can be converted to a form that can be accessed by another thread.
+辅助线程可以捕获**catch**块中的当前异常，然后调用 `current_exception` 函数将异常存储在 `exception_ptr` 对象中。 `exception_ptr` 对象必须可用于辅助线程和主线程。 例如，`exception_ptr` 对象可以是全局变量，由 mutex 控制对它的访问。 "*传输异常*" 一词表示一个线程中的异常可以转换为另一个线程可以访问的窗体。
 
 接下来，主线程调用 `rethrow_exception` 函数，该函数提取并继而引发 `exception_ptr` 对象中的异常。 异常引发后，将成为主线程中的当前异常。 也就是说，该异常看起来源自主线程。
 
-Finally, the primary thread can catch the current exception in a **catch** block and then process it or throw it to a higher level exception handler. 或者，主线程可以忽略该异常并允许该进程结束。
+最后，主线程可以捕获**catch**块中的当前异常，然后处理它或将其引发到更高级别的异常处理程序。 或者，主线程可以忽略该异常并允许该进程结束。
 
 大多数应用程序不必在线程之间传输异常。 但是，该功能在并行计算系统中有用，是因为该系统可以在辅助线程、处理器或内核间分配工作。 在并行计算环境中，单个专用线程可以处理辅助线程中的所有异常，并可以为任何应用程序提供一致的异常处理模型。
 
 有关 C++ 标准委员会建议的详细信息，请在 Internet 中搜索编号为 N2179，标题为“Language Support for Transporting Exceptions between Threads”（在线程之间传输异常的语言支持）的文档。
 
-### <a name="exception-handling-models-and-compiler-options"></a>Exception-handling models and compiler options
+### <a name="exception-handling-models-and-compiler-options"></a>异常处理模型和编译器选项
 
-你的应用程序的异常处理模型决定了它是否可以捕获和传输异常。 Visual C++ 支持三种模型，这些模型可以处理 C++ 异常、结构化异常处理 (SEH) 异常和公共语言运行时 (CLR) 异常。 Use the [/EH](../build/reference/eh-exception-handling-model.md) and [/clr](../build/reference/clr-common-language-runtime-compilation.md) compiler options to specify your application's exception-handling model.
+你的应用程序的异常处理模型决定了它是否可以捕获和传输异常。 Visual C++ 支持三种模型，这些模型可以处理 C++ 异常、结构化异常处理 (SEH) 异常和公共语言运行时 (CLR) 异常。 使用[/EH](../build/reference/eh-exception-handling-model.md)和[/clr](../build/reference/clr-common-language-runtime-compilation.md)编译器选项来指定应用程序的异常处理模型。
 
 只有编译器选项和编程语句的以下组合可以传输异常。 其他组合要么不能捕获异常，要么能捕获但不能传输异常。
 
-- The **/EHa** compiler option and the **catch** statement can transport SEH and C++ exceptions.
+- **/Eha**编译器选项和**catch**语句可以传输 SEH 和C++异常。
 
-- The **/EHa**, **/EHs**, and **/EHsc** compiler options and the **catch** statement can transport C++ exceptions.
+- **/Eha**、 **/ehs**和 **/ehsc**编译器选项以及**catch**语句可以传输C++异常。
 
-- The **/CLR** compiler option and the **catch** statement can transport C++ exceptions. The **/CLR** compiler option implies specification of the **/EHa** option. 请注意，编译器不支持传输托管异常。 This is because managed exceptions, which are derived from the [System.Exception class](../standard-library/exception-class.md), are already objects that you can move between threads by using the facilities of the common languange runtime.
+- **/Clr**编译器选项和**catch**语句可以传输C++异常。 **/Clr**编译器选项隐含了 **/eha**选项的规范。 请注意，编译器不支持传输托管异常。 这是因为派生自 system.exception[类](../standard-library/exception-class.md)的托管异常已经是可通过使用 common 语言运行时的功能在线程之间移动的对象。
 
    > [!IMPORTANT]
-   > We recommend that you specify the **/EHsc** compiler option and catch only C++ exceptions. You expose yourself to a security threat if you use the **/EHa** or **/CLR** compiler option and a **catch** statement with an ellipsis *exception-declaration* (`catch(...)`). You probably intend to use the **catch** statement to capture a few specific exceptions. 但是，`catch(...)` 语句将捕获所有的 C++ 和 SEH 异常，包括致命的意外异常。 如果忽略意外异常或处理不当，恶意代码就可以趁此机会破坏你程序的安全性。
+   > 建议指定 **/ehsc**编译器选项并仅C++捕获异常。 如果使用 **/eha**或 **/clr**编译器选项，并将**catch**语句与省略号*异常声明*（`catch(...)`）一起使用，则会给您带来安全威胁。 您可能打算使用**catch**语句来捕获几个特定的异常。 但是，`catch(...)` 语句将捕获所有的 C++ 和 SEH 异常，包括致命的意外异常。 如果忽略意外异常或处理不当，恶意代码就可以趁此机会破坏你程序的安全性。
 
 ## <a name="usage"></a>用法
 
-The following sections describe how to transport exceptions by using the `exception_ptr` type, and the `current_exception`, `rethrow_exception`, and `make_exception_ptr` functions.
+以下各节介绍如何使用 `exception_ptr` 类型和 `current_exception`、`rethrow_exception`和 `make_exception_ptr` 函数传输异常。
 
-## <a name="exception_ptr-type"></a>exception_ptr type
+## <a name="exception_ptr-type"></a>exception_ptr 类型
 
 使用 `exception_ptr` 对象可引用当前异常或用户指定异常的实例。 在 Microsoft 实现中，异常由 [EXCEPTION_RECORD](/windows/win32/api/winnt/ns-winnt-exception_record) 结构表示。 每个 `exception_ptr` 对象包含一个异常引用字段，该字段指向表示异常的 `EXCEPTION_RECORD` 结构的副本。
 
 当你声明 `exception_ptr` 变量时，该变量不与任何异常相关联。 也就是说，其异常引用字段为 NULL。 此类 `exception_ptr` 对象称为 *null exception_ptr*。
 
-使用 `current_exception` 或 `make_exception_ptr` 函数可将异常指派给 `exception_ptr` 对象。 将异常指派给 `exception_ptr` 变量时，该变量的异常引用字段将指向该异常的副本。 如果没有足够的内存来复制异常，异常引用字段将指向 [std::bad_alloc](../standard-library/bad-alloc-class.md) 异常的副本。 If the `current_exception` or `make_exception_ptr` function cannot copy the exception for any other reason, the function calls the [terminate](../c-runtime-library/reference/terminate-crt.md) function to exit the current process.
+使用 `current_exception` 或 `make_exception_ptr` 函数可将异常指派给 `exception_ptr` 对象。 将异常指派给 `exception_ptr` 变量时，该变量的异常引用字段将指向该异常的副本。 如果没有足够的内存来复制异常，异常引用字段将指向 [std::bad_alloc](../standard-library/bad-alloc-class.md) 异常的副本。 如果 `current_exception` 或 `make_exception_ptr` 函数因任何其他原因不能复制异常，该函数将调用[terminate](../c-runtime-library/reference/terminate-crt.md)函数以退出当前进程。
 
-尽管名称像是一个指针，但 `exception_ptr` 对象本身不属于指针。 It does not obey pointer semantics and cannot be used with the pointer member access (`->`) or indirection (`*`) operators. `exception_ptr` 对象没有公共数据成员或成员函数。
+尽管名称像是一个指针，但 `exception_ptr` 对象本身不属于指针。 它不遵循指针语义，不能与指针成员访问（`->`）或间接寻址（`*`）运算符一起使用。 `exception_ptr` 对象没有公共数据成员或成员函数。
 
 ### <a name="comparisons"></a>比较
 
 你可以使用相等 (`==`) 和不相等 (`!=`) 运算符比较两个 `exception_ptr` 对象。 这两个运算符不比较表示异常的 `EXCEPTION_RECORD` 结构的二进制值（位模式）， 而是比较 `exception_ptr` 对象的异常引用字段中的地址。 因此，null `exception_ptr` 和 NULL 值的比较结果为相等。
 
-## <a name="current_exception-function"></a>current_exception function
+## <a name="current_exception-function"></a>current_exception 函数
 
-Call the `current_exception` function in a **catch** block. If an exception is in flight and the **catch** block can catch the exception, the `current_exception` function returns an `exception_ptr` object that references the exception. 否则，该函数将返回 null `exception_ptr` 对象。
+在**catch**块中调用 `current_exception` 函数。 如果异常处于飞行中并且**catch**块可以捕获异常，则 `current_exception` 函数将返回引用该异常的 `exception_ptr` 对象。 否则，该函数将返回 null `exception_ptr` 对象。
 
 ### <a name="details"></a>详细信息
 
-The `current_exception` function captures the exception that is in flight regardless of whether the **catch** statement specifies an [exception-declaration](../cpp/try-throw-and-catch-statements-cpp.md) statement.
+`current_exception` 函数捕获处于飞行中的异常，而不考虑**catch**语句是否指定[异常声明](../cpp/try-throw-and-catch-statements-cpp.md)语句。
 
-The destructor for the current exception is called at the end of the **catch** block if you do not rethrow the exception. 但是，即使调用析构函数中的 `current_exception` 函数，该函数仍返回引用当前异常的 `exception_ptr` 对象。
+如果未再次引发异常，则将在**catch**块的末尾调用当前异常的析构函数。 但是，即使调用析构函数中的 `current_exception` 函数，该函数仍返回引用当前异常的 `exception_ptr` 对象。
 
 对 `current_exception` 函数的相继调用将返回引用当前异常的不同副本的 `exception_ptr` 对象。 因此，由于对象引用不同的副本，即使副本具有相同的二进制值，其比较结果也是不相等。
 
-### <a name="seh-exceptions"></a>SEH exceptions
+### <a name="seh-exceptions"></a>SEH 异常
 
-If you use the **/EHa** compiler option, you can catch an SEH exception in a C++ **catch** block. `current_exception` 函数返回引用 SEH 异常的 `exception_ptr` 对象。 And the `rethrow_exception` function throws the SEH exception if you call it with thetransported `exception_ptr` object as its argument.
+如果使用 **/eha**编译器选项，您可以在C++ **catch**块中捕获 SEH 异常。 `current_exception` 函数返回引用 SEH 异常的 `exception_ptr` 对象。 如果调用 `exception_ptr` thetransported 函数并将其作为其参数，则 `rethrow_exception` 函数将引发 SEH 异常。
 
-The `current_exception` function returns a null `exception_ptr` if you call it in an SEH **__finally** termination handler, an **__except** exception handler, or the **__except** filter expression.
+如果在 SEH **__finally**终止处理程序、 **__except**异常处理程序或 **__except**筛选器表达式中调用该函数，则该函数将返回 null `exception_ptr` `current_exception`。
 
 传输的异常不支持嵌套异常。 如果处理异常时引发了另一个异常，会发生嵌套异常。 如果你捕获嵌套异常，`EXCEPTION_RECORD.ExceptionRecord` 数据成员将指向描述关联异常的 `EXCEPTION_RECORD` 结构链。 `current_exception` 函数不支持嵌套异常，因为它返回 `exception_ptr` 数据成员调零的 `ExceptionRecord` 对象。
 
 如果你捕获 SEH 异常，则必须管理 `EXCEPTION_RECORD.ExceptionInformation` 数据成员数组中的任何指针所引用的内存。 你必须确保内存在相应的 `exception_ptr` 对象的生存期内有效，并且在 `exception_ptr` 对象删除时释放内存。
 
-你可以将结构化异常 (SE) 转换器函数与传输异常功能结合使用。 如果 SEH 异常转换为 C++ 异常，`current_exception` 函数返回的 `exception_ptr` 将引用转换后的异常，而不是原始 SEH 异常。 `rethrow_exception` 函数随后引发转换后的异常，而不是原始异常。 For more information about SE translator functions, see [_set_se_translator](../c-runtime-library/reference/set-se-translator.md).
+你可以将结构化异常 (SE) 转换器函数与传输异常功能结合使用。 如果 SEH 异常转换为 C++ 异常，`current_exception` 函数返回的 `exception_ptr` 将引用转换后的异常，而不是原始 SEH 异常。 `rethrow_exception` 函数随后引发转换后的异常，而不是原始异常。 有关 SE 转换器功能的详细信息，请参阅[_set_se_translator](../c-runtime-library/reference/set-se-translator.md)。
 
-## <a name="rethrow_exception-function"></a>rethrow_exception function
+## <a name="rethrow_exception-function"></a>rethrow_exception 函数
 
-在 `exception_ptr` 对象中存储捕获的异常后，主线程便可以处理该对象。 在主线程中，调用 `rethrow_exception` 函数，将 `exception_ptr` 对象作为其参数。 `rethrow_exception` 函数从 `exception_ptr` 对象中提取异常，然后在主线程的上下文中引发异常。 If the *p* parameter of the `rethrow_exception` function is a null `exception_ptr`, the function throws [std::bad_exception](../standard-library/bad-exception-class.md).
+在 `exception_ptr` 对象中存储捕获的异常后，主线程便可以处理该对象。 在主线程中，调用 `rethrow_exception` 函数，将 `exception_ptr` 对象作为其参数。 `rethrow_exception` 函数从 `exception_ptr` 对象中提取异常，然后在主线程的上下文中引发异常。 如果 `rethrow_exception` 函数的*p*参数为 null `exception_ptr`，则该函数将引发[std：： bad_exception](../standard-library/bad-exception-class.md)。
 
-提取的异常现在是主线程中的当前异常，因此你可以像处理任何其他异常一样对其进行处理。 If you catch the exception, you can handle it immediately or use a **throw** statement to send it to a higher level exception handler. 否则，不执行任何操作并允许默认系统异常处理程序来终止进程。
+提取的异常现在是主线程中的当前异常，因此你可以像处理任何其他异常一样对其进行处理。 如果捕捉到异常，可以立即处理它，或使用**throw**语句将其发送到更高级别的异常处理程序。 否则，不执行任何操作并允许默认系统异常处理程序来终止进程。
 
 ## <a name="make_exception_ptr-function"></a>make_exception_ptr 函数
 
 `make_exception_ptr` 函数采用类的实例作为其参数，然后返回引用该实例的 `exception_ptr`。 通常，指定[异常类](../standard-library/exception-class.md)对象作为参数传递给 `make_exception_ptr` 函数，但任意类对象都可以是参数。
 
-Calling the `make_exception_ptr` function is equivalent to throwing a C++ exception, catching it in a **catch** block, and then calling the `current_exception` function to return an `exception_ptr` object that references the exception. Microsoft 实现的 `make_exception_ptr` 函数比调用并捕获异常更高效。
+调用 `make_exception_ptr` 函数等效于引发C++异常，在**catch**块中捕获它，然后调用 `current_exception` 函数以返回引用异常的 `exception_ptr` 对象。 Microsoft 实现的 `make_exception_ptr` 函数比调用并捕获异常更高效。
 
 应用程序通常不需要 `make_exception_ptr` 函数，因此，我们不建议使用此函数。
 
@@ -254,7 +254,7 @@ exception_ptr 1: Caught a  myException exception.
 
 **标头：** \<exception>
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [异常处理](../cpp/exception-handling-in-visual-cpp.md)<br/>
 [/EH（异常处理模型）](../build/reference/eh-exception-handling-model.md)<br/>

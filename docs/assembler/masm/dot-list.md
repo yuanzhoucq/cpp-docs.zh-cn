@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - .LIST directive
 ms.assetid: f7e134de-6039-4343-b921-f70aea5e1c96
-ms.openlocfilehash: c4a43ad0edec6bf85b55e09e799d64cc8d4308fe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a74034b82a109c12836189b657cceffbfeaab4a6
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185169"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398188"
 ---
 # <a name="list"></a>.LIST
 
-启动列出的语句。
+开始语句列表。
 
 ## <a name="syntax"></a>语法
 
-> .LIST
+> **.LIST**
 
 ## <a name="remarks"></a>备注
 
 这是默认设置。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[指令参考](../../assembler/masm/directives-reference.md)<br/>
+[指令参考](directives-reference.md)

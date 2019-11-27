@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - SDWORD directive
 ms.assetid: 12663144-2426-4b4e-aabd-dbe0b04321d0
-ms.openlocfilehash: cd4653078d54e9ab735a0472cedc4dc87b6fabee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 11637b014a74fab8fdf75be7d6cddf662b9fb016
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210344"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74394150"
 ---
 # <a name="sdword"></a>SDWORD
 
-分配并根据需要为每个初始化存储一个有符号的双字 （4 字节） `initializer`。 此外可以用作类型说明符类型是合法的任何位置。
+分配并选择性地为每个*初始值设定项*初始化有符号双字（4字节）的存储。 还可在类型合法的任何位置用作类型说明符。
 
 ## <a name="syntax"></a>语法
 
-> 名称 SDWORD 初始值设定项 [[，初始值设定项]]...
+> *名称* **SDWORD** *初始值设定项*⟦ __，__ *初始值设定项*.。。⟧
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[指令参考](../../assembler/masm/directives-reference.md)<br/>
-[DWORD](../../assembler/masm/dword.md)<br/>
-[DD](../../assembler/masm/dd.md)<br/>
+[指令引用](../../assembler/masm/directives-reference.md)\
+[DWORD](../../assembler/masm/dword.md)\
+[DD](../../assembler/masm/dd.md)

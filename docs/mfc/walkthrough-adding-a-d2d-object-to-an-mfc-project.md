@@ -153,7 +153,7 @@ ms.locfileid: "74304296"
 
 ## <a name="to-verify-the-results"></a>验证结果
 
-生成并运行应用程序。 在调整窗口大小时，它应具有一个变化的渐变矩形。 "Hello World!" 应显示在矩形的中心。
+构建并运行应用程序。 在调整窗口大小时，它应具有一个变化的渐变矩形。 "Hello World!" 应显示在矩形的中心。
 
 ## <a name="see-also"></a>另请参阅
 

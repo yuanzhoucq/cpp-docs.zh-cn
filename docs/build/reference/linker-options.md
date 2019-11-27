@@ -23,7 +23,7 @@ LINK.exe 将通用对象文件格式 (COFF) 对象文件和库链接起来，以
 
 下表列出了 LINK.exe 的选项。 有关 LINK 的详细信息，请参阅：
 
-- [编译器控制的 LINK 选项](compiler-controlled-link-options.md)
+- [Compiler-Controlled LINK Options](compiler-controlled-link-options.md)
 
 - [LINK 输入文件](link-input-files.md)
 
@@ -37,7 +37,7 @@ LINK.exe 将通用对象文件格式 (COFF) 对象文件和库链接起来，以
 
 ## <a name="linker-options-listed-alphabetically"></a>按字母顺序列出的链接器选项
 
-|选项|用途|
+|选项|目标|
 |------------|-------------|
 |[@](at-specify-a-linker-response-file.md)|指定响应文件。|
 |[/ALIGN](align-section-alignment.md)|指定每一节的对齐方式。|
@@ -92,7 +92,7 @@ LINK.exe 将通用对象文件格式 (COFF) 对象文件和库链接起来，以
 |[/LTCG](ltcg-link-time-code-generation.md)|指定链接时间代码生成。|
 |[/MACHINE](machine-specify-target-platform.md)|指定目标平台。|
 |[/MANIFEST](manifest-create-side-by-side-assembly-manifest.md)|创建并行清单文件，也可以选择将其嵌入二进制文件。|
-|[/MANIFESTDEPENDENCY](manifestdependency-specify-manifest-dependencies.md)|指定清单文件中的 @no__t 0dependentAssembly > 部分。|
+|[/MANIFESTDEPENDENCY](manifestdependency-specify-manifest-dependencies.md)|指定清单文件中 \<dependentAssembly > 部分。|
 |[/MANIFESTFILE](manifestfile-name-manifest-file.md)|更改清单文件的默认名称。|
 |[/MANIFESTINPUT](manifestinput-specify-manifest-input.md)|指定链接器要进行处理并嵌入二进制文件的清单输入文件。 可以多次使用此选项以指定多个清单输入文件。|
 |[/MANIFESTUAC](manifestuac-embeds-uac-information-in-manifest.md)|指定是否将用户帐户控制 (UAC) 信息嵌入到程序清单中。|
@@ -139,7 +139,7 @@ LINK.exe 将通用对象文件格式 (COFF) 对象文件和库链接起来，以
 
 <sup>16.1</sup>从 Visual Studio 2019 版本16.1 开始，此选项可用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [C/C++ 生成参考](c-cpp-building-reference.md)\
 [MSVC 链接器参考](linking.md)

@@ -22,7 +22,7 @@ ms.locfileid: "74305856"
 
 ## <a name="syntax"></a>语法
 
-> **#pragma fenv_access (** { **on** | **off** } **)**
+> **#pragma fenv_access （** { **on** | **off** } **）**
 
 ## <a name="remarks"></a>备注
 

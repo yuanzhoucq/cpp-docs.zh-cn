@@ -8,27 +8,27 @@ helpviewer_keywords:
 - operator IMAGEREL
 - IMAGEREL operator
 ms.assetid: 5b5ea425-36f0-467c-9262-62c484b7fdb4
-ms.openlocfilehash: 1363297cc1627775093f0f5e78937b981e41bdc7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f88501d007ece1e3b9f45620953a911d4a6aa66e
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176871"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396891"
 ---
 # <a name="operator-imagerel"></a>运算符 IMAGEREL
 
-返回的映像相对偏移量`expression`。
+返回*表达式*的相对偏移量。
 
 ## <a name="syntax"></a>语法
 
-> IMAGEREL 表达式
+> **IMAGEREL** *表达式*
 
 ## <a name="remarks"></a>备注
 
 生成的值通常称为 RVA 或相对虚拟地址。
 
-仅支持 COFF 对象发出 IMAGEREL。
+IMAGEREL 仅可用于显示 COFF 对象。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[运算符参考](../../assembler/masm/operators-reference.md)<br/>
+[运算符引用](operators-reference.md)

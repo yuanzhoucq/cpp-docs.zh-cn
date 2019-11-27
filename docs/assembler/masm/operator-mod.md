@@ -8,21 +8,21 @@ helpviewer_keywords:
 - Mod operator
 - operator MOD
 ms.assetid: 8e05e8c2-3f07-44f9-8216-5436dcb97cc7
-ms.openlocfilehash: 843600ce9b05bcb7a99ff9c67eaca1975e9cb65f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9008f85c7b93abf7fb7534cf74c4b3d338d80cdb
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176754"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396655"
 ---
 # <a name="operator-mod"></a>运算符 MOD
 
-除时返回的余数 （取模） 的整数值*expression1*通过*expression2*。
+返回*除以表达式*2 时余数（取模）的整数*值。*
 
 ## <a name="syntax"></a>语法
 
-> expression1 MOD expression2
+> *表达式* 2
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[运算符参考](../../assembler/masm/operators-reference.md)<br/>
+[运算符引用](operators-reference.md)

@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - END directive
 ms.assetid: 128d1c17-f4c4-4ac6-bdb7-d14b4a9a7f4c
-ms.openlocfilehash: b05376a6a9814c029696423be8f6ccba1a3237f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b3788473a6e5704574f180a2dde28abcee0a772
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203173"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397673"
 ---
 # <a name="end-masm"></a>END (MASM)
 
-将标记的模块的结尾，并 （可选） 将程序入口点设置为*地址*。
+标记模块的末尾，并选择性地将程序入口点设置为*address*。
 
 ## <a name="syntax"></a>语法
 
-> 结束 [[address]]
+> **结束**⟦*地址*⟧
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[指令参考](../../assembler/masm/directives-reference.md)<br/>
+[指令参考](directives-reference.md)

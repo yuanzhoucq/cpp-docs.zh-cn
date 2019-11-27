@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - INVOKE directive
 ms.assetid: 12d9bb40-33b9-411e-b801-45a1d675967e
-ms.openlocfilehash: 853bc9cd22d866357a4cd2d695beccc3efc20acf
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: a5175252364918ca218e81536b29f084f7fd19cc
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73703958"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397299"
 ---
 # <a name="invoke-32-bit-masm"></a>INVOKE （32位 MASM）
 
@@ -19,12 +19,12 @@ ms.locfileid: "73703958"
 
 ## <a name="syntax"></a>语法
 
-> INVOKE*表达式*[[， *arguments*]]
+> **调用** *expression* ⟦ __，__ *argument* .。。⟧
 
 ## <a name="remarks"></a>备注
 
-传递给过程的每个参数可以是表达式、寄存器对或地址表达式（前面带有 `ADDR`的表达式）。
+传递给过程的每个参数可以是表达式、寄存器对或地址表达式（前面**是地址的表达式）。**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[指令参考](../../assembler/masm/directives-reference.md)<br/>
+[指令参考](../../assembler/masm/directives-reference.md)

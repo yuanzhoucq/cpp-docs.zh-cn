@@ -55,7 +55,7 @@ wchar_t *wmemcpy(
 
 ### <a name="parameters"></a>参数
 
-dest<br/>
+*dest*<br/>
 新缓冲区。
 
 *src*<br/>
@@ -73,7 +73,7 @@ dest<br/>
 **memcpy**将*计数*字节从*src*复制到*目标*;**wmemcpy**复制*计数*宽字符（两个字节）。 如果源和目标重叠，则**memcpy**的行为是不确定的。 使用**memmove**处理重叠区域。
 
 > [!IMPORTANT]
-> 确保目标缓冲区等于或大于源缓冲区。 有关更多信息，请参见[避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
+> 确保目标缓冲区等于或大于源缓冲区。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 > [!IMPORTANT]
 > 由于如此多的缓冲区溢出，进而导致**潜在的安全漏洞，因此**已被安全开发生命周期（SDL）的 "禁止" 函数列出。  你可能会发现一些 VC + + 库类继续使用**memcpy**。  此外，您可能会发现 VC + + 编译器优化器有时会发出对**memcpy**的调用。  Visual C++ 产品的开发需符合 SDL 过程，因此对此禁止函数的使用进行了仔细评估。  在库使用情况下，已经对调用进行了仔细审查，确保通过这些调用不会产生缓冲区溢出。  对于编译器，某些代码模式有时会被识别为与**memcpy**模式相同，因此会将其替换为对函数的调用。  在这种情况下，使用**memcpy**的方法并不比原始指令更安全;它们只是经过优化，可以调用性能优化的**memcpy**函数。  正如使用 "safe" CRT 函数不保证安全性（它们只是使它更难安全），使用 "禁止" 函数并不能保证危险（它们只需要更严格的审查以确保安全性）。
@@ -101,7 +101,7 @@ dest<br/>
 |**memcpy**|\<memory.h> 或 \<string.h>|
 |**wmemcpy**|\<wchar.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 

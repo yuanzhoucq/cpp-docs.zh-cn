@@ -7,47 +7,47 @@ f1_keywords:
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), ML error messages
 ms.assetid: e7e164b3-6d65-4b5b-8925-bfbebc043523
-ms.openlocfilehash: adf2c509c3d8d9110ddb757f809a4bca9199df7a
-ms.sourcegitcommit: af580f3a11b19d22288424eac7ceae1bc24ab312
+ms.openlocfilehash: b9238591ae025c4af258d8b5feda6e05c8bd291b
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66355330"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397184"
 ---
 # <a name="ml-error-messages"></a>ML 错误消息
 
-MASM 组件生成的错误消息划分为三个类别：
+MASM 组件生成的错误消息分为三个类别：
 
-- **严重错误。** 这些警报表示严重问题，以防止该实用程序完成其正常的过程。
+- **错误。** 这表明出现了阻止实用工具完成其正常过程的严重问题。
 
-- **非致命错误。** 该实用程序可能会完成其进程。 如果是这样，其结果是不可能是所需的一个。
+- **非致命错误。** 实用工具可能会完成其过程。 如果是这样，则其结果不太可能是所需的结果。
 
-- **警告。** 这些消息指示可能会阻止你获取所需的结果的条件。
+- **列出.** 这些消息指示可能会阻止您获取所需结果的条件。
 
-所有错误消息都采用以下格式：
+所有错误消息采用以下形式：
 
-> *实用工具*:*文件名*(*行*): {*Error_type*} (*代码*):*Message_text*
+> *实用工具*：*文件名*（*行*）： {*Error_type*} （*代码*）： *Message_text*
 
 其中：
 
-*实用工具*<br/>
-发送错误消息中的程序。
+*实用工具*\
+发送错误消息的程序。
 
-*文件名*<br/>
-包含生成错误的条件的文件。
+*文件名*\
+包含错误生成条件的文件。
 
-*Line*<br/>
-存在错误条件的近似行。
+*行*\
+错误条件所在的大概行。
 
-*Error_type*<br/>
-致命错误、 错误或警告。
+*Error_type*\
+错误、错误或警告。
 
-*代码*<br/>
-唯一的 5 或 6 位错误代码。
+*代码*\
+唯一的5或6位错误代码。
 
-*Message_text*<br/>
-短期和常规错误条件的说明。
+*Message_text*\
+错误条件的简短和一般说明。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Microsoft 宏汇编程序参考](../../assembler/masm/microsoft-macro-assembler-reference.md)

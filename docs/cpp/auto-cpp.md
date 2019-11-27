@@ -34,13 +34,13 @@ auto declarator initializer;
 
 在大多数情况下，我们建议你使用**auto**关键字，除非你确实需要转换，因为它具有以下优势：
 
-- **可靠性：** 如果表达式的类型发生更改（包括函数返回值发生更改的情况），它也能工作。
+- **可靠性：** 如果表达式的类型发生更改（这包括在函数返回类型发生更改时），则它将正常工作。
 
-- **性能：** 确保将不会进行转换。
+- **性能：** 您可以保证不会进行任何转换。
 
 - **可用性：** 无需担心类型名称拼写错误和拼写错误。
 
-- **效率：** 代码会变得更高效。
+- **效率：** 你的编码可能更高效。
 
 可能不希望使用**auto**的转换情况：
 
@@ -50,7 +50,7 @@ auto declarator initializer;
 
 若要使用**auto**关键字，请使用它（而不是类型）来声明变量，并指定初始化表达式。 此外，还可以使用说明符和声明符（如**const**、 **volatile**、指针（`*`）、引用（`&`）和右值引用（`&&`）修改**auto**关键字。 编译器计算初始化表达式，然后使用该信息来推断变量类型。
 
-初始化表达式可以是赋值 （等号语法），直接初始化 （函数样式语法）、[运算符 new](new-operator-cpp.md)表达式或初始化表达式可以是*有关范围声明*中的参数[基于范围的语句 （C++）](../cpp/range-based-for-statement-cpp.md)语句。 有关详细信息，请参阅[初始值设定项](../cpp/initializers.md)和本文档后面的代码示例。
+初始化表达式可以是赋值（等号语法）、直接初始化（函数样式语法）、[运算符 new](new-operator-cpp.md)表达式或初始化表达式可以是[基于范围的 for 语句（C++）](../cpp/range-based-for-statement-cpp.md)语句中的*范围声明*参数。 有关详细信息，请参阅本文档后面的[初始值设定项](../cpp/initializers.md)和代码示例。
 
 **Auto**关键字是类型的占位符，但它本身不是类型。 因此， **auto**关键字不能用于转换或运算符，例如[sizeof](../cpp/sizeof-operator.md)和（对于C++/cli） [typeid](../extensions/typeid-cpp-component-extensions.md)。
 
@@ -58,7 +58,7 @@ auto declarator initializer;
 
 **Auto**关键字是声明具有复杂类型的变量的一种简单方法。 例如，您可以使用**auto**声明一个变量，其中的初始化表达式包含模板、指向函数的指针或指向成员的指针。
 
-还可以使用**auto**来声明变量并将其初始化为 lambda 表达式。 您不能自行声明变量的类型，因为仅编译器知道 lambda 表达式的类型。 有关详细信息，请参阅 [Lambda 表达式示例](../cpp/examples-of-lambda-expressions.md)。
+还可以使用**auto**来声明变量并将其初始化为 lambda 表达式。 您不能自行声明变量的类型，因为仅编译器知道 lambda 表达式的类型。 有关详细信息，请参阅[Lambda 表达式的示例](../cpp/examples-of-lambda-expressions.md)。
 
 ## <a name="trailing-return-types"></a>尾部的返回类型
 
@@ -123,17 +123,17 @@ int main()
 
 下表列出了对**auto**关键字的使用限制以及编译器发出的相应诊断错误消息。
 
-|错误号|描述|
+|错误号|说明|
 |------------------|-----------------|
 |[C3530](../error-messages/compiler-errors-2/compiler-error-c3530.md)|**Auto**关键字不能与任何其他类型说明符组合。|
 |[C3531](../error-messages/compiler-errors-2/compiler-error-c3531.md)|使用**auto**关键字声明的符号必须具有初始值设定项。|
 |[C3532](../error-messages/compiler-errors-2/compiler-error-c3532.md)|错误地使用了**auto**关键字声明类型。 例如，声明了方法返回类型或数组。|
-|[C3533](../error-messages/compiler-errors-2/compiler-error-c3533.md)、[C3539](../error-messages/compiler-errors-2/compiler-error-c3539.md)|不能使用**auto**关键字声明参数或模板参数。|
+|[C3533](../error-messages/compiler-errors-2/compiler-error-c3533.md)、 [C3539](../error-messages/compiler-errors-2/compiler-error-c3539.md)|不能使用**auto**关键字声明参数或模板参数。|
 |[C3535](../error-messages/compiler-errors-2/compiler-error-c3535.md)|不能使用**auto**关键字声明方法或模板参数。|
 |[C3536](../error-messages/compiler-errors-2/compiler-error-c3536.md)|符号初始化之前无法使用。 在实践中，这意味着无法使用变量来初始化自身。|
 |[C3537](../error-messages/compiler-errors-2/compiler-error-c3537.md)|不能强制转换为使用**auto**关键字声明的类型。|
 |[C3538](../error-messages/compiler-errors-2/compiler-error-c3538.md)|声明符列表中使用**auto**关键字声明的所有符号都必须解析为相同的类型。 有关详细信息，请参阅[声明和定义](declarations-and-definitions-cpp.md)。|
-|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md), [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|[Sizeof](../cpp/sizeof-operator.md)和[typeid](../extensions/typeid-cpp-component-extensions.md)运算符不能应用于使用**auto**关键字声明的符号。|
+|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md)、 [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|[Sizeof](../cpp/sizeof-operator.md)和[typeid](../extensions/typeid-cpp-component-extensions.md)运算符不能应用于使用**auto**关键字声明的符号。|
 
 ## <a name="examples"></a>示例
 

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4324
 ms.assetid: 420fa929-d9c0-40b4-8808-2d8ad3ca8090
-ms.openlocfilehash: 696f53dff6398555355ca3a58e25d2c6d64eaaab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 02803e165255b563df5a8b6136198f1f49e9f65d
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400859"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541089"
 ---
 # <a name="compiler-warning-level-4-c4324"></a>编译器警告（等级 4）C4324
 
-'struct_name' : structure was padded due to __declspec(align())
+"struct_name"：结构已填充，因为 __declspec （align （））
 
-因为指定的填充已添加的一种结构末尾[__declspec （align)](../../cpp/align-cpp.md)值。
+已将填充添加到结构的末尾，因为指定了[__declspec （align）](../../cpp/align-cpp.md)值。
 
-例如，下面的代码生成 C4324:
+例如，下面的代码生成 C4324：
 
-```
+```cpp
 // C4324.cpp
 // compile with: /W4
 struct __declspec(align(32)) A

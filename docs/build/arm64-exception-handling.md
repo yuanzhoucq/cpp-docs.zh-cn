@@ -55,9 +55,9 @@ ARM64 上的 Windows 对异步硬件生成的异常和同步软件生成的异�
 
 ![堆栈帧布局](media/arm64-exception-handling-stack-frame.png "堆栈帧布局")
 
-对于帧链接函数，可以在本地变量区域中的任意位置保存 fp 和 lr 对，具体取决于优化注意事项。 目标是最大程度地提高可通过帧指针（x29）或堆栈指针（sp）的单个指令达到的局部变量的数目。 但是，对于 `alloca` 函数，它必须链接在一起，并且 x29 必须指向堆栈的底部。 若要允许更好地注册到寻址模式，非易失寄存器保存区位于本地区域堆栈的顶部。 下面的示例演示了几个最有效的 prolog 序列。 为清楚起见和更好地缓存区域，在所有规范 prolog 中存储被调用方保存的寄存器的顺序均为 "增长"。 下面 `#framesz` 表示整个堆栈的大小（不包括 alloca 区域）。 @no__t，`#outsz` 表示本地区域大小（包括 @no__t 2x29、lr > 对的保存区域）和传出参数大小。
+对于帧链接函数，可以在本地变量区域中的任意位置保存 fp 和 lr 对，具体取决于优化注意事项。 目标是最大程度地提高可通过帧指针（x29）或堆栈指针（sp）的单个指令达到的局部变量的数目。 但是，对于 `alloca` 函数，该函数必须链接在一起，并且 x29 必须指向堆栈的底部。 若要允许更好地注册到寻址模式，非易失寄存器保存区位于本地区域堆栈的顶部。 下面的示例演示了几个最有效的 prolog 序列。 为清楚起见和更好地缓存区域，在所有规范 prolog 中存储被调用方保存的寄存器的顺序均为 "增长"。 以下 `#framesz` 表示整个堆栈的大小（不包括 alloca 区域）。 `#localsz` 和 `#outsz` 表示本地区域大小（包括 \<x29、lr > 对的保存区域）和传出参数大小。
 
-1. 链式，#localsz \< = 512
+1. 链式 #localsz \<= 512
 
     ```asm
         stp    x19,x20,[sp,#-96]!        // pre-indexed, save in 1st FP/INT pair
@@ -96,7 +96,7 @@ ARM64 上的 Windows 对异步硬件生成的异常和同步软件生成的异�
         sub    sp,sp,#(framesz-80)      // allocate the remaining local area
     ```
 
-   所有局部变量都基于 SP 进行访问。 \<x29，lr > 指向上一帧。 对于帧大小 \< = 512，"sub sp ..."如果 regs 保存的区域移到堆栈底部，则可以将其优化掉。 缺点是它与上面的其他布局不一致，并且已保存的 regs 在 regs 和预索引和索引后偏移寻址模式的范围内。
+   所有局部变量都基于 SP 进行访问。 \<x29，lr > 指向上一帧。 对于帧大小 \<= 512，"sub sp ..."如果 regs 保存的区域移到堆栈底部，则可以将其优化掉。 缺点是它与上面的其他布局不一致，并且已保存的 regs 在 regs 和预索引和索引后偏移寻址模式的范围内。
 
 1. 非链式，非叶函数（lr 保存在 Int 个保存区域中）
 
@@ -128,11 +128,11 @@ ARM64 上的 Windows 对异步硬件生成的异常和同步软件生成的异�
         sub    sp,sp,#(framesz-16)      // allocate the remaining local area
     ```
 
-   \*，reg 保存区域分配不会折叠为 stp，因为预索引的 reg-lr stp 不能用展开代码表示。
+   \* reg 保存区域分配不会折叠为 stp，因为预索引的 reg-lr stp 不能使用展开代码表示。
 
    所有局部变量都基于 SP 进行访问。 \<x29 > 指向前一帧。
 
-1. 链式，#framesz \< = 512，#outsz = 0
+1. 链式，#framesz \<= 512，#outsz = 0
 
     ```asm
         stp    x29,lr,[sp,#-framesz]!       // pre-indexed, save <x29,lr>
@@ -286,21 +286,21 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 
 |展开代码|位和解释|
 |-|-|
-|`alloc_s`|000xxxxx：分配 @no__t 大小为-0 512 （2 ^ 5 * 16）的小堆栈。|
+|`alloc_s`|000xxxxx：分配小堆栈，大小为 \< 512 （2 ^ 5 * 16）。|
 |`save_r19r20_x`|    001zzzzz： save \<x19，x20 > 对，`[sp-#Z*8]!`，预索引偏移 > =-248 |
-|`save_fplr`|        01zzzzzz：将 \<x29，lr > 对 @no__t 为-1，偏移量 \< = 504。 |
-|`save_fplr_x`|        10zzzzzz： save \<x29，lr > 对，`[sp-(#Z+1)*8]!`，预索引偏移 > =-512 |
+|`save_fplr`|        01zzzzzz：将 \<x29，lr > 对 `[sp+#Z*8]`，偏移 \<= 504。 |
+|`save_fplr_x`|        10zzzzzz：将 \<x29、lr > 对保存在 `[sp-(#Z+1)*8]!`，预索引偏移 > =-512 |
 |`alloc_m`|        11000xxx'xxxxxxxx：分配大堆栈，大小 \< 16k （2 ^ 11 * 16）。 |
-|`save_regp`|        110010xx'xxzzzzzz：保存 x （19 + #X）对，`[sp+#Z*8]`，偏移量 \< = 504 |
-|`save_regp_x`|        110011xx'xxzzzzzz：将对 x （19 + #X）保存到 @no__t 的预索引偏移 > =-512 |
-|`save_reg`|        110100xx'xxzzzzzz：将 reg x （19 + #X）保存 `[sp+#Z*8]`，偏移量 \< = 504 |
-|`save_reg_x`|        1101010x'xxxzzzzz：将 reg x （19 + #X）保存在 `[sp-(#Z+1)*8]!`、预索引偏移 > =-256 |
-|`save_lrpair`|         1101011x'xxzzzzzz： save 对 \<x （19 + 2 * #X），lr >，`[sp+#Z*8]`，偏移量 @no__t = 504 |
-|`save_fregp`|        1101100x'xxzzzzzz：将对 d （8 + #X）保存到 `[sp+#Z*8]`，偏移量 \< = 504 |
-|`save_fregp_x`|        1101101x'xxzzzzzz：保存对 d （8 + #X），在 @no__t 0，预索引偏移量 > =-512 |
-|`save_freg`|        1101110x'xxzzzzzz：将 reg d （8 + #X）保存 `[sp+#Z*8]`，偏移量 \< = 504 |
-|`save_freg_x`|        11011110 ' xxxzzzzz：将 reg d （8 + #X）保存在 `[sp-(#Z+1)*8]!`、预索引的偏移 > =-256 |
-|`alloc_l`|         11100000 ' xxxxxxxx'xxxxxxxx'xxxxxxxx：分配大堆栈，大小 \< 256M （2 ^ 24 * 16） |
+|`save_regp`|        110010xx'xxzzzzzz：保存 x （19 + #X）对，`[sp+#Z*8]`，偏移 \<= 504 |
+|`save_regp_x`|        110011xx'xxzzzzzz：在 `[sp-(#Z+1)*8]!`，按预索引的偏移量 > =-512 保存对 x （19 + #X） |
+|`save_reg`|        110100xx'xxzzzzzz：将 reg x （19 + #X）保存 `[sp+#Z*8]`，偏移量 \<= 504 |
+|`save_reg_x`|        1101010x'xxxzzzzz：将 reg x （19 + #X）保存 `[sp-(#Z+1)*8]!`，预先索引的偏移量 > =-256 |
+|`save_lrpair`|         1101011x'xxzzzzzz： save 对 \<x （19 + 2 * #X），lr > `[sp+#Z*8]`，偏移量 \<= 504 |
+|`save_fregp`|        1101100x'xxzzzzzz：保存对 d （8 + #X），`[sp+#Z*8]`，偏移量 \<= 504 |
+|`save_fregp_x`|        1101101x'xxzzzzzz： save 对 d （8 + #X），`[sp-(#Z+1)*8]!`，预索引偏移量 > =-512 |
+|`save_freg`|        1101110x'xxzzzzzz：将 reg d （8 + #X）保存 `[sp+#Z*8]`，偏移量 \<= 504 |
+|`save_freg_x`|        11011110 ' xxxzzzzz：将 reg d （8 + #X）保存在 `[sp-(#Z+1)*8]!`的预索引偏移 > =-256 |
+|`alloc_l`|         11100000 ' xxxxxxxx'xxxxxxxx'xxxxxxxx：分配大小 \< 为256M 的大型堆栈（2 ^ 24 * 16） |
 |`set_fp`|        11100001：设置 x29： with： `mov x29,sp` |
 |`add_fp`|        11100010 ' xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx： set with： `add x29,sp,#x*8` |
 |`nop`|            11100011：不需要展开操作。 |
@@ -314,25 +314,25 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 |`arithmetic(ror)`|    11100111 ' 100zxxxx： ror lr with cookie reg （z）（0 = x28，1 = sp）;`ror lr, lr, reg(z)` |
 | |            11100111： xxxz----：----保留 |
 | |              11101xxx：为以下自定义堆栈事例保留：仅为 asm 例程生成 |
-| |              11101000：MSFT_OP_TRAP_FRAME 的自定义堆栈 |
-| |              11101001：MSFT_OP_MACHINE_FRAME 的自定义堆栈 |
-| |              11101010：MSFT_OP_CONTEXT 的自定义堆栈 |
-| |              11101100：MSFT_OP_CLEAR_UNWOUND_TO_CALL 的自定义堆栈 |
+| |              11101000： MSFT_OP_TRAP_FRAME 的自定义堆栈 |
+| |              11101001： MSFT_OP_MACHINE_FRAME 的自定义堆栈 |
+| |              11101010： MSFT_OP_CONTEXT 的自定义堆栈 |
+| |              11101100： MSFT_OP_CLEAR_UNWOUND_TO_CALL 的自定义堆栈 |
 | |              1111xxxx：已保留 |
 
 在包含多个字节的较大值的说明中，最重要的位将先存储。 此设计使你可以通过只查找代码的第一个字节来查找展开代码的总大小（以字节为单位）。 由于每个展开代码都完全映射到 prolog 或 epilog 中的指令，因此，您可以计算 prolog 或 epilog 的大小。 您可以从序列的开头到末尾进行遍历，并使用查找表或类似设备确定相应操作码的时间长度。
 
-Prolog 中不允许使用索引后的偏移量。 所有偏移范围（#Z）都匹配 STP/STR 寻址的编码（`save_r19r20_x` 除外），在这种情况下，248对所有保存区域（10个 Int 寄存器 + 8 个 FP 寄存器 + 8 个输入寄存器）都足够了。
+Prolog 中不允许使用索引后的偏移量。 除 `save_r19r20_x`以外，所有偏移范围（#Z）都匹配 STP/STR 寻址的编码，在这种情况下，248足以满足所有保存区域（10个 Int 寄存器 + 8 个 FP 寄存器 + 8 个输入寄存器）。
 
-`save_next` 必须遵循 Int 或 FP 可变寄存器对的保存： `save_regp`、`save_regp_x`、`save_fregp`、`save_fregp_x`、`save_r19r20_x` 或其他 `save_next`。 它将下一个寄存器对保存在 "增长" 顺序中的下一个16字节槽。 如果 @no__t 为-0，则引用第一个 FP 寄存器对，当它跟在表示最后一个 Int 寄存器对的 `save-next` 之后。
+`save_next` 必须遵循 Int 或 FP 可变寄存器对的保存： `save_regp`、`save_regp_x`、`save_fregp`、`save_fregp_x`、`save_r19r20_x`或其他 `save_next`。 它将下一个寄存器对保存在 "增长" 顺序中的下一个16字节槽。 `save_next` 指的是第一个 FP 寄存器对，如果它跟在 `save-next`，表示最后一个 Int 寄存器对。
 
-由于常规返回和跳转指令的大小相同，因此不需要针对尾调用方案使用单独的 @no__t 0 展开代码。
+由于常规返回和跳转指令的大小相同，因此不需要对尾调用方案使用分离 `end` 展开代码。
 
-`end_c` 设计为出于优化目的处理不连续的函数片段。 一个 @no__t 值为0，指示当前范围内的展开代码的结束必须后跟另一个序列的展开代码以真实 `end` 结束。 @No__t-0 与 `end` 之间的展开代码表示父区域（"虚拟" prolog）中的序言运算。  下面的部分介绍了更多详细信息和示例。
+`end_c` 旨在出于优化目的处理不连续的函数片段。 一个 `end_c`，指示当前作用域中的展开代码的结束时间必须后跟另一个展开代码序列，该序列以真实 `end`结束。 `end_c` 和 `end` 之间的展开代码表示父区域（"虚拟" 序言）中的序言运算。  下面的部分介绍了更多详细信息和示例。
 
 ### <a name="packed-unwind-data"></a>已打包的展开数据
 
-对于 prolog 和 epilogs 遵循下面所述的规范形式的函数，可以使用打包的展开数据。 它完全无需 xdata 记录，并且大大降低了提供展开数据的成本。 规范 prolog 和 epilogs 旨在满足简单函数的常见要求：一种不需要异常处理程序，并以标准顺序执行其设置和拆卸操作的情况。
+对于 prolog 和 epilogs 遵循下面所述的规范形式的函数，可以使用打包的展开数据。 它完全无需 xdata 记录，并且大大降低了提供展开数据的成本。 规范 prolog 和 epilogs 旨在满足简单函数的常见要求：一个不需要异常处理程序，并按标准顺序执行其设置和拆卸操作。
 
 具有打包的展开数据的 pdata 记录的格式如下所示：
 
@@ -349,27 +349,27 @@ Prolog 中不允许使用索引后的偏移量。 所有偏移范围（#Z）都�
 - **函数长度**是一个11位字段，它提供整个函数的长度（以字节为单位）除以4。 如果函数大于8k，则必须改为使用 xdata 记录。
 - **帧大小**是一个9位字段，它指示为此函数分配的堆栈的字节数除以16。 分配的 stack 大于（8k-16）字节的函数必须使用 xdata 记录。 它包括本地变量区域、传出参数区域、被调用方保存的 Int 和 FP 区域以及 home 参数区域，但不包括动态分配区域。
 - **CR**是一个2位标志，它指示函数是否包含用于设置帧链和返回链接的额外说明：
-  - 00 = 非链式函数、@no__t 0x29、lr > 对不会保存在堆栈中。
-  - 01 = 非链式函数，> \<lr 保存在堆栈中
+  - 00 = 非链式函数、\<x29、lr > 对未保存在堆栈中。
+  - 01 = 非链式函数，\<lr > 保存在堆栈中
   - 10 = 保留;
-  - 11 = 链式函数，在 prolog/epilog \<x29，lr > 使用存储/负载对指令
+  - 11 = 链式函数，用于 prolog/epilog \<x29，lr >
 - **H**是一个1位标志，它指示函数是否通过将整数参数存储在函数的最开头来注册（x 7）。 （0 = 不是 home 寄存器，1 = home 寄存器）。
 - **O**是一个4位字段，它指示在规范堆栈位置中保存的非易失性 INT 寄存器（x19）数。
-- **RegF**是一个3位字段，它指示在规范堆栈位置中保存的非易失性 FP 寄存器（d15）的数量。 （RegF = 0：不保存 FP 注册;RegF > 0：保存 RegF + 1 FP 寄存器。 打包的展开数据不能用于仅保存一个 FP 寄存器的函数。
+- **RegF**是一个3位字段，它指示在规范堆栈位置中保存的非易失性 FP 寄存器（d15）的数量。 （RegF = 0：不保存 FP 注册;RegF > 0：已保存 RegF + 1 FP 寄存器。 打包的展开数据不能用于仅保存一个 FP 寄存器的函数。
 
-属于类别1、2（无传出参数区域）、第3部分和第4节中的规范 prolog 可以使用打包展开格式表示。  规范函数的 epilogs 遵循类似的形式，但**H**不起作用，将省略 @no__t 1 指令，并且在 epilog 中反转每个步骤的步骤顺序和说明。 Xdata 的算法遵循下表中所述的步骤：
+属于类别1、2（无传出参数区域）、第3部分和第4节中的规范 prolog 可以使用打包展开格式表示。  Epilogs for 规范函数遵循类似的形式，但**H**不起作用，将省略 `set_fp` 指令，并在 epilog 中反转每个步骤的步骤顺序和说明。 Xdata 的算法遵循下表中所述的步骤：
 
-步骤 0：预先计算每个区域的大小。
+步骤0：预计算每个区域的大小。
 
-步骤 1：保存 Int 被调用方保存的寄存器。
+步骤1：保存 Int 被调用方保存的寄存器。
 
-步骤 2：此步骤特定于早期部分中的类型4。 lr 保存在 Int 区域末尾。
+步骤2：此步骤特定于早期部分中的类型4。 lr 保存在 Int 区域末尾。
 
-步骤 3：保存 FP 被调用方保存的寄存器。
+步骤3：保存 FP 被调用方保存的寄存器。
 
-步骤 4：在 home 参数区域保存输入参数。
+步骤4：将输入参数保存到 home 参数区域。
 
-步骤 5：分配剩余的堆栈，包括本地区域、\<x29、lr > 对和传出参数区域。 5a 对应于规范类型1。 5b 和5c 适用于规范类型2。 5d 和5e 用于类型3和类型4。
+步骤5：分配剩余的堆栈，包括本地区域、\<x29、lr > 对和传出参数区域。 5a 对应于规范类型1。 5b 和5c 适用于规范类型2。 5d 和5e 用于类型3和类型4。
 
 分步#|标志值|指令数|操作码|展开代码
 -|-|-|-|-
@@ -381,14 +381,14 @@ Prolog 中不允许使用索引后的偏移量。 所有偏移范围（#Z）都�
 5a|**CR** = = 11 & & #locsz<br/> < = 512|2|`stp x29,lr,[sp,#-locsz]!`<br/>`mov x29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
 5b|**CR** = = 11 & &<br/>512 < #locsz < = 4080|3|`sub sp,sp,#locsz`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
 5c|**CR** = = 11 & & #locsz > 4080|4|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5d|（**CR** = = 00 \| @ NO__T-2 **CR**= = 01） & &<br/>#locsz <= 4080|1|`sub sp,sp,#locsz`|`alloc_s`/`alloc_m`
-5e|（**CR** = = 00 \| @ NO__T-2 **CR**= = 01） & &<br/>#locsz > 4080|2|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
+5d|（**Cr** = = 00 \|\| **CR**= = 01） & &<br/>#locsz <= 4080|1|`sub sp,sp,#locsz`|`alloc_s`/`alloc_m`
+5e|（**Cr** = = 00 \|\| **CR**= = 01） & &<br/>#locsz > 4080|2|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
 
-如果**CR** = = 01 并且**o**为奇数，则步骤1中的步骤2和最后一个 save_rep 将合并为一个 save_regp。 @no__t
+\* 如果**CR** = = 01 且**o**为奇数，步骤1中的步骤2和最后 save_rep 将合并为一个 save_regp。
 
-\* @ no__t-1 如果**o** == **CR** = = 0， **RegF** ！ = 0，则浮点的第一个 stp 将执行前置减量。
+\*\* 如果**o** == **CR** = = 0， **RegF** ！ = 0，则浮点的第一个 stp 执行前置减量。
 
-\* @ no__t-1 @ no__t-2 不存在与 epilog 中 `mov x29,sp` 对应的指令。 如果函数需要从 x29 还原 sp，则不能使用打包的展开数据。
+\*\*\* epilog 中不存在与 `mov x29,sp` 对应的指令。 如果函数需要从 x29 还原 sp，则不能使用打包的展开数据。
 
 ### <a name="unwinding-partial-prologs-and-epilogs"></a>展开部分 prolog 和 epilogs
 
@@ -476,17 +476,17 @@ Prolog 和 epilog 代码并非总是完全匹配。 这就是，展开数组可�
 
    仅必须描述序言。 这不能以 pdata 格式表示。 在 xdata 情况下，它可以通过设置 Epilog Count = 0 来表示。 请参阅上述示例中的区域1。
 
-   展开代码： `set_fp`，`save_regp 0,240`，`save_fplr_x_256`，@no__t 为3。
+   展开代码： `set_fp`、`save_regp 0,240`、`save_fplr_x_256``end`。
 
 1. 仅限 Epilogs （区域2： prolog 位于主机区域）
 
-   假设时间控件跳转到此区域，则已执行所有 prolog 代码。 部分展开在 epilogs 中的执行方式与在正常函数中发生的方式相同。 此类型的区域不能由 pdata 表示。 在 xdata 记录中，它可以使用 "虚拟" prolog 进行编码，由 @no__t 0 和 @no__t 展开代码对括起来。  前导 `end_c` 指示序言大小为零。 每个 epilog 的 epilog 开始索引将指向 `set_fp`。
+   假设时间控件跳转到此区域，则已执行所有 prolog 代码。 部分展开在 epilogs 中的执行方式与在正常函数中发生的方式相同。 此类型的区域不能由 pdata 表示。 在 xdata 记录中，它可以使用 "虚拟" 序言码进行编码，由 `end_c` 和 `end` 展开代码对括起来。  前导 `end_c` 指示 prolog 的大小为零。 每个 epilog 点的 epilog 开始索引要 `set_fp`。
 
-   区域2： `end_c`，`set_fp`，`save_regp 0,240`，`save_fplr_x_256`，`end` 的展开代码。
+   区域2： `end_c`、`set_fp`、`save_regp 0,240`、`save_fplr_x_256`、`end`的展开代码。
 
 1. 没有 prolog 或 epilogs （区域3： prolog，并且所有 epilogs 都在其他片段中）：
 
-   可以通过设置标志 = 10 应用 pdata 格式。 对于 xdata 记录，Epilog 计数 = 1。 展开代码与上面区域2的代码相同，但是 Epilog 开始索引也指向 `end_c`。 部分展开操作永远不会发生在此代码区域中。
+   可以通过设置标志 = 10 应用 pdata 格式。 对于 xdata 记录，Epilog 计数 = 1。 展开代码与上面区域2的代码相同，但是 Epilog 开始索引还指向 `end_c`。 部分展开操作永远不会发生在此代码区域中。
 
 函数片段的另一种更复杂的情况是 "收缩环绕"。 编译器可以选择延迟将一些被调用方保存的寄存器保存到函数入口 prolog 之外。
 
@@ -521,9 +521,9 @@ Prolog 和 epilog 代码并非总是完全匹配。 这就是，展开数组可�
 
 在区域1的序言中，堆栈空间已预先分配。 你可以看到，区域2将具有相同的展开代码，即使它已移出其主机函数。
 
-区域1： `set_fp`，`save_regp 0,240`，`save_fplr_x_256`，`end`，其中 Epilog 开始索引点为 `set_fp`。
+区域1： `set_fp`，`save_regp 0,240`，`save_fplr_x_256`，与 Epilog 开始索引点 `end` 按平时 `set_fp`。
 
-区域2： `save_regp 2, 224`，`end_c`，`set_fp`，`save_regp 0,240`，`save_fplr_x_256`，`end`。 Epilog 开始索引点到首个展开代码 `save_regp 2, 224`。
+区域2： `save_regp 2, 224`、`end_c`、`set_fp`、`save_regp 0,240`、`save_fplr_x_256`、`end`。 Epilog 开始索引点到首个展开代码 `save_regp 2, 224`。
 
 ### <a name="large-functions"></a>大型函数
 
@@ -535,7 +535,7 @@ Prolog 和 epilog 代码并非总是完全匹配。 这就是，展开数组可�
 
 ## <a name="examples"></a>示例
 
-### <a name="example-1-frame-chained-compact-form"></a>示例 1：框架链接，紧凑形式
+### <a name="example-1-frame-chained-compact-form"></a>示例1：框架链接，紧凑形式
 
 ```asm
 |Foo|     PROC
@@ -553,7 +553,7 @@ Prolog 和 epilog 代码并非总是完全匹配。 这就是，展开数组可�
     ;Flags[SingleProEpi] functionLength[492] RegF[0] RegI[1] H[0] frameChainReturn[Chained] frameSize[2080]
 ```
 
-### <a name="example-2-frame-chained-full-form-with-mirror-prolog--epilog"></a>示例 2：帧链，具有镜像序言 & Epilog 的完全形式
+### <a name="example-2-frame-chained-full-form-with-mirror-prolog--epilog"></a>示例2：框架链接型、完整形式的镜像 Prolog & Epilog
 
 ```asm
 |Bar|     PROC
@@ -587,7 +587,7 @@ Prolog 和 epilog 代码并非总是完全匹配。 这就是，展开数组可�
 
 Epilog 开始索引 [0] 指向相同的序言展开代码序列。
 
-### <a name="example-3-variadic-unchained-function"></a>示例 3：可变参数非链式函数
+### <a name="example-3-variadic-unchained-function"></a>示例3：可变参数非链式函数
 
 ```asm
 |Delegate| PROC
@@ -628,7 +628,7 @@ Epilog 开始索引 [0] 指向相同的序言展开代码序列。
 
 Epilog 开始索引 [4] 指向序言展开代码的中间（部分重复使用展开数组）。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [ARM64 ABI 约定概述](arm64-windows-abi-conventions.md)<br/>
 [ARM 异常处理](arm-exception-handling.md)

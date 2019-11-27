@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - ECHO directive
 ms.assetid: 68b912cc-6bd3-4f22-88cb-00a1aa17ecaf
-ms.openlocfilehash: 46a7f77fae035b0fdc846c80f0415337d2bef07b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a06d6528301b4e946595fa7ad66cec5cac03ce7d
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203276"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397717"
 ---
 # <a name="echo"></a>ECHO
 
-显示*消息*到标准输出设备 （默认情况下，屏幕）。
+将*消息*显示到标准输出设备（默认情况下为屏幕）。
 
 ## <a name="syntax"></a>语法
 
-> ECHO*消息*
+> **回显***消息*
 
 ## <a name="remarks"></a>备注
 
-与相同[%out](../../assembler/masm/percent-out.md)。
+与[% OUT](../../assembler/masm/percent-out.md)相同。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[指令参考](../../assembler/masm/directives-reference.md)<br/>
+[指令参考](directives-reference.md)

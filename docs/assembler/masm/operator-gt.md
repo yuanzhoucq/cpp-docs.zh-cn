@@ -8,21 +8,21 @@ helpviewer_keywords:
 - operator GT
 - GT operator
 ms.assetid: 48194297-7bf9-42f9-957a-e1a5b6d7be7c
-ms.openlocfilehash: 905db693b0ff4c8373cde9bd688b97c2f8f08dbe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d740a37ebd7dd75ea7567b1f652cf1b22228a283
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62200518"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396932"
 ---
 # <a name="operator-gt"></a>运算符 GT
 
-如果返回 true (-1) *expression1*大于*expression2*，或如果不是返回 false (0)。
+如果*表达式* *1 大于 2-1，则*返回 true （-1），如果不是，则返回 false （0）。
 
 ## <a name="syntax"></a>语法
 
-> expression1 GT expression2
+> *表达式* 2
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[运算符参考](../../assembler/masm/operators-reference.md)<br/>
+[运算符引用](operators-reference.md)

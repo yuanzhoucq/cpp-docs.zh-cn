@@ -80,7 +80,7 @@ struct CDaoFieldInfo
 *m_lSize*<br/>
 一个值，该值指示 DAO 字段对象的最大大小（以字节为单位），该对象包含文本或数字值的字段对象的固定大小。 有关详细信息，请参阅 DAO 帮助中的主题 "Size 属性"。 大小可以为下列值之一：
 
-|Type|大小(字节)|描述|
+|类型|“大小(字节)”|说明|
 |----------|--------------------|-----------------|
 |`dbBoolean`|1 个字节|是/否（与 True/False 相同）|
 |`dbByte`|1|字节|
@@ -154,11 +154,11 @@ DAO 字段对象的默认值。 创建新记录时，"默认值" 属性设置会
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxdao.h
+**标头：** afxdao
 
 ## <a name="see-also"></a>另请参阅
 
 [结构、样式、回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
-[CDaoTableDef::GetFieldInfo](../../mfc/reference/cdaotabledef-class.md#getfieldinfo)<br/>
-[CDaoRecordset::GetFieldInfo](../../mfc/reference/cdaorecordset-class.md#getfieldinfo)<br/>
-[CDaoQueryDef::GetFieldInfo](../../mfc/reference/cdaoquerydef-class.md#getfieldinfo)
+[CDaoTableDef：： Issomapper.getfieldinfo](../../mfc/reference/cdaotabledef-class.md#getfieldinfo)<br/>
+[CDaoRecordset：： Issomapper.getfieldinfo](../../mfc/reference/cdaorecordset-class.md#getfieldinfo)<br/>
+[CDaoQueryDef：： Issomapper.getfieldinfo](../../mfc/reference/cdaoquerydef-class.md#getfieldinfo)

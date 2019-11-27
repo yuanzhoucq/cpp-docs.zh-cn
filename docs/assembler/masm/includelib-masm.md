@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - INCLUDELIB directive
 ms.assetid: 5455d004-8202-4b57-93f3-9aa66f133a2d
-ms.openlocfilehash: 12b629029c6ef250c288021232c23f82dcdd00a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef8a6e91ca8c5ca77b64b4668bf08087299701e0
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62202825"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397330"
 ---
 # <a name="includelib-masm"></a>INCLUDELIB (MASM)
 
-通知链接器的当前模块应与链接*libraryname*。
+通知链接器，当前模块应与*libraryname*链接。
 
 ## <a name="syntax"></a>语法
 
-> INCLUDELIB libraryname
+> **INCLUDELIB** *libraryname*
 
 ## <a name="remarks"></a>备注
 
-*Libraryname*必须括在尖括号中，如果它包含一个反斜杠，分号，更高版本的符号，较少-比符号、 单引号或双引号。
+如果*libraryname*包括反斜杠、分号、大于符号、小于符号、单引号或双引号，则必须将其括在尖括号中。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[指令参考](../../assembler/masm/directives-reference.md)<br/>
+[指令参考](directives-reference.md)

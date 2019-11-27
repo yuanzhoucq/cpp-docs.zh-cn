@@ -19,7 +19,7 @@ ms.locfileid: "71998663"
 
 ## <a name="remarks"></a>备注
 
-若要初始化定义为 `volatile`、非 `const` 或不是整型的 @no__t 0 数据成员，请使用成员定义语句。 它们不能在声明中初始化。
+若要初始化定义为 `volatile`、非`const`或不是整型的 `static` 数据成员，请使用成员定义语句。 它们不能在声明中初始化。
 
 ## <a name="example"></a>示例
 

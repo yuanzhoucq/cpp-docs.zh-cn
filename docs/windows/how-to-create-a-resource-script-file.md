@@ -70,7 +70,7 @@ ms.locfileid: "72444976"
    > [!NOTE]
    > 不要将项目文件夹与**解决方案资源管理器**中的解决方案文件夹混淆。 如果将焦点放在**解决方案**文件夹中，则不会有相同的 "**添加新项**" 选项。
 
-1. 在菜单中，找到 "**项目** > "**添加新项**"。
+1. 在菜单中，依次指向 "**项目**" > "**添加新项**"。
 
 1. 选择 "**视觉C++对象**" 文件夹，并在右窗格中选择 "**资源文件（.rc）** "。
 
@@ -83,7 +83,7 @@ ms.locfileid: "72444976"
 > [!NOTE]
 > 某些命令仅在文件独立打开时才可用，而无需先加载项目即可。 例如，若要使用 "**另存为**" 命令并使用不同的格式或文件名保存文件，则该文件必须是独立打开的。
 
-- 若要在项目外打开资源脚本文件，请在菜单中，依次单击 "**文件**" 和 "**文件"  >  "** ，然后选择"**文件**"。 导航到资源脚本文件，突出显示该文件，然后选择 "**打开**"。
+- 若要在项目外打开资源脚本文件，请在菜单中，依次指向 "**文件**" > "**打开**"，然后选择 "**文件**"。 导航到资源脚本文件，突出显示该文件，然后选择 "**打开**"。
 
     > [!NOTE]
     > 有时，你可能想要查看项目的资源脚本文件的内容，而无需使用资源编辑器打开资源。 例如，可能需要在资源文件的所有对话框内搜索字符串，而不必分别打开每个对话框。 您可以轻松地以文本格式打开资源文件，以查看它包含的所有资源，并完成文本编辑器支持的全局操作。
@@ -109,15 +109,15 @@ ms.locfileid: "72444976"
 使用 "**资源视图**" 窗口显示项目中包含的资源文件。 展开顶级文件夹（例如， *Project1*）将显示该文件中的资源类型。 展开每个资源类型以显示该类型的单个资源。
 
 > [!TIP]
-> 若要打开 "**资源视图**" 窗口，请转到 "菜单"**视图** > **其他窗口**@no__t**资源视图**@no__t
+> 若要打开 "**资源视图**" 窗口，请转到 "菜单"**视图** > **其他窗口** > **资源视图**或按**Ctrl**+**Shift**+**E**。
 
 你还可以使用右键单击 "**资源视图**" 窗口以启动命令的快捷菜单，或双击标题栏停靠和取消停靠窗口。 右键单击控制窗口行为的命令的标题栏。 有关详细信息，请参阅[Windows 管理](/visualstudio/ide/customizing-window-layouts-in-visual-studio)。
 
 **资源视图**windows 包括 "**添加资源**" 对话框，其中包含以下用于将资源添加到C++ windows 桌面应用程序项目的属性：
 
-| Property | 描述 |
+| 属性 | 说明 |
 |---|---|
-| **资源类型** | 指定要创建的资源类型。<br/><br/>您可以展开光标和对话框资源类别以显示*位于中的其他资源。\Microsoft Visual Studio \<version @ no__t-2\VC\VCResourceTemplates @ no__t < LCID @ no__t-4\mfc.rct*。 如果需要添加 .rct 文件，请将它们放在此处或指定另一个[包含路径](../windows/how-to-specify-include-directories-for-resources.md)。 在树控件中的顶层显示的资源是 Visual Studio 提供的默认资源。 .Rct 文件中的资源将显示在相应类别下的第二个级别。 对于可以添加的 .rct 文件数没有预设的限制。<br/><br/> |
+| **资源类型** | 指定要创建的资源类型。<br/><br/>您可以展开光标和对话框资源类别以显示*位于中的其他资源。\Microsoft Visual Studio \<版本\>\VC\VCResourceTemplates\\< LCID\>\mfc.rct*。 如果需要添加 .rct 文件，请将它们放在此处或指定另一个[包含路径](../windows/how-to-specify-include-directories-for-resources.md)。 在树控件中的顶层显示的资源是 Visual Studio 提供的默认资源。 .Rct 文件中的资源将显示在相应类别下的第二个级别。 对于可以添加的 .rct 文件数没有预设的限制。<br/><br/> |
 | **新建** | 根据在 "**资源类型**" 框中选择的类型创建资源，然后在相应的编辑器中打开该资源。<br/><br/>例如，如果您创建一个对话框资源，它将在[对话框编辑器](../windows/dialog-editor.md)中打开该资源。 |
 | **Import** | 打开 "**导入**" 对话框以导航到要导入到当前项目中的资源。<br/><br/>可以导入位图、图标、光标、HTML 和声音（。WAV）或自定义资源文件。 |
 | **自定义** | 打开 "**新建自定义资源**" 对话框以创建自定义资源。<br/><br/>还包括一个**资源类型**属性，该属性提供一个文本框以输入自定义资源类型的名称。 退出C++时，视觉对象会自动将名称改为大写。 自定义资源仅在[二进制编辑器](../windows/binary-editor.md)中进行编辑。 |
@@ -125,11 +125,11 @@ ms.locfileid: "72444976"
 创建新资源时，视觉对象C++将为其分配一个唯一名称，例如 `IDD_Dialog1`。 可以通过在关联的资源编辑器或[属性窗口](/visualstudio/ide/reference/properties-window)中编辑资源属性来自定义此资源 ID。
 
 > [!NOTE]
-> 不要指定由 Visual Studio 保留的资源名称或 ID。 保留名称为 `DESIGNINFO`、`HWB` 和 `TEXTINCLUDE`，保留 ID 为 `255`。
+> 不要指定由 Visual Studio 保留的资源名称或 ID。 保留的名称为 `DESIGNINFO`、`HWB`和 `TEXTINCLUDE`，保留的 ID 是 `255`的。
 
 ### <a name="to-create-a-resource"></a>创建资源
 
-- 在**资源视图**中，选择 .rc 文件，然后使用 "**编辑** > **添加资源**"，然后选择要添加到项目的资源类型。
+- 在**资源视图**中，选择 .rc 文件，然后使用 "**编辑** > "**添加资源**"，然后选择要添加到项目中的资源类型。
 
    > [!TIP]
    > 还可以在**资源视图**中右键单击 .rc 文件，然后从快捷菜单中选择 "**添加资源**"。
@@ -141,7 +141,7 @@ ms.locfileid: "72444976"
 
 - 在[类视图](/visualstudio/ide/viewing-the-structure-of-code)中，右键单击类，选择 "**添加** > **添加资源**"，然后选择要添加到项目中的资源类型。
 
-- 使用菜单**项目** > **添加资源**。
+- 使用菜单**项目** > "**添加资源**"。
 
 ## <a name="use-resource-templates"></a>使用资源模板
 
@@ -153,13 +153,13 @@ ms.locfileid: "72444976"
 > 资源编辑器将自动提供一个唯一的资源 ID。 您可以根据需要修改[资源属性](../windows/changing-the-properties-of-a-resource.md)。
 
 > [!NOTE]
-> 将特定于语言的模板文件放在主模板目录的子目录中。 例如，仅限英语的模板文件放入 *。\\ < 资源模板目录 @ no__t-2\1033*。
+> 将特定于语言的模板文件放在主模板目录的子目录中。 例如，仅限英语的模板文件 *\\< 资源模板目录\>\ 1033*。
 >
-> Visual Studio 将在 \Program Files\Microsoft Visual Studio 中搜索新的 .rct 文件 *\<version @ no__t-2\VC\VCResourceTemplates*、 *\Program Files\Microsoft Visual Studio \<version > \VC\VCResourceTemplates @ no__t-5 <LCID @ no__t* （例如，1033的 lcid），或[包括路径](../windows/how-to-specify-include-directories-for-resources.md)上的任何位置。 如果希望将 .rct 文件存储在其他位置，则必须将该位置添加到包含路径中。
+> Visual Studio 中的新.rct 文件搜索 *\Program Files\Microsoft Visual Studio\<版本\>\VC\VCResourceTemplates*， *\Program Files\Microsoft Visual Studio \<版本 > \VC\VCResourceTemplates\\< LCID\>*  （例如 1033 为英语的 LCID)，或在任何位置[包括路径](../windows/how-to-specify-include-directories-for-resources.md)。 如果希望将 .rct 文件存储在其他位置，则必须将该位置添加到包含路径中。
 
 ### <a name="to-create-and-use-a-resource-template"></a>创建和使用资源模板
 
-1. 在**解决方案资源管理器**中，右键单击你的项目，然后选择 "添加" "**添加** > **添加新项**"。
+1. 在**解决方案资源管理器**中，右键单击项目，然后选择 "**添加** > **添加新项**"。
 
 1. 在 "**模板：** " 窗格中，选择 "**资源模板文件（.rct）** "。
 
@@ -173,7 +173,7 @@ ms.locfileid: "72444976"
 
 1. 在**资源视图**窗格中，右键单击 *.rc*文件，然后选择 "**添加资源**"。
 
-1. 选择资源旁边的加号（ **+** ）展开 "资源" 节点，并查看可用于该资源的模板。
+1. 选择资源旁边的加号（ **+** ），展开资源节点并查看可用于该资源的模板。
 
 1. 双击要使用的模板。
 
@@ -181,13 +181,13 @@ ms.locfileid: "72444976"
 
 ### <a name="to-convert-an-existing-resource-file-to-a-template"></a>将现有资源文件转换为模板
 
-在资源脚本文件打开的情况下，在菜单中，依次指向 "**文件**"  >  "**将 @no__t 的*文件名*保存 > 为**。 指定位置，然后选择 **"确定"** 。
+在资源脚本文件打开的情况下，在菜单中，依次指向 "**文件**" > "**保存 \<*文件名*> 为**。 指定位置，然后选择 **"确定"** 。
 
 ## <a name="requirements"></a>要求
 
 Win32
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [资源文件](../windows/resource-files-visual-studio.md)<br/>
 [如何：管理资源](../windows/how-to-copy-resources.md)<br/>

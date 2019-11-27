@@ -44,7 +44,7 @@ Visual Studio 2017 及更高版本支持 CMake 项目。
 - `configurationType`：为选定的生成器指定生成类型配置。 可能是以下其中之一：
 
   - 调试
-  - Release
+  - 发布
   - MinSizeRel
   - RelWithDebInfo
   
@@ -84,7 +84,7 @@ Visual Studio 2017 及更高版本支持 CMake 项目。
 - `configurationType`：为选定的生成器指定生成类型配置。 可能是以下其中之一：
 
   - 调试
-  - Release
+  - 发布
   - MinSizeRel
   - RelWithDebInfo
  
@@ -288,7 +288,7 @@ ninja: invalid option -- `-?'
 usage: ninja [options] [targets...]
 ```
 
-|选项|描述|
+|选项|说明|
 |--------------|------------|
 | --version  | 打印 ninja 版本（“1.7.1”）|
 |   -C DIR   | 在执行任何其他操作前更改为 DIR|

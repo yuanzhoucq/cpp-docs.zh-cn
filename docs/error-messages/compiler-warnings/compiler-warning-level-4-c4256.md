@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C4256
 ms.assetid: a755a32e-895a-4837-a2b5-4ea06b736798
-ms.openlocfilehash: 3e8a3ab1b11c719730016e6a0cd248770cd89af8
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: e087e3cd36ab85d6f3f6b5cfed1b55cac66ea142
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447770"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541696"
 ---
 # <a name="compiler-warning-level-4-c4256"></a>编译器警告（等级 4）C4256
 
-function： 带虚拟基的类的构造函数具有...;调用可能不兼容与较旧版本的视觉对象C++
+"function"：具有虚拟基的类的构造函数具有 "...";调用可能与早期版本的视觉对象不兼容C++
 
-可能不兼容。
+可能的不兼容性。
 
-请考虑以下代码示例。 如果定义的构造函数 S2::S2 (int i，...) 已使用编译的版本的 MicrosoftC++之前版本 7，但下面的示例编译器编译使用最新版本，适用于 S3 的构造函数的调用无法正常工作由于特殊情况调用约定发生了更改。 如果两者都是使用 Visual C++ 6.0 编译的，该调用也无法完全正常工作，除非不为省略号传递任何参数。
+请看如下代码示例。 如果在版本7之前使用 Microsoft C++编译器版本编译了构造函数 s2：： S2 （int i，...）的定义，但以下示例是使用当前版本编译的，则对 S3 的构造函数的调用将无法正常工作，因为有特殊的 case 调用约定更改。 如果两者都是使用 Visual C++ 6.0 编译的，该调用也无法完全正常工作，除非不为省略号传递任何参数。
 
-若要解决此警告，
+若要修复此警告，
 
-1. 不要在构造函数使用省略号。
+1. 不要在构造函数中使用省略号。
 
-1. 请确保在其项目中的所有组件都生成与当前版本 （其中包括任何库，可以定义或引用此类），然后禁用警告使用[警告](../../preprocessor/warning.md)杂注。
+1. 请确保使用当前版本（包括可定义或引用此类的任何库）生成项目中的所有组件，然后使用[警告](../../preprocessor/warning.md)杂注禁用此警告。
 
-下面的示例生成 C4256:
+下面的示例生成 C4256：
 
-```
+```cpp
 // C4256.cpp
 // compile with: /W4
 // #pragma warning(disable : 4256)

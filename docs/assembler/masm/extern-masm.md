@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - EXTERN directive
 ms.assetid: 667d703d-3aaf-4139-a586-29bc5dab1aff
-ms.openlocfilehash: 30d1b3ae7c6676aeb97b91c7627da859525b9ce1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fc66338d90b54ecb12ef3ab1aa56214fb445cb13
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203610"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397568"
 ---
 # <a name="extern-masm"></a>EXTERN (MASM)
 
-定义一个或多个外部变量、 标签或符号名为*名称*其类型是*类型*。
+定义一个或多个名为*type* *类型的外部*变量、标签或符号。
 
 ## <a name="syntax"></a>语法
 
-> EXTERN [[*langtype*]] *name* [[ (*altid*) ]] : *type* [[, [[*langtype*]] *name* [[ (*altid*) ]] : *type*]] ...
+> **EXTERN** ⟦*language-type*⟧ *name* ⟦ __（__ *altid* __）__ ⟧ __：__ *type* ⟦ __，__ ⟦*language-type*⟧ *name* ⟦ __（__ *altid* __）__ ⟧ __：__ *type* .。。⟧
 
 ## <a name="remarks"></a>备注
 
-*类型*可以是[ABS](../../assembler/masm/operator-abs.md)，它导入*名称*为常量。 与相同[EXTRN](../../assembler/masm/extrn.md)。
+该*类型*可以是[ABS](../../assembler/masm/operator-abs.md)，后者将*名称*导入为常量。 与[EXTRN](../../assembler/masm/extrn.md)相同。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[指令参考](../../assembler/masm/directives-reference.md)<br/>
+[指令参考](../../assembler/masm/directives-reference.md)

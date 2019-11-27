@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - DD directive
 ms.assetid: 0c238628-2fe2-437e-979d-a90bdae7b478
-ms.openlocfilehash: 6022da53ad8cde2b90431bfaf5b1ea2ddc0cac34
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e87098d2536cce5d818a0759f50b42fa50cb887a
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178803"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398802"
 ---
 # <a name="dd"></a>DD
 
-分配并根据需要初始化双字 （4 字节） 存储的每个`initializer`。 `DD` 是的同义词[DWORD](../../assembler/masm/dword.md)。
+为每个*初始值设定*分配和（可选）初始化双字（4字节）的存储。 **DD**是[DWORD](../../assembler/masm/dword.md)的同义词。
 
 ## <a name="syntax"></a>语法
 
-> [[name]]DD 初始值设定项 [[，初始值设定项]]...
+> ⟦*name*⟧ **DD** *初始值设定项*⟦ __，__ *初始值设定项*.。。⟧
 
 ## <a name="remarks"></a>备注
 
-也可以用作类型说明符类型是合法的任何位置。
+在类型合法的任何位置，还可以用作类型说明符。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[指令参考](../../assembler/masm/directives-reference.md)<br/>
+[指令参考](../../assembler/masm/directives-reference.md)

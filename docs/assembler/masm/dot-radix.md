@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - .RADIX directive
 ms.assetid: 3f7c2717-fd41-4aff-820d-3f40fd9280a0
-ms.openlocfilehash: cd00699da0f9a9e77ea00ab242831f4dbf690cb9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9aec577ef5cda70f7bc126fe7d1245de7edd9698
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178600"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398021"
 ---
 # <a name="radix"></a>.RADIX
 
-在 2 到 16 的值的范围设置默认基数*表达式*。
+将介于2到16之间的默认基数设置为*expression*的值。
 
 ## <a name="syntax"></a>语法
 
-> .基数表达式
+> **.基数***表达式*
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[指令参考](../../assembler/masm/directives-reference.md)<br/>
+[指令参考](directives-reference.md)

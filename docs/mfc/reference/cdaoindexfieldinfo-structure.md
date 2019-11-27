@@ -48,10 +48,10 @@ struct CDaoIndexFieldInfo
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxdao.h
+**标头：** afxdao
 
 ## <a name="see-also"></a>另请参阅
 
 [结构、样式、回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
-[CDaoTableDef::GetIndexInfo](../../mfc/reference/cdaotabledef-class.md#getindexinfo)<br/>
-[CDaoRecordset::GetIndexInfo](../../mfc/reference/cdaorecordset-class.md#getindexinfo)
+[CDaoTableDef：： GetIndexInfo](../../mfc/reference/cdaotabledef-class.md#getindexinfo)<br/>
+[CDaoRecordset：： GetIndexInfo](../../mfc/reference/cdaorecordset-class.md#getindexinfo)

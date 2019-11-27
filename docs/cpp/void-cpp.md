@@ -17,13 +17,13 @@ ms.locfileid: "74245210"
 ---
 # <a name="void-c"></a>void (C++)
 
-When used as a function return type, the **void** keyword specifies that the function does not return a value. When used for a function's parameter list, **void** specifies that the function takes no parameters. When used in the declaration of a pointer, **void** specifies that the pointer is "universal."
+当用作函数返回类型时， **void**关键字指定函数不返回值。 用于函数的参数列表时， **void**指定该函数不采用任何参数。 当在指针的声明中使用 void 时， **void**指定指针为 "通用"。
 
-If a pointer's type is **void\*** , the pointer can point to any variable that is not declared with the **const** or **volatile** keyword. A **void\*** pointer cannot be dereferenced unless it is cast to another type. A **void\*** pointer can be converted into any other type of data pointer.
+如果指针的类型为**void\*** ，指针可以指向未使用**const**或**volatile**关键字声明的任何变量。 不能取消引用**void\*** 指针，除非它被强制转换为另一种类型。 **Void\*** 指针可以转换为任何其他类型的数据指针。
 
-A **void** pointer can point to a function, but not to a class member in C++.
+**Void**指针可以指向函数，但不能指向中C++的类成员。
 
-You cannot declare a variable of type **void**.
+不能声明**void**类型的变量。
 
 ## <a name="example"></a>示例
 
@@ -39,7 +39,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [关键字](../cpp/keywords-cpp.md)<br/>
 [基本类型](../cpp/fundamental-types-cpp.md)

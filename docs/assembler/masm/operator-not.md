@@ -7,21 +7,21 @@ helpviewer_keywords:
 - operator NOT
 - NOT operator
 ms.assetid: d68d44fd-f92f-4b65-8d36-96de03e1b4e5
-ms.openlocfilehash: b864294fa5d01f5cb231e0d26ac8e49cd9340ae5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 567165cdb481ab8081fe091d68cc3146a5f11dac
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176546"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396584"
 ---
 # <a name="operator-not"></a>运算符 NOT
 
-返回*表达式*反转的所有位。
+返回所有位均反转的*expression* 。
 
 ## <a name="syntax"></a>语法
 
-> 非表达式
+> **NOT** *表达式*
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[运算符参考](../../assembler/masm/operators-reference.md)<br/>
+[运算符引用](operators-reference.md)

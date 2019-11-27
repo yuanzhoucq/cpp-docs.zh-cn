@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - .ERRNB directive
 ms.assetid: 3b9a6f5e-9a4d-47a8-a1f6-b199328937de
-ms.openlocfilehash: 0c2f588c48f73c788106692c6bb8e3525c96056e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d8165f255e00163f880ef902282a1c8e508f551
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185230"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398334"
 ---
 # <a name="errnb"></a>.ERRNB
 
-如果将生成错误*textitem*不为空。
+如果*textitem*不为空，则生成错误。
 
 ## <a name="syntax"></a>语法
 
-> .ERRNB *textitem* [[, *message*]]
+> **..Errnb** *textitem* ⟦ __，__ *message*⟧
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[指令参考](../../assembler/masm/directives-reference.md)<br/>
+[指令参考](../../assembler/masm/directives-reference.md)

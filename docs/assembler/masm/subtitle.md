@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - SUBTITLE directive
 ms.assetid: b882ae31-9998-46ed-bd88-6656263143e7
-ms.openlocfilehash: 8029e66b8a8c9c3b274c925c756ebca5a5ef0bf5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28cb1bcafd95d83bbf008a2424ae030b328fce07
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210357"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74393470"
 ---
 # <a name="subtitle"></a>SUBTITLE
 
-定义列表副标题。 与相同[SUBTTL](../../assembler/masm/subttl.md)。
+定义列表副标题。 与[SUBTTL](../../assembler/masm/subttl.md)相同。
 
 ## <a name="syntax"></a>语法
 
-> 副标题文本
+> **副标题***文本*
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[指令参考](../../assembler/masm/directives-reference.md)<br/>
+[指令参考](directives-reference.md)

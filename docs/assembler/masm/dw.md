@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - DW directive
 ms.assetid: 451d0e24-b65b-4cbb-b81d-ea27680feaf3
-ms.openlocfilehash: 091404138e18cec96ffa47342b3e1c189ba614c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e0f863fd77a0e17c486553185fa6f27513b70b37
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203989"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397745"
 ---
 # <a name="dw"></a>DW
 
-分配并根据需要为每个初始化存储一个单词 （2 个字节） `initializer`。 也可以用作类型说明符类型是合法的任何位置。 `DW` 是的同义词[WORD](../../assembler/masm/word.md)。
+为每个*初始值设定项*分配一个字（2个字节），并根据需要对其进行初始化。 在类型合法的任何位置，还可以用作类型说明符。 **DW**是[WORD](../../assembler/masm/word.md)的同义词。
 
 ## <a name="syntax"></a>语法
 
-> [[name]]DW 初始值设定项 [[，初始值设定项]]...
+> ⟦*name*⟧ **DW** *初始值设定项*⟦ __，__ *初始值设定项*.。。⟧
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[指令参考](../../assembler/masm/directives-reference.md)<br/>
-[SWORD](../../assembler/masm/sword.md)<br/>
+[指令引用](../../assembler/masm/directives-reference.md)\
+[SWORD](../../assembler/masm/sword.md)
