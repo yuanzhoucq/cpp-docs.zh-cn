@@ -15,18 +15,18 @@ ms.locfileid: "74397513"
 ---
 # <a name="for-masm"></a>FOR (MASM)
 
-Marks a block that will be repeated once for each *argument*, with the current *argument* replacing *parameter* on each repetition.
+将为每个*参数*重复一次的块标记为使用当前*参数*替换每个重复的*参数*。
 
 ## <a name="syntax"></a>语法
 
-> **FOR** *parameter* ⟦ **:REQ** |  __:=__ *default*⟧ **, \<** _argument_ ⟦ __,__ *argument* ...⟧ **>** \
-> *statements*\
+> **对于***参数*⟦ **：** 请求 |  __： =__ *default*⟧ **，\<** _参数_⟦ __，__ *argument* .。。⟧ **>** \
+> *语句*\
 > **ENDM**
 
 ## <a name="remarks"></a>备注
 
-Same as [IRP](../../assembler/masm/irp.md).
+与[IRP](../../assembler/masm/irp.md)相同。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](directives-reference.md)
+[指令参考](directives-reference.md)
