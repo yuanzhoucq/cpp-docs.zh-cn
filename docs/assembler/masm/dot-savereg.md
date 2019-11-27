@@ -15,18 +15,18 @@ ms.locfileid: "74397971"
 ---
 # <a name="savereg"></a>.SAVEREG
 
-Generates either a `UWOP_SAVE_NONVOL` or a `UWOP_SAVE_NONVOL_FAR` unwind code entry for the specified register (*reg*) and offset (*offset*) using the current prologue offset. MASM will choose the most efficient encoding.
+使用当前的序言偏移量为指定的寄存器（*reg*）和偏移量（*偏移*量）生成 `UWOP_SAVE_NONVOL` 或 `UWOP_SAVE_NONVOL_FAR` 展开代码项。 MASM 将选择最有效的编码。
 
 ## <a name="syntax"></a>语法
 
-> **.SAVEREG** *reg* __,__ *offset*
+> **.SAVEREG** *reg* __，__ *offset*
 
 ## <a name="remarks"></a>备注
 
-**.SAVEREG**allows ml64.exe users to specify how a frame function unwinds and is only allowed within the prologue, which extends from the [PROC](../../assembler/masm/proc.md) FRAME declaration to the [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) directive. These directives do not generate code; they only generate `.xdata` and `.pdata`. **.SAVEREG** should be preceded by instructions that actually implement the actions to be unwound. It is a good practice to wrap both the unwind directives and the code they are meant to unwind in a macro to ensure agreement.
+**.SAVEREG**允许 ml64.exe 用户指定框架函数的展开方式，并只允许在序言内进行扩展，这种情况下，它从[过程](../../assembler/masm/proc.md)框架声明扩展到[。ENDPROLOG](../../assembler/masm/dot-endprolog.md)指令。 这些指令不生成代码;它们仅生成 `.xdata` 和 `.pdata`。 **.SAVEREG**后面应是实际实现要展开的操作的说明。 最好将展开指令和它们要展开的代码封装在一个宏中，以确保协议。
 
-For more information, see [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+有关详细信息，请参阅[MASM for x64 （ml64.exe）](../../assembler/masm/masm-for-x64-ml64-exe.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](directives-reference.md)
+[指令参考](directives-reference.md)

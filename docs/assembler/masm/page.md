@@ -15,14 +15,14 @@ ms.locfileid: "74395120"
 ---
 # <a name="page"></a>PAGE
 
-The first directive sets line *length* and character *width* of the program listing. If no arguments are given, generates a page break. The second directive increments the section number and resets the page number to 1.
+第一个指令设置程序列表的行*长度*和字符*宽度*。 如果未提供任何参数，则将生成分页符。 第二个指令递增节号，并将页码重置为1。
 
 ## <a name="syntax"></a>语法
 
-> **PAGE** ⟦*length*⟧⟦ __,__ *width*⟧
+> **PAGE** ⟦*length*⟧⟦ __，__ *width*⟧
 
 > **PAGE +**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[指令参考](../../assembler/masm/directives-reference.md)
