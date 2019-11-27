@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4640
+title: 编译器警告（等级 3）C4640
 ms.date: 11/04/2016
 f1_keywords:
 - C4640
@@ -13,15 +13,15 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74189107"
 ---
-# <a name="compiler-warning-level-3-c4640"></a>Compiler Warning (level 3) C4640
+# <a name="compiler-warning-level-3-c4640"></a>编译器警告（等级 3）C4640
 
-'instance' : construction of local static object is not thread-safe
+"instance"：局部静态对象的构造不是线程安全的
 
-A static instance of an object is not thread safe.
+对象的静态实例不是线程安全的。
 
 默认情况下，此警告处于关闭状态。 请参阅 [默认情况下处于关闭状态的编译器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 了解详细信息。
 
-The following sample generates C4640:
+下面的示例生成 C4640：
 
 ```cpp
 // C4640.cpp

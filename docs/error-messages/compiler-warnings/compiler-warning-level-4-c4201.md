@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4201
 ms.assetid: 6156f508-9393-4d77-9e73-1ec3e1c32d0d
-ms.openlocfilehash: c7c10273e06ec35528dbd9d51c02bb844d275638
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f029d7717f99e55a977ad9cb80dacbfa1485086
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401249"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541217"
 ---
 # <a name="compiler-warning-level-4-c4201"></a>编译器警告（等级 4）C4201
 
-使用了非标准扩展： 无名称结构/联合
+使用了非标准扩展：无号结构/联合
 
-在 Microsoft 扩展 (/Ze) 中，可以指定而无需声明符的结构，为另一个结构或联合的成员。 这些结构生成 ANSI 兼容性错误 ([/Za](../../build/reference/za-ze-disable-language-extensions.md))。
+在 Microsoft 扩展（/Ze）下，可以指定一个不包含声明符的结构作为另一个结构或联合的成员。 这些结构在 ANSI 兼容性（[/za](../../build/reference/za-ze-disable-language-extensions.md)）下生成错误。
 
 ## <a name="example"></a>示例
 
-```
+```cpp
 // C4201.cpp
 // compile with: /W4
 struct S

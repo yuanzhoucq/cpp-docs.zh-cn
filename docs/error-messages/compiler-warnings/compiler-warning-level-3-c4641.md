@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4641
+title: 编译器警告（等级 3）C4641
 ms.date: 11/04/2016
 f1_keywords:
 - C4641
@@ -13,17 +13,17 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74189428"
 ---
-# <a name="compiler-warning-level-3-c4641"></a>Compiler Warning (level 3) C4641
+# <a name="compiler-warning-level-3-c4641"></a>编译器警告（等级 3）C4641
 
 XML 文档注释含有不明确的交叉引用。
 
-The compiler was unable to unambiguously resolve a reference. To resolve this warning, specify the parameter information necessary to make the reference unambiguous.
+编译器无法明确解析引用。 若要解决此警告，请指定使引用明确所需的参数信息。
 
 有关更多信息，请参见 [XML Documentation](../../build/reference/xml-documentation-visual-cpp.md)。
 
 ## <a name="example"></a>示例
 
-The following sample generates C4641.
+下面的示例生成 C4641。
 
 ```cpp
 // C4641.cpp

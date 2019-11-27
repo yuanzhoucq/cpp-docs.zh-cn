@@ -43,7 +43,7 @@ int main()
 
 ## <a name="alternative-format-options"></a>替代格式选项
 
-作为替代方法，你可以使用 `Boost.Format` C++ ，即使它是非标准的。 你可以下载从任何 Boost 库[Boost](https://www.boost.org/)网站。
+作为替代方法，你可以使用 `Boost.Format` C++ ，即使它是非标准的。 可以从[提升](https://www.boost.org/)网站下载任何增强库。
 
 `Boost.Format` 的一些优点如下：
 
@@ -53,7 +53,7 @@ int main()
 
 - 便利：标准 Posix 和类似格式字符串。
 
-尽管 `Boost.Format` 是基于C++ [\<iostream >](../standard-library/iostream-programming.md)设施构建的，但这些设施是安全且可扩展的，它们不能优化性能。 当需要优化性能时，请考虑使用 C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)和[sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)，它们高效且易于使用。 但是，它们不是可扩展的，也不是安全的。 （存在安全版本，但会导致性能略微下降。 有关详细信息，请参阅[printf_s、 _printf_s_l、 wprintf_s、 _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)和[sprintf_s、 _sprintf_s_l、 swprintf_s、 _swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)。
+尽管 `Boost.Format` 是基于C++ [\<iostream >](../standard-library/iostream-programming.md)设施构建的，但这些设施是安全且可扩展的，它们不能优化性能。 需要性能优化时，请考虑 C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)和[sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)，这些是快速易用的。 但是，它们不是可扩展的，也不是安全的。 （存在安全版本，但会导致性能略微下降。 有关详细信息，请参阅[printf_s、_printf_s_l、wprintf_s、_wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)和[sprintf_s、_sprintf_s_l、swprintf_s、_swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)）。
 
 以下代码演示了某些 Boost 格式功能特点。
 

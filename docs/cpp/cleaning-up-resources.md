@@ -18,19 +18,19 @@ ms.locfileid: "74246637"
 ---
 # <a name="cleaning-up-resources"></a>清理资源
 
-在终止处理程序执行期间，您在调用终止处理程序之前，可能无法知道实际分配的资源。 It is possible that the **__try** statement block was interrupted before all resources were allocated, so that not all resources were opened.
+在终止处理程序执行期间，您在调用终止处理程序之前，可能无法知道实际分配的资源。 可能会在分配所有资源之前中断 **__try**语句块，以便不会打开所有资源。
 
 因此，为安全起见，您应检查以查看哪些资源在终止处理清理之前已实际打开。 建议的过程是：
 
 1. 将句柄初始化为 NULL。
 
-1. In the **__try** statement block, allocate resources. 随着资源的分配，句柄将被设置为正值。
+1. 在 **__try**语句块中，分配资源。 随着资源的分配，句柄将被设置为正值。
 
-1. In the **__finally** statement block, release each resource whose corresponding handle or flag variable is nonzero or not NULL.
+1. 在 **__finally**语句块中，释放其对应的句柄或标志变量为非零或非 NULL 的每个资源。
 
 ## <a name="example"></a>示例
 
-For example, the following code uses a termination handler to close three files and a memory block that were allocated in the **__try** statement block. 在清理资源之前，代码应先检查是否已分配资源。
+例如，下面的代码使用终止处理程序关闭三个文件，并使用在 **__try**语句块中分配的内存块。 在清理资源之前，代码应先检查是否已分配资源。
 
 ```cpp
 // exceptions_Cleaning_up_Resources.cpp
@@ -70,7 +70,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Writing a termination handler](../cpp/writing-a-termination-handler.md)<br/>
-[结构化异常处理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[编写终止处理程序](../cpp/writing-a-termination-handler.md)<br/>
+[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

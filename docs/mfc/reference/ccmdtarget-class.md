@@ -63,28 +63,28 @@ Microsoft 基础类库消息映射体系结构的基类。
 class CCmdTarget : public CObject
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[CCmdTarget::CCmdTarget](#ccmdtarget)|构造 `CCmdTarget` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[CCmdTarget::BeginWaitCursor](#beginwaitcursor)|将光标显示为沙漏光标。|
 |[CCmdTarget::DoOleVerb](#dooleverb)|导致执行 OLE 谓词指定的操作。|
-|[CCmdTarget::EnableAutomation](#enableautomation)|允许`CCmdTarget`对象的 OLE 自动化。|
+|[CCmdTarget::EnableAutomation](#enableautomation)|允许 `CCmdTarget` 对象的 OLE 自动化。|
 |[CCmdTarget::EnableConnections](#enableconnections)|允许通过连接点触发事件。|
 |[CCmdTarget::EnableTypeLib](#enabletypelib)|启用对象的类型库。|
 |[CCmdTarget::EndWaitCursor](#endwaitcursor)|返回到上一个游标。|
 |[CCmdTarget::EnumOleVerbs](#enumoleverbs)|枚举对象的 OLE 谓词。|
-|[CCmdTarget::FromIDispatch](#fromidispatch)|返回一个指向`IDispatch`与指针`CCmdTarget`关联的对象的指针。|
+|[CCmdTarget::FromIDispatch](#fromidispatch)|返回一个指向与 `IDispatch` 指针关联的 `CCmdTarget` 对象的指针。|
 |[CCmdTarget::GetDispatchIID](#getdispatchiid)|获取主调度接口 ID。|
-|[CCmdTarget::GetIDispatch](#getidispatch)|返回一个指向`CCmdTarget`与对象`IDispatch`关联的对象的指针。|
+|[CCmdTarget::GetIDispatch](#getidispatch)|返回一个指向与 `CCmdTarget` 对象关联的 `IDispatch` 对象的指针。|
 |[CCmdTarget::GetTypeInfoCount](#gettypeinfocount)|检索对象提供的类型信息接口的数量。|
 |[CCmdTarget::GetTypeInfoOfGuid](#gettypeinfoofguid)|检索与指定的 GUID 相对应的类型说明。|
 |[CCmdTarget::GetTypeLib](#gettypelib)|获取指向类型库的指针。|
@@ -99,13 +99,13 @@ class CCmdTarget : public CObject
 
 消息映射将命令或消息路由到你编写的用于处理它们的成员函数。 （命令是来自菜单项、命令按钮或快捷键的消息。）
 
-派生自 @no__t 的关键框架类包括[CView](../../mfc/reference/cview-class.md)、 [CWinApp](../../mfc/reference/cwinapp-class.md)、 [CDocument](../../mfc/reference/cdocument-class.md)、 [CWnd](../../mfc/reference/cwnd-class.md)和[CFrameWnd](../../mfc/reference/cframewnd-class.md)。 如果打算使用新类来处理消息，请从这些`CCmdTarget`派生类之一派生类。 很少会直接从`CCmdTarget`派生类。
+派生自 `CCmdTarget` 的关键框架类包括[CView](../../mfc/reference/cview-class.md)、 [CWinApp](../../mfc/reference/cwinapp-class.md)、 [CDocument](../../mfc/reference/cdocument-class.md)、 [CWnd](../../mfc/reference/cwnd-class.md)和[CFrameWnd](../../mfc/reference/cframewnd-class.md)。 如果打算使用新类来处理消息，请从这些 `CCmdTarget`派生类之一派生类。 很少会直接从 `CCmdTarget` 派生类。
 
 有关命令目标和 `OnCmdMsg` 路由的概述，请参阅[命令目标](../../mfc/command-targets.md)、[命令路由](../../mfc/command-routing.md)和[映射消息](../../mfc/mapping-messages.md)。
 
-`CCmdTarget`包含处理沙漏光标显示的成员函数。 如果希望命令采取明显的时间间隔来执行，则显示沙漏光标。
+`CCmdTarget` 包含处理沙漏光标显示的成员函数。 如果希望命令采取明显的时间间隔来执行，则显示沙漏光标。
 
-调度映射（类似于消息映射）用于公开 OLE 自动化`IDispatch`功能。 通过公开此接口，其他应用程序（如 Visual Basic）可以调入您的应用程序。
+调度映射与消息映射类似，用于公开 OLE 自动化 `IDispatch` 功能。 通过公开此接口，其他应用程序（如 Visual Basic）可以调入您的应用程序。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -127,11 +127,11 @@ void BeginWaitCursor();
 
 ### <a name="remarks"></a>备注
 
-框架调用此函数以显示用户处于繁忙状态，例如当`CDocument`对象将自身加载或保存到文件时。
+框架调用此函数以显示用户处于繁忙状态，例如，当 `CDocument` 对象将自身加载或保存到文件时。
 
-的操作`BeginWaitCursor`并非总是在单个消息处理程序外有效， `OnSetCursor`因为其他操作（如处理）可能会更改游标。
+`BeginWaitCursor` 的操作并非始终在单个消息处理程序的外部有效，因为其他操作（如 `OnSetCursor` 处理）可能会更改游标。
 
-调用`EndWaitCursor`以还原上一个游标。
+调用 `EndWaitCursor` 以还原上一个游标。
 
 ### <a name="example"></a>示例
 
@@ -157,7 +157,7 @@ BOOL DoOleVerb(
     LPCRECT lpRect);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>参数
 
 *iVerb*<br/>
 谓词的数值标识符。
@@ -213,11 +213,11 @@ void EnableTypeLib();
 
 ### <a name="remarks"></a>备注
 
-如果此成员函数提供类型信息，则`CCmdTarget`在派生对象的构造函数中调用此成员函数。
+如果此成员函数提供类型信息，则在 `CCmdTarget`派生对象的构造函数中调用此成员函数。
 
 ##  <a name="endwaitcursor"></a>CCmdTarget：： EndWaitCursor
 
-调用`BeginWaitCursor`成员函数以从沙漏光标返回到上一个游标后，调用此函数。
+在调用了从沙漏光标返回到上一个游标的 `BeginWaitCursor` 成员函数后，调用此函数。
 
 ```
 void EndWaitCursor();
@@ -239,14 +239,14 @@ void EndWaitCursor();
 BOOL EnumOleVerbs(LPENUMOLEVERB* ppenumOleVerb);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>参数
 
 *ppenumOleVerb*<br/>
 指向指向[IEnumOLEVERB](/windows/win32/api/oleidl/nn-oleidl-ienumoleverb)接口的指针的指针。
 
 ### <a name="return-value"></a>返回值
 
-如果对象至少支持一个 OLE 谓词（在这种情况下 \* *ppenumOleVerb*指向 @no__t 枚举器接口），则为 TRUE; 否则为 FALSE。
+如果对象至少支持一个 OLE 谓词（在这种情况下 \* *ppenumOleVerb*指向 `IEnumOLEVERB` 枚举器接口），则为 TRUE; 否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
@@ -254,24 +254,24 @@ BOOL EnumOleVerbs(LPENUMOLEVERB* ppenumOleVerb);
 
 ##  <a name="fromidispatch"></a>CCmdTarget：： FromIDispatch
 
-调用此函数可将从`IDispatch`类的 automation 成员函数接收的指针映射`CCmdTarget`到`IDispatch`实现对象接口的对象。
+调用此函数可将从类的 automation 成员函数接收的 `IDispatch` 指针映射到实现 `IDispatch` 对象接口的 `CCmdTarget` 对象中。
 
 ```
 static CCmdTarget* PASCAL FromIDispatch(LPDISPATCH lpDispatch);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>参数
 
 *lpDispatch*<br/>
 指向 `IDispatch` 对象的指针。
 
 ### <a name="return-value"></a>返回值
 
-指向与*lpDispatch*关联的 @no__t 0 对象的指针。 如果`IDispatch`对象未被识别为 Microsoft 基础类`IDispatch`对象，则此函数返回 NULL。
+指向与*lpDispatch*关联的 `CCmdTarget` 对象的指针。 如果 `IDispatch` 对象未被识别为 Microsoft 基础类 `IDispatch` 对象，则此函数将返回 NULL。
 
 ### <a name="remarks"></a>备注
 
-此函数的结果是对成员函数`GetIDispatch`的调用的反向。
+此函数的结果是对成员函数的调用的反向 `GetIDispatch`。
 
 ##  <a name="getdispatchiid"></a>CCmdTarget：： GetDispatchIID
 
@@ -281,7 +281,7 @@ static CCmdTarget* PASCAL FromIDispatch(LPDISPATCH lpDispatch);
 virtual BOOL GetDispatchIID(IID* pIID);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>参数
 
 *pIID*<br/>
 指向接口 ID 的指针（ [GUID](/previous-versions/cc317743(v%3dmsdn.10))。
@@ -292,28 +292,28 @@ virtual BOOL GetDispatchIID(IID* pIID);
 
 ### <a name="remarks"></a>备注
 
-派生类应重写此成员函数（如果未重`GetDispatchIID`写，则返回 FALSE）。 请参阅[COleControl](../../mfc/reference/colecontrol-class.md)。
+派生类应重写此成员函数（如果未重写，`GetDispatchIID` 返回 FALSE）。 请参阅[COleControl](../../mfc/reference/colecontrol-class.md)。
 
 ##  <a name="getidispatch"></a>  CCmdTarget::GetIDispatch
 
-调用此成员函数以从自动化`IDispatch`方法检索指针，该方法`IDispatch`返回指针或按引用获取`IDispatch`指针。
+调用此成员函数以从自动化方法检索 `IDispatch` 指针，该方法返回 `IDispatch` 指针或按引用使用 `IDispatch` 指针。
 
 ```
 LPDISPATCH GetIDispatch(BOOL bAddRef);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>参数
 
 *bAddRef*<br/>
 指定是否递增对象的引用计数。
 
 ### <a name="return-value"></a>返回值
 
-与`IDispatch`对象关联的指针。
+与对象关联的 `IDispatch` 指针。
 
 ### <a name="remarks"></a>备注
 
-对于在其构造`EnableAutomation`函数中调用的对象，使其实现自动化，此函数返回一个指向的基础类`IDispatch`实现的指针，该实现由通过`IDispatch`接口进行通信的客户端使用。 调用此函数会自动添加对指针的引用，因此不需要调用[IUnknown：： AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)。
+对于在其构造函数中调用 `EnableAutomation` 的对象，使其实现自动化，此函数返回一个指针，该指针指向通过 `IDispatch` 接口进行通信的客户端使用的 `IDispatch` 的基础类实现。 调用此函数会自动添加对指针的引用，因此不需要调用[IUnknown：： AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)。
 
 ##  <a name="gettypeinfocount"></a>  CCmdTarget::GetTypeInfoCount
 
@@ -331,7 +331,7 @@ virtual UINT GetTypeInfoCount();
 
 此成员函数主要实现[IDispatch：： GetTypeInfoCount](/windows/win32/api/oaidl/nf-oaidl-idispatch-gettypeinfocount)。
 
-派生类应重写此函数以返回提供的类型信息接口的数量（0或1）。 如果未重写`GetTypeInfoCount` ，则返回0。 若要重写， 请使用也实现`GetTypeLib`和`GetTypeLibCache`的 [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) 宏。
+派生类应重写此函数以返回提供的类型信息接口的数量（0或1）。 如果未重写，`GetTypeInfoCount` 将返回0。 若要重写， 请使用也实现[和](../../mfc/reference/type-library-access.md#implement_oletypelib)的 `GetTypeLib`IMPLEMENT_OLETYPELIB`GetTypeLibCache` 宏。
 
 ##  <a name="gettypeinfoofguid"></a>  CCmdTarget::GetTypeInfoOfGuid
 
@@ -344,20 +344,20 @@ HRESULT GetTypeInfoOfGuid(
     LPTYPEINFO* ppTypeInfo);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>参数
 
 *lcid*<br/>
-区域设置标识符（ `LCID`）。
+区域设置标识符（`LCID`）。
 
 *guid*<br/>
 类型说明的[GUID](/previous-versions/cc317743(v%3dmsdn.10)) 。
 
 *ppTypeInfo*<br/>
-指向`ITypeInfo`接口的指针的指针。
+指向 `ITypeInfo` 接口的指针的指针。
 
 ### <a name="return-value"></a>返回值
 
-一个 HRESULT，指示调用是成功还是失败。 如果成功，\* *ppTypeInfo*指向类型信息接口。
+一个 HRESULT，指示调用是成功还是失败。 如果成功，\* *ppTypeInfo*将指向类型信息接口。
 
 ##  <a name="gettypelib"></a>  CCmdTarget::GetTypeLib
 
@@ -369,13 +369,13 @@ virtual HRESULT GetTypeLib(
     LPTYPELIB* ppTypeLib);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>参数
 
 *lcid*<br/>
 区域设置标识符 (LCID)。
 
 *ppTypeLib*<br/>
-指向`ITypeLib`接口的指针的指针。
+指向指向 `ITypeLib` 接口的指针的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -383,7 +383,7 @@ virtual HRESULT GetTypeLib(
 
 ### <a name="remarks"></a>备注
 
-派生类应重写此成员函数（如果未重写，`GetTypeLib` 返回 TYPE_E_CANTLOADLIBRARY）。 使用也实现`GetTypeInfoCount`和`GetTypeLibCache`的 [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) 宏。
+派生类应重写此成员函数（如果未重写，`GetTypeLib` 返回 TYPE_E_CANTLOADLIBRARY）。 使用也实现[和](../../mfc/reference/type-library-access.md#implement_oletypelib)的 `GetTypeInfoCount`IMPLEMENT_OLETYPELIB`GetTypeLibCache` 宏。
 
 ##  <a name="gettypelibcache"></a>  CCmdTarget::GetTypeLibCache
 
@@ -399,17 +399,17 @@ virtual CTypeLibCache* GetTypeLibCache();
 
 ### <a name="remarks"></a>备注
 
-派生类应重写此成员函数（如果未重`GetTypeLibCache`写，则返回 NULL）。 使用也实现`GetTypeInfoCount`和`GetTypeLib`的 [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) 宏。
+派生类应重写此成员函数（如果未重写，`GetTypeLibCache` 返回 NULL）。 使用也实现[和](../../mfc/reference/type-library-access.md#implement_oletypelib)的 `GetTypeInfoCount`IMPLEMENT_OLETYPELIB`GetTypeLib` 宏。
 
 ##  <a name="isinvokeallowed"></a>CCmdTarget：： IsInvokeAllowed
 
-此函数由 MFC 的 @no__t 的实现调用，以确定是否可以调用给定的自动化方法（由*dispid*标识）。
+此函数由 MFC 的 `IDispatch::Invoke` 实现调用，以确定是否可以调用给定的自动化方法（由*dispid*标识）。
 
 ```
 virtual BOOL IsInvokeAllowed(DISPID dispid);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>参数
 
 *dispid*<br/>
 调度 ID。
@@ -420,13 +420,13 @@ virtual BOOL IsInvokeAllowed(DISPID dispid);
 
 ### <a name="remarks"></a>备注
 
-如果 `IsInvokeAllowed` 返回 TRUE，`Invoke` 将继续调用方法;否则，`Invoke` 将失败，并返回 E_UNEXPECTED。
+如果 `IsInvokeAllowed` 返回 TRUE，`Invoke` 继续调用方法;否则，`Invoke` 将失败，并返回 E_UNEXPECTED。
 
-派生类可以重写此函数以返回适当的值（如果未`IsInvokeAllowed`重写，则返回 TRUE）。 请参阅特定[COleControl：： IsInvokeAllowed](../../mfc/reference/colecontrol-class.md#isinvokeallowed)。
+派生类可以重写此函数以返回适当的值（如果未重写，`IsInvokeAllowed` 返回 TRUE）。 请参阅特定[COleControl：： IsInvokeAllowed](../../mfc/reference/colecontrol-class.md#isinvokeallowed)。
 
 ##  <a name="isresultexpected"></a>CCmdTarget：： IsResultExpected
 
-用于`IsResultExpected`确定客户端是否需要从其对自动化函数的调用返回值。
+使用 `IsResultExpected` 来确定客户端是否需要从其调用自动化函数的返回值。
 
 ```
 BOOL IsResultExpected();
@@ -438,11 +438,11 @@ BOOL IsResultExpected();
 
 ### <a name="remarks"></a>备注
 
-OLE 接口向 MFC 提供有关客户端是使用还是忽略函数调用结果的信息，而 MFC 又会使用此信息来确定调用`IsResultExpected`的结果。 如果生产返回值是需要耗费时间或消耗资源的，则可以在计算返回值之前调用此函数，从而提高效率。
+OLE 接口向 MFC 提供有关客户端是使用还是忽略函数调用结果的信息，而 MFC 又会使用此信息来确定调用 `IsResultExpected`的结果。 如果生产返回值是需要耗费时间或消耗资源的，则可以在计算返回值之前调用此函数，从而提高效率。
 
 此函数只返回一次0次，这样，如果从客户端调用的自动化函数调用它们，将从其他自动化函数获取有效的返回值。
 
-`IsResultExpected`如果未在自动化函数调用的过程中调用，则返回一个非零值。
+如果未在自动化函数调用的过程中调用，`IsResultExpected` 将返回一个非零值。
 
 ##  <a name="oncmdmsg"></a>CCmdTarget：： OnCmdMsg
 
@@ -456,7 +456,7 @@ virtual BOOL OnCmdMsg(
     AFX_CMDHANDLERINFO* pHandlerInfo);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>参数
 
 *nID*<br/>
 包含命令 ID。
@@ -478,7 +478,7 @@ virtual BOOL OnCmdMsg(
 
 这是框架命令体系结构的主要实现例程。
 
-在运行时， `OnCmdMsg`通过调用 root 类`CCmdTarget::OnCmdMsg`（执行实际的消息映射查找），将命令调度到其他对象或处理命令本身。 有关默认命令路由的完整说明，请参阅[消息处理和映射主题](../../mfc/message-handling-and-mapping.md)。
+在运行时，`OnCmdMsg` 向其他对象调度一个命令，或通过调用根类 `CCmdTarget::OnCmdMsg`来处理命令本身，此类将执行实际的消息映射查找。 有关默认命令路由的完整说明，请参阅[消息处理和映射主题](../../mfc/message-handling-and-mapping.md)。
 
 在极少数情况下，您可能希望重写此成员函数以扩展框架的标准命令路由。 有关命令路由体系结构的高级详细信息，请参阅[技术说明 21](../../mfc/tn021-command-and-message-routing.md) 。
 
@@ -522,7 +522,7 @@ void RestoreWaitCursor();
 
 [!code-cpp[NVC_MFCDocView#43](../../mfc/codesnippet/cpp/ccmdtarget-class_1.cpp)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [MFC 示例 ACDUAL](../../overview/visual-cpp-samples.md)<br/>
 [CObject 类](../../mfc/reference/cobject-class.md)<br/>

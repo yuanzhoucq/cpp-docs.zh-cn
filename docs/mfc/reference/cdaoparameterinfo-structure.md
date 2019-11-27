@@ -55,7 +55,7 @@ MFC 不会将 DAO 参数对象封装在类中。 DAO querydef 对象基础 MFC `
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxdao.h
+**标头：** afxdao
 
 ## <a name="see-also"></a>另请参阅
 

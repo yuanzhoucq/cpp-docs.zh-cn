@@ -1,5 +1,5 @@
 ---
-title: Exception specifications (throw, noexcept) (C++)
+title: 异常规范（throw、noexcept）（C++）
 ms.date: 01/18/2018
 helpviewer_keywords:
 - exceptions [C++], exception specifications
@@ -15,48 +15,48 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74245882"
 ---
-# <a name="exception-specifications-throw-noexcept-c"></a>Exception specifications (throw, noexcept) (C++)
+# <a name="exception-specifications-throw-noexcept-c"></a>异常规范（throw、noexcept）（C++）
 
-Exception specifications are a C++ language feature that indicate the programmer's intent about the exception types that can be propagated by a function. You can specify that a function may or may not exit by an exception by using an *exception specification*. The compiler can use this information to optimize calls to the function, and to terminate the program if an unexpected exception escapes the function.
+异常规范是 C++ 语言功能，它指示的异常类型的函数可以传播的程序员的意图。 您可以通过使用*异常规范*来指定某个函数不能由异常退出。 编译器可以使用此信息来优化对函数的调用，并在意外的异常转义函数时终止程序。
 
-Prior to C++17 there were two kinds of exception specification. The *noexcept specification* was new in C++11. It specifies whether the set of potential exceptions that can escape the function is empty. The *dynamic exception specification*, or `throw(optional_type_list)` specification, was deprecated in C++11 and removed in C++17, except for `throw()`, which is an alias for `noexcept(true)`. This exception specification was designed to provide summary information about what exceptions can be thrown out of a function, but in practice it was found to be problematic. The one dynamic exception specification that did prove to be somewhat useful was the unconditional `throw()` specification. For example, the function declaration:
+在 C++ 17 之前没有两种类型的异常规范。 *Noexcept 规范*是 c + + 11 中的新规范。 它指定的潜在可以转义函数的异常集是否为空。 *动态异常规范*（或 `throw(optional_type_list)` 规范）在 c + + 11 中已弃用，在 c + + 17 中被删除，但 `throw()`是 `noexcept(true)`的别名。 此异常规范旨在提供有关可以跳出函数引发哪些异常的摘要信息，但在实践中找到它就会出现问题。 一种动态异常规范，该规范在某种程度上非常有用，因为无条件 `throw()` 规范。 例如，以下函数声明中：
 
 ```cpp
 void MyFunction(int i) throw();
 ```
-告诉编译器函数不引发任何异常。 However, in **/std:c++14** mode this could lead to undefined behavior if the function does throw an exception. Therefore we recommend using the [noexcept](../cpp/noexcept-cpp.md) operator instead of the one above:
+告诉编译器函数不引发任何异常。 但是，在 **/std： c + + 14**模式下，如果函数引发异常，这可能会导致未定义的行为。 因此，建议使用[noexcept](../cpp/noexcept-cpp.md)运算符而不是上述运算符：
 
 ```cpp
 void MyFunction(int i) noexcept;
 ```
-The following table summarizes the Microsoft C++ implementation of exception specifications:
+下表总结了 Microsoft C++的异常规范实现：
 
 |异常规范|含义|
 |-----------------------------|-------------|
-|`noexcept`<br/>`noexcept(true)`<br/>`throw()`|函数不会引发异常。 In [/std:c++14](../build/reference/std-specify-language-standard-version.md) mode (which is the default), `noexcept` and `noexcept(true)` are equivalent. When an exception is thrown from a function that is declared `noexcept` or `noexcept(true)`, [std::terminate](../standard-library/exception-functions.md#terminate) is invoked. When an exception is thrown from a function declared as `throw()` in **/std:c++14** mode, the result is undefined behavior. No specific function is invoked. This is a divergence from the C++14 standard, which required the compiler to invoke [std::unexpected](../standard-library/exception-functions.md#unexpected).  <br/> **Visual Studio 2017 version 15.5 and later**: In **/std:c++17** mode , `noexcept`, `noexcept(true)`, and `throw()` are all equivalent. In **/std:c++17** mode, `throw()` is an alias for `noexcept(true)`. In **/std:c++17** mode, when an exception is thrown from a function declared with any of these specifications, [std::terminate](../standard-library/exception-functions.md#terminate)  is invoked as required by the C++17 standard.|
-|`noexcept(false)`<br/>`throw(...)`<br/>No specification|The function can throw an exception of any type.|
-|`throw(type)`| (**C++14 and earlier**) The function can throw an exception of type `type`. The compiler accepts the syntax, but interprets it as `noexcept(false)`. In **/std:c++17** mode the compiler issues warning C5040.|
+|`noexcept`<br/>`noexcept(true)`<br/>`throw()`|函数不会引发异常。 在[/std 中： c + + 14](../build/reference/std-specify-language-standard-version.md)模式（这是默认值），`noexcept` 和 `noexcept(true)` 等效。 当从 `noexcept` 或 `noexcept(true)`声明的函数中引发异常时，将调用[std：： terminate](../standard-library/exception-functions.md#terminate) 。 当在 **/std： c + + 14**模式下声明为 `throw()` 的函数引发异常时，结果为未定义的行为。 不调用任何特定函数。 这是 c + + 14 标准中的一个偏离，要求编译器调用[std：：意想不到](../standard-library/exception-functions.md#unexpected)。  <br/> **Visual Studio 2017 版本15.5 及更高版本**：在 **/std 中： c + + 17**模式下，`noexcept`、`noexcept(true)`和 `throw()` 都是等效的。 在 **/std： c + + 17**模式下，`throw()` 是 `noexcept(true)`的别名。 在 **/std： c + + 17**模式下，当使用上述任一规范声明的函数引发异常时，将根据 c + + 17 标准的要求调用[std：： terminate](../standard-library/exception-functions.md#terminate) 。|
+|`noexcept(false)`<br/>`throw(...)`<br/>无规范|函数可能会引发任何类型的异常。|
+|`throw(type)`| （**C + + 14 及更早版本**）函数可能引发 `type`类型的异常。 编译器接受语法，但会将其解释为 `noexcept(false)`。 在 **/std 中： c + + 17**模式下，编译器会发出警告 C5040。|
 
-If exception handling is used in an application, there must be a function in the call stack that handles thrown exceptions before they exit the outer scope of a function marked `noexcept`, `noexcept(true)`, or `throw()`. If any functions called between the one that throws an exception and the one that handles the exception are specified as `noexcept`, `noexcept(true)` (or `throw()` in **/std:c++17** mode), the program is terminated when the noexcept function propagates the exception.
+如果在应用程序中使用异常处理，则调用堆栈中必须有一个函数，该函数在退出标记为 `noexcept`、`noexcept(true)`或 `throw()`的函数的外部范围之前，处理引发的异常。 如果在引发异常的函数和处理异常的函数之间调用的任何函数被指定为 `noexcept`，`noexcept(true)` （或者在 **/std： c + + 17**模式下 `throw()`），则当 noexcept 函数传播异常时，程序将终止。
 
-The exception behavior of a function depends on the following factors:
+函数的异常行为取决于以下因素：
 
-- Which [language standard compilation mode](../build/reference/std-specify-language-standard-version.md) is set.
+- 设置的[语言标准编译模式](../build/reference/std-specify-language-standard-version.md)。
 - 您是否在 C 或 C++ 下编译函数。
 
-- Which [/EH](../build/reference/eh-exception-handling-model.md) compiler option you use.
+- 使用哪种[/EH](../build/reference/eh-exception-handling-model.md)编译器选项。
 
 - 是否显式指定异常规范。
 
-不允许对 C 函数使用显式异常规范。 A C function is assumed not to throw exceptions under **/EHsc**, and may throw structured exceptions under **/EHs**, **/EHa**, or **/EHac**.
+不允许对 C 函数使用显式异常规范。 假定 C 函数不在 **/ehsc**下引发异常，并且可能会在 **/ehs**、 **/eha**或 **/EHac**下引发结构化异常。
 
-The following table summarizes whether a C++ function may potentially throw under various compiler exception handling options:
+下表总结了 C++ 函数可能会有可能引发下处理选项的各种编译器异常是否：
 
 |函数|/EHsc|/EHs|/EHa|/EHac|
 |--------------|------------|-----------|-----------|------------|
 |没有异常规范的 C++ 函数|是|是|是|是|
-|C++ function with `noexcept`, `noexcept(true)`, or `throw()` exception specification|No|No|是|是|
-|C++ function with `noexcept(false)`, `throw(...)`, or `throw(type)` exception specification|是|是|是|是|
+|C++带有 `noexcept`、`noexcept(true)`或 `throw()` 异常规范的函数|是|是|是|是|
+|C++带有 `noexcept(false)`、`throw(...)`或 `throw(type)` 异常规范的函数|是|是|是|是|
 
 ## <a name="example"></a>示例
 
@@ -127,7 +127,7 @@ About to throw 1
 in handler
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [try、throw 和 catch 语句 (C++)](../cpp/try-throw-and-catch-statements-cpp.md)<br/>
-[Modern C++ best practices for exceptions and error handling](errors-and-exception-handling-modern-cpp.md)
+[异常C++和错误处理的新式最佳实践](errors-and-exception-handling-modern-cpp.md)

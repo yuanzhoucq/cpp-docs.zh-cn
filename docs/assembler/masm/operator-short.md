@@ -7,21 +7,21 @@ helpviewer_keywords:
 - operator SHORT
 - SHORT operator
 ms.assetid: 41e0982a-4f4e-4b48-ba58-e32d72053249
-ms.openlocfilehash: 26307b1838d3f6f185ffc6d71c3f24bd4b9945dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6bfd9e44d997353392b0d370d713968ffd03132b
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62198716"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396172"
 ---
 # <a name="operator-short"></a>运算符 SHORT
 
-设置类型*标签*为 short。 所有跳转到*标签*必须很短 (介于-128 到 + 127 个字节从跳转指令到*标签*)。
+将*标签*的类型设置为 short。 所有带*标签*的跳转必须为 short （范围为-128 到 + 127 字节，范围为-到 + *）。*
 
 ## <a name="syntax"></a>语法
 
-> 短标签
+> **短***标签*
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[运算符参考](../../assembler/masm/operators-reference.md)<br/>
+[运算符引用](operators-reference.md)

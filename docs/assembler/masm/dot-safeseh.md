@@ -8,12 +8,12 @@ helpviewer_keywords:
 - SAFESEH directive
 - .SAFESEH directive
 ms.assetid: 6eaac8c4-c46f-47ae-8a66-f5cfeb267e43
-ms.openlocfilehash: 4577bd5d76949dfb777a359c80d91814f1c45fe2
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: df9798800da293e5e0b4f545a8442380b7ff9408
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73703957"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397987"
 ---
 # <a name="safeseh-32-bit-masm"></a>.SAFESEH （32位 MASM）
 
@@ -21,7 +21,7 @@ ms.locfileid: "73703957"
 
 ## <a name="syntax"></a>语法
 
-> .SAFESEH 标识符
+> **.SAFESEH** *标识符*
 
 ## <a name="remarks"></a>备注
 
@@ -39,6 +39,6 @@ MyHandler   proto
 end
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[指令参考](../../assembler/masm/directives-reference.md)<br/>
+[指令参考](directives-reference.md)

@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - INSTR directive
 ms.assetid: fc37f6a2-3c95-47b2-b6bb-1066edd25994
-ms.openlocfilehash: be3dda768d153e764242f16cd6500e39bdda7923
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23641e4f7a8bec9eddcfa0e26b8acfe50c760a1a
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184549"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397315"
 ---
 # <a name="instr"></a>INSTR
 
-找到的第一个匹配项*textitem2*中*textitem1*。
+在*textitem1*中查找*textitem2*的第一个匹配项。
 
 ## <a name="syntax"></a>语法
 
-> *名称*INSTR [[*位置*，]] *textitem1*， *textitem2*
+> *name* **INSTR** ⟦*position* __，__ ⟧ *textitem1* __，__ *textitem2*
 
 ## <a name="remarks"></a>备注
 
-起始*位置*是可选的。 每个文本项可以是文字字符串，前面有一个常量`%`，或通过宏函数返回的字符串。
+起始*位置*是可选的。 每个文本项可以是文本字符串、前面带有 **%** 的常量或宏函数返回的字符串。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[指令参考](../../assembler/masm/directives-reference.md)<br/>
+[指令参考](directives-reference.md)

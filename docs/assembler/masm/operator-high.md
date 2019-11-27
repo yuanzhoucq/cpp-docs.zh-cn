@@ -8,21 +8,21 @@ helpviewer_keywords:
 - operator HIGH
 - HIGH operator
 ms.assetid: 1deea1af-5cba-4477-aab9-21891250cdfc
-ms.openlocfilehash: c7142709216bee6670666fe6baaae7bc449c4a86
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b9fb2e9a95617673505547b879e3fb0c5c7d4a9
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62200702"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396896"
 ---
 # <a name="operator-high"></a>运算符 HIGH
 
-返回的低 16 位高的 8 位*表达式*。 MASM 表达式是 64 位值。
+返回*表达式*的低16位的高8位。 MASM 表达式为64位值。
 
 ## <a name="syntax"></a>语法
 
-> 高表达式
+> **HIGH** *表达式*
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[运算符参考](../../assembler/masm/operators-reference.md)<br/>
+[运算符引用](operators-reference.md)

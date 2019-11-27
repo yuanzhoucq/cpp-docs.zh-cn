@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - ENDS directive
 ms.assetid: 30f68c58-de1f-4bdd-ac83-4658bdbaad65
-ms.openlocfilehash: a92b307e0d426afb4c74113de5738c15be064040
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 95ade586e1a2a422e7cfbc00fa9d92471d0f8bdf
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185156"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397633"
 ---
 # <a name="ends-masm"></a>ENDS (MASM)
 
-表示段、 结构或联合的结尾*名称*以前始于[段](../../assembler/masm/segment.md)，[结构](../../assembler/masm/struct-masm.md)，[联合](../../assembler/masm/union.md)，或简化的段指令。
+标记前面以[段](../../assembler/masm/segment.md)、[结构](../../assembler/masm/struct-masm.md)、[联合](../../assembler/masm/union.md)或简化段指令开头的段、结构或联合*名称*的末尾。
 
 ## <a name="syntax"></a>语法
 
-> 名称结尾
+> *名称***结束**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[指令参考](../../assembler/masm/directives-reference.md)<br/>
+[指令参考](directives-reference.md)

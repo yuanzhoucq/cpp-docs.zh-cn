@@ -39,24 +39,24 @@ class CDaoException : public CException
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[CDaoException::CDaoException](#cdaoexception)|构造 `CDaoException` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[CDaoException::GetErrorCount](#geterrorcount)|返回数据库引擎的错误集合中的错误数。|
-|[CDaoException::GetErrorInfo](#geterrorinfo)|返回有关错误集合中特定错误对象的错误信息。|
+|[CDaoException：： GetErrorInfo](#geterrorinfo)|返回有关错误集合中特定错误对象的错误信息。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CDaoException::m_nAfxDaoError](#m_nafxdaoerror)|包含 MFC DAO 类中的任何错误的扩展错误代码。|
-|[CDaoException::m_pErrorInfo](#m_perrorinfo)|指向[CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md)对象的指针，该对象包含一个 DAO 错误对象的相关信息。|
-|[CDaoException::m_scode](#m_scode)|与错误关联的[SCODE](#m_scode)值。|
+|[CDaoException：： m_nAfxDaoError](#m_nafxdaoerror)|包含 MFC DAO 类中的任何错误的扩展错误代码。|
+|[CDaoException：： m_pErrorInfo](#m_perrorinfo)|指向[CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md)对象的指针，该对象包含一个 DAO 错误对象的相关信息。|
+|[CDaoException：： m_scode](#m_scode)|与错误关联的[SCODE](#m_scode)值。|
 
 ## <a name="remarks"></a>备注
 
@@ -83,7 +83,7 @@ class CDaoException : public CException
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxdao.h
+**标头：** afxdao
 
 ##  <a name="cdaoexception"></a>CDaoException::CDaoException
 
@@ -107,7 +107,7 @@ CDaoException();
 
 1. 调用异常对象的[GetErrorInfo](#geterrorinfo)成员函数，以便一次检索一个特定错误对象，并通过异常对象在集合中索引。 将异常对象视为一个 DAO 错误对象的代理。
 
-1. 检查[m_pErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md)数据成员中`GetErrorInfo`返回的当前 [CDaoErrorInfo](#m_perrorinfo) 结构。 其成员提供有关 DAO 错误的信息。
+1. 检查 `GetErrorInfo` 在[m_pErrorInfo](#m_perrorinfo)数据成员中返回的当前[CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md)结构。 其成员提供有关 DAO 错误的信息。
 
 1. 对于 ODBC 数据源，请根据需要重复步骤3和4，以获取更多的错误对象。
 
@@ -155,7 +155,7 @@ void GetErrorInfo(int nIndex);
 
 - 源
 
-- 描述
+- 说明
 
 - 帮助文件
 
@@ -165,7 +165,7 @@ void GetErrorInfo(int nIndex);
 
 有关 DAO 异常和示例代码的信息，请参阅文章[异常：数据库异常](../../mfc/exceptions-database-exceptions.md)。
 
-##  <a name="m_nafxdaoerror"></a>  CDaoException::m_nAfxDaoError
+##  <a name="m_nafxdaoerror"></a>CDaoException：： m_nAfxDaoError
 
 包含 MFC 扩展错误代码。
 
@@ -195,7 +195,7 @@ void GetErrorInfo(int nIndex);
 |--------------------------|-----------------|-------------|
 |`m_lErrorCode`|错误代码|DAO 错误代码|
 |`m_strSource`|源|最初生成错误的对象或应用程序的名称|
-|`m_strDescription`|描述|与错误关联的描述性字符串|
+|`m_strDescription`|说明|与错误关联的描述性字符串|
 |`m_strHelpFile`|帮助文件|Windows 帮助文件的路径，用户可以在其中获取有关问题的信息|
 |`m_lHelpContext`|帮助上下文|DAO 帮助文件中的主题的上下文 ID|
 

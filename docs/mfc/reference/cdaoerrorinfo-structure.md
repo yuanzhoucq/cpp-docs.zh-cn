@@ -58,7 +58,7 @@ MFC 不会将 DAO 错误对象封装在类中。 相反， [CDaoException](../..
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxdao.h
+**标头：** afxdao
 
 ## <a name="see-also"></a>另请参阅
 

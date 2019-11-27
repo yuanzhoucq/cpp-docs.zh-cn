@@ -1,5 +1,5 @@
 ---
-title: 'How to: Create and use CComPtr and CComQIPtr instances'
+title: 如何：创建和使用 CComPtr 和 CComQIPtr 实例
 ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
@@ -11,7 +11,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74246544"
 ---
-# <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>How to: Create and use CComPtr and CComQIPtr instances
+# <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>如何：创建和使用 CComPtr 和 CComQIPtr 实例
 
 在经典 Windows 编程中，库通常作为 COM 对象（更准确地说是 COM 服务器）实现。 很多 Windows 操作系统组件都作为 COM 服务器实现，因此，很多参与者以这种形式提供库。 有关 COM 的基础知识的信息，请参阅 [Component Object Model (COM)](/windows/win32/com/component-object-model--com--portal)。
 
@@ -23,7 +23,7 @@ ms.locfileid: "74246544"
 
 [!code-cpp[COM_smart_pointers#01](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_1.cpp)]
 
-`CComPtr` and its relatives are part of the ATL and are defined in \<atlcomcli.h>. `_com_ptr_t` is declared in \<comip.h>. 当为类型库生成包装器类时，编译器将创建 `_com_ptr_t` 的专用化。
+`CComPtr` 及其亲属是 ATL 的一部分，并且是在 \<atlcomcli.h > 中定义的。 `_com_ptr_t` 在 \<comip.h > 中声明。 当为类型库生成包装器类时，编译器将创建 `_com_ptr_t` 的专用化。
 
 ## <a name="example"></a>示例
 
@@ -37,6 +37,6 @@ ATL 还提供了 `CComQIPtr`，它具有用于查询 COM 对象以检索额外�
 
 [!code-cpp[COM_smart_pointers#03](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_3.cpp)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [智能指针（现代 C++）](../cpp/smart-pointers-modern-cpp.md)

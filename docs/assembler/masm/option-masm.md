@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - OPTION directive
 ms.assetid: 8e10dabd-e36f-4586-ab01-ada96736b0bd
-ms.openlocfilehash: a8215bf1f816baa490a768fb2cab0b3c2e53e20b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0f90ab0115c3dde894d468bbbe60ffa0193b8336
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62217252"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74395170"
 ---
 # <a name="option-masm"></a>OPTION (MASM)
 
-启用和禁用在组装器的功能。
+启用和禁用组装器的功能。
 
 ## <a name="syntax"></a>语法
 
-> 选项*optionlist*
+> **选项** *optionlist*
 
 ## <a name="remarks"></a>备注
 
@@ -27,16 +27,16 @@ ms.locfileid: "62217252"
 
 |||||
 |-|-|-|-|
-|**CASEMAP**|**DOTNAME**|**NODOTNAME**|**仿真程序**|
+|**CASEMAP**|**DOTNAME**|**NODOTNAME**|**仿真**|
 |**NOEMULATOR**|**尾声**|**EXPR16**|**EXPR32**|
 |**语言**|**LJMP**|**NOLJMP**|**M510**|
-|**NOM510**|**NOKEYWORD**|**NOSIGNEXTEND**|**OFFSET**|
+|**NOM510**|**NOKEYWORD**|**NOSIGNEXTEND**|**抵销**|
 |**OLDMACROS**|**NOOLDMACROS**|**OLDSTRUCTS**|**NOOLDSTRUCTS**|
-|**PROC**|**序言**|**READONLY**|**NOREADONLY**|
-|**作用域**|**NOSCOPED**|**SEGMENT**|**SETIF2**。|
+|**PROC**|**序**|**只读**|**NOREADONLY**|
+|**划分**|**NOSCOPED**|**SEGMENT**|**SETIF2**。|
 
-语言的语法是**选项语言：**<em>x</em>，其中*x*是 C、 SYSCALL、 STDCALL、 PASCAL，FORTRAN 或 BASIC 之一。  SYSCALL、 PASCAL，FORTRAN 和 BASIC 不支持与一起使用[。模型](../../assembler/masm/dot-model.md)平面。
+LANGUAGE 的语法是**OPTION LANGUAGE：** <em>x</em>，其中*x*是 C、SYSCALL、STDCALL、PASCAL、FORTRAN 或 BASIC。  与一起使用时，SYSCALL、PASCAL、FORTRAN 和 BASIC 不受支持[。模型](../../assembler/masm/dot-model.md)平面。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[指令参考](../../assembler/masm/directives-reference.md)<br/>
+[指令参考](directives-reference.md)

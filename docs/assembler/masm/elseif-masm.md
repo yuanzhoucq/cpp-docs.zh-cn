@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - ELSEIF directive
 ms.assetid: 20a685d6-836e-4e64-902e-4f3daf2e51c2
-ms.openlocfilehash: 1971c71af67f7e8620da3c3371b619b33fc8830e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75fa24f10129827b0159a5975e28851713316d8b
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203232"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398435"
 ---
 # <a name="elseif-masm"></a>ELSEIF (MASM)
 
-将合并[ELSE](../../assembler/masm/else-masm.md)并[如果](../../assembler/masm/if-masm.md)到一条语句。
+将[ELSE](../../assembler/masm/else-masm.md)和[IF](../../assembler/masm/if-masm.md)组合到一个语句中。
 
 ## <a name="syntax"></a>语法
 
-> ELSEIF
+> **ELSEIF**
 
 ## <a name="remarks"></a>备注
 
-请参阅[如果](../../assembler/masm/if-masm.md)。
+查看[是否](../../assembler/masm/if-masm.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[指令参考](../../assembler/masm/directives-reference.md)<br/>
+[指令参考](directives-reference.md)

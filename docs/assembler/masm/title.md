@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - TITLE directive
 ms.assetid: d49df4dc-75db-472c-950e-75344e3c81eb
-ms.openlocfilehash: 3bd6f2e29282992aed36589be4219a7d1878abb6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e5f10e99413d85546b24dbb5db2b69705d62506
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216979"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74393195"
 ---
 # <a name="title"></a>TITLE
 
-定义程序列出标题。
+定义程序列表的标题。
 
 ## <a name="syntax"></a>语法
 
-> 标题文本
+> **标题***文本*
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[指令参考](../../assembler/masm/directives-reference.md)<br/>
+[指令参考](directives-reference.md)

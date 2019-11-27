@@ -55,13 +55,13 @@ DAO 与 Access 数据库结合使用，并受 Office 2013 的支持。 DAO 3.6 �
 封装二进制大型对象（BLOB）（如位图）的存储句柄。 `CLongBinary` 对象用于管理存储在数据库表中的大型数据对象。
 
 [COleCurrency](../mfc/reference/colecurrency-class.md)<br/>
-OLE 自动化类型 **CURRENCY**（定点算数类型，小数点前有 15 位，小数点后有 4 位）的包装器。
+OLE 自动化类型**货币**的包装，一个固定点算术类型，小数点前有15个数字，后接四位数字。
 
 [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)<br/>
-OLE 自动化类型 **DATE** 的包装器。 表示日期和时间值。
+OLE 自动化类型**日期**的包装。 表示日期和时间值。
 
 [COleVariant](../mfc/reference/colevariant-class.md)<br/>
-OLE 自动化类型 **VARIANT** 的包装器。 **VARIANT** 数据可用多种格式存储。
+OLE 自动化类型**变量**的包装。 **变体**中的数据可存储为多种格式。
 
 ## <a name="see-also"></a>另请参阅
 

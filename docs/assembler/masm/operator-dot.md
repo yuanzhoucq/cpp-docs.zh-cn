@@ -8,23 +8,23 @@ helpviewer_keywords:
 - operator .
 - . operator
 ms.assetid: 468ea0c8-5b08-47be-991b-38abacb77611
-ms.openlocfilehash: 75eccec0c65cba093d84e9d71107247e5b697287
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28fe852c7fbba4995905b2d9a42cc02c1d46eb00
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62177196"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397017"
 ---
 # <a name="operator-"></a>运算符 .
 
-第一个运算符返回*表达式*加上偏移量*字段*其结构或联合中。 第二个运算符返回值指向的位置*注册*加上偏移量*字段*其结构或联合中。
+第一个运算符返回*表达式*以及*字段*在其结构或联合中的偏移量。 第二个运算符通过在其结构或联合中*注册*和*字段*的偏移量，在所指向的位置返回值。
 
 ## <a name="syntax"></a>语法
 
-> *表达式* __。__ *字段* \[ __。__ *field*] ...
+> *表达式* __。__ *字段*⟦ __。__ *字段*.。。⟧
 >
-> __\[__*register*__]__ __.__ *字段* \[ __。__ *field*] ...
+> **\[** _注册_ **]** __。__ *字段*⟦ __。__ *字段*.。。⟧
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[运算符参考](../../assembler/masm/operators-reference.md)<br/>
+[运算符引用](operators-reference.md)

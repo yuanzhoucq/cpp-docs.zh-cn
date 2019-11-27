@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - '@Date symbol'
 ms.assetid: e5af496b-c5c8-4724-a54a-6880fcd67ee3
-ms.openlocfilehash: 7903d298b703dc811881bca1cbf8e7c88b89fd77
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 9252618cef46d2aa6ca5f38d5092bf3c02cd8ff6
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74302693"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399132"
 ---
 # <a name="date"></a>\@日期
 
@@ -23,4 +23,4 @@ ms.locfileid: "74302693"
 
 ## <a name="see-also"></a>另请参阅
 
-[符号参考](../../assembler/masm/symbols-reference.md)
+[符号引用](symbols-reference.md)

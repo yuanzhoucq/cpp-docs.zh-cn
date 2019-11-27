@@ -1,6 +1,6 @@
 ---
-title: Raw pointers (C++)
-description: How to use raw pointers in C++
+title: 原始指针（C++）
+description: 如何在中使用原始指针C++
 ms.date: 11/19/2019
 helpviewer_keywords:
 - pointers [C++]
@@ -11,11 +11,11 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74250684"
 ---
-# <a name="raw-pointers-c"></a>Raw pointers (C++)
+# <a name="raw-pointers-c"></a>原始指针（C++）
 
-A pointer is a type of variable that stores the address of an object in memory and is used to access that object. A *raw pointer* is a pointer whose lifetime is not controlled by an encapsulating object such as a [smart pointer](smart-pointers-modern-cpp.md). A raw pointer can be assigned the address of another non-pointer variable, or it can be assigned a value of [nullptr](nullptr.md). A pointer that has not been assigned a value contains random data.
+指针是一种变量，它将对象的地址存储在内存中，并用于访问该对象。 *原始指针*是一个指针，其生存期不受封装对象（如[智能指针](smart-pointers-modern-cpp.md)）的控制。 可以为原始指针分配另一个非指针变量的地址，也可以为其分配值[nullptr](nullptr.md)。 尚未分配值的指针包含随机数据。
 
-A pointer can also be *dereferenced* to retrieve the value of the object that it points at. The *member access operator* provides access to an object's members.
+还可以取消*引用*指针以检索它指向的对象的值。 *成员访问运算符*提供对象成员的访问权限。
 
 ```cpp
     int* p = nullptr; // declare pointer and initialize it
@@ -26,7 +26,7 @@ A pointer can also be *dereferenced* to retrieve the value of the object that it
 
 ```
 
-A pointer can point to a typed object or to **void**. When a program allocates a new object on the [heap](https://wikipedia.org/wiki/Heap) in memory, it receives the address of that object in the form of a pointer. Such pointers are called *owning pointers*; an owning pointer (or a copy of it) must be used to explicitly delete the heap-allocated object when it is no longer needed. Failure to delete the memory results in a *memory leak* and renders that memory location unavailable to any other program on the machine. For more information, see [new and delete operators](new-and-delete-operators.md).
+指针可指向类型化对象或**void**。 当程序在内存中的[堆](https://wikipedia.org/wiki/Heap)上分配新对象时，它将以指针的形式接收该对象的地址。 此类指针称为*拥有指针*;如果不再需要堆分配的对象，则必须使用拥有指针（或它的副本）显式删除该对象。 删除内存失败会导致*内存泄漏*，并将该内存位置呈现给计算机上的任何其他程序不可用。 有关详细信息，请参阅[new 和 delete 运算符](new-and-delete-operators.md)。
 
 ```cpp
 
@@ -35,7 +35,7 @@ A pointer can point to a typed object or to **void**. When a program allocates a
     delete mc; // delete object (please don't forget!)
 ```
 
-A pointer (if it isn't declared as **const**) can be incremented or decremented so that it points to a new location in memory. This is called *pointer arithmetic* and is used in C-style programming to iterate over elements in arrays or other data structures. A **const** pointer can't be made to point to a different memory location, and in that sense is very similar to a [reference](references-cpp.md). For more information, see [const and volatile pointers](const-and-volatile-pointers.md).
+指针（如果不声明为**const**）可以递增或递减，使其指向内存中的新位置。 这称为*指针算法*，并在 C 样式编程中用来循环访问数组或其他数据结构中的元素。 不能将**常量**指针指向不同的内存位置，并且在这种情况下，与[引用](references-cpp.md)非常类似。 有关详细信息，请参阅[const 和 volatile 指针](const-and-volatile-pointers.md)。
 
 ```cpp
     // declare a C-style string. Compiler adds terminating '\0'.
@@ -49,13 +49,13 @@ A pointer (if it isn't declared as **const**) can be incremented or decremented 
     // pconst2 = &c2; // Error! pconst2 is const.
 ```
 
-On 64-bit operating systems, a pointer has a size of 64 bits; a system's pointer size determines how much addressable memory it can have. All copies of a pointer point to the same memory location. Pointers (along with references) are used extensively in C++ to pass larger objects to and from functions because it is usually far more efficient to copy an object's 64-bit address than to copy an entire object. When defining a function, specify pointer parameters as **const** unless you intend for the function to modify the object. In general, **const** references are the preferred way to pass objects to functions unless the value of the object can possibly be **nullptr**.
+在64位操作系统上，指针的大小为64位;系统的指针大小决定了可以有多少可寻址内存。 指针指向同一内存位置的所有副本。 指针（以及引用）广泛C++地用于向传递函数和从函数传递更大的对象，因为复制对象的64位地址比复制整个对象的效率要高得多。 在定义函数时，除非您希望函数修改对象，否则请将指针参数指定为**const** 。 通常，如果对象的值可能为**nullptr**，则**常**引用是将对象传递到函数的首选方法。
 
-[Pointers to functions](#pointers_to_functions) enable functions to be passed to other functions and are used for "callbacks" in C-style programming. Modern C++ uses [lambda expressions](lambda-expressions-in-cpp.md) for this purpose.
+指向[函数的指针](#pointers_to_functions)使函数能够传递到其他函数，并用于 C 样式编程中的 "回调"。 新式C++使用[lambda 表达式](lambda-expressions-in-cpp.md)来实现此目的。
 
-## <a name="initialization-and-member-access"></a>Initialization and member access
+## <a name="initialization-and-member-access"></a>初始化和成员访问
 
-The following example shows how to declare a raw pointer and initialize it with an object allocated on the heap, and then how to use it. It also shows a few of the dangers associated with raw pointers. (Remember, this is C-style programming and not modern C++!)
+下面的示例演示如何声明一个原始指针，并使用堆上分配的对象对其进行初始化，然后使用该指针。 它还显示了一些与原始指针相关的危险。 （请记住，这是 C 样式编程，而不C++是新式的！）
 
 ```cpp
 #include <iostream>
@@ -133,14 +133,14 @@ int main()
 }
 ```
 
-## <a name="pointer-arithmetic-and-arrays"></a>Pointer arithmetic and arrays
+## <a name="pointer-arithmetic-and-arrays"></a>指针算法和数组
 
-Pointers and arrays are closely related. When an array is passed by-value to a function, it is passed as a pointer to the first element. The following example demonstrates the following important properties of pointers and arrays:
+指针和数组密切相关。 当数组按值传递到函数时，它将作为指针传递到第一个元素。 下面的示例演示了指针和数组的以下重要属性：
 
-- the `sizeof` operator returns the total size in bytes of an array
-- to determine the number of elements, divide total bytes by the size of one element
-- when an array is passed to a function, it *decays* to a pointer type
-- the `sizeof` operator when applied to a pointer returns the pointer size, 4 bytes on x86 or 8 bytes on x64
+- `sizeof` 运算符返回数组的总大小（以字节为单位）
+- 若要确定元素的数目，请将总字节数除以一个元素的大小
+- 当数组传递到函数时，它会*decays*到指针类型
+- 应用于指针的 `sizeof` 运算符返回指针大小、x86 上的4个字节或 x64 上的8个字节
 
 ```cpp
 #include <iostream>
@@ -166,9 +166,9 @@ int main()
 }
 ```
 
-Certain arithmetic operations can be performed on non-const pointers to make them point to a new memory location. A pointer can be incremented and decremented using the **++** , **+=** , **-=** and **--** operators. This technique can be used in arrays and is especially useful in buffers of untyped data. A **void\*** increments by the size of a **char** (1 byte). A typed pointer increments by size of the type it points to.
+可对非常量指针执行某些算术运算，使其指向新的内存位置。 可以使用 **++** 、 **+=** 、 **-=** 和 **--** 运算符来递增和递减指针。 此方法可用于数组中，在非类型化数据的缓冲区中尤其有用。 **Void\*** 按**字符**大小（1字节）递增。 类型化的指针按其所指向的类型的大小递增。
 
-The following example demonstrates how pointer arithmetic can be used to access individual pixels in a bitmap on Windows. Note the use of **new** and **delete**, and the dereference operator. 
+下面的示例演示如何使用指针算法访问 Windows 上位图中的单个像素。 请注意**new**和**delete**以及取消引用运算符的使用。 
 
 ```cpp
 #include <Windows.h>
@@ -233,11 +233,11 @@ int main()
 }
 ```
 
-## <a name="void-pointers"></a>void* pointers
+## <a name="void-pointers"></a>void * 指针
 
-A pointer to **void** simply points to a raw memory location. Sometimes it is necessary to use **void\*** pointers, for example when passing between C++ code and C functions. 
+指向**void**的指针只指向原始内存位置。 有时，有必要使用**void\*** 指针，例如，在代码和 C C++函数之间传递时。 
 
-When a typed pointer is cast to a void pointer, the contents of the memory location are not changed, but the type information is lost, so that you can't perform increment or decrement operations. A memory location can be cast, for example, from MyClass* to void* and back again to MyClass*. Such operations are inherently error-prone and require great care to avoid errors. Modern C++ discourages the use of void pointers unless absolutely necessary.
+当类型化指针强制转换为 void 指针时，内存位置的内容将不会更改，但类型信息会丢失，因此不能执行递增或递减运算。 内存位置可以强制转换，例如从 MyClass * 转换为 void * 并再次返回到 MyClass *。 此类操作本质上容易出错，并需要非常小心来避免错误。 新式C++不鼓励使用 void 指针，除非绝对必要。
 
 ```cpp
 
@@ -290,11 +290,11 @@ int main()
 }
 ```
 
-## <a name="pointers_to_functions"></a> Pointers to functions
+## <a name="pointers_to_functions"></a>指向函数的指针
 
-In C-style programming, function pointers are used primarily to pass functions to other functions. In this scenario, the caller can customize the behavior of a function without modifying it. In modern C++, [lambda expressions](lambda-expressions-in-cpp.md) provide the same capability with greater type safety and other advantages.
+在 C 样式编程中，函数指针主要用于将函数传递到其他函数。 在这种情况下，调用方可以自定义函数的行为而无需修改它。 在现代C++上， [lambda 表达式](lambda-expressions-in-cpp.md)提供相同的功能以及更高的类型安全性和其他优点。
 
-A function pointer declaration specifies the signature that the pointed-to function must have:
+函数指针声明指定所指向的函数必须具有的签名：
 
 ```cpp
 // Declare pointer to any function that...
@@ -310,7 +310,7 @@ void (*x)();
 int (*i)(int i, string s, double d);
 ```
 
-The following example shows a function `combine` that takes as a parameter any function that accepts a `std::string` and returns a `std::string`. Depending on the function that is passed to `combine` it will either prepend or append a string.
+下面的示例演示一个函数 `combine`，该函数将接受 `std::string` 并返回 `std::string`的任何函数作为参数。 根据传递到 `combine` 函数，该函数会预置或追加字符串。
 
 ```cpp
 #include <iostream>
@@ -342,9 +342,9 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Smart pointers](smart-pointers-modern-cpp.md)
-[Indirection Operator: *](indirection-operator-star.md)<br/>
+[智能指针](smart-pointers-modern-cpp.md)
+[间接寻址运算符： *](indirection-operator-star.md)<br/>
 [Address-of 运算符：&](address-of-operator-amp.md)</br>
-[Welcome back to C++](welcome-back-to-cpp-modern-cpp.md)
+[欢迎返回到C++](welcome-back-to-cpp-modern-cpp.md)

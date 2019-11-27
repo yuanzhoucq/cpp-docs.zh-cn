@@ -17,29 +17,29 @@ ms.locfileid: "74245857"
 ---
 # <a name="how-catch-blocks-are-evaluated-c"></a>Catch 块的计算方式 (C++)
 
-虽然通常建议您引发派生自 std::exception 的类型，但 C++ 使您能够引发任何类型的异常。 A C++ exception can be caught by a **catch** handler that specifies the same type as the thrown exception, or by a handler that can catch any type of exception.
+虽然通常建议您引发派生自 std::exception 的类型，但 C++ 使您能够引发任何类型的异常。 C++异常可由指定与引发的异常相同的类型的**catch**处理程序捕获，或由可以捕获任何类型的异常的处理程序捕获。
 
 如果引发的异常的类型是类，它还具有基类（或类），则它可由接受异常类型的基类和对异常类型的基的引用的处理程序捕获。 请注意，当异常由引用捕获时，会将其绑定到实际引发的异常对象；否则，它将为一个副本（与函数的参数大致相同）。
 
-When an exception is thrown, it may be caught by the following types of **catch** handlers:
+当引发异常时，它可能由以下类型的**catch**处理程序捕获：
 
 - 可以接受任何类型的处理程序（使用省略号语法）。
 
-- A handler that accepts the same type as the exception object; because it is a copy, **const** and **volatile** modifiers are ignored.
+- 接受与异常对象相同的类型的处理程序;由于它是副本，因此将忽略**const**和**volatile**修饰符。
 
 - 接受对与异常对象相同的类型的引用的处理程序。
 
-- A handler that accepts a reference to a **const** or **volatile** form of the same type as the exception object.
+- 接受对与异常对象类型相同的**const**或**volatile**形式的引用的处理程序。
 
-- A handler that accepts a base class of the same type as the exception object; since it is a copy, **const** and **volatile** modifiers are ignored. The **catch** handler for a base class must not precede the **catch** handler for the derived class.
+- 接受与异常对象类型相同的基类的处理程序;由于它是副本，因此**const**和**volatile**修饰符将被忽略。 基类的**catch**处理程序不能位于派生类的**catch**处理程序之前。
 
 - 接受对与异常对象相同的类型的基类的引用的处理程序。
 
-- A handler that accepts a reference to a **const** or **volatile** form of a base class of the same type as the exception object.
+- 接受对与异常对象类型相同的基类的**const**或**volatile**形式的引用的处理程序。
 
 - 接受可通过标准指针转换规则将引发的指针对象转换为的指针的处理程序。
 
-The order in which **catch** handlers appear is significant, because handlers for a given **try** block are examined in order of their appearance. 例如，将基类的处理程序放置在派生类的处理程序的前面是错误的。 After a matching **catch** handler is found, subsequent handlers are not examined. As a result, an ellipsis **catch** handler must be the last handler for its **try** block. 例如:
+**Catch**处理程序的显示顺序非常重要，因为给定**try**块的处理程序按其外观的顺序进行检查。 例如，将基类的处理程序放置在派生类的处理程序的前面是错误的。 找到匹配的**catch**处理程序后，不会检查后续处理程序。 因此，省略号**catch**处理程序必须是其**try**块的最后一个处理程序。 例如：
 
 ```cpp
 // ...
@@ -62,8 +62,8 @@ catch( CExcptClass E )
 }
 ```
 
-In this example, the ellipsis **catch** handler is the only handler that is examined.
+在此示例中，省略号**catch**处理程序是唯一检查的处理程序。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)
+[异常C++和错误处理的新式最佳实践](../cpp/errors-and-exception-handling-modern-cpp.md)

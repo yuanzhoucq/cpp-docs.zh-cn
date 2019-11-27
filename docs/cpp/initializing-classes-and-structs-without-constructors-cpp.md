@@ -1,6 +1,6 @@
 ---
-title: Brace initialization for classes, structs, and unions
-description: Use brace initialization with any C++ class, struct or union
+title: 类、结构和联合的大括号初始化
+description: 对任何C++类、结构或联合使用大括号初始化
 ms.date: 11/19/2019
 ms.assetid: 3e55c3d6-1c6b-4084-b9e5-221b151402f4
 ms.openlocfilehash: 41ff38bc4bcc9ebca913b5e66b5ac2f395044222
@@ -10,7 +10,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74246505"
 ---
-# <a name="brace-initialization"></a>Brace initialization
+# <a name="brace-initialization"></a>大括号初始化
 
 并不总是需要为类定义构造函数，特别是相对比较简单的类。 用户可以使用统一初始化来初始化类或结构的对象，如下面的示例所示：
 
@@ -61,7 +61,7 @@ int main()
 }
 ```
 
-Note that when a class or struct has no constructor, you provide the list elements in the order that the members are declared in the class. If the class has a constructor, provide the elements in the order of the parameters. 如果类型具有隐式或显式声明的默认构造函数，则您可以使用默认大括号初始化（具有空大括号）。 例如，可通过使用默认和非默认大括号初始化来初始化以下类：
+请注意，当类或结构没有构造函数时，将按在类中声明成员的顺序提供列表元素。 如果类具有构造函数，请按参数的顺序提供元素。 如果类型具有隐式或显式声明的默认构造函数，则您可以使用默认大括号初始化（具有空大括号）。 例如，可通过使用默认和非默认大括号初始化来初始化以下类：
 
 ```cpp
 #include <string>
@@ -128,7 +128,7 @@ int main()
 }
 ```
 
-You can use brace initialization anywhere you would typically do initialization—for example, as a function parameter or a return value, or with the **new** keyword:
+您可以在通常执行初始化的任何位置（例如，作为函数参数或返回值，或使用**新**关键字）使用大括号初始化：
 
 ```cpp
 class_d* cf = new class_d{4.5};
@@ -136,16 +136,16 @@ kr->add_d({ 4.5 });
 return { 4.5 };
 ```
 
-## <a name="initializer_list-constructors"></a>initializer_list constructors
+## <a name="initializer_list-constructors"></a>initializer_list 构造函数
 
-The [initializer_list Class](../standard-library/initializer-list-class.md) represents a list of objects of a specified type that can be used in a constructor, and in other contexts. 您可通过使用大括号初始化构造 initializer_list：
+[Initializer_list 类](../standard-library/initializer-list-class.md)表示指定类型的对象的列表，这些对象可以在构造函数中使用，也可以在其他上下文中使用。 您可通过使用大括号初始化构造 initializer_list：
 
 ```cpp
 initializer_list<int> int_list{5, 6, 7};
 ```
 
 > [!IMPORTANT]
->  To use this class, you must include the [\<initializer_list>](../standard-library/initializer-list.md) header.
+>  若要使用此类，则必须包含[\<initializer_list >](../standard-library/initializer-list.md)标头。
 
 可以复制 `initializer_list`。 在这种情况下，新列表的成员是对原始列表成员的引用：
 
@@ -166,7 +166,7 @@ regex rgx{'x', 'y', 'z'};
 ```
 
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [类和结构](../cpp/classes-and-structs-cpp.md)<br/>
 [构造函数](../cpp/constructors-cpp.md)

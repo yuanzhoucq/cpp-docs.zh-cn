@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - TYPEDEF directive
 ms.assetid: 0c659890-c9a5-485a-a680-e4fb3272032c
-ms.openlocfilehash: 9c7b0087166cfcf547dbd0b1dd5be2a0cbb2bc77
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d35966f8db5e8873b8080976aaaab37937cbe192
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210022"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74393169"
 ---
 # <a name="typedef-masm"></a>TYPEDEF (MASM)
 
-定义名为一种新型*名称*，这等同于*类型*。
+定义名为的新*类型，它*等效于*类型*。
 
 ## <a name="syntax"></a>语法
 
-> *名称*TYPEDEF*类型*
+> *名称* **TYPEDEF** *类型*
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[指令参考](../../assembler/masm/directives-reference.md)<br/>
+[指令参考](directives-reference.md)

@@ -72,7 +72,7 @@ UNWIND_INFO 结构必须在内存中对齐 DWORD。 每个字段的含义如下�
 
    当前定义了三个标志：
 
-   |Flag|描述|
+   |Flag|说明|
    |-|-|
    |`UNW_FLAG_EHANDLER`| 函数包含一个异常处理程序，该处理程序在查找需要检查异常的函数时应调用。|
    |`UNW_FLAG_UHANDLER`| 函数具有一个终止处理程序，该处理程序应在展开异常时调用。|
@@ -327,7 +327,7 @@ typedef struct _DISPATCHER_CONTEXT {
 
 ### <a name="raw-pseudo-operations"></a>原始伪操作
 
-|伪操作|描述|
+|伪操作|说明|
 |-|-|
 |处理器框架 \[：*ehandler*]|使 MASM 在 pdata 中生成函数表项，并在 xdata 中为函数的结构化异常处理展开行为生成展开信息。  如果*ehandler*存在，则在 xdata 中将此过程输入为特定于语言的处理程序。<br /><br /> 当使用 FRAME 属性时，它必须后跟。ENDPROLOG 指令。  如果函数是叶函数（在[函数类型](../build/stack-usage.md#function-types)中定义），则不需要帧属性，这与这些伪操作的其余部分相同。|
 |.PUSHREG*注册*|使用序言中的当前偏移量为指定寄存器号生成 UWOP_PUSH_NONVOL 的展开代码项。<br /><br /> 仅将它与非易失性整数寄存器一起使用。  对于易失寄存器的推送，请使用。ALLOCSTACK 8，而不是|
@@ -393,7 +393,7 @@ sample ENDP
 
 为了简化[原始伪操作](#raw-pseudo-operations)的使用，ksamd64 中定义了一组宏，可用于创建典型的过程序言和尾声。
 
-|宏|描述|
+|宏|说明|
 |-|-|
 |alloc_stack(n)|分配 n 个字节的堆栈帧（使用 `sub rsp, n`），并发出适当的展开信息（. allocstack n）|
 |save_reg *reg*， *loc*|将非易失寄存器*reg*保存在堆栈上的*RSP 偏移位置*，并发出适当的展开信息。 （. savereg reg）|

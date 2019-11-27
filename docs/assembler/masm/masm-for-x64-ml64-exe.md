@@ -6,26 +6,26 @@ helpviewer_keywords:
 - ml64.exe
 - masm for x64
 ms.assetid: 89059103-f372-4968-80ea-0c7f90bb9c91
-ms.openlocfilehash: d9b550313c8e65e47db70dc81519abce7db95da5
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 68f5a14b092109a647e7a81ed6c3fef148a5571b
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74050207"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397222"
 ---
 # <a name="masm-for-x64-ml64exe"></a>MASM for x64 (ml64.exe)
 
-Visual Studio 包含 Microsoft 汇编程序（MASM）的32位和64位托管版本，以面向 x64 代码。 命名为 ml64.exe，这是接受 x64 组装器语言的汇编程序。 当你在 Visual Studio 安装过程中选择C++工作负荷时，将安装 MASM 命令行工具。 MASM 工具不可单独下载。 有关如何下载和安装 Visual Studio 副本的说明，请参阅[安装 Visual studio](/visualstudio/install/install-visual-studio)。 如果你不想安装完整的 Visual Studio IDE，但只需要命令行工具，请下载[Visual studio 的生成工具](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019)。
+Visual Studio 同时包含面向x64 代码的 32 位和 64 位托管版本的 Microsoft Assembler (MASM)。 该汇编程序名为 ml64.exe，接受 x64 汇编语言。 在 Visual Studio 安装期间选择 C++ 工作负载时，会安装 MASM 命令行工具。 MASM 工具不可单独下载。 有关如何下载和安装 Visual Studio 副本的说明，请参阅[安装 Visual studio](/visualstudio/install/install-visual-studio)。 如果你不想安装完整的 Visual Studio IDE，但只需要命令行工具，请下载[Visual studio 的生成工具](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019)。
 
 若要在命令行上使用 MASM 生成 x64 目标的代码，必须为 x64 目标使用开发人员命令提示，这会设置所需的路径和其他环境变量。 有关如何启动开发人员命令提示的信息，请参阅在[命令行C++上生成 C/代码](../../build/building-on-the-command-line.md)。
 
 有关 ml64.exe 命令行选项的信息，请参阅[ML 和 Ml64.exe 命令行参考](../../assembler/masm/ml-and-ml64-command-line-reference.md)。
 
-X64 或 ARM 目标不支持内联汇编程序或使用 ASM 关键字。 若要将使用内联汇编程序的 x86 代码移植到 x64 或 ARM，可以将代码转换为C++、使用编译器内部函数或创建汇编程序语言源文件。 Microsoft C++编译器支持内部函数，使你能够在接近跨平台的方式的情况下，使用特殊的函数说明，例如，特权、位扫描/测试、互锁等。 有关可用内部函数的信息，请参阅[编译器内部函数](../../intrinsics/compiler-intrinsics.md)。
+X64 或 ARM 目标不支持使用内联汇编程序或 ASM 关键字。 要将使用内联汇编程序的 x86 代码切换到 x64 或 ARM，可以将代码转换为 C++，使用编译器内部函数，或创建汇编语言的源文件。 Microsoft C++编译器支持内部函数，使你能够在接近跨平台的方式的情况下，使用特殊的函数说明，例如，特权、位扫描/测试、互锁等。 有关可用内部函数的信息，请参阅[编译器内部函数](../../intrinsics/compiler-intrinsics.md)。
 
 ## <a name="add-an-assembler-language-file-to-a-visual-studio-c-project"></a>将汇编程序语言文件添加到 Visual Studio C++项目
 
-Visual Studio 项目系统支持在C++项目中使用 MASM 生成的汇编程序语言文件。 你可以创建 x64 汇编程序语言源文件，并使用 MASM 将它们生成到对象文件中，该文件支持 x64。 然后，可以将这些对象文件链接到C++为 x64 目标生成的代码。 这是克服 x64 内联汇编程序缺少的一种方法。
+Visual Studio 项目系统支持在 C + + 项目中使用 MASM 生成汇编程序语言文件。 可以使用 MASM 创建 x64 汇编语言源文件并将其构建为完全支持 x64 的对象文件。 然后可以将这些对象文件链接到专为 x64 目标生成的 C + + 代码。 这是一种可在缺少 x64 内联汇编程序时使用的方法。
 
 ### <a name="to-add-an-assembler-language-file-to-an-existing-visual-studio-c-project"></a>向现有的 Visual Studio C++项目添加汇编程序语言文件
 
@@ -37,11 +37,11 @@ Visual Studio 项目系统支持在C++项目中使用 MASM 生成的汇编程序
 
 1. 在 "**添加新项**" 对话框中，在中间窗格中选择 **C++ "文件（.cpp）** "。 在 "**名称**编辑控件" 中，输入具有 **.asm**扩展名的新文件名，而不是 .cpp。 选择 "**添加**" 将文件添加到项目中，并关闭对话框。
 
-在添加的 .asm 文件中创建汇编程序语言代码。 生成解决方案时，将调用 MASM 组装器将 .asm 文件组合到对象文件中，然后将该文件链接到项目。 为了更轻松地访问符号，请在C++源代码中将汇编程序函数声明为 `extern "C"`，而不是C++在汇编程序语言源文件中使用名称修饰约定。
+在添加的 .asm 文件中创建汇编语言代码。 生成解决方案时，会调用 MASM 汇编程序，将该 .asm 文件汇编为一个之后要链接到项目的对象文件。 为了更轻松地访问符号，请在C++源代码中将汇编程序函数声明为 `extern "C"`，而不是C++在汇编程序语言源文件中使用名称修饰约定。
 
 ## <a name="ml64-specific-directives"></a>ml64.exe 特定指令
 
-可以在面向 x64 的汇编程序语言源代码中使用以下 ml64.exe 特定的指令：
+可以在面向 x64 在汇编语言源代码中使用以下特定于 ml64 的指令：
 
 - [.ALLOCSTACK](../../assembler/masm/dot-allocstack.md)
 
@@ -80,6 +80,6 @@ mov eax, DWORD PTR [rcx*2+r10d]
 mov eax, DWORD PTR [ecx*2+r10+0100h]
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Microsoft 宏汇编程序参考](../../assembler/masm/microsoft-macro-assembler-reference.md)<br/>
+[Microsoft 宏汇编程序参考](../../assembler/masm/microsoft-macro-assembler-reference.md)

@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - MACRO directive
 ms.assetid: 89434f7c-bc2c-4e91-8940-fe2db8785233
-ms.openlocfilehash: 321f8472cd1622716af1114deefbee70e1982724
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 860d538a2f461db1d5fd6bb24d078f644af2156f
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62202864"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397233"
 ---
 # <a name="macro"></a>MACRO
 
-将标记调用一个宏块*名称*，并建立*参数*时该宏调用传递参数的占位符。
+标记名为*name*的宏块，并为调用宏时传递的参数建立*参数*占位符。
 
 ## <a name="syntax"></a>语法
 
-> *name* MACRO [[*parameter* [[:REQ | :=*default* | :VARARG]] ]] ...<br/>
-> *statements*<br/>
-> ENDM [[*值*]]
+> *name***宏**⟦*参数*⟦ **：** 请求 |： =*default* |  **： VARARG**⟧ .。。⟧\
+> *语句*\
+> **ENDM** ⟦*value*⟧
 
 ## <a name="remarks"></a>备注
 
-宏函数将返回*值*给调用语句。
+宏函数将*值*返回给调用语句。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[指令参考](../../assembler/masm/directives-reference.md)<br/>
+[指令参考](directives-reference.md)

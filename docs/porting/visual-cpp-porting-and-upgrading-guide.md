@@ -41,11 +41,11 @@ Visual Studio 2015、Visual Studio 2017 和 Visual Studio 2019 中的工具集�
 
 - 根据您选择的新式样式自动设置格式可帮助使旧代码更具可读性。
 
-有关更多信息，请参阅[使用 Visual Studio 中的本机多重目标生成旧项目](use-native-multi-targeting.md)。
+有关详细信息，请参阅 [使用 Visual Studio 中的本机多重目标生成旧项目](use-native-multi-targeting.md)。
 
 ## <a name="in-this-section"></a>本节内容
 
-|标题|描述|
+|职务|说明|
 |-----------|-----------------|
 |[从C++ Visual Studio 的早期版本升级项目](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|如何将基本代码升级到 Visual Studio 2019 和编译器的 v142。|
 |[用于升级C++代码的 IDE 工具](ide-tools-for-upgrading-code.md)|有助于升级过程的有用 IDE 功能。|

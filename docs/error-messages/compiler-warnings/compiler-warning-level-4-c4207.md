@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4207
 ms.assetid: f4e09e3e-ac87-4489-8e3f-c8f76b82e721
-ms.openlocfilehash: 44f49705bf197d7a42b80e50983e47a4c0ce7bed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd18964f8969bc75967de435e2ca3099b12213e0
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401197"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541878"
 ---
 # <a name="compiler-warning-level-4-c4207"></a>编译器警告（等级 4）C4207
 
-使用了非标准扩展： 扩展初始值设定项窗体
+使用了非标准扩展：扩展初始值设定项窗体
 
-使用 Microsoft 扩展 (/Ze)，您可以初始化数组未确定大小的`char`使用大括号内的字符串。
+使用 Microsoft 扩展（/Ze），可以使用大括号内的字符串初始化 `char` 的成员列表数组数组。
 
 ## <a name="example"></a>示例
 
-```
+```c
 // C4207.c
 // compile with: /W4
 char c[] = { 'a', 'b', "cdefg" }; // C4207
@@ -31,4 +31,4 @@ int main()
 }
 ```
 
-此类初始化将是无效 ANSI 兼容性 ([/Za](../../build/reference/za-ze-disable-language-extensions.md))。
+此类初始化在 ANSI 兼容性（[/za](../../build/reference/za-ze-disable-language-extensions.md)）下无效。

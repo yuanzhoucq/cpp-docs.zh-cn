@@ -8,21 +8,21 @@ helpviewer_keywords:
 - GE operator
 - operator GE
 ms.assetid: 28804311-174d-42d0-9ce1-2187b81bc844
-ms.openlocfilehash: 63b8486a6d3f7d8b61dc5befaaf43296f71f9ec0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 45bd137ab5833d11691261eaaa370daccdc08ed4
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176767"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396968"
 ---
 # <a name="operator-ge"></a>运算符 GE
 
-如果返回 true (-1) *expression1*大于或等于*expression2*，或如果不是返回 false (0)。
+如果*表达式*1 大于或等于*表达式*2，则返回 true （-1），如果不是，则返回 false （0）。
 
 ## <a name="syntax"></a>语法
 
-> expression1 GE expression2
+> *表达式* 2
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[运算符参考](../../assembler/masm/operators-reference.md)<br/>
+[运算符引用](operators-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: DLL loading exception codes (C/C++)
+title: DLL 加载异常代码（C/C++）
 ms.date: 11/19/2019
 f1_keywords:
 - ERROR_MOD_NOT_FOUND
@@ -21,13 +21,13 @@ ms.locfileid: "74243850"
 ---
 # <a name="exceptions-cc"></a>异常 (C/C++)
 
-Two exception codes can be raised when failures are encountered:
+当遇到失败时，可以引发两个异常代码：
 
-- For a **LoadLibrary** failure
+- 对于**LoadLibrary**失败
 
-- For a **GetProcAddress** failure
+- 对于**GetProcAddress**失败
 
-Here is the exception information:
+下面是异常信息：
 
 ```
 //
@@ -37,12 +37,12 @@ Here is the exception information:
 #define VcppException(sev,err)  ((sev) | (FACILITY_VISUALCPP<<16) | err)
 ```
 
-The exception codes thrown are the standard VcppException(ERROR_SEVERITY_ERROR, ERROR_MOD_NOT_FOUND) and VcppException(ERROR_SEVERITY_ERROR, ERROR_PROC_NOT_FOUND) values. The exception passes a pointer to a **DelayLoadInfo** structure in the LPDWORD value that can be retrieved by **GetExceptionInformation** in the [EXCEPTION_RECORD](/windows/win32/api/winnt/ns-winnt-exception_record) structure, ExceptionInformation[0] field.
+引发的异常代码为标准 VcppException （ERROR_SEVERITY_ERROR、ERROR_MOD_NOT_FOUND）和 VcppException （ERROR_SEVERITY_ERROR，ERROR_PROC_NOT_FOUND）值。 此异常将指针传递到 LPDWORD 值中的**DelayLoadInfo**结构，可通过**GetExceptionInformation**在[EXCEPTION_RECORD](/windows/win32/api/winnt/ns-winnt-exception_record)结构 ExceptionInformation [0] 字段中检索。
 
-Additionally, if the incorrect bits are set in the grAttrs field, the exception ERROR_INVALID_PARAMETER is thrown. This exception is, for all intents and purposes, fatal.
+此外，如果在 grAttrs 字段中设置了不正确的位，则会引发异常 ERROR_INVALID_PARAMETER。 此例外是出于所有意图和目的，都是致命的。
 
-See [Structure and Constant Definitions](structure-and-constant-definitions.md) for more information.
+有关详细信息，请参阅[结构和常量定义](structure-and-constant-definitions.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [错误处理和通知](error-handling-and-notification.md)

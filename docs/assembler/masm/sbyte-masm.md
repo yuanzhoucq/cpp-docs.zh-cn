@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - SBYTE directive
 ms.assetid: ae9323cc-4ed5-45fa-9cd6-c241868e4cfd
-ms.openlocfilehash: e95da5c9567483597112bfde686fcfe451b67eb9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3a06f35d3a3c32ab9229b7a399552301b2219412
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62217093"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74394173"
 ---
 # <a name="sbyte-masm"></a>SBYTE (MASM)
 
-分配并根据需要为每个初始化存储一个有符号的字节`initializer`。 也可以用作类型说明符类型是合法的任何位置。
+分配并选择性地为每个*初始值设定项*初始化一个有符号字节的存储。 在类型合法的任何位置，还可以用作类型说明符。
 
 ## <a name="syntax"></a>语法
 
-> 名称 SBYTEinitializer [[，初始值设定项]]...
+> *命名*  **SBYTE** *初始值*⟦ __，__ *初始值设定项*.。。⟧
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[指令参考](../../assembler/masm/directives-reference.md)<br/>
-[BYTE](../../assembler/masm/byte-masm.md)<br/>
-[DB](../../assembler/masm/db.md)<br/>
+[指令引用](../../assembler/masm/directives-reference.md)\
+[字节](../../assembler/masm/byte-masm.md)\
+[DB](../../assembler/masm/db.md)

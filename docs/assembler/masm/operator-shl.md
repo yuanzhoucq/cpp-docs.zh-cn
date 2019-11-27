@@ -8,21 +8,21 @@ helpviewer_keywords:
 - SHL operator
 - operator SHL
 ms.assetid: 7c4fbc25-cbbf-41ee-a07e-d6a15e9192ff
-ms.openlocfilehash: 3fb5dd80213c321ed28a0a6ffacff72749f3f4f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64a62f222047a3a7e61ab8808d40a5208b7d76da
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176351"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396189"
 ---
 # <a name="operator-shl"></a>运算符 SHL
 
-返回的位进行移位的结果*表达式*左*计数*数字的位数。
+返回将*表达式*的*位左移*的位的结果。
 
 ## <a name="syntax"></a>语法
 
-> 表达式 SHL 计数
+> *expression* **SHL** *计数*
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[运算符参考](../../assembler/masm/operators-reference.md)<br/>
+[运算符引用](operators-reference.md)

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4220
 ms.assetid: aba18868-825f-4763-9af6-3296406a80e4
-ms.openlocfilehash: 177fb01ba4181f72740724d107fe08e6680ed492
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 781626e20f787bf582605ebd2d4943a7d5f2aa0c
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401106"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541917"
 ---
 # <a name="compiler-warning-level-4-c4220"></a>编译器警告（等级 4）C4220
 
-varargs 与剩余的参数相匹配
+varargs 与剩余的参数匹配
 
-在默认的 Microsoft 扩展 (/Ze) 中，指向函数的匹配到具有相似，但变量、 参数的函数的指针。
+在默认的 Microsoft 扩展（/Ze）下，指向函数的指针与指向具有类似但可变参数的函数的指针匹配。
 
 ## <a name="example"></a>示例
 
-```
+```c
 // C4220.c
 // compile with: /W4
 
@@ -34,4 +34,4 @@ int main()
 }
 ```
 
-此类指针不匹配在 ANSI 兼容性 ([/Za](../../build/reference/za-ze-disable-language-extensions.md))。
+此类指针在 ANSI 兼容性（[/za](../../build/reference/za-ze-disable-language-extensions.md)）下不匹配。

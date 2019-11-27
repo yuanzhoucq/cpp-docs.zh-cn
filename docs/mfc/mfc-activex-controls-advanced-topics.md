@@ -43,7 +43,7 @@ ms.locfileid: "74305380"
 有关 MFC 数据库类的一般概述，请参阅[Mfc 数据库类（DAO 和 ODBC）](../data/mfc-database-classes-odbc-and-dao.md)。 本文介绍 MFC ODBC 类和 MFC DAO 类，并指导您了解其中的任何一项。
 
 > [!NOTE]
-> DAO 受 Office 2013 的支持。 DAO 3.6 是最终版本，被视为已过时。 视觉对象C++环境和向导不支持 dao （尽管包含 dao 类，但你仍可以使用它）。 Microsoft 建议您对新项目使用 [OLE DB 模板](../data/oledb/ole-db-programming.md)或 [ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)。 只应在维护现有应用程序时使用 DAO。
+> DAO 受 Office 2013 的支持。 DAO 3.6 是最终版本，被视为已过时。 视觉对象C++环境和向导不支持 dao （尽管包含 dao 类，但你仍可以使用它）。 Microsoft 建议你将[OLE DB 模板](../data/oledb/ole-db-programming.md)或[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)用于新项目。 只应在维护现有应用程序时使用 DAO。
 
 ##  <a name="_core_implementing_a_parameterized_property"></a>实现参数化属性
 
@@ -107,7 +107,7 @@ ms.locfileid: "74305380"
 
 ### <a name="activex-control-error-codes"></a>ActiveX 控件错误代码
 
-|错误|描述|
+|错误|说明|
 |-----------|-----------------|
 |CTL_E_ILLEGALFUNCTIONCALL|非法的函数调用|
 |CTL_E_OVERFLOW|溢出|
@@ -150,7 +150,7 @@ ms.locfileid: "74305380"
 |CTL_E_SEARCHTEXTNOTFOUND|未找到搜索文本|
 |CTL_E_REPLACEMENTSTOOLONG|替换内容太长|
 
-如有必要，请使用 CUSTOM_CTL_SCODE 宏为某个标准代码未涵盖的条件定义自定义错误代码。 此宏的参数应为介于1000到32767（含）之间的整数。 例如:
+如有必要，请使用 CUSTOM_CTL_SCODE 宏为某个标准代码未涵盖的条件定义自定义错误代码。 此宏的参数应为介于1000到32767（含）之间的整数。 例如：
 
 [!code-cpp[NVC_MFC_AxUI#37](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_4.cpp)]
 
@@ -174,7 +174,7 @@ ms.locfileid: "74305380"
 
 - 使用 "添加成员变量" 向导，选择 "**控制变量**"，然后选择控件的 ID。 输入成员变量名称并选择控件的包装器类作为**控件类型**。
 
-     或
+     \- 或 -
 
 - 将局部变量和子类声明为对话框项。 插入类似于下面的代码（`CMyCtrl` 是包装类，IDC_MYCTRL1 为控件的 ID）：
 

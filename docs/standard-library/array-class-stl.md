@@ -105,7 +105,7 @@ ms.locfileid: "74189413"
 ---
 # <a name="array-class-c-standard-library"></a>array 类（C++ 标准库）
 
-描述了一个对象，此对象控制类型 `Ty` 的元素的长度序列 `N`。 此序列存储为 `Ty` 的数组，包含在 `array<Ty, N>` 对象中。
+描述了一个对象，此对象控制类型 `N` 的元素的长度序列 `Ty`。 此序列存储为 `Ty` 的数组，包含在 `array<Ty, N>` 对象中。
 
 ## <a name="syntax"></a>语法
 
@@ -116,14 +116,14 @@ class array;
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |-|-|
 |`Ty`|元素的类型。|
 |`N`|元素数量。|
 
 ## <a name="members"></a>Members
 
-|类型定义|描述|
+|类型定义|说明|
 |-|-|
 |[const_iterator](#const_iterator)|受控序列的常量迭代器的类型。|
 |[const_pointer](#const_pointer)|元素的常量指针的类型。|
@@ -137,10 +137,10 @@ class array;
 |[size_type](#size_type)|两个元素间的无符号距离的类型。|
 |[value_type](#value_type)|元素的类型。|
 
-|成员函数|描述|
+|成员函数|说明|
 |-|-|
 |[array](#array)|构造一个数组对象。|
-|[assign](#assign)|(Obsolete. Use `fill`.) Replaces all elements.|
+|[assign](#assign)|弃用. 使用 `fill`。）替换所有元素。|
 |[at](#at)|访问指定位置处的元素。|
 |[back](#back)|访问最后一个元素。|
 |[begin](#begin)|指定受控序列的开头。|
@@ -159,14 +159,14 @@ class array;
 |[size](#size)|对元素数进行计数。|
 |[swap](#swap)|交换两个容器的内容。|
 
-|运算符|描述|
+|运算符|说明|
 |-|-|
 |[array::operator=](#op_eq)|替换受控序列。|
-|[array::operator\[\]](#op_at)|访问指定位置处的元素。|
+|[array：： operator\[\]](#op_at)|访问指定位置处的元素。|
 
 ## <a name="remarks"></a>备注
 
-此类型具有默认的构造函数 `array()` 和默认的赋值运算符 `operator=`，并且满足 `aggregate` 的要求。 因此，可使用聚合初始化表达式来初始化类型 `array<Ty, N>` 的对象。 例如，应用于对象的
+此类型具有默认的构造函数 `array()` 和默认的赋值运算符 `operator=`，并且满足 `aggregate` 的要求。 因此，可使用聚合初始化表达式来初始化类型 `array<Ty, N>` 的对象。 例如，
 
 ```cpp
 array<int, 4> ai = { 1, 2, 3 };
@@ -178,7 +178,7 @@ array<int, 4> ai = { 1, 2, 3 };
 
 **Header:** \<array>
 
-**命名空间:** std
+**命名空间：** std
 
 ## <a name="array"></a>  array::array
 
@@ -255,12 +255,12 @@ constexpr const_reference at(size_type off) const;
 
 ### <a name="parameters"></a>参数
 
-*off*\
+*关闭*\
 要访问的元素的位置。
 
 ### <a name="remarks"></a>备注
 
-The member functions return a reference to the element of the controlled sequence at position *off*. 如果该位置无效，则该函数将引发 `out_of_range` 类的对象。
+成员*函数将返回*对受控序列中的元素的引用。 如果该位置无效，则该函数将引发 `out_of_range` 类的对象。
 
 ### <a name="example"></a>示例
 
@@ -381,7 +381,7 @@ int main()
 
 ## <a name="cbegin"></a>  array::cbegin
 
-Returns a **const** iterator that addresses the first element in the range.
+返回一个**常量**迭代器，该迭代器用于寻址范围内的第一个元素。
 
 ```cpp
 const_iterator cbegin() const noexcept;
@@ -389,13 +389,13 @@ const_iterator cbegin() const noexcept;
 
 ### <a name="return-value"></a>返回值
 
-A **const** random-access iterator that points at the first element of the range, or the location just beyond the end of an empty range (for an empty range, `cbegin() == cend()`).
+**常量**随机访问迭代器，指向范围的第一个元素，或刚超出空范围末尾的位置（对于空范围，则为 `cbegin() == cend()`）。
 
 ### <a name="remarks"></a>备注
 
 由于使用 `cbegin` 的返回值，因此不能修改范围中的元素。
 
-可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 In the example, consider `Container` to be a modifiable (non- **const**) container of any kind that supports `begin()` and `cbegin()`.
+可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，请考虑 `Container` 为支持 `begin()` 和 `cbegin()`的任何类型的可修改（非常**量**）容器。
 
 ```cpp
 auto i1 = Container.begin();
@@ -407,7 +407,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a>  array::cend
 
-Returns a **const** iterator that addresses the location just beyond the last element in a range.
+返回一个**常量**迭代器，该迭代器用于寻址范围内最后一个元素之外的位置。
 
 ```cpp
 const_iterator cend() const noexcept;
@@ -421,7 +421,7 @@ const_iterator cend() const noexcept;
 
 `cend` 用于测试迭代器是否超过了其范围的末尾。
 
-可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 In the example, consider `Container` to be a modifiable (non- **const**) container of any kind that supports `end()` and `cend()`.
+可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，请考虑 `Container` 为支持 `end()` 和 `cend()`的任何类型的可修改（非常**量**）容器。
 
 ```cpp
 auto i1 = Container.end();
@@ -897,7 +897,7 @@ void fill(const Type& val);
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |-|-|
 |*val*|要插入到数组中的元素的值。|
 
@@ -1037,7 +1037,7 @@ constexpr size_type max_size() const;
 
 ### <a name="remarks"></a>备注
 
-此成员函数返回 `N`。
+成员函数返回 `N`。
 
 ### <a name="example"></a>示例
 
@@ -1082,14 +1082,14 @@ constexpr const_reference operator[](size_type off) const;
 
 ### <a name="parameters"></a>参数
 
-*off*\
+*关闭*\
 要访问的元素的位置。
 
 ### <a name="remarks"></a>备注
 
-The member functions return a reference to the element of the controlled sequence at position *off*. 如果该位置无效，则该行为未定义。
+成员*函数将返回*对受控序列中的元素的引用。 如果该位置无效，则该行为未定义。
 
-There is also a non-member [get](array-functions.md#get) function available to get a reference to an element of an **array**.
+还有一个非成员[get](array-functions.md#get)函数可用来获取对**数组**元素的引用。
 
 ### <a name="example"></a>示例
 
@@ -1138,7 +1138,7 @@ array<Value> operator=(array<Value> right);
 
 ### <a name="remarks"></a>备注
 
-The member operator assigns each element of *right* to the corresponding element of the controlled sequence, then returns `*this`. You use it to replace the controlled sequence with a copy of the controlled sequence in *right*.
+成员运算符将*右*的每个元素分配给受控序列的相应元素，然后返回 `*this`。 用于将受控序列替换为*右侧*受控序列的副本。
 
 ### <a name="example"></a>示例
 
@@ -1410,7 +1410,7 @@ constexpr size_type size() const;
 
 ### <a name="remarks"></a>备注
 
-此成员函数返回 `N`。
+成员函数返回 `N`。
 
 ### <a name="example"></a>示例
 
@@ -1502,9 +1502,9 @@ void swap(array& right);
 
 ### <a name="remarks"></a>备注
 
-The member function swaps the controlled sequences between `*this` and *right*. 它执行与 `N` 成正比的多个元素分配和构造函数调用。
+成员函数在 `*this` 和*右*之间交换受控序列。 它执行与 `N` 成正比的多个元素分配和构造函数调用。
 
-There is also a non-member [swap](array-functions.md#swap) function available to swap two **array** instances.
+还有一个非成员[交换](array-functions.md#swap)函数可用于交换两个**数组**实例。
 
 ### <a name="example"></a>示例
 
@@ -1563,7 +1563,7 @@ typedef Ty value_type;
 
 ### <a name="remarks"></a>备注
 
-类型是模板参数 `Ty` 的同义词。
+该类型是模板参数 `Ty`的同义词。
 
 ### <a name="example"></a>示例
 
@@ -1600,6 +1600,6 @@ int main()
 0 1 2 3
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [\<array>](../standard-library/array.md)

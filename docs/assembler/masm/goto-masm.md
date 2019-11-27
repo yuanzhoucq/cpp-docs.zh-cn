@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - GOTO directive
 ms.assetid: 6a5f73e7-6784-4eae-ac52-4fc77a7f369f
-ms.openlocfilehash: a03cbda5a8ff64f6c167766f416e7744a5382ad5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 424ff295fe37e7c5ff02897a01b99a7c75876f85
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203073"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397481"
 ---
 # <a name="goto-masm"></a>GOTO (MASM)
 
-将程序集传输到标记的行 **:**_macrolabel_。
+Transfers assembly to the line marked **:** _macrolabel_.
 
 ## <a name="syntax"></a>语法
 
@@ -23,8 +23,8 @@ ms.locfileid: "62203073"
 
 ## <a name="remarks"></a>备注
 
-**GOTO**仅在内允许[宏](macro.md)，[有关](for-masm.md)， [FORC](forc.md)，[重复](repeat.md)，和[时](while-masm.md)块。 *Macrolabel*目标必须是在行上唯一的指令，并且必须前面加前导冒号。
+**GOTO** is permitted only inside [MACRO](macro.md), [FOR](for-masm.md), [FORC](forc.md), [REPEAT](repeat.md), and [WHILE](while-masm.md) blocks. The *macrolabel* target must be the only directive on the line and must be preceded by a leading colon.
 
 ## <a name="see-also"></a>请参阅
 
-[指令参考](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

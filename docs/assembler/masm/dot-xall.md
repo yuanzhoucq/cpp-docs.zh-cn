@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - .XALL directive
 ms.assetid: b2d851dd-f79e-46c6-825d-1938b8487e8c
-ms.openlocfilehash: f218e412faaa338ce35987f72089d55cc1da25a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 788b6f021c5ae60b59f4cbb68c7b1a65c6e53985
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203799"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397824"
 ---
 # <a name="xall"></a>.XALL
 
-请参阅[。LISTMACRO](../../assembler/masm/dot-listmacro.md)。
+请参阅[.LISTMACRO](../../assembler/masm/dot-listmacro.md)。
 
 ## <a name="syntax"></a>语法
 
-> .XALL
+> **.XALL**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[指令参考](../../assembler/masm/directives-reference.md)<br/>
+[指令参考](directives-reference.md)

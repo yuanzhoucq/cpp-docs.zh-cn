@@ -6,31 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - IF directive
 ms.assetid: 82e43712-4f0c-4bf6-90ce-0663e81af707
-ms.openlocfilehash: 2b91698640e028bf91d822c12b85ded651a04d8d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed7b9e63bb19dcc16539dbdaaf1f6a7f16566b3c
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203059"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397455"
 ---
 # <a name="if-masm"></a>IF (MASM)
 
-授予的程序集*ifstatements*如果*expression1*为 true （非零） 或*elseifstatements*如果*expression1*为 false (0) 和*expression2*为 true。
+*如果表达式1为 true* （非零） *，则授予* *ifstatements*的程序集; 如果*表达式*1 为 false （0 *），则*为 true。
 
 ## <a name="syntax"></a>语法
 
-> IF *expression1*<br/>
-> *ifstatements*<br/>
-> [[ELSEIF *expression2*<br/>
-> *elseifstatements*]]<br/>
-> [[其他<br/>
-> *elsestatements*]]<br/>
-> ENDIF
+> **如果***表达式*=\
+> *if-语句*\
+> ⟦**ELSEIF** *表达式*2\
+> *elseif-语句*⟧ \
+> ⟦**ELSE**\
+> *else-语句*⟧ \
+> **ENDIF**
 
 ## <a name="remarks"></a>备注
 
-以下指令可能会替换为[ELSEIF](../../assembler/masm/elseif-masm.md):**ELSEIFB**， **ELSEIFDEF**， **ELSEIFDIF**， **ELSEIFDIFI**， **ELSEIFE**， **ELSEIFIDN**， **ELSEIFIDNI**， **ELSEIFNB**，并**ELSEIFNDEF**。 （可选） 组装*elsestatements*如果上一个表达式为 false。 请注意，在程序集时计算这些表达式。
+以下指令可以替换为[ELSEIF](../../assembler/masm/elseif-masm.md)： **ELSEIFB**、 **ELSEIFDEF**、 **ELSEIFDIF**、 **ELSEIFDIFI**、 **ELSEIFE**、 **ELSEIFIDN**、 **ELSEIFIDNI**、 **ELSEIFNB**和**ELSEIFNDEF**。 （可选）如果上一个表达式为 false，则汇编*else 语句*。 请注意，将在程序集时间对表达式进行计算。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[指令参考](../../assembler/masm/directives-reference.md)<br/>
+[指令参考](directives-reference.md)

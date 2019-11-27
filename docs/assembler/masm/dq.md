@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - DQ directive
 ms.assetid: 15de9c41-db90-4bca-affc-426eeb38ebc0
-ms.openlocfilehash: 4aeddc9528c281596501a112cb64184a8feca51b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e81ce4a970c99f69d526871b02120c4a75ccf552
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203399"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397777"
 ---
 # <a name="dq"></a>DQ
 
-分配并根据需要为每个初始化 8 个字节存储`initializer`。 此外可以用作类型说明符类型是合法的任何位置。 `DQ` 是的同义词[QWORD](../../assembler/masm/qword.md)。
+为每个*初始值设定*分配和（可选）初始化8个字节的存储。 还可在类型合法的任何位置用作类型说明符。 **DQ**是[QWORD](../../assembler/masm/qword.md)的同义词。
 
 ## <a name="syntax"></a>语法
 
-> [[name]]DQ 初始值设定项 [[，初始值设定项]]...
+> ⟦*name*⟧ **DQ** *初始值设定*项⟦ __，__ *初始值设定项*.。。⟧
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[指令参考](../../assembler/masm/directives-reference.md)<br/>
-[QWORD](../../assembler/masm/qword.md)<br/>
+[指令引用](../../assembler/masm/directives-reference.md)\
+[QWORD](../../assembler/masm/qword.md)

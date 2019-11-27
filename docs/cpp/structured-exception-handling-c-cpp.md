@@ -18,33 +18,33 @@ ms.locfileid: "74245131"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 
-Structured exception handling (SEH) is a Microsoft extension to C to handle certain exceptional code situations, such as hardware faults, gracefully. Although Windows and Microsoft C++ support SEH, we recommend that you use ISO-standard C++ exception handling because it makes your code more portable and flexible. Nevertheless, to maintain existing code or for particular kinds of programs, you still might have to use SEH.
+结构化异常处理（SEH）是 Microsoft 对 C 的扩展，用于处理特定的异常代码情况，如硬件故障。 虽然 Windows 和 Microsoft C++支持 SEH，但建议使用 ISO 标准C++异常处理，因为这样可以提高代码的可移植性和灵活性。 尽管如此，若要维护现有代码或特定类型的程序，仍可能必须使用 SEH。
 
-**Microsoft specific:**
+**Microsoft 专用：**
 
 ## <a name="grammar"></a>语法
 
-*try-except-statement* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__try** *compound-statement* **__except** **(** *expression* **)** *compound-statement*
+*try-except 语句*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__try** *复合语句* **__except** **（** *expression* **）** *复合语句*
 
-*try-finally-statement* :<br/>
+*try-finally-语句*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; **__try** *复合语句* **__finally** *复合语句*
 
 ## <a name="remarks"></a>备注
 
-With SEH, you can ensure that resources such as memory blocks and files are released correctly if execution unexpectedly terminates. You can also handle specific problems—for example, insufficient memory—by using concise structured code that does not rely on **goto** statements or elaborate testing of return codes.
+通过 SEH，你可以确保在执行意外终止的情况下正确释放内存块和文件等资源。 您还可以通过使用不依赖**goto**语句或对返回代码进行详尽测试的简单结构化代码，处理特定问题（例如，内存不足）。
 
-这篇文章中引用的 try-except 和 try-finally 语句是 C 语言的 Microsoft 扩展。 它们通过使应用程序可以在事件后获得对程序的控制（否则事件将终止执行）来支持 SEH。 尽管 SEH 使用 C++ 源文件，但它并不是专为 C++ 设计的。 If you use SEH in a C++ program that you compile by using the [/EHa or /EHsc](../build/reference/eh-exception-handling-model.md) option, destructors for local objects are called but other execution behavior might not be what you expect. For an illustration, see the example later in this article. In most cases, instead of SEH we recommend that you use ISO-standard [C++ exception handling](../cpp/try-throw-and-catch-statements-cpp.md), which the Microsoft C++ compiler also supports. 使用 C++ 异常处理可以确保你的代码更具可移植性，并且你可以处理任何类型的异常。
+这篇文章中引用的 try-except 和 try-finally 语句是 C 语言的 Microsoft 扩展。 它们通过使应用程序可以在事件后获得对程序的控制（否则事件将终止执行）来支持 SEH。 尽管 SEH 使用 C++ 源文件，但它并不是专为 C++ 设计的。 如果你在使用C++ [/eha 或/ehsc](../build/reference/eh-exception-handling-model.md)选项编译的程序中使用 SEH，则会调用本地对象的析构函数，但其他执行行为可能不是你预期的行为。 有关说明，请参阅本文后面的示例。 在大多数情况下，我们建议你使用 Microsoft C++编译器还支持的 ISO 标准[ C++异常处理](../cpp/try-throw-and-catch-statements-cpp.md)，而不是使用 SEH。 使用 C++ 异常处理可以确保你的代码更具可移植性，并且你可以处理任何类型的异常。
 
-If you have C code that uses SEH, you can mix it with C++ code that uses C++ exception handling. For information, see [Handle structured exceptions in C++](../cpp/exception-handling-differences.md).
+如果你的 C 代码使用 SEH，则可以将它与C++使用C++异常处理的代码混合使用。 有关信息，请参阅[中C++的处理结构化异常](../cpp/exception-handling-differences.md)。
 
 有两种 SEH 机制：
 
-- [Exception handlers](../cpp/writing-an-exception-handler.md), or **__except** blocks, which can respond to or dismiss the exception.
+- [异常处理程序](../cpp/writing-an-exception-handler.md)或 **__except**块，它们可响应或消除异常。
 
-- [Termination handlers](../cpp/writing-a-termination-handler.md), or **__finally** blocks, which are always called, whether an exception causes termination or not.
+- 始终调用的[终止处理程序](../cpp/writing-a-termination-handler.md)或 **__finally**块，无论异常是否会导致终止。
 
-这两种类型的处理程序是不同的，但会通过称为“展开堆栈”的过程紧密关联。 When a structured exception occurs, Windows looks for the most recently installed exception handler that is currently active. 该处理程序可以执行以下三个操作之一：
+这两种类型的处理程序是不同的，但会通过称为“展开堆栈”的过程紧密关联。 当出现结构化异常时，Windows 将查找最新安装的异常处理程序，该处理程序当前处于活动状态。 该处理程序可以执行以下三个操作之一：
 
 - 无法识别该异常并将控件传递给其他处理程序。
 
@@ -52,21 +52,21 @@ If you have C code that uses SEH, you can mix it with C++ code that uses C++ exc
 
 - 识别异常，并处理异常。
 
-识别异常的异常处理程序可能不在异常发生时正在运行的函数中。 在某些情况下，它可能在堆栈上高得多的函数中。 当前正在运行的函数和堆栈帧上的所有其他函数都将终止。 During this process, the stack is "unwound;" that is, local non-static variables of terminated functions are cleared from the stack.
+识别异常的异常处理程序可能不在异常发生时正在运行的函数中。 在某些情况下，它可能在堆栈上高得多的函数中。 当前正在运行的函数和堆栈帧上的所有其他函数都将终止。 在此过程中，堆栈将 "展开;"，即从堆栈中清除终止函数的本地非静态变量。
 
-当它展开堆栈时，操作系统将调用你为每个函数编写的任何终止处理程序。 通过使用终止处理程序，你可以清理资源，否则资源将由于异常终止而保持打开状态。 If you've entered a critical section, you can exit it in the termination handler. 如果程序将要关闭，你可以执行其他维护任务，如关闭和删除临时文件。
+当它展开堆栈时，操作系统将调用你为每个函数编写的任何终止处理程序。 通过使用终止处理程序，你可以清理资源，否则资源将由于异常终止而保持打开状态。 如果已输入临界区，可以在终止处理程序中将其退出。 如果程序将要关闭，你可以执行其他维护任务，如关闭和删除临时文件。
 
 ## <a name="next-steps"></a>后续步骤
 
-- [Writing an exception handler](../cpp/writing-an-exception-handler.md)
+- [编写异常处理程序](../cpp/writing-an-exception-handler.md)
 
-- [Writing a termination handler](../cpp/writing-a-termination-handler.md)
+- [编写终止处理程序](../cpp/writing-a-termination-handler.md)
 
 - [处理 C++ 中的结构性异常](../cpp/exception-handling-differences.md)
 
 ## <a name="example"></a>示例
 
-As stated earlier, destructors for local objects are called if you use SEH in a C++ program and compile it by using the **/EHa** or **/EHsc** option. 但是，如果你也正在使用 C++ 异常，则执行过程中的行为可能不是你所预期的。 This example demonstrates these behavioral differences.
+如前文所述，如果在C++程序中使用 SEH 并使用 **/eha**或 **/ehsc**选项对其进行编译，则会调用本地对象的析构函数。 但是，如果你也正在使用 C++ 异常，则执行过程中的行为可能不是你所预期的。 此示例演示这些行为差异。
 
 ```cpp
 #include <stdio.h>
@@ -115,14 +115,14 @@ int main()
 }
 ```
 
-If you use **/EHsc** to compile this code but the local test control macro `CPPEX` is undefined, there is no execution of the `TestClass` destructor and the output looks like this:
+如果使用 **/ehsc**编译此代码，但未定义本地测试控件宏 `CPPEX`，则不会执行 `TestClass` 析构函数，输出如下所示：
 
 ```Output
 Triggering SEH exception
 Executing SEH __except block
 ```
 
-If you use **/EHsc** to compile the code and `CPPEX` is defined by using `/DCPPEX` (so that a C++ exception is thrown), the `TestClass` destructor executes and the output looks like this:
+如果你使用 **/ehsc**来编译代码，并使用 `/DCPPEX` （因此会引发C++异常）定义 `CPPEX`，则将执行 `TestClass` 析构函数，输出如下所示：
 
 ```Output
 Throwing C++ exception
@@ -130,7 +130,7 @@ Destroying TestClass!
 Executing SEH __except block
 ```
 
-If you use **/EHa** to compile the code, the `TestClass` destructor executes regardless of whether the exception was thrown by using `std::throw` or by using SEH to trigger the exception, that is, whether `CPPEX` defined or not. 输出如下所示：
+如果使用 **/eha**来编译代码，则 `TestClass` 析构函数将执行，而不考虑是使用 `std::throw` 还是通过使用 SEH 来触发异常，即是否定义 `CPPEX`。 输出如下所示：
 
 ```Output
 Throwing C++ exception
@@ -138,14 +138,14 @@ Destroying TestClass!
 Executing SEH __except block
 ```
 
-有关详细信息，请参阅 [/EH（异常处理模型）](../build/reference/eh-exception-handling-model.md)。
+有关详细信息，请参阅 [/EH (Exception Handling Model)](../build/reference/eh-exception-handling-model.md)。
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [异常处理](../cpp/exception-handling-in-visual-cpp.md)<br/>
 [关键字](../cpp/keywords-cpp.md)<br/>
 [\<exception>](../standard-library/exception.md)<br/>
-[Errors and Exception Handling](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[Structured Exception Handling (Windows)](/windows/win32/debug/structured-exception-handling)
+[错误和异常处理](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
+[结构化异常处理（Windows）](/windows/win32/debug/structured-exception-handling)

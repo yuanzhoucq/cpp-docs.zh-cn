@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - .MODEL directive
 ms.assetid: 057f00df-1515-4c55-852a-d936c8a34b53
-ms.openlocfilehash: b341cfaec35c08f5ac16447890c85570e9c9c0df
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: bfc114a6e71c0eb0ae70005c2657871b6c9e9692
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73703582"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398113"
 ---
 # <a name="model-32-bit-masm"></a>.模型（32位 MASM）
 
@@ -19,34 +19,34 @@ ms.locfileid: "73703582"
 
 ## <a name="syntax"></a>语法
 
-> .MODEL memorymodel [[, langtype]] [[, stackoption]]
+> **.模型***内存-模型*⟦ __，__ *语言类型*⟧⟦ __，__ *堆栈选项*⟧
 
 ### <a name="parameters"></a>参数
 
-memorymodel<br/>
+*内存模型*\
 必需参数，确定代码和数据指针的大小。
 
-langtype<br/>
+*语言类型*\
 可选参数，设置过程和公共符号的调用和命名约定。
 
-stackoption<br/>
+*堆栈选项*\
 可选参数。
 
-如果 memorymodel 为 `FLAT`，则不使用 stackoption。
+如果*内存模式*为**平面**，则不使用*堆栈选项*。
 
-指定 `NEARSTACK` 将堆栈段以及数据组合至单个物理段 (`DGROUP`)。 假定堆栈段寄存器 (`SS`) 与数据段寄存器 (`DS`) 保留相同的地址。 `FARSTACK` 不会将堆栈与 `DGROUP` 组合；因此，`SS` 不等于 `DS`。
+指定**NEARSTACK**将堆栈段与数据一起分组到单个物理段（**DGROUP**）。 假定堆栈段寄存器（**SS**）包含与数据段寄存器（**DS**）相同的地址。 **FARSTACK**不会将堆栈分组到**DGROUP**;因此， **SS**不等于**DS**。
 
 ## <a name="remarks"></a>备注
 
-.`MODEL` 不在 [x64 的 MASM (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md) 中使用。
+**.** 在[MASM for x64 （ml64.exe）](../../assembler/masm/masm-for-x64-ml64-exe.md)中不使用模型。
 
 下表列出了在面向 16 位和 32 位平台时每个参数的可能的值：
 
 |参数|32 位值|16 位值（支持早期的 16 位开发）|
 |---------------|--------------------|----------------------------------------------------------------|
-|memorymodel|`FLAT`|`TINY`, `SMALL`, `COMPACT`, `MEDIUM`, `LARGE`, `HUGE`, `FLAT`|
-|langtype|`C`，`STDCALL`|`C`、 `BASIC`、 `FORTRAN`、 `PASCAL`、 `SYSCALL`、 `STDCALL`|
-|stackoption|未使用|`NEARSTACK`，`FARSTACK`|
+|*内存模型*|**降**|小型、**小型、小型**、**中型**、**大型、大规模**、**平面**|
+|*语言类型*|**C**， **STDCALL**|**C**， **BASIC**， **FORTRAN**， **PASCAL**， **SYSCALL**， **STDCALL**|
+|*stack 选项*|未使用|**NEARSTACK**、 **FARSTACK**|
 
 ## <a name="code"></a>代码
 
@@ -86,6 +86,6 @@ fxn ENDP
 end
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[指令参考](../../assembler/masm/directives-reference.md)<br/>
+[指令参考](../../assembler/masm/directives-reference.md)

@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - INCLUDE directive
 ms.assetid: 1c7964ee-715c-414e-a45e-74af93476eb4
-ms.openlocfilehash: e63d7cb85ad5379adcc1beea3c3c96eff0d91339
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e04cd761a7456c7337669822be87e8e5da8e805b
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184536"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397336"
 ---
 # <a name="include-masm"></a>INCLUDE (MASM)
 
-插入从给定的源文件的源代码*文件名*到程序集在当前的源文件。
+在程序集过程中，将源代码由*文件名*给定的源文件插入当前源文件中。
 
 ## <a name="syntax"></a>语法
 
-> 包含文件名
+> **包括***文件名*
 
 ## <a name="remarks"></a>备注
 
-*文件名*必须括在尖括号中，如果它包含一个反斜杠，分号，更高版本的符号，较少-比符号、 单引号或双引号。
+如果*文件名*包含反斜杠、分号、大于符号、小于符号、单引号或双引号，则必须将其括在尖括号中。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[指令参考](../../assembler/masm/directives-reference.md)<br/>
+[指令参考](directives-reference.md)

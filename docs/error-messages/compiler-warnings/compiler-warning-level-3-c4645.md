@@ -17,7 +17,7 @@ ms.locfileid: "74189379"
 
 用 __declspec(noreturn) 声明的函数有返回语句
 
-A [return](../../cpp/return-statement-in-program-termination-cpp.md) statement was found in a function that is marked with the [noreturn](../../cpp/noreturn.md) `__declspec` modifier. 忽略 `return` 语句。
+在用[noreturn](../../cpp/noreturn.md) `__declspec` 修饰符标记的函数中发现了[返回](../../cpp/return-statement-in-program-termination-cpp.md)语句。 忽略 `return` 语句。
 
 下面的示例生成 C4645：
 

@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - .DATA directive
 ms.assetid: 32797935-9c79-46e0-bf6f-07d0c2bf1dc1
-ms.openlocfilehash: 77c5327b5b6dc3fc93bec7181bb1cbf855d43fec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 85aa334ef067705fd5befc95393e60490842fc79
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185376"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398517"
 ---
 # <a name="data"></a>.DATA
 
-与一起使用时[。模型](../../assembler/masm/dot-model.md)，启动已初始化的数据 （段名称 （_d）） 的近数据段。
+与一起使用时[。模型](../../assembler/masm/dot-model.md)，为已初始化的数据（段名 _DATA）启动 near 数据段。
 
 ## <a name="syntax"></a>语法
 
-> .DATA
+> **.DATA**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[指令参考](../../assembler/masm/directives-reference.md)<br/>
-[.DATA?](../../assembler/masm/dot-data-q.md)<br/>
-[.CONST](../../assembler/masm/dot-const.md)<br/>
-[.FARDATA](../../assembler/masm/dot-fardata.md)<br/>
-[.FARDATA?](../../assembler/masm/dot-fardata-q.md)<br/>
+[指令引用](../../assembler/masm/directives-reference.md)\
+[.数据？](../../assembler/masm/dot-data-q.md)\
+[.CONST](../../assembler/masm/dot-const.md)\
+[.FARDATA](../../assembler/masm/dot-fardata.md)\
+[.FARDATA?](../../assembler/masm/dot-fardata-q.md)

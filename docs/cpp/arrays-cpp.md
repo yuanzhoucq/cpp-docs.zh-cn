@@ -15,11 +15,11 @@ ms.locfileid: "74188994"
 ---
 # <a name="arrays-c"></a>数组 (C++)
 
-An array is a sequence of objects of the same type that occupy a contiguous area of memory. Traditional C-style arrays are the source of many bugs, but are still common, especially in older code bases. In modern C++, we strongly recommend using [std::vector](../standard-library/vector-class.md) or [std::array](../standard-library/array-class-stl.md) instead of C-style arrays described in this section. Both of these standard library types store their elements as a contiguous block of memory but provide much greater type safety along with iterators that are guaranteed to point to a valid location within the sequence. For more information, see [Containers (Modern C++)](containers-modern-cpp.md).
+数组是一系列相同类型的对象，该对象占用一个连续的内存区域。 传统的 C 样式数组是许多 bug 的源，但仍很常见，尤其是在较旧的代码库中。 在新式C++中，强烈建议使用本节中所述的[std：： vector](../standard-library/vector-class.md)或[std：： array](../standard-library/array-class-stl.md)而不是 C 样式数组。 这两个标准库类型都将其元素存储为连续的内存块，但提供了更高的类型安全性和可保证指向序列内有效位置的迭代器。 有关详细信息，请参阅[容器（ C++现代）](containers-modern-cpp.md)。
 
-## <a name="stack-declarations"></a>Stack declarations
+## <a name="stack-declarations"></a>堆栈声明
 
-In a C++ array declaration, the array size is specified after the variable name, not after the type name as in some other languages. The following example declares an array of 1000 doubles to be allocated on the stack. The number of elements must be supplied as an integer literal or else as a constant expression because the compiler has to know how much stack space to allocate; it cannot use a value computed at run-time. Each element in the array is assigned a default value of 0. If you do not assign a default value, each element will initially contain whatever random values happen to be at that location.
+在C++数组声明中，数组大小在变量名称之后指定，而不是在类型名称之后指定为其他某些语言。 下面的示例声明一个在堆栈上分配的1000双精度数组。 由于编译器必须知道要分配的堆栈空间量，因此必须以整数文本或作为常量表达式的形式提供元素数;它不能使用在运行时计算的值。 为数组中的每个元素分配默认值0。 如果没有分配默认值，则每个元素最初都将包含发生在该位置的任何随机值。
 
 ```cpp
     constexpr size_t size = 1000;
@@ -44,20 +44,20 @@ In a C++ array declaration, the array size is specified after the variable name,
     }
 ```
 
-The first element in the array is the 0th element, and the last element is the (*n*-1) element, where *n* is the number of elements the array can contain. The number of elements in the declaration must be of an integral type and must be greater than 0. It is your responsibility to ensure that your program never passes a value to the subscript operator that is greater than `(size - 1)`.
+数组中的第一个元素是第0个元素，最后一个元素是（*n*-1）元素，其中*n*是数组可以包含的元素数。 声明中的元素数量必须是整型，并且必须大于0。 你有责任确保你的程序永远不会将值传递到大于 `(size - 1)`的下标运算符。
 
-A zero-sized array is legal only when the array is the last field in a **struct** or **union** and when the Microsoft extensions (/Ze) are enabled.
+仅当数组是**结构**或**联合**中的最后一个字段时，并且在 Microsoft 扩展（/ze）启用时，才合法数组的大小。
 
-Stack-based arrays are faster to allocate and access than heap-based arrays, but the number of elements can't be so large that it uses up too much stack memory. How much is too much depends on your program. You can use profiling tools to determine whether an array is too large.
+基于堆栈的数组比基于堆的数组分配和访问速度更快，但元素数不能太大，以致于占用太多堆栈内存。 太多多少依赖于你的程序。 可以使用分析工具来确定数组是否太大。
 
-## <a name="heap-declarations"></a>Heap declarations
+## <a name="heap-declarations"></a>堆声明
 
-If you require an array that is too large to be allocated on the stack, or whose size cannot be known at compile time, you can allocate it on the heap with a [new\[\]](new-operator-cpp.md) expression. The operator returns a pointer to the first element. You can use the subscript operator with the pointer variable just as with a stack-based array. You can also use [pointer arithmetic](../c-language/pointer-arithmetic.md) to move the pointer to any arbitrary elements in the array. It is your responsibility to ensure that:
+如果需要的数组太大，无法在堆栈上分配，或在编译时无法知道其大小，则可以使用[新的\[\]](new-operator-cpp.md)表达式在堆上进行分配。 运算符返回指向第一个元素的指针。 可以对指针变量使用下标运算符，就像在基于堆栈的数组中一样。 还可以使用[指针算法](../c-language/pointer-arithmetic.md)将指针移动到数组中的任意元素。 你需要负责确保：
 
-- you always keep a copy of the original pointer address so that you can delete the memory when you no longer need the array.
-- you do not increment or decrement the pointer address past the array bounds.
+- 始终保留原始指针地址的副本，以便在不再需要数组时可以删除内存。
+- 不会递增或递减超出数组界限的指针地址。
 
-The following example shows how to define an array on the heap at run time, and how to access the array elements using the subscript operator or by using pointer arithmetic:
+下面的示例演示如何在运行时在堆上定义数组，以及如何使用下标运算符或使用指针算法访问数组元素：
 
 ```cpp
 
@@ -117,7 +117,7 @@ int main()
 
 ## <a name="initializing-arrays"></a>初始化数组
 
-You can initialize an array in a loop, one element at a time, or in a single statement. The contents of the following two arrays are identical:
+可以在循环中、一次或在单个语句中初始化一个数组。 以下两个数组的内容相同：
 
 ```cpp
     int a[10];
@@ -129,11 +129,11 @@ You can initialize an array in a loop, one element at a time, or in a single sta
     int b[10]{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 ```
 
-## <a name="passing-arrays-to-functions"></a>Passing arrays to functions
+## <a name="passing-arrays-to-functions"></a>将数组传递给函数
 
-When an array is passed to a function, it is passed as a pointer to the first element. This is true for both stack-based and heap-based arrays. The pointer contains no additional size or type information. This behavior is called *pointer decay*. When you pass an array to a function, you must always specify the number of elements in a separate parameter. This behavior also implies that the array elements are not copied when the array is passed to a function. To prevent the function from modifying the elements, specify the parameter as a pointer to **const** elements.
+当数组传递到函数时，它将作为指向第一个元素的指针传递。 这适用于基于堆栈和堆的数组。 指针不包含其他大小或类型信息。 此行为称为*指针衰减*。 将数组传递给函数时，必须始终在单独的参数中指定元素数。 此行为还意味着数组元素在数组传递到函数时不会被复制。 若要防止函数修改元素，请将参数指定为指向**const**元素的指针。
 
-The following example shows a function that accepts an array and a length. The pointer points to the original array, not a copy. Because the parameter is not **const**, the function can modify the array elements.
+下面的示例演示了一个函数，该函数接受一个数组和一个长度。 指针指向原始数组，而不是副本。 由于参数不是**常量**，因此函数可以修改数组元素。
 
 ```cpp
 void process(double p*, const size_t len)
@@ -146,13 +146,13 @@ void process(double p*, const size_t len)
 }
 ```
 
-Declare the array as const to make it read-only within the function block:
+将数组声明为 const，使其在函数块中为只读：
 
 ```cpp
 void process(const double p*, const size_t len);
 ```
 
-The same function can also be declared in these ways, with no change in behavior. The array is still passed as a pointer to the first element:
+也可以通过这些方式声明同一函数，不会更改行为。 数组仍作为指向第一个元素的指针传递：
 
 ```cpp
 // Unsized array
@@ -162,7 +162,7 @@ void process(const double p[] const size_t len);
 void process(const double p[1000], const size_t len);
 ```
 
-## <a name="multidimensional-arrays"></a>Multidimensional arrays
+## <a name="multidimensional-arrays"></a>多维数组
 
 从其他数组构造的数组是多维数组。 通过按顺序放置多个括起来的常数表达式来指定这些多维数组。 例如，考虑此声明：
 
@@ -170,12 +170,12 @@ void process(const double p[1000], const size_t len);
 int i2[5][7];
 ```
 
-It specifies an array of type **int**, conceptually arranged in a two-dimensional matrix of five rows and seven columns, as shown in the following figure:
+它指定类型为**int**的数组，在概念上按五行和七列的二维矩阵排列，如下图所示：
 
-![Conceptual layout of a multi&#45;dimensional array](../cpp/media/vc38rc1.gif "Conceptual layout of a multi&#45;dimensional array") <br/>
+![多维&#45;数组的概念性布局](../cpp/media/vc38rc1.gif "多维&#45;数组的概念性布局") <br/>
 多维数组的概念布局
 
-In declarations of multidimensioned arrays that have an initializer list (as described in [Initializers](../cpp/initializers.md)), the constant expression that specifies the bounds for the first dimension can be omitted. 例如:
+对于具有初始值设定项列表的 initializers 数组的声明（如[初始值设定](../cpp/initializers.md)项中所述），可以省略指定第一个维度边界的常量表达式。 例如：
 
 ```cpp
 // arrays2.cpp
@@ -191,7 +191,7 @@ double TransportCosts[][cMarkets] = {
 
 前面的声明定义四列三行的数组。 行表示工厂，列表示从工厂装运到的市场。 值是从工厂运输到市场的成本。 忽略数组的第一个维度，但编译器会通过检查该初始值设定项来填充它。
 
-Use of the indirection operator (*) on an n-dimensional array type yields an n-1 dimensional array. If n is 1, a scalar (or array element) is yielded.
+在 n 维数组类型上使用间接寻址运算符（*）将生成一维数组。 如果 n 为 1，则将生成标量（或数组元素）。
 
 C++ 数组按行优先顺序存储。 行优先顺序意味着最后一个下标变化最快。
 
@@ -283,7 +283,7 @@ int main()
 
 `aPoint` 的第一个元素是使用构造函数 `Point( int, int )` 构造的；剩余的两个元素是使用默认构造函数构造的。
 
-Static member arrays (whether **const** or not) can be initialized in their definitions (outside the class declaration). 例如:
+静态成员数组（无论是否为**const** ）可以在其定义（类声明的外部）中进行初始化。 例如：
 
 ```cpp
 // initializing_arrays2.cpp
@@ -301,7 +301,7 @@ int main()
 }
 ```
 
-## <a name="accessing-array-elements"></a>Accessing array elements
+## <a name="accessing-array-elements"></a>访问数组元素
 
 您可以使用数组下标运算符 (`[ ]`) 访问数组的各个元素。 如果一维数组用于无下标的表达式中，则数组名称的计算结果为一个指向该数组中第一个元素的指针。
 
@@ -336,15 +336,15 @@ int main() {
 }
 ```
 
-In the preceding code, `multi` is a three-dimensional array of type **double**. The `p2multi` pointer points to an array of type **double** of size three. 在此示例中，该数组与一个、两个和三个下标一起使用。 尽管更为常见的是指定所有下标（如在 `cout` 语句中），但有时选择数组元素的特定子集会很有用，如 `cout` 后面的语句中所示。
+在前面的代码中，`multi` 是**double**类型的三维数组。 `p2multi` 指针指向大小为3的**双精度**类型的数组。 在此示例中，该数组与一个、两个和三个下标一起使用。 尽管更为常见的是指定所有下标（如在 `cout` 语句中），但有时选择数组元素的特定子集会很有用，如 `cout` 后面的语句中所示。
 
-## <a name="overloading-subscript-operator"></a>Overloading subscript operator
+## <a name="overloading-subscript-operator"></a>重载下标运算符
 
-Like other operators, the subscript operator (`[]`) can be redefined by the user. 如果没有重载下标运算符，下标运算符的默认行为是使用以下方法组合数组名称和下标：
+与其他运算符一样，下标运算符（`[]`）可由用户重新定义。 如果没有重载下标运算符，下标运算符的默认行为是使用以下方法组合数组名称和下标：
 
 `*((array_name) + (subscript))`
 
-像涉及指针类型的所有加法中一样，缩放将自动执行以调整类型的大小。 Therefore, the resultant value is not *n* bytes from the origin of array-name; rather, it is the *n*th element of the array. For more information about this conversion, see [Additive operators](additive-operators-plus-and.md).
+像涉及指针类型的所有加法中一样，缩放将自动执行以调整类型的大小。 因此，生成的值不是来自数组名称的源的*n*个字节;相反，它是数组的第*n*个元素。 有关此转换的详细信息，请参阅[加法运算符](additive-operators-plus-and.md)。
 
 同样，对于多维数组，将使用以下方法获取地址：
 
@@ -352,19 +352,19 @@ Like other operators, the subscript operator (`[]`) can be redefined by the user
 
 ## <a name="arrays-in-expressions"></a>表达式中的数组
 
-当数组类型的标识符出现在 `sizeof`、address-of (`&`) 或引用的初始化以外的表达式中时，该标识符将转换为指向第一个数组元素的指针。 例如:
+如果数组类型的标识符出现在 `sizeof`、地址（`&`）或引用的初始化之外的表达式中，则它将转换为指向第一个数组元素的指针。 例如：
 
 ```cpp
 char szError1[] = "Error: Disk drive not ready.";
 char *psz = szError1;
 ```
 
-指针 `psz` 指向数组 `szError1` 的第一个元素。 Arrays, unlike pointers, are not modifiable l-values. 因此，以下赋值是非法的：
+指针 `psz` 指向数组 `szError1` 的第一个元素。 与指针不同，数组是不可修改的左值。 因此，以下赋值是非法的：
 
 ```cpp
 szError1 = psz;
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[std::array](../standard-library/array-class-stl.md)
+[std：： array](../standard-library/array-class-stl.md)

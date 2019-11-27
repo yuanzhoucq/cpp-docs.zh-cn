@@ -8,21 +8,21 @@ helpviewer_keywords:
 - operator %
 - '% operator'
 ms.assetid: 7f07018e-b664-4655-aa93-9854eb271bbb
-ms.openlocfilehash: de759c3ac788c5c9c4037a3665c07f8a07a205f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 04a887ea0766ec2b1272e618fff2c49889c02732
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176572"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396516"
 ---
 # <a name="operator-"></a>运算符 %
 
-将处理的值*表达式*宏参数为文本。
+将宏参数中*expression*的值视为文本。
 
 ## <a name="syntax"></a>语法
 
-> % *expression*
+> **%** *表达式*
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[运算符参考](../../assembler/masm/operators-reference.md)<br/>
+[运算符引用](operators-reference.md)
