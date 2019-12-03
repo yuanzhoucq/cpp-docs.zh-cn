@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4487
 ms.assetid: 796144cf-cd3c-4edc-b6a4-96192b7eb4f0
-ms.openlocfilehash: 231482547856fc07d43ecfb859b31c2ece49fc5e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1583da44368225eabd8181be970f69f6582111e1
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62206988"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74682985"
 ---
 # <a name="compiler-warning-level-4-c4487"></a>编译器警告（等级 4）C4487
 
-derived_class_function： 匹配继承非虚方法 base_class_function 但不是显式标记为 new
+"derived_class_function"：匹配继承的非虚方法 "base_class_function"，但没有显式标记为 "new"
 
-在派生类中的函数具有与非虚拟基类函数相同的签名。 C4487 提醒您在派生的类函数不重写基类函数。 显式标记为派生的类函数`new`若要解决此警告。
+派生类中的函数与非虚拟基类函数具有相同的签名。 C4487 提醒你派生类函数不会重写基类函数。 将派生类函数显式标记为 `new` 以解决此警告。
 
-有关详细信息，请参阅[新 (新 vtable 中的槽）](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md)。
+有关详细信息，请参阅[new （vtable 中的新槽）](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md)。
 
 ## <a name="example"></a>示例
 
 下面的示例生成 C4487。
 
-```
+```cpp
 // C4487.cpp
 // compile with: /W4 /clr
 using namespace System;
