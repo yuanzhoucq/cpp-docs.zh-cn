@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4337
 ms.assetid: 70bc72d9-aac5-45cd-abd3-ebe42a05897b
-ms.openlocfilehash: 2bfa5f9b30fa0325df1c3655ded53ab0525449c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f86d03e30e2776a8dae4cf56032c45d0022ca01d
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400833"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683299"
 ---
 # <a name="compiler-warning-level-4-c4337"></a>编译器警告（等级 4）C4337
 
-在 typelib2 的交叉引用的类型库 typelib1 自动导入
+正在自动导入 "typelib2" 中的交叉引用类型库 "typelib1"
 
-Auto_search 特性[#import 指令](../../preprocessor/hash-import-directive-cpp.md)导致隐式导入类型库。
+[#Import 指令](../../preprocessor/hash-import-directive-cpp.md)的 auto_search 特性导致隐式导入类型库。
 
-从以下两个文件 （使用 midl.exe 编译） 创建的磁盘上的给定两个类型库：
+在通过以下两个文件创建的磁盘上提供两个类型库（用 midl 编译）：
 
 ```
 // C4337a.idl
@@ -38,7 +38,7 @@ library C4337aLib
 };
 ```
 
-然后第二个的.idl 文件，
+然后是第二个 .idl 文件，
 
 ```
 // C4337b.idl
@@ -58,9 +58,9 @@ library C4337bLib
 };
 ```
 
-下面的示例生成 C4337:
+下面的示例生成 C4337：
 
-```
+```cpp
 // C4337.cpp
 // compile with: /W4 /LD
 #import "c4337b.tlb" auto_search   // C4337

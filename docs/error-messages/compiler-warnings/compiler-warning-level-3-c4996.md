@@ -1,95 +1,93 @@
 ﻿---
-title: 编译器警告 （等级 3） C4996
-ms.date: 11/17/2017
+title: 编译器警告（等级3） C4996
+description: 说明为什么会发生编译器警告 C4996，并说明如何处理该警告。
+ms.date: 11/25/2019
 f1_keywords:
 - C4996
 helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
-ms.openlocfilehash: ef1bc46b64ccbe1374fd795a9b5d56e091b47f48
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d5b8cc3e3ce6445e021163df5301a38aab2c514
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401496"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683332"
 ---
-# <a name="compiler-warning-level-3-c4996"></a>编译器警告 （等级 3） C4996
+# <a name="compiler-warning-level-3-c4996"></a>编译器警告（等级3） C4996
 
-编译器遇到弃用声明。 **此警告始终是有意消息来自的库或包含的头文件，不应在不了解后果的情况下使用不推荐使用的符号的作者。** 不推荐使用修饰符或特性声明的站点上指定实际的警告消息。
+你的代码使用标记为已*弃用*的函数、类成员、变量或 typedef。 不推荐使用[__declspec （不推荐使用）](../../cpp/deprecated-cpp.md)修饰符或 c + + 14\[\[不推荐使用的符号[\]\]](../../cpp/attributes.md)特性。 实际的 C4996 警告消息由声明的 `deprecated` 修饰符或特性指定。
 
-这些是由 C 运行时库和标准库，但未详尽列出生成的一些常见 C4996 消息。 可单击的链接，或继续阅读，以解决此问题，或若要关闭该警告的方式。
-
-- [此项的 POSIX 名称已弃用。请改用 ISO C 和C++一致的名称： *new_name*。请参阅联机帮助了解详细信息。](#posix-function-names)
-
-- [此函数或变量可能不安全。请考虑使用*safe_version*相反。若要禁用弃用，请使用\_CRT\_SECURE\_NO\_WARNINGS。请参阅联机帮助了解详细信息。](#unsafe-crt-library-functions)
-
-- [std::*function_name*::\_选中此项\_迭代器::\_Deprecate 调用到 std::*function_name*可能不安全的参数与此调用依靠调用方检查传递的值正确。若要禁用此警告，请使用 -D_SCL_SECURE_NO_WARNINGS。有关如何使用视觉对象，请参阅文档C++检查的迭代器](#unsafe-standard-library-functions)
-
-- [此函数或变量已被较新的库或操作系统功能。请考虑使用*new_item*相反。请参阅联机帮助了解详细信息。](#obsolete-crt-functions-and-variables)
-
-## <a name="cause"></a>原因
-
-当编译器遇到函数或变量标记为时发生 C4996[弃用](../../cpp/deprecated-cpp.md)通过使用`__declspec(deprecated)`修饰符，或当你尝试访问的函数、 类成员或具有 C + + 14 的 typedef [ \[\[弃用\]\] ](../../cpp/attributes.md)属性。 可以使用`__declspec(deprecated)`修饰符或`[[deprecated]]`自己属性中你的库或标头文件来警告你有关已弃用的函数、 变量、 成员或类型定义的客户端。
+> [!IMPORTANT]
+> 此警告始终是来自声明符号的标头文件的作者的故意消息。 不要在不了解后果的情况下使用已弃用的符号。
 
 ## <a name="remarks"></a>备注
 
-许多函数、 成员函数，模板函数和 Visual Studio 中的库中的全局变量标记为*弃用*。 这些函数已弃用，因为它们可能具有不同的首选的名称，可能不安全或更安全的变体，或可能已过时。 许多弃用消息包括不推荐使用的函数或全局变量的建议的替换。
+Visual Studio 库中的许多函数、成员函数、模板函数和全局变量已*弃用*。 有些，如 Posix 函数，因为它们具有不同的首选名称。 某些 C 运行时库函数被弃用，因为它们不安全，并且具有更安全的变体。 其他内容已被弃用，因为它们已过时。 弃用消息通常包含推荐的替代函数或全局变量。
 
-若要解决此问题，我们通常建议更改代码以改为使用建议的更安全的或更新函数和全局变量。 如果您需要使用现有的函数或变量出于可移植性原因，可以关闭该警告。
+## <a name="turn-off-the-warning"></a>关闭警告
 
-### <a name="to-turn-the-warning-off-without-fixing-the-issue"></a>要关闭该警告而不解决此问题
+为了解决 C4996 问题，我们通常建议您更改代码。 请改用建议的函数和全局变量。 如果出于可移植性原因需要使用现有函数或变量，则可以关闭警告。
 
-可以通过使用来关闭的警告的特定代码行[警告](../../preprocessor/warning.md)杂注， `#pragma warning(suppress : 4996)`。 也可以关闭该警告文件中通过使用警告杂注， `#pragma warning(disable : 4996)`。
+若要关闭特定代码行的警告，请使用[警告](../../preprocessor/warning.md)杂注，`#pragma warning(suppress : 4996)`。
 
-您可以关闭该警告全局命令行生成中使用 **/wd4996**命令行选项。
+若要关闭文件中的警告，请使用警告杂注，`#pragma warning(disable : 4996)`。
 
-若要关闭的警告的 Visual Studio IDE 中的整个项目：
+若要在命令行生成中全局关闭警告，请使用[/wd4996](../../build/reference/compiler-option-warning-level.md)命令行选项。
 
-- 打开**属性页**对话框为您的项目。 有关如何使用属性页对话框的信息，请参阅[属性页](../../build/reference/property-pages-visual-cpp.md)。
-- 选择**配置属性**， **C /C++**，**高级**页。
-- 编辑**禁用特定警告**属性来添加`4996`。 选择**确定**应用所做的更改。
+若要在 Visual Studio IDE 中关闭整个项目的警告：
 
-此外可以使用预处理器宏关闭弃用警告库中使用某些特定类。 下面描述了这些宏。
+1. 打开项目的 "**属性页**" 对话框。 有关如何使用 "属性页" 对话框的信息，请参阅[属性页](../../build/reference/property-pages-visual-cpp.md)。
 
-若要在 Visual Studio 中定义预处理器宏：
+1. 选择 "**配置属性**" > **CC++ /**  > "**高级**" 页。
 
-- 打开**属性页**对话框为您的项目。 有关如何使用属性页对话框的信息，请参阅[属性页](../../build/reference/property-pages-visual-cpp.md)。
-- 展开**配置属性 > C /C++ > 预处理器**。
-- 在中**预处理器定义**属性，添加宏名称。 选择“确定”  进行保存，然后重新生成项目。
+1. 编辑 "**禁用特定警告**" 属性以添加 `4996`。 选择 **"确定"** 以应用所做的更改。
 
-若要仅在特定源文件中定义的宏，请添加一个行如`#define EXAMPLE_MACRO_NAME`包含的头文件的任意行之前。
+你还可以使用预处理器宏来关闭库中使用的某些特定类的弃用警告。 下面描述了这些宏。
 
-## <a name="specific-c4996-messages"></a>特定 C4996 消息
+在 Visual Studio 中定义预处理器宏：
 
-以下是一些常见 C4996 警告和错误的源。
+1. 打开项目的 "**属性页**" 对话框。 有关如何使用 "属性页" 对话框的信息，请参阅[属性页](../../build/reference/property-pages-visual-cpp.md)。
 
-### <a name="posix-function-names"></a>POSIX 函数名称
+1. 展开 "**配置属性" >C++ C/> 预处理器**。
 
-**此项的 POSIX 名称已弃用。请改用 ISO C 和C++一致的名称：** *new_name*。 **请参阅联机帮助了解详细信息。**
+1. 在 "**预处理器定义**" 属性中，添加宏名称。 选择“确定” 进行保存，然后重新生成项目。
 
-Microsoft 已重命名以符合 C99 和 c++03 规则的实现定义的全局函数名称的 CRT 中的一些 POSIX 函数。 仅原始 POSIX 名称已弃用，而不是函数本身。 在大多数情况下，前导下划线已添加到 POSIX 函数名称，以创建符合标准的名称。 编译器会发出弃用警告的原始函数名称，并建议首选的名称。
+若要仅在特定源文件中定义宏，请在包含头文件的任何行之前添加一行，如 `#define EXAMPLE_MACRO_NAME`。
 
-若要解决此问题，我们通常建议更改代码以改为使用建议的函数名称。 但是，更新的名称是特定于 Microsoft 的。 如果您需要将现有的函数名称，用于可移植性原因，可以关闭这些警告。 在其原始名称下的库中的 POSIX 函数现在仍然有效。
+下面是 C4996 警告和错误的一些常见源：
 
-若要关闭这些函数的弃用警告，请定义预处理器宏 **\_CRT\_NONSTDC\_NO\_WARNINGS**。 可以通过包括选项定义此宏在命令行`/D_CRT_NONSTDC_NO_WARNINGS`。
+## <a name="posix-function-names"></a>POSIX 函数名称
 
-### <a name="unsafe-crt-library-functions"></a>不安全的 CRT 库函数
+**此项的 POSIX 名称已弃用。改为使用 ISO C++ C 和相容名称：** "*新名称*"。 **有关详细信息，请参阅联机帮助。**
 
-**此函数或变量可能不安全。请考虑使用** *safe_version* **相反。若要禁用弃用，请使用\_CRT\_SECURE\_NO\_WARNINGS。请参阅联机帮助了解详细信息。**
+Microsoft 重命名了 CRT 中的一些 POSIX 函数，以符合实现定义的全局函数名称的 C99 和 c + + 03 规则。 只会弃用名称，而不会弃用函数本身。 在大多数情况下，在 POSIX 函数名称中添加了前导下划线以创建符合标准的名称。 编译器会发出对原始函数名称的弃用警告，并建议首选名称。
 
-Microsoft 已弃用某些 CRT 和C++标准库函数和全局变量以支持更多安全版本。 在大多数情况下，已弃用的函数允许未选中状态的读取或写入访问权限可能会导致严重的安全问题的缓冲区。 编译器会发出对这些函数的弃用警告，并建议首选函数。
+若要解决此问题，我们通常建议改为改用建议的函数名称。 但是，更新的名称是 Microsoft 特定的。 如果需要使用现有函数名称以实现可移植性，则可以关闭这些警告。 POSIX 函数在库中的原始名称下面仍可用。
 
-若要解决此问题，我们建议你使用的函数或变量*safe_version*相反。 如果已验证不能为缓冲区覆盖或 overread 出现在你的代码，并且您不能更改的代码可移植性原因，您可以关闭该警告。
+若要关闭这些函数的弃用警告，请定义预处理器宏 **\_CRT\_NONSTDC\_不\_警告**。 可以通过在命令行中包含选项 `/D_CRT_NONSTDC_NO_WARNINGS`来定义此宏。
 
-若要关闭 CRT 中的这些函数的弃用警告，定义 **\_CRT\_SECURE\_NO\_WARNINGS**。 若要关闭有关弃用的全局变量的警告，请定义 **\_CRT\_SECURE\_否\_警告\_GLOBALS**。 有关这些不推荐使用的函数和全局变量的详细信息，请参阅[CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)和[安全库：C++标准库](../../standard-library/safe-libraries-cpp-standard-library.md)。
+## <a name="unsafe-crt-library-functions"></a>不安全的 CRT 库函数
 
-### <a name="unsafe-standard-library-functions"></a>不安全的标准库函数
+**此函数或变量可能不安全。请考虑**改用*安全版本* **。若要禁用弃用，请使用 \_CRT\_安全\_不\_警告。 有关详细信息，请参阅联机帮助。**
 
-__std::__*function_name* __::\_选中此项\_迭代器::\_Deprecate 调用到 std::__ *function_name* **可能不安全的参数与此调用依靠调用方检查传递的值是否正确。若要禁用此警告，请使用-D\_SCL\_SECURE\_NO\_WARNINGS。有关如何使用视觉对象，请参阅文档C++检查的迭代器**
+Microsoft 弃用了某些 CRT C++和标准库函数和全局函数，因为提供了更安全的版本。 大多数不推荐使用的函数允许对缓冲区进行未检查的读取或写入访问。 它们可能会导致严重的安全问题。 编译器会发出对这些函数的弃用警告，并建议首选函数。
 
-会出现此警告在调试版本中特定C++标准库模板函数不会检查参数是否正确。 在大多数情况下，这是因为没有足够的信息可供要检查容器边界的函数或使用该函数可能会错误地使用迭代器。 此警告有助于标识这些函数用途，因为它们可能会在程序中的严重安全漏洞的源。 有关更多信息，请参见 [Checked Iterators](../../standard-library/checked-iterators.md)。
+若要解决此问题，建议改为使用函数或变量的*安全版本*。 有时您无法实现可移植性或向后兼容性的原因。 仔细验证代码中是否存在缓冲区覆盖或 overread 的情况。 然后，可以关闭警告。
 
-例如，会出现此警告在调试模式下如果传递到的元素指针`std::copy`而不是普通的数组。 若要解决此问题，请使用正确声明的数组，因此库可以检查数组扩展盘区，并执行边界检查。
+若要在 CRT 中关闭这些函数的弃用警告，请将 **\_CRT 定义\_安全\_不\_警告**。
+
+若要关闭有关弃用的全局变量的警告，请将 **\_CRT 定义\_安全\_不\_警告\_全局**。
+
+有关这些弃用的函数和全局函数的详细信息，请参阅 CRT 和安全库[中的安全功能](../../c-runtime-library/security-features-in-the-crt.md) [ C++ ：标准库](../../standard-library/safe-libraries-cpp-standard-library.md)。
+
+## <a name="unsafe-standard-library-functions"></a>不安全的标准库函数
+
+__"std：：__ *function_name* __：：\_Unchecked\_迭代器：：\_弃用" 对 Std：：__ *function_name* **的调用，其中包含可能不安全的参数-此调用依赖于调用方来检查传递的值是否正确。若要禁用此警告，请使用-D\_SCL\_SECURE\_不\_警告。请参阅有关如何使用视觉对象C++ "检查迭代器" 的文档**
+
+调试版本中会出现此警告， C++因为某些标准库模板函数不会检查参数的正确性。 通常，这是因为函数提供的信息不足以检查容器界限。 或，因为迭代器可能会对函数错误地使用。 此警告有助于识别这些功能，因为它们可能是程序中严重安全漏洞的来源。 有关详细信息，请参阅[检查迭代](../../standard-library/checked-iterators.md)器。
+
+例如，如果将元素指针传递到 `std::copy`而不是纯数组，则此警告会在调试模式下出现。 若要解决此问题，请使用适当声明的数组，使库可以检查阵列范围并执行边界检查。
 
 ```cpp
 // C4996_copyarray.cpp
@@ -104,7 +102,7 @@ void example(char const * const src) {
 }
 ```
 
-多个标准库算法已更新，可以在 C + + 14 中有"双范围"版本。 如果您使用双范围版本，第二个范围提供了必要的边界检查：
+多个标准库算法已更新为具有 c + + 14 中的 "双重范围" 版本。 如果使用的是双重范围版本，第二个范围提供必要的边界检查：
 
 ```cpp
 // C4996_containers.cpp
@@ -125,7 +123,7 @@ bool example(
 }
 ```
 
-此示例演示几个标准库可用于检查迭代器使用情况的更多方法和未选中状态的使用情况可能存在危险：
+此示例演示了如何使用标准库来检查迭代器的使用情况，并说明了在未检查的使用情况下可能很危险：
 
 ```cpp
 // C4996_standard.cpp
@@ -210,11 +208,11 @@ int main()
 }
 ```
 
-如果已验证您的代码不能具有缓冲区溢出错误在标准库函数，触发此警告，你可能想要关闭此警告。 若要关闭这些函数的警告，定义 **\_SCL\_SECURE\_NO\_WARNINGS**。
+如果已验证你的代码不能出现缓冲区溢出错误，则可以关闭此警告。 若要关闭这些函数的警告，请定义 **\_SCL\_SECURE\_不\_警告**。
 
-### <a name="checked-iterators-enabled"></a>检查迭代器启用
+## <a name="checked-iterators-enabled"></a>已启用检查迭代器
 
-如果使用编译时不使用经检查迭代器，也可能发生 C4996`_ITERATOR_DEBUG_LEVEL`定义为 1 或 2。 设置为 2，默认情况下，对于调试模式生成，并为 0 表示零售版本。 有关更多信息，请参见 [Checked Iterators](../../standard-library/checked-iterators.md) 。
+如果 `_ITERATOR_DEBUG_LEVEL` 定义为1或2，则也可能会发生 C4996。 对于调试模式生成，默认设置为 2; 对于零售版本，它设置为0。 有关详细信息，请参阅[检查迭代](../../standard-library/checked-iterators.md)器。
 
 ```cpp
 // C4996_checked.cpp
@@ -236,29 +234,29 @@ int main() {
 }
 ```
 
-### <a name="unsafe-mfc-or-atl-code"></a>不安全的 MFC 或 ATL 代码
+## <a name="unsafe-mfc-or-atl-code"></a>不安全 MFC 或 ATL 代码
 
-如果您出于安全原因使用不推荐使用的 MFC 或 ATL 函数，也可能发生 C4996。
+如果出于安全原因使用了不推荐使用的 MFC 或 ATL 函数，则可能会发生 C4996。
 
-若要解决此问题，我们强烈建议你更改代码以改为使用更新后的函数。
+若要解决此问题，我们强烈建议您更改代码以改用更新后的函数。
 
-有关如何禁用这些警告的信息，请参阅[_AFX_SECURE_NO_WARNINGS](../../mfc/reference/diagnostic-services.md#afx_secure_no_warnings)。
+有关如何禁止显示这些警告的信息，请参阅[_AFX_SECURE_NO_WARNINGS](../../mfc/reference/diagnostic-services.md#afx_secure_no_warnings)。
 
-### <a name="obsolete-crt-functions-and-variables"></a>已过时的 CRT 函数和变量
+## <a name="obsolete-crt-functions-and-variables"></a>过时的 CRT 函数和变量
 
-**此函数或变量已被较新的库或操作系统功能。请考虑使用** *new_item* **相反。请参阅联机帮助了解详细信息。**
+**此函数或变量已被较新的库或操作系统功能取代。请考虑**改用*new_item* **。有关详细信息，请参阅联机帮助。**
 
 某些库函数和全局变量由于过时已弃用。 可能会在未来版本的库中删除这些函数和变量。 编译器会发出对这些项的弃用警告，并建议首选备用项。
 
 若要解决此问题，我们建议更改代码以使用建议的函数或变量。
 
-若要关闭这些项的弃用警告，定义 **\_CRT\_过时\_NO\_WARNINGS**。 有关详细信息，请参阅弃用的函数或变量的文档。
+若要关闭这些项的弃用警告，请定义 **\_CRT\_过时\_不\_警告**。 有关详细信息，请参阅弃用的函数或变量的文档。
 
-### <a name="marshalling-errors-in-clr-code"></a>CLR 代码中的封送处理错误
+## <a name="marshaling-errors-in-clr-code"></a>在 CLR 代码中封送处理错误
 
-使用 CLR 封送处理库时，也会发生 C4996。 在这种情况下，C4996 是错误，而非警告。 使用时，会发生此错误[marshal_as](../../dotnet/marshal-as.md)要求的两个数据类型之间进行转换[marshal_context 类](../../dotnet/marshal-context-class.md)。 当封送处理库不支持转换，也可能收到此错误。 有关封送处理库的详细信息，请参阅 [Overview of Marshaling in C++](../../dotnet/overview-of-marshaling-in-cpp.md)。
+使用 CLR 封送处理库时也可能会发生 C4996。 在这种情况下，C4996 是错误，而非警告。 当使用[marshal_as](../../dotnet/marshal-as.md)在需要[marshal_context 类](../../dotnet/marshal-context-class.md)的两个数据类型之间进行转换时，将发生此错误。 如果封送处理库不支持转换，也会收到此错误。 有关封送处理库的详细信息，请参阅[中C++的封送处理概述](../../dotnet/overview-of-marshaling-in-cpp.md)。
 
-此示例生成 C4996，因为封送处理库需要上下文才能将从转换`System::String`到`const char *`。
+此示例将生成 C4996，因为封送处理库需要上下文才能从 `System::String` 转换为 `const char *`。
 
 ```cpp
 // C4996_Marshal.cpp
@@ -279,9 +277,9 @@ int main() {
 }
 ```
 
-## <a name="example-user-defined-deprecated-function"></a>示例:用户定义的已弃用的函数
+## <a name="example-user-defined-deprecated-function"></a>示例：用户定义的不推荐使用的函数
 
-可以在你自己的代码中使用不推荐使用的属性时不再推荐使用的某些函数发出警告的调用方。 在此示例中，为在其中被否决的函数声明，在行和在其使用该函数的行生成 C4996。
+您可以在您自己的代码中使用不推荐使用的属性，以便在您不再建议使用某些函数时警告调用方。 在此示例中，C4996 是在两个位置生成的：一个用于已声明的不推荐使用的函数，另一个用于使用函数的行。
 
 ```cpp
 // C4996.cpp
@@ -294,7 +292,8 @@ void func1(void) {
    printf_s("\nIn func1");
 }
 
-__declspec(deprecated) void func1(int) {
+[[deprecated]]
+void func1(int) {
    printf_s("\nIn func2");
 }
 

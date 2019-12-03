@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4365
 ms.assetid: af4b4191-bdfd-4dbb-8229-3ba4405df257
-ms.openlocfilehash: 3f9f6df9f72608f0c1197e0602c3f54548f8efcb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 554ead2d26a090eb1ffc86e532841143483b365a
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403995"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683028"
 ---
 # <a name="compiler-warning-level-4-c4365"></a>编译器警告（等级 4）C4365
 
-操作： 从 type_1 转换为 type_2，有符号/无符号不匹配
+"action"：从 "type_1" 转换到 "type_2"，有符号/无符号不匹配
 
-例如，尝试将无符号的值转换为有符号值。
+例如，你尝试将无符号值转换为有符号的值。
 
 默认情况下，C4365 处于关闭状态。  有关详细信息，请参阅 [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md)。
 
@@ -25,7 +25,7 @@ ms.locfileid: "62403995"
 
 下面的示例生成 C4365。
 
-```
+```cpp
 // C4365.cpp
 // compile with: /W4
 #pragma warning(default:4365)
