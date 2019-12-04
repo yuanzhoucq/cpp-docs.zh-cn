@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3488
 ms.assetid: 0a6fcd76-dd3b-48d7-abb3-22eccda96034
-ms.openlocfilehash: ed3cccb77a40ab646c9a6375cf4c182de62aa478
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b69ed4ac8b7e706096d107e9dfaa4447ca1bc79
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381093"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738422"
 ---
 # <a name="compiler-error-c3488"></a>编译器错误 C3488
 
@@ -33,7 +33,7 @@ ms.locfileid: "62381093"
 
 下面的示例生成 C3488，因为对变量 `n` 的引用出现在默认模式为按引用的 lambda 表达式的捕获子句中：
 
-```
+```cpp
 // C3488a.cpp
 
 int main()
@@ -47,7 +47,7 @@ int main()
 
 下面的示例演示 C3488 的四种可能的解决方法：
 
-```
+```cpp
 // C3488b.cpp
 
 int main()
@@ -72,6 +72,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Lambda 表达式](../../cpp/lambda-expressions-in-cpp.md)

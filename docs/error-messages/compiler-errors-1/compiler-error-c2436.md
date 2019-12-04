@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2436
 ms.assetid: ca4cc813-bc1d-4c0a-9a2c-3a5fe673d084
-ms.openlocfilehash: 335d4a304e16814243894c9524a9e4a2a7356110
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2fd910f18e8d863c6894a7fe99449d5ba213bf61
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375101"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744376"
 ---
 # <a name="compiler-error-c2436"></a>编译器错误 C2436
 
-identifier： 成员函数或构造函数初始值设定项列表中的嵌套的类
+"identifier"：构造函数初始值设定项列表中的成员函数或嵌套类
 
-无法初始化成员函数或构造函数初始值设定项列表中的局部类。
+构造函数初始值设定项列表中的成员函数或局部类无法初始化。
 
-下面的示例生成 C2436:
+下面的示例生成 C2436：
 
-```
+```cpp
 // C2436.cpp
 struct S{
    int f();

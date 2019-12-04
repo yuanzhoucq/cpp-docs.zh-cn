@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3153
 ms.assetid: d775d97e-2480-484f-81f1-88406b10f947
-ms.openlocfilehash: 62b9e7499c52153183f14eae47c488da6a59b458
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 54fa7de8eb3df8d4b3695544c5285cc202275492
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374867"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745910"
 ---
 # <a name="compiler-error-c3153"></a>编译器错误 C3153
 
-interface： 无法创建接口的实例
+"interface"：不能创建接口的实例
 
-不能实例化接口。 若要使用的接口成员，派生从接口类、 实现接口成员，以及如何将成员。
+接口不能实例化。 若要使用接口的成员，请从接口派生一个类，实现接口成员，然后使用成员。
 
-下面的示例生成 C3153:
+下面的示例生成 C3153：
 
-```
+```cpp
 // C3153.cpp
 // compile with: /clr
 interface class A {

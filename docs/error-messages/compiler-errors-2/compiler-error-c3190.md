@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3190
 ms.assetid: 7c701afa-85a7-4f7a-8881-0662436ac244
-ms.openlocfilehash: 1f30026d8f853aedc863bef4ecfa32b0bd3262b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bbdd54ad0e87557b62d42c8ef5651122d9ebc205
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382354"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761603"
 ---
 # <a name="compiler-error-c3190"></a>编译器错误 C3190
 
-实例，并且它提供的模板参数不是 type 的任何成员函数的显式实例化
+具有所提供的模板参数的 "实例化" 不是 "type" 的任何成员函数的显式实例化
 
-编译器检测到尝试使显式函数实例化;但是，提供的类型参数不匹配任何可能的函数。
+编译器检测到尝试进行显式函数实例化;但是，提供的类型参数不匹配任何可能的函数。
 
-下面的示例生成 C3190:
+下面的示例生成 C3190：
 
-```
+```cpp
 // C3190.cpp
 // compile with: /LD
 template<class T>

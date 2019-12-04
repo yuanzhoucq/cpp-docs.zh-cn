@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2120
 ms.assetid: b0f3f66c-6cd2-4f48-9ea3-c270b53c2b8c
-ms.openlocfilehash: 699a80b2cdb1de175c78efb918ba9389ec3695f4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b188f4f3e898a17a5f8fbeafaa2d1c3c6e08552
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182855"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737967"
 ---
 # <a name="compiler-error-c2120"></a>编译器错误 C2120
 
-与所有类型 void 非法
+"void" 对于所有类型都非法
 
-`void`具有另一种类型的声明中使用类型。
+`void` 类型在具有其他类型的声明中使用。
 
-下面的示例生成 C2120:
+下面的示例生成 C2120：
 
-```
+```cpp
 // C2120.cpp
 int main() {
    void int i;   // C2120

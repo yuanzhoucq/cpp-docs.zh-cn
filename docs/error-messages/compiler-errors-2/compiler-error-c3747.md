@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3747
 ms.assetid: a9a4be67-5d9c-4dcc-9ae9-baae46cbecde
-ms.openlocfilehash: 860a990e35b0d51dfc1316a11a2d2512eb40c273
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 761bb44f5097d998fd885fdb1c5caacf90db3642
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62226791"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761863"
 ---
 # <a name="compiler-error-c3747"></a>编译器错误 C3747
 
-缺少默认类型参数： 参数 param
+缺少默认类型参数：参数参数
 
-具有默认值的泛型或模板参数不能跟在参数列表中不具有默认值的参数。
+具有默认值的泛型参数或模板参数在参数列表中不能跟没有默认值的参数。
 
-下面的示例生成 C3747:
+下面的示例生成 C3747：
 
-```
+```cpp
 // C3747.cpp
 template <class T1 = int, class T2>   // C3747
 struct MyStruct {};
@@ -29,7 +29,7 @@ struct MyStruct {};
 
 可能的解决方法：
 
-```
+```cpp
 // C3747b.cpp
 // compile with: /c
 template <class T1, class T2 = int>

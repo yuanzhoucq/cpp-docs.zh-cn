@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2777
 ms.assetid: 5fe158c0-2a65-488a-aca2-61d4a8b32d43
-ms.openlocfilehash: cfbe2c729141108565f00b7b5a7fd581b49e516d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67132f0acbee3614d8032685ae454386d97b8fb1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227697"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740008"
 ---
 # <a name="compiler-error-c2777"></a>编译器错误 C2777
 
-只有一个 put 方法可以指定每个属性
+每个属性只能指定一个 "put" 方法
 
-一个[属性](../../cpp/property-cpp.md)declspec 修饰符有多个`put`属性。
+[属性](../../cpp/property-cpp.md)declspec 修饰符具有多个 `put` 属性。
 
-下面的示例生成 C2777:
+下面的示例生成 C2777：
 
-```
+```cpp
 // C2777.cpp
 struct A {
    __declspec(property(put=PutProp,put=PutPropToo))   // C2777

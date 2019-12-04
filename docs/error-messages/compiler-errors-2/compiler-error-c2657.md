@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2657
 ms.assetid: f7cf29a9-684a-4605-9469-ecfee9ba4b03
-ms.openlocfilehash: 4e2816092b3c0c210ae2c544e9bf9a823a9c5d18
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e060c2b9a38866a898a3c5ada9e595464050877e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360432"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756092"
 ---
 # <a name="compiler-error-c2657"></a>编译器错误 C2657
 
-类:: * 语句的开始找到 （是否忘记指定类型？）
+在语句的开始找到 "class：:*" （是否忘记指定类型？）
 
-在行开头的指针到成员标识符。
+该行以指向成员的指针标识符开头。
 
-此错误可能被引起给成员的指针的声明中缺少类型说明符。
+如果指向成员的指针的声明中缺少类型说明符，则可能导致此错误。
 
-下面的示例生成 C2657:
+下面的示例生成 C2657：
 
-```
+```cpp
 // C2657.cpp
 class C {};
 int main() {

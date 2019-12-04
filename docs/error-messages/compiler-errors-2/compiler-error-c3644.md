@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3644
 ms.assetid: 2e3f6c41-3ec5-4a01-82bc-f11b61ebe68e
-ms.openlocfilehash: 6d147d6a5955208bbca1ccf9a2f2bcfe3f485b4f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b89ecc1e370edfb4d1365b3c7a7c42b29d5f1c6c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385616"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757847"
 ---
 # <a name="compiler-error-c3644"></a>编译器错误 C3644
 
-function： 不能编译生成托管的代码的函数
+"function"：不能编译函数以生成托管代码
 
-某些关键字在函数中存在将导致要编译到本机的函数。
+函数中存在一些关键字将导致将函数编译为本机函数。
 
-下面的示例生成 C3644:
+下面的示例生成 C3644：
 
-```
+```cpp
 // C3644.cpp
 // compile with: /clr
 // processor: x86

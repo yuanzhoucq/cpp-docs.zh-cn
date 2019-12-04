@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3083
 ms.assetid: 05ff791d-52bb-41eb-9511-3ef89d7f4710
-ms.openlocfilehash: 5ff049d3fcfb2c3dbc28baacdecee9b313574fc0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee4a2bc683a757e079295c16d1022739eaa5726c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243292"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759706"
 ---
 # <a name="compiler-error-c3083"></a>编译器错误 C3083
 
-function： 左侧的符号:: 必须是类型
+"function"： "：：" 左侧的符号必须是一种类型
 
-错误地调用的函数。
+未正确调用函数。
 
 ## <a name="example"></a>示例
 
 下面的示例生成 C3083。
 
-```
+```cpp
 // C3083.cpp
 // compile with: /c
 struct N {
