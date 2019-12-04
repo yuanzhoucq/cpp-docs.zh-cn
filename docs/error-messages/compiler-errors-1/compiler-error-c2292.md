@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2292
 ms.assetid: 256b392f-2b8f-4162-b578-e7633984e162
-ms.openlocfilehash: 1477c767b770e4d1498df951d7ef5b4448e6fde7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 82d381fddc4cafd364bc0e45e70e5fb5c1cb3d84
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183050"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759108"
 ---
 # <a name="compiler-error-c2292"></a>编译器错误 C2292
 
-identifier： 最好的条件继承表示形式: representation1，但 representation2 所需声明
+"identifier"：最佳 case 继承表示形式： "representation1" 已声明，但需要 "representation2"
 
-编译以下代码[/vmb](../../build/reference/vmb-vmg-representation-method.md) ("最有利情况下始终"表示形式) 导致 C2292。
+用[/vmb](../../build/reference/vmb-vmg-representation-method.md) （"最佳情况总是" 表示形式）编译以下代码会导致 C2292。
 
-```
+```cpp
 // C2292.cpp
 // compile with: /vmb
 class __single_inheritance X;
