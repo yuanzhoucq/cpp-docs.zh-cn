@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3816
 ms.assetid: 2e52cc7f-e31c-41a3-8d6f-9f5fab3648c0
-ms.openlocfilehash: d362480b3380fe4576ef56b8ca76dfa10eaa1408
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e31138d50676c312028e35b480cc682dc146a43
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384278"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757119"
 ---
 # <a name="compiler-error-c3816"></a>编译器错误 C3816
 
-declaration 以前声明或定义与不同的托管或 WinRTmodifier
+"声明" 以前是用不同的托管或 WinRTmodifier 声明或定义的
 
 前向声明和实际声明要求特性声明中不存在任何冲突或不一致。
 
 下面的示例生成 C3816，并演示如何修复此错误：
 
-```
+```cpp
 // C3816a.cpp
 // compile with: /clr /c
 class C1;

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3893
 ms.assetid: 90d52eae-6ef2-4db1-b7ad-92f9e8b140fb
-ms.openlocfilehash: 45a140d3fd5f510ee2434950ca3c4b47c0756d75
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 20c17eaa6555b5511ecbc930eacdb2ec92475b23
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385493"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749498"
 ---
 # <a name="compiler-error-c3893"></a>编译器错误 C3893
 
-var： 只允许在类 type_name 的实例构造函数的 initonly 数据成员的左值使用
+"var"： initonly 数据成员的左值只允许在类 "type_name" 的实例构造函数中使用
 
-静态[initonly](../../dotnet/initonly-cpp-cli.md)数据成员只能在静态构造函数采用其地址。
+静态[initonly](../../dotnet/initonly-cpp-cli.md)数据成员只能在静态构造函数中采用其地址。
 
-实例 （非静态） initonly 数据成员只能在实例 （非静态） 构造函数采用其地址。
+实例（非静态） initonly 数据成员只能在实例（非静态）构造函数中采用其地址。
 
-下面的示例生成 C3893:
+下面的示例生成 C3893：
 
-```
+```cpp
 // C3893.cpp
 // compile with: /clr
 ref struct Y1 {

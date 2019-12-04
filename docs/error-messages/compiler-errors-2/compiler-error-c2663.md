@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2663
 ms.assetid: 1e93e368-fd52-42bf-9908-9b6df467c8c9
-ms.openlocfilehash: d74326e49edd980896276e2c6e67526d8d769cb7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f07b63202d8f171dfb69f4bb294b392152b9290b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360289"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756027"
 ---
 # <a name="compiler-error-c2663"></a>编译器错误 C2663
 
-function： 数字重载具有 this 指针没有合法转换
+"function"：数字重载没有 "this" 指针的合法转换
 
-编译器无法将转换`this`到任何成员函数的重载版本。
+编译器无法将 `this` 转换为成员函数的任何重载版本。
 
-此错误可能由调用非`const`成员函数上的`const`对象。  可能的解决方法：
+此错误的原因可能是对 `const` 对象调用了非`const` 成员函数。  可能的解决方法：
 
-1. 删除`const`从对象声明。
+1. 从对象声明中删除 `const`。
 
-1. 添加`const`成员函数重载之一。
+1. 将 `const` 添加到其中一个成员函数重载。
 
-下面的示例生成 C2663:
+下面的示例生成 C2663：
 
-```
+```cpp
 // C2663.cpp
 struct C {
    void f() volatile {}

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2229
 ms.assetid: 933c7cf2-a463-4e74-b0b4-59dedad987fb
-ms.openlocfilehash: 998067e9af178c1898c3443c4e84da965c22fa81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2d974c4f0630a592daad956448bf21cea21efb7c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301729"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759264"
 ---
 # <a name="compiler-error-c2229"></a>编译器错误 C2229
 
-类型 identifier 具有非法的零大小的数组
+类型 "identifier" 具有非法的零大小的数组
 
-结构或位域的成员包含不是最后一个成员的大小为零的数组。
+结构或位域的成员包含大小为零的数组，该数组不是最后一个成员。
 
-由于你可以有零大小的数组作为结构的最后一个成员，必须指定其大小，当分配结构。
+由于可以将零大小的数组作为结构的最后一个成员，因此，在分配结构时必须指定其大小。
 
-如果零大小的数组不是该结构的最后一个成员，编译器无法计算剩余的字段的偏移量。
+如果大小为零的数组不是结构的最后一个成员，则编译器不能计算剩余字段的偏移量。
 
-下面的示例生成 C2229:
+下面的示例生成 C2229：
 
-```
+```cpp
 // C2229.cpp
 struct S {
    int a[0];  // C2229  zero-sized array

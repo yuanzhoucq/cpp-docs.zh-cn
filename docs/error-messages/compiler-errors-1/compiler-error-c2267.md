@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2267
 ms.assetid: ea63bebb-6208-4367-8440-39be07f9c360
-ms.openlocfilehash: 5ff8b0bee1f79d9534841e4368fd5a5249cbb413
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c897f8e6b38743ee98ec29707b222901ddde9d7c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153393"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758731"
 ---
 # <a name="compiler-error-c2267"></a>编译器错误 C2267
 
-function： 具有块范围的静态函数是非法的
+"function"：具有块范围的静态函数是非法的
 
-声明本地函数`static`。 静态函数必须具有全局作用域。
+`static`声明本地函数。 静态函数必须具有全局范围。
 
-下面的示例生成 C2267:
+下面的示例生成 C2267：
 
-```
+```cpp
 // C2267.cpp
 static int func2();   // OK
 int main() {

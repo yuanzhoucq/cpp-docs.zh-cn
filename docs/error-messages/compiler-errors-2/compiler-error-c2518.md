@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2518
 ms.assetid: a7895b47-da90-4851-ac97-18e81479595a
-ms.openlocfilehash: d0a1f7bdc493a16b38dc2348097cc6cbea7ed898
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 894167fce43147b98af6603cba3102e5714b850e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282282"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746482"
 ---
 # <a name="compiler-error-c2518"></a>编译器错误 C2518
 
-关键字 keyword 在基类列表; 中非法忽略
+关键字 "关键字" 在基类列表中非法;掉
 
-关键字`class`和`struct`不应出现在基类列表。
+关键字 `class` 和 `struct` 不应出现在基类列表中。
 
-下面的示例生成 C2518:
+下面的示例生成 C2518：
 
-```
+```cpp
 // C2518.cpp
 // compile with: /c
 class B {};

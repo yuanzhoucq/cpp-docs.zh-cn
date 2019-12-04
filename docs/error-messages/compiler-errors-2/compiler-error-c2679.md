@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2679
 ms.assetid: 1a5f9d00-9190-4aa6-bc72-949f68ec136f
-ms.openlocfilehash: de5613c306eb12bc11d45e868f502ca04d0a62e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b9238493e7925f2786df2acb7ecad80eb6ca2eb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386819"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760317"
 ---
 # <a name="compiler-error-c2679"></a>编译器错误 C2679
 
-二进制 operator： 没有找到运算符接受的右侧操作数的类型 type （或没有可接受的转换）
+二进制 "operator"：没有找到接受 "type" 类型的右操作数的运算符（或没有可接受的转换）
 
 要使用该运算符，必须针对指定类型将其重载，或者定义一个到某个类型（该运算符已针对此类型进行了定义）的转换。
 
-下面的示例生成 C2679:
+下面的示例生成 C2679：
 
-```
+```cpp
 // C2679.cpp
 class C {
 public:

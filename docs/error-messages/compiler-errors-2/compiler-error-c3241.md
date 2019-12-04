@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3241
 ms.assetid: 2ca14879-bba0-4a23-b22a-72cfff92d6a4
-ms.openlocfilehash: 6eab22a8627b817b7a31e4bd34aad86d1f274615
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a618a9c538558d2aa4b995cbc9071bb8e94a5bc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173486"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754571"
 ---
 # <a name="compiler-error-c3241"></a>编译器错误 C3241
 
-method： 此方法不由 interface 引入
+"method"：此方法不是由 "interface" 引入
 
-显式重写函数，函数签名必须与要重写的函数声明完全匹配。
+显式重写函数时，函数签名必须与要重写的函数的声明完全匹配。
 
-下面的示例生成 C3241:
+下面的示例生成 C3241：
 
-```
+```cpp
 // C3241.cpp
 #pragma warning(disable:4199)
 

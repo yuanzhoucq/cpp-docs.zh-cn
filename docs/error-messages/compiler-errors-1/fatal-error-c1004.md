@@ -6,38 +6,38 @@ f1_keywords:
 helpviewer_keywords:
 - C1004
 ms.assetid: dbe034b0-6eb0-41b4-a50c-2fccf9e78ad4
-ms.openlocfilehash: 13fb8963b33569facf62ccedfe9ce8b7bbbbfdc3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 82a1a3e410505be53d4356e46d5521aebb72763c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383199"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756963"
 ---
 # <a name="fatal-error-c1004"></a>错误 C1004
 
-意外的文件结束
+找到意外的文件结尾
 
-编译器未解析为构造到达源文件的末尾。 代码可能缺少一个下列元素：
+编译器在未解析构造的情况下到达了源文件的结尾。 代码可能缺少以下元素之一：
 
 - 右大括号
 
 - 右括号
 
-- 结束注释标记 (* /)
+- 结束注释标记（*/）
 
 - 分号
 
-若要解决此错误，请检查以下：
+若要解决此错误，请检查以下各项：
 
-- 默认磁盘驱动器没有足够的空间用于临时文件，需要大约两倍空间与源文件。
+- 默认磁盘驱动器的临时文件空间不足，需要大约两倍于源文件空间。
 
-- `#if`指令的计算结果为 false 缺少右`#endif`指令。
+- 计算结果为 false 的 `#if` 指令缺少关闭 `#endif` 指令。
 
 - 源文件不以回车符和换行符结尾。
 
-下面的示例生成 C1004:
+下面的示例生成 C1004：
 
-```
+```cpp
 // C1004.cpp
 #if TEST
 int main() {}
@@ -46,7 +46,7 @@ int main() {}
 
 可能的解决方法：
 
-```
+```cpp
 // C1004b.cpp
 #if TEST
 #endif

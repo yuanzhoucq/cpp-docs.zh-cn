@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2787
 ms.assetid: 34cb57e6-cafe-4ce7-bcc6-53d194629bd0
-ms.openlocfilehash: 656fcd8a1a0429546189de8c3f01ab928c6333ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 00f2097dc556055f0becf1d81d784c9126c66f63
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62256855"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739592"
 ---
 # <a name="compiler-error-c2787"></a>编译器错误 C2787
 
-identifier： 没有 GUID 已与此对象关联
+"identifier"：没有与此对象关联的 GUID
 
-[__Uuidof](../../cpp/uuidof-operator.md)运算符采用与附加的 GUID 或用户定义类型的对象的用户定义的类型。 当参数是不具有 GUID 的用户定义的类型时，将出现此错误。
+[__Uuidof](../../cpp/uuidof-operator.md)运算符使用附加了 GUID 的用户定义类型或此类用户定义类型的对象。 当参数是不带 GUID 的用户定义类型时，将发生此错误。
 
-下面的示例生成 C2787:
+下面的示例生成 C2787：
 
-```
+```cpp
 // C2787.cpp
 #include <windows.h>
 struct F {};

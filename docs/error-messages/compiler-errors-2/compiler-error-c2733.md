@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2733
 ms.assetid: 67f83561-c633-407c-a2ee-f9fd16e165bf
-ms.openlocfilehash: 26819f1928223b5fa96d275290105f32787057f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3ef669a49f4a3ec5a1af1a15a79f2511fa2699dd
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208319"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755780"
 ---
 # <a name="compiler-error-c2733"></a>编译器错误 C2733
 
-重载函数 function 不允许使用的第二个 C 链接
+不允许使用重载函数 "function" 的第二个 C 链接
 
-使用 C 链接声明多个重载的函数。 使用 C 链接时，只有一个窗体的指定可以是函数的外部的。 重载的函数具有相同的未修饰的名称，因为它们不能用于 C 程序。
+用 C 链接声明了多个重载函数。 使用 C 链接时，只有一个指定函数的形式可以是外部的。 由于重载函数具有相同的未修饰名称，因此它们不能与 C 程序一起使用。
 
-下面的示例生成 C2733:
+下面的示例生成 C2733：
 
-```
+```cpp
 // C2733.cpp
 extern "C" {
    void F1(int);

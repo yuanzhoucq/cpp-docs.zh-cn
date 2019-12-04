@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2588
 ms.assetid: 19a0cabd-ca13-44a5-9be3-ee676abf9bc4
-ms.openlocfilehash: 15f9ba62751d9b3cb17ab56659310292dab41adf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1f73e2585606e7e86213607a96ef713345419c1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350447"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755403"
 ---
 # <a name="compiler-error-c2588"></a>编译器错误 C2588
 
-:: ~ 标识符： 非法的全局析构函数
+"：： ~ identifier"：非法的全局析构函数
 
-析构函数之外类、 结构或联合定义的内容。 这是不允许的。
+析构函数是为类、结构或联合以外的对象定义的。 不允许这样做。
 
-此错误可能由缺少的类、 结构或联合名称左侧的作用域解析 (`::`) 运算符。
+如果作用域解析（`::`）运算符左侧缺少类、结构或联合名称，则会导致此错误。
 
-下面的示例生成 C2588:
+下面的示例生成 C2588：
 
-```
+```cpp
 // C2588.cpp
 ~F();   // C2588
 ```

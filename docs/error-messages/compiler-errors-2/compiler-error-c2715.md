@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2715
 ms.assetid: c81567a7-5b65-468f-aaf9-835f91e468e4
-ms.openlocfilehash: 0f0df136952e09d26fbf43104bbf13b001c87255
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 24f972452f9c823d2082e1c29758b39f088021d0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386754"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760525"
 ---
 # <a name="compiler-error-c2715"></a>编译器错误 C2715
 
-type： 无法引发或捕捉此类型
+"type"：无法引发或捕捉此类型
 
-值类型不是有效的参数中使用异常处理托管代码时 (请参阅[异常处理](../../extensions/exception-handling-cpp-component-extensions.md)有关详细信息)。
+在托管代码中使用异常处理时，值类型是无效的参数（有关详细信息，请参阅[异常处理](../../extensions/exception-handling-cpp-component-extensions.md)）。
 
-```
+```cpp
 // C2715a.cpp
 // compile with: /clr
 using namespace System;

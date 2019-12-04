@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2254
 ms.assetid: 49bb3d7e-3bdf-4af6-937c-fa627be412a9
-ms.openlocfilehash: da89741811bbb9055f3f6793d115a357d80ab79a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38220575a48720a9df0e232ef74c8743e7e056c7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397531"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758835"
 ---
 # <a name="compiler-error-c2254"></a>编译器错误 C2254
 
-function： 纯说明符或抽象重写说明符友元函数上不允许
+"function"：友元函数上不允许使用纯说明符或抽象重写说明符
 
-一个`friend`函数指定为纯`virtual`。
+`friend` 函数指定为纯 `virtual`。
 
-下面的示例生成 C2254:
+下面的示例生成 C2254：
 
-```
+```cpp
 // C2254.cpp
 // compile with: /c
 class A {

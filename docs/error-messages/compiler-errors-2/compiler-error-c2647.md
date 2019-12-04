@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2647
 ms.assetid: 1034589e-bc3e-41a6-831f-2a1a4b8a2500
-ms.openlocfilehash: ac69dbb4de23be05d375126947fe003ef75fb85e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9553c85efeedb4d3eee4bd40f9e3b86707fd7eb1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222780"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758380"
 ---
 # <a name="compiler-error-c2647"></a>编译器错误 C2647
 
-operator： 不能取消引用 type1 上 type2
+"operator"：无法取消引用 "type2" 上的 "type1"
 
-指针到成员运算符的左的操作数 (`->*`或`.*`) 不能隐式转换为与右侧运算符相关的类型。
+指向成员的指针运算符（`->*` 或 `.*`）的左操作数不能隐式转换为与 right 运算符相关的类型。
 
-下面的示例生成 C2647:
+下面的示例生成 C2647：
 
-```
+```cpp
 // C2647.cpp
 class C {};
 class D {};

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3846
 ms.assetid: c470f8a5-106b-4efb-b8dc-e1319e04130f
-ms.openlocfilehash: 788f03e4364404ad5c30b7edcba8b743c7f201ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a4c51ccfc724cf8309044812b287677f0f1a2ff0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152418"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754896"
 ---
 # <a name="compiler-error-c3846"></a>编译器错误 C3846
 
-symbol： 无法导入 assembly2 中的符号： 因为 symbol 具有已导入从另一个程序集 assembly1
+"symbol"：无法从 "assembly2" 导入符号：因为 "symbol" 已从另一个程序集 "assembly1" 导入
 
-不是从引用的程序集导入一个符号，因为从引用的程序集以前导入。
+无法从引用的程序集导入符号，因为它以前是从引用的程序集导入的。
 
 ## <a name="example"></a>示例
 
-下面的示例生成 C3846:
+下面的示例生成 C3846：
 
-```
+```cpp
 // C3846a.cpp
 // compile with: /LD /clr
 public ref struct G
@@ -31,9 +31,9 @@ public ref struct G
 };
 ```
 
-然后编译这段：
+然后编译以下内容：
 
-```
+```cpp
 // C3846b.cpp
 // compile with: /clr
 #using "c3846a.dll"

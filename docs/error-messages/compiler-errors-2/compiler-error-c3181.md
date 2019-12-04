@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3181
 ms.assetid: 5d450f8b-6cef-4452-a0c4-2076e967451d
-ms.openlocfilehash: dc848d4108ed4a1a7b6646647a1bbb1ec8dcadf7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e30ed7016ca3a4d4948a08c5c09268e52c9a407d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382385"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761668"
 ---
 # <a name="compiler-error-c3181"></a>编译器错误 C3181
 
-type： 运算符的操作数无效
+"type"：运算符的操作数无效
 
-无效的参数传递给[typeid](../../extensions/typeid-cpp-component-extensions.md)运算符。 参数必须是托管的类型。
+向[typeid](../../extensions/typeid-cpp-component-extensions.md)运算符传递了一个无效参数。 参数必须是托管类型。
 
-请注意，编译器使用的本机类型将映射到公共语言运行时中的类型的别名。
+请注意，编译器对映射到公共语言运行时中的类型的本机类型使用别名。
 
-下面的示例生成 C3181:
+下面的示例生成 C3181：
 
-```
+```cpp
 // C3181a.cpp
 // compile with: /clr
 using namespace System;

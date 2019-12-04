@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3642
 ms.assetid: 429790c2-9614-4d85-b31c-687c8d8f83ff
-ms.openlocfilehash: d524c49075c400caa345dd26ed681734ea0cfb94
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c3f9f05bf04c9a1c20fff7910836e7b50468a8e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385610"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742452"
 ---
 # <a name="compiler-error-c3642"></a>编译器错误 C3642
 
-return_type/参数： 不能包含 __clrcall 调用约定的本机代码中调用的函数
+"return_type/args"：无法从本机代码调用具有 __clrcall 调用约定的函数
 
-将标有一个函数[__clrcall](../../cpp/clrcall.md)调用约定不能从本机 （非托管） 代码调用。
+不能从本机（非托管）代码中调用标记为[__clrcall](../../cpp/clrcall.md)调用约定的函数。
 
-*return_type/args*是函数的名称或类型的`__clrcall`想要调用的函数。  通过函数指针进行调用时，使用的类型。
+*return_type/args*是要尝试调用的函数的名称或 `__clrcall` 函数的类型。  当你通过函数指针调用时，会使用类型。
 
-若要从本机上下文调用托管的函数，您可以添加一个"包装器"函数，将调用`__clrcall`函数。 或者，可以使用 CLR 封送处理机制;请参阅[如何：封送函数指针使用 PInvoke](../../dotnet/how-to-marshal-function-pointers-using-pinvoke.md)有关详细信息。
+若要从本机上下文调用托管函数，可以添加一个 "包装" 函数，该函数将调用 `__clrcall` 函数。 或者，可以使用 CLR 封送机制;有关详细信息，请参阅[如何：使用 PInvoke 封送函数指针](../../dotnet/how-to-marshal-function-pointers-using-pinvoke.md)。
 
-下面的示例生成 C3642:
+下面的示例生成 C3642：
 
-```
+```cpp
 // C3642.cpp
 // compile with: /clr
 using namespace System;

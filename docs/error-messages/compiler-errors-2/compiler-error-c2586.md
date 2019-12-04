@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2586
 ms.assetid: dae703c7-5c38-4db6-8411-4d1b22713eb5
-ms.openlocfilehash: a6af49bba84eded7d530f6ecc37fac8f6acf16e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: be98f475bdcfb4dfdd7f7f37d78f4977d71c52b1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360419"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755416"
 ---
 # <a name="compiler-error-c2586"></a>编译器错误 C2586
 
-不正确的用户定义转换语法： 非法间接寻址
+用户定义的转换语法不正确：非法的间接寻址
 
-不允许间接寻址的转换运算符。
+不允许使用转换运算符的间接寻址。
 
-下面的示例生成 C2586:
+下面的示例生成 C2586：
 
-```
+```cpp
 // c2586.cpp
 // compile with: /c
 struct C {

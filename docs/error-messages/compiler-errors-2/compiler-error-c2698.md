@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2698
 ms.assetid: 3ebfe395-c20b-4c56-9980-ca9ed8653382
-ms.openlocfilehash: f643b7d8c035b4d1d7d8806feb5b121cf76d7796
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6129ff691f804b31fdb8cb487ac4609e4bca6ef2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367572"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755182"
 ---
 # <a name="compiler-error-c2698"></a>编译器错误 C2698
 
-using 声明为 declaration 1 不能与现有 using 声明共存声明 2
+"声明 1" 的 using 声明不能与 "声明 2" 的现有 using 声明共存
 
-一旦您有[using 声明](../../cpp/using-declaration.md)数据成员，任何使用不允许使用相同的名称与同一范围中声明，因为只有函数才可以进行重载。
+为数据成员[使用了声明](../../cpp/using-declaration.md)后，不允许使用同一范围内的任何 using 声明，因为只能重载函数。
 
-下面的示例生成 C2698:
+下面的示例生成 C2698：
 
-```
+```cpp
 // C2698.cpp
 struct A {
    int x;

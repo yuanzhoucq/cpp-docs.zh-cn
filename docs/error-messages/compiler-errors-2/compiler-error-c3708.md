@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3708
 ms.assetid: 45e71564-9c7f-437f-98d8-a735ce162ed0
-ms.openlocfilehash: 7ee9d59f12cc9e748b08b3e4a704420ea5c58be6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5a2688cf138733a7a2891238953bc9fd894e483
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328505"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757964"
 ---
 # <a name="compiler-error-c3708"></a>编译器错误 C3708
 
-interface: keyword; 使用不当必须是兼容事件源的成员
+"interface"：不正确地使用 "关键字";必须是兼容事件源的成员
 
-若要声明为事件的接口，事件声明必须是事件源。
+若要将接口声明为事件，事件声明必须位于事件源中。
 
-下面的示例生成 C3708:
+下面的示例生成 C3708：
 
-```
+```cpp
 // C3708.cpp
 // compile with: /c
 #define _ATL_ATTRIBUTES 1

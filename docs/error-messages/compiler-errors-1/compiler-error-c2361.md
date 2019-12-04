@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2361
 ms.assetid: efbdaeb9-891c-4f7d-97da-89088a8413f3
-ms.openlocfilehash: ca03a42cbf746a1ef32d9c79c23de637f05b56fc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 747b85b57bee9e53f13a978254798a1dc268ef85
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364358"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759888"
 ---
 # <a name="compiler-error-c2361"></a>编译器错误 C2361
 
-通过 default 标签跳过 identifier 的初始化
+"default" 标签跳过 "identifier" 的初始化
 
-初始化`identifier`中，可以跳过`switch`语句。 除非声明将封闭的块中，不能跳过具有初始值设定项的声明。 (除非它被声明块中，变量是作用域内的结束前一直`switch`语句。)
+可以在 `switch` 语句中跳过 `identifier` 的初始化。 不能跳过带有初始值设定项的声明，除非该声明括在块中。 （除非它是在块中声明的，否则在 `switch` 语句结束之前，该变量在范围内。）
 
-下面的示例生成 C2361:
+下面的示例生成 C2361：
 
-```
+```cpp
 // C2361.cpp
 void func( void ) {
    int x;
@@ -37,7 +37,7 @@ void func( void ) {
 
 可能的解决方法：
 
-```
+```cpp
 // C2361b.cpp
 // compile with: /c
 void func( void ) {

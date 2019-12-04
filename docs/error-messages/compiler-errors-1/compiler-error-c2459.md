@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2459
 ms.assetid: 81e29f4c-5b60-40fb-9557-1cdc630d77e8
-ms.openlocfilehash: d2e8b375fd1219b11b3a543bf3a565ddee00ccf2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c49c348968f750c7e5c64ab9ef4f298d3fc74f67
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367949"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743986"
 ---
 # <a name="compiler-error-c2459"></a>编译器错误 C2459
 
-identifier： 正在定义;不能添加作为匿名成员
+正在定义 "identifier"：。无法作为匿名成员添加
 
-类、 结构或联合内重新定义其自己范围的匿名联合成员。
+类、结构或联合由匿名联合的成员在其自身的范围内重新定义。
 
-下面的示例生成 C2459:
+下面的示例生成 C2459：
 
-```
+```cpp
 // C2459.cpp
 // compile with: /c
 class C {

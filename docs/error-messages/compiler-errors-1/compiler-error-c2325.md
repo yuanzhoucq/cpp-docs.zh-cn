@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2325
 ms.assetid: e6b0a186-3f2a-4adf-beae-fadd75492bf7
-ms.openlocfilehash: 28b291bd68971d7759589a75d8bafbf6e873dd39
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4ed0ca7403ff88ddcd0bd71123b1cbead7d020e1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300950"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74747808"
 ---
 # <a name="compiler-error-c2325"></a>编译器错误 C2325
 
-type： 意外的类型，右侧的 name
+"type"： "name" 的右侧意外类型
 
-调用析构函数不正确的类型。
+对错误类型的析构函数进行调用。
 
-下面的示例生成 C2325:
+下面的示例生成 C2325：
 
-```
+```cpp
 // C2325.cpp
 // compile with: /c
 class A {};

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3699
 ms.assetid: 47c29afc-ab8b-4238-adfe-788dd6e00b3b
-ms.openlocfilehash: 93058d34ca9a17ab175a55a7bc7b953d369e65c5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec902266550e591623894823e6336bd2436bfbd5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324761"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758029"
 ---
 # <a name="compiler-error-c3699"></a>编译器错误 C3699
 
-operator： 不能在类型 type 上使用此中间环节
+"operator"：不能在类型 "type" 上使用此间接寻址
 
-尝试使用不允许的间接寻址`type`。
+尝试使用 `type`上不允许的间接寻址。
 
 ## <a name="example"></a>示例
 
 下面的示例生成 C3699。
 
-```
+```cpp
 // C3699.cpp
 // compile with: /clr /c
 using namespace System;
@@ -36,9 +36,9 @@ int main() {
 
 ## <a name="example"></a>示例
 
-Trivial 属性不能具有引用类型。 有关更多信息，请参见 [property](../../extensions/property-cpp-component-extensions.md) 。 下面的示例生成 C3699。
+普通属性不能具有引用类型。 有关更多信息，请参见 [property](../../extensions/property-cpp-component-extensions.md) 。 下面的示例生成 C3699。
 
-```
+```cpp
 // C3699_b.cpp
 // compile with: /clr /c
 ref struct C {
@@ -49,9 +49,9 @@ ref struct C {
 
 ## <a name="example"></a>示例
 
-"指向指针的指针"语法的等效项是跟踪引用的句柄。 下面的示例生成 C3699。
+"指向指针的指针" 语法的等效项是跟踪引用的句柄。 下面的示例生成 C3699。
 
-```
+```cpp
 // C3699_c.cpp
 // compile with: /clr /c
 using namespace System;

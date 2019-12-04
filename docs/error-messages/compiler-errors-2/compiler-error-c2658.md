@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2658
 ms.assetid: 638368e8-7893-4a14-abec-13c768a9543a
-ms.openlocfilehash: 792fd497ad7cdb98ae72f3e6451780dad487624d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77a9122d20561ceee4f211394b3b81900d5580ac
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360406"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756079"
 ---
 # <a name="compiler-error-c2658"></a>编译器错误 C2658
 
-member： 匿名结构/联合中的重定义
+"member"：匿名结构/联合中的重定义
 
-两个匿名结构或联合包含具有相同标识符但具有不同类型的成员声明中。 下[/Za](../../build/reference/za-ze-disable-language-extensions.md)，也将具有相同标识符和类型成员发生此错误。
+两个匿名结构或联合包含具有相同标识符但类型不同的成员声明。 在[/za](../../build/reference/za-ze-disable-language-extensions.md)下，对于具有相同标识符和类型的成员，也会出现此错误。
 
-下面的示例生成 C2658:
+下面的示例生成 C2658：
 
-```
+```cpp
 // C2658.cpp
 // compile with: /c
 struct X {

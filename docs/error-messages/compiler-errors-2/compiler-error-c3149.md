@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3149
 ms.assetid: cf6e2616-2f06-46da-8a8a-d449cb481c51
-ms.openlocfilehash: 8238dcec821256dad8101cd7ad59b2d85882c218
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 263eb03b7a9f45458f8d8b586adc6f1cfc5805be
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345513"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745975"
 ---
 # <a name="compiler-error-c3149"></a>编译器错误 C3149
 
-type： 不能使用没有顶级 char 此类型
+"type"：不能在没有顶级 "char" 的情况下使用此类型
 
-未正确指定一个声明。
+未正确指定声明。
 
-例如，可能会定义在全局范围内的 CLR 类型并尝试为定义的一部分创建的变量的类型。 因为不允许使用的 CLR 类型的全局变量，编译器将生成 C3149。
+例如，你可能在全局范围内定义了 CLR 类型，并尝试在定义中创建类型为的变量。 由于不允许使用 CLR 类型的全局变量，编译器将生成 C3149。
 
-若要解决此错误，声明函数或类型定义内的 CLR 类型的变量。
+若要解决此错误，请在函数或类型定义中声明 CLR 类型的变量。
 
-下面的示例生成 C3149:
+下面的示例生成 C3149：
 
-```
+```cpp
 // C3149.cpp
 // compile with: /clr
 using namespace System;
@@ -36,9 +36,9 @@ int main() {
 }
 ```
 
-下面的示例生成 C3149:
+下面的示例生成 C3149：
 
-```
+```cpp
 // C3149b.cpp
 // compile with: /clr /c
 delegate int MyDelegate(const int, int);

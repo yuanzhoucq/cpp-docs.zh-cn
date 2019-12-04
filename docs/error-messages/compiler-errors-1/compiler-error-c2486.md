@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2486
 ms.assetid: 436da349-6461-4e32-bfca-4f3e620108e2
-ms.openlocfilehash: 8d745c03530f331da83b45c765a2cb4bb7d76d8e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75705bd8ecc850839e22fccbed1abf08687b3823
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364345"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743505"
 ---
 # <a name="compiler-error-c2486"></a>编译器错误 C2486
 
-仅在具有 naked 特性的函数中允许 __LOCAL_SIZE
+仅在具有 "naked" 特性的函数中允许 "__LOCAL_SIZE"
 
-在内联程序集函数中，名称`__LOCAL_SIZE`保留为与声明函数[naked](../../cpp/naked-cpp.md)属性。
+在内联程序集函数中，名称 `__LOCAL_SIZE` 保留给用[naked](../../cpp/naked-cpp.md)特性声明的函数。
 
-下面的示例生成 C2486:
+下面的示例生成 C2486：
 
-```
+```cpp
 // C2486.cpp
 // processor: x86
 void __declspec(naked) f1() {

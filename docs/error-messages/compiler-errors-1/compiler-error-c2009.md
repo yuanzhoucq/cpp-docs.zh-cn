@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2009
 ms.assetid: fe9d94ed-20a5-4d83-b9c4-60ee69d2f30a
-ms.openlocfilehash: d2216b3fe990109828492fb2b2055e9425c1e306
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 434ae830e78c8fb5fe4e56438a557afb027d264f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62361901"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752439"
 ---
 # <a name="compiler-error-c2009"></a>编译器错误 C2009
 
 宏形式 “identifier” 重复使用
 
-宏定义的形参列表不止一次使用的标识符。 宏的参数列表中的标识符必须是唯一的。
+宏定义的形参列表多次使用标识符。 宏参数列表中的标识符必须是唯一的。
 
 ## <a name="example"></a>示例
 
-下面的示例生成 C2009:
+下面的示例生成 C2009：
 
-```
+```cpp
 // C2009.cpp
 #include <stdio.h>
 
@@ -39,7 +39,7 @@ int main()
 
 可能的解决方法：
 
-```
+```cpp
 // C2009b.cpp
 #include <stdio.h>
 

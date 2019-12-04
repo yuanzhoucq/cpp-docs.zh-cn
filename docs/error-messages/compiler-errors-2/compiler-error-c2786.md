@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2786
 ms.assetid: 6676d8c0-86dd-4a39-bdda-b75a35f4d137
-ms.openlocfilehash: b03155ad1a209ae59327dd31d432f5623f380ac9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba5d05e9c7cc702509144fb876a1301bfc8bf3d4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265992"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739605"
 ---
 # <a name="compiler-error-c2786"></a>编译器错误 C2786
 
-type: __uuidof 的操作数无效
+"type"： __uuidof 的操作数无效
 
-[__Uuidof](../../cpp/uuidof-operator.md)运算符采用与附加的 GUID 或用户定义类型的对象的用户定义的类型。  可能的原因：
+[__Uuidof](../../cpp/uuidof-operator.md)运算符使用附加了 GUID 的用户定义类型或此类用户定义类型的对象。  可能的原因：
 
-1. 参数不是用户定义类型。
+1. 自变量不是用户定义类型。
 
-1. `__uuidof` 无法从参数中提取 GUID。
+1. `__uuidof` 无法从参数提取 GUID。
 
-下面的示例生成 C2786:
+下面的示例生成 C2786：
 
-```
+```cpp
 // C2786.cpp
 struct __declspec(uuid("00000000-0000-0000-0000-000000000000")) A {};
 

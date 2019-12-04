@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3656
 ms.assetid: 88965d85-73b0-4b35-8020-0650c9c94cd8
-ms.openlocfilehash: 9709f3105e957012c05111ea818890b6d1df8259
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 312fc4311120819fe6621d03e5ab6f7cab13cac9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227051"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758276"
 ---
 # <a name="compiler-error-c3656"></a>编译器错误 C3656
 
-override： 重写说明符不能重复
+"override"：重写说明符不能重复
 
 显式重写关键字只能指定一次。 有关详细信息，请参阅[显式重写](../../extensions/explicit-overrides-cpp-component-extensions.md)。
 
-下面的示例生成 C3656:
+下面的示例生成 C3656：
 
-```
+```cpp
 // C3656.cpp
 // compile with: /clr /c
 public interface struct O {

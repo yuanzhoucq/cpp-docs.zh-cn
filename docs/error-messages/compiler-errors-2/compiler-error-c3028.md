@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3028
 ms.assetid: 175e697f-8e8f-492a-8456-6240ffbbb900
-ms.openlocfilehash: 2a1d76d21005ecffc74f9fc64d4bdeb197e9653d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a497de92d782f65bfc27db27755718e7c6bbdbe
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360042"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735863"
 ---
 # <a name="compiler-error-c3028"></a>编译器错误 C3028
 
-member： 只有变量或静态数据成员可以使用数据共享子句中
+"member"：只能在数据共享子句中使用变量或静态数据成员
 
-向 reduction 子句传递了以外的变量或静态数据成员的其他符号。
+向缩减子句传递了除变量或静态数据成员以外的其他符号。
 
-下面的示例生成 C3028:
+下面的示例生成 C3028：
 
-```
+```cpp
 // C3028.cpp
 // compile with: /openmp /link vcomps.lib
 int g_i;

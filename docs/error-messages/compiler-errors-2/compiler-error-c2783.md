@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2783
 ms.assetid: 1ce94a11-bb8b-4be3-a222-f1f105da74b3
-ms.openlocfilehash: 539eeebc39fa7fc061cc615f29d87d3e6bcfc5c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: adba87853bac764d4975d6b6fa9aa44940ced03c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408428"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739670"
 ---
 # <a name="compiler-error-c2783"></a>编译器错误 C2783
 
-declaration： 无法推导 identifier 的模板参数
+"声明"：无法推导 "identifier" 的模板参数
 
-编译器无法确定模板自变量。 不能使用默认自变量推导出的模板自变量。
+编译器无法确定模板参数。 不能使用默认参数来推导模板参数。
 
-下面的示例生成 C2783:
+下面的示例生成 C2783：
 
-```
+```cpp
 // C2783.cpp
 template<typename T1, typename T2>
 T1 f(T2) {
@@ -35,9 +35,9 @@ int main() {
 }
 ```
 
-使用泛型时，也可能发生 C2783:
+使用泛型时也可能发生 C2783：
 
-```
+```cpp
 // C2783b.cpp
 // compile with: /clr
 using namespace System;

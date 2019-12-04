@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2750
 ms.assetid: 30450034-feb5-448c-9655-b8c5f3639695
-ms.openlocfilehash: 34d19e8e9f51c90c48ec0d429f98bb82e3d829d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 56f4e6e1d6c392fc377fe5fdf11643ae8a2e503a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62228533"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759602"
 ---
 # <a name="compiler-error-c2750"></a>编译器错误 C2750
 
-type： 不能使用引用类型; 上的 new请改用 gcnew
+"type"：不能对引用类型使用 "new";改为使用 "gcnew"
 
-若要创建的 CLR 类型，它将导致要放置在垃圾回收堆上的实例，实例必须使用[gcnew](../../extensions/ref-new-gcnew-cpp-component-extensions.md)。
+若要创建 CLR 类型的实例，使该实例放置在垃圾回收堆上，必须使用[gcnew](../../extensions/ref-new-gcnew-cpp-component-extensions.md)。
 
-下面的示例生成 C2750:
+下面的示例生成 C2750：
 
-```
+```cpp
 // C2750.cpp
 // compile with: /clr
 ref struct Y1 {};

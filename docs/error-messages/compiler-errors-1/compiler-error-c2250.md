@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2250
 ms.assetid: f990986f-5c7d-4af4-a25c-b35540f1e217
-ms.openlocfilehash: ea426e071eecb09359c3a99a6f569f628595784a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 472aabf00fecd000f274d97b5753ed8460ff867f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301352"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758861"
 ---
 # <a name="compiler-error-c2250"></a>编译器错误 C2250
 
-identifier: class::member 的不明确继承
+"identifier"： "class：： member" 的继承不明确
 
-派生的类继承的虚函数的虚拟基类的多个重写。 这些替代是在派生类中不明确。
+派生类继承了虚拟基类虚函数的多个重写。 这些重写在派生类中是不明确的。
 
 下面的示例生成 C2286：
 
-```
+```cpp
 // C2250.cpp
 // compile with: /c
 // C2250 expected

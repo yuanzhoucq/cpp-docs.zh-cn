@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2344
 ms.assetid: a84c7b37-c84e-4345-8691-c23abb2dc193
-ms.openlocfilehash: d1ba3a0f975dbc96c9c6ca51a8dac89b5a614572
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7aa1d5dfad67120556c9f4a1f69cf22dfca9acd2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188167"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760031"
 ---
 # <a name="compiler-error-c2344"></a>编译器错误 C2344
 
@@ -21,7 +21,7 @@ align(#)：对齐必须是 2 的幂
 
 例如，下面的代码生成 C2344，因为 3 不是 2 的幂：
 
-```
+```cpp
 // C2344.cpp
 // compile with: /c
 __declspec(align(3)) int a;   // C2344

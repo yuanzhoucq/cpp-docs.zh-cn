@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2885
 ms.assetid: 7743e5f3-a034-44b4-9ee8-5a6254c27f8c
-ms.openlocfilehash: ff5e770052301e95f694d3712f95b82732c2faba
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: e60f3fff2ef61f4d6374072c05a2ad3e64a57031
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447697"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760923"
 ---
 # <a name="compiler-error-c2885"></a>编译器错误 C2885
 
-class::identifier： 不是有效使用的声明在非类范围内
+"class：： identifier"：在非类范围内不是有效的 using 声明
 
-所用[使用](../../cpp/using-declaration.md)声明不正确。
+[使用](../../cpp/using-declaration.md)的声明不正确。
 
 ## <a name="example"></a>示例
 
-为 Visual Studio 2005 执行的编译器一致性工作可以生成此错误： 将不再有效具有`using`声明嵌套的类型，则必须显式限定对嵌套类型，将类型放在 n 中进行的每个引用amespace，或创建一个 typedef。
+此错误可能是由于对 Visual Studio 2005 执行的编译器一致性工作引起的，因为对嵌套类型具有 `using` 声明不再有效：必须显式限定对嵌套类型进行的每个引用，将类型置于命名空间中，或创建一个 typedef。
 
 下面的示例生成 C2885。
 
-```
+```cpp
 // C2885.cpp
 namespace MyNamespace {
    class X1 {};
@@ -54,11 +54,11 @@ int main () {
 
 ## <a name="example"></a>示例
 
-如果您使用`using`关键字与一个类成员， C++ ，必须先定义该成员在另一个类 （派生类）。
+如果将 `using` 关键字与类成员一起使用， C++则需要在另一个类（派生类）中定义该成员。
 
 下面的示例生成 C2885。
 
-```
+```cpp
 // C2885_b.cpp
 // compile with: /c
 class A {

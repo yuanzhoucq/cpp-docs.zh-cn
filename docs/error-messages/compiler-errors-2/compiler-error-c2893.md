@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2893
 ms.assetid: ec0cbe43-005d-45da-8742-aaeb9b81d28e
-ms.openlocfilehash: f1fad1ad18af54945ef32dadaac50a6de4dbd62f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca603eb94d5d528a7fed15e0320e1f5d88bf0629
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366376"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760871"
 ---
 # <a name="compiler-error-c2893"></a>编译器错误 C2893
 
-未能特殊化函数模板模板名称
+未能使函数模板 "template name" 专用化
 
-编译器未能特殊化函数模板。 可以有许多原因导致此错误。
+编译器未能使函数模板专用化。 导致此错误的原因可能有很多。
 
-一般情况下，若要解决 C2893 错误的方式是查看函数的签名并确保可以实例化每个类型。
+通常，解决 C2893 错误的方法是查看函数的签名，并确保可以实例化每个类型。
 
 ## <a name="example"></a>示例
 
-C2893 的发生是因为`f`的模板参数`T`推导为`std::map<int,int>`，但`std::map<int,int>`没有成员`data_type`(`T::data_type`不使用实例化`T = std::map<int,int>`。)。 下面的示例生成 C2893。
+发生 C2893 的原因是，`f`的模板参数 `T` 被推导为要 `std::map<int,int>`，但 `std::map<int,int>` 没有成员 `data_type` （不能用`T::data_type` 来实例化 `T = std::map<int,int>`。）。 下面的示例生成 C2893。
 
-```
+```cpp
 // C2893.cpp
 // compile with: /c /EHsc
 #include<map>
