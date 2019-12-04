@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3739
 ms.assetid: acffe894-08b8-4bf2-9249-9501e6e2bad3
-ms.openlocfilehash: 34f035c089b183670e87a23eb62f995b2af23c9b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48d0fef86908f3ba5a547417d0625febc5226454
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208664"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752699"
 ---
 # <a name="compiler-error-c3739"></a>编译器错误 C3739
 
-class： 当 event_receiver 的 layout_dependent 参数为 true 时才支持此语法
+"class"：只有当 event_receiver 的 "layout_dependent" 参数为 true 时，才支持语法
 
-尝试将挂钩整个接口的事件，但`layout_dependent`上[event_receiver](../../windows/event-receiver.md)属性不为 true; 你必须将单个事件挂钩一次。
+您尝试挂钩整个事件接口，但是 `layout_dependent` [event_receiver](../../windows/event-receiver.md)属性不为 true;您必须一次挂钩一个事件。
 
-下面的示例生成 C3739:
+下面的示例生成 C3739：
 
-```
+```cpp
 // C3739.cpp
 struct A
 {

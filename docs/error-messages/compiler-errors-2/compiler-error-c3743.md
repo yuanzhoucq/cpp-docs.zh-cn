@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3743
 ms.assetid: 7ca9a76e-7b60-46d1-ab8b-18600cf1a306
-ms.openlocfilehash: 137913e0c6909712cbb6745666112d315925ab0c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0e2082dc87c6236aa11dd3094d056b0024dfc2f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62226851"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752465"
 ---
 # <a name="compiler-error-c3743"></a>编译器错误 C3743
 
-可以仅挂钩/解除挂钩整个接口当 event_receiver 的 layout_dependent 参数为 true
+当 event_receiver 的 "layout_dependent" 参数为 true 时，只能挂钩/解除挂钩整个接口
 
-[__Unhook](../../cpp/unhook.md)函数在它根据采用传递给的值的参数数量发生变化`layout_dependent`中的参数[event_receiver](../../windows/event-receiver.md)类。
+根据传递给[event_receiver](../../windows/event-receiver.md)类中的 `layout_dependent` 参数的值， [__unhook](../../cpp/unhook.md)函数所采用的参数数量不同。
 
-下面的示例生成 C3743:
+下面的示例生成 C3743：
 
-```
+```cpp
 // C3743.cpp
 #define _ATL_ATTRIBUTES 1
 #include <atlbase.h>

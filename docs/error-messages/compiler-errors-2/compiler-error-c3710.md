@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3710
 ms.assetid: 18bec009-5b6f-464a-a21e-5d58a6936504
-ms.openlocfilehash: 04b79b3c924892eb2a970f880d3f2048f4cb2b10
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3c060d5b01c0d918071681996e76258eba0ce943
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328467"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753414"
 ---
 # <a name="compiler-error-c3710"></a>编译器错误 C3710
 
-function： 在 __hook 中指定事件处理程序的语法不正确 /\__unhook
+"function"：在 __hook/\_中指定事件处理程序的语法不正确 _unhook
 
-指定的事件处理程序时[__hook](../../cpp/hook.md)或[__unhook](../../cpp/unhook.md)，该处理程序必须是有效的方法。
+当使用[__hook](../../cpp/hook.md)或[__unhook](../../cpp/unhook.md)指定事件处理程序时，处理程序必须为有效的方法。
 
 ## <a name="example"></a>示例
 
 下面的示例生成 C3710
 
-```
+```cpp
 // C3710.cpp
 // compile with: /link /opt:noref
 #include <atlbase.h>

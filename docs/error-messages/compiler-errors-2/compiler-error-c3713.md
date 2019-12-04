@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3713
 ms.assetid: 75c6b9b6-955b-49bd-9bc8-ced88b496a1f
-ms.openlocfilehash: 8c8c3b5e6016c7f4af471a163463c91d478fea91
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d78d1fb3028e8618035c1c6f7bb3eb0f65409dd2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328375"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753349"
 ---
 # <a name="compiler-error-c3713"></a>编译器错误 C3713
 
-method： 事件处理程序方法必须具有相同的函数参数为源 method
+"method"：事件处理程序方法必须具有与源 "method" 相同的函数参数
 
-定义未使用相同的参数作为源事件方法的事件处理程序方法。 若要修复此错误，提供事件处理程序方法与源事件方法的相同的参数。
+您定义了一个事件处理程序方法，该方法未使用与源事件方法相同的参数。 若要修复此错误，请为事件处理程序方法指定与源事件方法相同的参数。
 
-下面的示例生成 C3713:
+下面的示例生成 C3713：
 
-```
+```cpp
 // C3713.cpp
 // compile with: /c
 [event_source(native)]
