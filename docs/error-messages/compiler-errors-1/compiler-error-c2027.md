@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2027
 ms.assetid: a39150c0-ec04-45ec-934c-a838bfe76627
-ms.openlocfilehash: 901e9b791616c5684b352c1fda7687f67b895d9c
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 62cf208d9d0025afba06d32a15b9a1e50777c473
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447377"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750996"
 ---
 # <a name="compiler-error-c2027"></a>编译器错误 C2027
 
-使用了未定义类型 type
+使用了未定义的类型 "type"
 
-它定义之前，不能使用的类型。 若要解决此错误，请确保类型完全定义之前对其进行引用。
+在定义类型之前，无法使用该类型。 若要解决此错误，请确保在引用类型之前已完全定义了该类型。
 
 ## <a name="example"></a>示例
 
 下面的示例生成 C2027。
 
-```
+```cpp
 // C2027.cpp
 class C;
 class D {
@@ -43,11 +43,11 @@ int main() {
 
 ## <a name="example"></a>示例
 
-它是可以声明指向声明但未定义类型的指针。 但是C++不允许对未定义类型的引用。
+可以声明指向已声明但未定义类型的指针。 但C++不允许引用未定义的类型。
 
 下面的示例生成 C2027。
 
-```
+```cpp
 // C2027_b.cpp
 class A;
 A& CreateA();

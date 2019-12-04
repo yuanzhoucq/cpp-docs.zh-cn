@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2017
 ms.assetid: 1083eed9-9906-4a97-883c-54e52d7e82cd
-ms.openlocfilehash: f4a17557e5e4ca1eb3f69561c964c9bbe24bb70d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3911ef9af2eb0fab7d0f9296ddce8a0f9b32ae0d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303778"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751048"
 ---
 # <a name="compiler-error-c2017"></a>编译器错误 C2017
 
 非法的转义序列
 
-转义序列，如 \t，出现外的字符或字符串常量。
+转义序列（如 \t）出现在字符或字符串常量的外部。
 
-下面的示例生成 C2017:
+下面的示例生成 C2017：
 
-```
+```cpp
 // C2017.cpp
 int main() {
    char test1='a'\n;   // C2017
@@ -29,11 +29,11 @@ int main() {
 }
 ```
 
-当 stringize 运算符用于包含转义序列的字符串，则会发生 C2017。
+当 stringize 运算符与包含转义序列的字符串一起使用时，可能会发生 C2017。
 
-下面的示例生成 C2017:
+下面的示例生成 C2017：
 
-```
+```cpp
 // C2017b.cpp
 #define TestDfn(x) AfxMessageBox(#x)
 TestDfn(CString("\\") + CString(".h\"\n\n"));   // C2017

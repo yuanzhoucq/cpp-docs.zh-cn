@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3718
 ms.assetid: 346b5205-c44d-49d3-b66a-96417d3d6986
-ms.openlocfilehash: 765791499370836f7c99ea7af69cb34bcf1e21fc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0bcf784f5b522d05585d63a3b38a2befb5aa191
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328246"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753193"
 ---
 # <a name="compiler-error-c3718"></a>编译器错误 C3718
 
-仅在接收类的成员函数上下文中调用 event
+只能在接收类的成员函数的上下文中调用 "event"
 
-`event`仅可以从在接收类调用。
+只能从接收类调用 `event`。
 
 ## <a name="example"></a>示例
 
-下面的示例生成 C3718:
+下面的示例生成 C3718：
 
-```
+```cpp
 // C3718.cpp
 #define _ATL_ATTRIBUTES 1
 #include "atlbase.h"

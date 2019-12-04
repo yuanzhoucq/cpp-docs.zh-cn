@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3719
 ms.assetid: d0d59d4e-babb-4480-9ef7-70cf1a28165c
-ms.openlocfilehash: 3ead2f18cdc8b76a0bb3da30e7086bdc80b49d43
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4fca5bfd944514bf2658a8af5cbbd58efe5b39fc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328284"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753180"
 ---
 # <a name="compiler-error-c3719"></a>编译器错误 C3719
 
-interface： 接口基于的事件源只用于 COM 事件
+"interface"：基于接口的事件源只能用于 COM 事件
 
-声明中的非 COM 上下文的接口。
+在非 COM 上下文中声明了接口。
 
-下面的示例生成 C3719:
+下面的示例生成 C3719：
 
-```
+```cpp
 // C3719a.cpp
 #define _ATL_ATTRIBUTES 1
 #include "atlbase.h"
@@ -46,9 +46,9 @@ int main() {
 }
 ```
 
-若要修复此错误，应用[对象](../../windows/object-cpp.md)，[组件类](../../windows/coclass.md)， [event_source](../../windows/event-source.md)，以及[event_receiver](../../windows/event-receiver.md)属性相应地进行使用接口 COM 类的类。 例如：
+若要修复此错误，请适当地应用[对象](../../windows/object-cpp.md)、 [coclass](../../windows/coclass.md)、 [event_source](../../windows/event-source.md)和[EVENT_RECEIVER](../../windows/event-receiver.md)属性，以使使用接口 COM 类的类。 例如：
 
-```
+```cpp
 // C3719b.cpp
 #define _ATL_ATTRIBUTES 1
 #include <atlbase.h>

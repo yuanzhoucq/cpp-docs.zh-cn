@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3712
 ms.assetid: 65b1fcaf-be89-4c55-9e40-25ec03457253
-ms.openlocfilehash: 0b84f4562dcc0dd5dcc3ecb647316772efab6b38
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 51772f22f83cff5c602bd2310d7913c0d317ba66
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328401"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753362"
 ---
 # <a name="compiler-error-c3712"></a>编译器错误 C3712
 
-method： 事件处理程序方法必须返回与源相同的类型 method
+"method"：事件处理程序方法必须返回与源 "method" 相同的类型
 
-定义未返回源事件方法的类型相同的事件处理程序方法。 若要修复此错误，为事件处理程序方法提供相同的源事件方法的返回类型。
+您定义了一个事件处理程序方法，该方法未返回与源事件方法相同的类型。 若要修复此错误，请为事件处理程序方法指定与源事件方法相同的返回类型。
 
-下面的示例生成 C3712:
+下面的示例生成 C3712：
 
-```
+```cpp
 // C3712.cpp
 // compile with: /c
 [event_source(native)]
