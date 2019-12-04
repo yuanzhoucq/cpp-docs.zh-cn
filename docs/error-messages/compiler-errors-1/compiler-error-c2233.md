@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2233
 ms.assetid: 236bdf0b-9607-4f26-a249-d8def0b1333c
-ms.openlocfilehash: 7d96230f189a8f9371473d2da4df4e7be295ab03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 066f28bfaacd1ad2e7645822aef082e43e863327
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375959"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759251"
 ---
 # <a name="compiler-error-c2233"></a>编译器错误 C2233
 
-identifier： 包含大小为零的数组的对象的数组是非法
+"identifier"：包含大小为零的数组的对象数组是非法的
 
-数组中的每个对象必须包含至少一个元素。
+数组中的每个对象都必须至少包含一个元素。
 
-下面的示例生成 C2233:
+下面的示例生成 C2233：
 
-```
+```cpp
 // C2233.cpp
 // compile with: /c
 class A {

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2781
 ms.assetid: f29b9963-f55b-427c-8db6-50f37713df5a
-ms.openlocfilehash: be665d86cf230c364f522fd1ad74cd5a124ac9de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ff5d3d322118d9e3e229b9302e57dc1075f80b9b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382965"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739917"
 ---
 # <a name="compiler-error-c2781"></a>编译器错误 C2781
 
-declaration： 需要至少 value1 参数的值 2 提供
+"声明"：应至少提供 value1 参数-value2
 
-具有变量参数列表的函数模板具有的参数太少。
+带有变量参数列表的函数模板的参数太少。
 
-下面的示例生成 C2781:
+下面的示例生成 C2781：
 
-```
+```cpp
 // C2781.cpp
 template<typename T>
 void f(T, T, ...){}

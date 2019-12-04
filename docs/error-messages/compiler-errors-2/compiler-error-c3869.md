@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3869
 ms.assetid: 85b2ad72-95c1-4ed6-9761-6ef66c3802b7
-ms.openlocfilehash: 1a3d0d754557bbc811d1017ed1491181333e82dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ae8931d3b139e0e7e7aa947ffea16700e2f12302
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242963"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736706"
 ---
 # <a name="compiler-error-c3869"></a>C3869
 
-gcnew 约束缺少空参数列表 （）
+gcnew 约束缺少空参数列表 "（）"
 
-`gcnew`特殊约束被指定了不含空参数列表。 请参阅[泛型类型参数的约束 (C++/CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md)有关详细信息。
+指定的 `gcnew` 特殊约束没有空参数列表。 有关详细信息，请参阅[泛型C++类型参数（/Cli）的约束](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md)。
 
 ## <a name="example"></a>示例
 
 下面的示例生成 C3869。
 
-```
+```cpp
 // C3869.cpp
 // compile with: /c /clr
 using namespace System;

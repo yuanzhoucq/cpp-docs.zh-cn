@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3633
 ms.assetid: 7d65babf-2191-4d67-a69f-f5c4c2ddf946
-ms.openlocfilehash: 2d96a0e4f5f0b34c76f41058316c7f158f1a939d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f44c94cbb3c945406835816d8fc6ed7c39480eb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385701"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742621"
 ---
 # <a name="compiler-error-c3633"></a>编译器错误 C3633
 
-不能定义为托管 type 的成员 member
+不能将 "member" 定义为托管 "type" 的成员
 
-CLR 引用类数据成员不能为非 POD + + 类型。  仅可以实例化 CLR 类型中的 POD 本机类型。  例如，POD 类型不能包含复制构造函数或赋值运算符。
+CLR 引用类数据成员不能为非 POD C++类型。  只能在 CLR 类型中实例化 POD 本机类型。  例如，POD 类型不能包含复制构造函数或赋值运算符。
 
 ## <a name="example"></a>示例
 
 下面的示例生成 C3633。
 
-```
+```cpp
 // C3633.cpp
 // compile with: /clr /c
 #pragma warning( disable : 4368 )

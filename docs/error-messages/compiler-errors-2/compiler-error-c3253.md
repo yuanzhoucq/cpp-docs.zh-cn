@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3253
 ms.assetid: da40be26-0f78-4730-8727-ad11cddf8869
-ms.openlocfilehash: 5d161dfab8dff48a1ddd5a8a5036c0bb4d5549aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c895def372fd74f077725479112873020264371f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173244"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754259"
 ---
 # <a name="compiler-error-c3253"></a>编译器错误 C3253
 
-function： 显式重写错误
+"function"：显式重写时出错
 
-显式重写未正确指定。 例如，不能指定一个替代以指定为纯的实现。 有关详细信息，请参阅[显式重写](../../extensions/explicit-overrides-cpp-component-extensions.md)。
+错误地指定了显式重写。 例如，你不能为也指定为纯的重写指定实现。 有关详细信息，请参阅[显式重写](../../extensions/explicit-overrides-cpp-component-extensions.md)。
 
-下面的示例生成 C3253:
+下面的示例生成 C3253：
 
-```
+```cpp
 // C3253.cpp
 // compile with: /clr
 public interface struct I {

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2179
 ms.assetid: f929bfc6-3964-4e54-87d6-7529b9b6c0b9
-ms.openlocfilehash: 4a8abd8d862d4d6b08b1d0efd1d47d0413b60a81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b9b5382ab934f8d870e58189a447775a1e9a415
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385987"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737161"
 ---
 # <a name="compiler-error-c2179"></a>编译器错误 C2179
 
-type： 特性实参不能使用类型参数
+"type"：特性参数不能使用类型参数
 
-在运行时解析为泛型类型参数。 但是，属性参数必须在编译时解析。 因此，您不能使用泛型类型参数作为属性的参数。
+泛型类型参数在运行时解析。 但是，必须在编译时解析特性参数。 因此，不能将泛型类型参数用作特性的参数。
 
 ## <a name="example"></a>示例
 
 下面的示例生成 C2179。
 
-```
+```cpp
 // C2179.cpp
 // compile with: /clr
 using namespace System;

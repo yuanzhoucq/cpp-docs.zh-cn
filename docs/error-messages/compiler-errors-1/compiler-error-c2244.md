@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2244
 ms.assetid: d9911c12-ceb5-4f93-ac47-b44a485215c2
-ms.openlocfilehash: 7cfa0cd7ff4290ca5f07fb712bbcac7dabf55f29
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 97ff469c6f3f766bd1b5412133003bae2acaddfc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301391"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759472"
 ---
 # <a name="compiler-error-c2244"></a>编译器错误 C2244
 
-identifier： 无法匹配函数定义与现有的声明
+"identifier"：无法将函数定义与现有的声明匹配
 
-没有括号的函数调用前使用一元 + 运算符的异常用法。
+一元 + 运算符在没有括号的函数调用之前使用过。
 
-此错误仅出现在C++项目。
+此错误仅出现在C++项目中。
 
-下面的示例生成 C2244:
+下面的示例生成 C2244：
 
-```
+```cpp
 // C2244.cpp
 int func(char) {
    return 0;
@@ -38,9 +38,9 @@ int main() {
 }
 ```
 
-不正确的函数签名用于类模板成员函数时，也可能发生 C2244。
+如果对类模板的成员函数使用不正确的函数签名，也会发生 C2244。
 
-```
+```cpp
 // C2244b.cpp
 // compile with: /c
 template<class T>
@@ -54,9 +54,9 @@ void XYZ<T>::func(int i) {}   // C2244 wrong function signature
 // void XYZ<T>::func(T t) {}
 ```
 
-不正确的函数签名用于成员函数模板时，也可能发生 C2244。
+如果将不正确的函数签名用于成员函数模板，也会发生 C2244。
 
-```
+```cpp
 // C2244c.cpp
 // compile with: /c
 class ABC {
@@ -70,9 +70,9 @@ void ABC::func(int i) {}   // C2244 wrong signature
 // void ABC::func(int i, T t) {}
 ```
 
-部分不能特殊化函数模板。
+不能对函数模板进行部分专用化。
 
-```
+```cpp
 // C2244d.cpp
 template<class T, class U>
 class QRS {

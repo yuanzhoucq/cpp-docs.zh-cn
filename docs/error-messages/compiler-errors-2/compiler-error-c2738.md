@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2738
 ms.assetid: 896b4640-1ee0-4cd8-9910-de3efa30006a
-ms.openlocfilehash: 8f8342f07d8062c5a1ec18d17423996c1b0dab39
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd83f0099e48b53db8055d8bc3282b672c1adc78
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360237"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759667"
 ---
 # <a name="compiler-error-c2738"></a>编译器错误 C2738
 
-declaration： 不明确或者不是 type 的成员
+"声明"：不明确或者不是 "type" 的成员
 
-未正确声明一个函数。
+未正确声明函数。
 
-下面的示例生成 C2738:
+下面的示例生成 C2738：
 
-```
+```cpp
 // C2738.cpp
 struct A {
    template <class T> operator T*();

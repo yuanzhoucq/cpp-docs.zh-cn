@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2556
 ms.assetid: fc4399ad-45b3-49fd-be1f-0b13956a595a
-ms.openlocfilehash: 4a2b4dc9dcd71d518845651dee97c566b778eb0a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b6f08ac52eff355f0857968817a681818e3c3dc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353061"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756768"
 ---
 # <a name="compiler-error-c2556"></a>编译器错误 C2556
 
-identifier： 重载的函数仅返回类型不同
+"identifier"：重载函数只在返回类型上不同
 
-重载的函数具有不同的返回类型，但相同的参数列表。 每个重载的函数必须具有不同形式的参数列表。
+重载函数具有不同的返回类型，但具有相同的参数列表。 每个重载函数都必须具有一个不同的形参列表。
 
-下面的示例生成 C2556:
+下面的示例生成 C2556：
 
-```
+```cpp
 // C2556.cpp
 // compile with: /c
 class C {

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2309
 ms.assetid: 6303d5b5-72cf-42b8-92ce-b1eb48e80d48
-ms.openlocfilehash: 9d114565b6b119711aaa773d76658cc27838f4a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2567562b5d8a75a40afcb4a94ad453ee65709a00
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303537"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759030"
 ---
 # <a name="compiler-error-c2309"></a>编译器错误 C2309
 
 catch 处理程序需要带括号的异常声明
 
-Catch 处理程序没有用圆括号括起来的类型。
+Catch 处理程序没有带括号的类型。
 
-下面的示例生成 C2309:
+下面的示例生成 C2309：
 
-```
+```cpp
 // C2309.cpp
 // compile with: /EHsc
 #include <eh.h>

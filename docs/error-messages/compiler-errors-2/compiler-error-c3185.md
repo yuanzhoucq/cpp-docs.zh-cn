@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3185
 ms.assetid: 5bf96279-043c-4981-9d02-b4550071b192
-ms.openlocfilehash: 45afe70b454f72dd8c9b8ce9771ce1f5aef6a10e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36f350287a1cfaf937ee739800042aaf99f31769
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366077"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761629"
 ---
 # <a name="compiler-error-c3185"></a>编译器错误 C3185
 
 在托管或 WinRT 类型“type”上使用了“typeid”，请改用“operator”
 
-无法应用[typeid](../../cpp/typeid-operator.md)运算符为托管或 WinRT 类型; 请改用[typeid](../../extensions/typeid-cpp-component-extensions.md)相反。
+不能将[typeid](../../cpp/typeid-operator.md)运算符应用于托管或 WinRT 类型;请改用[typeid](../../extensions/typeid-cpp-component-extensions.md) 。
 
 下面的示例生成 C3185，并演示如何修复此错误：
 
-```
+```cpp
 // C3185a.cpp
 // compile with: /clr
 ref class Base {};

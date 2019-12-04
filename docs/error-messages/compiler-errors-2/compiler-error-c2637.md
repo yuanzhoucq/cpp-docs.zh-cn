@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2637
 ms.assetid: 58d94447-eb96-4d8f-a690-dd78d322462e
-ms.openlocfilehash: 4231a811911fdf600b47962e929f6f3cff1f1bca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a17bd95cf1727d058e0cbd9e3dfb93c500da9fb5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395451"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758250"
 ---
 # <a name="compiler-error-c2637"></a>编译器错误 C2637
 
-identifier： 不能修改指向数据成员的指针
+"identifier"：不能修改指向数据成员的指针
 
-指向数据成员的指针不能具有调用约定。 若要解决，请删除调用约定或声明指向成员函数的指针。
+指向数据成员的指针不能具有调用约定。 若要解决此问题，请删除调用约定或声明指向成员函数的指针。
 
-下面的示例生成 C2637:
+下面的示例生成 C2637：
 
-```
+```cpp
 // C2637.cpp
 // compile with: /c
 struct S {};

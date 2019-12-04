@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2612
 ms.assetid: 6faacfd6-4455-41a2-808e-0f6799f84d6d
-ms.openlocfilehash: b2d4888c1be39c4f48f0ca674426c7af612b9bb7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 630e5b1cc6e99ffda28f50c09bccbbc2fea07172
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379020"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737694"
 ---
 # <a name="compiler-error-c2612"></a>编译器错误 C2612
 
-尾随 char 基/成员初始值设定项列表中非法
+基/成员初始值设定项列表中的尾随 "char" 非法
 
-最后一个基或成员初始值设定项列表中的后出现一个字符。
+初始值设定项列表中的最后一个基或成员后会出现一个字符。
 
-下面的示例生成 C2612:
+下面的示例生成 C2612：
 
-```
+```cpp
 // C2612.cpp
 class A {
 public:

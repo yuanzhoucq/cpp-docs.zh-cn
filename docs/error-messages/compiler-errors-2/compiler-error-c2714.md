@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2714
 ms.assetid: 401a5a42-660c-4bad-9d63-1a2d092bc489
-ms.openlocfilehash: feba363a7cd15d92bf850e8cba457ff310d15490
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5bfa56ca95cc93680c7eab227d658134b248976
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386782"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760551"
 ---
 # <a name="compiler-error-c2714"></a>编译器错误 C2714
 
-不允许 __alignof(void)
+不允许使用 __alignof （void）
 
-对运算符传递了无效值。
+传递给运算符的值无效。
 
-请参阅[__alignof 运算符](../../cpp/alignof-operator.md)有关详细信息。
+有关详细信息，请参阅[__Alignof 运算符](../../cpp/alignof-operator.md)。
 
 ## <a name="example"></a>示例
 
 下面的示例生成 C2714。
 
-```
+```cpp
 // C2714.cpp
 int main() {
    return __alignof(void);   // C2714

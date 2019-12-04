@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3531
 ms.assetid: 2bdb9fdc-9ddf-403e-8b92-02763d434487
-ms.openlocfilehash: 6961d99d1a0d7d0ea063aee5544a1009af2547c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7da9da2daedc79db619f82848dc864d1cb7bd1f1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397401"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750086"
 ---
 # <a name="compiler-error-c3531"></a>编译器错误 C3531
 
-symbol： 类型包含 auto 的符号必须具有初始值设定项
+"symbol"：其类型包含 "auto" 的符号必须具有初始值设定项
 
-指定的变量不具有初始值设定项表达式。
+指定的变量没有初始值设定项表达式。
 
 ### <a name="to-correct-this-error"></a>更正此错误
 
-1. 指定的初始值设定项表达式，如使用等号语法声明变量时的简单分配。
+1. 当你声明变量时，请指定初始值设定项表达式，如使用等号语法的简单赋值。
 
 ## <a name="example"></a>示例
 
-下面的示例会产生 C3531，因为变量`x1`， `y1, y2, y3`，和`z2`未初始化。
+下面的示例生成 C3531，因为未初始化变量 `x1`、`y1, y2, y3`和 `z2`。
 
-```
+```cpp
 // C3531.cpp
 // Compile with /Zc:auto
 int main()
@@ -39,6 +39,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [auto 关键字](../../cpp/auto-keyword.md)

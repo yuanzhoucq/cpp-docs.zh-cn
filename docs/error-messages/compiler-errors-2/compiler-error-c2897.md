@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2897
 ms.assetid: a88349e2-823f-42a0-8660-0653b677afa4
-ms.openlocfilehash: 264ad52a10c6cf19d1105561f1140cf2d3e2f8e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1433faade0a41ad8b63a3b40cb5d02f724bde658
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378838"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760769"
 ---
 # <a name="compiler-error-c2897"></a>编译器错误 C2897
 
 析构函数/终结器不能是函数模板
 
-析构函数或终结器不能重载，因此不允许将析构函数声明为模板 （这将定义一组析构函数）。
+析构函数或终结器不能重载，因此不允许将析构函数声明为模板（这将定义一组析构函数）。
 
-下面的示例生成 C2897:
+下面的示例生成 C2897：
 
 ## <a name="example"></a>示例
 
 下面的示例生成 C2897。
 
-```
+```cpp
 // C2897.cpp
 // compile with: /c
 class X {
@@ -38,7 +38,7 @@ public:
 
 下面的示例生成 C2897。
 
-```
+```cpp
 // C2897_b.cpp
 // compile with: /c /clr
 ref struct R2 {

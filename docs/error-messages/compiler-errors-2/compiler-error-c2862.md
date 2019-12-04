@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2862
 ms.assetid: c04d8499-b799-48a1-9fb4-7902a0b0ac8e
-ms.openlocfilehash: a3e2dba20c5283d87b6e98c2f8c9aba83c2d3cb9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd14f310a00202dce73f091dee46a4605858b698
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227684"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755078"
 ---
 # <a name="compiler-error-c2862"></a>编译器错误 C2862
 
-interface： 接口只能有公共成员
+"interface"：接口只能有公共成员
 
-保护，可能只能从其他成员函数访问私有成员。 此类成员是一个接口，在不使用，因为它可能没有提供任何其成员的实现。
+仅可从其他成员函数访问受保护的私有成员。 此类成员不能在接口中使用，因为它可能不会为其任何成员提供实现。
 
-下面的示例生成 C2862:
+下面的示例将生成 C2862：
 
-```
+```cpp
 // C2862.cpp
 // compile with: /c
 #include <unknwn.h>

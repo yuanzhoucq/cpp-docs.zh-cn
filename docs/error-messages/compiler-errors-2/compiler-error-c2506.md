@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2506
 ms.assetid: cfed21cd-2404-46f2-985e-d0c2c3820830
-ms.openlocfilehash: 02f0a81204c4bc1c41111d32bae1c6946dee09ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 593fbbc6b561e6390624aa79af14dc665a552990
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164860"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746833"
 ---
 # <a name="compiler-error-c2506"></a>编译器错误 C2506
 
-member: __declspec(modifier) 不能应用于此符号
+"member"： "__declspec （修饰符）" 不能应用于此符号
 
-不能为托管类的静态成员声明每个进程或每个 appdomain。
+不能为托管类的静态成员声明每进程或每个 appdomain。
 
 有关更多信息，请参见 [appdomain](../../cpp/appdomain.md) 。
 
@@ -25,7 +25,7 @@ member: __declspec(modifier) 不能应用于此符号
 
 下面的示例生成 C2506。
 
-```
+```cpp
 // C2506.cpp
 // compile with: /clr /c
 ref struct R {

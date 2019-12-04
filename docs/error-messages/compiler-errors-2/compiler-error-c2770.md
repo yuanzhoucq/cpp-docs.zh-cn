@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2770
 ms.assetid: 100001b5-80b0-4971-8ff6-9023f443c926
-ms.openlocfilehash: 9397b52838f61449f0475a31d5bb4077dad7f587
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4f6c82823dc619982ff148a83e2cc3316b42cfab
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257396"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759771"
 ---
 # <a name="compiler-error-c2770"></a>编译器错误 C2770
 
-template 的无效显式 template_or_generic 个参数
+"template" 的显式 template_or_generic 参数无效
 
-使用显式模板或泛型参数的函数模板候选项时不允许使用的函数类型。
+具有显式模板或泛型参数的函数模板候选项导致了不允许的函数类型。
 
-下面的示例生成 C2770:
+下面的示例生成 C2770：
 
-```
+```cpp
 // C2770.cpp
 #include <stdio.h>
 template <class T>

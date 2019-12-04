@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3210
 ms.assetid: c6e9d309-fabc-4e7d-b526-be20d9fe3f6a
-ms.openlocfilehash: 9e0ac1aded7eef40be0e923b3ac1ebc9ef00c7a6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 513f08d4dddc37d36a240ee0d72b24383f951cdf
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182530"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755117"
 ---
 # <a name="compiler-error-c3210"></a>编译器错误 C3210
 
-type： 访问声明可以仅应用于基类成员
+"type"：访问声明只能应用于基类成员
 
-一个[using 声明](../../cpp/using-declaration.md)未正确指定。
+错误地指定了[using 声明](../../cpp/using-declaration.md)。
 
 ## <a name="example"></a>示例
 
 下面的示例生成 C3210。
 
-```
+```cpp
 // C3210.cpp
 // compile with: /c
 struct A {

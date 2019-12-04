@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3886
 ms.assetid: 485f6c12-cc1b-4146-9034-409a0a5e615e
-ms.openlocfilehash: e9e9d4b478d5b53e50203d1f009295e1da444f2d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e7ba0fcc76d723cebb5b82315faf36313b1d7db
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402536"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736628"
 ---
 # <a name="compiler-error-c3886"></a>编译器错误 C3886
 
-var: literal 数据成员必须被初始化
+"var"：必须初始化 literal 数据成员
 
-一个[文字](../../extensions/literal-cpp-component-extensions.md)declaraed 时必须初始化变量。
+在 declaraed[文本](../../extensions/literal-cpp-component-extensions.md)变量时，必须对其进行初始化。
 
-下面的示例生成 C3886:
+下面的示例生成 C3886：
 
-```
+```cpp
 // C3886.cpp
 // compile with: /clr /c
 ref struct Y1 {

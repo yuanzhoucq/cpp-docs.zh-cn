@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2650
 ms.assetid: 49a8ac6e-aa6d-4616-917c-a3cfcdbad5a4
-ms.openlocfilehash: c7cbc12bff4e00613032a9d28b5be7533dce9612
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f71996c6d04d8be2101762fb0fb17634e6b25a1a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152550"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756131"
 ---
 # <a name="compiler-error-c2650"></a>编译器错误 C2650
 
-operator： 不能为虚函数
+"operator"：不能是虚函数
 
-一个`new`或`delete`声明运算符`virtual`。 这些运算符`static`成员函数，而不能为`virtual`。
+`virtual`声明 `new` 或 `delete` 运算符。 这些运算符 `static` 成员函数中，不能 `virtual`。
 
 ## <a name="example"></a>示例
 
-下面的示例生成 C2650:
+下面的示例生成 C2650：
 
-```
+```cpp
 // C2650.cpp
 // compile with: /c
 class A {

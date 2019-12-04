@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3675
 ms.assetid: 87461613-6633-430b-b95d-c7cb1bb63776
-ms.openlocfilehash: e29e536bf89aef887dc043327e4b4596703d0538
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6772572d29765370d6cdbf52ed8470ff2f3f054e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363890"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758068"
 ---
 # <a name="compiler-error-c3675"></a>编译器错误 C3675
 
-function： 已保留，因为 property 被定义
+"function"：已定义 "property"，因此被保留
 
-声明一个简单的属性时，编译器将生成的 get 和 set 访问器方法和这些名称是存在于程序的范围。  通过预先计算 get_ 和 set_ 的属性名称形成编译器生成的名称。  因此，不能声明具有相同的名称的编译器生成的访问器函数。
+当你声明一个简单的属性时，编译器会生成 get 和 set 访问器方法，这些名称将出现在程序的作用域中。  编译器生成的名称是通过在属性名称前面加 get_ 和 set_ 来构成的。  因此，不能声明与编译器生成的访问器同名的函数。
 
 有关更多信息，请参见 [property](../../extensions/property-cpp-component-extensions.md) 。
 
@@ -25,7 +25,7 @@ function： 已保留，因为 property 被定义
 
 下面的示例生成 C3675。
 
-```
+```cpp
 // C3675.cpp
 // compile with: /clr /c
 ref struct C {

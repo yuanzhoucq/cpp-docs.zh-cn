@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2385
 ms.assetid: 6d3dd1f2-e56d-49d7-865c-6a9acdb17417
-ms.openlocfilehash: bffb4c1088c41832e69b0c6f161b47f6f9f08d06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1247e4da05d65677f602a82591efd3e0c0c374e0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393696"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745247"
 ---
 # <a name="compiler-error-c2385"></a>编译器错误 C2385
 
-member 的访问不明确
+对 "member" 的访问不明确
 
-成员可以从多个对象 （它从多个对象继承的） 派生。  若要解决此错误，
+成员可以从多个对象派生（它继承自多个对象）。  若要解决此错误，
 
-- 强制转换，从而使该成员明确。
+- 提供强制转换，使成员明确。
 
-- 重命名在基类中不明确的成员。
+- 重命名基类中的不明确成员。
 
 ## <a name="example"></a>示例
 
 下面的示例生成 C2385。
 
-```
+```cpp
 // C2385.cpp
 // C2385 expected
 #include <stdio.h>

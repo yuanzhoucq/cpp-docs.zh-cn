@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2161
 ms.assetid: d6798821-13bb-4e60-924f-85f7bf955387
-ms.openlocfilehash: 366e848d566dbcbf9414565de604aa722f758456
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dd75fb4ba035f21a71fff1f345c0c397415bc0ec
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174797"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758419"
 ---
 # <a name="compiler-error-c2161"></a>编译器错误 C2161
 
 “##”不能在宏定义的结尾处出现
 
-以标记粘贴运算符结尾 (##) 的宏定义。
+以标记粘贴运算符 (##) 结尾的宏定义。
 
 以下示例生成 C2161：
 
-```
+```cpp
 // C2161.cpp
 // compile with: /c
 #define mac(a,b) a   // OK

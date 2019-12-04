@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3902
 ms.assetid: feb3bb29-f836-4d77-ba71-3876f7f4f216
-ms.openlocfilehash: d90bf299c566ce72e3d1cbfeb545def0a43d6cbf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9dd98bc46e28fe54362de442a433736787cd0d07
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375985"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749056"
 ---
 # <a name="compiler-error-c3902"></a>编译器错误 C3902
 
-accessor： 最后一个参数类型必须是 type
+"访问器"：最后一个参数的类型必须是 "type"
 
-至少一个 set 方法的最后一个参数的类型必须匹配的属性的类型。 有关详细信息，请参阅 [property](../../extensions/property-cpp-component-extensions.md)。
+至少一个 set 方法的最后一个参数的类型必须与属性的类型匹配。 有关详细信息，请参阅 [property](../../extensions/property-cpp-component-extensions.md)。
 
-下面的示例生成 C3902:
+下面的示例生成 C3902：
 
-```
+```cpp
 // C3902.cpp
 // compile with: /clr /c
 using namespace System;

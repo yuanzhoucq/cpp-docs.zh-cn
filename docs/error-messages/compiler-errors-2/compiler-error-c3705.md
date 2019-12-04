@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3705
 ms.assetid: 8361017d-5782-4214-a9d7-e9825fd29bc8
-ms.openlocfilehash: 8a1a5a7c3c54742f6952f6885a70fd5c1dcf6e0f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c4f77457be95ae22b2a67214207d361ca105811d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227065"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757925"
 ---
 # <a name="compiler-error-c3705"></a>编译器错误 C3705
 
-function： 找不到事件接口
+"function"：找不到事件接口
 
-必须定义要使用 COM 事件的事件接口。 请注意，`#include`行下面的示例中所示的 ATL 标头文件是使用 COM 事件所必需的。 若要解决此错误，请取消注释的定义`IEvents`示例代码中的接口。
+您必须定义一个使用 COM 事件的事件接口。 请注意，以下示例中显示的 ATL 标头文件的 `#include` 行是使用 COM 事件所必需的。 若要修复此错误，请取消注释示例代码中 `IEvents` 接口的定义。
 
-下面的示例生成 C3705:
+下面的示例生成 C3705：
 
-```
+```cpp
 // C3705.cpp
 // compile with: /c
 #define _ATL_ATTRIBUTES 1

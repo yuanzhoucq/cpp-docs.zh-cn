@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2357
 ms.assetid: d1083945-0ea2-4385-9e66-8c665978806c
-ms.openlocfilehash: 1872672e776ad13bf16be5ae69729f4f68d8f3b0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce1926468bac7e44485be5c0a0944fdf12dce3d8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302028"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759914"
 ---
 # <a name="compiler-error-c2357"></a>编译器错误 C2357
 
-identifier： 必须是 type 类型的函数
+"identifier"：必须是 "type" 类型的函数
 
-你的代码声明版本`atexit`由编译器在内部声明的版本不匹配的函数。 声明`atexit`，如下所示：
+你的代码声明了一个 `atexit` 函数的版本，该版本与编译器内部声明的版本不匹配。 按如下所示声明 `atexit`：
 
 ```
 int __cdecl atexit(void (__cdecl *)());
@@ -25,9 +25,9 @@ int __cdecl atexit(void (__cdecl *)());
 
 有关详细信息，请参阅[init_seg](../../preprocessor/init-seg.md)。
 
-下面的示例生成 C2357:
+下面的示例生成 C2357：
 
-```
+```cpp
 // C2357.cpp
 // compile with: /c
 // C2357 expected

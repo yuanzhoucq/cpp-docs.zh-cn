@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2391
 ms.assetid: 63a9c6b9-03cc-4517-885c-bdcd048643b3
-ms.openlocfilehash: 7683ad1580454bd7edb1fc08e5bd110a3e5c36c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7dd47ffbd9481f69f3799a94a17a53ccdffb2a84
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393618"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745013"
 ---
 # <a name="compiler-error-c2391"></a>编译器错误 C2391
 
-identifier: friend 不能在类型定义过程
+"identifier"： "friend" 不能在类型定义过程中使用
 
-`friend`声明包含完整的类声明。 一个`friend`声明可以指定的成员函数或详细的类型说明符，但不是完整的类声明。
+`friend` 声明包含完整的类声明。 `friend` 声明可以指定成员函数或详细的类型说明符，但不能指定完整的类声明。
 
 下面的示例生成 C2326:
 
-```
+```cpp
 // C2391.cpp
 // compile with: /c
 class D {

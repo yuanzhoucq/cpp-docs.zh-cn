@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2438
 ms.assetid: 3a0ab3ba-d0e4-4d8f-971d-e503397cc827
-ms.openlocfilehash: b2861090b5f7629c7f0cd94ea38a99e888909258
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da6443f3f319c864b53f6d077e8bf99faffc5888
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375751"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744311"
 ---
 # <a name="compiler-error-c2438"></a>编译器错误 C2438
 
-identifier： 无法初始化静态类数据通过构造函数
+"identifier"：无法通过构造函数初始化静态类数据
 
-构造函数用于初始化类的静态成员。 必须在类声明的外部定义中初始化静态成员。
+构造函数用于初始化类的静态成员。 静态成员必须在类声明之外的定义中进行初始化。
 
-下面的示例生成 C2438:
+下面的示例生成 C2438：
 
-```
+```cpp
 // C2438.cpp
 struct X {
    X(int i) : j(i) {}   // C2438

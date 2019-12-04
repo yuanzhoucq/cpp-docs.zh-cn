@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2203
 ms.assetid: 5497df43-86f6-43d5-b6cb-723c4c589b10
-ms.openlocfilehash: 848fdad460402238f4957344dd49bd9128352b4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: db36afa1376a0b64b3e110acd1722d3e0f2af449
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383253"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758952"
 ---
 # <a name="compiler-error-c2203"></a>编译器错误 C2203
 
 删除运算符不能指定数组的边界
 
-与 **/Za** (ANSI) 选项`delete`运算符可以删除整个数组，但不是部分或数组的特定成员。
+使用 **/za** （ANSI）选项，`delete` 运算符可以删除整个数组，但不能删除数组的部分或特定成员。
 
-下面的示例生成 C2203:
+下面的示例生成 C2203：
 
-```
+```cpp
 // C2203.cpp
 // compile with: /Za
 int main() {

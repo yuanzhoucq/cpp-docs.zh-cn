@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2488
 ms.assetid: cd435909-43e4-43c6-a57c-5d02468ef75f
-ms.openlocfilehash: 9b49d49c8a261bb3d636446f820a45699361830f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0c361db98e0ffd3f37f9e08b78f52ba7ae547030
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62361680"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757106"
 ---
 # <a name="compiler-error-c2488"></a>编译器错误 C2488
 
-identifier: naked 只能应用到非成员函数定义
+"identifier"： "naked" 只能应用到非成员函数定义
 
-[裸](../../cpp/naked-cpp.md)特性已应用于函数声明。
+已将[裸](../../cpp/naked-cpp.md)特性应用于函数声明。
 
-下面的示例生成 C2488:
+下面的示例生成 C2488：
 
-```
+```cpp
 // C2488.cpp
 // compile with: /c
 // processor: x86

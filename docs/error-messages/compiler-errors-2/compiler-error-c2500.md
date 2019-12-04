@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2500
 ms.assetid: 6bff8161-dc9a-48ca-91f1-fd2eefdbbc93
-ms.openlocfilehash: a5753fc99efcdb1064a21981c62faaba84d44189
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 152546fce8f3ee63f8b95595bff052f18cd4ebda
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165581"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746963"
 ---
 # <a name="compiler-error-c2500"></a>编译器错误 C2500
 
-identifier1: identifier2 已经是直接基类
+"identifier1"： "identifier2" 已是直接基类
 
-类或结构的基类列表中多次出现。
+某个类或结构在基类列表中出现多次。
 
-直接基是基列表中所述。 间接基是基类的基列表中的类之一。
+直接基是基列表中提到的一个。 间接基是基列表中某个类的基类。
 
-类不能多次指定为直接基类。 可以多次作为间接基类使用类。
+不能将一个类多次指定为直接基类。 类可以多次用作间接基类。
 
-下面的示例生成 C2500:
+下面的示例生成 C2500：
 
-```
+```cpp
 // C2500.cpp
 // compile with: /c
 class A {};

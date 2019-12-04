@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2571
 ms.assetid: c6522616-dee9-4d7d-9bf8-30a7e1deaadf
-ms.openlocfilehash: d7d4898e5f0b55c50a4c18cef053cc150394d7e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7bd87f0732e1a632b8c86cc57fab1a0f104b2c77
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408571"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755494"
 ---
 # <a name="compiler-error-c2571"></a>编译器错误 C2571
 
-function： 虚函数不能为联合 union 中
+"function"：虚函数不能在联合 "union" 中
 
-联合被声明具有虚拟函数。 您可以声明只能在类或结构中的虚拟函数。  可能的解决方法：
+联合是使用虚函数声明的。 只能在类或结构中声明虚函数。  可能的解决方法：
 
-1. 更改为类或结构的并集。
+1. 将联合更改为类或结构。
 
-1. 使非虚拟函数。
+1. 使函数不是虚拟的。
 
-下面的示例生成 C2571:
+下面的示例生成 C2571：
 
-```
+```cpp
 // C2571.cpp
 // compile with: /c
 union A {

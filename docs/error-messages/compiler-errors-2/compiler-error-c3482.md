@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3482
 ms.assetid: bf99558e-bef4-421c-bb16-dcd9c54c1011
-ms.openlocfilehash: 6ff269d719dd354932ef79946ae99a9b60490199
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d775551d0f4955dc4eda9b0d418ea31e065714f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173218"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743128"
 ---
 # <a name="compiler-error-c3482"></a>编译器错误 C3482
 
@@ -29,7 +29,7 @@ ms.locfileid: "62173218"
 
 以下示例生成 C3482：
 
-```
+```cpp
 // C3482.cpp
 // compile with: /c
 
@@ -43,6 +43,6 @@ public:
 };
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Lambda 表达式](../../cpp/lambda-expressions-in-cpp.md)

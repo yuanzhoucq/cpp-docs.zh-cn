@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3137
 ms.assetid: 70bb1313-2e87-43ed-a0d8-33fa6ff475e4
-ms.openlocfilehash: c29aecb798b13233f10ad2808d1be530b25d4b54
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 43c006a5be624d95c4d86bb97819c7ec5834e20d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344619"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761281"
 ---
 # <a name="compiler-error-c3137"></a>编译器错误 C3137
 
-property： 无法初始化属性
+"property"：属性不能初始化
 
-无法初始化属性，例如，在构造函数的初始化列表中。
+例如，在构造函数的初始化列表中不能初始化属性。
 
-下面的示例生成 C3137:
+下面的示例生成 C3137：
 
-```
+```cpp
 // C3137.cpp
 // compile with: /clr /c
 ref class CMyClass {

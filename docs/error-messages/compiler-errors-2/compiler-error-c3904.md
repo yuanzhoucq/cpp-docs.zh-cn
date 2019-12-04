@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3904
 ms.assetid: 08297605-e4f2-4c6c-b637-011f1fd40631
-ms.openlocfilehash: 4675bf95012c8e6662d7dba281c38ed2d684c448
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1861810f4598fa81d1b7662a57651b1648de1317
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406764"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749043"
 ---
 # <a name="compiler-error-c3904"></a>编译器错误 C3904
 
-property_accessor： 必须指定数字参数
+"property_accessor"：必须指定 number 个参数
 
-检查中的参数数量你`get`和`set`方法针对属性维度。
+检查 `get` 中参数的数目，并对属性维度 `set` 方法。
 
-- 参数数目`get`方法必须等于的维度的属性的数量或为零的非索引属性。
+- 对于非索引属性，`get` 方法的参数数目必须等于属性的维数或为零。
 
-- 参数的数目`set`方法必须是一个多个维度的属性的数目。
+- `set` 方法的参数数目必须比属性的维数多一个。
 
 有关详细信息，请参阅 [property](../../extensions/property-cpp-component-extensions.md)。
 
@@ -29,7 +29,7 @@ property_accessor： 必须指定数字参数
 
 下面的示例生成 C3904。
 
-```
+```cpp
 // C3904.cpp
 // compile with: /clr /c
 ref class X {
@@ -51,7 +51,7 @@ ref class X {
 
 下面的示例生成 C3904。
 
-```
+```cpp
 // C3904b.cpp
 // compile with: /clr /c
 ref struct X {

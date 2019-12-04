@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2582
 ms.assetid: ee1b9378-8bcd-4792-b87e-6d7a466d29ed
-ms.openlocfilehash: 2becaf3cf955a9ed8dbbc22cbf11728bcc5bec34
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 102682e64602d06b2ee5449ac5b71852cfa33af3
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366727"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748666"
 ---
 # <a name="compiler-error-c2582"></a>编译器错误 C2582
 
-function 函数类型中不可用
+"function" 函数在 "type" 中不可用
 
-尝试将分配到不具有赋值运算符的对象。
+尝试将一个不具有赋值运算符的对象分配给该对象。
 
-下面的示例生成 C2582:
+下面的示例生成 C2582：
 
-```
+```cpp
 // C2582.cpp
 // compile with: /clr
 using namespace System;

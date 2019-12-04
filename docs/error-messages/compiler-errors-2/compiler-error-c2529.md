@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2529
 ms.assetid: 73a99e55-b91e-488d-9b72-cc80faaeb436
-ms.openlocfilehash: b634f2369805114209860f5e304a7cd2cca2ec91
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f5a10131fe03bd98078e87f71d07bf02c51d34f4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266421"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760408"
 ---
 # <a name="compiler-error-c2529"></a>编译器错误 C2529
 
-name： 引用的引用是非法的
+"name"：引用引用是非法的
 
-通过使用指针的语法并声明对指针的引用可能会修复此错误。
+可以通过使用指针语法并声明对指针的引用来解决此错误。
 
-下面的示例生成 C2529:
+下面的示例生成 C2529：
 
-```
+```cpp
 // C2529.cpp
 // compile with: /c
 int i;

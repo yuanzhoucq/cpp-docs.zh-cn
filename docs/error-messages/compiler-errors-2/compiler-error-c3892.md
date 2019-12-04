@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3892
 ms.assetid: 83fff42c-ea48-442f-bc2e-b33a6b99d890
-ms.openlocfilehash: 07f34efa4ecf1445665fccf60dba10ea12dbff3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73d96c61e918da3aabbfc00b83213fa79a2eedf9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62281581"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736381"
 ---
 # <a name="compiler-error-c3892"></a>编译器错误 C3892
 
-var： 不能给常量赋值
+"var"：不能赋给常量变量
 
-在声明和初始化后无法更改的 const 变量。
+在声明和初始化常量变量后，不能对其进行更改。
 
-下面的示例生成 C3892:
+下面的示例生成 C3892：
 
-```
+```cpp
 // C3892.cpp
 // compile with: /clr
 ref struct Y1 {

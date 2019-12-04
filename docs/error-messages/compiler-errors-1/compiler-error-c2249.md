@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2249
 ms.assetid: bdd6697c-e04b-49b9-8e40-d9eb6d74f2b6
-ms.openlocfilehash: f3f82549cf5d9230adfee7e83248e92f8e93e769
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 24db84c9205173f098e493c4ea6393fb96592276
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301339"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758887"
 ---
 # <a name="compiler-error-c2249"></a>编译器错误 C2249
 
-member： 在虚拟基 class 中声明访问成员没有访问路径
+"member"：不能访问在虚拟基 "class" 中声明的成员的路径
 
-`member`继承自非公共`virtual`基的类或结构。
+`member` 继承自非公共 `virtual` 基类或结构。
 
 ## <a name="example"></a>示例
 
 下面的示例生成 C2249。
 
-```
+```cpp
 // C2249.cpp
 class A {
 private:
@@ -42,9 +42,9 @@ int main() {
 
 ## <a name="example"></a>示例
 
-如果尝试将分配中的流，也可能发生 C2249C++到另一个流的标准库。  下面的示例生成 C2249。
+如果尝试将流从C++标准库分配到另一个流，也会发生 C2249。  下面的示例生成 C2249。
 
-```
+```cpp
 // C2249_2.cpp
 #include <iostream>
 using namespace std;

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2431
 ms.assetid: 88a5b648-c89f-47d1-a20e-63231ab4f0f7
-ms.openlocfilehash: 6298748b341d58c5d931566f714530a4858e46ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 135f73490cf23313d4ac4e2a5f568f2b6100422b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165874"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744519"
 ---
 # <a name="compiler-error-c2431"></a>编译器错误 C2431
 
-identifier 中的非法索引寄存器
+"identifier" 中的索引寄存器非法
 
-ESP 注册进行缩放或用作索引和基寄存器。 编码为 x86 处理器不允许是同级。
+ESP 寄存器缩放或用作索引和基寄存器。 X86 处理器的 SIB 编码不允许这两种方法。
 
-下面的示例生成 C2431:
+下面的示例生成 C2431：
 
-```
+```cpp
 // C2431.cpp
 // processor: x86
 int main() {

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3849
 ms.assetid: 5347140e-1a81-4841-98c0-b63d98264b64
-ms.openlocfilehash: ec6725472d31b0b2ade0cd73da4440036239fde3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8492f108b57fbc63bd171276b1aa601f96a28b24
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381054"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754883"
 ---
 # <a name="compiler-error-c3849"></a>编译器错误 C3849
 
-表达式中的类型 type 的函数样式调用会失去所有数字可用运算符重载的 const 和/或 volatile 限定符
+"type" 类型的表达式中的函数样式调用会丢失所有可用的可用运算符重载的 const 和/或 volatile 限定符
 
-使用指定的量可变类型的变量可以仅调用成员函数定义有相同或更大的量可变限定。
+具有指定 const volatile 类型的变量只能调用使用相同或更大的 const volatile 限定定义的成员函数。
 
-若要解决此错误，请提供相应的成员函数。 转换导致丢失限定时，不能 const 或 volatile 限定的对象上执行转换。 您可以获得限定符，但不能丢失在转换中的限定符。
+若要修复此错误，请提供相应的成员函数。 当转换导致无法进行限定时，不能对 const 或 volatile 限定对象执行转换。 可以获取限定符，但不能在转换中丢失限定符。
 
-以下示例生成 C3849:
+以下示例生成 C3849：
 
-```
+```cpp
 // C3849.cpp
 void glbFunc3(int i, char c)
 {

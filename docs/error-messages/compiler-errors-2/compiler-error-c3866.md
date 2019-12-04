@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3866
 ms.assetid: 685870af-2440-4cdf-a6cb-284a5b96ef9d
-ms.openlocfilehash: 98014fec77ce47fa4c484645f401e615f1470e2f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 907e435b31a825021b03946f08f7307c5e1ed708
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302295"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761452"
 ---
 # <a name="compiler-error-c3866"></a>编译器错误 C3866
 
-函数调用缺少参数列表
+缺少参数列表的函数调用
 
-如果在非静态成员函数的析构函数或终结器调用没有参数列表。
+在非静态成员函数中，析构函数或终结器调用没有参数列表。
 
-下面的示例生成 C3866:
+下面的示例生成 C3866：
 
-```
+```cpp
 // C3866.cpp
 // compile with: /c
 class C {

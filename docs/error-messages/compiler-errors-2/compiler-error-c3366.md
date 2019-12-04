@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C3366
 ms.assetid: efc55bcf-c16d-43c1-a36f-87a6165fa2a8
-ms.openlocfilehash: 4d1cd510cda9957ced1d9dd5fd8fea267f39220d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5173b1c0df7de6a4e8d9993e680b961a82bb10a7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300552"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738461"
 ---
 # <a name="compiler-error-c3366"></a>编译器错误 C3366
 
-variable： 托管的静态数据成员或 WinRTtypes 必须在类定义中定义
+"variable"：托管或 WinRTtypes 的静态数据成员必须在类定义中定义
 
 尝试在 WinRT 或 .NET 类/接口定义外部引用该类或接口的静态成员。
 
@@ -23,7 +23,7 @@ variable： 托管的静态数据成员或 WinRTtypes 必须在类定义中定�
 
 例如，下面的示例生成 C3366，并演示如何修复此错误：
 
-```
+```cpp
 // C3366.cpp
 // compile with: /clr /c
 ref class X {

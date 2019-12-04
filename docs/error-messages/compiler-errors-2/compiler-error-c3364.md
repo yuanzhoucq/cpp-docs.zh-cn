@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3364
 ms.assetid: 98654741-60fe-4472-a6af-e580f8c0a6e1
-ms.openlocfilehash: e99ab3919edcfb883701c08c52cd7aad60cd4591
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eae1e7ddbc34d36b55d7afa424c137db00ef047d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400352"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757340"
 ---
 # <a name="compiler-error-c3364"></a>编译器错误 C3364
 
-delegate： 委托构造函数： 参数必须为指向托管类的成员函数或全局函数
+"delegate"：委托构造函数：参数必须是指向托管类或全局函数的成员函数的指针
 
-委托的构造函数的第二个参数采用成员函数的地址或任何类的静态成员函数的地址。 同时被视为简单的地址。
+委托构造函数的第二个参数采用成员函数的地址或任何类的静态成员函数的地址。 两者都被视为简单地址。
 
-下面的示例生成 C3364:
+下面的示例生成 C3364：
 
-```
+```cpp
 // C3364_2.cpp
 // compile with: /clr
 

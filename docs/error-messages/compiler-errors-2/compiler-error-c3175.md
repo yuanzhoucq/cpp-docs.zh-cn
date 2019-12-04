@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3175
 ms.assetid: 3f19d513-a05a-4b6c-806f-276fe5c36b90
-ms.openlocfilehash: 368e5a9cb9bea04a7889c25c86a7245049677112
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8be6cfa72c33212593c0b2a73ad38ad9fc113f26
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175447"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761707"
 ---
 # <a name="compiler-error-c3175"></a>编译器错误 C3175
 
-function1： 不能将托管类型的方法调用从非托管函数 function2
+"function1"：不能从非托管函数 "function2" 调用托管类型的方法
 
-非托管的函数不能调用托管类成员的函数。
+非托管函数不能调用托管类的成员函数。
 
-下面的示例生成 C3175:
+下面的示例生成 C3175：
 
-```
+```cpp
 // C3175_2.cpp
 // compile with: /clr
 

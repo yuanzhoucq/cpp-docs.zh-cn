@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3612
 ms.assetid: aa6e3a2b-4afa-481c-98c1-1b6d1f82f869
-ms.openlocfilehash: ab18381d3f263e3207662e1667ac5c835983412f
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 499c31b0c02bd72695cd6118612609a70316f0ae
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344491"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755741"
 ---
 # <a name="compiler-error-c3612"></a>编译器错误 C3612
 
-type： 密封的类不能是抽象
+"type"：密封类不能是抽象的
 
-通过使用定义的类型`value`密封的默认情况下，和一个类是抽象的除非它实现了其基类的所有方法。 密封的抽象类既不是一个基类，也可以将它实例化。
+默认情况下，使用 `value` 定义的类型是密封的，除非它实现其基的所有方法，否则类是抽象的。 密封的抽象类既不能是基类，也不能被实例化。
 
-有关详细信息，请参阅[类和结构](../../extensions/classes-and-structs-cpp-component-extensions.md)。
+有关更多信息，请参阅[类和结构](../../extensions/classes-and-structs-cpp-component-extensions.md)。
 
 ## <a name="example"></a>示例
 
-下面的示例生成 C3612:
+下面的示例生成 C3612：
 
-```
+```cpp
 // C3612.cpp
 // compile with: /clr /c
 value struct V: public System::ICloneable {};   // C3612

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2247
 ms.assetid: 72efa03e-615e-4ef9-aede-0a98654b20fd
-ms.openlocfilehash: ab1f83e2075128441cbffd2d939e3b99b45be4c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e82b406b20d77a824b62207b1766fec55ac65c5c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301365"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758900"
 ---
 # <a name="compiler-error-c2247"></a>编译器错误 C2247
 
-identifier 不可访问，因为 class 使用 specifier 继承 class
+"identifier" 不可访问，因为 "class" 使用 "说明符" 继承自 "class"
 
-`identifier` 从声明为具有私有或受保护的访问权限的类继承。
+`identifier` 继承自使用私有或受保护访问权限声明的类。
 
-下面的示例生成 C2247:
+下面的示例生成 C2247：
 
-```
+```cpp
 // C2247.cpp
 class A {
 public:
@@ -32,11 +32,11 @@ class C : public B {} c;   // so even though C's B is public
 int j = c.i;               // C2247, i not accessible
 ```
 
-此外可以为 Visual Studio.NET 2003年执行的编译器一致性工作生成此错误： 访问控制与受保护的成员。 仅可以通过类 (B) 继承的类 (A) (n) 的成员的成员函数的访问受保护的成员 (n)。
+对于 Visual Studio .NET 2003：具有受保护成员的访问控制，此错误也可能是由于编译器一致性工作而生成的。 受保护的成员（n）只能通过类的成员函数（B）进行访问，该类继承自类（n）是其成员的类（n）。
 
-在 Visual Studio.NET 2003年和 Visual Studio.NET 版本的视觉对象中是有效的代码的C++，声明为友元类型的成员。 此外可以使用公共继承。
+对于在 Visual Studio .NET 2003 和 visual Studio .NET 版本的视觉C++对象中都有效的代码，将成员声明为类型的友元。 还可以使用公共继承。
 
-```
+```cpp
 // C2247b.cpp
 // compile with: /c
 // C2247 expected
@@ -57,11 +57,11 @@ void A::f() {
 }
 ```
 
-C2247 也生成为 Visual Studio.NET 2003年执行的编译器一致性工作： 现在无法访问私有基的类。 是一种类型的私有基类的类 (A) （B） 不应访问的类型 （C） 作为基类使用 B。
+对于 Visual Studio .NET 2003 的编译器一致性工作，还可以生成 C2247：现在无法访问私有基类。 作为类型（B）的私有基类的类（A）应不能访问使用 B 作为基类的类型（C）。
 
-在 Visual Studio.NET 2003年和 Visual Studio.NET 版本的视觉对象中是有效的代码的C++，使用范围运算符。
+对于在 Visual Studio .NET 2003 和 visual Studio .NET 版本的视觉C++对象中都有效的代码，请使用 scope 运算符。
 
-```
+```cpp
 // C2247c.cpp
 // compile with: /c
 struct A {};

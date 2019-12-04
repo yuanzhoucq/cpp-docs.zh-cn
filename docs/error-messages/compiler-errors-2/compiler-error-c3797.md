@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3797
 ms.assetid: ab27ff34-8c1d-4297-b004-9e39bd3a4f25
-ms.openlocfilehash: 76206cdffce3f551ff472cbd83df486eb41ae80b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7236cb75aef4250440a1e992415df07fb5b7da3f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400131"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757171"
 ---
 # <a name="compiler-error-c3797"></a>编译器错误 C3797
 
-override： 事件声明不能具有重写说明符 （而应放置事件添加/remove/raise 方法相反）
+"override"：事件声明不能具有重写说明符（而应将其放在事件的 add/remove/raise 方法上）
 
-不能覆盖另一个常用事件的普通事件 （事件，而不显式定义访问器方法）。 重写事件必须定义其行为与访问器函数。
+不能使用另一个常用事件替代普通事件（没有显式定义的访问器方法的事件）。 重写事件必须定义其对访问器函数的行为。
 
 有关详细信息，请参阅[事件](../../extensions/event-cpp-component-extensions.md)。
 
@@ -25,7 +25,7 @@ override： 事件声明不能具有重写说明符 （而应放置事件添加/
 
 下面的示例生成 C3797。
 
-```
+```cpp
 // C3797.cpp
 // compile with: /clr /c
 delegate void MyDel();

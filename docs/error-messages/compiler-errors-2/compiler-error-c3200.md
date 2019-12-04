@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3200
 ms.assetid: 44bb5e77-f0ec-421c-a732-b9ee7c0a3529
-ms.openlocfilehash: 7eb0c00f4f4c5c59766bf305acfef89e12a6cfb1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f6b514231bcda18404e891e0acbe457c8f95146
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402770"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738773"
 ---
 # <a name="compiler-error-c3200"></a>编译器错误 C3200
 
-模板： 模板参数 parameter 的无效的模板参数应为类模板
+"template"：模板参数 "parameter" 的模板参数无效，应为类模板
 
-传递到类模板的参数无效。 类模板需要一个参数作为模板。 在以下示例中，调用`Y<int, int> aY`将生成 C3200。 第一个参数必须是一个模板，如`Y<X, int> aY`。
+向类模板传递的参数无效。 类模板需要模板作为参数。 在下面的示例中，调用 `Y<int, int> aY` 将生成 C3200。 第一个参数必须是一个模板，如 `Y<X, int> aY`。
 
-```
+```cpp
 // C3200.cpp
 template<typename T>
 class X

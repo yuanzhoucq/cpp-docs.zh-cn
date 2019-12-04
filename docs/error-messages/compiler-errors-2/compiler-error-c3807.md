@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3807
 ms.assetid: 7e2b0aab-8c61-4e71-b9c1-fcaeb6a1b5ea
-ms.openlocfilehash: b5599914666af95a29667acc1ad4ad35eef7608f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a4b33782c0a1e5abb811210c9e7a28da7040c805
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391928"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755260"
 ---
 # <a name="compiler-error-c3807"></a>编译器错误 C3807
 
-type： 具有 ComImport 特性的类不能从 type2 派生，允许仅接口实现
+"type"：具有 ComImport 特性的类不能从 "type2" 派生，只允许使用接口实现
 
-派生自的类型<xref:System.Runtime.InteropServices.ComImportAttribute>只能实现一个接口。
+派生自 <xref:System.Runtime.InteropServices.ComImportAttribute> 的类型只能实现接口。
 
 ## <a name="example"></a>示例
 
 下面的示例生成 C3807。
 
-```
+```cpp
 // C3807.cpp
 // compile with: /clr /c
 ref struct S {};

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3133
 ms.assetid: 4a709405-b67b-4061-8a2a-19fa5fb34a2a
-ms.openlocfilehash: 0a0c30203f886934a19fde35e51602b57cc1b14d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 003befa97b033eec38d7187966da15e4a275f310
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164847"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760707"
 ---
 # <a name="compiler-error-c3133"></a>编译器错误 C3133
 
-属性不能应用于C++varargs
+特性不能应用于C++ varargs
 
-未正确应用特性。 属性不会应用于表示变量参数的省略号。
+未正确应用特性。 特性不能应用于表示变量参数的省略号。
 
-有关详细信息，请参阅 [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md)。
+有关更多信息，请参见 [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md)。
 
 ## <a name="example"></a>示例
 
 下面的示例生成 C3133。
 
-```
+```cpp
 // C3133.cpp
 // compile with: /clr /c
 ref struct MyAttr: System::Attribute {};

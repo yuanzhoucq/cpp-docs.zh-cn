@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3918
 ms.assetid: a8b3a90a-3fe1-4244-a5ff-a31cdae97d98
-ms.openlocfilehash: 2c2d2f2598d06ca228a96f2786fcb02888e29a1b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ff2b59338c707767fa1d3c382feaa1bfcdf29ce2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386611"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758484"
 ---
 # <a name="compiler-error-c3918"></a>编译器错误 C3918
 
-用法要求 member 是数据成员
+用法要求 "member" 是数据成员
 
-C3918 可能与事件相关的几个原因。
+与事件相关的多种原因可能会导致 C3918。
 
 ## <a name="example"></a>示例
 
-因为当前上下文中不需要的类成员，则会发生 C3918。 下面的示例生成 C3918。
+由于当前上下文需要类成员，因此可能会发生 C3918。 下面的示例生成 C3918。
 
-```
+```cpp
 // C3918.cpp
 // compile with: /clr /c
 public ref class C {
@@ -43,11 +43,11 @@ public:
 
 ## <a name="example"></a>示例
 
-如果尝试检查常用事件为 null （事件名称将不再提供对直接访问后备存储区委托的事件），则也会导致 C3918。
+如果尝试检查简单事件的 null 值（事件名称将不再提供对事件的后备存储委托的直接访问权限），也会导致 C3918。
 
 下面的示例生成 C3918。
 
-```
+```cpp
 // C3918_2.cpp
 // compile with: /clr /c
 using namespace System;
@@ -68,9 +68,9 @@ ref struct EventSource : public IEFace {
 
 ## <a name="example"></a>示例
 
-如果您错误地订阅事件，也可能发生 C3918。 下面的示例生成 C3918。
+如果未正确订阅事件，也会发生 C3918。 下面的示例生成 C3918。
 
-```
+```cpp
 // C3918_3.cpp
 // compile with: /clr /c
 using namespace System;

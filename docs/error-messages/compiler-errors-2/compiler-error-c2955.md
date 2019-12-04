@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2955
 ms.assetid: 77709fb6-d69b-46fd-a62f-e8564563d01b
-ms.openlocfilehash: c012e5189b9ca1d0b0e786cbddacedee7c6728d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8afdeaf43c0c9789753b9165f1e8a8287aaac76d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300734"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742868"
 ---
 # <a name="compiler-error-c2955"></a>编译器错误 C2955
 
@@ -23,7 +23,7 @@ ms.locfileid: "62300734"
 
 下面的示例生成 C2955，并演示如何修复此错误：
 
-```
+```cpp
 // C2955.cpp
 // compile with: /c
 template<class T>
@@ -35,7 +35,7 @@ X<int> x2;   // OK - this is how to fix it.
 
 当尝试为类模板中声明的函数进行超行定义时，也可能发生 C2955：
 
-```
+```cpp
 // C2955_b.cpp
 // compile with: /c
 template <class T>
@@ -54,7 +54,7 @@ void CT<T>::CTFunc2() {}
 
 使用泛型时也可能发生 C2955：
 
-```
+```cpp
 // C2955_c.cpp
 // compile with: /clr
 generic <class T>
@@ -70,7 +70,7 @@ int main() {
 
 ## <a name="example"></a>示例
 
-**Visual Studio 2017 和更高版本：** 当模板出现在模板参数列表中 （例如作为默认模板自变量或非类型模板参数的一部分），编译器正确地诊断缺少的模板参数列表。 下列代码在 Visual Studio 2015 中进行编译，但在 Visual Studio 2017 中引发错误。
+**Visual Studio 2017 及更高版本：** 当模板出现在模板参数列表中时（例如，作为默认模板参数或非类型模板参数的一部分），编译器会正确地诊断缺少的模板参数列表。 下列代码在 Visual Studio 2015 中进行编译，但在 Visual Studio 2017 中引发错误。
 
 ```
 template <class T> class ListNode;

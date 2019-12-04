@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2208
 ms.assetid: 9ae704bc-bf70-45f1-8e47-0470f21edd4e
-ms.openlocfilehash: 7970ba5d8d2b19bd6e330fad1879880fc5cbf32d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 208e15e98a05089c0e9b1c98400f5267e4f3a48f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400443"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758926"
 ---
 # <a name="compiler-error-c2208"></a>编译器错误 C2208
 
-type： 没有定义使用此类型的成员
+"type"：没有使用此类型定义的成员
 
-标识符解析为类型名称是在聚合声明中，但编译器不能声明一个成员。
+解析为类型名称的标识符位于聚合声明中，但编译器无法声明成员。
 
-下面的示例生成 C2208:
+下面的示例生成 C2208：
 
-```
+```cpp
 // C2208.cpp
 class C {
    C;   // C2208

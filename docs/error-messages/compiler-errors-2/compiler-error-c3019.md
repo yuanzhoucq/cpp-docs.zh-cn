@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3019
 ms.assetid: 31a6d9b6-d29f-4499-9ad8-48dd751e87c7
-ms.openlocfilehash: bba90917614cbc8facb182659c288f9823d8ab45
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 15b2dbf55b18c50020140eae25a71b18ceb10b10
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386702"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742127"
 ---
 # <a name="compiler-error-c3019"></a>编译器错误 C3019
 
-在 OpenMP for 语句的增量具有格式不正确
+OpenMP "for" 语句中的增量格式不正确
 
-OpenMP 的增量部分`for`循环必须使用索引变量都在左侧和右侧运算符。
+OpenMP `for` 循环的递增部分必须同时在运算符的左侧和右侧使用索引变量。
 
-下面的示例生成 C3019:
+下面的示例生成 C3019：
 
-```
+```cpp
 // C3019.cpp
 // compile with: /openmp
 int main()
