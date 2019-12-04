@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2970
 ms.assetid: 21d90348-20d3-438c-b278-efdbfb93a7d2
-ms.openlocfilehash: 425d1bf50d56c4455ccd9292b300e744625d34c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: af30ccc4a71c51d042d6f7807a648a1eef066a70
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62256331"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742660"
 ---
 # <a name="compiler-error-c2970"></a>编译器错误 C2970
 
-class： 模板参数 param: arg： 涉及带有内部链接的对象的表达式不能用作非类型参数
+"class"：模板参数 "param"： "arg"：涉及带有内部链接的对象的表达式不能用作非类型参数
 
-不能作为模板参数中使用的名称或静态变量的地址。 模板类需要可以在编译时计算的常量值。
+不能将静态变量的名称或地址用作模板参数。 模板类需要可以在编译时计算的常量值。
 
-下面的示例生成 C2970:
+下面的示例生成 C2970：
 
-```
+```cpp
 // C2970.cpp
 // compile with: /c
 static int si;

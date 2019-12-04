@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2311
 ms.assetid: 1aff9bd5-ed0b-4db6-bbc0-01ac89850cf2
-ms.openlocfilehash: f4eff6f88a247dd17a2c9399b9009717f8fb8e62
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e72ff7325e293697b0117e527b0d9edd55840481
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303042"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748172"
 ---
 # <a name="compiler-error-c2311"></a>编译器错误 C2311
 
-exception： 由...在行号上捕获
+"exception"：由 "..." 捕获行号
 
-省略号 （...） 的 catch 处理程序必须以引发的最后一个处理程序。
+省略号（...）的 catch 处理程序必须是 throw 的最后一个处理程序。
 
-下面的示例生成 C2311:
+下面的示例生成 C2311：
 
-```
+```cpp
 // C2311.cpp
 // compile with: /EHsc
 #include <eh.h>

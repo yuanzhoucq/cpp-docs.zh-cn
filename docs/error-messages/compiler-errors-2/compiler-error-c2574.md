@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2574
 ms.assetid: 3e1c5c18-ee8b-4dbb-bfc0-d3b8991af71b
-ms.openlocfilehash: 764ff36441c563edd538c41be5c23c12f80e2537
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e0959d875065f7548706b07b032798a68bb4639b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300802"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755468"
 ---
 # <a name="compiler-error-c2574"></a>编译器错误 C2574
 
-析构函数： 不能声明为静态
+"析构函数"：不能声明为 static
 
-可以声明析构函数和构造函数都不`static`。
+析构函数和构造函数都不能 `static`声明。
 
-下面的示例生成 C2574:
+下面的示例生成 C2574：
 
-```
+```cpp
 // C2574.cpp
 // compile with: /c
 class A {

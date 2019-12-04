@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C1197
 ms.assetid: 22b801b7-e792-41f6-a461-973c03c69f25
-ms.openlocfilehash: e1c00a001c807b0cc6a5946b61ca4e9d5dc0167a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f698262c73f0b311a92a8940107b552430919bb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62229112"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74747236"
 ---
 # <a name="fatal-error-c1197"></a>错误 C1197
 
-不能引用 mscorlib.dll_1，因为程序已经引用 mscorlib.dll_2
+无法引用 "mscorlib. dll_1"，因为程序已经引用了 "mscorlib. dll_2"
 
-编译器与公共语言运行时版本匹配。  但是，尝试从以前的版本中引用公共语言运行时文件的版本。
+编译器与公共语言运行时的版本匹配。  但是，尝试引用以前版本中的公共语言运行时文件的版本。
 
-若要解决此错误，只能从引用文件与视觉对象的版本附带的公共语言运行时版本C++正在使用进行编译。
+若要解决此错误，只需要从您正在编译的 Visual C++语言运行时版本附带的公共语言运行时版本引用文件。
 
 ## <a name="example"></a>示例
 
-下面的示例生成 C1197:
+下面的示例生成 C1197：
 
-```
+```cpp
 // C1197.cpp
 // compile with: /clr /c
 // processor: x86

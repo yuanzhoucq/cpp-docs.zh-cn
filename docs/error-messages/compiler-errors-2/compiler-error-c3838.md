@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3838
 ms.assetid: d6f470c2-131a-4a8c-843a-254acd43da83
-ms.openlocfilehash: c8664c9df837d44ab6e356d54ff9e35c3776778a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 468fc5e8cb6b3a76880f12fe0aab14810f458a90
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208076"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741347"
 ---
 # <a name="compiler-error-c3838"></a>编译器错误 C3838
 
-从 type 不能显式继承
+无法从 "type" 显式继承
 
-指定`type`不能充当中的任何类的基类。
+指定的 `type` 不能用作任何类中的基类。
 
 ## <a name="example"></a>示例
 
-下面的示例生成 C3838:
+下面的示例生成 C3838：
 
-```
+```cpp
 // C3838a.cpp
 // compile with: /clr /c
 public ref class B : public System::Enum {};   // C3838

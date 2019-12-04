@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2680
 ms.assetid: d6f7129e-dd17-4661-b680-18d6b925b1cc
-ms.openlocfilehash: 7a0f58ae16baee00a86038c633f996a7d27a1019
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37535c9ffbafd0d312646d5f3cfdb0c4411bc790
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386806"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760304"
 ---
 # <a name="compiler-error-c2680"></a>编译器错误 C2680
 
-type： 名称的目标类型无效
+"type"：名称的目标类型无效
 
-尝试转换不是指针或引用的类型强制转换运算符。 [Dynamic_cast](../../cpp/dynamic-cast-operator.md)运算符可仅对指针或引用。
+转换运算符尝试转换为不是指针或引用的类型。 [Dynamic_cast](../../cpp/dynamic-cast-operator.md)运算符仅可用于指针或引用。
 
-下面的示例生成 C2680:
+下面的示例生成 C2680：
 
-```
+```cpp
 // C2680.cpp
 // compile with: /c
 class A { virtual void f(); };
@@ -34,9 +34,9 @@ void g(B b) {
 }
 ```
 
-未定义目标时，也可能发生 C2680:
+未定义目标时也可能发生 C2680：
 
-```
+```cpp
 // C2680b.cpp
 // compile with: /clr /c
 // C2680 expected

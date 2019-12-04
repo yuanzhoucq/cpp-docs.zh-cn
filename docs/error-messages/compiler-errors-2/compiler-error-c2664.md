@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2664
 ms.assetid: 3595d66e-cf87-4fda-a896-c0cd81f95db4
-ms.openlocfilehash: cffd178e1736358333ee27d4572d3531de23f527
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93bdac489dea0356ce3da3298cd8ed6bcb6f623c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360315"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756001"
 ---
 # <a name="compiler-error-c2664"></a>编译器错误 C2664
 
 “函数”: 无法将自变量 n 从“类型 1”转换为“类型 2”
 
-如果创建了某个类的实例，然后尝试了对用 `explicit` 关键字标记的构造函数进行隐式转换，则可能会发生此参数转换问题。 有关显式转换的详细信息，请参阅[用户定义类型的转换](../../cpp/user-defined-type-conversions-cpp.md)。
+如果创建了某个类的实例，然后尝试了对用 `explicit` 关键字标记的构造函数进行隐式转换，则可能会发生此参数转换问题。 有关显式转换的详细信息，请参阅[用户定义的类型转换](../../cpp/user-defined-type-conversions-cpp.md)。
 
 如果将临时对象传递给采用指向对象的引用作为参数的函数，则该引用必须是 `const` 引用。
 
@@ -31,13 +31,13 @@ ms.locfileid: "62360315"
 
 如果某个类在它的一个基类中隐藏了成员，也可能生成 C2664。
 
-有关详细信息，请参阅[如何：将 system:: string 转换为 wchar_t * 或 char\*](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)。
+有关详细信息，请参阅[如何：将 System：： String 转换为 wchar_t * 或 char\*](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)。
 
 ## <a name="example"></a>示例
 
 下面的示例生成 C2664，并演示如何修复此错误。
 
-```
+```cpp
 // C2664.cpp
 // C2664
 struct A {
@@ -61,7 +61,7 @@ int main() {
 
 此示例也生成 C2664，并演示如何修复此错误。
 
-```
+```cpp
 // C2664b.cpp
 // C2664 expected
 struct A {
@@ -80,7 +80,7 @@ int main() {
 
 下一个示例通过使用字符串调用 `Test` 来演示 C2664，并演示如何修复此错误。 因为该参数是 `szString` 引用，所以必须使用适当的构造函数创建对象。 结果是一个无法用于初始化该引用的临时对象。
 
-```
+```cpp
 // C2664c.cpp
 // compile with: /EHsc
 // C2664 expected
@@ -121,7 +121,7 @@ int main() {
 
 编译器强制实施应用 `const` 的 C++ 标准需求。 此示例生成 C2664：
 
-```
+```cpp
 // C2664d.cpp
 // C2664 expected
 #include <windows.h>
@@ -146,7 +146,7 @@ int main()
 
 下面是生成 C2664 的更复杂情况，包括有关如何修复此错误的说明：
 
-```
+```cpp
 // C2664e.cpp
 // compile with: /EHsc
 // C2664 expected
@@ -189,9 +189,9 @@ int main( ) {
 
 ## <a name="example"></a>示例
 
-枚举变量未转换为其满足函数调用的基础类型。 有关详细信息，请参阅[枚举类](../../extensions/enum-class-cpp-component-extensions.md)。 下面的示例生成 C2664，并演示如何修复此错误。
+枚举变量未转换为其满足函数调用的基础类型。 有关详细信息，请参阅[enum 类](../../extensions/enum-class-cpp-component-extensions.md)。 下面的示例生成 C2664，并演示如何修复此错误。
 
-```
+```cpp
 // C2664f.cpp
 // compile with: /clr
 using namespace System;
@@ -232,13 +232,13 @@ library myproj1 {
 }
 ```
 
-将代码从 Visual C++ 6.0 移植到更高版本时，使用 `wchar_t` 也会引发 C2664。 在 Visual C++ 6.0 和更早版本中，`wchar_t` 是 `typedef` 的 `unsigned short`，因此也可隐式转换为该类型。 在 Visual C++ 6.0 后，`wchar_t` 是它自己的内置类型（在 C++ 标准中指定），因此不再能隐式转换为 `unsigned short`。 请参阅[/zc: wchar_t （wchar_t 是本机类型）](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。
+将代码从 Visual C++ 6.0 移植到更高版本时，使用 `wchar_t` 也会引发 C2664。 在 Visual C++ 6.0 和更早版本中，`wchar_t` 是 `typedef` 的 `unsigned short`，因此也可隐式转换为该类型。 在 Visual C++ 6.0 后，`wchar_t` 是它自己的内置类型（在 C++ 标准中指定），因此不再能隐式转换为 `unsigned short`。 请参阅[/zc： wchar_t （Wchar_t 是本机类型）](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。
 
 ## <a name="example"></a>示例
 
 下面的示例生成 C2664，并演示如何修复此错误。
 
-```
+```cpp
 // C2664h.cpp
 #import "C2664g.tlb"
 using namespace myproj1;
@@ -260,7 +260,7 @@ int main() {
 
 如果编译器无法推导出模板自变量，则也会导致 C2664。
 
-```
+```cpp
 // C2664i.cpp
 #include <stdio.h>
 template <class T, int iType=0>

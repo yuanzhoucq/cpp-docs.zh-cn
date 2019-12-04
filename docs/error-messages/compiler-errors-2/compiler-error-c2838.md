@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2838
 ms.assetid: 176b2ad6-7a84-4019-b97e-328866054457
-ms.openlocfilehash: 1482efa8b018914a4ebc509464622726ae9ebb20
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 168f45a8cca8591d4780d056403de70440d25bec
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383004"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757834"
 ---
 # <a name="compiler-error-c2838"></a>编译器错误 C2838
 
-member： 成员声明中的非法限定的名
+"member"：成员声明中的非法限定名
 
-类、 结构或联合使用完全限定的名称重新声明另一个类、 结构或联合的成员。
+类、结构或联合使用完全限定名称重新声明另一类、结构或联合的成员。
 
-下面的示例生成 C2838:
+下面的示例生成 C2838：
 
-```
+```cpp
 // C2838.cpp
 // compile with: /c
 class Bellini {

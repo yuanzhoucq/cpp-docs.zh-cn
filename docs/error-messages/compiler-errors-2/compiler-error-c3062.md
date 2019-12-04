@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3062
 ms.assetid: 78632e6d-255f-42c3-b124-31a9194ff86d
-ms.openlocfilehash: 6f4157db4a2a1b1864446a082deddc73df2e2fe9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9b1fbc8f4ca2ce3434a30e833f4741bc17015bbb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406790"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749524"
 ---
 # <a name="compiler-error-c3062"></a>编译器错误 C3062
 
-enum： 枚举数需要值，因为基础类型为 type
+"enum"：枚举器需要值，因为基础类型是 "type"
 
-可以指定一个枚举的基础类型。 但是，某些类型需要您要将值分配到每个枚举器。
+可以指定枚举的基础类型。 但是，某些类型要求向每个枚举器分配值。
 
-枚举的详细信息，请参阅[枚举类](../../extensions/enum-class-cpp-component-extensions.md)。
+有关枚举的详细信息，请参阅[enum 类](../../extensions/enum-class-cpp-component-extensions.md)。
 
-下面的示例生成 C3062:
+下面的示例生成 C3062：
 
-```
+```cpp
 // C3062.cpp
 // compile with: /clr
 

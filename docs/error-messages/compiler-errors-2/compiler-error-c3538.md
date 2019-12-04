@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3538
 ms.assetid: ef3698a5-7356-4c62-b9af-5d3a4baed958
-ms.openlocfilehash: e8b97c8c6e5d23c406bf2d5831279810e7de0902
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1bd287c6b7e0b07938db55c282c69cd00fd25df
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376180"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761538"
 ---
 # <a name="compiler-error-c3538"></a>编译器错误 C3538
 
@@ -27,7 +27,7 @@ ms.locfileid: "62376180"
 
 下面的语句生成 C3538。 每条语句声明多个变量，但 `auto` 关键字的每次使用都不推导为同一类型。
 
-```
+```cpp
 // C3538.cpp
 // Compile with /Zc:auto
 // C3538 expected
@@ -45,6 +45,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [auto 关键字](../../cpp/auto-keyword.md)

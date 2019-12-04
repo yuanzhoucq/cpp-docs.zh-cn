@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2502
 ms.assetid: affa0b86-15fc-4e17-b7f2-6aad4a3771c4
-ms.openlocfilehash: e23ccae55c40c9652f5a3e1f55c834a968bca784
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4ff3523ac803e7804ca56532631fe77b240c215d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165575"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746911"
 ---
 # <a name="compiler-error-c2502"></a>编译器错误 C2502
 
-identifier： 基类上的访问修饰符太多
+"identifier"：基类上的访问修饰符太多
 
-基本类具有多个访问修饰符。 只有一个访问修饰符 (`public`， `private`，或`protected`) 允许。
+基类具有多个访问修饰符。 只允许使用一个访问修饰符（`public`、`private`或 `protected`）。
 
-下面的示例生成 C2502:
+下面的示例生成 C2502：
 
-```
+```cpp
 // C2502.cpp
 // compile with: /c
 class A { };

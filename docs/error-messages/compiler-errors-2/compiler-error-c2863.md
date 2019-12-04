@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2863
 ms.assetid: 32561d67-a795-486b-b3b6-4b90a1acb176
-ms.openlocfilehash: c0ee0e2932ef0ce739e14fd29ddde31f7d665f43
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 127db2f3e7d334b684502587f9b330959063234e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227465"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755065"
 ---
 # <a name="compiler-error-c2863"></a>编译器错误 C2863
 
-interface： 接口不能有友元
+"interface"：接口不能有友元
 
-不允许声明友元接口上。
+不允许在接口上声明好友。
 
-下面的示例生成 C2863:
+下面的示例生成 C2863：
 
-```
+```cpp
 // C2863.cpp
 // compile with: /c
 #include <unknwn.h>
