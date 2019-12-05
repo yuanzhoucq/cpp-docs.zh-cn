@@ -10,12 +10,12 @@ helpviewer_keywords:
 - return keyword [C++], function return types
 - functions [C++], return types
 ms.assetid: 3e5b8a97-b341-48c5-8be8-8986980ef586
-ms.openlocfilehash: 3f781e59672764dc518f3c6fad61d4021720362a
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: fe9280f434dd6267b03764df2ee663c494f007d8
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148135"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857029"
 ---
 # <a name="return-type"></a>返回类型
 
@@ -26,7 +26,7 @@ ms.locfileid: "56148135"
 function-definition：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *declarator* *declaration-list*<sub>opt</sub> *compound-statement*
 
-/\* *attribute-seq* 为 Microsoft 专用 \*/
+/\**属性-seq*是特定于 Microsoft 的 \*/
 
 *declaration-specifiers*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub><br/>
@@ -38,10 +38,10 @@ function-definition：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**char**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**short**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**int**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__int8** /\* Microsoft 专用 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__int16** /\* Microsoft 专用 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__int32** /\* Microsoft 专用 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__int64** /\* Microsoft 专用 \*/<br/>
+&nbsp;&nbsp; **&nbsp;&nbsp;__int8 /\*** \*/<br/>
+&nbsp;&nbsp; **&nbsp;&nbsp;__int16 /\*** \*/<br/>
+&nbsp;&nbsp; **&nbsp;&nbsp;__int32 /\*** \*/<br/>
+&nbsp;&nbsp; **&nbsp;&nbsp;__int64 /\*** \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**long**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**float**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**double**<br/>
@@ -97,6 +97,6 @@ char *smallstr( char s1[], char s2[] )
 
 在调用函数之前，您无需使用 `int` 返回类型声明函数，但建议使用原型，以便启用对参数和返回值的正确类型检查。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [C 函数定义](../c-language/c-function-definitions.md)

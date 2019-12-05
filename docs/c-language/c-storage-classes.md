@@ -9,12 +9,12 @@ helpviewer_keywords:
 - storage class specifiers, C storage classes
 - storage duration
 ms.assetid: 893fb929-f7a9-43dc-a0b3-29cb1ef845c1
-ms.openlocfilehash: 85eb11397b2336363fe4f55da26623fac720faf3
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 77aefe41fecf003218343710ef090eebf99446a8
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151788"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857107"
 ---
 # <a name="c-storage-classes"></a>C 存储类
 
@@ -32,7 +32,7 @@ C 提供了以下存储类说明符：
 &nbsp;&nbsp;&nbsp;&nbsp;**static**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**extern**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**typedef**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (** *extended-decl-modifier-seq* **)** /\* Microsoft 专用 \*/
+&nbsp;&nbsp;&nbsp;__declspec /\* \*/ **（** *decl* **）** &nbsp;
 
 除 `__declspec` 之外，只能在声明中的 declaration-specifier 中使用一个 storage-class-specifier。 如果没有制定存储类规范，块中的声明将创建自动对象。
 
@@ -50,6 +50,6 @@ C 提供了以下存储类说明符：
 
 [用于外部级别声明的存储类说明符](../c-language/storage-class-specifiers-for-external-level-declarations.md)和[用于内部级别的存储类说明符](../c-language/storage-class-specifiers-for-internal-level-declarations.md)介绍了每种声明中的 storage-class-specifier 终端并解释了从变量中省略 storage-class-specifier 时的默认行为。 [存储类说明符与函数声明](../c-language/storage-class-specifiers-with-function-declarations.md)讨论了与函数一起使用的存储类说明符。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [声明和类型](../c-language/declarations-and-types.md)
