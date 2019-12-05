@@ -39,22 +39,22 @@ helpviewer_keywords:
 - long keyword [C++]
 - type specifiers [C++]
 - integral types
-- long keyword [C++], C++ data types
+- long keyword [C++]
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-ms.openlocfilehash: f4af392ed559349b0e49fd26f3ecb4406a70b74b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 99c30eeb942eb3ab57518cc63ce353cfeff0bec9
+ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153796"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810554"
 ---
 # <a name="fundamental-types--c"></a>基本类型 (C++)
 
 C++ 中的基础类型分为三个类别：整数、浮点和 void。 整数类型能够处理整数。 浮点类型能够指定可具有小数部分的值。
 
-[void](../cpp/void-cpp.md) 类型描述了值的空集。 类型的变量**void**可以指定-它主要用于声明不返回任何值的函数或声明泛型指针到非类型化或任意类型的数据。 任何表达式可以显式转换或强制转换为类型**void**。 但是，此类表达式仅限于下列用途：
+[void](../cpp/void-cpp.md) 类型描述了值的空集。 不能指定**void**类型的变量-它主要用于声明不返回值的函数或声明指向非类型化或任意类型数据的泛型指针。 任何表达式都可以显式转换或强制转换为类型**void**。 但是，此类表达式仅限于下列用途：
 
 - 表达式语句。 （有关详细信息，请参阅 [表达式](../cpp/expressions-cpp.md)。）
 
@@ -68,17 +68,17 @@ C++ 中的基础类型分为三个类别：整数、浮点和 void。 整数类�
 
 |类别|类型|内容|
 |--------------|----------|--------------|
-|整数|**char**|类型**char**是一种整型类型通常包含基本执行字符集的成员，默认情况下，这是在 Microsoft 的 ASCII C++。<br /><br /> C++类型的变量视为编译器**char**，**签名 char**，并**unsigned char**不同类型。 类型的变量**char**升级到**int** ，就好像它们是类型**签名 char**默认情况下，除非使用 /J 编译选项。 在这种情况下将它们视为类型**unsigned char**并提升为**int**没有符号扩展。|
-||**bool**|类型**bool**是一种整型类型可以具有两个值之一**true**或**false**。 其大小未指定。|
-||**short**|类型**短整型**(或简称**短**) 是大于或等于类型的大小的整型类型**char**，但小于或等于类型大小**int**。<br /><br /> 类型的对象**短**可以声明为**short 签名**或**unsigned short**。 **简单地说签名**是的同义词**短**。|
-||**int**|类型**int**是大于或等于类型的大小的整型类型**short int**，但小于或等于类型的大小**长**。<br /><br /> 类型的对象**int**可以声明为**带符号整型**或**无符号的 int**。**带符号整型**是的同义词**int**。|
-||**__int8**, **__int16**, **__int32**, **__int64**|固定大小的整数 `__int n`，其中 `n` 是整数变量的大小（以比特为单位）。 **__int8**， **__int16**， **__int32**并 **__int64**是 Microsoft 专用的关键字。 并非所有类型在所有体系结构上都都可用。 (**__int128**不受支持。)|
-||**long**|类型**长**(或**long int**) 是大于或等于类型的大小的整型类型**int**。<br /><br /> 类型的对象**长**可以声明为**长签名**或**无符号长**。 **签名长**是的同义词**长**。|
-||**long long**|大于 unsigned**长**。<br /><br /> 类型的对象**超长**可以声明为**长长签名**或**无符号长长**。 **长时间长签名**是的同义词**超长**。|
-||**wchar_t**， **__wchar_t**|类型的变量**wchar_t**指定宽字符或多字节字符类型。 默认情况下**wchar_t**是本机类型，但你可以使用[/zc: wchar_t-](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)以使**wchar_t**的 typedef **unsigned short**。 **__Wchar_t**类型是本机的 Microsoft 专用同义词**wchar_t**类型。<br /><br /> 在字符或字符串文本前使用 L 前缀可指定宽字符类型。|
+|整数|**char**|类型**char**是通常包含基本执行字符集成员的整数类型-默认情况下，这是 Microsoft C++中的 ASCII。<br /><br /> 编译器C++将**char**、**带符号 char**和**无符号字符**类型的变量视为具有不同的类型。 除非使用/J 编译选项，否则**char**类型的变量将提升为**int** ，就像它们是类型**有符号 char** 。 在这种情况下，它们被视为类型**无符号字符**，并在没有符号扩展的情况下提升为**int** 。|
+||**bool**|类型**bool**是整数类型，它可以是以下两个值之一： **true**或**false**。 其大小未指定。|
+||**short**|类型**short int** （简称**short**）是大于或等于**char**类型的大小且小于或等于**int**类型的大小的整数类型。<br /><br /> **Short**类型的对象可声明为**有符号 short**或**无符号 short**。 **带符号 short**是**short**的同义词。|
+||**int**|类型**int**是大于或等于**short int**类型的大小且小于或等于类型**long**的大小的整数类型。<br /><br /> **Int**类型的对象可声明为**有符号 int**或**无符号整数**。**带符号 int**是**int**的同义词。|
+||**__int8**、 **__int16**、 **__int32** **__int64**|固定大小的整数 `__int n`，其中 `n` 是整数变量的大小（以比特为单位）。 **__int8**、 **__int16**、 **__int32**和 **__int64**是 Microsoft 特定的关键字。 并非所有类型在所有体系结构上都可用。 （不支持 **__int128** 。）|
+||**long**|类型**long** （或**long int**）是大于或等于**int**类型的大小的整数类型。（在 Windows **long**上，的大小与**int**相同。）<br /><br /> **Long**类型的对象可声明为**有符号 long**或**无符号长整数**。 **带符号的 long**是**long**的同义词。|
+||**long long**|大于无符号**长**整数。<br /><br /> **Long long**类型的对象可声明为**有符号长**整型或**无符号长**整数。 **带符号长**整型是**长**时间的同义词。|
+||**wchar_t**， **__wchar_t**|**Wchar_t**类型的变量指定宽字符或多字节字符类型。 默认情况下， **wchar_t**是本机类型，但你可以使用[/zc： wchar_t](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)将**wchar_t** typedef 设置为**无符号短**。 **__Wchar_t**类型是特定于 Microsoft 的同义词，适用于本机**wchar_t**类型。<br /><br /> 在字符或字符串文本前使用 L 前缀可指定宽字符类型。|
 |浮点|**float**|类型**float**是最小的浮点类型。|
-||**double**|类型**双**浮动点类型是大于或等于类型**float**，但小于或等于类型的大小**长双精度型**。<br /><br /> Microsoft 专用：表示形式**长双精度**并**double**完全相同。 但是，**长双精度**并**double**是不同的类型。|
-||**long double**|类型**长双精度**浮动点类型是大于或等于类型**double**。|
+||**双精度**|类型**double**是大于或等于**float**类型但小于或等于类型**long double**的大小的浮点类型。<br /><br /> Microsoft 专用： **long double**和**double**的表示形式是相同的。 不过，**长双精度**型和**双精度**型是单独的类型。|
+||**long double**|类型**long double**是大于或等于**double**类型的浮点类型。|
 
 **Microsoft 专用**
 
@@ -88,10 +88,10 @@ C++ 中的基础类型分为三个类别：整数、浮点和 void。 整数类�
 
 |类型|大小|
 |----------|----------|
-|**bool**， **char**， **unsigned char**，**签名 char**， **__int8**|1 个字节|
-|**__int16**，**短**， **unsigned short**， **wchar_t**， **__wchar_t**|2 个字节|
-|**float**， **__int32**， **int**，**无符号的 int**，**长**，**无符号长**|4 个字节|
-|**双精度**， **__int64**，**长双精度型**，**长时间长**|8 个字节|
+|**bool**、 **char**、**无符号 char**、**带符号 char**、 **__int8**|1 个字节|
+|**__int16**， **short**，**无符号 short**， **wchar_t**， **__wchar_t**|2 个字节|
+|**float**， **__int32**， **int**，**无符号整数**，**长**，**无符号长**|4 个字节|
+|**double**、 **__int64**、 **long double**、 **long long**|8 个字节|
 
 **结束 Microsoft 专用**
 
@@ -99,6 +99,6 @@ C++ 中的基础类型分为三个类别：整数、浮点和 void。 整数类�
 
 有关类型转换的详细信息，请参阅 [标准转换](../cpp/standard-conversions.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [数据类型范围](../cpp/data-type-ranges.md)
