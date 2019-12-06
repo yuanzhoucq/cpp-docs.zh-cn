@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - _com_ptr_t method [C++]
 ms.assetid: 0c00620a-28d2-4f60-ae4a-1696be36137e
-ms.openlocfilehash: 5a3923ee488771e807600069855299fc240b3212
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c169e454029a28f644a2aabc8d3089bf3069c8c5
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498714"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857588"
 ---
 # <a name="_com_ptr_t_com_ptr_t"></a>_com_ptr_t::_com_ptr_t
 
 **Microsoft 专用**
 
-构造 **_com_ptr_t**对象。
+构造一个 **_com_ptr_t**对象。
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 // Default constructor.
 // Constructs a NULL smart pointer.
 _com_ptr_t() throw();
@@ -133,35 +133,37 @@ explicit _com_ptr_t(
 );
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
 *pInterface*<br/>
 原始接口指针。
 
 *fAddRef*<br/>
-如果为 TRUE `AddRef` , 则调用来增加封装的接口指针的引用计数。
+如果为 TRUE，则调用 `AddRef` 来递增封装的接口指针的引用计数。
 
 *cp*<br/>
 一个 **_com_ptr_t**对象。
 
-*p*<br/>
-原始接口指针, 其类型不同于此 **_com_ptr_t**对象的智能指针类型。
+p<br/>
+原始接口指针，其类型不同于此 **_com_ptr_t**对象的智能指针类型。
 
 *varSrc*<br/>
-一个 `_variant_t` 对象。
+`_variant_t` 对象。
 
 *clsid*<br/>
-`CLSID`组件类的。
+组件类的 `CLSID`。
 
 *dwClsContext*<br/>
 运行可执行代码的上下文。
 
 *lpcStr*<br/>
-包含`CLSID` (以 " **{** " 开头) 或的`ProgID`多字节字符串。
+包含 `CLSID` （以 " **{** " 开头）或 `ProgID`的多字节字符串。
 
 *pOuter*<br/>
 [聚合](/windows/win32/com/aggregation)的外部未知。
 
-## <a name="see-also"></a>请参阅
+**结束 Microsoft 专用**
+
+## <a name="see-also"></a>另请参阅
 
 [_com_ptr_t 类](../cpp/com-ptr-t-class.md)

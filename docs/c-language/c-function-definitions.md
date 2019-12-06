@@ -12,12 +12,12 @@ helpviewer_keywords:
 - function body
 - declaring functions, variables
 ms.assetid: ebab23c8-6eb8-46f3-b21d-570cd8457a80
-ms.openlocfilehash: 61662caf28fad2f961a580cf280799711a6909bb
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 5cf56375df417ac68b3e03d00f2bd7770ee571e8
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147680"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857133"
 ---
 # <a name="c-function-definitions"></a>C 函数定义
 
@@ -36,7 +36,7 @@ external-declaration: /\* 只允许在外部（文件）范围内 \*/<br/>
 function-definition：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *declarator* *declaration-list*<sub>opt</sub> *compound-statement*
 
-/\* *attribute-seq* 为 Microsoft 专用 \*/
+/\**属性-seq*是特定于 Microsoft 的 \*/
 
 原型参数为：
 
@@ -53,8 +53,8 @@ declaration-list：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;pointer<sub>opt</sub> direct-declarator
 
 direct-declarator: /\* 函数声明符 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)** /\* New-style declarator \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)** /\* Obsolete-style declarator \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**  /\* New-style declarator \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)**  /\* Obsolete-style declarator \*/
 
 定义中的参数列表使用以下语法：
 
@@ -79,7 +79,7 @@ identifier-list：/\* 在旧式函数定义和声明中使用 \*/<br/>
 函数体的语法为：
 
 compound-statement：<br/>
-nchen&nbsp;&nbsp;&nbsp;&nbsp;**{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
+nchen&nbsp;&nbsp;&nbsp;&nbsp; **{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
 
 仅有的可修改函数声明的存储类说明符是 extern 和 static。 extern 说明符表示可以从其他文件引用函数；即，将函数名导出到链接器。 static 说明符表示不能从其他文件引用函数；即，链接器不会导出名称。 如果存储类未在函数定义中出现，则假定 extern。 在任何情况下，从定义点到文件的末尾函数始终可见。
 
@@ -93,6 +93,6 @@ compound-statement 是包含局部变量声明、对在外部声明的项的引�
 
 [函数特性](../c-language/function-attributes.md)、[存储类](../c-language/storage-class.md)、[返回类型](../c-language/return-type.md)、[参数](../c-language/parameters.md)和[函数体](../c-language/function-body.md)节详细地描述了函数定义的组成部分。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [函数](../c-language/functions-c.md)

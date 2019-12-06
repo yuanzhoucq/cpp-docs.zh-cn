@@ -9,24 +9,24 @@ helpviewer_keywords:
 - references, declaring
 - referencing objects, declarator syntax
 ms.assetid: 68156f7f-97a0-4b66-b26d-b25ade5e3bd8
-ms.openlocfilehash: aafc582299402eabab2736ac7d07b6c4c397413c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2353f0861f0f249416d0bb84a7a951b1cb6d64bc
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244208"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857328"
 ---
 # <a name="references-c"></a>引用 (C++)
 
-与指针相似的是，引用将存储位于内存中其他位置的对象的地址。 与指针不同的是，初始化之后的引用无法引用不同的对象或设置为 null。 有两种类型的引用： 左值引用，后者是指已命名的变量和右值引用后者是指[临时对象](../cpp/temporary-objects.md)。 & 运算符表示左值引用和 & & 运算符表示右值引用或根据上下文的通用引用 （右值或左值）。
+与指针相似的是，引用将存储位于内存中其他位置的对象的地址。 与指针不同的是，初始化之后的引用无法引用不同的对象或设置为 null。 有两种类型的引用：引用命名变量的 lvalue 引用和引用[临时对象](../cpp/temporary-objects.md)的 rvalue 引用。 & 运算符表示左值引用，& & 运算符表示右值引用，或基于上下文的通用引用（rvalue 或左值）。
 
 可以通过以下语法声明引用：
 
-> \[*storage-class-specifiers*] \[*cv-qualifiers*] *type-specifiers* \[*ms-modifier*] *declarator* \[**=** *expression*]**;**
+> \[*storage-class-specifiers*] \[*cv-qualifiers*] *type-specifiers* \[*ms-modifier*] *declarator* \[ **=** *expression*] **;**
 
 可以使用指定引用的任何有效声明符。 除非引用是对函数或数组类型的引用，否则应用以下简化语法：
 
-> \[*存储类说明符*] \[ *cv 限定符*]*类型说明符* \[ **&** 或**&&**] \[ *cv 限定符*]*标识符* \[ **=** *表达式*]**;**
+> \[*存储类说明符*] \[*cv 限定符*]*类型说明符*\[ **&** 或 **&&** ] \[*cv 限定符*]*标识符*\[ **=** *表达式*] **;**
 
 使用以下序列声明引用：
 
@@ -34,23 +34,23 @@ ms.locfileid: "62244208"
 
    - 可选存储类说明符。
 
-   - 可选**const**和/或**易失性**限定符。
+   - 可选**const**和/或**volatile**限定符。
 
    - 类型说明符：类型的名称。
 
 1. 声明符：
 
-   - 可选的 Microsoft 专用修饰符。 有关详细信息，请参阅[Microsoft 专用的修饰符](../cpp/microsoft-specific-modifiers.md)。
+   - 可选的 Microsoft 专用修饰符。 有关详细信息，请参阅[Microsoft 特定的修饰符](../cpp/microsoft-specific-modifiers.md)。
 
-   - **&** 运算符或**&&** 运算符。
+   - **&** 运算符或 **&&** 运算符。
 
-   - 可选**const**和/或**易失性**限定符。
+   - 可选**const**和/或**volatile**限定符。
 
    - 标识符。
 
 1. 可选初始值设定项。
 
-指向数组和函数的更复杂声明符形式也适用于对数组和函数的引用。 有关详细信息，请参阅[指针](../cpp/pointers-cpp.md)。
+对于指向数组和函数的指针，更复杂的声明符形式还适用于对数组和函数的引用。 有关详细信息，请参阅[指针](../cpp/pointers-cpp.md)。
 
 多个声明符和初始值设定项可能出现在一个声明说明符后面的逗号分隔的列表中。 例如：
 
@@ -99,7 +99,7 @@ int main() {
 4
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [引用类型函数自变量](../cpp/reference-type-function-arguments.md)<br/>
 [引用类型函数返回](../cpp/reference-type-function-returns.md)<br/>

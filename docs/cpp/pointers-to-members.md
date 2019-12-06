@@ -8,12 +8,12 @@ helpviewer_keywords:
 - members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
-ms.openlocfilehash: a15e519be14d9a05cb30a8c9282baccc87a5f35e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 14b5c12715d1c4c27d9ef8e262170acb2f85e526
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267684"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857341"
 ---
 # <a name="pointers-to-members"></a>指向成员的指针
 
@@ -28,21 +28,21 @@ ms.locfileid: "62267684"
 
    - 可选存储类说明符。
 
-   - 可选**const**和/或**易失性**说明符。
+   - 可选**const**和/或**volatile**说明符。
 
    - 类型说明符：类型的名称。  这是要指向的成员的类型，而不是类。
 
 1. 声明符：
 
-   - 可选的 Microsoft 专用修饰符。 有关详细信息，请参阅[Microsoft 专用的修饰符](../cpp/microsoft-specific-modifiers.md)。
+   - 可选的 Microsoft 专用修饰符。 有关详细信息，请参阅[Microsoft 特定的修饰符](../cpp/microsoft-specific-modifiers.md)。
 
    - 包含要指向的成员的类的限定名。
 
-   - __::__ 运算符。
+   - __：：__ 运算符。
 
    - __\*__ 运算符。
 
-   - 可选**const**和/或**易失性**说明符。
+   - 可选**const**和/或**volatile**说明符。
 
    - 命名指向成员的指针的标识符。
 
@@ -54,7 +54,7 @@ ms.locfileid: "62267684"
 
    - 类的限定名。
 
-   - __::__ 运算符。
+   - __：：__ 运算符。
 
    - 适当类型的类的非静态成员的名称。
 
@@ -82,7 +82,7 @@ int main()
 }
 ```
 
-在前面的示例中，`pwCaption`是指向类的任何成员的指针`Window`具有类型`char*`。 类型 `pwCaption` 不是 `char * Window::* `。 下一个代码片段将指针声明为 `SetCaption` 和 `GetCaption` 成员函数。
+在前面的示例中，`pwCaption` 是指向具有类型 `char*`的类 `Window` 的任何成员的指针。 类型 `pwCaption` 不是 `char * Window::* `。 下一个代码片段将指针声明为 `SetCaption` 和 `GetCaption` 成员函数。
 
 ```cpp
 const char * (Window::*pfnwGC)() = &Window::GetCaption;
@@ -104,9 +104,9 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
 (pwChildWindow->*pwCaption)[cUntitledLen - 1] = '2'; //same as //pwChildWindow->szWinCaption[cUntitledLen - 1] = '2';
 ```
 
-之间的差异 **。**<strong>\*</strong>并**->** <strong>\*</strong>运算符 （指向成员的指针运算符） 是 **。**<strong>\*</strong>运算符选择成员给定的对象或对象引用，而**->** <strong>\*</strong>运算符选择通过指针的成员。 (有关这些运算符的详细信息，请参阅[使用指向成员的指针运算符的表达式](../cpp/pointer-to-member-operators-dot-star-and-star.md)。)
+之间的差异 **。** <strong>\*</strong>和 **->** <strong>\*</strong>运算符（指向成员的指针运算符）是 **。** <strong>\*</strong>运算符选择给定对象或对象引用的成员，而 **->** <strong>\*</strong>运算符则通过指针选择成员。 （有关这些运算符的详细信息，请参阅[具有指向成员的指针运算符的表达式](../cpp/pointer-to-member-operators-dot-star-and-star.md)。）
 
-指针到成员运算符的结果是成员的类型，在这种情况下， `char *`。
+指向成员的指针运算符的结果是成员的类型（在本例中为 `char *`）。
 
 以下代码片段使用指向成员的指针调用成员函数 `GetCaption` 和 `SetCaption`：
 
@@ -127,13 +127,13 @@ strcat_s( szCaptionBase, sizeOfBuffer, " [View 1]" );
 
 ## <a name="restrictions-on-pointers-to-members"></a>针对指向成员的指针的限制
 
-静态成员的地址不是指向成员的指针。 它是指向静态成员的一个实例的常规指针。 因为只存在一个实例的静态成员的所有对象的给定类，普通 address-of (**&**) 和取消引用 (<strong>\*</strong>) 可以使用运算符。
+静态成员的地址不是指向成员的指针。 它是指向静态成员的一个实例的常规指针。 由于给定类的所有对象都只存在一个静态成员实例，因此可以使用普通的地址（ **&** ）和取消引用（<strong>\*</strong>）运算符。
 
 ## <a name="pointers-to-members-and-virtual-functions"></a>指向成员和虚函数的指针
 
 通过指向成员函数的指针调用虚函数就如同直接调用函数一样；将在 v 表中查找并调用正确的函数。
 
-一直以来，虚函数工作的关键是通过指向基类的指针来调用它们。 (有关虚函数的详细信息，请参阅[虚函数](../cpp/virtual-functions.md)。)
+一直以来，虚函数工作的关键是通过指向基类的指针来调用它们。 （有关虚函数的详细信息，请参阅[虚函数](../cpp/virtual-functions.md)。）
 
 以下代码演示如何通过指向成员函数的指针调用虚函数：
 

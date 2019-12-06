@@ -9,23 +9,23 @@ helpviewer_keywords:
 - try-catch keyword [C++], termination handlers
 - C++ exception handling, exception handlers
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
-ms.openlocfilehash: 942a7e48e4315454476bfe93c68169f461b006b2
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 3282f98f48f7e416857ef2f766563ab6038ca41a
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245131"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857263"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 
 结构化异常处理（SEH）是 Microsoft 对 C 的扩展，用于处理特定的异常代码情况，如硬件故障。 虽然 Windows 和 Microsoft C++支持 SEH，但建议使用 ISO 标准C++异常处理，因为这样可以提高代码的可移植性和灵活性。 尽管如此，若要维护现有代码或特定类型的程序，仍可能必须使用 SEH。
 
-**Microsoft 专用：**
+**特定于 Microsoft 的：**
 
 ## <a name="grammar"></a>语法
 
 *try-except 语句*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__try** *复合语句* **__except** **（** *expression* **）** *复合语句*
+&nbsp;&nbsp;&nbsp;&nbsp; **__try** *compound-statement* **__except** **(** *expression* **)** *compound-statement*
 
 *try-finally-语句*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; **__try** *复合语句* **__finally** *复合语句*
@@ -122,7 +122,7 @@ Triggering SEH exception
 Executing SEH __except block
 ```
 
-如果你使用 **/ehsc**来编译代码，并使用 `/DCPPEX` （因此会引发C++异常）定义 `CPPEX`，则将执行 `TestClass` 析构函数，输出如下所示：
+如果你使用 **/EHsc**来编译代码和`CPPEX`使用定义`/DCPPEX`（以致引发 C++ 异常），则`TestClass`析构函数执行并输出如下所示：
 
 ```Output
 Throwing C++ exception
@@ -138,7 +138,7 @@ Destroying TestClass!
 Executing SEH __except block
 ```
 
-有关详细信息，请参阅 [/EH (Exception Handling Model)](../build/reference/eh-exception-handling-model.md)。
+有关详细信息，请参阅 [/EH（异常处理模型）](../build/reference/eh-exception-handling-model.md)。
 
 **结束 Microsoft 专用**
 

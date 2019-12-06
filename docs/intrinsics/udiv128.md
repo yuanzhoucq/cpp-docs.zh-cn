@@ -5,16 +5,16 @@ f1_keywords:
 - _udiv128
 helpviewer_keywords:
 - _udiv128 intrinsic
-ms.openlocfilehash: 0e66bbe978199f47134aa288bdd2bac4eb3e332a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e8cc9ca3dbf19a04d07edb1d73df84f2e29a5c3
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390160"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857978"
 ---
-# <a name="udiv128"></a>_udiv128
+# <a name="_udiv128"></a>_udiv128
 
-`_udiv128`内部函数将由 64 位无符号整数的 128 位无符号的整数。 返回值包含商和内部函数返回的指针参数通过余数。 `_udiv128` 是**特定于 Microsoft**。
+`_udiv128` 内部函数将128位无符号整数除以64位无符号整数。 返回值保留商，内部函数通过指针参数返回余数。 `_udiv128` 是**Microsoft 特定**的。
 
 ## <a name="syntax"></a>语法
 
@@ -30,34 +30,34 @@ unsigned __int64 _udiv128(
 ### <a name="parameters"></a>参数
 
 *highDividend* \
-[in]被除数的高 64 位。
+中被除数的高64位。
 
 *lowDividend* \
-[in]被除数的低 64 位。
+中被除数的低64位。
 
 *divisor* \
-[in]要除以的 64 位整数。
+中要除以的64位整数。
 
-*remainder* \
-[out]64 位整数位的其余部分。
+*余数* \
+弄余数的64位整数位。
 
 ## <a name="return-value"></a>返回值
 
-商的 64 位。
+商的64位。
 
 ## <a name="remarks"></a>备注
 
-将传递在 128 位被除数的高 64 位*highDividend*，并在较低的 64 位*lowDividend*。 内部函数将此值，从而*除数*。 将存储在其余部分中指向的 64 位无符号整数*余数*，并返回商 64 位。
+传递*highDividend*中的128位的上限64位，以及*lowDividend*中的较低64位。 内部函数用*除数*除以此值。 它将余数存储在由*余数*指向的64位无符号整数中，并返回商的64位。
 
-`_udiv128`内部函数是在 Visual Studio 2019 RTM 中推出。
+从 Visual Studio 2019 RTM 开始，提供 `_udiv128` 内部函数。
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>需求
 
 |内部函数|体系结构|Header|
 |---------------|------------------|------------|
-|`_udiv128`|X64|\<immintrin.h>|
+|`_udiv128`|x64|\<immintrin.h>|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [_div128](div128.md) \
 [编译器内部函数](compiler-intrinsics.md)

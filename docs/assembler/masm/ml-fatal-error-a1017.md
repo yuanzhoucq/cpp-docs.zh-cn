@@ -1,29 +1,29 @@
 ---
 title: ML 错误 A1017
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A1017
 helpviewer_keywords:
 - A1017
 ms.assetid: bef0b312-5431-4e5a-b637-c19919acf01b
-ms.openlocfilehash: 22a16569364760d0cb1d01011405f7a11dd21cac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6fb0835cca135fc994866dc2453734d7b3012a64
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62177768"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856821"
 ---
 # <a name="ml-fatal-error-a1017"></a>ML 错误 A1017
 
 **缺少源文件名**
 
-ML 找不到要组装或将传递给链接器的文件。
+ML 找不到要汇编或传递到链接器的文件。
 
-为机器学习命令行选项提供无需指定文件名以对其执行操作时，会生成此错误。 若要组合不具有.asm 扩展名的文件，请使用 **/Ta**命令行选项。
+如果不指定要操作的文件名，则会生成 ML 命令行选项。 若要组合不具有 .asm 扩展名的文件，请使用 **/Ta**命令行选项。
 
-如果机器学习环境变量包含命令行选项不带任何参数调用机器学习，也可以生成此错误。
+如果 ML 环境变量包含命令行选项，则还可以通过调用不带参数的 ML 来生成此错误。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [ML 错误消息](../../assembler/masm/ml-error-messages.md)<br/>

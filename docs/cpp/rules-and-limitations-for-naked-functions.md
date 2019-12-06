@@ -4,20 +4,20 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - naked functions [C++]
 ms.assetid: ff203858-2dd3-4a76-8a57-d0d06817adef
-ms.openlocfilehash: c813b97b85469165aae892b0a4cce888112e3dc5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec5c7d635dbbb63af7177395c5ad08356e1a26f0
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267362"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857302"
 ---
 # <a name="rules-and-limitations-for-naked-functions"></a>裸函数的规则和限制
 
-## <a name="microsoft-specific"></a>Microsoft 专用
+**Microsoft 专用**
 
 以下规则和限制适用于裸函数：
 
-- **返回**语句不允许。
+- 不允许使用**return**语句。
 
 - 不允许结构化异常处理和 C++ 异常处理构造，因为它们必须在堆栈帧中展开。
 
@@ -31,7 +31,7 @@ ms.locfileid: "62267362"
 
 - 不能在函数词法范围中声明 C++ 类对象。 但是，可以在嵌套的块中声明对象。
 
-- **裸**进行编译时，将忽略关键字[/clr](../build/reference/clr-common-language-runtime-compilation.md)。
+- 当用[/clr](../build/reference/clr-common-language-runtime-compilation.md)编译时，将忽略**naked**关键字。
 
 - 有关[__fastcall](../cpp/fastcall.md)裸函数，只要对某个寄存器自变量的 C/C++ 代码中的引用，prolog 代码应将存储到该变量的堆栈位置寄存器的值。 例如：
 
@@ -72,6 +72,6 @@ __declspec(naked) int __fastcall  power(int i, int j) {
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Naked 函数调用](../cpp/naked-function-calls.md)
