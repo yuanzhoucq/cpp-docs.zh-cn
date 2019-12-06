@@ -9,12 +9,12 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-ms.openlocfilehash: 6f97ad75dcf3f01406f305b713b9d14cbe527c52
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 0f2c90bd7c1d88a94d1dab05b98442111faa71a2
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457023"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898818"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -29,21 +29,21 @@ using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> 在 Visual Studio 2017 版本中, \<filesystem > 标头尚不是C++标准版本。 C++在 Visual Studio 2017 (MSVC v141) 中, 可实现在[ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)中找到的最终草案标准。
+> 在 Visual Studio 2017 版本中，\<filesystem > 标头尚不是C++标准版本。 C++在 Visual Studio 2017 （MSVC v141）中，可实现在[ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)中找到的最终草案标准。
 
-此标头支持两大种类的主机操作系统之一的文件系统:Microsoft Windows 和 Posix。
+此标头支持两个广泛的主机操作系统（Microsoft Windows 和 POSIX）之一的文件系统。
 
 虽然这两种操作系统的大多数功能均相同，但本文档将介绍它们之间存在的差异。 例如：
 
 - Windows 支持多个根名称，例如 c: 或 \\\network_name。 文件系统由树林组成，每个树都有其自己的根目录（例如 c:\ 或 \\\\network_name\\），且每个树都有其自己的当前目录，用于完善相对路径名（非绝对路径名）。
 
-- Posix 支持不具有根名称的单个树、单个根目录 / 和单个当前目录。
+- POSIX 支持单个树，无根名称、单个根目录/和单个当前目录。
 
 另一个重要差异是路径名的本机表示方式：
 
 - Windows 使用以 null 结尾的 wchar_t 序列，编码为 UTF-16（每个字符一个或两个元素）。
 
-- Posix 使用以 null 结尾的 char 序列，编码为 UTF-8（每个字符一个或多个元素）。
+- POSIX 使用以 null 结尾的 char 序列，编码为 UTF-8 （每个字符一个或多个元素）。
 
 - 类路径的对象以本机形式存储路径名，但支持在此存储形式与多种外部形式之间进行简单转换：
 
@@ -63,7 +63,7 @@ using namespace std::experimental::filesystem::v1;
 
 1. Windows 记录文件是只读还是可写，此属性对于目录没有意义。
 
-1. Posix 记录文件是否可由所有者、所有者组或任何人读取、写入或执行（若为目录则还记录是否可扫描），以及一些其他权限。
+1. POSIX 记录文件是否可由所有者、所有者组或任何人读取、写入或执行（如果目录已扫描），以及其他一些权限。
 
 两个系统的共同点是通过根名称后施加于路径名的结构。 对于路径名 c:/abc/xyz/def.ext：
 
@@ -89,7 +89,7 @@ using namespace std::experimental::filesystem::v1;
 
 有关详细信息和代码示例，请参阅[文件系统导航 (C++)](../standard-library/file-system-navigation.md)。
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="classes"></a>类
 
@@ -127,6 +127,6 @@ using namespace std::experimental::filesystem::v1;
 |[perm_options](../standard-library/filesystem-enumerations.md#perm_options)||
 |[perms](../standard-library/filesystem-enumerations.md#perms)|用于传达权限和权限选项的位掩码类型|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [头文件引用](../standard-library/cpp-standard-library-header-files.md)

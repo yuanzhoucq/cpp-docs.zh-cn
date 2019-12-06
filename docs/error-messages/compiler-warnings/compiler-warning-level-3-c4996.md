@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
-ms.openlocfilehash: 9d5b8cc3e3ce6445e021163df5301a38aab2c514
-ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
+ms.openlocfilehash: 98662dc0b5439c1f8857e4f2ad259793a4d03e41
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74683332"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898780"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>编译器警告（等级3） C4996
 
@@ -23,7 +23,7 @@ ms.locfileid: "74683332"
 
 ## <a name="remarks"></a>备注
 
-Visual Studio 库中的许多函数、成员函数、模板函数和全局变量已*弃用*。 有些，如 Posix 函数，因为它们具有不同的首选名称。 某些 C 运行时库函数被弃用，因为它们不安全，并且具有更安全的变体。 其他内容已被弃用，因为它们已过时。 弃用消息通常包含推荐的替代函数或全局变量。
+Visual Studio 库中的许多函数、成员函数、模板函数和全局变量已*弃用*。 有些，例如 POSIX 和 Microsoft 特定的函数，因为它们现在具有不同的首选名称。 某些 C 运行时库函数被弃用，因为它们不安全，并且具有更安全的变体。 其他内容已被弃用，因为它们已过时。 弃用消息通常包含推荐的替代函数或全局变量。
 
 ## <a name="turn-off-the-warning"></a>关闭警告
 
@@ -61,11 +61,11 @@ Visual Studio 库中的许多函数、成员函数、模板函数和全局变量
 
 **此项的 POSIX 名称已弃用。改为使用 ISO C++ C 和相容名称：** "*新名称*"。 **有关详细信息，请参阅联机帮助。**
 
-Microsoft 重命名了 CRT 中的一些 POSIX 函数，以符合实现定义的全局函数名称的 C99 和 c + + 03 规则。 只会弃用名称，而不会弃用函数本身。 在大多数情况下，在 POSIX 函数名称中添加了前导下划线以创建符合标准的名称。 编译器会发出对原始函数名称的弃用警告，并建议首选名称。
+Microsoft 在 CRT 中重命名了某些 POSIX 和 Microsoft 特定的库函数，以符合 C99 和 c + + 03 对保留和全局实现定义名称的约束。 *只会弃用名称，而不会弃用函数本身*。 在大多数情况下，向函数名称添加了前导下划线来创建一致的名称。 编译器会发出对原始函数名称的弃用警告，并建议首选名称。
 
-若要解决此问题，我们通常建议改为改用建议的函数名称。 但是，更新的名称是 Microsoft 特定的。 如果需要使用现有函数名称以实现可移植性，则可以关闭这些警告。 POSIX 函数在库中的原始名称下面仍可用。
+若要解决此问题，我们通常建议改为改用建议的函数名称。 但是，更新的名称是 Microsoft 特定的。 如果需要使用现有函数名称以实现可移植性，则可以关闭这些警告。 函数在库中的原始名称下面仍可用。
 
-若要关闭这些函数的弃用警告，请定义预处理器宏 **\_CRT\_NONSTDC\_不\_警告**。 可以通过在命令行中包含选项 `/D_CRT_NONSTDC_NO_WARNINGS`来定义此宏。
+若要关闭这些函数的弃用警告，请定义预处理器宏 **\_CRT\_NONSTDC\_NO\_WARNINGS**。 可以通过在命令行中包含选项 `/D_CRT_NONSTDC_NO_WARNINGS`来定义此宏。
 
 ## <a name="unsafe-crt-library-functions"></a>不安全的 CRT 库函数
 
@@ -75,7 +75,7 @@ Microsoft 弃用了某些 CRT C++和标准库函数和全局函数，因为提�
 
 若要解决此问题，建议改为使用函数或变量的*安全版本*。 有时您无法实现可移植性或向后兼容性的原因。 仔细验证代码中是否存在缓冲区覆盖或 overread 的情况。 然后，可以关闭警告。
 
-若要在 CRT 中关闭这些函数的弃用警告，请将 **\_CRT 定义\_安全\_不\_警告**。
+若要关闭 CRT 中的这些函数的弃用警告，定义 **\_CRT\_SECURE\_NO\_WARNINGS**。
 
 若要关闭有关弃用的全局变量的警告，请将 **\_CRT 定义\_安全\_不\_警告\_全局**。
 
@@ -208,7 +208,7 @@ int main()
 }
 ```
 
-如果已验证你的代码不能出现缓冲区溢出错误，则可以关闭此警告。 若要关闭这些函数的警告，请定义 **\_SCL\_SECURE\_不\_警告**。
+如果已验证你的代码不能出现缓冲区溢出错误，则可以关闭此警告。 若要关闭这些函数的警告，定义 **\_SCL\_SECURE\_NO\_WARNINGS**。
 
 ## <a name="checked-iterators-enabled"></a>已启用检查迭代器
 
@@ -250,7 +250,7 @@ int main() {
 
 若要解决此问题，我们建议更改代码以使用建议的函数或变量。
 
-若要关闭这些项的弃用警告，请定义 **\_CRT\_过时\_不\_警告**。 有关详细信息，请参阅弃用的函数或变量的文档。
+若要关闭这些项的弃用警告，定义 **\_CRT\_过时\_NO\_WARNINGS**。 有关详细信息，请参阅弃用的函数或变量的文档。
 
 ## <a name="marshaling-errors-in-clr-code"></a>在 CLR 代码中封送处理错误
 
