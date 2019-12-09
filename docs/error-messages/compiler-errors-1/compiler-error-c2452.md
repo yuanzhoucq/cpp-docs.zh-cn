@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2452
 ms.assetid: a4ec7642-6660-4c7a-9866-853d1cc67daf
-ms.openlocfilehash: 3e2d583efa2b634cf49d8588fa398bd81f24c607
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e8173c2697a931e5b292dc974b6d1b22f376794
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208754"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744103"
 ---
 # <a name="compiler-error-c2452"></a>编译器错误 C2452
 
-type: safe_cast 的源类型无效
+"type"： safe_cast 的源类型无效
 
-源类型[safe_cast](../../extensions/safe-cast-cpp-component-extensions.md)无效。  例如中的所有类型`safe_cast`操作必须是 CLR 类型。
+[Safe_cast](../../extensions/safe-cast-cpp-component-extensions.md)的源类型无效。  例如，`safe_cast` 操作中的所有类型都必须是 CLR 类型。
 
-下面的示例生成 C2452:
+下面的示例生成 C2452：
 
-```
+```cpp
 // C2452.cpp
 // compile with: /clr
 

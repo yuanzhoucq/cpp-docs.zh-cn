@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3717
 ms.assetid: ae4fceb1-2583-4577-b2f1-40971a017055
-ms.openlocfilehash: f7e60b4f1b6a1337ef93088e4f36ce2a1b34dc47
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd9a97f1b0d9c9eecfa6a42f735f21a42fd846e9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328257"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753232"
 ---
 # <a name="compiler-error-c3717"></a>编译器错误 C3717
 
-method： 不能定义激发事件的方法
+"method"：不能定义激发事件的方法
 
-声明包含一个实现一个事件方法。 [__Event](../../cpp/event.md)方法声明不能有一个定义。 若要修复此错误，请确保没有事件方法声明具有定义。 例如，在下面的代码中，将删除从函数体`event1`声明的注释中所示。
+你声明了一个包含实现的事件方法。 [__Event](../../cpp/event.md)方法声明不能有定义。 若要修复此错误，请确保没有事件方法声明具有定义。 例如，在下面的代码中，从 `event1` 声明中删除注释所指示的函数体。
 
-下面的示例生成 C3717:
+下面的示例生成 C3717：
 
-```
+```cpp
 // C3717.cpp
 [event_source(native)]
 class CEventSrc {

@@ -1,27 +1,27 @@
 ---
 title: ML 非致命错误 A2066
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A2066
 helpviewer_keywords:
 - A2066
 ms.assetid: 58220fdf-fb8f-47fc-a36d-737867361185
-ms.openlocfilehash: 10285c65437bdaaed24fb818e6c1eb3996d0deec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8dc3000b2edc2b1ecda7cc3952b554296de19aa3
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62177339"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74855874"
 ---
 # <a name="ml-nonfatal-error-a2066"></a>ML 非致命错误 A2066
 
 **不兼容的 CPU 模式和段大小**
 
-尝试打开与段**USE16**， **USE32**，或**平面**属性是不兼容，指定的 CPU，或者更改为在 32 位的 16 位 CPU段。
+尝试使用与指定 CPU 不兼容的**USE16**、 **USE32**或**扁平**属性打开段，或在32位段中更改为16位 CPU。）。
 
-**USE32**并**平面**属性必须加.386 或更高的处理器指令。
+**USE32**和**平面**属性前面必须加上386或更高的处理器指令。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [ML 错误消息](../../assembler/masm/ml-error-messages.md)<br/>

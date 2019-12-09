@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2976
 ms.assetid: d9bf9836-325e-4f72-a7e3-a67cf19d32e7
-ms.openlocfilehash: 02771d7419c58ee4f0b6d7db46ba91fde253d9a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 76fd2363b6139bc1bc04aa4d4949a12522e31aa6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395360"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751789"
 ---
 # <a name="compiler-error-c2976"></a>编译器错误 C2976
 
-identifier： 类型参数太少
+"identifier"：类型参数太少
 
-泛型或模板缺少一个或多个自变量。 检查泛型或模板声明，以查找正确的参数数目。
+泛型或模板缺少一个或多个实参。 检查泛型或模板声明，以查找正确的参数数目。
 
-此错误可能引起中缺少模板参数C++标准库组件。
+此错误可能是由于标准库组件中C++缺少模板参数引起的。
 
-下面的示例生成 C2976:
+下面的示例生成 C2976：
 
-```
+```cpp
 // C2976.cpp
 template <class T>
 struct TC {
@@ -35,9 +35,9 @@ int main() {
 }
 ```
 
-使用泛型时，也可能发生 C2976:
+使用泛型时也可能发生 C2976：
 
-```
+```cpp
 // C2976b.cpp
 // compile with: /clr
 generic <class T>

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2798
 ms.assetid: fb0cd861-b228-4f81-8090-e28344a727e0
-ms.openlocfilehash: f3e8f0ac260e49866d1c654f89d34bf57a8ffbc1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6eed1f1aad0783f9e1d5f4126847b54f6b7278e0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152470"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739193"
 ---
 # <a name="compiler-error-c2798"></a>编译器错误 C2798
 
-super::member 不明确
+"super：： member" 不明确
 
-多个继承的结构包含与所引用的成员[super](../../cpp/super.md)。 可以通过以下任一方法来修复此错误：
+多个继承结构包含用[super](../../cpp/super.md)引用的成员。 可以通过以下任一方法修复错误：
 
-- D.在继承列表从删除 B1 或 B2
+- 从 D 的继承列表中删除 B1 或 B2。
 
-- 更改在 B1 或 B2 中的数据成员的名称。
+- 更改 B1 或 B2 中的数据成员的名称。
 
-下面的示例生成 C2798:
+下面的示例生成 C2798：
 
-```
+```cpp
 // C2798.cpp
 struct B1 {
    int i;

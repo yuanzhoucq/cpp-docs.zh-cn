@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2768
 ms.assetid: a7f6047a-6a80-4737-ad5c-c12868639fb5
-ms.openlocfilehash: 9c0fb8fb0a98830aaf061ba980e7bdd7903f25e1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bcc801bb5802598e936d577f08729214bb7e13a1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257606"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759784"
 ---
 # <a name="compiler-error-c2768"></a>编译器错误 C2768
 
-function： 非法使用显式模板参数
+"function"：非法使用显式模板参数
 
-编译器无法确定是否应该是函数模板的显式专用化函数定义或函数定义应适用于新的函数。
+编译器无法确定函数定义是否应该是函数模板的显式专用化，或函数定义是否应为新函数。
 
-此错误的引入了在 Visual Studio.NET 2003 中，编译器符合性增强功能的一部分。
+此错误是在 Visual Studio .NET 2003 中引入的，作为编译器一致性增强的一部分。
 
-下面的示例生成 C2768:
+下面的示例生成 C2768：
 
-```
+```cpp
 // C2768.cpp
 template<typename T>
 void f(T) {}

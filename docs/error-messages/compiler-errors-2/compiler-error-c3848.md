@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3848
 ms.assetid: 32d3ccef-01ec-4f8b-bbff-fb9b1a76b4c4
-ms.openlocfilehash: 1d738311ada14999a5345a4e2394631254dda00a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 51a5cf6d866a5e5ee914a3d70365761749f79eea
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380989"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761941"
 ---
 # <a name="compiler-error-c3848"></a>编译器错误 C3848
 
-具有类型 type 的表达式会丢失一些 const-volatile 限定符以调用 function
+类型为 "type" 的表达式会丢失一些常量可变限定符，以便调用 "function"
 
-使用指定的量可变类型的变量可以仅调用成员函数定义有相同或更大的量可变限定。
+具有指定 const volatile 类型的变量只能调用使用相同或更大的 const volatile 限定定义的成员函数。
 
-以下示例生成 C3848:
+以下示例生成 C3848：
 
-```
+```cpp
 // C3848.cpp
 void glbFunc1()
 {

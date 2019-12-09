@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2635
 ms.assetid: 9deca2a8-2d61-42eb-9783-6578132ee3fb
-ms.openlocfilehash: 0c31bcc4062aec1d939c801f9b5ee420f2f4fcb7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90bc30460cb578d1ed2812e40907a361eeb3b039
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367845"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748419"
 ---
 # <a name="compiler-error-c2635"></a>编译器错误 C2635
 
-不能转换为 identifier1 *' identifier2\*; 从虚拟基类的转换隐式
+无法将 "identifier1 *" 转换为 "identifier2\*";隐含从虚拟基类的转换
 
-该转换需要强制转换从`virtual`基类派生的类，这不允许。
+转换需要将 `virtual` 基类强制转换为派生类，这是不允许的。
 
-下面的示例生成 C2635:
+下面的示例生成 C2635：
 
-```
+```cpp
 // C2635.cpp
 class B {};
 class D : virtual public B {};

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3880
 ms.assetid: b0e05d1e-32d0-4034-9246-f37d23573ea9
-ms.openlocfilehash: 0b169309db88291f8a83b6d1192787b6396e84a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 54fd65fb4fe23a5c493a4e9ac83a5e44b0596362
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338462"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736667"
 ---
 # <a name="compiler-error-c3880"></a>编译器错误 C3880
 
-var： 不能是 literal 数据成员
+"var"：不能是 literal 数据成员
 
-类型[文字](../../extensions/literal-cpp-component-extensions.md)属性必须为，或者编译时转换为，以下类型之一：
+[文本](../../extensions/literal-cpp-component-extensions.md)属性的类型必须为或可转换为以下类型之一：
 
 - 整型类型
 
@@ -25,9 +25,9 @@ var： 不能是 literal 数据成员
 
 - 具有整型或基础类型的枚举
 
-下面的示例生成 C3880:
+下面的示例生成 C3880：
 
-```
+```cpp
 // C3880.cpp
 // compile with: /clr /c
 ref struct Y1 {

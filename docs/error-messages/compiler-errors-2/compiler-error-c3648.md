@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3648
 ms.assetid: 5d042989-41cb-4cd0-aa50-976b70146aaf
-ms.openlocfilehash: 7394f6b9789caa09ffc2ad6c2cf56f037b5d57b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b26be9890bbbdf6276c61023e6867160528e236
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385571"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751828"
 ---
 # <a name="compiler-error-c3648"></a>编译器错误 C3648
 
-此显式重写语法要求在 /clr: oldsyntax
+此显式重写语法需要/clr： oldSyntax
 
-在编译时的最新的托管语法，编译器找到显式重写为以前的版本不再受支持的语法。
+当针对最新的托管语法进行编译时，编译器找到了不再受支持的以前版本的显式重写语法。
 
 有关详细信息，请参阅[显式重写](../../extensions/explicit-overrides-cpp-component-extensions.md)。
 
 ## <a name="example"></a>示例
 
-下面的示例生成 C3648:
+下面的示例生成 C3648：
 
-```
+```cpp
 // C3648.cpp
 // compile with: /clr
 public interface struct I {

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3077
 ms.assetid: d9f3c619-d1e2-4656-81a5-a35a9586a7d4
-ms.openlocfilehash: d59859b82c1a8d506bb793a2c4dcd887b0898d85
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2dfe4c17ee122baa8f648669f9080b28584a66f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406686"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756729"
 ---
 # <a name="compiler-error-c3077"></a>编译器错误 C3077
 
@@ -19,13 +19,13 @@ ms.locfileid: "62406686"
 
 不能在本机类型或值类型中声明终结器。
 
-有关详细信息，请参阅[析构函数和终结器中如何：定义和使用类和结构 (C++/CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)。
+有关详细信息，请参阅[如何：定义和使用类和结构（C++/cli）中的析构函数和终结](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)器。
 
 ## <a name="example"></a>示例
 
 下面的示例生成 C3077。
 
-```
+```cpp
 // C3077.cpp
 // compile with: /clr /c
 value struct vs {

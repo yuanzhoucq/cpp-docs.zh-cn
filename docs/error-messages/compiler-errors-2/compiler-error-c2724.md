@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2724
 ms.assetid: 4e4664bc-8c96-4156-b79f-03436f532ea8
-ms.openlocfilehash: 3014a12767cb9a73dc65852c544b7ac9574b9a52
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f48bf45eeed491469b161ac1edcdb57d04eb5863
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383056"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760681"
 ---
 # <a name="compiler-error-c2724"></a>编译器错误 C2724
 
-identifier: static 不应在文件范围内定义的成员函数
+"identifier"： "static" 不应在文件范围内定义的成员函数上使用
 
-应使用外部链接声明静态成员函数。
+应通过外部链接声明静态成员函数。
 
-下面的示例生成 C2724:
+下面的示例生成 C2724：
 
-```
+```cpp
 // C2724.cpp
 class C {
    static void func();

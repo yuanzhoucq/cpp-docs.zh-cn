@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3510
 ms.assetid: c48387bc-0300-4a4d-97f7-3fb90f82a451
-ms.openlocfilehash: dbb65628aa6e0da94a91a59724ca8e1cd5b56491
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3f9dea77b739aa59474e60cf852fff2577ab6ba9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187347"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753622"
 ---
 # <a name="compiler-error-c3510"></a>编译器错误 C3510
 
-找不到依赖类型库 type_lib
+找不到依赖类型库 "type_lib"
 
-[no_registry](../../preprocessor/no-registry.md)并[auto_search](../../preprocessor/auto-search.md)传递给`#import`但编译器找不到引用的类型库。
+[no_registry](../../preprocessor/no-registry.md)和[auto_search](../../preprocessor/auto-search.md)传递到 `#import` 但编译器找不到引用的类型库。
 
-若要解决此错误，请确保所有类型库和被引用的类型库都都可用于编译器。
+若要解决此错误，请确保所有类型库和引用的类型库均可供编译器使用。
 
-下面的示例生成 C3510:
+下面的示例生成 C3510：
 
-假设以下两个类型库生成，并且 C3510a.tlb 已被删除或不在路径上。
+假定生成了以下两个类型库，并且该路径上删除了 C3510a。
 
 ```
 // C3510a.idl
@@ -38,7 +38,7 @@ library C3510aLib
 };
 ```
 
-然后第二个类型库的源代码：
+然后是第二个类型库的源代码：
 
 ```
 // C3510b.idl
@@ -54,9 +54,9 @@ library C3510bLib
 };
 ```
 
-然后客户端代码：
+然后，客户端代码：
 
-```
+```cpp
 // C3510.cpp
 #import "c3510b.tlb" no_registry auto_search   // C3510
 int main() {

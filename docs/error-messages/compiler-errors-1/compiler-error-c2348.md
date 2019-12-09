@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2348
 ms.assetid: 4c4d701f-ccf1-46fe-9ddb-3f341684f269
-ms.openlocfilehash: 379bcc7f37ff8942e4e45c6a6188438400937875
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7bded618c481e59f60c5528510c757dec7226acc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187901"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759992"
 ---
 # <a name="compiler-error-c2348"></a>编译器错误 C2348
 
-type name： 不是 C 样式聚合，不能嵌入的 IDL 中导出
+"type name"：不是 C 样式聚合，无法在嵌入的 IDL 中导出
 
-若要放置`struct`在.idl 文件中使用[导出](../../windows/export.md)属性，`struct`必须只包含数据。
+若要将 `struct` 放置在包含[export](../../windows/export.md)特性的 .idl 文件中，`struct` 必须只包含数据。
 
-下面的示例生成 C2348:
+下面的示例生成 C2348：
 
-```
+```cpp
 // C2348.cpp
 // C2348 error expected
 [ module(name="SimpleMidlTest") ];

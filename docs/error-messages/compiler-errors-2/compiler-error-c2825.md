@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2825
 ms.assetid: c832f1c1-5184-4fc2-9356-12b21daa7af3
-ms.openlocfilehash: 1e2f8e8cd38b90a698994743609892896ef0d1a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a51901477958056356a96d71adde4241d60a2ac
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406894"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750580"
 ---
 # <a name="compiler-error-c2825"></a>编译器错误 C2825
 
-var： 必须是类或命名空间时后跟::
+var：在后跟 "：：" 时必须为类或命名空间
 
-不成功尝试窗体的限定的名称。
+试图形成限定名称的尝试失败。
 
-例如，请确保你的代码不包含函数名称的开头的函数声明::。
+例如，确保你的代码不包含函数名称以：：开头的函数声明。
 
 ## <a name="example"></a>示例
 
-下面的示例生成 C2825:
+下面的示例生成 C2825：
 
-```
+```cpp
 // C2825.cpp
 typedef int i;
 int main() {

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2496
 ms.assetid: 9a25237d-5bbb-4112-98f3-29cd99d3f89f
-ms.openlocfilehash: 258012fdefed877558f122790954d830095d5026
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9236876e636e88f193d32ef2e33a817fa52e1bd2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360576"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757002"
 ---
 # <a name="compiler-error-c2496"></a>编译器错误 C2496
 
-identifier: selectany 只能应用到具有外部链接的数据项
+"identifier"： "selectany" 只能应用于带有外部链接的数据项
 
-[Selectany](../../cpp/selectany.md)属性可以仅应用于外部可见和全局数据的项。
+[Selectany](../../cpp/selectany.md)属性只能应用于外部可见和全局数据项。
 
-下面的示例生成 C2496:
+下面的示例生成 C2496：
 
-```
+```cpp
 // C2496.cpp
 // compile with: /c
 __declspec(selectany) int x1 = 1;

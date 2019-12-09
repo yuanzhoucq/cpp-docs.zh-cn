@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3115
 ms.assetid: 51726145-9782-4ec9-84b9-286f366d9cbd
-ms.openlocfilehash: e334836986548d4f854dd9a5760bd8315b769d03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c03361f08ffd54396d307ed8c075a327c576d49b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404086"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760734"
 ---
 # <a name="compiler-error-c3115"></a>编译器错误 C3115
 
-attribute: construct 上不允许使用此特性
+"attribute"：在 "构造" 上不允许使用此特性
 
-特性被应用到了意外的构造。  请参阅[按使用情况的特性](../../windows/attributes/attributes-by-usage.md)有关详细信息。
+已将特性应用于不打算用于的构造。  有关详细信息，请参阅[属性的用法](../../windows/attributes/attributes-by-usage.md)。
 
 ## <a name="example"></a>示例
 
 下面的示例生成 C3115。
 
-```
+```cpp
 // C3115.cpp
 // compile with: /c
 #include <unknwn.h>

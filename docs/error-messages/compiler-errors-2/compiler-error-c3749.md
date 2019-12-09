@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3749
 ms.assetid: 3d26b468-4757-41b8-b5a2-78022a5295fb
-ms.openlocfilehash: 7535f82a392f3d54b265ada2bd40a8d433838f4b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75138bf8b090b7770d5bee918790efc095d76627
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227268"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761837"
 ---
 # <a name="compiler-error-c3749"></a>编译器错误 C3749
 
-attribute： 不能在函数内使用的自定义属性
+"attribute"：自定义特性不能在函数内部使用
 
-不能在函数内使用的自定义属性。 自定义属性的详细信息，请参阅主题[属性](../../windows/attributes/attribute.md)。
+自定义特性不能在函数内部使用。 有关自定义特性的详细信息，请参阅主题[特性](../../windows/attributes/attribute.md)。
 
 ## <a name="example"></a>示例
 
-下面的示例生成 C3749:
+下面的示例生成 C3749：
 
-```
+```cpp
 // C3749a.cpp
 // compile with: /clr /c
 using namespace System;

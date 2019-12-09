@@ -11,12 +11,12 @@ helpviewer_keywords:
 - slash (/) operator
 - multiplication operator [C++], multiplicative operators
 ms.assetid: 495471c9-319b-4eb4-bd97-039a025fd3a9
-ms.openlocfilehash: fdf208ffba3e3d63d8672b84af8cf6168b34dc3f
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: e06ef25c14f8073d2b8753b57c9593af7bb6c69f
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147746"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857120"
 ---
 # <a name="c-multiplicative-operators"></a>C 乘法运算符
 
@@ -35,19 +35,17 @@ ms.locfileid: "56147746"
 
 C 乘法运算符的描述如下：
 
-|运算符|说明​​|
+|运算符|描述|
 |--------------|-----------------|
 |<strong>\*</strong>|乘法运算符使其两个操作数相乘。|
-|**/**|除法运算符使第一个操作数除以第二个操作数。 如果两个整数操作数相除，结果不是整数，则根据下列规则截断它：<br/><br/>- 根据 ANSI C 标准，被 0 除的结果是不确定的。 Microsoft C 编译器将在编译时或运行时生成错误。<br/><br/>- 如果两个操作数都为正或无符号，则结果将截断到 0。<br/><br/>- 如果其中一个操作数为负，则不管操作结果是小于或等于代数商的最大整数还是大于或等于代数商的最小整数，结果均为定义的实现。 （请参阅下面的 Microsoft 专用部分。）|
-|**%**|第一个操作数除以第二个操作数时，余数运算符的结果是余数。 如果除法不精确，则结果将由下列规则确定：<br/><br/>- 如果右操作数为零，则结果是不确定的。<br/><br/>- 如果两个操作数均为正或无符号，则结果为正。<br/><br/>- 如果其中一个操作数为负，并且结果不精确，则结果将是定义的实现。 （请参阅下面的 Microsoft 专用部分。）|
+|**/**|除法运算符使第一个操作数除以第二个操作数。 如果两个整数操作数相除，结果不是整数，则根据下列规则截断它：<br/><br/>- 根据 ANSI C 标准，被 0 除的结果是不确定的。 Microsoft C 编译器将在编译时或运行时生成错误。<br/><br/>- 如果两个操作数都为正或无符号，则结果将截断到 0。<br/><br/>- 如果其中一个操作数为负，则不管操作结果是小于或等于代数商的最大整数还是大于或等于代数商的最小整数，结果均为定义的实现。 （请参阅下面的 Microsoft 特定部分。）|
+|**%**|第一个操作数除以第二个操作数时，余数运算符的结果是余数。 如果除法不精确，则结果将由下列规则确定：<br/><br/>- 如果右操作数为零，则结果是不确定的。<br/><br/>- 如果两个操作数均为正或无符号，则结果为正。<br/><br/>- 如果其中一个操作数为负，并且结果不精确，则结果将是定义的实现。 （请参阅下面的 Microsoft 特定部分。）|
 
-**Microsoft 专用**
+### <a name="microsoft-specific"></a>Microsoft 专用
 
 在其中一个操作数为负的除法中，截断的方向将是朝向 0。
 
 如果使用余数运算符的除法中任一操作数为负，则结果与被除数（表达式中的第一个操作数）有相同的符号。
-
-**结束 Microsoft 专用**
 
 ## <a name="examples"></a>示例
 
@@ -64,7 +62,7 @@ double x = 2.0, y;
 y = x * i;
 ```
 
-在此示例中，`x` 乘以 `i` 将得到值 20.0。 结果为 double 类型。
+在此示例中，`x` 乘以 `i` 将得到值 20.0。 结果为double 类型。
 
 ```
 n = i / j;
@@ -80,7 +78,7 @@ n = i % j;
 
 **Microsoft 专用**
 
-余数的符号与被除数的符号相同。 例如:
+余数的符号与被除数的符号相同。 例如：
 
 ```
 50 % -6 = 2
@@ -91,6 +89,6 @@ n = i % j;
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [乘法运算符和取模运算符](../cpp/multiplicative-operators-and-the-modulus-operator.md)

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3131
 ms.assetid: 38f20fac-83c9-4cd9-b7b5-74ca8f650ea6
-ms.openlocfilehash: 082839c01a2da4b0d149962367b9719932d2b272
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3fe217a14b75ddedec8e1c703c36a66f747f79c5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349927"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760187"
 ---
 # <a name="compiler-error-c3131"></a>编译器错误 C3131
 
-项目必须有一个具有 name 属性 module 特性
+项目必须具有 "module" 特性和 "name" 属性
 
-[模块](../../windows/module-cpp.md)属性必须具有一个名称参数。
+[Module](../../windows/module-cpp.md)特性必须具有 name 参数。
 
-下面的示例生成 C3131:
+下面的示例生成 C3131：
 
-```
+```cpp
 // C3131.cpp
 [emitidl];
 [module];   // C3131

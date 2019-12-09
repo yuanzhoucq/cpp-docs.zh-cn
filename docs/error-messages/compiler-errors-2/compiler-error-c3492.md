@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3492
 ms.assetid: b1dc6342-9133-4b1f-a9c3-e8c65d20d121
-ms.openlocfilehash: facd8c78e775945924d77b09f9dc754bdc301ddd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37129c198096be91a8104aedcb508732d79e3630
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381119"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738305"
 ---
 # <a name="compiler-error-c3492"></a>编译器错误 C3492
 
@@ -27,7 +27,7 @@ ms.locfileid: "62381119"
 
 以下示例将生成 C3492，因为它捕获匿名联合的成员：
 
-```
+```cpp
 // C3492a.cpp
 
 int main()
@@ -47,7 +47,7 @@ int main()
 
 通过给此联合提供名称以及将整个联合结构传递给 lambda 表达式的捕获列表，下面的示例解析了 C3492：
 
-```
+```cpp
 // C3492b.cpp
 
 int main()
@@ -63,6 +63,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Lambda 表达式](../../cpp/lambda-expressions-in-cpp.md)

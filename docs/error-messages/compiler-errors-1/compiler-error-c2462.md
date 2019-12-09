@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2462
 ms.assetid: a8601bf8-f5ce-41de-9117-e2632bd4996b
-ms.openlocfilehash: 0b342f8b878c48a77336fab4921cf4a668e248ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4eb50ddac51ea78ab3a28d7703384f02eb026ecb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368287"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743921"
 ---
 # <a name="compiler-error-c2462"></a>编译器错误 C2462
 
-identifier： 无法在 new-expression 中定义类型
+"identifier"：不能在 "new 表达式" 中定义类型
 
-不能定义一种类型的操作数字段中`new`运算符。 将类型定义放在一个单独的语句。
+不能在 `new` 运算符的操作数字段中定义类型。 将类型定义置于单独的语句中。
 
-下面的示例生成 C2462:
+下面的示例生成 C2462：
 
-```
+```cpp
 // C2462.cpp
 int main() {
    new struct S { int i; };   // C2462

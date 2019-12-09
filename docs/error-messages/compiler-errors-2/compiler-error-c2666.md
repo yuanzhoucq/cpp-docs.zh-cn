@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2666
 ms.assetid: 78364d15-c6eb-439a-9088-e04a0176692b
-ms.openlocfilehash: 4a1d46f3b000b5054564b05ca2c3c94a9e7b6398
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca779269d573e3e5d270fccad6afe6220083fa42
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386871"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755988"
 ---
 # <a name="compiler-error-c2666"></a>编译器错误 C2666
 
-identifier： 数字重载有相似的转换
+"identifier"：数字重载具有相似的转换
 
-重载的函数或运算符不明确。   形参列表中可能是编译器要解决多义性问题非常相似。  若要解决此错误，显式转换一个或多个实际参数。
+重载的函数或运算符不明确。   形参列表可能太类似，编译器无法解析多义性。  若要解决此错误，请显式转换一个或多个实际参数。
 
-下面的示例生成 C2666:
+下面的示例生成 C2666：
 
-```
+```cpp
 // C2666.cpp
 struct complex {
    complex(double);
@@ -35,19 +35,19 @@ int main() {
 }
 ```
 
-为 Visual Studio.NET 2003年执行的编译器一致性工作，还可以生成此错误：
+此错误还可能是由于对 Visual Studio .NET 2003 执行的编译器一致性工作引起的：
 
-- 二元运算符和用户定义转换为指针类型
+- 二元运算符和用户定义的到指针类型的转换
 
-- 限定转换不是标识转换相同
+- 限定转换不同于标识转换
 
-对于二元运算符\<，>， \<=、 和 > =、 传递参数现在隐式转换为操作数的类型如果参数的类型定义了一个用户定义的转换运算符，以将转换为操作数的类型。 现在可能会不明确。
+对于二元运算符 \<、>、\<= 和 > =，如果参数的类型定义了用户定义的转换运算符来转换为操作数的类型，则传递的参数现在会隐式转换为操作数的类型。 现在可能存在歧义。
 
-在 Visual Studio.NET 2003年和 Visual Studio.NET 版本的视觉对象中是有效的代码的C++，调用类运算符显式使用函数的语法。
+对于在 visual Studio .NET 2003 和 visual Studio .NET 版本的视觉C++对象中都有效的代码，请使用函数语法显式调用类运算符。
 
 ## <a name="example"></a>示例
 
-```
+```cpp
 // C2666b.cpp
 #include <string.h>
 #include <stdio.h>
@@ -106,7 +106,7 @@ int main()
 
 下面的示例生成 C2666
 
-```
+```cpp
 // C2666c.cpp
 // compile with: /c
 

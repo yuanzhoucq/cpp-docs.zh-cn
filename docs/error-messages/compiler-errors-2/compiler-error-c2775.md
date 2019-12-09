@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2775
 ms.assetid: 9c488508-ade0-48f1-b94f-d538d15f807a
-ms.openlocfilehash: b0f04a64354f549115c8636cf6130d6e96470016
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: be858c7508aa520f78ec144b02738af02099b49b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257187"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740047"
 ---
 # <a name="compiler-error-c2775"></a>编译器错误 C2775
 
-identifier： 没有 get 方法是与此属性相关联
+"identifier"：没有 "get" 方法与该属性关联
 
-使用声明数据成员[属性](../../cpp/property-cpp.md)扩展的属性不具有`get`指定函数，但表达式尝试检索其值。
+使用[属性](../../cpp/property-cpp.md)扩展特性声明的数据成员未指定 `get` 函数，但表达式尝试检索其值。
 
-下面的示例生成 C2775:
+下面的示例生成 C2775：
 
-```
+```cpp
 // C2775.cpp
 struct A {
    __declspec(property(put=PutProp2, get=GetProp2)) int prop2;

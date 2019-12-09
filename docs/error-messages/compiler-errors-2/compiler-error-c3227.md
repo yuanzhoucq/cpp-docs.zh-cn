@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3227
 ms.assetid: 7939c23a-96c8-43c2-89e9-f217d132d155
-ms.openlocfilehash: b175b14af55a9a462e040f064cc6e38d13fffb94
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 460000531dba77e42379199f276c9e2e02f43a9b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173976"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743414"
 ---
 # <a name="compiler-error-c3227"></a>编译器错误 C3227
 
-parameter： 无法使用 keyword 来分配泛型类型
+"parameter"：不能使用 "关键字" 来分配泛型类型
 
-若要实例化一个类型，相应的构造函数是必需的。 但是，编译器不能确保适当的构造函数可用。
+为了实例化类型，需要一个适当的构造函数。 但编译器无法确保适当的构造函数可用。
 
-可以使用模板而不是泛型若要解决此错误，或者可以使用几种方法之一来创建类型的实例。
+您可以使用模板（而不是泛型）来解决此错误，也可以使用多种方法之一来创建该类型的实例。
 
 ## <a name="example"></a>示例
 
 下面的示例生成 C3227。
 
-```
+```cpp
 // C3227.cpp
 // compile with: /clr /c
 generic<class T> interface class ICreate {

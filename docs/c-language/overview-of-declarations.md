@@ -5,12 +5,12 @@ helpviewer_keywords:
 - declarations, about declarations
 - type qualifiers
 ms.assetid: fcd2364c-c2a5-4fbf-9027-19dac4144cb5
-ms.openlocfilehash: 439bc878bbcd1c9778fb74738cb3b32b908a5943
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 0ffda6522e632533b0aaa4ba146e8fad082ed435
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148343"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857055"
 ---
 # <a name="overview-of-declarations"></a>声明概述
 
@@ -21,7 +21,7 @@ ms.locfileid: "56148343"
 *declaration*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;declaration-specifiers attribute-seq<sub>opt</sub> init-declarator-list<sub>opt</sub>;
 
-/\* attribute-seq<sub>opt</sub> 是 Microsoft 专用的 */
+/\**属性-seq*<sub>opt</sub>为 Microsoft 专用 */
 
 *declaration-specifiers*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub><br/>
@@ -34,7 +34,7 @@ ms.locfileid: "56148343"
 
 *init-declarator*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;declarator = initializer
+&nbsp;&nbsp;&nbsp;&nbsp;*declarator* **=** *initializer*
 
 > [!NOTE]
 > 用于 declaration 的这种语法在以下部分中不重复。 以下部分中的语法通常以 declarator 非终止符开头。
@@ -57,7 +57,7 @@ int const *fp;
 
 变量声明中需要存储类或类型（或者这两者）。 除了 `__declspec`，声明中只允许包含一个存储类说明符，并且并非每一个上下文中都允许存在所有存储类说明符。 `__declspec` 存储类可以与其他存储类说明符一起使用，并且允许多次一起使用。 声明的存储类说明符会影响存储和初始化声明的项的方式，还会影响程序中的哪些部分可以引用该项。
 
-C 中定义的 storage-class-specifier 终止符包括 auto、`extern`、register、static 以及 `typedef`。 此外，Microsoft C 还包括 storage-class-specifier 终止符 `__declspec`。 [存储类](../c-language/c-storage-classes.md)中将讨论除 `typedef` 和 `__declspec` 之外的所有 storage-class-specifier 终止符。 有关 `typedef` 的信息，请参阅 [Typedef 声明](../c-language/typedef-declarations.md)。 有关 `__declspec` 的信息，请参阅[扩展的存储类特性](../c-language/c-extended-storage-class-attributes.md)。
+C 中定义的 storage-class-specifier 终止符包括 auto、`extern`、register、static 以及 `typedef`。 此外，Microsoft C 还包括 storage-class-specifier 终止符 `__declspec`。 [存储类](../c-language/c-storage-classes.md)中将讨论除 `typedef` 和 `__declspec` 之外的所有storage-class-specifier 终止符。 有关 `typedef` 的信息，请参阅 [Typedef 声明](../c-language/typedef-declarations.md)。 有关 `__declspec` 的信息，请参阅[扩展的存储类特性](../c-language/c-extended-storage-class-attributes.md)。
 
 源程序中声明的位置以及变量的其他声明存在与否是确定变量生存期的重要因素。 可以有多个重新声明，但只能有一个定义。 但是，定义可以出现在多个翻译单元中。 对于带内部链接的对象，此规则可分别应用到每个翻译单元，因为内部链接的对象对翻译单元是唯一的。 对于带外部链接的对象，此规则适用于整个程序。 有关可见性的详细信息，请参阅[生存期、范围、可见性和链接](../c-language/lifetime-scope-visibility-and-linkage.md)。
 
@@ -65,7 +65,7 @@ C 中定义的 storage-class-specifier 终止符包括 auto、`extern`、registe
 
 type-qualifier 终止符有两种：const 和 `volatile`。 这些限定符指定仅在通过左值访问该类型的对象时才相关的类型的其他属性。 有关 const 和 `volatile` 的详细信息，请参阅[类型限定符](../c-language/type-qualifiers.md)。 有关左值的定义，请参阅[左值和右值表达式](../c-language/l-value-and-r-value-expressions.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [C 语言语法摘要](../c-language/c-language-syntax-summary.md)<br/>
 [声明和类型](../c-language/declarations-and-types.md)<br/>

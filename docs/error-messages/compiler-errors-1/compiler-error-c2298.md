@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2298
 ms.assetid: eb0120ad-c850-4bdd-911d-0361229cc859
-ms.openlocfilehash: 34957d226f10b4ac27f13be6746eac241101b516
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b53ba11de7ecbb8e3d7f664ceaf8d99e395fac28
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182648"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759056"
 ---
 # <a name="compiler-error-c2298"></a>编译器错误 C2298
 
-operation： 指向成员函数表达式上的非法操作
+"operation"：对成员函数表达式的指针的非法操作
 
-指向成员函数表达式必须调用成员函数。
+指向成员函数表达式的指针必须调用成员函数。
 
 ## <a name="example"></a>示例
 
 下面的示例生成 C2298。
 
-```
+```cpp
 // C2298.cpp
 #include <stdio.h>
 
@@ -59,7 +59,7 @@ int main() {
 
 下面的示例生成 C2298。
 
-```
+```cpp
 // C2298_b.cpp
 // compile with: /c
 void F() {}

@@ -6,14 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - __writedr intrinsic
 ms.assetid: ac55c1ee-df2f-41d4-a429-6f369d2a934d
-ms.openlocfilehash: 715ef7432d506c2758c9c3da913e9c0ebb24e13f
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 473e7223e9974d0125e772c152ea85ae90b97342
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219220"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74858056"
 ---
 # <a name="__writedr"></a>__writedr
+
+**Microsoft 专用**
 
 将指定的值写入指定的调试寄存器。
 
@@ -34,9 +36,9 @@ void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue); /* x64 */
 
 ## <a name="remarks"></a>备注
 
-这些内部函数仅在内核模式下可用, 且这些例程只能用作内部函数。
+这些内部函数仅在内核模式下可用，且这些例程只能用作内部函数。
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>需求
 
 |内部函数|体系结构|
 |---------------|------------------|
@@ -46,7 +48,7 @@ void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue); /* x64 */
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [编译器内部函数](../intrinsics/compiler-intrinsics.md)\
 [__readdr](../intrinsics/readdr.md)

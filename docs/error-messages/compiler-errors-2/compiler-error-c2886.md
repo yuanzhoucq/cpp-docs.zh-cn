@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2886
 ms.assetid: c01588a1-484c-4dc9-a3f1-f900c6e44543
-ms.openlocfilehash: 2fa7450f03505501c2c4a45023dbb6a86937bb9c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a64457c84a48c73ad6714da01e48d41f3cc92efb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388808"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748718"
 ---
 # <a name="compiler-error-c2886"></a>编译器错误 C2886
 
-class::identifier： 不能在成员 using 声明中使用符号
+"class：： identifier"：符号不能用在成员 using 声明中
 
-一个`using`声明使用符号，如命名空间名称。 一个`using`声明是用于声明基类成员。
+`using` 声明使用符号，如命名空间名称。 `using` 声明用于声明基类成员。
 
-下面的示例生成 C2886:
+下面的示例生成 C2886：
 
-```
+```cpp
 // C2886.cpp
 // compile with: /c
 namespace Z {

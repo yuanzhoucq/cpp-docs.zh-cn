@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2423
 ms.assetid: 8797fb8b-b58b-4add-b6e6-2a9a3cd9084d
-ms.openlocfilehash: 47598ac08c0f8b6b41d88daf9e1eb9f0ca00131b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29203d3816f82bce95be656fdf71cb6536b325b9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402864"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744662"
 ---
 # <a name="compiler-error-c2423"></a>编译器错误 C2423
 
-number： 非法的小数位数
+"number"：非法的小数位数
 
-内联程序集代码使用非 1、 2、 4 或 8 数字来扩充寄存器。
+内联程序集代码使用1、2、4或8以外的数字来缩放寄存器。
 
-下面的示例生成 C2423:
+下面的示例生成 C2423：
 
-```
+```cpp
 // C2423.cpp
 // processor: x86
 int main() {

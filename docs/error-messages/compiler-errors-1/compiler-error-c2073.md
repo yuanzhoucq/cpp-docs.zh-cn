@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2073
 ms.assetid: 57908234-be7a-4ce9-b0a7-8b1ad621865e
-ms.openlocfilehash: 2b45d512224ec32459e6da040a6abb0211278e78
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 545b2b24d3bfe5a36c5554dfa898d17b05067c3d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303315"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757730"
 ---
 # <a name="compiler-error-c2073"></a>编译器错误 C2073
 
-identifier： 部分初始化数组的元素必须具有默认构造函数
+"identifier"：部分初始化数组的元素必须有默认构造函数
 
-太少初始值设定项指定的用户定义类型或常量的数组。 如果数组成员不指定显式初始值设定项和其相应的构造函数，必须提供默认构造函数。
+为用户定义的类型或常量的数组指定了太少的初始值设定项。 如果没有为数组成员指定显式初始值设定项及其相应的构造函数，则必须提供默认构造函数。
 
-下面的示例生成 C2073:
+下面的示例生成 C2073：
 
-```
+```cpp
 // C2073.cpp
 class A {
 public:
@@ -30,7 +30,7 @@ public:
 A a[3] = { A(1), A(2) };   // C2073, no default constructor
 ```
 
-```
+```cpp
 // C2073b.cpp
 // compile with: /c
 class B {

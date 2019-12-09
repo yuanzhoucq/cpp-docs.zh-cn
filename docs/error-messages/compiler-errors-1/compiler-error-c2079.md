@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2079
 ms.assetid: ca58d6d5-eccd-40b7-ba14-c003223c5bc7
-ms.openlocfilehash: 68435610680e3b21415a1d9439a8133fd1e2557f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ea158d8dada013f6b90d0fbe1e7502665c1c24da
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391954"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757717"
 ---
 # <a name="compiler-error-c2079"></a>编译器错误 C2079
 
-identifier 使用未定义的类/结构/联合 name
+"identifier" 使用未定义的类/结构/联合 "name"
 
-指定的标识符是未定义的类、 结构或联合。
+指定的标识符是未定义的类、结构或联合。
 
-通过初始化匿名联合可以导致此错误。
+此错误的原因可能是初始化匿名联合。
 
-下面的示例生成 C2079:
+下面的示例生成 C2079：
 
-```
+```cpp
 // C2079.cpp
 // compile with: /EHsc
 #include <iostream>
@@ -34,7 +34,7 @@ int main() {
 
 可能的解决方法：
 
-```
+```cpp
 // C2079b.cpp
 // compile with: /EHsc
 #include <fstream>
@@ -43,9 +43,9 @@ int main( ) {
 }
 ```
 
-如果您尝试将对象声明一个仅在作用域中为其前向声明的类型在堆栈上，也可能发生 C2079。
+如果你尝试在类型的堆栈上声明一个对象，而该类型的前向声明仅位于范围内，则也可能会发生 C2079。
 
-```
+```cpp
 // C2079c.cpp
 class A;
 
@@ -58,7 +58,7 @@ class A {};
 
 可能的解决方法：
 
-```
+```cpp
 // C2079d.cpp
 // compile with: /c
 class A;

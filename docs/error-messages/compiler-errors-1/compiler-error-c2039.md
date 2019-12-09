@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2039
 ms.assetid: f9dfd521-9b36-4454-a69c-d63f45b606bb
-ms.openlocfilehash: ff795a551c091deb73c5fae1e3b67a61d9966ff0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67c64de676c624369fb5a8bc07b9b5de4833fe7f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266850"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757678"
 ---
 # <a name="compiler-error-c2039"></a>编译器错误 C2039
 
-identifier1： 不是 identifier2 的成员
+"identifier1"：不是 "identifier2" 的成员
 
-代码错误地调用或引用的结构、 类或联合成员。
+代码错误地调用或引用结构、类或联合的成员。
 
 ## <a name="example"></a>示例
 
 下面的示例生成 C2039。
 
-```
+```cpp
 // C2039.cpp
 struct S {
    int mem0;
@@ -39,7 +39,7 @@ int main() {
 
 下面的示例生成 C2039。
 
-```
+```cpp
 // C2039_b.cpp
 // compile with: /clr
 using namespace System;
@@ -54,7 +54,7 @@ int main() {
 
 下面的示例生成 C2039。
 
-```
+```cpp
 // C2039_c.cpp
 // compile with: /clr /c
 ref struct S {
@@ -70,7 +70,7 @@ int S::Count::get() { return 0; }   // OK
 
 ## <a name="example"></a>示例
 
-如果您尝试访问默认索引器不正确，也可能发生 C2039。 下面的示例定义 C# 编写的组件。
+如果尝试不正确地访问默认索引器，也可能会发生 C2039。 下面的示例定义了在中C#创作的组件。
 
 ```
 // C2039_d.cs
@@ -89,7 +89,7 @@ public class B {
 
 下面的示例生成 C2039。
 
-```
+```cpp
 // C2039_e.cpp
 // compile with: /clr
 using namespace System;
@@ -106,9 +106,9 @@ int main() {
 
 ## <a name="example"></a>示例
 
-如果使用泛型，也可能发生 C2039。 下面的示例生成 C2039。
+如果使用泛型，则也可能会发生 C2039。 下面的示例生成 C2039。
 
-```
+```cpp
 // C2039_f.cpp
 // compile with: /clr
 interface class I {};
@@ -131,11 +131,11 @@ int main() {
 
 ## <a name="example"></a>示例
 
-当你尝试释放托管或非托管资源，则会发生 C2039。 有关详细信息，请参阅[析构函数和终结器](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)。
+尝试释放托管或非托管资源时，可能会发生 C2039。 有关详细信息，请参阅[析构函数和终结](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)器。
 
 下面的示例生成 C2039。
 
-```
+```cpp
 // C2039_g.cpp
 // compile with: /clr
 using namespace System;

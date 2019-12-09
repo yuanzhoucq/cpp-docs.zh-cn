@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3732
 ms.assetid: 2d55a7e1-9c39-4379-a093-2f7beb27e2ca
-ms.openlocfilehash: c71cca3643f6337060de6e4bb56ac64d8f0d6e4e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 30ade41ae463923cc5cc9911469e587decacbc64
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327985"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752920"
 ---
 # <a name="compiler-error-c3732"></a>编译器错误 C3732
 
-interface： 激发 COM 事件的自定义接口不能从 IDispatch 继承
+"interface"：激发 COM 事件的自定义接口不能从 IDispatch 继承
 
-支持 COM 事件的接口不能继承`IDispatch`。 有关详细信息，请参阅[COM 中的事件处理](../../cpp/event-handling-in-com.md)。
+支持 COM 事件的接口不能从 `IDispatch`继承。 有关详细信息，请参阅[COM 中的事件处理](../../cpp/event-handling-in-com.md)。
 
-以下错误生成 C3732:
+以下错误生成 C3732：
 
-```
+```cpp
 // C3732.cpp
 #define _ATL_ATTRIBUTES 1
 #include "atlbase.h"

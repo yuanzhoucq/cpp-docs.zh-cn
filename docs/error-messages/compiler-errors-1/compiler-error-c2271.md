@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2271
 ms.assetid: ea47bf57-f55d-4171-8e98-95a71d62820e
-ms.openlocfilehash: 68de819ca62e117036bb415a1708afc0ecd6028c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bddd5a413c0ca16d7b344e5d6c478b07f82ca1a5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388990"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758705"
 ---
 # <a name="compiler-error-c2271"></a>编译器错误 C2271
 
-operator： 新/delete 不能有形式表修饰符
+"operator"： new/delete 不能有形式表修饰符
 
-运算符 (`new`或`delete`) 使用的内存模型说明符声明。
+使用内存模型说明符声明运算符（`new` 或 `delete`）。
 
-下面的示例生成 C2271:
+下面的示例生成 C2271：
 
-```
+```cpp
 // C2271.cpp
 // compile with: /c
 void* operator new(size_t) const {   // C2271

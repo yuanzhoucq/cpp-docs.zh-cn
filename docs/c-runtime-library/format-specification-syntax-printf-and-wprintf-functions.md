@@ -9,12 +9,12 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-ms.openlocfilehash: e4def787dc5792921298999eb643ff56dd2c9f3d
-ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.openlocfilehash: 024e757f57e62ba2b30048c783798180b4da2b9a
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778387"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857861"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>格式规范语法：printf 和 wprintf 函数
 
@@ -46,16 +46,16 @@ ms.locfileid: "72778387"
 
 类型转换说明符字符指定是否要将相应的参数解释为字符、字符串、指针、整数或浮点数。 类型字符是唯一必填的转换规范字段，它出现在任何可选字段之后。
 
-将根据相应的类型字符和可选的[大小](#size)前缀对紧跟格式字符串的参数进行解释。 将通过使用 **c** 或 **C**指定字符类型 `char` 和 `wchar_t` 的转换，将通过使用 **s** 或 **S** 指定单字节和多字节或宽字符字符串，具体取决于正在使用的格式设置函数。 通过使用 **c** 和 **s** 指定的字符和字符串参数将被 `printf` 系列函数解释为 `char` 和 `char*`，或被 `wprintf` 系列函数解释为 `wchar_t` 和 `wchar_t*`。 通过使用 **C** 和 **S** 指定的字符和字符串参数将被 `printf` 系列函数解释为 `wchar_t` 和 `wchar_t*`，或被 `wprintf` 系列函数解释为 `char` 和 `char*`。 此行为是 Microsoft 专用的。
+将根据相应的类型字符和可选的[大小](#size)前缀对紧跟格式字符串的参数进行解释。 将通过使用 **c** 或 **C**指定字符类型 `char` 和 `wchar_t` 的转换，将通过使用 **s** 或 **S** 指定单字节和多字节或宽字符字符串，具体取决于正在使用的格式设置函数。 通过使用 **c** 和 **s** 指定的字符和字符串参数将被 `printf` 系列函数解释为 `char` 和 `char*`，或被 `wprintf` 系列函数解释为 `wchar_t` 和 `wchar_t*`。 通过使用 **C** 和 **S** 指定的字符和字符串参数将被 `printf` 系列函数解释为 `wchar_t` 和 `wchar_t*`，或被 `wprintf` 系列函数解释为 `char` 和 `char*`。 此行为是 Microsoft 特定的。
 
-使用**d**、 **i**、 **o**、 **u**、 **x**和**x**指定整数类型（如 `short`、`int`、`long`、`long long` 及其 `unsigned` 变体）。**使用、** **a**、 **e**、 **e**、 **f**、 **f**、 **g**和**g**指定浮点类型（如 1、2 和 3）。默认情况下，除非使用*大小*前缀对其进行修改，否则，将整数参数强制转换为 3 类型，并将浮点参数强制转换为 4。 在 64 位系统上，`int` 是 32 位的值；因此，确定 64 位整数的输出格式时，将把它截断，除非使用 **ll** 或 **I64** 的大小前缀。 由 **p** 指定的指针类型使用平台的默认指针大小。
+使用**d**、 **i**、 **o**、 **u**、 **x**和**x**指定整数类型（如 `short`、`int`、`long`、`long long`及其 `unsigned` 变体）。**使用、** **a**、 **e**、 **e**、 **f**、 **f**、 **g**和**g**指定浮点类型（如 `float`、`double`和 `long double`）。默认情况下，除非使用*大小*前缀对其进行修改，否则，将整数参数强制转换为 `int` 类型，并将浮点参数强制转换为 `double`。 在 64 位系统上，`int` 是 32 位的值；因此，确定 64 位整数的输出格式时，将把它截断，除非使用 **ll** 或 **I64** 的大小前缀。 由 **p** 指定的指针类型使用平台的默认指针大小。
 
 > [!NOTE]
-> **Microsoft 专用** 与 `printf` 和 `wprintf` 函数一起使用时，Z 类型字符以及c、C、s 和S 类型字符的行为是 Microsoft 扩展。 在所有的格式设置函数中，ISO C 标准始终对窄字符和字符串使用 **c** 和 **s**，而对宽字符和字符串使用 **C** 和 **S**。
+> **特定于 Microsoft 的：** 与 `printf` 和 `wprintf` 函数一起使用时， **Z**类型字符和**c**、 **c**、 **s**和**s**类型字符的行为是 Microsoft 扩展。 在所有的格式设置函数中，ISO C 标准始终对窄字符和字符串使用 **c** 和 **s**，而对宽字符和字符串使用 **C** 和 **S**。
 
 ### <a name="type-field-characters"></a>类型字段字符
 
-|类型字符|参数|输出格式|
+|类型字符|自变量|输出格式|
 |--------------------|--------------|-------------------|
 |**c**|字符|与 `printf` 函数一起使用时，指定单字节字符；与 `wprintf` 函数一起使用时，指定宽字符。|
 |**C**|字符|与 `printf` 函数一起使用时，指定宽字符；与 `wprintf` 函数一起使用时，指定单字节字符。|
@@ -75,24 +75,24 @@ ms.locfileid: "72778387"
 |**A**|浮点|有符号的十六进制双精度浮点值，形式为 [-]0X*h.hhhh*__P±__*dd*，其中 *h.hhhh* 是尾数的十六进制数（使用大写字母），*dd* 是一位或多位指数。 精度指定此点后的数字位数。|
 |**n**|指向整数的指针|目前成功写入流或缓冲区的字符数。 此值存储在地址作为自变量的整数中。 可通过参数大小规范前缀控制指向的整数的大小。 **n** 说明符默认为禁用；请参阅重要的安全说明了解相关信息。|
 |p|指针类型|将自变量显示为十六进制数中的地址。|
-|**s**|字符串|与 `printf` 函数一起使用时，指定单字节或多字节字符串；与 `wprintf` 函数一起使用时，指定宽字符字符串。 将于第一个空字符之前或达到精度值时显示字符。|
+|**秒**|字符串|与 `printf` 函数一起使用时，指定单字节或多字节字符串；与 `wprintf` 函数一起使用时，指定宽字符字符串。 将于第一个空字符之前或达到精度值时显示字符。|
 |**S**|字符串|与 `printf` 函数一起使用时，指定宽字符字符串；与 `wprintf` 函数一起使用时，指定单字节或多字节字符串。 将于第一个空字符之前或达到精度值时显示字符。|
 |**Z**|`ANSI_STRING` 或 `UNICODE_STRING` 结构|将 [ANSI_STRING](/windows/win32/api/ntdef/ns-ntdef-string) 或 [UNICODE_STRING](/windows/win32/api/ntdef/ns-ntdef-_unicode_string) 结构的地址作为参数传递时，会显示包含在由结构的 `Buffer` 字段指向的缓冲区中的字符串。 使用 **w** 的大小修饰符前缀指定 `UNICODE_STRING` 参数，例如 `%wZ`。 结构的 `Length` 字段必须设置为字符串的长度（以字节为单位）。 结构的 `MaximumLength` 字段必须设置为缓冲区的长度（以字节为单位）。<br /><br /> 通常情况下，**Z** 类型字符仅在使用转换规范的驱动程序调试函数（如 `dbgPrint` 和 `kdPrint`）中使用。|
 
 从 Visual Studio 2015 开始，如果对应浮点转换说明符（**a**、**A**、**e**、**E**、**f**、**F**、**g**、**G**）的参数为无穷大、不定或 NaN，格式化的输出则符合 C99 标准。 下表列出了格式化的输出：
 
-|“值”|Output|
+|{2&gt;值&lt;2}|Output|
 |-----------|------------|
 |infinity|`inf`|
 |静默 NaN|`nan`|
-|发信 NaN|`nan(snan)`|
+|信令 NaN|`nan(snan)`|
 |不定 NaN|`nan(ind)`|
 
 可能以符号作为其中任何一个值的前缀。 如果浮点类型转换说明符字符是一个大写字母，则输出也将使用大写字母格式。 例如，如果格式说明符是 `%F`而不是 `%f`，则 infinity 的格式将被设置为 `INF`，而不是 `inf`。 `scanf` 函数也可以分析这些字符串，使这些值可以通过 `printf` 和 `scanf` 函数进行往返。
 
 在 Visual Studio 2015 之前，CRT 使用一种不同的非标准格式作为无穷大、不定和 NaN 值的输出：
 
-|“值”|Output|
+|{2&gt;值&lt;2}|Output|
 |-----------|------------|
 |+ 无穷|`1.#INF` 随机数字|
 |- 无穷|`-1.#INF` 随机数字|
@@ -118,7 +118,7 @@ ms.locfileid: "72778387"
 
 ### <a name="flag-characters"></a>标志字符
 
-|Flag|含义|Default|
+|Flag|含义|默认值|
 |----------|-------------|-------------|
 |**-**|在给定的字段宽度内左对齐结果。|右对齐。|
 |**+**|如果输出值为有符号的类型，则在该值前使用符号（+ 或 -）作为前缀。|只对有符号的负值 (-) 显示符号。|
@@ -160,7 +160,7 @@ ms.locfileid: "72778387"
 
 ### <a name="how-precision-values-affect-type"></a>精度值如何影响类型
 
-|键入|含义|Default|
+|类型|含义|默认值|
 |----------|-------------|-------------|
 |**a**、**A**|精度指定此点后的数字位数。|默认精度为 13。 如果精度为 0，除非使用了 **#** 标志，否则不会打印小数点。|
 |**c**、**C**|精度不产生任何影响。|打印字符。|
@@ -204,9 +204,9 @@ ms.locfileid: "72778387"
 **hc** 或 **hC** 类型说明符与 `printf` 函数中的 **c** 以及 `wprintf` 函数中的 **C** 是同义的。 **lc**、**lC**、**wc** 或 **wC** 类型说明符与 `printf` 函数中的 **C** 以及 `wprintf` 函数中的 **c** 是同义的。 **hs** 或 **hS** 类型说明符与 `printf` 函数中的 **s** 以及 `wprintf` 函数中的 **S** 是同义的。 **ls**、**lS**、**ws** 或 **wS** 类型说明符与 `printf` 函数中的 **S** 以及 `wprintf` 函数中的 **s** 是同义的。
 
 > [!NOTE]
-> **Microsoft 专用** **I**（大写的 i）、**I32**、**I64** 和 **w** 参数大小修饰符前缀是 Microsoft 扩展，且不符合 ISO C 标准。 h 前缀（在与 `char` 类型的数据一起使用时）和 l（小写 L）前缀（在与 `double` 类型的数据一起使用时）是 Microsoft 扩展。
+> **特定于 Microsoft 的：** **I** （大写 I）、 **I32**、 **I64**和**w**参数大小修饰符前缀是 Microsoft 扩展，与 ISO C 兼容。 h 前缀（在与 `char` 类型的数据一起使用时）和 l（小写 L）前缀（在与 `double` 类型的数据一起使用时）是 Microsoft 扩展。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [printf、_printf_l、wprintf、_wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)<br/>
 [printf_s、_printf_s_l、wprintf_s、_wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)<br/>

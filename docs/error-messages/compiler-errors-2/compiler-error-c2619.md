@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2619
 ms.assetid: c826f8ab-d66a-4b79-a0b2-93b0af8c41ac
-ms.openlocfilehash: f82b315a3e7ae4bb1f6d281e1d80ddc2c7fb0dea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3ca5ea4612091f1e3eee8fead2b1eaebb264b696
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208423"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754766"
 ---
 # <a name="compiler-error-c2619"></a>编译器错误 C2619
 
@@ -21,7 +21,7 @@ ms.locfileid: "62208423"
 
 下面的示例生成 C2619，并演示如何通过删除 static 关键字修复此错误。
 
-```
+```cpp
 // C2619.cpp
 int main() {
    union { static int j; };  // C2619

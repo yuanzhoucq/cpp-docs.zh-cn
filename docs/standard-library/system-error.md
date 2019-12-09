@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - system_error header
 ms.assetid: 5e046c6e-48d9-4740-8c8a-05f3727c1215
-ms.openlocfilehash: e6eef7152e45e8177c451fc25592fab85c58ccb5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b9ddb3117afe37060b8013be235bdb11a2a031ac
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449750"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898852"
 ---
-# <a name="ltsystemerrorgt"></a>&lt;system_error&gt;
+# <a name="ltsystem_errorgt"></a>&lt;system_error&gt;
 
-包括标头\<system_error > 以定义用于处理低`system_error`级别系统错误的异常类和相关模板。
+包括标头 \<system_error > 定义异常类 `system_error` 和相关模板来处理低级别系统错误。
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>需求
 
 **标头：** \<system_error>
 
-**命名空间：** std
+**命名空间:** std
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="objects"></a>对象
 
@@ -55,7 +55,7 @@ ms.locfileid: "68449750"
 
 |||
 |-|-|
-|[errc](../standard-library/system-error-enums.md#errc)|为 `<errno.h>` 中的 Posix 定义的所有错误代码宏提供符号名称。|
+|[errc](../standard-library/system-error-enums.md#errc)|为 `<errno.h>`中的 POSIX 定义的所有错误代码宏提供符号名称。|
 
 ### <a name="classes-and-structs"></a>类和结构
 
@@ -69,6 +69,6 @@ ms.locfileid: "68449750"
 |[is_error_condition_enum](../standard-library/is-error-condition-enum-class.md)|表示测试 [error_condition Class](../standard-library/error-condition-class.md) 枚举的类型谓词。|
 |[system_error](../standard-library/system-error-class.md)|表示为报告低级别系统溢出而引发的所有异常的基类。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [头文件引用](../standard-library/cpp-standard-library-header-files.md)

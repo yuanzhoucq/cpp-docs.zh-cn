@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3218
 ms.assetid: 0eea19e0-503e-4e07-ae8b-2cb2e95922cd
-ms.openlocfilehash: 87084f9751b1593ec93a3062f23714bba403da9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 386a0c180dd01161ebccdd2b04e899e0cc999614
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182517"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737980"
 ---
 # <a name="compiler-error-c3218"></a>编译器错误 C3218
 
-type： 不允许作为约束的类型
+"type"：类型不允许作为约束
 
-对于要约束的类型，它必须是值类型或对托管的类或接口的引用。
+要使类型成为约束，该类型必须是值类型或对托管类或接口的引用。
 
 ## <a name="example"></a>示例
 
 下面的示例生成 C3218。
 
-```
+```cpp
 // C3218.cpp
 // compile with: /clr /c
 class A {};

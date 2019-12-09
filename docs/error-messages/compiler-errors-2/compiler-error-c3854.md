@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3854
 ms.assetid: 32a9ead0-c6c7-485a-8802-c7b1fe921d3a
-ms.openlocfilehash: 3b48e2c65003537102864fdafe7db70b06ade029
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c62117e9437233f614aa0e57a3848fcb8dd0c79
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265524"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754844"
 ---
 # <a name="compiler-error-c3854"></a>编译器错误 C3854
 
-左边的 = 表达式计算的函数。 无法将分配给函数的函数 （不是左值）
+"=" 左边的表达式的计算结果为函数。 不能分配给函数（函数不是左值）
 
-无法重新初始化引用。 取消引用的函数的引用将生成一个函数，这是右值，不能分配。 因此，不能通过对函数的引用进行分配。
+无法重新初始化引用。 取消引用函数引用将生成一个函数，该函数是右值，不能分配。 因此，不能通过对函数的引用进行赋值。
 
-下面的示例生成 C3854:
+下面的示例生成 C3854：
 
-```
+```cpp
 // C3854.cpp
 int afunc(int i)
 {

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3291
 ms.assetid: ed2e9f89-8dbc-4387-bc26-cc955e840858
-ms.openlocfilehash: e3f20d7d7e63079ed9c7a078e9fc9eac06d32677
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eb98be3677de6c93fdb7bedf7c0d482115891697
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222716"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760135"
 ---
 # <a name="compiler-error-c3291"></a>编译器错误 C3291
 
@@ -23,7 +23,7 @@ Trivial 属性不能命名为 `default`。 有关更多信息，请参见 [prope
 
 以下示例生成 C3291。
 
-```
+```cpp
 // C3291.cpp
 // compile with: /clr /c
 ref struct C {

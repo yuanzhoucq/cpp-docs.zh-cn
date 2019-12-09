@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2492
 ms.assetid: 8c44c9bb-c366-4fe5-a0ab-882e38608aaa
-ms.openlocfilehash: e2b08ef3e46681147c4efd77cbffadb096bbfc16
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fd52b434f86bdc93124c6005bbf7fadad3cb56b2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360705"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757054"
 ---
 # <a name="compiler-error-c2492"></a>编译器错误 C2492
 
-'*变量*： 具有线程存储持续时间的数据可能没有 dll 接口
+"*variable*"：具有线程存储持续时间的数据可能没有 dll 接口
 
-与声明该变量[线程](../../cpp/thread.md)属性，并使用的 DLL 接口。 地址`thread`变量之前未知运行时，因此它不能链接到 DLL 导入或导出。
+变量是用[thread](../../cpp/thread.md)特性和 DLL 接口声明的。 在运行时之前，`thread` 变量的地址是未知的，因此不能将其链接到 DLL 导入或导出。
 
-下面的示例生成 C2492:
+下面的示例生成 C2492：
 
-```
+```cpp
 // C2492.cpp
 // compile with: /c
 class C {

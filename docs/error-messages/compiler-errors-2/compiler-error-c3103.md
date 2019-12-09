@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3103
 ms.assetid: 7984bd3e-d51d-43e4-b6f4-08c1e9fb9704
-ms.openlocfilehash: 6a68e39ac92433eadacd666861f9e00431e4a34a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ecbbb3f7e9d173957c35e76cbec407aab9ebfafe
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404177"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749930"
 ---
 # <a name="compiler-error-c3103"></a>编译器错误 C3103
 
-参数： 重复的命名的参数
+"argument"：重复的命名参数
 
-属性不能重复命名的参数。
+特性不能重复命名自变量。
 
-有关详细信息，请参阅 [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md)。
+有关更多信息，请参见 [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md)。
 
 ## <a name="example"></a>示例
 
 下面的示例生成 C3103。
 
-```
+```cpp
 // C3103.cpp
 // compile with: /clr /c
 using namespace System;

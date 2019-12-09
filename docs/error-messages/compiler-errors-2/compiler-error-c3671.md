@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3671
 ms.assetid: d684e4ae-87e2-4424-80bb-6f346652c831
-ms.openlocfilehash: c4534b11f3aedf638f69337fb6a7af778e086bb4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 030a6acb19c0907956d2a5b833b683821591e5c5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62215012"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758107"
 ---
 # <a name="compiler-error-c3671"></a>编译器错误 C3671
 
-function_1： 函数不重写 function_2
+"function_1"：函数没有重写 "function_2"
 
-使用显式重写语法时，编译器将生成错误，如果未重写函数。  请参阅[显式重写](../../extensions/explicit-overrides-cpp-component-extensions.md)有关详细信息。
+使用显式 override 语法时，如果未重写函数，编译器将生成错误。  有关详细信息，请参阅[显式重写](../../extensions/explicit-overrides-cpp-component-extensions.md)。
 
 ## <a name="example"></a>示例
 
 下面的示例生成 C3671。
 
-```
+```cpp
 // C3671.cpp
 // compile with: /clr /c
 ref struct S {

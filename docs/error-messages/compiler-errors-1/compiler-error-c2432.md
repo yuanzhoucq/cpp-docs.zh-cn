@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2432
 ms.assetid: 0e3326e8-cab1-45a5-b48d-61edd33793e8
-ms.openlocfilehash: e2983d966a6290ce19713c63feb502c8ffc74bf1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4234626bc246d6da87be68b03d44562dd5990ff
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166836"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744506"
 ---
 # <a name="compiler-error-c2432"></a>编译器错误 C2432
 
-identifier 中的 16 位数据的非法引用
+"identifier" 中对16位数据的非法引用
 
-16 位寄存器用作索引或基寄存器。 编译器不支持引用 16 位数据。 16 位寄存器编译为 32 位代码时不能用作索引或基寄存器。
+16位寄存器用作索引或基寄存器。 编译器不支持引用16位数据。 编译32位代码时，16位寄存器不能用作索引或基寄存器。
 
-下面的示例生成 C2432:
+下面的示例生成 C2432：
 
-```
+```cpp
 // C2432.cpp
 // processor: x86
 int main() {

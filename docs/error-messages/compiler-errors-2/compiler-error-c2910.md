@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2910
 ms.assetid: 09c50e6a-e099-42f6-8ed6-d80e292a7a36
-ms.openlocfilehash: 58d56ad834b34425cda4ac7ba081eabd2424e451
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0061a7171dd08440ec5d8c8b8cadb77303ff8f41
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408350"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761110"
 ---
 # <a name="compiler-error-c2910"></a>编译器错误 C2910
 
-function： 不能显式专用化
+"function"：不能显式专用化
 
-编译器检测到尝试两次显式专用化函数。
+编译器检测到对函数进行显式专用化的尝试两次。
 
-下面的示例生成 C2910:
+下面的示例生成 C2910：
 
-```
+```cpp
 // C2910.cpp
 // compile with: /c
 template <class T>
@@ -31,11 +31,11 @@ template <> struct S<int> { void f() {} };
 template <> void S<int>::f() {}   // C2910 delete this specialization
 ```
 
-如果你尝试显式专用化非模板成员，则还可以生成 C2910。 也就是说，您可以仅显式特殊化函数模板。
+如果尝试显式专用化非模板成员，还可以生成 C2910。 也就是说，只能显式专用化函数模板。
 
-下面的示例生成 C2910:
+下面的示例生成 C2910：
 
-```
+```cpp
 // C2910b.cpp
 // compile with: /c
 template <class T> struct A {
@@ -54,13 +54,13 @@ template <> A<void>::A(void* p){}   // C2910
 // A<void>::A(void* p){}
 ```
 
-此错误还将生成的 Visual Studio.NET 2003年执行的编译器一致性工作:。
+此错误还会由于在 Visual Studio .NET 2003 中完成的编译器一致性工作而生成：。
 
-代码将视觉对象的 Visual Studio.NET 2003年和 Visual Studio.NET 版本中有效C++，删除`template <>`。
+要使代码在 visual Studio .NET 2003 和 visual Studio .NET 版本的视觉C++对象中有效，请删除 `template <>`。
 
-下面的示例生成 C2910:
+下面的示例生成 C2910：
 
-```
+```cpp
 // C2910c.cpp
 // compile with: /c
 template <class T> class A {

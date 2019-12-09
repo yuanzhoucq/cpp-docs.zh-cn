@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C2660
 ms.assetid: 2e01a1db-4f00-4df6-a04d-cb6f70a6922b
-ms.openlocfilehash: 3f236f18faa92df660ed677df293373fe9f0800c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: febeb75cbde6738bd9079b7bd86f88c521c29e40
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360367"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756053"
 ---
 # <a name="compiler-error-c2660"></a>编译器错误 C2660
 
-function： 函数不采用数字参数
+"function"：函数不接受数字参数
 
-该函数调用的参数数目不正确。
+调用函数时使用的参数数目不正确。
 
-如果您意外调用 Windows API 函数而不是相同的名称的 MFC 成员函数，则会发生 C2660。 若要解决此问题：
+如果意外调用 Windows API 函数而不是同名的 MFC 成员函数，则可能会发生 C2660。 若要解决此问题：
 
-- 调整以符合成员函数调用的格式的函数调用。
+- 调整函数调用以符合成员函数调用的格式。
 
-- 使用范围解析运算符 (`::`) 以告知编译器要查找全局命名空间中的函数名称。
+- 使用范围解析运算符（`::`）指示编译器在全局命名空间中查找函数名称。
 
 ## <a name="example"></a>示例
 
 下面的示例生成 C2660。
 
-```
+```cpp
 // C2660.cpp
 void func( int, int ) {}
 
@@ -41,9 +41,9 @@ int main() {
 
 ## <a name="example"></a>示例
 
-如果尝试直接调用的托管类型的 Dispose 方法，也可能发生 C2660。 有关详细信息，请参阅[析构函数和终结器](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)。 下面的示例生成 C2660。
+如果尝试直接调用托管类型的 Dispose 方法，也会发生 C2660。 有关详细信息，请参阅[析构函数和终结](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)器。 下面的示例生成 C2660。
 
-```
+```cpp
 // C2660_a.cpp
 // compile with: /clr
 using namespace System;
@@ -63,9 +63,9 @@ int main() {
 
 ## <a name="example"></a>示例
 
-如果派生的类隐藏了函数，将发生 C2660。
+如果派生的类隐藏了一个函数，将会发生 C2660。
 
-```
+```cpp
 // C2660b.cpp
 // C2660 expected
 #include <stdio.h>
@@ -94,9 +94,9 @@ int main() {
 
 ## <a name="example"></a>示例
 
-如果错误地调用索引的属性，则会发生 C2660。
+如果不正确地调用索引属性，则会发生 C2660。
 
-```
+```cpp
 // C2660c.cpp
 // compile with: /clr
 ref class X {
@@ -119,9 +119,9 @@ int main() {
 
 ## <a name="example"></a>示例
 
-如果错误地调用索引的属性，则会发生 C2660。
+如果不正确地调用索引属性，则会发生 C2660。
 
-```
+```cpp
 // C2660d.cpp
 // compile with: /clr
 ref class A{
@@ -142,9 +142,9 @@ int main() {
 
 ## <a name="example"></a>示例
 
-如果在模板类中，定义一个新的运算符，但其中 new 运算符创建一个对象，其类型是不同于封闭类型，则会发生 C2660。
+如果在模板类中定义了新的运算符，但 new 运算符创建的对象的类型不是封闭类型，则可能会发生 C2660。
 
-```
+```cpp
 // C2660e.cpp
 // compile with: /c
 #include <malloc.h>

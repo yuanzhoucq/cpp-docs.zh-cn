@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3899
 ms.assetid: 14e07e4a-f7a7-4309-baaa-649d69e12e23
-ms.openlocfilehash: 26860ba0e8fd92f491ee389147605ba82cecf25c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 022bc1a37f7d9cfdb2c206592dd303a9c3c95080
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376024"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749108"
 ---
 # <a name="compiler-error-c3899"></a>编译器错误 C3899
 
-var: initonly 数据成员的左值使用不允许直接在类 class 中的并行区域
+"var"： initonly 数据成员的左值不允许直接在类 "class" 中的并行区域内使用
 
-[Initonly (C++/CLI)](../../dotnet/initonly-cpp-cli.md)数据成员不能在该部分中的构造函数初始化[并行](../../parallel/openmp/reference/parallel.md)区域。  这样一来，就不再有效构造函数的一部分，这是因为编译器执行该代码，内部重定位。
+[Initonly （C++/cli）](../../dotnet/initonly-cpp-cli.md)数据成员不能在[并行](../../parallel/openmp/reference/parallel.md)区域中的构造函数的该部分内初始化。  这是因为编译器会执行该代码的内部重定位，因此它实际上不再是构造函数的一部分。
 
-若要解决，初始化 initonly 数据成员在构造函数中，但并行区域之外。
+若要解决此问题，请在构造函数中初始化 initonly 数据成员，但在并行区域外初始化。
 
 ## <a name="example"></a>示例
 
 下面的示例生成 C3899。
 
-```
+```cpp
 // C3899.cpp
 // compile with: /clr /openmp
 #include <omp.h>

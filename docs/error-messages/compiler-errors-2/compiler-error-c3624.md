@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3624
 ms.assetid: eaac6a4f-eb11-4e4d-ab12-124ba995c5cf
-ms.openlocfilehash: bb574b194f01aa1da27b962ed6be327f4f988c3c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b4f71ed71ddb1b14ed51ccbcd420284ddcc70f6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221991"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761915"
 ---
 # <a name="compiler-error-c3624"></a>编译器错误 C3624
 
-type： 使用此类型需要引用程序集 assembly
+"type"：使用此类型需要引用程序集 "assembly"
 
-未指定编译你的代码所需的程序集 （引用）;传递到程序集[#using](../../preprocessor/hash-using-directive-cpp.md)指令。
+未指定编译你的代码所需的程序集（引用）;将程序集传递给[#using](../../preprocessor/hash-using-directive-cpp.md)指令。
 
 ## <a name="example"></a>示例
 
-下面的示例生成 C3624:
+下面的示例生成 C3624：
 
-```
+```cpp
 // C3624.cpp
 // compile with: /clr /c
 #using <System.Windows.Forms.dll>

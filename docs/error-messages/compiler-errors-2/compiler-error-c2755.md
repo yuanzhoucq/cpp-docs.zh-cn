@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2755
 ms.assetid: 8ee4eeb6-4757-4efe-9100-38ff4a96f1de
-ms.openlocfilehash: c2238058dc4b7df6bbe33e98d6ccde996f36b782
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fcd4bb5d49f6f6e807ad240c377debb220138c93
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227967"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759550"
 ---
 # <a name="compiler-error-c2755"></a>编译器错误 C2755
 
-param： 部分专用化的非类型参数必须是简单标识符
+"param"：部分专用化的非类型参数必须是简单标识符
 
-非类型参数必须是简单标识符，有点像编译器可以在编译时解析为单个标识符或常量的值。
+非类型参数必须是简单标识符，编译器可以在编译时解析为单个标识符或常量值。
 
-下面的示例生成 C2755:
+下面的示例生成 C2755：
 
-```
+```cpp
 // C2755.cpp
 template<int I, int J>
 struct A {};

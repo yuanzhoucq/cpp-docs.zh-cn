@@ -1,18 +1,18 @@
 ---
 title: /NOPDB
 description: /NOPDB 选项使 DUMPBIN 无法加载和搜索 PDB 文件中的符号信息。
-ms.date: 10/29/2019
+ms.date: 12/04/2019
 f1_keywords:
 - /NOPDB
 helpviewer_keywords:
 - /NOPDB dumpbin option
 - /NOPDB
-ms.openlocfilehash: 3b745049517888d13de245d4e29be3985c122ada
-ms.sourcegitcommit: 6ed1bc5b26dc60a780c1fc5f2f19d57ba1dc47d8
+ms.openlocfilehash: 7b0c01e59b52bcec6ddf09416dd6aac9999527a6
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73145745"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856964"
 ---
 # <a name="nopdb"></a>/NOPDB
 
@@ -24,7 +24,7 @@ ms.locfileid: "73145745"
 
 ## <a name="remarks"></a>备注
 
-默认情况下，DUMPBIN 会尝试为其目标对象文件、库或可执行文件加载 PDB 文件。 DUMPBIN 使用此信息将地址与符号名称匹配。 如果 PDB 文件较大，或者必须从远程服务器加载，则进程可能会非常耗时。 **/NOPDB**选项告知 DUMPBIN 跳过此步骤。 它仅打印对象文件、库或可执行文件中可用的地址和符号信息。
+默认情况下，DUMPBIN 会尝试为其目标可执行文件加载 PDB 文件。 DUMPBIN 使用此信息将地址与符号名称匹配。 如果 PDB 文件较大，或者必须从远程服务器加载，则进程可能会非常耗时。 **/NOPDB**选项告知 DUMPBIN 跳过此步骤。 它仅打印可执行文件中提供的地址和符号信息。
 
 ### <a name="to-set-the-nopdb-linker-option-in-visual-studio"></a>在 Visual Studio 中设置/NOPDB 链接器选项
 
@@ -38,7 +38,7 @@ ms.locfileid: "73145745"
 
 - 此选项不具有编程等效项。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [DUMPBIN 命令行](dumpbin-command-line.md)\
 [DUMPBIN 选项](dumpbin-options.md)\

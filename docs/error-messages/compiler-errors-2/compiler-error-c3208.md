@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3208
 ms.assetid: 6d060bfe-52cf-4599-8f70-bdeb5a670df3
-ms.openlocfilehash: fa665f17de7ff6bec00ecdaf9d1749b0626c9181
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 61577ac4f28b8432a4425a76002ed5ad83186419
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402666"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761889"
 ---
 # <a name="compiler-error-c3208"></a>编译器错误 C3208
 
@@ -21,7 +21,7 @@ ms.locfileid: "62402666"
 
 下面的示例生成 C3208：
 
-```
+```cpp
 // C3208.cpp
 template <template <class T> class TT >
 int f();

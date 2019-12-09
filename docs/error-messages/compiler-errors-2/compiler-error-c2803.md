@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2803
 ms.assetid: 2cdbe374-8cc4-4c4e-ba15-062a7479e937
-ms.openlocfilehash: d20b8dde9f4134273adcba0f947f685f7ce7d213
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d39f737ba02f3fa9c9d5f61594ddf730db6739a5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408519"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760655"
 ---
 # <a name="compiler-error-c2803"></a>编译器错误 C2803
 
-operator operator 必须具有至少一个类类型的形参
+"operator operator" 必须至少有一个类类型的形参
 
-重载的运算符缺少类类型的参数。
+重载运算符缺少类类型的参数。
 
-您需要将至少一个参数传递 （不使用指针，而是引用） 的引用或值，以便能够编写"< b"(和 b 类 A 类型)。
+需要通过引用传递至少一个参数（不使用指针，而不是引用）或通过值来编写 "a < b" （a 和 b 类型为类 A）。
 
-如果这两个参数都是指针，它将是纯比较的指针地址，且不会将用户定义的转换。
+如果这两个参数都是指针，则它将是指针地址的纯粹比较，并且不会使用用户定义的转换。
 
-下面的示例生成 C2803:
+下面的示例生成 C2803：
 
-```
+```cpp
 // C2803.cpp
 // compile with: /c
 class A{};

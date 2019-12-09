@@ -2,12 +2,12 @@
 title: 声明摘要
 ms.date: 11/04/2016
 ms.assetid: 53a5e9e5-1a33-40b5-9dea-7f669b479329
-ms.openlocfilehash: 21d6866f8e0b370d8a0d93253a6259302666963a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 88cfc78089e0efd4765a40ab0d9c6dc333deb125
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647195"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857016"
 ---
 # <a name="summary-of-declarations"></a>声明摘要
 
@@ -17,12 +17,12 @@ ms.locfileid: "50647195"
 *declaration-specifiers*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*type-specifier* *declaration-specifiers*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;type-qualifier declaration-specifiers<sub>opt</sub>
+&nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier* *declaration-specifiers*<sub>opt</sub>
 
-attribute-seq :&nbsp;&nbsp;&nbsp;&nbsp;/\* Microsoft Specific \*/<br/>
+*属性-seq* ：&nbsp;&nbsp;&nbsp;&nbsp;/\* \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;attribute attribute-seq<sub>opt</sub>
 
-attribute : one of&nbsp;&nbsp;&nbsp;&nbsp;/\* Microsoft Specific \*/<br/>
+*属性*：&nbsp;&nbsp;中的一个 &nbsp;&nbsp;/\* \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[__asm](../assembler/inline/asm.md) [__clrcall](../cpp/clrcall.md) [__stdcall](../cpp/stdcall.md) [__based](../cpp/based-grammar.md) [__fastcall](../cpp/fastcall.md) [__thiscall](../cpp/thiscall.md) [__cdecl](../cpp/cdecl.md) [__inline](../cpp/inline-functions-cpp.md) [__vectorcall](../cpp/vectorcall.md)
 
 *init-declarator-list*：<br/>
@@ -39,17 +39,17 @@ attribute : one of&nbsp;&nbsp;&nbsp;&nbsp;/\* Microsoft Specific \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**static**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**extern**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**typedef**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (** *extended-decl-modifier-seq* **)** /\* Microsoft 专用 \*/
+&nbsp;&nbsp;&nbsp;__declspec /\* \*/ **（** *decl* **）** &nbsp;
 
 *type-specifier*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**void**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**char**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**short**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**int**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__int8** /\* Microsoft 专用 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__int16** /\* Microsoft 专用 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__int32** /\* Microsoft 专用 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__int64** /\* Microsoft 专用 \*/<br/>
+&nbsp;&nbsp; **&nbsp;&nbsp;__int8 /\*** \*/<br/>
+&nbsp;&nbsp; **&nbsp;&nbsp;__int16 /\*** \*/<br/>
+&nbsp;&nbsp; **&nbsp;&nbsp;__int32 /\*** \*/<br/>
+&nbsp;&nbsp; **&nbsp;&nbsp;__int64 /\*** \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**long**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**float**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**double**<br/>
@@ -75,10 +75,10 @@ attribute : one of&nbsp;&nbsp;&nbsp;&nbsp;/\* Microsoft Specific \*/<br/>
 
 *pointer*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *type-qualifier-list*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> type-qualifier-list<sub>opt</sub> pointer
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *type-qualifier-list*<sub>opt</sub> *pointer*
 
 parameter-type-list：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/\* 参数列表 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;parameter-list<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*parameter-list*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*parameter-list* **, ...**
 
 *parameter-list*:<br/>
@@ -135,7 +135,7 @@ parameter-type-list：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs
 &nbsp;&nbsp;&nbsp;&nbsp;declaration-specifiers abstract-declarator<sub>opt</sub> /\* 匿名声明符 \*/
 
 identifier-list：/\*用于旧式声明符\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;identifier<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;identifier-list , identifier
 
 abstract-declarator：/\* 用于匿名声明符 \*/<br/>
@@ -145,16 +145,16 @@ abstract-declarator：/\* 用于匿名声明符 \*/<br/>
 *direct-abstract-declarator*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;( abstract-declarator )<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;direct-abstract-declarator<sub>opt</sub> [ constant-expression<sub>opt</sub> ]<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;direct-abstract-declarator<sub>opt</sub> ( parameter-type-list<sub>opt</sub> )
+&nbsp;&nbsp;&nbsp;&nbsp;direct-abstract-declarator<sub>opt</sub> ( parameter-type-list<sub>opt</sub>)
 
 *initializer*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;{ initializer-list } /\* 用于聚合初始化 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;{ initializer-list , }
+&nbsp;&nbsp;&nbsp;&nbsp;{ initializer-list} /\* 用于聚合初始化 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;{initializer-list , }
 
 *initializer-list*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*initializer*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;initializer-list , initializer
+&nbsp;&nbsp;&nbsp;&nbsp;initializer-list, initializer
 
 *type-name*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;specifier-qualifier-list abstract-declarator<sub>opt</sub>
@@ -162,17 +162,17 @@ abstract-declarator：/\* 用于匿名声明符 \*/<br/>
 *typedef-name*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier*
 
-extended-decl-modifier-seq：&nbsp;&nbsp;&nbsp;&nbsp;/\* Microsoft 专用 \*/<br/>
+*decl*&nbsp;&nbsp;&nbsp;&nbsp;/\* 特定于 Microsoft 的 \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier-seq* *extended-decl-modifier*
 
-*extended-decl-modifier*:&nbsp;&nbsp;&nbsp;&nbsp;/\* Microsoft 专用 \*/<br/>
+*decl-修饰符*：&nbsp;&nbsp;&nbsp;&nbsp;/\* \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**thread**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**naked**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllexport**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [调用约定](../cpp/calling-conventions.md)<br/>
 [短语结构语法](../c-language/phrase-structure-grammar.md)<br/>

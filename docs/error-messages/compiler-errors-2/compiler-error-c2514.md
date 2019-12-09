@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2514
 ms.assetid: 4b7085e5-6714-4261-80b7-bc72e64ab3e8
-ms.openlocfilehash: aef9df0718d013378f88c1a34d08d1b1e05e214c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e0153ec9d48225d153221f2192761da4023fab96
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243746"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746508"
 ---
 # <a name="compiler-error-c2514"></a>编译器错误 C2514
 
-class： 类具有任何构造函数
+"class"：类没有构造函数
 
-类、 结构或联合具有正在使用其进行实例化的参数匹配的参数列表与任何构造函数。
+类、结构或联合没有带有与用于实例化参数的参数列表相匹配的参数列表的构造函数。
 
-它可以实例化之前，必须完全声明一个类。
+必须完全声明类，然后才能对其进行实例化。
 
-下面的示例生成 C2514:
+下面的示例生成 C2514：
 
-```
+```cpp
 // C2514.cpp
 // compile with: /c
 class f;

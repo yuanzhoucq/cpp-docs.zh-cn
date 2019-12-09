@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3891
 ms.assetid: 6e1a9458-97f5-4580-bc0f-aa97a1bfd20d
-ms.openlocfilehash: 74b8802a165ab3265cc0f1c6a0b33b31d3db401d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b5ef8b837033a149455c040f748f479aa3f424d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62281555"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736394"
 ---
 # <a name="compiler-error-c3891"></a>编译器错误 C3891
 
-var: literal 数据成员不能用作左值
+"var"： literal 数据成员不能用作左值
 
-一个[文字](../../extensions/literal-cpp-component-extensions.md)变量都是常量，并在声明中初始化后无法更改其值。
+[文本](../../extensions/literal-cpp-component-extensions.md)变量是 const，并且它在声明中初始化后无法更改其值。
 
-下面的示例生成 C3891:
+下面的示例生成 C3891：
 
-```
+```cpp
 // C3891.cpp
 // compile with: /clr
 ref struct Y1 {

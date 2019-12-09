@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3182
 ms.assetid: f3681266-308e-4990-a979-8eef8920e186
-ms.openlocfilehash: 6866c7bbcee0a4097e490b344c79a6eec7f94570
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c6b183eb30dd0e617e69ab9aac58bea5cb721591
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382394"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761655"
 ---
 # <a name="compiler-error-c3182"></a>编译器错误 C3182
 
-class： 成员 using 声明或访问声明是非法的托管或 WinRTtype 中
+"class"：托管或 WinRTtype 中的成员 using 声明或访问声明非法
 
-一个[使用](../../cpp/using-declaration.md)声明托管类的所有窗体中无效。
+[使用](../../cpp/using-declaration.md)声明在托管类的所有形式内无效。
 
 下例生成了 C3182，并演示了如何对其进行修复。
 
-```
+```cpp
 // C3182a.cpp
 // compile with: /clr /c
 ref struct B {

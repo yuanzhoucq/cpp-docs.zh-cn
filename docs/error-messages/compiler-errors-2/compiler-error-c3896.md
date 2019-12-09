@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3896
 ms.assetid: eb8be0f6-5b4e-4d71-8285-8a2a94f8ba29
-ms.openlocfilehash: 00e103720dc666b17566b67da19d4e908bb3addd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f15cd73465f4210ed5e5e34bebe2122c0b88f722
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385519"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749264"
 ---
 # <a name="compiler-error-c3896"></a>编译器错误 C3896
 
-member： 不正确的初始值设定项： 此 literal 数据成员只能初始化使用 nullptr
+"member"：不正确的初始值设定项：此 literal 数据成员只能用 "nullptr" 进行初始化
 
-一个[文字](../../extensions/literal-cpp-component-extensions.md)数据成员未正确初始化。  请参阅[nullptr](../../extensions/nullptr-cpp-component-extensions.md)有关详细信息。
+[文本](../../extensions/literal-cpp-component-extensions.md)数据成员未正确初始化。  有关详细信息，请参阅[nullptr](../../extensions/nullptr-cpp-component-extensions.md) 。
 
-下面的示例生成 C3896:
+下面的示例生成 C3896：
 
-```
+```cpp
 // C3896.cpp
 // compile with: /clr /c
 ref class R{};

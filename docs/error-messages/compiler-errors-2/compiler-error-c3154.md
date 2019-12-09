@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3154
 ms.assetid: 78005c74-eaaf-4ac2-88ae-6c25d01a302a
-ms.openlocfilehash: 9f7af4e19fab5f5a0539e9fc3bf9dbeffb5c6fbf
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: e40b0c2a56c36b92465fb3bb3451a48c88b5822e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344645"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745919"
 ---
 # <a name="compiler-error-c3154"></a>编译器错误 C3154
 
-应、 前省略号。 非逗号分隔的省略号参数数组函数上不受支持。
+省略号之前应为 "，"。 参数数组函数不支持非逗号分隔的省略号。
 
-未正确声明的变量自变量函数。
+未正确声明可变参数函数。
 
-有关详细信息，请参阅[变量自变量列表 （...）(C++/CLI)](../../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
+有关详细信息，请参阅[变量参数列表（...）C++（/cli）](../../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md)。
 
 ## <a name="example"></a>示例
 
 下面的示例生成 C3154。
 
-```
+```cpp
 // C3154.cpp
 // compile with: /clr
 ref struct R {

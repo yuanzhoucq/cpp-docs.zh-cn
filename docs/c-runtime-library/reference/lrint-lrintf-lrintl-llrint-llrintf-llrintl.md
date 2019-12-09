@@ -45,12 +45,12 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-ms.openlocfilehash: 72870c3548f0fd6972183b0c090708c6eddc591e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c7831842eb4d3c1eef9c4c9e83bbddb557cec0e3
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953131"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857744"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint、lrintf、lrintl、llrint、llrintf、llrintl
 
@@ -119,16 +119,16 @@ long long int llrintl(
 
 如果*x*不表示整数值的浮点等效项，则这些函数将引发**FE_INEXACT**。
 
-**Microsoft 专用**：如果结果超出了返回类型的范围，或者参数为 NaN 或无穷大，则返回值为 "已定义实现"。 Microsoft 编译器返回零 (0) 值。
+**Microsoft 专用**：当结果在返回类型范围之外时，或者参数为 NaN 或无穷大时，返回值为 "已定义实现"。 Microsoft 编译器返回零 (0) 值。
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>需求
 
 |函数|C 标头|C++ 标头|
 |--------------|--------------|------------------|
 |**lrint**、 **lrintf**、 **lrintl**、 **llrint**、 **llrintf**、 **llrintl**|\<math.h>|\<cmath>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参见 [Compatibility](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [按字母顺序的函数参考](crt-alphabetical-function-reference.md)<br/>

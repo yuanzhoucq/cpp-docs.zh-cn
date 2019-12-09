@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3499
 ms.assetid: 6717de5c-ae0f-4024-bdf2-b5598009e7b6
-ms.openlocfilehash: 381e665745f79f6156350f66e412f0580a06f6fb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e50aaeac4a9f02cf3e67c25a08afdc2df0f1c62f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381015"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738006"
 ---
 # <a name="compiler-error-c3499"></a>编译器错误 C3499
 
@@ -31,7 +31,7 @@ ms.locfileid: "62381015"
 
 以下示例将生成 C3499，因为 lambda 表达式的主体包含多条语句并返回一个值，但 lambda 表达式未指定返回类型：
 
-```
+```cpp
 // C3499a.cpp
 
 int main()
@@ -44,7 +44,7 @@ int main()
 
 以下示例演示 C3499 的两个可能的解决方法。 第一个解决方法是提供 lambda 表达式的返回类型。 第二个解决方法是将构成 lambda 表达式主体的语句合并成一条语句。
 
-```
+```cpp
 // C3499b.cpp
 
 int main()
@@ -60,6 +60,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Lambda 表达式](../../cpp/lambda-expressions-in-cpp.md)

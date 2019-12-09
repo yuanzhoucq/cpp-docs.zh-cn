@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2824
 ms.assetid: 5bd865f7-e0af-404e-80fe-e2b798b44a59
-ms.openlocfilehash: 226fc078312a214c561e80064474ee237245c0f8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee012d7244079fd881210eb969f4844a2c6e85d8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406933"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750632"
 ---
 # <a name="compiler-error-c2824"></a>编译器错误 C2824
 
-operator new 必须是返回类型 void *
+"operator new" 的返回类型必须为 "void *"
 
-与非基于指针的运算符重载`new`必须返回`void *`。
+对于非基于的指针，运算符 `new` 的重载必须返回 `void *`。
 
-下面的示例生成 C2824:
+下面的示例生成 C2824：
 
-```
+```cpp
 // C2824.cpp
 // compile with: /c
 class   A {

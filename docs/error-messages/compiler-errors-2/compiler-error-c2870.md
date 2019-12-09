@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2870
 ms.assetid: 80523ee9-1fd3-4dc4-8a77-5083deb99066
-ms.openlocfilehash: f61281da23e46236e7fce496a4d89086e5d6c0ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b006592723df1222d05e39b3bc9e5729efc8aa6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165031"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755026"
 ---
 # <a name="compiler-error-c2870"></a>编译器错误 C2870
 
-name： 命名空间定义必须出现在文件范围内或在另一个命名空间定义立即出现
+"name"：命名空间定义必须出现在文件范围内或紧跟在另一个命名空间定义中
 
-定义命名空间`name`不正确。 必须在文件范围内 （之外的所有块和类） 定义的命名空间或立即在另一个命名空间内。
+你定义的命名空间 `name` 错误。 必须在文件范围（在所有块和类的外部）或在另一个命名空间中定义命名空间。
 
-下面的示例生成 C2870:
+下面的示例生成 C2870：
 
-```
+```cpp
 // C2870.cpp
 // compile with: /c
 int main() {

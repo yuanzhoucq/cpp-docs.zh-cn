@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3703
 ms.assetid: 7e3677d9-f2be-4c26-998f-423564e9023c
-ms.openlocfilehash: 0b34760bc3f5b23148ce84cf590685efad2008df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1071623c8dbaef52a6a391d8858e7502de9c74b4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324631"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757990"
 ---
 # <a name="compiler-error-c3703"></a>编译器错误 C3703
 
-事件处理程序： 事件处理程序方法必须具有相同的存储类作为源的 event
+"事件处理程序"：事件处理程序方法必须具有与源 "事件" 相同的存储类
 
-[事件](../../cpp/event-handling.md)具有比它挂钩的事件处理程序指定不同的存储类。 例如，如果事件处理程序是静态成员函数，该事件不是静态，会发生此错误。 若要修复此错误，请给予事件和事件处理程序相同的存储类。
+[事件](../../cpp/event-handling.md)具有与它挂钩到的事件处理程序不同的存储类。 例如，如果事件处理程序是静态成员函数，并且事件不是静态的，则会发生此错误。 若要修复此错误，请为事件和事件处理程序指定相同的存储类。
 
-下面的示例生成 C3703:
+下面的示例生成 C3703：
 
-```
+```cpp
 // C3703.cpp
 // C3703 expected
 #include <stdio.h>

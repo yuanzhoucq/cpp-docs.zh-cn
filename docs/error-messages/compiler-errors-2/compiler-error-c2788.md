@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2788
 ms.assetid: 8688fc5c-e652-43b4-b407-9c488c76f2db
-ms.openlocfilehash: 0025aa5211c2736860bdd30cad4315f63fba9337
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a708e711fd086d31ecd5e8cc9c35679571af48c4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62256888"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739566"
 ---
 # <a name="compiler-error-c2788"></a>编译器错误 C2788
 
-identifier： 多个 GUID 与此对象相关联
+"identifier"：多个与此对象关联的 GUID
 
-[__Uuidof](../../cpp/uuidof-operator.md)运算符采用与附加的 GUID 或用户定义类型的对象的用户定义的类型。 当参数是具有多个 Guid 的对象，将出现此错误。
+[__Uuidof](../../cpp/uuidof-operator.md)运算符使用附加了 GUID 的用户定义类型或此类用户定义类型的对象。 如果参数是具有多个 Guid 的对象，则会发生此错误。
 
-下面的示例生成 C2788:
+下面的示例生成 C2788：
 
-```
+```cpp
 // C2788.cpp
 #include <windows.h>
 struct __declspec(uuid("00000001-0000-0000-0000-000000000000")) A {};

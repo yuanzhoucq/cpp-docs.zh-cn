@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2662
 ms.assetid: e172c2a4-f29e-4034-8232-e7dc6f83689f
-ms.openlocfilehash: fefd523ca3b9a3406afc307150322f9d431aa730
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2fa2643898fed510aa7cf0f483b538ebb33b033
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360331"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760447"
 ---
 # <a name="compiler-error-c2662"></a>编译器错误 C2662
 
-function： 不能将从 type1 到 type2 this 指针转换
+"function"：不能将 "this" 指针从 "type1" 转换为 "type2"
 
-编译器无法将转换`this`从指针`type1`到`type2`。
+编译器无法将 `this` 指针从 `type1` 转换为 `type2`。
 
-此错误可能由调用非`const`成员函数上的`const`对象。  可能的解决方法：
+此错误的原因可能是对 `const` 对象调用了非`const` 成员函数。  可能的解决方法：
 
-- 删除`const`从对象声明。
+- 从对象声明中删除 `const`。
 
-- 添加`const`指向成员函数。
+- 将 `const` 添加到成员函数。
 
-下面的示例生成 C2662:
+下面的示例生成 C2662：
 
-```
+```cpp
 // C2662.cpp
 class C {
 public:
@@ -41,9 +41,9 @@ int main() {
 }
 ```
 
-使用编译时 **/clr**，不能调用函数`const`或`volatile`限定托管的类型。 不能声明托管类的 const 成员函数，因此不能 const 托管对象上调用方法。
+使用 **/clr**进行编译时，不能对 `const` 或 `volatile` 限定的托管类型调用函数。 不能声明托管类的 const 成员函数，因此不能对 const 托管对象调用方法。
 
-```
+```cpp
 // C2662_b.cpp
 // compile with: /c /clr
 ref struct M {
@@ -67,9 +67,9 @@ ref struct N {
 };
 ```
 
-下面的示例生成 C2662:
+下面的示例生成 C2662：
 
-```
+```cpp
 // C2662_c.cpp
 // compile with: /c
 // C2662 expected

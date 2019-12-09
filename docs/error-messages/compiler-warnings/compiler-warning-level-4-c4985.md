@@ -1,15 +1,17 @@
 ---
 title: 编译器警告（等级 4）C4985
 ms.date: 11/04/2016
+f1_keywords:
+- C4985
 helpviewer_keywords:
 - C4985
 ms.assetid: 832f001c-afe7-403d-a8b4-02334724c79e
-ms.openlocfilehash: 73abb166910cc421f042d22d67efc122e416bceb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75feda6fb2c88b663aa6ade0efdfffc7def1568f
+ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280186"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810732"
 ---
 # <a name="compiler-warning-level-4-c4985"></a>编译器警告（等级 4）C4985
 
@@ -25,6 +27,6 @@ SAL 提供一组可用于描述函数如何使用参数的注释、其关于参�
 
 1. 在方法的定义及其所有声明上使用相同的 SAL 注释。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [SAL 批注](../../c-runtime-library/sal-annotations.md)

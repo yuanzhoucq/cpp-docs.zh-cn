@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3265
 ms.assetid: 10ab3e17-4a9f-4120-bab5-21473869b70f
-ms.openlocfilehash: a675567e23764a0b361cab4bef4bc75019de3756
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 633089115fe7edd0bdf06cdbcda6909ae7ac656e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365840"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754155"
 ---
 # <a name="compiler-error-c3265"></a>编译器错误 C3265
 
-不能声明托管托管中构造的非托管的非托管构造
+无法在非托管的 "非托管构造" 中声明托管的 "managed 构造"
 
-在非托管上下文中，不能包含托管的对象。
+不能在非托管上下文中包含托管对象。
 
-下面的示例重新产生 C3265:
+下面的示例重现 C3265：
 
-```
+```cpp
 // C3265_2.cpp
 // compile with: /clr /LD
 #include <vcclr.h>

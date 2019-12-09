@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3764
 ms.assetid: af5d254c-8d4a-4dda-aad9-3c5c1257c868
-ms.openlocfilehash: 2570ee9abb148b919242de7786cd6fa91765286f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3ede846c9068978ad5d283e97b1c96d3527bf67c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400248"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757224"
 ---
 # <a name="compiler-error-c3764"></a>编译器错误 C3764
 
-override_function： 不能重写基类方法 base_class_function
+"override_function"：不能重写基类方法 "base_class_function"
 
-编译器检测到格式不正确的重写。 例如，基类函数不是`virtual`。 有关详细信息，请参阅[重写](../../extensions/override-cpp-component-extensions.md)。
+编译器检测到格式错误的重写。 例如，基类函数未 `virtual`。 有关详细信息，请参阅[override](../../extensions/override-cpp-component-extensions.md)。
 
 ## <a name="example"></a>示例
 
 下面的示例生成 C3764。
 
-```
+```cpp
 // C3764.cpp
 // compile with: /clr /c
 public ref struct A {
@@ -39,9 +39,9 @@ public ref struct B : A {
 
 ## <a name="example"></a>示例
 
-C3764 基类方法是显式时也会发生和名为重写。 下面的示例生成 C3764。
+当基类方法显式和命名重写时，也会发生 C3764。 下面的示例生成 C3764。
 
-```
+```cpp
 // C3764_b.cpp
 // compile with: /clr /c
 ref struct A {

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3673
 ms.assetid: bb6d2079-05af-4e2c-be0e-75c892e6c590
-ms.openlocfilehash: 9fd6920956d6a48ec7e1f15bf54ea8d75bad4aa5
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 50585904f125dcb572043b568978d65eb1c61e80
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345425"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758081"
 ---
 # <a name="compiler-error-c3673"></a>编译器错误 C3673
 
-type： 类没有复制构造函数
+"type"：类没有复制构造函数
 
-用户定义的构造函数需要将复制 CLR ref 类型的对象。 有关详细信息，请参阅[C++引用类型的堆栈语义](../../dotnet/cpp-stack-semantics-for-reference-types.md)。
+需要用户定义的构造函数来复制 CLR ref 类型的对象。 有关详细信息，请参阅[ C++引用类型的堆栈语义](../../dotnet/cpp-stack-semantics-for-reference-types.md)。
 
 ## <a name="example"></a>示例
 
 下面的示例生成 C3673。
 
-```
+```cpp
 // C3673.cpp
 // compile with: /clr
 public ref struct R {
@@ -43,7 +43,7 @@ int main() {
 
 下面的示例生成 C3673。
 
-```
+```cpp
 // C3673_b.cpp
 // compile with: /clr /c
 // C3673 expected

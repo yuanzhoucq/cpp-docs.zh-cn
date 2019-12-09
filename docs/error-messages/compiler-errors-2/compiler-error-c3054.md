@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3054
 ms.assetid: 6f4b7ac5-0d12-474b-b611-76ff26ee41ac
-ms.openlocfilehash: 1dd6450d661700d9b2f7f94e625abd9ecc64ed08
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7a35f72be07799f61587c77b511395223ae72939
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265563"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761184"
 ---
 # <a name="compiler-error-c3054"></a>编译器错误 C3054
 
 当前在泛型类或函数中不支持“#pragma omp parallel”
 
-有关详细信息，请参阅[泛型](../../extensions/generics-cpp-component-extensions.md)并[OpenMP](../../parallel/openmp/openmp-in-visual-cpp.md)。
+有关详细信息，请参阅[泛型](../../extensions/generics-cpp-component-extensions.md)和[OpenMP](../../parallel/openmp/openmp-in-visual-cpp.md)。
 
 ## <a name="example"></a>示例
 
 下面的示例生成 C3054。
 
-```
+```cpp
 // C3054.cpp
 // compile with: /openmp /clr /c
 #include <omp.h>

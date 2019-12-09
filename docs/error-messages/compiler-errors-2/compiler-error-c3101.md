@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3101
 ms.assetid: 4f673766-d4f7-4632-94a5-d36a83f7f4b5
-ms.openlocfilehash: d39afc548010df95bdf31b2c7708bc4fa0310bcd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dca91b9359417b8c4cce9329e2aa25107016c086
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404190"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749995"
 ---
 # <a name="compiler-error-c3101"></a>编译器错误 C3101
 
-命名的特性参数 field 的表达式非法
+命名特性参数 "field" 的表达式非法
 
-在初始化命名的特性参数时，值必须是一个编译时常数。
+初始化命名特性参数时，该值必须是编译时常量。
 
-有关属性的详细信息，请参阅[用户定义的特性](../../extensions/user-defined-attributes-cpp-component-extensions.md)。
+有关特性的详细信息，请参阅[用户定义的属性](../../extensions/user-defined-attributes-cpp-component-extensions.md)。
 
 ## <a name="example"></a>示例
 
 下面的示例生成 C3101。
 
-```
+```cpp
 // C3101.cpp
 // compile with: /clr /c
 ref class AAttribute : System::Attribute {

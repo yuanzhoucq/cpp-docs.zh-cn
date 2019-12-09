@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2548
 ms.assetid: 01e9c835-9bf3-4020-9295-5ee448c519f3
-ms.openlocfilehash: 2c680d86a0ea69d67f9e53a481f2f096f4cc7878
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f89208314c1d2e8ddb5100da72aa600a411b4608
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353464"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756794"
 ---
 # <a name="compiler-error-c2548"></a>编译器错误 C2548
 
-class::member： 缺少参数参数的默认参数
+"class：： member"：缺少参数参数的默认参数
 
-默认参数列表缺少的参数。 如果提供的参数列表中的任意位置的默认参数，必须定义所有后续的参数的默认参数。
+默认参数列表缺少参数。 如果在参数列表中的任意位置提供默认参数，则必须为所有后续参数定义默认参数。
 
 ## <a name="example"></a>示例
 
-下面的示例生成 C2548:
+下面的示例生成 C2548：
 
-```
+```cpp
 // C2548.cpp
 // compile with: /c
 void func( int = 1, int, int = 3);  // C2548

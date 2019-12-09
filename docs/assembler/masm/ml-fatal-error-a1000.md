@@ -1,26 +1,26 @@
 ---
 title: ML 错误 A1000
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A1000
 helpviewer_keywords:
 - A1000
 ms.assetid: 4fc77a83-8796-4dcf-9c37-6395d635b817
-ms.openlocfilehash: c1149bb4362995c1f63a268deab276b5887b5614
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b403c75b4e27f8b673b262952c286995ae3f935
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178535"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856925"
 ---
 # <a name="ml-fatal-error-a1000"></a>ML 错误 A1000
 
-**无法打开文件： filename**
+**无法打开文件：文件名**
 
-在组装器无法打开源、 包含或输出文件。
+汇编程序无法打开源、包含或输出文件。
 
-以下任一可能原因：
+可能是以下原因之一：
 
 - 文件不存在。
 
@@ -28,16 +28,16 @@ ms.locfileid: "62178535"
 
 - 文件名无效。
 
-- 输出文件名的只读的文件已存在。
+- 已存在输出文件名为的只读文件。
 
-- 当前的驱动器已满。
+- 当前驱动器已满。
 
-- 当前目录是根，且已满。
+- 当前目录为根，已满。
 
-- 无法写入该设备。
+- 无法写入设备。
 
-- 驱动器未准备好。
+- 驱动器未就绪。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [ML 错误消息](../../assembler/masm/ml-error-messages.md)<br/>

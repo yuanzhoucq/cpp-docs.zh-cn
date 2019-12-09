@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3203
 ms.assetid: 6356770e-22c1-434c-91fe-f60b0aa23b91
-ms.openlocfilehash: c55160c855a6188a616f957acee43e409b751b62
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 1d0ed5ec717efecb9fbea4a9451836c0471522b6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447794"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738708"
 ---
 # <a name="compiler-error-c3203"></a>编译器错误 C3203
 
@@ -19,9 +19,9 @@ ms.locfileid: "65447794"
 
 你传递了一个无效的参数到类模板或泛型。 类模板或泛型需要一种类型作为参数。
 
-为 Visual Studio 2005 执行的编译器一致性工作可以生成此错误： 未专用化的类模板不能用作基类列表中的模板参数。 若要解决 C3203，则当将模板类型参数用作基类列表中的模板参数时，将其显式添加到模板类名称。
+此错误可能是由于对 Visual Studio 2005 执行的编译器一致性工作的结果导致的：非专用化的类模板不能用作基类列表中的模板参数。 若要解决 C3203，则当将模板类型参数用作基类列表中的模板参数时，将其显式添加到模板类名称。
 
-```
+```cpp
 // C3203.cpp
 template< typename T >
 struct X {
@@ -42,7 +42,7 @@ int main() {
 
 以下示例将生成 C3203，并演示如何修复此错误：
 
-```
+```cpp
 // C3203_b.cpp
 // compile with: /c
 template <class T>
@@ -67,7 +67,7 @@ typedef C3<S1<int> > MyC12;
 
 当使用泛型时，也可能发生 C3203：
 
-```
+```cpp
 // C3203_c.cpp
 // compile with: /clr /c
 generic <class T>
