@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ellipses (...), parameters
 - '... ellipsis'
 ms.assetid: 8f2b8026-78b5-4e21-86a3-bf0f91f05689
-ms.openlocfilehash: 0652fe6076899020050d94378649018721b4b188
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: f2fd4b49e08149f8ea5ce8fa6af46da39907dcf9
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147225"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857042"
 ---
 # <a name="parameters"></a>参数
 
@@ -28,14 +28,14 @@ ms.locfileid: "56147225"
 function-definition：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *declarator* *declaration-list*<sub>opt</sub> *compound-statement*
 
-/\* *attribute-seq* 为 Microsoft 专用 \*/
+/\**属性-seq*是特定于 Microsoft 的 \*/
 
 *declarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;pointer<sub>opt</sub> direct-declarator
 
 direct-declarator: /\* 函数声明符 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)** /\* New-style declarator \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)** /\* Obsolete-style declarator \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**  /\* New-style declarator \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)**  /\* Obsolete-style declarator \*/
 
 parameter-type-list： /\* 参数列表 \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*parameter-list* <br/>
@@ -66,14 +66,14 @@ void new( double x, double y, double z )
 }
 ```
 
-如果至少有一个参数出现在参数列表中，则该列表可以以一个逗号后跟三个句点 (, ...) 结尾。此构造称为“省略号表示法”，表示函数的可变数量的自变量。 （有关详细信息，请参阅[使用可变数量的参数进行调用](../c-language/calls-with-a-variable-number-of-arguments.md)。）但是，对函数进行调用时，自变量的数量必须至少与最后一个逗号前面的参数的数量相同。
+如果参数列表中至少出现一个参数，则该列表可以以逗号后跟三个句点（ **，...** ）结尾。此构造称为 "省略号表示法"，表示函数的可变数量的参数。 （有关详细信息，请参阅[使用可变数量的参数进行调用](../c-language/calls-with-a-variable-number-of-arguments.md)。）但是，对函数的调用的参数必须至少与最后一个逗号前面的参数的数量相同。
 
 如果实参不会传递到函数，则形参的列表将替换为关键字 `void`。 对 `void` 的这种用法不同于将其用作类型说明符。
 
-参数的顺序和类型（包括省略号表示法的任何用法）在所有函数声明（如果有）和函数定义中都必须相同。 进行常用算术转换后，自变量的类型与对应参数的类型必须是赋值兼容的。 （有关算术转换的信息，请参阅[常用算术转换](../c-language/usual-arithmetic-conversions.md)。）不检查省略号后面的自变量。 参数可以具有任何基础、结构、联合、指针或数组类型。
+参数的顺序和类型（包括省略号表示法的任何用法）在所有函数声明（如果有）和函数定义中都必须相同。 进行常用算术转换后，自变量的类型与对应参数的类型必须是赋值兼容的。 （有关算术转换的信息，请参阅[常用算术转换](../c-language/usual-arithmetic-conversions.md)。）不检查省略号后面的参数。 参数可以具有任何基础、结构、联合、指针或数组类型。
 
 如果需要，编译器将独立于每个参数和每个自变量执行常用算术转换。 转换后，没有参数短于 `int` 且没有参数具有 float 类型，除非参数类型在原型中显式指定为 float。 这意味着，例如，将参数声明为 `char` 与将其声明为 `int` 的效果相同。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [C 函数定义](../c-language/c-function-definitions.md)

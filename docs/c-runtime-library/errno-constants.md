@@ -41,12 +41,12 @@ helpviewer_keywords:
 - EXDEV constant
 - EILSEQ constant
 ms.assetid: 47089258-d5a5-4cd8-b193-223894dea0cf
-ms.openlocfilehash: 0e11c11b468ff6e058ccf5c75b000396e0473bfa
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 34f92bedfa9606c90196f2e3a5e47dc341b23aea
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747631"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898749"
 ---
 # <a name="errno-constants"></a>errno 常量
 
@@ -58,7 +58,7 @@ ms.locfileid: "57747631"
 
 ## <a name="remarks"></a>备注
 
-errno 值是在出现各种错误条件时分配给 [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 的常量。
+**errno** 值是在出现各种错误条件时分配给 [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 的常量。
 
 ERRNO.H 包含 errno 值的定义。 但是，并非 ERRNO.H 中给定的提供定义都可用于 32 位 Windows 操作系统。 ERRNO.H 中的某些值的存在是为了保持与 UNIX 系列操作系统的兼容性。
 
@@ -66,13 +66,13 @@ ERRNO.H 包含 errno 值的定义。 但是，并非 ERRNO.H 中给定的提供�
 
 下列 errno 值受支持：
 
-|返回的常量|说明|
+|返回的常量|描述|
 |-|-|
 |**ECHILD**|没有生成的进程。|
 |**EAGAIN**|没有其他进程。 尝试创建新进程失败，原因是没有更多的进程槽、没有足够的内存或者已到达最大嵌套级别。|
 |**E2BIG**|自变量列表太长。|
 |**EACCES**|权限被拒绝。 文件的权限设置不允许指定的访问权限。 此错误表示尝试通过与某个文件的特性不兼容的方式访问该文件（或者，在某些情况下为目录）。<br/><br/>例如，当尝试从未打开的文件读取、打开现有的只读文件进行写入或打开目录而不是文件时，将会发生错误。 在 MS-DOS 操作系统版本 3.0 以及更高版本下，EACCES 也可能表示锁定或共享冲突。<br/><br/>在尝试重命名文件或目录或者删除现有目录时也可能发生错误。|
-|**EBADF**|文件编号错误。 可能由两种原因造成：1) 指定的文件描述符不是有效值，或者未引用打开的文件。 2) 尝试写入到已打开进行只读访问的文件或设备。|
+|**EBADF**|文件编号错误。 可能有两种原因：1) 指定的文件描述符不是有效值，或者未引用打开的文件。 2) 尝试写入到已打开进行只读访问的文件或设备。|
 |**EDEADLOCK**|将会发生资源死锁。 数学函数的自变量未在函数域中。|
 |**EDOM**|数学自变量。|
 |**EEXIST**|文件存在。 尝试创建已存在的文件。 例如，在 _open 调用中指定 _O_CREAT 和 _O_EXCL 标志，但命名的文件已存在。|
@@ -87,7 +87,7 @@ ERRNO.H 包含 errno 值的定义。 但是，并非 ERRNO.H 中给定的提供�
 |**EXDEV**|跨设备链接。 尝试将文件移至不同的设备（使用 rename 函数）。|
 |**STRUNCATE**|字符串复制或串联导致字符串被截断。 请参阅 [_TRUNCATE](../c-runtime-library/truncate.md)。
 
-下列值支持 Posix 的兼容性。 它们都是非 Posix 系统上必需的值。
+支持将以下值用于与 POSIX 的兼容性。 它们是非 POSIX 系统上必需的值。
 
 ```C
 #define E2BIG /* argument list too long */
@@ -171,6 +171,6 @@ ERRNO.H 包含 errno 值的定义。 但是，并非 ERRNO.H 中给定的提供�
 #define EXDEV /* cross device link */
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [全局常量](../c-runtime-library/global-constants.md)

@@ -14,16 +14,16 @@ helpviewer_keywords:
 - typedef names, used in __asm blocks
 - __asm keyword [C++], C/C++ elements in
 ms.assetid: ae8b2b52-6b75-42e3-ac0c-ad02d922ed97
-ms.openlocfilehash: 0949eba769bed33da8fe39bb41500a2ba02af224
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16b298b92a4ba40d9091499a1821ad4f3c413d6c
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166550"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74854519"
 ---
-# <a name="using-c-or-c-in-asm-blocks"></a>在 __asm 块中使用 C 或 C++
+# <a name="using-c-or-c-in-__asm-blocks"></a>在 __asm 块中使用 C 或 C++
 
-* * Microsoft 专用 * *
+**Microsoft 专用**
 
 由于内联程序集指令可以与 C 或 C++ 语句组合，因此可以通过名称引用 C 或 C++ 变量，或者使用这些语言的多个其他元素。
 
@@ -35,11 +35,11 @@ ms.locfileid: "62166550"
 
 - 宏和预处理器指令
 
-- 注释 (同时__/ \* \* /__ 并__//__ )
+- 注释（ __/\* \*/__ 和 __//__ ）
 
 - 类型名称（其中的 MASM 类型是合法的）
 
-- `typedef` 如运算符通常使用的名称**PTR**并**类型**或指定的结构或联合成员
+- `typedef` 名称，通常与运算符（如**PTR**和**类型**）一起使用，或者用于指定结构或联合成员
 
 在 `__asm` 块内，您可以使用 C 表示法或汇编基数表示法指定整数常量（例如，0x100 和 100h 等效）。 这允许您在 C 中定义（使用 `#define`）常量，然后在 C 或 C++ 以及程序的程序集部分中使用该常量。 您还可以通过在其前面放置 0 以八进制指定常量。 例如，0777 指定一个八进制常量。
 
@@ -47,7 +47,7 @@ ms.locfileid: "62166550"
 
 - [在 __asm 块中使用运算符](../../assembler/inline/using-operators-in-asm-blocks.md)
 
-- [使用 C 或C++中将 __asm 块](../../assembler/inline/using-c-or-cpp-symbols-in-asm-blocks.md)
+- [使用 C 或C++ Symbols_in __asm 块](../../assembler/inline/using-c-or-cpp-symbols-in-asm-blocks.md)
 
 - [在 __asm 块中访问 C 或 C++ 数据](../../assembler/inline/accessing-c-or-cpp-data-in-asm-blocks.md)
 
@@ -55,6 +55,6 @@ ms.locfileid: "62166550"
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [内联汇编程序](../../assembler/inline/inline-assembler.md)<br/>

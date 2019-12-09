@@ -1,27 +1,27 @@
 ---
 title: ML 警告 A4012
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A4012
 helpviewer_keywords:
 - A4012
 ms.assetid: 842b1259-9679-4eeb-a02d-672a583a94e5
-ms.openlocfilehash: f58d1f420d4acc848eaf04f93c01205dd1205468
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40aabc264c52a0b81fcd4e29d519433cf5fecdd6
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62201336"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74854558"
 ---
 # <a name="ml-warning-a4012"></a>ML 警告 A4012
 
-**而不需要类为 CODE 的段的行号信息**
+**段的行号信息没有类 "CODE"**
 
-没有说明中的段不具有类名称以"代码。 在组装器没有生成这些说明的 CodeView 信息。
+段中的说明中没有以 "CODE" 结尾的类名。 汇编程序未生成这些说明的 CodeView 信息。
 
-CodeView 无法处理具有不以"代码。 结尾的类名称的段中的代码模块
+CodeView 无法处理包含代码的模块，这些段中的类名称不以 "CODE" 结尾。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [ML 错误消息](../../assembler/masm/ml-error-messages.md)<br/>

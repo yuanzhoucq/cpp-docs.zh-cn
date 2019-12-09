@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: a11f5bf7e8c280da3ba2cae82cf355a3b28c0577
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: 551bca93a30bee52dc4c838864df28cb747d91df
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890156"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898842"
 ---
 # <a name="locale-class"></a>locale 类
 
@@ -108,7 +108,7 @@ messages<char>
 messages<wchar_t>
 ```
 
-（最后一个类别是 Posix 需要而非 C 标准需要的类别。）
+（最后一个类别是 POSIX 所必需的，但不是 C 标准。）
 
 其中一些预定义的方面由 `iostream` 类使用，用来控制数值与文本序列之间的转换。
 
@@ -120,7 +120,7 @@ locale 类的对象还将区域设置名称存储为[字符串](../standard-libr
 static locale empty();
 ```
 
-构造不包含 facet 的区域设置对象。 它也是透明区域设置。 如果模板函数[has_facet](../standard-library/locale-functions.md#has_facet)和[use_facet](../standard-library/locale-functions.md#use_facet)在透明区域设置中找不到请求的 facet，它们首先参考全局区域设置，如果是透明的，则为经典区域设置。 因此，你可以编写：
+构造不包含 facet 的区域设置对象。 它也是透明区域设置。 如果模板函数[has_facet](../standard-library/locale-functions.md#has_facet)并且[use_facet](../standard-library/locale-functions.md#use_facet)在透明区域设置中找不到请求的 facet，则它们首先参考全局区域设置，如果是透明的，则为经典区域设置。 因此，你可以编写：
 
 ```cpp
 cout.imbue(locale::empty());
@@ -175,12 +175,12 @@ cout.imbue(loc);
 
 ### <a name="classes"></a>类
 
-|实例|描述|
+|类|描述|
 |-|-|
 |[facet](#facet_class)|一种类，此类用作所有区域设置 facet 的基类。|
 |[`id`](#id_class)|成员类提供用作索引以查找区域设置中的 facet 的唯一 facet 标识。|
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>需求
 
 **标头：** \<locale>
 
@@ -206,17 +206,17 @@ static const int none = 0;
 
 类型是**int**类型的同义词，该类型可以表示类区域设置本地位掩码类型的一组非重复元素，也可以用来表示任何相应的 C 区域设置类别。 这些元素为：
 
-- `collate`，对应于 C 类 LC_COLLATE
+- `collate`，对应于 C 类别 LC_COLLATE
 
-- `ctype`，对应于 C 类 LC_CTYPE
+- `ctype`，对应于 C 类别 LC_CTYPE
 
-- `monetary`，对应于 C 类 LC_MONETARY
+- `monetary`，对应于 C 类别 LC_MONETARY
 
-- `numeric`，对应于 C 类 LC_NUMERIC
+- `numeric`，对应于 C 类别 LC_NUMERIC
 
-- `time`，对应于 C 类 LC_TIME
+- `time`，对应于 C 类别 LC_TIME
 
-- `messages`，对应于 Posix 类别 LC_MESSAGES
+- `messages`，对应于 POSIX 类别 LC_MESSAGES
 
 另外两个有用的值是：
 
@@ -224,7 +224,7 @@ static const int none = 0;
 
 - `all`，对应于所有类别的 C 联合 LC_ALL
 
-可以通过将 `OR` 与这些常量结合使用来表示任意类别组，如 `monetary` &#124;`time`中所示。
+可以通过将 `OR` 与这些常量结合使用来表示任意类别组，如 `monetary` &#124; `time`中所示。
 
 ## <a name="classic"></a>locale::classic
 
@@ -297,7 +297,7 @@ locale combine(const locale& source_locale) const;
 
 ### <a name="return-value"></a>返回值
 
-该成员函数将返回一个区域设置对象，该对象将替换 **\*这**是*source_locale*中列出的方面 `Facet`。
+该成员函数将返回区域设置对象，该对象将替换 **\*这**一 `Facet` *source_locale*中列出的方面。
 
 ### <a name="example"></a>示例
 
@@ -454,23 +454,23 @@ locale(const locale& from_locale, const Facet* new_facet);
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数将初始化该对象，以便匹配全局构造函数。 第二个和第三个构造函数初始化所有区域设置类别，使其行为与区域设置名称*locale_name*一致。 其余构造函数复制*from_locale*，并注明例外：
+第一个构造函数将初始化该对象，以便匹配全局构造函数。 第二个和第三个构造函数初始化所有区域设置类别，使其行为与区域设置名称*locale_name*一致。 剩余的构造函数复制*from_locale*，并注明例外：
 
 `locale(const locale& from_locale, const locale& Other, category new_category);`
 
-替换为 C & *new_category*为非零的类别 c 对应的*其他*方面。
+替换为 C & *new_category*为非零的类别 c 的*其他*方面。
 
 `locale(const locale& from_locale, const char* locale_name, category new_category);`
 
 `locale(const locale& from_locale, const string& locale_name, category new_category);`
 
-`locale(locale_name, all)` 替换为与类别*replace_category*对应的那些方面，`replace_category & new_category` 为非零值。
+替换为 `replace_category & new_category` 为非零的类别*replace_category*对应的那些方面 `locale(locale_name, all)`。
 
 `template<class Facet> locale(const locale& from_locale, Facet* new_facet);`
 
-如果*new_facet*不是 null 指针，则将*from_locale* facet *new_facet*替换为（或添加到）。
+如果*new_facet*不是 null 指针，则将替换（或添加到） *from_locale* facet *new_facet*。
 
-如果 locale name *locale_name*是 null 指针或无效，则该函数将引发[runtime_error](../standard-library/runtime-error-class.md)。
+如果区域设置名称*locale_name*为 null 指针或无效，则该函数将引发[runtime_error](../standard-library/runtime-error-class.md)。
 
 ### <a name="example"></a>示例
 
@@ -569,7 +569,7 @@ bool operator!=(const locale& right) const;
 
 ### <a name="parameters"></a>参数
 
-*right* \
+*right*\
 要测试不相等的区域设置之一。
 
 ### <a name="return-value"></a>返回值
@@ -636,7 +636,7 @@ bool operator()(
 *左*\
 左侧的字符串。
 
-*right* \
+*right*\
 右侧的字符串。
 
 ### <a name="return-value"></a>返回值
@@ -702,7 +702,7 @@ bool operator==(const locale& right) const;
 
 ### <a name="parameters"></a>参数
 
-*right* \
+*right*\
 要测试相等的区域设置之一。
 
 ### <a name="return-value"></a>返回值
@@ -757,7 +757,7 @@ locales loc1 (German_Germany.1252)
 and loc3 (English_United States.1252) are not equal.
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [\<locale>](../standard-library/locale.md)\
 [代码页](../c-runtime-library/code-pages.md)\

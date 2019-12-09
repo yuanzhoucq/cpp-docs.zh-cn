@@ -13,18 +13,18 @@ helpviewer_keywords:
 - dllexport attribute [C++]
 - dllexport attribute [C++], classes [C++]
 ms.assetid: 8d7d1303-b9e9-47ca-96cc-67bf444a08a9
-ms.openlocfilehash: 3e8545f058043dfbb8abffc86cf987d0315ba3a7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b42ba7c1a88a4de28eb3385bbf6cad068abf1944
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404671"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857224"
 ---
 # <a name="using-dllimport-and-dllexport-in-c-classes"></a>在 C++ 类中使用 dllimport 和 dllexport
 
-## <a name="microsoft-specific"></a>Microsoft 专用
+**Microsoft 专用**
 
-您可以声明C++类与**dllimport**或**dllexport**属性。 这些形式表示已导入或导出整个类。 以这种方式导出的类称为可导出类。
+可以声明C++具有**dllimport**或**dllexport**特性的类。 这些形式表示已导入或导出整个类。 以这种方式导出的类称为可导出类。
 
 以下示例定义了可导出类。 将导出其所有成员函数和静态数据：
 
@@ -37,27 +37,27 @@ class DllExport C {
 };
 ```
 
-请注意该显式使用**dllimport**并**dllexport**禁止可导出类的成员的属性。
+请注意，禁止对可导出类的成员显式使用**dllimport**和**dllexport**特性。
 
-##  <a name="_pluslang_using_dllimport_and_dllexport_in_c2b2bdllexportclasses"></a> dllexport 类
+##  <a name="_pluslang_using_dllimport_and_dllexport_in_c2b2bdllexportclasses"></a>dllexport 类
 
-当你声明一个类**dllexport**，导出所有其成员函数和静态数据成员。 您必须在同一程序中提供所有此类成员的定义。 否则，将生成链接器错误。 此规则有一个例外情况，即对于纯虚函数，您无需为其提供显式定义。 但是，由于基类的析构函数始终在调用抽象类的析构函数，因此纯虚拟析构函数必须始终提供定义。 请注意，这些规则对不可导出的类是相同的。
+声明类**dllexport**时，将导出其所有成员函数和静态数据成员。 您必须在同一程序中提供所有此类成员的定义。 否则，将生成链接器错误。 此规则有一个例外情况，即对于纯虚函数，您无需为其提供显式定义。 但是，由于基类的析构函数始终在调用抽象类的析构函数，因此纯虚拟析构函数必须始终提供定义。 请注意，这些规则对不可导出的类是相同的。
 
 如果导出类类型的数据或返回类的函数，请务必导出类。
 
-##  <a name="_pluslang_dllexport_classesdllexportclasses"></a> dllimport 类
+##  <a name="_pluslang_dllexport_classesdllexportclasses"></a>dllimport 类
 
-当你声明一个类**dllimport**，导入所有其成员函数和静态数据成员。 与不同的行为**dllimport**并**dllexport**非类类型上静态数据成员不能在同一程序中指定的定义**dllimport**类是定义。
+声明类**dllimport**时，将导入其所有成员函数和静态数据成员。 不同于非类类型上**dllimport**和**dllexport**的行为，静态数据成员不能在定义**dllimport**类的同一程序中指定定义。
 
-##  <a name="_pluslang_using_dllimport_and_dllexport_in_c2b2binheritanceandexportableclasses"></a> 继承和可导出类
+##  <a name="_pluslang_using_dllimport_and_dllexport_in_c2b2binheritanceandexportableclasses"></a>继承和可导出类
 
-可导出类的所有基类都必须是可导出的。 否则，会生成编译器警告。 此外，同样是类的所有可访问成员必须是可导出的。 此规则将允许**dllexport**类继承自**dllimport**类，和一个**dllimport**从中继承**dllexport**类 （尽管不推荐后者）。 通常来说，对 DLL 客户端可访问的所有内容（根据 C++ 访问规则）都应该是可导出接口的一部分。 这包括在内联函数中引用的私有数据成员。
+可导出类的所有基类都必须是可导出的。 否则，会生成编译器警告。 此外，同样是类的所有可访问成员必须是可导出的。 此规则允许**dllexport**类从**dllimport**类继承，而**dllimport**类从**dllexport**类继承（尽管不建议这样做）。 通常来说，对 DLL 客户端可访问的所有内容（根据 C++ 访问规则）都应该是可导出接口的一部分。 这包括在内联函数中引用的私有数据成员。
 
-##  <a name="_pluslang_using_dllimport_and_dllexport_in_c2b2bselectivememberimportexport"></a> 选择性成员导入/导出
+##  <a name="_pluslang_using_dllimport_and_dllexport_in_c2b2bselectivememberimportexport"></a>选择性成员导入/导出
 
-成员函数和类中的静态数据隐式具有外部链接，因为可以将它们与声明**dllimport**或**dllexport**属性，除非整个类导出。 如果整个类导入或导出的成员函数和数据作为显式声明**dllimport**或**dllexport**禁止的。 如果声明为类定义中的静态数据成员**dllexport**，定义必须出现某个位置在同一程序中 （与非类外部链接）。
+由于类中的成员函数和静态数据隐式具有外部链接，因此您可以使用**dllimport**或**dllexport**特性来声明它们，除非导出整个类。 如果导入或导出整个类，则禁止将成员函数和数据显式声明为**dllimport**或**dllexport** 。 如果将类定义中的静态数据成员声明为**dllexport**，则定义必须出现在同一程序中的某处（与非类外部链接一样）。
 
-同样，可以声明具有函数成员**dllimport**或**dllexport**属性。 在这种情况下，必须提供**dllexport**同一程序中的某处定义。
+同样，可以声明具有**dllimport**或**dllexport**特性的成员函数。 在这种情况下，您必须在同一程序中的某个位置提供**dllexport**定义。
 
 有关选择性成员导入和导出的某些要点值得注意：
 
@@ -67,14 +67,14 @@ class DllExport C {
 
 - 如果有在其中将选择性成员导入/导出用于虚函数的类，则这些函数必须在可导出接口或已定义内联中（对客户端可见）。
 
-- 如果定义为成员**dllexport**但不是包含它的类定义中，则会生成编译器错误。 必须在类头中定义成员。
+- 如果将成员定义为**dllexport**但不将其包含在类定义中，则会生成编译器错误。 必须在类头中定义成员。
 
-- 尽管作为类成员的定义**dllimport**或**dllexport**是允许，您不能重写类定义中指定的接口。
+- 尽管允许将类成员定义为**dllimport**或**dllexport** ，但不能重写在类定义中指定的接口。
 
-- 如果在声明它的类定义的主体以外的地方定义成员函数，如果函数定义为将生成警告**dllexport**或**dllimport** （如果此定义不同于在类声明中指定)。
+- 如果在声明的类定义的主体以外的位置定义成员函数，则会在该函数被定义为**dllexport**或**dllimport** （如果此定义与类声明中指定的不同）时生成警告。
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [dllexport、dllimport](../cpp/dllexport-dllimport.md)

@@ -37,12 +37,12 @@ helpviewer_keywords:
 - istascii function
 - iswascii function
 ms.assetid: ba4325ad-7cb3-4fb9-b096-58906d67971a
-ms.openlocfilehash: ee20711628d5c2135b4ee1c37b87cb77f3610695
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b7677819a4b138b08ed4ff97de38c091ce0e94fd
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954573"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857783"
 ---
 # <a name="isascii-__isascii-iswascii"></a>isascii、__isascii、iswascii
 
@@ -68,7 +68,7 @@ int iswascii(
 
 ## <a name="return-value"></a>返回值
 
-如果**c**是 ASCII 字符的特定表示形式，则每个例程将返回非零值。 如果**c**是 ASCII 字符（在 0X00-0x7f 范围内），则 **__isascii**将返回一个非零值。 如果**c**是 ASCII 字符的宽字符表示形式，则**iswascii**将返回一个非零值。 如果**c**不满足测试条件，则这些例程都将返回0。
+如果**c**是 ASCII 字符的特定表示形式，则每个例程将返回非零值。 如果**c**是 ASCII 字符（在 0X00-0x7f 范围内）， **__isascii**将返回一个非零值。 如果**c**是 ASCII 字符的宽字符表示形式，则**iswascii**将返回一个非零值。 如果**c**不满足测试条件，则这些例程都将返回0。
 
 ## <a name="remarks"></a>备注
 
@@ -82,16 +82,16 @@ int iswascii(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_istascii**|**__isascii**|**__isascii**|**iswascii**|
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>需求
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**isascii**、 **__isascii**|C：\<ctype.h><br /><br /> C++：\<cctype> 或 \<ctype.h>|
 |**iswascii**|C：\<wctype.h 1>、\<ctype.h 1>，或 \<wchar.h 1><br /><br /> C++：\<cwctype 1>、\<cctype 1>、\<wctype.h 1>、\<ctype.h 1>，或 \<wchar.h 1>|
 
-**Isascii**、 **__isascii**和**iswascii**函数是 Microsoft 特定的。 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+**Isascii**、 **__isascii**和**iswascii**函数是 Microsoft 特定的。 有关其他兼容性信息，请参见 [Compatibility](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [字符分类](../../c-runtime-library/character-classification.md)<br/>
 [区域设置](../../c-runtime-library/locale.md)<br/>

@@ -43,12 +43,12 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-ms.openlocfilehash: 99c30eeb942eb3ab57518cc63ce353cfeff0bec9
-ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
+ms.openlocfilehash: daa2ad2680a9d7d0239a70ed37ec1d90a3d96d97
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74810554"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857536"
 ---
 # <a name="fundamental-types--c"></a>基本类型 (C++)
 
@@ -77,7 +77,7 @@ C++ 中的基础类型分为三个类别：整数、浮点和 void。 整数类�
 ||**long long**|大于无符号**长**整数。<br /><br /> **Long long**类型的对象可声明为**有符号长**整型或**无符号长**整数。 **带符号长**整型是**长**时间的同义词。|
 ||**wchar_t**， **__wchar_t**|**Wchar_t**类型的变量指定宽字符或多字节字符类型。 默认情况下， **wchar_t**是本机类型，但你可以使用[/zc： wchar_t](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)将**wchar_t** typedef 设置为**无符号短**。 **__Wchar_t**类型是特定于 Microsoft 的同义词，适用于本机**wchar_t**类型。<br /><br /> 在字符或字符串文本前使用 L 前缀可指定宽字符类型。|
 |浮点|**float**|类型**float**是最小的浮点类型。|
-||**双精度**|类型**double**是大于或等于**float**类型但小于或等于类型**long double**的大小的浮点类型。<br /><br /> Microsoft 专用： **long double**和**double**的表示形式是相同的。 不过，**长双精度**型和**双精度**型是单独的类型。|
+||**双精度**|类型**double**是大于或等于**float**类型但小于或等于类型**long double**的大小的浮点类型。<br /><br /> 特定于 Microsoft 的： **long double**和**double**的表示形式相同。 不过，**长双精度**型和**双精度**型是单独的类型。|
 ||**long double**|类型**long double**是大于或等于**double**类型的浮点类型。|
 
 **Microsoft 专用**

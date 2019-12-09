@@ -8,12 +8,12 @@ helpviewer_keywords:
 - functions [C], return types
 - prototypes [C++], function
 ms.assetid: d152f8e6-971e-432c-93ca-5a91400653c2
-ms.openlocfilehash: 2c75db3e1550927af57054a2cc1561d9df1567a4
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 9c42ce5b23e6f755dafd57bdb5a5f79cf1adb4ec
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148799"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857081"
 ---
 # <a name="function-prototypes"></a>函数原型
 
@@ -24,7 +24,7 @@ ms.locfileid: "56148799"
 *declaration*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *attribute-seq*<sub>opt</sub> *init-declarator-list*<sub>opt</sub> **;**
 
-/\* *attribute-seq*<sub>opt</sub> 为 Microsoft 专用 \*/
+/\**属性-seq*<sub>opt</sub>是特定于 Microsoft 的 \*/
 
 *declaration-specifiers*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub> <br/>
@@ -43,14 +43,14 @@ ms.locfileid: "56148799"
 &nbsp;&nbsp;&nbsp;&nbsp;pointer<sub>opt</sub> direct-declarator
 
 direct-declarator: /\* 函数声明符 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**  /\* New-style declarator \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)** /\* Obsolete-style declarator \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**   /\* New-style declarator \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)**  /\* Obsolete-style declarator \*/
 
 原型与函数定义具有相同的形式，只不过前者由紧跟在右括号后的分号结尾，因此没有主体。 在任一情况下，返回类型都必须与函数定义中指定的返回类型一致。
 
 函数原型有下列重要用途：
 
-- 它们建立返回除 int 之外的类型的函数的返回类型。尽管返回 int 值的函数不需要原型，但仍建议使用原型。
+- 它们建立返回**int**以外的类型的函数的返回类型。尽管返回**int**值的函数不需要原型，但建议使用原型。
 
 - 如果没有完整原型，将进行标准转换，但不会尝试使用形参的数量检查实参的类型或数量。
 
@@ -85,6 +85,6 @@ void func1( struct S * );
 
 在 /Ze 下，仍将在全局范围内输入标记。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [函数](../c-language/functions-c.md)

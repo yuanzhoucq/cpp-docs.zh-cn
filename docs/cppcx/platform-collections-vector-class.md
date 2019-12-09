@@ -1,6 +1,6 @@
 ---
 title: Platform::Collections::Vector 类
-ms.date: 10/01/2019
+ms.date: 12/04/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Vector::Vector
@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-ms.openlocfilehash: a70856be04a63cad1c700cb3cc52711dde410265
-ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
+ms.openlocfilehash: b7774c2cdab7b9abcb3ebac1453779055eacf897
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816579"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857887"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector 类
 
@@ -67,15 +67,15 @@ template <typename T, typename E>
 
 ### <a name="members"></a>Members
 
-### <a name="public-constructors"></a>公共构造函数
+### <a name="public-constructors"></a>公用建構函式
 
-|名称|说明|
+|Name|描述|
 |----------|-----------------|
 |[Vector::Vector](#ctor)|初始化 Vector 类的新实例。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|Name|描述|
 |----------|-----------------|
 |[Vector::Append](#append)|在当前向量中的最后一项后插入指定项。|
 |[Vector::Clear](#clear)|删除当前向量中的所有元素。|
@@ -84,25 +84,25 @@ template <typename T, typename E>
 |[Vector::GetMany](#getmany)|从指定索引处开始，检索当前向量中的项目序列。|
 |[Vector::GetView](#getview)|返回向量的只读视图，即 [Platform::Collections::VectorView](../cppcx/platform-collections-vectorview-class.md)。|
 |[Vector::IndexOf](#indexof)|在当前向量中搜索指定项，如果找到，则返回该项的索引。|
-|[Vector::InsertAt](#insertat)|在当前 Vector 中由指定的索引标识的元素后面插入指定的项。|
+|[Vector::InsertAt](#insertat)|将指定的项插入到由指定索引标识的元素的当前向量中。|
 |[Vector::ReplaceAll](#replaceall)|删除当前向量中的元素，然后插入来自指定数组的元素。|
 |[Vector::RemoveAt](#removeat)|从当前向量删除指定索引标识的元素。|
 |[Vector::RemoveAtEnd](#removeatend)|删除当前矢量末尾的元素。|
 |[Vector::SetAt](#setat)|将指定值分配给当前向量中指定索引标识的元素。|
 |[Vector::Size](#size)|返回当前向量对象中的元素数目。|
 
-### <a name="events"></a>事件
+### <a name="events"></a>Events
 
 |||
 |-|-|
-|名称|说明|
+|Name|描述|
 |事件[Windows：： Foundation：： Collection：： VectorChangedEventHandler\<t > ^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|当向量更改时发生。|
 
-## <a name="inheritance-hierarchy"></a>继承层次结构
+## <a name="inheritance-hierarchy"></a>繼承階層
 
 `Vector`
 
-### <a name="requirements"></a>要求
+### <a name="requirements"></a>需求
 
 **标头：** collection.h
 
@@ -189,7 +189,7 @@ virtual unsigned int GetMany(
 *startIndex*<br/>
 要检索的项开头从零开始的索引。
 
-dest<br/>
+*dest*<br/>
 调用方分配的项的数组，这些项以*startIndex*指定的元素开始，并在向量中的最后一个元素结束。
 
 ### <a name="return-value"></a>返回值
@@ -244,7 +244,7 @@ IndexOf 使用 std::find_if 查找该项目。 因此，自定义元素类型应
 
 ##  <a name="insertat"></a>Vector：： InsertAt 方法
 
-在当前 Vector 中由指定的索引标识的元素后面插入指定的项。
+将指定的项插入到由指定索引标识的元素的当前向量中。
 
 ### <a name="syntax"></a>语法
 
@@ -258,7 +258,7 @@ virtual void InsertAt(unsigned int index, T item)
 从零开始的无符号整数，用于指定 Vector 对象中的特定元素。
 
 *item*<br/>
-要插入到 Vector 中由*index*指定的元素之后的项。 *项*的类型由*T*类型名称定义。
+要插入到 Vector 中由*index*指定的元素的项。 *项*的类型由*T*类型名称定义。
 
 ## <a name="removeat"></a>Vector：： RemoveAt 方法
 
@@ -387,7 +387,7 @@ Vector(std::initializer_list<T> il);
 *first*<br/>
 用于初始化当前向量的对象序列中的第一个元素。 *第一*种类型是通过*完美转发*传递的。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
-*时间*<br/>
+*last*<br/>
 用于初始化当前向量的对象序列中的最后一个元素。 *最后一*种方法是通过*完美转发*传递的。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
 ## <a name="see-also"></a>另请参阅
