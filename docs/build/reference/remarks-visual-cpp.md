@@ -1,5 +1,5 @@
 ---
-title: '&lt;备注 > (C++文档注释)'
+title: '&lt;备注 > （C++文档注释）'
 ms.date: 11/04/2016
 f1_keywords:
 - remarks
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <remarks> C++ XML tag
 - remarks C++ XML tag
 ms.assetid: c820083b-3192-40ab-9ec8-1472c55b4247
-ms.openlocfilehash: 0d0c63d55de80f498498a6873dacb5e83fc956b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 096280526b12feff33377a705f7c03548a1f0f13
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319156"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988660"
 ---
 # <a name="ltremarksgt"></a>&lt;remarks&gt;
 
@@ -27,7 +27,7 @@ ms.locfileid: "62319156"
 
 #### <a name="parameters"></a>参数
 
-*description*<br/>
+description<br/>
 对成员的说明。
 
 ## <a name="remarks"></a>备注
@@ -36,7 +36,7 @@ ms.locfileid: "62319156"
 
 ## <a name="example"></a>示例
 
-```
+```cpp
 // xml_remarks_tag.cpp
 // compile with: /LD /clr /doc
 // post-build command: xdcmake xml_remarks_tag.dll
@@ -52,6 +52,6 @@ using namespace System;
 public ref class MyClass {};
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [XML 文档](xml-documentation-visual-cpp.md)

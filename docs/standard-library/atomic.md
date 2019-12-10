@@ -1,6 +1,7 @@
 ---
 title: '&lt;atomic&gt;'
-ms.date: 11/04/2016
+description: 描述标准C++库的原子标头中可用的类型和函数。
+ms.date: 12/06/2019
 f1_keywords:
 - <atomic>
 - atomic/std::atomic_int_least32_t
@@ -48,12 +49,12 @@ f1_keywords:
 - atomic/std::atomic_int64_t
 - atomic/std::atomic_uint_least64_t
 ms.assetid: e79a6b9f-52ff-48da-9554-654c4e1999f6
-ms.openlocfilehash: b33ec1e7fdc7f93062248a9ad42c78c3b30801fe
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: d11e8bf2067c1c8525725ae74e713ac834d89ec4
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688452"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991165"
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
 
@@ -68,11 +69,11 @@ ms.locfileid: "72688452"
 ## <a name="remarks"></a>备注
 
 > [!NOTE]
-> 在使用 **/clr**编译的代码中，此标头被阻止。
+> 在使用[/clr： pure](../build/reference/clr-common-language-runtime-compilation.md)编译的代码中，此标头被阻止。 在 Visual Studio 2017 及更高版本中，不推荐使用 **/clr： pure**和 **/clr： safe** 。
 
 一个原子操作有两个关键属性，帮助你使用多个线程正确操控对象，而无需使用互斥锁。
 
-- 由于原子操作是不可见的，因此，仅在第一个原子操作前后，来自不同线程同一对象上的第二个原子操作可以获取该对象的状态。
+- 由于原子操作是不可分的，因此，来自不同线程的同一对象的第二个原子操作只能在第一个原子操作之前或之后获取该对象的状态。
 
 - 基于其 [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 参数，原子操作可以针对同一个线程中其他原子操作的影响可见性建立排序要求。 因此，它会抑制违反排序要求的编译器优化。
 
@@ -80,11 +81,11 @@ ms.locfileid: "72688452"
 
 **C + + 11**：在信号处理程序中，如果 `obj.is_lock_free()` 或 `atomic_is_lock_free(x)` 为 true，则可以对对象 `obj` 执行原子操作。
 
-类[atomic_flag](../standard-library/atomic-flag-structure.md)提供了包含**bool**标志的最小原子类型。 其操作始终为无锁操作。
+类[atomic_flag](../standard-library/atomic-flag-structure.md)提供保存**bool**标志的最小原子类型。 其操作始终为无锁操作。
 
 类模板 `atomic<T>` 存储其参数类型的对象 `T`，并提供对该存储值的原子访问。 你可以使用可通过 [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) 复制的任何类型对该类进行实例化，并通过使用 [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md) 测试是否相等。 特别是，你可以将其与满足这些要求的用户定义类型结合使用，在很多情况下是与浮点类型结合使用。
 
-另外，该模板还具有一套用于整型类型的专用化和用于指针的部分专用化。 这些专用化提供了通过主模板无法执行的其他操作。
+另外，该模板还具有一套用于整型类型的专用化和用于指针的部分专用化。 这些专用化提供了无法通过主模板获得的其他操作。
 
 ## <a name="pointer-specializations"></a>指针专用化
 
@@ -92,11 +93,11 @@ ms.locfileid: "72688452"
 
 ## <a name="integral-specializations"></a>整型专用化
 
-`atomic<integral>` 专用化将应用于所有整型类型。 它们提供了通过主模板无法执行的其他操作。
+`atomic<integral>` 专用化将应用于所有整型类型。 它们提供了无法通过主模板获得的其他操作。
 
-每个 `atomic<integral>` 类型都有一个对应的宏，你可以在 `if directive` 中使用该宏来确定编译时对该类型执行的操作是否为无锁。 如果宏的值为零，则对类型执行的操作不是无锁。 如果值为 1，则操作可能为无锁，且需要进行运行时检查。 如果值为 2，操作为无锁。 可以使用函数 `atomic_is_lock_free` 确定在运行时对类型执行的操作是否为无锁。
+每个 `atomic<integral>` 类型都有一个对应的宏，你可以在 `if directive` 中使用该宏来确定编译时对该类型执行的操作是否为无锁。 如果宏的值为零，则对该类型的操作不会无锁。 如果值为 1，则操作可能为无锁，且需要进行运行时检查。 如果值为 2，操作为无锁。 可以使用函数 `atomic_is_lock_free` 确定在运行时对类型执行的操作是否为无锁。
 
-对于每个整型类型，都有相应的已命名原子类型用于管理该整型类型的对象。 每个 `atomic_integral` 类型都具有与 `atomic<T>` 的相应实例化相同的成员函数集，并且可以传递至任何非成员原子函数。
+对于每个整型类型，都有一个对应的命名原子类型，用于管理该整型类型的对象。 每个 `atomic_integral` 类型都具有与 `atomic<T>` 的相应实例化相同的成员函数集，并且可以传递至任何非成员原子函数。
 
 |`atomic_integral` 类型|整型类型|`atomic_is_lock_free` 宏|
 |----------------------------|-------------------|---------------------------------|
@@ -152,22 +153,22 @@ ms.locfileid: "72688452"
 
 ## <a name="structs"></a>结构
 
-|“属性”|描述|
+|Name|描述|
 |----------|-----------------|
 |[atomic 结构](../standard-library/atomic-structure.md)|描述对存储值执行原子操作的对象。|
 |[atomic_flag 结构](../standard-library/atomic-flag-structure.md)|描述一个对象，该对象以原子方式设置并清除**布尔**型标志。|
 
 ## <a name="enums"></a>枚举
 
-|“属性”|描述|
+|Name|描述|
 |----------|-----------------|
 |[memory_order 枚举](../standard-library/atomic-enums.md#memory_order_enum)|为内存位置上的同步操作提供符号名称。 这些操作将影响一个线程内的分配如何在另一个线程内变得可见。|
 
 ## <a name="functions"></a>函数
 
-在下面的列表中，不是以 `_explicit` 结尾的函数具有对应的 `_explicit` 的语义，只不过它们具有 `memory_order_seq_cst` 的隐式 [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 参数。
+在下面的列表中，不以 `_explicit` 结尾的函数具有相应 `_explicit`的语义，只不过它们具有 `memory_order_seq_cst`的隐式[memory_order](../standard-library/atomic-enums.md#memory_order_enum)参数。
 
-|“属性”|描述|
+|Name|描述|
 |----------|-----------------|
 |[atomic_compare_exchange_strong](../standard-library/atomic-functions.md#atomic_compare_exchange_strong)|执行*原子比较和交换*操作。|
 |[atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit)|执行*原子比较和交换*操作。|
@@ -199,7 +200,7 @@ ms.locfileid: "72688452"
 |[atomic_thread_fence](../standard-library/atomic-functions.md#atomic_thread_fence)|充当就其他 fence 建立内存排序要求的 *fence*。|
 |[kill_dependency](../standard-library/atomic-functions.md#kill_dependency)|中断可能的依赖关系链。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [头文件引用](../standard-library/cpp-standard-library-header-files.md)\
 [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

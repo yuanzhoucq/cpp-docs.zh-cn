@@ -1,5 +1,5 @@
 ---
-title: '&lt;返回 > (C++文档注释)'
+title: '&lt;返回 > （C++文档注释）'
 ms.date: 11/04/2016
 f1_keywords:
 - returns
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - returns C++ XML tag
 - <returns> C++ XML tag
 ms.assetid: 5e3b0ed9-838d-4953-a93e-76d2d0a19fb9
-ms.openlocfilehash: 72a6ad05f3a78919b652f518d11814c3f95c5fd0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1315ec09271c2c97f7bcaf3fb6f9c75f514b5d2d
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318675"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988628"
 ---
 # <a name="ltreturnsgt"></a>&lt;returns&gt;
 
@@ -27,7 +27,7 @@ ms.locfileid: "62318675"
 
 #### <a name="parameters"></a>参数
 
-*description*<br/>
+description<br/>
 返回值的说明。
 
 ## <a name="remarks"></a>备注
@@ -36,7 +36,7 @@ ms.locfileid: "62318675"
 
 ## <a name="example"></a>示例
 
-```
+```cpp
 // xml_returns_tag.cpp
 // compile with: /LD /clr /doc
 // post-build command: xdcmake xml_returns_tag.dll
@@ -49,6 +49,6 @@ public:
 };
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [XML 文档](xml-documentation-visual-cpp.md)

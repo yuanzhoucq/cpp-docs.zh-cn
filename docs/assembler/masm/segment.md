@@ -1,17 +1,17 @@
 ---
 title: SEGMENT
-ms.date: 08/30/2018
+ms.date: 12/06/2019
 f1_keywords:
 - SEGMENT
 helpviewer_keywords:
 - SEGMENT directive
 ms.assetid: e6f68367-6714-4f06-a79c-edfa88014430
-ms.openlocfilehash: b7344d9cb685e0212748d7835e19f398f14979e7
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 933e4e42b4b0f9cc979a3e67805d017f723472ef
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74393729"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988016"
 ---
 # <a name="segment"></a>SEGMENT
 
@@ -33,16 +33,16 @@ ms.locfileid: "74393729"
 |**BYTE**|下一个可用的字节地址。|
 |**WORD**|下一个可用的单词地址（每个单词2个字节）。|
 |**DWORD**|下一个可用的双字地址（每个双引号4个字节）。|
-|**分页**|下一个可用的段落地址（每段16个字节）。|
+|**PARA**|下一个可用的段落地址（每段16个字节）。|
 |**PAGE**|下一个可用页面地址（每页256字节）。|
 |**ALIGN**（*n*）|下一个可用的第*n*个字节地址。 有关详细信息，请参阅备注部分。|
 
 如果未指定此参数，则默认情况下使用**段落**。
 
-*合并*\
+*合并*（仅限32位 MASM） \
 **PUBLIC**、 **STACK**、 **COMMON**、 **MEMORY**、 **AT**<em>address</em>、 **PRIVATE**
 
-*使用*\
+*使用*（仅限32位 MASM） \
 **USE16**， **USE32**，**平面**
 
 *特征*\

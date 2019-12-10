@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4702
 ms.assetid: d8198c1e-8762-42a6-9e6b-cb568b7a1686
-ms.openlocfilehash: 96ae3a0742db5e3a5006f031ce62beb281c38ccd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e46bfef925f999ed7f04b5bbe7c88800209ed14
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395243"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990646"
 ---
 # <a name="compiler-warning-level-4-c4702"></a>编译器警告（等级 4）C4702
 
 无法访问的代码
 
-此警告是适用于 Visual Studio.NET 2003年执行的编译器一致性工作的结果： 无法访问的代码。 当编译器 （后端） 检测到无法访问的代码时，它将生成 C4702，第 4 级警告。
+此警告是针对 Visual Studio .NET 2003：无法访问的代码所执行的编译器一致性工作的结果。 当编译器（后端）检测到无法访问的代码时，它将生成 C4702，第4级警告。
 
-在 Visual Studio.NET 2003年和 Visual Studio.NET 版本的视觉对象中是有效的代码的C++、 删除无法访问的代码，或确保所有的源代码是可访问的某些流的执行。
+对于在 visual Studio .NET 2003 和 visual Studio .NET 版本的 Visual C++studio 中都有效的代码，请删除无法访问的代码，或确保所有源代码都可通过某个执行流访问。
 
 ## <a name="example"></a>示例
 
 下面的示例生成 C4702。
 
-```
+```cpp
 // C4702.cpp
 // compile with: /W4
 #include <stdio.h>
@@ -38,13 +38,13 @@ int main() {
 
 ## <a name="example"></a>示例
 
-使用编译时 **/GX**，**了 /EHc**， **/EHsc**，或者 **/EHac**和使用 extern C 函数，代码可能会变得无法访问因为 extern C函数假定不引发，因此 catch 块无法访问。  如果您认为，此警告不有效因为函数可以引发，使用编译 **/EHa**或 **/EHs**，取决于引发的异常。
+使用 **/gx**、 **/EHc**、 **/ehsc**或 **/EHac**并使用 extern c 函数进行编译时，代码可能会无法访问，因为假定 extern c 函数不会引发，因此无法到达 catch 块。  如果你认为此警告无效，因为函数可以引发、使用 **/eha**或 **/ehs**进行编译，具体取决于引发的异常。
 
-有关详细信息，请参阅[/EH （异常处理模型）](../../build/reference/eh-exception-handling-model.md)有关详细信息。
+有关详细信息，请参阅[/EH （异常处理模型）](../../build/reference/eh-exception-handling-model.md) 。
 
 下面的示例生成 C4702。
 
-```
+```cpp
 // C4702b.cpp
 // compile with: /W4 /EHsc
 #include <iostream>

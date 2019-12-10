@@ -1,17 +1,17 @@
 ---
 title: PROC
-ms.date: 08/30/2018
+ms.date: 12/06/2019
 f1_keywords:
 - PROC
 helpviewer_keywords:
 - PROC directive
 ms.assetid: ee5bb6b6-fa15-4d73-b0cf-e650178539a9
-ms.openlocfilehash: 5d1e44fcc4adbbe012b2f31fe9c6c27511bafff1
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: e68a7fc9814ba1ca07095e036e88fb5917220086
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74395031"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74987932"
 ---
 # <a name="proc"></a>PROC
 
@@ -25,6 +25,8 @@ ms.locfileid: "74395031"
 > *标签* **ENDP**
 
 ## <a name="remarks"></a>备注
+
+⟦*距离*⟧和⟦*language 类型*⟧参数仅在32位 MASM 中有效。
 
 ⟦**FRAME** ⟦ __：__ *ehandler-address*⟧⟧仅对 ml64.exe 有效，并使 MASM 在 pdata 中生成函数表项，xdata 中的展开信息用于函数的结构化异常处理展开行为。
 
