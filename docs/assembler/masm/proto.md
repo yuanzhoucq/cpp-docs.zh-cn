@@ -1,17 +1,17 @@
 ---
 title: PROTO
-ms.date: 10/22/2018
+ms.date: 12/06/2019
 f1_keywords:
 - PROTO
 helpviewer_keywords:
 - PROTO directive
 ms.assetid: 0487ee16-9dc7-43d1-9445-cd1601f5a080
-ms.openlocfilehash: 24ec2a9abc6c8b76fc81f6d412019296c53160f4
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 9df66b6c89498a2cc1a1864a668b7addfbaf593c
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74394758"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74987870"
 ---
 # <a name="proto"></a>PROTO
 
@@ -26,10 +26,10 @@ ms.locfileid: "74394758"
 *标签*\
 原型函数的名称。
 
-*距离*\
+*距离*（仅限32位 MASM。）\
 可有可无在16位内存模型中用于重写默认值，并指示近**距离或远**调用。
 
-*语言类型*\
+*language 类型*（仅限32位 MASM。）\
 可有可无设置过程和公共符号的调用和命名约定。 支持的约定包括：
 
 - 32位**平面**模型： **C**， **STDCALL**

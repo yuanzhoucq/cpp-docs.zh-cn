@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4682
 ms.assetid: 858ea157-1244-4a61-85df-97b3de43d418
-ms.openlocfilehash: 6566c27999f218b7a214e32dde96bd1cf96fbb12
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6af1bf2d27c04efb58e7f1af0439ed3d16b7491a
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395269"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990123"
 ---
 # <a name="compiler-warning-level-4-c4682"></a>编译器警告（等级 4）C4682
 
 “parameter”: 未指定方向参数特性，默认为 [in]
 
-特性化接口中参数的方法不具有方向性特性： [in](../../windows/in-cpp.md) 或 [out](../../windows/out-cpp.md)。参数默认为 in。
+特性化接口中参数的方法不具有方向性特性之一： [in](../../windows/in-cpp.md)或[out](../../windows/out-cpp.md)。参数默认为 in。
 
 默认情况下，此警告处于关闭状态。 请参阅 [默认情况下处于关闭状态的编译器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 了解详细信息。
 
 下面的示例生成 C4682：
 
-```
+```cpp
 // C4682.cpp
 // compile with: /W4
 #pragma warning(default : 4682)

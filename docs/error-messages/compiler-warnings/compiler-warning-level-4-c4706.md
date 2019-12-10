@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4706
 ms.assetid: 89cd3f4f-812c-4a4b-9426-65a5a6d1b99c
-ms.openlocfilehash: e57470fcd8e7b014084b094c9ca5e39f0a86d85e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ff8794dcf29539b492f53bfdf6f0810988c0f72
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395217"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74989905"
 ---
 # <a name="compiler-warning-level-4-c4706"></a>编译器警告（等级 4）C4706
 
 条件表达式内的赋值
 
-条件表达式中的测试值已分配的结果。
+条件表达式中的测试值是赋值的结果。
 
-分配有一个值 （在赋值语句左侧的值），可以在另一个表达式，包括测试表达式中合法使用。
+赋值包含一个值（赋值左侧的值），可以在其他表达式（包括测试表达式）中合法使用该值。
 
-下面的示例生成 C4706:
+下面的示例生成 C4706：
 
-```
+```cpp
 // C4706a.cpp
 // compile with: /W4
 int main()
@@ -35,9 +35,9 @@ int main()
 }
 ```
 
-即使两个测试条件两边的括号，则将出现警告：
+即使在测试条件两边加两个括号，也会出现此警告：
 
-```
+```cpp
 // C4706b.cpp
 // compile with: /W4
 int main()
@@ -49,9 +49,9 @@ int main()
 }
 ```
 
-如果您的意图是测试某一关系并不进行分配，请使用`==`运算符。 例如，下行将测试和 b 相等：
+如果打算测试关系而不进行赋值，请使用 `==` 运算符。 例如，下面的行测试和 b 是否相等：
 
-```
+```cpp
 // C4706c.cpp
 // compile with: /W4
 int main()
@@ -63,9 +63,9 @@ int main()
 }
 ```
 
-如果你想要将测试值分配的结果，测试以确保分配非零值且不为 null。 例如，下面的代码将生成此警告：
+如果要使测试值成为赋值的结果，请测试以确保赋值非零或非 null。 例如，下面的代码不会生成此警告：
 
-```
+```cpp
 // C4706d.cpp
 // compile with: /W4
 int main()

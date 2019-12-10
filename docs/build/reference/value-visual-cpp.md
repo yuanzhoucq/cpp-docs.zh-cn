@@ -1,5 +1,5 @@
 ---
-title: '&lt;值 > (C++文档注释)'
+title: '&lt;值 > （C++文档注释）'
 ms.date: 11/04/2016
 f1_keywords:
 - value
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - value C++ XML tag
 - <value> C++ XML tag
 ms.assetid: 0ba0a0d5-bcd7-4862-a169-83f2721ad80e
-ms.openlocfilehash: c0863b41791254992d16d373328ff6c8a5d6f94f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: de84d1faca59a6c8e4f82fba3605cbd54a05bd2e
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317024"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988592"
 ---
-# <a name="ltvaluegt"></a>&lt;值&gt;
+# <a name="ltvaluegt"></a>&lt;value&gt;
 
 借助 \<value>标记，可以描述属性和属性访问器方法。 请注意，在 Visual Studio 集成开发环境中使用代码向导添加属性时，将为新属性添加 [\<summary>](summary-visual-cpp.md)标记。 然后，应手动添加 \<value> 标记，描述属性表示的值。
 
@@ -36,7 +36,7 @@ ms.locfileid: "62317024"
 
 ## <a name="example"></a>示例
 
-```
+```cpp
 // xml_value_tag.cpp
 // compile with: /LD /clr /doc
 // post-build command: xdcmake xml_value_tag.dll
@@ -58,6 +58,6 @@ public:
 };
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [XML 文档](xml-documentation-visual-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;请参阅 > (C++文档注释)'
+title: '&lt;参阅 > （C++文档注释）'
 ms.date: 11/04/2016
 f1_keywords:
 - <see>
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <see> C++ XML tag
 - see C++ XML tag
 ms.assetid: 20ef66f4-b278-45cf-8613-63919edf5720
-ms.openlocfilehash: be99d3ac156c587888a7c56997d82531cf86ccec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8693646fa37648d1b20c791d99d159f2c81b8ec1
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318896"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988616"
 ---
 # <a name="ltseegt"></a>&lt;see&gt;
 
@@ -38,13 +38,13 @@ ms.locfileid: "62318896"
 
 有关使用 \<see> 的示例，请参阅 [\<summary>](summary-visual-cpp.md)。
 
-MSVC 编译器将尝试解析在一次传递通过文档注释的 cref 引用。  因此，如果使用 C++ 查找规则，编译器找不到符号，引用将被标记为未解析。 请参阅 [\<seealso>](seealso-visual-cpp.md)，获取详细信息。
+MSVC 编译器将尝试通过文档注释来解析一次中的 cref 引用。  因此，如果使用 C++ 查找规则，编译器找不到符号，引用将被标记为未解析。 请参阅 [\<seealso>](seealso-visual-cpp.md)，获取详细信息。
 
 ## <a name="example"></a>示例
 
 以下示例显示了如何对泛型类型进行 cref 引用，以便编译器解析该引用。
 
-```
+```cpp
 // xml_see_cref_example.cpp
 // compile with: /LD /clr /doc
 // the following cref shows how to specify the reference, such that,
@@ -69,6 +69,6 @@ generic<class T>
 ref class C {};
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [XML 文档](xml-documentation-visual-cpp.md)

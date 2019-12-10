@@ -1,5 +1,5 @@
 ---
-title: '&lt;示例 > (C++文档注释)'
+title: '&lt;示例 > （C++文档注释）'
 ms.date: 11/04/2016
 f1_keywords:
 - <example>
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <example> C++ XML tag
 - example C++ XML tag
 ms.assetid: c821aaa7-7ea7-4bee-9922-6705ad57f877
-ms.openlocfilehash: 69e4ad8315948c9c77e99f6ebece4debbe3831b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 384e9b9808a49770887eeda69b1d24fdd3f06027
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272528"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988313"
 ---
 # <a name="ltexamplegt"></a>&lt;example&gt;
 
@@ -27,7 +27,7 @@ ms.locfileid: "62272528"
 
 #### <a name="parameters"></a>参数
 
-*description*<br/>
+description<br/>
 代码示例的说明。
 
 ## <a name="remarks"></a>备注
@@ -36,7 +36,7 @@ ms.locfileid: "62272528"
 
 ## <a name="example"></a>示例
 
-```
+```cpp
 // xml_example_tag.cpp
 // compile with: /clr /doc /LD
 // post-build command: xdcmake xml_example_tag.dll
@@ -61,6 +61,6 @@ public:
 };
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [XML 文档](xml-documentation-visual-cpp.md)

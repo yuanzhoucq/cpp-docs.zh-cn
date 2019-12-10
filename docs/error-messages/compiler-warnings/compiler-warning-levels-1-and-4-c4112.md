@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C4112
 ms.assetid: aff64897-bb79-4a67-9b6f-902c6d44f3dc
-ms.openlocfilehash: 3678d0ce5d9eb9568f0272da4173e72502b0557f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f614373e1b96de2c8167d7981c0a87a4e1c58435
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280329"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991231"
 ---
 # <a name="compiler-warning-levels-1-and-4-c4112"></a>编译器警告（等级 1 和等级 4）C4112
 
-\#行要求 1 到 number 之间的整数
+\#line 要求1到1之间的整数
 
 [#line](../../preprocessor/hash-line-directive-c-cpp.md) 指令指定了一个位于允许范围之外的整数参数。
 
@@ -23,7 +23,7 @@ ms.locfileid: "62280329"
 
 下面的示例生成 C4112：
 
-```
+```cpp
 // C4112.cpp
 // compile with: /W4
 #line 0   // C4112, value must be between 1 and number
