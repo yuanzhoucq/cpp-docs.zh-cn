@@ -1,16 +1,16 @@
 ---
 title: C++ 的符合性改进
-ms.date: 10/04/2019
+ms.date: 12/04/2019
 description: Visual Studio 中的 Microsoft C++ 正朝着完全符合 C++20 语言标准的方向发展。
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 0bbfc364da217525251df0c5f09544ed1ccfe5b6
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 06fa060b674e51a3352a9a928bccdbfa6c63aae4
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627091"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74858030"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Visual Studio 中的 C++ 符合性改进
 
@@ -460,6 +460,245 @@ extern "C" void f(int, int, int, BOOL){}
 ### <a name="standard-library-improvements"></a>标准库改进
 
 已删除非标准标头 \<stdexcpt.h> 和 \<typeinfo.h>。 包含它们的代码应改为分别包括标准标头 \<exception > 和 \<typeinfo >。
+
+## <a name="improvements_164"></a> Visual Studio 2019 版本 16.4 的符合性改进
+
+### <a name="better-enforcement-of-two-phase-name-lookup-for-qualified-ids-in-permissive-"></a>改进了对 /permissive- 中完全限定 ID 的两阶段名称查找的强制执行
+
+两阶段名称查找要求模板正文中使用的非相关名称必须在定义时对模板可见。 以前，当模板实例化时，可找到此类名称。 此更改使你可以轻松地通过 MSVC 在 [/permissive-](../build/reference/permissive-standards-conformance.md) 标记中编写可移植的合规代码。
+
+在 Visual Studio 2019 版本 16.4 中使用 /permissive- 标记集时，以下示例会生成错误，因为在定义 `f<T>` 模板时 `N::f` 不可见： 
+
+```cpp
+template <class T>
+int f() {
+    return N::f() + T{}; // error C2039: 'f': is not a member of 'N'
+}
+
+namespace N {
+    int f() { return 42; }
+}
+```
+
+通常，包括缺失的标头或向前声明函数/变量，即可修复此问题，如以下示例所示：
+
+```cpp
+namespace N {
+    int f();
+}
+
+template <class T>
+int f() {
+    return N::f() + T{};
+}
+
+namespace N {
+    int f() { return 42; }
+}
+```
+
+### <a name="implicit-conversion-of-integral-constant-expressions-to-null-pointer"></a>将整数常量表达式隐式转换为 null 指针
+
+现在 MSVC 编译器在符合模式 (/permissive-) 中实施 [CWG 问题 903](http://www.open-std.org/jtc1/sc22/wg21/docs/cwg_defects.html#903)。 此规则不允许将整数常量表达式（整数文本“0”除外）隐式转换为 null 指针常量。 以下示例在符合模式下生成 C2440：
+
+```cpp
+int* f(bool* p) {
+    p = false; // error C2440: '=': cannot convert from 'bool' to 'bool *'
+    p = 0; // OK
+    return false; // error C2440: 'return': cannot convert from 'bool' to 'int *'
+}
+```
+
+若要修复此错误，请使用 nullptr，而不要使用 false。   请注意，仍然允许文本 0：
+
+```cpp
+int* f(bool* p) {
+    p = nullptr; // OK
+    p = 0; // OK
+    return nullptr; // OK
+}
+```
+
+### <a name="standard-rules-for-types-of-integer-literals"></a>用于整数文本类型的标准准则
+
+在符合模式中（通过 [/permissive-](../build/reference/permissive-standards-conformance.md) 启用），MSVC 将标准规则用于整数文本类型。 以前，如果十进制文本过大而无法置于签名的“int”，会为其提供类型“unsigned int”。 现在为此类文本提供第二大的带符号整数类型“long long”。 此外，如果带“ll”后缀的文本过大而无法置于带符号类型，会为其提供类型“unsigned long long”。
+
+这会导致生成各种警告诊断，以及对文本执行的算术运算的行为差异。
+
+以下示例演示 Visual Studio 2019 版本 16.4 中的新行为。 `i` 变量是 unsigned int 类型，因此会引发警告。  变量 `j` 的高阶位设置为 0。
+
+```cpp
+void f(int r) {
+    int i = 2964557531; // warning C4309: truncation of constant value
+    long long j = 0x8000000000000000ll >> r; // literal is now unsigned, shift will fill high-order bits with 0
+}
+```
+
+以下示例演示如何保留旧行为，以避免警告和运行时行为更改：
+
+```cpp
+void f(int r) {
+int i = 2964557531u; // OK
+long long j = (long long)0x8000000000000000ll >> r; // shift will keep high-order bits
+}
+```
+
+### <a name="function-parameters-that-shadow-template-parameters"></a>隐藏模板参数的函数参数
+
+现在，当函数参数隐藏模板参数时，MSVC 编译器会引发错误：
+
+```cpp
+template<typename T>
+void f(T* buffer, int size, int& size_read);
+
+template<typename T, int Size>
+void f(T(&buffer)[Size], int& Size) // error C7576: declaration of 'Size' shadows a template parameter
+{
+    return f(buffer, Size, Size);
+}
+```
+
+若要修复此错误，请更改以下参数之一的名称：
+
+```cpp
+template<typename T>
+void f(T* buffer, int size, int& size_read);
+
+template<typename T, int Size>
+void f(T (&buffer)[Size], int& size_read)
+{
+    return f(buffer, Size, size_read);
+}
+```
+
+### <a name="user-provided-specializations-of-type-traits"></a>用户提供的类型特征专用化
+
+现在，当 MSVC 编译器遇到对 `std` 命名空间中指定 type_traits 模板之一的用户定义的专用化时，会引发错误，以与标准版的 meta.rqmts 子句一致。  若未另行指定，此类专用化会生成未定义的行为。 以下示例包含未定义的行为，因为它违反了此规则，`static_assert` 因错误 C2338 而失败。 
+
+```cpp
+#include <type_traits>
+struct S;
+
+template<>
+struct std::is_fundamental<S> : std::true_type {};
+
+static_assert(std::is_fundamental<S>::value, "fail");
+```
+
+若要避免此错误，请定义继承自预期 type_trait 的结构，并将其专门化：
+
+```cpp
+#include <type_traits>
+
+struct S;
+
+template<typename T>
+struct my_is_fundamental : std::is_fundamental<T> {};
+
+template<>
+struct my_is_fundamental<S> : std::true_type { };
+
+static_assert(my_is_fundamental<S>::value, "fail");
+```
+
+### <a name="changes-to-compiler-provided-comparison-operators"></a>对编译器提供的比较运算符的更改
+
+现在当启用了 [/std:c++latest](../build/reference/std-specify-language-standard-version.md) 选项时，MSVC 编译器按照 [P1630R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1630r1.html) 对比较运算符实施以下更改：
+
+若包含 `operator==` 的表达式涉及不是布尔的返回类型，编译器将不再重写它们。  现在以下代码会生成错误“C2088: '!=': 对于结构非法”： 
+
+```cpp
+struct U {
+  operator bool() const;
+};
+
+struct S {
+  U operator==(const S&) const;
+};
+
+bool neq(const S& lhs, const S& rhs) {
+  return lhs != rhs;
+}
+```
+
+若要避免此错误，必须显式定义所需的运算符：
+
+```cpp
+struct U {
+    operator bool() const;
+};
+
+struct S {
+    U operator==(const S&) const;
+    U operator!=(const S&) const;
+};
+
+bool neq(const S& lhs, const S& rhs) {
+    return lhs != rhs;
+}
+```
+
+若默认的比较运算符是类似联合的类的成员，编译器将不再定义它。 现在以下示例生成“C2120: 对于所有类型‘void’非法”： 
+
+```cpp
+#include <compare>
+
+union S {
+    int a;
+    char b;
+    auto operator<=>(const S&) const = default;
+};
+
+bool lt(const S& lhs, const S& rhs) {
+    return lhs < rhs;
+}
+```
+
+若要避免此错误，请为此运算符定义主体：
+
+```cpp
+#include <compare>
+
+union S {
+  int a;
+  char b;
+  auto operator<=>(const S&) const { ... }
+}; 
+
+bool lt(const S& lhs, const S& rhs) {
+  return lhs < rhs;
+}
+```
+
+若默认的比较运算符的类包含引用成员，编译器将不再定义它。 现在以下代码生成“错误 C2120: 对于所有类型‘void’非法”： 
+
+```cpp
+#include <compare>
+
+struct U {
+    int& a;
+    auto operator<=>(const U&) const = default;
+};
+
+bool lt(const U& lhs, const U& rhs) {
+    return lhs < rhs;
+}
+```
+
+若要避免此错误，请为此运算符定义主体：
+
+```cpp
+#include <compare>
+
+struct U {
+    int& a;
+    auto operator<=>(const U&) const { ... };
+};
+
+bool lt(const U& lhs, const U& rhs) {
+    return lhs < rhs;
+}
+```
 
 ## <a name="update_160"></a>Visual Studio 2019 中的 bug 修复和行为变更
 
@@ -2820,7 +3059,7 @@ struct S
 {
     constexpr void f();
 };
- 
+
 template<>
 constexpr void S<int>::f()
 {

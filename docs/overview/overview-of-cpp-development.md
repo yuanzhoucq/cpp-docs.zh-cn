@@ -1,17 +1,17 @@
 ---
 title: Visual Studio 中的 C++ 开发概述
 description: Visual Studio IDE 支持在 Windows、Linux、Android 和 iOS 上通过代码编辑器、调试程序、测试框架、静态诊断分析器以及其他编程工具进行 C++ 开发。
-ms.date: 03/08/2019
+ms.date: 12/02/2019
 helpviewer_keywords:
 - Visual C++, development tools
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 54ed590122f1eb914ff039378914a1fd4adc5f10
-ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
+ms.openlocfilehash: d72ea2ab4fa83259152101b357c6b2b69e74c723
+ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66182897"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810620"
 ---
 # <a name="overview-of-c-development-in-visual-studio"></a>Visual Studio 中的 C++ 开发概述
 
@@ -29,13 +29,13 @@ Visual Studio 可支持要使用的任何项目系统或自定义生成工具，
 
    ::: moniker range="vs-2019"
 
-   ![新建项目模板](../build/media/mathclient-project-name-2019.png "Visual Studio 2019 新建项目对话框")
+   ![新项目模板](../build/media/mathclient-project-name-2019.png "Visual Studio 2019“新建项目”对话框")
 
    ::: moniker-end
 
    ::: moniker range="<=vs-2017"
 
-   ![项目模板](media/vs2017-new-project.png "Visual Studio 2017 新建项目对话框")
+   ![项目模板](media/vs2017-new-project.png "Visual Studio 2017“新建项目”对话框")
 
    ::: moniker-end
 
@@ -87,13 +87,11 @@ Visual Studio 可支持要使用的任何项目系统或自定义生成工具，
 
 ## <a name="add-and-edit-resources"></a>添加和编辑资源
 
-“资源”一词包括许多内容，例如对话框、图标、图像、可本地化的字符串、初始屏幕、数据库连接字符串，或想要包含在可执行文件中的任意数据  。
-
-有关添加和编辑本机桌面 C++ 项目中的资源的详细信息，请参阅[使用资源文件](../windows/working-with-resource-files.md)。
+Windows 程序或 DLL 通常会包括一些资源，例如对话框、图标、图像、可本地化的字符串、初始屏幕、数据库连接字符串或任意数据  。 Visual Studio 包括用于添加和编辑资源的工具。 有关详细信息，请参阅[使用资源文件](../windows/working-with-resource-files.md)。
 
 ## <a name="build-compile-and-link"></a>生成（编译和链接）
 
-要编译和链接项目，请在菜单栏选择“生成” > “生成解决方案”，或按组合键 Ctrl+Shift+B   。 将在“错误列表”中报告生成错误和警告（Ctrl+\\、Ctrl+E）。 “输出”窗口 (Alt+2) 显示生成过程的相关信息  。
+要编译和链接项目，请在菜单栏选择“生成” > “生成解决方案”，或按组合键 Ctrl+Shift+B    。 将在“错误列表”中报告生成错误和警告（Ctrl+\\、Ctrl+E）。  “输出”窗口 (Alt+2) 显示生成过程的相关信息  。 
 
 ![输出窗口和错误列表](media/vs2017-output-error-list.png "Visual Studio 2017 输出窗口和错误列表")
 
@@ -103,7 +101,7 @@ Visual Studio 可支持要使用的任何项目系统或自定义生成工具，
 
 ## <a name="debug"></a>调试
 
-你可以通过按 F5 键开始调试。  执行会在你设置的任何断点暂停。 你也可以一次一行地逐步执行代码、查看变量或寄存器的值，某些情况下甚至可在代码中进行更改并继续调试，而无需重新编译。 下图显示了一个在断点处停止执行的调试会话。 数据结构成员的值显示在“监视窗口”中  。
+你可以通过按 F5 键开始调试。  执行会在你设置的任何断点暂停（按 F9）  。 你也可以一次一行地逐步执行代码 (F10)、查看变量或寄存器的值，某些情况下甚至可在代码中进行更改并继续调试，而无需重新编译。  下图显示了一个在断点处停止执行的调试会话。 数据结构成员的值显示在“监视窗口”中  。
 
 ![调试会话](media/vs2017-debug-watch.png "Visual Studio 2017 调试会话")
 
@@ -125,7 +123,7 @@ Visual Studio 包含可以在源代码中检测潜在问题的静态代码分析
 
 你可以通过 Microsoft Store 将传统桌面应用程序和 UWP 应用部署到客户。 将在后台自动处理 CRT 的部署。 有关详细信息，请参阅[发布 Windows 应用和游戏](/windows/uwp/publish/)。
 
-此外，还可以将本机 C++ 桌面部署到另一台计算机。有关详细信息，请参阅[部署桌面应用程序](../windows/deploying-native-desktop-applications-visual-cpp.md)。
+你还可以将本机 C++ 桌面部署到其他计算机。 有关详细信息，请参阅[部署桌面应用程序](../windows/deploying-native-desktop-applications-visual-cpp.md)。
 
 有关部署 C++/CLI 程序的详细信息，请参阅[面向开发人员的部署指南](/dotnet/framework/deployment/deployment-guide-for-developers)。
 
