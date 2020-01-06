@@ -15,16 +15,16 @@ ms.locfileid: "74397481"
 ---
 # <a name="goto-masm"></a>GOTO (MASM)
 
-Transfers assembly to the line marked **:** _macrolabel_.
+将程序集传输**到标记为**"_macrolabel_" 的行。
 
 ## <a name="syntax"></a>语法
 
-> **GOTO** *macrolabel*
+> **转**到*macrolabel*
 
 ## <a name="remarks"></a>备注
 
-**GOTO** is permitted only inside [MACRO](macro.md), [FOR](for-masm.md), [FORC](forc.md), [REPEAT](repeat.md), and [WHILE](while-masm.md) blocks. The *macrolabel* target must be the only directive on the line and must be preceded by a leading colon.
+仅允许在[宏](macro.md)、[FOR](for-masm.md)、[强制](forc.md)、[重复](repeat.md)和[WHILE](while-masm.md)块中使用GOTO。 *Macrolabel*目标必须是行上唯一的指令，并且必须以前导冒号开头。
 
 ## <a name="see-also"></a>请参阅
 
-[Directives reference](directives-reference.md)
+[指令参考](directives-reference.md)

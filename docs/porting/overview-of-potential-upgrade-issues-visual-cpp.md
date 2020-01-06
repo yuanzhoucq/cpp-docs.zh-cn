@@ -2,12 +2,12 @@
 title: 潜在的升级问题概述 (Visual C++)
 ms.date: 05/03/2019
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: 10c2de547611cf7b1b47de2b1ec05dcf419c6225
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: 2b310760b1a6623a18a00e36e3bd5378d2ebb76e
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511556"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627242"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>潜在的升级问题概述 (Visual C++)
 
@@ -33,7 +33,7 @@ C++ 不具备稳定的应用程序二进制接口 (ABI)。 但是，Visual Studi
 
 如果对象文件具有包含 C++ 链接的外部符号，则该对象文件可能无法与其他主版本工具集生成的对象文件正确链接。 有许多可能的结果：链接可能会完全失败（例如，如果名称修饰已更改）。 链接可能会成功，但对象在运行时可能无法正常工作（例如，如果类型布局已更改）。 或在许多情况下，对象可能碰巧能够正常工作并且不会出现任何错误。 另请注意，尽管 C++ ABI 不稳定，但 COM 所需的 C ABI 和 C++ ABI 子集是稳定的。
 
-如果链接到导入库，保留 ABI 兼容性的 Visual Studio 可再发行库的更高版本可在运行时使用。 例如，如果使用 Visual Studio 2015 Update 3 工具集编译和链接应用，则可使用任何 Visual Studio 2017 或 Visual Studio 2019 可再发行库，因为 2015、2017 和 2019 库具有保留的二进制后向兼容性。 反之则不然：不能将可再发行库用于版本低于之前生成代码所使用的工具集版本的早期版本，即使其具有可兼容的 ABI 也是如此。
+如果链接到导入库，保留 ABI 兼容性的 Visual Studio 可再发行库的更高版本可在运行时使用。 例如，如果使用 Visual Studio 2015 Update 3 工具集编译和链接应用，则可使用任何 Visual Studio 2017 或 Visual Studio 2019 可再发行库，因为 2015、2017 和 2019 库具有保留的二进制后向兼容性。 反之亦然：如果工具集的早期版本不能使用可再发行组件，而不能使用用于生成代码的可再发行组件，即使它们具有兼容的 ABI。
 
 ### <a name="libraries"></a>库
 
@@ -68,7 +68,7 @@ CRT 向来不支持混合与匹配，但通常还是能使用混合与匹配（�
 <PlatformToolset Condition="'$(VisualStudioVersion)'=='15.0'">v141</PlatformToolset>
 ```
 
-### <a name="lnk2019-unresolved-external"></a>LNK2019：无法解析的外部对象
+### <a name="lnk2019-unresolved-external"></a>LNK2019：无法解析的外部符号
 
 对于无法解析的符号，可能需要修复项目设置。
 
@@ -88,20 +88,20 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 ### <a name="zcwchar_t-wchar_t-is-native-type"></a>/Zc:wchar_t（wchar_t 是本机类型）
 
-（在 Microsoft Visual C++ 6.0 及早期版本中，wchar_t 未作为内置类型实现，而是在 wchar.h 中声明作为 unsigned short 的 typedef。）  C++ 标准要求 **wchar_t** 为内置类型。 使用 typedef 版本可能导致可移植性问题。 如果你从 Visual Studio 的早期版本进行升级，并遇到编译器错误 C2664（理由是代码尝试将 wchar_t 隐式转换为 unsigned short），则建议更改代码来修正错误，而不是设置 `/Zc:wchar_t-`   。 有关详细信息，请参阅 [/Zc:wchar_t（wchar_t 是本机类型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。
+（在 Microsoft Visual C++ 6.0 及更早版本中， **wchar_t**未作为内置类型实现，但在 wchar 中声明为无符号 short 的 typedef。）C++标准要求**wchar_t**为内置类型。 使用 typedef 版本可能导致可移植性问题。 如果你从 Visual Studio 的早期版本进行升级，并遇到编译器错误 C2664（理由是代码尝试将 wchar_t 隐式转换为 unsigned short），则建议更改代码来修正错误，而不是设置`/Zc:wchar_t-`。 有关详细信息，请参阅 [/Zc:wchar_t（wchar_t 是本机类型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。
 
 ### <a name="upgrading-with-the-linker-options-nodefaultlib-entry-and-noentry"></a>使用链接器选项 /NODEFAULTLIB、/ENTRY 和 /NOENTRY 升级。
 
-通过 `/NODEFAULTLIB` 链接器选项（或“忽略所有默认库”链接器属性），可使链接器不在 CRT 等默认库中自动链接。 这意味着，每个库都必须作为输入单独列出。 “项目属性”对话框的“链接器”部分中的“附加依赖项”属性中，提供了此库列表    。
+通过 `/NODEFAULTLIB` 链接器选项（或“忽略所有默认库”链接器属性），可使链接器不在 CRT 等默认库中自动链接。 这意味着，每个库都必须作为输入单独列出。 “项目属性”对话框的“链接器”部分中的“附加依赖项”属性中，提供了此库列表。
 
-在升级过程中，使用此选项的项目会出现问题，因为某些默认库的内容已重构。 因为每个库都需要在“附加依赖项”属性或链接器命令行中列出，所以需要使用所有当前名称来更新库列表  。
+在升级过程中，使用此选项的项目会出现问题，因为某些默认库的内容已重构。 因为每个库都需要在“附加依赖项”属性或链接器命令行中列出，所以需要使用所有当前名称来更新库列表。
 
 下表显示自 Studio 2015 开始内容已更改的库。 若要升级，需要将第二列中的新库名称添加到第一列的库中。 其中有些库是导入库，但这应该没有什么影响。
 
 |||
 |-|-|
 |如果你使用的是：|需要使用以下库：|
-|LIBCMT.lib|libcmt.lib、libucrt.lib、libvcruntime.lib|
+|libcmt.lib|libcmt.lib、libucrt.lib、libvcruntime.lib|
 |libcmtd.lib|libcmtd.lib、libucrtd.lib、libvcruntimed.lib|
 |msvcrt.lib|msvcrt.lib、ucrt.lib、vcruntime.lib|
 |msvcrtd.lib|msvcrtd.lib、ucrtd.lib、vcruntimed.lib|
@@ -124,9 +124,9 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 如果错误为 C2371 且涉及 `stdint` 类型，这可能意味着该类型是在代码或第三方 lib 文件中的标头中定义的。 升级时，应消除 \<stdint.h> 类型的任何自定义定义，但应先将自定义定义与当前标准定义进行对比，确保不会引入新问题。
 
-可按 F12（转到定义）查看有所述类型的定义位置   。
+可按 F12（转到定义）查看有所述类型的定义位置。
 
-此处可使用 [/showIncludes](../build/reference/showincludes-list-include-files.md) 编译器选项。 在项目的“属性页”对话框中，打开“C/C++” > “高级”页，并将“显示包含文件”设置为“是”      。 然后重新生成项目，并在输出窗口中查看 `#include` 列表。 每个标头在包含它的标头下都是缩进的。
+此处可使用 [/showIncludes](../build/reference/showincludes-list-include-files.md) 编译器选项。 在项目的“属性页”对话框中，打开“C/C++” **“高级”页，并将“显示包含文件”设置为“是”**  > 。 然后重新生成项目，并在输出窗口中查看 `#include` 列表。 每个标头在包含它的标头下都是缩进的。
 
 ## <a name="errors-involving-crt-functions"></a>涉及 CRT 函数的错误
 
@@ -134,7 +134,7 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 如果错误涉及 CRT 函数，请搜索 [Visual C++ 更改历史记录 (2003 - 2015)](visual-cpp-change-history-2003-2015.md) 或 [Visual Studio 中 C++ 的符合性改进](../overview/cpp-conformance-improvements.md)，查阅这些文章中是否包含任何附加信息。 如果错误为 LNK2019，无法解析的外部对象，请确保未删除函数。 否则，若确定函数仍存在，且调用代码正确，请检查项目是否使用了 `/NODEFAULTLIB`。 在这种情况下，需更新库列表，以便项目使用新的通用 (UCRT) 库。 有关详细信息，请参阅以上有关库和依赖项的部分。
 
-如果错误涉及 `printf` 或 `scanf`，请确保未在不包含 stdio.h 的情况下私下定义这两种函数中的任意一种。 如果定义了，请删除私有定义或删除到 legacy\_stdio\_definitions.lib 的链接。 可以在“附加依赖项”属性中的“配置属性” > “链接器” > “输入”下的“属性页”对话框中对此库进行设置      。 若要使用 Windows SDK 8.1 或更早的版本进行链接，请添加 legacy\_stdio\_definitions.lib。
+如果错误涉及 `printf` 或 `scanf`，请确保未在不包含 stdio.h 的情况下私下定义这两种函数中的任意一种。 如果定义了，请删除私有定义或删除到 legacy\_stdio\_definitions.lib 的链接。 可以在“附加依赖项”属性中的“配置属性” **“链接器”** “输入”下的“属性页”对话框中对此库进行设置 >  > 。 若要使用 Windows SDK 8.1 或更早的版本进行链接，请添加 legacy\_stdio\_definitions.lib。
 
 如果错误涉及格式字符串参数，这可能是由于编译器在强制执行标准方面更严格。 有关详细信息，请参阅更改历史记录。 请密切注意此处的任何错误，因为它们可能表示存在安全风险。
 
@@ -150,7 +150,7 @@ C++ 标准发展的方式并不总是后向兼容。 在 C++11 中引入移动�
 
 ## <a name="warnings-to-use-secure-crt-functions"></a>使用安全 CRT 函数的警告
 
-多年来，已引入 C 运行时函数的多个安全版本。 尽管不安全的旧版本仍然可用，但建议更改代码以使用安全版本。 编译器将对使用不安全版本的行为发出警告。 可选择禁用或忽略这些警告。 要为解决方案中的所有项目禁用警告，请打开“视图” > “属性管理器”，选择要禁用警告的所有项目，然后右键单击所选项，并选择“属性”    。 在“配置属性” > “C/C++” > “高级”下的“属性页”中，选择“禁用特定警告”      。  单击下拉箭头，然后单击“编辑”。 在文本框中输入 4996。 （请勿包括“C”前缀。）有关详细信息，请参阅[移植以使用安全 CRT](porting-guide-spy-increment.md#porting_to_secure_crt)。
+多年来，已引入 C 运行时函数的多个安全版本。 尽管不安全的旧版本仍然可用，但建议更改代码以使用安全版本。 编译器将对使用不安全版本的行为发出警告。 可选择禁用或忽略这些警告。 要为解决方案中的所有项目禁用警告，请打开“视图” **“属性管理器”，选择要禁用警告的所有项目，然后右键单击所选项，并选择“属性”**  > 。 在“配置属性” **“C/C++”** “高级”下的“属性页”中，选择“禁用特定警告” >  > 。 单击下拉箭头，然后单击“编辑”。 在文本框中输入 4996。 （请勿包含 "C" 前缀。）有关详细信息，请参阅[移植以使用安全 CRT](porting-guide-spy-increment.md#porting_to_secure_crt)。
 
 ## <a name="errors-due-to-changes-in-windows-apis-or-obsolete-sdks"></a>对 Windows API 或已过时 SDK 进行的更改所导致的错误
 
@@ -170,7 +170,7 @@ ATL 和 MFC 是相对稳定的 API，但偶尔对其进行更改。 有关详细
 
 ### <a name="lnk-2005-_dllmain12-already-defined-in-msvcrtdlib"></a>已在 MSVCRTD.lib 中定义 LNK 2005 _DllMain@12
 
-MFC 应用程序中可能发生此错误。 它指示 CRT 库和 MFC 库之间的顺序问题。 必须先链接 MFC，使其提供 new 和 delete 运算符。 若要修复此错误，请使用 `/NODEFAULTLIB` 开关忽略以下默认库：MSVCRTD.lib 和 mfcs140d.lib。 然后将这些相同的 lib 添加为附加依赖项。
+MFC 应用程序中可能发生此错误。 它指示 CRT 库和 MFC 库之间的顺序问题。 必须先链接 MFC，使其提供 new 和 delete 运算符。 要修复此错误，请使用 `/NODEFAULTLIB` 开关忽略 MSVCRTD.lib 和 mfcs140d.lib 这两个默认库。 然后将这些相同的 lib 添加为附加依赖项。
 
 ## <a name="32-vs-64-bit"></a>32 位和 64 位
 
@@ -180,11 +180,11 @@ MFC 应用程序中可能发生此错误。 它指示 CRT 库和 MFC 库之间�
 
 ## <a name="unicode-vs-mbcsascii"></a>Unicode 和 MBCS/ASCII
 
-在标准化 Unicode 之前，许多程序使用多字节字符集 (MBCS) 来表示未包含在 ASCII 字符集中的字符。 在较早的 MFC 项目中，MBCS 是默认设置，在升级此类程序时，你将收到建议使用 Unicode 的警告。 如果认为因开发成本的原因而不值得转换至 Unicode，则可以选择禁用或忽略此警告。 要为解决方案中的所有项目禁用警告，请打开“视图” > “属性管理器”，选择要禁用警告的所有项目，然后右键单击所选项，并选择“属性”    。 在“属性页”对话框中，选择“配置属性” > “C/C++” > “高级”     。 在“禁用特定警告”属性中展开下拉箭头，然后选择“编辑”   。 在文本框中输入 4996。 （请勿包括“C”前缀。）选择“确定”保存该属性，然后选择“确定”保存所做更改   。
+在标准化 Unicode 之前，许多程序使用多字节字符集 (MBCS) 来表示未包含在 ASCII 字符集中的字符。 在较早的 MFC 项目中，MBCS 是默认设置，在升级此类程序时，你将收到建议使用 Unicode 的警告。 如果认为因开发成本的原因而不值得转换至 Unicode，则可以选择禁用或忽略此警告。 要为解决方案中的所有项目禁用警告，请打开“视图” **“属性管理器”，选择要禁用警告的所有项目，然后右键单击所选项，并选择“属性”**  > 。 在“属性页”对话框中，选择“配置属性” **“C/C++”** “高级” >  > 。 在“禁用特定警告”属性中展开下拉箭头，然后选择“编辑”。 在文本框中输入 4996。 （请勿包含 "C" 前缀。）选择 **"确定"** 保存属性，然后选择 **"确定"** 保存更改。
 
-有关详细信息，请参阅[从 MBCS 移植到 Unicode](porting-guide-spy-increment.md#porting_to_unicode)。 有关 MBCS 和 Unicode 的常规信息，请参阅 [Visual C++ 中的文本和字符串](../text/text-and-strings-in-visual-cpp.md)，以及[国际化](../c-runtime-library/internationalization.md)。
+有关详细信息，请参阅[从 MBCS 移植到 Unicode](porting-guide-spy-increment.md#porting_to_unicode)。 有关 MBCS 与 Unicode 的常规信息，请参阅 [Visual C++ 中的文本和字符串](../text/text-and-strings-in-visual-cpp.md)，以及[国际化](../c-runtime-library/internationalization.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[从 Visual C++ 早期版本升级项目](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[从 Visual 早期版本升级项目C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Visual Studio 中的 C++ 符合性改进](../overview/cpp-conformance-improvements.md)

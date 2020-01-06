@@ -1,5 +1,5 @@
 ---
-title: '&lt;摘要 > (C++文档注释)'
+title: '&lt;摘要 > （C++文档注释）'
 ms.date: 11/04/2016
 f1_keywords:
 - <summary>
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <summary> C++ XML tag
 - summary C++ XML tag
 ms.assetid: cdeeefbb-1339-45d6-9002-10042a9a2726
-ms.openlocfilehash: 68bb8b7c269b3406438e5cf21dde7179f7e67646
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0620273f24573539897809b7892d46ad49b7aa57
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318181"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988587"
 ---
 # <a name="ltsummarygt"></a>&lt;summary&gt;
 
@@ -27,7 +27,7 @@ ms.locfileid: "62318181"
 
 #### <a name="parameters"></a>参数
 
-*description*<br/>
+description<br/>
 对象的摘要。
 
 ## <a name="remarks"></a>备注
@@ -38,7 +38,7 @@ ms.locfileid: "62318181"
 
 ## <a name="example"></a>示例
 
-```
+```cpp
 // xml_summary_tag.cpp
 // compile with: /LD /clr /doc
 // post-build command: xdcmake xml_summary_tag.dll
@@ -57,6 +57,6 @@ public:
 };
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [XML 文档](xml-documentation-visual-cpp.md)

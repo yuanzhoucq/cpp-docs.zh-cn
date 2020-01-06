@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2020
 ms.assetid: 4dd017d0-5e83-471b-ac8a-538ac1ed6870
-ms.openlocfilehash: 7290a90dfd92d84c4632e7f9dd38d36eccd4ac27
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c6be2548e277af08f1069a70b26cd761db835bc
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386325"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988765"
 ---
 # <a name="linker-tools-error-lnk2020"></a>链接器工具错误 LNK2020
 
-无法解析的标记 token
+未解析的标记 "token"
 
-类似于未定义的外部错误，只不过该引用是通过元数据。 在元数据，必须定义所有函数和数据。
+类似于未定义的外部错误，只不过引用是通过元数据的。 在元数据中，必须定义所有函数和数据。
 
-若要解决：
+若要解决问题，请执行以下操作：
 
-- 定义缺少函数或数据，或
+- 定义缺少的函数或数据，或
 
-- 包括的对象文件或在其中缺少的函数或数据已定义的库。
+- 包含已在其中定义缺少的函数或数据的对象文件或库。
 
 ## <a name="example"></a>示例
 
 下面的示例生成 LNK2020。
 
-```
+```cpp
 // LNK2020.cpp
 // compile with: /clr /LD
 ref struct A {
@@ -46,11 +46,11 @@ ref struct B {
 
 ## <a name="example"></a>示例
 
-如果您创建的变量的一种托管的模板类型，但不是还实例化类型，也会出现 LNK2020。
+如果创建托管模板类型的变量，但不同时实例化该类型，则也会发生 LNK2020。
 
 下面的示例生成 LNK2020。
 
-```
+```cpp
 // LNK2020_b.cpp
 // compile with: /clr
 

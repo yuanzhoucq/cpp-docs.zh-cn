@@ -2,28 +2,28 @@
 title: 编译器警告（等级 3 和等级 4）C4244
 ms.date: 11/04/2016
 ms.assetid: f116bb09-c479-4b4e-a647-fe629a1383f6
-ms.openlocfilehash: af06dbf5bb4a1dd133c277d63c40da2a8a54770b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a12bee4591df8a7a952dc741c4b26c637bb5256c
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359925"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991076"
 ---
 # <a name="compiler-warning-levels-3-and-4-c4244"></a>编译器警告（等级 3 和等级 4）C4244
 
 从“type1”到“type2”的“conversion”转换，可能丢失数据
 
-整数类型转换为更小的整数类型。 如果这是警告等级 4 *type1*是`int`并*type2*小于`int`。 否则，将级别 3 (分配类型的值[__int64](../../cpp/int8-int16-int32-int64.md)为类型的变量`unsigned int`)。 可能发生了数据丢失。
+整数类型转换为更小的整数类型。 如果*type1* `int` 并且*type2*小于 `int`，则这是一个级别4警告。 否则为第3级（向类型的变量分配[__int64](../../cpp/int8-int16-int32-int64.md)类型的值 `unsigned int`）。 可能发生了数据丢失。
 
 如果收到 C4244，则应将程序更改为使用兼容类型，或向代码添加一些逻辑，以确保可能值的范围将始终与你使用的类型兼容。
 
-C4244 也会激发在级别 2;请参阅[编译器警告 （等级 2） C4244](../../error-messages/compiler-warnings/compiler-warning-level-2-c4244.md)有关详细信息。
+C4244 也可以在第2级激发;有关详细信息，请参阅[编译器警告（等级2） C4244](../../error-messages/compiler-warnings/compiler-warning-level-2-c4244.md) 。
 
 该转换可能会因隐式转换而出现问题。
 
 下面的示例生成 C4244：
 
-```
+```cpp
 // C4244_level4.cpp
 // compile with: /W4
 int aa;
@@ -41,7 +41,7 @@ int main() {
 
 有关详细信息，请参阅[常用算术转换](../../c-language/usual-arithmetic-conversions.md)。
 
-```
+```cpp
 // C4244_level3.cpp
 // compile with: /W3
 int main() {
@@ -54,7 +54,7 @@ int main() {
 
 下面的示例在为 64 位目标进行编译时生成 C4244：
 
-```
+```cpp
 // C4244_level3_b.cpp
 // compile with: /W3
 int main() {

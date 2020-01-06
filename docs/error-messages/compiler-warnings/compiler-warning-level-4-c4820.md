@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4820
 ms.assetid: 17aa29f4-c287-49b8-bc43-8ed82ffed5ea
-ms.openlocfilehash: adf8b365bc39acc1ce729e89260f8385ecb6c048
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ac97a943e6a8178e930d93a097071b0e3da09773
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280394"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74989065"
 ---
 # <a name="compiler-warning-level-4-c4820"></a>编译器警告（等级 4）C4820
 
 “bytes”字节填充添加在构造“member_name”之后
 
-类型和元素的顺序造成该编译器将填充添加到结构末尾。 请参阅[对齐](../../cpp/align-cpp.md)的结构中的填充量的详细信息。
+元素的类型和顺序导致编译器向结构的末尾添加填充。 有关在结构中填充的详细信息，请参阅[align](../../cpp/align-cpp.md) 。
 
 默认情况下，此警告处于关闭状态。 请参阅 [默认情况下处于关闭状态的编译器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 了解详细信息。
 
-下面的示例生成 C4820:
+下面的示例生成 C4820：
 
-```
+```cpp
 // C4820.cpp
 // compile with: /W4 /c
 #pragma warning(default : 4820)

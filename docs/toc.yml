@@ -2659,7 +2659,7 @@
       href: dotnet/friend-assemblies-cpp.md
     - name: 托管类型
       href: dotnet/managed-types-cpp-cli.md
-    - name: 映像
+    - name: 反射
       href: dotnet/reflection-cpp-cli.md
     - name: 强名称程序集（程序集签名）
       href: dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md
@@ -6370,6 +6370,8 @@
                   expanded: false
                   items:
                     - name: 文件和流
+                      href: c-runtime-library/files-and-streams.md
+                    - name: 文本和二进制流
                       href: c-runtime-library/text-and-binary-streams.md
                     - name: 字节和宽流
                       href: c-runtime-library/byte-and-wide-streams.md

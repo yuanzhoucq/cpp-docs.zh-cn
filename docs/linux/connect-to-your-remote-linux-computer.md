@@ -3,12 +3,12 @@ title: 在 Visual Studio 中连接到你的目标 Linux 系统
 description: 如何从 Visual Studio C++ 项目连接到远程 Linux 计算机或适用于 Linux 的 Windows 子系统。
 ms.date: 11/09/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: 6f7116ab5dc6c77f88d0787beac32d1c1e0a4716
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 4069979100c3b71a32e90ad72fb334d21a226e64
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966573"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755273"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>在 Visual Studio 中连接到你的目标 Linux 系统
 
@@ -82,7 +82,7 @@ Linux 支持在 Visual Studio 2017 及更高版本中提供。
 
 ## <a name="tcp-port-forwarding"></a>TCP 端口转发
 
-Visual Studio 的 Linux 支持依赖于 TCP 端口转发。 如果在远程系统上禁用了 TCP 端口转发，则 Rsync  和 gdbserver  将会受到影响。 
+Visual Studio 的 Linux 支持依赖于 TCP 端口转发。 如果在远程系统上禁用了 TCP 端口转发，则 Rsync  和 gdbserver  将会受到影响。 如果你受此依赖关系的影响，则可以从开发者社区取消对此[建议票证](https://developercommunity.visualstudio.com/idea/840265/dont-rely-on-ssh-tcp-port-forwarding-for-c-remote.html)投赞成票。
 
 rsync 由基于 MSBuild 的 Linux 项目和 CMake 项目用来[将标题从远程系统复制到 Windows，以供 IntelliSense 使用](configure-a-linux-project.md#remote_intellisense)。 如果无法启用 TCP 端口转发，请禁用远程标头的自动下载。 要禁用它，请使用“工具”>“选项”>“跨平台”>“连接管理器”>“远程标头 IntelliSense 管理器”  。 如果远程系统没有启用 TCP 端口转发，则当开始下载 IntelliSense 的远程标头时会出现此错误：
 
