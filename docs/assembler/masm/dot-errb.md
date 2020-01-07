@@ -1,17 +1,17 @@
 ---
 title: .ERRB
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .ERRB
 helpviewer_keywords:
 - .ERRB directive
 ms.assetid: d7834c95-c5b8-45d9-9224-692c2d7bff17
-ms.openlocfilehash: 036fdcda455b2617083bd38fc8b820a8d72eeef3
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: f7b701bd648f6fc811541c499f7d70d8faa77b7f
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398398"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313738"
 ---
 # <a name="errb"></a>.ERRB
 
@@ -23,4 +23,5 @@ ms.locfileid: "74398398"
 
 ## <a name="see-also"></a>另请参阅
 
-[指令参考](../../assembler/masm/directives-reference.md)
+[指令引用](directives-reference.md)\
+[MASM BNF 语法](masm-bnf-grammar.md)
