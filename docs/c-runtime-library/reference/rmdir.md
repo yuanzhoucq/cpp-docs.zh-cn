@@ -1,6 +1,6 @@
 ---
 title: rmdir
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - rmdir
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - rmdir function
 ms.assetid: 03a0aff4-f66c-42a9-bee9-84c46f994952
-ms.openlocfilehash: 92f38e090870115e465de59456339d45be963602
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: eb48e9eb4f84d0bea69b3719eea67e51a52b7931
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949167"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300737"
 ---
 # <a name="rmdir"></a>rmdir
 
-此 POSIX 函数已弃用。 请改用符合 ISO C++ 的 [_rmdir](rmdir-wrmdir.md)。
+Microsoft 实现的 POSIX 函数名称 `rmdir` 是[_rmdir](rmdir-wrmdir.md)函数的不推荐使用的别名。 默认情况下，它会生成[编译器警告（等级3） C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)。 名称已弃用，因为它不遵循特定于实现的名称的标准 C 规则。 但是，该函数仍受支持。
+
+建议改用[_rmdir](rmdir-wrmdir.md) 。 或者，你可以继续使用此函数名称，并禁用警告。 有关详细信息，请参阅[关闭警告](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning)和[POSIX 函数名称](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)。
