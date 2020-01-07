@@ -1,6 +1,6 @@
 ---
 title: cprintf
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - cprintf
 api_location:
@@ -23,16 +23,18 @@ f1_keywords:
 helpviewer_keywords:
 - cprintf function
 ms.assetid: 573e6634-d7e5-4856-8c01-627dcfbd5fc8
-ms.openlocfilehash: 01b70f3630652a36aa5115a47ab61f23673dbb4e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1f61043b1cf59ad31107bcfc333338a7493767cf
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942627"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299892"
 ---
 # <a name="cprintf"></a>cprintf
 
-此 POSIX 函数已弃用。 请改用符合 ISO C++ 的 [_cprintf](cprintf-cprintf-l-cwprintf-cwprintf-l.md) 或安全性增强的 [_cprintf_s](cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md)。
+特定于 Microsoft 的函数名称 `cprintf` 是[_cprintf](cprintf-cprintf-l-cwprintf-cwprintf-l.md)函数的不推荐使用的别名。 默认情况下，它会生成[编译器警告（等级3） C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)。 名称已弃用，因为它不遵循特定于实现的名称的标准 C 规则。 但是，该函数仍受支持。
+
+建议改用[_cprintf](cprintf-cprintf-l-cwprintf-cwprintf-l.md)或安全增强[_cprintf_s](cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md)函数。 或者，你可以继续使用此函数名称，并禁用警告。 有关详细信息，请参阅[关闭警告](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning)和[POSIX 函数名称](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)。
 
 > [!IMPORTANT]
 > 此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
