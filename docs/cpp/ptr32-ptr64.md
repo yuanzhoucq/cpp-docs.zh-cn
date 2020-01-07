@@ -16,18 +16,18 @@ helpviewer_keywords:
 - _ptr64 keyword [C++]
 - __ptr32 keyword [C++]
 ms.assetid: afb563d8-7458-4fe7-9c30-bd4b5385a59f
-ms.openlocfilehash: 0e979ed51f9c34700cef75113018c23e69a304f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 957e0deba31552777ef5e738afef13d74a640a18
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244458"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301322"
 ---
-# <a name="ptr32-ptr64"></a>__ptr32、__ptr64
+# <a name="__ptr32-__ptr64"></a>__ptr32、__ptr64
 
 **Microsoft 专用**
 
-**__ptr32**表示本机指针在 32 位系统上，而 **__ptr64**表示 64 位系统上的本机指针。
+**__ptr32**表示32位系统上的本机指针，而 **__ptr64**表示64位系统上的本机指针。
 
 以下示例演示如何声明所有这些指针类型：
 
@@ -36,16 +36,16 @@ int * __ptr32 p32;
 int * __ptr64 p64;
 ```
 
-在 32 位系统上，使用声明的指针 **__ptr64**截断为 32 位指针。 在 64 位系统上，使用声明的指针 **__ptr32**强制转换为 64 位指针。
+在32位系统上，使用 **__ptr64**声明的指针将被截断为32位指针。 在64位系统上，使用 **__ptr32**声明的指针被强制转换为64位指针。
 
 > [!NOTE]
-> 不能使用 **__ptr32**或 **__ptr64**编译时 **/clr: pure**。 否则，将生成编译器错误 C2472。 **/Clr: pure**并 **/clr: safe**编译器选项在 Visual Studio 2015 中弃用，在 Visual Studio 2017 中不受支持。
+> 使用 **/clr： pure**进行编译时，不能使用 **__ptr32**或 **__ptr64** 。 否则，将生成编译器错误 C2472。 **/Clr： pure**和 **/clr： safe**编译器选项在 visual studio 2015 中已弃用，在 visual studio 2017 中不受支持。
 
-与以前版本的兼容性 **_ptr32**并 **_ptr64**是的同义词 **__ptr32**并 **__ptr64**除非编译器选项[/Za\(禁用语言扩展)](../build/reference/za-ze-disable-language-extensions.md)指定。
+为了与早期版本兼容， **_ptr32**和 **_ptr64**是 **__ptr32**和 **__ptr64**的同义词，除非指定编译器选项[/za \(禁用语言扩展）](../build/reference/za-ze-disable-language-extensions.md) 。
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何声明和分配与指针 **__ptr32**并 **__ptr64**关键字。
+下面的示例演示如何声明和分配带有 **__ptr32**和 **__ptr64**关键字的指针。
 
 ```cpp
 #include <cstdlib>
@@ -75,6 +75,6 @@ int main()
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[基本类型](../cpp/fundamental-types-cpp.md)
+[内置类型](../cpp/fundamental-types-cpp.md)
