@@ -1,17 +1,17 @@
 ---
 title: .LISTIF
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .LISTIF
 helpviewer_keywords:
 - .LISTIF directive
 ms.assetid: 1189ff45-1fa1-4035-a74f-70c2c62b06fd
-ms.openlocfilehash: 0bca36e087f70d6e777dad6c3f9cdbed3170da01
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: d9fe1100a3513fb356e721cc677ad07f0cd7151c
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398161"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317664"
 ---
 # <a name="listif"></a>.LISTIF
 
@@ -23,8 +23,9 @@ ms.locfileid: "74398161"
 
 ## <a name="remarks"></a>备注
 
-与相同[.LFCOND](../../assembler/masm/dot-lfcond.md)。
+与相同[.LFCOND](dot-lfcond.md)。
 
 ## <a name="see-also"></a>另请参阅
 
-[指令参考](directives-reference.md)
+[指令引用](directives-reference.md)\
+[MASM BNF 语法](masm-bnf-grammar.md)

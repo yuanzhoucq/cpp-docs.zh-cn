@@ -6,31 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - C2054
 ms.assetid: 37f7c612-0d7d-4728-9e67-ac4160555f48
-ms.openlocfilehash: 7366995f8930b4733ccff73aef38ebcf65a0c120
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7d90d684c1d95f540f6357bf61ee7c6f889ad3f
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408766"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302050"
 ---
 # <a name="compiler-error-c2054"></a>编译器错误 C2054
 
-预期 ' (' 遵循 identifier
+应输入 "（" 跟随 "identifier"
 
-需要使用尾随括号的上下文中使用函数标识符。
+函数标识符用于需要尾随括号的上下文中。
 
-可以通过省略等号 （=） 在复杂的初始化导致此错误。
+此错误的原因可能是省略了复杂初始化上的等号（=）。
 
-下面的示例生成 C2054:
+下面的示例生成 C2054：
 
-```
+```c
 // C2054.c
 int array1[] { 1, 2, 3 };   // C2054, missing =
 ```
 
 可能的解决方法：
 
-```
+```c
 // C2054b.c
 int main() {
    int array2[] = { 1, 2, 3 };

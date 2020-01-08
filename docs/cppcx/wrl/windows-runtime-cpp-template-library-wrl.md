@@ -3,12 +3,12 @@ title: Windows 运行时 C++ 模板库 (WRL)
 ms.date: 11/04/2016
 ms.topic: overview
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-ms.openlocfilehash: 7a7b37a32ebaa0bb6ad71c8f710300256589388d
-ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
+ms.openlocfilehash: 41b8b45f89e94b8de2ddcb9c87bfd72122db8e1a
+ms.sourcegitcommit: 27d9db019f6d84c94de9e6aff0170d918cee6738
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74541200"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75676933"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Windows 运行时 C++ 模板库 (WRL)
 
@@ -147,5 +147,5 @@ Windows 运行时C++模板库提供了表示几个基本概念的类型。 以�
 |-|-|
 |[按类别列出的密钥 Api](key-wrl-apis-by-category.md)|突出显示主 Windows 运行时C++模板库类型、函数和宏。|
 |[引用](wrl-reference.md)|包含 Windows 运行时C++模板库的参考信息。|
-|[快速参考C++/cx）](../../cppcx/quick-reference-c-cx.md)|简要介绍支持C++Windows 运行时的/cx 功能。|
+|[快速参考 (C++-CX)](../../cppcx/quick-reference-c-cx.md)|简要介绍支持C++Windows 运行时的/cx 功能。|
 |[在视觉对象中使用 Windows 运行时组件C++](/windows/uwp/winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp)|演示如何使用C++/cx 创建基本 Windows 运行时组件。|

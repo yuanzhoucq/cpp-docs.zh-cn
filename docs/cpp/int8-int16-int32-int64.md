@@ -22,18 +22,18 @@ helpviewer_keywords:
 - __int8 keyword [C++]
 - __int64 keyword [C++]
 ms.assetid: 8e384602-2578-4980-8cc8-da63842356b2
-ms.openlocfilehash: b765eabcac3f9643c0cae78fefb6ce8231669ffc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4e793f23581f7dc62a39fcd8c5c504fb5a2ccbc9
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183449"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301465"
 ---
-# <a name="int8-int16-int32-int64"></a>__int8、__int16、__int32、__int64
+# <a name="__int8-__int16-__int32-__int64"></a>__int8、__int16、__int32、__int64
 
 **Microsoft 专用**
 
-Microsoft C/C++ 功能支持固定大小整数类型。 可以通过使用声明 8 位、 16 位、 32 位或 64 位整数变量 **__int**<em>n</em>类型说明符，其中*n*是 8、 16、 32 或 64。
+Microsoft C/C++ 功能支持固定大小整数类型。 您可以使用 **__int**<em>n</em>类型说明符声明8、16、32或64位整数变量，其中*n*为8、16、32或64。
 
 以下示例为这些类型的固定大小整数声明了一个变量：
 
@@ -44,13 +44,13 @@ __int32 nLarge;     // Declares 32-bit integer
 __int64 nHuge;      // Declares 64-bit integer
 ```
 
-类型 **__int8**， **__int16**，并 **__int32**是同义词，具有相同的 ANSI 类型的大小，并可用于编写的行为相同的可移植代码跨多个平台。 **__Int8**数据类型是同义词，具有类型**char**， **__int16**是类型的同义词**短**，和 **__int32**是类型的同义词**int**。**__Int64**类型是同义词，具有类型**超长**。
+**__Int8**、 **__int16**和 **__int32**的类型是大小相同的 ANSI 类型的同义词，用于编写在多个平台上表现完全相同的可移植代码。 **__Int8**的数据类型与类型**char**同义， **__int16**是类型为**short**的同义词， **__int32**与**int**类型是同义词。 **__Int64**类型是**long**类型的同义词。
 
-与以前版本的兼容性 **_int8**， **_int16**， **_int32**，以及 **_int64**是同义词的 **__int8**， **__int16**， **__int32**，并且 **__int64**除非编译器选项[/Za\(禁用语言扩展）](../build/reference/za-ze-disable-language-extensions.md)指定。
+为了与早期版本兼容， **_int8**、 **_int16**、 **_int32**和 **_int64**是 **__int8**、 **__int16**、 **__int32**和 **__int64**的同义词，除非指定编译器选项[/za \(禁用语言扩展）](../build/reference/za-ze-disable-language-extensions.md) 。
 
 ## <a name="example"></a>示例
 
-下面的示例说明 __int*xx*参数将提升为**int**:
+下面的示例说明 __int*xx*参数将提升为**int**：
 
 ```cpp
 // sized_int_types.cpp
@@ -75,8 +75,8 @@ func
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [关键字](../cpp/keywords-cpp.md)<br/>
-[基本类型](../cpp/fundamental-types-cpp.md)<br/>
+[内置类型](../cpp/fundamental-types-cpp.md)<br/>
 [数据类型范围](../cpp/data-type-ranges.md)<br/>

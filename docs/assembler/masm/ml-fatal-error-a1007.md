@@ -1,18 +1,18 @@
 ---
 title: ML 错误 A1007
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 ms.custom: error-reference
 f1_keywords:
 - A1007
 helpviewer_keywords:
 - A1007
 ms.assetid: bcf9c826-beb3-4e93-91fe-1ffd34995fbf
-ms.openlocfilehash: 01633b4fa084b7d5e14af5a5c6e51e3dca684d2a
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: c9527769e0d9397de90f49cbce98b2cca42bed50
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74856912"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317118"
 ---
 # <a name="ml-fatal-error-a1007"></a>ML 错误 A1007
 
@@ -22,7 +22,7 @@ ms.locfileid: "74856912"
 
 下面其中一个内容嵌套太深：
 
-- 高级指令，如[。如果](../../assembler/masm/dot-if.md)为，则为[。重复](../../assembler/masm/dot-repeat.md)或[。WHILE](../../assembler/masm/dot-while.md)。
+- 高级指令，如[。如果](dot-if.md)为，则为[。重复](dot-repeat.md)或[。WHILE](dot-while.md)。
 
 - 结构定义。
 
@@ -30,7 +30,7 @@ ms.locfileid: "74856912"
 
 - 过程定义。
 
-- [PUSHCONTEXT](../../assembler/masm/pushcontext.md)指令（限制为10）。
+- [PUSHCONTEXT](pushcontext.md)指令（限制为10）。
 
 - 分段定义。
 
@@ -40,4 +40,4 @@ ms.locfileid: "74856912"
 
 ## <a name="see-also"></a>另请参阅
 
-[ML 错误消息](../../assembler/masm/ml-error-messages.md)<br/>
+[ML 错误消息](ml-error-messages.md)

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2088
 ms.assetid: b93f7094-185b-423d-8bb9-507cd757dbf5
-ms.openlocfilehash: 6d53f2896fc3b964a4d2652b3bfd0dcebb4a7226
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f798774a7735a6aceb0bf75b3c6da9ccb1e4a72
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175168"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301972"
 ---
 # <a name="compiler-error-c2088"></a>编译器错误 C2088
 
-operator： 非法的 class-key
+"operator"： "class-key" 非法
 
-没有为结构或联合定义运算符。 此错误仅是有效的 C 代码。
+没有为结构或联合定义运算符。 此错误仅对 C 代码有效。
 
 下面的示例生成 C2088 三次：
 
-```
+```c
 // C2088.c
 struct S {
    int m_i;

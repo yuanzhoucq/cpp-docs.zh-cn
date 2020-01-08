@@ -1,17 +1,17 @@
 ---
 title: SEGMENT
-ms.date: 12/06/2019
+ms.date: 12/16/2019
 f1_keywords:
 - SEGMENT
 helpviewer_keywords:
 - SEGMENT directive
 ms.assetid: e6f68367-6714-4f06-a79c-edfa88014430
-ms.openlocfilehash: 933e4e42b4b0f9cc979a3e67805d017f723472ef
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 569604bfd6ed11039ce5492223b8d5f986ceea7a
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988016"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318457"
 ---
 # <a name="segment"></a>SEGMENT
 
@@ -25,7 +25,7 @@ ms.locfileid: "74988016"
 
 #### <a name="parameters"></a>参数
 
-*align*<br/>
+*对齐*\
 可以从中选择段的起始地址的内存地址范围。 对齐类型可以是以下任一项：
 
 |对齐类型|起始地址|
@@ -64,4 +64,5 @@ _string_\
 
 ## <a name="see-also"></a>另请参阅
 
-[指令参考](directives-reference.md)
+[指令引用](directives-reference.md)\
+[MASM BNF 语法](masm-bnf-grammar.md)

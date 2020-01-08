@@ -1,17 +1,17 @@
 ---
 title: '@stack'
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - '@stack'
 helpviewer_keywords:
 - '@stack symbol'
 ms.assetid: 4f656d9f-c3d4-4e19-9d97-bdee01b41861
-ms.openlocfilehash: 4ed40ac17d4bb073808b8dbb93db79d18df66399
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 517ab7202d62196ccec4bf62a2e97a8336c9b077
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398926"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75315428"
 ---
 # <a name="stack"></a>\@堆栈
 
@@ -19,8 +19,9 @@ ms.locfileid: "74398926"
 
 ## <a name="syntax"></a>语法
 
-> **\@堆栈**
+> **\@stack**
 
 ## <a name="see-also"></a>另请参阅
 
-[符号引用](symbols-reference.md)
+[符号引用](symbols-reference.md)\
+[MASM BNF 语法](masm-bnf-grammar.md)

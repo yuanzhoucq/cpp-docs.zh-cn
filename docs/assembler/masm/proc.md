@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - PROC directive
 ms.assetid: ee5bb6b6-fa15-4d73-b0cf-e650178539a9
-ms.openlocfilehash: e68a7fc9814ba1ca07095e036e88fb5917220086
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 85d9a1e82eebcd83cb0f12f5ca751ec9415af18d
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74987932"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318665"
 ---
 # <a name="proc"></a>PROC
 
-标记名为*label*的过程块的开头和结尾。 可以通过**调用**指令或[调用](../../assembler/masm/invoke.md)指令调用块中的语句。
+标记名为*label*的过程块的开头和结尾。 可以通过**调用**指令或[调用](invoke.md)指令调用块中的语句。
 
 ## <a name="syntax"></a>语法
 
-> *标签* **PROC** ⟦*远处*⟧⟦*language-type*⟧⟦*visibility*⟧⟦ __\<__ *prologuearg* __>__ ⟧⟦**使用** *reglist*⟧⟦ __，__ *参数*⟦ __：__ *tag*⟧ .。。⟧\
+> *标签* **PROC** ⟦*距离*⟧⟦*language-type*⟧⟦ **PUBLIC** | **PRIVATE** | **EXPORT** ⟧⟦ __\<__ *prologuearg* __>__ ⟧⟦**使用** *reglist*⟧⟦ __，__ *参数*⟦ __：__ *tag*⟧ .。。⟧\
 > ⟦**FRAME** ⟦ __：__ *ehandler-address*⟧⟧ \
 > *语句*\
 > *标签* **ENDP**
@@ -30,9 +30,9 @@ ms.locfileid: "74987932"
 
 ⟦**FRAME** ⟦ __：__ *ehandler-address*⟧⟧仅对 ml64.exe 有效，并使 MASM 在 pdata 中生成函数表项，xdata 中的展开信息用于函数的结构化异常处理展开行为。
 
-当使用**FRAME**属性时，它必须后跟[。ENDPROLOG](../../assembler/masm/dot-endprolog.md)指令。
+当使用**FRAME**属性时，它必须后跟[。ENDPROLOG](dot-endprolog.md)指令。
 
-有关使用 ml64.exe 的详细信息，请参阅[MASM （ml64.exe）](../../assembler/masm/masm-for-x64-ml64-exe.md) 。
+有关使用 ml64.exe 的详细信息，请参阅[MASM （ml64.exe）](masm-for-x64-ml64-exe.md) 。
 
 ## <a name="example"></a>示例
 
@@ -81,4 +81,5 @@ Dumping Unwind Information for file ex2.exe
 
 ## <a name="see-also"></a>另请参阅
 
-[指令参考](../../assembler/masm/directives-reference.md)
+[指令引用](directives-reference.md)\
+[MASM BNF 语法](masm-bnf-grammar.md)

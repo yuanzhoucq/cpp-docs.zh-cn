@@ -8,12 +8,12 @@ helpviewer_keywords:
 - IF2 directive
 - IF2 directive
 ms.assetid: a0f75564-b51b-4e39-ad3b-f7421e7ecad6
-ms.openlocfilehash: f1b5126d9294c229d773acd29af463164bb46536
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 60f8b0dcedb61ac06de929aff300845e342d7cfc
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397445"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317313"
 ---
 # <a name="if1-and-if2"></a>IF1 和 IF2
 
@@ -29,7 +29,7 @@ ms.locfileid: "74397445"
 
 ## <a name="remarks"></a>备注
 
-[若](../../assembler/masm/if-masm.md)要获取完整的语法，请参阅。
+[若](if-masm.md)要获取完整的语法，请参阅。
 
 不同于版本5.1，MASM 6.1 和更高版本在第一次传递时执行其大部分工作，然后根据需要执行任意数量的后续处理。 与此相反，MASM 5.1 始终在两个源阶段内装配。 因此，您可能需要在 MASM 6.1 和更高版本下修改或删除某些依赖于依赖关系的构造。
 
@@ -45,4 +45,5 @@ MASM 6.1 及更高版本以不同方式处理第一遍构造。 它处理 **。E
 
 ## <a name="see-also"></a>另请参阅
 
-[指令参考](directives-reference.md)
+[指令引用](directives-reference.md)\
+[MASM BNF 语法](masm-bnf-grammar.md)

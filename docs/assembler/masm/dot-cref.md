@@ -1,17 +1,17 @@
 ---
 title: .CREF
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .CREF
 helpviewer_keywords:
 - .CREF directive
 ms.assetid: 5bfb4f95-0a3f-4039-af29-f745039c92c1
-ms.openlocfilehash: ea6c7ac34735752bfa9e8ac75849dc153e25ccef
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 41ec13ad65a1674ecfc2e7de033b28e1c20e1142
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398538"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75314102"
 ---
 # <a name="cref"></a>.CREF
 
@@ -23,4 +23,5 @@ ms.locfileid: "74398538"
 
 ## <a name="see-also"></a>另请参阅
 
-[指令参考](../../assembler/masm/directives-reference.md)
+[指令引用](directives-reference.md)\
+[MASM BNF 语法](masm-bnf-grammar.md)

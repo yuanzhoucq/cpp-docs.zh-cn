@@ -1,19 +1,19 @@
 ---
 title: INCLUDELIB (MASM)
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - INCLUDELIB
 helpviewer_keywords:
 - INCLUDELIB directive
 ms.assetid: 5455d004-8202-4b57-93f3-9aa66f133a2d
-ms.openlocfilehash: ef8a6e91ca8c5ca77b64b4668bf08087299701e0
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: eff5b546aa10341434f2e34f03b9096d4c7f468a
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397330"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317196"
 ---
-# <a name="includelib-masm"></a>INCLUDELIB (MASM)
+# <a name="includelib"></a>INCLUDELIB
 
 通知链接器，当前模块应与*libraryname*链接。
 
@@ -27,4 +27,5 @@ ms.locfileid: "74397330"
 
 ## <a name="see-also"></a>另请参阅
 
-[指令参考](directives-reference.md)
+[指令引用](directives-reference.md)\
+[MASM BNF 语法](masm-bnf-grammar.md)

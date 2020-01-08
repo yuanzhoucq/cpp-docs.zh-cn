@@ -8,12 +8,12 @@ helpviewer_keywords:
 - statements, labeled
 - goto keyword [C]
 ms.assetid: 3d0473dc-4b18-4fcc-9616-31a38499d7d7
-ms.openlocfilehash: b23e7e6310ba4ed968e2eac8e6d07d81ee4e79ba
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: b5e0d602332c87510b1fe5f59db3e497b88f0acb
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151944"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299112"
 ---
 # <a name="goto-and-labeled-statements-c"></a>goto 和标记语句 (C)
 
@@ -21,15 +21,15 @@ ms.locfileid: "56151944"
 
 ## <a name="syntax"></a>语法
 
-*statement*：<br/>
+statement：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*labeled-statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*jump-statement*
 
 *jump-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**goto**  *identifier*  **;**
+&nbsp;&nbsp;&nbsp;&nbsp;**goto***标识符* **;**
 
 *labeled-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier*  **:**  *statement*
+&nbsp;&nbsp;&nbsp;&nbsp;*标识符* **：** *语句*
 
 语句标签仅对 `goto` 语句有意义；在任何其他上下文中，在不考虑标签的情况下执行已标记的语句。
 
@@ -39,7 +39,7 @@ jump-statement 必须位于同一函数中，并且只能出现在同一函数�
 
 此示例演示了 `goto` 语句：
 
-```
+```c
 // goto.c
 #include <stdio.h>
 
@@ -67,6 +67,6 @@ int main()
 
 在此示例中，当 `goto` 等于 5 时，`stop` 语句将控制权转交给标记为 `i` 的点。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [语句](../c-language/statements-c.md)

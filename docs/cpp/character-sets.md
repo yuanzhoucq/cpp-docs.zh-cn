@@ -1,30 +1,43 @@
 ---
-title: 字符集
-ms.date: 05/06/2019
+title: 标记和字符集
+ms.date: 12/10/2019
 helpviewer_keywords:
+- Tokens (C++)
 - Character sets
 - basic source character set (C++)
 - universal character names
 - basic execution character set (C++)
 ms.assetid: 379a2af6-6422-425f-8352-ef0bca6c0d74
-ms.openlocfilehash: 92d60e3383abd7e3b3fa2d689958cf02a9b91e75
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 1f6dbe2faa6348d61ec00b411cc35e8ef5ceb57a
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222522"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301608"
 ---
-# <a name="character-sets"></a>字符集
+# <a name="tokens-and-character-sets"></a>标记和字符集
 
-C++ 程序的文本存储在使用特定字符编码的源文件中。 C++ 标准指定源文件的基本源字符集和已编译文件的基本执行字符集。 MicrosoftC++编译器 (MSVC) 允许一组额外的区域设置特定字符在源文件中使用和已编译的文件。
+程序的文本由标记和空格组成。 C++ 标记是对编译器有用的 C++ 程序的最小元素。 C++分析器识别以下类型的标记：
 
-## <a name="character-sets"></a>字符集
+- [关键字](../cpp/keywords-cpp.md)
+- [标识符](../cpp/identifiers-cpp.md)
+- [数值、布尔和指针文本](../cpp/numeric-boolean-and-pointer-literals-cpp.md)
+- [字符串和字符文本](../cpp/string-and-character-literals-cpp.md)
+- [用户定义的文本](../cpp/user-defined-literals-cpp.md)
+- [运算符](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+- [标点符号](../cpp/punctuators-cpp.md)
 
-C++ 标准指定可用于源文件的 *基本源字符集* 。 若要表示这组字符之外的字符，可以通过使用 *通用字符名称*指定其他字符。 编译后， *基本执行字符集* 和 *基本执行宽字符集* 表示可以出现在程序中的字符和字符串。 MSVC 实现允许在源代码和编译的代码中的其他字符。
+标记*通常由空格*分隔，可以是一个或多个：
 
-### <a name="basic-source-character-set"></a>基本源字符集
+- 空白
+- 水平或垂直制表符
+- 新行
+- 换源
+- Comments
 
-*基本源字符集* 由可用于源文件的 96 个字符组成。 这组字符包括空白字符、水平选项卡、垂直选项卡、换页符和换行控制字符以及这一组图形字符：
+## <a name="basic-source-character-set"></a>基本源字符集
+
+C++标准指定可用于源文件的*基本源字符集*。 若要表示这组字符之外的字符，可以通过使用 *通用字符名称*指定其他字符。 MSVC 实现允许其他字符。 *基本源字符集*由可在源文件中使用的96个字符组成。 这组字符包括空白字符、水平选项卡、垂直选项卡、换页符和换行控制字符以及这一组图形字符：
 
 `a b c d e f g h i j k l m n o p q r s t u v w x y z`
 
@@ -36,7 +49,7 @@ C++ 标准指定可用于源文件的 *基本源字符集* 。 若要表示这�
 
 **Microsoft 专用**
 
-MSVC 包括`$`字符作为基本源字符集的成员。 MSVC 还允许一组额外的字符要在源代码文件中使用基于文件编码。 默认情况下，Visual Studio 通过使用默认代码页存储源文件。 当使用特定于区域设置代码页或 Unicode 代码页保存源文件时，MSVC，可在源代码中使用该代码页的字符的任何基本源字符集中未明确允许的控制代码除外设置。 例如，如果你使用日语代码页保存文件，则可以在注释、标识符或字符串中放置日语字符。 MSVC 不允许不能转换为有效多字节字符或 Unicode 码位的字符序列。 并非所有允许的字符均可显示在标识符中，具体取决于编译器选项。 有关详细信息，请参阅 [Identifiers](../cpp/identifiers-cpp.md)。
+MSVC 包含作为基本源字符集成员的 `$` 字符。 MSVC 还允许基于文件编码在源文件中使用额外的一组字符。 默认情况下，Visual Studio 通过使用默认代码页存储源文件。 使用特定于区域设置的代码页或 Unicode 代码页保存源文件时，MSVC 允许在源代码中使用该代码页的任何字符，基本源字符集中未明确允许的控制代码除外。 例如，如果你使用日语代码页保存文件，则可以在注释、标识符或字符串中放置日语字符。 MSVC 不允许不能转换为有效多字节字符或 Unicode 码位的字符序列。 并非所有允许的字符均可显示在标识符中，具体取决于编译器选项。 有关详细信息，请参阅 [Identifiers](../cpp/identifiers-cpp.md)。
 
 **结束 Microsoft 专用**
 
@@ -48,7 +61,7 @@ MSVC 包括`$`字符作为基本源字符集的成员。 MSVC 还允许一组额
 
 **Microsoft 专用**
 
-MicrosoftC++编译器将通用字符名称形式和文本形式中的字符互换。 例如，你可以声明一个使用通用字符名称形式的标识符，并以文本形式使用它：
+Microsoft C++编译器将通用字符名称形式的字符和文本形式视为互换。 例如，你可以声明一个使用通用字符名称形式的标识符，并以文本形式使用它：
 
 ```cpp
 auto \u30AD = 42; // \u30AD is 'キ'
@@ -59,6 +72,6 @@ Windows 剪贴板上的扩展字符的格式特定于应用程序区域设置。
 
 **结束 Microsoft 专用**
 
-### <a name="basic-execution-character-set"></a>基本执行字符集
+### <a name="execution-character-sets"></a>执行字符集
 
-*基本执行字符集* 和 *基本执行宽字符集* 的构成包括基本源字符集中的所有字符和用于表示警报、退格符、回车符和 null 字符的控制字符。 *执行字符集* 和 *执行宽字符集* 是基本集的超集。 它们包括基本原字符集之外的由实现定义的源字符。 执行字符集具有特定于区域设置的表示形式。
+*执行字符集*表示可以出现在编译的程序中的字符和字符串。 这些字符集包含源文件中允许的所有字符，还包含表示警报、backspace、回车符和 null 字符的控制字符。 执行字符集具有特定于区域设置的表示形式。

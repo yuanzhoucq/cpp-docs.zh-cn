@@ -1,6 +1,6 @@
 ---
-title: 基本类型 (C++)
-ms.date: 11/04/2016
+title: 内置类型（C++）
+ms.date: 12/11/2019
 f1_keywords:
 - __int128_cpp
 - __wchar_t_cpp
@@ -43,28 +43,28 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-ms.openlocfilehash: daa2ad2680a9d7d0239a70ed37ec1d90a3d96d97
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: f6bfc72bf279d09e89423866d9cb46ad3496b49c
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857536"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301491"
 ---
-# <a name="fundamental-types--c"></a>基本类型 (C++)
+# <a name="built-in-types-c"></a>内置类型（C++）
 
-C++ 中的基础类型分为三个类别：整数、浮点和 void。 整数类型能够处理整数。 浮点类型能够指定可具有小数部分的值。
+内置类型（也称为*基本类型*）由C++语言标准指定，并内置于编译器。 不会在任何标头文件中定义内置类型。 内置类型分为三个类别：整数、浮点和 void。 整数类型能够处理整数。 浮点类型能够指定可具有小数部分的值。
 
-[void](../cpp/void-cpp.md) 类型描述了值的空集。 不能指定**void**类型的变量-它主要用于声明不返回值的函数或声明指向非类型化或任意类型数据的泛型指针。 任何表达式都可以显式转换或强制转换为类型**void**。 但是，此类表达式仅限于下列用途：
+[void](void-cpp.md) 类型描述了值的空集。 不能指定**void**类型的变量-它主要用于声明不返回值的函数或声明指向非类型化或任意类型数据的泛型指针。 任何表达式都可以显式转换或强制转换为类型**void**。 但是，此类表达式仅限于下列用途：
 
-- 表达式语句。 （有关详细信息，请参阅 [表达式](../cpp/expressions-cpp.md)。）
+- 表达式语句。 （有关详细信息，请参阅[表达式](expressions-cpp.md)。）
 
-- 逗号运算符的左操作数。 （有关详细信息，请参阅 [逗号运算符](../cpp/comma-operator.md) 。）
+- 逗号运算符的左操作数。 （有关详细信息，请参阅[逗号运算符](comma-operator.md)。）
 
-- 条件运算符 (`? :`) 的第二个或第三个操作数。 （有关详细信息，请参阅 [带条件运算符的表达式](../cpp/conditional-operator-q.md) 。）
+- 条件运算符 (`? :`) 的第二个或第三个操作数。 （有关详细信息，请参阅[带条件运算符的表达式](conditional-operator-q.md)。）
 
-下表说明了类型大小的限制。 这些限制与 Microsoft 实现无关。
+下表说明了相对于类型大小的限制。 这些限制由C++标准规定，并与 Microsoft 实现无关。 标准中未指定某些内置类型的绝对大小。
 
-### <a name="fundamental-types-of-the-c-language"></a>C++ 语言的基础类型
+### <a name="built-in-type-size-restrictions"></a>内置类型大小限制
 
 |类别|类型|内容|
 |--------------|----------|--------------|
@@ -82,9 +82,9 @@ C++ 中的基础类型分为三个类别：整数、浮点和 void。 整数类�
 
 **Microsoft 专用**
 
-下表列出了 Microsoft C++ 中的基础类型所需的存储量。
+下表列出了 Microsoft C++中内置类型所需的存储量。 特别要注意的是，即使在64位操作系统上，**长**也是4个字节。
 
-### <a name="sizes-of-fundamental-types"></a>基础类型的大小
+### <a name="sizes-of-built-in-types"></a>内置类型的大小
 
 |类型|大小|
 |----------|----------|
@@ -95,10 +95,10 @@ C++ 中的基础类型分为三个类别：整数、浮点和 void。 整数类�
 
 **结束 Microsoft 专用**
 
-有关每个类型的值的范围的摘要，请参阅 [数据类型范围](../cpp/data-type-ranges.md) 。
+有关每个类型的值的范围的摘要，请参阅 [数据类型范围](data-type-ranges.md) 。
 
-有关类型转换的详细信息，请参阅 [标准转换](../cpp/standard-conversions.md)。
+有关类型转换的详细信息，请参阅 [标准转换](standard-conversions.md)。
 
 ## <a name="see-also"></a>另请参阅
 
-[数据类型范围](../cpp/data-type-ranges.md)
+[数据类型范围](data-type-ranges.md)
