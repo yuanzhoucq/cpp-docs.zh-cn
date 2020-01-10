@@ -1,6 +1,7 @@
 ---
 title: _mbclen、mblen、_mblen_l、_mbclen_l
-ms.date: 01/22/2019
+description: 描述 Microsoft C 运行时库（CRT） _mbclen、mblen、_mblen_l 和 _mbclen_l 函数。
+ms.date: 01/08/2020
 api_name:
 - _mbclen
 - mblen
@@ -42,12 +43,12 @@ helpviewer_keywords:
 - mbclen function
 - mblen function
 ms.assetid: d5eb92a0-b7a3-464a-aaf7-9890a8e3ed70
-ms.openlocfilehash: 96775f513b33eb407981480c17cb609dd85383f6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4676d850448af386a5aface69f616a4ac6f85cbf
+ms.sourcegitcommit: 7bd3567fc6a0e7124aab51cad63bbdb44a99a848
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952561"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75755065"
 ---
 # <a name="_mbclen-mblen-_mblen_l-_mbclen_l"></a>_mbclen、mblen、_mblen_l、_mbclen_l
 
@@ -79,29 +80,33 @@ int _mblen_l(
 
 ### <a name="parameters"></a>参数
 
-*c*<br/>
+*c*\
 多字节字符。
 
-*mbstr*<br/>
+*mbstr*\
 多字节字符序列的地址。
 
-*count*<br/>
+*计数*\
 要检查的字节数。
 
-*locale*<br/>
+*区域设置*\
 要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
 
-根据多字节字符*c*的长度是否为1或2字节， **_mbclen**返回1或2。 **_Mbclen**不会返回错误。 如果*mbstr*不**为 NULL**，则**mblen**将返回多字节字符的长度（以字节为单位）。 如果*mbstr*为**null**或它指向宽字符 null 字符，则**mblen**将返回0。 当*mbstr*指向的对象未形成第一个*计数*字符内的有效多字节字符时， **mblen**将返回-1。
+根据多字节字符*c*的长度， **_mbclen**和 **_mbclen_l**返回1或2。 对于 UTF-8，函数始终返回1，无论*c*是否为多字节。 **_Mbclen**没有错误返回。
+
+如果*mbstr*不**为 NULL**，则**mblen**和 **_mblen_l**返回多字节字符的长度（以字节为单位）。 **Mblen**和 **_MBLEN_L**函数在 utf-8 上正常工作，并且可能会返回一个介于1和3之间的值。 当*mbstr*为**null** （或指向宽字符 NULL 字符）时， **mblen**和 **_mblen_l**返回0。 *Mbstr*指向的对象必须在第一个*计数*字符内构成有效的多字节字符，或**mblen**并 **_mblen_l**返回-1。
 
 ## <a name="remarks"></a>备注
 
-**_Mbclen**函数返回多字节字符*c*的长度（以字节为单位）。 如果*c*不指向由隐式调用 **_ismbblead**确定的多字节字符的前导字节，则 **_mbclen**的结果是不可预知的。
+**_Mbclen**函数返回多字节字符*c*的长度（以字节为单位）。 如果*c*不指向多字节字符的前导字节（由对[_ismbblead](ismbblead-ismbblead-l.md)的隐式调用确定），则 **_mbclen**的结果是不可预知的。
 
-如果是有效的多字节字符，则**mblen**返回*mbstr*的长度（以字节为单位），并确定与代码页相关的多字节字符有效性。 **mblen**检查*mbstr*中包含的字节*数*或更少的字节数，但不能超过**MB_CUR_MAX**个字节。
+如果是有效的多字节字符，则**mblen**返回*mbstr*的长度（以字节为单位）。 它还确定与代码页相关的多字节字符有效性。 **mblen**检查*mbstr*中包含的字节*数*或更少的字节数，但不能超过**MB_CUR_MAX**字节。
 
-输出值受区域设置的**LC_CTYPE**类别设置影响;有关详细信息，请参阅[setlocale](setlocale-wsetlocale.md) 。 这些不带 **_l**后缀的函数的版本对与区域设置相关的行为使用当前区域设置。 **_L**后缀版本的行为相同，但它们使用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的**LC_CTYPE**类别设置的影响。 这些不带 **_l**后缀的函数的版本对与区域设置相关的行为使用当前区域设置。 **_L**后缀的版本是相同的，但它们使用传入的区域设置参数。 有关详细信息，请参阅[setlocale](setlocale-wsetlocale.md)和[Locale](../../c-runtime-library/locale.md)。
+
+**_mbclen**、 **_mblen_l**和 **_mbclen_l**是特定于 Microsoft 的，而不是标准 C 库的一部分。 建议你不要在需要可移植代码的位置使用它们。 对于标准 C 兼容性，请改用**mblen**或**mbrlen** 。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -109,7 +114,7 @@ int _mblen_l(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tclen**|映射到宏或内联函数|**_mbclen**|映射到宏或内联函数|
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>需求
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
@@ -117,7 +122,7 @@ int _mblen_l(
 |**mblen**|\<stdlib.h>|
 |**_mblen_l**|\<stdlib.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -158,10 +163,11 @@ Length in bytes of multibyte character 61: 1
 Length in bytes of NULL multibyte character 0: 0
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[字符分类](../../c-runtime-library/character-classification.md)<br/>
-[区域设置](../../c-runtime-library/locale.md)<br/>
-[多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[_mbccpy、_mbccpy_l](mbccpy-mbccpy-l.md)<br/>
-[strlen、wcslen、_mbslen、_mbslen_l、_mbstrlen、_mbstrlen_l](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)<br/>
+[字符分类](../../c-runtime-library/character-classification.md)\
+[区域设置](../../c-runtime-library/locale.md)\
+[多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)\
+[_mbccpy、_mbccpy_l](mbccpy-mbccpy-l.md)\
+[mbrlen](mbrlen.md)\
+[strlen、wcslen、_mbslen、_mbslen_l、_mbstrlen、_mbstrlen_l](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)
