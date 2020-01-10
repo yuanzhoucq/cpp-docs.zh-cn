@@ -1,6 +1,6 @@
 ---
 title: 运算符 OR
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - operator OR
 - Or
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - operator OR
 - OR operator, bitwise
 ms.assetid: fab36ba6-8ee0-4778-beb9-21dce6d99db7
-ms.openlocfilehash: 84724b47fd2f7f55e78b00eb37d6bdabb47e265e
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: c92149bc7d85365ff4f6bb3e2dbc54de59c8580c
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74396552"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75319042"
 ---
 # <a name="operator-or"></a>运算符 OR
 
@@ -25,4 +25,5 @@ ms.locfileid: "74396552"
 
 ## <a name="see-also"></a>另请参阅
 
-[运算符引用](operators-reference.md)
+[运算符引用](operators-reference.md)\
+[MASM BNF 语法](masm-bnf-grammar.md)

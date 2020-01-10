@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3003
 ms.assetid: 22e74f99-bb7f-4518-ab0d-934d5d49bcc7
-ms.openlocfilehash: 6d15d8bde8855b8dcc4857492acdeb950731b503
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2f7b645f0b76f500502faea86a9fe20bb8eb5a62
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152496"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75298891"
 ---
 # <a name="compiler-error-c3003"></a>编译器错误 C3003
 
-directive:在指令子句之后不允许使用 OpenMP 指令名称
+“directive”：在指令子句之后不允许使用 OpenMP 指令名称
 
 OpenMP 指令名称不能位于 OpenMP 指令子句之后。
 
 下面的示例生成 C3003：
 
-```
+```c
 // C3003.c
 // compile with: /openmp
 int main()

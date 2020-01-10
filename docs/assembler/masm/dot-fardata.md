@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - .FARDATA directive
 ms.assetid: 4458ef66-5626-4607-bf83-71637b459f77
-ms.openlocfilehash: 3a92bec747019cec1b14d3615ae5fb5a795fdc9d
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: b7f6328ea21c70fca8d15477b1e7ccb365132b22
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398268"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317755"
 ---
 # <a name="fardata-32-bit-masm"></a>.FARDATA （32）
 
-与一起使用时[。模型](../../assembler/masm/dot-model.md)，为已初始化的数据（段名 FAR_DATA 或*name*）启动较远的数据段。 （仅限32位 MASM。）
+与一起使用时[。模型](dot-model.md)，为已初始化的数据（段名 FAR_DATA 或*name*）启动较远的数据段。 （仅限32位 MASM。）
 
 ## <a name="syntax"></a>语法
 
@@ -23,4 +23,5 @@ ms.locfileid: "74398268"
 
 ## <a name="see-also"></a>另请参阅
 
-[指令参考](directives-reference.md)
+[指令引用](directives-reference.md)\
+[MASM BNF 语法](masm-bnf-grammar.md)

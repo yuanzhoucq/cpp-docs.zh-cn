@@ -1,26 +1,27 @@
 ---
 title: TYPEDEF (MASM)
-ms.date: 08/30/2018
+ms.date: 12/16/2019
 f1_keywords:
 - typedef
 helpviewer_keywords:
 - TYPEDEF directive
 ms.assetid: 0c659890-c9a5-485a-a680-e4fb3272032c
-ms.openlocfilehash: d35966f8db5e8873b8080976aaaab37937cbe192
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: bf14b446629a4704491feff44031ecc01267b027
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74393169"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75319185"
 ---
-# <a name="typedef-masm"></a>TYPEDEF (MASM)
+# <a name="typedef"></a>TYPEDEF
 
-定义名为的新*类型，它*等效于*类型*。
+定义名为 " *name*" 的新类型或**PROTO** ，它等效于*type*或*protoDefinition*。
 
 ## <a name="syntax"></a>语法
 
-> *名称* **TYPEDEF** *类型*
+>  | **PROTO**类型的*名称* **TYPEDEF** *类型*
 
 ## <a name="see-also"></a>另请参阅
 
-[指令参考](directives-reference.md)
+[指令引用](directives-reference.md)\
+[MASM BNF 语法](masm-bnf-grammar.md)

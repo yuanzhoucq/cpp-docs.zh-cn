@@ -8,12 +8,12 @@ helpviewer_keywords:
 - SAFESEH directive
 - .SAFESEH directive
 ms.assetid: 6eaac8c4-c46f-47ae-8a66-f5cfeb267e43
-ms.openlocfilehash: df9798800da293e5e0b4f545a8442380b7ff9408
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 5953ad6bdf1d9d1b0070ce83dd1d764799b7440a
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397987"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317560"
 ---
 # <a name="safeseh-32-bit-masm"></a>.SAFESEH （32位 MASM）
 
@@ -25,7 +25,7 @@ ms.locfileid: "74397987"
 
 ## <a name="remarks"></a>备注
 
-*标识符*必须为本地定义的[进程](../../assembler/masm/proc.md)或[EXTRN](../../assembler/masm/extrn.md)过程的 ID。 不允许使用[标签](../../assembler/masm/label-masm.md)。 此.SAFESEH 指令需要[/safeseh](../../assembler/masm/ml-and-ml64-command-line-reference.md)命令行选项。
+*标识符*必须为本地定义的[进程](proc.md)或[EXTRN](extrn.md)过程的 ID。 不允许使用[标签](label-masm.md)。 此.SAFESEH 指令需要[/safeseh](ml-and-ml64-command-line-reference.md)命令行选项。
 
 有关结构化异常处理程序的详细信息，请参阅[/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)。
 
@@ -41,4 +41,5 @@ end
 
 ## <a name="see-also"></a>另请参阅
 
-[指令参考](directives-reference.md)
+[指令引用](directives-reference.md)\
+[MASM BNF 语法](masm-bnf-grammar.md)

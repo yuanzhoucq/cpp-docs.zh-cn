@@ -2,15 +2,13 @@
 layout: HubPage
 title: Visual C++ 文档
 description: 了解如何使用 C++ 针对平台和设备开发应用程序、服务和工具。
-author: mikeblome
-ms.author: mblome
 ms.topic: hub-page
-ms.openlocfilehash: 204571952b7da922ddaac29949568cac3e69d616
-ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.openlocfilehash: 2a54776149bef58656380f6f03351083189ea6c1
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70177499"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75793790"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -199,10 +197,10 @@ ms.locfileid: "70177499"
                 </ul>
             </li>
             <li>
-                <a href="#features">特征</a>
+                <a href="#features">功能</a>
                 <ul id="features">
                     <li>
-                        <a href="#features1">特征</a>
+                        <a href="#features1">功能</a>
                         <ul id="features1" class="cardsC">
                             <li>
                                 <a href="/cpp/ide/writing-and-refactoring-code-cpp">

@@ -1,22 +1,25 @@
 ---
 title: 自动 （C++）
-ms.date: 11/04/2016
+ms.date: 12/10/2019
 f1_keywords:
 - auto_CPP
 - auto
 helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
-ms.openlocfilehash: 8af2aceb2964a5ec3adcbb0b0accab0b051ff48c
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 0991c836d1ade663be3e1b734ec4745796b91abd
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303379"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301647"
 ---
 # <a name="auto-c"></a>自动 （C++）
 
 从其初始化表达式中推导声明的变量的类型。
+
+> [!NOTE]
+> C++标准为此关键字定义原始和修订的含义。 在 Visual Studio 2010 之前， **auto**关键字在*自动*存储类中声明变量;即具有本地生存期的变量。 从 Visual Studio 2010 开始， **auto**关键字声明一个变量，该变量的类型是从其声明中的初始化表达式推导出来的。 [/Zc： auto&#91;&#93; ](../build/reference/zc-auto-deduce-variable-type.md)编译器选项控制**auto**关键字的含义。
 
 ## <a name="syntax"></a>语法
 
@@ -50,7 +53,7 @@ auto declarator initializer;
 
 若要使用**auto**关键字，请使用它（而不是类型）来声明变量，并指定初始化表达式。 此外，还可以使用说明符和声明符（如**const**、 **volatile**、指针（`*`）、引用（`&`）和右值引用（`&&`）修改**auto**关键字。 编译器计算初始化表达式，然后使用该信息来推断变量类型。
 
-初始化表达式可以是赋值（等号语法）、直接初始化（函数样式语法）、[运算符 new](new-operator-cpp.md)表达式或初始化表达式可以是[基于范围的 for 语句（C++）](../cpp/range-based-for-statement-cpp.md)语句中的*范围声明*参数。 有关详细信息，请参阅本文档后面的[初始值设定项](../cpp/initializers.md)和代码示例。
+初始化表达式可以是赋值 （等号语法），直接初始化 （函数样式语法）、[运算符 new](new-operator-cpp.md)表达式或初始化表达式可以是*有关范围声明*中的参数[基于范围的语句 （C++）](../cpp/range-based-for-statement-cpp.md)语句。 有关详细信息，请参阅本文档后面的[初始值设定项](../cpp/initializers.md)和代码示例。
 
 **Auto**关键字是类型的占位符，但它本身不是类型。 因此， **auto**关键字不能用于转换或运算符，例如[sizeof](../cpp/sizeof-operator.md)和（对于C++/cli） [typeid](../extensions/typeid-cpp-component-extensions.md)。
 
@@ -123,7 +126,7 @@ int main()
 
 下表列出了对**auto**关键字的使用限制以及编译器发出的相应诊断错误消息。
 
-|错误号|说明|
+|错误号|描述|
 |------------------|-----------------|
 |[C3530](../error-messages/compiler-errors-2/compiler-error-c3530.md)|**Auto**关键字不能与任何其他类型说明符组合。|
 |[C3531](../error-messages/compiler-errors-2/compiler-error-c3531.md)|使用**auto**关键字声明的符号必须具有初始值设定项。|
@@ -133,7 +136,7 @@ int main()
 |[C3536](../error-messages/compiler-errors-2/compiler-error-c3536.md)|符号初始化之前无法使用。 在实践中，这意味着无法使用变量来初始化自身。|
 |[C3537](../error-messages/compiler-errors-2/compiler-error-c3537.md)|不能强制转换为使用**auto**关键字声明的类型。|
 |[C3538](../error-messages/compiler-errors-2/compiler-error-c3538.md)|声明符列表中使用**auto**关键字声明的所有符号都必须解析为相同的类型。 有关详细信息，请参阅[声明和定义](declarations-and-definitions-cpp.md)。|
-|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md)、 [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|[Sizeof](../cpp/sizeof-operator.md)和[typeid](../extensions/typeid-cpp-component-extensions.md)运算符不能应用于使用**auto**关键字声明的符号。|
+|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md), [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|[Sizeof](../cpp/sizeof-operator.md)和[typeid](../extensions/typeid-cpp-component-extensions.md)运算符不能应用于使用**auto**关键字声明的符号。|
 
 ## <a name="examples"></a>示例
 

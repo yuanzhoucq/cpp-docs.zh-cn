@@ -1,29 +1,29 @@
 ---
-title: 用户定义的文本 （C++）
-ms.date: 11/04/2016
+title: 用户定义的文本（C++）
+ms.date: 12/10/2019
 ms.assetid: ff4a5bec-f795-4705-a2c0-53788fd57609
-ms.openlocfilehash: 1de94b43423bb5b420be29d3cace146e265a1459
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 31b8f1dfb261839c04a6829132975ada9c09d619
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392110"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301296"
 ---
-# <a name="user-defined-literals--c"></a>用户定义的文本 （C++）
+# <a name="user-defined-literals"></a>用户定义的文本
 
-文本有五个主要类别：整数、字符、浮点、字符串、布尔和指针。  从 C++ 11 开始，可以基于这些类别定义你自己的文本，以便为常见惯用语提供快捷语法，并提高类型安全性。 例如，假设有一个距离类。 你可以将一个文本定义为表示公里，将另一个文本定义为表示英里，并且只需编写以下内容即可帮助用户明确度量单位：auto d = 42.0_km 或 auto d = 42.0_mi。 用户定义的文本没有任何性能优势或劣势；它们的主要作用在于方便或实现编译时类型推断。 标准库中的时间和持续时间操作中具有用户定义的文本 std: string、 std:: complex，以及单位\<chrono > 标头：
+中C++有五种主要类别的文本：整数、字符、浮点、字符串、布尔值和指针。  从 C++ 11 开始，可以基于这些类别定义你自己的文本，以便为常见惯用语提供快捷语法，并提高类型安全性。 例如，假设有一个距离类。 你可以将一个文本定义为表示公里，将另一个文本定义为表示英里，并且只需编写以下内容即可帮助用户明确度量单位：auto d = 42.0_km 或 auto d = 42.0_mi。 用户定义的文本没有任何性能优势或劣势；它们的主要作用在于方便或实现编译时类型推断。 标准库的 std： string 为 std：： complex，在 \<chrono > 标头的时间和持续时间操作中，标准库包含用户定义的文本：
 
 ```cpp
 Distance d = 36.0_mi + 42.0_km;         // Custom UDL (see below)
-    std::string str = "hello"s + "World"s;  // Standard Library <string> UDL
-    complex<double> num =
-        (2.0 + 3.01i) * (5.0 + 4.3i);       // Standard Library <complex> UDL
-    auto duration = 15ms + 42h;             // Standard Library <chrono> UDLs
+std::string str = "hello"s + "World"s;  // Standard Library <string> UDL
+complex<double> num =
+   (2.0 + 3.01i) * (5.0 + 4.3i);        // Standard Library <complex> UDL
+auto duration = 15ms + 42h;             // Standard Library <chrono> UDLs
 ```
 
 ## <a name="user-defined-literal-operator-signatures"></a>用户定义的文本运算符签名
 
-通过定义实现用户定义的文本**运算符""** 在命名空间范围与以下形式之一：
+通过使用以下形式之一在命名空间范围内定义**运算符 ""** 来实现用户定义的文本：
 
 ```cpp
 ReturnType operator "" _a(unsigned long long int);   // Literal operator for user-defined INTEGRAL literal
@@ -32,19 +32,19 @@ ReturnType operator "" _c(char);                     // Literal operator for use
 ReturnType operator "" _d(wchar_t);                  // Literal operator for user-defined CHARACTER literal
 ReturnType operator "" _e(char16_t);                 // Literal operator for user-defined CHARACTER literal
 ReturnType operator "" _f(char32_t);                 // Literal operator for user-defined CHARACTER literal
-ReturnType operator "" _g(const     char*, size_t);  // Literal operator for user-defined STRING literal
-ReturnType operator "" _h(const  wchar_t*, size_t);  // Literal operator for user-defined STRING literal
+ReturnType operator "" _g(const char*, size_t);      // Literal operator for user-defined STRING literal
+ReturnType operator "" _h(const wchar_t*, size_t);   // Literal operator for user-defined STRING literal
 ReturnType operator "" _i(const char16_t*, size_t);  // Literal operator for user-defined STRING literal
 ReturnType operator "" _g(const char32_t*, size_t);  // Literal operator for user-defined STRING literal
 ReturnType operator "" _r(const char*);              // Raw literal operator
 template<char...> ReturnType operator "" _t();       // Literal operator template
 ```
 
-上例中的运算符名是你提供的任意占位符，但需要前导下划线。 （标准库只能定义不含下划线的文本。）在返回类型中，你可以自定义文本执行的转换或其他操作。 此外，这些运算符中的任何一个都可定义为 `constexpr`。
+上例中的运算符名是你提供的任意占位符，但需要前导下划线。 （仅允许标准库定义不带下划线的文本。）返回类型是自定义转换或文本执行的其他操作的位置。 此外，这些运算符中的任何一个都可定义为 `constexpr`。
 
 ## <a name="cooked-literals"></a>加工的文本
 
-在源代码中，任何文字（无论是否为用户定义的）实质上都是字母数字字符序列，例如 `101`、`54.7`、`"hello"` 或 `true`。 编译器将解释为整数、 float、 const char 序列\*字符串中，依次类推。 用户定义的接受编译器分配给文本值的任何类型作为输入的文本通俗称为*加工的文本*。 以上所有运算符（`_r` 和 `_t` 除外）均为加工的文本。 例如，文本 `42.0_km` 将绑定到签名与 _b 类似的运算符 _km；而文本 `42_km` 将绑定到签名与 _a 类似的运算符。
+在源代码中，任何文字（无论是否为用户定义的）实质上都是字母数字字符序列，例如 `101`、`54.7`、`"hello"` 或 `true`。 编译器将序列解释为 integer、float、const char\* 字符串，等等。 作为输入接受编译器分配给文本值的任何类型的用户定义的文本非正式地称为*加工文本*。 以上所有运算符（`_r` 和 `_t` 除外）均为加工的文本。 例如，文本 `42.0_km` 将绑定到签名与 _b 类似的运算符 _km；而文本 `42_km` 将绑定到签名与 _a 类似的运算符。
 
 下面的示例演示用户定义的文本如何帮助用户明确其输入。 若要构造 `Distance`，用户必须通过使用相应的用户定义文本显式指定公里或英里。 当然也可以通过其他方式实现相同的结果，但用户定义的文本比其他方案简便。
 
@@ -96,7 +96,7 @@ int main(int argc, char* argv[])
 }
 ```
 
-注意，文本数字必须使用小数，否则数字将被解释为整数，而该类型与运算符不兼容。 另请注意，对于浮点数输入，类型必须是**长双精度**，并且它必须是整型**超长**。
+注意，文本数字必须使用小数，否则数字将被解释为整数，而该类型与运算符不兼容。 另请注意，对于浮点输入，类型必须为**长双精度**值，对于整型类型，该类型必须**为 long 类型。**
 
 ## <a name="raw-literals"></a>原始文本
 
@@ -109,7 +109,7 @@ template<char...> ReturnType operator "" _t();       // Literal operator templat
 
 可使用原始文本提供输入序列的自定义解释，使其与编译器将执行的解释不同。 例如，可以定义一段文本，用于将序列 `4.75987` 转换为自定义的十进制类型，而不是 IEEE 754 浮点类型。 原始文本（如加工的文本）还可用于执行输入序列的编译时验证。
 
-### <a name="example-limitations-of-raw-literals"></a>示例:原始文本的限制
+### <a name="example-limitations-of-raw-literals"></a>示例：原始文本的限制
 
 原始文本运算符和文本运算符模板仅适用于整型和浮点型用户定义文本，如下面的示例所示：
 

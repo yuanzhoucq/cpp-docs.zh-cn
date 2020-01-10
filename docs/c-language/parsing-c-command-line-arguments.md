@@ -8,12 +8,12 @@ helpviewer_keywords:
 - parsing, command-line arguments
 - startup code, parsing command-line arguments
 ms.assetid: ffce8037-2811-45c4-8db4-1ed787859c80
-ms.openlocfilehash: da8a21ac9ff7ce4fd6bde4d2d1e50d8f30806b78
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: ace6d1b8295d0901ef22f3c354b32ad17e296e87
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151203"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299086"
 ---
 # <a name="parsing-c-command-line-arguments"></a>分析 C 命令行自变量
 
@@ -31,7 +31,7 @@ ms.locfileid: "56151203"
 
 - 如果偶数个反斜杠后跟双引号，则每对反斜杠 (\\\\) 中有一个反斜杠 (\\) 被置于 `argv` 数组中，而双引号 (") 被解释为字符串分隔符。
 
-- 如果奇数个反斜杠后跟双引号，则每对反斜杠 (\\\\) 中有一个反斜杠 (\\) 被置于 ) is placed in the `argv` 数组中，而通过剩余的反斜杠，双引号被解释为反义序列，从而使原义双引号 (") 放置在 `argv` 中。
+- 如果奇数个反斜杠后跟双引号，则每对反斜杠 ( **\\\\** ) 中有一个反斜杠 ( **\\** ) 被置于 `argv` 数组中，而通过剩余的反斜杠，双引号被解释为反义序列，从而使原义双引号 ( **"** ) 放置在 `argv` 中。
 
 此列表通过显示命令行参数的多个示例的传递到 `argv` 的解释结果来阐释上述规则。 在第二列、第三列和第四列中列出的输出来自于遵循列表的 ARGS.C 程序。
 
@@ -47,7 +47,7 @@ ms.locfileid: "56151203"
 
 ### <a name="code"></a>代码
 
-```
+```c
 // Parsing_C_Commandline_args.c
 // ARGS.C illustrates the following variables used for accessing
 // command-line arguments and environment variables:
@@ -76,7 +76,7 @@ char **envp )      // Array of environment variable strings
 }
 ```
 
-## <a name="comments"></a>注释
+## <a name="comments"></a>Comments
 
 此程序中输出的一个示例是：
 
@@ -97,6 +97,6 @@ Environment variables:
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [main 函数和程序执行](../c-language/main-function-and-program-execution.md)

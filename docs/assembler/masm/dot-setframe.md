@@ -1,17 +1,17 @@
 ---
 title: .SETFRAME
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .SETFRAME
 helpviewer_keywords:
 - .SETFRAME directive
 ms.assetid: eaa9b5ed-4daa-4f1e-bdb6-100758007ab3
-ms.openlocfilehash: a21dda496d32abcfeb4692d0228afdbcfd4e5ebb
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 8c491a811634995398a37aa001cc1c93f8434114
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397922"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318236"
 ---
 # <a name="setframe"></a>.SETFRAME
 
@@ -23,13 +23,13 @@ ms.locfileid: "74397922"
 
 ## <a name="remarks"></a>备注
 
-**..SETFRAME**允许 ml64.exe 用户指定框架函数的展开方式，并且仅允许在序言中使用，该函数从[过程](../../assembler/masm/proc.md)框架声明扩展到[。ENDPROLOG](../../assembler/masm/dot-endprolog.md)指令。 这些指令不生成代码;它们仅生成 `.xdata` 和 `.pdata`。 **..SETFRAME**后面应是实际实现要展开的操作的说明。 最好将展开指令和它们要展开的代码封装在一个宏中，以确保协议。
+**..SETFRAME**允许 ml64.exe 用户指定框架函数的展开方式，并且仅允许在序言中使用，该函数从[过程](proc.md)框架声明扩展到[。ENDPROLOG](dot-endprolog.md)指令。 这些指令不生成代码;它们仅生成 `.xdata` 和 `.pdata`。 **..SETFRAME**后面应是实际实现要展开的操作的说明。 最好将展开指令和它们要展开的代码封装在一个宏中，以确保协议。
 
-有关详细信息，请参阅[MASM for x64 （ml64.exe）](../../assembler/masm/masm-for-x64-ml64-exe.md)。
+有关详细信息，请参阅[MASM for x64 （ml64.exe）](masm-for-x64-ml64-exe.md)。
 
 ## <a name="sample"></a>示例
 
-### <a name="description"></a>说明
+### <a name="description"></a>描述
 
 下面的示例演示如何使用帧指针：
 
@@ -64,4 +64,5 @@ END
 
 ## <a name="see-also"></a>另请参阅
 
-[指令参考](directives-reference.md)
+[指令引用](directives-reference.md)\
+[MASM BNF 语法](masm-bnf-grammar.md)

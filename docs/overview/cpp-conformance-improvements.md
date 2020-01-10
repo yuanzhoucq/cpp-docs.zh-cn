@@ -5,12 +5,12 @@ description: Visual Studio 中的 Microsoft C++ 正朝着完全符合 C++20 语�
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 06fa060b674e51a3352a9a928bccdbfa6c63aae4
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: de31c2e61f0a10c785d610d3227a659c59b56d38
+ms.sourcegitcommit: 00f50ff242031d6069aa63c81bc013e432cae0cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74858030"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75546427"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Visual Studio 中的 C++ 符合性改进
 
@@ -1131,11 +1131,11 @@ Lambda 表达式中的 `*this` 对象现在可按值捕获。 此更改可以在
 
 ### `not_fn()`
 
-[P0005R4](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0005r4.html) `not_fn` 替换了 `not1` 和 `not2`。
+[P0005R4](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0005r4.html)`not_fn` 替换了 `not1` 和 `not2`。
 
 ### <a name="rewording-enable_shared_from_this"></a>改写 `enable_shared_from_this`
 
-在 C++11 中添加 [P0033R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0033r1.html) `enable_shared_from_this`。 C++17 标准更新规范以更好地处理某些特殊情况。 [14]
+[P0033R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0033r1.html) C++11 中添加了 `enable_shared_from_this`。 C++17 标准更新规范以更好地处理某些特殊情况。 [14]
 
 ### <a name="splicing-maps-and-sets"></a>拼接映射和集
 
@@ -1151,9 +1151,9 @@ Lambda 表达式中的 `*this` 对象现在可按值捕获。 此更改可以在
 
 ### <a name="fixes-for-not_fn"></a>`not_fn()` 的修复
 
-[P0358R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0358r1.html) `std::not_fn` 的新措词提供对在调用包装器时传播值类别的支持。
+[P0358R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0358r1.html)`std::not_fn` 的新措词提供对在调用包装器时传播值类别的支持。
 
-### <a name="shared_ptrt-shared_ptrtn"></a>`shared_ptr<T[]>`， `shared_ptr<T[N]>`
+### <a name="shared_ptrt-shared_ptrtn"></a>`shared_ptr<T[]>`，`shared_ptr<T[N]>`
 
 [P0414R2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0414r2.html) 将库基础知识中的 `shared_ptr` 更改合并到 C++17。 [14]
 
@@ -1241,13 +1241,11 @@ B b(42L); // now calls B(int)
 
 [P0017R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0017r1.html)
 
-如果基类的构造函数非公有但可由派生类进行访问，则在 Visual Studio 版本 15.7 的 /std:c++17  模式下，将不再能够使用空括号来初始化派生类型的对象。
-
+如果基类的构造函数非公有但可由派生类进行访问，则在 Visual Studio 2017 版本 15.7 的 /std:c++17  模式下，将不再能够使用空括号来初始化派生类型的对象。
 以下示例演示 C++14 一致行为：
 
 ```cpp
 struct Derived;
-
 struct Base {
     friend struct Derived;
 private:
@@ -1255,32 +1253,26 @@ private:
 };
 
 struct Derived : Base {};
-
 Derived d1; // OK. No aggregate init involved.
 Derived d2 {}; // OK in C++14: Calls Derived::Derived()
                // which can call Base ctor.
 ```
 
 在 C++17，`Derived` 现被视作聚合类型。 这意味着 `Base` 通过私有默认构造函数进行的初始化将作为扩展的聚合初始化规则的一部分而直接发生。 以前，`Base` 私有构造函数通过 `Derived` 构造函数调用，它之所以能够成功是因为友元声明。
-
 以下示例演示 Visual Studio 版本 15.7 中 /std:c++17  模式下的 C++17 行为：
 
 ```cpp
 struct Derived;
-
 struct Base {
     friend struct Derived;
 private:
     Base() {}
 };
-
 struct Derived : Base {
     Derived() {} // add user-defined constructor
                  // to call with {} initialization
 };
-
 Derived d1; // OK. No aggregate init involved.
-
 Derived d2 {}; // error C2248: 'Base::Base': cannot access
                // private member declared in class 'Base'
 ```

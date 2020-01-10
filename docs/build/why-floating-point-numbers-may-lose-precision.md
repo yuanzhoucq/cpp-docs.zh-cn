@@ -6,30 +6,30 @@ helpviewer_keywords:
 - FLT_EPSILON constant
 - floating-point numbers, precision
 ms.assetid: 1acb1add-ac06-4134-a2fd-aff13d8c4c15
-ms.openlocfilehash: 387b2f4a7156e42e59bd70c5a6f747943fb54ca7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 373ce9fa2c2c96fac349940076873a4a637a9dbe
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313579"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75298709"
 ---
 # <a name="why-floating-point-numbers-may-lose-precision"></a>为何浮点数可能丢失精度
 
-浮点十进制值通常没有准确的二进制表示形式。 这是 CPU 表示的浮点型数据的方式的副作用。 出于此原因，可能会遇到一些丢失精度，并且某些浮点操作可能产生意外的结果。
+浮点十进制值通常没有完全相同的二进制表示形式。 这是 CPU 表示浮点数据的方式的副作用。 出于此原因，你可能会遇到一些精度损失，并且某些浮点运算可能会产生意外的结果。
 
-此行为是以下其中一个的结果：
+此行为是下列其中一项的结果：
 
-- 可能不是精确的十进制数的二进制表示形式。
+- 十进制数的二进制表示形式不能是精确的。
 
-- 所使用的数字 （例如，混合 float 和 double） 之间没有类型不匹配。
+- 使用的数字之间存在类型不匹配（例如，混合 float 和 double）。
 
-若要解决此问题，大多数程序员或是确保的值大于或小于什么需要或他们获取并使用可以维护精度的二进制编码的十进制 (BCD) 库。
+若要解决此问题，大多数程序员要么确保该值大于或小于所需值，要么获取并使用二进制编码的十进制（BCD）库来保持精度。
 
-浮点值的二进制表示形式会影响精度和浮点计算的准确性。 Microsoft VisualC++使用[IEEE 浮点格式](ieee-floating-point-representation.md)。
+浮点值的二进制表示形式会影响浮点计算的精度和准确性。 Microsoft 视觉C++对象使用[IEEE 浮点格式](ieee-floating-point-representation.md)。
 
 ## <a name="example"></a>示例
 
-```
+```c
 // Floating-point_number_precision.c
 // Compile options needed: none. Value of c is printed with a decimal
 // point precision of 10 and 6 (printf rounded value by default) to
@@ -58,10 +58,10 @@ int main() {
 They are not equal! The value of c is  2.4679999352 or 2.468000
 ```
 
-## <a name="comments"></a>注释
+## <a name="comments"></a>Comments
 
-对于 EPSILON，你可以使用常量 FLT_EPSILON，定义的浮点型作为 1.192092896e-07F，或 DBL_EPSILON，定义表示双精度作为 2.2204460492503131e-016。 需要包含这些常量的 float.h。 这些常数被定义为最小正数 x 号，例如 x + 1.0 不等于 1.0。 由于这是极小的数字，您应使用用户定义涉及大量计算的容错能力。
+对于 EPSILON，可以使用 FLT_EPSILON 的常量，该常量定义为 float 作为 1.192092896 e-07F 或 DBL_EPSILON，后者定义为 double as 2.2204460492503131 e-016。 需要为这些常量包含 float。 这些常量定义为最小正数 x，因此 x + 1.0 不等于1.0。 由于这是一个非常小的数字，因此应将用户定义的公差用于涉及非常大的数字的计算。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [优化代码](optimizing-your-code.md)

@@ -1,16 +1,16 @@
 ---
 title: MASM 运算符引用
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), operators reference
 - operators [MASM]
 ms.assetid: c069cab7-d6b0-4f82-a6ce-0ca3fc7e6428
-ms.openlocfilehash: 5295307ad668b76e5ff39882ce2613f2042f914a
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: c0059ab1b0204b79e040d18bd5aa88145775ebcd
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74395213"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318756"
 ---
 # <a name="masm-operators-reference"></a>MASM 运算符引用
 
@@ -19,7 +19,7 @@ ms.locfileid: "74395213"
 ||||
 |-|-|-|
 |[* （乘）](operator-multiply.md)|[+ （添加）](operator-add.md)|[-（减或取反）](operator-subtract-2.md)|
-|[.定义域](operator-dot.md)|[/（除）](operator-subtract-1.md)|[&#91;&#93;编入](operator-brackets.md)|
+|[.定义域](operator-dot.md)|[/ (divide)](operator-subtract-1.md)|[&#91;&#93;编入](operator-brackets.md)|
 |[MOD （余数）](operator-mod.md)|||
 
 ## <a name="control-flow"></a>控制流
@@ -68,7 +68,7 @@ ms.locfileid: "74395213"
 |[EQ （等于）](operator-eq.md)|[GE （大于或等于）](operator-ge.md)|[G t （大于）](operator-gt.md)|
 |[LE （小于或等于）](operator-le.md)|[LT （小于）](operator-lt.md)|[NE （不等于）](operator-ne.md)|
 
-## <a name="segment"></a>细分
+## <a name="segment"></a>细分市场
 
 |||
 |-|-|
@@ -90,4 +90,5 @@ ms.locfileid: "74395213"
 
 ## <a name="see-also"></a>另请参阅
 
-[Microsoft 宏汇编程序参考](microsoft-macro-assembler-reference.md)<br/>
+[Microsoft 宏汇编程序参考](microsoft-macro-assembler-reference.md)\
+[MASM BNF 语法](masm-bnf-grammar.md)

@@ -3,18 +3,18 @@ title: 欢迎回到 C++（现代 C++）
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: 2739da77fbfa973ca716abc6d8fa4920b81095d9
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 4dee4779e941c66af1c23f62a88cecec4916a475
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303334"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301738"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>欢迎回到 C++（现代 C++）
 
-过去25年来， C++是世界上最广泛使用的编程语言之一。 正确编写的 C++ 程序是快速而高效的。 语言比其他语言更加灵活，因为它使你能够访问低级别硬件功能，最大程度地提高速度并最大程度地减少内存需求。 你可以使用它来创建各种应用，包括游戏、高性能科学软件、设备驱动程序、嵌入式程序、库和编译器，用于其他编程语言、Windows 客户端应用等。
+过去25年来， C++是世界上最广泛使用的编程语言之一。 正确编写的 C++ 程序快速、高效。 语言比其他语言更加灵活，因为它使你能够访问低级别硬件功能，最大程度地提高速度并最大程度地减少内存需求。 你可以使用它来创建各种应用，包括游戏、高性能科学软件、设备驱动程序、嵌入式程序、库和编译器，用于其他编程语言、Windows 客户端应用等。
 
-C++ 最初的要求之一，就是要向后兼容 C 语言。 因此C++ ，始终允许 C 样式编程，其中包含原始指针、数组、以 null 结尾的字符串、自定义数据结构，以及可实现良好性能的其他功能，但也可能会产生 bug 和复杂性。 的演变C++具有强调的功能，大大减少了使用 C 样式惯例的需求。 旧的 C 编程设施在您需要它们时存在，但对于新式C++的代码，您应该需要更少的代码。 新式C++代码更简单、更安全、更优雅，而且仍能像以往一样快速。
+C++ 的原始要求之一是与 C 语言向后兼容。 因此C++ ，始终允许 C 样式编程，其中包含原始指针、数组、以 null 结尾的字符串、自定义数据结构，以及可实现良好性能的其他功能，但也可能会产生 bug 和复杂性。 的演变C++具有强调的功能，大大减少了使用 C 样式惯例的需求。 旧的 C 编程设施在您需要它们时存在，但对于新式C++的代码，您应该需要更少的代码。 新式C++代码更简单、更安全、更优雅，而且仍能像以往一样快速。
 
 以下部分概述了新式C++的主要功能。 除非另有说明，否则此处列出的功能在 c + + 11 和更高版本中可用。 在 Microsoft C++编译器中，可以设置[/std](../build/reference/std-specify-language-standard-version.md)编译器选项，以指定要用于项目的标准版本。
 
@@ -47,7 +47,7 @@ void functionUsingWidget() {
 
 ## <a name="stdstring-and-stdstring_view"></a>std：： string 和 std：： string_view
 
-C 样式字符串是 bug 的另一个主要源。 通过使用[std：： string 和 std：： wstring](../standard-library/basic-string-class.md) ，可以完全消除与 C 样式字符串关联的所有错误，并获得用于搜索、追加、预先计算等成员函数的好处。 两者都是高度优化的速度。 将字符串传递到仅需要只读访问权限的函数时，可以使用[std：： string_view](../standard-library/basic-string-view-class.md)以获得更好的性能优势。
+C 样式字符串是 bug 的另一个主要源。 通过使用[std：： string 和 std：： wstring](../standard-library/basic-string-class.md) ，可以完全消除与 C 样式字符串关联的所有错误，并获得用于搜索、追加、预先计算等成员函数的好处。 两者都是高度优化的速度。 将字符串传递给只需要只读访问权限的函数时，可在 c + + 17 中使用[std：： string_view](../standard-library/basic-string-view-class.md)提高性能。
 
 ## <a name="stdvector-and-other-standard-library-containers"></a>std：： vector 和其他标准库容器
 
@@ -211,7 +211,7 @@ Lambda 表达式 `[=](int i) { return i > x && i < y; }` 可以读取为 "函数
 
 联合通常在 C 样式编程中使用，以通过使不同类型的成员占用相同的内存位置来节省内存。 但是，联合不是类型安全的，很容易出错。 C + + 17 引入了[std：： variant](../standard-library/variant-class.md)类作为联合的更可靠、更安全的替代类。 [Std：：就诊](../standard-library/variant-functions.md#visit)函数可用于以类型安全的方式访问 `variant` 类型的成员。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [C++ 语言参考](../cpp/cpp-language-reference.md)<br/>
 [Lambda 表达式](../cpp/lambda-expressions-in-cpp.md)<br/>

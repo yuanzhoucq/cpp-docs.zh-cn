@@ -1,23 +1,23 @@
 ---
-title: 数值、 布尔和指针文本 （C++）
+title: 数值、布尔和指针文本（C++）
 ms.date: 11/04/2016
 helpviewer_keywords:
 - literals, C++
 - constants, literals
 - literals [C++]
 ms.assetid: 17c09fc3-3ad7-47e2-8b48-ba8ae994edc8
-ms.openlocfilehash: f263e9a2ed357cdc80ec29fc5d1b6d58c9e093e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 467300501ffbbf8063e203d4c7395af34a954ed0
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245097"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301361"
 ---
-# <a name="numeric-boolean-and-pointer-literals--c"></a>数值、 布尔和指针文本 （C++）
+# <a name="numeric-boolean-and-pointer-literals"></a>数值、布尔和指针文本
 
 文本是一种直接表示值的程序元素。 本文介绍整数、浮点、布尔和指针类型的文本。 有关字符串和字符文本的信息，请参阅[字符串和字符文本 （C++）](../cpp/string-and-character-literals-cpp.md)。 你还可以定义基于任何这些类别中; 你自己的文本有关详细信息请参阅[用户定义文本 （C++）](../cpp/user-defined-literals-cpp.md)
 
-. 你可以在许多上下文中使用文本，但文本的最常用法是初始化命名变量以及将自变量传递给函数：
+。 你可以在许多上下文中使用文本，但文本的最常用法是初始化命名变量以及将自变量传递给函数：
 
 ```cpp
 const int answer = 42; // integer literal
@@ -26,15 +26,13 @@ bool b = true;              // boolean literal
 MyClass* mc = nullptr;      // pointer literal
 ```
 
-有时需要指示编译器如何解释某个文本或者为其赋予哪种特定类型。 你可以通过为文本追加前缀或后缀来达到此目的。 例如，前缀 0x 指示编译器将其后面的数字解释为十六进制值，例如 0x35。 ULL 后缀指示编译器将值视为**无符号长长**5894345ull 类型。 有关每个文本类型的前缀和后缀的完整列表，请参阅以下各节。
-
-## <a name="syntax"></a>语法
+有时需要指示编译器如何解释某个文本或者为其赋予哪种特定类型。 你可以通过为文本追加前缀或后缀来达到此目的。 例如，前缀 0x 指示编译器将其后面的数字解释为十六进制值，例如 0x35。 U) 后缀通知编译器将值视为**无符号长**整型类型，如5894345ULL 中所示。 有关每个文本类型的前缀和后缀的完整列表，请参阅以下各节。
 
 ## <a name="integer-literals"></a>整数文本
 
 整数文本以数字开头，没有小数部分或指数。 你可以指定十进制、八进制或十六进制形式的整数文本。 它们可指定有符号类型或无符号类型以及长类型或短类型。
 
-如果没有前缀或后缀，编译器将产生整型文本值类型**int** （32 位），如果是该值符合，否则它将为其提供类型**超长**（64 位）。
+如果不存在前缀或后缀，则编译器将提供整型文本值类型**int** （32位）（如果值适合），否则它会将其类型指定为**长**整型（64位）。
 
 要指定十进制整型文本，请以非零数字作为规范的开头。 例如：
 
@@ -60,7 +58,7 @@ int i = 0x3fff;   // Hexadecimal literal
 int j = 0X3FFF;        // Equal to i
 ```
 
-若要指定无符号的类型，请使用`u`或`U`后缀。 若要指定长类型，请使用`l`或`L`后缀。 要指定 64 位整型类型，请使用 LL 或 ll 后缀。 虽然仍支持 i64 后缀，但应避免使用，因为它特定于 Microsoft 且不可移植。 例如：
+若要指定无符号类型，请使用 `u` 或 `U` 后缀。 若要指定 long 类型，请使用 `l` 或 `L` 后缀。 要指定 64 位整型类型，请使用 LL 或 ll 后缀。 虽然仍支持 i64 后缀，但应避免使用，因为它特定于 Microsoft 且不可移植。 例如：
 
 ```cpp
 unsigned val_1 = 328u;             // Unsigned value
@@ -71,7 +69,7 @@ auto val_4 = 108LL;                           // signed long long
 auto val_4 = 0x8000000000000000ULL << 16;     // unsigned long long
 ```
 
-**数字分隔符**:可以使用单引号字符 （撇号） 分隔中较大的数，以使其更易于供人阅读的位置值。 分隔符不会对编译产生任何影响。
+**数字分隔符**：可以使用单引号字符（撇号）将位置值隔开，使其更易于阅读。 分隔符不会对编译产生任何影响。
 
 ```cpp
 long long i = 24'847'458'121
@@ -79,7 +77,7 @@ long long i = 24'847'458'121
 
 ## <a name="floating-point-literals"></a>浮点文本
 
-浮点文本指定必须具有小数部分的值。 这些值包含小数点 (**。**)，并且可以包含指数的后面。
+浮点文本指定必须具有小数部分的值。 这些值包含小数点（ **.** ），并且可包含指数。
 
 浮点文本具有“尾数”（用于指定数字的值）、“指数”（用于指定数字的量级）和可选的后缀（用于指定文本的类型）。 指定的尾数的格式是一系列位数后跟一个句点，再后跟表示数字的小数部分的可选的一系列位数。 例如：
 
@@ -95,11 +93,11 @@ long long i = 24'847'458'121
 18.46e1           // 184.6
 ```
 
-可能会使用指定指数`e`或`E`，它具有相同的含义后, 跟一个可选符号 (+ 或-) 和一系列数字。  如果指数存在，则整数（如 `18E0`）中不需要尾随的小数点。
+指数可以使用 `e` 或 `E`来指定，它们具有相同的含义，后跟一个可选符号（+ 或-）和一系列数字。  如果指数存在，则整数（如 `18E0`）中不需要尾随的小数点。
 
-浮点文本默认为类型**double**。 通过使用后缀`f`或`l`(或`F`或`L`— 后缀不区分大小写)，文本可以指定为**float**或者**长双精度型**，分别。
+浮点文本默认为**double**类型。 通过使用后缀 `f` 或 `l` （或 `F` 或 `L` （后缀不区分大小写），可以将文本分别指定为**float**或**long double**。
 
-尽管**长双精度**并**double**具有相同的表示形式，它们不是相同的类型。 例如，您可能有类似于下面的重载函数
+尽管**长双精度**和**双精度**值具有相同的表示形式，但它们的类型不同。 例如，您可能有类似于下面的重载函数
 
 ```cpp
 void func( double );
@@ -113,11 +111,11 @@ void func( long double );
 
 ## <a name="boolean-literals"></a>布尔文本
 
-布尔文本为 **，则返回 true**并**false**。
+布尔值文本为**true**和**false**。
 
 ## <a name="pointer-literal-c11"></a>指针文本 (C++11)
 
-C++ 引入[nullptr](../cpp/nullptr.md)文本来指定初始化为零的指针。 在可移植代码中， **nullptr**应使用而不是整型类型零或宏，如空值。
+C++ 引入[nullptr](../cpp/nullptr.md)文本来指定初始化为零的指针。 在可移植代码中，应使用**nullptr** ，而不是整数类型零或宏，如 NULL。
 
 ## <a name="binary-literals-c14"></a>二进制文本 (C++14)
 
@@ -139,7 +137,7 @@ if (num < 100)
 
 在上一个示例中，使用能够传达明确含义的命名常量可能会更好，例如“MAXIMUM_ERROR_THRESHOLD”。 如果最终用户看到返回值“成功”，则使用可以存储在文件单一位置中的命名字符串常量可能会更好，它可以在该位置本地化为其他语言。 使用命名常量可帮助你自己和其他人了解代码的含义。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [词法约定](../cpp/lexical-conventions.md)<br/>
 [C++字符串文本](../cpp/string-and-character-literals-cpp.md)<br/>

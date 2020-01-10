@@ -1,6 +1,6 @@
 ---
 title: ML 和 ML64 命令行参考
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - ML
 helpviewer_keywords:
@@ -54,18 +54,18 @@ helpviewer_keywords:
 - command line, reference [ML]
 - /Ta MASM compiler option
 ms.assetid: 712623c6-f77e-47ea-a945-089e57c50b40
-ms.openlocfilehash: 470cad1be6fe314fde89ee144a8935664ead5953
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 77385317ab7f90a646b7f552e471d0f434e72bfb
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397199"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317157"
 ---
 # <a name="ml-and-ml64-command-line-reference"></a>ML 和 ML64 命令行参考
 
 汇编和链接一个或多个汇编语言源文件。 命令行选项区分大小写。
 
-有关 ml64.exe 的详细信息，请参阅[MASM for x64 （ml64.exe）](../../assembler/masm/masm-for-x64-ml64-exe.md)。
+有关 ml64.exe 的详细信息，请参阅[MASM for x64 （ml64.exe）](masm-for-x64-ml64-exe.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -80,7 +80,7 @@ ms.locfileid: "74397199"
 
 |选项|操作|
 |------------|------------|
-|**/AT**|启用小型内存模型支持。 启用违反 .com 格式文件要求的代码构造的错误消息。 请注意，这与不等效[。](../../assembler/masm/dot-model.md)对**小**指令建模。<br /><br /> 在 ml64.exe 中不可用。|
+|**/AT**|启用小型内存模型支持。 启用违反 .com 格式文件要求的代码构造的错误消息。 请注意，这与不等效[。](dot-model.md)对**小**指令建模。<br /><br /> 在 ml64.exe 中不可用。|
 |**/Bl** *filename*|选择备用链接器。|
 |**/c**|仅装配。 不链接。|
 |**/coff**|生成对象模块的通用对象文件格式（COFF）类型。 通常，Win32 汇编语言开发需要。<br /><br /> 在 ml64.exe 中不可用。|
@@ -103,17 +103,17 @@ ms.locfileid: "74397199"
 |**/GZ**|指定使用 __stdcall 函数调用和命名约定。  与**选项语言相同： STCALL**。<br /><br /> 在 ml64.exe 中不可用。|
 |**/H** *数字*|限制外部名称为有效字符数。 默认值为31个字符。<br /><br /> 在 ml64.exe 中不可用。|
 |**/help**|调用 QuickHelp 获取有关 ML 的帮助。|
-|**/I** *路径名称*|设置包含文件的路径。 最多允许10个 **/i**选项。|
+|**/I** *pathname*|设置包含文件的路径。 最多允许10个 **/i**选项。|
 |**/nologo**|禁止成功的程序集的消息。|
 |**/omf**|生成对象模块的对象模块文件格式（OMF）类型。  **/omf**表示 **/c**;ML 不支持链接 OMF 对象。<br /><br /> 在 ml64.exe 中不可用。|
 |**/Sa**|打开列出所有可用信息。|
-|**/safeseh**|将对象标记为不包含异常处理程序或包含所有声明为的异常处理程序[。SAFESEH](../../assembler/masm/dot-safeseh.md)。<br /><br /> 在 ml64.exe 中不可用。|
+|**/safeseh**|将对象标记为不包含异常处理程序或包含所有声明为的异常处理程序[。SAFESEH](dot-safeseh.md)。<br /><br /> 在 ml64.exe 中不可用。|
 |**/Sf**|将第一个传递列表添加到列表文件中。|
-|**/Sl** *宽度*|设置源列表的线条宽度（以字符为单位）。 范围为60到255或0。 默认值为0。 与[页面](../../assembler/masm/page.md)宽度相同。|
+|**/Sl** *宽度*|设置源列表的线条宽度（以字符为单位）。 范围为60到255或0。 默认为 0。 与[页面](page.md)宽度相同。|
 |**/Sn**|生成列表时关闭符号表。|
-|**/Sp** *长度*|设置源列表的页面长度（以页为单位）。 范围为10到255或0。 默认值为0。 与[页面](../../assembler/masm/page.md)长度相同。|
-|**/Ss** *文本*|指定源列表的文本。 与[副标题](../../assembler/masm/subtitle.md)文本相同。|
-|**/St** *文本*|指定源列表的标题。 与[标题](../../assembler/masm/title.md)文本相同。|
+|**/Sp** *长度*|设置源列表的页面长度（以页为单位）。 范围为10到255或0。 默认为 0。 与[页面](page.md)长度相同。|
+|**/Ss** *文本*|指定源列表的文本。 与[副标题](subtitle.md)文本相同。|
+|**/St** *文本*|指定源列表的标题。 与[标题](title.md)文本相同。|
 |**/Sx**|在列表中打开 false 条件。|
 |**/Ta** *filename*|汇编其名称不以 .asm 扩展名结尾的源文件。|
 |**/w**|与 **/W0/WX**相同。|
@@ -142,7 +142,7 @@ ML 和 ML64.EXE 的某些命令行选项是位置相关的。 例如，因为 ML
 
 ## <a name="environment-variables"></a>环境变量
 
-|变量|说明|
+|变量|描述|
 |--------------|-----------------|
 |INCLUDE|指定包含文件的搜索路径。|
 |ML|指定默认的命令行选项。|
@@ -150,5 +150,5 @@ ML 和 ML64.EXE 的某些命令行选项是位置相关的。 例如，因为 ML
 
 ## <a name="see-also"></a>另请参阅
 
-[ML 错误消息](../../assembler/masm/ml-error-messages.md)\
-[Microsoft 宏汇编程序参考](../../assembler/masm/microsoft-macro-assembler-reference.md)
+[ML 错误消息](ml-error-messages.md)\
+[Microsoft 宏汇编程序参考](microsoft-macro-assembler-reference.md)

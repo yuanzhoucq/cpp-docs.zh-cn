@@ -1,16 +1,16 @@
 ---
 title: C++ 中的模块概述
-ms.date: 07/23/2019
+ms.date: 12/13/2019
 helpviewer_keywords:
 - modules [C++]
 - modules [C++], overview
 description: C + + 20 中的模块为标头文件提供了一种新式替代方法。
-ms.openlocfilehash: 17495aa3e295b26fcfa5c489ff6793bb75d13d68
-ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
+ms.openlocfilehash: 28e1824250ad4fb404c528aa9511745abb001f31
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70273670"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301374"
 ---
 # <a name="overview-of-modules-in-c"></a>C++ 中的模块概述
 
@@ -20,7 +20,7 @@ C + + 20 引入了*模块*，是用于组件化C++库和程序的新式解决方
 
 ## <a name="enable-modules-in-the-microsoft-c-compiler"></a>在 Microsoft C++编译器中启用模块
 
-Visual Studio 2019 版本16.2 中的模块未在 Microsoft C++编译器中完全实现。 你可以使用模块功能创建单分区模块，并导入 Microsoft 提供的标准库模块。 若要启用对模块的支持，请使用[/experimental： module](../build/reference/experimental-module.md)和[/std： c + + 最新版本](../build/reference/std-specify-language-standard-version.md)进行编译。 在 Visual Studio 项目中，右键单击**解决方案资源管理器**的项目节点，然后选择 "**属性**"。 将**配置**下拉设置为 "**所有配置**"，然后选择 "**配置属性** > " "**C++C/**  >  > 语言 **C++启用模块" （实验性）** 。
+Visual Studio 2019 版本16.2 中的模块未在 Microsoft C++编译器中完全实现。 你可以使用模块功能创建单分区模块，并导入 Microsoft 提供的标准库模块。 若要启用对模块的支持，请使用[/experimental： module](../build/reference/experimental-module.md)和[/std： c + + 最新版本](../build/reference/std-specify-language-standard-version.md)进行编译。 在 Visual Studio 项目中，右键单击**解决方案资源管理器**的项目节点，然后选择 "**属性**"。 将 "**配置**" 下拉箭头设置为 "**所有配置**"，然后选择 "**配置属性**" > **C/C++**  > **语言** > **启用C++模块（实验）** 。
 
 模块和使用它的代码必须使用相同的编译器选项编译。
 
@@ -28,24 +28,24 @@ Visual Studio 2019 版本16.2 中的模块未在 Microsoft C++编译器中完全
 
 虽然 c + + 20 标准未指定，但 Microsoft 允许将C++标准库的实现作为模块导入。 通过将C++标准库作为模块导入（而不是通过头文件 #including），可以根据项目的大小，提高编译时间。 库被组件化到以下模块：
 
-- std regex 提供标头\<正则表达式的内容 >
-- std filesystem 提供标头\<文件系统的内容 >
-- std 提供标头\<内存内容 >
-- std： thread 提供\<标头原子 >、 \<condition_variable >、 \<未来 >、 \<互斥 >、 \<shared_mutex > 和\<线程的内容 >
+- std regex 提供标头的内容 \<regex >
+- std filesystem 提供标头 \<filesystem 的内容 >
+- std 提供标头 \<内存的内容 >
+- std 提供标头的内容 \<原子 >、\<condition_variable >、\<未来 >、\<互斥 >、\<shared_mutex > 和 \<线程 >
 - std 核心提供了标准库中的C++所有其他内容
 
-若要使用这些模块，只需将 import 语句添加到源代码文件的顶部。 例如:
+若要使用这些模块，只需将导入声明添加到源代码文件的顶部。 例如：
 
 ```cpp
 import std.core;
 import std.regex;
 ```
 
-若要使用 Microsoft 标准库模块，必须使用[/ehsc](../build/reference/eh-exception-handling-model.md)和[/md](../build/reference/md-mt-ld-use-run-time-library.md)选项来编译程序。
+若要使用 Microsoft 标准库模块，请使用[/ehsc](../build/reference/eh-exception-handling-model.md)和[/md](../build/reference/md-mt-ld-use-run-time-library.md)选项编译程序。
 
 ## <a name="basic-example"></a>基本示例
 
-下面的示例在名为**ixx**的源文件中显示一个简单的模块定义。 Visual Studio 中的模块接口文件需要**ixx**扩展名。 在此示例中，接口文件包含函数定义和声明。 但是，还可以将定义放置在一个或多个单独的文件中（如后面的示例中所示）。 **导出模块 Foo**语句指示此文件是名`Foo`为的模块的主要接口。 `Foo` 上`f()`的导出修饰符指示当其他程序或模块导入此函数时，此函数将可见。 请注意，该模块引用命名`Bar`空间。
+下面的示例在名为**ixx**的源文件中显示一个简单的模块定义。 Visual Studio 中的模块接口文件需要**ixx**扩展名。 在此示例中，接口文件包含函数定义和声明。 但是，还可以将定义放置在一个或多个单独的文件中（如后面的示例中所示）。 **导出模块 Foo**语句指示此文件是名为 `Foo`的模块的主要接口。 `f()` 上的**export**修饰符表示当其他程序或模块导入 `Foo` 时，此函数将可见。 请注意，该模块引用命名空间 `Bar`。
 
 ```cpp
 export module Foo;
@@ -64,7 +64,7 @@ namespace Bar
 }
 ```
 
-文件**myprogram.exe**使用**import**语句访问导出`Foo`的名称。 请注意，此`Bar`名称在此处可见，但并不是其所有成员。 另请注意，宏`ANSWER`不可见。
+文件**myprogram.exe**使用**导入**声明访问 `Foo`导出的名称。 请注意，此处 `Bar` 名称是可见的，但并不是其所有成员。 另请注意，宏 `ANSWER` 不可见。
 
 ```cpp
 
@@ -132,7 +132,7 @@ export import :part2
 
 ## <a name="modules-and-header-files"></a>模块和标头文件
 
-您可以通过将`#include`指令置于模块声明之前，将标头文件包含在模块源文件中。 这些文件被视为位于*全局模块片段*中。 模块只能在它显式包含的标头中看到*全局模块片段*中的名称。 全局模块片段只包含实际使用的符号。
+可以通过将 `#include` 指令置于模块声明之前，将标头文件包含在模块源文件中。 这些文件被视为位于*全局模块片段*中。 模块只能在它显式包含的标头中看到*全局模块片段*中的名称。 全局模块片段只包含实际使用的符号。
 
 ```cpp
 // MyModuleA.cpp
@@ -168,6 +168,6 @@ import <vector>
 import "myheader.h"
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [模块，导入，导出](import-export-module.md)

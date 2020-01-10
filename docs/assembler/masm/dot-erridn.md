@@ -8,12 +8,12 @@ helpviewer_keywords:
 - .ERRIDN directive
 - .ERRIDNI directive
 ms.assetid: 89507db3-7d40-4a5e-a378-24d30feda9d1
-ms.openlocfilehash: a83015e8cd1354732bd8427bcb865ac241a6caed
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 036431d3b40fae8a7f9cbd0502dd46ba1fb4dcbe
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398346"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313465"
 ---
 # <a name="perioderridn-perioderridni"></a>&period;.ERRIDN，&period;ERRIDNI
 
@@ -30,4 +30,5 @@ ms.locfileid: "74398346"
 
 ## <a name="see-also"></a>另请参阅
 
-[指令参考](../../assembler/masm/directives-reference.md)
+[指令引用](directives-reference.md)\
+[MASM BNF 语法](masm-bnf-grammar.md)

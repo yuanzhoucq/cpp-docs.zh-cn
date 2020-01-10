@@ -1,21 +1,21 @@
 ---
-title: '@fardata?'
-ms.date: 08/30/2018
+title: '@fardata？'
+ms.date: 12/17/2019
 f1_keywords:
 - '@fardata?'
 helpviewer_keywords:
 - '@fardata? symbol'
 ms.assetid: 5184ac8d-c433-4136-81b2-3e7f6082415d
-ms.openlocfilehash: 2b3df142a7cd45948c934cae04bdb36c00b5ba76
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: bb09688ea5848ab04031539d3b3feaa79c5ad40a
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74399098"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75315883"
 ---
 # <a name="fardata"></a>\@fardata？
 
-定义的段的名称[。FARDATA？](../../assembler/masm/dot-fardata-q.md)指令（文本宏）。
+定义的段的名称[。FARDATA？](dot-fardata-q.md)指令（文本宏）。
 
 ## <a name="syntax"></a>语法
 
@@ -23,4 +23,5 @@ ms.locfileid: "74399098"
 
 ## <a name="see-also"></a>另请参阅
 
-[符号引用](symbols-reference.md)
+[符号引用](symbols-reference.md)\
+[MASM BNF 语法](masm-bnf-grammar.md)

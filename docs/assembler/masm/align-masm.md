@@ -1,25 +1,25 @@
 ---
 title: ALIGN (MASM)
-ms.date: 01/02/2019
+ms.date: 12/17/2019
 f1_keywords:
 - align
 helpviewer_keywords:
 - ALIGN directive
 ms.assetid: 1c386b23-439f-4ec3-a6de-74427b25e47f
-ms.openlocfilehash: 22b18f2e238c780377b84fc2be3eb6678686bb73
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 700721768deaf92e88b32a97e68c6e017219d19d
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74399275"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75316585"
 ---
-# <a name="align-masm"></a>ALIGN (MASM)
+# <a name="align"></a>ALIGN
 
 **ALIGN**指令将下一个数据元素或指令与作为其参数的倍数的地址对齐。 参数必须是2的幂（例如，1、2、4等等），小于或等于段对齐。
 
 ## <a name="syntax"></a>语法
 
-> **ALIGN** ⟦*number*⟧
+> **ALIGN** ⟦*constantExpression*⟧
 
 ## <a name="remarks"></a>备注
 
@@ -32,4 +32,5 @@ ms.locfileid: "74399275"
 ## <a name="see-also"></a>另请参阅
 
 [即使](even.md)\
-[指令参考](directives-reference.md)
+[指令引用](directives-reference.md)\
+[MASM BNF 语法](masm-bnf-grammar.md)
