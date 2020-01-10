@@ -1,15 +1,14 @@
 ---
 title: 在 Visual Studio 中创建 C++ 跨平台项目
 description: 如何在 Visual Studio 中设置、编译和调试C++面向 Linux 和 Windows 的开源 CMake 项目。
-author: mikeblome
 ms.topic: tutorial
-ms.date: 11/08/2019
-ms.openlocfilehash: 269c9e88133a492f66df7c7f81ab35424aff125d
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.date: 01/08/2020
+ms.openlocfilehash: 83d71d3078e892a51aef159b225fecec2b581f20
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303255"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75791758"
 ---
 # <a name="tutorial-create-c-cross-platform-projects-in-visual-studio"></a>教程：在C++ Visual Studio 中创建跨平台项目
 
@@ -44,10 +43,10 @@ Visual Studio C 和 C++ 开发不再仅适用于 Windows。 本教程介绍如�
     chmod +x cmake-3.11.18033000-MSVC_2-Linux-x86_64.sh
     ```
 
-  * 可以使用 `-–help` 查看运行脚本的选项。 建议使用 `–prefix` 选项指定在 **/usr/local**路径中安装，因为这是 Visual Studio 查找 CMake 的默认位置。 以下示例显示了 Linux-x86_64 脚本。 如果你使用不同的目标平台，请根据需要进行更改。
+  * 可以使用 `-–help` 查看运行脚本的选项。 建议使用 `–prefix` 选项来指定在 **/usr**路径中安装，因为 **/Usr/bin**是 Visual Studio 查找 CMake 的默认位置。 以下示例显示了 Linux-x86_64 脚本。 如果你使用不同的目标平台，请根据需要进行更改。
 
     ```cmd
-    sudo ./cmake-3.11.18033000-MSVC_2-Linux-x86_64.sh --skip-license --prefix=/usr/local
+    sudo ./cmake-3.11.18033000-MSVC_2-Linux-x86_64.sh --skip-license --prefix=/usr
     ```
 
 * 在 Windows 计算机上安装的适用于 Windows 的 Git。
