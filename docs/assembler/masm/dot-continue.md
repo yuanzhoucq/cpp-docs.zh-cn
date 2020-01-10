@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - .CONTINUE directive
 ms.assetid: 60a6e46d-49e6-4d65-97d0-cbe8c47b3fab
-ms.openlocfilehash: 18032113bdba0c2ae5182cd2fc3cc3382a1914d5
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 6c6af474e065a17c413700d4826f9a73dcaaade7
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398552"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75314089"
 ---
 # <a name="continue-32-bit-masm"></a>.CONTINUE （32位 MASM）
 
-生成要跳转到顶部的代码[。WHILE](../../assembler/masm/dot-while.md)或[。](../../assembler/masm/dot-repeat.md)如果*condition*为 TRUE，则重复 block。 （仅限32位 MASM。）
+生成要跳转到顶部的代码[。WHILE](dot-while.md)或[。](dot-repeat.md)如果*condition*为 TRUE，则重复 block。 （仅限32位 MASM。）
 
 ## <a name="syntax"></a>语法
 
@@ -23,4 +23,5 @@ ms.locfileid: "74398552"
 
 ## <a name="see-also"></a>另请参阅
 
-[指令参考](../../assembler/masm/directives-reference.md)
+[指令引用](directives-reference.md)\
+[MASM BNF 语法](masm-bnf-grammar.md)

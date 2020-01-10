@@ -1,17 +1,17 @@
 ---
 title: TITLE
-ms.date: 08/30/2018
+ms.date: 12/16/2019
 f1_keywords:
 - title
 helpviewer_keywords:
 - TITLE directive
 ms.assetid: d49df4dc-75db-472c-950e-75344e3c81eb
-ms.openlocfilehash: 1e5f10e99413d85546b24dbb5db2b69705d62506
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 3903a1395555d8c624e3a25836f54313ce758ab5
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74393195"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318366"
 ---
 # <a name="title"></a>TITLE
 
@@ -23,4 +23,5 @@ ms.locfileid: "74393195"
 
 ## <a name="see-also"></a>另请参阅
 
-[指令参考](directives-reference.md)
+[指令引用](directives-reference.md)\
+[MASM BNF 语法](masm-bnf-grammar.md)

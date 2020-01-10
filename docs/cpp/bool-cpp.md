@@ -8,18 +8,18 @@ helpviewer_keywords:
 - bool keyword [C++]
 - __BOOL_DEFINED macro
 ms.assetid: 9abed3f2-d21c-4eb4-97c5-716342e613d8
-ms.openlocfilehash: e481cb9de7c80d147179efceab2fda9b160f3c21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a3384bbb118c7363a603b5b9b0c8a375cb3dd185
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184268"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301621"
 ---
 # <a name="bool-c"></a>bool (C++)
 
-此关键字是内置类型。 此类型的变量可以具有值[，则返回 true](../cpp/true-cpp.md)并[false](../cpp/false-cpp.md)。 条件表达式具有类型**bool** ，因此拥有类型的值**bool**。 例如，`i!=0`现在具有 TRUE 或 FALSE，具体取决于值`i`。
+此关键字是内置类型。 此类型的变量可以具有值[true](../cpp/true-cpp.md)和[false](../cpp/false-cpp.md)。 条件表达式的类型为**bool** ，因此具有类型为**bool**的值。 例如，`i!=0` 现在具有 TRUE 或 FALSE，具体取决于 `i`的值。
 
-**Visual Studio 2017 版本 15.3 及更高版本**(适用于[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):操作数的后缀或前缀递增或递减运算符不能为类型**bool**。 换而言之，给定变量`b`类型的**bool**，不再允许两个表达式：
+**Visual Studio 2017 15.3 及更高版本**(适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)): 操作数的后缀或前缀递增或递减运算符不能为类型**bool**。 换言之，在给定变量 `b` 类型为**bool**后，将不再允许使用以下表达式：
 
 ```cpp
     b++;
@@ -28,7 +28,7 @@ ms.locfileid: "62184268"
     --b;
 ```
 
-TRUE 和 FALSE 的值具有以下关系：
+值 TRUE 和 FALSE 具有以下关系：
 
 ```cpp
 !false == true
@@ -41,16 +41,16 @@ TRUE 和 FALSE 的值具有以下关系：
 if (condexpr1) statement1;
 ```
 
-如果`condexpr1`为 TRUE 时，`statement1`时始终执行; 如果`condexpr1`为 FALSE，`statement1`永远不会执行。
+如果 `condexpr1` 为 TRUE，则始终执行 `statement1`;如果 `condexpr1` 为 FALSE，则永远不会执行 `statement1`。
 
-当后缀或前缀**++** 运算符应用于类型的变量**bool**，将变量设置为 TRUE。
-**Visual Studio 2017 版本 15.3 及更高版本**： 的 operator + + **bool**从该语言已被删除，不再受支持。
+将后缀或前缀 **++** 运算符应用到类型为**bool**的变量时，该变量将设置为 TRUE。
+**Visual Studio 2017 版本15.3 及更高版本**：已从该语言中删除了用于**bool**的 operator + +，不再受支持。
 
-后缀或前缀**--** 运算符不能应用于此类型的变量。
+后缀或前缀 **--** 运算符不能应用于此类型的变量。
 
-**Bool**类型参与了整型提升。 类型的右值**bool**可转换为类型为右值**int**、 与 FALSE 成为零和 TRUE 变为 1。 作为截然不同的类型， **bool**参与重载决策。
+**Bool**类型参与了整型提升。 **Bool**类型的 r 值可以转换为**int**类型的 r 值，而 FALSE 将变为零，并且 TRUE 变为一。 作为一种独特的类型， **bool**参与重载决策。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [关键字](../cpp/keywords-cpp.md)<br/>
-[基本类型](../cpp/fundamental-types-cpp.md)
+[内置类型](../cpp/fundamental-types-cpp.md)

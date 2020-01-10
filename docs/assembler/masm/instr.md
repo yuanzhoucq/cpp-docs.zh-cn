@@ -1,17 +1,17 @@
 ---
 title: INSTR
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - InStr
 helpviewer_keywords:
 - INSTR directive
 ms.assetid: fc37f6a2-3c95-47b2-b6bb-1066edd25994
-ms.openlocfilehash: 23641e4f7a8bec9eddcfa0e26b8acfe50c760a1a
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: b4af7af52a80b06b341d883d01c7fb8e03eccb8a
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397315"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313023"
 ---
 # <a name="instr"></a>INSTR
 
@@ -27,4 +27,5 @@ ms.locfileid: "74397315"
 
 ## <a name="see-also"></a>另请参阅
 
-[指令参考](directives-reference.md)
+[指令引用](directives-reference.md)\
+[MASM BNF 语法](masm-bnf-grammar.md)

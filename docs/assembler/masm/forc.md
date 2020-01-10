@@ -1,17 +1,17 @@
 ---
 title: FORC
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - FORC
 helpviewer_keywords:
 - FORC directive
 ms.assetid: 57c05099-0c46-44bc-9ae5-27ce850ccdff
-ms.openlocfilehash: f354a2ce3413976996f1e0bade1a5a706d4a3c54
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: d81c56c3322763030427d68d5b8075c9164f4ae3
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397528"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313309"
 ---
 # <a name="forc"></a>FORC
 
@@ -25,8 +25,9 @@ ms.locfileid: "74397528"
 
 ## <a name="remarks"></a>备注
 
-与[IRPC](../../assembler/masm/irpc.md)相同。
+与[IRPC](irpc.md)相同。
 
 ## <a name="see-also"></a>另请参阅
 
-[指令参考](directives-reference.md)
+[指令引用](directives-reference.md)\
+[MASM BNF 语法](masm-bnf-grammar.md)

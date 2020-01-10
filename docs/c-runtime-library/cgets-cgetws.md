@@ -30,19 +30,19 @@ helpviewer_keywords:
 - cgetws function
 - cgets function
 ms.assetid: 4d5e134a-58c3-4f62-befd-5d235b0212f4
-ms.openlocfilehash: aa258eaba34feec8ea25d780ea6392f195e37508
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 97a8de0a7fd0f278e6b0e3730a52ca3d0be6e07a
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944693"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75298995"
 ---
 # <a name="_cgets-_cgetws"></a>_cgets、_cgetws
 
-从控制台获取字符串。 提供这些函数的更多安全版本；请参阅 [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)。
+从控制台获取字符串。 已提供这些函数的更多安全版本；请参阅 [_cgets_s、_cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)。
 
 > [!IMPORTANT]
->  这些函数已过时。 从 Visual Studio 2015 开始，CRT 中不再提供这些函数。 这些函数（_cgets_s 和 _cgetws_s）的安全版本仍然可用。 有关这些备用函数的信息，请参阅 [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)。
+>  这些函数已过时。 从 Visual Studio 2015 开始，CRT 中不再提供这些函数。 这些函数（_cgets_s 和 _cgetws_s）的安全版本仍然可用。 有关这些备用函数的信息，请参阅 [_cgets_s、_cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)。
 
 > [!IMPORTANT]
 >  此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
@@ -73,7 +73,7 @@ wchar_t *_cgetws(
 
 ## <a name="return-value"></a>返回值
 
-在`_cgets` ， `_cgetws` 和 `buffer[2]`返回指向字符串起始位置的指针。 如果 `buffer` 为 NULL，这些函数则会调用无效的参数处理程序，如[参数验证](../c-runtime-library/parameter-validation.md)中所述  。 如果允许继续执行，这些函数则返回 NULL，并将 `errno` 设置为 `EINVAL`  。
+在 `buffer[2]`，`_cgets` 和 `_cgetws` 返回指向字符串起始位置的指针。 如果 `buffer` 为 NULL，这些函数则会调用无效的参数处理程序，如[参数验证](../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，这些函数则返回 NULL，并将 `errno` 设置为 `EINVAL`。
 
 ## <a name="remarks"></a>备注
 
@@ -81,7 +81,7 @@ wchar_t *_cgetws(
 
 因为处于控制台窗口中时，如果调用 `_cgets` 或 `_cgetws` ，所有编辑键都会处于活动状态，所以按 F3 键可以重复最后一个输入的项。
 
-在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅 [Secure Template Overloads](../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅[安全模板重载](../c-runtime-library/secure-template-overloads.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -89,18 +89,18 @@ wchar_t *_cgetws(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |`_cgetts`|`_cgets`|`_cgets`|`_cgetws`|
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>需求
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
 |`_cgets`|\<conio.h>|
 |`_cgetws`|\<conio.h> 或 \<wchar.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅 [Compatibility](../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
-```
+```c
 // crt_cgets.c
 // compile with: /c /W3
 // This program creates a buffer and initializes
@@ -142,7 +142,7 @@ Line Length = 16
 Text = A line of input.
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [控制台和端口 I/O](../c-runtime-library/console-and-port-i-o.md)<br/>
 [_getch、_getwch](../c-runtime-library/reference/getch-getwch.md)

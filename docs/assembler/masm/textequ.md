@@ -1,17 +1,17 @@
 ---
 title: TEXTEQU
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - TEXTEQU
 helpviewer_keywords:
 - TEXTEQU directive
 ms.assetid: 7c01df77-10d6-4555-8fe0-c5f7762df86d
-ms.openlocfilehash: e58c98b07a26e4c65f2c8e4a1f664b5f5045595f
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: cac09d500ac7f8478891eccf7daa61dea2159578
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74393187"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75319133"
 ---
 # <a name="textequ"></a>TEXTEQU
 
@@ -23,4 +23,5 @@ ms.locfileid: "74393187"
 
 ## <a name="see-also"></a>另请参阅
 
-[指令参考](directives-reference.md)
+[指令引用](directives-reference.md)\
+[MASM BNF 语法](masm-bnf-grammar.md)

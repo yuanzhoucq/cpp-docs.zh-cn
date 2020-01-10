@@ -1,6 +1,6 @@
 ---
 title: 运算符 LENGTH
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - operator LENGTH
 - length
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - LENGTH operator
 - operator LENGTH
 ms.assetid: dee7ba98-8e91-4078-9435-a2c8506e37f2
-ms.openlocfilehash: ee72edb08a1ea84d772e11045643167c26759a70
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: af102277567b32e3a350366b855ef0f194cb14f1
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74396843"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317911"
 ---
 # <a name="operator-length"></a>运算符 LENGTH
 
@@ -25,4 +25,5 @@ ms.locfileid: "74396843"
 
 ## <a name="see-also"></a>另请参阅
 
-[运算符引用](operators-reference.md)
+[运算符引用](operators-reference.md)\
+[MASM BNF 语法](masm-bnf-grammar.md)

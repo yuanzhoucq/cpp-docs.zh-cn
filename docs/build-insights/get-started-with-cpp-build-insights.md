@@ -1,5 +1,5 @@
 ---
-title: C++生成见解入门
+title: C++ 生成见解入门
 description: 概述如何使用C++生成时性能分析工具，这些工具是生成见解的一部分。
 ms.date: 11/03/2019
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 9c31d317cd7b9c6465362e3e532db2128303f602
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 862bfae3bdb27812306dcd356aecab812ea5181c
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73633224"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75298735"
 ---
-# <a name="get-started-with-c-build-insights"></a>C++生成见解入门
+# <a name="get-started-with-c-build-insights"></a>C++ 生成见解入门
 
 ::: moniker range="<=vs-2017"
 
@@ -39,7 +39,9 @@ WPA 是 Windows 评估和部署工具包（ADK）中提供的跟踪查看器。 
 
 ### <a name="to-download-and-install-wpa"></a>下载并安装 WPA
 
-1. 浏览到 Windows ADK 有问必答 Preview[下载页](https://www.microsoft.com/software-download/windowsinsiderpreviewADK)。
+注意：安装 Windows 性能分析器需要 Windows 8 或更高版本。
+
+1. 浏览到 Windows ADK 有问必答 Preview[下载页](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewADK)。
 
 1. 下载 Windows ADK 有问必答 Preview。 它是磁盘映像。
 
@@ -102,7 +104,7 @@ WPA 是 Windows 评估和部署工具包（ADK）中提供的跟踪查看器。 
 启动 WPA 并打开刚刚收集的跟踪。 WPA 应将C++其识别为 Build Insights 跟踪，并且以下视图应显示在左侧的图形资源管理器面板中：
 
 - 生成资源管理器
-- 文件
+- Files
 - 函数
 
 如果看不到这些视图，请仔细检查是否已正确配置 WPA，如[步骤 1](#configuration-steps)中所述。 可以通过将视图拖动到右侧的空 "分析" 窗口来查看生成数据，如下所示：

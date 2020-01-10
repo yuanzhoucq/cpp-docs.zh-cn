@@ -1,23 +1,21 @@
 ---
 title: WM_ 消息的处理程序
 ms.date: 11/04/2016
-f1_keywords:
-- WM_
 helpviewer_keywords:
 - WM_ messages [MFC]
 ms.assetid: cad81690-90bf-4f77-943f-a435e7563bdd
-ms.openlocfilehash: 2913bd775981eb197fec848aebca227822b45423
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e92e322e3026982730561086fb81f0c74d33286
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62322158"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302323"
 ---
-# <a name="handlers-for-wm-messages"></a>WM_ 消息的处理程序
+# <a name="handlers-for-wm_-messages"></a>WM_ 消息的处理程序
 
-以下主题对应的映射条目。
+以下主题对应于映射条目。
 
-|主题|映射项|
+|主题|映射条目|
 |-----------|-----------------|
 |[A - C](../../mfc/reference/wm-message-handlers-a-c.md)|通过 ON_WM_CTLCOLOR ON_WM_ACTIVATE|
 |[D - E](../../mfc/reference/wm-message-handlers-d-e.md)|通过 ON_WM_ERASEBKGND ON_WM_DEADCHAR|
@@ -28,6 +26,6 @@ ms.locfileid: "62322158"
 |[S](../../mfc/reference/wm-messages-s.md)|通过 ON_WM_SYSKEYUP ON_WM_SETCURSOR|
 |[T - Z](../../mfc/reference/wm-messages-t-z.md)|通过 ON_WM_WININICHANGE ON_WM_TIMECHANGE|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [消息映射](../../mfc/reference/message-maps-mfc.md)

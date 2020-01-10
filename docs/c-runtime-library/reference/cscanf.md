@@ -1,6 +1,6 @@
 ---
 title: cscanf
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - cscanf
 api_location:
@@ -23,16 +23,18 @@ f1_keywords:
 helpviewer_keywords:
 - cscanf function
 ms.assetid: 51aa2da2-0d53-4272-b510-f3eabf049ea7
-ms.openlocfilehash: 6b0a564c1c3b04e2bebc8e193e154bdf64b5873a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: dac19465145b2cae6c5c46327a3946a62ec58eae
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70938479"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300139"
 ---
 # <a name="cscanf"></a>cscanf
 
-此 POSIX 函数已弃用。 请改用符合 ISO C++ 的 [_cscanf](cscanf-cscanf-l-cwscanf-cwscanf-l.md)。
+特定于 Microsoft 的函数名称 `cscanf` 是[_cscanf](cscanf-cscanf-l-cwscanf-cwscanf-l.md)函数的不推荐使用的别名。 默认情况下，它会生成[编译器警告（等级3） C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)。 名称已弃用，因为它不遵循特定于实现的名称的标准 C 规则。 但是，该函数仍受支持。
+
+建议改用[_cscanf](cscanf-cscanf-l-cwscanf-cwscanf-l.md) 。 或者，你可以继续使用此函数名称，并禁用警告。 有关详细信息，请参阅[关闭警告](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning)和[POSIX 函数名称](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)。
 
 > [!IMPORTANT]
 > 此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。

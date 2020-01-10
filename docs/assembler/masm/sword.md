@@ -1,17 +1,17 @@
 ---
 title: SWORD
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - SWORD
 helpviewer_keywords:
 - SWORD directive
 ms.assetid: 99228a2a-4ed1-4343-a317-e59302620a55
-ms.openlocfilehash: d0a8c28ea5666ed5d4bd606d08ddfe5455c706a3
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: dc34061a14b41220252bbb75537d2ccefa601afe
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74393586"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318392"
 ---
 # <a name="sword"></a>SWORD
 
@@ -23,5 +23,6 @@ ms.locfileid: "74393586"
 
 ## <a name="see-also"></a>另请参阅
 
-[指令引用](../../assembler/masm/directives-reference.md)\
-[WORD](../../assembler/masm/word.md)
+[指令引用](directives-reference.md)\
+[WORD](word.md)\
+[MASM BNF 语法](masm-bnf-grammar.md)

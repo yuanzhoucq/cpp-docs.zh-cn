@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2085
 ms.assetid: 0a86785c-8e6f-481b-8c7b-412220c1950d
-ms.openlocfilehash: a65e3c0ea622950b99b9ba83fc168b4718d13e46
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 7dbf7266a6330a1fdb46d7f2df90e7684f026d9a
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345712"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301959"
 ---
 # <a name="compiler-error-c2085"></a>编译器错误 C2085
 
-identifier： 不在形参列表中
+"identifier"：不在形参表中
 
-函数定义中，但不是在形参列表中，已声明该标识符。 (仅适用于 ANSI C)
+已在函数定义中声明该标识符，但在形参表中未声明。 （仅限 ANSI C）
 
-下面的示例生成 C2085:
+下面的示例生成 C2085：
 
-```
+```c
 // C2085.c
 void func1( void )
 int main( void ) {}   // C2085
@@ -29,10 +29,10 @@ int main( void ) {}   // C2085
 
 可能的解决方法：
 
-```
+```c
 // C2085b.c
 void func1( void );
 int main( void ) {}
 ```
 
-使用分号缺少`func1()`看起来像函数定义，而不是原型，因此`main`中定义`func1()`，标识符生成错误 C2085 `main`。
+缺少分号后，`func1()` 看起来像函数定义，而不是原型，因此 `main` 在 `func1()`中定义，从而为标识符 `main`生成错误 C2085。

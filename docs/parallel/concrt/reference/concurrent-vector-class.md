@@ -33,16 +33,16 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_vector class
 ms.assetid: a217b4ac-af2b-4d41-94eb-09a75ee28622
-ms.openlocfilehash: 7c2ca35239dfb3ce4c0f710259f54005ff9f3c94
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 415dc9bd89346d9b5bddb2cdc52e10276646aa1f
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224202"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302115"
 ---
-# <a name="concurrentvector-class"></a>concurrent_vector 类
+# <a name="concurrent_vector-class"></a>concurrent_vector 类
 
-`concurrent_vector` 类是允许对任意元素进行随机访问的序列容器类。 它支持并发安全追加、元素访问、迭代器访问和迭代器遍历操作。
+`concurrent_vector` 类是允许对任意元素进行随机访问的序列容器类。 它支持并发安全追加、元素访问、迭代器访问和迭代器遍历操作。 此处，并发安全意味着指针或迭代器始终有效。 它不能保证元素初始化，也不能保证特定的遍历顺序。
 
 ## <a name="syntax"></a>语法
 
@@ -56,79 +56,79 @@ private details::_Concurrent_vector_base_v4;
 #### <a name="parameters"></a>参数
 
 *T*<br/>
-要存储在向量中的元素数据类型。
+要存储在向量中的元素的数据类型。
 
 *_Ax*<br/>
-表示存储的分配器对象封装有关分配和解除分配的并发向量内存的详细信息的类型。 此参数为可选参数，默认值为 `allocator<T>`。
+表示存储分配器对象的类型，该对象封装有关并发向量的内存分配和解除分配的详细信息。 此参数为可选参数，默认值为 `allocator<T>`。
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|描述|
+|Name|描述|
 |----------|-----------------|
-|`allocator_type`|表示并发向量的分配器类的类型。|
-|`const_iterator`|一个类型，提供的随机访问迭代器可读取`const`并发向量中的元素。|
-|`const_pointer`|提供一个指针指向的类型`const`并发向量中的元素。|
-|`const_reference`|提供对引用的类型`const`存储在用于读取和执行并发向量中元素`const`操作。|
-|`const_reverse_iterator`|一个类型，提供的随机访问迭代器可读取任何`const`并发向量中的元素。|
-|`difference_type`|提供并发向量中的两个元素之间的有符号的距离的类型。|
-|`iterator`|提供可读取并发向量中的任何元素的随机访问迭代器的类型。 使用迭代器对元素的修改不是并发安全的。|
-|`pointer`|提供指向并发向量中元素的类型。|
-|`reference`|提供对存储在并发向量的元素的引用的类型。|
-|`reverse_iterator`|提供可读取并发反向矢量中的任何元素的随机访问迭代器的类型。 使用迭代器对元素的修改不是并发安全的。|
-|`size_type`|一种计算并发向量中的元素数目的类型。|
-|`value_type`|表示并发向量中存储的数据类型的类型。|
+|`allocator_type`|一个类型，表示并发向量的分配器类。|
+|`const_iterator`|一种类型，它提供可读取并发向量中的 `const` 元素的随机访问迭代器。|
+|`const_pointer`|一种类型，它提供指向并发向量中的 `const` 元素的指针。|
+|`const_reference`|一种类型，该类型提供对存储在并发向量中的 `const` 元素的引用，以便读取和执行 `const` 操作。|
+|`const_reverse_iterator`|一种类型，它提供可读取并发向量中任何 `const` 元素的随机访问迭代器。|
+|`difference_type`|一种类型，它提供并发向量中两个元素之间的有符号距离。|
+|`iterator`|一种类型，它提供可读取并发向量中的任何元素的随机访问迭代器。 使用迭代器修改元素不是并发安全的。|
+|`pointer`|一种类型，它提供指向并发向量中元素的指针。|
+|`reference`|一种类型，该类型提供对并发向量中存储的元素的引用。|
+|`reverse_iterator`|一种类型，它提供可读取反向并发向量中的任何元素的随机访问迭代器。 使用迭代器修改元素不是并发安全的。|
+|`size_type`|一种类型，它对并发向量中的元素数进行计数。|
+|`value_type`|一种类型，表示并发向量中存储的数据类型。|
 
-### <a name="public-constructors"></a>公共构造函数
+### <a name="public-constructors"></a>公用建構函式
 
-|名称|描述|
+|Name|描述|
 |----------|-----------------|
 |[concurrent_vector](#ctor)|已重载。 构造并发向量。|
-|[~ concurrent_vector 析构函数](#dtor)|清除所有元素，并销毁此并发向量。|
+|[~ concurrent_vector 析构函数](#dtor)|清除所有元素并销毁此并发向量。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|Name|描述|
 |----------|-----------------|
-|[assign](#assign)|已重载。 清除并发向量的元素，并为其分配`_N`的副本`_Item`，或指定的迭代器范围的值 [ `_Begin`， `_End`)。 此方法不是并发安全的。|
-|[at](#at)|已重载。 提供对并发向量中的给定索引处的元素的访问。 此方法是并发安全方法对于读取操作，并且还增加矢量，只要你确保值`_Index`小于并发向量的大小。|
-|[back](#back)|已重载。 返回的引用或`const`到最后一个引用并发向量中的元素。 如果并发向量为空，则返回值未定义。 此方法是并发安全的。|
-|[begin](#begin)|已重载。 返回一个迭代器的类型`iterator`或`const_iterator`并发向量的开头。 此方法是并发安全的。|
-|[capacity](#capacity)|返回到的并发向量可增长而无需分配更多内存的最大大小。 此方法是并发安全的。|
-|[cbegin](#cbegin)|返回一个迭代器类型的`const_iterator`并发向量的开头。 此方法是并发安全的。|
-|[cend](#cend)|返回一个迭代器类型的`const_iterator`到并发向量末尾。 此方法是并发安全的。|
-|[clear](#clear)|清除并发向量中的所有元素。 此方法不是并发安全的。|
-|[crbegin](#crbegin)|返回一个迭代器类型的`const_reverse_iterator`并发向量的开头。 此方法是并发安全的。|
-|[crend](#crend)|返回一个迭代器类型的`const_reverse_iterator`到并发向量末尾。 此方法是并发安全的。|
-|[empty](#empty)|测试是否并发向量为空时调用此方法。 此方法是并发安全的。|
-|[end](#end)|已重载。 返回一个迭代器的类型`iterator`或`const_iterator`到并发向量末尾。 此方法是并发安全的。|
-|[front](#front)|已重载。 返回的引用或`const`并发向量中第一个元素的引用。 如果并发向量为空，则返回值未定义。 此方法是并发安全的。|
-|[get_allocator](#get_allocator)|返回用于构造并发向量的分配器的副本。 此方法是并发安全的。|
-|[grow_by](#grow_by)|已重载。 增大此并发向量通过`_Delta`元素。 此方法是并发安全的。|
-|[grow_to_at_least](#grow_to_at_least)|增大此并发向量，直到它至少具有`_N`元素。 此方法是并发安全的。|
-|[max_size](#max_size)|返回的最大并发向量可容纳的元素数。 此方法是并发安全的。|
-|[push_back](#push_back)|已重载。 将给定的项追加到并发向量末尾。 此方法是并发安全的。|
-|[rbegin](#rbegin)|已重载。 返回一个迭代器的类型`reverse_iterator`或`const_reverse_iterator`并发向量的开头。 此方法是并发安全的。|
-|[rend](#rend)|已重载。 返回一个迭代器的类型`reverse_iterator`或`const_reverse_iterator`到并发向量末尾。 此方法是并发安全的。|
-|[reserve](#reserve)|分配足够的空间来增长到大小的并发向量`_N`而无需分配更多的内存更高版本。 此方法不是并发安全的。|
-|[resize](#resize)|已重载。 并发向量的大小更改为所请求的大小，删除或根据需要添加元素。 此方法不是并发安全的。|
-|[shrink_to_fit](#shrink_to_fit)|将压缩要减少碎片并优化内存使用的并发向量的内部表示形式。 此方法不是并发安全的。|
-|[size](#size)|返回在并发向量中的元素数。 此方法是并发安全的。|
-|[swap](#swap)|交换两个并发向量的内容。 此方法不是并发安全的。|
+|[assign](#assign)|已重载。 清除并发向量的元素，并为其分配 `_N` `_Item`副本或迭代器范围 [`_Begin`，`_End`）指定的值。 此方法不是并发安全方法。|
+|[at](#at)|已重载。 提供对并发向量中给定索引处的元素的访问。 对于读取操作，此方法是并发安全的，而且在增大向量时也是如此，前提是已确保该值 `_Index` 小于并发向量的大小。|
+|[back](#back)|已重载。 返回对并发向量中最后一个元素的引用或 `const` 引用。 如果并发向量为空，则返回值为 undefined。 此方法是并发安全方法。|
+|[begin](#begin)|已重载。 返回 `iterator` 或 `const_iterator` 到并发向量开头的类型的迭代器。 此方法是并发安全方法。|
+|[capacity](#capacity)|返回并发向量可以增长到的最大大小，无需分配更多内存。 此方法是并发安全方法。|
+|[cbegin](#cbegin)|返回 `const_iterator` 到并发向量开头的类型的迭代器。 此方法是并发安全方法。|
+|[cend](#cend)|返回 `const_iterator` 到并发向量末尾的类型的迭代器。 此方法是并发安全方法。|
+|[clear](#clear)|清除并发向量中的所有元素。 此方法不是并发安全方法。|
+|[crbegin](#crbegin)|返回 `const_reverse_iterator` 到并发向量开头的类型的迭代器。 此方法是并发安全方法。|
+|[crend](#crend)|返回 `const_reverse_iterator` 到并发向量末尾的类型的迭代器。 此方法是并发安全方法。|
+|[empty](#empty)|测试在调用此方法时并发向量是否为空。 此方法是并发安全方法。|
+|[end](#end)|已重载。 返回 `iterator` 或 `const_iterator` 到并发向量末尾的类型的迭代器。 此方法是并发安全方法。|
+|[front](#front)|已重载。 返回对并发向量中第一个元素的引用或 `const` 引用。 如果并发向量为空，则返回值为 undefined。 此方法是并发安全方法。|
+|[get_allocator](#get_allocator)|返回用于构造并发向量的分配器副本。 此方法是并发安全方法。|
+|[grow_by](#grow_by)|已重载。 通过 `_Delta` 元素增长此并发向量。 此方法是并发安全方法。|
+|[grow_to_at_least](#grow_to_at_least)|增大此并发向量，直到它至少具有 `_N` 元素。 此方法是并发安全方法。|
+|[max_size](#max_size)|返回并发矢量可容纳的最大元素数。 此方法是并发安全方法。|
+|[push_back](#push_back)|已重载。 将给定项追加到并发向量的末尾。 此方法是并发安全方法。|
+|[rbegin](#rbegin)|已重载。 返回 `reverse_iterator` 或 `const_reverse_iterator` 到并发向量开头的类型的迭代器。 此方法是并发安全方法。|
+|[rend](#rend)|已重载。 返回 `reverse_iterator` 或 `const_reverse_iterator` 到并发向量末尾的类型的迭代器。 此方法是并发安全方法。|
+|[reserve](#reserve)|分配足够的空间以将并发向量增长到 `_N` 大小，而无需在以后分配更多内存。 此方法不是并发安全方法。|
+|[resize](#resize)|已重载。 将并发向量的大小更改为所需大小，并根据需要删除或添加元素。 此方法不是并发安全方法。|
+|[shrink_to_fit](#shrink_to_fit)|压缩并发向量的内部表示形式，以减少碎片并优化内存使用。 此方法不是并发安全方法。|
+|[size](#size)|返回并发向量中的元素数目。 此方法是并发安全方法。|
+|[swap](#swap)|交换两个并发向量的内容。 此方法不是并发安全方法。|
 
-### <a name="public-operators"></a>公共运算符
+### <a name="public-operators"></a>公用運算子
 
-|名称|描述|
+|Name|描述|
 |----------|-----------------|
-|[operator\[\]](#operator_at)|已重载。 提供对并发向量中的给定索引处的元素的访问。 此方法是并发安全方法对于读取操作，并且还增加矢量，只要你确保值`_Index`小于并发向量的大小。|
-|[operator=](#operator_eq)|已重载。 另一种内容分配`concurrent_vector`到此对象。 此方法不是并发安全的。|
+|[operator\[\]](#operator_at)|已重载。 提供对并发向量中给定索引处的元素的访问。 对于读取操作，此方法是并发安全的，而且在增大向量时也是如此，前提是已确保该值 `_Index` 小于并发向量的大小。|
+|[operator=](#operator_eq)|已重载。 将另一个 `concurrent_vector` 对象的内容分配给此对象。 此方法不是并发安全方法。|
 
 ## <a name="remarks"></a>备注
 
-有关详细信息`concurrent_vector`类，请参阅[并行容器和对象](../../../parallel/concrt/parallel-containers-and-objects.md)。
+有关 `concurrent_vector` 类的详细信息，请参阅[并行容器和对象](../../../parallel/concrt/parallel-containers-and-objects.md)。
 
-## <a name="inheritance-hierarchy"></a>继承层次结构
+## <a name="inheritance-hierarchy"></a>繼承階層
 
 `_Concurrent_vector_base_v4`
 
@@ -136,15 +136,15 @@ private details::_Concurrent_vector_base_v4;
 
 `concurrent_vector`
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>需求
 
-**标头：** concurrent_vector.h
+**标头：** concurrent_vector。h
 
 **命名空间：** 并发
 
-##  <a name="assign"></a> 分配
+##  <a name="assign"></a>将
 
-清除并发向量的元素，并为其分配`_N`的副本`_Item`，或指定的迭代器范围的值 [ `_Begin`， `_End`)。 此方法不是并发安全的。
+清除并发向量的元素，并为其分配 `_N` `_Item`副本或迭代器范围 [`_Begin`，`_End`）指定的值。 此方法不是并发安全方法。
 
 ```
 void assign(
@@ -159,27 +159,27 @@ void assign(_InputIterator _Begin,
 ### <a name="parameters"></a>参数
 
 *_InputIterator*<br/>
-指定的迭代器的类型。
+指定迭代器的类型。
 
 *_N*<br/>
-要复制到此并发向量的项目数。
+要复制到并发向量中的项数。
 
 *_Item*<br/>
-对用来填充并发向量值的引用。
+对用于填充并发向量的值的引用。
 
 *_Begin*<br/>
-指向源范围的第一个元素的迭代器。
+源范围中第一个元素的迭代器。
 
 *_End*<br/>
-指向一个源范围的最后一个元素之后的迭代器。
+指向源范围最后一个元素之后的一个迭代器。
 
 ### <a name="remarks"></a>备注
 
-`assign` 不是并发安全的。 您必须确保没有其他线程在调用此方法时所调用的并发向量中的方法。
+`assign` 不是并发安全的。 调用此方法时，必须确保没有其他线程在并发向量上调用方法。
 
-##  <a name="at"></a> 在
+##  <a name="at"></a>最
 
-提供对并发向量中的给定索引处的元素的访问。 此方法是并发安全方法对于读取操作，并且还增加矢量，只要你确保值`_Index`小于并发向量的大小。
+提供对并发向量中给定索引处的元素的访问。 对于读取操作，此方法是并发安全的，而且在增大向量时也是如此，前提是已确保该值 `_Index` 小于并发向量的大小。
 
 ```
 reference at(size_type _Index);
@@ -198,13 +198,13 @@ const_reference at(size_type _Index) const;
 
 ### <a name="remarks"></a>备注
 
-该函数的版本`at`，它返回一个非`const`引用不能用于并发地写入来自不同线程的元素。 应使用不同的同步对象来同步并发读取和写入到相同的数据元素的操作。
+返回非 `const` 引用的函数 `at` 的版本不能用于从不同线程同时写入元素。 应使用不同的同步对象将并发读写操作同步到相同的数据元素。
 
-该方法将引发`out_of_range`如果`_Index`大于或等于并发向量的大小和`range_error`如果索引不中断向量的一部分。 有关如何一个向量，可能会中断的详细信息，请参阅[并行容器和对象](../../../parallel/concrt/parallel-containers-and-objects.md)。
+如果 `_Index` 大于或等于并发向量的大小，则方法会引发 `out_of_range`; 如果索引用于矢量的损坏部分，则会引发 `range_error`。 有关矢量如何中断的详细信息，请参阅[并行容器和对象](../../../parallel/concrt/parallel-containers-and-objects.md)。
 
-##  <a name="back"></a> back
+##  <a name="back"></a>返回
 
-返回的引用或`const`到最后一个引用并发向量中的元素。 如果并发向量为空，则返回值未定义。 此方法是并发安全的。
+返回对并发向量中最后一个元素的引用或 `const` 引用。 如果并发向量为空，则返回值为 undefined。 此方法是并发安全方法。
 
 ```
 reference back();
@@ -214,11 +214,11 @@ const_reference back() const;
 
 ### <a name="return-value"></a>返回值
 
-引用或`const`到最后一个引用并发向量中的元素。
+对并发向量中最后一个元素的引用或 `const` 引用。
 
-##  <a name="begin"></a> begin
+##  <a name="begin"></a>准备
 
-返回一个迭代器的类型`iterator`或`const_iterator`并发向量的开头。 此方法是并发安全的。
+返回 `iterator` 或 `const_iterator` 到并发向量开头的类型的迭代器。 此方法是并发安全方法。
 
 ```
 iterator begin();
@@ -228,11 +228,11 @@ const_iterator begin() const;
 
 ### <a name="return-value"></a>返回值
 
-类型的迭代器`iterator`或`const_iterator`并发向量的开头。
+`iterator` 或 `const_iterator` 到并发向量开头的类型的迭代器。
 
-##  <a name="capacity"></a> 容量
+##  <a name="capacity"></a>功能
 
-返回到的并发向量可增长而无需分配更多内存的最大大小。 此方法是并发安全的。
+返回并发向量可以增长到的最大大小，无需分配更多内存。 此方法是并发安全方法。
 
 ```
 size_type capacity() const;
@@ -244,11 +244,11 @@ size_type capacity() const;
 
 ### <a name="remarks"></a>备注
 
-不同于C++标准库`vector`、 一个`concurrent_vector`对象不会移动现有元素，前提是它分配更多的内存。
+与C++标准库 `vector`不同的是，如果 `concurrent_vector` 对象分配更多内存，则不会移动现有元素。
 
 ##  <a name="cbegin"></a> cbegin
 
-返回一个迭代器类型的`const_iterator`并发向量的开头。 此方法是并发安全的。
+返回 `const_iterator` 到并发向量开头的类型的迭代器。 此方法是并发安全方法。
 
 ```
 const_iterator cbegin() const;
@@ -256,11 +256,11 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>返回值
 
-类型的迭代器`const_iterator`并发向量的开头。
+`const_iterator` 到并发向量开头的类型的迭代器。
 
-##  <a name="cend"></a> cend
+##  <a name="cend"></a>cend
 
-返回一个迭代器类型的`const_iterator`到并发向量末尾。 此方法是并发安全的。
+返回 `const_iterator` 到并发向量末尾的类型的迭代器。 此方法是并发安全方法。
 
 ```
 const_iterator cend() const;
@@ -268,11 +268,11 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>返回值
 
-类型的迭代器`const_iterator`到并发向量末尾。
+`const_iterator` 到并发向量末尾的类型的迭代器。
 
-##  <a name="clear"></a> 清除
+##  <a name="clear"></a>清除
 
-清除并发向量中的所有元素。 此方法不是并发安全的。
+清除并发向量中的所有元素。 此方法不是并发安全方法。
 
 ```
 void clear();
@@ -280,7 +280,7 @@ void clear();
 
 ### <a name="remarks"></a>备注
 
-`clear` 不是并发安全的。 您必须确保没有其他线程在调用此方法时所调用的并发向量中的方法。 `clear` 不会释放内部数组。 若要释放内部数组，调用函数`shrink_to_fit`后`clear`。
+`clear` 不是并发安全的。 调用此方法时，必须确保没有其他线程在并发向量上调用方法。 `clear` 不会释放内部数组。 若要释放内部数组，请在 `clear`之后调用函数 `shrink_to_fit`。
 
 ##  <a name="ctor"></a> concurrent_vector
 
@@ -344,31 +344,31 @@ concurrent_vector(_InputIterator _Begin,
 
 ### <a name="remarks"></a>备注
 
-所有构造函数存储一个分配器对象`_Al`并初始化此矢量。
+所有构造函数都存储一个分配器对象 `_Al` 并初始化该向量。
 
-第一个构造函数指定一个空初始矢量，并显式指定的分配器类型。 若要使用。
+第一个构造函数指定一个空的初始向量，并显式指定分配器类型。 要使用的。
 
-第二个和第三个构造函数指定并发向量的副本`_Vector`。
+第二个和第三个构造函数指定并发向量 `_Vector`的副本。
 
 第四个构造函数指定并发向量 `_Vector` 的移动。
 
-第五个构造函数指定指定数目的重复项 ( `_N`) 的类的默认值的元素`T`。
+第五个构造函数指定类 `T`的默认值的元素的指定数目（`_N`）重复。
 
-第六个构造函数指定的重复项 ( `_N`) 值的元素`_Item`。
+第六个构造函数指定值 `_Item`的（`_N`）元素的重复。
 
-最后一个构造函数指定值提供的迭代器范围 [ `_Begin`， `_End`)。
+最后一个构造函数指定迭代器范围 [`_Begin`，`_End`）提供的值。
 
 ##  <a name="dtor"></a> ~concurrent_vector
 
-清除所有元素，并销毁此并发向量。
+清除所有元素并销毁此并发向量。
 
 ```
 ~concurrent_vector();
 ```
 
-##  <a name="crbegin"></a> crbegin
+##  <a name="crbegin"></a>crbegin
 
-返回一个迭代器类型的`const_reverse_iterator`并发向量的开头。 此方法是并发安全的。
+返回 `const_reverse_iterator` 到并发向量开头的类型的迭代器。 此方法是并发安全方法。
 
 ```
 const_reverse_iterator crbegin() const;
@@ -376,11 +376,11 @@ const_reverse_iterator crbegin() const;
 
 ### <a name="return-value"></a>返回值
 
-类型的迭代器`const_reverse_iterator`并发向量的开头。
+`const_reverse_iterator` 到并发向量开头的类型的迭代器。
 
-##  <a name="crend"></a> crend
+##  <a name="crend"></a>crend
 
-返回一个迭代器类型的`const_reverse_iterator`到并发向量末尾。 此方法是并发安全的。
+返回 `const_reverse_iterator` 到并发向量末尾的类型的迭代器。 此方法是并发安全方法。
 
 ```
 const_reverse_iterator crend() const;
@@ -388,11 +388,11 @@ const_reverse_iterator crend() const;
 
 ### <a name="return-value"></a>返回值
 
-类型的迭代器`const_reverse_iterator`到并发向量末尾。
+`const_reverse_iterator` 到并发向量末尾的类型的迭代器。
 
-##  <a name="empty"></a> empty
+##  <a name="empty"></a>空白处
 
-测试是否并发向量为空时调用此方法。 此方法是并发安全的。
+测试在调用此方法时并发向量是否为空。 此方法是并发安全方法。
 
 ```
 bool empty() const;
@@ -400,11 +400,11 @@ bool empty() const;
 
 ### <a name="return-value"></a>返回值
 
-**true**如果向量为空时调用的函数，此时**false**否则为。
+如果在调用函数时向量为空，**则为 true** ; 否则为**false** 。
 
-##  <a name="end"></a> 结束
+##  <a name="end"></a>端面
 
-返回一个迭代器的类型`iterator`或`const_iterator`到并发向量末尾。 此方法是并发安全的。
+返回 `iterator` 或 `const_iterator` 到并发向量末尾的类型的迭代器。 此方法是并发安全方法。
 
 ```
 iterator end();
@@ -414,11 +414,11 @@ const_iterator end() const;
 
 ### <a name="return-value"></a>返回值
 
-类型的迭代器`iterator`或`const_iterator`到并发向量末尾。
+`iterator` 或 `const_iterator` 到并发向量末尾的类型的迭代器。
 
-##  <a name="front"></a> 前端
+##  <a name="front"></a>主
 
-返回的引用或`const`并发向量中第一个元素的引用。 如果并发向量为空，则返回值未定义。 此方法是并发安全的。
+返回对并发向量中第一个元素的引用或 `const` 引用。 如果并发向量为空，则返回值为 undefined。 此方法是并发安全方法。
 
 ```
 reference front();
@@ -428,11 +428,11 @@ const_reference front() const;
 
 ### <a name="return-value"></a>返回值
 
-引用或`const`并发向量中第一个元素的引用。
+对并发向量中第一个元素的引用或 `const` 引用。
 
 ##  <a name="get_allocator"></a> get_allocator
 
-返回用于构造并发向量的分配器的副本。 此方法是并发安全的。
+返回用于构造并发向量的分配器副本。 此方法是并发安全方法。
 
 ```
 allocator_type get_allocator() const;
@@ -440,11 +440,11 @@ allocator_type get_allocator() const;
 
 ### <a name="return-value"></a>返回值
 
-用于构造的分配器的副本`concurrent_vector`对象。
+用于构造 `concurrent_vector` 对象的分配器副本。
 
-##  <a name="grow_by"></a> grow_by
+##  <a name="grow_by"></a>grow_by
 
-增大此并发向量通过`_Delta`元素。 此方法是并发安全的。
+通过 `_Delta` 元素增长此并发向量。 此方法是并发安全方法。
 
 ```
 iterator grow_by(
@@ -458,22 +458,22 @@ iterator grow_by(
 ### <a name="parameters"></a>参数
 
 *_Delta*<br/>
-要追加到对象的元素数。
+要追加到对象的元素的数目。
 
 *_Item*<br/>
-要初始化新元素的值。
+用于初始化新元素的值。
 
 ### <a name="return-value"></a>返回值
 
-追加到第一项的迭代器。
+指向追加的第一项的迭代器。
 
 ### <a name="remarks"></a>备注
 
-如果`_Item`未指定，则为默认构造的新元素。
+如果未指定 `_Item`，则默认构造新元素。
 
-##  <a name="grow_to_at_least"></a> grow_to_at_least
+##  <a name="grow_to_at_least"></a>grow_to_at_least
 
-增大此并发向量，直到它至少具有`_N`元素。 此方法是并发安全的。
+增大此并发向量，直到它至少具有 `_N` 元素。 此方法是并发安全方法。
 
 ```
 iterator grow_to_at_least(size_type _N);
@@ -482,15 +482,15 @@ iterator grow_to_at_least(size_type _N);
 ### <a name="parameters"></a>参数
 
 *_N*<br/>
-新的最小大小为`concurrent_vector`对象。
+`concurrent_vector` 对象的新的最小大小。
 
 ### <a name="return-value"></a>返回值
 
-指向追加序列的开头或索引处的元素的迭代器`_N`如果未追加元素。
+一个迭代器，它指向追加序列的开头，如果未追加任何元素，则为索引 `_N` 的元素。
 
-##  <a name="max_size"></a> max_size
+##  <a name="max_size"></a>max_size
 
-返回的最大并发向量可容纳的元素数。 此方法是并发安全的。
+返回并发矢量可容纳的最大元素数。 此方法是并发安全方法。
 
 ```
 size_type max_size() const;
@@ -498,11 +498,11 @@ size_type max_size() const;
 
 ### <a name="return-value"></a>返回值
 
-最大元素数`concurrent_vector`对象可以保存。
+`concurrent_vector` 对象可以容纳的最大元素数。
 
-##  <a name="operator_eq"></a> 运算符 =
+##  <a name="operator_eq"></a>operator =
 
-另一种内容分配`concurrent_vector`到此对象。 此方法不是并发安全的。
+将另一个 `concurrent_vector` 对象的内容分配给此对象。 此方法不是并发安全方法。
 
 ```
 concurrent_vector& operator= (
@@ -526,11 +526,11 @@ concurrent_vector& operator= (
 
 ### <a name="return-value"></a>返回值
 
-对此引用`concurrent_vector`对象。
+对此 `concurrent_vector` 对象的引用。
 
-##  <a name="operator_at"></a> operator[]
+##  <a name="operator_at"></a>运算符 []
 
-提供对并发向量中的给定索引处的元素的访问。 此方法是并发安全方法对于读取操作，并且还增加矢量，只要你确保值`_Index`小于并发向量的大小。
+提供对并发向量中给定索引处的元素的访问。 对于读取操作，此方法是并发安全的，而且在增大向量时也是如此，前提是已确保该值 `_Index` 小于并发向量的大小。
 
 ```
 reference operator[](size_type _index);
@@ -549,13 +549,13 @@ const_reference operator[](size_type _index) const;
 
 ### <a name="remarks"></a>备注
 
-版本`operator []`，它返回一个非`const`引用不能用于并发地写入来自不同线程的元素。 应使用不同的同步对象来同步并发读取和写入到相同的数据元素的操作。
+返回非 `const` 引用的 `operator []` 的版本不能用于从不同线程并发写入元素。 应使用不同的同步对象将并发读写操作同步到相同的数据元素。
 
-无边界检查执行，确保`_Index`是到此并发向量的有效索引。
+不执行边界检查来确保 `_Index` 是并发向量的有效索引。
 
-##  <a name="push_back"></a> push_back
+##  <a name="push_back"></a>push_back
 
-将给定的项追加到并发向量末尾。 此方法是并发安全的。
+将给定项追加到并发向量的末尾。 此方法是并发安全方法。
 
 ```
 iterator push_back(const_reference _Item);
@@ -572,9 +572,9 @@ iterator push_back(T&& _Item);
 
 追加到项的迭代器。
 
-##  <a name="rbegin"></a> rbegin
+##  <a name="rbegin"></a>rbegin
 
-返回一个迭代器的类型`reverse_iterator`或`const_reverse_iterator`并发向量的开头。 此方法是并发安全的。
+返回 `reverse_iterator` 或 `const_reverse_iterator` 到并发向量开头的类型的迭代器。 此方法是并发安全方法。
 
 ```
 reverse_iterator rbegin();
@@ -584,11 +584,11 @@ const_reverse_iterator rbegin() const;
 
 ### <a name="return-value"></a>返回值
 
-类型的迭代器`reverse_iterator`或`const_reverse_iterator`并发向量的开头。
+`reverse_iterator` 或 `const_reverse_iterator` 到并发向量开头的类型的迭代器。
 
-##  <a name="rend"></a> rend
+##  <a name="rend"></a>rend
 
-返回一个迭代器的类型`reverse_iterator`或`const_reverse_iterator`到并发向量末尾。 此方法是并发安全的。
+返回 `reverse_iterator` 或 `const_reverse_iterator` 到并发向量末尾的类型的迭代器。 此方法是并发安全方法。
 
 ```
 reverse_iterator rend();
@@ -598,11 +598,11 @@ const_reverse_iterator rend() const;
 
 ### <a name="return-value"></a>返回值
 
-类型的迭代器`reverse_iterator`或`const_reverse_iterator`到并发向量末尾。
+`reverse_iterator` 或 `const_reverse_iterator` 到并发向量末尾的类型的迭代器。
 
-##  <a name="reserve"></a> 保留
+##  <a name="reserve"></a>保留
 
-分配足够的空间来增长到大小的并发向量`_N`而无需分配更多的内存更高版本。 此方法不是并发安全的。
+分配足够的空间以将并发向量增长到 `_N` 大小，而无需在以后分配更多内存。 此方法不是并发安全方法。
 
 ```
 void reserve(size_type _N);
@@ -611,15 +611,15 @@ void reserve(size_type _N);
 ### <a name="parameters"></a>参数
 
 *_N*<br/>
-要保留的空间的元素数。
+要为其保留空间的元素的数目。
 
 ### <a name="remarks"></a>备注
 
-`reserve` 不是并发安全的。 您必须确保没有其他线程在调用此方法时所调用的并发向量中的方法。 在方法返回之后的并发向量的容量可能大于请求的保留。
+`reserve` 不是并发安全的。 调用此方法时，必须确保没有其他线程在并发向量上调用方法。 在方法返回后，并发向量的容量可能大于请求的保留的容量。
 
-##  <a name="resize"></a> 重设大小
+##  <a name="resize"></a>调节
 
-并发向量的大小更改为所请求的大小，删除或根据需要添加元素。 此方法不是并发安全的。
+将并发向量的大小更改为所需大小，并根据需要删除或添加元素。 此方法不是并发安全方法。
 
 ```
 void resize(
@@ -636,17 +636,17 @@ void resize(
 并发向量的新大小。
 
 *val*<br/>
-新的大小大于原始大小时添加至向量的新元素的值。 如果省略值，则新对象分配的默认值为它们的类型。
+新的大小大于原始大小时添加至向量的新元素的值。 如果省略此值，则会为新对象分配其类型的默认值。
 
 ### <a name="remarks"></a>备注
 
-如果容器的大小小于请求的大小，元素将添加到向量，直到它达到请求的大小。 如果容器的大小大于请求的大小，最接近容器末尾元素将被删除之前该容器达到大小`_N`。 如果容器的当前大小与请求的大小相同，则不采取任何操作。
+如果容器的大小小于请求的大小，则会将元素添加到向量，直到它达到请求的大小。 如果容器的大小大于请求的大小，则会删除最靠近容器末尾的元素，直到容器达到 `_N`大小。 如果容器的当前大小与请求的大小相同，则不采取任何操作。
 
-`resize` 不是并发安全的。 您必须确保没有其他线程在调用此方法时所调用的并发向量中的方法。
+`resize` 不是并发安全的。 调用此方法时，必须确保没有其他线程在并发向量上调用方法。
 
 ##  <a name="shrink_to_fit"></a> shrink_to_fit
 
-将压缩要减少碎片并优化内存使用的并发向量的内部表示形式。 此方法不是并发安全的。
+压缩并发向量的内部表示形式，以减少碎片并优化内存使用。 此方法不是并发安全方法。
 
 ```
 void shrink_to_fit();
@@ -654,11 +654,11 @@ void shrink_to_fit();
 
 ### <a name="remarks"></a>备注
 
-此方法将在内部重新分配内存四处移动元素，使所有迭代器失效。 `shrink_to_fit` 不是并发安全的。 您必须确保没有其他线程在调用此函数时所调用的并发向量中的方法。
+此方法将在内部重新分配内存移动元素，从而使所有迭代器失效。 `shrink_to_fit` 不是并发安全的。 调用此函数时，必须确保没有其他线程在并发向量上调用方法。
 
-##  <a name="size"></a> 大小
+##  <a name="size"></a>规格
 
-返回在并发向量中的元素数。 此方法是并发安全的。
+返回并发向量中的元素数目。 此方法是并发安全方法。
 
 ```
 size_type size() const;
@@ -666,15 +666,15 @@ size_type size() const;
 
 ### <a name="return-value"></a>返回值
 
-在此元素的数目`concurrent_vector`对象。
+此 `concurrent_vector` 对象中的元素数。
 
 ### <a name="remarks"></a>备注
 
-保证返回的大小将追加到该函数调用的所有元素都包含`push_back`，或增大调用此方法之前已完成的操作。 但是，它还可能包括分配的元素，但仍在通过对任何的增长方法的并发调用的构造。
+返回的大小保证包含通过调用函数追加的所有元素 `push_back`或在调用此方法之前已完成的增长操作。 但是，它还可能包括通过对任何增长方法的并发调用来分配但仍在构造中的元素。
 
-##  <a name="swap"></a> swap
+##  <a name="swap"></a>购
 
-交换两个并发向量的内容。 此方法不是并发安全的。
+交换两个并发向量的内容。 此方法不是并发安全方法。
 
 ```
 void swap(concurrent_vector& _Vector);
@@ -683,9 +683,9 @@ void swap(concurrent_vector& _Vector);
 ### <a name="parameters"></a>参数
 
 *_Vector*<br/>
-`concurrent_vector`对象要与其交换内容。
+要与其交换内容的 `concurrent_vector` 对象。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [并发命名空间](concurrency-namespace.md)<br/>
 [并行容器和对象](../../../parallel/concrt/parallel-containers-and-objects.md)

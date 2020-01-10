@@ -1,21 +1,21 @@
 ---
 title: DOSSEG
-ms.date: 11/05/2019
+ms.date: 12/17/2019
 f1_keywords:
 - DOSSEG
 helpviewer_keywords:
 - DOSSEG directive
 ms.assetid: 4312826a-1547-4d48-bfd7-cfaf6d037609
-ms.openlocfilehash: 1f91142f353af97e9bb972620ae6360ac6f1fa42
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 3cfeb19b1a77262c01c3049838d7de02ec7b3be6
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398751"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75314648"
 ---
-# <a name="dosseg-32-bit-masm"></a>.DOSSEG （32）
+# <a name="dosseg"></a>DOSSEG
 
-与相同[.DOSSEG](../../assembler/masm/dot-dosseg.md)，这是首选格式。 （仅限32位 MASM。）
+（仅限32位 MASM。）与相同[.DOSSEG](dot-dosseg.md)，这是首选格式。
 
 ## <a name="syntax"></a>语法
 
@@ -23,4 +23,5 @@ ms.locfileid: "74398751"
 
 ## <a name="see-also"></a>另请参阅
 
-[指令参考](../../assembler/masm/directives-reference.md)
+[指令引用](directives-reference.md)\
+[MASM BNF 语法](masm-bnf-grammar.md)

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - _pgmptr function
 - pgmptr function
 ms.assetid: 4d44b515-0eff-4136-8bc4-684195f218f5
-ms.openlocfilehash: 6991dfe90e58352b26d7c914e1601a68674b8a5b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: beff0401d0aa2aa21819e58618ef4c02795d4393
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749862"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300152"
 ---
-# <a name="pgmptr-wpgmptr"></a>_pgmptr、_wpgmptr
+# <a name="_pgmptr-_wpgmptr"></a>_pgmptr、_wpgmptr
 
 可执行文件的路径。 已弃用；使用 [_get_pgmptr](../c-runtime-library/reference/get-pgmptr.md) 和 [_get_wpgmptr](../c-runtime-library/reference/get-wpgmptr.md)。
 
@@ -48,17 +48,17 @@ C> hello
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |`_tpgmptr`|`_pgmptr`|`_pgmptr`|`_wpgmptr`|
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>需求
 
 |变量|必需的标头|
 |--------------|---------------------|
-|`_pgmptr`， `_wpgmptr`|\<stdlib.h>|
+|`_pgmptr`, `_wpgmptr`|\<stdlib.h>|
 
 ## <a name="example"></a>示例
 
 下面的程序说明 `_pgmptr` 的使用。
 
-```
+```c
 // crt_pgmptr.c
 // compile with: /W3
 // The following program demonstrates the use of _pgmptr.
@@ -75,6 +75,6 @@ int main( void )
 
 您可通过将 `_wpgmptr` 更改为 `%Fs` 并将 `%S` 更改为 `main`，从而使用 `wmain`。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [全局变量](../c-runtime-library/global-variables.md)

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2191
 ms.assetid: 051b8350-e5de-4f51-ab6e-96d32366bcef
-ms.openlocfilehash: 23dfe1d95ab75f253fc2a7b4b00dfcd1aaaa3bbf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66b7d70b9010855ada7b9d24fba80915450a685b
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302964"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301868"
 ---
 # <a name="compiler-error-c2191"></a>编译器错误 C2191
 
 第二个参数列表比第一个长
 
-在第二个时间内使用较长参数列表声明了 C 函数。 C 不支持重载的函数。
+第二次用更长的参数列表声明了 C 函数。 C 不支持重载函数。
 
 ## <a name="example"></a>示例
 
-下面的示例生成 C2191:
+下面的示例生成 C2191：
 
-```
+```c
 // C2191.c
 // compile with: /Za /c
 void func( int );

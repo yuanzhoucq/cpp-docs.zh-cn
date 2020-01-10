@@ -3,22 +3,20 @@ title: using 声明
 ms.date: 11/04/2016
 helpviewer_keywords:
 - using declaration
-- declaring namespaces, unqualified names in namespaces
 - declarations [C++], using-declaration
 - namespaces [C++], unqualified names in
 - using keyword [C++]
-- declarations [C++], namespaces
 ms.assetid: 4184e2b1-3adc-408e-b5f3-0b3f8b554723
-ms.openlocfilehash: 46d8b1e13b55988efd40643482ffd6123034ccb5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a158094141307acb507d5f3e873c600e89135ad7
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403342"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301270"
 ---
 # <a name="using-declaration"></a>using 声明
 
-Using 声明引入到在其中的声明性区域的名称将显示使用声明。
+**Using**声明将一个名称引入声明性区域，其中显示了 using 声明。
 
 ## <a name="syntax"></a>语法
 
@@ -29,19 +27,19 @@ using declarator-list ;
 
 ### <a name="parameters"></a>参数
 
-*嵌套名称说明符*一系列命名空间、 类或枚举名称和范围解析运算符 （:），范围解析运算符被终止。 单个作用域解析运算符可能用于引入与全局命名空间的名称。 关键字**typename**是可选的可能用于解析依赖项时从基类引入到类模板的名称。
+*嵌套名称说明符*命名空间、类或枚举名称与范围解析运算符（：:)，由范围解析运算符终止的序列。 单个范围解析运算符可用于引入全局命名空间的名称。 关键字**typename**是可选的，可用于在从基类引入类模板时解析依赖名称。
 
-*非限定 id*非限定的 id-，该表达式可以是标识符、 重载的运算符名称、 用户定义的文本运算符或转换函数名、 类析构函数名称或模板名称和参数列表。
+*非限定 id*非限定 id 表达式，可以是标识符、重载运算符名称、用户定义的文本运算符或转换函数名称、类析构函数名称或模板名称和参数列表。
 
-*声明符列表*逗号分隔的列表 [**typename**]*嵌套名称说明符* *非限定 id*声明符，可以选择跟省略号。
+*声明符-列表*一个逗号分隔列表，其中列出了 [**typename**]*嵌套名称说明符*非*限定 id*声明符，后面跟有省略号。
 
 ## <a name="remarks"></a>备注
 
-一个使用声明的实体的同义词形式引入了非限定的名称在其他位置声明。 它允许从特定的命名空间，而无需显式限定它在其中出现的声明区域中使用单一名称。 这是与此相反[using 指令](../cpp/namespaces-cpp.md#using_directives)，它允许*所有*中要使用而无需限定命名空间的名称。 **使用**关键字还用于[类型的别名](../cpp/aliases-and-typedefs-cpp.md)。
+使用声明会将非限定名称引入到在其他位置声明的实体的同义词。 它允许使用特定命名空间中的单个名称，而无需在其出现的声明区域中进行显式限定。 这与[using 指令](../cpp/namespaces-cpp.md#using_directives)相反，后者允许使用命名空间中的*所有*名称而无需进行限定。 **Using**关键字还用于[类型别名](../cpp/aliases-and-typedefs-cpp.md)。
 
 ## <a name="example"></a>示例
 
-一个声明可以使用类定义中。
+使用声明可在类定义中使用。
 
 ```cpp
 // using_declaration1.cpp
@@ -87,7 +85,7 @@ In B::g()
 
 ## <a name="example"></a>示例
 
-当用于声明的成员 using 声明必须引用基类的成员。
+用于声明成员时，using 声明必须引用基类的成员。
 
 ```cpp
 // using_declaration2.cpp
@@ -127,7 +125,7 @@ In B::f()
 
 ## <a name="example"></a>示例
 
-使用 using 声明成员可以使用显式限定引用声明。 `::`前缀引用全局命名空间。
+使用 using 声明声明的成员可以通过使用显式限定来引用。 `::` 前缀引用全局命名空间。
 
 ```cpp
 // using_declaration3.cpp
@@ -167,9 +165,9 @@ In A::g
 
 ## <a name="example"></a>示例
 
-使用时进行声明，由声明所创建的同义词仅指在使用时有效的定义声明。 定义在使用后添加到命名空间声明不是有效的同义词。
+当使用声明时，由声明创建的同义词只引用在使用声明点有效的定义。 在 using 声明后面添加到命名空间的定义是无效同义词。
 
-由定义的名称**使用**声明是其原始名称的别名。 它不会影响的类型、 链接或原始声明的其他特性。
+**使用**声明定义的名称是其原始名称的别名。 它不会影响原始声明的类型、链接或其他特性。
 
 ```cpp
 // post_declaration_namespace_additions.cpp
@@ -196,7 +194,7 @@ void b() {
 
 ## <a name="example"></a>示例
 
-对于命名空间，如果本地声明的一组中的函数和使用声明性区域中提供了一个名称，它们必须都引用同一个实体，或者它们必须都引用函数的声明。
+对于命名空间中的函数，如果声明区域中提供了一组本地声明和使用单个名称的声明，则它们必须引用同一实体，或者它们必须都引用函数。
 
 ```cpp
 // functions_in_namespaces1.cpp
@@ -215,11 +213,11 @@ void g() {
 }
 ```
 
-在上述示例中，`using B::i`语句将导致第二个`int i`中声明`g()`函数。 `using B::f`语句不与冲突`f(char)`函数，因为函数名称引入`B::f`具有不同的参数类型。
+在上面的示例中，`using B::i` 语句导致第二个 `int i` 在 `g()` 函数中声明。 `using B::f` 语句与 `f(char)` 函数不冲突，因为 `B::f` 引入的函数名称具有不同的参数类型。
 
 ## <a name="example"></a>示例
 
-本地函数声明不能将作为由 using 声明引入的函数相同的名称和类型。 例如：
+局部函数声明不能与使用声明引入的函数具有相同的名称和类型。 例如：
 
 ```cpp
 // functions_in_namespaces2.cpp
@@ -246,7 +244,7 @@ void h() {
 
 ## <a name="example"></a>示例
 
-相对于继承时 using, 声明引入了一个名称从基类到派生的类作用域，在派生的类重写虚拟成员函数具有相同名称和参数类型的基类中的成员函数。
+就继承而言，当 using 声明将基类中的名称引入派生类作用域时，派生类中的成员函数会重写基类中具有相同名称和参数类型的虚拟成员函数。
 
 ```cpp
 // using_declaration_inheritance1.cpp
@@ -304,9 +302,9 @@ In D::g(char)
 
 ## <a name="example"></a>示例
 
-使用中所述的名称的所有实例声明必须是可访问。 具体而言，如果派生的类使用 using 声明访问成员的基类的成员名称必须是可访问。 如果名称为的一个重载的成员函数，则名为的所有函数必须都是可访问。
+使用声明中提到的名称的所有实例都必须是可访问的。 特别是，如果派生类使用 using 声明访问基类的成员，则该成员名称必须是可访问的。 如果名称是重载成员函数的名称，则所有名为的函数都必须是可访问的。
 
-有关可访问性成员的详细信息，请参阅[成员访问控制](../cpp/member-access-control-cpp.md)。
+有关成员的可访问性的详细信息，请参阅[成员访问控制](../cpp/member-access-control-cpp.md)。
 
 ```cpp
 // using_declaration_inheritance2.cpp
@@ -327,7 +325,7 @@ public:
 };
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [命名空间](../cpp/namespaces-cpp.md)<br/>
 [关键字](../cpp/keywords-cpp.md)

@@ -1,58 +1,53 @@
 ---
 title: 存储类 (C++)
-ms.date: 11/04/2016
+description: 在C++中，static、extern 和 thread_local 关键字指定变量或函数的生存期、链接和内存位置。
+ms.date: 12/11/2019
 f1_keywords:
 - thread_local_cpp
-- external_cpp
+- extern_cpp
 - static_cpp
 - register_cpp
 helpviewer_keywords:
 - storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
-ms.openlocfilehash: 92435b2bab670dd366f26c981443e98e4a4e3c29
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: ab00a5c64a32dc1dab5fef4bc15b722587bc2d6b
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221996"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301309"
 ---
-# <a name="storage-classes-c"></a>存储类 (C++)
+# <a name="storage-classes"></a>存储类
 
-A*存储类*在上下文中的 C++ 变量声明是控制对象的生存期、 链接和内存位置的类型说明符。 给定对象只能有一个存储类。 在块中定义的变量具有自动存储，除非另有指定使用**extern**，**静态**，或`thread_local`说明符。 自动对象和变量不具有链接；它们对于块外部的代码是不可见的。
+A*存储类*在上下文中的 C++ 变量声明是控制对象的生存期、 链接和内存位置的类型说明符。 给定对象只能有一个存储类。 除非使用**extern**、 **static**或**thread_local**说明符指定，否则在块中定义的变量将具有自动存储。 自动对象和变量不具有链接；它们对于块外部的代码是不可见的。 当执行进入块并在退出块时取消分配时，将自动为其分配内存。
 
 **备注**
 
-1. [可变](../cpp/mutable-data-members-cpp.md)关键字视为存储类说明符。 但是，它只存在于类定义的成员列表中。
+1. [可变](../cpp/mutable-data-members-cpp.md)关键字可视为存储类说明符。 但是，它只存在于类定义的成员列表中。
 
-1. **Visual Studio 2010 和更高版本：** **自动**关键字不再是C++存储类说明符，并**注册**关键字被弃用。 **Visual Studio 2017 版本 15.7 及更高版本：** (适用于[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):**注册**关键字已从C++语言。
+1. **Visual Studio 2010 及更高版本：** **Auto**关键字不再是C++存储类说明符，并且不推荐使用**register**关键字。 **Visual Studio 2017 版本15.7 及更高版本：** （可用于[/std： c + + 17](../build/reference/std-specify-language-standard-version.md)）： **register**关键字将C++从语言中删除。
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class
 ```
 
-## <a name="in-this-section"></a>本节内容：
+## <a name="static"></a>静止
 
-- [static](#static)
-- [extern](#extern)
-- [thread_local](#thread_local)
+**Static**关键字可用于声明全局范围、命名空间范围和类范围内的变量和函数。 静态变量还可在本地范围声明。
 
-## <a name="static"></a> static
+静态持续时间意味着，在程序启动时分配对象或变量，并在程序结束时释放对象或变量。 外部链接意味着，变量的名称在用于声明变量的文件的外部是可见的。 相反，内部链接意味着，名称在用于声明变量的文件的外部是不可见的。 默认情况下，在全局命名空间中定义的对象或变量具有静态持续时间和外部链接。 **静态**关键字可用于以下情况。
 
-**静态**关键字用于声明变量和函数在全局范围、 命名空间范围和类范围。 静态变量还可在本地范围声明。
+1. 在文件范围（全局和/或命名空间范围）声明变量或函数时， **static**关键字指定变量或函数具有内部链接。 在声明变量时，变量具有静态持续时间，并且除非您指定另一个值，否则编译器会将变量初始化为 0。
 
-静态持续时间意味着，在程序启动时分配对象或变量，并在程序结束时释放对象或变量。 外部链接意味着，变量的名称在用于声明变量的文件的外部是可见的。 相反，内部链接意味着，名称在用于声明变量的文件的外部是不可见的。 默认情况下，在全局命名空间中定义的对象或变量具有静态持续时间和外部链接。 **静态**关键字可在以下情况下。
+1. 在函数中声明变量时， **static**关键字指定该变量在调用该函数时保持其状态。
 
-1. 当你声明一个变量或函数在文件范围内 (全局和/或命名空间范围)，则**静态**关键字指定变量或函数具有内部链接。 在声明变量时，变量具有静态持续时间，并且除非您指定另一个值，否则编译器会将变量初始化为 0。
+1. 在类声明中声明数据成员时， **static**关键字指定成员的一个副本由类的所有实例共享。 必须在文件范围内定义静态数据成员。 声明为**const static**的整型数据成员可以有初始值设定项。
 
-1. 当你在函数中，将变量声明**静态**关键字指定该变量将保持其状态对该函数的调用之间。
+1. 在类声明中声明成员函数时， **static**关键字指定该函数由类的所有实例共享。 静态成员函数不能访问实例成员，因为该函数不具有隐式**this**指针。 若要访问实例成员，请使用作为实例指针或引用的参数来声明函数。
 
-1. 当你声明一个类声明中的数据成员时**静态**关键字将指定的类的所有实例共享成员的一个副本。 必须在文件范围内定义静态数据成员。 声明为整型数据成员**const 静态**可以有初始值设定项。
+1. 不能将联合成员声明为静态的。 然而，全局声明的匿名联合必须是显式声明为**静态**的。
 
-1. 当声明在类声明中，成员函数**静态**关键字指定的类的所有实例共享该函数。 静态成员函数不能访问实例成员，因为函数没有隐式**这**指针。 若要访问实例成员，请使用作为实例指针或引用的参数来声明函数。
-
-1. 不能将联合成员声明为静态的。 但是，全局声明的匿名联合必须显式声明**静态**。
-
-此示例演示如何声明的变量**静态**中函数间保持其状态对该函数的调用。
+此示例演示如何在函数中声明**静态**的变量在调用该函数时保持其状态。
 
 ```cpp
 // static1.cpp
@@ -81,7 +76,7 @@ nStatic is 6
 nStatic is 10
 ```
 
-此示例演示如何使用**静态**类中。
+此示例演示如何在类中使用**静态**。
 
 ```cpp
 // static2.cpp
@@ -127,7 +122,7 @@ int main() {
 3
 ```
 
-此示例演示声明的局部变量**静态**成员函数中。 静态变量对整个程序可用；该类型的所有实例共享静态变量的同一副本。
+此示例显示了成员函数中声明为**static**的局部变量。 静态变量对整个程序可用；该类型的所有实例共享静态变量的同一副本。
 
 ```cpp
 // static3.cpp
@@ -159,34 +154,15 @@ var != value
 var == value
 ```
 
-从 C++11 开始，可以保证静态本地变量初始化是线程安全的。 此功能有时称为*magic 静态变量*。 但是，在多线程应用程序中，必须同步所有后续分配。 可以通过禁用线程安全的静态初始化功能[/zc: threadsafeinit-](../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md)标志来避免依赖于 CRT。
+从 C++11 开始，可以保证静态本地变量初始化是线程安全的。 此功能有时称为 "*幻静态*"。 但是，在多线程应用程序中，必须同步所有后续分配。 可以通过使用[/zc： threadSafeInit-](../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md)标志来禁用线程安全静态初始化功能，以避免依赖 CRT。
 
-## <a name="extern"></a> extern
+## <a name="extern"></a>部
 
-对象和变量声明为**extern**声明另一个翻译单元中或在为具有外部链接的封闭范围中定义的对象。
-
-声明**const**变量**extern**存储类会强制变量具有外部链接。 一个初始化**extern const**定义的翻译单元中允许使用变量。 在正在定义的翻译单元之外的翻译单元中进行初始化将生成未定义的结果。 有关详细信息，请参阅[使用 extern 指定链接](../cpp/using-extern-to-specify-linkage.md)
-
-[/Zc: externconstexpr](../build/reference/zc-externconstexpr.md)编译器选项将使编译器要应用[外部链接](../c-language/external-linkage.md)到通过使用声明的变量`extern constexpr`。 在早期版本的 Visual Studio 中，并且默认情况下或者如果 **/Zc:externConstexpr-** 指定，则 Visual Studio 将应用到的内部链接**constexpr**变量，即使**extern**关键字使用。 **/Zc: externconstexpr**选项是从开始在 Visual Studio 2017 更新 15.6 版中提供。 和默认情况下处于关闭状态。 /Permissive-option 不会启用 /zc: externconstexpr。
-
-下面的代码演示两个**extern**声明， `DefinedElsewhere` （引用不同的翻译单元中定义的名称） 和`DefinedHere`（引用在封闭范围中定义的名称）：
-
-```cpp
-// external.cpp
-// DefinedElsewhere is defined in another translation unit
-extern int DefinedElsewhere;
-int main() {
-   int DefinedHere;
-   {
-      // refers to DefinedHere in the enclosing scope
-      extern int DefinedHere;
-   }
-}
-```
+声明为**extern**的对象和变量声明一个对象，该对象是在另一个翻译单元中定义的，或是在包含外部链接的封闭范围中定义的。 有关详细信息，请参阅[extern](extern-cpp.md) and[翻译单元和链接](program-and-linkage-cpp.md)。
 
 ## <a name="thread_local"></a> thread_local (C++ 11)
 
-使用 `thread_local` 说明符声明的变量仅可在它在其上创建的线程上访问。 变量在创建线程时创建，并在销毁线程时销毁。 每个线程都有其自己的变量副本。 在 Windows 中，`thread_local`功能上等同于 Microsoft 专用[__declspec （线程）](../cpp/thread.md)属性。
+使用**thread_local**说明符声明的变量只能在创建它的线程上访问。 变量在创建线程时创建，并在销毁线程时销毁。 每个线程都有其自己的变量副本。 在 Windows 上， **thread_local**在功能上与特定于 Microsoft 的[__declspec （thread）](../cpp/thread.md)特性等效。
 
 ```cpp
 thread_local float f = 42.0; // Global namespace. Not implicitly static.
@@ -205,29 +181,29 @@ void DoSomething()
 }
 ```
 
-需要注意的事项`thread_local`说明符：
+关于**thread_local**说明符的注意事项：
 
-- Dll 中的动态初始化的线程本地变量可能不正确初始化的所有调用的线程上。 有关详细信息，请参阅[线程](thread.md)。
+- Dll 中动态初始化的线程局部变量在所有调用线程上可能未正确初始化。 有关详细信息，请参阅[线程](thread.md)。
 
-- `thread_local`说明符可配合**静态**或**extern**。
+- **Thread_local**说明符可以与**static**或**extern**组合在一起。
 
-- 您可以将应用`thread_local`仅于数据声明和定义;`thread_local`不能用于函数声明或定义。
+- 只能将**thread_local**应用于数据声明和定义;**thread_local**不能用于函数声明或定义。
 
-- 只能在具有静态存储持续时间的数据项上指定 `thread_local`。 这包括全局数据对象 (同时**静态**并**extern**)，本地静态对象和类的静态数据成员。 声明的任何局部变量`thread_local`是隐式静态，如果未不提供任何其他存储类; 换而言之，在块范围内`thread_local`等效于`thread_local static`。
+- 只能在具有静态存储持续时间的数据项上指定**thread_local** 。 这包括全局数据对象（**静态**和**外部**）、本地静态对象和类的静态数据成员。 如果未提供任何其他存储类，则**thread_local**声明的任何局部变量都是隐式的。换句话说，在块范围**thread_local**等效于 `thread_local static`。
 
-- 必须为线程本地对象的声明和定义指定 `thread_local`，无论声明和定义是在同一文件中发生还是在单独的文件中发生。
+- 您必须为线程本地对象的声明和定义指定**thread_local** ，无论声明和定义是出现在同一文件中还是单独的文件中。
 
-在 Windows 中，`thread_local`功能上等效于[__declspec （thread)](../cpp/thread.md)只不过 **__declspec （thread)** 可应用于类型定义和在 C 代码中有效。 请尽可能使用 `thread_local`，因为它是 C++ 标准的一部分，因此更易于移植。
+在 Windows 上， **thread_local**在功能上等效于[__declspec （线程）](../cpp/thread.md) ，不同之处在于 **__declspec （thread）** 可应用于类型定义并且在 C 代码中有效。 请尽可能使用**thread_local** ，因为它是C++标准的一部分，因此更易于移植。
 
-##  <a name="register"></a>  register
+##  <a name="register"></a>注册
 
-**Visual Studio 2017 版本 15.3 及更高版本**(适用于[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):**注册**关键字不再是受支持的存储类。 关键字是仍保留供将来使用标准中。
+**Visual Studio 2017 版本15.3 及更高版本**（可用于[/std： c + + 17](../build/reference/std-specify-language-standard-version.md)）： **register**关键字不再是受支持的存储类。 关键字仍保留在标准中，供将来使用。
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class
 ```
 
-## <a name="example-automatic-vs-static-initialization"></a>示例： 自动与静态初始化
+## <a name="example-automatic-vs-static-initialization"></a>示例：自动和静态初始化
 
 当控制流到达其定义时，就会初始化本地自动对象或变量。 当控制流首次到达其定义时，将初始化本地静态对象或变量。
 
@@ -300,16 +276,16 @@ Destroying: Auto I1
 Destroying: Static I3
 ```
 
-此示例演示如何以及何时对象`I1`， `I2`，和`I3`进行初始化和何时销毁它们。
+此示例演示如何以及何时初始化对象 `I1`、`I2`和 `I3` 以及何时对它们进行销毁。
 
-有几个事项需要注意有关此计划：
+有关该计划，请注意以下几点：
 
 - 首先，当控制流退出在其中定义 `I1` 和 `I2` 的块时，二者将自动被销毁。
 
-- 第二，在 C++ 中，没有必要在块的开始处声明对象或变量。 此外，只有当控制流到达其定义时，才会初始化这些对象。 （`I2` 和 `I3` 是此类定义的示例。）输出说明了初始化它们的确切时间。
+- 第二，在 C++ 中，没有必要在块的开始处声明对象或变量。 此外，只有当控制流到达其定义时，才会初始化这些对象。 （`I2` 和 `I3` 是此类定义的示例。）输出显示初始化的确切时间。
 
 - 最后，静态局部变量（如 `I3`）在程序持续时间内保留其值，但在程序终止时将被销毁。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [声明和定义](../cpp/declarations-and-definitions-cpp.md)

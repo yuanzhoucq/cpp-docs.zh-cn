@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: 830c3b39e08252029933addde7d31ab84819b336
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: eda7a2430aa13bb8d30649d796d9f72f900b9097
+ms.sourcegitcommit: 27d9db019f6d84c94de9e6aff0170d918cee6738
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502357"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75676972"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -179,21 +179,21 @@ ms.locfileid: "69502357"
 class CTreeCtrl : public CWnd
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
-### <a name="public-constructors"></a>公共构造函数
+### <a name="public-constructors"></a>公用建構函式
 
-|名称|描述|
+|Name|描述|
 |----------|-----------------|
 |[CTreeCtrl::CTreeCtrl](#ctreectrl)|构造 `CTreeCtrl` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|Name|描述|
 |----------|-----------------|
-|[CTreeCtrl::Create](#create)|创建树视图控件，并将其附加到`CTreeCtrl`对象。|
+|[CTreeCtrl::Create](#create)|创建树视图控件，并将其附加到 `CTreeCtrl` 对象上。|
 |[CTreeCtrl::CreateDragImage](#createdragimage)|为指定的树视图项创建拖动位图。|
-|[CTreeCtrl::CreateEx](#createex)|创建具有指定 Windows 扩展样式的树控件，并将其附加到`CTreeCtrl`对象。|
+|[CTreeCtrl::CreateEx](#createex)|创建具有指定 Windows 扩展样式的树控件，并将其附加到 `CTreeCtrl` 的对象。|
 |[CTreeCtrl::DeleteAllItems](#deleteallitems)|删除树视图控件中的所有项。|
 |[CTreeCtrl::DeleteItem](#deleteitem)|删除树视图控件中的新项。|
 |[CTreeCtrl::EditLabel](#editlabel)|就地编辑指定树视图项。|
@@ -212,7 +212,7 @@ class CTreeCtrl : public CWnd
 |[CTreeCtrl::GetIndent](#getindent)|从其父级检索树视图项的偏移量（以像素为单位）。|
 |[CTreeCtrl::GetInsertMarkColor](#getinsertmarkcolor)|检索用于绘制树视图的插入标记的颜色。|
 |[CTreeCtrl::GetItem](#getitem)|检索指定树视图项的特性。|
-|[CTreeCtrl::GetItemData](#getitemdata)|返回与项关联的32位应用程序特定值。|
+|[CTreeCtrl::GetItemData](#getitemdata)|返回与项关联的应用程序特定的值。|
 |[CTreeCtrl::GetItemExpandedImageIndex](#getitemexpandedimageindex)|检索当当前树视图控件的指定项处于展开状态时要显示的图像的索引。|
 |[CTreeCtrl::GetItemHeight](#getitemheight)|检索树视图项的当前高度。|
 |[CTreeCtrl::GetItemImage](#getitemimage)|检索与项关联的图像。|
@@ -236,7 +236,7 @@ class CTreeCtrl : public CWnd
 |[CTreeCtrl::GetTextColor](#gettextcolor)|检索控件的当前文本颜色。|
 |[CTreeCtrl::GetToolTips](#gettooltips)|检索树视图控件使用的子工具提示控件的句柄。|
 |[CTreeCtrl::GetVisibleCount](#getvisiblecount)|检索与树视图控件关联的可见树项的数目。|
-|[CTreeCtrl::HitTest](#hittest)|返回与`CTreeCtrl`对象相关的光标当前位置。|
+|[CTreeCtrl::HitTest](#hittest)|返回与 `CTreeCtrl` 对象相关的光标当前位置。|
 |[CTreeCtrl::InsertItem](#insertitem)|在树视图控件中插入新项。|
 |[CTreeCtrl::ItemHasChildren](#itemhaschildren)|如果指定的项具有子项，则返回非零值。|
 |[CTreeCtrl::MapAccIdToItem](#mapaccidtoitem)|将指定的可访问性标识符映射到当前树视图控件中的树视图项的句柄。|
@@ -254,7 +254,7 @@ class CTreeCtrl : public CWnd
 |[CTreeCtrl::SetInsertMark](#setinsertmark)|设置树视图控件中的插入标记。|
 |[CTreeCtrl::SetInsertMarkColor](#setinsertmarkcolor)|设置用于绘制树视图插入标记的颜色。|
 |[CTreeCtrl::SetItem](#setitem)|设置指定树视图项的特性。|
-|[CTreeCtrl::SetItemData](#setitemdata)|设置与项关联的特定于32位应用程序的值。|
+|[CTreeCtrl::SetItemData](#setitemdata)|设置与项关联的应用程序特定的值。|
 |[CTreeCtrl::SetItemExpandedImageIndex](#setitemexpandedimageindex)|设置在当前树视图控件的指定项处于展开状态时要显示的图像的索引。|
 |[CTreeCtrl::SetItemHeight](#setitemheight)|设置树视图项的高度。|
 |[CTreeCtrl::SetItemImage](#setitemimage)|将图像与项关联。|
@@ -273,9 +273,9 @@ class CTreeCtrl : public CWnd
 
 "树视图控件" 是显示项的分层列表的窗口，例如文档中的标题、索引中的条目或磁盘上的文件和目录。 每个项包含一个标签和一个可选位图图像，且每个项可以有一个与之关联的子项列表。 通过单击项，用户可以展开和折叠关联的子项列表。
 
-此控件（因而`CTreeCtrl`类）仅适用于在 windows 98 和 windows NT 版本4及更高版本下运行的程序。
+此控件（因此 `CTreeCtrl` 类）仅适用于在 Windows 98 和 Windows NT 版本4及更高版本下运行的程序。
 
-有关使用`CTreeCtrl`的详细信息，请参阅：
+有关使用 `CTreeCtrl`的详细信息，请参阅：
 
 - [控件](../../mfc/controls-mfc.md)
 
@@ -283,7 +283,7 @@ class CTreeCtrl : public CWnd
 
 - Windows SDK 中的[树视图控件引用](/windows/win32/Controls/tree-view-control-reference)。
 
-## <a name="inheritance-hierarchy"></a>继承层次结构
+## <a name="inheritance-hierarchy"></a>繼承階層
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -293,7 +293,7 @@ class CTreeCtrl : public CWnd
 
 `CTreeCtrl`
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>需求
 
 **标头：** afxcmn.h
 
@@ -318,7 +318,7 @@ virtual BOOL Create(
 指定树视图控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](/previous-versions/dd162897\(v=vs.85\))结构。
 
 *pParentWnd*<br/>
-指定树视图控件的父窗口，通常为`CDialog`。 它不能为 NULL。
+指定树视图控件的父窗口，通常为 `CDialog`。 值不得为 NULL。
 
 *nID*<br/>
 指定树视图控件的 ID。
@@ -329,9 +329,9 @@ virtual BOOL Create(
 
 ### <a name="remarks"></a>备注
 
-如果要将树控件创建为某个其他窗口的子窗口，请使用`Create`成员函数。 如果使用`Create`创建树控件，则除了其他树视图样式以外，还必须将它传递给 WS_VISIBLE。
+如果要将树控件创建为某个其他窗口的子窗口，请使用 `Create` 成员函数。 如果使用 `Create`创建树控件，则除了其他树视图样式以外，还必须将其传递 WS_VISIBLE。
 
-可以通过`CTreeCtrl`两个步骤构造。 首先调用构造函数，然后调用`Create`，它将创建树视图控件并将其附加`CTreeCtrl`到对象。
+可以通过两个步骤构造 `CTreeCtrl`。 首先调用构造函数，然后调用 `Create`，这将创建树视图控件，并将其附加到 `CTreeCtrl` 对象。
 
 若要创建具有扩展窗口样式的树控件， 请调用 [CreateEx](#createex) 而不是`Create`。
 
@@ -341,7 +341,7 @@ virtual BOOL Create(
 
 ##  <a name="createex"></a>CTreeCtrl::CreateEx
 
-调用此函数可创建控件（子窗口）并将其与`CTreeCtrl`对象关联。
+调用此函数可创建控件（子窗口），并将其与 `CTreeCtrl` 对象相关联。
 
 ```
 virtual BOOL CreateEx(
@@ -375,7 +375,7 @@ virtual BOOL CreateEx(
 
 ### <a name="remarks"></a>备注
 
-使用`CreateEx`而不是[Create](#create)来应用扩展的 windows 样式，由 windows 扩展样式指定的**WS_EX_** 。
+使用 `CreateEx` 而不是[Create](#create)来应用扩展的 windows 样式，该样式由 Windows 扩展样式指定的前言**WS_EX_** 开头。
 
 ##  <a name="createdragimage"></a>CTreeCtrl::CreateDragImage
 
@@ -398,7 +398,7 @@ CImageList* CreateDragImage(HTREEITEM hItem);
 
 应用程序使用图像列表函数在拖动项时显示图像。
 
-对象`CImageList`是永久性的，并且必须在完成后将其删除。 例如:
+`CImageList` 对象是永久性的，并且必须在完成后将其删除。 例如：
 
 [!code-cpp[NVC_MFC_CTreeCtrl#2](../../mfc/reference/codesnippet/cpp/ctreectrl-class_2.cpp)]
 
@@ -437,7 +437,7 @@ BOOL DeleteItem(HTREEITEM hItem);
 ### <a name="parameters"></a>参数
 
 *hItem*<br/>
-要删除的树项的句柄。 如果*hitem*具有 TVI_ROOT 值，则会从树视图控件中删除所有项。
+要删除的树项的句柄。 如果*hitem*具有 TVI_ROOT 值，则将从树视图控件中删除所有项。
 
 ### <a name="return-value"></a>返回值
 
@@ -462,7 +462,7 @@ CEdit* EditLabel(HTREEITEM hItem);
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则为指向`CEdit`用于编辑项文本的对象的指针; 否则为 NULL。
+如果成功，则为指向用于编辑项文本的 `CEdit` 对象的指针;否则为 NULL。
 
 ### <a name="remarks"></a>备注
 
@@ -492,7 +492,7 @@ BOOL EndEditLabelNow(BOOL fCancelWithoutSave);
 
 ### <a name="remarks"></a>备注
 
-此方法发送[TVM_ENDEDITLABELNOW](/windows/win32/Controls/tvm-endeditlabelnow)消息，如 Windows SDK 中所述。
+此方法发送 Windows SDK 中描述的[TVM_ENDEDITLABELNOW](/windows/win32/Controls/tvm-endeditlabelnow)消息。
 
 ##  <a name="ensurevisible"></a>CTreeCtrl::Ensurevisible\
 
@@ -543,7 +543,7 @@ BOOL Expand(
 
 - TVE_EXPAND 扩展列表。
 
-- TVE_TOGGLE 折叠列表（如果当前已展开）或在当前折叠时展开列表。
+- TVE_TOGGLE 如果列表当前处于展开状态，则折叠该列表; 如果当前处于折叠状态，则展开它。
 
 ### <a name="return-value"></a>返回值
 
@@ -563,7 +563,7 @@ COLORREF GetBkColor() const;
 
 ### <a name="return-value"></a>返回值
 
-一个 COLORREF 值，该值表示控件的当前窗口背景色。 如果此值为-1，则控件使用系统窗口颜色。 在这种情况下，可以`::GetSysColor(COLOR_WINDOW)`使用获取控件所使用的当前系统颜色。
+一个 COLORREF 值，该值表示控件的当前窗口背景色。 如果此值为-1，则控件使用系统窗口颜色。 在这种情况下，可以使用 `::GetSysColor(COLOR_WINDOW)` 获取控件所使用的当前系统颜色。
 
 ### <a name="example"></a>示例
 
@@ -673,7 +673,7 @@ DWORD GetExtendedStyle() const;
 
 ### <a name="remarks"></a>备注
 
-此方法发送[TVM_GETEXTENDEDSTYLE](/windows/win32/Controls/tvm-getextendedstyle)消息，如 Windows SDK 中所述。
+此方法发送 Windows SDK 中描述的[TVM_GETEXTENDEDSTYLE](/windows/win32/Controls/tvm-getextendedstyle)消息。
 
 ##  <a name="getfirstvisibleitem"></a>CTreeCtrl::GetFirstVisibleItem
 
@@ -704,7 +704,7 @@ CImageList* GetImageList(UINT nImageList) const;
 *nImageList*<br/>
 要检索的图像列表的类型。 图像列表可以为下列值之一：
 
-- TVSIL_NORMAL 检索普通图像列表，其中包含树视图项的选定图像和 nonselected 图像。
+- TVSIL_NORMAL 检索普通图像列表，其中包含树视图项的所选和 nonselected 图像。
 
 - TVSIL_STATE 检索状态图像列表，其中包含处于用户定义状态的树视图项的图像。
 
@@ -777,7 +777,7 @@ BOOL GetItem(TVITEM* pItem) const;
 
 ##  <a name="getitemdata"></a>CTreeCtrl::GetItemData
 
-调用此函数可检索与指定项关联的32位应用程序特定值。
+调用此函数可检索与指定项关联的特定于应用程序的值。
 
 ```
 DWORD_PTR GetItemData(HTREEITEM hItem) const;
@@ -790,7 +790,7 @@ DWORD_PTR GetItemData(HTREEITEM hItem) const;
 
 ### <a name="return-value"></a>返回值
 
-与*hItem*指定的项关联的特定于32位应用程序的值。
+与*hItem*指定的项关联的特定于应用程序的指针大小的值。
 
 ### <a name="example"></a>示例
 
@@ -816,7 +816,7 @@ int GetItemExpandedImageIndex(HTREEITEM hItem)const;
 
 ### <a name="remarks"></a>备注
 
-此方法发送[TVM_GETITEM](/windows/win32/Controls/tvm-getitem)消息，如 Windows SDK 中所述。 该消息将返回描述树视图控件项的[TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)结构，然后此方法将从该结构中`iExpandedImage`检索成员。
+此方法发送 Windows SDK 中描述的[TVM_GETITEM](/windows/win32/Controls/tvm-getitem)消息。 该消息将返回描述树视图控件项的[TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)结构，然后此方法将从该结构中检索 `iExpandedImage` 成员。
 
 ##  <a name="getitemheight"></a>CTreeCtrl::GetItemHeight
 
@@ -897,11 +897,11 @@ BOOL GetItemPartRect(
 
 每个树控件项都由一个图形矩形界定。 只要单击该矩形中的某个点，就会被称为 "*命中*"。 此方法返回最大的矩形，以便在单击矩形中的某个点时，将命中由*hItem*参数标识的项。
 
-此方法发送 TVM_GETITEMPARTRECT 消息，如 Windows SDK 中所述。 有关详细信息，请参阅[TreeView_GetItemPartRect](/windows/win32/api/commctrl/nf-commctrl-treeview_getitempartrect)宏。
+此方法发送 Windows SDK 中描述的 TVM_GETITEMPARTRECT 消息。 有关详细信息，请参阅[TreeView_GetItemPartRect](/windows/win32/api/commctrl/nf-commctrl-treeview_getitempartrect)宏。
 
 ### <a name="example"></a>示例
 
-下面的代码示例定义了一个用于`m_treeCtrl`访问当前树视图控件的变量。 此代码示例还定义了一个无符号整数和多个 HTREEITEM 变量。 下面的示例中使用了这些变量。
+下面的代码示例定义了一个用于访问当前树视图控件的变量 `m_treeCtrl`。 此代码示例还定义了一个无符号整数和多个 HTREEITEM 变量。 下面的示例中使用了这些变量。
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_17.h)]
 
@@ -983,11 +983,11 @@ UINT GetItemStateEx(HTREEITEM hItem) const;
 
 ### <a name="return-value"></a>返回值
 
-项的扩展状态。 有关详细信息，请参阅`uStateEx` [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)结构的成员。
+项的扩展状态。 有关详细信息，请参阅[TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)结构的 `uStateEx` 成员。
 
 ### <a name="remarks"></a>备注
 
-此方法发送[TVM_GETITEM](/windows/win32/Controls/tvm-getitem)消息，如 Windows SDK 中所述。 该消息返回描述树视图控件项的[TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)结构，此方法从该结构中检索`uStateEx`成员。
+此方法发送 Windows SDK 中描述的[TVM_GETITEM](/windows/win32/Controls/tvm-getitem)消息。 该消息返回描述树视图控件项的[TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)结构，此方法从该结构检索 `uStateEx` 成员。
 
 ##  <a name="getitemtext"></a>  CTreeCtrl::GetItemText
 
@@ -1004,7 +1004,7 @@ CString GetItemText(HTREEITEM hItem) const;
 
 ### <a name="return-value"></a>返回值
 
-一个`CString`包含项的文本的对象。
+一个包含项文本的 `CString` 对象。
 
 ### <a name="example"></a>示例
 
@@ -1024,11 +1024,11 @@ HTREEITEM GetLastVisibleItem() const;
 
 ### <a name="remarks"></a>备注
 
-此方法发送[TVM_GETNEXTITEM](/windows/win32/Controls/tvm-getnextitem)消息，如 Windows SDK 中所述。 有关详细信息，请参阅该消息的*标记*参数中的 TVGN_LASTVISIBLE 标志。
+此方法发送 Windows SDK 中描述的[TVM_GETNEXTITEM](/windows/win32/Controls/tvm-getnextitem)消息。 有关详细信息，请参阅该消息的*标记*参数中的 TVGN_LASTVISIBLE 标志。
 
 ### <a name="example"></a>示例
 
-下面的代码示例定义了一个用于`m_treeCtrl`访问当前树视图控件的变量。 此代码示例还定义了一个无符号整数和多个 HTREEITEM 变量。 下一个示例中使用了这些变量中的一个或多个。
+下面的代码示例定义了一个用于访问当前树视图控件的变量 `m_treeCtrl`。 此代码示例还定义了一个无符号整数和多个 HTREEITEM 变量。 下一个示例中使用了这些变量中的一个或多个。
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_17.h)]
 
@@ -1040,7 +1040,7 @@ HTREEITEM GetLastVisibleItem() const;
 
 ##  <a name="getlinecolor"></a>CTreeCtrl::GetLineColor
 
-此成员函数实现 win32 消息[TVM_GETLINECOLOR](/windows/win32/Controls/tvm-getlinecolor)的行为，如 Windows SDK 中所述。
+此成员函数实现 Win32 消息[TVM_GETLINECOLOR](/windows/win32/Controls/tvm-getlinecolor)的行为，如 Windows SDK 中所述。
 
 ```
 COLORREF GetLineColor() const;
@@ -1074,7 +1074,7 @@ HTREEITEM GetNextItem(
 
 - TVGN_CARET 检索当前选定的项。
 
-- TVGN_CHILD 检索*hItem*参数指定的项的第一个子项目。
+- TVGN_CHILD 检索由*hItem*参数指定的项的第一个子项。
 
 - TVGN_DROPHILITE 检索作为拖放操作目标的项。
 
@@ -1100,11 +1100,11 @@ HTREEITEM GetNextItem(
 
 ### <a name="remarks"></a>备注
 
-如果要检索的项是树的根节点，则此函数将返回 NULL。 例如，如果在树视图根节点的第一级子节点上将此消息与 TVGN_PARENT 标志一起使用，则该消息将返回 NULL。
+如果要检索的项是树的根节点，则此函数将返回 NULL。 例如，如果您将此消息与树视图根节点的第一级子节点上的 TVGN_PARENT 标志一起使用，则该消息将返回 NULL。
 
 ### <a name="example"></a>示例
 
-有关在循环中使用`GetNextItem`的示例，请参阅[CTreeCtrl：:D eleteitem](#deleteitem)。
+有关在循环中使用 `GetNextItem` 的示例，请参阅[CTreeCtrl：:D eleteitem](#deleteitem)。
 
 [!code-cpp[NVC_MFC_CTreeCtrl#20](../../mfc/reference/codesnippet/cpp/ctreectrl-class_23.cpp)]
 
@@ -1247,7 +1247,7 @@ UINT GetScrollTime() const;
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 win32 消息[TVM_GETSCROLLTIME](/windows/win32/Controls/tvm-getscrolltime)的行为，如 Windows SDK 中所述。
+此成员函数实现 Win32 消息[TVM_GETSCROLLTIME](/windows/win32/Controls/tvm-getscrolltime)的行为，如 Windows SDK 中所述。
 
 ##  <a name="getselectedcount"></a>CTreeCtrl::GetSelectedCount
 
@@ -1263,7 +1263,7 @@ UINT GetSelectedCount();
 
 ### <a name="remarks"></a>备注
 
-此方法发送[TVM_GETSELECTEDCOUNT](/windows/win32/Controls/tvm-getselectedcount)消息，如 Windows SDK 中所述。
+此方法发送 Windows SDK 中描述的[TVM_GETSELECTEDCOUNT](/windows/win32/Controls/tvm-getselectedcount)消息。
 
 ##  <a name="getselecteditem"></a>CTreeCtrl::GetSelectedItem
 
@@ -1311,7 +1311,7 @@ CToolTipCtrl* GetToolTips() const;
 
 ### <a name="remarks"></a>备注
 
-的`GetToolTips` MFC 实现将返回一个`CToolTipCtrl`对象，该对象由树控件使用，而不是工具提示控件的句柄。
+`GetToolTips` 的 MFC 实现将返回一个 `CToolTipCtrl` 对象，该对象由树控件使用，而不是工具提示控件的句柄。
 
 ### <a name="example"></a>示例
 
@@ -1351,7 +1351,7 @@ HTREEITEM HitTest(TVHITTESTINFO* pHitTestInfo) const;
 要测试的点的工作区坐标。
 
 *pFlags*<br/>
-指向一个整数的指针，该整数接收有关命中测试结果的信息。 它可以是 "备注" 部分中`flags`成员下面列出的一个或多个值。
+指向一个整数的指针，该整数接收有关命中测试结果的信息。 它可以是 "备注" 部分中 "`flags`" 成员下列出的一个或多个值。
 
 *pHitTestInfo*<br/>
 [TVHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-tvhittestinfo)结构的地址，该结构包含要进行命中测试的位置并接收有关命中测试结果的信息。
@@ -1366,7 +1366,7 @@ HTREEITEM HitTest(TVHITTESTINFO* pHitTestInfo) const;
 
 |||
 |-|-|
-|值|含义|
+|{2&gt;值&lt;2}|含义|
 |TVHT_ABOVE|工作区之上。|
 |TVHT_BELOW|低于工作区。|
 |TVHT_NOWHERE|在工作区中，但在最后一项下。|
@@ -1419,10 +1419,10 @@ HTREEITEM InsertItem(
 ### <a name="parameters"></a>参数
 
 *lpInsertStruct*<br/>
-指向的指针`TVINSERTSTRUCT` ，该指针指定要插入的树视图项的特性。
+一个指向 `TVINSERTSTRUCT` 的指针，该指针指定要插入的树视图项的特性。
 
 *nMask*<br/>
-整数，用于指定要设置的特性。 请参阅`TVITEM` Windows SDK 中的结构。
+整数，用于指定要设置的特性。 请参阅 Windows SDK 中的 `TVITEM` 结构。
 
 *lpszItem*<br/>
 包含该项文本的字符串的地址。
@@ -1437,10 +1437,10 @@ HTREEITEM InsertItem(
 指定项的状态值。 有关相应状态的列表，请参阅 Windows SDK 中的树视图控件项目状态。
 
 *nStateMask*<br/>
-指定要设置的状态。 请参阅`TVITEM` Windows SDK 中的结构。
+指定要设置的状态。 请参阅 Windows SDK 中的 `TVITEM` 结构。
 
 *lParam*<br/>
-与项关联的32位应用程序特定值。
+与项关联的指针大小的特定于应用程序的值。
 
 *hParent*<br/>
 插入项的父项的句柄。
@@ -1501,17 +1501,17 @@ HTREEITEM MapAccIdToItem(UINT uAccId) const;
 
 ### <a name="return-value"></a>返回值
 
-与 uAccId 参数相对应的树视图项`HTREEITEM`（）的句柄 。 有关详细信息，请参阅[TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)结构的*hItem*成员。
+与*uAccId*参数相对应的树视图项（`HTREEITEM`）的句柄。 有关详细信息，请参阅[TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)结构的*hItem*成员。
 
 ### <a name="remarks"></a>备注
 
-辅助功能辅助工具是帮助残障人士使用计算机的应用程序。 `IAccessible`接口使用可访问性标识符来唯一指定窗口中的元素。 有关辅助功能标识符的详细信息，请在[Microsoft 开发人员网络](https://go.microsoft.com/fwlink/p/?linkid=56322)中搜索 "关于 Active Accessibility 支持" 主题。
+辅助功能辅助工具是帮助残障人士使用计算机的应用程序。 辅助功能标识符由 `IAccessible` 接口用于在窗口中唯一指定元素。 有关辅助功能标识符的详细信息，请在[Microsoft 开发人员网络](https://go.microsoft.com/fwlink/p/?linkid=56322)中搜索 "关于 Active Accessibility 支持" 主题。
 
-此方法发送[TVM_MAPACCIDTOHTREEITEM](/windows/win32/Controls/tvm-mapaccidtohtreeitem)消息，如 Windows SDK 中所述。
+此方法发送 Windows SDK 中描述的[TVM_MAPACCIDTOHTREEITEM](/windows/win32/Controls/tvm-mapaccidtohtreeitem)消息。
 
 ### <a name="example"></a>示例
 
-下面的代码示例定义了一个用于`m_treeCtrl`访问当前树视图控件的变量。 此代码示例还定义了一个无符号整数和多个 HTREEITEM 变量。 下面的示例中使用了这些变量。
+下面的代码示例定义了一个用于访问当前树视图控件的变量 `m_treeCtrl`。 此代码示例还定义了一个无符号整数和多个 HTREEITEM 变量。 下面的示例中使用了这些变量。
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_17.h)]
 
@@ -1541,13 +1541,13 @@ UINT MapItemToAccID(HTREEITEM hItem) const;
 
 ### <a name="remarks"></a>备注
 
-辅助功能辅助工具是帮助残障人士使用计算机的应用程序。 `IAccessible`接口使用可访问性标识符来唯一指定窗口中的元素。 有关辅助功能标识符的详细信息，请在[Microsoft 开发人员网络](https://go.microsoft.com/fwlink/p/?linkid=56322)中搜索 "关于 Active Accessibility 支持" 主题。
+辅助功能辅助工具是帮助残障人士使用计算机的应用程序。 辅助功能标识符由 `IAccessible` 接口用于在窗口中唯一指定元素。 有关辅助功能标识符的详细信息，请在[Microsoft 开发人员网络](https://go.microsoft.com/fwlink/p/?linkid=56322)中搜索 "关于 Active Accessibility 支持" 主题。
 
-此方法发送[TVM_MAPHTREEITEMTOACCID](/windows/win32/Controls/tvm-maphtreeitemtoaccid)消息，如 Windows SDK 中所述。
+此方法发送 Windows SDK 中描述的[TVM_MAPHTREEITEMTOACCID](/windows/win32/Controls/tvm-maphtreeitemtoaccid)消息。
 
 ### <a name="example"></a>示例
 
-下面的代码示例定义了一个用于`m_treeCtrl`访问当前树视图控件的变量。 此代码示例还定义了一个无符号整数和多个 HTREEITEM 变量。 下面的示例中使用了这些变量。
+下面的代码示例定义了一个用于访问当前树视图控件的变量 `m_treeCtrl`。 此代码示例还定义了一个无符号整数和多个 HTREEITEM 变量。 下面的示例中使用了这些变量。
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_17.h)]
 
@@ -1579,7 +1579,7 @@ BOOL Select(
 
 - TVGN_DROPHILITE 重绘样式中指定的项，该样式用于指示拖放操作的目标。
 
-- TVGN_FIRSTVISIBLE 垂直滚动树视图，以使给定项成为第一个可见项。
+- TVGN_FIRSTVISIBLE 垂直滚动树视图，以便给定项是第一个可见项。
 
 ### <a name="return-value"></a>返回值
 
@@ -1587,7 +1587,7 @@ BOOL Select(
 
 ### <a name="remarks"></a>备注
 
-如果*nCode*包含值 TVGN_CARET，则父窗口将接收 TVN_SELCHANGING 和 TVN_SELCHANGED 通知消息。 此外，如果指定的项是折叠的父项的子项，则将展开其父项列表以显示指定项。 在这种情况下，父窗口接收 TVN_ITEMEXPANDING 和 TVN_ITEMEXPANDED 通知消息。
+如果*nCode*包含 TVGN_CARET 的值，则父窗口将接收 TVN_SELCHANGING 并 TVN_SELCHANGED 通知消息。 此外，如果指定的项是折叠的父项的子项，则将展开其父项列表以显示指定项。 在这种情况下，父窗口会接收 TVN_ITEMEXPANDING 并 TVN_ITEMEXPANDED 通知消息。
 
 ### <a name="example"></a>示例
 
@@ -1687,13 +1687,13 @@ BOOL SetAutoscrollInfo(
 
 ### <a name="remarks"></a>备注
 
-自动滚动参数用于滚动查看当前不可见的项。 树视图控件必须具有 TVS_EX_AUTOHSCROLL 扩展样式，它在[树视图控件扩展样式](/windows/win32/Controls/tree-view-control-window-extended-styles)中进行了介绍。
+自动滚动参数用于滚动查看当前不可见的项。 树视图控件必须具有 TVS_EX_AUTOHSCROLL 扩展样式，该样式在[树视图控件扩展样式](/windows/win32/Controls/tree-view-control-window-extended-styles)中进行了介绍。
 
-此方法发送[TVM_SETAUTOSCROLLINFO](/windows/win32/Controls/tvm-setautoscrollinfo)消息，如 Windows SDK 中所述。
+此方法发送 Windows SDK 中描述的[TVM_SETAUTOSCROLLINFO](/windows/win32/Controls/tvm-setautoscrollinfo)消息。
 
 ### <a name="example"></a>示例
 
-下面的代码示例定义了一个用于`m_treeCtrl`访问当前树视图控件的变量。 此代码示例还定义了一个无符号整数和多个 HTREEITEM 变量。 下面的示例中使用了这些变量。
+下面的代码示例定义了一个用于访问当前树视图控件的变量 `m_treeCtrl`。 此代码示例还定义了一个无符号整数和多个 HTREEITEM 变量。 下面的示例中使用了这些变量。
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_17.h)]
 
@@ -1740,7 +1740,7 @@ BOOL SetCheck(
 要接收检查状态更改的 HTREEITEM。
 
 *fCheck*<br/>
-指示是否选中或取消选中树控件项。 默认情况下`SetCheck` ，设置要检查的项。
+指示是否选中或取消选中树控件项。 默认情况下，`SetCheck` 设置要检查的项。
 
 ### <a name="return-value"></a>返回值
 
@@ -1785,11 +1785,11 @@ DWORD SetExtendedStyle(
 
 此方法清除*dwExMask*参数中指定的样式，并设置*dwExStyles*参数中指定的样式。 只有与*dwExMask*中的位相对应的扩展样式发生更改。
 
-此方法发送[TVM_SETEXTENDEDSTYLE](/windows/win32/Controls/tvm-setextendedstyle)消息，如 Windows SDK 中所述。
+此方法发送 Windows SDK 中描述的[TVM_SETEXTENDEDSTYLE](/windows/win32/Controls/tvm-setextendedstyle)消息。
 
 ### <a name="example"></a>示例
 
-下面的代码示例定义了一个用于`m_treeCtrl`访问当前树视图控件的变量。 此代码示例还定义了一个无符号整数和多个 HTREEITEM 变量。 下面的示例中使用了这些变量。
+下面的代码示例定义了一个用于访问当前树视图控件的变量 `m_treeCtrl`。 此代码示例还定义了一个无符号整数和多个 HTREEITEM 变量。 下面的示例中使用了这些变量。
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_17.h)]
 
@@ -1817,7 +1817,7 @@ CImageList* SetImageList(
 *nImageListType*<br/>
 要设置的图像列表的类型。 图像列表可以为下列值之一：
 
-- TVSIL_NORMAL 设置 "普通图像列表"，其中包含树视图项的选定图像和 nonselected 图像。 必须为覆盖映像使用此状态。
+- TVSIL_NORMAL 设置 "普通图像" 列表，其中包含树视图项的所选和 nonselected 图像。 必须为覆盖映像使用此状态。
 
 - TVSIL_STATE 设置状态图像列表，其中包含处于用户定义状态的树视图项的图像。
 
@@ -1917,28 +1917,28 @@ BOOL SetItem(
 指向[TVITEM](/windows/win32/api/commctrl/ns-commctrl-tvitemw)结构的指针，该结构包含新的项特性，如 Windows SDK 中所述。
 
 *hItem*<br/>
-要设置其属性的项的句柄。 查看 Windows SDK 中`TVITEM`结构的成员。`hItem`
+要设置其属性的项的句柄。 请参阅 Windows SDK 中 `TVITEM` 结构的 `hItem` 成员。
 
 *nMask*<br/>
-整数，用于指定要设置的特性。 查看结构`TVITEM`的成员。 `mask`
+整数，用于指定要设置的特性。 查看 `TVITEM` 结构的 `mask` 成员。
 
 *lpszItem*<br/>
 包含该项文本的字符串的地址。
 
 *nImage*<br/>
-树视图控件的图像列表中项的图像的索引。 查看结构`TVITEM`的成员。 `iImage`
+树视图控件的图像列表中项的图像的索引。 查看 `TVITEM` 结构的 `iImage` 成员。
 
 *nSelectedImage*<br/>
-树视图控件的图像列表中项的选定图像的索引。 查看结构`TVITEM`的成员。 `iSelectedImage`
+树视图控件的图像列表中项的选定图像的索引。 查看 `TVITEM` 结构的 `iSelectedImage` 成员。
 
 *nState*<br/>
-指定项的状态值。 查看结构`TVITEM`的成员。 `State`
+指定项的状态值。 查看 `TVITEM` 结构的 `State` 成员。
 
 *nStateMask*<br/>
-指定要设置的状态。 查看结构`TVITEM`的成员。 `stateMask`
+指定要设置的状态。 查看 `TVITEM` 结构的 `stateMask` 成员。
 
 *lParam*<br/>
-与项关联的32位应用程序特定值。
+与项关联的指针大小的特定于应用程序的值。
 
 ### <a name="return-value"></a>返回值
 
@@ -1946,9 +1946,9 @@ BOOL SetItem(
 
 ### <a name="remarks"></a>备注
 
-在结构中`hItem` ，成员标识项， `mask`成员指定要设置的特性。 `TVITEM`
+在 `TVITEM` 结构中，`hItem` 成员标识项，`mask` 成员指定要设置的特性。
 
-`pszText` `cchTextMax`如果成员或 nMask 参数指定了 TVIF_TEXT 值，则成员或 lpszItem 为以 null 结尾的字符串的地址，并且该成员将被忽略。 `mask` 如果`mask` （或*nMask*）指定了 TVIF_STATE 值，则`stateMask`成员或*nStateMask* `state`参数指定要更改的项目状态，并且 member 或*nState*参数包含的值这些状态。
+如果 `mask` 成员或*nMask*参数指定了 TVIF_TEXT 值，则 `pszText` 成员或*lpszItem*为以 null 结尾的字符串的地址，并且忽略 `cchTextMax` 成员。 如果 `mask` （或*nMask*）指定 TVIF_STATE 值，则 `stateMask` 成员或*nStateMask*参数指定要更改的项状态，并且 `state` 成员或*nState*参数包含这些状态的值。
 
 ### <a name="example"></a>示例
 
@@ -1956,7 +1956,7 @@ BOOL SetItem(
 
 ##  <a name="setitemdata"></a>CTreeCtrl::SetItemData
 
-调用此函数可设置与指定项关联的32位应用程序特定值。
+调用此函数可设置与指定项关联的应用程序特定的值。
 
 ```
 BOOL SetItemData(
@@ -1970,7 +1970,7 @@ BOOL SetItemData(
 要检索其数据的项的句柄。
 
 *dwData*<br/>
-与*hItem*指定的项关联的特定于32位应用程序的值。
+与*hItem*指定的项关联的特定于应用程序的指针大小的值。
 
 ### <a name="return-value"></a>返回值
 
@@ -2003,11 +2003,11 @@ BOOL SetItemExpandedImageIndex(
 
 ### <a name="remarks"></a>备注
 
-此方法发送[TVM_SETITEM](/windows/win32/Controls/tvm-setitem)消息，如 Windows SDK 中所述。 此方法将*iExpandedImage*参数分配给`iExpandedImage` [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)结构的成员，然后在消息中使用该结构。
+此方法发送 Windows SDK 中描述的[TVM_SETITEM](/windows/win32/Controls/tvm-setitem)消息。 此方法将*iExpandedImage*参数分配给[TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)结构的 `iExpandedImage` 成员，然后在消息中使用该结构。
 
 ### <a name="example"></a>示例
 
-下面的代码示例定义了一个用于`m_treeCtrl`访问当前树视图控件的变量。 此代码示例还定义了一个无符号整数和多个 HTREEITEM 变量。 下面的示例中使用了这些变量。
+下面的代码示例定义了一个用于访问当前树视图控件的变量 `m_treeCtrl`。 此代码示例还定义了一个无符号整数和多个 HTREEITEM 变量。 下面的示例中使用了这些变量。
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_17.h)]
 
@@ -2125,7 +2125,7 @@ BOOL SetItemStateEx(
 |参数|描述|
 |---------------|-----------------|
 |*hItem*|中树视图控件项的句柄。|
-|*uStateEx*|中项的扩展状态。 有关详细信息，请参阅`uStateEx` [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)结构的成员。|
+|*uStateEx*|中项的扩展状态。 有关详细信息，请参阅[TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)结构的 `uStateEx` 成员。|
 
 ### <a name="return-value"></a>返回值
 
@@ -2133,11 +2133,11 @@ BOOL SetItemStateEx(
 
 ### <a name="remarks"></a>备注
 
-此方法发送[TVM_SETITEM](/windows/win32/Controls/tvm-setitem)消息，如 Windows SDK 中所述。 此方法将*uStateEx*参数分配给`uStateEx` [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)结构的成员，然后在消息中使用该结构。
+此方法发送 Windows SDK 中描述的[TVM_SETITEM](/windows/win32/Controls/tvm-setitem)消息。 此方法将*uStateEx*参数分配给[TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)结构的 `uStateEx` 成员，然后在消息中使用该结构。
 
 ### <a name="example"></a>示例
 
-下面的代码示例定义了一个用于`m_treeCtrl`访问当前树视图控件的变量。 此代码示例还定义了一个无符号整数和多个 HTREEITEM 变量。 下面的示例中使用了这些变量。
+下面的代码示例定义了一个用于访问当前树视图控件的变量 `m_treeCtrl`。 此代码示例还定义了一个无符号整数和多个 HTREEITEM 变量。 下面的示例中使用了这些变量。
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_17.h)]
 
@@ -2192,7 +2192,7 @@ COLORREF SetLineColor(COLORREF clrNew = CLR_DEFAULT);
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 win32 消息[TVM_SETLINECOLOR](/windows/win32/Controls/tvm-setlinecolor)的行为，如 Windows SDK 中所述。
+此成员函数实现 Win32 消息[TVM_SETLINECOLOR](/windows/win32/Controls/tvm-setlinecolor)的行为，如 Windows SDK 中所述。
 
 ### <a name="example"></a>示例
 
@@ -2217,7 +2217,7 @@ UINT SetScrollTime(UINT uScrollTime);
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 win32 消息[TVM_SETSCROLLTIME](/windows/win32/Controls/tvm-setscrolltime)的行为，如 Windows SDK 中所述。
+此成员函数实现 Win32 消息[TVM_SETSCROLLTIME](/windows/win32/Controls/tvm-setscrolltime)的行为，如 Windows SDK 中所述。
 
 ##  <a name="settextcolor"></a>CTreeCtrl::SetTextColor
 
@@ -2259,7 +2259,7 @@ CToolTipCtrl* SetToolTips(CToolTipCtrl* pWndTip);
 
 ### <a name="remarks"></a>备注
 
-若要使用工具提示，请在创建`CTreeCtrl`对象时指示 TVS_NOTOOLTIPS 样式。
+若要使用工具提示，请在创建 `CTreeCtrl` 对象时指示 TVS_NOTOOLTIPS 样式。
 
 ### <a name="example"></a>示例
 
@@ -2277,13 +2277,13 @@ void ShowInfoTip(HTREEITEM hItem);
 
 |参数|描述|
 |---------------|-----------------|
-|*hItem*|中控件中的树视图项的句柄。 有关详细信息，请参阅`hItem` [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)结构的成员。|
+|*hItem*|中控件中的树视图项的句柄。 有关详细信息，请参阅[TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)结构的 `hItem` 成员。|
 
 ### <a name="remarks"></a>备注
 
 有关 tooltip 和信息提示之间的区别的详细信息，请在[Microsoft 开发人员网络](https://go.microsoft.com/fwlink/p/?linkid=56322)上搜索 "Tooltip 和信息提示" 主题。
 
-此方法发送[TVM_SHOWINFOTIP](/windows/win32/Controls/tvm-showinfotip)消息，如 Windows SDK 中所述。
+此方法发送 Windows SDK 中描述的[TVM_SHOWINFOTIP](/windows/win32/Controls/tvm-showinfotip)消息。
 
 ##  <a name="sortchildren"></a>CTreeCtrl::SortChildren
 
@@ -2304,7 +2304,7 @@ BOOL SortChildren(HTREEITEM hItem);
 
 ### <a name="remarks"></a>备注
 
-`SortChildren`不会通过树递归;只有*hItem*的直接子项才会进行排序。
+`SortChildren` 不会通过树递归;只有*hItem*的直接子项才会进行排序。
 
 ### <a name="example"></a>示例
 
@@ -2329,9 +2329,9 @@ BOOL SortChildrenCB(LPTVSORTCB pSort);
 
 ### <a name="remarks"></a>备注
 
-如果第一个项应在`lpfnCompare`第二个项的前面，则此结构的比较函数必须返回一个负值，如果第一项应在第二个项后，则返回零; 如果两个项相等，则返回零。
+如果第一个项应在第二个项的前面，则结构的比较函数 `lpfnCompare`返回一个负值; 如果第一项应在第二个项后，则返回正值; 如果两个项相等，则返回零。
 
-*LParam1*和*lParam2*参数`lParam`对应于所比较的两个项的[TVITEM](/windows/win32/api/commctrl/ns-commctrl-tvitemw)结构成员。 *LParamSort*参数与`lParam` `TV_SORTCB`结构的成员相对应。
+*LParam1*和*lParam2*参数对应于所比较的两个项的[TVITEM](/windows/win32/api/commctrl/ns-commctrl-tvitemw)结构的 `lParam` 成员。 *LParamSort*参数对应于 `TV_SORTCB` 结构的 `lParam` 成员。
 
 ### <a name="example"></a>示例
 
@@ -2339,7 +2339,7 @@ BOOL SortChildrenCB(LPTVSORTCB pSort);
 
 [!code-cpp[NVC_MFC_CTreeCtrl#39](../../mfc/reference/codesnippet/cpp/ctreectrl-class_47.cpp)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [MFC 示例 CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>

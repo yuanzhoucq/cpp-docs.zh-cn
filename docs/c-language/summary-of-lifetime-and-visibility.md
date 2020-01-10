@@ -5,12 +5,12 @@ helpviewer_keywords:
 - lifetime, and visibility
 - visibility, identifiers
 ms.assetid: ea05a253-7658-482c-9a6b-abd71169c42d
-ms.openlocfilehash: 438dd855fbbfec01a31a8d4a1a53078e3c44658c
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: f364c3c0b558c00e3d411ab5b697ed01ec395cbd
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151775"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299073"
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>生存期和可见性的摘要
 
@@ -18,25 +18,25 @@ ms.locfileid: "56151775"
 
 ### <a name="summary-of-lifetime-and-visibility"></a>生存期和可见性的摘要
 
-|特性：<br /><br /> 级别|项|存储类<br /><br /> 说明符|结果:<br /><br /> 生存期|可见性|
+|特性:<br /><br /> Level|项|存储类<br /><br /> 说明符|结果:<br /><br /> 生存期|可见性|
 |---------------------------|----------|----------------------------------|--------------------------|----------------|
 |文件范围|变量定义|**static**|Global|此项所在的源文件的剩余部分|
 ||变量声明|**extern**|Global|此项所在的源文件的剩余部分|
 ||函数原型或定义|**static**|Global|单个源文件|
 ||函数原型|**extern**|Global|源文件的剩余部分|
-|块范围|变量声明|**extern**|Global|块|
-||变量定义|**static**|Global|块|
-||变量定义|auto 或 register|本地|块|
+|块范围|变量声明|**extern**|Global|阻止|
+||变量定义|**static**|Global|阻止|
+||变量定义|auto 或 register|本地|阻止|
 
 ## <a name="example"></a>示例
 
-### <a name="description"></a>说明​​
+### <a name="description"></a>描述
 
 以下示例演示了变量的块、嵌套和可见性：
 
 ### <a name="code"></a>代码
 
-```
+```c
 // Lifetime_and_Visibility.c
 
 #include <stdio.h>
@@ -62,10 +62,10 @@ int main()  // main function defined at external level
 }
 ```
 
-### <a name="comments"></a>注释
+### <a name="comments"></a>Comments
 
 在此示例中，有四个级别的可见性：外部级别和三个块级别。 值将输出到屏幕中，如每个语句后面的注释中所述。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [生存期、范围、可见性和链接](../c-language/lifetime-scope-visibility-and-linkage.md)

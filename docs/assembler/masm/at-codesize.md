@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - '@CodeSize symbol'
 ms.assetid: 6e18d99f-9999-41fe-9330-b80de8f735d5
-ms.openlocfilehash: dc5da8ffbd4f58eca470e1c23321d104c2d9449d
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: ae6b510add3c6e68a82f67f95a9b5a02b65cc32f
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74399202"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75316416"
 ---
 # <a name="codesize"></a>\@CodeSize
 
@@ -23,4 +23,5 @@ ms.locfileid: "74399202"
 
 ## <a name="see-also"></a>另请参阅
 
-[符号引用](symbols-reference.md)
+[符号引用](symbols-reference.md)\
+[MASM BNF 语法](masm-bnf-grammar.md)

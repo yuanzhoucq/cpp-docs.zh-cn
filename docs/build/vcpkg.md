@@ -1,17 +1,15 @@
 ---
 title: vcpkg-- 用于 Windows、Linux 和 MacOS 的 C++ 包管理器
 description: vcpkg 是一种命令行程序包管理器，可极大简化 Windows 上的开源 C++ 库的购置与安装。
-author: mikeblome
-ms.author: mblome
 ms.date: 05/16/2019
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 58f8a9b8223dc54bf083ebbac97528f88890777c
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: a116c33d7bb0b1d1396e68681d34995168a0bdc5
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837021"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75791618"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg：用于 Windows、Linux 和 MacOS 的 C++ 包管理器
 
@@ -182,7 +180,7 @@ If you are sure you want to rebuild the above packages, run this command with th
 
 ## <a name="uninstall-vcpkg"></a>卸载 vcpkg
 
-只需删除目录。
+只需删除 vcpkg 目录。 删除此目录会卸载 vcpkg 分发以及 vcpkg 已安装的所有库。
 
 ## <a name="send-feedback-about-vcpkg"></a>发送关于 vcpkg 的反馈
 
@@ -206,7 +204,7 @@ vcpkg 实例的内容如下：
 
 ## <a name="command-line-reference"></a>命令行参考
 
-|命令|说明|
+|命令|描述|
 |---------|---------|
 |**vcpkg search [pat]**|搜索可安装的包|
 |**vcpkg install \<pkg>...**|安装包|
@@ -228,7 +226,7 @@ vcpkg 实例的内容如下：
 
 ### <a name="options"></a>选项
 
-|选项|说明|
+|选项|描述|
 |---------|---------|
 |**--triplet \<t>**|指定目标体系结构三元组。 （默认：`%VCPKG_DEFAULT_TRIPLET%`，另请参阅“vcpkg help triplet”  ）|
 |**--vcpkg-root \<path>**|指定 vcpkg 根目录（默认：`%VCPKG_ROOT%`）|
