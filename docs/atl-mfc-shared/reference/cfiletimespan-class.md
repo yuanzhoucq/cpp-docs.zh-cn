@@ -1,6 +1,7 @@
 ---
 title: CFileTimeSpan 类
-ms.date: 01/06/2020
+description: 活动模板库（ATL）和 Microsoft 基础类（MFC） CFileTimeSpan 类以 FILETIME 单位管理时间间隔。
+ms.date: 01/10/2020
 f1_keywords:
 - CFileTimeSpan
 - ATLTIME/ATL::CFileTimeSpan
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - shared classes, CFileTimeSpan
 - CFileTimeSpan class
 ms.assetid: 5856fb39-9c82-4027-8ccf-8760890491ec
-ms.openlocfilehash: 9220ed8373e78db727b43ecb59880dcfbcc98f96
-ms.sourcegitcommit: 7bd3567fc6a0e7124aab51cad63bbdb44a99a848
+ms.openlocfilehash: 89d95759b11ff7e52c2a8fa75cf94f7b7b81fa36
+ms.sourcegitcommit: c3283062ce4e382aec7f11626d358a37caf8cdbb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75755063"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75914383"
 ---
 # <a name="cfiletimespan-class"></a>CFileTimeSpan 类
 
@@ -61,7 +62,7 @@ class CFileTimeSpan
 
 ## <a name="remarks"></a>备注
 
-此类提供方法来处理文件系统使用的单元中的相对时间段。 这些单位通常用于涉及创建、上次访问文件或上次修改文件的操作。 此类的方法经常与[CFileTime 类](../../atl-mfc-shared/reference/cfiletime-class.md)对象结合使用。
+`CFileTimeSpan` 类提供方法来处理文件系统使用的单元中的相对时间段。 通常在文件操作中使用这些单位，例如，在创建、上次访问文件或最后修改文件时。 此类的方法经常与[CFileTime 类](../../atl-mfc-shared/reference/cfiletime-class.md)对象结合使用。
 
 ## <a name="example"></a>示例
 
@@ -87,11 +88,11 @@ CFileTimeSpan(LONGLONG nSpan) throw();
 现有的 `CFileTimeSpan` 对象。
 
 *nSpan*\
-时间段（以毫秒为单位）。
+以 FILETIME 单位表示的时间段。
 
 ### <a name="remarks"></a>备注
 
-`CFileTimeSpan` 对象可使用现有 `CFileTimeSpan` 对象创建，或表示为64位值。 默认构造函数将时间跨度设置为0。
+可以使用现有的 `CFileTimeSpan` 对象创建 `CFileTimeSpan` 对象，或用100毫微秒的 FILETIME 单元表示为64位值。 有关详细信息，请参阅[CFileTime](cfiletime-class.md)。 默认构造函数将时间跨度设置为0。
 
 ## <a name="gettimespan"></a>CFileTimeSpan::GetTimeSpan
 
@@ -103,7 +104,7 @@ LONGLONG GetTimeSpan() const throw();
 
 ### <a name="return-value"></a>返回值
 
-返回时间跨度（以毫秒为单位）。
+返回以100毫微秒为单位的时间跨度。 有关详细信息，请参阅[CFileTime](cfiletime-class.md)。
 
 ## <a name="operator_-"></a>CFileTimeSpan：： operator-
 
@@ -303,7 +304,7 @@ void SetTimeSpan(LONGLONG nSpan) throw();
 ### <a name="parameters"></a>参数
 
 *nSpan*\
-时间跨度的新值，以100毫微秒为单位。 有关详细信息，请参阅[CFileTime](cfiletime-class.md)。
+以100毫微秒为单位的时间跨度的新值。 有关详细信息，请参阅[CFileTime](cfiletime-class.md)。
 
 ## <a name="see-also"></a>另请参阅
 
