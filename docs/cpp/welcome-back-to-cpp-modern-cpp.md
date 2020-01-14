@@ -1,26 +1,29 @@
 ﻿---
-title: 欢迎回到 C++（现代 C++）
-ms.date: 11/19/2019
+title: 欢迎返回C++ -新式C++
+description: 介绍新式C++中的新编程惯例及其基本原理。
+ms.date: 01/10/2020
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: 4dee4779e941c66af1c23f62a88cecec4916a475
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 9630322024e639f9e5db1888dac5a1530befc716
+ms.sourcegitcommit: ba129dc55dc3ff638f3af5ac0e87ec2ca1cb2674
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301738"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75869716"
 ---
-# <a name="welcome-back-to-c-modern-c"></a>欢迎回到 C++（现代 C++）
+# <a name="welcome-back-to-c---modern-c"></a>欢迎返回C++ -新式C++
 
-过去25年来， C++是世界上最广泛使用的编程语言之一。 正确编写的 C++ 程序快速、高效。 语言比其他语言更加灵活，因为它使你能够访问低级别硬件功能，最大程度地提高速度并最大程度地减少内存需求。 你可以使用它来创建各种应用，包括游戏、高性能科学软件、设备驱动程序、嵌入式程序、库和编译器，用于其他编程语言、Windows 客户端应用等。
+自从创建以来， C++已成为世界上最广泛使用的编程语言之一。 正确编写的 C++ 程序快速、高效。 语言比其他语言更加灵活：它可以在最高的抽象级别上运行，并在硅级别下运行。 C++提供高度优化的标准库。 它支持访问低级别硬件功能，最大限度地提高速度并最大程度地减少内存需求。 使用C++，你可以创建范围广泛的应用。 游戏、设备驱动程序和高性能科学软件。 嵌入的程序。 Windows 客户端应用程序。 甚至编写适用于其他编程语言的库和编译器C++。
 
-C++ 的原始要求之一是与 C 语言向后兼容。 因此C++ ，始终允许 C 样式编程，其中包含原始指针、数组、以 null 结尾的字符串、自定义数据结构，以及可实现良好性能的其他功能，但也可能会产生 bug 和复杂性。 的演变C++具有强调的功能，大大减少了使用 C 样式惯例的需求。 旧的 C 编程设施在您需要它们时存在，但对于新式C++的代码，您应该需要更少的代码。 新式C++代码更简单、更安全、更优雅，而且仍能像以往一样快速。
+C++ 的原始要求之一是与 C 语言向后兼容。 因此， C++始终允许 C 样式编程，其中包含原始指针、数组、以 null 结尾的字符串和其他功能。 它们可以实现良好的性能，但也可能会产生 bug 和复杂性。 的演变C++具有强调的功能，大大减少了使用 C 样式惯例的需求。 旧的 C 编程设施在您需要它们时存在，但对于新式C++的代码，您应该需要更少的代码。 新式C++代码更简单、更安全、更优雅，而且仍能像以往一样快速。
 
 以下部分概述了新式C++的主要功能。 除非另有说明，否则此处列出的功能在 c + + 11 和更高版本中可用。 在 Microsoft C++编译器中，可以设置[/std](../build/reference/std-specify-language-standard-version.md)编译器选项，以指定要用于项目的标准版本。
 
-## <a name="raii-and-smart-pointers"></a>RAII 和智能指针
+## <a name="resources-and-smart-pointers"></a>资源和智能指针
 
-C 样式编程中的一种主要 bug 类是*内存泄漏*，因为无法调用通过**new**分配的内存**删除**。 新式C++强调*资源获取的原则是初始化*，这表明任何资源（堆内存、文件句柄、套接字等）都应该由在其构造函数中创建或接收新分配的资源的对象*拥有*，并在其析构函数中删除。 通过遵守 RAII 原则，可保证当所属对象超出范围时，所有资源都将正确返回到操作系统。 为了支持简单采用 RAII 原则C++ ，标准库提供了三种智能指针类型： [std：： unique_ptr](../standard-library/unique-ptr-class.md)、 [std：： shared_ptr](../standard-library/shared-ptr-class.md)和[std：： weak_ptr](../standard-library/weak-ptr-class.md)。 智能指针处理其拥有的内存分配和删除操作。 下面的示例演示一个类，其中包含一个数组成员，该成员在调用 `make_unique()`的情况下在堆上分配。 对**new**和**delete**的调用由 `unique_ptr` 类封装。 当 `widget` 对象超出范围时，将调用 unique_ptr 析构函数，并且它将释放为数组分配的内存。  
+C 样式编程中的一个主要错误类是*内存泄漏*。 泄漏通常是由于对使用**new**分配的内存调用**delete**失败引起的。 新式C++强调*资源获取的原则是初始化*（RAII）。 其原理很简单。 资源（堆内存、文件句柄、套接字等）应归对象*所有*。 该对象在其构造函数中创建或接收新分配的资源，并在其析构函数中将其删除。 RAII 原则保证当所属对象超出范围时，所有资源都能正确返回到操作系统。
+
+为了支持简单采用 RAII 原则C++ ，标准库提供了三种智能指针类型： [std：： unique_ptr](../standard-library/unique-ptr-class.md)、 [std：： shared_ptr](../standard-library/shared-ptr-class.md)和[std：： weak_ptr](../standard-library/weak-ptr-class.md)。 智能指针处理其拥有的内存分配和删除操作。 下面的示例演示一个类，其中包含一个数组成员，该成员在调用 `make_unique()`的情况下在堆上分配。 对**new**和**delete**的调用由 `unique_ptr` 类封装。 当 `widget` 对象超出范围时，将调用 unique_ptr 析构函数，并且它将释放为数组分配的内存。  
 
 ```cpp
 #include <memory>
@@ -47,11 +50,11 @@ void functionUsingWidget() {
 
 ## <a name="stdstring-and-stdstring_view"></a>std：： string 和 std：： string_view
 
-C 样式字符串是 bug 的另一个主要源。 通过使用[std：： string 和 std：： wstring](../standard-library/basic-string-class.md) ，可以完全消除与 C 样式字符串关联的所有错误，并获得用于搜索、追加、预先计算等成员函数的好处。 两者都是高度优化的速度。 将字符串传递给只需要只读访问权限的函数时，可在 c + + 17 中使用[std：： string_view](../standard-library/basic-string-view-class.md)提高性能。
+C 样式字符串是 bug 的另一个主要源。 通过使用[std：： string 和 std：： wstring](../standard-library/basic-string-class.md)，几乎可以消除与 C 样式字符串关联的所有错误。 您还可以获得用于搜索、追加、预先计算等成员函数的好处。 两者都是高度优化的速度。 将字符串传递给只需要只读访问权限的函数时，可在 c + + 17 中使用[std：： string_view](../standard-library/basic-string-view-class.md)提高性能。
 
 ## <a name="stdvector-and-other-standard-library-containers"></a>std：： vector 和其他标准库容器
 
-标准库容器都遵循 RAII 的原则，提供用于安全遍历元素的迭代器，针对性能进行了高度优化，并已充分测试了正确性。 如果尽可能使用这些容器，则可以消除自定义数据结构中可能引入的 bug 或效率低下问题。 默认情况下，使用[向量](../standard-library/vector-class.md)作为 C++ 中的首选顺序容器。 这等同于.NET 语言中的`List<T>`。
+标准库容器都遵循 RAII 的原则。 它们为元素的安全遍历提供迭代器。 而且，它们已针对性能进行了高度优化，并已充分测试了正确性。 通过使用这些容器，可以消除自定义数据结构中可能引入的 bug 或效率低下问题。 在中C++，使用[vector](../standard-library/vector-class.md)作为序列容器，而不是原始数组。
 
 ```cpp
 vector<string> apples;
@@ -78,17 +81,17 @@ apple_color["Granny Smith"] = "Green";
 
 ## <a name="standard-library-algorithms"></a>标准库算法
 
-在假设需要为程序编写自定义算法之前，请先查看C++标准库[算法](../standard-library/algorithm.md)。 标准库包含许多常见操作（如搜索、排序、筛选和随机化进程）的不断增长的算法。 数学库很广泛。 从 c + + 17 开始，提供了许多算法的并行版本。
+在假设需要为程序编写自定义算法之前，请先查看C++标准库[算法](../standard-library/algorithm.md)。 标准库包含许多常见操作（如搜索、排序、筛选和随机化进程）的不断增长的算法。 The math library is extensive. Starting in C++17, parallel versions of many algorithms are provided.
 
-以下是一些重要示例：
+Here are some important examples:
 
-- **for_each**，默认遍历算法（以及基于范围的 for 循环）。 
+- **for_each**, the default traversal algorithm (along with range-based for loops).
 
-- 用于对容器元素进行就地修改的**转换**
+- **transform**, for not-in-place modification of container elements
 
-- **find_if**，默认搜索算法。
+- **find_if**, the default search algorithm.
 
-- **排序**、 **lower_bound**和其他默认的排序和搜索算法。
+- **sort**, **lower_bound**, and the other default sorting and searching algorithms.
 
 若要写入一个比较运算符，请使用格式精确的 **<** 并在可行时使用*命名的 lambda*。
 
@@ -101,9 +104,9 @@ sort( v.begin(), v.end(), comp );
 auto i = lower_bound( v.begin(), v.end(), comp );
 ```
 
-## <a name="auto-instead-of-explicit-type-names"></a>自动而不是显式类型名称
+## <a name="auto-instead-of-explicit-type-names"></a>auto instead of explicit type names
 
-C + + 11 引入了[auto](auto-cpp.md)关键字，用于变量、函数和模板声明。 **自动**告知编译器推断对象的类型，这样您就不必显式键入对象类型。 当推导出的类型是嵌套模板时，"**自动**" 特别有用：
+C++11 introduced the [auto](auto-cpp.md) keyword for use in variable, function, and template declarations. **auto** tells the compiler to deduce the type of the object so that you don't have to type it explicitly. **auto** is especially useful when the deduced type is a nested template:
 
 ```cpp
 map<int,list<string>>::iterator i = m.begin(); // C-style
@@ -112,7 +115,7 @@ auto i = m.begin(); // modern C++
 
 ## <a name="range-based-for-loops"></a>基于范围的 for 循环
 
-数组和容器上的 C 样式迭代容易导致索引错误，而且键入单调乏味。 若要消除这些错误，并使代码更具可读性，请使用基于范围的 for 循环和标准库容器以及原始数组。 有关详细信息，请参阅[基于范围的 for 语句](../cpp/range-based-for-statement-cpp.md)。
+C-style iteration over arrays and containers is prone to indexing errors and is also tedious to type. To eliminate these errors, and make your code more readable, use range-based for loops with both Standard Library containers and raw arrays. For more information, see [Range-based for statement](../cpp/range-based-for-statement-cpp.md).
 
 ```cpp
 #include <iostream>
@@ -136,18 +139,18 @@ int main()
 }
 ```
 
-## <a name="constexpr-expressions-instead-of-macros"></a>constexpr 表达式而非宏
+## <a name="constexpr-expressions-instead-of-macros"></a>constexpr expressions instead of macros
 
-C 和C++中的宏是在编译之前由预处理器处理的标记。 在编译文件之前，宏标记的每个实例都将替换为其定义的值或表达式。 通常在 C 样式编程中使用宏来定义编译时常量值。 但宏容易出错且难以调试。 在现代C++情况下，你应该首选[constexpr](constexpr-cpp.md)变量用于编译时常量：
+Macros in C and C++ are tokens that are processed by the preprocessor before compilation. Each instance of a macro token is replaced with its defined value or expression before the file is compiled. Macros are commonly used in C-style programming to define compile-time constant values. However, macros are error-prone and difficult to debug. In modern C++, you should prefer [constexpr](constexpr-cpp.md) variables for compile-time constants:
 
 ```cpp
 #define SIZE 10 / C-style
 constexpr int size = 10; // modern C++
 ```
 
-### <a name="uniform-initialization"></a>统一初始化
+### <a name="uniform-initialization"></a>Uniform initialization
 
-在新式C++中，可以对任何类型使用大括号初始化。 初始化数组、矢量或其他容器时，这种形式的初始化非常方便。 在下面的示例中，`v2` `S`的3个实例进行初始化。 `v3` 是用 `S` 的3个实例初始化的，这些实例本身都用大括号初始化。 编译器基于声明的 `v3`类型推断每个元素的类型。
+In modern C++, you can use brace initialization for any type. This form of initialization is especially convenient when initializing arrays, vectors, or other containers. In the following example, `v2` is initialized with three instances of `S`. `v3` is initialized with three instances of `S` that are themselves initialized using braces. The compiler infers the type of each element based on the declared type of `v3`.
 
 ```cpp
 #include <vector>
@@ -180,15 +183,15 @@ int main()
 }
 ```
 
-有关详细信息，请参阅[大括号初始化](initializing-classes-and-structs-without-constructors-cpp.md)。
+For more information, see [Brace initialization](initializing-classes-and-structs-without-constructors-cpp.md).
 
-## <a name="move-semantics"></a>移动语义
+## <a name="move-semantics"></a>Move semantics
 
-新式C++提供了*移动语义*，这使得在某些情况下，在早期版本的语言中可避免不必要的内存复制。 *移动*操作将资源的所有权从一个对象转移到下一个对象，而不创建副本。 实现拥有资源（如堆内存、文件句柄等）的类时，可以为其定义*移动构造函数*和*移动赋值运算符*。 在不需要复制的情况下，编译器会在重载解析期间选择这些特殊成员。 标准库容器类型调用对象的移动构造函数（如果已定义）。 有关详细信息，请参阅[移动构造函数和移动赋值C++运算符（）](move-constructors-and-move-assignment-operators-cpp.md)。
+Modern C++ provides *move semantics*, which make it possible to eliminate unnecessary memory copies. In earlier versions of the language, copies were unavoidable in certain situations. A *move* operation transfers ownership of a resource from one object to the next without making a copy. When implementing a class that owns a resource (such as heap memory, file handles, and so on), you can define a *move constructor* and *move assignment operator* for it. The compiler will choose these special members during overload resolution in situations where a copy isn't needed. The Standard Library container types invoke the move constructor on objects if one is defined. For more information, see [Move Constructors and Move Assignment Operators (C++)](move-constructors-and-move-assignment-operators-cpp.md).
 
 ## <a name="lambda-expressions"></a>Lambda 表达式
 
-在 C 样式编程中，可以通过*函数指针*将函数传递到其他函数。 函数指针的维护和理解是不方便的，因为它们引用的函数可以在源代码中的其他位置定义，而不是从调用它的位置定义。 而且，它们不是类型安全的。 新式C++提供函数对象，这些类用于重写[（）](function-call-operator-parens.md)运算符，从而使它们可以像函数一样进行调用。 创建函数对象的最简便方法是采用内联[lambda 表达式](../cpp/lambda-expressions-in-cpp.md)。 下面的示例演示如何使用 lambda 表达式传递函数对象，该函数对象将对矢量中的每个元素调用 `for_each` 函数：
+In C-style programming, a function can be passed to another function by using a *function pointer*. Function pointers are inconvenient to maintain and understand. The function they refer to may be defined elsewhere in the source code, far away from the point at which it's invoked. Also, they're not type-safe. Modern C++ provides *function objects*, classes that override the [()](function-call-operator-parens.md) operator, which enables them to be called like a function. The most convenient way to create function objects is with inline [lambda expressions](../cpp/lambda-expressions-in-cpp.md). The following example shows how to use a lambda expression to pass a function object, that the `for_each` function will invoke on each element in the vector:
 
 ```cpp
     std::vector<int> v {1,2,3,4,5};
@@ -197,11 +200,11 @@ int main()
     auto result = find_if(begin(v), end(v), [=](int i) { return i > x && i < y; });
 ```
 
-Lambda 表达式 `[=](int i) { return i > x && i < y; }` 可以读取为 "函数，该函数采用 `int` 类型的单个自变量，并返回一个布尔值，指示表达式是否为 true。 请注意，可在 lambda 中使用来自周围上下文的 `x` 和 `y` 变量。 `[=]` 指定这些变量是通过值*捕获*的;换句话说，lambda 表达式具有其自己的这些值的副本。
+The lambda expression `[=](int i) { return i > x && i < y; }` can be read as "function that takes a single argument of type `int` and returns a boolean that indicates whether the argument is greater than `x` and less than `y`." Notice that the variables `x` and `y` from the surrounding context can be used in the lambda. `[=]` 指定这些变量是通过值*捕获*的;换言之，lambda 表达式具有其自己的这些值的副本。
 
 ## <a name="exceptions"></a>异常
 
-通常，新式C++强调异常，而不是错误代码，作为报告和处理错误条件的最佳方式。 有关详细信息，请[参阅C++异常和错误处理的新式最佳实践](errors-and-exception-handling-modern-cpp.md)。
+新式C++强调异常，而不是错误代码，作为报告和处理错误条件的最佳方式。 有关详细信息，请[参阅C++异常和错误处理的新式最佳实践](errors-and-exception-handling-modern-cpp.md)。
 
 ## <a name="stdatomic"></a>std：：原子
 
@@ -213,7 +216,7 @@ Lambda 表达式 `[=](int i) { return i > x && i < y; }` 可以读取为 "函数
 
 ## <a name="see-also"></a>另请参阅
 
-[C++ 语言参考](../cpp/cpp-language-reference.md)<br/>
-[Lambda 表达式](../cpp/lambda-expressions-in-cpp.md)<br/>
-[C++ 标准库](../standard-library/cpp-standard-library-reference.md)<br/>
+[C++ 语言参考](../cpp/cpp-language-reference.md)\
+[Lambda 表达式](../cpp/lambda-expressions-in-cpp.md)\
+[C++ 标准库](../standard-library/cpp-standard-library-reference.md)\
 [Microsoft C++ 语言一致性表](../overview/visual-cpp-language-conformance.md)

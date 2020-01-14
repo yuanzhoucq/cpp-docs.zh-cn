@@ -10,16 +10,16 @@ helpviewer_keywords:
 - functions [C++], function-call operator
 - function call operator ()
 ms.assetid: 50c92e59-a4bf-415a-a6ab-d66c679ee80a
-ms.openlocfilehash: 79c43ed11bfc73ec4bfaedad0a20b45fb6ca1ffb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3194c34bacfe7b2ed758ab245c5858eadb18e64e
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154147"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301517"
 ---
 # <a name="function-call-operator-"></a>函数调用运算符：()
 
-Postfix-expression 后跟函数调用运算符 **（)**，指定函数调用。
+后跟函数调用运算符 **（）** 的后缀表达式指定函数调用。
 
 ## <a name="syntax"></a>语法
 
@@ -32,9 +32,9 @@ postfix-expression
 
 函数调用运算符的自变量是零或用逗号分隔的多个表达式 - 函数的自变量。
 
-*后缀表达式*的计算结果必须为函数地址 （例如，函数标识符或函数指针的值） 和*自变量表达式列表*是 （分隔的表达式的列表逗号） 分隔的值 （参数） 传递给函数。 argument-expression-list 参数可以为空。
+*后缀表达式*的计算结果必须为函数地址（例如，函数标识符或函数指针的值），*参数表达式列表*是值（参数）传递到函数的表达式的列表（用逗号分隔）。 argument-expression-list 参数可以为空。
 
-*后缀表达式*必须属于以下类型之一：
+*后缀表达式*必须是以下类型之一：
 
 - 函数返回类型 `T`。 示例声明如下
 
@@ -129,7 +129,7 @@ int main()
 }
 ```
 
-上面的代码定义一个名为类`Point`，其中包含专用的数据对象，分别代表*x*并*y*坐标。 必须修改这些数据对象，并且必须检索其值。 该程序只是针对此类的多个设计之一；另一种可能的设计是使用 `GetX` 与 `SetX` 函数或使用 `GetY` 与 `SetY` 函数。
+前面的代码定义了一个名为 `Point`的类，该类包含表示*x*和*y*坐标的私有数据对象。 必须修改这些数据对象，并且必须检索其值。 该程序只是针对此类的多个设计之一；另一种可能的设计是使用 `GetX` 与 `SetX` 函数或使用 `GetY` 与 `SetY` 函数。
 
 返回类类型的函数、指向类类型的指针或对类类型的引用可以用作成员选择运算符的左操作数。 因此，以下代码是合法的：
 
@@ -174,9 +174,9 @@ int main() {
 }
 ```
 
-可以递归方式调用函数。 有关函数声明的详细信息，请参阅[函数](functions-cpp.md)。 相关的材料处于[程序和链接](../cpp/program-and-linkage-cpp.md)。
+可以递归方式调用函数。 有关函数声明的详细信息，请参阅[函数](functions-cpp.md)。 相关材料位于[翻译单元和链接](../cpp/program-and-linkage-cpp.md)中。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [后缀表达式](../cpp/postfix-expressions.md)<br/>
 [C++ 内置运算符、优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
