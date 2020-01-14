@@ -56,12 +56,12 @@ helpviewer_keywords:
 - _exec function
 - _texecvpe function
 ms.assetid: a261df93-206a-4fdc-b8ac-66aa7db83bc6
-ms.openlocfilehash: f4bef0ef4f3cad0411f6da54ce5e2d8883913754
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: dab670c5baef1c51c39a4c936380fab92c5103cc
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940365"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300296"
 ---
 # <a name="_exec-_wexec-functions"></a>_exec、_wexec 函数
 
@@ -76,7 +76,7 @@ ms.locfileid: "70940365"
 
 函数名称末尾的字母可确定该变量。
 
-|_exec 函数后缀|说明|
+|_exec 函数后缀|描述|
 |----------------------------|-----------------|
 |`e`|将指向环境设置的指针数组 `envp` 传递给新进程。|
 |`l`|将命令行参数单独传递给 `_exec` 函数。 通常在提前知道新进程的参数数量时使用。|
@@ -116,9 +116,9 @@ ms.locfileid: "70940365"
 
 通常在提前知道参数数量时使用 `_execl`、`_execle`、`_execlp` 和 `_execlpe` 调用。 参数 `arg0` 通常是一个指向 `cmdname` 的指针。 参数 `arg1` 到 `argn` 指向构成新参数列表的字符字符串。 空指针必须在 `argn` 后才能标记参数列表的末尾。
 
-`_execv`、`_execve`、`_execvp` 和 `_execvpe` 调用在新进程的参数数量可变时很有用。 将指向参数的指针作为数组 `argv` 进行传递。 参数 `argv`[0] 通常是一个指向 `cmdname` 的指针。 参数 `argv`[1] 到 `argv`[`n`] 指向构成新参数列表的字符字符串。 参数 `argv`[`n`+1] 必须是一个 NULL 指针，用以标记参数列表的末尾  。
+`_execv`、`_execve`、`_execvp` 和 `_execvpe` 调用在新进程的参数数量可变时很有用。 将指向参数的指针作为数组 `argv` 进行传递。 参数 `argv`[0] 通常是一个指向 `cmdname` 的指针。 参数 `argv`[1] 到 `argv`[`n`] 指向构成新参数列表的字符字符串。 参数 `argv`[`n`+1] 必须是一个 NULL 指针，用以标记参数列表的末尾。
 
-在进行 `_exec` 调用时打开的文件在新进程中仍然保持打开状态。 在 `_execl`、`_execlp`、`_execv` 和 `_execvp` 调用中，新进程将继承调用进程的环境。 通过 `_execle` 参数传递环境设置的列表，`_execlpe`、`_execve`、`_execvpe` 和 `envp` 调用可更改新进程的环境。 `envp` 是一个字符指针数组，其中每个元素（最后一个元素除外）均指向定义环境变量的以 null 结尾的字符串。 此类字符串通常具有 `NAME`=`value` 格式，其中 `NAME` 是环境变量的名称，`value` 是为该变量设置的字符串值。 （请注意，`value` 并未括在双引号中。）`envp` 数组的最后一个元素应该是 NULL  。 当 `envp` 本身是 NULL 时，新进程将继承调用进程的环境设置  。
+在进行 `_exec` 调用时打开的文件在新进程中仍然保持打开状态。 在 `_execl`、`_execlp`、`_execv` 和 `_execvp` 调用中，新进程将继承调用进程的环境。 通过 `_execle` 参数传递环境设置的列表，`_execlpe`、`_execve`、`_execvpe` 和 `envp` 调用可更改新进程的环境。 `envp` 是一个字符指针数组，其中每个元素（最后一个元素除外）均指向定义环境变量的以 null 结尾的字符串。 此类字符串通常具有 `NAME`=`value` 格式，其中 `NAME` 是环境变量的名称，`value` 是为该变量设置的字符串值。 （请注意，`value` 并未括在双引号中。）`envp` 数组的最后一个元素应该是 NULL。 当 `envp` 本身是 NULL 时，新进程将继承调用进程的环境设置。
 
 使用一个 `_exec` 函数执行的程序将始终加载到内存中，如同已将该程序的 .exe 文件头中的最大分配字段设置为默认值 0xFFFFH。
 
@@ -126,7 +126,7 @@ ms.locfileid: "70940365"
 
 ## <a name="example"></a>示例
 
-```
+```c
 // crt_args.c
 // Illustrates the following variables used for accessing
 // command-line arguments and environment variables:
@@ -157,7 +157,7 @@ char **envp )       // Array of environment variable strings
 
 运行以下程序以执行 Crt_args.exe：
 
-```
+```c
 // crt_exec.c
 // Illustrates the different versions of exec, including
 //      _execl          _execle          _execlp          _execlpe
