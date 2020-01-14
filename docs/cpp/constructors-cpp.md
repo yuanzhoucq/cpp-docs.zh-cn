@@ -1,17 +1,17 @@
 ---
 title: 构造函数 (C++)
-ms.date: 11/19/2019
+ms.date: 12/27/2019
 helpviewer_keywords:
 - constructors [C++]
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: 6cdf6241542c3f93484097c65015181a91647d49
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 985c63c5c937f9e85b6898cdbcc61f347688b96d
+ms.sourcegitcommit: 00f50ff242031d6069aa63c81bc013e432cae0cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246620"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75546388"
 ---
 # <a name="constructors-c"></a>构造函数 (C++)
 
@@ -180,7 +180,7 @@ Box boxes[3]{ { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
 
 ## <a name="copy_and_move_constructors"></a>复制构造函数
 
-*复制构造函数*通过从同一类型的对象复制成员值来初始化对象。 如果类成员是所有简单类型（如标量值），则编译器生成的复制构造函数便已足够，无需自行定义。 如果你的类需要更复杂的初始化，则需要实现自定义复制构造函数。 例如，如果类成员是一个指针，则需要定义一个复制构造函数以分配新内存并从另一个指向对象复制值。 编译器生成的复制构造函数只复制指针，使新指针仍指向另一个内存位置。
+A*复制构造函数*是特殊成员函数，将作为输入的相同对象的引用类型，并使它的一个副本。 如果类成员是所有简单类型（如标量值），则编译器生成的复制构造函数便已足够，无需自行定义。 如果你的类需要更复杂的初始化，则需要实现自定义复制构造函数。 例如，如果类成员是一个指针，则需要定义一个复制构造函数以分配新内存并从另一个指向对象复制值。 编译器生成的复制构造函数只复制指针，使新指针仍指向另一个内存位置。
 
 复制构造函数可能具有以下其中一个签名：
 
@@ -194,7 +194,7 @@ Box boxes[3]{ { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
     Box(Box& other, int i = 42, string label = "Box");
 ```
 
-定义复制构造函数时，还应定义复制赋值运算符（=）。 有关详细信息，请参阅[分配](assignment.md)和[复制构造函数和复制赋值运算符](copy-constructors-and-copy-assignment-operators-cpp.md)。
+定义复制构造函数时，还应定义复制赋值运算符（=）。 有关更多信息，请参见[赋值](assignment.md)和[复制构造函数和复制赋值运算符](copy-constructors-and-copy-assignment-operators-cpp.md)。
 
 可以通过将复制构造函数定义为已删除，阻止复制对象：
 
@@ -283,7 +283,7 @@ int main()
 
 如果任何属于类类型的成员缺少析构函数，或者编译器无法确定要用于移动操作的构造函数，则将隐式声明的移动构造函数定义为已删除。
 
-有关如何编写非普通移动构造函数的详细信息，请参阅[移动构造函数和移动赋值运算符（C++）](../cpp/move-constructors-and-move-assignment-operators-cpp.md)。
+有关如何编写非普通移动构造函数的详细信息，请参阅[移动构造函数和移动赋值运算符 （C++）](../cpp/move-constructors-and-move-assignment-operators-cpp.md)。
 
 ## <a name="explicitly_defaulted_and_deleted_constructors"></a>显式默认的和删除的构造函数
 
@@ -478,6 +478,52 @@ int main(){
 
 1. 如果是非委托构造函数，所有完全构造的基类对象和成员均将被销毁。 但是，对象本身不是完全构造的，因此析构函数不会运行。
 
+## <a name="extended_aggregate"></a>派生的构造函数和扩展的聚合初始化
+
+如果基类的构造函数是非公共的，但派生类可访问，则在 Visual Studio 2017 和更高版本中的 **/std： c + + 17**模式下，不能使用空大括号初始化派生类型的对象。
+
+以下示例演示 C++14 一致行为：
+
+```cpp
+struct Derived;
+
+struct Base {
+    friend struct Derived;
+private:
+    Base() {}
+};
+
+struct Derived : Base {};
+
+Derived d1; // OK. No aggregate init involved.
+Derived d2 {}; // OK in C++14: Calls Derived::Derived()
+               // which can call Base ctor.
+```
+
+在 C++17，`Derived` 现被视作聚合类型。 这意味着 `Base` 通过私有默认构造函数进行的初始化将作为扩展的聚合初始化规则的一部分而直接发生。 以前，`Base` 私有构造函数通过 `Derived` 构造函数调用，它之所以能够成功是因为友元声明。
+
+下面的示例演示 Visual Studio 2017 和更高版本的 **/std： c + + 17**模式下的 c + + 17 行为：
+
+```cpp
+struct Derived;
+
+struct Base {
+    friend struct Derived;
+private:
+    Base() {}
+};
+
+struct Derived : Base {
+    Derived() {} // add user-defined constructor
+                 // to call with {} initialization
+};
+
+Derived d1; // OK. No aggregate init involved.
+
+Derived d2 {}; // error C2248: 'Base::Base': cannot access
+               // private member declared in class 'Base'
+```
+
 ### <a name="constructors-for-classes-that-have-multiple-inheritance"></a>具有多重继承的类的构造函数
 
 如果类从多个基类派生，那么将按照派生类声明中列出的顺序调用基类构造函数：
@@ -544,7 +590,7 @@ public:
 
 所有构造函数完成后，完全初始化的构造函数将立即创建对象。 有关详细信息，请参阅[委托构造函数](../cpp/delegating-constructors.md)。
 
-## <a name="inheriting_constructors"></a>继承构造函数（c + + 11）
+## <a name="inheriting_constructors"></a> 继承构造函数 (C++ 11)
 
 派生类可以使用**using**声明从直接基类继承构造函数，如下面的示例中所示：
 
@@ -597,7 +643,7 @@ Derived d4 calls: Base()*/
 
 ::: moniker range=">=vs-2017"
 
-**Visual Studio 2017 及更高版本**：/Std 中的**using**语句 **： c + + 17**模式使基类中的所有构造函数的作用域除外，但对于派生类中的构造函数具有相同的签名。 一般而言，当派生类未声明新数据成员或构造函数时，最好使用继承构造函数。 另请参阅[Visual Studio 2017 版本15.7 中的改进](https://docs.microsoft.com/cpp/overview/cpp-conformance-improvements?view=vs-2017#improvements_157)。
+**Visual Studio 2017 及更高版本**： **/Std： c + + 17**模式中的**using**语句可将基类中的所有构造函数作为作用域，但具有与派生类中的构造函数相同的签名的类除外。 一般而言，当派生类未声明新数据成员或构造函数时，最好使用继承构造函数。 另请参阅[Visual Studio 2017 版本15.7 中的改进](https://docs.microsoft.com/cpp/overview/cpp-conformance-improvements?view=vs-2017#improvements_157)。
 
 ::: moniker-end
 
@@ -652,6 +698,6 @@ int main(){
 - [移动构造函数和移动赋值运算符](move-constructors-and-move-assignment-operators-cpp.md)
 - [委托构造函数](delegating-constructors.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类和结构](classes-and-structs-cpp.md)

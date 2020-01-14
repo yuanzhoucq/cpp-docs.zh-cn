@@ -3,14 +3,12 @@ title: Visual Studio 中的 C++ 新变化
 ms.date: 07/02/2019
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-author: mikeblome
-ms.author: mblome
-ms.openlocfilehash: bde8b8e17c3186d22493f099a5f7d1b5a2646a67
-ms.sourcegitcommit: 2362d15b5eb18d27773c3f7522da3d0eed9e2571
+ms.openlocfilehash: 04cf4ecf447120302125c797bd70c00c62b5def9
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73754138"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75793966"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Visual Studio 中的 C++ 新变化
 
@@ -312,7 +310,7 @@ Microsoft C++ 编译器支持 Intel AVX-512，包括将 AVX-512 中的新函数�
 
 ##### <a name="visual-studio-2017-rtm-version-150"></a>Visual Studio 2017 RTM（版本 15.0）
 
-- 次要 `basic_string` `_ITERATOR_DEBUG_LEVEL != 0` 诊断改进。 在字符串机制中进行 IDL 检查现在将报告触发该检查的特定行为。 例如，现在会收到“无法取消引用字符串迭代器，因为其已超出范围（例如末尾迭代器）”，而不是“字符串迭代器不可取消引用”。
+- 次要 `basic_string``_ITERATOR_DEBUG_LEVEL != 0` 诊断改进。 在字符串机制中进行 IDL 检查现在将报告触发该检查的特定行为。 例如，现在会收到“无法取消引用字符串迭代器，因为其已超出范围（例如末尾迭代器）”，而不是“字符串迭代器不可取消引用”。
 - 修复了会导致代码永久受阻的 `std::promise` 移动赋值运算符。
 - 修复了编译器错误，将 `atomic<T*>` 隐式转换为 `T*`。
 - `pointer_traits<Ptr>` 现可正确检测 `Ptr::rebind<U>`。
