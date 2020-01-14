@@ -3,14 +3,12 @@ title: Visual C++ 帮助和社区
 ms.date: 11/30/2017
 ms.technology: cpp-ide
 ms.assetid: 6bc23c18-fcd9-47bc-bff2-17537700be4a
-author: mikeblome
-ms.author: mblome
-ms.openlocfilehash: a897f3b6154368c7381f1cac8e51ed5acfac5d32
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: eb266354b818e95583c0d236c19209963a34f1f5
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708171"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75791688"
 ---
 # <a name="visual-c-help-and-community"></a>Visual C++ 帮助和社区
 
@@ -18,13 +16,13 @@ ms.locfileid: "65708171"
 
 ## <a name="samples"></a>示例
 
-|Title|说明|
+|Title|描述|
 |-----------|-----------------|
 |[开发人员代码示例](https://code.msdn.microsoft.com/)|包含来自 Microsoft 和社区参与者的可下载示例代码。|
 
 ## <a name="product-documentation"></a>产品文档
 
-|Title|说明|
+|Title|描述|
 |-----------|-----------------|
 |[Visual Studio 中的 C++](visual-cpp-in-visual-studio.md)|包含有关 Visual C++ 的引用和概念文档。 MSDN 库的一部分。|
 |[Windows 开发人员中心](https://developer.microsoft.com/windows/)|包含有关如何使用 C++ 和其他语言来开发面向 Windows 10 的应用的信息。 Windows 开发人员中心的一部分, C++ 内容在“文档 > 语言参考”节点下。|
@@ -39,7 +37,7 @@ ms.locfileid: "65708171"
 
 ## <a name="related-articles"></a>相关文章
 
-|Title|说明|
+|Title|描述|
 |-----------|-----------------|
 |[Visual C++ 团队博客](https://blogs.msdn.microsoft.com/vcblog/)|包含一些博文，它们介绍了专家就 Visual C++ 产品团队进行的各种主题。|
 |[第 9 频道](https://channel9.msdn.com/)|包含视频访谈和演讲。 使用第 9 频道主页上的搜索框查找 C++ 内容。|
