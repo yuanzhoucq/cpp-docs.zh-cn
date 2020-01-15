@@ -1,31 +1,31 @@
 ---
-title: vcpkg-- 用于 Windows、Linux 和 MacOS 的 C++ 包管理器
-description: vcpkg 是一种命令行程序包管理器，可极大简化 Windows 上的开源 C++ 库的购置与安装。
-ms.date: 05/16/2019
+title: vcpkg：用于 Windows、Linux 和 MacOS 的 C++ 包管理器
+description: vcpkg 是一种命令行包管理器，可极大简化 Windows、MacOS 和 Linux 上开源 C++ 库的购置与安装。
+ms.date: 01/10/2020
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: a116c33d7bb0b1d1396e68681d34995168a0bdc5
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.openlocfilehash: 7c3dddd62a66c746d92d2f931b97e354ee27d75f
+ms.sourcegitcommit: ba129dc55dc3ff638f3af5ac0e87ec2ca1cb2674
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75791618"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75869713"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg：用于 Windows、Linux 和 MacOS 的 C++ 包管理器
 
-vcpkg 是一种命令行包管理器，可极大简化 Windows、Linux 和 MacOS 上第三方库的购置与安装。 如果项目要使用第三方库，建议通过 vcpkg 来安装它们。 vcpkg 同时支持开源和专有库。 已测试 vcpkg Windows 目录中所有库与 Visual Studio 2015、Visual Studio 2017 及 Visual Studio 2019 的兼容性。 截至 2018 年 5 月，Windows 目录中已有 900 多个库，Linux/MacOS 目录中有 350 多个库。 C++ 社区正在不断向两个目录添加更多的库。
+vcpkg 是用于 C++ 的一种命令行包管理器。 它极大地简化了 Windows、Linux 和 MacOS 上第三方库的购置与安装。 如果项目要使用第三方库，建议通过 vcpkg 来安装它们。 vcpkg 同时支持开源和专有库。 已测试 vcpkg Windows 目录中所有库与 Visual Studio 2015、Visual Studio 2017 及 Visual Studio 2019 的兼容性。 在 Windows 和 Linux/MacOS 目录之间，vcpkg 现已支持超过 1900 个库。 C++ 社区正在不断向两个目录添加更多的库。
 
 ## <a name="simple-yet-flexible"></a>简单而灵活
 
-仅通过单个命令就能下载源并生成库。 vcpkg 本身就是一个开源项目，可通过 GitHub 获取。 可凭喜好自定义个人专用克隆。 例如，除在公共目录中找到的内容外，还可指定不同的库或不同版本的库。 可在单台计算机上拥有多个 vcpkg 克隆，每个克隆都可生成自定义库集和/或编译开关等。每个克隆都是一个自包含的环境，它自身的 vcpkg.exe 副本仅可在自己的层次结构中运行。 vcpkg 不会被添加到任何环境变量，并且在 Windows 注册表或 Visual Studio 上也不会有依赖项。
+仅通过单个命令就能下载源并生成库。 vcpkg 本身就是一个开源项目，可通过 GitHub 获取。 你可以按照自己喜欢的任何方式自定义你的专用 vcpkg 克隆。 例如，除了在公共目录中找到的内容外，还可以指定不同的库或不同版本的库。 一台计算机上可以有多个 vcpkg 克隆。 每一克隆都可以设置为生成带有你首选的编译开关的自定义库集合。 每个克隆都是一个自包含的环境，它自身的 vcpkg.exe 副本仅可在自己的层次结构中运行。 vcpkg 不会被添加到任何环境变量中，并且在 Windows 注册表或 Visual Studio 上也没有依赖项。
 
-## <a name="sources-not-binaries"></a>源不是二进制文件
+## <a name="sources-not-binaries"></a>是源，而不是二进制文件
 
-对于 Windows 目录中的库，vcpkg 会下载源，而不是二进制文件[1]。 它使用可以找到的最新版 Visual Studio 编译这些源代码。 在 C++ 中，作为链接到它的应用程序代码，使用相同的编译器及编译器版本来编译任何要用的库至关重要。 通过 vcpkg 可以消除或最大程度减少不匹配二进制文件的存在风险及它可能造成的问题。 对于使用特定编译器版本的标准化团队，可让一位成员使用 vcpkg 下载源并编译一组二进制文件，然后通过导出命令将二进制文件和标头压缩打包，即可与其他团队成员进行共享。 有关详细信息，请参阅下方的[导出已编译二进制文件及标头](#export_binaries_per_project)。
+对于 Windows 目录中的库，vcpkg 会下载源，而不是二进制文件<sup>1</sup>。 它使用可以找到的最新版 Visual Studio 编译这些源代码。 在 C++ 中，有一点至关重要，即你的应用程序代码以及你所使用的任何库应均是由同一编译器和编译器版本编译的。 通过 vcpkg 可以消除或最大程度减少不匹配二进制文件的存在风险及它可能造成的问题。 对于使用特定编译器版本的标准化团队而言，可让一位成员使用 vcpkg 下载源并编译一组二进制文件。 他们随后可以使用导出命令将二进制文件和标头进行压缩打包，从而与其他团队成员共享。 有关详细信息，请参阅下方的[导出已编译二进制文件及标头](#export_binaries_per_project)。
 
-如果在端口集合中使用专用库创建 vcpkg 克隆，则可以添加一个端口来下载预生成二进制文件和标头，并编写一个 portfile.cmake 文件，轻松将上述文件复制到所需的地方。
+你还可以创建一个包含端口集合中的专用库的 vcpkg 克隆。 添加一个可下载预生成的二进制文件和标头的端口。 然后，编写一个仅将这些文件复制到首选位置的 portfile.cmake 文件。
 
-[1] 注意：某些专有库不具有这些源。 *在这些情况下，vcpkg 将下载可兼容预生成二进制文件。*
+<sup>1</sup> 注意：这些源不适用于某些专有库。  在这些情况下，vcpkg 会下载兼容的预生成二进制文件。
 
 ## <a name="installation"></a>安装
 
@@ -67,7 +67,7 @@ taglib      1.11.1-2   TagLib Audio Meta-Data Library
 
 对于 Linux 库，vcpkg 取决于本地计算机上安装的 gcc。 在 MacOS 上，vcpkg 使用 Clang。
 
-如果端口文件指定了依赖项，vcpkg 还会下载并安装这些依赖项。 下载完成后，vcpkg 使用库所使用的生成系统（版本不限）来生成库。 首选 CMake 和 MSBuild（Windows 上）项目，但同时还支持 MAKE 以及其他任何生成系统。 如果 vcpkg 在本地计算机上找不到指定的生成系统，它会下载并安装一个。
+当端口文件指定了依赖项时，vcpkg 也会下载并安装这些依赖项。 下载后，vcpkg 将使用库所使用的同一生成系统生成库。 CMake 和 MSBuild（Windows 上）项目是首选，但同时还支持 MAKE 以及其他任何生成系统。 如果 vcpkg 在本地计算机上找不到指定的生成系统，它会下载并安装一个。
 
 ```cmd
 > vcpkg install boost:x86-windows
@@ -88,7 +88,7 @@ cmake .. -DCMAKE_TOOLCHAIN_FILE=vcpkg\scripts\buildsystems\vcpkg.cmake (Windows)
 
 ## <a name="list-the-libraries-already-installed"></a>列出已安装的库
 
-在安装某些库以后，可使用 vcpkg list 来查看所获得的内容  ：
+在安装了某些库后，你可以使用 vcpkg list 来查看所获得的内容  ：
 
 ```cmd
 > vcpkg list
@@ -105,11 +105,11 @@ zlib:x86-windows        1.2.11   A compression library
 
 ### <a name="per-user"></a>按用户
 
-运行 vcpkg integrate install 来配置 Visual Studio，以便按用户找到所有 vcpkg 头文件和二进制文件，同时还无需手动编辑 VC++ 目录路径  。 如果有多个克隆，则运行此命令的克隆将成为新的默认位置。
+运行 vcpkg integrate install 来配置 Visual Studio，以便按用户找到所有 vcpkg 标头文件和二进制文件  。 无需手动编辑 VC++ 目录路径。 如果有多个克隆，那么你从中运行此命令的克隆则将成为新的默认位置。
 
-现在，只需键入文件夹/标头就可轻松加入标头，自动完成功能将帮助你完成这一切。 在链接到 lib 或添加项目引用时，无需额外步骤。 下图演示了 Visual Studio 查找 azure-storage-cpp 标头的方法。 vcpkg 将其标头放置在 /installed 子文件夹中，由目标平台予以分区  。 下图显示库的 /was 子文件夹中包含文件的列表  ：
+现在，只需键入文件夹/标头即可轻松加入 (#include) 标头，并且自动完成功能将帮助你完成这一切。 在链接到 lib 或添加项目引用时，无需额外步骤。 下图演示了 Visual Studio 查找 azure-storage-cpp 标头的方法。 vcpkg 将其标头放置在 /installed 子文件夹中，由目标平台予以分区  。 下图显示库的 /was 子文件夹中包含文件的列表  ：
 
-![vcpkg IntelliSense 集成](media/vcpkg-intellisense.png "vcpkg 和 IntelliSense")
+![vcpkg 和 IntelliSense](media/vcpkg-intellisense.png "vcpkg 和 IntelliSense")
 
 ### <a name="per-project"></a>按项目
 
@@ -122,21 +122,21 @@ zlib:x86-windows        1.2.11   A compression library
 
 ## <a name="integrate-with-visual-studio-code-linuxmacos"></a>与 Visual Studio Code (Linux/MacOS) 集成
 
-运行“vcpkg integrate install”，使用 vcpkg 登记的位置在 Linux/MacOS 上配置 Visual Studio Code，并在源文件上启用 IntelliSense  。
+运行 vcpkg integrate install 在 Linux/MacOS 上配置 Visual Studio Code  。 此命令将设置 vcpkg 登记的位置，并对源文件启用 IntelliSense。
 
 ## <a name="target-linux-from-windows-via-wsl"></a>通过 WSL 从 Windows 指向 Linux
 
-可使用适用于 Linux 的 Windows 子系统 (WSL) 从 Windows 计算机生成 Linux 二进制文件。 按照说明[在 Windows 10 上设置 WSL](/windows/wsl/install-win10)，并使用[适用于 Linux 的 Visual Studio 扩展](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/)进行配置。 可将生成的所有 Windows 和 Linux 库放在同一文件夹中，并从 Windows 和 WSL 进行访问。
+可使用适用于 Linux 的 Windows 子系统（也称为 WSL）在 Windows 计算机上生成 Linux 二进制文件。 按照说明[在 Windows 10 上设置 WSL](/windows/wsl/install-win10)，并使用[适用于 Linux 的 Visual Studio 扩展](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/)进行配置。 可以将所有针对 Windows 和 Linux 生成的库放入同一文件夹中。 可以从 Windows 和 WSL 访问它们。
 
 ## <a name="export_binaries_per_project"></a>导出已编译的二进制文件和标头
 
-让团队中的每个成员都去下载和生成库可能会造成效率低下。 一个团队成员就可完成该工作，然后使用 vcpkg export 创建二进制文件和标头的 zip 文件或 NuGet 包（各种格式均可），将其与其他团队成员进行轻松共享  。
+让团队中的每位成员都下载和生成公用库是一种效率较低的做法。 可以单独让一位团队成员使用 vcpkg export 命令创建二进制文件和标头的通用 zip 文件，或者创建 NuGet 包  。 然后，可以轻松地将它与其他团队成员共享。
 
 ## <a name="updateupgrade-installed-libraries"></a>更新/升级已安装的库
 
-公共目录始终与最新版本的库保持一致。 要判断哪个本地库已过期，请使用 vcpkg update  。 准备好将端口集合更新为公共目录的最新版本后，运行 vcpkg upgrade 命令以自动下载和重新生成任一或所有已安装的过期库  。
+公共目录始终与最新版本的库保持一致。 要判断哪个本地库已过期，请使用 vcpkg update  。 准备好将端口集合更新到最新版本的公共目录后，请运行 vcpkg upgrade 命令  。 它会自动下载并重新生成已过期的任意或所有已安装的库。
 
- 默认情况下，upgrade 命令仅列出过期库；而不会对它们进行升级。 要执行升级操作，请使用 --no-dry-run 选项  。
+ 默认情况下，upgrade 命令仅列出过期库；而不会对它们进行升级。 若要真正升级这些库，请使用 --no-dry-run 选项  。
 
 ```cmd
   vcpkg upgrade --no-dry-run
@@ -151,7 +151,7 @@ zlib:x86-windows        1.2.11   A compression library
 
 ### <a name="upgrade-example"></a>升级示例
 
-以下示例演示如何只升级指定的库。 请注意，必要时 vcpkg 会自动拉取依赖项。
+以下示例演示如何只升级指定的库。 必要时 vcpkg 会自动拉取依赖项。
 
 ```cmd
 c:\users\satyan\vcpkg> vcpkg upgrade tiny-dnn:x86-windows zlib
@@ -172,11 +172,11 @@ If you are sure you want to rebuild the above packages, run this command with th
 
 ## <a name="remove-a-library"></a>删除库
 
-键入 vcpkg remove  可删除已安装的库。 如果存在任何其他依赖于它的库，则系统会提示通过 --recurse 重新运行命令，如执行此操作，则下游的所有库都会被删除  。
+键入 vcpkg remove  可删除已安装的库。 如果存在任何其他依赖于它的库，则系统会提示你使用 --recurse 重新运行命令，如执行此操作，则下游的所有库都会被删除  。
 
 ## <a name="customize-vcpkg"></a>自定义 vcpkg
 
-可凭自身喜好随意修改 vcpkg 的克隆。 可创建多个 vcpkg 克隆，修改每个克隆中的端口文件，使其包含特定版本的库或指定命令行参数。 例如在某企业中，某组的开发者可能正在使用拥有某一依赖项集的软件，而其他组可能拥有不同的集。 可设置两个 vcpkg 克隆并对其进行修改，以便根据需要下载不同版本的库和编译开关等。
+可凭自身喜好随意修改 vcpkg 的克隆。 你甚至可以创建多个 vcpkg 克隆，然后在每个克隆中修改端口文件。 这是获取特定库版本或指定特定命令行参数的一种简单方法。 例如，在企业中，各个开发人员组可能在具有一组特定于他们所在组的依赖项的软件上工作。 解决方法是为每个团队设置一个 vcpkg 的克隆。 然后，修改克隆以下载库版本，并设置每个团队需要的编译开关。
 
 ## <a name="uninstall-vcpkg"></a>卸载 vcpkg
 
@@ -188,14 +188,14 @@ If you are sure you want to rebuild the above packages, run this command with th
 
 ## <a name="the-vcpkg-folder-hierarchy"></a>vcpkg 文件夹层次结构
 
-所有 vcpkg 功能和数据都自包含在称为“实例”的单独目录层次结构中。 没有注册表设置或环境变量。 可以在计算机上设置任意数量的 vcpkg 实例，它们彼此互不干扰。
+所有 vcpkg 功能和数据都自包含在称为“实例”的单独目录层次结构中。 没有注册表设置或环境变量。 可以在一台计算机上设置任意数量的 vcpkg 实例，它们彼此互不干扰。
 
 vcpkg 实例的内容如下：
 
 - buildtrees - 包含从中生成每个库的源的子文件夹
 - docs - 文档和示例
 - downloads - 任何已下载工具或源的缓存副本。 运行安装命令时，vcpkg 会首先搜索此处。
-- installed - 包含每个已安装库的标头和二进制文件。 与 Visual Studio 集成时，实质上相当于告知它将此文件夹添加到其搜索路径。
+- installed - 包含每个已安装库的标头和二进制文件。 与 Visual Studio 集成时，实质上是相当于告知它将此文件夹添加到其搜索路径。
 - packages - 在不同的安装之间用于暂存的内部文件夹。
 - ports - 用于描述每个库的目录、版本和下载位置的文件。 如有需要，可添加自己的端口。
 - scripts - 由 vcpkg 使用的脚本（cmake、powershell）。
@@ -206,20 +206,20 @@ vcpkg 实例的内容如下：
 
 |命令|描述|
 |---------|---------|
-|**vcpkg search [pat]**|搜索可安装的包|
+|**vcpkg search \[pat]**|搜索可安装的包|
 |**vcpkg install \<pkg>...**|安装包|
 |**vcpkg remove \<pkg>...**|卸载包|
 |**vcpkg remove --outdated**|卸载所有过期包|
 |**vcpkg list**|列出已安装的包|
 |**vcpkg update**|显示用于更新的包列表|
 |**vcpkg upgrade**|重新生成所有过期包|
-|**vcpkg hash \<file> [alg]**|通过特定算法对文件执行哈希操作，默认为 SHA512|
+|**vcpkg hash \<file> \[alg]**|通过特定算法对文件执行哈希操作，默认为 SHA512|
 |**vcpkg integrate install**|使已安装包在用户范围内可用。 首次使用时需要管理权限|
 |**vcpkg integrate remove**|删除用户范围的集成|
 |**vcpkg integrate project**|为使用单个 VS 项目生成引用 NuGet 包|
-|**vcpkg export \<pkg>... [opt]...**|导出包|
+|**vcpkg export \<pkg>... \[opt]...**|导出包|
 |**vcpkg edit \<pkg>**|打开端口进行编辑（使用 %EDITOR%，默认为“code”）|
-|**vcpkg create \<pkg> \<url> [archivename]**|创建新程序包|
+|**vcpkg create \<pkg> \<url> \[archivename]**|创建新程序包|
 |**vcpkg cache**|列出缓存的已编译包|
 |**vcpkg version**|显示版本信息|
 |**vcpkg contact --survey**|显示联系信息，以便发送反馈。|
