@@ -4,12 +4,12 @@ description: 介绍如何使用 Visual Studio 配置 CMake 调试器设置
 ms.date: 01/13/2020
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: ff1de8241c2489e675f82f469f1cf697a72f5034
-ms.sourcegitcommit: 275b71219d2a8bd5d78f87e21dd909e9968c2f44
+ms.openlocfilehash: 5e627f02b5245baede6e92268cedfc43957f3abc
+ms.sourcegitcommit: 49e4fb3e0300fe86c814130661f1bf68b16e72e2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75946814"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76031337"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>配置 CMake 调试会话
 
@@ -73,7 +73,7 @@ Visual Studio 2017 及更高版本中提供了本机 CMake 支持。
 
 ## <a name="launchvsjson-reference-for-remote-linux-projects"></a>对于远程 Linux 项目，启动和 json 引用
 
-以下属性特定于**远程调试配置**。 你还可以[将命令直接发送到 gdb](https://github.com/microsoft/MIEngine/wiki/Executing-custom-gdb-lldb-commands)并[启用 MIEngine 日志记录](https://github.com/microsoft/MIEngine/wiki/Logging)。 这些属性使你可以查看发送到 gdb 的命令、执行的输出 gdb 以及每个命令所花费的时间。
+以下属性特定于**远程调试配置**。 你还可以[执行自定义 gdb 命令](https://github.com/microsoft/MIEngine/wiki/Executing-custom-gdb-lldb-commands)，以便将命令直接发送到基础调试器，并[启用 MIEngine 日志记录](https://github.com/microsoft/MIEngine/wiki/Logging)，以查看发送到 gdb 的命令、输出 gdb 返回的内容以及每个命令所花费的时间。
 
 - `cwd`：用于查找远程计算机上的依赖项和其他文件的当前工作目录。 可以使用宏 `${debugInfo.defaultWorkingDirectory}`。 除非在*cmakelists.txt*中重写，否则默认值为远程工作区根目录。 此属性仅用于远程配置;`currentDir` 用于为本地项目设置启动应用程序的当前目录。
 
