@@ -1,44 +1,52 @@
 ---
 title: C++程序终止
-ms.date: 12/10/2019
+description: 介绍 exit C++语言程序的方式。
+ms.date: 01/15/2020
 helpviewer_keywords:
 - terminating execution
 - quitting applications
 - exiting applications
 - programs [C++], terminating
 ms.assetid: fa0ba9de-b5f1-4e7b-aa65-e7932068b48c
-ms.openlocfilehash: a0e86cacd951327d39296a183be5ee4fbc36fd15
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+no-loc:
+- exit
+- abort
+- return
+- main
+- atexit
+- void
+ms.openlocfilehash: f83c9d5da5b0a1127603a97fd7946e9cca43a7a5
+ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301335"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76123950"
 ---
 # <a name="c-program-termination"></a>C++程序终止
 
-在C++中，可以通过以下方式退出节目：
+在C++中，可以通过以下方式 exit 程序：
 
 - 调用[exit](exit-function.md)函数。
 - 调用[abort](abort-function.md)函数。
-- 执行 `main`的[return](return-statement-cpp.md)语句。
+- 从 `main`执行[return](return-statement-cpp.md)语句。
 
-## <a name="exit-function"></a>exit 函数
+## <a name="opno-locexit-function"></a>exit 函数
 
-[Exit](../c-runtime-library/reference/exit-exit-exit.md)函数在 \<stdlib.h > 中声明，用于C++终止程序。 作为 `exit` 的参数提供的值将作为程序的返回代码或退出代码返回到操作系统。 按照约定，返回代码为零表示该程序已成功完成。 您可以使用 EXIT_FAILURE 和 EXIT_SUCCESS 中定义的常量，\<stdlib.h > 中指定程序的成功或失败。
+\<stdlib.h > 中声明的[exit](../c-runtime-library/reference/exit-exit-exit.md)函数终止C++程序。 作为 `exit` 的参数提供的值将作为程序的 return 代码或 exit 代码返回到操作系统。 按照约定，return 的代码为零，则表示程序已成功完成。 您可以使用 EXIT_FAILURE 和 EXIT_SUCCESS 中定义的常量，\<stdlib.h > 中指定程序的成功或失败。
 
-从 `main` 函数发出**return**语句等效于使用返回值作为参数来调用 `exit` 函数。
+从 `main` 函数发出 **return** 语句等效于使用 return 值作为参数来调用 `exit` 函数。
 
-## <a name="abort-function"></a>abort 函数
+## <a name="opno-locabort-function"></a>abort 函数
 
-[中止](../c-runtime-library/reference/abort.md)函数，同样在标准包含文件中声明\<stdlib.h >，将终止 C++ 程序。 `exit` 和 `abort` 之间的区别在于 `exit` 允许进行C++运行时终止处理（将调用全局对象析构函数），而 `abort` 会立即终止程序。 `abort` 函数将绕过已初始化全局静态对象的正常析构进程。 它还会绕过使用[atexit](../c-runtime-library/reference/atexit.md)函数指定的任何特殊处理。
+[abort](../c-runtime-library/reference/abort.md)函数（也在标准包含文件 \<stdlib.h > 中声明）终止C++程序。 `exit` 和 `abort` 之间的区别在于 `exit` 允许进行C++运行时终止处理（将调用全局对象析构函数），而 `abort` 会立即终止程序。 `abort` 函数将绕过已初始化全局静态对象的正常析构进程。 它还会绕过使用[atexit](../c-runtime-library/reference/atexit.md)函数指定的任何特殊处理。
 
-## <a name="atexit-function"></a>atexit 函数
+## <a name="opno-locatexit-function"></a>atexit 函数
 
-使用[atexit](../c-runtime-library/reference/atexit.md)函数指定在程序终止之前执行的操作。 在执行退出处理函数之前，不会销毁对**atexit**的调用之前初始化的全局静态对象。
+使用[atexit](../c-runtime-library/reference/atexit.md)函数指定在程序终止之前执行的操作。 在执行 exit处理函数之前，不会销毁在调用 **atexit** 之前初始化的全局静态对象。
 
-## <a name="return-statement-in-main"></a>main 中的 return 语句
+## <a name="opno-locreturn-statement-in-opno-locmain"></a>main 中的 return 语句
 
-发出 `main` 的[return](return-statement-cpp.md)语句在功能上等同于调用 `exit` 函数。 请看下面的示例：
+从 `main` 发出[return](return-statement-cpp.md)语句在功能上等效于调用 `exit` 函数。 请看下面的示例：
 
 ```cpp
 // return_statement.cpp
@@ -50,15 +58,15 @@ int main()
 }
 ```
 
-上一示例中的 `exit` 和**return**语句的功能相同。 但是， C++要求具有**void**以外的返回类型的函数返回一个值。 **Return**语句允许从 `main`返回值。
+上一示例中的 `exit` 和 **return** 语句功能完全相同。 但是， C++要求具有除 **void** 以外 return 类型 return 值的函数。 **return** 语句允许您从 `main`中 return 值。
 
 ## <a name="destruction-of-static-objects"></a>静态对象的析构
 
-调用 `exit` 或从 `main`执行**return**语句时，静态对象将按其初始化的反向顺序销毁（在调用 `atexit` （如果存在）之后。 以下示例演示如何进行此类初始化和清理工作。
+调用 `exit` 或从 `main`执行 **return** 语句时，静态对象会按其初始化的反向顺序销毁（在调用 `atexit` （如果存在）之后。 以下示例演示如何进行此类初始化和清理工作。
 
 ### <a name="example"></a>示例
 
-在下面的示例中，将在进入 `main`之前创建并初始化静态对象 `sd1` 和 `sd2`。 在此程序使用**return**语句终止后，第一个 `sd2` 被销毁，然后 `sd1`。 `ShowData` 类的析构函数将关闭与这些静态对象关联的文件。
+在下面的示例中，将在进入 `main`之前创建并初始化静态对象 `sd1` 和 `sd2`。 此程序使用 **return** 语句终止后，首先 `sd2` 销毁，然后 `sd1`。 `ShowData` 类的析构函数将关闭与这些静态对象关联的文件。
 
 ```cpp
 // using_exit_or_return1.cpp
@@ -107,7 +115,6 @@ int main() {
 }
 ```
 
-
 ## <a name="see-also"></a>另请参阅
 
-[main：程序启动](main-program-startup.md)
+[main 函数和命令行参数](main-function-command-line-args.md)
