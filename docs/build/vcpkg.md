@@ -65,7 +65,7 @@ taglib      1.11.1-2   TagLib Audio Meta-Data Library
 
 在使用 vcpkg search 获取库的名称后，可使用 vcpkg install 下载库并对其进行编译   。 vcpkg 在端口目录中使用库的端口文件。 如果未指定三元组，则 vcpkg 将针对目标平台的默认三元组进行安装和编译：x86-windows、x64-linux.cmake 或 x64-osx.cmake。
 
-对于 Linux 库，vcpkg 取决于本地计算机上安装的 gcc。 在 MacOS 上，vcpkg 使用 Clang。
+对于 Linux 库，vcpkg 取决于本地计算机上安装的 GCC。 在 MacOS 上，vcpkg 使用 Clang。
 
 当端口文件指定了依赖项时，vcpkg 也会下载并安装这些依赖项。 下载后，vcpkg 将使用库所使用的同一生成系统生成库。 CMake 和 MSBuild（Windows 上）项目是首选，但同时还支持 MAKE 以及其他任何生成系统。 如果 vcpkg 在本地计算机上找不到指定的生成系统，它会下载并安装一个。
 

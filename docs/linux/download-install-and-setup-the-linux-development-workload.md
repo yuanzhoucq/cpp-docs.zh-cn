@@ -56,7 +56,7 @@ Visual Studio 2017 及更高版本支持 Linux 项目。
 
 Visual Studio 中的 Linux 项目要求在远程 Linux 系统或 WSL 上安装以下依赖项：
 
-- **编译器** - Visual Studio 2019 为 GCC 和 [Cla0ng](/cpp/build/clang-support-cmake?view=vs-2019) 提供现成的支持。
+- **编译器** - Visual Studio 2019 为 GCC 和 [Clang](/cpp/build/clang-support-cmake?view=vs-2019) 提供现成的支持。
 - **gdb** - Visual Studio 会在 Linux 系统上自动启动 gdb，并使用 Visual Studio 调试器的前端在 Linux 上提供完全保真度调试体验。
 - **rsync** 和 zip  - 包含 rsync 和 zip 允许 Visual Studio 将头文件从 Linux 系统提取到 Windows 文件系统以供 IntelliSense 使用。
 - **make**
