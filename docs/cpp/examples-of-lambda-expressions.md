@@ -55,13 +55,13 @@ int main()
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[auto](../cpp/auto-cpp.md)， [function 类](../standard-library/function-class.md)，并[函数调用](../cpp/function-call-cpp.md)。
+有关详细信息，请参阅 [auto](../cpp/auto-cpp.md)、[function 类](../standard-library/function-class.md)以及[函数调用](../cpp/function-call-cpp.md)。
 
 虽然 lambda 表达式多在函数的主体中声明，但是可以在初始化变量的任何地方声明。
 
 ### <a name="example-2"></a>示例 2
 
-Microsoft C++编译器将 lambda 表达式绑定到捕获的变量时调用的表达式时，而不是声明的表达式。 以下示例显示一个通过值捕获局部变量 `i` 并通过引用捕获局部变量 `j` 的 lambda 表达式。 由于 lambda 表达式通过值捕获 `i`，因此在程序后面部分中重新指派 `i` 不影响该表达式的结果。 但是，由于 lambda 表达式通过引用捕获 `j`，因此重新指派 `j` 会影响该表达式的结果。
+当声明表达式（而非调用表达式）时，Microsoft C++ 编译器将 lambda 表达式绑定到其捕获的变量。以下示例显示一个通过值捕获局部变量 `i` 并通过引用捕获局部变量 `j` 的 lambda 表达式。由于 lambda 表达式通过值捕获 `i`，因此在程序后面部分中重新指派 `i` 不影响该表达式的结果。 但是，由于 lambda 表达式通过引用捕获 `j`，因此重新指派 `j` 会影响该表达式的结果。
 
 ### <a name="code"></a>代码
 
@@ -221,7 +221,7 @@ int main()
 
 ### <a name="example"></a>示例
 
-许多编程语言都支持*高阶函数*这一概念。 高阶函数是采用另一个 lambda 表达式作为其参数或返回 lambda 表达式的 lambda 表达式。 你可以使用[函数](../standard-library/function-class.md)类，使得 C++ lambda 表达式的行为类似高阶函数。 以下示例显示返回 `function` 对象的 lambda 表达式和采用 `function` 对象作为其参数的 lambda 表达式。
+许多编程语言都支持*高阶函数*这一概念。 高阶函数是采用另一个 lambda 表达式作为其参数或返回 lambda 表达式的 lambda 表达式。 你可以使用 [function](../standard-library/function-class.md) 类，使得 C++ lambda 表达式的行为类似高阶函数。 以下示例显示返回 `function` 对象的 lambda 表达式和采用 `function` 对象作为其参数的 lambda 表达式。
 
 ### <a name="code"></a>代码
 
@@ -271,9 +271,9 @@ int main()
 ### <a name="example"></a>示例
 
 你可以在函数的主体中使用 lambda 表达式。 lambda 表达式可以访问该封闭函数可访问的任何函数或数据成员。 你可以显式或隐式捕获**this**指针，以提供对封闭类的函数和数据成员的访问权限。
-**Visual Studio 2017 版本 15.3 及更高版本**(适用于[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):捕获**this**按值 (`[*this]`) 当 lambda，将使用异步或并行操作中的原始对象超出范围后可能执行的代码。
+**Visual Studio 2017 版本 15.3 及更高版本**(适用于 [/std: c + + 17](../build/reference/std-specify-language-standard-version.md))：当将在异步或并行操作（在此操作中，可能在原始对象超出对象后执行代码）中使用 lambda 时，通过值 (`[*this]`) 捕获**this**。
 
-可以使用**this**指针显式在函数中，如下所示：
+可以在函数中显式使用**this**指针，如下所示：
 
 ```cpp
 // capture "this" by reference
@@ -291,7 +291,7 @@ void ApplyScale2(const vector<int>& v) const
 }
 ```
 
-此外可以捕获**this**指针隐式：
+还可以隐式捕获**this**指针：
 
 ```cpp
 void ApplyScale(const vector<int>& v) const
@@ -427,7 +427,7 @@ After negate_all():
 
 ### <a name="example"></a>示例
 
-lambda 表达式的主体遵循结构化异常处理 (SEH) 和 C++ 异常处理的原则。 你可以在 lambda 表达式主体中处理引发的异常或将异常处理推迟至封闭范围。 下面的示例使用**for_each**函数和 lambda 表达式来填充`vector`对象的另一个的值。 它使用**try**/**catch**块来处理对第一个向量的无效访问。
+lambda 表达式的主体遵循结构化异常处理 (SEH) 和 C++ 异常处理的原则。 你可以在 lambda 表达式主体中处理引发的异常或将异常处理推迟至封闭范围。 下面的示例使用**for_each**函数和 lambda 表达式来用另一个对象的值填充`vector`对象。 它使用**try**/**catch**块来处理对第一个 vector 的无效访问。
 
 ### <a name="code"></a>代码
 
