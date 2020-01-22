@@ -2,12 +2,12 @@
 title: 在 Visual Studio 中配置 C++ Linux 项目
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 1cfaeb6611a27af498325739271d4dba38581dd6
-ms.sourcegitcommit: c53a3efcc5d51fc55fa57ac83cca796b33ae888f
+ms.openlocfilehash: 5d42ca587946d3b5adcbd3b6fe35a6c1e1bb9ae8
+ms.sourcegitcommit: 49e4fb3e0300fe86c814130661f1bf68b16e72e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71960670"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76031368"
 ---
 # <a name="configure-a-linux-project"></a>配置 Linux 项目
 
@@ -57,7 +57,7 @@ Visual Studio 2019 版本 16.1：
 
    如果进行了并行 WSL 安装，则可在此处指定其他路径。 有关管理多个发行版的详细信息，请参阅[管理和配置适用于 Linux 的 Windows 子系统](/windows/wsl/wsl-config#set-a-default-distribution)。
 
-   可在“配置属性”>“调试”页上指定用于调试的其他目标   。
+   可在“配置属性”>“调试”页面上指定用于调试的其他目标   。
 
    ::: moniker-end
 
@@ -95,6 +95,9 @@ Visual Studio 2019 版本 16.1：
 ## <a name="remote_intellisense"></a> 远程系统上标头的 IntelliSense
 
 在连接管理器中添加新连接时，Visual Studio 会自动为远程系统上的编译器检测包含目录  。 随后 Visual Studio 压缩这些文件压缩，并将其复制到本地 Windows 计算机上的目录中。 此后，每当在 Visual Studio 或 CMake 项目中使用该连接时，都会使用这些目录中的标头来提供 IntelliSense。
+
+> [!NOTE]
+> 远程标头副本已在 Visual Studio 2019 版本 16.5 及更高版本中得到优化。 现在打开 Linux 项目或为 Linux 目标配置 CMake 时，会按需复制标头。 根据项目指定的编译器，按每个项目在后台进行复制。 有关详细信息，请参阅[对 Linux IntelliSense 的准确性和性能的改进](https://devblogs.microsoft.com/cppblog/improvements-to-accuracy-and-performance-of-linux-intellisense/)。
 
 此功能取决于 Linux 计算机是否安装了 zip。 可使用此 apt-get 命令安装 zip：
 
