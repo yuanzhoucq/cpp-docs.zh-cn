@@ -9,12 +9,12 @@ helpviewer_keywords:
 - compiling programs [C++]
 - command-line applications [C++], native
 ms.assetid: b200cfd1-0440-498f-90ee-7ecf92492dc0
-ms.openlocfilehash: daab00768f8140869a8db39c73f4fec3ab6304c7
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: d002fd4c4edc99775e62023dda7998fba2c6a44f
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051516"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518163"
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>演练：在命令行上编译本机 C++ 程序
 
@@ -24,7 +24,7 @@ Visual Studio 包含一个命令行C++编译器，可用于创建从基本控制
 
 在此演练中，可使用你自己的 Visual C++ 程序（而非键入显示的程序），也可使用另一个帮助文章中的 Visual C++ 代码示例。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
 若要完成本演练，你必须已安装 visual studio 和**使用C++** 工作负荷的可选桌面开发，或用于 Visual Studio 的命令行生成工具。
 
@@ -78,7 +78,7 @@ Visual Studio 生成工具仅安装生成 C 和C++程序所需的命令行编译
    ```cpp
    #include <iostream>
    using namespace std;
-   void main()
+   int main()
    {
        cout << "Hello, world, from Visual C++!" << endl;
    }
@@ -170,7 +170,7 @@ C 和语言C++类似，但并不相同。 MSVC 编译器使用简单的规则来
 
 MSVC 编译器包含与 ISO C99 standard 兼容但不严格相容的 C 运行时库（CRT）。 在大多数情况下，可移植代码将按预期方式进行编译和运行。 视觉C++对象不支持 ISO C11 中的某些 CRT 更改。 某些库函数和 POSIX 函数名称已被 MSVC 编译器弃用。 支持函数，但首选名称已更改。 有关详细信息，请参阅[CRT 中的安全功能](../c-runtime-library/security-features-in-the-crt.md)和[编译器警告（等级3） C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [C++ 语言参考](../cpp/cpp-language-reference.md)<br/>
 [项目和生成系统](projects-and-build-systems-cpp.md)<br/>
