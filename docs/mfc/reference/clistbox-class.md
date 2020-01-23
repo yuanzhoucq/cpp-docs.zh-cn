@@ -1,6 +1,7 @@
 ---
 title: CListBox 类
-ms.date: 11/04/2016
+description: MFC CListBox 类及其成员函数的说明。
+ms.date: 01/22/2020
 f1_keywords:
 - CListBox
 - AFXWIN/CListBox
@@ -102,12 +103,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: e47a580e786572b0741700721a9d1ba4ac925fcd
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5c3337641dcfc720a5f9fbccf5bb0614e97c3b54
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505695"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518421"
 ---
 # <a name="clistbox-class"></a>CListBox 类
 
@@ -119,22 +120,22 @@ ms.locfileid: "69505695"
 class CListBox : public CWnd
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
-### <a name="public-constructors"></a>公共构造函数
+### <a name="public-constructors"></a>公用建構函式
 
-|名称|描述|
+|Name|描述|
 |----------|-----------------|
 |[CListBox::CListBox](#clistbox)|构造 `CListBox` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|Name|描述|
 |----------|-----------------|
 |[CListBox::AddString](#addstring)|将字符串添加到列表框。|
 |[CListBox::CharToItem](#chartoitem)|重写以为不包含字符串的所有者描述列表框提供自定义 WM_CHAR 处理。|
 |[CListBox::CompareItem](#compareitem)|由框架调用，以确定新项在排序的所有者描述列表框中的位置。|
-|[CListBox::Create](#create)|创建 Windows 列表框并将其附加到`CListBox`对象。|
+|[CListBox::Create](#create)|创建 Windows 列表框并将其附加到 `CListBox` 对象上。|
 |[CListBox::DeleteItem](#deleteitem)|当用户从所有者描述的列表框中删除项时，由框架调用。|
 |[CListBox::DeleteString](#deletestring)|从列表框中删除字符串。|
 |[CListBox::Dir](#dir)|将当前目录中的文件名、驱动器或同时添加到列表框。|
@@ -185,9 +186,9 @@ class CListBox : public CWnd
 
 在单项选择列表框中，用户只能选择一项。 在多选列表框中，可以选择一系列项。 当用户选择某个项时，该项将突出显示，并且列表框将向父窗口发送通知消息。
 
-可以通过对话框模板或直接在代码中创建列表框。 若要直接创建它，请`CListBox`构造对象，然后调用[create](#create)成员函数以创建 Windows 列表框控件，并`CListBox`将其附加到对象。 若要在对话框模板中使用列表框，请在对话框类中声明列表框变量，然后在对话框类`DDX_Control`的`DoDataExchange`函数中使用将成员变量连接到控件。 （当您向对话框类添加控件变量时，会自动完成此操作。）
+可以通过对话框模板或直接在代码中创建列表框。 若要直接创建它，请构造 `CListBox` 对象，然后调用[create](#create)成员函数以创建 Windows 列表框控件，并将其附加到 `CListBox` 对象。 若要在对话框模板中使用列表框，请在对话框类中声明列表框变量，然后在对话框类的 `DoDataExchange` 函数中使用 `DDX_Control` 将成员变量连接到控件。 （当您向对话框类添加控件变量时，会自动完成此操作。）
 
-构造可以是从派生的`CListBox`类中的一个单步过程。 编写派生类的构造函数，并从`Create`构造函数中调用。
+构造可以是派生自 `CListBox`的类中的一个单步过程。 写入派生类的构造函数，并从构造函数内调用 `Create`。
 
 如果要将列表框发送的 Windows 通知消息处理到其父级（通常是派生自[CDialog](../../mfc/reference/cdialog-class.md)的类），请将消息映射项和消息处理程序成员函数添加到每条消息的父类。
 
@@ -195,7 +196,7 @@ class CListBox : public CWnd
 
 `ON_Notification( id, memberFxn )`
 
-其中`id` ，指定发送通知的列表框控件的子窗口 ID， `memberFxn`是您编写的用于处理通知的父成员函数的名称。
+其中 `id` 指定发送通知的列表框控件的子窗口 ID，`memberFxn` 是已编写用来处理通知的父成员函数的名称。
 
 父的函数原型如下所示：
 
@@ -211,21 +212,21 @@ class CListBox : public CWnd
 
 - ON_LBN_SELCANCEL 取消当前列表框选择。 此消息仅在列表框具有 LBS_NOTIFY 样式时发送。
 
-- ON_LBN_SELCHANGE 列表框中的选定内容已更改。 如果[CListBox：： SetCurSel](#setcursel)成员函数更改了所选内容，则不会发送此通知。 此通知仅适用于具有 LBS_NOTIFY 样式的列表框。 只要用户按下箭头键，就会为多选列表框发送 LBN_SELCHANGE 通知消息，即使所选内容未更改也是如此。
+- ON_LBN_SELCHANGE 列表框中的选定内容已更改。 如果[CListBox：： SetCurSel](#setcursel)成员函数更改了所选内容，则不会发送此通知。 此通知仅适用于具有 LBS_NOTIFY 样式的列表框。 无论用户按箭头键，都将为多选列表框发送 LBN_SELCHANGE 通知消息，即使所选内容未更改也是如此。
 
 - ON_LBN_SETFOCUS 列表框正在接收输入焦点。
 
-- ON_WM_CHARTOITEM 没有字符串的所有者描述的列表框将收到 WM_CHAR 消息。
+- ON_WM_CHARTOITEM 所有者描述的列表框中没有字符串接收 WM_CHAR 消息。
 
-- ON_WM_VKEYTOITEM 具有 LBS_WANTKEYBOARDINPUT 样式的列表框将接收 WM_KEYDOWN 消息。
+- ON_WM_VKEYTOITEM 具有 LBS_WANTKEYBOARDINPUT 样式的列表框将收到 WM_KEYDOWN 消息。
 
-如果在对话框中`CListBox`创建对象（通过对话资源） `CListBox` ，则当用户关闭对话框时，对象会自动销毁。
+如果在对话框中创建一个 `CListBox` 对象（通过对话框资源），则当用户关闭该对话框时，`CListBox` 对象将自动销毁。
 
-如果在窗口中`CListBox`创建对象，可能需要`CListBox`销毁对象。 如果在堆栈上`CListBox`创建对象，则该对象会自动销毁。 如果使用**new**函数`CListBox`在堆上创建对象，则必须对该对象调用**delete** ，以便在用户关闭父窗口时销毁该对象。
+如果在窗口中创建 `CListBox` 对象，可能需要销毁 `CListBox` 对象。 如果在堆栈上创建 `CListBox` 对象，则该对象会自动销毁。 如果使用**new**函数在堆上创建 `CListBox` 对象，则必须对该对象调用**delete** ，以便在用户关闭父窗口时销毁该对象。
 
-如果在`CListBox`对象中分配任何内存，请`CListBox`重写析构函数以释放分配。
+如果在 `CListBox` 对象中分配任何内存，请重写 `CListBox` 析构函数以释放分配。
 
-## <a name="inheritance-hierarchy"></a>继承层次结构
+## <a name="inheritance-hierarchy"></a>繼承階層
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -235,7 +236,7 @@ class CListBox : public CWnd
 
 `CListBox`
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>需求
 
 **标头:** afxwin.h
 
@@ -254,11 +255,11 @@ int AddString(LPCTSTR lpszItem);
 
 ### <a name="return-value"></a>返回值
 
-列表框中的字符串的从零开始的索引。 如果发生错误，则返回值为 LB_ERR;如果没有足够的可用空间来存储新的字符串，则返回值为 LB_ERRSPACE。
+列表框中的字符串的从零开始的索引。 如果发生错误，将 LB_ERR 返回值;如果没有足够的可用空间来存储新的字符串，则返回值为 LB_ERRSPACE。
 
 ### <a name="remarks"></a>备注
 
-如果列表框不是用[LBS_SORT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)样式创建的，则会将该字符串添加到列表的末尾。 否则，会将字符串插入列表，并对列表进行排序。 如果列表框是使用 LBS_SORT 样式而不是[LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)样式创建的，则框架将通过一个或多个对`CompareItem`成员函数的调用来对列表进行排序。
+如果列表框不是用[LBS_SORT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)样式创建的，则会将该字符串添加到列表的末尾。 否则，会将字符串插入列表，并对列表进行排序。 如果列表框是使用 LBS_SORT 样式而不是[LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)样式创建的，则框架将通过一个或多个对 `CompareItem` 成员函数的调用来对列表进行排序。
 
 使用[InsertString](#insertstring)将字符串插入到列表框中的特定位置。
 
@@ -268,7 +269,7 @@ int AddString(LPCTSTR lpszItem);
 
 ##  <a name="chartoitem"></a>CListBox：： CharToItem
 
-当列表框的父窗口接收到列表框中的 WM_CHARTOITEM 消息时由框架调用。
+当列表框的父窗口从列表框接收到 WM_CHARTOITEM 消息时由框架调用。
 
 ```
 virtual int CharToItem(
@@ -290,11 +291,11 @@ virtual int CharToItem(
 
 ### <a name="remarks"></a>备注
 
-WM_CHARTOITEM 消息在收到 WM_CHAR 消息时由列表框发送，但仅当列表框满足以下所有条件时才会发送：
+WM_CHARTOITEM 消息在收到 WM_CHAR 消息时由列表框发送，但仅当列表框满足以下所有条件时：
 
 - 是所有者描述的列表框。
 
-- 没有设置[LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)样式。
+- 没有[LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)的样式集。
 
 - 至少有一项。
 
@@ -318,7 +319,7 @@ CListBox();
 
 ### <a name="remarks"></a>备注
 
-可以通过`CListBox`两个步骤构造对象。 首先，调用构造函数`ClistBox` ，然后调用`Create`，它初始化 Windows 列表框`CListBox`并将其附加到。
+可以通过两个步骤构造一个 `CListBox` 对象。 首先，`ClistBox` 调用构造函数，然后调用 `Create`（初始化 Windows 列表框并将其附加到 `CListBox`）。
 
 ### <a name="example"></a>示例
 
@@ -335,19 +336,19 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ### <a name="parameters"></a>参数
 
 *lpCompareItemStruct*<br/>
-指向`COMPAREITEMSTRUCT`结构的长指针。
+指向 `COMPAREITEMSTRUCT` 结构的长指针。
 
 ### <a name="return-value"></a>返回值
 
 指示[COMPAREITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-compareitemstruct)结构中描述的两个项的相对位置。 它可以是下列值之一：
 
-|值|含义|
+|{2&gt;值&lt;2}|含义|
 |-----------|-------------|
 |-1|项目1排在第2项之前。|
 |0|项1和项2排序相同。|
 |1|项1在项2之后排序。|
 
-有关`COMPAREITEMSTRUCT`结构的说明，请参阅[CWnd：： OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem) 。
+有关 `COMPAREITEMSTRUCT` 结构的说明，请参阅[CWnd：： OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem) 。
 
 ### <a name="remarks"></a>备注
 
@@ -359,7 +360,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 
 ##  <a name="create"></a>CListBox：： Create
 
-创建 Windows 列表框并将其附加到`CListBox`对象。
+创建 Windows 列表框并将其附加到 `CListBox` 对象上。
 
 ```
 virtual BOOL Create(
@@ -375,10 +376,10 @@ virtual BOOL Create(
 指定列表框的样式。 应用[列表框样式](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)与框的任意组合。
 
 *rect*<br/>
-指定列表框的大小和位置。 可以是`RECT`对象或结构。 `CRect`
+指定列表框的大小和位置。 可以是 `CRect` 对象或 `RECT` 结构。
 
 *pParentWnd*<br/>
-指定列表框的父窗口（通常为`CDialog`对象）。 它不能为 NULL。
+指定列表框的父窗口（通常为 `CDialog` 对象）。 值不得为 NULL。
 
 *nID*<br/>
 指定列表框的控件 ID。
@@ -389,27 +390,27 @@ virtual BOOL Create(
 
 ### <a name="remarks"></a>备注
 
-可以通过`CListBox`两个步骤构造对象。 首先，调用构造函数，然后调用`Create`，它初始化 Windows 列表框并将其附加`CListBox`到对象。
+可以通过两个步骤构造一个 `CListBox` 对象。 首先，调用构造函数，然后调用 `Create`，后者初始化 Windows 列表框并将其附加到 `CListBox` 对象。
 
-执行`Create`时，Windows 会将[WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate)、 [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate)、 [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)和[WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)消息发送到列表框控件。
+当 `Create` 执行时，Windows 将向列表框控件发送[WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate)、 [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate)、 [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)和[WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)消息。
 
-默认情况下，将`CWnd`通过基类中的[OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate)、 [OnCreate](../../mfc/reference/cwnd-class.md#oncreate)、 [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize)和[OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)成员函数来处理这些消息。 若要扩展默认消息处理，从`CListBox`派生类，将消息映射添加到新类，然后重写前面的消息处理程序成员函数。 例如`OnCreate`，重写，为新类执行所需的初始化。
+默认情况下，这些消息由 `CWnd` 基类中的[OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate)、 [OnCreate](../../mfc/reference/cwnd-class.md#oncreate)、 [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize)和[OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)成员函数处理。 若要扩展默认消息处理，请从 `CListBox`中派生一个类，将消息映射添加到新类，然后重写前面的消息处理程序成员函数。 重写 `OnCreate`，例如，为新类执行所需的初始化。
 
 将以下[窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)应用于列表框控件。
 
-- WS_CHILD
+- 始终 WS_CHILD
 
 - WS_VISIBLE 通常
 
-- WS_DISABLED 极少
+- 很少 WS_DISABLED
 
 - 添加垂直滚动条的 WS_VSCROLL
 
-- WS_HSCROLL 添加水平滚动条
+- WS_HSCROLL 以添加水平滚动条
 
-- WS_GROUP 到分组控件
+- WS_GROUP 分组控件
 
-- 允许 tab 键到此控件的 WS_TABSTOP
+- 允许 tab 键切换到此控件的 WS_TABSTOP
 
 ### <a name="example"></a>示例
 
@@ -417,7 +418,7 @@ virtual BOOL Create(
 
 ##  <a name="deleteitem"></a>CListBox：:D eleteItem
 
-当用户从所有者描述`CListBox`的对象中删除项或销毁列表框时，由框架调用。
+当用户从所有者描述 `CListBox` 对象删除项或销毁列表框时，由框架调用。
 
 ```
 virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
@@ -432,7 +433,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 
 此函数的默认实现不执行任何操作。 重写此函数以根据需要重绘所有者描述的列表框。
 
-有关`DELETEITEMSTRUCT`结构的说明，请参阅[CWnd：： OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) 。
+有关 `DELETEITEMSTRUCT` 结构的说明，请参阅[CWnd：： OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) 。
 
 ### <a name="example"></a>示例
 
@@ -476,9 +477,9 @@ int Dir(
 ### <a name="parameters"></a>参数
 
 *attr*<br/>
-可以是中`CFile::GetStatu`所述的**枚举**[值的任意组合，或者](../../mfc/reference/cfile-class.md#getstatus)是下列值的任意组合：
+可以是 `CFile::GetStatu`[s](../../mfc/reference/cfile-class.md#getstatus)中描述的**枚举**值的任意组合，或者以下值的任意组合：
 
-|值|含义|
+|{2&gt;值&lt;2}|含义|
 |-----------|-------------|
 |0x0000|可以读取或写入文件。|
 |0x0001|文件可以从读取，但不能写入。|
@@ -490,11 +491,11 @@ int Dir(
 |0x8000|排他标志。 如果设置了独占标志，则仅列出指定类型的文件。 否则，除了 "正常" 文件，还会列出指定类型的文件。|
 
 *lpszWildCard*<br/>
-指向文件规范字符串。 字符串可以包含通配符（例如 *.\*）。
+指向文件规范字符串。 字符串可以包含通配符（例如，*.\*）。
 
 ### <a name="return-value"></a>返回值
 
-添加到列表中的最后一个文件名的从零开始的索引。 如果发生错误，则返回值为 LB_ERR;如果没有足够的可用空间来存储新的字符串，则返回值为 LB_ERRSPACE。
+添加到列表中的最后一个文件名的从零开始的索引。 如果发生错误，将 LB_ERR 返回值;如果没有足够的可用空间来存储新的字符串，则返回值为 LB_ERRSPACE。
 
 ### <a name="example"></a>示例
 
@@ -515,11 +516,11 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 
 ### <a name="remarks"></a>备注
 
-结构的`itemState`和成员定义要执行的绘图操作。 `itemAction` `DRAWITEMSTRUCT`
+`DRAWITEMSTRUCT` 结构的 `itemAction` 和 `itemState` 成员定义要执行的绘图操作。
 
-默认情况下，此成员函数不执行任何操作。 重写此成员函数以实现所有者描述`CListBox`对象的绘制。 此成员函数终止之前，应用程序应还原为*lpDrawItemStruct*中提供的显示上下文选择的所有图形设备接口（GDI）对象。
+默认情况下，此成员函数不执行任何操作。 重写此成员函数以实现 `CListBox` 对象的所有者描述的绘图。 此成员函数终止之前，应用程序应还原为*lpDrawItemStruct*中提供的显示上下文选择的所有图形设备接口（GDI）对象。
 
-有关`DRAWITEMSTRUCT`结构的说明，请参阅[CWnd：： OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) 。
+有关 `DRAWITEMSTRUCT` 结构的说明，请参阅[CWnd：： OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) 。
 
 ### <a name="example"></a>示例
 
@@ -545,7 +546,7 @@ int FindString(
 
 ### <a name="return-value"></a>返回值
 
-匹配项的从零开始的索引; 如果搜索未成功，则为 LB_ERR。
+匹配项的从零开始的索引; 如果搜索未成功，则 LB_ERR。
 
 ### <a name="remarks"></a>备注
 
@@ -579,7 +580,7 @@ int FindStringExact(
 
 ### <a name="remarks"></a>备注
 
-如果列表框是使用所有者描述样式创建的，但没有使用[LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)样式，则`FindStringExact`成员函数会尝试将双字值与*lpszFind*的值匹配。
+如果列表框是使用所有者描述样式创建的，但没有[LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)样式，则 `FindStringExact` 成员函数尝试将双字值与*lpszFind*的值匹配。
 
 ### <a name="example"></a>示例
 
@@ -595,7 +596,7 @@ int GetAnchorIndex() const;
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则为当前定位项的索引;否则为 LB_ERR。
+如果成功，则为当前定位项的索引;否则 LB_ERR。
 
 ### <a name="remarks"></a>备注
 
@@ -635,7 +636,7 @@ int GetCount() const;
 
 ### <a name="return-value"></a>返回值
 
-列表框中的项数或 LB_ERR （如果发生错误）。
+列表框中的项数，如果发生错误，则 LB_ERR。
 
 ### <a name="remarks"></a>备注
 
@@ -655,13 +656,13 @@ int GetCurSel() const;
 
 ### <a name="return-value"></a>返回值
 
-如果当前选定项是单选列表框，则为当前选定项的从零开始的索引。 如果当前未选择任何项，则为 LB_ERR。
+如果当前选定项是单选列表框，则为当前选定项的从零开始的索引。 如果当前未选择任何项，则 LB_ERR。
 
 在多选列表框中，为具有焦点的项的索引。
 
 ### <a name="remarks"></a>备注
 
-不要为多`GetCurSel`选列表框调用。 改[为使用 CListBox：： GetSelItems](#getselitems) 。
+不要为多选列表框调用 `GetCurSel`。 改[为使用 CListBox：： GetSelItems](#getselitems) 。
 
 ### <a name="example"></a>示例
 
@@ -702,7 +703,7 @@ DWORD_PTR GetItemData(int nIndex) const;
 
 ### <a name="return-value"></a>返回值
 
-与项关联的值; 如果发生错误，则为 LB_ERR。
+与项关联的值; 如果发生错误，则 LB_ERR。
 
 ### <a name="remarks"></a>备注
 
@@ -774,7 +775,7 @@ int GetItemRect(
 
 ### <a name="return-value"></a>返回值
 
-如果发生错误，则为 LB_ERR。
+如果发生错误，则 LB_ERR。
 
 ### <a name="example"></a>示例
 
@@ -790,7 +791,7 @@ DWORD GetListBoxInfo() const;
 
 ### <a name="return-value"></a>返回值
 
-`CListBox`对象每列的项数。
+`CListBox` 对象每列的项数。
 
 ### <a name="remarks"></a>备注
 
@@ -879,7 +880,7 @@ int GetSelItems(
 
 ### <a name="return-value"></a>返回值
 
-放入缓冲区中的实际项数。 如果列表框是单项选择列表框，则返回值为`LB_ERR`。
+放入缓冲区中的实际项数。 如果列表框是单项选择列表框，则返回值为 `LB_ERR`。
 
 ### <a name="example"></a>示例
 
@@ -905,7 +906,7 @@ void GetText(
 指定要检索的字符串的从零开始的索引。
 
 *lpszBuffer*<br/>
-指向接收字符串的缓冲区。 缓冲区必须具有足够的空间用于字符串和终止 null 字符。 可以通过调用`GetTextLen`成员函数提前确定字符串的大小。
+指向接收字符串的缓冲区。 缓冲区必须具有足够的空间用于字符串和终止 null 字符。 可以通过调用 `GetTextLen` 成员函数提前确定字符串的大小。
 
 *rString*<br/>
 对 `CString` 对象的引用。
@@ -916,7 +917,7 @@ void GetText(
 
 ### <a name="remarks"></a>备注
 
-此成员函数的第二种形式使用`CString`字符串文本填充对象。
+此成员函数的第二种形式使用字符串文本填充 `CString` 对象。
 
 ### <a name="example"></a>示例
 
@@ -953,7 +954,7 @@ int GetTopIndex() const;
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则为列表框中第一个可见项的从零开始的索引; 否则为 LB_ERR。
+如果成功，则为列表框中第一个可见项的从零开始的索引，LB_ERR 否则为。
 
 ### <a name="remarks"></a>备注
 
@@ -983,15 +984,15 @@ int InitStorage(
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则在需要重新分配内存之前，列表框可以存储的项的最大数目，否则 LB_ERRSPACE，这意味着没有足够的内存可用。
+如果成功，则在需要重新分配内存之前，列表框可以存储的最大项数，否则 LB_ERRSPACE，这意味着没有足够的内存可用。
 
 ### <a name="remarks"></a>备注
 
-在向添加大量项`CListBox`之前调用此函数。
+在将大量项添加到 `CListBox`之前调用此函数。
 
 此函数有助于加快具有大量项（超过100个）的列表框的初始化速度。 它预分配指定的内存量，以便后续的[AddString](#addstring)、 [InsertString](#insertstring)和[Dir](#dir)函数可以使用最短的时间。 您可以对参数使用估算值。 如果最好，则分配一些额外的内存;如果你低估，则会将常规分配用于超出预分配数量的项。
 
-仅限 Windows 95/98：*NItems*参数限制为16位值。 这意味着列表框包含的项不能超过32767个。 尽管项目数受到限制，列表框中的项的总大小仅受可用内存的限制。
+仅限 Windows 95/98： *nItems*参数限制为16位值。 这意味着列表框包含的项不能超过32767个。 尽管项目数受到限制，列表框中的项的总大小仅受可用内存的限制。
 
 ### <a name="example"></a>示例
 
@@ -1017,11 +1018,11 @@ int InsertString(
 
 ### <a name="return-value"></a>返回值
 
-插入该字符串的位置的索引（索引从零开始）。 如果发生错误，则返回值为 LB_ERR;如果没有足够的可用空间来存储新的字符串，则返回值为 LB_ERRSPACE。
+插入该字符串的位置的索引（索引从零开始）。 如果发生错误，将 LB_ERR 返回值;如果没有足够的可用空间来存储新的字符串，则返回值为 LB_ERRSPACE。
 
 ### <a name="remarks"></a>备注
 
-与[AddString](#addstring)成员函数不同， `InsertString`不会使具有[LBS_SORT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)样式的列表排序。
+与[AddString](#addstring)成员函数不同，`InsertString` 不会对具有[LBS_SORT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)样式的列表进行排序。
 
 ### <a name="example"></a>示例
 
@@ -1043,7 +1044,7 @@ UINT ItemFromPoint(
 要查找其最近项的点，该点相对于列表框的工作区的左上角指定。
 
 *bOutside*<br/>
-对 BOOL 变量的引用，如果*pt*超出最近的列表框项的工作区，则该变量将设置为 TRUE，如果*pt*在最近的列表框项的工作区中，则为 FALSE。
+对 BOOL 变量的引用，如果*pt*在列表框的工作区之外，该变量将设置为 TRUE，如果*pt*在列表框的工作区中，则为 FALSE。
 
 ### <a name="return-value"></a>返回值
 
@@ -1072,11 +1073,11 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 
 ### <a name="remarks"></a>备注
 
-默认情况下，此成员函数不执行任何操作。 重写此成员函数并填充`MEASUREITEMSTRUCT`结构以通知窗口列表框维度。 如果列表框是用[LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)样式创建的，则框架将为列表框中的每个项调用此成员函数。 否则，此成员只调用一次。
+默认情况下，此成员函数不执行任何操作。 重写此成员函数并填充 `MEASUREITEMSTRUCT` 结构以通知窗口列表框尺寸。 如果列表框是用[LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)样式创建的，则框架将为列表框中的每个项调用此成员函数。 否则，此成员只调用一次。
 
-有关使用的`SubclassDlgItem`成员函数`CWnd`创建的所有者描述列表框中的[LBS_OWNERDRAWFIXED](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)样式的详细信息，请参阅[技术说明 14](../../mfc/tn014-custom-controls.md)中的讨论。
+有关使用 `CWnd`的 `SubclassDlgItem` 成员函数创建的所有者描述列表框中的[LBS_OWNERDRAWFIXED](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)样式的详细信息，请参阅[技术说明 14](../../mfc/tn014-custom-controls.md)中的讨论。
 
-有关`MEASUREITEMSTRUCT`结构的说明，请参阅[CWnd：： OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) 。
+有关 `MEASUREITEMSTRUCT` 结构的说明，请参阅[CWnd：： OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) 。
 
 ### <a name="example"></a>示例
 
@@ -1124,7 +1125,7 @@ int SelectString(
 
 仅当项的初始字符（从起始点）与*lpszItem*指定的字符串中的字符匹配时，才会选择该项。
 
-`FindString`使用成员函数在不选择项的情况下查找字符串。
+在不选择项的情况下使用 `FindString` 成员函数查找字符串。
 
 ### <a name="example"></a>示例
 
@@ -1154,7 +1155,7 @@ int SelItemRange(
 
 ### <a name="return-value"></a>返回值
 
-如果发生错误，则为 LB_ERR。
+如果发生错误，则 LB_ERR。
 
 ### <a name="remarks"></a>备注
 
@@ -1205,7 +1206,7 @@ int SetCaretIndex(
 
 ### <a name="return-value"></a>返回值
 
-如果发生错误，则为 LB_ERR。
+如果发生错误，则 LB_ERR。
 
 ### <a name="remarks"></a>备注
 
@@ -1247,7 +1248,7 @@ int SetCurSel(int nSelect);
 
 ### <a name="return-value"></a>返回值
 
-如果发生错误，则为 LB_ERR。
+如果发生错误，则 LB_ERR。
 
 ### <a name="remarks"></a>备注
 
@@ -1278,9 +1279,9 @@ void SetHorizontalExtent(int cxExtent);
 
 如果列表框的大小小于此值，则水平滚动条将在列表框中水平滚动项。 如果列表框的大小大于或等于此值，则会隐藏水平滚动条。
 
-若要响应对的调用`SetHorizontalExtent`，必须使用[WS_HSCROLL](../../mfc/reference/styles-used-by-mfc.md#window-styles)样式定义列表框。
+若要响应对 `SetHorizontalExtent`的调用，必须使用[WS_HSCROLL](../../mfc/reference/styles-used-by-mfc.md#window-styles)样式定义列表框。
 
-此成员函数对于多列列表框不起作用。 对于多列列表框，请`SetColumnWidth`调用成员函数。
+此成员函数对于多列列表框不起作用。 对于多列列表框，请调用 `SetColumnWidth` 成员函数。
 
 ### <a name="example"></a>示例
 
@@ -1306,7 +1307,7 @@ int SetItemData(
 
 ### <a name="return-value"></a>返回值
 
-如果发生错误，则为 LB_ERR。
+如果发生错误，则 LB_ERR。
 
 ### <a name="example"></a>示例
 
@@ -1332,7 +1333,7 @@ int SetItemDataPtr(
 
 ### <a name="return-value"></a>返回值
 
-如果发生错误，则为 LB_ERR。
+如果发生错误，则 LB_ERR。
 
 ### <a name="remarks"></a>备注
 
@@ -1362,11 +1363,11 @@ int SetItemHeight(
 
 ### <a name="return-value"></a>返回值
 
-如果索引或高度无效，则为 LB_ERR。
+如果索引或高度无效，则 LB_ERR。
 
 ### <a name="remarks"></a>备注
 
-如果列表框具有[LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)样式，则此函数将设置由*nIndex*指定的项的高度。 否则，此函数将设置列表框中所有项的高度。
+如果列表框具有[LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)样式，则此函数将设置*nIndex*指定的项的高度。 否则，此函数将设置列表框中所有项的高度。
 
 ### <a name="example"></a>示例
 
@@ -1391,7 +1392,7 @@ LCID SetLocale(LCID nNewLocale);
 
 ### <a name="remarks"></a>备注
 
-如果`SetLocale`未调用，则从系统获取默认区域设置。 可以使用 "控制面板" 的 "区域" （或 "国际"）应用程序修改此系统默认区域设置。
+如果未调用 `SetLocale`，则将从系统中获取默认区域设置。 可以使用 "控制面板" 的 "区域" （或 "国际"）应用程序修改此系统默认区域设置。
 
 ### <a name="example"></a>示例
 
@@ -1417,7 +1418,7 @@ int SetSel(
 
 ### <a name="return-value"></a>返回值
 
-如果发生错误，则为 LB_ERR。
+如果发生错误，则 LB_ERR。
 
 ### <a name="remarks"></a>备注
 
@@ -1451,7 +1452,7 @@ BOOL SetTabStops(
 指定列表框中的制表位的数目。
 
 *rgTabStops*<br/>
-指向整数数组的第一个成员，其中包含对话框单位中的制表位位置。 对话单位为水平或垂直距离。 一个水平对话框单位等于当前 "对话框基本宽度单位" 的四分之一，一个垂直对话单位等于当前对话框基本高度单位的八分之一。 对话框基本单位根据当前系统字体的高度和宽度计算。 `GetDialogBaseUnits` Windows 函数以像素为单位返回当前的对话框基本单位。 制表位必须按递增顺序排序;不允许使用 back 选项卡。
+指向整数数组的第一个成员，其中包含对话框单位中的制表位位置。 对话单位为水平或垂直距离。 一个水平对话框单位等于当前 "对话框基本宽度单位" 的四分之一，一个垂直对话单位等于当前对话框基本高度单位的八分之一。 对话框基本单位根据当前系统字体的高度和宽度计算。 `GetDialogBaseUnits` Windows 函数返回当前的对话框基本单位（以像素为单位）。 制表位必须按递增顺序排序;不允许使用 back 选项卡。
 
 ### <a name="return-value"></a>返回值
 
@@ -1463,7 +1464,7 @@ BOOL SetTabStops(
 
 若要将制表位设置为大小数组，请使用带有*rgTabStops*和*nTabStops*参数的版本。 将为*rgTabStops*中的每个值设置一个制表位，直到*nTabStops*指定的数字为止。
 
-若要响应对`SetTabStops`成员函数的调用，必须创建具有[LBS_USETABSTOPS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)样式的列表框。
+若要响应对 `SetTabStops` 成员函数的调用，必须使用[LBS_USETABSTOPS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)样式创建列表框。
 
 ### <a name="example"></a>示例
 
@@ -1496,7 +1497,7 @@ int SetTopIndex(int nIndex);
 
 ##  <a name="vkeytoitem"></a>CListBox：： VKeyToItem
 
-当列表框的父窗口接收到列表框中的 WM_VKEYTOITEM 消息时由框架调用。
+当列表框的父窗口从列表框接收到 WM_VKEYTOITEM 消息时由框架调用。
 
 ```
 virtual int VKeyToItem(
@@ -1520,7 +1521,7 @@ virtual int VKeyToItem(
 
 WM_VKEYTOITEM 消息在收到 WM_KEYDOWN 消息时由列表框发送，但仅当列表框同时满足以下两个内容时：
 
-- 已设置[LBS_WANTKEYBOARDINPUT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)样式。
+- 具有[LBS_WANTKEYBOARDINPUT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)样式集。
 
 - 至少有一项。
 
@@ -1536,7 +1537,7 @@ WM_VKEYTOITEM 消息在收到 WM_KEYDOWN 消息时由列表框发送，但仅当
 
 [!code-cpp[NVC_MFC_CListBox#41](../../mfc/codesnippet/cpp/clistbox-class_41.cpp)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [MFC 示例 CTRLTEST](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>

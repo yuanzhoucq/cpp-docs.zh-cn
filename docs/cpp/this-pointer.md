@@ -1,6 +1,7 @@
 ---
 title: this 指针
-ms.date: 11/04/2016
+description: this 指针是一个由编译器生成的指针，指向非静态成员函数中的当前对象。
+ms.date: 01/22/2020
 f1_keywords:
 - this_cpp
 helpviewer_keywords:
@@ -8,16 +9,24 @@ helpviewer_keywords:
 - pointers, to class instance
 - this pointer
 ms.assetid: 92e3256a-4ad9-4d46-8be1-d77fad90791f
-ms.openlocfilehash: c90a843ba978a98c1c61d9e096d62b85256ab0c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+no-loc:
+- this
+- class
+- struct
+- union
+- sizeof
+- const
+- volatile
+ms.openlocfilehash: 58bba2edd7a457c624b747b5a65d209995852848
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330474"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518330"
 ---
-# <a name="this-pointer"></a>this 指针
+# <a name="opno-locthis-pointer"></a>this 指针
 
-**这**指针是只能在非静态成员函数中访问指针**类**，**结构**，或者**联合**类型。 它指向为其调用成员函数的对象。 静态成员函数不具有**这**指针。
+**this** 指针只能在 **class** 、 **struct** 或 **union** 类型的非静态成员函数中访问指针。 它指向为其调用成员函数的对象。 静态成员函数没有 **this** 的指针。
 
 ## <a name="syntax"></a>语法
 
@@ -28,19 +37,19 @@ this->member-identifier
 
 ## <a name="remarks"></a>备注
 
-对象的**这**指针不是对象本身; 的一部分不会反映结果中的**sizeof**对象上的语句。 相反，当对某个对象调用非静态成员函数时，该对象的地址将由编译器作为隐藏的参数传递给函数。 例如，以下函数调用：
+对象的 **this** 指针不是对象本身的组成部分。 它不会在对象的 **sizeof** 语句的结果中反映出来。 当为某个对象调用非静态成员函数时，编译器会将该对象的地址作为隐藏参数传递给该函数。 例如，以下函数调用：
 
 ```cpp
 myDate.setMonth( 3 );
 ```
 
-可以按以下方式解释：
+可以解释为：
 
 ```cpp
 setMonth( &myDate, 3 );
 ```
 
-对象的地址可用于从作为成员函数的内部**这**指针。 大多数用途**这**是隐式的。 它是合法的但没有必要显式使用**这**引用类的成员时。 例如：
+对象的地址可从成员函数内作为 **this** 指针。 大多数 **this** 指针都是隐式的。 尽管在引用 class的成员时，使用显式 **this** 却是合法的。 例如：
 
 ```cpp
 void Date::setMonth( int mn )
@@ -57,7 +66,7 @@ void Date::setMonth( int mn )
 return *this;
 ```
 
-**这**指针还用于防止自引用：
+**this** 指针还用于防止自引用：
 
 ```cpp
 if (&Object != this) {
@@ -65,9 +74,9 @@ if (&Object != this) {
 ```
 
 > [!NOTE]
->  因为**这**指针是不可修改，赋值**这**不允许。 C++ 的早期实现允许对分配**这**。
+> 由于 **this** 指针不可更改，因此不允许向 **this** 指针赋值。 的C++早期实现允许分配到 **this** 。
 
-有时，**这**直接使用指针 — 例如，操作自引用数据结构，其中当前对象的地址是必需的。
+有时会直接使用 **this** 指针（例如，用于处理自引用数据结构，此时需要当前对象的地址）。
 
 ## <a name="example"></a>示例
 
@@ -139,11 +148,11 @@ my buffer
 your buffer
 ```
 
-## <a name="type-of-the-this-pointer"></a>this 指针的类型
+## <a name="type-of-the-opno-locthis-pointer"></a>this 指针的类型
 
-**这**指针的类型可以通过在函数声明中修改**const**并**易失性**关键字。 若要将函数声明为具有一个或多个关键字的特性，请将关键字添加到函数参数列表的后面。
+**this** 指针的类型可由 **const** 和 **volatile** 关键字在函数声明中修改。 若要声明一个具有这些属性的函数，请在函数参数列表后面添加关键字。
 
-请看以下示例：
+请看一个示例：
 
 ```cpp
 // type_of_this_pointer1.cpp
@@ -156,7 +165,7 @@ int main()
 }
 ```
 
-前面的代码声明成员函数时， `X`，在其中**这**指针被视为**const**指向**const**对象。 组合*cv mod 列表*可以使用选项，但它们始终修改指向的对象**这**，而不**这**指针本身。 因此，以下声明将声明函数`X`;**这**指针位于**const**指向**const**对象：
+前面的代码声明一个成员函数 `X`，其中 **this** 指针被视为指向 **const** 对象的 **const** 指针。 可以使用*cv-现代型列表*选项的组合，但它们始终修改由 **this** 指针指向的对象，而不是指针本身。 下面的声明声明函数 `X`，其中 **this** 指针是指向 **const** 对象的 **const** 指针：
 
 ```cpp
 // type_of_this_pointer2.cpp
@@ -169,28 +178,30 @@ int main()
 }
 ```
 
-类型**这**中成员函数描述的以下语法，其中*cv 限定符列表*从成员函数声明符中确定和可以为**const**或**易失性**（或两者），并*类类型*是类的名称：
+成员函数中 **this** 的类型由以下语法描述。 *Cv 限定符列表*是从成员函数的声明符中确定的。 它可以是 **const** 或 **volatile** （或两者）。 *class类型*是 class的名称：
 
-*[cv 限定符列表] 类类型* **&#42; const 这**
+[*cv 限定符列表*] *class类型* **\* const this**
 
-换而言之，**这**始终是 const 指针; 无法重新分配。  **Const**或**易失性**成员函数声明中使用的限定符应用于类实例，指向**这**该函数的作用域中。
+换句话说， **this** 指针始终是 const 指针。 不能重新分配它。  成员函数声明中使用的 **const** 或 **volatile** 限定符适用于在该函数的作用域中 **this** 指针指向的 class 实例。
 
 下表介绍了有关这些修饰符的工作方式的更多信息。
 
-### <a name="semantics-of-this-modifiers"></a>this 修饰符的语义
+### <a name="semantics-of-opno-locthis-modifiers"></a>this 修饰符的语义
 
 |修饰符|含义|
 |--------------|-------------|
-|**const**|不能更改成员数据;无法调用成员函数不是**const**。|
-|**volatile**|每次访问成员数据时，都会从内存中加载该数据；禁用某些优化。|
+|**const**|无法更改成员数据;无法调用不 **const** 的成员函数。|
+|**volatile**|每次访问成员数据时，都将从内存中加载该成员数据;禁用某些优化。|
 
-它是传递错误**const**对象的成员函数不是**const**。 同样，它是错误传递**可变**对象的成员函数不是**易失性**。
+将 **const** 对象传递到不 **const** 的成员函数是错误的。
 
-成员函数声明为**const**不能更改成员数据 — 在此类函数**这**指针是指向**const**对象。
+同样，将 **volatile** 对象传递到不 **volatile** 的成员函数也是错误的。
+
+声明为 **const** 的成员函数无法更改成员数据，在此类函数中， **this** 指针是指向 **const** 对象的指针。
 
 > [!NOTE]
->  构造函数和析构函数不能声明为**const**或**易失性**。 它们，但是，可以在调用**const**或**易失性**对象。
+> 构造函数和析构函数不能声明为 **const** 或 **volatile** 。 但是，可以在 **const** 或 **volatile** 对象上调用它们。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [关键字](../cpp/keywords-cpp.md)
