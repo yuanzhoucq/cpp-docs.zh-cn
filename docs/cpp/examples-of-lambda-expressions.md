@@ -6,7 +6,7 @@ helpviewer_keywords:
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
 ms.openlocfilehash: f9f2c3e014e44c9f6a9ce10dd8388a1578ba3987
 ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2019
 ms.locfileid: "65222090"
@@ -19,7 +19,7 @@ ms.locfileid: "65222090"
 
 ### <a name="example-1"></a>示例 1
 
-由于 lambda 表达式类型化，您可以将其分配给**自动**变量或设置为[函数](../standard-library/function-class.md)对象，如下所示：
+由于 lambda 表达式类型化，您可以将其分配给**auto**变量或设置为[函数](../standard-library/function-class.md)对象，如下所示：
 
 ### <a name="code"></a>代码
 
@@ -55,13 +55,13 @@ int main()
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[自动](../cpp/auto-cpp.md)， [function 类](../standard-library/function-class.md)，并[函数调用](../cpp/function-call-cpp.md)。
+有关详细信息，请参阅 [auto](../cpp/auto-cpp.md)、[function 类](../standard-library/function-class.md)以及[函数调用](../cpp/function-call-cpp.md)。
 
 虽然 lambda 表达式多在函数的主体中声明，但是可以在初始化变量的任何地方声明。
 
 ### <a name="example-2"></a>示例 2
 
-MicrosoftC++编译器将 lambda 表达式绑定到捕获的变量时调用的表达式时，而不是声明的表达式。 以下示例显示一个通过值捕获局部变量 `i` 并通过引用捕获局部变量 `j` 的 lambda 表达式。 由于 lambda 表达式通过值捕获 `i`，因此在程序后面部分中重新指派 `i` 不影响该表达式的结果。 但是，由于 lambda 表达式通过引用捕获 `j`，因此重新指派 `j` 会影响该表达式的结果。
+当声明表达式（而非调用表达式）时，Microsoft C++ 编译器将 lambda 表达式绑定到其捕获的变量。 以下示例显示一个通过值捕获局部变量 `i` 并通过引用捕获局部变量 `j` 的 lambda 表达式。 由于 lambda 表达式通过值捕获 `i`，因此在程序后面部分中重新指派 `i` 不影响该表达式的结果。 但是，由于 lambda 表达式通过引用捕获 `j`，因此重新指派 `j` 会影响该表达式的结果。
 
 ### <a name="code"></a>代码
 
@@ -97,7 +97,7 @@ int main()
 47
 ```
 
-[[本文内容](#top)]
+[[回到顶部](#top)]
 
 ##  <a name="callingLambdaExpressions"></a> 调用 Lambda 表达式
 
@@ -177,7 +177,7 @@ The first even number in the list is 42.
 
 有关详细信息`find_if`函数中，请参阅[find_if](../standard-library/algorithm-functions.md#find_if)。 有关执行公共算法的 C++ 标准库函数的详细信息，请参阅[\<算法 >](../standard-library/algorithm.md)。
 
-[[本文内容](#top)]
+[[回到顶部](#top)]
 
 ##  <a name="nestingLambdaExpressions"></a> 嵌套 Lambda 表达式
 
@@ -215,7 +215,7 @@ int main()
 
 在该示例中，`[](int y) { return y * 2; }` 是嵌套的 lambda 表达式。
 
-[[本文内容](#top)]
+[[回到顶部](#top)]
 
 ##  <a name="higherOrderLambdaExpressions"></a> 高阶 Lambda 函数
 
@@ -264,16 +264,16 @@ int main()
 30
 ```
 
-[[本文内容](#top)]
+[[回到顶部](#top)]
 
 ##  <a name="methodLambdaExpressions"></a> 在函数中使用 Lambda 表达式
 
 ### <a name="example"></a>示例
 
-你可以在函数的主体中使用 lambda 表达式。 lambda 表达式可以访问该封闭函数可访问的任何函数或数据成员。 你可以显式或隐式捕获**这**指针，以提供对封闭类的函数和数据成员的访问权限。
+你可以在函数的主体中使用 lambda 表达式。 lambda 表达式可以访问该封闭函数可访问的任何函数或数据成员。 你可以显式或隐式捕获**this**指针，以提供对封闭类的函数和数据成员的访问权限。
 **Visual Studio 2017 版本 15.3 及更高版本**(适用于[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):捕获**这**按值 (`[*this]`) 当 lambda，将使用异步或并行操作中的原始对象超出范围后可能执行的代码。
 
-可以使用**这**指针显式在函数中，如下所示：
+可以在函数中显式使用**this**指针，如下所示：
 
 ```cpp
 // capture "this" by reference
@@ -291,7 +291,7 @@ void ApplyScale2(const vector<int>& v) const
 }
 ```
 
-此外可以捕获**这**指针隐式：
+还可以隐式捕获**this**指针：
 
 ```cpp
 void ApplyScale(const vector<int>& v) const
@@ -355,15 +355,15 @@ int main()
 
 ### <a name="remarks"></a>备注
 
-`ApplyScale` 函数使用 lambda 表达式打印小数位数值与 `vector` 对象中的每个元素的乘积。 Lambda 表达式隐式捕获**这**，以便它可以访问`_scale`成员。
+`ApplyScale` 函数使用 lambda 表达式打印小数位数值与 `vector` 对象中的每个元素的乘积。 Lambda 表达式隐式捕获**this**，以便它可以访问`_scale`成员。
 
-[[本文内容](#top)]
+[[回到顶部](#top)]
 
 ##  <a name="templateLambdaExpressions"></a> 与模板配合使用 Lambda 表达式
 
 ### <a name="example"></a>示例
 
-由于 lambda 表达式已类型化，因此你可以将其与 C++ 模板一起使用。 下面的示例显示 `negate_all` 和 `print_all` 函数。 `negate_all`函数将应用一元**运算符-** 中的所有元素`vector`对象。 `print_all` 函数将 `vector` 对象中的每个元素打印到控制台。
+由于 lambda 表达式已类型化，因此你可以将其与 C++ 模板一起使用。 下面的示例显示 `negate_all` 和 `print_all` 函数。 `negate_all`函数将对`vector`对象中的所有元素应用一元**运算符-** 。 `print_all` 函数将 `vector` 对象中的每个元素打印到控制台。
 
 ### <a name="code"></a>代码
 
@@ -421,13 +421,13 @@ After negate_all():
 
 有关 C++ 模板的详细信息，请参阅[模板](../cpp/templates-cpp.md)。
 
-[[本文内容](#top)]
+[[回到顶部](#top)]
 
 ##  <a name="ehLambdaExpressions"></a> 处理异常
 
 ### <a name="example"></a>示例
 
-lambda 表达式的主体遵循结构化异常处理 (SEH) 和 C++ 异常处理的原则。 你可以在 lambda 表达式主体中处理引发的异常或将异常处理推迟至封闭范围。 下面的示例使用**for_each**函数和 lambda 表达式来填充`vector`对象的另一个的值。 它使用**尝试**/**捕获**块来处理无效访问第一个向量。
+lambda 表达式的主体遵循结构化异常处理 (SEH) 和 C++ 异常处理的原则。 你可以在 lambda 表达式主体中处理引发的异常或将异常处理推迟至封闭范围。 下面的示例使用**for_each**函数和 lambda 表达式来用另一个对象的值填充`vector`对象。 它使用**try**/**catch**块来处理对第一个 vector 的无效访问。
 
 ### <a name="code"></a>代码
 
@@ -477,7 +477,7 @@ Caught 'invalid vector<T> subscript'.
 
 有关异常处理的详细信息，请参阅[异常处理](../cpp/exception-handling-in-visual-cpp.md)。
 
-[[本文内容](#top)]
+[[回到顶部](#top)]
 
 ##  <a name="managedLambdaExpressions"></a>托管类型传递配合使用 Lambda 表达式 (C++ /cli CLI)
 
@@ -517,7 +517,7 @@ Hello!
 > [!IMPORTANT]
 >  这些公共语言运行时 (CLR) 托管实体中不支持 lambda: **ref 类**， **ref 结构**，**值类**，和**值结构**.
 
-[[本文内容](#top)]
+[[回到顶部](#top)]
 
 ## <a name="see-also"></a>请参阅
 

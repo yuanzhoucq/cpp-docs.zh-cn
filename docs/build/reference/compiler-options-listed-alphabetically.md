@@ -1,20 +1,20 @@
 ---
 title: 按字母顺序列出的编译器选项
-ms.date: 08/08/2019
+ms.date: 01/08/2020
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 39dd11245ef88d1d59d3eda8cbeaa5fc4494b9a8
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: 72441692869dbed806474a7054fedff53b923d42
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685332"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518369"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>按字母顺序列出的编译器选项
 
 下面是一个完整的按字母顺序的编译器选项列表。 有关按类别排序的列表，请参见 [按类别列出的编译器选项](compiler-options-listed-by-category.md)。
 
-|选项|用途|
+|选项|目标|
 |------------|-------------|
 |[@](at-specify-a-compiler-response-file.md)|指定响应文件。|
 |[/?](help-compiler-command-line-help.md)|列出编译器选项。|
@@ -37,7 +37,7 @@ ms.locfileid: "71685332"
 |[/errorReport](errorreport-report-internal-compiler-errors.md)|允许你将内部编译器错误（ICE）信息直接提供给 Microsoft C++团队。|
 |[/execution-charset](execution-charset-set-execution-character-set.md)|设置执行字符集。|
 |[/experimental:module](experimental-module.md)|启用实验性模块支持。|
-|[/experimental:preprocessor](experimental-preprocessor.md)|启用实验相容预处理器支持。|
+|[/experimental：预处理器](experimental-preprocessor.md)|启用实验相容预处理器支持。|
 |[/F](f-set-stack-size.md)|设置堆栈大小。|
 |[/favor](favor-optimize-for-architecture-specifics.md)|生成针对特定 x64 体系结构或适用于 AMD64 和扩展内存64技术（EM64T）体系结构中的微体系结构的详细信息进行优化的代码。|
 |[/FA](fa-fa-listing-file.md)|创建列表文件。|
@@ -109,6 +109,7 @@ ms.locfileid: "71685332"
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|生成快速先验。|
 |[/QIfist](qifist-suppress-ftol.md)|已否决。 当需要从浮点类型转换为整型时（仅限 x86）取消 `_ftol` 。|
 |[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|移除 `fwait` 块中的 `try` 命令。|
+|[/QIntel-jcc-erratum](qintel-jcc-erratum.md)|缓解 Intel JCC 错误微代码更新对性能的影响。|
 |[/Qpar（自动并行化程序）](qpar-auto-parallelizer.md)|对标记有 [#pragma loop()](../../preprocessor/loop.md) 指令的循环启用自动并行化。|
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|将整数移动指令用于浮点值，并禁用特定浮点加载优化。|
 |[/Qspectre](qspectre.md)|指定编译器生成指令以缓解某些 Spectre 变体 1 安全漏洞。|
@@ -167,7 +168,7 @@ ms.locfileid: "71685332"
 |[/Zs](zs-syntax-check-only.md)|只检查语法。|
 |[/ZW](zw-windows-runtime-compilation.md)|生成要在 Windows 运行时上运行的输出文件。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [MSVC 编译器选项](compiler-options.md)<br/>
 [MSVC 编译器命令行语法](compiler-command-line-syntax.md)
