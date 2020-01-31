@@ -1,4 +1,4 @@
----
+﻿---
 title: Lambda 表达式的示例
 ms.date: 05/07/2019
 helpviewer_keywords:
@@ -221,7 +221,7 @@ int main()
 
 ### <a name="example"></a>示例
 
-许多编程语言都支持这一概念*高阶函数。* 高阶函数是采用另一个 lambda 表达式作为其参数或返回 lambda 表达式的 lambda 表达式。 你可以使用[函数](../standard-library/function-class.md)类，使得 C++ lambda 表达式的行为类似高阶函数。 以下示例显示返回 `function` 对象的 lambda 表达式和采用 `function` 对象作为其参数的 lambda 表达式。
+许多编程语言都支持*高阶函数*这一概念。 高阶函数是采用另一个 lambda 表达式作为其参数或返回 lambda 表达式的 lambda 表达式。 你可以使用 [function](../standard-library/function-class.md) 类，使得 C++ lambda 表达式的行为类似高阶函数。 以下示例显示返回 `function` 对象的 lambda 表达式和采用 `function` 对象作为其参数的 lambda 表达式。
 
 ### <a name="code"></a>代码
 
@@ -271,7 +271,7 @@ int main()
 ### <a name="example"></a>示例
 
 你可以在函数的主体中使用 lambda 表达式。 lambda 表达式可以访问该封闭函数可访问的任何函数或数据成员。 你可以显式或隐式捕获**this**指针，以提供对封闭类的函数和数据成员的访问权限。
-**Visual Studio 2017 版本 15.3 及更高版本**(适用于[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):捕获**这**按值 (`[*this]`) 当 lambda，将使用异步或并行操作中的原始对象超出范围后可能执行的代码。
+**Visual Studio 2017 版本 15.3 及更高版本**(适用于 [/std: c + + 17](../build/reference/std-specify-language-standard-version.md))：当将在异步或并行操作（在此操作中，可能在原始对象超出对象后执行代码）中使用 lambda 时，通过值 (`[*this]`) 捕获**this**。
 
 可以在函数中显式使用**this**指针，如下所示：
 
