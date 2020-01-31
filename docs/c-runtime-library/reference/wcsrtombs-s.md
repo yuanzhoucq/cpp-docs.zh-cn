@@ -26,12 +26,12 @@ helpviewer_keywords:
 - wcsrtombs_s function
 - wide characters, strings
 ms.assetid: 9dccb766-113c-44bb-9b04-07a634dddec8
-ms.openlocfilehash: bd43e4d4bf3a916f83fb014fc85aa5270fbd4c51
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 68f5b6f6b87fb3ad21899035dfc82d997d90cf38
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945184"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518304"
 ---
 # <a name="wcsrtombs_s"></a>wcsrtombs_s
 
@@ -86,13 +86,13 @@ errno_t wcsrtombs_s(
 |---------------------|------------------------------|
 |*mbstr*为**NULL** ， *sizeInBytes* > 0|**EINVAL**|
 |*wcstr*为**NULL**|**EINVAL**|
-|目标缓冲区太小，无法包含转换后的字符串（除非*计数*为 **_TRUNCATE**; 请参阅下面的备注）|**ERANGE**|
+|目标缓冲区太小，无法包含转换后的字符串（除非 **_TRUNCATE**了*count* ; 请参阅下面的备注）|**ERANGE**|
 
 如果发生这些情况中的任何一个，都会调用无效参数异常，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将返回错误代码并按表中所示设置**errno** 。
 
 ## <a name="remarks"></a>备注
 
-**Wcsrtombs_s**函数使用*mbstate*中包含的转换状态，将*wcstr*指向的宽字符字符串转换为存储在*mbstr*所指向的缓冲区中的多字节字符。 在满足以下条件之一前，该转换将一直对每个字符执行：
+**Wcsrtombs_s**函数使用*mbstate*中包含的转换状态，将*wcstr*指向的宽字符字符串转换为存储在由*mbstr*指向的缓冲区中的多字节字符。 在满足以下条件之一前，该转换将一直对每个字符执行：
 
 - 遇到 null 宽字符
 
@@ -102,24 +102,24 @@ errno_t wcsrtombs_s(
 
 目标字符串始终以 null 结尾（即使在出错时）。
 
-如果*count*是特殊值[_TRUNCATE](../../c-runtime-library/truncate.md)，则**wcsrtombs_s**会将尽可能多的字符串转换为目标缓冲区的大小，同时仍然为 null 终止符留下空间。
+如果*count*是[_TRUNCATE](../../c-runtime-library/truncate.md)的特殊值，则**wcsrtombs_s**会将尽可能多的字符串转换为目标缓冲区的大小，同时仍然为 null 终止符留下空间。
 
-如果**wcsrtombs_s**成功转换了源字符串，它会将转换后的字符串（包括 null 终止符）的大小（以字节为单位）放入 *&#42;pReturnValue* （提供的*pReturnValue*不为**null**）。 即使*mbstr*参数为**NULL** ，并且提供了一种方法来确定所需的缓冲区大小，也会发生这种情况。 请注意，如果*mbstr*为**NULL**，则忽略*count* 。
+如果**wcsrtombs_s**成功转换源字符串，则会将转换后的字符串的大小（以字节为单位）放入 *&#42;pReturnValue* （如果*pReturnValue*不为**null**）。 即使*mbstr*参数为**NULL** ，并且提供了一种方法来确定所需的缓冲区大小，也会发生这种情况。 请注意，如果*mbstr*为**NULL**，则忽略*count* 。
 
-如果**wcsrtombs_s**遇到不能转换为多字节字符的宽字符，则它会将-1 置于 *\*pReturnValue*中，将目标缓冲区设置为空字符串，将**errno**设置为**eilseq 且**，并返回**eilseq 且**.
+如果**wcsrtombs_s**遇到不能转换为多字节字符的宽字符，它将在 *\*pReturnValue*中设置-1，将目标缓冲区设置为空字符串，将**errno**设置为**eilseq 且**，并返回**eilseq 且**。
 
-如果由*wcstr*和*mbstr*指向的序列重叠，则**wcsrtombs_s**的行为不确定。 **wcsrtombs_s**受当前区域设置的 LC_TYPE 类别影响。
+如果由*wcstr*和*mbstr*指向的序列重叠，则**wcsrtombs_s**的行为是不确定的。 **wcsrtombs_s**受当前区域设置的 LC_TYPE 类别的影响。
 
 > [!IMPORTANT]
 > 确保*wcstr*和*mbstr*不重叠，并且该*计数*正确反映了要转换的宽字符数。
 
-**Wcsrtombs_s**函数的可重启性不同于[wcstombs_s、_wcstombs_s_l](wcstombs-s-wcstombs-s-l.md) 。 转换状态存储在*mbstate*中，以便后续调用相同的或其他可重启的函数。 混合使用可重启函数和不可重启函数时，结果不确定。 例如，如果使用了对**wcsrtombs_s**的后续调用而不是**wcstombs_s**，应用程序将使用**wcsrlen**而不是**wcslen**。
+**Wcsrtombs_s**函数不同于可重启性[_wcstombs_s_l wcstombs_s](wcstombs-s-wcstombs-s-l.md) 。 转换状态存储在*mbstate*中，以便后续调用相同的或其他可重启的函数。 混合使用可重启函数和不可重启函数时，结果不确定。 例如，如果使用了对**wcsrtombs_s**的后续调用而不是**wcstombs_s**，应用程序将使用**wcsrlen**而不是**wcslen**。
 
-在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 
-## <a name="exceptions"></a>Exceptions
+## <a name="exceptions"></a>异常
 
-只要当前线程中的函数都不调用**setlocale** ，而此函数正在执行且*mbstate*为 null， **wcsrtombs_s**函数就是多线程安全的。
+只要当前线程中的任何函数在执行此函数时都不会调用**setlocale** ，并且*mbstate*为 null， **wcsrtombs_s**函数就是多线程安全的。
 
 ## <a name="example"></a>示例
 
@@ -138,7 +138,7 @@ errno_t wcsrtombs_s(
 
 #define MB_BUFFER_SIZE 100
 
-void main()
+int main()
 {
     const wchar_t   wcString[] =
                     {L"Every good boy does fine."};
@@ -168,13 +168,13 @@ void main()
 The string was successfully converted.
 ```
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>需求
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**wcsrtombs_s**|\<wchar.h>|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
 [区域设置](../../c-runtime-library/locale.md)<br/>

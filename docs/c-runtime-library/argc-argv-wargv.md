@@ -1,5 +1,6 @@
 ---
-title: __argc、__argv、__wargv
+title: __argc, __argv, __wargv
+description: 介绍 __argc、__argv和 __wargv的 Microsoft C 运行时库全局常量。
 ms.date: 11/04/2016
 api_name:
 - __wargv
@@ -20,20 +21,26 @@ helpviewer_keywords:
 - __wargv
 - __argc
 ms.assetid: 17001b0a-04ad-4762-b3a6-c54847f02d7c
-ms.openlocfilehash: 59ab1f5ba52e6dc84d44e8cb5465cfa412d01895
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+no-loc:
+- __argc
+- __argv
+- __wargv
+- main
+- wmain
+ms.openlocfilehash: 86a22a7391c7bde34d7734631a2970a45851dda3
+ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940626"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76123976"
 ---
-# <a name="__argc-__argv-__wargv"></a>__argc、__argv、__wargv
+# <a name="opno-loc__argc-opno-loc__argv-opno-loc__wargv"></a>__argc, __argv, __wargv
 
 `__argc` 全局变量是传递给程序的命令行参数的数量计数。 `__argv` 是一个指向包含程序参数的单字节字符或多字节字符字符串的数组的指针，`__wargv` 是一个指向包含程序参数的宽字符字符串的数组的指针。 这些全局变量提供了 `main` 或 `wmain` 参数。
 
 ## <a name="syntax"></a>语法
 
-```
+```C
 extern int __argc;
 extern char ** __argv;
 extern wchar_t ** __wargv;
@@ -51,16 +58,16 @@ extern wchar_t ** __wargv;
 |---------------------|---------------------------|-----------------------|
 |`__targv`|`__argv`|`__wargv`|
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>需求
 
 |全局变量|必需的标头|
 |---------------------|---------------------|
 |`__argc`, `__argv`, `__wargv`|\<stdlib.h>、\<cstdlib> (C++)|
 
-`__argc`、`__argv` 和 `__wargv` 是 Microsoft 扩展。 有关兼容性信息，请参阅 [兼容性](../c-runtime-library/compatibility.md)。
+`__argc`、`__argv` 和 `__wargv` 是 Microsoft 扩展。 有关兼容性信息，请参阅[兼容性](../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[全局变量](../c-runtime-library/global-variables.md)<br/>
-[main：程序启动](../cpp/main-program-startup.md)<br/>
-[使用 wmain 代替 main](../cpp/using-wmain-instead-of-main.md)
+[全局变量](../c-runtime-library/global-variables.md)\
+[main 函数和命令行参数C++（）](../cpp/main-function-command-line-args.md)\
+[使用 wmain 而不是 main](../cpp/using-wmain-instead-of-main.md)

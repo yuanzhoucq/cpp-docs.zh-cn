@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: 995ad9ae21d7f00a74a912436d599dfead2c9ebb
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: 944834e40a399622b5c85d95100d4ca3c3c2da93
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890151"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518460"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt; 函数
 
@@ -61,7 +61,7 @@ T7 get_money(Money& amount, bool use_intl);
 
 ### <a name="remarks"></a>备注
 
-操控器返回一个对象，该对象在从流 `str`中提取时，将充当 `formatted input function`，该对象将调用与 `str`关联的区域设置 facet `money_get` 的成员函数 `get`，并使用*use_intl*来指示国际格式. 如果成功，则调用将按提取的货币值存储*量*。 此操控器随后返回 `str`。
+操控器会返回一个对象，该对象在从流 `str`中提取时，将充当 `formatted input function`，该对象调用与 `str`关联的区域设置 facet `money_get` `get`，并使用*use_intl*来指示国际格式。 如果成功，则调用将按提取的货币值存储*量*。 此操控器随后返回 `str`。
 
 `Money` 必须为 `long double` 类型，或者是具有与 `str` 相同的元素和特征参数的 `basic_string` 的实例化。
 
@@ -109,7 +109,7 @@ T8 put_money(const Money& amount, bool use_intl);
 
 ### <a name="remarks"></a>备注
 
-此操控器会返回一个对象，该对象在插入到流 `str` 中时会表现为一个格式化输出函数，该函数会对与 `str` 关联的区域设置 Facet `money_put` 调用成员函数 `put`。 如果成功，则调用插入 `amount` 的格式正确，使用*use_intl*指示国际格式，并将 `str.fill()`指定为填充元素。 此操控器随后返回 `str`。
+此操控器会返回一个对象，该对象在插入到流 `str` 中时会表现为一个格式化输出函数，该函数会对与 `str` 关联的区域设置 Facet `money_put` 调用成员函数 `put`。 如果成功，则调用插入 `amount` 的格式正确，使用*use_intl*指示国际格式并 `str.fill()`，作为填充元素。 此操控器随后返回 `str`。
 
 `Money` 必须为 `long double` 类型，或者是具有与 `str` 相同的元素和特征参数的 `basic_string` 的实例化。
 
@@ -132,7 +132,7 @@ T10 put_time(struct tm* time_ptr, const Elem* time_format);
 
 ### <a name="remarks"></a>备注
 
-操控器返回一个对象，该对象在插入到流 `str` 中时会表现为 `formatted output function`。 此输出函数会对与 `str` 关联的区域设置 Facet `time_put` 调用成员函数 `put`。 Output 函数使用*time_ptr*来指示时间结构，并使用*time_format*指示以 null 结尾的格式字符串的开头。 如果成功，则调用会从格式字符串插入文字文本，从时间结构插入转换的值。 此操控器随后返回 `str`。
+操控器返回一个对象，该对象在插入到流 `str` 中时会表现为 `formatted output function`。 此输出函数会对与 `str` 关联的区域设置 Facet `time_put` 调用成员函数 `put`。 Output 函数使用*time_ptr*来指示时间结构，并*time_format*以指示以 null 结尾的格式字符串的开头。 如果成功，则调用会从格式字符串插入文字文本，从时间结构插入转换的值。 此操控器随后返回 `str`。
 
 ## <a name="quoted"></a>quoted
 
@@ -147,8 +147,8 @@ quoted(const char* str, char delimiter, char escape) // or wide versions
 
 ### <a name="parameters"></a>参数
 
-*str* \
-Std：： string、char\*、字符串文本或原始字符串文本或其中任何一个的宽版本（例如 std：： wstring，wchar_t\*）。
+*str*\
+Std：： string、char\*、字符串文本或原始字符串文本或其中任何一个的宽版本（例如 std：： wstring、wchar_t\*）。
 
 *分隔符*\
 一个用户指定的字符或宽字符，用作字符串开头和结尾的分隔符。
@@ -195,7 +195,7 @@ void show_quoted_v_nonquoted()
     cout << "Quoted          : " << extracted_quoted << endl;
 }
 
-void main(int argc, char* argv[])
+int main(int argc, char* argv[])
 {
     show_quoted_v_nonquoted();
 
@@ -271,7 +271,7 @@ void show_custom_escape()
     // after round-tripping.
 }
 
-void main(int argc, char* argv[])
+int main(int argc, char* argv[])
 {
     cout << "Custom delimiter:" << endl;
     show_custom_delimiter();
@@ -337,7 +337,7 @@ T3 setbase(int base);
 
 ### <a name="return-value"></a>返回值
 
-操控器返回一个对象，该对象在从流中提取或插入到流 `str`时调用 `str.setf(mask, `[ios_base：： basefield](../standard-library/ios-base-class.md#fmtflags)`)`，然后返回 `str`。 此处 `mask` 确定如下：
+操控器返回一个对象，该对象在从流中提取或插入到流 `str`时，调用 `str.setf(mask, `[ios_base：： basefield](../standard-library/ios-base-class.md#fmtflags)`)`，然后返回 `str`。 此处 `mask` 确定如下：
 
 - 如果*基数*为8，则 `mask` `ios_base::`[oct](../standard-library/ios-functions.md#oct)。
 
@@ -651,6 +651,6 @@ l4 = 4096
 l5 = 65536
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [\<iomanip>](../standard-library/iomanip.md)

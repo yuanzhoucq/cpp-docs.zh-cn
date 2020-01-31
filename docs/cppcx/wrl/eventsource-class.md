@@ -23,16 +23,16 @@ helpviewer_keywords:
 - Microsoft::WRL::EventSource::targets_ data member
 - Microsoft::WRL::EventSource::targetsPointerLock_ data member
 ms.assetid: 91f1c072-6af4-44e6-b6d8-ac6d0c688dde
-ms.openlocfilehash: e9070fe756410e3e1bb1e5840eb3f06e29c2f46b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1350e51ff609a888b6a8ad6841be6856b68c7994
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398506"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821826"
 ---
 # <a name="eventsource-class"></a>EventSource 类
 
-表示非敏捷事件。 `EventSource` 成员函数将添加、删除和调用事件处理程序。 对于 agile 事件，使用[AgileEventSource](agileeventsource-class.md)。
+表示非敏捷事件。 `EventSource` 成员函数将添加、删除和调用事件处理程序。 对于 agile 事件，请使用[AgileEventSource](agileeventsource-class.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -44,46 +44,46 @@ class EventSource;
 ### <a name="parameters"></a>参数
 
 *TDelegateInterface*<br/>
-一个委托，表示一个事件处理程序接口。
+表示事件处理程序的委托的接口。
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
-### <a name="public-constructors"></a>公共构造函数
+### <a name="public-constructors"></a>公用建構函式
 
-| 名称                                     | 描述                                            |
+| Name                                     | 描述                                            |
 | ---------------------------------------- | ------------------------------------------------------ |
 | [EventSource::EventSource](#eventsource) | 初始化 `EventSource` 类的新实例。 |
 
 ### <a name="public-methods"></a>公共方法
 
-| 名称                                 | 描述                                                                                                                                                      |
+| Name                                 | 描述                                                                                                                                                      |
 | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [EventSource::Add](#add)             | 将追加到当前的事件处理程序集由指定的委托接口表示的事件处理程序`EventSource`对象。                     |
-| [EventSource::GetSize](#getsize)     | 检索与当前相关联的事件处理程序数`EventSource`对象。                                                                         |
-| [EventSource::InvokeAll](#invokeall) | 调用与当前关联的每个事件处理程序`EventSource`对象使用指定的参数类型和自变量。                                      |
-| [EventSource::Remove](#remove)       | 删除指定的事件注册标记与当前相关联的事件处理程序集中所表示的事件处理程序`EventSource`对象。 |
+| [EventSource::Add](#add)             | 将指定委托接口表示的事件处理程序追加到当前 `EventSource` 对象的事件处理程序集。                     |
+| [EventSource::GetSize](#getsize)     | 检索与当前 `EventSource` 对象关联的事件处理程序的数目。                                                                         |
+| [EventSource::InvokeAll](#invokeall) | 使用指定的参数类型和参数，调用与当前 `EventSource` 对象关联的每个事件处理程序。                                      |
+| [EventSource::Remove](#remove)       | 从与当前 `EventSource` 对象关联的事件处理程序集中删除由指定的事件注册令牌表示的事件处理程序。 |
 
 ### <a name="protected-data-members"></a>受保护的数据成员
 
-| name                                                    | 描述                                                                                                                       |
+| Name                                                    | 描述                                                                                                                       |
 | ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| [EventSource::addRemoveLock_](#addremovelock)           | 同步对的访问[targets_](#targets)数组时添加、 删除或调用事件处理程序。                          |
+| [EventSource::addRemoveLock_](#addremovelock)           | 添加、删除或调用事件处理程序时，同步对[targets_](#targets)数组的访问。                          |
 | [EventSource::targets_](#targets)                       | 包含一个或多个事件处理程序的数组。                                                                                           |
 | [EventSource::targetsPointerLock_](#targetspointerlock) | 同步对内部数据成员的访问，即使在添加、删除或调用此 EventSource 的事件处理程序时也是如此。 |
 
-## <a name="inheritance-hierarchy"></a>继承层次结构
+## <a name="inheritance-hierarchy"></a>繼承階層
 
 `EventSource`
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>需求
 
-**标头：** event.h
+**标头：** 事件。h
 
-**命名空间：** Microsoft:: wrl
+**命名空间：** Microsoft::WRL
 
 ## <a name="add"></a>EventSource::Add
 
-将追加到当前的事件处理程序集由指定的委托接口表示的事件处理程序`EventSource`对象。
+将指定委托接口表示的事件处理程序追加到当前 `EventSource` 对象的事件处理程序集。
 
 ```cpp
 HRESULT Add(
@@ -95,10 +95,10 @@ HRESULT Add(
 ### <a name="parameters"></a>参数
 
 *delegateInterface*<br/>
-为委托对象，表示事件处理程序的接口。
+委托对象的接口，它表示事件处理程序。
 
 *token*<br/>
-此操作完成后，表示该事件的句柄。 使用此令牌作为参数[Remove()](#remove)方法，丢弃的事件处理程序。
+此操作完成后，表示事件的句柄。 使用此标记作为[Remove （）](#remove)方法的参数以放弃事件处理程序。
 
 ### <a name="return-value"></a>返回值
 
@@ -106,7 +106,7 @@ HRESULT Add(
 
 ## <a name="addremovelock"></a>EventSource::addRemoveLock_
 
-同步对的访问[targets_](#targets)数组时添加、 删除或调用事件处理程序。
+添加、删除或调用事件处理程序时，同步对[targets_](#targets)数组的访问。
 
 ```cpp
 Wrappers::SRWLock addRemoveLock_;
@@ -122,7 +122,7 @@ EventSource();
 
 ## <a name="getsize"></a>EventSource::GetSize
 
-检索与当前相关联的事件处理程序数`EventSource`对象。
+检索与当前 `EventSource` 对象关联的事件处理程序的数目。
 
 ```cpp
 size_t GetSize() const;
@@ -130,11 +130,11 @@ size_t GetSize() const;
 
 ### <a name="return-value"></a>返回值
 
-中的事件处理程序数量[targets_](#targets)。
+[Targets_](#targets)中事件处理程序的数目。
 
 ## <a name="invokeall"></a>EventSource::InvokeAll
 
-调用与当前关联的每个事件处理程序`EventSource`对象使用指定的参数类型和自变量。
+使用指定的参数类型和参数，调用与当前 `EventSource` 对象关联的每个事件处理程序。
 
 ```cpp
 void InvokeAll();
@@ -354,7 +354,7 @@ T2<br/>
 
 ## <a name="remove"></a>EventSource::Remove
 
-删除指定的事件注册标记与当前相关联的事件处理程序集中所表示的事件处理程序`EventSource`对象。
+从与当前 `EventSource` 对象关联的事件处理程序集中删除由指定的事件注册令牌表示的事件处理程序。
 
 ```cpp
 HRESULT Remove(
@@ -365,7 +365,7 @@ HRESULT Remove(
 ### <a name="parameters"></a>参数
 
 *token*<br/>
-一个表示事件处理程序的句柄。 此令牌已由注册事件处理程序时返回[add （)](#add)方法。
+表示事件处理程序的句柄。 当使用[Add （）](#add)方法注册事件处理程序时，将返回此标记。
 
 ### <a name="return-value"></a>返回值
 
@@ -373,7 +373,7 @@ HRESULT Remove(
 
 ### <a name="remarks"></a>备注
 
-有关详细信息`EventRegistrationToken`结构，请参阅**Windows::Foundation::EventRegistrationToken 结构**中的主题**Windows 运行时**参考文档。
+有关 `EventRegistrationToken` 结构的详细信息，请参阅**Windows 运行时**参考文档中的**Windows：： Foundation：： EventRegistrationToken 结构**主题。
 
 ## <a name="targets"></a>EventSource::targets_
 
@@ -385,11 +385,11 @@ ComPtr<Details::EventTargetArray> targets_;
 
 ### <a name="remarks"></a>备注
 
-当表示由当前事件`EventSource`对象发生，则调用事件处理程序。
+当发生由当前 `EventSource` 对象表示的事件时，将调用事件处理程序。
 
 ## <a name="targetspointerlock"></a>EventSource::targetsPointerLock_
 
-此同步对内部数据成员，即使是事件处理程序的访问`EventSource`添加、 删除或被调用。
+同步对内部数据成员的访问，即使在添加、删除或调用此 `EventSource` 的事件处理程序时也是如此。
 
 ```cpp
 Wrappers::SRWLock targetsPointerLock_;

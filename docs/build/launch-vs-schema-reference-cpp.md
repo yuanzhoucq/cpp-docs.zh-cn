@@ -3,16 +3,16 @@ title: 启动. 与 json 架构引用（C++）
 ms.date: 08/20/2019
 helpviewer_keywords:
 - launch.vs.json file [C++]
-ms.openlocfilehash: 49b4f4e6c4359837e820684c29b0e102a08c3fd5
-ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
+ms.openlocfilehash: 5d8f657dda58d581ccc3441a777fdf31470ef25f
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556638"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518226"
 ---
 # <a name="launchvsjson-schema-reference-c"></a>启动. 与 json 架构引用（C++）
 
-使用*启动. vs json*文件配置调试参数。 来创建文件。 右键单击 "**解决方案资源管理器**中的可执行文件，然后选择"**调试和启动设置**"。 选择与项目最匹配的选项，然后根据需要使用以下属性修改配置：
+使用*启动. vs json*文件配置调试参数。 来创建文件。 右键单击 "**解决方案资源管理器**中的可执行文件，然后选择"**调试和启动设置**"。 选择与你的项目最匹配的选项，然后使用以下属性根据需要修改配置。 有关调试 CMake 项目的详细信息，请参阅[Configure CMake 调试会话](/cpp/build/configure-cmake-debugging-sessions)。
 
 ## <a name="default-properties"></a>默认属性
 

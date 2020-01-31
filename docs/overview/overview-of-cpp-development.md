@@ -15,7 +15,7 @@ ms.locfileid: "74810620"
 ---
 # <a name="overview-of-c-development-in-visual-studio"></a>Visual Studio 中的 C++ 开发概述
 
-作为 Visual Studio 集成开发环境 (IDE) 的一部分，Microsoft C++ (MSVC) 共享许多与其他语言相同的窗口和工具。 其中许多窗口和工具（包括“解决方案资源管理器”、“代码编辑器”和“调试器”）都记录在 [Visual Studio IDE](/visualstudio/get-started/visual-studio-ide) 下  。 通常情况下，相比为其他语言提供的功能集，共享的工具或窗口为 C++ 提供的功能集略有不同。 一些窗口或工具仅在 Visual StudioProfessional 或 Visual Studio Enterprise 版本中可用。
+作为 Visual Studio 集成开发环境 (IDE) 的一部分，Microsoft C++ (MSVC) 共享许多与其他语言相同的窗口和工具。 其中许多窗口和工具（包括“解决方案资源管理器”、“代码编辑器”和“调试器”）都记录在 [Visual Studio IDE](/visualstudio/get-started/visual-studio-ide) 下  。 通常情况下，相比为其他语言提供的功能集，共享的工具或窗口为 C++ 提供的功能集略有不同。 一些窗口或工具仅在 Visual Studio Professional 或 Visual Studio Enterprise 版本中可用。
 
 除了 Visual Studio IDE 中的共享工具之外，MSVC 还有几种专门用于本机代码开发的工具。 这些工具也会在本文中列出。 有关每个版本的 Visual Studio 可用的工具列表，请参阅 [Visual Studio 版本中的 C++ 工具和功能](visual-cpp-tools-and-features-in-visual-studio-editions.md)。
 

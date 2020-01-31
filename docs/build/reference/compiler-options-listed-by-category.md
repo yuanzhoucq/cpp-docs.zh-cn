@@ -1,15 +1,15 @@
 ---
 title: 按类别列出的编译器选项
-ms.date: 08/08/2019
+ms.date: 01/08/2020
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 8c99b2dd60e6c2266d5095a477ee4a5b2e0c8bd0
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: 0734cdc6fb7d8b543c6415bfd6b4f98469703586
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685196"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518408"
 ---
 # <a name="compiler-options-listed-by-category"></a>按类别列出的编译器选项
 
@@ -17,7 +17,7 @@ ms.locfileid: "71685196"
 
 ## <a name="optimization"></a>优化
 
-|选项|用途|
+|选项|目标|
 |------------|-------------|
 |[/O1](o1-o2-minimize-size-maximize-speed.md)|创建小代码。|
 |[/O2](o1-o2-minimize-size-maximize-speed.md)|创建快速代码。|
@@ -33,7 +33,7 @@ ms.locfileid: "71685196"
 
 ## <a name="code-generation"></a>代码生成
 
-|选项|用途|
+|选项|目标|
 |------------|-------------|
 |[/arch](arch-x86.md)|使用 SSE 或 SSE2 指令生成代码。 (仅限 x86)|
 |[/clr](clr-common-language-runtime-compilation.md)|生成要在公共语言运行时上运行的输出文件。|
@@ -64,6 +64,7 @@ ms.locfileid: "71685196"
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|生成快速先验。|
 |[/QIfist](qifist-suppress-ftol.md)|已否决。 当需要从浮点型转换为整型时，取消调用 Helper 函数 `_ftol` 。 (仅限 x86)|
 |[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|移除 `fwait` 块中的 `try` 命令。|
+|[/QIntel-jcc-erratum](qintel-jcc-erratum.md)|缓解 Intel JCC 错误微代码更新对性能的影响。|
 |[/Qpar](qpar-auto-parallelizer.md)|启用循环的自动并行化。|
 |[/Qpar-report](qpar-report-auto-parallelizer-reporting-level.md)|启用自动并行化的报告级别。|
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|将整数移动指令用于浮点值，并禁用特定浮点加载优化。|
@@ -74,7 +75,7 @@ ms.locfileid: "71685196"
 
 ## <a name="output-files"></a>输出文件
 
-|选项|用途|
+|选项|目标|
 |------------|-------------|
 |[/doc](doc-process-documentation-comments-c-cpp.md)|将文档注释处理到一个 XML 文件中。|
 |[/FA](fa-fa-listing-file.md)|配置程序集列表文件。|
@@ -89,7 +90,7 @@ ms.locfileid: "71685196"
 
 ## <a name="preprocessor"></a>预处理器
 
-|选项|用途|
+|选项|目标|
 |------------|-------------|
 |[/AI](ai-specify-metadata-directories.md)|指定在解析传递到 [#using](../../preprocessor/hash-using-directive-cpp.md) 指令的文件引用时搜索的目录。|
 |[/C](c-preserve-comments-during-preprocessing.md)|在预处理期间保留注释。|
@@ -105,9 +106,9 @@ ms.locfileid: "71685196"
 |[/u](u-u-undefine-symbols.md)|移除所有的预定义宏。|
 |[/X](x-ignore-standard-include-paths.md)|忽略标准包含目录。|
 
-## <a name="language"></a>语言
+## <a name="language"></a>Language
 
-|选项|用途|
+|选项|目标|
 |------------|-------------|
 |[/constexpr](constexpr-control-constexpr-evaluation.md)|在编译时控制 constexpr 计算。|
 |[/openmp](openmp-enable-openmp-2-0-support.md)|在源代码中启用 [#pragma omp](../../preprocessor/omp.md) 。|
@@ -132,7 +133,7 @@ ms.locfileid: "71685196"
 
 ## <a name="linking"></a>链接
 
-|选项|用途|
+|选项|目标|
 |------------|-------------|
 |[/F](f-set-stack-size.md)|设置堆栈大小。|
 |[/LD](md-mt-ld-use-run-time-library.md)|创建动态链接库。|
@@ -146,7 +147,7 @@ ms.locfileid: "71685196"
 
 ## <a name="miscellaneous"></a>其他
 
-|选项|用途|
+|选项|目标|
 |------------|-------------|
 |[/?](help-compiler-command-line-help.md)|列出编译器选项。|
 |[@](at-specify-a-compiler-response-file.md)|指定响应文件。|
@@ -172,7 +173,7 @@ ms.locfileid: "71685196"
 |[/TP](tc-tp-tc-tp-specify-source-file-type.md)|指定所有源文件C++。|
 |[/V](v-version-number.md)|已否决。 设置版本字符串。|
 |[/w](compiler-option-warning-level.md)|禁用所有警告。|
-|[/W0, /W1, /W2, /W3, /W4](compiler-option-warning-level.md)|设置输出警告级别。|
+|[/W0、/W1、/W2、/W3、/W4](compiler-option-warning-level.md)|设置输出警告级别。|
 |[/W1、/W2、/W3、/W4](compiler-option-warning-level.md)|针对指定的警告设置警告级别。|
 |[/Wall](compiler-option-warning-level.md)|启用所有警告，包括默认情况下禁用的警告。|
 |[/wd](compiler-option-warning-level.md)|禁用指定的警告。|
@@ -200,14 +201,14 @@ ms.locfileid: "71685196"
 
 实验性选项只能由某些版本的编译器支持，并可能在不同的编译器版本中具有不同的行为。 对于试验性选项，通常是最好的文档，如[ C++ Microsoft 团队博客](https://devblogs.microsoft.com/cppblog/)。
 
-|选项|用途|
+|选项|目标|
 |------------|-------------|
 |[/experimental:module](experimental-module.md)|启用实验性模块支持。|
 |[/experimental：预处理器](experimental-preprocessor.md)|启用实验相容预处理器支持。|
 
 ## <a name="deprecated-and-removed-compiler-options"></a>弃用并删除的编译器选项
 
-|选项|用途|
+|选项|目标|
 |------------|-------------|
 |[/clr:noAssembly](clr-common-language-runtime-compilation.md)|已否决。 请改用 [/LN (Create MSIL Module)](ln-create-msil-module.md) 。|
 |[/Fr](fr-fr-create-dot-sbr-file.md)|已否决。 创建无局部变量的浏览信息文件。|
@@ -225,7 +226,7 @@ ms.locfileid: "71685196"
 |[/Ze](za-ze-disable-language-extensions.md)|已否决。 启用语言扩展。|
 |[/Zg](zg-generate-function-prototypes.md)|在 Visual Studio 2015 中移除。 生成函数原型。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [C/C++ 生成参考](c-cpp-building-reference.md)<br/>
 [MSVC 编译器选项](compiler-options.md)<br/>

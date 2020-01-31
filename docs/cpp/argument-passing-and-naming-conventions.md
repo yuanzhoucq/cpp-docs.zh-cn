@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: de468979-eab8-4158-90c5-c198932f93b9
 ms.openlocfilehash: 1928f8e479b0533c5a8b2e60de7af9eff93f7eed
 ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2019
 ms.locfileid: "65222264"
@@ -24,7 +24,7 @@ ms.locfileid: "65222264"
 
 **Microsoft 专用**
 
-MicrosoftC++编译器，你可以指定传递自变量的约定和返回值的函数和调用方。 并非所有约定都在所有支持的平台上可用，某些约定使用平台特定的实现。 在大多数情况下，将忽略在特定平台上指定不支持的约定的关键字或编译器开关，并将使用平台默认约定。
+Microsoft C++编译器，你可以指定传递自变量的约定和返回值的函数和调用方。 并非所有约定都在所有支持的平台上可用，某些约定使用平台特定的实现。 在大多数情况下，将忽略在特定平台上指定不支持的约定的关键字或编译器开关，并将使用平台默认约定。
 
 在 x86 平台上，所有自变量在传递时都将加宽到 32 位。 返回值也将加宽到 32 位，并将通过 EAX 寄存器返回，但在 EDX:EAX 寄存器对中返回的 8 字节结构除外。 更大的结构将在 EAX 寄存器中作为指向隐藏返回结构的指针返回。 参数将从右到左推送到堆栈中。 不是 POD 的结构不会在寄存器中返回。
 
@@ -45,7 +45,7 @@ Visual C/C++ 编译器支持下列调用约定。
 |[__clrcall](../cpp/clrcall.md)|n/a|按顺序将参数加载到 CLR 表达式堆栈上（从左到右）。|
 |[__stdcall](../cpp/stdcall.md)|被调用方|在堆栈上按相反顺序推送参数（从右到左）|
 |[__fastcall](../cpp/fastcall.md)|被调用方|存储在寄存器中，然后在堆栈上推送|
-|[__thiscall](../cpp/thiscall.md)|被调用方|推入堆栈;**这**指针存储在 ECX 中|
+|[__thiscall](../cpp/thiscall.md)|被调用方|推入堆栈;**this**指针存储在 ECX 中|
 |[__vectorcall](../cpp/vectorcall.md)|被调用方|存储在寄存器中，然后按相反顺序在堆栈上推送（从右到左）|
 
 有关相关信息，请参阅[过时的调用约定](../cpp/obsolete-calling-conventions.md)。
