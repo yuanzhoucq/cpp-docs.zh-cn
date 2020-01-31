@@ -4,12 +4,12 @@ ms.date: 10/21/2019
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: 6d994ca3af1386d9c2f94dbf6b9f972ee139613f
-ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.openlocfilehash: b7a18354257333bb71fff6aedb3cf623c47c2d5c
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778532"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821800"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 更改历史记录（2003 - 2015）
 
@@ -44,7 +44,7 @@ ms.locfileid: "72778532"
 
 - 重构的二进制文件
 
-   CRT 库已经重构为两个不同的二进制文件：包含大多数标准功能的通用 CRT (ucrtbase) 和 VC 运行时库 (vcruntime)。 Vcruntime 库包含与编译器相关的功能，例如异常处理和内部函数。 如果你使用的是默认项目设置，则此更改不会对你产生影响，因为链接器将自动使用新的默认库。 如果将项目的“链接器”属性“忽略所有默认库”设置为“是”，或使用的是命令行上的 `/NODEFAULTLIB` 链接器选项，则必须更新库的列表（位于“附加依赖项”属性）以包括新的重构库。 将旧的 CRT 库（libcmt.lib、libcmtd.lib、msvcrt.lib、msvcrtd.lib）替换为等效的重构库。 对于两个中的每个重构库，都存在静态 (.lib) 和动态 (.dll) 版本，发行（无后缀）和调试版本（使用“d”后缀）。 动态版本具有与之链接的导入库。 两个重构库为通用 CRT（特别是 ucrtbase.dll 或 ucrtbase.lib、ucrtbased.dll 或 ucrtbased.lib）和 VC 运行时库（libvcruntime.lib、vcruntimeversion.dll、libvcruntimed.lib 和 vcruntimedversion.dll）。 *version* 在 Visual Studio 2015 和 Visual Studio 2017 中均为 140。 请参阅 [CRT 库的功能](../c-runtime-library/crt-library-features.md)。
+   CRT 库已经重构为两个不同的二进制文件：包含大多数标准功能的通用 CRT (ucrtbase) 和 VC 运行时库 (vcruntime)。 Vcruntime 库包含与编译器相关的功能，例如异常处理和内部函数。 如果你使用的是默认项目设置，则此更改不会对你产生影响，因为链接器将自动使用新的默认库。 如果将项目的“链接器”属性“忽略所有默认库”设置为“是”，或使用的是命令行上的 `/NODEFAULTLIB` 链接器选项，则必须更新库的列表（位于“附加依赖项”属性）以包括新的重构库。 将旧的 CRT 库（libcmt.lib、libcmtd.lib、msvcrt.lib、msvcrtd.lib）替换为等效的重构库。 对于两个中的每个重构库，都存在静态 (.lib) 和动态 (.dll) 版本，发行（无后缀）和调试版本（使用“d”后缀）。 动态版本具有与之链接的导入库。 两个重构库为通用 CRT（特别是 ucrtbase.dll 或 ucrtbase.lib、ucrtbased.dll 或 ucrtbased.lib）和 VC 运行时库（libvcruntime.lib、vcruntimeversion.dll、libvcruntimed.lib 和 vcruntimedversion.dll）。 *version* 在 Visual Studio 2015 和 Visual Studio 2017 中均为 140。 请参阅 [CRT Library Features](../c-runtime-library/crt-library-features.md)。
 
 #### <a name="localeh"></a>\<locale.h>
 
@@ -106,7 +106,7 @@ ms.locfileid: "72778532"
 
    编译 C++ 代码时，[va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) 现在会在编译时验证传递给它的参数是否为引用类型。 C++ 标准禁止引用类型的参数。
 
-#### <a name="stdio_and_conio"></a>\<stdio .h > 和 \<conio >
+#### <a name="stdio_and_conio"></a>\<stdio.h > 和 \<conio.h> >
 
 - **Printf 和 scanf 系列函数现在采用内联方式进行定义。**
 
@@ -235,7 +235,7 @@ ms.locfileid: "72778532"
 
 - 文件封装
 
-   在早期版本中，在 \<stdio.h> 中公开定义完整的文件类型，因此用户代码可以访问 FILE 并修改其内部结构。 该库已更改为隐藏实现细节。 作为此更改的一部分，\<stdio.h> 中所定义的 FILE 现在是不透明类型且无法从 CRT 自身的外部访问其成员。
+   在以前的版本中，完整的文件类型是在 \<stdio.h > 中公开定义的，因此用户代码可以访问文件并修改其内部。 该库已更改为隐藏实现细节。 作为此更改的一部分，\<stdio.h> 中所定义的 FILE 现在是不透明类型且无法从 CRT 自身的外部访问其成员。
 
 - _outp 和 _inp
 
@@ -652,7 +652,7 @@ ms.locfileid: "72778532"
     void operator delete(void*, std::size_t) noexcept;
     ```
 
-   由于定义的 placement delete 运算符和新的全局调整大小的 delete 运算符之间的函数签名匹配，因此就会出现问题。 考虑是否可使用任何 placement new 和 placement delete 运算符的其他类型（`size_t` 除外）。 `size_t` typedef 的类型取决于编译器；在 MSVC 中，它是一个无符号整型的 typedef。 较好的解决办法就是使用如下的枚举类型：
+   由于定义的 placement delete 运算符和新的全局调整大小的 delete 运算符之间的函数签名匹配，因此就会出现问题。 考虑是否可使用任何 placement new 和 placement delete 运算符的其他类型（`size_t` 除外）。 `size_t` **typedef**的类型取决于编译器;它是 MSVC 中**无符号 int**的**typedef** 。 较好的解决办法就是使用如下的枚举类型：
 
     ```cpp
     enum class my_type : size_t {};
@@ -2009,7 +2009,7 @@ ms.locfileid: "72778532"
 
    在其文档中提供了其他还原警告的示例。
 
-- #include：在路径名中使用父目录说明符“..”（只影响 `/Wall` `/WX`）
+- **#include：在路径名中使用父目录说明符 ".."** （仅影响 `/Wall` `/WX`）
 
    早期版本的编译器没有检测到使用父目录说明符“..” （在 `#include` 指令的路径名中）。 以这种方式编写的代码通常用于包含因不正确使用项目相对路径而留在项目外的标头。 这一旧行为会引发风险，导致编译程序时包含了程序员不需要的源文件来，或这些相对路径不能移植到其他生成环境中。 编译器现在会检测以这种方式编写的代码并通知程序员，并发出可选编译器警告 C4464（如果已启用）。
 
@@ -2031,7 +2031,7 @@ ms.locfileid: "72778532"
 
    此外，虽然编译器并不会进行具体诊断，但建议不应将父目录说明符“..”用于指定项目的包含目录。
 
-- #pragma optimize() 超出标头文件的末尾（只影响 `/Wall` `/WX`）
+- **#pragma optimize （）扩展了标头文件的过去结尾**（仅影响 `/Wall` `/WX`）
 
    早期版本的编译器无法检测到对转义翻译单元中包含的标头文件的优化标志设置的更改。 编译器现在会检测以这种方式编写的代码并通知程序员，并在有问题的 `#include`的位置发出可选编译器警告 C4426（如果已启用）。 只有更改与编译器命令行参数设置的优化标志发生冲突时，才发出此警告。
 
@@ -2064,7 +2064,7 @@ ms.locfileid: "72778532"
     #include "C4426.h"
     ```
 
-- #pragma warning(push) 和 #pragma warning(pop)（只影响 `/Wall` `/WX`）
+- 不**匹配 #pragma 警告（push）** 和 **#pragma 警告（pop）** （仅影响 `/Wall` `/WX`）
 
    早期版本的编译器无法检测到不同源文件中与 `#pragma warning(pop)` 状态更改配对的 `#pragma warning(push)` 状态更改，这并不是我们所预期的。 这种旧行为会引发风险，导致程序编译时会启用一组程序员不希望出现的警告，可能会导致无提示的运行时行为错误。 编译器现在能够检测以这种方式编写的代码并通知程序员，并在匹配 `#pragma warning(pop)` 位置发出可选编译器警告 C5031（如果已启用）。 此警告包括引用相应 #pragma warning(push) 的位置的注释。
 
@@ -2120,7 +2120,7 @@ ms.locfileid: "72778532"
 
    虽然不常见，但是有时会故意以这种方式编写代码。 以这种方式编写的代码对于 `#include` 顺序的更改比较敏感；如果可能，我们建议源代码文件以自包含的方式管理警告状态。
 
-- #pragma warning(push) 不匹配（只影响 `/Wall` `/WX`）
+- 不**匹配 #pragma 警告（push）** （仅影响 `/Wall` `/WX`）
 
    早期版本的编译器无法检测到翻译单元末尾出现的不匹配 `#pragma warning(push)` 状态更改。 而现在，编译器可检测按此方式编写的代码并通知程序员，还可在 `#pragma warning(push)` 不匹配的位置发出编译器警告 C5032（如已启用）。 只有翻译单元中没有任何编译错误时，才会发出此警告。
 
@@ -2292,7 +2292,7 @@ ms.locfileid: "72778532"
     };
     ```
 
-- `volatile` **成员变量将防止出现隐式定义的构造函数和赋值运算符**
+- `volatile`**成员变量会阻止隐式定义的构造函数和赋值运算符**
 
    编译器的早期版本允许具有可变成员变量的类自动生成默认复制/移动构造函数和默认复制/移动赋值运算符。 这种旧行为不正确，也不符合 C++ 标准。 编译器现在认为拥有可变成员变量的类具有非常用构造函数和赋值运算符，这将防止自动生成这些运算符的默认实现。 当此类为某一联合（或类中的匿名联合）的成员时，会将联合（或包含匿名联合的类）的复制/移动构造函数和复制/移动赋值运算符的隐式定义为已删除。 尝试构造或复制联合（或包含匿名联合的类）而不显式定义它们是错误的，将导致编译器发出编译器错误 C2280。
 
@@ -2636,7 +2636,7 @@ ms.locfileid: "72778532"
     };
     ```
 
-- **预编译标头 (PCH) 文件和不匹配的 #include 指令**（仅影响 `/Wall` `/WX`）
+- **预编译标头（PCH）文件和不匹配的 #include 指令**（仅影响 `/Wall` `/WX`）
 
    使用预编译标头 (PCH) 文件时，以前版本的编译器接受 `-Yc` 和 `-Yu` 编译之间的源文件中不匹配的 `#include` 指令。 编译器不再接受以这种方式编写的代码。   使用 PCH 文件时，编译器现将发出编译器警告 CC4598 以帮助识别不匹配的 `#include` 指令。
 
@@ -2680,7 +2680,7 @@ ms.locfileid: "72778532"
     #include "c.h"
     ```
 
-- **预编译标头 (PCH) 文件和不匹配的包含目录**（仅影响 `/Wall` `/WX`）
+- **预编译标头（PCH）文件和不匹配的包含目录**（仅影响 `/Wall` `/WX`）
 
    使用预编译标头 (PCH) 文件时，对于 `-Yc` 和 `-Yu` 编译之间的编译器，以前版本的编译器接受不匹配的包含目录 (`-I`) 命令行参数。 编译器不再接受以这种方式编写的代码。 使用 PCH 文件时，编译器现将发出编译器警告 CC4599 以帮助识别不匹配的包含目录 (`-I`) 命令行参数。
 
@@ -2883,7 +2883,7 @@ ms.locfileid: "72778532"
     };
     ```
 
-   若要在代码中查找早期版本将会优化的位置，请将该版本的编译器与 `/W3` 编译器选项一起使用，并打开警告 4370。 例如:
+   若要在代码中查找早期版本将会优化的位置，请将该版本的编译器与 `/W3` 编译器选项一起使用，并打开警告 4370。 例如：
 
     ```cpp
     #pragma warning(default:4370)
@@ -3042,11 +3042,11 @@ Visual Studio 2013 中的 C++ 编译器可以检测到 _ITERATOR_DEBUG_LEVEL 中
 
 - 根据 C++98/03 和 C++11 标准之间的重大更改，在 Visual Studio 2012 的 Visual C++ 中，使用显式模板参数调用 `make_pair()`（正如在 `make_pair<int, int>(x, y)` 中那样）通常不编译。 相关解决方案是始终调用没有显式模板参数的 `make_pair() `，正如在 `make_pair(x, y)` 中那样。 提供显式模板参数会破坏函数的作用。 如果需要精确控制结果类型，请使用 `pair` 而不是 `make_pair` - 正如在 `pair<short, short>(int1, int2)` 中那样。
 
-- C + + 98/03 和 c + + 11 标准之间的另一重大更改：当可隐式转换为 B，而 B 隐式转换为 C 时，不能隐式转换为 C、c + + 98/03 和 Visual Studio 2010 `pair<A, X>` 可转换（隐式或显式）到 `pair<C, X>`。 （此处的另一种类型为 X，并不特定于对中的第一个类型。）Visual C++ Studio 2012 中的编译器检测到不能隐式转换为 C，并从重载解析中删除对的转换。 此更改对许多方案来说是有益的。 例如，重载 `func(const pair<int, int>&)` 和 `func(const pair<string, string>&)`，并使用 `pair<const char *, const char *>` 调用 `func()`，将使用此更改进行编译。 但是，此更改会中断依赖主动对转换的代码。 通常可以通过显式执行部分转换来修复这些代码，例如，将 `make_pair(static_cast<B>(a), x)` 传递给需要 `pair<C, X>` 的函数。
+- C + + 98/03 和 c + + 11 标准之间的另一重大更改：当可隐式转换为 B 且 B 可隐式转换为 C 时，但不能隐式转换为 C，c + + 98/03 和 Visual Studio 2010 允许 `pair<A, X>` 转换为 `pair<C, X>`。 （此处的另一种类型为 X，并不特定于对中的第一个类型。）Visual C++ Studio 2012 中的编译器检测到不能隐式转换为 C，并从重载解析中删除对的转换。 此更改对许多方案来说是有益的。 例如，重载 `func(const pair<int, int>&)` 和 `func(const pair<string, string>&)`，并使用 `pair<const char *, const char *>` 调用 `func()`，将使用此更改进行编译。 但是，此更改会中断依赖主动对转换的代码。 通常可以通过显式执行部分转换来修复这些代码，例如，将 `make_pair(static_cast<B>(a), x)` 传递给需要 `pair<C, X>` 的函数。
 
 - Visual Studio 2010 模拟可变参数模板（如 `make_shared<T>(arg1, arg2, argN)`）通过使用预处理器机制杜绝重载和专用化，将参数个数限制为最多 10 个。 在 Visual Studio 2012 中，此限制减少到 5 个参数，以减少大多数用户的编译时间和编译器内存消耗。 但是，可以通过在项目范围内将 _VARIADIC_MAX 显式定义为 10 来设置之前的限制。
 
-- C++11 17.6.4.3.1 [macro.names]/2 禁止在包含 C++ 标准库标头时对关键字进行宏替换。 如果检测到宏替换关键字，标头现将发出编译器错误。 （定义 _ALLOW_KEYWORD_MACROS 允许编译此类代码，但我们强烈反对这种用法。）默认情况下，默认情况下允许使用 `new` 宏形式，因为标头通过使用 `#pragma push_macro("new")` / `#undef new` / `#pragma pop_macro("new")` 来全面保护自己。 定义 _ENFORCE_BAN_OF_MACRO_NEW 所执行的操作正如其名称所示。
+- C++11 17.6.4.3.1 [macro.names]/2 禁止在包含 C++ 标准库标头时对关键字进行宏替换。 如果检测到宏替换关键字，标头现将发出编译器错误。 （定义 _ALLOW_KEYWORD_MACROS 允许编译此类代码，但我们强烈反对这种用法。）默认情况下，默认情况下允许使用 `new` 宏形式，因为标头通过使用 `#pragma push_macro("new")`/`#undef new`/`#pragma pop_macro("new")`来全面保护自己。 定义 _ENFORCE_BAN_OF_MACRO_NEW 所执行的操作正如其名称所示。
 
 - 为了实现各种优化和调试检查，C++ 标准库实现特意中断了 Visual Studio 各版本（2005、2008、2010、2012）中的二进制文件兼容性。 如果使用 C++ 标准库，则使用不同版本编译的对象文件和静态库无法混合在同一个二进制文件（EXE 或 DLL）中，并且无法在使用不同版本编译的二进制文件之间传递 C++ 标准库对象。 对象文件和静态库的混合（使用由 Visual Studio 2010 编译的 C++ 标准库和由 Visual Studio 2012 中的 C++ 编译器编译的库）会发出有关 _MSC_VER 不匹配的链接器错误，其中 _MSC_VER 是包含编译器主版本（对于 Visual Studio 2012 中的 Visual C++ 为 1700）的宏。 此检查无法检测 DLL 混合，也无法检测涉及 Visual Studio 2008 或早期版本的混合。
 
@@ -3244,7 +3244,7 @@ Visual Studio 2013 中的 C++ 编译器可以检测到 _ITERATOR_DEBUG_LEVEL 中
 
 - 如果使用 `/GL`（全程序优化）和 `/clr`（公共语言运行时编译）编译器选项进行编译，则将忽略 `/GL` 选项。 进行此更改是因为组合编译器选项的作用微乎其微。 得益于此更改，生成的性能得到改进。
 
-- 默认情况下，Visual Studio 2010 中禁用对三元祖的支持。 使用 `/Zc:trigraphs` 编译器选项实现三元祖支持。 三元祖由两个连续的问号（“??”）后跟一个唯一的第三个字符组成。 编译器将三元祖替换为相应的标点字符。 例如，编译器会将三元祖 `??=` 替换为字符“#”。 可以在使用字符集的 C 源文件中使用三元祖，该字符集不包含一些标点字符的方便图形表示。
+- 默认情况下，Visual Studio 2010 中禁用对三元祖的支持。 使用 `/Zc:trigraphs` 编译器选项实现三字符组支持。 三元祖由两个连续的问号（“??”）后跟一个唯一的第三个字符组成。 编译器将三元祖替换为相应的标点字符。 例如，编译器会将三元祖 `??=` 替换为字符“#”。 可以在使用字符集的 C 源文件中使用三元祖，该字符集不包含一些标点字符的方便图形表示。
 
 - 链接器不再支持针对 Windows 98 的优化。 如果指定 `/OPT:WIN98` 或 `/OPT:NOWIN98`，则 `/OPT`（优化）选项将生成编译时错误。
 
@@ -3302,7 +3302,7 @@ Visual Studio 2013 中的 C++ 编译器可以检测到 _ITERATOR_DEBUG_LEVEL 中
 
 - 不再支持环境变量 __MSVCRT_HEAP_SELECT。 删除此环境变量且无替代项。
 
-### <a name="microsoft-macro-assembler-reference"></a>Microsoft 宏汇编程序参考
+### <a name="microsoft-macro-assembler-reference"></a>Microsoft Macro Assembler 参考
 
 - 从 Microsoft 宏汇编程序参考编译器删除多个指令。 删除的指令是 `.186`、`.286`、`.286P`、`.287`、`.8086`、`.8087` 和 `.NO87`。
 
@@ -3522,6 +3522,6 @@ Visual Studio 2013 中的 C++ 编译器可以检测到 _ITERATOR_DEBUG_LEVEL 中
 
 - 现在，编译器会报告无法访问的代码 (C4702)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Visual Studio 中 Visual C++ 的新增功能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)

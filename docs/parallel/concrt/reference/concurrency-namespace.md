@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-ms.openlocfilehash: aa2fe7dedd1c7e1a8b5a72e01508b4201bd72a7d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5449362454c5899e544ed370f13d28471a59bd13
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160062"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821839"
 ---
 # <a name="concurrency-namespace"></a>concurrency 命名空间
 
-`Concurrency` 命名空间提供可让你访问 C++ 的并发运行和并发编程框架的类和函数。 有关详细信息，请参阅[并发运行时](../../../parallel/concrt/concurrency-runtime.md)。
+`Concurrency` 命名空间提供可让你访问 C++ 的并发运行和并发编程框架的类和函数。 有关详细信息，请参阅 [Concurrency Runtime](../../../parallel/concrt/concurrency-runtime.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -37,11 +37,11 @@ ms.locfileid: "62160062"
 namespace concurrency;
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="typedefs"></a>Typedef
 
-|名称|描述|
+|Name|描述|
 |----------|-----------------|
 |`runtime_object_identity`|每个消息实例都后接一个标识，因为它已被克隆并在消息组件之间传递。 这不能是消息对象的地址。|
 |`task_status`|表示任务的终端状态的类型。 有效值为 `completed` 和 `canceled`。|
@@ -50,7 +50,7 @@ namespace concurrency;
 
 ### <a name="classes"></a>类
 
-|名称|描述|
+|Name|描述|
 |----------|-----------------|
 |[affinity_partitioner 类](affinity-partitioner-class.md)|`affinity_partitioner` 类与 `static_partitioner` 类相似，但它选择将子范围映射到工作线程，从而改善缓存关联。 在同一数据集中重新执行循环且数据适应缓存时，它可以显著提高性能。 请注意，必须与在特定数据集中执行的并行循环的后续迭代一起使用同一 `affinity_partitioner` 对象，才能受益于数据位置。|
 |[agent 类](agent-class.md)|旨在用作所有独立代理的基类的类。 用于对其他代理隐藏状态并通过消息传递进行交互。|
@@ -66,8 +66,8 @@ namespace concurrency;
 |[concurrent_queue 类](concurrent-queue-class.md)|`concurrent_queue` 类是允许对其元素进行先进先出访问的序列容器类。 它支持一组有限的并发安全操作，例如 `push` 和 `try_pop`。|
 |[concurrent_unordered_map 类](concurrent-unordered-map-class.md)|`concurrent_unordered_map` 类是控制 `std::pair<const K, _Element_type>` 类型元素的长短不一序列的并发安全容器。 序列以支持并发安全追加、元素访问、迭代器访问和迭代器遍历操作的方式表示。|
 |[concurrent_unordered_multimap 类](concurrent-unordered-multimap-class.md)|`concurrent_unordered_multimap` 类是控制 `std::pair<const K, _Element_type>` 类型元素的长短不一序列的并发安全容器。 序列以支持并发安全追加、元素访问、迭代器访问和迭代器遍历操作的方式表示。|
-|[concurrent_unordered_multiset 类](concurrent-unordered-multiset-class.md)|`concurrent_unordered_multiset`类是控制元素的类型 K.变长序列的并发安全容器序列表示方式支持并发安全追加、 元素访问、 迭代器访问和迭代器遍历操作。|
-|[concurrent_unordered_set 类](concurrent-unordered-set-class.md)|`concurrent_unordered_set`类是控制元素的类型 K.变长序列的并发安全容器序列表示方式支持并发安全追加、 元素访问、 迭代器访问和迭代器遍历操作。|
+|[concurrent_unordered_multiset 类](concurrent-unordered-multiset-class.md)|`concurrent_unordered_multiset` 类是一种并发安全容器，用于控制 K 类型的不同长度的元素序列。序列以启用并发安全追加、元素访问、迭代器访问和迭代器遍历操作的方式表示。|
+|[concurrent_unordered_set 类](concurrent-unordered-set-class.md)|`concurrent_unordered_set` 类是一种并发安全容器，用于控制 K 类型的不同长度的元素序列。序列以启用并发安全追加、元素访问、迭代器访问和迭代器遍历操作的方式表示。|
 |[concurrent_vector 类](concurrent-vector-class.md)|`concurrent_vector` 类是允许对任意元素进行随机访问的序列容器类。 它支持并发安全追加、元素访问、迭代器访问和迭代器遍历操作。|
 |[Context 类](context-class.md)|表示执行上下文的抽象。|
 |[context_self_unblock 类](context-self-unblock-class.md)|此类描述从同一上下文调用 `Context` 对象的 `Unblock` 方法时引发的异常。 这将指示给定上下文解除阻止自身的尝试。|
@@ -120,9 +120,9 @@ namespace concurrency;
 |[structured_task_group 类](structured-task-group-class.md)|`structured_task_group` 类表示并行工作的高度结构化集合。 可以使用 `task_handle` 对象将各个并行任务排队到 `structured_task_group` 并等待它们完成，或在它们完成执行之前取消任务组，这将中止尚未开始执行的所有任务。|
 |[target_block 类](target-block-class.md)|`target_block` 类是抽象基类，它提供基本链接管理功能和针对仅限于目标的块的错误检查。|
 |[task 类（并发运行时）](task-class.md)|并行模式库 (PPL) `task` 类。 `task` 对象，表示可异步执行的工作，以及可与并发运行时中的并行算法生成的其他任务一起执行的工作。 成功完成后，它将生成类型为 `_ResultType` 的结果。 类型为 `task<void>` 的任务不生成任何结果。 可独立于其他任务等待和取消的任务。 它也可通过使用 continuations(`then`)、join(`when_all`) 和 choice(`when_any`) 模式由其他任务构成。|
-|[task_canceled 类](task-canceled-class.md)|此类描述了 PPL 任务层为了强制取消当前任务而引发的异常。 它也会通过引发`get()`方法[任务](task-class.md)，为已取消的任务。|
+|[task_canceled 类](task-canceled-class.md)|此类描述了 PPL 任务层为了强制取消当前任务而引发的异常。 对于已取消的任务，它还由[任务](task-class.md)的 `get()` 方法引发。|
 |[task_completion_event 类](task-completion-event-class.md)|`task_completion_event` 类可让你延迟任务的执行，直到满足条件，或开始一项任务来响应外部事件。|
-|[task_continuation_context 类](task-continuation-context-class.md)|`task_continuation_context` 类可让你指定想要执行延续的位置。 最好仅使用此类从 UWP 应用。 对于非 Windows 运行时应用程序，任务延续的执行上下文是由运行时，并且不可配置。|
+|[task_continuation_context 类](task-continuation-context-class.md)|`task_continuation_context` 类可让你指定想要执行延续的位置。 仅在 UWP 应用中使用此类时才有用。 对于非 Windows 运行时应用，任务延续的执行上下文由运行时确定，并且不可配置。|
 |[task_group 类](task-group-class.md)|`task_group` 类表示可以等待或取消的并行工作的集合。|
 |[task_handle 类](task-handle-class.md)|`task_handle` 类表示单个并行工作项。 它封装执行一项工作所需的指令和数据。|
 |[task_options 类（并发运行时）](task-options-class-concurrency-runtime.md)|表示可用于创建任务的选项|
@@ -133,7 +133,7 @@ namespace concurrency;
 
 ### <a name="structures"></a>结构
 
-|名称|描述|
+|Name|描述|
 |----------|-----------------|
 |[DispatchState 结构](dispatchstate-structure.md)|`DispatchState` 结构用于将状态传输给 `IExecutionContext::Dispatch` 方法。 它描述了在 `IExecutionContext` 接口上调用 `Dispatch` 方法的情形。|
 |[IExecutionContext 结构](iexecutioncontext-structure.md)|可以在给定虚拟处理器上运行并可以协作切换上下文的执行上下文的接口。|
@@ -150,11 +150,11 @@ namespace concurrency;
 |[IUMSUnblockNotification 结构](iumsunblocknotification-structure.md)|表示来自资源管理器的通知，说明阻止并触发返回到计划程序的指定计划上下文的线程代理已解除阻止，并已准备好进行计划。 一旦重新计划该线程代理的关联执行上下文（从 `GetContext` 方法返回），此接口将变得无效。|
 |[IVirtualProcessorRoot 结构](ivirtualprocessorroot-structure.md)|线程代理可在其中执行的硬件线程的抽象。|
 |[scheduler_interface 结构](scheduler-interface-structure.md)|计划程序接口|
-|[scheduler_ptr 结构（并发运行时）](scheduler-ptr-structure-concurrency-runtime.md)|表示指向计划程序的指针。 此类存在是为了通过使用 shared_ptr 或无格式引用通过使用原始指针允许指定共享生存期。|
+|[scheduler_ptr 结构（并发运行时）](scheduler-ptr-structure-concurrency-runtime.md)|表示指向计划程序的指针。 此类可用于通过使用 shared_ptr 或仅通过使用原始指针来指定共享生存期。|
 
 ### <a name="enumerations"></a>枚举
 
-|名称|描述|
+|Name|描述|
 |----------|-----------------|
 |[agent_status](concurrency-namespace-enums.md#agent_status)|`agent` 的有效状态。|
 |[Agents_EventType](concurrency-namespace-enums.md#agents_eventtype)|可以使用代理库提供的跟踪功能进行跟踪的事件的类型|
@@ -164,7 +164,7 @@ namespace concurrency;
 |[DynamicProgressFeedbackType](concurrency-namespace-enums.md#dynamicprogressfeedbacktype)|由 `DynamicProgressFeedback` 策略用于描述重新平衡计划程序资源的依据是从计划程序收集的统计信息，还是通过对 `IVirtualProcessorRoot` 接口上的 `Activate` 和 `Deactivate` 方法进行调用以进出空闲状态的虚拟处理器。 有关可用计划程序策略的详细信息，请参阅[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)。|
 |[join_type](concurrency-namespace-enums.md#join_type)|`join` 消息块的类型。|
 |[message_status](concurrency-namespace-enums.md#message_status)|`message` 对象的内容到块的有效响应。|
-|[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)|描述计划程序行为各个方面的策略键。 每个策略元素由一个键值对描述。 有关计划程序策略和它们的影响计划程序的详细信息，请参阅[任务计划程序](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)。|
+|[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)|描述计划程序行为各个方面的策略键。 每个策略元素由一个键值对描述。 有关计划程序策略及其对计划程序的影响的详细信息，请参阅[任务计划程序](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)。|
 |[SchedulerType](concurrency-namespace-enums.md#schedulertype)|由 `SchedulerKind` 策略用于描述应由计划程序用于基础执行上下文的线程的类型。 有关可用计划程序策略的详细信息，请参阅[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)。|
 |[SchedulingProtocolType](concurrency-namespace-enums.md#schedulingprotocoltype)|由 `SchedulingProtocol` 策略用于描述将哪个计划算法用于计划程序。 有关可用计划程序策略的详细信息，请参阅[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)。|
 |[SwitchingProxyState](concurrency-namespace-enums.md#switchingproxystate)|用于表示线程代理在执行另一个线程代理的协作上下文切换时所处的状态。|
@@ -173,9 +173,9 @@ namespace concurrency;
 
 ### <a name="functions"></a>函数
 
-|名称|描述|
+|Name|描述|
 |----------|-----------------|
-|[Alloc 函数](concurrency-namespace-functions.md#alloc)|通过并发运行时缓存子分配器分配具有指定大小的内存块。|
+|[分配函数](concurrency-namespace-functions.md#alloc)|通过并发运行时缓存子分配器分配具有指定大小的内存块。|
 |[asend 函数](concurrency-namespace-functions.md#asend)|已重载。 异步发送操作，计划任务以将数据传播到目标块。|
 |[cancel_current_task 函数](concurrency-namespace-functions.md#cancel_current_task)|获取当前执行的任务。 此函数可从任务主体中进行调用，以便中止任务的执行并使其进入 `canceled` 状态。<br /><br /> 不支持从 `task` 主体外部调用此函数的情况。 这样做将导致未定义的行为，例如应用程序崩溃或挂起。|
 |[create_async 函数](concurrency-namespace-functions.md#create_async)|基于用户提供的 lambda 或函数对象创建 Windows 运行时异步构造。 `create_async` 的返回类型是基于传递给方法的 lambda 的签名的 `IAsyncAction^`、`IAsyncActionWithProgress<TProgress>^`、`IAsyncOperation<TResult>^` 或 `IAsyncOperationWithProgress<TResult, TProgress>^` 之一。|
@@ -184,7 +184,7 @@ namespace concurrency;
 |[DisableTracing 函数](concurrency-namespace-functions.md#disabletracing)|在并发运行时中禁用跟踪。 此函数被弃用，因为默认注销 ETW 跟踪。|
 |[EnableTracing 函数](concurrency-namespace-functions.md#enabletracing)|在并发运行时中启用跟踪。 此函数被弃用，因为现在默认启用 ETW 跟踪。|
 |[Free 函数](concurrency-namespace-functions.md#free)|释放先前通过 `Alloc` 方法分配给并发运行时的缓存子分配器的内存块。|
-|[get_ambient_scheduler 函数 （并发运行时）](concurrency-namespace-functions.md#get_ambient_scheduler)||
+|[get_ambient_scheduler 函数（并发运行时）](concurrency-namespace-functions.md#get_ambient_scheduler)||
 |[GetExecutionContextId 函数](concurrency-namespace-functions.md#getexecutioncontextid)|返回可以分配给实现 `IExecutionContext` 接口的执行上下文的唯一标识符。|
 |[GetOSVersion 函数](concurrency-namespace-functions.md#getosversion)|返回操作系统版本。|
 |[GetProcessorCount 函数](concurrency-namespace-functions.md#getprocessorcount)|返回基础系统上的硬件线程数。|
@@ -207,11 +207,11 @@ namespace concurrency;
 |[receive 函数](concurrency-namespace-functions.md#receive)|已重载。 常规接收实现，允许上下文仅等待来自一个源的数据并筛选所接受的值。|
 |[run_with_cancellation_token 函数](concurrency-namespace-functions.md#run_with_cancellation_token)|在给定取消标记的上下文中立即同步执行函数对象。|
 |[send 函数](concurrency-namespace-functions.md#send)|已重载。 同步发送操作，它会一直等待，直到目标接受或拒绝消息。|
-|[set_ambient_scheduler 函数 （并发运行时）](concurrency-namespace-functions.md#set_ambient_scheduler)||
+|[set_ambient_scheduler 函数（并发运行时）](concurrency-namespace-functions.md#set_ambient_scheduler)||
 |[set_task_execution_resources 函数](concurrency-namespace-functions.md#set_task_execution_resources)|已重载。 将并发运行时内部工作线程使用的执行资源限制为指定的关联集。<br /><br /> 仅在创建资源管理器之前，或在两个资源管理器生存期之间调用此方法才是有效的。 只要资源管理器在调用时不存在，就可以多次调用它。 设置关联限制后，它仍然有效，直到对 `set_task_execution_resources` 方法的下一次有效调用。<br /><br /> 提供的关联掩码不需要是进程关联掩码的子集。 如果需要，将更新过程关联。|
 |[swap 函数](concurrency-namespace-functions.md#swap)|交换两个 `concurrent_vector` 对象的元素。|
-|[task_from_exception 函数 （并发运行时）](concurrency-namespace-functions.md#task_from_exception)||
-|[task_from_result 函数 （并发运行时）](concurrency-namespace-functions.md#task_from_result)||
+|[task_from_exception 函数（并发运行时）](concurrency-namespace-functions.md#task_from_exception)||
+|[task_from_result 函数（并发运行时）](concurrency-namespace-functions.md#task_from_result)||
 |[Trace_agents_register_name 函数](concurrency-namespace-functions.md#trace_agents_register_name)|在 ETW 跟踪中将给定名称关联到消息块或代理。|
 |[try_receive 函数](concurrency-namespace-functions.md#try_receive)|已重载。 常规尝试-接收实现，允许上下文仅查找来自一个源的数据并筛选所接受的值。 如果数据未就绪，则方法将返回 false。|
 |[wait 函数](concurrency-namespace-functions.md#wait)|将当前上下文暂停指定的一段时间。|
@@ -220,11 +220,11 @@ namespace concurrency;
 
 ### <a name="operators"></a>运算符
 
-|名称|描述|
+|Name|描述|
 |----------|-----------------|
 |[operator!=](concurrency-namespace-operators.md#operator_neq)|测试运算符左侧的 `concurrent_vector` 对象是否不等于右侧的 `concurrent_vector` 对象。|
-|[operator&&](concurrency-namespace-operators.md#operator_amp_amp)|已重载。 创建一个任务，在作为自变量提供的两个任务成功完成后，此任务将成功完成。|
-|[operator&#124;&#124;](concurrency-namespace-operators.md#operator_lor)|已重载。 创建将在作为参数提供的任一任务成功完成时成功完成的任务。|
+|[operator&&](concurrency-namespace-operators.md#operator_amp_amp)|已重载。 创建一个任务，该任务将在作为参数提供的两个任务成功完成后成功完成。|
+|[operator||](concurrency-namespace-operators.md#operator_lor)|已重载。 创建将在作为参数提供的任一任务成功完成时成功完成的任务。|
 |[operator<](concurrency-namespace-operators.md#operator_lt)|测试运算符左侧的 `concurrent_vector` 对象是否小于右侧的 `concurrent_vector` 对象。|
 |[operator<=](concurrency-namespace-operators.md#operator_lt_eq)|测试运算符左侧的 `concurrent_vector` 对象是否小于或等于右侧的 `concurrent_vector` 对象。|
 |[operator==](concurrency-namespace-operators.md#operator_eq_eq)|测试运算符左侧的 `concurrent_vector` 对象是否等于右侧的 `concurrent_vector` 对象。|
@@ -233,7 +233,7 @@ namespace concurrency;
 
 ### <a name="constants"></a>常量
 
-|名称|描述|
+|Name|描述|
 |----------|-----------------|
 |[AgentEventGuid](concurrency-namespace-constants1.md#agenteventguid)|类别 GUID ({B9B5B78C-0713-4898-A21A-C67949DCED07})，描述并发运行时中由代理库激发的 ETW 事件。|
 |[ChoreEventGuid](concurrency-namespace-constants1.md#choreeventguid)|类别 GUID，描述由与日常任务或任务直接相关的并发运行时激发的 ETW 事件。|
@@ -254,10 +254,10 @@ namespace concurrency;
 |[SchedulerEventGuid](concurrency-namespace-constants1.md#schedulereventguid)|类别 GUID，描述由与计划程序活动直接相关的并发运行时激发的 ETW 事件。|
 |[VirtualProcessorEventGuid](concurrency-namespace-constants1.md#virtualprocessoreventguid)|类别 GUID，描述由与虚拟处理器直接相关的并发运行时激发的 ETW 事件。|
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>需求
 
-**标头：** agents.h、 concrt.h、 concrtrm.h、 concurrent_priority_queue.h、 concurrent_queue.h、 concurrent_unordered_map.h、 concurrent_unordered_set.h、 concurrent_vector.h、 internal_concurrent_hash.h、 internal_split_ordered_list.h、 ppl.h、 pplcancellation_token.h、 pplconcrt.h、 pplinterface.h、 ppltasks.h
+**标头：** concrt、concrtrm.h、concurrent_priority_queue、concurrent_queue、concurrent_unordered_set concurrent_unordered_map、concurrent_vector、internal_concurrent_hash、internal_split_ordered_list、pplcancellation_token、pplconcrt.h、pplinterface.h、、、ppltasks.h、、、、、、、、
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [引用](reference-concurrency-runtime.md)

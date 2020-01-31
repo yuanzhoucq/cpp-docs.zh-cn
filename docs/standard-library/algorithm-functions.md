@@ -200,12 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: b08d45ac065fe63f6f51e3b63a49e8714a486988
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: 199634997397cca0008c60843b5d977633277331
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68956985"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821878"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 函数
 
@@ -244,10 +244,10 @@ ForwardIterator adjacent_find(
 *exec*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 用于确定要搜索范围中第一个元素的位置的前向迭代器。
 
-*时间*\
+*最后*\
 用于确定要搜索范围中最后元素之后下一个元素的位置的前向迭代器。
 
 *pred*\
@@ -255,7 +255,7 @@ ForwardIterator adjacent_find(
 
 ### <a name="return-value"></a>返回值
 
-一个向前迭代器, 指向相邻元素 (在第一个版本中) 或满足二元谓词给定的条件 (在第二个版本中) 的第一个相邻元素, 前提是找到此类元素对。 否则, 将返回指向*最后*一个的迭代器。
+一个向前迭代器，指向相邻元素（在第一个版本中）或满足二元谓词给定的条件（在第二个版本中）的第一个相邻元素，前提是找到此类元素对。 否则，将返回指向*最后*一个的迭代器。
 
 ### <a name="remarks"></a>备注
 
@@ -329,7 +329,7 @@ They have values of 10 & 20.
 
 ## <a name="all_of"></a>all_of
 
-当给定范围内的每个元素都存在条件时, 返回**true** 。
+当给定范围内的每个元素都存在条件时，返回**true** 。
 
 ```cpp
 template<class InputIterator, class UnaryPredicate>
@@ -351,22 +351,22 @@ bool all_of(
 *exec*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 一种输入迭代器，指示检查条件的起始位置。 该迭代器将标记元素范围的起始位置。
 
-*时间*\
+*最后*\
 一种输入迭代器，指示在元素范围内检查条件的结束位置。
 
 *pred*\
-要测试的条件。 这是用户定义的谓词函数对象，定义被检查元素要满足的条件。 一元谓词采用单个参数, 并返回**true**或**false**。
+要测试的条件。 这是用户定义的谓词函数对象，定义被检查元素要满足的条件。 一元谓词采用单个参数，并返回**true**或**false**。
 
 ### <a name="return-value"></a>返回值
 
-如果在指示范围内的每个元素上检测到条件, 或者范围为空, 则返回**true** ; 否则返回**false** 。
+如果在指示范围内的每个元素上检测到条件，或者范围为空，则返回**true** ; 否则返回**false** 。
 
 ### <a name="remarks"></a>备注
 
-仅当`N`为`[0, last - first)`范围中的每个都为true时,模板函数才返回`pred(*(first + N))` **true** 。
+仅当范围 `[0, last - first)`中的每个 `N` 的谓词 `pred(*(first + N))` 为**true**时，模板函数才返回**true** 。
 
 ### <a name="example"></a>示例
 
@@ -405,7 +405,7 @@ All the elements are even numbers.
 
 ## <a name="any_of"></a>any_of
 
-如果在指定的元素范围内至少出现一次条件,**则返回 true** 。
+如果在指定的元素范围内至少出现一次条件，**则返回 true** 。
 
 ```cpp
 template<class InputIterator, class UnaryPredicate>
@@ -427,24 +427,24 @@ bool any_of(
 *exec*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 一种输入迭代器，指示在元素范围内检查条件的起始位置。
 
-*时间*\
+*最后*\
 一种输入迭代器，指示在元素范围内检查条件的结束位置。
 
 *pred*\
-要测试的条件。 这是由用户定义的谓词函数对象提供的。 谓词定义所测试的元素应满足的条件。 一元谓词采用单个参数, 并返回**true**或**false**。
+要测试的条件。 这是由用户定义的谓词函数对象提供的。 谓词定义所测试的元素应满足的条件。 一元谓词采用单个参数，并返回**true**或**false**。
 
 ### <a name="return-value"></a>返回值
 
-如果在指示的范围内至少检测到一次条件, 则返回**true** ; 如果从未检测到该条件, 则返回**false** 。
+如果在指示的范围内至少检测到一次条件，则返回**true** ; 如果从未检测到该条件，则返回**false** 。
 
 ### <a name="remarks"></a>备注
 
-仅当 (对于范围中的某些`N` ), 模板函数才返回 true
+仅当范围内的某些 `N` 时，模板函数才返回**true**
 
-`[0, last - first)`, 谓词`pred(*(first + N))`为 true。
+`[0, last - first)`，谓词 `pred(*(first + N))` 为 true。
 
 ### <a name="example"></a>示例
 
@@ -501,10 +501,10 @@ bool binary_search(
 
 ### <a name="parameters"></a>参数
 
-*1*\
+*第一个*\
 用于确定要搜索范围中第一个元素的位置的前向迭代器。
 
-*时间*\
+*最后*\
 用于确定要搜索范围中最后元素之后下一个元素的位置的前向迭代器。
 
 *value*\
@@ -515,7 +515,7 @@ bool binary_search(
 
 ### <a name="return-value"></a>返回值
 
-如果在等于或等于指定值的范围内找到元素, 则**为 true** ; 否则为。否则**为 false**。
+如果在等于或等于指定值的范围内找到元素，则**为 true** ; 否则为。否则**为 false**。
 
 ### <a name="remarks"></a>备注
 
@@ -527,7 +527,7 @@ bool binary_search(
 
 前向迭代器的值类型需小于比较元素才能进行排序；因此，给定两个元素，可以确定它们是相等的（即两者均不小于对方）或其中一个小于另一个。 这将导致在非等效元素之间进行排序。
 
-算法的复杂性是随机访问迭代器和线性的对数, 否则, 步骤数与 (`last` - `first`) 成正比。
+算法的复杂性是随机访问迭代器和线性的对数，否则，步骤数与（`last` - `first`）成正比。
 
 ### <a name="example"></a>示例
 
@@ -621,7 +621,7 @@ There is an element with a value equivalent to -3 under mod_lesser.
 
 ## <a name="clamp"></a>固定
 
-将值与上限和下限进行比较, 并返回对边界之间的值的引用, 如果值高于或低于这些值, 则返回对上限或下限的引用。
+将值与上限和下限进行比较，并返回对边界之间的值的引用，如果值高于或低于这些值，则返回对上限或下限的引用。
 
 ```cpp
 template<class Type>
@@ -643,22 +643,22 @@ constexpr const Type& clamp(
 *value*\
 要与*上限*和*下限*进行比较的值。
 
-*下移*\
+*降低*\
 值与夹具*值*的下限。
 
-*左上*\
+*上限*\
 值到夹具*值*的上限。
 
 *pred*\
-用于比较*值*为*lower*或下限的谓词。 比较谓词采用两个参数, 如果第一个参数的意义小于第二个参数, 则返回**true** , 否则返回**false**。
+用于比较*值*为*lower* *或下限的谓词*。 比较谓词采用两个参数，如果第一个参数的意义小于第二个参数，则返回**true** ，否则返回**false**。
 
 ### <a name="return-value"></a>返回值
 
-如果`upper < value` `value < lower`为, 则返回对 lower 的引用; 如果为, 则返回对*upper*的引用。 否则, 它将返回对*值*的引用。
+如果 `value < lower`，则返回对*lower*的引用; 如果 `upper < value`，则返回对*upper*的引用。 否则，它将返回对*值*的引用。
 
 ### <a name="remarks"></a>备注
 
-如果*上限*小于*下限*, 则行为是不确定的。
+如果*上限*小于*下限*，则行为是不确定的。
 
 ## <a name="copy"></a>复本
 
@@ -684,10 +684,10 @@ ForwardIterator2 copy(
 *exec*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 发现源范围内的第一个元素的位置的输入迭代器。
 
-*时间*\
+*最后*\
 一个输入迭代器，用于确定源范围内最后一个元素之后下一个元素的位置。
 
 *destBeg*\
@@ -695,13 +695,13 @@ ForwardIterator2 copy(
 
 ### <a name="return-value"></a>返回值
 
-一种输出迭代器, 用于确定目标范围中最后一个元素之后的位置`result` , 即迭代器会寻址 + (*最后* - *一个*)。
+一种输出迭代器，用于确定目标范围中最后一个元素之后的位置，即迭代器地址 `result` + （*最后* - *第一个*）。
 
 ### <a name="remarks"></a>备注
 
 源范围必须有效，且必须具有足够的空间来保存所有要复制的元素。
 
-由于算法从第一个元素开始按顺序复制源元素, 因此, 如果源范围的*最后一个*位置未包含在目标范围内, 则目标范围可以与源范围重叠。 `copy`可用于将元素向左移动, 而不是向右移位, 除非源范围和目标范围之间不存在重叠。 若要向右移动任意数量的位置，请使用 [copy_backward](../standard-library/algorithm-functions.md#copy_backward) 算法。
+由于算法从第一个元素开始按顺序复制源元素，因此，如果源范围的*最后一个*位置未包含在目标范围内，则目标范围可以与源范围重叠。 除非源范围和目标范围之间不存在重叠，否则 `copy` 可用于将元素向左移动，但不能向右移动。 若要向右移动任意数量的位置，请使用 [copy_backward](../standard-library/algorithm-functions.md#copy_backward) 算法。
 
 `copy` 算法只修改由迭代器指向的值，并为目标范围内的元素赋予新值。 它不能用来创建新元素，也无法直接将元素插入到空容器。
 
@@ -777,10 +777,10 @@ BidirectionalIterator2 copy_backward(
 
 ### <a name="parameters"></a>参数
 
-*1*\
+*第一个*\
 一种双向迭代器，用于定址源范围内第一个元素的位置。
 
-*时间*\
+*最后*\
 一种双向迭代器，用于定址源范围内最后元素之后下一个元素的位置。
 
 *destEnd*\
@@ -788,17 +788,17 @@ BidirectionalIterator2 copy_backward(
 
 ### <a name="return-value"></a>返回值
 
-一个输出迭代器, 用于确定目标范围中最后一个元素之后的位置, 即迭代器解决*destEnd* -(*最后* - *一个*)。
+一个输出迭代器，用于确定目标范围中最后一个元素之后的位置，即迭代器解决*destEnd* -（*最后* - *第一个*）。
 
 ### <a name="remarks"></a>备注
 
 源范围必须有效，且必须具有足够的空间来保存所有要复制的元素。
 
-算法`copy_backward`的要求比`copy`算法更严格。 它的输入和输出迭代器都必须是双向的。
+`copy_backward` 算法比 `copy` 算法具有更严格的要求。 它的输入和输出迭代器都必须是双向的。
 
 `copy_backward` 和 [move_backward](../standard-library/algorithm-functions.md#move_backward) 算法是唯一的 C++ 标准库算法，这些算法使用指向目标范围末尾的迭代器来指定输出范围。
 
-由于算法从最后一个元素开始按顺序复制源元素, 因此, 如果源范围的*第一个*位置未包含在目标范围内, 则目标范围可以与源范围重叠。 `copy_backward` 可用来将元素移动到右侧，但不能移动到左侧，除非源范围和目标范围之间不存在重叠。 若要向左移动任意数量的位置，请使用 [copy](../standard-library/algorithm-functions.md#copy) 算法。
+由于算法从最后一个元素开始按顺序复制源元素，因此，如果源范围的*第一个*位置未包含在目标范围内，则目标范围可以与源范围重叠。 `copy_backward` 可用来将元素移动到右侧，但不能移动到左侧，除非源范围和目标范围之间不存在重叠。 若要向左移动任意数量的位置，请使用 [copy](../standard-library/algorithm-functions.md#copy) 算法。
 
 `copy_backward` 算法只修改由迭代器指向的值，并为目标范围内的元素赋予新值。 它不能用来创建新元素，也无法直接将元素插入到空容器。
 
@@ -862,7 +862,7 @@ v2 with shifted insert = ( 0 3 6 9 0 10 0 10 20 27 30 )
 
 ## <a name="copy_if"></a>copy_if
 
-在一系列元素中, 复制指定条件下为**true**的元素。
+在一系列元素中，复制指定条件下为**true**的元素。
 
 ```cpp
 template<class InputIterator, class OutputIterator, class UnaryPredicate>
@@ -886,13 +886,13 @@ ForwardIterator2 copy_if(
 *exec*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 一种输入迭代器，指示在一个范围内检查条件的开始位置。
 
-*时间*\
+*最后*\
 一种输入迭代器，指示范围的结束位置。
 
-*目的*\
+*dest*\
 输出迭代器，指示复制元素的目标。
 
 *pred*\
@@ -900,15 +900,15 @@ ForwardIterator2 copy_if(
 
 ### <a name="return-value"></a>返回值
 
-对于满足条件的每个元素, 等于*dest*的输出迭代器递增一次。 换言之, 返回值减去*dest*等于复制的元素数。
+对于满足条件的每个元素，等于*dest*的输出迭代器递增一次。 换言之，返回值减去*dest*等于复制的元素数。
 
 ### <a name="remarks"></a>备注
 
-模板函数评估
+该模板函数为范围  中的每个  求值
 
 `if (pred(*first + N)) * dest++ = *(first + N))`
 
-一次为每个`N`范围内`[0, last - first)`，严格增加值的`N`从最低值开始 如果*目标*和*首次*指定存储区域, 则*目标*不能在范围`[ first, last )`内。
+一次，从最低值开始严格递增 `N` 的值。 如果*目标*和*首次*指定存储区域，则*目标*不能在 `[ first, last )`范围内。
 
 ### <a name="example"></a>示例
 
@@ -989,13 +989,13 @@ ForwardIterator2 copy_n(
 *exec*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 指示复制元素的位置的输入迭代器。
 
-*计*\
+*计数*\
 指定要复制的元素的数目的有符号或无符号整数类型。
 
-*目的*\
+*dest*\
 指示将元素复制到的位置的输出迭代器。
 
 ### <a name="return-value"></a>返回值
@@ -1004,7 +1004,7 @@ ForwardIterator2 copy_n(
 
 ### <a name="remarks"></a>备注
 
-`*(dest + N) = *(first + N))`对于范围`N` `N`中的每个, 模板函数将计算一次, 以从最低值开始严格递增的值。 `[0, count)` 然后返回 `dest + N`。 如果*目标*和*首次*指定存储区域, 则*目标*不能在范围`[first, last)`内。
+模板函数为范围 `[0, count)`中的每个 `N` 计算一次 `*(dest + N) = *(first + N))` 一次，以从最低值开始严格递增的 `N` 值。 然后返回 `dest + N`。 如果*目标*和*首次*指定存储区域，则*目标*不能在 `[first, last)`范围内。
 
 ### <a name="example"></a>示例
 
@@ -1060,10 +1060,10 @@ count(
 *exec*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 一种输入迭代器，用于寻址要遍历的范围中第一个元素的位置。
 
-*时间*\
+*最后*\
 一种输入迭代器，用于寻址要遍历的范围中最后元素之后下一个元素的位置。
 
 *value*\
@@ -1071,7 +1071,7 @@ count(
 
 ### <a name="return-value"></a>返回值
 
-的不同类型, 它`InputIterator`对具有值的范围 [*first*, *last*) 中的元素数进行计数。
+`InputIterator` 的不同类型，它对*具有值的*范围 [*first*， *last*）中的元素数进行计数。
 
 ### <a name="remarks"></a>备注
 
@@ -1141,14 +1141,14 @@ count_if(
 *exec*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 用于确定要搜索范围中的第一个元素的位置的输入迭代器。
 
-*时间*\
+*最后*\
 用于确定要搜索范围中最后元素之后下一个元素的位置的输入迭代器。
 
 *pred*\
-用户定义的谓词函数对象，用于定义如果计入元素要满足的条件。 一元谓词采用单个参数, 并返回**true**或**false**。
+用户定义的谓词函数对象，用于定义如果计入元素要满足的条件。 一元谓词采用单个参数，并返回**true**或**false**。
 
 ### <a name="return-value"></a>返回值
 
@@ -1299,7 +1299,7 @@ bool equal(
 
 要搜索的范围必须是有效的；所有迭代器必须是可解除引用的，并且最后一个位置可从第一个位置通过递增到达。
 
-如果两个范围的长度相等，则算法的时间复杂性在范围所包含的元素数目上呈线性。 否则, 函数立即返回**false**。
+如果两个范围的长度相等，则算法的时间复杂性在范围所包含的元素数目上呈线性。 否则，函数立即返回**false**。
 
 `operator==` 和用户定义的谓词都不需要施加在其操作数之间施加对称、反身和可传递的等效关系。
 
@@ -1357,23 +1357,23 @@ pair<ForwardIterator, ForwardIterator> equal_range(
 
 ### <a name="parameters"></a>参数
 
-*1*\
+*第一个*\
 用于确定要搜索范围中第一个元素的位置的前向迭代器。
 
-*时间*\
+*最后*\
 用于确定要搜索范围中最后元素之后下一个元素的位置的前向迭代器。
 
 *value*\
 在已排序范围中搜索的值。
 
 *pred*\
-用户定义的谓词函数对象，用于定义对一个元素小于另一个元素的理解。 比较谓词采用两个参数, 并且在满足时返回**true** , 如果不满足, 则返回**false** 。
+用户定义的谓词函数对象，用于定义对一个元素小于另一个元素的理解。 比较谓词采用两个参数，并且在满足时返回**true** ，如果不满足，则返回**false** 。
 
 ### <a name="return-value"></a>返回值
 
-指定包含在搜索范围内的子范围的一对前向迭代器, 其中所有元素都等效于所使用的二进制谓词 ( *pred*或默认值小于) 定义的意义中的*值*。
+指定包含在搜索范围内的子范围的一对前向迭代器，其中所有元素都等效于所使用的二进制谓词（ *pred*或默认值小于）定义的意义中的*值*。
 
-如果该范围中的任何元素都不等于*值*, 则返回对中的正向迭代器是相等的, 并指定可以在其中插入*值*而不影响范围顺序的点。
+如果该范围中的任何元素都不等于*值*，则返回对中的正向迭代器是相等的，并指定可以在其中插入*值*而不影响范围顺序的点。
 
 ### <a name="remarks"></a>备注
 
@@ -1381,9 +1381,9 @@ pair<ForwardIterator, ForwardIterator> equal_range(
 
 必须根据提供给 `equal_range` 的谓词排序范围。 例如，如果你打算使用“大于”谓词，则必须按降序排序范围。
 
-由返回`equal_range`的一对迭代器定义的可能为空的子范围中的元素将等效于所使用的谓词所定义的意义中的*值*。
+由 `equal_range` 返回的一对迭代器定义的可能为空的子范围中的元素将等效于所使用的谓词所定义的意义中的*值*。
 
-算法的复杂性是随机访问迭代器和线性的对数, 否则, 步骤数与 (*最后* - *一个*) 成正比。
+算法的复杂性是随机访问迭代器和线性的对数，否则，步骤数成正比（*最后* - *第一个*）。
 
 ### <a name="example"></a>示例
 
@@ -1526,14 +1526,14 @@ void fill(
 *exec*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 一种向前迭代器，用于寻址要遍历的范围内第一个元素的位置。
 
-*时间*\
+*最后*\
 一种向前迭代器，用于寻址要遍历的范围内最后一个元素之后下一个元素的位置。
 
 *value*\
-要分配给范围 [*first*, *last*) 中的元素的值。
+要分配给范围 [*first*， *last*）中的元素的值。
 
 ### <a name="remarks"></a>备注
 
@@ -1604,18 +1604,18 @@ ForwardIterator fill_n(
 *exec*\
 要使用的执行策略。
 
-*1*\
-一个输出迭代器, 用于确定要为其分配值*值*的范围中第一个元素的位置。
+*第一个*\
+一个输出迭代器，用于确定要为其分配值*值*的范围中第一个元素的位置。
 
-*计*\
+*计数*\
 指定要分配该值的元素数目的有符号或无符号整数类型。
 
 *value*\
-要分配给范围 [*first*, *first + count*) 中的元素的值。
+要分配给范围 [*first*， *first + count*）中的元素的值。
 
 ### <a name="return-value"></a>返回值
 
-一个迭代器, 该迭代器指向在*count* > 为零时, 最后一个元素之后的元素, 否则为第一个元素。
+一个迭代器，该迭代器指向在*count* > 为零时，最后一个元素之后的元素，否则为第一个元素。
 
 ### <a name="remarks"></a>备注
 
@@ -1693,10 +1693,10 @@ ForwardIterator find(
 *exec*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 用于确定要在范围中搜索其指定值的第一个元素的位置的输入迭代器。
 
-*时间*\
+*最后*\
 用于确定要在范围中搜索其指定值的最后一个元素之后下一个元素的位置的输入迭代器。
 
 *value*\
@@ -1704,7 +1704,7 @@ ForwardIterator find(
 
 ### <a name="return-value"></a>返回值
 
-用于确定要在范围中搜索的指定值第一次出现的位置的输入迭代器。 如果找不到具有等效值的元素, 则返回*last*。
+用于确定要在范围中搜索的指定值第一次出现的位置的输入迭代器。 如果找不到具有等效值的元素，则返回*last*。
 
 ### <a name="remarks"></a>备注
 
@@ -1772,7 +1772,7 @@ find_end(
 
 ### <a name="return-value"></a>返回值
 
-一个向前迭代器, 用于寻址 [first1, last1) 中与指定序列 [first2, last2) 匹配的最后一个子序列的第一个元素的位置。
+一个向前迭代器，用于寻址 [first1，last1）中与指定序列 [first2，last2）匹配的最后一个子序列的第一个元素的位置。
 
 ### <a name="remarks"></a>备注
 
@@ -2063,18 +2063,18 @@ ForwardIterator find_if(
 
 ### <a name="parameters"></a>参数
 
-*1*\
+*第一个*\
 用于确定要搜索范围中的第一个元素的位置的输入迭代器。
 
-*时间*\
+*最后*\
 用于确定要搜索范围中最后元素之后下一个元素的位置的输入迭代器。
 
 *pred*\
-用户定义的谓词函数对象或 [lambda 表达式](../cpp/lambda-expressions-in-cpp.md)，用于定义要搜索的元素应满足的条件。 一元谓词采用单个参数, 如果满足, 则返回**true** ; 否则返回**false** 。 *Pred*的签名必须有效地为`bool pred(const T& arg);`, 其中`T`是在取消引用时`InputIterator`可隐式转换为的类型。 仅显示**const**关键字以说明函数对象或 lambda 不应修改参数。
+用户定义的谓词函数对象或 [lambda 表达式](../cpp/lambda-expressions-in-cpp.md)，用于定义要搜索的元素应满足的条件。 一元谓词采用单个参数，如果满足，则返回**true** ; 否则返回**false** 。 *Pred*的签名必须有效地 `bool pred(const T& arg);`，其中 `T` 是在取消引用时可隐式转换 `InputIterator` 的类型。 仅显示**const**关键字以说明函数对象或 lambda 不应修改参数。
 
 ### <a name="return-value"></a>返回值
 
-一个输入迭代器, 该迭代器引用范围中满足谓词所指定条件的第一个元素 (该谓词将导致**为 true**)。 如果找不到满足谓词的元素, 则返回*last*。
+一个输入迭代器，该迭代器引用范围中满足谓词所指定条件的第一个元素（该谓词将导致**为 true**）。 如果找不到满足谓词的元素，则返回*last*。
 
 ### <a name="remarks"></a>备注
 
@@ -2185,18 +2185,18 @@ ForwardIterator find_if_not(
 
 ### <a name="parameters"></a>参数
 
-*1*\
+*第一个*\
 用于确定要搜索范围中的第一个元素的位置的输入迭代器。
 
-*时间*\
+*最后*\
 用于确定要搜索范围中最后元素之后下一个元素的位置的输入迭代器。
 
 *pred*\
-用户定义谓词函数对象或 [lambda 表达式](../cpp/lambda-expressions-in-cpp.md)，用于定义要搜索的元素不满足的条件。 一元谓词采用单个参数, 如果满足, 则返回**true** ; 否则返回**false** 。 *Pred*的签名必须有效地为`bool pred(const T& arg);`, 其中`T`是在取消引用时`InputIterator`可隐式转换为的类型。 仅显示**const**关键字以说明函数对象或 lambda 不应修改参数。
+用户定义谓词函数对象或 [lambda 表达式](../cpp/lambda-expressions-in-cpp.md)，用于定义要搜索的元素不满足的条件。 一元谓词采用单个参数，如果满足，则返回**true** ; 否则返回**false** 。 *Pred*的签名必须有效地 `bool pred(const T& arg);`，其中 `T` 是在取消引用时可隐式转换 `InputIterator` 的类型。 仅显示**const**关键字以说明函数对象或 lambda 不应修改参数。
 
 ### <a name="return-value"></a>返回值
 
-一种输入迭代器, 该迭代器引用范围中不满足谓词指定的条件的第一个元素 (谓词会导致**false**)。 如果所有元素都满足谓词 (对于每个元素, 谓词都为**true** ), 则返回*last*。
+一种输入迭代器，该迭代器引用范围中不满足谓词指定的条件的第一个元素（谓词会导致**false**）。 如果所有元素都满足谓词（对于每个元素，谓词都为**true** ），则返回*last*。
 
 ### <a name="remarks"></a>备注
 
@@ -2225,13 +2225,13 @@ void for_each(
 
 ### <a name="parameters"></a>参数
 
-*1*\
+*第一个*\
 一种输入迭代器，用于寻址要操作的范围中第一个元素的位置。
 
-*时间*\
+*最后*\
 一种输入迭代器，用于寻址要操作的范围中最后一个元素之后下一个元素的位置。
 
-*求*\
+*func*\
 用户定义的应用于范围内每个元素的函数对象。
 
 ### <a name="return-value"></a>返回值
@@ -2244,7 +2244,7 @@ void for_each(
 
 引用的范围必须有效；所有指针都必须可以引用，并且在序列中，通过递增必须可从第一个位置到达最后一个位置。
 
-复杂性是线性的, 最多进行 (*最后* - *一次*) 比较。
+复杂性是线性的，最多进行（*最后* - *首*次）比较。
 
 ### <a name="example"></a>示例
 
@@ -2396,13 +2396,13 @@ void generate(
 
 ### <a name="parameters"></a>参数
 
-*1*\
+*第一个*\
 一种前向迭代器，用于寻址要分配值的范围中第一个元素的位置。
 
-*时间*\
+*最后*\
 一种前向迭代器，用于寻址要分配值的范围中最后一个元素之后下一个元素的位置。
 
-*常规*\
+*gen*\
 用于生成要分配到范围中的每个元素的值的未使用任何自变量调用的函数对象。
 
 ### <a name="remarks"></a>备注
@@ -2411,7 +2411,7 @@ void generate(
 
 引用的范围必须有效；所有指针都必须可以引用，并且在序列中，通过递增必须可从第一个位置到达最后一个位置。
 
-复杂性是线性的, 对所需`last`的生成器的完全 (  -  `first`) 调用。
+复杂性是线性的，完全（`last` - `first`）调用所需的生成器。
 
 ### <a name="example"></a>示例
 
@@ -2480,13 +2480,13 @@ ForwardIterator generate_n(
 *exec*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 寻址要分配值的范围中的第一个元素位置的输出迭代器。
 
-*计*\
+*计数*\
 指定生成器函数要将值分配到的元素数的有符号或无符号整型。
 
-*常规*\
+*gen*\
 用于生成要分配到范围中的每个元素的值的未使用任何自变量调用的函数对象。
 
 ### <a name="remarks"></a>备注
@@ -2598,7 +2598,7 @@ bool includes(
 一种输入迭代器，用于寻址在两个连续已排序源范围的第二个中最后一个元素之后的下一个元素的位置，以便测试第二个已排序源范围中的所有元素是否包含在第一个中。
 
 *pred*\
-用户定义的谓词函数对象，用于定义对一个元素小于另一个元素的理解。 比较谓词采用两个参数, 并且在满足时返回**true** , 如果不满足, 则返回**false** 。
+用户定义的谓词函数对象，用于定义对一个元素小于另一个元素的理解。 比较谓词采用两个参数，并且在满足时返回**true** ，如果不满足，则返回**false** 。
 
 ### <a name="return-value"></a>返回值
 
@@ -2612,11 +2612,11 @@ bool includes(
 
 必须按照该算法对合并范围排序时要使用的相同顺序对已排序源范围分别进行排列，作为应用该算法的前置条件。
 
-算法`merge`不会修改源范围。
+`merge`算法不会修改源范围。
 
 输入迭代器的值类型需小于比较元素才能进行排序；因此，给定两个元素，可以确定这两个元素相等（即两者均不小于对方）或其中一个小于另一个。 这将导致在非等效元素之间进行排序。 更准确的说，该算法测试在指定二元谓词下第一个已排序范围中的所有元素，是否与第二个已排序范围中的所有元素具有相同的排序。
 
-算法的复杂性是线性的, 对于非空`2 * ((last1 - first1) - (last2 - first2)) - 1`源范围最多进行比较。
+算法的复杂性是线性的，对于非空源范围最多 `2 * ((last1 - first1) - (last2 - first2)) - 1` 比较。
 
 ### <a name="example"></a>示例
 
@@ -2806,17 +2806,17 @@ void inplace_merge(
 *exec*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 一种双向迭代器，用于寻址要合并且排序为一个范围的两个连续已排序源范围中，第一个源范围内第一个元素的位置。
 
-*过程*\
+*中间*\
 一种双向迭代器，用于寻址要合并且排序为一个范围的两个连续已排序源范围中，第二个源范围内第一个元素的位置。
 
-*时间*\
+*最后*\
 一种双向迭代器，用于寻址要合并且排序为一个范围的两个连续已排序源范围中，第二个源范围内最后一个元素之后下一个元素的位置。
 
 *pred*\
-用户定义的谓词函数对象，用于定义对一个元素小于另一个元素的理解。 比较谓词采用两个参数, 并且应在第一个元素小于第二个元素时返回**true** , 否则返回**false** 。
+用户定义的谓词函数对象，用于定义对一个元素小于另一个元素的理解。 比较谓词采用两个参数，并且应在第一个元素小于第二个元素时返回**true** ，否则返回**false** 。
 
 ### <a name="remarks"></a>备注
 
@@ -2824,7 +2824,7 @@ void inplace_merge(
 
 必须按照 `inplace_merge` 算法对合并范围排序时要使用的相同顺序对已排序连续范围分别进行排列，作为应用该算法的前置条件。 该操作保持不变，因为每个范围内元素的相对顺序均已保留。 当两个源范围中有相等的元素时，在合并范围中，第一个范围中的元素优先于第二个范围中的元素。
 
-因为该算法会向临时缓冲区分配内存，所以复杂性取决于可用内存。 如果有足够的内存可用, 则最佳情况是线性`(last - first) - 1`和比较; 如果没有可用的辅助内存, 最坏的`N log(N)`情况是, 其中*N* = 是*最后* - *一个*。
+因为该算法会向临时缓冲区分配内存，所以复杂性取决于可用内存。 如果有足够的内存可用，则最佳情况是线性 `(last - first) - 1` 比较;如果没有可用的辅助内存，则 `N log(N)`最差的情况，其中*N* = *最后* *一个* - 。
 
 ### <a name="example"></a>示例
 
@@ -2939,7 +2939,7 @@ vector v3mod = ( 0 0 1 -1 2 -2 3 -3 4 -4 5 -5 )
 
 ## <a name="is_heap"></a>is_heap
 
-如果指定范围中的元素形成堆,**则返回 true** 。
+如果指定范围中的元素形成堆，**则返回 true** 。
 
 ```cpp
 template<class RandomAccessIterator>
@@ -2972,18 +2972,18 @@ bool is_heap(
 *exec*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 一种随机访问迭代器，指示在一个范围内检查堆的开始位置。
 
-*时间*\
+*最后*\
 一种随机访问迭代器，指示一个范围内的结束位置。
 
 *pred*\
-要测试或者排序元素的条件。 比较谓词采用两个参数, 并返回**true**或**false**。
+要测试或者排序元素的条件。 比较谓词采用两个参数，并返回**true**或**false**。
 
 ### <a name="return-value"></a>返回值
 
-如果指定范围中的元素形成堆, 则返回**true** , 否则返回**false** 。
+如果指定范围中的元素形成堆，则返回**true** ，否则返回**false** 。
 
 ### <a name="remarks"></a>备注
 
@@ -2995,7 +2995,7 @@ bool is_heap(
 
 ## <a name="is_heap_until"></a>is_heap_until
 
-返回一个迭代器, 该迭代器位于范围 [ `first`, `last`) 中不满足堆排序条件的第一个元素处; 如果范围形成一个堆, 则返回*end* 。
+返回一个迭代器，它位于范围 [`first`，`last`）中不满足堆排序条件的第一个元素处; 如果范围形成一个堆，则返回*end* 。
 
 ```cpp
 template<class RandomAccessIterator>
@@ -3028,28 +3028,28 @@ RandomAccessIterator is_heap_until(
 *exec*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 一个随机访问迭代器，它为堆指定范围中要检查的第一个元素。
 
-*时间*\
+*最后*\
 一个随机访问迭代器，它为堆指定要检查的范围的末尾。
 
 *pred*\
-一个二元谓词，它指定定义堆的严格弱排序条件。 当未指定`std::less<>` *pred*时, 默认谓词为。
+一个二元谓词，它指定定义堆的严格弱排序条件。 如果未指定*pred* ，则 `std::less<>` 默认谓词。
 
 ### <a name="return-value"></a>返回值
 
-如果指定的范围形成堆或包含一个或更少元素, 则返回*last* 。 否则，为找到的不满足该堆条件的第一个元素返回迭代器。
+如果指定的范围形成堆或包含一个或更少元素，则返回*last* 。 否则，为找到的不满足该堆条件的第一个元素返回迭代器。
 
 ### <a name="remarks"></a>备注
 
-第一个`next`模板函数返回中`[first, last)`的最后一个迭代`[first, next)`器, 其中是由函数对象`std::less<>`排序的堆。 如果距离`last - first`小于 2, 则函数返回*last*。
+第一个模板函数返回中的最后一个迭代器 `next`，`[first, last)` 其中 `[first, next)` 是函数对象 `std::less<>`排序的堆。 如果 `last - first` 的距离小于2，则函数返回*last*。
 
-第二个模板函数的行为与第一个相同, 只不过它使用谓词*pred*而不是`std::less<>`作为堆排序条件。
+第二个模板函数的行为与第一个相同，只不过它使用谓词*pred*而不是 `std::less<>` 作为堆排序条件。
 
 ## <a name="is_partitioned"></a>is_partitioned
 
-如果给定范围中对某个条件测试**true**的所有元素在任何测试**false**的元素之前, 则返回**true** 。
+如果给定范围中对某个条件测试**true**的所有元素在任何测试**false**的元素之前，则返回**true** 。
 
 ```cpp
 template<class InputIterator, class UnaryPredicate>
@@ -3071,22 +3071,22 @@ bool is_partitioned(
 *exec*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 一种输入迭代器，指示一个范围开始检查条件的位置。
 
-*时间*\
+*最后*\
 一种输入迭代器，指示范围的结束位置。
 
 *pred*\
-要测试的条件。 由用户定义的谓词函数对象提供，用于定义被搜索元素要满足的条件。 一元谓词采用单个参数, 并返回**true**或**false**。
+要测试的条件。 由用户定义的谓词函数对象提供，用于定义被搜索元素要满足的条件。 一元谓词采用单个参数，并返回**true**或**false**。
 
 ### <a name="return-value"></a>返回值
 
-如果给定范围中对某个条件测试**true**的所有元素在任何测试**false**的元素之前, 则返回**true** , 否则返回**false**。
+如果给定范围中对某个条件测试**true**的所有元素在任何测试**false**的元素之前，则返回**true** ，否则返回**false**。
 
 ### <a name="remarks"></a>备注
 
-仅当中`[first, last)`的所有元素都按*pred*分区时, 模板函数`X`才返回**true** ; 也就是说`pred (X)` , `Y`在`[first, last)`中为 true 的所有元素都出现在为**false**。 `pred (Y)`
+仅当 `[first, last)` 中的所有元素都按*pred*分区时，模板函数才返回**true** ;也就是说，`pred (X)` 为 true 的 `[first, last)` 中 `X` 的所有元素出现在 `pred (Y)` 为**false**的所有元素 `Y` 之前。
 
 ## <a name="is_permutation"></a>is_permutation
 
@@ -3142,13 +3142,13 @@ bool is_permutation(
 
 ### <a name="return-value"></a>返回值
 
-如果可以重新排列范围以便根据比较运算符谓词相同, 则为**true** ;否则**为 false**。
+如果可以重新排列范围以便根据比较运算符谓词相同，则为**true** ;否则**为 false**。
 
 ### <a name="remarks"></a>备注
 
 `is_permutation` 在最坏情况下具有二次复杂性。
 
-第一个模板函数假设范围中的元素数从*first2*开始, 与指定`[first1, last1)`范围中的元素相同。 如果第二个范围中存在更多元素，则忽略它们；如果元素更少，则会发生未定义的行为。 第三个模板函数（C++14 及更高版本）不会进行此假设。 仅当为 x = = y 的范围中的每个元素 x `[first1, last1)`指定的范围内, x = = y 与从*first2*或`[first2, last2)`开始的范围中的元素 y 相同时, 两者才返回 true。 此处, `operator==`必须在其操作数之间执行成对比较。
+第一个模板函数假设范围中的元素数从*first2*开始，因为在 `[first1, last1)`指定的范围内。 如果第二个范围中存在更多元素，则忽略它们；如果元素更少，则会发生未定义的行为。 第三个模板函数（C++14 及更高版本）不会进行此假设。 仅当为指定范围内的每个元素 X 返回**true**时，`[first1, last1)` 在 x = = y 的同一范围内，与从*first2*或 `[first2, last2)`开始的范围中的元素 y 数量相等。 此处，`operator==` 必须在其操作数之间执行成对比较。
 
 第二个和第四个模板函数的行为相同，只不过它们会将 `operator==(X, Y)` 替换为 `Pred(X, Y)`。 若要行为正确，谓词必须是对称、自反且可传递。
 
@@ -3210,7 +3210,7 @@ int main()
 
 ## <a name="is_sorted"></a>is_sorted
 
-如果指定范围中的元素按顺序排序,**则返回 true** 。
+如果指定范围中的元素按顺序排序，**则返回 true** 。
 
 ```cpp
 template<class ForwardIterator>
@@ -3243,26 +3243,26 @@ bool is_sorted(
 *exec*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 一种前向迭代器，指示范围开始检查的位置。
 
-*时间*\
+*最后*\
 一种前向迭代器，指示范围的结束位置。
 
 *pred*\
-要进行测试以确定两个元素之间顺序的条件。 比较谓词采用两个参数, 并返回**true**或**false**。 此设置执行与 `operator<` 相同的任务。
+要进行测试以确定两个元素之间顺序的条件。 比较谓词采用两个参数，并返回**true**或**false**。 此设置执行与 `operator<` 相同的任务。
 
 ### <a name="remarks"></a>备注
 
-第一个模板函数返回[is_sorted_until](#is_sorted_until)`( first, last ) == last`。 `operator<`函数执行顺序比较。
+第一个模板函数返回[is_sorted_until](#is_sorted_until)`( first, last ) == last`。 `operator<` 函数执行顺序比较。
 
-第二个模板函数`is_sorted_until( first, last , pred ) == last`返回。 *Pred*谓词函数执行顺序比较。
+第二个模板函数返回 `is_sorted_until( first, last , pred ) == last`。 *Pred*谓词函数执行顺序比较。
 
 ## <a name="is_sorted_until"></a>is_sorted_until
 
 返回一个 `ForwardIterator`，设置为指定范围中按顺序排序的最后一个元素。
 
-通过第二个版本, 您可以提供一个比较函数对象, 该对象在两个给定元素按排序顺序返回 true 时返回**true** ; 否则为**false** 。
+通过第二个版本，您可以提供一个比较函数对象，该对象在两个给定元素按排序顺序返回 true 时返回**true** ; 否则为**false** 。
 
 ```cpp
 template<class ForwardIterator>
@@ -3295,14 +3295,14 @@ ForwardIterator is_sorted_until(
 *exec*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 一种前向迭代器，指示范围开始检查的位置。
 
-*时间*\
+*最后*\
 一种前向迭代器，指示范围的结束位置。
 
 *pred*\
-要进行测试以确定两个元素之间顺序的条件。 比较谓词采用两个参数, 并返回**true**或**false**。
+要进行测试以确定两个元素之间顺序的条件。 比较谓词采用两个参数，并返回**true**或**false**。
 
 ### <a name="return-value"></a>返回值
 
@@ -3310,7 +3310,7 @@ ForwardIterator is_sorted_until(
 
 ### <a name="remarks"></a>备注
 
-第一个`next`模板函数返回中`[first, last]`的最后一个迭代器`[first, next)` , 以便为按`operator<`排序的排序序列。 如果`distance()`小于 2, 则函数返回*last*。
+第一个模板函数返回 `[first, last]` 中的最后一个迭代器 `next`，以便 `[first, next)` 是按 `operator<`排序的排序序列。 如果 `distance()` 小于2，则函数返回*last*。
 
 第二个模板函数的行为相同，只不过它将 `operator<(X, Y)` 替换为 `pred(X, Y)`。
 
@@ -3325,15 +3325,15 @@ void iter_swap( ForwardIterator1 left, ForwardIterator2 right );
 
 ### <a name="parameters"></a>参数
 
-*左中*\
+*左*\
 其值将进行交换的其中一个前向迭代器。
 
-*然后*\
+*right*\
 其值将进行交换的前向迭代器中的第二个前向迭代器。
 
 ### <a name="remarks"></a>备注
 
-`swap`应优先使用**iter_swap**, 这是为了向后兼容而提供C++的标准。 如果`Fit1` `iter_swap( Fit1, Fit2 )` `swap( *Fit1, *Fit2 )`和`Fit2`是向前迭代器, 则等效于。
+应优先使用 `swap` **iter_swap**，它包含在C++标准中以便向后兼容。 如果 `Fit1` 和 `Fit2` 是向前迭代器，则 `iter_swap( Fit1, Fit2 )`，它等效于 `swap( *Fit1, *Fit2 )`。
 
 输入前向迭代器的值类型必须具有相同的值。
 
@@ -3526,7 +3526,7 @@ bool lexicographical_compare(
 一种输入迭代器，用于寻址要比较的第二个范围中最后一个元素之后下一个元素的位置。
 
 *pred*\
-用户定义的谓词函数对象，用于定义对一个元素小于另一个元素的理解。 比较谓词采用两个参数, 并且在满足时返回**true** , 如果不满足, 则返回**false** 。
+用户定义的谓词函数对象，用于定义对一个元素小于另一个元素的理解。 比较谓词采用两个参数，并且在满足时返回**true** ，如果不满足，则返回**false** 。
 
 ### <a name="return-value"></a>返回值
 
@@ -3540,7 +3540,7 @@ bool lexicographical_compare(
 
 - 未找到任何不相等的元素，但一个序列的元素数比另一个序列多，并且较短的序列小于较长的序列。
 
-- 找不到不相等, 并且序列具有相同数量的元素, 因此序列相等, 并且比较的结果为**false**。
+- 找不到不相等，并且序列具有相同数量的元素，因此序列相等，并且比较的结果为**false**。
 
 ### <a name="example"></a>示例
 
@@ -3658,10 +3658,10 @@ ForwardIterator lower_bound(
 
 ### <a name="parameters"></a>参数
 
-*1*\
+*第一个*\
 用于确定要搜索范围中第一个元素的位置的前向迭代器。
 
-*时间*\
+*最后*\
 用于确定要搜索范围中最后元素之后下一个元素的位置的前向迭代器。
 
 *value*\
@@ -3684,7 +3684,7 @@ ForwardIterator lower_bound(
 
 前向迭代器的值类型需小于比较元素才能进行排序；因此，给定两个元素，可以确定这两个元素相等（即两者均不小于对方）或其中一个小于另一个。 这将导致在非等效元素之间进行排序。
 
-算法的复杂性是随机访问迭代器和线性的对数, 否则, 步骤数与 (`last - first`) 成正比。
+算法的复杂性是随机访问迭代器和线性的对数，否则，步骤数与（`last - first`）成正比。
 
 ### <a name="example"></a>示例
 
@@ -3795,10 +3795,10 @@ void make_heap(
 
 ### <a name="parameters"></a>参数
 
-*1*\
+*第一个*\
 一种随机访问迭代器，用于寻址要转换为堆的范围中第一个元素的位置。
 
-*时间*\
+*最后*\
 一种随机访问迭代器，用于寻址要转换为堆的范围中最后一个元素之后下一个元素的位置。
 
 *pred*\
@@ -3814,7 +3814,7 @@ void make_heap(
 
 堆是实施优先级队列的理想方式，用于实施 C++ 标准库容器适配器 [priority_queue 类](../standard-library/priority-queue-class.md)。
 
-复杂性是线性的, 需要`3 * (last - first)`进行比较。
+复杂性是线性的，需要进行 `3 * (last - first)` 比较。
 
 ### <a name="example"></a>示例
 
@@ -3883,10 +3883,10 @@ constexpr Type& max(
 
 ### <a name="parameters"></a>参数
 
-*左中*\
+*左*\
 要比较的两个对象中的第一个对象。
 
-*然后*\
+*right*\
 要比较的两个对象中的第二个对象。
 
 *pred*\
@@ -3901,7 +3901,7 @@ constexpr Type& max(
 
 ### <a name="remarks"></a>备注
 
-`max` 算法很少将对象作为参数传递。 大多数 C++ 标准库算法对一系列其位置由作为参数传递的迭代器指定的元素进行操作。 如果你需要一个对一系列元素进行操作的函数，请改用 [max_element](../standard-library/algorithm-functions.md#max_element)。 Visual Studio 2017 在采用 initializer_list 的重载上启用**constexpr** 。
+`max` 算法很少将对象作为参数传递。 大多数 C++ 标准库算法对一系列其位置由作为参数传递的迭代器指定的元素进行操作。 如果你需要一个对一系列元素进行操作的函数，请改用 [max_element](../standard-library/algorithm-functions.md#max_element)。 Visual Studio 2017 对采用 initializer_list 的重载启用**constexpr** 。
 
 ### <a name="example"></a>示例
 
@@ -4059,7 +4059,7 @@ int main()
 Using integers 6 and -7...
 The integer with the greater absolute value is: -7
 The integer with the greater value is: 6.
-Comparing the members of an initializer_list...The member with the greater value is: 6The integer wiht the greater absolute value is: -7
+Comparing the members of an initializer_list...The member with the greater value is: 6The integer with the greater absolute value is: -7
 s1 = ( CInt( 1 ), CInt( 2 ) ).
 s2 = ( CInt( 2 ), CInt( 3 ) ).
 s3 = max ( s1, s2 ) = ( CInt( 2 ), CInt( 3 ) ).
@@ -4106,14 +4106,14 @@ ForwardIterator max_element(
 *exec*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 一个前向迭代器，用于确定要在其中搜索最大元素的范围中的第一个元素的位置。
 
-*时间*\
+*最后*\
 一个前向迭代器，用于确定要在其中搜索最大元素的范围中的最后一个元素的位置。
 
 *pred*\
-用户定义的谓词函数对象，用于定义对一个元素小于另一个元素的理解。 比较谓词采用两个参数, 并且应在第一个元素小于第二个元素时返回**true** , 否则返回**false** 。
+用户定义的谓词函数对象，用于定义对一个元素小于另一个元素的理解。 比较谓词采用两个参数，并且应在第一个元素小于第二个元素时返回**true** ，否则返回**false** 。
 
 ### <a name="return-value"></a>返回值
 
@@ -4123,7 +4123,7 @@ ForwardIterator max_element(
 
 引用范围必须是有效的；所有指针必须是可解除引用的，在每个序列中，最后一个位置可从第一个位置通过递增到达。
 
-复杂性是线性的: `(last - first) - 1`对于非空范围需要进行比较。
+复杂性是线性的：对于非空范围需要进行 `(last - first) - 1` 比较。
 
 ### <a name="example"></a>示例
 
@@ -4284,11 +4284,11 @@ ForwardIterator merge(
 *last2*\
 一个输入迭代器，用于确定要合并且排序为一个范围的两个连续已排序源范围中第二个源范围内最后一个元素之后下一个元素的位置。
 
-*输出*\
+*结果*\
 一个输出迭代器，用于确定要将两个源范围合并为一个已排序范围的目标范围内第一个元素的位置。
 
 *pred*\
-用户定义的谓词函数对象，用于定义对一个元素小于另一个元素的理解。 比较谓词采用两个参数, 并且应在第一个元素小于第二个元素时返回**true** , 否则返回**false** 。
+用户定义的谓词函数对象，用于定义对一个元素小于另一个元素的理解。 比较谓词采用两个参数，并且应在第一个元素小于第二个元素时返回**true** ，否则返回**false** 。
 
 ### <a name="return-value"></a>返回值
 
@@ -4302,11 +4302,11 @@ ForwardIterator merge(
 
 必须按照 `merge` 算法对合并范围排序时要使用的相同顺序对已排序源范围分别进行排列，作为应用该算法的前置条件。
 
-该操作保持不变，因为每个范围内元素的相对顺序均保留在目标范围中。 算法`merge`不会修改源范围。
+该操作保持不变，因为每个范围内元素的相对顺序均保留在目标范围中。 `merge`算法不会修改源范围。
 
 输入迭代器的值类型需小于比较元素才能进行排序；因此，给定两个元素，可以确定这两个元素相等（即两者均不小于对方）或其中一个小于另一个。 这将导致在非等效元素之间进行排序。 当两个源范围中有相等的元素时，在目标范围中，第一个范围中的元素优先于第二个源范围中的元素。
 
-算法的复杂性是线性的, 最多`(last1 - first1) - (last2 - first2) - 1`进行比较。
+算法的复杂性是线性的，最多 `(last1 - first1) - (last2 - first2) - 1` 比较。
 
 [list 类](../standard-library/list-class.md)提供成员函数“merge”来合并两个列表的元素。
 
@@ -4448,21 +4448,21 @@ constexpr Type min(
 
 ### <a name="parameters"></a>参数
 
-*左中*\
+*左*\
 要比较的两个对象中的第一个对象。
 
-*然后*\
+*right*\
 要比较的两个对象中的第二个对象。
 
 *pred*\
 用于比较两个对象的二元谓词。
 
 *inlist*\
-`initializer_list`包含要比较的成员的。
+包含要比较的成员的 `initializer_list`。
 
 ### <a name="return-value"></a>返回值
 
-两个对象中的较小者，除非两个对象都不小；在此情况下，它将返回两个对象中的第一个对象。 对于`initializer_list`, 它将返回列表中最少的对象。
+两个对象中的较小者，除非两个对象都不小；在此情况下，它将返回两个对象中的第一个对象。 如果是 `initializer_list`，它将返回列表中最少的对象。
 
 ### <a name="remarks"></a>备注
 
@@ -4670,14 +4670,14 @@ ForwardIterator min_element(
 *exec*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 一种前向迭代器，用于寻址要在其中搜索最小元素的范围中第一个元素的位置。
 
-*时间*\
+*最后*\
 一种前向迭代器，用于寻址要在其中搜索最小元素的范围中最后一个元素之后下一个元素的位置。
 
 *pred*\
-用户定义的谓词函数对象，用于定义对一个元素小于另一个元素的理解。 比较谓词采用两个参数, 并且应在第一个元素小于第二个元素时返回**true** , 否则返回**false** 。
+用户定义的谓词函数对象，用于定义对一个元素小于另一个元素的理解。 比较谓词采用两个参数，并且应在第一个元素小于第二个元素时返回**true** ，否则返回**false** 。
 
 ### <a name="return-value"></a>返回值
 
@@ -4687,7 +4687,7 @@ ForwardIterator min_element(
 
 引用范围必须是有效的；所有指针必须是可解除引用的，在每个序列中，最后一个位置可从第一个位置通过递增到达。
 
-复杂性是线性的: `(last - first) - 1`对于非空范围需要进行比较。
+复杂性是线性的：对于非空范围需要进行 `(last - first) - 1` 比较。
 
 ### <a name="example"></a>示例
 
@@ -4834,14 +4834,14 @@ pair<ForwardIterator, ForwardIterator> minmax_element(
 *exec*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 一种前向迭代器，指示范围的开始位置。
 
-*时间*\
+*最后*\
 一种前向迭代器，指示范围的结束位置。
 
 *pred*\
-用户定义的谓词函数对象, 用于定义一个元素小于另一个元素的含义。 比较谓词采用两个参数, 如果第一个参数小于第二个参数, 则应返回**true** , 否则返回**false** 。
+用户定义的谓词函数对象，用于定义一个元素小于另一个元素的含义。 比较谓词采用两个参数，如果第一个参数小于第二个参数，则应返回**true** ，否则返回**false** 。
 
 ### <a name="return-value"></a>返回值
 
@@ -4857,7 +4857,7 @@ pair<ForwardIterator, ForwardIterator> minmax_element(
 
 第二个模板函数的行为相同，只不过它将 `operator<(X, Y)` 替换为 `pred(X, Y)`。
 
-如果序列为非空, 则函数最多`3 * (last - first - 1) / 2`执行比较。
+如果序列为非空，则函数最多执行 `3 * (last - first - 1) / 2` 比较。
 
 ## <a name="minmax"></a>minmax
 
@@ -4887,25 +4887,25 @@ constexpr pair<Type&, Type&> minmax(
 
 ### <a name="parameters"></a>参数
 
-*左中*\
+*左*\
 要比较的两个对象中的第一个对象。
 
-*然后*\
+*right*\
 要比较的两个对象中的第二个对象。
 
 *pred*\
 用于比较两个对象的二元谓词。
 
 *inlist*\
-`initializer_list`包含要比较的成员的。
+包含要比较的成员的 `initializer_list`。
 
 ### <a name="remarks"></a>备注
 
-如果*right*小于*left*, `pair<const Type&, const Type&>( right, left )`则第一个模板函数返回。 否则，它将返回 `pair<const Type&, const Type&>( left, right )`。
+如果*right*小于*left*，则第一个模板函数返回 `pair<const Type&, const Type&>( right, left )`。 否则，它将返回 `pair<const Type&, const Type&>( left, right )`。
 
-第二个成员函数返回一个对, 其中第一个元素为较小的, 第二个元素按谓词*pred*进行比较。
+第二个成员函数返回一个对，其中第一个元素为较小的，第二个元素按谓词*pred*进行比较。
 
-其余模板函数的行为相同, 不同之处在于它们将*左*参数和*右*参数替换为*inlist*。
+其余模板函数的行为相同，不同之处在于它们将*左*参数和*右*参数替换为*inlist*。
 
 此函数仅执行一次比较。
 
@@ -5011,7 +5011,7 @@ mismatch(
 
 ### <a name="remarks"></a>备注
 
-第一个模板函数假设从 first2 开始的范围中存在的元素数与 [first1, last1) 指定的范围中的元素数相同。 如果在第二个范围中存在更多值, 则忽略它们;如果小于, 则会导致未定义的行为。
+第一个模板函数假设从 first2 开始的范围中存在的元素数与 [first1, last1) 指定的范围中的元素数相同。 如果在第二个范围中存在更多值，则忽略它们;如果小于，则会导致未定义的行为。
 
 要搜索的范围必须是有效的；所有迭代器必须是可解除引用的，并且最后一个位置可从第一个位置通过递增到达。
 
@@ -5114,7 +5114,7 @@ C++14: vec_1 and list_1 are a mismatch: false
 Press a key
 ```
 
-## <a name="alg_move"></a>&lt;alg移动&gt;
+## <a name="alg_move"></a>&lt;alg&gt; 移动
 
 移动与指定范围关联的元素。
 
@@ -5138,18 +5138,18 @@ ForwardIterator2 move(
 *exec*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 一个输入迭代器，指示在范围内移动元素的起始位置。
 
-*时间*\
+*最后*\
 一个输入迭代器，指示在范围内移动元素的结束位置。
 
-*目的*\
+*dest*\
 将包含已移动元素的输出迭代器。
 
 ### <a name="remarks"></a>备注
 
-`*(dest + N) = move(*(first + N))`对于范围`N` `N`中的每个, 模板函数将计算一次, 以从最低值开始严格递增的值。 `[0, last - first)` 然后返回 `dest + N`。 如果`dest`和*首次*指定存储区域, 则*目标*不能在范围`[first, last)`内。
+模板函数为范围 `[0, last - first)`中的每个 `N` 计算一次 `*(dest + N) = move(*(first + N))` 一次，以从最低值开始严格递增的 `N` 值。 然后返回 `dest + N`。 如果 `dest` 和*首次*指定存储区域，则*目标*不能在 `[first, last)`范围内。
 
 ## <a name="move_backward"></a>move_backward
 
@@ -5165,10 +5165,10 @@ BidirectionalIterator2 move_backward(
 
 ### <a name="parameters"></a>参数
 
-*1*\
+*第一个*\
 指示范围内移动元素的开始位置的迭代器。
 
-*时间*\
+*最后*\
 指示在范围内移动元素的结束位置的迭代器。 此元素未移动。
 
 *destEnd*\
@@ -5176,7 +5176,7 @@ BidirectionalIterator2 move_backward(
 
 ### <a name="remarks"></a>备注
 
-`*(destEnd - N - 1) = move(*(last - N - 1))`对于范围`N` `N`中的每个, 模板函数将计算一次, 以从最低值开始严格递增的值。 `[0, last - first)` 然后返回 `destEnd - (last - first)`。 如果*destEnd*和*第一次*指定存储区域, 则*destEnd*不能在范围`[first, last)`内。
+模板函数为范围 `[0, last - first)`中的每个 `N` 计算一次 `*(destEnd - N - 1) = move(*(last - N - 1))` 一次，以从最低值开始严格递增的 `N` 值。 然后返回 `destEnd - (last - first)`。 如果*destEnd*和*第一次*指定存储区域，则*destEnd*不能处于 `[first, last)`范围内。
 
 `move` 和 `move_backward` 在功能上等效于将 `copy` 和 `copy_backward` 与移动迭代器结合使用。
 
@@ -5199,10 +5199,10 @@ bool next_permutation(
 
 ### <a name="parameters"></a>参数
 
-*1*\
+*第一个*\
 一种双向迭代器，指向要重新排序的范围内第一个元素的位置。
 
-*时间*\
+*最后*\
 一种双向迭代器，指向要重新排序的范围内最后一个元素之后下一个元素的位置。
 
 *pred*\
@@ -5216,9 +5216,9 @@ bool next_permutation(
 
 引用的范围必须有效；所有指针都必须可以引用，并且在序列中，可通过递增从第一个位置到达最后一个位置。
 
-默认二元谓词小于, 并且范围中的元素必须小于可比, 以确保下一个排列定义正确。
+默认二元谓词小于，并且范围中的元素必须小于可比，以确保下一个排列定义正确。
 
-在大多数`(last - first) / 2`交换时, 复杂性是线性的。
+复杂性是线性的，最多 `(last - first) / 2` 交换。
 
 ### <a name="example"></a>示例
 
@@ -5398,23 +5398,23 @@ void nth_element(
 *exec*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 一种随机访问迭代器，用于寻址要分区的范围中第一个元素的位置。
 
-*n*\
+第*n*\
 一种随机访问迭代器，用于寻址要在分区边界上进行正确排序的元素的位置。
 
-*时间*\
+*最后*\
 一种随机访问迭代器，用于寻址要分区的范围中最后一个元素之后下一个元素的位置。
 
 *pred*\
-用户定义的谓词函数对象，定义排序中连续元素要满足的比较条件。 比较谓词采用两个参数, 并且在满足时返回**true** , 如果不满足, 则返回**false** 。
+用户定义的谓词函数对象，定义排序中连续元素要满足的比较条件。 比较谓词采用两个参数，并且在满足时返回**true** ，如果不满足，则返回**false** 。
 
 ### <a name="remarks"></a>备注
 
 引用的范围必须有效；所有指针都必须可以引用，并且在序列中，可通过递增从第一个位置到达最后一个位置。
 
-该`nth_element`算法不保证子范围中的元素在第*n*个元素的两侧进行排序。 因而，它保证的内容比 `partial_sort` 更少，它对范围中某些所选元素下面的元素进行排序，并且在不需要较低范围的排序时，可以用作替代 `partial_sort` 的一种较快算法。
+`nth_element` 算法不保证子范围中第*n*个元素两侧的元素进行排序。 因而，它保证的内容比 `partial_sort` 更少，它对范围中某些所选元素下面的元素进行排序，并且在不需要较低范围的排序时，可以用作替代 `partial_sort` 的一种较快算法。
 
 元素是等效的，但是如果两者都不小于对方，则不一定要相等。
 
@@ -5488,7 +5488,7 @@ int main() {
 
 ## <a name="none_of"></a>none_of
 
-当给定范围内的元素内从不出现条件时, 返回**true** 。
+当给定范围内的元素内从不出现条件时，返回**true** 。
 
 ```cpp
 template<class InputIterator, class UnaryPredicate>
@@ -5510,22 +5510,22 @@ bool none_of(
 *exec*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 一种输入迭代器，指示在元素范围内检查条件的起始位置。
 
-*时间*\
+*最后*\
 一种输入迭代器，指示元素范围的结束位置。
 
 *pred*\
-要测试的条件。 由定义条件的用户定义的谓词函数对象提供。 一元谓词采用单个参数, 并返回**true**或**false**。
+要测试的条件。 由定义条件的用户定义的谓词函数对象提供。 一元谓词采用单个参数，并返回**true**或**false**。
 
 ### <a name="return-value"></a>返回值
 
-如果在指示范围内至少检测到一次条件, 则返回**true** ; 如果检测到条件, 则返回**false** 。
+如果在指示范围内至少检测到一次条件，则返回**true** ; 如果检测到条件，则返回**false** 。
 
 ### <a name="remarks"></a>备注
 
-仅当 (对于范围`[0, last - first)`中的某些`N` ) 谓词`pred(*(first + N))`始终为**false**时, 模板函数才返回**true** 。
+仅当范围 `[0, last - first)`中的某些 `N` 的谓词 `pred(*(first + N))` 始终为**false**时，模板函数才返回**true** 。
 
 ## <a name="partial_sort"></a>partial_sort
 
@@ -5566,13 +5566,13 @@ void partial_sort(
 *exec*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 一种随机访问迭代器，用于寻址要排序的范围中第一个元素的位置。
 
 *sortEnd*\
 一种随机访问迭代器，用于寻址要排序的子范围中最后元素之后下一个元素的位置。
 
-*时间*\
+*最后*\
 一种随机访问迭代器，用于寻址要部分排序的子范围中最后元素之后下一个元素的位置。
 
 *pred*\
@@ -5582,9 +5582,9 @@ void partial_sort(
 
 引用的范围必须有效；所有指针都必须可以引用，并且在序列中，可通过递增从第一个位置到达最后一个位置。
 
-元素是等效的，但是如果两者都不小于对方，则不一定要相等。 该`sort`算法不稳定, 并且不保证将保留等效元素的相对顺序。 算法 `stable_sort` 会保留此原始顺序。
+元素是等效的，但是如果两者都不小于对方，则不一定要相等。 `sort` 算法不稳定，因此不保证将保留等效元素的相对顺序。 算法 `stable_sort` 会保留此原始顺序。
 
-平均部分排序复杂度是*O*`last`((`first`- ) log (`sortEnd`- `first`))。
+平均部分排序复杂度为*O*（（`last`- `first`）日志（`sortEnd`- `first`））。
 
 ### <a name="example"></a>示例
 
@@ -5826,14 +5826,14 @@ ForwardIterator partition(
 *exec*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 一种双向迭代器，用于寻址要分区的范围中第一个元素的位置。
 
-*时间*\
+*最后*\
 一种双向迭代器，用于寻址要分区的范围中最后一个元素之后下一个元素的位置。
 
 *pred*\
-用户定义的谓词函数对象，用于定义如果元素要分类时应满足的条件。 一元谓词采用单个参数, 并返回**true**或**false**。
+用户定义的谓词函数对象，用于定义如果元素要分类时应满足的条件。 一元谓词采用单个参数，并返回**true**或**false**。
 
 ### <a name="return-value"></a>返回值
 
@@ -5843,9 +5843,9 @@ ForwardIterator partition(
 
 引用的范围必须有效；所有指针都必须可以引用，并且在序列中，可通过递增从第一个位置到达最后一个位置。
 
-`pred( b, a )`如果两者 `pred( a, b )`都为 false 且为 false, 则元素*a*和 b 等效, 但不一定相等, 其中*pred*是参数指定的谓词。 该`partition`算法不稳定, 并且不保证将保留等效元素的相对顺序。 算法 `stable_partition` 会保留此原始顺序。
+如果 `pred( a, b )` 为 false 且 `pred( b, a )` 为 false （其中*pred*是参数指定的谓词），则元素*a*和*b*是等效的，但不一定相等。 `partition` 算法不稳定，因此不保证将保留等效元素的相对顺序。 算法 `stable_partition` 会保留此原始顺序。
 
-复杂性是线性的: `(last - first)` *pred*的应用程序和最多`(last - first)/2`交换。
+复杂性是线性的： *pred*的 `(last - first)` 应用程序，最多 `(last - first)/2` 交换。
 
 ### <a name="example"></a>示例
 
@@ -5890,7 +5890,7 @@ int main()
 
 ## <a name="partition_copy"></a>partition_copy
 
-将条件为**true**的元素复制到一个目标, 并将条件为**false**的元素复制到另一个目标。 元素必须来自于指定范围。
+将条件为**true**的元素复制到一个目标，并将条件为**false**的元素复制到另一个目标。 元素必须来自于指定范围。
 
 ```cpp
 template<class InputIterator, class OutputIterator1, class OutputIterator2, class UnaryPredicate>
@@ -5916,24 +5916,24 @@ pair<ForwardIterator1, ForwardIterator2> partition_copy(
 *exec*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 一种输入迭代器，指示在一个范围中开始检查条件的位置。
 
-*时间*\
+*最后*\
 一种输入迭代器，指示范围的结束位置。
 
 *dest1*\
-一个输出迭代器, 用于复制为使用*pred*测试的条件返回 true 的元素。
+一个输出迭代器，用于复制为使用*pred*测试的条件返回 true 的元素。
 
 *dest2*\
-一个输出迭代器, 用于复制为使用*pred*测试的条件返回 false 的元素。
+一个输出迭代器，用于复制为使用*pred*测试的条件返回 false 的元素。
 
 *pred*\
-要测试的条件。 由定义要测试条件的用户定义谓词函数对象提供。 一元谓词采用单个参数, 并返回**true**或**false**。
+要测试的条件。 由定义要测试条件的用户定义谓词函数对象提供。 一元谓词采用单个参数，并返回**true**或**false**。
 
 ### <a name="remarks"></a>备注
 
-如果`X` `[first,last)` `*dest1++` `*dest2++`为 true, 则模板函数将中的每个元素复制到; 否则为。 `pred(X)` 它将返回 `pair<OutputIterator1, OutputIterator2>(dest1, dest2)`。
+如果 `pred(X)` 为 true，则模板函数将 `[first,last)` 中 `X` 的每个元素复制到 `*dest1++`; 如果不是，则 `*dest2++` 为。 它将返回 `pair<OutputIterator1, OutputIterator2>(dest1, dest2)`。
 
 ## <a name="partition_point"></a>partition_point
 
@@ -5949,22 +5949,22 @@ ForwardIterator partition_point(
 
 ### <a name="parameters"></a>参数
 
-*1*\
+*第一个*\
 一种 `ForwardIterator`，指示在一个范围内检查条件的开始位置。
 
-*时间*\
+*最后*\
 一种 `ForwardIterator`，指示范围的结束位置。
 
 *pred*\
-要测试的条件。 由用户定义的谓词函数对象提供，用于定义被搜索元素要满足的条件。 一元谓词采用单个参数, 并返回**true**或**false**。
+要测试的条件。 由用户定义的谓词函数对象提供，用于定义被搜索元素要满足的条件。 一元谓词采用单个参数，并返回**true**或**false**。
 
 ### <a name="return-value"></a>返回值
 
-返回一个`ForwardIterator` , 它引用不满足*pred*测试的条件的第一个元素, 如果未找到, 则返回*最后*一个元素。
+返回一个 `ForwardIterator`，该引用未满足*pred*测试的条件的第一个元素，如果未找到，则返回*最后*一个元素。
 
 ### <a name="remarks"></a>备注
 
-模板函数`it`查找中`[first, last)`的第一个迭代器, `pred(*it)`其中为**false**。 序列必须按*pred*排序。
+此模板函数查找 `pred(*it)` 为**false**的 `[first, last)` 中的第一个迭代器 `it`。 序列必须按*pred*排序。
 
 ## <a name="pop_heap"></a>pop_heap
 
@@ -5985,10 +5985,10 @@ void pop_heap(
 
 ### <a name="parameters"></a>参数
 
-*1*\
+*第一个*\
 一种随机访问迭代器，用于寻址堆中第一个元素的位置。
 
-*时间*\
+*最后*\
 一种随机访问迭代器，用于寻址堆中最后一个元素之后下一个元素的位置。
 
 *pred*\
@@ -6010,7 +6010,7 @@ void pop_heap(
 
 排除末尾新添加元素的范围必须是一个堆。
 
-复杂度为对数, 要求`log (last - first)`进行比较。
+复杂度为对数，最多需要 `log (last - first)` 比较。
 
 ### <a name="example"></a>示例
 
@@ -6094,10 +6094,10 @@ bool prev_permutation(
 
 ### <a name="parameters"></a>参数
 
-*1*\
+*第一个*\
 一种双向迭代器，指向要重新排序的范围内第一个元素的位置。
 
-*时间*\
+*最后*\
 一种双向迭代器，指向要重新排序的范围内最后一个元素之后下一个元素的位置。
 
 *pred*\
@@ -6105,15 +6105,15 @@ bool prev_permutation(
 
 ### <a name="return-value"></a>返回值
 
-如果按字典顺序上一个排列存在并且已替换范围的原始顺序,**则为 true** ;否则**为 false**, 在这种情况下, 会将排序转换为按字典顺序最大排列。
+如果按字典顺序上一个排列存在并且已替换范围的原始顺序，**则为 true** ;否则**为 false**，在这种情况下，会将排序转换为按字典顺序最大排列。
 
 ### <a name="remarks"></a>备注
 
 引用的范围必须有效；所有指针都必须可以引用，并且在序列中，可通过递增从第一个位置到达最后一个位置。
 
-默认二元谓词小于, 并且范围中的元素必须是小于比较的, 才能确保上一排列定义正确。
+默认二元谓词小于，并且范围中的元素必须是小于比较的，才能确保上一排列定义正确。
 
-复杂性是线性的, 最多进行 (`last` - `first`)/2 次交换。
+复杂性是线性的，最多（`last` - `first`）/2 次交换。
 
 ### <a name="example"></a>示例
 
@@ -6269,10 +6269,10 @@ void push_heap(
 
 ### <a name="parameters"></a>参数
 
-*1*\
+*第一个*\
 一种随机访问迭代器，用于寻址堆中第一个元素的位置。
 
-*时间*\
+*最后*\
 一种随机访问迭代器，用于寻址要转换为堆的范围中最后一个元素之后下一个元素的位置。
 
 *pred*\
@@ -6294,7 +6294,7 @@ void push_heap(
 
 排除末尾新添加元素的范围必须是一个堆。
 
-复杂度为对数, 要求`log(last - first)`进行比较。
+复杂度为对数，最多需要 `log(last - first)` 比较。
 
 ### <a name="example"></a>示例
 
@@ -6365,7 +6365,7 @@ int main() {
 
 ## <a name="random_shuffle"></a>random_shuffle
 
-Std:: random_shuffle () 函数已弃用, 替换为[std:: 无序](../standard-library/algorithm-functions.md#shuffle)。 有关代码示例和详细信息, 请参阅[ \<"随机 >](../standard-library/random.md)和 Stack Overflow post[为什么在 c + + 14 中弃用 std:: random_shuffle 方法？](https://go.microsoft.com/fwlink/p/?linkid=397954)。
+Std：： random_shuffle （）函数已弃用，并已替换为[std：：无序](../standard-library/algorithm-functions.md#shuffle)。 有关代码示例和详细信息，请参阅[\<随机 >](../standard-library/random.md)和 Stack Overflow post[为什么在 c + + 14 中弃用 std：： random_shuffle 方法？](https://go.microsoft.com/fwlink/p/?linkid=397954)。
 
 ## <a name="remove"></a>取消
 
@@ -6391,10 +6391,10 @@ ForwardIterator remove(
 *exec*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 寻址要删除元素的范围中的第一个元素位置的转发迭代器。
 
-*时间*\
+*最后*\
 寻址要删除元素的范围中的最后一个元素的下一个位置的转发迭代器。
 
 *value*\
@@ -6412,9 +6412,9 @@ ForwardIterator remove(
 
 用于确定元素之间相等性的 `operator==` 必须在其操作数之间施加等效关系。
 
-复杂性是线性的;有 (`last` - )比较是否相等。`first`
+复杂性是线性的;相等性有（`last` - `first`）比较。
 
-[List 类](../standard-library/list-class.md)具有更高效的`remove`成员函数版本, 它也重新链接指针。
+[List 类](../standard-library/list-class.md)具有更高效的成员函数版本 `remove`，它也重新链接指针。
 
 ### <a name="example"></a>示例
 
@@ -6489,13 +6489,13 @@ ForwardIterator2 remove_copy(
 *exec*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 一个输入迭代器，用于确定要删除元素的范围内第一个元素的位置。
 
-*时间*\
+*最后*\
 一个输入迭代器，用于确定要删除元素的范围内最后一个元素之后下一个元素的位置。
 
-*输出*\
+*结果*\
 一个输出迭代器，用于确定要删除元素的目标范围内第一个元素的位置。
 
 *value*\
@@ -6515,7 +6515,7 @@ ForwardIterator2 remove_copy(
 
 用于确定元素之间相等性的 `operator==` 必须在其操作数之间施加等效关系。
 
-复杂性是线性的;`last``last`存在相等性和最多(`first`)个赋值运算。 -  - `first`
+复杂性是线性的;相等性和最多（`last` - `first`）赋值都有（`last` - `first`）比较。
 
 ### <a name="example"></a>示例
 
@@ -6563,7 +6563,7 @@ int main()
 
 ## <a name="remove_copy_if"></a>remove_copy_if
 
-将源范围中的元素复制到目标范围, 但满足谓词的元素除外。 复制元素而不影响剩余元素的顺序。 返回新目标范围的末尾。
+将源范围中的元素复制到目标范围，但满足谓词的元素除外。 复制元素而不影响剩余元素的顺序。 返回新目标范围的末尾。
 
 ```cpp
 template<class InputIterator, class OutputIterator, class UnaryPredicate>
@@ -6587,13 +6587,13 @@ ForwardIterator2 remove_copy_if(
 *exec*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 一个输入迭代器，用于确定要删除元素的范围内第一个元素的位置。
 
-*时间*\
+*最后*\
 一个输入迭代器，用于确定要删除元素的范围内最后一个元素之后下一个元素的位置。
 
-*输出*\
+*结果*\
 一个输出迭代器，用于确定要删除元素的目标范围内第一个元素的位置。
 
 *pred*\
@@ -6613,7 +6613,7 @@ ForwardIterator2 remove_copy_if(
 
 用于确定元素之间相等性的 `operator==` 必须在其操作数之间施加等效关系。
 
-复杂性是线性的:`last`存在 ( - `first`) 与相等性和最多 (`last` - `first`) 个赋值的比较。
+复杂性是线性的：对于相等性和最多（`last` - `first`）分配，有（`last` - `first`）比较。
 
 有关这些函数行为方式的信息，请参阅[检查迭代器](../standard-library/checked-iterators.md)。
 
@@ -6692,10 +6692,10 @@ ForwardIterator remove_if(
 *exec*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 一种输入迭代器，指向从其中删除元素的范围中第一个元素的位置。
 
-*时间*\
+*最后*\
 一种输入迭代器，指向从其中删除元素的范围中最后一个元素之后下一个元素的位置。
 
 *pred*\
@@ -6713,7 +6713,7 @@ ForwardIterator remove_if(
 
 用于确定元素之间相等性的 `operator==` 必须在其操作数之间施加等效关系。
 
-复杂性是线性的: 有 (`last` - `first`) 比较是否相等。
+复杂性是线性的：相等时有（`last` - `first`）比较。
 
 List 具有更高效的成员函数 remove 的版本，它将会重新链接指针。
 
@@ -6795,10 +6795,10 @@ void replace(
 *exec*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 一种输入迭代器，指向要从其中替换元素的范围中第一个元素的位置。
 
-*时间*\
+*最后*\
 一种输入迭代器，指向要从其中替换元素的范围中最后一个元素之后下一个元素的位置。
 
 *oldVal*\
@@ -6815,7 +6815,7 @@ void replace(
 
 用于确定元素之间相等性的 `operator==` 必须在其操作数之间施加等效关系。
 
-复杂性是线性的;存在`last`(`last``first` - ) 与新值的相等性和最多 () 赋值运算。 - `first`
+复杂性是线性的;存在（`last` - `first`）的相等性比较，以及最多（`last` - `first`）的新值分配。
 
 ### <a name="example"></a>示例
 
@@ -6884,13 +6884,13 @@ ForwardIterator2 replace_copy(
 *exec*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 一个输入迭代器，指向要替换元素的范围中的第一个元素的位置。
 
-*时间*\
+*最后*\
 一个输入迭代器，指向要替换元素的范围中最后一个元素之后下一个元素的位置。
 
-*输出*\
+*结果*\
 一个输出迭代器，指向要将序列已更改的元素复制到的目标范围中的第一个元素。
 
 *oldVal*\
@@ -6901,7 +6901,7 @@ ForwardIterator2 replace_copy(
 
 ### <a name="return-value"></a>返回值
 
-一个输出迭代器, 指向目标范围中最后一个元素之后的位置, 将更改的元素序列复制到该位置。
+一个输出迭代器，指向目标范围中最后一个元素之后的位置，将更改的元素序列复制到该位置。
 
 ### <a name="remarks"></a>备注
 
@@ -6911,7 +6911,7 @@ ForwardIterator2 replace_copy(
 
 用于确定元素之间相等性的 `operator==` 必须在其操作数之间施加等效关系。
 
-复杂性是线性的: 对于相等性`last`和最多 ( - `first``last`) 分配的新值, 有 ( - `first`) 比较。
+复杂性是线性的：对于相等性和最多（`last` - `first`）的新值分配，有（`last` - `first`）比较。
 
 ### <a name="example"></a>示例
 
@@ -6999,13 +6999,13 @@ ForwardIterator2 replace_copy_if(
 *exec*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 一个输入迭代器，指向要替换元素的范围中的第一个元素的位置。
 
-*时间*\
+*最后*\
 一个输入迭代器，指向要替换元素的范围中最后一个元素之后下一个元素的位置。
 
-*输出*\
+*结果*\
 一个输出迭代器，指向要将元素复制到的目标范围内第一个元素的位置。
 
 *pred*\
@@ -7016,7 +7016,7 @@ ForwardIterator2 replace_copy_if(
 
 ### <a name="return-value"></a>返回值
 
-一个输出迭代器, 指向目标范围中最后一个元素之后的位置, 将更改的元素序列复制到该位置。
+一个输出迭代器，指向目标范围中最后一个元素之后的位置，将更改的元素序列复制到该位置。
 
 ### <a name="remarks"></a>备注
 
@@ -7026,7 +7026,7 @@ ForwardIterator2 replace_copy_if(
 
 用于确定元素之间相等性的 `operator==` 必须在其操作数之间施加等效关系。
 
-复杂性是线性的;存在`last`(`last``first` - ) 与新值的相等性和最多 () 赋值运算。 - `first`
+复杂性是线性的;存在（`last` - `first`）的相等性比较，以及最多（`last` - `first`）的新值分配。
 
 ### <a name="example"></a>示例
 
@@ -7120,10 +7120,10 @@ void replace_if(
 *exec*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 一种输入迭代器，指向要从其中替换元素的范围中第一个元素的位置。
 
-*时间*\
+*最后*\
 一个迭代器，指向要替换元素的范围中最后一个元素之后下一个元素的位置。
 
 *pred*\
@@ -7138,11 +7138,11 @@ void replace_if(
 
 未替换的元素的顺序保持不变。
 
-算法`replace_if`是算法`replace`的通用化, 允许指定任何谓词, 而不是与指定的常数值相等。
+算法 `replace_if` 是算法的通用化 `replace`，允许指定任何谓词，而不是与指定的常数值相等。
 
 用于确定元素之间相等性的 `operator==` 必须在其操作数之间施加等效关系。
 
-复杂性是线性的: 对于相等性`last`和最多 ( - `first``last`) 分配的新值, 有 ( - `first`) 比较。
+复杂性是线性的：对于相等性和最多（`last` - `first`）的新值分配，有（`last` - `first`）比较。
 
 ### <a name="example"></a>示例
 
@@ -7212,10 +7212,10 @@ void reverse(
 *exec*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 一种双向迭代器，指向元素要进行重排的范围中第一个元素的位置。
 
-*时间*\
+*最后*\
 一个双向迭代器，指向元素要进行重排的范围中最后一个元素之后下一个元素的位置。
 
 ### <a name="remarks"></a>备注
@@ -7289,18 +7289,18 @@ ForwardIterator reverse_copy(
 *exec*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 一个双向迭代器，指向元素进行置换的源范围中第一个元素的位置。
 
-*时间*\
+*最后*\
 一个双向迭代器，指向元素进行置换的源范围中最后一个元素之后下一个元素的位置。
 
-*输出*\
+*结果*\
 一个输出迭代器，指向要将元素复制到的目标范围内第一个元素的位置。
 
 ### <a name="return-value"></a>返回值
 
-一个输出迭代器, 指向目标范围中最后一个元素之后的位置, 将更改的元素序列复制到该位置。
+一个输出迭代器，指向目标范围中最后一个元素之后的位置，将更改的元素序列复制到该位置。
 
 ### <a name="remarks"></a>备注
 
@@ -7371,20 +7371,20 @@ ForwardIterator rotate(
 *exec*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 一个向前迭代器，用于确定要轮换的范围内第一个元素的位置。
 
-*过程*\
+*中间*\
 一个向前迭代器，用于在范围内定义边界，从而确定范围内其元素将与第一部分中的元素进行交换的第二部分中第一个元素的位置。
 
-*时间*\
+*最后*\
 一个向前迭代器，用于确定要轮换的范围内最后一个元素之后下一个元素的位置。
 
 ### <a name="remarks"></a>备注
 
 引用的范围必须有效；所有指针必须可取消引用，并且在序列内，最后一个位置可从第一个位置通过递增到达。
 
-复杂性是线性的, 最多进行`last`( - `first`) 交换。
+复杂性是线性的，最多`last` - `first`）交换。
 
 ### <a name="example"></a>示例
 
@@ -7487,16 +7487,16 @@ ForwardIterator2 rotate_copy(
 *exec*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 一个向前迭代器，用于确定要轮换的范围内第一个元素的位置。
 
-*过程*\
+*中间*\
 一个向前迭代器，用于在范围内定义边界，从而确定范围内其元素将与第一部分中的元素进行交换的第二部分中第一个元素的位置。
 
-*时间*\
+*最后*\
 一个向前迭代器，用于确定要轮换的范围内最后一个元素之后下一个元素的位置。
 
-*输出*\
+*结果*\
 一种输出迭代器，用于定址目标范围内第一个元素的位置。
 
 ### <a name="return-value"></a>返回值
@@ -7507,7 +7507,7 @@ ForwardIterator2 rotate_copy(
 
 引用的范围必须有效；所有指针必须可取消引用，并且在序列内，最后一个位置可从第一个位置通过递增到达。
 
-复杂性是线性的, 最多进行`last`( - `first`) 交换。
+复杂性是线性的，最多`last` - `first`）交换。
 
 ### <a name="example"></a>示例
 
@@ -7645,8 +7645,8 @@ ForwardIterator search(
 *pred*\
 用于定义两个元素被视为等效时应满足的条件的用户定义谓词函数对象。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。
 
-*者*\
-封装要查找的模式以及要使用的搜索算法的搜索程序。 有关 searchers 的详细信息, 请参阅[default_searcher 类](default-searcher-class.md)、 [boyer_moore_horspool_searcher 类](boyer-moore-horspool-searcher-class.md)和[boyer_moore_searcher 类](boyer-moore-searcher-class.md)。
+*搜索*\
+封装要查找的模式以及要使用的搜索算法的搜索程序。 有关 searchers 的详细信息，请参阅[default_searcher 类](default-searcher-class.md)、 [boyer_moore_horspool_searcher 类](boyer-moore-horspool-searcher-class.md)和[boyer_moore_searcher 类](boyer-moore-searcher-class.md)。
 
 ### <a name="return-value"></a>返回值
 
@@ -7808,7 +7808,7 @@ ForwardIterator search_n(
 *last1*\
 用于确定要搜索范围中最后元素之后下一个元素的位置的前向迭代器。
 
-*计*\
+*计数*\
 要搜索的子序列的大小。
 
 *value*\
@@ -7971,7 +7971,7 @@ ForwardIterator set_difference(
 *last2*\
 一个输入迭代器，用于寻址要相并且排序为一个范围（表示两个源范围的差异）的两个连续已排序源范围中第二个源范围内最后一个元素之后下一个元素的位置。
 
-*输出*\
+*结果*\
 一个输出迭代器，用于寻址要将两个源范围相并为一个已排序范围（表示两个源范围的差异）的目标范围内第一个元素的位置。
 
 *pred*\
@@ -7993,7 +7993,7 @@ ForwardIterator set_difference(
 
 输入迭代器的值类型需小于比较元素才能进行排序；因此，给定两个元素，可以确定这两个元素相等（即两者均不小于对方）或其中一个小于另一个。 这将导致在非等效元素之间进行排序。 当两个源范围中有相等的元素时，在目标范围中，第一个范围中的元素优先于第二个源范围中的元素。 如果源范围包含某个元素的重复项，以便使第一个源范围中的重复项多于第二个源范围中的重复项，则目标范围将包含这些元素在第一个源范围中出现的次数比其在第二个源范围中出现的次数多出的次数。
 
-算法的复杂性是线性的, 对于非空`2 * ((last1 - first1) - (last2 - first2)) - 1`源范围最多进行比较。
+算法的复杂性是线性的，对于非空源范围最多 `2 * ((last1 - first1) - (last2 - first2)) - 1` 比较。
 
 ### <a name="example"></a>示例
 
@@ -8173,7 +8173,7 @@ ForwardIterator set_intersection(
 *last2*\
 一个输入迭代器，用于确定要相并且排序为一个范围（表示两个源范围的交集）的两个连续已排序源范围中第二个源范围内最后一个元素之后下一个元素的位置。
 
-*输出*\
+*结果*\
 一个输出迭代器，用于确定要将两个源范围相并为一个已排序范围（表示两个源范围的交集）的目标范围内第一个元素的位置。
 
 *pred*\
@@ -8195,7 +8195,7 @@ ForwardIterator set_intersection(
 
 输入迭代器的值类型需小于比较元素才能进行排序；因此，给定两个元素，可以确定这两个元素相等（即两者均不小于对方）或其中一个小于另一个。 这将导致在非等效元素之间进行排序。 当两个源范围中有相等的元素时，在目标范围中，第一个范围中的元素优先于第二个源范围中的元素。 如果源范围包含某个元素的重复项，目标范围将包含出现在源范围中的这些元素的最大数目。
 
-算法的复杂性是线性的, 对于非空`2 * ((last1 - first1) + (last2 - first2)) - 1`源范围最多进行比较。
+算法的复杂性是线性的，对于非空源范围最多 `2 * ((last1 - first1) + (last2 - first2)) - 1` 比较。
 
 ### <a name="example"></a>示例
 
@@ -8371,7 +8371,7 @@ ForwardIterator set_symmetric_difference(
 *last2*\
 一个输入迭代器，用于确定要相并且排序为一个范围（表示两个源范围的对称差异）的两个连续已排序源范围中第二个源范围内最后一个元素之后下一个元素的位置。
 
-*输出*\
+*结果*\
 一个输出迭代器，用于确定要将两个源范围相并为一个已排序范围（表示两个源范围的对称差异）的目标范围内第一个元素的位置。
 
 *pred*\
@@ -8393,7 +8393,7 @@ ForwardIterator set_symmetric_difference(
 
 输入迭代器的值类型需小于比较元素才能进行排序；因此，给定两个元素，可以确定这两个元素相等（即两者均不小于对方）或其中一个小于另一个。 这将导致在非等效元素之间进行排序。 当两个源范围中有相等的元素时，在目标范围中，第一个范围中的元素优先于第二个源范围中的元素。 如果源范围包含某个元素的重复项，则目标范围将包含这些元素在其中一个源范围中出现的次数比其在另一个源范围中出现的次数多出的次数的绝对值。
 
-算法的复杂性是线性的, 对于非空`2 * ((last1 - first1) - (last2 - first2)) - 1`源范围最多进行比较。
+算法的复杂性是线性的，对于非空源范围最多 `2 * ((last1 - first1) - (last2 - first2)) - 1` 比较。
 
 ### <a name="example"></a>示例
 
@@ -8573,7 +8573,7 @@ ForwardIterator set_union(
 *last2*\
 一个输入迭代器，用于确定要相并且排序为一个范围（表示两个源范围的并集）的两个连续已排序源范围中第二个源范围内最后一个元素之后下一个元素的位置。
 
-*输出*\
+*结果*\
 一个输出迭代器，用于确定要将两个源范围相并为一个已排序范围（表示两个源范围的并集）的目标范围内第一个元素的位置。
 
 *pred*\
@@ -8591,11 +8591,11 @@ ForwardIterator set_union(
 
 必须按照 `merge` 算法对合并范围排序时要使用的相同顺序对已排序源范围分别进行排列，作为应用该算法的前置条件。
 
-该操作保持不变，因为每个范围内元素的相对顺序均保留在目标范围中。 算法`merge`不会修改源范围。
+该操作保持不变，因为每个范围内元素的相对顺序均保留在目标范围中。 `merge`算法不会修改源范围。
 
 输入迭代器的值类型需小于比较元素才能进行排序；因此，给定两个元素，可以确定这两个元素相等（即两者均不小于对方）或其中一个小于另一个。 这将导致在非等效元素之间进行排序。 当两个源范围中有相等的元素时，在目标范围中，第一个范围中的元素优先于第二个源范围中的元素。 如果源范围包含某个元素的重复项，目标范围将包含出现在源范围中的这些元素的最大数目。
 
-算法的复杂性是线性的, 最多`2 * ((last1 - first1) - (last2 - first2)) - 1`进行比较。
+算法的复杂性是线性的，最多 `2 * ((last1 - first1) - (last2 - first2)) - 1` 比较。
 
 ### <a name="example"></a>示例
 
@@ -8730,13 +8730,13 @@ void shuffle(
 
 ### <a name="parameters"></a>参数
 
-*1*\
+*第一个*\
 指向范围中要重新排序的第一个元素的迭代器（包含第一个元素）。 必须满足 `RandomAccessIterator` 和 `ValueSwappable` 的要求。
 
-*时间*\
+*最后*\
 指向范围中要重新排序的最后一个元素的迭代器（不包含最后一个元素）。 必须满足 `RandomAccessIterator` 和 `ValueSwappable` 的要求。
 
-*常规*\
+*gen*\
 `shuffle()` 函数将用于运算的随机数生成器。 必须满足 `UniformRandomNumberGenerator` 的要求。
 
 ### <a name="remarks"></a>备注
@@ -8778,14 +8778,14 @@ void sort(
 *exec*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 一种随机访问迭代器，用于寻址要排序的范围中第一个元素的位置。
 
-*时间*\
+*最后*\
 一种随机访问迭代器，用于定址要排序的范围中最后元素之后下一个元素的位置。
 
 *pred*\
-用户定义的谓词函数对象，定义排序中连续元素要满足的比较条件。 此二元谓词采用两个参数, 如果这两个参数按顺序返回 true, 则返回**true** ; 否则返回**false** 。 该比较器函数必须对序列中的元素对进行严格弱排序。 有关详细信息，请参阅[算法](../standard-library/algorithms.md)。
+用户定义的谓词函数对象，定义排序中连续元素要满足的比较条件。 此二元谓词采用两个参数，如果这两个参数按顺序返回 true，则返回**true** ; 否则返回**false** 。 该比较器函数必须对序列中的元素对进行严格弱排序。 有关详细信息，请参阅[算法](../standard-library/algorithms.md)。
 
 ### <a name="remarks"></a>备注
 
@@ -8793,7 +8793,7 @@ void sort(
 
 元素是等效的，但是如果两者都不小于对方，则不一定要相等。 `sort` 算法不稳定，因此不保证保留等效元素的相对顺序。 算法 `stable_sort` 会保留此原始顺序。
 
-排序复杂度的平均值为, 其中`O( N log N )` *N* = 是*最后* - *一个*。
+排序复杂度的平均值是 `O( N log N )`的，其中*N* = *最后* *一个* - 。
 
 ### <a name="example"></a>示例
 
@@ -8882,14 +8882,14 @@ void sort_heap(
 
 ### <a name="parameters"></a>参数
 
-*1*\
+*第一个*\
 一种随机访问迭代器，用于寻址目标堆中第一个元素的位置。
 
-*时间*\
+*最后*\
 一种随机访问迭代器，用于寻址目标堆中最后一个元素之后下一个元素的位置。
 
 *pred*\
-用户定义的谓词函数对象，用于定义对一个元素小于另一个元素的理解。 比较谓词采用两个参数, 并且在满足时返回**true** , 如果不满足, 则返回**false** 。
+用户定义的谓词函数对象，用于定义对一个元素小于另一个元素的理解。 比较谓词采用两个参数，并且在满足时返回**true** ，如果不满足，则返回**false** 。
 
 ### <a name="remarks"></a>备注
 
@@ -8907,7 +8907,7 @@ void sort_heap(
 
 引用的范围必须有效；所有指针都必须可以引用，并且在序列中，可通过递增从第一个位置到达最后一个位置。
 
-最大`N log N`程度的复杂度为, 其中*N* = 是*最后* - *一个*。
+复杂性最多 `N log N`，其中*N* = *最后* *一个* - 。
 
 ### <a name="example"></a>示例
 
@@ -8987,14 +8987,14 @@ BidirectionalIterator stable_partition(
 *exec*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 一种双向迭代器，用于寻址要分区的范围中第一个元素的位置。
 
-*时间*\
+*最后*\
 一种双向迭代器，用于寻址要分区的范围中最后一个元素之后下一个元素的位置。
 
 *pred*\
-用户定义的谓词函数对象，用于定义如果元素要分类时应满足的条件。 一元谓词采用单个参数, 如果满足, 则返回**true** ; 否则返回**false** 。
+用户定义的谓词函数对象，用于定义如果元素要分类时应满足的条件。 一元谓词采用单个参数，如果满足，则返回**true** ; 否则返回**false** 。
 
 ### <a name="return-value"></a>返回值
 
@@ -9004,7 +9004,7 @@ BidirectionalIterator stable_partition(
 
 引用的范围必须有效；所有指针都必须可以引用，并且在序列中，可通过递增从第一个位置到达最后一个位置。
 
-`pred( b, a )`如果两者 `pred( a, b )`都为 false 且为 false, 则元素*a*和 b 等效, 但不一定相等, 其中*pred*是参数指定的谓词。 `stable_partition`算法是稳定的, 可保证保留等效元素的相对顺序。 此算法`partition`不一定要保留此原始顺序。
+如果 `pred( a, b )` 为 false 且 `pred( b, a )` 为 false （其中*pred*是参数指定的谓词），则元素*a*和*b*是等效的，但不一定相等。 `stable_partition` 算法是稳定的，可保证保留等效元素的相对顺序。 `partition` 的算法不一定要保留此原始顺序。
 
 ### <a name="example"></a>示例
 
@@ -9088,10 +9088,10 @@ void stable_sort(
 *exec*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 一种双向迭代器，用于寻址要排序的范围中第一个元素的位置。
 
-*时间*\
+*最后*\
 一种双向迭代器，用于寻址要排序的范围中最后一个元素之后下一个元素的位置。
 
 *pred*\
@@ -9101,9 +9101,9 @@ void stable_sort(
 
 引用的范围必须有效；所有指针都必须可以引用，并且在序列中，可通过递增从第一个位置到达最后一个位置。
 
-元素是等效的，但是如果两者都不小于对方，则不一定要相等。 `sort`算法是稳定的, 可保证保留等效元素的相对顺序。
+元素是等效的，但是如果两者都不小于对方，则不一定要相等。 `sort` 算法是稳定的，可保证保留等效元素的相对顺序。
 
-的运行时复杂性`stable_sort`取决于可用的内存量, 但最好的情况 (给定足够的内存) 为`O(N (log N)^2)` `O(N log N)` , 最差的情况是, 其中*N* = 个*最后* -  *第一*种。 通常, 算法`sort`的速度要快得`stable_sort`多。
+`stable_sort` 的运行时复杂性取决于可用的内存量，但会 `O(N log N)` 最佳情况（给定足够的内存），最差的情况是 `O(N (log N)^2)`，其中*N* = *最后* - *第一个*。 通常，`sort` 算法比 `stable_sort`快得多。
 
 ### <a name="example"></a>示例
 
@@ -9189,10 +9189,10 @@ void swap(
 
 ### <a name="parameters"></a>参数
 
-*左中*\
+*左*\
 对于第一次重写，为交换其内容的第一个对象。 对于第二次重写，为交换其内容的第一个对象数组。
 
-*然后*\
+*right*\
 对于第一次重写，为交换其内容的第二个对象。 对于第二次重写，为交换其内容的第二个对象数组。
 
 ### <a name="remarks"></a>备注
@@ -9296,7 +9296,7 @@ ForwardIterator2 swap_ranges(
 
 引用的范围必须是有效的；所有指针必须是可解除引用的，并且在每个序列内，最后一个位置可从第一个位置通过递增到达。 第二个范围必须与第一个范围一样大。
 
-复杂性是线性的, 因为已执行*last1* - *first1*交换。 如果交换同一类型的容器中的元素，应使用该容器中的 `swap` 成员函数，因为该成员函数通常具有恒定的复杂性。
+复杂性是线性的，已执行*last1* - *first1*交换。 如果交换同一类型的容器中的元素，应使用该容器中的 `swap` 成员函数，因为该成员函数通常具有恒定的复杂性。
 
 ### <a name="example"></a>示例
 
@@ -9411,10 +9411,10 @@ ForwardIterator transform(
 *first2*\
 一种输入迭代器，用于定址所操作的第二个源范围内第一个元素的位置。
 
-*输出*\
+*结果*\
 一种输出迭代器，用于定址目标范围内第一个元素的位置。
 
-*求*\
+*func*\
 在应用到第一个源范围中每个元素的第一版算法中使用的用户定义一元函数对象，或者在按前向顺序成对应用到两个源范围的第二版算法中使用的用户定义 (UD) 二元函数对象。
 
 ### <a name="return-value"></a>返回值
@@ -9425,9 +9425,9 @@ ForwardIterator transform(
 
 引用的范围必须是有效的；所有指针必须是可解除引用的，并且在每个序列内，最后一个位置必须可从第一个位置通过递增到达。 目标范围必须足够大，以包含已转换的源范围。
 
-如果在算法的第一个版本中,*结果*设置等于*first1* , 则源范围和目标范围将相同, 并且将就地修改序列。 但*结果*可能不会寻址 [`first1` + 1, `last1`) 范围内的位置。
+如果在算法的第一个版本中，*结果*设置等于*first1* ，则源范围和目标范围将相同，并且将就地修改序列。 但*结果*可能不会寻址 [`first1` + 1，`last1`）范围内的位置。
 
-复杂性是线性的, 最多进行`last1`( - `first1`) 次比较。
+复杂性是线性的，最多`last1` - `first1`）比较。
 
 ### <a name="example"></a>示例
 
@@ -9550,10 +9550,10 @@ ForwardIterator unique(
 *exec*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 一种前向迭代器，用于寻址要进行重复删除扫描的范围中第一个元素的位置。
 
-*时间*\
+*最后*\
 一种前向迭代器，用于寻址要进行重复删除扫描的范围中最后一个元素之后下一个元素的位置。
 
 *pred*\
@@ -9569,9 +9569,9 @@ ForwardIterator unique(
 
 该算法的操作是稳定的，因此未删除的元素的相对顺序不会发生更改。
 
-引用的范围必须有效；所有指针都必须可以引用，并且在序列中，可通过递增从第一个位置到达最后一个位置。 此序列中的元素数不会被算法`unique`更改, 已修改序列结尾之外的元素取消引用, 但未指定。
+引用的范围必须有效；所有指针都必须可以引用，并且在序列中，可通过递增从第一个位置到达最后一个位置。 此序列中的元素数不会被 `unique` 的算法更改，且已修改序列结尾之外的元素取消引用，但未指定。
 
-复杂性是线性的, 需要`(last - first) - 1`进行比较。
+复杂性是线性的，需要进行 `(last - first) - 1` 比较。
 
 List 提供了更高效的成员函数 "unique"，它可能会表现得更好。
 
@@ -9703,13 +9703,13 @@ ForwardIterator2 unique_copy(ExecutionPolicy&& exec,
 *exec*\
 要使用的执行策略。
 
-*1*\
+*第一个*\
 一个向前迭代器，用于寻址源范围中要复制的第一个元素的位置。
 
-*时间*\
+*最后*\
 一个向前迭代器，用于寻址源范围中要复制的最后一个元素之后下一个元素的位置。
 
-*输出*\
+*结果*\
 一个输出迭代器，用于寻址接收删除的连续副本的目标范围中第一个元素的位置。
 
 *pred*\
@@ -9727,7 +9727,7 @@ ForwardIterator2 unique_copy(ExecutionPolicy&& exec,
 
 引用的范围必须有效；所有指针都必须可以引用，并且在序列中，可通过递增从第一个位置到达最后一个位置。
 
-复杂性是线性的, 需要 (`last` - `first`) 进行比较。
+复杂性是线性的，需要（`last` - `first`）比较。
 
 ### <a name="example"></a>示例
 
@@ -9822,17 +9822,17 @@ ForwardIterator upper_bound(
 
 ### <a name="parameters"></a>参数
 
-*1*\
+*第一个*\
 要搜索的范围中第一个元素的位置。
 
-*时间*\
+*最后*\
 要搜索的范围中最后一个元素之后下一个元素的位置。
 
 *value*\
 返回排序范围中需要被迭代器寻址的元素值超越的值。
 
 *pred*\
-用户定义的比较谓词函数对象, 用于定义一个元素小于另一个元素的含义。 比较谓词采用两个参数, 并且在满足时返回**true** , 如果不满足, 则返回**false** 。
+用户定义的比较谓词函数对象，用于定义一个元素小于另一个元素的含义。 比较谓词采用两个参数，并且在满足时返回**true** ，如果不满足，则返回**false** 。
 
 ### <a name="return-value"></a>返回值
 
@@ -9842,13 +9842,13 @@ ForwardIterator upper_bound(
 
 引用的已排序源范围必须有效；所有迭代器必须可取消引用，并且在序列内，最后一个位置必须可从第一个位置通过递增到达。
 
-已排序的范围是使用的`upper_bound`前置条件, 其中排序条件与比较谓词指定的顺序相同。
+已排序的范围是使用 `upper_bound` 的前提条件，其中排序条件与比较谓词指定的顺序相同。
 
 `upper_bound` 不会修改该范围。
 
 前向迭代器的值类型需小于比较元素才能进行排序；因此，给定两个元素，可以确定这两个元素相等（即两者均不小于对方）或其中一个小于另一个。 这将导致在非等效元素之间进行排序。
 
-算法的复杂性是随机访问迭代器和线性的对数, 否则, 步骤数与 (`last - first`) 成正比。
+算法的复杂性是随机访问迭代器和线性的对数，否则，步骤数与（`last - first`）成正比。
 
 ### <a name="example"></a>示例
 

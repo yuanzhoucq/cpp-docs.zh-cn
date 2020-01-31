@@ -119,16 +119,16 @@ helpviewer_keywords:
 - std::basic_string_view, substr
 - std::basic_string_view, swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
-ms.openlocfilehash: e5d89eeb9f663c8699ddad469a8189008671ed3b
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 7bd6d02304e86b50d33bdaa3e07c95b08da31f7a
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447857"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821891"
 ---
 # <a name="basic_string_view-class"></a>basic_string_view 类
 
-类模板`basic_string_view<charT>`已添加到 c + + 17 中，以便函数接受各种不相关的字符串类型，而不需要在这些类型上模板化函数。 类将非拥有指针保存到连续的字符数据序列中，并指定一个长度来指定序列中的字符数。 对于序列是否以 null 结尾的情况，不进行任何假设。
+类模板 `basic_string_view<charT>` 已添加到 c + + 17 中，以便函数接受各种不相关的字符串类型，而不需要在这些类型上模板化函数。 类将非拥有指针保存到连续的字符数据序列中，并指定一个长度来指定序列中的字符数。 对于序列是否以 null 结尾的情况，不进行任何假设。
 
 标准库根据元素类型定义几个专用化：
 
@@ -139,11 +139,11 @@ ms.locfileid: "68447857"
 
 在本文档中，术语 "string_view" 通常指的是这些 typedef 中的任何一个。
 
-String_view 描述读取字符串数据所需的最低公共接口。 它提供对基础数据的 const 访问;它不会生成任何副本（ `copy`函数除外）。 数据在任何位置都不能包含 null 值（' \ 0 '）。 String_view 无法控制对象的生存期。 调用方负责确保基础字符串数据有效。
+String_view 描述读取字符串数据所需的最低公共接口。 它提供对基础数据的 const 访问;它不会生成任何副本（`copy` 函数除外）。 数据在任何位置都不能包含 null 值（' \ 0 '）。 String_view 无法控制对象的生存期。 调用方负责确保基础字符串数据有效。
 
-接受类型为 string_view 的参数的函数可用于任何类似于字符串的类型，而不会使函数进入模板，也不会将函数约束到字符串类型的特定子集。 唯一的要求是存在从字符串类型到 string_view 的隐式转换。 所有标准字符串类型都可隐式转换为包含相同元素类型的 string_view。 换言之， `std::string` `wstring_view`可以转换为，但不能转换为。`string_view`
+接受 string_view 类型的参数的函数可用于任何类似于字符串的类型，而不会使函数进入模板，也不会将函数约束到字符串类型的特定子集。 唯一的要求是存在从字符串类型到 string_view 的隐式转换。 所有标准字符串类型都可隐式转换为包含相同元素类型的 string_view。 换句话说，`std::string` 可转换为 `string_view` 而不是 `wstring_view`的。
 
-下面的示例演示一个采用类型`f` `wstring_view`为的参数的非模板函数。 可以通过类型`std::wstring`为、 `wchar_t*`和`winrt::hstring`的参数调用它。
+下面的示例演示了一个 `f` 的非模板函数，该函数采用 `wstring_view`类型的参数。 可以通过 `std::wstring`、`wchar_t*`和 `winrt::hstring`类型的参数来调用它。
 
 ```cpp
 // compile with: /std:c++17
@@ -191,7 +191,7 @@ class basic_string_view;
 
 |构造函数|描述|
 |-|-|
-|[basic_string_view](#basic_string_view)|构造一个空的 string_view 或指向某个其他字符串对象的数据的所有或部分，或指向 C 样式字符数组的。|
+|[basic_string_view](#basic_string_view)|构造一个空的 string_view，或指向某个其他字符串对象数据的全部或部分，或指向 C 样式字符数组的。|
 
 ### <a name="typedefs"></a>Typedef
 
@@ -215,28 +215,28 @@ class basic_string_view;
 
 |运算符|描述|
 |-|-|
-|[operator=](#op_eq)|将 string_view 或可转换的字符串对象赋给另一个 string_view。|
+|[operator=](#op_eq)|将 string_view 或可转换的字符串对象分配给另一个 string_view。|
 |[operator\[\]](#op_at)|返回指定索引处的元素。|
 
 ### <a name="member-functions"></a>成员函数
 
 |成员函数|描述|
 |-|-|
-|[at](#at)|将 const_reference 返回到指定位置处的元素。|
-|[back](#back)|返回 const_reference 到最后一个元素。|
+|[at](#at)|返回 const_reference 到指定位置的元素。|
+|[back](#back)|返回最后一个元素的 const_reference。|
 |[begin](#begin)|返回寻址第一个元素的常量迭代器。 （string_views 是不可变的。）|
 |[cbegin](#cbegin)|与[begin](#begin)相同。|
 |[cend](#cend)|返回一个常量迭代器，该迭代器指向最后一个元素之后的一个。|
-|[copy](#copy)|从源 string_view 中的索引位置到目标字符数组，最多复制指定数目的字符。 （不建议使用。 改为使用 _Copy_s。）|
+|[copy](#copy)|从源 string_view 中的索引位置到目标字符数组，最多复制指定数目的字符。 （不建议使用。 改用 _Copy_s。）|
 |[_Copy_s](#_copy_s)|安全 CRT 复制函数。|
-|[compare](#compare)|将 string_view 与指定的 string_view 进行比较，以确定它们是否相等，或者其中一个按字典顺序小于另一个。|
+|[compare](#compare)|将 string_view 与指定的 string_view 进行比较，以确定它们是否相等，或者按字典顺序是否小于另一个。|
 |[crbegin](#crbegin)|与[rbegin](#rbegin)相同。|
 |[crend](#crend)|与[rend](#rend)相同。|
 |[data](#data)|返回指向字符序列的原始非所有者指针。|
 |[empty](#empty)|测试 string_view 是否包含字符。|
 |[end](#end)|与[cend](#cend)相同。|
 |[find](#find)|向前搜索与指定字符序列匹配的子字符串的第一个匹配项。|
-|[find_first_not_of](#find_first_not_of)|搜索不属于指定 string_view 或可转换字符串对象的任何元素的第一个字符。|
+|[find_first_not_of](#find_first_not_of)|搜索不属于指定 string_view 或可转换的字符串对象的任何元素的第一个字符。|
 |[find_first_of](#find_first_of)|搜索与指定 string_view 或可转换的字符串对象的任何元素匹配的第一个字符。|
 |[find_last_not_of](#find_last_not_of)|搜索不属于指定 string_view 或可转换字符串对象的任何元素的最后一个字符。|
 |[find_last_of](#find_last_of)|搜索作为指定 string_view 或可转换的字符串对象的元素的最后一个字符。|
@@ -246,8 +246,8 @@ class basic_string_view;
 |[rbegin](#rbegin)|返回一个常量迭代器，该迭代器用于发现反向 string_view 中的第一个元素。|
 |[remove_prefix](#remove_prefix)|将指针向后移动指定数量的元素。|
 |[remove_suffix](#remove_suffix)|从后面开始，将视图的大小减少到指定数目的元素。|
-|[rend](#rend)|返回一个常量迭代器，该迭代器指向反向 string_view 中最后一个元素之后的元素。|
-|[rfind](#rfind)|反向搜索 string_view 中与指定字符序列匹配的第一个子字符串。|
+|[rend](#rend)|返回一个常量迭代器，该迭代器指向反向 string_view 中最后一个元素之后的一个。|
+|[rfind](#rfind)|反向搜索 string_view 与指定字符序列匹配的第一个子字符串。|
 |[size](#size)|返回元素的当前数目。|
 |[substr](#substr)|返回从指定索引处开始的指定长度的子字符串。|
 |[swap](#swap)|交换两个 string_views 的内容。|
@@ -256,7 +256,7 @@ class basic_string_view;
 
 如果要求函数生成的序列长于 [max_size](#max_size) 元素，这个函数将通过引发 [length_error](../standard-library/length-error-class.md) 类型的对象来报告长度错误。
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>需求
 
 [std： c + + 17](../build/reference/std-specify-language-standard-version.md)或更高版本
 
@@ -266,7 +266,7 @@ class basic_string_view;
 
 ## <a name="at"></a>  basic_string_view::at
 
-将 const_reference 返回到指定的从零开始的索引处的字符。
+返回一个 const_reference，该字符串指向指定的从零开始的索引处的字符。
 
 ```cpp
 constexpr const_reference at(size_type offset) const;
@@ -274,7 +274,7 @@ constexpr const_reference at(size_type offset) const;
 
 ### <a name="parameters"></a>参数
 
-*抵销*\
+*偏移*\
 要引用的元素的索引。
 
 ### <a name="return-value"></a>返回值
@@ -283,11 +283,11 @@ Const_reference 到参数索引所指定位置处的字符。
 
 ### <a name="remarks"></a>备注
 
-第一个元素的索引为零，并且以下元素按正整数连续索引，因此长度为*n*的 string_view 具有数字*n-* 1 索引的第*n*个元素。 与[运算符\[不同，中的无效索引会引发异常。\]](#op_at) 
+第一个元素的索引为零，后面的元素按正整数连续索引，以便长度为*n*的 string_view 包含第 n 个索引*的第 n* *个*元素。 对于**无效的索引，会引发异常**，这与[运算符\[\]](#op_at)不同。 
 
-一般情况下，我们建议不要**使用 for 等**序列`std::vector` 。 传递给序列的无效索引是一个逻辑错误，应在开发过程中发现并修复该错误。 如果程序并不完全确定其索引是否有效，则应对其进行测试，而不是调用（），并依赖于异常来防御粗心编程。
+一般情况**下，我们**建议不要使用 `std::vector` 和 string_view 等序列。 传递给序列的无效索引是一个逻辑错误，应在开发过程中发现并修复该错误。 如果程序并不完全确定其索引是否有效，则应对其进行测试，而不是调用（），并依赖于异常来防御粗心编程。
 
-有关详细信息，请参阅[basic_string_view：： operator\[ \] ](#op_at) 。
+有关详细信息，请参阅[basic_string_view：： operator\[\]](#op_at) 。
 
 ### <a name="example"></a>示例
 
@@ -308,7 +308,7 @@ int main()
 
 ## <a name="back"></a>  basic_string_view::back
 
-返回 const_reference 到最后一个元素。
+返回最后一个元素的 const_reference。
 
 ```cpp
 constexpr const_reference back() const;
@@ -316,17 +316,17 @@ constexpr const_reference back() const;
 
 ### <a name="return-value"></a>返回值
 
-Const_reference 到 string_view 中最后一个元素的。
+Const_reference 到 string_view 中的最后一个元素。
 
 ### <a name="remarks"></a>备注
 
 如果 string_view 为空，则引发异常。
 
-请记住，在修改 string_view （例如通过调用`remove_suffix`）后，此函数返回的元素将不再是基础数据中的最后一个元素。
+请记住，在修改 string_view （例如通过调用 `remove_suffix`）后，此函数返回的元素不再是基础数据中的最后一个元素。
 
 ### <a name="example"></a>示例
 
-使用 C 字符串文本构造的 string_view 不包括终止 null，因此在下面的示例`back`中，将返回 "p" 而不是 "\ 0"。
+使用 C 字符串文本构造的 string_view 不包括终止 null，因此在下面的示例中 `back` 返回 "p" 而不是 "\ 0"。
 
 ```cpp
 char c[] = "Help"; // char[5]
@@ -355,15 +355,15 @@ constexpr basic_string_view(const charT* str, size_type len);
 
 ### <a name="parameters"></a>参数
 
-*字符串*\
+*str*\
 指向字符值的指针。
 
-*长度*\
+*len*\
 要在视图中包含的字符数。
 
 ## <a name="remarks"></a>备注
 
-带有 charT * 参数的构造函数假设输入以 null 值结束，但终止 null 不包含在 string_view 中。
+带有 charT * 参数的构造函数假设输入以 null 值终止，但是终止 null 未包含在 string_view 中。
 
 你还可以使用文本构造 string_view。 请参阅[运算符 "" sv](string-view-operators.md#op_sv)。
 
@@ -376,11 +376,11 @@ constexpr const_iterator begin() const noexcept;
 ```
 
 ### <a name="return-value"></a>返回值
-返回寻址第一个元素的 const_iterator。
+返回寻址第一个元素 const_iterator。
 
 ## <a name="cbegin"></a>  basic_string_view::cbegin
 
-返回一个 const_iterator，它用于寻址范围内的第一个元素。
+返回一个用于寻址范围中第一个元素的 const_iterator。
 
 ```cpp
 constexpr const_iterator cbegin() const noexcept;
@@ -388,11 +388,11 @@ constexpr const_iterator cbegin() const noexcept;
 
 ### <a name="return-value"></a>返回值
 
-一个**常量**随机访问迭代器，指向范围的第一个元素，或刚超出空范围末尾的位置（对于空范围， `cbegin() == cend()`）。
+**常量**随机访问迭代器，指向范围的第一个元素，或刚超出空范围末尾的位置（对于空范围，则为 `cbegin() == cend()`）。
 
 ## <a name="cend"></a>  basic_string_view::cend
 
-返回一个 const_iterator，用于寻址范围内最后一个元素之外的位置。
+返回一个 const_iterator，该用于寻址范围内最后一个元素之外的位置。
 
 ```cpp
 constexpr const_iterator cend() const noexcept;
@@ -408,7 +408,7 @@ constexpr const_iterator cend() const noexcept;
 
 ## <a name="compare"></a>basic_string_view：： compare
 
-使用指定的 string_view （或可转换的字符串类型）执行区分大小写的比较，以确定两个对象是否相等，或是否按字典顺序小于另一个。 String_view > 运算符使用此成员函数来执行比较。 [ \<](string-view-operators.md)
+使用指定的 string_view （或可转换的字符串类型）执行区分大小写的比较，以确定两个对象是否相等，或者是否按字典顺序的对象是否小于另一个。 [\<string_view > 运算符](string-view-operators.md)使用此成员函数来执行比较。
 
 ```cpp
 constexpr int compare(basic_string_view strv) const noexcept;
@@ -424,16 +424,16 @@ constexpr int compare(size_type pos, size_type num, const charT* ptr, size_type 
 *strv*\
 要与此 string_view 进行比较的 string_view。
 
-*位置*\
+*pos*\
 此 string_view 的索引，比较从此位置开始比较。
 
-*编号*\
-要比较的此 string_view 中的最大字符数。
+*num*\
+此 string_view 要比较的最大字符数。
 
 *num2*\
 要比较的*strv*中的最大字符数。
 
-*抵销*\
+*偏移*\
 开始比较的*strv*的索引。
 
 *ptr*\
@@ -441,11 +441,11 @@ constexpr int compare(size_type pos, size_type num, const charT* ptr, size_type 
 
 ### <a name="return-value"></a>返回值
 
-如果此 string_view 小于*strv*或*ptr*，则为负值;如果两个字符序列相等，则为零;如果此 string_view 大于*strv*或*ptr*，则为正值。
+如果此 string_view 小于*strv*或*ptr*，则为负值;如果两个字符序列相等，则为零;如果此 string_view 大于*strv*或*ptr*，则为正数值。
 
 ### <a name="remarks"></a>备注
 
-`compare`成员函数对每个字符序列的全部或部分执行区分大小写的比较。 
+`compare` 成员函数对每个字符序列的全部或部分执行区分大小写的比较。 
 
 ### <a name="example"></a>示例
 
@@ -568,11 +568,11 @@ size_type copy(charT* ptr, size_type count, size_type offset = 0) const;
 *ptr*\
 要复制的元素的目标字符数组。
 
-*计*\
+*计数*\
 最多从源 string_view 复制的字符数。
 
-*抵销*\
-要从其进行复制的源 string_view 中的开始位置。
+*偏移*\
+要从中进行复制的源 string_view 中的开始位置。
 
 ### <a name="return-value"></a>返回值
 
@@ -582,7 +582,7 @@ size_type copy(charT* ptr, size_type count, size_type offset = 0) const;
 
 空字符不追加到副本的末尾。
 
-## <a name="_copy_s"></a>basic_string_view::_Copy_s
+## <a name="_copy_s"></a>basic_string_view：： _Copy_s
 
 要使用的安全 CRT 复制函数（而不是[复制](#copy)）。
 
@@ -596,7 +596,7 @@ size_type _Copy_s(
 
 ### <a name="parameters"></a>参数
 
-*目的*\
+*dest*\
 要复制的元素的目标字符数组。
 
 *dest_size*\
@@ -619,7 +619,7 @@ _*计算*要从源字符串复制的最多字符数。
 
 ## <a name="crbegin"></a>  basic_string_view::crbegin
 
-返回一个 const_reverse_iterator，用于寻址反向 string_view 中的第一个元素。
+返回一个 const_reverse_iterator，该用于寻址反向 string_view 中的第一个元素。
 
 ```cpp
 constexpr const_reverse_iterator crbegin() const noexcept;
@@ -639,7 +639,7 @@ constexpr const_reverse_iterator crend() const noexcept;
 
 ### <a name="return-value"></a>返回值
 
-返回一个 const_reverse_iterator，用于解决反向 string_view 末尾的一个。
+返回一个 const_reverse_iterator，用于解决反向 string_view 结束后的一个。
 
 ## <a name="data"></a>  basic_string_view::data
 
@@ -657,7 +657,7 @@ constexpr value_type *data() const noexcept;
 
 指针无法修改字符。
 
-String_view 字符的序列不一定以 null 结尾。 的返回类型`data`不是有效的 C 字符串，因为不追加 null 字符。 空字符 "\ 0" 在 string_view 类型的对象中没有任何特殊含义，可能与任何其他字符一样是 string_view 对象的一部分。
+String_view 字符的序列不一定以 null 结尾。 `data` 的返回类型不是有效的 C 字符串，因为不追加 null 字符。 空字符 "\ 0" 在类型 string_view 的对象中没有任何特殊含义，可能与任何其他字符一样是 string_view 对象的一部分。
 
 ## <a name="empty"></a>  basic_string_view::empty
 
@@ -677,7 +677,7 @@ constexpr bool empty() const noexcept;
 
 ## <a name="end"></a>  basic_string_view::end
 
-返回一个随机访问 const_iterator，它指向最后一个元素之后的一个。
+返回指向最后一个元素之后的一个随机访问 const_iterator。
 
 ```cpp
 constexpr const_iterator end() const noexcept;
@@ -685,15 +685,15 @@ constexpr const_iterator end() const noexcept;
 
 ### <a name="return-value"></a>返回值
 
-返回一个随机访问 const_iterator，它指向最后一个元素之后的一个。
+返回指向最后一个元素之后的一个随机访问 const_iterator。
 
 ### <a name="remarks"></a>备注
 
-`end`用于测试 const_iterator 是否已到达其 string_view 的结尾。 不应对 `end` 返回的值取消引用。
+`end` 用于测试 const_iterator 是否已到达其 string_view 的结尾。 不应对 `end` 返回的值取消引用。
 
 ## <a name="find"></a>  basic_string_view::find
 
-向前搜索 string_view 中与指定字符序列匹配的第一个字符或子字符串的第一个匹配项。
+在与指定字符序列匹配的字符或子字符串的第一个匹配项的情况中，向前搜索 string_view。
 
 ```cpp
 constexpr size_type find(basic_string_view str, size_type offset = 0) const noexcept;
@@ -704,19 +704,19 @@ constexpr size_type find(const charT* ptr, size_type offset = 0) const;
 
 ### <a name="parameters"></a>参数
 
-*字符串*\
+*str*\
 成员函数要搜索的 string_view。
 
 *chVal*\
 成员函数要搜索的字符值。
 
-*抵销*\
+*偏移*\
 要开始搜索的索引。
 
 *ptr*\
 要搜索其成员函数的 C 字符串。
 
-*计*\
+*计数*\
 *Ptr*中从第一个字符开始计数的字符数。
 
 ### <a name="return-value"></a>返回值
@@ -725,7 +725,7 @@ constexpr size_type find(const charT* ptr, size_type offset = 0) const;
 
 ## <a name="find_first_not_of"></a>  basic_string_view::find_first_not_of
 
-搜索不属于指定 string_view 或可转换字符串对象的元素的第一个字符。
+搜索不属于指定 string_view 或可转换的字符串对象的元素的第一个字符。
 
 ```cpp
 constexpr size_type find_first_not_of(basic_string_view str, size_type offset = 0) const noexcept;
@@ -736,19 +736,19 @@ constexpr size_type find_first_not_of(const charT* ptr, size_type offset = 0) co
 
 ### <a name="parameters"></a>参数
 
-*字符串*\
+*str*\
 成员函数要搜索的 string_view。
 
 *chVal*\
 成员函数要搜索的字符值。
 
-*抵销*\
+*偏移*\
 要开始搜索的索引。
 
 *ptr*\
 要搜索其成员函数的 C 字符串。
 
-*计*\
+*计数*\
 成员函数要搜索的 C 字符串中从第一个字符开始计数的字符数。
 
 ### <a name="return-value"></a>返回值
@@ -771,16 +771,16 @@ constexpr size_type find_first_of(const charT* str, size_type offset = 0) const;
 *chVal*\
 成员函数要搜索的字符值。
 
-*抵销*\
+*偏移*\
 要开始搜索的索引。
 
 *ptr*\
 要搜索其成员函数的 C 字符串。
 
-*计*\
+*计数*\
 成员函数要搜索的 C 字符串中从第一个字符开始计数的字符数。
 
-*字符串*\
+*str*\
 成员函数要搜索的 string_view。
 
 ### <a name="return-value"></a>返回值
@@ -800,19 +800,19 @@ constexpr size_type find_last_not_of(const charT* ptr, size_type offset = npos) 
 
 ### <a name="parameters"></a>参数
 
-*字符串*\
+*str*\
 成员函数要搜索的 string_view。
 
 *chVal*\
 成员函数要搜索的字符值。
 
-*抵销*\
+*偏移*\
 要完成搜索的索引。
 
 *ptr*\
 要搜索其成员函数的 C 字符串。
 
-*计*\
+*计数*\
 *Ptr*中从第一个字符开始计数的字符数。
 
 ### <a name="return-value"></a>返回值
@@ -832,19 +832,19 @@ constexpr size_type find_last_of(const charT* ptr, size_type offset = npos) cons
 
 ### <a name="parameters"></a>参数
 
-*字符串*\
+*str*\
 成员函数要搜索的 string_view。
 
 *chVal*\
 成员函数要搜索的字符值。
 
-*抵销*\
+*偏移*\
 要完成搜索的索引。
 
 *ptr*\
 要搜索其成员函数的 C 字符串。
 
-*计*\
+*计数*\
 成员函数要搜索的 C 字符串中从第一个字符开始计数的字符数。
 
 ### <a name="return-value"></a>返回值
@@ -897,7 +897,7 @@ String_view 可包含的最大字符数。
 
 ## <a name="op_eq"></a>  basic_string_view::operator=
 
-将 string_view 或可转换的字符串对象赋给另一个 string_view。
+将 string_view 或可转换的字符串对象分配给另一个 string_view。
 
 ```cpp
 constexpr basic_string_view& operator=(const basic_string_view&) noexcept = default;
@@ -910,7 +910,7 @@ constexpr basic_string_view& operator=(const basic_string_view&) noexcept = defa
 ```
 ## <a name="op_at"></a>  basic_string_view::operator[]
 
-为具有指定索引的字符提供 const_reference。
+向具有指定索引的字符提供 const_reference。
 
 ```cpp
 constexpr const_reference operator[](size_type offset) const;
@@ -918,7 +918,7 @@ constexpr const_reference operator[](size_type offset) const;
 
 ### <a name="parameters"></a>参数
 
-*抵销*\
+*偏移*\
 要引用的元素的索引。
 
 ### <a name="return-value"></a>返回值
@@ -927,15 +927,15 @@ Const_reference 到参数索引所指定位置处的字符。
 
 ### <a name="remarks"></a>备注
 
-第一个元素的索引为零，以下元素按正整数连续索引，以便长度为*n*的 string_view 具有*第 n 个索引的第 n* *个元素*。
+第一个元素的索引为零，后面的元素按正整数连续索引，使长度为*n*的 string_view 具有*第 n 个索引的第 n* *个元素*。
 
-`operator[]`比的[成员函数快，用于](#at)提供对 string_view 元素的读取访问权限。
+`operator[]` 比[提供对 string_view](#at)元素的读取访问权限更快。
 
-`operator[]`不检查作为参数传递的索引是否有效。 传递给`operator[]`的无效索引导致未定义的行为。
+`operator[]` 不检查作为参数传递的索引是否有效。 传递给 `operator[]` 的无效索引导致未定义的行为。
 
 如果基础字符串数据由所属对象修改或删除，则返回的引用可能会无效。
 
-当使用[ \_迭代器\_调试\_级别](../standard-library/iterator-debug-level.md)设置为1或2进行编译时，如果尝试访问 string_view 边界之外的元素，将发生运行时错误。 有关更多信息，请参见 [Checked Iterators](../standard-library/checked-iterators.md)。
+使用[\_迭代器进行编译时\_调试\_级别](../standard-library/iterator-debug-level.md)设置为1或2时，如果尝试访问 string_view 边界之外的元素，将发生运行时错误。 有关详细信息，请参阅[已检查的迭代器](../standard-library/checked-iterators.md)。
 
 ## <a name="rbegin"></a>  basic_string_view::rbegin
 
@@ -951,7 +951,7 @@ constexpr const_reverse_iterator rbegin() const noexcept;
 
 ### <a name="remarks"></a>备注
 
-`rbegin`用于反向 string_view，正如[begin](#begin)用于 string_view 一样。 `rbegin`可用于向后重初始化迭代。
+`rbegin` 与反向 string_view 一起使用，正如[begin](#begin)与 string_view 一起使用一样。 `rbegin` 可用于向后翻次迭代。
 
 ## <a name="remove_prefix"></a> basic_string_view::remove_prefix
 
@@ -963,7 +963,7 @@ constexpr void remove_prefix(size_type n);
 
 ### <a name="remarks"></a>备注
 
-使基础数据保持不变。 将 string_view 指针向前移动 n 个元素，并将私有`size`数据成员设置为大小-n。
+使基础数据保持不变。 将 string_view 指针向前移动 n 个元素，并将私有 `size` 数据成员设置为大小-n。
 
 ## <a name="remove_suffix"></a> basic_string_view::remove_suffix
 
@@ -975,11 +975,11 @@ constexpr void remove_suffix(size_type n);
 
 ### <a name="remarks"></a>备注
 
-使基础数据保持不变。 将私有`size`数据成员设置为大小-n。
+使基础数据保持不变。 将私有 `size` 数据成员设置为大小-n。
 
 ## <a name="rend"></a>  basic_string_view::rend
 
-返回一个常量迭代器，该迭代器指向反向 string_view 中最后一个元素之后的元素。
+返回一个常量迭代器，该迭代器指向反向 string_view 中最后一个元素之后的一个。
 
 ```cpp
 constexpr reverse_iterator rend() const noexcept;
@@ -991,11 +991,11 @@ constexpr reverse_iterator rend() const noexcept;
 
 ### <a name="remarks"></a>备注
 
-`rend`用于反向 string_view，正如[end](#end)用于 string_view 一样。 `rend`可用于测试反向迭代器是否已到达其 string_view 的末尾。 不应对 `rend` 返回的值取消引用。
+`rend` 与反向 string_view 一起使用，正如[end](#end)与 string_view 一起使用一样。 `rend` 可用于测试反向迭代器是否已到达其 string_view 的结尾。 不应对 `rend` 返回的值取消引用。
 
 ## <a name="rfind"></a>  basic_string_view::rfind
 
-反向搜索 string_view 与指定字符序列匹配的子字符串。
+反向搜索与指定字符序列匹配的子字符串的 string_view。
 
 ```cpp
 constexpr size_type rfind(basic_string_view str, size_type offset = npos) const noexcept;
@@ -1009,21 +1009,21 @@ constexpr size_type rfind(const charT* ptr, size_type offset = npos) const;
 *chVal*\
 成员函数要搜索的字符值。
 
-*抵销*\
+*偏移*\
 要开始搜索的索引。
 
 *ptr*\
 要搜索其成员函数的 C 字符串。
 
-*计*\
+*计数*\
 成员函数要搜索的 C 字符串中从第一个字符开始计数的字符数。
 
-*字符串*\
+*str*\
 成员函数要搜索的 string_view。
 
 ### <a name="return-value"></a>返回值
 
-成功时子字符串的第一个字符的索引;否则`npos`为。
+成功时子字符串的第一个字符的索引;否则 `npos`。
 
 ## <a name="size"></a>  basic_string_view::size
 
@@ -1039,7 +1039,7 @@ String_view 的长度。
 
 ### <a name="remarks"></a>备注
 
-String_view 可以修改其长度，例如`remove_prefix`和。 `remove_suffix` 由于这不会修改基础字符串数据，因此 string_view 的大小不一定是基础数据的大小。
+String_view 可以修改其长度，例如 `remove_prefix` 和 `remove_suffix`。 因为这不会修改基础字符串数据，所以 string_view 的大小不一定是基础数据的大小。
 
 ## <a name="substr"></a>  basic_string_view::substr
 
@@ -1051,15 +1051,15 @@ constexpr basic_string_view substr(size_type offset = 0, size_type count = npos)
 
 ### <a name="parameters"></a>参数
 
-*抵销*\
+*偏移*\
 在从其进行复制的位置查找元素的索引，默认值为0。
 
-*计*\
+*计数*\
 要包括在子字符串中的字符数（如果存在）。
 
 ### <a name="return-value"></a>返回值
 
-一个 string_view 对象，表示元素的指定子序列。
+一个 string_view 对象，该对象表示元素的指定子序列。
 
 ## <a name="swap"></a>  basic_string_view::swap
 
@@ -1072,9 +1072,9 @@ constexpr void swap(basic_string_view& sv) noexcept;
 ### <a name="parameters"></a>参数
 
 *sv*\
-要与目标 string_view 的指针和大小值进行交换的源 string_view。
+要与目标 string_view 的链接和大小值进行交换的源 string_view。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [\<string_view >](../standard-library/string-view.md)\
 [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

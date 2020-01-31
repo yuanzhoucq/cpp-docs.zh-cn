@@ -7,16 +7,16 @@ helpviewer_keywords:
 - logical_and class
 - logical_and struct
 ms.assetid: 1a375cc2-0592-4d57-a553-78009c7ad610
-ms.openlocfilehash: 86b780c71a0b0265cbd0c8829fb5aea70f0fa42e
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: cc75c93d5173ceb7fa12b9722a797499b4225a53
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243275"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821611"
 ---
-# <a name="logicaland-struct"></a>logical_and 结构
+# <a name="logical_and-struct"></a>logical_and 结构
 
-执行逻辑连接运算的预定义的函数对象 (`operator&&`) 对其自变量。
+一个预定义的函数对象，它对其参数执行逻辑与运算（`operator&&`）。
 
 ## <a name="syntax"></a>语法
 
@@ -39,14 +39,14 @@ struct logical_and<void>
 
 ### <a name="parameters"></a>参数
 
-*类型*， *T*， *U*\
+*Type*、 *T*、 *U*\
 支持 `operator&&` 接受指定或推断类型的操作数的任何类型。
 
-*左侧*\
-逻辑连接运算的左操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*T*。
+*左*\
+逻辑连接运算的左操作数。 非专用化的模板*采用类型为*的左值引用参数。 专用模板完全转发推断类型*T*的左值和右值引用参数。
 
-*右侧*\
-逻辑连接运算的右操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*U*。
+*Right*\
+逻辑连接运算的右操作数。 非专用化的模板*采用类型为*的左值引用参数。 专用模板完全转发推断类型*U*的左值和右值引用参数。
 
 ## <a name="return-value"></a>返回值
 
@@ -112,7 +112,7 @@ int main( )
    // of d1 & d2, use the logical_and function object
    transform( d1.begin( ), d1.end( ), d2.begin( ),
       d3.begin( ), logical_and<bool>( ) );
-   cout << "The deque which is the conjuction of d1 & d2 is:\n d3 = ( " ;
+   cout << "The deque which is the conjunction of d1 & d2 is:\n d3 = ( " ;
    for ( iter3 = d3.begin( ) ; iter3 != d3.end( ) ; iter3++ )
       cout << *iter3 << " ";
    cout << ")" << endl;
@@ -124,6 +124,6 @@ Original deque:
 d1 = ( true true true true true false false )
 Original deque:
 d2 = ( true false true true false true false )
-The deque which is the conjuction of d1 & d2 is:
+The deque which is the conjunction of d1 & d2 is:
 d3 = ( true false true true false false false )
 ```

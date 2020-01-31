@@ -1,18 +1,18 @@
 ---
-title: 回调函数 (WRL)
+title: Callback 函数（WRL）
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Callback
 ms.assetid: afb15d25-3230-44f7-b321-e17c54872943
-ms.openlocfilehash: d37e6fdd2521f07728305bfbf5441cebb363030a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 10fb053ed97aaca0f4a31e3843d96aa194d8949d
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398896"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821683"
 ---
-# <a name="callback-function-wrl"></a>回调函数 (WRL)
+# <a name="callback-function-wrl"></a>Callback 函数（WRL）
 
 创建一个对象，该对象的成员函数是一个回调方法。
 
@@ -233,7 +233,7 @@ ComPtr<TDelegateInterface> Callback(
 *object*<br/>
 一个对象，在事件发生时调用该对象的成员函数。
 
-*方法*<br/>
+*付款方式*<br/>
 在事件发生时要调用的成员函数。
 
 ## <a name="return-value"></a>返回值
@@ -242,14 +242,14 @@ ComPtr<TDelegateInterface> Callback(
 
 ## <a name="remarks"></a>备注
 
-必须是委托对象的基`IUnknown`，而不`IInspectable`。
+委托对象的基必须 `IUnknown`，而不是 `IInspectable`。
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>需求
 
-**标头：** event.h
+**标头：** 事件。h
 
-**命名空间：** Microsoft:: wrl
+**命名空间：** Microsoft::WRL
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Microsoft::WRL Namespace](microsoft-wrl-namespace.md)

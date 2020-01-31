@@ -1,4 +1,4 @@
----
+﻿---
 title: Lambda 表达式的示例
 ms.date: 05/07/2019
 helpviewer_keywords:
@@ -6,7 +6,7 @@ helpviewer_keywords:
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
 ms.openlocfilehash: f9f2c3e014e44c9f6a9ce10dd8388a1578ba3987
 ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2019
 ms.locfileid: "65222090"
@@ -61,7 +61,7 @@ int main()
 
 ### <a name="example-2"></a>示例 2
 
-当声明表达式（而非调用表达式）时，Microsoft C++ 编译器将 lambda 表达式绑定到其捕获的变量。以下示例显示一个通过值捕获局部变量 `i` 并通过引用捕获局部变量 `j` 的 lambda 表达式。由于 lambda 表达式通过值捕获 `i`，因此在程序后面部分中重新指派 `i` 不影响该表达式的结果。 但是，由于 lambda 表达式通过引用捕获 `j`，因此重新指派 `j` 会影响该表达式的结果。
+当声明表达式（而非调用表达式）时，Microsoft C++ 编译器将 lambda 表达式绑定到其捕获的变量。 以下示例显示一个通过值捕获局部变量 `i` 并通过引用捕获局部变量 `j` 的 lambda 表达式。 由于 lambda 表达式通过值捕获 `i`，因此在程序后面部分中重新指派 `i` 不影响该表达式的结果。 但是，由于 lambda 表达式通过引用捕获 `j`，因此重新指派 `j` 会影响该表达式的结果。
 
 ### <a name="code"></a>代码
 
@@ -363,7 +363,7 @@ int main()
 
 ### <a name="example"></a>示例
 
-由于 lambda 表达式已类型化，因此你可以将其与 C++ 模板一起使用。 下面的示例显示 `negate_all` 和 `print_all` 函数。 `negate_all`函数将对`vector`对象中的所有元素应用一元**运算符-**。 `print_all` 函数将 `vector` 对象中的每个元素打印到控制台。
+由于 lambda 表达式已类型化，因此你可以将其与 C++ 模板一起使用。 下面的示例显示 `negate_all` 和 `print_all` 函数。 `negate_all`函数将对`vector`对象中的所有元素应用一元**运算符-** 。 `print_all` 函数将 `vector` 对象中的每个元素打印到控制台。
 
 ### <a name="code"></a>代码
 
@@ -517,7 +517,7 @@ Hello!
 > [!IMPORTANT]
 >  这些公共语言运行时 (CLR) 托管实体中不支持 lambda: **ref 类**， **ref 结构**，**值类**，和**值结构**.
 
-[[本文内容](#top)]
+[[回到顶部](#top)]
 
 ## <a name="see-also"></a>请参阅
 
