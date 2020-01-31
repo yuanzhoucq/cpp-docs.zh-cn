@@ -26,12 +26,12 @@ helpviewer_keywords:
 - alloca function
 - _alloca function
 ms.assetid: 74488eb1-b71f-4515-88e1-cdd03b6f8225
-ms.openlocfilehash: 2212f9e40c78932b63eebfc221ad2f07fa3d3f9d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 77ce6e0cdb5e1ad3f5317989c7804abc5aed4e69
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943701"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821429"
 ---
 # <a name="_alloca"></a>_alloca
 
@@ -52,7 +52,7 @@ void *_alloca(
 
 ## <a name="return-value"></a>返回值
 
-**_Alloca**例程返回指向已分配空间的**void**指针，该指针保证能针对任何类型的对象的存储进行适当的调整。 如果*size*为0，则 **_alloca**分配一个长度为零的项，并返回指向该项的有效指针。
+**_Alloca**例程返回指向已分配空间的**void**指针，保证为任何类型的对象的存储进行适当的调整。 如果*size*为0，则 **_alloca**分配一个长度为零的项，并返回指向该项的有效指针。
 
 如果无法分配空间，将生成堆栈溢出异常。 堆栈溢出异常不是 C++ 异常，它是结构化异常。 必须使用[结构化异常处理](../../cpp/structured-exception-handling-c-cpp.md) (SEH)，而使用 C++ 异常处理。
 
@@ -60,22 +60,22 @@ void *_alloca(
 
 **_alloca**从程序堆栈分配*大小*字节。 释放调用函数时，将自动释放已分配的空间（而不是在分配超出范围时）。 因此，请不要将 **_alloca**返回的指针值作为参数传递给[free](free.md)。
 
-在异常处理程序（EH）中显式调用 **_alloca**存在一些限制。 在 x86 类处理器上运行的 EH 例程在其自己的内存帧中运行：它们在内存空间中执行其任务，这些任务不基于封闭函数的堆栈指针的当前位置。 最常见的实现包括 Windows NT 结构化异常处理 (SEH) 和 C++ catch 子句表达式。 因此，在以下任何一种情况下，显式调用 **_alloca**会导致在返回到调用 EH 例程期间程序失败：
+在异常处理程序（EH）中显式调用 **_alloca**存在一些限制。 在 x86 类处理器上运行的 EH 例程在自己的内存框架中工作：它们在未基于封闭函数堆栈指针当前位置的内存空间中执行其任务。 最常见的实现包括 Windows NT 结构化异常处理 (SEH) 和 C++ catch 子句表达式。 因此，在以下任何一种情况下，显式调用 **_alloca**会导致在返回到调用 EH 例程期间程序失败：
 
-- Windows NT SEH 异常筛选器表达式：`__except ( _alloca() )`
+- Windows NT SEH 异常筛选器表达式： `__except ( _alloca() )`
 
-- Windows NT SEH 最终异常处理程序：`__finally { _alloca() }`
+- Windows NT SEH 最终异常处理程序： `__finally { _alloca() }`
 
 - C++ EH catch 子句表达式
 
-但是，可以从 EH 例程内或从应用程序提供的回调中直接调用 **_alloca** ，此回调是前面列出的一个 EH 方案调用的。
+但是，可以从 EH 例程内或从应用程序提供的回调中直接调用 **_alloca** ，该回调由前面列出的某个 EH 方案调用。
 
 > [!IMPORTANT]
-> 在 Windows XP 中，如果在 try/catch 块中调用 **_alloca** ，则必须在 catch 块中调用[_resetstkoflw](resetstkoflw.md) 。
+> 在 Windows XP 中，如果在 try/catch 块内调用 **_alloca** ，则必须在 catch 块中调用[_resetstkoflw](resetstkoflw.md) 。
 
-除了上述限制之外，在使用[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)选项时，不能在 **__except**块中使用 **_alloca** 。 有关详细信息，请参阅 [/clr Restrictions](../../build/reference/clr-restrictions.md)。
+除了上述限制之外，在使用[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)选项时，不能在 **__except**块中使用 **_alloca** 。 有关详细信息，请参阅 [/clr 限制](../../build/reference/clr-restrictions.md)。
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>需求
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
@@ -119,7 +119,7 @@ int main()
         }
     }
 
-    // If an exception occured with the _alloca function
+    // If an exception occurred with the _alloca function
     __except( GetExceptionCode() == STATUS_STACK_OVERFLOW )
     {
         printf_s("_alloca failed!\n");
@@ -139,7 +139,7 @@ int main()
 Allocated 1000 bytes of stack at 0x0012FB50
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [内存分配](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>

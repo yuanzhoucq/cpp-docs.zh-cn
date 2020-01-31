@@ -3,26 +3,26 @@ title: 演练：使用 MFC 创建功能区应用程序
 ms.date: 09/09/2019
 helpviewer_keywords:
 - ribbon application, creating (MFC)
-- creating a ribbon aplication (MFC)
+- creating a ribbon application (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
-ms.openlocfilehash: 41084a78287521610ba400deab32d1052c9217c1
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 0f81b27d479b15864302b21a467bff9489ba465a
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907397"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821917"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>演练：使用 MFC 创建功能区应用程序
 
 此演练演示如何使用**MFC 应用程序向导**创建默认情况下具有功能区的应用程序。 然后，你可以通过添加具有 **"收藏夹**" 功能区的**自定义**功能区类别来展开功能区，然后在面板中添加一些经常使用的命令。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 本演练假定您已将 Visual Studio 设置为使用 "**常规开发设置**"。 如果使用的是其他设置，则可能不会显示以下说明中引用的某些用户界面（UI）元素。
 
 ### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>创建带功能区的 MFC 应用程序
 
-1. 使用**Mfc 应用程序向导**创建具有功能区的 mfc 应用程序。 请参阅[演练：使用新的 MFC Shell 控件](walkthrough-using-the-new-mfc-shell-controls.md)获取有关如何为你的 Visual Studio 版本打开向导的说明。
+1. 使用**Mfc 应用程序向导**创建具有功能区的 mfc 应用程序。 有关如何为你的 Visual Studio 版本打开向导的说明，请参阅[演练：使用新的 MFC Shell 控件](walkthrough-using-the-new-mfc-shell-controls.md)。
 
 1. 在**MFC 应用程序向导**中设置以下选项：
 
@@ -54,7 +54,7 @@ ms.locfileid: "70907397"
 
     右键单击 " **Category1** "，然后单击 "**属性**"。 在 "**属性**" 窗口中，将**标题**更改为 "*自定义*"。
 
-    "**大型图像**" 和 "**小型图像**" 属性指定用作此类别中功能区元素的图标的位图。 由于创建自定义位图超出了本演练的范围，请重新使用该向导创建的位图。 小型位图为 16 x 16 像素。 对于小图像，请使用`IDB_FILESMALL`资源 ID 访问的位图。 大型位图为 32 x 32 像素。 对于较大的图像，请使用`IDB_FILELARGE`资源 ID 访问的位图。
+    "**大型图像**" 和 "**小型图像**" 属性指定用作此类别中功能区元素的图标的位图。 由于创建自定义位图超出了本演练的范围，请重新使用该向导创建的位图。 小型位图为 16 x 16 像素。 对于小图像，请使用 `IDB_FILESMALL` 资源 ID 访问的位图。 大型位图为 32 x 32 像素。 对于大图像，请使用 `IDB_FILELARGE` 资源 ID 访问的位图。
 
     > [!NOTE]
     > 在每英寸像素数 (HDPI) 显示中，将自动使用图像的 HDPI 版本。
@@ -73,9 +73,9 @@ ms.locfileid: "70907397"
 
     若要创建 "**打印**" 按钮，请将按钮工具拖到面板上。
 
-    在 "**属性**" 窗口中，将 " **ID** " 属性更改为**ID_FILE_PRINT**，该属性应该已经定义。 将**标题**更改为*打印*。 将**图像索引**改为*4*。
+    在 "**属性**" 窗口中，将 " **ID** " 属性更改为 " **ID_FILE_PRINT**"，此属性应已定义。 将**标题**更改为*打印*。 将**图像索引**改为*4*。
 
-    若要创建 "**快速打印**" 按钮，请单击 "**菜单项**" 旁边的 "属性值" 列，然后单击省略号（ **...** ）。在**项目编辑器**中，单击未标记的 "**添加**" 按钮创建菜单项。 在 "**属性**" 窗口中，将 "**标题**" 更改为 "*快速打印*"，将**ID**更改为*ID_FILE_PRINT_DIRECT*，将**图像**更改为*5* Image 属性指定`IDB_FILESMALL`位图资源中的 "**快速打印**" 图标。
+    若要创建 "**快速打印**" 按钮，请单击 "**菜单项**" 旁边的 "属性值" 列，然后单击省略号（ **...** ）。在**项目编辑器**中，单击未标记的 "**添加**" 按钮创建菜单项。 在 "**属性**" 窗口中，将 "**标题**" 更改为 "*快速打印*"，将**ID**更改为*ID_FILE_PRINT_DIRECT*，将**图像**更改为*5* Image 属性指定 `IDB_FILESMALL` 位图资源中的 "**快速打印**" 图标。
 
 1. 若要验证是否已将这些按钮添加到功能区面板，请生成并运行应用程序。 若要生成应用程序，请在 "**生成**" 菜单上单击 "**生成解决方案**"。 如果应用程序成功生成，则通过单击 "**调试**" 菜单上的 "**启动调试**" 来运行该应用程序。 应显示功能区上的 "**自定义**" 选项卡上的 "**收藏夹**" 面板上的 "**打印**" 按钮和组合框。
 
@@ -87,7 +87,7 @@ ms.locfileid: "70907397"
 
 有关端到端示例，请参阅[示例（MFC 功能包）](../overview/visual-cpp-samples.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [演练](../mfc/walkthroughs-mfc.md)<br/>
 [示例（MFC 功能包）](../overview/visual-cpp-samples.md)

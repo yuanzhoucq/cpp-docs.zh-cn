@@ -116,12 +116,12 @@ helpviewer_keywords:
 - std::basic_string [C++], substr
 - std::basic_string [C++], swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
-ms.openlocfilehash: 6919f2ece4ed846cd80f791af91797373dea33b2
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 08620e0ae6b54b106daba8e0b0a392ceb1a6577d
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051507"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821904"
 ---
 # <a name="basic_string-class"></a>basic_string 类
 
@@ -136,13 +136,13 @@ class basic_string;
 
 ### <a name="parameters"></a>参数
 
-*CharType* \
+*CharType*\
 要存储在字符串中的单个字符的数据类型。 C++标准库提供了此类模板的专用化，其中包含**char**、 [wstring](../standard-library/string-typedefs.md#wstring)、of 类型的元素的类型定义[字符串](../standard-library/string-typedefs.md#string)、 **wchar_t**用于 `char16_t`的[u16string](../standard-library/string-typedefs.md#u16string)以及用于 `char32_t`的[u32string](../standard-library/string-typedefs.md#u32string) 。
 
 *特征*\
 Basic_string 特殊化中 `CharType` 元素的各种重要属性由类 `Traits`描述。 默认值为 `char_traits`< `CharType`>。
 
-*分配*器 \
+*分配*器\
 一种表示存储的分配器对象的类型，该分配器对象封装有关字符串的内存分配和解除分配的详细信息。 默认值为 **allocator**< `CharType`>。
 
 ### <a name="constructors"></a>构造函数
@@ -161,9 +161,9 @@ Basic_string 特殊化中 `CharType` 元素的各种重要属性由类 `Traits`�
 |[const_reference](#const_reference)|提供对存储于字符串中供读取和执行 **const** 操作的 **const** 元素的引用的类型。|
 |[const_reverse_iterator](#const_reverse_iterator)|提供可读取字符串中任何 **const** 元素的随机访问迭代器的类型。|
 |[difference_type](#difference_type)|提供引用同一字符串中的元素的两个迭代器之间的差异的类型。|
-|[迭代器](#iterator)|提供可读取或修改字符串中任何元素的随机访问迭代器的类型。|
+|[Iterator](#iterator)|提供可读取或修改字符串中任何元素的随机访问迭代器的类型。|
 |[npos](#npos)|一个无符号整数值，在搜索功能失败时指示 "找不到" 或 "所有剩余字符"。|
-|[指针](#pointer)|提供指向字符串中或字符数组中字符元素的指针的类型。|
+|[pointer](#pointer)|提供指向字符串中或字符数组中字符元素的指针的类型。|
 |[reference](#reference)|提供对存储在字符串中的元素的引用的类型。|
 |[reverse_iterator](#reverse_iterator)|提供可读取或修改反向字符串中元素的随机访问迭代器的类型。|
 |[size_type](#size_type)|字符串中元素的数目的无符号整数类型。|
@@ -222,7 +222,7 @@ Basic_string 特殊化中 `CharType` 元素的各种重要属性由类 `Traits`�
 |-|-|
 |[operator+=](#op_add_eq)|向字符串追加字符。|
 |[operator=](#op_eq)|对字符串的内容赋新的字符值。|
-|[operator[]](#op_at)|使用字符串中的指定索引提供对字符的引用。|
+|[operator&#91;&#93;](#op_at)|使用字符串中的指定索引提供对字符的引用。|
 
 ## <a name="remarks"></a>备注
 
@@ -230,11 +230,11 @@ Basic_string 特殊化中 `CharType` 元素的各种重要属性由类 `Traits`�
 
 用于指定受控制序列元素的引用、指针和迭代器在调用了可更改受控制序列的函数后或第一次调用一个非 **const** 成员函数后可能失效。
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>需求
 
-**标头：** \<string>
+**标头：** \<字符串 >
 
-**命名空间:** std
+**命名空间：** std
 
 ## <a name="allocator_type"></a>  basic_string::allocator_type
 
@@ -307,10 +307,10 @@ basic_string<CharType, Traits, Allocator>& append(
 
 ### <a name="parameters"></a>参数
 
-*ptr* \
+*ptr*\
 要追加的 C 字符串。
 
-*str* \
+*str*\
 要追加字符的字符串。
 
 *偏移*\
@@ -468,13 +468,13 @@ basic_string<CharType, Traits, Allocator>& assign(
 
 ### <a name="parameters"></a>参数
 
-*ptr* \
+*ptr*\
 指向要分配给目标字符串的 C 字符串字符的指针。
 
 *计数*\
 要从源字符串指定的字符数。
 
-*str* \
+*str*\
 要分配给目标字符串的字符的源字符串。
 
 *char_value*\
@@ -495,7 +495,7 @@ basic_string<CharType, Traits, Allocator>& assign(
 
 ### <a name="remarks"></a>备注
 
-可为这些字符串分配新字符值。 新值可以是字符串和 C 字符串或单个字符。 如果可以通过单个参数描述新值，则可以使用[operator =](#op_eq) ;否则，可以使用包含多个参数的成员函数 `assign` 来指定要将字符串的哪一部分分配给目标字符串。
+可为这些字符串分配新字符值。 新值可以是字符串和 C 字符串或单个字符。 如果可以通过单个参数描述新值，则可以使用[operator =](#op_eq) ;否则，可以使用包含多个参数的成员函数 `assign`来指定要将字符串的哪一部分分配给目标字符串。
 
 ### <a name="example"></a>示例
 
@@ -747,7 +747,7 @@ basic_string(
 
 ### <a name="parameters"></a>参数
 
-*ptr* \
+*ptr*\
 C 字符串，其字符将用于初始化正在构造的 `string`。 此值不能为 null 指针。
 
 *alloc_type*\
@@ -756,7 +756,7 @@ C 字符串，其字符将用于初始化正在构造的 `string`。 此值不�
 *计数*\
 要初始化的字符数。
 
-*right* \
+*right*\
 用于初始化正在构造的字符串的字符串。
 
 *right_offset*\
@@ -1030,7 +1030,7 @@ const_iterator cbegin() const;
 
 由于使用 `cbegin` 的返回值，因此不能修改范围中的元素。
 
-可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，请考虑 `Container` 为支持 `begin()` 和 `cbegin()` 的任何类型的可修改（非常**量**）容器。
+可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，请考虑 `Container` 为支持 `begin()` 和 `cbegin()`的任何类型的可修改（非常**量**）容器。
 
 ```cpp
 auto i1 = Container.begin();
@@ -1056,7 +1056,7 @@ const_iterator cend() const;
 
 `cend` 用于测试迭代器是否超过了其范围的末尾。
 
-可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，请考虑 `Container` 为支持 `end()` 和 `cend()` 的任何类型的可修改（非常**量**）容器。
+可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，请考虑 `Container` 为支持 `end()` 和 `cend()`的任何类型的可修改（非常**量**）容器。
 
 ```cpp
 auto i1 = Container.end();
@@ -1156,7 +1156,7 @@ int compare(
 
 ### <a name="parameters"></a>参数
 
-*str* \
+*str*\
 要与操作数字符串比较的字符串。
 
 *position_1*\
@@ -1174,7 +1174,7 @@ int compare(
 *计数*\
 要比较的参数字符串的最大字符数。
 
-*ptr* \
+*ptr*\
 要与操作数字符串比较的 C 字符串。
 
 ### <a name="return-value"></a>返回值
@@ -1406,7 +1406,7 @@ typedef typename allocator_type::const_pointer const_pointer;
 
 ### <a name="remarks"></a>备注
 
-该类型是 `allocator_type::const_pointer`的同义词。
+该类型是 `allocator_type::const_pointer` 的同义词。
 
 对于类型 `string`，它等效于 `char*`。
 
@@ -1448,7 +1448,7 @@ typedef typename allocator_type::const_reference const_reference;
 
 `const_reference` 类型不能用于修改元素的值。
 
-该类型是 `allocator_type::const_reference`的同义词。 对于字符串 `type`，它等效于 const `char&`。
+该类型是 `allocator_type::const_reference` 的同义词。 对于字符串 `type`，它等效于 const `char&`。
 
 ### <a name="example"></a>示例
 
@@ -1485,7 +1485,7 @@ size_type copy(
 
 ### <a name="parameters"></a>参数
 
-*ptr* \
+*ptr*\
 要复制的元素的目标字符数组。
 
 *计数*最多从源字符串复制的字符数。
@@ -1590,7 +1590,7 @@ size_type _Copy_s(
 
 ### <a name="parameters"></a>参数
 
-*dest* \
+*dest*\
 要复制的元素的目标字符数组。
 
 *dest_size*\
@@ -1860,7 +1860,7 @@ int main( )
    str1_Iter--;
    str1_Iter--;
    cout << "The last character-letter of the string str1 is: " << *str1_Iter << endl;
-   cout << "The full orginal string str1 is: " << str1 << endl;
+   cout << "The full original string str1 is: " << str1 << endl;
 
    // end used to test when an iterator has reached the end of its string
    cout << "The string is now: ";
@@ -1887,7 +1887,7 @@ int main( )
 
 ```Output
 The last character-letter of the string str1 is: t
-The full orginal string str1 is: No way out.
+The full original string str1 is: No way out.
 The string is now: No way out.
 The last character-letter of the modified str1 is now: T
 The modified string str1 is now: No way ouT.
@@ -2028,13 +2028,13 @@ size_type find(
 *偏移*\
 搜索开始处的索引。
 
-*ptr* \
+*ptr*\
 成员函数要搜索的 C 字符串。
 
 *计数*\
 在成员函数要搜索的 C 字符串中从第一个字符开始计数的字符数。
 
-*str* \
+*str*\
 成员函数要搜索的字符串。
 
 ### <a name="return-value"></a>返回值
@@ -2203,13 +2203,13 @@ size_type find_first_not_of(
 *偏移*\
 搜索开始处的索引。
 
-*ptr* \
+*ptr*\
 成员函数要搜索的 C 字符串。
 
 *计数*\
 在成员函数要搜索的 C 字符串中从第一个字符开始计数的字符数。
 
-*str* \
+*str*\
 成员函数要搜索的字符串。
 
 ### <a name="return-value"></a>返回值
@@ -2391,13 +2391,13 @@ size_type find_first_of(
 *偏移*\
 搜索开始处的索引。
 
-*ptr* \
+*ptr*\
 成员函数要搜索的 C 字符串。
 
 *计数*\
 在成员函数要搜索的 C 字符串中从第一个字符开始计数的字符数。
 
-*str* \
+*str*\
 成员函数要搜索的字符串。
 
 ### <a name="return-value"></a>返回值
@@ -2578,13 +2578,13 @@ size_type find_last_not_of(
 *偏移*\
 搜索结束位置的索引。
 
-*ptr* \
+*ptr*\
 成员函数要搜索的 C 字符串。
 
 *计数*\
 在成员函数要搜索的 C 字符串中从第一个字符开始计数的字符数。
 
-*str* \
+*str*\
 成员函数要搜索的字符串。
 
 ### <a name="return-value"></a>返回值
@@ -2767,13 +2767,13 @@ size_type find_last_of(
 *偏移*\
 搜索结束位置的索引。
 
-*ptr* \
+*ptr*\
 成员函数要搜索的 C 字符串。
 
 *计数*\
 在成员函数要搜索的 C 字符串中从第一个字符开始计数的字符数。
 
-*str* \
+*str*\
 成员函数要搜索的字符串。
 
 ### <a name="return-value"></a>返回值
@@ -3031,13 +3031,13 @@ void insert(
 *位置*\
 新字符插入点之后的位置的索引。
 
-*ptr* \
+*ptr*\
 将要完全或部分插入到字符串中的 C 字符串。
 
 *计数*\
 要插入的字符数。
 
-*str* \
+*str*\
 将要完全或部分插入到目标字符串中的字符串。
 
 *偏移*\
@@ -3127,7 +3127,7 @@ int main( )
    cout << "The string with a character inserted from a range is: "
         << str7a << endl;
 
-   // The eigth member function inserts a number of
+   // The eighth member function inserts a number of
    // characters at a specified position in the string
    string str8 ( "ABCDHIJ" );
    basic_string <char>::iterator str8_Iter = ( str8.begin ( ) + 4 );
@@ -3336,10 +3336,10 @@ basic_string<CharType, Traits, Allocator>& operator+=(
 *char_value*\
 要追加的字符。
 
-*ptr* \
+*ptr*\
 要追加的 C 字符串的字符。
 
-*right* \
+*right*\
 要追加的字符串的字符。
 
 ### <a name="return-value"></a>返回值
@@ -3428,10 +3428,10 @@ basic_string<CharType, Traits, Allocator>& operator=(
 *char_value*\
 要分配的字符值。
 
-*ptr* \
+*ptr*\
 指向要分配给目标字符串的 C 字符串字符的指针。
 
-*right* \
+*right*\
 要分配给目标字符串的字符的源字符串。
 
 ### <a name="return-value"></a>返回值
@@ -3527,7 +3527,7 @@ reference operator[](size_type offset);
 
 重新分配字符串或修改非 **const** 字符串可能使返回的引用无效。
 
-在 [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md) 设置为 1 或 2 的情况下进行编译时，如果尝试访问字符串边界以外的元素，将发生运行时错误。 有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。
+在 [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md) 设置为 1 或 2 的情况下进行编译时，如果尝试访问字符串边界以外的元素，将发生运行时错误。 有关详细信息，请参阅[已检查的迭代器](../standard-library/checked-iterators.md)。
 
 ### <a name="example"></a>示例
 
@@ -3578,7 +3578,7 @@ typedef typename allocator_type::pointer pointer;
 
 ### <a name="remarks"></a>备注
 
-该类型是 `allocator_type::pointer`的同义词。
+该类型是 `allocator_type::pointer` 的同义词。
 
 对于类型 `string`，它等效于**char** <strong>\*</strong>。
 
@@ -3760,7 +3760,7 @@ typedef typename allocator_type::reference reference;
 
 类型 `reference` 可用于修改元素的值。
 
-该类型是 `allocator_type::reference`的同义词。
+该类型是 `allocator_type::reference` 的同义词。
 
 对于类型 `string`，它等效于 `chr&`。
 
@@ -3924,7 +3924,7 @@ basic_string<CharType, Traits, Allocator>& replace(
 
 ### <a name="parameters"></a>参数
 
-*str* \
+*str*\
 要作为操作数字符串字符的源的字符串。
 
 *position_1*\
@@ -3939,16 +3939,16 @@ basic_string<CharType, Traits, Allocator>& replace(
 *number_2*\
 要从参数 C 字符串使用的最大字符数。
 
-*ptr* \
+*ptr*\
 要作为操作数字符串字符的源的 C 字符串。
 
 *char_value*\
 要复制到操作数字符串的字符。
 
-*first0* \
+*first0*\
 一种迭代器，用于寻址操作数字符串中要删除的第一个字符。
 
-*last0* \
+*last0*\
 一种迭代器，用于寻址操作数字符串中要删除的最后一个字符。
 
 *第一个*\
@@ -4390,13 +4390,13 @@ size_type rfind(
 *偏移*\
 搜索开始处的索引。
 
-*ptr* \
+*ptr*\
 成员函数要搜索的 C 字符串。
 
 *计数*\
 在成员函数要搜索的 C 字符串中从第一个字符开始计数的字符数。
 
-*str* \
+*str*\
 成员函数要搜索的字符串。
 
 ### <a name="return-value"></a>返回值
@@ -4481,7 +4481,7 @@ int main( )
    const char *cstr3b = "am";
    indexCh3b = str3.rfind ( cstr3b , indexCh3a + 25 , 2 );
    if ( indexCh3b != npos )
-      cout << "The index of the next occurrance of 'am' in "
+      cout << "The index of the next occurrence of 'am' in "
            << "str3 begins at: " << indexCh3b << endl << endl;
    else
       cout << "There is no next occurrence of 'am' in str3 ."
@@ -4527,7 +4527,7 @@ The substring 'imperfect' was not found in str2 .
 
 The original string str3 is: It is a nice day. I am happy.
 The index of the 1st element of 'nice' in str3 is: 8
-The index of the next occurrance of 'am' in str3 begins at: 20
+The index of the next occurrence of 'am' in str3 begins at: 20
 
 The original string str4 is: This perfectly unclear.
 The substring 'clear' was not found in str4 before the 15th position.
@@ -4725,7 +4725,7 @@ void swap(
 
 ### <a name="parameters"></a>参数
 
-*str* \
+*str*\
 要与目标字符串中的元素进行交换的元素的源字符串。
 
 ### <a name="remarks"></a>备注
@@ -4785,7 +4785,7 @@ typedef Traits traits_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是 `Traits` 的第二个模板参数的同义词。
+该类型是 `Traits`的第二个模板参数的同义词。
 
 对于类型 `string`，它等效于 **\<char > char_traits**。
 
@@ -4831,7 +4831,7 @@ The character ch1 is: G.
 The character ch2 is: H.
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [\<string>](../standard-library/string.md)\
 [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
