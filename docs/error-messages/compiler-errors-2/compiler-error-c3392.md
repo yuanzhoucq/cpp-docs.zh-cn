@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3392
 ms.assetid: e4757596-e2aa-4314-b01e-5c4bfd2110e9
-ms.openlocfilehash: 72bdef1b3344b3d69ba0d014f92a85e9381de4b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4109a59f093740c9e0865cef6a31f3b09127c747
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243019"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912805"
 ---
 # <a name="compiler-error-c3392"></a>编译器错误 C3392
 
@@ -21,9 +21,9 @@ ms.locfileid: "62243019"
 
 ## <a name="example"></a>示例
 
-下面的示例使用 C# 创建一个组件，它包含具有 C + 中创建泛型类型时，不支持某些约束的泛型类型 + CLI。 有关详细信息，请参阅[类型参数的约束](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters)。
+下面的示例使用C#创建包含泛型类型的组件，该泛型类型具有在/cli 中C++创作泛型类型时不受支持的某些约束 有关详细信息，请参阅[类型参数的约束](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters)。
 
-```cs
+```csharp
 // C3392.cs
 // Compile by using: csc /target:library C3392.cs
 // a C# program
@@ -33,7 +33,7 @@ where V : struct
 where N : new() {}
 ```
 
-可用 C3392.dll 组件时，下面的示例生成 C3392。
+当 C3392 组件可用时，以下示例将生成 C3392。
 
 ```cpp
 // C3392_b.cpp
