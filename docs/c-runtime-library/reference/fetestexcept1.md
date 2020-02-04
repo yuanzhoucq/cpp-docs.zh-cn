@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - fetestexept function
 ms.assetid: ca4dc43f-5573-440d-bc19-ead7571b13dc
-ms.openlocfilehash: 61a68b4569d52b550da3fad12c077b82bb067fa9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e70ae1b74420b8186cccd8fc8a817423df618adf
+ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941015"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76972158"
 ---
 # <a name="fetestexcept"></a>fetestexcept
 
@@ -55,7 +55,7 @@ int fetestexcept(
 
 ## <a name="remarks"></a>备注
 
-使用 fetestexcept 函数来确定哪些异常由浮点运算引发。 使用*removed*参数来指定要测试的异常状态标志。 **Fetestexcept**函数使用\< *removed*中 v. > 中定义的这些异常宏和返回值：
+使用 fetestexcept 函数来确定哪些异常由浮点运算引发。 使用*removed*参数来指定要测试的异常状态标志。 **Fetestexcept**函数使用*removed*中 \<v. > 中定义的这些异常宏和返回值：
 
 |异常宏|描述|
 |---------------------|-----------------|
@@ -64,13 +64,13 @@ int fetestexcept(
 |FE_INVALID|早期浮点运算中发生域错误。|
 |FE_OVERFLOW|范围出错；早期浮点运算结果过大而无法表示。|
 |FE_UNDERFLOW|早期的浮点运算结果因为过小而无法以完整的精度表示；创建了非常规值。|
-|FE_ALLEXCEPT|所有受支持的浮点异常的按位 OR。|
+|FE_ALL_EXCEPT|所有受支持的浮点异常的按位 OR。|
 
 指定的*removed*参数可以是0、支持的浮点异常宏之一，或者两个或多个宏的按位 or。 任何其他*removed*参数值的效果均为 undefined。
 
 若要使用此函数，必须在调用前先使用 `#pragma fenv_access(on)` 指令关闭可能会阻止访问的浮点优化。 有关详细信息，请参阅 [fenv_access](../../preprocessor/fenv-access.md)。
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>需求
 
 |函数|C 标头|C++ 标头|
 |--------------|--------------|------------------|
@@ -78,7 +78,7 @@ int fetestexcept(
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [按字母顺序的函数参考](crt-alphabetical-function-reference.md)<br/>
 [feclearexcept](feclearexcept1.md)<br/>

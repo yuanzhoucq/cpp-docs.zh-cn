@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - fegetexceptflag function
 ms.assetid: 2d28f0ca-70c9-4cff-be8b-3d876eacde71
-ms.openlocfilehash: 3d3bf59b28a464dc163dc027b867e890c3c8797b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b840408ce704ad5519fbf233de41c8d5422006ad
+ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941233"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76972178"
 ---
 # <a name="fegetexceptflag"></a>fegetexceptflag
 
@@ -48,7 +48,7 @@ int fegetexceptflag(
 ### <a name="parameters"></a>参数
 
 *pstatus*<br/>
-指向**fexcept_t**对象的指针，该对象包含由*removed*指定的异常标志的当前值。
+指向一个**fexcept_t**对象的指针，该对象包含*removed*指定的异常标志的当前值。
 
 *excepts*<br/>
 要存储在*pstatus*中的浮点异常标志。
@@ -59,7 +59,7 @@ int fegetexceptflag(
 
 ## <a name="remarks"></a>备注
 
-**Fegetexceptflag**函数将*removed*指定的浮点异常状态标志的当前状态存储在*pstatus*指向的**fexcept_t**对象中。  *pstatus*必须指向有效的**fexcept_t**对象，否则后续行为将不确定。 **Fegetexceptflag**函数支持在 v. > 中定义的\<这些异常宏：
+**Fegetexceptflag**函数将*removed*指定的浮点异常状态标志的当前状态存储在*pstatus*指向的**fexcept_t**对象中。  *pstatus*必须指向有效的**fexcept_t**对象，否则后续行为将不确定。 **Fegetexceptflag**函数支持在 \<v. > 中定义的这些异常宏：
 
 |异常宏|描述|
 |---------------------|-----------------|
@@ -68,13 +68,13 @@ int fegetexceptflag(
 |FE_INVALID|早期浮点运算中发生域错误。|
 |FE_OVERFLOW|范围出错；早期浮点运算结果过大而无法表示。|
 |FE_UNDERFLOW|早期的浮点运算结果因为过小而无法以完整的精度表示；创建了非常规值。|
-|FE_ALLEXCEPT|所有受支持的浮点异常的按位 OR。|
+|FE_ALL_EXCEPT|所有受支持的浮点异常的按位 OR。|
 
 *Removed*参数可以为零，其中一个受支持的浮点异常宏，或者两个或多个宏的按位 or。 未定义任何其他参数值的效果。
 
 若要使用此函数，必须在调用前先使用 `#pragma fenv_access(on)` 指令关闭可能会阻止访问的浮点优化。 有关详细信息，请参阅 [fenv_access](../../preprocessor/fenv-access.md)。
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>需求
 
 |函数|C 标头|C++ 标头|
 |--------------|--------------|------------------|
@@ -82,7 +82,7 @@ int fegetexceptflag(
 
 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [按字母顺序的函数参考](crt-alphabetical-function-reference.md)<br/>
 [fesetexceptflag](fesetexceptflag2.md)<br/>
