@@ -1,13 +1,14 @@
 ---
 title: 事件 (C++/CX)
-ms.date: 07/15/2019
+description: 如何使用C++/cx 在 Windows 运行时中创建和使用事件处理程序。
+ms.date: 02/03/2020
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
-ms.openlocfilehash: aab37353b1ea8d9f81a8e9a9ae489a4dd3542cc0
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 45f9a7bc17d9a695613ce551dae796b2cd2e0e6f
+ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740524"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76972201"
 ---
 # <a name="events-ccx"></a>事件 (C++/CX)
 
@@ -27,7 +28,7 @@ Windows 运行时中的许多组件都公开事件。 例如，当传感器报�
 
 [!code-cpp[cx_events#01](../cppcx/codesnippet/CPP/cx_events/class1.h#01)]
 
-### <a name="usage"></a>用法
+### <a name="usage"></a>用量
 
 下面的示例演示订阅类如何使用 `+=` 运算符订阅事件并在激发事件时调用事件处理程序。 请注意，提供的函数与 `EventTest` 命名空间中的发布程序端上定义的委托的签名匹配。
 
@@ -48,7 +49,7 @@ Windows 运行时中的许多组件都公开事件。 例如，当传感器报�
 
 ## <a name="removing-an-event-handler-from-the-subscriber-side"></a>从订户端移除事件处理程序
 
-在某些少见的情况下，你可能希望移除先前订阅的事件的事件处理程序。 例如，你可能要用另一个事件处理程序替换它，或者删除它占有的一些资源。 若要移除处理程序，必须存储自 `+=` 操作返回的 EventRegistrationToken。 然后，可以对标记使用 `-=` 运算符以移除事件处理程序。  但是，即使在移除原始处理程序后，也仍可以调用它。 因此，如果你希望移除事件处理程序，则在移除事件后创建一个成员标志并设置它，然后在事件处理程序中检查该标志，如果已设置，则立即返回。 下一个示例演示基本模式。
+在某些少见的情况下，你可能希望移除先前订阅的事件的事件处理程序。 例如，你可能要用另一个事件处理程序替换它，或者删除它占有的一些资源。 若要移除处理程序，必须存储自 `+=` 操作返回的 EventRegistrationToken。 然后，可以对标记使用 `-=` 运算符以移除事件处理程序。  但是，即使在移除原始处理程序后，也仍可以调用它。 例如，当事件源获取处理程序的列表并开始调用它们时，可能会出现争用条件。 如果在这种情况下删除了某个事件处理程序，则该列表将过期。 如果要删除事件处理程序，请创建成员标志。 如果删除了该事件，请对其进行设置，然后在事件处理程序中检查该标志，如果已设置，则立即返回。 下一个示例演示基本模式。
 
 [!code-cpp[cx_events#04](../cppcx/codesnippet/CPP/eventsupportinvs/eventclientclass.h#04)]
 
@@ -58,7 +59,7 @@ Windows 运行时中的许多组件都公开事件。 例如，当传感器报�
 
 事件源对事件接收器调用事件处理程序的顺序不能保证，可能因调用而异。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [类型系统](../cppcx/type-system-c-cx.md)<br/>
 [委托](../cppcx/delegates-c-cx.md)<br/>
