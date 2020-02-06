@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Q compiler option [C++]
 - -Q compiler option [C++]
 - /Q compiler option [C++]
-ms.openlocfilehash: 9dd3675f200be4f0ec66620bcf3cf05706991b66
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: 722a63a43e5e08fe80b26f908c7ae92df2fdb29c
+ms.sourcegitcommit: 0f4ee9056d65043fa5a715f0ad1031c0ed30e2b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518162"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "77034514"
 ---
 # <a name="q-options-low-level-operations"></a>/Q 选项（低级别操作）
 
@@ -33,6 +33,10 @@ ms.locfileid: "76518162"
 - [/Qsafe_fp_loads](qsafe-fp-loads.md)：取消对浮点寄存器负载和在内存和 MMX 寄存器之间移动的优化。
 
 - [/Qspectre](qspectre.md)：生成缓解某些 Spectre 安全漏洞的说明。
+
+- [/Qspectre-load](qspectre-load.md)：根据负载生成用于缓解 Spectre 安全漏洞的说明。
+
+- [/Qspectre-load-cf](qspectre-load-cf.md)：根据负载的控制流指令生成用于缓解 Spectre 安全漏洞的说明。
 
 - [/Qvec-report （自动向量化报告级别）](qvec-report-auto-vectorizer-reporting-level.md)：为自动矢量化启用报表级别。
 
