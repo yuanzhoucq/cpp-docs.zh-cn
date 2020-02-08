@@ -702,6 +702,10 @@
                           href: build/reference/qsafe-fp-loads.md
                         - name: /Qspectre
                           href: build/reference/qspectre.md
+                        - name: /Qspectre-load
+                          href: build/reference/qspectre-load.md
+                        - name: /Qspectre-load-cf
+                          href: build/reference/qspectre-load-cf.md
                         - name: /Qvec-report（自动矢量化程序报告等级）
                           href: build/reference/qvec-report-auto-vectorizer-reporting-level.md
                     - name: /RTC（运行时错误检查）
@@ -3994,7 +3998,7 @@
                   href: cpp/binary-operators.md
                 - name: 赋值
                   href: cpp/assignment.md
-                - name: 函数调用
+                - name: '函数调用 '
                   href: cpp/function-call-cpp.md
                 - name: 下标
                   href: cpp/subscripting.md
@@ -5891,7 +5895,7 @@
               href: extensions/delegate-cpp-component-extensions.md
             - name: 枚举类
               href: extensions/enum-class-cpp-component-extensions.md
-            - name: 事件
+            - name: event
               href: extensions/event-cpp-component-extensions.md
             - name: 异常处理
               href: extensions/exception-handling-cpp-component-extensions.md
