@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - transformer class
 ms.assetid: eea71925-7043-4a92-bfd4-dbc0ece5d081
-ms.openlocfilehash: c07017539bc0125e9e8c27e208480a50ccc7a719
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75c7697087b8b3ad8ff15ae4d08f2b4701aaa36a
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408058"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142356"
 ---
 # <a name="transformer-class"></a>transformer 类
 
@@ -31,43 +31,43 @@ ms.locfileid: "62408058"
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 template<class _Input, class _Output>
 class transformer : public propagator_block<single_link_registry<ITarget<_Output>>,
     multi_link_registry<ISource<_Input>>>;
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
 *_Input*<br/>
-接受的缓冲区的消息的负载类型。
+缓冲区接受的消息的负载类型。
 
 *_Output*<br/>
-存储和传播缓冲区的消息的负载类型。
+缓冲区存储和传播的消息的负载类型。
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[transformer](#ctor)|已重载。 构造 `transformer` 消息块。|
-|[~ transformer 析构函数](#dtor)|销毁`transformer`消息块。|
+|[转换器](#ctor)|已重载。 构造 `transformer` 消息块。|
+|[~ 转换器析构函数](#dtor)|销毁 `transformer` 消息块。|
 
-### <a name="protected-methods"></a>受保护的方法
+### <a name="protected-methods"></a>受保护方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[accept_message](#accept_message)|接受提供的这一条消息`transformer`消息块，将所有权传递给调用方。|
-|[consume_message](#consume_message)|使用以前提供的一条消息`transformer`和目标，将所有权传递给调用方保留。|
-|[link_target_notification](#link_target_notification)|通知新的目标已链接到此回调`transformer`消息块。|
-|[propagate_message](#propagate_message)|以异步方式从将消息传递`ISource`到此块`transformer`消息块。 由调用`propagate`方法，调用由源块时。|
+|[accept_message](#accept_message)|接受此 `transformer` 消息块提供的消息，并将所有权转移到调用方。|
+|[consume_message](#consume_message)|使用之前由 `transformer` 提供的消息，并由目标保留，将所有权转移给调用方。|
+|[link_target_notification](#link_target_notification)|一个回调，通知新目标已链接到此 `transformer` 消息块。|
+|[propagate_message](#propagate_message)|将消息从 `ISource` 块异步传递到此 `transformer` 消息块。 它由源块调用时由 `propagate` 方法调用。|
 |[propagate_to_any_targets](#propagate_to_any_targets)|执行输入消息中的转换器函数。|
-|[release_message](#release_message)|释放以前的消息保留。 (重写[source_block:: release_message](source-block-class.md#release_message)。)|
-|[reserve_message](#reserve_message)|保留以前由此一条消息`transformer`消息块。 (重写[source_block:: reserve_message](source-block-class.md#reserve_message)。)|
-|[resume_propagation](#resume_propagation)|将在保留已发布后继续传播。 (重写[source_block:: resume_propagation](source-block-class.md#resume_propagation)。)|
-|[send_message](#send_message)|以同步方式从将消息传递`ISource`到此块`transformer`消息块。 由调用`send`方法，调用由源块时。|
-|[supports_anonymous_source](#supports_anonymous_source)|重写 `supports_anonymous_source` 方法，以指示该块可以接受由未链接的源为其提供的消息。 (重写[itarget:: Supports_anonymous_source](itarget-class.md#supports_anonymous_source)。)|
+|[release_message](#release_message)|释放以前的消息保留。 （重写[source_block：： release_message](source-block-class.md#release_message)。）|
+|[reserve_message](#reserve_message)|保留此 `transformer` 消息块之前提供的消息。 （重写[source_block：： reserve_message](source-block-class.md#reserve_message)。）|
+|[resume_propagation](#resume_propagation)|释放保留后恢复传播。 （重写[source_block：： resume_propagation](source-block-class.md#resume_propagation)。）|
+|[send_message](#send_message)|将消息从 `ISource` 块同步传递到此 `transformer` 消息块。 它由源块调用时由 `send` 方法调用。|
+|[supports_anonymous_source](#supports_anonymous_source)|重写 `supports_anonymous_source` 方法，以指示该块可以接受由未链接的源为其提供的消息。 （重写[ITarget：： supports_anonymous_source](itarget-class.md#supports_anonymous_source)。）|
 
 ## <a name="remarks"></a>备注
 
@@ -91,57 +91,57 @@ class transformer : public propagator_block<single_link_registry<ITarget<_Output
 
 **命名空间：** 并发
 
-##  <a name="accept_message"></a> accept_message
+## <a name="accept_message"></a>accept_message
 
-接受提供的这一条消息`transformer`消息块，将所有权传递给调用方。
+接受此 `transformer` 消息块提供的消息，并将所有权转移到调用方。
 
-```
+```cpp
 virtual message<_Output>* accept_message(runtime_object_identity _MsgId);
 ```
 
 ### <a name="parameters"></a>参数
 
 *_MsgId*<br/>
-`runtime_object_identity`提供的`message`对象。
+提供的 `message` 对象的 `runtime_object_identity`。
 
 ### <a name="return-value"></a>返回值
 
-一个指向`message`对象调用方现在具有的所有权。
+指向调用方现在具有所有权的 `message` 对象的指针。
 
-##  <a name="consume_message"></a> consume_message
+## <a name="consume_message"></a>consume_message
 
-使用以前提供的一条消息`transformer`和目标，将所有权传递给调用方保留。
+使用之前由 `transformer` 提供的消息，并由目标保留，将所有权转移给调用方。
 
-```
+```cpp
 virtual message<_Output>* consume_message(runtime_object_identity _MsgId);
 ```
 
 ### <a name="parameters"></a>参数
 
 *_MsgId*<br/>
-`runtime_object_identity`的`message`对象已使用。
+所使用的 `message` 对象的 `runtime_object_identity`。
 
 ### <a name="return-value"></a>返回值
 
-一个指向`message`对象调用方现在具有的所有权。
+指向调用方现在具有所有权的 `message` 对象的指针。
 
 ### <a name="remarks"></a>备注
 
-类似于`accept`，但通过调用前面始终有`reserve`。
+与 `accept`类似，但前面总是调用 `reserve`。
 
-##  <a name="link_target_notification"></a> link_target_notification
+## <a name="link_target_notification"></a>link_target_notification
 
-通知新的目标已链接到此回调`transformer`消息块。
+一个回调，通知新目标已链接到此 `transformer` 消息块。
 
-```
+```cpp
 virtual void link_target_notification(_Inout_ ITarget<_Output> *);
 ```
 
-##  <a name="propagate_message"></a> propagate_message
+## <a name="propagate_message"></a>propagate_message
 
-以异步方式从将消息传递`ISource`到此块`transformer`消息块。 由调用`propagate`方法，调用由源块时。
+将消息从 `ISource` 块异步传递到此 `transformer` 消息块。 它由源块调用时由 `propagate` 方法调用。
 
-```
+```cpp
 virtual message_status propagate_message(
     _Inout_ message<_Input>* _PMessage,
     _Inout_ ISource<_Input>* _PSource);
@@ -153,67 +153,67 @@ virtual message_status propagate_message(
 指向 `message` 对象的指针。
 
 *_PSource*<br/>
-指向源块提供消息的指针。
+指向提供消息的源块的指针。
 
 ### <a name="return-value"></a>返回值
 
-一个[message_status](concurrency-namespace-enums.md)的目标决定如何处理该消息指示。
+[Message_status](concurrency-namespace-enums.md)指示目标决定对消息执行的操作。
 
-##  <a name="propagate_to_any_targets"></a> propagate_to_any_targets
+## <a name="propagate_to_any_targets"></a>propagate_to_any_targets
 
 执行输入消息中的转换器函数。
 
-```
+```cpp
 virtual void propagate_to_any_targets(_Inout_opt_ message<_Output> *);
 ```
 
-##  <a name="release_message"></a> release_message
+## <a name="release_message"></a>release_message
 
 释放以前的消息保留。
 
-```
+```cpp
 virtual void release_message(runtime_object_identity _MsgId);
 ```
 
 ### <a name="parameters"></a>参数
 
 *_MsgId*<br/>
-`runtime_object_identity`的`message`对象被释放。
+正在释放的 `message` 对象的 `runtime_object_identity`。
 
-##  <a name="reserve_message"></a> reserve_message
+## <a name="reserve_message"></a>reserve_message
 
-保留以前由此一条消息`transformer`消息块。
+保留此 `transformer` 消息块之前提供的消息。
 
-```
+```cpp
 virtual bool reserve_message(runtime_object_identity _MsgId);
 ```
 
 ### <a name="parameters"></a>参数
 
 *_MsgId*<br/>
-`runtime_object_identity`的`message`对象所保留。
+保留的 `message` 对象的 `runtime_object_identity`。
 
 ### <a name="return-value"></a>返回值
 
-**true**成功保留该消息，如果**false**否则为。
+如果消息已成功保留，**则为 true** ; 否则为**false** 。
 
 ### <a name="remarks"></a>备注
 
-之后`reserve`调用时，如果它将返回**true**，而是`consume`或`release`必须调用以获取或释放消息的所有权。
+调用 `reserve` 后，如果返回**true**，则必须调用 `consume` 或 `release`，才能获取或释放消息的所有权。
 
-##  <a name="resume_propagation"></a> resume_propagation
+## <a name="resume_propagation"></a>resume_propagation
 
-将在保留已发布后继续传播。
+释放保留后恢复传播。
 
-```
+```cpp
 virtual void resume_propagation();
 ```
 
-##  <a name="send_message"></a> send_message
+## <a name="send_message"></a>send_message
 
-以同步方式从将消息传递`ISource`到此块`transformer`消息块。 由调用`send`方法，调用由源块时。
+将消息从 `ISource` 块同步传递到此 `transformer` 消息块。 它由源块调用时由 `send` 方法调用。
 
-```
+```cpp
 virtual message_status send_message(
     _Inout_ message<_Input>* _PMessage,
     _Inout_ ISource<_Input>* _PSource);
@@ -225,29 +225,29 @@ virtual message_status send_message(
 指向 `message` 对象的指针。
 
 *_PSource*<br/>
-指向源块提供消息的指针。
+指向提供消息的源块的指针。
 
 ### <a name="return-value"></a>返回值
 
-一个[message_status](concurrency-namespace-enums.md)的目标决定如何处理该消息指示。
+[Message_status](concurrency-namespace-enums.md)指示目标决定对消息执行的操作。
 
-##  <a name="supports_anonymous_source"></a> supports_anonymous_source
+## <a name="supports_anonymous_source"></a>supports_anonymous_source
 
 重写 `supports_anonymous_source` 方法，以指示该块可以接受由未链接的源为其提供的消息。
 
-```
+```cpp
 virtual bool supports_anonymous_source();
 ```
 
 ### <a name="return-value"></a>返回值
 
-**true**因为该块没有推迟提供的消息。
+**true** ，因为块不会推迟所提供的消息。
 
-##  <a name="ctor"></a> 转换器
+## <a name="ctor"></a>转换器
 
 构造 `transformer` 消息块。
 
-```
+```cpp
 transformer(
     _Transform_method const& _Func,
     _Inout_opt_ ITarget<_Output>* _PTarget = NULL);
@@ -283,10 +283,10 @@ transformer(
 ### <a name="parameters"></a>参数
 
 *_Func*<br/>
-将为每个接受的消息调用一个函数。
+将为每个已接受的消息调用的函数。
 
 *_PTarget*<br/>
-指向要与转换器链接的目标块的指针。
+指向链接的目标块的指针。
 
 *_Filter*<br/>
 确定是否应接受提供的消息的筛选器函数。
@@ -301,19 +301,19 @@ transformer(
 
 如果未指定 `_PScheduler` 或 `_PScheduleGroup` 函数，运行时将使用默认的计划程序。
 
-类型`_Transform_method`是具有签名的伪函数`_Output (_Input const &)`调用此`transformer`消息块来处理消息。
+类型 `_Transform_method` 是具有签名 `_Output (_Input const &)` 的函子，此 `transformer` 消息块调用此方法来处理消息。
 
-类型`filter_method`是具有签名的伪函数`bool (_Input const &)`调用此`transformer`消息块，以确定它是否应接受提供的消息。
+类型 `filter_method` 是具有签名 `bool (_Input const &)` 的函子，此 `transformer` 消息块调用此方法来确定它是否应接受提供的消息。
 
-##  <a name="dtor"></a> ~transformer
+## <a name="dtor"></a>~ 转换器
 
-销毁`transformer`消息块。
+销毁 `transformer` 消息块。
 
-```
+```cpp
 ~transformer();
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [并发命名空间](concurrency-namespace.md)<br/>
 [call 类](call-class.md)

@@ -268,40 +268,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_4::set_zyx
 - amp_short_vectors/Concurrency::graphics::norm_4::wy
 ms.assetid: d628b2bf-2cdb-4dbb-95c6-cd778f5e991f
-ms.openlocfilehash: 06e08c24a92259e34be59a9f021ae13f38e974a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 08d19d25c3f9309553972e752daee75c9896a071
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351571"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126469"
 ---
-# <a name="norm4-class"></a>norm_4 类
+# <a name="norm_4-class"></a>norm_4 类
 
-表示正常的四个数字的短矢量。
+表示四个普通数字的短矢量。
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 class norm_4;
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[norm_4 构造函数](#ctor)|已重载。 默认构造函数，初始化 0 的所有元素。|
+|[norm_4 构造函数](#ctor)|已重载。 默认构造函数，用0初始化所有元素。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |norm_4::get_w||
 |norm_4::get_wx||
@@ -440,9 +440,9 @@ class norm_4;
 |norm_4::set_zyx||
 |norm_4::set_zyxw||
 
-### <a name="public-operators"></a>公共运算符
+### <a name="public-operators"></a>公用運算子
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |norm_4::operator-||
 |norm_4::operator--||
@@ -455,55 +455,55 @@ class norm_4;
 
 ### <a name="public-constants"></a>公共常量
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[大小常量](#norm_4__size)||
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |norm_4::a||
-|norm_4::ab||
+|norm_4：： ab||
 |norm_4::abg||
 |norm_4::abgr||
 |norm_4::abr||
 |norm_4::abrg||
-|norm_4::ag||
+|norm_4：： ag||
 |norm_4::agb||
 |norm_4::agbr||
 |norm_4::agr||
 |norm_4::agrb||
-|norm_4::ar||
+|norm_4：： ar||
 |norm_4::arb||
 |norm_4::arbg||
-|norm_4::arg||
+|norm_4：： arg||
 |norm_4::argb||
 |norm_4::b||
 |norm_4::ba||
-|norm_4::bag||
-|norm_4::bagr||
+|norm_4：：包||
+|norm_4：： bagr||
 |norm_4::bar||
 |norm_4::barg||
 |norm_4::bg||
 |norm_4::bga||
-|norm_4::bgar||
+|norm_4：： bgar||
 |norm_4::bgr||
 |norm_4::bgra||
 |norm_4::br||
 |norm_4::bra||
-|norm_4::brag||
+|norm_4：： brag||
 |norm_4::brg||
 |norm_4::brga||
-|norm_4::g||
+|norm_4：： g||
 |norm_4::ga||
-|norm_4::gab||
+|norm_4：： gab||
 |norm_4::gabr||
-|norm_4::gar||
+|norm_4：： gar||
 |norm_4::garb||
 |norm_4::gb||
-|norm_4::gba||
-|norm_4::gbar||
+|norm_4：： gba||
+|norm_4：： gbar||
 |norm_4::gbr||
 |norm_4::gbra||
 |norm_4::gr||
@@ -511,37 +511,37 @@ class norm_4;
 |norm_4::grab||
 |norm_4::grb||
 |norm_4::grba||
-|norm_4::r||
+|norm_4：： r||
 |norm_4::ra||
 |norm_4::rab||
 |norm_4::rabg||
 |norm_4::rag||
 |norm_4::ragb||
 |norm_4::rb||
-|norm_4::rba||
-|norm_4::rbag||
+|norm_4：： rba||
+|norm_4：： rbag||
 |norm_4::rbg||
-|norm_4::rbga||
-|norm_4::rg||
+|norm_4：： rbga||
+|norm_4：： rg||
 |norm_4::rga||
 |norm_4::rgab||
 |norm_4::rgb||
 |norm_4::rgba||
-|norm_4::w||
+|norm_4：： w||
 |norm_4::wx||
 |norm_4::wxy||
 |norm_4::wxyz||
 |norm_4::wxz||
 |norm_4::wxzy||
-|norm_4::wy||
-|norm_4::wyx||
+|norm_4：： wy||
+|norm_4：： wyx||
 |norm_4::wyxz||
 |norm_4::wyz||
 |norm_4::wyzx||
 |norm_4::wz||
 |norm_4::wzx||
 |norm_4::wzxy||
-|norm_4::wzy||
+|norm_4：： wzy||
 |norm_4::wzyx||
 |norm_4::x||
 |norm_4::xw||
@@ -550,7 +550,7 @@ class norm_4;
 |norm_4::xwz||
 |norm_4::xwzy||
 |norm_4::xy||
-|norm_4::xyw||
+|norm_4：： xyw||
 |norm_4::xywz||
 |norm_4::xyz||
 |norm_4::xyzw||
@@ -559,22 +559,22 @@ class norm_4;
 |norm_4::xzwy||
 |norm_4::xzy||
 |norm_4::xzyw||
-|norm_4::y||
-|norm_4::yw||
-|norm_4::ywx||
+|norm_4：： y||
+|norm_4：： yw||
+|norm_4：： ywx||
 |norm_4::ywxz||
 |norm_4::ywz||
-|norm_4::ywzx||
+|norm_4：： ywzx||
 |norm_4::yx||
 |norm_4::yxw||
 |norm_4::yxwz||
 |norm_4::yxz||
 |norm_4::yxzw||
 |norm_4::yz||
-|norm_4::yzw||
-|norm_4::yzwx||
+|norm_4：： yzw||
+|norm_4：： yzwx||
 |norm_4::yzx||
-|norm_4::yzxw||
+|norm_4：： yzxw||
 |norm_4::z||
 |norm_4::zw||
 |norm_4::zwx||
@@ -587,8 +587,8 @@ class norm_4;
 |norm_4::zxy||
 |norm_4::zxyw||
 |norm_4::zy||
-|norm_4::zyw||
-|norm_4::zywx||
+|norm_4：： zyw||
+|norm_4：： zywx||
 |norm_4::zyx||
 |norm_4::zyxw||
 
@@ -598,15 +598,15 @@ class norm_4;
 
 ## <a name="requirements"></a>要求
 
-**标头：** amp_short_vectors.h
+**标头：** amp_short_vectors。h
 
-**命名空间：** Concurrency:: graphics
+**命名空间：** Concurrency：： graphics
 
-##  <a name="ctor"></a> norm_4
+## <a name="ctor"></a>norm_4
 
-默认构造函数，初始化 0 的所有元素。
+默认构造函数，用0初始化所有元素。
 
-```
+```cpp
 norm_4() restrict(amp,
     cpu);
 
@@ -667,29 +667,29 @@ explicit inline norm_4(
 ### <a name="parameters"></a>参数
 
 *_V0*<br/>
-要初始化元素 0 的值。
+要初始化元素0的值。
 
 *_V1*<br/>
-要初始化元素 1 的值。
+要初始化元素1的值。
 
 *_V2*<br/>
-要初始化元素 2 的值。
+用于初始化元素2的值。
 
 *_V3*<br/>
-要初始化元素 3 的值。
+要初始化元素3的值。
 
 *_V*<br/>
-用于初始化值。
+用于初始化的值。
 
 *_Other*<br/>
 用于初始化的对象。
 
-##  <a name="norm_4__size"></a> 大小
+## <a name="norm_4__size"></a>规格
 
-```
+```cpp
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)

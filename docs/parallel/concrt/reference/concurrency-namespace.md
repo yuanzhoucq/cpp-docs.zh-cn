@@ -20,20 +20,20 @@ f1_keywords:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-ms.openlocfilehash: 5449362454c5899e544ed370f13d28471a59bd13
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 06134838494e38c182d7c8328497666862f40fd6
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821839"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143230"
 ---
 # <a name="concurrency-namespace"></a>concurrency 命名空间
 
-`Concurrency` 命名空间提供可让你访问 C++ 的并发运行和并发编程框架的类和函数。 有关详细信息，请参阅 [Concurrency Runtime](../../../parallel/concrt/concurrency-runtime.md)。
+`Concurrency` 命名空间提供可让你访问 C++ 的并发运行和并发编程框架的类和函数。 有关详细信息，请参阅[并发运行时](../../../parallel/concrt/concurrency-runtime.md)。
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 namespace concurrency;
 ```
 
@@ -41,7 +41,7 @@ namespace concurrency;
 
 ### <a name="typedefs"></a>Typedef
 
-|Name|描述|
+|名称|说明|
 |----------|-----------------|
 |`runtime_object_identity`|每个消息实例都后接一个标识，因为它已被克隆并在消息组件之间传递。 这不能是消息对象的地址。|
 |`task_status`|表示任务的终端状态的类型。 有效值为 `completed` 和 `canceled`。|
@@ -50,11 +50,11 @@ namespace concurrency;
 
 ### <a name="classes"></a>类
 
-|Name|描述|
+|名称|说明|
 |----------|-----------------|
 |[affinity_partitioner 类](affinity-partitioner-class.md)|`affinity_partitioner` 类与 `static_partitioner` 类相似，但它选择将子范围映射到工作线程，从而改善缓存关联。 在同一数据集中重新执行循环且数据适应缓存时，它可以显著提高性能。 请注意，必须与在特定数据集中执行的并行循环的后续迭代一起使用同一 `affinity_partitioner` 对象，才能受益于数据位置。|
 |[agent 类](agent-class.md)|旨在用作所有独立代理的基类的类。 用于对其他代理隐藏状态并通过消息传递进行交互。|
-|[auto_partitioner 类](auto-partitioner-class.md)|`auto_partitioner` 类表示 `parallel_for`、`parallel_for_each` 和 `parallel_transform` 用于对其循环访问的范围进行分区的默认方法。 此分区方法使用范围窃取进行负载平衡以及按循环访问取消。|
+|[auto_partitioner 类](auto-partitioner-class.md)|`auto_partitioner` 类表示 `parallel_for`、`parallel_for_each` 和 `parallel_transform` 用于对其循环访问的范围进行分区的默认方法。 这种分区方法使用范围偷窃来实现负载平衡和按循环访问。|
 |[bad_target 类](bad-target-class.md)|此类描述消息块被给予指向目标的指针，但该目标对于正在执行的操作无效时引发的异常。|
 |[call 类](call-class.md)|`call` 消息块是多源、有序的 `target_block`，可以在接收消息时调用指定函数。|
 |[cancellation_token 类](cancellation-token-class.md)|`cancellation_token` 类表示确定某项操作是否已请求取消的功能。 给定的标记可与 `task_group`、`structured_task_group` 或 `task` 关联以实现隐式取消。 它还可为了取消而进行轮询，或可在取消关联的 `cancellation_token_source` 时注册回调。|
@@ -70,21 +70,21 @@ namespace concurrency;
 |[concurrent_unordered_set 类](concurrent-unordered-set-class.md)|`concurrent_unordered_set` 类是一种并发安全容器，用于控制 K 类型的不同长度的元素序列。序列以启用并发安全追加、元素访问、迭代器访问和迭代器遍历操作的方式表示。|
 |[concurrent_vector 类](concurrent-vector-class.md)|`concurrent_vector` 类是允许对任意元素进行随机访问的序列容器类。 它支持并发安全追加、元素访问、迭代器访问和迭代器遍历操作。|
 |[Context 类](context-class.md)|表示执行上下文的抽象。|
-|[context_self_unblock 类](context-self-unblock-class.md)|此类描述从同一上下文调用 `Context` 对象的 `Unblock` 方法时引发的异常。 这将指示给定上下文解除阻止自身的尝试。|
-|[context_unblock_unbalanced 类](context-unblock-unbalanced-class.md)|此类描述对 `Context` 对象的 `Block` 和 `Unblock` 方法的调用未恰当配对时引发的异常。|
+|[context_self_unblock 类](context-self-unblock-class.md)|此类描述从同一上下文调用 `Unblock` 对象的 `Context` 方法时引发的异常。 这将指示给定上下文解除阻止自身的尝试。|
+|[context_unblock_unbalanced 类](context-unblock-unbalanced-class.md)|此类描述对 `Block` 对象的 `Unblock` 和 `Context` 方法的调用未恰当配对时引发的异常。|
 |[critical_section 类](critical-section-class.md)|明确感知并发运行时的不可重入互斥。|
 |[CurrentScheduler 类](currentscheduler-class.md)|表示与调用上下文关联的当前计划程序的抽象。|
 |[default_scheduler_exists 类](default-scheduler-exists-class.md)|此类描述在进程内已存在默认计划程序的情况下调用 `Scheduler::SetDefaultSchedulerPolicy` 方法时引发的异常。|
 |[event 类](event-class.md)|明确感知并发运行时的手动重置事件。|
 |[improper_lock 类](improper-lock-class.md)|此类描述错误获取锁时引发的异常。|
-|[improper_scheduler_attach 类](improper-scheduler-attach-class.md)|此类描述在已附加到当前上下文的 `Scheduler` 对象上调用 `Attach` 方法时引发的异常。|
-|[improper_scheduler_detach 类](improper-scheduler-detach-class.md)|此类描述在尚未附加到任何使用 `Scheduler` 对象的 `Attach` 方法的计划程序的上下文中调用 `CurrentScheduler::Detach` 方法时引发的异常。|
-|[improper_scheduler_reference 类](improper-scheduler-reference-class.md)|此类描述从不属于该计划程序的上下文中，在正在关闭的 `Scheduler` 对象上调用 `Reference` 方法时引发的异常。|
+|[improper_scheduler_attach 类](improper-scheduler-attach-class.md)|此类描述在已附加到当前上下文的 `Attach` 对象上调用 `Scheduler` 方法时引发的异常。|
+|[improper_scheduler_detach 类](improper-scheduler-detach-class.md)|此类描述在尚未附加到任何使用 `CurrentScheduler::Detach` 对象的 `Attach` 方法的计划程序的上下文中调用 `Scheduler` 方法时引发的异常。|
+|[improper_scheduler_reference 类](improper-scheduler-reference-class.md)|此类描述从不属于该计划程序的上下文中，在正在关闭的 `Reference` 对象上调用 `Scheduler` 方法时引发的异常。|
 |[invalid_link_target 类](invalid-link-target-class.md)|此类描述调用消息块的 `link_target` 方法且消息块无法链接到目标时引发的异常。 这可能是因为超出消息块允许的链接数或两次尝试将特定目标链接到同一源。|
-|[invalid_multiple_scheduling 类](invalid-multiple-scheduling-class.md)|此类描述在没有对 `wait` 或 `run_and_wait` 方法进行干预调用的情况下，通过 `task_group` 或 `structured_task_group` 对象的 `run` 方法对 `task_handle` 对象进行多次计划时引发的异常。|
+|[invalid_multiple_scheduling 类](invalid-multiple-scheduling-class.md)|此类描述在没有对 `task_handle` 或 `run` 方法进行干预调用的情况下，通过 `task_group` 或 `structured_task_group` 对象的 `wait` 方法对 `run_and_wait` 对象进行多次计划时引发的异常。|
 |[invalid_operation 类](invalid-operation-class.md)|此类描述执行无效操作时引发的异常，由并发运行时引发的其他异常类型不会对此异常进行更为准确的描述。|
-|[invalid_oversubscribe_operation 类](invalid-oversubscribe-operation-class.md)|此类描述在先前没有对 `Context::Oversubscribe` 方法进行调用（`_BeginOversubscription` 参数设置为 `true`）的情况下，调用 `Context::Oversubscribe` 方法（`_BeginOversubscription` 参数设置为 `false`）时引发的异常。|
-|[invalid_scheduler_policy_key 类](invalid-scheduler-policy-key-class.md)|此类描述无效或未知键传递给 `SchedulerPolicy` 对象构造函数，或 `SchedulerPolicy` 对象的 `SetPolicyValue` 方法被传递了必须使用其他方式（例如 `SetConcurrencyLimits` 方法）进行更改的键时引发的异常。|
+|[invalid_oversubscribe_operation 类](invalid-oversubscribe-operation-class.md)|此类描述在先前没有对 `Context::Oversubscribe` 方法进行调用（`_BeginOversubscription` 参数设置为 `false`）的情况下，调用 `Context::Oversubscribe` 方法（`_BeginOversubscription` 参数设置为 `true`）时引发的异常。|
+|[invalid_scheduler_policy_key 类](invalid-scheduler-policy-key-class.md)|此类描述无效或未知键传递给 `SchedulerPolicy` 对象构造函数，或 `SetPolicyValue` 对象的 `SchedulerPolicy` 方法被传递了必须使用其他方式（例如 `SetConcurrencyLimits` 方法）进行更改的键时引发的异常。|
 |[invalid_scheduler_policy_thread_specification 类](invalid-scheduler-policy-thread-specification-class.md)|此类描述尝试设置 `SchedulerPolicy` 对象的并发限制，以便 `MinConcurrency` 键的值小于 `MaxConcurrency` 键的值时引发的异常。|
 |[invalid_scheduler_policy_value 类](invalid-scheduler-policy-value-class.md)|此类描述 `SchedulerPolicy` 对象的策略键设置为对于该键无效的值时引发的异常。|
 |[ISource 类](isource-class.md)|`ISource` 类是所有源块的接口。 源块将消息传播到 `ITarget` 块。|
@@ -97,7 +97,7 @@ namespace concurrency;
 |[missing_wait 类](missing-wait-class.md)|此类描述执行对象的析构函数时仍有计划到 `task_group` 或 `structured_task_group` 对象的任务时引发的异常。 如果因为堆栈展开为异常的结果而到达析构函数的调用条件，则永远不会引发此异常。|
 |[multi_link_registry 类](multi-link-registry-class.md)|`multi_link_registry` 对象是管理多个源块或多个目标块的 `network_link_registry`。|
 |[multitype_join 类](multitype-join-class.md)|`multitype_join` 消息块是多源、单目标的消息块，可以合并来自其每个源的不同类型的消息并向其目标提供合并的消息的元组。|
-|[nested_scheduler_missing_detach 类](nested-scheduler-missing-detach-class.md)|此类描述并发运行时检测到你没有在通过 `Scheduler` 对象的 `Attach` 方法附加到第二个计划程序的上下文中调用 `CurrentScheduler::Detach` 方法时引发的异常。|
+|[nested_scheduler_missing_detach 类](nested-scheduler-missing-detach-class.md)|此类描述并发运行时检测到你没有在通过 `CurrentScheduler::Detach` 对象的 `Attach` 方法附加到第二个计划程序的上下文中调用 `Scheduler` 方法时引发的异常。|
 |[network_link_registry 类](network-link-registry-class.md)|`network_link_registry` 抽象基类管理源块和目标块之间的链接。|
 |[operation_timed_out 类](operation-timed-out-class.md)|此类描述操作超时时引发的异常。|
 |[ordered_message_processor 类](ordered-message-processor-class.md)|`ordered_message_processor` 是允许消息块按接收顺序处理消息的 `message_processor`。|
@@ -116,8 +116,8 @@ namespace concurrency;
 |[single_link_registry 类](single-link-registry-class.md)|`single_link_registry` 对象是仅管理单个源块或目标块的 `network_link_registry`。|
 |[source_block 类](source-block-class.md)|`source_block` 是仅限于源的块的抽象基类。 该类提供基本链接管理功能和常见错误检查。|
 |[source_link_manager 类](source-link-manager-class.md)|`source_link_manager` 对象管理到 `ISource` 块的消息块网络链接。|
-|[static_partitioner 类](static-partitioner-class.md)|`static_partitioner` 类表示由 `parallel_for` 循环访问的范围的静态分区。 只要基础计划程序有工作线程可用，分区程序就会将范围分成尽可能多的区块。|
-|[structured_task_group 类](structured-task-group-class.md)|`structured_task_group` 类表示并行工作的高度结构化集合。 可以使用 `task_handle` 对象将各个并行任务排队到 `structured_task_group` 并等待它们完成，或在它们完成执行之前取消任务组，这将中止尚未开始执行的所有任务。|
+|[static_partitioner 类](static-partitioner-class.md)|`static_partitioner` 类表示由 `parallel_for` 循环访问的范围的静态分区。 分区程序将范围划分为多个块，因为有可用于基础计划程序的工作线程。|
+|[structured_task_group 类](structured-task-group-class.md)|`structured_task_group` 类表示并行工作的高度结构化集合。 可以使用 `structured_task_group` 对象将各个并行任务排队到 `task_handle` 并等待它们完成，或在它们完成执行之前取消任务组，这将中止尚未开始执行的所有任务。|
 |[target_block 类](target-block-class.md)|`target_block` 类是抽象基类，它提供基本链接管理功能和针对仅限于目标的块的错误检查。|
 |[task 类（并发运行时）](task-class.md)|并行模式库 (PPL) `task` 类。 `task` 对象，表示可异步执行的工作，以及可与并发运行时中的并行算法生成的其他任务一起执行的工作。 成功完成后，它将生成类型为 `_ResultType` 的结果。 类型为 `task<void>` 的任务不生成任何结果。 可独立于其他任务等待和取消的任务。 它也可通过使用 continuations(`then`)、join(`when_all`) 和 choice(`when_any`) 模式由其他任务构成。|
 |[task_canceled 类](task-canceled-class.md)|此类描述了 PPL 任务层为了强制取消当前任务而引发的异常。 对于已取消的任务，它还由[任务](task-class.md)的 `get()` 方法引发。|
@@ -133,9 +133,9 @@ namespace concurrency;
 
 ### <a name="structures"></a>结构
 
-|Name|描述|
+|名称|说明|
 |----------|-----------------|
-|[DispatchState 结构](dispatchstate-structure.md)|`DispatchState` 结构用于将状态传输给 `IExecutionContext::Dispatch` 方法。 它描述了在 `IExecutionContext` 接口上调用 `Dispatch` 方法的情形。|
+|[DispatchState 结构](dispatchstate-structure.md)|`DispatchState` 结构用于将状态传输给 `IExecutionContext::Dispatch` 方法。 它描述了在 `Dispatch` 接口上调用 `IExecutionContext` 方法的情形。|
 |[IExecutionContext 结构](iexecutioncontext-structure.md)|可以在给定虚拟处理器上运行并可以协作切换上下文的执行上下文的接口。|
 |[IExecutionResource 结构](iexecutionresource-structure.md)|硬件线程的抽象。|
 |[IResourceManager 结构](iresourcemanager-structure.md)|并发运行时的资源管理器的接口。 这是计划程序与资源管理器进行通信的接口。|
@@ -154,14 +154,14 @@ namespace concurrency;
 
 ### <a name="enumerations"></a>枚举
 
-|Name|描述|
+|名称|说明|
 |----------|-----------------|
 |[agent_status](concurrency-namespace-enums.md#agent_status)|`agent` 的有效状态。|
 |[Agents_EventType](concurrency-namespace-enums.md#agents_eventtype)|可以使用代理库提供的跟踪功能进行跟踪的事件的类型|
 |[ConcRT_EventType](concurrency-namespace-enums.md#concrt_eventtype)|可以使用并发运行时提供的跟踪功能进行跟踪的事件的类型。|
 |[Concrt_TraceFlags](concurrency-namespace-enums.md#concrt_traceflags)|事件类型的跟踪标志|
 |[CriticalRegionType](concurrency-namespace-enums.md#criticalregiontype)|上下文位于其中的关键区域的类型。|
-|[DynamicProgressFeedbackType](concurrency-namespace-enums.md#dynamicprogressfeedbacktype)|由 `DynamicProgressFeedback` 策略用于描述重新平衡计划程序资源的依据是从计划程序收集的统计信息，还是通过对 `IVirtualProcessorRoot` 接口上的 `Activate` 和 `Deactivate` 方法进行调用以进出空闲状态的虚拟处理器。 有关可用计划程序策略的详细信息，请参阅[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)。|
+|[DynamicProgressFeedbackType](concurrency-namespace-enums.md#dynamicprogressfeedbacktype)|由 `DynamicProgressFeedback` 策略用于描述重新平衡计划程序资源的依据是从计划程序收集的统计信息，还是通过对 `Activate` 接口上的 `Deactivate` 和 `IVirtualProcessorRoot` 方法进行调用以进出空闲状态的虚拟处理器。 有关可用计划程序策略的详细信息，请参阅[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)。|
 |[join_type](concurrency-namespace-enums.md#join_type)|`join` 消息块的类型。|
 |[message_status](concurrency-namespace-enums.md#message_status)|`message` 对象的内容到块的有效响应。|
 |[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)|描述计划程序行为各个方面的策略键。 每个策略元素由一个键值对描述。 有关计划程序策略及其对计划程序的影响的详细信息，请参阅[任务计划程序](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)。|
@@ -173,7 +173,7 @@ namespace concurrency;
 
 ### <a name="functions"></a>函数
 
-|Name|描述|
+|名称|说明|
 |----------|-----------------|
 |[分配函数](concurrency-namespace-functions.md#alloc)|通过并发运行时缓存子分配器分配具有指定大小的内存块。|
 |[asend 函数](concurrency-namespace-functions.md#asend)|已重载。 异步发送操作，计划任务以将数据传播到目标块。|
@@ -196,13 +196,13 @@ namespace concurrency;
 |[make_greedy_join 函数](concurrency-namespace-functions.md#make_greedy_join)|已重载。 从可选的 `greedy multitype_join` 或 `Scheduler` 及两个或更多输入源构造 `ScheduleGroup` 消息块。|
 |[make_join 函数](concurrency-namespace-functions.md#make_join)|已重载。 从可选的 `non_greedy multitype_join` 或 `Scheduler` 及两个或更多输入源构造 `ScheduleGroup` 消息块。|
 |[make_task 函数](concurrency-namespace-functions.md#make_task)|用于创建 `task_handle` 对象的工厂方法。|
-|[parallel_buffered_sort 函数](concurrency-namespace-functions.md#parallel_buffered_sort)|已重载。 将指定范围中的元素按非降序顺序排列，或根据二元谓词指定的排序条件排列（以并行方式）。 此函数是基于比较、不稳定的就地排序，因此它与 `std::sort` 在语义上相似，但它需要 `O(n)` 附加空间，并需要待排序的元素进行默认初始化。|
+|[parallel_buffered_sort 函数](concurrency-namespace-functions.md#parallel_buffered_sort)|已重载。 将指定范围中的元素按非降序顺序排列，或根据二元谓词指定的排序条件进行排列。 此函数是基于比较、不稳定的就地排序，因此它与 `std::sort` 在语义上相似，但它需要 `O(n)` 附加空间，并需要待排序的元素进行默认初始化。|
 |[parallel_for 函数](concurrency-namespace-functions.md#parallel_for)|已重载。 `parallel_for` 循环访问某个索引范围，并在每次迭代时以并行方式执行用户提供的函数。|
-|[parallel_for_each 函数](concurrency-namespace-functions.md#parallel_for_each)|已重载。 `parallel_for_each` 以并行方式将指定函数应用于某个范围内的每个元素。 除对元素并行执行迭代以及未指定迭代的顺序外，它在语义上等效于 `std` 命名空间中的 `for_each` 函数。 实际自变量 `_Func` 必须支持窗体 `operator()(T)` 的函数调用运算符，其中形式参数 `T` 是正在被循环访问的容器的项类型。|
+|[parallel_for_each 函数](concurrency-namespace-functions.md#parallel_for_each)|已重载。 `parallel_for_each` 以并行方式将指定函数应用于某个范围内的每个元素。 除对元素并行执行迭代以及未指定迭代的顺序外，它在语义上等效于 `for_each` 命名空间中的 `std` 函数。 实际自变量 `_Func` 必须支持窗体 `operator()(T)` 的函数调用运算符，其中形式参数 `T` 是正在被循环访问的容器的项类型。|
 |[parallel_invoke 函数](concurrency-namespace-functions.md#parallel_invoke)|已重载。 执行作为参数并行提供的函数对象，并在它们完成执行后进行阻止。 每个函数对象都可以是 lambda 表达式、函数指针或支持具有签名 `void operator()()` 的函数调用运算符的任何对象。|
 |[parallel_radixsort 函数](concurrency-namespace-functions.md#parallel_radixsort)|已重载。 使用基数排序算法将指定范围中的元素按非降序顺序排列。 这是一个稳定排序函数，它需要可以投影要按无符号整数键排序的元素的投影函数。 默认初始化对于待排序的元素是必须的。|
 |[parallel_reduce 函数](concurrency-namespace-functions.md#parallel_reduce)|已重载。 通过计算连续部分和来计算指定范围中所有元素的和，或计算类似的通过指定的二元运算（而不是求和运算）获得的连续部分结果的结果（以并行方式）。 `parallel_reduce` 与 `std::accumulate` 在语义上相似，但它需要二元运算是关联的，并需要标识值（而不是初始值）。|
-|[parallel_sort 函数](concurrency-namespace-functions.md#parallel_sort)|已重载。 将指定范围中的元素按非降序顺序排列，或根据二元谓词指定的排序条件排列（以并行方式）。 此函数是基于比较、不稳定的就地排序，因此它与 `std::sort` 在语义上相似。|
+|[parallel_sort 函数](concurrency-namespace-functions.md#parallel_sort)|已重载。 将指定范围中的元素按非降序顺序排列，或根据二元谓词指定的排序条件进行排列。 此函数是基于比较、不稳定的就地排序，因此它与 `std::sort` 在语义上相似。|
 |[parallel_transform 函数](concurrency-namespace-functions.md#parallel_transform)|已重载。 将指定的函数对象应用于源范围中的每个元素或两个源范围中的一对元素，并将函数对象的返回值复制到目标范围（以并行方式）。 此函数在语义上等效于 `std::transform`。|
 |[receive 函数](concurrency-namespace-functions.md#receive)|已重载。 常规接收实现，允许上下文仅等待来自一个源的数据并筛选所接受的值。|
 |[run_with_cancellation_token 函数](concurrency-namespace-functions.md#run_with_cancellation_token)|在给定取消标记的上下文中立即同步执行函数对象。|
@@ -220,7 +220,7 @@ namespace concurrency;
 
 ### <a name="operators"></a>运算符
 
-|Name|描述|
+|名称|说明|
 |----------|-----------------|
 |[operator!=](concurrency-namespace-operators.md#operator_neq)|测试运算符左侧的 `concurrent_vector` 对象是否不等于右侧的 `concurrent_vector` 对象。|
 |[operator&&](concurrency-namespace-operators.md#operator_amp_amp)|已重载。 创建一个任务，该任务将在作为参数提供的两个任务成功完成后成功完成。|
@@ -233,7 +233,7 @@ namespace concurrency;
 
 ### <a name="constants"></a>常量
 
-|Name|描述|
+|名称|说明|
 |----------|-----------------|
 |[AgentEventGuid](concurrency-namespace-constants1.md#agenteventguid)|类别 GUID ({B9B5B78C-0713-4898-A21A-C67949DCED07})，描述并发运行时中由代理库激发的 ETW 事件。|
 |[ChoreEventGuid](concurrency-namespace-constants1.md#choreeventguid)|类别 GUID，描述由与日常任务或任务直接相关的并发运行时激发的 ETW 事件。|
@@ -254,10 +254,10 @@ namespace concurrency;
 |[SchedulerEventGuid](concurrency-namespace-constants1.md#schedulereventguid)|类别 GUID，描述由与计划程序活动直接相关的并发运行时激发的 ETW 事件。|
 |[VirtualProcessorEventGuid](concurrency-namespace-constants1.md#virtualprocessoreventguid)|类别 GUID，描述由与虚拟处理器直接相关的并发运行时激发的 ETW 事件。|
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>要求
 
 **标头：** concrt、concrtrm.h、concurrent_priority_queue、concurrent_queue、concurrent_unordered_set concurrent_unordered_map、concurrent_vector、internal_concurrent_hash、internal_split_ordered_list、pplcancellation_token、pplconcrt.h、pplinterface.h、、、ppltasks.h、、、、、、、、
 
 ## <a name="see-also"></a>另请参阅
 
-[引用](reference-concurrency-runtime.md)
+[参考](reference-concurrency-runtime.md)

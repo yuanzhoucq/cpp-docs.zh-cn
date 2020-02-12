@@ -4,24 +4,24 @@ ms.date: 11/04/2016
 f1_keywords:
 - amprt/concurrency::direct3d::adopt_d3d_access_lock_t
 ms.assetid: ef10bb06-88d6-420b-bb81-35895b2e02e6
-ms.openlocfilehash: 7d72902a0a11ff7e9c76db2b8b6a8a76199a40dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a52632134a8e386390a88a326d4ca870951a8288
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405607"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127145"
 ---
-# <a name="adoptd3daccesslockt-structure"></a>adopt_d3d_access_lock_t 结构
+# <a name="adopt_d3d_access_lock_t-structure"></a>adopt_d3d_access_lock_t 结构
 
-而不获取，应采用标记类型，以指示 D3D 访问锁。
+标记类型表示应采用 D3D 访问锁定，而不是获得。
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 struct adopt_d3d_access_lock_t;
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -29,10 +29,10 @@ struct adopt_d3d_access_lock_t;
 
 ## <a name="requirements"></a>要求
 
-**标头：** amprt.h
+**标头：** amprt
 
-**Namespace:** concurrency::direct3d
+**命名空间：** concurrency：:d irect3d
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Concurrency::direct3d 命名空间](concurrency-direct3d-namespace.md)

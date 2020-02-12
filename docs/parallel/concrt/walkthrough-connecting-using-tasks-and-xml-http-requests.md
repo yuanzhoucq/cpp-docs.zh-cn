@@ -6,19 +6,19 @@ helpviewer_keywords:
 - IXMLHTTPRequest2 and tasks, example
 - IXHR2 and tasks, example
 ms.assetid: e8e12d46-604c-42a7-abfd-b1d1bb2ed6b3
-ms.openlocfilehash: b11b56578cadc4b3bd037acf84014a718f9fad84
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: f1d91e4d203e17242bcf6e784d1ef70a03a9bc33
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "69512133"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142061"
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>演练：使用任务和 XML HTTP 请求进行连接
 
 此示例演示如何将[IXMLHTTPRequest2](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2)和[IXMLHTTPRequest2Callback](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2callback)接口与任务一起使用，以将 HTTP GET 和 POST 请求发送到通用 Windows 平台（UWP）应用中的 web 服务。 通过将 `IXMLHTTPRequest2` 与任务组合在一起，你可以编写通过其他任务编写的代码。 例如，可以使用下载任务作为任务链的一部分。 工作取消时，下载任务也会响应。
 
 > [!TIP]
->  你还可以使用C++ REST SDK 通过C++应用或桌面C++应用从 UWP 应用执行 HTTP 请求。 有关详细信息，请参阅[ C++ REST SDK （Codename "Casablanca"）](https://github.com/Microsoft/cpprestsdk)。
+> 你还可以使用C++ REST SDK 通过C++应用或桌面C++应用从 UWP 应用执行 HTTP 请求。 有关详细信息，请参阅[ C++ REST SDK （Codename "Casablanca"）](https://github.com/Microsoft/cpprestsdk)。
 
 有关任务的详细信息，请参阅[任务并行](../../parallel/concrt/task-parallelism-concurrency-runtime.md)。 有关如何在 uwp 应用中使用任务的详细信息，请参阅[中C++的异步编程](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)和在[中C++为 UWP 应用创建异步操作](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)。
 
@@ -27,7 +27,7 @@ ms.locfileid: "69512133"
 有关使用 `IXMLHTTPRequest2` 但不使用任务的示例，请参阅[快速入门：使用 XML HTTP 请求进行连接（IXMLHTTPRequest2）](/previous-versions/windows/apps/hh770550\(v=win.10\))。
 
 > [!TIP]
->  `IXMLHTTPRequest2` 和 `IXMLHTTPRequest2Callback` 是我们建议在 UWP 应用中使用的接口。 还可以调整此示例，以用于桌面应用程序。
+> `IXMLHTTPRequest2` 和 `IXMLHTTPRequest2Callback` 是我们建议在 UWP 应用中使用的接口。 还可以调整此示例，以用于桌面应用程序。
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -43,9 +43,9 @@ UWP 支持在 Visual Studio 2017 和更高版本中是可选的。 若要安装�
 
 若要支持取消，`HttpRequest`、`HttpRequestBuffersCallback` 和 `HttpRequestStringCallback` 类将使用取消标记。 `HttpRequestBuffersCallback` 和 `HttpRequestStringCallback` 类使用[concurrency：： cancellation_token：： register_callback](reference/cancellation-token-class.md#register_callback)方法启用任务完成事件以响应取消。 此取消回调将中止下载。 有关取消的详细信息，请参阅[取消](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation)。
 
-#### <a name="to-define-the-httprequest-class"></a>定义 HttpRequest 类
+### <a name="to-define-the-httprequest-class"></a>定义 HttpRequest 类
 
-1. 从主菜单中，选择 "**文件**" > **新建** > **项目**"。 
+1. 从主菜单中，选择 "**文件**" > **新建** > **项目**"。
 
 1. 使用 " C++ **空白应用（通用 Windows）** " 模板创建空白 XAML 应用项目。 此示例将项目命名为 `UsingIXMLHTTPRequest2`。
 
@@ -67,29 +67,29 @@ UWP 支持在 Visual Studio 2017 和更高版本中是可选的。 若要安装�
 
 本部分演示如何在 UWP 应用中使用 `HttpRequest` 类。 应用程序会提供一个输入框，该输入框定义了一个 URL 资源、用于执行 GET 和 POST 操作的按钮命令和用于取消当前操作的按钮命令。
 
-#### <a name="to-use-the-httprequest-class"></a>使用 HttpRequest 类
+### <a name="to-use-the-httprequest-class"></a>使用 HttpRequest 类
 
 1. 在 MainPage 中，定义[system.windows.controls.stackpanel>](/uwp/api/Windows.UI.Xaml.Controls.StackPanel)元素，如下所示。
 
    [!code-xml[concrt-using-ixhr2#A1](../../parallel/concrt/codesnippet/xaml/walkthrough-connecting-using-tasks-and-xml-http-requests_4.xaml)]
 
-2. 在 MainPage.xaml.h 中，添加此 `#include` 指令：
+1. 在 MainPage.xaml.h 中，添加此 `#include` 指令：
 
    [!code-cpp[concrt-using-ixhr2#A2](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_5.h)]
 
-3. 在 MainPage.xaml.h 中，将这些 `private` 成员变量添加到 `MainPage` 类中：
+1. 在 MainPage.xaml.h 中，将这些 `private` 成员变量添加到 `MainPage` 类中：
 
    [!code-cpp[concrt-using-ixhr2#A3](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_6.h)]
 
-4. 在 MainPage.xaml.h 中，声明 `private` 方法 `ProcessHttpRequest`：
+1. 在 MainPage.xaml.h 中，声明 `private` 方法 `ProcessHttpRequest`：
 
    [!code-cpp[concrt-using-ixhr2#A4](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_7.h)]
 
-5. 在 MainPage.xaml.cpp 中，添加这些 `using` 语句：
+1. 在 MainPage.xaml.cpp 中，添加这些 `using` 语句：
 
    [!code-cpp[concrt-using-ixhr2#A5](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_8.cpp)]
 
-6. 在 MainPage.xaml.cpp 中，实现 `GetButton_Click` 类的 `PostButton_Click`、`CancelButton_Click` 和 `MainPage` 方法。
+1. 在 MainPage.xaml.cpp 中，实现 `GetButton_Click` 类的 `PostButton_Click`、`CancelButton_Click` 和 `MainPage` 方法。
 
    [!code-cpp[concrt-using-ixhr2#A6](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_9.cpp)]
 
@@ -100,11 +100,11 @@ UWP 支持在 Visual Studio 2017 和更高版本中是可选的。 若要安装�
 
    [!code-cpp[concrt-using-ixhr2#A7](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_10.cpp)]
 
-8. 在项目属性中的 "**链接器**"、"**输入**" 下，指定 `shcore.lib` 和 `msxml6.lib`。
+1. 在项目属性中的 "**链接器**"、"**输入**" 下，指定 `shcore.lib` 和 `msxml6.lib`。
 
 这是正在运行的应用程序：
 
-正在运行的![Windows 运行时应用](../../parallel/concrt/media/concrt_usingixhr2.png "正在运行 Windows 运行时应用")
+![正在运行的 Windows 运行时应用](../../parallel/concrt/media/concrt_usingixhr2.png "正在运行的 Windows 运行时应用")
 
 ## <a name="next-steps"></a>后续步骤
 

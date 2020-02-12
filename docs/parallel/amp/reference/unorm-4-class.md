@@ -268,40 +268,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_4::rb
 - amp_short_vectors/Concurrency::graphics::unorm_4::get_wzyx
 ms.assetid: dd216a9d-95f7-4978-8e78-6cb9c781a7e9
-ms.openlocfilehash: e4996f65f4b7f707f6b86e05571cacd6987c83a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0164f595ba44999718895f5221250f12bd6b7344
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405399"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142937"
 ---
-# <a name="unorm4-class"></a>unorm_4 类
+# <a name="unorm_4-class"></a>unorm_4 类
 
-表示无符号的四个常规数字的短矢量。
+表示四个无符号的普通数字的短矢量。
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 class unorm_4;
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[unorm_4 构造函数](#ctor)|已重载。 默认构造函数，初始化 0 的所有元素。|
+|[unorm_4 构造函数](#ctor)|已重载。 默认构造函数，用0初始化所有元素。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |unorm_4::get_w||
 |unorm_4::get_wx||
@@ -440,9 +440,9 @@ class unorm_4;
 |unorm_4::set_zyx||
 |unorm_4::set_zyxw||
 
-### <a name="public-operators"></a>公共运算符
+### <a name="public-operators"></a>公用運算子
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |unorm_4::operator-||
 |unorm_4::operator--||
@@ -455,34 +455,34 @@ class unorm_4;
 
 ### <a name="public-constants"></a>公共常量
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[大小常量](#unorm_4__size)||
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |unorm_4::a||
-|unorm_4::ab||
+|unorm_4：： ab||
 |unorm_4::abg||
 |unorm_4::abgr||
 |unorm_4::abr||
 |unorm_4::abrg||
-|unorm_4::ag||
+|unorm_4：： ag||
 |unorm_4::agb||
 |unorm_4::agbr||
-|unorm_4::agr||
+|unorm_4：：同意||
 |unorm_4::agrb||
-|unorm_4::ar||
+|unorm_4：： ar||
 |unorm_4::arb||
 |unorm_4::arbg||
-|unorm_4::arg||
+|unorm_4：： arg||
 |unorm_4::argb||
 |unorm_4::b||
 |unorm_4::ba||
-|unorm_4::bag||
-|unorm_4::bagr||
+|unorm_4：：包||
+|unorm_4：： bagr||
 |unorm_4::bar||
 |unorm_4::barg||
 |unorm_4::bg||
@@ -495,15 +495,15 @@ class unorm_4;
 |unorm_4::brag||
 |unorm_4::brg||
 |unorm_4::brga||
-|unorm_4::g||
+|unorm_4：： g||
 |unorm_4::ga||
-|unorm_4::gab||
+|unorm_4：： gab||
 |unorm_4::gabr||
-|unorm_4::gar||
+|unorm_4：： gar||
 |unorm_4::garb||
 |unorm_4::gb||
-|unorm_4::gba||
-|unorm_4::gbar||
+|unorm_4：： gba||
+|unorm_4：： gbar||
 |unorm_4::gbr||
 |unorm_4::gbra||
 |unorm_4::gr||
@@ -511,30 +511,30 @@ class unorm_4;
 |unorm_4::grab||
 |unorm_4::grb||
 |unorm_4::grba||
-|unorm_4::r||
+|unorm_4：： r||
 |unorm_4::ra||
 |unorm_4::rab||
 |unorm_4::rabg||
 |unorm_4::rag||
 |unorm_4::ragb||
 |unorm_4::rb||
-|unorm_4::rba||
-|unorm_4::rbag||
+|unorm_4：： rba||
+|unorm_4：： rbag||
 |unorm_4::rbg||
-|unorm_4::rbga||
+|unorm_4：： rbga||
 |unorm_4::rg||
 |unorm_4::rga||
 |unorm_4::rgab||
 |unorm_4::rgb||
 |unorm_4::rgba||
-|unorm_4::w||
+|unorm_4：： w||
 |unorm_4::wx||
 |unorm_4::wxy||
 |unorm_4::wxyz||
 |unorm_4::wxz||
 |unorm_4::wxzy||
-|unorm_4::wy||
-|unorm_4::wyx||
+|unorm_4：： wy||
+|unorm_4：： wyx||
 |unorm_4::wyxz||
 |unorm_4::wyz||
 |unorm_4::wyzx||
@@ -559,20 +559,20 @@ class unorm_4;
 |unorm_4::xzwy||
 |unorm_4::xzy||
 |unorm_4::xzyw||
-|unorm_4::y||
-|unorm_4::yw||
-|unorm_4::ywx||
+|unorm_4：： y||
+|unorm_4：： yw||
+|unorm_4：： ywx||
 |unorm_4::ywxz||
 |unorm_4::ywz||
-|unorm_4::ywzx||
+|unorm_4：： ywzx||
 |unorm_4::yx||
 |unorm_4::yxw||
 |unorm_4::yxwz||
 |unorm_4::yxz||
 |unorm_4::yxzw||
 |unorm_4::yz||
-|unorm_4::yzw||
-|unorm_4::yzwx||
+|unorm_4：： yzw||
+|unorm_4：： yzwx||
 |unorm_4::yzx||
 |unorm_4::yzxw||
 |unorm_4::z||
@@ -587,8 +587,8 @@ class unorm_4;
 |unorm_4::zxy||
 |unorm_4::zxyw||
 |unorm_4::zy||
-|unorm_4::zyw||
-|unorm_4::zywx||
+|unorm_4：： zyw||
+|unorm_4：： zywx||
 |unorm_4::zyx||
 |unorm_4::zyxw||
 
@@ -598,15 +598,15 @@ class unorm_4;
 
 ## <a name="requirements"></a>要求
 
-**标头：** amp_short_vectors.h
+**标头：** amp_short_vectors。h
 
-**命名空间：** Concurrency:: graphics
+**命名空间：** Concurrency：： graphics
 
-##  <a name="ctor"></a> unorm_4
+## <a name="ctor"></a>unorm_4
 
-默认构造函数，初始化 0 的所有元素。
+默认构造函数，用0初始化所有元素。
 
-```
+```cpp
 unorm_4() restrict(amp,
     cpu);
 
@@ -660,29 +660,29 @@ explicit inline unorm_4(
 ### <a name="parameters"></a>参数
 
 *_V0*<br/>
-要初始化元素 0 的值。
+要初始化元素0的值。
 
 *_V1*<br/>
-要初始化元素 1 的值。
+要初始化元素1的值。
 
 *_V2*<br/>
-要初始化元素 2 的值。
+用于初始化元素2的值。
 
 *_V3*<br/>
-要初始化元素 3 的值。
+要初始化元素3的值。
 
 *_V*<br/>
-用于初始化值。
+用于初始化的值。
 
 *_Other*<br/>
 用于初始化的对象。
 
-##  <a name="unorm_4__size"></a> 大小
+## <a name="unorm_4__size"></a>规格
 
-```
+```cpp
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)

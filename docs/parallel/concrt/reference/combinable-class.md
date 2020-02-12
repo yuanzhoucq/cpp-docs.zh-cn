@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - combinable class
 ms.assetid: fe0bfbf6-6250-47da-b8d0-f75369f0b5be
-ms.openlocfilehash: 05256516c0a693a282b8d0de56d6c9e7465f2740
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1954cd3a69233deed053da5b5fdef0dbc183b80
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252966"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141436"
 ---
 # <a name="combinable-class"></a>combinable 类
 
@@ -25,39 +25,39 @@ ms.locfileid: "62252966"
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 template<typename T>
 class combinable;
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
 *T*<br/>
-最终的合并结果数据类型。 类型必须具有一个复制构造函数和默认构造函数。
+最终合并结果的数据类型。 该类型必须具有一个复制构造函数和一个默认构造函数。
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[combinable](#ctor)|已重载。 构造一个新`combinable`对象。|
-|[~ combinable 析构函数](#dtor)|销毁 `combinable` 对象。|
+|[组合](#ctor)|已重载。 构造新的 `combinable` 对象。|
+|[~ 合并析构函数](#dtor)|销毁 `combinable` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[clear](#clear)|清除任何以前的使用情况的中间计算结果。|
-|[combine](#combine)|通过调用提供的 combine 函子计算的线程本地子计算集的最终值。|
-|[combine_each](#combine_each)|通过调用每个线程本地子计算一次提供的合并函子计算的线程本地子计算集的最终值。 最终结果被累积的函数对象。|
-|[local](#local)|已重载。 返回到线程专用子计算的引用。|
+|[clear](#clear)|清除以前使用的任何中间计算结果。|
+|[combine](#combine)|通过调用提供的组合函子，从线程本地子计算集中计算最终值。|
+|[combine_each](#combine_each)|通过为每个线程本地子计算调用提供的组合函子，计算一组线程本地子计算的最终值。 最终的结果是由函数对象累积的。|
+|[local](#local)|已重载。 返回对线程专用子计算的引用。|
 
-### <a name="public-operators"></a>公共运算符
+### <a name="public-operators"></a>公用運算子
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[operator=](#operator_eq)|将分配给`combinable`从另一个对象`combinable`对象。|
+|[operator=](#operator_eq)|分配给另一个 `combinable` 对象的 `combinable` 对象。|
 
 ## <a name="remarks"></a>备注
 
@@ -69,23 +69,23 @@ class combinable;
 
 ## <a name="requirements"></a>要求
 
-**标头：** ppl.h
+**标头：** ppl。h
 
 **命名空间：** 并发
 
-##  <a name="clear"></a> 清除
+## <a name="clear"></a>清除
 
-清除任何以前的使用情况的中间计算结果。
+清除以前使用的任何中间计算结果。
 
-```
+```cpp
 void clear();
 ```
 
-##  <a name="ctor"></a> combinable
+## <a name="ctor"></a>组合
 
-构造一个新`combinable`对象。
+构造新的 `combinable` 对象。
 
-```
+```cpp
 combinable();
 
 template <typename _Function>
@@ -100,32 +100,32 @@ combinable(const combinable& _Copy);
 初始化函子对象的类型。
 
 *_FnInitialize*<br/>
-一个函数，它将调用以初始化的类型的每个新线程专用值`T`。 它必须支持具有签名的函数调用运算符`T ()`。
+一个函数，将调用该函数以初始化类型 `T`的每个新线程的私有值。 它必须支持签名 `T ()`的函数调用运算符。
 
 *_Copy*<br/>
-将现有`combinable`要复制到此对象。
+要复制到此对象中的现有 `combinable` 对象。
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数初始化新元素类型的默认构造函数`T`。
+第一个构造函数用 `T`类型的默认构造函数初始化新元素。
 
-使用提供的初始化函子的新元素的第二个构造函数初始化`_FnInitialize`参数。
+第二个构造函数使用作为 `_FnInitialize` 参数提供的初始化函子初始化新元素。
 
 第三个构造函数是复制构造函数。
 
-##  <a name="dtor"></a> ~combinable
+## <a name="dtor"></a>~ 组合
 
 销毁 `combinable` 对象。
 
-```
+```cpp
 ~combinable();
 ```
 
-##  <a name="combine"></a> combine
+## <a name="combine"></a>or
 
-通过调用提供的 combine 函子计算的线程本地子计算集的最终值。
+通过调用提供的组合函子，从线程本地子计算集中计算最终值。
 
-```
+```cpp
 template<typename _Function>
 T combine(_Function _FnCombine) const;
 ```
@@ -133,20 +133,20 @@ T combine(_Function _FnCombine) const;
 ### <a name="parameters"></a>参数
 
 *_Function*<br/>
-要调用以组合两个线程本地子计算的函数对象的类型。
+将调用以合并两个线程本地子计算的函数对象的类型。
 
 *_FnCombine*<br/>
-用于组合子计算仿函数。 其签名就`T (T, T)`或`T (const T&, const T&)`，并且它必须是关联性和可交换性。
+用于组合子计算的函子。 其签名为 `T (T, T)` 或 `T (const T&, const T&)`，并且必须是关联的，并且可交换。
 
 ### <a name="return-value"></a>返回值
 
-合并所有线程专用子计算最终结果。
+合并所有线程私有子计算的最终结果。
 
-##  <a name="combine_each"></a> combine_each
+## <a name="combine_each"></a>combine_each
 
-通过调用每个线程本地子计算一次提供的合并函子计算的线程本地子计算集的最终值。 最终结果被累积的函数对象。
+通过为每个线程本地子计算调用提供的组合函子，计算一组线程本地子计算的最终值。 最终的结果是由函数对象累积的。
 
-```
+```cpp
 template<typename _Function>
 void combine_each(_Function _FnCombine) const;
 ```
@@ -154,16 +154,16 @@ void combine_each(_Function _FnCombine) const;
 ### <a name="parameters"></a>参数
 
 *_Function*<br/>
-将调用要合并单个的线程本地子计算的函数对象的类型。
+将调用以合并单个线程本地子计算的函数对象的类型。
 
 *_FnCombine*<br/>
-用于将某一子计算仿函数。 其签名就`void (T)`或`void (const T&)`，并且必须是关联性和可交换性。
+用于合并一个子计算的函子。 它的签名是 `void (T)` 或 `void (const T&)`的，必须是相关的并且可交换。
 
-##  <a name="local"></a> local
+## <a name="local"></a>地方
 
-返回到线程专用子计算的引用。
+返回对线程专用子计算的引用。
 
-```
+```cpp
 T& local();
 
 T& local(bool& _Exists);
@@ -172,29 +172,29 @@ T& local(bool& _Exists);
 ### <a name="parameters"></a>参数
 
 *_Exists*<br/>
-一个布尔值对的引用。 此参数由引用的布尔值将设置为 **，则返回 true**如果子计算已存在，此线程上并设置为**false**如果这是此线程上的第一个子计算。
+对布尔值的引用。 如果此线程中已存在子计算，则此参数引用的布尔值将设置为**true** ，如果这是此线程上第一个子计算，则设置为**false** 。
 
 ### <a name="return-value"></a>返回值
 
-对线程专用子计算的引用。
+对线程私有子计算的引用。
 
-##  <a name="operator_eq"></a> 运算符 =
+## <a name="operator_eq"></a>operator =
 
-将分配给`combinable`从另一个对象`combinable`对象。
+分配给另一个 `combinable` 对象的 `combinable` 对象。
 
-```
+```cpp
 combinable& operator= (const combinable& _Copy);
 ```
 
 ### <a name="parameters"></a>参数
 
 *_Copy*<br/>
-将现有`combinable`要复制到此对象。
+要复制到此对象中的现有 `combinable` 对象。
 
 ### <a name="return-value"></a>返回值
 
-对此引用`combinable`对象。
+对此 `combinable` 对象的引用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [并发命名空间](concurrency-namespace.md)

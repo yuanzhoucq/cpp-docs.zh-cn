@@ -30,12 +30,12 @@ helpviewer_keywords:
 - MFC, file operations
 - registration [MFC], shell
 ms.assetid: 0480cd01-f629-4249-b221-93432d95b431
-ms.openlocfilehash: e96753a5dbc77fdc7aab365439e997585e00f43b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 04c7357d67dc1a5daee4b8b8135c9a54eda8504a
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511333"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127824"
 ---
 # <a name="special-cwinapp-services"></a>特殊 CWinApp 服务
 
@@ -43,7 +43,7 @@ ms.locfileid: "69511333"
 
 ##  <a name="_core_shell_registration"></a>Shell 注册
 
-默认情况下，MFC 应用程序向导使用户能够打开您的应用程序已创建的数据文件，方法是在文件资源管理器或文件管理器中打开它们。 如果你的应用程序是一个 MDI 应用程序，并且你为应用程序创建的文件指定了扩展，则 MFC 应用程序向导会将对[CWinApp](../mfc/reference/cwinapp-class.md)的[RegisterShellFileTypes](../mfc/reference/cwinapp-class.md#registershellfiletypes)和[EnableShellOpen](../mfc/reference/cwinapp-class.md#enableshellopen)成员函数的调用添加到它为您写入的重写。`InitInstance`
+默认情况下，MFC 应用程序向导使用户能够打开您的应用程序已创建的数据文件，方法是在文件资源管理器或文件管理器中打开它们。 如果你的应用程序是一个 MDI 应用程序，并且你为应用程序创建的文件指定了扩展，则 MFC 应用程序向导会将对[CWinApp](../mfc/reference/cwinapp-class.md)的[RegisterShellFileTypes](../mfc/reference/cwinapp-class.md#registershellfiletypes)和[EnableShellOpen](../mfc/reference/cwinapp-class.md#enableshellopen)成员函数的调用添加到它为你写入的 `InitInstance` 重写。
 
 `RegisterShellFileTypes` 将您的应用程序的文档类型注册到文件资源管理器或文件管理器。 该函数可将项添加到 Windows 保留的注册数据库。 这些项注册每个文档类型、将文件扩展名与文件类型关联、指定用来打开应用程序的命令行并指定用来打开该类型的文档的动态数据交换 (DDE) 命令。
 
@@ -53,7 +53,7 @@ ms.locfileid: "69511333"
 
 如果要为应用程序初始化 GDI + （通过在[InitInstance](../mfc/reference/cwinapp-class.md#initinstance)函数中调用[GdiplusStartup](/windows/win32/api/gdiplusinit/nf-gdiplusinit-gdiplusstartup) ），则必须取消 gdi + 后台线程。
 
-为此，可以将[GdiplusStartupInput](/windows/win32/api/gdiplusinit/ns-gdiplusinit-gdiplusstartupinput)结构`SuppressBackgroundThread`的成员设置为**TRUE**。 当禁止 gdi + 后台线程时， `NotificationHook`应`NotificationUnhook`刚好在进入和退出应用程序的消息循环之前执行和调用。 有关这些调用的详细信息，请参阅[GdiplusStartupOutput](/windows/win32/api/gdiplusinit/ns-gdiplusinit-gdiplusstartupoutput)。 因此，有一个很好的`GdiplusStartup`调用位置，挂钩通知函数将位于虚拟函数[CWinApp：： Run](../mfc/reference/cwinapp-class.md#run)的重写中，如下所示：
+为此，可以将[GdiplusStartupInput](/windows/win32/api/gdiplusinit/ns-gdiplusinit-gdiplusstartupinput)结构的 `SuppressBackgroundThread` 成员设置为**TRUE**。 当禁止 GDI + 后台线程时，`NotificationHook` 和 `NotificationUnhook` 调用应刚好在进入和退出应用程序的消息循环之前进行。 有关这些调用的详细信息，请参阅[GdiplusStartupOutput](/windows/win32/api/gdiplusinit/ns-gdiplusinit-gdiplusstartupoutput)。 因此，调用 `GdiplusStartup` 和挂钩通知函数的良好位置是虚拟函数[CWinApp：： Run](../mfc/reference/cwinapp-class.md#run)的替代，如下所示：
 
 [!code-cpp[NVC_MFCDocView#6](../mfc/codesnippet/cpp/special-cwinapp-services_1.cpp)]
 
@@ -63,14 +63,14 @@ ms.locfileid: "69511333"
 
 可从文件管理器或文件资源管理器中的文件视图将文件拖动到您的应用程序的窗口中。 例如，您可能使一个或多个文件拖动到 MDI 应用程序的主窗口，应用程序可在其中为这些文件检索文件名和打开 MDI 子窗口。
 
-若要在应用程序中启用文件拖放功能，MFC 应用程序向导会在的主框架`InitInstance`窗口中写入[CWnd](../mfc/reference/cwnd-class.md)成员函数[DragAcceptFiles](../mfc/reference/cwnd-class.md#dragacceptfiles)的调用。 如果您不想实现拖放功能，则可以移除该调用。
+若要在应用程序中启用文件拖放，MFC 应用程序向导将在您的 `InitInstance`中为主框架窗口写入[CWnd](../mfc/reference/cwnd-class.md)成员函数[DragAcceptFiles](../mfc/reference/cwnd-class.md#dragacceptfiles) 。 如果您不想实现拖放功能，则可以移除该调用。
 
 > [!NOTE]
->  您还可以使用 OLE 实现更常见的拖放功能 — 在文档之间或文档中拖动数据。 有关信息，请参阅[拖放（OLE）](../mfc/drag-and-drop-ole.md)一文。
+>  您还可以使用 OLE 实现更常见的拖放功能 — 在文档之间或文档中拖动数据。 有关信息，请参阅[OLE 拖放](../mfc/drag-and-drop-ole.md)文章。
 
 ##  <a name="_core_keeping_track_of_the_most_recently_used_documents"></a>跟踪最近使用的文档
 
-当用户打开和关闭文件时，应用程序对象将跟踪四个最近使用的文件。 这些文件的名称将添加到“文件”菜单并在更改时更新。 框架会将这些文件名存储在与您的项目同名的注册表或 .ini 文件中，并在您的应用程序启动时从文件中读取它们。 MFC 应用程序向导为您创建的 `InitInstance`替代包括对[CWinApp](../mfc/reference/cwinapp-class.md)成员函数[LoadStdProfileSettings](../mfc/reference/cwinapp-class.md#loadstdprofilesettings)的调用，该函数从注册表或.ini文件（包括最近使用的文件）加载信息人名.
+当用户打开和关闭文件时，应用程序对象将跟踪四个最近使用的文件。 这些文件的名称将添加到“文件”菜单并在更改时更新。 框架会将这些文件名存储在与您的项目同名的注册表或 .ini 文件中，并在您的应用程序启动时从文件中读取它们。 MFC 应用程序向导为您创建的 `InitInstance` 重写包括对[CWinApp](../mfc/reference/cwinapp-class.md)成员函数[LoadStdProfileSettings](../mfc/reference/cwinapp-class.md#loadstdprofilesettings)的调用，该函数从注册表或 .ini 文件（包括最近使用的文件名称）加载信息。
 
 这些项按如下方式进行存储：
 
@@ -80,6 +80,6 @@ ms.locfileid: "69511333"
 
 - 在 Windows 95 和更高版本中，值存储在缓存版的 WIN.INI 中。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [CWinApp：应用程序类](../mfc/cwinapp-the-application-class.md)

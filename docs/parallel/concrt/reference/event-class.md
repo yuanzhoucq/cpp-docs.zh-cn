@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - event class
 ms.assetid: fba35a53-6568-4bfa-9aaf-07c0928cf73d
-ms.openlocfilehash: aa9d46b868c1a31729a9590db3b3f67179903881
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2c72b4b086e932f4fe404259c25f8d2c8be2be31
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262386"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77138849"
 ---
 # <a name="event-class"></a>event 类
 
@@ -25,30 +25,30 @@ ms.locfileid: "62262386"
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 class event;
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[~ event 析构函数](#dtor)|销毁一个事件。|
+|[~ 事件析构函数](#dtor)|销毁事件。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[reset](#reset)|将事件重置为非终止状态。|
-|[set](#set)|向事件发出信号。|
-|[wait](#wait)|等待事件收到信号。|
-|[wait_for_multiple](#wait_for_multiple)|等待多个事件收到信号。|
+|[set](#set)|发出事件信号。|
+|[再](#wait)|等待事件进入终止状态。|
+|[wait_for_multiple](#wait_for_multiple)|等待多个事件发出信号。|
 
 ### <a name="public-constants"></a>公共常量
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[timeout_infinite](#timeout_infinite)|指示等待永远不应超时的值。|
 
@@ -62,45 +62,45 @@ class event;
 
 ## <a name="requirements"></a>要求
 
-**标头：** concrt.h
+**标头：** concrt
 
 **命名空间：** 并发
 
-##  <a name="ctor"></a> 事件
+## <a name="ctor"></a>引发
 
 构造一个新事件。
 
-```
+```cpp
 _CRTIMP event();
 ```
 
 ### <a name="remarks"></a>备注
 
-##  <a name="dtor"></a> ~ 事件
+## <a name="dtor"></a>~ 事件
 
-销毁一个事件。
+销毁事件。
 
-```
+```cpp
 ~event();
 ```
 
 ### <a name="remarks"></a>备注
 
-应没有线程等待事件析构函数运行时。 在线程仍处于等待状态时允许析构事件会导致未定义的行为。
+当析构函数运行时，预期不会有等待事件的线程。 在线程仍处于等待状态时允许析构事件会导致未定义的行为。
 
-##  <a name="reset"></a> 重置
+## <a name="reset"></a>&
 
 将事件重置为非终止状态。
 
-```
+```cpp
 void reset();
 ```
 
-##  <a name="set"></a> 设置
+## <a name="set"></a>字符集
 
-向事件发出信号。
+发出事件信号。
 
-```
+```cpp
 void set();
 ```
 
@@ -108,39 +108,39 @@ void set();
 
 发出事件信号会导致等待该事件的任意数量的上下文变为可运行。
 
-##  <a name="timeout_infinite"></a> timeout_infinite
+## <a name="timeout_infinite"></a>timeout_infinite
 
 指示等待永远不应超时的值。
 
-```
+```cpp
 static const unsigned int timeout_infinite = COOPERATIVE_TIMEOUT_INFINITE;
 ```
 
-##  <a name="wait"></a> 等待
+## <a name="wait"></a>再
 
-等待事件收到信号。
+等待事件进入终止状态。
 
-```
+```cpp
 size_t wait(unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
 ```
 
 ### <a name="parameters"></a>参数
 
 *_Timeout*<br/>
-表示毫秒的数之前等待超时。值`COOPERATIVE_TIMEOUT_INFINITE`表示无超时。
+指示等待超时前等待的毫秒数。值 `COOPERATIVE_TIMEOUT_INFINITE` 表示没有超时。
 
 ### <a name="return-value"></a>返回值
 
-如果满足该等待，则这`0`返回; 否则为值`COOPERATIVE_WAIT_TIMEOUT`以指示在等待而无需成为发出信号的事件已超时。
+如果等待满足，则返回值 `0`;否则，该值 `COOPERATIVE_WAIT_TIMEOUT` 指示等待超时，而不会发出事件信号。
 
 > [!IMPORTANT]
->  在通用 Windows 平台 (UWP) 应用中，不要调用`wait`对 ASTA 线程因为此调用可能会阻止当前线程，并可能导致应用停止响应。
+> 在通用 Windows 平台（UWP）应用程序中，不要在 ASTA 线程上调用 `wait`，因为此调用会阻止当前线程，并可能导致应用程序停止响应。
 
-##  <a name="wait_for_multiple"></a> wait_for_multiple
+## <a name="wait_for_multiple"></a>wait_for_multiple
 
-等待多个事件收到信号。
+等待多个事件发出信号。
 
-```
+```cpp
 static size_t __cdecl wait_for_multiple(
     _In_reads_(count) event** _PPEvents,
     size_t count,
@@ -151,28 +151,28 @@ static size_t __cdecl wait_for_multiple(
 ### <a name="parameters"></a>参数
 
 *_PPEvents*<br/>
-要等待的事件的数组。 所指示的数组中的事件数`count`参数。
+要等待的事件的数组。 数组中的事件数由 `count` 参数表示。
 
 *count*<br/>
-中提供的数组中的事件计数`_PPEvents`参数。
+`_PPEvents` 参数中提供的数组中的事件计数。
 
 *_FWaitAll*<br/>
-如果设置为值 **，则返回 true**，该数组内的所有事件中都提供的参数指定`_PPEvents`参数必须为满足在等待收到信号。 如果设置为值**false**，它指定数组中的任何事件中提供`_PPEvents`参数成为发出信号将满足等待。
+如果设置为值**true**，则参数指定在 `_PPEvents` 参数中提供的数组中的所有事件必须变为已发出信号，以便满足等待。 如果设置为值**false**，则它指定在 `_PPEvents` 参数中提供的数组中的任何事件都将满足等待。
 
 *_Timeout*<br/>
-表示毫秒的数之前等待超时。值`COOPERATIVE_TIMEOUT_INFINITE`表示无超时。
+指示等待超时前等待的毫秒数。值 `COOPERATIVE_TIMEOUT_INFINITE` 表示没有超时。
 
 ### <a name="return-value"></a>返回值
 
-如果满足该等待，该数组内的索引中提供`_PPEvents`参数它满足等待的条件; 否则为值`COOPERATIVE_WAIT_TIMEOUT`以指示在等待不满足该条件时已超时。
+如果已满足等待，则为满足等待条件的 `_PPEvents` 参数中提供的数组中的索引;否则，`COOPERATIVE_WAIT_TIMEOUT` 值指示等待超时，而不满足条件。
 
 ### <a name="remarks"></a>备注
 
-如果将参数`_FWaitAll`设置为值`true`若要指示所有事件必须发出都信号以满足等待，该函数返回的索引没有任何特殊意义，它不是值的事实之外`COOPERATIVE_WAIT_TIMEOUT`。
+如果参数 `_FWaitAll` 设置为值 `true` 以指示所有事件都必须收到信号才能满足等待，则函数返回的索引不会对非值 `COOPERATIVE_WAIT_TIMEOUT`执行任何特殊的意义。
 
 > [!IMPORTANT]
-> 在通用 Windows 平台 (UWP) 应用中，不要调用`wait_for_multiple`对 ASTA 线程因为此调用可能会阻止当前线程，并可能导致应用停止响应。
+> 在通用 Windows 平台（UWP）应用程序中，不要在 ASTA 线程上调用 `wait_for_multiple`，因为此调用会阻止当前线程，并可能导致应用程序停止响应。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [并发命名空间](concurrency-namespace.md)

@@ -6,37 +6,37 @@ f1_keywords:
 - AMP_SHORT_VECTORS/unorm
 - AMP_SHORT_VECTORS/Concurrency::graphics::unorm Constructor
 ms.assetid: bc30bd20-6452-4d5f-9158-3b11c4c16ed2
-ms.openlocfilehash: 059cd3a388d67e540a91146f2a287c375fb02bd1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c9ec967be8be618e5f8ab3bad1bfd940bfeaef4
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405425"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126300"
 ---
 # <a name="unorm-class"></a>unorm 类
 
-表示 unorm 数字。 每个元素是一个浮点数，范围内的 [0.0f，1.0f]。
+表示 unorm 的数字。 每个元素都是 [0.0 f，1.0 f] 范围内的一个浮点数。
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 class unorm;
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[unorm 构造函数](#ctor)|已重载。 默认构造函数。 初始化为 0.0f。|
 
-### <a name="public-operators"></a>公共运算符
+### <a name="public-operators"></a>公用運算子
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |unorm::operator--||
-|unorm::operator float|转换运算符。 将 unorm 数字转换为浮点值。|
+|unorm：： operator float|转换运算符。 将 unorm 数字转换为浮点值。|
 |unorm::operator*=||
 |unorm::operator/=||
 |unorm::operator++||
@@ -50,15 +50,15 @@ class unorm;
 
 ## <a name="requirements"></a>要求
 
-**标头：** amp_short_vectors.h
+**标头：** amp_short_vectors。h
 
-**命名空间：** Concurrency:: graphics
+**命名空间：** Concurrency：： graphics
 
-##  <a name="ctor"></a> unorm
+## <a name="ctor"></a>unorm
 
 默认构造函数。 初始化为 0.0f。
 
-```
+```cpp
 unorm(
     void) restrict(amp,
     cpu);
@@ -96,6 +96,6 @@ inline explicit unorm(
 *_Other*<br/>
 用于初始化的标准对象。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)

@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - location class
 ms.assetid: c3289f51-5bf1-4dff-a18d-d0dab8e5d9c7
-ms.openlocfilehash: 5e90dd3b23b33f6699f2df4ce0df9178f95816b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f45ff6d3092bd7c27e81adddca72c9411f752d1
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375452"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139829"
 ---
 # <a name="location-class"></a>location 类
 
@@ -23,33 +23,33 @@ ms.locfileid: "62375452"
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 class location;
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[location](#ctor)|已重载。 构造 `location` 对象。|
 |[~ location 析构函数](#dtor)|销毁 `location` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[current](#current)|返回表示调用线程执行的最具体位置的 `location` 对象。|
+|[当前](#current)|返回表示调用线程执行的最具体位置的 `location` 对象。|
 |[from_numa_node](#from_numa_node)|返回表示给定的 NUMA 节点的 `location` 对象。|
 
-### <a name="public-operators"></a>公共运算符
+### <a name="public-operators"></a>公用運算子
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[operator!=](#operator_neq)|确定两个 `location` 对象是否表示不同的位置。|
 |[operator=](#operator_eq)|将另一 `location` 对象的内容分配给此对象。|
-|[operator==](#operator_eq_eq)|确定两个`location`对象表示相同的位置。|
+|[operator==](#operator_eq_eq)|确定两个 `location` 对象是否表示同一位置。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -57,23 +57,23 @@ class location;
 
 ## <a name="requirements"></a>要求
 
-**标头：** concrt.h
+**标头：** concrt
 
 **命名空间：** 并发
 
-##  <a name="dtor"></a> ~location
+## <a name="dtor"></a>~ location
 
 销毁 `location` 对象。
 
-```
+```cpp
 ~location();
 ```
 
-##  <a name="current"></a> 当前
+## <a name="current"></a>当前
 
 返回表示调用线程执行的最具体位置的 `location` 对象。
 
-```
+```cpp
 static location __cdecl current();
 ```
 
@@ -81,11 +81,11 @@ static location __cdecl current();
 
 表示调用线程执行的最具体位置的位置。
 
-##  <a name="from_numa_node"></a> from_numa_node
+## <a name="from_numa_node"></a>from_numa_node
 
 返回表示给定的 NUMA 节点的 `location` 对象。
 
-```
+```cpp
 static location __cdecl from_numa_node(unsigned short _NumaNodeNumber);
 ```
 
@@ -98,11 +98,11 @@ static location __cdecl from_numa_node(unsigned short _NumaNodeNumber);
 
 表示 `_NumaNodeNumber` 参数指定的 NUMA 节点的位置。
 
-##  <a name="ctor"></a> 位置
+## <a name="ctor"></a>位置
 
 构造 `location` 对象。
 
-```
+```cpp
 location();
 
 location(
@@ -126,34 +126,34 @@ location(
 *_BindingId*<br/>
 
 *_PBinding*<br/>
-（可选）绑定指针。
+可有可无绑定指针。
 
 ### <a name="remarks"></a>备注
 
 默认构造的位置表示整个系统。
 
-##  <a name="operator_neq"></a> 运算符 ！ =
+## <a name="operator_neq"></a>operator！ =
 
 确定两个 `location` 对象是否表示不同的位置。
 
-```
+```cpp
 bool operator!= (const location& _Rhs) const;
 ```
 
 ### <a name="parameters"></a>参数
 
 *_Rhs*<br/>
-操作数`location`。
+操作数 `location`。
 
 ### <a name="return-value"></a>返回值
 
-**true**如果两个位置不同， **false**否则为。
+如果两个位置不同，**则为 true** ; 否则为**false** 。
 
-##  <a name="operator_eq"></a> 运算符 =
+## <a name="operator_eq"></a>operator =
 
 将另一 `location` 对象的内容分配给此对象。
 
-```
+```cpp
 location& operator= (const location& _Rhs);
 ```
 
@@ -164,23 +164,23 @@ location& operator= (const location& _Rhs);
 
 ### <a name="return-value"></a>返回值
 
-##  <a name="operator_eq_eq"></a> 运算符 = =
+## <a name="operator_eq_eq"></a>operator = =
 
-确定两个`location`对象表示相同的位置。
+确定两个 `location` 对象是否表示同一位置。
 
-```
+```cpp
 bool operator== (const location& _Rhs) const;
 ```
 
 ### <a name="parameters"></a>参数
 
 *_Rhs*<br/>
-操作数`location`。
+操作数 `location`。
 
 ### <a name="return-value"></a>返回值
 
-**true**如果两个位置是相同的并**false**否则为。
+如果两个位置相同，则**为 true** ; 否则为**false** 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [并发命名空间](concurrency-namespace.md)

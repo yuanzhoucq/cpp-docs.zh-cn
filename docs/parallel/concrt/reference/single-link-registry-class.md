@@ -13,47 +13,47 @@ f1_keywords:
 helpviewer_keywords:
 - single_link_registry class
 ms.assetid: 09540a4e-c34e-4ff9-af49-21b8612b6ab3
-ms.openlocfilehash: 20032f393964c8919d2c1a49ec8545400cd9e392
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c29caf6d31df316e80b15fe6827c81e34ece8a18
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160061"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142726"
 ---
-# <a name="singlelinkregistry-class"></a>single_link_registry 类
+# <a name="single_link_registry-class"></a>single_link_registry 类
 
 `single_link_registry` 对象是仅管理单个源块或目标块的 `network_link_registry`。
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 template<class _Block>
 class single_link_registry : public network_link_registry<_Block>;
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
 *_Block*<br/>
-块数据类型存储在`single_link_registry`对象。
+要存储在 `single_link_registry` 对象中的块数据类型。
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[single_link_registry](#ctor)|构造 `single_link_registry` 对象。|
-|[~ single_link_registry 析构函数](#dtor)|销毁`single_link_registry`对象。|
+|[~ single_link_registry 析构函数](#dtor)|销毁 `single_link_registry` 的对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[add](#add)|将添加一个指向`single_link_registry`对象。 (重写[network_link_registry:: add](network-link-registry-class.md#add)。)|
-|[begin](#begin)|返回一个迭代器中的第一个元素到`single_link_registry`对象。 (重写[network_link_registry:: begin](network-link-registry-class.md#begin)。)|
-|[contains](#contains)|搜索`single_link_registry`指定块的对象。 (重写[network_link_registry:: contains](network-link-registry-class.md#contains)。)|
-|[count](#count)|中的项的计数`single_link_registry`对象。 (重写[network_link_registry:: count](network-link-registry-class.md#count)。)|
-|[remove](#remove)|移除从链接`single_link_registry`对象。 (重写[network_link_registry:: remove](network-link-registry-class.md#remove)。)|
+|[add](#add)|向 `single_link_registry` 对象添加链接。 （重写[network_link_registry：： add](network-link-registry-class.md#add)。）|
+|[begin](#begin)|返回 `single_link_registry` 对象中第一个元素的迭代器。 （重写[network_link_registry：： begin](network-link-registry-class.md#begin)。）|
+|[contains](#contains)|在 `single_link_registry` 对象中搜索指定的块。 （重写[network_link_registry：： contains](network-link-registry-class.md#contains)。）|
+|[count](#count)|计算 `single_link_registry` 对象中的项数。 （重写[network_link_registry：： count](network-link-registry-class.md#count)。）|
+|[remove](#remove)|删除 `single_link_registry` 对象的链接。 （重写[network_link_registry：： remove](network-link-registry-class.md#remove)。）|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -67,11 +67,11 @@ class single_link_registry : public network_link_registry<_Block>;
 
 **命名空间：** 并发
 
-##  <a name="add"></a> add
+## <a name="add"></a>把
 
-将添加一个指向`single_link_registry`对象。
+向 `single_link_registry` 对象添加链接。
 
-```
+```cpp
 virtual void add(_EType _Link);
 ```
 
@@ -82,91 +82,91 @@ virtual void add(_EType _Link);
 
 ### <a name="remarks"></a>备注
 
-该方法将引发[invalid_link_target](invalid-link-target-class.md)异常，如果此注册表中已存在一个链接。
+如果此注册表中已经有一个链接，该方法将引发[invalid_link_target](invalid-link-target-class.md)异常。
 
-##  <a name="begin"></a> begin
+## <a name="begin"></a>准备
 
-返回一个迭代器中的第一个元素到`single_link_registry`对象。
+返回 `single_link_registry` 对象中第一个元素的迭代器。
 
-```
+```cpp
 virtual iterator begin();
 ```
 
 ### <a name="return-value"></a>返回值
 
-中的第一个元素的迭代器`single_link_registry`对象。
+用于寻址 `single_link_registry` 对象中第一个元素的迭代器。
 
 ### <a name="remarks"></a>备注
 
-最终状态由`NULL`链接。
+结束状态由 `NULL` 链接指示。
 
-##  <a name="contains"></a> 包含
+## <a name="contains"></a>有
 
-搜索`single_link_registry`指定块的对象。
+在 `single_link_registry` 对象中搜索指定的块。
 
-```
+```cpp
 virtual bool contains(_EType _Link);
 ```
 
 ### <a name="parameters"></a>参数
 
 *_Link*<br/>
-指向要在其中搜索中的块的指针`single_link_registry`对象。
+指向要在 `single_link_registry` 对象中搜索的块的指针。
 
 ### <a name="return-value"></a>返回值
 
-**true**找到了指定链接，如果**false**否则为。
+如果找到链接，**则为 true** ; 否则为**false** 。
 
-##  <a name="count"></a> count
+## <a name="count"></a>计
 
-中的项的计数`single_link_registry`对象。
+计算 `single_link_registry` 对象中的项数。
 
-```
+```cpp
 virtual size_t count();
 ```
 
 ### <a name="return-value"></a>返回值
 
-中的项数`single_link_registry`对象。
+`single_link_registry` 对象中的项数。
 
-##  <a name="remove"></a> 删除
+## <a name="remove"></a>取消
 
-移除从链接`single_link_registry`对象。
+删除 `single_link_registry` 对象的链接。
 
-```
+```cpp
 virtual bool remove(_EType _Link);
 ```
 
 ### <a name="parameters"></a>参数
 
 *_Link*<br/>
-指向块被删除，如果找到。
+指向要删除的块的指针（如果找到）。
 
 ### <a name="return-value"></a>返回值
 
-**true**找到该链接并将其删除，如果**false**否则为。
+如果找到并删除了链接，**则为 true** ; 否则为**false** 。
 
-##  <a name="ctor"></a> single_link_registry
+## <a name="ctor"></a>single_link_registry
 
 构造 `single_link_registry` 对象。
 
-```
+```cpp
 single_link_registry();
 ```
 
-##  <a name="dtor"></a> ~single_link_registry
+## <a name="dtor"></a>~ single_link_registry
 
-销毁`single_link_registry`对象。
+销毁 `single_link_registry` 的对象。
 
-```
+```cpp
 virtual ~single_link_registry();
 ```
 
 ### <a name="remarks"></a>备注
 
-该方法将引发[invalid_operation](invalid-operation-class.md)异常，它调用之前删除的链接。
+如果在删除链接之前调用此方法，则该方法会引发[invalid_operation](invalid-operation-class.md)异常。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [并发命名空间](concurrency-namespace.md)<br/>
 [multi_link_registry 类](multi-link-registry-class.md)

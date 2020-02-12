@@ -1,28 +1,28 @@
 ---
-title: 'Concurrency:: graphics 命名空间函数'
+title: Concurrency::graphics 命名空间函数
 ms.date: 11/04/2016
 f1_keywords:
 - amp_graphics/Concurrency::fast_math::copy_async
 - amp_graphics/Concurrency::fast_math::copy
 ms.assetid: ace01cd5-29d3-4356-930e-c81a61c5f934
-ms.openlocfilehash: 7ef181da43bb947230aaafe82b178938c85b9a8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 46b8a171acd3b125749b4e2c519909b82c76dc39
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375634"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126976"
 ---
-# <a name="concurrencygraphics-namespace-functions"></a>Concurrency:: graphics 命名空间函数
+# <a name="concurrencygraphics-namespace-functions"></a>Concurrency::graphics 命名空间函数
 
 |||
 |-|-|
 |[copy](#copy)|[copy_async](#copy_async)|
 
-##  <a name="copy"></a>  copy 函数 (concurrency:: graphics Namespace)
+## <a name="copy"></a>copy 函数（Concurrency：： graphics 命名空间）
 
-复制源纹理到目标缓冲区或复制源缓冲区到目标缓冲区。 此函数的一般形式为`copy(src, dest)`。
+将源纹理复制到目标缓冲区，或将源缓冲区复制到目标缓冲区。 此函数的常规形式是 `copy(src, dest)`。
 
-```
+```cpp
 template <
     typename _Src_type,
     typename = typename std::enable_if<details::texture_traits<_Src_type>::is_texture, void>::type>
@@ -122,7 +122,7 @@ void copy (
 要复制的纹理部分的范围。
 
 *_Dst*<br/>
-要将复制到的对象。
+要复制到的对象。
 
 *_Dst_byte_size*<br/>
 目标中的字节数。
@@ -131,7 +131,7 @@ void copy (
 目标对象的类型。
 
 *_Dst_offset*<br/>
-在此处开始复制目标中的偏移量。
+目标中的偏移量，从此处开始复制。
 
 *InputIterator*<br/>
 输入迭代器的类型。
@@ -140,7 +140,7 @@ void copy (
 输出迭代器的类型。
 
 *_Src*<br/>
-若要要复制的对象。
+要复制的对象。
 
 *_Src_byte_size*<br/>
 源中的字节数。
@@ -149,19 +149,19 @@ void copy (
 源对象的类型。
 
 *_Src_offset*<br/>
-从此处开始复制源中的偏移量。
+要从其开始复制的源中的偏移量。
 
 *first*<br/>
-进入源容器开始迭代器。
+源容器中的开始迭代器。
 
 *last*<br/>
-进入源容器结束迭代器。
+源容器中的结束迭代器。
 
-##  <a name="copy_async"></a>  copy_async 函数 (concurrency:: graphics Namespace)
+## <a name="copy_async"></a>copy_async 函数（Concurrency：： graphics 命名空间）
 
-以异步方式复制源纹理到目标缓冲区或复制源缓冲区到目标缓冲区，然后返回[completion_future](completion-future-class.md)可等待的对象。 当在加速器上运行代码时，无法复制数据。 此函数的一般形式为`copy(src, dest)`。
+以异步方式将源纹理复制到目标缓冲区，或将源缓冲区复制到目标缓冲区，然后返回可等待的[completion_future](completion-future-class.md)对象。 在加速器上运行代码时，无法复制数据。 此函数的常规形式是 `copy(src, dest)`。
 
-```
+```cpp
 template<
     typename _Src_type,
     typename = typename std::enable_if<details::texture_traits<_Src_type>::is_texture, void>::type
@@ -257,7 +257,7 @@ concurrency::completion_future copy_async(_Src_type& _Src,
 要复制的纹理部分的范围。
 
 *_Dst*<br/>
-要将复制到的对象。
+要复制到的对象。
 
 *_Dst_byte_size*<br/>
 目标中的字节数。
@@ -266,7 +266,7 @@ concurrency::completion_future copy_async(_Src_type& _Src,
 目标对象的类型。
 
 *_Dst_offset*<br/>
-在此处开始复制目标中的偏移量。
+目标中的偏移量，从此处开始复制。
 
 *InputIterator*<br/>
 输入迭代器的类型。
@@ -275,7 +275,7 @@ concurrency::completion_future copy_async(_Src_type& _Src,
 输出迭代器的类型。
 
 *_Src*<br/>
-若要要复制的对象。
+要复制的对象。
 
 *_Src_byte_size*<br/>
 源中的字节数。
@@ -284,20 +284,20 @@ concurrency::completion_future copy_async(_Src_type& _Src,
 源对象的类型。
 
 *_Src_offset*<br/>
-从此处开始复制源中的偏移量。
+要从其开始复制的源中的偏移量。
 
 *first*<br/>
-进入源容器开始迭代器。
+源容器中的开始迭代器。
 
 *last*<br/>
-进入源容器结束迭代器。
+源容器中的结束迭代器。
 
 ## <a name="requirements"></a>要求
 
-**标头：** amp_graphics.h
+**标头：** amp_graphics。h
 
-**命名空间：** Concurrency:: graphics
+**命名空间：** Concurrency：： graphics
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)

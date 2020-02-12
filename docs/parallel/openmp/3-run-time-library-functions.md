@@ -2,12 +2,12 @@
 title: 3. 运行时库函数
 ms.date: 05/13/2019
 ms.assetid: b226e512-6822-4cbe-a2ca-74cc2bb7e880
-ms.openlocfilehash: 553c9ff2ceff02dc7b72e9f11899dac9d1f0f612
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 6155eb87bd7a1a0533caf99afb3db8417854df30
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857952"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142958"
 ---
 # <a name="3-run-time-library-functions"></a>3. 运行时库函数
 
@@ -15,7 +15,7 @@ ms.locfileid: "74857952"
 
 类型 `omp_lock_t` 是一种对象类型，该对象类型能够表示锁可用，或者线程拥有锁。 这些锁称为*简单锁*。
 
-类型 `omp_nest_lock_t` 是一种对象类型，该对象类型能够表示锁可用，或者同时拥有该锁的线程的标识和*嵌套计数*（如下所述）。 这些锁嘿*可嵌套锁*。
+类型 `omp_nest_lock_t` 是一种对象类型，该对象类型能够表示锁可用，或者同时拥有该锁的线程的标识和*嵌套计数*（如下所述）。 这些锁称为*a.17 锁*。
 
 库函数是带有 "C" 链接的外部函数。
 
@@ -96,13 +96,9 @@ int omp_get_max_threads(void);
 
 下面表示 `omp_get_max_threads`的值的下限：
 
-```
+> *线程-用于下一个团队* <= `omp_get_max_threads`
 
-threads-used-for-next-team
-<= omp_get_max_threads
-```
-
-请注意，如果另一个并行区域使用 `num_threads` 子句来请求特定数量的线程，则保证 `omp_get_max_threads` 的结果的下限不长。
+请注意，如果另一个并行区域使用 `num_threads` 子句来请求特定数量的线程，则 `omp_get_max_threads` 的结果的下限将不再保留。
 
 `omp_get_max_threads` 函数的返回值可用于为在下一个并行区域中形成的团队中的所有线程动态分配足够的存储空间。
 
@@ -171,7 +167,7 @@ void omp_set_dynamic(int dynamic_threads);
 
 #### <a name="microsoft-specific"></a>Microsoft 专用
 
-`omp_get_dynamic` 和 `omp_set_dynamic` 的当前支持如下所示： 
+`omp_get_dynamic` 和 `omp_set_dynamic` 的当前支持如下所示：
 
 `omp_set_dynamic` 的输入参数不会影响线程策略，也不会更改线程的数目。 `omp_get_num_threads` 总是返回用户定义的编号（如果已设置）或默认线程号。 在当前的 Microsoft 实现中，`omp_set_dynamic(0)` 关闭动态线程，以便可以为以下并行区域重用现有的线程集。 `omp_set_dynamic(1)` 通过丢弃现有的一组线程并为即将推出的并行区域创建新集来打开动态线程处理。 新集合中的线程数与旧集相同，并且基于 `omp_get_num_threads`的返回值。 因此，为了获得最佳性能，请使用 `omp_set_dynamic(0)` 重新使用现有线程。
 

@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - Context class
 ms.assetid: c0d553f3-961d-4ecd-9a29-4fa4351673b8
-ms.openlocfilehash: 9074dad572a3a74a5b456e9790dc359ddf8b7c60
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c47d9db64b0af7d5413abed3f85e9d41a591fa2
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262744"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143119"
 ---
 # <a name="context-class"></a>Context 类
 
@@ -33,43 +33,43 @@ ms.locfileid: "62262744"
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 class Context;
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
-### <a name="protected-constructors"></a>受保护的构造函数
+### <a name="protected-constructors"></a>受保护构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[~ Context 析构函数](#dtor)||
+|[~ 上下文析构函数](#dtor)||
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[块](#block)|阻止当前上下文。|
 |[CurrentContext](#currentcontext)|返回指向当前上下文的指针。|
-|[GetId](#getid)|返回上下文所属的计划程序中是唯一的上下文的标识符。|
-|[GetScheduleGroupId](#getschedulegroupid)|返回上下文目前正在从事的计划组的标识符。|
-|[GetVirtualProcessorId](#getvirtualprocessorid)|返回当前正在执行上下文的虚拟处理器的标识符。|
-|[Id](#id)|返回在当前上下文所属的计划程序中是唯一的当前上下文的标识符。|
-|[IsCurrentTaskCollectionCanceling](#iscurrenttaskcollectioncanceling)|返回一个指示是否当前正在执行内联在当前上下文的任务集合正处于活动状态的取消操作 （或不久将）。|
-|[IsSynchronouslyBlocked](#issynchronouslyblocked)|确定以同步方式阻止上下文。 若要以同步方式阻止它显式执行的操作导致阻塞，则认为该上下文。|
-|[超额订阅](#oversubscribe)|注入一个计划程序的其他虚拟处理器的其中一个该计划程序中的虚拟处理器上执行的上下文调用时的代码块的持续时间。|
+|[GetId](#getid)|返回上下文所属计划程序中唯一的上下文标识符。|
+|[GetScheduleGroupId](#getschedulegroupid)|返回上下文当前正在处理的计划组的标识符。|
+|[GetVirtualProcessorId](#getvirtualprocessorid)|返回上下文当前正在其上执行的虚拟处理器的标识符。|
+|[Id](#id)|返回当前上下文的唯一标识符，该标识符在当前上下文所属的计划程序中是唯一的。|
+|[IsCurrentTaskCollectionCanceling](#iscurrenttaskcollectioncanceling)|返回一个指示当前上下文中当前正在执行内联的任务集合是否正在活动取消的中间（或将很快发生）。|
+|[IsSynchronouslyBlocked](#issynchronouslyblocked)|确定是否同步阻塞上下文。 如果上下文显式执行了导致阻止的操作，则会将其视为同步阻止。|
+|[过度](#oversubscribe)|当对在该计划程序的某个虚拟处理器上执行的上下文调用时，在代码块的持续时间内将额外的虚拟处理器注入到计划程序中。|
 |[ScheduleGroupId](#schedulegroupid)|返回当前上下文正在处理的计划组的标识符。|
-|[Unblock](#unblock)|取消阻止上下文，并使其成为可运行。|
-|[VirtualProcessorId](#virtualprocessorid)|返回当前上下文在其执行的虚拟处理器的标识符。|
+|[阻挡](#unblock)|取消阻止上下文并使其变为可运行。|
+|[VirtualProcessorId](#virtualprocessorid)|返回当前上下文正在其上执行的虚拟处理器的标识符。|
 |[Yield](#yield)|让出执行，这样另一个上下文可进行执行。 如果没有其他上下文可接受执行，则计划程序可将执行让出给另一个操作系统线程。|
 
 ## <a name="remarks"></a>备注
 
-并发运行时计划程序 (请参阅[计划程序](scheduler-class.md)) 使用执行上下文来执行工作排列到您的应用程序。 Win32 线程是在 Windows 操作系统上的执行上下文的示例。
+并发运行时计划程序（请参阅[计划](scheduler-class.md)程序）使用执行上下文来执行应用程序对其进行排队的工作。 Win32 线程是 Windows 操作系统上的执行上下文的示例。
 
-在任何时候，计划程序的并发级别等于向它授予通过资源管理器的虚拟处理器的数量。 虚拟处理器是处理资源和映射到基础系统上的硬件线程的抽象。 在给定时间，只有单个计划程序上下文可以执行虚拟处理器上。
+在任何时候，计划程序的并发级别都等于资源管理器向其授予的虚拟处理器的数目。 虚拟处理器是处理资源的抽象，并映射到基础系统上的硬件线程。 在给定的时间，只有单个计划程序上下文可在虚拟处理器上执行。
 
-计划程序是协作性在本质上，执行上下文可以在任何时间产生其虚拟处理器到不同的上下文，如果它希望进入等待状态。 其等待它满足时，它不能继续直到在计划程序中的虚拟处理器可用开始执行它。
+计划程序在本质上是协作的，如果正在执行的上下文希望进入等待状态，则可以随时将其虚拟处理器生成到不同的上下文中。 如果其等待时间满足，则无法继续，直到计划程序的可用虚拟处理器开始执行它。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -77,15 +77,15 @@ class Context;
 
 ## <a name="requirements"></a>要求
 
-**标头：** concrt.h
+**标头：** concrt
 
 **命名空间：** 并发
 
-##  <a name="block"></a> Block
+## <a name="block"></a>模块
 
 阻止当前上下文。
 
-```
+```cpp
 static void __cdecl Block();
 ```
 
@@ -93,23 +93,23 @@ static void __cdecl Block();
 
 如果当前没有计划程序与调用上下文关联,此方法将导致进程的默认计划程序正被创建和/或附加到调用上下文。
 
-如果虚拟处理器上运行时调用的上下文，虚拟处理器将查找另一个可运行的上下文执行，也有可能会创建一个新。
+如果调用上下文正在虚拟处理器上运行，则虚拟处理器将查找要执行的另一个可运行上下文，或者可能会创建新上下文。
 
-之后`Block`方法已调用，或将调用，必须将它与对的调用配对[解除阻止](#unblock)方法从另一个执行上下文才能使它再次运行。 请注意，你的代码发布为另一个线程可以调用其上下文的点之间没有重要的时间段`Unblock`方法和其中的实际方法调用的点`Block`进行。 在此时间段内，您不能调用任何可能会反过来阻止或取消阻止其自身原因（例如获取一个锁）的方法。 调用`Block`和`Unblock`方法不会跟踪阻止和取消阻止的原因。 只有一个对象应具有的所有权`Block` -  `Unblock`对。
+调用或调用 `Block` 方法后，必须将其与另一个执行上下文中的[解除阻止](#unblock)方法的调用配对，以便它再次运行。 请注意，在代码为另一个线程发布其上下文以便能够调用 `Unblock` 方法的点与对 `Block` 进行实际方法调用的点之间存在关键时间间隔。 在此时间段内，您不能调用任何可能会反过来阻止或取消阻止其自身原因（例如获取一个锁）的方法。 对 `Block` 和 `Unblock` 方法的调用不会跟踪阻止和取消阻止的原因。 只有一个对象应该拥有 `Block`- `Unblock` 对的所有权。
 
-此方法会引发异常，包括各种[scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md)。
+此方法可能会引发各种异常，包括[scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md)。
 
-##  <a name="dtor"></a> ~Context
+## <a name="dtor"></a>~ 上下文
 
-```
+```cpp
 virtual ~Context();
 ```
 
-##  <a name="currentcontext"></a> CurrentContext
+## <a name="currentcontext"></a>CurrentContext
 
 返回指向当前上下文的指针。
 
-```
+```cpp
 static Context* __cdecl CurrentContext();
 ```
 
@@ -121,97 +121,97 @@ static Context* __cdecl CurrentContext();
 
 如果当前没有计划程序与调用上下文关联,此方法将导致进程的默认计划程序正被创建和/或附加到调用上下文。
 
-##  <a name="getid"></a> GetId
+## <a name="getid"></a>GetId
 
-返回上下文所属的计划程序中是唯一的上下文的标识符。
+返回上下文所属计划程序中唯一的上下文标识符。
 
-```
+```cpp
 virtual unsigned int GetId() const = 0;
 ```
 
 ### <a name="return-value"></a>返回值
 
-上下文所属的计划程序中是唯一的上下文标识符。
+上下文的标识符，该标识符在上下文所属的计划程序中是唯一的。
 
-##  <a name="getschedulegroupid"></a> GetScheduleGroupId
+## <a name="getschedulegroupid"></a>GetScheduleGroupId
 
-返回上下文目前正在从事的计划组的标识符。
+返回上下文当前正在处理的计划组的标识符。
 
-```
+```cpp
 virtual unsigned int GetScheduleGroupId() const = 0;
 ```
 
 ### <a name="return-value"></a>返回值
 
-目前正计划组上下文的标识符。
+上下文当前正在处理的计划组的标识符。
 
 ### <a name="remarks"></a>备注
 
-此方法的返回值是在其执行上下文的计划组的瞬时采样。 如果是在除当前上下文外的其他上下文中调用此方法，则该值可能在返回时过时，不可依靠。 通常情况下，此方法用于调试或跟踪目的。
+此方法的返回值是上下文正在其上执行的计划组的即时采样。 如果是在除当前上下文外的其他上下文中调用此方法，则该值可能在返回时过时，不可依靠。 通常，此方法仅用于调试或跟踪目的。
 
-##  <a name="getvirtualprocessorid"></a> GetVirtualProcessorId
+## <a name="getvirtualprocessorid"></a>GetVirtualProcessorId
 
-返回当前正在执行上下文的虚拟处理器的标识符。
+返回上下文当前正在其上执行的虚拟处理器的标识符。
 
-```
+```cpp
 virtual unsigned int GetVirtualProcessorId() const = 0;
 ```
 
 ### <a name="return-value"></a>返回值
 
-如果上下文当前正在执行一个虚拟处理器上的虚拟处理器上; 当前执行上下文的标识符否则为值`-1`。
+如果上下文当前正在虚拟处理器上执行，则为当前正在其上执行上下文的虚拟处理器的标识符;否则，值 `-1`。
 
 ### <a name="remarks"></a>备注
 
-此方法的返回值是在其执行上下文的虚拟处理器的瞬时采样。 此值可能在返回时过时并且不可依靠。 通常情况下，此方法用于调试或跟踪目的。
+此方法的返回值是上下文正在其上执行的虚拟处理器的即时采样。 此值可能在返回时过时并且不可依靠。 通常，此方法仅用于调试或跟踪目的。
 
-##  <a name="id"></a> Id
+## <a name="id"></a>识别
 
-返回在当前上下文所属的计划程序中是唯一的当前上下文的标识符。
+返回当前上下文的唯一标识符，该标识符在当前上下文所属的计划程序中是唯一的。
 
-```
+```cpp
 static unsigned int __cdecl Id();
 ```
 
 ### <a name="return-value"></a>返回值
 
-如果当前上下文附加到计划程序，在当前上下文属于; 计划程序中是唯一的当前上下文的标识符否则为值`-1`。
+如果当前上下文附加到计划程序，则当前上下文在当前上下文所属的计划程序中是唯一的，它是当前上下文的标识符;否则，值 `-1`。
 
-##  <a name="iscurrenttaskcollectioncanceling"></a> IsCurrentTaskCollectionCanceling
+## <a name="iscurrenttaskcollectioncanceling"></a>IsCurrentTaskCollectionCanceling
 
-返回一个指示是否当前正在执行内联在当前上下文的任务集合正处于活动状态的取消操作 （或不久将）。
+返回一个指示当前上下文中当前正在执行内联的任务集合是否正在活动取消的中间（或将很快发生）。
 
-```
+```cpp
 static bool __cdecl IsCurrentTaskCollectionCanceling();
 ```
 
 ### <a name="return-value"></a>返回值
 
-如果计划附加到调用上下文，并且任务组该上下文上执行内联任务，指示该任务组正处于活动状态的取消操作 （或不久将）;否则为值`false`。
+如果将计划程序附加到调用上下文，并且任务组在该上下文上执行内联任务，则指示该任务组是否正在活动取消（或将很快）;否则，值 `false`。
 
-##  <a name="issynchronouslyblocked"></a> IsSynchronouslyBlocked
+## <a name="issynchronouslyblocked"></a>IsSynchronouslyBlocked
 
-确定以同步方式阻止上下文。 若要以同步方式阻止它显式执行的操作导致阻塞，则认为该上下文。
+确定是否同步阻塞上下文。 如果上下文显式执行了导致阻止的操作，则会将其视为同步阻止。
 
-```
+```cpp
 virtual bool IsSynchronouslyBlocked() const = 0;
 ```
 
 ### <a name="return-value"></a>返回值
 
-是否以同步方式阻止上下文。
+上下文是否已同步阻止。
 
 ### <a name="remarks"></a>备注
 
-若要以同步方式阻止它显式执行的操作导致阻塞，则认为该上下文。 在线程计划程序上，这将指示对 `Context::Block` 方法或通过 `Context::Block` 方法构建的同步对象的直接调用。
+如果上下文显式执行了导致阻止的操作，则会将其视为同步阻止。 在线程计划程序上，这将指示对 `Context::Block` 方法或通过 `Context::Block` 方法构建的同步对象的直接调用。
 
-此方法的返回值是瞬间完成示例的上下文是否以同步方式阻止。 此值可能会过时的时刻，它将返回并仅可以非常具体的情况下使用。
+此方法的返回值是是否同步阻塞上下文的即时示例。 此值可能在返回时过时，并且只能在非常特定的情况下使用。
 
-##  <a name="operator_delete"></a> 运算符 delete
+## <a name="operator_delete"></a>运算符删除
 
-一个`Context`由运行时在内部销毁对象。 无法显式删除它。
+`Context` 对象由运行时内部销毁。 无法显式删除它。
 
-```
+```cpp
 void operator delete(void* _PObject);
 ```
 
@@ -220,68 +220,68 @@ void operator delete(void* _PObject);
 *_PObject*<br/>
 指向要删除的对象的指针。
 
-##  <a name="oversubscribe"></a> 超额订阅
+## <a name="oversubscribe"></a>过度
 
-注入一个计划程序的其他虚拟处理器的其中一个该计划程序中的虚拟处理器上执行的上下文调用时的代码块的持续时间。
+当对在该计划程序的某个虚拟处理器上执行的上下文调用时，在代码块的持续时间内将额外的虚拟处理器注入到计划程序中。
 
-```
+```cpp
 static void __cdecl Oversubscribe(bool _BeginOversubscription);
 ```
 
 ### <a name="parameters"></a>参数
 
 *_BeginOversubscription*<br/>
-如果 **，则返回 true**，则表示应过度订阅的持续时间添加额外虚拟处理器。 如果**false**，指示过度订阅应结束，并且应删除以前添加的虚拟处理器。
+如果**为 true**，则指示应在超额订阅的持续时间内添加额外的虚拟处理器。 如果**为 false**，则表示超额订阅应结束，并且应删除以前添加的虚拟处理器。
 
-##  <a name="schedulegroupid"></a> ScheduleGroupId
+## <a name="schedulegroupid"></a>ScheduleGroupId
 
 返回当前上下文正在处理的计划组的标识符。
 
-```
+```cpp
 static unsigned int __cdecl ScheduleGroupId();
 ```
 
 ### <a name="return-value"></a>返回值
 
-如果当前上下文附加到计划程序，并使用计划组，计划程序的标识符进行分组的当前上下文正常否则为值`-1`。
+如果当前上下文附加到计划程序并处理计划组，则为当前上下文正在处理的计划程序组的标识符;否则，值 `-1`。
 
-##  <a name="unblock"></a> 取消阻止
+## <a name="unblock"></a>阻挡
 
-取消阻止上下文，并使其成为可运行。
+取消阻止上下文并使其变为可运行。
 
-```
+```cpp
 virtual void Unblock() = 0;
 ```
 
 ### <a name="remarks"></a>备注
 
-它是对的调用完全合法`Unblock`方法以相应地调用之前[块](#block)方法。 只要调用`Block`和`Unblock`恰当配对方法、 运行时正确处理任何顺序的自然竞争。 `Unblock`调用之前即将`Block`调用只是求反的效果`Block`调用。
+在对[Block](#block)方法的相应调用之前调用 `Unblock` 方法是完全合法的。 只要对 `Block` 和 `Unblock` 方法的调用正确配对，运行时就会正确地处理任意排序的自然争用。 `Block` 调用之前的 `Unblock` 调用只会否定 `Block` 调用的效果。
 
-有几个例外情况可能会引发此方法。 如果上下文尝试调用`Unblock`方法本身[context_self_unblock](context-self-unblock-class.md)将引发异常。 如果调用`Block`并`Unblock`未恰当配对 (例如，两次调用`Unblock`当前正在运行的上下文所做)、 一个[context_unblock_unbalanced](context-unblock-unbalanced-class.md)将引发异常。
+此方法可能会引发多个异常。 如果某个上下文尝试自行调用 `Unblock` 方法，则将引发[context_self_unblock](context-self-unblock-class.md)异常。 如果对 `Block` 和 `Unblock` 的调用未正确配对（例如，对当前正在运行的上下文进行了两次 `Unblock` 调用），则将引发[context_unblock_unbalanced](context-unblock-unbalanced-class.md)异常。
 
-请注意，你的代码发布为另一个线程可以调用其上下文的点之间没有重要的时间段`Unblock`方法和其中的实际方法调用的点`Block`进行。 在此时间段内，您不能调用任何可能会反过来阻止或取消阻止其自身原因（例如获取一个锁）的方法。 调用`Block`和`Unblock`方法不会跟踪阻止和取消阻止的原因。 只有一个对象应具有的所有权`Block`和`Unblock`对。
+请注意，在代码为另一个线程发布其上下文以便能够调用 `Unblock` 方法的点与对 `Block` 进行实际方法调用的点之间存在关键时间间隔。 在此时间段内，您不能调用任何可能会反过来阻止或取消阻止其自身原因（例如获取一个锁）的方法。 对 `Block` 和 `Unblock` 方法的调用不会跟踪阻止和取消阻止的原因。 只有一个对象应具有 `Block` 和 `Unblock` 对的所有权。
 
-##  <a name="virtualprocessorid"></a> VirtualProcessorId
+## <a name="virtualprocessorid"></a>VirtualProcessorId
 
-返回当前上下文在其执行的虚拟处理器的标识符。
+返回当前上下文正在其上执行的虚拟处理器的标识符。
 
-```
+```cpp
 static unsigned int __cdecl VirtualProcessorId();
 ```
 
 ### <a name="return-value"></a>返回值
 
-如果当前上下文附加到计划程序，当前的上下文执行; 的虚拟处理器的标识符否则为值`-1`。
+如果当前上下文附加到计划程序，则为当前上下文正在其上执行的虚拟处理器的标识符;否则，值 `-1`。
 
 ### <a name="remarks"></a>备注
 
-此方法的返回值是在其执行当前上下文的虚拟处理器的瞬时采样。 此值可能在返回时过时并且不可依靠。 通常情况下，此方法用于调试或跟踪目的。
+此方法的返回值是在其上执行当前上下文的虚拟处理器的即时采样。 此值可能在返回时过时并且不可依靠。 通常，此方法仅用于调试或跟踪目的。
 
-##  <a name="yield"></a> yield
+## <a name="yield"></a>产生
 
 让出执行，这样另一个上下文可进行执行。 如果没有其他上下文可接受执行，则计划程序可将执行让出给另一个操作系统线程。
 
-```
+```cpp
 static void __cdecl Yield();
 ```
 
@@ -289,11 +289,11 @@ static void __cdecl Yield();
 
 如果当前没有计划程序与调用上下文关联,此方法将导致进程的默认计划程序正被创建和/或附加到调用上下文。
 
-##  <a name="yieldexecution"></a> YieldExecution
+## <a name="yieldexecution"></a>YieldExecution
 
 让出执行，这样另一个上下文可进行执行。 如果没有其他上下文可接受执行，则计划程序可将执行让出给另一个操作系统线程。
 
-```
+```cpp
 static void __cdecl YieldExecution();
 ```
 
@@ -301,9 +301,9 @@ static void __cdecl YieldExecution();
 
 如果当前没有计划程序与调用上下文关联,此方法将导致进程的默认计划程序正被创建和/或附加到调用上下文。
 
-此函数是 Visual Studio 2015 中的新增功能，等同于[产生](#yield)正常工作，但是不与 Windows.h 中的 Yield 宏冲突。
+此函数是 Visual Studio 2015 中的新增功能，与[yield](#yield)函数相同，但不与 Windows 中的 yield 宏冲突。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [并发命名空间](concurrency-namespace.md)<br/>
 [Scheduler 类](scheduler-class.md)<br/>

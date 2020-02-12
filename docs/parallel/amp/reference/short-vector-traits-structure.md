@@ -7,20 +7,20 @@ f1_keywords:
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::short_vector_traits
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::size Constant
 ms.assetid: cd9492da-9e02-4a6e-9d50-b61252cdb460
-ms.openlocfilehash: c407c42e5c6a7035e911218ecb41c2da62967787
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7531a57dddcc85392380029afc6edd577bbc5cf3
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351139"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126366"
 ---
-# <a name="shortvectortraits-structure"></a>short_vector_traits 结构
+# <a name="short_vector_traits-structure"></a>short_vector_traits 结构
 
-通过 short_vector_traits 可检索基础矢量长度和短的矢量类型或标量类型的标量类型
+short_vector_traits 允许检索 short 矢量类型或标量类型的基础向量长度和标量类型
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 template<
     typename T
 >
@@ -75,29 +75,29 @@ template<>
 struct short_vector_traits<double_4>;
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
 `T`
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[short_vector_traits:: short_vector_traits 构造函数](#ctor)||
+|[short_vector_traits：： short_vector_traits 构造函数](#ctor)||
 
 ### <a name="public-constants"></a>公共常量
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[short_vector_traits:: size 常量](#size)||
+|[short_vector_traits：： size 常量](#size)||
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -105,22 +105,22 @@ struct short_vector_traits<double_4>;
 
 ## <a name="requirements"></a>要求
 
-**标头：** amp_short_vectors.h
+**标头：** amp_short_vectors。h
 
-**命名空间：** Concurrency:: graphics
+**命名空间：** Concurrency：： graphics
 
-##  <a name="ctor"></a>  short_vector_traits:: short_vector_traits 构造函数
+## <a name="ctor"></a>short_vector_traits：： short_vector_traits 构造函数
 
-```
+```cpp
 short_vector_traits();
 ```
 
-##  <a name="size"></a>  short_vector_traits:: size 常量
+## <a name="size"></a>short_vector_traits：： size 常量
 
-```
+```cpp
 static int const size = 1;
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)

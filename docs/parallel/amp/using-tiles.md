@@ -2,12 +2,12 @@
 title: 使用平铺
 ms.date: 11/19/2018
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
-ms.openlocfilehash: 6c935134e033d12fc140c8d377ef59d0b47265fc
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: e5cedde255846f61ed0aaadacbd9966c00a03c9d
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518252"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126248"
 ---
 # <a name="using-tiles"></a>使用平铺
 
@@ -15,7 +15,7 @@ ms.locfileid: "76518252"
 
 - `tile_static` 变量。 平铺的主要优点是 `tile_static` 访问的性能增益。 访问 `tile_static` 内存中的数据比访问全局空间（`array` 或 `array_view` 对象）中的数据的速度要快得多。 为每个图块创建 `tile_static` 变量的实例，并且该图块中的所有线程都可以访问该变量。 在典型的平铺算法中，将数据从全局内存复制到 `tile_static` 内存一次，然后从 `tile_static` 内存进行多次访问。
 
-- [tile_barrier：： Wait 方法](reference/tile-barrier-class.md#wait)。 对 `tile_barrier::wait` 的调用会挂起当前线程的执行，直到同一磁贴中的所有线程都达到对 `tile_barrier::wait`的调用为止。 你不能保证线程将在中运行的顺序，只有磁贴中的线程不会在调用 `tile_barrier::wait` 之后执行，直到所有线程均已到达调用。 这意味着，通过使用 `tile_barrier::wait` 方法，你可以按平铺方式（而不是按线程）来执行任务。 典型的平铺算法有代码来初始化整个磁贴的 `tile_static` 内存，然后调用 `tile_barrer::wait`。 后面 `tile_barrier::wait` 的代码包含需要访问所有 `tile_static` 值的计算。
+- [tile_barrier：： Wait 方法](reference/tile-barrier-class.md#wait)。 对 `tile_barrier::wait` 的调用会挂起当前线程的执行，直到同一磁贴中的所有线程都达到对 `tile_barrier::wait`的调用为止。 你不能保证线程将在中运行的顺序，只有磁贴中的线程不会在调用 `tile_barrier::wait` 之后执行，直到所有线程均已到达调用。 这意味着，通过使用 `tile_barrier::wait` 方法，你可以按平铺方式（而不是按线程）来执行任务。 典型的平铺算法有代码来初始化整个磁贴的 `tile_static` 内存，然后调用 `tile_barrier::wait`。 后面 `tile_barrier::wait` 的代码包含需要访问所有 `tile_static` 值的计算。
 
 - 本地和全局索引。 您可以访问相对于整个 `array_view` 或 `array` 对象的线程索引和与磁贴相关的索引。 使用本地索引可以使代码更易于读取和调试。 通常，使用本地索引访问 `tile_static` 变量，使用全局索引访问 `array` 和 `array_view` 变量。
 
@@ -234,7 +234,7 @@ void SamplingExample() {
         }
         std::cout << "\n";
     }
-    // Output for SAMPLESSIZE = 2 is:
+    // Output for SAMPLESIZE = 2 is:
     //  4.5  6.5  8.5 10.5
     // 20.5 22.5 24.5 26.5
     // 36.5 38.5 40.5 42.5

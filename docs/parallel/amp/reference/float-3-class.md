@@ -74,40 +74,40 @@ f1_keywords:
 helpviewer_keywords:
 - amp_short_vectors/Concurrency::graphics::float_3
 ms.assetid: 209df7a5-08d7-48b4-8ba5-77603642cdd8
-ms.openlocfilehash: ff9d9391efaeef5051424675dacf1f14c35b30df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 259d008c9819eed631026fd106c01644bb1179cc
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180305"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126677"
 ---
-# <a name="float3-class"></a>float_3 类
+# <a name="float_3-class"></a>float_3 类
 
 表示三个浮点数的短矢量。
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 class float_3;
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[float_3 构造函数](#ctor)|已重载。 默认构造函数，初始化 0 的所有元素。|
+|[float_3 构造函数](#ctor)|已重载。 默认构造函数，用0初始化所有元素。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |float_3::get_x||
 |float_3::get_xy||
@@ -146,9 +146,9 @@ class float_3;
 |float_3::set_zy||
 |float_3::set_zyx||
 
-### <a name="public-operators"></a>公共运算符
+### <a name="public-operators"></a>公用運算子
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |float_3::operator-||
 |float_3::operator--||
@@ -161,20 +161,20 @@ class float_3;
 
 ### <a name="public-constants"></a>公共常量
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[大小常量](#float_3__size)||
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |float_3::b||
 |float_3::bg||
 |float_3::bgr||
 |float_3::br||
 |float_3::brg||
-|float_3::g||
+|float_3：： g||
 |float_3::gb||
 |float_3::gbr||
 |float_3::gr||
@@ -184,12 +184,12 @@ class float_3;
 |float_3::rbg||
 |float_3::rg||
 |float_3::rgb||
-|float_3::x||
+|float_3：： x||
 |float_3::xy||
 |float_3::xyz||
 |float_3::xz||
 |float_3::xzy||
-|float_3::y||
+|float_3：： y||
 |float_3::yx||
 |float_3::yxz||
 |float_3::yz||
@@ -206,15 +206,15 @@ class float_3;
 
 ## <a name="requirements"></a>要求
 
-**标头：** amp_short_vectors.h
+**标头：** amp_short_vectors。h
 
-**命名空间：** Concurrency:: graphics
+**命名空间：** Concurrency：： graphics
 
-##  <a name="ctor"></a> float_3
+## <a name="ctor"></a>float_3
 
-默认构造函数，初始化 0 的所有元素。
+默认构造函数，用0初始化所有元素。
 
-```
+```cpp
 float_3() restrict(amp,
     cpu);
 
@@ -256,26 +256,26 @@ explicit inline float_3(
 ### <a name="parameters"></a>参数
 
 *_V0*<br/>
-要初始化元素 0 的值。
+要初始化元素0的值。
 
 *_V1*<br/>
-要初始化元素 1 的值。
+要初始化元素1的值。
 
 *_V2*<br/>
-要初始化元素 2 的值。
+用于初始化元素2的值。
 
 *_V*<br/>
-用于初始化值。
+用于初始化的值。
 
 *_Other*<br/>
 用于初始化的对象。
 
-##  <a name="float_3__size"></a> 大小
+## <a name="float_3__size"></a>规格
 
-```
+```cpp
 static const int size = 3;
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)

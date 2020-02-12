@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-ms.openlocfilehash: 9cc48687eb083ea4fab53380f62856b747c9d86a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5bc6691f6d0b166bb3084091ee6af70474937568
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69512814"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141335"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>将并发运行时与其他并发模型进行比较
 
@@ -19,7 +19,7 @@ ms.locfileid: "69512814"
 
 可以使用并发运行时的功能和工作效率的优势来补充使用另一种并发模型的现有应用程序。 多个任务计划程序争夺同一计算资源时，并发运行时无法保证负载平衡。 但是，工作负载不重叠时，这种影响非常小。
 
-##  <a name="top"></a> 部分
+## <a name="top"></a> 部分
 
 - [比较抢先式计划与协作式计划](#models)
 
@@ -27,13 +27,13 @@ ms.locfileid: "69512814"
 
 - [比较并发运行时与 OpenMP](#openmp)
 
-##  <a name="models"></a>比较抢先式计划与协作式计划
+## <a name="models"></a>比较抢先式计划与协作式计划
 
 抢先式模型和协作式计划模型是启用多任务以共享计算资源的两种常用方式，例如，处理器或硬件线程。
 
 ### <a name="preemptive-and-cooperative-scheduling"></a>抢先式和协作式计划
 
-*抢先式计划* 是一种基于优先级的轮循机制，它在给定时间内为每个任务提供单独访问计算资源的权限，并在之后切换到其他任务。 抢先式计划在多任务操作系统 (例如 Windows) 中很常见。 *协作式计划*是一种机制, 它为每个任务提供对计算资源的独占访问权限, 直到任务完成或任务生成对资源的访问权限为止。 并发运行时将操作系统的抢先式计划程序与协作式计划配合使用，以达到处理资源的最大使用率。
+*抢先式计划* 是一种基于优先级的轮循机制，它在给定时间内为每个任务提供单独访问计算资源的权限，并在之后切换到其他任务。 抢先式计划在多任务操作系统（例如 Windows）中很常见。 *协作式计划*是一种机制，它为每个任务提供对计算资源的独占访问权限，直到任务完成或任务生成对资源的访问权限为止。 并发运行时将操作系统的抢先式计划程序与协作式计划配合使用，以达到处理资源的最大使用率。
 
 ### <a name="differences-between-preemptive-and-cooperative-schedulers"></a>抢先式和协作式计划程序之间的差异
 
@@ -51,7 +51,7 @@ ms.locfileid: "69512814"
 
 [[返回页首](#top)]
 
-##  <a name="winapi"></a> 比较并发运行时与 Windows API
+## <a name="winapi"></a> 比较并发运行时与 Windows API
 
 Microsoft Windows 应用程序编程接口（通常称为 Windows API，以前称为 Win32）提供了在应用程序中启用并发的编程模型。 并发运行时基于 Windows API 生成，以提供无法从基础操作系统中获得的其他编程模型。
 
@@ -81,7 +81,7 @@ Windows API 中的中心并发机制是线程。 通常使用 [CreateThread](/wi
 
 [[返回页首](#top)]
 
-##  <a name="openmp"></a> 比较并发运行时与 OpenMP
+## <a name="openmp"></a> 比较并发运行时与 OpenMP
 
 并发运行时支持各种编程模型。 这些模型可能会与其他库的模型重叠或对其进行补充。 本部分将并发运行时与 [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp) 进行比较。
 
@@ -95,7 +95,7 @@ OpenMP 编程模型由开放标准定义，具有与 Fortran 和 C/C++ 编程语
 
 [[返回页首](#top)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [并发运行时](../../parallel/concrt/concurrency-runtime.md)<br/>
 [概述](../../parallel/concrt/asynchronous-message-blocks.md)<br/>

@@ -13,50 +13,50 @@ f1_keywords:
 - AMPRT/Concurrency::completion_future::wait_for
 - AMPRT/Concurrency::completion_future::wait_until
 ms.assetid: 1303c62e-546d-4b02-a578-251ed3fc0b6b
-ms.openlocfilehash: 663122c2d8cd430e921773e75dfd7975e4a41516
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 69aacad02df5290f161e9d8d311be347668be9f9
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405568"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127015"
 ---
-# <a name="completionfuture-class"></a>completion_future 类
+# <a name="completion_future-class"></a>completion_future 类
 
-表示一个未来，对应于C++AMP 的异步操作。
+表示对应于C++ AMP 异步操作的将来。
 
-### <a name="syntax"></a>语法
+## <a name="syntax"></a>语法
 
-```
+```cpp
 class completion_future;
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[completion_future 构造函数](#ctor)|初始化 `completion_future` 类的新实例。|
-|[~ completion_future 析构函数](#dtor)|销毁`completion_future`对象。|
+|[~ completion_future 析构函数](#dtor)|销毁 `completion_future` 的对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[get](#get)|等待，直到关联的异步操作完成。|
-|[then](#then)|链接到一个回调函数对象`completion_future`关联的异步操作完成执行时要执行对象。|
-|[to_task](#to_task)|返回`task`对应于关联的异步操作对象。|
-|[valid](#valid)|获取一个布尔值，该值指示对象是否与异步操作相关联。|
-|[wait](#wait)|阻止，直到关联的异步操作完成。|
-|[wait_for](#wait_for)|阻止，直到关联的异步操作完成或由指定的时间`_Rel_time`已过。|
-|[wait_until](#wait_until)|阻止，直到关联的异步操作完成或当前时间超过指定的值直到`_Abs_time`。|
+|[接着](#then)|将回调函数对象链接到在关联的异步操作完成执行时要执行的 `completion_future` 对象。|
+|[to_task](#to_task)|返回与关联的异步操作对应的 `task` 对象。|
+|[适用](#valid)|获取一个布尔值，该值指示对象是否与异步操作关联。|
+|[再](#wait)|阻止，直到关联的异步操作完成。|
+|[wait_for](#wait_for)|阻止，直到关联的异步操作完成或 `_Rel_time` 指定的时间已过。|
+|[wait_until](#wait_until)|阻止，直到关联的异步操作完成或当前时间超过 `_Abs_time`指定的值为止。|
 
-### <a name="public-operators"></a>公共运算符
+### <a name="public-operators"></a>公用運算子
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[operator std::shared_future\<void>](#operator_shared_future)|将隐式转换`completion_future`对象传递给`std::shared_future`对象。|
-|[operator=](#operator_eq)|将指定的内容复制`completion_future`到此对象。|
+|[运算符 std：： shared_future\<void >](#operator_shared_future)|将 `completion_future` 对象隐式转换为 `std::shared_future` 的对象。|
+|[operator=](#operator_eq)|将指定 `completion_future` 对象的内容复制到此对象中。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -64,17 +64,17 @@ class completion_future;
 
 ## <a name="requirements"></a>要求
 
-**标头：** amprt.h
+**标头：** amprt
 
 **命名空间：** 并发
 
-## <a name="ctor"></a> completion_future
+## <a name="ctor"></a>completion_future
 
 初始化 `completion_future` 类的新实例。
 
 ### <a name="syntax"></a>语法
 
-```
+```cpp
 completion_future();
 
 completion_future(
@@ -91,29 +91,29 @@ completion_future(
 
 ### <a name="overloads-list"></a>重载列表
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |`completion_future();`|初始化 `completion_future` 类的新实例。|
 |`completion_future(const completion_future& _Other);`|通过复制构造函数来初始化 `completion_future` 类的新实例。|
 |`completion_future(completion_future&& _Other);`|通过移动构造函数来初始化 `completion_future` 类的新实例。|
 
-## <a name="get"></a> 获取
+## <a name="get"></a>获取
 
 等待，直到关联的异步操作完成。 如果在异步操作时遇到存储的异常，则将引发该异常。
 
 ### <a name="syntax"></a>语法
 
-```
+```cpp
 void get() const;
 ```
 
-## <a name="operator_shared_future"></a> operator std::shared_future<void>
+## <a name="operator_shared_future"></a>运算符 std：： shared_future\<void >
 
-将隐式转换`completion_future`对象传递给`std::shared_future`对象。
+将 `completion_future` 对象隐式转换为 `std::shared_future` 的对象。
 
 ### <a name="syntax"></a>语法
 
-```
+```cpp
 operator std::shared_future<void>() const;
 ```
 
@@ -121,13 +121,13 @@ operator std::shared_future<void>() const;
 
 一个 `std::shared_future` 对象。
 
-## <a name="operator_eq"></a> 运算符 =
+## <a name="operator_eq"></a>operator =
 
-将指定的内容复制`completion_future`到此对象。
+将指定 `completion_future` 对象的内容复制到此对象中。
 
 ### <a name="syntax"></a>语法
 
-```
+```cpp
 completion_future&  operator= (const completion_future& _Other );
 completion_future&  operator= (completion_future&& _Other );
 ```
@@ -139,22 +139,22 @@ completion_future&  operator= (completion_future&& _Other );
 
 ### <a name="return-value"></a>返回值
 
-对此引用`completion_future`对象。
+对此 `completion_future` 对象的引用。
 
 ## <a name="overloads-list"></a>重载列表
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |`completion_future& operator=(const completion_future& _Other);`|使用深层复制将指定 `completion_future` 对象的内容复制到此对象中。|
 |`completion_future& operator=(completion_future&& _Other);`|使用移动赋值将指定 `completion_future` 对象的内容复制到此对象中。|
 
-## <a name="then"></a> 然后
+## <a name="then"></a>接着
 
-链接到一个回调函数对象`completion_future`关联的异步操作完成执行时要执行对象。
+将回调函数对象链接到在关联的异步操作完成执行时要执行的 `completion_future` 对象。
 
 ### <a name="syntax"></a>语法
 
-```
+```cpp
 template <typename _Functor>
 void then(const _Functor & _Func ) const;
 ```
@@ -167,13 +167,13 @@ void then(const _Functor & _Func ) const;
 *_Func*<br/>
 回调函数对象。
 
-## <a name="to_task"></a> to_task
+## <a name="to_task"></a>to_task
 
-返回`task`对应于关联的异步操作对象。
+返回与关联的异步操作对应的 `task` 对象。
 
 ### <a name="syntax"></a>语法
 
-```
+```cpp
 concurrency::task<void> to_task() const;
 ```
 
@@ -181,37 +181,37 @@ concurrency::task<void> to_task() const;
 
 对应于关联的异步操作的 `task` 对象。
 
-## <a name="valid"></a> 有效
+## <a name="valid"></a>适用
 
 获取一个布尔值，指示该对象是否与异步操作关联。
 
 ### <a name="syntax"></a>语法
 
-```
+```cpp
 bool valid() const;
 ```
 
 ### <a name="return-value"></a>返回值
 
-**true**的对象是否与异步操作相关联; 否则为**false**。
+如果对象与异步操作关联，则为**true** ; 否则为。否则**为 false**。
 
-## <a name="wait"></a> 等待
+## <a name="wait"></a>再
 
 阻止，直到关联的异步操作完成。
 
 ### <a name="syntax"></a>语法
 
-```
+```cpp
 void wait() const;
 ```
 
-## <a name="wait_for"></a> wait_for
+## <a name="wait_for"></a>wait_for
 
-阻止，直到关联的异步操作完成或由指定的时间`_Rel_time`已过。
+阻止，直到关联的异步操作完成或 `_Rel_time` 指定的时间已过。
 
 ### <a name="syntax"></a>语法
 
-```
+```cpp
 template <
     class _Rep,
     class _Period
@@ -223,31 +223,31 @@ std::future_status::future_status wait_for(
 ### <a name="parameters"></a>参数
 
 *_Rep*<br/>
-算术类型表示的计时周期数。
+表示计时周期数的算术类型。
 
 *_Period*<br/>
-Std::ratio，它表示每个滴答等待的秒数。
+Std：：比率，表示每个时钟周期所经过的秒数。
 
 *_Rel_time*<br/>
-最长时间等待操作完成。
+等待操作完成的最长时间。
 
 ### <a name="return-value"></a>返回值
 
 返回：
 
-- `std::future_status::deferred` 如果未运行关联的异步操作。
+- 如果关联的异步操作未运行，则 `std::future_status::deferred`。
 
-- `std::future_status::ready` 如果关联的异步操作已完成。
+- 如果关联的异步操作已完成，则 `std::future_status::ready`。
 
-- `std::future_status::timeout` 如果指定时间段内已过。
+- 如果指定的时间段已过，则 `std::future_status::timeout`。
 
-## <a name="wait_until"></a> wait_until
+## <a name="wait_until"></a>wait_until
 
-阻止，直到关联的异步操作完成或当前时间超过指定的值直到`_Abs_time`。
+阻止，直到关联的异步操作完成或当前时间超过 `_Abs_time`指定的值为止。
 
 ### <a name="syntax"></a>语法
 
-```
+```cpp
 template <
     class _Clock,
     class _Duration
@@ -259,34 +259,34 @@ std::future_status::future_status wait_until(
 ### <a name="parameters"></a>参数
 
 *_Clock*<br/>
-此时间点测量的时钟。
+测量此时间点的时钟。
 
 *_Duration*<br/>
-自启动以来的时间间隔`_Clock`的时期，此后该函数将超时时间。
+自 `_Clock`epoch 开始后的时间间隔，在此时间段后，函数将超时。
 
 *_Abs_time*<br/>
-此后该函数将超时的时间点。
+函数将在该时间点超时的时间点。
 
 ### <a name="return-value"></a>返回值
 
 返回：
 
-1. `std::future_status::deferred` 如果未运行关联的异步操作。
+1. 如果关联的异步操作未运行，则 `std::future_status::deferred`。
 
-1. `std::future_status::ready` 如果关联的异步操作已完成。
+1. 如果关联的异步操作已完成，则 `std::future_status::ready`。
 
-1. `std::future_status::timeout` 如果指定的时间段已过。
+1. 如果指定的时间段已过，则 `std::future_status::timeout`。
 
-## <a name="dtor"></a> ~completion_future
+## <a name="dtor"></a>~ completion_future
 
-销毁`completion_future`对象。
+销毁 `completion_future` 的对象。
 
 ### <a name="syntax"></a>语法
 
-```
+```cpp
 ~completion_future();
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [并发命名空间 (C++ AMP)](concurrency-namespace-cpp-amp.md)
