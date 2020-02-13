@@ -6,20 +6,20 @@ f1_keywords:
 - AMP_SHORT_VECTORS/short_vector
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector::short_vector Constructor
 ms.assetid: e4f50b8f-1150-437d-b58c-79c5fb883708
-ms.openlocfilehash: 012a70ae628a896c8202e46a5624f37f58b0781b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 531b8d53eac8d997b7e8ca4d29aad7d34ef90e22
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351542"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126430"
 ---
-# <a name="shortvector-structure"></a>short_vector 结构
+# <a name="short_vector-structure"></a>short_vector 结构
 
 short_vector 提供可广泛用于短矢量编程的元编程定义。
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 template<
     typename _Scalar_type,
     int _Size
@@ -75,25 +75,25 @@ template<>
 struct short_vector<double, 4>;
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
 *_Scalar_type*<br/>
 
 *_Size*<br/>
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |`type`||
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[short_vector:: short_vector 构造函数](#ctor)||
+|[short_vector：： short_vector 构造函数](#ctor)||
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -101,16 +101,16 @@ struct short_vector<double, 4>;
 
 ## <a name="requirements"></a>要求
 
-**标头：** amp_short_vectors.h
+**标头：** amp_short_vectors。h
 
-**命名空间：** Concurrency:: graphics
+**命名空间：** Concurrency：： graphics
 
-##  <a name="ctor"></a>  short_vector:: short_vector 构造函数
+## <a name="ctor"></a>short_vector：： short_vector 构造函数
 
-```
+```cpp
 short_vector();
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)

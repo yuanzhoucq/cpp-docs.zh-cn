@@ -5,12 +5,12 @@ helpviewer_keywords:
 - writing a parallel search algorithm [Concurrency Runtime]
 - parallel search algorithm, writing [Concurrency Runtime]
 ms.assetid: 421cd2de-f058-465f-b890-dd8fcc0df273
-ms.openlocfilehash: 08f33a75bc5c5391333a2d9368d4ed6563e117c2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 21907de6c5625f7774ae788cef0449ac49107e40
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346257"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142138"
 ---
 # <a name="how-to-use-cancellation-to-break-from-a-parallel-loop"></a>如何：使用取消中断并行循环
 
@@ -18,19 +18,19 @@ ms.locfileid: "62346257"
 
 ## <a name="example"></a>示例
 
-以下示例使用取消搜索数组中的元素。 `parallel_find_any`函数使用[concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for)算法以及[concurrency:: run_with_cancellation_token](reference/concurrency-namespace-functions.md#run_with_cancellation_token)函数搜索包含给定的值的位置。 当并行循环找到该值时，它将调用[concurrency::cancellation_token_source::cancel](reference/cancellation-token-source-class.md#cancel)方法来取消未来的工作。
+下面的示例使用取消在数组中搜索元素。 `parallel_find_any` 函数使用[concurrency：:p arallel_for](reference/concurrency-namespace-functions.md#parallel_for)算法，使用[concurrency：： run_with_cancellation_token](reference/concurrency-namespace-functions.md#run_with_cancellation_token)函数搜索包含给定值的位置。 当并行循环查找值时，它会调用[concurrency：： cancellation_token_source：： cancel](reference/cancellation-token-source-class.md#cancel)方法来取消将来的工作。
 
 [!code-cpp[concrt-parallel-array-search#1](../../parallel/concrt/codesnippet/cpp/how-to-use-cancellation-to-break-from-a-parallel-loop_1.cpp)]
 
-[Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for)算法并发作用。 因此，它不会按预先确定的顺序执行操作。 如果数组包含值的多个实例，则结果可以是其位置的任何一个。
+[Concurrency：:p arallel_for](reference/concurrency-namespace-functions.md#parallel_for)算法并发操作。 因此，它不按预先确定的顺序执行操作。 如果数组包含值的多个实例，则结果可以是其任何一个位置。
 
 ## <a name="compiling-the-code"></a>编译代码
 
-复制示例代码并将其粘贴到 Visual Studio 项目中，或将其粘贴在文件中名为`parallel-array-search.cpp`然后在 Visual Studio 命令提示符窗口中运行以下命令。
+复制代码示例并将其粘贴到 Visual Studio 项目中，或粘贴到一个名为 `parallel-array-search.cpp` 的文件中，然后在 Visual Studio 命令提示符窗口中运行以下命令。
 
-**cl.exe /EHsc 并行数组 search.cpp**
+> **cl/EHsc parallel-array-search**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [PPL 中的取消操作](cancellation-in-the-ppl.md)<br/>
 [并行算法](../../parallel/concrt/parallel-algorithms.md)<br/>

@@ -72,40 +72,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_3::get_yz
 - amp_short_vectors/Concurrency::graphics::unorm_3::rbg
 ms.assetid: ea4e7a17-5256-464c-af28-8b01962564c0
-ms.openlocfilehash: befbf350bbd591d168f19e87c81370220d29ef9f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: efca9b51f44a9eb64e6e9d89cc156ab0b2df5ae5
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405516"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126183"
 ---
-# <a name="unorm3-class"></a>unorm_3 类
+# <a name="unorm_3-class"></a>unorm_3 类
 
-表示三个正常的无符号数字的短矢量。
+表示三个无符号的普通数字的短矢量。
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 class unorm_3;
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[unorm_3 构造函数](#ctor)|已重载。 默认构造函数，初始化 0 的所有元素。|
+|[unorm_3 构造函数](#ctor)|已重载。 默认构造函数，用0初始化所有元素。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |unorm_3::get_x||
 |unorm_3::get_xy||
@@ -144,9 +144,9 @@ class unorm_3;
 |unorm_3::set_zy||
 |unorm_3::set_zyx||
 
-### <a name="public-operators"></a>公共运算符
+### <a name="public-operators"></a>公用運算子
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |unorm_3::operator--||
 |unorm_3::operator*=||
@@ -158,25 +158,25 @@ class unorm_3;
 
 ### <a name="public-constants"></a>公共常量
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[大小常量](#unorm_3__size)||
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |unorm_3::b||
 |unorm_3::bg||
 |unorm_3::bgr||
 |unorm_3::br||
 |unorm_3::brg||
-|unorm_3::g||
+|unorm_3：： g||
 |unorm_3::gb||
 |unorm_3::gbr||
 |unorm_3::gr||
 |unorm_3::grb||
-|unorm_3::r||
+|unorm_3：： r||
 |unorm_3::rb||
 |unorm_3::rbg||
 |unorm_3::rg||
@@ -186,7 +186,7 @@ class unorm_3;
 |unorm_3::xyz||
 |unorm_3::xz||
 |unorm_3::xzy||
-|unorm_3::y||
+|unorm_3：： y||
 |unorm_3::yx||
 |unorm_3::yxz||
 |unorm_3::yz||
@@ -203,15 +203,15 @@ class unorm_3;
 
 ## <a name="requirements"></a>要求
 
-**标头：** amp_short_vectors.h
+**标头：** amp_short_vectors。h
 
-**命名空间：** Concurrency:: graphics
+**命名空间：** Concurrency：： graphics
 
-##  <a name="ctor"></a> unorm_3
+## <a name="ctor"></a>unorm_3
 
-默认构造函数，初始化 0 的所有元素。
+默认构造函数，用0初始化所有元素。
 
-```
+```cpp
 unorm_3() restrict(amp,
     cpu);
 
@@ -263,26 +263,26 @@ explicit inline unorm_3(
 ### <a name="parameters"></a>参数
 
 *_V0*<br/>
-要初始化元素 0 的值。
+要初始化元素0的值。
 
 *_V1*<br/>
-要初始化元素 1 的值。
+要初始化元素1的值。
 
 *_V2*<br/>
-要初始化元素 2 的值。
+用于初始化元素2的值。
 
 *_V*<br/>
-用于初始化值。
+用于初始化的值。
 
 *_Other*<br/>
 用于初始化的对象。
 
-##  <a name="unorm_3__size"></a> 大小
+## <a name="unorm_3__size"></a>规格
 
-```
+```cpp
 static const int size = 3;
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)

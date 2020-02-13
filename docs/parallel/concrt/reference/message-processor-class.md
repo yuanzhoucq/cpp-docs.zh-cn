@@ -11,50 +11,50 @@ f1_keywords:
 helpviewer_keywords:
 - message_processor class
 ms.assetid: 23afb052-daa7-44ed-bf24-d2513db748da
-ms.openlocfilehash: be6cb1c614a41919663a4cc063da66679556e498
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88944b2d935eebd0e031be1431c2a0f4efa3d760
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409938"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139473"
 ---
-# <a name="messageprocessor-class"></a>message_processor 类
+# <a name="message_processor-class"></a>message_processor 类
 
 `message_processor` 类是用于处理 `message` 对象的抽象基类。 不能保证消息的排序。
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 template<class T>
 class message_processor;
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
 *T*<br/>
-在消息中的有效负载的数据类型由`message_processor`对象。
+此 `message_processor` 对象处理的消息内有效负载的数据类型。
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|`type`|类型别名`T`。|
+|`type`|`T`的类型别名。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[async_send](#async_send)|当在派生类中重写，以异步方式将消息放入块中。|
-|[sync_send](#sync_send)|当在派生类中重写，以同步方式将消息放入块中。|
-|[wait](#wait)|当在派生类中重写，等待所有异步操作完成。|
+|[async_send](#async_send)|当在派生类中重写时，以异步方式将消息放置到块中。|
+|[sync_send](#sync_send)|当在派生类中重写时，以同步方式将消息放入块。|
+|[再](#wait)|当在派生类中重写时，等待所有异步操作完成。|
 
-### <a name="protected-methods"></a>受保护的方法
+### <a name="protected-methods"></a>受保护方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[process_incoming_message](#process_incoming_message)|当在派生类中重写执行取块转发消息的处理。 每次添加一个新消息并找到队列为空，则调用一次。|
+|[process_incoming_message](#process_incoming_message)|当在派生类中被重写时，执行将消息转发到块的过程。 每次添加新消息并发现队列为空时调用一次。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -66,28 +66,28 @@ class message_processor;
 
 **命名空间：** 并发
 
-##  <a name="async_send"></a> async_send
+## <a name="async_send"></a>async_send
 
-当在派生类中重写，以异步方式将消息放入块中。
+当在派生类中重写时，以异步方式将消息放置到块中。
 
-```
+```cpp
 virtual void async_send(_Inout_opt_ message<T>* _Msg) = 0;
 ```
 
 ### <a name="parameters"></a>参数
 
 *_Msg*<br/>
-一个`message`以异步方式发送的对象。
+要异步发送的 `message` 对象。
 
 ### <a name="remarks"></a>备注
 
 处理器实现应重写此方法。
 
-##  <a name="process_incoming_message"></a> process_incoming_message
+## <a name="process_incoming_message"></a>process_incoming_message
 
-当在派生类中重写执行取块转发消息的处理。 每次添加一个新消息并找到队列为空，则调用一次。
+当在派生类中被重写时，执行将消息转发到块的过程。 每次添加新消息并发现队列为空时调用一次。
 
-```
+```cpp
 virtual void process_incoming_message() = 0;
 ```
 
@@ -95,28 +95,28 @@ virtual void process_incoming_message() = 0;
 
 消息块实现应重写此方法。
 
-##  <a name="sync_send"></a> sync_send
+## <a name="sync_send"></a>sync_send
 
-当在派生类中重写，以同步方式将消息放入块中。
+当在派生类中重写时，以同步方式将消息放入块。
 
-```
+```cpp
 virtual void sync_send(_Inout_opt_ message<T>* _Msg) = 0;
 ```
 
 ### <a name="parameters"></a>参数
 
 *_Msg*<br/>
-一个`message`要发送的同步对象。
+要同步发送的 `message` 对象。
 
 ### <a name="remarks"></a>备注
 
 处理器实现应重写此方法。
 
-##  <a name="wait"></a> 等待
+## <a name="wait"></a>再
 
-当在派生类中重写，等待所有异步操作完成。
+当在派生类中重写时，等待所有异步操作完成。
 
-```
+```cpp
 virtual void wait() = 0;
 ```
 
@@ -124,7 +124,7 @@ virtual void wait() = 0;
 
 处理器实现应重写此方法。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [并发命名空间](concurrency-namespace.md)<br/>
 [ordered_message_processor 类](ordered-message-processor-class.md)

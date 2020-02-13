@@ -268,40 +268,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_4::rba
 - amp_short_vectors/Concurrency::graphics::uint_4::set_yzx
 ms.assetid: 1cda9e2c-5970-4ced-ae54-d7ff3c6746f4
-ms.openlocfilehash: 413edb5c83dba465aff804658afc6931c7181e73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a795ed3c04f114b6e15d5d9161605988bab2778a
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405438"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142405"
 ---
-# <a name="uint4-class"></a>uint_4 类
+# <a name="uint_4-class"></a>uint_4 类
 
-表示的四个无符号整数中的短矢量。
+表示四个无符号整数的短矢量。
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 class uint_4;
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[uint_4 构造函数](#uint_4__ctor) |已重载。 默认构造函数，初始化 0 的所有元素。|
+|[uint_4 构造函数](#uint_4__ctor) |已重载。 默认构造函数，用0初始化所有元素。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |uint_4::get_w||
 |uint_4::get_wx||
@@ -440,9 +440,9 @@ class uint_4;
 |uint_4::set_zyx||
 |uint_4::set_zyxw||
 
-### <a name="public-operators"></a>公共运算符
+### <a name="public-operators"></a>公用運算子
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |uint_4::operator-||
 |uint_4::operator--||
@@ -455,21 +455,21 @@ class uint_4;
 
 ### <a name="public-constants"></a>公共常量
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[大小常量](#size)||
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|uint_4::a||
+|uint_4：： a||
 |uint_4::ab||
 |uint_4::abg||
 |uint_4::abgr||
 |uint_4::abr||
 |uint_4::abrg||
-|uint_4::ag||
+|uint_4：： ag||
 |uint_4::agb||
 |uint_4::agbr||
 |uint_4::agr||
@@ -495,14 +495,14 @@ class uint_4;
 |uint_4::brag||
 |uint_4::brg||
 |uint_4::brga||
-|uint_4::g||
+|uint_4：： g||
 |uint_4::ga||
-|uint_4::gab||
+|uint_4：： gab||
 |uint_4::gabr||
 |uint_4::gar||
 |uint_4::garb||
 |uint_4::gb||
-|uint_4::gba||
+|uint_4：： gba||
 |uint_4::gbar||
 |uint_4::gbr||
 |uint_4::gbra||
@@ -511,7 +511,7 @@ class uint_4;
 |uint_4::grab||
 |uint_4::grb||
 |uint_4::grba||
-|uint_4::r||
+|uint_4：： r||
 |uint_4::ra||
 |uint_4::rab||
 |uint_4::rabg||
@@ -527,7 +527,7 @@ class uint_4;
 |uint_4::rgab||
 |uint_4::rgb||
 |uint_4::rgba||
-|uint_4::w||
+|uint_4：： w||
 |uint_4::wx||
 |uint_4::wxy||
 |uint_4::wxyz||
@@ -537,12 +537,12 @@ class uint_4;
 |uint_4::wyx||
 |uint_4::wyxz||
 |uint_4::wyz||
-|uint_4::wyzx||
+|uint_4：： wyzx||
 |uint_4::wz||
-|uint_4::wzx||
+|uint_4：： wzx||
 |uint_4::wzxy||
 |uint_4::wzy||
-|uint_4::wzyx||
+|uint_4：： wzyx||
 |uint_4::x||
 |uint_4::xw||
 |uint_4::xwy||
@@ -559,28 +559,28 @@ class uint_4;
 |uint_4::xzwy||
 |uint_4::xzy||
 |uint_4::xzyw||
-|uint_4::y||
-|uint_4::yw||
-|uint_4::ywx||
+|uint_4：： y||
+|uint_4：： yw||
+|uint_4：： ywx||
 |uint_4::ywxz||
 |uint_4::ywz||
-|uint_4::ywzx||
+|uint_4：： ywzx||
 |uint_4::yx||
 |uint_4::yxw||
 |uint_4::yxwz||
 |uint_4::yxz||
 |uint_4::yxzw||
-|uint_4::yz||
+|uint_4：： yz||
 |uint_4::yzw||
 |uint_4::yzwx||
-|uint_4::yzx||
-|uint_4::yzxw||
+|uint_4：： yzx||
+|uint_4：： yzxw||
 |uint_4::z||
 |uint_4::zw||
 |uint_4::zwx||
 |uint_4::zwxy||
-|uint_4::zwy||
-|uint_4::zwyx||
+|uint_4：： zwy||
+|uint_4：： zwyx||
 |uint_4::zx||
 |uint_4::zxw||
 |uint_4::zxwy||
@@ -598,17 +598,17 @@ class uint_4;
 
 ## <a name="requirements"></a>要求
 
-**标头：** amp_short_vectors.h
+**标头：** amp_short_vectors。h
 
-**命名空间：** Concurrency:: graphics
+**命名空间：** Concurrency：： graphics
 
-## <a name="uint_4__ctor"></a> uint_4
+## <a name="uint_4__ctor"></a>uint_4
 
-默认构造函数，初始化 0 的所有元素。
+默认构造函数，用0初始化所有元素。
 
 ### <a name="syntax"></a>语法
 
-```
+```cpp
 uint_4() restrict(amp,cpu);
 uint_4(
    unsigned int _V0,
@@ -639,22 +639,22 @@ explicit inline uint_4(
 ) restrict(amp,cpu);
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
 *_V0*<br/>
-要初始化元素 0 的值。
+要初始化元素0的值。
 
 *_V1*<br/>
-要初始化元素 1 的值。
+要初始化元素1的值。
 
 *_V2*<br/>
-要初始化元素 2 的值。
+用于初始化元素2的值。
 
 *_V3*<br/>
-要初始化元素 3 的值。
+要初始化元素3的值。
 
 *_V*<br/>
-用于初始化值。
+用于初始化的值。
 
 *_Other*<br/>
 用于初始化的对象。
@@ -663,10 +663,10 @@ explicit inline uint_4(
 
 ### <a name="syntax"></a>语法
 
-```
+```cpp
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)

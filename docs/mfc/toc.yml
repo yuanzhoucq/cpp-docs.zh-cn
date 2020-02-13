@@ -428,17 +428,8 @@
               href: data-objects-and-data-sources-creation-and-destruction.md
             - name: 数据对象和数据源：操作
               href: data-objects-and-data-sources-manipulation.md
-        - name: 拖放 (OLE)
-          expanded: false
-          items:
-            - name: 拖放 (OLE)
-              href: drag-and-drop-ole.md
-            - name: 拖放：实现放置源
-              href: drag-and-drop-implementing-a-drop-source.md
-            - name: 拖放：实现放置目标
-              href: drag-and-drop-implementing-a-drop-target.md
-            - name: 拖放：自定义
-              href: drag-and-drop-customizing.md
+        - name: OLE 拖放
+          href: drag-and-drop-ole.md
         - name: 菜单和资源 (OLE)
           expanded: false
           items:

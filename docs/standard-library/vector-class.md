@@ -1,6 +1,7 @@
 ---
 title: vector 类
-ms.date: 01/04/2020
+description: 适用于类C++ Vector 的 Microsoft 标准库实现的参考。
+ms.date: 02/07/2020
 f1_keywords:
 - vector/std::vector::allocator_type
 - vector/std::vector::const_iterator
@@ -86,12 +87,12 @@ helpviewer_keywords:
 - std::vector [C++], size
 - std::vector [C++], swap
 ms.assetid: a3e0a8f8-7565-4fe0-93e4-e4d74ae1b70d
-ms.openlocfilehash: 8c4284fecf09044ceab326d858d6ffccccdeaf45
-ms.sourcegitcommit: 27d9db019f6d84c94de9e6aff0170d918cee6738
+ms.openlocfilehash: ed987409dc99ea9b1dade632a5fa5deeb322347a
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75676959"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126222"
 ---
 # <a name="vector-class"></a>vector 类
 
@@ -140,8 +141,8 @@ class vector
 |[const_reference](#const_reference)|一种类型，它提供对存储在向量中的**const**元素的引用。 它用于读取和执行**const**运算。|
 |[const_reverse_iterator](#const_reverse_iterator)|一个类型，它提供可读取矢量中任何 **const** 元素的随机访问迭代器。|
 |[difference_type](#difference_type)|一个类型，它提供矢量中两个元素的址间的差异。|
-|[iterator](#iterator)|一个类型，它提供可读取或修改向量中任何元素的随机访问迭代器。|
-|[pointer](#pointer)|一个类型，提供指向向量中元素的指针。|
+|[迭代器](#iterator)|一个类型，它提供可读取或修改向量中任何元素的随机访问迭代器。|
+|[指针](#pointer)|一个类型，提供指向向量中元素的指针。|
 |[reference](#reference)|一个类型，它提供对向量中存储的元素的引用。|
 |[reverse_iterator](#reverse_iterator)|一个类型，它提供可读取或修改反向矢量中的任意元素的随机访问迭代器。|
 |[size_type](#size_type)|一个类型，它计算矢量中的元素数目。|
@@ -185,7 +186,7 @@ class vector
 
 |||
 |-|-|
-|[operator&#91;&#93;](#op_at)|返回对指定位置的矢量元素的引用。|
+|[operator[]](#op_at)|返回对指定位置的矢量元素的引用。|
 |[operator=](#op_eq)|用另一个向量的副本替换该向量中的元素。|
 
 ## <a name="allocator_type"></a>allocator_type
@@ -202,7 +203,7 @@ typedef Allocator allocator_type;
 
 ### <a name="example"></a>示例
 
-有关使用 `allocator_type` 的示例，请参阅 [get_allocator](#get_allocator) 的示例。
+有关使用 [ 的示例，请参阅 ](#get_allocator)get_allocator`allocator_type` 的示例。
 
 ## <a name="assign"></a>将
 
@@ -486,7 +487,7 @@ The length of storage allocated is 1.
 The length of storage allocated is now 2.
 ```
 
-## <a name="cbegin"></a> cbegin
+## <a name="cbegin"></a>cbegin
 
 返回一个**常量**迭代器，该迭代器用于寻址范围内的第一个元素。
 
@@ -590,7 +591,7 @@ typedef implementation-defined const_iterator;
 
 ### <a name="example"></a>示例
 
-有关使用 `const_iterator` 的示例，请参阅 [back](#back) 的示例。
+有关使用 [ 的示例，请参阅 ](#back)back`const_iterator` 的示例。
 
 ## <a name="const_pointer"></a>const_pointer
 
@@ -790,7 +791,7 @@ int main()
 {
     using namespace std;
     vector<int> c1;
-    vector<int>::pointer c1 ptr;
+    vector<int>::pointer c1_ptr;
     vector<int>::const_pointer c1_cPtr;
 
     c1.push_back(1);
@@ -805,11 +806,11 @@ int main()
     cout << endl;
 
     cout << "The vector c1 now contains elements:";
-    c1 ptr = c1.data();
-    *c1 ptr = 20;
-    for (size_t n = c1.size(); 0 < n; --n, c1 ptr++)
+    c1_ptr = c1.data();
+    *c1_ptr = 20;
+    for (size_t n = c1.size(); 0 < n; --n, c1_ptr++)
     {
-        cout << " " << *c1 ptr;
+        cout << " " << *c1_ptr;
     }
     cout << endl;
 }
@@ -1177,7 +1178,7 @@ int main( )
 }
 ```
 
-## <a name="get_allocator"></a> get_allocator
+## <a name="get_allocator"></a>get_allocator
 
 返回用于构造矢量的分配器对象的一个副本。
 
@@ -1436,7 +1437,7 @@ vector& operator=(vector&& right);
 ### <a name="parameters"></a>参数
 
 *right*\
-要复制到 `vector` 中的[矢量](../standard-library/vector-class.md)。
+要复制到 [ 中的](../standard-library/vector-class.md)矢量`vector`。
 
 ### <a name="remarks"></a>备注
 
@@ -1493,7 +1494,7 @@ typedef typename Allocator::pointer pointer;
 
 ### <a name="remarks"></a>备注
 
-**pointer** 类型可用于修改元素的值。
+类型 **pointer** 可用于修改元素的值。
 
 ### <a name="example"></a>示例
 
@@ -1652,7 +1653,7 @@ typedef typename Allocator::reference reference;
 
 ### <a name="example"></a>示例
 
-有关如何使用矢量类中的 **reference** 的示例，请参阅 [at](#at)。
+有关如何使用矢量类中的 [reference](#at) 的示例，请参阅 **at**。
 
 ## <a name="rend"></a>rend
 
@@ -1890,7 +1891,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 请参阅 [rbegin](#rbegin) 的示例。
 
-## <a name="shrink_to_fit"></a> shrink_to_fit
+## <a name="shrink_to_fit"></a>shrink_to_fit
 
 放弃额外容量。
 
@@ -2043,7 +2044,7 @@ The number of elements in v1 = 2
 The number of elements in v2 = 3
 ```
 
-## <a name="value_type"></a> value_type
+## <a name="value_type"></a>value_type
 
 一个类型，它代表向量中存储的数据类型。
 

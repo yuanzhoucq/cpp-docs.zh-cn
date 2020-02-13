@@ -12,20 +12,20 @@ f1_keywords:
 helpviewer_keywords:
 - extent structure
 ms.assetid: edb5de3d-3935-4dbb-8365-4cc6c4fb0269
-ms.openlocfilehash: 46af59708ef3f0d91883c52502bce4d09676ca77
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e8dae7b76ea2efc852486a19f5d298cda477012
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62181939"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126716"
 ---
 # <a name="extent-class-c-amp"></a>extent 类 (C++ AMP)
 
-表示的向量*N*指定的边界的整数值*N*-原始为 0 维空间。 向量中的值按从最重要到最不重要的顺序排列。
+表示*n*个整数值的向量，这些整数值指定具有0源的*n*维空间的界限。 矢量中的值按从最重要到最不重要的顺序排列。
 
-### <a name="syntax"></a>语法
+## <a name="syntax"></a>语法
 
-```
+```cpp
 template <int _Rank>
 class extent;
 ```
@@ -33,7 +33,7 @@ class extent;
 ### <a name="parameters"></a>参数
 
 *_Rank*<br/>
-秩`extent`对象。
+`extent` 对象的秩。
 
 ## <a name="requirements"></a>要求
 
@@ -41,74 +41,74 @@ class extent;
 
 **命名空间：** 并发
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[范围构造函数](#ctor)|初始化 `extent` 类的新实例。|
+|[区构造函数](#ctor)|初始化 `extent` 类的新实例。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[contains](#contains)|验证指定`extent`对象具有指定的级别。|
-|[size](#size)|返回 （以元素单位） 范围的总线性大小。|
-|[tile](#tile)|生成`tiled_extent`指定维度与给定的平铺范围的对象。|
+|[contains](#contains)|验证指定的 `extent` 对象是否具有指定的级别。|
+|[size](#size)|返回区的总线性大小（单位为个元素）。|
+|[磁](#tile)|生成一个 `tiled_extent` 对象，该对象具有指定维度给定的磁贴区。|
 
-### <a name="public-operators"></a>公共运算符
+### <a name="public-operators"></a>公用運算子
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[operator-](#operator_min)|返回一个新`extent`对象创建的减去`index`中的相应元素`extent`元素。|
-|[operator--](#operator_min_min)|递减的每个元素`extent`对象。|
-|[operator%=](#operator_mod_eq)|计算的每个元素的模数 （余数）`extent`对象时该元素除以一个数字。|
-|[operator*=](#operator_star_eq)|每个元素乘以`extent`由许多对象。|
-|[operator/=](#operator_min_eq)|每个元素除以`extent`由许多对象。|
-|[extent::operator\[\]](#operator_at)|返回位于指定索引处的元素。|
-|[operator+](#operator_add)|返回一个新`extent`创建通过对应的对象`index`和`extent`元素。|
-|[operator++](#operator_add_add)|递增的每个元素`extent`对象。|
-|[operator+=](#operator_add_eq)|将指定的数字添加到的每个元素`extent`对象。|
-|[operator=](#operator_eq)|将复制的另一个内容`extent`到此对象。|
-|[operator-=](#operator_min_eq)|将指定的每个元素数减去`extent`对象。|
+|[operator-](#operator_min)|返回一个新的 `extent` 对象，该对象通过将相应的 `extent` 元素中的 `index` 元素减来创建。|
+|[operator--](#operator_min_min)|递减 `extent` 对象的每个元素。|
+|[operator%=](#operator_mod_eq)|计算 `extent` 对象中每个元素的模数（余数）。|
+|[operator*=](#operator_star_eq)|将 `extent` 对象的每个元素乘以一个数字。|
+|[operator/=](#operator_min_eq)|将 `extent` 对象的每个元素除以一个数字。|
+|[区：： operator\[\]](#operator_at)|返回位于指定索引处的元素。|
+|[operator+](#operator_add)|返回通过添加相应的 `index` 和 `extent` 元素而创建的新 `extent` 对象。|
+|[operator++](#operator_add_add)|递增 `extent` 对象的每个元素。|
+|[operator+=](#operator_add_eq)|将指定数字添加到 `extent` 对象的每个元素。|
+|[operator=](#operator_eq)|将另一个 `extent` 对象的内容复制到此对象中。|
+|[operator-=](#operator_min_eq)|从 `extent` 对象的每个元素中减去指定数字。|
 
 ### <a name="public-constants"></a>公共常量
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[rank 常量](#rank_constant)|获取的排名`extent`对象。|
+|[rank 常量](#rank_constant)|获取 `extent` 对象的排名。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
 `extent`
 
-## <a name="contains"></a> 包含
+## <a name="contains"></a>有
 
-指示是否指定[索引](index-class.md)值包含在扩展对象。
+指示指定的[索引](index-class.md)值是否包含在 "范围" 对象中。
 
 ### <a name="syntax"></a>语法
 
-```
+```cpp
 bool contains(const index<rank>& _Index) const restrict(amp,cpu);
 ```
 
 ### <a name="parameters"></a>参数
 
 *_Index*<br/>
-`index`要测试值。
+要测试的 `index` 值。
 
 ### <a name="return-value"></a>返回值
 
-**true**如果指定*索引*值包含在`extent`对象; 否则为**false**。
+如果 `extent` 对象中包含指定的*索引*值，则**为 true** ; 否则为。否则**为 false**。
 
-##  <a name="ctor"></a> 范围
+## <a name="ctor"></a>范围
 
-初始化范围类的新实例。
+初始化 "范围" 类的新实例。
 
 ### <a name="syntax"></a>语法
 
-```
+```cpp
 extent() restrict(amp,cpu);
 extent(const extent<_Rank>& _Other) restrict(amp,cpu);
 explicit extent(int _I) restrict(amp,cpu);
@@ -120,36 +120,36 @@ explicit extent(const int _Array[_Rank])restrict(amp,cpu);
 ### <a name="parameters"></a>参数
 
 *_Array*<br/>
-一个数组`_Rank`用于创建新的整数`extent`对象。
+用于创建新的 `extent` 对象的 `_Rank` 整数的数组。
 
 *_I*<br/>
-内容的长度。
+范围的长度。
 
 *_I0*<br/>
-最高有效位维的长度。
+最有效维度的长度。
 
 *_I1*<br/>
-下一步-到-最高有效维的长度。
+最高有效维度的长度。
 
 *_I2*<br/>
-最低有效位维的长度。
+最小的有效维度的长度。
 
 *_Other*<br/>
-`extent`在其上的对象的新`extent`基于对象。
+新的 `extent` 对象所基于的 `extent` 对象。
 
 ## <a name="remarks"></a>备注
 
-无参数构造函数初始化`extent`具有三个级别的对象。
+默认构造函数初始化排名为3的 `extent` 对象。
 
-如果数组用于构造`extent`对象，该数组的长度必须与匹配的秩`extent`对象。
+如果使用数组构造 `extent` 对象，则数组的长度必须与 `extent` 对象的级别匹配。
 
-##  <a name="operator_mod_eq"></a> operator %=
+## <a name="operator_mod_eq"></a>运算符% =
 
-该元素除以一个数字时，计算范围中的每个元素的模数 （余数）。
+计算 "区" 中每个元素的模数（余数）（如果该元素被数字除）。
 
 ### <a name="syntax"></a>语法
 
-```
+```cpp
 extent<_Rank>& operator%=(int _Rhs) restrict(cpu, direct3d);
 ```
 
@@ -162,66 +162,66 @@ extent<_Rank>& operator%=(int _Rhs) restrict(cpu, direct3d);
 
 `extent` 对象。
 
-##  <a name="operator_star_eq"></a> operator*=
+## <a name="operator_star_eq"></a>运算符 * =
 
-将指定的数字的范围对象中的每个元素相乘。
+将 "范围" 对象中的每个元素乘以指定的数字。
 
 ### <a name="syntax"></a>语法
 
-```
+```cpp
 extent<_Rank>& operator*=(int _Rhs) restrict(amp,cpu);
 ```
 
 ### <a name="parameters"></a>参数
 
 *_Rhs*<br/>
-要相乘的数。
+要相乘的数字。
 
 ### <a name="return-value"></a>返回值
 
 `extent` 对象。
 
-## <a name="operator_add"></a> operator +
+## <a name="operator_add"></a>operator +
 
-返回一个新`extent`对象创建通过对应`index`和`extent`元素。
+返回通过添加相应的 `index` 和 `extent` 元素而创建的新 `extent` 对象。
 
 ### <a name="syntax"></a>语法
 
-```
+```cpp
 extent<_Rank> operator+(const index<_Rank>& _Rhs) restrict(amp,cpu);
 ```
 
 ### <a name="parameters"></a>参数
 
 *_Rhs*<br/>
-`index`对象，其中包含要添加的元素。
+包含要添加的元素的 `index` 对象。
 
 ### <a name="return-value"></a>返回值
 
 新的 `extent` 对象。
 
-##  <a name="operator_add_add"></a> operator + +
+## <a name="operator_add_add"></a>operator + +
 
-递增扩展对象的每个元素。
+递增 "区" 对象的每个元素。
 
 ### <a name="syntax"></a>语法
 
-```
+```cpp
 extent<_Rank>& operator++() restrict(amp,cpu);
 extent<_Rank> operator++(int)restrict(amp,cpu);
 ```
 
 ### <a name="return-value"></a>返回值
 
-针对前缀运算符`extent`对象 (`*this`)。 针对后缀运算符，新`extent`对象。
+对于前缀运算符，则为 `extent` 对象（`*this`）。 对于后缀运算符，则为新的 `extent` 对象。
 
-##  <a name="operator_add_eq"></a> operator + =
+## <a name="operator_add_eq"></a>运算符 + =
 
-将指定的数字添加到扩展对象的每个元素。
+将指定的数字添加到 "区" 对象的每个元素。
 
 ### <a name="syntax"></a>语法
 
-```
+```cpp
 extent<_Rank>& operator+=(const extent<_Rank>& _Rhs) restrict(amp,cpu);
 extent<_Rank>& operator+=(const index<_Rank>& _Rhs) restrict(amp,cpu);
 extent<_Rank>& operator+=(int _Rhs) restrict(amp,cpu);
@@ -230,53 +230,53 @@ extent<_Rank>& operator+=(int _Rhs) restrict(amp,cpu);
 ### <a name="parameters"></a>参数
 
 *_Rhs*<br/>
-号、 索引或范围添加。
+要添加的数量、索引或范围。
 
 ### <a name="return-value"></a>返回值
 
 生成的 `extent` 对象。
 
-##  <a name="operator_min"></a> 运算符-
+## <a name="operator_min"></a>操作员
 
-创建一个新`extent`对象通过从指定的每个元素中减去`index`对象中的相应元素从`extent`对象。
+通过将指定的 `index` 对象中的每个元素减去此 `extent` 对象中的相应元素来创建新的 `extent` 对象。
 
 ### <a name="syntax"></a>语法
 
-```
+```cpp
 extent<_Rank> operator-(const index<_Rank>& _Rhs) restrict(amp,cpu);
 ```
 
 ### <a name="parameters"></a>参数
 
 *_Rhs*<br/>
-`index`对象，其中包含要减去的元素。
+包含要减去的元素的 `index` 对象。
 
 ### <a name="return-value"></a>返回值
 
 新的 `extent` 对象。
 
-##  <a name="operator_min_min"></a> operator-
+## <a name="operator_min_min"></a>operator--
 
-递减扩展对象中的每个元素。
+递减 "范围" 对象中的每个元素。
 
 ### <a name="syntax"></a>语法
 
-```
+```cpp
 extent<_Rank>& operator--() restrict(amp,cpu);
 extent<_Rank> operator--(int)restrict(amp,cpu);
 ```
 
 ### <a name="return-value"></a>返回值
 
-针对前缀运算符`extent`对象 (`*this`)。 针对后缀运算符，新`extent`对象。
+对于前缀运算符，则为 `extent` 对象（`*this`）。 对于后缀运算符，则为新的 `extent` 对象。
 
-##  <a name="operator_div_eq"></a> operator/=
+## <a name="operator_div_eq"></a>operator/=
 
-在扩展对象中的每个元素除以指定的数目。
+将 "范围" 对象中的每个元素除以指定的数字。
 
 ### <a name="syntax"></a>语法
 
-```
+```cpp
 extent<_Rank>& operator/=(int _Rhs) restrict(amp,cpu);
 ```
 
@@ -289,13 +289,13 @@ extent<_Rank>& operator/=(int _Rhs) restrict(amp,cpu);
 
 `extent` 对象。
 
-##  <a name="operator_min_eq"></a> operator-=
+## <a name="operator_min_eq"></a>operator-=
 
-减去从扩展对象的每个元素指定的数字。
+从 "片区" 对象的每个元素中减去指定数字。
 
 ### <a name="syntax"></a>语法
 
-```
+```cpp
 extent<_Rank>& operator-=(const extent<_Rank>& _Rhs) restrict(amp,cpu);
 extent<_Rank>& operator-=(const index<_Rank>& _Rhs) restrict(amp,cpu);
 extent<_Rank>& operator-=(int _Rhs) restrict(amp,cpu);
@@ -304,38 +304,38 @@ extent<_Rank>& operator-=(int _Rhs) restrict(amp,cpu);
 ### <a name="parameters"></a>参数
 
 *_Rhs*<br/>
-要减去的数。
+要减去的数字。
 
 ### <a name="return-value"></a>返回值
 
 生成的 `extent` 对象。
 
-##  <a name="operator_eq"></a> 运算符 =
+## <a name="operator_eq"></a>operator =
 
-范围的另一个对象的内容复制到此。
+将另一个 "区" 对象的内容复制到此对象中。
 
 ### <a name="syntax"></a>语法
 
-```
+```cpp
 extent<_Rank>& operator=(const extent<_Rank>& _Other) restrict(amp,cpu);
 ```
 
 ### <a name="parameters"></a>参数
 
 *_Other*<br/>
-`extent`要从复制对象。
+要从中进行复制的 `extent` 对象。
 
 ### <a name="return-value"></a>返回值
 
-对此引用`extent`对象。
+对此 `extent` 对象的引用。
 
-##  <a name="operator_at"></a> extent::operator \[\]
+## <a name="operator_at"></a>区：： operator \[\]
 
 返回位于指定索引处的元素。
 
 ### <a name="syntax"></a>语法
 
-```
+```cpp
 int operator[](unsigned int _Index) const restrict(amp,cpu);
 int& operator[](unsigned int _Index) restrict(amp,cpu);
 ```
@@ -343,37 +343,37 @@ int& operator[](unsigned int _Index) restrict(amp,cpu);
 ### <a name="parameters"></a>参数
 
 *_Index*<br/>
-一个介于 0 到负 1 级别。
+0到级别减1之间的整数。
 
 ### <a name="return-value"></a>返回值
 
 位于指定索引处的元素。
 
-##  <a name="rank_constant"></a> 排名
+## <a name="rank_constant"></a>级别
 
-将存储中的扩展对象的秩。
+存储 "区" 对象的秩。
 
 ### <a name="syntax"></a>语法
 
-```
+```cpp
 static const int rank = _Rank;
 ```
 
-##  <a name="size"></a> 大小
+## <a name="size"></a>规格
 
 返回 `extent` 对象的总线性大小（以元素单位）。
 
 ### <a name="syntax"></a>语法
 
-```
+```cpp
 unsigned int size() const restrict(amp,cpu);
 ```
 
-## <a name="tile"></a> 磁贴
+## <a name="tile"></a>磁
 
-生成具有指定的图标维度的 tiled_extent 对象。
+生成具有指定图块尺寸的 tiled_extent 对象。
 
-```
+```cpp
 template <int _Dim0>
 tiled_extent<_Dim0> tile() const ;
 
@@ -387,12 +387,12 @@ tiled_extent<_Dim0, _Dim1, _Dim2> tile() const ;
 ### <a name="parameters"></a>参数
 
 *_Dim0*<br/>
-平铺范围的最高有效组件。
+平铺区的最重要的组件。
 *_Dim1*<br/>
-平铺范围的下一步-到-最高有效组件。
+平铺范围的最高有效组件。
 *_Dim2*<br/>
-平铺范围的最低有效组件。
+平铺区的最不重要的组件。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [并发命名空间 (C++ AMP)](concurrency-namespace-cpp-amp.md)

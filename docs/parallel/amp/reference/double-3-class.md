@@ -72,40 +72,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_3::rbg
 - amp_short_vectors/Concurrency::graphics::double_3::get_yxz
 ms.assetid: baeb3ff0-2862-4c81-857e-b1a4c085be25
-ms.openlocfilehash: 6423220d8203b0d0fba73a4888f967e159db26de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 981b3026e1efb6c3b4e06457a0eb1f986cdcaafa
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180346"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126690"
 ---
-# <a name="double3-class"></a>double_3 类
+# <a name="double_3-class"></a>double_3 类
 
-表示三个双精度型值的短矢量。
+表示三双精度的短矢量。
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 class double_3;
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |value_type||
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[double_3 构造函数](#ctor)|已重载。 默认构造函数，初始化 0 的所有元素。|
+|[double_3 构造函数](#ctor)|已重载。 默认构造函数，用0初始化所有元素。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |double_3::get_x||
 |double_3::get_xy||
@@ -144,9 +144,9 @@ class double_3;
 |double_3::set_zy||
 |double_3::set_zyx||
 
-### <a name="public-operators"></a>公共运算符
+### <a name="public-operators"></a>公用運算子
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |double_3::operator-||
 |double_3::operator--||
@@ -159,13 +159,13 @@ class double_3;
 
 ### <a name="public-constants"></a>公共常量
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[大小常量](#double_3__size)||
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |double_3::b||
 |double_3::bg||
@@ -187,7 +187,7 @@ class double_3;
 |double_3::xyz||
 |double_3::xz||
 |double_3::xzy||
-|double_3::y||
+|double_3：： y||
 |double_3::yx||
 |double_3::yxz||
 |double_3::yz||
@@ -204,15 +204,15 @@ class double_3;
 
 ## <a name="requirements"></a>要求
 
-**标头：** amp_short_vectors.h
+**标头：** amp_short_vectors。h
 
-**命名空间：** Concurrency:: graphics
+**命名空间：** Concurrency：： graphics
 
-##  <a name="ctor"></a> double_3
+## <a name="ctor"></a>double_3
 
-默认构造函数，初始化 0 的所有元素。
+默认构造函数，用0初始化所有元素。
 
-```
+```cpp
 double_3() restrict(amp,
     cpu);
 
@@ -254,26 +254,26 @@ explicit inline double_3(
 ### <a name="parameters"></a>参数
 
 *_V0*<br/>
-要初始化元素 0 的值。
+要初始化元素0的值。
 
 *_V1*<br/>
-要初始化元素 1 的值。
+要初始化元素1的值。
 
 *_V2*<br/>
-要初始化元素 2 的值。
+用于初始化元素2的值。
 
 *_V*<br/>
-用于初始化值。
+用于初始化的值。
 
 *_Other*<br/>
 用于初始化的对象。
 
-##  <a name="double_3__size"></a> 大小
+## <a name="double_3__size"></a>规格
 
-```
+```cpp
 static const int size = 3;
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)

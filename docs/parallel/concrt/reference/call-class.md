@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - call class
 ms.assetid: 1521970a-1e9c-4b0c-a681-d18e40976f49
-ms.openlocfilehash: 9651a74fdb07ad96d6f01edb6818ea48d697c37c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 445e368ced9d9c8faf30351ecaeecc4e1b8a59f2
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337903"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142840"
 ---
 # <a name="call-class"></a>call 类
 
@@ -26,37 +26,37 @@ ms.locfileid: "62337903"
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 template<class T, class _FunctorType = std::function<void(T const&)>>
 class call : public target_block<multi_link_registry<ISource<T>>>;
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
 *T*<br/>
 传播到此块的消息的负载类型。
 
 *_FunctorType*<br/>
-该块可以接受的函数的签名。
+此块可接受的函数的签名。
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[call](#ctor)|已重载。 构造 `call` 消息块。|
-|[~ call 析构函数](#dtor)|销毁`call`消息块。|
+|[拨](#ctor)|已重载。 构造 `call` 消息块。|
+|[~ 调用析构函数](#dtor)|销毁 `call` 消息块。|
 
-### <a name="protected-methods"></a>受保护的方法
+### <a name="protected-methods"></a>受保护方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[process_input_messages](#process_input_messages)|输入消息执行调用的函数。|
-|[process_message](#process_message)|处理已接受此消息`call`消息块。|
-|[propagate_message](#propagate_message)|以异步方式从将消息传递`ISource`到此块`call`消息块。 由调用`propagate`方法，调用由源块时。|
-|[send_message](#send_message)|以同步方式从将消息传递`ISource`到此块`call`消息块。 由调用`send`方法，调用由源块时。|
-|[supports_anonymous_source](#supports_anonymous_source)|重写 `supports_anonymous_source` 方法，以指示该块可以接受由未链接的源为其提供的消息。 (重写[itarget:: Supports_anonymous_source](itarget-class.md#supports_anonymous_source)。)|
+|[process_input_messages](#process_input_messages)|对输入消息执行调用函数。|
+|[process_message](#process_message)|处理此 `call` 消息块接受的消息。|
+|[propagate_message](#propagate_message)|将消息从 `ISource` 块异步传递到此 `call` 消息块。 它由源块调用时由 `propagate` 方法调用。|
+|[send_message](#send_message)|将消息从 `ISource` 块同步传递到此 `call` 消息块。 它由源块调用时由 `send` 方法调用。|
+|[supports_anonymous_source](#supports_anonymous_source)|重写 `supports_anonymous_source` 方法，以指示该块可以接受由未链接的源为其提供的消息。 （重写[ITarget：： supports_anonymous_source](itarget-class.md#supports_anonymous_source)。）|
 
 ## <a name="remarks"></a>备注
 
@@ -76,11 +76,11 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
 
 **命名空间：** 并发
 
-##  <a name="ctor"></a> 调用
+## <a name="ctor"></a>拨
 
 构造 `call` 消息块。
 
-```
+```cpp
 call(
     _Call_method const& _Func);
 
@@ -110,7 +110,7 @@ call(
 ### <a name="parameters"></a>参数
 
 *_Func*<br/>
-将为每个接受的消息调用一个函数。
+将为每个已接受的消息调用的函数。
 
 *_Filter*<br/>
 确定是否应接受提供的消息的筛选器函数。
@@ -125,23 +125,23 @@ call(
 
 如果未指定 `_PScheduler` 或 `_PScheduleGroup` 函数，运行时将使用默认的计划程序。
 
-类型`_Call_method`是具有签名的伪函数`void (T const &)`调用此`call`消息块来处理消息。
+类型 `_Call_method` 是具有签名 `void (T const &)` 的函子，此 `call` 消息块调用此方法来处理消息。
 
-类型`filter_method`是具有签名的伪函数`bool (T const &)`调用此`call`消息块，以确定它是否应接受提供的消息。
+类型 `filter_method` 是具有签名 `bool (T const &)` 的函子，此 `call` 消息块调用此方法来确定它是否应接受提供的消息。
 
-##  <a name="dtor"></a> ~call
+## <a name="dtor"></a>~ 调用
 
-销毁`call`消息块。
+销毁 `call` 消息块。
 
-```
+```cpp
 ~call();
 ```
 
-##  <a name="process_input_messages"></a> process_input_messages
+## <a name="process_input_messages"></a>process_input_messages
 
-输入消息执行调用的函数。
+对输入消息执行调用函数。
 
-```
+```cpp
 virtual void process_input_messages(_Inout_ message<T>* _PMessage);
 ```
 
@@ -150,11 +150,11 @@ virtual void process_input_messages(_Inout_ message<T>* _PMessage);
 *_PMessage*<br/>
 指向要处理的消息的指针。
 
-##  <a name="process_message"></a> process_message
+## <a name="process_message"></a>process_message
 
-处理已接受此消息`call`消息块。
+处理此 `call` 消息块接受的消息。
 
-```
+```cpp
 virtual void process_message(_Inout_ message<T>* _PMessage);
 ```
 
@@ -163,11 +163,11 @@ virtual void process_message(_Inout_ message<T>* _PMessage);
 *_PMessage*<br/>
 指向要处理的消息的指针。
 
-##  <a name="propagate_message"></a> propagate_message
+## <a name="propagate_message"></a>propagate_message
 
-以异步方式从将消息传递`ISource`到此块`call`消息块。 由调用`propagate`方法，调用由源块时。
+将消息从 `ISource` 块异步传递到此 `call` 消息块。 它由源块调用时由 `propagate` 方法调用。
 
-```
+```cpp
 virtual message_status propagate_message(
     _Inout_ message<T>* _PMessage,
     _Inout_ ISource<T>* _PSource);
@@ -179,17 +179,17 @@ virtual message_status propagate_message(
 指向 `message` 对象的指针。
 
 *_PSource*<br/>
-指向源块提供消息的指针。
+指向提供消息的源块的指针。
 
 ### <a name="return-value"></a>返回值
 
-一个[message_status](concurrency-namespace-enums.md)的目标决定如何处理该消息指示。
+[Message_status](concurrency-namespace-enums.md)指示目标决定对消息执行的操作。
 
-##  <a name="send_message"></a> send_message
+## <a name="send_message"></a>send_message
 
-以同步方式从将消息传递`ISource`到此块`call`消息块。 由调用`send`方法，调用由源块时。
+将消息从 `ISource` 块同步传递到此 `call` 消息块。 它由源块调用时由 `send` 方法调用。
 
-```
+```cpp
 virtual message_status send_message(
     _Inout_ message<T>* _PMessage,
     _Inout_ ISource<T>* _PSource);
@@ -201,25 +201,25 @@ virtual message_status send_message(
 指向 `message` 对象的指针。
 
 *_PSource*<br/>
-指向源块提供消息的指针。
+指向提供消息的源块的指针。
 
 ### <a name="return-value"></a>返回值
 
-一个[message_status](concurrency-namespace-enums.md)的目标决定如何处理该消息指示。
+[Message_status](concurrency-namespace-enums.md)指示目标决定对消息执行的操作。
 
-##  <a name="supports_anonymous_source"></a> supports_anonymous_source
+## <a name="supports_anonymous_source"></a>supports_anonymous_source
 
 重写 `supports_anonymous_source` 方法，以指示该块可以接受由未链接的源为其提供的消息。
 
-```
+```cpp
 virtual bool supports_anonymous_source();
 ```
 
 ### <a name="return-value"></a>返回值
 
-**true**因为该块没有推迟提供的消息。
+**true** ，因为块不会推迟所提供的消息。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [并发命名空间](concurrency-namespace.md)<br/>
 [transformer 类](transformer-class.md)

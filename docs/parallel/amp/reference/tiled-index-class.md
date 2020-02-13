@@ -19,20 +19,20 @@ f1_keywords:
 helpviewer_keywords:
 - tiled_index class
 ms.assetid: 0ce2ae26-f1bb-4436-b473-a9e1b619bb38
-ms.openlocfilehash: dd8b6d7a0e174c88ad229da2d08a9ec8a11fb0aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eda01667a6b239284c682ba6ae3f9b857c713447
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352185"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142425"
 ---
-# <a name="tiledindex-class"></a>tiled_index 类
+# <a name="tiled_index-class"></a>tiled_index 类
 
-提供的索引[tiled_extent](tiled-extent-class.md)对象。 该类具有访问相对于本地平铺原点和相对于全局原点的元素的属性。 有关平铺空间的详细信息，请参阅[使用磁贴](../../../parallel/amp/using-tiles.md)。
+为[tiled_extent](tiled-extent-class.md)对象提供索引。 此类具有一些属性，可访问相对于本地平铺原点和相对于全局原点的元素。 有关平铺空间的详细信息，请参阅[使用磁贴](../../../parallel/amp/using-tiles.md)。
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 template <
     int _Dim0,
     int _Dim1 = 0,
@@ -52,51 +52,51 @@ template <
 class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
 *_Dim0*<br/>
-最高有效位维的长度。
+最有效维度的长度。
 
 *_Dim1*<br/>
-下一步接近最高有效位维的长度。
+最后面的重要维度的长度。
 
 *_Dim2*<br/>
-最低有效位维的长度。
+最小的有效维度的长度。
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[tiled_index 构造函数](#ctor)|初始化 `tile_index` 类的新实例。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[get_tile_extent](#tiled_index__get_tile_extent)|返回[程度](extent-class.md)对象，它具有的值`tiled_index`模板自变量`_Dim0`， `_Dim1`，并`_Dim2`。|
+|[get_tile_extent](#tiled_index__get_tile_extent)|返回一个[片区](extent-class.md)对象，该对象具有 `_Dim0`、`_Dim1`和 `_Dim2``tiled_index` 模板参数的值。|
 
 ### <a name="public-constants"></a>公共常量
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[barrier 常量](#tiled_index__barrier)|存储[tile_barrier](tile-barrier-class.md)对象，表示当前线程的平铺屏障。|
+|[关卡常量](#tiled_index__barrier)|存储一个表示当前线程磁贴中的关卡的[tile_barrier](tile-barrier-class.md)对象。|
 |||
-|[全局常量](#tiled_index__global)|存储[索引](index-class.md)表示网格对象中的全局索引的级别 1、 2 或 3 的对象。|
-|[局部常量](#tiled_index__local)|存储`index`对象的当前磁贴中的索引，级别 1、 2 或 3，表示相对[tiled_extent](tiled-extent-class.md)对象。|
-|[rank 常量](#tiled_index__rank)|将存储的秩`tiled_index`对象。|
-|[tile 常量](#tiled_index__tile)|存储`index`对象的秩为 1、 2 或 3 表示当前 tile 的坐标`tiled_extent`对象。|
-|[tile_dim0 常量](#tiled_index__tile_dim0)|存储最高有效位维的长度。|
-|[tile_dim1 常量](#tiled_index__tile_dim1)|存储的下一步接近最高有效位维的长度。|
-|[tile_dim2 常量](#tiled_index__tile_dim2)|存储最低有效位维的长度。|
-|[tile_origin 常量](#tiled_index__tile_origin)|存储`index`对象当前平铺原点的级别 1、 2 或 3 表示全局坐标`tiled_extent`对象。|
+|[全局常量](#tiled_index__global)|存储一个秩为1、2或3的[index](index-class.md)对象，该对象表示网格对象中的全局索引。|
+|[局部常量](#tiled_index__local)|存储一个秩为1、2或3的 `index` 对象，该对象表示[tiled_extent](tiled-extent-class.md)对象的当前平铺中的相对索引。|
+|[rank 常量](#tiled_index__rank)|存储 `tiled_index` 对象的排名。|
+|[平铺常量](#tiled_index__tile)|存储一个秩为1、2或3的 `index` 对象，该对象表示 `tiled_extent` 对象的当前平铺的坐标。|
+|[tile_dim0 常量](#tiled_index__tile_dim0)|存储最高有效维度的长度。|
+|[tile_dim1 常量](#tiled_index__tile_dim1)|存储下一个到最重要的维度的长度。|
+|[tile_dim2 常量](#tiled_index__tile_dim2)|存储最不重要维度的长度。|
+|[tile_origin 常量](#tiled_index__tile_origin)|存储一个秩为1、2或3的 `index` 对象，该对象表示 `tiled_extent` 对象中当前磁贴原点的全局坐标。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[tile_extent](#tile_extent)|获取[程度](extent-class.md)对象，它具有的值`tiled_index`模板自变量`tiled_index`模板自变量`_Dim0`， `_Dim1`，和`_Dim2`。|
+|[tile_extent](#tile_extent)|获取一个[区](extent-class.md)对象，该对象具有 `tiled_index` 模板参数 `tiled_index` 模板参数的值 `_Dim0`、`_Dim1`和 `_Dim2`。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -110,13 +110,13 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 
 **命名空间：** 并发
 
-## <a name="ctor"></a>  tiled_index 构造函数
+## <a name="ctor"></a>tiled_index 构造函数
 
 初始化 `tiled_index` 类的新实例。
 
-## <a name="syntax"></a>语法
+### <a name="syntax"></a>语法
 
-```
+```cpp
 tiled_index(
     const index<rank>& _Global,
     const index<rank>& _Local,
@@ -128,147 +128,148 @@ tiled_index(
     const tiled_index& _Other ) restrict(amp,cpu);
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
 *_Global*<br/>
-全局[索引](index-class.md)构造的`tiled_index`。
+构造的 `tiled_index`的全局[索引](index-class.md)。
 
 *_Local*<br/>
-本地[索引](index-class.md)的构造 `tiled_index`
+构造的 `tiled_index` 的本地[索引](index-class.md)
 
 *_Tile*<br/>
-该磁贴[索引](index-class.md)的构造 `tiled_index`
+构造的 `tiled_index` 的平铺[索引](index-class.md)
 
 *_Tile_origin*<br/>
-平铺原点[索引](index-class.md)的构造 `tiled_index`
+构造的 `tiled_index` 的磁贴源[索引](index-class.md)
 
 *_Barrier*<br/>
-[Tile_barrier](tile-barrier-class.md)对象的构造`tiled_index`。
+构造的 `tiled_index`的[tile_barrier](tile-barrier-class.md)对象。
 
 *_Other*<br/>
-`tile_index`对象要复制到构造`tiled_index`。
+要复制到构造的 `tiled_index`的 `tile_index` 对象。
 
-## <a name="overloads"></a>Overloads
+### <a name="overloads"></a>Overloads
 
 |||
 |-|-|
-|名称|描述|
-|`tiled_index(const index<rank>& _Global, const index<rank>& _Local, const index<rank>& _Tile, const index<rank>& _Tile_origin, const tile_barrier& _Barrier restrict(amp,cpu);`|初始化的新实例`tile_index`类从索引中全局坐标的平铺和本地坐标中的磁贴中的相对位置。 `_Global`和`_Tile_origin`参数可计算。|
-|`tiled_index(    const tiled_index& _Other) restrict(amp,cpu);`|初始化的新实例`tile_index`类的复制指定`tiled_index`对象。|
+|名称|说明|
+|`tiled_index(const index<rank>& _Global, const index<rank>& _Local, const index<rank>& _Tile, const index<rank>& _Tile_origin, const tile_barrier& _Barrier restrict(amp,cpu);`|从全局坐标中磁贴的索引和以本地坐标表示的磁贴中的相对位置，初始化 `tile_index` 类的新实例。 计算 `_Global` 和 `_Tile_origin` 参数。|
+|`tiled_index(    const tiled_index& _Other) restrict(amp,cpu);`|通过复制指定的 `tiled_index` 对象，初始化 `tile_index` 类的新实例。|
 
-## <a name="tiled_index__get_tile_extent"></a>  get_tile_extent
+## <a name="tiled_index__get_tile_extent"></a>get_tile_extent
 
-返回[程度](extent-class.md)对象，它具有的值`tiled_index`模板自变量`_Dim0`， `_Dim1`，并`_Dim2`。
+返回一个[片区](extent-class.md)对象，该对象具有 `_Dim0`、`_Dim1`和 `_Dim2``tiled_index` 模板参数的值。
 
-## <a name="syntax"></a>语法
+### <a name="syntax"></a>语法
 
-```
+```cpp
 extent<rank> get_tile_extent()restrict(amp,cpu);
 ```
 
-## <a name="return-value"></a>返回值
+### <a name="return-value"></a>返回值
 
 一个 `extent` 对象，具有 `tiled_index` 模板自变量 `_Dim0`、`_Dim1` 和 `_Dim2` 的值。
 
-## <a name="tiled_index__barrier"></a>  barrier
+## <a name="tiled_index__barrier"></a>关卡
 
-存储[tile_barrier](tile-barrier-class.md)对象，表示当前线程的平铺屏障。
+存储一个表示当前线程磁贴中的关卡的[tile_barrier](tile-barrier-class.md)对象。
 
-## <a name="syntax"></a>语法
+### <a name="syntax"></a>语法
 
-```
+```cpp
 const tile_barrier barrier;
 ```
 
-## <a name="tiled_index__global"></a>  global
+## <a name="tiled_index__global"></a>全局
 
-存储[索引](index-class.md)表示对象的全局索引的级别 1、 2 或 3 的对象。
+存储一个秩为1、2或3的[index](index-class.md)对象，该对象表示对象的全局索引。
 
-## <a name="syntax"></a>语法
+### <a name="syntax"></a>语法
 
-```
+```cpp
 const index<rank> global;
 ```
 
-## <a name="tiled_index__local"></a>  local
+## <a name="tiled_index__local"></a>地方
 
-存储[索引](index-class.md)对象的当前磁贴中的索引，级别 1、 2 或 3，表示相对[tiled_extent](tiled-extent-class.md)对象。
+存储一个秩为1、2或3的[index](index-class.md)对象，该对象表示[tiled_extent](tiled-extent-class.md)对象的当前磁贴中的相对索引。
 
-## <a name="syntax"></a>语法
+### <a name="syntax"></a>语法
 
-```
+```cpp
 const index<rank> local;
 ```
 
-## <a name="tiled_index__rank"></a>  排名
+## <a name="tiled_index__rank"></a>级别
 
-将存储的秩`tiled_index`对象。
+存储 `tiled_index` 对象的排名。
 
-## <a name="syntax"></a>语法
+### <a name="syntax"></a>语法
 
-```
+```cpp
 static const int rank = _Rank;
 ```
 
-## <a name="tiled_index__tile"></a>  tile
+## <a name="tiled_index__tile"></a>磁
 
-存储[索引](index-class.md)对象的秩为 1、 2 或 3 表示当前 tile 的坐标[tiled_extent](tiled-extent-class.md)对象。
+存储一个秩为1、2或3的[index](index-class.md)对象，该对象表示[tiled_extent](tiled-extent-class.md)对象的当前平铺的坐标。
 
-## <a name="syntax"></a>语法
+### <a name="syntax"></a>语法
 
-```
+```cpp
 const index<rank> tile;
 ```
 
-## <a name="tiled_index__tile_dim0"></a>  tile_dim0
+## <a name="tiled_index__tile_dim0"></a>tile_dim0
 
-存储最高有效位维的长度。
+存储最高有效维度的长度。
 
-## <a name="syntax"></a>语法
+### <a name="syntax"></a>语法
 
-```
+```cpp
 static const int tile_dim0 = _Dim0;
 ```
 
-## <a name="tiled_index__tile_dim1"></a>  tile_dim1
+## <a name="tiled_index__tile_dim1"></a>tile_dim1
 
-存储的下一步接近最高有效位维的长度。
+存储下一个到最重要的维度的长度。
 
-## <a name="syntax"></a>语法
+### <a name="syntax"></a>语法
 
-```
+```cpp
 static const int tile_dim1 = _Dim1;
 ```
 
-## <a name="tiled_index__tile_dim2"></a>  tile_dim2
+## <a name="tiled_index__tile_dim2"></a>tile_dim2
 
-存储最低有效位维的长度。
+存储最不重要维度的长度。
 
-## <a name="syntax"></a>语法
+### <a name="syntax"></a>语法
 
-```
+```cpp
 static const int tile_dim2 = _Dim2;
 ```
 
-## <a name="tiled_index__tile_origin"></a>  tile_origin
+## <a name="tiled_index__tile_origin"></a>tile_origin
 
-存储[索引](index-class.md)对象当前平铺中的起始级别 1、 2 或 3 表示全局坐标[tiled_extent](tiled-extent-class.md)对象。
+存储一个秩为1、2或3的[index](index-class.md)对象，该对象表示[tiled_extent](tiled-extent-class.md)对象内当前磁贴原点的全局坐标。
 
-## <a name="syntax"></a>语法
+### <a name="syntax"></a>语法
 
-```
+```cpp
 const index<rank> tile_origin
 ```
 
-## <a name="tile_extent"></a>  tile_extent
-  获取[程度](extent-class.md)对象，它具有的值`tiled_index`模板自变量`tiled_index`模板自变量`_Dim0`， `_Dim1`，和`_Dim2`。
+## <a name="tile_extent"></a>tile_extent
 
-## <a name="syntax"></a>语法
+获取一个[区](extent-class.md)对象，该对象具有 `tiled_index` 模板参数 `tiled_index` 模板参数的值 `_Dim0`、`_Dim1`和 `_Dim2`。
 
-```
+### <a name="syntax"></a>语法
+
+```cpp
 __declspec(property(get= get_tile_extent)) extent<rank> tile_extent;
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [并发命名空间 (C++ AMP)](concurrency-namespace-cpp-amp.md)

@@ -72,40 +72,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_3::set_zx
 - amp_short_vectors/Concurrency::graphics::norm_3::bgr
 ms.assetid: 17081060-14ce-477e-a71a-9801b0f1d9e4
-ms.openlocfilehash: cec778e6cdc53871b7987ef5a2faf529eea6d4f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f7123f047a92c377dedefbc5be11e30f5d77db46
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351649"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142164"
 ---
-# <a name="norm3-class"></a>norm_3 类
+# <a name="norm_3-class"></a>norm_3 类
 
-表示正常的三个数字的短矢量。
+表示三个普通数字的短矢量。
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 class norm_3;
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[norm_3 构造函数](#ctor)|已重载。 默认构造函数，初始化 0 的所有元素。|
+|[norm_3 构造函数](#ctor)|已重载。 默认构造函数，用0初始化所有元素。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |norm_3::get_x||
 |norm_3::get_xy||
@@ -144,9 +144,9 @@ class norm_3;
 |norm_3::set_zy||
 |norm_3::set_zyx||
 
-### <a name="public-operators"></a>公共运算符
+### <a name="public-operators"></a>公用運算子
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |norm_3::operator-||
 |norm_3::operator--||
@@ -159,25 +159,25 @@ class norm_3;
 
 ### <a name="public-constants"></a>公共常量
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[大小常量](#size)||
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |norm_3::b||
 |norm_3::bg||
 |norm_3::bgr||
 |norm_3::br||
 |norm_3::brg||
-|norm_3::g||
+|norm_3：： g||
 |norm_3::gb||
 |norm_3::gbr||
 |norm_3::gr||
 |norm_3::grb||
-|norm_3::r||
+|norm_3：： r||
 |norm_3::rb||
 |norm_3::rbg||
 |norm_3::rg||
@@ -187,7 +187,7 @@ class norm_3;
 |norm_3::xyz||
 |norm_3::xz||
 |norm_3::xzy||
-|norm_3::y||
+|norm_3：： y||
 |norm_3::yx||
 |norm_3::yxz||
 |norm_3::yz||
@@ -204,17 +204,17 @@ class norm_3;
 
 ## <a name="requirements"></a>要求
 
-**标头：** amp_short_vectors.h
+**标头：** amp_short_vectors。h
 
-**命名空间：** Concurrency:: graphics
+**命名空间：** Concurrency：： graphics
 
-## <a name="ctor"></a> norm_3 构造函数
+## <a name="ctor"></a>norm_3 构造函数
 
-默认构造函数，初始化 0 的所有元素。
+默认构造函数，用0初始化所有元素。
 
-## <a name="syntax"></a>语法
+### <a name="syntax"></a>语法
 
-```
+```cpp
 norm_3() restrict(amp,cpu);
 norm_3(
    norm _V0,
@@ -257,19 +257,19 @@ explicit inline norm_3(
 ) restrict(amp,cpu);
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
 *_V0*<br/>
-要初始化元素 0 的值。
+要初始化元素0的值。
 
 *_V1*<br/>
-要初始化元素 1 的值。
+要初始化元素1的值。
 
 *_V2*<br/>
-要初始化元素 2 的值。
+用于初始化元素2的值。
 
 *_V*<br/>
-用于初始化值。
+用于初始化的值。
 
 *_Other*<br/>
 用于初始化的对象。
@@ -278,10 +278,10 @@ explicit inline norm_3(
 
 ### <a name="syntax"></a>语法
 
-```
+```cpp
 static const int size = 3;
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)

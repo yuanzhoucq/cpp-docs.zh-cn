@@ -1,33 +1,33 @@
 ---
-title: invalid_scheduler_policy_value 类
+title: invalid_scheduler_policy_value Class类
 ms.date: 11/04/2016
 f1_keywords:
 - concrt/concurrency::invalid_scheduler_policy_value
 helpviewer_keywords:
 - invalid_scheduler_policy_value class
 ms.assetid: 8c533e3f-2774-4192-8616-b2313b859bf7
-ms.openlocfilehash: 8b8e233769d859aac102d0554a6987e9b7201473
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6a66b2b303a4b3b0cb8c2c7a3c515ac8cd1b33a0
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301436"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142994"
 ---
-# <a name="invalidschedulerpolicyvalue-class"></a>invalid_scheduler_policy_value 类
+# <a name="invalid_scheduler_policy_value-class"></a>invalid_scheduler_policy_value Class类
 
 此类描述 `SchedulerPolicy` 对象的策略键设置为对于该键无效的值时引发的异常。
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 class invalid_scheduler_policy_value : public std::exception;
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[invalid_scheduler_policy_value](invalid-scheduler-policy-thread-specification-class.md#ctor|已重载。 构造 `invalid_scheduler_policy_value` 对象。|
 
@@ -39,15 +39,15 @@ class invalid_scheduler_policy_value : public std::exception;
 
 ## <a name="requirements"></a>要求
 
-**标头：** concrt.h
+**标头：** concrt
 
 **命名空间：** 并发
 
-##  <a name="ctor"></a> invalid_scheduler_policy_value
+## <a name="ctor"></a>invalid_scheduler_policy_value
 
 构造 `invalid_scheduler_policy_value` 对象。
 
-```
+```cpp
 explicit _CRTIMP invalid_scheduler_policy_value(_In_z_ const char* _Message) throw();
 
 invalid_scheduler_policy_value() throw();
@@ -58,7 +58,7 @@ invalid_scheduler_policy_value() throw();
 *_Message*<br/>
 错误的描述性消息。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [并发命名空间](concurrency-namespace.md)<br/>
 [SchedulerPolicy 类](schedulerpolicy-class.md)

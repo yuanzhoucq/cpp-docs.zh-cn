@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - agent class
 ms.assetid: 1b09e3d2-5e37-4966-b016-907ef1512456
-ms.openlocfilehash: 98ad5f817361d8410e5a60648fb23baec06c42d7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0092f5f90bbdf253c09dbdc80849c3db472212f
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337747"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142892"
 ---
 # <a name="agent-class"></a>agent 类
 
@@ -30,37 +30,37 @@ ms.locfileid: "62337747"
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 class agent;
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[agent](#ctor)|已重载。 构造一个代理。|
-|[~ agent 析构函数](#dtor)|销毁该代理。|
+|[代理商](#ctor)|已重载。 构造代理。|
+|[~ 代理析构函数](#dtor)|销毁代理。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[cancel](#cancel)|将代理移动眖`agent_created`或`agent_runnable`状态到`agent_canceled`状态。|
-|[start](#start)|将从代理移`agent_created`状态变为`agent_runnable`状态，并且计划的执行。|
-|[status](#status)|来自代理的状态信息的同步源。|
-|[status_port](#status_port)|来自代理的状态信息异步源。|
-|[wait](#wait)|等待代理完成其任务。|
-|[wait_for_all](#wait_for_all)|等待所有指定的代理来完成其任务。|
-|[wait_for_one](#wait_for_one)|等待指定的代理完成其任务之一。|
+|[cancel](#cancel)|将代理从 `agent_created` 或 `agent_runnable` 状态移动到 `agent_canceled` 状态。|
+|[start](#start)|将代理从 `agent_created` 状态移动到 `agent_runnable` 状态，并将其计划为执行。|
+|[status](#status)|代理中状态信息的同步源。|
+|[status_port](#status_port)|代理中状态信息的异步源。|
+|[再](#wait)|等待代理完成其任务。|
+|[wait_for_all](#wait_for_all)|等待所有指定的代理完成其任务。|
+|[wait_for_one](#wait_for_one)|等待任一指定的代理完成其任务。|
 
-### <a name="protected-methods"></a>受保护的方法
+### <a name="protected-methods"></a>受保护方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[done](#done)|将移动到代理`agent_done`状态，表明代理已完成。|
-|[run](#run)|表示代理的主要任务。 `run` 应在派生类中重写，并指定代理应执行的操作已启动后。|
+|[效率](#done)|将代理移到 `agent_done` 状态，指示代理已完成。|
+|[run](#run)|表示代理的主要任务。 应在派生类中重写 `run`，并指定代理在启动后应执行的操作。|
 
 ## <a name="remarks"></a>备注
 
@@ -76,11 +76,11 @@ class agent;
 
 **命名空间：** 并发
 
-##  <a name="ctor"></a> 代理
+## <a name="ctor"></a>代理商
 
-构造一个代理。
+构造代理。
 
-```
+```cpp
 agent();
 
 agent(Scheduler& _PScheduler);
@@ -91,108 +91,108 @@ agent(ScheduleGroup& _PGroup);
 ### <a name="parameters"></a>参数
 
 *_PScheduler*<br/>
-`Scheduler`对象内执行任务的代理计划。
+在其中计划代理的执行任务的 `Scheduler` 对象。
 
 *_PGroup*<br/>
-`ScheduleGroup`对象内执行任务的代理计划。 所用 `Scheduler` 对象由该计划组提示。
+在其中计划代理的执行任务的 `ScheduleGroup` 对象。 所用 `Scheduler` 对象由该计划组提示。
 
 ### <a name="remarks"></a>备注
 
 如果未指定 `_PScheduler` 或 `_PGroup` 函数，运行时将使用默认的计划程序。
 
-##  <a name="dtor"></a> ~agent
+## <a name="dtor"></a>~ 代理
 
-销毁该代理。
+销毁代理。
 
-```
+```cpp
 virtual ~agent();
 ```
 
 ### <a name="remarks"></a>备注
 
-它是错误销毁代理不处于终止状态 (要么`agent_done`或`agent_canceled`)。 这可以避免等待代理达到终端状态的析构函数中的类的继承`agent`类。
+销毁不处于终端状态的代理是错误的（`agent_done` 或 `agent_canceled`）。 在从 `agent` 类继承的类的析构函数中等待代理到达终端状态，这样可以避免这种情况。
 
-##  <a name="cancel"></a> 取消
+## <a name="cancel"></a>取消
 
-将代理移动眖`agent_created`或`agent_runnable`状态到`agent_canceled`状态。
+将代理从 `agent_created` 或 `agent_runnable` 状态移动到 `agent_canceled` 状态。
 
-```
+```cpp
 bool cancel();
 ```
 
 ### <a name="return-value"></a>返回值
 
-**true**代理已被取消，如果**false**否则为。 如果它已启动运行或已完成，代理不能取消。
+如果代理已取消，**则为 true** ; 否则为**false** 。 如果代理已经开始运行或已完成，则无法取消它。
 
-##  <a name="done"></a> 完成
+## <a name="done"></a>效率
 
-将移动到代理`agent_done`状态，表明代理已完成。
+将代理移到 `agent_done` 状态，指示代理已完成。
 
-```
+```cpp
 bool done();
 ```
 
 ### <a name="return-value"></a>返回值
 
-**true**如果将代理移至`agent_done`状态， **false**否则为。 已取消的代理不能移动到`agent_done`状态。
+如果代理移到 `agent_done` 状态，**则为 true** ; 否则为**false** 。 无法将已取消的代理移到 `agent_done` 状态。
 
 ### <a name="remarks"></a>备注
 
-此方法应调用的末尾`run`方法，当你知道你的代理在执行时已完成。
+如果知道代理的执行已完成，则应在 `run` 方法的末尾调用此方法。
 
-##  <a name="run"></a> 运行
+## <a name="run"></a>用
 
-表示代理的主要任务。 `run` 应在派生类中重写，并指定代理应执行的操作已启动后。
+表示代理的主要任务。 应在派生类中重写 `run`，并指定代理在启动后应执行的操作。
 
-```
+```cpp
 virtual void run() = 0;
 ```
 
 ### <a name="remarks"></a>备注
 
-代理状态更改为`agent_started`右键之前调用此方法。 该方法应调用`done`的代理上的相应的状态在返回之前，并且可能不会引发任何异常。
+在调用此方法之前，代理状态将更改为 "`agent_started`"。 在返回之前，方法应在代理上调用 `done`，并可能不会引发任何异常。
 
-##  <a name="start"></a> 启动
+## <a name="start"></a>start
 
-将从代理移`agent_created`状态变为`agent_runnable`状态，并且计划的执行。
+将代理从 `agent_created` 状态移动到 `agent_runnable` 状态，并将其计划为执行。
 
-```
+```cpp
 bool start();
 ```
 
 ### <a name="return-value"></a>返回值
 
-**true**如果正确，启动**false**否则为。 无法启动已取消的代理。
+如果代理正确启动，**则为 true** ; 否则为**false** 。 无法启动已取消的代理。
 
-##  <a name="status"></a> 状态
+## <a name="status"></a>状态值
 
-来自代理的状态信息的同步源。
+代理中状态信息的同步源。
 
-```
+```cpp
 agent_status status();
 ```
 
 ### <a name="return-value"></a>返回值
 
-返回代理的当前状态。 请注意，此返回的状态可能在返回后立即更改。
+返回代理的当前状态。 请注意，返回状态在返回后会立即更改。
 
-##  <a name="status_port"></a> status_port
+## <a name="status_port"></a>status_port
 
-来自代理的状态信息异步源。
+代理中状态信息的异步源。
 
-```
+```cpp
 ISource<agent_status>* status_port();
 ```
 
 ### <a name="return-value"></a>返回值
 
-返回可以发送有关代理的当前状态的消息的消息源。
+返回一个消息源，该消息源可以发送有关代理的当前状态的消息。
 
-##  <a name="wait"></a> 等待
+## <a name="wait"></a>再
 
 等待代理完成其任务。
 
-```
+```cpp
 static agent_status __cdecl wait(
     _Inout_ agent* _PAgent,
     unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
@@ -201,26 +201,26 @@ static agent_status __cdecl wait(
 ### <a name="parameters"></a>参数
 
 *_PAgent*<br/>
-指向要等待的时间的代理的指针。
+一个指针，指向要等待的代理。
 
 *_Timeout*<br/>
-若要等待，以毫秒为单位最长时间。
+要等待的最大时间（以毫秒为单位）。
 
 ### <a name="return-value"></a>返回值
 
-`agent_status`等待完成时的代理。 这可以是`agent_canceled`或`agent_done`。
+等待完成时代理的 `agent_status`。 这可以是 `agent_canceled` 或 `agent_done`。
 
 ### <a name="remarks"></a>备注
 
-代理任务完成时，代理将进入`agent_canceled`或`agent_done`状态。
+代理任务在代理进入 `agent_canceled` 或 `agent_done` 状态时完成。
 
-如果将参数`_Timeout`具有常量以外的值`COOPERATIVE_TIMEOUT_INFINITE`，该异常[operation_timed_out](operation-timed-out-class.md)如果指定的时间内过期的代理程序已完成其任务之前，将引发。
+如果参数 `_Timeout` 的值不是常量 `COOPERATIVE_TIMEOUT_INFINITE`，则在代理完成其任务之前指定的时间量到期时，将引发异常[operation_timed_out](operation-timed-out-class.md) 。
 
-##  <a name="wait_for_all"></a> wait_for_all
+## <a name="wait_for_all"></a>wait_for_all
 
-等待所有指定的代理来完成其任务。
+等待所有指定的代理完成其任务。
 
-```
+```cpp
 static void __cdecl wait_for_all(
     size_t count,
     _In_reads_(count) agent** _PAgents,
@@ -231,28 +231,28 @@ static void __cdecl wait_for_all(
 ### <a name="parameters"></a>参数
 
 *count*<br/>
-代理存在于数组的指针数`_PAgents`。
+数组 `_PAgents`中存在的代理指针数。
 
 *_PAgents*<br/>
-指向要等待的时间的代理的指针的数组。
+指向要等待的代理的指针的数组。
 
 *_PStatus*<br/>
-指向代理状态的数组的指针。 该方法返回时，每个状态的值将表示相应代理的状态。
+指向代理状态的数组的指针。 当该方法返回时，每个状态值都将表示相应代理的状态。
 
 *_Timeout*<br/>
-若要等待，以毫秒为单位最长时间。
+要等待的最大时间（以毫秒为单位）。
 
 ### <a name="remarks"></a>备注
 
-代理任务完成时，代理将进入`agent_canceled`或`agent_done`状态。
+代理任务在代理进入 `agent_canceled` 或 `agent_done` 状态时完成。
 
-如果将参数`_Timeout`具有常量以外的值`COOPERATIVE_TIMEOUT_INFINITE`，该异常[operation_timed_out](operation-timed-out-class.md)如果指定的时间内过期的代理程序已完成其任务之前，将引发。
+如果参数 `_Timeout` 的值不是常量 `COOPERATIVE_TIMEOUT_INFINITE`，则在代理完成其任务之前指定的时间量到期时，将引发异常[operation_timed_out](operation-timed-out-class.md) 。
 
-##  <a name="wait_for_one"></a> wait_for_one
+## <a name="wait_for_one"></a>wait_for_one
 
-等待指定的代理完成其任务之一。
+等待任一指定的代理完成其任务。
 
-```
+```cpp
 static void __cdecl wait_for_one(
     size_t count,
     _In_reads_(count) agent** _PAgents,
@@ -264,26 +264,26 @@ static void __cdecl wait_for_one(
 ### <a name="parameters"></a>参数
 
 *count*<br/>
-代理存在于数组的指针数`_PAgents`。
+数组 `_PAgents`中存在的代理指针数。
 
 *_PAgents*<br/>
-指向要等待的时间的代理的指针的数组。
+指向要等待的代理的指针的数组。
 
 *_Status*<br/>
-对放置的代理状态的变量的引用。
+对将在其中放置代理状态的变量的引用。
 
 *_Index*<br/>
-对将放置代理索引的变量的引用。
+对将在其中放置代理索引的变量的引用。
 
 *_Timeout*<br/>
-若要等待，以毫秒为单位最长时间。
+要等待的最大时间（以毫秒为单位）。
 
 ### <a name="remarks"></a>备注
 
-代理任务完成时，代理将进入`agent_canceled`或`agent_done`状态。
+代理任务在代理进入 `agent_canceled` 或 `agent_done` 状态时完成。
 
-如果将参数`_Timeout`具有常量以外的值`COOPERATIVE_TIMEOUT_INFINITE`，该异常[operation_timed_out](operation-timed-out-class.md)如果指定的时间内过期的代理程序已完成其任务之前，将引发。
+如果参数 `_Timeout` 的值不是常量 `COOPERATIVE_TIMEOUT_INFINITE`，则在代理完成其任务之前指定的时间量到期时，将引发异常[operation_timed_out](operation-timed-out-class.md) 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [并发命名空间](concurrency-namespace.md)

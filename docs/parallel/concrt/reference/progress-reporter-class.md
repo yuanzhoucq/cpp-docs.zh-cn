@@ -9,46 +9,46 @@ f1_keywords:
 helpviewer_keywords:
 - progress_reporter class
 ms.assetid: b836efab-2d05-4649-b6fa-d15236f1f813
-ms.openlocfilehash: dac74085278418153ddec502f6257ce13885704d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd8f50a8c9829ff9de3e2412b89aa4de88d90db6
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394372"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77138771"
 ---
-# <a name="progressreporter-class"></a>progress_reporter 类
+# <a name="progress_reporter-class"></a>progress_reporter 类
 
 进度报告器类允许报告特定类型的进度通知。 每个 progress_reporter 对象都是绑定到特定异步动作或操作的。
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 template<typename _ProgressType>
 class progress_reporter;
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
 *_ProgressType*<br/>
 通过进度报告器报告的每个进度通知的负载类型。
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[progress_reporter](#ctor)||
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[report](#report)|向进度报告器绑定到的异步动作或操作发送进度报告。|
+|[报表](#report)|向进度报告器绑定到的异步动作或操作发送进度报告。|
 
 ## <a name="remarks"></a>备注
 
-此类型是仅适用于 Windows 运行时应用。
+此类型仅可用于 Windows 运行时应用。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -56,29 +56,29 @@ class progress_reporter;
 
 ## <a name="requirements"></a>要求
 
-**标头：** ppltasks.h
+**标头：** ppltasks。h
 
 **命名空间：** 并发
 
-##  <a name="ctor"></a> progress_reporter
+## <a name="ctor"></a>progress_reporter
 
-```
+```cpp
 progress_reporter();
 ```
 
-##  <a name="report"></a> 报表
+## <a name="report"></a>报表
 
 向进度报告器绑定到的异步动作或操作发送进度报告。
 
-```
+```cpp
 void report(const _ProgressType& val) const;
 ```
 
 ### <a name="parameters"></a>参数
 
 *val*<br/>
-要通过进程通知报告的负载。
+要通过进度通知报告的有效负载。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [并发命名空间](concurrency-namespace.md)

@@ -10,20 +10,20 @@ f1_keywords:
 helpviewer_keywords:
 - task_completion_event class
 ms.assetid: fb19ed98-f245-48dc-9ba5-487ba879b28a
-ms.openlocfilehash: 9d0ab271b20eb02c1dc4cb8e54cf2632eead4325
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b3e3093cb76df507f8c707e497c9aec75a065057
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212880"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142598"
 ---
-# <a name="taskcompletionevent-class"></a>task_completion_event 类
+# <a name="task_completion_event-class"></a>task_completion_event 类
 
 `task_completion_event` 类可让你延迟任务的执行，直到满足条件，或开始一项任务来响应外部事件。
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 template<typename _ResultType>
 class task_completion_event;
 
@@ -31,22 +31,22 @@ template<>
 class task_completion_event<void>;
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
 *_ResultType*<br/>
 此 `task_completion_event` 类的结果类型。
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[task_completion_event](#ctor)|构造 `task_completion_event` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[set](#set)|已重载。 设置任务完成事件。|
 |[set_exception](#set_exception)|已重载。 传播与此事件关联的所有任务的一个例外情况。|
@@ -65,15 +65,15 @@ class task_completion_event<void>;
 
 ## <a name="requirements"></a>要求
 
-**标头：** ppltasks.h
+**标头：** ppltasks。h
 
 **命名空间：** 并发
 
-##  <a name="set"></a> 设置
+## <a name="set"></a>字符集
 
 设置任务完成事件。
 
-```
+```cpp
 bool set(_ResultType _Result) const ;
 
 bool set() const ;
@@ -82,21 +82,21 @@ bool set() const ;
 ### <a name="parameters"></a>参数
 
 *_Result*<br/>
-要设置与此事件的结果。
+要为其设置此事件的结果。
 
 ### <a name="return-value"></a>返回值
 
-该方法返回 **，则返回 true**如果已成功设置该事件。 它将返回**false**如果已设置该事件。
+如果设置事件成功，则方法返回**true** 。 如果已设置该事件，则返回**false** 。
 
 ### <a name="remarks"></a>备注
 
-出现多个的情况下调用或并发调用到`set`; 仅第一次调用将成功，但其结果 （如果有） 将存储在任务完成事件。 将忽略剩余的集，而该方法将返回 false。 如果设置任务完成事件时，所有任务从都创建的事件都会立即完成，并且其，如果有，将安排运行。 任务已完成对象`_ResultType`以外**void**将的值传递给它们的延续。
+如果存在对 `set`的多个或并发调用，则只有第一个调用将成功，并且将在任务完成事件中存储其结果（如果有）。 剩余的集被忽略，并且方法将返回 false。 设置任务完成事件时，从该事件创建的所有任务都将立即完成，并将计划其延续任务（如果有）。 具有**void**以外的 `_ResultType` 的任务完成对象将值传递给其延续。
 
-##  <a name="set_exception"></a> set_exception
+## <a name="set_exception"></a>set_exception
 
 传播与此事件关联的所有任务的一个例外情况。
 
-```
+```cpp
 template<typename _E>
 __declspec(noinline) bool set_exception(_E _Except) const;
 
@@ -116,14 +116,14 @@ __declspec(noinline) bool set_exception(std::exception_ptr _ExceptionPtr) const 
 
 ### <a name="return-value"></a>返回值
 
-##  <a name="ctor"></a> task_completion_event
+## <a name="ctor"></a>task_completion_event
 
 构造 `task_completion_event` 对象。
 
-```
+```cpp
 task_completion_event();
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [并发命名空间](concurrency-namespace.md)

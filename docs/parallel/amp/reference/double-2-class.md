@@ -28,40 +28,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_2::g
 - amp_short_vectors/Concurrency::graphics::double_2::set_y
 ms.assetid: c19c2d21-3cbf-4ce5-b460-3b8253688f82
-ms.openlocfilehash: 9482c2839c4963d533eb643fa0ef86a5c66636a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73656415d1b8774fe8304d674872524e76ee301d
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182327"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126703"
 ---
-# <a name="double2-class"></a>double_2 类
+# <a name="double_2-class"></a>double_2 类
 
-表示 2 双短矢量。
+表示 2 double 的短矢量。
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 class double_2;
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[double_2 构造函数](#ctor)|已重载。 默认构造函数，初始化 0 的所有元素。|
+|[double_2 构造函数](#ctor)|已重载。 默认构造函数，用0初始化所有元素。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |double_2::get_x||
 |double_2::get_xy||
@@ -76,9 +76,9 @@ class double_2;
 |double_2::set_y||
 |double_2::set_yx||
 
-### <a name="public-operators"></a>公共运算符
+### <a name="public-operators"></a>公用運算子
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |double_2::operator-||
 |double_2::operator--||
@@ -91,13 +91,13 @@ class double_2;
 
 ### <a name="public-constants"></a>公共常量
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |double_2::size 常量||
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |double_2::g||
 |double_2::gr||
@@ -105,7 +105,7 @@ class double_2;
 |double_2::rg||
 |double_2::x||
 |double_2::xy||
-|double_2::y||
+|double_2：： y||
 |double_2::yx||
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
@@ -114,15 +114,15 @@ class double_2;
 
 ## <a name="requirements"></a>要求
 
-**标头：** amp_short_vectors.h
+**标头：** amp_short_vectors。h
 
-**命名空间：** Concurrency:: graphics
+**命名空间：** Concurrency：： graphics
 
-##  <a name="ctor"></a> double_2
+## <a name="ctor"></a>double_2
 
-默认构造函数，初始化 0 的所有元素。
+默认构造函数，用0初始化所有元素。
 
-```
+```cpp
 double_2() restrict(amp,
     cpu);
 
@@ -163,23 +163,23 @@ explicit inline double_2(
 ### <a name="parameters"></a>参数
 
 *_V0*<br/>
-要初始化元素 0 的值。
+要初始化元素0的值。
 
 *_V1*<br/>
-要初始化元素 1 的值。
+要初始化元素1的值。
 
 *_V*<br/>
-用于初始化值。
+用于初始化的值。
 
 *_Other*<br/>
 用于初始化的对象。
 
-##  <a name="double_2__size"></a> 大小
+## <a name="double_2__size"></a>规格
 
-```
+```cpp
 static const int size = 2;
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)

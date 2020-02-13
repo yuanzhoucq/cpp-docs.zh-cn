@@ -8,30 +8,30 @@ f1_keywords:
 helpviewer_keywords:
 - unsupported_feature class
 ms.assetid: 6b1ab917-df13-48c7-9648-7cb2465a0ff5
-ms.openlocfilehash: 451318bfbcfb9c5e002677556944e3499c0ed5fb
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 561f0a258943f6d7e1c0f1b5cae716592c931fbc
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525417"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127707"
 ---
-# <a name="unsupportedfeature-class"></a>unsupported_feature 类
+# <a name="unsupported_feature-class"></a>unsupported_feature 类
 
-使用不支持的功能时引发的异常。
+当使用不受支持的功能时引发的异常。
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 class unsupported_feature : public runtime_exception;
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[unsupported_feature 构造函数](#unsupported_feature)|构造的新实例`unsupported_feature`异常。|
+|[unsupported_feature 构造函数](#unsupported_feature)|构造 `unsupported_feature` 异常的新实例。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -41,13 +41,13 @@ class unsupported_feature : public runtime_exception;
 
 `unsupported_feature`
 
-## <a name="unsupported_feature"></a> unsupported_feature
+## <a name="unsupported_feature"></a>unsupported_feature
 
-  构造的新实例`unsupported_feature`异常。
+  构造 `unsupported_feature` 异常的新实例。
 
 ### <a name="syntax"></a>语法
 
-```
+```cpp
 explicit unsupported_feature(
     const char * _Message ) throw();
 
@@ -65,10 +65,10 @@ unsupported_feature() throw();
 
 ## <a name="requirements"></a>要求
 
-**标头：** amprt.h
+**标头：** amprt
 
 **命名空间：** 并发
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [并发命名空间 (C++ AMP)](concurrency-namespace-cpp-amp.md)

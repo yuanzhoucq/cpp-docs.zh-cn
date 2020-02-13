@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_queue class
 ms.assetid: c2218996-d0ea-40e9-b002-e9a15b085f51
-ms.openlocfilehash: 7f87ead486d635c933ad356f9868c22344601eda
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 4e913af40b2218da5699da2659ec2e9189e32994
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75298611"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143205"
 ---
 # <a name="concurrent_queue-class"></a>concurrent_queue 类
 
@@ -29,12 +29,12 @@ ms.locfileid: "75298611"
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 template<typename T, class _Ax>
 class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4;
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
 *T*<br/>
 要存储在队列中的元素的数据类型。
@@ -46,7 +46,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|Name|描述|
+|名称|说明|
 |----------|-----------------|
 |`allocator_type`|一个类型，表示并发队列的分配器类。|
 |`const_iterator`|一种类型，它表示对并发队列中的元素的非线程安全 `const` 迭代器。|
@@ -57,16 +57,16 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
 |`size_type`|一种类型，它对并发队列中的元素数进行计数。|
 |`value_type`|表示存储在并发队列中的数据类型的类型。|
 
-### <a name="public-constructors"></a>公用建構函式
+### <a name="public-constructors"></a>公共构造函数
 
-|Name|描述|
+|名称|说明|
 |----------|-----------------|
 |[concurrent_queue](#ctor)|已重载。 构造并发队列。|
 |[~ concurrent_queue 析构函数](#dtor)|销毁并发队列。|
 
 ### <a name="public-methods"></a>公共方法
 
-|Name|描述|
+|名称|说明|
 |----------|-----------------|
 |[clear](#clear)|清除并发队列，销毁当前排队的任何元素。 此方法不是并发安全方法。|
 |[empty](#empty)|测试在调用此方法时并发队列是否为空。 此方法是并发安全方法。|
@@ -81,29 +81,29 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
 
 有关详细信息，请参阅[并行容器和对象](../../../parallel/concrt/parallel-containers-and-objects.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>继承层次结构
 
 `concurrent_queue`
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>要求
 
 **标头：** concurrent_queue。h
 
 **命名空间：** 并发
 
-##  <a name="clear"></a>清除
+## <a name="clear"></a>清除
 
 清除并发队列，销毁当前排队的任何元素。 此方法不是并发安全方法。
 
-```
+```cpp
 void clear();
 ```
 
-##  <a name="ctor"></a> concurrent_queue
+## <a name="ctor"></a>concurrent_queue
 
 构造并发队列。
 
-```
+```cpp
 explicit concurrent_queue(
     const allocator_type& _Al = allocator_type());
 
@@ -149,19 +149,19 @@ concurrent_queue(_InputIterator _Begin,
 
 第四个构造函数指定迭代器范围 [`_Begin`，`_End`）提供的值。
 
-##  <a name="dtor"></a> ~concurrent_queue
+## <a name="dtor"></a>~ concurrent_queue
 
 销毁并发队列。
 
-```
+```cpp
 ~concurrent_queue();
 ```
 
-##  <a name="empty"></a>空白处
+## <a name="empty"></a>空白处
 
 测试在调用此方法时并发队列是否为空。 此方法是并发安全方法。
 
-```
+```cpp
 bool empty() const;
 ```
 
@@ -173,11 +173,11 @@ bool empty() const;
 
 尽管此方法对于调用 `push`、`try_pop`和 `empty`方法的方法是并发安全的，但返回的值在被调用线程检查时可能不正确。
 
-##  <a name="get_allocator"></a> get_allocator
+## <a name="get_allocator"></a>get_allocator
 
 返回用于构造并发队列的分配器副本。 此方法是并发安全方法。
 
-```
+```cpp
 allocator_type get_allocator() const;
 ```
 
@@ -185,11 +185,11 @@ allocator_type get_allocator() const;
 
 用于构造并发队列的分配器副本。
 
-##  <a name="push"></a>请求
+## <a name="push"></a>请求
 
 将项排队在并发队列的结尾处。 此方法是并发安全方法。
 
-```
+```cpp
 void push(const T& _Src);
 
 void push(T&& _Src);
@@ -204,11 +204,11 @@ void push(T&& _Src);
 
 对于 `push`、`try_pop`和 `empty`方法的调用，`push` 是并发安全的。
 
-##  <a name="try_pop"></a> try_pop
+## <a name="try_pop"></a>try_pop
 
 从队列中取消排队一个项（如果有）。 此方法是并发安全方法。
 
-```
+```cpp
 bool try_pop(T& _Dest);
 ```
 
@@ -227,11 +227,11 @@ bool try_pop(T& _Dest);
 
 对于 `push`、`try_pop`和 `empty`方法的调用，`try_pop` 是并发安全的。
 
-##  <a name="unsafe_begin"></a> unsafe_begin
+## <a name="unsafe_begin"></a>unsafe_begin
 
 返回一个迭代器，该迭代器 `iterator` 或 `const_iterator` 到并发队列的开头。 此方法不是并发安全方法。
 
-```
+```cpp
 iterator unsafe_begin();
 
 const_iterator unsafe_begin() const;
@@ -245,11 +245,11 @@ const_iterator unsafe_begin() const;
 
 `concurrent_queue` 类的迭代器主要用于调试，因为它们速度较慢，并且迭代不与其他队列操作有关并发安全。
 
-##  <a name="unsafe_end"></a> unsafe_end
+## <a name="unsafe_end"></a>unsafe_end
 
 返回一个迭代器，该迭代器 `iterator` 类型或 `const_iterator` 到并发队列的末尾。 此方法不是并发安全方法。
 
-```
+```cpp
 iterator unsafe_end();
 
 const_iterator unsafe_end() const;
@@ -263,11 +263,11 @@ const_iterator unsafe_end() const;
 
 `concurrent_queue` 类的迭代器主要用于调试，因为它们速度较慢，并且迭代不与其他队列操作有关并发安全。
 
-##  <a name="unsafe_size"></a> unsafe_size
+## <a name="unsafe_size"></a>unsafe_size
 
 返回队列中的项数。 此方法不是并发安全方法。
 
-```
+```cpp
 size_type unsafe_size() const;
 ```
 

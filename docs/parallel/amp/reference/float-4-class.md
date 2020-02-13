@@ -268,40 +268,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_4::get_z
 - amp_short_vectors/Concurrency::graphics::float_4::set_xyzw
 ms.assetid: 10f92170-e58c-4afc-8198-fc5778d56038
-ms.openlocfilehash: 63dbc38fd4c5c6d668dda525416ec4ff2f05b50f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: efff4e2263704dab35e5c212f6ef5d906e3f7c72
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180275"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142171"
 ---
-# <a name="float4-class"></a>float_4 类
+# <a name="float_4-class"></a>float_4 类
 
 表示四个浮点数的短矢量。
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 class float_4;
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[float_4 构造函数](#ctor)|已重载。 默认构造函数，初始化 0 的所有元素。|
+|[float_4 构造函数](#ctor)|已重载。 默认构造函数，用0初始化所有元素。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |float_4::get_w||
 |float_4::get_wx||
@@ -440,9 +440,9 @@ class float_4;
 |float_4::set_zyx||
 |float_4::set_zyxw||
 
-### <a name="public-operators"></a>公共运算符
+### <a name="public-operators"></a>公用運算子
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |float_4::operator-||
 |float_4::operator--||
@@ -455,21 +455,21 @@ class float_4;
 
 ### <a name="public-constants"></a>公共常量
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[大小常量](#float_4__size)||
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|float_4::a||
+|float_4：： a||
 |float_4::ab||
 |float_4::abg||
 |float_4::abgr||
 |float_4::abr||
 |float_4::abrg||
-|float_4::ag||
+|float_4：： ag||
 |float_4::agb||
 |float_4::agbr||
 |float_4::agr||
@@ -495,14 +495,14 @@ class float_4;
 |float_4::brag||
 |float_4::brg||
 |float_4::brga||
-|float_4::g||
-|float_4::ga||
+|float_4：： g||
+|float_4：： ga||
 |float_4::gab||
 |float_4::gabr||
 |float_4::gar||
 |float_4::garb||
-|float_4::gb||
-|float_4::gba||
+|float_4：： gb||
+|float_4：： gba||
 |float_4::gbar||
 |float_4::gbr||
 |float_4::gbra||
@@ -543,7 +543,7 @@ class float_4;
 |float_4::wzxy||
 |float_4::wzy||
 |float_4::wzyx||
-|float_4::x||
+|float_4：： x||
 |float_4::xw||
 |float_4::xwy||
 |float_4::xwyz||
@@ -559,7 +559,7 @@ class float_4;
 |float_4::xzwy||
 |float_4::xzy||
 |float_4::xzyw||
-|float_4::y||
+|float_4：： y||
 |float_4::yw||
 |float_4::ywx||
 |float_4::ywxz||
@@ -573,20 +573,20 @@ class float_4;
 |float_4::yz||
 |float_4::yzw||
 |float_4::yzwx||
-|float_4::yzx||
+|float_4：： yzx||
 |float_4::yzxw||
-|float_4::z||
+|float_4：： z||
 |float_4::zw||
 |float_4::zwx||
 |float_4::zwxy||
-|float_4::zwy||
-|float_4::zwyx||
+|float_4：： zwy||
+|float_4：： zwyx||
 |float_4::zx||
 |float_4::zxw||
 |float_4::zxwy||
 |float_4::zxy||
 |float_4::zxyw||
-|float_4::zy||
+|float_4：： zy||
 |float_4::zyw||
 |float_4::zywx||
 |float_4::zyx||
@@ -598,15 +598,15 @@ class float_4;
 
 ## <a name="requirements"></a>要求
 
-**标头：** amp_short_vectors.h
+**标头：** amp_short_vectors。h
 
-**命名空间：** Concurrency:: graphics
+**命名空间：** Concurrency：： graphics
 
-##  <a name="ctor"></a> float_4
+## <a name="ctor"></a>float_4
 
-默认构造函数，初始化 0 的所有元素。
+默认构造函数，用0初始化所有元素。
 
-```
+```cpp
 float_4() restrict(amp,
     cpu);
 
@@ -649,29 +649,29 @@ explicit inline float_4(
 ### <a name="parameters"></a>参数
 
 *_V0*<br/>
-要初始化元素 0 的值。
+要初始化元素0的值。
 
 *_V1*<br/>
-要初始化元素 1 的值。
+要初始化元素1的值。
 
 *_V2*<br/>
-要初始化元素 2 的值。
+用于初始化元素2的值。
 
 *_V3*<br/>
-要初始化元素 3 的值。
+要初始化元素3的值。
 
 *_V*<br/>
-用于初始化值。
+用于初始化的值。
 
 *_Other*<br/>
 用于初始化的对象。
 
-##  <a name="float_4__size"></a> 大小
+## <a name="float_4__size"></a>规格
 
-```
+```cpp
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)

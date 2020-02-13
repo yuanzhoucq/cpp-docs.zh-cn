@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, general best practices
 ms.assetid: ce5c784c-051e-44a6-be84-8b3e1139c18b
-ms.openlocfilehash: bb00c3ddb9a50a159174deccf8954f1e3bf1689d
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 15bae5ba25da4987b076cf3de67cd8484fe47df8
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302219"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141772"
 ---
 # <a name="general-best-practices-in-the-concurrency-runtime"></a>并发运行时中的常规最佳做法
 
 本文档介绍适用于并发运行时的多个区域的最佳实践。
 
-##  <a name="top"></a> 部分
+## <a name="top"></a> 部分
 
 本文档包含以下各节：
 
@@ -33,13 +33,13 @@ ms.locfileid: "75302219"
 
 - [不要使用共享数据段中的并发对象](#shared-data)
 
-##  <a name="synchronization"></a>尽可能使用协作式同步构造
+## <a name="synchronization"></a>尽可能使用协作式同步构造
 
 并发运行时提供了许多不需要外部同步对象的并发安全构造。 例如， [concurrency：： concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md)类提供并发安全追加和元素访问操作。 此处，并发安全意味着指针或迭代器始终有效。 它不能保证元素初始化，也不能保证特定的遍历顺序。 但是，对于需要对资源进行独占访问的情况，运行时提供[concurrency：： critical_section](../../parallel/concrt/reference/critical-section-class.md)、 [concurrency：： reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md)和[concurrency：：事件类](../../parallel/concrt/reference/event-class.md)。 这些类型以协作方式进行：因此，任务计划程序可以在第一个任务等待数据时将处理资源重新分配给另一个上下文。 如果可能，请使用这些同步类型，而不是其他同步机制，如 Windows API 提供的那些方法，这些同步机制不是以协作方式进行的。 有关这些同步类型和代码示例的详细信息，请参阅[同步数据结构](../../parallel/concrt/synchronization-data-structures.md)和将[同步数据结构与 Windows API 进行比较](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md)。
 
 [[返回页首](#top)]
 
-##  <a name="yield"></a>避免不会产生的漫长任务
+## <a name="yield"></a>避免不会产生的漫长任务
 
 因为任务计划程序的行为是合作的，所以它不能在任务之间实现公平。 因此，任务会阻止其他任务启动。 尽管这在某些情况下是可接受的，但在其他情况下，这可能会导致死锁或资源不足。
 
@@ -74,7 +74,7 @@ ms.locfileid: "75302219"
 
 [[返回页首](#top)]
 
-##  <a name="oversubscription"></a>使用过度订阅偏移阻止或具有高延迟的操作
+## <a name="oversubscription"></a>使用过度订阅偏移阻止或具有高延迟的操作
 
 并发运行时提供了同步基元（如[Concurrency：： critical_section](../../parallel/concrt/reference/critical-section-class.md)），它们使任务能够以协作方式阻止和生成。 当某个任务以协作方式阻止或生成时，任务计划程序可以在第一个任务等待数据时将处理资源重新分配给另一个上下文。
 
@@ -88,7 +88,7 @@ ms.locfileid: "75302219"
 
 [[返回页首](#top)]
 
-##  <a name="memory"></a>尽可能使用并发内存管理函数
+## <a name="memory"></a>尽可能使用并发内存管理函数
 
 当你具有经常分配生存期相对较短的小型对象的精细任务时，可使用内存管理函数[concurrency：：分配](reference/concurrency-namespace-functions.md#alloc)和[Concurrency：： Free](reference/concurrency-namespace-functions.md#free)。 并发运行时保存每个正在运行的线程的单独内存缓存。 `Alloc` 和 `Free` 函数在不使用锁或内存屏障的情况下，从这些缓存分配并释放内存。
 
@@ -96,7 +96,7 @@ ms.locfileid: "75302219"
 
 [[返回页首](#top)]
 
-##  <a name="raii"></a>使用 RAII 管理并发对象的生存期
+## <a name="raii"></a>使用 RAII 管理并发对象的生存期
 
 并发运行时使用异常处理来实现某些功能，如取消。 因此，当你调入运行时或调用调用运行时的另一个库时，请编写异常安全的代码。
 
@@ -128,7 +128,7 @@ Error details:
 
 [[返回页首](#top)]
 
-##  <a name="global-scope"></a>不要在全局范围内创建并发对象
+## <a name="global-scope"></a>不要在全局范围内创建并发对象
 
 在全局范围内创建并发对象时，会导致应用程序中出现死锁或内存访问冲突等问题。
 
@@ -142,7 +142,7 @@ Error details:
 
 [[返回页首](#top)]
 
-##  <a name="shared-data"></a>不要使用共享数据段中的并发对象
+## <a name="shared-data"></a>不要使用共享数据段中的并发对象
 
 并发运行时不支持在共享数据部分中使用并发对象，例如，由[data_seg](../../preprocessor/data-seg.md)`#pragma` 指令创建的数据节。 跨进程边界共享的并发对象可能将运行时置于不一致或无效状态。
 

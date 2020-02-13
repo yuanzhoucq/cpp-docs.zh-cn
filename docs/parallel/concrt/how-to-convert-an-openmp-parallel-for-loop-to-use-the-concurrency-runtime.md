@@ -7,20 +7,20 @@ helpviewer_keywords:
 - parallel for loops, converting from OpenMP to the Concurrency Runtime
 - parallel loops, converting from OpenMP to the Concurrency Runtime
 ms.assetid: d8a7b656-f86c-456e-9c5d-a7d52f94646e
-ms.openlocfilehash: bc408465f34f0558e9f426ae35b83d4610898414
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2d96ba23582368fe72e61003823826a6f3ab807a
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413887"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141762"
 ---
 # <a name="how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime"></a>如何：转换 OpenMP parallel for 循环以使用并发运行时
 
-此示例演示如何将一个基本循环使用 OpenMP[并行](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)并[有关](../../parallel/openmp/reference/for-openmp.md)指令以使用并发运行时[concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for)算法。
+此示例演示如何转换使用 OpenMP[并行](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)和[for](../../parallel/openmp/reference/for-openmp.md)指令的基本循环，以使用并发运行时[Concurrency：:p arallel_for](reference/concurrency-namespace-functions.md#parallel_for)算法。
 
-## <a name="example"></a>示例
+## <a name="example---prime-count"></a>示例-质数计数
 
-此示例使用 OpenMP 和并发运行时计算数组中的随机值的质数的计数。
+此示例使用 OpenMP 和并发运行时来计算随机值数组中质数的计数。
 
 [!code-cpp[concrt-openmp#1](../../parallel/concrt/codesnippet/cpp/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime_1.cpp)]
 
@@ -33,25 +33,25 @@ Using the Concurrency Runtime...
 found 107254 prime numbers.
 ```
 
-`parallel_for`算法和 OpenMP 3.0 允许索引类型为带符号整型类型或无符号整型类型。 `parallel_for`算法还可确保指定的范围内不会溢出有符号的类型。 OpenMP 版本 2.0 和 2.5 允许仅适用于有符号整数的索引类型。 OpenMP 还不会验证索引范围。
+`parallel_for` 算法和 OpenMP 3.0 允许索引类型为带符号整型类型或无符号整数类型。 `parallel_for` 算法还可确保指定的范围不会溢出已签名的类型。 OpenMP 版本2.0 和2.5 仅允许已签名的整型索引类型。 OpenMP 也不验证索引范围。
 
-此示例中使用并发运行时的版本也使用[concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md)对象来代替[原子](../../parallel/openmp/reference/atomic.md)指令的计数器值增加而无需同步。
+此示例中使用并发运行时的版本还使用[Concurrency：：可组合](../../parallel/concrt/reference/combinable-class.md)对象代替[原子](../../parallel/openmp/reference/atomic.md)指令来递增计数器值，而无需同步。
 
-有关详细信息`parallel_for`和其他并行算法，请参阅[并行算法](../../parallel/concrt/parallel-algorithms.md)。 有关详细信息`combinable`类，请参阅[并行容器和对象](../../parallel/concrt/parallel-containers-and-objects.md)。
+有关 `parallel_for` 和其他并行算法的详细信息，请参阅[并行算法](../../parallel/concrt/parallel-algorithms.md)。 有关 `combinable` 类的详细信息，请参阅[并行容器和对象](../../parallel/concrt/parallel-containers-and-objects.md)。
 
-## <a name="example"></a>示例
+## <a name="example---use-stdarray"></a>示例-使用 std：： array
 
-此示例修改上一个，以便做出[std:: array](../../standard-library/array-class-stl.md)对象而不是在本机数组。 因为对于仅在已签名整数索引类型允许使用 OpenMP 2.0 版和 2.5`parallel_for`构造，您不能使用迭代器访问的元素的C++并行的标准库容器。 并行模式库 (PPL) 提供了[concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)算法，例如由提供对迭代容器上并行执行任务，C++标准库。 它使用相同的分区逻辑的`parallel_for`算法使用。 `parallel_for_each`算法类似于C++标准库[std:: for_each](../../standard-library/algorithm-functions.md#for_each)算法，不同之处在于`parallel_for_each`算法并发执行任务。
+此示例修改了上一个，以对[std：： array](../../standard-library/array-class-stl.md)对象而不是在本机数组上执行操作。 由于 OpenMP 版本2.0 和2.5 仅允许在 `parallel_for` 构造中使用已签名整数索引类型，因此不能使用迭代器并行访问C++标准库容器的元素。 并行模式库（PPL）提供并发的[：:p arallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)算法，该算法并行执行任务（如C++标准库提供的迭代容器）。 它使用 `parallel_for` 算法使用的分区逻辑相同。 `parallel_for_each` 算法类似于C++标准库[std：： for_each](../../standard-library/algorithm-functions.md#for_each)算法，不同之处在于 `parallel_for_each` 算法并发执行任务。
 
 [!code-cpp[concrt-openmp#10](../../parallel/concrt/codesnippet/cpp/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime_2.cpp)]
 
 ## <a name="compiling-the-code"></a>编译代码
 
-复制示例代码并将其粘贴到 Visual Studio 项目中，或将其粘贴在文件中名为`concrt-omp-count-primes.cpp`然后在 Visual Studio 命令提示符窗口中运行以下命令。
+复制代码示例并将其粘贴到 Visual Studio 项目中，或粘贴到一个名为 `concrt-omp-count-primes.cpp` 的文件中，然后在 Visual Studio 命令提示符窗口中运行以下命令。
 
-**cl.exe /EHsc /openmp concrt-omp-count-primes.cpp**
+> **cl/EHsc/openmp concrt-omp-count-primes**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [从 OpenMP 迁移至并发运行时](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)<br/>
 [并行算法](../../parallel/concrt/parallel-algorithms.md)<br/>

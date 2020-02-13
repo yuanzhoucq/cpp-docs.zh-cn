@@ -6,21 +6,21 @@ helpviewer_keywords:
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-ms.openlocfilehash: a96c54a01788f03158b9fcdcd0bf72eb2b1ce84d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a17b4439baaec9caacfeca08983d0255b5a145de
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510548"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141623"
 ---
 # <a name="concurrency-runtime"></a>并发运行时
 
 适用于 C++ 的并发运行时可帮助你编写可靠、可伸缩且响应迅速的并行应用程序。 它提升了抽象级别，因此无需管理与并发相关的基础结构详细信息。 你还可以使用它来指定符合应用程序服务要求质量的计划策略。 使用这些资源帮助你开始使用并发运行时。
 
-有关参考文档, 请参阅[参考](../../parallel/concrt/reference/reference-concurrency-runtime.md)。
+有关参考文档，请参阅[参考](../../parallel/concrt/reference/reference-concurrency-runtime.md)。
 
 > [!TIP]
->  并发运行时十分依赖 C++11 功能，并采用更现代的 C++ 样式。 若要了解详细信息, 请参阅[欢迎回到C++ ](../../cpp/welcome-back-to-cpp-modern-cpp.md)。
+> 并发运行时十分依赖 C++11 功能，并采用更现代的 C++ 样式。 若要了解详细信息，请参阅[欢迎回到C++ ](../../cpp/welcome-back-to-cpp-modern-cpp.md)。
 
 ## <a name="choosing-concurrency-runtime-features"></a>选择并发运行时功能
 
@@ -47,7 +47,7 @@ ms.locfileid: "69510548"
 |||
 |-|-|
 |[并行算法](../../parallel/concrt/parallel-algorithms.md)<br /><br /> [如何：编写 parallel_for 循环](../../parallel/concrt/how-to-write-a-parallel-for-loop.md)<br /><br /> [如何：编写 parallel_for_each 循环](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md)<br /><br /> [如何：并行执行映射和减少操作](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md)|介绍 `parallel_for`、 `parallel_for_each`、 `parallel_invoke`和其他并行算法。 使用并行算法来解决涉及数据集合的 *数据并行* 问题。|
-|[并行容器和对象](../../parallel/concrt/parallel-containers-and-objects.md)<br /><br /> [如何：使用并行容器提高效率](../../parallel/concrt/how-to-use-parallel-containers-to-increase-efficiency.md)<br /><br /> [如何：使用 Combinable 改进性能](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)<br /><br /> [如何：使用 combinable 来组合集](../../parallel/concrt/how-to-use-combinable-to-combine-sets.md)|介绍 `combinable` 类，以及 `concurrent_vector`、 `concurrent_queue`、 `concurrent_unordered_map`和其他并行容器。 当你需要提供对其元素的线程安全访问的容器时，请使用并行容器和对象。|
+|[并行容器和对象](../../parallel/concrt/parallel-containers-and-objects.md)<br /><br /> [如何：使用并行容器提高效率](../../parallel/concrt/how-to-use-parallel-containers-to-increase-efficiency.md)<br /><br /> [如何：使用 combinable 提高性能](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)<br /><br /> [如何：使用 combinable 来组合集](../../parallel/concrt/how-to-use-combinable-to-combine-sets.md)|介绍 `combinable` 类，以及 `concurrent_vector`、 `concurrent_queue`、 `concurrent_unordered_map`和其他并行容器。 当你需要提供对其元素的线程安全访问的容器时，请使用并行容器和对象。|
 |[并行模式库中的最佳做法](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)<br /><br /> [并发运行时中的常规最佳做法](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)|提供使用 PPL 的提示和最佳做法。|
 
 ## <a name="canceling-tasks-and-parallel-algorithms"></a>取消任务和并行算法
@@ -55,14 +55,14 @@ ms.locfileid: "69510548"
 |||
 |-|-|
 |[PPL 中的取消操作](cancellation-in-the-ppl.md)|介绍 PPL 中取消操作的角色，包括如何启动和相应取消请求。|
-|[如何：通过取消来中断并行循环](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)<br /><br /> [如何：通过异常处理中断并行循环](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|演示取消数据并行工作的两种方法。|
+|[如何：使用取消来中断并行循环](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)<br /><br /> [如何：使用异常处理来中断并行循环](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|演示取消数据并行工作的两种方法。|
 
 ## <a name="universal-windows-platform-apps"></a>通用 Windows 平台应用
 
 |||
 |-|-|
 |[用 C++ 为 UWP 应用创建异步操作](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|描述在使用并发运行时在 UWP 应用中生成异步操作时要记住的一些要点。|
-|[演练：使用任务和 XML HTTP 请求进行连接](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|演示如何将 PPL 任务与`IXMLHTTPRequest2`和`IXMLHTTPRequest2Callback`接口结合使用, 以将 HTTP GET 和 POST 请求发送到 UWP 应用中的 web 服务。|
+|[演练：使用任务和 XML HTTP 请求进行连接](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|演示如何将 PPL 任务与 `IXMLHTTPRequest2` 和 `IXMLHTTPRequest2Callback` 接口结合使用，以将 HTTP GET 和 POST 请求发送到 UWP 应用中的 web 服务。|
 |[Windows 运行时应用示例](https://code.msdn.microsoft.com/windowsapps)|包含适用于 Windows 3.x 的可下载代码示例和演示应用。 C++ 示例使用 PPL 任务等并发运行时功能在后台处理数据，以保持 UX 随时响应。|
 
 ## <a name="dataflow-programming-in-the-asynchronous-agents-library"></a>异步代理库中的数据流编程
@@ -72,7 +72,7 @@ ms.locfileid: "69510548"
 |[异步代理](../../parallel/concrt/asynchronous-agents.md)<br /><br /> [异步消息块](../../parallel/concrt/asynchronous-message-blocks.md)<br /><br /> [消息传递函数](../../parallel/concrt/message-passing-functions.md)<br /><br /> [如何：实现各种制造者-使用者模式](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)<br /><br /> [如何：为 call 和 transformer 类提供工作函数](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md)<br /><br /> [如何：在数据管道中使用转换器](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)<br /><br /> [如何：在已完成的任务之间选择](../../parallel/concrt/how-to-select-among-completed-tasks.md)<br /><br /> [如何：定期发送消息](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md)<br /><br /> [如何：使用消息块筛选器](../../parallel/concrt/how-to-use-a-message-block-filter.md)|介绍异步代理、消息块和消息传递函数，它们是在并发运行时中执行数据流操作的构建基块。|
 |[演练：创建基于代理的应用程序](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)<br /><br /> [演练：创建数据流代理](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)|演示如何创建基本的基于代理的应用程序。|
 |[演练：创建图像处理网络](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)|演示如何创建执行图像处理的异步消息块网络。|
-|[演练：使用 Join 防止死锁](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)|通过哲学家就餐问题说明如何使用并发运行时来避免应用程序中发生死锁。|
+|[演练：使用 join 避免死锁](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)|通过哲学家就餐问题说明如何使用并发运行时来避免应用程序中发生死锁。|
 |[演练：创建自定义消息块](../../parallel/concrt/walkthrough-creating-a-custom-message-block.md)|演示如何创建根据优先级对传入消息进行排序的自定义消息块类型。|
 |[异步代理库中的最佳做法](../../parallel/concrt/best-practices-in-the-asynchronous-agents-library.md)<br /><br /> [并发运行时中的常规最佳做法](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)|提供使用代理的提示和最佳做法。|
 
@@ -98,11 +98,11 @@ ms.locfileid: "69510548"
 
 |||
 |-|-|
-|[Hilo（使用 C++ 和 XAML 的 Windows 应用商店应用）中的异步编程模式和提示](/previous-versions/windows/apps/jj160321(v=win.10))|了解如何使用并发运行时在 Hilo 中实现异步操作, 使用C++和 XAML 的 Windows 运行时应用。|
+|[Hilo（使用 C++ 和 XAML 的 Windows 应用商店应用）中的异步编程模式和提示](/previous-versions/windows/apps/jj160321(v=win.10))|了解如何使用并发运行时在 Hilo 中实现异步操作，使用C++和 XAML 的 Windows 运行时应用。|
 |[本机代码中的并行编程博客](https://go.microsoft.com/fwlink/p/?linkid=183873)|提供有关并发运行时中的并行编程的其他深度博客文章。|
 |[C++ 和本机代码中的并行计算论坛](https://go.microsoft.com/fwlink/p/?linkid=183874)|使你能够参与关于并发运行时的社区讨论。|
 |[并行编程](/dotnet/standard/parallel-programming/index)|讲授 .NET Framework 中可用的并行编程模型。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[引用](../../parallel/concrt/reference/reference-concurrency-runtime.md)
+[参考](../../parallel/concrt/reference/reference-concurrency-runtime.md)

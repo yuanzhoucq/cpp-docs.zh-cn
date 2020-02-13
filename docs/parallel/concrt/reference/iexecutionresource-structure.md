@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - IExecutionResource structure
 ms.assetid: 6b27042b-b98c-4f7f-b831-566950af84cd
-ms.openlocfilehash: 9f8f5c5629e9794ca8ee2cc6bedbc4ba6bfdb24d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40799d1ed6e21e6932f1adfbad117c436918b792
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262510"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141274"
 ---
 # <a name="iexecutionresource-structure"></a>IExecutionResource 结构
 
@@ -24,24 +24,24 @@ ms.locfileid: "62262510"
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 struct IExecutionResource;
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[IExecutionResource::CurrentSubscriptionLevel](#currentsubscriptionlevel)|返回数已激活的虚拟处理器根和订阅当前与此执行资源表示的基础硬件线程相关联的外部线程。|
-|[IExecutionResource::GetExecutionResourceId](#getexecutionresourceid)|返回表示此执行资源的硬件线程的唯一标识符。|
-|[IExecutionResource::GetNodeId](#getnodeid)|返回此执行资源所属的处理器节点的唯一标识符。|
-|[IExecutionResource::Remove](#remove)|返回此执行资源到资源管理器。|
+|[IExecutionResource：： CurrentSubscriptionLevel](#currentsubscriptionlevel)|返回已激活的虚拟处理器根和当前与此执行资源所表示的基础硬件线程关联的已订阅外部线程的数目。|
+|[IExecutionResource：： GetExecutionResourceId](#getexecutionresourceid)|返回此执行资源所表示的硬件线程的唯一标识符。|
+|[IExecutionResource：： GetNodeId](#getnodeid)|返回此执行资源所属的处理器节点的唯一标识符。|
+|[IExecutionResource：： Remove](#remove)|将此执行资源返回到资源管理器。|
 
 ## <a name="remarks"></a>备注
 
-可以是独立的或与虚拟处理器根关联的执行资源。 你的应用程序中的线程创建的线程订阅时，会创建独立执行资源。 方法[ISchedulerProxy::SubscribeThread](ischedulerproxy-structure.md#subscribecurrentthread)并[ischedulerproxy:: Requestinitialvirtualprocessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors)创建线程的订阅，并返回`IExecutionResource`接口表示订阅。 创建线程订阅是一种方法通知资源管理器的给定的线程将参与到工作排队到计划程序，以及资源管理器将分配给计划程序的虚拟处理器根。 资源管理器使用的信息以避免超额订阅硬件线程可以在其中。
+执行资源可以是独立的，也可以与虚拟处理器根关联。 当应用程序中的线程创建线程订阅时，将创建独立的执行资源。 方法[ISchedulerProxy：： SubscribeThread](ischedulerproxy-structure.md#subscribecurrentthread)和[ISchedulerProxy：： RequestInitialVirtualProcessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors)创建线程订阅，并返回表示订阅的 `IExecutionResource` 接口。 创建线程订阅是一种通知资源管理器给定线程将参与排队等候计划程序的工作的方法，并资源管理器分配给计划程序的虚拟处理器根。 资源管理器使用该信息来避免需要超额订阅硬件线程。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -49,53 +49,53 @@ struct IExecutionResource;
 
 ## <a name="requirements"></a>要求
 
-**标头：** concrtrm.h
+**标头：** concrtrm。h
 
 **命名空间：** 并发
 
-##  <a name="currentsubscriptionlevel"></a>  Iexecutionresource:: Currentsubscriptionlevel 方法
+## <a name="currentsubscriptionlevel"></a>IExecutionResource：： CurrentSubscriptionLevel 方法
 
-返回数已激活的虚拟处理器根和订阅当前与此执行资源表示的基础硬件线程相关联的外部线程。
+返回已激活的虚拟处理器根和当前与此执行资源所表示的基础硬件线程关联的已订阅外部线程的数目。
 
-```
+```cpp
 virtual unsigned int CurrentSubscriptionLevel() const = 0;
 ```
 
 ### <a name="return-value"></a>返回值
 
-当前的订阅级别。
+当前订阅级别。
 
 ### <a name="remarks"></a>备注
 
-订阅级别会告诉您正在运行的线程数与相关联的硬件线程。 这只包括资源管理器已意识到已订阅的线程和有效执行线程代理的虚拟处理器根的窗体中的线程。
+订阅级别告诉你正在运行的线程数与硬件线程关联。 这仅包括资源管理器可以识别的线程，其中包含已订阅线程的形式，以及主动执行线程代理的虚拟处理器根。
 
-调用方法[ischedulerproxy:: Subscribecurrentthread](ischedulerproxy-structure.md#subscribecurrentthread)，或方法[ischedulerproxy:: Requestinitialvirtualprocessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors)与参数`doSubscribeCurrentThread`设置为值 **，则返回 true**按 1 递增硬件线程的订阅级别。 它们还返回`IExecutionResource`表示订阅的接口。 相应地调用[iexecutionresource:: Remove](#remove)递减 1 的硬件线程的订阅级别。
+如果调用方法[ISchedulerProxy：： SubscribeCurrentThread](ischedulerproxy-structure.md#subscribecurrentthread)或方法[ISchedulerProxy：： RequestInitialVirtualProcessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors)的参数 `doSubscribeCurrentThread` 设置为值**true，则**会将硬件线程的订阅级别递增1。 它们还返回表示订阅的 `IExecutionResource` 接口。 对应于[IExecutionResource：： Remove](#remove)的调用会将硬件线程的订阅级别减一。
 
-激活使用方法的虚拟处理器根的 act [ivirtualprocessorroot:: Activate](ivirtualprocessorroot-structure.md#activate)按 1 递增硬件线程的订阅级别。 方法[ivirtualprocessorroot:: Deactivate](ivirtualprocessorroot-structure.md#deactivate)，或[iexecutionresource:: Remove](#remove)递减一个激活虚拟处理器根上调用时需要的订阅级别。
+使用[IVirtualProcessorRoot：： Activate](ivirtualprocessorroot-structure.md#activate)方法激活虚拟处理器根的操作将硬件线程的订阅级别增加1。 方法[IVirtualProcessorRoot:D：](ivirtualprocessorroot-structure.md#deactivate)在激活的虚拟处理器根上调用时，Eactivate 或[IExecutionResource：： Remove](#remove)会将订阅级别减一。
 
-资源管理器使用作为一种用来确定何时计划程序之间移动资源的订阅级别的信息。
+资源管理器使用订阅级信息作为确定何时在计划程序之间移动资源的一种方式。
 
-##  <a name="getexecutionresourceid"></a>  Iexecutionresource:: Getexecutionresourceid 方法
+## <a name="getexecutionresourceid"></a>IExecutionResource：： GetExecutionResourceId 方法
 
-返回表示此执行资源的硬件线程的唯一标识符。
+返回此执行资源所表示的硬件线程的唯一标识符。
 
-```
+```cpp
 virtual unsigned int GetExecutionResourceId() const = 0;
 ```
 
 ### <a name="return-value"></a>返回值
 
-此执行资源基础硬件线程的唯一标识符。
+此执行资源基础的硬件线程的唯一标识符。
 
 ### <a name="remarks"></a>备注
 
-每个硬件线程并发运行时分配的唯一标识符。 如果多个执行资源相关联的硬件线程，它们将具有相同的执行资源标识符。
+并发运行时为每个硬件线程分配一个唯一标识符。 如果多个执行资源与硬件线程关联，则它们将具有相同的执行资源标识符。
 
-##  <a name="getnodeid"></a>  Iexecutionresource:: Getnodeid 方法
+## <a name="getnodeid"></a>IExecutionResource：： GetNodeId 方法
 
 返回此执行资源所属的处理器节点的唯一标识符。
 
-```
+```cpp
 virtual unsigned int GetNodeId() const = 0;
 ```
 
@@ -105,36 +105,36 @@ virtual unsigned int GetNodeId() const = 0;
 
 ### <a name="remarks"></a>备注
 
-并发运行时表示硬件线程的处理器节点组中的系统上。 节点通常派生自系统的硬件拓扑。 例如，特定的套接字或特定 NUMA 节点上的所有处理器可能都属于同一处理器节点。 资源管理器将分配给从这些节点的唯一标识符`0`包括`nodeCount - 1`，其中`nodeCount`表示系统上的处理器节点的总数。
+并发运行时表示处理器节点组中系统上的硬件线程。 节点通常派生自系统的硬件拓扑。 例如，特定套接字或特定 NUMA 节点上的所有处理器可能属于同一处理器节点。 资源管理器将唯一标识符分配到这些节点，从 `0` 到（包括 `nodeCount - 1`）开始，其中 `nodeCount` 表示系统上的处理器节点的总数。
 
-可以从函数获取的节点计数[GetProcessorNodeCount](concurrency-namespace-functions.md)。
+可以从函数[GetProcessorNodeCount](concurrency-namespace-functions.md)获取节点计数。
 
-##  <a name="remove"></a>  Iexecutionresource:: Remove 方法
+## <a name="remove"></a>IExecutionResource：： Remove 方法
 
-返回此执行资源到资源管理器。
+将此执行资源返回到资源管理器。
 
-```
+```cpp
 virtual void Remove(_Inout_ IScheduler* pScheduler) = 0;
 ```
 
 ### <a name="parameters"></a>参数
 
 *pScheduler*<br/>
-到发出请求后，若要删除此执行资源的计划程序的接口。
+向计划程序发出请求以删除此执行资源的接口。
 
 ### <a name="remarks"></a>备注
 
-使用此方法返回独立执行资源，以及与虚拟处理器根到资源管理器相关联的执行资源。
+使用此方法将独立的执行资源以及与虚拟处理器根关联的执行资源返回到资源管理器。
 
-如果这是独立执行资源接收从两种方法之一[ischedulerproxy:: Subscribecurrentthread](ischedulerproxy-structure.md#subscribecurrentthread)或[ischedulerproxy:: Requestinitialvirtualprocessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors)，则调用方法`Remove`将结束到创建该资源的线程订阅表示。 需要关闭计划程序代理之前，结束所有线程订阅和必须调用`Remove`创建订阅的线程。
+如果这是从[ISchedulerProxy：： SubscribeCurrentThread](ischedulerproxy-structure.md#subscribecurrentthread)或[ISchedulerProxy：： RequestInitialVirtualProcessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors)的任一方法接收到的独立执行资源，则调用方法 `Remove` 将结束创建该资源所表示的线程订阅。 需要先结束所有线程订阅，然后才能关闭计划程序代理，并且必须从创建该订阅的线程调用 `Remove`。
 
-虚拟处理器根也可返回至资源管理器，通过调用 `Remove` 方法实现，因为接口 `IVirtualProcessorRoot` 继承自 `IExecutionResource` 接口。 可能需要返回到调用的响应中的虚拟处理器根[ischeduler:: Removevirtualprocessors](ischeduler-structure.md#removevirtualprocessors)方法，或者当你完成从获取过度订阅的虚拟处理器根[Ischedulerproxy:: Createoversubscriber](ischedulerproxy-structure.md#createoversubscriber)方法。 对于虚拟处理器根没有任何限制对哪个线程可以调用`Remove`方法。
+虚拟处理器根也可返回至资源管理器，通过调用 `Remove` 方法实现，因为接口 `IVirtualProcessorRoot` 继承自 `IExecutionResource` 接口。 你可能需要返回虚拟处理器根，以响应对[IScheduler：： RemoveVirtualProcessors](ischeduler-structure.md#removevirtualprocessors)方法的调用，或在你完成从[ISchedulerProxy：： CreateOversubscriber](ischedulerproxy-structure.md#createoversubscriber)方法获取的超额订阅虚拟处理器根时返回。 对于虚拟处理器根，对哪个线程可以调用 `Remove` 方法没有任何限制。
 
-`invalid_argument` 如果引发参数`pScheduler`设置为`NULL`。
+如果参数 `pScheduler` 设置为 `NULL`，则会引发 `invalid_argument`。
 
-`invalid_operation` 如果引发参数`pScheduler`是不同于此执行资源是否已创建，或者，使用独立执行资源，计划程序，如果当前线程的线程的创建线程订阅不同。
+如果参数 `pScheduler` 不同于为其创建此执行资源的计划程序，则会引发 `invalid_operation`; 如果当前线程与创建线程订阅的线程不同，则会引发。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [并发命名空间](concurrency-namespace.md)<br/>
 [IVirtualProcessorRoot 结构](ivirtualprocessorroot-structure.md)
