@@ -1,18 +1,18 @@
 ---
 title: LIB 概述
 description: 库工具 .lib 的使用和选项概述。
-ms.date: 09/25/2019
+ms.date: 02/09/2020
 f1_keywords:
 - Lib
 helpviewer_keywords:
 - LIB [C++], modes
 ms.assetid: e997d423-f574-434f-8b56-25585d137ee0
-ms.openlocfilehash: 7223ef0a624cf15c43bd067db8a7919efd27df17
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: 5829a65ab0dc4ef193236c9ae480856a17c5874c
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685496"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257607"
 ---
 # <a name="overview-of-lib"></a>LIB 概述
 
@@ -32,10 +32,10 @@ ms.locfileid: "71685496"
 
 下表列出了 lib 的选项，并提供了指向详细信息的链接。
 
-|选项|描述|
+|选项|说明|
 |-|-|
 |**/DEF**|创建导入库和导出文件。<br/><br/>有关详细信息，请参阅[构建导入库和导出文件](building-an-import-library-and-export-file.md)。|
-|**/ERRORREPORT**|   向 Microsoft 发送有关 lib 的内部错误的信息。<br/><br/>有关详细信息，请参阅[运行 LIB](running-lib.md)。|
+|**/ERRORREPORT**| 已弃用。 有关详细信息，请参阅[运行 LIB](running-lib.md)。|
 |**/EXPORT**|   从程序中导出函数。<br/><br/>有关详细信息，请参阅[构建导入库和导出文件](building-an-import-library-and-export-file.md)。|
 |**/EXTRACT**|   创建一个对象（.obj）文件，该文件包含现有库的成员的副本。<br/><br/>有关详细信息，请参阅[提取库成员](extracting-a-library-member.md)。|
 |**/INCLUDE**|   将符号添加到符号表中。<br/><br/>有关详细信息，请参阅[构建导入库和导出文件](building-an-import-library-and-export-file.md)。|
@@ -54,10 +54,10 @@ ms.locfileid: "71685496"
 |**/VERBOSE**|   显示有关会话进度的详细信息，包括正在添加的 .obj 文件的名称。<br/><br/>有关详细信息，请参阅[运行 LIB](running-lib.md)。|
 |**/WX**|   将警告视为错误。<br/><br/>有关详细信息，请参阅[运行 LIB](running-lib.md)。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[LIB 引用](lib-reference.md)<br/>
-[LIB 输入文件](lib-input-files.md)<br/>
-[LIB 输出文件](lib-output-files.md)<br/>
-[其他 LIB 输出](other-lib-output.md)<br/>
+[LIB 引用](lib-reference.md)\
+[LIB 输入文件](lib-input-files.md)\
+[LIB 输出文件](lib-output-files.md)\
+[其他 LIB 输出](other-lib-output.md)\
 [库结构](structure-of-a-library.md)

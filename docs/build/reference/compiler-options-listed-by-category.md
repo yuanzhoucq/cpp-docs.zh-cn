@@ -1,21 +1,22 @@
 ---
 title: 按类别列出的编译器选项
-ms.date: 01/08/2020
+description: 按类别列出的 Microsoft C/C++编译器命令行选项的引用。
+ms.date: 02/09/2020
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 191ea3d5d6f4647f7130757a4657820483d212b5
-ms.sourcegitcommit: 0f4ee9056d65043fa5a715f0ad1031c0ed30e2b6
+ms.openlocfilehash: d29076e6eae4bcbd15a4bc50bb48477e3f93152d
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "77034579"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257710"
 ---
 # <a name="compiler-options-listed-by-category"></a>按类别列出的编译器选项
 
-本文包含编译器选项的分类列表。 有关按字母顺序排序的列表，请参见 [Compiler Options Listed Alphabetically](compiler-options-listed-alphabetically.md)。
+本文包含编译器选项的分类列表。 有关按字母顺序排列的列表，请参阅[按字母顺序列出的编译器选项](compiler-options-listed-alphabetically.md)。
 
-## <a name="optimization"></a>优化
+## <a name="optimization"></a>Optimization
 
 |选项|目的|
 |------------|-------------|
@@ -70,7 +71,7 @@ ms.locfileid: "77034579"
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|将整数移动指令用于浮点值，并禁用特定浮点加载优化。|
 |[/Qspectre](qspectre.md)|为 CVE 2017-5753 启用缓解，适用于一类 Spectre 攻击。|
 |[/Qspectre-load](qspectre-load.md)|为每个加载指令生成序列化说明。|
-|[/Qspectre-load-cf](qspectre-load-cf.md)|为加载内存的每个控制流指令生成序列化说明。|
+|[/Qspectre-load-cf](qspectre-load-cf.md)|为每个加载内存的控制流指令生成序列化说明。|
 |[/Qvec-report](qvec-report-auto-vectorizer-reporting-level.md)|启用自动矢量化的报告级别。|
 |[/RTC](rtc-run-time-error-checks.md)|启用运行时错误检查。|
 |[/volatile](volatile-volatile-keyword-interpretation.md)|选择如何解释 volatile 关键字。|
@@ -88,7 +89,7 @@ ms.locfileid: "77034579"
 |[/Fm](fm-name-mapfile.md)|创建映射文件。|
 |[/Fo](fo-object-file-name.md)|创建对象文件。|
 |[/Fp](fp-name-dot-pch-file.md)|指定预编译头文件名。|
-|[/FR、/Fr](fr-fr-create-dot-sbr-file.md)|名称生成的 .sbr 浏览器文件。|
+|[/FR、/Fr](fr-fr-create-dot-sbr-file.md)|*`.sbr`* 浏览器文件生成的名称。|
 
 ## <a name="preprocessor"></a>预处理器
 
@@ -108,11 +109,11 @@ ms.locfileid: "77034579"
 |[/u](u-u-undefine-symbols.md)|移除所有的预定义宏。|
 |[/X](x-ignore-standard-include-paths.md)|忽略标准包含目录。|
 
-## <a name="language"></a>Language
+## <a name="language"></a>语言
 
 |选项|目的|
 |------------|-------------|
-|[/constexpr](constexpr-control-constexpr-evaluation.md)|在编译时控制 constexpr 计算。|
+|[/constexpr](constexpr-control-constexpr-evaluation.md)|在编译时控制**constexpr**计算。|
 |[/openmp](openmp-enable-openmp-2-0-support.md)|在源代码中启用 [#pragma omp](../../preprocessor/omp.md) 。|
 |[/vd](vd-disable-construction-displacements.md)|取消或启用隐藏的 `vtordisp` 类成员。|
 |[/vmb](vmb-vmg-representation-method.md)|对指向成员的指针使用最佳的基。|
@@ -128,7 +129,7 @@ ms.locfileid: "77034579"
 |[/ZH](zh.md)|为调试信息中的校验和指定 MD5、SHA-1 或 SHA-256。|
 |[/ZI](z7-zi-zi-debug-information-format.md)|将调试信息包含在与“编辑并继续”兼容的程序数据库中。 (仅限 x86)|
 |[/Zi](z7-zi-zi-debug-information-format.md)|生成完整的调试信息。|
-|[/Zl](zl-omit-default-library-name.md)|从 .obj 文件中移除默认库名。|
+|[/Zl](zl-omit-default-library-name.md)|删除 *`.obj`* 文件中的默认库名称。|
 |[/Zp](zp-struct-member-alignment.md) *n*|封装结构成员。|
 |[/Zs](zs-syntax-check-only.md)|只检查语法。|
 |[/ZW](zw-windows-runtime-compilation.md)|生成要在 Windows 运行时上运行的输出文件。|
@@ -142,12 +143,12 @@ ms.locfileid: "77034579"
 |[/LDd](md-mt-ld-use-run-time-library.md)|创建调试动态链接库。|
 |[/link](link-pass-options-to-linker.md)|将指定的选项传递给 LINK。|
 |[/LN](ln-create-msil-module.md)|创建 MSIL 模块。|
-|[/MD](md-mt-ld-use-run-time-library.md)|使用 MSVCRT.lib 编译以创建多线程 DLL。|
-|[/MDd](md-mt-ld-use-run-time-library.md)|使用 MSVCRTD.lib 编译以创建调试多线程 DLL。|
-|[/MT](md-mt-ld-use-run-time-library.md)|使用 LIBCMT.lib 编译以创建多线程可执行文件。|
-|[/MTd](md-mt-ld-use-run-time-library.md)|使用 LIBCMTD.lib 编译以创建调试多线程可执行文件。|
+|[/MD](md-mt-ld-use-run-time-library.md)|使用*msvcrt.lib*编译以创建多线程 DLL。|
+|[/MDd](md-mt-ld-use-run-time-library.md)|使用*msvcrtd.lib*编译以创建调试多线程 DLL。|
+|[/MT](md-mt-ld-use-run-time-library.md)|使用*libcmt.lib*编译以创建多线程可执行文件。|
+|[/MTd](md-mt-ld-use-run-time-library.md)|使用*libcmtd.lib*编译以创建调试多线程可执行文件。|
 
-## <a name="miscellaneous"></a>其他
+## <a name="miscellaneous"></a>杂项
 
 |选项|目的|
 |------------|-------------|
@@ -156,10 +157,10 @@ ms.locfileid: "77034579"
 |[/analyze](analyze-code-analysis.md)|启用代码分析。|
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|增加 .obj 文件中可寻址节的数目。|
 |[/c](c-compile-without-linking.md)|编译但不链接。|
-|[/cgthreads](cgthreads-code-generation-threads.md)|指定 cl.exe 线程数以用于优化和代码生成。|
-|[/errorReport](errorreport-report-internal-compiler-errors.md)|使你能够将内部编译器错误（ICE）信息直接提供给 Microsoft C++团队。|
-|[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|在诊断文本中显示传递给 cl.exe 的源代码文件的完整路径。|
-|[/FS](fs-force-synchronous-pdb-writes.md)|强制写入到程序数据库 (PDB) 文件以通过 MSPDBSRV.EXE 序列化。|
+|[/cgthreads](cgthreads-code-generation-threads.md)|指定用于优化和代码生成的*cl*线程数。|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)| 已弃用。 错误报告由[Windows 错误报告（WER）](/windows/win32/wer/windows-error-reporting)设置控制。 |
+|[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|在诊断文本中显示传递给*cl .exe*的源代码文件的完整路径。|
+|[/FS](fs-force-synchronous-pdb-writes.md)|强制将写入 PDB 文件以通过 Mspdbsrv.exe 序列化 *。EXE*。|
 |[/H](h-restrict-length-of-external-names.md)|已弃用。 限制外部（公共）名称的长度。|
 |[/HELP](help-compiler-command-line-help.md)|列出编译器选项。|
 |[/J](j-default-char-type-is-unsigned.md)|更改默认的 `char` 类型。|
@@ -184,7 +185,7 @@ ms.locfileid: "77034579"
 |[/wo](compiler-option-warning-level.md)|仅显示指定的警告一次。|
 |[/Wv](compiler-option-warning-level.md)|禁用更高版本的编译器引入的警告。|
 |[/WX](compiler-option-warning-level.md)|将警告视为错误。|
-|[/Yc](yc-create-precompiled-header-file.md)|创建.PCH 文件。|
+|[/Yc](yc-create-precompiled-header-file.md)|创建 *`.PCH`* 文件。|
 |[/Yd](yd-place-debug-information-in-object-file.md)|已弃用。 将完整的调试信息放在所有对象文件中。 改为使用 [/Zi](z7-zi-zi-debug-information-format.md) 。|
 |[/Yl](yl-inject-pch-reference-for-debug-library.md)|创建调试库时插入 PCH 引用。|
 |[/Yu](yu-use-precompiled-header-file.md)|在生成期间使用预编译头文件。|
@@ -201,7 +202,7 @@ ms.locfileid: "77034579"
 
 ## <a name="experimental-options"></a>实验性选项
 
-实验性选项只能由某些版本的编译器支持，并可能在不同的编译器版本中具有不同的行为。 对于试验性选项，通常是最好的文档，如[ C++ Microsoft 团队博客](https://devblogs.microsoft.com/cppblog/)。
+实验性选项只能由某些版本的编译器支持。 它们在不同的编译器版本中也可能具有不同的行为。 对于试验性选项，通常是最好的文档，如[ C++ Microsoft 团队博客](https://devblogs.microsoft.com/cppblog/)。
 
 |选项|目的|
 |------------|-------------|
@@ -213,6 +214,7 @@ ms.locfileid: "77034579"
 |选项|目的|
 |------------|-------------|
 |[/clr:noAssembly](clr-common-language-runtime-compilation.md)|已弃用。 请改用 [/LN (Create MSIL Module)](ln-create-msil-module.md) 。|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)| 已弃用。 错误报告由[Windows 错误报告（WER）](/windows/win32/wer/windows-error-reporting)设置控制。 |
 |[/Fr](fr-fr-create-dot-sbr-file.md)|已弃用。 创建无局部变量的浏览信息文件。|
 |[/Ge](ge-enable-stack-probes.md)|已弃用。 激活堆栈探测。 默认开启。|
 |[/Gm](gm-enable-minimal-rebuild.md)|已弃用。 启用最小重新生成。|
@@ -221,7 +223,7 @@ ms.locfileid: "77034579"
 |[/H](h-restrict-length-of-external-names.md)|已弃用。 限制外部（公共）名称的长度。|
 |[/Og](og-global-optimizations.md)|已弃用。 使用全局优化。|
 |[/QIfist](qifist-suppress-ftol.md)|已弃用。 曾用来指定如何从浮点类型转换到整型类型。|
-|[/V](v-version-number.md)|已弃用。 设置 .obj 文件版本字符串。|
+|[/V](v-version-number.md)|已弃用。 设置 *`.obj`* 文件版本字符串。|
 |[/Wp64](wp64-detect-64-bit-portability-issues.md)|已过时。 检测 64 位可移植性问题。|
 |[/Yd](yd-place-debug-information-in-object-file.md)|已弃用。 将完整的调试信息放在所有对象文件中。 改为使用 [/Zi](z7-zi-zi-debug-information-format.md) 。|
 |[/Zc:forScope-](zc-forscope-force-conformance-in-for-loop-scope.md)|已弃用。 在 for 循环范围中禁用一致性。|
@@ -230,6 +232,6 @@ ms.locfileid: "77034579"
 
 ## <a name="see-also"></a>另请参阅
 
-[C/C++ 生成参考](c-cpp-building-reference.md)<br/>
-[MSVC 编译器选项](compiler-options.md)<br/>
-[MSVC 编译器命令行语法](compiler-command-line-syntax.md)<br/>
+[C/C++构建引用](c-cpp-building-reference.md)\
+[MSVC 编译器选项](compiler-options.md)\
+[MSVC 编译器命令行语法](compiler-command-line-syntax.md)

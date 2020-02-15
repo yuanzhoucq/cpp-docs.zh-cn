@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::complex [C++], imag
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
-ms.openlocfilehash: 687665d2ad8bf80f4f2db07ce11c4866ff1ee903
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 0c72726bfb92965a2152830d7ce77ae13f763d35
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688253"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257970"
 ---
 # <a name="complex-class"></a>complex 类
 
@@ -30,7 +30,7 @@ class complex
 
 ## <a name="remarks"></a>备注
 
-类 `Type` 的对象：
+类 `Type`的对象：
 
 - 具有公共默认构造函数、析构函数、复制构造函数、赋值运算符和常规行为。
 
@@ -40,9 +40,9 @@ class complex
 
 具体而言，复制构造和后跟分配的默认构造之间可能不存在任何细微的差异。 对类 `Type` 的对象的操作都不会引发异常。
 
-对于三个浮点类型，类模板的显式专用化存在。 在此实现中，`Type` 的任何其他类型的值都转换为**double**进行计算，并将**double**结果赋回 `Type` 类型的存储对象。
+对于三个浮点类型，类模板的显式专用化存在。 在此实现中，`Type` 的任何其他类型的值都转换为**double**进行计算，并将**double**结果赋回 `Type`类型的存储对象。
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="constructors"></a>构造函数
 
@@ -73,8 +73,6 @@ class complex
 |[operator/=](#op_div_eq)|用一个除数除以目标复数，这可能是复数或与复数的实部和虚部相同的类型。|
 |[operator=](#op_eq)|向目标复数分配一个数，其中所分配的数可能是复数或与所分配的复数的实部和虚部相同的类型。|
 
-
-
 ## <a name="complex"></a>过于
 
 构造一个具有指定实部和虚部的复数，或作为某些其他复数的副本的复数。
@@ -89,15 +87,15 @@ constexpr complex(
     const complex<Other>& complexNum);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*_RealVal* \
+*_RealVal*\
 用于初始化正在构造的复数的实部值。
 
-*_ImagVal* \
+*_ImagVal*\
 用于初始化正在构造的复数的虚部值。
 
-*complexNum* \
+*complexNum*\
 一个复数，其实部和虚部用于初始化正在构造的复数。
 
 ### <a name="remarks"></a>备注
@@ -113,7 +111,7 @@ complex(const complex<Other>& right);
 
 替换为：
 
-```
+```cpp
 complex(const complex& right);
 ```
 
@@ -169,9 +167,9 @@ T imag() const;
 T imag(const T& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*right* \
+*right*\
 要提取其虚数值的复数。
 
 ### <a name="return-value"></a>返回值
@@ -226,9 +224,9 @@ complex<Type>& operator*=(const Type& right);
 complex<Type>& operator*=(const complex<Type>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*right* \
+*right*\
 复数或与目标复数的参数具有相同类型的数。
 
 ### <a name="return-value"></a>返回值
@@ -311,9 +309,9 @@ complex<Type>& operator+=(const Type& right);
 complex<Type>& operator+=(const complex<Type>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*right* \
+*right*\
 复数或与目标复数的参数具有相同类型的数。
 
 ### <a name="return-value"></a>返回值
@@ -414,12 +412,12 @@ complex<Type>& operator-=(const Type& _RealPart);
 complex<Type>& operator-=(const complex<Type>& complexNum);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*complexNum* \
+*complexNum*\
 要从目标复数减去的复数。
 
-*_RealPart* \
+*_RealPart*\
 要从目标复数减去的实数。
 
 ### <a name="return-value"></a>返回值
@@ -522,12 +520,12 @@ complex<Type>& operator/=(const Type& _RealPart);
 complex<Type>& operator/=(const complex<Type>& complexNum);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*complexNum* \
+*complexNum*\
 要从目标复数减去的复数。
 
-*_RealPart* \
+*_RealPart*\
 要从目标复数减去的实数。
 
 ### <a name="return-value"></a>返回值
@@ -624,9 +622,9 @@ complex<Type>& operator=(const complex<Other>& right);
 complex<Type>& operator=(const Type& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*right* \
+*right*\
 复数或与目标复数的参数具有相同类型的数。
 
 ### <a name="return-value"></a>返回值
@@ -701,9 +699,9 @@ constexpr T real() const;
 T real(const T& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*right* \
+*right*\
 要提取其实数值的复数。
 
 ### <a name="return-value"></a>返回值
@@ -749,7 +747,7 @@ The imaginary part of c1 is c1.imag() = 3.
 
 该类型代表用于表示复数的实部和虚部的数据类型。
 
-```
+```cpp
 typedef Type value_type;
 ```
 
@@ -782,6 +780,6 @@ Specifying initial real & imaginary parts
 of type value_type: c1 = (3,4).
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

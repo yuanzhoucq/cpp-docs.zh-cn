@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - tuple class
 ms.assetid: c38749be-ae4d-41f3-98ea-6aa3250de9a3
-ms.openlocfilehash: 1727d3a12b7186d3cc868ef6bb78711774057407
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 9890a6a9dea1671f14b66897a80f4b49861dff2b
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688862"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257099"
 ---
 # <a name="tuple-class"></a>tuple 类
 
@@ -20,7 +20,7 @@ ms.locfileid: "72688862"
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 class tuple {
    tuple();
    explicit tuple(P1, P2, ..., PN); // 0 < N
@@ -39,14 +39,14 @@ class tuple {
 };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*TN* \
+*TN*\
 第 N 个元组元素的类型。
 
 ## <a name="remarks"></a>备注
 
-类模板描述了一个对象，该对象在 `0 <= N <= Nmax` 的位置分别存储 `T1`、`T2`、`TN` 的 N 个对象。 元组实例的范围 `tuple<T1, T2, ..., TN>` 是其模板参数 `N` 的数量。 模板参数 `Ti` 和该类型的相应存储值的索引 `i - 1`。 因此，虽然我们将此文档中的类型从1到 N 进行编号，但相应的索引值的范围介于0到 N-1 之间。
+类模板描述了一个对象，该对象在 `0 <= N <= Nmax`的位置分别存储 `T1`、`T2`、`TN`的 N 个对象。 元组实例的范围 `tuple<T1, T2, ..., TN>` 是其模板参数 `N` 的数量。 模板参数 `Ti` 和该类型的相应存储值的索引 `i - 1`。 因此，虽然我们将此文档中的类型从1到 N 进行编号，但相应的索引值的范围介于0到 N-1 之间。
 
 ## <a name="example"></a>示例
 
@@ -135,17 +135,17 @@ template <class U1, class U2>
    tuple& operator=(pair<U1, U2>&& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *取消*\
 第 N 个复制的元组元素的类型。
 
-*right* \
+*right*\
 要从其进行复制的元组。
 
 ### <a name="remarks"></a>备注
 
-前两个成员运算符将*right*的元素分配给 `*this` 的相应元素。 第三个成员运算符将 `right.first` 分配到 `*this` 的索引 0 处的元素，将 `right.second` 分配到索引 1 处的元素。 所有三个成员运算符都将返回 `*this`。
+前两个成员运算符将*right*的元素分配给 `*this`的相应元素。 第三个成员运算符将 `right.first` 分配到 `*this` 的索引 0 处的元素，将 `right.second` 分配到索引 1 处的元素。 所有三个成员运算符都将返回 `*this`。
 
 剩余的成员运算符类似于之前的构造函数，但具有[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
@@ -207,12 +207,12 @@ template <class... Types>
    void swap(tuple<Types...&> left, tuple<Types...&> right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 一个元组，其元素将与元组*权限*的元素进行交换。
 
-*right* \
+*right*\
 一个元组，其元素将与要*留下*的元组的元素进行交换。
 
 ### <a name="remarks"></a>备注
@@ -244,12 +244,12 @@ template <class U1, class U2>
    constexpr tuple(pair<U1, U2>&&);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *取消*\
 第 N 个复制的元组元素的类型。
 
-*right* \
+*right*\
 要从其进行复制的元组。
 
 ### <a name="remarks"></a>备注

@@ -1,6 +1,7 @@
 ---
 title: /ERRORREPORT (editbin.exe)
-ms.date: 11/04/2016
+description: Microsoft EDITBIN utility/ERRORREPORT 命令行选项的参考。
+ms.date: 02/09/2020
 f1_keywords:
 - /ERRORREPORT
 helpviewer_keywords:
@@ -8,25 +9,26 @@ helpviewer_keywords:
 - ERRORREPORT editbin option
 - /ERRORREPORT editbin option
 ms.assetid: eca66ac3-b754-4bd7-9dd4-e04fc79a71b6
-ms.openlocfilehash: a23d64b8491b2521746eb3bfab2372ed563f2c58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c2ec8b6cda7b794114ed38cfb72b885bf2e38a1
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271705"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257583"
 ---
 # <a name="errorreport-editbinexe"></a>/ERRORREPORT (editbin.exe)
 
-```
-/ERRORREPORT[NONE | PROMPT | QUEUE | SEND ]
-```
+> [!NOTE]
+> /ERRORREPORT 选项已弃用。 从 Windows Vista 开始，错误报告由[Windows 错误报告（WER）](/windows/win32/wer/windows-error-reporting)设置控制。
+
+## <a name="syntax"></a>语法
+
+> **/ERRORREPORT** \[ **NONE** \| **PROMPT** \| **QUEUE** \| **SEND** ]
 
 ## <a name="remarks"></a>备注
 
-如果 editbin.exe 在运行时失败，则可以使用 **/ERRORREPORT**有关这些内部错误向 Microsoft 发送信息。
+**/ERRORREPORT**参数将被 Windows 错误报告服务设置重写。 如果 Windows 错误报告启用了报表，则 EDITBIN 会自动向 Microsoft 发送内部错误报表。 如果 Windows 错误报告禁用了报表，则不发送任何报表。
 
-有关详细信息 **/ERRORREPORT**，请参阅[/errorReport （报告内部编译器错误）](errorreport-report-internal-compiler-errors.md)。
-
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [EDITBIN 选项](editbin-options.md)

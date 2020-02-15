@@ -1,6 +1,7 @@
 ---
 title: 运行 NMAKE
-ms.date: 10/29/2019
+description: Microsoft NMAKE 命令行选项的参考指南。
+ms.date: 02/09/2020
 helpviewer_keywords:
 - targets, building
 - response files, NMAKE
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - NMAKE program, running
 - command files, NMAKE
 ms.assetid: 0421104d-8b7b-4bf3-86c1-928d9b7c1a8c
-ms.openlocfilehash: ed56b7cd69b683caa84f184d9d72e70aac12add3
-ms.sourcegitcommit: 6ed1bc5b26dc60a780c1fc5f2f19d57ba1dc47d8
+ms.openlocfilehash: bfada33a89c04d25bf7444cbf3b1e7ef3ed44385
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73144539"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257582"
 ---
 # <a name="running-nmake"></a>运行 NMAKE
 
@@ -33,14 +34,14 @@ NMAKE 仅生成指定的*目标*，如果未指定，则生成生成文件中的
 
 NMAKE 选项如下表所述。 选项前面有一个斜杠（`/`）或短划线（`-`），不区分大小写。 使用[`!CMDSWITCHES`](makefile-preprocessing-directives.md)更改生成文件或 "工具" 中的选项设置。
 
-| 选项 | 目标 |
+| 选项 | 目的 |
 | ------------ | ------------- |
 | **/A** | 强制生成所有已计算的目标，即使与依赖项相比不过期。 不强制生成不相关的目标。 |
 | **/B** | 即使时间戳相等，也强制生成。 建议仅用于 fast 系统（解析为两秒钟或更少）。 |
 | **/C** | 禁止显示默认输出，包括非致命 NMAKE 错误或警告、时间戳和 NMAKE 版权消息。 禁止使用 **/k**发出的警告。 |
 | **/D** | 显示每个已评估的目标和依赖项的时间戳，并显示一条不存在的目标消息。 使用 **/p**调试生成文件非常有用。 使用 `!CMDSWITCHES` 设置或清除 **/d**作为生成文件的一部分。 |
 | **/E** | 导致环境变量重写生成文件宏定义。 |
-| **/ERRORREPORT** [**无** &#124; **提示** &#124;队列&#124; **发送**] | 如果 nmake 在运行时失败，则可以使用 **/ERRORREPORT**向 Microsoft 发送有关这些内部错误的信息。<br /><br /> 有关详细信息，请参阅 [/errorReport（报告内部编译器错误）](errorreport-report-internal-compiler-errors.md)。 |
+| **/ERRORREPORT** [**无** &#124; **提示** &#124;队列&#124; **发送**] | 已弃用。 [Windows 错误报告（WER）](/windows/win32/wer/windows-error-reporting)设置控制报告。 |
 | **/F** *filename* | 指定*filename*作为生成文件。 空格或制表符可以位于*filename*之前。 为每个生成文件指定 **/f**一次。 若要从标准输入提供生成文件，请为*文件名*指定短划线（`-`），并使用**F6**或**CTRL + Z**结束键盘输入。 |
 | **/G** | 显示 `!INCLUDE` 指令附带的生成生成。 有关详细信息，请参阅[Makefile 预处理指令](makefile-preprocessing-directives.md)。 |
 | **/Help**， **/？** | 显示 NMAKE 命令行语法的简短摘要。 |
@@ -73,6 +74,6 @@ NMAKE 返回以下退出代码：
 | 4 | 系统错误-内存不足 |
 | 255 | 目标不是最新的（仅在使用 **/q**时发出） |
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [NMAKE 参考](nmake-reference.md)

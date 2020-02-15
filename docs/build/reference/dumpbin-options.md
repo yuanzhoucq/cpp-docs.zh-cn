@@ -1,17 +1,18 @@
 ---
 title: DUMPBIN 选项
-ms.date: 10/24/2019
+description: Microsoft DUMPBIN 实用程序命令行选项的参考指南。
+ms.date: 02/09/2020
 f1_keywords:
 - dumpbin
 helpviewer_keywords:
 - DUMPBIN program, options
 ms.assetid: 563b696e-7599-4480-94b9-014776289ec8
-ms.openlocfilehash: 81c66f1971294531a2904a0b681819476bcc1eb2
-ms.sourcegitcommit: 6ed1bc5b26dc60a780c1fc5f2f19d57ba1dc47d8
+ms.openlocfilehash: 98a4fd221d66b93f945667deadaba3180f8d3e66
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73144553"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257723"
 ---
 # <a name="dumpbin-options"></a>DUMPBIN 选项
 
@@ -33,7 +34,7 @@ DUMPBIN 具有以下选项：
 
 - [/DISASM\[： {BYTES\|NOBYTES}\]](disasm.md)
 
-- [/ERRORREPORT： {NONE |PROMPT |QUEUE |收发](errorreport-dumpbin-exe.md)
+- [/ERRORREPORT： {NONE |PROMPT |QUEUE |发送}](errorreport-dumpbin-exe.md) （不推荐使用）
 
 - [/EXPORTS](dash-exports.md)
 
@@ -71,9 +72,9 @@ DUMPBIN 具有以下选项：
 
 - [/TLS](tls.md)
 
-若要列出命令行上的 DUMPBIN 支持的选项，请使用 **/？** 选.
+若要列出命令行上的 DUMPBIN 支持的选项，请使用 **/？** 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [其他 MSVC 生成工具](c-cpp-build-tools.md)\
 [DUMPBIN 命令行](dumpbin-command-line.md)\
