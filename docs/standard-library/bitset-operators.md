@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::operator&amp; (bitset)
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
-ms.openlocfilehash: cd1dfc035fde06c4be0f90e1bd11b231d64ab811
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: 23c6abffe7e433a0550c45502a12e9adaf652a33
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890133"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257983"
 ---
 # <a name="ltbitsetgt-operators"></a>&lt;bitset&gt; 运算符
 
@@ -33,12 +33,12 @@ operator&(
     const bitset<size>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 要将其各自的元素使用按位 `AND` 组合的两个位组中的第一个。
 
-*right* \
+*right*\
 要将其各自的元素使用按位 `AND` 组合的两个 valarray 中的第二个。
 
 ### <a name="return-value"></a>返回值
@@ -77,16 +77,16 @@ bitset 3: 0001
 
 将位序列的文本表示形式插入到输出流中。
 
-```
+```cpp
 template <class CharType, class Traits, size_t N>
 basic_ostream<CharType, Traits>& operator<<(
     basic_ostream<CharType, Traits>& ostr,
     const bitset<N>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*right* \
+*right*\
 要作为字符串插入到输出流的 **bitset\<N>** 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -134,30 +134,30 @@ int main( )
 
 将位字符的字符串读入位组。
 
-```
+```cpp
 template <class CharType, class Traits, size_t Bits>
 basic_istream<CharType, Traits>& operator>> (
     basic_istream<CharType, Traits>& i_str,
     bitset<N>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *i_str*\
 输入到输入流以插入位组的字符串。
 
-*right* \
+*right*\
 正在从输入流接收位的位组。
 
 ### <a name="return-value"></a>返回值
 
-模板函数返回字符串*i_str*。
+模板函数返回*i_str*的字符串。
 
 ### <a name="remarks"></a>备注
 
-模板函数重载 `operator>>`*在位组中*存储 `bitset(str)`的值，其中 `str` 是从*i_str*提取的`< CharType, Traits, allocator< CharType > >&` [basic_string](basic-string-class.md)类型的对象。
+模板函数重载 `operator>>` 在位组中存储 `bitset(str)`的值，其中 `str` 是从 *`< CharType, Traits, allocator< CharType > >&`* 提取的[basic_string](basic-string-class.md) i_str*类型的对象*。
 
-模板函数从*i_str*中提取元素，并将它们插入到位组中，直到：
+模板函数从*i_str*提取元素，并将它们插入到位组中：
 
 - 已从输入流提取所有的位元素并将其存储在位组中。
 
@@ -226,12 +226,12 @@ operator^(
     const bitset<size>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 要将其各自的元素使用按位 `EXCLUSIVE-OR` 组合的两个位组中的第一个。
 
-*right* \
+*right*\
 要将其各自的元素使用按位 `EXCLUSIVE-OR` 组合的两个 valarray 中的第二个。
 
 ### <a name="return-value"></a>返回值
@@ -278,12 +278,12 @@ operator|(
     const bitset<size>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 要将其各自的元素使用按位 `OR` 组合的两个位组中的第一个。
 
-*right* \
+*right*\
 要将其各自的元素使用按位 `OR` 组合的两个 valarray 中的第二个。
 
 ### <a name="return-value"></a>返回值

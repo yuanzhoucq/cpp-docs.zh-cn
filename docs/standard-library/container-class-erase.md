@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - erase method
 ms.assetid: abc091c5-5a80-4bd8-93a8-a2d9bde2efec
-ms.openlocfilehash: 1463a854c314884f0b3b6bffa5d37dfb7fec4a6f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 1fa3fe7dee10f3033b84a671fdc35c193cd6ec3c
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454515"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257892"
 ---
 # <a name="container-classerase"></a>Container Class::erase
 
@@ -20,9 +20,8 @@ ms.locfileid: "68454515"
 
 ## <a name="syntax"></a>语法
 
-```
-
-    iterator erase(
+```cpp
+iterator erase(
     iterator _Where);
 
 iterator erase(
@@ -32,10 +31,10 @@ iterator erase(
 
 ## <a name="remarks"></a>备注
 
-第一个成员函数删除由 *_Where*指向的受控序列的元素。 第二个成员函数将移除范围 [`first`、`last`) 中的受控序列的元素。 两者都返回一个迭代器，指定已移除的任何元素之外保留的第一个元素或 [end](../standard-library/container-class-end.md)（若此类元素不存在）。
+第一个成员函数通过 *_Where*删除受控序列的元素。 第二个成员函数将移除范围 [`first`、`last`) 中的受控序列的元素。 两者都返回一个迭代器，指定已移除的任何元素之外保留的第一个元素或 [end](../standard-library/container-class-end.md)（若此类元素不存在）。
 
 成员函数仅在复制操作引发异常时才引发异常。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Sample Container 类](../standard-library/sample-container-class.md)

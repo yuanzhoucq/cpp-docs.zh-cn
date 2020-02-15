@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - empty method
 ms.assetid: 2055418d-3c42-4d28-a7db-111586119ed9
-ms.openlocfilehash: 30b21e9826bdeca279a9baea9029fa607faa6c77
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 7417a0504435eb5d1391bc170c9b878524ac21c7
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450815"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257905"
 ---
 # <a name="container-classempty"></a>Container Class::empty
 
@@ -20,11 +20,10 @@ ms.locfileid: "68450815"
 
 ## <a name="syntax"></a>语法
 
-```
-
+```cpp
 bool empty() const;
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Sample Container 类](../standard-library/sample-container-class.md)

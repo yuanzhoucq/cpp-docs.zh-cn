@@ -5,12 +5,12 @@ f1_keywords:
 - system_error/std::errc
 - system_error/std::io_errc
 ms.assetid: b21321b7-404a-40de-8777-a85b77c6fa58
-ms.openlocfilehash: 7587261c81739bf19aa0dc4bb80459efa617ad6a
-ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.openlocfilehash: cff8a58545409c4358cd303e41d27520edd5d552
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898755"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257775"
 ---
 # <a name="ltsystem_errorgt-enums"></a>&lt;system_error&gt; 枚举
 
@@ -18,7 +18,7 @@ ms.locfileid: "74898755"
 
 为 `<errno.h>`中的 POSIX 定义的所有错误代码宏提供符号名称。
 
-```
+```cpp
 class errc {
    address_family_not_supported = EAFNOSUPPORT,
    address_in_use = EADDRINUSE,
@@ -107,7 +107,7 @@ class errc {
 
 为 \<iostream> 中的错误条件提供符号名称。 可用于创建 [error_condition](../standard-library/error-condition-class.md) 对象，其用于与由 [ios_base::failure](../standard-library/ios-base-class.md#failure)`code()` 函数返回的值进行比较。
 
-```
+```cpp
 class io_errc {
    stream = 1
 };

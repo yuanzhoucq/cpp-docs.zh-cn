@@ -1,18 +1,21 @@
 ---
 title: 按字母顺序列出的编译器选项
-ms.date: 01/08/2020
+description: Microsoft C/C++编译器命令行选项的按字母顺序排列的引用列表。
+ms.date: 02/09/2020
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: d64a41802c18627cf8e07f0d83b53fa5a4555f5b
-ms.sourcegitcommit: 0f4ee9056d65043fa5a715f0ad1031c0ed30e2b6
+ms.openlocfilehash: 6b3412378aa4bb36ea861a81758d2227df3432c6
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "77034592"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257736"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>按字母顺序列出的编译器选项
 
-下面是一个完整的按字母顺序的编译器选项列表。 有关按类别排序的列表，请参见 [按类别列出的编译器选项](compiler-options-listed-by-category.md)。
+此表包含编译器选项的按字母顺序排序的列表。 有关按类别列出的编译器选项的列表，请参阅[按类别列出的编译器选项](compiler-options-listed-by-category.md)一文。
+
+## <a name="compiler-options"></a>编译器选项
 
 |选项|目的|
 |------------|-------------|
@@ -27,19 +30,19 @@ ms.locfileid: "77034592"
 |[/c](c-compile-without-linking.md)|编译但不链接。|
 |[/cgthreads](cgthreads-code-generation-threads.md)|指定 cl.exe 线程数以用于优化和代码生成。|
 |[/clr](clr-common-language-runtime-compilation.md)|生成要在公共语言运行时上运行的输出文件。|
-|[/constexpr](constexpr-control-constexpr-evaluation.md)|在编译时控制 constexpr 计算。|
+|[/constexpr](constexpr-control-constexpr-evaluation.md)|在编译时控制**constexpr**计算。|
 |[/D](d-preprocessor-definitions.md)|定义常数和宏。|
 |[/diagnostics](diagnostics-compiler-diagnostic-options.md)|控制诊断消息的格式。|
 |[/doc](doc-process-documentation-comments-c-cpp.md)|处理 XML 文件的文档注释。|
 |[/E](e-preprocess-to-stdout.md)|将预处理器输出复制到标准输出。|
 |[/EH](eh-exception-handling-model.md)|指定异常处理模型。|
 |[/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|将预处理器输出复制到标准输出。|
-|[/errorReport](errorreport-report-internal-compiler-errors.md)|允许你将内部编译器错误（ICE）信息直接提供给 Microsoft C++团队。|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)| 已弃用。 错误报告由[Windows 错误报告（WER）](/windows/win32/wer/windows-error-reporting)设置控制。 |
 |[/execution-charset](execution-charset-set-execution-character-set.md)|设置执行字符集。|
 |[/experimental： module](experimental-module.md)|启用实验性模块支持。|
 |[/experimental：预处理器](experimental-preprocessor.md)|启用实验相容预处理器支持。|
 |[/F](f-set-stack-size.md)|设置堆栈大小。|
-|[/favor](favor-optimize-for-architecture-specifics.md)|生成针对特定 x64 体系结构或适用于 AMD64 和扩展内存64技术（EM64T）体系结构中的微体系结构的详细信息进行优化的代码。|
+|[/favor](favor-optimize-for-architecture-specifics.md)|生成针对特定 x64 体系结构进行了优化的代码。 或者，适用于 AMD64 和 EM64T 体系结构中的特定微体系结构。|
 |[/FA](fa-fa-listing-file.md)|创建列表文件。|
 |[/Fa](fa-fa-listing-file.md)|设置列表文件名。|
 |[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|在诊断文本中显示传递给 cl.exe 的源代码文件的完整路径。|
@@ -52,7 +55,7 @@ ms.locfileid: "77034592"
 |[/fp](fp-specify-floating-point-behavior.md)|指定浮点行为。|
 |[/Fp](fp-name-dot-pch-file.md)|指定预编译头文件名。|
 |[/FR](fr-fr-create-dot-sbr-file.md)<br /><br /> [/Fr](fr-fr-create-dot-sbr-file.md)|生成浏览器文件。 **/Fr** 已弃用。|
-|[/FS](fs-force-synchronous-pdb-writes.md)|强制写入到程序数据库 (PDB) 文件以通过 MSPDBSRV.EXE 序列化。|
+|[/FS](fs-force-synchronous-pdb-writes.md)|通过 MSPDBSRV.EXE 强制对程序数据库（PDB）文件的所有写入操作进行序列化.EXE.|
 |[/FU](fu-name-forced-hash-using-file.md)|强制使用文件名，就像它已被传递到 [#using](../../preprocessor/hash-using-directive-cpp.md) 指令一样。|
 |[/Fx](fx-merge-injected-code.md)|将插入的代码与源文件合并。|
 |[/GA](ga-optimize-for-windows-application.md)|优化 Windows 应用程序的代码。|
@@ -114,7 +117,7 @@ ms.locfileid: "77034592"
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|将整数移动指令用于浮点值，并禁用特定浮点加载优化。|
 |[/Qspectre](qspectre.md)|指定编译器生成指令以缓解某些 Spectre 变体 1 安全漏洞。|
 |[/Qspectre-load](qspectre-load.md)|指定编译器生成序列化说明，以根据负载说明减少 Spectre 的安全漏洞。|
-|[/Qspectre-load-cf](qspectre-load-cf.md)|指定编译器的序列化说明的生成，以根据负载内存的控制流指令来减少 Spectre 的安全漏洞。|
+|[/Qspectre-load-cf](qspectre-load-cf.md)|指定编译器的序列化说明的生成，以根据加载内存的控制流指令来减少 Spectre 的安全漏洞。|
 |[/Qvec-report（自动矢量化程序报告等级）](qvec-report-auto-vectorizer-reporting-level.md)|启用自动矢量化的报告级别。|
 |[/RTC](rtc-run-time-error-checks.md)|启用运行时错误检查。|
 |[/sdl](sdl-enable-additional-security-checks.md)|启用更多安全功能和警告。|
@@ -172,5 +175,5 @@ ms.locfileid: "77034592"
 
 ## <a name="see-also"></a>另请参阅
 
-[MSVC 编译器选项](compiler-options.md)<br/>
+[MSVC 编译器选项](compiler-options.md)\
 [MSVC 编译器命令行语法](compiler-command-line-syntax.md)

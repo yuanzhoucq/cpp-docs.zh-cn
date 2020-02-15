@@ -1,7 +1,7 @@
 ---
 title: MSVC 链接器选项
 description: Microsoft LINK 链接器支持的选项的列表。
-ms.date: 09/24/2019
+ms.date: 02/09/2020
 f1_keywords:
 - link
 helpviewer_keywords:
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - libraries [C++], linking to COFF
 - LINK tool [C++], linker options
 ms.assetid: c1d51b8a-bd23-416d-81e4-900e02b2c129
-ms.openlocfilehash: c7a44be5bb21bf83d621bd57c45713bd01e22cb6
-ms.sourcegitcommit: a361362354f6ce51eda4ffdb016b81c24cd225cb
+ms.openlocfilehash: 12710aff1cf833e277e48ab2f13abc702c7d6c14
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71712692"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257541"
 ---
 # <a name="linker-options"></a>链接器选项
 
@@ -31,13 +31,13 @@ LINK.exe 将通用对象文件格式 (COFF) 对象文件和库链接起来，以
 
 - [保留字](reserved-words.md)
 
-在命令行上，链接器选项不区分大小写;例如，/base 和/BASE 的含义相同。 有关如何在命令行或 Visual Studio 中指定每个选项的详细信息，请参阅适用于该选项的文档。
+在命令行上，链接器选项不区分大小写;例如，`/base` 和 `/BASE` 表示相同的内容。 有关如何在命令行或 Visual Studio 中指定每个选项的详细信息，请参阅适用于该选项的文档。
 
 可以使用 [注释](../../preprocessor/comment-c-cpp.md) 杂注指定一些链接器选项。
 
 ## <a name="linker-options-listed-alphabetically"></a>按字母顺序列出的链接器选项
 
-|选项|目标|
+|选项|目的|
 |------------|-------------|
 |[@](at-specify-a-linker-response-file.md)|指定响应文件。|
 |[/ALIGN](align-section-alignment.md)|指定每一节的对齐方式。|
@@ -64,21 +64,21 @@ LINK.exe 将通用对象文件格式 (COFF) 对象文件和库链接起来，以
 |[/DEPENDENTLOADFLAG](dependentloadflag.md)|设置依赖 DLL 加载的默认标志。|
 |[/DLL](dll-build-a-dll.md)|生成 DLL。|
 |[/DRIVER](driver-windows-nt-kernel-mode-driver.md)|创建内核模式驱动程序。|
-|[/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)|使用地址空间布局随机化 (ASLR) 功能，指定是否生成可在加载时随机重新设定基址的可执行文件映像。|
+|[/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)|指定是否在加载时使用地址空间布局随机化（ASLR）功能生成变基的可执行映像。|
 |[/ENTRY](entry-entry-point-symbol.md)|设置起始地址。|
-|[/errorReport](errorreport-report-internal-linker-errors.md)|向 Microsoft 报告内部链接器错误。|
+|[/ERRORREPORT](errorreport-report-internal-linker-errors.md)| 已弃用。 错误报告由[Windows 错误报告（WER）](/windows/win32/wer/windows-error-reporting)设置控制。 |
 |[/EXPORT](export-exports-a-function.md)|导出函数。|
 |[/FILEALIGN](filealign.md)|将输出文件中的部分与指定值的倍数对齐。|
 |[/FIXED](fixed-fixed-base-address.md)|创建只能在其首选基址加载的程序。|
 |[/FORCE](force-force-file-output.md)|强制完成链接，即使符号无法解析或已定义多次。|
 |[/FUNCTIONPADMIN](functionpadmin-create-hotpatchable-image.md)|创建可进行热修补的映像。|
-|[/GENPROFILE、/FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)|这两个选项均通过链接器指定 .pgd 文件的生成，以支持按配置文件优化 (PGO)。 /GENPROFILE 和 /FASTGENPROFILE 使用不同的默认参数。|
+|[/GENPROFILE、/FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)|这两个选项都指定通过链接器生成 *`.pgd`* 文件，以支持按配置文件优化（PGO）。 /GENPROFILE 和 /FASTGENPROFILE 使用不同的默认参数。|
 |[/GUARD](guard-enable-guard-checks.md)|启用控制流防护保护。|
 |[/HEAP](heap-set-heap-size.md)|设置堆的大小（以字节为单位）。|
 |[/HIGHENTROPYVA](highentropyva-support-64-bit-aslr.md)|指定对高熵 64 位地址空间布局随机化 (ASLR) 的支持。|
-|[/IDLOUT](idlout-name-midl-output-files.md)|指定 .idl 文件和其他 MIDL 输出文件的名称。|
+|[/IDLOUT](idlout-name-midl-output-files.md)|指定 *`.idl`* 文件和其他 MIDL 输出文件的名称。|
 |[/IGNORE](ignore-ignore-specific-warnings.md)|禁止显示指定链接器警告的输出。|
-|[/IGNOREIDL](ignoreidl-don-t-process-attributes-into-midl.md)|防止将特性信息处理到 .idl 文件中。|
+|[/IGNOREIDL](ignoreidl-don-t-process-attributes-into-midl.md)|阻止将属性信息处理到 *`.idl`* 文件中。|
 |[/IMPLIB](implib-name-import-library.md)|重写默认的导入库名。|
 |[/INCLUDE](include-force-symbol-references.md)|强制符号引用。|
 |[/INCREMENTAL](incremental-link-incrementally.md)|控制增量链接。|
@@ -100,7 +100,7 @@ LINK.exe 将通用对象文件格式 (COFF) 对象文件和库链接起来，以
 |[/MAPINFO](mapinfo-include-information-in-mapfile.md)|包括映射文件中的指定信息。|
 |[/MERGE](merge-combine-sections.md)|合并节。|
 |[/MIDL](midl-specify-midl-command-line-options.md)|指定 MIDL 命令行选项。|
-|[/NATVIS](natvis-add-natvis-to-pdb.md)|将 Natvis 文件中的调试器可视化工具添加到 PDB。|
+|[/NATVIS](natvis-add-natvis-to-pdb.md)|将 Natvis 文件中的调试器可视化工具添加到程序数据库（PDB）。|
 |[/NOASSEMBLY](noassembly-create-a-msil-module.md)|取消创建 .NET Framework 程序集。|
 |[/NODEFAULTLIB](nodefaultlib-ignore-libraries.md)|在解析外部引用时忽略所有（或指定的）默认库。|
 |[/NOENTRY](noentry-no-entry-point.md)|创建纯资源 DLL。|
@@ -109,22 +109,22 @@ LINK.exe 将通用对象文件格式 (COFF) 对象文件和库链接起来，以
 |[/OPT](opt-optimizations.md)|控制 LINK 优化。|
 |[/ORDER](order-put-functions-in-order.md)|按预先确定的顺序将 COMDAT 放置到映像中。|
 |[/OUT](out-output-file-name.md)|指定输出文件名。|
-|[/PDB](pdb-use-program-database.md)|创建程序数据库 (PDB) 文件。|
+|[/PDB](pdb-use-program-database.md)|创建 PDB 文件。|
 |[/PDBALTPATH](pdbaltpath-use-alternate-pdb-path.md)|使用备用位置来保存 PDB 文件。|
-|[/PDBSTRIPPED](pdbstripped-strip-private-symbols.md)|创建没有私有符号的程序数据库 (PDB) 文件。|
-|[/PGD](pgd-specify-database-for-profile-guided-optimizations.md)|为按配置文件优化指定 .pgd 文件。|
+|[/PDBSTRIPPED](pdbstripped-strip-private-symbols.md)|创建没有私有符号的 PDB 文件。|
+|[/PGD](pgd-specify-database-for-profile-guided-optimizations.md)|为按配置文件优化指定 *`.pgd`* 文件。|
 |[/POGOSAFEMODE](pogosafemode-linker-option.md)|**过时**创建线程安全的 PGO 检测生成。|
 |[/PROFILE](profile-performance-tools-profiler.md)|生成一个可与“性能工具”探查器结合使用的输出文件。|
-|[/RELEASE](release-set-the-checksum.md)|在 .exe 标头中设置校验和。|
+|[/RELEASE](release-set-the-checksum.md)|在 *`.exe`* 标头中设置校验和。|
 |[/SAFESEH](safeseh-image-has-safe-exception-handlers.md)|指定映像将包含安全异常处理程序表。|
 |[/SECTION](section-specify-section-attributes.md)|重写节的特性。|
 |[/SOURCELINK](sourcelink.md)|指定要添加到 PDB 的 SourceLink 文件。|
 |[/STACK](stack-stack-allocations.md)|设置堆栈的大小（以字节为单位）。|
 |[/STUB](stub-ms-dos-stub-file-name.md)|将 MS-DOS 存根程序附加到 Win32 程序。|
-|[/SUBSYSTEM](subsystem-specify-subsystem.md)|通知操作系统如何运行 .exe 文件。|
-|[/SWAPRUN](swaprun-load-linker-output-to-swap-file.md)|通知操作系统在运行链接器输出之前将其复制到一个交换文件。|
+|[/SUBSYSTEM](subsystem-specify-subsystem.md)|告知操作系统如何运行 *`.exe`* 文件。|
+|[/SWAPRUN](swaprun-load-linker-output-to-swap-file.md)|通知操作系统在运行链接器输出之前将其复制到交换文件中。|
 |[/TLBID](tlbid-specify-resource-id-for-typelib.md)|指定链接器生成的类型库的资源 ID。|
-|[/TLBOUT](tlbout-name-dot-tlb-file.md)|指定 .tlb 文件和其他 MIDL 输出文件的名称。|
+|[/TLBOUT](tlbout-name-dot-tlb-file.md)|指定 *`.tlb`* 文件和其他 MIDL 输出文件的名称。|
 |[/TSAWARE](tsaware-create-terminal-server-aware-application.md)|创建专为在终端服务器下运行而设计的应用程序。|
 |[/USEPROFILE](useprofile.md)|使用按配置文件优化定型数据创建优化的映像。|
 |[/VERBOSE](verbose-print-progress-messages.md)|打印链接器进度消息。|

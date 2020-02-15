@@ -1,39 +1,45 @@
 ---
 title: /WHOLEARCHIVE （包括所有库对象文件）
-ms.date: 11/04/2016
+ms.date: 02/12/2020
 ms.assetid: ee92d12f-18af-4602-9683-d6223be62ac9
-ms.openlocfilehash: db99816b18110b424647603196040997044e7fbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 95685c9c0dfde45c42449bbcad67228a0e21b36a
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316426"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257528"
 ---
 # <a name="wholearchive-include-all-library-object-files"></a>/WHOLEARCHIVE （包括所有库对象文件）
 
-Force 链接器在链接的可执行文件中的静态库中包括所有对象文件。
+强制链接器在链接的可执行文件中包含静态库中的所有对象文件。
 
 ## <a name="syntax"></a>语法
 
-> /WHOLEARCHIVE[:*library*]
+> **/WHOLEARCHIVE**\
+> **/WHOLEARCHIVE：** _库_
+
+### <a name="arguments"></a>参数
+
+*库*\
+静态库的可选路径名。 链接器包含此库中的每个对象文件。
 
 ## <a name="remarks"></a>备注
 
-/WHOLEARCHIVE 选项将强制链接器包括每个对象文件从指定的静态库，或如果未不指定任何库，从所有静态库链接到指定命令。 若要指定多个库的 /WHOLEARCHIVE 选项，可以在链接器命令行上使用多个 /WHOLEARCHIVE 切换。 默认情况下，链接器包括对象文件中链接的输出仅当它们导出符号引用的可执行文件中的其他对象文件。 /WHOLEARCHIVE 选项使链接器将在静态库中存档，如同它们在链接器命令行上单独指定的所有对象文件。
+/WHOLEARCHIVE 选项强制链接器包含指定的静态库中的每个对象文件，或者，如果未指定任何库，则从所有指定到 LINK 命令的静态库。 若要为多个库指定/WHOLEARCHIVE 选项，可以在链接器命令行中使用多个/WHOLEARCHIVE 开关。 默认情况下，链接器仅在链接的输出中包含对象文件，而这些文件导出可执行文件中的其他对象文件引用的符号。 /WHOLEARCHIVE 选项使链接器将存档在静态库中的所有对象文件视为在链接器命令行上单独指定。
 
-/WHOLEARCHIVE 选项可用于重新导出静态库中的所有符号。 这可以确保所有的库代码、 资源和元数据都包含一个组件创建从多个静态库时。 如果看到警告 LNK4264 创建静态库时包含导出为 Windows 运行时组件，此库链接到另一个组件或应用程序时使用 /WHOLEARCHIVE 选项。
+/WHOLEARCHIVE 选项可用于重新导出静态库中的所有符号。 这使你可以确保在从多个静态库中创建组件时，包含所有库代码、资源和元数据。 如果在创建包含要导出的 Windows 运行时组件的静态库时看到警告 LNK4264，请在将库链接到其他组件或应用时使用/WHOLEARCHIVE 选项。
 
-在 Visual Studio 2015 Update 2 中引入 /WHOLEARCHIVE 选项。
+Visual Studio 2015 Update 2 中引入了/WHOLEARCHIVE 选项。
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>在 Visual Studio 中设置此链接器选项
 
-1. 打开项目“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目“属性页” 对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择**命令行**下的属性页**配置属性**，**链接器**。
+1. 选择 "**配置属性**"、"**链接器**" 下的 "**命令行**" 属性页。
 
-1. /WHOLEARCHIVE 将选项添加到**其他选项**文本框。
+1. 将/WHOLEARCHIVE 选项添加到 "**其他选项**" 文本框中。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [MSVC 链接器参考](linking.md)<br/>
 [MSVC 链接器选项](linker-options.md)

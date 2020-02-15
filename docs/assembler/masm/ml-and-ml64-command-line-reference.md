@@ -1,6 +1,7 @@
 ---
 title: ML 和 ML64 命令行参考
-ms.date: 12/17/2019
+description: Microsoft MASM ML 和 ML64.EXE 组装器命令行选项的参考指南。
+ms.date: 02/09/2020
 f1_keywords:
 - ML
 helpviewer_keywords:
@@ -54,12 +55,12 @@ helpviewer_keywords:
 - command line, reference [ML]
 - /Ta MASM compiler option
 ms.assetid: 712623c6-f77e-47ea-a945-089e57c50b40
-ms.openlocfilehash: 77385317ab7f90a646b7f552e471d0f434e72bfb
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: b5c5a79417cb141da3d5cfe1c08aa39e02a9c7c2
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75317157"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257359"
 ---
 # <a name="ml-and-ml64-command-line-reference"></a>ML 和 ML64 命令行参考
 
@@ -71,30 +72,30 @@ ms.locfileid: "75317157"
 
 > ML \[*选项*] *filename* \[ \[*选项*] *filename*]
 >
-> ML64.EXE \[*options*] *filename* \[ \[*选项*] *filename*] ... \[/link *linkoptions*]
+> ML64.EXE \[*options*] *filename* \[ \[*选项*] *filename*] ... \[/link *link_options*]
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *选项*\
 下表中列出的选项。
 
 |选项|操作|
 |------------|------------|
-|**/AT**|启用小型内存模型支持。 启用违反 .com 格式文件要求的代码构造的错误消息。 请注意，这与不等效[。](dot-model.md)对**小**指令建模。<br /><br /> 在 ml64.exe 中不可用。|
+|**/AT**|启用小型内存模型支持。 启用违反 .com 格式文件要求的代码构造的错误消息。 此选项与不等效[。](dot-model.md)对**小**指令建模。<br /><br /> 在 ml64.exe 中不可用。|
 |**/Bl** *filename*|选择备用链接器。|
-|**/c**|仅装配。 不链接。|
-|**/coff**|生成对象模块的通用对象文件格式（COFF）类型。 通常，Win32 汇编语言开发需要。<br /><br /> 在 ml64.exe 中不可用。|
+|**/c**|仅装配。 没有链接。|
+|**/coff**|生成对象模块的通用对象文件格式（COFF）类型。 Win32 汇编语言开发所必需的。<br /><br /> 在 ml64.exe 中不可用。|
 |**/Cp**|保留所有用户标识符的大小写。|
 |**/Cu**|将所有标识符映射为大写（默认值）。<br /><br /> 在 ml64.exe 中不可用。|
 |**/Cx**|保留公共和 extern 符号中的大小写。|
-|**/D** *symbol*⟦ =*value*⟧|定义具有给定名称的文本宏。 如果缺少值，则*该值*为空。 用空格分隔的多个标记必须用引号引起来。|
+|**/D** *symbol*⟦ =*value*⟧|定义具有给定名称的文本宏。 如果缺少*值*，则它为空。 用空格分隔的多个标记必须用引号引起来。|
 |**/EP**|生成一个预处理的源列表（发送到 STDOUT）。 请参阅 **/Sf**。|
-|**/ERRORREPORT** [**无** &#124; **提示** &#124;队列&#124; **发送**]|如果 ml 或 ml64.exe 在运行时失败，则可以使用 **/ERRORREPORT**向 Microsoft 发送有关这些内部错误的信息。<br /><br /> 有关 **/ERRORREPORT**的详细信息，请参阅[/ERRORREPORT （报告内部编译器错误）](../../build/reference/errorreport-report-internal-compiler-errors.md)。|
+|**/ERRORREPORT** [**无** &#124; **提示** &#124;队列&#124; **发送**]| 已弃用。 错误报告由[Windows 错误报告（WER）](/windows/win32/wer/windows-error-reporting)设置控制。 |
 |**/F** *hexnum*|将堆栈大小设置为*hexnum*字节（与 **/link/STACK**：*number*相同）。 该值必须用十六进制表示法表示。 在 **/f**和*hexnum*之间必须有一个空格。|
 |**/Fe** *filename*|命名可执行文件。|
 |**/Fl**⟦*filename*⟧|生成汇编的代码清单。 请参阅 **/Sf**。|
 |**/Fm**⟦*filename*⟧|创建链接器映射文件。|
-|**/Fo** *filename*|命名对象文件。 有关详细信息，请参阅备注部分。|
+|**/Fo** *filename*|命名对象文件。 有关更多信息，请参见[备注](#remarks)。|
 |**/FPi**|为浮点运算生成模拟器修复方法（仅限混合语言）。<br /><br /> 在 ml64.exe 中不可用。|
 |**/Fr**⟦*filename*⟧|生成源浏览器 .sbr 文件。|
 |**/Fr**⟦*filename*⟧|生成源浏览器 .sbr 文件的扩展形式。|
@@ -103,7 +104,7 @@ ms.locfileid: "75317157"
 |**/GZ**|指定使用 __stdcall 函数调用和命名约定。  与**选项语言相同： STCALL**。<br /><br /> 在 ml64.exe 中不可用。|
 |**/H** *数字*|限制外部名称为有效字符数。 默认值为31个字符。<br /><br /> 在 ml64.exe 中不可用。|
 |**/help**|调用 QuickHelp 获取有关 ML 的帮助。|
-|**/I** *pathname*|设置包含文件的路径。 最多允许10个 **/i**选项。|
+|**/I** *路径名称*|设置包含文件的路径。 最多允许10个 **/i**选项。|
 |**/nologo**|禁止成功的程序集的消息。|
 |**/omf**|生成对象模块的对象模块文件格式（OMF）类型。  **/omf**表示 **/c**;ML 不支持链接 OMF 对象。<br /><br /> 在 ml64.exe 中不可用。|
 |**/Sa**|打开列出所有可用信息。|
@@ -131,18 +132,20 @@ ms.locfileid: "75317157"
 *文件名*\
 文件的名称。
 
-*linkoptions*\
-链接选项。  有关详细信息，请参阅[链接器选项](../../build/reference/linker-options.md)。
+*link_options*\
+链接选项。 有关详细信息，请参阅[链接器选项](../../build/reference/linker-options.md)。
 
 ## <a name="remarks"></a>备注
 
 ML 和 ML64.EXE 的某些命令行选项是位置相关的。 例如，因为 ML 和 ML64.EXE 可以接受多个 **/c**选项，所以必须在 **/c**之前指定任何相应的 **/fo**选项。 以下命令行示例说明了每个程序集文件规范的对象文件规范：
 
-**ml/Fo a1 .obj/c a .asm/Fo b1 .obj .obj**
+```cmd
+ml.exe /Fo a1.obj /c a.asm /Fo b1.obj /c b.asm
+```
 
 ## <a name="environment-variables"></a>环境变量
 
-|变量|描述|
+|变量|说明|
 |--------------|-----------------|
 |INCLUDE|指定包含文件的搜索路径。|
 |ML|指定默认的命令行选项。|
