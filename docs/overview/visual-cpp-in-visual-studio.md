@@ -5,19 +5,19 @@ ms.date: 07/02/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
-ms.openlocfilehash: 74e1b34549a8e8d0f1e22e6f40aacbd4429b272f
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.openlocfilehash: 0a4093860c7d06e8240e03b1487546f80da24b88
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75793782"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416104"
 ---
 # <a name="c-in-visual-studio"></a>Visual Studio 中的 C++
 
 > [!NOTE]
 > 此开发人员文档适用于 Visual Studio 2015 及更高版本。 请使用页面左上角的版本选择器来匹配你的 Visual Studio 版本。
 >
-> 如果要查找 Visual C++ 可再发行包以便运行程序，请转到 [Microsoft 下载中心](https://www.microsoft.com/download/) ，并在搜索框中输入“Visual C++”。
+> 如果要查找 Visual C++ 可再发行包以便运行程序，请转到 [Microsoft 下载中心](https://www.microsoft.com/download/) ，并在搜索框中输入“Visual C++”  。
 
 Microsoft Visual C++（通常缩写为 Visual C++ 或 MSVC）是 Windows Visual Studio 的一部分，指 C++、C 和汇编语言开发的工具和库。 这些工具和库可用于创建通用 Windows 平台 (UWP) 应用、本机 Windows 桌面和服务器应用程序、在 Windows、Linux、Android 和 iOS 上运行的跨平台库和应用以及使用 .NET Framework 的托管应用和库。 从 Windows 桌面的简单控制台应用到最复杂的应用，从移动设备的设备驱动程序和操作系统组件到跨平台游戏，再从 Azure 云中的最小 IoT 设备到多服务器的高性能计算等所有内容都可以使用 Visual C++ 编写。
 
@@ -82,7 +82,7 @@ MSVC C++ 编译器中按功能列出的符合性状态列表。
 [调试本机代码](/visualstudio/debugger/debugging-native-code)<br/>
 在 C++ 项目中使用 Visual Studio 调试器。
 
-[C/C++ 代码分析概述](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)<br/>
+[C/C++ 代码分析概述](/cpp/code-quality/code-analysis-for-c-cpp-overview)<br/>
 使用 SAL 注释或 C++ Core Guidelines 检查器执行静态分析。
 
 [在 Visual Studio 中编写 C/C++ 单元测试](/visualstudio/test/writing-unit-tests-for-c-cpp)<br/>
@@ -160,7 +160,7 @@ C++ 标准库。
 
 ## <a name="third-party-open-source-c-libraries"></a>第三方开源 C++ 库
 
-跨平台 vcpkg 命令行工具，可以显著简化 900 多个 C++ 开源库的发现和安装操作。 请参阅 [vcpkg：用于 Windows 的 C++ 程序包管理器](../build/vcpkg.md)。
+跨平台 vcpkg  命令行工具，可以显著简化 900 多个 C++ 开源库的发现和安装操作。 请参阅 [vcpkg：用于 Windows 的 C++ 程序包管理器](../build/vcpkg.md)。
 
 ## <a name="feedback-and-community"></a>反馈和社区
 

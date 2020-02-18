@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C++, development tools
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: d72ea2ab4fa83259152101b357c6b2b69e74c723
-ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
+ms.openlocfilehash: 4e04e189b44fe61759a9422139d856ab8a09f201
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74810620"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415707"
 ---
 # <a name="overview-of-c-development-in-visual-studio"></a>Visual Studio 中的 C++ 开发概述
 
@@ -47,7 +47,7 @@ Visual Studio 可支持要使用的任何项目系统或自定义生成工具，
 
 ## <a name="add-to-source-control"></a>添加到源控件
 
-通过源控件，可让你协调多个开发人员的工作，将正在进行中的工作与生产代码隔离并备份源代码。 Visual Studio 通过其“团队资源管理器”  窗口支持 Git 和 [Team Foundation 版本控制 \(TFVC\)](/azure/devops/repos/tfvc/)。 
+通过源控件，可让你协调多个开发人员的工作，将正在进行中的工作与生产代码隔离并备份源代码。 Visual Studio 通过其“团队资源管理器”  窗口支持 Git 和 [Team Foundation 版本控制 \(TFVC\)](/azure/devops/repos/tfvc/)。
 
 ::: moniker range="vs-2019"
 
@@ -117,7 +117,7 @@ Visual Studio 包含适用于 C++ 的 Microsoft 单元测试框架，以及对 B
 
 ## <a name="analyze"></a>分析
 
-Visual Studio 包含可以在源代码中检测潜在问题的静态代码分析工具。 这些工具包括 [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md) 规则检查器的实现。 有关详细信息，请参阅 [C/C++ 代码分析概述](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)。
+Visual Studio 包含可以在源代码中检测潜在问题的静态代码分析工具。 这些工具包括 [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md) 规则检查器的实现。 有关详细信息，请参阅 [C/C++ 代码分析概述](/cpp/code-quality/code-analysis-for-c-cpp-overview)。
 
 ## <a name="deploy-completed-applications"></a>部署已完成的应用程序
 
