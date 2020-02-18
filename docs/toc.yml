@@ -375,6 +375,8 @@
           href: build/arm64-exception-handling.md
     - name: 配置适用于 Windows XP 的程序
       href: build/configuring-programs-for-windows-xp.md
+    - name: C/C++ 代码分析
+      href: code-quality/
     - name: 编译器和生成工具参考
       expanded: false
       items:
@@ -3998,7 +4000,7 @@
                   href: cpp/binary-operators.md
                 - name: 赋值
                   href: cpp/assignment.md
-                - name: '函数调用 '
+                - name: 函数调用
                   href: cpp/function-call-cpp.md
                 - name: 下标
                   href: cpp/subscripting.md
