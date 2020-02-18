@@ -1,5 +1,5 @@
 ---
-title: Debug Iterator Support
+title: 调试迭代器支持
 ms.date: 09/13/2018
 helpviewer_keywords:
 - Safe Libraries
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - incompatible iterators
 - debug iterator support
 ms.assetid: f3f5bd15-4be8-4d64-a4d0-8bc0761c68b6
-ms.openlocfilehash: 3ccb618c9a3c6b21d6ffe3fbbce7b6c1140e0564
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f43367fd58d8ab2a62fb2312efcd9fc9ec0cfc42
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450591"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416202"
 ---
-# <a name="debug-iterator-support"></a>Debug Iterator Support
+# <a name="debug-iterator-support"></a>调试迭代器支持
 
 Visual c + + 运行库检测到不正确使用的迭代器，并在运行时断言和显示一个对话框。 若要启用调试迭代器支持，必须使用 c + + 标准库和 C 运行库的调试版本来编译你的程序。 有关详细信息，请参阅 [ CRT 库功能](../c-runtime-library/crt-library-features.md)。 有关如何使用经过检查的迭代器的信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。
 
@@ -54,7 +54,7 @@ int main() {
 }
 ```
 
-## <a name="using-iteratordebuglevel"></a>使用 _ITERATOR_DEBUG_LEVEL
+## <a name="using-_iterator_debug_level"></a>使用 _ITERATOR_DEBUG_LEVEL
 
 可以使用预处理器宏 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 关闭调试版本中迭代器的调试功能。 此程序不会断言，但仍会触发未定义的行为。
 
@@ -148,7 +148,7 @@ int main() {
 
 ## <a name="destructors-for-debug-iterators"></a>调试迭代器的析构函数
 
-调试迭代器具有不平常的析构函数。 如果析构函数未运行, 但对象的内存被释放, 则可能会发生访问冲突和数据损坏。 请看以下示例：
+调试迭代器具有不平常的析构函数。 如果析构函数未运行，但对象的内存被释放，则可能会发生访问冲突和数据损坏。 请看以下示例：
 
 ```cpp
 // iterator_debugging_5.cpp
@@ -165,7 +165,7 @@ struct derived : base {
    ~derived() {}
 };
 
- int main() {
+int main() {
    std::vector<int> vect( 10 );
    base * pb = new derived( vect.begin() );
    delete pb;  // doesn't call ~derived()
@@ -173,6 +173,6 @@ struct derived : base {
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [C++ 标准库概述](../standard-library/cpp-standard-library-overview.md)

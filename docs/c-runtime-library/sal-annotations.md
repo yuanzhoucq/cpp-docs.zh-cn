@@ -47,19 +47,19 @@ helpviewer_keywords:
 - ecount annotation
 - bcount annotation
 ms.assetid: 81893638-010c-41a0-9cb3-666fe360f3e0
-ms.openlocfilehash: a50e37b41c6e90428bed5ae113d2d9f064e042d0
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 77b934010b7f76b556a4c7ba9826fbedfc36b95e
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741756"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415845"
 ---
 # <a name="sal-annotations"></a>SAL 批注
 
 如果检查库的标头文件，您可能会注意一些特殊的注释，例如，`_In_z` 和 `_Out_z_cap_(_Size)`。 这些是 Microsoft 源代码注释语言 (SAL) 的示例。SAL 提供一组描述函数如何使用其参数的注释，例如，它关于参数的假设以及关于完成的保证。 标头文件 \<sal.h> 定义了这些注释。
 
-有关在 Visual Studio 中使用 SAL 注释的详细信息，请参阅[使用 SAL 注释减少 C/C++ 代码缺陷](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)。
+有关在 Visual Studio 中使用 SAL 注释的详细信息，请参阅[使用 SAL 注释减少 C/C++ 代码缺陷](/cpp/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [CRT 库功能](../c-runtime-library/crt-library-features.md)

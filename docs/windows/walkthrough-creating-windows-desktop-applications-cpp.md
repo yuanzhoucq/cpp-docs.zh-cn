@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: 6f219a0c199971b563b1c0ff291f2f5d12803023
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: cebc748f207cb1283add4b494b422a13bdc17f8c
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627480"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416136"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>演练：创建传统的 Windows 桌面应用程序C++（）
 
@@ -23,7 +23,7 @@ Windows API （也称为 Win32 API、Windows 桌面 API 和 Windows Classic API�
 > [!IMPORTANT]
 > 为了简洁起见，文本中省略了一些代码语句。 本文档末尾的 "[生成代码"](#build-the-code)部分显示了完整的代码。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必备条件
 
 - 运行 Microsoft Windows 7 或更高版本的计算机。 建议使用 Windows 10 以实现最佳开发体验。
 
@@ -43,7 +43,7 @@ Windows API （也称为 Win32 API、Windows 桌面 API 和 Windows Classic API�
 
 ### <a name="to-create-a-windows-desktop-project-in-visual-studio-2019"></a>在 Visual Studio 2019 中创建 Windows 桌面项目
 
-1. 在主菜单中，选择“文件”>“新建”>“项目”，打开“创建新项目”对话框。
+1. 从主菜单中，选择 "**文件**" ">**新建**>**项目**" 打开 "新建**项目**" 对话框。
 
 1. 在对话框顶部，将 "**语言**" 设置为**C++** ，将 "**平台**" 设置为 " **Windows**"，并将 "**项目类型**" 设置为 "**桌面**"。
 
@@ -73,7 +73,7 @@ Windows API （也称为 Win32 API、Windows 桌面 API 和 Windows Classic API�
 
 1. 在 "**新建项目**" 对话框的左窗格中，展开 "**已安装** > **视觉对象C++** ，然后选择" **Windows 桌面**"。 在中间窗格中，选择 " **Windows 桌面向导**"。
 
-   在 "**名称**" 框中，键入项目的名称，例如 " *DesktopApp*"。 选择 **“确定”** 。
+   在 "**名称**" 框中，键入项目的名称，例如 " *DesktopApp*"。 选择“确定”。
 
    ![为 DesktopApp 项目命名](../build/media/desktop-app-new-project-name-153.png "为 DesktopApp 项目命名")
 
@@ -99,7 +99,7 @@ Windows API （也称为 Win32 API、Windows 桌面 API 和 Windows Classic API�
 
 1. 在 "**新建项目**" 对话框的左窗格中，展开 "**已安装** > **模板** > "**视觉C++对象**，然后选择 " **Win32**"。 在中间窗格中，选择“Win32 项目”。
 
-   在 "**名称**" 框中，键入项目的名称，例如 " *DesktopApp*"。 选择 **“确定”** 。
+   在 "**名称**" 框中，键入项目的名称，例如 " *DesktopApp*"。 选择“确定”。
 
    ![为 DesktopApp 项目命名](../build/media/desktop-app-new-project-name-150.png "为 DesktopApp 项目命名")
 
@@ -141,9 +141,9 @@ Windows API （也称为 Win32 API、Windows 桌面 API 和 Windows Classic API�
    有关此函数的参数和返回值的信息，请参阅[WinMain 入口点](/windows/win32/api/winbase/nf-winbase-winmain)。
 
    > [!NOTE]
-   > 这些额外的单词（例如 `CALLBACK`、`HINSTANCE`或 `_In_`）有哪些？ 传统的 Windows API 广泛使用 typedef 和预处理器宏来抽象掉某些类型的详细信息和特定于平台的代码，例如调用约定、 **__declspec**声明和编译器杂注。 在 Visual Studio 中，可以使用 IntelliSense[快速信息](/visualstudio/ide/using-intellisense#quick-info)功能来查看这些 typedef 和宏定义的内容。 将鼠标悬停在感兴趣的字词上，或选择它，然后按**ctrl** +**K**， **ctrl** +**I**以包含定义的一个小的弹出窗口。 有关详细信息，请参阅[使用 IntelliSense](/visualstudio/ide/using-intellisense)。 参数和返回类型通常使用*SAL 批注*来帮助您捕获编程错误。 有关详细信息，请参阅[使用 SAL 注释减少 C/C++代码缺陷](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)。
+   > 这些额外的单词（例如 `CALLBACK`、`HINSTANCE`或 `_In_`）有哪些？ 传统的 Windows API 广泛使用 typedef 和预处理器宏来抽象掉某些类型和特定于平台的代码的详细信息，例如调用约定、 **__declspec**声明和编译器杂注。 在 Visual Studio 中，可以使用 IntelliSense[快速信息](/visualstudio/ide/using-intellisense#quick-info)功能来查看这些 typedef 和宏定义的内容。 将鼠标悬停在感兴趣的字词上，或选择它，然后按**ctrl**+**K**， **ctrl**+**I**以包含定义的一个小的弹出窗口。 有关详细信息，请参阅[使用 IntelliSense](/visualstudio/ide/using-intellisense)。 参数和返回类型通常使用*SAL 批注*来帮助您捕获编程错误。 有关详细信息，请参阅[使用 SAL 注释减少 C/C++代码缺陷](/cpp/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)。
 
-1. Windows 桌面程序需要 &lt;windows .h >。 &lt;tchar > 定义 `TCHAR` 宏，如果在项目中定义了 UNICODE 符号，则该宏将最终解析为**wchar_t** ，否则它将解析为**char**。  如果你始终启用了 UNICODE 生成，则无需 TCHAR，只需直接使用**wchar_t**即可。
+1. Windows 桌面程序需要 &lt;的 >。 &lt;tchar > 定义 `TCHAR` 宏，如果在项目中定义了 UNICODE 符号，则该宏将最终解析为**wchar_t** ，否则它将解析为**char**。  如果你始终启用了 UNICODE 生成，则无需 TCHAR，只需直接使用**wchar_t**即可。
 
    ```cpp
    #include <windows.h>
@@ -390,7 +390,7 @@ Windows API （也称为 Win32 API、Windows 桌面 API 和 Windows Classic API�
 
    代码中 `HDC` 是设备上下文的句柄，它是 Windows 用于使应用程序能够与图形子系统通信的数据结构。 `BeginPaint` 和 `EndPaint` 函数会使你的应用程序的行为类似于一个良好的公民，而不是将设备上下文用于所需的时间。 函数有助于使图形子系统可供其他应用程序使用。
 
-1. 应用程序通常会处理许多其他消息。 例如，当首次创建窗口时， [WM_CREATE](/windows/win32/winmsg/wm-create) ，当窗口关闭时[WM_DESTROY](/windows/win32/winmsg/wm-destroy) 。 以下代码显示基本但完整的 `WndProc` 函数。
+1. 应用程序通常会处理许多其他消息。 例如，在首次创建窗口时[WM_CREATE](/windows/win32/winmsg/wm-create) ，当窗口关闭时[WM_DESTROY](/windows/win32/winmsg/wm-destroy) 。 以下代码显示基本但完整的 `WndProc` 函数。
 
    ```cpp
    LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
@@ -584,12 +584,12 @@ Windows API （也称为 Win32 API、Windows 桌面 API 和 Windows Classic API�
 
    ![生成 DesktopApp 项目](../build/media/desktop-app-project-build-150.gif "生成 DesktopApp 项目")
 
-1. 若要运行应用程序，请按**F5**。 包含文本 "Hello，Windows desktop！" 的窗口 文字的窗口。
+1. 若要运行应用程序，请按 F5。 包含文本 "Hello，Windows desktop！" 的窗口 文字的窗口。
 
    ![运行 DesktopApp 项目](../build/media/desktop-app-project-run-157.PNG "运行 DesktopApp 项目")
 
 祝贺你！ 您已经完成了本演练，并构建了传统的 Windows 桌面应用程序。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Windows 桌面应用程序](../windows/windows-desktop-applications-cpp.md)

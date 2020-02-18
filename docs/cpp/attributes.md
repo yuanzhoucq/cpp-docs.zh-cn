@@ -2,18 +2,18 @@
 title: C++ 中的属性
 ms.date: 05/06/2019
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
-ms.openlocfilehash: 5967974d419299778e4aadaa235ee21c62e16d34
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: b3ed21b033c0e606d02d3aa845f09f72118a3c5e
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518291"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416076"
 ---
 # <a name="attributes-in-c"></a>C++ 中的属性
 
 C++ 标准定义的一组特性，并允许编译器供应商来定义其自己的属性 （在某个特定于供应商命名空间），但编译器所需识别只有标准中定义的属性。
 
-在某些情况下，标准属性与特定于编译器 declspec 参数相重叠。 在 Visual C++ 中，你可以使用`[[deprecated]]`属性而不是使用`declspec(deprecated)`和属性将由任何符合的编译器识别。 所有其他 declspec 参数如 dllimport 和 dllexport，目前还没有特性等效项因此必须继续使用 declspec 语法。 属性不会影响类型系统中，并且它们不会更改程序的含义。 编译器忽略它们无法识别的属性值。
+在某些情况下，标准属性与特定于编译器 declspec 参数相重叠。 在视觉C++对象中，可以使用 `[[deprecated]]` 特性，而不是使用 `declspec(deprecated)`，任何符合的编译器都将识别属性。 所有其他 declspec 参数如 dllimport 和 dllexport，目前还没有特性等效项因此必须继续使用 declspec 语法。 属性不会影响类型系统中，并且它们不会更改程序的含义。 编译器忽略它们无法识别的属性值。
 
 **Visual Studio 2017 版本15.3 及更高版本**（可用于[/std： c + + 17](../build/reference/std-specify-language-standard-version.md)）：在属性列表的作用域中，可以**使用**引导指定所有名称的命名空间：
 
@@ -33,7 +33,7 @@ void g() {
 void Foo(int);
 ```
 
-属性表示 #pragma 指令，__declspec() （Visual C++），例如供应商特定扩展的标准化的替代或 & #95; & #95; 属性 & #95; & #95;(GNU)。 但是，仍需要使用特定于供应商的构造在大多数情况。 标准版当前指定了符合一致性的编译器应识别的下列属性：
+属性表示 #pragma 指令，__declspec() （Visual C++），例如供应商特定扩展的标准化的替代或 &#95; &#95; 属性 &#95; &#95; (GNU)。 但是，仍需要使用特定于供应商的构造在大多数情况。 标准版当前指定了符合一致性的编译器应识别的下列属性：
 
 - `[[noreturn]]` 指定函数从不返回;换句话说，它总是引发异常。 编译器可以为 `[[noreturn]]` 实体调整其编译规则。
 
@@ -41,9 +41,9 @@ void Foo(int);
 
 - `[[deprecated]]` **Visual Studio 2015 及更高版本：** 指定不应使用某个函数，并且该函数可能不存在于库接口的未来版本中。 当客户端代码尝试调用函数时，编译器可以使用此功能生成信息性消息。 可应用于类的声明、typedef 名称、变量、非静态数据成员、函数、命名空间、枚举、枚举器或模板特殊化。
 
-- `[[fallthrough]]`**2017年及更高版本的 visual Studio:** (适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md))`[[fallthrough]]`的上下文中可以使用属性[切换](switch-statement-cpp.md)语句作为对的提示编译器 （或任何人阅读代码） 是旨在 fallthrough 行为。 Microsoft C++编译器当前不会对 fallthrough 行为发出警告，因此此属性不会影响编译器行为。
+- `[[fallthrough]]` **Visual Studio 2017 及更高版本：** （可与[/std： c + + 17](../build/reference/std-specify-language-standard-version.md)一起使用），`[[fallthrough]]` 属性可以在[switch](switch-statement-cpp.md)语句的上下文中用作对编译器（或读取代码的任何人）的提示。 Microsoft C++编译器当前不会对 fallthrough 行为发出警告，因此此属性不会影响编译器行为。
 
-- `[[nodiscard]]`**15.3 及更高版本的 visual Studio 2017:** (适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)) 指定函数的返回值不应被丢弃。 引发警告 C4834，如以下示例中所示：
+- `[[nodiscard]]` **Visual Studio 2017 版本15.3 及更高版本：** （可用于[/std： c + + 17](../build/reference/std-specify-language-standard-version.md)）指定函数的返回值不应被丢弃。 引发警告 C4834，如以下示例中所示：
 
     ```cpp
     [[nodiscard]]
@@ -56,7 +56,7 @@ void Foo(int);
     }
     ```
 
-- `[[maybe_unused]]`**15.3 及更高版本的 visual Studio 2017:** (适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)) 指定的变量，函数，类，typedef、 非静态数据成员、 枚举类型或模板专用化可能特意不使用。 当未使用标记为 `[[maybe_unused]]` 的实体时，编译器不会发出警告。 稍后可使用属性重新声明未使用特性声明的实体，反之亦然。 在分析标记的第一个声明后，或在当前翻译单元的其余翻译中，实体被视为标记。
+- `[[maybe_unused]]` **Visual Studio 2017 版本15.3 及更高版本：** （与[/std： c + + 17](../build/reference/std-specify-language-standard-version.md)一起提供）指定变量、函数、类、typedef、非静态数据成员、枚举或模板特殊化可能不会被有意使用。 当未使用标记为 `[[maybe_unused]]` 的实体时，编译器不会发出警告。 稍后可使用属性重新声明未使用特性声明的实体，反之亦然。 在分析标记的第一个声明后，或在当前翻译单元的其余翻译中，实体被视为标记。
 
 ## <a name="microsoft-specific-attributes"></a>特定于 Microsoft 的属性
 
@@ -65,12 +65,12 @@ void Foo(int);
     ```cpp
     int main()
     {
-        int arr[10]; // GSL warning 26494 will be fired
-        int* p = arr; // GSL warning 26485 will be fired
+        int arr[10]; // GSL warning C26494 will be fired
+        int* p = arr; // GSL warning C26485 will be fired
         [[gsl::suppress(bounds.1)]] // This attribute suppresses Bounds rule #1
         {
-            int* q = p + 1; // GSL warning 26481 suppressed
-            p = q--; // GSL warning 26481 suppressed
+            int* q = p + 1; // GSL warning C26481 suppressed
+            p = q--; // GSL warning C26481 suppressed
         }
     }
     ```

@@ -2,12 +2,12 @@
 title: 阅读并理解 Visual Studio 中的 C++ 代码
 description: 使用 Visual Studio 中的 C++ 代码编辑器来设置代码格式以及理解代码。
 ms.date: 05/28/2019
-ms.openlocfilehash: d4af4c9bc747540bada49de305c45cffc5c44374
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 2ddeabd9d70ebb344fe6d14abe520ee51a42eebb
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303023"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416130"
 ---
 # <a name="read-and-understand-c-code-in-visual-studio"></a>阅读并理解 Visual Studio 中的 C++ 代码
 
@@ -19,17 +19,17 @@ Visual Studio 对语法元素进行着色，以区分语言关键字、类型名
 
 ![代码着色](../ide/media/code-outline-colorization.png "C++上色")
 
- 未使用的代码（例如 #if 0 下的代码）颜色更淡。
+未使用的代码（例如 #if 0 下的代码）颜色更淡。
 
- ![非活动代码](../ide/media/inactive-code-cpp.png "C++非活动代码")
+![非活动代码](../ide/media/inactive-code-cpp.png "C++非活动代码")
 
 在“快速启动”中键入“字体”，然后选择“字体和颜色”，即可自定义颜色。 在“字体和颜色”对话框中，向下滚动到 C/C++ 选项，然后选择自定义字体和/或颜色。
 
-## <a name="outlining"></a>大纲
+## <a name="outlining"></a>大纲显示
 
 右键单击源代码文件中的任意位置，然后选择“大纲显示”以折叠或展开代码块和/或自定义区域，以便更轻松地仅浏览你感兴趣的代码。 有关详细信息，请参阅[大纲显示](/visualstudio/ide/outlining)。
 
-![C&#43; &#43;大纲显示](../ide/media/vs2015_cpp_outlining.png "大纲")
+![C&#43; &#43;大纲显示](../ide/media/vs2015_cpp_outlining.png "大纲显示")
 
 在将光标放到大括号“{”或“}”前面时，编辑器会突出显示其匹配的对应内容。
 
@@ -111,7 +111,7 @@ Visual Studio 对语法元素进行着色，以区分语言关键字、类型名
 
 ![C&#43; &#43;调用层次结构](../ide/media/vs2015_cpp_call_hierarchy.png "vs2015_cpp_call_hierarchy")
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [编辑和重构代码 (C++)](writing-and-refactoring-code-cpp.md)</br>
 [在 Visual Studio 中导航 C++ 代码库](navigate-code-cpp.md)</br>

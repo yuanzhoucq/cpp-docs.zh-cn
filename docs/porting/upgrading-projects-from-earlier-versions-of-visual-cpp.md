@@ -6,12 +6,12 @@ helpviewer_keywords:
 - 32-bit code porting
 - upgrading Visual C++ applications, 32-bit code
 ms.assetid: 18cdacaa-4742-43db-9e4c-2d9e73d8cc84
-ms.openlocfilehash: a18d2dbabdeec0f283fb4eca7ed52e616f9d224a
-ms.sourcegitcommit: b67b08472b6f1ee8f1c5684bba7056d3e0fc745f
+ms.openlocfilehash: bc9fb5628c1a628b91f306c346f2bbb1dea13de8
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725716"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416114"
 ---
 # <a name="upgrade-c-projects-from-earlier-versions-of-visual-studio"></a>从C++ Visual Studio 的早期版本升级项目
 
@@ -47,7 +47,7 @@ ms.locfileid: "76725716"
 
 1. 将平台工具集、 C++语言标准和 Windows SDK 版本（如果适用）设置为首选版本。 （**Project** > **属性** > **配置属性** > **常规**）
 
-1. 如果有大量错误，可以在修复这些错误时暂时关闭某些选项。 若要关闭[/permissive-](../build/reference/permissive-standards-conformance.md)选项，请使用**Project** > **属性** > **配置属性** > **C/C++**  > **语言**。 若要关闭[代码分析](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)选项，请使用**Project** > **属性** > **配置属性** > **代码分析**。
+1. 如果有大量错误，可以在修复这些错误时暂时关闭某些选项。 若要关闭[/permissive-](../build/reference/permissive-standards-conformance.md)选项，请使用**Project** > **属性** > **配置属性** > **C/C++**  > **语言**。 若要关闭[代码分析](/cpp/code-quality/code-analysis-for-c-cpp-overview)选项，请使用**Project** > **属性** > **配置属性** > **代码分析**。
 
 1. 确保所有依赖项都存在并且包含路径或库位置正确。 （**Project** >  > **VC + + 目录** > **配置属性**的**属性**
 
@@ -63,7 +63,7 @@ ms.locfileid: "76725716"
 
 若要修复错误，请尝试在 Stack Overflow 或[ C++开发人员社区](https://developercommunity.visualstudio.com/spaces/62/index.html)上搜索或发布问题。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
 
 [潜在的升级问题概述](overview-of-potential-upgrade-issues-visual-cpp.md)\
 将[代码升级到通用 CRT](upgrade-your-code-to-the-universal-crt.md)\

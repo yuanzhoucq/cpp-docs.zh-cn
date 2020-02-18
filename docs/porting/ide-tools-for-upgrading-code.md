@@ -3,12 +3,12 @@ title: 用于升级C++代码的 VISUAL Studio IDE 工具
 description: Visual C++ Studio 中的代码编辑器和代码分析工具可帮助你实现基本C++代码的现代化。
 ms.date: 11/13/2019
 ms.topic: conceptual
-ms.openlocfilehash: 3f85b955b688489bfc04c4bfc0605201e883e3d4
-ms.sourcegitcommit: 4dde7914608508e47c21cae03ac58fe953a0c29b
+ms.openlocfilehash: 409fc0a2fa6cd39c7751dc34b20b231ffbea3956
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119632"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416155"
 ---
 # <a name="visual-studio-ide-tools-for-upgrading-c-code"></a>用于升级C++代码的 VISUAL Studio IDE 工具
 
@@ -24,7 +24,7 @@ Visual Studio 可帮助你通过C++编译器选项、代码分析警告和编辑
 
 - 符合标准的所有版本的代码，但在现代C++上不再被视为最佳做法。
 
-   若要确定建议更改的代码，请运行[代码分析](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)。
+   若要确定建议更改的代码，请运行[代码分析](/cpp/code-quality/code-analysis-for-c-cpp-overview)。
 
 ## <a name="open-and-convert-a-legacy-project"></a>打开和转换旧项目
 
@@ -74,7 +74,7 @@ C++设置所需的语言标准和任何其他编译器选项（**Project** > **�
 
 ![错误列表中的代码分析警告](media/code-analysis-error-list.png "错误列表中的代码分析警告")
 
-可以更改处于活动状态的规则，并创建自定义规则集。 有关使用代码分析的详细信息，请参阅[C/C++概述的代码分析](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)。
+可以更改处于活动状态的规则，并创建自定义规则集。 有关使用代码分析的详细信息，请参阅[C/C++概述的代码分析](/cpp/code-quality/code-analysis-for-c-cpp-overview)。
 
 ## <a name="use-quick-actions-to-modernize-code"></a>使用快速操作使代码实现现代化
 

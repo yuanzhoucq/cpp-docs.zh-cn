@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -analyze compiler option [C++]
 - analyze compiler option [C++]
 ms.assetid: 81da536a-e030-4bd4-be18-383927597d08
-ms.openlocfilehash: f537fdea2703805c7ab1c57ba0d4429f6b683ae4
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.openlocfilehash: c0cebe1cbd160bdec257a960f90039c1af3bfee2
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72444896"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416054"
 ---
 # <a name="analyze-code-analysis"></a>/analyze（代码分析）
 
@@ -41,7 +41,7 @@ ms.locfileid: "72444896"
 关闭分析器输出到 "**输出**" 窗口。
 
 **/analyze： stacksize** *number*\
-与此选项一起使用的*number*参数指定为其生成警告[C6262](/visualstudio/code-quality/c6262)的堆栈帧的大小（以字节为单位）。 *Number*之前的空格是可选的。 如果未指定此参数，则默认情况下，堆栈帧大小为16KB。
+与此选项一起使用的*number*参数指定为其生成警告[C6262](/cpp/code-quality/c6262)的堆栈帧的大小（以字节为单位）。 *Number*之前的空格是可选的。 如果未指定此参数，则默认情况下，堆栈帧大小为16KB。
 
 **/analyze： max_paths** *号*\
 与此选项一起使用的*number*参数指定要分析的代码路径的最大数目。 如果未指定此参数，则默认情况下，该数字为256。 较大的值会导致更彻底的检查，但分析可能需要更长的时间。
@@ -71,14 +71,14 @@ ms.locfileid: "72444896"
 
 ::: moniker range="<=vs-2017"
 
-LocalEspC 是在 C261XX 警告范围内实现与并发相关的代码分析检查的插件。 例如， [C26100](/visualstudio/code-quality/c26100)， [C26101](/visualstudio/code-quality/c26101)，...， [C26167](/visualstudio/code-quality/c26167)。
+LocalEspC 是在 C261XX 警告范围内实现与并发相关的代码分析检查的插件。 例如， [C26100](/cpp/code-quality/c26100)， [C26101](/cpp/code-quality/c26101)，...， [C26167](/cpp/code-quality/c26167)。
 
 若要运行 LocalEspC，请使用此编译器选项： **/analyze：插件 LocalEspC**
 
 ::: moniker-end
 ::: moniker range=">=vs-2019"
 
-ConcurrencyCheck 在 C261XX 警告范围内实现与并发相关的代码分析检查。 例如， [C26100](/visualstudio/code-quality/c26100)， [C26101](/visualstudio/code-quality/c26101)，...， [C26167](/visualstudio/code-quality/c26167)。
+ConcurrencyCheck 在 C261XX 警告范围内实现与并发相关的代码分析检查。 例如， [C26100](/cpp/code-quality/c26100)， [C26101](/cpp/code-quality/c26101)，...， [C26167](/cpp/code-quality/c26167)。
 
 若要运行 ConcurrencyCheck，请首先从开发人员命令提示符处运行以下命令：
 
@@ -100,7 +100,7 @@ set Esp.Extensions=CppCoreCheck.dll
 
 ## <a name="remarks"></a>备注
 
-有关详细信息，请参阅 c [/C++概述的代码分析](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)和[c/C++警告的代码分析](/visualstudio/code-quality/code-analysis-for-c-cpp-warnings)。
+有关详细信息，请参阅 c [/C++概述的代码分析](/cpp/code-quality/code-analysis-for-c-cpp-overview)和[c/C++警告的代码分析](/cpp/code-quality/code-analysis-for-c-cpp-warnings)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
