@@ -4,12 +4,12 @@ ms.date: 07/01/2019
 ms.description: Configure a CMake project in Visual Studio to use the Clang/LLVM toolchain.
 helpviewer_keywords:
 - Clang support for C++ CMake projects
-ms.openlocfilehash: b5a5985ad6a82d1c7ff45ceb3668273ec96292ec
-ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
+ms.openlocfilehash: a71f9dc98f74247788558d1b7dccf3e117f43072
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556716"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416027"
 ---
 # <a name="clangllvm-support-in-visual-studio-cmake-projects"></a>Visual Studio CMake 项目中的 Clang/LLVM 支持
 
@@ -74,7 +74,7 @@ Visual Studio 2019 中提供了 Clang 支持。
 
 对于 Windows 配置，默认情况下，CMake 将在[Clang-cl](https://llvm.org/devmtg/2014-04/PDFs/Talks/clang-cl.pdf)模式下调用 Clang，并使用标准库的 Microsoft 实现的链接。 默认情况下， **clang-cl**位于 `C:\Program Files (x86)\Microsoft Visual Studio\2019\Common7\IDE\CommonExtensions\Microsoft\Llvm\bin`中。
 
- 可以在 " **CMake 变量和缓存**" 下的**CMake 设置**中修改这些值。 单击 "**显示高级变量**"。 向下滚动以查找**CMAKE_CXX_COMPILER**，然后单击 "**浏览**" 按钮以指定其他编译器路径。
+可以在 " **CMake 变量和缓存**" 下的**CMake 设置**中修改这些值。 单击 "**显示高级变量**"。 向下滚动以查找**CMAKE_CXX_COMPILER**，然后单击 "**浏览**" 按钮以指定其他编译器路径。
 
 ## <a name="edit-build-and-debug"></a>编辑、生成和调试
 

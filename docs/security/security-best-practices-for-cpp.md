@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-ms.openlocfilehash: 914498a79d3d3ddae08ae672aac35c6e913ef238
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: eaaa581ff622438c2e395c34b4b026aca693a845
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988072"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416169"
 ---
 # <a name="security-best-practices-for-c"></a>C++ 安全性最佳做法
 
@@ -35,14 +35,14 @@ Microsoft C++编译器和链接器中内置了这些安全功能：
 [/NXCOMPAT](../build/reference/nxcompat.md)、 [/NXCOMPAT （与数据执行保护兼容）](../build/reference/nxcompat-compatible-with-data-execution-prevention.md)这些编译器和链接器选项启用数据执行保护（DEP）兼容性。 DEP 可防止 CPU 执行非代码页。
 
 [/analyze（代码分析）](../build/reference/analyze-code-analysis.md)<br/>
-此编译器选项将激活报告潜在安全问题（比如缓冲区溢出、未初始化的内存、null 指针取消引用和内存泄漏）的代码分析。 默认情况下关闭此选项。 有关详细信息，请参阅[C/C++概述的代码分析](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)。
+此编译器选项将激活报告潜在安全问题（比如缓冲区溢出、未初始化的内存、null 指针取消引用和内存泄漏）的代码分析。 默认情况下关闭此选项。 有关详细信息，请参阅[C/C++概述的代码分析](/cpp/code-quality/code-analysis-for-c-cpp-overview)。
 
 [/DYNAMICBASE（使用地址空间布局随机化）](../build/reference/dynamicbase-use-address-space-layout-randomization.md)<br/>
 通过使用此链接器选项，可以生成一个在执行开始时可在内存的不同位置加载的可执行映像。 此选项还使内存中的堆栈位置更加不可预测。
 
 ## <a name="security-enhanced-crt"></a>增强了安全性的 CRT
 
-已扩充 C 运行库 (CRT) 以包括面临安全风险的函数的安全版本（例如，未经检查的 `strcpy` 字符串复制函数）。 由于这些函数的早期、不安全版本现已被弃用，因此它们将导致编译时警告。 建议您使用这些 CRT 函数的安全版本，而不是选择禁止显示编译警告。 有关详细信息，请参阅 [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md)。
+已扩充 C 运行库 (CRT) 以包括面临安全风险的函数的安全版本（例如，未经检查的 `strcpy` 字符串复制函数）。 由于这些函数的早期、不安全版本现已被弃用，因此它们将导致编译时警告。 建议您使用这些 CRT 函数的安全版本，而不是选择禁止显示编译警告。 有关详细信息，请参阅 [CRT 中的安全功能](../c-runtime-library/security-features-in-the-crt.md)。
 
 ## <a name="safeint-library"></a>SafeInt 库
 
@@ -54,7 +54,7 @@ Microsoft C++编译器和链接器中内置了这些安全功能：
 
 ## <a name="checked-iterators"></a>经过检查的迭代器
 
-经过检查的迭代器强制实施容器边界。 默认情况下，当检查的迭代器超出范围时，它将生成异常并终止程序的执行。 经过检查的迭代器提供其他级别的响应，这些响应取决于分配给预处理器的值 **\_安全\_SCL\_引发**和 **\_迭代器\_调试\_级别**。 例如，在 **\_迭代器\_调试\_LEVEL = 2** ，经检查迭代器提供了全面的正确性检查处于调试模式，这可供使用断言。 有关详细信息，请参阅[调试\_级别\_](../standard-library/iterator-debug-level.md)[检查迭代](../standard-library/checked-iterators.md)器和\_迭代器。
+经过检查的迭代器强制实施容器边界。 默认情况下，当检查的迭代器超出范围时，它将生成异常并终止程序的执行。 经过检查的迭代器提供其他级别的响应，这些响应取决于分配给预处理器的值 **\_安全\_SCL\_引发**和 **\_迭代器\_调试\_级别**。 例如，在 **\_迭代器\_调试\_级别 = 2**时，checked 迭代器会在调试模式下提供全面的正确性检查，这是使用断言实现的。 有关详细信息，请参阅[调试\_级别\_](../standard-library/iterator-debug-level.md)[检查迭代](../standard-library/checked-iterators.md)器和\_迭代器。
 
 ## <a name="code-analysis-for-managed-code"></a>托管代码的代码分析
 
@@ -62,7 +62,7 @@ Microsoft C++编译器和链接器中内置了这些安全功能：
 
 - 库设计
 
-- Localization
+- 本地化
 
 - 命名约定
 
@@ -95,5 +95,5 @@ AppVerifier 可监视应用程序使用操作系统的方式。 在应用程序�
 ## <a name="see-also"></a>另请参阅
 
 <xref:System.Security> <br/>
-[Security](/dotnet/standard/security/index)<br/>
+[安全性](/dotnet/standard/security/index)<br/>
 [用户帐户控制 (UAC) 如何影响应用程序](how-user-account-control-uac-affects-your-application.md)

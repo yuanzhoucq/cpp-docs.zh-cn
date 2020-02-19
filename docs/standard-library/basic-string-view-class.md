@@ -119,12 +119,12 @@ helpviewer_keywords:
 - std::basic_string_view, substr
 - std::basic_string_view, swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
-ms.openlocfilehash: 7bd6d02304e86b50d33bdaa3e07c95b08da31f7a
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 7a53a27e11088ab02f873613794d6799851ca373
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821891"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416173"
 ---
 # <a name="basic_string_view-class"></a>basic_string_view 类
 
@@ -213,7 +213,7 @@ class basic_string_view;
 
 ### <a name="member-operators"></a>成员运算符
 
-|运算符|描述|
+|Operator|描述|
 |-|-|
 |[operator=](#op_eq)|将 string_view 或可转换的字符串对象分配给另一个 string_view。|
 |[operator\[\]](#op_at)|返回指定索引处的元素。|
@@ -256,7 +256,7 @@ class basic_string_view;
 
 如果要求函数生成的序列长于 [max_size](#max_size) 元素，这个函数将通过引发 [length_error](../standard-library/length-error-class.md) 类型的对象来报告长度错误。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>要求
 
 [std： c + + 17](../build/reference/std-specify-language-standard-version.md)或更高版本
 
@@ -615,7 +615,7 @@ _*计算*要从源字符串复制的最多字符数。
 
 空字符不追加到副本的末尾。
 
- 有关详细信息，请参阅- [crt 中的 c 运行时库/安全功能](../c-runtime-library/security-features-in-the-crt.md)。
+有关详细信息，请参阅- [crt 中的 c 运行时库/安全功能](../c-runtime-library/security-features-in-the-crt.md)。
 
 ## <a name="crbegin"></a>  basic_string_view::crbegin
 
@@ -935,7 +935,7 @@ Const_reference 到参数索引所指定位置处的字符。
 
 如果基础字符串数据由所属对象修改或删除，则返回的引用可能会无效。
 
-使用[\_迭代器进行编译时\_调试\_级别](../standard-library/iterator-debug-level.md)设置为1或2时，如果尝试访问 string_view 边界之外的元素，将发生运行时错误。 有关详细信息，请参阅[已检查的迭代器](../standard-library/checked-iterators.md)。
+使用[\_迭代器进行编译时\_调试\_级别](../standard-library/iterator-debug-level.md)设置为1或2时，如果尝试访问 string_view 边界之外的元素，将发生运行时错误。 有关更多信息，请参见 [Checked Iterators](../standard-library/checked-iterators.md)。
 
 ## <a name="rbegin"></a>  basic_string_view::rbegin
 
@@ -1074,7 +1074,7 @@ constexpr void swap(basic_string_view& sv) noexcept;
 *sv*\
 要与目标 string_view 的链接和大小值进行交换的源 string_view。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<string_view >](../standard-library/string-view.md)\
 [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

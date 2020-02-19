@@ -3,12 +3,12 @@ title: Visual Studio 中的 C++ 新变化
 ms.date: 07/02/2019
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: 04cf4ecf447120302125c797bd70c00c62b5def9
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.openlocfilehash: df7cf44831781086f1b36d32ea9ed773a5dff9a4
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75793966"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415726"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Visual Studio 中的 C++ 新变化
 
@@ -647,7 +647,7 @@ Visual Studio 2017 附带的 Clang/C2 工具集现在支持 /bigobj 开关，这
 
 ## <a name="c-code-analysis"></a>C++ 代码分析
 
-用于强制执行 [C++ 核心准则](https://github.com/isocpp/CppCoreGuidelines) 的 C++ 核心检查器现已通过 Visual Studio 分发。 只需在项目“属性”页的“代码分析扩展”页面中启动检查器，即会在运行代码分析时包含扩展  。 有关详细信息，请参阅[使用 C++ 核心准则检查器](/visualstudio/code-quality/using-the-cpp-core-guidelines-checkers)。
+用于强制执行 [C++ 核心准则](https://github.com/isocpp/CppCoreGuidelines) 的 C++ 核心检查器现已通过 Visual Studio 分发。 只需在项目“属性”页的“代码分析扩展”页面中启动检查器，即会在运行代码分析时包含扩展  。 有关详细信息，请参阅[使用 C++ 核心准则检查器](/cpp/code-quality/using-the-cpp-core-guidelines-checkers)。
 
 ![CppCoreCheck](media/CppCoreCheck.png "CppCoreCheck 属性页")
 
@@ -668,7 +668,7 @@ Visual Studio 2017 附带的 Clang/C2 工具集现在支持 /bigobj 开关，这
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 15.7 版
 
 - 添加了对 [/analyze:ruleset](../build/reference/analyze-code-analysis.md) 的支持，它允许指定要运行的代码分析规则。
-- 添加了对其他 C++ Core Guidelines 规则的支持。  有关详细信息，请参阅[使用 C++ 核心准则检查器](/visualstudio/code-quality/using-the-cpp-core-guidelines-checkers)。
+- 添加了对其他 C++ Core Guidelines 规则的支持。  有关详细信息，请参阅[使用 C++ 核心准则检查器](/cpp/code-quality/using-the-cpp-core-guidelines-checkers)。
 
 ## <a name="unit-testing"></a>单元测试
 

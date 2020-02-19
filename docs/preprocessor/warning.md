@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pop warning pragma
 - warning pragma
 ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
-ms.openlocfilehash: c6c9668f614f932b0a96f30ad3e0395e39ddc400
-ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
+ms.openlocfilehash: d8b110d459bba1e0b7e2fd6e2c95e7eed638fc99
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74683343"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416190"
 ---
 # <a name="warning-pragma"></a>警告杂注
 
@@ -36,9 +36,9 @@ ms.locfileid: "74683343"
 |警告说明符|含义|
 |------------------------|-------------|
 |*1，2，3，4*|将给定级别应用于指定的警告。 还会打开默认情况下处于关闭状态的指定警告。|
-|*default*|将警告行为重置为其默认值。 还会打开默认情况下处于关闭状态的指定警告。 警告将在其默认存档级别生成。<br /><br /> 有关详细信息，请参阅[默认情况下处于关闭状态的编译器警告](../preprocessor/compiler-warnings-that-are-off-by-default.md)。|
-|*禁用*|不要发出指定的警告消息。|
-|*条*|将指定警告报告为错误。|
+|default|将警告行为重置为其默认值。 还会打开默认情况下处于关闭状态的指定警告。 警告将在其默认存档级别生成。<br /><br /> 有关详细信息，请参阅[默认情况下处于关闭状态的编译器警告](../preprocessor/compiler-warnings-that-are-off-by-default.md)。|
+|*disable*|不要发出指定的警告消息。|
+|*error*|将指定警告报告为错误。|
 |*once*|只显示指定消息一次。|
 |*取消*|将杂注的当前状态推送到堆栈上，禁用下一行的指定警告，然后弹出警告堆栈，从而重置杂注状态。|
 
@@ -54,10 +54,10 @@ ms.locfileid: "74683343"
 // Disable warning messages 4507 and 4034.
 #pragma warning( disable : 4507 34 )
 
-// Issue warning 4385 only once.
+// Issue warning C4385 only once.
 #pragma warning( once : 4385 )
 
-// Report warning 4164 as an error.
+// Report warning C4164 as an error.
 #pragma warning( error : 164 )
 ```
 

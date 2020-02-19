@@ -4,12 +4,12 @@ ms.date: 10/21/2019
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: b7a18354257333bb71fff6aedb3cf623c47c2d5c
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 335db55f3b181021f4deb391358df5bbfb607815
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821800"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415701"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 更改历史记录（2003 - 2015）
 
@@ -141,9 +141,9 @@ ms.locfileid: "76821800"
 
   - 静默 NaN：1.#QNAN
 
-  - 信号 NaN：1.#SNAN
+  - 信令 NaN：1.#SNAN
 
-  - 无穷大 NaN：1.#IND
+  - 不定 NaN：1.#IND
 
   这些格式的任何一种都可能已采用符号作为前缀并且格式设置也可能略有不同，具体取决于字段宽度和精度（有时会起到不寻常的作用，例如，`printf("%.2f\n", INFINITY)` 可以输出 1.#J，因为 #INF 会“四舍五入”为 2 位数的精度）。 C99 引入了有关如何设置无穷大和 NaN 格式的新要求。 现在，MSVC 实现符合这些要求。 新字符串如下所示：
 
@@ -305,7 +305,7 @@ ms.locfileid: "76821800"
 
 ####  <a name="BK_STL"></a>C++ 标准库
 
-为了实现新的优化和调试检查，C++ 标准库的 Visual Studio 实现特意破坏了连续两个版本之间的二进制兼容性。 因此，在使用 C++ 标准库时，使用不同版本编译的对象文件和静态库不能混合在同一二进制文件（EXE 或 DLL）中，并且不能在使用不同版本编译的二进制文件之间传递 C++ 标准库对象。 这样混合会发出关于 _MSC_VER 不匹配的链接器错误。 （_MSC_VER 是包含编译器主版本的宏，例如，Visual Studio 2013 为1800。）此检查无法检测 DLL 混合，也无法检测涉及 Visual Studio 2008 或更早版本的混合。
+为了实现新的优化和调试检查，C++ 标准库的 Visual Studio 实现特意破坏了连续两个版本之间的二进制兼容性。 因此，在使用 C++ 标准库时，使用不同版本编译的对象文件和静态库不能混合在同一二进制文件（EXE 或 DLL）中，并且不能在使用不同版本编译的二进制文件之间传递 C++ 标准库对象。 这样混合会发出关于 _MSC_VER 不匹配的链接器错误。 （_MSC_VER 是包含编译器主版本的宏，例如，Visual Studio 2013 的 1800。）此检查无法检测 DLL 混合，也无法检测涉及 Visual Studio 2008 或早期版本的混合。
 
 - C++ 标准库包含文件
 
@@ -1004,7 +1004,7 @@ ms.locfileid: "76821800"
     //other partial specializations here
     ```
 
-- **为前向声明强制执行的规则。（仅适用于 C。）**
+- **对前向声明强制执行规则。（仅适用于 C。）**
 
    下面的代码现在生成错误 C2065：
 
@@ -1046,7 +1046,7 @@ ms.locfileid: "76821800"
 
 - **对重载函数的调用不明确**
 
-   下面的代码现在生成错误 C266："N::bind":对重载函数的调用不明确
+   下面的代码现在生成错误 C266：“N::bind”: 对重载函数的调用不明确
 
     ```cpp
     template<typename R, typename T, typename T1, typename A1>
@@ -1189,7 +1189,7 @@ ms.locfileid: "76821800"
 
 - **值无法捕获 MFC 异常，因为此类异常无法复制**
 
-   MFC 应用程序中的以下代码现在生成错误 C2316："D":无法被捕获，因为析构函数和/或复制构造函数不可访问或已遭删除
+   MFC 应用程序中的下列代码现在会造成错误 C2316：“D”: 无法作为析构函数捕获，或者复制构造函数不可访问或已删除，或同时出现这两种情况
 
     ```cpp
     struct B {
@@ -1335,7 +1335,7 @@ ms.locfileid: "76821800"
 
 - **修复非静态数据成员初始化 (NSDMI) 中的无效复制初始化**
 
-   下面的代码现在生成错误 C2664："S1::S1(S1 &&)":无法将自变量 1 从 "bool" 转换成 "const S1 &"。
+   下面的代码现在生成错误 C2664：“S1::S1(S1 &&)”: 无法将自变量 1 从 “bool” 转换为 “const S1 &”:
 
     ```cpp
     struct S1 {
@@ -1357,7 +1357,7 @@ ms.locfileid: "76821800"
 
 - **访问 decltype 语句内部的构造函数**
 
-   下面的代码现在生成错误 C2248："S::S":无法访问类 "S" 中声明的私有成员。
+   下面的代码现在会生成错误 C2248：“S::S”: 无法访问类 “S” 中声明的私有成员：
 
     ```cpp
     class S {
@@ -1479,7 +1479,7 @@ ms.locfileid: "76821800"
 
 - **无法在派生构造函数的主体中调用受保护的基构造函数。**
 
-   下面的代码现在生成错误 C2248："S1::S1":无法访问类 "S1" 中声明的受保护成员
+   下面的代码现在会生成错误 C2248：“S1::S1”: 无法访问类 “S1” 中受保护的成员
 
     ```cpp
     struct S1 {
@@ -1837,7 +1837,7 @@ ms.locfileid: "76821800"
     error C2668: 'function' : ambiguous call to overloaded function.
     ```
 
-   示例 1： 对重载函数的调用不明确（之前）
+   示例 1：对重载函数的调用不明确（之前）
 
     ```cpp
     // In previous versions of the compiler, code written in this way would unambiguously call f(int, Args...)
@@ -2804,7 +2804,7 @@ ms.locfileid: "76821800"
     int y = x;
     ```
 
-   此代码现在将 `x` 解析为某种类型的 `std::initializer_list<int>`，并在尝试将 `x` 赋给**int**类型的下一行上导致错误。（默认情况下不进行转换。）若要更正此代码，请使用**int**替换**auto**：
+   此代码现在将 `x` 解析为 `std::initializer_list<int>` 类型并会导致在尝试将 `x` 分配到 int 类型的下一行上出错。（默认情况下，不存在转换。）若要更正此代码，请使用 int 替换 auto：
 
     ```cpp
     int x = {0};
@@ -2883,7 +2883,7 @@ ms.locfileid: "76821800"
     };
     ```
 
-   若要在代码中查找早期版本将会优化的位置，请将该版本的编译器与 `/W3` 编译器选项一起使用，并打开警告 4370。 例如：
+   若要在代码中查找早期版本将尝试进行优化的位置，请使用该版本中的编译器以及 `/W3` 编译器选项，并打开 warning C4370。 例如：
 
     ```cpp
     #pragma warning(default:4370)
@@ -2898,7 +2898,7 @@ ms.locfileid: "76821800"
     };
     ```
 
-   在 Visual Studio 2013 之前，此代码输出以下消息：“警告 C4370: 'S2' : 为了更好地封装，类的布局与早期版本的编译器已有所不同”。
+   在 Visual Studio 2013 之前，此代码输出以下消息：“警告 C4370: “S2”: 为了更好地封装，类的布局与早期版本的编译器已有所不同”。
 
    在所有版本的编译器中，x86 编译器具有相同的次优布局问题。 例如，如果为 x86 编译以下代码：
 
@@ -2962,7 +2962,7 @@ Visual Studio 2013 中的 C++ 编译器可以检测到 _ITERATOR_DEBUG_LEVEL 中
 
 ### <a name="mfc-and-atl"></a>MFC 和 ATL
 
-- **仅 Visual Studio 2013**： MFC MBCS 库不包含在 Visual Studio 中，因为 Unicode 很受欢迎，且使用 MBCS 的使用已有重大拒绝。 此更改也使 MFC 与 Windows SDK 本身更加紧密联合在一起，因为许多新控件和消息都仅支持 Unicode。 但是，如果必须继续使用 MFC MBCS 库，可以从 MSDN 下载中心下载，下载位置：[适用于 Visual Studio 2013 的多字节 MFC 库](https://www.microsoft.com/download/details.aspx?id=40770)（Multibyte MFC Library for Visual Studio 2013）。 Visual C++ 可再发行组件包仍包含此库。  （请注意：Visual Studio 2015 及更高版本的 C++ 安装组件中包含 MBCS DLL）。
+- **仅 Visual Studio 2013**：Visual Studio 中不包括 MFC MBCS 库，因为 Unicode 很常用并且大大减少了 MBCS 的使用。 此更改也使 MFC 与 Windows SDK 本身更加紧密联合在一起，因为许多新控件和消息都仅支持 Unicode。 但是，如果必须继续使用 MFC MBCS 库，可以从 MSDN 下载中心下载，下载位置：[适用于 Visual Studio 2013 的多字节 MFC 库](https://www.microsoft.com/download/details.aspx?id=40770)（Multibyte MFC Library for Visual Studio 2013）。 Visual C++ 可再发行组件包仍包含此库。  （注意：Visual Studio 2015 及更高版本的 C++ 安装组件中包含 MBCS DLL）。
 
 - MFC 功能区的辅助功能已更改。  现在显示的是分层体系结构，而不是一级体系结构。 通过调用 `CRibbonBar::EnableSingleLevelAccessibilityMode()` 可继续使用旧有行为。
 
@@ -3026,7 +3026,7 @@ Visual Studio 2013 中的 C++ 编译器可以检测到 _ITERATOR_DEBUG_LEVEL 中
 
 - 编译器可能会在以前未发出警告的位置发出警告[编译器警告（等级 4）C4703](../error-messages/compiler-warnings/compiler-warning-level-4-c4703.md) 和 C4701。 编译器对指针类型的未初始化局部变量的使用加强检查。
 
-- 指定新的链接器标志 `/HIGHENTROPYVA` 时，Windows 8 通常会导致内存分配返回 64 位地址。 （在 Windows 8 之前，此类分配更常返回小于 2 GB 的地址。）此更改可能会在现有代码中公开指针截断错误。 默认情况下，此开关处于开启状态。 要禁用此行为，请指定 `/HIGHENTROPYVA:NO`。
+- 指定新的链接器标志 `/HIGHENTROPYVA` 时，Windows 8 通常会导致内存分配返回 64 位地址。 （Windows 8 之前，此类分配通常会返回小于 2 GB 的地址。）此更改可能会暴露现有代码中的指针截断 bug。 默认情况下，此开关处于开启状态。 要禁用此行为，请指定 `/HIGHENTROPYVA:NO`。
 
 - 托管的编译器 (Visual Basic/C#) 还支持托管版本的 `/HIGHENTROPYVA`。  但是，在这种情况下，`/HIGHENTROPYVAswitch` 默认处于关闭状态。
 
@@ -3042,11 +3042,11 @@ Visual Studio 2013 中的 C++ 编译器可以检测到 _ITERATOR_DEBUG_LEVEL 中
 
 - 根据 C++98/03 和 C++11 标准之间的重大更改，在 Visual Studio 2012 的 Visual C++ 中，使用显式模板参数调用 `make_pair()`（正如在 `make_pair<int, int>(x, y)` 中那样）通常不编译。 相关解决方案是始终调用没有显式模板参数的 `make_pair() `，正如在 `make_pair(x, y)` 中那样。 提供显式模板参数会破坏函数的作用。 如果需要精确控制结果类型，请使用 `pair` 而不是 `make_pair` - 正如在 `pair<short, short>(int1, int2)` 中那样。
 
-- C + + 98/03 和 c + + 11 标准之间的另一重大更改：当可隐式转换为 B 且 B 可隐式转换为 C 时，但不能隐式转换为 C，c + + 98/03 和 Visual Studio 2010 允许 `pair<A, X>` 转换为 `pair<C, X>`。 （此处的另一种类型为 X，并不特定于对中的第一个类型。）Visual C++ Studio 2012 中的编译器检测到不能隐式转换为 C，并从重载解析中删除对的转换。 此更改对许多方案来说是有益的。 例如，重载 `func(const pair<int, int>&)` 和 `func(const pair<string, string>&)`，并使用 `pair<const char *, const char *>` 调用 `func()`，将使用此更改进行编译。 但是，此更改会中断依赖主动对转换的代码。 通常可以通过显式执行部分转换来修复这些代码，例如，将 `make_pair(static_cast<B>(a), x)` 传递给需要 `pair<C, X>` 的函数。
+- C++98/03 和 C++11 标准之间的另一重大更改：如果 A 可隐式转换为 B，B 可隐式转换为 C，但 A 不能隐式转换为 C，则 C++98/03 和 Visual Studio 2010 允许 `pair<A, X>`（隐式或显式）转换为 `pair<C, X>`。 （此处不关注另一种类型 X，并且不特定于该对中的第一种类型。）Visual Studio 2012 中的 C++ 编译器检测到 A 不能隐式转换为 C，并且从重载解析中删除对转换。 此更改对许多方案来说是有益的。 例如，重载 `func(const pair<int, int>&)` 和 `func(const pair<string, string>&)`，并使用 `pair<const char *, const char *>` 调用 `func()`，将使用此更改进行编译。 但是，此更改会中断依赖主动对转换的代码。 通常可以通过显式执行部分转换来修复这些代码，例如，将 `make_pair(static_cast<B>(a), x)` 传递给需要 `pair<C, X>` 的函数。
 
 - Visual Studio 2010 模拟可变参数模板（如 `make_shared<T>(arg1, arg2, argN)`）通过使用预处理器机制杜绝重载和专用化，将参数个数限制为最多 10 个。 在 Visual Studio 2012 中，此限制减少到 5 个参数，以减少大多数用户的编译时间和编译器内存消耗。 但是，可以通过在项目范围内将 _VARIADIC_MAX 显式定义为 10 来设置之前的限制。
 
-- C++11 17.6.4.3.1 [macro.names]/2 禁止在包含 C++ 标准库标头时对关键字进行宏替换。 如果检测到宏替换关键字，标头现将发出编译器错误。 （定义 _ALLOW_KEYWORD_MACROS 允许编译此类代码，但我们强烈反对这种用法。）默认情况下，默认情况下允许使用 `new` 宏形式，因为标头通过使用 `#pragma push_macro("new")`/`#undef new`/`#pragma pop_macro("new")`来全面保护自己。 定义 _ENFORCE_BAN_OF_MACRO_NEW 所执行的操作正如其名称所示。
+- C++11 17.6.4.3.1 [macro.names]/2 禁止在包含 C++ 标准库标头时对关键字进行宏替换。 如果检测到宏替换关键字，标头现将发出编译器错误。 （虽然通过定义 _ALLOW_KEYWORD_MACROS 可允许此类代码进行编译，但我们强烈建议不要这样做。）例外情况是，默认情况下允许使用 `new` 形式的宏，因为标头通过使用 `#pragma push_macro("new")`/`#undef new`/`#pragma pop_macro("new")` 全面保护自己。 定义 _ENFORCE_BAN_OF_MACRO_NEW 所执行的操作正如其名称所示。
 
 - 为了实现各种优化和调试检查，C++ 标准库实现特意中断了 Visual Studio 各版本（2005、2008、2010、2012）中的二进制文件兼容性。 如果使用 C++ 标准库，则使用不同版本编译的对象文件和静态库无法混合在同一个二进制文件（EXE 或 DLL）中，并且无法在使用不同版本编译的二进制文件之间传递 C++ 标准库对象。 对象文件和静态库的混合（使用由 Visual Studio 2010 编译的 C++ 标准库和由 Visual Studio 2012 中的 C++ 编译器编译的库）会发出有关 _MSC_VER 不匹配的链接器错误，其中 _MSC_VER 是包含编译器主版本（对于 Visual Studio 2012 中的 Visual C++ 为 1700）的宏。 此检查无法检测 DLL 混合，也无法检测涉及 Visual Studio 2008 或早期版本的混合。
 
@@ -3264,7 +3264,7 @@ Visual Studio 2013 中的 C++ 编译器可以检测到 _ITERATOR_DEBUG_LEVEL 中
 
 ### <a name="ide"></a>IDE
 
-- 应用程序终止对话框不再终止应用程序。 在早期版本中，当 `abort()` 或 `terminate()` 函数关闭应用程序的零售内部版本时，C 运行时库将在控制台窗口或对话框中显示应用程序终止消息。 此消息的一部分为“该应用程序已请求运行时以非常规方式终止它。 有关详细信息，请与应用程序的支持团队联系。” 应用程序终止消息是冗余的，因为 Windows 随后显示当前终止处理程序，这通常是 Windows 错误报告（Dr. Watson）对话框或 Visual Studio 调试器。 从 Visual Studio 2010 开始，C 运行时库不显示此消息。 此外，运行时阻止应用程序在调试器启动前结束。 只有在依赖应用程序终止消息的以前行为的情况下，这才是一项重大更改。
+- 应用程序终止对话框不再终止应用程序。 在早期版本中，当 `abort()` 或 `terminate()` 函数关闭应用程序的零售内部版本时，C 运行时库将在控制台窗口或对话框中显示应用程序终止消息。 此消息的一部分为“该应用程序已请求运行时以非常规方式终止它。 有关详细信息，请与应用程序的支持团队联系。” 应用程序终止消息是多余的，因为 Windows 随后会显示当前的终止处理程序，通常为 Windows 错误报告 (Dr.Watson) 对话框或 Visual Studio 调试程序。 从 Visual Studio 2010 开始，C 运行时库不显示此消息。 此外，运行时阻止应用程序在调试器启动前结束。 只有在依赖应用程序终止消息的以前行为的情况下，这才是一项重大更改。
 
 - 特别对于 Visual Studio 2010，IntelliSense 不适用于 C++/CLI 代码或属性，“查找所有引用”不适用于局部变量，并且代码模型不从导入的程序集中检索类型名称或将类型解析为其完全限定名称。
 
@@ -3408,17 +3408,17 @@ Visual Studio 2013 中的 C++ 编译器可以检测到 _ITERATOR_DEBUG_LEVEL 中
 
 - MFC 对话框中控件的 Tab 键顺序：如果按 Tab 键顺序插入 MFC ActiveX 控件，则 MFC 对话框中多个控件的正确 Tab 键顺序会受到干扰。 此更改可以解决该问题。
 
-   例如，创建具有 1 个 ActiveX 控件和多个编辑控件的 MFC 对话框应用程序。 将 ActiveX 控件放置在编辑控件的 Tab 键顺序的中间。 启动应用程序，单击其 tab 键顺序在 ActiveX 控件之后的编辑控件，然后单击 "选项卡"。在此更改之前，焦点转到 ActiveX 控件后的编辑控件，而不是 tab 键顺序中的下一个编辑控件。
+   例如，创建具有 1 个 ActiveX 控件和多个编辑控件的 MFC 对话框应用程序。 将 ActiveX 控件放置在编辑控件的 Tab 键顺序的中间。 启动应用程序，单击其 Tab 键顺序在 ActiveX 控件之后的编辑控件，然后单击 Tab。在此更改前，焦点将转到 ActiveX 控件后的编辑控件，而不是 Tab 键顺序中的下一个编辑控件。
 
-- `CFileDialog` 类： `CFileDialog` 类的自定义模板不能自动移植到 Windows Vista。 该模板仍然可用，但将不具有 Windows Vista 样式对话框的其他功能或外观。
+- `CFileDialog` 类：`CFileDialog` 类的自定义模板无法自动移植到 Windows Vista。 该模板仍然可用，但将不具有 Windows Vista 样式对话框的其他功能或外观。
 
-- `CWnd` 类和 `CFrameWnd` 类：已删除 `CWnd::GetMenuBarInfo` 方法。
+- `CWnd` 类和 `CFrameWnd` 类：`CWnd::GetMenuBarInfo` 方法已删除。
 
    `CFrameWnd::GetMenuBarInfo` 方法现在是非虚拟方法。 有关详细信息，请参阅 Windows SDK 中的 GetMenuBarInfo 函数。
 
 - MFC ISAPI 支持：MFC 不再支持使用 Internet 服务器应用程序编程接口 (ISAPI) 生成应用程序。 若要生成 ISAPI 应用程序，请直接调用 ISAPI 扩展。
 
-- 弃用的 ANSI API：已弃用某些 MFC 方法的 ANSI 版本。 请在以后的应用程序中使用这些方法的 Unicode 版本。 有关详细信息，请参阅“Windows Vista 公共控件的生成要求”。
+- 弃用了 ANSI API：已弃用某些 MFC 方法的 ANSI 版本。 请在以后的应用程序中使用这些方法的 Unicode 版本。 有关详细信息，请参阅“Windows Vista 公共控件的生成要求”。
 
 ## <a name="visual-studio-2005-breaking-changes"></a>Visual Studio 2005 重大更改
 
@@ -3470,7 +3470,7 @@ Visual Studio 2013 中的 C++ 编译器可以检测到 _ITERATOR_DEBUG_LEVEL 中
 
 - 调用 `valarray::resize()` 时，`valarray` 的内容将会丢失，并将替换为默认值。 `resize()` 方法旨在重新初始化 `valarray`，而不是使其像向量一样动态增长。
 
-- 调试迭代器：使用 C 运行时库的调试版本生成和错误使用迭代器的应用程序可能会在运行时开始看到断言。 若要禁用这些断言，必须将 _HAS_ITERATOR_DEBUGGING（Visual Studio 2010 之后由 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 取代）定义为 0。 有关详细信息，请参阅[调试迭代器支持](../standard-library/debug-iterator-support.md)
+- 调试迭代器：如果应用程序使用 C 运行时库的调试版本生成并且错误使用迭代器，则可能会在运行时开始看到断言。 若要禁用这些断言，必须将 _HAS_ITERATOR_DEBUGGING（Visual Studio 2010 之后由 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 取代）定义为 0。 有关详细信息，请参阅[调试迭代器支持](../standard-library/debug-iterator-support.md)
 
 ## <a name="visual-c-net-2003-breaking-changes"></a>Visual C++ .NET 2003 重大更改
 

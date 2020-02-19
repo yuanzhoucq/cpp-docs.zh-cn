@@ -5,12 +5,12 @@ f1_keywords:
 - ConnectionManager
 helpviewer_keywords:
 - ConnectionManager program
-ms.openlocfilehash: 2b01bfbcd81984e7ddf32cd5ab0485fff17b3d2b
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: 1c6236cedba88714e9918dd2c096b5e78d2f08ce
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76520467"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77258028"
 ---
 # <a name="connectionmanager-reference"></a>ConnectionManager 引用
 
@@ -22,7 +22,7 @@ ms.locfileid: "76520467"
 
 ::: moniker range="vs-2019"
 
-ConnectionManager.exe 是用于在 Visual Studio 之外管理远程开发连接的命令行实用工具。 它对于预配新开发计算机之类的任务非常有用。 你也可以使用它来设置 Visual Studio 进行持续集成。 可以在“开发人员命令提示”窗口中使用它。 若要详细了解开发人员命令提示，请参阅[通过命令行使用 Microsoft C++ 工具集](..\build\building-on-the-command-line.md)。
+ConnectionManager.exe 是用于在 Visual Studio 之外管理远程开发连接的命令行实用工具。 它对于预配新开发计算机之类的任务非常有用。 你也可以使用它来设置 Visual Studio 进行持续集成。 可以在“开发人员命令提示”窗口中使用它。 若要详细了解开发人员命令提示，请参阅[通过命令行使用 Microsoft C++ 工具集](../build/building-on-the-command-line.md)。
 
 可以在 Visual Studio 2019 版本 16.5 及更高版本中使用 ConnectionManager.exe。 它属于 Visual Studio 安装程序中的“使用 C++ 的 Linux 开发”  工作负载。 它也会在你选择安装程序中的“连接管理器”  组件时自动安装。 它的安装路径为 %VCIDEInstallDir%\\Linux\\bin\\ConnectionManagerExe\\ConnectionManager.exe  。
 
