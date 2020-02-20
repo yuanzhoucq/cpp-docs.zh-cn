@@ -9,12 +9,12 @@ helpviewer_keywords:
 - std::invoke_result
 - std::invoke_result_t
 - std::invoke_result::type
-ms.openlocfilehash: 8cd72e62fcb65209482fd9677afcc2ec83356feb
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: a5f67935bde103cf10c1bd9948ac1388f5221322
+ms.sourcegitcommit: f38f770bfda1c174d2b81fabda7c893b15bd83a1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689523"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77473886"
 ---
 # <a name="invoke_result-class"></a>invoke_result 类
 
@@ -27,16 +27,16 @@ template <class Callable, class... Args>
    struct invoke_result<Callable(Args...)>;
 
 // Helper type
-template<lass Callable, class... Args>
+template<class Callable, class... Args>
    using invoke_result_t = typename invoke_result<Callable, Args...>::type;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 可*调用*\
 要查询的可调用类型。
 
-*Args* \
+*Args*\
 供可调用类型查询的参数列表的类型。
 
 ## <a name="remarks"></a>备注
@@ -45,11 +45,11 @@ template<lass Callable, class... Args>
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<type_traits>
+**标头：** \<type_traits >
 
-**命名空间:** std
+**命名空间：** std
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [<type_traits>](../standard-library/type-traits.md)\
-[唤醒](functional-functions.md#invoke)
+[invoke](functional-functions.md#invoke)

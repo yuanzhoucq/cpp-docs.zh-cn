@@ -226,12 +226,12 @@ no-loc:
 - _WIN64
 - _WINRT_DLL
 - __func__
-ms.openlocfilehash: 7d019b527abea89ab8337270fbd22abc9dbecc4e
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: ff3945fa9476e090f26ce029c63b1813401082e0
+ms.sourcegitcommit: f38f770bfda1c174d2b81fabda7c893b15bd83a1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74305467"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77473847"
 ---
 # <a name="predefined-macros"></a>预定义宏
 
@@ -472,11 +472,14 @@ MSVC 支持这些其他预定义的宏。
    |Visual Studio 2017 版本 15.6|1913|
    |Visual Studio 2017 15.7 版|1914|
    |Visual Studio 2017 版本 15.8|1915|
-   |Visual Studio 2017 版本15。9|1916|
+   |Visual Studio 2017 版本 15.9|1916|
    |Visual Studio 2019 RTW （16.0）|1920|
    |Visual Studio 2019 版本 16.1|1921|
    |Visual Studio 2019 版本 16.2|1922|
    |Visual Studio 2019 版本16。3|1923|
+   |Visual Studio 2019 版本16。4|1924|
+   |Visual Studio 2019 版本16。5|1925|
+   |Visual Studio 2019 版本16。6|1926|
 
    若要在 Visual Studio 的给定版本或之后测试编译器版本或更新，请使用 `>=` 运算符。 可以在条件指令中使用它来比较 `_MSC_VER` 与已知版本。 如果要比较多个互相排斥的版本，请按版本号的降序顺序进行比较。 例如，以下代码将检查 Visual Studio 2017 和更高版本中发布的编译器。 接下来，它将检查 Visual Studio 2015 或之后发布的编译器。 然后，它会检查 Visual Studio 2015 之前发布的所有编译器：
 
