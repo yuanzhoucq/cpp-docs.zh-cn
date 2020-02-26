@@ -4,12 +4,12 @@ ms.date: 11/22/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: fb7dc81648ae301962b952b0440d8a24b397c0d8
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: 542a469393d3655418f69e5d51d59adfa824ad15
+ms.sourcegitcommit: 9a63e9b36d5e7fb13eab15c2c35bedad4fb03ade
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518200"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77600032"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>CMakeSettings.json 架构引用
 
@@ -31,7 +31,7 @@ Visual Studio 2017 及更高版本支持 CMake 项目。
 
 `configuration` 具有以下属性：
 
-- `addressSDanitizerEnabled`：如果 `true` 编译具有 Address Sanitizer 的程序（在 Windows 上实验）。 在 Linux 上，编译 fno-rtti 和编译器优化级别-Os 或-Oo 以获得最佳结果。
+- `addressSanitizerEnabled`：如果 `true` 编译具有 Address Sanitizer 的程序（在 Windows 上实验）。 在 Linux 上，编译 fno-rtti 和编译器优化级别-Os 或-Oo 以获得最佳结果。
 - `addressSanitizerRuntimeFlags`：通过 ASAN_OPTIONS 环境变量传递给 AddressSanitizer 的运行时标志。 格式：标志 1 = 值：标志 2 = value2。
 - `buildCommandArgs`：指定在“生成”后传递给 CMake 的本机生成开关。 例如，使用 Ninja 生成器强制输出命令行使用 Ninja 时，传递 -v。 请参阅 [Ninja 命令行参数](#ninja)，详细了解 Ninja 命令。
 - `buildRoot`：指定 CMake 生成器要在其中为所选生成器生成脚本的目录。  映射到 **-DCMAKE_BINARY_DIR**开关并指定将在其中创建*cmakecache.txt*的位置。 如果文件夹不存在，则会创建一个。 支持的宏包括 `${workspaceRoot}`、`${workspaceHash}`、`${projectFile}`、`${projectDir}`、`${thisFile}`、`${thisFileDir}`、`${name}`、`${generator}`、`${env.VARIABLE}`。
@@ -44,7 +44,7 @@ Visual Studio 2017 及更高版本支持 CMake 项目。
 - `configurationType`：为选定的生成器指定生成类型配置。 可能是以下其中之一：
 
   - 调试
-  - Release
+  - 发布
   - MinSizeRel
   - RelWithDebInfo
   
@@ -211,7 +211,7 @@ Visual Studio 2017 及更高版本支持 CMake 项目。
 }
 ```
 
-在下一个示例中，x86-Debug 配置为 BuildDir 属性定义其自己的值。 此值替代由全局 BuildDir 属性设置的值，以便 BuildRoot 评估为 `D:\custom-builddir\x86-Debug`。
+在下一个示例中，x86-Debug 配置为 BuildDir 属性定义其自己的值。 此值替代由全局 BuildDir 属性设置的值，以便 BuildRoot 评估为`D:\custom-builddir\x86-Debug`。
 
 ```json
 {
@@ -279,7 +279,7 @@ ninja: invalid option -- `-?'
 usage: ninja [options] [targets...]
 ```
 
-|选项|描述|
+|选项|说明|
 |--------------|------------|
 | --version  | 打印 ninja 版本（“1.7.1”）|
 |   -C DIR   | 在执行任何其他操作前更改为 DIR|
