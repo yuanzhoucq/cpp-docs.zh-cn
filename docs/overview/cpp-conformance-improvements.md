@@ -2439,7 +2439,7 @@ Visual Studio 2017 版本 15.3 中添加了此警告，但是默认关闭。 Vis
 
 ### <a name="defaulted-functions-and-__declspecnothrow"></a>默认函数和 `__declspec(nothrow)`
 
-以前，当相应基/成员函数允许异常时，编译器允许使用 `__declspec(nothrow)` 声明默认函数。 此行为与 C++ 标准冲突，可能导致在运行时发生未定义的行为。 如果有异常规范不匹配，标准要求此类函数定义为已删除。  在 /std:c++17 下，以下代码引发错误 C2280: 尝试引用已删除的函数  *。因为显式异常规范与隐式声明的异常规范不兼容，所以已隐式删除函数。*
+以前，当相应基/成员函数允许异常时，编译器允许使用 `__declspec(nothrow)` 声明默认函数。 此行为与 C++ 标准冲突，可能导致在运行时发生未定义的行为。 如果有异常规范不匹配，标准要求此类函数定义为已删除。  在 /std:c++17 下，以下代码引发错误 C2280: 尝试引用已删除的函数。   因为显式异常规范与隐式声明的异常规范不兼容，所以已隐式删除函数。
 
 ```cpp
 struct A {
@@ -2589,7 +2589,7 @@ struct D : B<T*> {
 };
 ```
 
-在 /std:c++17 模式下，Visual Studio 2017 版本 15.7 需要 D 中 using 语句中的 typename 关键字。如果没有 typename，编译器会引发警告 C4346:     （B<T>::type”：依赖项名称不是类型）和错误 C2061（语法错误：标识符“type”）*  ：
+在 /std:c++17 模式下，Visual Studio 2017 版本 15.7 需要 D 中 using 语句中的 typename 关键字。如果没有 typename，编译器会引发警告 C4346:     （B<T>::type”：依赖项名称不是类型）和错误 C2061（语法错误：标识符“type”） *\**  ：
 
 ```cpp
 template<typename T>
@@ -2925,9 +2925,9 @@ cl /EHsc /std:c++17 m.ixx /experimental:module
 cl /experimental:module /module:reference m.ifc main.cpp /std:c++14
 ```
 
-在这两种情况下编译器均引发 C5050。警告 C5050：导入模块“m”时可能不兼容的环境：C++ 版本不匹配。当前版本为“201402”，模块版本为“201703”* 。
+在这两种情况下编译器均引发 C5050。警告 C5050：导入模块“m”时可能不兼容的环境：C++ 版本不匹配。当前版本为“201402”，模块版本为“201703”。
 
-每当篡改 .ifc 文件时，编译器还会引发 C7536。 模块接口的标头包含它下面内容的 SHA2 哈希。 在导入时，.ifc 文件以相同方式进行哈希处理，然后检查标头中提供的哈希。 如果这些不匹配，将引发错误 C7536：*ifc 未通过完整性检查。预期为 SHA2：“66d5c8154df0c71d4cab7665bab4a125c7ce5cb9a401a4d8b461b706ddd771c6”* 。
+每当篡改 .ifc 文件时，编译器还会引发 C7536。 模块接口的标头包含它下面内容的 SHA2 哈希。 在导入时，.ifc 文件以相同方式进行哈希处理，然后检查标头中提供的哈希。 如果这些不匹配，将引发错误 C7536：ifc 未通过完整性检查。预期为 SHA2：“66d5c8154df0c71d4cab7665bab4a125c7ce5cb9a401a4d8b461b706ddd771c6”。
 
 ### <a name="partial-ordering-involving-aliases-and-non-deduced-contexts"></a>部分排序涉及别名和非推导上下文
 
