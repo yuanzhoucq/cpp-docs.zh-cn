@@ -99,11 +99,11 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
 ms.openlocfilehash: 14befb819a30238abb5780b1bdcc6d74402e8976
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70741186"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875742"
 ---
 # <a name="crebarctrl-class"></a>CReBarCtrl 类
 
@@ -115,63 +115,63 @@ ms.locfileid: "70741186"
 class CReBarCtrl : public CWnd
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[CReBarCtrl：： CReBarCtrl](#crebarctrl)|构造 `CReBarCtrl` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CReBarCtrl::BeginDrag](#begindrag)|将 rebar 控件置于拖放模式。|
-|[CReBarCtrl::Create](#create)|创建 rebar 控件并将其附加到`CReBarCtrl`对象。|
-|[CReBarCtrl::CreateEx](#createex)|创建具有指定 Windows 扩展样式的 rebar 控件，并将其附加到`CReBarCtrl`对象。|
-|[CReBarCtrl::DeleteBand](#deleteband)|从 rebar 控件中删除带区。|
-|[CReBarCtrl::DragMove](#dragmove)|调用后，更新 rebar 控件中的拖动位置`BeginDrag`。|
-|[CReBarCtrl::EndDrag](#enddrag)|终止 rebar 控件的拖放操作。|
-|[CReBarCtrl::GetBandBorders](#getbandborders)|检索带区的边框。|
-|[CReBarCtrl::GetBandCount](#getbandcount)|检索当前在 rebar 控件中的带区的计数。|
-|[CReBarCtrl::GetBandInfo](#getbandinfo)|检索 rebar 控件中指定带区的相关信息。|
-|[CReBarCtrl::GetBandMargins](#getbandmargins)|检索带区的边距。|
-|[CReBarCtrl::GetBarHeight](#getbarheight)|检索 rebar 控件的高度。|
-|[CReBarCtrl::GetBarInfo](#getbarinfo)|检索有关 rebar 控件及其使用的图像列表的信息。|
-|[CReBarCtrl::GetBkColor](#getbkcolor)|检索 rebar 控件的默认背景色。|
-|[CReBarCtrl::GetColorScheme](#getcolorscheme)|检索与 rebar 控件关联的[COLORSCHEME](/windows/win32/api/commctrl/ns-commctrl-colorscheme)结构。|
-|[CReBarCtrl::GetDropTarget](#getdroptarget)|检索 rebar 控件的`IDropTarget`接口指针。|
-|[CReBarCtrl::GetExtendedStyle](#getextendedstyle)|获取当前 rebar 控件的扩展样式。|
-|[CReBarCtrl::GetImageList](#getimagelist)|检索与 rebar 控件关联的图像列表。|
-|[CReBarCtrl::GetPalette](#getpalette)|检索 rebar 控件的当前调色板。|
-|[CReBarCtrl::GetRect](#getrect)|检索 rebar 控件中给定带区的边框。|
-|[CReBarCtrl::GetRowCount](#getrowcount)|检索 rebar 控件中带区的行数。|
-|[CReBarCtrl::GetRowHeight](#getrowheight)|检索 rebar 控件中指定行的高度。|
-|[CReBarCtrl::GetTextColor](#gettextcolor)|检索 rebar 控件的默认文本颜色。|
-|[CReBarCtrl::GetToolTips](#gettooltips)|检索与 rebar 控件关联的任何工具提示控件的句柄。|
-|[CReBarCtrl::HitTest](#hittest)|确定 rebar 带区的哪个部分位于屏幕上的给定点，前提是在该点存在 rebar 带区。|
-|[CReBarCtrl::IDToIndex](#idtoindex)|将带区标识符（ID）转换为 rebar 控件中的带区索引。|
-|[CReBarCtrl::InsertBand](#insertband)|在 rebar 控件中插入新带区。|
-|[CReBarCtrl::MaximizeBand](#maximizeband)|将 rebar 控件中的带区调整到其最大大小。|
-|[CReBarCtrl::MinimizeBand](#minimizeband)|将 rebar 控件中的带区大小调整到最小大小。|
-|[CReBarCtrl::MoveBand](#moveband)|将带区从一个索引移动到另一个索引。|
-|[CReBarCtrl::PushChevron](#pushchevron)|以编程方式推送 v 形。|
-|[CReBarCtrl::RestoreBand](#restoreband)|将 rebar 控件中的带区调整为理想大小。|
-|[CReBarCtrl::SetBandInfo](#setbandinfo)|设置 rebar 控件中现有带区的特征。|
-|[CReBarCtrl::SetBandWidth](#setbandwidth)|设置当前 rebar 控件中指定的带区的宽度。|
-|[CReBarCtrl::SetBarInfo](#setbarinfo)|设置 rebar 控件的特征。|
-|[CReBarCtrl::SetBkColor](#setbkcolor)|设置 rebar 控件的默认背景色。|
-|[CReBarCtrl::SetColorScheme](#setcolorscheme)|为 rebar 控件上的按钮设置配色方案。|
-|[CReBarCtrl::SetExtendedStyle](#setextendedstyle)|设置当前 rebar 控件的扩展样式。|
-|[CReBarCtrl::SetImageList](#setimagelist)|设置 rebar 控件的图像列表。|
-|[CReBarCtrl::SetOwner](#setowner)|设置 rebar 控件的所有者窗口。|
-|[CReBarCtrl::SetPalette](#setpalette)|设置 rebar 控件的当前调色板。|
-|[CReBarCtrl::SetTextColor](#settextcolor)|设置 rebar 控件的默认文本颜色。|
-|[CReBarCtrl::SetToolTips](#settooltips)|将工具提示控件与 rebar 控件相关联。|
-|[CReBarCtrl::SetWindowTheme](#setwindowtheme)|设置 rebar 控件的视觉样式。|
-|[CReBarCtrl::ShowBand](#showband)|显示或隐藏 rebar 控件中的给定带区。|
-|[CReBarCtrl::SizeToRect](#sizetorect)|使 rebar 控件适合指定的矩形。|
+|[CReBarCtrl：： BeginDrag](#begindrag)|将 rebar 控件置于拖放模式。|
+|[CReBarCtrl：： Create](#create)|创建 rebar 控件，并将其附加到 `CReBarCtrl` 对象上。|
+|[CReBarCtrl：： CreateEx](#createex)|创建具有指定 Windows 扩展样式的 rebar 控件，并将其附加到 `CReBarCtrl` 的对象。|
+|[CReBarCtrl：:D eleteBand](#deleteband)|从 rebar 控件中删除带区。|
+|[CReBarCtrl：:D ragMove](#dragmove)|调用 `BeginDrag`后，更新 rebar 控件中的拖动位置。|
+|[CReBarCtrl：： EndDrag](#enddrag)|终止 rebar 控件的拖放操作。|
+|[CReBarCtrl：： GetBandBorders](#getbandborders)|检索带区的边框。|
+|[CReBarCtrl：： GetBandCount](#getbandcount)|检索当前在 rebar 控件中的带区的计数。|
+|[CReBarCtrl：： GetBandInfo](#getbandinfo)|检索 rebar 控件中指定带区的相关信息。|
+|[CReBarCtrl：： GetBandMargins](#getbandmargins)|检索带区的边距。|
+|[CReBarCtrl：： GetBarHeight](#getbarheight)|检索 rebar 控件的高度。|
+|[CReBarCtrl：： GetBarInfo](#getbarinfo)|检索有关 rebar 控件及其使用的图像列表的信息。|
+|[CReBarCtrl：： GetBkColor](#getbkcolor)|检索 rebar 控件的默认背景色。|
+|[CReBarCtrl：： GetColorScheme](#getcolorscheme)|检索与 rebar 控件关联的[COLORSCHEME](/windows/win32/api/commctrl/ns-commctrl-colorscheme)结构。|
+|[CReBarCtrl：： GetDropTarget](#getdroptarget)|检索 rebar 控件的 `IDropTarget` 接口指针。|
+|[CReBarCtrl：： GetExtendedStyle](#getextendedstyle)|获取当前 rebar 控件的扩展样式。|
+|[CReBarCtrl：： GetImageList](#getimagelist)|检索与 rebar 控件关联的图像列表。|
+|[CReBarCtrl：： GetPalette](#getpalette)|检索 rebar 控件的当前调色板。|
+|[CReBarCtrl：： GetRect](#getrect)|检索 rebar 控件中给定带区的边框。|
+|[CReBarCtrl：： GetRowCount](#getrowcount)|检索 rebar 控件中带区的行数。|
+|[CReBarCtrl：： GetRowHeight](#getrowheight)|检索 rebar 控件中指定行的高度。|
+|[CReBarCtrl：： GetTextColor](#gettextcolor)|检索 rebar 控件的默认文本颜色。|
+|[CReBarCtrl：： GetToolTips](#gettooltips)|检索与 rebar 控件关联的任何工具提示控件的句柄。|
+|[CReBarCtrl：： System.windows.media.visualtreehelper.hittest](#hittest)|确定 rebar 带区的哪个部分位于屏幕上的给定点，前提是在该点存在 rebar 带区。|
+|[CReBarCtrl：： IDToIndex](#idtoindex)|将带区标识符（ID）转换为 rebar 控件中的带区索引。|
+|[CReBarCtrl：： InsertBand](#insertband)|在 rebar 控件中插入新带区。|
+|[CReBarCtrl：： MaximizeBand](#maximizeband)|将 rebar 控件中的带区调整到其最大大小。|
+|[CReBarCtrl：： MinimizeBand](#minimizeband)|将 rebar 控件中的带区大小调整到最小大小。|
+|[CReBarCtrl：： MoveBand](#moveband)|将带区从一个索引移动到另一个索引。|
+|[CReBarCtrl：:P ushChevron](#pushchevron)|以编程方式推送 v 形。|
+|[CReBarCtrl：： RestoreBand](#restoreband)|将 rebar 控件中的带区调整为理想大小。|
+|[CReBarCtrl：： SetBandInfo](#setbandinfo)|设置 rebar 控件中现有带区的特征。|
+|[CReBarCtrl：： SetBandWidth](#setbandwidth)|设置当前 rebar 控件中指定的带区的宽度。|
+|[CReBarCtrl：： SetBarInfo](#setbarinfo)|设置 rebar 控件的特征。|
+|[CReBarCtrl：： SetBkColor](#setbkcolor)|设置 rebar 控件的默认背景色。|
+|[CReBarCtrl：： SetColorScheme](#setcolorscheme)|为 rebar 控件上的按钮设置配色方案。|
+|[CReBarCtrl：： SetExtendedStyle](#setextendedstyle)|设置当前 rebar 控件的扩展样式。|
+|[CReBarCtrl：： SetImageList](#setimagelist)|设置 rebar 控件的图像列表。|
+|[CReBarCtrl：： SetOwner](#setowner)|设置 rebar 控件的所有者窗口。|
+|[CReBarCtrl：： SetPalette](#setpalette)|设置 rebar 控件的当前调色板。|
+|[CReBarCtrl：： SetTextColor](#settextcolor)|设置 rebar 控件的默认文本颜色。|
+|[CReBarCtrl：： SetToolTips](#settooltips)|将工具提示控件与 rebar 控件相关联。|
+|[CReBarCtrl：： SetWindowTheme](#setwindowtheme)|设置 rebar 控件的视觉样式。|
+|[CReBarCtrl：： ShowBand](#showband)|显示或隐藏 rebar 控件中的给定带区。|
+|[CReBarCtrl：： SizeToRect](#sizetorect)|使 rebar 控件适合指定的矩形。|
 
 ## <a name="remarks"></a>备注
 
@@ -219,7 +219,7 @@ Rebar 控件支持：
 
 **标头：** afxcmn.h
 
-##  <a name="begindrag"></a>  CReBarCtrl::BeginDrag
+##  <a name="begindrag"></a>CReBarCtrl：： BeginDrag
 
 实现 Win32 消息[RB_BEGINDRAG](/windows/win32/Controls/rb-begindrag)的行为，如 Windows SDK 中所述。
 
@@ -235,11 +235,11 @@ void BeginDrag(
 拖放操作将影响的带区的从零开始的索引。
 
 *dwPos*<br/>
-一个包含开始鼠标坐标的 DWORD 值。 水平坐标包含在 LOWORD 中，垂直坐标包含在 HIWORD 中。 如果传递（DWORD）-1，则 rebar 控件将使用鼠标在控件的线程最后一次调用`GetMessage`或`PeekMessage`时的位置。
+一个包含开始鼠标坐标的 DWORD 值。 水平坐标包含在 LOWORD 中，垂直坐标包含在 HIWORD 中。 如果传递（DWORD）-1，则 rebar 控件将使用鼠标上一次调用控件线程 `GetMessage` 或 `PeekMessage`时的位置。
 
 ##  <a name="create"></a>CReBarCtrl：： Create
 
-创建 rebar 控件并将其附加到`CReBarCtrl`对象。
+创建 rebar 控件，并将其附加到 `CReBarCtrl` 对象上。
 
 ```
 virtual BOOL Create(
@@ -258,7 +258,7 @@ virtual BOOL Create(
 对[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](/previous-versions/dd162897\(v=vs.85\))结构的引用，它是 rebar 控件的位置和大小。
 
 *pParentWnd*<br/>
-指向[CWnd](../../mfc/reference/cwnd-class.md)对象的指针，该对象是 rebar 控件的父窗口。 它不能为 NULL。
+指向[CWnd](../../mfc/reference/cwnd-class.md)对象的指针，该对象是 rebar 控件的父窗口。 值不得为 NULL。
 
 *nID*<br/>
 指定 rebar 控件的控件 ID。
@@ -271,11 +271,11 @@ virtual BOOL Create(
 
 通过两个步骤创建 rebar 控件：
 
-1. 调用[CReBarCtrl](#crebarctrl)以构造`CReBarCtrl`对象。
+1. 调用[CReBarCtrl](#crebarctrl)构造 `CReBarCtrl` 的对象。
 
-1. 调用此成员函数，该函数创建 Windows rebar 控件并将其附加到`CReBarCtrl`对象。
+1. 调用此成员函数，该函数创建 Windows rebar 控件，并将其附加到 `CReBarCtrl` 的对象。
 
-调用`Create`时，将初始化公共控件。
+调用 `Create`时，将初始化公共控件。
 
 ### <a name="example"></a>示例
 
@@ -283,7 +283,7 @@ virtual BOOL Create(
 
 ##  <a name="createex"></a>CReBarCtrl：： CreateEx
 
-创建一个控件（子窗口）并将`CReBarCtrl`其与对象关联。
+创建一个控件（子窗口）并将其与 `CReBarCtrl` 对象相关联。
 
 ```
 virtual BOOL CreateEx(
@@ -317,7 +317,7 @@ virtual BOOL CreateEx(
 
 ### <a name="remarks"></a>备注
 
-使用`CreateEx`而不是[Create](#create)来应用扩展的 windows 样式，由 windows 扩展样式指定的**WS_EX_** 。
+使用 `CreateEx` 而不是[Create](#create)来应用扩展的 windows 样式，该样式由 Windows 扩展样式指定的前言**WS_EX_** 开头。
 
 ##  <a name="crebarctrl"></a>CReBarCtrl：： CReBarCtrl
 
@@ -352,7 +352,7 @@ BOOL DeleteBand(UINT uBand);
 
 [!code-cpp[NVC_MFC_CReBarCtrl#4](../../mfc/reference/codesnippet/cpp/crebarctrl-class_2.cpp)]
 
-##  <a name="dragmove"></a>  CReBarCtrl::DragMove
+##  <a name="dragmove"></a>CReBarCtrl：:D ragMove
 
 实现 Win32 消息[RB_DRAGMOVE](/windows/win32/Controls/rb-dragmove)的行为，如 Windows SDK 中所述。
 
@@ -363,7 +363,7 @@ void DragMove(DWORD dwPos = (DWORD)-1);
 ### <a name="parameters"></a>参数
 
 *dwPos*<br/>
-一个包含新鼠标坐标的 DWORD 值。 水平坐标包含在 LOWORD 中，垂直坐标包含在 HIWORD 中。 如果传递（DWORD）-1，则 rebar 控件将使用鼠标在控件的线程最后一次调用`GetMessage`或`PeekMessage`时的位置。
+一个包含新鼠标坐标的 DWORD 值。 水平坐标包含在 LOWORD 中，垂直坐标包含在 HIWORD 中。 如果传递（DWORD）-1，则 rebar 控件将使用鼠标上一次调用控件线程 `GetMessage` 或 `PeekMessage`时的位置。
 
 ##  <a name="enddrag"></a>CReBarCtrl：： EndDrag
 
@@ -388,7 +388,7 @@ void GetBandBorders(
 *uBand*<br/>
 要为其检索边框的带区的从零开始的索引。
 
-*prc*<br/>
+*中国*<br/>
 指向将接收带区边框的[RECT](/previous-versions/dd162897\(v=vs.85\))结构的指针。 如果 rebar 控件具有 RBS_BANDBORDERS 样式，则此结构的每个成员将在带区的相应一侧接收构成边框的像素数。 如果 rebar 控件没有 RBS_BANDBORDERS 样式，则只有此结构的左侧成员才能接收有效信息。 有关 rebar 控件样式的说明，请参阅 Windows SDK 中的[Rebar 控件样式](/windows/win32/Controls/rebar-control-styles)。
 
 ##  <a name="getbandcount"></a>CReBarCtrl：： GetBandCount
@@ -405,7 +405,7 @@ UINT GetBandCount() const;
 
 ##  <a name="getbandinfo"></a>CReBarCtrl：： GetBandInfo
 
-按照 Windows SDK 中所述，实现 Win32 消息[RB_GETBANDINFO](/windows/win32/Controls/rb-getbandinfo)的行为。
+如 Windows SDK 中所述，实现 Win32 消息[RB_GETBANDINFO](/windows/win32/Controls/rb-getbandinfo)的行为。
 
 ```
 BOOL GetBandInfo(
@@ -419,7 +419,7 @@ BOOL GetBandInfo(
 要为其检索信息的带区的从零开始的索引。
 
 *prbbi*<br/>
-指向接收带区信息的[REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow)结构的指针。 您必须将此`cbSize`结构的成员设置为`sizeof(REBARBANDINFO)` ，并将`fMask`成员设置为在发送此消息之前要检索的项。
+指向接收带区信息的[REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow)结构的指针。 您必须将此结构的 `cbSize` 成员设置为 `sizeof(REBARBANDINFO)` 并将 `fMask` 成员设置为发送此消息之前要检索的项。
 
 ### <a name="return-value"></a>返回值
 
@@ -465,7 +465,7 @@ BOOL GetBarInfo(REBARINFO* prbi) const;
 ### <a name="parameters"></a>参数
 
 *prbi*<br/>
-指向将接收 rebar 控件信息的[REBARINFO](/windows/win32/api/commctrl/ns-commctrl-rebarinfo)结构的指针。 发送此消息前 ，必须将此结构的`sizeof(REBARINFO)` cbSize 成员设置为。
+指向将接收 rebar 控件信息的[REBARINFO](/windows/win32/api/commctrl/ns-commctrl-rebarinfo)结构的指针。 发送此消息前，必须将此结构的*cbSize*成员设置为 `sizeof(REBARINFO)`。
 
 ### <a name="return-value"></a>返回值
 
@@ -502,9 +502,9 @@ BOOL GetColorScheme(COLORSCHEME* lpcs);
 
 ### <a name="remarks"></a>备注
 
-`COLORSCHEME`结构包括按钮突出显示颜色和按钮阴影颜色。
+`COLORSCHEME` 结构包括按钮突出显示颜色和按钮阴影颜色。
 
-##  <a name="getdroptarget"></a>  CReBarCtrl::GetDropTarget
+##  <a name="getdroptarget"></a>CReBarCtrl：： GetDropTarget
 
 实现 Win32 消息[RB_GETDROPTARGET](/windows/win32/Controls/rb-getdroptarget)的行为，如 Windows SDK 中所述。
 
@@ -526,15 +526,15 @@ DWORD GetExtendedStyle() const;
 
 ### <a name="return-value"></a>返回值
 
-标志的按位组合（OR），指示扩展样式。 可能的标志为 RBS_EX_SPLITTER 和 RBS_EX_TRANSPARENT。 有关详细信息，请参阅[CReBarCtrl：： SetExtendedStyle](#setextendedstyle)方法的*dwMask*参数。
+标志的按位组合（OR），指示扩展样式。 可能的标志 RBS_EX_SPLITTER 和 RBS_EX_TRANSPARENT。 有关详细信息，请参阅[CReBarCtrl：： SetExtendedStyle](#setextendedstyle)方法的*dwMask*参数。
 
 ### <a name="remarks"></a>备注
 
-此方法发送[RB_GETEXTENDEDSTYLE](/windows/win32/Controls/rb-dragmove)消息，如 Windows SDK 中所述。
+此方法发送 Windows SDK 中描述的[RB_GETEXTENDEDSTYLE](/windows/win32/Controls/rb-dragmove)消息。
 
 ##  <a name="getimagelist"></a>CReBarCtrl：： GetImageList
 
-获取与`CImageList` rebar 控件关联的对象。
+获取与 rebar 控件关联的 `CImageList` 对象。
 
 ```
 CImageList* GetImageList() const;
@@ -562,7 +562,7 @@ CPalette* GetPalette() const;
 
 ### <a name="remarks"></a>备注
 
-请注意，此成员函数使用`CPalette`对象作为其返回值，而不是 HPALETTE。
+请注意，此成员函数使用 `CPalette` 对象作为其返回值，而不是 HPALETTE。
 
 ### <a name="example"></a>示例
 
@@ -583,7 +583,7 @@ BOOL GetRect(
 *uBand*<br/>
 Rebar 控件中带区的从零开始的索引。
 
-*prc*<br/>
+*中国*<br/>
 指向将接收 rebar 带区边界的[RECT](/previous-versions/dd162897\(v=vs.85\))结构的指针。
 
 ### <a name="return-value"></a>返回值
@@ -657,7 +657,7 @@ CToolTipCtrl* GetToolTips() const;
 
 ### <a name="remarks"></a>备注
 
-请注意，的`GetToolTips` MFC 实现返回指向的`CToolTipCtrl`指针，而不是 HWND。
+请注意，的 MFC 实现 `GetToolTips` 返回指向 `CToolTipCtrl`的指针，而不是 HWND。
 
 ##  <a name="hittest"></a>CReBarCtrl：： System.windows.media.visualtreehelper.hittest
 
@@ -670,7 +670,7 @@ int HitTest(RBHITTESTINFO* prbht);
 ### <a name="parameters"></a>参数
 
 *prbht*<br/>
-指向[RBHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-rbhittestinfo)结构的指针。 在发送消息之前， `pt`必须在工作区坐标中将此结构的成员初始化为要测试的点。
+指向[RBHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-rbhittestinfo)结构的指针。 在发送消息之前，必须在工作区坐标中将此结构的 `pt` 成员初始化为要测试的点。
 
 ### <a name="return-value"></a>返回值
 
@@ -687,7 +687,7 @@ int IDToIndex(UINT uBandID) const;
 ### <a name="parameters"></a>参数
 
 *uBandID*<br/>
-指定带区的应用程序定义的标识符，在插入带`wID`区时传入[REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow)结构的成员。
+指定带区的应用程序定义的标识符，在插入带区时传递到[REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow)结构的 `wID` 成员中。
 
 ### <a name="return-value"></a>返回值
 
@@ -709,7 +709,7 @@ BOOL InsertBand(
 要插入带区的位置的从零开始的索引。 如果将此参数设置为-1，则控件将在最后一个位置添加新的带区。
 
 *prbbi*<br/>
-指向[REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow)结构的指针，该结构定义要插入的带区。 在调用此函数之前，您必须将此`sizeof(REBARBANDINFO)`结构的 cbSize 成员设置为。
+指向[REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow)结构的指针，该结构定义要插入的带区。 在调用此函数之前，您必须将此结构的*cbSize*成员设置为 `sizeof(REBARBANDINFO)`。
 
 ### <a name="return-value"></a>返回值
 
@@ -734,7 +734,7 @@ void MaximizeBand(UINT uBand);
 
 ### <a name="remarks"></a>备注
 
-实现 Win32 消息[RB_MAXIMIZEBAND](/windows/win32/Controls/rb-maximizeband)的行为，并将`fIdeal`其设置为0，如 Windows SDK 中所述。
+实现 Win32 消息[RB_MAXIMIZEBAND](/windows/win32/Controls/rb-maximizeband)的行为，并将 `fIdeal` 设置为0，如 Windows SDK 中所述。
 
 ### <a name="example"></a>示例
 
@@ -799,7 +799,7 @@ void PushChevron(
 要推送其 v 形的带区的从零开始的索引。
 
 *lAppValue*<br/>
-应用程序定义的32位值。 请参阅 Windows SDK 的[RB_PUSHCHEVRON](/windows/win32/Controls/rb-pushchevron)中的*lAppValue* 。
+应用程序定义的32位值。 请参阅 Windows SDK [RB_PUSHCHEVRON](/windows/win32/Controls/rb-pushchevron)中的*lAppValue* 。
 
 ##  <a name="restoreband"></a>CReBarCtrl：： RestoreBand
 
@@ -816,7 +816,7 @@ void RestoreBand(UINT uBand);
 
 ### <a name="remarks"></a>备注
 
-实现 Win32 消息[RB_MAXIMIZEBAND](/windows/win32/Controls/rb-maximizeband)的行为，并将`fIdeal`其设置为1，如 Windows SDK 中所述。
+实现 Win32 消息[RB_MAXIMIZEBAND](/windows/win32/Controls/rb-maximizeband)的行为，并将 `fIdeal` 设置为1，如 Windows SDK 中所述。
 
 ### <a name="example"></a>示例
 
@@ -838,7 +838,7 @@ BOOL SetBandInfo(
 要接收新设置的带区的从零开始的索引。
 
 *prbbi*<br/>
-指向[REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow)结构的指针，该结构定义要插入的带区。 发送此消息前`cbSize` ，必须将此结构`sizeof(REBARBANDINFO)`的成员设置为。
+指向[REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow)结构的指针，该结构定义要插入的带区。 发送此消息前，必须将此结构的 `cbSize` 成员设置为 `sizeof(REBARBANDINFO)`。
 
 ### <a name="return-value"></a>返回值
 
@@ -860,7 +860,7 @@ BOOL SetBandWidth(
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |*uBand*|中Rebar 带区的从零开始的索引。|
 |*cxWidth*|中Rebar 带区的新宽度（以像素为单位）。|
@@ -871,11 +871,11 @@ BOOL SetBandWidth(
 
 ### <a name="remarks"></a>备注
 
-此方法发送[RB_SETBANDWIDTH](/windows/win32/Controls/rb-setbandwidth)消息，如 Windows SDK 中所述。
+此方法发送 Windows SDK 中描述的[RB_SETBANDWIDTH](/windows/win32/Controls/rb-setbandwidth)消息。
 
 ### <a name="example"></a>示例
 
-下面的代码示例定义用于访问当前`m_rebar`rebar 控件的变量。 此变量将在下一个示例中使用。
+下面的代码示例定义用于访问当前 rebar 控件的变量 `m_rebar`。 此变量将在下一个示例中使用。
 
 [!code-cpp[NVC_MFC_CReBarCtrl_s1#1](../../mfc/reference/codesnippet/cpp/crebarctrl-class_12.h)]
 
@@ -896,7 +896,7 @@ BOOL SetBarInfo(REBARINFO* prbi);
 ### <a name="parameters"></a>参数
 
 *prbi*<br/>
-指向[REBARINFO](/windows/win32/api/commctrl/ns-commctrl-rebarinfo)结构的指针，该结构包含要设置的信息。 发送此消息前`cbSize` ，必须将此结构`sizeof(REBARINFO)`的成员设置为
+指向[REBARINFO](/windows/win32/api/commctrl/ns-commctrl-rebarinfo)结构的指针，该结构包含要设置的信息。 发送此消息前，必须将此结构的 `cbSize` 成员设置为 `sizeof(REBARINFO)`
 
 ### <a name="return-value"></a>返回值
 
@@ -942,7 +942,7 @@ void SetColorScheme(const COLORSCHEME* lpcs);
 
 ### <a name="remarks"></a>备注
 
-`COLORSCHEME`结构包含按钮突出显示颜色和按钮阴影颜色。
+`COLORSCHEME` 结构同时包含按钮突出显示颜色和按钮阴影颜色。
 
 ##  <a name="setextendedstyle"></a>CReBarCtrl：： SetExtendedStyle
 
@@ -956,9 +956,9 @@ DWORD SetExtendedStyle(
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
-|*dwMask*|中指定*dwStyleEx*参数中的哪些标志适用的标志的按位组合（OR）。 使用以下一个或多个值：<br /><br /> RBS_EX_SPLITTER:默认情况下，在水平模式下的底部显示拆分器，并在垂直模式下显示在右侧。<br /><br /> RBS_EX_TRANSPARENT:将[WM_ERASEBKGND](/windows/win32/winmsg/wm-erasebkgnd)消息转发到父窗口。|
+|*dwMask*|中指定*dwStyleEx*参数中的哪些标志适用的标志的按位组合（OR）。 使用以下一个或多个值：<br /><br /> RBS_EX_SPLITTER：默认情况下，在水平模式下的底部显示拆分器，在垂直模式下显示在右侧。<br /><br /> RBS_EX_TRANSPARENT：向父窗口转发[WM_ERASEBKGND](/windows/win32/winmsg/wm-erasebkgnd)消息。|
 |*dwStyleEx*|中标志的按位组合（OR），指定要应用的样式。 若要设置样式，请指定在*dwMask*参数中使用的同一标志。 若要重置样式，请指定二进制零。|
 
 ### <a name="return-value"></a>返回值
@@ -967,7 +967,7 @@ DWORD SetExtendedStyle(
 
 ### <a name="remarks"></a>备注
 
-此方法发送[RB_SETEXTENDEDSTYLE](/windows/win32/Controls/rb-setextendedstyle)消息，如 Windows SDK 中所述。
+此方法发送 Windows SDK 中描述的[RB_SETEXTENDEDSTYLE](/windows/win32/Controls/rb-setextendedstyle)消息。
 
 ##  <a name="setimagelist"></a>CReBarCtrl：： SetImageList
 
@@ -986,7 +986,7 @@ BOOL SetImageList(CImageList* pImageList);
 
 如果成功，则不为零，否则为零。
 
-##  <a name="setowner"></a>  CReBarCtrl::SetOwner
+##  <a name="setowner"></a>CReBarCtrl：： SetOwner
 
 实现 Win32 消息[RB_SETPARENT](/windows/win32/Controls/rb-setparent)的行为，如 Windows SDK 中所述。
 
@@ -997,7 +997,7 @@ CWnd* SetOwner(CWnd* pWnd);
 ### <a name="parameters"></a>参数
 
 *pWnd*<br/>
-指向要设置为`CWnd` rebar 控件所有者的对象的指针。
+指向要设置为 rebar 控件所有者的 `CWnd` 对象的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -1005,7 +1005,7 @@ CWnd* SetOwner(CWnd* pWnd);
 
 ### <a name="remarks"></a>备注
 
-请注意，此成员函数将指针`CWnd`同时用于 rebar 控件的当前和选定的所有者，而不是指向 windows 的句柄。
+请注意，此成员函数使用指针为 rebar 控件的当前和选定所有者 `CWnd` 对象，而不是使用窗口的句柄。
 
 > [!NOTE]
 >  此成员函数不会更改在创建控件时设置的实际父级;相反，它会将通知消息发送到您指定的窗口。
@@ -1029,7 +1029,7 @@ CPalette* SetPalette(HPALETTE hPal);
 
 ### <a name="remarks"></a>备注
 
-请注意，此成员函数使用`CPalette`对象作为其返回值，而不是 HPALETTE。
+请注意，此成员函数使用 `CPalette` 对象作为其返回值，而不是 HPALETTE。
 
 ##  <a name="settextcolor"></a>CReBarCtrl：： SetTextColor
 
@@ -1042,11 +1042,11 @@ COLORREF SetTextColor(COLORREF clr);
 ### <a name="parameters"></a>参数
 
 *clr*<br/>
-一个 COLORREF 值，该值表示`CReBarCtrl`对象中的新文本颜色。
+一个 COLORREF 值，该值表示 `CReBarCtrl` 对象中的新文本颜色。
 
 ### <a name="return-value"></a>返回值
 
-表示与`CReBarCtrl`对象关联的上一个文本颜色的 [COLORREF](/windows/win32/gdi/colorref) 值。
+[COLORREF](/windows/win32/gdi/colorref)值，表示与 `CReBarCtrl` 对象关联的上一个文本颜色。
 
 ### <a name="remarks"></a>备注
 
@@ -1067,7 +1067,7 @@ void SetToolTips(CToolTipCtrl* pToolTip);
 
 ### <a name="remarks"></a>备注
 
-完成后，必须`CToolTipCtrl`销毁对象。
+完成此操作后，必须销毁 `CToolTipCtrl` 的对象。
 
 ##  <a name="setwindowtheme"></a>CReBarCtrl：： SetWindowTheme
 
@@ -1131,9 +1131,9 @@ BOOL SizeToRect(CRect& rect);
 
 ### <a name="remarks"></a>备注
 
-请注意，此成员函数使用`CRect`对象作为参数，而不`RECT`是结构。
+请注意，此成员函数使用 `CRect` 对象作为参数，而不是 `RECT` 结构。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)

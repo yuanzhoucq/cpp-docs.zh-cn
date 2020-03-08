@@ -11,18 +11,18 @@ helpviewer_keywords:
 - CAtlWinModule class
 ms.assetid: 7ec844af-0f68-4a34-b0c8-9de50a025df0
 ms.openlocfilehash: d0bc98fa48f84e67ab38106dea3fe22d5ad1757d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246819"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78857346"
 ---
 # <a name="catlwinmodule-class"></a>CAtlWinModule 类
 
-此类的 ATL 窗口化组件提供支持。
+此类提供对 ATL 窗口化组件的支持。
 
 > [!IMPORTANT]
->  不能在 Windows 运行时中执行的应用程序中使用此类和其成员。
+>  此类及其成员不能用于在 Windows 运行时中执行的应用程序。
 
 ## <a name="syntax"></a>语法
 
@@ -30,25 +30,25 @@ ms.locfileid: "62246819"
 class CAtlWinModule : public _ATL_WIN_MODULE
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[CAtlWinModule::CAtlWinModule](#catlwinmodule)|构造函数。|
-|[CAtlWinModule:: ~ CAtlWinModule](#dtor)|析构函数。|
+|[CAtlWinModule：： ~ CAtlWinModule](#dtor)|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[CAtlWinModule::AddCreateWndData](#addcreatewnddata)|添加数据对象。|
-|[CAtlWinModule::ExtractCreateWndData](#extractcreatewnddata)|返回一个指向窗口模块数据对象。|
+|[CAtlWinModule::ExtractCreateWndData](#extractcreatewnddata)|返回一个指向窗口模块数据对象的指针。|
 
 ## <a name="remarks"></a>备注
 
-此类的所有 ATL 类需要窗口化功能提供支持。
+此类为需要窗口化功能的所有 ATL 类提供支持。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -58,11 +58,11 @@ class CAtlWinModule : public _ATL_WIN_MODULE
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlbase.h
+**标头：** atlbase。h
 
-##  <a name="addcreatewnddata"></a>  CAtlWinModule::AddCreateWndData
+##  <a name="addcreatewnddata"></a>CAtlWinModule::AddCreateWndData
 
-此方法初始化并添加`_AtlCreateWndData`结构。
+此方法初始化并添加 `_AtlCreateWndData` 结构。
 
 ```
 void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
@@ -71,16 +71,16 @@ void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
 ### <a name="parameters"></a>参数
 
 *pData*<br/>
-指向`_AtlCreateWndData`结构，以初始化，并添加到当前模块。
+一个指针，指向要初始化并添加到当前模块的 `_AtlCreateWndData` 结构。
 
 *pObject*<br/>
-指向对象的指针**这**指针。
+指向对象的**this**指针的指针。
 
 ### <a name="remarks"></a>备注
 
-此方法调用[AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata)哪些初始化[_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)结构。 此结构将存储**这**指针，用于获取窗口过程中的类实例。
+此方法调用[AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata) ，后者初始化[_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)结构。 此结构将存储用于在窗口过程中获取类实例**的指针。**
 
-##  <a name="catlwinmodule"></a>  CAtlWinModule::CAtlWinModule
+##  <a name="catlwinmodule"></a>CAtlWinModule::CAtlWinModule
 
 构造函数。
 
@@ -90,9 +90,9 @@ CAtlWinModule();
 
 ### <a name="remarks"></a>备注
 
-如果初始化失败， **EXCEPTION_NONCONTINUABLE**引发异常。
+如果初始化失败，则会引发**EXCEPTION_NONCONTINUABLE**异常。
 
-##  <a name="dtor"></a>  CAtlWinModule:: ~ CAtlWinModule
+##  <a name="dtor"></a>CAtlWinModule：： ~ CAtlWinModule
 
 析构函数。
 
@@ -104,9 +104,9 @@ CAtlWinModule();
 
 释放所有已分配的资源。
 
-##  <a name="extractcreatewnddata"></a>  CAtlWinModule::ExtractCreateWndData
+##  <a name="extractcreatewnddata"></a>CAtlWinModule::ExtractCreateWndData
 
-此方法返回一个指向`_AtlCreateWndData`结构。
+此方法返回指向 `_AtlCreateWndData` 结构的指针。
 
 ```
 void* ExtractCreateWndData();
@@ -114,9 +114,9 @@ void* ExtractCreateWndData();
 
 ### <a name="return-value"></a>返回值
 
-返回一个指向`_AtlCreateWndData`与以前添加的结构[CAtlWinModule::AddCreateWndData](#addcreatewnddata)，或如果没有对象，则可为 NULL。
+返回一个指向先前用[CAtlWinModule：： AddCreateWndData](#addcreatewnddata)添加的 `_AtlCreateWndData` 结构的指针; 如果没有可用的对象，则返回 NULL。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)<br/>
 [类概述](../../atl/atl-class-overview.md)<br/>

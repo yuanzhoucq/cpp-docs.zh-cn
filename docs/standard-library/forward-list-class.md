@@ -80,11 +80,11 @@ helpviewer_keywords:
 - std::forward_list::swap
 - std::forward_list::unique
 ms.openlocfilehash: e13242aa41cc99cdd01a6f16b607ef568195d659
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890194"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890839"
 ---
 # <a name="forward_list-class"></a>forward_list 类
 
@@ -117,7 +117,7 @@ class forward_list
 
 调用 [forward_list::insert_after](#insert_after)（它是可调用构造函数 `Type(const  T&)` 的唯一成员函数）时，可能会添加受控序列。 `forward_list` 也可能调用移动构造函数。 如果此类表达式引发异常，则容器对象不插入任何新元素，并重新引发该异常。 因此，当发生此类异常时，类型 `forward_list` 的对象将处于已知状态。
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="constructors"></a>构造函数
 
@@ -134,8 +134,8 @@ class forward_list
 |[const_pointer](#const_pointer)|一种类型，它提供指向转发列表中**const**元素的指针。|
 |[const_reference](#const_reference)|一种类型，用于提供对转发列表中元素的常量引用。|
 |[difference_type](#difference_type)|一种有符号整数类型，可用于表示转发列表中某个范围类迭代器所指向元素之间的元素数目。|
-|[Iterator](#iterator)|一种类型，用于为转发列表提供迭代器。|
-|[pointer](#pointer)|一种类型，用于提供指向转发列表中元素的指针。|
+|[迭代器](#iterator)|一种类型，用于为转发列表提供迭代器。|
+|[指针](#pointer)|一种类型，用于提供指向转发列表中元素的指针。|
 |[reference](#reference)|一种类型，用于提供对转发列表中元素的引用。|
 |[size_type](#size_type)|一种类型，用于表示两个元素之间的无符号距离。|
 |[value_type](#value_type)|一种类型，用于表示转发列表中存储的元素的类型。|
@@ -230,7 +230,7 @@ void assign(InputIterator First, InputIterator Last);
 
 如果 forward_list 是整数类型，则第一个成员函数的行为与 `assign((size_type)First, (Type)Last)` 相同。 否则，第一个成员函数将 `*this` 控制的序列替换为序列 [ `First, Last)`，该序列不能与初始控制序列重叠。
 
-第二个成员函数将 `*this` 控制的序列替换为值 `Val` 的重复 `Count` 元素。
+第二个成员函数将 `*this` 控制的序列替换为值 `Count` 的重复 `Val` 元素。
 
 第三个成员函数将 initializer_list 的元素复制到 forward_list 中。
 
@@ -538,7 +538,7 @@ forward_list(InputIterator First, InputIterator Last, const Allocator& Al);
 
 ### <a name="remarks"></a>备注
 
-所有构造函数都存储[分配器](../standard-library/allocator-class.md)并初始化受控序列。 分配器对象*是参数（* 如果存在）。 对于复制构造函数，则为 ` right.get_allocator()`。 否则，它是 `Allocator()`。
+所有构造函数都存储[分配器](../standard-library/allocator-class.md)并初始化受控序列。 分配器对象*是参数（* 如果存在）。 对于复制构造函数，则为 ` right.get_allocator()`。 否则为 `Allocator()`。
 
 前两个构造函数指定一个空的初始受控序列。
 
@@ -680,7 +680,7 @@ template <class Predicate>
 
 `forward_list::merge` 从 `forward_list` `right`中删除元素，并将其插入到此 `forward_list`中。 这两个序列必须由相同的谓词进行排序，如下所述。 合并的序列也可按该比较函数对象进行排序。
 
-对于在 `i` 和 `j` 位置指定元素的迭代器 `Pi` 和 `Pj`，第一个成员函数每当 `i < j` 时采用顺序 `!(*Pj < *Pi)`。 （元素按 `ascending` 顺序进行排序。）第二个成员函数每当 `i < j` 时采用顺序 `! comp(*Pj, *Pi)`。
+对于在 `Pi` 和 `Pj` 位置指定元素的迭代器 `i` 和 `j`，第一个成员函数每当 `!(*Pj < *Pi)` 时采用顺序 `i < j`。 （元素按 `ascending` 顺序排序。）当 `i < j`时，第二个成员函数将强制实施订单 `! comp(*Pj, *Pi)`。
 
 原始受控序列中没有元素对在所生成的受控序列中反向。 如果所生成的受控序列中的一对元素经比较相等 (`!(*Pi < *Pj) && !(*Pj < *Pi)`)，则来自原始受控序列的元素在来自由 `right` 控制的序列的元素之前显示。
 
@@ -818,7 +818,7 @@ void resize(size_type _Newsize, const Type& val);
 
 ### <a name="remarks"></a>备注
 
-成员函数同时确保列表之后中的元素数为 *_Newsize*。 如果它必须使受控序列更长，则第一个成员函数将追加值为 `Type()`的元素，而第二个成员函数则追加值为*val*的元素。 若要使受控序列更短，两个成员函数可有效地调用 `erase_after(begin() + _Newsize - 1, end())`。
+成员函数同时确保列表之后中的元素数 *_Newsize*。 如果它必须使受控序列更长，则第一个成员函数将追加值为 `Type()`的元素，而第二个成员函数则追加值为*val*的元素。 若要使受控序列更短，两个成员函数可有效地调用 `erase_after(begin() + _Newsize - 1, end())`。
 
 ## <a name="reverse"></a>反向
 
@@ -859,7 +859,7 @@ void sort(Predicate pred);
 
 两个成员函数通过谓词对受控序列中的元素排序，如下所述。
 
-对于在 `i` 和 `j` 位置指定元素的迭代器 `Pi` 和 `Pj`，第一个成员函数每当 `i < j` 时采用顺序 `!(*Pj < *Pi)`。 （元素按 `ascending` 顺序进行排序。）成员模板函数每当 `i < j` 时采用顺序 `! pred(*Pj, *Pi)`。 原始受控序列中没有排序的元素对在所生成的受控序列中反向。 （排序是稳定的。）
+对于在 `Pi` 和 `Pj` 位置指定元素的迭代器 `i` 和 `j`，第一个成员函数每当 `!(*Pj < *Pi)` 时采用顺序 `i < j`。 （元素按 `ascending` 顺序排序。）`i < j`时，成员模板函数会施加订单 `! pred(*Pj, *Pi)`。 原始受控序列中没有排序的元素对在所生成的受控序列中反向。 （排序是稳定的。）
 
 仅当*pred*引发异常时才会发生异常。 在这种情况下，受控序列以未指定的顺序保留，并重新引发异常。
 
@@ -895,7 +895,7 @@ void splice_after(
 *Where*\
 目标 forward_list 中要在其后面进行插入的位置。
 
-Source\
+*源*\
 要插入目标 forward_list 中的源 forward_list。
 
 *Iter*\
@@ -1028,9 +1028,9 @@ void unique(BinaryPredicate comp);
 
 保留每个唯一元素的第一个元素，并删除其余元素。 元素必须进行排序，以使具有相等值的元素在列表中相邻。
 
-第一个成员函数从受控序列删除经比较等于其前一个元素的每个元素。 对于在 `i` 和 `j` 位置指定元素的迭代器 `Pi` 和 `Pj`，第二个成员函数删除其中 `i + 1 == j &&  comp(*Pi, *Pj)` 的每个元素。
+第一个成员函数从受控序列删除经比较等于其前一个元素的每个元素。 对于在 `Pi` 和 `Pj` 位置指定元素的迭代器 `i` 和 `j`，第二个成员函数删除其中 `i + 1 == j &&  comp(*Pi, *Pj)` 的每个元素。
 
-对于长度为 `N` (> 0) 的受控序列，计算谓词 ` comp(*Pi, *Pj)` `N - 1` 次。
+对于长度为 `N` (> 0) 的受控序列，计算谓词 ` comp(*Pi, *Pj)``N - 1` 次。
 
 仅当 `comp` 引发异常时才会发生异常。 在这种情况下，受控序列以未指定的状态保留，并重新引发异常。
 
@@ -1044,4 +1044,4 @@ typedef typename Allocator::value_type value_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数 `Type` 的同义词。
+该类型是模板参数 `Type`的同义词。

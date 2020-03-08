@@ -6,11 +6,11 @@ f1_keywords:
 - unordered_set/std::swap (unordered_multiset)
 ms.assetid: 66b35671-4023-4411-ad50-83786580d8ee
 ms.openlocfilehash: 6b6e764acc9fa3410a44a4a11760933328365852
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257762"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890721"
 ---
 # <a name="ltunordered_setgt-functions"></a>&lt;unordered_set&gt; 函数
 
@@ -25,7 +25,7 @@ void swap(
    unordered_set <Key, Hash, Pred, Alloc>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *密钥*\
 密钥类型。
@@ -113,7 +113,7 @@ void swap(
    unordered_multiset <Key, Hash, Pred, Alloc>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *密钥*\
 密钥类型。
