@@ -10,11 +10,11 @@ f1_keywords:
 - iosfwd/std::wstreampos
 ms.assetid: 0b962632-3439-44de-bf26-20c67a7f0ff3
 ms.openlocfilehash: 20bffbeb7720274302633c5dda9e6364c06d5b54
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687876"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856387"
 ---
 # <a name="ltiosgt-typedefs"></a>&lt;ios&gt; typedef
 
@@ -127,7 +127,7 @@ typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
 
 ### <a name="remarks"></a>备注
 
-类型是类模板[basic_ios](../standard-library/basic-ios-class.md)的同义词，专用于具有默认字符特征的**wchar_t**类型的元素。
+类型是类模板[basic_ios](../standard-library/basic-ios-class.md)的同义词，专用于**wchar_t**具有默认字符特征的类型的元素。
 
 ## <a name="wstreampos"></a>wstreampos
 

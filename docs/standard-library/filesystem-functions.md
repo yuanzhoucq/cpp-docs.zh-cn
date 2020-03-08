@@ -85,11 +85,11 @@ helpviewer_keywords:
 - std::experimental::filesystem::temp_directory_path
 - std::experimental::filesystem::u8path
 ms.openlocfilehash: 1ab57a6fc13a03d02963f3d7ecc80f63decb9487
-ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898714"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875815"
 ---
 # <a name="ltfilesystemgt-functions"></a>&lt;filesystem&gt; 函数
 
@@ -184,7 +184,7 @@ void copy(const path& from, const path& to, copy_options opts, error_code& ec) n
 
 - 否则，如果 `is_directory(f)`，则 `copy_file(from, to` / `from.filename(), opts)`。
 
-- 否则，设置为 `copy_file(from, to, opts)`。
+- 否则为 `copy_file(from, to, opts)`。
 
 否则，如果 `is_directory(f) && (opts & copy_options::recursive || !opts)`，则：
 
@@ -288,7 +288,7 @@ void current_path(const path& pval, error_code& ec) noexcept;
 
 没有参数*pval*的函数将返回当前目录的路径名。 其余函数将当前目录设置为*pval*。
 
-## <a name="end"></a>  end
+## <a name="end"></a>end
 
 ```cpp
 directory_iterator& end(const directory_iterator& iter) noexcept;

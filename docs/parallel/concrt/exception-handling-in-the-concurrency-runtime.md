@@ -9,17 +9,17 @@ helpviewer_keywords:
 - task groups, exception handling [Concurrency Runtime]
 ms.assetid: 4d1494fb-3089-4f4b-8cfb-712aa67d7a7a
 ms.openlocfilehash: 4c7fee363da023b9252471a35aaecd262a55f17c
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141791"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854115"
 ---
 # <a name="exception-handling-in-the-concurrency-runtime"></a>并发运行时中的异常处理
 
 并发运行时使用C++异常处理来传达多种类型的错误。 这些错误包括对运行时的使用、运行时错误（例如获取资源失败）以及在提供给任务和任务组的工作函数中发生的错误。 当任务或任务组引发异常时，运行时会保存该异常，并将其封送到等待任务或任务组完成的上下文中。 对于轻量级任务和代理等组件，运行时不会为你管理异常。 在这些情况下，必须实现自己的异常处理机制。 本主题介绍运行时如何处理任务、任务组、轻量级任务和异步代理引发的异常以及如何在应用程序中响应异常。
 
-## <a name="key-points"></a>关键点
+## <a name="key-points"></a>要点
 
 - 当任务或任务组引发异常时，运行时会保存该异常，并将其封送到等待任务或任务组完成的上下文中。
 
@@ -181,7 +181,7 @@ the status of the agent is: done
 
 [[返回页首](#top)]
 
-## <a name="summary"></a> 摘要
+## <a name="summary"></a>总结
 
 [[返回页首](#top)]
 

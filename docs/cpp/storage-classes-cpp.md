@@ -11,17 +11,17 @@ helpviewer_keywords:
 - storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
 ms.openlocfilehash: ab00a5c64a32dc1dab5fef4bc15b722587bc2d6b
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301309"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856893"
 ---
 # <a name="storage-classes"></a>存储类
 
-A*存储类*在上下文中的 C++ 变量声明是控制对象的生存期、 链接和内存位置的类型说明符。 给定对象只能有一个存储类。 除非使用**extern**、 **static**或**thread_local**说明符指定，否则在块中定义的变量将具有自动存储。 自动对象和变量不具有链接；它们对于块外部的代码是不可见的。 当执行进入块并在退出块时取消分配时，将自动为其分配内存。
+变量声明上下文中的*存储类*是一种类型说明符，用于控制对象的生存期、链接和内存位置。 C++ 给定对象只能有一个存储类。 除非使用**extern**、 **static**或**thread_local**说明符指定，否则在块中定义的变量将具有自动存储。 自动对象和变量不具有链接；它们对于块外部的代码是不可见的。 当执行进入块并在退出块时取消分配时，将自动为其分配内存。
 
-**备注**
+**说明**
 
 1. [可变](../cpp/mutable-data-members-cpp.md)关键字可视为存储类说明符。 但是，它只存在于类定义的成员列表中。
 
@@ -160,7 +160,7 @@ var == value
 
 声明为**extern**的对象和变量声明一个对象，该对象是在另一个翻译单元中定义的，或是在包含外部链接的封闭范围中定义的。 有关详细信息，请参阅[extern](extern-cpp.md) and[翻译单元和链接](program-and-linkage-cpp.md)。
 
-## <a name="thread_local"></a> thread_local (C++ 11)
+## <a name="thread_local"></a>thread_local （c + + 11）
 
 使用**thread_local**说明符声明的变量只能在创建它的线程上访问。 变量在创建线程时创建，并在销毁线程时销毁。 每个线程都有其自己的变量副本。 在 Windows 上， **thread_local**在功能上与特定于 Microsoft 的[__declspec （thread）](../cpp/thread.md)特性等效。
 

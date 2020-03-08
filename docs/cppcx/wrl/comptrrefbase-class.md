@@ -14,11 +14,11 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ComPtrRefBase::ptr_ data member
 ms.assetid: 6d344c1a-cc13-4a3f-8a0d-f167ccb9348f
 ms.openlocfilehash: df4e2aa1ce650fd5b1f04baf2f7c4cd2fb4cff93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398636"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865816"
 ---
 # <a name="comptrrefbase-class"></a>ComPtrRefBase 类
 
@@ -34,32 +34,32 @@ class ComPtrRefBase;
 ### <a name="parameters"></a>参数
 
 *T*<br/>
-一个[ComPtr\<T >](comptr-class.md)类型派生自它，而不仅仅是所表示接口`ComPtr`。
+[ComPtr\<t >](comptr-class.md)类型或从其派生的类型，而不只是由 `ComPtr`表示的接口。
 
 ## <a name="remarks"></a>备注
 
-表示类的基类[ComPtrRef](comptrref-class.md)类。
+表示[ComPtrRef](comptrref-class.md)类的基类。
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-名称            | 描述
+名称            | 说明
 --------------- | -------------------------------------------------
-`InterfaceType` | 模板参数的类型的同义词*T*。
+`InterfaceType` | 模板参数*T*的类型的同义词。
 
-### <a name="public-operators"></a>公共运算符
+### <a name="public-operators"></a>公用運算子
 
-名称                                                                       | 描述
+名称                                                                       | 说明
 -------------------------------------------------------------------------- | -----------------------------------------------------------------------------------------------------
-[Comptrrefbase:: Operator IInspectable * *](#operator-iinspectable-star-star) | 将当前[ptr_](#ptr)数据成员添加到指针-到-a-指针-到`IInspectable`接口。
-[Comptrrefbase:: Operator IUnknown * *](#operator-iunknown-star-star)         | 将当前[ptr_](#ptr)数据成员添加到指针-到-a-指针-到`IUnknown`接口。
+[ComPtrRefBase：： operator IInspectable * *](#operator-iinspectable-star-star) | 将当前[ptr_](#ptr)数据成员强制转换为指向 `IInspectable` 接口的指针。
+[ComPtrRefBase：： operator IUnknown * *](#operator-iunknown-star-star)         | 将当前[ptr_](#ptr)数据成员强制转换为指向 `IUnknown` 接口的指针。
 
 ### <a name="protected-data-members"></a>受保护的数据成员
 
-name                        | 描述
+名称                        | 说明
 --------------------------- | ----------------------------------------------------------------
-[ComPtrRefBase::ptr_](#ptr) | 为当前的模板参数指定的类型的指针。
+[ComPtrRefBase：:p tr_](#ptr) | 指向当前模板参数所指定的类型的指针。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -69,9 +69,9 @@ name                        | 描述
 
 **标头：** client.h
 
-**命名空间：** Microsoft::WRL::Details
+**命名空间：** Microsoft：： WRL：:D etails
 
-## <a name="operator-iinspectable-star-star"></a>Comptrrefbase:: Operator IInspectable\* \*运算符
+## <a name="operator-iinspectable-star-star"></a>ComPtrRefBase：： operator IInspectable\*\* 运算符
 
 支持 WRL 基础结构，不应在代码中直接使用。
 
@@ -81,13 +81,13 @@ operator IInspectable**() const;
 
 ### <a name="remarks"></a>备注
 
-将当前[ptr_](#ptr)数据成员添加到指针-到-a-指针-到`IInspectable`接口。
+将当前[ptr_](#ptr)数据成员强制转换为指向 `IInspectable` 接口的指针。
 
-如果发出错误当前`ComPtrRefBase`也不是派生`IInspectable`。
+如果当前 `ComPtrRefBase` 不是从 `IInspectable`派生的，则会发出错误。
 
-此强制转换为可用才`__WRL_CLASSIC_COM__`定义。
+此强制转换仅在定义 `__WRL_CLASSIC_COM__` 的情况下可用。
 
-## <a name="operator-iunknown-star-star"></a>Comptrrefbase:: Operator IUnknown * * 运算符
+## <a name="operator-iunknown-star-star"></a>ComPtrRefBase：： operator IUnknown * * 运算符
 
 支持 WRL 基础结构，不应在代码中直接使用。
 
@@ -97,11 +97,11 @@ operator IUnknown**() const;
 
 ### <a name="remarks"></a>备注
 
-将当前[ptr_](#ptr)数据成员添加到指针-到-a-指针-到`IUnknown`接口。
+将当前[ptr_](#ptr)数据成员强制转换为指向 `IUnknown` 接口的指针。
 
-如果发出错误当前`ComPtrRefBase`也不是派生`IUnknown`。
+如果当前 `ComPtrRefBase` 不是从 `IUnknown`派生的，则会发出错误。
 
-## <a name="ptr"></a>ComPtrRefBase::ptr_
+## <a name="ptr"></a>ComPtrRefBase：:p tr_
 
 支持 WRL 基础结构，不应在代码中直接使用。
 
@@ -111,4 +111,4 @@ T* ptr_;
 
 ### <a name="remarks"></a>备注
 
-为当前的模板参数指定的类型的指针。 `ptr_` 是受保护的数据成员。
+指向当前模板参数所指定的类型的指针。 `ptr_` 是受保护的数据成员。

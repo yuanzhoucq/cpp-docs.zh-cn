@@ -11,13 +11,13 @@ helpviewer_keywords:
 - std::insert_iterator [C++], reference
 ms.assetid: d5d86405-872e-4e3b-9e68-c69a2b7e8221
 ms.openlocfilehash: 15041e21b53c29aedda831fd73b37a65e57a3680
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447667"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874031"
 ---
-# <a name="insertiterator-class"></a>insert_iterator 类
+# <a name="insert_iterator-class"></a>insert_iterator 类
 
 描述满足输出迭代器需求的迭代器适配器。 它是将元素插入到序列而不是覆盖，因此不同于 C++ 序列和关联容器的迭代器所提供的覆盖语义，它可以提供不同的语义。 `insert_iterator` 类会针对要适配的容器类型进行模板化。
 
@@ -35,24 +35,24 @@ class insert_iterator;
 
 ## <a name="remarks"></a>备注
 
-类型`Container`的容器必须满足可变大小容器的要求, 并且具有两个参数的 insert 成员函数, 其中的参数类型`Container::iterator`为和`Container::value_type` , 并且返回一个类型`Container::iterator`。 C++ 标准库序列和排序关联容器符合这些需求，可以进行适配以便用于 `insert_iterator`。 对于关联容器，位置自变量将被当做提示来处理，有可能会提高或降低性能，具体取决于该提示的好坏。 `insert_iterator` 必须使用其容器进行初始化。
+`Container` 类型的容器必须满足可变大小容器的需求，并具有一个双参数插入成员函数，其中的参数类型为 `Container::iterator` 和 `Container::value_type`，并返回 `Container::iterator`类型。 C++ 标准库序列和排序关联容器符合这些需求，可以进行适配以便用于 `insert_iterator`。 对于关联容器，位置自变量将被当做提示来处理，有可能会提高或降低性能，具体取决于该提示的好坏。 `insert_iterator` 必须使用其容器进行初始化。
 
 ### <a name="constructors"></a>构造函数
 
-|构造函数|描述|
+|构造函数|说明|
 |-|-|
 |[insert_iterator](#insert_iterator)|构造一个 `insert_iterator`，以便将元素插入到容器中的指定位置。|
 
 ### <a name="typedefs"></a>Typedef
 
-|类型名称|描述|
+|类型名称|说明|
 |-|-|
 |[container_type](#container_type)|一种类型，代表要对其执行泛型插入的容器。|
 |[reference](#reference)|一种类型，此类型提供对关联容器所控制序列中的元素的引用。|
 
 ### <a name="operators"></a>运算符
 
-|运算符|描述|
+|运算符|说明|
 |-|-|
 |[operator*](#op_star)|取消引用运算符，用于实现泛型插入的输出迭代器表达式 * `i` = `x`。|
 |[operator++](#op_add_add)|将 `insert_iterator` 递增到下一个可用来存储值的位置。|
@@ -186,7 +186,7 @@ insert_iterator<Container>& operator*();
 
 ### <a name="remarks"></a>备注
 
-用于实现输出迭代器表达式 **\*Iter** = **value**。 如果`Iter`是在序列中对元素进行寻址的迭代器, 则 **\*Iter** = **值**会将该元素替换为值, 而不会更改序列中的元素总数。
+用于实现输出迭代器表达式 **\*Iter** = **value**。 如果 `Iter` 是对序列中的元素进行寻址的迭代器，则 **\*Iter** = **值**用值替换该元素，而不会更改序列中的元素总数。
 
 ### <a name="example"></a>示例
 
@@ -310,7 +310,7 @@ insert_iterator<Container>& operator=(
 
 ### <a name="parameters"></a>参数
 
-*初始值*\
+*val*\
 要赋给容器的值。
 
 ### <a name="return-value"></a>返回值
@@ -427,7 +427,7 @@ The first element in the list L is: 10.
 */
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [\<iterator>](../standard-library/iterator.md)\
 [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

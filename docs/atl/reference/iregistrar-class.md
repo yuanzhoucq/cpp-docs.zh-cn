@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Iregistrar Interface
 ms.assetid: e88c04b7-0c93-4ae8-aeb9-ecd78f87421e
 ms.openlocfilehash: e347bdba1656a53cd705123a26650dad50d3892f
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927758"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78857129"
 ---
 # <a name="iregistrar-interface"></a>IRegistrar 接口
 
@@ -36,11 +36,11 @@ typedef interface IRegistrar IRegistrar;
 
 有关更多详细信息，请参阅主题[使用可替换参数（注册器的预处理器）](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) 。
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[IRegistrar::ResourceRegisterSz](#resourceregistersz)|注册资源。 |
 |[IRegistrar::ResourceUnregisterSz](#resourceunregistersz)| 取消注册资源。|
@@ -135,7 +135,7 @@ virtualHRESULT STDMETHODCALLTYPE ResourceUnregister(
     /* [in] */ _In_z_ LPCOLESTR szType) = 0;
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [使用可替换参数（注册器预处理器）](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)<br/>
 [类概述](../../atl/atl-class-overview.md)<br/>

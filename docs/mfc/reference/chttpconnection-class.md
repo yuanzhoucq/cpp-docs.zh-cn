@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CHttpConnection [MFC], OpenRequest
 ms.assetid: a402b662-c445-4988-800d-c8278551babe
 ms.openlocfilehash: 1941af1e16a897235dd90db509d6ed29c2d9a875
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237557"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890769"
 ---
 # <a name="chttpconnection-class"></a>CHttpConnection 类
 
@@ -27,29 +27,29 @@ ms.locfileid: "62237557"
 class CHttpConnection : public CInternetConnection
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CHttpConnection::CHttpConnection](#chttpconnection)|创建一个 `CHttpConnection` 对象。|
+|[CHttpConnection：： CHttpConnection](#chttpconnection)|创建一个 `CHttpConnection` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CHttpConnection::OpenRequest](#openrequest)|将打开一个 HTTP 请求。|
+|[CHttpConnection：： OpenRequest](#openrequest)|打开 HTTP 请求。|
 
 ## <a name="remarks"></a>备注
 
-HTTP 是由 MFC WinInet 类实现的三种 Internet 服务器协议之一。
+HTTP 是由 MFC WinInet 类实现的三个 Internet 服务器协议之一。
 
-该类`CHttpConnection`包含一个构造函数和一个成员函数[OpenRequest](#openrequest)，管理与 HTTP 协议与服务器的连接。
+类 `CHttpConnection` 包含构造函数和一个成员函数[OpenRequest](#openrequest)，该函数使用 HTTP 协议管理与服务器的连接。
 
-若要与 HTTP 服务器通信，必须首先创建的实例[CInternetSession](../../mfc/reference/cinternetsession-class.md)，然后创建[CHttpConnection](#chttpconnection)对象。 永远不会创建`CHttpConnection`直接对象; 而是调用[cinternetsession:: Gethttpconnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection)，这将创建`CHttpConnection`对象并返回的指针。
+若要与 HTTP 服务器通信，必须先创建[CInternetSession](../../mfc/reference/cinternetsession-class.md)的实例，然后创建[CHttpConnection](#chttpconnection)对象。 永远不会直接创建 `CHttpConnection` 对象;相反，可以调用[CInternetSession：： GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection)，它将创建 `CHttpConnection` 对象并返回一个指向该对象的指针。
 
-若要详细了解如何`CHttpConnection`适用于其他 MFC Internet 类，请参阅文章[Internet 编程与 WinInet](../../mfc/win32-internet-extensions-wininet.md)。 Internet 协议、 gopher 和 FTP 受支持的有关连接到使用其他两个服务器的详细信息，请参见类[CGopherConnection](../../mfc/reference/cgopherconnection-class.md)并[CFtpConnection](../../mfc/reference/cftpconnection-class.md)。
+若要详细了解 `CHttpConnection` 如何与其他 MFC Internet 类结合使用，请参阅文章[使用 WinInet 进行 Internet 编程](../../mfc/win32-internet-extensions-wininet.md)。 有关使用其他两个受支持的 Internet 协议（gopher 和 FTP）连接到服务器的详细信息，请参阅类[CGopherConnection](../../mfc/reference/cgopherconnection-class.md)和[CFtpConnection](../../mfc/reference/cftpconnection-class.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -61,11 +61,11 @@ HTTP 是由 MFC WinInet 类实现的三种 Internet 服务器协议之一。
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxinet.h
+**标头：** afxinet。h
 
-##  <a name="chttpconnection"></a>  CHttpConnection::CHttpConnection
+##  <a name="chttpconnection"></a>CHttpConnection：： CHttpConnection
 
-调用此成员函数来构造`CHttpConnection`对象。
+调用此成员函数来构造 `CHttpConnection` 的对象。
 
 ```
 CHttpConnection(
@@ -95,41 +95,41 @@ CHttpConnection(
 ### <a name="parameters"></a>参数
 
 *pSession*<br/>
-一个指向[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象。
+指向[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象的指针。
 
 *hConnected*<br/>
-Internet 连接到一个句柄。
+Internet 连接的句柄。
 
 *pstrServer*<br/>
 指向包含服务器名称的字符串的指针。
 
 *dwContext*<br/>
-上下文标识符`CInternetConnection`对象。 有关详细信息*dwContext*，请参阅**备注**部分。
+`CInternetConnection` 对象的上下文标识符。 有关*dwContext*的详细信息，请参阅 "**备注**" 部分。
 
 *nPort*<br/>
-标识此连接的 Internet 端口数。
+标识此连接的 Internet 端口的编号。
 
 *pstrUserName*<br/>
-指向一个以 null 结尾的字符串，指定要登录的用户的名称。 如果为 NULL，则默认值是匿名的。
+指向以 null 结尾的字符串的指针，该字符串指定要登录的用户的名称。 如果为 NULL，则默认值为 anonymous。
 
 *pstrPassword*<br/>
-一个指向一个以 null 结尾的字符串，指定要用于登录的密码。 如果这两个*pstrPassword*并*pstrUserName*为 NULL 时，默认匿名密码是用户的电子邮件名称。 如果*pstrPassword*为 NULL 或空字符串，但*pstrUserName*不为 NULL，则使用空密码。 下表描述了四个可能的设置的行为*pstrUserName*并*pstrPassword*:
+指向以 null 结尾的字符串的指针，该字符串指定用于登录的密码。 如果*pstrPassword*和*PSTRUSERNAME*都为 NULL，则默认的匿名密码是用户的电子邮件名称。 如果*pstrPassword*为 null 或为空字符串，但*PSTRUSERNAME*不为 null，则使用空密码。 下表描述了*pstrUserName*和*pstrPassword*的四个可能设置的行为：
 
 |*pstrUserName*|*pstrPassword*|发送到 FTP 服务器的用户名|发送到 FTP 服务器的密码|
 |--------------------|--------------------|---------------------------------|---------------------------------|
-|NULL 或""|NULL 或""|"匿名"|用户的电子邮件名称|
-|非 NULL 字符串|NULL 或""|*pstrUserName*|" "|
-|NULL |非 NULL 字符串|错误|错误|
-|非 NULL 字符串|非 NULL 字符串|*pstrUserName*|*pstrPassword*|
+|NULL 或 ""|NULL 或 ""|匿名|用户的电子邮件名称|
+|非空字符串|NULL 或 ""|*pstrUserName*|" "|
+|NULL |非空字符串|ERROR|ERROR|
+|非空字符串|非空字符串|*pstrUserName*|*pstrPassword*|
 
-*dwFlags*<br/>
-任意组合`INTERNET_FLAG_*`标志。 请参阅中的表**备注**一部分[chttpconnection::](#openrequest)有关的说明*dwFlags*值。
+dwFlags<br/>
+`INTERNET_FLAG_*` 标志的任意组合。 有关*dwFlags*值的说明，请参阅[CHttpConnection：： OpenRequest](#openrequest)的 "**备注**" 部分中的表。
 
 ### <a name="remarks"></a>备注
 
-永远不会创建`CHttpConnection`直接。 而是通过调用创建对象[cinternetsession:: Gethttpconnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection)。
+永远不会直接创建 `CHttpConnection`。 而是通过调用[CInternetSession：： GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection)来创建对象。
 
-##  <a name="openrequest"></a>  CHttpConnection::OpenRequest
+##  <a name="openrequest"></a>CHttpConnection：： OpenRequest
 
 调用此成员函数以打开 HTTP 连接。
 
@@ -156,30 +156,30 @@ CHttpFile* OpenRequest(
 ### <a name="parameters"></a>参数
 
 *pstrVerb*<br/>
-指向一个包含要在请求中使用的谓词字符串的指针。 如果为 NULL，则使用"获取"。
+指向字符串的指针，该字符串包含要在请求中使用的谓词。 如果为 NULL，则使用 "GET"。
 
 *pstrObjectName*<br/>
-指向包含指定的谓词的目标对象的字符串的指针。 此字符串通常是一个文件名、 可执行模块或搜索说明符。
+指向字符串的指针，该字符串包含指定谓词的目标对象。 此字符串通常是文件名、可执行模块或搜索说明符。
 
 *pstrReferer*<br/>
-指向一个字符串，指定从其文档的地址 (URL) 的请求中的 URL (*pstrObjectName*) 获取。 如果为 NULL，指定的 HTTP 标头。
+一个指向字符串的指针，该字符串指定从其获取请求中的 URL （*pstrObjectName*）的文档的地址（url）。 如果为 NULL，则未指定 HTTP 标头。
 
 *dwContext*<br/>
-上下文标识符`OpenRequest`操作。 有关详细信息*dwContext*，请参阅备注部分。
+`OpenRequest` 操作的上下文标识符。 有关*dwContext*的详细信息，请参阅 "备注" 部分。
 
 *ppstrAcceptTypes*<br/>
-指向以 null 结尾 LPCTSTR 指向的指针数组，该值指示客户端接受的内容类型的字符串的指针。 如果*ppstrAcceptTypes*为 NULL，服务器解释客户端仅接受类型的文档"text / *"（即，只有文本文档并不图片或其他二进制文件）。 内容类型是等效于 CGI 变量 CONTENT_TYPE，用于标识已附加信息，如 HTTP POST 和 PUT 的查询的数据类型。
+一个指针，指向以 null 结尾的 LPCTSTR 指针数组，这些指针指向指示客户端接受的内容类型的字符串。 如果*ppstrAcceptTypes*为 NULL，则服务器将解释客户端只接受 "text/*" 类型的文档（即，只接受文本文档，而不接受图片或其他二进制文件）。 内容类型等效于 CGI 变量 CONTENT_TYPE，后者标识包含附加信息的查询（例如 HTTP POST 和 PUT）的数据类型。
 
 *pstrVersion*<br/>
-指向定义的 HTTP 版本字符串的指针。 如果为 NULL，则使用"HTTP/1.0"。
+指向定义 HTTP 版本的字符串的指针。 如果为 NULL，则使用 "HTTP/1.0"。
 
-*dwFlags*<br/>
-INTERNET_ FLAG_ * 标志的任意组合。 请参阅备注部分有关的可能说明*dwFlags*值。
+dwFlags<br/>
+INTERNET_ FLAG_ * 标志的任意组合。 有关可能的*dwFlags*值的说明，请参阅 "备注" 部分。
 
 *nVerb*<br/>
-与 HTTP 请求类型的号码。 可以是以下各项之一：
+与 HTTP 请求类型相关联的数字。 可以是以下值之一：
 
-|HTTP 请求类型|*nVerb* value|
+|HTTP 请求类型|*nVerb*值|
 |-----------------------|-------------------|
 |HTTP_VERB_POST|0|
 |HTTP_VERB_GET|1|
@@ -191,25 +191,25 @@ INTERNET_ FLAG_ * 标志的任意组合。 请参阅备注部分有关的可能�
 
 ### <a name="return-value"></a>返回值
 
-一个指向[CHttpFile](../../mfc/reference/chttpfile-class.md)所请求对象。
+指向所请求的[CHttpFile](../../mfc/reference/chttpfile-class.md)对象的指针。
 
 ### <a name="remarks"></a>备注
 
-*dwFlags*可以是以下之一：
+*dwFlags*可以是下列其中一项：
 
-|Internet 标志|描述|
+|Internet 标志|说明|
 |-------------------|-----------------|
-|INTERNET_FLAG_RELOAD|源服务器中，而不是从缓存将强制下载的请求的文件、 对象或目录列表。|
-|INTERNET_FLAG_DONT_CACHE|不会添加到缓存中返回的实体。|
-|INTERNET_FLAG_MAKE_PERSISTENT|将返回的实体为持久实体添加到缓存。 这意味着标准缓存清理、 一致性检查，或垃圾回收无法从缓存删除该项。|
-|INTERNET_FLAG_SECURE|使用安全事务语义。 它将转换为使用 SSL/百分比，并且仅在 HTTP 请求中有意义|
-|INTERNET_FLAG_NO_AUTO_REDIRECT|仅用于 HTTP，则指定不应中自动处理重定向[CHttpFile::SendRequest](../../mfc/reference/chttpfile-class.md#sendrequest)。|
+|INTERNET_FLAG_RELOAD|强制从源服务器下载所请求的文件、对象或目录列表，而不是从缓存中下载。|
+|INTERNET_FLAG_DONT_CACHE|不会将返回的实体添加到缓存中。|
+|INTERNET_FLAG_MAKE_PERSISTENT|将返回的实体作为持久性实体添加到缓存中。 这意味着标准缓存清除、一致性检查或垃圾回收无法从缓存中删除此项。|
+|INTERNET_FLAG_SECURE|使用安全事务语义。 它转换为使用 SSL/PCT，仅在 HTTP 请求中有意义|
+|INTERNET_FLAG_NO_AUTO_REDIRECT|仅用于 HTTP，指定重定向不应在[CHttpFile：： SendRequest](../../mfc/reference/chttpfile-class.md#sendrequest)中自动处理。|
 
-重写`dwContext`默认可为您选择的值设置的上下文标识符。 上下文标识符是否与此特定操作相关联`CHttpConnection`对象由其[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象。 值返回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供用于标识操作的状态。 请参阅文章[Internet 前几个步骤：WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。
+重写 `dwContext` 默认设置，以将上下文标识符设置为你选择的值。 上下文标识符与[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象创建的 `CHttpConnection` 对象的特定操作相关联。 该值将返回到[CInternetSession：： OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) ，以提供用于标识该操作的状态。 有关上下文标识符的详细信息，请参阅文章[Internet 优先步骤： WinInet](../../mfc/wininet-basics.md) 。
 
-与此函数可能会引发异常。
+此函数可能会引发异常。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [CInternetConnection 类](../../mfc/reference/cinternetconnection-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>

@@ -21,13 +21,13 @@ helpviewer_keywords:
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
 ms.openlocfilehash: 999e236433ec4f3f2f52abb06855004a89169fa6
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449457"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78872410"
 ---
-# <a name="conditionvariable-class"></a>condition_variable 类
+# <a name="condition_variable-class"></a>condition_variable 类
 
 使用 `condition_variable` 类在具有 `mutex` 类型的 `unique_lock<mutex>` 时等待事件。 此类型的对象的性能可能比 [condition_variable_any<unique_lock\<mutex>>](../standard-library/condition-variable-any-class.md) 类型的对象更好。
 
@@ -37,7 +37,7 @@ ms.locfileid: "68449457"
 class condition_variable;
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="constructors"></a>构造函数
 
@@ -66,7 +66,7 @@ condition_variable();
 
 ### <a name="remarks"></a>备注
 
-如果没有足够的内存，构造函数将抛出包含 `not_enough_memory` 错误代码的 [system_error](../standard-library/system-error-class.md) 对象。 如果由于某些其他资源不可用导致无法构造该对象，则构造函数将抛出包含 `resource_unavailable_try_again` 错误代码的 `system_error` 对象。
+如果没有足够的内存，构造函数将抛出包含 [ 错误代码的 ](../standard-library/system-error-class.md)system_error`not_enough_memory` 对象。 如果由于某些其他资源不可用导致无法构造该对象，则构造函数将抛出包含 `system_error` 错误代码的 `resource_unavailable_try_again` 对象。
 
 ## <a name="native_handle"></a>native_handle
 
@@ -117,7 +117,7 @@ void wait(unique_lock<mutex>& Lck, Predicate Pred);
 
 ### <a name="remarks"></a>备注
 
-第一种方法进行阻止，直到通过调用 [notify_one](#notify_one) 或 [notify_all](#notify_all) 对 `condition_variable` 对象发出信号。 它还可错误唤醒。
+第一种方法进行阻止，直到通过调用 `condition_variable`notify_one[ 或 ](#notify_one)notify_all[ 对 ](#notify_all) 对象发出信号。 它还可错误唤醒。
 
 第二种方法实际上执行以下代码。
 
@@ -156,13 +156,13 @@ bool wait_for(
 
 ### <a name="return-value"></a>返回值
 
-如果 Rel_time 已过`cv_status::timeout` , 则第一种方法返回。 否则，该方法将返回 `cv_status::no_timeout`。
+如果*Rel_time*结束，则第一个方法返回 `cv_status::timeout`。 否则，该方法将返回 `cv_status::no_timeout`。
 
 第二个方法返回*Pred*的值。
 
 ### <a name="remarks"></a>备注
 
-第一种方法将在`condition_variable`对象通过调用[notify_one](#notify_one)或[notify_all 或](#notify_all)的时间间隔结束之前, 阻止 。 它还可错误唤醒。
+第一种方法将被阻止，`condition_variable` 直到通过调用[notify_one](#notify_one)或[notify_all](#notify_all)或直到时间间隔*Rel_time*已过。 它还可错误唤醒。
 
 第二种方法实际上执行以下代码。
 
@@ -214,13 +214,13 @@ bool wait_until(
 
 ### <a name="return-value"></a>返回值
 
-如果等待时间`cv_status` *Abs_time* , 则`cv_status::timeout`返回类型的方法将返回。 否则，方法返回 `cv_status::no_timeout`。
+如果等待*Abs_time*过期，返回 `cv_status` 类型的方法将返回 `cv_status::timeout`。 否则，方法返回 `cv_status::no_timeout`。
 
 返回**布尔**值的方法返回*Pred*的值。
 
 ### <a name="remarks"></a>备注
 
-第一种方法进行阻止，直到通过调用 [notify_one](#notify_one) 或 [notify_all](#notify_all) 对 `condition_variable` 对象发出信号，或直到 `Abs_time`。 它还可错误唤醒。
+第一种方法进行阻止，直到通过调用 `condition_variable`notify_one[ 或 ](#notify_one)notify_all[ 对 ](#notify_all) 对象发出信号，或直到 `Abs_time`。 它还可错误唤醒。
 
 第二种方法实际上执行以下代码
 
@@ -234,7 +234,7 @@ return true;
 
 第三种和第四种方法使用指向 `xtime` 类型的对象的指针来替换 `chrono::time_point` 对象。 `xtime` 对象指定等待信号的最大时间。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [头文件引用](../standard-library/cpp-standard-library-header-files.md)\
 [<condition_variable>](../standard-library/condition-variable.md)

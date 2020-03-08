@@ -83,13 +83,13 @@ helpviewer_keywords:
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
 ms.openlocfilehash: c8abca8109db9c781d63721b795feb01161fdb40
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451669"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876124"
 ---
-# <a name="regexconstants-namespace"></a>regex_constants 命名空间
+# <a name="regex_constants-namespace"></a>regex_constants 命名空间
 
 正则表达式标志的命名空间。
 
@@ -115,7 +115,7 @@ namespace regex_constants {
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<regex 1>
+**标头：** \<regex >
 
 **命名空间：** std
 
@@ -288,13 +288,13 @@ enum syntax_option_type
 
 `collate` -- 进行区分区域设置的匹配
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [\<regex>](../standard-library/regex.md)\
-[regex_error 类](../standard-library/regex-error-class.md)\
+[Regex_error 类](../standard-library/regex-error-class.md)\
 [\<regex > 函数](../standard-library/regex-functions.md)\
-[regex_iterator 类](../standard-library/regex-iterator-class.md)\
+[Regex_iterator 类](../standard-library/regex-iterator-class.md)\
 [\<regex > 运算符](../standard-library/regex-operators.md)\
-[regex_token_iterator 类](../standard-library/regex-token-iterator-class.md)\
-[regex_traits 类](../standard-library/regex-traits-class.md)\
+[Regex_token_iterator 类](../standard-library/regex-token-iterator-class.md)\
+[Regex_traits 类](../standard-library/regex-traits-class.md)\
 [\<regex> typedefs](../standard-library/regex-typedefs.md)

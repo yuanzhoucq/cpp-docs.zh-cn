@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
 ms.openlocfilehash: 23c6abffe7e433a0550c45502a12e9adaf652a33
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257983"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865829"
 ---
 # <a name="ltbitsetgt-operators"></a>&lt;bitset&gt; 运算符
 
@@ -33,7 +33,7 @@ operator&(
     const bitset<size>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *左*\
 要将其各自的元素使用按位 `AND` 组合的两个位组中的第一个。
@@ -84,7 +84,7 @@ basic_ostream<CharType, Traits>& operator<<(
     const bitset<N>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *right*\
 要作为字符串插入到输出流的 **bitset\<N>** 类型的对象。
@@ -141,7 +141,7 @@ basic_istream<CharType, Traits>& operator>> (
     bitset<N>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *i_str*\
 输入到输入流以插入位组的字符串。
@@ -226,7 +226,7 @@ operator^(
     const bitset<size>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *左*\
 要将其各自的元素使用按位 `EXCLUSIVE-OR` 组合的两个位组中的第一个。
@@ -278,7 +278,7 @@ operator|(
     const bitset<size>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *左*\
 要将其各自的元素使用按位 `OR` 组合的两个位组中的第一个。

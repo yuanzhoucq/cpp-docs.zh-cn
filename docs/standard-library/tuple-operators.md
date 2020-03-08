@@ -10,15 +10,15 @@ f1_keywords:
 - tuple/std::operator==
 ms.assetid: f25752dc-d3e2-4e12-b5ac-9a8682ca60ed
 ms.openlocfilehash: 5554f08f32048bafde5bdb2c316e12e1e01c6ffb
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68241659"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866183"
 ---
 # <a name="lttuplegt-operators"></a>&lt;tuple&gt; 运算符
 
-## <a name="op_neq"></a> 运算符 ！ =
+## <a name="op_neq"></a>operator！ =
 
 比较 `tuple` 对象是否不相等。
 
@@ -101,7 +101,7 @@ bool operator<(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="remarks"></a>备注
 
-如果 `N` 大于 0，且 `tpl1` 中的第一个不同值小于 `tpl2` 中的相应值，则函数返回 true，否则返回 false。
+如果 `N` 大于 0，且 `tpl1` 中的第一个不同值小于 `tpl2` 中的相应值，则函数返回 ture，否则返回 false。
 
 ### <a name="example"></a>示例
 
@@ -148,7 +148,7 @@ false
 true
 ```
 
-## <a name="op_lt_eq"></a> 运算符&lt;=
+## <a name="op_lt_eq"></a>操作员&lt;=
 
 比较 `tuple` 对象，条件为小于或等于。
 
@@ -213,7 +213,7 @@ true
 false
 ```
 
-## <a name="op_eq_eq"></a> 运算符 = =
+## <a name="op_eq_eq"></a>operator = =
 
 比较 `tuple` 对象是否相等。
 
@@ -343,7 +343,7 @@ false
 true
 ```
 
-## <a name="op_gt_eq"></a> 运算符&gt;=
+## <a name="op_gt_eq"></a>操作员&gt;=
 
 比较 `tuple` 对象是否更大或相等。
 

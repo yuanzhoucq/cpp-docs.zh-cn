@@ -22,11 +22,11 @@ helpviewer_keywords:
 - Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
 ms.openlocfilehash: 77ad876b8352ab1ae86fde622b05712ec5f2cea9
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142010"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78867117"
 ---
 # <a name="scheduler-class"></a>Scheduler 类
 
@@ -60,7 +60,7 @@ class Scheduler;
 |[IsAvailableLocation](#isavailablelocation)|确定给定位置在计划程序上是否可用。|
 |[参考](#reference)|递增计划程序引用计数。|
 |[RegisterShutdownEvent](#registershutdownevent)|导致当计划程序关闭并销毁自身时，将在 `_Event` 参数中传递的 Windows 事件句柄发出信号。 在事件终止时，已计划计划程序的所有工作都已完成。 可以通过此方法注册多个关闭事件。|
-|[发布](#release)|递减计划程序的引用计数。|
+|[版本](#release)|递减计划程序的引用计数。|
 |[ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy)|将默认计划程序策略重置为运行时默认值。 下一次创建默认计划程序时，它将使用运行时默认策略设置。|
 |[ScheduleTask](#scheduletask)|已重载。 计划计划程序中的轻量任务。 轻量任务将放置在运行时确定的计划组中。 采用参数 `_Placement` 的版本导致任务偏向在指定的位置执行。|
 |[SetDefaultSchedulerPolicy](#setdefaultschedulerpolicy)|允许使用用户定义的策略来创建默认计划程序。 仅当进程中不存在任何默认计划程序时，才能调用此方法。 设置默认策略后，它将保持有效，直到下一次对 `SetDefaultSchedulerPolicy` 或[ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy)方法的有效调用。|

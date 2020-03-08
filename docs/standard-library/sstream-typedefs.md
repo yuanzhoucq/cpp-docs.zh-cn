@@ -12,11 +12,11 @@ f1_keywords:
 - iosfwd/std::wstringstream
 ms.assetid: d102edd2-ecea-4a35-a398-cf96e58dd422
 ms.openlocfilehash: e8f5a20b976d196090ac9300510044e84470c462
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72686283"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865909"
 ---
 # <a name="ltsstreamgt-typedefs"></a>&lt;sstream&gt; typedef
 
@@ -76,7 +76,7 @@ typedef basic_stringstream<char> stringstream;
 
 ## <a name="wistringstream"></a>  wistringstream
 
-创建一个类型 `basic_istringstream` 专用于**wchar_t**模板参数的类型。
+创建一个 `basic_istringstream` 专用于**wchar_t**模板参数的类型。
 
 ```cpp
 typedef basic_istringstream<wchar_t> wistringstream;
@@ -88,7 +88,7 @@ typedef basic_istringstream<wchar_t> wistringstream;
 
 ## <a name="wostringstream"></a>  wostringstream
 
-创建一个类型 `basic_ostringstream` 专用于**wchar_t**模板参数的类型。
+创建一个 `basic_ostringstream` 专用于**wchar_t**模板参数的类型。
 
 ```cpp
 typedef basic_ostringstream<wchar_t> wostringstream;
@@ -100,7 +100,7 @@ typedef basic_ostringstream<wchar_t> wostringstream;
 
 ## <a name="wstringbuf"></a>  wstringbuf
 
-创建一个类型 `basic_stringbuf` 专用于**wchar_t**模板参数的类型。
+创建一个 `basic_stringbuf` 专用于**wchar_t**模板参数的类型。
 
 ```cpp
 typedef basic_stringbuf<wchar_t> wstringbuf;
@@ -112,7 +112,7 @@ typedef basic_stringbuf<wchar_t> wstringbuf;
 
 ## <a name="wstringstream"></a>  wstringstream
 
-创建一个类型 `basic_stringstream` 专用于**wchar_t**模板参数的类型。
+创建一个 `basic_stringstream` 专用于**wchar_t**模板参数的类型。
 
 ```cpp
 typedef basic_stringstream<wchar_t> wstringstream;
@@ -122,6 +122,6 @@ typedef basic_stringstream<wchar_t> wstringstream;
 
 类型是类模板[basic_stringstream](../standard-library/basic-stringstream-class.md)的同义词，专用于**wchar_t**类型的元素。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [\<sstream>](../standard-library/sstream.md)

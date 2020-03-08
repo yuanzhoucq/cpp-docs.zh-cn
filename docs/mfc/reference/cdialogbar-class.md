@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CDialogBar [MFC], Create
 ms.assetid: da2f7a30-970c-44e3-87f0-6094bd002cab
 ms.openlocfilehash: af84c5239a9cb3cbddb1ab4f0230e5b1a3373573
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400716"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883613"
 ---
 # <a name="cdialogbar-class"></a>CDialogBar 类
 
@@ -27,30 +27,30 @@ ms.locfileid: "62400716"
 class CDialogBar : public CControlBar
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CDialogBar::CDialogBar](#cdialogbar)|构造 `CDialogBar` 对象。|
+|[CDialogBar：： CDialogBar](#cdialogbar)|构造 `CDialogBar` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CDialogBar::Create](#create)|创建 Windows 对话栏并将其附加到`CDialogBar`对象。|
+|[CDialogBar：： Create](#create)|创建一个 Windows 对话栏并将其附加到 `CDialogBar` 对象上。|
 
 ## <a name="remarks"></a>备注
 
-对话栏类似于一个对话框，其中包含用户可以使用 tab 键之间的标准 Windows 控件。 另一种相似性就创建对话框模板来表示对话栏。
+对话栏类似于一个对话框，其中包含用户可在两者之间切换的标准 Windows 控件。 另一个相似性是创建对话框模板来表示对话栏。
 
-创建和使用对话栏是类似于创建和使用`CFormView`对象。 首先，使用[对话框编辑器](../../windows/dialog-editor.md)定义样式 WS_CHILD 的对话框模板和任何其他样式。 该模板不能 WS_VISIBLE 的样式。 在应用程序代码中，调用构造函数来构造`CDialogBar`对象，然后调用`Create`若要创建对话栏窗口，然后将其附加到`CDialogBar`对象。
+创建和使用对话栏类似于创建和使用 `CFormView` 对象。 首先，使用 "[对话框编辑器](../../windows/dialog-editor.md)" 定义样式 WS_CHILD 的对话框模板，而不是其他样式。 模板不能具有 WS_VISIBLE 样式。 在应用程序代码中，调用构造函数以构造 `CDialogBar` 对象，然后调用 `Create` 以创建对话框窗口，并将其附加到 `CDialogBar` 对象。
 
-有关详细信息`CDialogBar`，请参阅文章[对话栏](../../mfc/dialog-bars.md)并[技术说明 31](../../mfc/tn031-control-bars.md)，控件条。
+有关 `CDialogBar`的详细信息，请参阅文章[对话框](../../mfc/dialog-bars.md)和[技术说明 31](../../mfc/tn031-control-bars.md)，控件条。
 
 > [!NOTE]
->  在当前版本中，`CDialogBar`对象不能承载 Windows 窗体控件。 视觉对象中的 Windows 窗体控件有关的详细信息C++，请参阅[在 MFC 中使用 Windows 窗体用户控件](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
+>  在当前版本中，`CDialogBar` 对象无法承载 Windows 窗体控件。 有关视觉对象C++中 Windows 窗体控件的详细信息，请参阅[在 MFC 中使用 Windows 窗体用户控件](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -66,9 +66,9 @@ class CDialogBar : public CControlBar
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxext.h
+**标头：** afxext。h
 
-##  <a name="cdialogbar"></a>  CDialogBar::CDialogBar
+##  <a name="cdialogbar"></a>CDialogBar：： CDialogBar
 
 构造 `CDialogBar` 对象。
 
@@ -76,9 +76,9 @@ class CDialogBar : public CControlBar
 CDialogBar();
 ```
 
-##  <a name="create"></a>  CDialogBar::Create
+##  <a name="create"></a>CDialogBar：： Create
 
-加载指定的对话框资源模板`lpszTemplateName`或`nIDTemplate`、 创建对话栏窗口中，设置其样式，并将其与`CDialogBar`对象。
+加载 `lpszTemplateName` 或 `nIDTemplate`指定的对话框资源模板，创建对话框窗口，设置其样式，并将其与 `CDialogBar` 对象相关联。
 
 ```
 virtual BOOL Create(
@@ -97,37 +97,37 @@ virtual BOOL Create(
 ### <a name="parameters"></a>参数
 
 *pParentWnd*<br/>
-指向父`CWnd`对象。
+指向父级 `CWnd` 对象的指针。
 
 *lpszTemplateName*<br/>
-指向的目录名称`CDialogBar`对象的对话框资源模板。
+一个指针，指向 `CDialogBar` 对象的对话框资源模板的名称。
 
 *nStyle*<br/>
-Styl toolbar。 支持的其他工具栏样式是：
+工具栏样式。 支持的其他工具栏样式包括：
 
-- CBRS_TOP 控件条是在框架窗口的顶部。
+- CBRS_TOP 控件条位于框架窗口的顶部。
 
-- CBRS_BOTTOM 控件条是在框架窗口的底部。
+- CBRS_BOTTOM 控件条位于框架窗口的底部。
 
-- 父级重设大小时，CBRS_NOALIGN 控件栏不会重新定位。
+- 调整父级大小时，不会重新定位 CBRS_NOALIGN 控件条。
 
-- CBRS_TOOLTIPS 控件栏会显示工具提示。
+- CBRS_TOOLTIPS 控件条显示工具提示。
 
-- CBRS_SIZE_DYNAMIC 控件栏是动态的。
+- CBRS_SIZE_DYNAMIC 控件条是动态的。
 
-- CBRS_SIZE_FIXED 控件条被固定。
+- CBRS_SIZE_FIXED 控制条是固定的。
 
-- 浮动 CBRS_FLOATING 控件条。
+- CBRS_FLOATING 控件条浮动。
 
-- CBRS_FLYBY 状态栏会显示按钮的信息。
+- CBRS_FLYBY 状态栏显示有关按钮的信息。
 
-- 不会向用户显示 CBRS_HIDE_INPLACE 控件条。
+- 不向用户显示 CBRS_HIDE_INPLACE 控件条。
 
 *nID*<br/>
-对话栏控件 ID。
+对话栏的控件 ID。
 
 *nIDTemplate*<br/>
-资源 ID`CDialogBar`对象的对话框模板。
+`CDialogBar` 对象的对话框模板的资源 ID。
 
 ### <a name="return-value"></a>返回值
 
@@ -135,16 +135,16 @@ Styl toolbar。 支持的其他工具栏样式是：
 
 ### <a name="remarks"></a>备注
 
-如果指定 CBRS_TOP 或 CBRS_BOTTOM 对齐样式，对话栏的宽度是框架窗口的窗体的高度是由指定的资源*nIDTemplate*。 如果指定 CBRS_LEFT 或 CBRS_RIGHT 对齐方式、 对话栏的高度为的框架窗口，其宽度为指定的资源的*nIDTemplate*。
+如果指定 CBRS_TOP 或 CBRS_BOTTOM 对齐样式，则对话栏的宽度为框架窗口的宽度，其高度为*nIDTemplate*指定的资源的高度。 如果指定 CBRS_LEFT 或 CBRS_RIGHT 对齐样式，则对话栏的高度为框架窗口的高度，其宽度为*nIDTemplate*指定的资源的宽度。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFCMessageMaps#13](../../mfc/reference/codesnippet/cpp/cdialogbar-class_1.cpp)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [MFC 示例 CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
-[CControlBar 类](../../mfc/reference/ccontrolbar-class.md)<br/>
+[CControlBar Class](../../mfc/reference/ccontrolbar-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CFormView 类](../../mfc/reference/cformview-class.md)<br/>
-[CControlBar 类](../../mfc/reference/ccontrolbar-class.md)
+[CControlBar Class](../../mfc/reference/ccontrolbar-class.md)

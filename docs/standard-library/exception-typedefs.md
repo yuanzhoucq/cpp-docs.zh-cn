@@ -7,11 +7,11 @@ f1_keywords:
 - exception/std::unexpected_handler
 ms.assetid: 2a338480-35e2-46f7-b223-52d4e84a5768
 ms.openlocfilehash: aba17b7bf052b6974bf849f60ff895b8e84a1092
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501961"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854897"
 ---
 # <a name="ltexceptiongt-typedefs"></a>&lt;exception&gt; typedefs
 
@@ -31,7 +31,7 @@ typedef unspecified exception_ptr;
 
 当你声明 `exception_ptr` 变量时，该变量不与任何异常相关联。 也就是说，其异常引用字段为 NULL。 此类 `exception_ptr` 对象称为 *null exception_ptr*。
 
-使用 `current_exception` 或 `make_exception_ptr` 函数可将异常指派给 `exception_ptr` 对象。 将异常指派给 `exception_ptr` 变量时，该变量的异常引用字段将指向该异常的副本。 如果没有足够的内存来复制异常，异常引用字段将指向 [std::bad_alloc](../standard-library/bad-alloc-class.md) 异常的副本。 `current_exception`如果或`make_exception_ptr`函数因任何其他原因不能复制异常`terminate` , 该函数将调用 CRT 函数以退出当前进程。
+使用 `current_exception` 或 `make_exception_ptr` 函数可将异常指派给 `exception_ptr` 对象。 将异常指派给 `exception_ptr` 变量时，该变量的异常引用字段将指向该异常的副本。 如果没有足够的内存来复制异常，异常引用字段将指向 [std::bad_alloc](../standard-library/bad-alloc-class.md) 异常的副本。 如果 `current_exception` 或 `make_exception_ptr` 函数因任何其他原因不能复制异常，该函数将调用 `terminate` CRT 函数以退出当前进程。
 
 尽管名称像是一个指针，但 `exception_ptr` 对象本身不属于指针。 它不遵循指针语义，不能与指针成员访问 ( `->`) 或间接寻址 (*) 运算符一起使用。 `exception_ptr` 对象没有公共数据成员或成员函数。
 
@@ -53,7 +53,7 @@ typedef void (*terminate_handler)();
 
 ### <a name="example"></a>示例
 
-有关 `terminate_handler` 的使用示例，请参阅 [set_terminate](../standard-library/exception-functions.md#set_terminate)。
+有关 [ 的使用示例，请参阅 ](../standard-library/exception-functions.md#set_terminate)set_terminate`terminate_handler`。
 
 ## <a name="unexpected_handler"></a>unexpected_handler
 
@@ -65,4 +65,4 @@ typedef void (*unexpected_handler)();
 
 ### <a name="example"></a>示例
 
-有关 `unexpected_handler` 的使用示例，请参阅 [set_unexpected](../standard-library/exception-functions.md#set_unexpected)。
+有关 [ 的使用示例，请参阅 ](../standard-library/exception-functions.md#set_unexpected)set_unexpected`unexpected_handler`。

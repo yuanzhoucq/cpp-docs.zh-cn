@@ -6,23 +6,23 @@ f1_keywords:
 - hash_set/std::operator==
 ms.assetid: 403d8e4e-0b3f-43fb-bc5a-8100c4f331c5
 ms.openlocfilehash: 3900e9c6e4fb7f5a163279165a51b440d138a8e5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452036"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883834"
 ---
-# <a name="lthashsetgt-operators"></a>&lt;hash_set&gt; 运算符
+# <a name="lthash_setgt-operators"></a>&lt;hash_set&gt; 运算符
 
 ||||
 |-|-|-|
 |[operator!=](#op_neq)|[operator!= (hash_multiset)](#op_neq_hash_multiset)|[operator==](#op_eq_eq)|
 |[operator== (hash_multiset)](#op_eq_eq_hash_multiset)|
 
-## <a name="op_neq"></a>operator!=
+## <a name="op_neq"></a>  operator!=
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
+> 此 API 已过时。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
 
 测试运算符左侧的 hash_set 对象是否不等于右侧的 hash_set 对象。
 
@@ -32,10 +32,10 @@ bool operator!=(const hash_set <Key, Traits, Allocator>& left, const hash_set <K
 
 ### <a name="parameters"></a>参数
 
-*左中*\
+*左*\
 一个 `hash_set` 类型的对象。
 
-*然后*\
+*right*\
 一个 `hash_set` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -46,7 +46,7 @@ bool operator!=(const hash_set <Key, Traits, Allocator>& left, const hash_set <K
 
 hash_set 对象之间的比较基于其元素的成对比较。 如果两个 hash_set 具有的元素数目相等且对应元素具有相同的值，则这两个 hash_set 相等。 否则，它们不相等。
 
-[< Hash_map >](../standard-library/hash-map.md)和[< hash_set >](../standard-library/hash-set.md)标头文件的成员位于[stdext 命名空间](../standard-library/stdext-namespace.md)中。
+< 的成员[hash_map >](../standard-library/hash-map.md)和[< hash_set >](../standard-library/hash-set.md)头文件位于[stdext 命名空间](../standard-library/stdext-namespace.md)中。
 
 ### <a name="example"></a>示例
 
@@ -90,7 +90,7 @@ The hash_sets hs1 and hs3 are equal.
 ## <a name="op_eq_eq"></a>operator==
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
+> 此 API 已过时。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
 
 测试运算符左侧的 hash_set 对象是否等于右侧的 hash_set 对象。
 
@@ -100,10 +100,10 @@ bool operator!==(const hash_set <Key, Traits, Allocator>& left, const hash_set <
 
 ### <a name="parameters"></a>参数
 
-*左中*\
+*左*\
 一个 `hash_set` 类型的对象。
 
-*然后*\
+*right*\
 一个 `hash_set` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -156,7 +156,7 @@ The hash_sets s1 and s3 are equal.
 ## <a name="op_neq_hash_multiset"></a>operator!= (hash_multiset)
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
+> 此 API 已过时。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
 
 测试运算符左侧的 hash_multiset 对象是否不等于右侧的 hash_multiset 对象。
 
@@ -166,10 +166,10 @@ bool operator!=(const hash_multiset <Key, Traits, Allocator>& left, const hash_m
 
 ### <a name="parameters"></a>参数
 
-*左中*\
+*左*\
 一个 `hash_multiset` 类型的对象。
 
-*然后*\
+*right*\
 一个 `hash_multiset` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -222,7 +222,7 @@ The hash_multisets hs1 and hs3 are equal.
 ## <a name="op_eq_eq_hash_multiset"></a>operator== (hash_multiset)
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
+> 此 API 已过时。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
 
 测试运算符左侧的 hash_multiset 对象是否等于右侧的 hash_multiset 对象。
 
@@ -232,10 +232,10 @@ bool operator!==(const hash_multiset <Key, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>参数
 
-*左中*\
+*左*\
 一个 `hash_multiset` 类型的对象。
 
-*然后*\
+*right*\
 一个 `hash_multiset` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -285,6 +285,6 @@ The hash_multisets s1 and s2 are not equal.
 The hash_multisets s1 and s2 are equal.
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [<hash_set>](../standard-library/hash-set.md)

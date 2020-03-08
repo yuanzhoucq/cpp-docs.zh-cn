@@ -95,16 +95,16 @@ helpviewer_keywords:
 - COleIPFrameWndEx [MFC], InitUserToobars
 ms.assetid: ebff1560-a1eb-4854-af00-95d4a192bd55
 ms.openlocfilehash: 71c0db8d059ede0016caf7ceb72c7f3ab7da2718
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504142"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883913"
 ---
 # <a name="coleipframewndex-class"></a>COleIPFrameWndEx 类
 
 `COleIPFrameWndEx` 类实现支持 MFC 的 OLE 容器。 必须从 `COleIPFrameWndEx` 类派生应用程序的就地框架窗口类，而不是从 [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md)类派生。
-有关更多详细信息，请参阅位于 Visual Studio 安装的**VC\\atlmfc\\src\\mfc**文件夹中的源代码。
+有关更多详细信息，请参阅位于你的 Visual Studio 安装的**VC\\atlmfc\\src\\mfc**文件夹中的源代码。
 
 ## <a name="syntax"></a>语法
 
@@ -112,19 +112,19 @@ ms.locfileid: "69504142"
 class COleIPFrameWndEx : public COleIPFrameWnd
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[COleIPFrameWndEx::AddDockSite](#adddocksite)||
 |[COleIPFrameWndEx::AddPane](#addpane)||
-|[COleIPFrameWndEx::AdjustDockingLayout](#adjustdockinglayout)||
-|[COleIPFrameWndEx::DockPane](#dockpane)||
-|[COleIPFrameWndEx::DockPaneLeftOf](#dockpaneleftof)|将一个窗格停靠到另一个窗格的左侧。|
+|[COleIPFrameWndEx：： AdjustDockingLayout](#adjustdockinglayout)||
+|[COleIPFrameWndEx：:D ockPane](#dockpane)||
+|[COleIPFrameWndEx：:D ockPaneLeftOf](#dockpaneleftof)|将一个窗格停靠到另一个窗格的左侧。|
 |[COleIPFrameWndEx::EnableAutoHidePanes](#enableautohidepanes)||
-|[COleIPFrameWndEx::EnableDocking](#enabledocking)||
+|[COleIPFrameWndEx：： EnableDocking](#enabledocking)||
 |[COleIPFrameWndEx::EnablePaneMenu](#enablepanemenu)||
 |[COleIPFrameWndEx::GetActivePopup](#getactivepopup)|返回一个指向当前显示的弹出菜单的指针。|
 |[COleIPFrameWndEx::GetContainerFrameWindow](#getcontainerframewindow)||
@@ -143,28 +143,28 @@ class COleIPFrameWndEx : public COleIPFrameWnd
 |[COleIPFrameWndEx::OnCloseDockingPane](#onclosedockingpane)||
 |[COleIPFrameWndEx::OnCloseMiniFrame](#oncloseminiframe)||
 |[COleIPFrameWndEx::OnClosePopupMenu](#onclosepopupmenu)|当活动的弹出菜单处理 WM_DESTROY 消息时由框架调用。|
-|[COleIPFrameWndEx::OnCmdMsg](#oncmdmsg)|（重写 `CFrameWnd::OnCmdMsg`。）|
-|[COleIPFrameWndEx::OnDrawMenuImage](#ondrawmenuimage)|当绘制与菜单项关联的图像时由框架调用。|
+|[COleIPFrameWndEx：： OnCmdMsg](#oncmdmsg)|（重写 `CFrameWnd::OnCmdMsg`。）|
+|[COleIPFrameWndEx：： OnDrawMenuImage](#ondrawmenuimage)|当绘制与菜单项关联的图像时由框架调用。|
 |[COleIPFrameWndEx::OnDrawMenuLogo](#ondrawmenulogo)|当 [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)对象处理 WM_PAINT 消息时由框架调用。|
 |[COleIPFrameWndEx::OnMenuButtonToolHitTest](#onmenubuttontoolhittest)|当 [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)对象处理 WM_NCHITTEST 消息时由框架调用。|
 |[COleIPFrameWndEx::OnMoveMiniFrame](#onmoveminiframe)||
-|[COleIPFrameWndEx::OnSetPreviewMode](#onsetpreviewmode)|调用该成员函数以设置应用程序主框架窗口打印预览模式的流入和流出。 （重写 [CFrameWnd::OnSetPreviewMode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode)。）|
+|[COleIPFrameWndEx：： OnSetPreviewMode](#onsetpreviewmode)|调用该成员函数以设置应用程序主框架窗口打印预览模式的流入和流出。 （重写 [CFrameWnd::OnSetPreviewMode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode)。）|
 |[COleIPFrameWndEx::OnShowCustomizePane](#onshowcustomizepane)||
 |[COleIPFrameWndEx::OnShowPanes](#onshowpanes)||
 |[COleIPFrameWndEx::OnShowPopupMenu](#onshowpopupmenu)|当激活弹出菜单时由框架调用。|
 |[COleIPFrameWndEx::OnTearOffMenu](#ontearoffmenu)|当激活带有拖曳栏的菜单时由框架调用。|
-|[COleIPFrameWndEx::PaneFromPoint](#panefrompoint)||
-|[COleIPFrameWndEx::PreTranslateMessage](#pretranslatemessage)|（重写 `COleIPFrameWnd::PreTranslateMessage`。）|
-|[COleIPFrameWndEx::RecalcLayout](#recalclayout)|（重写 `COleIPFrameWnd::RecalcLayout`。）|
+|[COleIPFrameWndEx：:P aneFromPoint](#panefrompoint)||
+|[COleIPFrameWndEx：:P reTranslateMessage](#pretranslatemessage)|（重写 `COleIPFrameWnd::PreTranslateMessage`。）|
+|[COleIPFrameWndEx：： RecalcLayout](#recalclayout)|（重写 `COleIPFrameWnd::RecalcLayout`。）|
 |[COleIPFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)||
 |[COleIPFrameWndEx::SetDockState](#setdockstate)|将指定的停靠状态应用于属于框架窗口的窗格。|
 |[COleIPFrameWndEx::SetupToolbarMenu](#setuptoolbarmenu)|通过搜索虚拟项并将其替换为指定的用户定义项修改工具栏对象。|
 |[COleIPFrameWndEx::ShowPane](#showpane)||
 |[COleIPFrameWndEx::WinHelpA](#winhelpa)|由框架调用以启动 WinHelp 应用程序或上下文帮助。|
 
-### <a name="protected-methods"></a>受保护的方法
+### <a name="protected-methods"></a>受保护方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[COleIPFrameWndEx::InitUserToobars](#initusertoobars)|告知框架初始化一系列分配给用户定义的工具栏的控件 ID。|
 
@@ -210,7 +210,7 @@ BOOL AddPane(
 
 ### <a name="parameters"></a>参数
 
-[in] *pControlBar*<br/>
+中*pControlBar*<br/>
 中*bTail*<br/>
 
 ### <a name="return-value"></a>返回值
@@ -225,7 +225,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 
 ### <a name="parameters"></a>参数
 
-[in] *hdwp*<br/>
+中*hdwp*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -241,8 +241,8 @@ void DockPane(
 ### <a name="parameters"></a>参数
 
 中*pBar*<br/>
-[in] *nDockBarID*<br/>
-[in] *lpRect*<br/>
+中*nDockBarID*<br/>
+中*lpRect*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -266,7 +266,7 @@ BOOL DockPaneLeftOf(
 
 ### <a name="return-value"></a>返回值
 
-如果操作成功，则返回 TRUE。 否则，返回 FALSE。
+如果操作成功，则返回 TRUE。 否则返回 FALSE。
 
 ### <a name="remarks"></a>备注
 
@@ -280,7 +280,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 
 ### <a name="parameters"></a>参数
 
-[in] *dwDockStyle*<br/>
+中*dwDockStyle*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -294,7 +294,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 
 ### <a name="parameters"></a>参数
 
-[in] *dwDockStyle*<br/>
+中*dwDockStyle*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -316,14 +316,14 @@ void EnablePaneMenu(
 
 中*bEnable*<br/>
 中*uiCustomizeCmd*<br/>
-[in] *strCustomizeLabel*<br/>
+中*strCustomizeLabel*<br/>
 中*uiViewToolbarsMenuEntryID*<br/>
-[in] *bContextMenuShowsToolbarsOnly*<br/>
-[in] *bViewMenuShowsToolbarsOnly*<br/>
+中*bContextMenuShowsToolbarsOnly*<br/>
+中*bViewMenuShowsToolbarsOnly*<br/>
 
 ### <a name="remarks"></a>备注
 
-##  <a name="getactivepopup"></a>  COleIPFrameWndEx::GetActivePopup
+##  <a name="getactivepopup"></a>COleIPFrameWndEx::GetActivePopup
 
 返回一个指向当前显示的弹出菜单的指针。
 
@@ -363,7 +363,7 @@ UINT GetDefaultResId() const;
 
 ### <a name="remarks"></a>备注
 
-调用此函数可检索框架窗口通过调用`COleIPFrameWndEx::LoadFrame`加载菜单资源时所指定的资源 ID。
+调用此函数可检索框架窗口在通过调用 `COleIPFrameWndEx::LoadFrame`加载菜单资源时指定的资源 ID。
 
 ##  <a name="getdockframe"></a>COleIPFrameWndEx::GetDockFrame
 
@@ -409,7 +409,7 @@ const CMFCMenuBar* GetMenuBar() const;
 
 ### <a name="remarks"></a>备注
 
-使用此函数可检索指向属于`COleIPFrameWndEx`对象的菜单栏对象的指针。
+使用此函数可检索指向 `COleIPFrameWndEx` 对象的菜单栏对象的指针。
 
 ##  <a name="getpane"></a>COleIPFrameWndEx::GetPane
 
@@ -435,11 +435,11 @@ const CObList& GetTearOffBars() const;
 
 ### <a name="return-value"></a>返回值
 
-对`CObList`对象的引用，该对象包含指向[CBasePane 类](../../mfc/reference/cbasepane-class.md)派生对象的指针的集合。
+对 `CObList` 对象的引用，该对象包含指向[CBasePane 类](../../mfc/reference/cbasepane-class.md)派生对象的指针的集合。
 
 ### <a name="remarks"></a>备注
 
-`COleIPFrameWndEx`对象以 [CBasePane](../../mfc/reference/cbasepane-class.md) 类派生对象的列表的形式维护要分离的菜单。 使用此方法可检索此列表的引用。
+`COleIPFrameWndEx` 对象将被取消的菜单的集合作为[CBasePane 类](../../mfc/reference/cbasepane-class.md)派生对象的列表进行维护。 使用此方法可检索此列表的引用。
 
 ##  <a name="gettoolbarbuttontooltiptext"></a>COleIPFrameWndEx::GetToolbarButtonToolTipText
 
@@ -504,8 +504,8 @@ BOOL InsertPane(
 
 ### <a name="parameters"></a>参数
 
-[in] *pControlBar*<br/>
-[in] *pTarget*<br/>
+中*pControlBar*<br/>
+中*pTarget*<br/>
 中*bAfter*<br/>
 
 ### <a name="return-value"></a>返回值
@@ -560,8 +560,8 @@ virtual BOOL LoadFrame(
 ### <a name="parameters"></a>参数
 
 中*nIDResource*<br/>
-[in] *dwDefaultStyle*<br/>
-[in] *pParentWnd*<br/>
+中*dwDefaultStyle*<br/>
+中*pParentWnd*<br/>
 中*pContext*<br/>
 
 ### <a name="return-value"></a>返回值
@@ -576,7 +576,7 @@ virtual BOOL OnCloseDockingPane(CDockablePane*);
 
 ### <a name="parameters"></a>参数
 
-[in] *CDockablePane&#42;*<br/>
+中*CDockablePane&#42;*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -611,7 +611,7 @@ virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 
 ### <a name="remarks"></a>备注
 
-重写此方法，以便在`CMFCPopupMenu`处理 WM_DESTROY 消息时接收来自对象的通知。
+重写此方法，以便在处理 WM_DESTROY 消息时接收来自 `CMFCPopupMenu` 对象的通知。
 
 ##  <a name="oncmdmsg"></a>COleIPFrameWndEx：： OnCmdMsg
 
@@ -628,7 +628,7 @@ virtual BOOL OnCmdMsg(
 中*nID*<br/>
 中*nCode*<br/>
 中*pExtra*<br/>
-[in] *pHandlerInfo*<br/>
+中*pHandlerInfo*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -662,7 +662,7 @@ virtual BOOL OnDrawMenuImage(
 
 ### <a name="remarks"></a>备注
 
-如果要为属于由`COleIPFrameWndEx`派生对象拥有的菜单栏的菜单项自定义图像绘制，请重写此方法。
+如果要为属于由 `COleIPFrameWndEx`派生的对象所拥有的菜单栏的菜单项自定义图像绘制，请重写此方法。
 
 ##  <a name="ondrawmenulogo"></a>COleIPFrameWndEx::OnDrawMenuLogo
 
@@ -688,7 +688,7 @@ virtual void OnDrawMenuLogo(
 
 ### <a name="remarks"></a>备注
 
-重写此方法以在与由`COleIPFrameWndEx`派生的对象所拥有的菜单栏相关联的弹出菜单上显示徽标。 默认实现不执行任何操作。
+重写此方法以在与由 `COleIPFrameWndEx`派生的对象所拥有的菜单栏相关联的弹出菜单上显示徽标。 默认实现不执行任何操作。
 
 ##  <a name="onmenubuttontoolhittest"></a>COleIPFrameWndEx::OnMenuButtonToolHitTest
 
@@ -704,7 +704,7 @@ virtual BOOL OnMenuButtonToolHitTest(
 
 [in] pButton 指向菜单按钮的指针。
 
-[out] pTI 指向结构的`TOOLINFO`指针。
+[out] 指向 `TOOLINFO` 结构的 pTI 指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -739,7 +739,7 @@ virtual void OnSetPreviewMode(
 ### <a name="parameters"></a>参数
 
 中*bPreview*<br/>
-[in] *pState*<br/>
+中*pState*<br/>
 
 ### <a name="remarks"></a>备注
 
@@ -754,7 +754,7 @@ virtual BOOL OnShowCustomizePane(
 ### <a name="parameters"></a>参数
 
 中*pMenuPane*<br/>
-[in] *uiToolbarID*<br/>
+中*uiToolbarID*<br/>
 
 ### <a name="return-value"></a>返回值
 
@@ -841,8 +841,8 @@ CBasePane* PaneFromPoint(
 
 中*点*<br/>
 中*nSensitivity*<br/>
-[in] *bExactBar*<br/>
-[in] *pRTCBarType*<br/>
+中*bExactBar*<br/>
+中*pRTCBarType*<br/>
 中*dwAlignment*<br/>
 
 ### <a name="return-value"></a>返回值
@@ -875,7 +875,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 ### <a name="remarks"></a>备注
 
-##  <a name="removepanefromdockmanager"></a>  COleIPFrameWndEx::RemovePaneFromDockManager
+##  <a name="removepanefromdockmanager"></a>COleIPFrameWndEx::RemovePaneFromDockManager
 
 ```
 void RemovePaneFromDockManager(
@@ -888,7 +888,7 @@ void RemovePaneFromDockManager(
 
 ### <a name="parameters"></a>参数
 
-[in] *pControlBar*<br/>
+中*pControlBar*<br/>
 中*bDestroy*<br/>
 中*bAdjustLayout*<br/>
 中*bAutoHide*<br/>
@@ -911,7 +911,7 @@ State<br/>
 
 ### <a name="remarks"></a>备注
 
-使用此函数为属于`COleIPFrameWndEx`对象的窗格指定新的停靠状态。
+使用此函数为属于 `COleIPFrameWndEx` 对象的窗格指定新的停靠状态。
 
 ##  <a name="setuptoolbarmenu"></a>COleIPFrameWndEx::SetupToolbarMenu
 
@@ -951,7 +951,7 @@ void ShowPane(
 
 中*pBar*<br/>
 中*bShow*<br/>
-[in] *bDelay*<br/>
+中*bDelay*<br/>
 中*bActivate*<br/>
 
 ### <a name="remarks"></a>备注
@@ -975,7 +975,7 @@ virtual void WinHelp(
 
 ### <a name="remarks"></a>备注
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

@@ -32,11 +32,11 @@ helpviewer_keywords:
 - std::transform_inclusive_scan [C++]
 - std::transform_reduce [C++]
 ms.openlocfilehash: 88a97a3d110c684090b78570077927e32541eed7
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627451"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856360"
 ---
 # <a name="ltnumericgt-functions"></a>&lt;numeric&gt; 函数
 
@@ -62,24 +62,24 @@ Type accumulate(
 ### <a name="parameters"></a>参数
 
 *第一个*\
-一种输入迭代器，用于寻址范围中的第一个元素，使用*binary_op*进行求和或合并。
+一种输入迭代器，用于寻址范围中的第一个元素，以通过使用*binary_op*进行求和或合并。
 
 *最后*\
-一种输入迭代器，用于寻址范围内的最后一个元素，以使用*binary_op*进行求和或合并，而最后一个元素之外的一个位置实际上包含在循环中。
+一种输入迭代器，用于寻址范围中的最后一个元素，该元素是通过使用*binary_op*进行求和或合并的，而最后一个元素的位置不是实际包含在循环累积中的元素。
 
 *init*\
-通过使用*binary_op*，将每个元素添加或合并到的初始值。
+一个初始值，将使用*binary_op*将每个元素添加或合并为该初始值。
 
 *binary_op*\
 要应用于指定范围内的每个元素及其以前应用程序的结果的二元运算。
 
 ### <a name="return-value"></a>返回值
 
-第一个模板函数的指定范围内*init*和所有元素的总和; 对于第二个模板函数，将二元运算*binary_op*而不是 sum 运算的结果，应用于（* PartialResult， *in_iter*），其中*PartialResult*是操作之前的应用程序的结果，而*in_iter*是一个迭代器，该迭代器指向范围中的下一个元素。
+第一个模板函数的指定范围中*init*和所有元素的总和; 对于第二个模板函数，为第二个模板函数应用二元运算的结果，将*Binary_op* （* PartialResult， *in_iter*），其中*PartialResult*是操作之前的应用程序的结果，而*in_iter*是一个迭代器，它指向范围中的下一个元素。
 
 ### <a name="remarks"></a>备注
 
-初始值可确保当范围为空时具有明确定义的结果，在这种情况下，将返回*init* 。 二元运算不需要具有关联性或可交换性。 结果初始化为初始值*init* ，然后*结果* = *binary_op*（*result*， *in_iter*）通过范围以迭代方式进行计算，其中*in_iter*是指向每个范围中的连续元素。 范围必须有效，并且复杂性与范围大小为线性。 二元运算符的返回类型必须可转换为 **Type**，以确保在迭代期间闭包。
+初始值可确保当范围为空时具有明确定义的结果，在这种情况下，将返回*init* 。 二元运算不需要具有关联性或可交换性。 结果初始化为初始值*init* ，然后*结果* = *binary_op*（*result*， *in_iter*）以迭代方式通过范围进行迭代，其中*in_iter*是指向范围中的每个连续元素的迭代器。 范围必须有效，并且复杂性与范围大小为线性。 二元运算符的返回类型必须可转换为 **Type**，以确保在迭代期间闭包。
 
 ### <a name="example"></a>示例
 
@@ -242,9 +242,9 @@ ForwardIterator2 adjacent_difference(
 
 对于输入范围中的*值 a*1 *，a*2， *a*3，第一个模板函数在目标范围中存储连续 `adjacent_difference` 值*为*1、 *2-* *a*1、a3- *a*2。
 
-对于输入范围中的值*a*1 *，a*2， *a*3，第二个模板函数存储连续 `adjacent_difference` 值*a*1， *a*2 *binary_op* *a*1， *a*3 *binary_op* *a*2，在目标范围。
+对于输入范围中的值*a*1， *a*2， *a*3，第二个模板函数在目标范围中存储连续 `adjacent_difference` 值*a*1， *a*2 *binary_op* *1，* 3 *binary_op* *a*2。
 
-二元运算*binary_op*不需要为关联或可交换性，因为指定了操作的顺序。
+二元*binary_op*运算不需要是关联或可交换的，因为指定了操作的顺序。
 
 ### <a name="example"></a>示例
 
@@ -351,16 +351,16 @@ ForwardIterator2 exclusive_scan(
 执行策略。
 
 *第一个*\
-一种输入迭代器，用于寻址范围中的第一个元素，使用*binary_op*进行求和或合并。
+一种输入迭代器，用于寻址范围中的第一个元素，以通过使用*binary_op*进行求和或合并。
 
 *最后*\
-一种输入迭代器，用于寻址范围内的最后一个元素，以使用*binary_op*进行求和或合并，而最后一个元素之外的一个位置实际上包含在循环中。
+一种输入迭代器，用于寻址范围中的最后一个元素，该元素是通过使用*binary_op*进行求和或合并的，而最后一个元素的位置不是实际包含在循环累积中的元素。
 
 *结果*\
 一种输出迭代器，用于寻址第一个元素的目标范围，其中的总和或指定操作的结果将存储在该范围内。
 
 *init*\
-通过使用*binary_op*，将每个元素添加或合并到的初始值。
+一个初始值，将使用*binary_op*将每个元素添加或合并为该初始值。
 
 *binary_op*\
 要应用于指定范围内的每个元素及其以前应用程序的结果的二元运算。
@@ -446,16 +446,16 @@ ForwardIterator2 inclusive_scan(
 执行策略。
 
 *第一个*\
-一种输入迭代器，用于寻址范围中的第一个元素，使用*binary_op*进行求和或合并。
+一种输入迭代器，用于寻址范围中的第一个元素，以通过使用*binary_op*进行求和或合并。
 
 *最后*\
-一种输入迭代器，用于寻址范围内的最后一个元素，以使用*binary_op*进行求和或合并，而最后一个元素之外的一个位置实际上包含在循环中。
+一种输入迭代器，用于寻址范围中的最后一个元素，该元素是通过使用*binary_op*进行求和或合并的，而最后一个元素的位置不是实际包含在循环累积中的元素。
 
 *结果*\
 一种输出迭代器，用于寻址第一个元素的目标范围，其中的总和或指定操作的结果将存储在该范围内。
 
 *init*\
-通过使用*binary_op*，将每个元素添加或合并到的初始值。
+一个初始值，将使用*binary_op*将每个元素添加或合并为该初始值。
 
 *binary_op*\
 要应用于指定范围内的每个元素及其以前应用程序的结果的二元运算。
@@ -488,13 +488,13 @@ Type inner_product(
 
 ### <a name="parameters"></a>参数
 
-*first1* \
+*first1*\
 一个输入迭代器，该迭代器发现第一个范围内的第一个元素，该范围与第二个范围的内部乘积或一般化内部乘积将进行计算。
 
-*last1* \
+*last1*\
 一个输入迭代器，该迭代器发现第一个范围内的最后一个元素，该范围与第二个范围的内部乘积或一般化内部乘积将进行计算。
 
-*first2* \
+*first2*\
 一个输入迭代器，该迭代器发现第二个范围内的第一个元素，该范围与第一个范围的内部乘积或一般化内部乘积将进行计算。
 
 *init*\
@@ -516,9 +516,9 @@ Type inner_product(
 
 第二个成员函数返回：
 
-*init* *binary_op1* （*1* *binary_op2* *b*1） *binary_op1* （*a*2 *binary_op2* *b*2） *binary_op1* .。。*binary_op1* （*a*n *binary_op2* *b*n）
+*init* *binary_op1* （*1* *binary_op2* *b*1） *binary_op1* （*a*2 *binary_op2* *b*2） *binary_op1* .。。*binary_op1* （*n* *binary_op2* *b*n）
 
-通过以迭代方式*将* *init*替换为*init* *binary_op1* （ *binary_op2* *b*i）。
+通过以迭代方式将*init*替换为*init* *binary_op1* （*a*i *binary_op2* *b*i）。
 
 ### <a name="remarks"></a>备注
 
@@ -636,7 +636,7 @@ void iota(ForwardIterator first, ForwardIterator last, Type value);
 
 ### <a name="example"></a>示例
 
-以下示例通过填充整数[列表](../standard-library/list.md)，然后通过 `list` 填充[向量](../standard-library/vector.md)演示了 `iota` 函数的一些用途，以便使用 [random_shuffle](../standard-library/algorithm-functions.md#random_shuffle) 函数。
+以下示例通过填充整数`iota`列表[，然后通过 ](../standard-library/list.md) 填充[向量](../standard-library/vector.md)演示了 `list` 函数的一些用途，以便使用 [random_shuffle](../standard-library/algorithm-functions.md#random_shuffle) 函数。
 
 ```cpp
 // compile by using: cl /EHsc /nologo /W4 /MTd
@@ -726,9 +726,9 @@ OutputIterator partial_sum(
 
 对于值序列*a*1， *a*2 .。。在输入范围中，*第一个模板*函数在目标范围中存储连续部分求和。 第*n*个元素是由指定的（*a*+ *a*2 + *a*3 + ... + *a*n）。
 
-对于输入范围内值*为*1、2*和3的值* *序列，第*二个模板函数在目标范围中存储连续的部分结果。 第*n*个元素由（（...）（（*a*1 *binary_op* *a*2） *binary_op* *a*3）*binary_op* ...）*binary_op* *n）* 。
+对于输入范围内值*为*1、2*和3的值* *序列，第*二个模板函数在目标范围中存储连续的部分结果。 第*n*个元素由（（...）（（*a*1 *binary_op* *2）* *binary_op* *3）* *binary_op* ...）*binary_op* *n）* 。
 
-二元运算*binary_op*不需要为关联或可交换性，因为指定了操作的顺序。
+二元*binary_op*运算不需要是关联或可交换的，因为指定了操作的顺序。
 
 ### <a name="example"></a>示例
 
@@ -841,27 +841,27 @@ Type reduce(
 执行策略。
 
 *第一个*\
-一种输入迭代器，用于寻址范围中的第一个元素，使用*binary_op*进行求和或合并。
+一种输入迭代器，用于寻址范围中的第一个元素，以通过使用*binary_op*进行求和或合并。
 
 *最后*\
-一种输入迭代器，用于寻址范围内的最后一个元素，以使用*binary_op*进行求和或合并，而最后一个元素之外的一个位置实际上包含在循环中。
+一种输入迭代器，用于寻址范围中的最后一个元素，该元素是通过使用*binary_op*进行求和或合并的，而最后一个元素的位置不是实际包含在循环累积中的元素。
 
 *结果*\
 一种输出迭代器，用于寻址第一个元素的目标范围，其中的总和或指定操作的结果将存储在该范围内。
 
 *init*\
-通过使用*binary_op*，将每个元素添加或合并到的初始值。
+一个初始值，将使用*binary_op*将每个元素添加或合并为该初始值。
 
 *binary_op*\
 要应用于指定范围内的每个元素及其以前应用程序的结果的二元运算。
 
 ### <a name="return-value"></a>返回值
 
-将*binary_op*或 `std::plus<>()` 应用于*init*并将指定范围中的所有元素应用到（* PartialResult， *in_iter*），其中*PartialResult*是之前的操作应用程序的结果，而*in_iter*是指向范围内某个元素的迭代器。 在未指定*init*的重载中，使用的*init*值等效于 `typename iterator_traits<InputIterator>::value_type{}`。
+将*binary_op*或 `std::plus<>()` 应用到*init* ，并将指定范围中的所有元素应用到（* PartialResult， *in_iter*），其中*PartialResult*是操作之前的应用程序的结果，而*in_iter*是指向范围内某个元素的迭代器。 在未指定*init*的重载中，使用的*init*值等效于 `typename iterator_traits<InputIterator>::value_type{}`。
 
 ### <a name="remarks"></a>备注
 
-`reduce` 行为是不确定的，除非*binary_op*是关联的，并且可交换。 如果*binary_op*修改任何元素，或使间隔 \[*第一个*、*最后一个*] 的任何迭代器无效，则该行为是不确定的。
+除非*binary_op*是关联的且可交换的，否则 `reduce` 行为是不确定的。 如果*binary_op*修改任意元素，或使时间间隔 \[*first*， *last*] 中的任何迭代器无效，则该行为是不确定的。
 
 ## <a name="transform_exclusive_scan"></a>transform_exclusive_scan
 
@@ -894,16 +894,16 @@ ForwardIterator2 transform_exclusive_scan(
 执行策略。
 
 *第一个*\
-一种输入迭代器，用于寻址范围中的第一个元素，使用*binary_op*进行求和或合并。
+一种输入迭代器，用于寻址范围中的第一个元素，以通过使用*binary_op*进行求和或合并。
 
 *最后*\
-一种输入迭代器，用于寻址范围内的最后一个元素，以使用*binary_op*进行求和或合并，而最后一个元素之外的一个位置实际上包含在循环中。
+一种输入迭代器，用于寻址范围中的最后一个元素，该元素是通过使用*binary_op*进行求和或合并的，而最后一个元素的位置不是实际包含在循环累积中的元素。
 
 *结果*\
 一种输出迭代器，用于寻址第一个元素的目标范围，其中的总和或指定操作的结果将存储在该范围内。
 
 *init*\
-通过使用*binary_op*，将每个元素添加或合并到的初始值。
+一个初始值，将使用*binary_op*将每个元素添加或合并为该初始值。
 
 *binary_op*\
 要应用于指定范围内的每个元素及其以前应用程序的结果的二元运算。
@@ -959,10 +959,10 @@ ForwardIterator2 transform_inclusive_scan(
 执行策略。
 
 *第一个*\
-一种输入迭代器，用于寻址范围中的第一个元素，使用*binary_op*进行求和或合并。
+一种输入迭代器，用于寻址范围中的第一个元素，以通过使用*binary_op*进行求和或合并。
 
 *最后*\
-一种输入迭代器，用于寻址范围内的最后一个元素，以使用*binary_op*进行求和或合并，而最后一个元素之外的一个位置实际上包含在循环中。
+一种输入迭代器，用于寻址范围中的最后一个元素，该元素是通过使用*binary_op*进行求和或合并的，而最后一个元素的位置不是实际包含在循环累积中的元素。
 
 *结果*\
 一种输出迭代器，用于寻址第一个元素的目标范围，其中的总和或指定操作的结果将存储在该范围内。
@@ -974,7 +974,7 @@ ForwardIterator2 transform_inclusive_scan(
 要应用于指定范围内的每个元素的一元运算。
 
 *init*\
-通过使用*binary_op*，将每个元素添加或合并到的初始值。
+一个初始值，将使用*binary_op*将每个元素添加或合并为该初始值。
 
 ## <a name="transform_reduce"></a>transform_reduce
 
@@ -1039,22 +1039,22 @@ Type transform_reduce(
 执行策略。
 
 *第一个*\
-一种输入迭代器，用于寻址范围中的第一个元素，使用*binary_op*进行求和或合并。
+一种输入迭代器，用于寻址范围中的第一个元素，以通过使用*binary_op*进行求和或合并。
 
-*first1* \
-一种输入迭代器，用于寻址范围中的第一个元素，使用*binary_op1*进行求和或合并。
+*first1*\
+一种输入迭代器，用于寻址范围中的第一个元素，以通过使用*binary_op1*进行求和或合并。
 
 *最后*\
-一种输入迭代器，用于寻址范围内的最后一个元素，以使用*binary_op*进行求和或合并，而最后一个元素之外的一个位置实际上包含在循环中。
+一种输入迭代器，用于寻址范围中的最后一个元素，该元素是通过使用*binary_op*进行求和或合并的，而最后一个元素的位置不是实际包含在循环累积中的元素。
 
-*last1* \
-一种输入迭代器，用于寻址范围内的最后一个元素，以使用*binary_op1*进行求和或合并，而最后一个元素之外的一个位置实际上包含在循环中。
+*last1*\
+一种输入迭代器，用于寻址范围中的最后一个元素，该元素是通过使用*binary_op1*进行求和或合并的，而最后一个元素的位置不是实际包含在循环累积中的元素。
 
 *结果*\
 一种输出迭代器，用于寻址第一个元素的目标范围，其中的总和或指定操作的结果将存储在该范围内。
 
 *init*\
-通过使用*binary_op*，将每个元素添加或合并到的初始值。
+一个初始值，将使用*binary_op*将每个元素添加或合并为该初始值。
 
 *binary_op*\
 要应用于指定范围内的每个元素及其以前应用程序的结果的二元运算。

@@ -56,15 +56,15 @@ helpviewer_keywords:
 - std::basic_ios [C++], widen
 ms.assetid: 4fdcd8e1-62d2-4611-8a70-1e4f58434007
 ms.openlocfilehash: 614e26b2329edeec2cccb32c7ba18b23e9d5320d
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688442"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856467"
 ---
 # <a name="basic_ios-class"></a>basic_ios 类
 
-类模板描述了依赖于模板参数的输入流（类模板[basic_istream](../standard-library/basic-istream-class.md)）和输出流（属于类模板[basic_ostream](../standard-library/basic-ostream-class.md)）所共有的存储和成员函数。 （类[ios_base](../standard-library/ios-base-class.md)描述了什么是通用的，不依赖于模板参数。）类**basic_ios \<class Elem、类特征 >** 的对象可帮助控制包含 `Elem` 类型元素的流，其字符特征由类 `Traits` 决定。
+类模板描述了依赖于模板参数的输入流（类模板[basic_istream](../standard-library/basic-istream-class.md)）和输出流（属于类模板[basic_ostream](../standard-library/basic-ostream-class.md)）所共有的存储和成员函数。 （类[ios_base](../standard-library/ios-base-class.md)描述了什么是通用的，不依赖于模板参数。）类的对象**basic_ios\<类 Elem、类特征 >** 有助于控制包含 `Elem`类型元素的流，其字符特征由类 `Traits`确定。
 
 ## <a name="syntax"></a>语法
 
@@ -76,7 +76,7 @@ class basic_ios : public ios_base
 
 ### <a name="parameters"></a>参数
 
-*Elem* \
+*Elem*\
 一种类型。
 
 *特征*\
@@ -98,13 +98,13 @@ class basic_ios : public ios_base
 
 ### <a name="constructors"></a>构造函数
 
-|构造函数|描述|
+|构造函数|说明|
 |-|-|
 |[basic_ios](#basic_ios)|构造 `basic_ios` 类。|
 
 ### <a name="typedefs"></a>Typedef
 
-|类型名称|描述|
+|类型名称|说明|
 |-|-|
 |[char_type](#char_type)|模板参数 `Elem` 的同义词。|
 |[int_type](#int_type)|`Traits::int_type` 的同义词。|
@@ -114,13 +114,13 @@ class basic_ios : public ios_base
 
 ### <a name="member-functions"></a>成员函数
 
-|成员函数|描述|
+|成员函数|说明|
 |-|-|
 |[bad](#bad)|指示流缓冲区的完整性损失。|
 |[clear](#clear)|清除所有错误标志。|
 |[copyfmt](#copyfmt)|将标志从一个流复制到另一个流。|
 |[eof](#eof)|指示是否已到达流的结尾。|
-|[exceptions](#exceptions)|指示流将引发哪些异常。|
+|[异常](#exceptions)|指示流将引发哪些异常。|
 |[fail](#fail)|指示从流中提取有效字段失败。|
 |[fill](#fill)|指定或返回在文本宽度小于流宽度时将使用的字符。|
 |[good](#good)|指示流处于良好状态。|
@@ -138,7 +138,7 @@ class basic_ios : public ios_base
 
 ### <a name="operators"></a>运算符
 
-|运算符|描述|
+|运算符|说明|
 |-|-|
 |[explicit operator bool](#op_bool)|允许使用 `basic_ios` 对象作为**bool**。 禁用自动类型转换以防止产生常见的意外副作用。|
 |[operator void *](#op_void_star)|指示流是否仍处于良好状态。|
@@ -146,9 +146,9 @@ class basic_ios : public ios_base
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<ios>
+**标头：** \<ios >
 
-**命名空间:** std
+**命名空间：** std
 
 ## <a name="bad"></a>  basic_ios::bad
 
@@ -194,7 +194,7 @@ basic_ios();
 
 ### <a name="parameters"></a>参数
 
-*sb* \
+*sb*\
 用于存储输入或输出元素的标准缓冲区。
 
 ### <a name="remarks"></a>备注
@@ -223,12 +223,12 @@ void clear(io_state state);
 *状态*\
 可有可无清除所有标志后要设置的标志。 默认为 `goodbit`。
 
-*reraise* \
+*reraise*\
 可有可无指定是否应重新引发异常。 默认值为**false** （不会重新引发异常）。
 
 ### <a name="remarks"></a>备注
 
-标志为 `goodbit`、`failbit`、`eofbit` 和 `badbit`。 使用 [good](#good)、[bad](#bad)、[eof](#eof) 和 [fail](#fail) 测试这些标志
+标志为 `goodbit`、`failbit`、`eofbit`和 `badbit`。 使用 [good](#good)、[bad](#bad)、[eof](#eof) 和 [fail](#fail) 测试这些标志
 
 成员函数将存储的流状态信息替换为：
 
@@ -238,7 +238,7 @@ void clear(io_state state);
 
 ### <a name="example"></a>示例
 
-有关使用 `clear` 的示例，请参阅[rdstate](#rdstate)和[getline](../standard-library/string-functions.md#getline) 。
+有关使用 `clear`的示例，请参阅[rdstate](#rdstate)和[getline](../standard-library/string-functions.md#getline) 。
 
 ## <a name="copyfmt"></a>  basic_ios::copyfmt
 
@@ -251,7 +251,7 @@ const basic_ios<Elem, Traits>& right);
 
 ### <a name="parameters"></a>参数
 
-*right* \
+*right*\
 要复制其标志的流。
 
 ### <a name="return-value"></a>返回值
@@ -260,7 +260,7 @@ const basic_ios<Elem, Traits>& right);
 
 ### <a name="remarks"></a>备注
 
-该成员函数将报告回调事件**erase \_event**。 然后，它从*右边*复制到 **\*this**填充字符、绑定指针和格式设置信息。 在更改异常掩码之前，它会报告回调事件 `copyfmt_event`。 复制完成后，如果 **state &** [exceptions](#exceptions) 为非零，则该函数将有效地调用带参数 [rdstate](#rdstate) 的 [clear](#clear)。 它将返回 **\*this**。
+该成员函数将报告回调事件 **\_事件的清除**。 然后，它从*右*到 **\*** 将填充字符、绑定指针和格式信息进行复制。 在更改异常掩码之前，它会报告回调事件 `copyfmt_event`。 复制完成后，如果 **state &** [exceptions](#exceptions) 为非零，则该函数将有效地调用带参数 [rdstate](#clear) 的 [clear](#rdstate)。 它将返回 **\*this**。
 
 ### <a name="example"></a>示例
 
@@ -333,7 +333,7 @@ void exceptions(io_state Newexcept);
 
 ### <a name="parameters"></a>参数
 
-*Newexcept* \
+*Newexcept*\
 希望抛出异常的标志。
 
 ### <a name="return-value"></a>返回值
@@ -421,7 +421,7 @@ char_type fill(char_type Char);
 
 ### <a name="parameters"></a>参数
 
-*Char* \
+*Char*\
 希望用作填充字符的字符。
 
 ### <a name="return-value"></a>返回值
@@ -485,7 +485,7 @@ locale imbue(const locale& Loc);
 
 ### <a name="parameters"></a>参数
 
-*Loc* \
+*Loc*\
 区域设置字符串。
 
 ### <a name="return-value"></a>返回值
@@ -528,10 +528,10 @@ void init(basic_streambuf<Elem,Traits>* _Sb, bool _Isstd = false);
 
 ### <a name="parameters"></a>参数
 
-*_Sb* \
+*_Sb*\
 用于存储输入或输出元素的标准缓冲区。
 
-*_Isstd* \
+*_Isstd*\
 指定这是否是一个标准流。
 
 ### <a name="remarks"></a>备注
@@ -576,12 +576,12 @@ void move(basic_ios&& right);
 
 ### <a name="parameters"></a>参数
 
-*right* \
+*right*\
 从中移动值的 `ios_base` 对象。
 
 ### <a name="remarks"></a>备注
 
-受保护的成员函数将*向右*存储的所有值移动到 `*this`，存储 `stream buffer pointer` 除外，它在*右侧*保持不变，并在 `*this` 设置为 null 指针。 存储 `tie pointer` 设置为*右侧*的 null 指针。
+受保护的成员函数将*向右*存储的所有值移动到 `*this`，存储 `stream buffer pointer`除外，它在*右侧*保持不变，并在 `*this`设置为 null 指针。 存储 `tie pointer` 设置为*右侧*的 null 指针。
 
 ## <a name="narrow"></a>  basic_ios::narrow
 
@@ -593,7 +593,7 @@ char narrow(char_type Char, char Default = '\0') const;
 
 ### <a name="parameters"></a>参数
 
-*Char* \
+*Char*\
 要转换的**字符**。
 
 *Default*\
@@ -601,11 +601,11 @@ char narrow(char_type Char, char Default = '\0') const;
 
 ### <a name="return-value"></a>返回值
 
-给定 `char_type` 的等效**字符**。
+给定 `char_type`的等效**字符**。
 
 ### <a name="remarks"></a>备注
 
-该成员函数将返回[use_facet](../standard-library/basic-filebuf-class.md#open) \<ctype \<E > > （ [getloc](../standard-library/ios-base-class.md#getloc)（））。`narrow` （`Char`，`Default`）。
+成员函数将返回[use_facet](../standard-library/basic-filebuf-class.md#open)\<Ctype\<E > > （ [getloc](../standard-library/ios-base-class.md#getloc)（））。`narrow`（`Char`，`Default`）。
 
 ### <a name="example"></a>示例
 
@@ -706,7 +706,7 @@ explicit operator bool() const;
 
 ### <a name="remarks"></a>备注
 
-仅当 `fail()` 时，运算符才会返回一个可转换为**false**的值。 返回类型只能转换为**bool**，而不能转换为 `void *` 或其他已知的标量类型。
+仅当 `fail()`时，运算符才会返回一个可转换为**false**的值。 返回类型只能转换为**bool**，而不能转换为 `void *` 或其他已知的标量类型。
 
 ## <a name="pos_type"></a>  basic_ios::pos_type
 
@@ -728,8 +728,8 @@ basic_streambuf<Elem, Traits>* _Sb);
 
 ### <a name="parameters"></a>参数
 
-*_Sb* \
-流。
+*_Sb*\
+一个流。
 
 ### <a name="remarks"></a>备注
 
@@ -820,7 +820,7 @@ void setstate(iostate _State);
 
 ### <a name="parameters"></a>参数
 
-*_State* \
+*_State*\
 要设置的其他标志。
 
 ### <a name="remarks"></a>备注
@@ -870,12 +870,12 @@ basic_streambuf<Elem, Tr>* strbuf)
 
 ### <a name="parameters"></a>参数
 
-*strbuf* \
+*strbuf*\
 要成为读取缓冲区的流缓冲区。
 
 ### <a name="remarks"></a>备注
 
-受保护的成员函数将*strbuf*存储在 `stream buffer pointer` 中。它不会调用 `clear`。
+受保护的成员函数将*strbuf*存储在 `stream buffer pointer`中。它不会调用 `clear`。
 
 ## <a name="tie"></a>  basic_ios::tie
 
@@ -889,8 +889,8 @@ basic_ostream<Elem, Traits>* str);
 
 ### <a name="parameters"></a>参数
 
-*str* \
-流。
+*str*\
+一个流。
 
 ### <a name="return-value"></a>返回值
 
@@ -936,7 +936,7 @@ char_type widen(char Char) const;
 
 ### <a name="parameters"></a>参数
 
-*Char* \
+*Char*\
 要转换的字符。
 
 ### <a name="return-value"></a>返回值
@@ -945,7 +945,7 @@ char_type widen(char Char) const;
 
 ### <a name="remarks"></a>备注
 
-成员函数返回 [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **E**> >( [getloc](../standard-library/ios-base-class.md#getloc)). `widen`( `Char`).
+该成员函数将返回[use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **E**> > （ [getloc](../standard-library/ios-base-class.md#getloc)）。 `widen`( `Char`).
 
 ### <a name="example"></a>示例
 
@@ -977,15 +977,15 @@ void swap(basic_ios&& right);
 
 ### <a name="parameters"></a>参数
 
-*right* \
+*right*\
 用于交换值的 `basic_ios` 对象。
 
 ### <a name="remarks"></a>备注
 
-受保护的成员函数用除存储 `stream buffer pointer` 之外的 `*this` 来交换存储*在中的*所有值。
+受保护的成员函数用除存储 `stream buffer pointer`之外的 `*this` 来交换存储*在中的*所有值。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream 编程](../standard-library/iostream-programming.md)\
 [iostreams 约定](../standard-library/iostreams-conventions.md)
