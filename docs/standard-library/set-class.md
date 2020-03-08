@@ -87,11 +87,11 @@ helpviewer_keywords:
 - std::set [C++], value_comp
 ms.assetid: 8991f9aa-5509-4440-adc1-371512d32018
 ms.openlocfilehash: f1718b1cd362e54f63388b46025804ccc0396851
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689014"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865119"
 ---
 # <a name="set-class"></a>set 类
 
@@ -112,11 +112,11 @@ class set
 要存储在集中的元素数据类型。
 
 *特征*\
-一种提供函数对象的类型，该函数对象将两个元素值作为排序键进行比较，以确定其在集中的相对顺序。 此参数是可选自变量，默认值为二元谓词 **less** *\<Key>* 。
+一种提供函数对象的类型，该函数对象将两个元素值作为排序键进行比较，以确定其在集中的相对顺序。 此参数是可选的， *\<键 >* 的**二进制谓词是**默认值。
 
 在 C++ 14 中可以通过指定没有类型参数的 `std::less<>` 或 `std::greater<>` 谓词来启用异类查找。 有关详细信息，请参阅[关联容器中的异类查找](../standard-library/stl-containers.md#sequence_containers)
 
-*分配*器 \
+*分配*器\
 一种表示存储的分配器对象的类型，该分配器对象封装有关集的内存分配和解除分配的详细信息。 此参数是可选参数，默认值为 `allocator<Key>`。
 
 ## <a name="remarks"></a>备注
@@ -223,7 +223,7 @@ typedef Allocator allocator_type;
 
 ### <a name="example"></a>示例
 
-有关使用 `allocator_type` 的示例，请参阅 [get_allocator](#get_allocator) 的示例。
+有关使用 [ 的示例，请参阅 ](#get_allocator)get_allocator`allocator_type` 的示例。
 
 ## <a name="begin"></a>准备
 
@@ -298,7 +298,7 @@ const_iterator cbegin() const;
 
 由于使用 `cbegin` 的返回值，因此不能修改范围中的元素。
 
-可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，请考虑 `Container` 为支持 `begin()` 和 `cbegin()` 的任何类型的可修改（非常**量**）容器。
+可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，请考虑 `Container` 为支持 `begin()` 和 `cbegin()`的任何类型的可修改（非常**量**）容器。
 
 ```cpp
 auto i1 = Container.begin();
@@ -324,7 +324,7 @@ const_iterator cend() const;
 
 `cend` 用于测试迭代器是否超过了其范围的末尾。
 
-可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，请考虑 `Container` 为支持 `end()` 和 `cend()` 的任何类型的可修改（非常**量**）容器。
+可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，请考虑 `Container` 为支持 `end()` 和 `cend()`的任何类型的可修改（非常**量**）容器。
 
 ```cpp
 auto i1 = Container.end();
@@ -388,7 +388,7 @@ typedef implementation-defined const_iterator;
 
 ### <a name="example"></a>示例
 
-有关 `const_iterator` 的示例，请参阅 [begin](#begin) 的示例。
+有关 [ 的示例，请参阅 ](#begin)begin`const_iterator` 的示例。
 
 ## <a name="const_pointer"></a>const_pointer
 
@@ -459,7 +459,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 ### <a name="example"></a>示例
 
-有关如何声明和使用 `const_reverse_iterator` 的示例，请参阅 [rend](#rend) 的示例。
+有关如何声明和使用 [ 的示例，请参阅 ](#rend)rend`const_reverse_iterator` 的示例。
 
 ## <a name="count"></a>计
 
@@ -619,7 +619,7 @@ typedef typename allocator_type::difference_type difference_type;
 
 ### <a name="remarks"></a>备注
 
-`difference_type` 是通过容器迭代器减少或递增时返回的类型。 `difference_type` 通常用于表示迭代器 `first` 和 `last` 之间的范围 *[ first,  last)* 内元素的数目，包括 `first` 指向的元素以及那一系列元素，但不包括 `last` 指向的元素。
+`difference_type` 是通过容器迭代器减少或递增时返回的类型。 `difference_type` 通常用于表示迭代器 *和* 之间的范围 `first`[ first,  last)`last` 内元素的数目，包括 `first` 指向的元素以及那一系列元素，但不包括 `last` 指向的元素。
 
 注意，尽管 `difference_type` 适用于满足输入迭代器（包括可逆容器支持的双向迭代器的类，如集）需求的所有迭代器，迭代器之间的减法仅受随机访问容器（如 vector）提供的随机访问迭代器支持。
 
@@ -695,7 +695,7 @@ emplace(
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |-|-|
 |*args*|用于构造要插入到集中的元素的转发参数（除非它已包含一个具有相对有序的值的元素）。|
 
@@ -776,10 +776,10 @@ iterator emplace_hint(
 
 ### <a name="parameters"></a>参数
 
-*args* \
+*args*\
 用于构造要插入集中的元素的转发自变量，除非集已包含该元素，或更普遍的情况是除非它已包含其值已经过相同排序的元素。
 
-*where* \
+*where*\
 开始搜索正确插入点的位置。 （如果该点紧靠*在位置*之前，则插入可能发生在分期常量时间内，而不是对数时间。）
 
 ### <a name="return-value"></a>返回值
@@ -899,7 +899,7 @@ iterator end();
 
 **end** 用于测试迭代器是否超过集的末尾。
 
-不应对 **end** 返回的值取消引用。
+**end** 返回的值不应被取消引用。
 
 有关代码示例，请参阅 [set::find](#find)。
 
@@ -1000,7 +1000,7 @@ size_type erase(
 
 ### <a name="parameters"></a>参数
 
-*Where* \
+*Where*\
 要移除的元素的位置。
 
 *第一个*\
@@ -1296,14 +1296,14 @@ IList);
 
 ### <a name="parameters"></a>参数
 
-*Val* \
+*Val*\
 要插入到集中的元素的值（除非它已经包含一个具有相对有序的值的元素）。
 
-*Where* \
+*Where*\
 开始搜索正确插入点的位置。 （如果该点紧靠*在位置*之前，则插入可能发生在分期常量时间内，而不是对数时间。）
 
-*ValTy* \
-一个模板参数，该参数指定集可用于构造[value_type](../standard-library/map-class.md#value_type)元素的参数类型，并将 "完美转发" 的*Val*作为参数。
+*ValTy*\
+一个模板参数，该参数指定集可用于构造[value_type](../standard-library/map-class.md#value_type)的元素的参数类型，并将 "完美转发" 的*Val*作为参数。
 
 *第一个*\
 要复制的第一个元素的位置。
@@ -1311,10 +1311,10 @@ IList);
 *最后*\
 要复制的最后一个元素以外的位置。
 
-*InputIterator* \
+*InputIterator*\
 满足[输入迭代器](../standard-library/input-iterator-tag-struct.md)需求的模板函数自变量，该输入迭代器指向可用于构造 [value_type](../standard-library/map-class.md#value_type) 对象的类型的元素。
 
-*IList* \
+*IList*\
 从中复制元素的 [initializer_list](../standard-library/initializer-list.md)。
 
 ### <a name="return-value"></a>返回值
@@ -1329,7 +1329,7 @@ IList);
 
 在插入单个元素的过程中，如果引发异常，则不会修改该容器的状态。 在插入多个元素的过程中，如果引发异常，则会使容器处于未指定但有效的状态。
 
-要访问单个元素成员函数返回的 `pair` `pr` 的迭代器组件，请使用 `pr.first`；要在返回的配对中取消引用迭代器，请使用 `*pr.first`，从而向你提供一个元素。 若要访问**bool**组件，请使用 `pr.second`。 有关示例，请参阅本文后面的示例代码。
+若要访问由单个元素成员函数返回的 `pair` `pr` 的迭代器组件，请使用 `pr.first`;若要在返回的对中取消引用迭代器，请使用 `*pr.first`，为你提供一个元素。 若要访问**bool**组件，请使用 `pr.second`。 有关示例，请参阅本文后面的示例代码。
 
 容器的 [value_type](../standard-library/map-class.md#value_type) 是属于该容器的 typedef；对于集，`set<V>::value_type` 是 `const V` 类型。
 
@@ -1447,7 +1447,7 @@ typedef implementation-defined iterator;
 
 ### <a name="example"></a>示例
 
-有关如何声明和使用 `iterator` 的示例，请参阅[begin](#begin)的示例。
+有关如何声明和使用 `iterator`的示例，请参阅[begin](#begin)的示例。
 
 ## <a name="key_comp"></a>key_comp
 
@@ -1469,7 +1469,7 @@ key_compare key_comp() const;
 
 **bool operator （）** （**const key &** `_xVal`， **const key &** `_yVal`）;
 
-如果 `_xVal` 在排序顺序中先于且不等于 `_yVal`，则该函数会返回 **true**。
+如果 **在排序顺序中先于且不等于**，则该函数会返回 `_xVal`true`_yVal`。
 
 请注意，[key_compare](#key_compare) 和 [value_compare](#value_compare) 皆是模板参数 `Traits` 的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。
 
@@ -1538,11 +1538,11 @@ typedef Traits key_compare;
 
 有关 `Traits` 的详细信息，请参阅 [set 类](../standard-library/set-class.md)主题。
 
-请注意，`key_compare` 和[value_compare](#value_compare)都是模板参数 `Traits` 的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。
+请注意，`key_compare` 和[value_compare](#value_compare)都是 `Traits`的模板参数的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。
 
 ### <a name="example"></a>示例
 
-有关如何声明和使用 `key_compare` 的示例，请参阅 [key_comp](#key_comp) 的示例。
+有关如何声明和使用 [ 的示例，请参阅 ](#key_comp)key_comp`key_compare` 的示例。
 
 ## <a name="key_type"></a>key_type
 
@@ -1558,11 +1558,11 @@ typedef Key key_type;
 
 有关 `Key` 的详细信息，请参阅 [set 类](../standard-library/set-class.md)主题的“备注”部分。
 
-请注意，`key_type` 和[value_type](#value_type)都是模板参数 `Key` 的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。
+请注意，`key_type` 和[value_type](#value_type)都是 `Key`的模板参数的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。
 
 ### <a name="example"></a>示例
 
-有关如何声明和使用 `key_type` 的示例，请参阅 [value_type](#value_type) 的示例。
+有关如何声明和使用 [ 的示例，请参阅 ](#value_type)value_type`key_type` 的示例。
 
 ## <a name="lower_bound"></a>lower_bound
 
@@ -1676,12 +1676,12 @@ set& operator=(set&& right);
 
 ### <a name="parameters"></a>参数
 
-*right* \
+*right*\
 `set` 提供用于分配给此 `set` 的新元素。
 
 ### <a name="remarks"></a>备注
 
-@No__t_0 的第一个版本使用*right*的[左值引用](../cpp/lvalue-reference-declarator-amp.md)，将元素从此 `set` 向*右*复制。
+`operator=` 的第一个版本使用*right*的[左值引用](../cpp/lvalue-reference-declarator-amp.md)，将元素从此 `set`向*右*复制。
 
 第二个版本使用 right 的[右值引用](../cpp/rvalue-reference-declarator-amp-amp.md)。 它将元素从此 `set`*向右*移动。
 
@@ -1935,7 +1935,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 ### <a name="example"></a>示例
 
-有关如何声明和使用 `reverse_iterator` 的示例，请参阅 [rbegin](#rbegin) 的示例。
+有关如何声明和使用 [ 的示例，请参阅 ](#rbegin)rbegin`reverse_iterator` 的示例。
 
 ## <a name="set"></a>字符集
 
@@ -1990,13 +1990,13 @@ set(
 
 ### <a name="parameters"></a>参数
 
-*Al* \
+*Al*\
 要用于此集对象的存储分配器类，默认为 `Allocator`。
 
-*Comp* \
+*Comp*\
 用于对集中元素排序的 `const Traits` 类型比较函数，默认为 `Compare`。
 
-*Rght* \
+*Rght*\
 要以构造的集为副本的集。
 
 *第一个*\
@@ -2005,7 +2005,7 @@ set(
 *最后*\
 要复制的元素范围以外的第一个元素的位置。
 
-*IList* \
+*IList*\
 从中复制元素的 initializer_list。
 
 ### <a name="remarks"></a>备注
@@ -2014,7 +2014,7 @@ set(
 
 所有构造函数对其集进行初始化。
 
-所有构造函数都存储一个类型 `Traits` 的函数对象，该函数对象用于在集的键之间建立顺序，并且稍后可通过调用[key_comp](#key_comp)返回。
+所有构造函数都存储一个类型 `Traits` 的函数对象，该函数对象用于在集的键之间建立顺序，并且稍后可通过调用[key_comp](#key_comp)来返回。
 
 前三个构造函数指定一个空的初始集，第二个指定用于建立元素顺序的比较函数（`comp`）的类型，第三个指定要使用的分配器类型（`al`）。 关键字 **explicit** 取消某些种类的自动类型转换。
 
@@ -2189,7 +2189,7 @@ typedef typename allocator_type::size_type size_type;
 
 ### <a name="example"></a>示例
 
-有关如何声明和使用 `size_type` 的示例，请参阅 [size](#size) 的示例
+有关如何声明和使用 [ 的示例，请参阅 ](#size)size`size_type` 的示例
 
 ## <a name="swap"></a>购
 
@@ -2202,7 +2202,7 @@ void swap(
 
 ### <a name="parameters"></a>参数
 
-*right* \
+*right*\
 参数集，提供与目标集进行交换的元素。
 
 ### <a name="remarks"></a>备注
@@ -2347,7 +2347,7 @@ value_compare value_comp() const;
 
 **bool 运算符**（**const key &** `_xVal`， **const key &** `_yVal`）;
 
-如果 `_xVal` 在排序顺序中先于且不等于 `_yVal`，则该函数会返回 **true**。
+如果 **在排序顺序中先于且不等于**，则该函数会返回 `_xVal`true`_yVal`。
 
 请注意，[value_compare](#value_compare) 和 [key_compare](#key_compare) 皆是模板参数 `Traits` 的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。
 
@@ -2416,11 +2416,11 @@ typedef key_compare value_compare;
 
 有关 `Traits` 的详细信息，请参阅 [set 类](../standard-library/set-class.md)主题。
 
-请注意， [key_compare](#key_compare)和 `value_compare` 都是模板参数 `Traits` 的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。
+请注意， [key_compare](#key_compare)和 `value_compare` 都是 `Traits`的模板参数的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。
 
 ### <a name="example"></a>示例
 
-有关如何声明和使用 `value_compare` 的示例，请参阅 [value_comp](#value_comp) 的示例。
+有关如何声明和使用 [ 的示例，请参阅 ](#value_comp)value_comp`value_compare` 的示例。
 
 ## <a name="value_type"></a>value_type
 
@@ -2436,7 +2436,7 @@ typedef Key value_type;
 
 有关 `Key` 的详细信息，请参阅 [set 类](../standard-library/set-class.md)主题的“备注”部分。
 
-请注意， [key_type](#key_type)和 `value_type` 都是模板参数 `Key` 的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。
+请注意， [key_type](#key_type)和 `value_type` 都是 `Key`的模板参数的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。
 
 ### <a name="example"></a>示例
 

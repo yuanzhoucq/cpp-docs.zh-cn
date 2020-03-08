@@ -9,13 +9,13 @@ ms.assetid: cf2e4115-f205-4a0e-90be-a143ffcc1f44
 helpviewer_keywords:
 - std::swap (unordered_map/multimap)
 ms.openlocfilehash: 8ad81157d12de017198afeeb48f3b329ef20dbde
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454824"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78873949"
 ---
-# <a name="ltunorderedmapgt-functions"></a>&lt;unordered_map&gt; 函数
+# <a name="ltunordered_mapgt-functions"></a>&lt;unordered_map&gt; 函数
 
 |||
 |-|-|
@@ -34,13 +34,13 @@ void swap(
 
 ### <a name="parameters"></a>参数
 
-*按键*\
+*密钥*\
 密钥类型。
 
 *Ty*\
 映射类型。
 
-*代码*\
+*哈希*\
 哈希函数对象类型。
 
 *Pred*\
@@ -49,10 +49,10 @@ void swap(
 *分配*\
 allocator 类。
 
-*左中*\
+*左*\
 第一个要交换的容器。
 
-*然后*\
+*right*\
 第二个要交换的容器。
 
 ### <a name="remarks"></a>备注
@@ -127,13 +127,13 @@ void swap(
 
 ### <a name="parameters"></a>参数
 
-*按键*\
+*密钥*\
 密钥类型。
 
 *Ty*\
 映射类型。
 
-*代码*\
+*哈希*\
 哈希函数对象类型。
 
 *Pred*\
@@ -142,10 +142,10 @@ void swap(
 *分配*\
 allocator 类。
 
-*左中*\
+*左*\
 第一个要交换的容器。
 
-*然后*\
+*right*\
 第二个要交换的容器。
 
 ### <a name="remarks"></a>备注
@@ -207,6 +207,6 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [<unordered_map>](../standard-library/unordered-map.md)

@@ -109,15 +109,15 @@ helpviewer_keywords:
 - std::ios_base [C++], xalloc
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
 ms.openlocfilehash: 17fb83cdbf882467f0ec330e05a6506b13051cab
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890115"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856469"
 ---
 # <a name="ios_base-class"></a>ios_base 类
 
-此类描述了不依赖模板参数的输入和输出流通用的存储和成员函数。 （类模板[basic_ios](../standard-library/basic-ios-class.md)描述了什么是通用的，并依赖于模板参数。）
+此类描述了不依赖模板参数的输入和输出流通用的存储和成员函数。 （类模板[basic_ios](../standard-library/basic-ios-class.md)描述什么是通用的，并依赖于模板参数。）
 
 Ios_base 类的对象存储格式设置信息，其中包括：
 
@@ -199,7 +199,7 @@ Ios_base 类的对象存储格式设置信息，其中包括：
 
 |||
 |-|-|
-|[failure](#failure)|成员类用作类模板[basic_ios](../standard-library/basic-ios-class.md)[中的](../standard-library/basic-ios-class.md#clear)成员函数引发的所有异常的基类。|
+|[failure](#failure)|成员类用作类模板[basic_ios](../standard-library/basic-ios-class.md)中的[成员函数所](../standard-library/basic-ios-class.md#clear)引发的所有异常的基类。|
 |[flags](#flags)|设置或返回当前的标志设置。|
 |[getloc](#getloc)|返回存储的区域设置对象。|
 |[imbue](#imbue)|更改区域设置。|
@@ -243,7 +243,7 @@ enum event {
 
 - `copyfmt_event`，用于标识在调用[copyfmt](../standard-library/basic-ios-class.md#copyfmt)的末尾附近发生的回调，刚好在复制[异常掩码](../standard-library/ios-base-class.md)之前。
 
-- `erase_event`，用于标识在调用[copyfmt](../standard-library/basic-ios-class.md#copyfmt)时，或在调用析构函数的开头处发生的回调 **\*此**操作。
+- `erase_event`标识发生在调用开始时的回调[copyfmt](../standard-library/basic-ios-class.md#copyfmt)，或调用的析构函数的开头 **\*这**。
 
 - `imbue_event`，用于标识在调用[imbue](#imbue)时，刚好在函数返回之前发生的回调。
 
@@ -532,7 +532,7 @@ ios_base();
 
 ### <a name="remarks"></a>备注
 
-此（受保护）构造函数不会执行任何操作。 稍后对 `basic_ios::`[init](../standard-library/basic-ios-class.md#init)的调用必须先初始化该对象，然后才能安全地销毁该对象。 因此，类 ios_base 的唯一安全用途是作为类模板[basic_ios](../standard-library/basic-ios-class.md)的基类。
+此（受保护）构造函数不会执行任何操作。 稍后对 `basic_ios::`[init](../standard-library/basic-ios-class.md#init)的调用必须先初始化该对象，然后才能安全地销毁该对象。 因此，类 ios_base 的唯一安全用法是作为类模板[basic_ios](../standard-library/basic-ios-class.md)的基类。
 
 ## <a name="iostate"></a>iostate
 
@@ -676,7 +676,7 @@ streamsize precision(streamsize _Prec);
 
 ### <a name="return-value"></a>返回值
 
-第一个成员函数返回存储的[显示精度](../standard-library/ios-base-class.md)。 第二个成员函数在显示精度中存储 *_Prec* ，并返回其以前存储的值。
+第一个成员函数返回存储的[显示精度](../standard-library/ios-base-class.md)。 第二个成员函数将 *_Prec*存储在显示精度中，并返回其以前存储的值。
 
 ### <a name="remarks"></a>备注
 
@@ -982,7 +982,7 @@ void unsetf(
 
 ### <a name="remarks"></a>备注
 
-成员函数有效地调用[标志](#flags)（`~` *_Mask* **& 标志**）（清除选定位）。
+成员函数有效地调用[标志](#flags)（`~` *_Mask* **& 标志**）（清除选定的位）。
 
 ### <a name="example"></a>示例
 

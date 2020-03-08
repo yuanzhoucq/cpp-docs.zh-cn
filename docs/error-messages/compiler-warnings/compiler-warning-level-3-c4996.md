@@ -8,11 +8,11 @@ helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
 ms.openlocfilehash: 98662dc0b5439c1f8857e4f2ad259793a4d03e41
-ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898780"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865214"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>编译器警告（等级3） C4996
 
@@ -65,7 +65,7 @@ Microsoft 在 CRT 中重命名了某些 POSIX 和 Microsoft 特定的库函数�
 
 若要解决此问题，我们通常建议改为改用建议的函数名称。 但是，更新的名称是 Microsoft 特定的。 如果需要使用现有函数名称以实现可移植性，则可以关闭这些警告。 函数在库中的原始名称下面仍可用。
 
-若要关闭这些函数的弃用警告，请定义预处理器宏 **\_CRT\_NONSTDC\_NO\_WARNINGS**。 可以通过在命令行中包含选项 `/D_CRT_NONSTDC_NO_WARNINGS`来定义此宏。
+若要关闭这些函数的弃用警告，请定义预处理器宏 **\_CRT\_NONSTDC\_不\_警告**。 可以通过在命令行中包含选项 `/D_CRT_NONSTDC_NO_WARNINGS`来定义此宏。
 
 ## <a name="unsafe-crt-library-functions"></a>不安全的 CRT 库函数
 
@@ -75,7 +75,7 @@ Microsoft 弃用了某些 CRT C++和标准库函数和全局函数，因为提�
 
 若要解决此问题，建议改为使用函数或变量的*安全版本*。 有时您无法实现可移植性或向后兼容性的原因。 仔细验证代码中是否存在缓冲区覆盖或 overread 的情况。 然后，可以关闭警告。
 
-若要关闭 CRT 中的这些函数的弃用警告，定义 **\_CRT\_SECURE\_NO\_WARNINGS**。
+若要在 CRT 中关闭这些函数的弃用警告，请将 **\_CRT 定义\_安全\_不\_警告**。
 
 若要关闭有关弃用的全局变量的警告，请将 **\_CRT 定义\_安全\_不\_警告\_全局**。
 
@@ -208,7 +208,7 @@ int main()
 }
 ```
 
-如果已验证你的代码不能出现缓冲区溢出错误，则可以关闭此警告。 若要关闭这些函数的警告，定义 **\_SCL\_SECURE\_NO\_WARNINGS**。
+如果已验证你的代码不能出现缓冲区溢出错误，则可以关闭此警告。 若要关闭这些函数的警告，请定义 **\_SCL\_SECURE\_不\_警告**。
 
 ## <a name="checked-iterators-enabled"></a>已启用检查迭代器
 
@@ -250,7 +250,7 @@ int main() {
 
 若要解决此问题，我们建议更改代码以使用建议的函数或变量。
 
-若要关闭这些项的弃用警告，定义 **\_CRT\_过时\_NO\_WARNINGS**。 有关详细信息，请参阅弃用的函数或变量的文档。
+若要关闭这些项的弃用警告，请定义 **\_CRT\_过时\_不\_警告**。 有关详细信息，请参阅弃用的函数或变量的文档。
 
 ## <a name="marshaling-errors-in-clr-code"></a>在 CLR 代码中封送处理错误
 

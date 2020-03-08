@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::operatoroperator&lt; (forward_list)
 - std::operatoroperator&lt;= (forward_list)
 ms.openlocfilehash: 1ddfb56c7ff68ec10c7bb56af3495e4042acb83c
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689689"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874751"
 ---
 # <a name="ltforward_listgt-operators"></a>&lt;forward_list&gt; 运算符
 
@@ -40,12 +40,12 @@ bool operator==(
 *左*\
 一个 `forward_list` 类型的对象。
 
-*right* \
+*right*\
 一个 `forward_list` 类型的对象。
 
 ### <a name="remarks"></a>备注
 
-此模板函数重载 `operator==` 比较类模板 `forward_list` 的两个对象。 该函数返回 `distance(left.begin(), end()) == distance(right.begin(),right.end()) && equal(left. begin(),left. end(),right.begin())`。
+此模板函数重载 `operator==` 比较类模板 `forward_list`的两个对象。 该函数返回 `distance(left.begin(), end()) == distance(right.begin(),right.end()) && equal(left. begin(),left. end(),right.begin())`。
 
 ## <a name="op_neq"></a>operator！ =
 
@@ -62,7 +62,7 @@ bool operator!=(
 *左*\
 一个 `forward_list` 类型的对象。
 
-*right* \
+*right*\
 一个 `forward_list` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -88,7 +88,7 @@ bool operator<(
 *左*\
 一个 `forward_list` 类型的对象。
 
-*right* \
+*right*\
 一个 `forward_list` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -97,9 +97,9 @@ bool operator<(
 
 ### <a name="remarks"></a>备注
 
-此模板函数重载 `operator<` 比较类模板 `forward_list` 的两个对象。 该函数返回 `lexicographical_compare(lhs. begin(), lhs. end(), rhs.begin(), rhs.end())`。
+此模板函数重载 `operator<` 比较类模板 `forward_list`的两个对象。 该函数返回 `lexicographical_compare(lhs. begin(), lhs. end(), rhs.begin(), rhs.end())`。
 
-## <a name="op_lt_eq"></a>操作员 &lt; =
+## <a name="op_lt_eq"></a>操作员&lt;=
 
 测试运算符左侧的转发列表对象是否小于或等于右侧的转发列表对象。
 
@@ -114,7 +114,7 @@ bool operator<=(
 *左*\
 一个 `forward_list` 类型的对象。
 
-*right* \
+*right*\
 一个 `forward_list` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -140,7 +140,7 @@ bool operator>(
 *左*\
 一个 `forward_list` 类型的对象。
 
-*right* \
+*right*\
 一个 `forward_list` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -151,7 +151,7 @@ bool operator>(
 
 此模板函数返回 `right < left`。
 
-## <a name="op_gt_eq"></a>操作员 &gt; =
+## <a name="op_gt_eq"></a>操作员&gt;=
 
 测试运算符左侧的转发列表对象是否大于或等于右侧的转发列表对象。
 
@@ -166,7 +166,7 @@ bool operator>=(
 *左*\
 一个 `forward_list` 类型的对象。
 
-*right* \
+*right*\
 一个 `forward_list` 类型的对象。
 
 ### <a name="return-value"></a>返回值

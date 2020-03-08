@@ -1,30 +1,30 @@
 ---
-title: PIXEL-HIMETRIC 转换全局函数
+title: 像素 HIMETRIC 转换全局函数
 ms.date: 11/04/2016
 f1_keywords:
 - atlwin/ATL::AtlHiMetricToPixel
 - atlwin/ATL::AtlPixelToHiMetric
 ms.assetid: ecb1b1b2-7e9d-4fbc-a855-16252d2d794c
 ms.openlocfilehash: 43a12985f259603a9b67f22f7a7891bf847c0b0f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276830"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78862902"
 ---
-# <a name="pixelhimetric-conversion-global-functions"></a>像素/HIMETRIC 转换全局函数
+# <a name="pixelhimetric-conversion-global-functions"></a>象素/HIMETRIC 转换全局函数
 
-这些函数为从像素和 HIMETRIC 为单位进行来回转换提供支持。
+这些函数为转换到像素和 HIMETRIC 单元提供支持。
 
 > [!IMPORTANT]
->  下表中列出的函数不能在 Windows 运行时中执行的应用程序中使用。
+>  下表中列出的函数不能用于在 Windows 运行时中执行的应用程序。
 
 |||
 |-|-|
-|[AtlHiMetricToPixel](#atlhimetrictopixel)|将 HIMETRIC 为单位 （每个单位是 0.01 毫米） 转换为像素。|
-|[AtlPixelToHiMetric](#atlpixeltohimetric)|将像素转换为 HIMETRIC 为单位 （每个单位是 0.01 毫米）。|
+|[AtlHiMetricToPixel](#atlhimetrictopixel)|将 HIMETRIC 单位（每个单位为0.01 毫米）转换为像素。|
+|[AtlPixelToHiMetric](#atlpixeltohimetric)|将像素转换为 HIMETRIC 单位（每个单位为0.01 毫米）。|
 
-##  <a name="atlhimetrictopixel"></a>  AtlHiMetricToPixel
+##  <a name="atlhimetrictopixel"></a>AtlHiMetricToPixel
 
 将以 HIMETRIC 为单位（每个单位是 0.01 毫米）的对象大小转换为以屏幕设备上的像素为单位的大小。
 
@@ -37,10 +37,10 @@ extern void AtlHiMetricToPixel(
 ### <a name="parameters"></a>参数
 
 *lpSizeInHiMetric*<br/>
-[in]指向以 HIMETRIC 为单位的对象的大小。
+中指向对象的大小的指针，以 HIMETRIC 单位表示。
 
 *lpSizeInPix*<br/>
-[out]指向对象的大小 （像素） 将返回的指针。
+弄一个指针，指向要返回对象的大小（以像素为单位）的位置。
 
 ### <a name="example"></a>示例
 
@@ -48,9 +48,9 @@ extern void AtlHiMetricToPixel(
 
 ### <a name="requirements"></a>要求
 
-**标头：** atlwin.h
+**标头：** atlwin。h
 
-##  <a name="atlpixeltohimetric"></a>  AtlPixelToHiMetric
+##  <a name="atlpixeltohimetric"></a>AtlPixelToHiMetric
 
 将以屏幕设备上的像素为单位的对象大小转换为以 HIMETRIC 为单位（每个单位是 0.01 毫米）的大小。
 
@@ -63,10 +63,10 @@ extern void AtlPixelToHiMetric(
 ### <a name="parameters"></a>参数
 
 *lpSizeInPix*<br/>
-[in]指向对象的大小 （像素）。
+中一个指针，指向对象的大小（以像素为单位）。
 
 *lpSizeInHiMetric*<br/>
-[out]指向其中以 HIMETRIC 为单位的对象的大小是要返回的指针。
+弄一个指针，指向要返回对象在 HIMETRIC 单位中的大小的位置。
 
 ### <a name="example"></a>示例
 
@@ -74,8 +74,8 @@ extern void AtlPixelToHiMetric(
 
 ### <a name="requirements"></a>要求
 
-**标头：** atlwin.h
+**标头：** atlwin。h
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [函数](../../atl/reference/atl-functions.md)

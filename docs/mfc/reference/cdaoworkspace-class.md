@@ -63,11 +63,11 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
 ms.openlocfilehash: c1d235035cee9342c8c54c7aaa4e05a96d5a37e3
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303474"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883860"
 ---
 # <a name="cdaoworkspace-class"></a>CDaoWorkspace 类
 
@@ -403,7 +403,7 @@ virtual void Create(
 工作区所有者的用户名。 有关要求，请参阅[SetDefaultUser](#setdefaultuser)成员函数的*lpszDefaultUser*参数。 有关相关信息，请参阅 DAO 帮助中的主题 "UserName 属性"。
 
 *lpszPassword*<br/>
-新工作区对象的密码。 密码长度最多为14个字符，可以包含除 ASCII 0 （null）以外的任何字符。 密码区分大小写。 相关信息，请参阅 DAO 帮助中的 "Password 属性" 主题。
+新工作区对象的密码。 密码长度最多为14个字符，可以包含除 ASCII 0 （null）以外的任何字符。 密码是区分大小写的。 相关信息，请参阅 DAO 帮助中的 "Password 属性" 主题。
 
 ### <a name="remarks"></a>备注
 
@@ -723,7 +723,7 @@ virtual void Open(LPCTSTR lpszName = NULL);
 ||||
 |-|-|-|
 |[创建](#create)|[GetVersion](#getversion)|[SetDefaultUser](#setdefaultuser)|
-|[GetIniPath](#getinipath)|[时间](#idle)|[SetIniPath](#setinipath)|
+|[GetIniPath](#getinipath)|[Idle](#idle)|[SetIniPath](#setinipath)|
 |[GetLoginTimeout](#getlogintimeout)|[SetDefaultPassword](#setdefaultpassword)|[SetLoginTimeout](#setlogintimeout)|
 
 ##  <a name="repairdatabase"></a>CDaoWorkspace::RepairDatabase
@@ -779,7 +779,7 @@ static void PASCAL SetDefaultPassword(LPCTSTR lpszPassword);
 ### <a name="parameters"></a>参数
 
 *lpszPassword*<br/>
-默认密码。 密码长度最多为14个字符，可以包含除 ASCII 0 （null）以外的任何字符。 密码区分大小写。
+默认密码。 密码长度最多为14个字符，可以包含除 ASCII 0 （null）以外的任何字符。 密码是区分大小写的。
 
 ### <a name="remarks"></a>备注
 

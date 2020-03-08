@@ -109,11 +109,11 @@ helpviewer_keywords:
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
 ms.openlocfilehash: b54a1913073ca0b23aeb17a57b16f589a074637b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507195"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890793"
 ---
 # <a name="ccombobox-class"></a>CComboBox 类
 
@@ -125,68 +125,68 @@ ms.locfileid: "69507195"
 class CComboBox : public CWnd
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CComboBox::CComboBox](#ccombobox)|构造 `CComboBox` 对象。|
+|[CComboBox：： CComboBox](#ccombobox)|构造 `CComboBox` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[CComboBox::AddString](#addstring)|将字符串添加到组合框列表框中列表的末尾，或添加到具有 CBS_SORT 样式的列表框的排序位置。|
-|[CComboBox::Clear](#clear)|删除（清除）编辑控件中的当前选择（如果有）。|
-|[CComboBox::CompareItem](#compareitem)|由框架调用，以确定新列表项在排序的所有者描述的组合框中的相对位置。|
-|[CComboBox::Copy](#copy)|将当前选择（如果有）复制到剪贴板上，格式为 CF_TEXT。|
-|[CComboBox::Create](#create)|创建组合框并将其附加到`CComboBox`对象。|
-|[CComboBox::Cut](#cut)|删除（剪切）编辑控件中的当前选定内容（如果有），并以 CF_TEXT 格式将删除的文本复制到剪贴板。|
-|[CComboBox::DeleteItem](#deleteitem)|当从所有者描述的组合框中删除列表项时，由框架调用。|
-|[CComboBox::DeleteString](#deletestring)|从组合框的列表框中删除字符串。|
-|[CComboBox::Dir](#dir)|将文件名列表添加到组合框的列表框中。|
-|[CComboBox::DrawItem](#drawitem)|当所有者描述的组合框的视觉方面发生变化时，由框架调用。|
-|[CComboBox::FindString](#findstring)|在组合框的列表框中查找包含指定前缀的第一个字符串。|
-|[CComboBox::FindStringExact](#findstringexact)|查找与指定字符串匹配的第一个列表框字符串（在组合框中）。|
-|[CComboBox::GetComboBoxInfo](#getcomboboxinfo)|检索有关对象的`CComboBox`信息。|
-|[CComboBox::GetCount](#getcount)|检索组合框的列表框中的项数。|
-|[CComboBox::GetCueBanner](#getcuebanner)|获取为组合框控件显示的提示文本。|
-|[CComboBox::GetCurSel](#getcursel)|在组合框的列表框中检索当前选定项（如果有）的索引。|
-|[CComboBox::GetDroppedControlRect](#getdroppedcontrolrect)|检索下拉组合框的可见（下拉列表）列表框的屏幕坐标。|
-|[CComboBox::GetDroppedState](#getdroppedstate)|确定下拉组合框的列表框是否可见（删除）。|
-|[CComboBox::GetDroppedWidth](#getdroppedwidth)|检索组合框的下拉列表框部分的最小允许宽度。|
-|[CComboBox::GetEditSel](#geteditsel)|获取组合框编辑控件中当前所选内容的起始和结束字符位置。|
-|[CComboBox::GetExtendedUI](#getextendedui)|确定组合框是否具有默认用户界面或扩展的用户界面。|
-|[CComboBox::GetHorizontalExtent](#gethorizontalextent)|返回组合框的列表框部分可水平滚动的宽度（以像素为单位）。|
-|[CComboBox::GetItemData](#getitemdata)|检索应用程序提供的与指定组合框项关联的32位值。|
-|[CComboBox::GetItemDataPtr](#getitemdataptr)|检索应用程序提供的与指定组合框项关联的32位指针。|
-|[CComboBox::GetItemHeight](#getitemheight)|检索组合框中列表项的高度。|
-|[CComboBox::GetLBText](#getlbtext)|从组合框的列表框中获取一个字符串。|
-|[CComboBox::GetLBTextLen](#getlbtextlen)|获取组合框的列表框中的字符串长度。|
-|[CComboBox::GetLocale](#getlocale)|检索组合框的区域设置标识符。|
-|[CComboBox::GetMinVisible](#getminvisible)|获取当前组合框下拉列表中可见项的最小数目。|
-|[CComboBox::GetTopIndex](#gettopindex)|返回组合框的列表框部分中第一个可见项的索引。|
-|[CComboBox::InitStorage](#initstorage)|组合框的列表框部分中项和字符串的预分配内存块。|
+|[CComboBox：： Clear](#clear)|删除（清除）编辑控件中的当前选择（如果有）。|
+|[CComboBox：： CompareItem](#compareitem)|由框架调用，以确定新列表项在排序的所有者描述的组合框中的相对位置。|
+|[CComboBox：： Copy](#copy)|将当前选择（如果有）复制到剪贴板上 CF_TEXT 格式。|
+|[CComboBox：： Create](#create)|创建组合框并将其附加到 `CComboBox` 对象上。|
+|[CComboBox：： Cut](#cut)|删除（剪切）编辑控件中的当前选定内容（如果有），并以 CF_TEXT 格式将删除的文本复制到剪贴板。|
+|[CComboBox：:D eleteItem](#deleteitem)|当从所有者描述的组合框中删除列表项时，由框架调用。|
+|[CComboBox：:D eleteString](#deletestring)|从组合框的列表框中删除字符串。|
+|[CComboBox：:D ir](#dir)|将文件名列表添加到组合框的列表框中。|
+|[CComboBox：:D rawItem](#drawitem)|当所有者描述的组合框的视觉方面发生变化时，由框架调用。|
+|[CComboBox：： FindString](#findstring)|在组合框的列表框中查找包含指定前缀的第一个字符串。|
+|[CComboBox：： FindStringExact](#findstringexact)|查找与指定字符串匹配的第一个列表框字符串（在组合框中）。|
+|[CComboBox：： GetComboBoxInfo](#getcomboboxinfo)|检索有关 `CComboBox` 对象的信息。|
+|[CComboBox：： GetCount](#getcount)|检索组合框的列表框中的项数。|
+|[CComboBox：： GetCueBanner](#getcuebanner)|获取为组合框控件显示的提示文本。|
+|[CComboBox：： GetCurSel](#getcursel)|在组合框的列表框中检索当前选定项（如果有）的索引。|
+|[CComboBox：： GetDroppedControlRect](#getdroppedcontrolrect)|检索下拉组合框的可见（下拉列表）列表框的屏幕坐标。|
+|[CComboBox：： GetDroppedState](#getdroppedstate)|确定下拉组合框的列表框是否可见（删除）。|
+|[CComboBox：： GetDroppedWidth](#getdroppedwidth)|检索组合框的下拉列表框部分的最小允许宽度。|
+|[CComboBox：： GetEditSel](#geteditsel)|获取组合框编辑控件中当前所选内容的起始和结束字符位置。|
+|[CComboBox：： GetExtendedUI](#getextendedui)|确定组合框是否具有默认用户界面或扩展的用户界面。|
+|[CComboBox：： GetHorizontalExtent](#gethorizontalextent)|返回组合框的列表框部分可水平滚动的宽度（以像素为单位）。|
+|[CComboBox：： GetItemData](#getitemdata)|检索应用程序提供的与指定组合框项关联的32位值。|
+|[CComboBox：： GetItemDataPtr](#getitemdataptr)|检索应用程序提供的与指定组合框项关联的32位指针。|
+|[CComboBox：： GetItemHeight](#getitemheight)|检索组合框中列表项的高度。|
+|[CComboBox：： GetLBText](#getlbtext)|从组合框的列表框中获取一个字符串。|
+|[CComboBox：： GetLBTextLen](#getlbtextlen)|获取组合框的列表框中的字符串长度。|
+|[CComboBox：： GetLocale](#getlocale)|检索组合框的区域设置标识符。|
+|[CComboBox：： GetMinVisible](#getminvisible)|获取当前组合框下拉列表中可见项的最小数目。|
+|[CComboBox：： GetTopIndex](#gettopindex)|返回组合框的列表框部分中第一个可见项的索引。|
+|[CComboBox：： InitStorage](#initstorage)|组合框的列表框部分中项和字符串的预分配内存块。|
 |[CComboBox::InsertString](#insertstring)|将字符串插入组合框的列表框。|
-|[CComboBox::LimitText](#limittext)|限制用户可以在组合框的编辑控件中输入的文本的长度。|
-|[CComboBox::MeasureItem](#measureitem)|当创建所有者描述的组合框时，由框架调用以确定组合框尺寸。|
-|[CComboBox::Paste](#paste)|将剪贴板中的数据插入到当前光标位置的编辑控件中。 仅当剪贴板包含 CF_TEXT 格式的数据时，才插入数据。|
-|[CComboBox::ResetContent](#resetcontent)|从列表框中移除所有项，并在组合框中编辑控件。|
-|[CComboBox::SelectString](#selectstring)|在组合框的列表框中搜索字符串，如果找到该字符串，则选择列表框中的字符串，并将该字符串复制到编辑控件中。|
-|[CComboBox::SetCueBanner](#setcuebanner)|设置为组合框控件显示的提示文本。|
-|[CComboBox::SetCurSel](#setcursel)|在组合框的列表框中选择一个字符串。|
-|[CComboBox::SetDroppedWidth](#setdroppedwidth)|设置组合框的下拉列表框部分的最小允许宽度。|
-|[CComboBox::SetEditSel](#seteditsel)|在组合框的编辑控件中选择字符。|
-|[CComboBox::SetExtendedUI](#setextendedui)|为具有 CBS_DROPDOWN 或 CBS_DROPDOWNLIST 样式的组合框选择默认的用户界面或扩展的用户界面。|
-|[CComboBox::SetHorizontalExtent](#sethorizontalextent)|设置组合框的列表框部分可水平滚动的宽度（以像素为单位）。|
-|[CComboBox::SetItemData](#setitemdata)|设置与组合框中的指定项关联的32位值。|
-|[CComboBox::SetItemDataPtr](#setitemdataptr)|设置与组合框中的指定项关联的32位指针。|
-|[CComboBox::SetItemHeight](#setitemheight)|设置组合框中的列表项的高度或组合框的编辑控件（或静态文本）部分的高度。|
-|[CComboBox::SetLocale](#setlocale)|设置组合框的区域设置标识符。|
-|[CComboBox::SetMinVisibleItems](#setminvisibleitems)|设置当前组合框下拉列表中可见项的最小数目。|
-|[CComboBox::SetTopIndex](#settopindex)|指示组合框的列表框部分在顶部显示具有指定索引的项。|
-|[CComboBox::ShowDropDown](#showdropdown)|显示或隐藏具有 CBS_DROPDOWN 或 CBS_DROPDOWNLIST 样式的组合框的列表框。|
+|[CComboBox：： LimitText](#limittext)|限制用户可以在组合框的编辑控件中输入的文本的长度。|
+|[CComboBox：： MeasureItem](#measureitem)|当创建所有者描述的组合框时，由框架调用以确定组合框尺寸。|
+|[CComboBox：:P aste](#paste)|将剪贴板中的数据插入到当前光标位置的编辑控件中。 仅当剪贴板包含 CF_TEXT 格式的数据时，才插入数据。|
+|[CComboBox：： ResetContent](#resetcontent)|从列表框中移除所有项，并在组合框中编辑控件。|
+|[CComboBox：： SelectString](#selectstring)|在组合框的列表框中搜索字符串，如果找到该字符串，则选择列表框中的字符串，并将该字符串复制到编辑控件中。|
+|[CComboBox：： SetCueBanner](#setcuebanner)|设置为组合框控件显示的提示文本。|
+|[CComboBox：： SetCurSel](#setcursel)|在组合框的列表框中选择一个字符串。|
+|[CComboBox：： SetDroppedWidth](#setdroppedwidth)|设置组合框的下拉列表框部分的最小允许宽度。|
+|[CComboBox：： SetEditSel](#seteditsel)|在组合框的编辑控件中选择字符。|
+|[CComboBox：： SetExtendedUI](#setextendedui)|为具有 CBS_DROPDOWN 或 CBS_DROPDOWNLIST 样式的组合框选择默认的用户界面或扩展的用户界面。|
+|[CComboBox：： SetHorizontalExtent](#sethorizontalextent)|设置组合框的列表框部分可水平滚动的宽度（以像素为单位）。|
+|[CComboBox：： SetItemData](#setitemdata)|设置与组合框中的指定项关联的32位值。|
+|[CComboBox：： SetItemDataPtr](#setitemdataptr)|设置与组合框中的指定项关联的32位指针。|
+|[CComboBox：： SetItemHeight](#setitemheight)|设置组合框中的列表项的高度或组合框的编辑控件（或静态文本）部分的高度。|
+|[CComboBox：： SetLocale](#setlocale)|设置组合框的区域设置标识符。|
+|[CComboBox：： SetMinVisibleItems](#setminvisibleitems)|设置当前组合框下拉列表中可见项的最小数目。|
+|[CComboBox：： SetTopIndex](#settopindex)|指示组合框的列表框部分在顶部显示具有指定索引的项。|
+|[CComboBox：： ShowDropDown](#showdropdown)|显示或隐藏具有 CBS_DROPDOWN 或 CBS_DROPDOWNLIST 样式的组合框的列表框。|
 
 ## <a name="remarks"></a>备注
 
@@ -198,33 +198,33 @@ class CComboBox : public CWnd
 
 |样式|何时显示列表框|静态控件或编辑控件|
 |-----------|-------------------------------|-----------------------------|
-|简单|Always|Edit|
-|Drop-down|放下时|Edit|
-|下拉列表|放下时|Static|
+|简单|始终|编辑|
+|Drop-down|放下时|编辑|
+|下拉列表|放下时|静态|
 
-可以通过对话框模板`CComboBox`或直接在代码中创建对象。 在这两种情况下，首先`CComboBox`调用构造函数`CComboBox`构造对象，然后调用[create](#create)成员函数来创建控件并将其附加到`CComboBox`对象。
+你可以从对话框模板或直接在代码中创建 `CComboBox` 对象。 在这两种情况下，首先调用构造函数 `CComboBox` 来构造 `CComboBox` 对象;然后调用[create](#create)成员函数以创建控件，并将其附加到 `CComboBox` 对象上。
 
-如果要处理由组合框发送到其父级的 Windows 通知消息（通常是从`CDialog`派生的类），请将消息映射项和消息处理程序成员函数添加到每条消息的父类。
+如果要处理由组合框发送到其父级的 Windows 通知消息（通常是派生自 `CDialog`的类），请将消息映射项和消息处理程序成员函数添加到每条消息的父类。
 
 每个消息映射项都采用以下形式：
 
-**开启\_** _通知_ **（** _id_， _memberFxn_ **）**
+**\_** _通知_ **（** _id_， _memberFxn_ **）**
 
-其中`id` ，指定发送通知的组合框控件的子窗口 ID， `memberFxn`是您编写的用于处理通知的父成员函数的名称。
+其中 `id` 指定发送通知的组合框控件的子窗口 ID，`memberFxn` 是已编写的用于处理通知的父成员函数的名称。
 
 父的函数原型如下所示：
 
-**afx_msg** `void` `memberFxn` **( );**
+**afx_msg** `void` `memberFxn` **（）;**
 
-无法预测某些通知的发送顺序。 特别是，CBN_SELCHANGE 通知可能发生在 CBN_CLOSEUP 通知之前或之后。
+无法预测某些通知的发送顺序。 具体而言，CBN_SELCHANGE 通知可能发生在 CBN_CLOSEUP 通知之前或之后。
 
 可能的消息映射条目如下：
 
 - ON_CBN_CLOSEUP （Windows 3.1 及更高版本。）组合框的列表框已关闭。 不会为具有[CBS_SIMPLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)样式的组合框发送此通知消息。
 
-- ON_CBN_DBLCLK 用户双击组合框的列表框中的字符串。 此通知消息仅针对具有 CBS_SIMPLE 样式的组合框发送。 对于具有[CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)或[CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)样式的组合框，双击不会出现，因为单击即可隐藏列表框。
+- ON_CBN_DBLCLK 用户双击组合框的列表框中的字符串。 仅为具有 CBS_SIMPLE 样式的组合框发送此通知消息。 对于具有[CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)或[CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)样式的组合框，因为单击隐藏列表框，则不会出现双击。
 
-- ON_CBN_DROPDOWN 组合框的列表框将要下拉（变为可见）。 此通知消息仅适用于具有 CBS_DROPDOWN 或 CBS_DROPDOWNLIST 样式的组合框。
+- ON_CBN_DROPDOWN 组合框的列表框将要下拉（使其可见）。 此通知消息仅适用于具有 CBS_DROPDOWN 或 CBS_DROPDOWNLIST 样式的组合框。
 
 - ON_CBN_EDITCHANGE 用户执行了一项操作，该操作可能更改了组合框的编辑控件部分中的文本。 与 CBN_EDITUPDATE 消息不同，此消息在 Windows 更新屏幕后发送。 如果组合框具有 CBS_DROPDOWNLIST 样式，则不会发送它。
 
@@ -232,21 +232,21 @@ class CComboBox : public CWnd
 
 - ON_CBN_ERRSPACE 组合框无法分配足够的内存来满足特定的请求。
 
-- ON_CBN_SELENDCANCEL （Windows 3.1 及更高版本。）指示应取消用户的选择。 用户单击某个项，然后单击另一个窗口或控件以隐藏组合框的列表框。 此通知消息将在 CBN_CLOSEUP 通知消息之前发送，以指示应忽略用户的选择。 即使未发送 CBN_CLOSEUP 通知消息（例如，具有 CBS_SIMPLE 样式的组合框），也会发送 CBN_SELENDCANCEL 或 CBN_SELENDOK 通知消息。
+- ON_CBN_SELENDCANCEL （Windows 3.1 及更高版本。）指示应取消用户的选择。 用户单击某个项，然后单击另一个窗口或控件以隐藏组合框的列表框。 此通知消息将在 CBN_CLOSEUP 通知消息之前发送，以指示应忽略用户的选择。 即使未发送 CBN_CLOSEUP 通知消息（例如，在具有 CBS_SIMPLE 样式的组合框的情况下），也会发送 CBN_SELENDCANCEL 或 CBN_SELENDOK 通知消息。
 
-- ON_CBN_SELENDOK 用户选择一个项，然后按 ENTER 键或单击向下箭头键以隐藏组合框的列表框。 此通知消息将在 CBN_CLOSEUP 消息之前发送，以指示应将用户的选择视为有效。 即使未发送 CBN_CLOSEUP 通知消息（例如，具有 CBS_SIMPLE 样式的组合框），也会发送 CBN_SELENDCANCEL 或 CBN_SELENDOK 通知消息。
+- ON_CBN_SELENDOK 用户选择一个项，然后按 ENTER 键或单击向下箭头键以隐藏组合框的列表框。 此通知消息将在 CBN_CLOSEUP 消息之前发送，以指示应将用户的选择视为有效。 即使未发送 CBN_CLOSEUP 通知消息（例如，在具有 CBS_SIMPLE 样式的组合框的情况下），也会发送 CBN_SELENDCANCEL 或 CBN_SELENDOK 通知消息。
 
 - ON_CBN_KILLFOCUS 组合框丢失了输入焦点。
 
-- ON_CBN_SELCHANGE 在组合框的列表框中所选内容将因用户单击列表框或使用箭头键更改选择而更改。 当处理此消息时，组合框的编辑控件中的文本只能通过`GetLBText`或其他类似函数检索。 `GetWindowText`不能使用。
+- ON_CBN_SELCHANGE 在组合框的列表框中所选内容将因用户单击列表框或使用箭头键更改选择而更改。 当处理此消息时，组合框的编辑控件中的文本只能通过 `GetLBText` 或另一个类似的函数检索。 不能使用 `GetWindowText`。
 
-- ON_CBN_SETFOCUS 组合框将接收输入焦点。
+- ON_CBN_SETFOCUS 组合框接收输入焦点。
 
-如果在对话框中`CComboBox`创建对象（通过对话资源） `CComboBox` ，则当用户关闭对话框时，对象会自动销毁。
+如果在对话框中创建一个 `CComboBox` 对象（通过对话框资源），则当用户关闭该对话框时，`CComboBox` 对象将自动销毁。
 
-如果在另一个`CComboBox`窗口对象中嵌入对象，则不需要销毁它。 如果在堆栈上`CComboBox`创建对象，则该对象会自动销毁。 如果通过使用`CComboBox` **新**函数在堆上创建对象，则必须对对象调用**delete** ，以便在销毁 Windows 组合框时销毁该对象。
+如果在另一个窗口对象中嵌入 `CComboBox` 对象，则不需要销毁它。 如果在堆栈上创建 `CComboBox` 对象，则该对象会自动销毁。 如果使用**new**函数在堆上创建 `CComboBox` 对象，则在销毁 Windows 组合框时，必须对对象调用**delete**以销毁该对象。
 
-**注意**如果要处理 WM_KEYDOWN 和 WM_CHAR 消息，则必须为组合框的编辑和列表框控件创建子类，从`CEdit`和`CListBox`派生类，然后将这些消息的处理程序添加到派生类。 有关详细信息，请参阅[CWnd：： SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow)。
+**注意**如果要处理 WM_KEYDOWN 和 WM_CHAR 消息，则必须为组合框的编辑和列表框控件创建子类，从 `CEdit` 和 `CListBox`派生类，然后将这些消息的处理程序添加到派生类。 有关详细信息，请参阅[CWnd：： SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -277,14 +277,14 @@ int AddString(LPCTSTR lpszString);
 
 ### <a name="return-value"></a>返回值
 
-如果返回值大于或等于0，则它是列表框中的字符串的从零开始的索引。 如果发生错误，则返回值为 CB_ERR;如果没有足够的可用空间来存储新的字符串，则返回值为 CB_ERRSPACE。
+如果返回值大于或等于0，则它是列表框中的字符串的从零开始的索引。 如果发生错误，将 CB_ERR 返回值;如果没有足够的可用空间来存储新的字符串，则返回值为 CB_ERRSPACE。
 
 ### <a name="remarks"></a>备注
 
 如果列表框不是用[CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)样式创建的，则会将该字符串添加到列表的末尾。 否则，会将字符串插入列表，并对列表进行排序。
 
 > [!NOTE]
->  Windows `ComboBoxEx`控件不支持此函数。 有关此控件的详细信息，请参阅 Windows SDK 中的[ComboBoxEx 控件](/windows/win32/Controls/comboboxex-controls)。
+>  Windows `ComboBoxEx` 控件不支持此函数。 有关此控件的详细信息，请参阅 Windows SDK 中的[ComboBoxEx 控件](/windows/win32/Controls/comboboxex-controls)。
 
 若要将字符串插入到列表中的特定位置，请使用[InsertString](#insertstring)成员函数。
 
@@ -335,7 +335,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 
 ### <a name="return-value"></a>返回值
 
-指示在`COMPAREITEMSTRUCT`结构中描述的两个项的相对位置。 可以是下列值之一：
+指示 `COMPAREITEMSTRUCT` 结构中描述的两个项的相对位置。 可以是以下任一值：
 
 |值|含义|
 |-----------|-------------|
@@ -343,7 +343,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 |0|项1和项2排序相同。|
 |1|项1在项2之后排序。|
 
-有关的说明`COMPAREITEMSTRUCT`，请参阅[CWnd：： OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem) 。
+有关 `COMPAREITEMSTRUCT`说明，请参阅[CWnd：： OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem) 。
 
 ### <a name="remarks"></a>备注
 
@@ -355,7 +355,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 
 ##  <a name="copy"></a>CComboBox：： Copy
 
-以 CF_TEXT 格式将组合框编辑控件中的当前选定内容（如果有）复制到剪贴板上。
+将组合框编辑控件中的当前选定内容（如果有）复制 CF_TEXT 格式的剪贴板上。
 
 ```
 void Copy();
@@ -367,7 +367,7 @@ void Copy();
 
 ##  <a name="create"></a>CComboBox：： Create
 
-创建组合框并将其附加到`CComboBox`对象。
+创建组合框并将其附加到 `CComboBox` 对象上。
 
 ```
 virtual BOOL Create(
@@ -383,10 +383,10 @@ virtual BOOL Create(
 指定组合框的样式。 将[组合框样式](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)的任意组合应用于该框。
 
 *rect*<br/>
-指向组合框的位置和大小。 可以是[矩形结构](/windows/win32/api/windef/ns-windef-rect)或`CRect`对象。
+指向组合框的位置和大小。 可以是[矩形结构](/windows/win32/api/windef/ns-windef-rect)或 `CRect` 对象。
 
 *pParentWnd*<br/>
-指定组合框的父窗口（通常为`CDialog`）。 它不能为 NULL。
+指定组合框的父窗口（通常为 `CDialog`）。 值不得为 NULL。
 
 *nID*<br/>
 指定组合框的控件 ID。
@@ -397,27 +397,27 @@ virtual BOOL Create(
 
 ### <a name="remarks"></a>备注
 
-可以通过`CComboBox`两个步骤构造对象。 首先，调用构造函数，然后调用`Create`，它创建 Windows 组合框并将其附加`CComboBox`到对象。
+可以通过两个步骤构造一个 `CComboBox` 对象。 首先，调用构造函数，然后调用 `Create`，这将创建 Windows 组合框并将其附加到 `CComboBox` 对象。
 
-执行`Create`时，Windows 会将[WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate)、 [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate)、 [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)和[WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)消息发送到组合框。
+`Create` 执行时，Windows 会将[WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate)、 [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate)、 [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)和[WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)消息发送到组合框。
 
-默认情况下，将`CWnd`通过基类中的[OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate)、 [OnCreate](../../mfc/reference/cwnd-class.md#oncreate)、 [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize)和[OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)成员函数来处理这些消息。 若要扩展默认消息处理，从`CComboBox`派生类，将消息映射添加到新类，然后重写前面的消息处理程序成员函数。 例如`OnCreate`，重写，为新类执行所需的初始化。
+默认情况下，这些消息由 `CWnd` 基类中的[OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate)、 [OnCreate](../../mfc/reference/cwnd-class.md#oncreate)、 [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize)和[OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)成员函数处理。 若要扩展默认消息处理，请从 `CComboBox`中派生一个类，将消息映射添加到新类，然后重写前面的消息处理程序成员函数。 重写 `OnCreate`，例如，为新类执行所需的初始化。
 
-将以下[窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)应用于组合框控件。 :
+将以下[窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)应用于组合框控件。 ：
 
-- WS_CHILD
+- 始终 WS_CHILD
 
 - WS_VISIBLE 通常
 
-- WS_DISABLED 极少
+- 很少 WS_DISABLED
 
 - WS_VSCROLL 为组合框中的列表框添加垂直滚动
 
 - WS_HSCROLL 为组合框中的列表框添加水平滚动
 
-- WS_GROUP 到分组控件
+- WS_GROUP 分组控件
 
-- 按 tab 键顺序包含组合框的 WS_TABSTOP
+- WS_TABSTOP 以按 tab 键顺序包含组合框
 
 ### <a name="example"></a>示例
 
@@ -441,7 +441,7 @@ void Cut();
 
 ##  <a name="deleteitem"></a>CComboBox：:D eleteItem
 
-当用户从所有者描述`CComboBox`的对象中删除项或销毁组合框时由框架调用。
+当用户从所有者描述 `CComboBox` 对象或销毁组合框中删除项时，由框架调用。
 
 ```
 virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
@@ -502,30 +502,30 @@ int Dir(
 
 - 可以读取或写入 DDL_READWRITE 文件。
 
-- DDL_READONLY 文件可从读取，但不能写入。
+- 可以从读取 DDL_READONLY 文件，但不能将其写入。
 
 - DDL_HIDDEN 文件处于隐藏状态，并且不会显示在目录列表中。
 
 - DDL_SYSTEM 文件是系统文件。
 
-- DDL_DIRECTORY 由*lpszWildCard*指定的名称指定目录。
+- DDL_DIRECTORY *lpszWildCard*指定的名称指定目录。
 
 - DDL_ARCHIVE 文件已存档。
 
 - DDL_DRIVES 包括与*lpszWildCard*指定的名称相匹配的所有驱动器。
 
-- DDL_EXCLUSIVE Exclusive 标志。 如果设置了独占标志，则仅列出指定类型的文件。 否则，除了 "正常" 文件，还会列出指定类型的文件。
+- DDL_EXCLUSIVE 排他标志。 如果设置了独占标志，则仅列出指定类型的文件。 否则，除了 "正常" 文件，还会列出指定类型的文件。
 
 *lpszWildCard*<br/>
-指向文件规范字符串。 字符串可以包含通配符（例如 *.\*）。
+指向文件规范字符串。 字符串可以包含通配符（例如，*.\*）。
 
 ### <a name="return-value"></a>返回值
 
-如果返回值大于或等于0，则它是添加到列表中的最后一个文件名的从零开始的索引。 如果发生错误，则返回值为 CB_ERR;如果没有足够的可用空间来存储新的字符串，则返回值为 CB_ERRSPACE。
+如果返回值大于或等于0，则它是添加到列表中的最后一个文件名的从零开始的索引。 如果发生错误，将 CB_ERR 返回值;如果没有足够的可用空间来存储新的字符串，则返回值为 CB_ERRSPACE。
 
 ### <a name="remarks"></a>备注
 
-Windows `ComboBoxEx`控件不支持此函数。 有关此控件的详细信息，请参阅 Windows SDK 中的[ComboBoxEx 控件](/windows/win32/Controls/comboboxex-controls)。
+Windows `ComboBoxEx` 控件不支持此函数。 有关此控件的详细信息，请参阅 Windows SDK 中的[ComboBoxEx 控件](/windows/win32/Controls/comboboxex-controls)。
 
 ### <a name="example"></a>示例
 
@@ -546,9 +546,9 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 
 ### <a name="remarks"></a>备注
 
-`DRAWITEMSTRUCT`结构的成员定义要执行的绘图操作。 `itemAction` 有关此结构的说明，请参阅[CWnd：： OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) 。
+`DRAWITEMSTRUCT` 结构的 `itemAction` 成员定义要执行的绘图操作。 有关此结构的说明，请参阅[CWnd：： OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) 。
 
-默认情况下，此成员函数不执行任何操作。 重写此成员函数以实现所有者描述`CComboBox`对象的绘制。 此成员函数终止之前，应用程序应还原为*lpDrawItemStruct*中提供的显示上下文选择的所有图形设备接口（GDI）对象。
+默认情况下，此成员函数不执行任何操作。 重写此成员函数以实现 `CComboBox` 对象的所有者描述的绘图。 此成员函数终止之前，应用程序应还原为*lpDrawItemStruct*中提供的显示上下文选择的所有图形设备接口（GDI）对象。
 
 ### <a name="example"></a>示例
 
@@ -574,11 +574,11 @@ int FindString(
 
 ### <a name="return-value"></a>返回值
 
-如果返回值大于或等于0，则它是匹配项的从零开始的索引。 如果搜索未成功，则为 CB_ERR。
+如果返回值大于或等于0，则它是匹配项的从零开始的索引。 如果搜索未成功，则 CB_ERR。
 
 ### <a name="remarks"></a>备注
 
-Windows `ComboBoxEx`控件不支持此函数。 有关此控件的详细信息，请参阅 Windows SDK 中的[ComboBoxEx 控件](/windows/win32/Controls/comboboxex-controls)。
+Windows `ComboBoxEx` 控件不支持此函数。 有关此控件的详细信息，请参阅 Windows SDK 中的[ComboBoxEx 控件](/windows/win32/Controls/comboboxex-controls)。
 
 ### <a name="example"></a>示例
 
@@ -586,7 +586,7 @@ Windows `ComboBoxEx`控件不支持此函数。 有关此控件的详细信息�
 
 ##  <a name="findstringexact"></a>CComboBox：： FindStringExact
 
-调用成员函数，查找与 lpszFind 中指定的字符串匹配的第一个列表框字符串（在组合框中）。 `FindStringExact`
+调用 `FindStringExact` 成员函数，查找与*lpszFind*中指定的字符串匹配的第一个列表框字符串（在组合框中）。
 
 ```
 int FindStringExact(
@@ -604,11 +604,11 @@ int FindStringExact(
 
 ### <a name="return-value"></a>返回值
 
-匹配项的从零开始的索引; 如果搜索未成功，则为 CB_ERR。
+匹配项的从零开始的索引; 如果搜索未成功，则 CB_ERR。
 
 ### <a name="remarks"></a>备注
 
-如果使用所有者描述样式创建组合框，但没有[CBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)样式， `FindStringExact`则会尝试将双字值与*lpszFind*的值匹配。
+如果使用所有者描述样式创建组合框，但没有[CBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)样式，则 `FindStringExact` 会尝试将双字值与*lpszFind*的值匹配。
 
 ### <a name="example"></a>示例
 
@@ -616,7 +616,7 @@ int FindStringExact(
 
 ##  <a name="getcomboboxinfo"></a>CComboBox：： GetComboBoxInfo
 
-检索`CComboBox`对象的信息。
+检索 `CComboBox` 对象的信息。
 
 ```
 BOOL GetComboBoxInfo(PCOMBOBOXINFO pcbi) const;
@@ -645,7 +645,7 @@ int GetCount() const;
 
 ### <a name="return-value"></a>返回值
 
-项的数目。 返回的计数比最后一项的索引值大1（索引从零开始）。 如果发生错误，则会 CB_ERR。
+项数。 返回的计数比最后一项的索引值大1（索引从零开始）。 如果发生错误，则 CB_ERR。
 
 ### <a name="example"></a>示例
 
@@ -665,16 +665,16 @@ BOOL GetCueBanner(
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |*lpszText*|弄指向接收提示横幅文本的缓冲区的指针。|
 |*cchText*|中*LpszText*参数指向的缓冲区的大小。|
 
 ### <a name="return-value"></a>返回值
 
-在第一个重载中，包含提示横幅文本的[CString](../../atl-mfc-shared/using-cstring.md)对象（如果存在）;否则为长度为零的对象。`CString`
+在第一个重载中，包含提示横幅文本的[CString](../../atl-mfc-shared/using-cstring.md)对象（如果存在）;否则，为长度为零的 `CString` 对象。
 
-或
+\- 或 -
 
 在第二个重载中，如果此方法成功，则为 TRUE;否则为 FALSE。
 
@@ -682,7 +682,7 @@ BOOL GetCueBanner(
 
 提示文本是显示在组合框控件的输入区域中的提示。 显示提示文本直到用户提供输入。
 
-此方法发送[CB_GETCUEBANNER](/windows/win32/Controls/cb-getcuebanner)消息，如 Windows SDK 中所述。
+此方法发送 Windows SDK 中描述的[CB_GETCUEBANNER](/windows/win32/Controls/cb-getcuebanner)消息。
 
 ##  <a name="getcursel"></a>CComboBox：： GetCurSel
 
@@ -698,7 +698,7 @@ int GetCurSel() const;
 
 ### <a name="remarks"></a>备注
 
-`GetCurSel`返回列表中的索引。
+`GetCurSel` 返回列表中的索引。
 
 ### <a name="example"></a>示例
 
@@ -706,7 +706,7 @@ int GetCurSel() const;
 
 ##  <a name="getdroppedcontrolrect"></a>CComboBox：： GetDroppedControlRect
 
-`GetDroppedControlRect`调用成员函数以检索下拉组合框的可见（下拉列表）列表框的屏幕坐标。
+调用 `GetDroppedControlRect` 成员函数以检索下拉组合框的可见（下拉列表）列表框的屏幕坐标。
 
 ```
 void GetDroppedControlRect(LPRECT lprect) const;
@@ -723,7 +723,7 @@ void GetDroppedControlRect(LPRECT lprect) const;
 
 ##  <a name="getdroppedstate"></a>CComboBox：： GetDroppedState
 
-`GetDroppedState`调用成员函数以确定下拉组合框的列表框是否可见（已删除）。
+调用 `GetDroppedState` 成员函数以确定下拉组合框的列表框是否可见（已删除）。
 
 ```
 BOOL GetDroppedState() const;
@@ -769,7 +769,7 @@ DWORD GetEditSel() const;
 
 ### <a name="return-value"></a>返回值
 
-一个32位值，该值包含低序位字中的起始位置和高位字中选定内容末尾后的第一个 nonselected 字符的位置。 如果在没有编辑控件的组合框上使用此函数，则返回 CB_ERR。
+一个32位值，该值包含低序位字中的起始位置和高位字中选定内容末尾后的第一个 nonselected 字符的位置。 如果在没有编辑控件的组合框上使用此函数，将返回 CB_ERR。
 
 ### <a name="example"></a>示例
 
@@ -777,7 +777,7 @@ DWORD GetEditSel() const;
 
 ##  <a name="getextendedui"></a>CComboBox：： GetExtendedUI
 
-`GetExtendedUI`调用成员函数以确定组合框是否具有默认用户界面或扩展的用户界面。
+调用 `GetExtendedUI` 成员函数以确定组合框是否具有默认用户界面或扩展的用户界面。
 
 ```
 BOOL GetExtendedUI() const;
@@ -836,11 +836,11 @@ DWORD_PTR GetItemData(int nIndex) const;
 
 ### <a name="return-value"></a>返回值
 
-与项关联的32位值，如果发生错误，则为 CB_ERR。
+与项关联的32位值，如果发生错误，则 CB_ERR。
 
 ### <a name="remarks"></a>备注
 
-可以使用[SetItemData](#setitemdata)成员函数调用的*dwItemData*参数设置32位值。 如果要检索的32位值为指针（**void** <strong>\*</strong>），请使用成员函数。`GetItemDataPtr`
+可以使用[SetItemData](#setitemdata)成员函数调用的*dwItemData*参数设置32位值。 如果要检索的32位值为指针（**void** <strong>\*</strong>），则使用 `GetItemDataPtr` 成员函数。
 
 ### <a name="example"></a>示例
 
@@ -869,7 +869,7 @@ void* GetItemDataPtr(int nIndex) const;
 
 ##  <a name="getitemheight"></a>CComboBox：： GetItemHeight
 
-`GetItemHeight`调用成员函数以检索组合框中列表项的高度。
+调用 `GetItemHeight` 成员函数以检索组合框中列表项的高度。
 
 ```
 int GetItemHeight(int nIndex) const;
@@ -882,7 +882,7 @@ int GetItemHeight(int nIndex) const;
 
 ### <a name="return-value"></a>返回值
 
-组合框中指定项的高度（以像素为单位）。 如果发生错误，则返回值为 CB_ERR。
+组合框中指定项的高度（以像素为单位）。 返回值是 CB_ERR 如果发生错误。
 
 ### <a name="example"></a>示例
 
@@ -919,7 +919,7 @@ void GetLBText(
 
 ### <a name="remarks"></a>备注
 
-此成员函数`CString`的第二种形式将对象替换为该项的文本。
+此成员函数的第二种形式用该项的文本填充 `CString` 对象。
 
 ### <a name="example"></a>示例
 
@@ -980,7 +980,7 @@ int GetMinVisible() const;
 
 ### <a name="remarks"></a>备注
 
-此方法发送[CB_GETMINVISIBLE](/windows/win32/Controls/cb-setminvisible)消息，如 Windows SDK 中所述。
+此方法发送 Windows SDK 中描述的[CB_GETMINVISIBLE](/windows/win32/Controls/cb-setminvisible)消息。
 
 ##  <a name="gettopindex"></a>CComboBox：： GetTopIndex
 
@@ -992,7 +992,7 @@ int GetTopIndex() const;
 
 ### <a name="return-value"></a>返回值
 
-如果成功，组合框的列表框部分中第一个可见项的从零开始的索引，则为 CB_ERR; 否则为。
+如果成功，组合框的列表框部分中第一个可见项的从零开始的索引，CB_ERR 否则为。
 
 ### <a name="remarks"></a>备注
 
@@ -1022,13 +1022,13 @@ int InitStorage(
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则在需要重新分配内存之前，组合框的列表框部分可以存储的最大项数，否则为 CB_ERRSPACE，这意味着没有足够的内存可用。
+如果成功，则在需要重新分配内存之前，组合框的列表框部分可以存储的最大项数，否则 CB_ERRSPACE，这意味着没有足够的内存可用。
 
 ### <a name="remarks"></a>备注
 
-在将大量项添加到的列表框部分`CComboBox`之前，请调用此函数。
+在将大量项添加到 `CComboBox`的列表框部分之前，请调用此函数。
 
-仅限 Windows 95/98：*WParam*参数限制为16位值。 这意味着列表框包含的项不能超过32767个。 尽管项目数受到限制，列表框中的项的总大小仅受可用内存的限制。
+仅限 Windows 95/98： *wParam*参数限制为16位值。 这意味着列表框包含的项不能超过32767个。 尽管项目数受到限制，列表框中的项的总大小仅受可用内存的限制。
 
 此函数有助于加快具有大量项（超过100个）的列表框的初始化速度。 它预分配指定的内存量，以便后续的[AddString](#addstring)、 [InsertString](#insertstring)和[Dir](#dir)函数可以使用最短的时间。 您可以对参数使用估算值。 如果最好，则分配一些额外的内存;如果你低估，则会将常规分配用于超出预分配数量的项。
 
@@ -1056,14 +1056,14 @@ int InsertString(
 
 ### <a name="return-value"></a>返回值
 
-插入该字符串的位置的索引（索引从零开始）。 如果发生错误，则返回值为 CB_ERR。 如果没有足够的可用空间来存储新的字符串，则返回值为 CB_ERRSPACE。
+插入该字符串的位置的索引（索引从零开始）。 返回值是 CB_ERR 如果发生错误。 如果没有足够空间可用于存储新的字符串，则返回值为 CB_ERRSPACE。
 
 ### <a name="remarks"></a>备注
 
 与 [AddString](#addstring) 成员函数不同， `InsertString` 成员函数不会导致对一个列表的 [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) 样式进行排序。
 
 > [!NOTE]
->  Windows `ComboBoxEx`控件不支持此函数。 有关此控件的详细信息，请参阅 Windows SDK 中的[ComboBoxEx 控件](/windows/win32/Controls/comboboxex-controls)。
+>  Windows `ComboBoxEx` 控件不支持此函数。 有关此控件的详细信息，请参阅 Windows SDK 中的[ComboBoxEx 控件](/windows/win32/Controls/comboboxex-controls)。
 
 ### <a name="example"></a>示例
 
@@ -1084,13 +1084,13 @@ BOOL LimitText(int nMaxChars);
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则为非零值。 如果为具有样式[CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)的组合框或没有编辑控件的组合框调用，则返回值为 CB_ERR。
+如果成功，则为非零值。 如果为样式[CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)的组合框或没有编辑控件的组合框调用，则返回值为 CB_ERR。
 
 ### <a name="remarks"></a>备注
 
-如果组合框没有样式[CBS_AUTOHSCROLL](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)，将文本限制设置为大于编辑控件的大小将不起作用。
+如果组合框没有样式[CBS_AUTOHSCROLL](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)，则将文本限制设置为大于编辑控件的大小将不起作用。
 
-`LimitText`仅限制用户可输入的文本。 它不会影响在发送消息时编辑控件中已有的任何文本，也不会影响在选择列表框中的字符串时复制到编辑控件中的文本的长度。
+`LimitText` 仅限制用户可输入的文本。 它不会影响在发送消息时编辑控件中已有的任何文本，也不会影响在选择列表框中的字符串时复制到编辑控件中的文本的长度。
 
 ### <a name="example"></a>示例
 
@@ -1111,11 +1111,11 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 
 ### <a name="remarks"></a>备注
 
-默认情况下，此成员函数不执行任何操作。 重写此成员函数并填充`MEASUREITEMSTRUCT`结构，以便在组合框中通知窗口列表框的维度。 如果组合框是用[CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)样式创建的，则框架将为列表框中的每个项调用此成员函数。 否则，此成员只调用一次。
+默认情况下，此成员函数不执行任何操作。 重写此成员函数并填充 `MEASUREITEMSTRUCT` 结构，以便在组合框中通知窗口列表框的尺寸。 如果组合框是用[CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)样式创建的，则框架将为列表框中的每个项调用此成员函数。 否则，此成员只调用一次。
 
-使用[SubclassDlgItem](../../mfc/reference/cwnd-class.md#subclassdlgitem)成员函数`CWnd`创建的所有者描述组合框中的 CBS_OWNERDRAWFIXED 样式涉及到进一步的编程注意事项。 请参阅[技术说明 14](../../mfc/tn014-custom-controls.md)中的讨论。
+使用 `CWnd` 的[SubclassDlgItem](../../mfc/reference/cwnd-class.md#subclassdlgitem)成员函数创建的所有者描述组合框中的 CBS_OWNERDRAWFIXED 样式涉及进一步的编程注意事项。 请参阅[技术说明 14](../../mfc/tn014-custom-controls.md)中的讨论。
 
-有关`MEASUREITEMSTRUCT`结构的说明，请参阅[CWnd：： OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) 。
+有关 `MEASUREITEMSTRUCT` 结构的说明，请参阅[CWnd：： OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) 。
 
 ### <a name="example"></a>示例
 
@@ -1175,7 +1175,7 @@ int SelectString(
 
 仅当字符串的初始字符（从起始点开始）与前缀字符串中的字符匹配时，才会选择字符串。
 
-请注意， `SelectString`和`FindString`成员函数都查找字符串，但`SelectString`成员函数也会选择字符串。
+请注意，`SelectString` 和 `FindString` 成员函数都查找字符串，但 `SelectString` 成员函数也会选择字符串。
 
 ### <a name="example"></a>示例
 
@@ -1191,7 +1191,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |*lpszText*|中指向以 null 结尾的包含提示文本的缓冲区的指针。|
 
@@ -1203,11 +1203,11 @@ BOOL SetCueBanner(LPCTSTR lpszText);
 
 提示文本是显示在组合框控件的输入区域中的提示。 显示提示文本直到用户提供输入。
 
-此方法发送[CB_SETCUEBANNER](/windows/win32/Controls/cb-setcuebanner)消息，如 Windows SDK 中所述。
+此方法发送 Windows SDK 中描述的[CB_SETCUEBANNER](/windows/win32/Controls/cb-setcuebanner)消息。
 
 ### <a name="example"></a>示例
 
-下面的代码示例定义了变量*m_combobox*，用于以编程方式访问组合框控件。 此变量将在下一个示例中使用。
+下面的代码示例定义了用于以编程方式访问组合框控件的变量*m_combobox*。 此变量将在下一个示例中使用。
 
 [!code-cpp[NVC_MFC_CComboBox_s1#1](../../mfc/reference/codesnippet/cpp/ccombobox-class_33.h)]
 
@@ -1227,7 +1227,7 @@ int SetCurSel(int nSelect);
 
 ### <a name="parameters"></a>参数
 
-*nSelect*<br/>
+*选择*<br/>
 指定要选择的字符串的从零开始的索引。 如果为-1，则删除列表框中的任何当前选择，并清除编辑控件。
 
 ### <a name="return-value"></a>返回值
@@ -1257,7 +1257,7 @@ int SetDroppedWidth(UINT nWidth);
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则为列表框的新宽度，否则为 CB_ERR。
+如果成功，则为列表框的新宽度，否则 CB_ERR。
 
 ### <a name="remarks"></a>备注
 
@@ -1289,14 +1289,14 @@ BOOL SetEditSel(
 
 ### <a name="return-value"></a>返回值
 
-如果成员函数成功，则为非零值;否则为0。 如果`CComboBox`具有[CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)样式或没有列表框，则为 CB_ERR。
+如果成员函数成功，则为非零值;否则为0。 如果 `CComboBox` 具有[CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)样式或没有列表框，则 CB_ERR。
 
 ### <a name="remarks"></a>备注
 
 位置是从零开始的。 若要选择编辑控件的第一个字符，请指定起始位置0。 结束位置就是最后一个字符之后要选择的字符。 例如，若要选择编辑控件的前四个字符，请使用0的起始位置和结束位置4。
 
 > [!NOTE]
->  Windows `ComboBoxEx`控件不支持此函数。 有关此控件的详细信息，请参阅 Windows SDK 中的[ComboBoxEx 控件](/windows/win32/Controls/comboboxex-controls)。
+>  Windows `ComboBoxEx` 控件不支持此函数。 有关此控件的详细信息，请参阅 Windows SDK 中的[ComboBoxEx 控件](/windows/win32/Controls/comboboxex-controls)。
 
 ### <a name="example"></a>示例
 
@@ -1304,7 +1304,7 @@ BOOL SetEditSel(
 
 ##  <a name="setextendedui"></a>CComboBox：： SetExtendedUI
 
-调用`SetExtendedUI`成员函数以便为具有 [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) 或[CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)样式的组合框选择默认用户界面或扩展的用户界面。
+调用 `SetExtendedUI` 成员函数为具有[CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)或[CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)样式的组合框选择默认用户界面或扩展用户界面。
 
 ```
 int SetExtendedUI(BOOL bExtended = TRUE);
@@ -1317,7 +1317,7 @@ int SetExtendedUI(BOOL bExtended = TRUE);
 
 ### <a name="return-value"></a>返回值
 
-如果操作成功，则为 CB_OKAY; 如果发生错误，则为 CB_ERR。
+CB_OKAY 如果操作成功，则为; 如果发生错误，则为 CB_ERR。
 
 ### <a name="remarks"></a>备注
 
@@ -1348,7 +1348,7 @@ void SetHorizontalExtent(UINT nExtent);
 
 ### <a name="remarks"></a>备注
 
-如果列表框的宽度小于此值，则水平滚动条将在列表框中水平滚动项。 如果列表框的宽度等于或大于此值，则水平滚动条是隐藏的，或者，如果组合框具有[CBS_DISABLENOSCROLL](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)样式，则为已禁用。
+如果列表框的宽度小于此值，则水平滚动条将在列表框中水平滚动项。 如果列表框的宽度等于或大于此值，则水平滚动条是隐藏的，或者，如果组合框具有[CBS_DISABLENOSCROLL](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)样式，则为 "已禁用"。
 
 ### <a name="example"></a>示例
 
@@ -1374,11 +1374,11 @@ int SetItemData(
 
 ### <a name="return-value"></a>返回值
 
-如果发生错误，则为 CB_ERR。
+如果发生错误，则 CB_ERR。
 
 ### <a name="remarks"></a>备注
 
-如果32位项是指针，请使用成员函数。`SetItemDataPtr`
+如果32位项是指针，请使用 `SetItemDataPtr` 成员函数。
 
 ### <a name="example"></a>示例
 
@@ -1404,7 +1404,7 @@ int SetItemDataPtr(
 
 ### <a name="return-value"></a>返回值
 
-如果发生错误，则为 CB_ERR。
+如果发生错误，则 CB_ERR。
 
 ### <a name="remarks"></a>备注
 
@@ -1416,7 +1416,7 @@ int SetItemDataPtr(
 
 ##  <a name="setitemheight"></a>CComboBox：： SetItemHeight
 
-`SetItemHeight`调用成员函数以设置组合框中的列表项的高度或组合框的编辑控件（或静态文本）部分的高度。
+调用 `SetItemHeight` 成员函数可设置组合框中的列表项的高度或组合框的编辑控件（或静态文本）部分的高度。
 
 ```
 int SetItemHeight(
@@ -1438,7 +1438,7 @@ int SetItemHeight(
 
 ### <a name="return-value"></a>返回值
 
-如果索引或高度无效，则为 CB_ERR;否则为0。
+如果索引或高度无效，则 CB_ERR;否则为0。
 
 ### <a name="remarks"></a>备注
 
@@ -1467,7 +1467,7 @@ LCID SetLocale(LCID nNewLocale);
 
 ### <a name="remarks"></a>备注
 
-如果`SetLocale`未调用，则从系统获取默认区域设置。 可以使用 "控制面板" 的 "区域" （或 "国际"）应用程序修改此系统默认区域设置。
+如果未调用 `SetLocale`，则将从系统中获取默认区域设置。 可以使用 "控制面板" 的 "区域" （或 "国际"）应用程序修改此系统默认区域设置。
 
 ### <a name="example"></a>示例
 
@@ -1483,7 +1483,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |*iMinVisible*|中指定可见项的最小数目。|
 
@@ -1493,11 +1493,11 @@ BOOL SetMinVisibleItems(int iMinVisible);
 
 ### <a name="remarks"></a>备注
 
-此方法发送[CB_SETMINVISIBLE](/windows/win32/Controls/cb-setminvisible)消息，如 Windows SDK 中所述。
+此方法发送 Windows SDK 中描述的[CB_SETMINVISIBLE](/windows/win32/Controls/cb-setminvisible)消息。
 
 ### <a name="example"></a>示例
 
-下面的代码示例定义了变量*m_combobox*，用于以编程方式访问组合框控件。 此变量将在下一个示例中使用。
+下面的代码示例定义了用于以编程方式访问组合框控件的变量*m_combobox*。 此变量将在下一个示例中使用。
 
 [!code-cpp[NVC_MFC_CComboBox_s1#1](../../mfc/reference/codesnippet/cpp/ccombobox-class_33.h)]
 
@@ -1555,14 +1555,14 @@ void ShowDropDown(BOOL bShowIt = TRUE);
 
   请参阅[CComboBox：： GetDroppedState](#getdroppedstate)的示例。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [MFC 示例 CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
 [CButton 类](../../mfc/reference/cbutton-class.md)<br/>
-[CEdit 类](../../mfc/reference/cedit-class.md)<br/>
+[CEdit Class](../../mfc/reference/cedit-class.md)<br/>
 [CListBox 类](../../mfc/reference/clistbox-class.md)<br/>
 [CScrollBar 类](../../mfc/reference/cscrollbar-class.md)<br/>
 [CStatic 类](../../mfc/reference/cstatic-class.md)<br/>
