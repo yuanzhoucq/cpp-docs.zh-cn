@@ -22,11 +22,11 @@ helpviewer_keywords:
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
 ms.openlocfilehash: 551bca93a30bee52dc4c838864df28cb747d91df
-ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898842"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856466"
 ---
 # <a name="locale-class"></a>locale 类
 
@@ -166,7 +166,7 @@ cout.imbue(loc);
 
 ### <a name="operators"></a>运算符
 
-|运算符|描述|
+|Operator|描述|
 |-|-|
 |[operator=](#op_eq)|指定区域设置。|
 |[operator!=](#op_neq)|测试两个区域设置是否不相等。|
@@ -180,11 +180,11 @@ cout.imbue(loc);
 |[facet](#facet_class)|一种类，此类用作所有区域设置 facet 的基类。|
 |[`id`](#id_class)|成员类提供用作索引以查找区域设置中的 facet 的唯一 facet 标识。|
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>要求
 
 **标头：** \<locale>
 
-**命名空间:** std
+**命名空间：** std
 
 ## <a name="category"></a>locale::category
 
@@ -240,7 +240,7 @@ C 区域设置的引用。
 
 ### <a name="remarks"></a>备注
 
-经典 C 区域设置是标准 C 库中的美国英语 ASCII 区域设置。 这是隐式的程序中所使用的区域设置。
+经典 C 区域设置为美国。标准 C 库中的英文 ASCII 区域设置。 这是隐式的程序中所使用的区域设置。
 
 ### <a name="example"></a>示例
 
@@ -757,7 +757,7 @@ locales loc1 (German_Germany.1252)
 and loc3 (English_United States.1252) are not equal.
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<locale>](../standard-library/locale.md)\
 [代码页](../c-runtime-library/code-pages.md)\

@@ -30,11 +30,11 @@ helpviewer_keywords:
 - threadprivate OpenMP directive
 ms.assetid: 0562c263-344c-466d-843e-de830d918940
 ms.openlocfilehash: 4db341cf58884263e414e24aacf888c8c88e57cc
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142018"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78882887"
 ---
 # <a name="openmp-directives"></a>OpenMP 指令
 
@@ -44,7 +44,7 @@ Visual C++支持以下 OpenMP 指令。
 
 对于并行工作共享：
 
-|Directive|说明|
+|指令|描述|
 |---------|-----------|
 |[parallel](#parallel)|定义一个并行区域，这是将由多个线程并行执行的代码。|
 |[for](#for-openmp)|导致在并行区域内的 `for` 循环中完成的工作在线程间进行分割。|
@@ -53,7 +53,7 @@ Visual C++支持以下 OpenMP 指令。
 
 对于 master 和同步：
 
-|Directive|说明|
+|指令|描述|
 |---------|-----------|
 |[master](#master)|指定仅主线程应执行程序的某个部分。|
 |[critical](#critical)|指定代码每次只能在一个线程上执行。|
@@ -64,7 +64,7 @@ Visual C++支持以下 OpenMP 指令。
 
 对于数据环境：
 
-|Directive|说明|
+|指令|描述|
 |---------|-----------|
 |[threadprivate](#threadprivate)|指定变量对于线程是私有的。|
 
@@ -79,7 +79,7 @@ Visual C++支持以下 OpenMP 指令。
 
 ### <a name="parameters"></a>参数
 
-expression<br/>
+*expression*<br/>
 具有*lvalue*的语句，其内存位置要针对多个写入进行保护。
 
 ### <a name="remarks"></a>备注
@@ -211,7 +211,7 @@ int main()
 max = 29358
 ```
 
-## <a name="flush-openmp"></a>平
+## <a name="flush-openmp"></a>flush
 
 指定所有线程都具有与所有共享对象相同的内存视图。
 
@@ -541,7 +541,7 @@ test2() iteration 4
 - [private](openmp-clauses.md#private-openmp)
 - [firstprivate](openmp-clauses.md#firstprivate)
 - [default](openmp-clauses.md#default-openmp)
-- [共享](openmp-clauses.md#shared-openmp)
+- [shared](openmp-clauses.md#shared-openmp)
 - [copyin](openmp-clauses.md#copyin)
 - [reduction](openmp-clauses.md#reduction)
 - [num_threads](openmp-clauses.md#num-threads)
@@ -712,7 +712,7 @@ write output
 
 `threadprivate` 指令不支持子句。
 
-`threadprivate` 指令基于使用[__declspec](../../../cpp/declspec.md)关键字的[线程](../../../cpp/thread.md)特性;`__declspec(thread)` 适用于 `threadprivate`的限制。 例如，在进程中启动的任何线程（而不只是作为由并行区域生成的线程组的一部分的线程）中都存在一个 `threadprivate` 变量。 请注意此实现的详细信息;你可能会注意到，`threadprivate` 用户定义类型的构造函数被多次调用。
+`threadprivate` 指令基于使用 [__declspec](../../../cpp/declspec.md)关键字的[线程](../../../cpp/thread.md)属性; 适用于`threadprivate`的限制`__declspec(thread)`。 例如，在进程中启动的任何线程（而不只是作为由并行区域生成的线程组的一部分的线程）中都存在一个 `threadprivate` 变量。 请注意此实现的详细信息;你可能会注意到，`threadprivate` 用户定义类型的构造函数被多次调用。
 
 您可以使用在进程启动时静态加载的 DLL 中的 `threadprivate`，但是不能在将通过[LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw)加载的任何 dll （如使用[/DELAYLOAD （延迟负载导入）](../../../build/reference/delayload-delay-load-import.md)加载的 dll）中使用 `threadprivate`，后者也使用 `LoadLibrary`。
 

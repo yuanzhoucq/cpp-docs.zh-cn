@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::gslice [C++], stride
 ms.assetid: f47cffd0-ea59-4b13-848b-7a5ce1d7e2a3
 ms.openlocfilehash: 9290fabc86ffbdb051b7c61fe1600cd2f7f17dca
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448900"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866241"
 ---
 # <a name="gslice-class"></a>gslice 类
 
@@ -29,9 +29,9 @@ ms.locfileid: "68448900"
 
 - 一个起始索引。
 
-- 类`valarray<size_t>`的长度向量。
+- 类 `valarray<size_t>`的长度向量。
 
-- 类`valarray<size_t>`的跨距向量。
+- 类 `valarray<size_t>`的跨距向量。
 
 两个矢量必须具有相同长度。
 
@@ -55,7 +55,7 @@ ms.locfileid: "68448900"
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<valarray>
+**标头：** \<valarray >
 
 **命名空间：** std
 
@@ -85,11 +85,11 @@ gslice(
 
 ### <a name="return-value"></a>返回值
 
-默认构造函数对起始索引存储零，对于长度和跨距向量存储长度为零的向量。 第二个构造函数将 *_StartIndex*存储为起始索引, *_LenArray*为长度数组, 并为跨距数组存储 *_IncArray* 。
+默认构造函数对起始索引存储零，对于长度和跨距向量存储长度为零的向量。 第二个构造函数存储 *_StartIndex*用于开始索引、长度数组 *_LenArray* ，以及 stride 数组的 *_IncArray* 。
 
 ### <a name="remarks"></a>备注
 
-**gslice** 定义一个由多个 valarray 的切分组成的 valarray 子集，其中每个都以同一指定元素开始。 `gslice` 和 [slice::slice](../standard-library/slice-class.md#slice) 之间的唯一差别在于使用数组定义多个切分的能力。 第一个切片具有一个索引为 *_StartIndex*的第一个元素、 *_LenArray*的第一个元素指定的多个元素以及 *_IncArray*的第一个元素所指定的步幅。 下一个正交切分集具有由第一个切分指定的第一个元素。 *_LenArray*的第二个元素指定元素的数量。 跨距由 *_IncArray*的第二个元素提供。 第三个维度的切分会将二维数组的元素视为起始元素，以此类推
+**gslice** 定义一个由多个 valarray 的切分组成的 valarray 子集，其中每个都以同一指定元素开始。 `gslice` 和 [slice::slice](../standard-library/slice-class.md#slice) 之间的唯一差别在于使用数组定义多个切分的能力。 第一个切片具有一个索引为 *_StartIndex*的第一个元素、 *_LenArray*的第一个元素指定的元素数，以及 *_IncArray*的第一个元素所指定的步幅。 下一个正交切分集具有由第一个切分指定的第一个元素。 *_LenArray*的第二个元素指定元素的数量。 跨距由 *_IncArray*的第二个元素提供。 第三个维度的切分会将二维数组的元素视为起始元素，以此类推
 
 ### <a name="example"></a>示例
 
