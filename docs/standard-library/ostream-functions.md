@@ -13,15 +13,15 @@ helpviewer_keywords:
 - std::ends [C++]
 - std::flush [C++]
 ms.openlocfilehash: 8d93e46b0323058d93c6d0bd8c1ee566998aef61
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447198"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874786"
 ---
 # <a name="ltostreamgt-functions"></a>&lt;ostream&gt; 函数
 
-这些是在 ostream &lt;&gt;中定义的全局模板函数。 有关成员函数, 请参阅[Basic_ostream 类](basic-ostream-class.md)文档。
+这些是 &lt;ostream&gt;中定义的全局模板函数。 有关成员函数的详细说明，请参阅[Basic_ostream 类](basic-ostream-class.md)文档。
 
 ||||
 |-|-|-|
@@ -55,7 +55,7 @@ basic_ostream<Elem, Tr>& endl(
 
 ### <a name="remarks"></a>备注
 
-操控器调用*Ostr*。[put](../standard-library/basic-ostream-class.md#put)(*Ostr*。[加宽](../standard-library/basic-ios-class.md#widen)(' \n ')), 然后调用*Ostr*。[flush](../standard-library/basic-ostream-class.md#flush)。 它将返回*Ostr*。
+操控器调用*Ostr*。[put](../standard-library/basic-ostream-class.md#put)（*Ostr*。[加宽](../standard-library/basic-ios-class.md#widen)（' \n '）），然后调用*Ostr*。[flush](../standard-library/basic-ostream-class.md#flush)。 它将返回*Ostr*。
 
 ### <a name="example"></a>示例
 
@@ -102,7 +102,7 @@ basic_ostream<Elem, Tr>& ends(
 
 ### <a name="remarks"></a>备注
 
-操控器调用*Ostr*。[put](../standard-library/basic-ostream-class.md#put)(*Elem*(' \ 0 '))。 它将返回*Ostr*。
+操控器调用*Ostr*。[put](../standard-library/basic-ostream-class.md#put)（*Elem*（' \ 0 '））。 它将返回*Ostr*。
 
 ### <a name="example"></a>示例
 
@@ -171,7 +171,7 @@ int main( )
 testing
 ```
 
-## <a name="swap"></a>swap
+## <a name="swap"></a>交换
 
 交换两个 `basic_ostream` 对象的值。
 
@@ -190,16 +190,16 @@ void swap(
 *Tr*\
 字符特征。
 
-*左中*\
+*左*\
 对 `basic_ostream` 对象的左值引用。
 
-*然后*\
+*right*\
 对 `basic_ostream` 对象的左值引用。
 
 ### <a name="remarks"></a>备注
 
 模板函数 `swap` 执行 `left.swap(right)`。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [\<ostream>](../standard-library/ostream.md)

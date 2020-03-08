@@ -31,11 +31,11 @@ helpviewer_keywords:
 - std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
 ms.openlocfilehash: 07285f5c014db1ddf419c372913cac0364538a55
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689210"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856477"
 ---
 # <a name="numpunct-class"></a>numpunct 类
 
@@ -50,7 +50,7 @@ class numpunct : public locale::facet;
 
 ### <a name="parameters"></a>参数
 
-*CharType* \
+*CharType*\
 在程序中用于对区域设置中的字符进行编码的类型。
 
 ## <a name="remarks"></a>备注
@@ -59,20 +59,20 @@ class numpunct : public locale::facet;
 
 ### <a name="constructors"></a>构造函数
 
-|构造函数|描述|
+|构造函数|说明|
 |-|-|
 |[numpunct](#numpunct)|`numpunct` 类型的对象的构造函数。|
 
 ### <a name="typedefs"></a>Typedef
 
-|类型名称|描述|
+|类型名称|说明|
 |-|-|
 |[char_type](#char_type)|一种类型，此类型用于描述区域设置使用的字符。|
 |[string_type](#string_type)|一种类型，此类型描述包含 `CharType` 类型字符的字符串。|
 
 ### <a name="member-functions"></a>成员函数
 
-|成员函数|描述|
+|成员函数|说明|
 |-|-|
 |[decimal_point](#decimal_point)|返回要用作小数点的区域设置特定元素。|
 |[do_decimal_point](#do_decimal_point)|一种受保护的虚拟成员函数，通过调用此函数可返回要用作小数点的区域设置特定元素。|
@@ -87,9 +87,9 @@ class numpunct : public locale::facet;
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<locale>
+**标头：** \<区域设置 >
 
-**命名空间:** std
+**命名空间：** std
 
 ## <a name="char_type"></a>  numpunct::char_type
 
@@ -200,7 +200,7 @@ virtual string do_grouping() const;
 
 ### <a name="example"></a>示例
 
-请参阅[分组](#grouping)的示例，其中虚拟成员函数由 `grouping` 调用。
+请参阅[分组](#grouping)的示例，其中虚拟成员函数由 `grouping`调用。
 
 ## <a name="do_thousands_sep"></a>  numpunct::do_thousands_sep
 
@@ -250,7 +250,7 @@ string_type falsename() const;
 
 ### <a name="return-value"></a>返回值
 
-一个包含要用作值**false**的文本表示形式的 `CharType`s 序列的字符串。
+一个字符串，包含要用作值**false**的文本表示形式的 `CharType`s 的序列。
 
 ### <a name="remarks"></a>备注
 
@@ -345,7 +345,7 @@ explicit numpunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>参数
 
-*_Refs* \
+*_Refs*\
 用于指定对象的内存管理类型的整数值。
 
 ### <a name="remarks"></a>备注
@@ -466,8 +466,8 @@ French_France.1252 truename true
 French_France.1252 falsename false
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[\<locale>](../standard-library/locale.md)\
+[\<区域设置>](../standard-library/locale.md)\
 [facet 类](../standard-library/locale-class.md#facet_class)\
 [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

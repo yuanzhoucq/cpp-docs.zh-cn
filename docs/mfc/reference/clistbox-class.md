@@ -104,11 +104,11 @@ helpviewer_keywords:
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
 ms.openlocfilehash: 5c3337641dcfc720a5f9fbccf5bb0614e97c3b54
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518421"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865517"
 ---
 # <a name="clistbox-class"></a>CListBox 类
 
@@ -122,63 +122,63 @@ class CListBox : public CWnd
 
 ## <a name="members"></a>Members
 
-### <a name="public-constructors"></a>公用建構函式
+### <a name="public-constructors"></a>公共构造函数
 
-|Name|描述|
+|名称|说明|
 |----------|-----------------|
-|[CListBox::CListBox](#clistbox)|构造 `CListBox` 对象。|
+|[CListBox：： CListBox](#clistbox)|构造 `CListBox` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|Name|描述|
+|名称|说明|
 |----------|-----------------|
 |[CListBox::AddString](#addstring)|将字符串添加到列表框。|
-|[CListBox::CharToItem](#chartoitem)|重写以为不包含字符串的所有者描述列表框提供自定义 WM_CHAR 处理。|
-|[CListBox::CompareItem](#compareitem)|由框架调用，以确定新项在排序的所有者描述列表框中的位置。|
-|[CListBox::Create](#create)|创建 Windows 列表框并将其附加到 `CListBox` 对象上。|
-|[CListBox::DeleteItem](#deleteitem)|当用户从所有者描述的列表框中删除项时，由框架调用。|
-|[CListBox::DeleteString](#deletestring)|从列表框中删除字符串。|
-|[CListBox::Dir](#dir)|将当前目录中的文件名、驱动器或同时添加到列表框。|
-|[CListBox::DrawItem](#drawitem)|当所有者描述列表框的视觉方面发生变化时，由框架调用。|
-|[CListBox::FindString](#findstring)|搜索列表框中的字符串。|
-|[CListBox::FindStringExact](#findstringexact)|查找与指定字符串匹配的第一个列表框字符串。|
-|[CListBox::GetAnchorIndex](#getanchorindex)|检索列表框中当前定位项的从零开始的索引。|
-|[CListBox::GetCaretIndex](#getcaretindex)|确定在多选列表框中具有聚焦框的项的索引。|
-|[CListBox::GetCount](#getcount)|返回列表框中的字符串数。|
-|[CListBox::GetCurSel](#getcursel)|返回列表框中当前选定字符串的从零开始的索引。|
-|[CListBox::GetHorizontalExtent](#gethorizontalextent)|返回列表框可水平滚动的宽度（以像素为单位）。|
-|[CListBox::GetItemData](#getitemdata)|返回与列表框项关联的值。|
-|[CListBox::GetItemDataPtr](#getitemdataptr)|返回指向列表框项的指针。|
-|[CListBox::GetItemHeight](#getitemheight)|确定列表框中项的高度。|
-|[CListBox::GetItemRect](#getitemrect)|返回当前显示的列表框项的边框。|
-|[CListBox::GetListBoxInfo](#getlistboxinfo)|检索每个列的项数。|
-|[CListBox::GetLocale](#getlocale)|检索列表框的区域设置标识符。|
-|[CListBox::GetSel](#getsel)|返回列表框项的选择状态。|
-|[CListBox::GetSelCount](#getselcount)|返回在多选列表框中当前选定的字符串的数目。|
-|[CListBox::GetSelItems](#getselitems)|返回列表框中当前选定的字符串的索引。|
-|[CListBox::GetText](#gettext)|将列表框项复制到缓冲区中。|
-|[CListBox::GetTextLen](#gettextlen)|返回列表框项的长度（以字节为单位）。|
-|[CListBox::GetTopIndex](#gettopindex)|返回列表框中第一个可见字符串的索引。|
-|[CListBox::InitStorage](#initstorage)|列表框项和字符串的预分配内存块。|
+|[CListBox：： CharToItem](#chartoitem)|重写以为不包含字符串的所有者描述列表框提供自定义 WM_CHAR 处理。|
+|[CListBox：： CompareItem](#compareitem)|由框架调用，以确定新项在排序的所有者描述列表框中的位置。|
+|[CListBox：： Create](#create)|创建 Windows 列表框并将其附加到 `CListBox` 对象上。|
+|[CListBox：:D eleteItem](#deleteitem)|当用户从所有者描述的列表框中删除项时，由框架调用。|
+|[CListBox：:D eleteString](#deletestring)|从列表框中删除字符串。|
+|[CListBox：:D ir](#dir)|将当前目录中的文件名、驱动器或同时添加到列表框。|
+|[CListBox：:D rawItem](#drawitem)|当所有者描述列表框的视觉方面发生变化时，由框架调用。|
+|[CListBox：： FindString](#findstring)|搜索列表框中的字符串。|
+|[CListBox：： FindStringExact](#findstringexact)|查找与指定字符串匹配的第一个列表框字符串。|
+|[CListBox：： GetAnchorIndex](#getanchorindex)|检索列表框中当前定位项的从零开始的索引。|
+|[CListBox：： GetCaretIndex](#getcaretindex)|确定在多选列表框中具有聚焦框的项的索引。|
+|[CListBox：： GetCount](#getcount)|返回列表框中的字符串数。|
+|[CListBox：： GetCurSel](#getcursel)|返回列表框中当前选定字符串的从零开始的索引。|
+|[CListBox：： GetHorizontalExtent](#gethorizontalextent)|返回列表框可水平滚动的宽度（以像素为单位）。|
+|[CListBox：： GetItemData](#getitemdata)|返回与列表框项关联的值。|
+|[CListBox：： GetItemDataPtr](#getitemdataptr)|返回指向列表框项的指针。|
+|[CListBox：： GetItemHeight](#getitemheight)|确定列表框中项的高度。|
+|[CListBox：： GetItemRect](#getitemrect)|返回当前显示的列表框项的边框。|
+|[CListBox：： GetListBoxInfo](#getlistboxinfo)|检索每个列的项数。|
+|[CListBox：： GetLocale](#getlocale)|检索列表框的区域设置标识符。|
+|[CListBox：： GetSel](#getsel)|返回列表框项的选择状态。|
+|[CListBox：： GetSelCount](#getselcount)|返回在多选列表框中当前选定的字符串的数目。|
+|[CListBox：： GetSelItems](#getselitems)|返回列表框中当前选定的字符串的索引。|
+|[CListBox：： GetText](#gettext)|将列表框项复制到缓冲区中。|
+|[CListBox：： GetTextLen](#gettextlen)|返回列表框项的长度（以字节为单位）。|
+|[CListBox：： GetTopIndex](#gettopindex)|返回列表框中第一个可见字符串的索引。|
+|[CListBox：： InitStorage](#initstorage)|列表框项和字符串的预分配内存块。|
 |[CListBox::InsertString](#insertstring)|在列表框中的特定位置插入字符串。|
-|[CListBox::ItemFromPoint](#itemfrompoint)|返回最接近某个点的列表框项的索引。|
-|[CListBox::MeasureItem](#measureitem)|当创建所有者描述列表框以确定列表框尺寸时，由框架调用。|
-|[CListBox::ResetContent](#resetcontent)|清除列表框中的所有条目。|
-|[CListBox::SelectString](#selectstring)|在单项选择列表框中搜索并选择一个字符串。|
-|[CListBox::SelItemRange](#selitemrange)|选择或取消选择多选列表框中的一系列字符串。|
-|[CListBox::SetAnchorIndex](#setanchorindex)|设置多选列表框中的定位点以开始扩展选定内容。|
-|[CListBox::SetCaretIndex](#setcaretindex)|将焦点矩形设置为多选列表框中指定索引处的项。|
-|[CListBox::SetColumnWidth](#setcolumnwidth)|设置多列列表框的列宽。|
-|[CListBox::SetCurSel](#setcursel)|选择列表框字符串。|
-|[CListBox::SetHorizontalExtent](#sethorizontalextent)|设置列表框可水平滚动的宽度（以像素为单位）。|
-|[CListBox::SetItemData](#setitemdata)|设置与列表框项关联的值。|
-|[CListBox::SetItemDataPtr](#setitemdataptr)|设置指向列表框项的指针。|
-|[CListBox::SetItemHeight](#setitemheight)|设置列表框中项的高度。|
-|[CListBox::SetLocale](#setlocale)|设置列表框的区域设置标识符。|
-|[CListBox::SetSel](#setsel)|选择或取消选择多选列表框中的列表框项。|
-|[CListBox::SetTabStops](#settabstops)|在列表框中设置制表位位置。|
-|[CListBox::SetTopIndex](#settopindex)|设置列表框中第一个可见字符串的从零开始的索引。|
-|[CListBox::VKeyToItem](#vkeytoitem)|重写以为具有 LBS_WANTKEYBOARDINPUT 样式集的列表框提供自定义 WM_KEYDOWN 处理。|
+|[CListBox：： ItemFromPoint](#itemfrompoint)|返回最接近某个点的列表框项的索引。|
+|[CListBox：： MeasureItem](#measureitem)|当创建所有者描述列表框以确定列表框尺寸时，由框架调用。|
+|[CListBox：： ResetContent](#resetcontent)|清除列表框中的所有条目。|
+|[CListBox：： SelectString](#selectstring)|在单项选择列表框中搜索并选择一个字符串。|
+|[CListBox：： SelItemRange](#selitemrange)|选择或取消选择多选列表框中的一系列字符串。|
+|[CListBox：： SetAnchorIndex](#setanchorindex)|设置多选列表框中的定位点以开始扩展选定内容。|
+|[CListBox：： SetCaretIndex](#setcaretindex)|将焦点矩形设置为多选列表框中指定索引处的项。|
+|[CListBox：： SetColumnWidth](#setcolumnwidth)|设置多列列表框的列宽。|
+|[CListBox：： SetCurSel](#setcursel)|选择列表框字符串。|
+|[CListBox：： SetHorizontalExtent](#sethorizontalextent)|设置列表框可水平滚动的宽度（以像素为单位）。|
+|[CListBox：： SetItemData](#setitemdata)|设置与列表框项关联的值。|
+|[CListBox：： SetItemDataPtr](#setitemdataptr)|设置指向列表框项的指针。|
+|[CListBox：： SetItemHeight](#setitemheight)|设置列表框中项的高度。|
+|[CListBox：： SetLocale](#setlocale)|设置列表框的区域设置标识符。|
+|[CListBox：： SetSel](#setsel)|选择或取消选择多选列表框中的列表框项。|
+|[CListBox：： SetTabStops](#settabstops)|在列表框中设置制表位位置。|
+|[CListBox：： SetTopIndex](#settopindex)|设置列表框中第一个可见字符串的从零开始的索引。|
+|[CListBox：： VKeyToItem](#vkeytoitem)|重写以为具有 LBS_WANTKEYBOARDINPUT 样式集的列表框提供自定义 WM_KEYDOWN 处理。|
 
 ## <a name="remarks"></a>备注
 
@@ -226,7 +226,7 @@ class CListBox : public CWnd
 
 如果在 `CListBox` 对象中分配任何内存，请重写 `CListBox` 析构函数以释放分配。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>继承层次结构
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -236,7 +236,7 @@ class CListBox : public CWnd
 
 `CListBox`
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>要求
 
 **标头:** afxwin.h
 
@@ -342,7 +342,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 
 指示[COMPAREITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-compareitemstruct)结构中描述的两个项的相对位置。 它可以是下列值之一：
 
-|{2&gt;值&lt;2}|含义|
+|值|含义|
 |-----------|-------------|
 |-1|项目1排在第2项之前。|
 |0|项1和项2排序相同。|
@@ -479,7 +479,7 @@ int Dir(
 *attr*<br/>
 可以是 `CFile::GetStatu`[s](../../mfc/reference/cfile-class.md#getstatus)中描述的**枚举**值的任意组合，或者以下值的任意组合：
 
-|{2&gt;值&lt;2}|含义|
+|值|含义|
 |-----------|-------------|
 |0x0000|可以读取或写入文件。|
 |0x0001|文件可以从读取，但不能写入。|
@@ -1243,7 +1243,7 @@ int SetCurSel(int nSelect);
 
 ### <a name="parameters"></a>参数
 
-*nSelect*<br/>
+*选择*<br/>
 指定要选择的字符串的从零开始的索引。 如果*选择*为-1，则将列表框设置为 "没有选择"。
 
 ### <a name="return-value"></a>返回值
@@ -1545,6 +1545,6 @@ WM_VKEYTOITEM 消息在收到 WM_KEYDOWN 消息时由列表框发送，但仅当
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
 [CButton 类](../../mfc/reference/cbutton-class.md)<br/>
 [CComboBox 类](../../mfc/reference/ccombobox-class.md)<br/>
-[CEdit 类](../../mfc/reference/cedit-class.md)<br/>
+[CEdit Class](../../mfc/reference/cedit-class.md)<br/>
 [CScrollBar 类](../../mfc/reference/cscrollbar-class.md)<br/>
 [CStatic 类](../../mfc/reference/cstatic-class.md)

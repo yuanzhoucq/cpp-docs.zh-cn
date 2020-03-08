@@ -138,15 +138,15 @@ helpviewer_keywords:
 - std::unordered_multimap::swap
 ms.assetid: 4baead6c-5870-4b85-940f-a47d6b891c27
 ms.openlocfilehash: f19e6c1a4befa3e1b5ddd46e607b8cf894f29ba6
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72684121"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78873951"
 ---
 # <a name="unordered_multimap-class"></a>unordered_multimap 类
 
-类模板描述了一个对象，该对象控制 `std::pair<const Key, Ty>` 类型的不同长度的元素序列。 序列由哈希函数弱排序，哈希函数将此序列分区到称为存储桶的有序序列集中。 在每个存储桶中，比较函数将确定任一元素对是否具有等效顺序。 每个元素存储两个对象，包括一个排序键和一个值。 序列以允许查找、插入和移除任意元素的方式表示，并包含与序列中的元素数量无关的多个操作（常量时间），至少在所有存储桶长度大致相等时如此。 在最坏情况下，当所有元素位于一个存储桶中时，操作数量与序列中的元素数量成比例（线性时间）。 此外，插入元素不会使迭代器失效，移除元素仅会使指向已移除元素的迭代器失效。
+类模板描述了一个对象，该对象控制 `std::pair<const Key, Ty>`类型的不同长度的元素序列。 序列由哈希函数弱排序，哈希函数将此序列分区到称为存储桶的有序序列集中。 在每个存储桶中，比较函数将确定任一元素对是否具有等效顺序。 每个元素存储两个对象，包括一个排序键和一个值。 序列以允许查找、插入和移除任意元素的方式表示，并包含与序列中的元素数量无关的多个操作（常量时间），至少在所有存储桶长度大致相等时如此。 在最坏情况下，当所有元素位于一个存储桶中时，操作数量与序列中的元素数量成比例（线性时间）。 此外，插入元素不会使迭代器失效，移除元素仅会使指向已移除元素的迭代器失效。
 
 ## <a name="syntax"></a>语法
 
@@ -161,17 +161,17 @@ class unordered_multimap;
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |-|-|
-|*Key*|键类型。|
+|*Key*|密钥类型。|
 |*Ty*|映射类型。|
-|*代码*|哈希函数对象类型。|
+|*哈希*|哈希函数对象类型。|
 |*Pred*|相等比较函数对象类型。|
 |*分配*|allocator 类。|
 
 ## <a name="members"></a>Members
 
-|类型定义|描述|
+|类型定义|说明|
 |-|-|
 |[allocator_type](#allocator_type)|用于管理存储的分配器的类型。|
 |[const_iterator](#const_iterator)|受控序列的常量迭代器的类型。|
@@ -190,7 +190,7 @@ class unordered_multimap;
 |[size_type](#size_type)|两个元素间的无符号距离的类型。|
 |[value_type](#value_type)|元素的类型。|
 
-|成员函数|描述|
+|成员函数|说明|
 |-|-|
 |[begin](#begin)|指定受控序列的开头。|
 |[地址](#bucket)|获取键值的存储桶编号。|
@@ -220,25 +220,25 @@ class unordered_multimap;
 |[swap](#swap)|交换两个容器的内容。|
 |[unordered_multimap](#unordered_multimap)|构造容器对象。|
 
-|运算符|描述|
+|运算符|说明|
 |-|-|
 |[unordered_multimap::operator=](#op_eq)|复制哈希表。|
 
 ## <a name="remarks"></a>备注
 
-对象通过调用两个存储对象，即一个 [unordered_multimap::key_equal](#key_equal) 类型的比较函数对象和一个 [unordered_multimap::hasher](#hasher) 类型的哈希函数对象，对它控制的序列进行排序。 可以通过调用成员函数 [unordered_multimap::key_eq](#key_eq)`()` 访问第一个存储对象；通过调用成员函数 [unordered_multimap::hash_function](#hash)`()` 访问第二个存储对象。 具体而言，对于所有 `X` 类型的值 `Y` 和 `Key`，`key_eq()(X, Y)` 调用将仅在两个参数值拥有等效顺序时返回 true；`hash_function()(keyval)` 调用将生成 `size_t` 类型的值的分布。 与类模板[Unordered_map 类](../standard-library/unordered-map-class.md)不同，类型 `unordered_multimap` 的对象不确保对于受控序列的任意两个元素，`key_eq()(X, Y)` 始终为 false。 （键不需要唯一。）
+对象通过调用两个存储对象，即一个 [unordered_multimap::key_equal](#key_equal) 类型的比较函数对象和一个 [unordered_multimap::hasher](#hasher) 类型的哈希函数对象，对它控制的序列进行排序。 可以通过调用成员函数 [unordered_multimap::key_eq](#key_eq)`()` 访问第一个存储对象；通过调用成员函数 [unordered_multimap::hash_function](#hash)`()` 访问第二个存储对象。 具体而言，对于所有 `X` 类型的值 `Y` 和 `Key`，`key_eq()(X, Y)` 调用将仅在两个参数值拥有等效顺序时返回 true；`hash_function()(keyval)` 调用将生成 `size_t` 类型的值的分布。 与类模板[Unordered_map 类](../standard-library/unordered-map-class.md)不同，`unordered_multimap` 类型的对象不确保对于受控序列的任意两个元素，`key_eq()(X, Y)` 始终为 false。 （键不需要唯一。）
 
 此对象还存储最大加载因子，用于指定每个存储桶的元素的最大所需平均数量。 如果插入元素导致 [unordered_multimap::load_factor](#load_factor)`()` 超出最大加载因子，容器将增加存储桶的数量并根据需要重新生成哈希表。
 
 受控序列中元素的实际顺序取决于哈希函数、比较函数、插入顺序、最大加载因子和存储桶的当前数量。 通常无法预测受控序列中的元素顺序。 但是，可以始终确保具有等效顺序的任何元素子集在受控序列中相邻。
 
-对象通过 [unordered_multimap::allocator_type](#allocator_type) 类型的存储分配器对象为其控制的序列分配并释放存储。 此类分配器对象必须与 `allocator` 类型的对象具有相同的外部接口。 请注意，分配容器对象时不会复制存储的分配器对象。
+对象通过 [unordered_multimap::allocator_type](#allocator_type) 类型的存储分配器对象为其控制的序列分配并释放存储。 此类分配器对象必须与 `allocator`类型的对象具有相同的外部接口。 请注意，分配容器对象时不会复制存储的分配器对象。
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<unordered_map>
+**标头：** \<unordered_map >
 
-**命名空间:** std
+**命名空间：** std
 
 ## <a name="allocator_type"></a>  unordered_multimap::allocator_type
 
@@ -250,7 +250,7 @@ typedef Alloc allocator_type;
 
 ### <a name="remarks"></a>备注
 
-类型是模板参数 `Alloc` 的同义词。
+该类型是模板参数 `Alloc`的同义词。
 
 ### <a name="example"></a>示例
 
@@ -294,7 +294,7 @@ const_local_iterator begin(size_type nbucket) const;
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |-|-|
 |*nbucket*|存储桶编号。|
 
@@ -356,7 +356,7 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>参数
 
-*keyval* \
+*keyval*\
 要映射的键值。
 
 ### <a name="remarks"></a>备注
@@ -498,7 +498,7 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>参数
 
-*nbucket* \
+*nbucket*\
 存储桶编号。
 
 ### <a name="remarks"></a>备注
@@ -560,7 +560,7 @@ const_iterator cbegin() const;
 
 由于使用 `cbegin` 的返回值，因此不能修改范围中的元素。
 
-可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，请考虑 `Container` 为支持 `begin()` 和 `cbegin()` 的任何类型的可修改（非常**量**）容器。
+可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，请考虑 `Container` 为支持 `begin()` 和 `cbegin()`的任何类型的可修改（非常**量**）容器。
 
 ```cpp
 auto i1 = Container.begin();
@@ -586,7 +586,7 @@ const_iterator cend() const;
 
 `cend` 用于测试迭代器是否超过了其范围的末尾。
 
-可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，请考虑 `Container` 为支持 `end()` 和 `cend()` 的任何类型的可修改（非常**量**）容器。
+可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，请考虑 `Container` 为支持 `end()` 和 `cend()`的任何类型的可修改（非常**量**）容器。
 
 ```cpp
 auto i1 = Container.end();
@@ -608,7 +608,7 @@ void clear();
 
 ### <a name="remarks"></a>备注
 
-此成员函数调用 [unordered_multimap::erase](#erase)`(` [unordered_multimap::begin](#begin)`(),` [unordered_multimap::end](#end)`())`。
+此成员函数调用[unordered_multimap：： erase](#erase)`(` [unordered_multimap：： begin](#begin)`(),` [unordered_multimap：： end](#end)`())`。
 
 ### <a name="example"></a>示例
 
@@ -858,7 +858,7 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>参数
 
-*keyval* \
+*keyval*\
 要搜索的键值。
 
 ### <a name="remarks"></a>备注
@@ -973,7 +973,7 @@ iterator emplace(Args&&... args);
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |-|-|
 |*args*|用于构造要插入到 unordered_multimap 中的元素的转发参数。|
 
@@ -1004,7 +1004,7 @@ iterator emplace_hint(
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |-|-|
 |*args*|用于构造要插入到 unordered 中的元素的转发参数。|
 |*where*|有关开始搜索正确插入点的位置的提示。|
@@ -1106,7 +1106,7 @@ const_local_iterator end(size_type nbucket) const;
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |-|-|
 |*nbucket*|存储桶编号。|
 
@@ -1174,7 +1174,7 @@ std::pair<const_iterator, const_iterator>
 
 ### <a name="parameters"></a>参数
 
-*keyval* \
+*keyval*\
 要搜索的键值。
 
 ### <a name="remarks"></a>备注
@@ -1249,7 +1249,7 @@ size_type erase(
 
 ### <a name="parameters"></a>参数
 
-*Where* \
+*Where*\
 要移除的元素的位置。
 
 *第一个*\
@@ -1263,7 +1263,7 @@ size_type erase(
 
 ### <a name="return-value"></a>返回值
 
-对于前两个成员函数，则为双向迭代器，它指定已删除的任何元素之外留存的第一个元素，如果此类元素不存在，则为 map 末尾的元素。
+对于前两个成员函数，则为双向迭代器，它指定已删除的任何元素之外留存的第一个元素，如果此类元素不存在，则为映射末尾的元素。
 
 对于第三个成员函数，返回已从 unordered_multimap 中删除的元素数目。
 
@@ -1281,7 +1281,7 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>参数
 
-*keyval* \
+*keyval*\
 要搜索的键值。
 
 ### <a name="remarks"></a>备注
@@ -1417,7 +1417,7 @@ typedef Hash hasher;
 
 ### <a name="remarks"></a>备注
 
-类型是模板参数 `Hash` 的同义词。
+该类型是模板参数 `Hash`的同义词。
 
 ### <a name="example"></a>示例
 
@@ -1485,13 +1485,13 @@ IList);
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |-|-|
 |*初始值*|要插入到 unordered_multimap 中的元素的值。|
 |*Where*|开始搜索正确插入点的位置。|
-|*ValTy*|指定 unordered_multimap 可用于构造[value_type](../standard-library/map-class.md#value_type)元素的自变量类型的模板参数，以及作为参数的完美转发的*Val* 。|
-|*1*|要复制的第一个元素的位置。|
-|*时间*|要复制的最后一个元素以外的位置。|
+|*ValTy*|指定参数类型的模板参数，unordered_multimap 可以使用该参数类型构造[value_type](../standard-library/map-class.md#value_type)的元素，并将 "完美转发" 的*Val*作为参数。|
+|*第一个*|要复制的第一个元素的位置。|
+|*上一次*|要复制的最后一个元素以外的位置。|
 |*InputIterator*|满足[输入迭代器](../standard-library/input-iterator-tag-struct.md)需求的模板函数自变量，该输入迭代器指向可用于构造 [value_type](../standard-library/map-class.md#value_type) 对象的类型的元素。|
 |*IList*|从中复制元素的 [initializer_list](../standard-library/initializer-list.md)。|
 
@@ -1507,9 +1507,9 @@ IList);
 
 在只插入单个元素的过程中，如果引发异常，但是异常并未在容器的哈希函数中发生，则不会修改该容器的状态。 如果在哈希函数中引发异常，则未定义此结果。 在插入多个元素的过程中，如果引发异常，则会使容器处于未指定但有效的状态。
 
-容器的 [value_type](../standard-library/map-class.md#value_type) 是属于该容器的 typedef；对于 map ，`map<K, V>::value_type` 是 `pair<const K, V>`。 元素的值是一个有序对，其中第一个组件相当于键值，第二个组件相当于该元素的数据值。
+容器的 [value_type](../standard-library/map-class.md#value_type) 是属于该容器的 typedef；对于映射，`map<K, V>::value_type` 是 `pair<const K, V>`。 元素的值是一个有序对，其中第一个组件相当于键值，第二个组件相当于该元素的数据值。
 
-范围成员函数（5）将元素值序列插入到与 `[First, Last)` 范围内的迭代器所处理的每个元素对应的 unordered_multimap 中;因此，*最后*不会插入。 容器成员函数 `end()` 是指容器中最后一个元素之后的位置，例如，`m.insert(v.begin(), v.end());` 语句会将 `v` 的所有元素插入到 `m` 中。
+范围成员函数（5）将元素值序列插入到与 `[First, Last)`范围内的迭代器所处理的每个元素对应的 unordered_multimap 中;因此，*最后*不会插入。 容器成员函数 `end()` 是指容器中最后一个元素之后的位置，例如，`m.insert(v.begin(), v.end());` 语句会将 `v` 的所有元素插入到 `m` 中。
 
 初始化表达式列表成员函数 (6) 使用 [initializer_list](../standard-library/initializer-list.md) 将元素复制到 unordered_multimap 中。
 
@@ -1610,7 +1610,7 @@ typedef Pred key_equal;
 
 ### <a name="remarks"></a>备注
 
-类型是模板参数 `Pred` 的同义词。
+该类型是模板参数 `Pred`的同义词。
 
 ### <a name="example"></a>示例
 
@@ -1650,7 +1650,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>备注
 
-类型是模板参数 `Key` 的同义词。
+该类型是模板参数 `Key`的同义词。
 
 ### <a name="example"></a>示例
 
@@ -1821,7 +1821,7 @@ typedef Ty mapped_type;
 
 ### <a name="remarks"></a>备注
 
-类型是模板参数 `Ty` 的同义词。
+该类型是模板参数 `Ty`的同义词。
 
 ### <a name="example"></a>示例
 
@@ -2092,13 +2092,13 @@ unordered_multimap& operator=(unordered_multimap&& right);
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |-|-|
 |right|正在被复制到 unordered_multimap 中的 unordered_multimap。|
 
 ### <a name="remarks"></a>备注
 
-清除 unordered_multimap 中的任何现有元素后 `operator=` 会将*右侧*的内容复制或移动到 unordered_multimap 中。
+擦除 unordered_multimap 中的任何现有元素后，`operator=` 将*右侧*的内容复制或移动到 unordered_multimap 中。
 
 ### <a name="example"></a>示例
 
@@ -2239,7 +2239,7 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>参数
 
-*nbuckets* \
+*nbuckets*\
 请求的存储桶数。
 
 ### <a name="remarks"></a>备注
@@ -2420,7 +2420,7 @@ void swap(unordered_multimap& right);
 
 ### <a name="parameters"></a>参数
 
-*right* \
+*right*\
 要交换的容器。
 
 ### <a name="remarks"></a>备注
@@ -2536,12 +2536,12 @@ unordered_multimap(
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |-|-|
 |*InputIterator*|迭代器类型。|
 |*Fc-al*|要存储的分配器对象。|
 |*压缩*|要存储的比较函数对象。|
-|*代码*|要存储的哈希函数对象。|
+|*哈希*|要存储的哈希函数对象。|
 |*Bucket_count*|存储桶的最少数量。|
 |右侧|要复制的容器。|
 |*IList*|从中复制元素的 initializer_list。|
@@ -2552,7 +2552,7 @@ unordered_multimap(
 
 所有构造函数还初始化若干存储的值。 对于复制构造函数，值从*右*获取。 否则：
 
-最小存储桶数是参数*Bucket_count*（如果存在）;否则，它是此处所述的默认值作为实现定义的值 `N0`。
+最小存储桶数是*Bucket_count*的参数（如果存在）;否则，它是此处所述的默认值作为实现定义的值 `N0`。
 
 哈*希函数对象是自变量*（如果有）。否则 `Hash()`。
 
@@ -2738,9 +2738,9 @@ int main()
 [d, 4] [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [<unordered_map>](../standard-library/unordered-map.md)\
 [容器](../cpp/containers-modern-cpp.md)\
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::basic_ofstream [C++], swap
 ms.assetid: 3bcc9c51-6dfc-4844-8fcc-22ef57c9dff1
 ms.openlocfilehash: a73803f25c4fb9e54703b8bca93e68fedb63074e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452508"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865857"
 ---
 # <a name="basic_ofstream-class"></a>basic_ofstream 类
 
@@ -44,7 +44,7 @@ class basic_ofstream : public basic_ostream<Elem, Tr>
 
 ## <a name="remarks"></a>备注
 
-如果在文本模式下打开该文件 **，则将**其写入到该文件时，它将编写MBCS序列。`basic_ofstream` 内部表示形式将使用 `wchar_t` 字符的缓冲区。
+`basic_ofstream` 的**wchar_t**特殊化写入文件时，如果文件在文本模式下打开，则它将编写 MBCS 序列。 内部表示形式将使用 `wchar_t` 字符的缓冲区。
 
 该对象存储 `basic_filebuf`< `Elem`, `Tr`> 类的对象。
 
@@ -72,13 +72,13 @@ int main(int argc, char **argv)
 
 ### <a name="constructors"></a>构造函数
 
-|构造函数|描述|
+|构造函数|说明|
 |-|-|
 |[basic_ofstream](#basic_ofstream)|创建 `basic_ofstream` 类型的对象。|
 
 ### <a name="member-functions"></a>成员函数
 
-|成员函数|描述|
+|成员函数|说明|
 |-|-|
 |[close](#close)|关闭文件。|
 |[is_open](#is_open)|确定文件是否打开。|
@@ -88,13 +88,13 @@ int main(int argc, char **argv)
 
 ### <a name="operators"></a>运算符
 
-|运算符|描述|
+|运算符|说明|
 |-|-|
 |[operator=](#op_eq)|分配此流对象的内容。 这是一种移动赋值，所涉及的 `rvalue reference` 不会留下副本。|
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<fstream>
+**标头：** \<m >
 
 **命名空间：** std
 
@@ -128,16 +128,16 @@ basic_ofstream(
 [ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的枚举之一。
 
 *_Prot*\
-默认文件打开保护，等同于 [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md) 中的 `shflag` 参数。
+默认文件打开保护，等同于 `shflag`_fsopen、_wfsopen[ 中的 ](../c-runtime-library/reference/fsopen-wfsopen.md) 参数。
 
-*然后*\
+*right*\
 对 `basic_ofstream` 对象的右值引用用于初始化此 `basic_ofstream` 对象。
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数通过调用[basic_ostream](../standard-library/basic-ostream-class.md)`sb`（ `sb` ）初始化基类，其中是[basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`， `Tr`> 类的存储对象。 通过调用 `basic_filebuf`< `Elem`, `Tr`>，它还可以初始化 `sb`。
+第一个构造函数通过调用[basic_ostream](../standard-library/basic-ostream-class.md)（`sb`）来初始化基类，其中 `sb` 是类的存储对象[basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem``Tr`>。 通过调用 `sb``basic_filebuf`< , `Elem`>，它还可以初始化 `Tr`。
 
-通过调用 `basic_ostream`( **sb**)，第二个和第三个构造函数可初始化基类。 它还通过`sb` `basic_filebuf` < 调用>然后`sb`进行初始化。 `Elem` `Tr` [open](../standard-library/basic-filebuf-class.md#open)( `_Filename`, `_Mode` &#124; `ios_base::out`)。 如果后一个函数返回一个空指针，则构造函数将调用[setstate](../standard-library/basic-ios-class.md#setstate) （`failbit`）。
+通过调用 `basic_ostream`( **sb**)，第二个和第三个构造函数可初始化基类。 它还通过调用 `basic_filebuf`< `Elem`、`Tr`> 然后 `sb`来初始化 `sb`。 [open](../standard-library/basic-filebuf-class.md#open)( `_Filename`, `_Mode` &#124; `ios_base::out`)。 如果后一个函数返回一个空指针，则构造函数将调用[setstate](../standard-library/basic-ios-class.md#setstate)（`failbit`）。
 
 第四个构造函数是一个 copy 函数。 它使用*右侧*的内容来初始化对象，该对象被视为 rvalue 引用。
 
@@ -173,11 +173,11 @@ void close();
 
 ### <a name="remarks"></a>备注
 
-此成员函数调用[rdbuf](../standard-library/basic-ifstream-class.md#rdbuf) **->** [close](../standard-library/basic-filebuf-class.md#close)。
+成员函数调用 [rdbuf](../standard-library/basic-ifstream-class.md#rdbuf) **->** [close](../standard-library/basic-filebuf-class.md#close)。
 
 ### <a name="example"></a>示例
 
-有关如何使用 `close` 的示例，请参阅 [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close)。
+有关如何使用 [ 的示例，请参阅 ](../standard-library/basic-filebuf-class.md#close)basic_filebuf::close`close`。
 
 ## <a name="is_open"></a>  basic_ofstream::is_open
 
@@ -250,15 +250,15 @@ void open(
 [ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的枚举之一。
 
 *_Prot*\
-默认文件打开保护，等同于 [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md) 中的 `shflag` 参数。
+默认文件打开保护，等同于 `shflag`_fsopen、_wfsopen[ 中的 ](../c-runtime-library/reference/fsopen-wfsopen.md) 参数。
 
 ### <a name="remarks"></a>备注
 
-此成员函数调用 [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode` &#124; `ios_base::out`)。 如果该函数返回 null 指针，该函数将调用[setstate](../standard-library/basic-ios-class.md#setstate)（`failbit`）。
+此成员函数调用[rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)（_ *Filename*，`_Mode` &#124; `ios_base::out`）。 如果该函数返回 null 指针，该函数将调用[setstate](../standard-library/basic-ios-class.md#setstate)（`failbit`）。
 
 ### <a name="example"></a>示例
 
-有关使用`open`的示例，请参阅[basic_filebuf：： open](../standard-library/basic-filebuf-class.md#open) 。
+有关使用 `open`的示例，请参阅[basic_filebuf：： open](../standard-library/basic-filebuf-class.md#open) 。
 
 ## <a name="op_eq"></a>  basic_ofstream::operator=
 
@@ -270,7 +270,7 @@ basic_ofstream& operator=(basic_ofstream&& right);
 
 ### <a name="parameters"></a>参数
 
-*然后*\
+*right*\
 对 `basic_ofstream` 对象的右值引用。
 
 ### <a name="return-value"></a>返回值
@@ -295,7 +295,7 @@ basic_filebuf<Elem, Tr> *rdbuf() const
 
 ### <a name="example"></a>示例
 
-有关如何使用 `rdbuf` 的示例，请参阅 [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close)。
+有关如何使用 [ 的示例，请参阅 ](../standard-library/basic-filebuf-class.md#close)basic_filebuf::close`rdbuf`。
 
 ## <a name="swap"></a>  basic_ofstream::swap
 
@@ -307,14 +307,14 @@ void swap(basic_ofstream& right);
 
 ### <a name="parameters"></a>参数
 
-*然后*\
-对另一个 `basic_ofstream` 对象的 `lvalue` 引用。
+*right*\
+对另一个 `lvalue` 对象的 `basic_ofstream` 引用。
 
 ### <a name="remarks"></a>备注
 
 该成员函数将此对象的内容与*右侧*的内容进行交换。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [basic_ostream 类](../standard-library/basic-ostream-class.md)\
 [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

@@ -57,11 +57,11 @@ helpviewer_keywords:
 - std::unitbuf [C++]
 - std::uppercase [C++]
 ms.openlocfilehash: c3b1e2350d0923cbfddf95492842ae126859e29f
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890074"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856465"
 ---
 # <a name="ltiosgt-functions"></a>&lt;ios&gt; 函数
 
@@ -75,7 +75,7 @@ ios_base& boolalpha(ios_base& str);
 
 ### <a name="parameters"></a>参数
 
-*str* \
+*str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
 
 ### <a name="return-value"></a>返回值
@@ -127,7 +127,7 @@ ios_base& dec(ios_base& str);
 
 ### <a name="parameters"></a>参数
 
-*str* \
+*str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
 
 ### <a name="return-value"></a>返回值
@@ -185,7 +185,7 @@ ios_base& defaultfloat(ios_base& iosbase);
 
 ### <a name="remarks"></a>备注
 
-操控器有效地调用 `iosbase.`[ios_base：： unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::floatfield)`，然后返回*iosbase*。
+操控器有效调用 `iosbase.`[ios_base：： unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::floatfield)`，然后返回*iosbase*。
 
 ## <a name="fixed"></a>小数点
 
@@ -197,7 +197,7 @@ ios_base& fixed(ios_base& str);
 
 ### <a name="parameters"></a>参数
 
-*str* \
+*str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
 
 ### <a name="return-value"></a>返回值
@@ -245,7 +245,7 @@ ios_base& hex(ios_base& str);
 
 ### <a name="parameters"></a>参数
 
-*str* \
+*str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
 
 ### <a name="return-value"></a>返回值
@@ -286,7 +286,7 @@ ios_base& internal(ios_base& str);
 
 ### <a name="parameters"></a>参数
 
-*str* \
+*str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
 
 ### <a name="return-value"></a>返回值
@@ -297,7 +297,7 @@ ios_base& internal(ios_base& str);
 
 [showpos](../standard-library/ios-functions.md#showpos) 会对正数显示此符号。
 
-操控器有效调用 `str.`[setf](../standard-library/ios-base-class.md#setf)`(`[ios_base：： internal](../standard-library/ios-base-class.md#fmtflags)`, `[ios_base：： adjustfield](../standard-library/ios-base-class.md#fmtflags)`)`，然后返回*str*。
+操控器有效地调用 `str.`[setf](../standard-library/ios-base-class.md#setf)`(`[ios_base：： internal](../standard-library/ios-base-class.md#fmtflags)`, `[ios_base：： adjustfield](../standard-library/ios-base-class.md#fmtflags)`)`，然后返回*str*。
 
 ### <a name="example"></a>示例
 
@@ -344,7 +344,7 @@ ios_base& left(ios_base& str);
 
 ### <a name="parameters"></a>参数
 
-*str* \
+*str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
 
 ### <a name="return-value"></a>返回值
@@ -399,7 +399,7 @@ ios_base& noboolalpha(ios_base& str);
 
 ### <a name="parameters"></a>参数
 
-*str* \
+*str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
 
 ### <a name="return-value"></a>返回值
@@ -416,7 +416,7 @@ ios_base& noboolalpha(ios_base& str);
 
 ### <a name="example"></a>示例
 
-有关使用 `noboolalpha` 的示例，请参阅 [boolalpha](../standard-library/ios-functions.md#boolalpha)。
+有关使用 [ 的示例，请参阅 ](../standard-library/ios-functions.md#boolalpha)boolalpha`noboolalpha`。
 
 ## <a name="noshowbase"></a>noshowbase
 
@@ -428,7 +428,7 @@ ios_base& noshowbase(ios_base& str);
 
 ### <a name="parameters"></a>参数
 
-*str* \
+*str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
 
 ### <a name="return-value"></a>返回值
@@ -443,7 +443,7 @@ ios_base& noshowbase(ios_base& str);
 
 ### <a name="example"></a>示例
 
-有关如何使用 `noshowbase` 的示例，请参阅 [showbase](../standard-library/ios-functions.md#showbase)。
+有关如何使用 [ 的示例，请参阅 ](../standard-library/ios-functions.md#showbase)showbase`noshowbase`。
 
 ## <a name="noshowpoint"></a>noshowpoint
 
@@ -455,7 +455,7 @@ ios_base& noshowpoint(ios_base& str);
 
 ### <a name="parameters"></a>参数
 
-*str* \
+*str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
 
 ### <a name="return-value"></a>返回值
@@ -502,7 +502,7 @@ ios_base& noshowpos(ios_base& str);
 
 ### <a name="parameters"></a>参数
 
-*str* \
+*str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
 
 ### <a name="return-value"></a>返回值
@@ -517,7 +517,7 @@ ios_base& noshowpos(ios_base& str);
 
 ### <a name="example"></a>示例
 
-有关使用 `noshowpos` 的示例，请参阅 [showpos](../standard-library/ios-functions.md#showpos)。
+有关使用 [ 的示例，请参阅 ](../standard-library/ios-functions.md#showpos)showpos`noshowpos`。
 
 ## <a name="noskipws"></a>noskipws
 
@@ -529,7 +529,7 @@ ios_base& noskipws(ios_base& str);
 
 ### <a name="parameters"></a>参数
 
-*str* \
+*str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
 
 ### <a name="return-value"></a>返回值
@@ -571,7 +571,7 @@ ios_base& nounitbuf(ios_base& str);
 
 ### <a name="parameters"></a>参数
 
-*str* \
+*str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
 
 ### <a name="return-value"></a>返回值
@@ -594,7 +594,7 @@ ios_base& nouppercase(ios_base& str);
 
 ### <a name="parameters"></a>参数
 
-*str* \
+*str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
 
 ### <a name="return-value"></a>返回值
@@ -607,7 +607,7 @@ ios_base& nouppercase(ios_base& str);
 
 ### <a name="example"></a>示例
 
-有关使用 `nouppercase` 的示例，请参阅 [uppercase](../standard-library/ios-functions.md#uppercase)。
+有关使用 [ 的示例，请参阅 ](../standard-library/ios-functions.md#uppercase)uppercase`nouppercase`。
 
 ## <a name="oct"></a>oct
 
@@ -619,7 +619,7 @@ ios_base& oct(ios_base& str);
 
 ### <a name="parameters"></a>参数
 
-*str* \
+*str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
 
 ### <a name="return-value"></a>返回值
@@ -646,7 +646,7 @@ ios_base& right(ios_base& str);
 
 ### <a name="parameters"></a>参数
 
-*str* \
+*str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
 
 ### <a name="return-value"></a>返回值
@@ -703,7 +703,7 @@ ios_base& scientific(ios_base& str);
 
 ### <a name="parameters"></a>参数
 
-*str* \
+*str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
 
 ### <a name="return-value"></a>返回值
@@ -748,7 +748,7 @@ ios_base& showbase(ios_base& str);
 
 ### <a name="parameters"></a>参数
 
-*str* \
+*str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
 
 ### <a name="return-value"></a>返回值
@@ -802,7 +802,7 @@ ios_base& showpoint(ios_base& str);
 
 ### <a name="parameters"></a>参数
 
-*str* \
+*str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
 
 ### <a name="return-value"></a>返回值
@@ -817,7 +817,7 @@ ios_base& showpoint(ios_base& str);
 
 ### <a name="example"></a>示例
 
-有关使用 `showpoint` 的示例，请参阅 [noshowpoint](../standard-library/ios-functions.md#noshowpoint)。
+有关使用 [ 的示例，请参阅 ](../standard-library/ios-functions.md#noshowpoint)noshowpoint`showpoint`。
 
 ## <a name="showpos"></a>showpos
 
@@ -829,7 +829,7 @@ ios_base& showpos(ios_base& str);
 
 ### <a name="parameters"></a>参数
 
-*str* \
+*str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
 
 ### <a name="return-value"></a>返回值
@@ -874,7 +874,7 @@ ios_base& skipws(ios_base& str);
 
 ### <a name="parameters"></a>参数
 
-*str* \
+*str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
 
 ### <a name="return-value"></a>返回值
@@ -926,7 +926,7 @@ ios_base& unitbuf(ios_base& str);
 
 ### <a name="parameters"></a>参数
 
-*str* \
+*str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
 
 ### <a name="return-value"></a>返回值
@@ -951,7 +951,7 @@ ios_base& uppercase(ios_base& str);
 
 ### <a name="parameters"></a>参数
 
-*str* \
+*str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
 
 ### <a name="return-value"></a>返回值
