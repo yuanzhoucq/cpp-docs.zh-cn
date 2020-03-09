@@ -15,11 +15,11 @@ helpviewer_keywords:
 - IScheduler structure
 ms.assetid: 471de85a-2b1a-4b6d-ab81-2eff2737161e
 ms.openlocfilehash: cd7b04b0dc5ca1bc496ce87a6459d00ed5813bf7
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142321"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854117"
 ---
 # <a name="ischeduler-structure"></a>IScheduler 结构
 
@@ -31,7 +31,7 @@ ms.locfileid: "77142321"
 struct IScheduler;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-methods"></a>公共方法
 
@@ -69,12 +69,12 @@ virtual void AddVirtualProcessors(
     unsigned int count) = 0;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ppVirtualProcessorRoots*<br/>
 `IVirtualProcessorRoot` 接口的数组，表示要添加到计划程序中的虚拟处理器根。
 
-*count*<br/>
+*计数*<br/>
 数组中 `IVirtualProcessorRoot` 接口的数目。
 
 ### <a name="remarks"></a>备注
@@ -121,12 +121,12 @@ virtual void NotifyResourcesExternallyBusy(
     unsigned int count) = 0;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ppVirtualProcessorRoots*<br/>
 与其他计划程序处于繁忙状态的硬件线程关联的 `IVirtualProcessorRoot` 接口的数组。
 
-*count*<br/>
+*计数*<br/>
 数组中 `IVirtualProcessorRoot` 接口的数目。
 
 ### <a name="remarks"></a>备注
@@ -149,12 +149,12 @@ virtual void NotifyResourcesExternallyIdle(
     unsigned int count) = 0;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ppVirtualProcessorRoots*<br/>
 与其他计划程序处于空闲状态的硬件线程关联的 `IVirtualProcessorRoot` 接口的数组。
 
-*count*<br/>
+*计数*<br/>
 数组中 `IVirtualProcessorRoot` 接口的数目。
 
 ### <a name="remarks"></a>备注
@@ -177,12 +177,12 @@ virtual void RemoveVirtualProcessors(
     unsigned int count) = 0;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ppVirtualProcessorRoots*<br/>
 一个 `IVirtualProcessorRoot` 接口数组，表示要移除的虚拟处理器根。
 
-*count*<br/>
+*计数*<br/>
 数组中 `IVirtualProcessorRoot` 接口的数目。
 
 ### <a name="remarks"></a>备注
@@ -202,7 +202,7 @@ virtual void Statistics(
     _Out_ unsigned int* pNumberOfTasksEnqueued) = 0;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pTaskCompletionRate*<br/>
 自上次调用此方法后，计划程序已完成的任务数。
