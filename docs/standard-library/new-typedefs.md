@@ -5,15 +5,15 @@ f1_keywords:
 - new/std::new_handler
 ms.assetid: aef01de1-06b5-4b6c-aebc-2c9f423d7e47
 ms.openlocfilehash: 80123bc35422984ef92bdba6da45052d3461b1d7
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245163"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854923"
 ---
 # <a name="ltnewgt-typedefs"></a>&lt;new&gt; typedefs
 
-## <a name="hardware_constructive_interference_size"></a> hardware_constructive_interference_size
+## <a name="hardware_constructive_interference_size"></a>hardware_constructive_interference_size
 
 ```cpp
 inline constexpr size_t hardware_constructive_interference_size = implementation-defined;
@@ -21,7 +21,7 @@ inline constexpr size_t hardware_constructive_interference_size = implementation
 
 ### <a name="remarks"></a>备注
 
-此数字是内存的建议的连续两个与时间局部性指由并发线程访问的对象占用大小的最大值。 它应至少为`alignof(max_align_t)`。
+此数字是通过并发线程使用时态位置访问的两个对象所占用的最大连续内存大小。 它至少应为 `alignof(max_align_t)`。
 
 ### <a name="example"></a>示例
 
@@ -40,7 +40,7 @@ struct kennel {
 static_assert(sizeof(together) <= hardware_constructive_interference_size);
 ```
 
-## <a name="hardware_destructive_interference_size"></a> hardware_destructive_interference_size
+## <a name="hardware_destructive_interference_size"></a>hardware_destructive_interference_size
 
 ```cpp
 inline constexpr size_t hardware_destructive_interference_size = implementation-defined;
@@ -48,7 +48,7 @@ inline constexpr size_t hardware_destructive_interference_size = implementation-
 
 ### <a name="remarks"></a>备注
 
-此数字是两个同时并发访问对象，以避免由于争用由实现引入的其他性能降低之间的最小建议偏移量。 它应至少为`alignof(max_align_t)`。
+此数字是两个并发访问的对象之间的最小建议偏移量，以避免因实现引入的争用而导致的额外性能下降。 它至少应为 `alignof(max_align_t)`。
 
 ### <a name="example"></a>示例
 
@@ -59,7 +59,7 @@ struct keep_apart {
 };
 ```
 
-## <a name="new_handler"></a> new_handler
+## <a name="new_handler"></a>new_handler
 
 该类型指向适合用作新处理程序的函数。
 
@@ -69,8 +69,8 @@ typedef void (*new_handler)();
 
 ### <a name="remarks"></a>备注
 
-这种类型的处理程序函数调用**运算符 new**或`operator new[]`时它们不能满足额外的存储的请求。
+此类型的处理程序函数由 new 或 `operator new[]`**运算符**在无法满足额外存储的请求时调用。
 
 ### <a name="example"></a>示例
 
-有关将 `new_handler` 用作返回值的示例，请参阅 [set_new_handler](../standard-library/new-functions.md#set_new_handler)。
+有关将 [ 用作返回值的示例，请参阅 ](../standard-library/new-functions.md#set_new_handler)set_new_handler`new_handler`。

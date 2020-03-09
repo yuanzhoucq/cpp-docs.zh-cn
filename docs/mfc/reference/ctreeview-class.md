@@ -11,15 +11,15 @@ helpviewer_keywords:
 - CTreeView [MFC], GetTreeCtrl
 ms.assetid: 5df583a6-d69f-42ca-9d8d-57e04558afff
 ms.openlocfilehash: fec8379a3944d981672754274f50dd4e60f71b61
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323591"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883988"
 ---
 # <a name="ctreeview-class"></a>CTreeView 类
 
-可以使用树控件和简化[CTreeCtrl](../../mfc/reference/ctreectrl-class.md)，封装树控件功能，使用 MFC 文档视图体系结构的类。
+简化对树控件和[CTreeCtrl](../../mfc/reference/ctreectrl-class.md)（封装树控件功能的类，以及 MFC 文档视图体系结构）的使用。
 
 ## <a name="syntax"></a>语法
 
@@ -31,19 +31,19 @@ class CTreeView : public CCtrlView
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CTreeView::CTreeView](#ctreeview)|构造 `CTreeView` 对象。|
+|[CTreeView：： CTreeView](#ctreeview)|构造 `CTreeView` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CTreeView::GetTreeCtrl](#gettreectrl)|返回与视图关联的树控件。|
+|[CTreeView：： GetTreeCtrl](#gettreectrl)|返回与视图关联的树控件。|
 
 ## <a name="remarks"></a>备注
 
-此体系结构的详细信息，请参阅的概览[CView](../../mfc/reference/cview-class.md)类和交叉引用那里引用。
+有关此体系结构的详细信息，请参阅[CView](../../mfc/reference/cview-class.md)类和引用的交叉引用的概述。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -61,9 +61,9 @@ class CTreeView : public CCtrlView
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxcview.h
+**标头：** afxcview
 
-##  <a name="ctreeview"></a>  CTreeView::CTreeView
+##  <a name="ctreeview"></a>CTreeView：： CTreeView
 
 构造 `CTreeView` 对象。
 
@@ -71,18 +71,18 @@ class CTreeView : public CCtrlView
 CTreeView();
 ```
 
-##  <a name="gettreectrl"></a>  CTreeView::GetTreeCtrl
+##  <a name="gettreectrl"></a>CTreeView：： GetTreeCtrl
 
-返回与视图相关联的树控件的引用。
+返回对与视图关联的树控件的引用。
 
 ```
 CTreeCtrl& GetTreeCtrl() const;
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [CCtrlView 类](../../mfc/reference/cctrlview-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CView 类](../../mfc/reference/cview-class.md)<br/>
 [CCtrlView 类](../../mfc/reference/cctrlview-class.md)<br/>
-[CTreeCtrl 类](../../mfc/reference/ctreectrl-class.md)
+[CTreeCtrl Class](../../mfc/reference/ctreectrl-class.md)

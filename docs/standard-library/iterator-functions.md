@@ -33,15 +33,15 @@ helpviewer_keywords:
 - std::next [C++]
 - std::prev [C++]
 ms.openlocfilehash: 69f1007f0c7f587e81313f5de97947410bf243df
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244027"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874030"
 ---
 # <a name="ltiteratorgt-functions"></a>&lt;iterator&gt; 函数
 
-## <a name="advance"></a> 高级
+## <a name="advance"></a>进
 
 使迭代器递增指定数量的位置。
 
@@ -50,7 +50,7 @@ template <class InputIterator, class Distance>
     void advance(InputIterator& InIt, Distance Off);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *InIt*\
 要递增的迭代器，且必须满足输入迭代器的需求。
@@ -62,9 +62,9 @@ template <class InputIterator, class Distance>
 
 前移范围必须非奇数，这种情况下，迭代器必须可解引用或超过结尾。
 
-如果`InputIterator`满足双向迭代器类型的要求，则*关闭*可以是负数。 如果`InputIterator`是输入或向前迭代器类型，*关闭*必须为非负。
+如果 `InputIterator` 满足双向迭代器类型的要求，则*Off*可能为负数。 如果 `InputIterator` 是输入迭代器类型或向前迭代器类型，则 Off 必须为*非*负。
 
-前移函数具有恒定的复杂性时`InputIterator`满足的要求随机访问迭代器; 否则为它具有线性复杂度，因此会可能很重要。
+当 `InputIterator` 满足随机访问迭代器的要求时，步进函数具有恒定的复杂性;否则，它具有线性复杂性，因此可能会占用大量资源。
 
 ### <a name="example"></a>示例
 
@@ -113,7 +113,7 @@ LPOS is advanced 4 steps forward to point to the fifth element: 5.
 LPOS is moved 3 steps back to point to the 2nd element: 2.
 ```
 
-## <a name="back_inserter"></a> back_inserter
+## <a name="back_inserter"></a>back_inserter
 
 创建一个可以在指定容器的后面插入元素的迭代器。
 
@@ -122,14 +122,14 @@ template <class Container>
 back_insert_iterator<Container> back_inserter(Container& _Cont);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Cont*\
 一个容器，将向其执行后插入。
 
 ### <a name="return-value"></a>返回值
 
-一个`back_insert_iterator`与容器对象相关联 *_Cont*。
+与容器对象 *_Cont*关联的 `back_insert_iterator`。
 
 ### <a name="remarks"></a>备注
 
@@ -184,7 +184,7 @@ The initial vector vec is: ( 0 1 2 ).
 After the insertions, the vector vec is: ( 0 1 2 30 40 500 600 ).
 ```
 
-## <a name="begin"></a> 开始
+## <a name="begin"></a>准备
 
 检索一个指向指定容器中第一个元素的迭代器。
 
@@ -201,9 +201,9 @@ template <class Ty, class Size>
 Ty *begin(Ty (& array)[Size]);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*cont*\
+*续*\
 容器。
 
 *数组*\
@@ -213,7 +213,7 @@ Ty *begin(Ty (& array)[Size]);
 
 前两个模板函数返回 `cont.begin()`。 第一个函数为非常量；第二个函数为常量。
 
-第三个模板函数返回*数组*。
+第三个模板函数返回*array*。
 
 ### <a name="example"></a>示例
 
@@ -286,7 +286,7 @@ void reverse_sort(C& c) {
 error C2228: left of '.begin' must have class/struct/union
 ```
 
-## <a name="cbegin"></a> cbegin
+## <a name="cbegin"></a>cbegin
 
 检索指向指定容器中第一个元素的常量迭代器。
 
@@ -296,9 +296,9 @@ auto cbegin(const Container& cont)
    -> decltype(cont.begin());
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*cont*\
+*续*\
 容器或 initializer_list。
 
 ### <a name="return-value"></a>返回值
@@ -309,7 +309,7 @@ auto cbegin(const Container& cont)
 
 此函数适用于 [initializer_list](../standard-library/initializer-list-class.md) 和所有 C++ 标准库容器。
 
-可以使用此成员函数替代 `begin()` 模板函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在示例中，请考虑`Container`的可修改 (非**const**) 容器或`initializer_list`的任何类型的支持`begin()`和`cbegin()`。
+可以使用此成员函数替代 `begin()` 模板函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，请考虑 `Container` 为可修改的（非常**量**）容器或支持 `begin()` 和 `cbegin()`的任何类型的 `initializer_list`。
 
 ```cpp
 auto i1 = Container.begin();
@@ -319,7 +319,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a> cend
+## <a name="cend"></a>cend
 
 检索指向指定容器中最后元素之后的元素的常量迭代器。
 
@@ -329,9 +329,9 @@ auto cend(const Container& cont)
    -> decltype(cont.end());
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*cont*\
+*续*\
 容器或 initializer_list。
 
 ### <a name="return-value"></a>返回值
@@ -342,7 +342,7 @@ auto cend(const Container& cont)
 
 此函数适用于 [initializer_list](../standard-library/initializer-list-class.md) 和所有 C++ 标准库容器。
 
-可以使用此成员函数替代 [end()](../standard-library/iterator-functions.md#end) 模板函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在示例中，请考虑`Container`的可修改 (非**const**) 容器或`initializer_list`的任何类型的支持`end()`和`cend()`。
+可以使用此成员函数替代 [end()](../standard-library/iterator-functions.md#end) 模板函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，请考虑 `Container` 为可修改的（非常**量**）容器或支持 `end()` 和 `cend()`的任何类型的 `initializer_list`。
 
 ```cpp
 auto i1 = Container.end();
@@ -352,19 +352,19 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="crbegin"></a> crbegin
+## <a name="crbegin"></a>crbegin
 
 ```cpp
 template <class C> constexpr auto crbegin(const C& c) -> decltype(std::rbegin(c));
 ```
 
-## <a name="crend"></a> crend
+## <a name="crend"></a>crend
 
 ```cpp
 template <class C> constexpr auto crend(const C& c) -> decltype(std::rend(c));
 ```
 
-## <a name="data"></a> 数据
+## <a name="data"></a>数据
 
 ```cpp
 template <class C> constexpr auto data(C& c) -> decltype(c.data());
@@ -373,7 +373,7 @@ template <class T, size_t N> constexpr T* data(T (&array)[N]) noexcept;
 template <class E> constexpr const E* data(initializer_list<E> il) noexcept;
 ```
 
-## <a name="distance"></a> 距离
+## <a name="distance"></a>长途
 
 确定两个迭代器定址位置之间的增量数。
 
@@ -382,21 +382,21 @@ template <class InputIterator>
 typename iterator_traits<InputIterator>::difference_type distance(InputIterator first, InputIterator last);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *第一个*\
 第一个迭代器，将要确定其与第二个迭代器之间的距离。
 
-*最后一个*\
+*最后*\
 第二个迭代器，将要确定其与第一个迭代器之间的距离。
 
 ### <a name="return-value"></a>返回值
 
-数乘以*第一个*必须递增到等于*最后一个*。
+*第一*次必须递增，直到*最后*一个值相等。
 
 ### <a name="remarks"></a>备注
 
-Distance 函数具有恒定的复杂性时`InputIterator`满足的要求随机访问迭代器; 否则为它具有线性复杂度，因此会可能很昂贵。
+当 `InputIterator` 满足随机访问迭代器的要求时，距离函数具有恒定的复杂性;否则，它具有线性复杂性，因此可能会占用大量资源。
 
 ### <a name="example"></a>示例
 
@@ -446,7 +446,7 @@ LPOS is advanced 7 steps forward to point  to the eighth element: 12.
 The distance from L.begin( ) to LPOS is: 7.
 ```
 
-## <a name="empty"></a> 为空
+## <a name="empty"></a>空白处
 
 ```cpp
 template <class C> constexpr auto empty(const C& c) -> decltype(c.empty());
@@ -454,7 +454,7 @@ template <class T, size_t N> constexpr bool empty(const T (&array)[N]) noexcept;
 template <class E> constexpr bool empty(initializer_list<E> il) noexcept;
 ```
 
-## <a name="end"></a> 结束
+## <a name="end"></a>端面
 
 检索指向指定容器中最后一个元素之后的元素的迭代器。
 
@@ -471,9 +471,9 @@ template <class Ty, class Size>
 Ty *end(Ty (& array)[Size]);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*cont*\
+*续*\
 容器。
 
 *数组*\
@@ -489,7 +489,7 @@ Ty *end(Ty (& array)[Size]);
 
 有关代码示例，请参阅 [begin](../standard-library/iterator-functions.md#begin)。
 
-## <a name="front_inserter"></a> front_inserter
+## <a name="front_inserter"></a>front_inserter
 
 创建一个可以在指定容器前面插入元素的迭代器。
 
@@ -498,14 +498,14 @@ template <class Container>
 front_insert_iterator<Container> front_inserter(Container& _Cont);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Cont*\
 其前部要插入元素的容器对象。
 
 ### <a name="return-value"></a>返回值
 
-一个`front_insert_iterator`与容器对象相关联 *_Cont*。
+与容器对象 *_Cont*关联的 `front_insert_iterator`。
 
 ### <a name="remarks"></a>备注
 
@@ -560,9 +560,9 @@ After the front insertions, the list L is:
 ( 200 100 -1 0 1 2 3 4 5 6 7 8 ).
 ```
 
-## <a name="inserter"></a> 插入器
+## <a name="inserter"></a>插入
 
-使您可以使用一个帮助程序模板函数`inserter(_Cont, _Where)`而不是`insert_iterator<Container>(_Cont, _Where)`。
+一个帮助器模板函数，可用于使用 `inserter(_Cont, _Where)` 而不是 `insert_iterator<Container>(_Cont, _Where)`。
 
 ```cpp
 template <class Container>
@@ -572,7 +572,7 @@ inserter(
     typename Container::iterator _Where);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Cont*\
 要向其添加新元素的容器。
@@ -631,7 +631,7 @@ After the insertions, the list L is:
 ( 1 20 30 40 500 ).
 ```
 
-## <a name="make_checked_array_iterator"></a> make_checked_array_iterator
+## <a name="make_checked_array_iterator"></a>make_checked_array_iterator
 
 创建可由其他算法使用的 [checked_array_iterator](../standard-library/checked-array-iterator-class.md)。
 
@@ -647,9 +647,9 @@ Iter Ptr,
     size_t Index = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*ptr*\
+*Ptr*\
 指向目标数组的指针。
 
 *大小*\
@@ -660,7 +660,7 @@ Iter Ptr,
 
 ### <a name="return-value"></a>返回值
 
-`checked_array_iterator` 的一个实例。
+`checked_array_iterator` 的实例。
 
 ### <a name="remarks"></a>备注
 
@@ -725,9 +725,9 @@ int main()
 }
 ```
 
-## <a name="make_move_iterator"></a> make_move_iterator
+## <a name="make_move_iterator"></a>make_move_iterator
 
-创建一个将所提供的迭代器包含在内作为 `stored` 迭代器的 `move iterator`。
+创建一个将所提供的迭代器包含在内作为 `move iterator` 迭代器的 `stored`。
 
 ```cpp
 template <class Iterator>
@@ -735,16 +735,16 @@ move_iterator<Iterator>
 make_move_iterator(const Iterator& _It);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_It*\
 存储在新移动迭代器中的迭代器。
 
 ### <a name="remarks"></a>备注
 
-模板函数返回`move_iterator` `<Iterator>(_It)`。
+模板函数返回 `move_iterator` `<Iterator>(_It)`。
 
-## <a name="make_unchecked_array_iterator"></a> make_unchecked_array_iterator
+## <a name="make_unchecked_array_iterator"></a>make_unchecked_array_iterator
 
 创建可由其他算法使用的 [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)。
 
@@ -757,14 +757,14 @@ unchecked_array_iterator<Iter>
     make_unchecked_array_iterator(Iter Ptr);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*ptr*\
+*Ptr*\
 指向目标数组的指针。
 
 ### <a name="return-value"></a>返回值
 
-`unchecked_array_iterator` 的一个实例。
+`unchecked_array_iterator` 的实例。
 
 ### <a name="remarks"></a>备注
 
@@ -823,7 +823,7 @@ int main()
 }
 ```
 
-## <a name="next"></a> 下一步
+## <a name="next"></a>一个
 
 迭代指定的次数并返回新的迭代器位置。
 
@@ -834,7 +834,7 @@ InputIterator next(
     typename iterator_traits<InputIterator>::difference_type _Off = 1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *第一个*\
 当前位置。
@@ -844,13 +844,13 @@ InputIterator next(
 
 ### <a name="return-value"></a>返回值
 
-循环访问之后，返回新的迭代器位置 *_Off*时间。
+在迭代 *_Off*次后，返回新的迭代器位置。
 
 ### <a name="remarks"></a>备注
 
-模板函数返回`next`递增 *_Off*时间
+模板函数返回 `next` 递增 *_Off*时间
 
-## <a name="prev"></a> 上一步
+## <a name="prev"></a>处
 
 反向迭代指定的次数并返回新的迭代器位置。
 
@@ -861,7 +861,7 @@ BidirectionalIterator prev(
     typename iterator_traits<BidirectionalIterator>::difference_type _Off = 1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *第一个*\
 当前位置。
@@ -873,21 +873,21 @@ BidirectionalIterator prev(
 
 模板函数返回 `next` 递减 `off` 次数。
 
-## <a name="rbegin"></a> rbegin
+## <a name="rbegin"></a>rbegin
 
 ```cpp
 template <class C> constexpr auto rbegin(C& c) -> decltype(c.rbegin());
 template <class C> constexpr auto rbegin(const C& c) -> decltype(c.rbegin());
 ```
 
-## <a name="rend"></a> rend
+## <a name="rend"></a>rend
 
 ```cpp
 template <class C> constexpr auto rend(C& c) -> decltype(c.rend());
 template <class C> constexpr auto rend(const C& c) -> decltype(c.rend());
 ```
 
-## <a name="size"></a> 大小
+## <a name="size"></a>规格
 
 ```cpp
 template <class C> constexpr auto size(const C& c) -> decltype(c.size());
