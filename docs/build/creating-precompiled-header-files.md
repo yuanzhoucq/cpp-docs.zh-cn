@@ -8,11 +8,11 @@ helpviewer_keywords:
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
 ms.openlocfilehash: 071839df431071a7d8921d1b445094f886ad38e2
-ms.sourcegitcommit: 33a898bf976c65f998b4e88a84765a0cef4193a8
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920112"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884087"
 ---
 # <a name="precompiled-header-files"></a>预编译的头文件
 
@@ -116,13 +116,13 @@ PCH 文件不包含有关在创建时生效的包含路径的信息。 当使用
 
 此表列出了在使用预编译头时可能触发不一致性警告的编译器选项：
 
-|选项|“属性”|规则|
+|选项|名称|规则|
 |------------|----------|----------|
 |/D|定义常数和宏|在创建预编译标头的编译和当前编译之间必须相同。 不检查已定义常量的状态，但如果您的文件依赖于更改的常量的值，则可能会出现不可预知的结果。|
 |/E 或/EP|将预处理器输出复制到标准输出|预编译标头不适用于/E 或/EP 选项。|
 |/Fr 或/FR|生成 Microsoft 源浏览器信息|为了使/Fr 和/FR 选项与/Yu 选项一起使用，在创建预编译标头时，它们也必须已生效。 使用预编译标头的后续编译还会生成源浏览器信息。 浏览器信息放置在单个 .sbr 文件中，由其他文件引用，其方式与 CodeView 信息相同。 不能重写源浏览器信息的位置。|
 |/GA、/GD、/GE、/Gw 或/GW|Windows 协议选项|在创建预编译标头的编译和当前编译之间必须相同。 如果这些选项不同，则会出现一条警告消息。|
-|/Zi|生成完整的调试信息|如果创建预编译标头时此选项生效，则使用预编译的后续编译可以使用该调试信息。 如果在创建预编译标头时/Zi 不起作用，则使用预编译和/Zi 选项的后续编译将触发警告。 调试信息放在当前的对象文件中，并且在预编译头中定义的本地符号不适用于调试器。|
+|/ZI|生成完整的调试信息|如果创建预编译标头时此选项生效，则使用预编译的后续编译可以使用该调试信息。 如果在创建预编译标头时/Zi 不起作用，则使用预编译和/Zi 选项的后续编译将触发警告。 调试信息放在当前的对象文件中，并且在预编译头中定义的本地符号不适用于调试器。|
 
 > [!NOTE]
 >  预编译标头功能仅适用于 C 和C++源文件。
@@ -306,7 +306,7 @@ int main( void )
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [C/C++ 生成参考](reference/c-cpp-building-reference.md)<br/>
 [MSVC 编译器选项](reference/compiler-options.md)

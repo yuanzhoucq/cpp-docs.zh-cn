@@ -97,15 +97,15 @@ helpviewer_keywords:
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
 ms.openlocfilehash: e93f5089e62956e7473c95eb6835046b5fe992bf
-ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74189413"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883786"
 ---
 # <a name="array-class-c-standard-library"></a>array 类（C++ 标准库）
 
-描述了一个对象，此对象控制类型 `N` 的元素的长度序列 `Ty`。 此序列存储为 `Ty` 的数组，包含在 `array<Ty, N>` 对象中。
+描述了一个对象，此对象控制类型 `Ty` 的元素的长度序列 `N`。 此序列存储为 `Ty` 的数组，包含在 `array<Ty, N>` 对象中。
 
 ## <a name="syntax"></a>语法
 
@@ -116,28 +116,28 @@ class array;
 
 ### <a name="parameters"></a>参数
 
-|参数|说明|
+|参数|描述|
 |-|-|
 |`Ty`|元素的类型。|
 |`N`|元素数量。|
 
 ## <a name="members"></a>Members
 
-|类型定义|说明|
+|类型定义|描述|
 |-|-|
 |[const_iterator](#const_iterator)|受控序列的常量迭代器的类型。|
 |[const_pointer](#const_pointer)|元素的常量指针的类型。|
 |[const_reference](#const_reference)|元素的常量引用的类型。|
 |[const_reverse_iterator](#const_reverse_iterator)|受控序列的常量反向迭代器的类型。|
 |[difference_type](#difference_type)|两个元素间的带符号距离的类型。|
-|[迭代器](#iterator)|受控序列的迭代器的类型。|
-|[指针](#pointer)|指向元素的指针的类型。|
+|[Iterator](#iterator)|受控序列的迭代器的类型。|
+|[pointer](#pointer)|指向元素的指针的类型。|
 |[reference](#reference)|元素的引用的类型。|
 |[reverse_iterator](#reverse_iterator)|受控序列的反向迭代器的类型。|
 |[size_type](#size_type)|两个元素间的无符号距离的类型。|
 |[value_type](#value_type)|元素的类型。|
 
-|成员函数|说明|
+|成员函数|描述|
 |-|-|
 |[array](#array)|构造一个数组对象。|
 |[assign](#assign)|弃用. 使用 `fill`。）替换所有元素。|
@@ -159,14 +159,14 @@ class array;
 |[size](#size)|对元素数进行计数。|
 |[swap](#swap)|交换两个容器的内容。|
 
-|运算符|说明|
+|Operator|描述|
 |-|-|
 |[array::operator=](#op_eq)|替换受控序列。|
 |[array：： operator\[\]](#op_at)|访问指定位置处的元素。|
 
 ## <a name="remarks"></a>备注
 
-此类型具有默认的构造函数 `array()` 和默认的赋值运算符 `operator=`，并且满足 `aggregate` 的要求。 因此，可使用聚合初始化表达式来初始化类型 `array<Ty, N>` 的对象。 例如，
+此类型具有默认的构造函数 `array()` 和默认的赋值运算符 `operator=`，并且满足 `aggregate` 的要求。 因此，可使用聚合初始化表达式来初始化类型 `array<Ty, N>` 的对象。 例如，应用于对象的
 
 ```cpp
 array<int, 4> ai = { 1, 2, 3 };
@@ -176,7 +176,7 @@ array<int, 4> ai = { 1, 2, 3 };
 
 ## <a name="requirements"></a>要求
 
-**Header:** \<array>
+**标头：** \<数组 >
 
 **命名空间：** std
 
@@ -897,7 +897,7 @@ void fill(const Type& val);
 
 ### <a name="parameters"></a>参数
 
-|参数|说明|
+|参数|描述|
 |-|-|
 |*val*|要插入到数组中的元素的值。|
 
@@ -1563,7 +1563,7 @@ typedef Ty value_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数 `Ty`的同义词。
+该类型是模板参数 `Ty` 的同义词。
 
 ### <a name="example"></a>示例
 
@@ -1600,6 +1600,6 @@ int main()
 0 1 2 3
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<array>](../standard-library/array.md)

@@ -8,11 +8,11 @@ f1_keywords:
 - istream/std::wistream
 ms.assetid: 55bc1f84-53a7-46ca-a36f-ac6ef75d0374
 ms.openlocfilehash: 9a25e4aa9ee42ea36d1bb8d6b196b36ff5c97758
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689474"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856472"
 ---
 # <a name="ltistreamgt-typedefs"></a>&lt;istream&gt; typedef
 
@@ -47,7 +47,7 @@ typedef basic_istream<char, char_traits<char>> istream;
 
 ## <a name="wiostream"></a>wiostream
 
-在**wchar_t**上特殊化 `basic_iostream` 类型。
+**Wchar_t**`basic_iostream` 专用化的类型。
 
 ```cpp
 typedef basic_iostream<wchar_t, char_traits<wchar_t>> wiostream;
@@ -55,11 +55,11 @@ typedef basic_iostream<wchar_t, char_traits<wchar_t>> wiostream;
 
 ### <a name="remarks"></a>备注
 
-类型是类模板[basic_iostream](../standard-library/basic-iostream-class.md)的同义词，专用于具有默认字符特征的**wchar_t**类型的元素。
+类型是类模板[basic_iostream](../standard-library/basic-iostream-class.md)的同义词，专用于**wchar_t**具有默认字符特征的类型的元素。
 
 ## <a name="wistream"></a> wistream
 
-在**wchar_t**上特殊化 `basic_istream` 类型。
+**Wchar_t**`basic_istream` 专用化的类型。
 
 ```cpp
 typedef basic_istream<wchar_t, char_traits<wchar_t>> wistream;
@@ -67,8 +67,8 @@ typedef basic_istream<wchar_t, char_traits<wchar_t>> wistream;
 
 ### <a name="remarks"></a>备注
 
-类型是类模板[basic_istream](../standard-library/basic-istream-class.md)的同义词，专用于具有默认字符特征的**wchar_t**类型的元素。
+类型是类模板[basic_istream](../standard-library/basic-istream-class.md)的同义词，专用于**wchar_t**具有默认字符特征的类型的元素。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [\<istream>](../standard-library/istream.md)
