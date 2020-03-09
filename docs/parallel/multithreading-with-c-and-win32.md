@@ -11,11 +11,11 @@ helpviewer_keywords:
 - threading [C]
 ms.assetid: 67cdc99e-1ad9-452b-a042-ed246b70040e
 ms.openlocfilehash: 1764561e0b2b43b8a89d8a1eb2e85d84ce33c4fc
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141965"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78867048"
 ---
 # <a name="multithreading-with-c-and-win32"></a>使用 C 和 Win32 进行多线程编程
 
@@ -110,7 +110,7 @@ Win32 还提供线程本地存储（TLS）来存储每个线程的数据。 有�
 
 创建、链接或执行多线程 C 程序时可能会遇到几个问题。 下表描述了一些更常见的问题。 （有关从 MFC 角度进行类似的讨论，请参见[多线程处理：编程提示](multithreading-programming-tips.md)。）
 
-|Problem|可能的原因|
+|问题|可能的原因|
 |-------------|--------------------|
 |您将看到一个消息框，表明您的程序导致了保护冲突。|许多 Win32 编程错误都会导致保护冲突。 保护冲突的一个常见原因是间接将数据分配给 null 指针。 因为这会导致程序尝试访问不属于它的内存，所以会发出保护冲突。<br /><br /> 检测保护冲突原因的简单方法是使用调试信息编译程序，然后通过 Visual Studio 环境中的调试器运行该程序。 出现保护错误时，Windows 会将控制转移到调试器，并将光标置于引起问题的行上。|
 |您的程序会生成许多编译和链接错误。|您可以通过将编译器的警告等级设置为其最高值之一并留意警告消息，来消除许多潜在问题。 通过使用第3级或第4级警告等级选项，您可以检测无意的数据转换、缺少函数原型以及非 ANSI 功能的使用。|

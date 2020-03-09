@@ -87,11 +87,11 @@ helpviewer_keywords:
 - std::multiset [C++], value_comp
 ms.assetid: 630e8c10-0ce9-4ad9-8d79-9e91a600713f
 ms.openlocfilehash: 83980094562e1c0083a879d1dc9aab591dc52d02
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689267"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78873952"
 ---
 # <a name="multiset-class"></a>multiset 类
 
@@ -114,7 +114,7 @@ class multiset
 
 在 C++ 14 中可以通过指定没有类型参数的 `std::less<>` 或 `std::greater<>` 谓词来启用异类查找。 有关详细信息，请参阅[关联容器中的异类查找](../standard-library/stl-containers.md#sequence_containers)
 
-*分配*器 \
+*分配*器\
 一种表示存储的分配器对象的类型，该分配器对象封装有关多重集合的内存分配和解除分配的详细信息。 默认值为 `allocator<Key>`。
 
 ## <a name="remarks"></a>备注
@@ -145,19 +145,19 @@ C++ 标准库多重集合类为：
 
 ### <a name="constructors"></a>构造函数
 
-|构造函数|描述|
+|构造函数|说明|
 |-|-|
 |[multiset](#multiset)|构造一个空的或者是指定 `multiset` 的全部或部分副本的 `multiset`。|
 
 ### <a name="typedefs"></a>Typedef
 
-|类型名称|描述|
+|类型名称|说明|
 |-|-|
 |[allocator_type](#allocator_type)|`allocator` 对象的 `multiset` 类的 typedef。|
-|[const_iterator](#const_iterator)|可读取 `multiset` 中的**const**元素的双向迭代器的 typedef。|
-|[const_pointer](#const_pointer)|指向 `multiset` 中的**const**元素的指针的 typedef。|
+|[const_iterator](#const_iterator)|可读取 `multiset`中的**const**元素的双向迭代器的 typedef。|
+|[const_pointer](#const_pointer)|指向 `multiset`中的**const**元素的指针的 typedef。|
 |[const_reference](#const_reference)|对存储在 `multiset` 中用于读取和执行**const**操作的**const**元素的引用的 typedef。|
-|[const_reverse_iterator](#const_reverse_iterator)|可读取 `multiset` 中任何**const**元素的双向迭代器的 typedef。|
+|[const_reverse_iterator](#const_reverse_iterator)|可读取 `multiset`中任何**const**元素的双向迭代器的 typedef。|
 |[difference_type](#difference_type)|`multiset` 中迭代器指向的元素间范围内元素数量的有符号整数 typedef。|
 |[迭代器](#iterator)|可读取或修改 `multiset` 中任何元素的双向迭代器的 typedef。|
 |[key_compare](#key_compare)|可比较两个键以确定 `multiset` 中两个元素的相对顺序的函数对象的 typedef。|
@@ -171,7 +171,7 @@ C++ 标准库多重集合类为：
 
 ### <a name="member-functions"></a>成员函数
 
-|成员函数|描述|
+|成员函数|说明|
 |-|-|
 |[begin](#begin)|返回一个迭代器，此迭代器指向 `multiset` 中的第一个元素。|
 |[cbegin](#cbegin)|返回一个常量迭代器，此迭代器用于发现 `multiset` 中的第一个元素。|
@@ -201,15 +201,15 @@ C++ 标准库多重集合类为：
 
 ### <a name="operators"></a>运算符
 
-|运算符|描述|
+|运算符|说明|
 |-|-|
 |[operator=](#op_eq)|将一个 `multiset` 中的元素替换为另一 `multiset` 副本。|
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<set>
+**标头：** \<集 >
 
-**命名空间:** std
+**命名空间：** std
 
 ## <a name="allocator_type"></a>  multiset::allocator_type
 
@@ -227,7 +227,7 @@ typedef Allocator allocator_type;
 
 ### <a name="example"></a>示例
 
-有关使用 `allocator_type` 的示例，请参阅 [get_allocator](#get_allocator) 的示例
+有关使用 [ 的示例，请参阅 ](#get_allocator)get_allocator`allocator_type` 的示例
 
 ## <a name="begin"></a>  multiset::begin
 
@@ -298,7 +298,7 @@ const_iterator cbegin() const;
 
 由于使用 `cbegin` 的返回值，因此不能修改范围中的元素。
 
-可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，请考虑 `Container` 为支持 `begin()` 和 `cbegin()` 的任何类型的可修改（非常**量**）容器。
+可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，请考虑 `Container` 为支持 `begin()` 和 `cbegin()`的任何类型的可修改（非常**量**）容器。
 
 ```cpp
 auto i1 = Container.begin();
@@ -324,7 +324,7 @@ const_iterator cend() const;
 
 `cend` 用于测试迭代器是否超过了其范围的末尾。
 
-可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，请考虑 `Container` 为支持 `end()` 和 `cend()` 的任何类型的可修改（非常**量**）容器。
+可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，请考虑 `Container` 为支持 `end()` 和 `cend()`的任何类型的可修改（非常**量**）容器。
 
 ```cpp
 auto i1 = Container.end();
@@ -388,7 +388,7 @@ typedef implementation-defined const_iterator;
 
 ### <a name="example"></a>示例
 
-有关使用 `const_iterator` 的示例，请参阅 [begin](#begin) 的示例。
+有关使用 [ 的示例，请参阅 ](#begin)begin`const_iterator` 的示例。
 
 ## <a name="const_pointer"></a>  multiset::const_pointer
 
@@ -459,7 +459,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 ### <a name="example"></a>示例
 
-有关如何声明和使用 `const_reverse_iterator` 的示例，请参阅 [rend](#rend) 的示例。
+有关如何声明和使用 [ 的示例，请参阅 ](#rend)rend`const_reverse_iterator` 的示例。
 
 ## <a name="count"></a>  multiset::count
 
@@ -482,7 +482,7 @@ multiset 中其排序键与参数键匹配的元素数量。
 
 成员函数返回以下范围内的元素 *x* 的数量
 
-\[ lower_bound （*key*）、upper_bound （*key*））
+\[ lower_bound （*key*）、upper_bound （*键*））
 
 ### <a name="example"></a>示例
 
@@ -703,7 +703,7 @@ iterator emplace(Args&&... args);
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |-|-|
 |*args*|用于构造要插入到多重集中的元素的转发参数。|
 
@@ -771,7 +771,7 @@ iterator emplace_hint(
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |-|-|
 |*args*|用于构造要插入到多重集中的元素的转发参数。|
 |*where*|开始搜索正确插入点的位置。 （如果该点紧靠*在位置*之前，则插入可能发生在分期常量时间内，而不是对数时间。）|
@@ -849,7 +849,7 @@ iterator end();
 
 **end** 用于测试迭代器是否超过多重集的末尾。
 
-不应对 **end** 返回的值取消引用。
+**end** 返回的值不应被取消引用。
 
 有关代码示例，请参阅 [multiset::find](#find)。
 
@@ -950,7 +950,7 @@ size_type erase(
 
 ### <a name="parameters"></a>参数
 
-*Where* \
+*Where*\
 要移除的元素的位置。
 
 *第一个*\
@@ -1166,13 +1166,13 @@ IList);
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |-|-|
 |*初始值*|要插入到多重集合中的元素的值。|
 |*Where*|开始搜索正确插入点的位置。 （如果该点紧靠*在位置*之前，则插入可能发生在分期常量时间内，而不是对数时间。）|
-|*ValTy*|指定多集可用于构造[value_type](../standard-library/map-class.md#value_type)元素的自变量类型的模板参数，并以参数形式表示完美转发的*Val* 。|
-|*1*|要复制的第一个元素的位置。|
-|*时间*|要复制的最后一个元素以外的位置。|
+|*ValTy*|一个模板参数，该参数指定多重集可用来构造[value_type](../standard-library/map-class.md#value_type)的元素的参数类型，并将 "完美转发" 的*Val*作为参数。|
+|*第一个*|要复制的第一个元素的位置。|
+|*上一次*|要复制的最后一个元素以外的位置。|
 |*InputIterator*|满足[输入迭代器](../standard-library/input-iterator-tag-struct.md)需求的模板函数自变量，该输入迭代器指向可用于构造 [value_type](../standard-library/map-class.md#value_type) 对象的类型的元素。|
 |*IList*|从中复制元素的 [initializer_list](../standard-library/initializer-list.md)。|
 
@@ -1296,7 +1296,7 @@ typedef implementation-defined iterator;
 
 ### <a name="example"></a>示例
 
-有关如何声明和使用 `iterator` 的示例，请参阅[begin](#begin)的示例。
+有关如何声明和使用 `iterator`的示例，请参阅[begin](#begin)的示例。
 
 ## <a name="key_comp"></a>  multiset::key_comp
 
@@ -1316,7 +1316,7 @@ key_compare key_comp() const;
 
 存储对象用于定义以下成员函数：
 
-**bool operator**( **const Key&** *x*, **const Key&** *y*);
+**bool 运算符**（ **const key &** *x*， **const key &** *y*）;
 
 如果在排序顺序中 *x* 严格位于 *y* 之前，则返回 true。
 
@@ -1389,7 +1389,7 @@ typedef Compare key_compare;
 
 ### <a name="example"></a>示例
 
-有关如何声明和使用 `key_compare` 的示例，请参阅 [key_comp](#key_comp) 的示例。
+有关如何声明和使用 [ 的示例，请参阅 ](#key_comp)key_comp`key_compare` 的示例。
 
 ## <a name="key_type"></a>  multiset::key_type
 
@@ -1407,7 +1407,7 @@ typedef Key key_type;
 
 ### <a name="example"></a>示例
 
-有关如何声明和使用 `key_type` 的示例，请参阅 [value_type](#value_type) 的示例。
+有关如何声明和使用 [ 的示例，请参阅 ](#value_type)value_type`key_type` 的示例。
 
 ## <a name="lower_bound"></a>  multiset::lower_bound
 
@@ -1562,13 +1562,13 @@ multiset (
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |-|-|
 |*Fc-al*|要用于此多重集对象的存储分配器类，默认为 `Allocator`。|
 |*压缩*|用于对多重集中元素排序的 `const Compare` 类型比较函数，默认为 `Compare`。|
 |右侧|所构造多重集要作为副本的多重集。|
-|*1*|要复制的范围元素中的第一个元素的位置。|
-|*时间*|要复制的元素范围以外的第一个元素的位置。|
+|*第一个*|要复制的范围元素中的第一个元素的位置。|
+|*上一次*|要复制的元素范围以外的第一个元素的位置。|
 |*IList*|从中复制元素的 initializer_list。|
 
 ### <a name="remarks"></a>备注
@@ -1579,7 +1579,7 @@ multiset (
 
 所有构造函数会存储类型为 Compare 的函数对象，此对象用于在多重集的键之间建立顺序，且事后可通过调用 [key_comp](#key_comp) 返回。
 
-前三个构造函数指定一个空的初始多重集，第二个指定用于建立元素顺序的比较函数（*Comp*）的类型，第三个构造函数将分配器类型（*Al*）显式指定为广泛. 关键字 **explicit** 取消某些种类的自动类型转换。
+前三个构造函数指定一个空的初始多重集，第二个指定用于建立元素顺序的比较函数（*Comp*）的类型，第三个构造函数指定要使用的分配器类型（*al.exe*）。 关键字 **explicit** 取消某些种类的自动类型转换。
 
 第四个构造函数指定多重集*权限*的副本。
 
@@ -1702,13 +1702,13 @@ multiset& operator=(multiset&& right);
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |-|-|
 |right|从中复制或移动元素的 `multiset`。|
 
 ### <a name="remarks"></a>备注
 
-`operator=` 将元素*直接*复制或移动到此 `multiset` 中，具体取决于所使用的引用类型（lvalue 或右值）。 放弃 `operator=` executes 之前此 `multiset` 中的元素。
+`operator=` 将元素*直接*复制或移动到此 `multiset`中，具体取决于所使用的引用类型（lvalue 或右值）。 放弃 `multiset` executes 之前此 `operator=` 中的元素。
 
 ### <a name="example"></a>示例
 
@@ -1779,7 +1779,7 @@ reverse_iterator rbegin();
 
 `rbegin` 用于反向多重集，正如 rbegin 用于多重集。
 
-如果将 `rbegin` 的返回值赋予 `const_reverse_iterator`，则无法修改多重集对象。 如果将 `rbegin` 的返回值赋予 `reverse_iterator`，则可修改多重集对象。
+如果将 `rbegin` 的返回值分配给 `const_reverse_iterator`，则无法修改多重集对象。 如果将 `rbegin` 的返回值分配给 `reverse_iterator`，则可修改多重集对象。
 
 `rbegin` 可用于向后循环访问多重集。
 
@@ -1892,7 +1892,7 @@ reverse_iterator rend();
 
 `rend` 用于反向多重集，正如 [end](#end) 用于多重集一样。
 
-如果将 `rend` 的返回值赋予 `const_reverse_iterator`，则无法修改多重集对象。 如果将 `rend` 的返回值赋予 `reverse_iterator`，则可修改多重集对象。
+如果将 `rend` 的返回值分配给 `const_reverse_iterator`，则无法修改多重集对象。 如果将 `rend` 的返回值分配给 `reverse_iterator`，则可修改多重集对象。
 
 `rend` 可用于测试反向迭代器是否已到达其多重集末尾。
 
@@ -1961,7 +1961,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 ### <a name="example"></a>示例
 
-有关如何声明和使用 `reverse_iterator` 的示例，请参阅 [rbegin](#rbegin) 的示例。
+有关如何声明和使用 [ 的示例，请参阅 ](#rbegin)rbegin`reverse_iterator` 的示例。
 
 ## <a name="size"></a>  multiset::size
 
@@ -2014,7 +2014,7 @@ typedef typename allocator_type::size_type size_type;
 
 ### <a name="example"></a>示例
 
-有关如何声明和使用 `size_type` 的示例，请参阅 [size](#size) 的示例
+有关如何声明和使用 [ 的示例，请参阅 ](#size)size`size_type` 的示例
 
 ## <a name="swap"></a>  multiset::swap
 
@@ -2027,7 +2027,7 @@ void swap(
 
 ### <a name="parameters"></a>参数
 
-*right* \
+*right*\
 参数多重集提供与目标多重集进行交换的元素。
 
 ### <a name="remarks"></a>备注
@@ -2239,13 +2239,13 @@ typedef key_compare value_compare;
 
 `value_compare` 是模板参数 `Compare` 的同义词。
 
-请注意， [key_compare](#key_compare)和 `value_compare` 都是模板参数 `Compare` 的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。
+请注意， [key_compare](#key_compare)和 `value_compare` 都是 `Compare`的模板参数的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。
 
 有关 `Compare` 的详细信息，请参阅 [multiset 类](../standard-library/multiset-class.md)主题的备注部分。
 
 ### <a name="example"></a>示例
 
-有关如何声明和使用 `value_compare` 的示例，请参阅 [value_comp](#value_comp) 的示例。
+有关如何声明和使用 [ 的示例，请参阅 ](#value_comp)value_comp`value_compare` 的示例。
 
 ## <a name="value_type"></a>  multiset::value_type
 
@@ -2259,7 +2259,7 @@ typedef Key value_type;
 
 `value_type` 是模板参数 `Key` 的同义词。
 
-请注意， [key_type](#key_type)和 `value_type` 都是模板参数 `Key` 的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。
+请注意， [key_type](#key_type)和 `value_type` 都是 `Key`的模板参数的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。
 
 有关 `Key` 的详细信息，请参阅该主题的备注部分。
 
@@ -2298,8 +2298,8 @@ int main( )
 The multiset has elements: 10 20.
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [容器](../cpp/containers-modern-cpp.md)\
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

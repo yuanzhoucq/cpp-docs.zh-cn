@@ -24,11 +24,11 @@ helpviewer_keywords:
 - Microsoft::WRL::EventSource::targetsPointerLock_ data member
 ms.assetid: 91f1c072-6af4-44e6-b6d8-ac6d0c688dde
 ms.openlocfilehash: 1350e51ff609a888b6a8ad6841be6856b68c7994
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821826"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865725"
 ---
 # <a name="eventsource-class"></a>EventSource 类
 
@@ -48,40 +48,40 @@ class EventSource;
 
 ## <a name="members"></a>Members
 
-### <a name="public-constructors"></a>公用建構函式
+### <a name="public-constructors"></a>公共构造函数
 
-| Name                                     | 描述                                            |
+| 名称                                     | 说明                                            |
 | ---------------------------------------- | ------------------------------------------------------ |
-| [EventSource::EventSource](#eventsource) | 初始化 `EventSource` 类的新实例。 |
+| [EventSource：： EventSource](#eventsource) | 初始化 `EventSource` 类的新实例。 |
 
 ### <a name="public-methods"></a>公共方法
 
-| Name                                 | 描述                                                                                                                                                      |
+| 名称                                 | 说明                                                                                                                                                      |
 | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [EventSource::Add](#add)             | 将指定委托接口表示的事件处理程序追加到当前 `EventSource` 对象的事件处理程序集。                     |
-| [EventSource::GetSize](#getsize)     | 检索与当前 `EventSource` 对象关联的事件处理程序的数目。                                                                         |
-| [EventSource::InvokeAll](#invokeall) | 使用指定的参数类型和参数，调用与当前 `EventSource` 对象关联的每个事件处理程序。                                      |
-| [EventSource::Remove](#remove)       | 从与当前 `EventSource` 对象关联的事件处理程序集中删除由指定的事件注册令牌表示的事件处理程序。 |
+| [EventSource：： Add](#add)             | 将指定委托接口表示的事件处理程序追加到当前 `EventSource` 对象的事件处理程序集。                     |
+| [EventSource：： GetSize](#getsize)     | 检索与当前 `EventSource` 对象关联的事件处理程序的数目。                                                                         |
+| [EventSource：： InvokeAll](#invokeall) | 使用指定的参数类型和参数，调用与当前 `EventSource` 对象关联的每个事件处理程序。                                      |
+| [EventSource：： Remove](#remove)       | 从与当前 `EventSource` 对象关联的事件处理程序集中删除由指定的事件注册令牌表示的事件处理程序。 |
 
 ### <a name="protected-data-members"></a>受保护的数据成员
 
-| Name                                                    | 描述                                                                                                                       |
+| 名称                                                    | 说明                                                                                                                       |
 | ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| [EventSource::addRemoveLock_](#addremovelock)           | 添加、删除或调用事件处理程序时，同步对[targets_](#targets)数组的访问。                          |
-| [EventSource::targets_](#targets)                       | 包含一个或多个事件处理程序的数组。                                                                                           |
-| [EventSource::targetsPointerLock_](#targetspointerlock) | 同步对内部数据成员的访问，即使在添加、删除或调用此 EventSource 的事件处理程序时也是如此。 |
+| [EventSource：： addRemoveLock_](#addremovelock)           | 添加、删除或调用事件处理程序时，同步对[targets_](#targets)数组的访问。                          |
+| [EventSource：： targets_](#targets)                       | 包含一个或多个事件处理程序的数组。                                                                                           |
+| [EventSource：： targetsPointerLock_](#targetspointerlock) | 同步对内部数据成员的访问，即使在添加、删除或调用此 EventSource 的事件处理程序时也是如此。 |
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>继承层次结构
 
 `EventSource`
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>要求
 
 **标头：** 事件。h
 
 **命名空间：** Microsoft::WRL
 
-## <a name="add"></a>EventSource::Add
+## <a name="add"></a>EventSource：： Add
 
 将指定委托接口表示的事件处理程序追加到当前 `EventSource` 对象的事件处理程序集。
 
@@ -104,7 +104,7 @@ HRESULT Add(
 
 如果成功，则为 S_OK；否则为指示错误的 HRESULT。
 
-## <a name="addremovelock"></a>EventSource::addRemoveLock_
+## <a name="addremovelock"></a>EventSource：： addRemoveLock_
 
 添加、删除或调用事件处理程序时，同步对[targets_](#targets)数组的访问。
 
@@ -112,7 +112,7 @@ HRESULT Add(
 Wrappers::SRWLock addRemoveLock_;
 ```
 
-## <a name="eventsource"></a>EventSource::EventSource
+## <a name="eventsource"></a>EventSource：： EventSource
 
 初始化 `EventSource` 类的新实例。
 
@@ -120,7 +120,7 @@ Wrappers::SRWLock addRemoveLock_;
 EventSource();
 ```
 
-## <a name="getsize"></a>EventSource::GetSize
+## <a name="getsize"></a>EventSource：： GetSize
 
 检索与当前 `EventSource` 对象关联的事件处理程序的数目。
 
@@ -132,7 +132,7 @@ size_t GetSize() const;
 
 [Targets_](#targets)中事件处理程序的数目。
 
-## <a name="invokeall"></a>EventSource::InvokeAll
+## <a name="invokeall"></a>EventSource：： InvokeAll
 
 使用指定的参数类型和参数，调用与当前 `EventSource` 对象关联的每个事件处理程序。
 
@@ -352,7 +352,7 @@ T2<br/>
 *arg9*<br/>
 第九个事件处理程序参数。
 
-## <a name="remove"></a>EventSource::Remove
+## <a name="remove"></a>EventSource：： Remove
 
 从与当前 `EventSource` 对象关联的事件处理程序集中删除由指定的事件注册令牌表示的事件处理程序。
 
@@ -375,7 +375,7 @@ HRESULT Remove(
 
 有关 `EventRegistrationToken` 结构的详细信息，请参阅**Windows 运行时**参考文档中的**Windows：： Foundation：： EventRegistrationToken 结构**主题。
 
-## <a name="targets"></a>EventSource::targets_
+## <a name="targets"></a>EventSource：： targets_
 
 包含一个或多个事件处理程序的数组。
 
@@ -387,7 +387,7 @@ ComPtr<Details::EventTargetArray> targets_;
 
 当发生由当前 `EventSource` 对象表示的事件时，将调用事件处理程序。
 
-## <a name="targetspointerlock"></a>EventSource::targetsPointerLock_
+## <a name="targetspointerlock"></a>EventSource：： targetsPointerLock_
 
 同步对内部数据成员的访问，即使在添加、删除或调用此 `EventSource` 的事件处理程序时也是如此。
 

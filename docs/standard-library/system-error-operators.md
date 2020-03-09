@@ -6,15 +6,15 @@ f1_keywords:
 - system_error/std::operator==
 ms.assetid: c14edefb-bd8a-4e90-88d3-c59c98e6f73c
 ms.openlocfilehash: 5cf6a455beb5654ef65f7411db4783a32c71d625
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246215"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876249"
 ---
-# <a name="ltsystemerrorgt-operators"></a>&lt;system_error&gt; 运算符
+# <a name="ltsystem_errorgt-operators"></a>&lt;system_error&gt; 运算符
 
-## <a name="op_eq_eq"></a> 运算符 = =
+## <a name="op_eq_eq"></a>operator = =
 
 测试运算符左侧的对象是否等于右侧的对象。
 
@@ -31,10 +31,10 @@ bool operator==(const error_condition& left,
 
 ### <a name="parameters"></a>参数
 
-*左侧*\
+*左*\
 要测试是否相等的对象。
 
-*右侧*\
+*right*\
 要测试是否相等的对象。
 
 ### <a name="return-value"></a>返回值
@@ -45,7 +45,7 @@ bool operator==(const error_condition& left,
 
 该函数返回 `left.category() == right.category() && left.value() == right.value()`。
 
-## <a name="op_neq"></a> 运算符 ！ =
+## <a name="op_neq"></a>operator！ =
 
 测试运算符左侧的对象是否不等于右侧的对象。
 
@@ -58,15 +58,15 @@ bool operator!=(const error_condition& left, const error_condition& right);
 
 ### <a name="parameters"></a>参数
 
-*左侧*\
+*左*\
 要测试是否不相等的对象。
 
-*右侧*\
+*right*\
 要测试是否不相等的对象。
 
 ### <a name="return-value"></a>返回值
 
-**true**如果在传递的对象*左*是否不等于传入的对象*右*; 否则为**false**。
+如果*左侧*传递的对象不等于*右侧*传递的对象，**则为 true** ;否则**为 false**。
 
 ### <a name="remarks"></a>备注
 
@@ -102,21 +102,21 @@ inline bool operator<(
 
 ### <a name="parameters"></a>参数
 
-*左侧*\
+*左*\
 要比较的对象。
 
-*右侧*\
+*right*\
 要比较的对象。
 
 ### <a name="return-value"></a>返回值
 
-**true**如果在传递的对象*左*小于传入的对象*右*;否则为**false**。
+如果*左侧*传入的对象小于*向右*传递的对象，**则为 true** ;否则**为 false**。
 
 ### <a name="remarks"></a>备注
 
 该函数测试错误顺序。
 
-## <a name="op_ostream"></a> 运算符&lt;&lt;
+## <a name="op_ostream"></a>操作员&lt;&lt;
 
 ```cpp
 template <class charT, class traits> 

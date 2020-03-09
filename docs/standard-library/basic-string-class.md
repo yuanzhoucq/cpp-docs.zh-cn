@@ -117,11 +117,11 @@ helpviewer_keywords:
 - std::basic_string [C++], swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
 ms.openlocfilehash: 08620e0ae6b54b106daba8e0b0a392ceb1a6577d
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821904"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856478"
 ---
 # <a name="basic_string-class"></a>basic_string 类
 
@@ -218,11 +218,11 @@ Basic_string 特殊化中 `CharType` 元素的各种重要属性由类 `Traits`�
 
 ### <a name="operators"></a>运算符
 
-|运算符|描述|
+|Operator|描述|
 |-|-|
 |[operator+=](#op_add_eq)|向字符串追加字符。|
 |[operator=](#op_eq)|对字符串的内容赋新的字符值。|
-|[operator&#91;&#93;](#op_at)|使用字符串中的指定索引提供对字符的引用。|
+|[operator[]](#op_at)|使用字符串中的指定索引提供对字符的引用。|
 
 ## <a name="remarks"></a>备注
 
@@ -230,7 +230,7 @@ Basic_string 特殊化中 `CharType` 元素的各种重要属性由类 `Traits`�
 
 用于指定受控制序列元素的引用、指针和迭代器在调用了可更改受控制序列的函数后或第一次调用一个非 **const** 成员函数后可能失效。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>要求
 
 **标头：** \<字符串 >
 
@@ -246,7 +246,7 @@ typedef Allocator allocator_type;
 
 ### <a name="remarks"></a>备注
 
-类型是模板参数 `Allocator` 的同义词。
+该类型是模板参数 `Allocator` 的同义词。
 
 ### <a name="example"></a>示例
 
@@ -3527,7 +3527,7 @@ reference operator[](size_type offset);
 
 重新分配字符串或修改非 **const** 字符串可能使返回的引用无效。
 
-在 [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md) 设置为 1 或 2 的情况下进行编译时，如果尝试访问字符串边界以外的元素，将发生运行时错误。 有关详细信息，请参阅[已检查的迭代器](../standard-library/checked-iterators.md)。
+在 [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md) 设置为 1 或 2 的情况下进行编译时，如果尝试访问字符串边界以外的元素，将发生运行时错误。 有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。
 
 ### <a name="example"></a>示例
 
@@ -4831,7 +4831,7 @@ The character ch1 is: G.
 The character ch2 is: H.
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<string>](../standard-library/string.md)\
 [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

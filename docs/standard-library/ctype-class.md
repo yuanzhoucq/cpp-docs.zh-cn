@@ -37,11 +37,11 @@ helpviewer_keywords:
 - std::ctype [C++], widen
 ms.assetid: 3627154c-49d9-47b5-b28f-5bbedee38e3b
 ms.openlocfilehash: 640b2cc8506e498006feedbea6825a0e51a88209
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688168"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876304"
 ---
 # <a name="ctype-class"></a>ctype 类
 
@@ -56,7 +56,7 @@ class ctype : public ctype_base;
 
 ### <a name="parameters"></a>参数
 
-*CharType* \
+*CharType*\
 在程序中用于对字符进行编码的类型。
 
 ## <a name="remarks"></a>备注
@@ -65,7 +65,7 @@ class ctype : public ctype_base;
 
 C++标准库定义了此类模板的两个显式专用化：
 
-- `ctype<char>`，它们的差异单独描述。 有关详细信息，请参阅[&gt; 类的 ctype &lt;char](../standard-library/ctype-char-class.md)。
+- `ctype<char>`，它们的差异单独描述。 有关详细信息，请参阅[ctype&lt;char&gt; 类](../standard-library/ctype-char-class.md)。
 
 - `ctype<wchar_t>`，它将元素视为宽字符。
 
@@ -75,23 +75,23 @@ C++标准库定义了此类模板的两个显式专用化：
 
 - 将**char**类型的值*Byte*转换为*CharType*类型的值，并使用表达式 `CharType(byte)`。
 
-对**char**值执行所有其他操作的方式与显式专用化 `ctype<char>` 的方式相同。
+对**char**值执行所有其他操作的方式与显式专用化 `ctype<char>`的方式相同。
 
 ### <a name="constructors"></a>构造函数
 
-|构造函数|描述|
+|构造函数|说明|
 |-|-|
 |[ctype](#ctype)|`ctype` 类对象的构造函数，该类可用作字符的区域设置 facet。|
 
 ### <a name="typedefs"></a>Typedef
 
-|类型名称|描述|
+|类型名称|说明|
 |-|-|
 |[char_type](#char_type)|一种类型，此类型描述区域设置使用的字符。|
 
 ### <a name="member-functions"></a>成员函数
 
-|成员函数|描述|
+|成员函数|说明|
 |-|-|
 |[do_is](#do_is)|一种虚拟函数，通过调用此函数可测试单个字符是否具有特定属性，或者为某个范围内的每个字符的属性进行分类并将属性存储在数组中。|
 |[do_narrow](#do_narrow)|一种虚拟函数，通过调用此函数可将区域设置使用 `CharType` 类型的字符转换为本机字符集中**char**类型的相应字符。|
@@ -110,9 +110,9 @@ C++标准库定义了此类模板的两个显式专用化：
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<locale>
+**标头：** \<区域设置 >
 
-**命名空间:** std
+**命名空间：** std
 
 ## <a name="char_type"></a>  ctype::char_type
 
@@ -128,7 +128,7 @@ typedef CharType char_type;
 
 ### <a name="example"></a>示例
 
-有关将 `char_type` 用作返回值的示例，请参阅成员函数 [widen](#widen)。
+有关将 [ 用作返回值的示例，请参阅成员函数 ](#widen)widen`char_type`。
 
 ## <a name="ctype"></a>  ctype::ctype
 
@@ -140,7 +140,7 @@ explicit ctype(size_t _Refs = 0);
 
 ### <a name="parameters"></a>参数
 
-*_Refs* \
+*_Refs*\
 用于指定对象的内存管理类型的整数值。
 
 ### <a name="remarks"></a>备注
@@ -155,7 +155,7 @@ explicit ctype(size_t _Refs = 0);
 
 由于该析构函数受到保护，可能没有直接的示例。
 
-构造函数通过 **locale::** [facet](../standard-library/locale-class.md#facet_class)( `_Refs`) 初始化其 `locale::facet` 基对象。
+构造函数通过 `locale::facet`locale::facet[( ](../standard-library/locale-class.md#facet_class)) 初始化其 `_Refs` 基对象。
 
 ## <a name="do_is"></a>  ctype::do_is
 
@@ -174,10 +174,10 @@ virtual const CharType *do_is(
 
 ### <a name="parameters"></a>参数
 
-*maskVal* \
+*maskVal*\
 要为其测试字符的掩码值。
 
-*ch* \
+*ch*\
 要测试其属性的字符。
 
 *第一个*\
@@ -186,7 +186,7 @@ virtual const CharType *do_is(
 *最后*\
 指向范围内要对其属性进行分类的最后一个字符之后紧跟的字符的指针。
 
-*dest* \
+*dest*\
 指向数组开头的指针，描述每个字符属性特征的掩码值存储在该数组中。
 
 ### <a name="return-value"></a>返回值
@@ -221,19 +221,19 @@ virtual const CharType* do_narrow(
 
 ### <a name="parameters"></a>参数
 
-*ch* \
+*ch*\
 `Chartype` 类型的字符由区域设置用于转换。
 
 *默认*\
 要由成员函数分配的默认值，该默认值为不包含**char**类型的对应字符 `CharType` 类型的字符。
 
 *第一个*\
-指向要转换的字符范围内的第一个字符的指针。
+指向要转换的字符范围内第一个字符的指针。
 
 *最后*\
 指向要转换的字符范围内最后一个字符之后紧跟的字符的指针。
 
-*dest* \
+*dest*\
 指向存储转换的字符范围的目标范围中**char**类型的第一个字符的常量指针。
 
 ### <a name="return-value"></a>返回值
@@ -244,7 +244,7 @@ virtual const CharType* do_narrow(
 
 ### <a name="remarks"></a>备注
 
-第二个受保护的成员模板函数将以 `dest` [`I`] 为间隔 [0，`I` `default` `I`）中的 `last` 存储值 `do_narrow` （`first` [ - ]，`first`）。
+第二个受保护的成员模板函数将以 `dest`[`I`] 为间隔 [0，`I``default``I`）中的 `last`存储值 `do_narrow`（`first` [ - ]，`first`）。
 
 ### <a name="example"></a>示例
 
@@ -263,7 +263,7 @@ virtual const CharType *do_scan_is(
 
 ### <a name="parameters"></a>参数
 
-*maskVal* \
+*maskVal*\
 要通过字符匹配的掩码值。
 
 *第一个*\
@@ -278,7 +278,7 @@ virtual const CharType *do_scan_is(
 
 ### <a name="remarks"></a>备注
 
-受保护的成员函数返回 `ptr` 在 [`first`，`last`）范围内的最小指针，其中[do_is](#do_is)（`maskVal`，\* `ptr`）为 true。
+受保护的成员函数返回 `ptr` 在 [`first`，`last`）范围内的最小指针， [do_is](#do_is)（`maskVal`，\* `ptr`）为 true。
 
 ### <a name="example"></a>示例
 
@@ -297,7 +297,7 @@ virtual const CharType *do_scan_not(
 
 ### <a name="parameters"></a>参数
 
-*maskVal* \
+*maskVal*\
 不通过字符匹配的掩码值。
 
 *第一个*\
@@ -312,7 +312,7 @@ virtual const CharType *do_scan_not(
 
 ### <a name="remarks"></a>备注
 
-受保护的成员函数返回 `ptr` 在 [`first`，`last`）范围内的最小指针，其中[do_is](#do_is)（`maskVal`，\* `ptr`）为 false。
+受保护的成员函数返回 `ptr` 在 [`first`，`last`）范围内的最小指针， [do_is](#do_is)（`maskVal`，\* `ptr`）为 false。
 
 ### <a name="example"></a>示例
 
@@ -332,7 +332,7 @@ virtual const CharType *do_tolower(
 
 ### <a name="parameters"></a>参数
 
-*ch* \
+*ch*\
 要转换为小写的字符。
 
 *第一个*\
@@ -347,7 +347,7 @@ virtual const CharType *do_tolower(
 
 ### <a name="remarks"></a>备注
 
-第二个受保护的成员模板函数将 `first` [`I`] 的每个元素替换为间隔 [0，`last`  -  `first`）中的 `I`，并将 `do_tolower` （`first` [`I`]）。
+第二个受保护的成员模板函数将 `first` [`I`] 的每个元素替换为间隔 [0，`last` - `first`）中的 `I`，并将 `do_tolower`（`first` [`I`]）。
 
 ### <a name="example"></a>示例
 
@@ -367,7 +367,7 @@ virtual const CharType *do_toupper(
 
 ### <a name="parameters"></a>参数
 
-*ch* \
+*ch*\
 要转换为大写的字符。
 
 *第一个*\
@@ -382,7 +382,7 @@ virtual const CharType *do_toupper(
 
 ### <a name="remarks"></a>备注
 
-第二个受保护的成员模板函数将 `first` [`I`] 的每个元素替换为间隔 [0，`last`  -  `first`）中的 `I`，并将 `do_toupper` （`first` [`I`]）。
+第二个受保护的成员模板函数将 `first` [`I`] 的每个元素替换为间隔 [0，`last` - `first`）中的 `I`，并将 `do_toupper`（`first` [`I`]）。
 
 ### <a name="example"></a>示例
 
@@ -407,12 +407,12 @@ virtual const char *do_widen(
 要转换的本机字符集中**char**类型的字符。
 
 *第一个*\
-指向要转换的字符范围内的第一个字符的指针。
+指向要转换的字符范围内第一个字符的指针。
 
 *最后*\
 指向要转换的字符范围内最后一个字符之后紧跟的字符的指针。
 
-*dest* \
+*dest*\
 指向目标范围内 `CharType` 类型的第一个字符的指针，该范围存储经过转换的字符范围。
 
 ### <a name="return-value"></a>返回值
@@ -423,7 +423,7 @@ virtual const char *do_widen(
 
 ### <a name="remarks"></a>备注
 
-第二个受保护的成员模板函数将 `I` 的值 `do_widen`( `first` [ `I`]) 存储在 `dest`[ `I`] 值 ，间隔为 [0, `last` - `first`)。
+第二个受保护的成员模板函数将 `dest` 的值 `I`( `do_widen` [ `first`]) 存储在 `I`[ `I`] 值 ，间隔为 [0, `last` - `first`)。
 
 ### <a name="example"></a>示例
 
@@ -444,10 +444,10 @@ const CharType *is(
 
 ### <a name="parameters"></a>参数
 
-*maskVal* \
+*maskVal*\
 要为其测试字符的掩码值。
 
-*ch* \
+*ch*\
 要测试其属性的字符。
 
 *第一个*\
@@ -456,7 +456,7 @@ const CharType *is(
 *最后*\
 指向范围内要对其属性进行分类的最后一个字符之后紧跟的字符的指针。
 
-*dest* \
+*dest*\
 指向数组开头的指针，描述每个字符属性特征的掩码值存储在该数组中。
 
 ### <a name="return-value"></a>返回值
@@ -524,19 +524,19 @@ const CharType* narrow(
 
 ### <a name="parameters"></a>参数
 
-*ch* \
+*ch*\
 `Chartype` 类型的字符由区域设置用于转换。
 
 *默认*\
 要由成员函数分配的默认值，该默认值为不包含**char**类型的对应字符 `CharType` 类型的字符。
 
 *第一个*\
-指向要转换的字符范围内的第一个字符的指针。
+指向要转换的字符范围内第一个字符的指针。
 
 *最后*\
 指向要转换的字符范围内最后一个字符之后紧跟的字符的指针。
 
-*dest* \
+*dest*\
 指向存储转换的字符范围的目标范围中**char**类型的第一个字符的常量指针。
 
 ### <a name="return-value"></a>返回值
@@ -547,7 +547,7 @@ const CharType* narrow(
 
 ### <a name="remarks"></a>备注
 
-第一个成员函数返回[do_narrow](#do_narrow)（`ch`，`default`）。 第二个成员函数返回[do_narrow](#do_narrow) （`first`、`last`、`default` `dest`）。 只有基本的源字符才能保证在 `narrow` 之下存在唯一的反向映像 `CharType`。 对于这些基本的源字符，包含以下不变式：`narrow` ([widen](#widen) ( **c** ), 0 ) == **c**。
+第一个成员函数返回[do_narrow](#do_narrow)（`ch`，`default`）。 第二个成员函数返回[do_narrow](#do_narrow) （`first`、`last`、`default`、`dest`）。 只有基本的源字符才能保证在 `CharType` 之下存在唯一的反向映像 `narrow`。 对于这些基本的源字符，包含以下不变式：`narrow` ([widen](#widen) ( **c** ), 0 ) == **c**。
 
 ### <a name="example"></a>示例
 
@@ -588,7 +588,7 @@ const CharType *scan_is(
 
 ### <a name="parameters"></a>参数
 
-*maskVal* \
+*maskVal*\
 要通过字符匹配的掩码值。
 
 *第一个*\
@@ -603,7 +603,7 @@ const CharType *scan_is(
 
 ### <a name="remarks"></a>备注
 
-此成员函数返回[do_scan_is](#do_scan_is)（`maskVal`、`first` `last`）。
+该成员函数将返回[do_scan_is](#do_scan_is)（`maskVal`、`first``last`）。
 
 ### <a name="example"></a>示例
 
@@ -644,7 +644,7 @@ const CharType *scan_not(
 
 ### <a name="parameters"></a>参数
 
-*maskVal* \
+*maskVal*\
 不通过字符匹配的掩码值。
 
 *第一个*\
@@ -659,7 +659,7 @@ const CharType *scan_not(
 
 ### <a name="remarks"></a>备注
 
-此成员函数返回[do_scan_not](#do_scan_not)（`maskVal`、`first` `last`）。
+该成员函数将返回[do_scan_not](#do_scan_not)（`maskVal`、`first``last`）。
 
 ### <a name="example"></a>示例
 
@@ -699,7 +699,7 @@ const CharType *tolower(CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>参数
 
-*ch* \
+*ch*\
 要转换为小写的字符。
 
 *第一个*\
@@ -754,7 +754,7 @@ const CharType *toupper(CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>参数
 
-*ch* \
+*ch*\
 要转换为大写的字符。
 
 *第一个*\
@@ -813,12 +813,12 @@ const char *widen(const char* first, const char* last, CharType* dest) const;
 要转换的本机字符集中的 char 类型字符。
 
 *第一个*\
-指向要转换的字符范围内的第一个字符的指针。
+指向要转换的字符范围内第一个字符的指针。
 
 *最后*\
 指向要转换的字符范围内最后一个字符之后紧跟的字符的指针。
 
-*dest* \
+*dest*\
 指向目标范围内 `CharType` 类型的第一个字符的指针，该范围存储经过转换的字符范围。
 
 ### <a name="return-value"></a>返回值
@@ -829,7 +829,7 @@ const char *widen(const char* first, const char* last, CharType* dest) const;
 
 ### <a name="remarks"></a>备注
 
-第一个成员函数返回[do_widen](#do_widen)（`byte`）。 第二个成员函数返回[do_widen](#do_widen)（`first`、`last` `dest`）。
+第一个成员函数返回[do_widen](#do_widen)（`byte`）。 第二个成员函数返回[do_widen](#do_widen)（`first`、`last``dest`）。
 
 ### <a name="example"></a>示例
 
@@ -861,7 +861,7 @@ Hello everyone!
 Hello everyone!
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[\<locale>](../standard-library/locale.md)\
+[\<区域设置>](../standard-library/locale.md)\
 [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

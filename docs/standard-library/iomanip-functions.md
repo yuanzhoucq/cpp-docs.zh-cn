@@ -27,11 +27,11 @@ helpviewer_keywords:
 - std::setprecision [C++]
 - std::setw [C++]
 ms.openlocfilehash: 944834e40a399622b5c85d95100d4ca3c3c2da93
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518460"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856471"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt; 函数
 
@@ -63,7 +63,7 @@ T7 get_money(Money& amount, bool use_intl);
 
 操控器会返回一个对象，该对象在从流 `str`中提取时，将充当 `formatted input function`，该对象调用与 `str`关联的区域设置 facet `money_get` `get`，并使用*use_intl*来指示国际格式。 如果成功，则调用将按提取的货币值存储*量*。 此操控器随后返回 `str`。
 
-`Money` 必须为 `long double` 类型，或者是具有与 `str` 相同的元素和特征参数的 `basic_string` 的实例化。
+`Money` 必须为 `long double` 类型，或者是具有与 `basic_string` 相同的元素和特征参数的 `str` 的实例化。
 
 ## <a name="iomanip_get_time"></a>get_time
 
@@ -84,7 +84,7 @@ T10 put_time(struct tm *time_ptr, const Elem *time_format);
 
 ### <a name="remarks"></a>备注
 
-此操控器会返回一个对象，该对象在从流 `str` 中提取时会表现为 `formatted input function`，它为与 `str` 关联的区域设置 Facet `time_get` 调用成员函数 `get`，其使用 `tptr` 来指示时间结构，使用 `fmt` 来指示 null 终止格式字符串的开头。 如果成功，则调用会将与任何提取时间字段关联的值存储在时间结构中。 此操控器随后返回 `str`。
+此操控器会返回一个对象，该对象在从流 `str` 中提取时会表现为 `formatted input function`，它为与 `get` 关联的区域设置 Facet `time_get` 调用成员函数 `str`，其使用 `tptr` 来指示时间结构，使用 `fmt` 来指示 null 终止格式字符串的开头。 如果成功，则调用会将与任何提取时间字段关联的值存储在时间结构中。 此操控器随后返回 `str`。
 
 ## <a name="iomanip_put_money"></a>put_money
 
@@ -109,9 +109,9 @@ T8 put_money(const Money& amount, bool use_intl);
 
 ### <a name="remarks"></a>备注
 
-此操控器会返回一个对象，该对象在插入到流 `str` 中时会表现为一个格式化输出函数，该函数会对与 `str` 关联的区域设置 Facet `money_put` 调用成员函数 `put`。 如果成功，则调用插入 `amount` 的格式正确，使用*use_intl*指示国际格式并 `str.fill()`，作为填充元素。 此操控器随后返回 `str`。
+此操控器会返回一个对象，该对象在插入到流 `str` 中时会表现为一个格式化输出函数，该函数会对与 `put` 关联的区域设置 Facet `money_put` 调用成员函数 `str`。 如果成功，则调用插入 `amount` 的格式正确，使用*use_intl*指示国际格式并 `str.fill()`，作为填充元素。 此操控器随后返回 `str`。
 
-`Money` 必须为 `long double` 类型，或者是具有与 `str` 相同的元素和特征参数的 `basic_string` 的实例化。
+`Money` 必须为 `long double` 类型，或者是具有与 `basic_string` 相同的元素和特征参数的 `str` 的实例化。
 
 ## <a name="iomanip_put_time"></a>put_time
 
@@ -132,7 +132,7 @@ T10 put_time(struct tm* time_ptr, const Elem* time_format);
 
 ### <a name="remarks"></a>备注
 
-操控器返回一个对象，该对象在插入到流 `str` 中时会表现为 `formatted output function`。 此输出函数会对与 `str` 关联的区域设置 Facet `time_put` 调用成员函数 `put`。 Output 函数使用*time_ptr*来指示时间结构，并*time_format*以指示以 null 结尾的格式字符串的开头。 如果成功，则调用会从格式字符串插入文字文本，从时间结构插入转换的值。 此操控器随后返回 `str`。
+操控器返回一个对象，该对象在插入到流 `str` 中时会表现为 `formatted output function`。 此输出函数会对与 `put` 关联的区域设置 Facet `time_put` 调用成员函数 `str`。 Output 函数使用*time_ptr*来指示时间结构，并*time_format*以指示以 null 结尾的格式字符串的开头。 如果成功，则调用会从格式字符串插入文字文本，从时间结构插入转换的值。 此操控器随后返回 `str`。
 
 ## <a name="quoted"></a>quoted
 
@@ -320,7 +320,7 @@ T1 resetiosflags(ios_base::fmtflags mask);
 
 ### <a name="example"></a>示例
 
-有关使用 `resetiosflags` 的示例，请参阅 [setw](../standard-library/iomanip-functions.md#setw)。
+有关使用 [ 的示例，请参阅 ](../standard-library/iomanip-functions.md#setw)setw`resetiosflags`。
 
 ## <a name="setbase"></a>setbase
 
@@ -349,7 +349,7 @@ T3 setbase(int base);
 
 ### <a name="example"></a>示例
 
-有关使用 `setbase` 的示例，请参阅 [setw](../standard-library/iomanip-functions.md#setw)。
+有关使用 [ 的示例，请参阅 ](../standard-library/iomanip-functions.md#setw)setw`setbase`。
 
 ## <a name="setfill"></a>setfill
 
@@ -371,7 +371,7 @@ T4 setfill(Elem Ch);
 
 ### <a name="example"></a>示例
 
-有关使用 `setfill` 的示例，请参阅 [setw](../standard-library/iomanip-functions.md#setw)。
+有关使用 [ 的示例，请参阅 ](../standard-library/iomanip-functions.md#setw)setw`setfill`。
 
 ## <a name="setiosflags"></a>setiosflags
 
@@ -392,7 +392,7 @@ T2 setiosflags(ios_base::fmtflags mask);
 
 ### <a name="example"></a>示例
 
-有关使用 `setiosflags` 的示例，请参阅 [setw](../standard-library/iomanip-functions.md#setw)。
+有关使用 [ 的示例，请参阅 ](../standard-library/iomanip-functions.md#setw)setw`setiosflags`。
 
 ## <a name="setprecision"></a>setprecision
 
@@ -413,7 +413,7 @@ T5 setprecision(streamsize Prec);
 
 ### <a name="example"></a>示例
 
-有关使用 `setprecision` 的示例，请参阅 [setw](../standard-library/iomanip-functions.md#setw)。
+有关使用 [ 的示例，请参阅 ](../standard-library/iomanip-functions.md#setw)setw`setprecision`。
 
 ## <a name="setw"></a>setw
 
