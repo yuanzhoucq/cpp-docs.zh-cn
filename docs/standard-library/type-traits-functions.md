@@ -25,13 +25,13 @@ helpviewer_keywords:
 - std::is_trivially_move_assignable
 - std::is_trivially_move_constructible
 ms.openlocfilehash: 48ca51d56994f3d487af6744801acedf5c6cc79c
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447033"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874189"
 ---
-# <a name="lttypetraitsgt-functions"></a>&lt;type_traits&gt; 函数
+# <a name="lttype_traitsgt-functions"></a>&lt;type_traits&gt; 函数
 
 ||||
 |-|-|-|
@@ -50,12 +50,12 @@ template <class To, class From>
 struct is_assignable;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*自*\
+*要*\
 接收赋值的对象的类型。
 
-*从*\
+*From*\
 提供值的对象的类型。
 
 ### <a name="remarks"></a>备注
@@ -71,14 +71,14 @@ template <class Ty>
 struct is_copy_assignable;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Ty*\
 要查询的类型。
 
 ### <a name="remarks"></a>备注
 
-如果类型*Ty*是具有复制赋值运算符的类, 则类型谓词的实例为 true; 否则为 false。 等效于 is_assignable\<Ty&, const Ty&>。
+如果类型*Ty*是具有复制赋值运算符的类，则类型谓词的实例为 true; 否则为 false。 等效于 is_assignable\<Ty&, const Ty&>。
 
 ## <a name="is_copy_constructible"></a>  is_copy_constructible
 
@@ -89,14 +89,14 @@ template <class Ty>
 struct is_copy_constructible;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Ty*\
 要查询的类型。
 
 ### <a name="remarks"></a>备注
 
-如果类型*Ty*是具有复制构造函数的类, 则类型谓词的实例为 true; 否则为 false。
+如果类型*Ty*是具有复制构造函数的类，则类型谓词的实例为 true; 否则为 false。
 
 ### <a name="example"></a>示例
 
@@ -141,14 +141,14 @@ template <class Ty>
 struct is_default_constructible;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*关心*\
+*T*\
 要查询的类型。
 
 ### <a name="remarks"></a>备注
 
-如果类型*T*是具有默认构造函数的类类型, 则类型谓词的实例为 true; 否则为 false。 这等效于谓词 `is_constructible<T>`。 类型*T*必须是完整类型、**无效**或未知绑定的数组。
+如果类型*T*是具有默认构造函数的类类型，则类型谓词的实例为 true; 否则为 false。 这等效于谓词 `is_constructible<T>`。 类型*T*必须是完整类型、**无效**或未知绑定的数组。
 
 ### <a name="example"></a>示例
 
@@ -193,9 +193,9 @@ template <class T>
 struct is_move_assignable;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*关心*\
+*T*\
 要查询的类型。
 
 ### <a name="remarks"></a>备注
@@ -211,14 +211,14 @@ template <class T>
 struct is_move_constructible;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*关心*\
+*T*\
 要计算的类型
 
 ### <a name="remarks"></a>备注
 
-如果可以使用移动操作构造类型*T* , 则其计算结果为 true 的类型谓词。 此谓词等效于 `is_constructible<T, T&&>`。
+如果可以使用移动操作构造类型*T* ，则其计算结果为 true 的类型谓词。 此谓词等效于 `is_constructible<T, T&&>`。
 
 ## <a name="is_nothrow_move_assignable"></a>  is_nothrow_move_assignable
 
@@ -229,14 +229,14 @@ template <class Ty>
 struct is_nothrow_move_assignable;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Ty*\
 要查询的类型。
 
 ### <a name="remarks"></a>备注
 
-如果类型*Ty*具有 nothrow 移动赋值运算符, 则类型谓词的实例为 true; 否则为 false。
+如果类型*Ty*具有 nothrow 移动赋值运算符，则类型谓词的实例为 true; 否则为 false。
 
 ## <a name="is_nothrow_swappable"></a>is_nothrow_swappable
 
@@ -271,16 +271,16 @@ template <class Ty>
 struct is_trivially_copy_assignable;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*关心*\
+*T*\
 要查询的类型。
 
 ### <a name="remarks"></a>备注
 
-如果类型*T*是具有普通复制赋值运算符的类, 则类型谓词的实例为 true; 否则为 false。
+如果类型*T*是具有普通复制赋值运算符的类，则类型谓词的实例为 true; 否则为 false。
 
-如果类*t*的赋值构造函数是隐式提供的, 则该类没有虚函数, 类 t 没有虚函数, 类*t*没有虚拟基, 类类型的所有非静态数据成员的类具有普通赋值运算符以及类的类型数组的所有非静态数据成员的类具有普通赋值运算符。
+如果类*t*的赋值构造函数是隐式提供的，则该类没有虚函数，*类 t 没有*虚函数，类*t*没有虚拟基，类类型的所有非静态数据成员的类具有普通赋值运算符，并且类的类型数组的所有非静态数据成员的类具有普通赋值运算符。
 
 ## <a name="is_trivially_move_assignable"></a>  is_trivially_move_assignable
 
@@ -291,16 +291,16 @@ template <class Ty>
 struct is_trivially_move_assignable;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Ty*\
 要查询的类型。
 
 ### <a name="remarks"></a>备注
 
-如果类型*Ty*是具有普通移动赋值运算符的类, 则类型谓词的实例为 true; 否则为 false。
+如果类型*Ty*是具有普通移动赋值运算符的类，则类型谓词的实例为 true; 否则为 false。
 
-如果以下情况, *Ty*类的移动赋值运算符是普通运算符:
+如果以下情况， *Ty*类的移动赋值运算符是普通运算符：
 
 它被隐式提供
 
@@ -321,16 +321,16 @@ template <class Ty>
 struct is_trivially_move_constructible;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Ty*\
 要查询的类型。
 
 ### <a name="remarks"></a>备注
 
-如果类型*Ty*是一个具有普通移动构造函数的类, 则类型谓词的实例为 true; 否则为 false。
+如果类型*Ty*是一个具有普通移动构造函数的类，则类型谓词的实例为 true; 否则为 false。
 
-如果以下情况, *Ty*类的移动构造函数是普通的:
+如果以下情况， *Ty*类的移动构造函数是普通的：
 
 它被隐式声明
 
@@ -348,6 +348,6 @@ struct is_trivially_move_constructible;
 
 类的类型数组的所有非静态数据成员的类具有普通构造函数
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [<type_traits>](../standard-library/type-traits.md)

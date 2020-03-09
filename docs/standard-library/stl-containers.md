@@ -6,11 +6,11 @@ helpviewer_keywords:
 - containers, C++ Standard Library
 ms.assetid: 8e915ca1-19ba-4f0d-93c8-e2c3bfd638eb
 ms.openlocfilehash: 1119947534c030afaad64e4905e58365ffffd05e
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72686093"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856707"
 ---
 # <a name="c-standard-library-containers"></a>C++ 标准库容器
 
@@ -44,7 +44,7 @@ ms.locfileid: "72686093"
 
 `map` 和 `set` 都仅允许将键或元素的一个实例插入容器中。 如果需要元素的多个实例，请使用`multimap`或`multiset`。 无序版本是 `unordered_multimap` 和 `unordered_multiset`。 有关详细信息，请参阅 [multimap 类](../standard-library/multimap-class.md)、[unordered_multimap 类](../standard-library/unordered-multimap-class.md)、[multiset 类](../standard-library/multiset-class.md)和 [unordered_multiset 类](../standard-library/unordered-multiset-class.md)。
 
-有序的映射和组集支持双向迭代器，其未排序副本支持向前迭代器。 有关详细信息，请参阅[迭代器](../standard-library/iterators.md)。
+有序的映射和组集支持双向迭代器，其未排序副本支持向前迭代器。 有关更多信息，请参见 [迭代器](../standard-library/iterators.md)。
 
 ### <a name="heterogeneous-lookup-in-associative-containers-c14"></a>关联容器中的异类查找 (C++14)
 
@@ -121,7 +121,7 @@ int main()
 
 已重载下列映射、多重映射、集与多重集中的成员函数来支持异类查找：
 
-1. 查找
+1. find
 
 1. count
 
@@ -155,7 +155,7 @@ int main()
 
 ## <a name="accessing-container-elements"></a>正在访问容器元素
 
-使用迭代器访问容器的元素。 有关详细信息，请参阅[迭代器](../standard-library/iterators.md)。
+使用迭代器访问容器的元素。 有关更多信息，请参见 [迭代器](../standard-library/iterators.md)。
 
 > [!NOTE]
 > 还可以使用[基于范围的 for 循环](../cpp/range-based-for-statement-cpp.md)来循环访问 C++ 标准库集合。
@@ -166,9 +166,9 @@ int main()
 
 ### <a name="comparing-dissimilar-containers-c14"></a>比较不同的容器 (C++14)
 
-在 c + + 14 及更高版本中，你可以通过使用采用两个完整范围的 `std::equal`、`std::mismatch` 或 `std::is_permutation` 函数重载之一来比较不同的容器和/或不同的元素类型。 这些重载使你能够比较具有不同长度的容器。 这些重载使用户非常不易遭受错误，并进行了优化，当比较不同长度的容器时会在固定时间内返回错误。 因此，我们建议使用这些重载，除非 (1) 有很明确的理由不这么做，或者 (2) 正在使用 [std::list](../standard-library/list-class.md) 容器，它不会从双范围优化中受益。
+在 c + + 14 及更高版本中，你可以通过使用采用两个完整范围的 `std::equal`、`std::mismatch`或 `std::is_permutation` 函数重载之一来比较不同的容器和/或不同的元素类型。 这些重载使你能够比较具有不同长度的容器。 这些重载使用户非常不易遭受错误，并进行了优化，当比较不同长度的容器时会在固定时间内返回错误。 因此，我们建议使用这些重载，除非 (1) 有很明确的理由不这么做，或者 (2) 正在使用 [std::list](../standard-library/list-class.md) 容器，它不会从双范围优化中受益。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [容器](../cpp/containers-modern-cpp.md)\
 [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)\
