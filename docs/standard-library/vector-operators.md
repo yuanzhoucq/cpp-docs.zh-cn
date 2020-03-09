@@ -17,15 +17,15 @@ helpviewer_keywords:
 - std::operator&lt;= (vector)
 - std::operator== (vector)
 ms.openlocfilehash: f6717add93c489f536bd0c0b0f82b74bbd915985
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240983"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876056"
 ---
 # <a name="ltvectorgt-operators"></a>&lt;vector&gt; 运算符
 
-## <a name="op_neq"></a> 运算符 ！ =
+## <a name="op_neq"></a>operator！ =
 
 测试运算符左侧的对象是否不等于右侧的对象。
 
@@ -35,10 +35,10 @@ bool operator!=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>参数
 
-*左侧*\
+*左*\
 一个 `vector` 类型的对象。
 
-*右侧*\
+*right*\
 一个 `vector` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -86,10 +86,10 @@ bool operator<(const vector<Type, Allocator>& left, const vector<Type, Allocator
 
 ### <a name="parameters"></a>参数
 
-*左侧*\
+*左*\
 一个 `vector` 类型的对象。
 
-*右侧*\
+*right*\
 一个 `vector` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -127,7 +127,7 @@ int main( )
 Vector v1 is less than vector v2.
 ```
 
-## <a name="op_lt_eq"></a> 运算符&lt;=
+## <a name="op_lt_eq"></a>操作员&lt;=
 
 测试运算符左侧的对象是否小于或等于右侧的对象。
 
@@ -137,10 +137,10 @@ bool operator<=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>参数
 
-*左侧*\
+*左*\
 一个 `vector` 类型的对象。
 
-*右侧*\
+*right*\
 一个 `vector` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -178,7 +178,7 @@ int main( )
 Vector v1 is less than or equal to vector v2.
 ```
 
-## <a name="op_eq_eq"></a> 运算符 = =
+## <a name="op_eq_eq"></a>operator = =
 
 测试运算符左侧的对象是否等于右侧的对象。
 
@@ -188,10 +188,10 @@ bool operator==(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>参数
 
-*左侧*\
+*左*\
 一个 `vector` 类型的对象。
 
-*右侧*\
+*right*\
 一个 `vector` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -239,10 +239,10 @@ bool operator>(const vector<Type, Allocator>& left, const vector<Type, Allocator
 
 ### <a name="parameters"></a>参数
 
-*左侧*\
+*左*\
 一个 `vector` 类型的对象。
 
-*右侧*\
+*right*\
 一个 `vector` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -281,7 +281,7 @@ int main( )
 Vector v1 is greater than vector v2.
 ```
 
-## <a name="op_gt_eq"></a> 运算符&gt;=
+## <a name="op_gt_eq"></a>操作员&gt;=
 
 测试运算符左侧的对象是否大于或等于右侧的对象。
 
@@ -291,10 +291,10 @@ bool operator>=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>参数
 
-*左侧*\
+*左*\
 一个 `vector` 类型的对象。
 
-*右侧*\
+*right*\
 一个 `vector` 类型的对象。
 
 ### <a name="return-value"></a>返回值
