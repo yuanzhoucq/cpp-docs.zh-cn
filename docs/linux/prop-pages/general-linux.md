@@ -3,12 +3,12 @@ title: 常规属性（Linux C++ 项目）
 description: 介绍了可在 Visual Studio 的“常规属性”页面中设置的 Linux 项目属性。
 ms.date: 01/14/2020
 ms.assetid: 56c800a9-3df9-4196-87b2-81adb00e4767
-ms.openlocfilehash: 6d598e9d52037d709cba87d98ad375455d8c00b0
-ms.sourcegitcommit: 49e4fb3e0300fe86c814130661f1bf68b16e72e2
+ms.openlocfilehash: d6a69d9fd3091c885ebd708cbc4598533d2922b4
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76031346"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883975"
 ---
 # <a name="general-properties-linux-c"></a>常规属性 (Linux C++)
 
@@ -29,7 +29,7 @@ Target Name | 指定此项目生成的文件名称。
 清除时要删除的扩展名 | 分号分隔的通配符规范，指定在清除或重新生成时要删除中间目录中的哪些文件。
 生成日志文件 | 指定启用生成日志时要写入的生成日志文件。
 平台工具集 | 指定用于生成当前配置的工具集。 如果未设置，则使用默认工具集。
-远程生成计算机 | 要用于远程生成、部署和调试的目标计算机或设备。 Visual Studio 2019 版本 16.1：可在[调试](debugging-linux.md)页面中指定其他用于调试的计算机  。
+远程生成计算机 | 显示用于远程生成、部署和调试的目标计算机或设备。 可通过使用“工具” > “选项” > “跨平台” > “连接管理器”，添加或编辑目标计算机连接     。 Visual Studio 2019 版本 16.1：可在[调试](debugging-linux.md)页面中指定其他用于调试的计算机  。
 远程生成根目录 | 指定远程计算机或设备上目录的路径。
 远程生成项目目录 | 指定远程计算机或设备上项目的目录路径。
 远程部署目录 | Visual Studio 2019 版本 16.1：指定远程计算机或设备上的目录路径以部署项目  。
