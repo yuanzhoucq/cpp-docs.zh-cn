@@ -3,11 +3,11 @@ title: 在 Visual Studio 中配置 C++ Linux 项目
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
 ms.openlocfilehash: 5d42ca587946d3b5adcbd3b6fe35a6c1e1bb9ae8
-ms.sourcegitcommit: 49e4fb3e0300fe86c814130661f1bf68b16e72e2
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76031368"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865619"
 ---
 # <a name="configure-a-linux-project"></a>配置 Linux 项目
 
