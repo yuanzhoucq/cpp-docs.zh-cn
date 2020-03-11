@@ -71,11 +71,11 @@ helpviewer_keywords:
 - std::numeric_limits [C++], traps
 ms.assetid: 9e817177-0e91-48e6-b680-0531c4b26625
 ms.openlocfilehash: 5373bd6a99605f5a63fb6aa2ed6de50c12b1c8f1
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687623"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876019"
 ---
 # <a name="numeric_limits-class"></a>numeric_limits 类
 
@@ -95,7 +95,7 @@ template <class Type>
 
 ## <a name="remarks"></a>备注
 
-标头定义类型为**wchar_t**、 **bool**、 **char**、**有符号字符**、**无符号 char**、 **short**、**无符号 short**、 **int**、**无符号 int**、 **long**、**无符号长**、**浮点**、**双**精度、**长双精度**、**长**、**无符号长整型**、 **char16_t**和**char32_t**。 对于这些显式专用化，成员[numeric_limits：： is_specialized](#is_specialized)为**true**，所有相关成员都具有有意义的值。 程序可提供额外的显式专用化。 类的大多数成员函数描述或测试**float**的可能实现。
+标头为类型**wchar_t**、 **bool**、 **char**、**有符号字符**、**无符号 char**、 **short**、**无符号短**、**整数**、**无符号整数**、**长**、**无符号长**、**浮点**、**双** **精度、长双精度**、**长**整数、**无符号长**、 **char16_t**和**char32_t**定义显式专用化。 对于这些显式专用化，成员[numeric_limits：： is_specialized](#is_specialized)为**true**，所有相关成员都具有有意义的值。 程序可提供额外的显式专用化。 类的大多数成员函数描述或测试**float**的可能实现。
 
 对于任意专用化，所有成员均无有意义的值。 不具有有意义的值的成员对象将存储零（或**false**），并且不返回有意义的值的成员函数将返回 `Type(0)`。
 
@@ -119,7 +119,7 @@ template <class Type>
 |[is_integer](#is_integer)|测试某一类型是否具有具有整数表示形式。|
 |[is_modulo](#is_modulo)|测试某一类型是否具有具有取模表示形式。|
 |[is_signed](#is_signed)|测试某一类型是否具有带符号的表示形式。|
-|[is_specialized](#is_specialized)|测试某一类型是否具有在类模板 `numeric_limits` 中定义的显式专用化。|
+|[is_specialized](#is_specialized)|测试某一类型是否具有在类模板 `numeric_limits`中定义的显式专用化。|
 |[lowest](#lowest)|返回最小的负有限值。|
 |[max](#max)|返回某个类型的最大有限值。|
 |[max_digits10](#max_digits10)|返回确保类型的两个非重复值具有不同的十进制表示形式所需的十进制数字的位数。|
@@ -152,7 +152,7 @@ static constexpr Type denorm_min() throw();
 
 **long double**与C++编译器的**双**精度值相同。
 
-该函数返回该类型的最小值，如果[has_denorm](#has_denorm)不等于 `denorm_present`，则该值与[min](#min)相同。
+该函数返回该类型的最小值（如果[has_denorm](#has_denorm)不等于 `denorm_present`，则与[min](#min)相同）。
 
 #### <a name="example"></a>示例
 
@@ -929,7 +929,7 @@ Whether unsigned char objects have a signed representation: 0
 
 ### <a name="is_specialized"></a>is_specialized
 
-测试某一类型是否具有在类模板 `numeric_limits` 中定义的显式专用化。
+测试某一类型是否具有在类模板 `numeric_limits`中定义的显式专用化。
 
 ```cpp
 static constexpr bool is_specialized = false;
@@ -941,7 +941,7 @@ static constexpr bool is_specialized = false;
 
 #### <a name="remarks"></a>备注
 
-除指针之外的所有标量类型都具有为类模板 `numeric_limits` 定义的显式专用化。
+除指针之外的所有标量类型都具有为类模板 `numeric_limits`定义的显式专用化。
 
 #### <a name="example"></a>示例
 
@@ -1011,7 +1011,7 @@ static constexpr Type max() throw();
 
 #### <a name="remarks"></a>备注
 
-对于类型**INT** ，最大有限值为 INT_MAX，对于**FLOAT**类型为 FLT_MAX。 当 [is_bounded](#is_bounded) 为 **true** 时，返回值有意义。
+类型为**float**的类型**INT**和 FLT_MAX INT_MAX 最大有限值。 当 [is_bounded](#is_bounded) 为 **true** 时，返回值有意义。
 
 #### <a name="example"></a>示例
 
@@ -1161,7 +1161,7 @@ static constexpr Type min() throw();
 
 #### <a name="remarks"></a>备注
 
-对于类型**INT** ，最小标准化值为 INT_MIN，对于**FLOAT**类型为 FLT_MIN。 如果[is_bounded](#is_bounded)为**true**或[is_signed](#is_signed)为**false**，则返回值是有意义的。
+对于 INT 类型的类型**INT**和 FLT_MIN INT_MIN 最小规范化值 **。** 如果[is_bounded](#is_bounded)为**true**或者[is_signed](#is_signed)为**false**，则返回值是有意义的。
 
 #### <a name="example"></a>示例
 

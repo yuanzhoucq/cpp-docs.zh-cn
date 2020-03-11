@@ -87,11 +87,11 @@ helpviewer_keywords:
 - stdext::hash_set::value_comp
 ms.assetid: c765c06e-cbb6-48c2-93ca-d15468eb28d7
 ms.openlocfilehash: becf038678f4abbe285e719e4d1cc1f3f12de982
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689540"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865118"
 ---
 # <a name="hash_set-class"></a>hash_set 类
 
@@ -115,9 +115,9 @@ class hash_set
 要存储在 hash_set 中的元素数据类型。
 
 *特征*\
-包含两个函数对象的类型，这是一个用于将两个元素值作为排序键进行比较以确定其相对顺序和一个哈希函数（即元素到无符号的一元谓词映射键值）的二进制谓词。`size_t` 类型的整数。 此自变量是可选自变量，默认值为 `hash_compare<Key, less<Key> >`。
+类型包括两个函数对象，其中一个是可以将两个元素值作为排序键进行比较以确定其相对顺序，另一个哈希函数是 `size_t`类型的无符号整数。 此自变量是可选自变量，默认值为 `hash_compare<Key, less<Key> >`。
 
-*分配*器 \
+*分配*器\
 一种表示存储的分配器对象的类型，该分配器对象封装有关 hash_set 的内存分配和解除分配的详细信息。 此参数是可选参数，默认值为 `allocator<Key>`。
 
 ## <a name="remarks"></a>备注
@@ -140,7 +140,7 @@ Hash_set 是：
 
 当应用程序满足将值与其键关联的条件时，应选择 hash_set 作为关联容器。 Hash_set 的元素是唯一的，并用作其自己的排序键。 此类结构的模型是排序列表，如关键字排序列表，其中关键字只能出现一次。 如果允许关键字多次出现，那么相应的容器结构应该是 hash_multiset。 如果需要将值附加到唯一关键字的列表，则包含此数据的适当结构应为 hash_map。 如果键不唯一，则应选择 hash_multimap 作为容器。
 
-Hash_set 通过调用存储的哈希 `Traits` 类型[value_compare](#value_compare)类型的对象来对其控制的序列进行排序。 此存储对象可通过调用成员函数 [key_comp](#key_comp) 进行访问。 此类函数对象的行为必须与类 *hash_compare\<<Key, less*Key>> 的对象的行为相同。 具体而言，对于类型键 `key` 的所有值，调用特征（`key`）生成类型为 size_t 的值的分布。
+Hash_set 通过调用[value_compare](#value_compare)类型的已存储哈希 `Traits` 对象对其控制的序列进行排序。 此存储对象可通过调用成员函数 [key_comp](#key_comp) 进行访问。 此类函数对象的行为必须与类 *hash_compare\<<Key, less*Key>> 的对象的行为相同。 具体而言，对于类型键 `key` 的所有值，调用特征（`key`）生成类型 size_t 的值的分布。
 
 通常，元素仅需小于比较元素即可建立此顺序；因此，给定任意两个元素，可以确定这两个元素等效（即两者均不小于对方）或其中一个小于另一个。 这会导致在非等效元素之间进行排序。 在技术性更强的说明中，比较函数是一个二元谓词，在标准数学的意义上引发严格弱排序。 二元谓词 *f*( *x*, *y*) 是包含两个参数对象（x 和 y）以及一个返回值（true 或 false）的函数对象。 如果二元谓词具有非自反性、反对称性和传递性且等效可传递，对 hash_set 进行的排序将为严格弱排序，其中两个对象 *x* 和 *y* 定义为在 *f*( *x*, *y*) 和 *f*( *y*, *x*) 均为 false 时等效。 如果键之间的更强相等条件取代了等效性，则排序将为总排序（即所有元素彼此排序），并且匹配的键将难以彼此辨别。
 
@@ -160,14 +160,14 @@ hash_set 类提供的迭代器是双向迭代器，但类成员函数[insert](#i
 |-|-|
 |[allocator_type](#allocator_type)|一种类型，此类型表示 `allocator` 对象的 `hash_set` 类。|
 |[const_iterator](#const_iterator)|一种类型，此类型提供可读取 `const` 中的 `hash_set` 元素的双向迭代器。|
-|[const_pointer](#const_pointer)|一种类型，它提供指向 `hash_set` 中的**const**元素的指针。|
+|[const_pointer](#const_pointer)|一种类型，它提供指向 `hash_set`中的**const**元素的指针。|
 |[const_reference](#const_reference)|一种类型，它提供对存储在 `hash_set` 中用于读取和执行**const**操作的**const**元素的引用。|
-|[const_reverse_iterator](#const_reverse_iterator)|一种类型，它提供可读取 `hash_set` 中任何**const**元素的双向迭代器。|
+|[const_reverse_iterator](#const_reverse_iterator)|一种类型，它提供可读取 `hash_set`中任何**const**元素的双向迭代器。|
 |[difference_type](#difference_type)|一种有符号整数类型，此类型可用于表示 `hash_set` 中迭代器指向的元素间范围内的元素数量。|
-|[迭代器](#iterator)|一种类型，它提供可读取或修改 `hash_set` 中任何元素的双向迭代器。|
+|[Iterator](#iterator)|一种类型，它提供可读取或修改 `hash_set` 中任何元素的双向迭代器。|
 |[key_compare](#key_compare)|一种提供函数对象的类型，该函数对象可比较两个排序键以确定 `hash_set` 中两个元素的相对顺序。|
 |[key_type](#key_type)|一种类型，它描述当作为排序键存储为其容量中 `hash_set` 的元素的对象。|
-|[指针](#pointer)|一种类型，它提供指向 `hash_set` 中的某个元素的指针。|
+|[pointer](#pointer)|一种类型，它提供指向 `hash_set` 中的某个元素的指针。|
 |[reference](#reference)|一种类型，此类型提供对存储在 `hash_set` 中的元素的引用。|
 |[reverse_iterator](#reverse_iterator)|一种类型，此类型提供可读取或修改反向 `hash_set` 中的元素的双向迭代器。|
 |[size_type](#size_type)|可表示 `hash_set` 中元素数量的无符号整数类型。|
@@ -206,13 +206,13 @@ hash_set 类提供的迭代器是双向迭代器，但类成员函数[insert](#i
 
 ### <a name="operators"></a>运算符
 
-|运算符|描述|
+|Operator|描述|
 |-|-|
 |[hash_set::operator=](#op_eq)|将一个 `hash_set` 中的元素替换为另一 `hash_set` 副本。|
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<hash_set>
+**标头：** \<hash_set >
 
 **命名空间：** stdext
 
@@ -807,7 +807,7 @@ emplace(
 
 ### <a name="return-value"></a>返回值
 
-@No__t_0 成员函数返回一个对 **，其中，** 如果执行插入操作，则该函数将返回**true** ; 如果 `hash_set` 已包含一个其键在排序中具有等效值的元素，则返回 false; 否则返回**false** 。组件返回新元素的插入位置或已定位的元素的地址。
+`emplace` 成员函数返回一个对，其中的**bool**组件返回**true** ，如果 `hash_set` 已经包含一个其键在排序中具有等效值的元素，并且其迭代器组件返回新元素的插入位置或已定位的元素的位置，则为**false** 。
 
 ### <a name="remarks"></a>备注
 
@@ -856,7 +856,7 @@ iterator emplace(
 |参数|描述|
 |-|-|
 |*val*|要插入 [hash_set](../standard-library/hash-set-class.md) 的元素的值，除非 `hash_set` 已包含该元素（更宽泛地说，是其键经等效排序的元素）。|
-|*_Where*|开始搜索正确插入点的位置。 （如果插入点紧跟 *_Where*，则可能会在分期常量时间内（而不是对数时间）进行插入。|
+|*_Where*|开始搜索正确插入点的位置。 （如果插入点紧随 *_Where*，则可能会在分期常量时间内（而不是对数时间）进行插入。|
 
 ### <a name="return-value"></a>返回值
 
@@ -960,7 +960,7 @@ iterator end();
 
 ### <a name="remarks"></a>备注
 
-`end` 用于测试迭代器是否已到达其 hash_set 的末尾。 不应对 `end` 返回的值取消引用。
+`end` 用于测试迭代器是否已到达其 hash_set 的结尾。 不应对 `end` 返回的值取消引用。
 
 ### <a name="example"></a>示例
 
@@ -1106,7 +1106,7 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>参数
 
-*_Where* \
+*_Where*\
 要从 hash_set 中删除的元素的位置。
 
 *第一个*\
@@ -1229,13 +1229,13 @@ const_iterator find(const Key& key) const;
 
 ### <a name="return-value"></a>返回值
 
-一个 `iterator` 或 `const_iterator`，用于寻址与指定键等效的元素的位置，或如果未找到键的匹配项，则发现 hash_set 中最后一个元素之后的位置。
+一个 `iterator` 或 `const_iterator`，用于寻址与指定键等效的元素的位置，或用于发现该键 hash_set 中最后一个元素之后的位置的位置。
 
 ### <a name="remarks"></a>备注
 
 此成员函数返回一个迭代器，该迭代器用于寻址 hash_set 中其排序键与二元谓词下的参数键 `equivalent` 的元素，该谓词基于小于比较关系进行排序。
 
-如果 `find` 的返回值分配给某个 `const_iterator`，则无法修改 hash_set 对象。 如果 `find` 的返回值分配给某个 `iterator`，则可以修改 hash_set 对象。
+如果 `find` 的返回值分配给某个 `const_iterator`，则无法修改 hash_set 对象。 如果 `find` 的返回值分配给某个 `iterator`，则可修改该 hash_set 对象。
 
 ### <a name="example"></a>示例
 
@@ -1300,7 +1300,7 @@ Allocator get_allocator() const;
 
 ### <a name="return-value"></a>返回值
 
-Hash_set 用来管理内存的分配器，即模板参数*分配*器。
+Hash_set 用于管理内存的分配器，即模板参数*分配*器。
 
 有关*分配*器的详细信息，请参阅[hash_set 类](../standard-library/hash-set-class.md)主题的 "备注" 部分。
 
@@ -1424,8 +1424,8 @@ hash_set(
 |*Fc-al*|要用于此 `hash_set` 对象的存储分配器类，默认为 `Allocator`。|
 |*压缩*|用于对 `hash_set` 中元素排序的类型 `const Traits` 的比较函数，默认为 `hash_compare`。|
 |右侧|所构造的 `hash_set` 要作为其副本的 `hash_set`。|
-|*1*|要复制的范围元素中的第一个元素的位置。|
-|*时间*|要复制的元素范围以外的第一个元素的位置。|
+|*第一个*|要复制的范围元素中的第一个元素的位置。|
+|*上一次*|要复制的元素范围以外的第一个元素的位置。|
 
 ### <a name="remarks"></a>备注
 
@@ -1437,7 +1437,7 @@ hash_set(
 
 第一个构造函数创建一个空的起始 `hash_set`，第二个构造函数指定用于建立元素顺序的比较函数 ( `Comp`) 的类型，第三个构造函数显式指定要使用的分配器类型 ( `Al`)。 关键字 `explicit` 取消了某些种类的自动类型转换。
 
-第四个和第五个构造函数指定 `hash_set` `Right` 的副本。
+第四个和第五个构造函数指定 `hash_set` `Right`的副本。
 
 最后，第六个、第七个和第八个构造函数对元素使用 initializer_list。
 
@@ -1476,13 +1476,13 @@ void insert(
 |-|-|
 |*初始值*|要插入 `hash_set` 的元素的值，除非 `hash_set` 已包含该元素（更宽泛地说，是其键经等效排序的元素）。|
 |*Where*|开始搜索正确插入点的位置。 （如果插入点紧随 `_Where`，则插入可发生在分期常量时间内，而非对数时间内。）|
-|*1*|要从 `hash_set` 中复制的第一个元素的位置。|
-|*时间*|要从 `hash_set` 中复制的最后一个元素以外的位置。|
+|*第一个*|要从 `hash_set` 中复制的第一个元素的位置。|
+|*上一次*|要从 `hash_set` 中复制的最后一个元素以外的位置。|
 |*IList*|从中复制元素的 initializer_list。|
 
 ### <a name="return-value"></a>返回值
 
-第一个 `insert` 成员函数返回一个对，其中的**bool**组件返回**true** ，如果已执行插入，则**为 false** ; 如果 `hash_set` 已包含一个其键在排序中具有等效值的元素，则返回 false; 否则返回 false。组件返回新元素的插入位置或已定位的元素的地址。
+第一个 `insert` 成员函数返回一个对，其中的**bool**组件返回**true** ，如果 `hash_set` 已经包含一个其键在排序中具有等效值的元素，并且其迭代器组件返回新元素的插入位置或已定位的元素的位置，则为**false** 。
 
 若要访问此成员函数返回的 `pr` 对的迭代器组件，请使用 `pr.first`；若要对其取消引用，请使用 `*(pr.first)`。 若要访问此成员函数返回的对的**bool**部分 `pr`，请使用 `pr.second`，并对其取消引用，请使用 `*(pr.second)`。
 
@@ -1655,7 +1655,7 @@ iterator lower_bound(const Key& key);
 
 ### <a name="return-value"></a>返回值
 
-一种 `iterator` 或 `const_iterator`，用于寻址 hash_set 中其键等于或大于参数键的元素的位置，或用于寻址 hash_set 中最后一个元素之后的位置（如果找不到该键的匹配项）。
+一种 `iterator` 或 `const_iterator`，用于寻址某个元素的位置，该 hash_set 元素的键等于或大于参数键，或者用于发现该键 hash_set 中最后一个元素之后的位置的位置。
 
 ### <a name="remarks"></a>备注
 
@@ -1764,11 +1764,11 @@ hash_set& operator=(hash_set&& right);
 
 |参数|描述|
 |-|-|
-|right|要复制到 `hash_set` 中的 [hash_set](../standard-library/hash-set-class.md)。|
+|*right*|要复制到 `hash_set` 中的 [hash_set](../standard-library/hash-set-class.md)。|
 
 ### <a name="remarks"></a>备注
 
-擦除 `hash_set` 中的任何现有元素后，`operator=` 将*右侧*的内容复制或移动到 `hash_set` 中。
+擦除 `hash_set`中的任何现有元素后，`operator=` 将*右侧*的内容复制或移动到 `hash_set`中。
 
 ### <a name="example"></a>示例
 
@@ -2140,7 +2140,7 @@ void swap(hash_set& right);
 
 ### <a name="parameters"></a>参数
 
-*right* \
+*right*\
 参数 hash_set 提供与目标 hash_set 进行交换的元素。
 
 ### <a name="remarks"></a>备注
@@ -2221,7 +2221,7 @@ iterator upper_bound(const Key& key);
 
 ### <a name="return-value"></a>返回值
 
-一种 `iterator` 或 `const_iterator`，用于寻址 hash_set 中其键等于或大于参数键的元素的位置，或用于寻址 hash_set 中最后一个元素之后的位置（如果找不到该键的匹配项）。
+一种 `iterator` 或 `const_iterator`，用于寻址某个元素在 hash_set 中的某个元素的位置，该键等于或大于参数键，或用于寻址 hash_set 中最后一个元素之后的位置（如果找不到该键的匹配项）。
 
 ### <a name="remarks"></a>备注
 
@@ -2423,5 +2423,5 @@ The hash_set has elements: 10 20.
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

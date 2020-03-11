@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::basic_ifstream [C++], swap
 ms.assetid: 366cd9a7-efc4-4b7f-ba10-c8271e47ffcf
 ms.openlocfilehash: 1e5e22c837ca2d6389591cec6d2cdd256ca50b1a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455519"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865856"
 ---
 # <a name="basic_ifstream-class"></a>basic_ifstream 类
 
@@ -77,7 +77,7 @@ int main(int argc, char **argv)
 This is the contents of basic_ifstream_class.txt.
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>输出
 
 ```cpp
 This is the contents of basic_ifstream_class.txt.
@@ -101,13 +101,13 @@ This is the contents of basic_ifstream_class.txt.
 
 ### <a name="operators"></a>运算符
 
-|运算符|描述|
+|Operator|描述|
 |-|-|
 |[operator=](#op_eq)|分配此流对象的内容。 这是一种移动赋值，所涉及的 `rvalue` 不会留下副本。|
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<fstream>
+**标头：** \<m >
 
 **命名空间：** std
 
@@ -185,7 +185,7 @@ void close();
 
 ### <a name="remarks"></a>备注
 
-成员函数调用 [rdbuf](#rdbuf) **->** [close](../standard-library/basic-filebuf-class.md#close)。
+此成员函数调用[rdbuf](#rdbuf) **->** [close](../standard-library/basic-filebuf-class.md#close)。
 
 ### <a name="example"></a>示例
 
@@ -248,11 +248,11 @@ void open(
 
 ### <a name="remarks"></a>备注
 
-成员函数调用 [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode` &#124; **ios_base::in**). 如果打开失败，该函数将调用 [setstate](../standard-library/basic-ios-class.md#setstate)（`failbit`），这可能会引发 ios_base：：失败异常。
+此成员函数调用[rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)（_ *Filename*，`_Mode` &#124; **ios_base：： in**）。 如果打开失败，该函数将调用 [setstate](../standard-library/basic-ios-class.md#setstate)（`failbit`），这可能会引发 ios_base：：失败异常。
 
 ### <a name="example"></a>示例
 
-有关使用`open`的示例，请参阅[basic_filebuf：： open](../standard-library/basic-filebuf-class.md#open) 。
+有关使用 `open`的示例，请参阅[basic_filebuf：： open](../standard-library/basic-filebuf-class.md#open) 。
 
 ## <a name="op_eq"></a>  basic_ifstream::operator=
 
@@ -264,7 +264,7 @@ basic_ifstream& operator=(basic_ifstream&& right);
 
 ### <a name="parameters"></a>参数
 
-*然后*\
+*right*\
 对 `basic_ifstream` 对象的右值引用。
 
 ### <a name="return-value"></a>返回值
@@ -301,7 +301,7 @@ void swap(basic_ifstream& right);
 
 ### <a name="parameters"></a>参数
 
-*然后*\
+*right*\
 对另一个流缓冲区的引用。
 
 ### <a name="remarks"></a>备注

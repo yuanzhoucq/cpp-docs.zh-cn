@@ -139,15 +139,15 @@ helpviewer_keywords:
 - std::unordered_map::swap
 ms.assetid: 7cf7cfa1-16e7-461c-a9b2-3b8d8ec24e0d
 ms.openlocfilehash: 6b6d907fd0f1f19c829f991a61c9d92e015c6686
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72684449"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78873950"
 ---
 # <a name="unordered_map-class"></a>unordered_map 类
 
-类模板描述了一个对象，该对象控制 `std::pair<const Key, Ty>` 类型的不同长度的元素序列。 序列由哈希函数弱排序，哈希函数将此序列分区到称为存储桶的有序序列集中。 在每个存储桶中，比较函数将确定任一元素对是否具有等效顺序。 每个元素存储两个对象，包括一个排序键和一个值。 序列以允许查找、插入和移除任意元素的方式表示，并包含与序列中的元素数量无关的多个操作（常量时间），至少在所有存储桶长度大致相等时如此。 在最坏情况下，当所有元素位于一个存储桶中时，操作数量与序列中的元素数量成比例（线性时间）。 此外，插入元素不会使迭代器失效，移除元素仅会使指向已移除元素的迭代器失效。
+类模板描述了一个对象，该对象控制 `std::pair<const Key, Ty>`类型的不同长度的元素序列。 序列由哈希函数弱排序，哈希函数将此序列分区到称为存储桶的有序序列集中。 在每个存储桶中，比较函数将确定任一元素对是否具有等效顺序。 每个元素存储两个对象，包括一个排序键和一个值。 序列以允许查找、插入和移除任意元素的方式表示，并包含与序列中的元素数量无关的多个操作（常量时间），至少在所有存储桶长度大致相等时如此。 在最坏情况下，当所有元素位于一个存储桶中时，操作数量与序列中的元素数量成比例（线性时间）。 此外，插入元素不会使迭代器失效，移除元素仅会使指向已移除元素的迭代器失效。
 
 ## <a name="syntax"></a>语法
 
@@ -164,9 +164,9 @@ class unordered_map;
 
 |参数|描述|
 |-|-|
-|*Key*|键类型。|
+|*Key*|密钥类型。|
 |*Ty*|映射类型。|
-|*代码*|哈希函数对象类型。|
+|*哈希*|哈希函数对象类型。|
 |*Pred*|相等比较函数对象类型。|
 |*分配*|allocator 类。|
 
@@ -181,12 +181,12 @@ class unordered_map;
 |[const_reference](#const_reference)|元素的常量引用的类型。|
 |[difference_type](#difference_type)|两个元素间的带符号距离的类型。|
 |[hasher](#hasher)|哈希函数的类型。|
-|[迭代器](#iterator)|受控序列的迭代器的类型。|
+|[Iterator](#iterator)|受控序列的迭代器的类型。|
 |[key_equal](#key_equal)|比较函数的类型。|
 |[key_type](#key_type)|排序键的类型。|
 |[local_iterator](#local_iterator)|受控序列的存储桶迭代器的类型。|
 |[mapped_type](#mapped_type)|与每个键关联的映射值的类型。|
-|[指针](#pointer)|指向元素的指针的类型。|
+|[pointer](#pointer)|指向元素的指针的类型。|
 |[reference](#reference)|元素的引用的类型。|
 |[size_type](#size_type)|两个元素间的无符号距离的类型。|
 |[value_type](#value_type)|元素的类型。|
@@ -195,13 +195,13 @@ class unordered_map;
 |-|-|
 |[at](#at)|查找具有指定键的元素。|
 |[begin](#begin)|指定受控序列的开头。|
-|[地址](#bucket)|获取键值的存储桶编号。|
+|[bucket](#bucket)|获取键值的存储桶编号。|
 |[bucket_count](#bucket_count)|获取存储桶数。|
 |[bucket_size](#bucket_size)|获取存储桶的大小。|
 |[cbegin](#cbegin)|指定受控序列的开头。|
 |[cend](#cend)|指定受控序列的末尾。|
 |[clear](#clear)|删除所有元素。|
-|[count](#count)|查找与指定键匹配的元素数。|
+|[计数](#count)|查找与指定键匹配的元素数。|
 |[emplace](#emplace)|添加就地构造的元素。|
 |[emplace_hint](#emplace_hint)|添加就地构造的元素，附带提示。|
 |[empty](#empty)|测试元素是否存在。|
@@ -222,26 +222,26 @@ class unordered_map;
 |[swap](#swap)|交换两个容器的内容。|
 |[unordered_map](#unordered_map)|构造容器对象。|
 
-|运算符|描述|
+|Operator|描述|
 |-|-|
 |[unordered_map::operator[]](#op_at)|查找或插入具有指定键的元素。|
 |[unordered_map::operator=](#op_eq)|复制哈希表。|
 
 ## <a name="remarks"></a>备注
 
-对象通过调用两个存储对象，即一个 [unordered_map::key_equal](#key_equal) 类型的比较函数对象和一个 [unordered_map::hasher](#hasher) 类型的哈希函数对象，对它控制的序列进行排序。 可以通过调用成员函数 [unordered_map::key_eq](#key_eq)`()` 访问第一个存储对象；通过调用成员函数 [unordered_map::hash_function](#hash)`()` 访问第二个存储对象。 具体而言，对于所有 `X` 类型的值 `Y` 和 `Key`，`key_eq()(X, Y)` 调用将仅在两个参数值拥有等效顺序时返回 true；`hash_function()(keyval)` 调用将生成 `size_t` 类型的值的分布。 与类模板[Unordered_multimap 类](../standard-library/unordered-multimap-class.md)不同，类型 `unordered_map` 的对象可确保对于受控序列的任意两个元素，`key_eq()(X, Y)` 始终为 false。 （键是唯一的。）
+对象通过调用两个存储对象，即一个 [unordered_map::key_equal](#key_equal) 类型的比较函数对象和一个 [unordered_map::hasher](#hasher) 类型的哈希函数对象，对它控制的序列进行排序。 可以通过调用成员函数 [unordered_map::key_eq](#key_eq)`()` 访问第一个存储对象；通过调用成员函数 [unordered_map::hash_function](#hash)`()` 访问第二个存储对象。 具体而言，对于所有 `X` 类型的值 `Y` 和 `Key`，`key_eq()(X, Y)` 调用将仅在两个参数值拥有等效顺序时返回 true；`hash_function()(keyval)` 调用将生成 `size_t` 类型的值的分布。 与类模板[Unordered_multimap 类](../standard-library/unordered-multimap-class.md)不同，类型 `unordered_map` 的对象可确保 `key_eq()(X, Y)` 对于受控序列的任意两个元素始终为 false。 （键是唯一的。）
 
 此对象还存储最大加载因子，用于指定每个存储桶的元素的最大所需平均数量。 如果插入元素导致 [unordered_map::load_factor](#load_factor)`()` 超出最大加载因子，容器将增加存储桶的数量并根据需要重新生成哈希表。
 
 受控序列中元素的实际顺序取决于哈希函数、比较函数、插入顺序、最大加载因子和存储桶的当前数量。 通常无法预测受控序列中的元素顺序。 但是，可以始终确保具有等效顺序的任何元素子集在受控序列中相邻。
 
-对象通过 [unordered_map::allocator_type](#allocator_type) 类型的存储分配器对象为其控制的序列分配并释放存储。 此类分配器对象必须与 `allocator` 类型的对象具有相同的外部接口。 请注意，分配容器对象时不会复制存储的分配器对象。
+对象通过 [unordered_map::allocator_type](#allocator_type) 类型的存储分配器对象为其控制的序列分配并释放存储。 此类分配器对象必须与 `allocator`类型的对象具有相同的外部接口。 请注意，分配容器对象时不会复制存储的分配器对象。
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<unordered_map>
+**标头：** \<unordered_map >
 
-**命名空间:** std
+**命名空间：** std
 
 ## <a name="allocator_type"></a>  unordered_map::allocator_type
 
@@ -253,7 +253,7 @@ typedef Alloc allocator_type;
 
 ### <a name="remarks"></a>备注
 
-类型是模板参数 `Alloc` 的同义词。
+该类型是模板参数 `Alloc` 的同义词。
 
 ### <a name="example"></a>示例
 
@@ -406,7 +406,7 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>参数
 
-*keyval* \
+*keyval*\
 要映射的键值。
 
 ### <a name="remarks"></a>备注
@@ -548,7 +548,7 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>参数
 
-*nbucket* \
+*nbucket*\
 存储桶编号。
 
 ### <a name="remarks"></a>备注
@@ -610,7 +610,7 @@ const_iterator cbegin() const;
 
 由于使用 `cbegin` 的返回值，因此不能修改范围中的元素。
 
-可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，请考虑 `Container` 为支持 `begin()` 和 `cbegin()` 的任何类型的可修改（非常**量**）容器。
+可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，请考虑 `Container` 为支持 `begin()` 和 `cbegin()`的任何类型的可修改（非常**量**）容器。
 
 ```cpp
 auto i1 = Container.begin();
@@ -636,7 +636,7 @@ const_iterator cend() const;
 
 `cend` 用于测试迭代器是否超过了其范围的末尾。
 
-可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，请考虑 `Container` 为支持 `end()` 和 `cend()` 的任何类型的可修改（非常**量**）容器。
+可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，请考虑 `Container` 为支持 `end()` 和 `cend()`的任何类型的可修改（非常**量**）容器。
 
 ```cpp
 auto i1 = Container.end();
@@ -657,7 +657,7 @@ void clear();
 
 ### <a name="remarks"></a>备注
 
-此成员函数调用 [unordered_map::erase](#erase)`(` [unordered_map::begin](#begin)`(),` [unordered_map::end](#end)`())`。
+此成员函数调用[unordered_map：： erase](#erase)`(` [unordered_map：： begin](#begin)`(),` [unordered_map：： end](#end)`())`。
 
 ### <a name="example"></a>示例
 
@@ -907,7 +907,7 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>参数
 
-*keyval* \
+*keyval*\
 要搜索的键值。
 
 ### <a name="remarks"></a>备注
@@ -1028,7 +1028,7 @@ pair<iterator, bool>  emplace( Args&&... args);
 
 ### <a name="return-value"></a>返回值
 
-一个 `pair`，其中的**bool**组件返回 true，如果已执行插入操作，并且如果 `unordered_map` 已包含一个其键在排序中具有等效值的元素，并且其迭代器组件返回插入新元素的地址，则为 false。或元素已位于的位置。
+一个 `pair`，其中的**bool**组件返回 true，如果已进行插入，则为 false; 如果 `unordered_map` 已包含一个其键在排序中具有等效值的元素，则为 false; 如果该元素的迭代器组件返回新元素的插入位置或已定位的元素，则为 false。
 
 若要访问此成员函数返回的 `pr` 对的迭代器组件，请使用 `pr.first`；若要对其取消引用，请使用 `*(pr.first)`。 若要访问此成员函数返回的对的**布尔**分量 `pr`，请使用 `pr.second`。
 
@@ -1171,7 +1171,7 @@ std::pair<const_iterator, const_iterator>  equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>参数
 
-*keyval* \
+*keyval*\
 要搜索的键值。
 
 ### <a name="remarks"></a>备注
@@ -1240,7 +1240,7 @@ size_type erase(const key_type& Key);
 
 ### <a name="parameters"></a>参数
 
-*Where* \
+*Where*\
 要移除的元素的位置。
 
 *第一个*\
@@ -1272,7 +1272,7 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>参数
 
-*keyval* \
+*keyval*\
 要搜索的键值。
 
 ### <a name="remarks"></a>备注
@@ -1408,7 +1408,7 @@ typedef Hash hasher;
 
 ### <a name="remarks"></a>备注
 
-类型是模板参数 `Hash` 的同义词。
+该类型是模板参数 `Hash` 的同义词。
 
 ### <a name="example"></a>示例
 
@@ -1474,15 +1474,15 @@ IList);
 |-|-|
 |*初始值*|要插入到 unordered_map 中的元素的值（除非它已经包含一个具有相对有序的键的元素）。|
 |*Where*|开始搜索正确插入点的位置。|
-|*ValTy*|指定 unordered_map 可用于构造[value_type](../standard-library/map-class.md#value_type)元素的自变量类型的模板参数，以及作为参数的完美转发的*Val* 。|
-|*1*|要复制的第一个元素的位置。|
-|*时间*|要复制的最后一个元素以外的位置。|
+|*ValTy*|指定参数类型的模板参数，unordered_map 可以使用该参数类型构造[value_type](../standard-library/map-class.md#value_type)的元素，并将 "完美转发" 的*Val*作为参数。|
+|*第一个*|要复制的第一个元素的位置。|
+|*上一次*|要复制的最后一个元素以外的位置。|
 |*InputIterator*|满足[输入迭代器](../standard-library/input-iterator-tag-struct.md)需求的模板函数自变量，该输入迭代器指向可用于构造 [value_type](../standard-library/map-class.md#value_type) 对象的类型的元素。|
 |*IList*|从中复制元素的 [initializer_list](../standard-library/initializer-list.md)。|
 
 ### <a name="return-value"></a>返回值
 
-单个元素成员函数（1）和（2）返回一[对](../standard-library/pair-structure.md)，如果进行插入，则其**bool**组件为 true; 如果 unordered_map 已包含一个其键在排序中具有等效值的元素，则为 false。 如果**bool 组件为**true，则返回值对的迭代器组件指向新插入的元素; 如果为 false **，则为**现有元素。
+单个元素成员函数（1）和（2）返回一个[对](../standard-library/pair-structure.md)，其中的**bool**组件为 true，如果执行了插入操作，则为 false; 如果 unordered_map 已经包含一个其键在排序中具有等效值的元素，则为 false。 如果**bool 组件为**true，则返回值对的迭代器组件指向新插入的元素; 如果为 false **，则为**现有元素。
 
 附带提示的单个元素的成员函数 (3) 和 (4) 返回迭代器，该迭代器指向将新元素插入到 unordered_map 中的位置，如果具有等效键的元素已经存在，则指向现有元素。
 
@@ -1492,7 +1492,7 @@ IList);
 
 在只插入单个元素的过程中，如果引发异常，但是异常并未在容器的哈希函数中发生，则不会修改该容器的状态。 如果在哈希函数中引发异常，则未定义此结果。 在插入多个元素的过程中，如果引发异常，则会使容器处于未指定但有效的状态。
 
-要访问单个元素成员函数返回的 `pair` `pr` 的迭代器组件，请使用 `pr.first`；要在返回的配对中取消引用迭代器，请使用 `*pr.first`，从而向你提供一个元素。 若要访问**bool**组件，请使用 `pr.second`。 有关示例，请参阅本文后面的示例代码。
+若要访问由单个元素成员函数返回的 `pair` `pr` 的迭代器组件，请使用 `pr.first`;若要在返回的对中取消引用迭代器，请使用 `*pr.first`，为你提供一个元素。 若要访问**bool**组件，请使用 `pr.second`。 有关示例，请参阅本文后面的示例代码。
 
 容器的 [value_type](../standard-library/map-class.md#value_type) 是属于该容器的 typedef；对于 map ，`map<K, V>::value_type` 是 `pair<const K, V>`。 元素的值是一个有序对，其中第一个组件相当于键值，第二个组件相当于该元素的数据值。
 
@@ -1597,7 +1597,7 @@ typedef Pred key_equal;
 
 ### <a name="remarks"></a>备注
 
-类型是模板参数 `Pred` 的同义词。
+该类型是模板参数 `Pred` 的同义词。
 
 ### <a name="example"></a>示例
 
@@ -1637,7 +1637,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>备注
 
-类型是模板参数 `Key` 的同义词。
+该类型是模板参数 `Key` 的同义词。
 
 ### <a name="example"></a>示例
 
@@ -1826,7 +1826,7 @@ typedef Ty mapped_type;
 
 ### <a name="remarks"></a>备注
 
-类型是模板参数 `Ty` 的同义词。
+该类型是模板参数 `Ty` 的同义词。
 
 ### <a name="example"></a>示例
 
@@ -2109,7 +2109,7 @@ Ty& operator[](Key&& keyval);
 
 如果未找到自变量键值，则它将与数据类型的默认值一起插入。
 
-`operator[]` 可用于将元素插入到使用*m*[*Key*] = `DataValue` 的映射*m*中;其中 `DataValue` 是键值为*key*的元素的 `mapped_type` 值。
+`operator[]` 可用于将元素插入到使用*m*[*Key*] = `DataValue`的映射*m*中;其中 `DataValue` 是键值为*key*的元素的 `mapped_type` 值。
 
 使用 `operator[]` 插入元素时，返回的引用不指示插入是更改预先存在的元素还是创建一个新元素。 成员函数 [find](../standard-library/map-class.md#find) 和 [insert](../standard-library/map-class.md#insert) 可用于确定具有指定键的元素在插入前是否已存在。
 
@@ -2170,7 +2170,7 @@ c2["abc"] == 1
 
 ### <a name="remarks"></a>备注
 
-成员函数将迭代器 `where` 确定为 [unordered_map::insert](#insert)`(` [unordered_map::value_type](#value_type)`(keyval, Ty())` 的返回值。 （如果此类元素不存在，它将插入具有指定键的元素。）然后，它将返回对 `(*where).second` 的引用。
+成员函数将迭代器确定 `where` 作为[unordered_map：： insert](#insert)`(` [unordered_map：： value_type](#value_type)`(keyval, Ty())`的返回值。 （如果不存在此元素，它将插入具有指定键的元素。）随后它将返回对 `(*where).second` 的引用。
 
 ## <a name="op_eq"></a>unordered_map::operator=
 
@@ -2186,7 +2186,7 @@ unordered_map& operator=(unordered_map&& right);
 
 |参数|描述|
 |-|-|
-|right|运算符函数从中分配内容的 unordered_map。|
+|*right*|运算符函数从中分配内容的 unordered_map。|
 
 ### <a name="remarks"></a>备注
 
@@ -2335,7 +2335,7 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>参数
 
-*nbuckets* \
+*nbuckets*\
 请求的存储桶数。
 
 ### <a name="remarks"></a>备注
@@ -2516,7 +2516,7 @@ void swap(unordered_map& right);
 
 ### <a name="parameters"></a>参数
 
-*right* \
+*right*\
 要交换的容器。
 
 ### <a name="remarks"></a>备注
@@ -2629,20 +2629,20 @@ unordered_map(
 |-|-|
 |*Fc-al*|要存储的分配器对象。|
 |*压缩*|要存储的比较函数对象。|
-|*代码*|要存储的哈希函数对象。|
+|*哈希*|要存储的哈希函数对象。|
 |*Bucket_count*|存储桶的最少数量。|
 |右侧|要复制的容器。|
-|*1*||
-|*时间*||
+|*第一个*||
+|*上一次*||
 |*IList*|包含要复制的元素的 initializer_list。|
 
 ### <a name="remarks"></a>备注
 
 第一个构造函数指定通过 `right` 控制的序列副本。 第二个构造函数指定空的受控序列。 第三个构造函数插入元素值 `[first, last)` 的序列。 第四个构造函数通过移动 `right` 指定序列副本。
 
-所有构造函数还初始化若干存储的值。 对于复制构造函数，值从*右*获取。 否则：
+所有构造函数还初始化若干存储的值。 对于复制构造函数，值从*右*获取。 除此以外：
 
-最小存储桶数是参数*Bucket_count*（如果存在）;否则，它是此处所述的默认值作为实现定义的值 `N0`。
+最小存储桶数是*Bucket_count*的参数（如果存在）;否则，它是此处所述的默认值作为实现定义的值 `N0`。
 
 哈*希函数对象是自变量*（如果有）。否则 `Hash()`。
 
@@ -2843,5 +2843,5 @@ int main()
 
 [<unordered_map>](../standard-library/unordered-map.md)\
 [容器](../cpp/containers-modern-cpp.md)\
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

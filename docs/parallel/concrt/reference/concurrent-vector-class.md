@@ -34,11 +34,11 @@ helpviewer_keywords:
 - concurrent_vector class
 ms.assetid: a217b4ac-af2b-4d41-94eb-09a75ee28622
 ms.openlocfilehash: 002f1e3f691de3315810efed8f7d8f6c547cf653
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143138"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854123"
 ---
 # <a name="concurrent_vector-class"></a>concurrent_vector 类
 
@@ -65,7 +65,7 @@ private details::_Concurrent_vector_base_v4;
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|说明|
+|name|描述|
 |----------|-----------------|
 |`allocator_type`|一个类型，表示并发向量的分配器类。|
 |`const_iterator`|一种类型，它提供可读取并发向量中的 `const` 元素的随机访问迭代器。|
@@ -82,14 +82,14 @@ private details::_Concurrent_vector_base_v4;
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[concurrent_vector](#ctor)|已重载。 构造并发向量。|
 |[~ concurrent_vector 析构函数](#dtor)|清除所有元素并销毁此并发向量。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[assign](#assign)|已重载。 清除并发向量的元素，并为其分配 `_N` `_Item`副本或迭代器范围 [`_Begin`，`_End`）指定的值。 此方法不是并发安全方法。|
 |[at](#at)|已重载。 提供对并发向量中给定索引处的元素的访问。 对于读取操作，此方法是并发安全的，而且在增大向量时也是如此，前提是已确保该值 `_Index` 小于并发向量的大小。|
@@ -117,9 +117,9 @@ private details::_Concurrent_vector_base_v4;
 |[size](#size)|返回并发向量中的元素数目。 此方法是并发安全方法。|
 |[swap](#swap)|交换两个并发向量的内容。 此方法不是并发安全方法。|
 
-### <a name="public-operators"></a>公用運算子
+### <a name="public-operators"></a>公共运算符
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[operator\[\]](#operator_at)|已重载。 提供对并发向量中给定索引处的元素的访问。 对于读取操作，此方法是并发安全的，而且在增大向量时也是如此，前提是已确保该值 `_Index` 小于并发向量的大小。|
 |[operator=](#operator_eq)|已重载。 将另一个 `concurrent_vector` 对象的内容分配给此对象。 此方法不是并发安全方法。|
@@ -246,7 +246,7 @@ size_type capacity() const;
 
 与C++标准库 `vector`不同的是，如果 `concurrent_vector` 对象分配更多内存，则不会移动现有元素。
 
-## <a name="cbegin"></a>cbegin
+## <a name="cbegin"></a> cbegin
 
 返回 `const_iterator` 到并发向量开头的类型的迭代器。 此方法是并发安全方法。
 
@@ -282,7 +282,7 @@ void clear();
 
 `clear` 不是并发安全的。 调用此方法时，必须确保没有其他线程在并发向量上调用方法。 `clear` 不会释放内部数组。 若要释放内部数组，请在 `clear`之后调用函数 `shrink_to_fit`。
 
-## <a name="ctor"></a>concurrent_vector
+## <a name="ctor"></a> concurrent_vector
 
 构造并发向量。
 
@@ -358,7 +358,7 @@ concurrent_vector(_InputIterator _Begin,
 
 最后一个构造函数指定迭代器范围 [`_Begin`，`_End`）提供的值。
 
-## <a name="dtor"></a>~ concurrent_vector
+## <a name="dtor"></a> ~concurrent_vector
 
 清除所有元素并销毁此并发向量。
 
@@ -430,7 +430,7 @@ const_reference front() const;
 
 对并发向量中第一个元素的引用或 `const` 引用。
 
-## <a name="get_allocator"></a>get_allocator
+## <a name="get_allocator"></a> get_allocator
 
 返回用于构造并发向量的分配器副本。 此方法是并发安全方法。
 
@@ -644,7 +644,7 @@ void resize(
 
 `resize` 不是并发安全的。 调用此方法时，必须确保没有其他线程在并发向量上调用方法。
 
-## <a name="shrink_to_fit"></a>shrink_to_fit
+## <a name="shrink_to_fit"></a> shrink_to_fit
 
 压缩并发向量的内部表示形式，以减少碎片并优化内存使用。 此方法不是并发安全方法。
 
@@ -685,7 +685,7 @@ void swap(concurrent_vector& _Vector);
 *_Vector*<br/>
 要与其交换内容的 `concurrent_vector` 对象。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [并发命名空间](concurrency-namespace.md)<br/>
 [并行容器和对象](../../../parallel/concrt/parallel-containers-and-objects.md)
