@@ -19,11 +19,11 @@ helpviewer_keywords:
 - std::operator&lt;= (thread)
 - std::operator== (thread)
 ms.openlocfilehash: c0593b8016cf45abe64114958ccda84eb3704844
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458443"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876161"
 ---
 # <a name="ltthreadgt-operators"></a>&lt;thread&gt; 运算符
 
@@ -43,12 +43,12 @@ bool operator>= (
     thread::id Right) noexcept
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左中*\
+*左*\
 左 `thread::id` 对象。
 
-*然后*\
+*Right*\
 正确的 `thread::id` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -59,7 +59,7 @@ bool operator>= (
 
 此函数不引发任何异常。
 
-## <a name="op_gt"></a>operator&gt;
+## <a name="op_gt"></a>  operator&gt;
 
 确定一个 `thread::id` 对象是否大于另一个。
 
@@ -69,12 +69,12 @@ bool operator> (
     thread::id Right) noexcept
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左中*\
+*左*\
 左 `thread::id` 对象。
 
-*然后*\
+*Right*\
 正确的 `thread::id` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -95,12 +95,12 @@ bool operator<= (
     thread::id Right) noexcept
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左中*\
+*左*\
 左 `thread::id` 对象。
 
-*然后*\
+*Right*\
 正确的 `thread::id` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -111,7 +111,7 @@ bool operator<= (
 
 此函数不引发任何异常。
 
-## <a name="op_lt"></a>operator&lt;
+## <a name="op_lt"></a>  operator&lt;
 
 确定一个 `thread::id` 对象是否小于另一个。
 
@@ -121,17 +121,17 @@ bool operator<(
     thread::id Right) noexcept
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左中*\
+*左*\
 左 `thread::id` 对象。
 
-*然后*\
+*Right*\
 正确的 `thread::id` 对象。
 
 ### <a name="return-value"></a>返回值
 
-如果在合计顺序*中* *靠左*, 则为**true** ;否则**为 false**。
+如果在合计顺序*中* *靠左*，则为**true** ;否则**为 false**。
 
 ### <a name="remarks"></a>备注
 
@@ -139,7 +139,7 @@ bool operator<(
 
 此函数不引发任何异常。
 
-## <a name="op_neq"></a>operator!=
+## <a name="op_neq"></a>  operator!=
 
 比较两个 `thread::id` 对象是否相等。
 
@@ -149,12 +149,12 @@ bool operator!= (
     thread::id Right) noexcept
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左中*\
+*左*\
 左 `thread::id` 对象。
 
-*然后*\
+*Right*\
 正确的 `thread::id` 对象。
 
 ### <a name="return-value"></a>返回值
@@ -175,17 +175,17 @@ bool operator== (
     thread::id Right) noexcept
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左中*\
+*左*\
 左 `thread::id` 对象。
 
-*然后*\
+*Right*\
 正确的 `thread::id` 对象。
 
 ### <a name="return-value"></a>返回值
 
-如果两个对象表示相同的执行线程, 或者如果这两个对象都不表示执行线程,**则为 true** ;否则**为 false**。
+如果两个对象表示相同的执行线程，或者如果这两个对象都不表示执行线程，**则为 true** ;否则**为 false**。
 
 ### <a name="remarks"></a>备注
 
@@ -201,13 +201,13 @@ basic_ostream<Elem, Tr>& operator<<(
     basic_ostream<Elem, Tr>& Ostr, thread::id Id);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Ostr*\
 一个 [basic_ostream](../standard-library/basic-ostream-class.md) 对象。
 
-*识别*\
-一个 `thread::id` 对象。
+*Id*\
+`thread::id` 对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -219,6 +219,6 @@ basic_ostream<Elem, Tr>& operator<<(
 
 如果两个`thread::id` 对象相等，这些对象的文本表示形式相同。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [\<thread>](../standard-library/thread.md)

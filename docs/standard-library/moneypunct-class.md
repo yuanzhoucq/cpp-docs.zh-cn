@@ -47,11 +47,11 @@ helpviewer_keywords:
 - std::moneypunct [C++], thousands_sep
 ms.assetid: cf2650da-3e6f-491c-95d5-23e57f582ee6
 ms.openlocfilehash: 7960ee8b5e9ce6b27494e896e38bbf6b5256fe7e
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689300"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884001"
 ---
 # <a name="moneypunct-class"></a>moneypunct 类
 
@@ -64,9 +64,9 @@ template <class CharType, bool Intl>
 class moneypunct;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*CharType* \
+*CharType*\
 在程序中用于对字符进行编码的类型。
 
 *国际*\
@@ -80,20 +80,20 @@ class moneypunct;
 
 ### <a name="constructors"></a>构造函数
 
-|构造函数|描述|
+|构造函数|说明|
 |-|-|
 |[moneypunct](#moneypunct)|`moneypunct` 类型对象的构造函数。|
 
 ### <a name="typedefs"></a>Typedef
 
-|类型名称|描述|
+|类型名称|说明|
 |-|-|
 |[char_type](#char_type)|一种类型，此类型用于描述区域设置使用的字符。|
 |[string_type](#string_type)|一种类型，此类型描述包含 `CharType` 类型字符的字符串。|
 
 ### <a name="member-functions"></a>成员函数
 
-|成员函数|描述|
+|成员函数|说明|
 |-|-|
 |[curr_symbol](#curr_symbol)|返回要用作货币符号的区域设置特定元素序列。|
 |[decimal_point](#decimal_point)|返回要用作小数点符号的区域设置特定元素序列。|
@@ -116,9 +116,9 @@ class moneypunct;
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<locale>
+**标头：** \<区域设置 >
 
-**命名空间:** std
+**命名空间：** std
 
 ## <a name="char_type"></a>moneypunct::char_type
 
@@ -277,7 +277,7 @@ virtual string do_grouping() const;
 
 ### <a name="example"></a>示例
 
-请参阅[分组](#grouping)的示例，其中虚拟成员函数由 `grouping` 调用。
+请参阅[分组](#grouping)的示例，其中虚拟成员函数由 `grouping`调用。
 
 ## <a name="do_neg_format"></a>  moneypunct::do_neg_format
 
@@ -289,7 +289,7 @@ virtual pattern do_neg_format() const;
 
 ### <a name="return-value"></a>返回值
 
-此受保护的虚拟成员函数可返回一个区域设置特定规则，用于确定生成负金额的货币输出字段的方式。 @No__t_0 的四个元素中的每一个都可以具有以下值：
+此受保护的虚拟成员函数可返回一个区域设置特定规则，用于确定生成负金额的货币输出字段的方式。 `pattern::field` 的四个元素中的每一个都可以具有以下值：
 
 - `none` 匹配零个或多个空格，或不生成任何空格。
 
@@ -301,9 +301,9 @@ virtual pattern do_neg_format() const;
 
 - `value` 匹配或生成货币值。
 
-生成货币输出字段的组件，并按这些元素在 `pattern::field` 中的显示顺序来匹配货币输入字段的组成部分。 @No__t_0、`symbol`、`value` 和 `none` 或 `space` 的每个值必须只出现一次。 值 `none` 不得首先显示。 值 **space** 不能第一个或最后一个出现。 如果 `Intl` 为 true，则顺序为 `symbol`、`sign`、`none`，然后 `value`。
+生成货币输出字段的组件，并按这些元素在 `pattern::field`中的显示顺序来匹配货币输入字段的组成部分。 `sign`、`symbol`、`value`和 `none` 或 `space` 的每个值必须只出现一次。 值 `none` 不得首先显示。 值 **space** 不能第一个或最后一个出现。 如果 `Intl` 为 true，则顺序为 `symbol`、`sign`、`none`，然后 `value`。
 
-`moneypunct`\< **CharType**, **Intl**> 的模板版本返回 `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`。
+`moneypunct`的模板版本 \< **CharType**，**国际**> 返回 `{`**money_base：： symbol**， **money_base：： sign**， **money_base：： value**， **money_base：： none**`}`。
 
 ### <a name="example"></a>示例
 
@@ -335,9 +335,9 @@ virtual pattern do_pos_format() const;
 
 ### <a name="return-value"></a>返回值
 
-此受保护的虚拟成员函数可返回一个区域设置特定规则，用于确定生成正金额的货币输出字段的方式。 （它还确定如何匹配货币输入字段的组件。）编码与[do_neg_format](#do_neg_format)相同。
+此受保护的虚拟成员函数可返回一个区域设置特定规则，用于确定生成正金额的货币输出字段的方式。 （它还确定如何匹配货币输入字段的组件。）编码与[do_neg_format](#do_neg_format)的编码相同。
 
-moneypunct\< **CharType**, **Inputlterator**> 的模板版本返回 `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`。
+模板版本的 moneypunct\< **CharType**， **Inputlterator**> 返回 `{`**money_base：： symbol**， **money_base：： sign**， **money_base：： value**， **money_base：： none**`}`。
 
 ### <a name="example"></a>示例
 
@@ -521,9 +521,9 @@ to the right of the radix character: 2
 explicit moneypunct(size_t _Refs = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*_Refs* \
+*_Refs*\
 用于指定对象的内存管理类型的整数值。
 
 ### <a name="remarks"></a>备注
@@ -833,7 +833,7 @@ English_Canada.1252 international thousands separator: ,
 English_Canada.1252 domestic thousands separator: ,
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[\<locale>](../standard-library/locale.md)\
+[\<区域设置>](../standard-library/locale.md)\
 [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -6,11 +6,11 @@ f1_keywords:
 - concrt/concurrency:[operator&amp;&amp
 ms.assetid: 8e373f23-fc8e-49f7-82e6-ba0c57b822f8
 ms.openlocfilehash: 676e1936af317a6ab19959f8fd09b1de06dfaf69
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143238"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883767"
 ---
 # <a name="concurrency-namespace-operators"></a>并发命名空间运算符
 
@@ -45,7 +45,7 @@ inline task<void> operator||(
     const task<void>& rhs);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ReturnType*<br/>
 已返回任务的类型。
@@ -94,7 +94,7 @@ inline task<void>  operator&&(
     const task<void>& rhs);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ReturnType*<br/>
 已返回任务的类型。
@@ -124,7 +124,7 @@ inline bool operator== (
     const concurrent_vector<T, A2>& _B);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 并发向量中存储的元素的数据类型。
@@ -162,7 +162,7 @@ inline bool operator!= (
     const concurrent_vector<T, A2>& _B);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 并发向量中存储的元素的数据类型。
@@ -200,7 +200,7 @@ inline bool operator<(
     const concurrent_vector<T, A2>& _B);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 并发向量中存储的元素的数据类型。
@@ -238,7 +238,7 @@ inline bool operator<= (
     const concurrent_vector<T, A2>& _B);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 并发向量中存储的元素的数据类型。
@@ -276,7 +276,7 @@ inline bool operator>(
     const concurrent_vector<T, A2>& _B);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 并发向量中存储的元素的数据类型。
@@ -314,7 +314,7 @@ inline bool operator>= (
     const concurrent_vector<T, A2>& _B);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 并发向量中存储的元素的数据类型。

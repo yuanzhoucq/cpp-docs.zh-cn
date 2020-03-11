@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::messages [C++], open
 ms.assetid: c4c71f40-4f24-48ab-9f7c-daccd8d5bd83
 ms.openlocfilehash: 704ee2ce40b4026cc066213181c96cf0f744d152
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687690"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884015"
 ---
 # <a name="messages-class"></a>messages 类
 
@@ -42,9 +42,9 @@ template <class CharType>
 class messages : public messages_base;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*CharType* \
+*CharType*\
 在程序中用于对区域设置中的字符进行编码的类型。
 
 ## <a name="remarks"></a>备注
@@ -55,20 +55,20 @@ class messages : public messages_base;
 
 ### <a name="constructors"></a>构造函数
 
-|构造函数|描述|
+|构造函数|说明|
 |-|-|
 |[messages](#messages)|消息 facet 构造函数。|
 
 ### <a name="typedefs"></a>Typedef
 
-|类型名称|描述|
+|类型名称|说明|
 |-|-|
 |[char_type](#char_type)|一种用于显示消息的字符类型。|
 |[string_type](#string_type)|一种类型，此类型描述包含 `basic_string` 类型字符的 `CharType` 类型字符串。|
 
 ### <a name="member-functions"></a>成员函数
 
-|成员函数|描述|
+|成员函数|说明|
 |-|-|
 |[close](#close)|关闭消息目录。|
 |[do_close](#do_close)|一种为失去消息目录而调用的虚拟函数。|
@@ -79,9 +79,9 @@ class messages : public messages_base;
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<locale>
+**标头：** \<区域设置 >
 
-**命名空间:** std
+**命名空间：** std
 
 ## <a name="char_type"></a>messages::char_type
 
@@ -103,9 +103,9 @@ typedef CharType char_type;
 void close(catalog _Catval) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*_Catval* \
+*_Catval*\
 要关闭的目录。
 
 ### <a name="remarks"></a>备注
@@ -120,14 +120,14 @@ void close(catalog _Catval) const;
 virtual void do_close(catalog _Catval) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*_Catval* \
+*_Catval*\
 要关闭的目录。
 
 ### <a name="remarks"></a>备注
 
-受保护的成员函数将关闭消息目录 *_Catval*，此消息必须已由先前对[do_open](#do_open)的调用打开。
+受保护的成员函数关闭 *_Catval*的消息目录，该目录必须已由之前对[do_open](#do_open)的调用打开。
 
 必须从以前打开的且未关闭的目录获取 *_Catval*。
 
@@ -147,18 +147,18 @@ virtual string_type do_get(
     const string_type& _Dfault) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*_Catval* \
+*_Catval*\
 指定要搜索的消息目录的标识值。
 
-*_ 设置*\
+*_Set*\
 用于在消息目录中查找消息的第一个标识。
 
-*_Message* \
+*_Message*\
 用于在消息目录中查找消息的第二个标识。
 
-*_Dfault* \
+*_Dfault*\
 失败时返回的字符串。
 
 ### <a name="return-value"></a>返回值
@@ -167,7 +167,7 @@ virtual string_type do_get(
 
 ### <a name="remarks"></a>备注
 
-受保护的成员函数尝试从消息目录 *_Catval*获取消息序列。 在此过程中，它可以使用 *_ 设置*、 *_Message*和 *_Dfault* 。
+受保护的成员函数尝试从消息目录 *_Catval*获取消息序列。 在此过程中，它可以使用 *_Set*、 *_Message*和 *_Dfault* 。
 
 ### <a name="example"></a>示例
 
@@ -183,12 +183,12 @@ virtual catalog do_open(
     const locale& _Loc) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*_Catname* \
+*_Catname*\
 要搜索的目录的名称。
 
-*_Loc* \
+*_Loc*\
 目录中要搜索的区域设置。
 
 ### <a name="return-value"></a>返回值
@@ -217,18 +217,18 @@ string_type get(
     const string_type& _Dfault) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*_Catval* \
+*_Catval*\
 指定要搜索的消息目录的标识值。
 
-*_ 设置*\
+*_Set*\
 用于在消息目录中查找消息的第一个标识。
 
-*_Message* \
+*_Message*\
 用于在消息目录中查找消息的第二个标识。
 
-*_Dfault* \
+*_Dfault*\
 失败时返回的字符串。
 
 ### <a name="return-value"></a>返回值
@@ -252,12 +252,12 @@ protected: messages(
     size_t _Refs = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*_Refs* \
+*_Refs*\
 用于指定对象的内存管理类型的整数值。
 
-*_Locname* \
+*_Locname*\
 区域设置的名称。
 
 ### <a name="remarks"></a>备注
@@ -284,12 +284,12 @@ catalog open(
     const locale& _Loc) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*_Catname* \
+*_Catname*\
 要搜索的目录的名称。
 
-*_Loc* \
+*_Loc*\
 目录中要搜索的区域设置。
 
 ### <a name="return-value"></a>返回值
@@ -312,8 +312,8 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 该类型描述类模板[basic_string](../standard-library/basic-string-class.md)的专用化，其对象可以存储消息序列的副本。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[\<locale>](../standard-library/locale.md)\
+[\<区域设置>](../standard-library/locale.md)\
 [messages_base 类](../standard-library/messages-base-class.md)\
 [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

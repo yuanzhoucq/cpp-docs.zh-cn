@@ -41,11 +41,11 @@ helpviewer_keywords:
 - accelerator class
 ms.assetid: 37eed593-cf87-4611-9cdc-e98df6c2377a
 ms.openlocfilehash: 72a570ab28696730f835c42748a6ea12b865ca55
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127158"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855908"
 ---
 # <a name="accelerator-class"></a>accelerator 类
 
@@ -57,7 +57,7 @@ ms.locfileid: "77127158"
 class accelerator;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -88,7 +88,7 @@ class accelerator;
 |[set_default](#set_default)|返回默认快捷键的路径。|
 |[set_default_cpu_access_type](#set_default_cpu_access_type)|为在此 `accelerator`上进行的数组和隐式内存分配设置默认 CPU [access_type](concurrency-namespace-enums-amp.md#access_type)。|
 
-### <a name="public-operators"></a>公用運算子
+### <a name="public-operators"></a>公共运算符
 
 |名称|说明|
 |----------|-----------------|
@@ -155,7 +155,7 @@ explicit accelerator(const std::wstring& _Device_path);
 accelerator(const accelerator& _Other);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Device_path*<br/>
 物理设备的路径。
@@ -179,7 +179,7 @@ static const wchar_t cpu_accelerator[];
 accelerator_view create_view(queuing_mode qmode = queuing_mode_automatic);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *qmode*<br/>
 排队模式。
@@ -452,7 +452,7 @@ __declspec(property(get= get_is_emulated)) bool is_emulated;
 bool operator!= (const accelerator& _Other) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Other*<br/>
 与此对象相比较的 `accelerator` 对象。
@@ -469,7 +469,7 @@ bool operator!= (const accelerator& _Other) const;
 accelerator& operator= (const accelerator& _Other);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Other*<br/>
 要从中进行复制的 `accelerator` 对象。
@@ -486,7 +486,7 @@ accelerator& operator= (const accelerator& _Other);
 bool operator== (const accelerator& _Other) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Other*<br/>
 与此对象相比较的 `accelerator` 对象。
@@ -503,7 +503,7 @@ bool operator== (const accelerator& _Other) const;
 static inline bool set_default(std::wstring _Path);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Path*<br/>
 加速器的路径。
@@ -520,7 +520,7 @@ static inline bool set_default(std::wstring _Path);
 bool set_default_cpu_access_type(access_type _Default_cpu_access_type);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Default_cpu_access_type*<br/>
 要用于此加速器上的 array/array_view 内存分配的默认 cpu access_type。

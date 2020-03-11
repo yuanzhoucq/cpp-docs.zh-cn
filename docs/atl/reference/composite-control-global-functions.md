@@ -19,11 +19,11 @@ helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
 ms.openlocfilehash: 525fc01247053a1e2bc993398978cb332262a1a5
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927773"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864716"
 ---
 # <a name="composite-control-global-functions"></a>复合控件全局函数
 
@@ -43,7 +43,7 @@ ms.locfileid: "70927773"
 |[AtlAxAttachControl](#atlaxattachcontrol)|将以前创建的控件附加到指定窗口。|
 |[AtlAxGetHost](#atlaxgethost)|用于获取指向指定窗口（如果有）的容器的直接接口指针（在给定其句柄的情况下）。|
 |[AtlAxGetControl](#atlaxgetcontrol)|在给定的句柄的情况下，用于获取指向指定窗口（如果有）内包含的控件的直接接口指针。|
-|[AtlSetChildSite](#atlsetchildsite)|`IUnknown`初始化子站点的。|
+|[AtlSetChildSite](#atlsetchildsite)|初始化子站点的 `IUnknown`。|
 |[AtlAxWinInit](#atlaxwininit)|初始化 AxWin 对象的宿主代码。|
 |[AtlAxWinTerm](#atlaxwinterm)|取消 AxWin 对象的宿主代码。|
 |[AtlGetObjectSourceInterface](#atlgetobjectsourceinterface)|返回有关对象的默认源接口的信息。|
@@ -52,7 +52,7 @@ ms.locfileid: "70927773"
 
 **标头：** atlhost
 
-##  <a name="atlaxdialogbox"></a>  AtlAxDialogBox
+##  <a name="atlaxdialogbox"></a>AtlAxDialogBox
 
 从用户提供的对话框模板创建模式对话框。
 
@@ -65,7 +65,7 @@ ATLAPI_(int) AtlAxDialogBox(
     LPARAM dwInitParam);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hInstance*<br/>
 中标识可执行文件包含对话框模板的模块的实例。
@@ -88,18 +88,18 @@ ATLAPI_(int) AtlAxDialogBox(
 
 ### <a name="remarks"></a>备注
 
-若要`AtlAxDialogBox`将与包含 ActiveX 控件的对话框模板一起使用，请将有效的 CLSID、APPID 或 URL 字符串指定为对话框资源的**控件**部分的*文本*字段，并将 "AtlAxWin80" 指定为 "*类名称*" 字段在同一节中。 下面演示了有效的**控件**部分可能如下所示：
+若要将 `AtlAxDialogBox` 与包含 ActiveX 控件的对话框模板一起使用，请将有效的 CLSID、APPID 或 URL 字符串指定为对话框资源的**控件**部分的*文本*字段，并将 "AtlAxWin80" 指定为同一节下的*类名称*字段。 下面演示了有效的**控件**部分可能如下所示：
 
 ```
 CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
-有关编辑资源脚本的详细信息，请[参阅如何：以文本格式](../../windows/how-to-open-a-resource-script-file-in-text-format.md)打开资源脚本文件。 有关控制资源定义语句的详细信息，请参阅 Windows SDK 下的[公共控制参数](/windows/win32/menurc/common-control-parameters)：SDK Tools。
+有关编辑资源脚本的详细信息，请参阅[如何：以文本格式打开资源脚本文件](../../windows/how-to-open-a-resource-script-file-in-text-format.md)。 有关控制资源定义语句的详细信息，请参阅 Windows SDK： SDK Tools 下的[公共控制参数](/windows/win32/menurc/common-control-parameters)。
 
 有关一般对话框的详细信息，请参阅 Windows SDK 中的[对话框](/windows/win32/api/winuser/nf-winuser-dialogboxw)和[CreateDialogParam](/windows/win32/api/winuser/nf-winuser-createdialogparamw) 。
 
-##  <a name="atlaxcreatedialog"></a>  AtlAxCreateDialog
+##  <a name="atlaxcreatedialog"></a>AtlAxCreateDialog
 
 从用户提供的对话框模板创建无模式对话框。
 
@@ -112,7 +112,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
     LPARAM dwInitParam);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hInstance*<br/>
 中标识可执行文件包含对话框模板的模块的实例。
@@ -139,7 +139,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 
 请参阅 Windows SDK 中的[CreateDialog](/windows/win32/api/winuser/nf-winuser-createdialogw)和[CreateDialogParam](/windows/win32/api/winuser/nf-winuser-createdialogparamw) 。
 
-##  <a name="atlaxcreatecontrol"></a>  AtlAxCreateControl
+##  <a name="atlaxcreatecontrol"></a>AtlAxCreateControl
 
 创建 ActiveX 控件，初始化它并在指定窗口中承载它。
 
@@ -151,23 +151,23 @@ ATLAPI AtlAxCreateControl(
     IUnknown** ppUnkContainer);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszName*<br/>
 指向要传递到控件的字符串的指针。 必须采用下列方式之一进行格式化：
 
-- ProgID，如`"MSCAL.Calendar.7"`
+- ProgID，如 `"MSCAL.Calendar.7"`
 
-- CLSID，如`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
+- CLSID，如 `"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- URL，如`"<https://www.microsoft.com>"`
+- URL，如 `"<https://www.microsoft.com>"`
 
-- 对活动文档的引用，例如`"file://\\\Documents\MyDoc.doc"`
+- 对活动文档的引用，如 `"file://\\\Documents\MyDoc.doc"`
 
-- HTML 片段，如`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
+- HTML 片段，如 `"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > `"MSHTML:"`必须在 HTML 片段之前，才能指定为 MSHTML 流。
+   > `"MSHTML:"` 必须在 HTML 片段之前，才能指定为 MSHTML 流。
 
 *hWnd*<br/>
 中控件将附加到的窗口的句柄。
@@ -176,7 +176,7 @@ ATLAPI AtlAxCreateControl(
 中指向用于初始化控件的属性的流的指针。 可以为 NULL。
 
 *ppUnkContainer*<br/>
-弄将接收`IUnknown`容器的的指针地址。 可以为 NULL。
+弄将接收容器 `IUnknown` 的指针的地址。 可以为 NULL。
 
 ### <a name="return-value"></a>返回值
 
@@ -188,7 +188,7 @@ ATLAPI AtlAxCreateControl(
 
 若要创建许可的 ActiveX 控件，请参阅[AtlAxCreateControlLic](#atlaxcreatecontrollic)。
 
-##  <a name="atlaxcreatecontrolex"></a>  AtlAxCreateControlEx
+##  <a name="atlaxcreatecontrolex"></a>AtlAxCreateControlEx
 
 创建 ActiveX 控件，初始化它并在指定窗口中承载它。 也可以创建新控件的接口指针和事件接收器。
 
@@ -203,23 +203,23 @@ ATLAPI AtlAxCreateControlEx(
     IUnknown* punkSink = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszName*<br/>
 指向要传递到控件的字符串的指针。 必须采用下列方式之一进行格式化：
 
-- ProgID，如`"MSCAL.Calendar.7"`
+- ProgID，如 `"MSCAL.Calendar.7"`
 
-- CLSID，如`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
+- CLSID，如 `"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- URL，如`"<https://www.microsoft.com>"`
+- URL，如 `"<https://www.microsoft.com>"`
 
-- 对活动文档的引用，例如`"file://\\\Documents\MyDoc.doc"`
+- 对活动文档的引用，如 `"file://\\\Documents\MyDoc.doc"`
 
-- HTML 片段，如`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
+- HTML 片段，如 `"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > `"MSHTML:"`必须在 HTML 片段之前，才能指定为 MSHTML 流。
+   > `"MSHTML:"` 必须在 HTML 片段之前，才能指定为 MSHTML 流。
 
 *hWnd*<br/>
 中控件将附加到的窗口的句柄。
@@ -228,16 +228,16 @@ ATLAPI AtlAxCreateControlEx(
 中指向用于初始化控件的属性的流的指针。 可以为 NULL。
 
 *ppUnkContainer*<br/>
-弄将接收`IUnknown`容器的的指针地址。 可以为 NULL。
+弄将接收容器 `IUnknown` 的指针的地址。 可以为 NULL。
 
 *ppUnkControl*<br/>
-弄将接收`IUnknown`创建的控件的的指针的地址。 可以为 NULL。
+弄将接收创建的控件 `IUnknown` 的指针的地址。 可以为 NULL。
 
 *iidSink*<br/>
 所包含对象上的传出接口的接口标识符。
 
 *punkSink*<br/>
-一个指针，指向`IUnknown`在已成功创建包含对象后，要连接到由*iidSink*在包含对象上指定的连接点的接收器对象的接口。
+一个指针，指向在已成功创建包含对象后，要连接到由*iidSink*在包含对象上指定的连接点的接收器对象的 `IUnknown` 接口。
 
 ### <a name="return-value"></a>返回值
 
@@ -245,11 +245,11 @@ ATLAPI AtlAxCreateControlEx(
 
 ### <a name="remarks"></a>备注
 
-`AtlAxCreateControlEx`类似于[AtlAxCreateControl](#atlaxcreatecontrol) ，但也可用于接收指向新创建的控件的接口指针，并设置用于接收由控件触发的事件的事件接收器。
+`AtlAxCreateControlEx` 类似于[AtlAxCreateControl](#atlaxcreatecontrol) ，但也可用于接收指向新创建的控件的接口指针，并设置用于接收由控件激发的事件的事件接收器。
 
 若要创建许可的 ActiveX 控件，请参阅[AtlAxCreateControlLicEx](#atlaxcreatecontrollicex)。
 
-##  <a name="atlaxcreatecontrollic"></a>  AtlAxCreateControlLic
+##  <a name="atlaxcreatecontrollic"></a>AtlAxCreateControlLic
 
 创建授权的 ActiveX 控件，初始化它并在指定窗口中承载它。
 
@@ -262,23 +262,23 @@ ATLAPI AtlAxCreateControlLic(
     BSTR bstrLic = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszName*<br/>
 指向要传递到控件的字符串的指针。 必须采用下列方式之一进行格式化：
 
-- ProgID，如`"MSCAL.Calendar.7"`
+- ProgID，如 `"MSCAL.Calendar.7"`
 
-- CLSID，如`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
+- CLSID，如 `"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- URL，如`"<https://www.microsoft.com>"`
+- URL，如 `"<https://www.microsoft.com>"`
 
-- 对活动文档的引用，例如`"file://\\\Documents\MyDoc.doc"`
+- 对活动文档的引用，如 `"file://\\\Documents\MyDoc.doc"`
 
-- HTML 片段，如`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
+- HTML 片段，如 `"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > `"MSHTML:"`必须在 HTML 片段之前，才能指定为 MSHTML 流。
+   > `"MSHTML:"` 必须在 HTML 片段之前，才能指定为 MSHTML 流。
 
 *hWnd*<br/>
 控件将附加到的窗口的句柄。
@@ -287,7 +287,7 @@ ATLAPI AtlAxCreateControlLic(
 指向用于初始化控件的属性的流的指针。 可以为 NULL。
 
 *ppUnkContainer*<br/>
-将接收`IUnknown`容器的的指针地址。 可以为 NULL。
+将接收容器 `IUnknown` 的指针的地址。 可以为 NULL。
 
 *bstrLic*<br/>
 包含控件的许可证的 BSTR。
@@ -298,9 +298,9 @@ ATLAPI AtlAxCreateControlLic(
 
 ### <a name="example"></a>示例
 
-有关如何使用`AtlAxCreateControlLic`的示例，请参阅[使用 ATL AXHost 托管 ActiveX 控件](../../atl/hosting-activex-controls-using-atl-axhost.md)。
+有关如何使用 `AtlAxCreateControlLic`的示例，请参阅[使用 ATL AXHost 托管 ActiveX 控件](../../atl/hosting-activex-controls-using-atl-axhost.md)。
 
-##  <a name="atlaxcreatecontrollicex"></a>  AtlAxCreateControlLicEx
+##  <a name="atlaxcreatecontrollicex"></a>AtlAxCreateControlLicEx
 
 创建授权的 ActiveX 控件，初始化它并在指定窗口中承载它。 也可以创建新控件的接口指针和事件接收器。
 
@@ -316,23 +316,23 @@ ATLAPI AtlAxCreateControlLicEx(
     BSTR bstrLic = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszName*<br/>
 指向要传递到控件的字符串的指针。 必须采用下列方式之一进行格式化：
 
-- ProgID，如`"MSCAL.Calendar.7"`
+- ProgID，如 `"MSCAL.Calendar.7"`
 
-- CLSID，如`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
+- CLSID，如 `"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- URL，如`"<https://www.microsoft.com>"`
+- URL，如 `"<https://www.microsoft.com>"`
 
-- 对活动文档的引用，例如`"file://\\\Documents\MyDoc.doc"`
+- 对活动文档的引用，如 `"file://\\\Documents\MyDoc.doc"`
 
-- HTML 片段，如`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
+- HTML 片段，如 `"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > `"MSHTML:"`必须在 HTML 片段之前，才能指定为 MSHTML 流。
+   > `"MSHTML:"` 必须在 HTML 片段之前，才能指定为 MSHTML 流。
 
 *hWnd*<br/>
 控件将附加到的窗口的句柄。
@@ -341,16 +341,16 @@ ATLAPI AtlAxCreateControlLicEx(
 指向用于初始化控件的属性的流的指针。 可以为 NULL。
 
 *ppUnkContainer*<br/>
-将接收`IUnknown`容器的的指针地址。 可以为 NULL。
+将接收容器 `IUnknown` 的指针的地址。 可以为 NULL。
 
 *ppUnkControl*<br/>
-弄将接收`IUnknown`创建的控件的的指针的地址。 可以为 NULL。
+弄将接收创建的控件 `IUnknown` 的指针的地址。 可以为 NULL。
 
 *iidSink*<br/>
 所包含对象上的传出接口的接口标识符。
 
 *punkSink*<br/>
-一个指针，指向`IUnknown`在已成功创建包含对象后，要连接到由*iidSink*在包含对象上指定的连接点的接收器对象的接口。
+一个指针，指向在已成功创建包含对象后，要连接到由*iidSink*在包含对象上指定的连接点的接收器对象的 `IUnknown` 接口。
 
 *bstrLic*<br/>
 包含控件的许可证的 BSTR。
@@ -361,13 +361,13 @@ ATLAPI AtlAxCreateControlLicEx(
 
 ### <a name="remarks"></a>备注
 
-`AtlAxCreateControlLicEx`类似于[AtlAxCreateControlLic](#atlaxcreatecontrollic) ，但也可用于接收指向新创建的控件的接口指针，并设置用于接收由控件触发的事件的事件接收器。
+`AtlAxCreateControlLicEx` 类似于[AtlAxCreateControlLic](#atlaxcreatecontrollic) ，但也可用于接收指向新创建的控件的接口指针，并设置用于接收由控件激发的事件的事件接收器。
 
 ### <a name="example"></a>示例
 
-有关如何使用`AtlAxCreateControlLicEx`的示例，请参阅[使用 ATL AXHost 托管 ActiveX 控件](../../atl/hosting-activex-controls-using-atl-axhost.md)。
+有关如何使用 `AtlAxCreateControlLicEx`的示例，请参阅[使用 ATL AXHost 托管 ActiveX 控件](../../atl/hosting-activex-controls-using-atl-axhost.md)。
 
-##  <a name="atlaxattachcontrol"></a>  AtlAxAttachControl
+##  <a name="atlaxattachcontrol"></a>AtlAxAttachControl
 
 将以前创建的控件附加到指定窗口。
 
@@ -378,16 +378,16 @@ ATLAPI AtlAxAttachControl(
     IUnknown** ppUnkContainer);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pControl*<br/>
-中指向`IUnknown`控件的的指针。
+中指向控件的 `IUnknown` 的指针。
 
 *hWnd*<br/>
 中承载控件的窗口的句柄。
 
 *ppUnkContainer*<br/>
-弄指向容器对象的`IUnknown`的指针的指针。
+弄指向容器对象的 `IUnknown` 的指针的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -398,9 +398,9 @@ ATLAPI AtlAxAttachControl(
 使用[AtlAxCreateControlEx](#atlaxcreatecontrolex)和[AtlAxCreateControl](#atlaxcreatecontrol)同时创建和附加控件。
 
 > [!NOTE]
->  在调用`AtlAxAttachControl`之前，必须正确初始化要附加的控件对象。
+>  在调用 `AtlAxAttachControl`之前，必须正确初始化要附加的控件对象。
 
-##  <a name="atlaxgethost"></a>  AtlAxGetHost
+##  <a name="atlaxgethost"></a>AtlAxGetHost
 
 获取指向指定窗口（如果有）的容器的直接接口指针（在给定容器的句柄的情况下）。
 
@@ -408,19 +408,19 @@ ATLAPI AtlAxAttachControl(
 ATLAPI AtlAxGetHost(HWND h, IUnknown** pp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*h*<br/>
+h<br/>
 中承载控件的窗口的句柄。
 
 *pp*<br/>
-弄`IUnknown`控件的容器的。
+弄控件的容器的 `IUnknown`。
 
 ### <a name="return-value"></a>返回值
 
 标准的 HRESULT 值之一。
 
-##  <a name="atlaxgetcontrol"></a>  AtlAxGetControl
+##  <a name="atlaxgetcontrol"></a>AtlAxGetControl
 
 获取指向包含在指定窗口内的控件的直接接口指针（在给定控件的句柄的情况下）。
 
@@ -428,39 +428,39 @@ ATLAPI AtlAxGetHost(HWND h, IUnknown** pp);
 ATLAPI AtlAxGetControl(HWND h, IUnknown** pp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*h*<br/>
+h<br/>
 中承载控件的窗口的句柄。
 
 *pp*<br/>
-弄`IUnknown`要承载的控件的。
+弄要承载的控件的 `IUnknown`。
 
 ### <a name="return-value"></a>返回值
 
 标准的 HRESULT 值之一。
 
-##  <a name="atlsetchildsite"></a>  AtlSetChildSite
+##  <a name="atlsetchildsite"></a>AtlSetChildSite
 
-调用此函数可将子对象的站点设置为`IUnknown`父对象的。
+调用此函数可将子对象的站点设置为父对象的 `IUnknown`。
 
 ```
 HRESULT AtlSetChildSite(IUnknown* punkChild, IUnknown* punkParent);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *punkChild*<br/>
-中指向子级的`IUnknown`接口的指针。
+中指向子级的 `IUnknown` 接口的指针。
 
 *punkParent*<br/>
-中指向父级的`IUnknown`接口的指针。
+中指向父级的 `IUnknown` 接口的指针。
 
 ### <a name="return-value"></a>返回值
 
 标准的 HRESULT 值。
 
-##  <a name="atlaxwininit"></a>  AtlAxWinInit
+##  <a name="atlaxwininit"></a>AtlAxWinInit
 
 此函数通过注册 **"AtlAxWin80"** 和 **"AtlAxWinLic80"** 窗口类以及一些自定义窗口消息来初始化 ATL 的控件托管代码。
 
@@ -476,7 +476,7 @@ ATLAPI_(BOOL) AtlAxWinInit();
 
 使用 ATL 控件托管 API 之前，必须先调用此函数。 调用此函数后，可以在对[CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww)或[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)的调用中使用 **"AtlAxWin"** 窗口类，如 Windows SDK 中所述。
 
-##  <a name="atlaxwinterm"></a>  AtlAxWinTerm
+##  <a name="atlaxwinterm"></a>AtlAxWinTerm
 
 此函数通过注销 **"AtlAxWin80"** 和 **"AtlAxWinLic80"** 窗口类来取消 ATL 的控件承载代码。
 
@@ -494,7 +494,7 @@ inline BOOL AtlAxWinTerm();
 
 如果调用[AtlAxWinInit](#atlaxwininit)并且不再需要创建主机窗口，则在销毁所有现有主机窗口后，调用此函数以进行清理。 如果不调用此函数，则在进程终止时将自动注销窗口类。
 
-##  <a name="atlgetobjectsourceinterface"></a>  AtlGetObjectSourceInterface
+##  <a name="atlgetobjectsourceinterface"></a>AtlGetObjectSourceInterface
 
 调用此函数可检索有关对象的默认源接口的信息。
 
@@ -507,7 +507,7 @@ ATLAPI AtlGetObjectSourceInterface(
     unsigned short* pdwMinor);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *punkObj*<br/>
 中指向要为其返回信息的对象的指针。
@@ -530,18 +530,18 @@ ATLAPI AtlGetObjectSourceInterface(
 
 ### <a name="remarks"></a>备注
 
-`AtlGetObjectSourceInterface`可为您提供默认源接口的接口 ID，以及描述该接口的类型库的 LIBID 和主版本号和次版本号。
+`AtlGetObjectSourceInterface` 可以提供默认源接口的接口 ID，以及描述该接口的类型库的 LIBID 和主版本号和次版本号。
 
 > [!NOTE]
->  要使此函数成功检索所请求的信息， *punkObj*表示的对象必须实现`IDispatch` （并通过`IDispatch::GetTypeInfo`返回类型信息`IProvideClassInfo2` ），此外，它还必须实现或`IPersist`. 源接口的类型信息必须与的类型信息`IDispatch`位于同一类型库中。
+>  要使此函数成功检索所请求的信息， *punkObj*所表示的对象必须实现 `IDispatch` （并通过 `IDispatch::GetTypeInfo`返回类型信息），此外还必须实现 `IProvideClassInfo2` 或 `IPersist`。 源接口的类型信息必须与 `IDispatch`的类型信息位于同一类型库中。
 
 ### <a name="example"></a>示例
 
-下面的示例演示了如何定义事件接收器类`CEasySink`，从而减少了可`IDispEventImpl`传递给 bare essentials 的模板参数的数目。 `EasyAdvise`和`EasyUnadvise`用于 `AtlGetObjectSourceInterface` 在调用 [DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise) 或 [DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise) 之前初始化 [IDispEventImpl](../../atl/reference/idispeventimpl-class.md) 成员。
+下面的示例演示了如何定义事件接收器类 `CEasySink`，从而减少了可传递给 `IDispEventImpl` 到 bare essentials 的模板参数的数目。 `EasyAdvise` 和 `EasyUnadvise` 使用 `AtlGetObjectSourceInterface` 来初始化[IDispEventImpl](../../atl/reference/idispeventimpl-class.md)成员，然后调用[DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise)或[DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise)。
 
 [!code-cpp[NVC_ATL_Windowing#93](../../atl/codesnippet/cpp/composite-control-global-functions_1.h)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [函数](../../atl/reference/atl-functions.md)<br/>
 [复合控件宏](../../atl/reference/composite-control-macros.md)

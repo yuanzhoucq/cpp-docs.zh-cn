@@ -6,15 +6,15 @@ f1_keywords:
 - unordered_set/std::operator==
 ms.assetid: 8653eea6-12f2-4dd7-aa2f-db38a71599a0
 ms.openlocfilehash: 59a7154ed46ac788516bc9f42c3385ec8f07dcf1
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243413"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890718"
 ---
-# <a name="ltunorderedsetgt-operators"></a>&lt;unordered_set&gt; 运算符
+# <a name="ltunordered_setgt-operators"></a>&lt;unordered_set&gt; 运算符
 
-## <a name="op_neq"></a> 运算符 ！ =
+## <a name="op_neq"></a>operator！ =
 
 测试位于运算符左侧的 [unordered_set](../standard-library/unordered-set-class.md) 对象是否与位于右侧的 unordered_set 对象不相等。
 
@@ -22,17 +22,17 @@ ms.locfileid: "68243413"
 bool operator!=(const unordered_set <Key, Hash, Pred, Allocator>& left, const unordered_set <Key, Hash, Pred, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左侧*\
+*左*\
 一个 `unordered_set` 类型的对象。
 
-*右侧*\
+*right*\
 一个 `unordered_set` 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-**true**如果 unordered_set 不相等，则**false**如果它们相等。
+如果 unordered_sets 不相等，则**为 true** ;如果相等，则**为 false** 。
 
 ### <a name="remarks"></a>备注
 
@@ -82,7 +82,7 @@ int main()
 
 `c2 != c3: true`
 
-## <a name="op_eq_eq"></a> 运算符 = =
+## <a name="op_eq_eq"></a>operator = =
 
 测试位于运算符左侧的 [unordered_set](../standard-library/unordered-set-class.md) 对象是否与位于右侧的 unordered_set 对象相等。
 
@@ -90,17 +90,17 @@ int main()
 bool operator==(const unordered_set <Key, Hash, Pred, Allocator>& left, const unordered_set <Key, Hash, Pred, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左侧*\
+*左*\
 一个 `unordered_set` 类型的对象。
 
-*右侧*\
+*right*\
 一个 `unordered_set` 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-**true**如果 unordered_set 相等，则**false**如果它们不相等。
+如果 unordered_sets 相等，则为**true** ;如果不相等，则**为 false** 。
 
 ### <a name="remarks"></a>备注
 
@@ -148,7 +148,7 @@ c1 == c3: true
 c2 == c3: false
 ```
 
-## <a name="op_neq_unordered_multiset"></a> 运算符 ！ =
+## <a name="op_neq_unordered_multiset"></a>operator！ =
 
 测试位于运算符左侧的 [unordered_multiset](../standard-library/unordered-multiset-class.md) 对象是否与位于右侧的 unordered_multiset 对象不相等。
 
@@ -156,17 +156,17 @@ c2 == c3: false
 bool operator!=(const unordered_multiset <Key, Hash, Pred, Allocator>& left, const unordered_multiset <Key, Hash, Pred, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左侧*\
+*左*\
 一个 `unordered_multiset` 类型的对象。
 
-*右侧*\
+*right*\
 一个 `unordered_multiset` 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-**true**如果 unordered_multiset 不相等，则**false**如果它们相等。
+如果 unordered_multisets 不相等，则**为 true** ;如果相等，则**为 false** 。
 
 ### <a name="remarks"></a>备注
 
@@ -217,7 +217,7 @@ c1 != c3: false
 c2 != c3: true
 ```
 
-## <a name="op_eq_eq_unordered_multiset"></a> 运算符 = =
+## <a name="op_eq_eq_unordered_multiset"></a>operator = =
 
 测试位于运算符左侧的 [unordered_multiset](../standard-library/unordered-multiset-class.md) 对象是否与位于右侧的 unordered_multiset 对象相等。
 
@@ -225,17 +225,17 @@ c2 != c3: true
 bool operator==(const unordered_multiset <Key, Hash, Pred, Allocator>& left, const unordered_multiset <Key, Hash, Pred, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左侧*\
+*左*\
 一个 `unordered_multiset` 类型的对象。
 
-*右侧*\
+*right*\
 一个 `unordered_multiset` 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-**true**如果 unordered_multiset 相等，则**false**如果它们不相等。
+如果 unordered_multisets 相等，则为**true** ;如果不相等，则**为 false** 。
 
 ### <a name="remarks"></a>备注
 

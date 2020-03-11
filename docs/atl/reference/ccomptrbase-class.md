@@ -18,11 +18,11 @@ helpviewer_keywords:
 - CComPtrBase class
 ms.assetid: 6dbe9543-dee8-4a97-b02f-dd3a25f4a1a0
 ms.openlocfilehash: 740920225fc513a869b4a92344f87004831e4768
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75298605"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864943"
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase 类
 
@@ -35,36 +35,36 @@ template <class T>
 class CComPtrBase
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *T*<br/>
 智能指针所引用的对象类型。
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
-### <a name="public-constructors"></a>公用建構函式
+### <a name="public-constructors"></a>公共构造函数
 
-|Name|描述|
+|名称|说明|
 |----------|-----------------|
 |[CComPtrBase：： ~ CComPtrBase](#dtor)|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|Name|描述|
+|名称|说明|
 |----------|-----------------|
-|[CComPtrBase::Advise](#advise)|调用此方法可在 `CComPtrBase`的连接点和客户端接收器之间创建连接。|
-|[CComPtrBase::Attach](#attach)|调用此方法以获取现有指针的所有权。|
-|[CComPtrBase::CoCreateInstance](#cocreateinstance)|调用此方法以创建与指定类 ID 或程序 ID 相关联的类的对象。|
-|[CComPtrBase::CopyTo](#copyto)|调用此方法可将 `CComPtrBase` 指针复制到另一个指针变量。|
-|[CComPtrBase::Detach](#detach)|调用此方法可释放指针的所有权。|
+|[CComPtrBase：： Advise](#advise)|调用此方法可在 `CComPtrBase`的连接点和客户端接收器之间创建连接。|
+|[CComPtrBase：： Attach](#attach)|调用此方法以获取现有指针的所有权。|
+|[CComPtrBase：： CoCreateInstance](#cocreateinstance)|调用此方法以创建与指定类 ID 或程序 ID 相关联的类的对象。|
+|[CComPtrBase：： CopyTo](#copyto)|调用此方法可将 `CComPtrBase` 指针复制到另一个指针变量。|
+|[CComPtrBase：:D etach](#detach)|调用此方法可释放指针的所有权。|
 |[CComPtrBase::IsEqualObject](#isequalobject)|调用此方法以检查指定的 `IUnknown` 是否指向与 `CComPtrBase` 对象关联的同一对象。|
-|[CComPtrBase::QueryInterface](#queryinterface)|调用此方法以返回指向指定接口的指针。|
-|[CComPtrBase::Release](#release)|调用此方法可释放接口。|
-|[CComPtrBase::SetSite](#setsite)|调用此方法可将 `CComPtrBase` 对象的站点设置为父对象的 `IUnknown`。|
+|[CComPtrBase：： QueryInterface](#queryinterface)|调用此方法以返回指向指定接口的指针。|
+|[CComPtrBase：： Release](#release)|调用此方法可释放接口。|
+|[CComPtrBase：： SetSite](#setsite)|调用此方法可将 `CComPtrBase` 对象的站点设置为父对象的 `IUnknown`。|
 
-### <a name="public-operators"></a>公用運算子
+### <a name="public-operators"></a>公共运算符
 
-|Name|描述|
+|名称|说明|
 |----------|-----------------|
 |[CComPtrBase：： operator T *](#operator_t_star)|转换运算符。|
 |[CComPtrBase：： operator！](#operator_not)|NOT 运算符。|
@@ -76,7 +76,7 @@ class CComPtrBase
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|Name|描述|
+|名称|说明|
 |----------|-----------------|
 |[CComPtrBase：:p](#p)|指针数据成员变量。|
 
@@ -84,7 +84,7 @@ class CComPtrBase
 
 此类为使用 COM 内存管理例程的其他智能指针（例如[CComQIPtr](../../atl/reference/ccomqiptr-class.md)和[CComPtr](../../atl/reference/ccomptr-class.md)）提供基础。 派生类添加自己的构造函数和运算符，但依赖于 `CComPtrBase`提供的方法。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>要求
 
 **标头：** atlcomcli。h
 
@@ -99,7 +99,7 @@ HRESULT Advise(
     LPDWORD pdw) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pUnk*<br/>
 指向客户端的 `IUnknown`的指针。
@@ -126,7 +126,7 @@ HRESULT Advise(
 void Attach(T* p2) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *p2*<br/>
 `CComPtrBase` 对象将取得此指针的所有权。
@@ -163,7 +163,7 @@ HRESULT CoCreateInstance(
     DWORD dwClsContext = CLSCTX_ALL) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szProgID*<br/>
 一个指针，指向用于恢复 CLSID 的 ProgID。
@@ -195,7 +195,7 @@ HRESULT CoCreateInstance(
 HRESULT CopyTo(T** ppT) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ppT*<br/>
 将接收 `CComPtrBase` 指针的变量的地址。
@@ -234,7 +234,7 @@ T* Detach() throw();
 bool IsEqualObject(IUnknown* pOther) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pOther*<br/>
 要比较的 `IUnknown *`。
@@ -289,9 +289,9 @@ T& operator*() const throw();
 bool operator== (T* pT) const throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*pT*<br/>
+*五*<br/>
 指向对象的指针。
 
 ### <a name="return-value"></a>返回值
@@ -322,9 +322,9 @@ _NoAddRefReleaseOnCComPtr<T>* operator->() const throw();
 bool operator<(T* pT) const throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*pT*<br/>
+*五*<br/>
 指向对象的指针。
 
 ### <a name="return-value"></a>返回值
@@ -364,7 +364,7 @@ template <class Q> HRESULT QueryInterface(Q
 ** pp) const throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Q*<br/>
 需要其接口指针的对象类型。
@@ -402,7 +402,7 @@ void Release() throw();
 HRESULT SetSite(IUnknown* punkParent) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *punkParent*<br/>
 指向父级的 `IUnknown` 接口的指针。

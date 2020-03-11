@@ -53,11 +53,11 @@ helpviewer_keywords:
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
 ms.openlocfilehash: f6be846e80209ce94c84222d61c37a7964baad03
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127504"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855436"
 ---
 # <a name="cview-class"></a>CView 类
 
@@ -69,9 +69,9 @@ ms.locfileid: "77127504"
 class AFX_NOVTABLE CView : public CWnd
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
-### <a name="protected-constructors"></a>受保护构造函数
+### <a name="protected-constructors"></a>受保护的构造函数
 
 |名称|说明|
 |----------|-----------------|
@@ -95,7 +95,7 @@ class AFX_NOVTABLE CView : public CWnd
 |[CView：： OnScroll](#onscroll)|在将 OLE 项拖至视图边框之外时调用。|
 |[CView：： OnScrollBy](#onscrollby)|当滚动包含活动的就地 OLE 项的视图时调用。|
 
-### <a name="protected-methods"></a>受保护方法
+### <a name="protected-methods"></a>受保护的方法
 
 |名称|说明|
 |----------|-----------------|
@@ -183,7 +183,7 @@ CView();
 BOOL DoPreparePrinting(CPrintInfo* pInfo);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pInfo*<br/>
 指向描述当前打印作业的 [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) 结构。
@@ -222,7 +222,7 @@ CDocument* GetDocument() const;
 virtual BOOL IsSelected(const CObject* pDocItem) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDocItem*<br/>
 指向要测试的文档项。
@@ -245,7 +245,7 @@ virtual void OnActivateFrame(
     CFrameWnd* pFrameWnd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nState*<br/>
 指定是否正在激活或停用框架窗口。 可以为下列值之一：
@@ -274,7 +274,7 @@ virtual void OnActivateView(
     CView* pDeactiveView);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bActivate*<br/>
 指示是否正在激活或停用视图。
@@ -303,7 +303,7 @@ virtual void OnBeginPrinting(
     CPrintInfo* pInfo);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 指向打印机设备上下文。
@@ -328,7 +328,7 @@ virtual DROPEFFECT OnDragEnter(
     CPoint point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDataObject*<br/>
 指向要拖动到视图拖放区域中的[COleDataObject](../../mfc/reference/coledataobject-class.md) 。
@@ -382,7 +382,7 @@ virtual DROPEFFECT OnDragOver(
     CPoint point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDataObject*<br/>
 指向要拖动到拖放目标上的[COleDataObject](../../mfc/reference/coledataobject-class.md) 。
@@ -423,7 +423,7 @@ virtual DROPEFFECT OnDragScroll(
     CPoint point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwKeyState*<br/>
 包含修改键的状态。 这是以下任意数量的组合： "MK_CONTROL"、"MK_SHIFT"、"MK_ALT"、"MK_LBUTTON"、"MK_MBUTTON" 和 "MK_RBUTTON"。
@@ -459,7 +459,7 @@ DROPEFFECT 枚举类型中的一个值，指示当用户在此位置删除对象
 virtual void OnDraw(CDC* pDC) = 0;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 指向要用于呈现文档图像的设备上下文。
@@ -483,7 +483,7 @@ virtual BOOL OnDrop(
     CPoint point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 ' pDataObject * 指向拖放到拖放目标的[COleDataObject](../../mfc/reference/coledataobject-class.md) 。
 
@@ -524,7 +524,7 @@ virtual DROPEFFECT OnDropEx(
     CPoint point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDataObject*<br/>
 指向拖放到拖放目标的[COleDataObject](../../mfc/reference/coledataobject-class.md) 。
@@ -586,7 +586,7 @@ virtual void OnEndPrinting(
     CPrintInfo* pInfo);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 指向打印机设备上下文。
@@ -610,7 +610,7 @@ virtual void OnEndPrintPreview(
     CPreviewView* pView);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 指向打印机设备上下文。
@@ -652,7 +652,7 @@ virtual void OnPrepareDC(
     CPrintInfo* pInfo = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 指向要用于呈现文档图像的设备上下文。
@@ -688,7 +688,7 @@ virtual void OnPrepareDC(
 virtual BOOL OnPreparePrinting(CPrintInfo* pInfo);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pInfo*<br/>
 指向描述当前打印作业的 [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) 结构。
@@ -729,7 +729,7 @@ virtual void OnPrint(
     CPrintInfo* pInfo);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 指向打印机设备上下文。
@@ -774,7 +774,7 @@ virtual BOOL OnScroll(
     BOOL bDoScroll = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nScrollCode*<br/>
 指示用户滚动请求的滚动条代码。 此参数由两部分组成：一个低序位字节，用于确定水平滚动的类型和一个高序位字节，该字节确定垂直发生的滚动类型：
@@ -817,7 +817,7 @@ virtual BOOL OnScrollBy(
     BOOL bDoScroll = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *sizeScroll*<br/>
 水平和垂直滚动的像素数。
@@ -848,7 +848,7 @@ virtual void OnUpdate(
     CObject* pHint);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pSender*<br/>
 指向修改文档的视图，如果要更新所有视图，则为 NULL。

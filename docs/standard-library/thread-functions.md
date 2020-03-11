@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::yield [C++]
 ms.openlocfilehash: 8064cec7e94a909d7dc2e1b22142d362bb7b9488
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458505"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876162"
 ---
 # <a name="ltthreadgt-functions"></a>&lt;thread&gt; 函数
 
@@ -50,14 +50,14 @@ class Period>
 inline void sleep_for(const chrono::duration<Rep, Period>& Rel_time);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Rel_time*\
 用于指定时间间隔的 [duration](../standard-library/duration-class.md) 对象。
 
 ### <a name="remarks"></a>备注
 
-函数会阻止调用线程, 至少为*Rel_time*指定的时间。 此函数不引发任何异常。
+函数会阻止调用线程，至少*Rel_time*指定的时间。 此函数不引发任何异常。
 
 ## <a name="sleep_until"></a>  sleep_until
 
@@ -70,7 +70,7 @@ void sleep_until(const chrono::time_point<Clock, Duration>& Abs_time);
 void sleep_until(const xtime *Abs_time);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Abs_time*\
 表示时间点。
@@ -79,7 +79,7 @@ void sleep_until(const xtime *Abs_time);
 
 此函数不引发任何异常。
 
-## <a name="swap"></a>  swap
+## <a name="swap"></a> swap
 
 交换两个**线程**对象的状态。
 
@@ -87,12 +87,12 @@ void sleep_until(const xtime *Abs_time);
 void swap(thread& Left, thread& Right) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左中*\
+*左*\
 左**螺纹**对象。
 
-*然后*\
+*Right*\
 右**线程**对象。
 
 ### <a name="remarks"></a>备注
@@ -107,6 +107,6 @@ void swap(thread& Left, thread& Right) noexcept;
 inline void yield() noexcept;
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [\<thread>](../standard-library/thread.md)

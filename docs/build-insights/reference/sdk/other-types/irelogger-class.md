@@ -13,8 +13,8 @@ ms.openlocfilehash: d0796cec3fe4ac6183279e8d8013a9550f18b61c
 ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334072"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78857046"
 ---
 # <a name="irelogger-class"></a>IRelogger 类
 
@@ -56,7 +56,7 @@ public:
 
 所有未重写的函数的默认返回值都是 `AnalysisControl::CONTINUE`。 有关详细信息，请参阅[AnalysisControl](analysis-control-enum-class.md)。
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="destructor"></a>析构函数
 
@@ -137,7 +137,7 @@ virtual AnalysisControl OnSimpleEvent(const EventStack& eventStack);
 
 处理简单事件时将调用此函数。
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *eventStack*\
 此简单事件的事件堆栈。 有关事件堆栈的详细信息，请参阅[事件](../event-table.md)。
@@ -154,7 +154,7 @@ virtual AnalysisControl OnStartActivity(const EventStack& eventStack);
 
 处理活动开始事件时将调用此函数。
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *eventStack*\
 此活动开始事件的事件堆栈。 有关事件堆栈的详细信息，请参阅[事件](../event-table.md)。
@@ -171,7 +171,7 @@ virtual AnalysisControl OnStartActivity(const EventStack& eventStack);
 virtual AnalysisControl OnStopActivity(const EventStack& eventStack);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *eventStack*\
 此活动停止事件的事件堆栈。 有关事件堆栈的详细信息，请参阅[事件](../event-table.md)。
@@ -188,7 +188,7 @@ virtual AnalysisControl OnTraceInfo(const TraceInfo& traceInfo);
 
 每次分析或 relogging 通过时调用此函数一次。
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *traceInfo*\
 一个[TraceInfo](../cpp-event-data-types/trace-info.md)对象，它包含有关所使用的跟踪的有用属性。

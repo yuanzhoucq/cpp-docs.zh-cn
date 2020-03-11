@@ -6,11 +6,11 @@ f1_keywords:
 - amp_graphics/Concurrency::fast_math::copy
 ms.assetid: ace01cd5-29d3-4356-930e-c81a61c5f934
 ms.openlocfilehash: 46b8a171acd3b125749b4e2c519909b82c76dc39
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126976"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883741"
 ---
 # <a name="concurrencygraphics-namespace-functions"></a>Concurrency::graphics 命名空间函数
 
@@ -116,7 +116,7 @@ void copy (
     const extent<_Src_type::rank>& _Copy_extent);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Copy_extent*<br/>
 要复制的纹理部分的范围。
@@ -251,7 +251,7 @@ concurrency::completion_future copy_async(_Src_type& _Src,
     const extent<_Src_type::rank>& _Copy_extent);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Copy_extent*<br/>
 要复制的纹理部分的范围。

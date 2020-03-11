@@ -10,22 +10,22 @@ f1_keywords:
 - array/std::array::operator==
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
 ms.openlocfilehash: 3d65cd6b6b8549fd9964f6c5bb6d8b2d3c0a27b6
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688461"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875881"
 ---
 # <a name="ltarraygt-operators"></a>&lt;array&gt; 运算符
 
-@No__t_0array > 标头包括这些**数组**非成员比较模板函数。
+\<数组 > 标头包含这些**数组**非成员比较模板函数。
 
 ||||
 |-|-|-|
 |[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
 |[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
 
-## <a name="op_neq"></a>operator!=
+## <a name="op_neq"></a>  operator!=
 
 数组比较，不等于。
 
@@ -36,18 +36,18 @@ bool operator!=(
     const array<Ty, N>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*Ty* \
+*Ty*\
 元素的类型。
 
-*N* \
+*N*\
 数组大小。
 
 *左*\
 要比较的左容器。
 
-*right* \
+*right*\
 要比较的右容器。
 
 ### <a name="remarks"></a>备注
@@ -98,7 +98,7 @@ false
 true
 ```
 
-## <a name="op_lt"></a>operator&lt;
+## <a name="op_lt"></a>  operator&lt;
 
 数组的比较，小于。
 
@@ -109,18 +109,18 @@ bool operator<(
     const array<Ty, N>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*Ty* \
+*Ty*\
 元素的类型。
 
-*N* \
+*N*\
 数组大小。
 
 *左*\
 要比较的左容器。
 
-*right* \
+*right*\
 要比较的右容器。
 
 ### <a name="remarks"></a>备注
@@ -171,7 +171,7 @@ false
 true
 ```
 
-## <a name="op_lt_eq"></a>operator&lt;=
+## <a name="op_lt_eq"></a>  operator&lt;=
 
 数组的比较，小于或等于。
 
@@ -182,18 +182,18 @@ bool operator<=(
     const array<Ty, N>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*Ty* \
+*Ty*\
 元素的类型。
 
-*N* \
+*N*\
 数组大小。
 
 *左*\
 要比较的左容器。
 
-*right* \
+*right*\
 要比较的右容器。
 
 ### <a name="remarks"></a>备注
@@ -244,7 +244,7 @@ true
 false
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a>operator==
 
 数组比较，等于。
 
@@ -255,18 +255,18 @@ bool operator==(
     const array<Ty, N>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*Ty* \
+*Ty*\
 元素的类型。
 
-*N* \
+*N*\
 数组大小。
 
 *左*\
 要比较的左容器。
 
-*right* \
+*right*\
 要比较的右容器。
 
 ### <a name="remarks"></a>备注
@@ -317,7 +317,7 @@ true
 false
 ```
 
-## <a name="op_gt"></a>operator&gt;
+## <a name="op_gt"></a>  operator&gt;
 
 数组比较，大于。
 
@@ -328,18 +328,18 @@ bool operator>(
     const array<Ty, N>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*Ty* \
+*Ty*\
 元素的类型。
 
-*N* \
+*N*\
 数组大小。
 
 *左*\
 要比较的左容器。
 
-*right* \
+*right*\
 要比较的右容器。
 
 ### <a name="remarks"></a>备注
@@ -390,7 +390,7 @@ false
 true
 ```
 
-## <a name="op_gt_eq"></a>operator&gt;=
+## <a name="op_gt_eq"></a>  operator&gt;=
 
 数组比较，大于或等于。
 
@@ -401,18 +401,18 @@ bool operator>=(
     const array<Ty, N>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*Ty* \
+*Ty*\
 元素的类型。
 
-*N* \
+*N*\
 数组大小。
 
 *左*\
 要比较的左容器。
 
-*right* \
+*right*\
 要比较的右容器。
 
 ### <a name="remarks"></a>备注
@@ -463,6 +463,6 @@ true
 false
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [\<array>](../standard-library/array.md)

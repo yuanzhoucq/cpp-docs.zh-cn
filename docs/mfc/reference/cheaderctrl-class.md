@@ -65,11 +65,11 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
 ms.openlocfilehash: 62915da703e1c938e65643ab389999b83c72d459
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70741531"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78871582"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl 类
 
@@ -85,62 +85,62 @@ class CHeaderCtrl : public CWnd
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CHeaderCtrl::CHeaderCtrl](#cheaderctrl)|构造 `CHeaderCtrl` 对象。|
+|[CHeaderCtrl：： CHeaderCtrl](#cheaderctrl)|构造 `CHeaderCtrl` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CHeaderCtrl::ClearAllFilters](#clearallfilters)|清除标头控件的所有筛选器。|
-|[CHeaderCtrl::ClearFilter](#clearfilter)|清除标头控件的筛选器。|
-|[CHeaderCtrl::Create](#create)|创建标头控件，并将其附加`CHeaderCtrl`到对象。|
-|[CHeaderCtrl::CreateDragImage](#createdragimage)|在标头控件内创建项图像的透明版本。|
-|[CHeaderCtrl::CreateEx](#createex)|创建具有指定 Windows 扩展样式的标头控件，并将其附加`CListCtrl`到对象。|
-|[CHeaderCtrl::DeleteItem](#deleteitem)|删除标头控件中的项。|
-|[CHeaderCtrl::DrawItem](#drawitem)|绘制标头控件的指定项。|
-|[CHeaderCtrl::EditFilter](#editfilter)|开始编辑指定的标头控件筛选器。|
-|[CHeaderCtrl::GetBitmapMargin](#getbitmapmargin)|检索标头控件中位图的边距宽度。|
-|[CHeaderCtrl::GetFocusedItem](#getfocuseditem)|获取当前标头控件中具有焦点的项的标识符。|
-|[CHeaderCtrl::GetImageList](#getimagelist)|检索用于在标题控件中绘制标题项的图像列表的句柄。|
-|[CHeaderCtrl::GetItem](#getitem)|检索有关标头控件中的项的信息。|
-|[CHeaderCtrl::GetItemCount](#getitemcount)|检索标头控件中项的计数。|
-|[CHeaderCtrl::GetItemDropDownRect](#getitemdropdownrect)|获取标头控件中指定下拉按钮的边框信息。|
-|[CHeaderCtrl::GetItemRect](#getitemrect)|检索标头控件中给定项的边框。|
-|[CHeaderCtrl::GetOrderArray](#getorderarray)|检索标头控件中项的从左到右顺序。|
-|[CHeaderCtrl::GetOverflowRect](#getoverflowrect)|获取当前标头控件的溢出按钮的边框。|
-|[CHeaderCtrl::HitTest](#hittest)|确定位于指定点处的标头项（如果有）。|
-|[CHeaderCtrl::InsertItem](#insertitem)|在标头控件中插入新项。|
-|[CHeaderCtrl::Layout](#layout)|检索给定矩形内的标头控件的大小和位置。|
-|[CHeaderCtrl::OrderToIndex](#ordertoindex)|基于项在标头控件中的顺序检索项的索引值。|
-|[CHeaderCtrl::SetBitmapMargin](#setbitmapmargin)|设置标题控件中位图的边距宽度。|
-|[CHeaderCtrl::SetFilterChangeTimeout](#setfilterchangetimeout)|设置筛选器属性中发生更改和发布`HDN_FILTERCHANGE`通知之间的超时时间间隔。|
-|[CHeaderCtrl::SetFocusedItem](#setfocuseditem)|将焦点设置到当前标头控件中的指定标头项。|
-|[CHeaderCtrl::SetHotDivider](#sethotdivider)|更改标头项之间的分隔符，以指示手动拖放标头项。|
-|[CHeaderCtrl::SetImageList](#setimagelist)|将图像列表分配给标头控件。|
-|[CHeaderCtrl::SetItem](#setitem)|设置标头控件中指定项的属性。|
-|[CHeaderCtrl::SetOrderArray](#setorderarray)|设置标头控件中项的从左到右的顺序。|
+|[CHeaderCtrl：： ClearAllFilters](#clearallfilters)|清除标头控件的所有筛选器。|
+|[CHeaderCtrl：： ClearFilter](#clearfilter)|清除标头控件的筛选器。|
+|[CHeaderCtrl：： Create](#create)|创建标头控件，并将其附加到 `CHeaderCtrl` 的对象。|
+|[CHeaderCtrl：： CreateDragImage](#createdragimage)|在标头控件内创建项图像的透明版本。|
+|[CHeaderCtrl：： CreateEx](#createex)|创建具有指定 Windows 扩展样式的标头控件，并将其附加到 `CListCtrl` 的对象。|
+|[CHeaderCtrl：:D eleteItem](#deleteitem)|删除标头控件中的项。|
+|[CHeaderCtrl：:D rawItem](#drawitem)|绘制标头控件的指定项。|
+|[CHeaderCtrl：： EditFilter](#editfilter)|开始编辑指定的标头控件筛选器。|
+|[CHeaderCtrl：： GetBitmapMargin](#getbitmapmargin)|检索标头控件中位图的边距宽度。|
+|[CHeaderCtrl：： GetFocusedItem](#getfocuseditem)|获取当前标头控件中具有焦点的项的标识符。|
+|[CHeaderCtrl：： GetImageList](#getimagelist)|检索用于在标题控件中绘制标题项的图像列表的句柄。|
+|[CHeaderCtrl：： GetItem](#getitem)|检索有关标头控件中的项的信息。|
+|[CHeaderCtrl：： GetItemCount](#getitemcount)|检索标头控件中项的计数。|
+|[CHeaderCtrl：： GetItemDropDownRect](#getitemdropdownrect)|获取标头控件中指定下拉按钮的边框信息。|
+|[CHeaderCtrl：： GetItemRect](#getitemrect)|检索标头控件中给定项的边框。|
+|[CHeaderCtrl：： GetOrderArray](#getorderarray)|检索标头控件中项的从左到右顺序。|
+|[CHeaderCtrl：： GetOverflowRect](#getoverflowrect)|获取当前标头控件的溢出按钮的边框。|
+|[CHeaderCtrl：： System.windows.media.visualtreehelper.hittest](#hittest)|确定位于指定点处的标头项（如果有）。|
+|[CHeaderCtrl：： InsertItem](#insertitem)|在标头控件中插入新项。|
+|[CHeaderCtrl：： Layout](#layout)|检索给定矩形内的标头控件的大小和位置。|
+|[CHeaderCtrl：： OrderToIndex](#ordertoindex)|基于项在标头控件中的顺序检索项的索引值。|
+|[CHeaderCtrl：： SetBitmapMargin](#setbitmapmargin)|设置标题控件中位图的边距宽度。|
+|[CHeaderCtrl：： SetFilterChangeTimeout](#setfilterchangetimeout)|设置筛选器属性中发生更改和发布 `HDN_FILTERCHANGE` 通知之间的超时时间间隔。|
+|[CHeaderCtrl：： SetFocusedItem](#setfocuseditem)|将焦点设置到当前标头控件中的指定标头项。|
+|[CHeaderCtrl：： SetHotDivider](#sethotdivider)|更改标头项之间的分隔符，以指示手动拖放标头项。|
+|[CHeaderCtrl：： SetImageList](#setimagelist)|将图像列表分配给标头控件。|
+|[CHeaderCtrl：： SetItem](#setitem)|设置标头控件中指定项的属性。|
+|[CHeaderCtrl：： SetOrderArray](#setorderarray)|设置标头控件中项的从左到右的顺序。|
 
 ## <a name="remarks"></a>备注
 
 标头控件是一个窗口，该窗口通常位于一组文本或数字的列的上方。 它包含每一列的标题，并可划分为多个部分。 用户可以拖动分隔部分的分隔线，设置每列的宽度。 有关标头控件的图例，请参阅[标题控件](/windows/win32/Controls/header-controls)。
 
-此控件（因而`CHeaderCtrl`类）仅适用于在 windows 95/98 和 windows NT 版本3.51 及更高版本下运行的程序。
+此控件（因此 `CHeaderCtrl` 类）仅适用于在 Windows 95/98 和 Windows NT 版本3.51 及更高版本下运行的程序。
 
 为 Windows 95/Internet Explorer 4.0 公共控件添加的功能包括：
 
 - 标头项自定义排序。
 
-- 用于标题项的重新排序的标头项拖放。 创建`CHeaderCtrl`对象时使用 HDS_DRAGDROP 样式。
+- 用于标题项的重新排序的标头项拖放。 创建 `CHeaderCtrl` 对象时，请使用 HDS_DRAGDROP 样式。
 
-- 在列大小调整期间，标题列文本可持续查看。 创建`CHeaderCtrl`对象时使用 HDS_FULLDRAG 样式。
+- 在列大小调整期间，标题列文本可持续查看。 创建 `CHeaderCtrl` 对象时，请使用 HDS_FULLDRAG 样式。
 
-- 标头热跟踪，当指针悬停在标题项上方时，将突出显示该标头项。 创建`CHeaderCtrl`对象时使用 HDS_HOTTRACK 样式。
+- 标头热跟踪，当指针悬停在标题项上方时，将突出显示该标头项。 创建 `CHeaderCtrl` 对象时，请使用 HDS_HOTTRACK 样式。
 
-- 图像列表支持。 标头项可以包含`CImageList`对象或文本中存储的图像。
+- 图像列表支持。 标头项可以包含 `CImageList` 对象或文本中存储的图像。
 
-有关使用`CHeaderCtrl`的详细信息，请参阅[控件](../../mfc/controls-mfc.md)和[使用 CHeaderCtrl](../../mfc/using-cheaderctrl.md)。
+有关使用 `CHeaderCtrl`的详细信息，请参阅[控件](../../mfc/controls-mfc.md)和[使用 CHeaderCtrl](../../mfc/using-cheaderctrl.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -188,7 +188,7 @@ BOOL ClearAllFilters();
 
 [!code-cpp[NVC_MFC_CHeaderCtrl#2](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_2.cpp)]
 
-##  <a name="clearfilter"></a>  CHeaderCtrl::ClearFilter
+##  <a name="clearfilter"></a>CHeaderCtrl：： ClearFilter
 
 清除标头控件的筛选器。
 
@@ -196,7 +196,7 @@ BOOL ClearAllFilters();
 BOOL ClearFilter(int nColumn);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nColumn*<br/>
 指示要清除的筛选器的列值。
@@ -215,7 +215,7 @@ BOOL ClearFilter(int nColumn);
 
 ##  <a name="create"></a>CHeaderCtrl：： Create
 
-创建标头控件，并将其附加`CHeaderCtrl`到对象。
+创建标头控件，并将其附加到 `CHeaderCtrl` 的对象。
 
 ```
 virtual BOOL Create(
@@ -225,7 +225,7 @@ virtual BOOL Create(
     UINT nID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwStyle*<br/>
 指定标头控件的样式。 有关标头控件样式的说明，请参阅 Windows SDK 中的[标题控件样式](/windows/win32/Controls/header-control-styles)。
@@ -234,7 +234,7 @@ virtual BOOL Create(
 指定标头控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](/previous-versions/dd162897\(v=vs.85\))结构。
 
 *pParentWnd*<br/>
-指定标头控件的父窗口（通常为`CDialog`）。 它不能为 NULL。
+指定标头控件的父窗口，通常为 `CDialog`。 值不得为 NULL。
 
 *nID*<br/>
 指定标头控件的 ID。
@@ -245,7 +245,7 @@ virtual BOOL Create(
 
 ### <a name="remarks"></a>备注
 
-可以通过`CHeaderCtrl`两个步骤构造对象。 首先，调用构造函数，然后调用`Create`，它会创建标头控件并将其附加`CHeaderCtrl`到对象。
+可以通过两个步骤构造一个 `CHeaderCtrl` 对象。 首先，调用构造函数，然后调用 `Create`，这会创建标头控件，并将其附加到 `CHeaderCtrl` 对象。
 
 除了标头控件样式以外，还可以使用以下公共控件样式来确定标头控件的位置和大小（有关详细信息，请参阅[公共控件样式](/windows/win32/Controls/common-control-styles)）：
 
@@ -253,27 +253,27 @@ virtual BOOL Create(
 
 - CCS_NODIVIDER 防止在控件的顶部绘制两像素的突出显示。
 
-- CCS_NOMOVEY 导致控件调整大小并水平移动，但不会在响应 WM_SIZE 消息时垂直移动。 如果使用了 CCS_NORESIZE 样式，则不应用此样式。 默认情况下，标头控件具有此样式。
+- CCS_NOMOVEY 将导致控件调整大小，并在响应 WM_SIZE 消息时水平（但不是垂直）移动。 如果使用 CCS_NORESIZE 样式，则不应用此样式。 默认情况下，标头控件具有此样式。
 
-- CCS_NOPARENTALIGN 可防止控件自动移动到父窗口的顶部或底部。 相反，无论父窗口的大小发生更改，控件都将保留其在父窗口中的位置。 如果还使用 CCS_TOP 或 CCS_BOTTOM 样式，则高度将调整为默认值，但位置和宽度保持不变。
+- CCS_NOPARENTALIGN 阻止控件自动移动到父窗口的顶部或底部。 相反，无论父窗口的大小发生更改，控件都将保留其在父窗口中的位置。 如果还使用 CCS_TOP 或 CCS_BOTTOM 样式，则高度将调整为默认值，但位置和宽度保持不变。
 
-- CCS_NORESIZE 在设置初始大小或新大小时，防止控件使用默认的宽度和高度。 相反，控件使用请求中指定的宽度和高度来创建或调整大小。
+- CCS_NORESIZE 在设置初始大小或新大小时防止控件使用默认的宽度和高度。 相反，控件使用请求中指定的宽度和高度来创建或调整大小。
 
 - CCS_TOP 使控件将自身定位在父窗口的工作区顶部，并将宽度设置为与父窗口的宽度相同。
 
 还可以将以下窗口样式应用于标题控件（有关详细信息，请参阅[窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)）：
 
-- WS_CHILD 创建子窗口。 不能与 WS_POPUP 样式一起使用。
+- WS_CHILD 创建一个子窗口。 不能与 WS_POPUP 样式一起使用。
 
 - WS_VISIBLE 创建一个最初可见的窗口。
 
 - WS_DISABLED 创建一个最初处于禁用状态的窗口。
 
-- WS_GROUP 指定一组控件的第一个控件，用户可以使用箭头键从一个控件移动到下一个控件。 在第一个控件属于同一组后，所有用 WS_GROUP 样式定义的控件。 具有 WS_GROUP 样式的下一个控件将结束样式组，并启动下一组（即，一个组在下一次开始时结束）。
+- WS_GROUP 指定一组控件中的第一个控件，用户可以使用箭头键从一个控件移动到下一个控件。 在第一个控件属于同一组之后，用 WS_GROUP 样式定义的所有控件。 具有 WS_GROUP 样式的下一个控件将结束样式组，并启动下一组（即，一个组在下一开始的位置结束）。
 
-- WS_TABSTOP 指定任意数量的控件，用户可以使用 TAB 键移动这些控件。 TAB 键将用户移动到 WS_TABSTOP 样式指定的下一个控件。
+- WS_TABSTOP 指定多个控件中的一个，用户可以使用 TAB 键移动这些控件。 TAB 键将用户移动到 WS_TABSTOP 样式指定的下一个控件。
 
-如果要在控件中使用扩展的 windows 样式，请调用[CreateEx](#createex)而不`Create`是。
+如果要在控件中使用扩展的 windows 样式，请调用[CreateEx](#createex)而不是 `Create`。
 
 ### <a name="example"></a>示例
 
@@ -281,7 +281,7 @@ virtual BOOL Create(
 
 ##  <a name="createex"></a>CHeaderCtrl：： CreateEx
 
-创建一个控件（子窗口）并将其与`CHeaderCtrl`对象关联。
+创建一个控件（子窗口）并将其与 `CHeaderCtrl` 对象相关联。
 
 ```
 virtual BOOL CreateEx(
@@ -292,7 +292,7 @@ virtual BOOL CreateEx(
     UINT nID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwExStyle*<br/>
 指定正在创建的控件的扩展样式。 有关扩展 Windows 样式的列表，请参阅 Windows SDK 中[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)的*dwExStyle*参数。
@@ -315,7 +315,7 @@ virtual BOOL CreateEx(
 
 ### <a name="remarks"></a>备注
 
-使用`CreateEx`而不是来应用扩展的windows样式，由windows扩展样式指定的WS_EX_。`Create`
+使用 `CreateEx` 而不是 `Create` 来应用扩展 Windows 样式，该样式由 Windows 扩展样式指定为在**WS_EX_** 。
 
 ##  <a name="createdragimage"></a>CHeaderCtrl：： CreateDragImage
 
@@ -325,7 +325,7 @@ virtual BOOL CreateEx(
 CImageList* CreateDragImage(int nIndex);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 标头控件中项的从零开始的索引。 为此项分配的图像是透明图像的基础。
@@ -338,7 +338,7 @@ CImageList* CreateDragImage(int nIndex);
 
 此成员函数实现 Win32 消息[HDM_CREATEDRAGIMAGE](/windows/win32/Controls/hdm-createdragimage)的行为，如 Windows SDK 中所述。 提供它是为了支持标头项拖放。
 
-返回的指针指向的对象是临时对象，并在下一次空闲时处理时删除。`CImageList`
+返回的指针指向的 `CImageList` 对象是临时对象，并在下一次空闲时处理时删除。
 
 ##  <a name="deleteitem"></a>CHeaderCtrl：:D eleteItem
 
@@ -348,7 +348,7 @@ CImageList* CreateDragImage(int nIndex);
 BOOL DeleteItem(int nPos);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nPos*<br/>
 指定要删除的项的从零开始的索引。
@@ -369,16 +369,16 @@ BOOL DeleteItem(int nPos);
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpDrawItemStruct*<br/>
 指向[DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct)结构的指针，该结构描述要绘制的项。
 
 ### <a name="remarks"></a>备注
 
-`DRAWITEMSTRUCT`结构的成员定义要执行的绘图操作。 `itemAction`
+`DRAWITEMSTRUCT` 结构的 `itemAction` 成员定义要执行的绘图操作。
 
-默认情况下，此成员函数不执行任何操作。 重写此成员函数以实现所有者描述`CHeaderCtrl`对象的绘制。
+默认情况下，此成员函数不执行任何操作。 重写此成员函数以实现 `CHeaderCtrl` 对象的所有者描述的绘图。
 
 此成员函数终止之前，应用程序应还原为*lpDrawItemStruct*中提供的显示上下文选择的所有图形设备接口（GDI）对象。
 
@@ -396,7 +396,7 @@ BOOL EditFilter(
     BOOL bDiscardChanges);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nColumn*<br/>
 要编辑的列。
@@ -452,17 +452,17 @@ int GetFocusedItem() const;
 
 ### <a name="remarks"></a>备注
 
-此方法发送[HDM_GETFOCUSEDITEM](/windows/win32/Controls/hdm-getfocuseditem)消息，如 Windows SDK 中所述。
+此方法发送 Windows SDK 中描述的[HDM_GETFOCUSEDITEM](/windows/win32/Controls/hdm-getfocuseditem)消息。
 
 ### <a name="example"></a>示例
 
-下面的代码示例定义用于访问当前`m_headerCtrl`标头控件的变量。 此变量将在下一个示例中使用。
+下面的代码示例定义用于访问当前标头控件的变量 `m_headerCtrl`。 此变量将在下一个示例中使用。
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]
 
 ### <a name="example"></a>示例
 
-下面的代码示例演示了`SetFocusedItem`和`GetFocusedItem`方法。 在代码的前面部分中，我们创建了一个包含五个列的标题控件。 但是，您可以拖动列分隔符，使列不可见。 下面的示例设置并确认最后一个列标题为焦点项。
+下面的代码示例演示 `SetFocusedItem` 和 `GetFocusedItem` 方法。 在代码的前面部分中，我们创建了一个包含五个列的标题控件。 但是，您可以拖动列分隔符，使列不可见。 下面的示例设置并确认最后一个列标题为焦点项。
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_10.cpp)]
 
@@ -480,7 +480,7 @@ CImageList* GetImageList() const;
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 消息[HDM_GETIMAGELIST](/windows/win32/Controls/hdm-getimagelist)的行为，如 Windows SDK 中所述。 返回的指针指向的对象是临时对象，并在下一次空闲时处理时删除。`CImageList`
+此成员函数实现 Win32 消息[HDM_GETIMAGELIST](/windows/win32/Controls/hdm-getimagelist)的行为，如 Windows SDK 中所述。 返回的指针指向的 `CImageList` 对象是临时对象，并在下一次空闲时处理时删除。
 
 ### <a name="example"></a>示例
 
@@ -496,13 +496,13 @@ BOOL GetItem(
     HDITEM* pHeaderItem) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nPos*<br/>
 指定要检索的项的从零开始的索引。
 
 *pHeaderItem*<br/>
-指向接收新项的[HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw)结构的指针。 此结构与`InsertItem`和`SetItem`成员函数结合使用。 `mask`元素中设置的任何标志都确保返回时正确填充相应元素中的值。 `mask`如果元素设置为零，则其他结构元素中的值毫无意义。
+指向接收新项的[HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw)结构的指针。 此结构与 `InsertItem` 和 `SetItem` 成员函数结合使用。 `mask` 元素中设置的任何标志都确保返回时正确填充相应元素中的值。 如果 `mask` 元素设置为零，则其他结构元素中的值毫无意义。
 
 ### <a name="return-value"></a>返回值
 
@@ -538,11 +538,11 @@ BOOL GetItemDropDownRect(
     LPRECT lpRect) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
-|*iItem*|中其样式为 HDF_SPLITBUTTON 的标头项的从零开始的索引。 有关详细信息，请参阅`fmt` [HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw)结构的成员。|
+|*iItem*|中HDF_SPLITBUTTON 其样式的标头项的从零开始的索引。 有关详细信息，请参阅[HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw)结构的 `fmt` 成员。|
 |*lpRect*|弄一个指针，指向用于接收边框信息的[RECT](/previous-versions/dd162897\(v=vs.85\))结构。|
 
 ### <a name="return-value"></a>返回值
@@ -551,17 +551,17 @@ BOOL GetItemDropDownRect(
 
 ### <a name="remarks"></a>备注
 
-此方法发送[HDM_GETITEMDROPDOWNRECT](/windows/win32/Controls/hdm-getitemdropdownrect)消息，如 Windows SDK 中所述。
+此方法发送 Windows SDK 中描述的[HDM_GETITEMDROPDOWNRECT](/windows/win32/Controls/hdm-getitemdropdownrect)消息。
 
 ### <a name="example"></a>示例
 
-下面的代码示例定义用于访问当前`m_headerCtrl`标头控件的变量。 此变量将在下一个示例中使用。
+下面的代码示例定义用于访问当前标头控件的变量 `m_headerCtrl`。 此变量将在下一个示例中使用。
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]
 
 ### <a name="example"></a>示例
 
-下面的代码示例演示`GetItemDropDownRect`方法。 在代码的前面部分中，我们创建了一个包含五个列的标题控件。 下面的代码示例在为标头下拉按钮保留的第一列上的位置周围绘制一个三维矩形。
+下面的代码示例演示 `GetItemDropDownRect` 方法。 在代码的前面部分中，我们创建了一个包含五个列的标题控件。 下面的代码示例在为标头下拉按钮保留的第一列上的位置周围绘制一个三维矩形。
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#2](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_13.cpp)]
 
@@ -575,7 +575,7 @@ BOOL GetItemRect(
     LPRECT lpRect) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 标头控件项的从零开始的索引。
@@ -601,7 +601,7 @@ BOOL GetOrderArray(
     int iCount);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *piArray*<br/>
 指向缓冲区的地址的指针，该缓冲区接收标头控件中项的索引值（按照它们从左到右的显示顺序）。
@@ -629,9 +629,9 @@ BOOL GetOrderArray(
 BOOL GetOverflowRect(LPRECT lpRect) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |*lpRect*|弄一个指针，指向用于接收边框信息的[RECT](/previous-versions/dd162897\(v=vs.85\))结构。|
 
@@ -643,17 +643,17 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
 
 如果标题控件包含的项数超过了可以同时显示的项数，则控件可以显示一个滚动到不可见项的溢出按钮。 标头控件必须具有 HDS_OVERFLOW 和 HDF_SPLITBUTTON 样式，才能显示溢出按钮。 边框包含溢出按钮，仅当显示溢出按钮时才存在。 有关详细信息，请参阅[标题控件样式](/windows/win32/Controls/header-control-styles)。
 
-此方法发送[HDM_GETOVERFLOWRECT](/windows/win32/Controls/hdm-getoverflowrect)消息，如 Windows SDK 中所述。
+此方法发送 Windows SDK 中描述的[HDM_GETOVERFLOWRECT](/windows/win32/Controls/hdm-getoverflowrect)消息。
 
 ### <a name="example"></a>示例
 
-下面的代码示例定义用于访问当前`m_headerCtrl`标头控件的变量。 此变量将在下一个示例中使用。
+下面的代码示例定义用于访问当前标头控件的变量 `m_headerCtrl`。 此变量将在下一个示例中使用。
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]
 
 ### <a name="example"></a>示例
 
-下面的代码示例演示`GetOverflowRect`方法。 在代码的前面部分中，我们创建了一个包含五个列的标题控件。 但是，您可以拖动列分隔符，使列不可见。 如果某些列不可见，则标头控件将绘制溢出按钮。 下面的代码示例在溢出按钮的位置周围绘制一个三维矩形。
+下面的代码示例演示 `GetOverflowRect` 方法。 在代码的前面部分中，我们创建了一个包含五个列的标题控件。 但是，您可以拖动列分隔符，使列不可见。 如果某些列不可见，则标头控件将绘制溢出按钮。 下面的代码示例在溢出按钮的位置周围绘制一个三维矩形。
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#3](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_15.cpp)]
 
@@ -665,9 +665,9 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
 int HitTest(LPHDHITTESTINFO* phdhti);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |*phdhti*|[in，out]指向[HDHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-hdhittestinfo)结构的指针，该结构指定测试和接收测试结果的点。|
 
@@ -677,17 +677,17 @@ int HitTest(LPHDHITTESTINFO* phdhti);
 
 ### <a name="remarks"></a>备注
 
-此方法发送[HDM_HITTEST](/windows/win32/Controls/hdm-hittest)消息，如 Windows SDK 中所述。
+此方法发送 Windows SDK 中描述的[HDM_HITTEST](/windows/win32/Controls/hdm-hittest)消息。
 
 ### <a name="example"></a>示例
 
-下面的代码示例定义用于访问当前`m_headerCtrl`标头控件的变量。 此变量将在下一个示例中使用。
+下面的代码示例定义用于访问当前标头控件的变量 `m_headerCtrl`。 此变量将在下一个示例中使用。
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]
 
 ### <a name="example"></a>示例
 
-下面的代码示例演示`HitTest`方法。 在此代码示例的前面部分中，我们创建了一个包含五个列的标题控件。 但是，您可以拖动列分隔符，使列不可见。 如果该列可见，此示例将报告该列的索引; 如果列不可见，则为-1。
+下面的代码示例演示 `HitTest` 方法。 在此代码示例的前面部分中，我们创建了一个包含五个列的标题控件。 但是，您可以拖动列分隔符，使列不可见。 如果该列可见，此示例将报告该列的索引; 如果列不可见，则为-1。
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#1](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_16.cpp)]
 
@@ -701,7 +701,7 @@ int InsertItem(
     HDITEM* phdi);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nPos*<br/>
 要插入的项的索引（索引从零开始）。 如果值为零，则在标头控件的开头插入该项。 如果该值大于最大值，则会在标头控件的末尾插入该项。
@@ -725,7 +725,7 @@ int InsertItem(
 BOOL Layout(HDLAYOUT* pHeaderLayout);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pHeaderLayout*<br/>
 指向[HDLAYOUT](/windows/win32/api/commctrl/ns-commctrl-hdlayout)结构的指针，该结构包含用于设置标头控件的大小和位置的信息。
@@ -742,7 +742,7 @@ BOOL Layout(HDLAYOUT* pHeaderLayout);
 
 [!code-cpp[NVC_MFC_CHeaderCtrl#13](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_18.cpp)]
 
-##  <a name="ordertoindex"></a>  CHeaderCtrl::OrderToIndex
+##  <a name="ordertoindex"></a>CHeaderCtrl：： OrderToIndex
 
 基于项在标头控件中的顺序检索项的索引值。
 
@@ -750,7 +750,7 @@ BOOL Layout(HDLAYOUT* pHeaderLayout);
 int OrderToIndex(int nOrder) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nOrder*<br/>
 项在标题控件中显示的从零开始的顺序，从左到右。
@@ -771,7 +771,7 @@ int OrderToIndex(int nOrder) const;
 int SetBitmapMargin(int nWidth);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nWidth*<br/>
 现有标题控件内的位图周围的边距的宽度（以像素为单位指定）。
@@ -796,7 +796,7 @@ int SetBitmapMargin(int nWidth);
 int SetFilterChangeTimeout(DWORD dwTimeOut);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwTimeOut*<br/>
 超时值（以毫秒为单位）。
@@ -821,9 +821,9 @@ int SetFilterChangeTimeout(DWORD dwTimeOut);
 BOOL SetFocusedItem(int iItem);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |*iItem*|中标头项的从零开始的索引。|
 
@@ -833,17 +833,17 @@ BOOL SetFocusedItem(int iItem);
 
 ### <a name="remarks"></a>备注
 
-此方法发送[HDM_SETFOCUSEDITEM](/windows/win32/Controls/hdm-setfocuseditem)消息，如 Windows SDK 中所述。
+此方法发送 Windows SDK 中描述的[HDM_SETFOCUSEDITEM](/windows/win32/Controls/hdm-setfocuseditem)消息。
 
 ### <a name="example"></a>示例
 
-下面的代码示例定义用于访问当前`m_headerCtrl`标头控件的变量。 此变量将在下一个示例中使用。
+下面的代码示例定义用于访问当前标头控件的变量 `m_headerCtrl`。 此变量将在下一个示例中使用。
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]
 
 ### <a name="example"></a>示例
 
-下面的代码示例演示了`SetFocusedItem`和`GetFocusedItem`方法。 在代码的前面部分中，我们创建了一个包含五个列的标题控件。 但是，您可以拖动列分隔符，使列不可见。 下面的示例设置并确认最后一个列标题为焦点项。
+下面的代码示例演示 `SetFocusedItem` 和 `GetFocusedItem` 方法。 在代码的前面部分中，我们创建了一个包含五个列的标题控件。 但是，您可以拖动列分隔符，使列不可见。 下面的示例设置并确认最后一个列标题为焦点项。
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_10.cpp)]
 
@@ -856,7 +856,7 @@ int SetHotDivider(CPoint pt);
 int SetHotDivider(int nIndex);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pt*<br/>
 指针的位置。 标头控件基于指针的位置突出显示相应的分隔线。
@@ -884,10 +884,10 @@ int SetHotDivider(int nIndex);
 CImageList* SetImageList(CImageList* pImageList);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pImageList*<br/>
-指向`CImageList`对象的指针，该对象包含要分配给标头控件的图像列表。
+指向 `CImageList` 对象的指针，该对象包含要分配给标头控件的图像列表。
 
 ### <a name="return-value"></a>返回值
 
@@ -895,7 +895,7 @@ CImageList* SetImageList(CImageList* pImageList);
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 消息[HDM_SETIMAGELIST](/windows/win32/Controls/hdm-setimagelist)的行为，如 Windows SDK 中所述。 返回的指针指向的对象是临时对象，并在下一次空闲时处理时删除。`CImageList`
+此成员函数实现 Win32 消息[HDM_SETIMAGELIST](/windows/win32/Controls/hdm-setimagelist)的行为，如 Windows SDK 中所述。 返回的指针指向的 `CImageList` 对象是临时对象，并在下一次空闲时处理时删除。
 
 ### <a name="example"></a>示例
 
@@ -911,7 +911,7 @@ BOOL SetItem(
     HDITEM* pHeaderItem);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nPos*<br/>
 要操作的项的从零开始的索引。
@@ -927,7 +927,7 @@ BOOL SetItem(
 
   请参阅[CHeaderCtrl：： GetItem](#getitem)的示例。
 
-##  <a name="setorderarray"></a>  CHeaderCtrl::SetOrderArray
+##  <a name="setorderarray"></a>CHeaderCtrl：： SetOrderArray
 
 设置标头控件中项的从左到右的顺序。
 
@@ -937,7 +937,7 @@ BOOL SetOrderArray(
     LPINT piArray);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iCount*<br/>
 标头控件项的数目。
@@ -957,7 +957,7 @@ BOOL SetOrderArray(
 
   请参阅[CHeaderCtrl：： GetOrderArray](#getorderarray)的示例。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>

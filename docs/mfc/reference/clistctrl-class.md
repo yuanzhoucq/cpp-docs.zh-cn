@@ -265,11 +265,11 @@ helpviewer_keywords:
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
 ms.openlocfilehash: c8f1b8a9ed0ca8437ba40e77b47448d1bb209d20
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927922"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855450"
 ---
 # <a name="clistctrl-class"></a>CListCtrl 类
 
@@ -285,150 +285,150 @@ class CListCtrl : public CWnd
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CListCtrl::CListCtrl](#clistctrl)|构造 `CListCtrl` 对象。|
+|[CListCtrl：： CListCtrl](#clistctrl)|构造 `CListCtrl` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CListCtrl::ApproximateViewRect](#approximateviewrect)|确定显示列表视图控件的项所需的宽度和高度。|
-|[CListCtrl::Arrange](#arrange)|对齐网格上的项。|
-|[CListCtrl::CancelEditLabel](#canceleditlabel)|取消项文本编辑操作。|
-|[CListCtrl::Create](#create)|创建一个列表控件，并将其附加`CListCtrl`到对象。|
-|[CListCtrl::CreateDragImage](#createdragimage)|为指定的项创建一个拖动图像列表。|
-|[CListCtrl::CreateEx](#createex)|创建具有指定 Windows 扩展样式的列表控件，并将其附加到`CListCtrl`对象。|
-|[CListCtrl::DeleteAllItems](#deleteallitems)|从控件中删除所有项。|
-|[CListCtrl::DeleteColumn](#deletecolumn)|从列表视图控件中删除列。|
-|[CListCtrl::DeleteItem](#deleteitem)|删除控件中的项。|
-|[CListCtrl::DrawItem](#drawitem)|当所有者描述的控件的可视方位发生更改时调用。|
-|[CListCtrl::EditLabel](#editlabel)|开始就地编辑项的文本。|
-|[CListCtrl::EnableGroupView](#enablegroupview)|启用或禁用列表视图控件中的项是否显示为组。|
-|[CListCtrl::EnsureVisible](#ensurevisible)|确保项可见。|
-|[CListCtrl::FindItem](#finditem)|搜索具有指定特征的列表视图项。|
-|[CListCtrl::GetBkColor](#getbkcolor)|检索列表视图控件的背景色。|
-|[CListCtrl::GetBkImage](#getbkimage)|检索列表视图控件的当前背景图像。|
-|[CListCtrl::GetCallbackMask](#getcallbackmask)|检索列表视图控件的回调掩码。|
-|[CListCtrl::GetCheck](#getcheck)|检索与项关联的状态图像的当前显示状态。|
-|[CListCtrl::GetColumn](#getcolumn)|检索控件的列的属性。|
-|[CListCtrl::GetColumnOrderArray](#getcolumnorderarray)|检索列表视图控件的列顺序（从左到右）。|
-|[CListCtrl::GetColumnWidth](#getcolumnwidth)|检索报表视图或列表视图中列的宽度。|
-|[CListCtrl::GetCountPerPage](#getcountperpage)|计算列表视图控件中可垂直容纳的项数。|
-|[CListCtrl::GetEditControl](#geteditcontrol)|检索用于编辑项文本的编辑控件的句柄。|
-|[CListCtrl::GetEmptyText](#getemptytext)|检索当前列表视图控件为空时要显示的字符串。|
-|[CListCtrl::GetExtendedStyle](#getextendedstyle)|检索列表视图控件的当前扩展样式。|
-|[CListCtrl::GetFirstSelectedItemPosition](#getfirstselecteditemposition)|检索列表视图控件中第一个选定列表视图项的位置。|
-|[CListCtrl::GetFocusedGroup](#getfocusedgroup)|检索在当前列表视图控件中具有键盘焦点的组。|
-|[CListCtrl::GetGroupCount](#getgroupcount)|检索当前列表视图控件中的组数。|
-|[CListCtrl::GetGroupInfo](#getgroupinfo)|获取列表视图控件的指定组的信息。|
-|[CListCtrl::GetGroupInfoByIndex](#getgroupinfobyindex)|检索有关当前列表视图控件中指定组的信息。|
-|[CListCtrl::GetGroupMetrics](#getgroupmetrics)|检索组的度量值。|
-|[CListCtrl::GetGroupRect](#getgrouprect)|检索当前列表视图控件中指定组的边框。|
-|[CListCtrl::GetGroupState](#getgroupstate)|检索当前列表视图控件中指定组的状态。|
-|[CListCtrl::GetHeaderCtrl](#getheaderctrl)|检索列表视图控件的标题控件。|
-|[CListCtrl::GetHotCursor](#gethotcursor)|检索对列表视图控件启用热跟踪时使用的光标。|
-|[CListCtrl::GetHotItem](#gethotitem)|检索当前光标下的列表视图项。|
-|[CListCtrl::GetHoverTime](#gethovertime)|检索列表视图控件的当前悬停时间。|
-|[CListCtrl::GetImageList](#getimagelist)|检索用于绘制列表视图项的图像列表的句柄。|
-|[CListCtrl::GetInsertMark](#getinsertmark)|检索插入标记的当前位置。|
-|[CListCtrl::GetInsertMarkColor](#getinsertmarkcolor)|检索插入标记的当前颜色。|
-|[CListCtrl::GetInsertMarkRect](#getinsertmarkrect)|检索限定插入点的矩形。|
-|[CListCtrl::GetItem](#getitem)|检索列表视图项的特性。|
-|[CListCtrl::GetItemCount](#getitemcount)|检索列表视图控件中的项数。|
-|[CListCtrl::GetItemData](#getitemdata)|检索与项关联的应用程序特定的值。|
-|[CListCtrl::GetItemIndexRect](#getitemindexrect)|检索当前列表视图控件中子项的全部或部分的边框。|
-|[CListCtrl::GetItemPosition](#getitemposition)|检索列表视图项的位置。|
-|[CListCtrl::GetItemRect](#getitemrect)|检索项的边框。|
-|[CListCtrl::GetItemSpacing](#getitemspacing)|计算当前列表视图控件中各项之间的间距。|
-|[CListCtrl::GetItemState](#getitemstate)|检索列表视图项的状态。|
-|[CListCtrl::GetItemText](#getitemtext)|检索列表视图项或子项的文本。|
-|[CListCtrl::GetNextItem](#getnextitem)|使用指定的属性和与给定项的指定关系搜索列表视图项。|
-|[CListCtrl::GetNextItemIndex](#getnextitemindex)|检索当前列表视图控件中具有一组指定属性的项的索引。|
-|[CListCtrl::GetNextSelectedItem](#getnextselecteditem)|检索列表视图项位置的索引，以及用于迭代的下一个选定列表视图项的位置。|
-|[CListCtrl::GetNumberOfWorkAreas](#getnumberofworkareas)|检索列表视图控件的当前工作区数。|
-|[CListCtrl::GetOrigin](#getorigin)|检索列表视图控件的当前视图源。|
-|[CListCtrl::GetOutlineColor](#getoutlinecolor)|检索列表视图控件边框的颜色。|
-|[CListCtrl::GetSelectedColumn](#getselectedcolumn)|检索列表控件中当前所选列的索引。|
-|[CListCtrl::GetSelectedCount](#getselectedcount)|检索列表视图控件中选定项的数目。|
-|[CListCtrl::GetSelectionMark](#getselectionmark)|检索列表视图控件的选择标记。|
-|[CListCtrl::GetStringWidth](#getstringwidth)|确定显示给定字符串的所有所需的最小列宽。|
-|[CListCtrl::GetSubItemRect](#getsubitemrect)|检索列表视图控件中项的边框。|
-|[CListCtrl::GetTextBkColor](#gettextbkcolor)|检索列表视图控件的文本背景色。|
-|[CListCtrl::GetTextColor](#gettextcolor)|检索列表视图控件的文本颜色。|
-|[CListCtrl::GetTileInfo](#gettileinfo)|检索有关列表视图控件中的图块的信息。|
-|[CListCtrl::GetTileViewInfo](#gettileviewinfo)|检索有关磁贴视图中的列表视图控件的信息。|
-|[CListCtrl::GetToolTips](#gettooltips)|检索列表视图控件用来显示工具提示的 tooltip 控件。|
-|[CListCtrl::GetTopIndex](#gettopindex)|检索最顶层可见项的索引。|
-|[CListCtrl::GetView](#getview)|获取列表视图控件的视图。|
-|[CListCtrl::GetViewRect](#getviewrect)|检索列表视图控件中所有项的边框。|
-|[CListCtrl::GetWorkAreas](#getworkareas)|检索列表视图控件的当前工作区。|
-|[CListCtrl::HasGroup](#hasgroup)|确定列表视图控件是否具有指定的组。|
-|[CListCtrl::HitTest](#hittest)|确定位于指定位置的列表视图项。|
-|[CListCtrl::InsertColumn](#insertcolumn)|在列表视图控件中插入新列。|
-|[CListCtrl::InsertGroup](#insertgroup)|将组插入到列表视图控件中。|
-|[CListCtrl::InsertGroupSorted](#insertgroupsorted)|将指定的组插入组的有序列表。|
-|[CListCtrl::InsertItem](#insertitem)|在列表视图控件中插入新项。|
-|[CListCtrl::InsertMarkHitTest](#insertmarkhittest)|检索距离指定点最近的插入点。|
-|[CListCtrl::IsGroupViewEnabled](#isgroupviewenabled)|确定是否为列表视图控件启用组视图。|
-|[CListCtrl::IsItemVisible](#isitemvisible)|指示当前列表视图控件中的指定项是否可见。|
-|[CListCtrl::MapIDToIndex](#mapidtoindex)|将当前列表视图控件中项的唯一 ID 映射到索引。|
-|[CListCtrl::MapIndexToID](#mapindextoid)|将当前列表视图控件中项的索引映射到唯一 ID。|
-|[CListCtrl::MoveGroup](#movegroup)|移动指定的组。|
-|[CListCtrl::MoveItemToGroup](#moveitemtogroup)|将指定组移动到列表视图控件的指定的从零开始的索引。|
-|[CListCtrl::RedrawItems](#redrawitems)|强制列表视图控件重绘一系列项。|
-|[CListCtrl::RemoveAllGroups](#removeallgroups)|从列表视图控件中删除所有组。|
-|[CListCtrl::RemoveGroup](#removegroup)|从列表视图控件中删除指定的组。|
-|[CListCtrl::Scroll](#scroll)|滚动列表视图控件的内容。|
-|[CListCtrl::SetBkColor](#setbkcolor)|设置列表视图控件的背景色。|
-|[CListCtrl::SetBkImage](#setbkimage)|设置列表视图控件的当前背景图像。|
-|[CListCtrl::SetCallbackMask](#setcallbackmask)|设置列表视图控件的回调掩码。|
-|[CListCtrl::SetCheck](#setcheck)|设置与项关联的状态图像的当前显示状态。|
-|[CListCtrl::SetColumn](#setcolumn)|设置列表视图列的属性。|
-|[CListCtrl::SetColumnOrderArray](#setcolumnorderarray)|设置列表视图控件的列顺序（从左到右）。|
-|[CListCtrl::SetColumnWidth](#setcolumnwidth)|更改报表视图或列表视图中列的宽度。|
-|[CListCtrl::SetExtendedStyle](#setextendedstyle)|设置列表视图控件的当前扩展样式。|
-|[CListCtrl::SetGroupInfo](#setgroupinfo)|设置列表视图控件的指定组的信息。|
-|[CListCtrl::SetGroupMetrics](#setgroupmetrics)|设置列表视图控件的组度量值。|
-|[CListCtrl::SetHotCursor](#sethotcursor)|设置为列表视图控件启用热跟踪时使用的光标。|
-|[CListCtrl::SetHotItem](#sethotitem)|设置列表视图控件的当前热项。|
-|[CListCtrl::SetHoverTime](#sethovertime)|设置列表视图控件的当前悬停时间。|
-|[CListCtrl::SetIconSpacing](#seticonspacing)|设置列表视图控件中图标的间距。|
-|[CListCtrl::SetImageList](#setimagelist)|将图像列表分配给列表视图控件。|
-|[CListCtrl::SetInfoTip](#setinfotip)|设置工具提示文本。|
-|[CListCtrl::SetInsertMark](#setinsertmark)|将插入点设置为定义的位置。|
-|[CListCtrl::SetInsertMarkColor](#setinsertmarkcolor)|设置插入点的颜色。|
-|[CListCtrl::SetItem](#setitem)|设置列表视图项的部分或全部属性。|
-|[CListCtrl::SetItemCount](#setitemcount)|准备用于添加大量项的列表视图控件。|
-|[CListCtrl::SetItemCountEx](#setitemcountex)|设置虚拟列表视图控件的项计数。|
-|[CListCtrl::SetItemData](#setitemdata)|设置项的应用程序特定的值。|
-|[CListCtrl::SetItemIndexState](#setitemindexstate)|设置当前列表视图控件中项的状态。|
-|[CListCtrl::SetItemPosition](#setitemposition)|将项移动到列表视图控件中的指定位置。|
-|[CListCtrl::SetItemState](#setitemstate)|更改列表视图控件中项的状态。|
-|[CListCtrl::SetItemText](#setitemtext)|更改列表视图项或子项的文本。|
-|[CListCtrl::SetOutlineColor](#setoutlinecolor)|设置列表视图控件边框的颜色。|
-|[CListCtrl::SetSelectedColumn](#setselectedcolumn)|设置列表视图控件的选定列。|
-|[CListCtrl::SetSelectionMark](#setselectionmark)|设置列表视图控件的选择标记。|
-|[CListCtrl::SetTextBkColor](#settextbkcolor)|设置列表视图控件中文本的背景色。|
-|[CListCtrl::SetTextColor](#settextcolor)|设置列表视图控件的文本颜色。|
-|[CListCtrl::SetTileInfo](#settileinfo)|设置列表视图控件的图块的信息。|
-|[CListCtrl::SetTileViewInfo](#settileviewinfo)|设置列表视图控件在磁贴视图中使用的信息。|
-|[CListCtrl::SetToolTips](#settooltips)|设置列表视图控件将用于显示工具提示的 tooltip 控件。|
-|[CListCtrl::SetView](#setview)|设置列表视图控件的视图。|
-|[CListCtrl::SetWorkAreas](#setworkareas)|设置可在列表视图控件中显示图标的区域。|
-|[CListCtrl::SortGroups](#sortgroups)|使用用户定义函数对列表视图控件的组进行排序。|
-|[CListCtrl::SortItems](#sortitems)|使用应用程序定义的比较函数对列表视图项进行排序。|
-|[CListCtrl::SortItemsEx](#sortitemsex)|使用应用程序定义的比较函数对列表视图项进行排序。|
-|[CListCtrl::SubItemHitTest](#subitemhittest)|确定位于给定位置的列表视图项（如果有）。|
-|[CListCtrl::Update](#update)|强制控件重绘指定的项。|
+|[CListCtrl：： ApproximateViewRect](#approximateviewrect)|确定显示列表视图控件的项所需的宽度和高度。|
+|[CListCtrl：：排列](#arrange)|对齐网格上的项。|
+|[CListCtrl：： CancelEditLabel](#canceleditlabel)|取消项文本编辑操作。|
+|[CListCtrl：： Create](#create)|创建一个列表控件，并将其附加到 `CListCtrl` 对象上。|
+|[CListCtrl：： CreateDragImage](#createdragimage)|为指定的项创建一个拖动图像列表。|
+|[CListCtrl：： CreateEx](#createex)|创建具有指定 Windows 扩展样式的列表控件，并将其附加到 `CListCtrl` 的对象。|
+|[CListCtrl：:D eleteAllItems](#deleteallitems)|从控件中删除所有项。|
+|[CListCtrl：:D eleteColumn](#deletecolumn)|从列表视图控件中删除列。|
+|[CListCtrl：:D eleteItem](#deleteitem)|删除控件中的项。|
+|[CListCtrl：:D rawItem](#drawitem)|当所有者描述的控件的可视方位发生更改时调用。|
+|[CListCtrl：： EditLabel](#editlabel)|开始就地编辑项的文本。|
+|[CListCtrl：： EnableGroupView](#enablegroupview)|启用或禁用列表视图控件中的项是否显示为组。|
+|[CListCtrl：： Ensurevisible\](#ensurevisible)|确保项可见。|
+|[CListCtrl：： FindItem](#finditem)|搜索具有指定特征的列表视图项。|
+|[CListCtrl：： GetBkColor](#getbkcolor)|检索列表视图控件的背景色。|
+|[CListCtrl：： GetBkImage](#getbkimage)|检索列表视图控件的当前背景图像。|
+|[CListCtrl：： GetCallbackMask](#getcallbackmask)|检索列表视图控件的回调掩码。|
+|[CListCtrl：： GetCheck](#getcheck)|检索与项关联的状态图像的当前显示状态。|
+|[CListCtrl：： GetColumn](#getcolumn)|检索控件的列的属性。|
+|[CListCtrl：： GetColumnOrderArray](#getcolumnorderarray)|检索列表视图控件的列顺序（从左到右）。|
+|[CListCtrl：： GetColumnWidth](#getcolumnwidth)|检索报表视图或列表视图中列的宽度。|
+|[CListCtrl：： GetCountPerPage](#getcountperpage)|计算列表视图控件中可垂直容纳的项数。|
+|[CListCtrl：： GetEditControl](#geteditcontrol)|检索用于编辑项文本的编辑控件的句柄。|
+|[CListCtrl：： GetEmptyText](#getemptytext)|检索当前列表视图控件为空时要显示的字符串。|
+|[CListCtrl：： GetExtendedStyle](#getextendedstyle)|检索列表视图控件的当前扩展样式。|
+|[CListCtrl：： GetFirstSelectedItemPosition](#getfirstselecteditemposition)|检索列表视图控件中第一个选定列表视图项的位置。|
+|[CListCtrl：： GetFocusedGroup](#getfocusedgroup)|检索在当前列表视图控件中具有键盘焦点的组。|
+|[CListCtrl：： GetGroupCount](#getgroupcount)|检索当前列表视图控件中的组数。|
+|[CListCtrl：： GetGroupInfo](#getgroupinfo)|获取列表视图控件的指定组的信息。|
+|[CListCtrl：： GetGroupInfoByIndex](#getgroupinfobyindex)|检索有关当前列表视图控件中指定组的信息。|
+|[CListCtrl：： GetGroupMetrics](#getgroupmetrics)|检索组的度量值。|
+|[CListCtrl：： GetGroupRect](#getgrouprect)|检索当前列表视图控件中指定组的边框。|
+|[CListCtrl：： GetGroupState](#getgroupstate)|检索当前列表视图控件中指定组的状态。|
+|[CListCtrl：： GetHeaderCtrl](#getheaderctrl)|检索列表视图控件的标题控件。|
+|[CListCtrl：： GetHotCursor](#gethotcursor)|检索对列表视图控件启用热跟踪时使用的光标。|
+|[CListCtrl：： GetHotItem](#gethotitem)|检索当前光标下的列表视图项。|
+|[CListCtrl：： GetHoverTime](#gethovertime)|检索列表视图控件的当前悬停时间。|
+|[CListCtrl：： GetImageList](#getimagelist)|检索用于绘制列表视图项的图像列表的句柄。|
+|[CListCtrl：： GetInsertMark](#getinsertmark)|检索插入标记的当前位置。|
+|[CListCtrl：： GetInsertMarkColor](#getinsertmarkcolor)|检索插入标记的当前颜色。|
+|[CListCtrl：： GetInsertMarkRect](#getinsertmarkrect)|检索限定插入点的矩形。|
+|[CListCtrl：： GetItem](#getitem)|检索列表视图项的特性。|
+|[CListCtrl：： GetItemCount](#getitemcount)|检索列表视图控件中的项数。|
+|[CListCtrl：： GetItemData](#getitemdata)|检索与项关联的应用程序特定的值。|
+|[CListCtrl：： GetItemIndexRect](#getitemindexrect)|检索当前列表视图控件中子项的全部或部分的边框。|
+|[CListCtrl：： GetItemPosition](#getitemposition)|检索列表视图项的位置。|
+|[CListCtrl：： GetItemRect](#getitemrect)|检索项的边框。|
+|[CListCtrl：： GetItemSpacing](#getitemspacing)|计算当前列表视图控件中各项之间的间距。|
+|[CListCtrl：： GetItemState](#getitemstate)|检索列表视图项的状态。|
+|[CListCtrl：： GetItemText](#getitemtext)|检索列表视图项或子项的文本。|
+|[CListCtrl：： GetNextItem](#getnextitem)|使用指定的属性和与给定项的指定关系搜索列表视图项。|
+|[CListCtrl：： GetNextItemIndex](#getnextitemindex)|检索当前列表视图控件中具有一组指定属性的项的索引。|
+|[CListCtrl：： GetNextSelectedItem](#getnextselecteditem)|检索列表视图项位置的索引，以及用于迭代的下一个选定列表视图项的位置。|
+|[CListCtrl：： GetNumberOfWorkAreas](#getnumberofworkareas)|检索列表视图控件的当前工作区数。|
+|[CListCtrl：： GetOrigin](#getorigin)|检索列表视图控件的当前视图源。|
+|[CListCtrl：： GetOutlineColor](#getoutlinecolor)|检索列表视图控件边框的颜色。|
+|[CListCtrl：： GetSelectedColumn](#getselectedcolumn)|检索列表控件中当前所选列的索引。|
+|[CListCtrl：： GetSelectedCount](#getselectedcount)|检索列表视图控件中选定项的数目。|
+|[CListCtrl：： GetSelectionMark](#getselectionmark)|检索列表视图控件的选择标记。|
+|[CListCtrl：： GetStringWidth](#getstringwidth)|确定显示给定字符串的所有所需的最小列宽。|
+|[CListCtrl：： GetSubItemRect](#getsubitemrect)|检索列表视图控件中项的边框。|
+|[CListCtrl：： GetTextBkColor](#gettextbkcolor)|检索列表视图控件的文本背景色。|
+|[CListCtrl：： GetTextColor](#gettextcolor)|检索列表视图控件的文本颜色。|
+|[CListCtrl：： GetTileInfo](#gettileinfo)|检索有关列表视图控件中的图块的信息。|
+|[CListCtrl：： GetTileViewInfo](#gettileviewinfo)|检索有关磁贴视图中的列表视图控件的信息。|
+|[CListCtrl：： GetToolTips](#gettooltips)|检索列表视图控件用来显示工具提示的 tooltip 控件。|
+|[CListCtrl：： GetTopIndex](#gettopindex)|检索最顶层可见项的索引。|
+|[CListCtrl：： GetView](#getview)|获取列表视图控件的视图。|
+|[CListCtrl：： GetViewRect](#getviewrect)|检索列表视图控件中所有项的边框。|
+|[CListCtrl：： GetWorkAreas](#getworkareas)|检索列表视图控件的当前工作区。|
+|[CListCtrl：： HasGroup](#hasgroup)|确定列表视图控件是否具有指定的组。|
+|[CListCtrl：： System.windows.media.visualtreehelper.hittest](#hittest)|确定位于指定位置的列表视图项。|
+|[CListCtrl：： InsertColumn](#insertcolumn)|在列表视图控件中插入新列。|
+|[CListCtrl：： InsertGroup](#insertgroup)|将组插入到列表视图控件中。|
+|[CListCtrl：： InsertGroupSorted](#insertgroupsorted)|将指定的组插入组的有序列表。|
+|[CListCtrl：： InsertItem](#insertitem)|在列表视图控件中插入新项。|
+|[CListCtrl：： InsertMarkHitTest](#insertmarkhittest)|检索距离指定点最近的插入点。|
+|[CListCtrl：： IsGroupViewEnabled](#isgroupviewenabled)|确定是否为列表视图控件启用组视图。|
+|[CListCtrl：： IsItemVisible](#isitemvisible)|指示当前列表视图控件中的指定项是否可见。|
+|[CListCtrl：： MapIDToIndex](#mapidtoindex)|将当前列表视图控件中项的唯一 ID 映射到索引。|
+|[CListCtrl：： MapIndexToID](#mapindextoid)|将当前列表视图控件中项的索引映射到唯一 ID。|
+|[CListCtrl：： MoveGroup](#movegroup)|移动指定的组。|
+|[CListCtrl：： MoveItemToGroup](#moveitemtogroup)|将指定组移动到列表视图控件的指定的从零开始的索引。|
+|[CListCtrl：： RedrawItems](#redrawitems)|强制列表视图控件重绘一系列项。|
+|[CListCtrl：： RemoveAllGroups](#removeallgroups)|从列表视图控件中删除所有组。|
+|[CListCtrl：： RemoveGroup](#removegroup)|从列表视图控件中删除指定的组。|
+|[CListCtrl：： Scroll](#scroll)|滚动列表视图控件的内容。|
+|[CListCtrl：： SetBkColor](#setbkcolor)|设置列表视图控件的背景色。|
+|[CListCtrl：： SetBkImage](#setbkimage)|设置列表视图控件的当前背景图像。|
+|[CListCtrl：： SetCallbackMask](#setcallbackmask)|设置列表视图控件的回调掩码。|
+|[CListCtrl：： SetCheck](#setcheck)|设置与项关联的状态图像的当前显示状态。|
+|[CListCtrl：： SetColumn](#setcolumn)|设置列表视图列的属性。|
+|[CListCtrl：： SetColumnOrderArray](#setcolumnorderarray)|设置列表视图控件的列顺序（从左到右）。|
+|[CListCtrl：： SetColumnWidth](#setcolumnwidth)|更改报表视图或列表视图中列的宽度。|
+|[CListCtrl：： SetExtendedStyle](#setextendedstyle)|设置列表视图控件的当前扩展样式。|
+|[CListCtrl：： SetGroupInfo](#setgroupinfo)|设置列表视图控件的指定组的信息。|
+|[CListCtrl：： SetGroupMetrics](#setgroupmetrics)|设置列表视图控件的组度量值。|
+|[CListCtrl：： SetHotCursor](#sethotcursor)|设置为列表视图控件启用热跟踪时使用的光标。|
+|[CListCtrl：： SetHotItem](#sethotitem)|设置列表视图控件的当前热项。|
+|[CListCtrl：： SetHoverTime](#sethovertime)|设置列表视图控件的当前悬停时间。|
+|[CListCtrl：： SetIconSpacing](#seticonspacing)|设置列表视图控件中图标的间距。|
+|[CListCtrl：： SetImageList](#setimagelist)|将图像列表分配给列表视图控件。|
+|[CListCtrl：： SetInfoTip](#setinfotip)|设置工具提示文本。|
+|[CListCtrl：： SetInsertMark](#setinsertmark)|将插入点设置为定义的位置。|
+|[CListCtrl：： SetInsertMarkColor](#setinsertmarkcolor)|设置插入点的颜色。|
+|[CListCtrl：： SetItem](#setitem)|设置列表视图项的部分或全部属性。|
+|[CListCtrl：： SetItemCount](#setitemcount)|准备用于添加大量项的列表视图控件。|
+|[CListCtrl：： SetItemCountEx](#setitemcountex)|设置虚拟列表视图控件的项计数。|
+|[CListCtrl：： SetItemData](#setitemdata)|设置项的应用程序特定的值。|
+|[CListCtrl：： SetItemIndexState](#setitemindexstate)|设置当前列表视图控件中项的状态。|
+|[CListCtrl：： SetItemPosition](#setitemposition)|将项移动到列表视图控件中的指定位置。|
+|[CListCtrl：： SetItemState](#setitemstate)|更改列表视图控件中项的状态。|
+|[CListCtrl：： SetItemText](#setitemtext)|更改列表视图项或子项的文本。|
+|[CListCtrl：： SetOutlineColor](#setoutlinecolor)|设置列表视图控件边框的颜色。|
+|[CListCtrl：： SetSelectedColumn](#setselectedcolumn)|设置列表视图控件的选定列。|
+|[CListCtrl：： SetSelectionMark](#setselectionmark)|设置列表视图控件的选择标记。|
+|[CListCtrl：： SetTextBkColor](#settextbkcolor)|设置列表视图控件中文本的背景色。|
+|[CListCtrl：： SetTextColor](#settextcolor)|设置列表视图控件的文本颜色。|
+|[CListCtrl：： SetTileInfo](#settileinfo)|设置列表视图控件的图块的信息。|
+|[CListCtrl：： SetTileViewInfo](#settileviewinfo)|设置列表视图控件在磁贴视图中使用的信息。|
+|[CListCtrl：： SetToolTips](#settooltips)|设置列表视图控件将用于显示工具提示的 tooltip 控件。|
+|[CListCtrl：： SetView](#setview)|设置列表视图控件的视图。|
+|[CListCtrl：： SetWorkAreas](#setworkareas)|设置可在列表视图控件中显示图标的区域。|
+|[CListCtrl：： SortGroups](#sortgroups)|使用用户定义函数对列表视图控件的组进行排序。|
+|[CListCtrl：： SortItems](#sortitems)|使用应用程序定义的比较函数对列表视图项进行排序。|
+|[CListCtrl：： SortItemsEx](#sortitemsex)|使用应用程序定义的比较函数对列表视图项进行排序。|
+|[CListCtrl：： SubItemHitTest](#subitemhittest)|确定位于给定位置的列表视图项（如果有）。|
+|[CListCtrl：： Update](#update)|强制控件重绘指定的项。|
 
 ## <a name="remarks"></a>备注
 
-除了图标和标签，每一项都可以将信息显示在图标和标签右侧的列中。 此控件（因而`CListCtrl`类）仅适用于在 windows 95/98 和 windows NT 版本3.51 及更高版本下运行的程序。
+除了图标和标签，每一项都可以将信息显示在图标和标签右侧的列中。 此控件（因此 `CListCtrl` 类）仅适用于在 Windows 95/98 和 Windows NT 版本3.51 及更高版本下运行的程序。
 
-下面是`CListCtrl`类的简要概述。 有关详细的概念讨论，请参阅[使用 CListCtrl](../../mfc/using-clistctrl.md)和[控件](../../mfc/controls-mfc.md)。
+下面是 `CListCtrl` 类的简要概述。 有关详细的概念讨论，请参阅[使用 CListCtrl](../../mfc/using-clistctrl.md)和[控件](../../mfc/controls-mfc.md)。
 
-## <a name="views"></a>Views
+## <a name="views"></a>视图
 
 列表视图控件可以通过四种不同的方式显示其内容，称为 "视图"。
 
@@ -440,7 +440,7 @@ class CListCtrl : public CWnd
 
    每个项都显示为一个小图标（16 x 16 像素），标签位于其右侧。 用户可以将这些项拖到 "列表视图" 窗口中的任何位置。
 
-- 列表视图
+- “列表”视图
 
    每个项都显示为一个小图标，其右侧有一个标签。 项按列排列，并且不能拖动到 "列表视图" 窗口中的任何位置。
 
@@ -452,7 +452,7 @@ class CListCtrl : public CWnd
 
 ## <a name="extended-styles"></a>扩展样式
 
-除了标准列表样式以外，类`CListCtrl`还支持大量扩展样式，提供丰富的功能。 此功能的一些示例包括：
+除了标准列表样式以外，类 `CListCtrl` 还支持大量扩展样式，提供丰富的功能。 此功能的一些示例包括：
 
 - 悬停选定内容
 
@@ -460,7 +460,7 @@ class CListCtrl : public CWnd
 
 - 虚拟列表视图
 
-   启用后，允许控件支持最多 DWORD 项。 这可以通过在应用程序上施加管理项数据的开销来实现。 除项选择和焦点信息外，所有项信息都必须由应用程序管理。 有关详细信息，请[参阅使用 CListCtrl：虚拟列表控件](../../mfc/virtual-list-controls.md)。
+   启用后，允许控件支持最多 DWORD 项。 这可以通过在应用程序上施加管理项数据的开销来实现。 除项选择和焦点信息外，所有项信息都必须由应用程序管理。 有关详细信息，请参阅[Using CListCtrl： Virtual List Controls](../../mfc/virtual-list-controls.md)。
 
 - 一键式激活
 
@@ -470,15 +470,15 @@ class CListCtrl : public CWnd
 
    启用后，允许对列表视图控件中的列进行拖放排序。 仅在 "报表" 视图中可用。
 
-有关使用这些新扩展样式的信息，请[参阅使用 CListCtrl：更改列表控件样式](../../mfc/changing-list-control-styles.md)。
+有关使用这些新的扩展样式的信息，请参阅[使用 CListCtrl：更改列表控件样式](../../mfc/changing-list-control-styles.md)。
 
 ## <a name="items-and-subitems"></a>项和子项
 
 列表视图控件中的每一项都包含一个图标（来自图像列表）、一个标签、一个当前状态和一个应用程序定义的值（称为 "项数据"）。 也可以将一个或多个子项与每个项关联。 "子项" 是在 "报表" 视图中，可在项的图标和标签右侧的列中显示的字符串。 列表视图控件中的所有项必须具有相同数目的子项。
 
-类`CListCtrl`提供多个用于插入、删除、查找和修改这些项的函数。 有关详细信息，请参阅[CListCtrl：： GetItem](#getitem)、 [CListCtrl：： InsertItem](#insertitem)和[CListCtrl：： FindItem](#finditem)、[向控件添加项](../adding-items-to-the-control.md)以及[在列表控件中滚动、排列、排序和查找](../scrolling-arranging-sorting-and-finding-in-list-controls.md)。
+类 `CListCtrl` 提供了若干用于插入、删除、查找和修改这些项的函数。 有关详细信息，请参阅[CListCtrl：： GetItem](#getitem)、 [CListCtrl：： InsertItem](#insertitem)和[CListCtrl：： FindItem](#finditem)、[向控件添加项](../adding-items-to-the-control.md)以及[在列表控件中滚动、排列、排序和查找](../scrolling-arranging-sorting-and-finding-in-list-controls.md)。
 
-默认情况下，列表视图控件负责存储项的图标和文本特性。 但是，除了这些项类型之外，类`CListCtrl`还支持 "回调项"。 "回调项" 是一个列表视图项，应用程序（而不是控件）存储文本和/或图标。 回调掩码用于指定应用程序提供的项属性（文本和/或图标）。 如果应用程序使用回叫项，则它必须能够按需提供文本和/或图标属性。 当你的应用程序已经维护了某些此信息时，回调项很有用。 有关详细信息，请[参阅使用 CListCtrl：回调项和回调掩码](../callback-items-and-the-callback-mask.md)。
+默认情况下，列表视图控件负责存储项的图标和文本特性。 但是，除了这些项类型之外，类 `CListCtrl` 还支持 "回调项"。 "回调项" 是一个列表视图项，应用程序（而不是控件）存储文本和/或图标。 回调掩码用于指定应用程序提供的项属性（文本和/或图标）。 如果应用程序使用回叫项，则它必须能够按需提供文本和/或图标属性。 当你的应用程序已经维护了某些此信息时，回调项很有用。 有关详细信息，请参阅[使用 CListCtrl：回调项和回调掩码](../callback-items-and-the-callback-mask.md)。
 
 ## <a name="image-lists"></a>图像列表
 
@@ -500,7 +500,7 @@ class CListCtrl : public CWnd
 
    用于显示在每个标头控件项中的小图像的报表视图中。
 
-默认情况下，列表视图控件会在销毁时销毁分配给它的图像列表;但是，开发人员可以通过在不使用的情况下销毁每个图像列表（由应用程序确定）来自定义此行为。 有关详细信息，请[参阅使用 CListCtrl：列表项和图像列表](../list-items-and-image-lists.md)。
+默认情况下，列表视图控件会在销毁时销毁分配给它的图像列表;但是，开发人员可以通过在不使用的情况下销毁每个图像列表（由应用程序确定）来自定义此行为。 有关详细信息，请参阅[使用 CListCtrl：列出项和图像列表](../list-items-and-image-lists.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -526,7 +526,7 @@ CSize ApproximateViewRect(
     int iCount = -1) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *sz*<br/>
 控件的建议尺寸（以像素为单位）。 如果未指定维度，则框架将使用控件的当前宽度或高度值。
@@ -536,11 +536,11 @@ CSize ApproximateViewRect(
 
 ### <a name="return-value"></a>返回值
 
-一个`CSize`对象，该对象包含显示项所需的近似宽度和高度（以像素为单位）。
+一个 `CSize` 对象，它包含显示项所需的近似宽度和高度（以像素为单位）。
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 宏[ListView_ApproximateViewRect](/windows/win32/api/commctrl/nf-commctrl-listview_approximateviewrect)的行为，如 Windows SDK 中所述。
+此成员函数实现 Win32 宏的行为， [ListView_ApproximateViewRect](/windows/win32/api/commctrl/nf-commctrl-listview_approximateviewrect)，如 Windows SDK 中所述。
 
 ## <a name="arrange"></a>CListCtrl：：排列
 
@@ -550,10 +550,10 @@ CSize ApproximateViewRect(
 BOOL Arrange(UINT nCode);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nCode*<br/>
-指定项的对齐样式。 它可以是下列值之一:
+指定项的对齐样式。 可以为下列值之一：
 
 - LVA_ALIGNLEFT 沿窗口左边缘对齐项。
 
@@ -602,7 +602,7 @@ CListCtrl();
 
 ## <a name="create"></a>CListCtrl：： Create
 
-创建一个列表控件，并将其附加`CListCtrl`到对象。
+创建一个列表控件，并将其附加到 `CListCtrl` 对象上。
 
 ```
 virtual BOOL Create(
@@ -612,16 +612,16 @@ virtual BOOL Create(
     UINT nID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwStyle*<br/>
 指定列表控件的样式。 将列表控件样式的任意组合应用于控件。 有关这些样式的完整列表，请参阅 Windows SDK 中的[列表视图窗口样式](/windows/win32/Controls/list-view-window-styles)。 使用[SetExtendedStyle](#setextendedstyle)设置特定于控件的扩展样式。
 
 *rect*<br/>
-指定列表控件的大小和位置。 它可以`CRect`是对象或[RECT](/previous-versions/dd162897\(v=vs.85\))结构。
+指定列表控件的大小和位置。 它可以是 `CRect` 对象或[RECT](/previous-versions/dd162897\(v=vs.85\))结构。
 
 *pParentWnd*<br/>
-指定列表控件的父窗口，通常为`CDialog`。 它不能为 NULL。
+指定列表控件的父窗口，通常为 `CDialog`。 值不得为 NULL。
 
 *nID*<br/>
 指定列表控件的 ID。
@@ -632,9 +632,9 @@ virtual BOOL Create(
 
 ### <a name="remarks"></a>备注
 
-可以通过`CListCtrl`两个步骤构造。 首先，调用构造函数，然后调用`Create`，它将创建列表视图控件并将其附加`CListCtrl`到对象。
+可以通过两个步骤构造 `CListCtrl`。 首先，调用构造函数，然后调用 `Create`，这将创建列表视图控件，并将其附加到 `CListCtrl` 对象。
 
-若要将扩展的 Windows 样式应用于 list 控件对象 ，请调用[CreateEx](#createex) 而不是`Create`。
+若要将扩展的 Windows 样式应用于 list 控件对象，请调用[CreateEx](#createex)而不是 `Create`。
 
 ### <a name="example"></a>示例
 
@@ -646,7 +646,7 @@ virtual BOOL Create(
 
 ## <a name="createex"></a>CListCtrl：： CreateEx
 
-创建一个控件（子窗口）并将`CListCtrl`其与对象关联。
+创建一个控件（子窗口）并将其与 `CListCtrl` 对象相关联。
 
 ```
 virtual BOOL CreateEx(
@@ -657,7 +657,7 @@ virtual BOOL CreateEx(
     UINT nID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwExStyle*<br/>
 指定正在创建的控件的扩展样式。 有关扩展 Windows 样式的列表，请参阅 Windows SDK 中[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)的*dwExStyle*参数。
@@ -680,9 +680,9 @@ virtual BOOL CreateEx(
 
 ### <a name="remarks"></a>备注
 
-使用`CreateEx`而不是[Create](#create)来应用扩展的 windows 样式，由 windows 扩展样式指定的**WS_EX_** 。
+使用 `CreateEx` 而不是[Create](#create)来应用扩展的 windows 样式，该样式由 Windows 扩展样式指定的前言**WS_EX_** 开头。
 
-`CreateEx`使用由*dwExStyle*指定的扩展 Windows 样式创建控件。 若要设置特定于控件的扩展样式，请调用[SetExtendedStyle](#setextendedstyle)。 例如，使用`CreateEx`将此类样式设置为 WS_EX_CONTEXTHELP，但使用`SetExtendedStyle`将此类样式设置为 LVS_EX_FULLROWSELECT。 有关详细信息，请参阅在 Windows SDK 中的[扩展列表视图样式](/windows/win32/Controls/extended-list-view-styles)一文中所述的样式。
+`CreateEx` 使用*dwExStyle*指定的扩展 Windows 样式创建控件。 若要设置特定于控件的扩展样式，请调用[SetExtendedStyle](#setextendedstyle)。 例如，使用 `CreateEx` 将此类样式设置 WS_EX_CONTEXTHELP，但使用 `SetExtendedStyle` 将此类样式设置为 "LVS_EX_FULLROWSELECT"。 有关详细信息，请参阅在 Windows SDK 中的[扩展列表视图样式](/windows/win32/Controls/extended-list-view-styles)一文中所述的样式。
 
 ## <a name="createdragimage"></a>CListCtrl：： CreateDragImage
 
@@ -694,7 +694,7 @@ CImageList* CreateDragImage(
     LPPOINT lpPoint);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nItem*<br/>
 要创建其拖动图像列表的项的索引。
@@ -708,7 +708,7 @@ CImageList* CreateDragImage(
 
 ### <a name="remarks"></a>备注
 
-对象`CImageList`是永久性的，并且必须在完成后将其删除。 例如:
+`CImageList` 对象是永久性的，并且必须在完成后将其删除。 例如：
 
 ```cpp
         CImageList* pImageList = m_myListCtrl.CreateDragImage(nItem, &point);
@@ -718,7 +718,7 @@ CImageList* CreateDragImage(
         delete pImageList;
 ```
 
-## <a name="deleteallitems"></a>  CListCtrl::DeleteAllItems
+## <a name="deleteallitems"></a>CListCtrl：:D eleteAllItems
 
 从列表视图控件中删除所有项。
 
@@ -746,7 +746,7 @@ BOOL DeleteAllItems();
 BOOL DeleteColumn(int nCol);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nCol*<br/>
 要删除的列的索引。
@@ -775,7 +775,7 @@ BOOL DeleteColumn(int nCol);
 BOOL DeleteItem(int nItem);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nItem*<br/>
 指定要删除的项的索引。
@@ -796,7 +796,7 @@ BOOL DeleteItem(int nItem);
         }
 ```
 
-## <a name="drawitem"></a>  CListCtrl::DrawItem
+## <a name="drawitem"></a>CListCtrl：:D rawItem
 
 当所有者描述的列表视图控件的可视方面发生更改时由框架调用。
 
@@ -804,16 +804,16 @@ BOOL DeleteItem(int nItem);
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpDrawItemStruct*<br/>
-指向`DRAWITEMSTRUCT`结构的长指针，该结构包含所需绘图类型的相关信息。
+指向 `DRAWITEMSTRUCT` 结构的长指针，该指针包含所需绘图类型的相关信息。
 
 ### <a name="remarks"></a>备注
 
-[DRAWITEMSTRUCT 结构](/windows/win32/api/winuser/ns-winuser-drawitemstruct)的成员定义要执行的绘图`itemAction`操作。
+[DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct)结构的 `itemAction` 成员定义要执行的绘图操作。
 
-默认情况下，此成员函数不执行任何操作。 重写此成员函数以实现所有者描述`CListCtrl`对象的绘制。
+默认情况下，此成员函数不执行任何操作。 重写此成员函数以实现 `CListCtrl` 对象的所有者描述的绘图。
 
 此成员函数终止之前，应用程序应还原为*lpDrawItemStruct*中提供的显示上下文选择的所有图形设备接口（GDI）对象。
 
@@ -825,18 +825,18 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 CEdit* EditLabel(int nItem);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nItem*<br/>
 要编辑的列表视图项的索引。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则为指向`CEdit`用于编辑项文本的对象的指针; 否则为 NULL。
+如果成功，则为指向用于编辑项文本的 `CEdit` 对象的指针;否则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-具有 LVS_EDITLABELS 窗口样式的列表视图控件允许用户就地编辑项标签。 用户通过单击具有焦点的项的标签开始编辑。
+具有 "LVS_EDITLABELS" 窗口样式的列表视图控件允许用户就地编辑项标签。 用户通过单击具有焦点的项的标签开始编辑。
 
 使用此函数开始就地编辑指定的列表视图项的文本。
 
@@ -860,7 +860,7 @@ CEdit* EditLabel(int nItem);
 LRESULT EnableGroupView(BOOL fEnable);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *fEnable*<br/>
 指示是否启用 listview 控件来对显示的项进行分组。 若要启用分组，则为 TRUE;若要禁用它，则为 FALSE。
@@ -889,7 +889,7 @@ BOOL EnsureVisible(
     BOOL bPartialOK);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nItem*<br/>
 要显示的列表视图项的索引。
@@ -924,7 +924,7 @@ int FindItem(
     int nStart = -1) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFindInfo*<br/>
 指向[LVFINDINFO](/windows/win32/api/commctrl/ns-commctrl-lvfindinfow)结构的指针，该结构包含要搜索的项的相关信息。
@@ -938,7 +938,7 @@ int FindItem(
 
 ### <a name="remarks"></a>备注
 
-*PFindInfo*参数指向一个`LVFINDINFO`结构，它包含用于搜索列表视图项的信息。
+*PFindInfo*参数指向 `LVFINDINFO` 结构，它包含用于搜索列表视图项的信息。
 
 ### <a name="example"></a>示例
 
@@ -972,7 +972,7 @@ COLORREF GetBkColor() const;
 
 请参阅[CListCtrl：： SetBkColor](#setbkcolor)的示例。
 
-## <a name="getbkimage"></a>  CListCtrl::GetBkImage
+## <a name="getbkimage"></a>CListCtrl：： GetBkImage
 
 检索列表视图控件的当前背景图像。
 
@@ -980,10 +980,10 @@ COLORREF GetBkColor() const;
 BOOL GetBkImage(LVBKIMAGE* plvbkImage) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *plvbkImage*<br/>
-指向一个`LVBKIMAGE`结构的指针，该结构包含列表视图的当前背景图像。
+指向包含列表视图当前背景图像的 `LVBKIMAGE` 结构的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -991,7 +991,7 @@ BOOL GetBkImage(LVBKIMAGE* plvbkImage) const;
 
 ### <a name="remarks"></a>备注
 
-此方法实现 Win32 宏[ListView_GetBkImage](/windows/win32/api/commctrl/nf-commctrl-listview_getbkimage)的行为，如 Windows SDK 中所述。
+此方法实现 Win32 宏的行为， [ListView_GetBkImage](/windows/win32/api/commctrl/nf-commctrl-listview_getbkimage)，如 Windows SDK 中所述。
 
 ### <a name="example"></a>示例
 
@@ -1008,7 +1008,7 @@ BOOL GetBkImage(LVBKIMAGE* plvbkImage) const;
         }
 ```
 
-## <a name="getcallbackmask"></a>  CListCtrl::GetCallbackMask
+## <a name="getcallbackmask"></a>CListCtrl：： GetCallbackMask
 
 检索列表视图控件的回调掩码。
 
@@ -1028,7 +1028,7 @@ UINT GetCallbackMask() const;
 
 请参阅[CListCtrl：： SetCallbackMask](#setcallbackmask)的示例。
 
-## <a name="getcheck"></a>  CListCtrl::GetCheck
+## <a name="getcheck"></a>CListCtrl：： GetCheck
 
 检索与项关联的状态图像的当前显示状态。
 
@@ -1036,7 +1036,7 @@ UINT GetCallbackMask() const;
 BOOL GetCheck(int nItem) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nItem*<br/>
 列表控件项的从零开始的索引。
@@ -1047,7 +1047,7 @@ BOOL GetCheck(int nItem) const;
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 宏[ListView_GetCheckState](/windows/win32/api/commctrl/nf-commctrl-listview_getcheckstate)的行为，如 Windows SDK 中所述。
+此成员函数实现 Win32 宏的行为， [ListView_GetCheckState](/windows/win32/api/commctrl/nf-commctrl-listview_getcheckstate)，如 Windows SDK 中所述。
 
 ### <a name="example"></a>示例
 
@@ -1063,13 +1063,13 @@ BOOL GetColumn(
     LVCOLUMN* pColumn) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nCol*<br/>
 要检索其属性的列的索引。
 
 *pColumn*<br/>
-[LVCOLUMN](/windows/win32/api/commctrl/ns-commctrl-lvcolumnw)结构的地址，它指定要检索的信息并接收有关列的信息。 `mask`成员指定要检索的列属性。 如果成员指定 LVCF_TEXT 值，则`pszText`成员必须包含接收项文本的缓冲区的地址，并且`cchTextMax`成员必须指定缓冲区的大小。 `mask`
+[LVCOLUMN](/windows/win32/api/commctrl/ns-commctrl-lvcolumnw)结构的地址，它指定要检索的信息并接收有关列的信息。 `mask` 成员指定要检索的列属性。 如果 `mask` 成员指定 LVCF_TEXT 值，则 `pszText` 成员必须包含接收项文本的缓冲区的地址，并且 `cchTextMax` 成员必须指定缓冲区的大小。
 
 ### <a name="return-value"></a>返回值
 
@@ -1077,7 +1077,7 @@ BOOL GetColumn(
 
 ### <a name="remarks"></a>备注
 
-`LVCOLUMN`结构包含有关 "报表" 视图中的列的信息。
+`LVCOLUMN` 结构包含有关报表视图中的列的信息。
 
 ### <a name="example"></a>示例
 
@@ -1104,7 +1104,7 @@ BOOL GetColumnOrderArray(
     int iCount = -1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *piArray*<br/>
 指向缓冲区的指针，该缓冲区将包含列表视图控件中列的索引值。 缓冲区必须足够大，以便包含列表视图控件中的总列数。
@@ -1118,7 +1118,7 @@ BOOL GetColumnOrderArray(
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 宏[ListView_GetColumnOrderArray](/windows/win32/api/commctrl/nf-commctrl-listview_getcolumnorderarray)的行为，如 Windows SDK 中所述。
+此成员函数实现 Win32 宏的行为， [ListView_GetColumnOrderArray](/windows/win32/api/commctrl/nf-commctrl-listview_getcolumnorderarray)，如 Windows SDK 中所述。
 
 ### <a name="example"></a>示例
 
@@ -1156,7 +1156,7 @@ BOOL GetColumnOrderArray(
 int GetColumnWidth(int nCol) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nCol*<br/>
 指定要检索其宽度的列的索引。
@@ -1230,7 +1230,7 @@ CString GetEmptyText() const;
 
 ### <a name="remarks"></a>备注
 
-此方法发送[LVM_GETEMPTYTEXT](/windows/win32/Controls/lvm-getemptytext)消息，如 Windows SDK 中所述。
+此方法发送 Windows SDK 中描述的[LVM_GETEMPTYTEXT](/windows/win32/Controls/lvm-getemptytext)消息。
 
 ## <a name="getextendedstyle"></a>CListCtrl：： GetExtendedStyle
 
@@ -1246,13 +1246,13 @@ DWORD GetExtendedStyle();
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 宏[ListView_GetExtendedListViewStyle](/windows/win32/api/commctrl/nf-commctrl-listview_getextendedlistviewstyle)的行为，如 Windows SDK 中所述。
+此成员函数实现 Win32 宏的行为， [ListView_GetExtendedListViewStyle](/windows/win32/api/commctrl/nf-commctrl-listview_getextendedlistviewstyle)，如 Windows SDK 中所述。
 
 ### <a name="example"></a>示例
 
 请参阅[CListCtrl：： SetExtendedStyle](#setextendedstyle)的示例。
 
-## <a name="getfirstselecteditemposition"></a>  CListCtrl::GetFirstSelectedItemPosition
+## <a name="getfirstselecteditemposition"></a>CListCtrl：： GetFirstSelectedItemPosition
 
 获取列表视图控件中第一个选定项的位置。
 
@@ -1295,11 +1295,11 @@ int GetFocusedGroup() const;
 
 ### <a name="return-value"></a>返回值
 
-如果存在此类组，则为其状态为 LVGS_FOCUSED 的组的索引;否则为-1。
+如果存在此类组，则为其状态为 LVGS_FOCUSED 的组的索引; 否则为。否则为-1。
 
 ### <a name="remarks"></a>备注
 
-此方法发送[LVM_GETFOCUSEDGROUP](/windows/win32/Controls/lvm-getfocusedgroup)消息，如 Windows SDK 中所述。 有关详细信息，请参阅`state` [LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup)结构的成员的 LVGS_FOCUSED 值。
+此方法发送 Windows SDK 中描述的[LVM_GETFOCUSEDGROUP](/windows/win32/Controls/lvm-getfocusedgroup)消息。 有关详细信息，请参阅[LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup)结构的 `state` 成员的 LVGS_FOCUSED 值。
 
 ## <a name="getgroupcount"></a>CListCtrl：： GetGroupCount
 
@@ -1315,9 +1315,9 @@ int GetGroupCount()const;
 
 ### <a name="remarks"></a>备注
 
-此方法发送[LVM_GETGROUPCOUNT](/windows/win32/Controls/lvm-getgroupcount)消息，该消息在 Windows SDK--> 中进行了介绍。
+此方法发送 Windows SDK--> 中描述的[LVM_GETGROUPCOUNT](/windows/win32/Controls/lvm-getgroupcount)消息。
 
-## <a name="getgroupinfo"></a>  CListCtrl::GetGroupInfo
+## <a name="getgroupinfo"></a>CListCtrl：： GetGroupInfo
 
 获取列表视图控件的指定组的信息。
 
@@ -1327,7 +1327,7 @@ int GetGroupInfo(
     PLVGROUP pgrp) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iGroupId*<br/>
 要检索其信息的组的标识符。
@@ -1353,24 +1353,24 @@ BOOL GetGroupInfoByIndex(
     PLVGROUP pGroup) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |*iIndex*|中组的从零开始的索引。|
-|*pGroup*|弄指向[LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup)结构的指针，该结构接收*iIndex*参数指定的组的相关信息。<br /><br /> 调用方负责初始化[LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup)结构的成员。 将成员设置为结构的大小，并将成员的标志`mask`设置为指定要检索的信息。 `cbSize`|
+|*pGroup*|弄指向[LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup)结构的指针，该结构接收*iIndex*参数指定的组的相关信息。<br /><br /> 调用方负责初始化[LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup)结构的成员。 将 `cbSize` 成员设置为结构的大小，并将 `mask` 成员的标志设置为指定要检索的信息。|
 
 ### <a name="return-value"></a>返回值
 
-如果此方法成功, 则为 TRUE;否则为 FALSE。
+如果此方法成功，则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-此方法发送[LVM_GETGROUPINFOBYINDEX](/windows/win32/controls/lvm-getgroupinfobyindex)消息，该消息在 Windows SDK--> 中进行了介绍。
+此方法发送 Windows SDK--> 中描述的[LVM_GETGROUPINFOBYINDEX](/windows/win32/controls/lvm-getgroupinfobyindex)消息。
 
 ### <a name="example"></a>示例
 
-下面的代码示例定义了一个用于`m_listCtrl`访问当前列表视图控件的变量。 此变量将在下一个示例中使用。
+下面的代码示例定义了一个用于访问当前列表视图控件的变量 `m_listCtrl`。 此变量将在下一个示例中使用。
 
 ```cpp
 public:
@@ -1380,7 +1380,7 @@ public:
 
 ### <a name="example"></a>示例
 
-下面的代码示例演示`GetGroupInfoByIndex`方法。 在此代码示例的前面部分中，我们创建了一个列表视图控件，该控件在报表视图中显示标题为 "ClientID" 和 "评分" 的两个列。 下面的代码示例检索有关其索引为0的组的信息（如果存在这样的组）。
+下面的代码示例演示 `GetGroupInfoByIndex` 方法。 在此代码示例的前面部分中，我们创建了一个列表视图控件，该控件在报表视图中显示标题为 "ClientID" 和 "评分" 的两个列。 下面的代码示例检索有关其索引为0的组的信息（如果存在这样的组）。
 ```cpp
     // GetGroupInfoByIndex
     const int GROUP_HEADER_BUFFER_SIZE = 40;
@@ -1416,7 +1416,7 @@ public:
 void GetGroupMetrics(PLVGROUPMETRICS pGroupMetrics) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pGroupMetrics*<br/>
 指向包含组度量值信息的[LVGROUPMETRICS](/windows/win32/api/commctrl/ns-commctrl-lvgroupmetrics)的指针。
@@ -1436,27 +1436,27 @@ BOOL GetGroupRect(
     int iCoords = LVGGR_GROUP) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |*iGroupId*|中指定组。|
 |*lpRect*|[in，out]指向[RECT](/previous-versions/dd162897\(v=vs.85\))结构的指针。 如果此方法成功，则结构将接收由*iGroupId*指定的组的矩形坐标。|
-|*iCoords*|中指定要检索的矩形坐标。 使用以下值之一：<br /><br /> -LVGGR_GROUP-（默认值）整个展开组的坐标。<br />-LVGGR_HEADER-仅限标头（折叠组）的坐标。<br />-LVGGR_SUBSETLINK-仅限子集链接（标记子集）的坐标。|
+|*iCoords*|中指定要检索的矩形坐标。 使用以下值之一：<br /><br /> -LVGGR_GROUP （默认值）整个展开组的坐标。<br />-LVGGR_HEADER-仅标头（折叠组）的坐标。<br />-LVGGR_SUBSETLINK-仅限子集链接（标记子集）的坐标。|
 
 ### <a name="return-value"></a>返回值
 
-如果此方法成功, 则为 TRUE;否则为 FALSE。
+如果此方法成功，则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
 调用方负责分配*pRect*参数指向的[RECT](/previous-versions/dd162897\(v=vs.85\))结构。
 
-此方法发送[LVM_GETGROUPRECT](/windows/win32/Controls/lvm-getgrouprect)消息，如 Windows SDK 中所述。
+此方法发送 Windows SDK 中描述的[LVM_GETGROUPRECT](/windows/win32/Controls/lvm-getgrouprect)消息。
 
 ### <a name="example"></a>示例
 
-下面的代码示例定义了一个用于`m_listCtrl`访问当前列表视图控件的变量。 此变量将在下一个示例中使用。
+下面的代码示例定义了一个用于访问当前列表视图控件的变量 `m_listCtrl`。 此变量将在下一个示例中使用。
 ```cpp
 public:
     // Variable used to access the list control.
@@ -1465,7 +1465,7 @@ public:
 
 ### <a name="example"></a>示例
 
-下面的代码示例演示`GetGroupRect`方法。 在此代码示例的前面部分中，我们创建了一个列表视图控件，该控件在报表视图中显示标题为 "ClientID" 和 "评分" 的两个列。 下面的代码示例在其索引为0的组（如果存在这样的组）周围绘制一个三维矩形。
+下面的代码示例演示 `GetGroupRect` 方法。 在此代码示例的前面部分中，我们创建了一个列表视图控件，该控件在报表视图中显示标题为 "ClientID" 和 "评分" 的两个列。 下面的代码示例在其索引为0的组（如果存在这样的组）周围绘制一个三维矩形。
 
 ```cpp
     // GetGroupRect
@@ -1482,7 +1482,7 @@ public:
     }
 ```
 
-## <a name="getgroupstate"></a>  CListCtrl::GetGroupState
+## <a name="getgroupstate"></a>CListCtrl：： GetGroupState
 
 检索当前列表视图控件中指定组的状态。
 
@@ -1492,12 +1492,12 @@ UINT GetGroupState(
     DWORD dwMask) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |*iGroupId*|中组的从零开始的索引。|
-|*dwMask*|中掩码，指定要为指定组检索的状态值。 有关详细信息，请参阅`mask` [LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup)结构的成员。|
+|*dwMask*|中掩码，指定要为指定组检索的状态值。 有关详细信息，请参阅[LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup)结构的 `mask` 成员。|
 
 ### <a name="return-value"></a>返回值
 
@@ -1505,9 +1505,9 @@ UINT GetGroupState(
 
 ### <a name="remarks"></a>备注
 
-返回值是对*dwMask*参数执行按位 "与" 运算的结果，以及表示当前列表`state`视图控件的[LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup)结构的成员的值。
+返回值是对*dwMask*参数执行按位 "与" 运算的结果，以及表示当前列表视图控件的[LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup)结构的 `state` 成员的值。
 
-此方法发送[LVM_GETGROUPSTATE](/windows/win32/Controls/lvm-getgroupstate)消息，如 Windows SDK 中所述。 有关详细信息，请参阅[ListView_GetGroupState](/windows/win32/api/commctrl/nf-commctrl-listview_getgroupstate)宏。
+此方法发送 Windows SDK 中描述的[LVM_GETGROUPSTATE](/windows/win32/Controls/lvm-getgroupstate)消息。 有关详细信息，请参阅[ListView_GetGroupState](/windows/win32/api/commctrl/nf-commctrl-listview_getgroupstate)宏。
 
 ## <a name="getheaderctrl"></a>CListCtrl：： GetHeaderCtrl
 
@@ -1523,7 +1523,7 @@ CHeaderCtrl* GetHeaderCtrl();
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 宏[ListView_GetHeader](/windows/win32/api/commctrl/nf-commctrl-listview_getheader)的行为，如 Windows SDK 中所述。
+此成员函数实现 Win32 宏的行为， [ListView_GetHeader](/windows/win32/api/commctrl/nf-commctrl-listview_getheader)，如 Windows SDK 中所述。
 
 ### <a name="example"></a>示例
 
@@ -1543,7 +1543,7 @@ HCURSOR GetHotCursor();
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 宏[ListView_GetHotCursor](/windows/win32/api/commctrl/nf-commctrl-listview_gethotcursor)的行为，如 Windows SDK 中所述。 当光标经过任何列表视图项时，将显示热光标（仅当启用悬停选项时可见）。 通过设置 LVS_EX_TRACKSELECT 扩展样式启用了悬停选项。
+此成员函数实现 Win32 宏的行为， [ListView_GetHotCursor](/windows/win32/api/commctrl/nf-commctrl-listview_gethotcursor)，如 Windows SDK 中所述。 当光标经过任何列表视图项时，将显示热光标（仅当启用悬停选项时可见）。 通过设置 LVS_EX_TRACKSELECT 扩展样式启用悬停选择。
 
 ### <a name="example"></a>示例
 
@@ -1568,7 +1568,7 @@ int GetHotItem();
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 宏[ListView_GetHotItem](/windows/win32/api/commctrl/nf-commctrl-listview_gethotitem)的行为，如 Windows SDK 中所述。 启用热跟踪（和悬停选择）时，热项定义为当前选定的项。
+此成员函数实现 Win32 宏的行为， [ListView_GetHotItem](/windows/win32/api/commctrl/nf-commctrl-listview_gethotitem)，如 Windows SDK 中所述。 启用热跟踪（和悬停选择）时，热项定义为当前选定的项。
 
 如果启用了热跟踪，则当用户暂停列表视图项时，项标签会自动突出显示，而不使用鼠标按钮。
 
@@ -1595,7 +1595,7 @@ DWORD GetHoverTime() const;
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 宏[ListView_GetHoverTime](/windows/win32/api/commctrl/nf-commctrl-listview_gethovertime)的行为，如 Windows SDK 中所述。
+此成员函数实现 Win32 宏的行为， [ListView_GetHoverTime](/windows/win32/api/commctrl/nf-commctrl-listview_gethovertime)，如 Windows SDK 中所述。
 
 ### <a name="example"></a>示例
 
@@ -1614,16 +1614,16 @@ DWORD GetHoverTime() const;
 CImageList* GetImageList(int nImageList) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nImageList*<br/>
-指定要检索的图像列表的值。 可以是以下值之一：
+指定要检索的图像列表的值。 它可以是以下值之一：
 
-- 带有大图标的 LVSIL_NORMAL 图像列表。
+- 带大图标 LVSIL_NORMAL 图像列表。
 
-- 带有小图标的 LVSIL_SMALL 图像列表。
+- 带有小图标 LVSIL_SMALL 图像列表。
 
-- 包含状态图像的 LVSIL_STATE 图像列表。
+- LVSIL_STATE 包含状态图像的图像列表。
 
 ### <a name="return-value"></a>返回值
 
@@ -1645,14 +1645,14 @@ CImageList* GetImageList(int nImageList) const;
 BOOL GetInsertMark(LPLVINSERTMARK plvim) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *plvim*<br/>
 指向[LVINSERTMARK](/windows/win32/api/commctrl/ns-commctrl-lvinsertmark)结构的指针，该结构包含插入标记的信息。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则返回 TRUE; 否则返回 FALSE。 如果`cbSize` `LVINSERTMARK`结构的成员中的大小不等于结构的实际大小，则返回 FALSE。
+如果成功，则返回 TRUE; 否则返回 FALSE。 如果 `LVINSERTMARK` 结构的 `cbSize` 成员的大小不等于结构的实际大小，则返回 FALSE。
 
 ### <a name="remarks"></a>备注
 
@@ -1682,10 +1682,10 @@ COLORREF GetInsertMarkColor() const;
 int GetInsertMarkRect(LPRECT pRect) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pRect*<br/>
-指向`RECT`结构的指针，该结构包含绑定插入点的矩形的坐标。
+指向 `RECT` 结构的指针，该结构包含绑定插入点的矩形的坐标。
 
 ### <a name="return-value"></a>返回值
 
@@ -1707,7 +1707,7 @@ int GetInsertMarkRect(LPRECT pRect) const;
 BOOL GetItem(LVITEM* pItem) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pItem*<br/>
 指向[LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)结构的指针，该结构接收项的特性。
@@ -1718,9 +1718,9 @@ BOOL GetItem(LVITEM* pItem) const;
 
 ### <a name="remarks"></a>备注
 
-`LVITEM`结构指定或接收列表视图项的特性。
+`LVITEM` 结构指定或接收列表视图项的特性。
 
-## <a name="getitemcount"></a>  CListCtrl::GetItemCount
+## <a name="getitemcount"></a>CListCtrl：： GetItemCount
 
 检索列表视图控件中的项数。
 
@@ -1738,13 +1738,13 @@ int GetItemCount() const;
 
 ## <a name="getitemdata"></a>CListCtrl：： GetItemData
 
-检索与指定`nItem`的项关联的特定于32位应用程序的值。
+检索与 `nItem`指定的项关联的特定于32位应用程序的值。
 
 ```
 DWORD_PTR GetItemData(int nItem) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nItem*<br/>
 要检索其数据的列表项的索引。
@@ -1755,7 +1755,7 @@ DWORD_PTR GetItemData(int nItem) const;
 
 ### <a name="remarks"></a>备注
 
-此值为`lParam` [LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)结构的成员，如 Windows SDK
+此值为[LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)结构的 `lParam` 成员，如 Windows SDK
 
 ### <a name="example"></a>示例
 
@@ -1782,26 +1782,26 @@ BOOL GetItemIndexRect(
     LPRECT pRect) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |*pItemIndex*|中指向子项的父项的[LVITEMINDEX](/windows/win32/api/commctrl/ns-commctrl-lvitemindex)结构的指针。<br /><br /> 调用方负责分配和设置[LVITEMINDEX](/windows/win32/api/commctrl/ns-commctrl-lvitemindex)结构的成员。 此参数不能为 NULL。|
 |*iColumn*|中控件中列的从零开始的索引。|
-|*rectType*|中要为其检索边框的列表视图子项的部分。 指定下列值之一：<br /><br /> LVIR_BOUNDS-返回整个子项的边框，包括图标和标签。<br /><br /> LVIR_ICON-返回子项的图标或小图标的边框。<br /><br /> LVIR_LABEL-返回子项文本的边框。|
+|*rectType*|中要为其检索边框的列表视图子项的部分。 指定以下值之一：<br /><br /> LVIR_BOUNDS-返回整个子项的边框，包括图标和标签。<br /><br /> LVIR_ICON-返回子项的图标或小图标的边框。<br /><br /> LVIR_LABEL-返回子项文本的边框。|
 |*pRect*|弄指向[RECT](/previous-versions/dd162897\(v=vs.85\))结构的指针，该结构接收有关子项的边框的信息。<br /><br /> 调用方负责分配[RECT](/previous-versions/dd162897\(v=vs.85\))结构。 此参数不能为 NULL。|
 
 ### <a name="return-value"></a>返回值
 
-如果此方法成功, 则为 TRUE;否则为 FALSE。
+如果此方法成功，则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-此方法发送[LVM_GETITEMINDEXRECT](/windows/win32/Controls/lvm-getitemindexrect)消息，如 Windows SDK 中所述。 有关详细信息，请参阅[ListView_GetItemIndexRect 宏](/windows/win32/api/commctrl/nf-commctrl-listview_getitemindexrect)。
+此方法发送 Windows SDK 中描述的[LVM_GETITEMINDEXRECT](/windows/win32/Controls/lvm-getitemindexrect)消息。 有关详细信息，请参阅[ListView_GetItemIndexRect 宏](/windows/win32/api/commctrl/nf-commctrl-listview_getitemindexrect)。
 
 ### <a name="example"></a>示例
 
-下面的代码示例定义了一个用于`m_listCtrl`访问当前列表视图控件的变量。 此变量将在下一个示例中使用。
+下面的代码示例定义了一个用于访问当前列表视图控件的变量 `m_listCtrl`。 此变量将在下一个示例中使用。
 
 ```cpp
 public:
@@ -1811,7 +1811,7 @@ public:
 
 ### <a name="example"></a>示例
 
-下面的代码示例演示`GetGroupRect`方法。 在输入此代码示例之前，我们创建了一个列表视图控件，该控件在报表视图中显示标题为 "ClientID" 和 "评分" 的两个列。 下面的代码示例在两个列中的第二个子项周围绘制一个三维矩形。
+下面的代码示例演示 `GetGroupRect` 方法。 在输入此代码示例之前，我们创建了一个列表视图控件，该控件在报表视图中显示标题为 "ClientID" 和 "评分" 的两个列。 下面的代码示例在两个列中的第二个子项周围绘制一个三维矩形。
 
 ```cpp
     // GetItemIndexRect
@@ -1827,7 +1827,7 @@ public:
     m_listCtrl.GetDC()->Draw3dRect( &rect, RGB(255, 0, 0), RGB(255, 0, 0) );
 ```
 
-## <a name="getitemposition"></a>  CListCtrl::GetItemPosition
+## <a name="getitemposition"></a>CListCtrl：： GetItemPosition
 
 检索列表视图项的位置。
 
@@ -1837,7 +1837,7 @@ BOOL GetItemPosition(
     LPPOINT lpPoint) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nItem*<br/>
 要检索其位置的项的索引。
@@ -1876,7 +1876,7 @@ BOOL GetItemRect(
     UINT nCode) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nItem*<br/>
 要检索其位置的项的索引。
@@ -1885,7 +1885,7 @@ BOOL GetItemRect(
 接收边框的[RECT](/previous-versions/dd162897\(v=vs.85\))结构的地址。
 
 *nCode*<br/>
-要为其检索边框的列表视图项的部分。 可以是以下值之一：
+要为其检索边框的列表视图项的部分。 它可以是以下值之一：
 
 - LVIR_BOUNDS 返回整个项的边框，包括图标和标签。
 
@@ -1950,9 +1950,9 @@ BOOL GetItemSpacing(
     int* pnVertSpacing) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |*fSmall*|中要为其检索项间距的视图。 将小图标视图指定为 TRUE，或为图标视图指定 FALSE。|
 |*pnHorzSpacing*|弄包含项之间的水平间距。|
@@ -1960,13 +1960,13 @@ BOOL GetItemSpacing(
 
 ### <a name="return-value"></a>返回值
 
-如果此方法成功, 则为 TRUE;否则为 FALSE。
+如果此方法成功，则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-此方法发送[LVM_GETITEMSPACING](/windows/win32/Controls/lvm-getitemspacing)消息，如 Windows SDK 中所述。
+此方法发送 Windows SDK 中描述的[LVM_GETITEMSPACING](/windows/win32/Controls/lvm-getitemspacing)消息。
 
-## <a name="getitemstate"></a>  CListCtrl::GetItemState
+## <a name="getitemstate"></a>CListCtrl：： GetItemState
 
 检索列表视图项的状态。
 
@@ -1976,7 +1976,7 @@ UINT GetItemState(
     UINT nMask) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nItem*<br/>
 要检索其状态的项的索引。
@@ -1990,13 +1990,13 @@ UINT GetItemState(
 
 ### <a name="remarks"></a>备注
 
-项的状态由`state` [LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)结构的成员指定，如 Windows SDK 中所述。 指定或更改项的状态时，该`stateMask`成员指定要更改的状态位。
+项的状态由[LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)结构的 `state` 成员指定，如 Windows SDK 中所述。 指定或更改项的状态时，`stateMask` 成员指定要更改的状态位。
 
 ### <a name="example"></a>示例
 
 请参阅[CListCtrl：： GetTopIndex](#gettopindex)的示例。
 
-## <a name="getitemtext"></a>  CListCtrl::GetItemText
+## <a name="getitemtext"></a>CListCtrl：： GetItemText
 
 检索列表视图项或子项的文本。
 
@@ -2012,7 +2012,7 @@ CString GetItemText(
     int nSubItem) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nItem*<br/>
 要检索其文本的项的索引。
@@ -2030,7 +2030,7 @@ CString GetItemText(
 
 返回**int**的版本返回检索到的字符串的长度。
 
-返回的版本`CString`返回项文本。
+返回 `CString` 的版本返回项文本。
 
 ### <a name="remarks"></a>备注
 
@@ -2046,7 +2046,7 @@ int GetNextItem(
     int nFlags) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nItem*<br/>
 要开始搜索的项的索引，或者为-1，则查找与指定标志匹配的第一项。 指定的项本身将从搜索中排除。
@@ -2060,17 +2060,17 @@ int GetNextItem(
 
 - LVNI_BELOW 搜索指定项下面的项。
 
-- LVNI_TOLEFT 在指定项的左侧搜索项。
+- LVNI_TOLEFT 搜索指定项左侧的项。
 
 - LVNI_TORIGHT 在指定项的右侧搜索项。
 
 状态可以是零，也可以是以下一个或多个值：
 
-- LVNI_DROPHILITED 项已设置 LVIS_DROPHILITED 状态标志。
+- LVNI_DROPHILITED 项设置了 LVIS_DROPHILITED 状态标志。
 
-- LVNI_FOCUSED 项已设置 LVIS_FOCUSED 状态标志。
+- LVNI_FOCUSED 项设置了 LVIS_FOCUSED 状态标志。
 
-- LVNI_SELECTED 项已设置 LVIS_SELECTED 状态标志。
+- LVNI_SELECTED 项设置了 LVIS_SELECTED 状态标志。
 
 如果项未设置所有指定的状态标志，则搜索将继续下一项。
 
@@ -2088,22 +2088,22 @@ BOOL GetNextItemIndex(
     int nFlags) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
-|*pItemIndex*|[in，out]指向[LVITEMINDEX](/windows/win32/api/commctrl/ns-commctrl-lvitemindex)结构的指针，该结构描述搜索开始处的项，或为-1 以查找与*nFlags*参数中的标志匹配的第一项。<br /><br /> 如果此方法成功，则结构`LVITEMINDEX`将描述搜索找到的项目。|
+|*pItemIndex*|[in，out]指向[LVITEMINDEX](/windows/win32/api/commctrl/ns-commctrl-lvitemindex)结构的指针，该结构描述搜索开始处的项，或为-1 以查找与*nFlags*参数中的标志匹配的第一项。<br /><br /> 如果此方法成功，则 `LVITEMINDEX` 结构将描述搜索所找到的项。|
 |*nFlags*|中标志的按位组合（OR），指定如何执行搜索。<br /><br /> 搜索可以依赖于目标项的索引、状态或外观，或者依赖于*pItemIndex*参数指定的项的目标项的物理位置。 有关详细信息，请参阅[LVM_GETNEXTITEMINDEX](/windows/win32/controls/lvm-getnextitemindex)消息中的*flags*参数。|
 
 ### <a name="return-value"></a>返回值
 
-如果此方法成功, 则为 TRUE;否则为 FALSE。
+如果此方法成功，则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-调用方负责分配和设置`LVITEMINDEX` *pItemIndex*参数指向的结构的成员。
+调用方负责分配和设置*pItemIndex*参数指向的 `LVITEMINDEX` 结构的成员。
 
-此方法发送[LVM_GETNEXTITEMINDEX](/windows/win32/controls/lvm-getnextitemindex)消息，如 Windows SDK 中所述。
+此方法发送 Windows SDK 中描述的[LVM_GETNEXTITEMINDEX](/windows/win32/controls/lvm-getnextitemindex)消息。
 
 ## <a name="getnextselecteditem"></a>CListCtrl：： GetNextSelectedItem
 
@@ -2113,10 +2113,10 @@ BOOL GetNextItemIndex(
 int GetNextSelectedItem(POSITION& pos) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*位置*<br/>
-对`GetNextSelectedItem` 或`GetFirstSelectedItemPosition`的先前调用返回的位置值的引用。 此调用会将值更新到下一个位置。
+pos<br/>
+对 `GetNextSelectedItem` 或 `GetFirstSelectedItemPosition`先前调用所返回的位置值的引用。 此调用会将值更新到下一个位置。
 
 ### <a name="return-value"></a>返回值
 
@@ -2124,7 +2124,7 @@ int GetNextSelectedItem(POSITION& pos) const;
 
 ### <a name="remarks"></a>备注
 
-如果使用对`GetNextSelectedItem` `GetFirstSelectedItemPosition`的调用建立初始位置，则可以在向前迭代循环中使用。
+如果使用对 `GetFirstSelectedItemPosition`的调用建立初始位置，则可以在向前迭代循环中使用 `GetNextSelectedItem`。
 
 您必须确保您的位置值有效。 如果无效，则 Microsoft 基础类库断言的调试版本。
 
@@ -2163,7 +2163,7 @@ UINT GetNumberOfWorkAreas() const;
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 宏[ListView_GetNumberOfWorkAreas](/windows/win32/api/commctrl/nf-commctrl-listview_getnumberofworkareas)的行为，如 Windows SDK 中所述。
+此成员函数实现 Win32 宏的行为， [ListView_GetNumberOfWorkAreas](/windows/win32/api/commctrl/nf-commctrl-listview_getnumberofworkareas)，如 Windows SDK 中所述。
 
 ### <a name="example"></a>示例
 
@@ -2192,7 +2192,7 @@ UINT GetNumberOfWorkAreas() const;
         }
 ```
 
-## <a name="getoutlinecolor"></a>  CListCtrl::GetOutlineColor
+## <a name="getoutlinecolor"></a>CListCtrl：： GetOutlineColor
 
 检索列表视图控件边框的颜色。
 
@@ -2208,7 +2208,7 @@ COLORREF GetOutlineColor() const;
 
 此成员函数模拟[LVM_GETOUTLINECOLOR](/windows/win32/Controls/lvm-getoutlinecolor)消息的功能，如 Windows SDK 中所述。
 
-## <a name="getorigin"></a>  CListCtrl::GetOrigin
+## <a name="getorigin"></a>CListCtrl：： GetOrigin
 
 检索列表视图控件的当前视图源。
 
@@ -2216,7 +2216,7 @@ COLORREF GetOutlineColor() const;
 BOOL GetOrigin(LPPOINT lpPoint) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpPoint*<br/>
 接收视图原点的[点](/previous-versions/dd162805\(v=vs.85\))结构的地址。
@@ -2285,7 +2285,7 @@ int GetSelectionMark();
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 宏[ListView_GetSelectionMark](/windows/win32/api/commctrl/nf-commctrl-listview_getselectionmark)的行为，如 Windows SDK 中所述。
+此成员函数实现 Win32 宏的行为， [ListView_GetSelectionMark](/windows/win32/api/commctrl/nf-commctrl-listview_getselectionmark)，如 Windows SDK 中所述。
 
 ### <a name="example"></a>示例
 
@@ -2296,7 +2296,7 @@ int GetSelectionMark();
         m_myListCtrl.SetSelectionMark(0);
 ```
 
-## <a name="getstringwidth"></a>  CListCtrl::GetStringWidth
+## <a name="getstringwidth"></a>CListCtrl：： GetStringWidth
 
 确定显示给定字符串的所有所需的最小列宽。
 
@@ -2304,7 +2304,7 @@ int GetSelectionMark();
 int GetStringWidth(LPCTSTR lpsz) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpsz*<br/>
 要确定其宽度的以 null 结尾的字符串的地址。
@@ -2333,7 +2333,7 @@ int GetStringWidth(LPCTSTR lpsz) const;
         }
 ```
 
-## <a name="getsubitemrect"></a>  CListCtrl::GetSubItemRect
+## <a name="getsubitemrect"></a>CListCtrl：： GetSubItemRect
 
 检索列表视图控件中项的边框。
 
@@ -2345,7 +2345,7 @@ BOOL GetSubItemRect(
     CRect& ref);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iItem*<br/>
 子项的父项的索引。
@@ -2360,7 +2360,7 @@ BOOL GetSubItemRect(
 
 - LVIR_ICON 返回图标或小图标的边框。
 
-- LVIR_LABEL 返回整个项的边框，包括图标和标签。 这与 LVIR_BOUNDS 相同。
+- LVIR_LABEL 返回整个项的边框，包括图标和标签。 这与 LVIR_BOUNDS 完全相同。
 
 *ref*<br/>
 对[CRect](../../atl-mfc-shared/reference/crect-class.md)对象的引用，该对象包含子项的边框的坐标。
@@ -2371,7 +2371,7 @@ BOOL GetSubItemRect(
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 宏[ListView_GetSubItemRect](/windows/win32/api/commctrl/nf-commctrl-listview_getsubitemrect)的行为，如 Windows SDK 中所述。
+此成员函数实现 Win32 宏的行为， [ListView_GetSubItemRect](/windows/win32/api/commctrl/nf-commctrl-listview_getsubitemrect)，如 Windows SDK 中所述。
 
 ## <a name="gettextbkcolor"></a>CListCtrl：： GetTextBkColor
 
@@ -2413,7 +2413,7 @@ COLORREF GetTextColor() const;
 BOOL GetTileInfo(PLVTILEINFO plvti) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *plvti*<br/>
 指向接收磁贴信息的[LVTILEINFO](/windows/win32/api/commctrl/ns-commctrl-lvtileinfo)结构的指针。
@@ -2426,7 +2426,7 @@ BOOL GetTileInfo(PLVTILEINFO plvti) const;
 
 此成员函数模拟[LVM_GETTILEINFO](/windows/win32/Controls/lvm-gettileinfo)消息的功能，如 Windows SDK 中所述。
 
-## <a name="gettileviewinfo"></a>  CListCtrl::GetTileViewInfo
+## <a name="gettileviewinfo"></a>CListCtrl：： GetTileViewInfo
 
 检索有关磁贴视图中的列表视图控件的信息。
 
@@ -2434,7 +2434,7 @@ BOOL GetTileInfo(PLVTILEINFO plvti) const;
 BOOL GetTileViewInfo(PLVTILEVIEWINFO ptvi) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ptvi*<br/>
 指向[LVTILEVIEWINFO](/windows/win32/api/commctrl/ns-commctrl-lvtileviewinfo)结构的指针，该结构接收检索到的信息。
@@ -2461,7 +2461,7 @@ CToolTipCtrl* GetToolTips() const;
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 消息[LVM_GETTOOLTIPS](/windows/win32/Controls/lvm-gettooltips)的行为，如 Windows SDK 中所述。 的`GetToolTips` MFC 实现返回一个`CToolTipCtrl`对象，该对象由列表控件使用，而不是工具提示控件的句柄。
+此成员函数实现 Win32 消息[LVM_GETTOOLTIPS](/windows/win32/Controls/lvm-gettooltips)的行为，如 Windows SDK 中所述。 `GetToolTips` 的 MFC 实现将返回一个 `CToolTipCtrl` 对象，此对象由列表控件使用，而不是工具提示控件的句柄。
 
 ### <a name="example"></a>示例
 
@@ -2527,7 +2527,7 @@ DWORD GetView() const;
 BOOL GetViewRect(LPRECT lpRect) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpRect*<br/>
 [矩形](/previous-versions/dd162897\(v=vs.85\))结构的地址。
@@ -2550,17 +2550,17 @@ void GetWorkAreas(
     LPRECT pRect) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nWorkAreas*<br/>
-PRect 数组中`RECT`包含的结构数 。
+*PRect*数组中包含的 `RECT` 结构的数目。
 
 *pRect*<br/>
-一个指针，指向接收列表`RECT`视图控件的工作区的结构（或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象）的数组。 这些结构中的值采用工作区坐标。
+一个指针，它指向接收列表视图控件的工作区的 `RECT` 结构（或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象）的数组。 这些结构中的值采用工作区坐标。
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 宏[ListView_GetWorkAreas](/windows/win32/api/commctrl/nf-commctrl-listview_getworkareas)的行为，如 Windows SDK 中所述。
+此成员函数实现 Win32 宏的行为， [ListView_GetWorkAreas](/windows/win32/api/commctrl/nf-commctrl-listview_getworkareas)，如 Windows SDK 中所述。
 
 ### <a name="example"></a>示例
 
@@ -2574,14 +2574,14 @@ PRect 数组中`RECT`包含的结构数 。
 BOOL HasGroup(int iGroupId) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iGroupId*<br/>
 正在请求的组的标识符。
 
 ### <a name="return-value"></a>返回值
 
-如果成功, 则返回 TRUE, 否则返回 FALSE。
+如果成功，则返回 TRUE，否则返回 FALSE。
 
 ### <a name="remarks"></a>备注
 
@@ -2599,16 +2599,16 @@ int HitTest(
     UINT* pFlags = NULL) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pHitTestInfo*<br/>
-`LVHITTESTINFO`结构的地址，该结构包含要进行命中测试的位置并接收有关命中测试结果的信息。
+`LVHITTESTINFO` 结构的地址，该结构包含要进行命中测试的位置并接收有关命中测试结果的信息。
 
 *pt*<br/>
 要测试的点。
 
 *pFlags*<br/>
-指向一个整数的指针，该整数接收有关测试结果的信息。 请参阅 Windows SDK 中`flags` [LVHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-lvhittestinfo)结构成员的说明。
+指向一个整数的指针，该整数接收有关测试结果的信息。 请参阅 Windows SDK 中[LVHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-lvhittestinfo)结构的 `flags` 成员的说明。
 
 ### <a name="return-value"></a>返回值
 
@@ -2616,9 +2616,9 @@ int HitTest(
 
 ### <a name="remarks"></a>备注
 
-您可以使用结构`flag`成员的 LVHT_ABOVE、LVHT_BELOW、LVHT_TOLEFT 和 LVHT_TORIGHT 值来确定是否滚动列表视图控件的内容。 例如，如果位置在工作区的上方和左侧，则可以合并其中两个标志。
+您可以使用结构的 `flag` 成员的 LVHT_ABOVE、LVHT_BELOW、LVHT_TOLEFT 和 LVHT_TORIGHT 值来确定是否滚动列表视图控件的内容。 例如，如果位置在工作区的上方和左侧，则可以合并其中两个标志。
 
-你可以测试结构`flag`成员的 LVHT_ONITEM 值，以确定给定的位置是否在列表视图项之上。 此值是对结构`flag`成员的 LVHT_ONITEMICON、LVHT_ONITEMLABEL 和 LVHT_ONITEMSTATEICON 值的按位 "或" 运算。
+您可以测试结构的 `flag` 成员的 LVHT_ONITEM 值，以确定给定的位置是否在列表视图项之上。 此值是对结构的 `flag` 成员的 LVHT_ONITEMICON、LVHT_ONITEMLABEL 和 LVHT_ONITEMSTATEICON 值的按位 "或" 运算。
 
 ### <a name="example"></a>示例
 
@@ -2642,7 +2642,7 @@ void CListCtrlDlg::OnRClick(NMHDR* pNMHDR, LRESULT* pResult)
 }
 ```
 
-## <a name="insertcolumn"></a>  CListCtrl::InsertColumn
+## <a name="insertcolumn"></a>CListCtrl：： InsertColumn
 
 在列表视图控件中插入新列。
 
@@ -2659,19 +2659,19 @@ int InsertColumn(
     int nSubItem = -1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nCol*<br/>
 新列的索引。
 
 *pColumn*<br/>
-包含新列的特性的结构的地址。`LVCOLUMN`
+包含新列的属性的 `LVCOLUMN` 结构的地址。
 
 *lpszColumnHeading*<br/>
 包含列标题的字符串的地址。
 
 *nFormat*<br/>
-整数，用于指定列的对齐方式。 可以是以下值之一：LVCFMT_LEFT、LVCFMT_RIGHT 或 LVCFMT_CENTER。
+整数，用于指定列的对齐方式。 可以是以下值之一： LVCFMT_LEFT、LVCFMT_RIGHT 或 LVCFMT_CENTER。
 
 *nWidth*<br/>
 列的宽度（以像素为单位）。 如果此参数为-1，则不设置列宽。
@@ -2689,7 +2689,7 @@ int InsertColumn(
 
 [LVCOLUMN](/windows/win32/api/commctrl/ns-commctrl-lvcolumnw)结构包含 "报表" 视图中列的属性。 它还用于接收有关列的信息。 此结构在 Windows SDK 中进行了介绍。
 
-## <a name="insertgroup"></a>  CListCtrl::InsertGroup
+## <a name="insertgroup"></a>CListCtrl：： InsertGroup
 
 将组插入到列表视图控件中。
 
@@ -2699,9 +2699,9 @@ LRESULT InsertGroup(
     PLVGROUP pgrp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*index*<br/>
+索引<br/>
 要插入组的项的索引。
 
 *pgrp*<br/>
@@ -2715,7 +2715,7 @@ LRESULT InsertGroup(
 
 此成员函数模拟[LVM_INSERTGROUP](/windows/win32/Controls/lvm-insertgroup)消息的功能，如 Windows SDK 中所述。
 
-## <a name="insertgroupsorted"></a>  CListCtrl::InsertGroupSorted
+## <a name="insertgroupsorted"></a>CListCtrl：： InsertGroupSorted
 
 将指定的组插入组的有序列表。
 
@@ -2723,7 +2723,7 @@ LRESULT InsertGroup(
 LRESULT InsertGroupSorted(PLVINSERTGROUPSORTED pStructInsert);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pStructInsert*<br/>
 指向[LVINSERTGROUPSORTED](/windows/win32/api/commctrl/ns-commctrl-lvinsertgroupsorted)结构的指针，该结构包含要插入的组。
@@ -2736,7 +2736,7 @@ LRESULT InsertGroupSorted(PLVINSERTGROUPSORTED pStructInsert);
 
 此成员函数模拟[LVM_INSERTGROUPSORTED](/windows/win32/Controls/lvm-insertgroupsorted)消息的功能，如 Windows SDK 中所述。
 
-## <a name="insertitem"></a>  CListCtrl::InsertItem
+## <a name="insertitem"></a>CListCtrl：： InsertItem
 
 向列表视图控件中插入项。
 
@@ -2762,7 +2762,7 @@ int InsertItem(
     LPARAM lParam);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pItem*<br/>
 指向[LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)结构的指针，该结构指定项的属性，如 Windows SDK 中所述。
@@ -2773,8 +2773,8 @@ int InsertItem(
 *lpszItem*<br/>
 包含项标签的字符串的地址，如果该项是回调项，则为 LPSTR_TEXTCALLBACK。 有关回调项的信息，请参阅[CListCtrl：： GetCallbackMask](#getcallbackmask)。
 
-*nImage*<br/>
-该项的图像的索引，如果该项是回调项，则为 I_IMAGECALLBACK。 有关回调项的信息，请参阅[CListCtrl：： GetCallbackMask](#getcallbackmask)。
+*n*<br/>
+项的图像的索引，如果该项是回调项，则为 I_IMAGECALLBACK。 有关回调项的信息，请参阅[CListCtrl：： GetCallbackMask](#getcallbackmask)。
 
 *nMask*<br/>
 *NMask*参数指定作为参数传递的项属性是有效的。 它可以是 Windows SDK 中的[LVITEM 结构](/windows/win32/api/commctrl/ns-commctrl-lvitemw)中描述的一个或多个掩码值。 有效值可以与按位 "或" 运算符组合。
@@ -2786,7 +2786,7 @@ int InsertItem(
 指示将检索或修改状态成员的哪些位。 有关详细信息，请参阅 Windows SDK 中的[LVITEM 结构](/windows/win32/api/commctrl/ns-commctrl-lvitemw)。
 
 *lParam*<br/>
-与项关联的32位应用程序特定值。 如果指定此参数，则必须设置*nMask*属性 LVIF_PARAM。
+与项关联的32位应用程序特定值。 如果指定此参数，则必须将*nMask*属性设置 LVIF_PARAM。
 
 ### <a name="return-value"></a>返回值
 
@@ -2794,7 +2794,7 @@ int InsertItem(
 
 ### <a name="remarks"></a>备注
 
-调用此方法可能会导致将 LVM_INSERTITEM 消息发送到控件窗口。 控件的关联消息处理程序可能无法在某些情况下设置项文本（例如，使用窗口样式，如 LVS_OWNERDRAW）。 有关这些条件的详细信息，请参阅 Windows SDK 中的[LVM_INSERTITEM](/windows/win32/Controls/lvm-insertitem) 。
+调用此方法可能会导致 LVM_INSERTITEM 消息发送到控件窗口。 控件的关联消息处理程序可能无法在某些情况下设置项文本（例如，使用诸如 LVS_OWNERDRAW 的窗口样式）。 有关这些条件的详细信息，请参阅 Windows SDK 中的[LVM_INSERTITEM](/windows/win32/Controls/lvm-insertitem) 。
 
 ### <a name="example"></a>示例
 
@@ -2820,7 +2820,7 @@ int InsertItem(
         }
 ```
 
-## <a name="insertmarkhittest"></a>  CListCtrl::InsertMarkHitTest
+## <a name="insertmarkhittest"></a>CListCtrl：： InsertMarkHitTest
 
 检索距离指定点最近的插入点。
 
@@ -2830,7 +2830,7 @@ int InsertMarkHitTest(
     LPLVINSERTMARK plvim) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pPoint*<br/>
 指向一个[点](/previous-versions/dd162805\(v=vs.85\))结构的指针，该结构包含命中测试坐标（相对于列表控件的工作区）。
@@ -2862,7 +2862,7 @@ BOOL IsGroupViewEnabled() const;
 
 此成员函数模拟[LVM_ISGROUPVIEWENABLED](/windows/win32/Controls/lvm-isgroupviewenabled)消息的功能，如 Windows SDK 中所述。
 
-## <a name="isitemvisible"></a>  CListCtrl::IsItemVisible
+## <a name="isitemvisible"></a>CListCtrl：： IsItemVisible
 
 指示当前列表视图控件中的指定项是否可见。
 
@@ -2870,11 +2870,11 @@ BOOL IsGroupViewEnabled() const;
 BOOL IsItemVisible(int index) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
-|*index*|中当前列表视图控件中项的从零开始的索引。|
+|索引|中当前列表视图控件中项的从零开始的索引。|
 
 ### <a name="return-value"></a>返回值
 
@@ -2882,9 +2882,9 @@ BOOL IsItemVisible(int index) const;
 
 ### <a name="remarks"></a>备注
 
-此方法发送[LVM_ISITEMVISIBLE](/windows/win32/Controls/lvm-isitemvisible)消息，如 Windows SDK 中所述。
+此方法发送 Windows SDK 中描述的[LVM_ISITEMVISIBLE](/windows/win32/Controls/lvm-isitemvisible)消息。
 
-## <a name="mapidtoindex"></a>  CListCtrl::MapIDToIndex
+## <a name="mapidtoindex"></a>CListCtrl：： MapIDToIndex
 
 将当前列表视图控件中项的唯一 ID 映射到索引。
 
@@ -2892,9 +2892,9 @@ BOOL IsItemVisible(int index) const;
 UINT MapIDToIndex(UINT id) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |*id*|中项的唯一 ID。|
 
@@ -2908,7 +2908,7 @@ UINT MapIDToIndex(UINT id) const;
 
 请注意，在多线程环境中，仅在承载列表视图控件而不是在后台线程上的线程上确保索引。
 
-此方法发送[LVM_MAPIDTOINDEX](/windows/win32/controls/lvm-mapidtoindex)消息，如 Windows SDK 中所述。
+此方法发送 Windows SDK 中描述的[LVM_MAPIDTOINDEX](/windows/win32/controls/lvm-mapidtoindex)消息。
 
 ## <a name="mapindextoid"></a>CListCtrl：： MapIndexToID
 
@@ -2918,11 +2918,11 @@ UINT MapIDToIndex(UINT id) const;
 UINT MapIndexToID(UINT index) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
-|*index*|中项的从零开始的索引。|
+|索引|中项的从零开始的索引。|
 
 ### <a name="return-value"></a>返回值
 
@@ -2934,11 +2934,11 @@ UINT MapIndexToID(UINT index) const;
 
 请注意，在多线程环境中，仅在承载列表视图控件而不是在后台线程上的线程上确保索引。
 
-此方法发送[LVM_MAPINDEXTOID](/windows/win32/Controls/lvm-mapindextoid)消息，如 Windows SDK 中所述。
+此方法发送 Windows SDK 中描述的[LVM_MAPINDEXTOID](/windows/win32/Controls/lvm-mapindextoid)消息。
 
 ### <a name="example"></a>示例
 
-下面的代码示例定义了一个用于`m_listCtrl`访问当前列表视图控件的变量。 此变量将在下一个示例中使用。
+下面的代码示例定义了一个用于访问当前列表视图控件的变量 `m_listCtrl`。 此变量将在下一个示例中使用。
 
 ```cpp
 public:
@@ -2948,7 +2948,7 @@ public:
 
 ### <a name="example"></a>示例
 
-下面的代码示例演示`MapIndexToID`方法。 在此代码示例的前面部分中，我们创建了一个列表视图控件，该控件在报表视图中显示标题为 "ClientID" 和 "评分" 的两个列。 下面的示例将每个列表视图项的索引映射到标识号，然后检索每个标识号的索引。 最后，该示例报告是否检索了原始索引。
+下面的代码示例演示 `MapIndexToID` 方法。 在此代码示例的前面部分中，我们创建了一个列表视图控件，该控件在报表视图中显示标题为 "ClientID" 和 "评分" 的两个列。 下面的示例将每个列表视图项的索引映射到标识号，然后检索每个标识号的索引。 最后，该示例报告是否检索了原始索引。
 
 ```cpp
     // MapIndexToID
@@ -2976,7 +2976,7 @@ public:
         MB_ICONINFORMATION);
 ```
 
-## <a name="movegroup"></a>  CListCtrl::MoveGroup
+## <a name="movegroup"></a>CListCtrl：： MoveGroup
 
 将指定组移动到列表视图控件的指定的从零开始的索引。
 
@@ -2986,7 +2986,7 @@ LRESULT MoveGroup(
     int toIndex);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iGroupId*<br/>
 要移动的组的标识符。
@@ -3002,7 +3002,7 @@ LRESULT MoveGroup(
 
 此成员函数模拟[LVM_MOVEGROUP](/windows/win32/Controls/lvm-movegroup)消息的功能，如 Windows SDK 中所述。
 
-## <a name="moveitemtogroup"></a>  CListCtrl::MoveItemToGroup
+## <a name="moveitemtogroup"></a>CListCtrl：： MoveItemToGroup
 
 将指定的项移动到指定的组中。
 
@@ -3012,7 +3012,7 @@ void MoveItemToGroup(
     int idGroupTo);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *idItemFrom*<br/>
 中要移动的项的索引。
@@ -3027,7 +3027,7 @@ void MoveItemToGroup(
 
 此方法模拟[LVM_MOVEITEMTOGROUP](/windows/win32/Controls/lvm-moveitemtogroup)消息的功能，如 Windows SDK 中所述。
 
-## <a name="redrawitems"></a>  CListCtrl::RedrawItems
+## <a name="redrawitems"></a>CListCtrl：： RedrawItems
 
 强制列表视图控件重绘一系列项。
 
@@ -3037,7 +3037,7 @@ BOOL RedrawItems(
     int nLast);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nFirst*<br/>
 要重新绘制的第一项的索引。
@@ -3051,9 +3051,9 @@ BOOL RedrawItems(
 
 ### <a name="remarks"></a>备注
 
-在列表视图窗口收到 WM_PAINT 消息之前，不会实际重绘指定的项。 若要立即重绘，请在使用此函数后调用 Windows [UpdateWindow](/windows/win32/api/winuser/nf-winuser-updatewindow)函数。
+在列表视图窗口收到 WM_PAINT 消息之前，不会实际重绘指定项。 若要立即重绘，请在使用此函数后调用 Windows [UpdateWindow](/windows/win32/api/winuser/nf-winuser-updatewindow)函数。
 
-## <a name="removeallgroups"></a>  CListCtrl::RemoveAllGroups
+## <a name="removeallgroups"></a>CListCtrl：： RemoveAllGroups
 
 从列表视图控件中删除所有组。
 
@@ -3065,7 +3065,7 @@ void RemoveAllGroups();
 
 此成员函数模拟[LVM_REMOVEALLGROUPS](/windows/win32/Controls/lvm-removeallgroups)消息的功能，如 Windows SDK 中所述。
 
-## <a name="removegroup"></a>  CListCtrl::RemoveGroup
+## <a name="removegroup"></a>CListCtrl：： RemoveGroup
 
 从列表视图控件中删除指定的组。
 
@@ -3073,7 +3073,7 @@ void RemoveAllGroups();
 LRESULT RemoveGroup(int iGroupId);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iGroupId*<br/>
 要移除的组的标识符。
@@ -3094,10 +3094,10 @@ LRESULT RemoveGroup(int iGroupId);
 BOOL Scroll(CSize size);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*size*<br/>
-一个`CSize`对象，该对象指定水平和垂直滚动的量（以像素为单位）。 `y` *大小*的成员除以列表视图控件线条的高度（以像素为单位），并且控件按产生的行数滚动。
+size<br/>
+指定水平和垂直滚动量（以像素为单位）的 `CSize` 对象。 *Size*的 `y` 成员除以列表视图控件线条的高度（以像素为单位），并且控件按产生的行数滚动。
 
 ### <a name="return-value"></a>返回值
 
@@ -3111,10 +3111,10 @@ BOOL Scroll(CSize size);
 BOOL SetBkColor(COLORREF cr);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*cr*<br/>
-要设置的背景色，或无背景色的 CLR_NONE 值。 具有背景色的列表视图控件的重绘方式明显快于那些没有背景色的控件。 有关信息，请参阅 Windows SDK 中的[COLORREF](/windows/win32/gdi/colorref) 。
+*回车*<br/>
+要设置的背景色，或不 CLR_NONE 背景色的值。 具有背景色的列表视图控件的重绘方式明显快于那些没有背景色的控件。 有关信息，请参阅 Windows SDK 中的[COLORREF](/windows/win32/gdi/colorref) 。
 
 ### <a name="return-value"></a>返回值
 
@@ -3129,7 +3129,7 @@ BOOL SetBkColor(COLORREF cr);
         ASSERT(m_myListCtrl.GetBkColor() == crBkColor);
 ```
 
-## <a name="setbkimage"></a>  CListCtrl::SetBkImage
+## <a name="setbkimage"></a>CListCtrl：： SetBkImage
 
 设置列表视图控件的背景图像。
 
@@ -3149,10 +3149,10 @@ BOOL SetBkImage(
     int yOffsetPercent = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *plvbkImage*<br/>
-`LVBKIMAGE`结构的地址，其中包含新的背景图像信息。
+`LVBKIMAGE` 结构的地址，其中包含新的背景图像信息。
 
 *hBitmap*<br/>
 位图的句柄。
@@ -3176,13 +3176,13 @@ BOOL SetBkImage(
 ### <a name="remarks"></a>备注
 
 > [!NOTE]
->  由于`CListCtrl::SetBkImage`使用 ole COM 功能，因此必须先初始化 ole 库，然后才能使用`SetBkImage`。 最好在应用程序初始化时初始化 COM 库，并在应用程序终止时初始化库。 这会在使用 ActiveX 技术、OLE 自动化、OLE 链接/嵌入或 ODBC/DAO 操作的 MFC 应用程序中自动完成。
+>  由于 `CListCtrl::SetBkImage` 使用 OLE COM 功能，因此必须先初始化 OLE 库，然后才能使用 `SetBkImage`。 最好在应用程序初始化时初始化 COM 库，并在应用程序终止时初始化库。 这会在使用 ActiveX 技术、OLE 自动化、OLE 链接/嵌入或 ODBC/DAO 操作的 MFC 应用程序中自动完成。
 
 ### <a name="example"></a>示例
 
 请参阅[CListCtrl：： GetBkImage](#getbkimage)的示例。
 
-## <a name="setcallbackmask"></a>  CListCtrl::SetCallbackMask
+## <a name="setcallbackmask"></a>CListCtrl：： SetCallbackMask
 
 设置列表视图控件的回调掩码。
 
@@ -3190,7 +3190,7 @@ BOOL SetBkImage(
 BOOL SetCallbackMask(UINT nMask);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nMask*<br/>
 回调掩码的新值。
@@ -3209,7 +3209,7 @@ BOOL SetCallbackMask(UINT nMask);
         (LVIS_SELECTED|LVIS_FOCUSED));
 ```
 
-## <a name="setcheck"></a>  CListCtrl::SetCheck
+## <a name="setcheck"></a>CListCtrl：： SetCheck
 
 确定列表控件项的状态图像是否可见。
 
@@ -3219,12 +3219,12 @@ BOOL SetCheck(
     BOOL fCheck = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nItem*<br/>
 列表控件项的从零开始的索引。
 
-*fCheck*<br/>
+*查看*<br/>
 指定项的状态图像是否应可见。 默认情况下，*查看*为 TRUE，状态图像可见。 如果*查看*为 FALSE，则不可见。
 
 ### <a name="return-value"></a>返回值
@@ -3258,13 +3258,13 @@ BOOL SetColumn(
     const LVCOLUMN* pColumn);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nCol*<br/>
 要设置其属性的列的索引。
 
 *pColumn*<br/>
-包含新列属性的[LVCOLUMN](/windows/win32/api/commctrl/ns-commctrl-lvcolumnw)结构的地址，如 Windows SDK 中所述。 结构的`mask`成员指定要设置的列特性。 如果成员指定 LVCF_TEXT 值，则结构的`pszText`成员为以 null 结尾的字符串的地址，并且该结构的`cchTextMax`成员将被忽略。 `mask`
+包含新列属性的[LVCOLUMN](/windows/win32/api/commctrl/ns-commctrl-lvcolumnw)结构的地址，如 Windows SDK 中所述。 结构的 `mask` 成员指定要设置的列特性。 如果 `mask` 成员指定 LVCF_TEXT 值，则结构的 `pszText` 成员是以 null 结尾的字符串的地址，并且该结构的 `cchTextMax` 成员将被忽略。
 
 ### <a name="return-value"></a>返回值
 
@@ -3284,7 +3284,7 @@ BOOL SetColumnOrderArray(
     LPINT piArray);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *piArray*<br/>
 指向缓冲区的指针，该缓冲区包含列表视图控件中列的索引值（从左到右）。 缓冲区必须足够大，以便包含列表视图控件中的总列数。
@@ -3298,7 +3298,7 @@ BOOL SetColumnOrderArray(
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 宏[ListView_SetColumnOrderArray](/windows/win32/api/commctrl/nf-commctrl-listview_setcolumnorderarray)的行为，如 Windows SDK 中所述。
+此成员函数实现 Win32 宏的行为， [ListView_SetColumnOrderArray](/windows/win32/api/commctrl/nf-commctrl-listview_setcolumnorderarray)，如 Windows SDK 中所述。
 
 ### <a name="example"></a>示例
 
@@ -3314,13 +3314,13 @@ BOOL SetColumnWidth(
     int cx);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nCol*<br/>
 要为其设置宽度的列的索引。 在列表视图中，此参数必须为0。
 
 *cx*<br/>
-列的新宽度。 可以是 LVSCW_AUTOSIZE 或 LVSCW_AUTOSIZE_USEHEADER，如 Windows SDK 的[LVM_SETCOLUMNWIDTH](/windows/win32/Controls/lvm-setcolumnwidth)中所述。
+列的新宽度。 可以是 LVSCW_AUTOSIZE 或 LVSCW_AUTOSIZE_USEHEADER，如 Windows SDK [LVM_SETCOLUMNWIDTH](/windows/win32/Controls/lvm-setcolumnwidth)中所述。
 
 ### <a name="return-value"></a>返回值
 
@@ -3334,7 +3334,7 @@ BOOL SetColumnWidth(
 DWORD SetExtendedStyle(DWORD dwNewStyle);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwNewStyle*<br/>
 要由列表视图控件使用的扩展样式的组合。 有关这些样式的描述性列表，请参阅 Windows SDK 中的[扩展列表视图样式](/windows/win32/Controls/extended-list-view-styles)主题。
@@ -3345,7 +3345,7 @@ DWORD SetExtendedStyle(DWORD dwNewStyle);
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 宏[ListView_SetExtendedListViewStyle](/windows/win32/api/commctrl/nf-commctrl-listview_setextendedlistviewstyle)的行为，如 Windows SDK 中所述。
+此成员函数实现 Win32 宏的行为， [ListView_SetExtendedListViewStyle](/windows/win32/api/commctrl/nf-commctrl-listview_setextendedlistviewstyle)，如 Windows SDK 中所述。
 
 ### <a name="example"></a>示例
 
@@ -3355,7 +3355,7 @@ DWORD SetExtendedStyle(DWORD dwNewStyle);
         (m_myListCtrl.GetExtendedStyle()|LVS_EX_HEADERDRAGDROP);
 ```
 
-## <a name="setgroupinfo"></a>  CListCtrl::SetGroupInfo
+## <a name="setgroupinfo"></a>CListCtrl：： SetGroupInfo
 
 设置描述当前列表视图控件的指定组的信息。
 
@@ -3365,7 +3365,7 @@ int SetGroupInfo(
     PLVGROUP pgrp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iGroupId*<br/>
 设置其信息的组的标识符。
@@ -3379,9 +3379,9 @@ int SetGroupInfo(
 
 ### <a name="remarks"></a>备注
 
-此方法发送[LVM_SETGROUPINFO](/windows/win32/Controls/lvm-setgroupinfo)消息，如 Windows SDK 中所述。
+此方法发送 Windows SDK 中描述的[LVM_SETGROUPINFO](/windows/win32/Controls/lvm-setgroupinfo)消息。
 
-## <a name="setgroupmetrics"></a>  CListCtrl::SetGroupMetrics
+## <a name="setgroupmetrics"></a>CListCtrl：： SetGroupMetrics
 
 设置列表视图控件的组度量值。
 
@@ -3389,7 +3389,7 @@ int SetGroupInfo(
 void SetGroupMetrics(PLVGROUPMETRICS pGroupMetrics);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pGroupMetrics*<br/>
 指向[LVGROUPMETRICS](/windows/win32/api/commctrl/ns-commctrl-lvgroupmetrics)结构的指针，该结构包含要设置的组度量值信息。
@@ -3406,7 +3406,7 @@ void SetGroupMetrics(PLVGROUPMETRICS pGroupMetrics);
 HCURSOR SetHotCursor(HCURSOR hc);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hc*<br/>
 用于表示热光标的游标资源的句柄。
@@ -3417,9 +3417,9 @@ HCURSOR SetHotCursor(HCURSOR hc);
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 宏[ListView_SetHotCursor](/windows/win32/api/commctrl/nf-commctrl-listview_sethotcursor)的行为，如 Windows SDK 中所述。
+此成员函数实现 Win32 宏的行为， [ListView_SetHotCursor](/windows/win32/api/commctrl/nf-commctrl-listview_sethotcursor)，如 Windows SDK 中所述。
 
-只有启用了悬停选项时，才会显示热光标，因为光标会传递到任何列表视图项。 通过设置 LVS_EX_TRACKSELECT 扩展样式启用了悬停选项。
+只有启用了悬停选项时，才会显示热光标，因为光标会传递到任何列表视图项。 通过设置 LVS_EX_TRACKSELECT 扩展样式启用悬停选择。
 
 ### <a name="example"></a>示例
 
@@ -3433,7 +3433,7 @@ HCURSOR SetHotCursor(HCURSOR hc);
 int SetHotItem(int iIndex);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iIndex*<br/>
 要设置为热项的项的从零开始的索引。
@@ -3444,7 +3444,7 @@ int SetHotItem(int iIndex);
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 宏[ListView_SetHotItem](/windows/win32/api/commctrl/nf-commctrl-listview_sethotitem)的行为，如 Windows SDK 中所述。
+此成员函数实现 Win32 宏的行为， [ListView_SetHotItem](/windows/win32/api/commctrl/nf-commctrl-listview_sethotitem)，如 Windows SDK 中所述。
 
 ### <a name="example"></a>示例
 
@@ -3458,7 +3458,7 @@ int SetHotItem(int iIndex);
 DWORD SetHoverTime(DWORD dwHoverTime = (DWORD)-1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwHoverTime*<br/>
 在选定项之前，鼠标光标必须停留在该项上方的新延迟时间（以毫秒为单位）。 如果传递了默认值，则时间设置为默认悬停时间。
@@ -3469,13 +3469,13 @@ DWORD SetHoverTime(DWORD dwHoverTime = (DWORD)-1);
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 宏[ListView_SetHoverTime](/windows/win32/api/commctrl/nf-commctrl-listview_sethovertime)的行为，如 Windows SDK 中所述。
+此成员函数实现 Win32 宏的行为， [ListView_SetHoverTime](/windows/win32/api/commctrl/nf-commctrl-listview_sethovertime)，如 Windows SDK 中所述。
 
 ### <a name="example"></a>示例
 
 请参阅[CListCtrl：： GetHoverTime](#gethovertime)的示例。
 
-## <a name="seticonspacing"></a>  CListCtrl::SetIconSpacing
+## <a name="seticonspacing"></a>CListCtrl：： SetIconSpacing
 
 设置列表视图控件中图标的间距。
 
@@ -3487,7 +3487,7 @@ CSize SetIconSpacing(
 CSize SetIconSpacing(CSize size);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *cx*<br/>
 X 轴上的图标之间的距离（以像素为单位）。
@@ -3495,8 +3495,8 @@ X 轴上的图标之间的距离（以像素为单位）。
 *cy*<br/>
 Y 轴上的图标之间的距离（以像素为单位）。
 
-*size*<br/>
-一个`CSize`对象，该对象指定 x 轴和 y 轴上的图标之间的距离（以像素为单位）。
+size<br/>
+一个 `CSize` 对象，该对象指定 x 轴和 y 轴上的图标之间的距离（以像素为单位）。
 
 ### <a name="return-value"></a>返回值
 
@@ -3504,7 +3504,7 @@ Y 轴上的图标之间的距离（以像素为单位）。
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 宏[ListView_SetIconSpacing](/windows/win32/api/commctrl/nf-commctrl-listview_seticonspacing)的行为，如 Windows SDK 中所述。
+此成员函数实现 Win32 宏的行为， [ListView_SetIconSpacing](/windows/win32/api/commctrl/nf-commctrl-listview_seticonspacing)，如 Windows SDK 中所述。
 
 ### <a name="example"></a>示例
 
@@ -3513,7 +3513,7 @@ Y 轴上的图标之间的距离（以像素为单位）。
     m_myListCtrl.SetIconSpacing(CSize(100, 100));
 ```
 
-## <a name="setimagelist"></a>  CListCtrl::SetImageList
+## <a name="setimagelist"></a>CListCtrl：： SetImageList
 
 将图像列表分配给列表视图控件。
 
@@ -3523,19 +3523,19 @@ CImageList* SetImageList(
     int nImageListType);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pImageList*<br/>
 指向要分配的图像列表的指针。
 
 *nImageListType*<br/>
-图像列表的类型。 可以是以下值之一：
+图像列表的类型。 它可以是以下值之一：
 
-- 带有大图标的 LVSIL_NORMAL 图像列表。
+- 带大图标 LVSIL_NORMAL 图像列表。
 
-- 带有小图标的 LVSIL_SMALL 图像列表。
+- 带有小图标 LVSIL_SMALL 图像列表。
 
-- 包含状态图像的 LVSIL_STATE 图像列表。
+- LVSIL_STATE 包含状态图像的图像列表。
 
 ### <a name="return-value"></a>返回值
 
@@ -3545,7 +3545,7 @@ CImageList* SetImageList(
 
 请参阅[CListCtrl：： GetImageList](#getimagelist)的示例。
 
-## <a name="setinfotip"></a>  CListCtrl::SetInfoTip
+## <a name="setinfotip"></a>CListCtrl：： SetInfoTip
 
 设置工具提示文本。
 
@@ -3553,20 +3553,20 @@ CImageList* SetImageList(
 BOOL SetInfoTip(PLVSETINFOTIP plvInfoTip);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *plvInfoTip*<br/>
 指向[LVFSETINFOTIP](/windows/win32/api/commctrl/ns-commctrl-lvsetinfotip)结构的指针，该结构包含要设置的信息。
 
 ### <a name="return-value"></a>返回值
 
-如果成功, 则返回 TRUE, 否则返回 FALSE。
+如果成功，则返回 TRUE，否则返回 FALSE。
 
 ### <a name="remarks"></a>备注
 
 此成员函数模拟[LVM_SETINFOTIP](/windows/win32/Controls/lvm-setinfotip)消息的功能，如 Windows SDK 中所述。
 
-## <a name="setinsertmark"></a>  CListCtrl::SetInsertMark
+## <a name="setinsertmark"></a>CListCtrl：： SetInsertMark
 
 将插入点设置为定义的位置。
 
@@ -3574,14 +3574,14 @@ BOOL SetInfoTip(PLVSETINFOTIP plvInfoTip);
 BOOL SetInsertMark(LPLVINSERTMARK plvim);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *plvim*<br/>
 指向[LVINSERTMARK](/windows/win32/api/commctrl/ns-commctrl-lvinsertmark)结构的指针，该结构指定在何处设置插入点。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则返回 TRUE; 否则返回 FALSE。 如果`cbSize` `LVINSERTMARK`结构的成员中的大小不等于结构的实际大小，或者在当前视图中不应用插入点，则返回 FALSE。
+如果成功，则返回 TRUE; 否则返回 FALSE。 如果 `LVINSERTMARK` 结构的 `cbSize` 成员的大小不等于结构的实际大小，或者在当前视图中不应用插入点，则返回 FALSE。
 
 ### <a name="remarks"></a>备注
 
@@ -3595,20 +3595,20 @@ BOOL SetInsertMark(LPLVINSERTMARK plvim);
 COLORREF SetInsertMarkColor(COLORREF color);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*color*<br/>
+*颜色*<br/>
 一个[COLORREF](/windows/win32/gdi/colorref)结构，指定要设置插入点的颜色。
 
 ### <a name="return-value"></a>返回值
 
-返回包含前一颜色的结构。`COLORREF`
+返回包含前一种颜色的 `COLORREF` 结构。
 
 ### <a name="remarks"></a>备注
 
 此成员函数模拟[LVM_SETINSERTMARKCOLOR](/windows/win32/Controls/lvm-setinsertmarkcolor)消息的功能，如 Windows SDK 中所述。
 
-## <a name="setitem"></a>  CListCtrl::SetItem
+## <a name="setitem"></a>CListCtrl：： SetItem
 
 设置列表视图项的部分或全部属性。
 
@@ -3637,10 +3637,10 @@ BOOL SetItem(
     int nIndent);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pItem*<br/>
-包含新项属性的[LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)结构的地址，如 Windows SDK 中所述。 结构的`iItem`和`iSubItem`成员标识项或子项，结构的`mask`成员指定要设置的特性。 有关`mask`成员的详细信息，请参阅 "**备注**"。
+包含新项属性的[LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)结构的地址，如 Windows SDK 中所述。 结构的 `iItem` 和 `iSubItem` 成员标识项或子项，结构的 `mask` 成员指定要设置的特性。 有关 `mask` 成员的详细信息，请参阅 "**备注**"。
 
 *nItem*<br/>
 要设置其属性的项的索引。
@@ -3654,7 +3654,7 @@ BOOL SetItem(
 *lpszItem*<br/>
 指定项标签的以 null 结尾的字符串的地址。
 
-*nImage*<br/>
+*n*<br/>
 图像列表中项的图像的索引。
 
 *nState*<br/>
@@ -3675,19 +3675,19 @@ BOOL SetItem(
 
 ### <a name="remarks"></a>备注
 
-`LVITEM`结构`iItem`和`iSubItem` *nItem*和*nSubItem*参数的和成员标识要设置其属性的项和子项。
+`LVITEM` 结构的 `iItem` 和 `iSubItem` 成员以及*nItem*和*nSubItem*参数标识要设置其属性的项和子项。
 
-结构的成员和 nMask 参数指定要设置的项属性： `mask` `LVITEM`
+`LVITEM` 结构的 `mask` 成员和*nMask*参数指定要设置的项属性：
 
-- LVIF_TEXT 成员或*lpszItem*参数是以 null 结尾的字符串的地址; 将忽略该`cchTextMax`成员。 `pszText`
+- LVIF_TEXT `pszText` 成员或*lpszItem*参数是以 null 结尾的字符串的地址;`cchTextMax` 成员将被忽略。
 
-- LVIF_STATE member 或*nStateMask*参数指定`state`要更改的项目状态，成员或 nState 参数包含这些状态的值。 `stateMask`
+- LVIF_STATE `stateMask` 成员或*nStateMask*参数指定要更改的项目状态，并且 `state` 成员或*nState*参数包含这些状态的值。
 
 ### <a name="example"></a>示例
 
 请参阅[CListCtrl：： system.windows.media.visualtreehelper.hittest](#hittest)的示例。
 
-## <a name="setitemcount"></a>  CListCtrl::SetItemCount
+## <a name="setitemcount"></a>CListCtrl：： SetItemCount
 
 准备用于添加大量项的列表视图控件。
 
@@ -3695,7 +3695,7 @@ BOOL SetItem(
 void SetItemCount(int nItems);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nItems*<br/>
 控件最终将包含的项的数目。
@@ -3706,7 +3706,7 @@ void SetItemCount(int nItems);
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 宏[ListView_SetItemCount](/windows/win32/api/commctrl/nf-commctrl-listview_setitemcount)的行为，如 Windows SDK 中所述。
+此成员函数实现 Win32 宏的行为， [ListView_SetItemCount](/windows/win32/api/commctrl/nf-commctrl-listview_setitemcount)，如 Windows SDK 中所述。
 
 ### <a name="example"></a>示例
 
@@ -3733,17 +3733,17 @@ BOOL SetItemCountEx(
     DWORD dwFlags = LVSICF_NOINVALIDATEALL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iCount*<br/>
 控件最终将包含的项的数目。
 
-*dwFlags*<br/>
+dwFlags<br/>
 指定重置项计数后列表视图控件的行为。 此值可以是以下各项的组合：
 
 - LVSICF_NOINVALIDATEALL 除非当前正在查看受影响的项，否则不会重新绘制列表视图控件。 这是默认值。
 
-- LVSICF_NOSCROLL 当项计数改变时，列表视图控件将不会更改滚动位置。
+- LVSICF_NOSCROLL 列表视图控件将不会更改项计数发生更改时的滚动位置。
 
 ### <a name="return-value"></a>返回值
 
@@ -3751,7 +3751,7 @@ BOOL SetItemCountEx(
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 宏[ListView_SetItemCountEx](/windows/win32/api/commctrl/nf-commctrl-listview_setitemcountex)的行为，如只应为虚拟列表视图调用 Windows SDKand 中所述。
+此成员函数实现 Win32 宏的行为， [ListView_SetItemCountEx](/windows/win32/api/commctrl/nf-commctrl-listview_setitemcountex)，如只应为虚拟列表视图调用 Windows SDKand 中所述。
 
 ### <a name="example"></a>示例
 
@@ -3772,7 +3772,7 @@ BOOL SetItemCountEx(
         }
 ```
 
-## <a name="setitemdata"></a>  CListCtrl::SetItemData
+## <a name="setitemdata"></a>CListCtrl：： SetItemData
 
 设置与*nItem*指定的项关联的特定于32位应用程序的值。
 
@@ -3780,7 +3780,7 @@ BOOL SetItemCountEx(
 BOOL SetItemData(int nItem, DWORD_PTR dwData);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nItem*<br/>
 要设置其数据的列表项的索引。
@@ -3794,7 +3794,7 @@ BOOL SetItemData(int nItem, DWORD_PTR dwData);
 
 ### <a name="remarks"></a>备注
 
-此值为`lParam` [LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)结构的成员，如 Windows SDK 中所述。
+此值为[LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)结构的 `lParam` 成员，如 Windows SDK 中所述。
 
 ### <a name="example"></a>示例
 
@@ -3817,9 +3817,9 @@ BOOL SetItemIndexState(
     DWORD dwMask) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |*pItemIndex*|中指向描述项的[LVITEMINDEX](/windows/win32/api/commctrl/ns-commctrl-lvitemindex)结构的指针。 调用方负责分配此结构并设置其成员。|
 |*dwState*|中要设置项的状态，该项是[列表视图项状态](/windows/win32/Controls/list-view-item-states)的按位组合。 指定零以重置或设置一个状态。|
@@ -3827,7 +3827,7 @@ BOOL SetItemIndexState(
 
 ### <a name="return-value"></a>返回值
 
-如果此方法成功, 则为 TRUE;否则为 FALSE。
+如果此方法成功，则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
@@ -3835,9 +3835,9 @@ BOOL SetItemIndexState(
 
 有关*dwMask*参数的详细信息，请参阅[LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)结构的*stateMask*成员。
 
-此方法发送[LVM_SETITEMINDEXSTATE](/windows/win32/Controls/lvm-setitemindexstate)消息，如 Windows SDK 中所述。
+此方法发送 Windows SDK 中描述的[LVM_SETITEMINDEXSTATE](/windows/win32/Controls/lvm-setitemindexstate)消息。
 
-## <a name="setitemposition"></a>  CListCtrl::SetItemPosition
+## <a name="setitemposition"></a>CListCtrl：： SetItemPosition
 
 将项移动到列表视图控件中的指定位置。
 
@@ -3847,7 +3847,7 @@ BOOL SetItemPosition(
     POINT pt);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nItem*<br/>
 要设置其位置的项的索引。
@@ -3869,7 +3869,7 @@ BOOL SetItemPosition(
 
 请参阅[CListCtrl：： GetItemPosition](#getitemposition)的示例。
 
-## <a name="setitemstate"></a>  CListCtrl::SetItemState
+## <a name="setitemstate"></a>CListCtrl：： SetItemState
 
 更改列表视图控件中项的状态。
 
@@ -3884,13 +3884,13 @@ BOOL SetItemState(
     UINT nMask);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nItem*<br/>
 要设置其状态的项的索引。
 
 *pItem*<br/>
-[LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)结构的地址，如 Windows SDK 中所述。 结构`stateMask`成员指定要更改的状态位，结构的`state`成员包含这些位的新值。 将忽略其他成员。
+[LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)结构的地址，如 Windows SDK 中所述。 结构的 `stateMask` 成员指定要更改的状态位，结构的 `state` 成员包含这些位的新值。 将忽略其他成员。
 
 *nState*<br/>
 状态位的新值。 有关可能值的列表，请参阅[CListCtrl：： GetNextItem](#getnextitem)和[LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw) state 成员。
@@ -3910,7 +3910,7 @@ BOOL SetItemState(
 
 请参阅[CListCtrl：： GetTopIndex](#gettopindex)的示例。
 
-## <a name="setitemtext"></a>  CListCtrl::SetItemText
+## <a name="setitemtext"></a>CListCtrl：： SetItemText
 
 更改列表视图项或子项的文本。
 
@@ -3921,7 +3921,7 @@ BOOL SetItemText(
     LPCTSTR lpszText);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nItem*<br/>
 要设置其文本的项的索引。
@@ -3938,13 +3938,13 @@ BOOL SetItemText(
 
 ### <a name="remarks"></a>备注
 
-此方法不适合用于包含 LVS_OWNERDATA 窗口样式的控件（事实上，这将导致调试生成中的断言）。 有关此列表控件样式的详细信息，请参阅[列表视图控件概述](/windows/win32/Controls/list-view-controls-overview)。
+此方法不应与包含 LVS_OWNERDATA 窗口样式的控件一起使用（事实上，这将导致调试生成中的断言）。 有关此列表控件样式的详细信息，请参阅[列表视图控件概述](/windows/win32/Controls/list-view-controls-overview)。
 
 ### <a name="example"></a>示例
 
 请参阅[CListCtrl：： InsertItem](#insertitem)的示例。
 
-## <a name="setoutlinecolor"></a>  CListCtrl::SetOutlineColor
+## <a name="setoutlinecolor"></a>CListCtrl：： SetOutlineColor
 
 设置列表视图控件边框的颜色（如果设置了[LVS_EX_BORDERSELECT](/windows/win32/Controls/list-view-window-styles)扩展窗口样式）。
 
@@ -3952,20 +3952,20 @@ BOOL SetItemText(
 COLORREF SetOutlineColor(COLORREF color);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*color*<br/>
+*颜色*<br/>
 包含轮廓颜色的新[COLORREF](/windows/win32/gdi/colorref)结构。
 
 ### <a name="return-value"></a>返回值
 
-包含轮廓`COLORREF`颜色的上一个结构
+包含轮廓颜色的上一个 `COLORREF` 结构
 
 ### <a name="remarks"></a>备注
 
 此成员函数模拟[LVM_SETOUTLINECOLOR](/windows/win32/Controls/lvm-setoutlinecolor)消息的功能，如 Windows SDK 中所述。
 
-## <a name="setselectedcolumn"></a>  CListCtrl::SetSelectedColumn
+## <a name="setselectedcolumn"></a>CListCtrl：： SetSelectedColumn
 
 设置列表视图控件的选定列。
 
@@ -3973,7 +3973,7 @@ COLORREF SetOutlineColor(COLORREF color);
 LRESULT SetSelectedColumn(int iCol);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iCol*<br/>
 要选择的列的索引。
@@ -3994,7 +3994,7 @@ LRESULT SetSelectedColumn(int iCol);
 int SetSelectionMark(int iIndex);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iIndex*<br/>
 多选内容中第一项的从零开始的索引。
@@ -4005,7 +4005,7 @@ int SetSelectionMark(int iIndex);
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 宏[ListView_SetSelectionMark](/windows/win32/api/commctrl/nf-commctrl-listview_setselectionmark)的行为，如 Windows SDK 中所述。
+此成员函数实现 Win32 宏的行为， [ListView_SetSelectionMark](/windows/win32/api/commctrl/nf-commctrl-listview_setselectionmark)，如 Windows SDK 中所述。
 
 ### <a name="example"></a>示例
 
@@ -4019,9 +4019,9 @@ int SetSelectionMark(int iIndex);
 BOOL SetTextBkColor(COLORREF cr);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*cr*<br/>
+*回车*<br/>
 一个 COLORREF，它指定新的文本背景色。 有关信息，请参阅 Windows SDK 中的[COLORREF](/windows/win32/gdi/colorref) 。
 
 ### <a name="return-value"></a>返回值
@@ -4045,9 +4045,9 @@ BOOL SetTextBkColor(COLORREF cr);
 BOOL SetTextColor(COLORREF cr);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*cr*<br/>
+*回车*<br/>
 指定新文本颜色的 COLORREF。 有关信息，请参阅 Windows SDK 中的[COLORREF](/windows/win32/gdi/colorref) 。
 
 ### <a name="return-value"></a>返回值
@@ -4064,7 +4064,7 @@ BOOL SetTextColor(COLORREF cr);
     ASSERT(m_myListCtrl.GetTextColor() == crTextColor);
 ```
 
-## <a name="settileinfo"></a>  CListCtrl::SetTileInfo
+## <a name="settileinfo"></a>CListCtrl：： SetTileInfo
 
 设置列表视图控件的图块的信息。
 
@@ -4072,20 +4072,20 @@ BOOL SetTextColor(COLORREF cr);
 BOOL SetTileInfo(PLVTILEINFO pTileInfo);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pTileInfo*<br/>
 指向[LVTILEINFO](/windows/win32/api/commctrl/ns-commctrl-lvtileinfo)结构的指针，该结构包含要设置的信息。
 
 ### <a name="return-value"></a>返回值
 
-如果成功, 则返回 TRUE, 否则返回 FALSE。
+如果成功，则返回 TRUE，否则返回 FALSE。
 
 ### <a name="remarks"></a>备注
 
 此成员函数模拟[LVM_SETTILEINFO](/windows/win32/Controls/lvm-settileinfo)消息的功能，如 Windows SDK 中所述。
 
-## <a name="settileviewinfo"></a>  CListCtrl::SetTileViewInfo
+## <a name="settileviewinfo"></a>CListCtrl：： SetTileViewInfo
 
 设置列表视图控件在磁贴视图中使用的信息。
 
@@ -4093,20 +4093,20 @@ BOOL SetTileInfo(PLVTILEINFO pTileInfo);
 BOOL SetTileViewInfo(PLVTILEVIEWINFO ptvi);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ptvi*<br/>
 指向[LVTILEVIEWINFO](/windows/win32/api/commctrl/ns-commctrl-lvtileviewinfo)结构的指针，该结构包含要设置的信息。
 
 ### <a name="return-value"></a>返回值
 
-如果成功, 则返回 TRUE, 否则返回 FALSE。
+如果成功，则返回 TRUE，否则返回 FALSE。
 
 ### <a name="remarks"></a>备注
 
 此成员函数模拟[LVM_SETTILEVIEWINFO](/windows/win32/Controls/lvm-settileviewinfo)消息的功能，如 Windows SDK 中所述。
 
-## <a name="settooltips"></a>  CListCtrl::SetToolTips
+## <a name="settooltips"></a>CListCtrl：： SetToolTips
 
 设置列表视图控件将用于显示工具提示的 tooltip 控件。
 
@@ -4114,10 +4114,10 @@ BOOL SetTileViewInfo(PLVTILEVIEWINFO ptvi);
 CToolTipCtrl* SetToolTips(CToolTipCtrl* pWndTip);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pWndTip*<br/>
-指向列表控件将`CToolTipCtrl`使用的对象的指针。
+指向列表控件将使用的 `CToolTipCtrl` 对象的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -4127,7 +4127,7 @@ CToolTipCtrl* SetToolTips(CToolTipCtrl* pWndTip);
 
 此成员函数实现 Win32 消息[LVM_SETTOOLTIPS](/windows/win32/Controls/lvm-settooltips)的行为，如 Windows SDK 中所述。
 
-若要不使用工具提示，请在创建`CListCtrl`对象时指示 LVS_NOTOOLTIPS 样式。
+若要不使用工具提示，请在创建 `CListCtrl` 对象时指示 LVS_NOTOOLTIPS 样式。
 
 ## <a name="setview"></a>CListCtrl：： SetView
 
@@ -4137,7 +4137,7 @@ CToolTipCtrl* SetToolTips(CToolTipCtrl* pWndTip);
 DWORD SetView(int iView);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iView*<br/>
 要选择的视图。
@@ -4160,17 +4160,17 @@ void SetWorkAreas(
     LPRECT lpRect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nWorkAreas*<br/>
-LpRect 指向的`RECT`数组中的结构（或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象）的数目。
+*LpRect*指向的数组中 `RECT` 结构（或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象）的数目。
 
 *lpRect*<br/>
-指定列表视图控件新工作`RECT`区的结构`CRect` （或对象）数组的地址。 必须在工作区坐标中指定这些区域。 如果此参数为 NULL，工作区域将设置为控件的工作区。
+指定列表视图控件新工作区的 `RECT` 结构（或 `CRect` 对象）数组的地址。 必须在工作区坐标中指定这些区域。 如果此参数为 NULL，工作区域将设置为控件的工作区。
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 宏[ListView_SetWorkAreas](/windows/win32/api/commctrl/nf-commctrl-listview_setworkareas)的行为，如 Windows SDK 中所述。
+此成员函数实现 Win32 宏的行为， [ListView_SetWorkAreas](/windows/win32/api/commctrl/nf-commctrl-listview_setworkareas)，如 Windows SDK 中所述。
 
 ### <a name="example"></a>示例
 
@@ -4189,7 +4189,7 @@ BOOL SortGroups(
     LPVOID _plv);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_pfnGroupCompare*<br/>
 指向组比较函数的指针。
@@ -4199,13 +4199,13 @@ Void 指针。
 
 ### <a name="return-value"></a>返回值
 
-如果成功, 则返回 TRUE, 否则返回 FALSE。
+如果成功，则返回 TRUE，否则返回 FALSE。
 
 ### <a name="remarks"></a>备注
 
 此成员函数模拟[LVM_SORTGROUPS](/windows/win32/Controls/lvm-sortgroups)消息的功能，如 Windows SDK 中所述。
 
-## <a name="sortitems"></a>  CListCtrl::SortItems
+## <a name="sortitems"></a>CListCtrl：： SortItems
 
 使用应用程序定义的比较函数对列表视图项进行排序。
 
@@ -4215,7 +4215,7 @@ BOOL SortItems(
     DWORD_PTR dwData);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pfnCompare*<br/>
 中应用程序定义的比较函数的地址。
@@ -4244,7 +4244,7 @@ int CALLBACK CompareFunc(LPARAM lParam1,
 
 *LParam1*参数是与比较的第一项关联的32位值，而*lParam2*参数是与第二项关联的值。 这些值是在项的[LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)结构插入到列表中时在它们的*lParam*成员中指定的值。 *LParamSort*参数与*dwData*值相同。
 
-此方法发送[LVM_SORTITEMS](/windows/win32/Controls/lvm-sortitems)消息，如 Windows SDK 中所述。
+此方法发送 Windows SDK 中描述的[LVM_SORTITEMS](/windows/win32/Controls/lvm-sortitems)消息。
 
 ### <a name="example"></a>示例
 
@@ -4268,7 +4268,7 @@ void CListCtrlDlg::Sort()
 }
 ```
 
-## <a name="sortitemsex"></a>  CListCtrl::SortItemsEx
+## <a name="sortitemsex"></a>CListCtrl：： SortItemsEx
 
 使用应用程序定义的比较函数对当前列表视图控件中的项进行排序。
 
@@ -4278,16 +4278,16 @@ BOOL SortItemsEx(
     DWORD_PTR dwData);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |*pfnCompare*|中应用程序定义的比较函数的地址。<br /><br /> 每次需要确定两个列表项的相对顺序时，排序操作都会调用比较函数。 比较函数必须是类的静态成员或不是任何类的成员的独立函数。|
 |*dwData*|中传递到比较函数的应用程序定义值。|
 
 ### <a name="return-value"></a>返回值
 
-如果此方法成功, 则为 TRUE;否则为 FALSE。
+如果此方法成功，则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
@@ -4300,18 +4300,18 @@ int CALLBACK CompareFunc(LPARAM lParam1,
     LPARAM lParam2,
     LPARAM lParamSort);
 ```
-此消息类似于[LVM_SORTITEMS](/windows/win32/Controls/lvm-sortitems)，传递到比较函数的信息类型除外。 在[LVM_SORTITEMS](/windows/win32/Controls/lvm-sortitems)中， *lParam1*和*lParam2*是要比较的项的值。 在[LVM_SORTITEMSEX](/windows/win32/Controls/lvm-sortitemsex)中， *lParam1*是要比较的第一项的当前索引，而*lParam2*是第二项的当前索引。 您可以发送[LVM_GETITEMTEXT](/windows/win32/Controls/lvm-getitemtext)消息以检索有关项目的详细信息。
+此消息与[LVM_SORTITEMS](/windows/win32/Controls/lvm-sortitems)（传递到比较函数的信息的类型除外）类似。 在[LVM_SORTITEMS](/windows/win32/Controls/lvm-sortitems)中， *lParam1*和*lParam2*是要比较的项的值。 在[LVM_SORTITEMSEX](/windows/win32/Controls/lvm-sortitemsex)中， *lParam1*是要比较的第一项的当前索引， *lParam2*是第二项的当前索引。 可以发送[LVM_GETITEMTEXT](/windows/win32/Controls/lvm-getitemtext)消息来检索有关项的详细信息。
 
 如果第一个项应在第二个项之前，则该比较函数必须返回一个负值; 如果第一项应在第二个项之后，则为正值; 如果两个项相等，则为零。
 
 > [!NOTE]
 >  在排序过程中，列表视图内容不稳定。 如果回调函数将任何消息发送到[LVM_GETITEM](/windows/win32/Controls/lvm-getitem)以外的列表视图控件，则结果是不可预知的。
 
-此方法发送[LVM_SORTITEMSEX](/windows/win32/Controls/lvm-sortitemsex)消息，如 Windows SDK 中所述。
+此方法发送 Windows SDK 中描述的[LVM_SORTITEMSEX](/windows/win32/Controls/lvm-sortitemsex)消息。
 
 ### <a name="example"></a>示例
 
-下面的代码示例定义了一个用于`m_listCtrl`访问当前列表视图控件的变量。 此变量将在下一个示例中使用。
+下面的代码示例定义了一个用于访问当前列表视图控件的变量 `m_listCtrl`。 此变量将在下一个示例中使用。
 
 ```cpp
 public:
@@ -4321,7 +4321,7 @@ public:
 
 ### <a name="example"></a>示例
 
-下面的代码示例演示`SortItemEx`方法。 在此代码示例的前面部分中，我们创建了一个列表视图控件，该控件在报表视图中显示标题为 "ClientID" 和 "评分" 的两个列。 下面的代码示例使用 "评分" 列中的值对表进行排序。
+下面的代码示例演示 `SortItemEx` 方法。 在此代码示例的前面部分中，我们创建了一个列表视图控件，该控件在报表视图中显示标题为 "ClientID" 和 "评分" 的两个列。 下面的代码示例使用 "评分" 列中的值对表进行排序。
 
 ```cpp
 // The ListCompareFunc() method is a global function used by SortItemEx().
@@ -4353,7 +4353,7 @@ void CCListCtrl_s2Dlg::OnBnClickedButton1()
 }
 ```
 
-## <a name="subitemhittest"></a>  CListCtrl::SubItemHitTest
+## <a name="subitemhittest"></a>CListCtrl：： SubItemHitTest
 
 确定位于给定位置的列表视图项（如果有）。
 
@@ -4361,7 +4361,7 @@ void CCListCtrl_s2Dlg::OnBnClickedButton1()
 int SubItemHitTest(LPLVHITTESTINFO pInfo);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pInfo*<br/>
 指向[LVHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-lvhittestinfo)结构的指针。
@@ -4372,7 +4372,7 @@ int SubItemHitTest(LPLVHITTESTINFO pInfo);
 
 ### <a name="remarks"></a>备注
 
-此成员函数实现 Win32 宏[ListView_SubItemHitTest](/windows/win32/api/commctrl/nf-commctrl-listview_subitemhittest)的行为，如 Windows SDK 中所述。
+此成员函数实现 Win32 宏的行为， [ListView_SubItemHitTest](/windows/win32/api/commctrl/nf-commctrl-listview_subitemhittest)，如 Windows SDK 中所述。
 
 ### <a name="example"></a>示例
 
@@ -4394,7 +4394,7 @@ void CListCtrlDlg::OnDblClk(NMHDR* pNMHDR, LRESULT* pResult)
 }
 ```
 
-## <a name="update"></a>  CListCtrl::Update
+## <a name="update"></a>CListCtrl：： Update
 
 强制列表视图控件重绘*nItem*指定的项。
 
@@ -4402,7 +4402,7 @@ void CListCtrlDlg::OnDblClk(NMHDR* pNMHDR, LRESULT* pResult)
 BOOL Update(int nItem);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nItem*<br/>
 要更新的项的索引。
@@ -4413,13 +4413,13 @@ BOOL Update(int nItem);
 
 ### <a name="remarks"></a>备注
 
-如果列表视图控件具有 LVS_AUTOARRANGE 样式，此函数还会对其进行排列。
+如果列表视图控件具有 LVS_AUTOARRANGE 样式，此函数也会对其进行排列。
 
 ### <a name="example"></a>示例
 
 请参阅[CListCtrl：： GetSelectedCount](#getselectedcount)的示例。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [MFC 示例 ROWLIST](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 类](cwnd-class.md)<br/>

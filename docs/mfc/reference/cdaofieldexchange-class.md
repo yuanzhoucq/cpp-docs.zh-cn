@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CDaoFieldExchange [MFC], m_prs
 ms.assetid: 350a663e-92ff-44ab-ad53-d94efa2e5823
 ms.openlocfilehash: cfffebd16c3c1d62dc4084b962c22911e4b46ae5
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303885"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78872470"
 ---
 # <a name="cdaofieldexchange-class"></a>CDaoFieldExchange 类
 
@@ -33,7 +33,7 @@ DAO 受 Office 2013 的支持。 DAO 3.6 是最终版本，被视为已过时。
 class CDaoFieldExchange
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-methods"></a>公共方法
 
@@ -108,7 +108,7 @@ DFX 机制执行的某些操作仅适用于其中一种可能的字段类型。 
 
 `m_nOperation` 的可能值为：
 
-|操作|说明|
+|Operation|说明|
 |---------------|-----------------|
 |`AddToParameterList`|生成 SQL 语句的**参数**子句。|
 |`AddToSelectList`|生成 SQL 语句的**SELECT**子句。|
@@ -140,7 +140,7 @@ DFX 机制执行的某些操作仅适用于其中一种可能的字段类型。 
 void SetFieldType(UINT nFieldType);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nFieldType*<br/>
 在 `CDaoFieldExchange`中声明的**枚举 FieldType**的值，可以是下列值之一：

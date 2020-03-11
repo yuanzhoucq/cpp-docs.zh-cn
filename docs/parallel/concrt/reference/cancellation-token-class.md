@@ -14,11 +14,11 @@ helpviewer_keywords:
 - cancellation_token class
 ms.assetid: 2787df2b-e9d3-440e-bfd0-841a46a9835f
 ms.openlocfilehash: 34743ce48510eec9d8f7862e5ed951a722932962
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142248"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876069"
 ---
 # <a name="cancellation_token-class"></a>cancellation_token 类
 
@@ -30,7 +30,7 @@ ms.locfileid: "77142248"
 class cancellation_token;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -49,7 +49,7 @@ class cancellation_token;
 |[无](#none)|返回一个取消标记，此标记绝不会受到取消。|
 |[register_callback](#register_callback)|使用标记注册一个回调函数。 取消该标记时，将进行回调。 请注意，如果在调用此方法时已删除此标记，则将立即同步进行回调。|
 
-### <a name="public-operators"></a>公用運算子
+### <a name="public-operators"></a>公共运算符
 
 |名称|说明|
 |----------|-----------------|
@@ -81,7 +81,7 @@ cancellation_token(const cancellation_token& _Src);
 cancellation_token(cancellation_token&& _Src);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Src*<br/>
 要复制或移动的 cancellation_token。
@@ -94,7 +94,7 @@ cancellation_token(cancellation_token&& _Src);
 void deregister_callback(const cancellation_token_registration& _Registration) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Registration*<br/>
 与将取消注册的回调对应的 `cancellation_token_registration` 对象。 此标记必须先前已从对 `register` 的调用中返回。
@@ -141,7 +141,7 @@ static cancellation_token none();
 bool operator!= (const cancellation_token& _Src) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Src*<br/>
 要比较的 `cancellation_token`。
@@ -156,7 +156,7 @@ cancellation_token& operator= (const cancellation_token& _Src);
 cancellation_token& operator= (cancellation_token&& _Src);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Src*<br/>
 要分配的 `cancellation_token`。
@@ -169,7 +169,7 @@ cancellation_token& operator= (cancellation_token&& _Src);
 bool operator== (const cancellation_token& _Src) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Src*<br/>
 要比较的 `cancellation_token`。
@@ -185,7 +185,7 @@ template<typename _Function>
 ::Concurrency::cancellation_token_registration register_callback(const _Function& _Func) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Function*<br/>
 取消此 `cancellation_token` 时将回调的函数对象的类型。

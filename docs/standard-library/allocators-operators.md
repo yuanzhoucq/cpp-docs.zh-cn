@@ -6,21 +6,21 @@ f1_keywords:
 - allocators/std::operator==
 ms.assetid: b55d67cb-3c69-46bf-ad40-e845fb096c4e
 ms.openlocfilehash: b7429e298cdf14d727fc481db6c4a3bf8574b5e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377878"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875953"
 ---
 # <a name="ltallocatorsgt-operators"></a>&lt;allocators&gt; 运算符
 
-这些是中定义的全局模板运算符函数&lt;分配器&gt;。 类成员运算符函数，请参阅类文档。
+这些是 &lt;分配器&gt;中定义的全局模板运算符函数。 有关类成员运算符函数的详细说明，请参阅类文档。
 
 |||
 |-|-|
 |[operator!=](#op_neq)|[operator==](#op_eq_eq)|
 
-## <a name="op_neq"></a>operator!=
+## <a name="op_neq"></a>  operator!=
 
 测试指定类的分配器对象之间是否不相等。
 
@@ -31,12 +31,12 @@ bool operator!=(
     const allocator_base<Type, Sync>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |*left*|要测试是否不相等的其中一个分配器对象。|
-|*right*|要测试是否不相等的其中一个分配器对象。|
+|right|要测试是否不相等的其中一个分配器对象。|
 
 ### <a name="return-value"></a>返回值
 
@@ -46,7 +46,7 @@ bool operator!=(
 
 模板运算符返回 `!(left == right)`。
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a>operator==
 
 测试指定类的分配器对象之间是否相等。
 
@@ -57,12 +57,12 @@ bool operator==(
     const allocator_base<Type, Sync>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |*left*|要测试是否相等的其中一个分配器对象。|
-|*right*|要测试是否相等的其中一个分配器对象。|
+|right|要测试是否相等的其中一个分配器对象。|
 
 ### <a name="return-value"></a>返回值
 
@@ -72,6 +72,6 @@ bool operator==(
 
 此模板运算符返回 `left.equals(right)`。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [\<allocators>](../standard-library/allocators-header.md)

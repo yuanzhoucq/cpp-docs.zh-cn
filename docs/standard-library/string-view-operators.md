@@ -18,11 +18,11 @@ helpviewer_keywords:
 - std::basic_string_view::operator&lt;&lt;
 - std::basic_string_view::operator&lt;=, std::basic_string_view::operator==
 ms.openlocfilehash: 699b1f1bddeb71ecbf03297d162a7e45ebd39609
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127733"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890910"
 ---
 # <a name="ltstring_viewgt-operators"></a>&lt;string_view&gt; 运算符
 
@@ -55,7 +55,7 @@ bool operator!=(
     const basic_string_view<CharType, Traits>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 任何可转换的字符串类型或要进行比较 `basic_string_view` 类型的对象。
@@ -94,7 +94,7 @@ bool operator==(
     const basic_string_view<CharType, Traits>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 任何可转换的字符串类型或要进行比较 `basic_string_view` 类型的对象。
@@ -133,7 +133,7 @@ bool operator<(
     const basic_string_view<CharType, Traits>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 任何可转换的字符串类型或要进行比较 `basic_string_view` 类型的对象。
@@ -194,7 +194,7 @@ bool operator<=(
     const basic_string_view<CharType, Traits>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 任何可转换的字符串类型或要进行比较 `basic_string_view` 类型的对象。
@@ -220,7 +220,7 @@ inline basic_ostream<CharType, Traits>& operator<<(
     basic_ostream<CharType, Traits>& Ostr, const basic_string_view<CharType, Traits> Str);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Ostr*\
 要写入的输出流。
@@ -257,7 +257,7 @@ bool operator>(
     const basic_string_view<CharType, Traits>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 任何可转换的字符串类型或要进行比较 `basic_string_view` 类型的对象。
@@ -294,7 +294,7 @@ bool operator>=(
     const basic_string_view<CharType, Traits>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 任何可转换的字符串类型或要进行比较 `basic_string_view` 类型的对象。

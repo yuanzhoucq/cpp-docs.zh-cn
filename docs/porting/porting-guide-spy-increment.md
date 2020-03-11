@@ -3,11 +3,11 @@ title: 迁移指南：Spy++
 ms.date: 10/23/2019
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
 ms.openlocfilehash: 5505e0dbf23dd02f4ae5924ff4f2bacff3f11eea
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627233"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890936"
 ---
 # <a name="porting-guide-spy"></a>迁移指南：Spy++
 
@@ -19,7 +19,7 @@ Spy++ 是广泛使用的 GUI 诊断工具，适用于提供有关 Windows 桌面
 
 我们认为这是最典型的移植使用 MFC 和 Win32 API 的 Windows 桌面应用程序的情况，尤其是对于尚未使用从 Visual C++ 6.0 版本开始的任意 Visual C++ 版本进行更新的旧项目。
 
-##  <a name="convert_project_file"></a>步骤 1. 转换项目文件。
+##  <a name="convert_project_file"></a> 步骤 1. 转换项目文件。
 
 项目文件（Visual C++ 6.0 中两个旧的 .dsw 文件）轻松转换，且未产生任何需要进一步关注的问题。 其中一个项目是 Spy++ 应用程序。 另一个项目是 SpyHk，它是用 C 语言编写的支持 DLL。 如[此处](../porting/visual-cpp-porting-and-upgrading-guide.md)所述，更复杂的项目可能无法轻松升级。
 
@@ -29,7 +29,7 @@ Spy++ 是广泛使用的 GUI 诊断工具，适用于提供有关 Windows 桌面
 
 我们共有两个项目，一个具有大量的 C++ 文件，另一个是用 C 语言编写的 DLL。
 
-##  <a name="header_file_problems"></a>步骤 2. 头文件问题
+##  <a name="header_file_problems"></a> 步骤 2. 头文件问题
 
 生成新转换的项目后，通常首先发现的是，找不到自己项目使用的头文件。
 
@@ -39,7 +39,7 @@ Spy++ 中无法找到的文件是 verstamp.h。 通过搜索 Internet，我们�
 1>C:\Program Files (x86)\Windows Kits\8.1\Include\shared\common.ver(212): error RC2104: undefined keyword or key name: VER_FILEFLAGSMASK
 ```
 
-在可用的包含文件中查找符号最简单的方法是，使用“在文件中查找”(Ctrl+Shift+F)，并指定“Visual C++ 包含目录”。 我们在 ntverp.h 中找到了该符号。 我们将 verstamp.h 包含文件替换为 ntverp.h 后，此错误消失。
+在可用的包含文件中查找符号最简单的方法是，使用“在文件中查找”(Ctrl**Shift**F)，并指定“Visual C++ 包含目录”++。 我们在 ntverp.h 中找到了该符号。 我们将 verstamp.h 包含文件替换为 ntverp.h 后，此错误消失。
 
 ##  <a name="linker_output_settings"></a>步骤 3. 链接器 OutputFile 设置
 
@@ -292,7 +292,7 @@ afx_msg UINT OnNcHitTest(CPoint point);
 afx_msg LRESULT OnNcHitTest(CPoint point);
 ```
 
-由于从 CWnd 派生的不同类中总共出现了此函数的大约十个匹配项，当光标位于编辑器的函数上时，使用“转到定义”（键盘：F12）和“转到声明”（键盘：Ctrl+F12）有助于从“查找符号”工具窗口定位并导航到这些函数。 “转到定义”通常是两个选项中更有用的。 “转到声明”将查找声明而不是定义类声明，例如友元类声明或前向引用。
+由于从 CWnd 派生的不同类中总共出现了此函数的大约十个匹配项，当光标位于编辑器的函数上时，使用“转到定义”（键盘：F12）和“转到声明”（键盘：Ctrl**F12）有助于从“查找符号”工具窗口定位并导航到这些函数**+。 “转到定义”通常是两个选项中更有用的。 “转到声明”将查找声明而不是定义类声明，例如友元类声明或前向引用。
 
 ##  <a name="mfc_changes"></a>步骤 9. MFC 更改
 
@@ -381,7 +381,7 @@ DECODEPARM(CB_GETLBTEXT)
 #pragma warning(disable : 4456)
 ```
 
-禁用警告时，你可能需要将禁用限制为只对产生警告的代码起作用，以避免在可能提供有用信息时禁止显示警告。 我们在产生警告的行之后添加代码以还原警告，或者因为宏中发生警告，最好使用在宏中起作用的 __pragma 关键字（`#pragma` 在宏中不起作用）。
+禁用警告时，你可能需要将禁用限制为只对产生警告的代码起作用，以避免在可能提供有用信息时禁止显示警告。 我们在产生警告的行之后添加代码以还原警告，或者因为宏中发生警告，最好使用在宏中起作用的 __pragma 关键字（ **在宏中不起作用）** `#pragma`。
 
 ```cpp
 #define PARM(var, type, src)__pragma(warning(disable : 4456))  \
@@ -518,7 +518,7 @@ msvcrtd.lib;msvcirtd.lib;kernel32.lib;user32.lib;gdi32.lib;advapi32.lib;Debug\Sp
 
 现在让我们实际将旧的多字节字符集 (MBCS) 代码更新为 Unicode。 由于这是一个 Windows 应用程序，它与 Windows 桌面平台联系紧密，因此我们将该应用程序移植到 Windows 使用的 UTF-16 Unicode。 如果你正编写跨平台代码或正将 Windows 应用程序移植到另一个平台，则可能需要考虑移植到其他操作系统广泛使用的 UTF-8。
 
-移植到 UTF-16 Unicode 时，必须决定是否仍然需要编译为 MBCS 的选项。  如果需要具有支持 MBCS 的选项，则应将 TCHAR 宏用作字符类型，它将解析为 char 或 wchar_t，具体取决于是否在编译期间定义了 \_MBCS 或 \_UNICODE。 切换到 TCHAR 及 TCHAR 版本的各种 API 而不是 wchar_t 及其关联 API 意味着你能够重回 MBCS 版本的代码，只需定义 \_MBCS 宏而不是 \_UNICODE 即可。 除 TCHAR 外，还存在各种 TCHAR 版本，如广泛使用的 typedef、宏和函数。 例如，LPCTSTR 而非 LPCSTR，等等。 在项目属性对话框中，在“配置属性”的“常规”部分，将“字符集”属性从“使用 MBCS 字符集”更改为“使用 Unicode 字符集”。 此设置会影响编译期间预定义的宏。 同时存在 UNICODE 宏和 \_UNICODE 宏。 项目属性对两者的影响一致。 Windows 头文件使用 UNICODE，而 Visual C++ 头文件（如 MFC）则使用 \_UNICODE，但定义其中一个后，另一个也将得到定义。
+移植到 UTF-16 Unicode 时，必须决定是否仍然需要编译为 MBCS 的选项。  如果需要具有支持 MBCS 的选项，则应将 TCHAR 宏用作字符类型，它将解析为 char 或 wchar_t，具体取决于是否在编译期间定义了 **MBCS 或** UNICODE\_\_。 切换到 TCHAR 及 TCHAR 版本的各种 API 而不是 wchar_t 及其关联 API 意味着你能够重回 MBCS 版本的代码，只需定义 **MBCS 宏而不是** UNICODE 即可\_\_。 除 TCHAR 外，还存在各种 TCHAR 版本，如广泛使用的 typedef、宏和函数。 例如，LPCTSTR 而非 LPCSTR，等等。 在项目属性对话框中，在“配置属性”的“常规”部分，将“字符集”属性从“使用 MBCS 字符集”更改为“使用 Unicode 字符集”。 此设置会影响编译期间预定义的宏。 同时存在 UNICODE 宏和 \_UNICODE 宏。 项目属性对两者的影响一致。 Windows 头文件使用 UNICODE，而 Visual C++ 头文件（如 MFC）则使用 \_UNICODE，但定义其中一个后，另一个也将得到定义。
 
 有一个使用 TCHAR 从 MBCS 移植到 UTF-16 Unicode 的好[方法](/previous-versions/cc194801(v=msdn.10))。 选择此路由。 首先，将“字符集”属性设置为“使用 Unicode 字符集”并重新生成项目。
 
@@ -542,7 +542,7 @@ wsprintf(szTmp, "%d.%2.2d.%4.4d", rmj, rmm, rup);
 wsprintf(szTmp, _T("%d.%2.2d.%4.4d"), rmj, rmm, rup);
 ```
 
-\_T 宏可以使字符串文本编译为 char 字符串或 wchar_t 字符串，具体取决于 MBCS 或 UNICODE 的设置。 要在 Visual Studio 中将所有字符串替换为 \_T，首先需要打开“快速替换”框（键盘：Ctrl+F）或“在文件中替换”（键盘：Ctrl+Shift+H），然后选中“使用正则表达式”复选框。 输入 `((\".*?\")|('.+?'))` 作为搜索文本，输入 `_T($1)` 作为替换文本。 如果某些字符串周围已存在 \_T 宏，此过程将重新添加该宏，并且可能还会发现不需要 \_T 的情况（例如使用 `#include` 时），因此最好使用“替换下一个”而不是“全部替换”。
+\_T 宏可以使字符串文本编译为 char 字符串或 wchar_t 字符串，具体取决于 MBCS 或 UNICODE 的设置。 要在 Visual Studio 中将所有字符串替换为 \_T，首先需要打开“快速替换”框（键盘：Ctrl**F）或“在文件中替换”（键盘：Ctrl**Shift**H），然后选中“使用正则表达式”复选框**+++。 输入 `((\".*?\")|('.+?'))` 作为搜索文本，输入 `_T($1)` 作为替换文本。 如果某些字符串周围已存在 \_T 宏，此过程将重新添加该宏，并且可能还会发现不需要 \_T 的情况（例如使用 `#include` 时），因此最好使用“替换下一个”而不是“全部替换”。
 
 此特定函数 [wsprintf](/windows/win32/api/winuser/nf-winuser-wsprintfw) 实际上在 Windows 标头中已定义，相关文档建议不使用此函数，因为可能会发生缓冲区溢出。 `szTmp` 缓冲区未给定大小，因此函数无法检查该缓冲区是否可容纳要写入的所有数据。 请参阅下一节有关移植到安全 CRT 的内容，我们将在下一节修复其他类似的问题。 最终使用 [_stprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md) 进行替换。
 
@@ -610,7 +610,7 @@ strFace.ReleaseBuffer();
 #endif
 ```
 
-当然，应使用更安全的版本 `wcscpy_s`而非 `wcscpy`。 下一节将解决此问题。
+当然，应使用更安全的版本 `wcscpy`而非 `wcscpy_s`。 下一节将解决此问题。
 
 作为操作检查，我们应将“字符集”重置为“使用多字节字符集”，并确保代码仍使用 MBCS 和 Unicode 进行编译。 当然，发生所有这些更改后，应在重新编译的应用上执行完整的测试轮次。
 
@@ -636,7 +636,7 @@ Visual C++ 提供了技巧，可以更加轻松地获取代码安全而无需添
 
 ##  <a name="deprecated_forscope"></a>步骤 13. /Zc:forScope 已弃用
 
-自 Visual C++ 6.0 起，编译器符合当前的标准，该标准将在循环中声明的变量的范围限制为循环的范围。 编译器选项 [/Zc:forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)（项目属性中的“强制 for 循环范围中的符合性”）控制是否将其报告为错误。 我们应更新我们的代码以使其符合标准，并在循环外部添加声明。 若要避免更改代码，可以将“语言”部分的 C++ 项目属性中的设置更改为 `No (/Zc:forScope-)`。 但请记住，未来版本的 Visual C++ 中可能会删除 `/Zc:forScope-`，因此你的代码最终同样需要更改以符合标准。
+自 Visual C++ 6.0 起，编译器符合当前的标准，该标准将在循环中声明的变量的范围限制为循环的范围。 编译器选项 [/Zc:forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)（项目属性中的“强制 for 循环范围中的符合性”）控制是否将其报告为错误。 我们应更新我们的代码以使其符合标准，并在循环外部添加声明。 若要避免更改代码，可以将“语言”部分的 C++ 项目属性中的设置更改为`No (/Zc:forScope-)`。 但请记住，未来版本的 Visual C++ 中可能会删除 `/Zc:forScope-`，因此你的代码最终同样需要更改以符合标准。
 
 这些问题的修复相对轻松，但具体取决于你的代码，此问题可能会影响大量代码。 下面是一个典型问题。
 
@@ -671,7 +671,7 @@ int CPerfTextDataBase::NumStrings(LPCTSTR mszStrings) const
 
 将 Spy++ 从原始的 Visual C++ 6.0 代码移植到最新的编译器需要花费大约 20 个小时的编码时间，历经一周的过程。 我们跳过了该产品的 8 个版本（从 Visual Studio 6.0 到 Visual Studio 2015）直接升级。 现在，这是所有大小型项目升级的推荐方法。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [移植和升级：示例和案例研究](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [上一个案例研究：COM Spy](../porting/porting-guide-com-spy.md)

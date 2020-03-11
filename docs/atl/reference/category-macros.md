@@ -8,11 +8,11 @@ f1_keywords:
 - atlcom/ATL::REQUIRED_CATEGORY
 ms.assetid: 223578cb-6180-4787-a8d8-ba3787a5d3ee
 ms.openlocfilehash: 411e06cc795827eef356018ba427510fd9eb7c06
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497856"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864441"
 ---
 # <a name="category-macros"></a>类别宏
 
@@ -29,7 +29,7 @@ ms.locfileid: "69497856"
 
 **标头：** atlcom。h
 
-##  <a name="begin_category_map"></a>  BEGIN_CATEGORY_MAP
+##  <a name="begin_category_map"></a>BEGIN_CATEGORY_MAP
 
 标记类别映射的开头。
 
@@ -37,16 +37,16 @@ ms.locfileid: "69497856"
 BEGIN_CATEGORY_MAP(theClass)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*theClass*<br/>
+*类*<br/>
 中包含类别映射的类的名称。
 
 ### <a name="remarks"></a>备注
 
 类别映射用于指定 COM 类将实现的组件类别以及它需要从其容器中执行的类别。
 
-将[IMPLEMENTED_CATEGORY](#implemented_category)条目添加到 COM 类实现的每个类别的映射。 将[REQUIRED_CATEGORY](#required_category)条目添加到类需要其客户端实现的每个类别的映射。 用[END_CATEGORY_MAP](#end_category_map)宏标记地图的结尾。
+对于 COM 类实现的每个类别，将[IMPLEMENTED_CATEGORY](#implemented_category)条目添加到映射。 将[REQUIRED_CATEGORY](#required_category)条目添加到类需要其客户端实现的每个类别的映射。 用[END_CATEGORY_MAP](#end_category_map)宏标记地图的结尾。
 
 如果类具有关联的[OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto)或[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto)，则在注册模块时将自动注册映射中列出的组件类别。
 
@@ -79,7 +79,7 @@ END_CATEGORY_MAP()
 IMPLEMENTED_CATEGORY(catID)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *catID*<br/>
 中一个 CATID 常量或变量，保存已实现类别的全局唯一标识符（GUID）。 将采用*catID*的地址并将其添加到映射。 请参阅下表，了解所选的股票类别。
@@ -94,7 +94,7 @@ IMPLEMENTED_CATEGORY(catID)
 
 ### <a name="a-selection-of-stock-categories"></a>股票类别的选择
 
-|描述|符号|注册表 GUID|
+|说明|符号|注册表 GUID|
 |-----------------|------------|-------------------|
 |脚本安全|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
 |初始化安全|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|
@@ -116,7 +116,7 @@ IMPLEMENTED_CATEGORY(catID)
 REQUIRED_CATEGORY( catID )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *catID*<br/>
 中包含所需类别的全局唯一标识符（GUID）的 CATID 常量或变量。 将采用*catID*的地址并将其添加到映射。 请参阅下表，了解所选的股票类别。
@@ -131,7 +131,7 @@ REQUIRED_CATEGORY( catID )
 
 ### <a name="a-selection-of-stock-categories"></a>股票类别的选择
 
-|描述|符号|注册表 GUID|
+|说明|符号|注册表 GUID|
 |-----------------|------------|-------------------|
 |脚本安全|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
 |初始化安全|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|
@@ -145,6 +145,6 @@ REQUIRED_CATEGORY( catID )
 
 [!code-cpp[NVC_ATL_Windowing#135](../../atl/codesnippet/cpp/category-macros_2.h)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [宏](../../atl/reference/atl-macros.md)

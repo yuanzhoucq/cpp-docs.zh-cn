@@ -52,11 +52,11 @@ helpviewer_keywords:
 - Microsoft::WRL::ComPtr::~ComPtr, destructor
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
 ms.openlocfilehash: 1e20a991c8f32027aeea6a17df0534aa6e1c2c43
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498411"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865701"
 ---
 # <a name="comptr-class"></a>ComPtr 类
 
@@ -72,74 +72,74 @@ template<class T>
 friend class ComPtr;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
-`ComPtr`表示的接口。
+`ComPtr` 表示的接口。
 
 *U*<br/>
-当前`ComPtr`为其友元的类。 （使用此参数的模板受到保护。）
+当前 `ComPtr` 为其友元的类。 （使用此参数的模板受到保护。）
 
 ## <a name="remarks"></a>备注
 
-`ComPtr<>`声明表示基础接口指针的类型。 使用`ComPtr<>`声明变量, 然后使用箭头成员访问运算符 (`->`) 访问接口成员函数。
+`ComPtr<>` 声明表示基础接口指针的类型。 使用 `ComPtr<>` 声明变量，然后使用箭头成员访问运算符（`->`）访问接口成员函数。
 
-有关智能指针的详细信息, 请参阅 MSDN Library 中[Com 编码实践](/windows/win32/LearnWin32/com-coding-practices)主题的 "Com 智能指针" 部分。
+有关智能指针的详细信息，请参阅 MSDN Library 中[Com 编码实践](/windows/win32/LearnWin32/com-coding-practices)主题的 "Com 智能指针" 部分。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-name            | 描述
+名称            | 说明
 --------------- | ---------------------------------------------------------------
 `InterfaceType` | *T*模板参数指定的类型的同义词。
 
 ### <a name="public-constructors"></a>公共构造函数
 
-名称                             | 描述
+名称                             | 说明
 -------------------------------- | --------------------------------------------------------------------------------------------------------------------
-[ComPtr::ComPtr](#comptr)        | 初始化 `ComPtr` 类的新实例。 重载提供默认、复制、移动和转换构造函数。
-[ComPtr::~ComPtr](#tilde-comptr) | 取消初始化的实例`ComPtr`。
+[ComPtr：： ComPtr](#comptr)        | 初始化 `ComPtr` 类的新实例。 重载提供默认、复制、移动和转换构造函数。
+[ComPtr：： ~ ComPtr](#tilde-comptr) | 取消初始化 `ComPtr`的实例。
 
 ### <a name="public-methods"></a>公共方法
 
-名称                                                      | 描述
+名称                                                      | 说明
 --------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[ComPtr:: As](#as)                                         | 返回表示由指定模板参数标识的接口的对象。`ComPtr`
-[ComPtr::AsIID](#asiid)                                   | 返回一个`ComPtr`对象, 该对象表示由指定接口 ID 标识的接口。
-[ComPtr::AsWeak](#asweak)                                 | 检索对当前对象的弱引用。
-[ComPtr::Attach](#attach)                                 | 将此`ComPtr`与当前模板类型参数指定的接口类型相关联。
-[ComPtr::CopyTo](#copyto)                                 | 将与此`ComPtr`关联的当前或指定接口复制到指定的输出指针。
-[ComPtr::Detach](#detach)                                 | 将此`ComPtr`与它所表示的接口解除。
-[ComPtr::Get](#get)                                       | 检索指向与此`ComPtr`相关联的接口的指针。
-[ComPtr::GetAddressOf](#getaddressof)                     | 检索[ptr_](#ptr)数据成员的地址, 其中包含指向此`ComPtr`所表示的接口的指针。
-[ComPtr::ReleaseAndGetAddressOf](#releaseandgetaddressof) | 释放与此`ComPtr`关联的接口, 然后检索[ptr_](#ptr)数据成员的地址, 其中包含指向已释放接口的指针。
-[ComPtr::Reset](#reset)                                   | 释放指向与此`ComPtr`相关联的接口的指针的所有引用。
-[ComPtr::Swap](#swap)                                     | 使用由指定`ComPtr`的管理的接口`ComPtr`交换由当前管理的接口。
+[ComPtr：： As](#as)                                         | 返回表示由指定模板参数标识的接口的 `ComPtr` 对象。
+[ComPtr：： AsIID](#asiid)                                   | 返回一个 `ComPtr` 对象，该对象表示由指定接口 ID 标识的接口。
+[ComPtr：： AsWeak](#asweak)                                 | 检索对当前对象的弱引用。
+[ComPtr：： Attach](#attach)                                 | 将此 `ComPtr` 与当前模板类型参数指定的接口类型相关联。
+[ComPtr：： CopyTo](#copyto)                                 | 将与此 `ComPtr` 关联的当前或指定接口复制到指定的输出指针。
+[ComPtr：:D etach](#detach)                                 | 将此 `ComPtr` 与它所表示的接口解除。
+[ComPtr：： Get](#get)                                       | 检索指向与此 `ComPtr`相关联的接口的指针。
+[ComPtr：： GetAddressOf](#getaddressof)                     | 检索[ptr_](#ptr)数据成员的地址，其中包含指向此 `ComPtr`所表示的接口的指针。
+[ComPtr：： ReleaseAndGetAddressOf](#releaseandgetaddressof) | 释放与此 `ComPtr` 关联的接口，然后检索[ptr_](#ptr)数据成员的地址，其中包含指向已释放接口的指针。
+[ComPtr::Reset](#reset)                                   | 释放指向与此 `ComPtr`相关联的接口的指针的所有引用。
+[ComPtr：： Swap](#swap)                                     | 将当前 `ComPtr` 管理的接口与由指定 `ComPtr`管理的接口交换。
 
 ### <a name="protected-methods"></a>受保护的方法
 
-名称                                        | 描述
+名称                                        | 说明
 ------------------------------------------- | --------------------------------------------------------------------------------
-[ComPtr::InternalAddRef](#internaladdref)   | 递增与此`ComPtr`相关联的接口的引用计数。
-[ComPtr::InternalRelease](#internalrelease) | 对与此`ComPtr`关联的接口执行 COM 释放操作。
+[ComPtr：： InternalAddRef](#internaladdref)   | 递增与此 `ComPtr`相关联的接口的引用计数。
+[ComPtr：： InternalRelease](#internalrelease) | 对与此 `ComPtr`关联的接口执行 COM 释放操作。
 
 ### <a name="public-operators"></a>公共运算符
 
-名称                                                                                           | 描述
+名称                                                                                           | 说明
 ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------
-[ComPtr::operator&](#operator-ampersand)                                                       | 检索当前`ComPtr`的地址。
-[ComPtr::operator->](#operator-arrow)                                                          | 检索指向当前模板参数所指定类型的指针。
-[ComPtr::operator=](#operator-assign)                                                          | 为当前`ComPtr`赋值。
-[ComPtr::operator==](#operator-equality)                                                       | 指示两个 `ComPtr` 对象是否相等。
-[ComPtr::operator!=](#operator-inequality)                                                     | 指示两个 `ComPtr` 对象是否不相等。
-[ComPtr:: operator Microsoft:: WRL::D etails:: BoolType](#operator-microsoft-wrl-details-booltype) | 指示是否`ComPtr`正在管理接口的对象生存期。
+[ComPtr：： operator &](#operator-ampersand)                                                       | 检索当前 `ComPtr`的地址。
+[ComPtr：： operator->](#operator-arrow)                                                          | 检索指向当前模板参数所指定类型的指针。
+[ComPtr：： operator =](#operator-assign)                                                          | 为当前 `ComPtr`分配值。
+[ComPtr：： operator = =](#operator-equality)                                                       | 指示两个 `ComPtr` 对象是否相等。
+[ComPtr：： operator！ =](#operator-inequality)                                                     | 指示两个 `ComPtr` 对象是否不相等。
+[ComPtr：： operator Microsoft：： WRL：:D etails：： BoolType](#operator-microsoft-wrl-details-booltype) | 指示 `ComPtr` 是否正在管理接口的对象生存期。
 
 ### <a name="protected-data-members"></a>受保护的数据成员
 
-name                 | 描述
+名称                 | 说明
 -------------------- | ------------------------------------------------------------------------------------------
-[ComPtr::ptr_](#ptr) | 包含指向与关联的接口的指针, 并由此管理`ComPtr`。
+[ComPtr：:p tr_](#ptr) | 包含指向与此 `ComPtr`相关联的接口的指针。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -149,19 +149,19 @@ name                 | 描述
 
 **标头：** client.h
 
-**命名空间：** Microsoft:: WRL
+**命名空间：** Microsoft::WRL
 
-## <a name="tilde-comptr"></a>ComPtr:: ~ ComPtr
+## <a name="tilde-comptr"></a>ComPtr：： ~ ComPtr
 
-取消初始化的实例`ComPtr`。
+取消初始化 `ComPtr`的实例。
 
 ```cpp
 WRL_NOTHROW ~ComPtr();
 ```
 
-## <a name="as"></a>ComPtr:: As
+## <a name="as"></a>ComPtr：： As
 
-返回表示由指定模板参数标识的接口的对象。`ComPtr`
+返回表示由指定模板参数标识的接口的 `ComPtr` 对象。
 
 ```cpp
 template<typename U>
@@ -175,13 +175,13 @@ HRESULT As(
 ) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *U*<br/>
 要由参数*p*表示的接口。
 
 *p*<br/>
-一个`ComPtr`对象, 该对象表示由参数*U*指定的接口。参数*p*不得引用当前`ComPtr`对象。
+一个 `ComPtr` 对象，该对象表示参数*U*指定的接口。参数*p*不得引用当前的 `ComPtr` 对象。
 
 ### <a name="remarks"></a>备注
 
@@ -191,9 +191,9 @@ HRESULT As(
 
 如果成功，则为 S_OK；否则为指示错误的 HRESULT。
 
-## <a name="asiid"></a>ComPtr:: AsIID
+## <a name="asiid"></a>ComPtr：： AsIID
 
-返回一个`ComPtr`对象, 该对象表示由指定接口 ID 标识的接口。
+返回一个 `ComPtr` 对象，该对象表示由指定接口 ID 标识的接口。
 
 ```cpp
 WRL_NOTHROW HRESULT AsIID(
@@ -202,19 +202,19 @@ WRL_NOTHROW HRESULT AsIID(
 ) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *riid*<br/>
 接口 ID。
 
 *p*<br/>
-如果对象的某个接口的 ID 等于*riid*, 则为由*riid*参数指定的接口的双重间接指针;否则为指向`IUnknown`的指针。
+如果对象的某个接口的 ID 等于*riid*，则为由*riid*参数指定的接口的双重间接指针;否则为指向 `IUnknown`的指针。
 
 ### <a name="return-value"></a>返回值
 
 如果成功，则为 S_OK；否则为指示错误的 HRESULT。
 
-## <a name="asweak"></a>ComPtr:: AsWeak
+## <a name="asweak"></a>ComPtr：： AsWeak
 
 检索对当前对象的弱引用。
 
@@ -224,18 +224,18 @@ HRESULT AsWeak(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pWeakRef*<br/>
-此操作完成后, 指向弱引用对象的指针。
+此操作完成后，指向弱引用对象的指针。
 
 ### <a name="return-value"></a>返回值
 
 如果成功，则为 S_OK；否则为指示错误的 HRESULT。
 
-## <a name="attach"></a>ComPtr:: Attach
+## <a name="attach"></a>ComPtr：： Attach
 
-将此`ComPtr`与当前模板类型参数指定的接口类型相关联。
+将此 `ComPtr` 与当前模板类型参数指定的接口类型相关联。
 
 ```cpp
 void Attach(
@@ -243,12 +243,12 @@ void Attach(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *other*<br/>
 接口类型。
 
-## <a name="comptr"></a>ComPtr::ComPtr
+## <a name="comptr"></a>ComPtr：： ComPtr
 
 初始化 `ComPtr` 类的新实例。 重载提供默认、复制、移动和转换构造函数。
 
@@ -284,7 +284,7 @@ WRL_NOTHROW ComPtr(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *U*<br/>
 *其他*参数的类型。
@@ -296,17 +296,17 @@ WRL_NOTHROW ComPtr(
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数是默认构造函数, 隐式创建一个空对象。 第二个构造函数指定[__nullptr](../../extensions/nullptr-cpp-component-extensions.md), 它显式创建一个空对象。
+第一个构造函数是默认构造函数，隐式创建一个空对象。 第二个构造函数指定[__nullptr](../../extensions/nullptr-cpp-component-extensions.md)，它显式创建一个空对象。
 
-第三个构造函数从指针指定的对象创建一个对象。 现在, ComPtr 拥有指向的内存, 并对其维护引用计数。
+第三个构造函数从指针指定的对象创建一个对象。 现在，ComPtr 拥有指向的内存，并对其维护引用计数。
 
-第四个和第五个构造函数是复制构造函数。 如果对象可转换为当前类型, 则第五个构造函数将复制该对象。
+第四个和第五个构造函数是复制构造函数。 如果对象可转换为当前类型，则第五个构造函数将复制该对象。
 
-第六个和第七个构造函数是移动构造函数。 如果对象可转换为当前类型, 则第七个构造函数将移动该对象。
+第六个和第七个构造函数是移动构造函数。 如果对象可转换为当前类型，则第七个构造函数将移动该对象。
 
-## <a name="copyto"></a>ComPtr:: CopyTo
+## <a name="copyto"></a>ComPtr：： CopyTo
 
-将与此`ComPtr`关联的当前或指定接口复制到指定指针。
+将与此 `ComPtr` 关联的当前或指定接口复制到指定指针。
 
 ```cpp
 HRESULT CopyTo(
@@ -324,32 +324,32 @@ HRESULT CopyTo(
 ) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *U*<br/>
 类型名称。
 
 *ptr*<br/>
-此操作完成后, 指向所请求的接口的指针。
+此操作完成后，指向所请求的接口的指针。
 
 *riid*<br/>
 接口 ID。
 
 ### <a name="return-value"></a>返回值
 
-如果成功, 则为 S_OK;否则, 为一个 HRESULT, 指示隐式`QueryInterface`操作失败的原因。
+如果成功，则为 S_OK;否则，为一个 HRESULT，指示隐式 `QueryInterface` 操作失败的原因。
 
 ### <a name="remarks"></a>备注
 
-第一个函数返回指向与此`ComPtr`相关联的接口的指针的副本。 此函数始终返回 S_OK。
+第一个函数返回指向与此 `ComPtr`相关联的接口的指针的副本。 此函数始终返回 S_OK。
 
-第二个函数对`QueryInterface`由*riid*参数指定的接口上`ComPtr`的与此关联的接口执行操作。
+第二个函数在与此 `ComPtr` 相关联的接口上针对*riid*参数指定的接口执行 `QueryInterface` 操作。
 
-第三个函数对`QueryInterface` *U*参数的基础接口上与`ComPtr`此关联的接口执行操作。
+第三个函数在与此 `ComPtr` 相关联的接口上对*U*参数的基础接口执行 `QueryInterface` 操作。
 
-## <a name="detach"></a>ComPtr::Detach
+## <a name="detach"></a>ComPtr：:D etach
 
-将此`ComPtr`对象与它所表示的接口解除。
+将此 `ComPtr` 对象与它所表示的接口解除。
 
 ```cpp
 T* Detach();
@@ -357,11 +357,11 @@ T* Detach();
 
 ### <a name="return-value"></a>返回值
 
-指向由此`ComPtr`对象表示的接口的指针。
+指向由此 `ComPtr` 对象表示的接口的指针。
 
-## <a name="get"></a>ComPtr:: Get
+## <a name="get"></a>ComPtr：： Get
 
-检索指向与此`ComPtr`相关联的接口的指针。
+检索指向与此 `ComPtr`相关联的接口的指针。
 
 ```cpp
 T* Get() const;
@@ -369,11 +369,11 @@ T* Get() const;
 
 ### <a name="return-value"></a>返回值
 
-指向与此`ComPtr`关联的接口的指针。
+指向与此 `ComPtr`相关联的接口的指针。
 
-## <a name="getaddressof"></a>ComPtr::GetAddressOf
+## <a name="getaddressof"></a>ComPtr：： GetAddressOf
 
-检索[ptr_](#ptr)数据成员的地址, 其中包含指向此`ComPtr`所表示的接口的指针。
+检索[ptr_](#ptr)数据成员的地址，其中包含指向此 `ComPtr`所表示的接口的指针。
 
 ```cpp
 T* const* GetAddressOf() const;
@@ -384,9 +384,9 @@ T** GetAddressOf();
 
 变量的地址。
 
-## <a name="internaladdref"></a>ComPtr::InternalAddRef
+## <a name="internaladdref"></a>ComPtr：： InternalAddRef
 
-递增与此`ComPtr`相关联的接口的引用计数。
+递增与此 `ComPtr`相关联的接口的引用计数。
 
 ```cpp
 void InternalAddRef() const;
@@ -396,9 +396,9 @@ void InternalAddRef() const;
 
 此方法是受保护的。
 
-## <a name="internalrelease"></a>ComPtr::InternalRelease
+## <a name="internalrelease"></a>ComPtr：： InternalRelease
 
-对与此`ComPtr`关联的接口执行 COM 释放操作。
+对与此 `ComPtr`关联的接口执行 COM 释放操作。
 
 ```cpp
 void InternalRelease();
@@ -408,9 +408,9 @@ void InternalRelease();
 
 此方法是受保护的。
 
-## <a name="operator-ampersand"></a>ComPtr::operator&amp;
+## <a name="operator-ampersand"></a>ComPtr：： operator&amp;
 
-释放与此`ComPtr`对象关联的接口, 然后检索`ComPtr`对象的地址。
+释放与此 `ComPtr` 对象关联的接口，然后检索 `ComPtr` 对象的地址。
 
 ```cpp
 Details::ComPtrRef<WeakRef> operator&()
@@ -420,13 +420,13 @@ const Details::ComPtrRef<const WeakRef> operator&() const
 
 ### <a name="return-value"></a>返回值
 
-对当前`ComPtr`的弱引用。
+对当前 `ComPtr`的弱引用。
 
 ### <a name="remarks"></a>备注
 
-此方法与[ComPtr:: GetAddressOf](#getaddressof)的不同之处在于, 此方法释放了对接口指针的引用。 在`ComPtr::GetAddressOf`需要接口指针的地址但不希望释放该接口时使用。
+此方法与[ComPtr：： GetAddressOf](#getaddressof)的不同之处在于，此方法释放了对接口指针的引用。 如果需要接口指针的地址，但不希望释放该接口，请使用 `ComPtr::GetAddressOf`。
 
-## <a name="operator-arrow"></a>ComPtr:: operator-&gt;
+## <a name="operator-arrow"></a>ComPtr：： operator-&gt;
 
 检索指向当前模板参数所指定类型的指针。
 
@@ -440,11 +440,11 @@ WRL_NOTHROW Microsoft::WRL::Details::RemoveIUnknown<InterfaceType>* operator->()
 
 ### <a name="remarks"></a>备注
 
-此 helper 函数消除了使用 STDMETHOD 宏引起的不必要的开销。 此函数将`IUnknown`生成`private`类型, `virtual`而不是。
+此 helper 函数消除了使用 STDMETHOD 宏引起的不必要的开销。 此函数使 `IUnknown` 类型 `private` 而不是 `virtual`。
 
-## <a name="operator-assign"></a>ComPtr:: operator =
+## <a name="operator-assign"></a>ComPtr：： operator =
 
-为当前`ComPtr`赋值。
+为当前 `ComPtr`分配值。
 
 ```cpp
 WRL_NOTHROW ComPtr& operator=(
@@ -473,35 +473,35 @@ WRL_NOTHROW ComPtr& operator=(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *U*<br/>
 一个类。
 
 *other*<br/>
-对类型或其他`ComPtr`类型的指针、引用或右值引用。
+对类型或其他 `ComPtr`的指针、引用或右值引用。
 
 ### <a name="return-value"></a>返回值
 
-对当前`ComPtr`的引用。
+对当前 `ComPtr`的引用。
 
 ### <a name="remarks"></a>备注
 
-此运算符的第一个版本将空值赋给当前`ComPtr`。
+此运算符的第一个版本为当前 `ComPtr`分配一个空值。
 
-在第二个版本中, 如果分配接口指针与当前`ComPtr`接口指针不同, 则会将第二个接口指针分配给当前。 `ComPtr`
+在第二个版本中，如果分配接口指针与当前 `ComPtr` 接口指针不同，则第二个接口指针将分配给当前 `ComPtr`。
 
-在第三个版本中, 分配接口指针分配给当前`ComPtr`。
+在第三个版本中，分配接口指针分配给当前 `ComPtr`。
 
-在第四个版本中, 如果指定值的接口指针与当前`ComPtr`接口指针不同, 则会将第二个接口指针分配给当前。 `ComPtr`
+在第四个版本中，如果指定值的接口指针与当前 `ComPtr` 接口指针不同，则会将第二个接口指针分配给当前 `ComPtr`。
 
-第五个版本是复制运算符;对的`ComPtr`引用将分配给当前`ComPtr`。
+第五个版本是复制运算符;向当前 `ComPtr`分配对 `ComPtr` 的引用。
 
-第六个版本是使用移动语义的 copy 运算符;如果任何类型为静态`ComPtr`强制转换, 然后将其分配给当前`ComPtr`, 则为对的右值引用。
+第六个版本是使用移动语义的 copy 运算符;如果任何类型为静态强制转换，然后将其分配给当前 `ComPtr`，则为对 `ComPtr` 的右值引用。
 
-第七个版本是使用移动语义的 copy 运算符;对`ComPtr`类型*U*的右值引用是静态强制转换, 并分配给当前`ComPtr`。
+第七个版本是使用移动语义的 copy 运算符;对类型*U*的 `ComPtr` 的右值引用是静态强制转换，并分配给当前 `ComPtr`。
 
-## <a name="operator-equality"></a>ComPtr:: operator = =
+## <a name="operator-equality"></a>ComPtr：： operator = =
 
 指示两个 `ComPtr` 对象是否相等。
 
@@ -522,21 +522,21 @@ bool operator==(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *a*<br/>
 对 `ComPtr` 对象的引用。
 
 *b*<br/>
-对另一`ComPtr`对象的引用。
+对其他 `ComPtr` 对象的引用。
 
 ### <a name="return-value"></a>返回值
 
-如果对象*a*等于`true`对象*b*, `false`则第一个运算符将生成; 否则为。
+如果对象*a*等于对象*b*，则第一个运算符将产生 `true`;否则，`false`。
 
-第二个和第三`true`个运算符在对象*a*等于`nullptr`时生成; `false`否则为。
+如果对象*a*等于 `nullptr`，则第二个和第三个运算符将产生 `true`;否则，`false`。
 
-## <a name="operator-inequality"></a>ComPtr:: operator! =
+## <a name="operator-inequality"></a>ComPtr：： operator！ =
 
 指示两个 `ComPtr` 对象是否不相等。
 
@@ -557,23 +557,23 @@ bool operator!=(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *a*<br/>
 对 `ComPtr` 对象的引用。
 
 *b*<br/>
-对另一`ComPtr`对象的引用。
+对其他 `ComPtr` 对象的引用。
 
 ### <a name="return-value"></a>返回值
 
-如果对象*a*不`true`等于对象*b*, `false`则第一个运算符将生成; 否则返回。
+如果对象*a*不等于对象*b*，则第一个运算符将产生 `true`;否则，`false`。
 
-如果对象*a*不等于`nullptr`, `true`则第二个和第三个运算符将`false`生成; 否则为。
+如果对象*a*不等于 `nullptr`，则第二个和第三个运算符将产生 `true`;否则，`false`。
 
-## <a name="operator-microsoft-wrl-details-booltype"></a>ComPtr:: operator Microsoft:: WRL::D etails:: BoolType
+## <a name="operator-microsoft-wrl-details-booltype"></a>ComPtr：： operator Microsoft：： WRL：:D etails：： BoolType
 
-指示是否`ComPtr`正在管理接口的对象生存期。
+指示 `ComPtr` 是否正在管理接口的对象生存期。
 
 ```cpp
 WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;
@@ -581,11 +581,11 @@ WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;
 
 ### <a name="return-value"></a>返回值
 
-如果接口与此`ComPtr`关联, 则为[BoolStruct:: member](boolstruct-structure.md#member)数据`nullptr`成员的地址; 否则为。
+如果接口与此 `ComPtr`相关联，则为[BoolStruct：： member](boolstruct-structure.md#member)数据成员的地址;否则，`nullptr`。
 
-## <a name="ptr"></a>ComPtr::p tr_
+## <a name="ptr"></a>ComPtr：:p tr_
 
-包含指向与关联的接口的指针, 并由此管理`ComPtr`。
+包含指向与此 `ComPtr`相关联的接口的指针。
 
 ```cpp
 InterfaceType *ptr_;
@@ -593,11 +593,11 @@ InterfaceType *ptr_;
 
 ### <a name="remarks"></a>备注
 
-`ptr_`是受保护的内部数据成员。
+`ptr_` 是内部受保护的数据成员。
 
-## <a name="releaseandgetaddressof"></a>ComPtr::ReleaseAndGetAddressOf
+## <a name="releaseandgetaddressof"></a>ComPtr：： ReleaseAndGetAddressOf
 
-释放与此`ComPtr`关联的接口, 然后检索[ptr_](#ptr)数据成员的地址, 其中包含指向已释放接口的指针。
+释放与此 `ComPtr` 关联的接口，然后检索[ptr_](#ptr)数据成员的地址，其中包含指向已释放接口的指针。
 
 ```cpp
 T** ReleaseAndGetAddressOf();
@@ -605,11 +605,11 @@ T** ReleaseAndGetAddressOf();
 
 ### <a name="return-value"></a>返回值
 
-此`ComPtr`的[ptr_](#ptr)数据成员的地址。
+此 `ComPtr`的[ptr_](#ptr)数据成员的地址。
 
-## <a name="reset"></a>ComPtr:: Reset
+## <a name="reset"></a>ComPtr：： Reset
 
-释放指向与此`ComPtr`相关联的接口的指针的所有引用。
+释放指向与此 `ComPtr`相关联的接口的指针的所有引用。
 
 ```cpp
 unsigned long Reset();
@@ -619,9 +619,9 @@ unsigned long Reset();
 
 已释放的引用的数量（如果存在）。
 
-## <a name="swap"></a>ComPtr:: Swap
+## <a name="swap"></a>ComPtr：： Swap
 
-使用由指定`ComPtr`的管理的接口`ComPtr`交换由当前管理的接口。
+将当前 `ComPtr` 管理的接口与由指定 `ComPtr`管理的接口交换。
 
 ```cpp
 void Swap(
@@ -633,8 +633,8 @@ void Swap(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *r*<br/>
-`ComPtr`。
+一个 `ComPtr`。
 

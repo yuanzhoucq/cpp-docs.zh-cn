@@ -4,11 +4,11 @@ ms.date: 08/09/2019
 helpviewer_keywords:
 - CppProperties.json file [C++]
 ms.openlocfilehash: d59fca412a26d08f88ccbda20a2c0444cf33b1cb
-ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556664"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856808"
 ---
 # <a name="cpppropertiesjson-reference"></a>Cppproperties.json 引用
 
@@ -64,7 +64,7 @@ ms.locfileid: "75556664"
 
 Visual Studio 为 Microsoft C++提供了以下预定义的环境，它们映射到相应的开发人员命令提示。 当你继承其中一个环境时，你可以通过使用具有以下宏语法的 global 属性 `env` 来引用任何环境变量： $ {env.\<VARIABLE >}。
 
-|变量名称|描述|
+|变量名|说明|
 |-----------|-----------------|
 |vsdev|默认的 Visual Studio 环境|
 |msvc_x86|使用 x86 工具为 x86 编译|
@@ -77,7 +77,7 @@ Visual Studio 为 Microsoft C++提供了以下预定义的环境，它们映射�
 
 安装 Linux 工作负载后，可使用以下环境变量远程定向到 Linux 和 WSL：
 
-|变量名称|描述|
+|变量名|说明|
 |-----------|-----------------|
 |linux_x86|远程将 x86 Linux 设为目标|
 |linux_x64|远程将 x64 Linux 设为目标|

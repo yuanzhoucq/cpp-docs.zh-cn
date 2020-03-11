@@ -1,5 +1,5 @@
 ---
-title: '&lt;可选&gt;运算符'
+title: '&lt;可选&gt; 运算符'
 ms.date: 11/04/2016
 f1_keywords:
 - optional/std::operator!=
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - std::operatoroperator&lt; (optional)
 - std::operatoroperator&lt;= (optional)
 ms.openlocfilehash: c5d0de435180054b186400384fc0583df5b03246
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268919"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854044"
 ---
-# <a name="ltoptionalgt-operators"></a>&lt;可选&gt;运算符
+# <a name="ltoptionalgt-operators"></a>&lt;可选&gt; 运算符
 
-## <a name="op_eq_eq"></a> 运算符 = =
+## <a name="op_eq_eq"></a>operator = =
 
 测试运算符左侧的 `optional` 对象是否等于右侧的 `optional` 对象。
 
@@ -37,15 +37,15 @@ template <class T, class U> constexpr bool operator==(const optional<T>&, const 
 template <class T, class U> constexpr bool operator==(const U&, const optional<T>&);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左侧*\
-类型的对象`optional`， `nullopt_t`，或`T`。
+*左*\
+`optional`、`nullopt_t`或 `T`类型的对象。
 
-*右侧*\
-类型的对象`optional`， `nullopt_t`，或`T`。
+*right*\
+`optional`、`nullopt_t`或 `T`类型的对象。
 
-## <a name="op_neq"></a> 运算符 ！ =
+## <a name="op_neq"></a>operator！ =
 
 测试运算符左侧的 `optional` 对象是否不等于右侧的 `optional` 对象。
 
@@ -57,13 +57,13 @@ template <class T, class U> constexpr bool operator!=(const optional<T>&, const 
 template <class T, class U> constexpr bool operator!=(const U&, const optional<T>&);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左侧*\
-类型的对象`optional`， `nullopt_t`，或`T`。
+*左*\
+`optional`、`nullopt_t`或 `T`类型的对象。
 
-*右侧*\
-类型的对象`optional`， `nullopt_t`，或`T`。
+*right*\
+`optional`、`nullopt_t`或 `T`类型的对象。
 
 ### <a name="remarks"></a>备注
 
@@ -81,13 +81,13 @@ template <class T, class U> constexpr bool operator<(const optional<T>&, const U
 template <class T, class U> constexpr bool operator<(const U&, const optional<T>&);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左侧*\
-类型的对象`optional`， `nullopt_t`，或`T`。
+*左*\
+`optional`、`nullopt_t`或 `T`类型的对象。
 
-*右侧*\
-类型的对象`optional`， `nullopt_t`，或`T`。
+*right*\
+`optional`、`nullopt_t`或 `T`类型的对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -105,13 +105,13 @@ template <class T, class U> constexpr bool operator<=(const optional<T>&, const 
 template <class T, class U> constexpr bool operator<=(const U&, const optional<T>&);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左侧*\
-类型的对象`optional`， `nullopt_t`，或`T`。
+*左*\
+`optional`、`nullopt_t`或 `T`类型的对象。
 
-*右侧*\
-类型的对象`optional`， `nullopt_t`，或`T`。
+*right*\
+`optional`、`nullopt_t`或 `T`类型的对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -133,13 +133,13 @@ template <class T, class U> constexpr bool operator>(const optional<T>&, const U
 template <class T, class U> constexpr bool operator>(const U&, const optional<T>&);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左侧*\
-类型的对象`optional`， `nullopt_t`，或`T`。
+*左*\
+`optional`、`nullopt_t`或 `T`类型的对象。
 
-*右侧*\
-类型的对象`optional`， `nullopt_t`，或`T`。
+*right*\
+`optional`、`nullopt_t`或 `T`类型的对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -149,7 +149,7 @@ template <class T, class U> constexpr bool operator>(const U&, const optional<T>
 
 此模板函数返回 `right < left`。
 
-## <a name="op_gt_eq"></a> 运算符&gt;=
+## <a name="op_gt_eq"></a>操作员&gt;=
 
 测试运算符左侧的 `optional` 对象是否大于或等于右侧的 `optional` 对象。
 
@@ -161,17 +161,17 @@ template <class T, class U> constexpr bool operator>=(const optional<T>&, const 
 template <class T, class U> constexpr bool operator>=(const U&, const optional<T>&);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左侧*\
-类型的对象`optional`， `nullopt_t`，或`T`。
+*左*\
+`optional`、`nullopt_t`或 `T`类型的对象。
 
-*右侧*\
-类型的对象`optional`， `nullopt_t`，或`T`。
+*right*\
+`optional`、`nullopt_t`或 `T`类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-如果运算符左侧的 `optional` 大于或等于右侧的 `optional`，则为 **true**；否则为 **false**。
+如果运算符左侧的 **大于或等于右侧的**，则为 `optional`true`optional`；否则为 **false**。
 
 ### <a name="remarks"></a>备注
 

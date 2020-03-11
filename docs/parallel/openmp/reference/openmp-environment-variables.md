@@ -15,11 +15,11 @@ helpviewer_keywords:
 - OMP_SCHEDULE OpenMP environment variable
 ms.assetid: 2178ce2b-ffa1-45ec-a455-64437711d15d
 ms.openlocfilehash: 838427320fcb68cedb97b36156fc18002ed962d8
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143276"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78882884"
 ---
 # <a name="openmp-environment-variables"></a>OpenMP 环境变量
 
@@ -102,7 +102,7 @@ set OMP_NESTED
 set OMP_NUM_THREADS[=num]
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *num*<br/>
 并行区域中所需的最大线程数，在可视化C++实现中最大为64。
@@ -137,9 +137,9 @@ set OMP_NUM_THREADS
 set OMP_SCHEDULE[=type[,size]]
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*size*<br/>
+size<br/>
 可有可无指定迭代的大小。 *大小*必须为正整数。 默认值为 `1`，除非*类型*为 static。 当*类型*为 `runtime`时无效。
 
 type<br/>

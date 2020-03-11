@@ -17,15 +17,15 @@ helpviewer_keywords:
 - std::operator&lt;= (queue)
 - std::operator== (queue)
 ms.openlocfilehash: 420d717b34b6c17587f8790701906e06ab008d96
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240278"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854882"
 ---
 # <a name="ltqueuegt-operators"></a>&lt;queue&gt; 运算符
 
-## <a name="op_neq"></a> 运算符 ！ =
+## <a name="op_neq"></a>operator！ =
 
 测试运算符左侧和右侧的 queue 对象是否不相等。
 
@@ -33,12 +33,12 @@ ms.locfileid: "68240278"
 bool operator!=(const queue <Type, Container>& left, const queue <Type, Container>& right,);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左侧*\
+*左*\
 一个 `queue` 类型的对象。
 
-*右侧*\
+*right*\
 一个 `queue` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -100,12 +100,12 @@ The queues q1 and q3 are equal.
 bool operator<(const queue <Type, Container>& left, const queue <Type, Container>& right,);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左侧*\
+*左*\
 一个 `queue` 类型的对象。
 
-*右侧*\
+*right*\
 一个 `queue` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -155,7 +155,7 @@ The queue q1 is less than the queue q2.
 The queue q1 is not less than the queue q3.
 ```
 
-## <a name="op_lt_eq"></a> 运算符&lt;=
+## <a name="op_lt_eq"></a>操作员&lt;=
 
 测试运算符左侧的 queue 对象是否小于或等于右侧的 queue 对象。
 
@@ -163,12 +163,12 @@ The queue q1 is not less than the queue q3.
 bool operator<=(const queue <Type, Container>& left, const queue <Type, Container>& right,);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左侧*\
+*左*\
 一个 `queue` 类型的对象。
 
-*右侧*\
+*right*\
 一个 `queue` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -220,7 +220,7 @@ The queue q1 is greater than the queue q2.
 The queue q1 is less than or equal to the queue q3.
 ```
 
-## <a name="op_eq_eq"></a> 运算符 = =
+## <a name="op_eq_eq"></a>operator = =
 
 测试运算符左侧和右侧的队列对象是否相等。
 
@@ -228,12 +228,12 @@ The queue q1 is less than or equal to the queue q3.
 bool operator==(const queue <Type, Container>& left, const queue <Type, Container>& right,);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左侧*\
+*左*\
 一个 `queue` 类型的对象。
 
-*右侧*\
+*right*\
 一个 `queue` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -294,12 +294,12 @@ The queues q1 and q3 are equal.
 bool operator>(const queue <Type, Container>& left, const queue <Type, Container>& right,);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左侧*\
+*左*\
 一个 `queue` 类型的对象。
 
-*右侧*\
+*right*\
 一个 `queue` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -352,7 +352,7 @@ The queue q1 is not greater than the queue q2.
 The queue q1 is greater than the queue q3.
 ```
 
-## <a name="op_gt_eq"></a> 运算符&gt;=
+## <a name="op_gt_eq"></a>操作员&gt;=
 
 测试运算符左侧的 queue 对象是否大于或等于右侧的 queue 对象。
 
@@ -360,12 +360,12 @@ The queue q1 is greater than the queue q3.
 bool operator>=(const queue <Type, Container>& left, const queue <Type, Container>& right,);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左侧*\
+*左*\
 一个 `queue` 类型的对象。
 
-*右侧*\
+*right*\
 一个 `queue` 类型的对象。
 
 ### <a name="return-value"></a>返回值

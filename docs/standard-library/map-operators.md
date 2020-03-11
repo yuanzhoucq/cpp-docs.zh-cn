@@ -17,15 +17,15 @@ helpviewer_keywords:
 - std::operator&lt;= (map)
 - std::operator== (map)
 ms.openlocfilehash: deb442d0ba1fbd180fdb41b66de73df92bee7fc9
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68956960"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883951"
 ---
 # <a name="ltmapgt-operators"></a>&lt;map&gt; 运算符
 
-## <a name="op_neq"></a>operator!=
+## <a name="op_neq"></a>  operator!=
 
 测试运算符左侧和右侧的 map 对象是否不相等。
 
@@ -35,12 +35,12 @@ bool operator!=(
       const map <Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左中*\
+*左*\
 一个 `map` 类型的对象。
 
-*然后*\
+*right*\
 一个 `map` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -100,12 +100,12 @@ bool operator<(
       const map <Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左中*\
+*左*\
 一个 `map` 类型的对象。
 
-*然后*\
+*right*\
 一个 `map` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -165,12 +165,12 @@ bool operator<=(
       const map <Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左中*\
+*左*\
 一个 `map` 类型的对象。
 
-*然后*\
+*right*\
 一个 `map` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -233,12 +233,12 @@ bool operator==(
       const map <Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左中*\
+*左*\
 一个 `map` 类型的对象。
 
-*然后*\
+*right*\
 一个 `map` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -298,12 +298,12 @@ bool operator>(
       const map <Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左中*\
+*左*\
 一个 `map` 类型的对象。
 
-*然后*\
+*right*\
 一个 `map` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -362,12 +362,12 @@ bool operator>=(
       const map <Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左中*\
+*左*\
 一个 `map` 类型的对象。
 
-*然后*\
+*right*\
 一个 `map` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -420,7 +420,7 @@ Map m1 is greater than or equal to map m3.
 Map m1 is greater than or equal to map m4.
 ```
 
-## <a name="op_neq_multimap"></a>operator! = (多重映射)
+## <a name="op_neq_multimap"></a>operator！ = （多重映射）
 
 测试运算符左侧和右侧的 multimap 对象是否不相等。
 
@@ -430,12 +430,12 @@ bool operator!=(
       const multimap <Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左中*\
+*左*\
 一个 `multimap` 类型的对象。
 
-*然后*\
+*right*\
 一个 `multimap` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -495,12 +495,12 @@ bool operator<(
       const multimap <Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左中*\
+*左*\
 一个 `multimap` 类型的对象。
 
-*然后*\
+*right*\
 一个 `multimap` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -560,12 +560,12 @@ bool operator<=(
       const multimap <Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左中*\
+*左*\
 一个 `multimap` 类型的对象。
 
-*然后*\
+*right*\
 一个 `multimap` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -628,12 +628,12 @@ bool operator==(
       const multimap <Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左中*\
+*左*\
 一个 `multimap` 类型的对象。
 
-*然后*\
+*right*\
 一个 `multimap` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -693,12 +693,12 @@ bool operator>(
       const multimap <Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左中*\
+*左*\
 一个 `multimap` 类型的对象。
 
-*然后*\
+*right*\
 一个 `multimap` 类型的对象。
 
 ### <a name="return-value"></a>返回值
@@ -758,12 +758,12 @@ bool operator>=(
       const multimap <Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*左中*\
+*左*\
 一个 `multimap` 类型的对象。
 
-*然后*\
+*right*\
 一个 `multimap` 类型的对象。
 
 ### <a name="return-value"></a>返回值

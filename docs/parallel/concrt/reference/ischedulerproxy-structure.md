@@ -14,11 +14,11 @@ helpviewer_keywords:
 - ISchedulerProxy structure
 ms.assetid: af416973-7a1c-4c30-aa3b-4161c2aaea54
 ms.openlocfilehash: 776f70f9b93eb2e38151ceb5e84b4664420cf954
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77140336"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854119"
 ---
 # <a name="ischedulerproxy-structure"></a>ISchedulerProxy 结构
 
@@ -30,7 +30,7 @@ ms.locfileid: "77140336"
 struct ISchedulerProxy;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-methods"></a>公共方法
 
@@ -65,7 +65,7 @@ struct ISchedulerProxy;
 virtual void BindContext(_Inout_ IExecutionContext* pContext) = 0;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pContext*<br/>
 要与线程代理关联的执行上下文的接口。
@@ -84,7 +84,7 @@ virtual void BindContext(_Inout_ IExecutionContext* pContext) = 0;
 virtual IVirtualProcessorRoot* CreateOversubscriber(_Inout_ IExecutionResource* pExecutionResource) = 0;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pExecutionResource*<br/>
 一个 `IExecutionResource` 接口，该接口表示你要订阅的硬件线程。
@@ -107,7 +107,7 @@ virtual IVirtualProcessorRoot* CreateOversubscriber(_Inout_ IExecutionResource* 
 virtual IExecutionResource* RequestInitialVirtualProcessors(bool doSubscribeCurrentThread) = 0;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *doSubscribeCurrentThread*<br/>
 是否在资源分配过程中订阅当前线程并为其提供帐户。
@@ -172,7 +172,7 @@ virtual IExecutionResource* SubscribeCurrentThread() = 0;
 virtual void UnbindContext(_Inout_ IExecutionContext* pContext) = 0;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pContext*<br/>
 要与其线程代理解除关联的执行上下文。

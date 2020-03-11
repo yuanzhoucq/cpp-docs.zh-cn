@@ -131,11 +131,11 @@ helpviewer_keywords:
 - CRecordset [MFC], m_strSort
 ms.assetid: dd89a21d-ef39-4aab-891b-1e373d67c855
 ms.openlocfilehash: 1ebdb18254171d28b5d5e02367596b79142df284
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626191"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78871646"
 ---
 # <a name="crecordset-class"></a>CRecordset 类
 
@@ -147,17 +147,17 @@ ms.locfileid: "73626191"
 class CRecordset : public CObject
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|描述|
+|名称|说明|
 |----------|-----------------|
 |[CRecordset：： CRecordset](#crecordset)|构造 `CRecordset` 对象。 派生类必须提供调用此类的构造函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|描述|
+|名称|说明|
 |----------|-----------------|
 |[CRecordset：： AddNew](#addnew)|准备添加新记录。 调用 `Update` 以完成加法。|
 |[CRecordset：： CanAppend](#canappend)|如果可以通过 `AddNew` 成员函数将新记录添加到记录集中，则返回非零值。|
@@ -217,7 +217,7 @@ class CRecordset : public CObject
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|“属性”|描述|
+|名称|说明|
 |----------|-----------------|
 |[CRecordset：： m_hstmt](#m_hstmt)|包含记录集的 ODBC 语句句柄。 键入 `HSTMT`。|
 |[CRecordset：： m_nFields](#m_nfields)|包含记录集中的字段数据成员数。 键入 `UINT`。|
@@ -226,7 +226,7 @@ class CRecordset : public CObject
 |[CRecordset：： m_strFilter](#m_strfilter)|包含指定结构化查询语言（SQL） `WHERE` 子句的 `CString`。 用作筛选器，以仅选择符合特定条件的那些记录。|
 |[CRecordset：： m_strSort](#m_strsort)|包含指定 SQL `ORDER BY` 子句的 `CString`。 用于控制记录的排序方式。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a> 注释
 
 通常在两种形式下使用 "记录集" `CRecordset` 对象：动态集和快照。 动态集中与其他用户所做的数据更新保持同步。 快照是数据的静态视图。 每个窗体都表示一组在记录集打开时已修复的记录，但当滚动到动态集中的某条记录时，它将反映其他用户或应用程序中的其他记录集对记录所做的更改。
 
@@ -424,7 +424,7 @@ BOOL CanUpdate() const;
 virtual void CheckRowsetError(RETCODE nRetCode);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nRetCode*<br/>
 ODBC API 函数返回代码。 有关详细信息，请参阅“备注”。
@@ -435,7 +435,7 @@ ODBC API 函数返回代码。 有关详细信息，请参阅“备注”。
 
 `CheckRowsetError` 在游标导航操作中自动调用，如 `Open`、`Requery`或任何 `Move` 操作。 它传递了 ODBC API 函数 `SQLExtendedFetch`的返回值。 下表列出了*nRetCode*参数的可能值。
 
-|nRetCode|描述|
+|nRetCode|说明|
 |--------------|-----------------|
 |SQL_SUCCESS|函数已成功完成;无其他信息可用。|
 |SQL_SUCCESS_WITH_INFO|函数已成功完成，可能出现非致命错误。 可以通过调用 `SQLError`获取其他信息。|
@@ -472,7 +472,7 @@ ODBC HSTMT 以及为记录集分配的所有内存都将释放。 通常在调�
 CRecordset(CDatabase* pDatabase = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDatabase*<br/>
 包含指向 `CDatabase` 对象的指针或值为 NULL 的值。 如果不为 NULL，并且尚未调用 `CDatabase` 对象的 `Open` 成员函数以将其连接到数据源，则记录集会在其自己的 `Open` 调用期间尝试打开它。 如果传递 NULL，则使用在使用 ClassWizard 派生记录集类时指定的数据源信息构造并连接 `CDatabase` 对象。
@@ -524,7 +524,7 @@ virtual void Delete();
 virtual void DoBulkFieldExchange(CFieldExchange* pFX);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFX*<br/>
 指向[CFieldExchange](../../mfc/reference/cfieldexchange-class.md)对象的指针。 框架将已设置此对象，以指定字段交换操作的上下文。
@@ -552,7 +552,7 @@ virtual void DoBulkFieldExchange(CFieldExchange* pFX);
 virtual void DoFieldExchange(CFieldExchange* pFX);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFX*<br/>
 指向[CFieldExchange](../../mfc/reference/cfieldexchange-class.md)对象的指针。 框架将已设置此对象，以指定字段交换操作的上下文。
@@ -627,7 +627,7 @@ BOOL FlushResultSet();
 
 如果预定义的查询使用输出参数或输入/输出参数，则必须调用 `FlushResultSet`，直到返回 `FALSE` （值为0），才能获得这些参数值。
 
-`FlushResultSet` 调用 ODBC API 函数 `SQLMoreResults`。 如果 `SQLMoreResults` 返回 SQL_ERROR 或 SQL_INVALID_HANDLE，则 `FlushResultSet` 会引发异常。 有关 `SQLMoreResults`的详细信息，请参阅 Windows SDK。
+`FlushResultSet` 调用 ODBC API 函数 `SQLMoreResults`。 如果 `SQLMoreResults` 返回 SQL_ERROR 或 SQL_INVALID_HANDLE，则 `FlushResultSet` 将引发异常。 有关 `SQLMoreResults`的详细信息，请参阅 Windows SDK。
 
 如果要调用 `FlushResultSet`，则存储过程需要具有绑定字段。
 
@@ -647,7 +647,7 @@ BOOL FlushResultSet();
 void GetBookmark(CDBVariant& varBookmark);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *varBookmark*<br/>
 对[CDBVariant](../../mfc/reference/cdbvariant-class.md)对象的引用，该对象表示当前记录上的书签。
@@ -731,7 +731,7 @@ void GetFieldValue(
     CStringW& strValue);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszName*<br/>
 字段的名称。
@@ -739,7 +739,7 @@ void GetFieldValue(
 *varValu*e 对将存储字段值的[CDBVariant](../../mfc/reference/cdbvariant-class.md)对象的引用。
 
 *nFieldType*<br/>
-字段的 ODBC C 数据类型。 使用默认值 DEFAULT_FIELD_TYPE，将强制 `GetFieldValue` 根据下表强制从 SQL 数据类型确定 C 数据类型。 否则，可以直接指定数据类型或选择兼容的数据类型;例如，可以在 SQL_C_CHAR 中存储任何数据类型。
+字段的 ODBC C 数据类型。 使用 DEFAULT_FIELD_TYPE 的默认值，强制 `GetFieldValue` 根据下表从 SQL 数据类型确定 C 数据类型。 否则，可以直接指定数据类型或选择兼容的数据类型;例如，可以将任何数据类型存储到 SQL_C_CHAR 中。
 
 |C 数据类型|SQL 数据类型|
 |-----------------|-------------------|
@@ -772,7 +772,7 @@ void GetFieldValue(
 > [!NOTE]
 >  如果在不从 `CRecordset`派生的情况下声明记录集对象，则不会加载 ODBC 游标库。 游标库要求记录集至少有一个绑定列;但是，如果直接使用 `CRecordset`，则不会绑定任何列。 成员函数[CDatabase：： microsoft.office.interop.visio.documents.open](../../mfc/reference/cdatabase-class.md#openex)和[CDatabase：： Open](../../mfc/reference/cdatabase-class.md#open)控件是否将加载光标库。
 
-`GetFieldValue` 调用 ODBC API 函数 `SQLGetData`。 如果驱动程序输出字段值的实际长度值 SQL_NO_TOTAL，`GetFieldValue` 会引发异常。 有关 `SQLGetData`的详细信息，请参阅 Windows SDK。
+`GetFieldValue` 调用 ODBC API 函数 `SQLGetData`。 如果驱动程序输出字段值的实际长度 SQL_NO_TOTAL 值，`GetFieldValue` 会引发异常。 有关 `SQLGetData`的详细信息，请参阅 Windows SDK。
 
 ### <a name="example"></a>示例
 
@@ -815,7 +815,7 @@ void GetODBCFieldInfo(
     CODBCFieldInfo& fieldinfo);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszName*<br/>
 字段的名称。
@@ -903,7 +903,7 @@ DWORD GetRowsFetched() const;
 WORD GetRowStatus(WORD wRow) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *wRow*<br/>
 当前行集中某一行的位置（从1开始）。 此值的范围为1到行集的大小。
@@ -916,7 +916,7 @@ WORD GetRowStatus(WORD wRow) const;
 
 `GetRowStatus` 返回一个值，该值指示自上次从数据源检索到的行的状态变化，或未获取与*wRow*相对应的行。 下表列出可能的返回值。
 
-|状态值|描述|
+|状态值|说明|
 |------------------|-----------------|
 |SQL_ROW_SUCCESS|该行不变。|
 |SQL_ROW_UPDATED|已更新行。|
@@ -935,10 +935,10 @@ WORD GetRowStatus(WORD wRow) const;
 void GetStatus(CRecordsetStatus& rStatus) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rStatus*<br/>
-对 `CRecordsetStatus` 对象的引用。 有关详细信息，请参阅备注部分。
+对 `CRecordsetStatus` 对象的引用。 有关详细信息，请参阅“备注”部分。
 
 ### <a name="remarks"></a>备注
 
@@ -1040,7 +1040,7 @@ BOOL IsDeleted() const;
 
 如果滚动到某一记录并且 `IsDeleted` 返回 TRUE （非零），则必须滚动到其他记录，然后才能执行任何其他记录集操作。
 
-`IsDeleted` 的结果取决于许多因素，例如记录集类型、记录集是否可更新、打开记录集时是否指定了 "`CRecordset::skipDeletedRecords`" 选项、驱动程序是否打包删除的记录，以及是否有多个那些.
+`IsDeleted` 的结果取决于许多因素，例如记录集类型、是否可更新记录集、打开记录集时是否指定了 "`CRecordset::skipDeletedRecords`" 选项、驱动程序是否打包删除的记录，以及是否有多个用户。
 
 有关 `CRecordset::skipDeletedRecords` 和驱动程序打包的详细信息，请参阅[开放](#open)成员函数。
 
@@ -1077,7 +1077,7 @@ BOOL IsEOF() const;
 BOOL IsFieldDirty(void* pv);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *函数*<br/>
 指向要检查其状态的字段数据成员的指针，或为 NULL 以确定是否有任何字段处于脏状态。
@@ -1107,7 +1107,7 @@ BOOL IsFieldDirty(void* pv);
 BOOL IsFieldNull(void* pv);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *函数*<br/>
 指向要检查其状态的字段数据成员的指针，或为 NULL 以确定是否有任何字段为 Null。
@@ -1133,7 +1133,7 @@ BOOL IsFieldNull(void* pv);
 BOOL IsFieldNullable(void* pv);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *函数*<br/>
 指向要检查其状态的字段数据成员的指针，或为 NULL 以确定是否可以将任何字段设置为 Null 值。
@@ -1213,7 +1213,7 @@ Recordset 类的构造函数必须用正确的数字初始化 `m_nFields`。 如
 
 ### <a name="remarks"></a>备注
 
-如果记录集类有任何参数数据成员，则该类的构造函数必须用正确的数字初始化 `m_nParams`。 `m_nParams` 的值默认为0。 如果添加参数数据成员（必须手动执行此操作），则还必须在类构造函数中手动添加初始化，以反映参数的数目（至少必须与 `m_strFilter` 中的 "" 占位符的数目相同或 `m_strSort`string）。
+如果记录集类有任何参数数据成员，则该类的构造函数必须用正确的数字初始化 `m_nParams`。 `m_nParams` 的值默认为0。 如果添加参数数据成员（必须手动执行此操作），则还必须在类构造函数中手动添加初始化，以反映参数的数目（至少必须与 `m_strFilter` 中的 "" 占位符的数目或 `m_strSort` 字符串）相同。
 
 参数化记录集的查询时，框架使用此数字。
 
@@ -1284,9 +1284,9 @@ virtual void Move(
     WORD wFetchType = SQL_FETCH_RELATIVE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*nRows*<br/>
+nRows<br/>
 向前或向后移动的行数。 正值表示向前移动，直到记录集的末尾。 负值将向后移动。
 
 *wFetchType*<br/>
@@ -1316,7 +1316,7 @@ virtual void Move(
 |SQL_FETCH_BOOKMARK|从其书签值对应于*nRows*的行开始的行集。|[SetBookmark](#setbookmark)|
 
 > [!NOTE]
->  对于只进记录集，`Move` 仅对*wFetchType*的值有效。
+>  对于只进记录集，`Move` 仅对*wFetchType*的值 SQL_FETCH_NEXT 有效。
 
 > [!CAUTION]
 >  如果记录集没有记录，则调用 `Move` 会引发异常。 若要确定记录集是否有任何记录，请调用[IsBOF](#isbof)和[IsEOF](#iseof)。
@@ -1466,7 +1466,7 @@ void MovePrev();
 virtual void OnSetOptions(HSTMT hstmt);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hstmt*<br/>
 要设置其选项的 ODBC 语句的 HSTMT。
@@ -1487,7 +1487,7 @@ virtual void OnSetOptions(HSTMT hstmt);
 virtual void OnSetUpdateOptions(HSTMT hstmt);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hstmt*<br/>
 要设置其选项的 ODBC 语句的 HSTMT。
@@ -1511,7 +1511,7 @@ virtual BOOL Open(
     DWORD dwOptions = none);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nOpenType*<br/>
 接受默认值 AFX_DB_USE_DEFAULT_TYPE，或使用 `enum OpenType`中的以下值之一：
@@ -1589,7 +1589,7 @@ virtual BOOL Open(
 
 |LpszSQL 参数的值|选择的记录由|示例|
 |------------------------------------|----------------------------------------|-------------|
-|NULL|`GetDefaultSQL`返回的字符串。||
+|Null|`GetDefaultSQL`返回的字符串。||
 |SQL 表名称|`DoFieldExchange` 或 `DoBulkFieldExchange`中的表列表的所有列。|`"Customer"`|
 |预定义的查询（存储过程）名称|定义查询以返回的列。|`"{call OverDueAccts}"`|
 |从表列表**中** **选择**列列表|指定的表中指定的列。|`"SELECT CustId, CustName FROM`<br /><br /> `Customer"`|
@@ -1623,7 +1623,7 @@ void RefreshRowset(
     WORD wLockType = SQL_LOCK_NO_CHANGE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *wRow*<br/>
 当前行集中某一行的位置（从1开始）。 此值的范围为从零到行集的大小。
@@ -1639,7 +1639,7 @@ void RefreshRowset(
 
 `RefreshRowset` 调用 ODBC API 函数 `SQLSetPos`。 *WLockType*参数指定执行 `SQLSetPos` 后的行锁定状态。 下表描述了*wLockType*的可能值。
 
-|wLockType|描述|
+|wLockType|说明|
 |---------------|-----------------|
 |SQL_LOCK_NO_CHANGE （默认值）|驱动程序或数据源确保行处于调用 `RefreshRowset` 之前的锁定或解锁状态。|
 |SQL_LOCK_EXCLUSIVE|驱动程序或数据源只锁定行。 并非所有数据源都支持这种类型的锁。|
@@ -1686,9 +1686,9 @@ virtual BOOL Requery();
 void SetAbsolutePosition(long nRows);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*nRows*<br/>
+nRows<br/>
 记录集中当前记录的从1开始的序号位置。
 
 ### <a name="remarks"></a>备注
@@ -1703,7 +1703,7 @@ void SetAbsolutePosition(long nRows);
 还可以将负值传递到 `SetAbsolutePosition`。 在这种情况下，将从记录集的末尾计算记录集的位置。 例如，`SetAbsolutePosition( -1 )` 将当前记录指针移动到记录集中的最后一条记录。
 
 > [!NOTE]
->  绝对位置不应用作代理项记录号。 书签仍是保留并返回到给定位置的建议方法，因为在删除前面的记录后，记录的位置会发生变化。 此外，如果重新创建记录集，则不能确保给定的记录将具有相同的绝对位置，因为记录集中单个记录的顺序不能保证，除非是使用 Order BY 的 SQL 语句创建的。子句。
+>  绝对位置不应用作代理项记录号。 书签仍是保留并返回到给定位置的建议方法，因为在删除前面的记录后，记录的位置会发生变化。 此外，如果重新创建记录集，则不能确保给定的记录将具有相同的绝对位置，因为记录集中单个记录的顺序不能保证，除非使用**ORDER by**子句创建了 SQL 语句。
 
 有关记录集导航和书签的详细信息，请参阅文章[记录集：滚动（odbc）](../../data/odbc/recordset-scrolling-odbc.md)和[记录集：书签和绝对位置（ODBC）](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)。
 
@@ -1715,7 +1715,7 @@ void SetAbsolutePosition(long nRows);
 void SetBookmark(const CDBVariant& varBookmark);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *varBookmark*<br/>
 对包含特定记录书签值的[CDBVariant](../../mfc/reference/cdbvariant-class.md)对象的引用。
@@ -1742,7 +1742,7 @@ void SetBookmark(const CDBVariant& varBookmark);
 void SetFieldDirty(void* pv, BOOL bDirty = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *函数*<br/>
 包含记录集的字段数据成员的地址，或为 NULL。 如果为 NULL，则对记录集中的所有字段数据成员进行标记。 （C++ Null 与数据库术语中的 null 不相同，这意味着 "无值"。）
@@ -1757,7 +1757,7 @@ void SetFieldDirty(void* pv, BOOL bDirty = TRUE);
 > [!NOTE]
 >  此成员函数不适用于使用批量取行的记录集。 如果已实现批量行提取，则 `SetFieldDirty` 将导致断言失败。 有关批量行提取的详细信息，请参阅 [记录集：批量提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
 
-框架标记已更改的字段数据成员，以确保通过记录字段交换（RFX）机制将它们写入数据源上的记录。 更改字段的值通常会自动对字段进行更新，因此，你很少需要自行调用 `SetFieldDirty`，但有时你可能需要确保列将被显式更新或插入，而不考虑字段数据中的值职员.
+框架标记已更改的字段数据成员，以确保通过记录字段交换（RFX）机制将它们写入数据源上的记录。 更改字段的值通常会自动将字段设置为脏字段，因此您很少需要自行调用 `SetFieldDirty`，但有时您可能需要确保列将被显式更新或插入，而不考虑字段数据成员中的值。
 
 > [!CAUTION]
 >  只有在调用 "[编辑](#edit)" 或 " [AddNew](#addnew)" 后才调用此成员函数。
@@ -1782,7 +1782,7 @@ void SetFieldDirty(void* pv, BOOL bDirty = TRUE);
 void SetFieldNull(void* pv, BOOL bNull = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *函数*<br/>
 包含记录集的字段数据成员的地址，或为 NULL。 如果为 NULL，则对记录集中的所有字段数据成员进行标记。 （C++ Null 与数据库术语中的 null 不相同，这意味着 "无值"。）
@@ -1827,7 +1827,7 @@ void SetFieldNull(void* pv, BOOL bNull = TRUE);
 void SetLockingMode(UINT nMode);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nMode*<br/>
 包含 `enum LockMode`中的以下值之一：
@@ -1850,7 +1850,7 @@ void SetParamNull(
     BOOL bNull = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 参数的从零开始的索引。
@@ -1872,7 +1872,7 @@ void SetParamNull(
 void SetRowsetCursorPosition(WORD wRow, WORD wLockType = SQL_LOCK_NO_CHANGE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *wRow*<br/>
 当前行集中某一行的位置（从1开始）。 此值的范围为1到行集的大小。
@@ -1888,7 +1888,7 @@ void SetRowsetCursorPosition(WORD wRow, WORD wLockType = SQL_LOCK_NO_CHANGE);
 
 `SetRowsetCursorPosition` 调用 ODBC API 函数 `SQLSetPos`。 *WLockType*参数指定执行 `SQLSetPos` 后的行锁定状态。 下表描述了*wLockType*的可能值。
 
-|wLockType|描述|
+|wLockType|说明|
 |---------------|-----------------|
 |SQL_LOCK_NO_CHANGE （默认值）|驱动程序或数据源确保行处于调用 `SetRowsetCursorPosition` 之前的锁定或解锁状态。|
 |SQL_LOCK_EXCLUSIVE|驱动程序或数据源只锁定行。 并非所有数据源都支持这种类型的锁。|
@@ -1904,7 +1904,7 @@ void SetRowsetCursorPosition(WORD wRow, WORD wLockType = SQL_LOCK_NO_CHANGE);
 virtual void SetRowsetSize(DWORD dwNewRowsetSize);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwNewRowsetSize*<br/>
 给定提取过程中要检索的行数。
@@ -1919,7 +1919,7 @@ virtual void SetRowsetSize(DWORD dwNewRowsetSize);
 在调用之前调用 `SetRowsetSize` `Open` 最初设置记录集的行集大小。 实现批量行提取时默认行集大小为25。
 
 > [!NOTE]
->  调用 `SetRowsetSize`时请务必小心。 如果手动为数据分配存储（由 `Open`中 dwOptions 参数的 `CRecordset::userAllocMultiRowBuffers` 选项指定），则应检查是否需要在调用 `SetRowsetSize`之后但在执行任何游标之前重新分配这些存储缓冲区导航操作。
+>  调用 `SetRowsetSize`时请务必小心。 如果手动为数据分配存储（由 `Open`中 dwOptions 参数的 `CRecordset::userAllocMultiRowBuffers` 选项指定），则应检查在调用 `SetRowsetSize`之后但在执行任何游标导航操作之前是否需要重新分配这些存储缓冲区。
 
 若要获取行集大小的当前设置，请调用[GetRowsetSize](#getrowsetsize)。
 
@@ -1957,7 +1957,7 @@ virtual BOOL Update();
 
 请参阅[事务：在记录集中执行事务（ODBC）](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)一文。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [CObject 类](../../mfc/reference/cobject-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - IExecutionResource structure
 ms.assetid: 6b27042b-b98c-4f7f-b831-566950af84cd
 ms.openlocfilehash: 40799d1ed6e21e6932f1adfbad117c436918b792
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141274"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854121"
 ---
 # <a name="iexecutionresource-structure"></a>IExecutionResource 结构
 
@@ -28,7 +28,7 @@ ms.locfileid: "77141274"
 struct IExecutionResource;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-methods"></a>公共方法
 
@@ -117,7 +117,7 @@ virtual unsigned int GetNodeId() const = 0;
 virtual void Remove(_Inout_ IScheduler* pScheduler) = 0;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pScheduler*<br/>
 向计划程序发出请求以删除此执行资源的接口。

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::CACHE_SUBALLOC [C++]
 - std::SYNC_DEFAULT [C++]
 ms.openlocfilehash: 5355661e370daf8826541c036f7301e5c25788d7
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72690056"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875918"
 ---
 # <a name="ltallocatorsgt-macros"></a>&lt;allocators&gt; 宏
 
@@ -38,7 +38,7 @@ ms.locfileid: "72690056"
 
 ### <a name="remarks"></a>备注
 
-该宏将生成一个模板定义 `template <class Type> class name {.....}` 和一个特殊化 `template <> class name<void> {.....}`，这两者共同定义一个分配器类模板，该模板使用同步筛选器 `sync` 和 `cache` 类型的缓存。
+该宏将生成一个模板定义 `template <class Type> class name {.....}` 和一个特殊化 `template <> class name<void> {.....}`，这两者共同定义一个分配器类模板，该模板使用同步筛选器 `sync` 和 `cache`类型的缓存。
 
 对于可以编译重新绑定的编译器，其生成的模板定义如下所示：
 
@@ -110,6 +110,6 @@ public:
 
 如果编译器支持编译单线程和多线程应用程序，则对于单线程应用程序，宏生成 `stdext::allocators::sync_none`；在所有其他情况下生成 `stdext::allocators::sync_shared`。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [\<allocators>](../standard-library/allocators-header.md)
