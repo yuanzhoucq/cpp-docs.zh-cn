@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::slice [C++], stride
 ms.assetid: 00f0b03d-d657-4b81-ba53-5a9034bb2bf2
 ms.openlocfilehash: 830e345eb7522cef44dbf6e727a976fb79c1e081
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450347"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79094860"
 ---
 # <a name="slice-class"></a>slice 类
 
@@ -39,13 +39,13 @@ valarray 的实用程序类，用于定义父级 valarray 的一维子集。 如
 
 ### <a name="constructors"></a>构造函数
 
-|构造函数|描述|
+|构造函数|说明|
 |-|-|
 |[slice](#slice)|定义 `valarray` 的一个子集，该 valarray 包含一些等距分隔的元素，并且在指定的元素开始。|
 
 ### <a name="member-functions"></a>成员函数
 
-|成员函数|描述|
+|成员函数|说明|
 |-|-|
 |[size](#size)|查找 `valarray` 的切片中的元素数目。|
 |[start](#start)|查找 `valarray` 的切片的起始索引。|
@@ -53,7 +53,7 @@ valarray 的实用程序类，用于定义父级 valarray 的一维子集。 如
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<valarray>
+**标头：** \<valarray >
 
 **命名空间：** std
 
@@ -142,12 +142,12 @@ slice(
 *_Len*\
 子集中的元素数。
 
-*长足*\
+*步幅*\
 子集中元素间的距离。
 
 ### <a name="return-value"></a>返回值
 
-默认构造函数对于起始索引、总长度和 stride 都存储为零。 第二个构造函数存储 *_StartIndex*的起始索引、 *_Len*的总*长度和跨距*。
+默认构造函数对于起始索引、总长度和 stride 都存储为零。 第二个构造函数存储起始索引的 *_StartIndex* ， *_Len*的总*长度和跨距*。
 
 ### <a name="remarks"></a>备注
 
@@ -310,6 +310,6 @@ The slice of valarray va is vaResult = va[slice( 4, 5, 3)] =
 The stride of slice vaSlice is: 3.
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
