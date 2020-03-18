@@ -47,11 +47,11 @@ helpviewer_keywords:
 - CDocTemplate [MFC], SetServerInfo
 ms.assetid: 14b41a1f-bf9d-4eac-b6a8-4c54ffcc77f6
 ms.openlocfilehash: 3b2d84af9be8e5c606cde8794b51e12207dcdec9
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855433"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426071"
 ---
 # <a name="cdoctemplate-class"></a>CDocTemplate 类
 
@@ -63,7 +63,7 @@ ms.locfileid: "78855433"
 class CDocTemplate : public CCmdTarget
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="protected-constructors"></a>受保护构造函数
 
@@ -139,7 +139,7 @@ class CDocTemplate : public CCmdTarget
 virtual void AddDocument(CDocument* pDoc);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDoc*<br/>
 指向要添加的文档的指针。
@@ -160,7 +160,7 @@ CDocTemplate (
     CRuntimeClass* pViewClass);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIDResource*<br/>
 指定用于文档类型的资源的 ID。 这可能包括菜单、图标、快捷键对应表和字符串资源。
@@ -198,7 +198,7 @@ END
 virtual void CloseAllDocuments(BOOL bEndSession);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bEndSession*<br/>
 未使用。
@@ -231,7 +231,7 @@ virtual CFrameWnd* CreateNewFrame(
     CFrameWnd* pOther);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDoc*<br/>
 新框架窗口应引用的文档。 可以为 NULL。
@@ -260,7 +260,7 @@ CFrameWnd* CreateOleFrame(
     BOOL bCreateView);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pParentWnd*<br/>
 指向框架的父窗口的指针。
@@ -289,7 +289,7 @@ virtual BOOL GetDocString(
     enum DocStringIndex index) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rString*<br/>
 对在函数返回时将包含字符串的 `CString` 对象的引用。
@@ -351,7 +351,7 @@ virtual CDocument* GetNextDoc(POSITION& rPos) const = 0;
 
 指向与此模板关联的文档列表中的下一个文档的指针。
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *恢复*<br/>
 对[GetFirstDocPosition](#getfirstdocposition)或 `GetNextDoc`之前调用返回的位置值的引用。
@@ -375,7 +375,7 @@ virtual void InitialUpdateFrame(
     BOOL bMakeVisible = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFrame*<br/>
 需要初始更新的框架窗口。
@@ -414,7 +414,7 @@ virtual Confidence MatchDocType(
     CDocument*& rpDocMatch);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszPathName*<br/>
 要确定其类型的文件的路径名。
@@ -462,7 +462,7 @@ virtual CDocument* OpenDocumentFile(
     BOOL bAddToMRU) = 0;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszPathName*<br/>
 中一个指针，指向包含要打开的文档的文件的路径。
@@ -486,7 +486,7 @@ virtual CDocument* OpenDocumentFile(
 virtual void RemoveDocument(CDocument* pDoc);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDoc*<br/>
 指向要删除的文档的指针。
@@ -515,7 +515,7 @@ virtual BOOL SaveAllModified();
 void SetContainerInfo(UINT nIDOleInPlaceContainer);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIDOleInPlaceContainer*<br/>
 激活嵌入对象时使用的资源的 ID。
@@ -534,7 +534,7 @@ void SetContainerInfo(UINT nIDOleInPlaceContainer);
 virtual void SetDefaultTitle(CDocument* pDocument) = 0;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDocument*<br/>
 指向要设置其标题的文档的指针。
@@ -555,7 +555,7 @@ void SetServerInfo(
     CRuntimeClass* pOleViewClass = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIDOleEmbedding*<br/>
 在单独的窗口中打开嵌入对象时使用的资源的 ID。
@@ -585,7 +585,7 @@ CFrameWnd* CreatePreviewFrame(
     CDocument* pDoc);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pParentWnd*<br/>
 指向父窗口（通常由 Shell 提供）的指针。
@@ -610,7 +610,7 @@ void SetPreviewInfo(
     CRuntimeClass* pPreviewViewClass = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIDPreviewFrame*<br/>
 指定预览帧的资源 ID。

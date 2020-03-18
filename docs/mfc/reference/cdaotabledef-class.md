@@ -73,11 +73,11 @@ helpviewer_keywords:
 - CDaoTableDef [MFC], m_pDatabase
 ms.assetid: 7c5d2254-8475-43c4-8a6c-2d32ead194c9
 ms.openlocfilehash: 485fe3533916e5e59bc87084f58acfb37368ac32
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883859"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424511"
 ---
 # <a name="cdaotabledef-class"></a>CDaoTableDef 类
 
@@ -89,7 +89,7 @@ ms.locfileid: "78883859"
 class CDaoTableDef : public CObject
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -232,7 +232,7 @@ BOOL CanUpdate();
 CDaoTableDef(CDaoDatabase* pDatabase);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDatabase*<br/>
 指向[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)对象的指针。
@@ -269,7 +269,7 @@ virtual void Create(
     LPCTSTR lpszConnect = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszName*<br/>
 指向包含表名称的字符串的指针。
@@ -277,7 +277,7 @@ virtual void Create(
 *lAttributes*<br/>
 一个值，该值对应于 tabledef 对象所表示的表的特征。 您可以使用按位 "或" 组合以下任意常量：
 
-|常量|说明|
+|一直|说明|
 |--------------|-----------------|
 |`dbAttachExclusive`|对于使用 Microsoft Jet 数据库引擎的数据库，指示表是一个打开以供独占使用的附加表。|
 |`dbAttachSavePWD`|对于使用 Microsoft Jet 数据库引擎的数据库，指示附加表的用户 ID 和密码与连接信息一起保存。|
@@ -310,7 +310,7 @@ void CreateField(
 void CreateField(CDaoFieldInfo& fieldinfo);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszName*<br/>
 一个指针，指向用于指定此字段的名称的字符串表达式。
@@ -320,12 +320,12 @@ nType<br/>
 
 |类型|大小(字节)|说明|
 |----------|--------------------|-----------------|
-|`dbBoolean`|1 个字节|BOOL|
+|`dbBoolean`|1 字节|BOOL|
 |`dbByte`|BYTE|
 |`dbInteger`|2|int|
 |`dbLong`|4|long|
 |`dbCurrency`|8|货币（ [COleCurrency](../../mfc/reference/colecurrency-class.md)）|
-|`dbSingle`|4|float|
+|`dbSingle`|4|FLOAT|
 |`dbDouble`|8|double|
 |`dbDate`|8|日期/时间（ [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)）|
 |`dbText`|1 - 255|文本（ [CString](../../atl-mfc-shared/reference/cstringt-class.md)）|
@@ -338,7 +338,7 @@ nType<br/>
 *lAttributes*<br/>
 与字段的特性对应的值，可以使用按位 "或" 进行组合。
 
-|常量|说明|
+|一直|说明|
 |--------------|-----------------|
 |`dbFixedField`|字段大小是固定的（数值字段的默认值）。|
 |`dbVariableField`|字段大小是可变的（仅限文本字段）。|
@@ -377,7 +377,7 @@ nType<br/>
 void CreateIndex(CDaoIndexInfo& indexinfo);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *indexinfo*<br/>
 对[CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md)结构的引用。
@@ -407,7 +407,7 @@ void DeleteField(LPCTSTR lpszName);
 void DeleteField(int nIndex);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszName*<br/>
 一个指针，指向作为现有字段的名称的字符串表达式。
@@ -430,7 +430,7 @@ void DeleteIndex(LPCTSTR lpszName);
 void DeleteIndex(int nIndex);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszName*<br/>
 一个指针，指向作为现有索引的名称的字符串表达式。
@@ -458,7 +458,7 @@ long GetAttributes();
 
 ### <a name="remarks"></a>备注
 
-|常量|说明|
+|一直|说明|
 |--------------|-----------------|
 |`dbAttachExclusive`|对于使用 Microsoft Jet 数据库引擎的数据库，指示表是一个打开以供独占使用的附加表。|
 |`dbAttachSavePWD`|对于使用 Microsoft Jet 数据库引擎的数据库，指示附加表的用户 ID 和密码与连接信息一起保存。|
@@ -569,7 +569,7 @@ void GetFieldInfo(
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 表的从零开始的字段集合中字段对象的索引，用于按索引查找。
@@ -631,7 +631,7 @@ void GetIndexInfo(
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 表的从零开始的索引集合中索引对象的数值索引，用于按其在集合中的位置进行查找。
@@ -785,7 +785,7 @@ BOOL IsOpen() const;
 virtual void Open(LPCTSTR lpszName);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszName*<br/>
 指向指定表名称的字符串的指针。
@@ -816,12 +816,12 @@ void RefreshLink();
 void SetAttributes(long lAttributes);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lAttributes*<br/>
 `CDaoTableDef` 对象所表示的表的特征，可以是以下常量的总和：
 
-|常量|说明|
+|一直|说明|
 |--------------|-----------------|
 |`dbAttachExclusive`|对于使用 Microsoft Jet 数据库引擎的数据库，指示表是一个打开以供独占使用的附加表。|
 |`dbAttachSavePWD`|对于使用 Microsoft Jet 数据库引擎的数据库，指示附加表的用户 ID 和密码与连接信息一起保存。|
@@ -846,7 +846,7 @@ void SetAttributes(long lAttributes);
 void SetConnect(LPCTSTR lpszConnect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszConnect*<br/>
 指向字符串表达式的指针，该字符串表达式指定要传递给 ODBC 或可安装的 ISAM 驱动程序的其他参数。
@@ -860,7 +860,7 @@ void SetConnect(LPCTSTR lpszConnect);
 
 下表显示了可能的数据库类型及其相应的数据库说明符和路径：
 
-|数据库类型|说明符|Path|
+|数据库类型|说明符|路径|
 |-------------------|---------------|----------|
 |使用 Jet 数据库引擎的数据库|"[`database`];"|"`drive`：\\\ *路径*\\\ *文件名*.MDB|
 |dBASE III|"dBASE III;"|"`drive`：\\\ *路径*"|
@@ -898,7 +898,7 @@ void SetConnect(LPCTSTR lpszConnect);
 void SetName(LPCTSTR lpszName);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszName*<br/>
 一个指针，指向指定表名称的字符串表达式。
@@ -917,7 +917,7 @@ void SetName(LPCTSTR lpszName);
 void SetSourceTableName(LPCTSTR lpszSrcTableName);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszSrcTableName*<br/>
 一个指针，它指向指定外部数据库中的表名称的字符串表达式。 对于基表，此设置为空字符串（""）。
@@ -936,7 +936,7 @@ void SetSourceTableName(LPCTSTR lpszSrcTableName);
 void SetValidationRule(LPCTSTR lpszValidationRule);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszValidationRule*<br/>
 一个指针，指向用于验证操作的字符串表达式。
@@ -961,7 +961,7 @@ void SetValidationRule(LPCTSTR lpszValidationRule);
 void SetValidationText(LPCTSTR lpszValidationText);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszValidationText*<br/>
 一个指向字符串表达式的指针，该字符串表达式指定在输入的数据无效时所显示的文本。

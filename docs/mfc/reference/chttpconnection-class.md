@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CHttpConnection [MFC], OpenRequest
 ms.assetid: a402b662-c445-4988-800d-c8278551babe
 ms.openlocfilehash: 1941af1e16a897235dd90db509d6ed29c2d9a875
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890769"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425891"
 ---
 # <a name="chttpconnection-class"></a>CHttpConnection 类
 
@@ -27,7 +27,7 @@ ms.locfileid: "78890769"
 class CHttpConnection : public CInternetConnection
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -92,7 +92,7 @@ CHttpConnection(
     DWORD_PTR dwContext = 1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pSession*<br/>
 指向[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象的指针。
@@ -119,7 +119,7 @@ Internet 连接的句柄。
 |--------------------|--------------------|---------------------------------|---------------------------------|
 |NULL 或 ""|NULL 或 ""|匿名|用户的电子邮件名称|
 |非空字符串|NULL 或 ""|*pstrUserName*|" "|
-|NULL |非空字符串|ERROR|ERROR|
+|Null |非空字符串|ERROR|ERROR|
 |非空字符串|非空字符串|*pstrUserName*|*pstrPassword*|
 
 dwFlags<br/>
@@ -153,7 +153,7 @@ CHttpFile* OpenRequest(
     DWORD dwFlags = INTERNET_FLAG_EXISTING_CONNECT);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pstrVerb*<br/>
 指向字符串的指针，该字符串包含要在请求中使用的谓词。 如果为 NULL，则使用 "GET"。

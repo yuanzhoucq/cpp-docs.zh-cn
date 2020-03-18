@@ -31,11 +31,11 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (valarray)
 - std::operator&lt;= (valarray), std::operator== (valarray)
 ms.openlocfilehash: 231bad65e2af1ee2ab800890c83cc50e584a8c6a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78875603"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427583"
 ---
 # <a name="ltvalarraygt-operators"></a>&lt;valarray&gt; 运算符
 
@@ -63,7 +63,7 @@ operator!=(
     const valarray<Type>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 两个 valarray 中的第一个，将对此 valarray 的元素进行不相等测试。
@@ -160,7 +160,7 @@ operator%(
     const valarray<Type>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 一个值或 valarray，它充当另一个值或 valarray 的被除数。
@@ -245,7 +245,7 @@ operator&(
     const valarray<Type>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 两个 valarray 中的第一个，它的每个元素将与按位 `AND` 合并；或一个元素类型的指定值，此元素类型将与 valarray 的每个元素按位合并。
@@ -336,7 +336,7 @@ operator&&(
     const valarray<Type>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 两个 valarray 中的第一个，它的每个元素将与逻辑 `AND` 合并；或一个元素类型的指定值，此元素类型将与 valarray 的每个元素合并。
@@ -425,7 +425,7 @@ operator>(
     const valarray<Type>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 两个 valarray 中的第一个，它的元素将进行比较；或一个指定值，此值将与 valarray 的每个元素进行比较。
@@ -518,7 +518,7 @@ operator>=(
     const valarray<Type>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 两个 valarray 中的第一个，它的元素将进行比较；或一个指定值，此值将与 valarray 的每个元素进行比较。
@@ -611,7 +611,7 @@ operator>>(
     const valarray<Type>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 要移动的值，或要移动其元素的 valarray。
@@ -700,7 +700,7 @@ operator<(
     const valarray<Type>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 两个 valarray 中的第一个，它的元素将进行比较；或一个指定值，此值将与 valarray 的每个元素进行比较。
@@ -793,7 +793,7 @@ operator<=(
     const valarray<Type>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 两个 valarray 中的第一个，它的元素将进行比较；或一个指定值，此值将与 valarray 的每个元素进行比较。
@@ -886,7 +886,7 @@ operator<<(
     const valarray<Type>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 要移动的值，或要移动其元素的 valarray。
@@ -975,7 +975,7 @@ operator*(
     const valarray<Type>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 两个 valarray 中的第一个，它的元素将进行乘法运算；或一个指定值，此值将与 valarray 的每个元素相乘。
@@ -1060,7 +1060,7 @@ operator+(
     const valarray<Type>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 两个 valarray 中的第一个，它的元素将进行加法运算；或一个指定值，此值将与 valarray 的每个元素相加。
@@ -1145,7 +1145,7 @@ operator-(
     const valarray<Type>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 一个值或 valarray，它充当另一个值或 valarray 的被减数，并得出差值。
@@ -1236,7 +1236,7 @@ operator/(
     const valarray<Type>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 一个值或 valarray，它充当另一个值或 valarray 的被除数，并得出商。
@@ -1327,7 +1327,7 @@ operator==(
     const valarray<Type>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 两个 valarray 中的第一个，将对此 valarray 的元素进行相等性测试。
@@ -1420,7 +1420,7 @@ operator^(
     const valarray<Type>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 两个 valarray 中的第一个，它的每个元素将与按位 **XOR** 合并；或一个元素类型的指定值，此元素类型将与 valarray 的每个元素按位合并。
@@ -1515,7 +1515,7 @@ operator|(
     const valarray<Type>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 两个 valarray 中的第一个，它的每个元素将与按位 `OR` 合并；或一个元素类型的指定值，此元素类型将与 valarray 的每个元素按位合并。
@@ -1610,7 +1610,7 @@ operator||(
     const valarray<Type>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 两个 valarray 中的第一个，它的每个元素将与逻辑 `OR` 合并；或一个元素类型的指定值，此元素类型将与 valarray 的每个元素合并。

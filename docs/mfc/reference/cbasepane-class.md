@@ -167,11 +167,11 @@ helpviewer_keywords:
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
 ms.openlocfilehash: 59291516c14ea6ff8b1d2fe515d121dd6f910cba
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866672"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426047"
 ---
 # <a name="cbasepane-class"></a>CBasePane 类
 
@@ -183,7 +183,7 @@ MFC 中所有窗格的基类。
 class CBasePane : public CWnd
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -368,7 +368,7 @@ class CBasePane : public CWnd
 virtual void AccNotifyObjectFocusEvent(int);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *int*<br/>
 中不使用。
@@ -381,7 +381,7 @@ virtual void AccNotifyObjectFocusEvent(int);
 void AddPane(CBasePane* pBar);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pBar*<br/>
 中指向要添加的窗格的指针。
@@ -400,7 +400,7 @@ void AddPane(CBasePane* pBar);
 virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hdwp*<br/>
 弄包含多个窗口位置的结构的句柄。
@@ -433,7 +433,7 @@ virtual CSize CalcFixedLayout(
     BOOL bHorz);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bStretch*<br/>
 中指示是否应将栏拉伸到帧的大小。 如果栏不是停靠栏（不能用于停靠）， *bStretch*参数为非零值，当停靠或浮动（可用于停靠）时，此参数为0。
@@ -457,7 +457,7 @@ virtual CSize CalcFixedLayout(
 virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pBar*<br/>
 中指向要停靠的窗格的指针。
@@ -538,7 +538,7 @@ virtual BOOL CanBeClosed() const;
 virtual BOOL CanBeDocked(CBasePane* pDockBar) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDockBar*<br/>
 中指向另一个窗格的指针。
@@ -636,7 +636,7 @@ virtual BOOL CanFocus() const;
 virtual void CopyState(CBasePane* pOrgBar);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pOrgBar*<br/>
 中指向另一个窗格的指针。
@@ -653,7 +653,7 @@ virtual void CopyState(CBasePane* pOrgBar);
 virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rectInitial*<br/>
 中指定袖珍框架窗口的初始坐标。
@@ -685,7 +685,7 @@ virtual BOOL CreateEx(
     CCreateContext* pContext=NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwStyleEx*<br/>
 中扩展样式（有关详细信息，请参阅[CWnd：： CreateEx](../../mfc/reference/cwnd-class.md#createex) ）。
@@ -726,7 +726,7 @@ virtual BOOL CreateEx(
 
 库为窗格添加了几个新样式。 下表介绍了新样式：
 
-|样式|说明|
+|Style|说明|
 |-----------|-----------------|
 |AFX_CBRS_FLOAT|窗格可以浮动。|
 |AFX_CBRS_AUTOHIDE|窗格支持自动隐藏模式|
@@ -749,7 +749,7 @@ virtual BOOL DockPane(
     AFX_DOCK_METHOD dockMethod);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDockBar*<br/>
 中指向另一个窗格的指针。
@@ -778,7 +778,7 @@ virtual BOOL DockPane(
 void DockPaneUsingRTTI(BOOL bUseDockSite);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bUseDockSite*<br/>
 中如果为 TRUE，则停靠到停靠站点。 如果为 FALSE，则停靠到父框架。
@@ -797,7 +797,7 @@ virtual BOOL DockToFrameWindow(
     BOOL bOuterEdge = FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwAlignment*<br/>
 中要将窗格停靠到的父框架侧。
@@ -855,7 +855,7 @@ virtual BOOL DoesAllowDynInsertBefore() const;
 virtual void DoPaint(CDC* pDC);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 中指向设备上下文的指针。
@@ -872,7 +872,7 @@ virtual void DoPaint(CDC* pDC);
 virtual void EnableDocking(DWORD dwAlignment);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwAlignment*<br/>
 中指定要启用的停靠对齐方式。
@@ -893,7 +893,7 @@ virtual void EnableDocking(DWORD dwAlignment);
 virtual void EnableGripper(BOOL bEnable);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bEnable*<br/>
 中若要启用控制手柄，则为 TRUE;若要禁用它，则为 FALSE。
@@ -913,7 +913,7 @@ virtual BOOL FloatPane(
     bool bShow=true);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rectFloat*<br/>
 中指定浮动窗格的显示位置的屏幕坐标。
@@ -943,7 +943,7 @@ virtual HRESULT get_accHelpTopic(
     long* pidTopic);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pszHelpFile*<br/>
 中用于接收与指定对象关联的**WinHelp**文件的完整路径的 BSTR 的地址（如果有）。
@@ -970,7 +970,7 @@ virtual HRESULT get_accHelpTopic(
 virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pvarChildren*<br/>
 中接收标识选定子项的信息。
@@ -1011,7 +1011,7 @@ AFX_CBRS_ 标志的按位 "或" 组合。
 
 返回值是以下可能值的组合。
 
-|样式|说明|
+|Style|说明|
 |-----------|-----------------|
 |AFX_CBRS_FLOAT|使控件条浮动。|
 |AFX_CBRS_AUTOHIDE|启用自动隐藏模式。|
@@ -1030,7 +1030,7 @@ virtual DWORD GetCurrentAlignment() const;
 
 控件条的当前对齐方式。 下表显示了可能的值：
 
-|值|对齐|
+|值|Alignment|
 |-----------|---------------|
 |CBRS_ALIGN_LEFT|左对齐。|
 |CBRS_ALIGN_RIGHT|右对齐。|
@@ -1085,7 +1085,7 @@ virtual DWORD GetEnabledAlignment() const;
 
 CBRS_ALIGN_ 样式的组合。 下表显示了可能的样式：
 
-|Flag|启用对齐|
+|标志|启用对齐|
 |----------|-----------------------|
 |CBRS_ALIGN_LEFT|左中.|
 |CBRS_ALIGN_RIGHT|然后.|
@@ -1119,7 +1119,7 @@ virtual DWORD GetMFCStyle() const;
 virtual HICON GetPaneIcon(BOOL bBigIcon);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bBigIcon*<br/>
 中如果为 TRUE，则指定32像素 x 32 像素图标;如果为 FALSE，则指定 16 x 16 像素图标。
@@ -1180,7 +1180,7 @@ virtual CDockSite* GetParentDockSite() const;
 virtual CPaneFrameWnd* GetParentMiniFrame(BOOL bNoAssert=FALSE) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bNoAssert*<br/>
 中如果为 TRUE，则此方法不检查无效指针。 如果在应用程序退出时调用此方法，请将此参数设置为 TRUE。
@@ -1215,7 +1215,7 @@ CBaseTabbedPane* GetParentTabbedPane() const;
 CMFCBaseTabCtrl* GetParentTabWnd(HWND& hWndTab) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hWndTab*<br/>
 弄如果返回值不为 NULL，则此参数包含父选项卡式窗口的句柄。
@@ -1267,7 +1267,7 @@ BOOL InsertPane(
     BOOL bAfter = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pControlBar*<br/>
 中指向要插入的窗格的指针。
@@ -1425,7 +1425,7 @@ BOOL IsPointNearDockSite(
     BOOL& bOuterEdge) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *情况*<br/>
 中指定的点。
@@ -1519,7 +1519,7 @@ virtual BOOL LoadState(
     UINT uiID=(UINT)-1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszProfileName*<br/>
 中配置文件名称。
@@ -1549,7 +1549,7 @@ virtual HDWP MoveWindow(
     HDWP hdwp = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rect*<br/>
 中指定窗格的新位置和大小的矩形。
@@ -1576,7 +1576,7 @@ virtual HDWP MoveWindow(
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pWndOldParent*<br/>
 中指向上一个父项的指针。
@@ -1597,7 +1597,7 @@ virtual void OnBeforeChangeParent(
     BOOL bDelay=FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pWndNewParent*<br/>
 中指向新的父窗口的指针。
@@ -1631,7 +1631,7 @@ virtual void OnDrawCaption();
 virtual void OnMovePaneDivider(CPaneDivider* /* unused */);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *用*<br/>
 中不使用。
@@ -1646,7 +1646,7 @@ virtual void OnPaneContextMenu(
     CPoint point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pParentFrame*<br/>
 中指向父帧的指针。
@@ -1668,7 +1668,7 @@ virtual void OnPaneContextMenu(
 virtual void OnRemoveFromMiniFrame(CPaneFrameWnd* pMiniFrame);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pMiniFrame*<br/>
 中一个指针，指向要从中移除窗格的微型框架窗口。
@@ -1687,7 +1687,7 @@ virtual void OnRemoveFromMiniFrame(CPaneFrameWnd* pMiniFrame);
 virtual BOOL OnSetAccData(long lVal);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lVal*<br/>
 中不使用。
@@ -1710,7 +1710,7 @@ CBasePane* PaneFromPoint(
     CRuntimeClass* pRTCBarType = NULL) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *情况*<br/>
 中指定要检查的以屏幕坐标表示的点。
@@ -1749,7 +1749,7 @@ void RemovePaneFromDockManager(
     CBasePane* pBarReplacement = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pBar*<br/>
 中指向要删除的窗格的指针。
@@ -1777,7 +1777,7 @@ virtual BOOL SaveState(
     UINT uiID=(UINT)-1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszProfileName*<br/>
 中配置文件名称。
@@ -1804,7 +1804,7 @@ virtual BOOL SaveState(
 CFont* SelectDefaultFont(CDC* pDC);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 中设备上下文。
@@ -1821,12 +1821,12 @@ CFont* SelectDefaultFont(CDC* pDC);
 virtual void SetControlBarStyle(DWORD dwNewStyle);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwNewStyle*<br/>
 中以下可能值的按位 "或" 组合。
 
-|样式|说明|
+|Style|说明|
 |-----------|-----------------|
 |AFX_CBRS_FLOAT|使控件条浮动。|
 |AFX_CBRS_AUTOHIDE|启用自动隐藏模式。|
@@ -1841,7 +1841,7 @@ virtual void SetControlBarStyle(DWORD dwNewStyle);
 void SetDockingMode(AFX_DOCK_TYPE dockModeNew);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dockModeNew*<br/>
 中指定窗格的新停靠模式。
@@ -1862,7 +1862,7 @@ void SetDockingMode(AFX_DOCK_TYPE dockModeNew);
 virtual void SetPaneAlignment(DWORD dwAlignment);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwAlignment*<br/>
 中指定新的对齐方式。
@@ -1873,7 +1873,7 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
 
 下表显示了*dwAlignment*的可能值：
 
-|值|对齐|
+|值|Alignment|
 |-----------|---------------|
 |CBRS_ALIGN_LEFT|左对齐。|
 |CBRS_ALIGN_RIGHT|右对齐。|
@@ -1888,7 +1888,7 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
 virtual void SetPaneStyle(DWORD dwNewStyle);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwNewStyle*<br/>
 中指定要设置的新样式。
@@ -1914,7 +1914,7 @@ virtual HDWP SetWindowPos(
     HDWP hdwp = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pWndInsertAfter*<br/>
 中标识在 Z 顺序中此 `CWnd` 对象之前的 `CWnd` 对象。 有关详细信息，请参阅[CWnd：： SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos)。
@@ -1956,7 +1956,7 @@ virtual void ShowPane(
     BOOL bActivate);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bShow*<br/>
 中指定是否显示（TRUE）或隐藏（FALSE）窗格。
@@ -1983,7 +1983,7 @@ virtual CSize StretchPane(
     BOOL bVert);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nLength*<br/>
 中窗格伸展的长度。
@@ -2003,7 +2003,7 @@ virtual CSize StretchPane(
 virtual void UndockPane(BOOL bDelay=FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bDelay*<br/>
 如果为 TRUE，则不会立即重新计算停靠布局。

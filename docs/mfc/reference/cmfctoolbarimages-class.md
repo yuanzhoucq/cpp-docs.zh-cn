@@ -141,11 +141,11 @@ helpviewer_keywords:
 - CMFCToolBarImages [MFC], m_bDisableTrueColorAlpha
 ms.assetid: d4e50518-9ffc-406f-9996-f79e5cd38155
 ms.openlocfilehash: 210432b8ec193efccc0bf2338089dbccca310726
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866669"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425747"
 ---
 # <a name="cmfctoolbarimages-class"></a>CMFCToolBarImages 类
 
@@ -157,7 +157,7 @@ ms.locfileid: "78866669"
 class CMFCToolBarImages : public CObject
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -275,7 +275,7 @@ void AdaptColors(
     COLORREF clrTone);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中*clrBase*<br/>
 中*clrTone*<br/>
@@ -292,7 +292,7 @@ int AddIcon(
     BOOL bAlphaBlend=FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hIcon*<br/>
 中要添加的图标的句柄。
@@ -318,7 +318,7 @@ int AddImage(
     int nIndex);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hbmp*<br/>
 中要添加的位图的句柄。
@@ -370,7 +370,7 @@ CMFCToolBarImages();
 BOOL CopyImageToClipboard(int iImage);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中*iImage*<br/>
 
@@ -384,7 +384,7 @@ BOOL CopyImageToClipboard(int iImage);
 BOOL CopyTo(CMFCToolBarImages& imageList);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中*imageList*<br/>
 
@@ -400,7 +400,7 @@ BOOL CopyTo(CMFCToolBarImages& imageList);
 BOOL CreateFromImageList(const CImageList& imageList);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *imageList*<br/>
 中要用作工具栏图像的源的图像列表。
@@ -421,7 +421,7 @@ static HRGN __stdcall CreateRegionFromImage(
     COLORREF clrTransparent);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中*bmp*<br/>
 中*clrTransparent*<br/>
@@ -438,7 +438,7 @@ static HRGN __stdcall CreateRegionFromImage(
 BOOL DeleteImage(int iImage);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iImage*<br/>
 中指定要删除的图像的从零开始的索引。
@@ -465,7 +465,7 @@ BOOL Draw(
     BYTE alphaSrc=255);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 中指向设备上下文的指针。
@@ -514,7 +514,7 @@ BOOL DrawEx(
     BYTE alphaSrc = 255);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中*pDC*<br/>
 中*rect*<br/>
@@ -534,7 +534,7 @@ BOOL DrawEx(
 static void __stdcall EnableRTL(BOOL bIsRTL = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中*bIsRTL*<br/>
 
@@ -548,7 +548,7 @@ static void __stdcall EnableRTL(BOOL bIsRTL = TRUE);
 void EndDrawImage(CAfxDrawState& ds);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ds*<br/>
 中对传递到 `PrepareDrawImage` 方法的 `CAfxDrawState` 对象的引用。
@@ -561,7 +561,7 @@ void EndDrawImage(CAfxDrawState& ds);
 HICON ExtractIcon(int nIndex);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 中图像列表中从零开始的索引，将在该列表中将图像提取为图标。
@@ -580,7 +580,7 @@ static void FillDitheredRect(
     const CRect& rect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 中指向设备上下文的指针。
@@ -648,7 +648,7 @@ static BYTE __stdcall GetFadedImageAlpha();
 SIZE GetImageSize(BOOL bDest=FALSE) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bDest*<br/>
 中若要检索目标大小，则为 TRUE;若要检索源映像大小，则为 FALSE。
@@ -725,7 +725,7 @@ BOOL GetMapTo3DColors() const;
 HBITMAP GetMask(int iImage);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中*iImage*<br/>
 
@@ -741,7 +741,7 @@ HBITMAP GetMask(int iImage);
 int GetResourceOffset(UINT uiResId) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *uiResId*<br/>
 中图像资源 ID。
@@ -768,7 +768,7 @@ COLORREF GetTransparentColor() const;
 BOOL GrayImages(int nGrayImageLuminancePercentage);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nGrayImageLuminancePercentage*<br/>
 中亮度百分比。
@@ -885,7 +885,7 @@ BOOL Load(
     DWORD nMaxFileSize = 819200);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *uiResID*<br/>
 中位图资源的 ID。
@@ -919,7 +919,7 @@ BOOL LoadStr(
     BOOL bAdd = FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中*lpszResourceName*<br/>
 中*hinstRes*<br/>
@@ -937,7 +937,7 @@ static COLORREF __stdcall MapFromSysColor(
     BOOL bUseRGBQUAD = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中*颜色*<br/>
 中*bUseRGBQUAD*<br/>
@@ -955,7 +955,7 @@ BOOL MapTo3dColors(
     COLORREF clrDest = (COLORREF)-1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中*bUseRGBQUAD*<br/>
 中*clrSrc*<br/>
@@ -973,7 +973,7 @@ static COLORREF __stdcall MapToSysColor(
     BOOL bUseRGBQUAD = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中*颜色*<br/>
 中*bUseRGBQUAD*<br/>
@@ -988,7 +988,7 @@ static COLORREF __stdcall MapToSysColor(
 static COLORREF __stdcall MapToSysColorAlpha(COLORREF color);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中*颜色*<br/>
 
@@ -1022,7 +1022,7 @@ static BOOL MirrorBitmap(
     int cxImage);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hbmp*<br/>
 [in，out]要镜像的位图的句柄。
@@ -1046,7 +1046,7 @@ static BOOL __stdcall MirrorBitmapVert(
     int cyImage);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中*hbmp*<br/>
 中*cyImage*<br/>
@@ -1083,7 +1083,7 @@ static BOOL __stdcall PreMultiplyAlpha(
 BOOL PreMultiplyAlpha(HBITMAP hbmp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中*hbmp*<br/>
 中*bAutoCheckPremlt*<br/>
@@ -1118,7 +1118,7 @@ BOOL PrepareDrawImage(
     BOOL bFadeInactive=FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ds*<br/>
 中对 `CAfxDrawState` 结构的引用，该结构存储图像呈现阶段之间分配的资源。
@@ -1145,7 +1145,7 @@ BOOL PrepareDrawImage(
 BOOL Save(LPCTSTR lpszBmpFileName=NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszBmpFileName*<br/>
 磁盘文件的路径。
@@ -1164,7 +1164,7 @@ BOOL Save(LPCTSTR lpszBmpFileName=NULL);
 void SetAlwaysLight(BOOL bAlwaysLight = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中*bAlwaysLight*<br/>
 
@@ -1178,7 +1178,7 @@ void SetAlwaysLight(BOOL bAlwaysLight = TRUE);
 static void SetDisabledImageAlpha(BYTE nValue);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *N 值*<br/>
 中Alpha 通道的新值。
@@ -1193,7 +1193,7 @@ static void SetDisabledImageAlpha(BYTE nValue);
 static void __stdcall SetFadedImageAlpha(BYTE nValue);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中*n 值*<br/>
 
@@ -1209,7 +1209,7 @@ void SetImageSize(
     BOOL bUpdateCount=FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *sizeImage*<br/>
 中工具栏图像的新大小。
@@ -1224,7 +1224,7 @@ void SetImageSize(
 void SetLightPercentage(int nValue);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中*n 值*<br/>
 
@@ -1236,7 +1236,7 @@ void SetLightPercentage(int nValue);
 void SetMapTo3DColors(BOOL bMapTo3DColors);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中*bMapTo3DColors*<br/>
 
@@ -1248,7 +1248,7 @@ void SetMapTo3DColors(BOOL bMapTo3DColors);
 void SetPreMultiplyAutoCheck(BOOL bAuto = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中*bAuto*<br/>
 
@@ -1270,7 +1270,7 @@ void SetSingleImage();
 COLORREF SetTransparentColor(COLORREF clrTransparent);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *clrTransparent*<br/>
 中一个 RGB 值。
@@ -1293,7 +1293,7 @@ BOOL UpdateImage(
     HBITMAP hbmp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iImage*<br/>
 中要更新的图像的从零开始的索引。
@@ -1313,7 +1313,7 @@ BOOL UpdateImage(
 BOOL ConvertTo32Bits(COLORREF clrTransparent = (COLORREF)-1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *clrTransparent*<br/>
 指定带有下划线的位图的透明颜色。
@@ -1370,7 +1370,7 @@ BOOL IsScaled () const;
 BOOL SmoothResize(double dblImageScale);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dblImageScale*<br/>
 缩放比例。

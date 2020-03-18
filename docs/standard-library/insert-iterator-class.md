@@ -11,11 +11,11 @@ helpviewer_keywords:
 - std::insert_iterator [C++], reference
 ms.assetid: d5d86405-872e-4e3b-9e68-c69a2b7e8221
 ms.openlocfilehash: 15041e21b53c29aedda831fd73b37a65e57a3680
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78874031"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424661"
 ---
 # <a name="insert_iterator-class"></a>insert_iterator 类
 
@@ -28,7 +28,7 @@ template <class Container>
 class insert_iterator;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *容器*\
 要通过 `insert_iterator` 将元素插入其中的容器类型。
@@ -52,7 +52,7 @@ class insert_iterator;
 
 ### <a name="operators"></a>运算符
 
-|运算符|说明|
+|操作员|说明|
 |-|-|
 |[operator*](#op_star)|取消引用运算符，用于实现泛型插入的输出迭代器表达式 * `i` = `x`。|
 |[operator++](#op_add_add)|将 `insert_iterator` 递增到下一个可用来存储值的位置。|
@@ -114,7 +114,7 @@ The list L2 is: ( 40 20 10 ).
 insert_iterator(Container& _Cont, typename Container::iterator _It);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Cont*\
 `insert_iterator` 要将元素插入到其中的容器。
@@ -242,7 +242,7 @@ insert_iterator<Container>& operator++();
 insert_iterator<Container> operator++(int);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 `insert_iterator`，它寻找下一个可用来存储值的位置。
 
@@ -308,7 +308,7 @@ insert_iterator<Container>& operator=(
     typename Container::value_type&& val);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *val*\
 要赋给容器的值。

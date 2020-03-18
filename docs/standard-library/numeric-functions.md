@@ -32,11 +32,11 @@ helpviewer_keywords:
 - std::transform_inclusive_scan [C++]
 - std::transform_reduce [C++]
 ms.openlocfilehash: 88a97a3d110c684090b78570077927e32541eed7
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856360"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425363"
 ---
 # <a name="ltnumericgt-functions"></a>&lt;numeric&gt; 函数
 
@@ -59,7 +59,7 @@ Type accumulate(
     BinaryOperation binary_op);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *第一个*\
 一种输入迭代器，用于寻址范围中的第一个元素，以通过使用*binary_op*进行求和或合并。
@@ -215,7 +215,7 @@ ForwardIterator2 adjacent_difference(
     BinaryOperation binary_op);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 执行策略。
@@ -242,7 +242,7 @@ ForwardIterator2 adjacent_difference(
 
 对于输入范围中的*值 a*1 *，a*2， *a*3，第一个模板函数在目标范围中存储连续 `adjacent_difference` 值*为*1、 *2-* *a*1、a3- *a*2。
 
-对于输入范围中的值*a*1， *a*2， *a*3，第二个模板函数在目标范围中存储连续 `adjacent_difference` 值*a*1， *a*2 *binary_op* *1，* 3 *binary_op* *a*2。
+对于输入范围中的值*a*1， *a*2， *a*3，第二个模板函数在目标范围中存储连续 `adjacent_difference` 值*a*1， *a*2 *binary_op* *1，* 3 *binary_op* *a*2。 *a*
 
 二元*binary_op*运算不需要是关联或可交换的，因为指定了操作的顺序。
 
@@ -345,7 +345,7 @@ ForwardIterator2 exclusive_scan(
     BinaryOperation binary_op);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 执行策略。
@@ -378,7 +378,7 @@ template <class M, class N>
 constexpr common_type_t<M,N> gcd(M m, N n);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *m*、 *n*\
 整数类型的值。
@@ -440,7 +440,7 @@ ForwardIterator2 inclusive_scan(
     Type init);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 执行策略。
@@ -486,7 +486,7 @@ Type inner_product(
     BinaryOperation2 binary_op2);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *first1*\
 一个输入迭代器，该迭代器发现第一个范围内的第一个元素，该范围与第二个范围的内部乘积或一般化内部乘积将进行计算。
@@ -623,7 +623,7 @@ template <class ForwardIterator, class Type>
 void iota(ForwardIterator first, ForwardIterator last, Type value);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *第一个*\
 发现范围中要填充的第一个元素的输入迭代器。
@@ -702,7 +702,7 @@ OutputIterator partial_sum(
     BinaryOperation binary_op);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *第一个*\
 输入迭代器，此迭代器在要部分求和或根据指定二元运算合并的范围内发现第一个元素。
@@ -835,7 +835,7 @@ Type reduce(
     BinaryOperation binary_op);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 执行策略。
@@ -888,7 +888,7 @@ ForwardIterator2 transform_exclusive_scan(
     UnaryOperation unary_op);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 执行策略。
@@ -953,7 +953,7 @@ ForwardIterator2 transform_inclusive_scan(
     Type init);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 执行策略。
@@ -1033,7 +1033,7 @@ Type transform_reduce(
     UnaryOperation unary_op);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 执行策略。

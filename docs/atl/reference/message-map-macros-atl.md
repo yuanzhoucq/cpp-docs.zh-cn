@@ -38,11 +38,11 @@ f1_keywords:
 - atlwin/ATL::REFLECTED_NOTIFY_RANGE_HANDLER
 ms.assetid: eefdd546-8934-4a30-b263-9c06a8addcbd
 ms.openlocfilehash: 42fdc7a3f09568b641229e897a2a493994a7ba8a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78862954"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423032"
 ---
 # <a name="message-map-macros-atl"></a>消息映射宏（ATL）
 
@@ -89,7 +89,7 @@ ms.locfileid: "78862954"
 
 **标头：** atlwin。h
 
-##  <a name="alt_msg_map"></a>  ALT_MSG_MAP
+##  <a name="alt_msg_map"></a>ALT_MSG_MAP
 
 标记备用消息映射的开头。
 
@@ -97,7 +97,7 @@ ms.locfileid: "78862954"
 ALT_MSG_MAP(msgMapID)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *msgMapID*<br/>
 中消息映射标识符。
@@ -128,7 +128,7 @@ ATL 按数字标识每个消息。 默认消息映射（使用 BEGIN_MSG_MAP 宏
 
 **标头：** atlwin。h
 
-##  <a name="begin_msg_map"></a>  BEGIN_MSG_MAP
+##  <a name="begin_msg_map"></a>BEGIN_MSG_MAP
 
 标记默认消息映射的开头。
 
@@ -136,9 +136,9 @@ ATL 按数字标识每个消息。 默认消息映射（使用 BEGIN_MSG_MAP 宏
 BEGIN_MSG_MAP(theClass)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*theClass*<br/>
+*类*<br/>
 中包含消息映射的类的名称。
 
 ### <a name="remarks"></a>备注
@@ -147,7 +147,7 @@ BEGIN_MSG_MAP(theClass)
 
 以下宏将消息映射到处理程序函数。 此函数必须在*类*中定义。
 
-|宏|描述|
+|宏|说明|
 |-----------|-----------------|
 |[MESSAGE_HANDLER](#message_handler)|将 Windows 消息映射到处理程序函数。|
 |[MESSAGE_RANGE_HANDLER](#message_range_handler)|将一系列连续的 Windows 消息映射到处理程序函数。|
@@ -162,7 +162,7 @@ BEGIN_MSG_MAP(theClass)
 
 以下宏将消息定向到另一消息映射。 此过程称为 "链接"。
 
-|宏|描述|
+|宏|说明|
 |-----------|-----------------|
 |[CHAIN_MSG_MAP](#chain_msg_map)|链接到基类中的默认消息映射。|
 |[CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member)|链接到类的数据成员中的默认消息映射。|
@@ -172,7 +172,7 @@ BEGIN_MSG_MAP(theClass)
 
 以下宏直接从父窗口 "反射" 消息。 例如，控件通常将通知消息发送到其父窗口进行处理，但父窗口可以将消息反映回控件。
 
-|宏|描述|
+|宏|说明|
 |-----------|-----------------|
 |[REFLECTED_COMMAND_HANDLER](#reflected_command_handler)|根据通知代码以及菜单项、控件或快捷键的标识符，将反射的 WM_COMMAND 消息映射到处理程序函数。|
 |[REFLECTED_COMMAND_ID_HANDLER](#reflected_command_id_handler)|基于菜单项、控件或快捷键的标识符，将反射的 WM_COMMAND 消息映射到处理程序函数。|
@@ -207,7 +207,7 @@ BEGIN_MSG_MAP(theClass)
 
 **标头：** atlwin。h
 
-##  <a name="chain_msg_map_alt"></a>  CHAIN_MSG_MAP_ALT
+##  <a name="chain_msg_map_alt"></a>CHAIN_MSG_MAP_ALT
 
 定义消息映射中的条目。
 
@@ -215,7 +215,7 @@ BEGIN_MSG_MAP(theClass)
 CHAIN_MSG_MAP_ALT(theChainClass, msgMapID)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *theChainClass*<br/>
 中包含消息映射的基类的名称。
@@ -236,7 +236,7 @@ CHAIN_MSG_MAP_ALT 将消息定向到基类中的备用消息映射。 必须已�
 
 **标头：** atlwin。h
 
-##  <a name="chain_msg_map_alt_member"></a>  CHAIN_MSG_MAP_ALT_MEMBER
+##  <a name="chain_msg_map_alt_member"></a>CHAIN_MSG_MAP_ALT_MEMBER
 
 定义消息映射中的条目。
 
@@ -244,7 +244,7 @@ CHAIN_MSG_MAP_ALT 将消息定向到基类中的备用消息映射。 必须已�
 CHAIN_MSG_MAP_ALT_MEMBER(theChainMember, msgMapID)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *theChainMember*<br/>
 中包含消息映射的数据成员的名称。
@@ -265,7 +265,7 @@ CHAIN_MSG_MAP_ALT_MEMBER 将消息定向到数据成员中的备用消息映射�
 
 **标头：** atlwin。h
 
-##  <a name="chain_msg_map"></a>  CHAIN_MSG_MAP
+##  <a name="chain_msg_map"></a>CHAIN_MSG_MAP
 
 定义消息映射中的条目。
 
@@ -273,7 +273,7 @@ CHAIN_MSG_MAP_ALT_MEMBER 将消息定向到数据成员中的备用消息映射�
 CHAIN_MSG_MAP(theChainClass)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *theChainClass*<br/>
 中包含消息映射的基类的名称。
@@ -303,7 +303,7 @@ CHAIN_MSG_MAP 将消息定向到基类的默认消息映射（使用[BEGIN_MSG_M
 
 **标头：** atlwin。h
 
-##  <a name="chain_msg_map_dynamic"></a>  CHAIN_MSG_MAP_DYNAMIC
+##  <a name="chain_msg_map_dynamic"></a>CHAIN_MSG_MAP_DYNAMIC
 
 定义消息映射中的条目。
 
@@ -311,7 +311,7 @@ CHAIN_MSG_MAP 将消息定向到基类的默认消息映射（使用[BEGIN_MSG_M
 CHAIN_MSG_MAP_DYNAMIC(dynaChainID)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dynaChainID*<br/>
 中对象的消息映射的唯一标识符。
@@ -337,7 +337,7 @@ CHAIN_MSG_MAP_DYNAMIC 将运行时的消息定向到另一个对象中的默认�
 CHAIN_MSG_MAP_MEMBER(theChainMember)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *theChainMember*<br/>
 中包含消息映射的数据成员的名称。
@@ -375,12 +375,12 @@ CHAIN_MSG_MAP_MEMBER 将消息定向到数据成员的默认消息映射（使�
 COMMAND_CODE_HANDLER(code, func)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*代码*<br/>
+*code*<br/>
 中通知代码。
 
-*func*<br/>
+func<br/>
 中消息处理程序函数的名称。
 
 ### <a name="requirements"></a>要求
@@ -395,15 +395,15 @@ COMMAND_CODE_HANDLER(code, func)
 COMMAND_HANDLER(id, code, func)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *id*<br/>
 中菜单项、控件或快捷键的标识符。
 
-*代码*<br/>
+*code*<br/>
 中通知代码。
 
-*func*<br/>
+func<br/>
 中消息处理程序函数的名称。
 
 ### <a name="remarks"></a>备注
@@ -437,12 +437,12 @@ COMMAND_HANDLER 根据通知代码和控件标识符，将[WM_COMMAND](/windows/
 COMMAND_ID_HANDLER(id, func)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *id*<br/>
 中发送消息的菜单项、控件或快捷键的标识符。
 
-*func*<br/>
+func<br/>
 中消息处理程序函数的名称。
 
 ### <a name="requirements"></a>要求
@@ -457,7 +457,7 @@ COMMAND_ID_HANDLER(id, func)
 COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *idFirst*<br/>
 中标记连续的控件标识符范围的开头。
@@ -465,10 +465,10 @@ COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
 *idLast*<br/>
 中标记连续的控件标识符范围的结尾。
 
-*代码*<br/>
+*code*<br/>
 中通知代码。
 
-*func*<br/>
+func<br/>
 中消息处理程序函数的名称。
 
 ### <a name="remarks"></a>备注
@@ -487,7 +487,7 @@ COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
 COMMAND_RANGE_HANDLER( idFirst, idLast, func)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *idFirst*<br/>
 中标记连续的控件标识符范围的开头。
@@ -495,7 +495,7 @@ COMMAND_RANGE_HANDLER( idFirst, idLast, func)
 *idLast*<br/>
 中标记连续的控件标识符范围的结尾。
 
-*func*<br/>
+func<br/>
 中消息处理程序函数的名称。
 
 ### <a name="remarks"></a>备注
@@ -506,7 +506,7 @@ COMMAND_RANGE_HANDLER( idFirst, idLast, func)
 
 **标头：** atlwin。h
 
-##  <a name="declare_empty_msg_map"></a>  DECLARE_EMPTY_MSG_MAP
+##  <a name="declare_empty_msg_map"></a>DECLARE_EMPTY_MSG_MAP
 
 声明空消息映射。
 
@@ -532,7 +532,7 @@ DEFAULT_REFLECTION_HANDLER()
 
 **标头：** atlwin。h
 
-##  <a name="end_msg_map"></a>  END_MSG_MAP
+##  <a name="end_msg_map"></a>END_MSG_MAP
 
 标记消息映射的结尾。
 
@@ -586,12 +586,12 @@ FORWARD_NOTIFICATIONS()
 MESSAGE_HANDLER( msg, func )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*msg*<br/>
+*缺少*<br/>
 中Windows 消息。
 
-*func*<br/>
+func<br/>
 中消息处理程序函数的名称。
 
 ### <a name="remarks"></a>备注
@@ -627,7 +627,7 @@ MESSAGE_HANDLER 将 Windows 消息映射到指定的处理程序函数。
 MESSAGE_RANGE_HANDLER( msgFirst, msgLast, func )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *msgFirst*<br/>
 中标记连续消息范围的开头。
@@ -635,7 +635,7 @@ MESSAGE_RANGE_HANDLER( msgFirst, msgLast, func )
 *msgLast*<br/>
 中标记连续消息范围的结尾。
 
-*func*<br/>
+func<br/>
 中消息处理程序函数的名称。
 
 ### <a name="requirements"></a>要求
@@ -650,12 +650,12 @@ MESSAGE_RANGE_HANDLER( msgFirst, msgLast, func )
 NOTIFY_CODE_HANDLER(cd, func)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *cd*<br/>
 中通知代码。
 
-*func*<br/>
+func<br/>
 中消息处理程序函数的名称。
 
 ### <a name="requirements"></a>要求
@@ -670,7 +670,7 @@ NOTIFY_CODE_HANDLER(cd, func)
 NOTIFY_HANDLER( id, cd, func )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *id*<br/>
 中发送消息的控件的标识符。
@@ -678,7 +678,7 @@ NOTIFY_HANDLER( id, cd, func )
 *cd*<br/>
 中通知代码。
 
-*func*<br/>
+func<br/>
 中消息处理程序函数的名称。
 
 ### <a name="remarks"></a>备注
@@ -714,12 +714,12 @@ NOTIFY_HANDLER 根据通知代码和控件标识符，将[WM_NOTIFY](/windows/wi
 NOTIFY_ID_HANDLER( id, func )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *id*<br/>
 中发送消息的控件的标识符。
 
-*func*<br/>
+func<br/>
 中消息处理程序函数的名称。
 
 ### <a name="requirements"></a>要求
@@ -734,7 +734,7 @@ NOTIFY_ID_HANDLER( id, func )
 NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *idFirst*<br/>
 中标记连续的控件标识符范围的开头。
@@ -745,7 +745,7 @@ NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 *cd*<br/>
 中通知代码。
 
-*func*<br/>
+func<br/>
 中消息处理程序函数的名称。
 
 ### <a name="remarks"></a>备注
@@ -764,7 +764,7 @@ NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *idFirst*<br/>
 中标记连续的控件标识符范围的开头。
@@ -772,7 +772,7 @@ NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
 *idLast*<br/>
 中标记连续的控件标识符范围的结尾。
 
-*func*<br/>
+func<br/>
 中消息处理程序函数的名称。
 
 ### <a name="remarks"></a>备注
@@ -807,12 +807,12 @@ REFLECT_NOTIFICATIONS()
 REFLECTED_COMMAND_CODE_HANDLER( code, func )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*代码*<br/>
+*code*<br/>
 中通知代码。
 
-*func*<br/>
+func<br/>
 中消息处理程序函数的名称。
 
 ### <a name="requirements"></a>要求
@@ -827,15 +827,15 @@ REFLECTED_COMMAND_CODE_HANDLER( code, func )
 REFLECTED_COMMAND_HANDLER( id, code, func )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *id*<br/>
 中菜单项、控件或快捷键的标识符。
 
-*代码*<br/>
+*code*<br/>
 中通知代码。
 
-*func*<br/>
+func<br/>
 中消息处理程序函数的名称。
 
 ### <a name="requirements"></a>要求
@@ -850,12 +850,12 @@ REFLECTED_COMMAND_HANDLER( id, code, func )
 REFLECTED_COMMAND_ID_HANDLER( id, func )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *id*<br/>
 中菜单项、控件或快捷键的标识符。
 
-*func*<br/>
+func<br/>
 中消息处理程序函数的名称。
 
 ### <a name="requirements"></a>要求
@@ -870,7 +870,7 @@ REFLECTED_COMMAND_ID_HANDLER( id, func )
 REFLECTED_COMMAND_RANGE_CODE_HANDLER( idFirst, idLast, code, func )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *idFirst*<br/>
 中标记连续的控件标识符范围的开头。
@@ -878,10 +878,10 @@ REFLECTED_COMMAND_RANGE_CODE_HANDLER( idFirst, idLast, code, func )
 *idLast*<br/>
 中标记连续的控件标识符范围的结尾。
 
-*代码*<br/>
+*code*<br/>
 中通知代码。
 
-*func*<br/>
+func<br/>
 中消息处理程序函数的名称。
 
 ### <a name="requirements"></a>要求
@@ -896,7 +896,7 @@ REFLECTED_COMMAND_RANGE_CODE_HANDLER( idFirst, idLast, code, func )
 REFLECTED_COMMAND_RANGE_HANDLER( idFirst, idLast, func )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *idFirst*<br/>
 中标记连续的控件标识符范围的开头。
@@ -904,7 +904,7 @@ REFLECTED_COMMAND_RANGE_HANDLER( idFirst, idLast, func )
 *idLast*<br/>
 中标记连续的控件标识符范围的结尾。
 
-*func*<br/>
+func<br/>
 中消息处理程序函数的名称。
 
 ### <a name="requirements"></a>要求
@@ -919,12 +919,12 @@ REFLECTED_COMMAND_RANGE_HANDLER( idFirst, idLast, func )
 REFLECTED_NOTIFY_CODE_HANDLER_EX( cd, func )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *cd*<br/>
 中通知代码。
 
-*func*<br/>
+func<br/>
 中消息处理程序函数的名称。
 
 ### <a name="requirements"></a>要求
@@ -939,7 +939,7 @@ REFLECTED_NOTIFY_CODE_HANDLER_EX( cd, func )
 REFLECTED_NOTIFY_HANDLER( id, cd, func )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *id*<br/>
 中菜单项、控件或快捷键的标识符。
@@ -947,7 +947,7 @@ REFLECTED_NOTIFY_HANDLER( id, cd, func )
 *cd*<br/>
 中通知代码。
 
-*func*<br/>
+func<br/>
 中消息处理程序函数的名称。
 
 ### <a name="requirements"></a>要求
@@ -962,12 +962,12 @@ REFLECTED_NOTIFY_HANDLER( id, cd, func )
 REFLECTED_NOTIFY_ID_HANDLER( id, func )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *id*<br/>
 中菜单项、控件或快捷键的标识符。
 
-*func*<br/>
+func<br/>
 中消息处理程序函数的名称。
 
 ### <a name="requirements"></a>要求
@@ -982,7 +982,7 @@ REFLECTED_NOTIFY_ID_HANDLER( id, func )
 REFLECTED_NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *idFirst*<br/>
 中标记连续的控件标识符范围的开头。
@@ -993,7 +993,7 @@ REFLECTED_NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 *cd*<br/>
 中通知代码。
 
-*func*<br/>
+func<br/>
 中消息处理程序函数的名称。
 
 ### <a name="requirements"></a>要求
@@ -1008,7 +1008,7 @@ REFLECTED_NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 REFLECTED_NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *idFirst*<br/>
 中标记连续的控件标识符范围的开头。
@@ -1016,9 +1016,9 @@ REFLECTED_NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
 *idLast*<br/>
 中标记连续的控件标识符范围的结尾。
 
-*func*<br/>
+func<br/>
 中消息处理程序函数的名称。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [宏](../../atl/reference/atl-macros.md)

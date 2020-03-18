@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CAcl class
 ms.assetid: 20bcb9af-dc1c-4737-b923-3864776680d6
 ms.openlocfilehash: 5d03154597f800042846e82d0a0cf5e7c46b613f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864900"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423506"
 ---
 # <a name="cacl-class"></a>CAcl 类
 
@@ -42,7 +42,7 @@ ms.locfileid: "78864900"
 class CAcl
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
@@ -90,7 +90,7 @@ class CAcl
 
 - 自主
 
-- System
+- 系统
 
 随机 ACL 由对象的所有者控制，或者由授予 WRITE_DAC 对对象的访问权限的任何人控制。 它指定特定用户和组对对象的访问权限。 例如，文件的所有者可以使用任意 ACL 来控制哪些用户和组可以和不能访问该文件。
 
@@ -149,10 +149,10 @@ CAcl() throw();
 CAcl(const CAcl& rhs) throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 rhs<br/>
-现有的 `CAcl` 对象。
+一个现有的 `CAcl` 对象。
 
 ### <a name="remarks"></a>备注
 
@@ -194,7 +194,7 @@ void GetAclEntries(
     CAceFlagArray* pAceFlags = NULL) const throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pSids*<br/>
 指向[CSid](../../atl/reference/csid-class.md)对象的数组的指针。
@@ -231,7 +231,7 @@ void GetAclEntry(
     GUID* pInheritedObjectType = NULL) const throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 要检索的 ACL 项的索引。
@@ -328,7 +328,7 @@ operator const ACL *() const throw(...);
 CAcl& operator= (const CAcl& rhs) throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 rhs<br/>
 要分配给现有对象的 `CAcl`。
@@ -345,7 +345,7 @@ rhs<br/>
 void RemoveAce(UINT nIndex) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 要移除的 ACE 项的索引。
@@ -362,7 +362,7 @@ void RemoveAce(UINT nIndex) throw();
 bool RemoveAces(const CSid& rSid) throw(...)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rSid*<br/>
 对 `CSid` 对象的引用。

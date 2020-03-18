@@ -22,11 +22,11 @@ helpviewer_keywords:
 - Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
 ms.openlocfilehash: 77ad876b8352ab1ae86fde622b05712ec5f2cea9
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78867117"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427349"
 ---
 # <a name="scheduler-class"></a>Scheduler 类
 
@@ -38,7 +38,7 @@ ms.locfileid: "78867117"
 class Scheduler;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="protected-constructors"></a>受保护构造函数
 
@@ -107,7 +107,7 @@ virtual void Attach() = 0;
 static Scheduler* __cdecl Create(const SchedulerPolicy& _Policy);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Policy*<br/>
 描述新创建的计划程序行为的计划程序策略。
@@ -134,7 +134,7 @@ virtual ScheduleGroup* CreateScheduleGroup() = 0;
 virtual ScheduleGroup* CreateScheduleGroup(location& _Placement) = 0;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Placement*<br/>
 对计划组中的任务在其下执行的偏差位置的引用。
@@ -193,7 +193,7 @@ virtual unsigned int Id() const = 0;
 virtual bool IsAvailableLocation(const location& _Placement) const = 0;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Placement*<br/>
 用于查询计划程序的位置的引用。
@@ -232,7 +232,7 @@ virtual unsigned int Reference() = 0 ;
 virtual void RegisterShutdownEvent(HANDLE _Event) = 0;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Event*<br/>
 Windows 事件对象的句柄，当计划程序关闭并销毁自身时，运行时将向其发出信号。
@@ -302,7 +302,7 @@ virtual void ScheduleTask(
     location& _Placement) = 0;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Proc*<br/>
 一个指针，指向用于执行轻量任务的主体的函数。
@@ -321,7 +321,7 @@ virtual void ScheduleTask(
 static void __cdecl SetDefaultSchedulerPolicy(const SchedulerPolicy& _Policy);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Policy*<br/>
 要设置为默认计划程序策略的策略。

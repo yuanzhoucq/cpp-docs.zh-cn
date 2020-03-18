@@ -87,11 +87,11 @@ helpviewer_keywords:
 - std::set [C++], value_comp
 ms.assetid: 8991f9aa-5509-4440-adc1-371512d32018
 ms.openlocfilehash: f1718b1cd362e54f63388b46025804ccc0396851
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865119"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425177"
 ---
 # <a name="set-class"></a>set 类
 
@@ -112,7 +112,7 @@ class set
 要存储在集中的元素数据类型。
 
 *特征*\
-一种提供函数对象的类型，该函数对象将两个元素值作为排序键进行比较，以确定其在集中的相对顺序。 此参数是可选的， *\<键 >* 的**二进制谓词是**默认值。
+一种提供函数对象的类型，该函数对象将两个元素值作为排序键进行比较，以确定其在集中的相对顺序。 此参数是可选自变量，默认值为二元谓词 **less** *\<Key>* 。
 
 在 C++ 14 中可以通过指定没有类型参数的 `std::less<>` 或 `std::greater<>` 谓词来启用异类查找。 有关详细信息，请参阅[关联容器中的异类查找](../standard-library/stl-containers.md#sequence_containers)
 
@@ -159,10 +159,10 @@ C++ 标准库集是：
 |[const_reference](#const_reference)|一种类型，此类型提供对用于读取和执行 **const** 操作的集中存储的 **const** 元素的引用。|
 |[const_reverse_iterator](#const_reverse_iterator)|一个提供双向迭代器的类型，双向迭代器可读取集中的任何 **const** 元素。|
 |[difference_type](#difference_type)|一种有符号整数类型，此类型可用于表示集中迭代器指向的元素间范围内的元素数量。|
-|[迭代器](#iterator)|一种类型，此类型提供可读取或修改集中的任何元素的双向迭代器。|
+|[Iterator](#iterator)|一种类型，此类型提供可读取或修改集中的任何元素的双向迭代器。|
 |[key_compare](#key_compare)|一种提供函数对象的类型，该函数对象可比较两个排序键以确定集中两个元素的相对顺序。|
 |[key_type](#key_type)|此类型描述当作为排序键时存储为集中元素的对象。|
-|[指针](#pointer)|一种类型，此类型提供指向集中元素的指针。|
+|[pointer](#pointer)|一种类型，此类型提供指向集中元素的指针。|
 |[reference](#reference)|一种类型，此类型提供对存储在集中的元素的引用。|
 |[reverse_iterator](#reverse_iterator)|一种类型，此类型提供可读取或修改反向集中的元素的双向迭代器。|
 |[size_type](#size_type)|一种无符号整数类型，此类型可表示集中的元素数量。|
@@ -177,7 +177,7 @@ C++ 标准库集是：
 |[cbegin](#cbegin)|返回一个常量迭代器，此迭代器用于发现集中的第一个元素。|
 |[cend](#cend)|返回一个常量迭代器，此迭代器用于发现集中最后一个元素之后的位置。|
 |[clear](#clear)|清除集的所有元素。|
-|[count](#count)|返回集中其键与指定为参数的键匹配的元素数量。|
+|[计数](#count)|返回集中其键与指定为参数的键匹配的元素数量。|
 |[crbegin](#rbegin)|返回一个常量迭代器，此迭代器用于发现反向集中的第一个元素。|
 |[crend](#rend)|返回一个常量迭代器，此迭代器用于发现反向集中最后一个元素之后的位置。|
 |[emplace](#emplace)|将就地构造的元素插入到集中。|
@@ -223,7 +223,7 @@ typedef Allocator allocator_type;
 
 ### <a name="example"></a>示例
 
-有关使用 [ 的示例，请参阅 ](#get_allocator)get_allocator`allocator_type` 的示例。
+有关使用 `allocator_type` 的示例，请参阅 [get_allocator](#get_allocator) 的示例。
 
 ## <a name="begin"></a>准备
 
@@ -282,7 +282,7 @@ The first element of s1 is 1
 The first element of s1 is now 2
 ```
 
-## <a name="cbegin"></a>cbegin
+## <a name="cbegin"></a> cbegin
 
 返回一个**常量**迭代器，该迭代器用于寻址范围内的第一个元素。
 
@@ -388,7 +388,7 @@ typedef implementation-defined const_iterator;
 
 ### <a name="example"></a>示例
 
-有关 [ 的示例，请参阅 ](#begin)begin`const_iterator` 的示例。
+有关 `const_iterator` 的示例，请参阅 [begin](#begin) 的示例。
 
 ## <a name="const_pointer"></a>const_pointer
 
@@ -459,7 +459,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 ### <a name="example"></a>示例
 
-有关如何声明和使用 [ 的示例，请参阅 ](#rend)rend`const_reverse_iterator` 的示例。
+有关如何声明和使用 `const_reverse_iterator` 的示例，请参阅 [rend](#rend) 的示例。
 
 ## <a name="count"></a>计
 
@@ -619,7 +619,7 @@ typedef typename allocator_type::difference_type difference_type;
 
 ### <a name="remarks"></a>备注
 
-`difference_type` 是通过容器迭代器减少或递增时返回的类型。 `difference_type` 通常用于表示迭代器 *和* 之间的范围 `first`[ first,  last)`last` 内元素的数目，包括 `first` 指向的元素以及那一系列元素，但不包括 `last` 指向的元素。
+`difference_type` 是通过容器迭代器减少或递增时返回的类型。 `difference_type` 通常用于表示迭代器 `first` 和 `last` 之间的范围 *[ first,  last)* 内元素的数目，包括 `first` 指向的元素以及那一系列元素，但不包括 `last` 指向的元素。
 
 注意，尽管 `difference_type` 适用于满足输入迭代器（包括可逆容器支持的双向迭代器的类，如集）需求的所有迭代器，迭代器之间的减法仅受随机访问容器（如 vector）提供的随机访问迭代器支持。
 
@@ -695,7 +695,7 @@ emplace(
 
 ### <a name="parameters"></a>参数
 
-|参数|说明|
+|参数|描述|
 |-|-|
 |*args*|用于构造要插入到集中的元素的转发参数（除非它已包含一个具有相对有序的值的元素）。|
 
@@ -899,7 +899,7 @@ iterator end();
 
 **end** 用于测试迭代器是否超过集的末尾。
 
-**end** 返回的值不应被取消引用。
+不应对 **end** 返回的值取消引用。
 
 有关代码示例，请参阅 [set::find](#find)。
 
@@ -1182,7 +1182,7 @@ int main()
 }
 ```
 
-## <a name="get_allocator"></a>get_allocator
+## <a name="get_allocator"></a> get_allocator
 
 返回用于构造集的分配器对象的一个副本。
 
@@ -1447,7 +1447,7 @@ typedef implementation-defined iterator;
 
 ### <a name="example"></a>示例
 
-有关如何声明和使用 `iterator`的示例，请参阅[begin](#begin)的示例。
+有关如何声明和使用`iterator`的示例，请参阅 [begin](#begin) 的示例。
 
 ## <a name="key_comp"></a>key_comp
 
@@ -1469,7 +1469,7 @@ key_compare key_comp() const;
 
 **bool operator （）** （**const key &** `_xVal`， **const key &** `_yVal`）;
 
-如果 **在排序顺序中先于且不等于**，则该函数会返回 `_xVal`true`_yVal`。
+如果 `_xVal` 在排序顺序中先于且不等于 `_yVal`，则该函数会返回 **true**。
 
 请注意，[key_compare](#key_compare) 和 [value_compare](#value_compare) 皆是模板参数 `Traits` 的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。
 
@@ -1542,7 +1542,7 @@ typedef Traits key_compare;
 
 ### <a name="example"></a>示例
 
-有关如何声明和使用 [ 的示例，请参阅 ](#key_comp)key_comp`key_compare` 的示例。
+有关如何声明和使用 `key_compare` 的示例，请参阅 [key_comp](#key_comp) 的示例。
 
 ## <a name="key_type"></a>key_type
 
@@ -1562,7 +1562,7 @@ typedef Key key_type;
 
 ### <a name="example"></a>示例
 
-有关如何声明和使用 [ 的示例，请参阅 ](#value_type)value_type`key_type` 的示例。
+有关如何声明和使用 `key_type` 的示例，请参阅 [value_type](#value_type) 的示例。
 
 ## <a name="lower_bound"></a>lower_bound
 
@@ -1734,7 +1734,7 @@ typedef typename allocator_type::pointer pointer;
 
 ### <a name="remarks"></a>备注
 
-类型 **pointer** 可用于修改元素的值。
+**pointer** 类型可用于修改元素的值。
 
 在大多数情况下，应使用 [iterator](#iterator) 访问集对象中的元素。
 
@@ -1935,7 +1935,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 ### <a name="example"></a>示例
 
-有关如何声明和使用 [ 的示例，请参阅 ](#rbegin)rbegin`reverse_iterator` 的示例。
+有关如何声明和使用 `reverse_iterator` 的示例，请参阅 [rbegin](#rbegin) 的示例。
 
 ## <a name="set"></a>字符集
 
@@ -2189,7 +2189,7 @@ typedef typename allocator_type::size_type size_type;
 
 ### <a name="example"></a>示例
 
-有关如何声明和使用 [ 的示例，请参阅 ](#size)size`size_type` 的示例
+有关如何声明和使用 `size_type` 的示例，请参阅 [size](#size) 的示例
 
 ## <a name="swap"></a>购
 
@@ -2347,7 +2347,7 @@ value_compare value_comp() const;
 
 **bool 运算符**（**const key &** `_xVal`， **const key &** `_yVal`）;
 
-如果 **在排序顺序中先于且不等于**，则该函数会返回 `_xVal`true`_yVal`。
+如果 `_xVal` 在排序顺序中先于且不等于 `_yVal`，则该函数会返回 **true**。
 
 请注意，[value_compare](#value_compare) 和 [key_compare](#key_compare) 皆是模板参数 `Traits` 的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。
 
@@ -2420,9 +2420,9 @@ typedef key_compare value_compare;
 
 ### <a name="example"></a>示例
 
-有关如何声明和使用 [ 的示例，请参阅 ](#value_comp)value_comp`value_compare` 的示例。
+有关如何声明和使用 `value_compare` 的示例，请参阅 [value_comp](#value_comp) 的示例。
 
-## <a name="value_type"></a>value_type
+## <a name="value_type"></a> value_type
 
 一种类型，此类型将在其容量中存储为 set 元素的对象描述为值。
 

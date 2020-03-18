@@ -27,11 +27,11 @@ helpviewer_keywords:
 - CCmdUI [MFC], m_pSubMenu
 ms.assetid: 04eaaaf5-f510-48ab-b425-94665ba24766
 ms.openlocfilehash: 42aec2937cd81ebbb50482321b8deae001723d3a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883612"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424565"
 ---
 # <a name="ccmdui-class"></a>CCmdUI 类
 
@@ -43,7 +43,7 @@ ms.locfileid: "78883612"
 class CCmdUI
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-methods"></a>公共方法
 
@@ -115,7 +115,7 @@ void ContinueRouting();
 virtual void Enable(BOOL bOn = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bOn*<br/>
 若要启用该项，则为 TRUE; 否则为 FALSE。
@@ -186,7 +186,7 @@ CWnd* m_pOther;
 virtual void SetCheck(int nCheck = 1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *n*<br/>
 指定要设置的检查状态。 如果为0，则取消选中;如果为1，则检查;如果为2，则设置不确定。
@@ -203,7 +203,7 @@ virtual void SetCheck(int nCheck = 1);
 virtual void SetRadio(BOOL bOn = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bOn*<br/>
 若要启用该项，则为 TRUE;否则为 FALSE。
@@ -220,7 +220,7 @@ virtual void SetRadio(BOOL bOn = TRUE);
 virtual void SetText(LPCTSTR lpszText);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszText*<br/>
 指向文本字符串的指针。

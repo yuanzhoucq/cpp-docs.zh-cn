@@ -6,17 +6,17 @@ helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
 ms.openlocfilehash: d29076e6eae4bcbd15a4bc50bb48477e3f93152d
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856902"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422786"
 ---
 # <a name="compiler-options-listed-by-category"></a>按类别列出的编译器选项
 
 本文包含编译器选项的分类列表。 有关按字母顺序排列的列表，请参阅[按字母顺序列出的编译器选项](compiler-options-listed-alphabetically.md)。
 
-## <a name="optimization"></a>优化
+## <a name="optimization"></a>Optimization
 
 |选项|目的|
 |------------|-------------|
@@ -109,7 +109,7 @@ ms.locfileid: "78856902"
 |[/u](u-u-undefine-symbols.md)|移除所有的预定义宏。|
 |[/X](x-ignore-standard-include-paths.md)|忽略标准包含目录。|
 
-## <a name="language"></a>Language
+## <a name="language"></a>语言
 
 |选项|目的|
 |------------|-------------|
@@ -148,7 +148,7 @@ ms.locfileid: "78856902"
 |[/MT](md-mt-ld-use-run-time-library.md)|使用*libcmt.lib*编译以创建多线程可执行文件。|
 |[/MTd](md-mt-ld-use-run-time-library.md)|使用*libcmtd.lib*编译以创建调试多线程可执行文件。|
 
-## <a name="miscellaneous"></a>其他
+## <a name="miscellaneous"></a>杂项
 
 |选项|目的|
 |------------|-------------|

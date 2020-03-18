@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CDialogBar [MFC], Create
 ms.assetid: da2f7a30-970c-44e3-87f0-6094bd002cab
 ms.openlocfilehash: af84c5239a9cb3cbddb1ab4f0230e5b1a3373573
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883613"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425957"
 ---
 # <a name="cdialogbar-class"></a>CDialogBar 类
 
@@ -27,7 +27,7 @@ ms.locfileid: "78883613"
 class CDialogBar : public CControlBar
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -94,7 +94,7 @@ virtual BOOL Create(
     UINT nID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pParentWnd*<br/>
 指向父级 `CWnd` 对象的指针。

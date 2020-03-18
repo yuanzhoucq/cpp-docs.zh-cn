@@ -10,11 +10,11 @@ f1_keywords:
 - tuple/std::operator==
 ms.assetid: f25752dc-d3e2-4e12-b5ac-9a8682ca60ed
 ms.openlocfilehash: 5554f08f32048bafde5bdb2c316e12e1e01c6ffb
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866183"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427805"
 ---
 # <a name="lttuplegt-operators"></a>&lt;tuple&gt; 运算符
 
@@ -29,7 +29,7 @@ bool operator!=(const tuple<T1, T2, ..., TN>& tpl1,
     const tuple<U1, U2, ..., UN>& tpl2);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *TN*\
 第 N 个元组元素的类型。
@@ -94,7 +94,7 @@ bool operator<(const tuple<T1, T2, ..., TN>& tpl1,
     const tuple<U1, U2, ..., UN>& tpl2);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *TN*\
 第 N 个元组元素的类型。
@@ -159,7 +159,7 @@ bool operator<=(const tuple<T1, T2, ..., TN>& tpl1,
     const tuple<U1, U2, ..., UN>& tpl2);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *TN*\
 第 N 个元组元素的类型。
@@ -224,7 +224,7 @@ bool operator==(const tuple<T1, T2, ..., TN>& tpl1,
     const tuple<U1, U2, ..., UN>& tpl2);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *TN*\
 第 N 个元组元素的类型。
@@ -289,7 +289,7 @@ bool operator>(const tuple<T1, T2, ..., TN>& tpl1,
     const tuple<U1, U2, ..., UN>& tpl2);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *TN*\
 第 N 个元组元素的类型。
@@ -354,7 +354,7 @@ bool operator>=(const tuple<T1, T2, ..., TN>& tpl1,
     const tuple<U1, U2, ..., UN>& tpl2);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *TN*\
 第 N 个元组元素的类型。

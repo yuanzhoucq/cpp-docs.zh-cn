@@ -80,11 +80,11 @@ helpviewer_keywords:
 - std::forward_list::swap
 - std::forward_list::unique
 ms.openlocfilehash: e13242aa41cc99cdd01a6f16b607ef568195d659
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890839"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424805"
 ---
 # <a name="forward_list-class"></a>forward_list 类
 
@@ -98,13 +98,13 @@ template <class Type,
 class forward_list
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 类型 * \
 要存储在 forward_list 中的元素数据类型。
 
 *分配*器\
-存储的分配器对象，用于封装有关 forward_list 的内存分配和解除分配的详细信息。 此参数可选。 默认值为分配器 <`Type`>。
+存储的分配器对象，用于封装有关 forward_list 的内存分配和解除分配的详细信息。 此参数是可选的。 默认值为分配器 <`Type`>。
 
 ## <a name="remarks"></a>备注
 
@@ -117,7 +117,7 @@ class forward_list
 
 调用 [forward_list::insert_after](#insert_after)（它是可调用构造函数 `Type(const  T&)` 的唯一成员函数）时，可能会添加受控序列。 `forward_list` 也可能调用移动构造函数。 如果此类表达式引发异常，则容器对象不插入任何新元素，并重新引发该异常。 因此，当发生此类异常时，类型 `forward_list` 的对象将处于已知状态。
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="constructors"></a>构造函数
 
@@ -206,7 +206,7 @@ template <class InputIterator>
 void assign(InputIterator First, InputIterator Last);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *第一个*\
 替换范围的起始处。
@@ -397,7 +397,7 @@ template <class T>
 iterator emplace_after(const_iterator Where, Type&& val);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Where*\
 目标转发列表中构造新元素的位置。
@@ -422,7 +422,7 @@ template <class Type>
     void emplace_front(Type&& val);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *val*\
 添加到转发列表开头的元素。
@@ -467,7 +467,7 @@ iterator erase_after(const_iterator Where);
 iterator erase_after(const_iterator first, const_iterator last);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Where*\
 目标转发列表中擦除元素的位置。
@@ -513,7 +513,7 @@ template <class InputIterator>
 forward_list(InputIterator First, InputIterator Last, const Allocator& Al);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Al*\
 要用于此对象的分配器类。
@@ -590,7 +590,7 @@ template <class InputIterator>
     void insert_after(const_iterator Where, InputIterator First, InputIterator Last);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Where*\
 目标转发列表中插入第一个元素的位置。
@@ -668,7 +668,7 @@ template <class Predicate>
     void merge(forward_list& right, Predicate comp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *right*\
 要从其开始合并的转发列表。
@@ -696,7 +696,7 @@ forward_list& operator=(initializer_list<Type> IList);
 forward_list& operator=(forward_list&& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *right*\
 要复制到转发列表的转发列表。
@@ -743,7 +743,7 @@ void push_front(const Type& val);
 void push_front(Type&& val);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *val*\
 添加到转发列表开头的元素。
@@ -768,7 +768,7 @@ typedef typename Allocator::reference reference;
 void remove(const Type& val);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *val*\
 一个值，如果某个元素包含该值，则会导致从列表中删除该元素。
@@ -788,7 +788,7 @@ template <class Predicate>
     void remove_if(Predicate pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pred*\
 一元谓词，如果元素满足该谓词，则该谓词会导致此元素从列表删除。
@@ -808,7 +808,7 @@ void resize(size_type _Newsize);
 void resize(size_type _Newsize, const Type& val);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Newsize*\
 调整大小后的转发列表中的元素数。
@@ -850,7 +850,7 @@ template <class Predicate>
 void sort(Predicate pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pred*\
 排序谓词。
@@ -890,7 +890,7 @@ void splice_after(
     const_iterator Last);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Where*\
 目标 forward_list 中要在其后面进行插入的位置。
@@ -1000,7 +1000,7 @@ Beginning state of lists:c1 = (10) (11)c2 = (20) (21) (22)c3 = (30) (31)c4 = (40
 void swap(forward_list& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *right*\
 提供要交换的元素的转发列表。
@@ -1019,7 +1019,7 @@ template <class BinaryPredicate>
 void unique(BinaryPredicate comp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *comp*\
 用于比较连续元素的二元谓词。

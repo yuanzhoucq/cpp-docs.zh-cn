@@ -27,11 +27,11 @@ helpviewer_keywords:
 - CPalette [MFC], SetPaletteEntries
 ms.assetid: 8cd95498-53ed-4852-85e1-70e522541114
 ms.openlocfilehash: 27f4f14c9e93091728e256c890dcffee26a43de4
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855435"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426971"
 ---
 # <a name="cpalette-class"></a>CPalette 类
 
@@ -65,7 +65,7 @@ class CPalette : public CGdiObject
 |[CPalette：： ResizePalette](#resizepalette)|将 `CPalette` 对象指定的逻辑调色板的大小更改为指定的项数。|
 |[CPalette：： SetPaletteEntries](#setpaletteentries)|设置逻辑调色板中某一范围的项的 RGB 颜色值和标志。|
 
-### <a name="public-operators"></a>公共运算符
+### <a name="public-operators"></a>公用運算子
 
 |名称|说明|
 |----------|-----------------|

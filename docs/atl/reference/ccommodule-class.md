@@ -32,11 +32,11 @@ helpviewer_keywords:
 - DLL modules [C++], ATL
 ms.assetid: f5face2c-8fd8-40e6-9ec3-54ab74701769
 ms.openlocfilehash: 482f29bae28841ab40ca8a8f80ab7f0df42ddc8b
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78863157"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423308"
 ---
 # <a name="ccommodule-class"></a>CComModule 类
 
@@ -51,7 +51,7 @@ ms.locfileid: "78863157"
 class CComModule : public _ATL_MODULE
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-methods"></a>公共方法
 
@@ -132,7 +132,7 @@ HRESULT GetClassObject(
     LPVOID* ppv) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rclsid*<br/>
 中要创建的对象的 CLSID。
@@ -212,12 +212,12 @@ HRESULT Init(
     const GUID* plibid = NULL) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *p*<br/>
 中指向对象映射项的数组的指针。
 
-*h*<br/>
+h<br/>
 中传递给 `DLLMain` 或 `WinMain`的 HINSTANCE。
 
 *plibid*<br/>
@@ -338,7 +338,7 @@ ATL_DEPRECATED HRESULT RegisterClassHelper(
     DWORD dwFlags);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *clsid*<br/>
 中要注册的对象的 CLSID。
@@ -373,7 +373,7 @@ dwFlags<br/>
 HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwClsContext*<br/>
 中指定要在其中运行类对象的上下文。 可能的值为 CLSCTX_INPROC_SERVER、CLSCTX_INPROC_HANDLER 或 CLSCTX_LOCAL_SERVER。 有关这些值的说明，请参阅 Windows SDK 中的[CLSCTX](/windows/win32/api/wtypesbase/ne-wtypesbase-clsctx) 。
@@ -399,10 +399,10 @@ HRESULT RegisterServer(
     const CLSID* pCLSID = NULL) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bRegTypeLib*<br/>
-中指示是否将注册类型库。 默认值为 FALSE。
+中指示是否将注册类型库。 默认值是 FALSE。
 
 *pCLSID*<br/>
 中指向要注册的对象的 CLSID。 如果为 NULL （默认值），则将注册对象映射中的所有对象。
@@ -430,7 +430,7 @@ HRESULT RegisterTypeLib() throw();
 HRESULT RegisterTypeLib(LPCTSTR lpszIndex) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszIndex*<br/>
 中格式 `"\\N"`格式的字符串，其中 `N` 是 TYPELIB 资源的整数索引。
@@ -484,7 +484,7 @@ ATL_DEPRECATED HRESULT UnregisterClassHelper(
     LPCTSTR lpszVerIndProgID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *clsid*<br/>
 中要注销的对象的 CLSID。
@@ -514,7 +514,7 @@ HRESULT UnregisterServer(const CLSID* pCLSID = NULL) throw ();
 inline HRESULT UnregisterServer(BOOL bUnRegTypeLib, const CLSID* pCLSID = NULL) throw ();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bUnRegTypeLib*<br/>
 如果为 TRUE，则也取消注册类型库。
@@ -556,7 +556,7 @@ ATL_DEPRECATED HRESULT UpdateRegistryClass(
     BOOL bRegister);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *clsid*<br/>
 要注册或取消注册的对象的 CLSID。
@@ -609,7 +609,7 @@ virtual HRESULT UpdateRegistryFromResourceD(
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw ();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszRes*<br/>
 中资源名称。
@@ -659,7 +659,7 @@ virtual HRESULT UpdateRegistryFromResourceS(
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszRes*<br/>
 中资源名称。

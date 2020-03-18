@@ -61,11 +61,11 @@ helpviewer_keywords:
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
 ms.openlocfilehash: a9161764f6c8646766a73add01c25cce5619ad19
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855257"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424463"
 ---
 # <a name="cfile-class"></a>CFile 类
 
@@ -113,7 +113,7 @@ class CFile : public CObject
 |[CFile：： UnlockRange](#unlockrange)|解锁文件中的字节范围。|
 |[CFile：： Write](#write)|将文件中的数据写入（未缓冲）到当前文件位置。|
 
-### <a name="public-operators"></a>公共运算符
+### <a name="public-operators"></a>公用運算子
 
 |名称|说明|
 |----------|-----------------|

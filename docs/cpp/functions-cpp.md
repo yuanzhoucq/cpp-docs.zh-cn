@@ -9,11 +9,11 @@ helpviewer_keywords:
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
 ms.openlocfilehash: da30d647947e98146cd89f255c2e05991c1be562
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301504"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423752"
 ---
 # <a name="functions-c"></a>函数 (C++)
 
@@ -64,7 +64,7 @@ int sum(int a, int b)
 
 函数声明的必需部分有：
 
-1. 返回类型，该类型指定函数返回的值的类型; 如果没有返回值，则为**void** 。 在 C++ 11 中，**自动**是有效的返回类型，指示编译器从返回语句推断类型。 在 C++14 中，还允许使用 decltype(auto)。 有关详细信息，请参阅下面的“返回类型中的类型推导”。
+1. 返回类型，该类型指定函数返回的值的类型; 如果没有返回值，则为**void** 。 在 c + + 11 中， **auto**是有效的返回类型，它指示编译器从 return 语句推断类型。 在 C++14 中，还允许使用 decltype(auto)。 有关详细信息，请参阅下面的“返回类型中的类型推导”。
 
 1. 函数名，必须以字母或下划线开头，不能包含空格。 一般而言，标准库函数名中的前导下划线指示私有成员函数，或不是供你的代码使用的非成员函数。
 
@@ -196,7 +196,7 @@ void DoSomething(std::string& input){...}
 void DoSomething(const std::string& input){...}
 ```
 
-**C++ 11:** 若要显式处理通过右值引用或左值引用传递的参数，使用双与号参数以指示通用引用：
+**C++ 11：** 若要显式处理通过右值引用或左值引用传递的参数，请在参数上使用双与号以指示通用引用：
 
 ```cpp
 void DoSomething(const std::string&& input){...}
@@ -261,9 +261,9 @@ auto Add(const Lhs& lhs, const Rhs& rhs) -> decltype(lhs + rhs)
 
 在 C++ 中，局部变量可以声明为静态。 变量仅在函数体中可见，但是对于函数的所有实例，存在变量的单个副本。 局部静态对象将在 `atexit` 指定的终止期间销毁。 如果某个静态对象由于程序的控制流跳过了其声明而未构造，则不会尝试销毁该对象。
 
-##  <a name="type_deduction"></a> 返回类型 (C++ 14) 中的类型推导
+##  <a name="type_deduction"></a>返回类型中的类型推导（c + + 14）
 
-在 C++ 14 中，你可以使用**自动**指示编译器从函数体的返回类型推断而不必提供结尾返回类型。 请注意， **auto**始终推导为返回值。 使用 `auto&&` 可指示编译器推导引用。
+在 c + + 14 中，可以使用**auto**指示编译器从函数体推断返回类型，而不必提供尾随返回类型。 请注意， **auto**始终推导为返回值。 使用 `auto&&` 可指示编译器推导引用。
 
 在此示例中， **auto**将被推断为 lhs 和 rhs 总和的非常量值副本。
 
@@ -362,7 +362,7 @@ template<typename F, typename Tuple = tuple<T...>,
     }
     ```
 
-1. **Visual Studio 2017 15.3 及更高版本**(适用于[/std:C++ 17](../build/reference/std-specify-language-standard-version.md)): 使用结构化绑定。 结构化绑定的优点是，存储返回值的变量在声明时将进行初始化，在某些情况下，这两个变量的效率会大大提高。 在此语句中--`auto[x, y, z] = f();`--方括号介绍和初始化整个函数块作用域内的名称。
+1. **Visual Studio 2017 版本15.3 及更高版本**（可用于[/std： c + + 17](../build/reference/std-specify-language-standard-version.md)）：使用结构化绑定。 结构化绑定的优点是，存储返回值的变量在声明时将进行初始化，在某些情况下，这两个变量的效率会大大提高。 在此语句中--`auto[x, y, z] = f();`--方括号介绍和初始化整个函数块作用域内的名称。
 
     ```cpp
     #include <tuple>
@@ -408,7 +408,7 @@ template<typename F, typename Tuple = tuple<T...>,
 
 C++ 通过与 C 语言相同的方式支持函数指针。 但是更加类型安全的替代方法通常是使用函数对象。
 
-如果声明返回函数指针类型的函数，则建议使用**typedef**声明函数指针类型的别名。  例如
+如果声明返回函数指针类型的函数，则建议使用**typedef**声明函数指针类型的别名。  例如：
 
 ```cpp
 typedef int (*fp)(int);

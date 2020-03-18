@@ -12,11 +12,11 @@ helpviewer_keywords:
 - connection points [C++], notifying of events
 ms.assetid: eb7a563e-6bce-4cdf-8d20-8c6a5307781b
 ms.openlocfilehash: 694127ceccc1d1b55e5da9abca799dff77dcfc60
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864913"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423266"
 ---
 # <a name="cfirepropnotifyevent-class"></a>CFirePropNotifyEvent 类
 
@@ -31,7 +31,7 @@ ms.locfileid: "78864913"
 class CFirePropNotifyEvent
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-methods"></a>公共方法
 
@@ -60,7 +60,7 @@ class CFirePropNotifyEvent
 static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pUnk*<br/>
 中指向发送通知的对象的 `IUnknown` 的指针。
@@ -84,7 +84,7 @@ static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
 static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pUnk*<br/>
 中指向发送通知的对象的 `IUnknown` 的指针。

@@ -5,11 +5,11 @@ f1_keywords:
 - ostream/std::operator&lt;&lt;
 ms.assetid: 9282a62e-a3d1-4371-a284-fbc9515bb9a2
 ms.openlocfilehash: c80abcb08423b4bb269e7d60ac43ef97d197a0e9
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78874787"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425279"
 ---
 # <a name="ltostreamgt-operators"></a>&lt;ostream&gt; 运算符
 
@@ -78,7 +78,7 @@ basic_ostream <_Elem, _Tr>& operator<<(
     Ty val);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Ch*\
 一个字符。
@@ -87,7 +87,7 @@ basic_ostream <_Elem, _Tr>& operator<<(
 元素类型。
 
 *_Ostr*\
-一个 `basic_ostream` 对象。
+`basic_ostream` 对象。
 
 *str*\
 字符串。

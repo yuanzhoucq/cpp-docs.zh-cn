@@ -25,11 +25,11 @@ helpviewer_keywords:
 - CBrush [MFC], GetLogBrush
 ms.assetid: e5ef2c62-dd95-4973-9090-f52f605900e1
 ms.openlocfilehash: a99d8c8022d23f627320b66c3f376be803c9c839
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876043"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426011"
 ---
 # <a name="cbrush-class"></a>CBrush 类
 
@@ -41,7 +41,7 @@ ms.locfileid: "78876043"
 class CBrush : public CGdiObject
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -99,7 +99,7 @@ CBrush(int nIndex, COLORREF crColor);
 explicit CBrush(CBitmap* pBitmap);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *crColor*<br/>
 指定画笔的前景色作为 RGB 颜色。 如果画笔为影线，则此参数指定阴影的颜色。
@@ -146,7 +146,7 @@ explicit CBrush(CBitmap* pBitmap);
 BOOL CreateBrushIndirect(const LOGBRUSH* lpLogBrush);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpLogBrush*<br/>
 指向包含有关画笔的信息的[LOGBRUSH](/windows/win32/api/wingdi/ns-wingdi-logbrush)结构。
@@ -179,7 +179,7 @@ BOOL CreateDIBPatternBrush(
     UINT nUsage);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hPackedDIB*<br/>
 标识包含打包的与设备无关的位图（DIB）的全局内存对象。
@@ -234,7 +234,7 @@ BOOL CreateHatchBrush(
     COLORREF crColor);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 指定画笔的阴影样式。 它可以是下列值之一：
@@ -274,7 +274,7 @@ BOOL CreateHatchBrush(
 BOOL CreatePatternBrush(CBitmap* pBitmap);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pBitmap*<br/>
 标识位图。
@@ -307,7 +307,7 @@ BOOL CreatePatternBrush(CBitmap* pBitmap);
 BOOL CreateSolidBrush(COLORREF crColor);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *crColor*<br/>
 指定画笔颜色的[COLORREF](/windows/win32/gdi/colorref)结构。 颜色指定一个 RGB 值，并且可以使用 WINDOWS 中的 RGB 宏来构造。高.
@@ -334,7 +334,7 @@ BOOL CreateSolidBrush(COLORREF crColor);
 BOOL CreateSysColorBrush(int nIndex);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 指定颜色索引。 此值对应于用于绘制21个窗口元素之一的颜色。 有关值的列表，请参阅 Windows SDK 中的[GetSysColor](/windows/win32/api/winuser/nf-winuser-getsyscolor) 。
@@ -361,7 +361,7 @@ BOOL CreateSysColorBrush(int nIndex);
 static CBrush* PASCAL FromHandle(HBRUSH hBrush);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hBrush*<br/>
 Windows GDI 画笔的句柄。
@@ -388,7 +388,7 @@ Windows GDI 画笔的句柄。
 int GetLogBrush(LOGBRUSH* pLogBrush);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pLogBrush*<br/>
 指向包含有关画笔的信息的[LOGBRUSH](/windows/win32/api/wingdi/ns-wingdi-logbrush)结构。

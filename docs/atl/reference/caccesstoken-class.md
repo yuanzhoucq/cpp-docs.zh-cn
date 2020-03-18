@@ -53,11 +53,11 @@ helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
 ms.openlocfilehash: 33fbaae5dafaccdf7f7e6880eaa42dd68352e840
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864861"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423518"
 ---
 # <a name="caccesstoken-class"></a>CAccessToken 类
 
@@ -72,7 +72,7 @@ ms.locfileid: "78864861"
 class CAccessToken
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -148,7 +148,7 @@ class CAccessToken
 void Attach(HANDLE hToken) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hToken*<br/>
 访问令牌的句柄。
@@ -179,7 +179,7 @@ bool CheckTokenMembership(
     bool* pbIsMember) const throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rSid*<br/>
 对[CSid 类](../../atl/reference/csid-class.md)对象的引用。
@@ -210,7 +210,7 @@ bool CreateImpersonationToken(
     SECURITY_IMPERSONATION_LEVEL sil = SecurityImpersonation) const throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pImp*<br/>
 指向新的 `CAccessToken` 对象的指针。
@@ -237,7 +237,7 @@ bool CreatePrimaryToken(
     const CSecurityAttributes* pTokenAttributes = NULL) const throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pPri*<br/>
 指向新的 `CAccessToken` 对象的指针。
@@ -274,7 +274,7 @@ bool CreateProcessAsUser(
     LPCTSTR pCurrentDirectory = NULL) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pApplicationName*<br/>
 指向以 null 结尾的字符串的指针，该字符串指定要执行的模块。 此参数不能为 NULL。
@@ -328,7 +328,7 @@ bool CreateRestrictedToken(
     const CTokenPrivileges& PrivilegesToDelete = CTokenPrivileges()) const throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pRestrictedToken*<br/>
 新的、受限的 `CAccessToken` 对象。
@@ -379,7 +379,7 @@ bool DisablePrivilege(
     CTokenPrivileges* pPreviousState = NULL) throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pszPrivilege*<br/>
 指向字符串的指针，该字符串包含要在 `CAccessToken` 对象中禁用的特权。
@@ -401,7 +401,7 @@ bool DisablePrivileges(
     CTokenPrivileges* pPreviousState = NULL) throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rPrivileges*<br/>
 指向字符串数组的指针，该字符串包含要在 `CAccessToken` 对象中禁用的特权。
@@ -423,7 +423,7 @@ bool EnablePrivilege(
     CTokenPrivileges* pPreviousState = NULL) throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pszPrivilege*<br/>
 指向字符串的指针，该字符串包含要在 `CAccessToken` 对象中启用的特权。
@@ -445,7 +445,7 @@ bool EnablePrivileges(
     CTokenPrivileges* pPreviousState = NULL) throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rPrivileges*<br/>
 指向字符串数组的指针，该字符串包含要在 `CAccessToken` 对象中启用的特权。
@@ -465,7 +465,7 @@ bool EnablePrivileges(
 bool GetDefaultDacl(CDacl* pDacl) const throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDacl*<br/>
 指向[CDacl 类](../../atl/reference/cdacl-class.md)对象的指针，该对象将接收 `CAccessToken` 对象的默认 DACL。
@@ -482,7 +482,7 @@ bool GetDefaultDacl(CDacl* pDacl) const throw(...);
 bool GetEffectiveToken(DWORD dwDesiredAccess) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwDesiredAccess*<br/>
 指定一个访问掩码，该掩码指定对访问令牌发起访问的请求类型。 这些请求的访问类型与令牌的 DACL 比较来确定同意或拒绝哪些访问。
@@ -499,7 +499,7 @@ bool GetEffectiveToken(DWORD dwDesiredAccess) throw();
 bool GetGroups(CTokenGroups* pGroups) const throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pGroups*<br/>
 指向将接收组信息的[CTokenGroups 类](../../atl/reference/ctokengroups-class.md)对象的指针。
@@ -529,7 +529,7 @@ bool GetImpersonationLevel(
     SECURITY_IMPERSONATION_LEVEL* pImpersonationLevel) const throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pImpersonationLevel*<br/>
 指向将接收模拟级别信息的[SECURITY_IMPERSONATION_LEVEL](/windows/win32/api/winnt/ne-winnt-security_impersonation_level)枚举类型的指针。
@@ -546,7 +546,7 @@ bool GetImpersonationLevel(
 bool GetLogonSessionId(LUID* pluid) const throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pluid*<br/>
 指向将接收登录会话 ID 的[LUID](/windows/win32/api/winnt/ns-winnt-luid)的指针。
@@ -567,7 +567,7 @@ bool GetLogonSessionId(LUID* pluid) const throw(...);
 bool GetLogonSid(CSid* pSid) const throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pSid*<br/>
 指向[CSid 类](../../atl/reference/csid-class.md)对象的指针。
@@ -588,7 +588,7 @@ bool GetLogonSid(CSid* pSid) const throw(...);
 bool GetOwner(CSid* pSid) const throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pSid*<br/>
 指向[CSid 类](../../atl/reference/csid-class.md)对象的指针。
@@ -609,7 +609,7 @@ bool GetOwner(CSid* pSid) const throw(...);
 bool GetPrimaryGroup(CSid* pSid) const throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pSid*<br/>
 指向[CSid 类](../../atl/reference/csid-class.md)对象的指针。
@@ -630,7 +630,7 @@ bool GetPrimaryGroup(CSid* pSid) const throw(...);
 bool GetPrivileges(CTokenPrivileges* pPrivileges) const throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pPrivileges*<br/>
 指向将接收权限的[CTokenPrivileges 类](../../atl/reference/ctokenprivileges-class.md)对象的指针。
@@ -647,7 +647,7 @@ bool GetPrivileges(CTokenPrivileges* pPrivileges) const throw(...);
 bool GetProcessToken(DWORD dwDesiredAccess, HANDLE hProcess = NULL) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwDesiredAccess*<br/>
 指定一个访问掩码，该掩码指定对访问令牌发起访问的请求类型。 这些请求的访问类型与令牌的 DACL 比较来确定同意或拒绝哪些访问。
@@ -683,7 +683,7 @@ HANDLE GetProfile() const throw();
 bool GetSource(TOKEN_SOURCE* pSource) const throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pSource*<br/>
 指向[TOKEN_SOURCE](/windows/win32/api/winnt/ns-winnt-token_source)结构的指针。
@@ -700,7 +700,7 @@ bool GetSource(TOKEN_SOURCE* pSource) const throw(...);
 bool GetStatistics(TOKEN_STATISTICS* pStatistics) const throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pStatistics*<br/>
 指向[TOKEN_STATISTICS](/windows/win32/api/winnt/ns-winnt-token_statistics)结构的指针。
@@ -717,7 +717,7 @@ bool GetStatistics(TOKEN_STATISTICS* pStatistics) const throw(...);
 bool GetTerminalServicesSessionId(DWORD* pdwSessionId) const throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pdwSessionId*<br/>
 终端服务会话 ID。
@@ -737,7 +737,7 @@ bool GetThreadToken(
     bool bOpenAsSelf = true) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwDesiredAccess*<br/>
 指定一个访问掩码，该掩码指定对访问令牌发起访问的请求类型。 这些请求的访问类型与令牌的 DACL 比较来确定同意或拒绝哪些访问。
@@ -762,7 +762,7 @@ bool GetThreadToken(
 bool GetTokenId(LUID* pluid) const throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pluid*<br/>
 指向将接收令牌 ID 的[LUID](/windows/win32/api/winnt/ns-winnt-luid)的指针。
@@ -779,7 +779,7 @@ bool GetTokenId(LUID* pluid) const throw(...);
 bool GetType(TOKEN_TYPE* pType) const throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pType*<br/>
 成功接收令牌类型的[TOKEN_TYPE](/windows/win32/api/winnt/ne-winnt-token_type)变量的地址。
@@ -800,7 +800,7 @@ TOKEN_TYPE 枚举类型包含区分主令牌和模拟令牌的值。
 bool GetUser(CSid* pSid) const throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pSid*<br/>
 指向[CSid 类](../../atl/reference/csid-class.md)对象的指针。
@@ -829,7 +829,7 @@ HKEY HKeyCurrentUser() const throw();
 bool Impersonate(HANDLE hThread = NULL) const throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hThread*<br/>
 要向其分配模拟标记的线程的句柄。 此句柄必须已使用 TOKEN_IMPERSONATE 访问权限打开。 如果*hThread*为 NULL，则该方法将导致线程使用模拟标记停止。
@@ -902,7 +902,7 @@ bool LogonUser(
     DWORD dwLogonProvider = LOGON32_PROVIDER_DEFAULT) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pszUserName*<br/>
 指向以 null 结尾的字符串的指针，该字符串指定用户名。 这是要登录到的用户帐户的名称。
@@ -938,7 +938,7 @@ bool OpenCOMClientToken(
     bool bOpenAsSelf = true) throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwDesiredAccess*<br/>
 指定一个访问掩码，该掩码指定对访问令牌发起访问的请求类型。 这些请求的访问类型与令牌的 DACL 比较来确定同意或拒绝哪些访问。
@@ -971,7 +971,7 @@ bool OpenNamedPipeClientToken(
     bool bOpenAsSelf = true) throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hPipe*<br/>
 命名管道的句柄。
@@ -1007,7 +1007,7 @@ bool OpenRPCClientToken(
     bool bOpenAsSelf = true) throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *BindingHandle*<br/>
 服务器上表示与客户端的绑定的绑定句柄。
@@ -1043,7 +1043,7 @@ bool OpenThreadToken(
     SECURITY_IMPERSONATION_LEVEL sil = SecurityImpersonation) throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwDesiredAccess*<br/>
 指定一个访问掩码，该掩码指定对访问令牌发起访问的请求类型。 这些请求的访问类型与令牌的 DACL 比较来确定同意或拒绝哪些访问。
@@ -1079,7 +1079,7 @@ bool PrivilegeCheck(
     bool* pbResult) const throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *RequiredPrivileges*<br/>
 指向[PRIVILEGE_SET](/windows/win32/api/winnt/ns-winnt-privilege_set)结构的指针。
@@ -1103,7 +1103,7 @@ bool PrivilegeCheck(
 bool Revert(HANDLE hThread = NULL) const throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hThread*<br/>
 要从模拟恢复的线程的句柄。 如果*hThread*为 NULL，则假定当前线程。
@@ -1124,7 +1124,7 @@ bool Revert(HANDLE hThread = NULL) const throw();
 bool SetDefaultDacl(const CDacl& rDacl) throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rDacl*<br/>
 新的默认[CDacl 类](../../atl/reference/cdacl-class.md)信息。
@@ -1145,7 +1145,7 @@ bool SetDefaultDacl(const CDacl& rDacl) throw(...);
 bool SetOwner(const CSid& rSid) throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rSid*<br/>
 包含所有者信息的[CSid 类](../../atl/reference/csid-class.md)对象。
@@ -1166,7 +1166,7 @@ bool SetOwner(const CSid& rSid) throw(...);
 bool SetPrimaryGroup(const CSid& rSid) throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rSid*<br/>
 包含主要组信息的[CSid 类](../../atl/reference/csid-class.md)对象。

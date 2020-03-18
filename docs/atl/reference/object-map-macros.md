@@ -7,11 +7,11 @@ f1_keywords:
 - atlcom/ATL::OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO
 ms.assetid: 680087f4-9894-41dd-a79c-6f337e1f13c1
 ms.openlocfilehash: 73dc924527bac8499adefab3d0d6b51afa500a5a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78863153"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423020"
 ---
 # <a name="object-map-macros"></a>对象映射宏
 
@@ -68,7 +68,7 @@ OBJECT_ENTRY_AUTO( clsid, class )
 中由C++类命名*类*实现的 COM 类的 CLSID。
 
 class<br/>
-中实现 clsid 所表示C++的 COM 类的类的名称。
+中实现 clsid 所表示C++的 COM 类的类的名称*clsid*。
 
 ### <a name="remarks"></a>备注
 
@@ -100,7 +100,7 @@ OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO( clsid, class )
 中由C++类命名*类*实现的 COM 类的 CLSID。
 
 class<br/>
-中实现 clsid 所表示C++的 COM 类的类的名称。
+中实现 clsid 所表示C++的 COM 类的类的名称*clsid*。
 
 ### <a name="remarks"></a>备注
 

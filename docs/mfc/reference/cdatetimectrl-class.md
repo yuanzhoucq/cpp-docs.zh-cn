@@ -41,11 +41,11 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
 ms.openlocfilehash: ec9060ba60c4d9877e5ee32bc68da0134f0ccf20
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866929"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424445"
 ---
 # <a name="cdatetimectrl-class"></a>CDateTimeCtrl 类
 
@@ -57,7 +57,7 @@ ms.locfileid: "78866929"
 class CDateTimeCtrl : public CWnd
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -152,7 +152,7 @@ virtual BOOL Create(
     UINT nID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwStyle*<br/>
 指定日期时间控件样式的组合。 有关日期和时间选择器样式的详细信息，请参阅[日期和时间选取器控件 Windows SDK 样式](/windows/win32/Controls/date-and-time-picker-control-styles)。
@@ -192,7 +192,7 @@ virtual BOOL Create(
 BOOL GetDateTimePickerInfo(LPDATETIMEPICKERINFO pDateTimePickerInfo) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -226,7 +226,7 @@ BOOL GetDateTimePickerInfo(LPDATETIMEPICKERINFO pDateTimePickerInfo) const;
 COLORREF GetMonthCalColor(int iColor) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iColor*<br/>
 一个**整数**值，指定要检索的月历的颜色区。 有关值的列表，请参阅[SetMonthCalColor](#setmonthcalcolor)的*iColor*参数。
@@ -309,7 +309,7 @@ DWORD GetRange(
     CTime* pMaxRange) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pMinRange*<br/>
 指向[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)对象或[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象的指针，该对象包含 `CDateTimeCtrl` 对象中允许的最早时间。
@@ -347,7 +347,7 @@ DWORD GetTime(CTime& timeDest) const;
 DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *timeDest*<br/>
 在第一个版本中，是对将接收系统时间信息的[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)对象的引用。 在第二个版本中，是对将接收系统时间信息的[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象的引用。
@@ -377,7 +377,7 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
 BOOL GetIdealSize(LPSIZE psize) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -411,7 +411,7 @@ BOOL GetIdealSize(LPSIZE psize) const;
 BOOL SetFormat(LPCTSTR pstrFormat);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pstrFormat*<br/>
 指向以零结尾的格式字符串的指针，该字符串定义所需的显示。 如果将此参数设置为 NULL，则会将控件重置为当前样式的默认格式字符串。
@@ -441,7 +441,7 @@ COLORREF SetMonthCalColor(
     COLORREF ref);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iColor*<br/>
 指定要设置月历控件哪个区域的**int**值。 此值可以是下列值之一。
@@ -480,7 +480,7 @@ void SetMonthCalFont(
     BOOL bRedraw = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hFont*<br/>
 要设置的字体的句柄。
@@ -507,7 +507,7 @@ void SetMonthCalFont(
 DWORD SetMonthCalStyle(DWORD dwStyle);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -547,7 +547,7 @@ BOOL SetRange(
     const CTime* pMaxRange);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pMinRange*<br/>
 指向[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)对象或[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象的指针，该对象包含 `CDateTimeCtrl` 对象中允许的最早时间。
@@ -577,7 +577,7 @@ BOOL SetTime(const CTime* pTimeNew);
 BOOL SetTime(LPSYSTEMTIME pTimeNew = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *timeNew*<br/>
 对[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)对象的引用，该对象包含将设置控件的。

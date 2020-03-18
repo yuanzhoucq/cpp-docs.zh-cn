@@ -6,11 +6,11 @@ f1_keywords:
 - atlwin/ATL::AtlPixelToHiMetric
 ms.assetid: ecb1b1b2-7e9d-4fbc-a855-16252d2d794c
 ms.openlocfilehash: 43a12985f259603a9b67f22f7a7891bf847c0b0f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78862902"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423014"
 ---
 # <a name="pixelhimetric-conversion-global-functions"></a>象素/HIMETRIC 转换全局函数
 
@@ -34,7 +34,7 @@ extern void AtlHiMetricToPixel(
     LPSIZEL lpSizeInPix);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpSizeInHiMetric*<br/>
 中指向对象的大小的指针，以 HIMETRIC 单位表示。
@@ -60,7 +60,7 @@ extern void AtlPixelToHiMetric(
     LPSIZEL lpSizeInHiMetric);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpSizeInPix*<br/>
 中一个指针，指向对象的大小（以像素为单位）。

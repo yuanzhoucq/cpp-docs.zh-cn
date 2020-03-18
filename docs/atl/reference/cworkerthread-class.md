@@ -16,11 +16,11 @@ helpviewer_keywords:
 - CWorkerThread class
 ms.assetid: be79a832-1345-4a36-a13e-a406cc65286f
 ms.openlocfilehash: f1aa76514b98bbf12f8e516d3d54f68e8ef4dd7d
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78862904"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423140"
 ---
 # <a name="cworkerthread-class"></a>CWorkerThread 类
 
@@ -36,12 +36,12 @@ template <class ThreadTraits = DefaultThreadTraits>
 class CWorkerThread
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ThreadTraits*<br/>
 提供线程创建函数的类，如[CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md)或[Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md)。
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="protected-structures"></a>受保护的结构
 
@@ -103,7 +103,7 @@ HRESULT AddHandle(
     DWORD_PTR dwParam) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hObject*<br/>
 可等待对象的句柄。
@@ -134,7 +134,7 @@ HRESULT AddTimer(
     HANDLE* phTimer) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwInterval*<br/>
 指定计时器的持续时间（以毫秒为单位）。
@@ -212,7 +212,7 @@ HRESULT Initialize() throw();
 HRESULT Initialize(CWorkerThread<ThreadTraits>* pThread) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pThread*<br/>
 现有的工作线程。
@@ -237,7 +237,7 @@ HRESULT Initialize(CWorkerThread<ThreadTraits>* pThread) throw();
 HRESULT RemoveHandle(HANDLE hObject) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hObject*<br/>
 要移除的句柄。
@@ -258,7 +258,7 @@ HRESULT RemoveHandle(HANDLE hObject) throw();
 HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwWait*<br/>
 等待工作线程关闭所用的时间（以毫秒为单位）。 ATL_WORKER_THREAD_WAIT 默认为10秒。 如有必要，你可以在包括 atlutil 之前为此符号定义你自己的值。

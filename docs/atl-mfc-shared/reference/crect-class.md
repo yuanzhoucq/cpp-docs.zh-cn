@@ -35,11 +35,11 @@ helpviewer_keywords:
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
 ms.openlocfilehash: 13f86c411cca98f5817d1b3b2d9162ae8af8b734
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866527"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423596"
 ---
 # <a name="crect-class"></a>CRect 类
 
@@ -51,7 +51,7 @@ ms.locfileid: "78866527"
 class CRect : public tagRECT
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -246,7 +246,7 @@ void CMyDlg::OnPaint()
 void CopyRect(LPCRECT lpSrcRect) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpSrcRect*<br/>
 指向要复制的[RECT](/windows/win32/api/windef/ns-windef-rect)结构或 `CRect` 的对象。
@@ -286,7 +286,7 @@ CRect(POINT point, SIZE size) throw();
 CRect(POINT topLeft, POINT bottomRight) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *l*<br/>
 指定 `CRect`的左侧位置。
@@ -373,7 +373,7 @@ void DeflateRect(LPCRECT lpRect) throw();
 void DeflateRect(int l, int t, int r, int b) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*<br/>
 指定 `CRect`左右两侧 deflate 的单位数。
@@ -428,7 +428,7 @@ ASSERT(rect2.top == 12 && rect2.bottom == 46);
 BOOL EqualRect(LPCRECT lpRect) const throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpRect*<br/>
 指向[矩形结构或](/windows/win32/api/windef/ns-windef-rect)`CRect` 对象，该对象包含矩形的左上角和右下角坐标。
@@ -499,7 +499,7 @@ void InflateRect(LPCRECT lpRect) throw();
 void InflateRect(int l, int t, int r,  int b) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*<br/>
 指定 `CRect`左右两侧的单位数。
@@ -549,7 +549,7 @@ ASSERT(rect == CRect(-50, -200, 350, 500));
 BOOL IntersectRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpRect1*<br/>
 指向[矩形](/windows/win32/api/windef/ns-windef-rect)结构或包含源矩形的 `CRect` 对象。
@@ -651,7 +651,7 @@ ASSERT(!rectNotNull.IsRectNull());
 void MoveToX(int x) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*<br/>
 矩形左上角的绝对 x 坐标。
@@ -675,7 +675,7 @@ void MoveToXY(int x, int y) throw();
 void MoveToXY(POINT point) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*<br/>
 矩形左上角的绝对 x 坐标。
@@ -703,7 +703,7 @@ ASSERT(rect == CRect(10, 10, 110, 110));
 void MoveToY(int y) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *y*<br/>
 矩形左上角的绝对 y 坐标。
@@ -752,7 +752,7 @@ void OffsetRect(POINT point) throw();
 void OffsetRect(SIZE size) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*<br/>
 指定向左或向右移动的量。 它必须为负数才能向左移动。
@@ -814,7 +814,7 @@ operator LPRECT() throw();
 void operator=(const RECT& srcRect) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *srcRect*<br/>
 引用源矩形。 可以是[矩形](/windows/win32/api/windef/ns-windef-rect)或 `CRect`。
@@ -837,7 +837,7 @@ ASSERT(rect2 == CRect(0, 0, 127, 168));
 BOOL operator==(const RECT& rect) const throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rect*<br/>
 引用源矩形。 可以是[矩形](/windows/win32/api/windef/ns-windef-rect)或 `CRect`。
@@ -877,7 +877,7 @@ ASSERT(rect1 == test);
 BOOL operator!=(const RECT& rect) const throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rect*<br/>
 引用源矩形。 可以是[矩形](/windows/win32/api/windef/ns-windef-rect)或 `CRect`。
@@ -919,7 +919,7 @@ void operator+=(SIZE size) throw();
 void operator+=(LPCRECT lpRect) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *情况*<br/>
 [POINT](/windows/win32/api/windef/ns-windef-point)结构或[CPoint](cpoint-class.md)对象，指定矩形要移动的单位数。
@@ -957,7 +957,7 @@ void operator-=(SIZE size) throw();
 void operator-=(LPCRECT lpRect) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *情况*<br/>
 [POINT](/windows/win32/api/windef/ns-windef-point)结构或[CPoint](cpoint-class.md)对象，指定矩形要移动的单位数。
@@ -993,7 +993,7 @@ ASSERT(rect1 == rectResult);
 void operator&=(const RECT& rect) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rect*<br/>
 包含[矩形](/windows/win32/api/windef/ns-windef-rect)或 `CRect`。
@@ -1017,7 +1017,7 @@ void operator&=(const RECT& rect) throw();
 void operator|=(const RECT& rect) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rect*<br/>
 包含 `CRect` 或[RECT](/windows/win32/api/windef/ns-windef-rect)。
@@ -1050,7 +1050,7 @@ CRect operator+(LPCRECT lpRect) const throw();
 CRect operator+(SIZE size) const throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *情况*<br/>
 [POINT](/windows/win32/api/windef/ns-windef-point)结构或[CPoint](cpoint-class.md)对象，用于指定要将返回值移动到的单位数。
@@ -1093,7 +1093,7 @@ CRect operator-(SIZE size) const throw();
 CRect operator-(LPCRECT lpRect) const throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *情况*<br/>
 一个[点](/windows/win32/api/windef/ns-windef-point)结构或 `CPoint` 对象，它指定要将返回值移动到的单位数。
@@ -1134,7 +1134,7 @@ ASSERT(rect2 == rectResult);
 CRect operator&(const RECT& rect2) const throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rect2*<br/>
 包含[矩形](/windows/win32/api/windef/ns-windef-rect)或 `CRect`。
@@ -1171,7 +1171,7 @@ CRect operator|(const RECT&
 rect2) const throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rect2*<br/>
 包含[矩形](/windows/win32/api/windef/ns-windef-rect)或 `CRect`。
@@ -1207,7 +1207,7 @@ ASSERT(rectResult == rect3);
 BOOL PtInRect(POINT point) const throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *情况*<br/>
 包含[点](/windows/win32/api/windef/ns-windef-point)结构或[CPoint](cpoint-class.md)对象。
@@ -1259,7 +1259,7 @@ ASSERT(rect.PtInRect(pt));
 void SetRect(int x1, int y1, int x2, int y2) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x1*<br/>
 指定左上角的 x 坐标。
@@ -1334,7 +1334,7 @@ ASSERT(sz.cx == 40 && sz.cy == 40);
 BOOL SubtractRect(LPCRECT lpRectSrc1, LPCRECT lpRectSrc2) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpRectSrc1*<br/>
 指向要从中减去矩形的[RECT](/windows/win32/api/windef/ns-windef-rect)结构或 `CRect` 对象。
@@ -1422,7 +1422,7 @@ const CPoint& TopLeft() const throw();
 BOOL UnionRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpRect1*<br/>
 指向包含源矩形的[矩形](/windows/win32/api/windef/ns-windef-rect)或 `CRect`。

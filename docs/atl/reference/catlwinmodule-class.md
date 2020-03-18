@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CAtlWinModule class
 ms.assetid: 7ec844af-0f68-4a34-b0c8-9de50a025df0
 ms.openlocfilehash: d0bc98fa48f84e67ab38106dea3fe22d5ad1757d
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78857346"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423404"
 ---
 # <a name="catlwinmodule-class"></a>CAtlWinModule 类
 
@@ -30,7 +30,7 @@ ms.locfileid: "78857346"
 class CAtlWinModule : public _ATL_WIN_MODULE
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -68,7 +68,7 @@ class CAtlWinModule : public _ATL_WIN_MODULE
 void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pData*<br/>
 一个指针，指向要初始化并添加到当前模块的 `_AtlCreateWndData` 结构。

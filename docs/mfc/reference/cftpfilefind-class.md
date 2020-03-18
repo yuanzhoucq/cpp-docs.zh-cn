@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CFtpFileFind [MFC], GetFileURL
 ms.assetid: 9667cf01-657f-4b11-b9db-f11e5a7b4e4c
 ms.openlocfilehash: 2f4a394e29be135cac95edf6f504d8b066f53414
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866293"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425867"
 ---
 # <a name="cftpfilefind-class"></a>CFtpFileFind 类
 
@@ -31,7 +31,7 @@ ms.locfileid: "78866293"
 class CFtpFileFind : public CFileFind
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -83,10 +83,10 @@ explicit CFtpFileFind(
     DWORD_PTR dwContext = 1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pConnection*<br/>
-指向 `CFtpConnection` 对象的指针。 可以通过调用[CInternetSession：： GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection)获取 FTP 连接。
+一个指向 `CFtpConnection` 对象的指针。 可以通过调用[CInternetSession：： GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection)获取 FTP 连接。
 
 *dwContext*<br/>
 `CFtpFileFind` 对象的上下文标识符。 有关此参数的详细信息，请参阅**备注**。
@@ -109,7 +109,7 @@ virtual BOOL FindFile(
     DWORD dwFlags = INTERNET_FLAG_RELOAD);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pstrName*<br/>
 指向字符串的指针，该字符串包含要查找的文件的名称。 如果为 NULL，则调用将执行通配符搜索（*）。

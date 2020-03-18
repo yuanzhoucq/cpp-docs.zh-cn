@@ -10,11 +10,11 @@ helpviewer_keywords:
 - IAxWinHostWindowLic interface
 ms.assetid: 750f1520-6bce-428c-aca0-fccbe3f063c7
 ms.openlocfilehash: aca3970d13db53ffa04fe9582bbe9b8db78e820d
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864848"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423074"
 ---
 # <a name="iaxwinhostwindowlic-interface"></a>IAxWinHostWindowLic 接口
 
@@ -26,7 +26,7 @@ ms.locfileid: "78864848"
 interface IAxWinHostWindowLic : IAxWinHostWindow
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="methods"></a>方法
 
@@ -62,7 +62,7 @@ STDMETHOD(CreateControlLic)(
     BSTR bstrLic);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bstrLic*<br/>
 中包含控件的许可证密钥的 BSTR。
@@ -92,7 +92,7 @@ STDMETHOD(CreateControlLicEx)(
     BSTR bstrLic);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bstrLic*<br/>
 中包含控件的许可证密钥的 BSTR。
