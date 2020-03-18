@@ -27,11 +27,11 @@ helpviewer_keywords:
 - std::setprecision [C++]
 - std::setw [C++]
 ms.openlocfilehash: 944834e40a399622b5c85d95100d4ca3c3c2da93
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856471"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426953"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt; 函数
 
@@ -51,13 +51,13 @@ template <class Money>
 T7 get_money(Money& amount, bool use_intl);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 \*量*
 提取的货币值。
 
 *use_intl*\
-如果**为 true**，则使用国际格式。 默认值为“false”。
+如果**为 true**，则使用国际格式。 默认值是 **false**秒。
 
 ### <a name="remarks"></a>备注
 
@@ -74,7 +74,7 @@ template <class Elem>
 T10 put_time(struct tm *time_ptr, const Elem *time_format);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *time_ptr*\
 时间结构形式的时间。
@@ -95,7 +95,7 @@ template <class Money>
 T8 put_money(const Money& amount, bool use_intl);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 \*量*
 要插入到流中的货币金额。
@@ -122,7 +122,7 @@ template <class Elem>
 T10 put_time(struct tm* time_ptr, const Elem* time_format);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *time_ptr*\
 时间结构中提供的要写入到流中的时间值。
@@ -145,7 +145,7 @@ quoted(std::string str, char delimiter, char escape) // or wide versions
 quoted(const char* str, char delimiter, char escape) // or wide versions
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *str*\
 Std：： string、char\*、字符串文本或原始字符串文本或其中任何一个的宽版本（例如 std：： wstring、wchar_t\*）。
@@ -309,7 +309,7 @@ Press Enter to exit
 T1 resetiosflags(ios_base::fmtflags mask);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *掩码*\
 要清除的标志。
@@ -330,7 +330,7 @@ T1 resetiosflags(ios_base::fmtflags mask);
 T3 setbase(int base);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *base*\
 数基。
@@ -360,7 +360,7 @@ template <class Elem>
 T4 setfill(Elem Ch);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Ch*\
 用于在右对齐显示中填充空格的字符。
@@ -381,7 +381,7 @@ T4 setfill(Elem Ch);
 T2 setiosflags(ios_base::fmtflags mask);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *掩码*\
 要设置的标志。
@@ -402,7 +402,7 @@ T2 setiosflags(ios_base::fmtflags mask);
 T5 setprecision(streamsize Prec);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Prec*\
 浮点值的精度。
@@ -423,7 +423,7 @@ T5 setprecision(streamsize Prec);
 T6 setw(streamsize Wide);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *宽*\
 显示字段的宽度。

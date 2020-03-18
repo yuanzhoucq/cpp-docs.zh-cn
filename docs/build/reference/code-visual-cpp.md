@@ -1,19 +1,18 @@
 ---
-title: '&lt;代码 > (C++文档注释)'
+title: '&lt;代码 > （C++文档注释）'
 ms.date: 11/04/2016
 f1_keywords:
-- code
 - <code>
 helpviewer_keywords:
 - <code> C++ XML tag
 - code C++ XML tag
 ms.assetid: 687db3f8-d435-4a90-b781-8da503fa39bc
-ms.openlocfilehash: d368f3c82afd028ce557db7d0507b3a6a4d7c118
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bacd95f9c93a439e5bab7a556ac2724a042411b8
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272398"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440156"
 ---
 # <a name="ltcodegt"></a>&lt;代码&gt;
 
@@ -38,8 +37,8 @@ ms.locfileid: "62272398"
 
 ## <a name="example"></a>示例
 
-有关如何使用 \<code> 标记的示例，请参阅 [\<example>](example-visual-cpp.md) 主题。
+有关如何使用 [code> 标记的示例，请参阅 \<](example-visual-cpp.md)example>\< 主题。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [XML 文档](xml-documentation-visual-cpp.md)

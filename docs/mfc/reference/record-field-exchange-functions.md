@@ -46,11 +46,11 @@ helpviewer_keywords:
 - RFX (record field exchange)
 ms.assetid: 6e4c5c1c-acb7-4c18-bf51-bf7959a696cd
 ms.openlocfilehash: 491b00fe65634acf7c8805dd471fa6e3cc62acf0
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78871647"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426605"
 ---
 # <a name="record-field-exchange-functions"></a>记录字段交换函数
 
@@ -129,7 +129,7 @@ void RFX_Binary(
    int nMaxLength = 255);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFX*<br/>
 指向[CFieldExchange](cfieldexchange-class.md)类的对象的指针。 此对象包含用于定义每次函数时的上下文的信息。 有关 `CFieldExchange` 对象可以指定的操作的详细信息，请参阅[记录字段交换： RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
@@ -168,7 +168,7 @@ void RFX_Bool(
    BOOL& value);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFX*<br/>
 指向[CFieldExchange](cfieldexchange-class.md)类的对象的指针。 此对象包含用于定义每次函数时的上下文的信息。 有关 `CFieldExchange` 对象可以指定的操作的详细信息，请参阅[记录字段交换： RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
@@ -200,7 +200,7 @@ void RFX_Byte(
    BYTE& value);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFX*<br/>
 指向[CFieldExchange](cfieldexchange-class.md)类的对象的指针。 此对象包含用于定义每次函数时的上下文的信息。 有关 `CFieldExchange` 对象可以指定的操作的详细信息，请参阅[记录字段交换： RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
@@ -242,7 +242,7 @@ void RFX_Date(
    COleDateTime& value);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFX*<br/>
 指向[CFieldExchange](cfieldexchange-class.md)类的对象的指针。 此对象包含用于定义每次函数时的上下文的信息。 有关 `CFieldExchange` 对象可以指定的操作的详细信息，请参阅[记录字段交换： RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
@@ -282,7 +282,7 @@ void RFX_Double(
    double& value);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFX*<br/>
 指向[CFieldExchange](cfieldexchange-class.md)类的对象的指针。 此对象包含用于定义每次函数时的上下文的信息。 有关 `CFieldExchange` 对象可以指定的操作的详细信息，请参阅[记录字段交换： RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
@@ -314,7 +314,7 @@ void RFX_Int(
    int& value);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFX*<br/>
 指向[CFieldExchange](cfieldexchange-class.md)类的对象的指针。 此对象包含用于定义每次函数时的上下文的信息。 有关 `CFieldExchange` 对象可以指定的操作的详细信息，请参阅[记录字段交换： RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
@@ -347,7 +347,7 @@ void RFX_Long(
 value );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFX*<br/>
 指向[CFieldExchange](cfieldexchange-class.md)类的对象的指针。 此对象包含用于定义每次函数时的上下文的信息。 有关 `CFieldExchange` 对象可以指定的操作的详细信息，请参阅[记录字段交换： RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
@@ -379,7 +379,7 @@ void RFX_LongBinary(
    CLongBinary& value);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFX*<br/>
 指向[CFieldExchange](cfieldexchange-class.md)类的对象的指针。 此对象包含用于定义每次函数时的上下文的信息。 有关 `CFieldExchange` 对象可以指定的操作的详细信息，请参阅[记录字段交换： RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
@@ -411,7 +411,7 @@ void RFX_Single(
    float& value);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFX*<br/>
 指向[CFieldExchange](cfieldexchange-class.md)类的对象的指针。 此对象包含用于定义每次函数时的上下文的信息。 有关 `CFieldExchange` 对象可以指定的操作的详细信息，请参阅[记录字段交换： RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
@@ -446,7 +446,7 @@ void RFX_Text(
    short nScale = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFX*<br/>
 指向 `CFieldExchange`类的对象的指针。 此对象包含用于定义每次函数时的上下文的信息。 有关 `CFieldExchange` 对象可以指定的操作的详细信息，请参阅[记录字段交换： RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
@@ -511,7 +511,7 @@ void RFX_Binary_Bulk(
    int nMaxLength);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFX*<br/>
 指向[CFieldExchange](cfieldexchange-class.md)对象的指针。 此对象包含用于定义每次函数时的上下文的信息。 有关详细信息，请参阅[记录字段交换： RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
@@ -561,7 +561,7 @@ void RFX_Bool_Bulk(
    long** prgLengths);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFX*<br/>
 指向[CFieldExchange](cfieldexchange-class.md)对象的指针。 此对象包含用于定义每次函数时的上下文的信息。 有关详细信息，请参阅[记录字段交换： RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
@@ -608,7 +608,7 @@ void RFX_Byte_Bulk(
    long** prgLengths);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFX*<br/>
 指向[CFieldExchange](cfieldexchange-class.md)对象的指针。 此对象包含用于定义每次函数时的上下文的信息。 有关详细信息，请参阅[记录字段交换： RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
@@ -655,7 +655,7 @@ void RFX_Date_Bulk(
    long** prgLengths);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFX*<br/>
 指向[CFieldExchange](cfieldexchange-class.md)对象的指针。 此对象包含用于定义每次函数时的上下文的信息。 有关详细信息，请参阅[记录字段交换： RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
@@ -702,7 +702,7 @@ void RFX_Double_Bulk(
    long** prgLengths);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFX*<br/>
 指向[CFieldExchange](cfieldexchange-class.md)对象的指针。 此对象包含用于定义每次函数时的上下文的信息。 有关详细信息，请参阅[记录字段交换： RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
@@ -748,7 +748,7 @@ void RFX_Int(
    int& value);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFX*<br/>
 指向[CFieldExchange](cfieldexchange-class.md)类的对象的指针。 此对象包含用于定义每次函数时的上下文的信息。 有关 `CFieldExchange` 对象可以指定的操作的详细信息，请参阅[记录字段交换： RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
@@ -781,7 +781,7 @@ void RFX_Long_Bulk(
    long** prgLengths);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFX*<br/>
 指向[CFieldExchange](cfieldexchange-class.md)对象的指针。 此对象包含用于定义每次函数时的上下文的信息。 有关详细信息，请参阅[记录字段交换： RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
@@ -828,7 +828,7 @@ void RFX_Single_Bulk(
    long** prgLengths);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFX*<br/>
 指向[CFieldExchange](cfieldexchange-class.md)对象的指针。 此对象包含用于定义每次函数时的上下文的信息。 有关详细信息，请参阅[记录字段交换： RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
@@ -876,7 +876,7 @@ void RFX_Text_Bulk(
    int nMaxLength);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFX*<br/>
 指向[CFieldExchange](cfieldexchange-class.md)对象的指针。 此对象包含用于定义每次函数时的上下文的信息。 有关详细信息，请参阅[记录字段交换： RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。
@@ -942,7 +942,7 @@ void AFXAPI DFX_Binary(
    DWORD dwBindOptions = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFX*<br/>
 指向[CDaoFieldExchange](cdaofieldexchange-class.md)类的对象的指针。 此对象包含用于定义每次函数时的上下文的信息。
@@ -988,7 +988,7 @@ void AFXAPI DFX_Bool(
    DWORD dwBindOptions = AFX_DAO_ENABLE_FIELD_CACHE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFX*<br/>
 指向[CDaoFieldExchange](cdaofieldexchange-class.md)类的对象的指针。 此对象包含用于定义每次函数时的上下文的信息。
@@ -1031,7 +1031,7 @@ void AFXAPI DFX_Byte(
    DWORD dwBindOptions = AFX_DAO_ENABLE_FIELD_CACHE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFX*<br/>
 指向[CDaoFieldExchange](cdaofieldexchange-class.md)类的对象的指针。 此对象包含用于定义每次函数时的上下文的信息。
@@ -1074,7 +1074,7 @@ void AFXAPI DFX_Currency(
    DWORD dwBindOptions = AFX_DAO_ENABLE_FIELD_CACHE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFX*<br/>
 指向[CDaoFieldExchange](cdaofieldexchange-class.md)类的对象的指针。 此对象包含用于定义每次函数时的上下文的信息。
@@ -1117,7 +1117,7 @@ void AFXAPI DFX_DateTime(
    DWORD dwBindOptions = AFX_DAO_ENABLE_FIELD_CACHE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFX*<br/>
 指向[CDaoFieldExchange](cdaofieldexchange-class.md)类的对象的指针。 此对象包含用于定义每次函数时的上下文的信息。
@@ -1163,7 +1163,7 @@ void AFXAPI DFX_Double(
    DWORD dwBindOptions = AFX_DAO_ENABLE_FIELD_CACHE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFX*<br/>
 指向[CDaoFieldExchange](cdaofieldexchange-class.md)类的对象的指针。 此对象包含用于定义每次函数时的上下文的信息。
@@ -1206,7 +1206,7 @@ void AFXAPI DFX_Long(
    DWORD dwBindOptions = AFX_DAO_ENABLE_FIELD_CACHE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFX*<br/>
 指向[CDaoFieldExchange](cdaofieldexchange-class.md)类的对象的指针。 此对象包含用于定义每次函数时的上下文的信息。
@@ -1250,7 +1250,7 @@ void AFXAPI DFX_LongBinary(
    DWORD dwBindOptions = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFX*<br/>
 指向[CDaoFieldExchange](cdaofieldexchange-class.md)类的对象的指针。 此对象包含用于定义每次函数时的上下文的信息。
@@ -1296,7 +1296,7 @@ void AFXAPI DFX_Short(
    DWORD dwBindOptions = AFX_DAO_ENABLE_FIELD_CACHE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFX*<br/>
 指向[CDaoFieldExchange](cdaofieldexchange-class.md)类的对象的指针。 此对象包含用于定义每次函数时的上下文的信息。
@@ -1342,7 +1342,7 @@ void AFXAPI DFX_Single(
    DWORD dwBindOptions = AFX_DAO_ENABLE_FIELD_CACHE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFX*<br/>
 指向[CDaoFieldExchange](cdaofieldexchange-class.md)类的对象的指针。 此对象包含用于定义每次函数时的上下文的信息。
@@ -1386,7 +1386,7 @@ void AFXAPI DFX_Text(
    DWORD dwBindOptions = AFX_DAO_ENABLE_FIELD_CACHE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFX*<br/>
 指向[CDaoFieldExchange](cdaofieldexchange-class.md)类的对象的指针。 此对象包含用于定义每次函数时的上下文的信息。

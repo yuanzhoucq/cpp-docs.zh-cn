@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::operator&lt;= (vector)
 - std::operator== (vector)
 ms.openlocfilehash: f6717add93c489f536bd0c0b0f82b74bbd915985
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876056"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427571"
 ---
 # <a name="ltvectorgt-operators"></a>&lt;vector&gt; 运算符
 
@@ -33,7 +33,7 @@ ms.locfileid: "78876056"
 bool operator!=(const vector<Type, Allocator>& left, const vector<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 一个 `vector` 类型的对象。
@@ -84,7 +84,7 @@ Vectors not equal.
 bool operator<(const vector<Type, Allocator>& left, const vector<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 一个 `vector` 类型的对象。
@@ -135,7 +135,7 @@ Vector v1 is less than vector v2.
 bool operator<=(const vector<Type, Allocator>& left, const vector<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 一个 `vector` 类型的对象。
@@ -186,7 +186,7 @@ Vector v1 is less than or equal to vector v2.
 bool operator==(const vector<Type, Allocator>& left, const vector<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 一个 `vector` 类型的对象。
@@ -237,7 +237,7 @@ Vectors equal.
 bool operator>(const vector<Type, Allocator>& left, const vector<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 一个 `vector` 类型的对象。
@@ -289,7 +289,7 @@ Vector v1 is greater than vector v2.
 bool operator>=(const vector<Type, Allocator>& left, const vector<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 一个 `vector` 类型的对象。

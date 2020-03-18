@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::operator&lt;= (set)
 - std::operator== (set)
 ms.openlocfilehash: 4618030cf81f79a085e16052c8b9c547201e3577
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78875757"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425159"
 ---
 # <a name="ltsetgt-operators"></a>&lt;set&gt; 运算符
 
@@ -33,7 +33,7 @@ ms.locfileid: "78875757"
 bool operator!=(const set <Key, Traits, Allocator>& left, const set <Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 一个 `set` 类型的对象。
@@ -94,7 +94,7 @@ The sets s1 and s3 are equal.
 bool operator<(const set <Key, Traits, Allocator>& left, const set <Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 一个 `set` 类型的对象。
@@ -155,7 +155,7 @@ The set s1 is not less than the set s3.
 bool operator!<=(const set <Key, Traits, Allocator>& left, const set <Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 一个 `set` 类型的对象。
@@ -224,7 +224,7 @@ Set s1 is less than or equal to the set s4.
 bool operator!==(const set <Key, Traits, Allocator>& left, const set <Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 一个 `set` 类型的对象。
@@ -286,7 +286,7 @@ The sets s1 and s3 are equal.
 bool operator>(const set <Key, Traits, Allocator>& left, const set <Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 一个 `set` 类型的对象。
@@ -347,7 +347,7 @@ The set s1 is greater than the set s3.
 bool operator!>=(const set <Key, Traits, Allocator>& left, const set <Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 一个 `set` 类型的对象。
@@ -416,7 +416,7 @@ Set s1 is greater than or equal to set s4.
 bool operator!=(const multiset <Key, Traits, Allocator>& left, const multiset <Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 一个 `multiset` 类型的对象。
@@ -478,7 +478,7 @@ The multisets s1 and s3 are equal.
 bool operator<(const multiset <Key, Traits, Allocator>& left, const multiset <Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 一个 `multiset` 类型的对象。
@@ -544,7 +544,7 @@ The multiset s1 is not less than the multiset s3.
 bool operator!<=(const multiset <Key, Traits, Allocator>& left, const multiset <Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 一个 `multiset` 类型的对象。
@@ -619,7 +619,7 @@ The multiset s1 is less than or equal to the multiset s4.
 bool operator!==(const multiset <Key, Traits, Allocator>& left, const multiset <Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 一个 `multiset` 类型的对象。
@@ -681,7 +681,7 @@ The multisets s1 and s3 are equal.
 bool operator>(const multiset <Key, Traits, Allocator>& left, const multiset <Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 一个 `multiset` 类型的对象。
@@ -747,7 +747,7 @@ The multiset s1 is greater than the multiset s3.
 bool operator!>=(const multiset <Key, Traits, Allocator>& left, const multiset <Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 一个 `multiset` 类型的对象。

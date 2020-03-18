@@ -63,11 +63,11 @@ helpviewer_keywords:
 - std::atomic_thread_fence [C++]
 - std::kill_dependency [C++]
 ms.openlocfilehash: 5314db43bed913e801846341309513c239216887
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78867073"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427259"
 ---
 # <a name="ltatomicgt-functions"></a>&lt;atomic&gt; 函数
 
@@ -102,7 +102,7 @@ inline bool atomic_compare_exchange_strong(
     Ty Value) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Atom*\
 指向*原子*对象的指针，该对象存储类型 `Ty`的值。
@@ -143,7 +143,7 @@ inline bool atomic_compare_exchange_strong_explicit(
     memory_order Order2) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Atom*\
 指向存储类型 `atomic` 值的 `Ty` 对象的指针。
@@ -186,7 +186,7 @@ inline bool atomic_compare_exchange_strong(
     Ty Value) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Atom*\
 指向存储类型 `atomic` 值的 `Ty` 对象的指针。
@@ -227,7 +227,7 @@ inline bool atomic_compare_exchange_weak_explicit(
     memory_order Order2) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Atom*\
 指向存储类型 `atomic` 值的 `Ty` 对象的指针。
@@ -264,7 +264,7 @@ template <class Ty>
 inline T atomic_exchange(atomic<Ty>* Atom, Ty Value) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Atom*\
 指向存储类型 `atomic` 值的 `Ty` 对象的指针。
@@ -298,7 +298,7 @@ inline Ty atomic_exchange_explicit(
     memory_order Order) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Atom*\
 指向存储类型 `atomic` 值的 `Ty` 对象的指针。
@@ -328,7 +328,7 @@ template <class T>
 T* atomic_fetch_add(atomic<T*>* Atom, ptrdiff_t Value) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Atom*\
 一个指向 `atomic` 对象的指针，该对象存储指向类型 `T` 的指针。
@@ -372,7 +372,7 @@ T* atomic_fetch_add_explicit(
     memory_order Order) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Atom*\
 一个指向 `atomic` 对象的指针，该对象存储指向类型 `T` 的指针。
@@ -415,7 +415,7 @@ template <class T>
 inline T atomic_fetch_and(volatile atomic<T>* Atom, T Value) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Atom*\
 指向存储类型 `atomic` 值的 `T` 对象的指针。
@@ -449,7 +449,7 @@ inline T atomic_fetch_and_explicit(
     memory_order Order) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Atom*\
 指向存储类型 `atomic` 值的 `T` 对象的指针。
@@ -479,7 +479,7 @@ template <class T>
 inline T atomic_fetch_or (volatile atomic<T>* Atom, T Value) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Atom*\
 指向存储类型 `atomic` 值的 `T` 对象的指针。
@@ -513,7 +513,7 @@ inline T atomic_fetch_or_explicit(
     memory_order Order) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Atom*\
 指向存储类型 `atomic` 值的 `T` 对象的指针。
@@ -548,7 +548,7 @@ T* atomic_fetch_sub(
     ptrdiff_t Value) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Atom*\
 一个指向 `atomic` 对象的指针，该对象存储指向类型 `T` 的指针。
@@ -590,7 +590,7 @@ T* atomic_fetch_sub_explicit(
     ptrdiff_t Value, memory_order Order) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Atom*\
 一个指向 `atomic` 对象的指针，该对象存储指向类型 `T` 的指针。
@@ -634,7 +634,7 @@ template <class T>
 inline T atomic_fetch_xor(volatile atomic<T>* Atom, T Value) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Atom*\
 指向存储类型 `atomic` 值的 `T` 对象的指针。
@@ -668,7 +668,7 @@ inline T atomic_fetch_xor_explicit(
     memory_order Order) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Atom*\
 指向存储类型 `atomic` 值的 `T` 对象的指针。
@@ -696,7 +696,7 @@ inline void atomic_flag_clear(volatile atomic_flag* Flag) noexcept;
 inline void atomic_flag_clear(atomic_flag* Flag) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *标志*\
 指向 `atomic_flag` 对象的指针。
@@ -710,7 +710,7 @@ inline void atomic_flag_clear_explicit(volatile atomic_flag* Flag, memory_order 
 inline void atomic_flag_clear_explicit(atomic_flag* Flag, memory_order Order) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *标志*\
 指向 `atomic_flag` 对象的指针。
@@ -727,7 +727,7 @@ inline bool atomic_flag_test_and_set(volatile atomic_flag* Flag,) noexcept;
 inline bool atomic_flag_test_and_set(atomic_flag* Flag,) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *标志*\
 指向 `atomic_flag` 对象的指针。
@@ -745,7 +745,7 @@ inline bool atomic_flag_test_and_set_explicit(volatile atomic_flag* Flag, memory
 inline bool atomic_flag_test_and_set_explicit(atomic_flag* Flag, memory_order Order) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *标志*\
 指向 `atomic_flag` 对象的指针。
@@ -768,7 +768,7 @@ template <class Ty>
 inline void atomic_init(atomic<Ty>* Atom, Ty Value) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Atom*\
 指向存储类型 `atomic` 值的 `Ty` 对象的指针。
@@ -791,7 +791,7 @@ template <class T>
 inline bool atomic_is_lock_free(const atomic<T>* Atom) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Atom*\
 指向存储类型 `atomic` 值的 `T` 对象的指针。
@@ -815,7 +815,7 @@ template <class Ty>
 inline Ty atomic_load(const atomic<Ty>* Atom) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Atom*\
 指向包含 `atomic` 类型值的 `Ty` 对象的指针。
@@ -839,7 +839,7 @@ template <class Ty>
 inline Ty atomic_load_explicit(const atomic<Ty>* Atom, memory_order Order) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Atom*\
 指向包含 `atomic` 类型值的 `Ty` 对象的指针。
@@ -859,7 +859,7 @@ inline Ty atomic_load_explicit(const atomic<Ty>* Atom, memory_order Order) noexc
 inline void atomic_signal_fence(memory_order Order) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *订单*\
 确定 fence 类型的内存排序约束。
@@ -888,7 +888,7 @@ template <class Ty>
 inline Ty atomic_store_explicit(const atomic<Ty>* Atom, T Value) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Atom*\
 指向包含 `Ty` 类型值的原子对象的指针。
@@ -918,7 +918,7 @@ inline Ty atomic_store_explicit(
     memory_order Order) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Atom*\
 指向包含 `atomic` 类型值的 `Ty` 对象的指针。
@@ -941,7 +941,7 @@ inline Ty atomic_store_explicit(
 inline void atomic_thread_fence(memory_order Order) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *订单*\
 确定 fence 类型的内存排序约束。
@@ -968,7 +968,7 @@ template <class Ty>
 Ty kill_dependency(Ty Arg) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Arg*\
 一个 `Ty` 类型的值。

@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::basic_ofstream [C++], swap
 ms.assetid: 3bcc9c51-6dfc-4844-8fcc-22ef57c9dff1
 ms.openlocfilehash: a73803f25c4fb9e54703b8bca93e68fedb63074e
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865857"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424061"
 ---
 # <a name="basic_ofstream-class"></a>basic_ofstream 类
 
@@ -34,7 +34,7 @@ template <class Elem, class Tr = char_traits<Elem>>
 class basic_ofstream : public basic_ostream<Elem, Tr>
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Elem*\
 文件缓冲区的基本元素。
@@ -74,7 +74,7 @@ int main(int argc, char **argv)
 
 |构造函数|说明|
 |-|-|
-|[basic_ofstream](#basic_ofstream)|创建 `basic_ofstream` 类型的对象。|
+|[basic_ofstream](#basic_ofstream)|创建一个 `basic_ofstream` 类型的对象。|
 
 ### <a name="member-functions"></a>成员函数
 
@@ -88,7 +88,7 @@ int main(int argc, char **argv)
 
 ### <a name="operators"></a>运算符
 
-|运算符|说明|
+|操作员|说明|
 |-|-|
 |[operator=](#op_eq)|分配此流对象的内容。 这是一种移动赋值，所涉及的 `rvalue reference` 不会留下副本。|
 
@@ -100,7 +100,7 @@ int main(int argc, char **argv)
 
 ## <a name="basic_ofstream"></a>  basic_ofstream::basic_ofstream
 
-创建 `basic_ofstream` 类型的对象。
+创建一个 `basic_ofstream` 类型的对象。
 
 ```cpp
 basic_ofstream();
@@ -119,7 +119,7 @@ basic_ofstream(
     basic_ofstream&& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Filename*\
 要打开的文件的名称。
@@ -241,7 +241,7 @@ void open(
     ios_base::openmode _Mode);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Filename*\
 要打开的文件的名称。
@@ -268,7 +268,7 @@ void open(
 basic_ofstream& operator=(basic_ofstream&& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *right*\
 对 `basic_ofstream` 对象的右值引用。
@@ -305,7 +305,7 @@ basic_filebuf<Elem, Tr> *rdbuf() const
 void swap(basic_ofstream& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *right*\
 对另一个 `lvalue` 对象的 `basic_ofstream` 引用。

@@ -7,11 +7,11 @@ f1_keywords:
 - atlwin/ATL::DECLARE_WND_CLASS_EX
 ms.assetid: ce18681a-2bab-4453-9895-0f3ea47c2b24
 ms.openlocfilehash: c4617a04c199741b97316122456e417a94275e89
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78862953"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422936"
 ---
 # <a name="window-class-macros"></a>窗口类宏
 
@@ -36,7 +36,7 @@ ms.locfileid: "78862953"
 DECLARE_WND_CLASS( WndClassName )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *WndClassName*<br/>
 中新窗口类的名称。 如果为 NULL，则 ATL 将生成一个窗口类名。
@@ -71,7 +71,7 @@ DECLARE_WND_CLASS 还指定了默认窗口的背景色。 使用[DECLARE_WND_CLA
 DECLARE_WND_CLASS2( WndClassName, EnclosingClass )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *WndClassName*<br/>
 中新窗口类的名称。 如果为 NULL，则 ATL 将生成一个窗口类名。
@@ -92,7 +92,7 @@ DECLARE_WND_CLASS2( WndClassName, EnclosingClass )
 DECLARE_WND_SUPERCLASS( WndClassName, OrigWndClassName )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *WndClassName*<br/>
 中将*OrigWndClassName*的超类的窗口类的名称。 如果为 NULL，则 ATL 将生成一个窗口类名。
@@ -122,7 +122,7 @@ DECLARE_WND_SUPERCLASS 实现以下静态函数：
 DECLARE_WND_CLASS_EX( WndClassName, style, bkgnd )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *WndClassName*<br/>
 中新窗口类的名称。 如果为 NULL，则 ATL 将生成一个窗口类名。

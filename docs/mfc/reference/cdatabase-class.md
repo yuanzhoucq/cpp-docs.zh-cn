@@ -51,11 +51,11 @@ helpviewer_keywords:
 - CDatabase [MFC], m_hdbc
 ms.assetid: bd0de70a-e3c3-4441-bcaa-bbf434426ca8
 ms.openlocfilehash: ebc36d82af9bfe12ab30a86214e58610b5eaab95
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876297"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424505"
 ---
 # <a name="cdatabase-class"></a>CDatabase 类
 
@@ -67,7 +67,7 @@ ms.locfileid: "78876297"
 class CDatabase : public CObject
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -171,7 +171,7 @@ BOOL BeginTrans();
 virtual void BindParameters(HSTMT hstmt);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hstmt*<br/>
 要将参数绑定到的 ODBC 语句句柄。
@@ -298,7 +298,7 @@ BOOL CommitTrans();
 void ExecuteSQL(LPCTSTR lpszSQL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszSQL*<br/>
 指向以 null 结尾的字符串的指针，该字符串包含要执行的有效 SQL 命令。 可以传递[CString](../../atl-mfc-shared/reference/cstringt-class.md)。
@@ -459,7 +459,7 @@ BOOL IsOpen() const;
 virtual void OnSetOptions(HSTMT hstmt);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hstmt*<br/>
 正在为其设置选项的 ODBC 语句句柄。
@@ -490,7 +490,7 @@ virtual BOOL Open(
     BOOL bUseCursorLib = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszDSN*<br/>
 指定数据源名称-通过 ODBC 管理程序在 ODBC 中注册的名称。 如果在*lpszConnect*中指定了 dsn 值（格式为 "DSN =\<data-source >"），则不能在*lpszDSN*中再次指定它。 在这种情况下， *lpszDSN*应为 NULL。 否则，如果要向用户显示 "数据源" 对话框（用户可以在其中选择数据源），则可以传递 NULL。 有关详细信息，请参阅 "备注"。
@@ -499,7 +499,7 @@ virtual BOOL Open(
 在此版本的类库中不受支持。 目前，如果此参数为 TRUE，则断言失败。 数据源始终以共享方式打开（非独占）。
 
 *bReadOnly*<br/>
-如果希望连接为只读并且禁止更新数据源，则为 TRUE。 所有依赖记录集均继承此属性。 默认值为 FALSE。
+如果希望连接为只读并且禁止更新数据源，则为 TRUE。 所有依赖记录集均继承此属性。 默认值是 FALSE。
 
 *lpszConnect*<br/>
 指定连接字符串。 连接字符串会连接信息，其中可能包括数据源名称、对数据源有效的用户 ID、用户身份验证字符串（如果数据源需要密码，则为密码）和其他信息。 整个连接字符串必须以字符串 "ODBC;" 作为前缀。（大写或小写）。 "ODBC;" 字符串用于指示连接到 ODBC 数据源;这是为了在将来版本的类库可能支持非 ODBC 数据源时实现向上兼容性。
@@ -540,7 +540,7 @@ virtual BOOL OpenEx(
     DWORD dwOptions = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszConnectString*<br/>
 指定 ODBC 连接字符串。 这包括数据源名称以及其他可选信息，如用户 ID 和密码。 例如，"DSN = SQLServer_Source;UID = SA;PWD = abc123 "是可能的连接字符串。 请注意，如果为*lpszConnectString*传递 NULL，"数据源" 对话框将提示用户选择一个数据源。
@@ -610,7 +610,7 @@ BOOL Rollback();
 void SetLoginTimeout(DWORD dwSeconds);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwSeconds*<br/>
 连接尝试超时之前允许的秒数。
@@ -629,7 +629,7 @@ void SetLoginTimeout(DWORD dwSeconds);
 void SetQueryTimeout(DWORD dwSeconds);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwSeconds*<br/>
 查询尝试超时之前允许的秒数。

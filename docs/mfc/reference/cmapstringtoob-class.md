@@ -35,11 +35,11 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], SetAt
 ms.assetid: 09653980-b885-4f3a-8594-0aeb7f94c601
 ms.openlocfilehash: b56e9052533269ba62d248312f07ac16db71bf4a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876369"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424319"
 ---
 # <a name="cmapstringtoob-class"></a>CMapStringToOb 类
 
@@ -51,7 +51,7 @@ ms.locfileid: "78876369"
 class CMapStringToOb : public CObject
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -115,7 +115,7 @@ class CMapStringToOb : public CObject
 CMapStringToOb(INT_PTR nBlockSize = 10);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nBlockSize*<br/>
 指定用于扩展映射的内存分配粒度。
@@ -208,7 +208,7 @@ void GetNextAssoc(
     CObject*& rValue) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rNextPosition*<br/>
 指定对上一个 `GetNextAssoc` 或 `GetStartPosition` 调用返回的位置值的引用。
@@ -327,9 +327,9 @@ POSITION GetStartPosition() const;
 UINT HashKey(LPCTSTR key) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*key*<br/>
+*键*<br/>
 要计算其哈希值的键。
 
 ### <a name="return-value"></a>返回值
@@ -359,7 +359,7 @@ void InitHashTable(
     BOOL bAllocNow = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hashSize*<br/>
 哈希表中的项数。
@@ -421,9 +421,9 @@ BOOL Lookup(
     CObject*& rValue) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*key*<br/>
+*键*<br/>
 指定标识要查找的元素的字符串键。
 
 *右值*<br/>
@@ -464,9 +464,9 @@ BOOL LookupKey(
     LPCTSTR& rKey) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*key*<br/>
+*键*<br/>
 指定标识要查找的元素的字符串键。
 
 *rKey*<br/>
@@ -569,9 +569,9 @@ void RemoveAll();
 BOOL RemoveKey(LPCTSTR key);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*key*<br/>
+*键*<br/>
 指定用于映射查找的字符串。
 
 ### <a name="return-value"></a>返回值
@@ -618,9 +618,9 @@ void SetAt(
     CObject* newValue);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*key*<br/>
+*键*<br/>
 指定作为新元素的键的字符串。
 
 *newValue*<br/>

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - registry, ATL macros
 ms.assetid: 3ee041da-c63b-42a4-89cf-2a4b2a6f81ae
 ms.openlocfilehash: c2a70c15473798ba6eb2ef35e0b7ded395708586
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78857130"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422954"
 ---
 # <a name="registry-macros"></a>注册表宏
 
@@ -51,7 +51,7 @@ ms.locfileid: "78857130"
 
 [!code-cpp[NVC_ATL_EventHandlingSample#5](../../atl/codesnippet/cpp/registry-macros_1.cpp)]
 
-##  <a name="declare_libid"></a>  DECLARE_LIBID
+##  <a name="declare_libid"></a>DECLARE_LIBID
 
 为 ATL 提供了一种方法来获取类型库的*libid* 。
 
@@ -59,7 +59,7 @@ ms.locfileid: "78857130"
 DECLARE_LIBID( libid )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *libid*<br/>
 类型库的 GUID。
@@ -93,9 +93,9 @@ DECLARE_REGISTRY(
     flags )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*class*<br/>
+class<br/>
 中为了向后兼容而提供。
 
 pid<br/>
@@ -107,8 +107,8 @@ pid<br/>
 *nid*<br/>
 中UINT，是注册表中要用作程序说明的资源字符串的索引。
 
-*flags*<br/>
-中包含注册表中程序的线程模型的 DWORD。 必须是以下值之一：THREADFLAGS_APARTMENT、THREADFLAGS_BOTH 或 AUTPRXFLAG。
+*flag*<br/>
+中包含注册表中程序的线程模型的 DWORD。 必须是下列值之一： THREADFLAGS_APARTMENT、THREADFLAGS_BOTH 或 AUTPRXFLAG。
 
 ### <a name="remarks"></a>备注
 
@@ -126,7 +126,7 @@ DECLARE_REGISTRY_APPID_RESOURCEID(
     appid )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *resid 标识*<br/>
 包含*appid*相关信息的 .rgs 文件的资源 id。
@@ -150,7 +150,7 @@ DECLARE_REGISTRY_APPID_RESOURCEID(
 DECLARE_REGISTRY_RESOURCE( x )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*<br/>
 中资源的字符串标识符。
@@ -175,7 +175,7 @@ DECLARE_REGISTRY_RESOURCE( x )
 DECLARE_REGISTRY_RESOURCEID( x )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*<br/>
 中向导生成的资源标识符。
@@ -192,6 +192,6 @@ DECLARE_REGISTRY_RESOURCEID( x )
 
 有关可替换参数和脚本的详细信息，请参阅[ATL 注册表组件（注册器）](../../atl/atl-registry-component-registrar.md)一文。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [宏](../../atl/reference/atl-macros.md)

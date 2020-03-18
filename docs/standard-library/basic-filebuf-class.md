@@ -44,8 +44,8 @@ ms.openlocfilehash: ec6fced70a53d27fdb3312a5b349e9e653ccbd24
 ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79129076"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427343"
 ---
 # <a name="basic_filebuf-class"></a>basic_filebuf 类
 
@@ -58,7 +58,7 @@ template <class Char_T, class Tr = char_traits<Char_T>>
 class basic_filebuf : public basic_streambuf<Char_T, Tr>
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Char_T*\
 文件缓冲区的基本元素。
@@ -400,7 +400,7 @@ basic_filebuf<Char_T, Tr> *open(
     ios_base::openmode mode);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *文件名*\
 要打开的文件的名称。
@@ -449,7 +449,7 @@ basic_filebuf<Char_T, Tr> *open(
 basic_filebuf& operator=(basic_filebuf&& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *right*\
 对 [basic_filebuf](../standard-library/basic-filebuf-class.md) 对象的右值引用。
@@ -470,7 +470,7 @@ basic_filebuf& operator=(basic_filebuf&& right);
 virtual int_type overflow(int_type _Meta = traits_type::eof);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Meta*\
 要插入到缓冲区或 `traits_type::eof`中的字符。
@@ -497,7 +497,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
 virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Meta*\
 要插入到缓冲区的字符或 `traits_type::eof`。
@@ -535,7 +535,7 @@ virtual pos_type seekoff(
     ios_base::openmode _Which = ios_base::in | ios_base::out);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Off*\
 要查找的相对于 *_Way*的位置。
@@ -568,7 +568,7 @@ virtual pos_type seekpos(
     ios_base::openmode _Which = ios_base::in | ios_base::out);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Sp*\
 要搜寻的位置。
@@ -598,7 +598,7 @@ virtual basic_streambuf<Char_T, Tr> *setbuf(
     streamsize count);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Buffer*\
 指向缓冲区的指针。
@@ -622,7 +622,7 @@ virtual basic_streambuf<Char_T, Tr> *setbuf(
 void swap(basic_filebuf& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *right*\
 对另一 `basic_filebuf`的左值引用。

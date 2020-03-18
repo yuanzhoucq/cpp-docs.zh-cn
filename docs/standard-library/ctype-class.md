@@ -37,11 +37,11 @@ helpviewer_keywords:
 - std::ctype [C++], widen
 ms.assetid: 3627154c-49d9-47b5-b28f-5bbedee38e3b
 ms.openlocfilehash: 640b2cc8506e498006feedbea6825a0e51a88209
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876304"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427169"
 ---
 # <a name="ctype-class"></a>ctype 类
 
@@ -54,7 +54,7 @@ template <class CharType>
 class ctype : public ctype_base;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *CharType*\
 在程序中用于对字符进行编码的类型。
@@ -138,7 +138,7 @@ ctype 类对象的构造函数，该类可用作字符的区域设置 facet。
 explicit ctype(size_t _Refs = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Refs*\
 用于指定对象的内存管理类型的整数值。
@@ -172,7 +172,7 @@ virtual const CharType *do_is(
     mask* dest) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *maskVal*\
 要为其测试字符的掩码值。
@@ -219,7 +219,7 @@ virtual const CharType* do_narrow(
     char* dest) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ch*\
 `Chartype` 类型的字符由区域设置用于转换。
@@ -261,7 +261,7 @@ virtual const CharType *do_scan_is(
     const CharType* last) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *maskVal*\
 要通过字符匹配的掩码值。
@@ -295,7 +295,7 @@ virtual const CharType *do_scan_not(
     const CharType* last) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *maskVal*\
 不通过字符匹配的掩码值。
@@ -330,7 +330,7 @@ virtual const CharType *do_tolower(
     const CharType* last) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ch*\
 要转换为小写的字符。
@@ -365,7 +365,7 @@ virtual const CharType *do_toupper(
     const CharType* last) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ch*\
 要转换为大写的字符。
@@ -401,7 +401,7 @@ virtual const char *do_widen(
     CharType* dest) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *byte*\
 要转换的本机字符集中**char**类型的字符。
@@ -442,7 +442,7 @@ const CharType *is(
     mask* dest) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *maskVal*\
 要为其测试字符的掩码值。
@@ -522,7 +522,7 @@ const CharType* narrow(
     char* dest) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ch*\
 `Chartype` 类型的字符由区域设置用于转换。
@@ -586,7 +586,7 @@ const CharType *scan_is(
     const CharType* last) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *maskVal*\
 要通过字符匹配的掩码值。
@@ -642,7 +642,7 @@ const CharType *scan_not(
     const CharType* last) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *maskVal*\
 不通过字符匹配的掩码值。
@@ -697,7 +697,7 @@ CharType tolower(CharType ch) const;
 const CharType *tolower(CharType* first, const CharType* last) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ch*\
 要转换为小写的字符。
@@ -752,7 +752,7 @@ CharType toupper(CharType ch) const;
 const CharType *toupper(CharType* first, const CharType* last) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ch*\
 要转换为大写的字符。
@@ -807,7 +807,7 @@ CharType widen(char byte) const;
 const char *widen(const char* first, const char* last, CharType* dest) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *byte*\
 要转换的本机字符集中的 char 类型字符。

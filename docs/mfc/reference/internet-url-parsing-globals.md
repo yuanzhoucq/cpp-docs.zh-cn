@@ -6,11 +6,11 @@ helpviewer_keywords:
 - URLs, parsing
 ms.assetid: 46c6384f-e4a6-4dbd-9196-219c19040ec5
 ms.openlocfilehash: 310e4ffb3fc207d874e97ba1fac65f6f8cb41a31
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865803"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426665"
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>Internet URL 分析全局和帮助程序
 
@@ -43,13 +43,13 @@ BOOL AFXAPI AfxParseURL(
     INTERNET_PORT& nPort);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pstrURL*<br/>
 一个指针，指向包含要分析的 URL 的字符串。
 
 *dwServiceType*<br/>
-指示 Internet 服务的类型。 可能的值如下：
+指示 Internet 服务的类型。 可能的值如下所示：
 
 - AFX_INET_SERVICE_FTP
 
@@ -131,13 +131,13 @@ BOOL AFXAPI AfxParseURLEx(
     DWORD dwFlags = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pstrURL*<br/>
 一个指针，指向包含要分析的 URL 的字符串。
 
 *dwServiceType*<br/>
-指示 Internet 服务的类型。 可能的值如下：
+指示 Internet 服务的类型。 可能的值如下所示：
 
 - AFX_INET_SERVICE_FTP
 
@@ -222,7 +222,7 @@ dwFlags<br/>
 DWORD AFXAPI AfxGetInternetHandleType(  HINTERNET hQuery );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hQuery*<br/>
 Internet 查询的句柄。
@@ -278,7 +278,7 @@ WININET 定义的任何 Internet 服务类型。高. 有关这些 Internet 服�
    void AFXAPI AfxThrowInternetException(  DWORD dwContext,  DWORD dwError = 0 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwContext*<br/>
 导致错误的操作的上下文标识符。 *DwContext*的默认值最初指定在[CInternetSession](cinternetsession-class.md)中，并传递给[CInternetConnection](cinternetconnection-class.md)和[CInternetFile](cinternetfile-class.md)派生的类。 对于在连接或文件上执行的特定操作，通常使用自己的*dwContext*替代默认值。 此值随后返回到[CInternetSession：： OnStatusCallback](cinternetsession-class.md#onstatuscallback)以标识特定操作的状态。

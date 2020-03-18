@@ -15,17 +15,17 @@ helpviewer_keywords:
 - std::make_error_condition [C++]
 - std::swap [C++]
 ms.openlocfilehash: 5435c3b9e10f151fc77c72b58c93510b6a867ce1
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865164"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427049"
 ---
 # <a name="ltfuturegt-functions"></a>&lt;future&gt; 函数
 
 ||||
 |-|-|-|
-|[async](#async)|[future_category](#future_category)|[make_error_code](#make_error_code)|
+|[异步](#async)|[future_category](#future_category)|[make_error_code](#make_error_code)|
 |[make_error_condition](#make_error_condition)|[swap](#swap)|
 
 ## <a name="async"></a>async
@@ -42,7 +42,7 @@ future<typename result_of<Fn(ArgTypes...)>::type>
     async(launch policy, Fn&& fn, ArgTypes&&... args);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *策略*\
 一个 [launch](../standard-library/future-enums.md#launch) 值。
@@ -90,7 +90,7 @@ const error_category& future_category() noexcept;
 inline error_code make_error_code(future_errc Errno) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Errno*\
 一个标识已报告错误的 [future_errc](../standard-library/future-enums.md#future_errc) 值。
@@ -107,7 +107,7 @@ inline error_code make_error_code(future_errc Errno) noexcept;
 inline error_condition make_error_condition(future_errc Errno) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Errno*\
 一个标识已报告错误的 [future_errc](../standard-library/future-enums.md#future_errc) 值。
@@ -128,7 +128,7 @@ template <class Ty, class... ArgTypes>
 void swap(packaged_task<Ty(ArgTypes...)>& Left, packaged_task<Ty(ArgTypes...)>& Right) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 左 `promise` 对象。

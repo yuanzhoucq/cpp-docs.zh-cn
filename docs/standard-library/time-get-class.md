@@ -39,11 +39,11 @@ helpviewer_keywords:
 - std::time_get [C++], get_year
 ms.assetid: 869d5f5b-dbab-4628-8333-bdea7e272023
 ms.openlocfilehash: e605423b829305bd1e7bde8be4fdbf312c8ce3c1
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876186"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426143"
 ---
 # <a name="time_get-class"></a>time_get 类
 
@@ -57,7 +57,7 @@ template <class CharType,
 class time_get : public time_base;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *CharType*\
 在程序中用于对字符进行编码的类型。
@@ -215,7 +215,7 @@ iter_type first,
     char mod) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *第一个*\
 一个输入迭代器，它指示要转换的序列的开始位置。
@@ -308,7 +308,7 @@ virtual iter_type do_get_date(iter_type first,
     tm* ptm) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *第一个*\
 确定待转换序列开头位置的输入迭代器。
@@ -359,7 +359,7 @@ virtual iter_type do_get_monthname(iter_type first,
     tm* ptm) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *第一个*\
 确定待转换序列开头位置的输入迭代器。
@@ -402,7 +402,7 @@ virtual iter_type do_get_time(iter_type first,
     tm* ptm) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *第一个*\
 确定待转换序列开头位置的输入迭代器。
@@ -453,7 +453,7 @@ virtual iter_type do_get_weekday(iter_type first,
     tm* ptm) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *第一个*\
 确定待转换序列开头位置的输入迭代器。
@@ -496,7 +496,7 @@ virtual iter_type do_get_year(iter_type first,
     tm* ptm) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *第一个*\
 确定待转换序列开头位置的输入迭代器。
@@ -551,7 +551,7 @@ iter_type get(
     char_type* fmt_last) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *第一个*\
 一个输入迭代器，它指示从何处开始转换序列。
@@ -608,7 +608,7 @@ iter_type get_date(iter_type first,
     tm* ptm) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *第一个*\
 确定待转换序列开头位置的输入迭代器。
@@ -702,7 +702,7 @@ iter_type get_monthname(iter_type first,
     tm* ptm) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *第一个*\
 确定待转换序列开头位置的输入迭代器。
@@ -794,7 +794,7 @@ iter_type get_time(iter_type first,
     tm* ptm) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *第一个*\
 确定待转换序列开头位置的输入迭代器。
@@ -875,7 +875,7 @@ iter_type get_weekday(iter_type first,
     tm* ptm) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *第一个*\
 确定待转换序列开头位置的输入迭代器。
@@ -952,7 +952,7 @@ iter_type get_year(iter_type first,
     tm* ptm) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *第一个*\
 确定待转换序列开头位置的输入迭代器。
@@ -1038,7 +1038,7 @@ typedef InputIterator iter_type;
 explicit time_get(size_t refs = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *refs*\
 用于指定对象的内存管理类型的整数值。

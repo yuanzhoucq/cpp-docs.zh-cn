@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::istream_iterator [C++], traits_type
 ms.assetid: fb52a8cd-7f71-48d1-b73e-4b064e2a8d16
 ms.openlocfilehash: 941d625e388edc75dfe25a2de0e609c6d955ff19
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78869885"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425651"
 ---
 # <a name="istream_iterator-class"></a>istream_iterator 类
 
@@ -34,7 +34,7 @@ class istream_iterator
     const Type&>;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *类型*\
 要从输入流中提取的对象的类型。
@@ -66,7 +66,7 @@ class istream_iterator
 
 ### <a name="operators"></a>运算符
 
-|运算符|说明|
+|操作员|说明|
 |-|-|
 |[operator*](#op_star)|此解引用运算符返回由 `Type` 定址的、`istream_iterator` 类型的存储对象。|
 |[operator->](#op_arrow)|返回成员的值（如果有）。|
@@ -136,7 +136,7 @@ istream_iterator();
 istream_iterator(istream_type& _Istr);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Istr*\
 要读取以用于初始化 `istream_iterator` 的输入流。

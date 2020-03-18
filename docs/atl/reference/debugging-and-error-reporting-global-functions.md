@@ -9,11 +9,11 @@ helpviewer_keywords:
 - functions [ATL], error reporting
 ms.assetid: 11339c02-98cd-428d-b3b9-7deeb155a6a3
 ms.openlocfilehash: f7483b7473383958089b0c88d0b3c2645ddc2a4f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864875"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423134"
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>调试和错误报告全局函数
 
@@ -51,7 +51,7 @@ HRESULT AtlHresultFromLastError();
 AtlHresultFromWin32(DWORD error);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *error*<br/>
 要转换的错误值。
@@ -117,7 +117,7 @@ HRESULT WINAPI AtlReportError(
     HINSTANCE hInst = _AtlBaseModule.GetResourceInstance());
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *clsid*<br/>
 中报告错误的对象的 CLSID。
@@ -170,7 +170,7 @@ HRESULT WINAPI AtlReportError(
 __declspec(noreturn) inline void AtlThrow(HRESULT hr);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *人事*<br/>
 标准 HRESULT 值。

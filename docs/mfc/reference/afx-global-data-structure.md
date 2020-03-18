@@ -56,11 +56,11 @@ helpviewer_keywords:
 - AFX_GLOBAL_DATA constructor
 ms.assetid: c7abf2fb-ad5e-4336-a01d-260c29ed53a2
 ms.openlocfilehash: dda3056cbed18ef93e09b52cd9d0a6b00e1db177
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
-ms.translationtype: MT
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78869911"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426053"
 ---
 # <a name="afx_global_data-structure"></a>AFX_GLOBAL_DATA 结构
 
@@ -72,7 +72,7 @@ ms.locfileid: "78869911"
 struct AFX_GLOBAL_DATA
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -185,7 +185,7 @@ HRESULT D2D1MakeRotateMatrix(
     D2D1_MATRIX_3X2_F *matrix);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *夹角*<br/>
 顺时针旋转角度，以度为单位。
@@ -211,7 +211,7 @@ BOOL DrawParentBackground(
     LPRECT lpRect = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pWnd*<br/>
 中指向控件窗口的指针。
@@ -243,7 +243,7 @@ BOOL DrawTextOnGlass(
     COLORREF clrText = (COLORREF)-1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hTheme*<br/>
 中窗口主题数据的句柄，或为 NULL。 如果此参数不为 NULL 并且支持主题，框架将使用指定的主题绘制文本。 否则，该框架将不使用主题来绘制文本。
@@ -292,7 +292,7 @@ dwFlags<br/>
 void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bEnable*<br/>
 中TRUE 表示启用辅助功能支持;禁用辅助功能支持的 FALSE。 默认值为 TRUE。
@@ -315,7 +315,7 @@ BOOL ExcludeTag(
     BOOL bIsCharsList = FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *strBuffer*<br/>
 中文本缓冲区。
@@ -327,7 +327,7 @@ BOOL ExcludeTag(
 弄此方法返回时， *strTag*参数包含*lpszTag*参数命名的开始和结束 XML 标记之间的文本。 任何前导空格或尾随空格都将从结果中去除。
 
 *bIsCharsList*<br/>
-中如果为 TRUE，则将*strTag*参数中的转义符符号转换为实际转义字符;若为 FALSE，则不执行转换。默认值为 FALSE。 有关详细信息，请参阅备注。
+中如果为 TRUE，则将*strTag*参数中的转义符符号转换为实际转义字符;若为 FALSE，则不执行转换。默认值为 FALSE。 有关详细信息，请参阅“备注”。
 
 ### <a name="return-value"></a>返回值
 
@@ -357,14 +357,14 @@ XML 标记对包含命名的开始标记和结束标记，这些标记指示指�
 COLORREF GetColor(int nColor);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nColor*<br/>
 中一个值，该值指定要检索其颜色的用户界面元素。 有关有效值的列表，请参阅[GetSysColor](/windows/win32/api/winuser/nf-winuser-getsyscolor)方法的*nIndex*参数。
 
 ### <a name="return-value"></a>返回值
 
-指定的用户界面元素的 RGB 颜色值。 有关详细信息，请参阅备注。
+指定的用户界面元素的 RGB 颜色值。 有关详细信息，请参阅“备注”。
 
 ### <a name="remarks"></a>备注
 
@@ -402,7 +402,7 @@ HCURSOR GetHandCursor();
 BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 info<br/>
 [in，out][NONCLIENTMETRICS](/windows/win32/api/winuser/ns-winuser-nonclientmetricsw)结构，其中包含与非最小化窗口的非工作区相关联的可缩放指标。
@@ -419,7 +419,7 @@ info<br/>
 int GetTextHeight(BOOL bHorz = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bHorz*<br/>
 中若要在文本水平运行时检索字符的高度，则为 TRUE;若为 FALSE，则在文本垂直运行时检索字符的高度。 默认值为 TRUE。
@@ -462,7 +462,7 @@ BOOL InitD2D(
     DWRITE_FACTORY_TYPE writeFactoryType = DWRITE_FACTORY_TYPE_SHARED);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *d2dFactoryType*<br/>
 D2D 工厂及其创建的资源的线程模型。
@@ -691,7 +691,7 @@ void OnSettingChange();
 CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszClassNamePrefix*<br/>
 中要注册的窗口类的名称。
@@ -732,7 +732,7 @@ BOOL SetLayeredAttrib(
     DWORD dwFlags);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hwnd*<br/>
 中分层窗口的句柄。
@@ -760,7 +760,7 @@ BOOL SetMenuFont(
     BOOL bHorz);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpLogFont*<br/>
 中指向一个结构的指针，该结构包含字体的特性。
@@ -876,7 +876,7 @@ HRESULT ShellCreateItemFromParsingName(
     void **ppv);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pszPath*<br/>
 中指向显示名称的指针。

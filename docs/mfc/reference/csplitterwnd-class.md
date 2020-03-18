@@ -73,11 +73,11 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
 ms.openlocfilehash: 065735c13a3e763208142eb6bc989d3a496221f0
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
-ms.translationtype: MT
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890949"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426797"
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd 类
 
@@ -131,7 +131,7 @@ class CSplitterWnd : public CWnd
 |[CSplitterWnd：： SplitColumn](#splitcolumn)|指示框架窗口垂直拆分的位置。|
 |[CSplitterWnd：： SplitRow](#splitrow)|指示框架窗口水平拆分的位置。|
 
-### <a name="protected-methods"></a>受保护的方法
+### <a name="protected-methods"></a>受保护方法
 
 |名称|说明|
 |----------|-----------------|

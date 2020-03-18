@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CAtlExeModuleT class
 ms.assetid: 82245f3d-91d4-44fa-aa86-7cc7fbd758d9
 ms.openlocfilehash: d37cc8e97d29cbedfeb4ba79502d44529485399f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78863155"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423428"
 ---
 # <a name="catlexemodulet-class"></a>Catlexemodulet 用作类
 
@@ -40,12 +40,12 @@ template <class T>
 class ATL_NO_VTABLE CAtlExeModuleT : public CAtlModuleT<T>
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *T*<br/>
 派生自 `CAtlExeModuleT`的类。
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -188,7 +188,7 @@ DWORD m_dwTimeOut;
 bool ParseCommandLine(LPCTSTR lpCmdLine, HRESULT* pnRetCode) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpCmdLine*<br/>
 传递给应用程序的命令行。
@@ -228,7 +228,7 @@ HRESULT PostMessageLoop() throw();
 HRESULT PreMessageLoop(int nShowCmd) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nShowCmd*<br/>
 作为 WinMain 中的*nShowCmd*参数传递的值。
@@ -249,7 +249,7 @@ HRESULT PreMessageLoop(int nShowCmd) throw();
 HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwClsContext*<br/>
 指定要在其中运行类对象的上下文。 可能的值为 CLSCTX_INPROC_SERVER、CLSCTX_INPROC_HANDLER 或 CLSCTX_LOCAL_SERVER。
@@ -281,7 +281,7 @@ HRESULT RevokeClassObjects() throw();
 HRESULT Run(int nShowCmd = SW_HIDE) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nShowCmd*<br/>
 指定窗口的显示方式。 此参数可以是[WinMain](/windows/win32/api/winbase/nf-winbase-winmain)节中讨论的值之一。 默认为 SW_HIDE。
@@ -338,7 +338,7 @@ LONG Unlock() throw();
 int WinMain(int nShowCmd) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nShowCmd*<br/>
 指定窗口的显示方式。 此参数可以是[WinMain](/windows/win32/api/winbase/nf-winbase-winmain)节中讨论的值之一。

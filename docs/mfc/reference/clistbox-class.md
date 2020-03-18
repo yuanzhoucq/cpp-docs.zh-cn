@@ -104,11 +104,11 @@ helpviewer_keywords:
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
 ms.openlocfilehash: 5c3337641dcfc720a5f9fbccf5bb0614e97c3b54
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865517"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425837"
 ---
 # <a name="clistbox-class"></a>CListBox 类
 
@@ -120,7 +120,7 @@ ms.locfileid: "78865517"
 class CListBox : public CWnd
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -248,7 +248,7 @@ class CListBox : public CWnd
 int AddString(LPCTSTR lpszItem);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszItem*<br/>
 指向要添加的以 null 值结束的字符串。
@@ -277,7 +277,7 @@ virtual int CharToItem(
     UINT nIndex);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nKey*<br/>
 用户键入的字符的 ANSI 代码。
@@ -333,7 +333,7 @@ CListBox();
 virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpCompareItemStruct*<br/>
 指向 `COMPAREITEMSTRUCT` 结构的长指针。
@@ -370,7 +370,7 @@ virtual BOOL Create(
     UINT nID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwStyle*<br/>
 指定列表框的样式。 应用[列表框样式](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)与框的任意组合。
@@ -424,7 +424,7 @@ virtual BOOL Create(
 virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpDeleteItemStruct*<br/>
 指向 Windows [DELETEITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-deleteitemstruct)结构的长指针，其中包含有关已删除项的信息。
@@ -447,7 +447,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 int DeleteString(UINT nIndex);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 指定要删除的字符串的从零开始的索引。
@@ -474,7 +474,7 @@ int Dir(
     LPCTSTR lpszWildCard);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *attr*<br/>
 可以是 `CFile::GetStatu`[s](../../mfc/reference/cfile-class.md#getstatus)中描述的**枚举**值的任意组合，或者以下值的任意组合：
@@ -509,7 +509,7 @@ int Dir(
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpDrawItemStruct*<br/>
 指向[DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct)结构的长指针，该指针包含所需绘图类型的相关信息。
@@ -536,7 +536,7 @@ int FindString(
     LPCTSTR lpszItem) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nStartAfter*<br/>
 包含要搜索的第一项之前项的从零开始的索引。 当搜索到达列表框的底部时，它会从列表框的顶部继续到由*nStartAfter*指定的项。 如果*nStartAfter*为-1，则从一开始就搜索整个列表框。
@@ -566,7 +566,7 @@ int FindStringExact(
     LPCTSTR lpszFind) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndexStart*<br/>
 指定要搜索的第一项之前项的从零开始的索引。 当搜索到达列表框的底部时，它会从列表框的顶部继续到由*nIndexStart*指定的项。 如果*nIndexStart*为-1，则从一开始就搜索整个列表框。
@@ -696,7 +696,7 @@ int GetHorizontalExtent() const;
 DWORD_PTR GetItemData(int nIndex) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 指定列表框中项的从零开始的索引。
@@ -721,7 +721,7 @@ DWORD_PTR GetItemData(int nIndex) const;
 void* GetItemDataPtr(int nIndex) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 指定列表框中项的从零开始的索引。
@@ -742,7 +742,7 @@ void* GetItemDataPtr(int nIndex) const;
 int GetItemHeight(int nIndex) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 指定列表框中项的从零开始的索引。 仅当列表框具有 LBS_OWNERDRAWVARIABLE 样式时才使用此参数;否则，它应设置为0。
@@ -765,7 +765,7 @@ int GetItemRect(
     LPRECT lpRect) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 指定项的从零开始的索引。
@@ -825,7 +825,7 @@ LCID GetLocale() const;
 int GetSel(int nIndex) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 指定项的从零开始的索引。
@@ -870,7 +870,7 @@ int GetSelItems(
     LPINT rgIndex) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nMaxItems*<br/>
 指定项号要放入缓冲区的选定项的最大数量。
@@ -900,7 +900,7 @@ void GetText(
     CString& rString) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 指定要检索的字符串的从零开始的索引。
@@ -931,7 +931,7 @@ void GetText(
 int GetTextLen(int nIndex) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 指定字符串的从零开始的索引。
@@ -974,7 +974,7 @@ int InitStorage(
     UINT nBytes);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nItems*<br/>
 指定要添加的项的数目。
@@ -1008,7 +1008,7 @@ int InsertString(
     LPCTSTR lpszItem);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 指定要插入字符串的位置的从零开始的索引。 如果此参数为-1，则字符串将被添加到列表的末尾。
@@ -1038,7 +1038,7 @@ UINT ItemFromPoint(
     BOOL& bOutside) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pt*<br/>
 要查找其最近项的点，该点相对于列表框的工作区的左上角指定。
@@ -1066,7 +1066,7 @@ UINT ItemFromPoint(
 virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpMeasureItemStruct*<br/>
 指向[MEASUREITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-measureitemstruct)结构的长指针。
@@ -1105,7 +1105,7 @@ int SelectString(
     LPCTSTR lpszItem);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nStartAfter*<br/>
 包含要搜索的第一项之前项的从零开始的索引。 当搜索到达列表框的底部时，它会从列表框的顶部继续到由*nStartAfter*指定的项。 如果*nStartAfter*为-1，则从一开始就搜索整个列表框。
@@ -1142,7 +1142,7 @@ int SelItemRange(
     int nLastItem);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bSelect*<br/>
 指定如何设置选择。 如果*bSelect*为 TRUE，则将选中并突出显示该字符串;如果为 FALSE，则移除突出显示，并且不再选择字符串。
@@ -1173,7 +1173,7 @@ int SelItemRange(
 void SetAnchorIndex(int nIndex);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 指定将成为定位点的列表框项的从零开始的索引。
@@ -1196,7 +1196,7 @@ int SetCaretIndex(
     BOOL bScroll = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 指定项的从零开始的索引，该索引用于接收列表框中的聚焦框。
@@ -1224,7 +1224,7 @@ int SetCaretIndex(
 void SetColumnWidth(int cxWidth);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *cxWidth*<br/>
 指定所有列的宽度（以像素为单位）。
@@ -1241,7 +1241,7 @@ void SetColumnWidth(int cxWidth);
 int SetCurSel(int nSelect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *选择*<br/>
 指定要选择的字符串的从零开始的索引。 如果*选择*为-1，则将列表框设置为 "没有选择"。
@@ -1270,7 +1270,7 @@ int SetCurSel(int nSelect);
 void SetHorizontalExtent(int cxExtent);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *cxExtent*<br/>
 指定列表框可水平滚动的像素数。
@@ -1297,7 +1297,7 @@ int SetItemData(
     DWORD_PTR dwItemData);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 指定项的从零开始的索引。
@@ -1323,7 +1323,7 @@ int SetItemDataPtr(
     void* pData);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 指定项的从零开始的索引。
@@ -1353,7 +1353,7 @@ int SetItemHeight(
     UINT cyItemHeight);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 指定列表框中项的从零开始的索引。 仅当列表框具有 LBS_OWNERDRAWVARIABLE 样式时才使用此参数;否则，它应设置为0。
@@ -1381,7 +1381,7 @@ int SetItemHeight(
 LCID SetLocale(LCID nNewLocale);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nNewLocale*<br/>
 要为列表框设置的新区域设置标识符（LCID）值。
@@ -1408,7 +1408,7 @@ int SetSel(
     BOOL bSelect = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 包含要设置的字符串的从零开始的索引。 如果为-1，则将从所有字符串中添加或删除所选内容，具体取决于*bSelect*的值。
@@ -1443,7 +1443,7 @@ BOOL SetTabStops(
     LPINT rgTabStops);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *cxEachStop*<br/>
 在每个*cxEachStop*对话框单位设置制表位。 有关对话单位的说明，请参阅*rgTabStops* 。
@@ -1478,7 +1478,7 @@ BOOL SetTabStops(
 int SetTopIndex(int nIndex);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 指定列表框项的从零开始的索引。
@@ -1505,7 +1505,7 @@ virtual int VKeyToItem(
     UINT nIndex);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nKey*<br/>
 用户按下的键的虚拟键代码。 有关标准虚拟键代码的列表，请参阅 Winuser。h

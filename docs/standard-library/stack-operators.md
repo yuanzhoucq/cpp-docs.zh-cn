@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::operator&lt;= (stack)
 - std::operator== (stack)
 ms.openlocfilehash: 169698d30edd4a7995cb05e1909c1ffc38b0b6ef
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865894"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425069"
 ---
 # <a name="ltstackgt-operators"></a>&lt;stack&gt; 运算符
 
@@ -33,7 +33,7 @@ ms.locfileid: "78865894"
 bool operator!=(const stack <Type, Container>& left, const stack <Type, Container>& right,);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 一个 `stack` 类型的对象。
@@ -98,7 +98,7 @@ The stacks s1 and s3 are equal.
 bool operator<(const stack <Type, Container>& left, const stack <Type, Container>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 一个 `stack` 类型的对象。
@@ -182,7 +182,7 @@ The stack s1 from the top down is: ( 8 6 4 2 ).
 bool operator<=(const stack <Type, Container>& left, const stack <Type, Container>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 一个 `stack` 类型的对象。
@@ -249,7 +249,7 @@ The stack s1 is less than or equal to the stack s3.
 bool operator==(const stack <Type, Container>& left, const stack <Type, Container>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 一个 `stack` 类型的对象。
@@ -314,7 +314,7 @@ The stacks s1 and s3 are equal.
 bool operator>(const stack <Type, Container>& left, const stack <Type, Container>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 一个 `stack` 类型的对象。
@@ -383,7 +383,7 @@ The stack s1 is greater than the stack s3.
 bool operator>=(const stack <Type, Container>& left, const stack <Type, Container>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 一个 `stack` 类型的对象。

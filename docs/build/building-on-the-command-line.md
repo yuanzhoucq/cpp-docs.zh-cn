@@ -11,11 +11,11 @@ helpviewer_keywords:
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
 ms.openlocfilehash: ec30cba8e119f96efc5bca156fa565db77904520
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051483"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422900"
 ---
 # <a name="use-the-microsoft-c-toolset-from-the-command-line"></a>从命令行C++使用 Microsoft 工具集
 
@@ -135,13 +135,13 @@ architecture<br/>
 |architecture|编译器|主机计算机体系结构|生成输出（目标）体系结构|
 |----------------------------|--------------|----------------------------------|-------------------------------|
 |**x86**|x86 32 位本机|x86、x64|x86|
-|**x86\_amd64** 或 **x86\_x64**|x86 跨平台上的 x64|x86、x64|X64|
+|**x86\_amd64** 或 **x86\_x64**|x86 跨平台上的 x64|x86、x64|x64|
 |**x86_arm**|x86 跨平台上的 ARM|x86、x64|ARM|
 |**x86_arm64**|x86 跨平台上的 ARM64|x86、x64|ARM64|
-|“amd64”或“x64”|x64 64 位本机编译器|X64|X64|
-|**amd64\_x86** 或 **x64\_x86**|x64 跨平台上的 x86|X64|x86|
-|**amd64\_arm** 或 **x64\_arm**|x64 跨平台上的 ARM|X64|ARM|
-|**amd64\_arm64** 或 **x64\_arm64**|x64 跨平台上的 ARM64|X64|ARM64|
+|“amd64”或“x64”|x64 64 位本机编译器|x64|x64|
+|**amd64\_x86** 或 **x64\_x86**|x64 跨平台上的 x86|x64|x86|
+|**amd64\_arm** 或 **x64\_arm**|x64 跨平台上的 ARM|x64|ARM|
+|**amd64\_arm64** 或 **x64\_arm64**|x64 跨平台上的 ARM64|x64|ARM64|
 
 platform_type<br/>
 可选择使用此参数指定“store”或“uwp”作为平台类型。 默认情况下，环境设置为生成桌面或控制台应用。
@@ -242,7 +242,7 @@ vcversion<br/>
 
 当你在命令行上生成时，F1 命令对于 "即时帮助" 不可用。 相反，可使用搜索引擎获取有关警告、错误和消息的信息，也可以使用脱机帮助文件。 若要在[docs.microsoft.com](https://docs.microsoft.com/cpp/)中使用搜索，请使用页面顶部的 "搜索" 框。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
 
 本文介绍如何在命令行上生成应用程序，并说明如何自定义命令行生成环境。 其中一些演示如何使用64位工具集，并面向 x86、x64、ARM 和 ARM64 平台。 它们还介绍了如何使用命令行生成工具 MSBuild 和 NMAKE。
 
@@ -281,6 +281,6 @@ vcversion<br/>
 [其他 MSVC 生成工具](reference/c-cpp-build-tools.md)<br/>
 提供指向 Visual Studio 中包括的 C/C++ 生成工具的链接。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [项目和生成系统](projects-and-build-systems-cpp.md)

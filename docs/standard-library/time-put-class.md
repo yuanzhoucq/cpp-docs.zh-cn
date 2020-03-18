@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::time_put [C++], put
 ms.assetid: df79493e-3331-48d2-97c3-ac3a745f0791
 ms.openlocfilehash: 2c0ae501693a8abffc72a23be9c427f31bad65b6
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78867308"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426089"
 ---
 # <a name="time_put-class"></a>time_put 类
 
@@ -33,7 +33,7 @@ template <class CharType,
 class time_put : public locale::facet;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *CharType*\
 在程序中用于对字符进行编码的类型。
@@ -96,7 +96,7 @@ virtual iter_type do_put(
     char _Mod = 0) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *下一*\
 一个输出迭代器，其中字符序列表示要插入的时间和日期。
@@ -159,7 +159,7 @@ iter_type put(iter_type next,
     const CharType* last) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *下一*\
 一个输出迭代器，其中字符序列表示要插入的时间和日期。
@@ -245,7 +245,7 @@ strftime( ) = x: 05:30:40 07/04/00
 explicit time_put(size_t _Refs = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Refs*\
 用于指定对象的内存管理类型的整数值。

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - memory, memory manager
 ms.assetid: 18b2c569-25fe-4464-bdb6-3b1abef7154a
 ms.openlocfilehash: a0d79ae95a0604ca75f03673873e99394a1bc295
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865065"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423086"
 ---
 # <a name="iatlmemmgr-class"></a>IAtlMemMgr 类
 
@@ -30,7 +30,7 @@ ms.locfileid: "78865065"
 __interface __declspec(uuid("654F7EF5-CFDF-4df9-A450-6C6A13C622C0")) IAtlMemMgr
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="methods"></a>方法
 
@@ -64,7 +64,7 @@ __interface __declspec(uuid("654F7EF5-CFDF-4df9-A450-6C6A13C622C0")) IAtlMemMgr
 void* Allocate(size_t nBytes) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nBytes*<br/>
 新内存块中请求的字节数。
@@ -89,7 +89,7 @@ void* Allocate(size_t nBytes) throw();
 void Free(void* p) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *p*<br/>
 指向此内存管理器以前分配的内存的指针。
@@ -110,7 +110,7 @@ void Free(void* p) throw();
 size_t GetSize(void* p) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *p*<br/>
 指向此内存管理器以前分配的内存的指针。
@@ -131,7 +131,7 @@ size_t GetSize(void* p) throw();
 void* Reallocate(void* p, size_t nBytes) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *p*<br/>
 指向此内存管理器以前分配的内存的指针。
@@ -161,7 +161,7 @@ void* Reallocate(void* p, size_t nBytes) throw();
 STDMETHOD(get_AllowContextMenu)(VARIANT_BOOL* pbAllowContextMenu);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pbAllowContextMenu*<br/>
 弄用于接收此属性的当前值的变量的地址。
@@ -182,7 +182,7 @@ ATL 宿主对象实现使用 VARIANT_TRUE 作为此属性的默认值。
 STDMETHOD(get_AllowShowUI)(VARIANT_BOOL* pbAllowShowUI);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pbAllowShowUI*<br/>
 弄用于接收此属性的当前值的变量的地址。
@@ -203,7 +203,7 @@ ATL 宿主对象实现使用 VARIANT_FALSE 作为此属性的默认值。
 STDMETHOD(get_AllowWindowlessActivation)(VARIANT_BOOL* pbAllowWindowless);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pbAllowWindowless*<br/>
 弄用于接收此属性的当前值的变量的地址。
@@ -224,7 +224,7 @@ ATL 宿主对象实现使用 VARIANT_TRUE 作为此属性的默认值。
 STDMETHOD(get_BackColor)(OLE_COLOR* pclrBackground);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pclrBackground*<br/>
 弄用于接收此属性的当前值的变量的地址。
@@ -245,7 +245,7 @@ ATL 宿主对象实现使用 COLOR_BTNFACE 或 COLOR_WINDOW 作为此属性的�
 STDMETHOD(get_DisplayAsDefault)(VARIANT_BOOL* pbDisplayAsDefault);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pbDisplayAsDefault*<br/>
 弄用于接收此属性的当前值的变量的地址。
@@ -266,7 +266,7 @@ ATL 宿主对象实现使用 VARIANT_FALSE 作为此属性的默认值。
 STDMETHOD(get_DocHostDoubleClickFlags)(DWORD* pdwDocHostDoubleClickFlags);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pdwDocHostDoubleClickFlags*<br/>
 弄用于接收此属性的当前值的变量的地址。
@@ -287,7 +287,7 @@ ATL 宿主对象实现使用 DOCHOSTUIDBLCLK_DEFAULT 作为此属性的默认值
 STDMETHOD(get_DocHostFlags)(DWORD* pdwDocHostFlags);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pdwDocHostFlags*<br/>
 弄用于接收此属性的当前值的变量的地址。
@@ -308,7 +308,7 @@ ATL 宿主对象实现使用 DOCHOSTUIFLAG_NO3DBORDER 作为此属性的默认�
 STDMETHOD(get_Font)(IFontDisp** pFont);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFont*<br/>
 弄用于接收此属性的当前值的 `IFontDisp` 接口指针的地址。
@@ -329,7 +329,7 @@ ATL 宿主对象实现使用默认的 GUI 字体或系统字体作为此属性�
 STDMETHOD(get_ForeColor)(OLE_COLOR* pclrForeground);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pclrForeground*<br/>
 弄用于接收此属性的当前值的变量的地址。
@@ -350,7 +350,7 @@ ATL 宿主对象实现使用系统窗口文本颜色作为此属性的默认值�
 STDMETHOD(get_LocaleID)(LCID* plcidLocaleID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *plcidLocaleID*<br/>
 弄用于接收此属性的当前值的变量的地址。
@@ -373,7 +373,7 @@ ATL 宿主对象实现使用用户的默认区域设置作为此属性的默认�
 STDMETHOD(get_MessageReflect)(VARIANT_BOOL* pbMessageReflect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pbMessageReflect*<br/>
 弄用于接收此属性的当前值的变量的地址。
@@ -394,7 +394,7 @@ ATL 宿主对象实现使用 VARIANT_TRUE 作为此属性的默认值。
 STDMETHOD(get_OptionKeyPath)(BSTR* pbstrOptionKeyPath);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pbstrOptionKeyPath*<br/>
 弄用于接收此属性的当前值的变量的地址。
@@ -411,7 +411,7 @@ STDMETHOD(get_OptionKeyPath)(BSTR* pbstrOptionKeyPath);
 STDMETHOD(get_ShowGrabHandles)(VARIANT_BOOL* pbShowGrabHandles);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pbShowGrabHandles*<br/>
 弄用于接收此属性的当前值的变量的地址。
@@ -432,7 +432,7 @@ ATL 宿主对象实现始终返回 VARIANT_FALSE 作为此属性的值。
 STDMETHOD(get_ShowHatching)(VARIANT_BOOL* pbShowHatching);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pbShowHatching*<br/>
 弄用于接收此属性的当前值的变量的地址。
@@ -453,7 +453,7 @@ ATL 宿主对象实现始终返回 VARIANT_FALSE 作为此属性的值。
 STDMETHOD(get_UserMode)(VARIANT_BOOL* pbUserMode);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pbUserMode*<br/>
 弄用于接收此属性的当前值的变量的地址。
@@ -474,7 +474,7 @@ ATL 宿主对象实现使用 VARIANT_TRUE 作为此属性的默认值。
 STDMETHOD(put_AllowContextMenu)(VARIANT_BOOL bAllowContextMenu);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bAllowContextMenu*<br/>
 中此属性的新值。
@@ -495,7 +495,7 @@ ATL 宿主对象实现使用 VARIANT_TRUE 作为此属性的默认值。
 STDMETHOD(put_AllowShowUI)(VARIANT_BOOL bAllowShowUI);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bAllowShowUI*<br/>
 中此属性的新值。
@@ -516,7 +516,7 @@ ATL 宿主对象实现使用 VARIANT_FALSE 作为此属性的默认值。
 STDMETHOD(put_AllowWindowlessActivation)(VARIANT_BOOL bAllowWindowless);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bAllowWindowless*<br/>
 中此属性的新值。
@@ -537,7 +537,7 @@ ATL 宿主对象实现使用 VARIANT_TRUE 作为此属性的默认值。
 STDMETHOD(put_BackColor)(OLE_COLOR clrBackground);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *clrBackground*<br/>
 中此属性的新值。
@@ -558,7 +558,7 @@ ATL 宿主对象实现使用 COLOR_BTNFACE 或 COLOR_WINDOW 作为此属性的�
 STDMETHOD(put_DisplayAsDefault)(VARIANT_BOOL bDisplayAsDefault);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bDisplayAsDefault*<br/>
 中此属性的新值。
@@ -579,7 +579,7 @@ ATL 宿主对象实现使用 VARIANT_FALSE 作为此属性的默认值。
 STDMETHOD(put_DocHostDoubleClickFlags)(DWORD dwDocHostDoubleClickFlags);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwDocHostDoubleClickFlags*<br/>
 中此属性的新值。
@@ -600,7 +600,7 @@ ATL 宿主对象实现使用 DOCHOSTUIDBLCLK_DEFAULT 作为此属性的默认值
 STDMETHOD(put_DocHostFlags)(DWORD dwDocHostFlags);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwDocHostFlags*<br/>
 中此属性的新值。
@@ -621,7 +621,7 @@ ATL 宿主对象实现使用 DOCHOSTUIFLAG_NO3DBORDER 作为此属性的默认�
 STDMETHOD(put_Font)(IFontDisp* pFont);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFont*<br/>
 中此属性的新值。
@@ -642,7 +642,7 @@ ATL 宿主对象实现使用默认的 GUI 字体或系统字体作为此属性�
 STDMETHOD(put_ForeColor)(OLE_COLOR clrForeground);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *clrForeground*<br/>
 中此属性的新值。
@@ -663,7 +663,7 @@ ATL 宿主对象实现使用系统窗口文本颜色作为此属性的默认值�
 STDMETHOD(put_LocaleID)(LCID lcidLocaleID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lcidLocaleID*<br/>
 中此属性的新值。
@@ -684,7 +684,7 @@ ATL 宿主对象实现使用用户的默认区域设置作为此属性的默认�
 STDMETHOD(put_MessageReflect)(VARIANT_BOOL bMessageReflect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bMessageReflect*<br/>
 中此属性的新值。
@@ -705,7 +705,7 @@ ATL 宿主对象实现使用 VARIANT_TRUE 作为此属性的默认值。
 STDMETHOD(put_OptionKeyPath)(BSTR bstrOptionKeyPath);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bstrOptionKeyPath*<br/>
 中此属性的新值。
@@ -722,7 +722,7 @@ STDMETHOD(put_OptionKeyPath)(BSTR bstrOptionKeyPath);
 STDMETHOD(put_UserMode)(VARIANT_BOOL bUserMode);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bUserMode*<br/>
 中此属性的新值。
@@ -743,7 +743,7 @@ ATL 宿主对象实现使用 VARIANT_TRUE 作为此属性的默认值。
 virtual HRESULT STDMETHODCALLTYPE SetAmbientDispatch(IDispatch* pDispatch) = 0;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDispatch*<br/>
 指向新接口的指针。
@@ -764,7 +764,7 @@ virtual HRESULT STDMETHODCALLTYPE SetAmbientDispatch(IDispatch* pDispatch) = 0;
 STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pUnkControl*<br/>
 中指向要附加到宿主对象的控件的 `IUnknown` 接口的指针。
@@ -787,7 +787,7 @@ STDMETHOD(CreateControl)(
     IStream* pStream);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpTricsData*<br/>
 中标识要创建的控件的字符串。 可以是 CLSID （必须包括大括号）、ProgID、URL 或原始 HTML （前缀**为 MSHTML：** ）。
@@ -824,7 +824,7 @@ STDMETHOD(CreateControlEx)(
     IUnknown* punkAdvise);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpTricsData*<br/>
 中标识要创建的控件的字符串。 可以是 CLSID （必须包括大括号）、ProgID、URL 或原始 HTML （前缀为**MSHTML：** ）。
@@ -862,7 +862,7 @@ STDMETHOD(CreateControlEx)(
 STDMETHOD(QueryControl)(REFIID riid, void** ppvObject);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *riid*<br/>
 中正在请求的控件的接口 ID。
@@ -882,7 +882,7 @@ STDMETHOD(QueryControl)(REFIID riid, void** ppvObject);
 STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDisp*<br/>
 中指向 `IDispatch` 接口的指针。
@@ -899,7 +899,7 @@ STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
 STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDisp*<br/>
 中指向 `IDocHostUIHandlerDispatch` 接口的指针。
@@ -924,7 +924,7 @@ STDMETHOD(CreateControlLic)(
     BSTR bstrLic);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bstrLic*<br/>
 中包含控件的许可证密钥的 BSTR。
@@ -954,7 +954,7 @@ STDMETHOD(CreateControlLicEx)(
     BSTR bstrLic);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bstrLic*<br/>
 中包含控件的许可证密钥的 BSTR。

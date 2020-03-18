@@ -165,11 +165,11 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
 ms.openlocfilehash: 9f97f117f0fd8570855079aca7bdfd7a63118bc5
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855438"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427025"
 ---
 # <a name="coleclientitem-class"></a>COleClientItem 类
 
@@ -181,7 +181,7 @@ ms.locfileid: "78855438"
 class COleClientItem : public CDocItem
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -317,7 +317,7 @@ void Activate(
     LPMSG lpMsg = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nVerb*<br/>
 指定要执行的谓词。 该参数可以是下列值之一：
@@ -357,7 +357,7 @@ virtual BOOL ActivateAs(
     REFCLSID clsidNew);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszUserType*<br/>
 指向表示目标用户类型（如 "Word 文档"）的字符串的指针。
@@ -384,7 +384,7 @@ virtual BOOL ActivateAs(
 void AttachDataObject(COleDataObject& rDataObject) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rDataObject*<br/>
 对 `COleDataObject` 对象的引用，该对象将初始化以允许访问 OLE 项中的数据。
@@ -415,7 +415,7 @@ virtual BOOL CanActivate();
 static BOOL PASCAL CanCreateFromData(const COleDataObject* pDataObject);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDataObject*<br/>
 指向要从中创建 OLE 项的[COleDataObject](../../mfc/reference/coledataobject-class.md)对象的指针。
@@ -440,7 +440,7 @@ static BOOL PASCAL CanCreateFromData(const COleDataObject* pDataObject);
 static BOOL PASCAL CanCreateLinkFromData(const COleDataObject* pDataObject);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDataObject*<br/>
 指向要从中创建 OLE 项的[COleDataObject](../../mfc/reference/coledataobject-class.md)对象的指针。
@@ -497,7 +497,7 @@ static BOOL PASCAL CanPasteLink();
 void Close(OLECLOSE dwCloseOption = OLECLOSE_SAVEIFDIRTY);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwCloseOption*<br/>
 指定在 OLE 项返回到已加载状态时，该 OLE 项保存在什么情况下的标志。 它可以具有下列值之一：
@@ -522,7 +522,7 @@ void Close(OLECLOSE dwCloseOption = OLECLOSE_SAVEIFDIRTY);
 COleClientItem(COleDocument* pContainerDoc = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pContainerDoc*<br/>
 指向将包含此项的容器文档的指针。 这可以是任何[COleDocument](../../mfc/reference/coledocument-class.md)派生。
@@ -561,7 +561,7 @@ COleClientItem(COleDocument* pContainerDoc = NULL);
 virtual BOOL ConvertTo(REFCLSID clsidNew);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *clsidNew*<br/>
 目标类型的类 ID。
@@ -582,7 +582,7 @@ virtual BOOL ConvertTo(REFCLSID clsidNew);
 void CopyToClipboard(BOOL bIncludeLink = FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bIncludeLink*<br/>
 如果应将链接信息复制到剪贴板，允许粘贴链接的项，则为 TRUE; 否则为。否则为 FALSE。
@@ -601,7 +601,7 @@ void CopyToClipboard(BOOL bIncludeLink = FALSE);
 BOOL CreateCloneFrom(const COleClientItem* pSrcItem);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pSrcItem*<br/>
 指向要复制的 OLE 项的指针。
@@ -625,7 +625,7 @@ BOOL CreateFromClipboard(
     LPFORMATETC lpFormatEtc = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *呈现*<br/>
 指定服务器将如何呈现 OLE 项的标志。 有关可能的值，请参阅 Windows SDK 中的[OLERENDER](/windows/win32/api/oleidl/ne-oleidl-olerender) 。
@@ -658,7 +658,7 @@ BOOL CreateFromData(
     LPFORMATETC lpFormatEtc = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDataObject*<br/>
 指向要从中创建 OLE 项的[COleDataObject](../../mfc/reference/coledataobject-class.md)对象的指针。
@@ -695,13 +695,13 @@ BOOL CreateFromFile(
     LPFORMATETC lpFormatEtc = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszFileName*<br/>
 一个指针，指向要从中创建 OLE 项的文件的名称。
 
 *clsid*<br/>
-留待将来使用。
+保留供将来使用。
 
 *呈现*<br/>
 指定服务器将如何呈现 OLE 项的标志。 有关可能的值，请参阅 Windows SDK 中的[OLERENDER](/windows/win32/api/oleidl/ne-oleidl-olerender) 。
@@ -733,7 +733,7 @@ BOOL CreateLinkFromClipboard(
     LPFORMATETC lpFormatEtc = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *呈现*<br/>
 指定服务器将如何呈现 OLE 项的标志。 有关可能的值，请参阅 Windows SDK 中的[OLERENDER](/windows/win32/api/oleidl/ne-oleidl-olerender) 。
@@ -766,7 +766,7 @@ BOOL CreateLinkFromData(
     LPFORMATETC lpFormatEtc = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDataObject*<br/>
 指向要从中创建 OLE 项的[COleDataObject](../../mfc/reference/coledataobject-class.md)对象的指针。
@@ -802,7 +802,7 @@ BOOL CreateLinkFromFile(
     LPFORMATETC lpFormatEtc = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszFileName*<br/>
 一个指针，指向要从中创建 OLE 项的文件的名称。
@@ -838,7 +838,7 @@ BOOL CreateNewItem(
     LPFORMATETC lpFormatEtc = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *clsid*<br/>
 唯一标识要创建的 OLE 项类型的 ID。
@@ -873,7 +873,7 @@ BOOL CreateStaticFromClipboard(
     LPFORMATETC lpFormatEtc = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *呈现*<br/>
 指定服务器将如何呈现 OLE 项的标志。 有关可能的值，请参阅 Windows SDK 中的[OLERENDER](/windows/win32/api/oleidl/ne-oleidl-olerender) 。
@@ -906,7 +906,7 @@ BOOL CreateStaticFromData(
     LPFORMATETC lpFormatEtc = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDataObject*<br/>
 指向要从中创建 OLE 项的[COleDataObject](../../mfc/reference/coledataobject-class.md)对象的指针。
@@ -972,7 +972,7 @@ void DeactivateUI();
 void Delete(BOOL bAutoDelete = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bAutoDelete*<br/>
 指定是否要从文档中删除该项。
@@ -994,7 +994,7 @@ DROPEFFECT DoDragDrop(
     LPCRECT lpRectStartDrag = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpItemRect*<br/>
 在屏幕上以工作区坐标表示的项的矩形（像素）。
@@ -1040,7 +1040,7 @@ virtual BOOL DoVerb(
     LPMSG lpMsg = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nVerb*<br/>
 指定要执行的谓词。 它可以包括以下内容之一：
@@ -1082,7 +1082,7 @@ BOOL Draw(
     DVASPECT nDrawAspect = (DVASPECT)-1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 指向用于绘制 OLE 项的[CDC](../../mfc/reference/cdc-class.md)对象的指针。
@@ -1129,7 +1129,7 @@ BOOL GetCachedExtent(
     DVASPECT nDrawAspect = (DVASPECT)-1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpSize*<br/>
 指向 `SIZE` 结构或将接收大小信息的[CSize](../../atl-mfc-shared/reference/csize-class.md)对象的指针。
@@ -1157,7 +1157,7 @@ BOOL GetCachedExtent(
 void GetClassID(CLSID* pClassID) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pClassID*<br/>
 指向要检索类 ID 的[CLSID](/windows/win32/com/clsid-key-hklm)类型的标识符的指针。 有关 CLSID 的信息，请参阅 Windows SDK。
@@ -1180,7 +1180,7 @@ void GetClipboardData(
     LPSIZE lpSize = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDataSource*<br/>
 指向将接收 OLE 项中包含的数据的[COleDataSource](../../mfc/reference/coledatasource-class.md)对象的指针。
@@ -1240,7 +1240,7 @@ BOOL GetExtent(
     DVASPECT nDrawAspect = (DVASPECT)- 1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpSize*<br/>
 指向 `SIZE` 结构或将接收大小信息的 `CSize` 对象的指针。
@@ -1271,7 +1271,7 @@ HICON GetIconFromRegistry() const;
 static HICON GetIconFromRegistry(CLSID& clsid);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *clsid*<br/>
 对与图标关联的服务器的 CLSID 的引用。
@@ -1406,7 +1406,7 @@ void GetUserType(
     CString& rString);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nUserClassType*<br/>
 一个值，该值指示描述 OLE 项类型的字符串所需的变量。 此值可以是以下值之一：
@@ -1550,7 +1550,7 @@ virtual void OnChange(
     DWORD dwParam);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nCode*<br/>
 服务器更改此项的原因。 它可以具有下列值之一：
@@ -1582,7 +1582,7 @@ virtual void OnChange(
 virtual BOOL OnChangeItemPosition(const CRect& rectPos);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rectPos*<br/>
 指示项相对于容器应用程序的工作区的位置。
@@ -1633,7 +1633,7 @@ virtual void OnDeactivateAndUndo();
 virtual void OnDeactivateUI(BOOL bUndoable);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bUndoable*<br/>
 指定编辑更改是否可撤消。
@@ -1671,7 +1671,7 @@ virtual COleDataSource* OnGetClipboardData(
     LPSIZE lpSize);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bIncludeLink*<br/>
 如果应将链接数据复制到剪贴板，请将此值设置为 TRUE。 如果服务器应用程序不支持链接，则将此值设置为 "FALSE"。
@@ -1698,7 +1698,7 @@ virtual COleDataSource* OnGetClipboardData(
 virtual void OnGetClipRect(CRect& rClipRect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rClipRect*<br/>
 指向[CRect](../../atl-mfc-shared/reference/crect-class.md)类的对象的指针，它将保存项的剪辑矩形坐标。
@@ -1717,7 +1717,7 @@ virtual void OnGetClipRect(CRect& rClipRect);
 virtual void OnGetItemPosition(CRect& rPosition);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rPosition*<br/>
 对[CRect](../../atl-mfc-shared/reference/crect-class.md)对象的引用，该对象将包含项的位置坐标。
@@ -1739,7 +1739,7 @@ virtual BOOL OnGetWindowContext(
     LPOLEINPLACEFRAMEINFO lpFrameInfo);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ppMainFrame*<br/>
 指向主框架窗口的指针的指针。
@@ -1774,7 +1774,7 @@ virtual void OnInsertMenus(
     LPOLEMENUGROUPWIDTHS lpMenuWidths);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pMenuShared*<br/>
 指向空菜单。
@@ -1798,7 +1798,7 @@ virtual void OnInsertMenus(
 virtual void OnRemoveMenus(CMenu* pMenuShared);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pMenuShared*<br/>
 指向通过调用[OnInsertMenus](#oninsertmenus)成员函数构建的复合菜单。
@@ -1819,7 +1819,7 @@ virtual void OnRemoveMenus(CMenu* pMenuShared);
 virtual BOOL OnScrollBy(CSize sizeExtent);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *sizeExtent*<br/>
 指定在 x 和 y 方向上滚动的距离（以像素为单位）。
@@ -1845,7 +1845,7 @@ virtual void OnSetMenu(
     HWND hwndActiveObject);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pMenuShared*<br/>
 一个指针，指向通过调用[OnInsertMenus](#oninsertmenus)成员函数和 `InsertMenu` 函数构建的复合菜单。
@@ -1872,7 +1872,7 @@ virtual BOOL OnShowControlBars(
     BOOL bShow);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFrameWnd*<br/>
 指向容器应用程序框架窗口的指针。 这可以是主框架窗口或 MDI 子窗口。
@@ -1946,7 +1946,7 @@ BOOL ReactivateAndUndo();
 virtual void Release(OLECLOSE dwCloseOption = OLECLOSE_NOSAVE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwCloseOption*<br/>
 指定在 OLE 项返回到已加载状态时，该 OLE 项保存在什么情况下的标志。 有关可能值的列表，请参阅[COleClientItem：： Close](#close)。
@@ -1993,7 +1993,7 @@ void Run();
 virtual void SetDrawAspect(DVASPECT nDrawAspect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nDrawAspect*<br/>
 DVASPECT 枚举中的一个值。 此参数可以具有下列值之一：
@@ -2022,9 +2022,9 @@ void SetExtent(
     DVASPECT nDrawAspect = DVASPECT_CONTENT);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*size*<br/>
+size<br/>
 包含大小信息的[CSize](../../atl-mfc-shared/reference/csize-class.md)对象。
 
 *nDrawAspect*<br/>
@@ -2046,7 +2046,7 @@ void SetHostNames(
     LPCTSTR lpszHostObj);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszHost*<br/>
 一个指针，指向容器应用程序的用户可见名称。
@@ -2070,7 +2070,7 @@ void SetHostNames(
 BOOL SetIconicMetafile(HGLOBAL hMetaPict);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hMetaPict*<br/>
 用于绘制项的图标的图元文件的句柄。
@@ -2095,7 +2095,7 @@ BOOL SetItemRects(
     LPCRECT lpClipRect = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lprcPosRect*<br/>
 指向包含 OLE 项相对于其父窗口的边界的矩形的指针（以工作区坐标表示）。
@@ -2121,7 +2121,7 @@ BOOL SetItemRects(
 void SetLinkUpdateOptions(OLEUPDATE dwUpdateOpt);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwUpdateOpt*<br/>
 此项的链接更新选项的值。 此值必须是下列值之一：
@@ -2145,7 +2145,7 @@ BOOL SetPrintDevice(const DVTARGETDEVICE* ptd);
 BOOL SetPrintDevice(const PRINTDLG* ppd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ptd*<br/>
 指向[DVTARGETDEVICE](/windows/win32/api/objidl/ns-objidl-dvtargetdevice)数据结构的指针，该结构包含有关新的打印目标设备的信息。 可以为 NULL。

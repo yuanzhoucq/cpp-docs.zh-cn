@@ -3,11 +3,11 @@ title: 4. 环境变量
 ms.date: 01/16/2019
 ms.assetid: 4ec7ed81-e9ca-46a1-84f8-8f9ce4587346
 ms.openlocfilehash: b41829fd9cf2f90312f669ef991f56dda02947f7
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78882845"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424163"
 ---
 # <a name="4-environment-variables"></a>4. 环境变量
 
@@ -92,7 +92,7 @@ setenv OMP_DYNAMIC TRUE
 
 ## <a name="44-omp_nested"></a>4.4 OMP_NESTED
 
-`OMP_NESTED` 环境变量启用或禁用嵌套并行性，除非通过调用 `omp_set_nested` 库例程启用或禁用嵌套并行度。 如果 `OMP_NESTED` 设置为 `TRUE`，则会启用嵌套并行度。 如果 `OMP_NESTED` 设置为 `FALSE`，则将禁用嵌套并行度。 默认值为 `FALSE`。
+`OMP_NESTED` 环境变量启用或禁用嵌套并行性，除非通过调用 `omp_set_nested` 库例程启用或禁用嵌套并行度。 如果 `OMP_NESTED` 设置为 `TRUE`，则会启用嵌套并行度。 如果 `OMP_NESTED` 设置为 `FALSE`，则将禁用嵌套并行度。 默认值是 `FALSE`。
 
 示例：
 

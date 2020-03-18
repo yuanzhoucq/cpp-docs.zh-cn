@@ -18,11 +18,11 @@ helpviewer_keywords:
 - CComPtrBase class
 ms.assetid: 6dbe9543-dee8-4a97-b02f-dd3a25f4a1a0
 ms.openlocfilehash: 740920225fc513a869b4a92344f87004831e4768
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864943"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423278"
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase 类
 
@@ -62,7 +62,7 @@ class CComPtrBase
 |[CComPtrBase：： Release](#release)|调用此方法可释放接口。|
 |[CComPtrBase：： SetSite](#setsite)|调用此方法可将 `CComPtrBase` 对象的站点设置为父对象的 `IUnknown`。|
 
-### <a name="public-operators"></a>公共运算符
+### <a name="public-operators"></a>公用運算子
 
 |名称|说明|
 |----------|-----------------|

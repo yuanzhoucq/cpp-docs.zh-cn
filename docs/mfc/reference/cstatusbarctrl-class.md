@@ -45,11 +45,11 @@ helpviewer_keywords:
 - CStatusBarCtrl [MFC], SetTipText
 ms.assetid: 8504ad38-7b91-4746-aede-ac98886eb47b
 ms.openlocfilehash: 8c33aa4d77eeeeca69e50dc63982ff4d7e8bd505
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865530"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426353"
 ---
 # <a name="cstatusbarctrl-class"></a>CStatusBarCtrl 类
 
@@ -61,7 +61,7 @@ ms.locfileid: "78865530"
 class CStatusBarCtrl : public CWnd
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -126,7 +126,7 @@ virtual BOOL Create(
     UINT nID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwStyle*<br/>
 指定状态栏控件的样式。 应用 Windows SDK 中[常见控件样式](/windows/win32/Controls/common-control-styles)中列出的任何状态栏控件样式组合。 此参数必须包括 WS_CHILD 样式。 它还应包括 WS_VISIBLE 样式。
@@ -169,7 +169,7 @@ virtual BOOL CreateEx(
     UINT nID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwExStyle*<br/>
 指定正在创建的控件的扩展样式。 有关扩展 Windows 样式的列表，请参阅 Windows SDK 中[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)的*dwExStyle*参数。
@@ -210,7 +210,7 @@ CStatusBarCtrl();
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpDrawItemStruct*<br/>
 指向[DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct)结构的长指针，该指针包含所需绘图类型的相关信息。
@@ -236,7 +236,7 @@ BOOL GetBorders(
     int& nSpacing) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pBorders*<br/>
 包含三个元素的整数数组的地址。 第一个元素接收水平边框的宽度，第二个元素接收垂直边框的宽度，第三个元素接收矩形之间的边框宽度。
@@ -270,7 +270,7 @@ BOOL GetBorders(
 HICON GetIcon(int iPart) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -308,7 +308,7 @@ int GetParts(
     int* pParts) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nParts*<br/>
 要为其检索坐标的部分数。 如果此参数大于控件中的部分数，则消息仅检索现有部分的坐标。
@@ -338,7 +338,7 @@ BOOL GetRect(
     LPRECT lpRect) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nPane*<br/>
 要检索其边框的部分的从零开始的索引。
@@ -369,7 +369,7 @@ int GetText(
     int* pType = NULL) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszText*<br/>
 接收文本的缓冲区的地址。 此参数为以 null 值结束的字符串。
@@ -406,7 +406,7 @@ int GetTextLength(
     int* pType = NULL) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nPane*<br/>
 要从中检索文本的部分的从零开始的索引。
@@ -438,7 +438,7 @@ int GetTextLength(
 CString GetTipText(int nPane) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nPane*<br/>
 用于接收工具提示文本的状态栏窗格的从零开始的索引。
@@ -479,7 +479,7 @@ BOOL IsSimple() const;
 COLORREF SetBkColor(COLORREF cr);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *回车*<br/>
 指定新背景色的 COLORREF 值。 指定 CLR_DEFAULT 值以使状态栏使用其默认背景色。
@@ -506,7 +506,7 @@ BOOL SetIcon(
     HICON hIcon);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nPane*<br/>
 将接收图标的窗格的从零开始的索引。 如果此参数为-1，则将状态栏视为一个简单的状态栏。
@@ -534,7 +534,7 @@ BOOL SetIcon(
 void SetMinHeight(int nMin);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nMin*<br/>
 控件的最小高度（以像素为单位）。
@@ -557,7 +557,7 @@ BOOL SetParts(
     int* pWidths);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nParts*<br/>
 要设置的部分数。 部分数不能大于255。
@@ -581,7 +581,7 @@ BOOL SetParts(
 BOOL SetSimple(BOOL bSimple = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bSimple*<br/>
 中显示类型标志。 如果此参数为 TRUE，则控件显示简单文本;如果它为 FALSE，则显示多个部件。
@@ -605,7 +605,7 @@ BOOL SetText(
     int nType);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszText*<br/>
 用于指定要设置的文本且以 Null 结尾的字符串的地址。 如果 SBT_OWNERDRAW *n* ，则*lpszText*表示32位数据。
@@ -638,7 +638,7 @@ void SetTipText(
     LPCTSTR pszTipText);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nPane*<br/>
 用于接收工具提示文本的状态栏窗格的从零开始的索引。

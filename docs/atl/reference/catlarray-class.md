@@ -26,11 +26,11 @@ helpviewer_keywords:
 - CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
 ms.openlocfilehash: 6a0b83f722d1b616e9c10713646d337f9cb090a4
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864876"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423458"
 ---
 # <a name="catlarray-class"></a>CAtlArray 类
 
@@ -43,7 +43,7 @@ template<typename E, class ETraits = CElementTraits<E>>
 class CAtlArray
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *E*<br/>
 要存储在数组中的数据类型。
@@ -51,7 +51,7 @@ class CAtlArray
 *ETraits*<br/>
 用于复制或移动元素的代码。
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="methods"></a>方法
 
@@ -112,7 +112,7 @@ size_t Add(INARGTYPE element);
 size_t Add();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *element*<br/>
 要添加到数组中的元素。
@@ -137,7 +137,7 @@ size_t Add();
 size_t Append(const CAtlArray<E, ETraits>& aSrc);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *aSrc*<br/>
 要追加的数组。
@@ -210,7 +210,7 @@ CAtlArray() throw();
 void Copy(const CAtlArray<E, ETraits>& aSrc);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *aSrc*<br/>
 要复制到数组的元素的源。
@@ -253,7 +253,7 @@ const E& GetAt(size_t iElement) const throw();
 E& GetAt(size_t iElement) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iElement*<br/>
 要返回的数组元素的索引值。
@@ -323,7 +323,7 @@ typedef ETraits::INARGTYPE INARGTYPE;
 void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iStart*<br/>
 要插入数组的位置的索引。
@@ -352,7 +352,7 @@ void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
 void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iElement*<br/>
 要在其中插入元素的索引。
@@ -402,7 +402,7 @@ E& operator[](size_t ielement) throw();
 const E& operator[](size_t ielement) const throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iElement*<br/>
 要返回的数组元素的索引值。
@@ -451,7 +451,7 @@ void RemoveAll() throw();
 void RemoveAt(size_t iElement, size_t nCount = 1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iElement*<br/>
 要移除的第一个元素的索引。
@@ -477,7 +477,7 @@ void RemoveAt(size_t iElement, size_t nCount = 1);
 void SetAt(size_t iElement, INARGTYPE element);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iElement*<br/>
 指向要设置的数组元素的索引。
@@ -501,7 +501,7 @@ void SetAt(size_t iElement, INARGTYPE element);
 bool SetCount(size_t nNewSize, int nGrowBy = - 1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nNewSize*<br/>
 数组的所需大小。
@@ -531,7 +531,7 @@ bool SetCount(size_t nNewSize, int nGrowBy = - 1);
 void SetAtGrow(size_t iElement, INARGTYPE element);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iElement*<br/>
 指向要设置的数组元素的索引。

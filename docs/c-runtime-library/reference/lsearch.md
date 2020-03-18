@@ -21,7 +21,6 @@ topic_type:
 - apiref
 f1_keywords:
 - _lsearch
-- lsearch
 helpviewer_keywords:
 - _lsearch function
 - values, searching for
@@ -31,12 +30,12 @@ helpviewer_keywords:
 - searching, linear
 - lsearch function
 ms.assetid: 8200f608-159a-46f0-923b-1a37ee1af7e0
-ms.openlocfilehash: 92973536df478f4176970929c5f4dd48352bed13
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6dc610c4ab120d81bfb2b3b5e64a54a104bea97f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954079"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438142"
 ---
 # <a name="_lsearch"></a>_lsearch
 
@@ -62,7 +61,7 @@ void *_lsearch(
 *base*<br/>
 指向要搜索的数组基的指针。
 
-*number*<br/>
+*数字*<br/>
 元素数量。
 
 *width*<br/>
@@ -73,23 +72,23 @@ void *_lsearch(
 
 ## <a name="return-value"></a>返回值
 
-如果找到该键，则 **_lsearch**将返回一个指针，该指针指向与*键*匹配的*基*中的数组元素。 如果未找到该键，则 **_lsearch**将返回指向数组末尾的新添加项的指针。
+如果找到该密钥， **_lsearch**将返回一个指针，该指针指向匹配*键*的*基*中的数组元素。 如果未找到该键，则 **_lsearch**返回指向数组末尾的新添加项的指针。
 
 ## <a name="remarks"></a>备注
 
-**_Lsearch**函数对*数字*元素数组中的值*键*执行线性搜索，其中每个*宽度*字节。 与**bsearch**不同， **_lsearch**不需要对数组进行排序。 如果找不到*键*， **_lsearch**会将其添加到数组的末尾并递增*数字*。
+**_Lsearch**函数对*数字*元素数组中的值*键*（每个*宽度*字节）执行线性搜索。 与**bsearch**不同， **_lsearch**不需要对数组进行排序。 如果找不到*键*， **_lsearch**会将其添加到数组的末尾并递增*数字*。
 
 *Compare*参数是指向用户提供的例程的指针，它比较两个数组元素，并返回指定其关系的值。 **_lsearch**在搜索过程中一次或多次调用*比较*例程，同时将指针传递到每个调用上的两个数组元素。 *compare*必须比较元素并返回非零值（表示元素不同）或0（表示元素相同）。
 
-此函数验证其参数。 如果为*compare*、 *key*或*number*为**null**，或者*base*为**null**且*number*为非零，或者*width*小于零，则调用无效参数处理程序，如参数中所述。 [验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则将**errno**设置为**EINVAL** ，并且该函数将返回**NULL**。
+此函数验证其参数。 如果为*compare*、 *key*或*number*为**null**，或者*base*为**null**且*number*为非零，或者*width*小于零，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将**errno**设置为**EINVAL** ，并且该函数将返回**NULL**。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_lsearch**|\<search.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -133,7 +132,7 @@ wordlist before _lsearch: hello thanks bye
 wordlist after _lsearch: hello thanks bye extra
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [搜索和排序](../../c-runtime-library/searching-and-sorting.md)<br/>
 [bsearch](bsearch.md)<br/>

@@ -91,11 +91,11 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
 ms.openlocfilehash: 963aecfed4f6eb67a0ab227df06fce98c0778f7f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866385"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425723"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl 类
 
@@ -107,7 +107,7 @@ ms.locfileid: "78866385"
 class CMonthCalCtrl : public CWnd
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -221,7 +221,7 @@ virtual BOOL Create(
     UINT nID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwStyle*<br/>
 指定应用于月历控件的 Windows 样式的组合。 有关样式的详细信息，请参阅[月历控件样式](/windows/win32/Controls/month-calendar-control-styles)Windows SDK。
@@ -300,7 +300,7 @@ int GetCalendarCount() const;
 BOOL GetCalendarGridInfo(PMCGRIDINFO pmcGridInfo) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -352,7 +352,7 @@ CALID GetCalID() const;
 COLORREF GetColor(int nRegion) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nRegion*<br/>
 从中检索颜色的月历控件区域。 有关值的列表，请参阅[SetColor](#setcolor)的*nRegion*参数。
@@ -406,7 +406,7 @@ BOOL GetCurSel(COleDateTime& refDateTime) const;  BOOL GetCurSel(CTime& refDateT
 BOOL GetCurSel(LPSYSTEMTIME pDateTime) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *refDateTime*<br/>
 对[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)对象或[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象的引用。 接收当前时间。
@@ -435,7 +435,7 @@ BOOL GetCurSel(LPSYSTEMTIME pDateTime) const;
 int GetFirstDayOfWeek(BOOL* pbLocal = NULL) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pbLocal*<br/>
 指向布尔值的指针。 如果该值为非零，则该控件的设置与控制面板中的设置不匹配。
@@ -520,7 +520,7 @@ DWORD GetMaxTodayWidth() const;
 BOOL GetMinReqRect(RECT* pRect) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pRect*<br/>
 指向将接收边框信息的[RECT](/previous-versions/dd162897\(v=vs.85\))结构的指针。 此参数必须是有效的地址，并且不能为 NULL。
@@ -570,7 +570,7 @@ int GetMonthRange(
     DWORD dwFlags) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *refMinRange*<br/>
 对包含所允许的最小日期的[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)或[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象的引用。
@@ -622,7 +622,7 @@ DWORD GetRange(
     LPSYSTEMTIME pMaxRange) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pMinRange*<br/>
 指向 `COleDateTime` 对象、`CTime` 对象或[SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime)结构的指针，该对象包含范围的最低端日期。
@@ -665,7 +665,7 @@ BOOL GetSelRange(
     LPSYSTEMTIME pMaxRange) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *refMinRange*<br/>
 对包含所允许的最小日期的[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)或[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象的引用。
@@ -699,7 +699,7 @@ BOOL GetToday(COleDateTime& refDateTime) const;  BOOL GetToday(COleDateTime& ref
 BOOL GetToday(LPSYSTEMTIME pDateTime) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *refDateTime*<br/>
 对指示当前日的[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)或[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象的引用。
@@ -727,7 +727,7 @@ BOOL GetToday(LPSYSTEMTIME pDateTime) const;
 DWORD HitTest(PMCHITTESTINFO pMCHitTest);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pMCHitTest*<br/>
 指向[MCHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-mchittestinfo)结构的指针，该结构包含月历控件的命中测试点。
@@ -812,7 +812,7 @@ BOOL IsYearView() const;
 void SetCalendarBorder(int cxyBorder);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -858,7 +858,7 @@ void SetCalendarBorderDefault();
 BOOL SetCalID(CALID calid);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -912,7 +912,7 @@ COLORREF SetColor(
     COLORREF ref);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nRegion*<br/>
 一个整数值，指定要设置的月份日历颜色。 此值可以是下列值之一。
@@ -949,7 +949,7 @@ COLORREF SetColor(
 BOOL SetCurrentView(DWORD dwNewView);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -973,7 +973,7 @@ BOOL SetCurSel(const CTime& refDateTime);
 BOOL SetCurSel(const LPSYSTEMTIME pDateTime);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *refDateTime*<br/>
 对[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)或[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象的引用，该对象指示当前选定的月历控件。
@@ -1003,7 +1003,7 @@ BOOL SetDayState(
     LPMONTHDAYSTATE pStates);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nMonths*<br/>
 指示数组中*pStates*指向的元素数的值。
@@ -1049,7 +1049,7 @@ BOOL SetFirstDayOfWeek(
     int* lpnOld = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iDay*<br/>
 一个整数值，表示要将哪一天设置为一周的第一天。 此值必须是某一天数值。 有关日数字的说明，请参阅[GetFirstDayOfWeek](#getfirstdayofweek) 。
@@ -1077,7 +1077,7 @@ BOOL SetFirstDayOfWeek(
 BOOL SetMaxSelCount(int nMax);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *N 每天*<br/>
 将设置为表示可选择的最大天数的值。
@@ -1102,7 +1102,7 @@ BOOL SetMaxSelCount(int nMax);
 int SetMonthDelta(int iDelta);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Idelta 修改*<br/>
 要设置为控件的滚动率的月数。 如果此值为零，则月份增量将重置为默认值，即显示在控件中的月数。
@@ -1161,7 +1161,7 @@ BOOL SetRange(
     const LPSYSTEMTIME pMaxRange);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pMinRange*<br/>
 指向 `COleDateTime` 对象、`CTime` 对象或[SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime)结构的指针，该对象包含范围的最低端日期。
@@ -1199,7 +1199,7 @@ BOOL SetSelRange(
     const LPSYSTEMTIME pMaxRange);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pMinRange*<br/>
 指向 `COleDateTime` 对象、`CTime` 对象或[SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime)结构的指针，该对象包含范围的最低端日期。
@@ -1225,7 +1225,7 @@ void SetToday(const CTime* pDateTime);
 void SetToday(const LPSYSTEMTIME pDateTime);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *refDateTime*<br/>
 对包含当前日期的[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)对象的引用。
@@ -1265,7 +1265,7 @@ BOOL SetYearView();
 BOOL SizeMinReq(BOOL bRepaint = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bRepaint*<br/>
 指定是否要重新绘制控件。 默认情况下，为 TRUE。 如果为 FALSE，则不进行重画。
@@ -1286,7 +1286,7 @@ BOOL SizeMinReq(BOOL bRepaint = TRUE);
 LPRECT SizeRectToMin(LPRECT lpRect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|

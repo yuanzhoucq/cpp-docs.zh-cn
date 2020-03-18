@@ -41,11 +41,11 @@ helpviewer_keywords:
 - CEditView [MFC], dwStyleDefault
 ms.assetid: bf38255c-fcbe-450c-95b2-3c5e35f86c37
 ms.openlocfilehash: e9b7dea980e607c776e2d50c679042c765080fdb
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78872490"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424421"
 ---
 # <a name="ceditview-class"></a>CEditView 类
 
@@ -57,7 +57,7 @@ ms.locfileid: "78872490"
 class CEditView : public CCtrlView
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -181,7 +181,7 @@ BOOL FindText(
     BOOL bCase = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszFind*<br/>
 要查找的文本。
@@ -263,7 +263,7 @@ CFont* GetPrinterFont() const;
 void GetSelectedText(CString& strResult) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *strResult*<br/>
 对要接收所选文本的 `CString` 对象的引用。
@@ -291,7 +291,7 @@ virtual void OnFindNext(
     BOOL bCase);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszFind*<br/>
 要查找的文本。
@@ -319,7 +319,7 @@ virtual void OnReplaceAll(
     BOOL bCase);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszFind*<br/>
 要查找的文本。
@@ -350,7 +350,7 @@ virtual void OnReplaceSel(
     LPCTSTR lpszReplace);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszFind*<br/>
 要查找的文本。
@@ -378,7 +378,7 @@ virtual void OnReplaceSel(
 virtual void OnTextNotFound(LPCTSTR lpszFind);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszFind*<br/>
 要查找的文本。
@@ -395,7 +395,7 @@ UINT PrintInsideRect(
     UINT nIndexStop);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 指向打印机设备上下文的指针。
@@ -427,7 +427,7 @@ UINT PrintInsideRect(
 void SerializeRaw(CArchive& ar);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ar*<br/>
 对存储序列化文本的 `CArchive` 对象的引用。
@@ -444,7 +444,7 @@ void SerializeRaw(CArchive& ar);
 void SetPrinterFont(CFont* pFont);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFont*<br/>
 指向 `CFont`类型的对象的指针。 如果为 NULL，则用于打印的字体基于显示字体。
@@ -461,7 +461,7 @@ void SetPrinterFont(CFont* pFont);
 void SetTabStops(int nTabStops);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nTabStops*<br/>
 每个制表位的宽度（以对话框单位为单位）。

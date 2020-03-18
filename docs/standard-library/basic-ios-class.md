@@ -56,11 +56,11 @@ helpviewer_keywords:
 - std::basic_ios [C++], widen
 ms.assetid: 4fdcd8e1-62d2-4611-8a70-1e4f58434007
 ms.openlocfilehash: 614e26b2329edeec2cccb32c7ba18b23e9d5320d
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856467"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424115"
 ---
 # <a name="basic_ios-class"></a>basic_ios 类
 
@@ -74,7 +74,7 @@ template <class Elem, class Traits>
 class basic_ios : public ios_base
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Elem*\
 一种类型。
@@ -138,7 +138,7 @@ class basic_ios : public ios_base
 
 ### <a name="operators"></a>运算符
 
-|运算符|说明|
+|操作员|说明|
 |-|-|
 |[explicit operator bool](#op_bool)|允许使用 `basic_ios` 对象作为**bool**。 禁用自动类型转换以防止产生常见的意外副作用。|
 |[operator void *](#op_void_star)|指示流是否仍处于良好状态。|
@@ -192,7 +192,7 @@ explicit basic_ios(basic_streambuf<Elem,  Traits>* sb);
 basic_ios();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *sb*\
 用于存储输入或输出元素的标准缓冲区。
@@ -218,7 +218,7 @@ void clear(iostate state = goodbit, bool reraise = false);
 void clear(io_state state);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *状态*\
 可有可无清除所有标志后要设置的标志。 默认为 `goodbit`。
@@ -249,7 +249,7 @@ basic_ios<Elem, Traits>& copyfmt(
 const basic_ios<Elem, Traits>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *right*\
 要复制其标志的流。
@@ -331,7 +331,7 @@ void exceptions(iostate Newexcept);
 void exceptions(io_state Newexcept);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Newexcept*\
 希望抛出异常的标志。
@@ -419,7 +419,7 @@ char_type fill() const;
 char_type fill(char_type Char);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Char*\
 希望用作填充字符的字符。
@@ -483,7 +483,7 @@ bool good() const;
 locale imbue(const locale& Loc);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Loc*\
 区域设置字符串。
@@ -526,7 +526,7 @@ int main( )
 void init(basic_streambuf<Elem,Traits>* _Sb, bool _Isstd = false);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Sb*\
 用于存储输入或输出元素的标准缓冲区。
@@ -574,7 +574,7 @@ typedef typename traits_type::int_type int_type;
 void move(basic_ios&& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *right*\
 从中移动值的 `ios_base` 对象。
@@ -591,7 +591,7 @@ void move(basic_ios&& right);
 char narrow(char_type Char, char Default = '\0') const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Char*\
 要转换的**字符**。
@@ -726,7 +726,7 @@ basic_streambuf<Elem, Traits> *rdbuf(
 basic_streambuf<Elem, Traits>* _Sb);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Sb*\
 一个流。
@@ -818,7 +818,7 @@ int main( )
 void setstate(iostate _State);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_State*\
 要设置的其他标志。
@@ -868,7 +868,7 @@ void set_rdbuf(
 basic_streambuf<Elem, Tr>* strbuf)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *strbuf*\
 要成为读取缓冲区的流缓冲区。
@@ -887,7 +887,7 @@ basic_ostream<Elem, Traits> *tie(
 basic_ostream<Elem, Traits>* str);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *str*\
 一个流。
@@ -934,7 +934,7 @@ typedef Traits traits_type;
 char_type widen(char Char) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Char*\
 要转换的字符。
@@ -975,7 +975,7 @@ int main( )
 void swap(basic_ios&& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *right*\
 用于交换值的 `basic_ios` 对象。

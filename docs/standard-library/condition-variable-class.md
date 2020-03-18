@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
 ms.openlocfilehash: 999e236433ec4f3f2f52abb06855004a89169fa6
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78872410"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427163"
 ---
 # <a name="condition_variable-class"></a>condition_variable 类
 
@@ -37,7 +37,7 @@ ms.locfileid: "78872410"
 class condition_variable;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="constructors"></a>构造函数
 
@@ -107,7 +107,7 @@ template <class Predicate>
 void wait(unique_lock<mutex>& Lck, Predicate Pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Fuj-bk-lck*\
 [unique_lock\<mutex>](../standard-library/unique-lock-class.md) 对象。
@@ -143,7 +143,7 @@ bool wait_for(
     Predicate Pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Fuj-bk-lck*\
 [unique_lock\<mutex>](../standard-library/unique-lock-class.md) 对象。
@@ -201,7 +201,7 @@ bool wait_until(
     Predicate Pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Fuj-bk-lck*\
 [unique_lock\<mutex>](../standard-library/unique-lock-class.md) 对象。

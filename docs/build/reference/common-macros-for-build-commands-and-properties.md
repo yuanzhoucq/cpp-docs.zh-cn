@@ -1,9 +1,6 @@
 ---
 title: MSBuild 命令和属性的常见宏
 ms.date: 08/02/2019
-f1_keywords:
-- VC.Project.VCCLCompilerTool.GenerateXMLDocumentationFiles
-- VC.Project.VCCLCompilerTool.XMLDocumentationFileName
 helpviewer_keywords:
 - $(FrameworkSDKDir) macro
 - ProjectName macro $(ProjectName)
@@ -93,12 +90,12 @@ helpviewer_keywords:
 - $(PlatformShortName) macro
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
-ms.openlocfilehash: e2c7fe6f2ea63f2cbd259e4114843fcfc28fcd84
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 5038416a8df3282b426d3298c73520f78e962766
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988324"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440166"
 ---
 # <a name="common-macros-for-msbuild-commands-and-properties"></a>MSBuild 命令和属性的常见宏
 
@@ -114,7 +111,7 @@ ms.locfileid: "74988324"
 
 下表介绍了可用宏的常用子集;这里有很多未列出的内容。 请访问 "**宏**" 对话框，查看项目中的所有属性及其当前值。 有关如何创建 MSBuild 属性定义以及如何在 .props、.targets 和 .vcxproj 文件中将其用作宏的详细信息，请参阅 [MSBuild 属性](/visualstudio/msbuild/msbuild-properties)。
 
-|宏|描述|
+|宏|说明|
 |-----------|-----------------|
 |**$(Configuration)**|当前项目配置的名称，例如，“调试”。|
 |**$(DevEnvDir)**|Visual Studio 的安装目录（定义为驱动器 + 路径）；包括尾随反斜杠“\\”。|
@@ -147,13 +144,13 @@ ms.locfileid: "74988324"
 |**$(VCInstallDir)**|包含 Visual Studio 安装的 C++ 内容的目录。 此属性包含目标 Microsoft C++ （MSVC）工具集的版本，它可能与主机 Visual Studio 不同。 例如，在 `$(PlatformToolset) = v140`生成时， **$ （VCInstallDir）** 包含 Visual Studio 2015 安装的路径。|
 |**$(VSInstallDir)**|在其中安装了 Visual Studio 的目录。 此属性包含目标 Visual Studio 工具集的版本，它可能与主机 Visual Studio 不同。 例如，当使用 `$(PlatformToolset) = v110`进行生成时， **$(VSInstallDir)** 包含 Visual Studio 2012 安装的路径。|
 |**$(WebDeployPath)**|从 Web 部署根到项目输出位置的相对路径。|
-|**$(WebDeployRoot)**|\<localhost> 的位置的绝对路径。 例如，c:\inetpub\wwwroot。|
+|**$(WebDeployRoot)**|**localhost> 的位置的绝对路径\<** 。 例如，c:\inetpub\wwwroot。|
 
 ## <a name="obsolete-macros"></a>弃用的宏
 
 Visual Studio 2008 和 Visual Studio 2010 之间的 C++ 生成系统已显著更改。 早期项目类型中使用的许多宏已更改为新的宏。 这些宏已不再使用，或者被一个或多个等效属性或[项目元数据宏](/visualstudio/msbuild/itemmetadata-element-msbuild) (%(name)) 值替换。 项目迁移工具可以更新标记为“已迁移”的宏。 如果包含宏的项目从 Visual Studio 2008 或更旧版本迁移到了 Visual Studio 2010，则 Visual Studio 会将宏转换为等效的当前宏。 更高版本的 Visual Studio 无法将 Visual Studio 2008 和更低版本中的项目转换为新的项目类型。 转换这些项目必须执行两步操作；首先将这些项目转换为 Visual Studio 2010，然后将结果转换为更新版本的 Visual Studio。 有关详细信息，请参阅[潜在的升级问题概述](../../porting/overview-of-potential-upgrade-issues-visual-cpp.md)。
 
-|宏|描述|
+|宏|说明|
 |-----------|-----------------|
 |**$(InputDir)**|（已迁移。）输入文件的目录（定义为驱动器 + 路径）;包括尾随反斜杠 "\\"。 如果项目即输入，则此宏等同于 **$(ProjectDir)** 。|
 |**$(InputExt)**|（已迁移。）输入文件的文件扩展名。 文件扩展名之前包括“.”。 如果项目即输入，则此宏等同于 **$(ProjectExt)** 。 对于源文件，此为“%(Extension)”。|

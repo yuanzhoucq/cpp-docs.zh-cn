@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Visual C++, x64 calling conventions
 ms.assetid: 750f3d97-1706-4840-b2fc-41a007329a08
 ms.openlocfilehash: 11d29b6c31ccecfe5b9c51c2f9311213bd4a6732
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865595"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422720"
 ---
 # <a name="x64-software-conventions"></a>x64 软件约定
 
@@ -194,24 +194,24 @@ X64 体系结构提供了16个通用寄存器（以后称为整数寄存器）�
 ||||
 |-|-|-|
 |注册|状态|用途|
-|RAX|易失的|返回值寄存器|
-|RCX|易失的|第一个整型自变量|
-|RDX|易失的|第二个整型自变量|
-|R8|易失的|第三个整型自变量|
-|R9|易失的|第四个整型自变量|
-|R10:R11|易失的|必须根据需要由调用方保留；在 syscall/sysret 指令中使用|
+|RAX|Volatile|返回值寄存器|
+|RCX|Volatile|第一个整型自变量|
+|RDX|Volatile|第二个整型自变量|
+|R8|Volatile|第三个整型自变量|
+|R9|Volatile|第四个整型自变量|
+|R10:R11|Volatile|必须根据需要由调用方保留；在 syscall/sysret 指令中使用|
 |R12:R15|非易失的|必须由被调用方保留|
 |RDI|非易失的|必须由被调用方保留|
 |RSI|非易失的|必须由被调用方保留|
 |RBX|非易失的|必须由被调用方保留|
 |RBP|非易失的|可用作帧指针；必须由被调用方保留|
 |RSP|非易失的|堆栈指针|
-|XMM0、YMM0|易失的|第一个 FP 参数；使用 `__vectorcall` 时的第一个矢量类型参数|
-|XMM1、YMM1|易失的|第二个 FP 参数；使用 `__vectorcall` 时的第二个矢量类型参数|
-|XMM2、YMM2|易失的|第三个 FP 参数；使用 `__vectorcall` 时的第三个矢量类型参数|
-|XMM3、YMM3|易失的|第四个 FP 自变量；使用 `__vectorcall` 时的第四个矢量类型参数|
-|XMM4、YMM4|易失的|必须根据需要由调用方保留；使用 `__vectorcall` 时的第五个矢量类型参数|
-|XMM5、YMM5|易失的|必须根据需要由调用方保留；使用 `__vectorcall` 时的第六个矢量类型参数|
+|XMM0、YMM0|Volatile|第一个 FP 参数；使用 `__vectorcall` 时的第一个矢量类型参数|
+|XMM1、YMM1|Volatile|第二个 FP 参数；使用 `__vectorcall` 时的第二个矢量类型参数|
+|XMM2、YMM2|Volatile|第三个 FP 参数；使用 `__vectorcall` 时的第三个矢量类型参数|
+|XMM3、YMM3|Volatile|第四个 FP 自变量；使用 `__vectorcall` 时的第四个矢量类型参数|
+|XMM4、YMM4|Volatile|必须根据需要由调用方保留；使用 `__vectorcall` 时的第五个矢量类型参数|
+|XMM5、YMM5|Volatile|必须根据需要由调用方保留；使用 `__vectorcall` 时的第六个矢量类型参数|
 |XMM6:XMM15、YMM6:YMM15|非易失的 (XMM)，易失的（YMM 的上半部分）|必须由被调用方保留。 YMM 寄存器必须根据需要由调用方保留。|
 
 在函数 exit 和 on 函数进入 C 运行库调用和 Windows 系统调用时，应清除 CPU 标志寄存器中的方向标志。

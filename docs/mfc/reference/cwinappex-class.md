@@ -119,11 +119,11 @@ helpviewer_keywords:
 - CWinAppEx [MFC], m_bForceImageReset
 ms.assetid: a3d3e053-3e22-463f-9444-c73abb1bb9d7
 ms.openlocfilehash: c222567703d0e57480c00f6f2bf9e78f16979150
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78869925"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426305"
 ---
 # <a name="cwinappex-class"></a>CWinAppEx 类
 
@@ -136,7 +136,7 @@ ms.locfileid: "78869925"
 class CWinAppEx : public CWinApp
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -248,7 +248,7 @@ MFC 框架提供的很多功能取决于 `CWinAppEx` 类。 您可以通过以�
 virtual BOOL CleanState(LPCTSTR lpszSectionName=NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszSectionName*<br/>
 中包含注册表项的路径的字符串。
@@ -269,7 +269,7 @@ virtual BOOL CleanState(LPCTSTR lpszSectionName=NULL);
 CWinAppEx(BOOL bResourceSmartUpdate = FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bResourceSmartUpdate*<br/>
 中一个布尔参数，指定工作区对象是否应检测并处理资源更新。
@@ -286,7 +286,7 @@ CWinAppEx(BOOL bResourceSmartUpdate = FALSE);
 void EnableLoadWindowPlacement(BOOL bEnable = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bEnable*<br/>
 中指定应用程序是否从注册表加载主框架窗口的初始大小和位置。
@@ -306,7 +306,7 @@ BOOL EnableTearOffMenus(
     const UINT uiCmdLast);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszRegEntry*<br/>
 中一个字符串，其中包含注册表项的路径。 应用程序使用此注册表项来存储可拆卸菜单的信息。
@@ -339,7 +339,7 @@ BOOL EnableUserTools(
     UINT uInitDirMenuID = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *uiCmdToolsDummy*<br/>
 中一个无符号整数，框架使用该整数作为 "用户工具" 菜单的命令 ID 占位符。
@@ -392,7 +392,7 @@ BOOL GetBinary(
     UINT* pBytes);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszEntry*<br/>
 中包含注册表项名称的字符串。
@@ -473,7 +473,7 @@ int GetInt(
     int nDefault = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszEntry*<br/>
 中一个字符串，其中包含注册表项的名称。
@@ -533,12 +533,12 @@ BOOL GetObject(
     CObject& obj);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszEntry*<br/>
 中包含注册表项的相对路径的字符串。
 
-*obj*<br/>
+obj<br/>
 弄对 `CObject`的引用。 方法使用此引用存储注册表数据。
 
 ### <a name="return-value"></a>返回值
@@ -575,7 +575,7 @@ LPCTSTR GetRegistryBase();
 CString GetRegSectionPath(LPCTSTR szSectionAdd = _T(""));
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szSectionAdd*<br/>
 中包含注册表项的相对路径的字符串。
@@ -600,7 +600,7 @@ BOOL GetSectionBinary(
     UINT* pBytes);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszSubSection*<br/>
 中包含注册表项的相对路径的字符串。
@@ -635,7 +635,7 @@ int GetSectionInt(
     int nDefault = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszSubSection*<br/>
 中包含注册表项的相对路径的字符串。
@@ -667,7 +667,7 @@ BOOL GetSectionObject(
     CObject& obj);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszSubSection*<br/>
 中包含注册表项的相对路径的字符串。
@@ -675,7 +675,7 @@ BOOL GetSectionObject(
 *lpszEntry*<br/>
 中一个字符串，其中包含要读取的值。
 
-*obj*<br/>
+obj<br/>
 弄对 `CObject`的引用。 方法使用此 `CObject` 存储注册表数据。
 
 ### <a name="return-value"></a>返回值
@@ -699,7 +699,7 @@ CString GetSectionString(
     LPCTSTR lpszDefault = _T(""));
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszSubSection*<br/>
 中包含注册表项的相对路径的字符串。
@@ -746,7 +746,7 @@ CString GetString(
     LPCTSTR lpzDefault= _T(""));
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszEntry*<br/>
 中包含注册表项名称的字符串
@@ -904,7 +904,7 @@ BOOL IsResourceSmartUpdate() const;
 BOOL IsStateExists(LPCTSTR lpszSectionName);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszSectionName*<br/>
 中包含注册表项的路径的字符串。
@@ -949,7 +949,7 @@ virtual BOOL LoadState(
     CFrameImpl* pFrameImpl = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFrame*<br/>
 中指向框架窗口对象的指针。 方法将注册表中的状态信息应用于此框架窗口。
@@ -983,7 +983,7 @@ virtual BOOL LoadWindowPlacement(
     int& nShowCmd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rectNormalPosition*<br/>
 弄一个矩形，其中包含当主框架窗口处于还原位置时的坐标。
@@ -1026,7 +1026,7 @@ virtual void OnAppContextHelp(
     const DWORD dwHelpIDArray[]);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pWndControl*<br/>
 中一个指针，指向用户为其调用上下文帮助的窗口对象。
@@ -1046,7 +1046,7 @@ virtual void OnAppContextHelp(
 virtual void OnClosingMainFrame(CFrameImpl* pFrameImpl);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFrameImpl*<br/>
 中指向 `CFrameImpl` 对象的指针。
@@ -1065,7 +1065,7 @@ virtual BOOL OnViewDoubleClick(
     int iViewId);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pWnd*<br/>
 中指向派生自[CView 类](../../mfc/reference/cview-class.md)的对象的指针。
@@ -1087,7 +1087,7 @@ virtual BOOL OnViewDoubleClick(
 virtual BOOL OnWorkspaceIdle(CWnd*);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中*CWnd&#38;*<br/>
 
@@ -1127,7 +1127,7 @@ virtual void PreSaveState();
 virtual BOOL ReloadWindowPlacement(CFrameWnd* pFrame);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFrame*<br/>
 中指向框架窗口的指针。
@@ -1174,7 +1174,7 @@ BOOL SaveState(
     LPCTSTR lpszSectionName = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszSectionName*<br/>
 中包含注册表项的相对路径的字符串。
@@ -1203,7 +1203,7 @@ BOOL SaveState(
 LPCTSTR SetRegistryBase(LPCTSTR lpszSectionName = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszSectionName*<br/>
 中一个字符串，其中包含注册表项的路径。
@@ -1227,7 +1227,7 @@ virtual BOOL ShowPopupMenu(
     CWnd* pWnd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *uiMenuResId*<br/>
 中菜单资源 ID。
@@ -1259,7 +1259,7 @@ virtual BOOL StoreWindowPlacement(
     int nShowCmd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nFlags*<br/>
 中用于控制最小化窗口的位置以及操作系统如何在最小化的窗口和已还原的窗口之间切换的标志。
@@ -1291,7 +1291,7 @@ BOOL WriteBinary(
     UINT nBytes);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszEntry*<br/>
 中包含注册表项名称的字符串。
@@ -1322,7 +1322,7 @@ BOOL WriteInt(
     int nValue);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszEntry*<br/>
 中包含注册表项名称的字符串。
@@ -1350,12 +1350,12 @@ BOOL WriteObject(
     CObject& obj);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszEntry*<br/>
 中包含要设置的值的字符串。
 
-*obj*<br/>
+obj<br/>
 中对方法将存储 `CObject` 数据的引用。
 
 ### <a name="return-value"></a>返回值
@@ -1378,7 +1378,7 @@ BOOL WriteSectionBinary(
     UINT nBytes);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszSubSection*<br/>
 中包含注册表项名称的字符串
@@ -1413,7 +1413,7 @@ BOOL WriteSectionInt(
     int nValue);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszSubSection*<br/>
 中包含注册表项的相对路径的字符串。
@@ -1445,7 +1445,7 @@ BOOL WriteSectionObject(
     CObject& obj);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszSubSection*<br/>
 中包含注册表项名称的字符串。
@@ -1453,7 +1453,7 @@ BOOL WriteSectionObject(
 *lpszEntry*<br/>
 中一个字符串，其中包含要设置的值的名称。
 
-*obj*<br/>
+obj<br/>
 中要存储的数据。
 
 ### <a name="return-value"></a>返回值
@@ -1477,7 +1477,7 @@ BOOL WriteSectionString(
     LPCTSTR lpszValue);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszSubSection*<br/>
 中包含注册表项名称的字符串。
@@ -1508,7 +1508,7 @@ BOOL WriteString(
     LPCTSTR lpszValue);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszEntry*<br/>
 中包含注册表项名称的字符串。

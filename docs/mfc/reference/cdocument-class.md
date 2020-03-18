@@ -121,11 +121,11 @@ helpviewer_keywords:
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
 ms.openlocfilehash: 2d87ff67000fb5b70c0a5c965638875e6f50b22c
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856756"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424457"
 ---
 # <a name="cdocument-class"></a>CDocument 类
 
@@ -198,7 +198,7 @@ class CDocument : public CCmdTarget
 |[CDocument：： SetTitle](#settitle)|设置文档的标题。|
 |[CDocument：： UpdateAllViews](#updateallviews)|通知已修改文档的所有视图。|
 
-### <a name="protected-methods"></a>受保护的方法
+### <a name="protected-methods"></a>受保护方法
 
 |名称|说明|
 |----------|-----------------|

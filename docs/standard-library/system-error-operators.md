@@ -6,11 +6,11 @@ f1_keywords:
 - system_error/std::operator==
 ms.assetid: c14edefb-bd8a-4e90-88d3-c59c98e6f73c
 ms.openlocfilehash: 5cf6a455beb5654ef65f7411db4783a32c71d625
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876249"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426173"
 ---
 # <a name="ltsystem_errorgt-operators"></a>&lt;system_error&gt; 运算符
 
@@ -29,7 +29,7 @@ bool operator==(const error_condition& left,
     const error_condition& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 要测试是否相等的对象。
@@ -56,7 +56,7 @@ bool operator!=(const error_code& left, const error_code& right);
 bool operator!=(const error_condition& left, const error_condition& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 要测试是否不相等的对象。
@@ -100,7 +100,7 @@ inline bool operator<(
     const error_condition&>::type left, _Enum right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 要比较的对象。

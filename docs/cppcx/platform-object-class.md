@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
 ms.openlocfilehash: 77313f8c4dcc87fa9de852afe2d60e614f8fc3a3
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865738"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423668"
 ---
 # <a name="platformobject-class"></a>Platform::Object 类
 
@@ -29,7 +29,7 @@ ms.locfileid: "78865738"
 public ref class Object : Object
 ```
 
-### <a name="members"></a>Members
+### <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -41,10 +41,10 @@ public ref class Object : Object
 
 |名称|说明|
 |----------|-----------------|
-|[Object：： Equals](#equals)|确定指定的对象是否等于当前对象。|
+|[Object：： Equals](#equals)|确定指定对象是否等于当前对象。|
 |[Object：： GetHashCode](#gethashcode)|返回此实例的哈希代码。|
 |[Object：： ReferenceEquals](#referenceequals)|确定指定对象实例是否为同一实例。|
-|[ToString](#tostring)|返回一个表示当前对象的 string。 可重写。|
+|[ToString](#tostring)|返回表示当前对象的字符串。 可重写。|
 |[GetType](#gettype)|获取描述当前实例的 [Platform::Type](../cppcx/platform-type-class.md) 。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
@@ -61,7 +61,7 @@ public ref class Object : Object
 
 ## <a name="equals"></a>Object：： Equals 方法
 
-确定指定的对象是否等于当前对象。
+确定指定对象是否等于当前对象。
 
 ### <a name="syntax"></a>语法
 
@@ -71,9 +71,9 @@ bool Equals(
 )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*obj*<br/>
+obj<br/>
 要比较的对象。
 
 ### <a name="return-value"></a>返回值
@@ -144,7 +144,7 @@ public:Object();
 public:static bool ReferenceEquals(  Object^ obj1,   Object^ obj2);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *obj1*<br/>
 要比较的第一个对象。
@@ -158,7 +158,7 @@ public:static bool ReferenceEquals(  Object^ obj1,   Object^ obj2);
 
 ## <a name="tostring"></a>Object：： ToString 方法（C++/cx）
 
-返回一个表示当前对象的 string。
+返回表示当前对象的字符串。
 
 ### <a name="syntax"></a>语法
 

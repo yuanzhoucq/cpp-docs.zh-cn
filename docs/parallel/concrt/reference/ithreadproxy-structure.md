@@ -12,11 +12,11 @@ helpviewer_keywords:
 - IThreadProxy structure
 ms.assetid: feb89241-a555-4e61-ad48-40add54daeca
 ms.openlocfilehash: b87694393af4634ec97d05070aa5513cd132098a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854122"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424253"
 ---
 # <a name="ithreadproxy-structure"></a>IThreadProxy 结构
 
@@ -28,7 +28,7 @@ ms.locfileid: "78854122"
 struct IThreadProxy;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-methods"></a>公共方法
 
@@ -73,7 +73,7 @@ virtual unsigned int GetId() const = 0;
 virtual void SwitchOut(SwitchingProxyState switchState = Blocking) = 0;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *switchState*<br/>
 指示正在执行切换的线程代理的状态。 参数的类型为 `SwitchingProxyState`。
@@ -102,7 +102,7 @@ virtual void SwitchTo(
     SwitchingProxyState switchState) = 0;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pContext*<br/>
 要以协作方式切换到的执行上下文。

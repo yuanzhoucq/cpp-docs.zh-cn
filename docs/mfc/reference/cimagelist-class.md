@@ -75,11 +75,11 @@ helpviewer_keywords:
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
 ms.openlocfilehash: 1555209ce0f1c2caacbfb4b01107775db948d230
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890702"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425855"
 ---
 # <a name="cimagelist-class"></a>CImageList 类
 
@@ -136,7 +136,7 @@ class CImageList : public CObject
 |[CImageList：： SetOverlayImage](#setoverlayimage)|将图像的从零开始的索引添加到要用作覆盖蒙板的图像的列表。|
 |[CImageList：： Write](#write)|将图像列表写入存档。|
 
-### <a name="public-operators"></a>公共运算符
+### <a name="public-operators"></a>公用運算子
 
 |名称|说明|
 |----------|-----------------|

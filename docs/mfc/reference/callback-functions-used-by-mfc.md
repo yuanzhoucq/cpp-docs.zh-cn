@@ -8,11 +8,11 @@ helpviewer_keywords:
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
 ms.openlocfilehash: 9e51774b2158a81fce05dc0bd27e296e4ad94faa
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855434"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424757"
 ---
 # <a name="callback-functions-used-by-mfc"></a>MFC 使用的回调函数
 
@@ -40,7 +40,7 @@ int CALLBACK EXPORT ObjectFunc(
     LPSTR* lpData);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszLogObject*<br/>
 指向[LOGPEN](/windows/win32/api/Wingdi/ns-wingdi-logpen)或[LOGBRUSH](/windows/win32/api/wingdi/ns-wingdi-logbrush)数据结构，该结构包含有关对象的逻辑特性的信息。
@@ -69,7 +69,7 @@ BOOL CALLBACK EXPORT OutputFunc(
     int nCount);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hDC*<br/>
 向 `nWidth` 标识一个内存设备上下文，该上下文具有宽度和高度至少为 `nHeight` 和 `GrayString` 指定的值的位图。
@@ -100,12 +100,12 @@ BOOL CALLBACK EXPORT AbortFunc(
     int code);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hPr*<br/>
 标识设备上下文。
 
-*代码*<br/>
+*code*<br/>
 指定是否发生了错误。 如果未发生错误，则为0。 如果打印管理器当前磁盘空间不足，并且如果应用程序等待，将会有更多的可用磁盘空间，则 SP_OUTOFDISK。 如果 SP_OUTOFDISK*代码*，应用程序不必中止打印作业。 如果不是，则必须通过调用 `PeekMessage` 或 `GetMessage` Windows 函数向打印管理器发出。
 
 ### <a name="return-value"></a>返回值

@@ -193,11 +193,11 @@ helpviewer_keywords:
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
 ms.openlocfilehash: e65ad8b5d8b14ff747adc55b517d9e695d9cbb66
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855441"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426407"
 ---
 # <a name="cwinapp-class"></a>CWinApp 类
 
@@ -209,7 +209,7 @@ ms.locfileid: "78855441"
 class CWinApp : public CWinThread
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -381,7 +381,7 @@ class CWinApp : public CWinThread
 void AddDocTemplate(CDocTemplate* pTemplate);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pTemplate*<br/>
 指向要添加的 `CDocTemplate` 的指针。
@@ -402,7 +402,7 @@ void AddDocTemplate(CDocTemplate* pTemplate);
 virtual void AddToRecentFileList(LPCTSTR lpszPathName);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszPathName*<br/>
 文件的路径。
@@ -425,7 +425,7 @@ virtual void AddToRecentFileList(LPCTSTR lpszPathName);
 virtual DWORD ApplicationRecoveryCallback(LPVOID lpvParam);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpvParam*<br/>
 中保留供将来使用。
@@ -450,7 +450,7 @@ virtual DWORD ApplicationRecoveryCallback(LPVOID lpvParam);
 void CloseAllDocuments(BOOL bEndSession);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bEndSession*<br/>
 指定是否将结束 Windows 会话。 如果会话正在结束，则为 TRUE;否则为 FALSE。
@@ -467,7 +467,7 @@ void CloseAllDocuments(BOOL bEndSession);
 BOOL CreatePrinterDC(CDC& dc);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dc*<br/>
 对打印机设备上下文的引用。
@@ -490,7 +490,7 @@ BOOL CreatePrinterDC(CDC& dc);
 CWinApp(LPCTSTR lpszAppName = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszAppName*<br/>
 一个以 null 结尾的字符串，其中包含 Windows 使用的应用程序名称。 如果未提供此参数或该参数为 NULL，`CWinApp` 将使用资源字符串 AFX_IDS_APP_TITLE 或可执行文件的文件名。
@@ -514,7 +514,7 @@ LONG DelRegTree(
     CAtlTransactionManager* pTM = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hParentKey*<br/>
 注册表项的句柄。
@@ -544,7 +544,7 @@ virtual int DoMessageBox(
     UINT nIDPrompt);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszPrompt*<br/>
 消息框中的文本地址。
@@ -573,7 +573,7 @@ nType<br/>
 virtual void DoWaitCursor(int nCode);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nCode*<br/>
 如果此参数为1，则将显示等待光标。 如果为0，则在不递增引用计数的情况下还原等待光标。 如果为-1，则等待光标结束。
@@ -602,7 +602,7 @@ BOOL EnableD2DSupport(
     DWRITE_FACTORY_TYPE writeFactoryType = DWRITE_FACTORY_TYPE_SHARED);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *d2dFactoryType*<br/>
 D2D 工厂及其创建的资源的线程模型。
@@ -648,7 +648,7 @@ void EnableShellOpen();
 BOOL EnableTaskbarInteraction(BOOL bEnable = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bEnable*<br/>
 指定应启用（TRUE）还是禁用（FALSE）与 Windows 7 任务栏的交互。
@@ -755,7 +755,7 @@ virtual DWORD GetApplicationRestartFlags();
 HKEY GetAppRegistryKey(CAtlTransactionManager* pTM = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pTM*<br/>
 指向 `CAtlTransactionManager` 对象的指针。
@@ -822,7 +822,7 @@ AFX_HELP_TYPE GetHelpMode();
 CDocTemplate* GetNextDocTemplate(POSITION& pos) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 pos<br/>
 对 `GetNextDocTemplate` 或[GetFirstDocTemplatePosition](#getfirstdoctemplateposition)的前一次调用所返回的位置值的引用。 此调用会将值更新到下一个位置。
@@ -847,7 +847,7 @@ pos<br/>
 BOOL GetPrinterDeviceDefaults(struct tagPDA* pPrintDlg);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pPrintDlg*<br/>
 指向[PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga)结构的指针。
@@ -876,7 +876,7 @@ BOOL GetProfileBinary(
     UINT* pBytes);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszSection*<br/>
 指向以 null 结尾的字符串，该字符串指定包含条目的部分。
@@ -921,7 +921,7 @@ UINT GetProfileInt(
     int nDefault);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszSection*<br/>
 指向以 null 结尾的字符串，该字符串指定包含条目的部分。
@@ -962,7 +962,7 @@ CString GetProfileString(
     LPCTSTR lpszDefault = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszSection*<br/>
 指向以 null 结尾的字符串，该字符串指定包含条目的部分。
@@ -998,7 +998,7 @@ HKEY GetSectionKey(
     CAtlTransactionManager* pTM = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszSection*<br/>
 要获取的密钥的名称。
@@ -1030,7 +1030,7 @@ virtual void HtmlHelp(
     UINT nCmd = 0x000F);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwData*<br/>
 指定其他数据。 使用的值取决于*nCmd*参数的值。 默认为 `0x000F` 这意味着[HH_HELP_CONTEXT](/previous-versions/windows/desktop/htmlhelp/hh-help-context-command)。
@@ -1093,7 +1093,7 @@ virtual BOOL IsTaskbarInteractionEnabled();
 HCURSOR LoadCursor(LPCTSTR lpszResourceName) const;  HCURSOR LoadCursor(UINT nIDResource) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszResourceName*<br/>
 指向以 null 结尾的字符串，该字符串包含游标资源的名称。 可以为此参数使用 `CString`。
@@ -1123,7 +1123,7 @@ HCURSOR LoadCursor(LPCTSTR lpszResourceName) const;  HCURSOR LoadCursor(UINT nID
 HICON LoadIcon(LPCTSTR lpszResourceName) const;  HICON LoadIcon(UINT nIDResource) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszResourceName*<br/>
 指向以 null 结尾的字符串，该字符串包含图标资源的名称。 还可以对此参数使用 `CString`。
@@ -1152,7 +1152,7 @@ HICON LoadIcon(LPCTSTR lpszResourceName) const;  HICON LoadIcon(UINT nIDResource
 HCURSOR LoadOEMCursor(UINT nIDCursor) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIDCursor*<br/>
 一个**OCR_** 清单常量标识符，它指定预定义的 Windows 光标。 你必须在 `#include \<afxwin.h>` 之前具有 `#define OEMRESOURCE`，才能获得对 WINDOWS 中**OCR_** 常量的访问权限。高.
@@ -1179,7 +1179,7 @@ HCURSOR LoadOEMCursor(UINT nIDCursor) const;
 HICON LoadOEMIcon(UINT nIDIcon) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIDIcon*<br/>
 一个**OIC_** 清单常量标识符，它指定预定义的 Windows 图标。 在 `#include \<afxwin.h>` 访问 WINDOWS 中的**OIC_** 常量之前，您必须具有 `#define OEMRESOURCE`。高.
@@ -1200,7 +1200,7 @@ HICON LoadOEMIcon(UINT nIDIcon) const;
 HCURSOR LoadStandardCursor(LPCTSTR lpszCursorName) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszCursorName*<br/>
 一个**IDC_** 清单常量标识符，它指定预定义的 Windows 光标。 这些标识符在 WINDOWS 中定义。高. 以下列表显示了可能的预定义值和*lpszCursorName*的含义：
@@ -1249,7 +1249,7 @@ HCURSOR LoadStandardCursor(LPCTSTR lpszCursorName) const;
 HICON LoadStandardIcon(LPCTSTR lpszIconName) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszIconName*<br/>
 一个清单常量标识符，它指定预定义的 Windows 图标。 这些标识符在 WINDOWS 中定义。高. 有关可能的预定义值及其说明的列表，请参阅 Windows SDK 的[LoadIcon](/windows/win32/api/winuser/nf-winuser-loadiconw)中的*lpIconName*参数。
@@ -1270,7 +1270,7 @@ HICON LoadStandardIcon(LPCTSTR lpszIconName) const;
 void LoadStdProfileSettings(UINT nMaxMRU = _AFX_MRU_COUNT);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nMaxMRU*<br/>
 要跟踪的最近使用的文件数。
@@ -1546,7 +1546,7 @@ afx_msg void OnContextHelp();
 virtual BOOL OnDDECommand(LPTSTR lpszCommand);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszCommand*<br/>
 指向应用程序收到的 DDE 命令字符串。
@@ -1685,7 +1685,7 @@ afx_msg void OnHelpUsing();
 virtual BOOL OnIdle(LONG lCount);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lCount*<br/>
 当应用程序的消息队列为空时，每次调用 `OnIdle` 时，计数器就会递增。 每次处理新消息时，此计数都将重置为0。 你可以使用*lCount*参数来确定应用程序处于空闲状态的时间，而不处理消息。
@@ -1733,7 +1733,7 @@ virtual CDocument* OpenDocumentFile(
     BOOL bAddToMRU = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszFileName*<br/>
 中要打开的文件的名称。
@@ -1761,7 +1761,7 @@ virtual CDocument* OpenDocumentFile(
 void ParseCommandLine(CCommandLineInfo& rCmdInfo);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rCmdInfo*<br/>
 对[CCommandLineInfo](../../mfc/reference/ccommandlineinfo-class.md)对象的引用。
@@ -1790,7 +1790,7 @@ void ParseCommandLine(CCommandLineInfo& rCmdInfo);
 virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pMsg*<br/>
 指向包含要处理的消息的[MSG](/windows/win32/api/winuser/ns-winuser-msg)结构的指针。
@@ -1809,7 +1809,7 @@ virtual BOOL ProcessMessageFilter(
     LPMSG lpMsg);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *code*<br/>
 指定挂钩代码。 此成员函数使用代码来确定如何处理*lpMsg。*
@@ -1835,7 +1835,7 @@ virtual BOOL ProcessMessageFilter(
 BOOL ProcessShellCommand(CCommandLineInfo& rCmdInfo);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rCmdInfo*<br/>
 对[CCommandLineInfo](../../mfc/reference/ccommandlineinfo-class.md)对象的引用。
@@ -1880,7 +1880,7 @@ virtual LRESULT ProcessWndProcException(
     const MSG* pMsg);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *e*<br/>
 指向未捕获的异常的指针。
@@ -1924,7 +1924,7 @@ virtual BOOL Register();
 void RegisterShellFileTypes(BOOL bCompat = FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bCompat*<br/>
 中如果为 TRUE，则会向打印和打印 shell 命令的注册项，允许用户从 shell 直接打印文件，或通过将文件拖动到打印机对象。 它还会添加一个 DefaultIcon 键。 默认情况下，此参数为 FALSE，以便向后兼容。
@@ -1958,7 +1958,7 @@ virtual HRESULT RegisterWithRestartManager(
     DWORD dwCallbackFlags);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |||
 |-|-|
@@ -2115,7 +2115,7 @@ void SelectPrinter(
     BOOL bFreeOld = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hDevNames*<br/>
 标识特定打印机的驱动程序、设备和输出端口名称的[DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames)结构的句柄。
@@ -2138,7 +2138,7 @@ void SelectPrinter(
 void SetHelpMode(AFX_HELP_TYPE eHelpType);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *eHelpType*<br/>
 指定要使用的帮助的类型。 有关详细信息，请参阅[CWinApp：： m_eHelpType](#m_ehelptype) 。
@@ -2158,7 +2158,7 @@ void SetRegistryKey(LPCTSTR lpszRegistryKey);
 void SetRegistryKey(UINT nIDRegistryKey);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszRegistryKey*<br/>
 指向包含密钥名称的字符串的指针。
@@ -2254,7 +2254,7 @@ virtual void WinHelp(
     UINT nCmd = HELP_CONTEXT);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwData*<br/>
 指定其他数据。 使用的值取决于*nCmd*参数的值。
@@ -2284,7 +2284,7 @@ BOOL WriteProfileBinary(
     UINT nBytes);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszSection*<br/>
 指向以 null 结尾的字符串，该字符串指定包含条目的部分。 如果该节不存在，则创建它。 部分的名称独立于大小写;字符串可以是大写字母和小写字母的任意组合。
@@ -2321,7 +2321,7 @@ BOOL WriteProfileInt(
     int nValue);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszSection*<br/>
 指向以 null 结尾的字符串，该字符串指定包含条目的部分。 如果该节不存在，则创建它。 部分的名称独立于大小写;字符串可以是大写字母和小写字母的任意组合。
@@ -2355,7 +2355,7 @@ BOOL WriteProfileString(
     LPCTSTR lpszValue);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszSection*<br/>
 指向以 null 结尾的字符串，该字符串指定包含条目的部分。 如果该节不存在，则创建它。 部分的名称独立于大小写;字符串可以是大写字母和小写字母的任意组合。
@@ -2384,7 +2384,7 @@ BOOL WriteProfileString(
 void SetAppID(LPCTSTR lpcszAppID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpcszAppID*<br/>
 指定应用程序用户模型 ID。

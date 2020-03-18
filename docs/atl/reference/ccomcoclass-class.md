@@ -13,11 +13,11 @@ helpviewer_keywords:
 - aggregation [C++], aggregation models
 ms.assetid: 67cfefa4-8df9-47fa-ad58-2d1a1ae25762
 ms.openlocfilehash: 5b4e39fa4d93893d288bb8de03d8a71b671be087
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78863156"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423332"
 ---
 # <a name="ccomcoclass-class"></a>CComCoClass 类
 
@@ -30,7 +30,7 @@ template <class T, const CLSID* pclsid = &CLSID_NULL>
 class CComCoClass
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *T*<br/>
 派生自 `CComCoClass`的类。
@@ -38,7 +38,7 @@ class CComCoClass
 *pclsid*<br/>
 指向对象的 CLSID 的指针。
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-methods"></a>公共方法
 
@@ -79,7 +79,7 @@ template <class  Q>
 static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Q*<br/>
 应通过*pp*返回的 COM 接口。
@@ -154,7 +154,7 @@ static HRESULT Error(
     HINSTANCE hInst = _AtlBaseModule.GetResourceInstance());
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszDesc*<br/>
 中描述错误的字符串。 `Error` 的 Unicode 版本指定*lpszDesc*的类型为 LPCOLESTR;ANSI 版本指定 LPCSTR 的类型。
@@ -213,7 +213,7 @@ static LPCTSTR WINAPI GetObjectDescription();
 
 ### <a name="remarks"></a>备注
 
-默认实现返回 NULL。 可以用[DECLARE_OBJECT_DESCRIPTION](object-map-macros.md#declare_object_description)宏重写此方法。 例如:
+默认实现返回 NULL。 可以用[DECLARE_OBJECT_DESCRIPTION](object-map-macros.md#declare_object_description)宏重写此方法。 例如：
 
 [!code-cpp[NVC_ATL_COM#12](../../atl/codesnippet/cpp/ccomcoclass-class_3.h)]
 

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - command files, NMAKE
 ms.assetid: 0421104d-8b7b-4bf3-86c1-928d9b7c1a8c
 ms.openlocfilehash: bfada33a89c04d25bf7444cbf3b1e7ef3ed44385
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856921"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422774"
 ---
 # <a name="running-nmake"></a>运行 NMAKE
 
@@ -41,7 +41,7 @@ NMAKE 选项如下表所述。 选项前面有一个斜杠（`/`）或短划线�
 | **/C** | 禁止显示默认输出，包括非致命 NMAKE 错误或警告、时间戳和 NMAKE 版权消息。 禁止使用 **/k**发出的警告。 |
 | **/D** | 显示每个已评估的目标和依赖项的时间戳，并显示一条不存在的目标消息。 使用 **/p**调试生成文件非常有用。 使用 `!CMDSWITCHES` 设置或清除 **/d**作为生成文件的一部分。 |
 | **/E** | 导致环境变量重写生成文件宏定义。 |
-| **/ERRORREPORT** [**无** &#124; **提示** &#124;队列&#124; **发送**] | 已弃用。 [Windows 错误报告（WER）](/windows/win32/wer/windows-error-reporting)设置控制报告。 |
+| **/ERRORREPORT** [**无** &#124; **提示** &#124; **QUEUE**队列&#124; **发送**] | 已弃用。 [Windows 错误报告（WER）](/windows/win32/wer/windows-error-reporting)设置控制报告。 |
 | **/F** *filename* | 指定*filename*作为生成文件。 空格或制表符可以位于*filename*之前。 为每个生成文件指定 **/f**一次。 若要从标准输入提供生成文件，请为*文件名*指定短划线（`-`），并使用**F6**或**CTRL + Z**结束键盘输入。 |
 | **/G** | 显示 `!INCLUDE` 指令附带的生成生成。 有关详细信息，请参阅[Makefile 预处理指令](makefile-preprocessing-directives.md)。 |
 | **/Help**， **/？** | 显示 NMAKE 命令行语法的简短摘要。 |

@@ -45,11 +45,11 @@ helpviewer_keywords:
 - CControlBar [MFC], m_pInPlaceOwner
 ms.assetid: 4d668c55-9b42-4838-97ac-cf2b3000b82c
 ms.openlocfilehash: 41e40b3da7b4a294fe396a9d93f7c6a93593ff95
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866420"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426005"
 ---
 # <a name="ccontrolbar-class"></a>CControlBar Class
 
@@ -61,7 +61,7 @@ ms.locfileid: "78866420"
 class CControlBar : public CWnd
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="protected-constructors"></a>受保护构造函数
 
@@ -133,7 +133,7 @@ virtual CSize CalcDynamicLayout(
     DWORD nMode);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nLength*<br/>
 控件条的请求维度（水平或垂直），取决于*dwMode*。
@@ -169,7 +169,7 @@ virtual CSize CalcFixedLayout(
     BOOL bHorz);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bStretch*<br/>
 指示是否应将栏拉伸到帧的大小。 如果栏不是停靠栏（不能用于停靠）， *bStretch*参数为非零值，当停靠或浮动（可用于停靠）时，此参数为0。
@@ -204,7 +204,7 @@ virtual void CalcInsideRect(
     BOOL bHorz) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rect*<br/>
 包含控件栏的当前尺寸;包括边框。
@@ -234,7 +234,7 @@ CControlBar();
 virtual void DoPaint(CDC* pDC);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 指向用于呈现控件栏的边框和控制手柄的设备上下文。
@@ -255,7 +255,7 @@ virtual void DrawBorders(
     CRect& rect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 指向用于呈现控件栏边框的设备上下文。
@@ -277,7 +277,7 @@ virtual void DrawGripper(
     const CRect& rect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 指向用于呈现控制条控制手柄的设备上下文。
@@ -297,7 +297,7 @@ virtual void DrawGripper(
 void EnableDocking(DWORD dwDockStyle);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwDockStyle*<br/>
 指定控件栏是否支持停靠以及控件栏可以停靠到的父窗口的侧（如果支持）。 可以是下列一项或多项：
@@ -432,7 +432,7 @@ virtual void OnUpdateCmdUI(
     BOOL bDisableIfNoHndler) = 0;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pTarget*<br/>
 指向应用程序的主框架窗口。 此指针用于路由更新消息。
@@ -454,7 +454,7 @@ virtual void OnUpdateCmdUI(
 void SetBarStyle(DWORD dwStyle);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwStyle*<br/>
 控件条的所需样式。 可以是下列一项或多项：
@@ -503,7 +503,7 @@ void SetBorders(
 void SetBorders(LPCRECT lpRect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *cxLeft*<br/>
 控件栏左边框的宽度（以像素为单位）。
@@ -534,7 +534,7 @@ void SetBorders(LPCRECT lpRect);
 void SetInPlaceOwner(CWnd* pWnd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pWnd*<br/>
 一个指向 `CWnd` 对象的指针。

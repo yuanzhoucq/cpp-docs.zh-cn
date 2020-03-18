@@ -14,11 +14,11 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ComPtrRefBase::ptr_ data member
 ms.assetid: 6d344c1a-cc13-4a3f-8a0d-f167ccb9348f
 ms.openlocfilehash: df4e2aa1ce650fd5b1f04baf2f7c4cd2fb4cff93
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865816"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423644"
 ---
 # <a name="comptrrefbase-class"></a>ComPtrRefBase 类
 
@@ -31,7 +31,7 @@ template <typename T>
 class ComPtrRefBase;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 [ComPtr\<t >](comptr-class.md)类型或从其派生的类型，而不只是由 `ComPtr`表示的接口。
@@ -40,7 +40,7 @@ class ComPtrRefBase;
 
 表示[ComPtrRef](comptrref-class.md)类的基类。
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-typedefs"></a>公共 Typedef
 

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - application control [MFC]
 ms.assetid: c1f69f15-e0fe-4515-9f36-d63d31869deb
 ms.openlocfilehash: cb4ad19dfad06b793f226324d8e28c37c084ad67
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855679"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424631"
 ---
 # <a name="application-control"></a>应用程序控件
 
@@ -108,7 +108,7 @@ BOOL AFXAPI AfxOleGetUserCtrl();
 void AFXAPI AfxOleSetUserCtrl(BOOL bUserCtrl);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bUserCtrl*<br/>
 指定是否要设置或清除用户控制标志。
@@ -180,7 +180,7 @@ BOOL AFXAPI AfxOleLockControl(  REFCLSID clsid  );
 BOOL AFXAPI AfxOleLockControl( LPCTSTR lpszProgID );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *clsid*<br/>
 控件的唯一类 ID。
@@ -225,7 +225,7 @@ BOOL AFXAPI AfxOleRegisterServerClass(
     LPCTSTR* rglpszOverwrite = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *clsid*<br/>
 对服务器的 OLE 类 ID 的引用。
@@ -294,7 +294,7 @@ void AFXAPI AfxOleSetEditMenu(
     UINT nIDConvert = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pClient*<br/>
 指向客户端 OLE 项的指针。
@@ -337,7 +337,7 @@ BOOL AFXAPI AfxOleUnlockControl( REFCLSID clsid );
 BOOL AFXAPI AfxOleUnlockControl( LPCTSTR lpszProgID );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *clsid*<br/>
 控件的唯一类 ID。

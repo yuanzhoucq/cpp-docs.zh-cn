@@ -51,11 +51,11 @@ helpviewer_keywords:
 - omp_unset_nest_lock OpenMP function
 ms.assetid: a55a2e5c-a260-44ee-bbd6-de7e2351b384
 ms.openlocfilehash: 4508c683ff5d4bece290b7fef2bbd83ae8023eac
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78882885"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424121"
 ---
 # <a name="openmp-functions"></a>OpenMP 函数
 
@@ -115,7 +115,7 @@ void omp_destroy_lock(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lock*<br/>
 使用[omp_init_lock](#omp-init-lock)初始化 `omp_lock_t` 类型的变量。
@@ -138,7 +138,7 @@ void omp_destroy_nest_lock(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lock*<br/>
 使用[omp_init_nest_lock](#omp-init-nest-lock)初始化 `omp_nest_lock_t` 类型的变量。
@@ -461,7 +461,7 @@ void omp_init_lock(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lock*<br/>
 `omp_lock_t` 类型的变量。
@@ -553,7 +553,7 @@ void omp_init_nest_lock(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lock*<br/>
 `omp_nest_lock_t` 类型的变量。
@@ -638,7 +638,7 @@ void omp_set_dynamic(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *val*<br/>
 一个值，该值指示在运行时可以调整即将存在的并行区域中的可用线程数。 如果为非零值，则运行时可以调整线程的数量，如果为0，则运行时不会动态调整线程数。
@@ -689,7 +689,7 @@ void omp_set_lock(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lock*<br/>
 使用[omp_init_lock](#omp-init-lock)初始化 `omp_lock_t` 类型的变量。
@@ -712,7 +712,7 @@ void omp_set_nest_lock(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lock*<br/>
 使用[omp_init_nest_lock](#omp-init-nest-lock)初始化 `omp_nest_lock_t` 类型的变量。
@@ -735,7 +735,7 @@ void omp_set_nested(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *val*<br/>
 非零值启用嵌套并行，而零则禁用嵌套并行度。
@@ -788,7 +788,7 @@ void omp_set_num_threads(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *num_threads*<br/>
 并行区域中的线程数。
@@ -811,7 +811,7 @@ int omp_test_lock(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lock*<br/>
 使用[omp_init_lock](#omp-init-lock)初始化 `omp_lock_t` 类型的变量。
@@ -884,7 +884,7 @@ int omp_test_nest_lock(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lock*<br/>
 使用[omp_init_nest_lock](#omp-init-nest-lock)初始化 `omp_nest_lock_t` 类型的变量。
@@ -975,7 +975,7 @@ void omp_unset_lock(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lock*<br/>
 使用[omp_init_lock](#omp-init-lock)初始化并在函数中执行的 `omp_lock_t` 类型的变量。
@@ -998,7 +998,7 @@ void omp_unset_nest_lock(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lock*<br/>
 使用[omp_init_nest_lock](#omp-init-nest-lock)初始化并在函数中执行的 `omp_nest_lock_t` 类型的变量。

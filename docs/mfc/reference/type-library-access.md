@@ -5,11 +5,11 @@ helpviewer_keywords:
 - type libraries [MFC], accessing
 ms.assetid: a03fa7f0-86c2-4119-bf81-202916fb74b3
 ms.openlocfilehash: 23d4675bd3638d2effd1b967f0729f9e70dac6de
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78867023"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426191"
 ---
 # <a name="type-library-access"></a>类型库访问
 
@@ -32,7 +32,7 @@ ms.locfileid: "78867023"
 DECLARE_OLETYPELIB(class_name)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *class_name*<br/>
 与类型库相关的控件类的名称。
@@ -53,7 +53,7 @@ DECLARE_OLETYPELIB(class_name)
 IMPLEMENT_OLETYPELIB(class_name, tlid, wVerMajor,  wVerMinor)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *class_name*<br/>
 与类型库相关的控件类的名称。

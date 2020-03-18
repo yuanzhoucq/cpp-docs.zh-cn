@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CAtlDllModuleT class
 ms.assetid: 351d5767-8257-4878-94be-45a85e31a72d
 ms.openlocfilehash: be42915c6c2e941bc5fc1de78c5c7ac26ccca6e2
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78863150"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423440"
 ---
 # <a name="catldllmodulet-class"></a>Catldllmodulet 用作基类类
 
@@ -32,12 +32,12 @@ template <class T>
 class ATL_NO_VTABLE CAtlDllModuleT : public CAtlModuleT<T>
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *T*<br/>
 派生自 `CAtlDllModuleT`的类。
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -116,7 +116,7 @@ HRESULT DllGetClassObject(
     LPVOID* ppv) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rclsid*<br/>
 要创建的对象的 CLSID。
@@ -139,7 +139,7 @@ HRESULT DllGetClassObject(
 BOOL WINAPI DllMain(DWORD dwReason, LPVOID /* lpReserved*/) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwReason*<br/>
 如果设置为 DLL_PROCESS_ATTACH，将禁用 DLL_THREAD_ATTACH 和 DLL_THREAD_DETACH 通知调用。
@@ -163,7 +163,7 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID /* lpReserved*/) throw();
 HRESULT DllRegisterServer(BOOL bRegTypeLib = TRUE) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bRegTypeLib*<br/>
 如果要注册类型库，则为 TRUE。 默认值为 TRUE。
@@ -180,7 +180,7 @@ HRESULT DllRegisterServer(BOOL bRegTypeLib = TRUE) throw();
 HRESULT DllUnregisterServer(BOOL bUnRegTypeLib = TRUE) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bUnRegTypeLib*<br/>
 如果要从注册表中删除类型库，则为 TRUE。 默认值为 TRUE。
@@ -200,7 +200,7 @@ HRESULT GetClassObject(
     LPVOID* ppv) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rclsid*<br/>
 要创建的对象的 CLSID。

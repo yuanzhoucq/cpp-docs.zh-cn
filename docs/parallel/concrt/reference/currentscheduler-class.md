@@ -18,11 +18,11 @@ helpviewer_keywords:
 - CurrentScheduler class
 ms.assetid: 31c20e0e-4cdf-49b4-8220-d726130aad2b
 ms.openlocfilehash: 6bf61af9ff55722553353a045c87501dbd27fad9
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78867118"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427409"
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler 类
 
@@ -34,7 +34,7 @@ ms.locfileid: "78867118"
 class CurrentScheduler;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-methods"></a>公共方法
 
@@ -73,7 +73,7 @@ class CurrentScheduler;
 static void __cdecl Create(const SchedulerPolicy& _Policy);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Policy*<br/>
 描述新创建的计划程序的行为的计划程序策略。
@@ -98,7 +98,7 @@ static ScheduleGroup* __cdecl CreateScheduleGroup();
 static ScheduleGroup* __cdecl CreateScheduleGroup(location& _Placement);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Placement*<br/>
 对计划组中的任务在其下执行的偏差位置的引用。
@@ -205,7 +205,7 @@ static unsigned int __cdecl Id();
 static bool __cdecl IsAvailableLocation(const location& _Placement);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Placement*<br/>
 对在当前计划程序中查询的位置的引用。
@@ -228,7 +228,7 @@ static bool __cdecl IsAvailableLocation(const location& _Placement);
 static void __cdecl RegisterShutdownEvent(HANDLE _ShutdownEvent);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_ShutdownEvent*<br/>
 Windows 事件对象的句柄，当与当前上下文关联的计划程序关闭并销毁自身时，运行时将由运行时发出信号。
@@ -252,7 +252,7 @@ static void __cdecl ScheduleTask(
     location& _Placement);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Proc*<br/>
 一个指针，指向用于执行轻量任务的主体的函数。

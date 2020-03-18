@@ -95,11 +95,11 @@ helpviewer_keywords:
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
 ms.openlocfilehash: 5ad8784f3bff999eec046aa91f52b1cd164764e5
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876356"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425879"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -111,7 +111,7 @@ ms.locfileid: "78876356"
 class CEdit : public CWnd
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -275,7 +275,7 @@ CEdit();
 int CharFromPos(CPoint pt) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pt*<br/>
 此 `CEdit` 对象的工作区中某个点的坐标。
@@ -343,7 +343,7 @@ virtual BOOL Create(
     UINT nID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwStyle*<br/>
 指定编辑控件的样式。 将[编辑样式](styles-used-by-mfc.md#edit-styles)的任意组合应用于控件。
@@ -433,7 +433,7 @@ void EmptyUndoBuffer();
 BOOL FmtLines(BOOL bAddEOL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bAddEOL*<br/>
 指定是否要插入软换行字符。 如果值为 TRUE，则插入字符;如果值为 FALSE，则将其删除。
@@ -468,7 +468,7 @@ BOOL GetCueBanner(
 CString GetCueBanner() const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszText*<br/>
 弄指向包含提示文本的字符串的指针。
@@ -545,7 +545,7 @@ BOOL GetHighlight(
     int* pichEnd) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -600,7 +600,7 @@ int GetLine(
     int nMaxLength) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 指定要从多行编辑控件中检索的行号。 行号从零开始;值0指定第一行。 单行编辑控件将忽略此参数。
@@ -724,7 +724,7 @@ TCHAR GetPasswordChar() const;
 void GetRect(LPRECT lpRect) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpRect*<br/>
 指向接收格式设置矩形的 `RECT` 结构。
@@ -753,7 +753,7 @@ void GetSel(
     int& nEndChar) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nStartChar*<br/>
 引用一个整数，该整数将接收当前选定内容中第一个字符的位置。
@@ -797,10 +797,10 @@ BOOL HideBalloonTip();
 void LimitText(int nChars = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nChars*<br/>
-指定用户可输入的文本的长度（在 TCHARs 中）。 如果此参数为0，则文本长度设置为 UINT_MAX 字节。 这是默认行为。
+指定用户可输入的文本的长度（在 TCHARs 中）。 如果此参数为0，则文本长度设置为 UINT_MAX 字节。 此选项为默认行为。
 
 ### <a name="remarks"></a>备注
 
@@ -823,7 +823,7 @@ void LimitText(int nChars = 0);
 int LineFromChar(int nIndex = -1) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 包含编辑控件文本中所需字符的从零开始的索引值，或包含-1。 如果*nIndex*为-1，则它指定当前行，即包含插入符号的行。
@@ -852,7 +852,7 @@ int LineFromChar(int nIndex = -1) const;
 int LineIndex(int nLine = -1) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *N 第*<br/>
 在编辑控件的文本中包含所需行的索引值，或包含-1。 如果*n 第*为-1，则它指定当前行，即包含插入符号的行。
@@ -881,7 +881,7 @@ int LineIndex(int nLine = -1) const;
 int LineLength(int nLine = -1) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *N 第*<br/>
 要检索其长度的行中的字符的从零开始的索引。 默认值为 -1。
@@ -916,7 +916,7 @@ void LineScroll(
     int nChars = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nLines*<br/>
 指定垂直滚动的行数。
@@ -964,7 +964,7 @@ void Paste();
 CPoint PosFromChar(UINT nChar) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nChar*<br/>
 指定字符的从零开始的索引。
@@ -994,13 +994,13 @@ CPoint PosFromChar(UINT nChar) const;
 void ReplaceSel(LPCTSTR lpszNewText, BOOL bCanUndo = FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszNewText*<br/>
 指向以 null 结尾的字符串，该字符串包含替换文本。
 
 *bCanUndo*<br/>
-若要指定此函数可以撤消，请将此参数的值设置为 TRUE。 默认值为 FALSE。
+若要指定此函数可以撤消，请将此参数的值设置为 TRUE。 默认值是 FALSE。
 
 ### <a name="remarks"></a>备注
 
@@ -1026,7 +1026,7 @@ BOOL SetCueBanner(
     BOOL fDrawWhenFocused = FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszText*<br/>
 中指向字符串的指针，该字符串包含要在编辑控件中显示的提示。
@@ -1036,7 +1036,7 @@ BOOL SetCueBanner(
 
 如果为 TRUE，则即使控件具有焦点，也会绘制提示横幅。 当用户开始在控件中键入时，提示横幅就会消失。
 
-默认值为 FALSE。
+默认值是 FALSE。
 
 ### <a name="return-value"></a>返回值
 
@@ -1060,7 +1060,7 @@ BOOL SetCueBanner(
 void SetHandle(HLOCAL hBuffer);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hBuffer*<br/>
 包含本地内存的句柄。 此句柄必须已使用 LMEM_MOVEABLE 标志通过对[LocalAlloc](/windows/win32/api/winbase/nf-winbase-localalloc) Windows 函数的先前调用创建。 假定内存包含以 null 结尾的字符串。 如果不是这种情况，则分配的内存的第一个字节应设置为0。
@@ -1096,7 +1096,7 @@ void SetHighlight(
     int ichEnd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -1115,7 +1115,7 @@ void SetHighlight(
 void SetLimitText(UINT nMax);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *N 每天*<br/>
 新文本限制（字符）。
@@ -1144,7 +1144,7 @@ void SetMargins(
     UINT nRight);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nLeft*<br/>
 新左边距的宽度（以像素为单位）。
@@ -1171,7 +1171,7 @@ void SetMargins(
 void SetModify(BOOL bModified = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bModified*<br/>
 如果值为 TRUE，则表示文本已修改，值为 FALSE 表示未修改该文本。 默认情况下，已修改的标志设置为。
@@ -1194,7 +1194,7 @@ void SetModify(BOOL bModified = TRUE);
 void SetPasswordChar(TCHAR ch);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *48*<br/>
 指定要显示的字符，以代替用户键入的字符。 如果*ch*为0，则显示用户键入的实际字符。
@@ -1223,7 +1223,7 @@ void SetPasswordChar(TCHAR ch);
 BOOL SetReadOnly(BOOL bReadOnly = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bReadOnly*<br/>
 指定是设置还是删除编辑控件的只读状态。 如果值为 TRUE，则将状态设置为只读;如果值为 FALSE，则将状态设置为读/写。
@@ -1250,7 +1250,7 @@ BOOL SetReadOnly(BOOL bReadOnly = TRUE);
 void SetRect(LPCRECT lpRect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpRect*<br/>
 指向 `RECT` 结构或 `CRect` 对象，该对象指定格式设置矩形的新尺寸。
@@ -1279,7 +1279,7 @@ void SetRect(LPCRECT lpRect);
 void SetRectNP(LPCRECT lpRect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpRect*<br/>
 指向 `RECT` 结构或 `CRect` 对象，该对象指定矩形的新尺寸。
@@ -1317,7 +1317,7 @@ void SetSel(
     BOOL bNoScroll = FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwSelection*<br/>
 指定低序位字中的起始位置和高位字中的结束位置。 如果低序位字为0，高序位字为-1，则将选中 "编辑" 控件中的所有文本。 如果低序位字为-1，则将删除当前选择的内容。
@@ -1352,7 +1352,7 @@ BOOL SetTabStops(
     LPINT rgTabStops);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *cxEachStop*<br/>
 指定要在每个*cxEachStop*对话框单位设置制表位。
@@ -1396,7 +1396,7 @@ BOOL ShowBalloonTip(
     INT ttiIcon = TTI_NONE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|

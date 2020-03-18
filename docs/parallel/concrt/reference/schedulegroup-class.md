@@ -12,11 +12,11 @@ helpviewer_keywords:
 - ScheduleGroup class
 ms.assetid: 86d380ff-f2e8-411c-b1a8-22bd3079824a
 ms.openlocfilehash: 8686b5ef0906e3188a1e683d1190bbe6124cd19e
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78867116"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424229"
 ---
 # <a name="schedulegroup-class"></a>ScheduleGroup 类
 
@@ -28,7 +28,7 @@ ms.locfileid: "78867116"
 class ScheduleGroup;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="protected-constructors"></a>受保护构造函数
 
@@ -82,7 +82,7 @@ const char *,
     int);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_PObject*<br/>
 指向要删除的对象的指针。
@@ -137,7 +137,7 @@ virtual void ScheduleTask(
     _Inout_opt_ void* _Data) = 0;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Proc*<br/>
 一个指针，指向用于执行轻量任务的主体的函数。

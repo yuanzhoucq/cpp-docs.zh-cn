@@ -6,11 +6,11 @@ helpviewer_keywords:
 - OLE controls [MFC], registering
 ms.assetid: 73c45b7f-7dbc-43f5-bd17-dd77c6acec72
 ms.openlocfilehash: 9fcbc002913cc6cce86276796a371231ef0f32e1
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856373"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426197"
 ---
 # <a name="registering-ole-controls"></a>注册 OLE 控件
 
@@ -48,7 +48,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
     WORD wVerMinor);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hInstance*<br/>
 与控件类关联的模块的实例句柄。
@@ -163,7 +163,7 @@ BOOL AFXAPI AfxOleRegisterPropertyPageClass(
    int nRegFlags);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hInstance*<br/>
 与属性页类关联的模块的实例句柄。
@@ -206,7 +206,7 @@ BOOL AfxOleRegisterTypeLib(
     LPCTSTR pszHelpDir  = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hInstance*<br/>
 与类型库关联的应用程序的实例句柄。
@@ -246,7 +246,7 @@ BOOL AfxOleRegisterTypeLib(
 BOOL AFXAPI AfxOleUnregisterClass(REFCLSID clsID, LPCSTR pszProgID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *clsID*<br/>
 控件或属性页的唯一类 ID。
@@ -270,7 +270,7 @@ BOOL AFXAPI AfxOleUnregisterClass(REFCLSID clsID, LPCSTR pszProgID);
 BOOL AFXAPI AfxOleUnregisterTypeLib(REFGUID tlID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *tlID*<br/>
 类型库的唯一 ID。

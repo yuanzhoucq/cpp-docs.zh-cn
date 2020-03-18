@@ -16,11 +16,11 @@ helpviewer_keywords:
 - reader_writer_lock class
 ms.assetid: 91a59cd2-ca05-4b74-8398-d826d9f86736
 ms.openlocfilehash: 1a7386e527b5327d928bfdcb3281c88666f1b106
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78867155"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424223"
 ---
 # <a name="reader_writer_lock-class"></a>reader_writer_lock 类
 
@@ -32,7 +32,7 @@ ms.locfileid: "78867155"
 class reader_writer_lock;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-classes"></a>公共类
 
@@ -140,7 +140,7 @@ class scoped_lock;
 explicit _CRTIMP scoped_lock(reader_writer_lock& _Reader_writer_lock);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Reader_writer_lock*<br/>
 要作为编写器获取的 `reader_writer_lock` 对象。
@@ -169,7 +169,7 @@ class scoped_lock_read;
 explicit _CRTIMP scoped_lock_read(reader_writer_lock& _Reader_writer_lock);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Reader_writer_lock*<br/>
 要作为读取器获取的 `reader_writer_lock` 对象。

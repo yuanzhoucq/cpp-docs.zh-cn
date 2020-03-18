@@ -11,11 +11,11 @@ helpviewer_keywords:
 - std::get [C++]
 - std::swap [C++]
 ms.openlocfilehash: 61b5404d0f22cd902e35f6bee680df3c719804f2
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78875880"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424067"
 ---
 # <a name="ltarraygt-functions"></a>&lt;array&gt; 函数
 
@@ -40,7 +40,7 @@ template <int Index, class T, size_t N>
 constexpr T&& get(array<T, N>&& arr) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *索引*\
 元素偏移量。
@@ -95,7 +95,7 @@ template <class Ty, std::size_t N>
 void swap(array<Ty, N>& left, array<Ty, N>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Ty*\
 元素的类型。
