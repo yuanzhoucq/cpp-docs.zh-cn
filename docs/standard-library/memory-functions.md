@@ -8,7 +8,6 @@ f1_keywords:
 - memory/std::const_pointer_cast
 - memory/std::declare_no_pointers
 - memory/std::declare_reachable
-- memory/std::default_delete
 - memory/std::dynamic_pointer_cast
 - memory/std::get_deleter
 - memory/std::get_pointer_safety
@@ -28,8 +27,6 @@ f1_keywords:
 - memory/std::uninitialized_copy_n
 - memory/std::uninitialized_fill
 - memory/std::uninitialized_fill_n
-- memory/std::get_temporary_buffer
-- memory/std::return_temporary_buffer
 ms.assetid: 3e1898c2-44b7-4626-87ce-84962e4c6f1a
 helpviewer_keywords:
 - std::addressof [C++]
@@ -77,12 +74,12 @@ helpviewer_keywords:
 - std::uninitialized_copy_n [C++]
 - std::uninitialized_fill [C++]
 - std::uninitialized_fill_n [C++]
-ms.openlocfilehash: 2aceb96fcda49df8a1fd40a1bd8011170dccd8ef
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: fa8f0dd7e5588891aeef4fbe04a907fbbfc52b52
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425495"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447394"
 ---
 # <a name="ltmemorygt-functions"></a>&lt;memory&gt; 函数
 
@@ -104,7 +101,7 @@ const T* addressof(
     const T&& value) = delete;   // C++17
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *value*\
 要获取其实际地址的对象或函数。
@@ -128,7 +125,7 @@ void* align(
 );
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *对齐*\
 要尝试的对齐边界。
@@ -186,7 +183,7 @@ shared_ptr<T> allocate_shared(
     Args&&... args);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *分配*\
 用于创建对象的分配器。
@@ -319,7 +316,7 @@ shared_ptr<T> const_pointer_cast(
     shared_ptr<Other>&& sp) noexcept;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *T*\
 由返回的共享指针控制的类型。
@@ -369,7 +366,7 @@ void declare_no_pointers(
     size_t size);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *ptr*\
 第一个字符的地址，该字符不再包含可跟踪的指针。
@@ -390,7 +387,7 @@ void declare_reachable(
     void* ptr);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *ptr*\
 指向可访问、已分配且有效的存储区域的指针。
@@ -415,7 +412,7 @@ struct default_delete
 };
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *ptr*\
 指向要删除的对象的指针。
@@ -484,7 +481,7 @@ shared_ptr<T> dynamic_pointer_cast(
     shared_ptr<Other>&& sp) noexcept;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *T*\
 由返回的共享指针控制的类型。
@@ -545,7 +542,7 @@ Deleter* get_deleter(
     const shared_ptr<T>& sp) noexcept;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *删除器*\
 删除器的类型。
@@ -626,7 +623,7 @@ pair<T *, ptrdiff_t> get_temporary_buffer(
     ptrdiff_t count);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *计数*\
 所请求的、要为其分配内存的元素的最大数目。
@@ -684,7 +681,7 @@ shared_ptr<T> make_shared(
     Args&&... args);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *args*\
 零个或多个构造函数参数。 函数根据所提供的自变量来推断要调用的构造函数重载。
@@ -789,7 +786,7 @@ template <class T, class... Args>
 /* unspecified */ make_unique(Args&&...) = delete;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *T*\
 `unique_ptr` 将指向的对象的类型。
@@ -883,7 +880,7 @@ template<> struct owner_less<void>
 };
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *左*\
 共享指针或弱指针。
@@ -909,7 +906,7 @@ shared_ptr<T> reinterpret_pointer_cast(
     shared_ptr<U>&& ptr) noexcept;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *ptr*\
 对 `shared_ptr<U>`的引用。
@@ -930,7 +927,7 @@ void return_temporary_buffer(
     T* buffer);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *缓冲区*\
 指向要取消分配的内存的指针。
@@ -991,7 +988,7 @@ shared_ptr<T> static_pointer_cast(
     shared_ptr<Other>&& sp) noexcept;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *T*\
 由返回的共享指针控制的类型。
@@ -1063,7 +1060,7 @@ void swap(
 
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *T*\
 由自变量指针控制的类型。
@@ -1136,7 +1133,7 @@ void undeclare_no_pointers(
     size_t size);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *ptr*\
 指向以前使用[declare_no_pointers](#declare_no_pointers)标记的内存地址的指针。
@@ -1158,7 +1155,7 @@ T *undeclare_reachable(
     T* ptr);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *ptr*\
 指向以前使用[declare_reachable](#declare_reachable)标记的内存地址的指针。
@@ -1186,7 +1183,7 @@ ForwardIterator uninitialized_copy(
     ForwardIterator dest);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *策略*\
 要使用的执行策略。
@@ -1306,7 +1303,7 @@ ForwardIterator uninitialized_copy_n(
     ForwardIterator dest);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *策略*\
 要使用的执行策略。
@@ -1356,7 +1353,7 @@ void uninitialized_default_construct(
     ForwardIterator last);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *策略*\
 要使用的执行策略。
@@ -1400,7 +1397,7 @@ ForwardIterator uninitialized_default_construct_n(
     Size count);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *策略*\
 要使用的执行策略。
@@ -1451,7 +1448,7 @@ void uninitialized_fill(
     const T& value);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *策略*\
 要使用的执行策略。
@@ -1539,7 +1536,7 @@ ForwardIterator uninitialized_fill_n(
     const T& value);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *策略*\
 要使用的执行策略。
@@ -1621,7 +1618,7 @@ ForwardIterator uninitialized_move(
     ForwardIterator dest);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *策略*\
 要使用的执行策略。
@@ -1671,7 +1668,7 @@ pair<InputIterator, ForwardIterator> uninitialized_move_n(
     ForwardIterator dest);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *策略*\
 要使用的执行策略。
@@ -1719,7 +1716,7 @@ void uninitialized_value_construct(
     ForwardIterator last);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *策略*\
 要使用的执行策略。
@@ -1765,7 +1762,7 @@ ForwardIterator uninitialized_value_construct_n(
     Size count);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *策略*\
 要使用的执行策略。

@@ -2,7 +2,6 @@
 title: 如何：创建资源（C++）
 ms.date: 02/14/2019
 f1_keywords:
-- vc.editors.resource
 - vc.resvw.add.MFC
 - vs.resourceview.F1
 - vc.editors.insertresource
@@ -36,12 +35,12 @@ helpviewer_keywords:
 - resources [C++], templates
 - .rct files [C++]
 ms.assetid: 82be732a-cdcd-4a58-8de7-976d1418f86b
-ms.openlocfilehash: c997c7a1b2d7fb3a852a42fa78faf2be6074705e
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 93bee6319d356128f56c1886d395cf25db372e80
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426581"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443869"
 ---
 # <a name="how-to-create-resources-c"></a>如何：创建资源（C++）
 
@@ -115,7 +114,7 @@ ms.locfileid: "79426581"
 
 **资源视图**windows 包括 "**添加资源**" 对话框，其中包含以下用于将资源添加到C++ windows 桌面应用程序项目的属性：
 
-| properties | 说明 |
+| 属性 | 说明 |
 |---|---|
 | **资源类型** | 指定要创建的资源类型。<br/><br/>您可以展开光标和对话框资源类别以显示*位于中的其他资源。\Microsoft Visual Studio \<版本\>\VC\VCResourceTemplates\\< LCID\>\mfc.rct*。 如果需要添加 .rct 文件，请将它们放在此处或指定另一个[包含路径](../windows/how-to-specify-include-directories-for-resources.md)。 在树控件中的顶层显示的资源是 Visual Studio 提供的默认资源。 .Rct 文件中的资源将显示在相应类别下的第二个级别。 对于可以添加的 .rct 文件数没有预设的限制。<br/><br/> |
 | **新建** | 根据在 "**资源类型**" 框中选择的类型创建资源，然后在相应的编辑器中打开该资源。<br/><br/>例如，如果您创建一个对话框资源，它将在[对话框编辑器](../windows/dialog-editor.md)中打开该资源。 |

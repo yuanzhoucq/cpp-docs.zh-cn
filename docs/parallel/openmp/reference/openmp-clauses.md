@@ -7,7 +7,6 @@ f1_keywords:
 - copyprivate
 - default
 - firstprivate
-- if
 - lastprivate
 - nowait
 - num_threads
@@ -33,12 +32,12 @@ helpviewer_keywords:
 - schedule OpenMP clause
 - shared OpenMP clause
 ms.assetid: 806e7d8f-b204-4e4c-a12c-273ab540a7ca
-ms.openlocfilehash: 92bd73fda5891b0bbf7393d1a7fda573d0f00263
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 37f86eeb172c5f8b496ed724142af002f5db8d41
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79424157"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446339"
 ---
 # <a name="openmp-clauses"></a>OpenMP 子句
 
@@ -48,7 +47,7 @@ Visual C++支持以下 OpenMP 子句。
 
 对于常规属性：
 
-|子句|描述|
+|子句|说明|
 |------|-----------|
 |[if](#if-openmp)|指定是应并行执行循环还是在序列中执行循环。|
 |[num_threads](#num-threads)|设置线程团队中的线程数。|
@@ -58,12 +57,12 @@ Visual C++支持以下 OpenMP 子句。
 
 对于数据共享属性：
 
-|子句|描述|
+|子句|说明|
 |------|-----------|
 |[private](#private-openmp)|指定每个线程都应有自己的变量实例。|
 |[firstprivate](#firstprivate)|指定每个线程都应有自己的变量实例，并且应使用该变量的值初始化该变量，因为它存在于并行构造之前。|
 |[lastprivate](#lastprivate)|指定将该变量的封闭上下文版本设置为等于执行最终迭代（对于循环构造）或上一部分（#pragma 部分）的任何线程的专用版本。|
-|[shared](#shared-openmp)|指定应在所有线程之间共享一个或多个变量。|
+|[共享](#shared-openmp)|指定应在所有线程之间共享一个或多个变量。|
 |[default](#default-openmp)|指定并行区域中的未区分范围的变量的行为。|
 |[reduction](#reduction)|指定每个线程专用的一个或多个变量是并行区域结束时的缩减操作的主体。|
 |[copyin](#copyin)|允许线程访问[threadprivate](openmp-directives.md#threadprivate)变量的主线程的值。|
@@ -243,7 +242,7 @@ if(expression)
 
 ### <a name="parameters"></a>参数
 
-*expression*<br/>
+expression<br/>
 一个整数表达式，如果计算结果为 true （非零），则并行执行并行区域中的代码。 如果表达式的计算结果为 false （0），则并行区域在序列中执行（通过单个线程）。
 
 ### <a name="remarks"></a>备注
