@@ -12,11 +12,11 @@ helpviewer_keywords:
 - property maps
 ms.assetid: 128bc742-2b98-4b97-a243-684dbb83db77
 ms.openlocfilehash: 1e2e7235dd924467d9d5e0613a704fedf8340ae4
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78857179"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422972"
 ---
 # <a name="property-map-macros"></a>属性映射宏
 
@@ -43,7 +43,7 @@ ms.locfileid: "78857179"
 BEGIN_PROP_MAP(theClass)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *类*<br/>
 中指定包含属性映射的类。
@@ -68,7 +68,7 @@ BEGIN_PROP_MAP 不会保存属性映射的范围（即维度），因为使用�
 PROP_DATA_ENTRY( szDesc, member, vt)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szDesc*<br/>
 中属性说明。
@@ -101,7 +101,7 @@ PROP_DATA_ENTRY( szDesc, member, vt)
 PROP_ENTRY_TYPE( szDesc, dispid, clsid, vt)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szDesc*<br/>
 中属性说明。
@@ -133,7 +133,7 @@ PROP_ENTRY 宏不安全且已弃用。 它已替换为 PROP_ENTRY_TYPE。
 PROP_ENTRY_TYPE_EX( szDesc, dispid, clsid, iidDispatch, vt)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szDesc*<br/>
 中属性说明。
@@ -170,7 +170,7 @@ PROP_ENTRY_EX 宏不安全且已弃用。 它已替换为 PROP_ENTRY_TYPE_EX。
 PROP_PAGE(clsid)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *clsid*<br/>
 中属性页的 CLSID。

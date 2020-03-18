@@ -18,11 +18,11 @@ helpviewer_keywords:
 - aggregation [C++], ATL macros
 ms.assetid: d99d379a-0eec-481f-8daa-252dac18f163
 ms.openlocfilehash: 38239942b99a29b5777deef8000d9f1ab85b10e6
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78862596"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423578"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>聚合和类工厂宏
 
@@ -47,7 +47,7 @@ ms.locfileid: "78862596"
 
 **标头：** atlcom。h
 
-##  <a name="declare_aggregatable"></a>  DECLARE_AGGREGATABLE
+##  <a name="declare_aggregatable"></a>DECLARE_AGGREGATABLE
 
 指定可以聚合对象。
 
@@ -55,7 +55,7 @@ ms.locfileid: "78862596"
 DECLARE_AGGREGATABLE( x )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*<br/>
 中要定义为可聚合的类的名称。
@@ -119,7 +119,7 @@ ATL 提供三个声明类工厂的宏：
 DECLARE_CLASSFACTORY_EX( cf )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *cf*<br/>
 中实现类工厂对象的类的名称。
@@ -142,9 +142,9 @@ DECLARE_CLASSFACTORY_EX( cf )
 DECLARE_CLASSFACTORY2( lic )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*lic*<br/>
+*许可证*<br/>
 中一个实现 `VerifyLicenseKey`、`GetLicenseKey`和 `IsLicenseValid`的类。
 
 ### <a name="remarks"></a>备注
@@ -166,7 +166,7 @@ class  CComClassFactory2 : public IClassFactory2,
     public license
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *license*<br/>
 实现以下静态函数的类：
@@ -237,9 +237,9 @@ ATL 对象通过从[CComCoClass](../../atl/reference/ccomcoclass-class.md)派生
 DECLARE_CLASSFACTORY_SINGLETON( obj )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*obj*<br/>
+obj<br/>
 中类对象的名称。
 
 ### <a name="remarks"></a>备注
@@ -262,7 +262,7 @@ template<class T>
 class CComClassFactorySingleton : public CComClassFactory
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 你的类。
@@ -287,7 +287,7 @@ DECLARE_GET_CONTROLLING_UNKNOWN()
 
 如果收到 `GetControllingUnknown` 未定义的编译器错误消息（例如，在 `CComAggregateCreator`中），请将此宏添加到对象。
 
-##  <a name="declare_not_aggregatable"></a>  DECLARE_NOT_AGGREGATABLE
+##  <a name="declare_not_aggregatable"></a>DECLARE_NOT_AGGREGATABLE
 
 指定不能聚合您的对象。
 
@@ -295,7 +295,7 @@ DECLARE_GET_CONTROLLING_UNKNOWN()
 DECLARE_NOT_AGGREGATABLE( x )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*<br/>
 中要定义为不可聚合的类对象的名称。
@@ -310,7 +310,7 @@ DECLARE_NOT_AGGREGATABLE( x )
 
 [!code-cpp[NVC_ATL_Windowing#121](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_1.h)]
 
-##  <a name="declare_only_aggregatable"></a>  DECLARE_ONLY_AGGREGATABLE
+##  <a name="declare_only_aggregatable"></a>DECLARE_ONLY_AGGREGATABLE
 
 指定必须聚合您的对象。
 
@@ -318,7 +318,7 @@ DECLARE_NOT_AGGREGATABLE( x )
 DECLARE_ONLY_AGGREGATABLE( x )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*<br/>
 中要定义为仅可聚合的类对象的名称。
@@ -333,7 +333,7 @@ DECLARE_ONLY_AGGREGATABLE( x )
 
 [!code-cpp[NVC_ATL_Windowing#125](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_8.h)]
 
-##  <a name="declare_poly_aggregatable"></a>  DECLARE_POLY_AGGREGATABLE
+##  <a name="declare_poly_aggregatable"></a>DECLARE_POLY_AGGREGATABLE
 
 指定在创建对象时创建**CComPolyObject \<** *x* **>** 的实例。
 
@@ -341,7 +341,7 @@ DECLARE_ONLY_AGGREGATABLE( x )
 DECLARE_POLY_AGGREGATABLE( x )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*<br/>
 中要定义为可聚合或不可聚合的类对象的名称。
@@ -354,7 +354,7 @@ DECLARE_POLY_AGGREGATABLE( x )
 
 如果使用 ATL 控件向导创建完全控件，则会在对象中自动声明 DECLARE_POLY_AGGREGATABLE 宏。
 
-##  <a name="declare_protect_final_construct"></a>  DECLARE_PROTECT_FINAL_CONSTRUCT
+##  <a name="declare_protect_final_construct"></a>DECLARE_PROTECT_FINAL_CONSTRUCT
 
 保护对象不被删除（在[FinalConstruct](ccomobjectrootex-class.md#finalconstruct)期间）内部聚合对象递增引用计数，然后将计数递减为0。
 
@@ -370,7 +370,7 @@ DECLARE_PROTECT_FINAL_CONSTRUCT()
 DECLARE_VIEW_STATUS( statusFlags )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *statusFlags*<br/>
 中VIEWSTATUS 标志。 有关标志列表，请参阅[VIEWSTATUS](/windows/win32/api/ocidl/ne-ocidl-viewstatus) 。
@@ -379,6 +379,6 @@ DECLARE_VIEW_STATUS( statusFlags )
 
 [!code-cpp[NVC_ATL_Windowing#126](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_9.h)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [宏](../../atl/reference/atl-macros.md)

@@ -1,9 +1,6 @@
 ---
 title: 作为用户组的成员运行
 ms.date: 11/04/2016
-f1_keywords:
-- PRJ0050
-- VCD0047
 helpviewer_keywords:
 - Users Group [C++]
 - security [C++], Users Group
@@ -12,12 +9,12 @@ helpviewer_keywords:
 - user accounts [C++]
 - administrator (not running as) [C++]
 ms.assetid: e48a03ec-d345-49f6-809a-1a291eecbc81
-ms.openlocfilehash: dc06e2dc58d28c34a646ccffc0be90368b3297f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 117ef426950fc9aff5ae41e894f0d7ae898369cd
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411287"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445441"
 ---
 # <a name="running-as-a-member-of-the-users-group"></a>作为用户组的成员运行
 
@@ -29,7 +26,7 @@ ms.locfileid: "62411287"
 
 ## <a name="non-administrator-user-groups"></a>非管理员用户组
 
-应将开发人员通常使用的 Windows 用户帐户添加到用户组或超级用户组。 还应将开发人员添加到调试组。 作为用户组的成员，你可以执行例程任务，包括在使你的计算机免受不必要的风险的情况下运行程序以及访问 Internet 站点。 作为超级用户组的成员，你也可以执行任务，如应用程序的安装、打印机的安装和大多数“控制面板”的操作。 如果你需要执行管理员任务（如升级操作系统或配置系统参数），应登录到管理员帐户，登录时间以足够完成执行管理任务为宜。 或者，Windows **runas**命令可用于启动具有管理访问权限的特定应用程序。
+应将开发人员通常使用的 Windows 用户帐户添加到用户组或超级用户组。 还应将开发人员添加到调试组。 作为用户组的成员，你可以执行例程任务，包括在使你的计算机免受不必要的风险的情况下运行程序以及访问 Internet 站点。 作为超级用户组的成员，你也可以执行任务，如应用程序的安装、打印机的安装和大多数“控制面板”的操作。 如果你需要执行管理员任务（如升级操作系统或配置系统参数），应登录到管理员帐户，登录时间以足够完成执行管理任务为宜。 或者，可以使用 Windows **runas**命令，通过管理访问权限来启动特定的应用程序。
 
 ## <a name="exposing-customers-to-security-risks"></a>向客户公开安全风险
 
@@ -51,6 +48,6 @@ ms.locfileid: "62411287"
 
 您可以通过成为调试组的一部分以非管理员身份调试在 Visual Studio（本机和托管）内启动的任何应用程序。 这包括可使用 Attach to Process 命令附加到正在运行的应用程序。 但是，为了调试由其他用户启动的本机或托管应用程序而成为管理员组的一部分是必要的。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [安全性最佳做法](security-best-practices-for-cpp.md)

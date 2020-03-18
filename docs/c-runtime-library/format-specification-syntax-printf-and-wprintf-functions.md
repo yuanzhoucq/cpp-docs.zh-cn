@@ -10,11 +10,11 @@ helpviewer_keywords:
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
 ms.openlocfilehash: 024e757f57e62ba2b30048c783798180b4da2b9a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865481"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422708"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>格式规范语法：printf 和 wprintf 函数
 
