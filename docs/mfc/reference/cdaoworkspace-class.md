@@ -63,11 +63,11 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
 ms.openlocfilehash: c1d235035cee9342c8c54c7aaa4e05a96d5a37e3
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883860"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425969"
 ---
 # <a name="cdaoworkspace-class"></a>CDaoWorkspace 类
 
@@ -79,7 +79,7 @@ ms.locfileid: "78883860"
 class CDaoWorkspace : public CObject
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -147,7 +147,7 @@ class CDaoWorkspace : public CObject
 
 MFC 不实现 DAO 中的用户和组集合，这些集合用于安全控制。 如果需要 DAO 的这些方面，则必须通过直接调用 DAO 接口自行进行编程。 有关信息，请参阅[技术说明 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)。
 
-## <a name="usage"></a>用法
+## <a name="usage"></a>使用情况
 
 可以使用类 `CDaoWorkspace` 来执行以下操作：
 
@@ -307,7 +307,7 @@ static void PASCAL CompactDatabase(
     LPCTSTR lpszPassword);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszSrcName*<br/>
 现有的已关闭数据库的名称。 它可以是完整路径和文件名，如 "C：\\\MYDB。MDB "。 如果文件名有扩展名，则必须指定扩展名。 如果你的网络支持统一命名约定（UNC），则还可以指定网络路径，例如 "\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB。MDB "。 （路径字符串中需要双反斜杠，因为 "\\" 是C++转义字符。）
@@ -394,7 +394,7 @@ virtual void Create(
     LPCTSTR lpszPassword);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszName*<br/>
 一个最多包含14个字符的字符串，用于唯一命名新的工作区对象。 必须提供名称。 有关相关信息，请参阅 DAO 帮助中的主题 "名称属性"。
@@ -449,7 +449,7 @@ void GetDatabaseInfo(
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 工作区的数据库集合中数据库对象的从零开始的索引，用于按索引查找。
@@ -619,7 +619,7 @@ void GetWorkspaceInfo(
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 工作区集合中数据库对象的从零开始的索引，用于按索引查找。
@@ -651,7 +651,7 @@ void GetWorkspaceInfo(
 static void PASCAL Idle(int nAction = dbFreeLocks);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *N 操作*<br/>
 在空闲处理期间要执行的操作。 目前 `dbFreeLocks`唯一有效的操作。
@@ -703,7 +703,7 @@ BOOL IsOpen() const;
 virtual void Open(LPCTSTR lpszName = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszName*<br/>
 要打开的 DAO 工作区对象的名称-最多包含14个字符的字符串，用于唯一命名工作区。 接受默认值 NULL，以显式打开默认工作区。 有关命名要求，请参阅[Create](#create)的*lpszName*参数。 有关相关信息，请参阅 DAO 帮助中的主题 "名称属性"。
@@ -734,7 +734,7 @@ virtual void Open(LPCTSTR lpszName = NULL);
 static void PASCAL RepairDatabase(LPCTSTR lpszName);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszName*<br/>
 现有 Microsoft Jet 引擎数据库文件的路径和文件名。 如果省略该路径，将仅搜索当前目录。 如果系统支持统一命名约定（UNC），则还可以指定网络路径，例如： "\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB。MDB "。 （路径字符串中需要双反斜杠，因为 "\\" 是C++转义字符。）
@@ -776,7 +776,7 @@ void Rollback();
 static void PASCAL SetDefaultPassword(LPCTSTR lpszPassword);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszPassword*<br/>
 默认密码。 密码长度最多为14个字符，可以包含除 ASCII 0 （null）以外的任何字符。 密码是区分大小写的。
@@ -805,7 +805,7 @@ static void PASCAL SetDefaultPassword(LPCTSTR lpszPassword);
 static void PASCAL SetDefaultUser(LPCTSTR lpszDefaultUser);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszDefaultUser*<br/>
 默认用户名。 用户名长度为 1-20 个字符，并包含字母字符、重音字符、数字、空格和符号，除了： "（引号）、/（正斜杠）、\ （反斜杠）、\[ \] （方括号）、：（冒号）、 &#124; （管道）、\< （小于号）、> （大于号）、+ （正号）、= （等号）、（分号）、、（逗号）、（问号）、\* （星号）、前导空格和控制字符（ASCII 00 到 ASCII 31）。 有关相关信息，请参阅 DAO 帮助中的主题 "UserName 属性"。
@@ -834,7 +834,7 @@ static void PASCAL SetDefaultUser(LPCTSTR lpszDefaultUser);
 static void PASCAL SetIniPath(LPCTSTR lpszRegistrySubKey);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszRegistrySubkey*<br/>
 一个字符串，其中包含用于 Microsoft Jet 数据库引擎设置的位置或可安装的 ISAM 数据库所需参数的 Windows 注册表子项的名称。
@@ -856,7 +856,7 @@ static void PASCAL SetIniPath(LPCTSTR lpszRegistrySubKey);
 void SetIsolateODBCTrans(BOOL bIsolateODBCTrans);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bIsolateODBCTrans*<br/>
 如果要开始隔离 ODBC 事务，则传递 TRUE。 如果要停止隔离 ODBC 事务，则传递 FALSE。
@@ -875,7 +875,7 @@ void SetIsolateODBCTrans(BOOL bIsolateODBCTrans);
 static void PASCAL SetLoginTimeout(short nSeconds);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nSeconds*<br/>
 尝试登录到 ODBC 数据库时出现错误之前等待的秒数。

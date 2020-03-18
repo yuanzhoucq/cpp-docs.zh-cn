@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CFont [MFC], GetLogFont
 ms.assetid: 3fad6bfe-d6ce-4ab9-967a-5ce0aa102800
 ms.openlocfilehash: c37b2f657105e0065e0cddb2c508424bd6c89b0a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866602"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424391"
 ---
 # <a name="cfont-class"></a>CFont 类
 
@@ -37,7 +37,7 @@ ms.locfileid: "78866602"
 class CFont : public CGdiObject
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -120,7 +120,7 @@ BOOL CreateFont(
     LPCTSTR lpszFacename);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nHeight*<br/>
 指定字体所需的高度（以逻辑单位为单位）。 有关说明，请参阅 Windows SDK 中[LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw)结构的 `lfHeight` 成员。 转换后， *nHeight*的绝对值不得超过16384个设备单位。 对于所有高度的比较，如果所有字体都超出了所需大小，则字体映射器将查找不会超出所需大小的最大字体或最小字体。
@@ -200,7 +200,7 @@ OEM 字符集与系统相关。
 BOOL CreateFontIndirect(const LOGFONT* lpLogFont);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpLogFont*<br/>
 指向定义逻辑字体特征的 `LOGFONT` 结构。
@@ -232,7 +232,7 @@ BOOL CreatePointFont(
     CDC* pDC = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nPointSize*<br/>
 在十分之一的点中请求的字体高度。 （例如，传递120请求12点字体。）
@@ -267,7 +267,7 @@ BOOL CreatePointFontIndirect(
     CDC* pDC = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpLogFont*<br/>
 指向定义逻辑字体特征的[LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw)结构。 `LOGFONT` 结构的 `lfHeight` 成员按十分之一的点（而不是逻辑单元）来度量。 （例如，将 `lfHeight` 设置为120以请求12点字体。）
@@ -297,7 +297,7 @@ BOOL CreatePointFontIndirect(
 static CFont* PASCAL FromHandle(HFONT hFont);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hFont*<br/>
 Windows 字体的 HFONT 句柄。
@@ -322,7 +322,7 @@ Windows 字体的 HFONT 句柄。
 int GetLogFont(LOGFONT* pLogFont);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pLogFont*<br/>
 指向[LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw)结构的指针，该结构用于接收字体信息。

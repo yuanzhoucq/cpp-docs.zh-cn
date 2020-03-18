@@ -1,8 +1,6 @@
 ---
-title: 菜单和资源：添加服务器
+title: 菜单和资源：服务器添加
 ms.date: 11/04/2016
-f1_keywords:
-- IDP_OLE_INIT_FAILED
 helpviewer_keywords:
 - OLE visual editing servers [MFC]
 - accelerator tables [MFC], server applications
@@ -17,60 +15,60 @@ helpviewer_keywords:
 - server applications [MFC], OLE menus and resources
 - OLE initialization failure [MFC]
 ms.assetid: 56ce9e8d-8f41-4db8-8dee-e8b0702d057c
-ms.openlocfilehash: 85c7b6059a868e93c6c6a7ebbd7b08dac3233612
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1dfd059572c433e8fd7ccaf6e5c48e880f59cad
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62225394"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445185"
 ---
-# <a name="menus-and-resources-server-additions"></a>菜单和资源：添加服务器
+# <a name="menus-and-resources-server-additions"></a>菜单和资源：服务器添加
 
-本文介绍了对菜单和可视化编辑服务器 （组件） 应用程序中的其他资源进行更改。 服务器应用程序需要许多新增功能的菜单结构和其他资源，因为它可以启动在三种模式之一： 独立、 嵌入，或在位置。 如中所述[菜单和资源 (OLE)](../mfc/menus-and-resources-ole.md)文章中，有最多四个集的菜单。 所有四个用于 MDI 完全服务器应用程序，而只有三个用于袖珍服务器。 应用程序向导将创建菜单布局所需的服务器所需的类型。 可能需要一些自定义。
+本文说明了需要对可视编辑服务器（组件）应用程序中的菜单和其他资源进行的更改。 服务器应用程序需要很多添加到菜单结构和其他资源，因为它可以使用以下三种模式之一来启动：独立、嵌入或就地。 如[菜单和资源（OLE）](../mfc/menus-and-resources-ole.md)一文中所述，最多可以有四组菜单。 所有四个用于 MDI 完全服务器应用程序，而只有三个用于袖珍服务器。 应用程序向导将创建所需服务器类型的菜单布局。 某些自定义可能是必需的。
 
-如果不使用应用程序向导，您可能想要看一看 HIERSVR。RC 中，MFC 示例应用程序的资源脚本[HIERSVR](../overview/visual-cpp-samples.md)，以查看如何实现这些更改。
+如果不使用应用程序向导，可能需要查看 HIERSVR。RC，MFC 示例应用程序[HIERSVR](../overview/visual-cpp-samples.md)的资源脚本，用于查看如何实现这些更改。
 
-在本文中涵盖的主题包括：
+本文中涵盖的主题包括：
 
-- [添加服务器菜单](#_core_server_menu_additions)
+- [服务器菜单添加项](#_core_server_menu_additions)
 
-- [添加快捷键对应表](#_core_server_application_accelerator_table_additions)
+- [快捷键对应表添加项](#_core_server_application_accelerator_table_additions)
 
-- [添加字符串表](../mfc/menus-and-resources-container-additions.md)
+- [字符串表添加](../mfc/menus-and-resources-container-additions.md)
 
-- [添加袖珍服务器](#_core_mini.2d.server_additions)
+- [添加袖珍](#_core_mini.2d.server_additions)
 
-##  <a name="_core_server_menu_additions"></a> 添加服务器菜单
+##  <a name="_core_server_menu_additions"></a>服务器菜单添加项
 
-服务器 （组件） 应用程序必须具有为支持 OLE 可视化编辑添加的菜单资源。 在独立模式下运行应用程序时使用的菜单而无需更改，但生成应用程序之前，必须添加两个新的菜单资源： 一种用于支持就地激活和一种用于支持服务器完全打开。 完整和袖珍服务器应用程序使用这两个菜单资源。
+服务器（组件）应用程序必须添加菜单资源才能支持 OLE 可视化编辑。 当应用程序在独立模式下运行时使用的菜单无需更改，但必须在构建应用程序之前添加两个新的菜单资源：一个用于支持就地激活，另一个用于支持完全打开的服务器。 这两个菜单资源均由完全和袖珍应用程序使用。
 
-- 若要支持就地激活，必须创建一个菜单资源，可非常类似于在独立模式下运行时使用的菜单资源。 在此菜单中的差异是缺少的文件和窗口项 （和任何其他应用程序，并不是数据处理的菜单项）。 容器应用程序会提供这些菜单项。 有关详细信息，并举例说明此菜单合并技术，请参阅文章[菜单和资源：菜单合并](../mfc/menus-and-resources-menu-merging.md)。
+- 若要支持就地激活，必须创建与以独立模式运行时所使用的菜单资源非常相似的菜单资源。 此菜单的区别在于缺少文件和窗口项（以及处理应用程序的任何其他菜单项，而不是数据）。 容器应用程序将提供这些菜单项。 有关此菜单合并技术的详细信息和示例，请参阅菜单[和资源：菜单合并](../mfc/menus-and-resources-menu-merging.md)一文。
 
-- 若要支持完全打开激活，必须创建菜单资源几乎等同于使用的菜单资源以独立模式运行时。 此菜单资源的唯一修改是某些项重述以反映在嵌入复合文档中的项上的服务器正在其中运行这一事实。
+- 若要支持完全打开的激活，必须创建与在独立模式下运行时使用的菜单资源几乎相同的菜单资源。 对此 menu 资源的唯一修改是，某些项改写，以反映服务器对嵌入到复合文档中的项的操作。
 
-除了本文中列出的更改，需要包括 AFXOLESV 资源文件。RC 中，这是 Microsoft 基础类库实现所必需的。 此文件是 MFC\Include 子目录中。
+除了本文中列出的更改之外，资源文件还需要包含 AFXOLESV。RC，这是 Microsoft 基础类库实现所必需的。 此文件位于 MFC\Include 子目录中。
 
-##  <a name="_core_server_application_accelerator_table_additions"></a> 添加服务器应用程序快捷键对应表
+##  <a name="_core_server_application_accelerator_table_additions"></a>服务器应用程序加速器表添加
 
-两个新的快捷键对应表资源必须添加到服务器应用程序;它们直接对应于前面所述的新菜单资源。 在就地激活服务器应用程序时，使用第一个快捷键对应表。 除了这些绑定到的文件和窗口菜单包含该视图的快捷键对应表中的所有条目。
+必须向服务器应用程序添加两个新的快捷键对应表资源;它们与前面所述的新菜单资源直接对应。 当就地激活服务器应用程序时，将使用第一个快捷键对应表。 它包含视图的快捷键对应表中的所有条目，但绑定到文件和窗口菜单的项除外。
 
-第二个表是几乎视图的快捷键对应表的一个精确副本。 任何差异并行中所述的完全打开菜单中所做的更改[服务器菜单添加](#_core_server_menu_additions)。
+第二个表几乎是视图快捷键对应表的精确副本。 [服务器菜单添加内容](#_core_server_menu_additions)中所述的完全打开菜单中进行的任何差异并行更改。
 
-这些快捷键对应表更改的示例，进行比较与在 HIERSVR IDR_MAINFRAME IDR_HIERSVRTYPE_SRVR_IP 和 IDR_HIERSVRTYPE_SRVR_EMB 快捷键对应表。RC 文件包含在 MFC OLE 示例[HIERSVR](../overview/visual-cpp-samples.md)。 文件和窗口加速器就地表中缺少，它们的确切副本位于嵌入的表。
+有关这些快捷键表更改的示例，请将 IDR_HIERSVRTYPE_SRVR_IP 和 IDR_HIERSVRTYPE_SRVR_EMB 快捷键对应表与 HIERSVR 中的 IDR_MAINFRAME 进行比较。MFC OLE 示例[HIERSVR](../overview/visual-cpp-samples.md)中包含的 RC 文件。 就地表中缺少文件和窗口加速器，并且嵌入表中存在这些快捷键的精确副本。
 
-##  <a name="_core_string_table_additions_for_server_applications"></a> 服务器应用程序的添加的字符串表
+##  <a name="_core_string_table_additions_for_server_applications"></a>服务器应用程序的字符串表添加
 
-添加仅一个字符串表中是必需的服务器应用程序 — 一个字符串，表示 OLE 初始化失败。 例如，下面是应用程序向导生成的字符串表条目：
+在服务器应用程序中只需要添加一个字符串表，即表示 OLE 初始化失败的字符串。 例如，以下是应用程序向导生成的字符串表项：
 
-|Id|String|
+|ID|String|
 |--------|------------|
-|IDP_OLE_INIT_FAILED|OLE 初始化失败。 请确保 OLE 库的正确版本。|
+|IDP_OLE_INIT_FAILED|OLE 初始化失败。 请确保 OLE 库的版本正确。|
 
-##  <a name="_core_mini.2d.server_additions"></a> 添加袖珍服务器
+##  <a name="_core_mini.2d.server_additions"></a>添加袖珍
 
-添加了相同的内容同样适用于袖珍上面所列的完整服务器。 袖珍服务器不能在独立模式下运行，因为其主菜单是要小得多。 应用程序向导创建主菜单有仅文件菜单，包含项退出和有关。 嵌入和就地菜单和快捷键的袖珍都与用于完整服务器相同。
+与上面列出的用于完整服务器的 miniservers 一样，添加的内容也同样适用。 由于袖珍无法在独立模式下运行，因此它的主菜单要小得多。 应用程序向导创建的主菜单只有一个 "文件" 菜单，其中只包含 "退出" 和 "关于" 项。 适用于 miniservers 的嵌入和就地菜单和加速器与完全服务器的相同。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [菜单和资源 (OLE)](../mfc/menus-and-resources-ole.md)<br/>
 [菜单和资源：菜单合并](../mfc/menus-and-resources-menu-merging.md)

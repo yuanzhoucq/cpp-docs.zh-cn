@@ -75,11 +75,11 @@ helpviewer_keywords:
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
 ms.openlocfilehash: 669bdb18e378c4dc39bdc6d51ca1ebe7f93fa839
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78870607"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424571"
 ---
 # <a name="cbutton-class"></a>CButton 类
 
@@ -91,7 +91,7 @@ ms.locfileid: "78870607"
 class CButton : public CWnd
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -211,7 +211,7 @@ virtual BOOL Create(
     UINT nID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszCaption*<br/>
 指定按钮控件的文本。
@@ -262,7 +262,7 @@ virtual BOOL Create(
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpDrawItemStruct*<br/>
 指向[DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct)结构的长指针。 结构包含有关要绘制的项的信息以及所需的绘图类型。
@@ -373,7 +373,7 @@ HICON GetIcon() const;
 BOOL GetIdealSize(SIZE* psize);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *psize*<br/>
 指向按钮当前大小的指针。
@@ -394,7 +394,7 @@ BOOL GetIdealSize(SIZE* psize);
 BOOL GetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pbuttonImagelist*<br/>
 指向 `CButton` 对象的图像列表的指针。
@@ -419,7 +419,7 @@ BOOL GetNote(
     UINT* cchNote) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -430,7 +430,7 @@ BOOL GetNote(
 
 第一个重载中的[CString](../../atl-mfc-shared/using-cstring.md)对象，该对象包含与当前命令链接控件关联的注释文本。
 
-\- 或 -
+-或-
 
 在第二个重载中，如果此方法成功，则为 TRUE;否则为 FALSE。
 
@@ -504,7 +504,7 @@ CImageList* GetSplitImageList() const;
 BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -528,7 +528,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
 BOOL GetSplitSize(LPSIZE pSize) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -602,7 +602,7 @@ UINT GetState() const;
 BOOL GetTextMargin(RECT* pmargin);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pmargin*<br/>
 指向 `CButton` 对象的文本边距的指针。
@@ -627,7 +627,7 @@ BOOL GetTextMargin(RECT* pmargin);
 HBITMAP SetBitmap(HBITMAP hBitmap);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hBitmap*<br/>
 位图的句柄。
@@ -670,7 +670,7 @@ void SetButtonStyle(
     BOOL bRedraw = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nStyle*<br/>
 指定[按钮样式](../../mfc/reference/styles-used-by-mfc.md#button-styles)。
@@ -694,7 +694,7 @@ void SetButtonStyle(
 void SetCheck(int nCheck);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *n*<br/>
 指定复选状态。 此参数可以是以下项之一：
@@ -721,7 +721,7 @@ void SetCheck(int nCheck);
 HCURSOR SetCursor(HCURSOR hCursor);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hCursor*<br/>
 游标的句柄。
@@ -760,7 +760,7 @@ HCURSOR SetCursor(HCURSOR hCursor);
 BOOL SetDropDownState(BOOL fDropDown);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -796,7 +796,7 @@ BOOL SetDropDownState(BOOL fDropDown);
 BOOL SetElevationRequired(BOOL fElevationRequired);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -820,7 +820,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
 HICON SetIcon(HICON hIcon);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hIcon*<br/>
 图标的句柄。
@@ -859,7 +859,7 @@ HICON SetIcon(HICON hIcon);
 BOOL SetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pbuttonImagelist*<br/>
 指向新图像列表的指针。
@@ -880,7 +880,7 @@ BOOL SetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 BOOL SetNote(LPCTSTR lpszNote);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -916,7 +916,7 @@ BOOL SetNote(LPCTSTR lpszNote);
 BOOL SetSplitGlyph(TCHAR chGlyph);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -942,7 +942,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
 BOOL SetSplitImageList(CImageList* pSplitImageList);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -966,7 +966,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
 BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -1002,7 +1002,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
 BOOL SetSplitSize(LPSIZE pSize);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -1040,7 +1040,7 @@ BOOL SetSplitSize(LPSIZE pSize);
 BOOL SetSplitStyle(UINT uSplitStyle);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -1078,7 +1078,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
 void SetState(BOOL bHighlight);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bHighlight*<br/>
 指定是否突出显示该按钮。 非零值突出显示按钮;0值会删除任何突出显示。
@@ -1101,7 +1101,7 @@ void SetState(BOOL bHighlight);
 BOOL SetTextMargin(RECT* pmargin);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pmargin*<br/>
 指向新文本边距的指针。

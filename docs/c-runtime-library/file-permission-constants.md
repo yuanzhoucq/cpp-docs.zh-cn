@@ -1,9 +1,6 @@
 ---
 title: 文件权限常量
 ms.date: 11/04/2016
-f1_keywords:
-- _S_IWRITE
-- _S_IREAD
 helpviewer_keywords:
 - S_IWRITE constant
 - constants [C++], file attributes
@@ -12,12 +9,12 @@ helpviewer_keywords:
 - _S_IWRITE constant
 - _S_IREAD constant
 ms.assetid: 593cad33-31d1-44d2-8941-8af7d210c88c
-ms.openlocfilehash: 0e042cddce6edf079aa54f114130f9750412e327
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 9f6126b867e29ca37468c6ff383224a483639c78
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742702"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443275"
 ---
 # <a name="file-permission-constants"></a>文件权限常量
 
@@ -33,7 +30,7 @@ ms.locfileid: "57742702"
 
 `pmode` 参数按以下方式指定文件的权限设置。
 
-|返回的常量|含义|
+|常量|含义|
 |--------------|-------------|
 |`_S_IREAD`|允许读取|
 |`_S_IWRITE`|允许写入|
@@ -41,13 +38,13 @@ ms.locfileid: "57742702"
 
 当用作 `pmode` 的 `_umask` 参数时，清单常量将设置权限设置，如下所示。
 
-|返回的常量|含义|
+|常量|含义|
 |--------------|-------------|
 |`_S_IREAD`|不允许写入（文件是只读的）|
 |`_S_IWRITE`|不允许读取（文件是只写的）|
 |`_S_IREAD` &#124; `_S_IWRITE`|既不允许读取也不允许写入|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [_open、_wopen](../c-runtime-library/reference/open-wopen.md)<br/>
 [_sopen、_wsopen](../c-runtime-library/reference/sopen-wsopen.md)<br/>

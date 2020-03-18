@@ -134,11 +134,11 @@ helpviewer_keywords:
 - CPane [MFC], m_recentDockInfo
 ms.assetid: 5c651a64-3c79-4d94-9676-45f6402a6bc5
 ms.openlocfilehash: 9d6a408b6ed7e7ab6f3dd138a4222b262978fd6c
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883912"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426467"
 ---
 # <a name="cpane-class"></a>CPane Class
 
@@ -150,7 +150,7 @@ ms.locfileid: "78883912"
 class CPane : public CBasePane
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -272,7 +272,7 @@ class CPane : public CBasePane
 virtual void AdjustSizeImmediate(BOOL bRecalcLayout = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bRecalcLayout*<br/>
 中如果为 TRUE，则自动重新计算窗格的布局;否则为 FALSE。
@@ -291,7 +291,7 @@ BOOL AllocElements(
     int cbElement);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nElements*<br/>
 中要为其分配存储的元素的数目。
@@ -327,7 +327,7 @@ virtual BOOL AllowShowOnPaneMenu() const;
 virtual CSize CalcAvailableSize(CRect rectRequired);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rectRequired*<br/>
 中所需的矩形。
@@ -346,7 +346,7 @@ void CalcInsideRect(
     BOOL bHorz) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rect*<br/>
 弄包含窗格的工作区的大小和偏移量。
@@ -378,7 +378,7 @@ void CalcRecentDockedRect();
 virtual CSize CalcSize(BOOL bVertDock);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bVertDock*<br/>
 中如果垂直停靠该窗格，则为 TRUE; 否则为 FALSE。
@@ -399,7 +399,7 @@ virtual CSize CalcSize(BOOL bVertDock);
 virtual BOOL CanBeDocked(CBasePane* pDockBar) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDockBar*<br/>
 中指定要停靠此窗格的窗格。
@@ -438,7 +438,7 @@ virtual BOOL CanBeTabbedDocument() const;
 virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bActiveTabOnly*<br/>
 中不用于 `CPane::ConvertToTabbedDocument`。
@@ -455,7 +455,7 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 virtual void CopyState(CPane* pOrgBar);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pOrgBar*<br/>
 中指向窗格的指针。
@@ -479,7 +479,7 @@ virtual BOOL Create(
     CCreateContext* pContext = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszClassName*<br/>
 中指定 Windows 类的名称。
@@ -520,7 +520,7 @@ virtual BOOL Create(
 virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rectInitial*<br/>
 中指定要创建的袖珍框架窗口的初始大小和位置（以屏幕坐标表示）。
@@ -551,7 +551,7 @@ virtual BOOL CreateEx(
     CCreateContext* pContext = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwStyleEx*<br/>
 中指定扩展的窗口样式特性。 有关详细信息，请参阅[扩展窗口样式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)。
@@ -595,7 +595,7 @@ virtual BOOL CreateEx(
 virtual BOOL DockByMouse(CBasePane* pDockBar);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDockBar*<br/>
 中指定此窗格要停靠到的基本窗格。
@@ -615,7 +615,7 @@ virtual BOOL DockPane(
     AFX_DOCK_METHOD dockMethod);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDockBar*<br/>
 [in，out]指定要将此窗格停靠到的基本窗格。
@@ -651,7 +651,7 @@ virtual BOOL DockPane(
 virtual CPane* DockPaneStandard(BOOL& bWasDocked);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bWasDocked*<br/>
 中如果成功停靠窗格，则为 TRUE;否则为 FALSE。
@@ -678,7 +678,7 @@ virtual BOOL DockToFrameWindow(
     BOOL bOuterEdge = FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwAlignment*<br/>
 中要将窗格停靠到的父框架侧。
@@ -733,7 +733,7 @@ virtual BOOL FloatPane(
     bool bShow = true);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rectFloat*<br/>
 中指定屏幕坐标中的位置，以便在窗格浮动时对其进行定位。
@@ -862,9 +862,9 @@ CPoint GetHotSpot() const;
 virtual void GetMinSize(CSize& size) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*size*<br/>
+size<br/>
 弄使用最小允许大小填充的 `CSize` 对象。
 
 ### <a name="remarks"></a>备注
@@ -877,7 +877,7 @@ virtual void GetMinSize(CSize& size) const;
 virtual void GetPaneName(CString& strName) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *strName*<br/>
 弄用标题名称填充的 `CString` 对象。
@@ -894,7 +894,7 @@ virtual void GetPaneName(CString& strName) const;
 void GetVirtualRect(CRect& rectVirtual) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rectVirtual*<br/>
 弄用虚拟矩形填充的 `CRect` 对象。
@@ -915,7 +915,7 @@ virtual AFX_CS_STATUS IsChangeState(
     CBasePane** ppTargetBar) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nOffset*<br/>
 中指定停靠敏感度。 例如，在停靠行的*nOffset*像素内移动的窗格将被停靠。
@@ -974,7 +974,7 @@ bool IsLeftOf(
     bool bWindowRect = true) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rect*<br/>
 中用于比较的 `CRect` 对象。
@@ -1035,7 +1035,7 @@ virtual BOOL LoadState(
     UINT uiID = (UINT) -1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszProfileName*<br/>
 中配置文件名称。
@@ -1092,7 +1092,7 @@ BOOL MoveByAlignment(
     int nOffset);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwAlignment*<br/>
 中指定窗格对齐方式。
@@ -1127,7 +1127,7 @@ virtual CSize MovePane(
     HDWP& hdwp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rectNew*<br/>
 中为窗格指定新矩形。
@@ -1154,7 +1154,7 @@ virtual CSize MovePane(
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pWndOldParent*<br/>
 [in，out]窗格的上一个父窗口。
@@ -1174,7 +1174,7 @@ virtual void OnAfterDock(
     AFX_DOCK_METHOD dockMethod);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pBar*<br/>
 中未使用此参数。
@@ -1207,7 +1207,7 @@ virtual void OnBeforeChangeParent(
     BOOL bDelay = FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pWndNewParent*<br/>
 [in，out]指定新的父窗口。
@@ -1232,7 +1232,7 @@ virtual BOOL OnBeforeDock(
     AFX_DOCK_METHOD dockMethod);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ppDockBar*<br/>
 [in，out]指定此窗格停靠到的窗格。
@@ -1261,7 +1261,7 @@ virtual BOOL OnBeforeFloat(
     AFX_DOCK_METHOD dockMethod);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rectFloat*<br/>
 中指定窗格处于浮动状态时的位置和大小。
@@ -1297,7 +1297,7 @@ virtual void OnPressCloseButton();
 virtual BOOL OnShowControlBarMenu(CPoint point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *情况*<br/>
 中指定菜单位置。
@@ -1335,7 +1335,7 @@ virtual BOOL SaveState(
     UINT uiID = (UINT) -1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszProfileName*<br/>
 中配置文件名称。
@@ -1364,7 +1364,7 @@ virtual BOOL SaveState(
 virtual void SetActiveInGroup(BOOL bActive);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bActive*<br/>
 中指定是否将窗格标记为活动的布尔值。
@@ -1391,7 +1391,7 @@ void SetBorders(
 void SetBorders(LPCRECT lpRect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *cxLeft*<br/>
 中指定窗格左边框的宽度（以像素为单位）。
@@ -1420,7 +1420,7 @@ void SetBorders(LPCRECT lpRect);
 void SetClientHotSpot(const CPoint& ptNew);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ptNew*<br/>
 中一个 `CPoint` 对象，该对象指定新的作用点。
@@ -1437,7 +1437,7 @@ void SetClientHotSpot(const CPoint& ptNew);
 virtual void SetDockState(CDockingManager* pDockManager);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDockManager*<br/>
 中指向主框架窗口的停靠管理器的指针。
@@ -1456,7 +1456,7 @@ virtual void SetDockState(CDockingManager* pDockManager);
 virtual void SetExclusiveRowMode(BOOL bExclusive = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bExclusive*<br/>
 中若要启用独占行模式，则为 TRUE;否则为 FALSE。
@@ -1475,9 +1475,9 @@ virtual void SetExclusiveRowMode(BOOL bExclusive = TRUE);
 void SetMinSize(const CSize& size);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*size*<br/>
+size<br/>
 中一个 `CSize` 对象，该对象包含窗格允许的最小大小。
 
 ### <a name="remarks"></a>备注
@@ -1492,7 +1492,7 @@ void SetVirtualRect(
     BOOL bMapToParent = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rect*<br/>
 中一个 `CRect` 对象，该对象指定要设置的虚拟矩形。
@@ -1514,7 +1514,7 @@ void SetVirtualRect(
 void SetMiniFrameRTC(CRuntimeClass* pClass);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pClass*<br/>
 [in，out]指定袖珍框架窗口的运行时类信息。
@@ -1533,7 +1533,7 @@ virtual int StretchPaneDeferWndPos(
     HDWP& hdwp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nStretchSize*<br/>
 中用于延伸窗格的量（以像素为单位）。 使用负值来收缩窗格。
@@ -1569,7 +1569,7 @@ virtual void ToggleAutoHide();
 virtual void UndockPane(BOOL bDelay = FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bDelay*<br/>
 中如果为 FALSE，则框架将调用[CBasePane：： AdjustDockingLayout](../../mfc/reference/cbasepane-class.md#adjustdockinglayout)来调整停靠布局。
@@ -1588,7 +1588,7 @@ void UpdateVirtualRect(CPoint ptOffset);
 void UpdateVirtualRect(CSize sizeNew);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ptOffset*<br/>
 中一个 `CPoint` 对象，该对象指定切换窗格的偏移量。

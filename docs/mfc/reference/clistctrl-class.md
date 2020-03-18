@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: c8f1b8a9ed0ca8437ba40e77b47448d1bb209d20
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 83d7c0223e2ca4a40560e29932beca1f17f74f80
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79424439"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442681"
 ---
 # <a name="clistctrl-class"></a>CListCtrl 类
 
@@ -281,7 +281,7 @@ ms.locfileid: "79424439"
 class CListCtrl : public CWnd
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -440,7 +440,7 @@ class CListCtrl : public CWnd
 
    每个项都显示为一个小图标（16 x 16 像素），标签位于其右侧。 用户可以将这些项拖到 "列表视图" 窗口中的任何位置。
 
-- “列表”视图
+- 列表视图
 
    每个项都显示为一个小图标，其右侧有一个标签。 项按列排列，并且不能拖动到 "列表视图" 窗口中的任何位置。
 
@@ -526,7 +526,7 @@ CSize ApproximateViewRect(
     int iCount = -1) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *sz*<br/>
 控件的建议尺寸（以像素为单位）。 如果未指定维度，则框架将使用控件的当前宽度或高度值。
@@ -550,7 +550,7 @@ CSize ApproximateViewRect(
 BOOL Arrange(UINT nCode);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nCode*<br/>
 指定项的对齐样式。 可以为下列值之一：
@@ -612,7 +612,7 @@ virtual BOOL Create(
     UINT nID);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *dwStyle*<br/>
 指定列表控件的样式。 将列表控件样式的任意组合应用于控件。 有关这些样式的完整列表，请参阅 Windows SDK 中的[列表视图窗口样式](/windows/win32/Controls/list-view-window-styles)。 使用[SetExtendedStyle](#setextendedstyle)设置特定于控件的扩展样式。
@@ -657,7 +657,7 @@ virtual BOOL CreateEx(
     UINT nID);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *dwExStyle*<br/>
 指定正在创建的控件的扩展样式。 有关扩展 Windows 样式的列表，请参阅 Windows SDK 中[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)的*dwExStyle*参数。
@@ -694,7 +694,7 @@ CImageList* CreateDragImage(
     LPPOINT lpPoint);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nItem*<br/>
 要创建其拖动图像列表的项的索引。
@@ -746,7 +746,7 @@ BOOL DeleteAllItems();
 BOOL DeleteColumn(int nCol);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nCol*<br/>
 要删除的列的索引。
@@ -775,7 +775,7 @@ BOOL DeleteColumn(int nCol);
 BOOL DeleteItem(int nItem);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nItem*<br/>
 指定要删除的项的索引。
@@ -804,7 +804,7 @@ BOOL DeleteItem(int nItem);
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *lpDrawItemStruct*<br/>
 指向 `DRAWITEMSTRUCT` 结构的长指针，该指针包含所需绘图类型的相关信息。
@@ -825,7 +825,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 CEdit* EditLabel(int nItem);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nItem*<br/>
 要编辑的列表视图项的索引。
@@ -860,7 +860,7 @@ CEdit* EditLabel(int nItem);
 LRESULT EnableGroupView(BOOL fEnable);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *fEnable*<br/>
 指示是否启用 listview 控件来对显示的项进行分组。 若要启用分组，则为 TRUE;若要禁用它，则为 FALSE。
@@ -889,7 +889,7 @@ BOOL EnsureVisible(
     BOOL bPartialOK);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nItem*<br/>
 要显示的列表视图项的索引。
@@ -924,7 +924,7 @@ int FindItem(
     int nStart = -1) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pFindInfo*<br/>
 指向[LVFINDINFO](/windows/win32/api/commctrl/ns-commctrl-lvfindinfow)结构的指针，该结构包含要搜索的项的相关信息。
@@ -980,7 +980,7 @@ COLORREF GetBkColor() const;
 BOOL GetBkImage(LVBKIMAGE* plvbkImage) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *plvbkImage*<br/>
 指向包含列表视图当前背景图像的 `LVBKIMAGE` 结构的指针。
@@ -1036,7 +1036,7 @@ UINT GetCallbackMask() const;
 BOOL GetCheck(int nItem) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nItem*<br/>
 列表控件项的从零开始的索引。
@@ -1063,7 +1063,7 @@ BOOL GetColumn(
     LVCOLUMN* pColumn) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nCol*<br/>
 要检索其属性的列的索引。
@@ -1104,7 +1104,7 @@ BOOL GetColumnOrderArray(
     int iCount = -1);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *piArray*<br/>
 指向缓冲区的指针，该缓冲区将包含列表视图控件中列的索引值。 缓冲区必须足够大，以便包含列表视图控件中的总列数。
@@ -1156,7 +1156,7 @@ BOOL GetColumnOrderArray(
 int GetColumnWidth(int nCol) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nCol*<br/>
 指定要检索其宽度的列的索引。
@@ -1327,7 +1327,7 @@ int GetGroupInfo(
     PLVGROUP pgrp) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *iGroupId*<br/>
 要检索其信息的组的标识符。
@@ -1353,7 +1353,7 @@ BOOL GetGroupInfoByIndex(
     PLVGROUP pGroup) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 |参数|说明|
 |---------------|-----------------|
@@ -1381,6 +1381,7 @@ public:
 ### <a name="example"></a>示例
 
 下面的代码示例演示 `GetGroupInfoByIndex` 方法。 在此代码示例的前面部分中，我们创建了一个列表视图控件，该控件在报表视图中显示标题为 "ClientID" 和 "评分" 的两个列。 下面的代码示例检索有关其索引为0的组的信息（如果存在这样的组）。
+
 ```cpp
     // GetGroupInfoByIndex
     const int GROUP_HEADER_BUFFER_SIZE = 40;
@@ -1416,7 +1417,7 @@ public:
 void GetGroupMetrics(PLVGROUPMETRICS pGroupMetrics) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pGroupMetrics*<br/>
 指向包含组度量值信息的[LVGROUPMETRICS](/windows/win32/api/commctrl/ns-commctrl-lvgroupmetrics)的指针。
@@ -1436,7 +1437,7 @@ BOOL GetGroupRect(
     int iCoords = LVGGR_GROUP) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 |参数|说明|
 |---------------|-----------------|
@@ -1457,6 +1458,7 @@ BOOL GetGroupRect(
 ### <a name="example"></a>示例
 
 下面的代码示例定义了一个用于访问当前列表视图控件的变量 `m_listCtrl`。 此变量将在下一个示例中使用。
+
 ```cpp
 public:
     // Variable used to access the list control.
@@ -1492,7 +1494,7 @@ UINT GetGroupState(
     DWORD dwMask) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 |参数|说明|
 |---------------|-----------------|
@@ -1614,7 +1616,7 @@ DWORD GetHoverTime() const;
 CImageList* GetImageList(int nImageList) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nImageList*<br/>
 指定要检索的图像列表的值。 它可以是以下值之一：
@@ -1645,7 +1647,7 @@ CImageList* GetImageList(int nImageList) const;
 BOOL GetInsertMark(LPLVINSERTMARK plvim) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *plvim*<br/>
 指向[LVINSERTMARK](/windows/win32/api/commctrl/ns-commctrl-lvinsertmark)结构的指针，该结构包含插入标记的信息。
@@ -1682,7 +1684,7 @@ COLORREF GetInsertMarkColor() const;
 int GetInsertMarkRect(LPRECT pRect) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pRect*<br/>
 指向 `RECT` 结构的指针，该结构包含绑定插入点的矩形的坐标。
@@ -1707,7 +1709,7 @@ int GetInsertMarkRect(LPRECT pRect) const;
 BOOL GetItem(LVITEM* pItem) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pItem*<br/>
 指向[LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)结构的指针，该结构接收项的特性。
@@ -1744,7 +1746,7 @@ int GetItemCount() const;
 DWORD_PTR GetItemData(int nItem) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nItem*<br/>
 要检索其数据的列表项的索引。
@@ -1782,13 +1784,13 @@ BOOL GetItemIndexRect(
     LPRECT pRect) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 |参数|说明|
 |---------------|-----------------|
 |*pItemIndex*|中指向子项的父项的[LVITEMINDEX](/windows/win32/api/commctrl/ns-commctrl-lvitemindex)结构的指针。<br /><br /> 调用方负责分配和设置[LVITEMINDEX](/windows/win32/api/commctrl/ns-commctrl-lvitemindex)结构的成员。 此参数不能为 NULL。|
 |*iColumn*|中控件中列的从零开始的索引。|
-|*rectType*|中要为其检索边框的列表视图子项的部分。 指定以下值之一：<br /><br /> LVIR_BOUNDS-返回整个子项的边框，包括图标和标签。<br /><br /> LVIR_ICON-返回子项的图标或小图标的边框。<br /><br /> LVIR_LABEL-返回子项文本的边框。|
+|*rectType*|中要为其检索边框的列表视图子项的部分。 指定下列值之一：<br /><br /> LVIR_BOUNDS-返回整个子项的边框，包括图标和标签。<br /><br /> LVIR_ICON-返回子项的图标或小图标的边框。<br /><br /> LVIR_LABEL-返回子项文本的边框。|
 |*pRect*|弄指向[RECT](/previous-versions/dd162897\(v=vs.85\))结构的指针，该结构接收有关子项的边框的信息。<br /><br /> 调用方负责分配[RECT](/previous-versions/dd162897\(v=vs.85\))结构。 此参数不能为 NULL。|
 
 ### <a name="return-value"></a>返回值
@@ -1837,7 +1839,7 @@ BOOL GetItemPosition(
     LPPOINT lpPoint) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nItem*<br/>
 要检索其位置的项的索引。
@@ -1876,7 +1878,7 @@ BOOL GetItemRect(
     UINT nCode) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nItem*<br/>
 要检索其位置的项的索引。
@@ -1950,7 +1952,7 @@ BOOL GetItemSpacing(
     int* pnVertSpacing) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 |参数|说明|
 |---------------|-----------------|
@@ -1976,7 +1978,7 @@ UINT GetItemState(
     UINT nMask) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nItem*<br/>
 要检索其状态的项的索引。
@@ -2012,7 +2014,7 @@ CString GetItemText(
     int nSubItem) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nItem*<br/>
 要检索其文本的项的索引。
@@ -2046,7 +2048,7 @@ int GetNextItem(
     int nFlags) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nItem*<br/>
 要开始搜索的项的索引，或者为-1，则查找与指定标志匹配的第一项。 指定的项本身将从搜索中排除。
@@ -2088,7 +2090,7 @@ BOOL GetNextItemIndex(
     int nFlags) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 |参数|说明|
 |---------------|-----------------|
@@ -2113,7 +2115,7 @@ BOOL GetNextItemIndex(
 int GetNextSelectedItem(POSITION& pos) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 pos<br/>
 对 `GetNextSelectedItem` 或 `GetFirstSelectedItemPosition`先前调用所返回的位置值的引用。 此调用会将值更新到下一个位置。
@@ -2216,7 +2218,7 @@ COLORREF GetOutlineColor() const;
 BOOL GetOrigin(LPPOINT lpPoint) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *lpPoint*<br/>
 接收视图原点的[点](/previous-versions/dd162805\(v=vs.85\))结构的地址。
@@ -2304,7 +2306,7 @@ int GetSelectionMark();
 int GetStringWidth(LPCTSTR lpsz) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *lpsz*<br/>
 要确定其宽度的以 null 结尾的字符串的地址。
@@ -2345,7 +2347,7 @@ BOOL GetSubItemRect(
     CRect& ref);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *iItem*<br/>
 子项的父项的索引。
@@ -2413,7 +2415,7 @@ COLORREF GetTextColor() const;
 BOOL GetTileInfo(PLVTILEINFO plvti) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *plvti*<br/>
 指向接收磁贴信息的[LVTILEINFO](/windows/win32/api/commctrl/ns-commctrl-lvtileinfo)结构的指针。
@@ -2434,7 +2436,7 @@ BOOL GetTileInfo(PLVTILEINFO plvti) const;
 BOOL GetTileViewInfo(PLVTILEVIEWINFO ptvi) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *ptvi*<br/>
 指向[LVTILEVIEWINFO](/windows/win32/api/commctrl/ns-commctrl-lvtileviewinfo)结构的指针，该结构接收检索到的信息。
@@ -2527,7 +2529,7 @@ DWORD GetView() const;
 BOOL GetViewRect(LPRECT lpRect) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *lpRect*<br/>
 [矩形](/previous-versions/dd162897\(v=vs.85\))结构的地址。
@@ -2550,7 +2552,7 @@ void GetWorkAreas(
     LPRECT pRect) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nWorkAreas*<br/>
 *PRect*数组中包含的 `RECT` 结构的数目。
@@ -2574,7 +2576,7 @@ void GetWorkAreas(
 BOOL HasGroup(int iGroupId) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *iGroupId*<br/>
 正在请求的组的标识符。
@@ -2599,7 +2601,7 @@ int HitTest(
     UINT* pFlags = NULL) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pHitTestInfo*<br/>
 `LVHITTESTINFO` 结构的地址，该结构包含要进行命中测试的位置并接收有关命中测试结果的信息。
@@ -2659,7 +2661,7 @@ int InsertColumn(
     int nSubItem = -1);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nCol*<br/>
 新列的索引。
@@ -2699,7 +2701,7 @@ LRESULT InsertGroup(
     PLVGROUP pgrp);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 索引<br/>
 要插入组的项的索引。
@@ -2723,7 +2725,7 @@ LRESULT InsertGroup(
 LRESULT InsertGroupSorted(PLVINSERTGROUPSORTED pStructInsert);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pStructInsert*<br/>
 指向[LVINSERTGROUPSORTED](/windows/win32/api/commctrl/ns-commctrl-lvinsertgroupsorted)结构的指针，该结构包含要插入的组。
@@ -2762,7 +2764,7 @@ int InsertItem(
     LPARAM lParam);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pItem*<br/>
 指向[LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)结构的指针，该结构指定项的属性，如 Windows SDK 中所述。
@@ -2830,7 +2832,7 @@ int InsertMarkHitTest(
     LPLVINSERTMARK plvim) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pPoint*<br/>
 指向一个[点](/previous-versions/dd162805\(v=vs.85\))结构的指针，该结构包含命中测试坐标（相对于列表控件的工作区）。
@@ -2870,7 +2872,7 @@ BOOL IsGroupViewEnabled() const;
 BOOL IsItemVisible(int index) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 |参数|说明|
 |---------------|-----------------|
@@ -2892,7 +2894,7 @@ BOOL IsItemVisible(int index) const;
 UINT MapIDToIndex(UINT id) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 |参数|说明|
 |---------------|-----------------|
@@ -2918,7 +2920,7 @@ UINT MapIDToIndex(UINT id) const;
 UINT MapIndexToID(UINT index) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 |参数|说明|
 |---------------|-----------------|
@@ -2986,7 +2988,7 @@ LRESULT MoveGroup(
     int toIndex);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *iGroupId*<br/>
 要移动的组的标识符。
@@ -3012,7 +3014,7 @@ void MoveItemToGroup(
     int idGroupTo);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *idItemFrom*<br/>
 中要移动的项的索引。
@@ -3037,7 +3039,7 @@ BOOL RedrawItems(
     int nLast);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nFirst*<br/>
 要重新绘制的第一项的索引。
@@ -3073,7 +3075,7 @@ void RemoveAllGroups();
 LRESULT RemoveGroup(int iGroupId);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *iGroupId*<br/>
 要移除的组的标识符。
@@ -3094,9 +3096,9 @@ LRESULT RemoveGroup(int iGroupId);
 BOOL Scroll(CSize size);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-size<br/>
+*size*<br/>
 指定水平和垂直滚动量（以像素为单位）的 `CSize` 对象。 *Size*的 `y` 成员除以列表视图控件线条的高度（以像素为单位），并且控件按产生的行数滚动。
 
 ### <a name="return-value"></a>返回值
@@ -3111,7 +3113,7 @@ size<br/>
 BOOL SetBkColor(COLORREF cr);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *回车*<br/>
 要设置的背景色，或不 CLR_NONE 背景色的值。 具有背景色的列表视图控件的重绘方式明显快于那些没有背景色的控件。 有关信息，请参阅 Windows SDK 中的[COLORREF](/windows/win32/gdi/colorref) 。
@@ -3149,7 +3151,7 @@ BOOL SetBkImage(
     int yOffsetPercent = 0);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *plvbkImage*<br/>
 `LVBKIMAGE` 结构的地址，其中包含新的背景图像信息。
@@ -3190,7 +3192,7 @@ BOOL SetBkImage(
 BOOL SetCallbackMask(UINT nMask);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nMask*<br/>
 回调掩码的新值。
@@ -3219,7 +3221,7 @@ BOOL SetCheck(
     BOOL fCheck = TRUE);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nItem*<br/>
 列表控件项的从零开始的索引。
@@ -3258,7 +3260,7 @@ BOOL SetColumn(
     const LVCOLUMN* pColumn);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nCol*<br/>
 要设置其属性的列的索引。
@@ -3284,7 +3286,7 @@ BOOL SetColumnOrderArray(
     LPINT piArray);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *piArray*<br/>
 指向缓冲区的指针，该缓冲区包含列表视图控件中列的索引值（从左到右）。 缓冲区必须足够大，以便包含列表视图控件中的总列数。
@@ -3314,7 +3316,7 @@ BOOL SetColumnWidth(
     int cx);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nCol*<br/>
 要为其设置宽度的列的索引。 在列表视图中，此参数必须为0。
@@ -3334,7 +3336,7 @@ BOOL SetColumnWidth(
 DWORD SetExtendedStyle(DWORD dwNewStyle);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *dwNewStyle*<br/>
 要由列表视图控件使用的扩展样式的组合。 有关这些样式的描述性列表，请参阅 Windows SDK 中的[扩展列表视图样式](/windows/win32/Controls/extended-list-view-styles)主题。
@@ -3365,7 +3367,7 @@ int SetGroupInfo(
     PLVGROUP pgrp);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *iGroupId*<br/>
 设置其信息的组的标识符。
@@ -3389,7 +3391,7 @@ int SetGroupInfo(
 void SetGroupMetrics(PLVGROUPMETRICS pGroupMetrics);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pGroupMetrics*<br/>
 指向[LVGROUPMETRICS](/windows/win32/api/commctrl/ns-commctrl-lvgroupmetrics)结构的指针，该结构包含要设置的组度量值信息。
@@ -3406,7 +3408,7 @@ void SetGroupMetrics(PLVGROUPMETRICS pGroupMetrics);
 HCURSOR SetHotCursor(HCURSOR hc);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *hc*<br/>
 用于表示热光标的游标资源的句柄。
@@ -3433,7 +3435,7 @@ HCURSOR SetHotCursor(HCURSOR hc);
 int SetHotItem(int iIndex);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *iIndex*<br/>
 要设置为热项的项的从零开始的索引。
@@ -3458,7 +3460,7 @@ int SetHotItem(int iIndex);
 DWORD SetHoverTime(DWORD dwHoverTime = (DWORD)-1);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *dwHoverTime*<br/>
 在选定项之前，鼠标光标必须停留在该项上方的新延迟时间（以毫秒为单位）。 如果传递了默认值，则时间设置为默认悬停时间。
@@ -3487,7 +3489,7 @@ CSize SetIconSpacing(
 CSize SetIconSpacing(CSize size);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *cx*<br/>
 X 轴上的图标之间的距离（以像素为单位）。
@@ -3495,7 +3497,7 @@ X 轴上的图标之间的距离（以像素为单位）。
 *cy*<br/>
 Y 轴上的图标之间的距离（以像素为单位）。
 
-size<br/>
+*size*<br/>
 一个 `CSize` 对象，该对象指定 x 轴和 y 轴上的图标之间的距离（以像素为单位）。
 
 ### <a name="return-value"></a>返回值
@@ -3523,7 +3525,7 @@ CImageList* SetImageList(
     int nImageListType);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pImageList*<br/>
 指向要分配的图像列表的指针。
@@ -3553,7 +3555,7 @@ CImageList* SetImageList(
 BOOL SetInfoTip(PLVSETINFOTIP plvInfoTip);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *plvInfoTip*<br/>
 指向[LVFSETINFOTIP](/windows/win32/api/commctrl/ns-commctrl-lvsetinfotip)结构的指针，该结构包含要设置的信息。
@@ -3574,7 +3576,7 @@ BOOL SetInfoTip(PLVSETINFOTIP plvInfoTip);
 BOOL SetInsertMark(LPLVINSERTMARK plvim);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *plvim*<br/>
 指向[LVINSERTMARK](/windows/win32/api/commctrl/ns-commctrl-lvinsertmark)结构的指针，该结构指定在何处设置插入点。
@@ -3595,7 +3597,7 @@ BOOL SetInsertMark(LPLVINSERTMARK plvim);
 COLORREF SetInsertMarkColor(COLORREF color);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *颜色*<br/>
 一个[COLORREF](/windows/win32/gdi/colorref)结构，指定要设置插入点的颜色。
@@ -3637,7 +3639,7 @@ BOOL SetItem(
     int nIndent);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pItem*<br/>
 包含新项属性的[LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)结构的地址，如 Windows SDK 中所述。 结构的 `iItem` 和 `iSubItem` 成员标识项或子项，结构的 `mask` 成员指定要设置的特性。 有关 `mask` 成员的详细信息，请参阅 "**备注**"。
@@ -3695,7 +3697,7 @@ BOOL SetItem(
 void SetItemCount(int nItems);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nItems*<br/>
 控件最终将包含的项的数目。
@@ -3733,7 +3735,7 @@ BOOL SetItemCountEx(
     DWORD dwFlags = LVSICF_NOINVALIDATEALL);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *iCount*<br/>
 控件最终将包含的项的数目。
@@ -3780,7 +3782,7 @@ dwFlags<br/>
 BOOL SetItemData(int nItem, DWORD_PTR dwData);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nItem*<br/>
 要设置其数据的列表项的索引。
@@ -3817,7 +3819,7 @@ BOOL SetItemIndexState(
     DWORD dwMask) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 |参数|说明|
 |---------------|-----------------|
@@ -3847,7 +3849,7 @@ BOOL SetItemPosition(
     POINT pt);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nItem*<br/>
 要设置其位置的项的索引。
@@ -3884,7 +3886,7 @@ BOOL SetItemState(
     UINT nMask);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nItem*<br/>
 要设置其状态的项的索引。
@@ -3921,7 +3923,7 @@ BOOL SetItemText(
     LPCTSTR lpszText);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nItem*<br/>
 要设置其文本的项的索引。
@@ -3952,7 +3954,7 @@ BOOL SetItemText(
 COLORREF SetOutlineColor(COLORREF color);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *颜色*<br/>
 包含轮廓颜色的新[COLORREF](/windows/win32/gdi/colorref)结构。
@@ -3973,7 +3975,7 @@ COLORREF SetOutlineColor(COLORREF color);
 LRESULT SetSelectedColumn(int iCol);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *iCol*<br/>
 要选择的列的索引。
@@ -3994,7 +3996,7 @@ LRESULT SetSelectedColumn(int iCol);
 int SetSelectionMark(int iIndex);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *iIndex*<br/>
 多选内容中第一项的从零开始的索引。
@@ -4019,7 +4021,7 @@ int SetSelectionMark(int iIndex);
 BOOL SetTextBkColor(COLORREF cr);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *回车*<br/>
 一个 COLORREF，它指定新的文本背景色。 有关信息，请参阅 Windows SDK 中的[COLORREF](/windows/win32/gdi/colorref) 。
@@ -4045,7 +4047,7 @@ BOOL SetTextBkColor(COLORREF cr);
 BOOL SetTextColor(COLORREF cr);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *回车*<br/>
 指定新文本颜色的 COLORREF。 有关信息，请参阅 Windows SDK 中的[COLORREF](/windows/win32/gdi/colorref) 。
@@ -4072,7 +4074,7 @@ BOOL SetTextColor(COLORREF cr);
 BOOL SetTileInfo(PLVTILEINFO pTileInfo);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pTileInfo*<br/>
 指向[LVTILEINFO](/windows/win32/api/commctrl/ns-commctrl-lvtileinfo)结构的指针，该结构包含要设置的信息。
@@ -4093,7 +4095,7 @@ BOOL SetTileInfo(PLVTILEINFO pTileInfo);
 BOOL SetTileViewInfo(PLVTILEVIEWINFO ptvi);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *ptvi*<br/>
 指向[LVTILEVIEWINFO](/windows/win32/api/commctrl/ns-commctrl-lvtileviewinfo)结构的指针，该结构包含要设置的信息。
@@ -4114,7 +4116,7 @@ BOOL SetTileViewInfo(PLVTILEVIEWINFO ptvi);
 CToolTipCtrl* SetToolTips(CToolTipCtrl* pWndTip);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pWndTip*<br/>
 指向列表控件将使用的 `CToolTipCtrl` 对象的指针。
@@ -4137,7 +4139,7 @@ CToolTipCtrl* SetToolTips(CToolTipCtrl* pWndTip);
 DWORD SetView(int iView);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *iView*<br/>
 要选择的视图。
@@ -4160,7 +4162,7 @@ void SetWorkAreas(
     LPRECT lpRect);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nWorkAreas*<br/>
 *LpRect*指向的数组中 `RECT` 结构（或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象）的数目。
@@ -4189,7 +4191,7 @@ BOOL SortGroups(
     LPVOID _plv);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *_pfnGroupCompare*<br/>
 指向组比较函数的指针。
@@ -4215,7 +4217,7 @@ BOOL SortItems(
     DWORD_PTR dwData);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pfnCompare*<br/>
 中应用程序定义的比较函数的地址。
@@ -4240,6 +4242,7 @@ int CALLBACK CompareFunc(LPARAM lParam1,
     LPARAM lParam2,
     LPARAM lParamSort);
 ```
+
 如果第一个项应在第二个项之前，则该比较函数必须返回一个负值; 如果第一项应在第二个项之后，则为正值; 如果两个项相等，则为零。
 
 *LParam1*参数是与比较的第一项关联的32位值，而*lParam2*参数是与第二项关联的值。 这些值是在项的[LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)结构插入到列表中时在它们的*lParam*成员中指定的值。 *LParamSort*参数与*dwData*值相同。
@@ -4278,7 +4281,7 @@ BOOL SortItemsEx(
     DWORD_PTR dwData);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 |参数|说明|
 |---------------|-----------------|
@@ -4300,6 +4303,7 @@ int CALLBACK CompareFunc(LPARAM lParam1,
     LPARAM lParam2,
     LPARAM lParamSort);
 ```
+
 此消息与[LVM_SORTITEMS](/windows/win32/Controls/lvm-sortitems)（传递到比较函数的信息的类型除外）类似。 在[LVM_SORTITEMS](/windows/win32/Controls/lvm-sortitems)中， *lParam1*和*lParam2*是要比较的项的值。 在[LVM_SORTITEMSEX](/windows/win32/Controls/lvm-sortitemsex)中， *lParam1*是要比较的第一项的当前索引， *lParam2*是第二项的当前索引。 可以发送[LVM_GETITEMTEXT](/windows/win32/Controls/lvm-getitemtext)消息来检索有关项的详细信息。
 
 如果第一个项应在第二个项之前，则该比较函数必须返回一个负值; 如果第一项应在第二个项之后，则为正值; 如果两个项相等，则为零。
@@ -4361,7 +4365,7 @@ void CCListCtrl_s2Dlg::OnBnClickedButton1()
 int SubItemHitTest(LPLVHITTESTINFO pInfo);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pInfo*<br/>
 指向[LVHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-lvhittestinfo)结构的指针。
@@ -4402,7 +4406,7 @@ void CListCtrlDlg::OnDblClk(NMHDR* pNMHDR, LRESULT* pResult)
 BOOL Update(int nItem);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nItem*<br/>
 要更新的项的索引。

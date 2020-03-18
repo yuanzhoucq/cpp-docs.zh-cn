@@ -28,11 +28,11 @@ helpviewer_keywords:
 - char_traits class
 ms.assetid: 568e59f0-4521-4207-9223-9dcf6a16d620
 ms.openlocfilehash: efb926bc8c2ae55835391f884a0e3430e3da8aca
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856388"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427265"
 ---
 # <a name="char_traits-struct"></a>char_traits 结构
 
@@ -45,7 +45,7 @@ template <class CharType>
 struct char_traits;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *CharType*\
 元素数据类型。
@@ -103,7 +103,7 @@ static char_type *assign(char_type* strTo,
     char_type _CharFrom);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 **_** *CharFrom*要分配其值的字符。
 
@@ -187,7 +187,7 @@ static int compare(const char_type* str1,
     size_t _Num);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *str1*\
 要进行比较的两个字符串中的第一个。
@@ -253,7 +253,7 @@ static char_type *copy(char_type* _To,
     size_t _Num);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_To*\
 用于接收复制的字符序列的字符串或字符数组的开头处的元素。
@@ -315,7 +315,7 @@ static char_type *_Copy_s(
     size_t count);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dest*\
 用于接收复制的字符序列的字符串或字符数组。
@@ -427,7 +427,7 @@ The eof marker for char_traits<wchar_t> is: 65535
 static bool eq(const char_type& _Ch1, const char_type& _Ch2);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Ch1*\
 要测试是否相等的两个字符中的第一个。
@@ -487,7 +487,7 @@ The character ch1 is equal to the character ch3.
 static bool eq_int_type(const int_type& _Ch1, const int_type& _Ch2);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Ch1*\
 要测试是否与 `int_type`相等的两个字符中的第一个字符。
@@ -574,7 +574,7 @@ static const char_type* find(const char_type* str,
     const char_type& _Ch);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *str*\
 要搜索的字符串中的第一个字符。
@@ -655,7 +655,7 @@ typedef long int_type;
 static size_t length(const char_type* str);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *str*\
 要测量其长度的 C 字符串。
@@ -698,7 +698,7 @@ The length of C-string str1 is: 5.
 static bool lt(const char_type& _Ch1, const char_type& _Ch2);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Ch1*\
 要测试是否小于的两个字符中的第一个。
@@ -761,7 +761,7 @@ static char_type *move(char_type* _To,
     size_t _Num);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_To*\
 用于接收复制的字符序列的字符串或字符数组的开头处的元素。
@@ -838,7 +838,7 @@ static char_type *_Move_s(
     size_t count);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dest*\
 用于接收复制的字符序列的字符串或字符数组的开头处的元素。
@@ -914,7 +914,7 @@ The result2 = _Move_s(sToFrom2, char_traits<char>::length(sToFrom2), findc, 8) i
 static int_type not_eof(const int_type& _Ch);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Ch*\
 表示为 `int_type` 且要测试其是否为 EOF 字符的字符。
@@ -1022,7 +1022,7 @@ typedef implementation-defined state_type;
 static char_type to_char_type(const int_type& _Ch);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Ch*\
 要表示为 `int_type` 的 `char_type` 字符。
@@ -1128,7 +1128,7 @@ The recovered char_type of ch2 is equal to the original ch2.
 static int_type to_int_type(const char_type& _Ch);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Ch*\
 表示为 `char_type` 的 `int_type` 字符。

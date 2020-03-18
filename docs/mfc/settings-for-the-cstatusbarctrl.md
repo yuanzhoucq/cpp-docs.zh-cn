@@ -1,37 +1,35 @@
 ---
 title: CStatusBarCtrl 的设置
 ms.date: 11/04/2016
-f1_keywords:
-- CStatusBarCtrl
 helpviewer_keywords:
 - status bar controls [MFC], settings
 - CStatusBarCtrl class [MFC], settings
 ms.assetid: adeba0c3-17f3-435c-b140-a57845e9ce49
-ms.openlocfilehash: b41997fb9342a651260bc2196d212016dc0deb7e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 18c4c780ecf7865d8d648bfa4c54961bbffe7b18
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62307687"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446399"
 ---
 # <a name="settings-for-the-cstatusbarctrl"></a>CStatusBarCtrl 的设置
 
-默认位置[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)状态窗口的父窗口底部，但可以指定要让其显示在父窗口工作区顶部的 CCS_TOP 样式。
+[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)状态窗口的默认位置沿父窗口的底部，但您可以指定 CCS_TOP 样式，使其显示在父窗口的工作区的顶部。
 
-可以指定要包括在右端的大小调整手柄的 SBARS_SIZEGRIP 样式`CStatusBarCtrl`状态窗口。 大小调整手柄类似于大小调整边框；它是用户可以通过单击和拖动来重设父窗口大小的矩形区域。
+可以指定 SBARS_SIZEGRIP 样式，以在 "`CStatusBarCtrl` 状态" 窗口的右端包含大小调整手柄。 大小调整手柄类似于大小调整边框；它是用户可以通过单击和拖动来重设父窗口大小的矩形区域。
 
 > [!NOTE]
->  如果合并 CCS_TOP 和 SBARS_SIZEGRIP 样式，即使系统将其绘制在状态窗口中不起作用的结果的大小调整手柄。
+>  如果将 CCS_TOP 和 SBARS_SIZEGRIP 样式组合在一起，则即使系统在状态窗口中进行绘制，生成的大小调整手柄仍不起作用。
 
 状态窗口的窗口过程将自动设置控件窗口的初始大小和位置。 宽度与父窗口工作区的一样。 高度基于实际选入状态窗口设备上下文的字体的度量值和窗口边框的宽度。
 
-每当收到 WM_SIZE 消息时，窗口过程自动调整状态窗口的大小。 通常情况下，当父窗口的大小更改时，父级将 WM_SIZE 消息发送到状态窗口。
+每当窗口过程收到 WM_SIZE 消息时，它都会自动调整状态窗口的大小。 通常，当父窗口的大小发生更改时，父级会将 WM_SIZE 的消息发送到状态窗口。
 
-可以通过调用设置状态窗口绘图区的最小高度[SetMinHeight](../mfc/reference/cstatusbarctrl-class.md#setminheight)，以像素为单位指定最小高度。 绘图区不包括窗口边框。
+您可以通过调用[SetMinHeight](../mfc/reference/cstatusbarctrl-class.md#setminheight)来设置状态窗口的最小高度，并指定最小高度（以像素为单位）。 绘图区不包括窗口边框。
 
-通过调用检索状态窗口的边框的宽度[GetBorders](../mfc/reference/cstatusbarctrl-class.md#getborders)。 此成员函数包含指向三元素数组（将收到水平边框、垂直边框和矩形之间的边框的宽度）的指针。
+可以通过调用[GetBorders](../mfc/reference/cstatusbarctrl-class.md#getborders)来检索状态窗口边框的宽度。 此成员函数包含指向三元素数组（将收到水平边框、垂直边框和矩形之间的边框的宽度）的指针。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [使用 CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)<br/>
 [控件](../mfc/controls-mfc.md)

@@ -3,12 +3,12 @@ title: Cppproperties.json 引用
 ms.date: 08/09/2019
 helpviewer_keywords:
 - CppProperties.json file [C++]
-ms.openlocfilehash: d59fca412a26d08f88ccbda20a2c0444cf33b1cb
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: c276b566d8efc116c8789fd7ebec17dc2017a00d
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422840"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442551"
 ---
 # <a name="cpppropertiesjson-reference"></a>Cppproperties.json 引用
 
@@ -28,7 +28,7 @@ ms.locfileid: "79422840"
 |`forcedInclude`|会自动包含在每个编译单元的标头（对于 MSVC，映射到 /FI；对于 clang，映射到 -include）|
 |`undefines`|未定义的宏的列表（对于 MSVC，映射到 /U）|
 |`intelliSenseMode`|要使用的 IntelliSense 引擎。 可以为 MSVC、gcc 或 Clang 指定预定义的体系结构特定的变量之一。|
-|`environments`|用户定义的变量集，它们的行为类似于命令提示符中的环境变量，并使用 $ {env.<VARIABLE>} 进行访问 宏定义.|
+|`environments`|用户定义的变量集，它们的行为类似于命令提示符中的环境变量，并使用 $ {env.\<VARIABLE >} 宏进行访问。|
 
 ### <a name="intellisensemode-values"></a>由于 intellisensemode 值
 
@@ -64,7 +64,7 @@ ms.locfileid: "79422840"
 
 Visual Studio 为 Microsoft C++提供了以下预定义的环境，它们映射到相应的开发人员命令提示。 当你继承其中一个环境时，你可以通过使用具有以下宏语法的 global 属性 `env` 来引用任何环境变量： $ {env.\<VARIABLE >}。
 
-|变量名|说明|
+|变量名称|说明|
 |-----------|-----------------|
 |vsdev|默认的 Visual Studio 环境|
 |msvc_x86|使用 x86 工具为 x86 编译|
@@ -77,7 +77,7 @@ Visual Studio 为 Microsoft C++提供了以下预定义的环境，它们映射�
 
 安装 Linux 工作负载后，可使用以下环境变量远程定向到 Linux 和 WSL：
 
-|变量名|说明|
+|变量名称|说明|
 |-----------|-----------------|
 |linux_x86|远程将 x86 Linux 设为目标|
 |linux_x64|远程将 x64 Linux 设为目标|

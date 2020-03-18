@@ -6,11 +6,11 @@ f1_keywords:
 - hash_set/std::swap (hash_multiset)
 ms.assetid: 557a0162-3728-4537-97dc-f9f6cc7ece94
 ms.openlocfilehash: 2fbc05c16ba6629397bbb07bab30cb9315a16e1f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883833"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426935"
 ---
 # <a name="lthash_setgt-functions"></a>&lt;hash_set&gt; 函数
 
@@ -21,7 +21,7 @@ ms.locfileid: "78883833"
 ## <a name="swap"></a> swap
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
+> 此 API 已过时。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
 
 交换两个 hash_set 的元素。
 
@@ -54,7 +54,7 @@ void swap(
 ## <a name="swap_hash_multiset"></a>swap (hash_multiset)
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
+> 此 API 已过时。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
 
 交换两个 hash_multiset 的元素。
 

@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnDrawSplitter
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
-ms.openlocfilehash: 065735c13a3e763208142eb6bc989d3a496221f0
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: bee6deed3052d6cc923e432e97ad9a7904060cb6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426797"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447440"
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd 类
 
@@ -89,7 +89,7 @@ ms.locfileid: "79426797"
 class CSplitterWnd : public CWnd
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -201,7 +201,7 @@ class CSplitterWnd : public CWnd
 virtual void ActivateNext(BOOL bPrev = FALSE);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *bPrev*<br/>
 指示要激活哪个窗口。 对于 previous，为**TRUE** ;对于 "下一步" 为**FALSE** 。
@@ -218,7 +218,7 @@ virtual void ActivateNext(BOOL bPrev = FALSE);
 virtual BOOL CanActivateNext(BOOL bPrev = FALSE);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *bPrev*<br/>
 指示要激活哪个窗口。 对于 previous，为**TRUE** ;对于 "下一步" 为**FALSE** 。
@@ -246,7 +246,7 @@ virtual BOOL Create(
     UINT nID = AFX_IDW_PANE_FIRST);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pParentWnd*<br/>
 拆分窗口的父框架窗口。
@@ -303,7 +303,7 @@ virtual BOOL CreateScrollBarCtrl(
     UINT nID);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *dwStyle*<br/>
 指定窗口样式。
@@ -332,7 +332,7 @@ virtual BOOL CreateStatic(
     UINT nID = AFX_IDW_PANE_FIRST);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pParentWnd*<br/>
 拆分窗口的父框架窗口。
@@ -386,7 +386,7 @@ virtual BOOL CreateView(
     CCreateContext* pContext);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 row<br/>
 指定要在其中放置新视图的拆分窗口行。
@@ -437,7 +437,7 @@ CSplitterWnd();
 virtual void DeleteColumn(int colDelete);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *colDelete*<br/>
 指定要删除的列。
@@ -454,7 +454,7 @@ virtual void DeleteColumn(int colDelete);
 virtual void DeleteRow(int rowDelete);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *rowDelete*<br/>
 指定要删除的行。
@@ -473,7 +473,7 @@ virtual void DeleteView(
     int col);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 row<br/>
 指定要在其上删除视图的拆分窗口行。
@@ -514,7 +514,7 @@ virtual BOOL DoScroll(
     BOOL bDoScroll = TRUE);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pViewFrom*<br/>
 指向滚动消息源自的视图的指针。
@@ -522,17 +522,17 @@ virtual BOOL DoScroll(
 *nScrollCode*<br/>
 指示用户滚动请求的滚动条代码。 此参数由两部分组成：一个低序位字节，用于确定水平滚动的类型和一个高序位字节，该字节确定垂直发生的滚动类型：
 
-    - SB_BOTTOM 向下滚动。
+- SB_BOTTOM 向下滚动。
 
-    - SB_LINEDOWN 向下滚动一行。
+- SB_LINEDOWN 向下滚动一行。
 
-    - SB_LINEUP 向上滚动一行。
+- SB_LINEUP 向上滚动一行。
 
-    - SB_PAGEDOWN 向下滚动一页。
+- SB_PAGEDOWN 向下滚动一页。
 
-    - SB_PAGEUP 向上滚动一页。
+- SB_PAGEUP 向上滚动一页。
 
-    - SB_TOP 滚动到顶部。
+- SB_TOP 滚动到顶部。
 
 *bDoScroll*<br/>
 确定是否发生指定的滚动操作。 如果*bDoScroll*为 TRUE （也就是说，如果存在子窗口，并且拆分窗口具有滚动范围），则可能发生指定的滚动操作;如果*bDoScroll*为 FALSE （也就是说，如果不存在子窗口或拆分视图没有滚动范围），则不会发生滚动。
@@ -556,7 +556,7 @@ virtual BOOL DoScrollBy(
     BOOL bDoScroll = TRUE);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pViewFrom*<br/>
 指向滚动消息源自的视图的指针。
@@ -587,7 +587,7 @@ virtual CWnd* GetActivePane(
     int* pCol = NULL);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pRow*<br/>
 指向**整数**的指针，该指针用于检索活动窗格的行号。
@@ -626,7 +626,7 @@ void GetColumnInfo(
     int& cxMin) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *col*<br/>
 指定列。
@@ -647,7 +647,7 @@ CWnd* GetPane(
     int col) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 row<br/>
 指定一行。
@@ -682,7 +682,7 @@ void GetRowInfo(
     int& cyMin) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 row<br/>
 指定一行。
@@ -709,9 +709,9 @@ DWORD GetScrollStyle() const;
 
 如果成功，则为以下一种或多种 windows 样式标志：
 
-    - WS_HSCROLL 如果拆分器当前管理共享的水平滚动条，则为。
+- WS_HSCROLL 如果拆分器当前管理共享的水平滚动条，则为。
 
-    - WS_VSCROLL 如果拆分器当前管理共享垂直滚动条，则为。
+- WS_VSCROLL 如果拆分器当前管理共享垂直滚动条，则为。
 
 如果为零，则拆分窗口当前不会管理任何共享的滚动条。
 
@@ -725,7 +725,7 @@ int IdFromRowCol(
     int col) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 row<br/>
 指定拆分窗口行。
@@ -756,7 +756,7 @@ BOOL IsChildPane(
     int* pCol);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pWnd*<br/>
 指向要测试的[CWnd](../../mfc/reference/cwnd-class.md)对象的指针。
@@ -802,7 +802,7 @@ virtual void OnDrawSplitter(
     const CRect& rect);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pDC*<br/>
 一个指针，指向要在其中进行绘制的设备上下文。 如果*pDC*为 NULL，则该框架将调用[CWnd：： RedrawWindow](../../mfc/reference/cwnd-class.md#redrawwindow) ，并且不绘制拆分窗口。
@@ -810,13 +810,13 @@ virtual void OnDrawSplitter(
 nType<br/>
 `enum ESplitType`的值，可以是下列值之一：
 
-    - `splitBox` 拆分器拖动框。
+- `splitBox` 拆分器拖动框。
 
-    - `splitBar` 两个拆分窗口之间显示的栏。
+- `splitBar` 两个拆分窗口之间显示的栏。
 
-    - `splitIntersection` 拆分窗口的交集。 在 Windows 95/98 上运行时，不会调用此元素。
+- `splitIntersection` 拆分窗口的交集。 在 Windows 95/98 上运行时，不会调用此元素。
 
-    - `splitBorder` 拆分窗口边框。
+- `splitBorder` 拆分窗口边框。
 
 *rect*<br/>
 对[CRect](../../atl-mfc-shared/reference/crect-class.md)对象的引用，该对象指定拆分窗口的大小和形状。
@@ -835,7 +835,7 @@ nType<br/>
 virtual void OnInvertTracker(const CRect& rect);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *rect*<br/>
 对指定跟踪矩形的 `CRect` 对象的引用。
@@ -875,7 +875,7 @@ virtual void SetActivePane(
     CWnd* pWnd = NULL);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 row<br/>
 如果*pWnd*为 NULL，则在窗格中指定将处于活动状态的行。
@@ -884,7 +884,7 @@ row<br/>
 如果*pWnd*为 NULL，则在窗格中指定将处于活动状态的列。
 
 *pWnd*<br/>
-一个指向 `CWnd` 对象的指针。 如果为 NULL，则由*row*和*col*指定的窗格设置为活动窗格。 如果不为 NULL，则指定设置为活动的窗格。
+指向 `CWnd` 对象的指针。 如果为 NULL，则由*row*和*col*指定的窗格设置为活动窗格。 如果不为 NULL，则指定设置为活动的窗格。
 
 ### <a name="remarks"></a>备注
 
@@ -903,7 +903,7 @@ void SetColumnInfo(
     int cxMin);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *col*<br/>
 指定拆分窗口列。
@@ -935,7 +935,7 @@ void SetRowInfo(
     int cyMin);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 row<br/>
 指定拆分窗口行。
@@ -960,7 +960,7 @@ row<br/>
 void SetScrollStyle(DWORD dwStyle);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *dwStyle*<br/>
 拆分窗口的共享滚动条支持的新滚动样式，可以是下列值之一：
@@ -981,7 +981,7 @@ void SetScrollStyle(DWORD dwStyle);
 virtual BOOL SplitColumn(int cxBefore);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *cxBefore*<br/>
 发生拆分之前的位置（以像素为单位）。
@@ -1004,7 +1004,7 @@ virtual BOOL SplitColumn(int cxBefore);
 virtual BOOL SplitRow(int cyBefore);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *cyBefore*<br/>
 发生拆分之前的位置（以像素为单位）。
@@ -1027,7 +1027,7 @@ virtual BOOL SplitRow(int cyBefore);
 virtual void OnDraw(CDC* pDC);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pDC*<br/>
 一个指向设备上下文的指针。

@@ -4,17 +4,16 @@ description: 引用 Microsoft C/C++编译器/errorReport 命令行选项。
 ms.date: 02/09/2020
 f1_keywords:
 - VC.Project.VCCLCompilerTool.ErrorReporting
-- /errorreport
 helpviewer_keywords:
 - /errorReport compiler option [C++]
 - -errorReport compiler option [C++]
 ms.assetid: 819828f8-b0a5-412c-9c57-bf822f17e667
-ms.openlocfilehash: 8d4a3c4d5fd918973bbf8057e0c073c680e6995e
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: afc366728e62029ffbd3993e2fdd740e3aaf3369
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257645"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439894"
 ---
 # <a name="errorreport-report-internal-compiler-errors"></a>/errorReport（报告内部编译器错误）
 
@@ -42,7 +41,7 @@ ms.locfileid: "77257645"
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
 
-- 请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ErrorReporting%2A>。
+- 请参阅<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ErrorReporting%2A>。
 
 ## <a name="see-also"></a>另请参阅
 

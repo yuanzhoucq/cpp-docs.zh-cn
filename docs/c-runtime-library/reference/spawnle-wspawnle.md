@@ -21,7 +21,6 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- spawnle
 - _spawnle
 - wspawnle
 - _wspawnle
@@ -34,12 +33,12 @@ helpviewer_keywords:
 - wspawnle function
 - _spawnle function
 ms.assetid: 80308892-2815-49b1-8cca-53894c366f5a
-ms.openlocfilehash: a0225d007bfc69d88982b4c130410bc6be9abc06
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9d3c97f5fb7f98a2c045b3f5657211b3866c4b78
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947969"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442725"
 ---
 # <a name="_spawnle-_wspawnle"></a>_spawnle、_wspawnle
 
@@ -79,7 +78,7 @@ intptr_t _wspawnle(
 *cmdname*<br/>
 要执行的文件的路径。
 
-*arg0*， *arg1*， ... *argn*<br/>
+*arg0*， *arg1*，.。。*argn*<br/>
 指向参数的指针的列表。 *Arg0*参数通常是指向*cmdname*的指针。 参数*arg1*到*argn*是指向构成新参数列表的字符串的指针。 在*argn*之后，必须有一个**NULL**指针，用于标记参数列表的末尾。
 
 *envp*<br/>
@@ -87,7 +86,7 @@ intptr_t _wspawnle(
 
 ## <a name="return-value"></a>返回值
 
-同步 **_spawnle**或 **_wspawnle** （为*mode*指定的 **_P_WAIT** ）的返回值是新进程的退出状态。 异步 **_spawnle**或 **_wspawnle** （为*Mode*指定的 **_P_NOWAIT**或 **_P_NOWAITO** ）的返回值是进程句柄。 如果进程正常终止，则退出状态为 0。 如果生成的进程专门使用非零参数调用**exit**例程，则可以将退出状态设置为一个非零值。 如果更新过程没有显式设置正退出状态，则正退出状态指示因中止或中断而异常退出。 返回值-1 表示错误（不启动新进程）。 在这种情况下， **errno**设置为以下值之一。
+同步 **_spawnle**或 **_wspawnle** （为*mode*指定 **_P_WAIT** ）的返回值是新进程的退出状态。 异步 **_spawnle**或 **_wspawnle** （为*mode*指定的 **_P_NOWAIT**或 **_P_NOWAITO** ）的返回值是进程句柄。 如果进程正常终止，则退出状态为 0。 如果生成的进程专门使用非零参数调用**exit**例程，则可以将退出状态设置为一个非零值。 如果更新过程没有显式设置正退出状态，则正退出状态指示因中止或中断而异常退出。 返回值-1 表示错误（不启动新进程）。 在这种情况下， **errno**设置为以下值之一。
 
 |||
 |-|-|
@@ -97,7 +96,7 @@ intptr_t _wspawnle(
 | **ENOEXEC** | 指定的文件不是可执行文件或者有无效的可执行文件格式。 |
 | **ENOMEM** | 没有足够的内存可用于执行新进程。 |
 
-有关这些属性和其他的更多信息返回代码示例，请参见 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+有关这些代码及其他返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
@@ -107,18 +106,18 @@ intptr_t _wspawnle(
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_spawnle**|\<process.h>|
 |**_wspawnle**|\<stdio.h> 或 \<wchar.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
-在参见 [_spawn、_wspawn 函数](../../c-runtime-library/spawn-wspawn-functions.md)中的示例。
+请参阅 [_spawn、_wspawn 函数](../../c-runtime-library/spawn-wspawn-functions.md)中的示例。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [进程和环境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_spawn、_wspawn 函数](../../c-runtime-library/spawn-wspawn-functions.md)<br/>

@@ -167,11 +167,11 @@ helpviewer_keywords:
 - CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
 ms.openlocfilehash: 96118645aa656e97fcb93a0fd223045208ab03a3
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78872471"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424535"
 ---
 # <a name="cdaorecordset-class"></a>CDaoRecordset 类
 
@@ -183,7 +183,7 @@ ms.locfileid: "78872471"
 class CDaoRecordset : public CObject
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -502,7 +502,7 @@ BOOL CanUpdate() const;
 CDaoRecordset(CDaoDatabase* pDatabase = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDatabase*<br/>
 包含指向[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)对象的指针或值 NULL。 如果不为 NULL，并且尚未调用 `CDaoDatabase` 对象的 `Open` 成员函数以将其连接到数据源，则记录集会在其自己的[open](#open)调用期间尝试打开它。 如果传递 NULL，则将使用指定的数据源信息为你构造并连接 `CDaoDatabase` 对象（如果从 `CDaoRecordset`派生记录集类）。
@@ -565,7 +565,7 @@ virtual void Delete();
 virtual void DoFieldExchange(CDaoFieldExchange* pFX);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFX*<br/>
 包含指向 `CDaoFieldExchange` 对象的指针。 框架将已设置此对象，以指定字段交换操作的上下文。
@@ -632,7 +632,7 @@ void FillCache(
     COleVariant* pBookmark = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pSize*<br/>
 指定要在缓存中填充的行数。 如果省略此参数，则该值由基础 DAO 对象的 CacheSize 属性设置确定。
@@ -664,10 +664,10 @@ virtual BOOL Find(
     LPCTSTR lpszFilter);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lFindType*<br/>
-一个值，该值指示所需的查找操作的类型。 可能的值为：
+一个值，该值指示所需的查找操作的类型。 可能的值包括：
 
 - AFX_DAO_NEXT 查找匹配字符串的下一个位置。
 
@@ -705,7 +705,7 @@ virtual BOOL Find(
 BOOL FindFirst(LPCTSTR lpszFilter);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszFilter*<br/>
 用于定位记录的字符串表达式（如 SQL 语句中没有单词**where**的**where**子句）。
@@ -727,7 +727,7 @@ BOOL FindFirst(LPCTSTR lpszFilter);
 
 `Find` 成员函数按照下表中指定的位置进行搜索：
 
-|查找操作|开始|搜索方向|
+|查找操作|Begin|搜索方向|
 |---------------------|-----------|----------------------|
 |`FindFirst`|记录集开头|记录集末尾|
 |`FindLast`|记录集末尾|记录集开头|
@@ -759,7 +759,7 @@ BOOL FindFirst(LPCTSTR lpszFilter);
 BOOL FindLast(LPCTSTR lpszFilter);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszFilter*<br/>
 用于定位记录的字符串表达式（如 SQL 语句中没有单词**where**的**where**子句）。
@@ -801,7 +801,7 @@ BOOL FindLast(LPCTSTR lpszFilter);
 BOOL FindNext(LPCTSTR lpszFilter);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszFilter*<br/>
 用于定位记录的字符串表达式（如 SQL 语句中没有单词**where**的**where**子句）。
@@ -843,7 +843,7 @@ BOOL FindNext(LPCTSTR lpszFilter);
 BOOL FindPrev(LPCTSTR lpszFilter);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszFilter*<br/>
 用于定位记录的字符串表达式（如 SQL 语句中没有单词**where**的**where**子句）。
@@ -1117,7 +1117,7 @@ void GetFieldInfo(
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 记录集的字段集合中预定义字段的从零开始的索引，用于按索引查找。
@@ -1162,7 +1162,7 @@ virtual COleVariant GetFieldValue(LPCTSTR lpszName);
 virtual COleVariant GetFieldValue(int nIndex);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszName*<br/>
 指向包含字段名称的字符串的指针。
@@ -1224,7 +1224,7 @@ void GetIndexInfo(
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 表的索引集合中从零开始的索引，用于按数字位置查找。
@@ -1321,7 +1321,7 @@ virtual COleVariant GetParamValue(int nIndex);
 virtual COleVariant GetParamValue(LPCTSTR lpszName);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 基础 DAOParameter 对象中参数的数字位置。
@@ -1500,10 +1500,10 @@ BOOL IsBOF() const;
 
 ||MoveFirst、MoveLast|MovePrev<br /><br /> 移动 < 0|移动0|MoveNext<br /><br /> 移动 > 0|
 |------|-------------------------|-----------------------------|------------|-----------------------------|
-|`IsBOF`= 非零，<br /><br /> `IsEOF`=0|Allowed|例外|例外|Allowed|
-|`IsBOF`=0,<br /><br /> `IsEOF`= 非零|Allowed|Allowed|例外|例外|
-|均为非零|例外|例外|例外|例外|
-|均为0|Allowed|Allowed|Allowed|Allowed|
+|`IsBOF`= 非零，<br /><br /> `IsEOF`=0|允许|异常|异常|允许|
+|`IsBOF`=0,<br /><br /> `IsEOF`= 非零|允许|允许|异常|异常|
+|均为非零|异常|异常|异常|异常|
+|均为0|允许|允许|允许|允许|
 
 允许移动操作并不意味着操作将成功定位记录。 它仅指示允许执行指定的移动操作，并且不会生成异常。 由于尝试移动，`IsBOF` 和 `IsEOF` 成员函数的值可能会更改。
 
@@ -1511,7 +1511,7 @@ BOOL IsBOF() const;
 
 ||IsBOF|IsEOF|
 |------|-----------|-----------|
-|`MoveFirst`， `MoveLast`|非零|非零|
+|`MoveFirst`、`MoveLast`|非零|非零|
 |`Move` 0|没有变化|没有变化|
 |`MovePrev`，`Move` < 0|非零|没有变化|
 |`MoveNext`，`Move` > 0|没有变化|非零|
@@ -1573,10 +1573,10 @@ BOOL IsEOF() const;
 
 ||MoveFirst、MoveLast|MovePrev<br /><br /> 移动 < 0|移动0|MoveNext<br /><br /> 移动 > 0|
 |------|-------------------------|-----------------------------|------------|-----------------------------|
-|`IsBOF`= 非零，<br /><br /> `IsEOF`=0|Allowed|例外|例外|Allowed|
-|`IsBOF`=0,<br /><br /> `IsEOF`= 非零|Allowed|Allowed|例外|例外|
-|均为非零|例外|例外|例外|例外|
-|均为0|Allowed|Allowed|Allowed|Allowed|
+|`IsBOF`= 非零，<br /><br /> `IsEOF`=0|允许|异常|异常|允许|
+|`IsBOF`=0,<br /><br /> `IsEOF`= 非零|允许|允许|异常|异常|
+|均为非零|异常|异常|异常|异常|
+|均为0|允许|允许|允许|允许|
 
 允许移动操作并不意味着操作将成功定位记录。 它仅指示允许执行指定的移动操作，并且不会生成异常。 由于尝试移动，`IsBOF` 和 `IsEOF` 成员函数的值可能会更改。
 
@@ -1584,7 +1584,7 @@ BOOL IsEOF() const;
 
 ||IsBOF|IsEOF|
 |------|-----------|-----------|
-|`MoveFirst`， `MoveLast`|非零|非零|
+|`MoveFirst`、`MoveLast`|非零|非零|
 |`Move` 0|没有变化|没有变化|
 |`MovePrev`，`Move` < 0|非零|没有变化|
 |`MoveNext`，`Move` > 0|没有变化|非零|
@@ -1599,7 +1599,7 @@ BOOL IsEOF() const;
 BOOL IsFieldDirty(void* pv);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *函数*<br/>
 指向要检查其状态的字段数据成员的指针，或为 NULL 以确定是否有任何字段处于脏状态。
@@ -1622,7 +1622,7 @@ BOOL IsFieldDirty(void* pv);
 BOOL IsFieldNull(void* pv);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *函数*<br/>
 指向要检查其状态的字段数据成员的指针，或为 NULL 以确定是否有任何字段为 Null。
@@ -1651,7 +1651,7 @@ BOOL IsFieldNull(void* pv);
 BOOL IsFieldNullable(void* pv);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *函数*<br/>
 指向要检查其状态的字段数据成员的指针，或为 NULL 以确定是否有任何字段为 Null。
@@ -1774,7 +1774,7 @@ Recordset 类的构造函数必须初始化具有正确的静态绑定字段数�
 virtual void Move(long lRows);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lRows*<br/>
 向前或向后移动的记录数。 正值表示向前移动，直到记录集的末尾。 负值将向后移动。
@@ -1929,12 +1929,12 @@ virtual void Open(
     int nOptions = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nOpenType*<br/>
 以下值之一：
 
-- 使用双向滚动 `dbOpenDynaset` 动态集类型的记录集。 这是默认设置。
+- 使用双向滚动 `dbOpenDynaset` 动态集类型的记录集。 这是默认值。
 
 - 使用双向滚动 `dbOpenTable` 表类型记录集。
 
@@ -1952,7 +1952,7 @@ virtual void Open(
 - 传递查询。
 
 *nOptions*<br/>
-下面列出的一个或多个选项。 默认值为 0。 可能的值如下：
+下面列出的一个或多个选项。 默认值为 0。 可能的值如下所示：
 
 - `dbAppendOnly` 只能追加新记录（仅限动态集类型的记录集）。 此选项意味着仅可以追加记录。 MFC ODBC 数据库类具有仅限追加的选项，该选项允许检索和追加记录。
 
@@ -2008,7 +2008,7 @@ virtual void Open(
 
 |`lpszSQL` 参数的值|选择的记录由|示例|
 |--------------------------------------|----------------------------------------|-------------|
-|NULL|`GetDefaultSQL`返回的字符串。||
+|Null|`GetDefaultSQL`返回的字符串。||
 |一个或多个 tabledefs 和/或 querydef 名称的逗号分隔列表。|`DoFieldExchange`中表示的所有列。|`"Customer"`|
 |从表列表**中** **选择**列列表|指定的 tabledef 和/或 querydef 中指定的列。|`"SELECT CustId, CustName`<br /><br /> `FROM Customer"`|
 
@@ -2078,7 +2078,7 @@ BOOL Seek(
     WORD nKeys);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszComparison*<br/>
 以下字符串表达式之一： "<"、"\<="、"="、"> =" 或 ">"。
@@ -2133,7 +2133,7 @@ BOOL Seek(
 void SetAbsolutePosition(long lPosition);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lPosition*<br/>
 对应于记录集中当前记录的序号位置。
@@ -2162,7 +2162,7 @@ void SetAbsolutePosition(long lPosition);
 void SetBookmark(COleVariant varBookmark);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *varBookmark*<br/>
 一个包含特定记录的书签值的[COleVariant](../../mfc/reference/colevariant-class.md)对象。
@@ -2186,7 +2186,7 @@ void SetBookmark(COleVariant varBookmark);
 void SetCacheSize(long lSize);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lSize*<br/>
 指定记录数。 典型值为100。 设置为0将禁用缓存。 此设置必须介于5到1200条记录之间。 缓存可能会占用大量内存。
@@ -2207,7 +2207,7 @@ void SetCacheSize(long lSize);
 void SetCacheStart(COleVariant varBookmark);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *varBookmark*<br/>
 一个[COleVariant](../../mfc/reference/colevariant-class.md) ，指定要缓存的记录集中的第一条记录的书签。
@@ -2234,7 +2234,7 @@ Microsoft Jet 数据库引擎在缓存范围内请求缓存中的记录，并从
 void SetCurrentIndex(LPCTSTR lpszIndex);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszIndex*<br/>
 一个指针，它包含要设置的索引的名称。
@@ -2259,7 +2259,7 @@ void SetFieldDirty(
     BOOL bDirty = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *函数*<br/>
 包含记录集的字段数据成员的地址，或为 NULL。 如果为 NULL，则对记录集中的所有字段数据成员进行标记。 （C++ Null 与数据库术语中的 null 不相同，这意味着 "无值"。）
@@ -2302,7 +2302,7 @@ void SetFieldNull(
     BOOL bNull = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *函数*<br/>
 包含记录集的字段数据成员的地址，或为 NULL。 如果为 NULL，则对记录集中的所有字段数据成员进行标记。 （C++ Null 与数据库术语中的 null 不相同，这意味着 "无值"。）
@@ -2353,7 +2353,7 @@ void SetFieldValue(
     LPCTSTR lpszValue);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszName*<br/>
 指向包含字段名称的字符串的指针。
@@ -2384,7 +2384,7 @@ void SetFieldValueNull(int nIndex);
 void SetFieldValueNull(LPCTSTR lpszName);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 记录集中的字段索引，用于按从零开始的索引查找。
@@ -2406,7 +2406,7 @@ C++NULL 与 Null 不同，后者在数据库术语中意味着 "无值"。
 void SetLockingMode(BOOL bPessimistic);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bPessimistic*<br/>
 指示锁定类型的标志。
@@ -2437,7 +2437,7 @@ virtual void SetParamValue(
     const COleVariant& varValue);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 Querydef 的参数集合中的参数的数字位置。
@@ -2463,7 +2463,7 @@ void SetParamValueNull(int nIndex);
 void SetParamValueNull(LPCTSTR lpszName);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 记录集中的字段索引，用于按从零开始的索引查找。
@@ -2483,7 +2483,7 @@ C++NULL 与 Null 不同，后者在数据库术语中意味着 "无值"。
 void SetPercentPosition(float fPosition);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *fPosition*<br/>
 一个介于 0 和 100 之间的数字。

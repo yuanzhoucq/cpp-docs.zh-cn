@@ -33,11 +33,11 @@ helpviewer_keywords:
 - CInternetFile [MFC], m_hFile
 ms.assetid: 96935681-ee71-4a8d-9783-5abc7b3e6f10
 ms.openlocfilehash: 68a0a0f35d1a1f4519401080f9f207bf76c87079
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890770"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424331"
 ---
 # <a name="cinternetfile-class"></a>CInternetFile 类
 
@@ -51,7 +51,7 @@ class CInternetFile : public CStdioFile
 
 ## <a name="members"></a>成员
 
-### <a name="protected-constructors"></a>受保护的构造函数
+### <a name="protected-constructors"></a>受保护构造函数
 
 |名称|说明|
 |----------|-----------------|
@@ -73,7 +73,7 @@ class CInternetFile : public CStdioFile
 |[CInternetFile：： Write](#write)|写入指定字节数。|
 |[CInternetFile：： WriteString](#writestring)|将以 null 结尾的字符串写入文件。|
 
-### <a name="public-operators"></a>公共运算符
+### <a name="public-operators"></a>公用運算子
 
 |名称|说明|
 |----------|-----------------|

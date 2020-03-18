@@ -3,22 +3,21 @@ title: MFC 桌面应用程序
 ms.date: 07/28/2019
 f1_keywords:
 - MFC
-- mfc
 helpviewer_keywords:
 - libraries, MFC
 - class libraries, MFC
 - MFC, about MFC
 ms.assetid: 7101cb18-a681-495c-8f2b-069ad20c72f7
-ms.openlocfilehash: f23a41a0dbaedb7063617accee3afe4ba833d59c
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: e9921d18e9ec060f61959278b68906338f02b5b7
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68607532"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447706"
 ---
 # <a name="mfc-desktop-applications"></a>MFC 桌面应用程序
 
-Microsoft 基础类 (MFC) 库针对大部分 Win32 和 COM API 提供面向对象的包装器。 虽然此包装器可用于创建极为简单的桌面应用程序，但当你需要开发具有多个控件的更复杂的用户界面时，此包装器将最为有用。 可以使用 MFC 创建带有 Office 样式用户界面的应用程序。 有关 Windows 平台本身的文档, 请参阅[windows 文档](/windows/index)。 有关在C++不使用 MFC 的情况下生成 windows 应用程序的信息, 请参阅[使用 Win32 API 生成桌面 Windows 应用](/windows/win32/index)。
+Microsoft 基础类 (MFC) 库针对大部分 Win32 和 COM API 提供面向对象的包装器。 虽然此包装器可用于创建极为简单的桌面应用程序，但当你需要开发具有多个控件的更复杂的用户界面时，此包装器将最为有用。 可以使用 MFC 创建带有 Office 样式用户界面的应用程序。 有关 Windows 平台本身的文档，请参阅[windows 文档](/windows/index)。 有关在C++不使用 MFC 的情况下生成 windows 应用程序的信息，请参阅[使用 Win32 API 生成桌面 Windows 应用](/windows/win32/index)。
 
 “MFC 参考”介绍了构成 Microsoft 基础类库的类、全局函数、全局变量和宏。
 
@@ -31,7 +30,7 @@ Microsoft 基础类 (MFC) 库针对大部分 Win32 和 COM API 提供面向对�
 > [!IMPORTANT]
 >  MFC 类及其成员不能在 Windows 运行时环境中执行的应用程序中使用。
 >
->  用于多字节字符编码 (MBCS) 的 MFC 库 (DLL) 不再包含于 Visual Studio 中，但可用作 Visual Studio 加载项。 有关详细信息, 请参阅[MFC MBCS DLL 加载项](mfc-mbcs-dll-add-on.md)。
+>  用于多字节字符编码 (MBCS) 的 MFC 库 (DLL) 不再包含于 Visual Studio 中，但可用作 Visual Studio 加载项。 有关详细信息，请参阅[MFC MBCS DLL 加载项](mfc-mbcs-dll-add-on.md)。
 
 ## <a name="in-this-section"></a>本节内容
 
@@ -88,6 +87,6 @@ Visual Studio 中用于创建 MFC 应用程序的功能的指南。
 [在 Visual Studio 中进行调试](/visualstudio/debugger/debugging-in-visual-studio)<br/>
 提供一些链接，所涉及内容为使用 Visual Studio 调试器纠正应用程序或存储过程中的逻辑错误。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [MFC 和 ATL](mfc-and-atl.md)

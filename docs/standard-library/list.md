@@ -3,16 +3,15 @@ title: '&lt;list&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <list>
-- std::<list>
 helpviewer_keywords:
 - list header
 ms.assetid: 2345823b-5612-44d8-95d3-aa96ed076d17
-ms.openlocfilehash: c81990f14c6f9dc2400362015b838df5aed86429
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 6b67434d36146de87a124fc02f49971425943dc5
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689429"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447273"
 ---
 # <a name="ltlistgt"></a>&lt;list&gt;
 
@@ -25,7 +24,7 @@ ms.locfileid: "72689429"
 ```
 
 > [!NOTE]
-> > 库 \<list 也使用了 `#include <initializer_list>` 语句。
+> \<列表 > 库也使用 `#include <initializer_list>` 语句。
 
 ## <a name="members"></a>Members
 
@@ -52,8 +51,8 @@ ms.locfileid: "72689429"
 |-|-|
 |[list 类](../standard-library/list-class.md)|序列容器的类模板，它以线性方式维护其元素，并允许在序列内的任何位置高效插入和删除。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [头文件引用](../standard-library/cpp-standard-library-header-files.md)\
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

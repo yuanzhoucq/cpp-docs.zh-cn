@@ -18,11 +18,11 @@ helpviewer_keywords:
 - RegistryDataExchange function, global functions
 ms.assetid: d58b8a4e-975c-4417-8b34-d3c847f679b3
 ms.openlocfilehash: c5fdaceb47b6cd09dd9d66f26af1337a8dc6bbae
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78863152"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422948"
 ---
 # <a name="registry-and-typelib-global-functions"></a>注册表和类型库全局函数
 
@@ -66,7 +66,7 @@ ms.locfileid: "78863152"
 ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pEnabled*<br/>
 弄TRUE 指示将注册表信息定向到**HKCU**节点;FALSE 表示应用程序将注册表信息写入默认节点。 默认节点为**HKEY_CLASSES_ROOT** （**HKCR**）。
@@ -95,7 +95,7 @@ ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
 LONG AFXAPI AfxRegCreateKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hKey*<br/>
 打开的注册表项的句柄。
@@ -127,7 +127,7 @@ LONG AFXAPI AfxRegCreateKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTr
 LONG AFXAPI AfxRegDeleteKey(HKEY hKey, LPCTSTR lpSubKey, CAtlTransactionManager* pTM = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hKey*<br/>
 打开的注册表项的句柄。
@@ -156,7 +156,7 @@ LONG AFXAPI AfxRegDeleteKey(HKEY hKey, LPCTSTR lpSubKey, CAtlTransactionManager*
 BOOL AFXAPI AfxRegisterPreviewHandler(LPCTSTR lpszCLSID, LPCTSTR lpszShortTypeName, LPCTSTR lpszFilterExt);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszCLSID*<br/>
 指定处理程序的 CLSID。
@@ -179,7 +179,7 @@ BOOL AFXAPI AfxRegisterPreviewHandler(LPCTSTR lpszCLSID, LPCTSTR lpszShortTypeNa
 ATLAPI AtlRegisterTypeLib(HINSTANCE hInstTypeLib, LPCOLESTR lpszIndex);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hInstTypeLib*<br/>
 模块实例的句柄。
@@ -209,7 +209,7 @@ ATLAPI AtlRegisterTypeLib(HINSTANCE hInstTypeLib, LPCOLESTR lpszIndex);
 LONG AFXAPI AfxRegOpenKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hKey*<br/>
 打开的注册表项的句柄。
@@ -241,7 +241,7 @@ LONG AFXAPI AfxRegOpenKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTran
 LONG AFXAPI AfxRegOpenKeyEx(HKEY hKey, LPCTSTR lpSubKey, DWORD ulOptions, REGSAM samDesired, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hKey*<br/>
 打开的注册表项的句柄。
@@ -279,7 +279,7 @@ LONG AFXAPI AfxRegOpenKeyEx(HKEY hKey, LPCTSTR lpSubKey, DWORD ulOptions, REGSAM
 BOOL AFXAPI AfxUnRegisterPreviewHandler(LPCTSTR lpszCLSID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszCLSID*<br/>
 指定要注销的处理程序的 CLSID。
@@ -298,7 +298,7 @@ BOOL AFXAPI AfxUnRegisterPreviewHandler(LPCTSTR lpszCLSID);
 ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bEnable*<br/>
 中TRUE 指示将注册表信息定向到**HKCU**节点;FALSE 表示应用程序将注册表信息写入默认节点。 默认节点为**HKEY_CLASSES_ROOT** （**HKCR**）。
@@ -329,7 +329,7 @@ ATLAPI AtlUnRegisterTypeLib(
     LPCOLESTR lpszIndex);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hInstTypeLib*<br/>
 模块实例的句柄。
@@ -363,7 +363,7 @@ ATLINLINE ATLAPI AtlLoadTypeLib(
     ITypeLib** ppTypeLib);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hInstTypeLib*<br/>
 与类型库关联的模块的句柄。
@@ -406,7 +406,7 @@ HRESULT RegistryDataExchange(
     void* pItem = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *五*<br/>
 指向当前对象的指针。
@@ -427,7 +427,7 @@ HRESULT RegistryDataExchange(
 
 下表显示了指示函数应执行的操作的可能的枚举值：
 
-|枚举值|操作|
+|枚举值|Operation|
 |----------------|---------------|
 |eReadFromReg|从注册表读取数据。|
 |eWriteToReg|将数据写入注册表。|

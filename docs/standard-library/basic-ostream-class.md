@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::basic_ostream [C++], write
 ms.assetid: 5baadc65-b662-4fab-8c9f-94457c58cda1
 ms.openlocfilehash: 9025d595e79eed9f81aff77b931a2585359a8c3a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78874789"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427241"
 ---
 # <a name="basic_ostream-class"></a>basic_ostream 类
 
@@ -296,7 +296,7 @@ basic_ostream<Elem, Tr>& operator<<(double val);
 basic_ostream<Elem, Tr>& operator<<(long double val);
 ```
 
-每个将*val*转换为数值字段，并通过调用**use_facet < num_put\<Elem，OutIt >** （`getloc`） **，** 将其插入。`rdbuf`\*`getloc` 此处，将 **OutIt** 定义为 **ostreambuf_iterator\<Elem, Tr>** 。 该函数返回 **\*this**。
+每**val**个将*val*转换为数值字段，并通过调用**use_facet < num_put\<Elem，OutIt >** （`getloc`） **，** 将其**OutIt**插入。 **\*this**`rdbuf``getloc` 此处，将 **OutIt** 定义为 **ostreambuf_iterator\<Elem, Tr>** 。 该函数返回 **\*this**。
 
 ### <a name="example"></a>示例
 

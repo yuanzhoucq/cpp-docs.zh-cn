@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
-ms.openlocfilehash: a7bb3ab5ed292cef8108e937e67bc9e2ccc1ebce
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 0740ad024e0ca7fd56ecf9178ca57b22dc66b79e
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426659"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445692"
 ---
 # <a name="icommandui-interface"></a>ICommandUI 接口
 
@@ -31,7 +31,7 @@ ms.locfileid: "79426659"
 interface class ICommandUI
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>公共方法
 
@@ -60,6 +60,7 @@ interface class ICommandUI
 ## <a name="check"></a>ICommandUI：： Check
 
 将此命令的用户界面项设置为相应的复选状态。
+
 ```
 property UICheckState Check;
 ```
@@ -74,6 +75,7 @@ property UICheckState Check;
 ## <a name="continuerouting"></a>ICommandUI::ContinueRouting
 
 告诉命令路由机制继续向下传递处理程序链中的当前消息。
+
 ```
 void ContinueRouting();
 ```
@@ -85,6 +87,7 @@ void ContinueRouting();
 ## <a name="enabled"></a>ICommandUI：： Enabled
 
 启用或禁用此命令的用户界面项。
+
 ```
 property bool Enabled;
 ```
@@ -96,6 +99,7 @@ property bool Enabled;
 ## <a name="id"></a>ICommandUI：： ID
 
 获取由 ICommandUI 对象表示的用户界面对象的 ID。
+
 ```
 property unsigned int ID;
 ```
@@ -107,6 +111,7 @@ property unsigned int ID;
 ## <a name="index"></a>ICommandUI：： Index
 
 获取由 ICommandUI 对象表示的用户界面对象的索引。
+
 ```
 property unsigned int Index;
 ```
@@ -118,6 +123,7 @@ property unsigned int Index;
 ## <a name="radio"></a>ICommandUI：：收音机
 
 将此命令的用户界面项设置为相应的复选状态。
+
 ```
 property bool Radio;
 ```
@@ -129,6 +135,7 @@ property bool Radio;
 ## <a name="text"></a>ICommandUI：： Text
 
 为此命令设置用户界面项的文本。
+
 ```
 property String^ Text;
 ```

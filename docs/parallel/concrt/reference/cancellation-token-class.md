@@ -14,11 +14,11 @@ helpviewer_keywords:
 - cancellation_token class
 ms.assetid: 2787df2b-e9d3-440e-bfd0-841a46a9835f
 ms.openlocfilehash: 34743ce48510eec9d8f7862e5ed951a722932962
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876069"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427457"
 ---
 # <a name="cancellation_token-class"></a>cancellation_token 类
 
@@ -49,7 +49,7 @@ class cancellation_token;
 |[无](#none)|返回一个取消标记，此标记绝不会受到取消。|
 |[register_callback](#register_callback)|使用标记注册一个回调函数。 取消该标记时，将进行回调。 请注意，如果在调用此方法时已删除此标记，则将立即同步进行回调。|
 
-### <a name="public-operators"></a>公共运算符
+### <a name="public-operators"></a>公用運算子
 
 |名称|说明|
 |----------|-----------------|

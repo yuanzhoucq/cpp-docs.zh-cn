@@ -4,24 +4,23 @@ description: 在C++中，static、extern 和 thread_local 关键字指定变量�
 ms.date: 12/11/2019
 f1_keywords:
 - thread_local_cpp
-- extern_cpp
 - static_cpp
 - register_cpp
 helpviewer_keywords:
 - storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
-ms.openlocfilehash: ab00a5c64a32dc1dab5fef4bc15b722587bc2d6b
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 5b30fe7bc6665da9172f093f8ea6a2130cb900b2
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423710"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447315"
 ---
 # <a name="storage-classes"></a>存储类
 
 变量声明上下文中的*存储类*是一种类型说明符，用于控制对象的生存期、链接和内存位置。 C++ 给定对象只能有一个存储类。 除非使用**extern**、 **static**或**thread_local**说明符指定，否则在块中定义的变量将具有自动存储。 自动对象和变量不具有链接；它们对于块外部的代码是不可见的。 当执行进入块并在退出块时取消分配时，将自动为其分配内存。
 
-**说明**
+**注意**
 
 1. [可变](../cpp/mutable-data-members-cpp.md)关键字可视为存储类说明符。 但是，它只存在于类定义的成员列表中。
 

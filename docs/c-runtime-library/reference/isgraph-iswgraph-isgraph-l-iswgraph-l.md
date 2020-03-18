@@ -25,7 +25,6 @@ topic_type:
 f1_keywords:
 - _isgraph_l
 - _iswgraph_l
-- _ismbcgraph_l
 - Isgraph
 - _istgraph_l
 - _istgraph
@@ -40,12 +39,12 @@ helpviewer_keywords:
 - _istgraph function
 - _ismbcgraph_l function
 ms.assetid: 531a5f34-4302-4d0a-8a4f-b7ea150ad941
-ms.openlocfilehash: 88219ca6dc4218fc13f7d7c0b5f2ba399c07d501
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 282f11dfa6a4545b672419d42fe960c0e5001fbf
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954868"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442956"
 ---
 # <a name="isgraph-iswgraph-_isgraph_l-_iswgraph_l"></a>isgraph、iswgraph、_isgraph_l、_iswgraph_l
 
@@ -79,7 +78,7 @@ int _iswgraph_l(
 
 如果*c*是可打印字符而非空格的特定表示形式，则每个例程将返回非零值。 如果*c*是一个除空格之外的可打印字符，则**isgraph**将返回一个非零值。 如果*c*是一个非宽字符空间的可打印宽字符，则**iswgraph**将返回一个非零值。 如果*c*不满足测试条件，则这些例程都将返回0。
 
-具有 **_l**后缀的这些函数的版本使用传入的区域设置，而不是其与区域设置相关的行为的当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+这些具有 **_l**后缀的函数的版本使用传入的区域设置，而不是其与区域设置相关的行为的当前区域设置。 有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。
 
 如果*c*不是 EOF 或介于0到0xff （含0和0xff），则**isgraph**和 **_isgraph_l**的行为是不确定的。 当使用调试 CRT 库并且*c*不是这些值之一时，函数将引发断言。
 
@@ -92,16 +91,16 @@ int _iswgraph_l(
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
-|**isgraph**|\<ctype.h>|
+|**isgraph**|\<ctype.h 1>|
 |**iswgraph**|\<ctype.h 1> 或 \<wchar.h 1>|
-|**_isgraph_l**|\<ctype.h>|
+|**_isgraph_l**|\<ctype.h 1>|
 |**_iswgraph_l**|\<ctype.h 1> 或 \<wchar.h 1>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [字符分类](../../c-runtime-library/character-classification.md)<br/>
 [区域设置](../../c-runtime-library/locale.md)<br/>

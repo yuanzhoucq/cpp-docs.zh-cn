@@ -1,37 +1,35 @@
 ---
 title: CWinApp 和 MFC 应用程序向导
 ms.date: 11/04/2016
-f1_keywords:
-- CWinApp
 helpviewer_keywords:
 - application wizards [MFC], and CWinApp
 - CWinApp class [MFC], and MFC Application Wizard
 - MFC, wizards
 ms.assetid: f8ac0491-3302-4e46-981d-0790624eb8a2
-ms.openlocfilehash: cb45c8ffae15628b0b99a1ebcd962d88d845f83b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a46842d7b4d6a588da585d63e2ad56982bb0ff8
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241571"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447037"
 ---
 # <a name="cwinapp-and-the-mfc-application-wizard"></a>CWinApp 和 MFC 应用程序向导
 
-MFC 应用程序向导创建主干应用程序时, 声明应用程序类派生自[CWinApp](../mfc/reference/cwinapp-class.md)。 MFC 应用程序向导还会生成一个包含以下各项的实现文件：
+当它创建主干应用程序时，MFC 应用程序向导将声明派生自[CWinApp](../mfc/reference/cwinapp-class.md)的应用程序类。 MFC 应用程序向导还会生成一个包含以下项的实现文件：
 
-- 消息映射为应用程序类的。
+- 应用程序类的消息映射。
 
-- 一个空的类的构造函数。
+- 空类构造函数。
 
-- 声明的类对象和变量。
+- 声明类的一个和唯一一个对象的变量。
 
-- 标准实现你`InitInstance`成员函数。
+- `InitInstance` 成员函数的标准实现。
 
-应用程序类位于项目标头和主源代码文件中。 类和创建文件的名称基于在 MFC 应用程序向导中提供的项目名称。 若要查看这些类的代码的最简单方法是通过[类视图](/visualstudio/ide/viewing-the-structure-of-code)。
+应用程序类放置在项目标题和主源文件中。 类的名称和创建的文件基于您在 MFC 应用程序向导中提供的项目名称。 查看这些类的代码的最简单方法是通过[类视图](/visualstudio/ide/viewing-the-structure-of-code)。
 
-标准实现和消息映射提供足够用于多种用途，但你可以根据需要修改它们。 这些实现最有趣的是`InitInstance`成员函数。 通常情况下，会将代码添加到的主干实现`InitInstance`。
+提供的标准实现和消息映射足以满足多种目的，但你可以根据需要进行修改。 这些实现中最值得注意的是 `InitInstance` 成员函数。 通常，会将代码添加到 `InitInstance`的框架实现。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [CWinApp：应用程序类](../mfc/cwinapp-the-application-class.md)<br/>
 [可重写的 CWinApp 成员函数](../mfc/overridable-cwinapp-member-functions.md)<br/>

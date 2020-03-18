@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: cc6c5315757b4a1602eba53ebafb573dd88caed2
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 2ceb22afa5e6d071c1cb8dae79327eaaf08e3ee1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141793"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445104"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>C++为 UWP 应用创建异步操作
 
@@ -31,7 +31,7 @@ ms.locfileid: "77141793"
 
 - `create_async` 函数的行为取决于传递给它的工作函数的返回类型。 返回任务（ `task<T>` 或 `task<void>`）的工作函数在调用了 `create_async`的上下文中同步运行。 返回 `T` 或 `void` 的工作函数在任意上下文中运行。
 
-- 可以使用 [concurrency::task::then](reference/task-class.md#then) 方法创建一个可依次运行的任务链。 在 UWP 应用中，任务延续的默认上下文取决于该任务的构造方式。 如果是通过向任务构造函数传递异步操作，或通过传递可返回异步操作的 lambda 表达式创建的任务，那么此任务所有延续的默认上下文是当前上下文。 如果任务不是从异步操作构造的，那么默认情况下，对任务的延续使用任意上下文。 可以用 [concurrency::task_continuation_context](../../parallel/concrt/reference/task-continuation-context-class.md) 类重写默认上下文。
+- 可以使用 [concurrency::task::then](reference/task-class.md#then) 方法创建一个可依次运行的任务链。 在 UWP 应用中，任务延续的默认上下文取决于该任务的构造方式。 如果是通过向任务构造函数传递异步操作，或通过传递可返回异步操作的 lambda 表达式创建的任务，那么此任务所有延续的默认上下文是当前上下文。 如果任务不是从异步操作构造的，则默认情况下会对任务的延续使用任意上下文。 可以用 [concurrency::task_continuation_context](../../parallel/concrt/reference/task-continuation-context-class.md) 类重写默认上下文。
 
 ## <a name="in-this-document"></a>本文档内容
 
@@ -90,7 +90,7 @@ Windows 运行时是一种编程接口，可用于创建只在特殊操作系统
 
 [!code-cpp[concrt-windowsstore-primes#100](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_1.cpp)]
 
-## <a name="example-component"></a> 示例: 创建 c++ 窗口运行时组件和从 C# 使用它
+## <a name="example-component"></a>示例：创建C++ Windows 运行时组件，并将其从 C\# 使用
 
 假设有一个使用 XAML 和C#的应用程序，用于定义 UI C++和 Windows 运行时组件来执行计算密集型操作。 在此示例中，C++ 组件会计算给定范围中的哪些数字是质数。 若要阐释四个 Windows 运行时异步任务接口之间的差异，请在 Visual Studio 中创建一个**空解决方案**并将其命名为 `Primes`。 然后在解决方案中添加一个“Windows 运行时组件” 项目并命名为 `PrimesLibrary`。 将以下代码添加到生成的 C++ 标头文件中（本示例将 Class1.h 重命名为 Primes.h）。 每个 `public` 方法定义四个异步接口之一。 返回值的方法将返回[Windows：： Foundation：：集合：： IVector\<int >](/uwp/api/Windows.Foundation.Collections.IVector_T_)对象。 报告进度的方法生成 `double` 值，这些值定义了已完成的整体工作的百分比。
 
@@ -188,7 +188,7 @@ Windows 运行时使用 COM 线程模型。 在此模型中，根据对象处理
 
 ![Windows 运行时 CommonWords 应用](../../parallel/concrt/media/concrt_windows_common_words.png "Windows 运行时 CommonWords 应用")
 
-在此示例中，可以支持取消操作，因为支持 `task` 的 `create_async` 对象使用了隐式取消标记。 如果您的任务需要以协作方式响应取消，则请定义您的工作函数以采用 `cancellation_token` 对象。 有关 PPL 中取消操作的详细信息，请参阅 [Cancellation in the PPL](cancellation-in-the-ppl.md)
+在此示例中，可以支持取消操作，因为支持的 `task` 对象 `create_async` 使用隐式取消标记。 如果您的任务需要以协作方式响应取消，则请定义您的工作函数以采用 `cancellation_token` 对象。 有关 PPL 中取消操作的详细信息，请参阅 [Cancellation in the PPL](cancellation-in-the-ppl.md)
 
 ## <a name="see-also"></a>另请参阅
 

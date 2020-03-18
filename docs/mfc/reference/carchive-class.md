@@ -53,11 +53,11 @@ helpviewer_keywords:
 - CArchive [MFC], m_pDocument
 ms.assetid: 9e950d23-b874-456e-ae4b-fe00781a7699
 ms.openlocfilehash: 3cf5c3b7a79e846928b5a7ee0af12a3324e141a3
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855248"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424625"
 ---
 # <a name="carchive-class"></a>CArchive 类
 
@@ -69,7 +69,7 @@ ms.locfileid: "78855248"
 class CArchive
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -174,7 +174,7 @@ CArchive(
     void* lpBuf = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *.Pfile*<br/>
 指向 `CFile` 对象的指针，该对象是永久性数据的最终源或目标。
@@ -350,7 +350,7 @@ BOOL IsStoring() const;
 void MapObject(const CObject* pOb);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pOb*<br/>
 指向要存储的对象的常量指针。
@@ -547,7 +547,7 @@ CArchive& operator>>(LONGLONG& dwdw);
 UINT Read(void* lpBuf, UINT nMax);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpBuf*<br/>
 指向用户提供的用于接收从存档中读取的数据的缓冲区的指针。
@@ -580,7 +580,7 @@ CRuntimeClass* ReadClass(
     DWORD* pObTag = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pClassRefRequested*<br/>
 指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)结构的指针，该结构与请求的类引用相对应。 可以为 NULL。
@@ -617,7 +617,7 @@ CRuntimeClass* ReadClass(
 CObject* ReadObject(const CRuntimeClass* pClass);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pClass*<br/>
 指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)结构的常量指针，该结构对应于要读取的对象。
@@ -645,7 +645,7 @@ BOOL ReadString(CString& rString);
 LPTSTR ReadString(LPTSTR lpsz, UINT nMax);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rString*<br/>
 对[CString](../../atl-mfc-shared/reference/cstringt-class.md)的引用，在从与 CArchive 对象关联的文件中读取结果字符串后将包含该字符串。
@@ -680,7 +680,7 @@ LPTSTR ReadString(LPTSTR lpsz, UINT nMax);
 void SerializeClass(const CRuntimeClass* pClassRef);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pClassRef*<br/>
 指向基类的运行时类对象的指针。
@@ -707,7 +707,7 @@ void SerializeClass(const CRuntimeClass* pClassRef);
 void SetLoadParams(UINT nGrowBy = 1024);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nGrowBy*<br/>
 如果需要增加大小，要分配的元素槽的最小数目。
@@ -730,7 +730,7 @@ void SetLoadParams(UINT nGrowBy = 1024);
 void SetObjectSchema(UINT nSchema);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nSchema*<br/>
 指定对象的架构。
@@ -753,7 +753,7 @@ void SetObjectSchema(UINT nSchema);
 void SetStoreParams(UINT nHashSize = 2053, UINT nBlockSize = 128);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nHashSize*<br/>
 接口指针映射的哈希表的大小。 应为质数。
@@ -779,7 +779,7 @@ void SetStoreParams(UINT nHashSize = 2053, UINT nBlockSize = 128);
 void Write(const void* lpBuf, INT nMax);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpBuf*<br/>
 指向用户提供的缓冲区的指针，该缓冲区包含要写入存档的数据。
@@ -805,7 +805,7 @@ void Write(const void* lpBuf, INT nMax);
 void WriteClass(const CRuntimeClass* pClassRef);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pClassRef*<br/>
 指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)结构的指针，该结构与请求的类引用相对应。
@@ -832,7 +832,7 @@ void WriteClass(const CRuntimeClass* pClassRef);
 void WriteObject(const CObject* pOb);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pOb*<br/>
 指向要存储的对象的常量指针。
@@ -862,7 +862,7 @@ void WriteObject(const CObject* pOb);
 void WriteString(LPCTSTR lpsz);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpsz*<br/>
 指定指向包含以 null 结尾的文本字符串的缓冲区的指针。

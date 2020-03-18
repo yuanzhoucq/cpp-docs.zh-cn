@@ -1,64 +1,62 @@
 ---
-title: 使用 CArchive &lt; &lt;并&gt;&gt;运算符
+title: 使用 CArchive &lt;&lt; 并 &gt;&gt; 运算符
 ms.date: 11/04/2016
-f1_keywords:
-- CArchive
 helpviewer_keywords:
 - objects [MFC], loading from previously stored values
 - CArchive class [MFC], storing and loading objects
 - CArchive class [MFC], operators
 ms.assetid: 56aef326-02dc-4992-8282-f0a4b78a064e
-ms.openlocfilehash: 9b4192e79b68388e45eb9837e056bbd881de2933
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8e175f35f2218341c69571c818711596180df4a6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411495"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442172"
 ---
-# <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>使用 CArchive &lt; &lt;并&gt;&gt;运算符
+# <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>使用 CArchive &lt;&lt; 并 &gt;&gt; 运算符
 
-`CArchive` 提供了 <\<和 >> 写入和读取简单数据类型的运算符以及`CObject`到和从一个文件。
+`CArchive` 提供 <\< 和 > > 运算符，用于写入和读取文件的简单数据类型以及 `CObject`和。
 
-#### <a name="to-store-an-object-in-a-file-via-an-archive"></a>若要将对象存储在通过存档文件
+#### <a name="to-store-an-object-in-a-file-via-an-archive"></a>通过存档在文件中存储对象
 
-1. 下面的示例演示如何将对象存储在通过存档文件：
+1. 下面的示例演示如何通过存档在文件中存储对象：
 
    [!code-cpp[NVC_MFCSerialization#7](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_1.cpp)]
 
-#### <a name="to-load-an-object-from-a-value-previously-stored-in-a-file"></a>若要从以前存储在文件中的值加载对象
+#### <a name="to-load-an-object-from-a-value-previously-stored-in-a-file"></a>从先前存储在文件中的值加载对象
 
 1. 下面的示例演示如何从以前存储在文件中的值加载对象：
 
    [!code-cpp[NVC_MFCSerialization#8](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_2.cpp)]
 
-通常情况下，存储和加载数据传入和传出文件通过在存档`Serialize`函数的`CObject`的派生类，您必须声明与 DECLARE_SERIALIZE 宏保持一致。 对引用`CArchive`对象传递给你`Serialize`函数。 在调用`IsLoading`的函数`CArchive`对象，以确定是否`Serialize`调用函数以从文件加载数据或存储文件的数据。
+通常，你可以通过存档在 `CObject`派生类的 `Serialize` 函数中存储和加载文件，并且必须使用 DECLARE_SERIALIZE 宏进行声明。 向 `Serialize` 函数传递对 `CArchive` 对象的引用。 调用 `CArchive` 对象的 `IsLoading` 函数，以确定是否调用了 `Serialize` 函数以便从文件中加载数据或将数据存储到该文件。
 
-`Serialize`函数的可序列化`CObject`-派生的类通常具有以下形式：
+可序列化 `CObject`派生类的 `Serialize` 函数通常具有以下格式：
 
 [!code-cpp[NVC_MFCSerialization#9](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_3.cpp)]
 
-上面的代码模板正是与其中一个应用程序向导创建的相同`Serialize`函数的文档 (一个类派生自`CDocument`)。 此代码模板可帮助您编写代码，这是更轻松地查看，因为存储代码和加载代码应始终为并行，如以下示例所示：
+上面的代码模板与为文档的 `Serialize` 函数（从 `CDocument`派生的类）的运行时创建的模板完全相同。 此代码模板帮助你编写更易于查看的代码，因为存储代码和加载代码应始终并行，如以下示例中所示：
 
 [!code-cpp[NVC_MFCSerialization#10](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_4.cpp)]
 
-库定义了 **< \<** 并 **>>** 运算符`CArchive`作为第一个操作数的以下数据类型和类类型作为第二个操作数:
+库将 `CArchive` 的 **<\<** 和 **>>** 运算符定义为第一个操作数，将以下数据类型和类类型定义为第二个操作数：
 
 ||||
 |-|-|-|
 |`CObject*`|**大小**和 `CSize`|**float**|
-|**WORD**|`CString`|**点**和 `CPoint`|
+|**WORD**|`CString`|**POINT**和 `CPoint`|
 |`DWORD`|**BYTE**|`RECT` 和 `CRect`|
-|**Double**|**LONG**|`CTime` 和 `CTimeSpan`|
+|**双精度**|**LONG**|`CTime` 和 `CTimeSpan`|
 |`Int`|**COleCurrency**|`COleVariant`|
 |`COleDateTime`|`COleDateTimeSpan`||
 
 > [!NOTE]
->  存储和加载`CObject`s 通过存档需要额外的注意事项。 有关详细信息，请参阅[存储和加载 Cobject 通过存档](../mfc/storing-and-loading-cobjects-via-an-archive.md)。
+>  通过存档存储和加载 `CObject`需要额外考虑。 有关详细信息，请参阅[通过存档存储和加载 cobject](../mfc/storing-and-loading-cobjects-via-an-archive.md)。
 
-**CArchive <\<** 并 **>>** 运算符始终返回对引用`CArchive`对象，它是第一个操作数。 这使您可以链接运算符，如下图所示：
+**CArchive <\<** 和 **>>** 运算符始终返回对 `CArchive` 对象的引用，该对象是第一个操作数。 这使您可以链接运算符，如下所示：
 
 [!code-cpp[NVC_MFCSerialization#11](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_5.cpp)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[序列化：序列化对象](../mfc/serialization-serializing-an-object.md)
+[序列化：对象的序列化](../mfc/serialization-serializing-an-object.md)

@@ -1,18 +1,16 @@
 ---
 title: Windows 套接字类
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.net
 helpviewer_keywords:
 - sockets classes [MFC]
 - Windows Sockets [MFC], classes
 ms.assetid: 58b9ab8d-9e44-4db3-8265-e04e713d2e9a
-ms.openlocfilehash: 4abdd8f8fbfc115b5014ffd0b3a37df357852b16
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3f1b7b2b6674b4a5f8c8f7bff6c5fa239715f459
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371797"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445979"
 ---
 # <a name="windows-sockets-classes"></a>Windows 套接字类
 
@@ -27,6 +25,6 @@ Windows 套接字提供了一个在两台计算机之间进行通信的与网络
 [CSocketFile](../mfc/reference/csocketfile-class.md)<br/>
 为 Windows 套接字提供 `CFile` 接口。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [类概述](../mfc/class-library-overview.md)

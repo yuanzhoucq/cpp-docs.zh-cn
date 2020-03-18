@@ -6,11 +6,11 @@ f1_keywords:
 - new/std::operator new
 ms.assetid: d1af4b56-9a95-4c65-ab01-bf43e982c7bd
 ms.openlocfilehash: a3fd5b825fe1eaf3a07d9d001f03b9d0c64ffa31
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854925"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425369"
 ---
 # <a name="ltnewgt-operators-and-enums"></a>&lt;新的&gt; 运算符和枚举
 
@@ -30,7 +30,7 @@ void operator delete(void *, void*) throw();
 void operator delete(void* ptr, const std::nothrow_t&) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ptr*\
 其值由删除呈现为无效的指针。
@@ -59,7 +59,7 @@ void operator delete[](void *, void*) throw();
 void operator delete[](void* ptr, const std::nothrow_t&) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ptr*\
 其值由删除呈现为无效的指针。
@@ -86,7 +86,7 @@ void* operator new(std::size_t count, const std::nothrow_t&) throw();
 void* operator new(std::size_t count, void* ptr) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *计数*\
 要分配的存储的字节数。
@@ -181,7 +181,7 @@ void* operator new[](std::size_t count, const std::nothrow_t&) throw();
 void* operator new[](std::size_t count, void* ptr) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *计数*\
 要为数组对象分配的存储的字节数。

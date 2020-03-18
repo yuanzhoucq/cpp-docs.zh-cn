@@ -403,11 +403,11 @@ helpviewer_keywords:
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
 ms.openlocfilehash: bae2f9a5a4f39c4eeffe68cc33e744e44c6800c8
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855440"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426131"
 ---
 # <a name="cdc-class"></a>CDC 类
 
@@ -627,7 +627,7 @@ class CDC : public CObject
 |[CDC：： UpdateColors](#updatecolors)|通过将工作区中的当前颜色与系统调色板逐像素匹配，更新设备上下文的工作区。|
 |[CDC：： WidenPath](#widenpath)|如果使用当前选择的笔在设备上下文中绘制路径，则将当前路径重新定义为要绘制的区域。|
 
-### <a name="public-operators"></a>公共运算符
+### <a name="public-operators"></a>公用運算子
 
 |名称|说明|
 |----------|-----------------|

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::move [C++]
 - std::swap [C++]
 ms.openlocfilehash: 723b077500b9b741445efcd8574fb26cd53e5fc7
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854852"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427679"
 ---
 # <a name="ltutilitygt-functions"></a>&lt;utility&gt; 函数
 
@@ -49,7 +49,7 @@ template <class T, class Other = T>
     T exchange(T& val, Other&& new_val)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *val*\
 将接收 new_val 的值的对象。
@@ -107,7 +107,7 @@ template <class Type>    // accepts everything else
     constexpr Type&& forward(typename remove_reference<Type>::type&& Arg) noexcept
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *类型*\
 在*arg*中传递的值的类型可能不同于*参数*的类型。 通常由转发函数的模板自变量决定。
@@ -184,7 +184,7 @@ template <class T2, class T1>
     constexpr T2&& get(pair<T1, T2>&& Pr) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *索引*\
 所选元素的从零开始的索引。
@@ -281,7 +281,7 @@ template <class T, class U>
     pair<T, U> make_pair(T&& Val1, U&& Val2);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Val1*\
 用于初始化第一个 `pair` 元素的值。
@@ -322,7 +322,7 @@ template <class Type>
     constexpr typename remove_reference<Type>::type&& move(Type&& Arg) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *类型*\
 从参数传入的参数类型推导出的*类型以及引用*折叠规则。
@@ -361,7 +361,7 @@ template <class T, class U>
     void swap(pair<T, U>& left, pair<T, U>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 `pair`的类型或类型的对象。

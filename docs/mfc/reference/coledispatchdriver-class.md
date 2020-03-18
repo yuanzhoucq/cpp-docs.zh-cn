@@ -27,11 +27,11 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
 ms.openlocfilehash: fa88147b57b0506f7f9ab96d4a5d2f43fdd75458
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855447"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426629"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver 类
 
@@ -43,7 +43,7 @@ ms.locfileid: "78855447"
 class COleDispatchDriver
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -109,7 +109,7 @@ void AttachDispatch(
     BOOL bAutoRelease = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpDispatch*<br/>
 指向 OLE `IDispatch` 对象的指针被附加到 `COleDispatchDriver` 对象。
@@ -135,7 +135,7 @@ COleDispatchDriver(LPDISPATCH lpDispatch, BOOL bAutoRelease = TRUE);
 COleDispatchDriver(const COleDispatchDriver& dispatchSrc);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpDispatch*<br/>
 指向 OLE `IDispatch` 对象的指针被附加到 `COleDispatchDriver` 对象。
@@ -172,7 +172,7 @@ BOOL CreateDispatch(
     COleException* pError = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *clsid*<br/>
 要创建的 `IDispatch` 连接对象的类 ID。
@@ -224,7 +224,7 @@ void GetProperty(
     void* pvProp) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwDispID*<br/>
 标识要检索的属性。
@@ -252,13 +252,13 @@ void AFX_CDECL InvokeHelper(
     const BYTE* pbParamInfo, ...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwDispID*<br/>
 标识要调用的方法或属性。
 
 *wFlags*<br/>
-描述对 `IDispatch::Invoke`的调用的上下文的标志。 . 有关可能值的列表，请参阅 Windows SDK 中的[IDispatch：： Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke)中的*wFlags*参数。
+描述对 `IDispatch::Invoke`的调用的上下文的标志。 。 有关可能值的列表，请参阅 Windows SDK 中的[IDispatch：： Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke)中的*wFlags*参数。
 
 *vtRet*<br/>
 指定返回值的类型。 有关可能值，请参阅“备注”部分。
@@ -348,7 +348,7 @@ LPDISPATCH m_lpDispatch;
 const COleDispatchDriver& operator=(const COleDispatchDriver& dispatchSrc);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dispatchSrc*<br/>
 指向现有 `COleDispatchDriver` 对象的指针。
@@ -391,7 +391,7 @@ void AFX_CDECL SetProperty(
     VARTYPE vtProp, ...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwDispID*<br/>
 标识要设置的属性。

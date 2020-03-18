@@ -57,11 +57,11 @@ helpviewer_keywords:
 - std::unitbuf [C++]
 - std::uppercase [C++]
 ms.openlocfilehash: c3b1e2350d0923cbfddf95492842ae126859e29f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856465"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426929"
 ---
 # <a name="ltiosgt-functions"></a>&lt;ios&gt; 函数
 
@@ -73,7 +73,7 @@ ms.locfileid: "78856465"
 ios_base& boolalpha(ios_base& str);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
@@ -125,7 +125,7 @@ true
 ios_base& dec(ios_base& str);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
@@ -178,7 +178,7 @@ int main( )
 ios_base& defaultfloat(ios_base& iosbase);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Iosbase*\
 一个 `ios_base` 对象。
@@ -195,7 +195,7 @@ ios_base& defaultfloat(ios_base& iosbase);
 ios_base& fixed(ios_base& str);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
@@ -243,7 +243,7 @@ int main( )
 ios_base& hex(ios_base& str);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
@@ -284,7 +284,7 @@ enum class io_errc {
 ios_base& internal(ios_base& str);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
@@ -342,7 +342,7 @@ const error_category& iostream_category() noexcept;
 ios_base& left(ios_base& str);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
@@ -397,7 +397,7 @@ error_condition make_error_condition(io_errc e) noexcept;
 ios_base& noboolalpha(ios_base& str);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
@@ -426,7 +426,7 @@ ios_base& noboolalpha(ios_base& str);
 ios_base& noshowbase(ios_base& str);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
@@ -437,7 +437,7 @@ ios_base& noshowbase(ios_base& str);
 
 ### <a name="remarks"></a>备注
 
-默认情况下，`noshowbase` 处于打开状态。 使用 [showbase](../standard-library/ios-functions.md#showbase) 来指示数字基数。
+`noshowbase` 处于打开状态。 使用 [showbase](../standard-library/ios-functions.md#showbase) 来指示数字基数。
 
 操控器有效地调用 `str.`[unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::showbase)`，然后返回*str*。
 
@@ -453,7 +453,7 @@ ios_base& noshowbase(ios_base& str);
 ios_base& noshowpoint(ios_base& str);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
@@ -500,7 +500,7 @@ int main( )
 ios_base& noshowpos(ios_base& str);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
@@ -511,7 +511,7 @@ ios_base& noshowpos(ios_base& str);
 
 ### <a name="remarks"></a>备注
 
-默认情况下，`noshowpos` 处于打开状态。
+`noshowpos` 处于打开状态。
 
 操控器有效地调用 `str.`[unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::showps)`，然后返回*str*。
 
@@ -527,7 +527,7 @@ ios_base& noshowpos(ios_base& str);
 ios_base& noskipws(ios_base& str);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
@@ -569,7 +569,7 @@ int main() {
 ios_base& nounitbuf(ios_base& str);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
@@ -592,7 +592,7 @@ ios_base& nounitbuf(ios_base& str);
 ios_base& nouppercase(ios_base& str);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
@@ -617,7 +617,7 @@ ios_base& nouppercase(ios_base& str);
 ios_base& oct(ios_base& str);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
@@ -644,7 +644,7 @@ ios_base& oct(ios_base& str);
 ios_base& right(ios_base& str);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
@@ -701,7 +701,7 @@ int main( )
 ios_base& scientific(ios_base& str);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
@@ -746,7 +746,7 @@ int main( )
 ios_base& showbase(ios_base& str);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
@@ -800,7 +800,7 @@ int main( )
 ios_base& showpoint(ios_base& str);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
@@ -827,7 +827,7 @@ ios_base& showpoint(ios_base& str);
 ios_base& showpos(ios_base& str);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
@@ -872,7 +872,7 @@ int main( )
 ios_base& skipws(ios_base& str);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
@@ -924,7 +924,7 @@ Enter three characters: 1 2 3
 ios_base& unitbuf(ios_base& str);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。
@@ -949,7 +949,7 @@ ios_base& unitbuf(ios_base& str);
 ios_base& uppercase(ios_base& str);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *str*\
 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。

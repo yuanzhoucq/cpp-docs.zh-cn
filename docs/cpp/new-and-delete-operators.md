@@ -1,19 +1,16 @@
 ---
 title: new 和 delete 运算符
 ms.date: 11/19/2019
-f1_keywords:
-- delete_cpp
-- new
 helpviewer_keywords:
 - new keyword [C++]
 - delete keyword [C++]
 ms.assetid: fa721b9e-0374-4f04-bb87-032ea775bcc8
-ms.openlocfilehash: c64b15f1e1e63b1e743743883429ffd11007de0a
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 2fd665ce2570bbe7750684057cdf7f517f6f64f3
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246446"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445455"
 ---
 # <a name="new-and-delete-operators"></a>new 和 delete 运算符
 
@@ -23,7 +20,7 @@ C++支持使用[new](new-operator-cpp.md)和[delete](delete-operator-cpp.md)运�
 
 有关包含 C 运行库和C++标准库的库文件的列表，请参阅[CRT 库功能](../c-runtime-library/crt-library-features.md)。
 
-##  <a id="new_operator"></a> New 运算符
+##  <a id="new_operator"> </a> New 运算符
 
 如果程序中遇到如下语句，它将转换为对函数**运算符 new**的调用：
 
@@ -42,7 +39,7 @@ char *pch = new char[BUFFER_SIZE];
 |运算符|范围|
 |--------------|-----------|
 |**：： new 运算符**|Global|
-|*类名* **：： operator new**|实例|
+|*类名* **：： operator new**|类|
 
 **Operator new**的第一个参数的类型必须为 `size_t` （在 \<stddef.h > 中定义的类型），并且返回类型始终为**void** <strong>\*</strong>。
 
@@ -124,7 +121,7 @@ int main() {
 
 还可以通过另一种方法来处理失败的内存分配请求。 编写自定义恢复例程来处理此类故障，并通过调用[_set_new_handler](../c-runtime-library/reference/set-new-handler.md)运行时函数来注册该函数。
 
-##  <a id="delete_operator"></a> Delete 运算符
+##  <a id="delete_operator"> </a> Delete 运算符
 
 使用**new**运算符动态分配的内存可以使用**delete**运算符释放。 Delete 运算符调用**operator delete**函数，该函数将内存释放回可用池。 使用**delete**运算符还会导致调用类析构函数（如果有）。
 

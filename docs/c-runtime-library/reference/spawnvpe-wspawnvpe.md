@@ -23,7 +23,6 @@ topic_type:
 f1_keywords:
 - _spawnvpe
 - wspawnvpe
-- spawnvpe
 - _wspawnvpe
 helpviewer_keywords:
 - _wspawnvpe function
@@ -34,12 +33,12 @@ helpviewer_keywords:
 - process creation
 - spawnvpe function
 ms.assetid: 3db6394e-a955-4837-97a1-fab1db1e6092
-ms.openlocfilehash: 65a3eaa9fb88ccd1d674f1ebf1bccea01f684b7a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1ea71f5d7a9cd640e3d314eb48846bca995dca5c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957850"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442697"
 ---
 # <a name="_spawnvpe-_wspawnvpe"></a>_spawnvpe、_wspawnvpe
 
@@ -81,7 +80,7 @@ intptr_t _wspawnvpe(
 
 ## <a name="return-value"></a>返回值
 
-同步 **_spawnvpe**或 **_wspawnvpe** （为*mode*指定的 **_P_WAIT** ）的返回值是新进程的退出状态。 异步 **_spawnvpe**或 **_wspawnvpe** （为*Mode*指定的 **_P_NOWAIT**或 **_P_NOWAITO** ）的返回值是进程句柄。 如果进程正常终止，则退出状态为 0。 如果生成的进程专门使用非零参数调用**exit**例程，则可以将退出状态设置为一个非零值。 如果更新过程没有显式设置正退出状态，则正退出状态指示因中止或中断而异常退出。 返回值-1 表示错误（不启动新进程）。 在这种情况下， **errno**设置为以下值之一：
+同步 **_spawnvpe**或 **_wspawnvpe** （为*mode*指定 **_P_WAIT** ）的返回值是新进程的退出状态。 异步 **_spawnvpe**或 **_wspawnvpe** （为*mode*指定的 **_P_NOWAIT**或 **_P_NOWAITO** ）的返回值是进程句柄。 如果进程正常终止，则退出状态为 0。 如果生成的进程专门使用非零参数调用**exit**例程，则可以将退出状态设置为一个非零值。 如果更新过程没有显式设置正退出状态，则正退出状态指示因中止或中断而异常退出。 返回值-1 表示错误（不启动新进程）。 在这种情况下， **errno**设置为以下值之一：
 
 |||
 |-|-|
@@ -101,18 +100,18 @@ intptr_t _wspawnvpe(
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_spawnvpe**|\<stdio.h> 或 \<process.h>|
 |**_wspawnvpe**|\<stdio.h> 或 \<wchar.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
-在参见 [_spawn、_wspawn 函数](../../c-runtime-library/spawn-wspawn-functions.md)中的示例。
+请参阅 [_spawn、_wspawn 函数](../../c-runtime-library/spawn-wspawn-functions.md)中的示例。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [abort](abort.md)<br/>
 [atexit](atexit.md)<br/>

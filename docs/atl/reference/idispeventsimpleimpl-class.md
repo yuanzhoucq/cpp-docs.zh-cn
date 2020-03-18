@@ -16,11 +16,11 @@ helpviewer_keywords:
 - IDispEventSimpleImpl class
 ms.assetid: 971d82b7-a921-47fa-a4d8-909bed377ab0
 ms.openlocfilehash: 3ceb436e4f20a17ecd086fb68f9c1cfdcbe0be3e
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864715"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423080"
 ---
 # <a name="idispeventsimpleimpl-class"></a>IDispEventSimpleImpl 类
 
@@ -36,7 +36,7 @@ template <UINT nID, class T, const IID* pdiid>
 class ATL_NO_VTABLE IDispEventSimpleImpl : public _IDispEventLocator<nID, pdiid>
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *nID*<br/>
 源对象的唯一标识符。 如果 `IDispEventSimpleImpl` 是复合控件的基类，请使用此参数所需的所含控件的资源 ID。 在其他情况下，请使用任意正整数。
@@ -47,7 +47,7 @@ class ATL_NO_VTABLE IDispEventSimpleImpl : public _IDispEventLocator<nID, pdiid>
 *pdiid*<br/>
 指向由此类实现的事件调度接口的 IID 的指针。
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-methods"></a>公共方法
 
@@ -107,7 +107,7 @@ ActiveX 事件接收器的 CE ATL 实现仅支持事件处理程序方法中类�
 HRESULT Advise(IUnknown* pUnk);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pUnk*<br/>
 中指向事件源对象的 `IUnknown` 接口的指针。
@@ -133,7 +133,7 @@ S_OK 或任何故障 HRESULT 值。
 HRESULT DispEventAdvise(IUnknown* pUnk  const IID* piid);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pUnk*<br/>
 中指向事件源对象的 `IUnknown` 接口的指针。
@@ -162,7 +162,7 @@ S_OK 或任何故障 HRESULT 值。
 HRESULT DispEventUnadvise(IUnknown* pUnk  const IID* piid);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pUnk*<br/>
 中指向事件源对象的 `IUnknown` 接口的指针。
@@ -255,7 +255,7 @@ STDMETHOD(Invoke)(
 HRESULT Unadvise(IUnknown* pUnk);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pUnk*<br/>
 中指向事件源对象的 `IUnknown` 接口的指针。

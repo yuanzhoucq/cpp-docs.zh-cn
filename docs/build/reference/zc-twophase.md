@@ -5,17 +5,16 @@ ms.date: 12/03/2019
 f1_keywords:
 - twoPhase
 - /Zc:twoPhase
-- VC.Project.VCCLCompilerTool.EnforceTypeConversionRules
 helpviewer_keywords:
 - twoPhase
 - disable two-phase name lookup
 - /Zc:twoPhase
-ms.openlocfilehash: a2ede9f0875bf718d63361201cf8923666078f7a
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 3464759793a2dd243024a9f3f52263f76514033a
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74856951"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438642"
 ---
 # <a name="zctwophase--disable-two-phase-name-lookup"></a>/Zc:twoPhase-（禁用两阶段名称查找）
 
@@ -23,7 +22,7 @@ ms.locfileid: "74856951"
 
 ## <a name="syntax"></a>语法
 
-> **/Zc:twoPhase-**
+> **/Zc： twoPhase-**
 
 ## <a name="remarks"></a>备注
 
@@ -195,7 +194,7 @@ typename T::template X<T>::TYPE func(typename T::TYPE)
 
 1. 打开项目的“属性页” 对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择“配置属性” > “C/C++” > “命令行”属性页。
+1. 选择“配置属性” **“C/C++”** “命令行”属性页 >  > 。
 
 1. 修改 "**附加选项**" 属性以包含 **/zc： twoPhase** ，然后选择 **"确定"** 。
 

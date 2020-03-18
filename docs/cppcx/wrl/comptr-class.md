@@ -52,11 +52,11 @@ helpviewer_keywords:
 - Microsoft::WRL::ComPtr::~ComPtr, destructor
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
 ms.openlocfilehash: 1e20a991c8f32027aeea6a17df0534aa6e1c2c43
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865701"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423650"
 ---
 # <a name="comptr-class"></a>ComPtr 类
 
@@ -117,14 +117,14 @@ friend class ComPtr;
 [ComPtr::Reset](#reset)                                   | 释放指向与此 `ComPtr`相关联的接口的指针的所有引用。
 [ComPtr：： Swap](#swap)                                     | 将当前 `ComPtr` 管理的接口与由指定 `ComPtr`管理的接口交换。
 
-### <a name="protected-methods"></a>受保护的方法
+### <a name="protected-methods"></a>受保护方法
 
 名称                                        | 说明
 ------------------------------------------- | --------------------------------------------------------------------------------
 [ComPtr：： InternalAddRef](#internaladdref)   | 递增与此 `ComPtr`相关联的接口的引用计数。
 [ComPtr：： InternalRelease](#internalrelease) | 对与此 `ComPtr`关联的接口执行 COM 释放操作。
 
-### <a name="public-operators"></a>公共运算符
+### <a name="public-operators"></a>公用運算子
 
 名称                                                                                           | 说明
 ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------

@@ -1,8 +1,6 @@
 ---
 title: LINK 输入文件
 ms.date: 11/04/2016
-f1_keywords:
-- link
 helpviewer_keywords:
 - files [C++], LINK
 - module definition files
@@ -14,23 +12,23 @@ helpviewer_keywords:
 - import libraries [C++], linker files
 - command input to linker files [C++]
 ms.assetid: bb26fcc5-509a-4620-bc3e-b6c6e603a412
-ms.openlocfilehash: 48ad9423ae35c22a97a873fe6a2a0479c12ab33b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 25d8e20903a97186e2c32a079fd74ece3626b7fa
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291504"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439340"
 ---
 # <a name="link-input-files"></a>LINK 输入文件
 
-链接器提供文件，其中包含的对象、 导入和标准库、 资源、 模块定义和输入的命令。 链接不使用文件扩展名进行假设文件的内容。 相反，链接将检查每个输入的文件以确定它是什么类型的文件。
+为链接器提供包含对象、导入和标准库、资源、模块定义和命令输入的文件。 LINK 不使用文件扩展名对文件内容进行假设。 相反，LINK 检查每个输入文件以确定文件的类型。
 
-命令行上出现的顺序处理命令行上的对象文件。 库中，命令行顺序搜索以下一点：符号无法解析时将在库中的对象文件中搜索在该库中第一次，然后从命令行的以下库和[/DEFAULTLIB （指定默认库）](defaultlib-specify-default-library.md)指令，然后在命令行的开头的任何库。
+命令行上的对象文件将按照它们在命令行上出现的顺序进行处理。 还将在命令行顺序中搜索库，但有以下注意事项：在库中引入对象文件时，将首先在该库中搜索，然后在命令行和[/DEFAULTLIB （指定默认库）](defaultlib-specify-default-library.md)指令中搜索以下库，并将其放入命令行开头的任何库。
 
 > [!NOTE]
->  链接不再接受以分号 （或任何其他字符） 作为响应文件和顺序文件中注释的开始。 分号仅认为模块定义文件 (.def) 中的注释的开始。
+>  链接不再接受分号（或任何其他字符）作为响应文件和顺序文件中注释的开头。 分号仅在模块定义文件（.def）中作为注释的开头被识别。
 
-链接使用以下类型的输入文件：
+LINK 使用以下类型的输入文件：
 
 - [.obj 文件](dot-obj-files-as-linker-input.md)
 
@@ -42,9 +40,9 @@ ms.locfileid: "62291504"
 
 - [.def 文件](dot-def-files-as-linker-input.md)
 
-- [.pdb files](dot-pdb-files-as-linker-input.md)
+- [.pdb 文件](dot-pdb-files-as-linker-input.md)
 
-- [.res 文件](dot-res-files-as-linker-input.md)
+- [res 文件](dot-res-files-as-linker-input.md)
 
 - [.exe 文件](dot-exe-files-as-linker-input.md)
 
@@ -52,7 +50,7 @@ ms.locfileid: "62291504"
 
 - [.ilk 文件](dot-ilk-files-as-linker-input.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [MSVC 链接器参考](linking.md)<br/>
 [MSVC 链接器选项](linker-options.md)

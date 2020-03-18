@@ -6,11 +6,11 @@ helpviewer_keywords:
 - persistence, OLE controls
 ms.assetid: 64f8dc80-f110-41af-b3ea-14948f6bfdf7
 ms.openlocfilehash: 42e70f9e48339eddb2a5af4fa288400cce01f490
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855710"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426641"
 ---
 # <a name="persistence-of-ole-controls"></a>OLE 控件的持久性
 
@@ -51,7 +51,7 @@ BOOL PX_Blob(
     HGLOBAL hBlobDefault = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pPX*<br/>
 指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象的指针（通常作为参数传递给 `DoPropExchange`）。
@@ -98,7 +98,7 @@ BOOL PX_Bool(
     BOOL bDefault);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pPX*<br/>
 指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象的指针（通常作为参数传递给 `DoPropExchange`）。
@@ -137,7 +137,7 @@ BOOL PX_Color(
     OLE_COLOR clrDefault);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pPX*<br/>
 指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象的指针（通常作为参数传递给 `DoPropExchange`）。
@@ -176,7 +176,7 @@ BOOL PX_Currency(
     CY cyDefault);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pPX*<br/>
 指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象的指针（通常作为参数传递给 `DoPropExchange`）。
@@ -213,7 +213,7 @@ BOOL PX_DataPath(
     CDataPathProperty& dataPathProperty);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pPX*<br/>
 指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象的指针（通常作为参数传递给 `DoPropExchange`）。
@@ -249,7 +249,7 @@ BOOL PX_Double(
     double doubleDefault);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pPX*<br/>
 指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象的指针（通常作为参数传递给 `DoPropExchange`）。
@@ -284,7 +284,7 @@ BOOL PX_Font(
     LPFONTDISP pFontDispAmbient = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pPX*<br/>
 指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象的指针（通常作为参数传递给 `DoPropExchange`）。
@@ -326,7 +326,7 @@ BOOL PX_Float(
     float floatDefault);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pPX*<br/>
 指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象的指针（通常作为参数传递给 `DoPropExchange`）。
@@ -361,7 +361,7 @@ BOOL PX_IUnknown(
     LPUNKNOWN pUnkDefault = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pPX*<br/>
 指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象的指针（通常作为参数传递给 `DoPropExchange`）。
@@ -403,7 +403,7 @@ BOOL PX_Long(
     long lDefault);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pPX*<br/>
 指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象的指针（通常作为参数传递给 `DoPropExchange`）。
@@ -442,7 +442,7 @@ BOOL PX_Picture(
     CPictureHolder& pictDefault);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pPX*<br/>
 指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象的指针（通常作为参数传递给 `DoPropExchange`）。
@@ -481,7 +481,7 @@ BOOL PX_Short(
     short sDefault);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pPX*<br/>
 指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象的指针（通常作为参数传递给 `DoPropExchange`）。
@@ -520,7 +520,7 @@ BOOL PX_ULong(
     long ulDefault);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pPX*<br/>
 指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象的指针（通常作为参数传递给 `DoPropExchange`）。
@@ -559,7 +559,7 @@ BOOL PX_UShort(
     USHORT usDefault);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pPX*<br/>
 指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象的指针（通常作为参数传递给 `DoPropExchange`）。
@@ -598,7 +598,7 @@ BOOL PXstring(
     CString strDefault);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pPX*<br/>
 指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象的指针（通常作为参数传递给 `DoPropExchange`）。
@@ -630,7 +630,7 @@ BOOL PX_VBXFontConvert(
     CFontHolder& font);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pPX*<br/>
 指向[CPropExchange](../../mfc/reference/cpropexchange-class.md)对象的指针（通常作为参数传递给 `DoPropExchange`）。

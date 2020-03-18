@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-ms.openlocfilehash: be5a905725c2ed0f056f1686d17d87c74b9cdc5e
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 79854d8ead089aeba88fbdc151fdc0788dd181c1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416062"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445793"
 ---
 # <a name="platformcollectionsbackinsertiterator-class"></a>Platform::Collections::BackInsertIterator 类
 
@@ -26,7 +26,7 @@ class BackInsertIterator :
 public ::std::iterator<::std::output_iterator_tag, void, void, void, void>;
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *T*<br/>
 当前集合中项目的类型。
@@ -35,7 +35,7 @@ public ::std::iterator<::std::output_iterator_tag, void, void, void, void>;
 
 BackInsertIterator 类实现 [back_insert_iterator Class](../standard-library/back-insert-iterator-class.md)所要求的规则。
 
-### <a name="members"></a>成员
+### <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -59,8 +59,8 @@ BackInsertIterator 类实现 [back_insert_iterator Class](../standard-library/ba
 
 **标头：** collection.h
 
-<a name="namespace-platformcollections"></a>**命名空间：** Platform::Collections
----
+**命名空间：** Platform::Collections
+
 ## <a name="ctor"></a>BackInsertIterator：： BackInsertIterator 构造函数
 
 初始化 `BackInsertIterator` 类的新实例。
@@ -68,12 +68,11 @@ BackInsertIterator 类实现 [back_insert_iterator Class](../standard-library/ba
 ## <a name="syntax"></a>语法
 
 ```
-
 explicit BackInsertIterator(
    Windows::Foundation::Collections::IVector<T>^ v);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *v*<br/>
 IVector\<T > 对象。
@@ -92,7 +91,7 @@ IVector\<T > 对象。
 BackInsertIterator& operator=( const T& t);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *t*<br/>
 要追加到当前集合的对象。
@@ -126,7 +125,6 @@ BackInsertIterator& operator*();
 ## <a name="syntax"></a>语法
 
 ```
-
 BackInsertIterator& operator++();
 
 BackInsertIterator operator++(int);

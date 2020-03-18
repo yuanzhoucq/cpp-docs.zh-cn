@@ -20,12 +20,12 @@ helpviewer_keywords:
 - databases [MFC], dialog data exchange (DDX) support
 - DAO [MFC], dialog data exchange (DDX) support
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
-ms.openlocfilehash: 8b216941837cd79492aa6cb707481073b5321bce
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 48ffe6f124b91ee8ad60452f26d895bc2698779b
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426713"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447302"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>CRecordView 和 CDaoRecordView 的对话框数据交换函数
 
@@ -68,7 +68,7 @@ void AFXAPI DDX_FieldCBIndex(
     CDaoRecordset* pRecordset);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pDX*<br/>
 指向[CDataExchange](../../mfc/reference/cdataexchange-class.md)对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
@@ -116,7 +116,7 @@ void AFXAPI DDX_FieldCBString(
     CDaoRecordset* pRecordset);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pDX*<br/>
 指向[CDataExchange](../../mfc/reference/cdataexchange-class.md)对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
@@ -164,7 +164,7 @@ void AFXAPI DDX_FieldCBStringExact(
     CDaoRecordset* pRecordset);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pDX*<br/>
 指向[CDataExchange](../../mfc/reference/cdataexchange-class.md)对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
@@ -212,7 +212,7 @@ void AFXAPI DDX_FieldCheck(
     CDaoRecordset* pRecordset);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pDX*<br/>
 指向[CDataExchange](../../mfc/reference/cdataexchange-class.md)对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
@@ -254,7 +254,7 @@ void AFXAPI DDX_FieldLBIndex(
     CDaoRecordset* pRecordset);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pDX*<br/>
 指向[CDataExchange](../../mfc/reference/cdataexchange-class.md)对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
@@ -302,7 +302,7 @@ void AFXAPI DDX_FieldLBString(
     CDaoRecordset* pRecordset);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pDX*<br/>
 指向[CDataExchange](../../mfc/reference/cdataexchange-class.md)对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
@@ -350,7 +350,7 @@ void AFXAPI DDX_FieldLBStringExact(
     CDaoRecordset* pRecordset);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pDX*<br/>
 指向[CDataExchange](../../mfc/reference/cdataexchange-class.md)对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
@@ -398,7 +398,7 @@ void AFXAPI DDX_FieldRadio(
     CDaoRecordset* pRecordset);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pDX*<br/>
 指向[CDataExchange](../../mfc/reference/cdataexchange-class.md)对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
@@ -446,7 +446,7 @@ void AFXAPI DDX_FieldScroll(
     CDaoRecordset* pRecordset);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pDX*<br/>
 指向[CDataExchange](../../mfc/reference/cdataexchange-class.md)对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
@@ -476,7 +476,8 @@ void AFXAPI DDX_FieldScroll(
 
   **标头**afxdao
 
-  ## <a name="ddx_fieldslider"></a>DDX_FieldSlider
+## <a name="ddx_fieldslider"></a>DDX_FieldSlider
+
 `DDX_FieldSlider` 函数将同步记录视图中滑块控件的滚动块位置和与记录视图关联的记录集（或选择将其映射到的任何整数变量）的**int**字段数据成员。
 
 ### <a name="syntax"></a>语法
@@ -495,7 +496,7 @@ void AFXAPI DDX_FieldSlider(
    CDaoRecordset* pRecordset );
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pDX*<br/>
 指向[CDataExchange](cdataexchange-class.md)对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
@@ -641,7 +642,7 @@ void AFXAPI DDX_FieldText(
     CDaoRecordset* pRecordset);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pDX*<br/>
 指向[CDataExchange](../../mfc/reference/cdataexchange-class.md)对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。

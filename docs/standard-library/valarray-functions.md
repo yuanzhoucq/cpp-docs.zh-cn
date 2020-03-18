@@ -41,11 +41,11 @@ helpviewer_keywords:
 - std::tan [C++]
 - std::tanh [C++]
 ms.openlocfilehash: 12275f93c751b4d9ffafcae62621b251a8bc9bfc
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78875602"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427607"
 ---
 # <a name="ltvalarraygt-functions"></a>&lt;valarray&gt; 函数
 
@@ -58,7 +58,7 @@ template <class Type>
 valarray<Type> abs(const valarray<Type>& left);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 输入 valarray，它的元素通过成员函数进行操作。
@@ -113,7 +113,7 @@ template <class Type>
 valarray<Type> acos(const valarray<Type>& left);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 输入 valarray，它的元素通过成员函数进行操作。
@@ -186,7 +186,7 @@ template <class Type>
 valarray<Type> asin(const valarray<Type>& left);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 输入 valarray，它的元素通过成员函数进行操作。
@@ -259,7 +259,7 @@ template <class Type>
 valarray<Type> atan(const valarray<Type>& left);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 输入 valarray，它的元素通过成员函数进行操作。
@@ -341,7 +341,7 @@ template <class Type>
 valarray<Type> atan2(const Type& left, const valarray<Type>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 常量数值数据类型或输入 valarray，它的元素为反正切值参数的 y 轴提供值。
@@ -436,7 +436,7 @@ template <class Type>
 valarray<Type> cos(const valarray<Type>& left);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 输入 valarray，它的元素通过成员函数进行操作。
@@ -513,7 +513,7 @@ template <class Type>
 valarray<Type> cosh(const valarray<Type>& left);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 输入 valarray，它的元素通过成员函数进行操作。
@@ -603,7 +603,7 @@ template <class Type>
 valarray<Type> exp(const valarray<Type>& left);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 输入 valarray，它的元素通过成员函数进行操作。
@@ -666,7 +666,7 @@ template <class Type>
 valarray<Type> log(const valarray<Type>& left);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 输入 valarray，它的元素通过成员函数进行操作。
@@ -729,7 +729,7 @@ template <class Type>
 valarray<Type> log10(const valarray<Type>& left);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 输入 valarray，它的元素通过成员函数进行操作。
@@ -809,7 +809,7 @@ pow(
     const valarray<Type>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 输入 valarray，它的元素为每个要指数化的元素提供基数。
@@ -891,7 +891,7 @@ template <class Type>
 valarray<Type> sin(const valarray<Type>& left);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 输入 valarray，它的元素通过成员函数进行操作。
@@ -968,7 +968,7 @@ template <class Type>
 valarray<Type> sinh(const valarray<Type>& left);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 输入 valarray，它的元素通过成员函数进行操作。
@@ -1051,7 +1051,7 @@ template <class Type>
 valarray<Type> sqrt(const valarray<Type>& left);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 输入 valarray，它的元素通过成员函数进行操作。
@@ -1107,7 +1107,7 @@ void swap(
     valarray<Type>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 一个 `valarray` 类型的对象。
@@ -1128,7 +1128,7 @@ template <class Type>
 valarray<Type> tan(const valarray<Type>& left);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 输入 valarray，它的元素通过成员函数进行操作。
@@ -1205,7 +1205,7 @@ template <class Type>
 valarray<Type> tanh(const valarray<Type>& left);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 输入 valarray，它的元素通过成员函数进行操作。

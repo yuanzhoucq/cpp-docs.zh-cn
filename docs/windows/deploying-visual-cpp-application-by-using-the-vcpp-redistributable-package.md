@@ -4,18 +4,18 @@ ms.date: 04/23/2019
 helpviewer_keywords:
 - walkthrough, deploying a Visual C++ application by using the redistributable package
 ms.assetid: e59becbf-b8c6-4c8e-bab3-b69cc1ed3e5e
-ms.openlocfilehash: a235fa12138fd00a0f6d722cad7776980ad3d292
-ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.openlocfilehash: 1e09debc53e5b1b3e1eeaa6a63924b04fd2b7ca5
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877289"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443887"
 ---
-# <a name="walkthrough-deploying-a-visual-c-application-by-using-the-visual-c-redistributable-package"></a>演练：使用 Visual C++ 可再发行软件包部署 Visual C++ 应用程序
+# <a name="walkthrough-deploying-a-visual-c-application-by-using-the-visual-c-redistributable-package"></a>演练：使用 Visual C++ 可再发行组件包部署 Visual C++ 应用程序
 
 本文分步说明了如何使用 Visual C++ 可再发行组件包部署 Visual C++ 应用程序的方法。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 要完成本演练，必须具有以下组件：
 
@@ -25,7 +25,7 @@ ms.locfileid: "64877289"
 
 ### <a name="to-use-the-visual-c-redistributable-package-to-deploy-an-application"></a>使用 Visual C++ 可再发行组件包部署应用程序
 
-1.  请按照[演练：使用安装项目部署 Visual C++ 应用程序](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md)中的步骤创建和生成 MFC 应用程序。
+1.  按照[演练：使用安装项目部署 Visual C++ 应用程序](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md)中的步骤创建并生成 MFC 应用程序。
 
 1. 创建文件，将其命名为 setup.bat，并向其添加以下命令。 将 `MyMFCApplication` 更改为项目名称。
 
@@ -54,7 +54,7 @@ ms.locfileid: "64877289"
 
       - MFC 应用程序（.exe 文件）。
 
-      - vcredist_x86.exe。 此文件位于 \Program Files (x86)\Microsoft Visual Studio \<version>\SDK\Bootstrapper\Packages\. 中 也可以从 [Microsoft](https://www.microsoft.com/download/confirmation.aspx?id=5555) 下载此文件。
+      - vcredist_x86.exe。 在 Visual Studio 2015 中，此文件位于 *% VCINSTALLDIR%%\\1033\\* 中。 在 Visual Studio 2017 和 Visual Studio 2019 中，此文件位于 *% VCToolsRedistDir%* 。 你还可以[从 Microsoft 下载最新的受支持的再发行文件](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)。
 
       - 在之前的步骤中创建的 setup.bat 文件。
 
@@ -72,7 +72,7 @@ ms.locfileid: "64877289"
 
    1. 在“保存自解压指令”页上，选择“保存自解压指令(SED)文件”，然后选择“下一步”。
 
-   1. 在“创建包”页上，选择“下一步”。 选择“完成”。
+   1. 在“创建包”页上，选择“下一步”。 选择 **“完成”** 。
 
 1. 在另一台没有 Visual C++ 库的计算机上测试自解压安装程序文件：
 
@@ -83,8 +83,8 @@ ms.locfileid: "64877289"
       自解压安装程序文件可安装在步骤 2 中指定的文件夹中的 MFC 应用程序。 由于 Visual C++ 可再发行组件包安装程序包含在自解压安装程序文件中，因此应用程序成功运行。
 
       > [!IMPORTANT]
-      > 为了确定安装的运行时版本，安装程序会检查注册表项 \HKLM\SOFTWARE\Microsoft\VisualStudio\\\<version>\VC\Runtimes\\<platform>。 如果当前安装的版本比安装程序尝试安装的版本高，则安装程序成功返回而不安装较旧版本，并在控制面板中的已安装程序页上留下其他条目。
+      > 若要确定安装的运行时版本，安装程序会检查注册表项 \\HKLM\\\SOFTWARE\\Microsoft\\_VisualStudio\\\\\\\\_ \\_平台_版本。 如果当前安装的版本比安装程序尝试安装的版本高，则安装程序成功返回而不安装较旧版本，并在控制面板中的已安装程序页上留下其他条目。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [部署示例](deployment-examples.md)<br/>

@@ -99,11 +99,11 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
 ms.openlocfilehash: 14befb819a30238abb5780b1bdcc6d74402e8976
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78875742"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426851"
 ---
 # <a name="crebarctrl-class"></a>CReBarCtrl 类
 
@@ -115,7 +115,7 @@ ms.locfileid: "78875742"
 class CReBarCtrl : public CWnd
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -229,7 +229,7 @@ void BeginDrag(
     DWORD dwPos = (DWORD)-1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *uBand*<br/>
 拖放操作将影响的带区的从零开始的索引。
@@ -249,7 +249,7 @@ virtual BOOL Create(
     UINT nID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwStyle*<br/>
 指定应用于控件的 rebar 控件样式的组合。 有关支持的样式的列表，请参阅 Windows SDK 中的[Rebar 控件样式](/windows/win32/Controls/rebar-control-styles)。
@@ -294,7 +294,7 @@ virtual BOOL CreateEx(
     UINT nID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwExStyle*<br/>
 指定正在创建的控件的扩展样式。 有关扩展 Windows 样式的列表，请参阅 Windows SDK 中[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)的*dwExStyle*参数。
@@ -339,7 +339,7 @@ CReBarCtrl();
 BOOL DeleteBand(UINT uBand);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *uBand*<br/>
 要删除的带区的从零开始的索引。
@@ -360,7 +360,7 @@ BOOL DeleteBand(UINT uBand);
 void DragMove(DWORD dwPos = (DWORD)-1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwPos*<br/>
 一个包含新鼠标坐标的 DWORD 值。 水平坐标包含在 LOWORD 中，垂直坐标包含在 HIWORD 中。 如果传递（DWORD）-1，则 rebar 控件将使用鼠标上一次调用控件线程 `GetMessage` 或 `PeekMessage`时的位置。
@@ -383,7 +383,7 @@ void GetBandBorders(
     LPRECT prc) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *uBand*<br/>
 要为其检索边框的带区的从零开始的索引。
@@ -413,7 +413,7 @@ BOOL GetBandInfo(
     REBARBANDINFO* prbbi) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *uBand*<br/>
 要为其检索信息的带区的从零开始的索引。
@@ -433,7 +433,7 @@ BOOL GetBandInfo(
 void GetBandMargins(PMARGINS pMargins);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pMargins*<br/>
 指向将接收信息的[边距](/windows/win32/api/uxtheme/ns-uxtheme-margins)结构的指针。
@@ -462,7 +462,7 @@ UINT GetBarHeight() const;
 BOOL GetBarInfo(REBARINFO* prbi) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *prbi*<br/>
 指向将接收 rebar 控件信息的[REBARINFO](/windows/win32/api/commctrl/ns-commctrl-rebarinfo)结构的指针。 发送此消息前，必须将此结构的*cbSize*成员设置为 `sizeof(REBARINFO)`。
@@ -491,7 +491,7 @@ COLORREF GetBkColor() const;
 BOOL GetColorScheme(COLORSCHEME* lpcs);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpcs*<br/>
 指向[COLORSCHEME](/windows/win32/api/commctrl/ns-commctrl-colorscheme)结构的指针，如 Windows SDK 中所述。
@@ -578,7 +578,7 @@ BOOL GetRect(
     LPRECT prc) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *uBand*<br/>
 Rebar 控件中带区的从零开始的索引。
@@ -618,7 +618,7 @@ UINT GetRowCount() const;
 UINT GetRowHeight(UINT uRow) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *uRow*<br/>
 要检索其高度的带区的从零开始的索引。
@@ -667,7 +667,7 @@ CToolTipCtrl* GetToolTips() const;
 int HitTest(RBHITTESTINFO* prbht);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *prbht*<br/>
 指向[RBHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-rbhittestinfo)结构的指针。 在发送消息之前，必须在工作区坐标中将此结构的 `pt` 成员初始化为要测试的点。
@@ -684,7 +684,7 @@ int HitTest(RBHITTESTINFO* prbht);
 int IDToIndex(UINT uBandID) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *uBandID*<br/>
 指定带区的应用程序定义的标识符，在插入带区时传递到[REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow)结构的 `wID` 成员中。
@@ -703,7 +703,7 @@ BOOL InsertBand(
     REBARBANDINFO* prbbi);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *uIndex*<br/>
 要插入带区的位置的从零开始的索引。 如果将此参数设置为-1，则控件将在最后一个位置添加新的带区。
@@ -727,7 +727,7 @@ BOOL InsertBand(
 void MaximizeBand(UINT uBand);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *uBand*<br/>
 要最大化的带区的从零开始的索引。
@@ -748,7 +748,7 @@ void MaximizeBand(UINT uBand);
 void MinimizeBand(UINT uBand);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *uBand*<br/>
 要最小化的带区的从零开始的索引。
@@ -771,7 +771,7 @@ BOOL MoveBand(
     UINT uTo);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *uFrom*<br/>
 要移动的带区的从零开始的索引。
@@ -793,7 +793,7 @@ void PushChevron(
     LPARAM lAppValue);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *uBand*<br/>
 要推送其 v 形的带区的从零开始的索引。
@@ -809,7 +809,7 @@ void PushChevron(
 void RestoreBand(UINT uBand);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *uBand*<br/>
 要最大化的带区的从零开始的索引。
@@ -832,7 +832,7 @@ BOOL SetBandInfo(
     REBARBANDINFO* prbbi);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *uBand*<br/>
 要接收新设置的带区的从零开始的索引。
@@ -858,7 +858,7 @@ BOOL SetBandWidth(
     int cxWidth);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -893,7 +893,7 @@ BOOL SetBandWidth(
 BOOL SetBarInfo(REBARINFO* prbi);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *prbi*<br/>
 指向[REBARINFO](/windows/win32/api/commctrl/ns-commctrl-rebarinfo)结构的指针，该结构包含要设置的信息。 发送此消息前，必须将此结构的 `cbSize` 成员设置为 `sizeof(REBARINFO)`
@@ -914,7 +914,7 @@ BOOL SetBarInfo(REBARINFO* prbi);
 COLORREF SetBkColor(COLORREF clr);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *clr*<br/>
 COLORREF 值，它表示新的默认背景色。
@@ -935,7 +935,7 @@ COLORREF 值，它表示新的默认背景色。
 void SetColorScheme(const COLORSCHEME* lpcs);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpcs*<br/>
 指向[COLORSCHEME](/windows/win32/api/commctrl/ns-commctrl-colorscheme)结构的指针，如 Windows SDK 中所述。
@@ -954,7 +954,7 @@ DWORD SetExtendedStyle(
     DWORD dwStyleEx);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -977,7 +977,7 @@ DWORD SetExtendedStyle(
 BOOL SetImageList(CImageList* pImageList);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pImageList*<br/>
 指向[CImageList](../../mfc/reference/cimagelist-class.md)对象的指针，该对象包含要分配给 rebar 控件的图像列表。
@@ -994,7 +994,7 @@ BOOL SetImageList(CImageList* pImageList);
 CWnd* SetOwner(CWnd* pWnd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pWnd*<br/>
 指向要设置为 rebar 控件所有者的 `CWnd` 对象的指针。
@@ -1018,7 +1018,7 @@ CWnd* SetOwner(CWnd* pWnd);
 CPalette* SetPalette(HPALETTE hPal);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hPal*<br/>
 一个 HPALETTE，指定 rebar 控件将使用的新调色板。
@@ -1039,7 +1039,7 @@ CPalette* SetPalette(HPALETTE hPal);
 COLORREF SetTextColor(COLORREF clr);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *clr*<br/>
 一个 COLORREF 值，该值表示 `CReBarCtrl` 对象中的新文本颜色。
@@ -1060,7 +1060,7 @@ COLORREF SetTextColor(COLORREF clr);
 void SetToolTips(CToolTipCtrl* pToolTip);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pToolTip*<br/>
 指向[CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md)对象的指针
@@ -1077,7 +1077,7 @@ void SetToolTips(CToolTipCtrl* pToolTip);
 HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pszSubAppName*<br/>
 指向包含要设置的 rebar 视觉样式的 Unicode 字符串的指针。
@@ -1100,7 +1100,7 @@ BOOL ShowBand(
     BOOL fShow = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *uBand*<br/>
 Rebar 控件中带区的从零开始的索引。
@@ -1120,7 +1120,7 @@ Rebar 控件中带区的从零开始的索引。
 BOOL SizeToRect(CRect& rect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rect*<br/>
 对[CRect](../../atl-mfc-shared/reference/crect-class.md)对象的引用，该对象指定要调整 rebar 控件大小的矩形。

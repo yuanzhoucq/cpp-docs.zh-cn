@@ -3,16 +3,15 @@ title: do-while 语句 (C)
 ms.date: 11/04/2016
 f1_keywords:
 - do
-- while
 helpviewer_keywords:
 - do-while keyword [C]
 ms.assetid: f2ac20a6-10c7-4a08-b5e3-c3b3639dbeaf
-ms.openlocfilehash: 052b02beca49f5de19c6f68cc475edb5f5daf6e2
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 3658fe7635ad77db6d6e08ff9d7c30e29d665721
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147498"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438587"
 ---
 # <a name="do-while-statement-c"></a>do-while 语句 (C)
 
@@ -20,11 +19,11 @@ ms.locfileid: "56147498"
 
 ## <a name="syntax"></a>语法
 
-*iteration-statement*: &nbsp;&nbsp;&nbsp;&nbsp;**do**  *statement*  **while (**  *expression*  **) ;**
+*迭代语句*： &nbsp;&nbsp;&nbsp;**在（** *expression* **）** 时 &nbsp;**do***语句*;
 
 在执行循环体后，将计算 do-while 语句中的 expression。 因此，总是至少执行一次循环体。
 
-expression 必须具有算法或指针类型。 执行过程如下所示：
+expression必须具有算法或指针类型。 执行过程如下所示：
 
 1. 执行语句体。
 
@@ -42,8 +41,8 @@ do
 } while ( x > 0 );
 ```
 
-在此 do-while 语句中，无论 `x` 的初始值是什么，`y = f( x );` 和 `x--;` 这两个语句都会执行。 然后将计算 `x > 0`。 如果 `x` 大于 0，则会再次执行语句体并重新计算 `x > 0`。 只要 `x` 保持大于 0，语句主体就会重复执行。 当 `x` 变为 0 或负值时，do-while 语句的执行将终止。 将至少执行一次循环体。
+在此 do-while 语句中，无论 `y = f( x );` 的初始值是什么，`x--;` 和 `x` 这两个语句都会执行。 然后将计算 `x > 0`。 如果 `x` 大于 0，则会再次执行语句体并重新计算 `x > 0`。 只要 `x` 保持大于 0，语句主体就会重复执行。 当  *变为 0 或负值时，do-while*`x` 语句的执行将终止。 将至少执行一次循环体。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [do-while 语句 (C++)](../cpp/do-while-statement-cpp.md)

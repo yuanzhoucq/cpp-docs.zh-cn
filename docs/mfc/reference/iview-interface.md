@@ -12,12 +12,12 @@ helpviewer_keywords:
 - IView class [MFC]
 - views [MFC], classes
 ms.assetid: 9321f299-486e-4551-bee9-d2c4a7b91548
-ms.openlocfilehash: 22e08a70ff4cc742406a1489899c0ba1df7eb664
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: e8afa7a5f5a7692f88ace4da08209b80f902b603
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426251"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445664"
 ---
 # <a name="iview-interface"></a>IView 接口
 
@@ -29,7 +29,7 @@ ms.locfileid: "79426251"
 interface class IView
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>公共方法
 
@@ -54,11 +54,12 @@ interface class IView
 ## <a name="onactivateview"></a>IView：： OnActivateView
 
 当激活或停用视图时，由 MFC 调用。
+
 ```
 void OnActivateView(bool activate);
 ```
 
-## <a name="parameters"></a>parameters
+## <a name="parameters"></a>参数
 
 *激活*<br/>
 指示是否正在激活或停用视图。
@@ -66,6 +67,7 @@ void OnActivateView(bool activate);
 ## <a name="oninitialupdate"></a>IView：： OnInitialUpdate
 
 在视图第一次附加到文档之后但最初显示视图之前由框架调用。
+
 ```
 void OnInitialUpdate();
 ```
@@ -73,6 +75,7 @@ void OnInitialUpdate();
 ## <a name="onupdate"></a>IView：： OnUpdate
 
 在视图的文档被修改后由 MFC 调用。
+
 ```
 void OnUpdate();
 ```

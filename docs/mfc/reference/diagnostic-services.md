@@ -18,12 +18,12 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-ms.openlocfilehash: 4cf3f53d1e238218b4eb892dc92e3c823dcc1296
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 6880a6a3d25738bd0480168902044530d06f7e7f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426749"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446213"
 ---
 # <a name="diagnostic-services"></a>诊断服务
 
@@ -109,6 +109,7 @@ _AFX_SECURE_NO_WARNINGS
 // define this before including any afx files in *pch.h* (*stdafx.h* in Visual Studio 2017 and earlier)
 #define _AFX_SECURE_NO_WARNINGS
 ```
+
 ```cpp
 CRichEditCtrl* pRichEdit = new CRichEditCtrl;
 pRichEdit->Create(WS_CHILD|WS_VISIBLE|WS_BORDER|ES_MULTILINE,
@@ -143,7 +144,7 @@ void AfxDebugBreak( );
 ASSERT(booleanExpression)
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *booleanExpression*<br/>
 指定一个计算结果为非零值或0的表达式（包括指针值）。
@@ -179,7 +180,7 @@ ASSERT(booleanExpression)
 ASSERT_KINDOF(classname, pobject)
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 classname<br/>
 `CObject`派生类的名称。
@@ -214,7 +215,7 @@ classname<br/>
 ASSERT_VALID(pObject)
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pObject*<br/>
 指定从具有 `AssertValid` 成员函数的重写版本的 `CObject` 派生的类的对象。
@@ -298,7 +299,7 @@ ENSURE(  booleanExpression )
 ENSURE_VALID( booleanExpression  )
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *booleanExpression*<br/>
 指定要测试的布尔表达式。
@@ -377,7 +378,7 @@ TRACE(DWORD  category,  UINT  level, LPCSTR lpszFormat, ...)
 VERIFY(booleanExpression)
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *booleanExpression*<br/>
 指定一个计算结果为非零值或0的表达式（包括指针值）。
@@ -436,7 +437,7 @@ MFC 用于在调试时转储对象状态的内部函数。
 void AfxDump(const CObject* pOb);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pOb*<br/>
 指向派生自 `CObject`的类的对象的指针。
@@ -549,7 +550,7 @@ BOOL  AfxCheckMemory();
 void AfxDump(const CObject* pOb);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pOb*<br/>
 指向派生自 `CObject`的类的对象的指针。
@@ -572,7 +573,7 @@ void AfxDump(const CObject* pOb);
 void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *dwTarget*<br/>
 指示转储输出的目标。 可能的值可以使用按位 "或" （ **&#124;** ）运算符组合在一起，如下所示：
@@ -621,7 +622,7 @@ BFF928E0: WINDOWS\SYSTEM\KERNEL32.DLL! UTUnRegister + 2492 bytes
 
 例如，下表描述了上述输出的第一行：
 
-|输出|说明|
+|Output|说明|
 |------------|-----------------|
 |`00427D55:`|最后一个函数调用的返回地址。|
 |`DUMP2\DEBUG\DUMP2.EXE!`|包含函数调用的模块的完整路径名称。|
@@ -635,7 +636,8 @@ BFF928E0: WINDOWS\SYSTEM\KERNEL32.DLL! UTUnRegister + 2492 bytes
 - IMAGEHLP.DLL 文件。DLL 必须在你的路径上。 如果没有此 DLL，此函数将显示错误消息。 有关 IMAGEHLP.DLL 提供的函数集的信息，请参阅[图像帮助库](/windows/win32/Debug/image-help-library)。
 
 - 堆栈上具有框架的模块必须包含调试信息。 如果它们不包含调试信息，则函数仍将生成堆栈跟踪，但不会详细说明跟踪。
-  ### <a name="requirements"></a>要求
+
+### <a name="requirements"></a>要求
 
 **标头：** afx.h
 
@@ -647,7 +649,7 @@ BFF928E0: WINDOWS\SYSTEM\KERNEL32.DLL! UTUnRegister + 2492 bytes
 BOOL AFXAPI AfxEnableMemoryLeakDump(BOOL bDump);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *bDump*<br/>
 中如果为 TRUE，则表示已启用内存泄漏转储;FALSE 表示已禁用内存泄漏转储。
@@ -677,7 +679,7 @@ BOOL AFXAPI AfxEnableMemoryLeakDump(BOOL bDump);
 BOOL AfxEnableMemoryTracking(BOOL bTrack);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *bTrack*<br/>
 如果将此值设置为 TRUE，则打开内存跟踪;FALSE 将关闭。
@@ -714,7 +716,7 @@ BOOL AfxIsMemoryBlock(
     LONG* plRequestNumber = NULL);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *p*<br/>
 指向要测试的内存块。
@@ -752,7 +754,7 @@ BOOL AfxIsValidAddress(
     BOOL bReadWrite = TRUE);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *lp*<br/>
 指向要测试的内存地址。
@@ -791,7 +793,7 @@ BOOL  AfxIsValidString(
     int nLength = -1);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *lpsz*<br/>
 要测试的指针。
@@ -821,7 +823,7 @@ BOOL  AfxIsValidString(
 AFX_ALLOC_HOOK AfxSetAllocHook(AFX_ALLOC_HOOK pfnAllocHook);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pfnAllocHook*<br/>
 指定要调用的函数的名称。 请参阅有关分配函数的原型的备注。
@@ -862,7 +864,7 @@ AFXAPI AfxDoForAllClasses(
     void* pContext);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pfn*<br/>
 指向要为每个类调用的迭代函数。 函数参数是指向 `CRuntimeClass` 对象的指针和指向调用方向函数提供的额外数据的 void 指针。
@@ -897,7 +899,7 @@ void AfxDoForAllObjects(
     void* pContext);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *pfn*<br/>
 指向要对每个对象执行的迭代函数。 函数参数是指向 `CObject` 的指针，指向调用方向函数提供的额外数据的 void 指针。

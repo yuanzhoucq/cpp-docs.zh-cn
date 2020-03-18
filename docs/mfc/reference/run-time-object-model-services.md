@@ -4,12 +4,12 @@ ms.date: 03/27/2019
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-ms.openlocfilehash: f8b891467d91d0c945b6c59c90dbc49fd7cbcb30
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: a4e471decd07cb2025b833513403b64f43105d0c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426701"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446457"
 ---
 # <a name="run-time-object-model-services"></a>运行时对象模型服务
 
@@ -64,7 +64,7 @@ Microsoft 基础类库提供了两个特定于 OLE 的宏。
 AFX_COMCTL32_IF_EXISTS(  proc );
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *proc*<br/>
 指向包含函数名的以 null 结尾的字符串的指针，或者指定函数的序号值。 如果此参数是序号值，则它必须在低序位字中；高序位字必须为零。 此参数必须采用 Unicode。
@@ -87,7 +87,7 @@ afxcomctl32.h，afxcomctl32.inl
 AFX_COMCTL32_IF_EXISTS2( proc );
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *proc*<br/>
 指向包含函数名的以 null 结尾的字符串的指针，或者指定函数的序号值。 如果此参数是序号值，则它必须在低序位字中；高序位字必须为零。 此参数必须采用 Unicode。
@@ -108,7 +108,7 @@ afxcomctl32.h，afxcomctl32.inl
 DECLARE_DYNAMIC(class_name)
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *class_name*<br/>
 类的实际名称。
@@ -139,7 +139,7 @@ DECLARE_DYNAMIC(class_name)
 DECLARE_DYNCREATE(class_name)
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *class_name*<br/>
 类的实际名称。
@@ -175,7 +175,7 @@ DECLARE_DYNCREATE(class_name)
 DECLARE_OLECTLTYPE( class_name )
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *class_name*<br/>
 控件类的名称。
@@ -198,7 +198,7 @@ DECLARE_OLECTLTYPE( class_name )
 DECLARE_PROPPAGEIDS( class_name )
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *class_name*<br/>
 拥有属性页的控件类的名称。
@@ -221,7 +221,7 @@ DECLARE_PROPPAGEIDS( class_name )
 DECLARE_SERIAL(class_name)
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *class_name*<br/>
 类的实际名称。
@@ -258,7 +258,7 @@ DECLARE_SERIAL 宏包含 DECLARE_DYNAMIC 和 DECLARE_DYNCREATE 的所有功能�
 IMPLEMENT_DYNAMIC(class_name, base_class_name)
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *class_name*<br/>
 类的实际名称。
@@ -290,7 +290,7 @@ IMPLEMENT_DYNAMIC(class_name, base_class_name)
 IMPLEMENT_DYNCREATE(class_name, base_class_name)
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *class_name*<br/>
 类的实际名称。
@@ -329,7 +329,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
     l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8)
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *class_name*<br/>
 类的实际名称。
@@ -340,11 +340,11 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
 *nFlags*<br/>
 包含一个或多个以下标志：
 
-   - `afxRegInsertable` 允许控件显示在 OLE 对象的 "插入对象" 对话框中。
-   - `afxRegApartmentThreading` 将注册表中的线程模型设置为 ThreadingModel = 单元。
-   - `afxRegFreeThreading` 将注册表中的线程模型设置为 ThreadingModel = Free。
+- `afxRegInsertable` 允许控件显示在 OLE 对象的 "插入对象" 对话框中。
+- `afxRegApartmentThreading` 将注册表中的线程模型设置为 ThreadingModel = 单元。
+- `afxRegFreeThreading` 将注册表中的线程模型设置为 ThreadingModel = Free。
 
-         You can combine the two flags `afxRegApartmentThreading` and `afxRegFreeThreading` to set ThreadingModel=Both. See [InprocServer32](/windows/win32/com/inprocserver32) in the Windows SDK for more information on threading model registration.
+可以结合两个标志 `afxRegApartmentThreading` 和 `afxRegFreeThreading` 设置 ThreadingModel = Both。 有关线程模型注册的详细信息，请参阅 Windows SDK 中的[InprocServer32](/windows/win32/com/inprocserver32) 。
 
 *l*， *w1*， *w2*， *b1*， *b2*， *b3*， *b4*， *b5*， *b6*， *b7*， *b8* Components 类的 CLSID。
 
@@ -371,7 +371,7 @@ OLE 类 ID 是对象的唯一128位标识符。 它由 "语法说明" 中的 " *
 DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *class_name*<br/>
 控件类的名称。
@@ -403,7 +403,7 @@ DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
 IMPLEMENT_SERIAL(class_name, base_class_name, wSchema)
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *class_name*<br/>
 类的实际名称。
@@ -440,7 +440,7 @@ UINT "版本号"，将在存档中进行编码，以使反序列化程序能够�
 RUNTIME_CLASS(class_name)
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *class_name*<br/>
 类的实际名称（不用引号引起来）。
@@ -467,7 +467,7 @@ RUNTIME_CLASS 返回指向*class_name*指定的类的[CRuntimeClass](../../mfc/r
 DECLARE_OLECREATE(class_name)
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *class_name*<br/>
 类的实际名称。
@@ -492,7 +492,7 @@ DECLARE_OLECREATE(class_name)
 IMPLEMENT_OLECREATE(class_name, external_name, l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8)
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *class_name*<br/>
 类的实际名称。

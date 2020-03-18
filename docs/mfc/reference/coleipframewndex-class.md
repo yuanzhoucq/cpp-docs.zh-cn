@@ -95,11 +95,11 @@ helpviewer_keywords:
 - COleIPFrameWndEx [MFC], InitUserToobars
 ms.assetid: ebff1560-a1eb-4854-af00-95d4a192bd55
 ms.openlocfilehash: 71c0db8d059ede0016caf7ceb72c7f3ab7da2718
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883913"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426881"
 ---
 # <a name="coleipframewndex-class"></a>COleIPFrameWndEx 类
 
@@ -112,7 +112,7 @@ ms.locfileid: "78883913"
 class COleIPFrameWndEx : public COleIPFrameWnd
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-methods"></a>公共方法
 
@@ -208,7 +208,7 @@ BOOL AddPane(
     BOOL bTail = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中*pControlBar*<br/>
 中*bTail*<br/>
@@ -223,7 +223,7 @@ BOOL AddPane(
 virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中*hdwp*<br/>
 
@@ -238,7 +238,7 @@ void DockPane(
     LPCRECT lpRect = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中*pBar*<br/>
 中*nDockBarID*<br/>
@@ -256,7 +256,7 @@ BOOL DockPaneLeftOf(
     CPane* pLeftOf);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pBar*<br/>
 中指向要停靠的窗格的指针。
@@ -278,7 +278,7 @@ BOOL DockPaneLeftOf(
 BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中*dwDockStyle*<br/>
 
@@ -292,7 +292,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 BOOL EnableDocking(DWORD dwDockStyle);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中*dwDockStyle*<br/>
 
@@ -312,7 +312,7 @@ void EnablePaneMenu(
     BOOL bViewMenuShowsToolbarsOnly = FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中*bEnable*<br/>
 中*uiCustomizeCmd*<br/>
@@ -417,7 +417,7 @@ const CMFCMenuBar* GetMenuBar() const;
 CBasePane* GetPane(UINT nID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中*nID*<br/>
 
@@ -451,7 +451,7 @@ virtual BOOL GetToolbarButtonToolTipText(
     CString& strTTText);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pButton*<br/>
 中指向按钮的指针。
@@ -478,7 +478,7 @@ void InitUserToolbars(
     UINT uiUserToolbarLast)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszRegEntry*<br/>
 中库存储用户工具栏设置的注册表项。
@@ -502,7 +502,7 @@ BOOL InsertPane(
     BOOL bAfter = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中*pControlBar*<br/>
 中*pTarget*<br/>
@@ -537,7 +537,7 @@ BOOL IsPointNearDockSite(
     BOOL& bOuterEdge) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中*点*<br/>
 中*dwBarAlignment*<br/>
@@ -557,7 +557,7 @@ virtual BOOL LoadFrame(
     CCreateContext* pContext = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中*nIDResource*<br/>
 中*dwDefaultStyle*<br/>
@@ -574,7 +574,7 @@ virtual BOOL LoadFrame(
 virtual BOOL OnCloseDockingPane(CDockablePane*);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中*CDockablePane&#42;*<br/>
 
@@ -588,7 +588,7 @@ virtual BOOL OnCloseDockingPane(CDockablePane*);
 virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中*CPaneFrameWnd&#42;*<br/>
 
@@ -604,7 +604,7 @@ virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
 virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pMenuPopup*<br/>
 中指向弹出菜单对象的指针。
@@ -623,7 +623,7 @@ virtual BOOL OnCmdMsg(
     AFX_CMDHANDLERINFO* pHandlerInfo);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中*nID*<br/>
 中*nCode*<br/>
@@ -645,7 +645,7 @@ virtual BOOL OnDrawMenuImage(
     const CRect& rectImage);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 中指向设备上下文的指针。
@@ -675,7 +675,7 @@ virtual void OnDrawMenuLogo(
     const CRect& rectLogo);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 中指向设备上下文的指针。
@@ -700,7 +700,7 @@ virtual BOOL OnMenuButtonToolHitTest(
     TOOLINFO* pTI);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 [in] pButton 指向菜单按钮的指针。
 
@@ -720,7 +720,7 @@ virtual BOOL OnMenuButtonToolHitTest(
 virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中*pFrame*<br/>
 
@@ -736,7 +736,7 @@ virtual void OnSetPreviewMode(
     CPrintPreviewState* pState);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中*bPreview*<br/>
 中*pState*<br/>
@@ -751,7 +751,7 @@ virtual BOOL OnShowCustomizePane(
     UINT uiToolbarID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中*pMenuPane*<br/>
 中*uiToolbarID*<br/>
@@ -766,7 +766,7 @@ virtual BOOL OnShowCustomizePane(
 virtual BOOL OnShowPanes(BOOL bShow);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中*bShow*<br/>
 
@@ -782,7 +782,7 @@ virtual BOOL OnShowPanes(BOOL bShow);
 virtual BOOL OnShowPopupMenu(CMFCPopupMenu* pMenuPopup);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pMenuPopup*<br/>
 中指向要显示的弹出菜单的指针。
@@ -805,7 +805,7 @@ virtual BOOL OnTearOffMenu(
     CPane* pBar);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pMenuPopup*<br/>
 中指向用户选择的弹出菜单的指针。
@@ -837,7 +837,7 @@ CBasePane* PaneFromPoint(
     CRuntimeClass* pRTCBarType) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中*点*<br/>
 中*nSensitivity*<br/>
@@ -855,7 +855,7 @@ CBasePane* PaneFromPoint(
 virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中*pMsg*<br/>
 
@@ -869,7 +869,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中*bNotify*<br/>
 
@@ -886,7 +886,7 @@ void RemovePaneFromDockManager(
     CBasePane* pBarReplacement);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中*pControlBar*<br/>
 中*bDestroy*<br/>
@@ -904,7 +904,7 @@ void RemovePaneFromDockManager(
 void SetDockState(const CDockState& state);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 State<br/>
 中指定停靠状态。
@@ -924,7 +924,7 @@ void SetupToolbarMenu(
     const UINT uiViewUserToolbarCmdLast);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *下拉菜单*<br/>
 中对要修改的[CMenu](../../mfc/reference/cmenu-class.md)对象的引用。
@@ -947,7 +947,7 @@ void ShowPane(
     BOOL bActivate);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中*pBar*<br/>
 中*bShow*<br/>
@@ -966,7 +966,7 @@ virtual void WinHelp(
     UINT nCmd = HELP_CONTEXT);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 [in] dwData 根据*nCmd*指定的帮助类型的要求指定数据。
 

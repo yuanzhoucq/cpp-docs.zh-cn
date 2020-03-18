@@ -4,15 +4,14 @@ ms.date: 10/03/2018
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::AgileEventSource
-- event/Microsoft::WRL::InvokeModeOptions
 helpviewer_keywords:
 - AgileEventSource class
-ms.openlocfilehash: fa1e0a72d865b2993e149f6e4d2b57fe13463a61
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 7a919c0b2aa778ba1db19c3bfc3871542e8f9569
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821735"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441265"
 ---
 # <a name="agileeventsource-class"></a>AgileEventSource 类
 
@@ -42,13 +41,13 @@ class AgileEventSource :
 
 Windows 运行时中的绝大部分组件都是 agile 组件。 有关详细信息，请参阅[线程处理和C++封送处理（/cx）](../../cppcx/threading-and-marshaling-c-cx.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>继承层次结构
 
 `EventSource`
 
 `AgileEventSource`
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>要求
 
 **标头：** 事件。h
 
@@ -58,7 +57,7 @@ Windows 运行时中的绝大部分组件都是 agile 组件。 有关详细信�
 
 ### <a name="public-methods"></a>公共方法
 
-|Name|描述|
+|名称|说明|
 |----------|-----------------|
 |[AgileEventSource：： Add 方法](#add)|将指定委托接口表示的敏捷事件处理程序追加到当前**AgileEventSource**对象的事件处理程序集。|
 

@@ -2,19 +2,17 @@
 title: 兼容性
 description: 介绍 Microsoft 通用 C 运行时库（UCRT）与标准 C 库（POSIX、安全 CRT 和应用商店应用）的兼容性。
 ms.date: 12/06/2019
-f1_keywords:
-- c.programs
 helpviewer_keywords:
 - CRT, compatibility
 - compatibility, C run-time libraries
 - compatibility
 ms.assetid: 346709cb-edda-4909-9a19-3d253eddb6b7
-ms.openlocfilehash: a3bc6f53d1c86268cae95e60a93576c4ac8e3e14
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: fba85462218d0cc2ba1d52caa4e59b2cfb9f4fd6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988728"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443482"
 ---
 # <a name="compatibility"></a>兼容性
 
@@ -24,13 +22,13 @@ ms.locfileid: "74988728"
 
 C++ 标准将全局命名空间中以下划线开头的名称保留到实现中。 POSIX 函数和 Microsoft 特定的运行时库函数都在全局命名空间中，但不属于标准 C 运行时库。 这就是为什么这些函数的首选 Microsoft 实现具有前导下划线的原因。 为了便于移植，UCRT 还支持默认名称，但使用它们编译代码时，Microsoft C++ 编译器会发出弃用警告。 只会弃用默认名称，而不会弃用函数本身。 若要取消警告，在使用原始 POSIX 名称的代码中包含任何标头之前，请定义 `_CRT_NONSTDC_NO_WARNINGS` 。
 
-由于误用参数和未检查缓冲区，标准 C 库中的某些函数具有不安全的使用情况历史记录。 这些函数通常是代码中出现的安全问题的来源。 Microsoft 创建了这些函数的一组更加安全的版本来验证参数用法。 当在运行时检测到问题时，它们将调用无效参数处理程序。  默认情况下，如果使用的函数具有更加安全的变体，Microsoft C++ 编译器会发出弃用警告。 将代码编译为C++时，可以将 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` 定义为1，以消除大多数警告。 此宏允许模板重载调用更安全的变体，同时保持可移植的源代码。 若要取消警告，在使用这些函数的代码中包含任何标头之前，请定义 `_CRT_SECURE_NO_WARNINGS` 。 有关详细信息，请参阅 [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md)。
+由于误用参数和未检查缓冲区，标准 C 库中的某些函数具有不安全的使用情况历史记录。 这些函数通常是代码中出现的安全问题的来源。 Microsoft 创建了这些函数的一组更加安全的版本来验证参数用法。 当在运行时检测到问题时，它们将调用无效参数处理程序。  默认情况下，如果使用的函数具有更加安全的变体，Microsoft C++ 编译器会发出弃用警告。 将代码编译为C++时，可以将 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` 定义为1，以消除大多数警告。 此宏允许模板重载调用更安全的变体，同时保持可移植的源代码。 若要取消警告，在使用这些函数的代码中包含任何标头之前，请定义 `_CRT_SECURE_NO_WARNINGS` 。 有关详细信息，请参阅 [CRT 中的安全功能](../c-runtime-library/security-features-in-the-crt.md)。
 
 除非文档中对特定函数另有注明，否则 UCRT 与 Windows API 可兼容。  Windows 应用商店或通用 Windows 平台（[UWP](/uwp)）应用中不支持某些功能。 [通用 Windows 平台应用中不支持的 CRT 函数](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)中列出了这些函数。
 
 ## <a name="related-articles"></a>相关文章
 
-|职务|描述|
+|职务|说明|
 |-----------|-----------------|
 |[UWP 应用、Windows 运行时和 C 运行时](../c-runtime-library/windows-store-apps-the-windows-runtime-and-the-c-run-time.md)|说明 UCRT 例程何时与通用 Windows 应用或 Microsoft Store 应用不兼容。|
 |[ANSI C 遵从性](../c-runtime-library/ansi-c-compliance.md)|说明 UCRT 中符合标准的命名。|

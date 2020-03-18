@@ -7,11 +7,11 @@ helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
 ms.openlocfilehash: 4885edf57988d5f83b56ba6a71da85877354d3ce
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856437"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426677"
 ---
 # <a name="c-attributes-for-com-and-net"></a>适用于 COM 和 .NET 的 C++ 属性
 
@@ -82,7 +82,7 @@ class CMyReceiver
 
 C++可以使用以下四个基本字段来描述属性：可以将其应用于（**适用**于），如果它们是可重复的或不是（可**重复**的），则需要存在其他属性（**必需的属性**），并与其他属性（**无效属性**）不兼容。 这些字段在每个属性的参考主题的随附表中列出。 下面介绍了其中的每个字段。
 
-### <a name="applies-to"></a>适用于
+### <a name="applies-to"></a>应用于
 
 此字段描述为指定C++属性的合法目标的不同语言元素。 例如，如果属性在 "**应用**于" 字段中指定 "类"，则表示该属性只能应用于合法C++类。 如果该特性应用于类的成员函数，则会导致语法错误。
 
@@ -92,7 +92,7 @@ C++可以使用以下四个基本字段来描述属性：可以将其应用于�
 
 此字段指示该属性是否可重复应用于同一目标。 大多数属性是不可重复的。
 
-### <a name="required-attributes"></a>所需的属性
+### <a name="required-attributes"></a>必需的属性
 
 此字段列出了需要存在（即应用于同一目标）以使指定属性正常工作的其他属性。 属性具有此字段的任何条目的情况并不常见。
 

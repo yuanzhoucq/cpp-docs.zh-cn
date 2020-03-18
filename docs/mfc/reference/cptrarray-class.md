@@ -4,50 +4,50 @@ ms.date: 11/04/2016
 f1_keywords:
 - CPtrArray
 - AFXCOLL/CPtrArray
-- AFXCOLL/CObArray::CObArray
-- AFXCOLL/CObArray::Add
-- AFXCOLL/CObArray::Append
-- AFXCOLL/CObArray::Copy
-- AFXCOLL/CObArray::ElementAt
-- AFXCOLL/CObArray::FreeExtra
-- AFXCOLL/CObArray::GetAt
-- AFXCOLL/CObArray::GetCount
-- AFXCOLL/CObArray::GetData
-- AFXCOLL/CObArray::GetSize
-- AFXCOLL/CObArray::GetUpperBound
-- AFXCOLL/CObArray::InsertAt
-- AFXCOLL/CObArray::IsEmpty
-- AFXCOLL/CObArray::RemoveAll
-- AFXCOLL/CObArray::RemoveAt
-- AFXCOLL/CObArray::SetAt
-- AFXCOLL/CObArray::SetAtGrow
-- AFXCOLL/CObArray::SetSize
+- AFXCOLL/CPtrArray::CPtrArray
+- AFXCOLL/CPtrArray::Add
+- AFXCOLL/CPtrArray::Append
+- AFXCOLL/CPtrArray::Copy
+- AFXCOLL/CPtrArray::ElementAt
+- AFXCOLL/CPtrArray::FreeExtra
+- AFXCOLL/CPtrArray::GetAt
+- AFXCOLL/CPtrArray::GetCount
+- AFXCOLL/CPtrArray::GetData
+- AFXCOLL/CPtrArray::GetSize
+- AFXCOLL/CPtrArray::GetUpperBound
+- AFXCOLL/CPtrArray::InsertAt
+- AFXCOLL/CPtrArray::IsEmpty
+- AFXCOLL/CPtrArray::RemoveAll
+- AFXCOLL/CPtrArray::RemoveAt
+- AFXCOLL/CPtrArray::SetAt
+- AFXCOLL/CPtrArray::SetAtGrow
+- AFXCOLL/CPtrArray::SetSize
 helpviewer_keywords:
-- CObArray [MFC], CObArray
-- CObArray [MFC], Add
-- CObArray [MFC], Append
-- CObArray [MFC], Copy
-- CObArray [MFC], ElementAt
-- CObArray [MFC], FreeExtra
-- CObArray [MFC], GetAt
-- CObArray [MFC], GetCount
-- CObArray [MFC], GetData
-- CObArray [MFC], GetSize
-- CObArray [MFC], GetUpperBound
-- CObArray [MFC], InsertAt
-- CObArray [MFC], IsEmpty
-- CObArray [MFC], RemoveAll
-- CObArray [MFC], RemoveAt
-- CObArray [MFC], SetAt
-- CObArray [MFC], SetAtGrow
-- CObArray [MFC], SetSize
+- CPtrArray [MFC], CPtrArray
+- CPtrArray [MFC], Add
+- CPtrArray [MFC], Append
+- CPtrArray [MFC], Copy
+- CPtrArray [MFC], ElementAt
+- CPtrArray [MFC], FreeExtra
+- CPtrArray [MFC], GetAt
+- CPtrArray [MFC], GetCount
+- CPtrArray [MFC], GetData
+- CPtrArray [MFC], GetSize
+- CPtrArray [MFC], GetUpperBound
+- CPtrArray [MFC], InsertAt
+- CPtrArray [MFC], IsEmpty
+- CPtrArray [MFC], RemoveAll
+- CPtrArray [MFC], RemoveAt
+- CPtrArray [MFC], SetAt
+- CPtrArray [MFC], SetAtGrow
+- CPtrArray [MFC], SetSize
 ms.assetid: c23b87a3-bf84-49d6-a66b-61e999d0938a
-ms.openlocfilehash: 59ecf01b81c4150e2bdae3b6d2862c1b3e91152b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3167c6a388ecbfefce9a72b7bfd720f83639108a
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372395"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444285"
 ---
 # <a name="cptrarray-class"></a>CPtrArray 类
 
@@ -59,9 +59,9 @@ ms.locfileid: "62372395"
 class CPtrArray : public CObject
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
-成员函数`CPtrArray`类似于类的成员函数[CObArray](../../mfc/reference/cobarray-class.md)。 由于此相似性，因此你可以使用 `CObArray` 参考文档获取成员函数细节。 无论您在何处`CObject`指针作为函数参数或返回值替换为指向的指针**void**。
+`CPtrArray` 的成员函数类似于类[CObArray](../../mfc/reference/cobarray-class.md)的成员函数。 由于此相似性，因此你可以使用 `CObArray` 参考文档获取成员函数细节。 无论你在何处看到作为函数参数或返回值的 `CObject` 指针，都要用一个指向**void**的指针。
 
 `CObject* CObArray::GetAt( int <nIndex> ) const;`
 
@@ -71,50 +71,50 @@ class CPtrArray : public CObject
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CObArray::CObArray](../../mfc/reference/cobarray-class.md#cobarray)|构造一个空数组。|
+|[CPtrArray::CPtrArray](../../mfc/reference/cobarray-class.md#cobarray)|构造一个空数组。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CObArray::Add](../../mfc/reference/cobarray-class.md#add)|向数组的末尾添加一个元素；根据需要扩展该数组。|
-|[CObArray::Append](../../mfc/reference/cobarray-class.md#append)|将另一个数组追加到该数组中；根据需要扩展该数组。|
-|[CObArray::Copy](../../mfc/reference/cobarray-class.md#copy)|将另一个数组复制到该数组；根据需要扩展该数组。|
-|[CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)|在该数组中返回对元素指针的临时引用。|
-|[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|若高于当前的上限，则将释放所有未使用的内存。|
-|[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|返回给定索引位置处的值。|
-|[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|获取此数组中的元素数。|
-|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|允许访问该数组中的元素。 可以为 `NULL`。|
-|[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|获取此数组中的元素数。|
-|[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|返回最大的有效索引。|
-|[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|在指定索引处插入一个元素（或另一个数组中的所有元素）。|
-|[CObArray::IsEmpty](../../mfc/reference/cobarray-class.md#isempty)|确定数组是否为空。|
-|[CObArray::RemoveAll](../../mfc/reference/cobarray-class.md#removeall)|从此数组中移除所有元素。|
-|[CObArray::RemoveAt](../../mfc/reference/cobarray-class.md#removeat)|移除特定索引处的元素。|
-|[CObArray::SetAt](../../mfc/reference/cobarray-class.md#setat)|设置给定索引的值；不允许对该数组进行扩展。|
-|[CObArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)|设置给定索引的值；根据需要扩展该数组。|
-|[CObArray::SetSize](../../mfc/reference/cobarray-class.md#setsize)|设置要在该数组中包含的元素数。|
+|[CPtrArray：： Add](../../mfc/reference/cobarray-class.md#add)|向数组的末尾添加一个元素；根据需要扩展该数组。|
+|[CPtrArray：： Append](../../mfc/reference/cobarray-class.md#append)|将另一个数组追加到该数组中；根据需要扩展该数组。|
+|[CPtrArray：： Copy](../../mfc/reference/cobarray-class.md#copy)|将另一个数组复制到该数组；根据需要扩展该数组。|
+|[CPtrArray：： .Value.elementat](../../mfc/reference/cobarray-class.md#elementat)|在该数组中返回对元素指针的临时引用。|
+|[CPtrArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|若高于当前的上限，则将释放所有未使用的内存。|
+|[CPtrArray：： GetAt](../../mfc/reference/cobarray-class.md#getat)|返回给定索引位置处的值。|
+|[CPtrArray：： GetCount](../../mfc/reference/cobarray-class.md#getcount)|获取此数组中的元素数。|
+|[CPtrArray：：](../../mfc/reference/cobarray-class.md#getdata)|允许访问该数组中的元素。 可以为 `NULL`。|
+|[CPtrArray：： GetSize](../../mfc/reference/cobarray-class.md#getsize)|获取此数组中的元素数。|
+|[CPtrArray：： System.array.getupperbound](../../mfc/reference/cobarray-class.md#getupperbound)|返回最大的有效索引。|
+|[CPtrArray：： InsertAt](../../mfc/reference/cobarray-class.md#insertat)|在指定索引处插入一个元素（或另一个数组中的所有元素）。|
+|[CPtrArray：： IsEmpty](../../mfc/reference/cobarray-class.md#isempty)|确定数组是否为空。|
+|[CPtrArray：： RemoveAll](../../mfc/reference/cobarray-class.md#removeall)|从此数组中移除所有元素。|
+|[CPtrArray：： RemoveAt](../../mfc/reference/cobarray-class.md#removeat)|移除特定索引处的元素。|
+|[CPtrArray：： SetAt](../../mfc/reference/cobarray-class.md#setat)|设置给定索引的值；不允许对该数组进行扩展。|
+|[CPtrArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)|设置给定索引的值；根据需要扩展该数组。|
+|[CPtrArray：： SetSize](../../mfc/reference/cobarray-class.md#setsize)|设置要在该数组中包含的元素数。|
 
-### <a name="public-operators"></a>公共运算符
+### <a name="public-operators"></a>公用運算子
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CObArray::operator \[ \]](../../mfc/reference/cobarray-class.md#operator_at)|设置或获取位于指定索引处的元素。|
+|[CPtrArray：： operator \[ \]](../../mfc/reference/cobarray-class.md#operator_at)|设置或获取位于指定索引处的元素。|
 
 ## <a name="remarks"></a>备注
 
-`CPtrArray` 集成了 IMPLEMENT_DYNAMIC 宏来支持运行时类型访问和转储到`CDumpContext`对象。 如果需要单个指针数组元素的转储，你必须将转储上下文的深度设置为 1 或更高版本。
+`CPtrArray` 包含 IMPLEMENT_DYNAMIC 宏来支持运行时类型访问和转储到 `CDumpContext` 对象。 如果需要单个指针数组元素的转储，则必须将转储上下文的深度设置为1或更大。
 
 > [!NOTE]
 >  在使用数组之前，先使用 `SetSize` 建立其大小并为其分配内存。 如果不使用 `SetSize`，则向数组添加元素会导致它经常重新分配和复制。 经常重新分配和复制会降低效率而且会产生内存碎片。
 
-无法序列化指针数组。
+不能对指针数组进行序列化。
 
-当删除指针数组时，或移除其元素时，只有指针均被删除，未引用的实体。
+如果删除了指针数组，或删除了其元素，则只会移除指针，而不会移除它们引用的实体。
 
-有关使用的详细信息`CPtrArray`，请参阅文章[集合](../../mfc/collections.md)。
+有关使用 `CPtrArray`的详细信息，请参阅文章[集合](../../mfc/collections.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -124,9 +124,9 @@ class CPtrArray : public CObject
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxcoll.h
+**标头：** afxcoll。h
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [CObject 类](../../mfc/reference/cobject-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>

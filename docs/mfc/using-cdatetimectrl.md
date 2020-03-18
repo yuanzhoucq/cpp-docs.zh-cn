@@ -1,26 +1,24 @@
 ---
 title: 使用 CDateTimeCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CDateTimeCtrl
 helpviewer_keywords:
 - DateTimePicker control [MFC], CDateTimeCtrl class
 ms.assetid: cb2a8720-43f1-4c33-a3a4-def9a1622e00
-ms.openlocfilehash: 251528cafcbedb0352a1962d70452f8b8778f10b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57c437c97ad6c6d377b3bc62099e569b29f03346
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348596"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447074"
 ---
 # <a name="using-cdatetimectrl"></a>使用 CDateTimeCtrl
 
-日期和时间选取器控件 ([CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)) 实现直观和可识别的输入或选择特定日期的方法。 在功能上类似于组合框控件的主接口。 但是，如果在用户展开控件，默认情况下，将显示月历控件允许用户指定特定的日期。 选择一个日期，月历控件自动将消失。
+日期和时间选取器控件（[CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)）实现了一种直观且可识别的方法来输入或选择特定日期。 控件的主接口在功能上类似于组合框。 但是，如果用户展开控件，则会显示一个月历控件（默认情况下），允许用户指定特定日期。 选择日期后，月历控件将自动消失。
 
 > [!NOTE]
->  若要同时使用这两者`CDateTimePicker`和`CMonthCalCtrl`类必须在项目中，包括 AFXDTCTL。通常在您的项目的 STDAFX H。H 文件。
+>  若要同时在项目中使用 `CDateTimePicker` 和 `CMonthCalCtrl` 类，则必须包含 AFXDTCTL。H.，通常在项目的 STDAFX.H 中。H 文件。
 
-## <a name="what-do-you-want-to-know-more-about"></a>你想要了解更多信息
+## <a name="what-do-you-want-to-know-more-about"></a>要了解有关的详细信息
 
 - [创建日期和时间选取器控件](../mfc/creating-the-date-and-time-picker-control.md)
 
@@ -34,6 +32,6 @@ ms.locfileid: "62348596"
 
 - [处理日期和时间选取器控件中的通知消息](../mfc/processing-notification-messages-in-date-and-time-picker-controls.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [控件](../mfc/controls-mfc.md)

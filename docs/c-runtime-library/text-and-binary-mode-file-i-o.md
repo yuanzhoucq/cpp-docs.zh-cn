@@ -1,8 +1,6 @@
 ---
 title: 文本和二进制模式文件 I/O
 ms.date: 04/11/2018
-f1_keywords:
-- c.io
 helpviewer_keywords:
 - files [C++], open functions
 - I/O [CRT], text files
@@ -15,12 +13,12 @@ helpviewer_keywords:
 - translation modes (file I/O)
 - binary access
 ms.assetid: 3196e321-8b87-4609-b302-cd6f3c516051
-ms.openlocfilehash: 2c875350aedadb55d8f96fb682d6215030be2198
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 75d302e625747d6e02e1d904c21542530d70d02f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738579"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444631"
 ---
 # <a name="text-and-binary-mode-file-io"></a>文本和二进制模式文件 I/O
 
@@ -30,7 +28,7 @@ ms.locfileid: "57738579"
 
 - 使用函数 [_set_fmode](../c-runtime-library/reference/set-fmode.md) 更改新打开的文件的默认模式。 使用 [_get_fmode](../c-runtime-library/reference/get-fmode.md) 查找当前默认模式。 初始默认设置为文本模式 (_O_TEXT)。
 
-- 通过在程序中设置全局变量 [_fmode](../c-runtime-library/fmode.md) 来直接更改默认转换模式。 函数 _set_fmode 将设置此变量的值，不过也可以直接设置它。
+- 通过在程序中设置全局变量 [_fmode](../c-runtime-library/fmode.md) 来直接更改默认转换模式。 函数 _set_fmode将设置此变量的值，不过也可以直接设置它。
 
 当调用一个文件打开函数（如 [_open](../c-runtime-library/reference/open-wopen.md)、[fopen](../c-runtime-library/reference/fopen-wfopen.md)、[fopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)、[freopen](../c-runtime-library/reference/freopen-wfreopen.md)、[freopen_s](../c-runtime-library/reference/freopen-s-wfreopen-s.md)、[_fsopen](../c-runtime-library/reference/fsopen-wfsopen.md) 或 [_sopen_s](../c-runtime-library/reference/sopen-s-wsopen-s.md)）时，可通过指定函数 [_set_fmode](../c-runtime-library/reference/set-fmode.md) 的相应参数来替代 _fmode 的当前默认设置。 默认情况下，stdin、stdout 和 stderr 流始终在文本模式中打开；在打开这些文件中的任一文件时，也可以重写该默认值。 使用 [_setmode](../c-runtime-library/reference/setmode.md) 可在文件打开后利用文件说明符更改转换模式。
 

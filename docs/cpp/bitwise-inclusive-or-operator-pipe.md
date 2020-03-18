@@ -1,8 +1,7 @@
 ---
-title: '按位与或运算符: |'
+title: 按位与或运算符：|
 ms.date: 06/14/2018
 f1_keywords:
-- bitor
 - '|'
 helpviewer_keywords:
 - OR operator [C++], bitwise inclusive
@@ -10,28 +9,28 @@ helpviewer_keywords:
 - inclusive OR operator
 - '| operator'
 ms.assetid: 4c8a6a68-d828-447d-875a-aedb4ce3aa9a
-ms.openlocfilehash: 848bf3b2ec61084b59ab5b1ee6807f6066a4675e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0df3493930206d655c0d9bca8a2468151aa3c2c6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184270"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445507"
 ---
-# <a name="bitwise-inclusive-or-operator-"></a>按位与或运算符: |
+# <a name="bitwise-inclusive-or-operator-"></a>按位与或运算符：|
 
 ## <a name="syntax"></a>语法
 
-> *expression1* **|** *expression2*
+> *表达式*2 **|** *表达式*2
 
 ## <a name="remarks"></a>备注
 
-按位非独占 OR 运算符 (**&#124;**) 将第二个操作数的相应位进行第一个操作数的每一位进行比较。 如果其中一个位是 1，则将对应的结果位设置为 1。 否则，将对应的结果位设置为 0。
+按位 "或" 运算符 **&#124;** （）将其第一个操作数的每个位与其第二操作数的相应位进行比较。 如果其中一个位是 1，则将对应的结果位设置为 1。 否则，将对应的结果位设置为 0。
 
-按位“与或”运算符的两个操作数必须为整型。 中涵盖的常用算术转换[标准转换](standard-conversions.md)适用于操作数。
+按位“与或”运算符的两个操作数必须为整型。 [标准转换](standard-conversions.md)中涵盖的常用算术转换将应用于操作数。
 
 ## <a name="operator-keyword-for-124"></a>运算符关键字&#124;
 
-**Bitor**运算符是的文本等效 **&#124;**。 有两种方法来访问**bitor**您的程序中的运算符： 包含头文件\<iso646.h >，或使用编译[/Za](../build/reference/za-ze-disable-language-extensions.md) （禁用语言扩展） 编译器选项。
+**Bitor**运算符是的文本等效项 **&#124;** 。 可以通过两种方式访问程序中的**bitor**运算符： > \<包含头文件，或使用[/za](../build/reference/za-ze-disable-language-extensions.md) （禁用语言扩展）编译器选项进行编译。
 
 ## <a name="example"></a>示例
 
@@ -50,7 +49,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [C++ 内置运算符、优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [C 按位运算符](../c-language/c-bitwise-operators.md)

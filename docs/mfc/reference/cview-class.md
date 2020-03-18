@@ -53,11 +53,11 @@ helpviewer_keywords:
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
 ms.openlocfilehash: f6be846e80209ce94c84222d61c37a7964baad03
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855436"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426893"
 ---
 # <a name="cview-class"></a>CView 类
 
@@ -71,7 +71,7 @@ class AFX_NOVTABLE CView : public CWnd
 
 ## <a name="members"></a>成员
 
-### <a name="protected-constructors"></a>受保护的构造函数
+### <a name="protected-constructors"></a>受保护构造函数
 
 |名称|说明|
 |----------|-----------------|
@@ -95,7 +95,7 @@ class AFX_NOVTABLE CView : public CWnd
 |[CView：： OnScroll](#onscroll)|在将 OLE 项拖至视图边框之外时调用。|
 |[CView：： OnScrollBy](#onscrollby)|当滚动包含活动的就地 OLE 项的视图时调用。|
 
-### <a name="protected-methods"></a>受保护的方法
+### <a name="protected-methods"></a>受保护方法
 
 |名称|说明|
 |----------|-----------------|

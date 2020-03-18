@@ -21,19 +21,18 @@ topic_type:
 - apiref
 f1_keywords:
 - _putw
-- putw
 helpviewer_keywords:
 - integers, writing to streams
 - putw function
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-ms.openlocfilehash: 0515ae911a653bde1208b1711bf33dd8b4e2f8e1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: be2ee5c1b3706b1f2a0847415ab4a82a6a4bbe4f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949755"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443719"
 ---
 # <a name="_putw"></a>_putw
 
@@ -53,7 +52,7 @@ int _putw(
 *binint*<br/>
 要输出的二进制整数。
 
-*stream*<br/>
+*流*<br/>
 指向**文件**结构的指针。
 
 ## <a name="return-value"></a>返回值
@@ -64,15 +63,15 @@ int _putw(
 
 ## <a name="remarks"></a>备注
 
-**_Putw**函数将**int**类型的二进制值写入流的当前位置 *。* **_putw**不会影响流中的项的对齐方式，也不会采用任何特殊的对齐方式。 **_putw**主要用于与以前的库兼容。 **_Putw**可能会出现可移植性**问题，因为 int 和** **int**中的字节顺序的大小在不同系统之间存在差异。
+**_Putw**函数将**int**类型的二进制值写入流的当前位置 *。* **_putw**不会影响流中的项的对齐方式，也不会采用任何特殊的对齐方式。 **_putw**主要是为了与以前的库兼容。 **_Putw**上可能会出现可移植性**问题，因为 int 和** **int**中的字节顺序的大小在不同系统之间不同。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
+|例程|必需的标头|
 |-------------|---------------------|
 |**_putw**|\<stdio.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>库
 
@@ -116,7 +115,7 @@ int main( void )
 Wrote ten words
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
 [_getw](getw.md)<br/>

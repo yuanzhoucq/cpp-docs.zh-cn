@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCRibbonCheckBox [MFC], OnDrawOnList
 - CMFCRibbonCheckBox [MFC], SetACCData
 ms.assetid: 3a6c3891-c8d1-4af0-b954-7b9ab048782a
-ms.openlocfilehash: 34af1ae818125abd51b9eaf04cd98f9ac24addb3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8048f860a2cce75c37a065cfdd2751141054f1b
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392539"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446241"
 ---
 # <a name="cmfcribboncheckbox-class"></a>CMFCRibbonCheckBox 类
 
@@ -41,26 +41,26 @@ ms.locfileid: "62392539"
 class CMFCRibbonCheckBox : public CMFCRibbonButton
 ```
 
-## <a name="members"></a>成员
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[CMFCRibbonCheckBox::CMFCRibbonCheckBox](#cmfcribboncheckbox)|构造函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[CMFCRibbonCheckBox::GetCompactSize](#getcompactsize)|(重写[cmfcribbonbutton:: Getcompactsize](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize)。)|
-|[CMFCRibbonCheckBox::GetIntermediateSize](#getintermediatesize)|(重写[cmfcribbonbutton:: Getintermediatesize](../../mfc/reference/cmfcribbonbutton-class.md#getintermediatesize)。)|
-|[CMFCRibbonCheckBox::GetRegularSize](#getregularsize)|(重写[cmfcribbonbutton:: Getregularsize](../../mfc/reference/cmfcribbonbutton-class.md#getregularsize)。)|
+|[CMFCRibbonCheckBox：： GetCompactSize](#getcompactsize)|（重写[CMFCRibbonButton：： GetCompactSize](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize)。）|
+|[CMFCRibbonCheckBox：： GetIntermediateSize](#getintermediatesize)|（重写[CMFCRibbonButton：： GetIntermediateSize](../../mfc/reference/cmfcribbonbutton-class.md#getintermediatesize)。）|
+|[CMFCRibbonCheckBox：： GetRegularSize](#getregularsize)|（重写[CMFCRibbonButton：： GetRegularSize](../../mfc/reference/cmfcribbonbutton-class.md#getregularsize)。）|
 |[CMFCRibbonCheckBox::IsDrawTooltipImage](#isdrawtooltipimage)|（重写 `CMFCRibbonButton::IsDrawTooltipImage`。）|
-|[CMFCRibbonCheckBox::OnDraw](#ondraw)|(重写[cmfcribbonbutton:: Ondraw](../../mfc/reference/cmfcribbonbutton-class.md#ondraw)。)|
-|[CMFCRibbonCheckBox::OnDrawMenuImage](#ondrawmenuimage)|(重写[cmfcribbonbaseelement:: Ondrawmenuimage](../../mfc/reference/cmfcribbonbaseelement-class.md#ondrawmenuimage)。)|
+|[CMFCRibbonCheckBox：： OnDraw](#ondraw)|（重写[CMFCRibbonButton：： OnDraw](../../mfc/reference/cmfcribbonbutton-class.md#ondraw)。）|
+|[CMFCRibbonCheckBox：： OnDrawMenuImage](#ondrawmenuimage)|（重写[CMFCRibbonBaseElement：： OnDrawMenuImage](../../mfc/reference/cmfcribbonbaseelement-class.md#ondrawmenuimage)。）|
 |[CMFCRibbonCheckBox::OnDrawOnList](#ondrawonlist)|（重写 `CMFCRibbonButton::OnDrawOnList`。）|
-|[CMFCRibbonCheckBox::SetACCData](#setaccdata)|(重写[cmfcribbonbutton:: Setaccdata](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata)。)|
+|[CMFCRibbonCheckBox：： SetACCData](#setaccdata)|（重写[CMFCRibbonButton：： SetACCData](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata)。）|
 
 ## <a name="remarks"></a>备注
 
@@ -69,9 +69,10 @@ class CMFCRibbonCheckBox : public CMFCRibbonButton
 ```
 CMFCRibbonCheckBox (UINT nID, LPCTSTR lpszText)
 ```
-其中*nID*的复选框命令 id 并*lpszText*是复选框的文本标签。
 
-可以通过向功能区面板添加复选框[cmfcribbonpanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add)。
+其中， *nID*是复选框命令 ID， *lpszText*是复选框的文本标签。
+
+可以通过使用[CMFCRibbonPanel：： add](../../mfc/reference/cmfcribbonpanel-class.md#add)将复选框添加到功能区面板。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -85,9 +86,9 @@ CMFCRibbonCheckBox (UINT nID, LPCTSTR lpszText)
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxribboncheckbox.h
+**标头：** afxribboncheckbox
 
-##  <a name="cmfcribboncheckbox"></a>  CMFCRibbonCheckBox::CMFCRibbonCheckBox
+##  <a name="cmfcribboncheckbox"></a>CMFCRibbonCheckBox::CMFCRibbonCheckBox
 
 功能区复选框对象的构造函数
 
@@ -100,22 +101,22 @@ CMFCRibbonCheckBox(
 ### <a name="parameters"></a>参数
 
 *nID*<br/>
-[in]指定命令 id。
+中指定命令 ID。
 
 *lpszText*<br/>
-[in]指定文本标签。
+中指定文本标签。
 
 ### <a name="return-value"></a>返回值
 
-构造一个功能区复选框对象。
+构造功能区复选框对象。
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何构造的对象`CMFCRibbonCheckBox`类。
+下面的示例演示如何构造 `CMFCRibbonCheckBox` 类的对象。
 
 [!code-cpp[NVC_MFC_RibbonApp#17](../../mfc/reference/codesnippet/cpp/cmfcribboncheckbox-class_1.cpp)]
 
-##  <a name="getcompactsize"></a>  CMFCRibbonCheckBox::GetCompactSize
+##  <a name="getcompactsize"></a>CMFCRibbonCheckBox：： GetCompactSize
 
 重写时，获取复选框的压缩大小。
 
@@ -126,19 +127,19 @@ virtual CSize GetCompactSize(CDC* pDC);
 ### <a name="parameters"></a>参数
 
 *pDC*<br/>
-[in]指向与复选框相关联的 CDC。
+中指向与此复选框关联的 CDC 的指针。
 
 ### <a name="return-value"></a>返回值
 
-返回`CSize`对象，其中包含复选框的压缩大小。
+返回一个 `CSize` 对象，该对象包含复选框的压缩大小。
 
 ### <a name="remarks"></a>备注
 
-如果未重写时，返回复选框的中间大小。
+如果未重写，则返回复选框的中间大小。
 
-##  <a name="getintermediatesize"></a>  CMFCRibbonCheckBox::GetIntermediateSize
+##  <a name="getintermediatesize"></a>CMFCRibbonCheckBox：： GetIntermediateSize
 
-获取中间复选框的大小。
+获取复选框的中间大小。
 
 ```
 virtual CSize GetIntermediateSize(CDC* pDC);
@@ -147,17 +148,17 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ### <a name="parameters"></a>参数
 
 *pDC*<br/>
-[in]指向与此复选框相关联的 CDC。
+中指向与此复选框关联的 CDC 的指针。
 
 ### <a name="return-value"></a>返回值
 
-一个`CSize`对象，其中包含中间复选框的大小。
+包含复选框的中间大小的 `CSize` 对象。
 
 ### <a name="remarks"></a>备注
 
-如果未重写，将计算默认复选框大小具有中间的大小 ( `AFX_CHECK_BOX_DEFAULT_SIZE`) 以及文本大小和边距。
+如果未重写，则将中间大小计算为默认复选框大小（`AFX_CHECK_BOX_DEFAULT_SIZE`）加上文本大小和边距。
 
-##  <a name="getregularsize"></a>  CMFCRibbonCheckBox::GetRegularSize
+##  <a name="getregularsize"></a>CMFCRibbonCheckBox：： GetRegularSize
 
 获取复选框的常规大小。
 
@@ -168,19 +169,19 @@ virtual CSize GetRegularSize(CDC* pDC);
 ### <a name="parameters"></a>参数
 
 *pDC*<br/>
-[in]指向与此复选框关联的 CDC 对象指针。
+中指向与此复选框关联的 CDC 对象的指针。
 
 ### <a name="return-value"></a>返回值
 
-返回`CSize`对象，其中包含复选框的常规大小。
+返回一个 `CSize` 对象，该对象包含复选框的正常大小。
 
 ### <a name="remarks"></a>备注
 
-如果未重写时，返回复选框的中间大小。
+如果未重写，则返回复选框的中间大小。
 
-##  <a name="isdrawtooltipimage"></a>  CMFCRibbonCheckBox::IsDrawTooltipImage
+##  <a name="isdrawtooltipimage"></a>CMFCRibbonCheckBox::IsDrawTooltipImage
 
-指示是否存在与复选框相关联的工具提示映像。
+指示是否存在与该复选框相关联的工具提示图像。
 
 ```
 virtual BOOL IsDrawTooltipImage() const;
@@ -188,13 +189,13 @@ virtual BOOL IsDrawTooltipImage() const;
 
 ### <a name="return-value"></a>返回值
 
-如果工具提示映像关联的复选框，或如果不是 FALSE，则返回 TRUE。
+如果有与该复选框相关联的工具提示图像，则返回 TRUE; 否则返回 FALSE。
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondraw"></a>  CMFCRibbonCheckBox::OnDraw
+##  <a name="ondraw"></a>CMFCRibbonCheckBox：： OnDraw
 
-由框架调用以绘制复选框使用指定的设备上下文。
+由框架调用，以使用指定的设备上下文绘制复选框。
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -203,13 +204,13 @@ virtual void OnDraw(CDC* pDC);
 ### <a name="parameters"></a>参数
 
 *pDC*<br/>
-[in]指向要在其中绘制复选框 CDC。
+中一个指针，指向要在其中绘制复选框的 CDC。
 
 ### <a name="remarks"></a>备注
 
-##  <a name="ondrawmenuimage"></a>  CMFCRibbonCheckBox::OnDrawMenuImage
+##  <a name="ondrawmenuimage"></a>CMFCRibbonCheckBox：： OnDrawMenuImage
 
-由框架调用以绘制菜单图标的复选框。
+由框架调用以绘制复选框的菜单图像。
 
 ```
 virtual BOOL OnDrawMenuImage(CDC*, CRect);
@@ -217,23 +218,23 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 
 ### <a name="parameters"></a>参数
 
-[in] *CDC&#42;*<br/>
-指向与复选框相关联的 CDC。
+中*CDC&#42;*<br/>
+指向与此复选框关联的 CDC 的指针。
 
 *CRect*<br/>
-[in]一个`CRect`对象，它指定要在其中绘制的菜单图像的矩形。
+中一个 `CRect` 对象，该对象指定要在其中绘制菜单图像的矩形。
 
 ### <a name="return-value"></a>返回值
 
-如果已绘制图像，则为 TRUE 或 FALSE，如果不是返回。
+如果绘制图像，则返回 TRUE; 否则返回 FALSE。
 
 ### <a name="remarks"></a>备注
 
-如果未重写，将返回 FALSE。
+如果未重写，则返回 FALSE。
 
-##  <a name="ondrawonlist"></a>  CMFCRibbonCheckBox::OnDrawOnList
+##  <a name="ondrawonlist"></a>CMFCRibbonCheckBox::OnDrawOnList
 
-由框架调用以绘制命令列表框中的复选框。
+由框架调用，用于在命令列表框中绘制复选框。
 
 ```
 virtual void OnDrawOnList(
@@ -248,28 +249,28 @@ virtual void OnDrawOnList(
 ### <a name="parameters"></a>参数
 
 *pDC*<br/>
-[in]指向要在其中绘制复选框的设备上下文指针。
+中一个指针，指向要在其中绘制复选框的设备上下文。
 
 *strText*<br/>
-[in]显示文本。
+中显示文本。
 
 *nTextOffset*<br/>
-[in]以像素为单位，从左侧和右侧显示文本的列表框的距离。
+中从列表框左侧到显示文本的距离（以像素为单位）。
 
 *rect*<br/>
-[in]复选框显示矩形。
+中复选框的显示矩形。
 
 *bIsSelected*<br/>
-[in]如果此复选框处于选中状态，或如果不是 FALSE，则为 TRUE。
+中如果选中此复选框，则为 TRUE; 否则为 FALSE。
 
 *bHighlighted*<br/>
-[in]如果复选框为选中此选项，或如果不是 FALSE，则为 TRUE。
+中如果突出显示复选框，则为 TRUE; 否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-##  <a name="setaccdata"></a>  CMFCRibbonCheckBox::SetACCData
+##  <a name="setaccdata"></a>CMFCRibbonCheckBox：： SetACCData
 
-设置复选框的可访问性数据。
+设置复选框的辅助功能数据。
 
 ```
 virtual BOOL SetACCData(
@@ -283,7 +284,7 @@ virtual BOOL SetACCData(
 复选框的父窗口。
 
 *data*<br/>
-复选框可访问性数据。
+复选框的辅助功能数据。
 
 ### <a name="return-value"></a>返回值
 
@@ -291,9 +292,9 @@ virtual BOOL SetACCData(
 
 ### <a name="remarks"></a>备注
 
-默认情况下此方法设置复选框的可访问性数据，并始终返回 TRUE。 重写此方法以设置可访问性数据并返回一个指示成功或失败的值。
+默认情况下，此方法设置复选框的可访问性数据，并始终返回 TRUE。 重写此方法以设置可访问性数据并返回一个指示成功或失败的值。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>

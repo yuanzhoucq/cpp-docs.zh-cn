@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CArchiveException [MFC], m_strFileName
 ms.assetid: da31a127-e86c-41d1-b0b6-bed0865b1b49
 ms.openlocfilehash: 731735bccf9225e67d82b1fe90336c92a630b368
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855254"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426107"
 ---
 # <a name="carchiveexception-class"></a>CArchiveException 类
 
@@ -29,7 +29,7 @@ ms.locfileid: "78855254"
 class CArchiveException : public CException
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -72,7 +72,7 @@ CArchiveException(
     LPCTSTR lpszArchiveName = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *cause*<br/>
 指示异常原因的枚举类型变量。 有关枚举器的列表，请参阅[m_cause](#m_cause)数据成员。

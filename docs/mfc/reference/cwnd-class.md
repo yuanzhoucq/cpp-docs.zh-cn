@@ -819,11 +819,11 @@ helpviewer_keywords:
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
 ms.openlocfilehash: 1f0338d827a9ec92747169ff2682e6d47485e4c2
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855442"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426395"
 ---
 # <a name="cwnd-class"></a>CWnd 类
 
@@ -835,7 +835,7 @@ ms.locfileid: "78855442"
 class CWnd : public CCmdTarget
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -1307,7 +1307,7 @@ class CWnd : public CCmdTarget
 virtual HRESULT accDoDefaultAction(VARIANT varChild);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *varChild*<br/>
 指定要调用的默认操作是否为对象的对象或对象的一个子元素。 此参数可以是 CHILDID_SELF （用于执行对象的默认操作）或子 ID （用于执行对象的一个子元素的默认操作）。
@@ -1333,7 +1333,7 @@ virtual HRESULT accHitTest(
     VARIANT* pvarChild);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *xLeft*<br/>
 要进行点击测试的点的 X 坐标（以屏幕单位表示）。
@@ -1369,7 +1369,7 @@ virtual HRESULT accLocation(
     VARIANT varChild);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pxLeft*<br/>
 接收对象左上角的 x 坐标（在屏幕单位中）。
@@ -1407,7 +1407,7 @@ virtual HRESULT accNavigate(
     VARIANT* pvarEndUpAt);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *navDir*<br/>
 指定要导航的方向。 请参阅 Windows SDK 中[IAccessible：： accNavigate](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accnavigate)中的*navDir* 。
@@ -1440,7 +1440,7 @@ virtual HRESULT accSelect(
     VARIANT varChild);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *flagsSelect*<br/>
 指定如何更改当前所选内容或焦点。 请参阅 Windows SDK 中[IAccessible：： accSelect](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accselect)中的*flagsSelect* 。
@@ -1470,7 +1470,7 @@ BOOL AnimateWindow(
     DWORD dwFlags);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwTime*<br/>
 指定播放动画所用的时间（以毫秒为单位）。 通常，动画需要200毫秒才能播放。
@@ -1516,7 +1516,7 @@ UINT ArrangeIconicWindows();
 BOOL Attach(HWND hWndNew);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hWndNew*<br/>
 指定 Windows 窗口的句柄。
@@ -1551,7 +1551,7 @@ virtual void BeginModalState();
 CDC* BeginPaint(LPPAINTSTRUCT lpPaint);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpPaint*<br/>
 指向接收绘制信息的[PAINTSTRUCT](/windows/win32/api/winuser/ns-winuser-paintstruct)结构。
@@ -1584,7 +1584,7 @@ void BindDefaultProperty(
     CWnd* pDSCWnd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwDispID*<br/>
 指定要绑定到数据源控件的数据绑定控件上的属性的 DISPID。
@@ -1618,7 +1618,7 @@ void BindProperty(
     CWnd* pWndDSC);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwDispId*<br/>
 指定要绑定到数据源控件的数据绑定控件上的属性的 DISPID。
@@ -1664,7 +1664,7 @@ virtual void CalcWindowRect(
     UINT nAdjustType = adjustBorder);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpClientRect*<br/>
 [in，out]指向矩形结构的指针。 对于输入，此结构包含客户端矩形。 此方法完成后，此结构包含可包含指定客户端矩形的窗口矩形。
@@ -1690,7 +1690,7 @@ virtual void CalcWindowRect(
 static void PASCAL CancelToolTips(BOOL bKeys = FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bKeys*<br/>
 如果为 TRUE，则在按下某个键时取消工具提示，然后将状态栏文本设置为默认值;否则为 FALSE。
@@ -1712,7 +1712,7 @@ static void PASCAL CancelToolTips(BOOL bKeys = FALSE);
 void CenterWindow(CWnd* pAlternateOwner = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pAlternateOwner*<br/>
 指向相对于其居中（父窗口除外）的替换窗口的指针。
@@ -1733,7 +1733,7 @@ void CenterWindow(CWnd* pAlternateOwner = NULL);
 BOOL ChangeClipboardChain(HWND hWndNext);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hWndNext*<br/>
 标识位于剪贴板查看器链中 `CWnd` 后面的窗口。
@@ -1752,7 +1752,7 @@ void CheckDlgButton(
     UINT nCheck);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIDButton*<br/>
 指定要修改的按钮。
@@ -1779,7 +1779,7 @@ void CheckRadioButton(
     int nIDCheckButton);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIDFirstButton*<br/>
 指定组中第一个单选按钮的整数标识符。
@@ -1810,7 +1810,7 @@ CWnd* ChildWindowFromPoint(
     UINT nFlags) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *情况*<br/>
 指定要测试的点的工作区坐标。
@@ -1847,7 +1847,7 @@ CWnd* ChildWindowFromPoint(
 void ClientToScreen(LPPOINT lpPoint) const;  void ClientToScreen(LPRECT lpRect) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpPoint*<br/>
 指向一个[点结构](/windows/win32/api/windef/ns-windef-point)或 `CPoint` 对象，该对象包含要转换的客户端坐标。
@@ -1908,7 +1908,7 @@ virtual BOOL Create(
     CCreateContext* pContext = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszClassName*<br/>
 中指向以 null 结尾的字符串的指针，该字符串包含已注册系统窗口类的名称;或预定义系统窗口类的名称。
@@ -1961,7 +1961,7 @@ virtual HRESULT CreateAccessibleProxy(
     LRESULT* pResult);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *wParam*<br/>
 标识 Active Accessibility 代理访问的对象。 可以是下列值之一
@@ -1988,7 +1988,7 @@ virtual HRESULT CreateAccessibleProxy(
 void CreateCaret(CBitmap* pBitmap);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pBitmap*<br/>
 标识用于定义插入符号形状的位图。
@@ -2045,7 +2045,7 @@ BOOL CreateControl(
     BSTR bstrLicKey = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pszClass*<br/>
 此字符串可能包含类的 OLE "short name" （ProgID），例如 "CIRC3"。Circ3Ctrl. 1 "。 该名称需要与控件注册的名称相同。 或者，该字符串可能包含 CLSID 的字符串形式，其中包含在大括号中，例如 "{9DBAFCCF-592F-101B-85CE-00608CEC297B}"。 在任一情况下，`CreateControl` 会将字符串转换为相应的类 ID。
@@ -2075,7 +2075,7 @@ BOOL CreateControl(
 指向包含控件持久状态的[CFile](../../mfc/reference/cfile-class.md)的指针。 默认值为 NULL，指示控件将初始化自身，而不从任何持久性存储还原其状态。 如果不为 NULL，则它应为指向 `CFile`派生对象的指针，该对象包含控件的持久性数据（以流或存储的形式）。 此数据可能已在以前的客户端激活中保存。 `CFile` 可以包含其他数据，但在调用 `CreateControl`时，必须将其读写指针设置为永久性数据的第一个字节。
 
 *bStorage*<br/>
-指示*pPersist*中的数据是否应解释为 IStorage 或 IStream 数据。 如果*pPersist*中的数据是存储，则*bStorage*应为 TRUE。 如果*pPersist*中的数据是流，则*BSTORAGE*应为 FALSE。 默认值为 FALSE。
+指示*pPersist*中的数据是否应解释为 IStorage 或 IStream 数据。 如果*pPersist*中的数据是存储，则*bStorage*应为 TRUE。 如果*pPersist*中的数据是流，则*BSTORAGE*应为 FALSE。 默认值是 FALSE。
 
 *bstrLicKey*<br/>
 可选许可证密钥数据。 此数据仅用于创建需要运行时许可证密钥的控件。 如果控件支持授权，则必须提供许可证密钥才能成功创建控件。 默认值为 NULL。
@@ -2136,7 +2136,7 @@ virtual BOOL CreateEx(
     LPVOID lpParam = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwExStyle*<br/>
 [扩展窗口样式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)的按位组合（OR）;否则为默认扩展窗口样式的 NULL。
@@ -2213,7 +2213,7 @@ void CreateGrayCaret(
     int nHeight);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nWidth*<br/>
 指定插入符号的宽度（以逻辑单位为单位）。 如果此参数为0，则宽度设置为系统定义的窗口边框宽度。
@@ -2247,7 +2247,7 @@ void CreateSolidCaret(
     int nHeight);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nWidth*<br/>
 指定插入符号的宽度（以逻辑单位为单位）。 如果此参数为0，则宽度设置为系统定义的窗口边框宽度。
@@ -2314,7 +2314,7 @@ virtual LRESULT DefWindowProc(
     LPARAM lParam);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 message<br/>
 指定要处理的 Windows 消息。
@@ -2407,7 +2407,7 @@ int DlgDirList(
     UINT nFileType);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpPathSpec*<br/>
 指向以 null 结尾的字符串，该字符串包含路径或文件名。 `DlgDirList` 修改此字符串，此字符串的长度应足以包含修改内容。 有关详细信息，请参阅以下 "备注" 部分。
@@ -2475,7 +2475,7 @@ int DlgDirListComboBox(
     UINT nFileType);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpPathSpec*<br/>
 指向以 null 结尾的字符串，该字符串包含路径或文件名。 `DlgDirListComboBox` 修改此字符串，因此此数据不应为字符串文本形式。 请参阅以下 "备注" 部分。
@@ -2541,7 +2541,7 @@ BOOL DlgDirSelect(
     int nIDListBox);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpString*<br/>
 指向接收列表框中当前选定内容的缓冲区。
@@ -2573,7 +2573,7 @@ BOOL DlgDirSelectComboBox(
     int nIDComboBox);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpString*<br/>
 指向接收所选路径的缓冲区。
@@ -2603,7 +2603,7 @@ BOOL DlgDirSelectComboBox(
 virtual void DoDataExchange(CDataExchange* pDX);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 一个指向 `CDataExchange` 对象的指针。
@@ -2630,7 +2630,7 @@ virtual void DoDataExchange(CDataExchange* pDX);
 void DragAcceptFiles(BOOL bAccept = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *BAccept*<br/>
 指示是否接受拖动的文件的标志。
@@ -2649,7 +2649,7 @@ void DragAcceptFiles(BOOL bAccept = TRUE);
 BOOL DragDetect(POINT pt) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pt*<br/>
 鼠标的初始位置（以屏幕坐标表示）。 函数使用此点确定拖动矩形的坐标。
@@ -2675,7 +2675,7 @@ BOOL DrawAnimatedRects(
     CONST RECT* lprcTo);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *idAni*<br/>
 指定动画的类型。 如果指定 IDANI_CAPTION，则窗口标题将从*lprcFrom*指定的位置到*lprcTo*指定的位置进行动画处理。 其效果类似于最小化或最大化窗口。
@@ -2705,7 +2705,7 @@ BOOL DrawCaption(
     UINT uFlags);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 一个指向设备上下文的指针。 函数在此设备上下文中绘制窗口标题。
@@ -2760,7 +2760,7 @@ MFC 的默认 Active Accessibility 支持足以满足标准的窗口和控件，
 void EnableDynamicLayout(BOOL bEnable = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bEnable*<br/>
 如果为 TRUE，则启用动态布局；如果为 FALSE，则禁用动态布局。
@@ -2779,7 +2779,7 @@ void EnableD2DSupport(
     BOOL bUseDCRenderTarget = FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bEnable*<br/>
 指定是打开还是关闭 D2D 支持。
@@ -2797,7 +2797,7 @@ BOOL EnableScrollBar(
     UINT nArrowFlags = ESB_ENABLE_BOTH);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nSBFlags*<br/>
 指定滚动条类型。 可以是下列值之一：
@@ -2833,7 +2833,7 @@ void EnableScrollBarCtrl(
     BOOL bEnable = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nBar*<br/>
 滚动条标识符。
@@ -2853,7 +2853,7 @@ void EnableScrollBarCtrl(
 BOOL EnableToolTips(BOOL bEnable = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bEnable*<br/>
 指定是否启用或禁用工具提示控件。 如果为 TRUE，则启用控件;FALSE 禁用控件。
@@ -2889,7 +2889,7 @@ BOOL EnableToolTips(BOOL bEnable = TRUE);
 BOOL EnableTrackingToolTips(BOOL bEnable = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bEnable*<br/>
 指定是启用还是禁用跟踪工具提示。 如果此参数为 TRUE，则将启用跟踪工具提示。 如果此参数为 FALSE，则将禁用跟踪工具提示。
@@ -2910,7 +2910,7 @@ BOOL EnableTrackingToolTips(BOOL bEnable = TRUE);
 BOOL EnableWindow(BOOL bEnable = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bEnable*<br/>
 指定是要启用还是禁用给定的窗口。 如果此参数为 TRUE，则将启用窗口。 如果此参数为 FALSE，则将禁用窗口。
@@ -2945,7 +2945,7 @@ BOOL EnableWindow(BOOL bEnable = TRUE);
 virtual void EndModalLoop(int nResult);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *N 结果*<br/>
 包含要返回到[runmodalloop 调用](#runmodalloop)的调用方的值。
@@ -2970,7 +2970,7 @@ virtual void EndModalState();
 void EndPaint(LPPAINTSTRUCT lpPaint);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpPaint*<br/>
 指向[PAINTSTRUCT](/windows/win32/api/winuser/ns-winuser-paintstruct)结构，其中包含[BeginPaint](#beginpaint)成员函数检索到的绘制信息。
@@ -2994,7 +2994,7 @@ BOOL ExecuteDlgInit(LPCTSTR lpszResourceName);
 BOOL ExecuteDlgInit(LPVOID lpResource);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszResourceName*<br/>
 指向以 null 结尾的字符串的指针，该字符串指定资源的名称。
@@ -3018,7 +3018,7 @@ BOOL ExecuteDlgInit(LPVOID lpResource);
 void FilterToolTipMessage(MSG* pMsg);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pMsg*<br/>
 指向工具提示消息的指针。
@@ -3039,7 +3039,7 @@ static CWnd* PASCAL FindWindow(
     LPCTSTR lpszWindowName);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszClassName*<br/>
 指向以 null 结尾的字符串，该字符串指定窗口的类名称（`WNDCLASS` 结构）。 如果*lpClassName*为 NULL，则所有类名都匹配。
@@ -3073,7 +3073,7 @@ static CWnd* FindWindowEx(
     LPCTSTR lpszWindow);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hwndParent*<br/>
 要搜索其子窗口的父窗口的句柄。
@@ -3103,7 +3103,7 @@ static CWnd* FindWindowEx(
 BOOL FlashWindow(BOOL bInvert);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bInvert*<br/>
 指定是否将 `CWnd` 刷新或返回到其原始状态。 如果*bInvert*为 TRUE，则从一种状态到另一种状态的刷新 `CWnd`。 如果*bInvert*为 FALSE，则窗口将恢复为其原始状态（活动或非活动）。
@@ -3137,7 +3137,7 @@ BOOL FlashWindowEx(
     DWORD dwTimeout);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 dwFlags<br/>
 指定闪存状态。 有关值的完整列表，请参阅[FLASHWINFO](/windows/win32/api/winuser/ns-winuser-flashwinfo)结构。
@@ -3164,7 +3164,7 @@ dwFlags<br/>
 static CWnd* PASCAL FromHandle(HWND hWnd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hWnd*<br/>
 Windows 窗口的 HWND。
@@ -3183,7 +3183,7 @@ Windows 窗口的 HWND。
 static CWnd* PASCAL FromHandlePermanent(HWND hWnd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hWnd*<br/>
 Windows 窗口的 HWND。
@@ -3208,7 +3208,7 @@ virtual HRESULT get_accChild(
     IDispatch** ppdispChild);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *varChild*<br/>
 标识要检索其 `IDispatch` 接口的子元素。
@@ -3236,7 +3236,7 @@ virtual HRESULT get_accChild(
 virtual HRESULT get_accChildCount(long* pcountChildren);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pcountChildren*<br/>
 接收子级的数目。
@@ -3263,7 +3263,7 @@ virtual HRESULT get_accDefaultAction(
     BSTR* pszDefaultAction);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *varChild*<br/>
 指定要检索的默认操作是否为对象或对象的一个子元素。 此参数可以是 CHILDID_SELF （获取有关对象的信息）或子级 ID （以获取有关对象的子元素的信息）。
@@ -3293,7 +3293,7 @@ virtual HRESULT get_accDescription(
     BSTR* pszDescription);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *varChild*<br/>
 指定要检索的说明是否为对象或对象的一个子元素的说明。 此参数可以是 CHILDID_SELF （获取有关对象的信息）或子级 ID （以获取有关对象的子元素的信息）。
@@ -3321,7 +3321,7 @@ virtual HRESULT get_accDescription(
 virtual HRESULT get_accFocus(VARIANT* pvarChild);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pvarChild*<br/>
 接收有关具有焦点的对象的信息。 请参阅 Windows SDK 中的*pvarID* in [IAccessible：： get_accFocus](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accfocus) 。
@@ -3348,7 +3348,7 @@ virtual HRESULT get_accHelp(
     BSTR* pszHelp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *varChild*<br/>
 指定要检索的帮助信息是否为对象或对象的一个子元素。 此参数可以是 CHILDID_SELF （获取有关对象的信息）或子级 ID （以获取有关对象的子元素的信息）。
@@ -3379,7 +3379,7 @@ virtual HRESULT get_accHelpTopic(
     long* pidTopic);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pszHelpFile*<br/>
 用于接收与指定对象关联的 `WinHelp` 文件的完整路径的 BSTR 的地址（如果有）。
@@ -3412,7 +3412,7 @@ virtual HRESULT get_accKeyboardShortcut(
     BSTR* pszKeyboardShortcut);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *varChild*<br/>
 指定要检索的键盘快捷键是否为对象或对象的一个子元素。 此参数可以是 CHILDID_SELF （获取有关对象的信息）或子级 ID （以获取有关对象的子元素的信息）。
@@ -3442,7 +3442,7 @@ virtual HRESULT get_accName(
     BSTR* pszName);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *varChild*<br/>
 指定要检索的名称是否是对象的名称或对象的一个子元素。 此参数可以是 CHILDID_SELF （获取有关对象的信息）或子级 ID （以获取有关对象的子元素的信息）。
@@ -3470,7 +3470,7 @@ virtual HRESULT get_accName(
 virtual HRESULT get_accParent(IDispatch** ppdispParent);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ppdispParent*<br/>
 接收父对象的 `IDispatch` 接口的地址。 如果父项不存在，则将变量设置为 NULL; 如果子级无法访问其父项，则设置为。
@@ -3497,7 +3497,7 @@ virtual HRESULT get_accRole(
     VARIANT* pvarRole);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *varChild*<br/>
 指定要检索的角色信息是否为对象的对象或对象的一个子元素。 此参数可以是 CHILDID_SELF （获取有关对象的信息）或子级 ID （以获取有关对象的子元素的信息）。
@@ -3525,7 +3525,7 @@ virtual HRESULT get_accRole(
 virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pvarChildren*<br/>
 接收有关所选子项的信息。 请参阅 Windows SDK 中的*pvarChildren* in [IAccessible：： get_accSelection](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accselection) 。
@@ -3552,7 +3552,7 @@ virtual HRESULT get_accState(
     VARIANT* pvarState);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *varChild*<br/>
 指定要检索的状态信息是否为对象或对象的一个子元素。 此参数可以是 CHILDID_SELF （获取有关对象的信息）或子级 ID （以获取有关对象的子元素的信息）。
@@ -3582,7 +3582,7 @@ virtual HRESULT get_accValue(
     BSTR* pszValue);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *varChild*<br/>
 指定要检索的值信息是否为对象或对象的一个子元素的值。 此参数可以是 CHILDID_SELF （获取有关对象的信息）或子级 ID （以获取有关对象的子元素的信息）。
@@ -3626,7 +3626,7 @@ static CWnd* PASCAL GetActiveWindow();
 CWnd* GetAncestor(UINT gaFlags) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *gaFlags*<br/>
 指定要检索的上级。 有关可能值的完整列表，请参阅[GetAncestor](/windows/win32/api/winuser/nf-winuser-getancestor)。
@@ -3683,7 +3683,7 @@ int GetCheckedRadioButton(
     int nIDLastButton);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIDFirstButton*<br/>
 指定组中第一个单选按钮的整数标识符。
@@ -3703,7 +3703,7 @@ int GetCheckedRadioButton(
 void GetClientRect(LPRECT lpRect) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpRect*<br/>
 指向[RECT 结构](/windows/win32/api/windef/ns-windef-rect)或 `CRect` 对象以接收客户端坐标。 `left` 和 `top` 成员将为0。 `right` 和 `bottom` 成员将包含窗口的宽度和高度。
@@ -3816,7 +3816,7 @@ CDC* GetDCEx(
     DWORD flags);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *prgnClip*<br/>
 标识可与客户端窗口的可见区域组合的剪辑区域。
@@ -3882,7 +3882,7 @@ CWnd* GetDescendantWindow(
     BOOL bOnlyPerm = FALSE) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nID*<br/>
 指定要检索的控件或子窗口的标识符。
@@ -3946,7 +3946,7 @@ void GetDlgItem(
     HWND* phWnd) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nID*<br/>
 指定要检索的控件或子窗口的标识符。
@@ -3979,7 +3979,7 @@ UINT GetDlgItemInt(
     BOOL bSigned = TRUE) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nID*<br/>
 指定要转换的对话框控件的整数标识符。
@@ -4021,7 +4021,7 @@ int GetDlgItemText(
     CString& rString) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nID*<br/>
 指定要检索其标题的控件的整数标识符。
@@ -4145,7 +4145,7 @@ static CWnd* PASCAL GetForegroundWindow();
 HICON GetIcon(BOOL bBigIcon) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bBigIcon*<br/>
 如果为 TRUE，则指定32像素 x 32 像素图标;如果为 FALSE，则指定 16 x 16 像素图标。
@@ -4189,7 +4189,7 @@ BOOL GetLayeredWindowAttributes(
     DWORD* pdwFlags) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pcrKey*<br/>
 指向 COLORREF 值的指针，该值用于在编写分层窗口时接收要使用的透明度颜色键。 此颜色的窗口绘制的所有像素都将是透明的。 如果不需要参数，则此值可以为 NULL。
@@ -4241,7 +4241,7 @@ BOOL GetMenuBarInfo(
     PMENUBARINFO pmbi) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *idObject*<br/>
 指定菜单对象。 有关可能值的列表，请参阅[GetMenuBarInfo](/windows/win32/api/winuser/nf-winuser-getmenubarinfo)。
@@ -4273,7 +4273,7 @@ COleControlSiteOrWnd* GetNextDlgGroupItem(
     COleControlSiteOrWnd* pCurSiteOrWnd = NULL) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pWndCtl*<br/>
 标识要用作搜索开始点的控件。
@@ -4319,7 +4319,7 @@ COleControlSiteOrWnd* GetNextDlgTabItem(
     BOOL bPrevious) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pWndCtl*<br/>
 标识要用作搜索开始点的控件。
@@ -4346,7 +4346,7 @@ COleControlSiteOrWnd* GetNextDlgTabItem(
 CWnd* GetNextWindow(UINT nFlag = GW_HWNDNEXT) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nFlag*<br/>
 指定函数是否返回指向下一窗口或上一窗口的指针。 它可以是 GW_HWNDNEXT （返回在窗口管理器列表中 `CWnd` 对象后的窗口），也可以是 GW_HWNDPREV，这将返回窗口管理器列表中的上一个窗口。
@@ -4371,7 +4371,7 @@ CWnd* GetNextWindow(UINT nFlag = GW_HWNDNEXT) const;
 COleControlSite* GetOleControlSite(UINT idControl) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *idControl*<br/>
 ActiveX 控件的 ID。
@@ -4467,7 +4467,7 @@ void GetProperty(
     void* pvProp)const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwDispID*<br/>
 标识要检索的属性。
@@ -4525,7 +4525,7 @@ static CWnd* GetSafeOwner(
     HWND* pWndTop = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pParent*<br/>
 指向父级 `CWnd` 窗口的指针。 可以为 NULL。
@@ -4552,7 +4552,7 @@ static CWnd* GetSafeOwner(
 virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nBar*<br/>
 指定滚动条的类型。 参数可以采用下列值之一：
@@ -4579,7 +4579,7 @@ BOOL GetScrollBarInfo(
     PSCROLLBARINFO psbi) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *idObject*<br/>
 指定菜单对象。 有关可能值的列表，请参阅[GetScrollBarInfo](/windows/win32/api/winuser/nf-winuser-getscrollbarinfo)。
@@ -4606,7 +4606,7 @@ BOOL GetScrollInfo(
     UINT nMask = SIF_ALL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nBar*<br/>
 指定滚动条是控件还是窗口的非工作区的一部分。 如果它是非工作区的一部分， *nBar*还指示是水平还是垂直定位滚动条。 它必须是以下各项之一：
@@ -4643,7 +4643,7 @@ MFC Windows 消息处理程序（指示滚动条位置， [CWnd：： OnHScroll]
 int GetScrollLimit(int nBar);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nBar*<br/>
 指定滚动条的类型。 参数可以采用下列值之一：
@@ -4664,7 +4664,7 @@ int GetScrollLimit(int nBar);
 int GetScrollPos(int nBar) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nBar*<br/>
 指定要检查的滚动条。 参数可以采用下列值之一：
@@ -4692,7 +4692,7 @@ void GetScrollRange(
     LPINT lpMaxPos) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nBar*<br/>
 指定要检查的滚动条。 参数可以采用下列值之一：
@@ -4733,7 +4733,7 @@ DWORD GetStyle() const;
 CMenu* GetSystemMenu(BOOL bRevert) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bRevert*<br/>
 指定要执行的操作。 如果*bRevert*为 FALSE，`GetSystemMenu` 将返回当前正在使用的控件菜单副本的句柄。 此副本最初与控制菜单相同，但可以修改。 如果*bRevert*为 TRUE，`GetSystemMenu` 会将控制菜单重置回默认状态。 以前的可能修改的控制菜单（如果有）被销毁。 在这种情况下，返回值未定义。
@@ -4766,7 +4766,7 @@ Windows 可能会自动使项目在标准控制菜单上不可用。 `CWnd` 可�
 BOOL GetTitleBarInfo(PTITLEBARINFO pti) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pti*<br/>
 指向接收信息的[TITLEBARINFO](/windows/win32/api/winuser/ns-winuser-titlebarinfo)结构的指针。
@@ -4855,7 +4855,7 @@ BOOL GetUpdateRect(
     BOOL bErase = FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpRect*<br/>
 指向用于接收包含更新区域的更新的客户端坐标的 `CRect` 对象或[RECT 结构](/windows/win32/api/windef/ns-windef-rect)。
@@ -4891,7 +4891,7 @@ int GetUpdateRgn(
     BOOL bErase = FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pRgn*<br/>
 标识更新区域。
@@ -4925,7 +4925,7 @@ int GetUpdateRgn(
 CWnd* GetWindow(UINT nCmd) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nCmd*<br/>
 指定 `CWnd` 和返回的窗口之间的关系。 它可以采用以下值之一：
@@ -5004,7 +5004,7 @@ CDC* GetWindowDC();
 BOOL GetWindowInfo(PWINDOWINFO pwi) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pwi*<br/>
 指向[WINDOWINFO](/windows/win32/api/winuser/ns-winuser-windowinfo)结构的指针。
@@ -5033,7 +5033,7 @@ long GetWindowlessChildCount();
 BOOL GetWindowPlacement(WINDOWPLACEMENT* lpwndpl) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpwndpl*<br/>
 指向接收显示状态和位置信息的 `WINDOWPLACEMENT` 结构。
@@ -5054,7 +5054,7 @@ BOOL GetWindowPlacement(WINDOWPLACEMENT* lpwndpl) const;
 void GetWindowRect(LPRECT lpRect) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpRect*<br/>
 指向将接收左上角和右下角的屏幕坐标的 `CRect` 对象或[RECT 结构](/windows/win32/api/windef/ns-windef-rect)。
@@ -5071,7 +5071,7 @@ void GetWindowRect(LPRECT lpRect) const;
 int GetWindowRgn(HRGN hRgn)const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hRgn*<br/>
 窗口区域的句柄。
@@ -5109,7 +5109,7 @@ void GetWindowText(
     CString& rString) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszStringBuf*<br/>
 指向用于接收复制的窗口标题字符串的缓冲区。
@@ -5181,7 +5181,7 @@ BOOL HiliteMenuItem(
     UINT nHilite);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pMenu*<br/>
 标识包含要突出显示的项的顶级菜单。
@@ -5218,7 +5218,7 @@ virtual void HtmlHelp(
     UINT nCmd = 0x000F);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwData*<br/>
 指定其他数据。 使用的值取决于*nCmd*参数的值。
@@ -5250,7 +5250,7 @@ void InitDynamicLayout();
 void Invalidate(BOOL bErase = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bErase*<br/>
 指定是否要清除更新区域中的背景。
@@ -5277,7 +5277,7 @@ void InvalidateRect(
     BOOL bErase = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpRect*<br/>
 指向一个 `CRect` 对象或[矩形结构](/windows/win32/api/windef/ns-windef-rect)，其中包含要添加到更新区域的矩形（在工作区坐标中）。 如果*lpRect*为 NULL，则会将整个工作区添加到区域。
@@ -5303,7 +5303,7 @@ void InvalidateRgn(
     BOOL bErase = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pRgn*<br/>
 指向[CRgn](../../mfc/reference/crgn-class.md)对象的指针，该对象标识要添加到更新区域的区域。 假定区域具有客户端坐标。 如果此参数为 NULL，则会将整个工作区添加到更新区域。
@@ -5335,7 +5335,7 @@ void AFX_CDECL InvokeHelper(
     ... );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwDispID*<br/>
 标识要调用的方法或属性。
@@ -5374,7 +5374,7 @@ void AFX_CDECL InvokeHelper(
 BOOL IsChild(const CWnd* pWnd) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pWnd*<br/>
 标识要测试的窗口。
@@ -5407,7 +5407,7 @@ BOOL IsD2DSupportEnabled();
 BOOL IsDialogMessage(LPMSG lpMsg);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpMsg*<br/>
 指向包含要检查的[消息的消息结构。](/windows/win32/api/winuser/ns-winuser-msg)
@@ -5432,7 +5432,7 @@ BOOL IsDialogMessage(LPMSG lpMsg);
 UINT IsDlgButtonChecked(int nIDButton) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIDButton*<br/>
 指定按钮控件的整数标识符。
@@ -5547,7 +5547,7 @@ BOOL IsZoomed() const;
 BOOL KillTimer(UINT_PTR nIDEvent);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIDEvent*<br/>
 传递给[SetTimer](#settimer)的计时器事件的值。
@@ -5572,7 +5572,7 @@ BOOL KillTimer(UINT_PTR nIDEvent);
 BOOL LoadDynamicLayoutResource(LPCTSTR lpszResourceName);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszResourceName*<br/>
 包含此窗口所需的动态布局信息的资源名称。
@@ -5634,7 +5634,7 @@ void MapWindowPoints(
     UINT nCount) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pwndTo*<br/>
 标识点要转换到的窗口。 如果此参数为 NULL，则将这些点转换为屏幕坐标。
@@ -5659,7 +5659,7 @@ int MessageBox(
     UINT nType = MB_OK);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszText*<br/>
 指向一个 `CString` 对象或以 null 结尾的字符串，其中包含要显示的消息。
@@ -5702,7 +5702,7 @@ BOOL ModifyStyle(
     UINT nFlags = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwRemove*<br/>
 指定要在样式修改过程中删除的窗口样式。
@@ -5751,7 +5751,7 @@ BOOL ModifyStyleEx(
     UINT nFlags = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwRemove*<br/>
 指定要在样式修改过程中删除的扩展样式。
@@ -5803,7 +5803,7 @@ void MoveWindow(
     BOOL bRepaint = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*<br/>
 指定 `CWnd`左侧的新位置。
@@ -5844,7 +5844,7 @@ void NotifyWinEvent(
     LONG idObject);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *event*<br/>
 指定发生的事件。 此值必须是一个[事件常量](/windows/win32/WinAuto/event-constants)。
@@ -5870,7 +5870,7 @@ afx_msg void OnActivate(
     BOOL bMinimized);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nState*<br/>
 指定是否正在激活或停用 `CWnd`。 可以为下列值之一：
@@ -5906,7 +5906,7 @@ afx_msg void OnActivateApp(
     DWORD dwThreadID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bActive*<br/>
 指定是否正在激活或停用 `CWnd`。 如果为 TRUE，则表示正在激活 `CWnd`。 FALSE 表示 `CWnd` 将被停用。
@@ -5930,7 +5930,7 @@ virtual BOOL OnAmbientProperty(
     VARIANT* pvar);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pSite*<br/>
 一个指针，指向请求环境属性的控件的站点。
@@ -5961,7 +5961,7 @@ afx_msg void OnAppCommand(
     UINT nKey);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -5987,7 +5987,7 @@ afx_msg void OnAskCbFormatName(
     LPTSTR lpszString);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nMaxCount*<br/>
 指定要复制的最大字节数。
@@ -6026,7 +6026,7 @@ afx_msg void OnCancelMode();
 afx_msg void OnCaptureChanged(CWnd* pWnd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pWnd*<br/>
 指向用于获取鼠标捕获的窗口的指针
@@ -6050,7 +6050,7 @@ afx_msg void OnChangeCbChain(
     HWND hWndAfter);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hWndRemove*<br/>
 指定要从剪贴板查看器链中删除的窗口句柄。
@@ -6075,7 +6075,7 @@ afx_msg void OnChangeUIState(
     UINT nUIElement);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *N 操作*<br/>
 指定要执行的操作。 可以是以下值之一：
@@ -6110,7 +6110,7 @@ afx_msg void OnChar(
     UINT nFlags);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nChar*<br/>
 包含键的字符代码值。
@@ -6153,7 +6153,7 @@ afx_msg int OnCharToItem(
     UINT nIndex);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nChar*<br/>
 指定用户按下的键的值。
@@ -6193,7 +6193,7 @@ virtual BOOL OnChildNotify(
     LRESULT* pResult);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 message<br/>
 发送到父窗口的 Windows 消息编号。
@@ -6249,7 +6249,7 @@ afx_msg void OnColorizationColorChanged(
     BOOL bOpacity);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -6273,7 +6273,7 @@ virtual BOOL OnCommand(
     LPARAM lParam);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *wParam*<br/>
 *WParam*的低序位字标识菜单项、控件或快捷键的命令 ID。 如果消息来自控件，则*wParam*的高序位字指定通知消息。 如果消息来自加速器，则高阶字为1。 如果消息来自菜单，则高序位字为0。
@@ -6302,7 +6302,7 @@ virtual BOOL OnCommand(
 afx_msg void OnCompacting(UINT nCpuTime);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nCpuTime*<br/>
 指定 Windows 压缩内存到执行其他操作所用 CPU 时间的当前所用 CPU 时间的比率。 例如，8000h 表示压缩内存占用的 CPU 时间的50%。
@@ -6326,7 +6326,7 @@ afx_msg int OnCompareItem(
     LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIDCtl*<br/>
 发送 WM_COMPAREITEM 消息的控件的标识符。
@@ -6380,7 +6380,7 @@ afx_msg void OnContextMenu(
     CPoint pos);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pWnd*<br/>
 用户右键单击鼠标的窗口的句柄。 这可以是接收消息的窗口的子窗口。 有关处理此消息的详细信息，请参阅 "备注" 部分。
@@ -6404,7 +6404,7 @@ afx_msg BOOL OnCopyData(
     COPYDATASTRUCT* pCopyDataStruct);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pWnd*<br/>
 指向发送数据的 `CWnd` 对象的指针。
@@ -6437,7 +6437,7 @@ afx_msg BOOL OnCopyData(
 afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpCreateStruct*<br/>
 指向[CREATESTRUCT](/windows/win32/api/winuser/ns-winuser-createstructw)结构，其中包含有关所创建的 `CWnd` 对象的信息。
@@ -6468,7 +6468,7 @@ afx_msg HBRUSH OnCtlColor(
     UINT nCtlColor);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 包含指向子窗口的显示上下文的指针。 可能是临时性的。
@@ -6525,7 +6525,7 @@ afx_msg void OnDeadChar(
     UINT nFlags);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nChar*<br/>
 指定死键字符值。
@@ -6569,7 +6569,7 @@ afx_msg void OnDeleteItem(
     LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIDCtl*<br/>
 发送 WM_DELETEITEM 消息的控件的标识符。
@@ -6618,7 +6618,7 @@ afx_msg BOOL OnDeviceChange(
     DWORD_PTR dwData);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nEventType*<br/>
 事件类型。 有关可用值的说明，请参阅 "备注" 部分
@@ -6661,7 +6661,7 @@ afx_msg BOOL OnDeviceChange(
 afx_msg void OnDevModeChange(LPTSTR lpDeviceName);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpDeviceName*<br/>
 指向 Windows 初始化文件中指定的设备名称，WIN.INI.
@@ -6702,7 +6702,7 @@ virtual void OnDrawIconicThumbnailOrLivePreview(
     BOOL& bAlphaChannelSet);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dc*<br/>
 指定设备上下文。
@@ -6733,7 +6733,7 @@ afx_msg void OnDrawItem(
     LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIDCtl*<br/>
 包含发送 WM_DRAWITEM 消息的控件的标识符。 如果某个菜单发送了该消息，则*nIDCtl*包含0。
@@ -6760,7 +6760,7 @@ afx_msg void OnDrawItem(
 afx_msg void OnDropFiles(HDROP hDropInfo);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hDropInfo*<br/>
 指向用于描述已删除文件的内部数据结构的指针。 `DragFinish`、`DragQueryFile`和 `DragQueryPoint` Windows 函数使用此句柄来检索有关删除的文件的信息。
@@ -6780,7 +6780,7 @@ afx_msg void OnDropFiles(HDROP hDropInfo);
 afx_msg void OnEnable(BOOL bEnable);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bEnable*<br/>
 指定 `CWnd` 对象已启用还是已禁用。 如果 `CWnd` 已启用，则此参数为 TRUE;如果已禁用 `CWnd`，则为 FALSE。
@@ -6800,7 +6800,7 @@ afx_msg void OnEnable(BOOL bEnable);
 afx_msg void OnEndSession(BOOL bEnding);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *装入*<br/>
 指定会话是否正在结束。 如果会话正在结束，则为 TRUE;否则为 FALSE。
@@ -6826,7 +6826,7 @@ afx_msg void OnEnterIdle(
     CWnd* pWho);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nWhy*<br/>
 指定消息是由对话框还是显示菜单的结果。 此参数可以是下列值之一：
@@ -6853,7 +6853,7 @@ afx_msg void OnEnterIdle(
 afx_msg void OnEnterMenuLoop(BOOL bIsTrackPopupMenu);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bIsTrackPopupMenu*<br/>
 指定所涉及的菜单是否是一个弹出菜单。 如果函数成功，则为非零值;否则为0。
@@ -6888,7 +6888,7 @@ afx_msg void OnEnterSizeMove();
 afx_msg BOOL OnEraseBkgnd(CDC* pDC);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 指定设备上下文对象。
@@ -6920,7 +6920,7 @@ Windows 假定背景是用 MM_TEXT 映射模式计算的。 如果设备上下�
 afx_msg void OnExitMenuLoop(BOOL bIsTrackPopupMenu);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bIsTrackPopupMenu*<br/>
 指定所涉及的菜单是否是一个弹出菜单。 如果函数成功，则为非零值;否则为0。
@@ -7009,7 +7009,7 @@ afx_msg UINT OnGetDlgCode();
 afx_msg void OnGetMinMaxInfo(MINMAXINFO* lpMMI);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpMMI*<br/>
 指向一个 `MINMAXINFO` 结构，该结构包含有关窗口最大化的大小和位置以及最小和最大跟踪大小的信息。 有关此结构的详细信息，请参阅[MINMAXINFO](/windows/win32/api/winuser/ns-winuser-minmaxinfo)结构。
@@ -7067,7 +7067,7 @@ afx_msg void OnHelpIndex();
 afx_msg BOOL OnHelpInfo(HELPINFO* lpHelpInfo);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpHelpInfo*<br/>
 指向[HELPINFO](/windows/win32/api/winuser/ns-winuser-helpinfo)结构的指针，该结构包含有关为其请求帮助的菜单项、控件、对话框或窗口的信息。
@@ -7103,7 +7103,7 @@ afx_msg void OnHotKey(
     UINT nKey2);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -7129,7 +7129,7 @@ afx_msg void OnHScroll(
     CScrollBar* pScrollBar);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nSBCode*<br/>
 指定一个指示用户滚动请求的滚动条代码。 此参数可以是以下项之一：
@@ -7182,7 +7182,7 @@ afx_msg void OnHScrollClipboard(
     UINT nPos);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pClipAppWnd*<br/>
 指定指向剪贴板查看器窗口的指针。 该指针可能是暂时的，不应存储起来供将来使用。
@@ -7224,7 +7224,7 @@ afx_msg void OnHScrollClipboard(
 afx_msg void OnIconEraseBkgnd(CDC* pDC);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 指定图标的设备上下文对象。 可能是临时性的，不应存储以供以后使用。
@@ -7246,7 +7246,7 @@ afx_msg void OnIconEraseBkgnd(CDC* pDC);
 afx_msg void OnInitMenu(CMenu* pMenu);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pMenu*<br/>
 指定要初始化的菜单。 可能是临时性的，不应存储以供以后使用。
@@ -7271,7 +7271,7 @@ afx_msg void OnInitMenuPopup(
     BOOL bSysMenu);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pPopupMenu*<br/>
 指定弹出菜单的菜单对象。 可能是临时性的，不应存储以供以后使用。
@@ -7297,7 +7297,7 @@ afx_msg void OnInitMenuPopup(
 afx_msg void OnInputDeviceChange(unsigned short uFlag);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -7320,7 +7320,7 @@ afx_msg void OnInputLangChange(
     UINT nLocaleId);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -7344,7 +7344,7 @@ afx_msg void OnInputLangChangeRequest(
     UINT nLocaleId);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -7369,7 +7369,7 @@ afx_msg void OnKeyDown(
     UINT nFlags);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nChar*<br/>
 指定给定键的虚拟键代码。 有关标准虚拟键代码的列表，请参阅 Winuser。h
@@ -7414,7 +7414,7 @@ afx_msg void OnKeyUp(
     UINT nFlags);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nChar*<br/>
 指定给定键的虚拟键代码。 有关标准虚拟键代码的列表，请参阅 Winuser。h
@@ -7454,7 +7454,7 @@ afx_msg void OnKeyUp(
 afx_msg void OnKillFocus(CWnd* pNewWnd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pNewWnd*<br/>
 指定一个指针，该指针指向接收输入焦点的窗口（可以为 NULL，也可以是临时的）。
@@ -7476,7 +7476,7 @@ afx_msg void OnLButtonDblClk(
     CPoint point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nFlags*<br/>
 指示各种虚拟键是否已关闭。 此参数可以是下列值的任意组合：
@@ -7511,7 +7511,7 @@ afx_msg void OnLButtonDown(
     CPoint point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nFlags*<br/>
 指示各种虚拟键是否已关闭。 此参数可以是下列值的任意组合：
@@ -7544,7 +7544,7 @@ afx_msg void OnLButtonUp(
     CPoint point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nFlags*<br/>
 指示各种虚拟键是否已关闭。 此参数可以是下列值的任意组合：
@@ -7575,7 +7575,7 @@ afx_msg void OnMButtonDblClk(
     CPoint point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nFlags*<br/>
 指示各种虚拟键是否已关闭。 此参数可以是下列值的任意组合：
@@ -7610,7 +7610,7 @@ afx_msg void OnMButtonDown(
     CPoint point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nFlags*<br/>
 指示各种虚拟键是否已关闭。 此参数可以是下列值的任意组合：
@@ -7643,7 +7643,7 @@ afx_msg void OnMButtonUp(
     CPoint point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nFlags*<br/>
 指示各种虚拟键是否已关闭。 此参数可以是下列值的任意组合：
@@ -7675,7 +7675,7 @@ afx_msg void OnMDIActivate(
     CWnd* pDeactivateWnd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bActivate*<br/>
 如果子项正在激活，则为 TRUE; 否则为 FALSE。
@@ -7702,7 +7702,7 @@ afx_msg void OnMeasureItem(
     int nIDCtl, LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIDCtl*<br/>
 控件的 ID。
@@ -7736,7 +7736,7 @@ afx_msg LRESULT OnMenuChar(
     CMenu* pMenu);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nChar*<br/>
 根据生成设置，指定用户按下的 ANSI 或 Unicode 字符。
@@ -7776,7 +7776,7 @@ afx_msg UINT OnMenuDrag(
     CMenu* pMenu);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -7805,7 +7805,7 @@ afx_msg UINT OnMenuDrag(
 afx_msg UINT OnMenuGetObject(MENUGETOBJECTINFO* pMenuGetObjectInfo);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -7835,7 +7835,7 @@ afx_msg void OnMenuRButtonUp(
     CMenu* pMenu);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -7860,7 +7860,7 @@ afx_msg void OnMenuSelect(
     HMENU hSysMenu);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nItemID*<br/>
 标识所选的项。 如果所选项是菜单项，则*nItemID*包含菜单项 ID。 如果所选项包含弹出菜单，则*nItemID*包含弹出菜单索引，而*hSysMenu*包含 main （单击）菜单的句柄。
@@ -7907,7 +7907,7 @@ afx_msg int OnMouseActivate(
     UINT message);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDesktopWnd*<br/>
 指定指向正在激活的窗口的顶级父窗口的指针。 指针可能是暂时的，不应存储。
@@ -7953,7 +7953,7 @@ afx_msg void OnMouseHover(
     CPoint point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -7990,7 +7990,7 @@ afx_msg void OnMouseHWheel(
     CPoint pt);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -8030,7 +8030,7 @@ afx_msg void OnMouseMove(
     CPoint point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nFlags*<br/>
 指示各种虚拟键是否已关闭。 此参数可以是下列值的任意组合：
@@ -8066,7 +8066,7 @@ afx_msg BOOL OnMouseWheel(
     CPoint pt);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nFlags*<br/>
 指示各种虚拟键是否已关闭。 此参数可以是下列值的任意组合：
@@ -8114,7 +8114,7 @@ afx_msg void OnMove(
     int y);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*<br/>
 指定工作区左上角的新 x 坐标位置。 此新位置在重叠和弹出窗口的屏幕坐标中给定，子窗口的父工作区坐标。
@@ -8137,7 +8137,7 @@ afx_msg void OnMoving(
     LPRECT lpRect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nSide*<br/>
 要移动的窗口的边缘。
@@ -8158,7 +8158,7 @@ afx_msg void OnMoving(
 afx_msg BOOL OnNcActivate(BOOL bActive);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bActive*<br/>
 指定何时需要更改标题栏或图标以指示活动或非活动状态。 如果要绘制活动标题或图标，则*bActive*参数为 TRUE。 对于非活动标题或图标，此值为 FALSE。
@@ -8184,7 +8184,7 @@ afx_msg void OnNcCalcSize(
     NCCALCSIZE_PARAMS* lpncsp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bCalcValidRects*<br/>
 指定应用程序是否应指定包含有效信息的工作区部分。 Windows 会将有效信息复制到新工作区中的指定区域。 如果此参数为 TRUE，则应用程序应指定工作区的哪个部分有效。
@@ -8213,7 +8213,7 @@ afx_msg void OnNcCalcSize(
 afx_msg BOOL OnNcCreate(LPCREATESTRUCT lpCreateStruct);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpCreateStruct*<br/>
 指向 `CWnd`的[CREATESTRUCT](/windows/win32/api/winuser/ns-winuser-createstructw)数据结构。
@@ -8249,7 +8249,7 @@ afx_msg void OnNcDestroy();
 afx_msg LRESULT OnNcHitTest(CPoint point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *情况*<br/>
 包含光标的 x 坐标和 y 坐标。 这些坐标始终是屏幕坐标。
@@ -8273,7 +8273,7 @@ afx_msg void OnNcLButtonDblClk(
     CPoint point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nHitTest*<br/>
 指定[命中测试代码](#onnchittest)。 命中测试是确定游标位置的测试。 有关值的列表，请参阅[WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) 。
@@ -8298,7 +8298,7 @@ afx_msg void OnNcLButtonDown(
     CPoint point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nHitTest*<br/>
 指定[命中测试代码](#onnchittest)。 命中测试是确定游标位置的测试。 有关值的列表，请参阅[WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) 。
@@ -8323,7 +8323,7 @@ afx_msg void OnNcLButtonUp(
     CPoint point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nHitTest*<br/>
 指定[命中测试代码](#onnchittest)。 命中测试是确定游标位置的测试。 有关值的列表，请参阅[WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) 。
@@ -8348,7 +8348,7 @@ afx_msg void OnNcMButtonDblClk(
     CPoint point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nHitTest*<br/>
 指定[命中测试代码](#onnchittest)。 命中测试是确定游标位置的测试。
@@ -8371,7 +8371,7 @@ afx_msg void OnNcMButtonDown(
     CPoint point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nHitTest*<br/>
 指定[命中测试代码](#onnchittest)。 命中测试是确定游标位置的测试。
@@ -8394,7 +8394,7 @@ afx_msg void OnNcMButtonUp(
     CPoint point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nHitTest*<br/>
 指定[命中测试代码](#onnchittest)。 命中测试是确定游标位置的测试。
@@ -8417,7 +8417,7 @@ afx_msg void OnNcMouseHover(
     CPoint point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -8456,7 +8456,7 @@ afx_msg void OnNcMouseMove(
     CPoint point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nHitTest*<br/>
 指定[命中测试代码](#onnchittest)。 命中测试是确定游标位置的测试。
@@ -8495,7 +8495,7 @@ afx_msg void OnNcRButtonDblClk(
     CPoint point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nHitTest*<br/>
 指定[命中测试代码](#onnchittest)。 命中测试是确定游标位置的测试。
@@ -8518,7 +8518,7 @@ afx_msg void OnNcRButtonDown(
     CPoint point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nHitTest*<br/>
 指定[命中测试代码](#onnchittest)。 命中测试是确定游标位置的测试。
@@ -8541,7 +8541,7 @@ afx_msg void OnNcRButtonUp(
     CPoint point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nHitTest*<br/>
 指定[命中测试代码](#onnchittest)。 命中测试是确定游标位置的测试。
@@ -8562,7 +8562,7 @@ afx_msg void OnNcRButtonUp(
 afx_msg void OnNcRenderingChanged(BOOL bIsRendering);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -8586,7 +8586,7 @@ void OnNcXButtonDblClk(
     CPoint point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -8612,7 +8612,7 @@ afx_msg void OnNcXButtonDown(
     CPoint point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -8638,7 +8638,7 @@ afx_msg void OnNcXButtonUp(
     CPoint point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -8663,7 +8663,7 @@ afx_msg void OnNextMenu(
     LPMDINEXTMENU lpMdiNextMenu);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -8688,7 +8688,7 @@ virtual BOOL OnNotify(
     LRESULT* pResult);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *wParam*<br/>
 标识当消息来自控件时发送消息的控件。 否则， *wParam*为0。
@@ -8721,7 +8721,7 @@ afx_msg UINT OnNotifyFormat(
     UINT nCommand);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -8779,7 +8779,7 @@ afx_msg void OnPaintClipboard(
     HGLOBAL hPaintStruct);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pClipAppWnd*<br/>
 指定指向剪贴板应用程序窗口的指针。 该指针可能是暂时的，不应存储起来供将来使用。
@@ -8804,7 +8804,7 @@ afx_msg void OnPaintClipboard(
 afx_msg void OnPaletteChanged(CWnd* pFocusWnd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFocusWnd*<br/>
 指定一个指向窗口的指针，该窗口导致系统调色板发生更改。 指针可能是暂时的，不应存储。
@@ -8828,7 +8828,7 @@ afx_msg void OnPaletteChanged(CWnd* pFocusWnd);
 afx_msg void OnPaletteIsChanging(CWnd* pRealizeWnd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pRealizeWnd*<br/>
 指定要实现其逻辑调色板的窗口。
@@ -8847,7 +8847,7 @@ afx_msg void OnParentNotify(
     LPARAM lParam);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 message<br/>
 指定为其通知父窗口的事件和子窗口的标识符。 事件是*消息*的低序位字。 如果事件 WM_CREATE 或 WM_DESTROY，则*消息*的高顺序字为子窗口的标识符;否则，高位字是不确定的。 事件（*消息*的低序位字）可以是以下值之一：
@@ -8886,7 +8886,7 @@ afx_msg UINT OnPowerBroadcast(
     UINT nEventData);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -8998,7 +8998,7 @@ afx_msg void OnRawInput(
     HRAWINPUT hRawInput);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -9022,7 +9022,7 @@ afx_msg void OnRButtonDblClk(
     CPoint point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nFlags*<br/>
 指示各种虚拟键是否已关闭。 此参数可以是下列值的任意组合：
@@ -9057,7 +9057,7 @@ afx_msg void OnRButtonDown(
     CPoint point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nFlags*<br/>
 指示各种虚拟键是否已关闭。 此参数可以是下列值的任意组合：
@@ -9089,7 +9089,7 @@ afx_msg void OnRButtonUp(
     CPoint point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nFlags*<br/>
 指示各种虚拟键是否已关闭。 此参数可以是下列值的任意组合：
@@ -9119,7 +9119,7 @@ afx_msg LRESULT OnRegisteredMouseWheel(
     LPARAM lParam);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *wParam*<br/>
 指针的水平位置。
@@ -9160,7 +9160,7 @@ afx_msg void OnRenderAllFormats();
 afx_msg void OnRenderFormat(UINT nFormat);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nFormat*<br/>
 指定剪贴板格式。
@@ -9184,7 +9184,7 @@ afx_msg void OnSessionChange(
     UINT nId);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -9211,7 +9211,7 @@ afx_msg BOOL OnSetCursor(
     UINT message);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pWnd*<br/>
 指定指向包含光标的窗口的指针。 该指针可能是暂时的，不应存储起来供将来使用。
@@ -9247,7 +9247,7 @@ message<br/>
 afx_msg void OnSetFocus(CWnd* pOldWnd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pOldWnd*<br/>
 包含失去输入焦点的 `CWnd` 对象（可能为 NULL）。 该指针可能是暂时的，不应存储起来供将来使用。
@@ -9269,7 +9269,7 @@ afx_msg void OnSettingChange(
     LPCTSTR lpszSection);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *uFlags*<br/>
 当系统作为 `SystemParametersInfo` 调用的结果发送消息时，此参数是一个标志，用于指示已更改的系统参数。 有关值的列表，请参阅 Windows SDK 中的[SystemParametersInfo](/windows/win32/api/winuser/nf-winuser-systemparametersinfow) 。 当应用程序发送消息时，此参数必须为0。
@@ -9299,7 +9299,7 @@ afx_msg void OnShowWindow(
     UINT nStatus);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bShow*<br/>
 指定是否显示窗口。 如果正在显示窗口，则为 TRUE;如果该窗口处于隐藏状态，则为 FALSE。
@@ -9329,7 +9329,7 @@ afx_msg void OnSize(
     int cy);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 nType<br/>
 指定所请求的调整大小类型。 此参数可以是下列值之一：
@@ -9371,7 +9371,7 @@ afx_msg void OnSizeClipboard(
     HGLOBAL hRect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pClipAppWnd*<br/>
 标识剪贴板-应用程序窗口。 指针可能是暂时的，不应存储。
@@ -9398,7 +9398,7 @@ afx_msg void OnSizing(
     LPRECT lpRect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nSide*<br/>
 要移动的窗口的边缘。
@@ -9427,7 +9427,7 @@ afx_msg void OnSpoolerStatus(
     UINT nJobs);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nStatus*<br/>
 指定 SP_JOBSTATUS 标志。
@@ -9452,7 +9452,7 @@ afx_msg void OnStyleChanged(
     LPSTYLESTRUCT lpStyleStruct);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nStyleType*<br/>
 指定窗口的扩展样式或 nonextended 样式是否已更改。 此参数可以是下列值的组合：
@@ -9479,7 +9479,7 @@ afx_msg void OnStyleChanging(
     LPSTYLESTRUCT lpStyleStruct);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nStyleType*<br/>
 指定窗口的扩展样式或 nonextended 样式是否已更改。 此参数可以是下列值的组合：
@@ -9507,7 +9507,7 @@ afx_msg void OnSysChar(
     UINT nFlags);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nChar*<br/>
 指定控件菜单键的 ASCII 字符键代码。
@@ -9563,7 +9563,7 @@ afx_msg void OnSysCommand(
     LPARAM lParam);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nID*<br/>
 指定所请求的系统命令的类型。 此参数可以是下列值之一：
@@ -9631,7 +9631,7 @@ afx_msg void OnSysDeadChar(
     UINT nFlags);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nChar*<br/>
 指定死键字符值。
@@ -9670,7 +9670,7 @@ afx_msg void OnSysKeyDown(
     UINT nFlags);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nChar*<br/>
 指定所按下的键的虚拟键代码。 有关标准虚拟键代码的列表，请参阅 Winuser。h
@@ -9717,7 +9717,7 @@ afx_msg void OnSysKeyUp(
     UINT nFlags);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nChar*<br/>
 指定所按下的键的虚拟键代码。 有关标准虚拟键代码的列表，请参阅 Winuser。h
@@ -9770,7 +9770,7 @@ afx_msg void OnTCard(
     DWORD dwActionData);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *idAction*<br/>
 指示用户已执行的操作。 此参数可以是下列值之一：
@@ -9826,7 +9826,7 @@ afx_msg void OnTimeChange();
 afx_msg void OnTimer(UINT_PTR nIDEvent);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIDEvent*<br/>
 指定计时器的标识符。
@@ -9852,7 +9852,7 @@ virtual INT_PTR OnToolHitTest(
     TOOLINFO* pTI) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *情况*<br/>
 指定光标的 x 坐标和 y 坐标。 这些坐标始终相对于窗口的左上角
@@ -9894,7 +9894,7 @@ virtual BOOL OnTouchInput(
     PTOUCHINPUT pInput);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pt*<br/>
 触摸屏幕的位置（在工作区坐标中）。
@@ -9924,7 +9924,7 @@ virtual BOOL OnTouchInputs(
     PTOUCHINPUT pInputs);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nInputsCount*<br/>
 Windows touch 输入的总数。
@@ -9949,7 +9949,7 @@ afx_msg void OnUniChar(
     UINT nFlags);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -9974,7 +9974,7 @@ afx_msg void OnUnInitMenuPopup(
     UINT nFlags);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -9998,7 +9998,7 @@ afx_msg void OnUpdateUIState(
     UINT nUIElement);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *N 操作*<br/>
 指定要执行的操作。 可以是以下值之一：
@@ -10048,7 +10048,7 @@ afx_msg int OnVKeyToItem(
     UINT nIndex);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nKey*<br/>
 指定用户按下的键的虚拟键代码。 有关标准虚拟键代码的列表，请参阅 Winuser。h
@@ -10081,7 +10081,7 @@ afx_msg void OnVScroll(
     CScrollBar* pScrollBar);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nSBCode*<br/>
 指定一个指示用户滚动请求的滚动条代码。 此参数可以是以下项之一：
@@ -10130,7 +10130,7 @@ afx_msg void OnVScrollClipboard(
     UINT nPos);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pClipAppWnd*<br/>
 指定指向剪贴板查看器窗口的指针。 该指针可能是暂时的，不应存储起来供将来使用。
@@ -10172,7 +10172,7 @@ afx_msg void OnVScrollClipboard(
 afx_msg void OnWindowMaximizedChanged(BOOL bIsMaximized);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -10193,7 +10193,7 @@ afx_msg void OnWindowMaximizedChanged(BOOL bIsMaximized);
 afx_msg void OnWindowPosChanged(WINDOWPOS* lpwndpos);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpwndpos*<br/>
 指向[WINDOWPOS](/windows/win32/api/winuser/ns-winuser-windowpos)数据结构，该结构包含有关窗口新大小和位置的信息。
@@ -10213,7 +10213,7 @@ afx_msg void OnWindowPosChanged(WINDOWPOS* lpwndpos);
 afx_msg void OnWindowPosChanging(WINDOWPOS* lpwndpos);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpwndpos*<br/>
 指向一个 `WINDOWPOS` 数据结构，该结构包含有关窗口新大小和位置的信息。
@@ -10235,7 +10235,7 @@ afx_msg void OnWindowPosChanging(WINDOWPOS* lpwndpos);
 afx_msg void OnWinIniChange(LPCTSTR lpszSection);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszSection*<br/>
 指向一个字符串，该字符串指定已更改的节的名称。 （该字符串不包含用方括号括起节名称。）
@@ -10265,7 +10265,7 @@ virtual BOOL OnWndMsg(
     LRESULT* pResult);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 message<br/>
 指定要发送的消息。
@@ -10300,7 +10300,7 @@ afx_msg void OnXButtonDblClk(
     CPoint point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -10338,7 +10338,7 @@ afx_msg void OnXButtonDown(
     CPoint point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -10376,7 +10376,7 @@ afx_msg void OnXButtonUp(
     CPoint point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 |参数|说明|
 |---------------|-----------------|
@@ -10441,7 +10441,7 @@ operator HWND() const;
 BOOL operator!=(const CWnd& wnd) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *wnd*<br/>
 对 `CWnd` 对象的引用。
@@ -10458,7 +10458,7 @@ BOOL operator!=(const CWnd& wnd) const;
 BOOL operator==(const CWnd& wnd) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *wnd*<br/>
 对 `CWnd` 对象的引用。
@@ -10475,7 +10475,7 @@ BOOL operator==(const CWnd& wnd) const;
 BOOL PaintWindowlessControls(CDC* pDC);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 要在其上绘制无窗口控件的设备上下文。
@@ -10495,7 +10495,7 @@ BOOL PostMessage(
     LPARAM lParam = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 message<br/>
 指定要发布的消息。
@@ -10540,7 +10540,7 @@ virtual void PostNcDestroy();
 virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *站*<br/>
 [CREATESTRUCT](/windows/win32/api/winuser/ns-winuser-createstructw)结构。
@@ -10588,7 +10588,7 @@ virtual void PreSubclassWindow();
 virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pMsg*<br/>
 指向包含要处理的[消息的消息结构。](/windows/win32/api/winuser/ns-winuser-msg)
@@ -10607,7 +10607,7 @@ void Print(
     DWORD dwFlags) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 一个指向设备上下文的指针。
@@ -10653,7 +10653,7 @@ void PrintClient(
     DWORD dwFlags) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 一个指向设备上下文的指针。
@@ -10683,7 +10683,7 @@ BOOL PrintWindow(
     UINT nFlags) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 指向要打印到的设备上下文的指针。
@@ -10710,7 +10710,7 @@ BOOL RedrawWindow(
     UINT flags = RDW_INVALIDATE | RDW_UPDATENOW | RDW_ERASE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpRectUpdate*<br/>
 指向包含更新矩形坐标的[RECT 结构](/windows/win32/api/windef/ns-windef-rect)。 如果*prgnUpdate*包含有效的区域句柄，则忽略此参数。
@@ -10771,7 +10771,7 @@ BOOL ReflectChildNotify(
     LRESULT* pResult);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 message<br/>
 指定要反射的消息。
@@ -10807,7 +10807,7 @@ static BOOL PASCAL ReflectLastMsg(
     LRESULT* pResult = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hWndChild*<br/>
 子窗口的句柄。
@@ -10833,7 +10833,7 @@ static BOOL PASCAL ReflectLastMsg(
 int ReleaseDC(CDC* pDC);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 标识要释放的设备上下文。
@@ -10862,7 +10862,7 @@ void RepositionBars(UINT nIDFirst,
     BOOL bStretch = TRUE) ;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIDFirst*<br/>
 要重新定位和调整大小的控件条范围中第一个的 ID。
@@ -10903,7 +10903,7 @@ void RepositionBars(UINT nIDFirst,
 int RunModalLoop(DWORD dwFlags = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 dwFlags<br/>
 指定要发送的 Windows 消息。 可以是以下值之一：
@@ -10930,7 +10930,7 @@ dwFlags<br/>
 void ScreenToClient(LPPOINT lpPoint) const;  void ScreenToClient(LPRECT lpRect) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpPoint*<br/>
 指向包含要转换的屏幕坐标的[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象或[点结构](/windows/win32/api/windef/ns-windef-point)。
@@ -10958,7 +10958,7 @@ void ScrollWindow(
     LPCRECT lpClipRect = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *xAmount*<br/>
 指定水平滚动的量（以设备单位为单位）。 此参数必须是负值才能滚动到左侧。
@@ -10997,7 +10997,7 @@ int ScrollWindowEx(
     UINT flags);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dx*<br/>
 指定水平滚动的量（以设备单位为单位）。 此参数的值必须为负值才能滚动到左侧。
@@ -11050,7 +11050,7 @@ int ScrollWindowEx(
 BOOL SendChildNotifyLastMsg(LRESULT* pResult = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pResult*<br/>
 子窗口由父窗口返回的结果。
@@ -11077,7 +11077,7 @@ LRESULT SendDlgItemMessage(
     LPARAM lParam = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nID*<br/>
 指定将接收消息的对话框控件的标识符。
@@ -11116,7 +11116,7 @@ LRESULT SendMessage(
     LPARAM lParam = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 message<br/>
 指定要发送的消息。
@@ -11152,7 +11152,7 @@ void SendMessageToDescendants(
     BOOL bOnlyPerm = FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 message<br/>
 指定要发送的消息。
@@ -11190,7 +11190,7 @@ BOOL SendNotifyMessage(
     LPARAM lParam);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 message<br/>
 指定要发送的消息。
@@ -11253,7 +11253,7 @@ CWnd* SetCapture();
 static void PASCAL SetCaretPos(POINT point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *情况*<br/>
 指定插入符号的新 x 和 y 坐标（在工作区坐标中）。
@@ -11296,7 +11296,7 @@ HWND SetClipboardViewer();
 int SetDlgCtrlID(int nID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nID*<br/>
 要为控件的标识符设置的新值。
@@ -11320,7 +11320,7 @@ void SetDlgItemInt(
     BOOL bSigned = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nID*<br/>
 指定要更改的控件的整数 ID。
@@ -11349,7 +11349,7 @@ void SetDlgItemText(
     LPCTSTR lpszString);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nID*<br/>
 标识要设置其文本的控件。
@@ -11415,7 +11415,7 @@ void SetFont(
     BOOL bRedraw = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFont*<br/>
 指向 `CFont` 对象的指针。
@@ -11437,7 +11437,7 @@ HICON SetIcon(
     BOOL bBigIcon);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hIcon*<br/>
 上一个图标的句柄。
@@ -11468,7 +11468,7 @@ BOOL SetLayeredWindowAttributes(
     DWORD dwFlags);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *crKey*<br/>
 指向 COLORREF 值的指针，该值指定在编写分层窗口时要使用的透明度颜色键。 此颜色的窗口绘制的所有像素都将是透明的。 若要生成 COLORREF，请使用 RGB 宏。
@@ -11495,7 +11495,7 @@ dwFlags<br/>
 BOOL SetMenu(CMenu* pMenu);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pMenu*<br/>
 标识新菜单。 如果此参数为 NULL，则将删除当前菜单。
@@ -11522,7 +11522,7 @@ BOOL SetMenu(CMenu* pMenu);
 void SetOwner(CWnd* pOwnerWnd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pOwnerWnd*<br/>
 标识 window 对象的新所有者。 如果此参数为 NULL，则窗口对象没有所有者。
@@ -11543,7 +11543,7 @@ void SetOwner(CWnd* pOwnerWnd);
 CWnd* SetParent(CWnd* pWndNewParent);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pWndNewParent*<br/>
 标识新的父窗口。
@@ -11566,7 +11566,7 @@ void AFX_CDECL SetProperty(
     VARTYPE vtProp, ...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwDispID*<br/>
 标识要设置的属性。
@@ -11592,7 +11592,7 @@ void AFX_CDECL SetProperty(
 void SetRedraw(BOOL bRedraw = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bRedraw*<br/>
 指定重绘标志的状态。 如果此参数为 TRUE，则设置重绘标志;如果为 FALSE，则清除标志。
@@ -11616,7 +11616,7 @@ BOOL SetScrollInfo(
     BOOL bRedraw = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nBar*<br/>
 指定滚动条是控件还是窗口的非工作区的一部分。 如果它是非工作区的一部分，nBar 还指示是水平还是垂直定位滚动条。 它必须是以下各项之一：
@@ -11657,7 +11657,7 @@ int SetScrollPos(
     BOOL bRedraw = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nBar*<br/>
 指定要设置的滚动条。 此参数可以是下列参数之一：
@@ -11692,7 +11692,7 @@ void SetScrollRange(
     BOOL bRedraw = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nBar*<br/>
 指定要设置的滚动条。 此参数可以是下列值之一：
@@ -11734,7 +11734,7 @@ UINT_PTR SetTimer(
     DWORD));
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIDEvent*<br/>
 指定一个非零计时器标识符。 如果计时器标识符是唯一的，则 `SetTimer`返回此相同的值。 否则，`SetTimer` 会确定新的唯一值，并返回。 对于窗口计时器（具有 NULL 回调函数），该值必须仅对与当前窗口关联的其他 windows 计时器是唯一的。 对于回调计时器，此值对于所有进程中的所有计时器都必须是唯一的。 因此，当您创建回调计时器时，返回的值可能与您指定的值不同。
@@ -11777,7 +11777,7 @@ void CALLBACK TimerProc(
 BOOL SetWindowContextHelpId(DWORD dwContextHelpId);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwContextHelpId*<br/>
 帮助上下文标识符。
@@ -11802,7 +11802,7 @@ BOOL SetWindowContextHelpId(DWORD dwContextHelpId);
 BOOL SetWindowPlacement(const WINDOWPLACEMENT* lpwndpl);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpwndpl*<br/>
 指向指定新显示状态和位置的[WINDOWPLACEMENT](/windows/win32/api/winuser/ns-winuser-windowplacement)结构。
@@ -11825,7 +11825,7 @@ BOOL SetWindowPos(
     UINT nFlags);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pWndInsertAfter*<br/>
 标识将在 Z 顺序中此 `CWnd` 对象之前（高于）的 `CWnd` 对象。 此参数可以是指向 `CWnd` 的指针，也可以是指向以下值之一的指针：
@@ -11927,7 +11927,7 @@ int SetWindowRgn(
     BOOL bRedraw);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hRgn*<br/>
 区域的句柄。
@@ -11953,7 +11953,7 @@ int SetWindowRgn(
 void SetWindowText(LPCTSTR lpszString);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszString*<br/>
 指向[CString](../../atl-mfc-shared/reference/cstringt-class.md)对象或以 null 结尾的字符串，将其用作新的标题或控件文本。
@@ -11998,7 +11998,7 @@ void ShowCaret();
 void ShowOwnedPopups(BOOL bShow = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bShow*<br/>
 指定弹出窗口是显示还是隐藏。 如果此参数为 TRUE，则显示所有隐藏的弹出窗口。 如果此参数为 FALSE，则隐藏所有可见的弹出窗口。
@@ -12017,7 +12017,7 @@ void ShowScrollBar(
     BOOL bShow = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nBar*<br/>
 指定滚动条是控件还是窗口的非工作区的一部分。 如果它是非工作区的一部分， *nBar*还指示是水平还是垂直定位滚动条。 它必须是以下各项之一：
@@ -12043,7 +12043,7 @@ void ShowScrollBar(
 BOOL ShowWindow(int nCmdShow);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nCmdShow*<br/>
 指定如何显示 `CWnd`。 它必须是下列值之一：
@@ -12090,7 +12090,7 @@ BOOL SubclassDlgItem(
     CWnd* pParent);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nID*<br/>
 控件的 ID。
@@ -12120,7 +12120,7 @@ BOOL SubclassDlgItem(
 BOOL SubclassWindow(HWND hWnd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hWnd*<br/>
 窗口的句柄。
@@ -12178,7 +12178,7 @@ Unsubclassed 窗口的句柄。
 BOOL UpdateData(BOOL bSaveAndValidate = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bSaveAndValidate*<br/>
 指示是否正在初始化对话框（FALSE）或正在检索数据的标志（TRUE）。
@@ -12201,7 +12201,7 @@ void UpdateDialogControls(
     BOOL bDisableIfNoHndler);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pTarget*<br/>
 指向应用程序的主框架窗口，并用于路由更新消息。
@@ -12231,7 +12231,7 @@ BOOL UpdateLayeredWindow(
     DWORD dwFlags);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDCDst*<br/>
 指向屏幕的设备上下文的指针。 它在窗口内容更新时用于调色板颜色匹配。 如果*pDCDst*为 NULL，则将使用默认调色板。
@@ -12295,7 +12295,7 @@ void UpdateWindow();
 void ValidateRect(LPCRECT lpRect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpRect*<br/>
 指向包含要从更新区域中删除的矩形的客户端坐标的[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT 结构](/windows/win32/api/windef/ns-windef-rect)。 如果*lpRect*为 NULL，则验证整个窗口。
@@ -12314,7 +12314,7 @@ void ValidateRect(LPCRECT lpRect);
 void ValidateRgn(CRgn* pRgn);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pRgn*<br/>
 指向[CRgn](../../mfc/reference/crgn-class.md)对象的指针，该对象标识定义要从更新区域中删除的区域的区域。 如果此参数为 NULL，则删除整个工作区。
@@ -12333,7 +12333,7 @@ void ValidateRgn(CRgn* pRgn);
 static CWnd* PASCAL WindowFromPoint(POINT point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *情况*<br/>
 指定用于定义要检查的点的[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象或[点](/windows/win32/api/windef/ns-windef-point)数据结构。
@@ -12357,7 +12357,7 @@ virtual LRESULT WindowProc(
     LPARAM lParam);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 message<br/>
 指定要处理的 Windows 消息。
@@ -12386,7 +12386,7 @@ virtual void WinHelp(
     UINT nCmd = HELP_CONTEXT);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwData*<br/>
 指定其他数据。 使用的值取决于*nCmd*参数的值。
@@ -12408,7 +12408,7 @@ BOOL RegisterTouchWindow(
     ULONG ulFlags = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bRegister*<br/>
 TRUE 表示注册 Windows touch 支持;否则为 FALSE。

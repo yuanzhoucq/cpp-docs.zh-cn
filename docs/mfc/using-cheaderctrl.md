@@ -1,29 +1,27 @@
 ---
 title: 使用 CHeaderCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CHeaderCtrl
 helpviewer_keywords:
 - header controls [MFC], using
 - CHeaderCtrl class [MFC]
 ms.assetid: fb3e512b-9539-43c4-a7e7-3fafd6d0706e
-ms.openlocfilehash: bf99aad508aee52bc8d345ca084ef96ef40f803b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 74e306368d7354bbc9f8281a8bf7fa857b6bf524
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386403"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443999"
 ---
 # <a name="using-cheaderctrl"></a>使用 CHeaderCtrl
 
-使用标头控件，由类[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)，以显示列标题，以纵栏表列表。 例如，标头控件将用于实现电子表格中的列的控件。
+使用由类[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)表示的标头控件，以显示列标题。 例如，标头控件对于实现电子表格中的列控件很有用。
 
-标头控件通常分为部分，名为"标头项"每个贴有关联的文本或数字列的标题。 具体取决于您设置的样式，可以提供多种用户操作的标头项的直接方法。
+标头控件通常分为多个部分（称为 "标头项"），每个部分都带有文本或数字相关列的标题。 根据您设置的样式，您可以为用户提供多种直接的方法来处理标头项。
 
 > [!NOTE]
->  [CListCtrl](../mfc/reference/clistctrl-class.md)提供了一个嵌入标头控件，并[CListView](../mfc/reference/clistview-class.md)封装`CListCtrl`MFC 类中。 一般情况下，考虑使用`CHeaderCtrl`到想要绘制您自己的标签列表。
+>  [CListCtrl](../mfc/reference/clistctrl-class.md)提供嵌入的标头控件， [CListView](../mfc/reference/clistview-class.md)将 `CListCtrl` 封装在 MFC 类中。 一般情况下，请考虑使用 `CHeaderCtrl` 来标记你打算自行绘制的列表。
 
-## <a name="what-do-you-want-to-know-more-about"></a>你想要了解更多信息
+## <a name="what-do-you-want-to-know-more-about"></a>要了解有关的详细信息
 
 - [标题控件和列表控件](../mfc/header-control-and-list-control.md)
 
@@ -49,6 +47,6 @@ ms.locfileid: "62386403"
 
 - [处理标题控件通知](../mfc/processing-header-control-notifications.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [控件](../mfc/controls-mfc.md)

@@ -41,11 +41,11 @@ helpviewer_keywords:
 - accelerator class
 ms.assetid: 37eed593-cf87-4611-9cdc-e98df6c2377a
 ms.openlocfilehash: 72a570ab28696730f835c42748a6ea12b865ca55
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855908"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427481"
 ---
 # <a name="accelerator-class"></a>accelerator 类
 
@@ -88,7 +88,7 @@ class accelerator;
 |[set_default](#set_default)|返回默认快捷键的路径。|
 |[set_default_cpu_access_type](#set_default_cpu_access_type)|为在此 `accelerator`上进行的数组和隐式内存分配设置默认 CPU [access_type](concurrency-namespace-enums-amp.md#access_type)。|
 
-### <a name="public-operators"></a>公共运算符
+### <a name="public-operators"></a>公用運算子
 
 |名称|说明|
 |----------|-----------------|

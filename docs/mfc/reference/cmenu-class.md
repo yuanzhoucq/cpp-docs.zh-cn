@@ -85,11 +85,11 @@ helpviewer_keywords:
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
 ms.openlocfilehash: 1cd7be72dc6c9a38fae4f5ccc1a15c184a2d4466
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855448"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426239"
 ---
 # <a name="cmenu-class"></a>CMenu 类
 
@@ -151,7 +151,7 @@ class CMenu : public CObject
 |[CMenu：： TrackPopupMenu](#trackpopupmenu)|在指定位置显示一个浮动的弹出菜单，并在弹出菜单上跟踪项的选定内容。|
 |[CMenu：： TrackPopupMenuEx](#trackpopupmenuex)|在指定位置显示一个浮动的弹出菜单，并在弹出菜单上跟踪项的选定内容。|
 
-### <a name="public-operators"></a>公共运算符
+### <a name="public-operators"></a>公用運算子
 
 |名称|说明|
 |----------|-----------------|

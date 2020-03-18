@@ -14,11 +14,11 @@ helpviewer_keywords:
 - structured_task_group class
 ms.assetid: 742afa8c-c7b6-482c-b0ba-04c809927b22
 ms.openlocfilehash: 93dd79b755f79dcb4857c1b1c4856362b0bd45dd
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78884113"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427361"
 ---
 # <a name="structured_task_group-class"></a>structured_task_group 类
 
@@ -30,7 +30,7 @@ ms.locfileid: "78884113"
 class structured_task_group;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -116,7 +116,7 @@ void run(
     location& _Placement);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Function*<br/>
 将调用以执行任务句柄的主体的函数对象的类型。
@@ -147,7 +147,7 @@ template<class _Function>
 task_group_status run_and_wait(const _Function& _Func);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Function*<br/>
 将调用以执行任务的函数对象的类型。
@@ -182,7 +182,7 @@ structured_task_group();
 structured_task_group(cancellation_token _CancellationToken);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_CancellationToken*<br/>
 要与此结构化任务组关联的取消标记。 取消标记时，将取消结构化任务组。

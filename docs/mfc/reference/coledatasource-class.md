@@ -37,11 +37,11 @@ helpviewer_keywords:
 - COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
 ms.openlocfilehash: 5cd573590bc1adb303e0b4c5cd600b9fa6c685b2
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855708"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426521"
 ---
 # <a name="coledatasource-class"></a>COleDataSource 类
 
@@ -53,7 +53,7 @@ ms.locfileid: "78855708"
 class COleDataSource : public CCmdTarget
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -111,7 +111,7 @@ void CacheData(
     LPFORMATETC lpFormatEtc = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *cfFormat*<br/>
 要提供数据的剪贴板格式。 此参数可以是预定义的剪贴板格式之一或本机 Windows [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw)函数返回的值。
@@ -147,7 +147,7 @@ void CacheGlobalData(
     LPFORMATETC lpFormatEtc = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *cfFormat*<br/>
 要提供数据的剪贴板格式。 此参数可以是预定义的剪贴板格式之一或本机 Windows [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw)函数返回的值。
@@ -186,7 +186,7 @@ void DelayRenderData(
     LPFORMATETC lpFormatEtc = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *cfFormat*<br/>
 要提供数据的剪贴板格式。 此参数可以是预定义的剪贴板格式之一或本机 Windows [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw)函数返回的值。
@@ -216,7 +216,7 @@ void DelayRenderFileData(
     LPFORMATETC lpFormatEtc = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *cfFormat*<br/>
 要提供数据的剪贴板格式。 此参数可以是预定义的剪贴板格式之一或本机 Windows [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw)函数返回的值。
@@ -246,7 +246,7 @@ void DelaySetData(
     LPFORMATETC lpFormatEtc = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *cfFormat*<br/>
 要在其中放置数据的剪贴板格式。 此参数可以是预定义的剪贴板格式之一或本机 Windows [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw)函数返回的值。
@@ -273,7 +273,7 @@ DROPEFFECT DoDragDrop(
     COleDropSource* pDropSource = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwEffects*<br/>
 此数据源允许的拖放操作。 可以是下列一项或多项：
@@ -360,7 +360,7 @@ virtual BOOL OnRenderData(
     LPSTGMEDIUM lpStgMedium);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpFormatEtc*<br/>
 指向[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)结构，指定请求信息时所用的格式。
@@ -392,7 +392,7 @@ virtual BOOL OnRenderFileData(
     CFile* pFile);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpFormatEtc*<br/>
 指向[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)结构，指定请求信息时所用的格式。
@@ -422,7 +422,7 @@ virtual BOOL OnRenderGlobalData(
     HGLOBAL* phGlobal);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpFormatEtc*<br/>
 指向[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)结构，指定请求信息时所用的格式。
@@ -455,7 +455,7 @@ virtual BOOL OnSetData(
     BOOL bRelease);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpFormatEtc*<br/>
 指向[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)结构，指定替换数据的格式。

@@ -67,11 +67,11 @@ helpviewer_keywords:
 - CDaoQueryDef [MFC], m_pDatabase
 ms.assetid: 9676a4a3-c712-44d4-8c5d-d1cc78288d3a
 ms.openlocfilehash: 08fb2909a4fd2e5bda3dfc63d19224a515c7c699
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883884"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424541"
 ---
 # <a name="cdaoquerydef-class"></a>CDaoQueryDef 类
 
@@ -83,7 +83,7 @@ ms.locfileid: "78883884"
 class CDaoQueryDef : public CObject
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -137,7 +137,7 @@ Querydef 是一个数据访问对象，其中包含描述查询的 SQL 语句及
 > [!NOTE]
 >  DAO 数据库类与基于开放式数据库连接（ODBC）的 MFC 数据库类不同。 所有 DAO 数据库类名称都具有 "CDao" 前缀。 你仍可以使用 DAO 类访问 ODBC 数据源。 通常，基于 DAO 的 MFC 类比基于 ODBC 的 MFC 类更强大;基于 DAO 的类可以通过其自己的数据库引擎来访问数据，包括通过 ODBC 驱动程序。 基于 DAO 的类还支持数据定义语言（DDL）操作，例如通过类添加表，而无需直接调用 DAO。
 
-## <a name="usage"></a>用法
+## <a name="usage"></a>使用情况
 
 使用 querydef 对象可以处理现有的已保存查询，或创建新的已保存查询或临时查询：
 
@@ -235,7 +235,7 @@ BOOL CanUpdate();
 CDaoQueryDef(CDaoDatabase* pDatabase);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDatabase*<br/>
 指向打开的[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)对象的指针。
@@ -276,7 +276,7 @@ virtual void Create(
     LPCTSTR lpszSQL = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszName*<br/>
 保存在数据库中的查询的唯一名称。 有关字符串的详细信息，请参阅 DAO 帮助中的 "CreateQueryDef 方法" 主题。 如果接受默认值（空字符串），则会创建一个临时 querydef。 此类查询不会保存在 QueryDefs 集合中。
@@ -298,7 +298,7 @@ virtual void Create(
 virtual void Execute(int nOptions = dbFailOnError);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nOptions*<br/>
 一个整数，它确定查询的特征。 有关相关信息，请参阅 DAO 帮助中的 "执行方法" 主题。 您可以使用按位 "或" 运算符 **&#124;** （）来合并此参数的以下常量：
@@ -422,7 +422,7 @@ void GetFieldInfo(
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 用于按索引查找的 querydef 字段集合中所需字段的从零开始的索引。
@@ -515,7 +515,7 @@ void GetParameterInfo(
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 Querydef 参数集合中所需参数的从零开始的索引，用于按索引查找。
@@ -546,7 +546,7 @@ virtual COleVariant GetParamValue(LPCTSTR lpszName);
 virtual COleVariant GetParamValue(int nIndex);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszName*<br/>
 你需要其值的参数的名称，用于按名称进行查找。
@@ -701,7 +701,7 @@ Querydef 必须处于打开状态，然后才能使用它来调用[Execute](#exe
 virtual void Open(LPCTSTR lpszName = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszName*<br/>
 一个字符串，包含要打开的已保存的 querydef 的名称。 可以使用[CString](../../atl-mfc-shared/reference/cstringt-class.md)。
@@ -718,7 +718,7 @@ virtual void Open(LPCTSTR lpszName = NULL);
 void SetConnect(LPCTSTR lpszConnect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszConnect*<br/>
 一个字符串，其中包含关联的[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)对象的连接字符串。
@@ -742,7 +742,7 @@ void SetConnect(LPCTSTR lpszConnect);
 void SetName(LPCTSTR lpszName);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszName*<br/>
 一个字符串，其中包含关联的[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)对象中 nontemporary 查询的新名称。
@@ -759,7 +759,7 @@ Querydef 名称是用户定义的唯一名称。 可以在将 querydef 对象追
 void SetODBCTimeout(short nODBCTimeout);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nODBCTimeout*<br/>
 查询超时前等待的秒数。
@@ -784,7 +784,7 @@ virtual void SetParamValue(
     const COleVariant& varValue);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszName*<br/>
 要设置其值的参数的名称。
@@ -809,7 +809,7 @@ Querydef 的 Parameters 集合中参数的序号位置。 可以通过调用[Get
 void SetReturnsRecords(BOOL bReturnsRecords);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bReturnsRecords*<br/>
 如果对外部数据库的查询返回记录，则传递 TRUE;否则为 FALSE。
@@ -826,7 +826,7 @@ void SetReturnsRecords(BOOL bReturnsRecords);
 void SetSQL(LPCTSTR lpszSQL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszSQL*<br/>
 一个字符串，其中包含适用于执行的完整 SQL 语句。 此字符串的语法取决于查询所针对的 DBMS。 有关 Microsoft Jet 数据库引擎中使用的语法的讨论，请参阅 DAO 帮助中的 "在代码中生成 SQL 语句" 主题。

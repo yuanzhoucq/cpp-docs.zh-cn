@@ -201,11 +201,11 @@ helpviewer_keywords:
 - std::partition_copy [C++]
 - std::swap [C++]
 ms.openlocfilehash: 199634997397cca0008c60843b5d977633277331
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
-ms.translationtype: HT
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855233"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427367"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 函数
 
@@ -239,7 +239,7 @@ ForwardIterator adjacent_find(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -346,7 +346,7 @@ bool all_of(
     UnaryPredicate pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -422,7 +422,7 @@ bool any_of(
     UnaryPredicate pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -499,7 +499,7 @@ bool binary_search(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *第一个*\
 用于确定要搜索范围中第一个元素的位置的前向迭代器。
@@ -638,7 +638,7 @@ constexpr const Type& clamp(
     Compare pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *value*\
 要与*上限*和*下限*进行比较的值。
@@ -679,7 +679,7 @@ ForwardIterator2 copy(
     ForwardIterator2 result);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -775,7 +775,7 @@ BidirectionalIterator2 copy_backward(
     BidirectionalIterator2 destEnd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *第一个*\
 一种双向迭代器，用于定址源范围内第一个元素的位置。
@@ -881,7 +881,7 @@ ForwardIterator2 copy_if(
     UnaryPredicate pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -984,7 +984,7 @@ ForwardIterator2 copy_n(
     ForwardIterator2 dest);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -1055,7 +1055,7 @@ count(
     const Type& value);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -1136,7 +1136,7 @@ count_if(
     UnaryPredicate pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -1271,7 +1271,7 @@ bool equal(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -1355,7 +1355,7 @@ pair<ForwardIterator, ForwardIterator> equal_range(
     Compare pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *第一个*\
 用于确定要搜索范围中第一个元素的位置的前向迭代器。
@@ -1521,7 +1521,7 @@ void fill(
     const Type& value);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -1599,7 +1599,7 @@ ForwardIterator fill_n(
     const Type& value);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -1688,7 +1688,7 @@ ForwardIterator find(
     const Type& value);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -1753,7 +1753,7 @@ find_end(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *first1*\
 用于确定要搜索范围中第一个元素的位置的前向迭代器。
@@ -1917,7 +1917,7 @@ find_first_of(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *first1*\
 用于确定要搜索范围中第一个元素的位置的前向迭代器。
@@ -2061,7 +2061,7 @@ ForwardIterator find_if(
     UnaryPredicate pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *第一个*\
 用于确定要搜索范围中的第一个元素的位置的输入迭代器。
@@ -2183,7 +2183,7 @@ ForwardIterator find_if_not(
     UnaryPredicate pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *第一个*\
 用于确定要搜索范围中的第一个元素的位置的输入迭代器。
@@ -2223,7 +2223,7 @@ void for_each(
     Function func);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *第一个*\
 一种输入迭代器，用于寻址要操作的范围中第一个元素的位置。
@@ -2394,7 +2394,7 @@ void generate(
     Generator gen);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *第一个*\
 一种前向迭代器，用于寻址要分配值的范围中第一个元素的位置。
@@ -2475,7 +2475,7 @@ ForwardIterator generate_n(
     Generator gen);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -2580,7 +2580,7 @@ bool includes(
     Compare pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -2801,7 +2801,7 @@ void inplace_merge(
     Compare pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -2967,7 +2967,7 @@ bool is_heap(
     Compare pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -2991,7 +2991,7 @@ bool is_heap(
 
 第二个模板函数返回
 
-`is_heap_until(first, last, pred) == last`。
+`is_heap_until(first, last, pred) == last` 列中的一个值匹配。
 
 ## <a name="is_heap_until"></a>is_heap_until
 
@@ -3023,7 +3023,7 @@ RandomAccessIterator is_heap_until(
     Compare pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -3066,7 +3066,7 @@ bool is_partitioned(
     UnaryPredicate pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -3123,7 +3123,7 @@ bool is_permutation(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *first1*\
 引用范围的第一个元素的向前迭代器。
@@ -3238,7 +3238,7 @@ bool is_sorted(
     Compare pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -3290,7 +3290,7 @@ ForwardIterator is_sorted_until(
     Compare pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -3323,7 +3323,7 @@ template<class ForwardIterator1, class ForwardIterator2>
 void iter_swap( ForwardIterator1 left, ForwardIterator2 right );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 其值将进行交换的其中一个前向迭代器。
@@ -3508,7 +3508,7 @@ bool lexicographical_compare(
     Compare pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -3656,7 +3656,7 @@ ForwardIterator lower_bound(
     BinaryPredicate pred );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *第一个*\
 用于确定要搜索范围中第一个元素的位置的前向迭代器。
@@ -3793,7 +3793,7 @@ void make_heap(
     BinaryPredicate pred );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *第一个*\
 一种随机访问迭代器，用于寻址要转换为堆的范围中第一个元素的位置。
@@ -3881,7 +3881,7 @@ constexpr Type& max(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 要比较的两个对象中的第一个对象。
@@ -4101,7 +4101,7 @@ ForwardIterator max_element(
     Compare pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -4267,7 +4267,7 @@ ForwardIterator merge(
     Compare pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -4446,7 +4446,7 @@ constexpr Type min(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 要比较的两个对象中的第一个对象。
@@ -4665,7 +4665,7 @@ ForwardIterator min_element(
     Compare pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -4829,7 +4829,7 @@ pair<ForwardIterator, ForwardIterator> minmax_element(
     Compare pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -4847,13 +4847,13 @@ pair<ForwardIterator, ForwardIterator> minmax_element(
 
 返回
 
-`pair<ForwardIterator, ForwardIterator>( min_element(first, last), max_element(first, last))`。
+`pair<ForwardIterator, ForwardIterator>( min_element(first, last), max_element(first, last))` 列中的一个值匹配。
 
 ### <a name="remarks"></a>备注
 
 第一个模板函数返回
 
-`pair<ForwardIterator,ForwardIterator>(min_element(first,last), max_element(first,last))`。
+`pair<ForwardIterator,ForwardIterator>(min_element(first,last), max_element(first,last))` 列中的一个值匹配。
 
 第二个模板函数的行为相同，只不过它将 `operator<(X, Y)` 替换为 `pred(X, Y)`。
 
@@ -4885,7 +4885,7 @@ constexpr pair<Type&, Type&> minmax(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 要比较的两个对象中的第一个对象。
@@ -4901,7 +4901,7 @@ constexpr pair<Type&, Type&> minmax(
 
 ### <a name="remarks"></a>备注
 
-如果*right*小于*left*，则第一个模板函数返回 `pair<const Type&, const Type&>( right, left )`。 否则，它将返回 `pair<const Type&, const Type&>( left, right )`。
+如果*right*小于*left*，则第一个模板函数返回 `pair<const Type&, const Type&>( right, left )`。 否则，将返回 `pair<const Type&, const Type&>( left, right )`。
 
 第二个成员函数返回一个对，其中第一个元素为较小的，第二个元素按谓词*pred*进行比较。
 
@@ -4985,7 +4985,7 @@ mismatch(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -5133,7 +5133,7 @@ ForwardIterator2 move(
     ForwardIterator2 result);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -5163,7 +5163,7 @@ BidirectionalIterator2 move_backward(
     BidirectionalIterator2 destEnd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *第一个*\
 指示范围内移动元素的开始位置的迭代器。
@@ -5197,7 +5197,7 @@ bool next_permutation(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *第一个*\
 一种双向迭代器，指向要重新排序的范围内第一个元素的位置。
@@ -5393,7 +5393,7 @@ void nth_element(
     Compare pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -5505,7 +5505,7 @@ bool none_of(
     UnaryPredicate pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -5561,7 +5561,7 @@ void partial_sort(
     Compare pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -5696,7 +5696,7 @@ RandomAccessIterator partial_sort_copy(
     Compare pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -5821,7 +5821,7 @@ ForwardIterator partition(
     UnaryPredicate pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -5911,7 +5911,7 @@ pair<ForwardIterator1, ForwardIterator2> partition_copy(
     UnaryPredicate pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -5947,7 +5947,7 @@ ForwardIterator partition_point(
     UnaryPredicate pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *第一个*\
 一种 `ForwardIterator`，指示在一个范围内检查条件的开始位置。
@@ -5983,7 +5983,7 @@ void pop_heap(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *第一个*\
 一种随机访问迭代器，用于寻址堆中第一个元素的位置。
@@ -6092,7 +6092,7 @@ bool prev_permutation(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *第一个*\
 一种双向迭代器，指向要重新排序的范围内第一个元素的位置。
@@ -6267,7 +6267,7 @@ void push_heap(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *第一个*\
 一种随机访问迭代器，用于寻址堆中第一个元素的位置。
@@ -6386,7 +6386,7 @@ ForwardIterator remove(
     const Type& value);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -6484,7 +6484,7 @@ ForwardIterator2 remove_copy(
     const Type& value);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -6582,7 +6582,7 @@ ForwardIterator2 remove_copy_if(
     UnaryPredicate pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -6687,7 +6687,7 @@ ForwardIterator remove_if(
     UnaryPredicate pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -6790,7 +6790,7 @@ void replace(
     const Type& newVal);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -6879,7 +6879,7 @@ ForwardIterator2 replace_copy(
     const Type& newVal);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -6994,7 +6994,7 @@ ForwardIterator2 replace_copy_if(
     const Type& value);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -7115,7 +7115,7 @@ void replace_if(
     const Type& value);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -7207,7 +7207,7 @@ void reverse(
     BidirectionalIterator last);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -7284,7 +7284,7 @@ ForwardIterator reverse_copy(
     ForwardIterator result);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -7366,7 +7366,7 @@ ForwardIterator rotate(
     ForwardIterator last);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -7482,7 +7482,7 @@ ForwardIterator2 rotate_copy(
     ForwardIterator2 result);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -7625,7 +7625,7 @@ ForwardIterator search(
     const Searcher& searcher);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -7797,7 +7797,7 @@ ForwardIterator search_n(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -7954,7 +7954,7 @@ ForwardIterator set_difference(
     Compare pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -8156,7 +8156,7 @@ ForwardIterator set_intersection(
     Compare pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -8354,7 +8354,7 @@ ForwardIterator set_symmetric_difference(
     Compare pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -8556,7 +8556,7 @@ ForwardIterator set_union(
     Compare pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -8728,7 +8728,7 @@ void shuffle(
     UniformRandomNumberGenerator&& gen);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *第一个*\
 指向范围中要重新排序的第一个元素的迭代器（包含第一个元素）。 必须满足 `RandomAccessIterator` 和 `ValueSwappable` 的要求。
@@ -8773,7 +8773,7 @@ void sort(
     Compare pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -8880,7 +8880,7 @@ void sort_heap(
     Compare pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *第一个*\
 一种随机访问迭代器，用于寻址目标堆中第一个元素的位置。
@@ -8982,7 +8982,7 @@ BidirectionalIterator stable_partition(
     UnaryPredicate pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -9083,7 +9083,7 @@ void stable_sort(
     Compare pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -9187,7 +9187,7 @@ void swap(
     Type (& right)[N]);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 对于第一次重写，为交换其内容的第一个对象。 对于第二次重写，为交换其内容的第一个对象数组。
@@ -9274,7 +9274,7 @@ ForwardIterator2 swap_ranges(
     ForwardIterator2 first2);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -9397,7 +9397,7 @@ ForwardIterator transform(
     BinaryOperation binary_op);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -9545,7 +9545,7 @@ ForwardIterator unique(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -9698,7 +9698,7 @@ ForwardIterator2 unique_copy(ExecutionPolicy&& exec,
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exec*\
 要使用的执行策略。
@@ -9820,7 +9820,7 @@ ForwardIterator upper_bound(
     Compare pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *第一个*\
 要搜索的范围中第一个元素的位置。

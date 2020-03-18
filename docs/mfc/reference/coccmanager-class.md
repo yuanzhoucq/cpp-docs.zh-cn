@@ -31,11 +31,11 @@ helpviewer_keywords:
 - COccManager [MFC], SplitDialogTemplate
 ms.assetid: 7d47aeed-d1ab-48e3-b4cf-d429718e370a
 ms.openlocfilehash: c2a49e3396879e5f1e0864ab5342b57541c6b36c
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865933"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423935"
 ---
 # <a name="coccmanager-class"></a>COccManager 类
 
@@ -47,7 +47,7 @@ ms.locfileid: "78865933"
 class COccManager : public CNoTrackObject
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-methods"></a>公共方法
 
@@ -88,7 +88,7 @@ class COccManager : public CNoTrackObject
 virtual COleControlContainer* CreateContainer(CWnd* pWnd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pWnd*<br/>
 指向与自定义站点容器关联的窗口对象的指针。
@@ -117,7 +117,7 @@ virtual BOOL CreateDlgControls(
     _AFX_OCC_DIALOG_INFO* pOccDialogInfo);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pWndParent*<br/>
 指向对话框对象的父对象的指针。
@@ -143,7 +143,7 @@ virtual BOOL CreateDlgControls(
 virtual COleControlSite* CreateSite(COleControlContainer* pCtrlCont);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pCtrlCont*<br/>
 一个指针，指向承载新控件网站的控件容器。
@@ -166,7 +166,7 @@ virtual COleControlSite* CreateSite(COleControlContainer* pCtrlCont);
 static DWORD AFX_CDECL GetDefBtnCode(CWnd* pWnd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pWnd*<br/>
 包含 button 控件的窗口对象。
@@ -191,7 +191,7 @@ virtual BOOL IsDialogMessage(
     LPMSG lpMsg);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pWndDlg*<br/>
 指向消息的目标对话框的指针。
@@ -218,7 +218,7 @@ static BOOL AFX_CDECL IsLabelControl(CWnd* pWnd);
 static BOOL AFX_CDECL IsLabelControl(COleControlSiteOrWnd* pWnd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pWnd*<br/>
 指向包含控件的窗口的指针。
@@ -245,7 +245,7 @@ static BOOL AFX_CDECL IsMatchingMnemonic(
     LPMSG lpMsg);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pWnd*<br/>
 指向包含控件的窗口的指针。
@@ -271,7 +271,7 @@ virtual BOOL OnEvent(
     AFX_CMDHANDLERINFO* pHandlerInfo);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pCmdTarget*<br/>
 指向试图处理事件的 `CCmdTarget` 对象的指针
@@ -303,7 +303,7 @@ virtual const DLGTEMPLATE* PreCreateDialog(
     const DLGTEMPLATE* pOrigTemplate);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pOccDialogInfo*<br/>
 一个 `_AFX_OCC_DIALOG_INFO` 结构，它包含对话框模板以及对话框所承载的任何 ActiveX 控件上的信息。
@@ -329,7 +329,7 @@ virtual const DLGTEMPLATE* PreCreateDialog(
 virtual void PostCreateDialog(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pOccDialogInfo*<br/>
 一个 `_AFX_OCC_DIALOG_INFO` 结构，它包含对话框模板以及对话框所承载的任何 ActiveX 控件上的信息。
@@ -350,7 +350,7 @@ static void AFX_CDECL SetDefaultButton(
     BOOL bDefault);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pWnd*<br/>
 指向包含控件的窗口的指针。
@@ -377,7 +377,7 @@ virtual DLGTEMPLATE* SplitDialogTemplate(
     DLGITEMTEMPLATE** ppOleDlgItems);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pTemplate*<br/>
 指向要检查的对话框模板的指针。

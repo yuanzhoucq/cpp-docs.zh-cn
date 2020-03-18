@@ -1,8 +1,6 @@
 ---
 title: CCmdUI 类
 ms.date: 11/04/2016
-f1_keywords:
-- CCmdUI
 helpviewer_keywords:
 - updating user interface objects [MFC]
 - user interface objects [MFC], updating
@@ -10,12 +8,12 @@ helpviewer_keywords:
 - update handlers [MFC]
 - toolbars [MFC], updating
 ms.assetid: 2f2bae62-8c29-45a4-bbce-490eb01907d5
-ms.openlocfilehash: 8e0af0703924d6fae626d3753b8523efe0c56652
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 105aa7ad6c5cc6a5563dbde8145327a2b3d066a1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62306296"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447144"
 ---
 # <a name="the-ccmdui-class"></a>CCmdUI 类
 
@@ -23,8 +21,8 @@ ms.locfileid: "62306296"
 
 [!code-cpp[NVC_MFCDocView#3](../mfc/codesnippet/cpp/the-ccmdui-class_1.cpp)]
 
-此处理程序调用`Enable`有权访问菜单项对象的成员函数。 `Enable` 将项可供使用。
+此处理程序通过访问菜单项来调用对象的 `Enable` 成员函数。 `Enable` 使该项可供使用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [如何：更新用户界面对象](../mfc/how-to-update-user-interface-objects.md)

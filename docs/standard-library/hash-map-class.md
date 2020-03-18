@@ -88,17 +88,17 @@ helpviewer_keywords:
 - stdext::hash_map::upper_bound
 - stdext::hash_map::value_comp
 ms.assetid: 40879dfc-51ba-4a59-9f9e-26208de568a8
-ms.openlocfilehash: e993b694e03c83ef2b2bc96ecefc2d37e48f7747
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 4e13402fbff40ff810e71f78f43060cb59f03cd9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79424739"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441637"
 ---
 # <a name="hash_map-class"></a>hash_map 类
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
 从集合快速存储和检索数据，集合中的每个元素都是一个具有排序关键字和关联数据值的一对值，排序关键字的值是唯一的。
 
@@ -124,7 +124,7 @@ class hash_map
 此类型包括两个函数对象，其中一个是类 compare，可与作为排序关键字的两个元素值进行比较以确定其相对顺序；另一个是哈希函数，这是一个一元谓词，用于将元素的关键字值映射到 `size_t` 类型的无符号整数。 此参数为可选参数，hash_compare <`Key`，不 <`Key`> > 为默认值。
 
 *分配*器\
-一种表示存储的分配器对象的类型，该分配器对象封装有关 hash_map 的内存分配和解除分配的详细信息。 此参数为可选参数，其默认值为 allocator<pair <const `Key`, `Type`>>。
+一种表示存储的分配器对象的类型，该分配器对象封装有关 hash_map 的内存分配和解除分配的详细信息。 此参数是可选的，默认值为分配器\<对 < const `Key`，`Type`> >。
 
 ## <a name="remarks"></a>备注
 
@@ -158,13 +158,13 @@ hash_map 类提供的迭代器是双向迭代器，但类成员函数 [insert](#
 
 ### <a name="constructors"></a>构造函数
 
-|构造函数|描述|
+|构造函数|说明|
 |-|-|
 |[hash_map](#hash_map)|构造一个空的或者是其他某个 `hash_map` 的全部或部分副本的 `hash_map`。|
 
 ### <a name="typedefs"></a>Typedef
 
-|类型名称|描述|
+|类型名称|说明|
 |-|-|
 |[allocator_type](#allocator_type)|一种类型，此类型表示 `allocator` 对象的 `hash_map` 类。|
 |[const_iterator](#const_iterator)|一种类型，此类型提供可读取 `const` 中的 `hash_map` 元素的双向迭代器。|
@@ -172,11 +172,11 @@ hash_map 类提供的迭代器是双向迭代器，但类成员函数 [insert](#
 |[const_reference](#const_reference)|一种类型，它提供对存储在 `hash_map` 中用于读取和执行**const**操作的**const**元素的引用。|
 |[const_reverse_iterator](#const_reverse_iterator)|一种类型，它提供可读取 `hash_map`中任何**const**元素的双向迭代器。|
 |[difference_type](#difference_type)|一种有符号整数类型，此类型可用于表示 `hash_map` 中迭代器指向的元素间范围内的元素数量。|
-|[Iterator](#iterator)|一种类型，它提供可读取或修改 `hash_map` 中任何元素的双向迭代器。|
+|[迭代器](#iterator)|一种类型，它提供可读取或修改 `hash_map` 中任何元素的双向迭代器。|
 |[key_compare](#key_compare)|一种提供函数对象的类型，该函数对象可比较两个排序键以确定 `hash_map` 中两个元素的相对顺序。|
 |[key_type](#key_type)|一种类型，用于描述组成 `hash_map` 中每个元素的排序关键字对象。|
 |[mapped_type](#mapped_type)|一种类型，此类型表示存储在 `hash_map` 中的数据类型。|
-|[pointer](#pointer)|一种类型，它提供指向 `hash_map` 中的某个元素的指针。|
+|[指针](#pointer)|一种类型，它提供指向 `hash_map` 中的某个元素的指针。|
 |[reference](#reference)|一种类型，此类型提供对存储在 `hash_map` 中的元素的引用。|
 |[reverse_iterator](#reverse_iterator)|一种类型，此类型提供可读取或修改反向 `hash_map` 中的元素的双向迭代器。|
 |[size_type](#size_type)|可表示 `hash_map` 中元素数量的无符号整数类型。|
@@ -184,7 +184,7 @@ hash_map 类提供的迭代器是双向迭代器，但类成员函数 [insert](#
 
 ### <a name="member-functions"></a>成员函数
 
-|成员函数|描述|
+|成员函数|说明|
 |-|-|
 |[at](#at)|在 `hash_map` 中查找具有指定关键字值的元素。|
 |[begin](#begin)|返回一个迭代器，此迭代器用于发现 `hash_map` 中的第一个元素。|
@@ -215,9 +215,9 @@ hash_map 类提供的迭代器是双向迭代器，但类成员函数 [insert](#
 
 ### <a name="operators"></a>运算符
 
-|Operator|描述|
+|运算符|说明|
 |-|-|
-|[operator[]](#op_at)|将元素插入到具有指定键值的 `hash_map`。|
+|[operator&#91;&#93;](#op_at)|将元素插入到具有指定键值的 `hash_map`。|
 |[hash_map::operator=](#op_eq)|将一个 `hash_map` 中的元素替换为另一 `hash_map` 副本。|
 
 ## <a name="requirements"></a>要求
@@ -229,7 +229,7 @@ hash_map 类提供的迭代器是双向迭代器，但类成员函数 [insert](#
 ## <a name="allocator_type"></a>hash_map::allocator_type
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
 一个类型，它代表 hash_map 对象的分配器类。
 
@@ -239,12 +239,12 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::allo
 
 ### <a name="example"></a>示例
 
-有关使用 `allocator_type` 的示例，请参阅 [get_allocator](#get_allocator) 的示例。
+有关使用 [ 的示例，请参阅 ](#get_allocator)get_allocator`allocator_type` 的示例。
 
 ## <a name="at"></a>hash_map::at
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
 在 hash_map 中查找具有指定键值的元素。
 
@@ -256,7 +256,7 @@ const Type& at(const Key& key) const;
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |-|-|
 |*key*|要查找的元素的键值。|
 
@@ -266,7 +266,7 @@ const Type& at(const Key& key) const;
 
 ### <a name="remarks"></a>备注
 
-如果找不到参数键值，函数将返回 [out_of_range 类](../standard-library/out-of-range-class.md)的一个对象。
+如果未找到参数键值，函数将引发类 [out_of_range 类](../standard-library/out-of-range-class.md)的对象。
 
 ### <a name="example"></a>示例
 
@@ -298,7 +298,7 @@ int main( )
 ## <a name="begin"></a>hash_map::begin
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
 返回发现 hash_map 中第一个元素的位置的迭代器。
 
@@ -359,7 +359,7 @@ The first element of hm1 is now 1.
 ## <a name="cbegin"></a>hash_map::cbegin
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
 返回发现 hash_map 中第一个元素的位置的常量迭代器。
 
@@ -403,7 +403,7 @@ The first element of hm1 is 2.
 ## <a name="cend"></a>hash_map::cend
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
 返回一个常量迭代器，此迭代器用于发现 hash_map 中最后一个元素之后的位置。
 
@@ -454,7 +454,7 @@ The value of last element of hm1 is 30.
 ## <a name="clear"></a>hash_map::clear
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
 清除 hash_map 的所有元素。
 
@@ -504,7 +504,7 @@ The size of the hash_map after clearing is 0.
 ## <a name="const_iterator"></a>hash_map::const_iterator
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
 提供可读取 hash_map 中 **const** 元素的双向迭代器的类型。
 
@@ -524,12 +524,12 @@ Hash_map 定义的 `const_iterator` 指向元素，这些元素是 `pair< const 
 
 ### <a name="example"></a>示例
 
-有关使用 `const_iterator` 的示例，请参阅 [begin](#begin) 的示例。
+有关使用 [ 的示例，请参阅 ](#begin)begin`const_iterator` 的示例。
 
 ## <a name="const_pointer"></a>hash_map::const_pointer
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
 一种类型，此类型提供指向 hash_map 中的 **const** 元素的指针。
 
@@ -546,7 +546,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::co
 ## <a name="const_reference"></a>hash_map::const_reference
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
 一种类型，此类型提供对用于读取和执行 **const** 操作的 hash_map 中存储的 **const** 元素的引用。
 
@@ -602,7 +602,7 @@ The data value of the first element in the hash_map is 10.
 ## <a name="const_reverse_iterator"></a>hash_map::const_reverse_iterator
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
 提供可读取 hash_map 中任何 **const** 元素的双向迭代器的类型。
 
@@ -618,16 +618,16 @@ Hash_map 定义的 `const_reverse_iterator` 指向[value_type](#value_type)的�
 
 若要取消引用指向 hash_map 中某个元素 `crIter` `const_reverse_iterator`，请使用 **->** 运算符。
 
-若要访问元素的键的值，请使用 `crIter`**第一个** -> ，它等效于（\* `crIter`） **。** 若要访问元素的映射基准值，请使用 `crIter` -> **second**，它等效于（\* `crIter`）。 **first** 相同。
+若要访问元素的键的值，请使用 `crIter`**第一个** -> ，它等效于（\* `crIter`） **。** 若要访问元素的映射基准值，请使用 `crIter` -> **second**，它等效于（\* `crIter`）。 **first**。
 
 ### <a name="example"></a>示例
 
-有关如何声明和使用 `const_reverse_iterator` 的示例，请参阅 [rend](#rend) 的示例。
+有关如何声明和使用 [ 的示例，请参阅 ](#rend)rend`const_reverse_iterator` 的示例。
 
 ## <a name="count"></a>hash_map::count
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
 返回 hash_map 中其键与参数指定的键匹配的元素的数量。
 
@@ -648,7 +648,7 @@ size_type count(const Key& key) const;
 
 成员函数返回以下范围内的元素 *x* 的数量
 
-\[ lower_bound(*key*), upper_bound(*key*) )
+\[ lower_bound （*key*）、upper_bound （*键*））
 
 对于唯一的关联容器 hash_map，数量为 0 或 1。
 
@@ -699,7 +699,7 @@ The number of elements in hm1 with a sort key of 3 is: 0.
 ## <a name="crbegin"></a>hash_map::crbegin
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
 返回一个常量迭代器，此迭代器用于发现反向 hash_map 中的第一个元素的位置。
 
@@ -751,7 +751,7 @@ The first element of the reversed hash_map hm1 is 3.
 ## <a name="crend"></a>hash_map::crend
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
 返回一个常量迭代器，此迭代器用于发现反向 hash_map 中最后一个元素之后的位置。
 
@@ -806,7 +806,7 @@ The last element of the reversed hash_map hm1 is 3.
 ## <a name="difference_type"></a>hash_map::difference_type
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
 一种带符号整数类型，此类型可用于表示中迭代器指向的元素间范围内 hash_map 的元素数量。
 
@@ -876,7 +876,7 @@ The values of the mapped elements are: 10 20 20.
 ## <a name="emplace"></a>hash_map::emplace
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
 将就地构造的元素插入到 hash_map 中。
 
@@ -889,13 +889,13 @@ emplace(
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |-|-|
 |*val*|要插入 [hash_map](../standard-library/hash-map-class.md) 的用于移动构造元素的值，除非此 `hash_map` 已包含该元素（更宽泛地说，是其键经等效排序的元素）。|
 
 ### <a name="return-value"></a>返回值
 
-`hash_map` 成员函数返回一个对，其中，如果完成插入操作，则此对的 bool 组件返回 true，如果 `emplace` 已包含一个其值在排序中具有等效值的元素，则返回 false；此对的迭代器组件返回新元素的插入位置或已包含的元素的位置。
+`emplace` 成员函数返回一个对，其中，如果完成插入操作，则此对的 bool 组件返回 true，如果 `hash_map` 已包含一个其值在排序中具有等效值的元素，则返回 false；此对的迭代器组件返回新元素的插入位置或已包含的元素的位置。
 
 若要访问此成员函数返回的 `pr` 对的迭代器组件，请使用 `pr.first`；若要对其取消引用，请使用 `*(pr.first)`。 若要访问此成员函数返回的对的**bool**部分 `pr`，请使用 `pr.second`，并对其取消引用，请使用 `*(pr.second)`。
 
@@ -935,7 +935,7 @@ After the emplace insertion, hm1 contains:
 ## <a name="emplace_hint"></a>hash_map::emplace_hint
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
 将就地构造的元素插入到 hash_map，并附带位置提示。
 
@@ -948,7 +948,7 @@ iterator emplace_hint(
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |-|-|
 |*val*|要插入 [hash_map](../standard-library/hash-map-class.md) 的用于移动构造元素的值，除非此 `hash_map` 已包含该元素（更宽泛地说，是其键经等效排序的元素）。|
 |*_Where*|有关开始搜索正确插入点的位置的提示。|
@@ -995,7 +995,7 @@ After the emplace insertion, hm1 contains:
 ## <a name="empty"></a>hash_map::empty
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
 测试 hash_map 是否为空。
 
@@ -1046,7 +1046,7 @@ The hash_map hm2 is empty.
 ## <a name="end"></a>hash_map::end
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
 返回一个迭代器，此迭代器用于发现 hash_map 中最后一个元素之后的位置。
 
@@ -1117,7 +1117,7 @@ The value of last element of hm1 is now 20.
 ## <a name="equal_range"></a>hash_map::equal_range
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
 返回一对迭代器，这两个迭代器分别用于发现 hash_map 中其键大于指定键的第一个元素，以及 hash_map 中其键等于或大于指定键的第一个元素。
 
@@ -1204,7 +1204,7 @@ The hash_map hm1 doesn't have an element with a key less than 40.
 ## <a name="erase"></a>hash_map::erase
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
 从 hash_map 中的指定位置移除一个元素或元素范围，或者移除与指定键匹配的元素。
 
@@ -1328,7 +1328,7 @@ of the 2nd element is deleted, the hash_map hm3 is: 0 3.
 ## <a name="find"></a>hash_map::find
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
 返回一个迭代器，此迭代器用于发现 hash_map 中其键与指定键等效的元素的位置。
 
@@ -1407,7 +1407,7 @@ The element of hm1 with a key matching that of the last element is: 30.
 ## <a name="get_allocator"></a>hash_map::get_allocator
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
 返回用于构造 hash_map 的分配器对象的一个副本。
 
@@ -1483,7 +1483,7 @@ int main( )
 ## <a name="hash_map"></a>hash_map::hash_map
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
 构造一个空的或者是其他某个 hash_map 的全部或部分副本的 hash_map。
 
@@ -1533,7 +1533,7 @@ hash_map(
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |-|-|
 |*Fc-al*|要用于此 hash_map 对象的存储分配器类，默认为 `Allocator`。|
 |*压缩*|用于对 hash_map 中元素排序的类常量 `Traits` 的比较函数，默认为 `hash_compare`。|
@@ -1561,7 +1561,7 @@ hash_map(
 ## <a name="insert"></a>hash_map::insert
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
 将一个元素或元素范围插入到 hash_map。
 
@@ -1591,7 +1591,7 @@ iterator insert(
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |-|-|
 |*val*|要插入 hash_map 的元素的值，除非 hash_map 已包含该元素（更宽泛地说，是其键经等效排序的元素）。|
 |*_Where*|有关开始搜索正确插入点的位置的提示。|
@@ -1727,7 +1727,7 @@ After the move insertion, hm4 contains:
 ## <a name="iterator"></a>hash_map::iterator
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
 一种类型，此类型提供可读取或修改 hash_map 中的任何元素的双向迭代器。
 
@@ -1741,18 +1741,18 @@ Hash_map 定义的 `iterator` 指向[value_type](#value_type)的对象的元素�
 
 若要取消引用**迭代器**`Iter` 指向多重映射中的元素，请使用 `->` 运算符。
 
-若要访问元素的键值，请使用 `Iter`**第一个** -> ，它等效于（\* `Iter`）。 **first** 相同。 若要访问元素的映射基准值，请使用 `Iter` -> **second**，它等效于（\* `Iter`）。 **second** 相同。
+若要访问元素的键值，请使用 `Iter`**第一个** -> ，它等效于（\* `Iter`）。 **first**。 若要访问元素的映射基准值，请使用 `Iter` -> **second**，它等效于（\* `Iter`）。 **second** 相同。
 
 类型 `iterator` 可用于修改元素的值。
 
 ### <a name="example"></a>示例
 
-有关如何声明和使用`iterator`的示例，请参阅 [begin](#begin) 的示例。
+有关如何声明和使用 `iterator`的示例，请参阅[begin](#begin)的示例。
 
 ## <a name="key_comp"></a>hash_map::key_comp
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
 检索用于对 hash_map 中的键进行排序的比较对象的副本。
 
@@ -1770,7 +1770,7 @@ key_compare key_comp() const;
 
 **bool 运算符**（ **const key &** `left` **，const key &** `right`）;
 
-如果 `left` 在前且不等于排序顺序中的 `right`，则该函数会返回 **true**。
+如果 **在前且不等于排序顺序中的**，则该函数会返回 `left`true`right`。
 
 ### <a name="example"></a>示例
 
@@ -1828,9 +1828,9 @@ int main( )
 ## <a name="key_compare"></a>hash_map::key_compare
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
-一种提供函数对象的类型，该函数对象可比较两个排序键以确定映射中两个元素的相对顺序。
+一种提供函数对象的类型，该函数对象可比较两个排序键以确定 map 中两个元素的相对顺序。
 
 ```cpp
 typedef Traits key_compare;
@@ -1844,12 +1844,12 @@ typedef Traits key_compare;
 
 ### <a name="example"></a>示例
 
-有关如何声明和使用 `key_compare` 的示例，请参阅 [key_comp](#key_comp) 的示例。
+有关如何声明和使用 [ 的示例，请参阅 ](#key_comp)key_comp`key_compare` 的示例。
 
 ## <a name="key_type"></a>hash_map::key_type
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
 一种类型，用于描述组成 hash_map 的每个元素的排序关键字对象。
 
@@ -1865,12 +1865,12 @@ typedef Key key_type;
 
 ### <a name="example"></a>示例
 
-有关如何声明和使用 `key_type` 的示例，请参阅 [value_type](#value_type) 的示例。
+有关如何声明和使用 [ 的示例，请参阅 ](#value_type)value_type`key_type` 的示例。
 
 ## <a name="lower_bound"></a>hash_map::lower_bound
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
 返回一个迭代器，此迭代器指向 hash_map 中其键值等于或大于指定键的键值的第一个元素。
 
@@ -1947,7 +1947,7 @@ The element of hm1 with a key matching that of the last element is: 30.
 ## <a name="mapped_type"></a>hash_map::mapped_type
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
 一个类型，它代表 hash_map 中存储的数据类型。
 
@@ -1963,12 +1963,12 @@ typedef Type mapped_type;
 
 ### <a name="example"></a>示例
 
-有关如何声明和使用 `key_type` 的示例，请参阅 [value_type](#value_type) 的示例。
+有关如何声明和使用 [ 的示例，请参阅 ](#value_type)value_type`key_type` 的示例。
 
 ## <a name="max_size"></a>hash_map::max_size
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
 返回 hash_map 的最大长度。
 
@@ -2007,7 +2007,7 @@ int main( )
 ## <a name="op_at"></a>hash_map::operator[]
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
 将元素插入到具有指定键值的 `hash_map`。
 
@@ -2019,7 +2019,7 @@ Type& operator[](Key&& key);
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |-|-|
 |*key*|要插入的元素的键值。|
 
@@ -2104,7 +2104,7 @@ int main( )
 ## <a name="op_eq"></a>hash_map::operator=
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
 将 hash_map 的元素替换为另一个 hash_map 的副本。
 
@@ -2116,9 +2116,9 @@ hash_map& operator=(hash_map&& right);
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |-|-|
-|*right*|正在复制到 `hash_map` 的 [hash_map 类](../standard-library/hash-map-class.md)。|
+|right|正在复制到 [ 的 ](../standard-library/hash-map-class.md)hash_map 类`hash_map`。|
 
 ### <a name="remarks"></a>备注
 
@@ -2165,7 +2165,7 @@ int main( )
 ## <a name="pointer"></a>hash_map::pointer
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
 一种类型，此类型提供指向 hash_map 中元素的指针。
 
@@ -2182,7 +2182,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::po
 ## <a name="rbegin"></a>hash_map::rbegin
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
 返回一个迭代器，此迭代器用于发现反向 hash_map 中的第一个元素。
 
@@ -2266,7 +2266,7 @@ After the erasure, the first element in the reversed hash_map is 2.
 ## <a name="reference"></a>hash_map::reference
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
 一种类型，此类型提供对存储在 hash_map 中的元素的引用。
 
@@ -2329,7 +2329,7 @@ The modified data value of first element is 15.
 ## <a name="rend"></a>hash_map::rend
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
 返回一个迭代器，此迭代器用于发现反向 hash_map 中最后一个元素之后的位置。
 
@@ -2419,7 +2419,7 @@ After the erasure, the last element in the reversed hash_map is 2.
 ## <a name="reverse_iterator"></a>hash_map::reverse_iterator
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
 一种类型，此类型提供可读取或修改反向 hash_map 中的元素的双向迭代器。
 
@@ -2435,16 +2435,16 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::reve
 
 若要取消引用指向 hash_map 中某个元素 `rIter` `reverse_iterator`，请使用-> 运算符。
 
-若要访问元素的键值，请使用 `rIter`**第一个** -> ，它等效于（\* `rIter`）。 **first** 相同。 若要访问元素的映射基准值，请使用 `rIter` -> **second**，它等效于（\* `rIter`）。 **first** 相同。
+若要访问元素的键值，请使用 `rIter`**第一个** -> ，它等效于（\* `rIter`）。 **first**。 若要访问元素的映射基准值，请使用 `rIter` -> **second**，它等效于（\* `rIter`）。 **first**。
 
 ### <a name="example"></a>示例
 
-有关如何声明和使用 `reverse_iterator` 的示例，请参阅 [rbegin](#rbegin) 的示例。
+有关如何声明和使用 [ 的示例，请参阅 ](#rbegin)rbegin`reverse_iterator` 的示例。
 
 ## <a name="size"></a>hash_map::size
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
 返回 hash_map 中的元素数量。
 
@@ -2494,7 +2494,7 @@ The hash_map length is now 2.
 ## <a name="size_type"></a>hash_map::size_type
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
 一种无符号整数类型，此类型可表示 hash_map 中的元素数量。
 
@@ -2506,12 +2506,12 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::si
 
 ### <a name="example"></a>示例
 
-有关如何声明和使用 `size_type` 的示例，请参阅 [size](#size) 的示例
+有关如何声明和使用 [ 的示例，请参阅 ](#size)size`size_type` 的示例
 
 ## <a name="swap"></a>hash_map::swap
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
 交换两个 hash_map 的元素。
 
@@ -2585,7 +2585,7 @@ After swapping with hm3, hash_map hm1 is: 300.
 ## <a name="upper_bound"></a>hash_map::upper_bound
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
 返回一个迭代器，此迭代器指向 hash_map 中其键值大于指定键的键值的第一个元素。
 
@@ -2663,7 +2663,7 @@ of the initial element of hm1 is: 20.
 ## <a name="value_comp"></a>hash_map::value_comp
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
 返回一个函数对象，该函数对象可通过比较 hash_map 中元素的键值来确定元素顺序。
 
@@ -2681,7 +2681,7 @@ value_compare value_comp() const;
 
 `bool operator(value_type& left, value_type& right);`
 
-如果 `left` 的键值在排序顺序中先于且不等于 `right` 的键值，则该函数会返回 **true**。
+如果 **的键值在排序顺序中先于且不等于** 的键值，则该函数会返回 `left`true`right`。
 
 ### <a name="example"></a>示例
 
@@ -2731,7 +2731,7 @@ int main( )
 ## <a name="value_type"></a>hash_map::value_type
 
 > [!NOTE]
-> 此 API 已废弃不用。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
+> 此 API 已过时。 替代项为 [unordered_map 类](../standard-library/unordered-map-class.md)。
 
 一种类型，它表示 hash_map 中存储的对象类型。
 
@@ -2803,7 +2803,7 @@ The keys of the mapped elements are: 1 2 3.
 The values of the mapped elements are: 10 20 30.
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

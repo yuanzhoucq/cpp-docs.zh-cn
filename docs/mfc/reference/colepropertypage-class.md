@@ -39,11 +39,11 @@ helpviewer_keywords:
 - COlePropertyPage [MFC], SetPageName
 ms.assetid: e9972872-8e6b-4550-905e-d36a274d64dc
 ms.openlocfilehash: 8253b2c2fa6b93ec51c7ede983ef710eed039970
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865881"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426485"
 ---
 # <a name="colepropertypage-class"></a>COlePropertyPage 类
 
@@ -55,7 +55,7 @@ ms.locfileid: "78865881"
 class AFX_NOVTABLE COlePropertyPage : public CDialog
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -117,7 +117,7 @@ COlePropertyPage(
     UINT idCaption);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *idDlg*<br/>
 对话框模板的资源 ID。
@@ -137,7 +137,7 @@ COlePropertyPage(
 BOOL GetControlStatus(UINT nID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nID*<br/>
 属性页控件的资源 ID。
@@ -154,7 +154,7 @@ BOOL GetControlStatus(UINT nID);
 LPDISPATCH* GetObjectArray(ULONG* pnObjects);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pnObjects*<br/>
 指向一个无符号长整数的指针，该整数将接收该页正在编辑的对象数。
@@ -191,7 +191,7 @@ LPPROPERTYPAGESITE GetPageSite();
 void IgnoreApply(UINT nID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nID*<br/>
 要忽略的控件的 ID。
@@ -220,7 +220,7 @@ BOOL IsModified();
 virtual BOOL OnEditProperty(DISPID dispid);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dispid*<br/>
 正在编辑的属性的调度 ID。
@@ -241,7 +241,7 @@ virtual BOOL OnEditProperty(DISPID dispid);
 virtual BOOL OnHelp(LPCTSTR lpszHelpDir);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszHelpDir*<br/>
 包含属性页的帮助文件的目录。
@@ -306,7 +306,7 @@ BOOL SetControlStatus(
     BOOL bDirty);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nID*<br/>
 包含属性页控件的 ID。
@@ -330,7 +330,7 @@ BOOL SetControlStatus(
 void SetDialogResource(HGLOBAL hDialog);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hDialog*<br/>
 属性页的对话框资源的句柄。
@@ -346,7 +346,7 @@ void SetHelpInfo(
     DWORD dwHelpContext = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszDocString*<br/>
 一个字符串，其中包含要在状态栏或其他位置显示的简短帮助信息。
@@ -365,7 +365,7 @@ void SetHelpInfo(
 void SetModifiedFlag(BOOL bModified = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bModified*<br/>
 指定属性页的已修改标志的新值。
@@ -378,7 +378,7 @@ void SetModifiedFlag(BOOL bModified = TRUE);
 void SetPageName(LPCTSTR lpszPageName);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszPageName*<br/>
 指向包含属性页名称的字符串的指针。

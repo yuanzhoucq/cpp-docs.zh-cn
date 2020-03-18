@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::piecewise_constant_distribution [C++], param_type
 - std::piecewise_constant_distribution [C++], param_type
 ms.assetid: 2c9a21fa-623e-4d63-b827-3f1556b6dedb
-ms.openlocfilehash: 62cfba1fda3d9a42788e8dd47144705fb05c6787
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: db537e7cfab70c2ac4e235a752216b892882f8cf
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455245"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446196"
 ---
-# <a name="piecewiseconstantdistribution-class"></a>piecewise_constant_distribution 类
+# <a name="piecewise_constant_distribution-class"></a>piecewise_constant_distribution 类
 
 生成包含以等概率分布在每个区间中的不等宽区间的分段常数分布。
 
@@ -81,7 +81,7 @@ public:
 ### <a name="parameters"></a>参数
 
 *RealType*\
-浮点结果类型, 默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+浮点结果类型，默认为**double**。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>备注
 
@@ -106,7 +106,7 @@ public:
 
 `operator()` 成员函数将根据 URNG 引擎，从当前参数包或指定参数包返回下一个生成的值。
 
-若要深入了解分布类及其成员，请参阅 [\<random>](../standard-library/random.md)。
+有关分布类及其成员的详细信息，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="example"></a>示例
 
@@ -214,7 +214,7 @@ Distribution for 100 samples:
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<random>
+**标头：** \<随机 >
 
 **命名空间：** std
 
@@ -260,13 +260,13 @@ explicit piecewise_constant_distribution(const param_type& parm);
 *间隔*\
 具有分布区间的 [initializer_list](../cpp/initializers.md)。
 
-*计*\
+*计数*\
 分布范围中的元素数。
 
-*xmin*\
+xmin\
 分布范围中的最低值。
 
-*xmax*\
+xmax\
 分布范围中的最高值。 必须大于 *xmin*。
 
 *weightfunc*\
@@ -280,6 +280,7 @@ explicit piecewise_constant_distribution(const param_type& parm);
 默认构造函数将设置存储参数，以便存在一个概率密度为 1 的 0 到 1 的区间。
 
 迭代器范围构造函数
+
 ```cpp
 template <class InputIteratorI, class InputIteratorW>
 piecewise_constant_distribution(InputIteratorI firstI, InputIteratorI lastI,
@@ -289,6 +290,7 @@ piecewise_constant_distribution(InputIteratorI firstI, InputIteratorI lastI,
 使用序列 [`firstI`，`lastI`) 上迭代器中的区间和以 `firstW` 开始的匹配权重序列来构造分布对象。
 
 初始值设定项列表构造函数
+
 ```cpp
 template <class UnaryOperation>
 piecewise_constant_distribution(initializer_list<result_type>
@@ -299,20 +301,22 @@ intervals,
 使用从函数*weightfunc*生成的初始值设定项列表*间隔*和权重的间隔构造分布对象。
 
 定义为以下内容的构造函数
+
 ```cpp
 template <class UnaryOperation>
 piecewise_constant_distribution(size_t count, result_type xmin, result_type xmax,
     UnaryOperation weightfunc);
 ```
 
-构造`xmin,xmax`一个在 [] 上均匀分布的*计数*间隔的分布对象, 根据函数*weightfunc*分配每个间隔权重, 并且*weightfunc*必须接受一个参数并返回值, 两者都可转换为`double`。 **前置条件：** `xmin < xmax`
+构造一个在 [`xmin,xmax`] 上均匀分布的*计数*间隔的分布对象，根据函数*weightfunc*分配每个间隔权重，而*weightfunc*必须接受一个参数并具有一个返回值，这两个参数都可转换为 `double`。 **前提条件：** `xmin < xmax`
 
 定义为以下内容的构造函数
+
 ```cpp
 explicit piecewise_constant_distribution(const param_type& parm);
 ```
 
-使用*parm*作为存储的参数结构, 构造分布对象。
+使用*parm*作为存储的参数结构，构造分布对象。
 
 ## <a name="param_type"></a>  piecewise_constant_distribution::param_type
 
@@ -340,11 +344,11 @@ struct param_type {
 
 ### <a name="remarks"></a>备注
 
-**前置条件：** `xmin < xmax`
+**前提条件：** `xmin < xmax`
 
 在实例化时，可将此结构传递给分布的类构造函数、传递给 `param()` 成员函数以设置现有分布的存储参数，并传递给 `operator()` 以代替存储参数使用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [\<random>](../standard-library/random.md)\
 [piecewise_linear_distribution](../standard-library/piecewise-linear-distribution-class.md)

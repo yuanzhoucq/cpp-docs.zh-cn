@@ -7,11 +7,11 @@ f1_keywords:
 - new/std::set_new_handler
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
 ms.openlocfilehash: c912e5be07ea0ebdd3148d30c80c39a5f8cfa1a5
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854924"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425411"
 ---
 # <a name="ltnewgt-functions"></a>&lt;new&gt; 函数
 
@@ -32,7 +32,7 @@ template <class T>
     constexpr T* launder(T* ptr) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ptr*\
 内存中的字节地址，其中包含类型类似于*T*的对象。
@@ -83,7 +83,7 @@ extern const std::nothrow_t nothrow;
 new_handler set_new_handler(new_handler Pnew) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Pnew*\
 要安装的 `new_handler`。

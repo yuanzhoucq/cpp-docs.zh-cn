@@ -53,11 +53,11 @@ helpviewer_keywords:
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
 ms.openlocfilehash: 23d17aee2aacbc1484c0f3e181bc824546ab49a2
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865441"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426413"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet 类
 
@@ -69,7 +69,7 @@ ms.locfileid: "78865441"
 class CPropertySheet : public CWnd
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -169,7 +169,7 @@ class CPropertySheet : public CWnd
 void AddPage(CPropertyPage* pPage);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pPage*<br/>
 指向要添加到属性表的页面。 不能为 NULL。
@@ -222,7 +222,7 @@ void Construct(
     HBITMAP hbmHeader = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIDCaption*<br/>
 要用于属性表的标题的 ID。
@@ -293,7 +293,7 @@ CPropertySheet(
     HBITMAP hbmHeader = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIDCaption*<br/>
 要用于属性表的标题的 ID。
@@ -338,7 +338,7 @@ virtual BOOL Create(CWnd* pParentWnd = NULL,
     DWORD dwExStyle = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pParentWnd*<br/>
 指向父窗口。 如果为 NULL，则父项是桌面。
@@ -426,7 +426,7 @@ virtual INT_PTR DoModal();
 void EnableStackedTabs(BOOL bStacked);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bStacked*<br/>
 指示是否在属性表中启用了堆积选项卡。 通过将*bStacked*设置为 FALSE，禁用堆积标记行。
@@ -449,7 +449,7 @@ void EnableStackedTabs(BOOL bStacked);
 void EndDialog(int nEndID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nEndID*<br/>
 要用作属性表的返回值的标识符。
@@ -508,7 +508,7 @@ CPropertyPage* GetActivePage() const;
 CPropertyPage* GetPage(int nPage) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nPage*<br/>
 所需页面的索引（从0开始）。 值必须介于0和1之间，小于属性表中的页数（含）。
@@ -545,7 +545,7 @@ int GetPageCount() const;
 int GetPageIndex(CPropertyPage* pPage);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pPage*<br/>
 指向包含要查找的索引的页面。 不能为 NULL。
@@ -604,7 +604,7 @@ CTabCtrl* GetTabControl() const;
 void MapDialogRect(LPRECT lpRect) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpRect*<br/>
 指向一个[RECT](/previous-versions/dd162897\(v=vs.85\))结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象，其中包含要转换的对话框坐标。
@@ -645,7 +645,7 @@ virtual BOOL OnInitDialog();
 void PressButton(int nButton);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nButton*<br/>
 nButton：标识要按下的按钮。 此参数可以是下列值之一：
@@ -683,7 +683,7 @@ void RemovePage(CPropertyPage* pPage);
 void RemovePage(int nPage);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pPage*<br/>
 指向要从属性表中删除的页面。 不能为 NULL。
@@ -704,13 +704,13 @@ BOOL SetActivePage(int nPage);
 BOOL SetActivePage(CPropertyPage* pPage);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nPage*<br/>
 要设置的页的索引。 该值必须介于0和小于属性表中的页数（含）之间。
 
 *pPage*<br/>
-指向要在属性表中设置的页面。 它不能为 NULL。
+指向要在属性表中设置的页面。 不可为 NULL。
 
 ### <a name="return-value"></a>返回值
 
@@ -732,7 +732,7 @@ BOOL SetActivePage(CPropertyPage* pPage);
 void SetFinishText(LPCTSTR lpszText);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszText*<br/>
 指向 "完成" 命令按钮上显示的文本。
@@ -755,7 +755,7 @@ void SetTitle(
     UINT nStyle = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nStyle*<br/>
 指定属性表标题的样式。 样式必须指定为0或 PSH_PROPTITLE。 如果样式设置为 "PSH_PROPTITLE"，则在指定为标题的文本后将显示 "属性" 一词。 例如，调用 `SetTitle`（"Simple"，PSH_PROPTITLE）将导致 "简单属性" 的属性表标题。
@@ -779,7 +779,7 @@ void SetTitle(
 void SetWizardButtons(DWORD dwFlags);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 dwFlags<br/>
 一组用于自定义向导按钮的功能和外观的标志。 此参数可以是下列值的组合：

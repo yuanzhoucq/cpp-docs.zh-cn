@@ -27,11 +27,11 @@ helpviewer_keywords:
 - CGopherFileFind [MFC], IsDots
 ms.assetid: 8465a979-6323-496d-ab4b-e81383fb999d
 ms.openlocfilehash: 55c40fc04934f00ccb541a01cce611d9532bee1a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78875781"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424355"
 ---
 # <a name="cgopherfilefind-class"></a>CGopherFileFind 类
 
@@ -46,7 +46,7 @@ ms.locfileid: "78875781"
 class CGopherFileFind : public CFileFind
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -113,7 +113,7 @@ explicit CGopherFileFind(
     DWORD_PTR dwContext = 1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pConnection*<br/>
 指向[CGopherConnection](../../mfc/reference/cgopherconnection-class.md)对象的指针。
@@ -140,7 +140,7 @@ virtual BOOL FindFile(
     DWORD dwFlags = INTERNET_FLAG_RELOAD);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *refLocator*<br/>
 对[CGopherLocator](../../mfc/reference/cgopherlocator-class.md)对象的引用。
@@ -188,7 +188,7 @@ virtual BOOL GetCreationTime(FILETIME* pTimeStamp) const;
 virtual BOOL GetCreationTime(CTime& refTime) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pTimeStamp*<br/>
 指向包含文件创建时间的[FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime)结构的指针。
@@ -216,7 +216,7 @@ virtual BOOL GetLastAccessTime(CTime& refTime) const;
 virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *refTime*<br/>
 对[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象的引用。
@@ -244,7 +244,7 @@ virtual BOOL GetLastWriteTime(FILETIME* pTimeStamp) const;
 virtual BOOL GetLastWriteTime(CTime& refTime) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pTimeStamp*<br/>
 指向包含文件上次写入时间的[FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime)结构的指针。
@@ -296,7 +296,7 @@ CGopherLocator GetLocator() const;
 
 ### <a name="return-value"></a>返回值
 
-一个 `CGopherLocator` 对象。
+`CGopherLocator` 对象。
 
 ##  <a name="getscreenname"></a>CGopherFileFind：： GetScreenName
 

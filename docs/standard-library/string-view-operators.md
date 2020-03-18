@@ -17,12 +17,12 @@ helpviewer_keywords:
 - std::basic_string_view::operator&lt;
 - std::basic_string_view::operator&lt;&lt;
 - std::basic_string_view::operator&lt;=, std::basic_string_view::operator==
-ms.openlocfilehash: 699b1f1bddeb71ecbf03297d162a7e45ebd39609
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 871b7dc93f5d548897cf77e55dbacf5a104cbee9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425057"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446764"
 ---
 # <a name="ltstring_viewgt-operators"></a>&lt;string_view&gt; 运算符
 
@@ -55,7 +55,7 @@ bool operator!=(
     const basic_string_view<CharType, Traits>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *左*\
 任何可转换的字符串类型或要进行比较 `basic_string_view` 类型的对象。
@@ -94,7 +94,7 @@ bool operator==(
     const basic_string_view<CharType, Traits>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *左*\
 任何可转换的字符串类型或要进行比较 `basic_string_view` 类型的对象。
@@ -116,6 +116,7 @@ bool operator==(
 ## <a name="op_lt"></a> 运算符&lt;
 
 测试运算符左侧的对象是否小于右端的对象 sidestring_view
+
 ```cpp
 template <class CharType, class Traits>
 bool operator<(
@@ -133,7 +134,7 @@ bool operator<(
     const basic_string_view<CharType, Traits>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *左*\
 任何可转换的字符串类型或要进行比较 `basic_string_view` 类型的对象。
@@ -194,7 +195,7 @@ bool operator<=(
     const basic_string_view<CharType, Traits>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *左*\
 任何可转换的字符串类型或要进行比较 `basic_string_view` 类型的对象。
@@ -220,7 +221,7 @@ inline basic_ostream<CharType, Traits>& operator<<(
     basic_ostream<CharType, Traits>& Ostr, const basic_string_view<CharType, Traits> Str);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *Ostr*\
 要写入的输出流。
@@ -257,7 +258,7 @@ bool operator>(
     const basic_string_view<CharType, Traits>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *左*\
 任何可转换的字符串类型或要进行比较 `basic_string_view` 类型的对象。
@@ -294,7 +295,7 @@ bool operator>=(
     const basic_string_view<CharType, Traits>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *左*\
 任何可转换的字符串类型或要进行比较 `basic_string_view` 类型的对象。

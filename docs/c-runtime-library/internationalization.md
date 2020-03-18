@@ -1,20 +1,18 @@
 ---
 title: 国际化
 ms.date: 11/04/2016
-f1_keywords:
-- c.international
 helpviewer_keywords:
 - localization, routines for
 - locale-dependent routines
 - internationalization routines
 - international applications, run-time routines for
 ms.assetid: ee536a04-3558-4729-8e10-6dabcde055fd
-ms.openlocfilehash: 0066fe2b17425695cefc648acc7479172067e885
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 215caf2051458bda4597713cf7b22c03b416f5c7
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57737983"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443164"
 ---
 # <a name="internationalization"></a>国际化
 
@@ -22,6 +20,6 @@ Microsoft 运行库提供许多例程，可用于为国际市场创建不同版�
 
 ISO646 运算符替代项也包含在其中。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [按类别分的通用 C 运行时例程](../c-runtime-library/run-time-routines-by-category.md)<br/>

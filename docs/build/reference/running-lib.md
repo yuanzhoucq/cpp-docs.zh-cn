@@ -4,7 +4,6 @@ description: 描述可与 node.js 一起使用的命令行选项。
 ms.date: 02/09/2020
 f1_keywords:
 - VC.Project.VCLibrarianTool.TargetMachine
-- Lib
 - VC.Project.VCLibrarianTool.PrintProgress
 - VC.Project.VCLibrarianTool.SuppressStartupBanner
 helpviewer_keywords:
@@ -27,12 +26,12 @@ helpviewer_keywords:
 - semicolon, command files
 - / command files
 ms.assetid: d54f5c81-7147-4b2c-a8db-68ce6eb1eabd
-ms.openlocfilehash: 0688365fa83edcacd901321fead48c9c98df2faf
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 871b92809f38b4dcbf84de802b1ac9940ea6f1e9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257554"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438934"
 ---
 # <a name="running-lib"></a>运行 LIB
 
@@ -60,7 +59,7 @@ ms.locfileid: "77257554"
 
 下列选项适用于所有 LIB 模式：
 
-> **/ERRORREPORT** \[**无** &#124; **提示** &#124;队列&#124; **发送**]
+> **/ERRORREPORT** \[**无** &#124; **提示** &#124; **QUEUE**队列&#124; **发送**]
 
 /ERRORREPORT 选项已弃用。 从 Windows Vista 开始，错误报告由[Windows 错误报告（WER）](/windows/win32/wer/windows-error-reporting)设置控制。
 

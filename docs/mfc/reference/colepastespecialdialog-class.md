@@ -29,11 +29,11 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
 ms.openlocfilehash: f4174369620f14f2d1ac410aa5d756c75097ad0f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855444"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426617"
 ---
 # <a name="colepastespecialdialog-class"></a>COlePasteSpecialDialog 类
 
@@ -45,7 +45,7 @@ ms.locfileid: "78855444"
 class COlePasteSpecialDialog : public COleDialog
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -120,7 +120,7 @@ void AddFormat(
     BOOL bLink);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bcp.fmt*<br/>
 要添加的数据类型的引用。
@@ -131,7 +131,7 @@ void AddFormat(
 *lpszResult*<br/>
 描述在对话框中选择此格式时的结果的字符串。
 
-*flags*<br/>
+*flag*<br/>
 此格式可用的不同链接和嵌入选项。 此标志是 OLEUIPASTEFLAG 枚举类型中的一个或多个不同值的按位组合。
 
 *cf*<br/>
@@ -165,7 +165,7 @@ void AddFormat(
 OLEUIPASTEFLAG AddLinkEntry(UINT cf);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *cf*<br/>
 要添加的剪贴板格式。
@@ -182,7 +182,7 @@ OLEUIPASTEFLAG AddLinkEntry(UINT cf);
 void AddStandardFormats(BOOL bEnableLink = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bEnableLink*<br/>
 一个标志，该标志确定是否将 CF_LINKSOURCE 添加到您的应用程序可以粘贴的格式列表中。
@@ -212,12 +212,12 @@ COlePasteSpecialDialog(
     CWnd* pParentWnd = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 dwFlags<br/>
 创建标志：包含使用按位 "或" 运算符组合的下列任意数量的标志：
 
-- PSF_SELECTPASTE 指定将在调用对话框时最初检查 "粘贴" 单选按钮。 不能与 PSF_SELECTPASTELINK 结合使用。 这是默认设置。
+- PSF_SELECTPASTE 指定将在调用对话框时最初检查 "粘贴" 单选按钮。 不能与 PSF_SELECTPASTELINK 结合使用。 这是默认值。
 
 - PSF_SELECTPASTELINK 指定将在调用对话框时最初检查 "粘贴链接" 单选按钮。 不能与 PSF_SELECTPASTE 结合使用。
 
@@ -245,7 +245,7 @@ dwFlags<br/>
 BOOL CreateItem(COleClientItem* pNewItem);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pNewItem*<br/>
 指向 `COleClientItem` 的实例。 不能为 NULL。

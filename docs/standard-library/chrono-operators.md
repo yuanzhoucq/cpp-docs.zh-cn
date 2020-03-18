@@ -5,11 +5,11 @@ f1_keywords:
 - chrono/std::operator modulo
 ms.assetid: c5a19267-4684-40c1-b7a9-cc1012b058f3
 ms.openlocfilehash: 398e2429c38cffb454c7b510aa5ab44fbe4cfef6
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865190"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427205"
 ---
 # <a name="ltchronogt-operators"></a>&lt;chrono&gt; 运算符
 
@@ -37,7 +37,7 @@ constexpr typename common_type<Duration1, Duration2>::type
        const time_point<Clock, Duration2>& Right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 左侧的 `duration` 或 `time_point` 对象。
@@ -46,10 +46,10 @@ constexpr typename common_type<Duration1, Duration2>::type
 右侧的 `duration` 或 `time_point` 对象。
 
 *时间*\
-一个 `time_point` 对象。
+`time_point` 对象。
 
 *工期*\
-一个 `duration` 对象。
+`duration` 对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -75,7 +75,7 @@ constexpr bool operator!=(
     const time_point<Clock, Duration2>& Right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 左侧的 `duration` 或 `time_point` 对象。
@@ -106,10 +106,10 @@ constexpr duration<typename common_type<Rep1, Rep2>::type, Period2>
        Period2>& Dur);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *工期*\
-一个 `duration` 对象。
+`duration` 对象。
 
 *Mult*\
 一个整数值。
@@ -140,10 +140,10 @@ constexpr typename common_type<Rep1, Rep2>::type
      const duration<Rep2, Period2>& Right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *工期*\
-一个 `duration` 对象。
+`duration` 对象。
 
 *Div*\
 一个整数值。
@@ -186,7 +186,7 @@ time_point<Clock, constexpr typename common_type<duration<Rep1, Period1>, Durati
       const time_point<Clock, Duration2>& Time);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 左侧的 `duration` 或 `time_point` 对象。
@@ -195,10 +195,10 @@ time_point<Clock, constexpr typename common_type<duration<Rep1, Period1>, Durati
 右侧的 `duration` 或 `time_point` 对象。
 
 *时间*\
-一个 `time_point` 对象。
+`time_point` 对象。
 
 *工期*\
-一个 `duration` 对象。
+`duration` 对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -222,7 +222,7 @@ constexpr bool operator<(
     const time_point<Clock, Duration2>& Right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 左侧的 `duration` 或 `time_point` 对象。
@@ -252,7 +252,7 @@ constexpr bool operator<=(
     const time_point<Clock, Duration2>& Right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 左侧的 `duration` 或 `time_point` 对象。
@@ -280,7 +280,7 @@ constexpr bool operator==(
     const time_point<Clock, Duration2>& Right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 左侧的 `duration` 或 `time_point` 对象。
@@ -310,7 +310,7 @@ constexpr bool operator>(
     const time_point<Clock, Duration2>& Right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 左侧的 `duration` 或 `time_point` 对象。
@@ -338,7 +338,7 @@ constexpr bool operator>=(
     const time_point<Clock, Duration2>& Right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左*\
 左侧的 `duration` 或 `time_point` 对象。
@@ -368,10 +368,10 @@ constexpr typename common_type<duration<Rep1, _Period1>, duration<Rep2, Period2>
      const duration<Rep2, Period2>& Right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *工期*\
-一个 `duration` 对象。
+`duration` 对象。
 
 *Div*\
 一个整数值。

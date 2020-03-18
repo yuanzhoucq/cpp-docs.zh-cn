@@ -3,18 +3,17 @@ title: Platform::Array 类
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
-- VCCORLIB/Namespace not found::Platform
-- VCCORLIB/Namespace not found::Platform::Array Constructors
-- VCCORLIB/Namespace not found::Platform::Array::Value
+- VCCORLIB/Platform::Array
+- VCCORLIB/Platform::Array::Value
 helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-ms.openlocfilehash: 94166dfcb222d5cfece146e7ad67bb04d6ad06e9
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 7d9fca4de954b5ba9c7cbcb3bdfce0fe3263dbd7
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221838"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445796"
 ---
 # <a name="platformarray-class"></a>Platform::Array 类
 
@@ -29,43 +28,43 @@ private ref class Array<TArg, 1> :
     public IBoxArray<TArg>
 ```
 
-### <a name="members"></a>成员
+### <a name="members"></a>Members
 
-Platform:: array 继承其所有方法从[platform:: writeonlyarray 类](../cppcx/platform-writeonlyarray-class.md)并实现`Value`的属性[platform:: iboxarray 接口](../cppcx/platform-iboxarray-interface.md)。
+Platform：： Array 从[platform：： WriteOnlyArray 类](../cppcx/platform-writeonlyarray-class.md)继承其所有方法，并实现[Platform：： IBoxArray 接口](../cppcx/platform-iboxarray-interface.md)的 `Value` 属性。
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[Array 构造函数](#ctor)|初始化指定的类模板参数类型的一维可数组*T*。|
+|[Array 构造函数](#ctor)|初始化由类模板参数*T*指定的一维可修改类型数组。|
 
 ### <a name="methods"></a>方法
 
-请参阅[platform:: writeonlyarray 类](../cppcx/platform-writeonlyarray-class.md)。
+请参阅[Platform：： WriteOnlyArray 类](../cppcx/platform-writeonlyarray-class.md)。
 
 ### <a name="properties"></a>属性
 
 |||
 |-|-|
-|[Array::Value](#value)|检索当前数组的句柄。|
+|[Array：： Value](#value)|检索当前数组的句柄。|
 
 ### <a name="remarks"></a>备注
 
 Array 类是密封类，不能被继承。
 
-Windows 运行时类型系统不支持交错数组的概念，因此不能将传递 IVector < platform:: array\<T >> 作为返回值或方法参数。 要跨 ABI 传递交错数组或一系列序列，请使用 `IVector<IVector<T>^>`。
+Windows 运行时类型系统不支持交错数组的概念，因此不能将 IVector < Platform：： Array\<T > > 作为返回值或方法参数传递。 要跨 ABI 传递交错数组或一系列序列，请使用 `IVector<IVector<T>^>`。
 
-有关何时以及如何使用 platform:: array 的详细信息，请参阅[Array 和 WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)。
+有关何时以及如何使用 Platform：： Array 的详细信息，请参阅[Array 和 WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)。
 
-此类在编译器会自动包括的 vccorlib.h 标头中定义。 它是在 IntelliSense 中而不是在对象浏览器中可见的因为它不是在 platform.winmd 中定义的公共类型。
+此类在编译器会自动包括的 vccorlib.h 标头中定义。 它可在 IntelliSense 中显示，但不会出现在对象浏览器中，因为它不是在 platform.string 中定义的公共类型。
 
 ### <a name="requirements"></a>要求
 
 编译器选项： **/ZW**
 
-## <a name="ctor"></a>  Array 构造函数
+## <a name="ctor"></a>数组构造函数
 
-初始化指定的类模板参数类型的一维可数组*T*。
+初始化由类模板参数*T*指定的一维可修改类型数组。
 
 ## <a name="syntax"></a>语法
 
@@ -87,9 +86,9 @@ Array(T* data, unsigned int size);
 
 ### <a name="remarks"></a>备注
 
-有关如何创建 platform:: array 实例的详细信息，请参阅[Array 和 WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)。
+有关如何创建 Platform：： Array 的实例的详细信息，请参阅[Array 和 WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)。
 
-## <a name="get"></a>  Array:: get 方法
+## <a name="get"></a>Array：： get 方法
 
 检索对指定索引位置上数组元素的引用。
 
@@ -101,14 +100,14 @@ T& get(unsigned int index)  const;
 
 #### <a name="parameters"></a>参数
 
-*index*<br/>
-从零开始的索引，用来标识数组元素。 最小索引为 0，最大索引为指定的值`size`中的参数[Array 构造函数](#ctor)。
+索引<br/>
+从零开始的索引，用来标识数组元素。 最小索引为0，最大索引为[数组构造函数](#ctor)中的 `size` 参数指定的值。
 
 ### <a name="return-value"></a>返回值
 
 `index` 参数指定的数组元素。
 
-## <a name="value"></a>  Array:: value 属性
+## <a name="value"></a>Array：： Value 属性
 
 检索当前数组的句柄。
 
@@ -122,7 +121,7 @@ property Array^ Value;
 
 当前数组的句柄。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Platform 命名空间](../cppcx/platform-namespace-c-cx.md)<br/>
 [Array 和 WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)

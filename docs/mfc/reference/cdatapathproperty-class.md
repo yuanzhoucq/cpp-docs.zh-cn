@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CDataPathProperty [MFC], SetPath
 ms.assetid: 1f96efdb-54e4-460b-862c-eba5d4103488
 ms.openlocfilehash: 89cb8ddcdd42643f52f755516e8845109163c57a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890819"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424451"
 ---
 # <a name="cdatapathproperty-class"></a>CDataPathProperty 类
 
@@ -37,7 +37,7 @@ ms.locfileid: "78890819"
 class CDataPathProperty : public CAsyncMonikerFile
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
@@ -95,7 +95,7 @@ CDataPathProperty(COleControl* pControl = NULL);
 CDataPathProperty(LPCTSTR lpszPath, COleControl* pControl = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pControl*<br/>
 一个指针，指向要与此 `CDataPathProperty` 对象相关联的 OLE 控件对象。
@@ -152,7 +152,7 @@ virtual BOOL Open(
 virtual BOOL Open(CFileException* pError = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pControl*<br/>
 一个指针，指向要与此 `CDataPathProperty` 对象相关联的 OLE 控件对象。
@@ -197,7 +197,7 @@ virtual void ResetData();
 void SetControl(COleControl* pControl);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pControl*<br/>
 一个指针，指向要与属性关联的异步 OLE 控件。
@@ -210,7 +210,7 @@ void SetControl(COleControl* pControl);
 void SetPath(LPCTSTR lpszPath);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszPath*<br/>
 路径（可以是绝对的或相对的）到异步加载的属性。 `CDataPathProperty` 使用 Url，而不是文件名。 如果需要文件的 `CDataPathProperty` 对象，请在路径前面添加 `file://`。

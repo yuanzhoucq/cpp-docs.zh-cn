@@ -3,16 +3,18 @@ layout: LandingPage
 title: 使用 C++ 文档的 Linux 开发
 description: 创建和调试在 Linux 上运行的应用程序。
 ms.topic: landing-page
-ms.openlocfilehash: ee956f25914e1996acb6776d9ecbb8c9e79c689b
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 9c09e9bd590ece013a2ee7d85017b3e046394232
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216103"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441521"
 ---
 # <a name="linux-development-with-c-documentation"></a>使用 C++ 文档的 Linux 开发
 
 使用 Visual Studio 2017 及更高版本创建和调试在 Linux 远程计算机或适用于 Linux 的 Windows 子系统上运行的应用程序。
+
+<!-- markdownlint-disable MD033 -->
 
 <ul class="panelContent cardsF">
     <li>

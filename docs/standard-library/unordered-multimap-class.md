@@ -138,11 +138,11 @@ helpviewer_keywords:
 - std::unordered_multimap::swap
 ms.assetid: 4baead6c-5870-4b85-940f-a47d6b891c27
 ms.openlocfilehash: f19e6c1a4befa3e1b5ddd46e607b8cf894f29ba6
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78873951"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427715"
 ---
 # <a name="unordered_multimap-class"></a>unordered_multimap 类
 
@@ -161,7 +161,7 @@ class unordered_multimap;
 
 ### <a name="parameters"></a>参数
 
-|参数|说明|
+|参数|描述|
 |-|-|
 |*Key*|密钥类型。|
 |*Ty*|映射类型。|
@@ -171,7 +171,7 @@ class unordered_multimap;
 
 ## <a name="members"></a>Members
 
-|类型定义|说明|
+|类型定义|描述|
 |-|-|
 |[allocator_type](#allocator_type)|用于管理存储的分配器的类型。|
 |[const_iterator](#const_iterator)|受控序列的常量迭代器的类型。|
@@ -180,26 +180,26 @@ class unordered_multimap;
 |[const_reference](#const_reference)|元素的常量引用的类型。|
 |[difference_type](#difference_type)|两个元素间的带符号距离的类型。|
 |[hasher](#hasher)|哈希函数的类型。|
-|[迭代器](#iterator)|受控序列的迭代器的类型。|
+|[Iterator](#iterator)|受控序列的迭代器的类型。|
 |[key_equal](#key_equal)|比较函数的类型。|
 |[key_type](#key_type)|排序键的类型。|
 |[local_iterator](#local_iterator)|受控序列的存储桶迭代器的类型。|
 |[mapped_type](#mapped_type)|与每个键关联的映射值的类型。|
-|[指针](#pointer)|指向元素的指针的类型。|
+|[pointer](#pointer)|指向元素的指针的类型。|
 |[reference](#reference)|元素的引用的类型。|
 |[size_type](#size_type)|两个元素间的无符号距离的类型。|
 |[value_type](#value_type)|元素的类型。|
 
-|成员函数|说明|
+|成员函数|描述|
 |-|-|
 |[begin](#begin)|指定受控序列的开头。|
-|[地址](#bucket)|获取键值的存储桶编号。|
+|[bucket](#bucket)|获取键值的存储桶编号。|
 |[bucket_count](#bucket_count)|获取存储桶数。|
 |[bucket_size](#bucket_size)|获取存储桶的大小。|
 |[cbegin](#cbegin)|指定受控序列的开头。|
 |[cend](#cend)|指定受控序列的末尾。|
 |[clear](#clear)|删除所有元素。|
-|[count](#count)|查找与指定键匹配的元素数。|
+|[计数](#count)|查找与指定键匹配的元素数。|
 |[emplace](#emplace)|添加就地构造的元素。|
 |[emplace_hint](#emplace_hint)|添加就地构造的元素，附带提示。|
 |[empty](#empty)|测试元素是否存在。|
@@ -220,7 +220,7 @@ class unordered_multimap;
 |[swap](#swap)|交换两个容器的内容。|
 |[unordered_multimap](#unordered_multimap)|构造容器对象。|
 
-|运算符|说明|
+|Operator|描述|
 |-|-|
 |[unordered_multimap::operator=](#op_eq)|复制哈希表。|
 
@@ -250,7 +250,7 @@ typedef Alloc allocator_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数 `Alloc`的同义词。
+该类型是模板参数 `Alloc` 的同义词。
 
 ### <a name="example"></a>示例
 
@@ -294,7 +294,7 @@ const_local_iterator begin(size_type nbucket) const;
 
 ### <a name="parameters"></a>参数
 
-|参数|说明|
+|参数|描述|
 |-|-|
 |*nbucket*|存储桶编号。|
 
@@ -973,7 +973,7 @@ iterator emplace(Args&&... args);
 
 ### <a name="parameters"></a>参数
 
-|参数|说明|
+|参数|描述|
 |-|-|
 |*args*|用于构造要插入到 unordered_multimap 中的元素的转发参数。|
 
@@ -1004,7 +1004,7 @@ iterator emplace_hint(
 
 ### <a name="parameters"></a>参数
 
-|参数|说明|
+|参数|描述|
 |-|-|
 |*args*|用于构造要插入到 unordered 中的元素的转发参数。|
 |*where*|有关开始搜索正确插入点的位置的提示。|
@@ -1106,7 +1106,7 @@ const_local_iterator end(size_type nbucket) const;
 
 ### <a name="parameters"></a>参数
 
-|参数|说明|
+|参数|描述|
 |-|-|
 |*nbucket*|存储桶编号。|
 
@@ -1417,7 +1417,7 @@ typedef Hash hasher;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数 `Hash`的同义词。
+该类型是模板参数 `Hash` 的同义词。
 
 ### <a name="example"></a>示例
 
@@ -1485,7 +1485,7 @@ IList);
 
 ### <a name="parameters"></a>参数
 
-|参数|说明|
+|参数|描述|
 |-|-|
 |*初始值*|要插入到 unordered_multimap 中的元素的值。|
 |*Where*|开始搜索正确插入点的位置。|
@@ -1610,7 +1610,7 @@ typedef Pred key_equal;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数 `Pred`的同义词。
+该类型是模板参数 `Pred` 的同义词。
 
 ### <a name="example"></a>示例
 
@@ -1650,7 +1650,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数 `Key`的同义词。
+该类型是模板参数 `Key` 的同义词。
 
 ### <a name="example"></a>示例
 
@@ -1821,7 +1821,7 @@ typedef Ty mapped_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数 `Ty`的同义词。
+该类型是模板参数 `Ty` 的同义词。
 
 ### <a name="example"></a>示例
 
@@ -2092,9 +2092,9 @@ unordered_multimap& operator=(unordered_multimap&& right);
 
 ### <a name="parameters"></a>参数
 
-|参数|说明|
+|参数|描述|
 |-|-|
-|right|正在被复制到 unordered_multimap 中的 unordered_multimap。|
+|*right*|正在被复制到 unordered_multimap 中的 unordered_multimap。|
 
 ### <a name="remarks"></a>备注
 
@@ -2536,7 +2536,7 @@ unordered_multimap(
 
 ### <a name="parameters"></a>参数
 
-|参数|说明|
+|参数|描述|
 |-|-|
 |*InputIterator*|迭代器类型。|
 |*Fc-al*|要存储的分配器对象。|
@@ -2550,7 +2550,7 @@ unordered_multimap(
 
 第一个构造函数指定由*Right*控制的序列副本。 第二个构造函数指定空的受控序列。 第三个构造函数。 通过*向右*移动来指定序列的副本。 第四、第五、第六、第七和第八个构造函数对成员使用 initializer_list。 第九个构造函数插入元素值 `[First, Last)` 的序列。
 
-所有构造函数还初始化若干存储的值。 对于复制构造函数，值从*右*获取。 否则：
+所有构造函数还初始化若干存储的值。 对于复制构造函数，值从*右*获取。 除此以外：
 
 最小存储桶数是*Bucket_count*的参数（如果存在）;否则，它是此处所述的默认值作为实现定义的值 `N0`。
 
@@ -2738,7 +2738,7 @@ int main()
 [d, 4] [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [<unordered_map>](../standard-library/unordered-map.md)\
 [容器](../cpp/containers-modern-cpp.md)\

@@ -1,17 +1,15 @@
 ---
 title: default::(type_name)::Equals 方法
 ms.date: 12/30/2016
-f1_keywords:
-- VCCORLIB/Platform::Object::Equals
 ms.assetid: 4450f835-06fc-4758-8d0a-72cf00007873
-ms.openlocfilehash: ef34e50e6561481eafd7de635bdbcc1b6cd4c8b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57143da18e98ed2d034343726ac96a92b4d1b23c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389380"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444325"
 ---
-# <a name="defaulttypenameequals-method"></a>default::(type_name)::Equals 方法
+# <a name="defaulttype_nameequals-method"></a>default::(type_name)::Equals 方法
 
 确定指定的对象是否等于当前对象。
 
@@ -30,7 +28,7 @@ bool Equals(
 
 ### <a name="return-value"></a>返回值
 
-**true**如果对象相等，否则**false**。
+如果对象相等，**则为 true** ; 否则为**false**。
 
 ### <a name="requirements"></a>要求
 
@@ -42,6 +40,6 @@ bool Equals(
 
 **标头：** vccorlib.h
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [默认命名空间](../cppcx/default-namespace.md)

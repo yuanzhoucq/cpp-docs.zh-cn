@@ -10,11 +10,11 @@ helpviewer_keywords:
 - canceling parallel tasks [Concurrency Runtime]
 ms.assetid: baaef417-b2f9-470e-b8bd-9ed890725b35
 ms.openlocfilehash: 6e23ccd6fcae03bcad40ea560356f4d1290dbcdd
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866332"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427487"
 ---
 # <a name="cancellation-in-the-ppl"></a>PPL 中的取消操作
 
@@ -23,7 +23,7 @@ ms.locfileid: "78866332"
 > [!NOTE]
 > 运行时使用异常处理实现取消操作。 请勿在代码中捕捉或处理这些异常。 此外，还建议你在任务的函数体中编写异常安全的代码。 例如，你可以使用*资源采集为初始化*（RAII）模式，以确保在任务正文中引发异常时正确处理资源。 有关使用 RAII 模式清除可取消任务中的资源的完整示例，请参阅[演练：从用户界面线程中删除工作](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)。
 
-## <a name="key-points"></a>关键点
+## <a name="key-points"></a>要点
 
 - 取消是协作性的并且涉及在请求取消的代码和响应取消的任务之间的协作。
 
@@ -242,7 +242,7 @@ Caught 50
 
 ## <a name="related-topics"></a>相关主题
 
-|职务|说明|
+|标题|说明|
 |-----------|-----------------|
 |[如何：使用取消来中断并行循环](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)|演示如何使用取消来实现并行搜索算法。|
 |[如何：使用异常处理来中断并行循环](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|演示如何使用 `task_group` 类编写基本树结构的搜索算法。|

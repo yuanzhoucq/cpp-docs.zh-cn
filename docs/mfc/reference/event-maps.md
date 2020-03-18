@@ -5,11 +5,11 @@ helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
 ms.openlocfilehash: 34741dc05efe77c0932343739540370f54db6008
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855446"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426383"
 ---
 # <a name="event-maps"></a>事件映射
 
@@ -75,7 +75,7 @@ DECLARE_EVENT_MAP()
 BEGIN_EVENT_MAP(theClass,  baseClass)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *类*<br/>
 指定其事件映射为的控件类的名称。
@@ -113,7 +113,7 @@ END_EVENT_MAP()
 EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pszName*<br/>
 事件的名称。
@@ -139,7 +139,7 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 |VTS_I2|**short**|
 |VTS_I4|**long**|
 |VTS_R4|**float**|
-|VTS_R8|**双精度**|
+|VTS_R8|**double**|
 |VTS_COLOR|OLE_COLOR|
 |VTS_CY|货币|
 |VTS_DATE|DATE|
@@ -183,7 +183,7 @@ EVENT_CUSTOM_ID(
     vtsParams)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pszName*<br/>
 事件的名称。
@@ -219,7 +219,7 @@ EVENT_CUSTOM_ID(
 ON_OLEVERB(idsVerbName,  memberFxn)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *idsVerbName*<br/>
 谓词名称的字符串资源 ID。
@@ -254,7 +254,7 @@ BOOL memberFxn(
 ON_STDOLEVERB(iVerb, memberFxn)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iVerb*<br/>
 重写谓词的标准谓词索引。

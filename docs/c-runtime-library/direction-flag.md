@@ -1,17 +1,15 @@
 ---
 title: 方向标志
 ms.date: 11/04/2016
-f1_keywords:
-- c.flags
 helpviewer_keywords:
 - direction flag
 ms.assetid: 0836b4af-dbbb-4ab8-a4b2-156f2e2099e2
-ms.openlocfilehash: ead32fa7f09e9dd98130855ecd87ba3b3d454ef5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 04e096c6a62f806f4c214745a8401b1730eda3a6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740152"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443378"
 ---
 # <a name="direction-flag"></a>方向标志
 
@@ -21,6 +19,6 @@ C 运行期例程假定方向标志已清除。 如果要将其他函数与 C �
 
 C 运行库函数（如字符串操作和缓冲区操作例程）期望方向标志保持清晰。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [CRT 库功能](../c-runtime-library/crt-library-features.md)

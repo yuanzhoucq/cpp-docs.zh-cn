@@ -35,11 +35,11 @@ helpviewer_keywords:
 - std::bitset [C++], reference
 ms.assetid: 28b86964-87b4-429c-8124-b6c251b6c50b
 ms.openlocfilehash: a4771e9c2c48bfe9c4c09629278533b031d60979
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890838"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427211"
 ---
 # <a name="bitset-class"></a>bitset 类
 
@@ -59,7 +59,7 @@ class bitset
 
 ## <a name="remarks"></a>备注
 
-与类似的 [vector\<bool> 类](../standard-library/vector-bool-class.md)不同，bitset 类没有迭代器，并且不是 C++ 标准库容器。 它与 vector\<bool> 的不同之处还在于它有某个特定大小，该大小在编译时根据声明 *bitset*N **\< 时由模板参数 \>N** 指定的大小确定并固定。
+与类似的 [vector\<bool> 类](../standard-library/vector-bool-class.md)不同，bitset 类没有迭代器，并且不是 C++ 标准库容器。 它与 vector\<bool> 的不同之处还在于它有某个特定大小，该大小在编译时根据声明 **bitset\<N\>** 时由模板参数 *N* 指定的大小确定并固定。
 
 如果某个位的值为 1，则该位已设置；如果其值为 0，则该位已重置。 翻转或反转某个位就是将其值从 1 更改到 0 或从 0 到 1。 bitset 中的 *N* 个位由从 0 到 *N* - 1 的整数值索引，其中 0 索引第一个位的位置，*N* - 1 索引最后一个位的位置。
 
@@ -83,7 +83,7 @@ class bitset
 |-|-|
 |[all](#all)|测试此 `bitset` 中的所有位以确定它们是否都设置为**true**。|
 |[any](#any)|成员函数测试序列中是否有任何位设置为 1。|
-|[count](#count)|成员函数返回位序列中设置的位数。|
+|[计数](#count)|成员函数返回位序列中设置的位数。|
 |[flip](#flip)|反转 `bitset` 中的所有位的值或反转位于指定位置的单个位。|
 |[none](#none)|测试 `bitset` 对象中是否不存在任何已设置为 1 的位。|
 |[reset](#reset)|将 `bitset` 中的所有位重置为 0 或将位于指定位置的位重置为 0。|
@@ -98,7 +98,7 @@ class bitset
 
 |||
 |-|-|
-|[reference](#reference)|一个代理类，它提供对 `bitset`（用于将单个位作为 `operator[]` 类的 `bitset` 的帮助程序类进行访问和操作）中包含的位的引用。|
+|[reference](#reference)|一个代理类，它提供对 `bitset`（用于将单个位作为 `bitset` 类的 `operator[]` 的帮助程序类进行访问和操作）中包含的位的引用。|
 
 ### <a name="operators"></a>运算符
 
@@ -263,7 +263,7 @@ explicit bitset(
 
 还提供了两个构造函数模板：
 
-- 第一个构造函数模板构造 `bitset\<N>` 类的对象并初始化由 0 和 1 组成的字符串中提供的字符中的位。 如果字符串的任何字符为非 0 或非 1，则该构造函数引发 [invalid argument](../standard-library/invalid-argument-class.md) 类的对象。 如果指定的位置（ *_Pos*）超出了字符串的长度，则构造函数将引发类[out_of_range](../standard-library/out-of-range-class.md)的对象。 该构造函数只设置位置 *处的字符串中的字符为 1 的位组中*j`_Pos + j` 位置处的位。 默认情况下， *_Pos*为0。
+- 第一个构造函数模板构造 `bitset\<N>` 类的对象并初始化由 0 和 1 组成的字符串中提供的字符中的位。 如果字符串的任何字符为非 0 或非 1，则该构造函数引发 [invalid argument](../standard-library/invalid-argument-class.md) 类的对象。 如果指定的位置（ *_Pos*）超出了字符串的长度，则构造函数将引发类[out_of_range](../standard-library/out-of-range-class.md)的对象。 该构造函数只设置位置 `_Pos + j` 处的字符串中的字符为 1 的位组中 *j* 位置处的位。 默认情况下， *_Pos*为0。
 
 - 第二个构造函数模板类似于第一个，但包含一个附加参数（*count*），用于指定要初始化的位数。 它还具有两个可选参数， *_Zero*和 *_One*，这表示*str*中的哪个字符将分别解释为0位和1位。
 
@@ -1108,7 +1108,7 @@ bitset\<N>& operator|=(const bitset\<N>& right);
 
 #### <a name="remarks"></a>备注
 
-如果至少一位为 `OR`true **，则由非独占**  运算符组合的两个位返回 **true**；如果两个位均为 **false**，则它们的组合返回 **false**。
+如果至少一位为 **true**，则由非独占 `OR` 运算符组合的两个位返回 **true**；如果两个位均为 **false**，则它们的组合返回 **false**。
 
 位组必须大小相同才能由成员运算符函数使用非独占 `OR` 运算符按位组合。
 
@@ -1459,7 +1459,7 @@ size_t size() const;
 
 #### <a name="return-value"></a>返回值
 
-bitset*N> 中* N\< 的位数。
+bitset\<N> 中 *N* 的位数。
 
 #### <a name="example"></a>示例
 
