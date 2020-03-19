@@ -5,12 +5,12 @@ ms.date: 09/26/2018
 helpviewer_keywords:
 - _ATL_MIN_CRT macro
 ms.assetid: 08ff14e8-aa49-4139-a110-5d071939cf1e
-ms.openlocfilehash: df89837e8f453443dc092a1b96e9c3f395fa2353
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 4244dae532f467f28a5ca53e15ee601344999233
+ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127374"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79509366"
 ---
 # <a name="changing-the-drawing-code-atl-tutorial-part-4"></a>更改绘图代码（ATL 教程，第 4 部分）
 
@@ -111,12 +111,15 @@ ms.locfileid: "77127374"
     > [!NOTE]
     > 对于涉及 `ATL::CW2AEX`的错误，请在 Script 中将行 `TRACE( "XActiveScriptSite::GetItemInfo( %s )\n", pszNameT );` 替换为 `TRACE( "XActiveScriptSite::GetItemInfo( %s )\n", pszNameT.m_psz );`，并将行 `TRACE( "Source Text: %s\n", COLE2CT( bstrSourceLineText ) );` 替换为 `TRACE( "Source Text: %s\n", bstrSourceLineText );`。<br/>
     > 对于涉及 `HMONITOR`的错误，请在 `TCProps` 项目中打开 Stdafx.h 并替换：
+    >
     > ```
     > #ifndef WINVER
     > #define WINVER 0x0400
     > #endif
     > ```
+    >
     > 替换为
+    >
     > ```
     > #ifndef WINVER
     > #define WINVER 0x0500

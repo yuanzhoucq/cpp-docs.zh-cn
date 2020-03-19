@@ -38,16 +38,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HString::Set method
 - Microsoft::WRL::Wrappers::HString::~HString, destructor
 ms.assetid: 6709dd2e-8d72-4675-8ec7-1baa7d71854d
-ms.openlocfilehash: 71ebc02dc56b45e8790bfac7b7d4bac80d5f7729
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a3765da94560eb84a1d441a6b25c42822fc857bb
+ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500488"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79509466"
 ---
 # <a name="hstring-class"></a>HString 类
 
-一个帮助器类, 用于使用 RAII 模式管理[HSTRING](/windows/win32/WinRT/hstring)的生存期。
+一个帮助器类，用于使用 RAII 模式管理[HSTRING](/windows/win32/WinRT/hstring)的生存期。
 
 ## <a name="syntax"></a>语法
 
@@ -57,40 +57,40 @@ class HString;
 
 ## <a name="remarks"></a>备注
 
-Windows 运行时通过[HSTRING](/windows/win32/WinRT/hstring)句柄提供对字符串的访问。 `HString`类提供便利的函数和运算符来简化使用 HSTRING 句柄。 此类可以通过 RAII 模式处理其拥有的 HSTRING 的生存期。
+Windows 运行时通过[HSTRING](/windows/win32/WinRT/hstring)句柄提供对字符串的访问。 `HString` 类提供便利的函数和运算符，以简化使用 HSTRING 句柄。 此类可以通过 RAII 模式处理其拥有的 HSTRING 的生存期。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-名称                                | 描述
+名称                                | 说明
 ----------------------------------- | -----------------------------------------------------
-[HString::HString](#hstring)        | 初始化 `HString` 类的新实例。
-[HString:: ~ HString](#tilde-hstring) | 销毁`HString`类的当前实例。
+[HString：： HString](#hstring)        | 初始化 `HString` 类的新实例。
+[HString：： ~ HString](#tilde-hstring) | 销毁 `HString` 类的当前实例。
 
 ### <a name="public-methods"></a>公共方法
 
-名称                                     | 描述
+名称                                     | 说明
 ---------------------------------------- | -------------------------------------------------------------------------------------------------------------
-[HString::Attach](#attach)               | 将指定`HString`的对象与当前`HString`的对象相关联。
-[HString::CopyTo](#copyto)               | 将当前`HString`对象复制到 HSTRING 对象。
-[HString::Detach](#detach)               | 将指定`HString`的对象与其基础值解除对应。
-[HString::Get](#get)                     | 检索基础 HSTRING 句柄的值。
-[HString::GetAddressOf](#getaddressof)   | 检索指向基础 HSTRING 句柄的指针。
-[HString::GetRawBuffer](#getrawbuffer)   | 检索指向基础字符串数据的指针。
-[HString::IsValid](#isvalid)             | 指示当前`HString`的对象是否有效。
-[HString:: MakeReference](#makereference) | 根据指定的字符串参数创建对象。`HStringReference`
-[HString::Release](#release)             | 删除基础字符串值, 并将当前`HString`对象初始化为空值。
-[HString::Set](#set)                     | 将当前`HString`对象的值设置为指定的宽字符字符串或`HString`参数。
+[HString：： Attach](#attach)               | 将指定 `HString` 对象与当前 `HString` 对象关联。
+[HString：： CopyTo](#copyto)               | 将当前 `HString` 对象复制到 HSTRING 对象。
+[HString：:D etach](#detach)               | 将指定的 `HString` 对象与其基础值解除对应。
+[HString：： Get](#get)                     | 检索基础 HSTRING 句柄的值。
+[HString：： GetAddressOf](#getaddressof)   | 检索指向基础 HSTRING 句柄的指针。
+[HString：： GetRawBuffer](#getrawbuffer)   | 检索指向基础字符串数据的指针。
+[HString：： IsValid](#isvalid)             | 指示当前 `HString` 对象是否有效。
+[HString：： MakeReference](#makereference) | 根据指定的字符串参数创建 `HStringReference` 对象。
+[HString：： Release](#release)             | 删除基础字符串值，并将当前 `HString` 对象初始化为空值。
+[HString：： Set](#set)                     | 将当前 `HString` 对象的值设置为指定的宽字符字符串或 `HString` 参数。
 
-### <a name="public-operators"></a>公共运算符
+### <a name="public-operators"></a>公用運算子
 
-名称                                         | 描述
+名称                                         | 说明
 -------------------------------------------- | ----------------------------------------------------------------------------
-[HString::operator=](#operator-assign)       | 将另一个`HString`对象的值移动到当前`HString`对象。
-[HString:: operator = =](#operator-equality)    | 指示两个参数是否相等。
-[HString::operator!=](#operator-inequality)  | 指示两个参数是否不相等。
-[HString:: operator&lt;](#operator-less-than) | 指示第一个参数是否小于第二个参数。
+[HString：： operator =](#operator-assign)       | 将另一个 `HString` 对象的值移动到当前 `HString` 对象。
+[HString：： operator = =](#operator-equality)    | 指示两个参数是否相等。
+[HString：： operator！ =](#operator-inequality)  | 指示两个参数是否不相等。
+[HString：： operator&lt;](#operator-less-than) | 指示第一个参数是否小于第二个参数。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -98,21 +98,21 @@ Windows 运行时通过[HSTRING](/windows/win32/WinRT/hstring)句柄提供对字
 
 ## <a name="requirements"></a>要求
 
-**标头:** corewrappers。h
+**标头：** corewrappers。h
 
-**命名空间：** Microsoft::WRL::Wrappers
+**命名空间：** Microsoft：： WRL：：包装
 
-## <a name="tilde-hstring"></a>HString:: ~ HString
+## <a name="hstringhstring"></a><a name="tilde-hstring"></a>HString：： ~ HString
 
-销毁`HString`类的当前实例。
+销毁 `HString` 类的当前实例。
 
 ```cpp
 ~HString() throw()
 ```
 
-## <a name="attach"></a>HString:: Attach
+## <a name="hstringattach"></a><a name="attach"></a>HString：： Attach
 
-将指定`HString`的对象与当前`HString`的对象相关联。
+将指定 `HString` 对象与当前 `HString` 对象关联。
 
 ```cpp
 void Attach(
@@ -120,14 +120,14 @@ void Attach(
        ) throw()
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hstr*<br/>
 一个现有的 `HString` 对象。
 
-## <a name="copyto"></a>HString::CopyTo
+## <a name="hstringcopyto"></a><a name="copyto"></a>HString：： CopyTo
 
-将当前`HString`对象复制到 HSTRING 对象。
+将当前 `HString` 对象复制到 HSTRING 对象。
 
 ```cpp
 HRESULT CopyTo(
@@ -135,7 +135,7 @@ HRESULT CopyTo(
    ) const throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *str*<br/>
 接收副本的 HSTRING。
@@ -144,9 +144,9 @@ HRESULT CopyTo(
 
 此方法调用[WindowsDuplicateString](/windows/win32/api/winstring/nf-winstring-windowsduplicatestring)函数。
 
-## <a name="detach"></a>HString::Detach
+## <a name="hstringdetach"></a><a name="detach"></a>HString：:D etach
 
-将指定`HString`的对象与其基础值解除对应。
+将指定的 `HString` 对象与其基础值解除对应。
 
 ```cpp
 HSTRING Detach() throw()
@@ -154,9 +154,9 @@ HSTRING Detach() throw()
 
 ### <a name="return-value"></a>返回值
 
-分离操作`HString`开始之前的基础值。
+分离操作开始之前的基础 `HString` 值。
 
-## <a name="get"></a>HString::Get
+## <a name="hstringget"></a><a name="get"></a>HString：： Get
 
 检索基础 HSTRING 句柄的值。
 
@@ -168,7 +168,7 @@ HSTRING Get() const throw()
 
 基础 HSTRING 句柄的值
 
-## <a name="getaddressof"></a>HString::GetAddressOf
+## <a name="hstringgetaddressof"></a><a name="getaddressof"></a>HString：： GetAddressOf
 
 检索指向基础 HSTRING 句柄的指针。
 
@@ -184,14 +184,15 @@ HSTRING* GetAddressOf() throw()
 
 此操作后，将销毁基础 HSTRING 句柄的字符串值。
 
-## <a name="getrawbuffer"></a>HString::GetRawBuffer
+## <a name="hstringgetrawbuffer"></a><a name="getrawbuffer"></a>HString：： GetRawBuffer
 
 检索指向基础字符串数据的指针。
 
 ```cpp
 const wchar_t* GetRawBuffer(unsigned int* length) const;
 ```
-### <a name="parameters"></a>参数
+
+### <a name="parameters"></a>parameters
 
 *长度*指向接收数据长度的**int**变量的指针。
 
@@ -200,7 +201,7 @@ const wchar_t* GetRawBuffer(unsigned int* length) const;
 指向基础字符串数据的**常量**指针。
 
 
-## <a name="hstring"></a>HString:: HString
+## <a name="hstringhstring"></a><a name="hstring"></a>HString：： HString
 
 初始化 `HString` 类的新实例。
 
@@ -209,7 +210,7 @@ HString() throw();
 HString(HString&& other) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hstr*<br/>
 HSTRING 句柄。
@@ -219,25 +220,25 @@ HSTRING 句柄。
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数初始化一个`HString`空的新对象。
+第一个构造函数初始化一个空的新 `HString` 对象。
 
-第二个构造函数将`HString`新的对象初始化为现有*其他*参数的值, 然后销毁*其他*参数。
+第二个构造函数将新的 `HString` 对象初始化为现有*其他*参数的值，然后销毁*其他*参数。
 
-## <a name="isvalid"></a>HString::IsValid
+## <a name="hstringisvalid"></a><a name="isvalid"></a>HString：： IsValid
 
-指示当前`HString`对象是否为空。
+指示当前 `HString` 对象是否为空。
 
 ```cpp
 bool IsValid() const throw()
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-如果当前`HString`对象不为空, 则为 true; 否则为**false**。
+如果当前 `HString` 对象不为空，则为**true** ;否则**为 false**。
 
-## <a name="makereference"></a>HString:: MakeReference
+## <a name="hstringmakereference"></a><a name="makereference"></a>HString：： MakeReference
 
-根据指定的字符串参数创建对象。`HStringReference`
+根据指定的字符串参数创建 `HStringReference` 对象。
 
 ```cpp
 template<unsigned int sizeDest>
@@ -250,39 +251,39 @@ template<unsigned int sizeDest>
               unsigned int len);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *sizeDest*<br/>
-一个模板参数, 指定目标`HStringReference`缓冲区的大小。
+一个模板参数，指定 `HStringReference` 缓冲区的目标大小。
 
 *str*<br/>
 对宽字符串的引用。
 
 len<br/>
-要在此操作中使用的*str*参数缓冲区的最大长度。 如果未指定*len*参数, 则使用整个*str*参数。
+要在此操作中使用的*str*参数缓冲区的最大长度。 如果未指定*len*参数，则使用整个*str*参数。
 
 ### <a name="return-value"></a>返回值
 
-一个`HStringReference`对象, 其值与指定的*str*参数相同。
+一个 `HStringReference` 对象，其值与指定的*str*参数相同。
 
-## <a name="operator-assign"></a>HString:: operator = 运算符
+## <a name="hstringoperator-operator"></a><a name="operator-assign"></a>HString：： operator = 运算符
 
-将另一个`HString`对象的值移动到当前`HString`对象。
+将另一个 `HString` 对象的值移动到当前 `HString` 对象。
 
 ```cpp
 HString& operator=(HString&& other) throw()
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *other*<br/>
 一个现有的 `HString` 对象。
 
 ### <a name="remarks"></a>备注
 
-现有的*其他*对象的值将复制到当前`HString`对象, 然后*其他*对象将被销毁。
+现有的*其他*对象的值将复制到当前 `HString` 对象，然后销毁*另*一个对象。
 
-## <a name="operator-equality"></a>HString:: operator = = 运算符
+## <a name="hstringoperator-operator"></a><a name="operator-equality"></a>HString：： operator = = 运算符
 
 指示两个参数是否相等。
 
@@ -308,19 +309,19 @@ inline bool operator==(
                  const HSTRING& rhs) throw()
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lhs*<br/>
-要比较的第一个参数。 *lhs*可以是`HString`或`HStringReference`对象, 也可以是 HSTRING 句柄。
+要比较的第一个参数。 *lhs*可以是 `HString` 或 `HStringReference` 对象或 HSTRING 句柄。
 
 rhs<br/>
-要比较的第二个参数。*rhs*可以是`HString` `HStringReference` 、对象或 HSTRING 句柄。
+要比较的第二个参数。*rhs*可以是 `HString` 或 `HStringReference` 对象或 HSTRING 句柄。
 
 ### <a name="return-value"></a>返回值
 
-如果*lhs*和*rhs*参数相等, 则**为 true** ;否则**为 false**。
+如果*lhs*和*rhs*参数相等，则**为 true** ;否则**为 false**。
 
-## <a name="operator-inequality"></a>HString:: operator! = 运算符
+## <a name="hstringoperator-operator"></a><a name="operator-inequality"></a>HString：： operator！ = 运算符
 
 指示两个参数是否不相等。
 
@@ -341,19 +342,19 @@ inline bool operator!=( const HString& lhs,
                         const HSTRING& rhs) throw()
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lhs*<br/>
-要比较的第一个参数。 *lhs*可以是`HString`或`HStringReference`对象, 也可以是 HSTRING 句柄。
+要比较的第一个参数。 *lhs*可以是 `HString` 或 `HStringReference` 对象或 HSTRING 句柄。
 
 rhs<br/>
-要比较的第二个参数。*rhs*可以是`HString` `HStringReference` 、对象或 HSTRING 句柄。
+要比较的第二个参数。*rhs*可以是 `HString` 或 `HStringReference` 对象或 HSTRING 句柄。
 
 ### <a name="return-value"></a>返回值
 
-如果*lhs*和*rhs*参数不相等,**则为 true** ;否则**为 false**。
+如果*lhs*和*rhs*参数不相等，**则为 true** ;否则**为 false**。
 
-## <a name="operator-less-than"></a>HString:: operator&lt;运算符
+## <a name="hstringoperatorlt-operator"></a><a name="operator-less-than"></a>HString：： operator&lt; 运算符
 
 指示第一个参数是否小于第二个参数。
 
@@ -363,29 +364,29 @@ inline bool operator<(
     const HString& rhs) throw()
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lhs*<br/>
-要比较的第一个参数。 *lhs*可以是对的`HString`引用。
+要比较的第一个参数。 *lhs*可以是对 `HString`的引用。
 
 rhs<br/>
-要比较的第二个参数。 *rhs*可以是对的`HString`引用。
+要比较的第二个参数。 *rhs*可以是对 `HString`的引用。
 
 ### <a name="return-value"></a>返回值
 
-如果*lhs*参数小于*rhs*参数,**则为 true** ; 否则为 false。否则**为 false**。
+如果*lhs*参数小于*rhs*参数，**则为 true** ; 否则为 false。否则**为 false**。
 
-## <a name="release"></a>HString::Release
+## <a name="hstringrelease"></a><a name="release"></a>HString：： Release
 
-删除基础字符串值, 并将当前`HString`对象初始化为空值。
+删除基础字符串值，并将当前 `HString` 对象初始化为空值。
 
 ```cpp
 void Release() throw()
 ```
 
-## <a name="set"></a>HString::Set
+## <a name="hstringset"></a><a name="set"></a>HString：： Set
 
-将当前`HString`对象的值设置为指定的宽字符字符串或`HString`参数。
+将当前 `HString` 对象的值设置为指定的宽字符字符串或 `HString` 参数。
 
 ```cpp
 HRESULT Set(
@@ -399,13 +400,13 @@ HRESULT Set(
            ) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *str*<br/>
 宽字符字符串。
 
 len<br/>
-分配给当前`HString`对象的*str*参数的最大长度。
+赋给当前 `HString` 对象的*str*参数的最大长度。
 
 *hstr*<br/>
 一个现有的 `HString` 对象。

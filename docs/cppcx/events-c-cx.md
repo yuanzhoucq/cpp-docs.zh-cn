@@ -3,12 +3,12 @@ title: 事件 (C++/CX)
 description: 如何使用C++/cx 在 Windows 运行时中创建和使用事件处理程序。
 ms.date: 02/03/2020
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
-ms.openlocfilehash: 45f9a7bc17d9a695613ce551dae796b2cd2e0e6f
-ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
+ms.openlocfilehash: b40f71b183561b52047c1f7316def3d895465d2a
+ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76972201"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79509363"
 ---
 # <a name="events-ccx"></a>事件 (C++/CX)
 
@@ -28,7 +28,7 @@ Windows 运行时中的许多组件都公开事件。 例如，当传感器报�
 
 [!code-cpp[cx_events#01](../cppcx/codesnippet/CPP/cx_events/class1.h#01)]
 
-### <a name="usage"></a>用量
+### <a name="usage"></a>使用情况
 
 下面的示例演示订阅类如何使用 `+=` 运算符订阅事件并在激发事件时调用事件处理程序。 请注意，提供的函数与 `EventTest` 命名空间中的发布程序端上定义的委托的签名匹配。
 
