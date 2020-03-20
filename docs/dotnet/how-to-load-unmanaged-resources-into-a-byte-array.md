@@ -1,5 +1,5 @@
 ---
-title: 如何：将非托管的资源加载到字节数组
+title: 如何：将非托管资源加载到一个字节数组
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - unmanaged resources, loading into Byte array
 - native resources
 ms.assetid: cdada6cd-6d42-437a-a90f-44a0b18d6a93
-ms.openlocfilehash: 641bdf4429bca35800e3fbbbb7622f2651bb3fee
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 425def1cd0557298985148d7bb9f74da489643e8
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344973"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79544957"
 ---
-# <a name="how-to-load-unmanaged-resources-into-a-byte-array"></a>如何：将非托管的资源加载到字节数组
+# <a name="how-to-load-unmanaged-resources-into-a-byte-array"></a>如何：将非托管资源加载到一个字节数组
 
-本主题讨论了几种方法加载到非托管的资源<xref:System.Byte>数组。
+本主题讨论了将非托管资源加载到 <xref:System.Byte> 数组中的几种方法。
 
 ## <a name="example"></a>示例
 
-如果您知道非托管资源的大小，可以预分配 CLR 数组并将资源然后加载到使用指向 CLR 数组的数组块的指针的数组。
+如果知道非托管资源的大小，则可以预分配 CLR 数组，然后使用指向 CLR 数组的数组块的指针将资源加载到数组中。
 
-```
+```cpp
 // load_unmanaged_resources_into_Byte_array.cpp
 // compile with: /clr
 using namespace System;
@@ -56,9 +56,9 @@ int main() {
 
 ## <a name="example"></a>示例
 
-此示例演示如何将数据从非托管的内存块复制到托管数组。
+此示例演示如何将数据从非托管内存块复制到托管数组。
 
-```
+```cpp
 // load_unmanaged_resources_into_Byte_array_2.cpp
 // compile with: /clr
 using namespace System;
@@ -75,6 +75,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [使用 C++ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)

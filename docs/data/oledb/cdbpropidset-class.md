@@ -11,7 +11,6 @@ f1_keywords:
 - ATL.CDBPropIDSet.AddPropertyID
 - ATL::CDBPropIDSet::AddPropertyID
 - ATL::CDBPropIDSet::CDBPropIDSet
-- CDBPropIDSet
 - CDBPropIDSet.CDBPropIDSet
 - CDBPropIDSet::CDBPropIDSet
 - ATL.CDBPropIDSet.CDBPropIDSet
@@ -21,7 +20,6 @@ f1_keywords:
 - CDBPropIDSet::operator=
 - CDBPropIDSet.SetGUID
 - ATL::CDBPropIDSet::SetGUID
-- SetGUID
 - ATL.CDBPropIDSet.SetGUID
 - CDBPropIDSet::SetGUID
 helpviewer_keywords:
@@ -33,16 +31,16 @@ helpviewer_keywords:
 - operator=, property sets
 - SetGUID method
 ms.assetid: 52bb806c-9581-494d-9af7-50d8a4834805
-ms.openlocfilehash: 9e878af3acf4c4d3a6ca785454c4bb072f17cf09
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e2fced2ed0e32af15e75c7290733fdc2b4b34dc9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209316"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79546121"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet 类
 
-继承自`DBPROPIDSET`结构，并添加初始化键字段的构造函数并将[AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md)访问方法。
+继承自 `DBPROPIDSET` 结构，并添加一个用于初始化键字段和[AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md)访问方法的构造函数。
 
 ## <a name="syntax"></a>语法
 
@@ -72,9 +70,9 @@ class CDBPropIDSet : public tagDBPROPIDSET
 
 ## <a name="remarks"></a>备注
 
-OLE DB 使用者使用`DBPROPIDSET`结构传递的使用者要为其获取属性信息的属性 Id 的数组。 在单个标识的属性[DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85))结构属于一个属性集。
+OLE DB 使用者使用 `DBPROPIDSET` 结构来传递属性 Id 的数组，使用者想要获取属性信息。 单个[DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85))结构中标识的属性属于一个属性集。
 
-## <a name="addpropertyid"></a> CDBPropIDSet::AddPropertyID
+## <a name="cdbpropidsetaddpropertyid"></a><a name="addpropertyid"></a>CDBPropIDSet：： AddPropertyID
 
 将属性 ID 添加到属性 ID 集中。
 
@@ -84,14 +82,14 @@ OLE DB 使用者使用`DBPROPIDSET`结构传递的使用者要为其获取属性
 bool AddPropertyID(DBPROPID propid) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *propid*<br/>
 [in] 要添加到属性 ID 集中的属性 ID。
 
-## <a name="cdbpropidset"></a> Cdbpropidset:: Cdbpropidset
+## <a name="cdbpropidsetcdbpropidset"></a><a name="cdbpropidset"></a>CDBPropIDSet：： CDBPropIDSet
 
-构造函数。 初始化`rgProperties`， `cProperties`，和 （可选）`guidPropertySet`的字段[DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85))结构。
+构造函数。 初始化[DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85))结构的 `rgProperties`、`cProperties`和（可选） `guidPropertySet` 字段。
 
 ### <a name="syntax"></a>语法
 
@@ -103,17 +101,17 @@ CDBPropIDSet(const CDBPropIDSet& propidset);
 CDBPropIDSet();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *guid*<br/>
-[in]使用 GUID 来初始化`guidPropertySet`字段。
+中用于初始化 `guidPropertySet` 字段的 GUID。
 
 *propidset*<br/>
 [in] 复制构造的另一个 `CDBPropIDSet` 对象。
 
-## <a name="setguid"></a> CDBPropIDSet::SetGUID
+## <a name="cdbpropidsetsetguid"></a><a name="setguid"></a>CDBPropIDSet：： SetGUID
 
-GUID 字段设置`DBPROPIDSET`结构。
+在 `DBPROPIDSET` 结构中设置 GUID 字段。
 
 ### <a name="syntax"></a>语法
 
@@ -121,16 +119,16 @@ GUID 字段设置`DBPROPIDSET`结构。
 void SetGUID(const GUID& guid) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *guid*<br/>
-[in]使用 GUID 来设置`guidPropertySet`字段[DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85))结构。
+中用于设置[DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85))结构的 `guidPropertySet` 字段的 GUID。
 
 ### <a name="remarks"></a>备注
 
-可设置此字段[构造函数](../../data/oledb/cdbpropidset-cdbpropidset.md)也。 如果您对此类使用默认构造函数，则调用此函数。
+此字段也可以通过[构造函数](../../data/oledb/cdbpropidset-cdbpropidset.md)进行设置。 如果您对此类使用默认构造函数，则调用此函数。
 
-## <a name="op_equal"></a> Cdbpropidset:: Operator =
+## <a name="cdbpropidsetoperator-"></a><a name="op_equal"></a>CDBPropIDSet：： operator =
 
 将一个属性 ID 集的内容分配给另一 ID 属性集。
 
@@ -140,7 +138,7 @@ void SetGUID(const GUID& guid) throw();
 CDBPropIDSet& operator =(CDBPropIDSet& propset) throw();
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)

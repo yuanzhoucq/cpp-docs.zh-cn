@@ -7,25 +7,23 @@ f1_keywords:
 - ATL::ICommandPropertiesImpl
 - ICommandPropertiesImpl::GetProperties
 - ICommandPropertiesImpl.GetProperties
-- GetProperties
 - ICommandPropertiesImpl.SetProperties
 - ICommandPropertiesImpl::SetProperties
-- SetProperties
 helpviewer_keywords:
 - ICommandPropertiesImpl class
 - GetProperties method
 - SetProperties method
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
-ms.openlocfilehash: 1250f1c5c5094a0ca8348f325260e6079afe2baa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 165f7124657cbaf0c0f94171eaf9394011796aea
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408948"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545971"
 ---
 # <a name="icommandpropertiesimpl-class"></a>ICommandPropertiesImpl 类
 
-提供的实现[ICommandProperties](/previous-versions/windows/desktop/ms723044(v=vs.85))接口。
+提供[ICommandProperties](/previous-versions/windows/desktop/ms723044(v=vs.85))接口的实现。
 
 ## <a name="syntax"></a>语法
 
@@ -35,13 +33,13 @@ class ATL_NO_VTABLE ICommandPropertiesImpl
    : public ICommandProperties, public CUtlProps<PropClass>
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
-您的类，派生自
+你的类，派生自
 
 *PropClass*<br/>
-属性类。
+Properties 类。
 
 ## <a name="requirements"></a>要求
 
@@ -53,16 +51,16 @@ class ATL_NO_VTABLE ICommandPropertiesImpl
 
 |||
 |-|-|
-|[GetProperties](#getproperties)|返回在当前请求的行集的行集属性组中的属性列表。|
-|[SetProperties](#setproperties)|行集属性组中设置属性。|
+|[GetProperties](#getproperties)|返回行集属性组中当前为行集请求的属性的列表。|
+|[SetProperties](#setproperties)|设置行集属性组中的属性。|
 
 ## <a name="remarks"></a>备注
 
-这是必需的对于命令。 通过定义一个静态函数提供了该实现[BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)宏。
+这对于命令是必需的。 实现由[BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)宏定义的静态函数提供。
 
-## <a name="getproperties"></a> Icommandpropertiesimpl:: Getproperties
+## <a name="icommandpropertiesimplgetproperties"></a><a name="getproperties"></a>ICommandPropertiesImpl：： GetProperties
 
-返回使用该命令的属性映射的所有请求的属性集。
+使用命令的属性映射返回所有请求的属性集。
 
 ### <a name="syntax"></a>语法
 
@@ -73,15 +71,15 @@ STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,
    DBPROPSET ** prgPropertySets);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅[icommandproperties:: Getproperties](/previous-versions/windows/desktop/ms723119(v=vs.85))中*OLE DB 程序员参考*。
+请参阅*OLE DB 程序员参考*中的[ICommandProperties：： GetProperties](/previous-versions/windows/desktop/ms723119(v=vs.85)) 。
 
 ### <a name="remarks"></a>备注
 
 请参阅 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。
 
-## <a name="setproperties"></a> Icommandpropertiesimpl:: Setproperties
+## <a name="icommandpropertiesimplsetproperties"></a><a name="setproperties"></a>ICommandPropertiesImpl：： SetProperties
 
 设置命令对象的属性。
 
@@ -92,11 +90,11 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
    DBPROPSET rgPropertySets[]);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅[icommandproperties:: Setproperties](/previous-versions/windows/desktop/ms711497(v=vs.85))中*OLE DB 程序员参考*。
+请参阅*OLE DB 程序员参考*中的[ICommandProperties：： SetProperties](/previous-versions/windows/desktop/ms711497(v=vs.85)) 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

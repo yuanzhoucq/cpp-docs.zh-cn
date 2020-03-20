@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - boxing, C++
 ms.assetid: b5fd2c98-c578-4f83-8257-6dd663478665
-ms.openlocfilehash: 0b41cacba8c279447e1e944cc3214ca1ba607665
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 6221087b60e76e3a2648366c4efebc4105f0ab58
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516152"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "79544668"
 ---
 # <a name="boxing--ccli-and-ccx"></a>装箱（C++/CLI 和 C++/CX）
 
@@ -72,7 +72,7 @@ void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
 }
 ```
 
-有关详细信息，请参阅[装箱 (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh969554.aspx)。
+有关详细信息，请参阅[装箱 (C++/CX)](../cppcx/boxing-c-cx.md)。
 
 ## <a name="common-language-runtime"></a>公共语言运行时
 
@@ -80,7 +80,7 @@ void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
 
 装箱和取消装箱使值类型能够被视为对象。 值类型（包括结构类型和内置类型，如 int）与 <xref:System.Object> 类型可相互转换。
 
-有关详细信息，请参见:
+有关详细信息，请参阅：
 
 - [如何：显式请求装箱](../dotnet/how-to-explicitly-request-boxing.md)
 
@@ -188,6 +188,6 @@ in func2(System::ValueType^)
 in func2(System::ValueType^)
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [ .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)

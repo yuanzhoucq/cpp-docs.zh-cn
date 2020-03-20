@@ -1,25 +1,25 @@
 ---
-title: 如何：定义和使用枚举在C++/CLI
+title: 如何：在 C++/CLI 中定义和使用枚举
 ms.date: 11/04/2016
 helpviewer_keywords:
 - enum class, specifying underlying types
 ms.assetid: df8f2b91-b9d2-4fab-9be4-b1d58b8bc570
-ms.openlocfilehash: 9787b7b96f83b2926c65209254c88eb56fe1a8ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 68f8e113f6199d3b320bc6d241ee3396d2b70a1a
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387378"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79544981"
 ---
-# <a name="how-to-define-and-consume-enums-in-ccli"></a>如何：定义和使用枚举在C++/CLI
+# <a name="how-to-define-and-consume-enums-in-ccli"></a>如何：在 C++/CLI 中定义和使用枚举
 
-本主题讨论在设好枚举C++/CLI。
+本主题讨论/Cli 中C++的枚举
 
 ## <a name="specifying-the-underlying-type-of-an-enum"></a>指定枚举的基础类型
 
-默认情况下，枚举的基础类型是`int`。  但是，可以指定为有符号或无符号形式的类型`int`， `short`， `long`， `__int32`，或`__int64`。  此外可以使用`char`。
+默认情况下，枚举的基础类型是 `int`。  不过，您可以指定要签名的类型或 `int`、`short`、`long`、`__int32`或 `__int64`的无符号形式。  还可以使用 `char`。
 
-```
+```cpp
 // mcppv2_enum_3.cpp
 // compile with: /clr
 public enum class day_char : char {sun, mon, tue, wed, thu, fri, sat};
@@ -47,11 +47,11 @@ sun
 2
 ```
 
-## <a name="how-to-convert-between-managed-and-standard-enumerations"></a>如何托管和标准枚举之间进行转换
+## <a name="how-to-convert-between-managed-and-standard-enumerations"></a>如何在托管和标准枚举之间转换
 
-没有枚举和一种整型类型; 之间的标准转换强制转换是必需的。
+枚举和整型之间没有标准转换;需要强制转换。
 
-```
+```cpp
 // mcppv2_enum_4.cpp
 // compile with: /clr
 enum class day {sun, mon, tue, wed, thu, fri, sat};
@@ -77,24 +77,24 @@ a and day2 are the same
 
 ## <a name="operators-and-enums"></a>运算符和枚举
 
-以下运算符是无效的枚举C++/CLI:
+以下运算符对于/Cli 中C++的枚举有效：
 
-|运算符|
+|操作员|
 |--------------|
-|== != \< > \<= >=|
+|= =！ = \< > \<= > =|
 |+ -|
 |&#124; ^ & ~|
 |++ --|
 |sizeof|
 
-运算符&#124;^ & ~ + +-仅为枚举定义与基础类型，不包括布尔值的整数。  两个操作数必须是枚举类型。
+运算符&#124; ^ & ~ + +--仅定义有整型基础类型的枚举，不包括 bool。  两个操作数都必须是枚举类型。
 
-编译器会执行任何静态或动态检查结果的枚举操作;操作可能会导致不在范围枚举的有效枚举器值。
+编译器不会对枚举操作的结果进行静态或动态检查;操作可能导致不在枚举的有效枚举器范围内的值。
 
 > [!NOTE]
->  C + + 11 引入了枚举类类型在非托管代码中明显不同于托管的枚举类中的C++/CLI。 特别是，C + + 11 枚举类类型不支持相同的运算符中的托管的枚举类类型为C++/CLI，和C++/CLI 源代码必须提供托管枚举中的可访问性说明符类声明才能将它们从区分开来非托管 (C + + 11) 枚举类声明。 有关详细信息中的枚举类C++/CLI， C++CX，并且 C + + 11，可以看到[枚举类](../extensions/enum-class-cpp-component-extensions.md)。
+>  C + + 11 在非托管代码中引入了与/Cli 中C++的托管枚举类大不相同的枚举类类型。 特别是，c + + 11 枚举类类型不支持与/Cli 中C++的托管枚举类类型相同的运算符，并且C++/cli 源代码必须在托管枚举类声明中提供可访问性说明符，以便将它们与非托管（c + + 11）枚举类声明区分开来。 有关/Cli、 C++/Cx 和 c + C+++ 11 中的枚举类的详细信息，请参阅[enum 类](../extensions/enum-class-cpp-component-extensions.md)。
 
-```
+```cpp
 // mcppv2_enum_5.cpp
 // compile with: /clr
 private enum class E { a, b } e, mask;
@@ -110,7 +110,7 @@ int main() {
 }
 ```
 
-```
+```cpp
 // mcppv2_enum_6.cpp
 // compile with: /clr
 private enum class day : int {sun, mon};
@@ -135,6 +135,6 @@ int main() {
 True
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [枚举类](../extensions/enum-class-cpp-component-extensions.md)

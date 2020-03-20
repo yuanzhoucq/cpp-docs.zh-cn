@@ -2,18 +2,15 @@
 title: property（C++/CLI 和 C++/CX）
 ms.date: 10/12/2018
 ms.topic: reference
-f1_keywords:
-- property_cpp
-- property
 helpviewer_keywords:
 - property keyword [C++]
 ms.assetid: cc79d2b2-f013-4d81-8252-eece97a18704
-ms.openlocfilehash: 8ec76db37cffb1b3d15447165300bedf1a8771c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 46501717755933b2bdc11ee4ee6249bfea9f18cd
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516502"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545755"
 ---
 # <a name="property--ccli-and-ccx"></a>property（C++/CLI 和 C++/CX）
 
@@ -59,9 +56,9 @@ property type default[index_list] {
 }
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*type*<br/>
+type<br/>
 属性值的数据类型，因此是属性本身。
 
 property_name<br/>
@@ -78,7 +75,7 @@ inheritance-modifier<br/>
 index_list<br/>
 以逗号分隔的一个或多个索引列表。 每个索引包含索引类型，以及可以在属性方法体中使用的可选标识符。
 
-*值*<br/>
+*value*<br/>
 在设置操作中分配给属性的值，或在 get 操作中检索的值。
 
 property_body<br/>
@@ -86,7 +83,7 @@ Set 或 get 访问器的属性方法体。 property_body 可以使用 index_list
 
 ## <a name="windows-runtime"></a>Windows 运行时
 
-有关详细信息，请参阅[属性 (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755807.aspx)。
+有关详细信息，请参阅[属性 (C++/CX)](../cppcx/properties-c-cx.md)。
 
 ### <a name="requirements"></a>要求
 
@@ -111,12 +108,12 @@ modifier property type default[index];
 }
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 modifier<br/>
 可用于属性声明或 get/set 访问器方法的修饰符。 可取值为 static 和 virtual。
 
-*type*<br/>
+type<br/>
 由属性表示的值类型。
 
 property_name<br/>
@@ -127,9 +124,9 @@ index_list<br/>
 
 ### <a name="remarks"></a>备注
 
-第一个语法示例展示了同时隐式声明 `set` 和 `get` 方法的简单属性。 编译器将自动创建私有字段以存储属性值。
+第一个语法示例展示了同时隐式声明 *和* 方法的简单属性`set``get`。 编译器将自动创建私有字段以存储属性值。
 
-第二个语法示例展示了同时显式声明 `set` 和 `get` 方法的属性块。
+第二个语法示例展示了同时显式声明 *和* 方法的属性块`set``get`。
 
 第三个语法示例展示了客户定义的索引属性。 除了要设置或检索的值外，索引属性也接受参数。 必须指定属性名。 与简单的属性不同，索引属性的 `set` 和/或 `get` 方法必须显式定义，并且必须指定属性名。
 
@@ -213,6 +210,6 @@ test
 21
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [ .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)

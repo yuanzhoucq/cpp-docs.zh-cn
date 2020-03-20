@@ -1,5 +1,5 @@
 ---
-title: 如何：本机类型声明句柄
+title: 如何：使用本机类型声明句柄
 ms.custom: get-started-article
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,26 +9,26 @@ helpviewer_keywords:
 - gcroot keyword [C++]
 - types [C++], declaring handles in
 ms.assetid: b8c0eead-17e5-4003-b21f-b673f997d79f
-ms.openlocfilehash: f5d6d31be9f3c10e1a56639ccf20663ce59d7941
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 11dbc196a89a224afe02312fbe4dff99d8467f4c
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387404"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545035"
 ---
-# <a name="how-to-declare-handles-in-native-types"></a>如何：本机类型声明句柄
+# <a name="how-to-declare-handles-in-native-types"></a>如何：使用本机类型声明句柄
 
-不能声明中的本机类型的句柄类型。 vcclr.h 提供类型安全的包装器模板`gcroot`来指代中的 CLR 对象C++堆。 此模板允许您在本机类型中嵌入虚拟句柄，并将它视为像它是一样的基础类型。 在大多数情况下，可以使用`gcroot`作为嵌入类型而不需要任何转换的对象。 但是，对于[对于每个，在](../dotnet/for-each-in.md)，你必须使用`static_cast`来检索基本托管的引用。
+不能在本机类型中声明句柄类型。 vcclr 提供了类型安全的包装器模板 `gcroot` 从C++堆中引用 CLR 对象。 此模板允许您在本机类型中嵌入虚拟句柄，并将其视为基础类型。 在大多数情况下，可以使用 `gcroot` 对象作为嵌入类型，而无需任何强制转换。 但是，[对于每个，在中](../dotnet/for-each-in.md)，你必须使用 `static_cast` 来检索基础托管引用。
 
-`gcroot`到垃圾回收堆使用的值类 System::Runtime::InteropServices::GCHandle，提供"handles"功能实现的模板。 请注意，句柄本身不是垃圾回收并在不再使用时中的析构函数释放`gcroot`类 （此析构函数不能手动调用）。 如果实例化`gcroot`本机堆上对象必须调用删除对该资源。
+使用值类 System：： Runtime：： InteropServices：： GCHandle 的功能实现 `gcroot` 模板，后者向垃圾回收堆提供 "handles"。 请注意，句柄本身不会被垃圾回收，并且会在 `gcroot` 类中的析构函数不再使用时将其释放（不能手动调用此析构函数）。 如果在本机堆上实例化 `gcroot` 对象，则必须对该资源调用 delete。
 
-在运行时将保持该句柄和它所引用的 CLR 对象之间的关联。 当 CLR 对象移动与垃圾回收堆时，该句柄将返回该对象的新地址。 不需要固定之前分配给一个变量`gcroot`模板。
+运行时将维护句柄与它所引用的 CLR 对象之间的关联。 当 CLR 对象与垃圾回收堆一起移动时，句柄将返回对象的新地址。 不需要先固定变量，然后才能将其分配给 `gcroot` 的模板。
 
 ## <a name="example"></a>示例
 
-此示例演示如何创建`gcroot`本机堆栈上的对象。
+此示例演示如何在本机堆栈上创建 `gcroot` 对象。
 
-```
+```cpp
 // mcpp_gcroot.cpp
 // compile with: /clr
 #include <vcclr.h>
@@ -53,9 +53,9 @@ hello
 
 ## <a name="example"></a>示例
 
-此示例演示如何创建`gcroot`本机堆上的对象。
+此示例演示如何在本机堆上创建 `gcroot` 对象。
 
-```
+```cpp
 // mcpp_gcroot_2.cpp
 // compile with: /clr
 // compile with: /clr
@@ -83,9 +83,9 @@ hello
 
 ## <a name="example"></a>示例
 
-此示例演示如何使用`gcroot`若要在本机类型中保存对值类型 （而不是引用类型） 的引用，使用`gcroot`上已装箱的类型。
+此示例演示如何通过对装箱类型使用 `gcroot`，使用 `gcroot` 在本机类型中保存对值类型的引用（而不是引用类型）。
 
-```
+```cpp
 // mcpp_gcroot_3.cpp
 // compile with: /clr
 #include < vcclr.h >
@@ -113,6 +113,6 @@ int main() {
 String in V: Hello
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [使用 C++ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)

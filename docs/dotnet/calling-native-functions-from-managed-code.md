@@ -9,33 +9,33 @@ helpviewer_keywords:
 - calling native functions from managed code
 - interop [C++], calling native functions from managed code
 ms.assetid: 982cef18-20d9-42b4-8242-a77fa65f2e36
-ms.openlocfilehash: 285bfabbd5935df303a39ada11c388713ae24f34
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 50f40cc147daaa26a7fa4e607f0d4dd42cf22d61
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209186"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545365"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>从托管代码调用本机函数
 
-公共语言运行时提供平台调用服务，简称 PInvoke，使托管代码能够调用本机动态链接库 (Dll) 中的 C 样式函数。 与 COM 互操作性与运行时和"It Just Works，"或 ijw 映像、 机制使用相同的数据封送处理。
+公共语言运行时提供平台调用服务（即 PInvoke），使托管代码能够调用本机动态链接库（Dll）中的 C 样式函数。 使用相同的数据封送处理与运行时的 COM 互操作性以及 "它的工作" 或 IJW 的机制相同。
 
-有关详细信息，请参见:
+有关详细信息，请参阅：
 
 - [在 C++ 中使用显式 PInvoke（DllImport 特性）](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
 
 - [使用 C++ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)
 
-在本部分中的示例仅演示了如何`PInvoke`可用。 `PInvoke` 可以简化自定义的数据封送处理，这因为你提供属性而不是编写过程性的封送处理代码中声明的方式封送处理信息。
+本节中的示例演示如何使用 `PInvoke`。 `PInvoke` 可以简化自定义的数据封送处理，因为在属性中以声明方式提供封送处理信息，而不是编写过程封送
 
 > [!NOTE]
->  封送处理库提供了一种方法来以优化方式在本机和托管环境之间封送数据。 请参阅[Overview of Marshaling 中C++](../dotnet/overview-of-marshaling-in-cpp.md)有关封送处理库的详细信息。 封送处理库是可用的数据，而不是针对函数。
+>  封送处理库提供了一种方法，可通过优化的方式在本机和托管环境之间封送数据。 有关封送处理库的详细信息，请参阅[中C++的封送的概述](../dotnet/overview-of-marshaling-in-cpp.md)。 封送处理库仅适用于数据，不适用于函数。
 
 ## <a name="pinvoke-and-the-dllimport-attribute"></a>PInvoke 和 DllImport 特性
 
-下面的示例演示如何使用`PInvoke`视觉对象中C++程序。 本机函数的 puts 定义在 msvcrt.dll 中。 DllImport 特性用于 puts 的声明。
+下面的示例演示如何在可视化C++程序中使用 `PInvoke`。 本机函数 put 是在 msvcrt.lib 中定义的。 DllImport 特性用于 put 的声明。
 
-```
+```cpp
 // platform_invocation_services.cpp
 // compile with: /clr
 using namespace System;
@@ -50,9 +50,9 @@ int main() {
 }
 ```
 
-下面的示例等效于上面示例中，但使用了 IJW。
+下面的示例与前面的示例等效，但使用 IJW。
 
-```
+```cpp
 // platform_invocation_services_2.cpp
 // compile with: /clr
 using namespace System;
@@ -71,31 +71,31 @@ int main() {
 
 ### <a name="advantages-of-ijw"></a>IJW 的优点
 
-- 无需编写`DLLImport`特性声明该程序使用的非托管 api。 只需包括标头文件和使用导入库链接。
+- 不需要为程序使用的非托管 Api 写入 `DLLImport` 属性声明。 只需包含头文件并链接到导入库。
 
-- IJW 机制速度稍微快一些 （例如，IJW 存根 （stub） 不必检查是否需要 pin 或复制数据项，因为由开发人员显式完成的）。
+- IJW 机制稍微快一些（例如，IJW 存根无需检查是否需要固定或复制数据项，因为这是由开发人员显式完成的）。
 
-- 它清楚地说明了性能问题。 在这种情况下，这一事实从 Unicode 字符串转换为 ANSI 字符串，并且具有助理内存分配和解除分配。 在这种情况下，编写使用 IJW 的代码的开发人员将发现调用`_putws`并使用`PtrToStringChars`会更好的性能。
+- 它清楚地说明了性能问题。 在这种情况下，你要将 Unicode 字符串转换为 ANSI 字符串，并且具有助理内存分配和解除分配。 在这种情况下，使用 IJW 编写代码的开发人员将认识到调用 `_putws` 和使用 `PtrToStringChars` 对于性能更好。
 
-- 如果调用许多非托管的 Api 使用相同的数据，封送处理它，一次并传递经过封送处理的复制速度比重新封送处理每次都有效得多。
+- 如果使用相同的数据调用多个非托管 Api，则封送处理一次后，传递已封送的副本比每次重新封送处理要高效得多。
 
 ### <a name="disadvantages-of-ijw"></a>IJW 的缺点
 
-- 封送处理必须显式指定代码而不是由属性 （它们通常具有适当的默认值）。
+- 必须在代码中（而不是按属性，通常具有适当的默认值）显式指定封送处理。
 
-- 封送处理代码是内联，其中是应用程序逻辑的流中更具侵入性的。
+- 封送处理代码是内联的，在这种情况下，它会更容易受到应用程序逻辑的流动。
 
-- 由于显式封送处理 Api 返回`IntPtr`32 位到 64 位可移植性类型，因此必须使用额外`ToPointer`调用。
+- 因为显式封送处理 Api 将32位的 `IntPtr` 类型返回到64位可移植性，所以必须使用额外 `ToPointer` 调用。
 
-公开的特定方法C++是更高效、 显式方法，但代价是附加的复杂性。
+公开的特定方法C++是更有效的显式方法，但代价是增加一些额外的复杂性。
 
-如果应用程序使用主要的非托管的数据类型，或如果它调用更多的非托管的 Api 比.NET Framework Api，我们建议你使用 IJW 功能。 若要在托管应用程序中调用偶尔的非托管的 API，是更细微而定。
+如果应用程序主要使用非托管数据类型，或者它调用的 Api 比 .NET Framework Api 多，则建议使用 IJW 功能。 若要在大多数托管的应用程序中调用偶尔非托管的 API，选择更为微妙。
 
-## <a name="pinvoke-with-windows-apis"></a>PInvoke 与 Windows Api
+## <a name="pinvoke-with-windows-apis"></a>带有 Windows Api 的 PInvoke
 
-来说，PInvoke 很方便地在 Windows 中调用函数。
+PInvoke 非常适合用于在 Windows 中调用函数。
 
-在此示例中，视觉对象C++是 Win32 API 的一部分的 MessageBox 函数互操作程序。
+在此示例中，可视化C++程序与 Win32 API 的一部分的 MessageBox 函数进行互操作。
 
 ```cpp
 // platform_invocation_services_4.cpp
@@ -113,28 +113,28 @@ int main() {
 }
 ```
 
-输出是一个消息框标题为 PInvoke Test 并包含文本 Hello World ！。
+输出是一个消息框，其标题为 PInvoke，并包含文本 Hello World！。
 
-PInvoke 还使用封送处理信息来查找 DLL 中的函数。 在 user32.dll 没有实际上没有 MessageBox 函数，但 CharSet = charset:: Ansi 使 PInvoke 能够使用 MessageBoxA，ANSI 版本，而非 MessageBoxW，它是 Unicode 版本。 一般情况下，我们建议你使用非托管 Api 的 Unicode 版本，因为它消除了开销从转换的本机 Unicode 格式的.NET Framework 字符串对象为 ANSI。
+PInvoke 还使用封送处理信息在 DLL 中查找函数。 在 user32 中，事实上没有 MessageBox 函数，但字符集 = 字符集：： Ansi 允许 PInvoke 使用 MessageBoxA，而不是 MessageBoxW，这是 Unicode 版本。 通常，我们建议你使用非托管 Api 的 Unicode 版本，因为这样可以消除从 .NET Framework 字符串对象的本机 Unicode 格式到 ANSI 的转换开销。
 
 ## <a name="when-not-to-use-pinvoke"></a>何时不使用 PInvoke
 
-使用 PInvoke 不适合于 Dll 中的所有 C 样式函数。 例如，假设 mylib.dll 中的一个函数 makespecial，其声明，如下所示：
+使用 PInvoke 并非适用于 Dll 中的所有 C 样式函数。 例如，假设 mylib.dll 中有一个函数 MakeSpecial，其声明如下：
 
 `char * MakeSpecial(char * pszString);`
 
-如果我们在视觉对象中使用 PInvokeC++应用程序中，我们可以编写类似于以下内容：
+如果在可视化C++应用程序中使用 PInvoke，我们可能会编写类似于下面的内容：
 
 ```cpp
 [DllImport("mylib")]
 extern "C" String * MakeSpecial([MarshalAs(UnmanagedType::LPStr)] String ^);
 ```
 
-这里的难点是我们不能删除由 MakeSpecial 返回的非托管字符串的内存。 通过 PInvoke 调用的其他函数返回到没有用户已取消分配的内部缓冲区的指针。 在这种情况下，使用 IJW 功能是显而易见的选择。
+此处的难点在于，我们无法删除 MakeSpecial 返回的非托管字符串的内存。 通过 PInvoke 调用的其他函数返回一个指针，该指针指向不需要由用户释放的内部缓冲区。 在这种情况下，使用 IJW 功能是显而易见的选择。
 
-## <a name="limitations-of-pinvoke"></a>PInvoke 的局限性
+## <a name="limitations-of-pinvoke"></a>PInvoke 的限制
 
-无法从以前用作参数的本机函数来返回完全相同的指针。 如果本机函数由 PInvoke 封送的指针返回到它，可能会发生内存损坏和异常。
+不能从用作为参数的本机函数返回相同的指针。 如果本机函数返回已通过 PInvoke 封送到它的指针，则内存损坏和异常可能会不幸。
 
 ```cpp
 __declspec(dllexport)
@@ -143,9 +143,9 @@ char* fstringA(char* param) {
 }
 ```
 
-下面的示例说明了此问题，并且即使程序看起来给出了正确的输出，输出来自已经释放的内存。
+下面的示例展示了此问题，即使该程序看起来好像提供了正确的输出，输出也来自已释放的内存。
 
-```
+```cpp
 // platform_invocation_services_5.cpp
 // compile with: /clr /c
 using namespace System;
@@ -168,13 +168,13 @@ int main() {
 
 ## <a name="marshaling-arguments"></a>封送处理参数
 
-与`PInvoke`，没有封送处理之间需要管理和C++具有相同形式的本机基元类型。 例如，没有封送处理是 Int32 和 int、 Double 和 double 之间或之间必需的。
+在 `PInvoke`中，具有相同格式的托管和C++本机基元类型之间不需要封送处理。 例如，在 Int32 和 int 之间，或者在 Double 和 double 之间不需要封送处理。
 
-但是，您必须封送不具有相同的形式的类型。 这包括 char、 string 和 struct 类型。 下表显示封送处理程序使用的各种类型的映射：
+但是，您必须对不具有相同形式的类型进行封送处理。 这包括 char、string 和 struct 类型。 下表显示了封送拆收器用于各种类型的映射：
 
-|wtypes.h|Visual C++|VisualC++使用 /clr|公共语言运行时|
+|wtypes.h|Visual C++|Visual C++ with/clr|公共语言运行时|
 |--------------|------------------|-----------------------------|-----------------------------|
-|句柄|Void \*|Void \*|IntPtr、 UIntPtr|
+|句柄|void \*|void \*|IntPtr、UIntPtr|
 |BYTE|unsigned char|unsigned char|Byte|
 |SHORT|short|short|Int16|
 |WORD|unsigned short|unsigned short|UInt16|
@@ -185,22 +185,22 @@ int main() {
 |DWORD|unsigned long|unsigned long|UInt32|
 |ULONG|unsigned long|unsigned long|UInt32|
 |CHAR|char|char|Char|
-|LPCSTR|Char \*|字符串 ^ [in]、 StringBuilder ^ [中，out]|字符串 ^ [in]、 StringBuilder ^ [中，out]|
+|LPCSTR|char \*|String ^ [in]，StringBuilder ^ [in，out]|String ^ [in]，StringBuilder ^ [in，out]|
 |LPCSTR|const char \*|字符串 ^|String|
-|LPWSTR|wchar_t \*|字符串 ^ [in]、 StringBuilder ^ [中，out]|字符串 ^ [in]、 StringBuilder ^ [中，out]|
+|LPWSTR|wchar_t \*|String ^ [in]，StringBuilder ^ [in，out]|String ^ [in]，StringBuilder ^ [in，out]|
 |LPCWSTR|const wchar_t \*|字符串 ^|String|
-|FLOAT|float|float|Single|
+|FLOAT|FLOAT|FLOAT|Single|
 |DOUBLE|double|double|Double|
 
-封送处理程序会自动锁定其地址传递给非托管函数如果在运行时堆上分配内存。 固定可防止垃圾回收器在压缩期间移动分配的内存块。
+如果封送处理程序传递到非托管函数，则封送拆收器会自动固定在运行时堆上分配的内存。 固定可防止垃圾回收器在压缩期间移动分配的内存块。
 
-在本主题中前面所示示例中，DllImport 的 CharSet 参数指定如何将托管的字符串封送处理;在这种情况下，它们应封送到本机端为 ANSI 字符串。
+在本主题前面所示的示例中，DllImport 的字符集参数指定应如何封送托管字符串;在这种情况下，应将它们封送到本机端的 ANSI 字符串。
 
-可以使用 MarshalAs 特性来指定各个自变量封送处理信息的本机函数。 有几个选项进行封送处理字符串\*参数：BStr、 ANSIBStr、 TBStr、 LPStr、 LPWStr 和 LPTStr。 默认选项为 LPStr。
+您可以通过使用 MarshalAs 特性来指定本机函数的单个参数的封送处理信息。 有几种方式可用于封送字符串 \* 参数： BStr、ANSIBStr、TBStr、LPStr、LPWStr 和 LPTStr。 默认值为 LPStr。
 
-在此示例中，该字符串被封送为双字节 Unicode 字符字符串 LPWStr。 输出是第一个字母的 Hello World ！ 因为封送的字符串的第二个字节为 null，并且将放则将此解释为字符串的结尾标记。
+在此示例中，将字符串作为双字节 Unicode 字符串 LPWStr 封送。 输出是 Hello World 的第一个字母！ 因为封送字符串的第二个字节为 null，并将其解释为字符串结尾标记。
 
-```
+```cpp
 // platform_invocation_services_3.cpp
 // compile with: /clr
 using namespace System;
@@ -215,16 +215,16 @@ int main() {
 }
 ```
 
-MarshalAs 特性位于 System::Runtime::InteropServices 命名空间中。 该属性可以用于其他数据类型，例如数组。
+MarshalAs 特性位于 System：： Runtime：： InteropServices 命名空间中。 属性可与其他数据类型（如数组）一起使用。
 
-如本主题前面所述，封送处理库提供了一个新的本机和托管环境之间封送数据优化方法。 有关详细信息，请参阅[Overview of Marshaling 中C++ ](../dotnet/overview-of-marshaling-in-cpp.md)。
+如本主题前面所述，封送处理库提供了一种新的优化方法，用于在本机和托管环境之间封送数据。 有关详细信息，请参阅[中C++的封送的概述](../dotnet/overview-of-marshaling-in-cpp.md)。
 
 ## <a name="performance-considerations"></a>性能注意事项
 
-PInvoke 有 10 到 30 之间的开销为 x86 说明每个调用。 除了这些固定开销，封送处理造成额外的负担。 在托管和非托管代码中具有相同的表示形式的 blittable 类型之间没有封送处理成本。 例如，没有任何费用 int 和 Int32 之间进行转换。
+对于每个调用，PInvoke 的系统开销介于10到30个 x86 指令之间。 除这一固定开销外，封送还会产生额外的开销。 在托管代码和非托管代码中具有相同表示形式的可直接复制类型之间没有封送处理开销。 例如，int 和 Int32 之间不需要进行转换。
 
-为了提高性能，具有较少的 PInvoke 调用封送尽可能，而不是多个调用封送更少的数据每次调用的数量的数据。
+为了获得更好的性能，请使用更少的 PInvoke 调用来封送尽可能多的数据，而不是对每次调用封送更少数据的调用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [本机和 .NET 的互操作性](../dotnet/native-and-dotnet-interoperability.md)

@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB, application design considerations
 ms.assetid: 8caa7d99-d2bb-42c9-8884-74f228bb6ecc
-ms.openlocfilehash: ef2837ea80c61f074cf567ee1fe61fa2cfa0ae73
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: b481d9948d3055247bd284ca794a0fa65905e21b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525308"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "79544548"
 ---
 # <a name="ole-db-architectural-design-issues"></a>OLE DB 结构设计问题
 
@@ -38,9 +38,9 @@ Microsoft 提供了多个可完成此任务的库：OLE DB 模板库、OLE DB �
 
 - [Microsoft 帮助和支持](https://support.microsoft.com/)
 
-- [Microsoft 数据访问技术文章概述](https://msdn.microsoft.com/library/ms810811.aspx)
+- [Microsoft 数据访问技术文章概述](/previous-versions/ms810811(v=msdn.10))
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [OLE DB 编程](../../data/oledb/ole-db-programming.md)<br/>
 [OLE DB 编程概述](../../data/oledb/ole-db-programming-overview.md)

@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - call_in_appdomain function
 ms.assetid: 9a1a5026-b76b-4cae-a3d4-29badeb9db9c
-ms.openlocfilehash: a7ee0ef9c98ee940ab810abd82f6220da95d7346
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da0f2bc1a503226e41198871e6dc48ace7a86854
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351490"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545371"
 ---
-# <a name="callinappdomain-function"></a>call_in_appdomain 函数
+# <a name="call_in_appdomain-function"></a>call_in_appdomain 函数
 
-在指定的应用程序域中执行的函数。
+在指定的应用程序域中执行函数。
 
 ## <a name="syntax"></a>语法
 
@@ -39,31 +39,31 @@ RetType call_in_appdomain(
 );
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *appdomainId*<br/>
-在其中调用该函数应用程序域。
+要在其中调用函数的 appdomain。
 
 *voidFunc*<br/>
-指向`void`采用 N 参数的函数 (0 < = N < = 15)。
+指向采用 N 个参数的 `void` 函数（0 < = N < = 15）的指针。
 
 *nonvoidFunc*<br/>
-指向非`void`采用 N 参数的函数 (0 < = N < = 15)。
+指向采用 N 个参数（0 < = N < = 15）的非`void` 函数的指针。
 
-*arg1...argN*<br/>
-0 到 15 个参数传递给`voidFunc`或`nonvoidFunc`其他 appdomain 中。
+*arg1 .。。argN*<br/>
+要传递到 `voidFunc` 或另一个 appdomain 中的 `nonvoidFunc` 的零到15个参数。
 
 ## <a name="return-value"></a>返回值
 
-执行的结果`voidFunc`或`nonvoidFunc`指定的应用程序域中。
+在指定的应用程序域中执行 `voidFunc` 或 `nonvoidFunc` 的结果。
 
 ## <a name="remarks"></a>备注
 
-函数的参数传递给`call_in_appdomain`必须不是 CLR 类型。
+传递给 `call_in_appdomain` 的函数的参数不得为 CLR 类型。
 
 ## <a name="example"></a>示例
 
-```
+```cpp
 // msl_call_in_appdomain.cpp
 // compile with: /clr
 
@@ -107,7 +107,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>输出
 
 ```
 default appdomain: msl_call_in_appdomain.exe
@@ -118,6 +118,6 @@ appDomain1 id = 2
 
 ## <a name="requirements"></a>要求
 
-**标头文件** \<msclr\appdomain.h >
+**标头文件**\<msclr\appdomain.h >
 
-**Namespace** msclr
+**命名空间**msclr

@@ -1,5 +1,5 @@
 ---
-title: '如何：System:: string 中访问字符'
+title: 如何：访问 System::String 中的字符
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,26 +7,26 @@ helpviewer_keywords:
 - examples [C++], strings
 - strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-ms.openlocfilehash: 6b9e30a18ab1d2b8463ccccae0b265bc20904020
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3c44c5e7651bb1c5b4c28654b896cbe64bd5bec7
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222931"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545341"
 ---
-# <a name="how-to-access-characters-in-a-systemstring"></a>如何：System:: string 中访问字符
+# <a name="how-to-access-characters-in-a-systemstring"></a>如何：访问 System::String 中的字符
 
-您可以访问的字符<xref:System.String>对象的高性能调用到非托管函数`wchar_t*`字符串。 该方法生成的第一个字符的内部指针<xref:System.String>对象。 此指针可以直接操作或固定并传递给函数应为普通`wchar_t`字符串。
+可以访问 <xref:System.String> 对象的字符，以对采用 `wchar_t*` 字符串的非托管函数进行高性能调用。 方法会生成指向 <xref:System.String> 对象的第一个字符的内部指针。 可以直接或固定此指针，并将其传递给需要普通 `wchar_t` 字符串的函数。
 
 ## <a name="example"></a>示例
 
-`PtrToStringChars` 返回<xref:System.Char>，这是内部指针 (也称为`byref`)。 在这种情况下，它是进行垃圾收集。 您无需将固定此指针，除非您要将其传递给本机函数。
+`PtrToStringChars` 返回 <xref:System.Char>，它是内部指针（也称为 `byref`）。 因此，它可能会进行垃圾回收。 除非要将指针传递到本机函数，否则不需要固定指针。
 
-考虑下列代码。  因为不需要固定`ppchar`是一个内部指针和如果垃圾回收器移动它指向的字符串，它还将更新`ppchar`。 无需[pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md)，代码将起作用且不具有可能会导致性能下降通过固定。
+考虑下列代码。  不需要进行固定，因为 `ppchar` 是内部指针，如果垃圾回收器移动其指向的字符串，它也将更新 `ppchar`。 如果没有[pin_ptr （C++/cli）](../extensions/pin-ptr-cpp-cli.md)，代码将正常运行，并且不会因固定而导致性能下降。
 
-如果传递`ppchar`到本机函数，则它必须是钉住指针; 垃圾回收器将不能更新任何指针的非托管的堆栈帧。
+如果将 `ppchar` 传递给本机函数，则它必须是钉住指针;垃圾回收器将无法更新非托管堆栈帧上的任何指针。
 
-```
+```cpp
 // PtrToStringChars.cpp
 // compile with: /clr
 #include<vcclr.h>
@@ -48,9 +48,9 @@ abcdefg
 
 ## <a name="example"></a>示例
 
-此示例显示了需要固定的情况。
+此示例演示需要固定的位置。
 
-```
+```cpp
 // PtrToStringChars_2.cpp
 // compile with: /clr
 #include <string.h>
@@ -77,9 +77,9 @@ int main() {
 
 ## <a name="example"></a>示例
 
-内部指针具有本机的所有属性C++指针。 例如，您可以使用它可以运行链接的数据结构并执行插入和删除只使用一个指针：
+内部指针具有本机C++指针的所有属性。 例如，您可以使用它来遍历链接的数据结构，并只使用一个指针执行插入和删除操作：
 
-```
+```cpp
 // PtrToStringChars_3.cpp
 // compile with: /clr /LD
 using namespace System;
@@ -99,6 +99,6 @@ void deleteNode( ListNode ^ list, Int32 e ) {
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [使用 C++ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)

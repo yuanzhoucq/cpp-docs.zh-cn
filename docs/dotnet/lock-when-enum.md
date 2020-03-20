@@ -9,14 +9,14 @@ f1_keywords:
 helpviewer_keywords:
 - lock_when enum
 ms.assetid: 6b87bbe9-63cd-450d-a02e-bb91ffd0dcea
-ms.openlocfilehash: be75ec497dff79d75c22bda3b7d24389db2c9c59
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: af4e4472a33ef3d083f54da74e306562af1867a1
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153226"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79544831"
 ---
-# <a name="lockwhen-enum"></a>lock_when 枚举
+# <a name="lock_when-enum"></a>lock_when 枚举
 
 指定延迟锁定。
 
@@ -30,13 +30,13 @@ enum lock_when {
 
 ## <a name="remarks"></a>备注
 
-当传递给[lock::lock](../dotnet/lock-lock.md)，`lock_later`指定的锁，无法立即执行。
+传递到[lock：： lock](../dotnet/lock-lock.md)时，`lock_later` 指定现在不会执行该锁。
 
 ## <a name="example"></a>示例
 
-此示例跨多个线程使用单个类的实例。  类自身上使用锁来确保对其内部数据的访问是为每个线程保持一致。  主应用程序线程的类的同一实例上使用锁来定期检查以查看任何工作线程仍存在，并等待，直到所有工作线程退出已完成其任务。
+此示例在多个线程中使用类的单个实例。  类对自身使用锁定，以确保对每个线程的内部数据的访问都是一致的。  主应用程序线程使用类的同一实例上的锁来定期检查是否有任何工作线程仍存在，并等待退出，直到所有工作线程都完成了其任务。
 
-```
+```cpp
 // msl_lock_lock_when.cpp
 // compile with: /clr
 #include <msclr/lock.h>
@@ -124,10 +124,10 @@ All threads completed.
 
 ## <a name="requirements"></a>要求
 
-**标头文件** \<msclr\lock.h >
+**标头文件**\<msclr\lock.h >
 
-**Namespace** msclr
+**命名空间**msclr
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [lock](../dotnet/lock.md)

@@ -1,21 +1,24 @@
 ---
 title: ref class 和 ref struct（C++/CLI 和 C++/CX）
-ms.date: 05/16/2019
+ms.date: 05/30/2019
 ms.topic: reference
 f1_keywords:
 - ref class
+- value class
+- ref struct
+- value struct
 helpviewer_keywords:
 - ref class keyword [C++]
 - value class keyword [C++]
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: 9c993b134d6d359d0bc756f5e79d2f9cc137c9cf
-ms.sourcegitcommit: bc1b14f29a02685f97c7ef5c098d16db6eaf369f
-ms.translationtype: HT
+ms.openlocfilehash: dd58f32d031068785cd6020549f9eea4b2182786
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65788786"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "79544662"
 ---
 # <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>ref class 和 ref struct（C++/CLI 和 C++/CX）
 
@@ -35,12 +38,12 @@ class_accessvalue classnamemodifier :  inherit_accessbase_type {};
 class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 class_access<br/>
 （可选）程序集外部类或结构的可访问性。 可取值为 public 和 private（private 是默认值）。 嵌套类或结构不得包含 class_access 说明符。
 
-*name*<br/>
+name<br/>
 类或结构的名称。
 
 modifier<br/>
@@ -70,7 +73,7 @@ base_type<br/>
 
 - [类、结构和联合](../cpp/classes-and-structs-cpp.md)
 
-- [“操作说明：定义和使用类和结构 (C++/CLI)”中的“析构函数和终结器”](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
+- [中的析构函数和终结器如何：定义和使用类和C++结构（/cli）](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
 
 - [用户定义的运算符 (C++/CLI)](../dotnet/user-defined-operators-cpp-cli.md)
 
@@ -84,9 +87,9 @@ base_type<br/>
 
 ### <a name="remarks"></a>备注
 
-请参阅 [ref class 和 ref struct](../cppcx/ref-classes-and-structs-c-cx.md) 以及 [value class 和 value struct](https://msdn.microsoft.com/library/windows/apps/hh699861.aspx)。
+请参阅 [ref class 和 ref struct](../cppcx/ref-classes-and-structs-c-cx.md) 以及 [value class 和 value struct](../cppcx/value-classes-and-structs-c-cx.md)。
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 base_type<br/>
 （可选）基类型。 ref class 或 ref struct 可以继承自零个或多个接口，也可以继承自零个或一个 ref 类型。 value class 或 value struct 只能继承自零个或多个接口。
@@ -105,7 +108,7 @@ base_type<br/>
 
 下表列出了与“所有运行时”部分中语法的 C++/CLI 专属区别。
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 base_type<br/>
 （可选）基类型。 ref class 或 ref struct 可以继承自零个或多个托管接口，也可以继承自零个或一个 ref 类型。 value class 或 value struct 只能继承自零个或多个托管接口。
@@ -118,6 +121,6 @@ value class 或 value struct 关键字指示编译器，已分配类或结构的
 
 编译器选项：`/clr`
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [ .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)

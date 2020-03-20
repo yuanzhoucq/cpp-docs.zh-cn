@@ -7,18 +7,18 @@ helpviewer_keywords:
 - .NET applications [C++]
 - Visual C++, .NET programming
 ms.assetid: 2c7f3b0f-a266-4f0e-b318-d6f1371e04a9
-ms.openlocfilehash: 21a45dbff2b02ccce5444706c158e5bdcc6e6cc2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5ac73ec4921b57f5a4c8e1fdeb16edc4d92f57e1
+ms.sourcegitcommit: 40ffe764244784c715b086c79626ac390b855d47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303791"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "79544470"
 ---
 # <a name="net-programming-with-ccli-visual-c"></a>使用 C++/CLI (Visual C++) 进行 .NET 编程
 
-**Visual Studio 2015**：默认情况下，使用 Visual Studio 2015 创建的 CLR 项目将以.NET Framework 4.5.2 为目标。 若要在创建新项目时将目标设定为 .NET Framework 4.6，请在“新建项目”  对话框中，更改该对话框顶部中间的下拉列表中的目标框架。 若要更改现有项目的目标框架，请关闭项目、编辑项目文件 (.vcxproj)，并将目标 Framework 版本的值更改为 4.6。 设置将在你下次打开该项目时生效。
+**Visual studio 2015**：默认情况下，使用 visual studio 2015 目标创建的 CLR 项目 .NET Framework 4.5.2。 若要在创建新项目时将目标设定为 .NET Framework 4.6，请在“新建项目” 对话框中，更改该对话框顶部中间的下拉列表中的目标框架。 若要更改现有项目的目标框架，请关闭项目、编辑项目文件 (.vcxproj)，并将目标 Framework 版本的值更改为 4.6。 设置将在你下次打开该项目时生效。
 
-**Visual Studio 2017**：在 Visual Studio 2017 中，默认框架是 4.6.1 和 Framework 版本选择器是在底部**新建项目对话框**。 C++/ 默认情况下未安装 CLI 本身。 若要安装组件，请打开 Visual Studio 安装程序并选择C++/CLI 组件下视觉对象C++。
+**Visual studio 2017**：在 visual studio 2017 中，默认框架为4.6.1，而 framework 版本选择器位于 "**新建项目" 对话框**的底部。 C++默认情况下，不安装/CLI 本身。 若要安装该组件，请打开 Visual Studio 安装程序，然后C++选择 "视觉对象C++" 下的/cli 组件。
 
 ## <a name="in-this-section"></a>本节内容
 
@@ -26,13 +26,11 @@ ms.locfileid: "62303791"
 
 [本机和 .NET 的互操作性](../dotnet/native-and-dotnet-interoperability.md)
 
-[C++/CLI 迁移入门](../dotnet/cpp-cli-migration-primer.md)
-
 [纯代码和可验证代码 (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)
 
 [正则表达式 (C++/CLI)](../dotnet/regular-expressions-cpp-cli.md)
 
-[文件处理和 I/O (C++/CLI)](../dotnet/file-handling-and-i-o-cpp-cli.md)
+[文件处理和 i/o （C++/cli）](../dotnet/file-handling-and-i-o-cpp-cli.md)
 
 [图形操作 (C++/CLI)](../dotnet/graphics-operations-cpp-cli.md)
 
@@ -60,6 +58,6 @@ ms.locfileid: "62303791"
 
 [装箱 (C++/CLI)](../dotnet/boxing-cpp-cli.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [本机和 .NET 的互操作性](../dotnet/native-and-dotnet-interoperability.md)

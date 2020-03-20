@@ -9,14 +9,14 @@ f1_keywords:
 helpviewer_keywords:
 - safe_cast keyword [C++]
 ms.assetid: 4fa688bf-a8ec-49bc-a4c5-f48134efa4f7
-ms.openlocfilehash: 199fda710a077998c6b10f101f6ebc15573e675e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 42e141caed720aa29cf918a2bdf69d9a2c4203dc
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516632"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "79544638"
 ---
-# <a name="safecast-ccli-and-ccx"></a>safe_cast（C++/CLI 和 C++/CX）
+# <a name="safe_cast-ccli-and-ccx"></a>safe_cast（C++/CLI 和 C++/CX）
 
 如果成功，safe_cast 操作返回指定表达式作为指定类型；否则，抛出 `InvalidCastException`。
 
@@ -32,7 +32,7 @@ ms.locfileid: "65516632"
 
 ## <a name="windows-runtime"></a>Windows 运行时
 
-使用 safe_cast，可以更改指定表达式的类型。 在完全期望变量或参数可转换为特定类型的情况下，可以使用不含 try-catch 块的 safe_cast，以在开发过程中检测编程错误。 有关详细信息，请参阅[强制转换 (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755802.aspx)。
+使用 safe_cast，可以更改指定表达式的类型。 在完全期望变量或参数可转换为特定类型的情况下，可以使用不含 try-catch 块的 safe_cast，以在开发过程中检测编程错误。 有关详细信息，请参阅[强制转换 (C++/CX)](../cppcx/casting-c-cx.md)。
 
 ### <a name="syntax"></a>语法
 

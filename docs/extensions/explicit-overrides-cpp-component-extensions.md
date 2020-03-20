@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - overriding, override [C++]
 ms.assetid: 4ec3eaf5-163b-4df8-8f16-7a2ec04c3d0f
-ms.openlocfilehash: 7d36793e4467f9454aca1eb207f3c3dfbd483bff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: b80e49489c0b0d26469ba9f8b77e80a962668e35
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516672"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "79545431"
 ---
 # <a name="explicit-overrides--ccli-and-ccx"></a>显式重写（C++/CLI 和 C++/CX）
 
@@ -25,12 +25,12 @@ overriding-function-declarator = type::function [,type::function] { overriding-f
 overriding-function-declarator = function { overriding-function-definition }
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 overriding-function-declarator<br/>
 重写函数的返回类型、名称和参数列表。  请注意，重写函数不必与被重写函数同名。
 
-*type*<br/>
+type<br/>
 包含要重写的函数的基类型。
 
 *函数*<br/>
@@ -41,7 +41,7 @@ overriding-function-definition<br/>
 
 ### <a name="remarks"></a>备注
 
-显式重写可用于创建方法签名的别名，或为签名相同的方法提供不同实现。
+使用显式重写可为方法签名创建别名，或为具有相同签名的方法提供不同的实现。
 
 若要了解如何修改继承类型和继承类型成员的行为，请参阅[重写说明符](override-specifiers-cpp-component-extensions.md)。
 
@@ -172,6 +172,6 @@ public:
 };
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [ .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)

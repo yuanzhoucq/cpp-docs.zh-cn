@@ -1,15 +1,15 @@
 ---
 title: 实现简单使用者
-ms.date: 05/09/2019
+ms.date: 08/19/2019
 helpviewer_keywords:
 - OLE DB consumers, implementing
 ms.assetid: 13828167-23a4-4e94-8b6c-878262fda464
-ms.openlocfilehash: 67bce55a19a2aaaf3a8cbb62d7db228513e93c91
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 2f290f2a17c51682c75fbc09118757e5fd12c4f7
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707530"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "79544704"
 ---
 # <a name="implementing-a-simple-consumer"></a>实现简单使用者
 
@@ -33,7 +33,7 @@ ATL OLE DB 使用者向导不适用于 Visual Studio 2019 及更高版本。 但
 > [!NOTE]
 > 若要生成使用者应用程序来测试 `MyProv`（[增强简单只读提供程序](../../data/oledb/enhancing-the-simple-read-only-provider.md)中所述的相同提供程序），必须添加书签支持，如[向使用者添加书签支持](#bookmark)中所述。
 
-## <a name="retrieve" ></a> 通过使用者检索数据
+## <a name="retrieving-data-with-the-consumer"></a><a name="retrieve" ></a> 通过使用者检索数据
 
 ### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>将控制台应用程序修改为使用 OLE DB 使用者的具体步骤
 
@@ -42,7 +42,7 @@ ATL OLE DB 使用者向导不适用于 Visual Studio 2019 及更高版本。 但
     ```cpp
     // MyCons.cpp : Defines the entry point for the console application.
     //
-    #include "stdafx.h"
+    #include "pch.h" // "stdafx.h" in Visual Studio 2017 and earlier
     #include "Products.h"
     ...
     int main(int argc, char* argv[])
@@ -64,7 +64,7 @@ ATL OLE DB 使用者向导不适用于 Visual Studio 2019 及更高版本。 但
     }
     ```
 
-## <a name="bookmark" ></a> 向使用者添加书签支持
+## <a name="adding-bookmark-support-to-the-consumer"></a><a name="bookmark" ></a> 向使用者添加书签支持
 
 书签是唯一标识表中行的列。 它通常是键列，但并不总是这样；它是提供程序专用列。 此部分介绍了如何添加书签支持。 为此，需要在用户记录类中执行以下步骤：
 
@@ -205,6 +205,6 @@ ATL OLE DB 使用者向导不适用于 Visual Studio 2019 及更高版本。 但
 
 ::: moniker-end
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [使用向导创建 OLE DB 使用者](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

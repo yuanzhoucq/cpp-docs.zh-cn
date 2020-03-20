@@ -15,7 +15,6 @@ f1_keywords:
 - IRowsetChangeImpl.InsertRow
 - ATL::IRowsetChangeImpl::InsertRow
 - IRowsetChangeImpl::InsertRow
-- SetData
 - IRowsetChangeImpl::SetData
 - ATL.IRowsetChangeImpl.SetData
 - IRowsetChangeImpl.SetData
@@ -32,16 +31,16 @@ helpviewer_keywords:
 - SetData method
 - FlushData method
 ms.assetid: 1e9fee15-ed9e-4387-af8f-215569beca6c
-ms.openlocfilehash: 8b2a92fdefd965d4b87e0a9ed411cc1b5c89b8f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e07289a2d0fb283a20657797db5f915c06a39ad
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390758"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545899"
 ---
 # <a name="irowsetchangeimpl-class"></a>IRowsetChangeImpl 类
 
-OLE DB 模板实现[IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85)) OLE DB 规范中的接口。
+OLE DB 规范中[IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85))接口的 OLE DB 模板实现。
 
 ## <a name="syntax"></a>语法
 
@@ -55,22 +54,22 @@ template <
 class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
-一个类派生自`IRowsetChangeImpl`。
+派生自 `IRowsetChangeImpl`的类。
 
 *存储*<br/>
-用户记录中。
+用户记录。
 
 *BaseInterface*<br/>
-基类接口，如`IRowsetChange`。
+接口的基类，如 `IRowsetChange`。
 
 *RowClass*<br/>
-行句柄存储单元。
+行句柄的存储单元。
 
 *MapClass*<br/>
-持有的提供程序的所有行句柄存储单元。
+提供程序所持有的所有行句柄的存储单元。
 
 ## <a name="requirements"></a>要求
 
@@ -78,38 +77,38 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
 
 ## <a name="members"></a>成员
 
-### <a name="interface-methods-used-with-irowsetchange"></a>接口方法 （用于 IRowsetChange）
+### <a name="interface-methods-used-with-irowsetchange"></a>接口方法（与 IRowsetChange 一起使用）
 
 |||
 |-|-|
 |[DeleteRows](#deleterows)|删除行集中的行。|
-|[InsertRow](#insertrow)|将行插入到行集中。|
+|[InsertRow](#insertrow)|向行集中插入行。|
 |[SetData](#setdata)|设置一个或多个列中的数据值。|
 
-### <a name="implementation-method-callback"></a>实现方法 （回调）
+### <a name="implementation-method-callback"></a>实现方法（回调）
 
 |||
 |-|-|
-|[FlushData](#flushdata)|重写提供程序数据提交到自己的存储。|
+|[FlushData](#flushdata)|由提供程序重写，以将数据提交到其存储区。|
 
 ## <a name="remarks"></a>备注
 
-此接口是负责向数据存储区直接写入操作。 "即时"意味着，当最终用户 （使用使用者的人员） 进行任何更改，这些更改立即传输到数据存储 （并不能撤消）。
+此接口负责向数据存储区进行立即写入操作。 "即时" 表示当最终用户（使用使用者的人员）进行了任何更改时，这些更改将立即传输到数据存储区（不能撤消）。
 
-`IRowsetChangeImpl` 实现 OLE DB`IRowsetChange`接口，可更新的现有行，删除行，并将插入新行中列的值。
+`IRowsetChangeImpl` 实现了 OLE DB `IRowsetChange` 接口，该接口允许更新现有行中列的值、删除行和插入新行。
 
-OLE DB 模板实现支持所有基方法 (`SetData`， `InsertRow`，和`DeleteRows`)。
+OLE DB 模板实现支持所有基方法（`SetData`、`InsertRow`和 `DeleteRows`）。
 
 > [!IMPORTANT]
->  强烈建议您阅读以下文档，再尝试实现您的提供程序：
+>  强烈建议在尝试实现提供程序之前先阅读以下文档：
 
 - [创建可更新的提供程序](../../data/oledb/creating-an-updatable-provider.md)
 
-- 第 6 章*OLE DB 程序员参考*
+- *OLE DB 程序员参考*的第6章
 
-- 另请参阅如何`RUpdateRowset`中使用类[UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)示例。
+- 另请参阅[UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)示例中使用 `RUpdateRowset` 类的方式。
 
-## <a name="deleterows"></a> IRowsetChangeImpl::DeleteRows
+## <a name="irowsetchangeimpldeleterows"></a><a name="deleterows"></a>IRowsetChangeImpl：:D eleteRows
 
 删除行集中的行。
 
@@ -122,13 +121,13 @@ STDMETHOD (DeleteRows )(HCHAPTER /* hReserved */,
    DBROWSTATUS rgRowStatus[]);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅[IRowsetChange::DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85))中*OLE DB 程序员参考*。
+请参阅*OLE DB 程序员参考*中的[IRowsetChange：:D eleterows](/previous-versions/windows/desktop/ms724362(v=vs.85)) 。
 
-## <a name="insertrow"></a> IRowsetChangeImpl::InsertRow
+## <a name="irowsetchangeimplinsertrow"></a><a name="insertrow"></a>IRowsetChangeImpl：： InsertRow
 
-创建并初始化新行集中的一行。
+创建并初始化行集中的新行。
 
 ### <a name="syntax"></a>语法
 
@@ -139,11 +138,11 @@ STDMETHOD (InsertRow )(HCHAPTER /* hReserved */,
    HROW* phRow);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅[irowsetchange:: Insertrow](/previous-versions/windows/desktop/ms716921(v=vs.85))中*OLE DB 程序员参考*。
+请参阅*OLE DB 程序员参考*中的[IRowsetChange：： InsertRow](/previous-versions/windows/desktop/ms716921(v=vs.85)) 。
 
-## <a name="setdata"></a> IRowsetChangeImpl::SetData
+## <a name="irowsetchangeimplsetdata"></a><a name="setdata"></a>IRowsetChangeImpl：： SetData
 
 设置一个或多个列中的数据值。
 
@@ -155,13 +154,13 @@ STDMETHOD (SetData )(HROW hRow,
    void* pSrcData);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅[irowsetchange:: Setdata](/previous-versions/windows/desktop/ms721232(v=vs.85))中*OLE DB 程序员参考*。
+请参阅*OLE DB 程序员参考*中的[IRowsetChange：： SetData](/previous-versions/windows/desktop/ms721232(v=vs.85)) 。
 
-## <a name="flushdata"></a> IRowsetChangeImpl::FlushData
+## <a name="irowsetchangeimplflushdata"></a><a name="flushdata"></a>IRowsetChangeImpl：： FlushData
 
-重写提供程序数据提交到自己的存储。
+由提供程序重写，以将数据提交到其存储区。
 
 ### <a name="syntax"></a>语法
 
@@ -170,19 +169,19 @@ HRESULT FlushData(HROW hRowToFlush,
    HACCESSOR hAccessorToFlush);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *hRowToFlush*<br/>
-[in]数据行的句柄。 此行的类型由*RowClass*的模板参数`IRowsetImpl`类 (`CSimpleRow`默认情况下)。
+中数据行的句柄。 此行的类型由 `IRowsetImpl` 类（默认`CSimpleRow`）的*RowClass*模板自变量确定。
 
 *hAccessorToFlush*<br/>
-[in]句柄的访问器，其中包含绑定信息和类型信息在其`PROVIDER_MAP`(请参阅[IAccessorImpl](../../data/oledb/iaccessorimpl-class.md))。
+中访问器的句柄，其中包含绑定信息和 `PROVIDER_MAP` 中的类型信息（请参见[IAccessorImpl](../../data/oledb/iaccessorimpl-class.md)）。
 
 ### <a name="return-value"></a>返回值
 
 标准的 HRESULT。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

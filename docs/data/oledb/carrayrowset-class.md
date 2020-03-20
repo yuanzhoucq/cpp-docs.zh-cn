@@ -12,7 +12,6 @@ f1_keywords:
 - ATL.CArrayRowset.CArrayRowset
 - ATL.CArrayRowset<TAccessor>.CArrayRowset
 - CArrayRowset::CArrayRowset
-- CArrayRowset
 - CArrayRowset<TAccessor>::CArrayRowset
 - ATL::CArrayRowset<TAccessor>::CArrayRowset
 - CArrayRowset<TAccessor>.Snapshot
@@ -43,12 +42,12 @@ helpviewer_keywords:
 - operator[], arrays
 - m_nRowsRead
 ms.assetid: 511427e1-73ca-4fd8-9ba1-ae9463557cb6
-ms.openlocfilehash: b257c4e95a99bfbc8042c5935638a70deac0ea7a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66b7607eb28392196f6b7d3790aee976a861f2b6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176156"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545611"
 ---
 # <a name="carrayrowset-class"></a>CArrayRowset 类
 
@@ -63,7 +62,7 @@ class CArrayRowset :
    protected CBulkRowset <TAccessor>
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *TAccessor*<br/>
 您希望集合使用的访问器类的类型。
@@ -85,7 +84,7 @@ class CArrayRowset :
 
 |||
 |-|-|
-|[Operator&#91;&#93;](#operator)|访问行集合的元素。|
+|[操作员&#91;&#93;](#operator)|访问行集合的元素。|
 
 ### <a name="data-members"></a>数据成员
 
@@ -93,9 +92,9 @@ class CArrayRowset :
 |-|-|
 |[CArrayRowset::m_nRowsRead](#nrowsread)|已读取的行数。|
 
-## <a name="carrayrowset"></a> CArrayRowset::CArrayRowset
+## <a name="carrayrowsetcarrayrowset"></a><a name="carrayrowset"></a>CArrayRowset：： CArrayRowset
 
-创建一个新的 `CArrayRowset` 对象。
+创建新的 `CArrayRowset` 对象。
 
 ### <a name="syntax"></a>语法
 
@@ -103,12 +102,12 @@ class CArrayRowset :
 CArrayRowset(int nMax = 100000);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-*nMax*<br/>
+*N 每天*<br/>
 [in] 行集中的最大行数。
 
-## <a name="snapshot"></a> CArrayRowset::Snapshot
+## <a name="carrayrowsetsnapshot"></a><a name="snapshot"></a>CArrayRowset：： Snapshot
 
 将整个行集读入内存，并创建该行集的图像或快照。
 
@@ -118,7 +117,7 @@ CArrayRowset(int nMax = 100000);
 HRESULT Snapshot() throw();
 ```
 
-## <a name="operator"></a> CArrayRowset::operator
+## <a name="carrayrowsetoperator"></a><a name="operator"></a>CArrayRowset：： operator
 
 提供用于访问行集中的行的类似数组的语法。
 
@@ -128,7 +127,7 @@ HRESULT Snapshot() throw();
 TAccessor & operator[](int nrow);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *TAccessor*<br/>
 一个指定存储在行集中的访问器类型的模板化参数。
@@ -142,9 +141,9 @@ TAccessor & operator[](int nrow);
 
 ### <a name="remarks"></a>备注
 
-如果*nRow*超过行集中的行数，将引发异常。
+如果*nRow*超过行集中的行数，则会引发异常。
 
-## <a name="nrowsread"></a> CArrayRowset::m_nRowsRead
+## <a name="carrayrowsetm_nrowsread"></a><a name="nrowsread"></a>CArrayRowset：： m_nRowsRead
 
 包含已读取的行集中的行数。
 
@@ -154,7 +153,7 @@ TAccessor & operator[](int nrow);
 ULONG m_nRowsRead;
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>

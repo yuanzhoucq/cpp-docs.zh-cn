@@ -2,22 +2,19 @@
 title: swap 函数 (auto_handle)
 ms.date: 11/04/2016
 ms.topic: reference
-f1_keywords:
-- msclr::swap
-- msclr.swap
 helpviewer_keywords:
 - swap function
 ms.assetid: 7dd91b5c-f0de-4634-a2e2-642626706e27
-ms.openlocfilehash: eb410d420e91f9b64742d74d9f9262a4db42f562
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e6cde103eefb6e14fdf2a3fc7e3299070afbc25
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384551"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545941"
 ---
-# <a name="swap-function-autohandle"></a>swap 函数 (auto_handle)
+# <a name="swap-function-auto_handle"></a>swap 函数 (auto_handle)
 
-交换对象之间一个`auto_handle`和另一个。
+交换一个 `auto_handle` 与另一个之间的对象。
 
 ## <a name="syntax"></a>语法
 
@@ -29,17 +26,17 @@ void swap(
 );
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *_left*<br/>
-一个 `auto_handle`。
+一个`auto_handle`。
 
 *_right*<br/>
-另一个`auto_handle`。
+另一个 `auto_handle`。
 
 ## <a name="example"></a>示例
 
-```
+```cpp
 // msl_swap_auto_handle.cpp
 // compile with: /clr
 #include <msclr\auto_handle.h>
@@ -66,11 +63,11 @@ s1 = 'string two', s2 = 'string one'
 
 ## <a name="requirements"></a>要求
 
-**标头文件** \<msclr\auto_handle.h >
+**标头文件**\<msclr \ auto_handle .h >
 
-**Namespace** msclr
+**命名空间**msclr
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [auto_handle](../dotnet/auto-handle.md)<br/>
 [auto_handle::swap](../dotnet/auto-handle-swap.md)

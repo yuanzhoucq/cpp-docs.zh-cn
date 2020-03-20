@@ -8,7 +8,6 @@ f1_keywords:
 - ATL::CManualAccessor::AddBindEntry
 - ATL.CManualAccessor.AddBindEntry
 - CManualAccessor::AddBindEntry
-- AddBindEntry
 - CManualAccessor.AddBindEntry
 - CManualAccessor::AddParameterEntry
 - ATL.CManualAccessor.AddParameterEntry
@@ -16,7 +15,6 @@ f1_keywords:
 - AddParameterEntry
 - ATL::CManualAccessor::AddParameterEntry
 - ATL::CManualAccessor::CreateAccessor
-- CreateAccessor
 - ATL.CManualAccessor.CreateAccessor
 - CManualAccessor.CreateAccessor
 - CManualAccessor::CreateAccessor
@@ -32,16 +30,16 @@ helpviewer_keywords:
 - CreateAccessor method
 - CreateParameterAccessor method
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
-ms.openlocfilehash: 526415f14172911b26462fab97d9e0a7513b8cad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 80c8f94a417c700f86159de53bd53e4011f78d71
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62231059"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79546067"
 ---
 # <a name="cmanualaccessor-class"></a>CManualAccessor 类
 
-表示用于高级用途而设计的访问器类型。
+表示旨在供高级使用的访问器类型。
 
 ## <a name="syntax"></a>语法
 
@@ -59,18 +57,18 @@ class CManualAccessor : public CAccessorBase
 
 |||
 |-|-|
-|[AddBindEntry](#addbindentry)|将绑定条目添加到输出列。|
-|[AddParameterEntry](#addparameterentry)|将参数项添加到参数访问器。|
-|[CreateAccessor](#createaccessor)|列绑定结构分配内存并初始化列数据成员。|
-|[CreateParameterAccessor](#createparameteraccessor)|参数绑定结构分配内存并初始化参数数据成员。|
+|[AddBindEntry](#addbindentry)|向输出列添加绑定项。|
+|[AddParameterEntry](#addparameterentry)|向参数访问器添加参数项。|
+|[CreateAccessor](#createaccessor)|为列绑定结构分配内存并初始化列数据成员。|
+|[CreateParameterAccessor](#createparameteraccessor)|为参数绑定结构分配内存并初始化参数数据成员。|
 
 ## <a name="remarks"></a>备注
 
-使用`CManualAccessor`，可以指定参数和运行时函数调用的输出列绑定。
+使用 `CManualAccessor`，可以通过运行时函数调用指定参数和输出列绑定。
 
-## <a name="addbindentry"></a> Cmanualaccessor:: Addbindentry
+## <a name="cmanualaccessoraddbindentry"></a><a name="addbindentry"></a>CManualAccessor：： AddBindEntry
 
-将绑定条目添加到输出列。
+向输出列添加绑定项。
 
 ### <a name="syntax"></a>语法
 
@@ -82,35 +80,35 @@ void AddBindEntry(DBORDINAL nOrdinal,
    void* pStatus = NULL) throw ();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅[DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))中*OLE DB 程序员参考*。
+请参阅*OLE DB 程序员参考*中的[DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 。
 
 *nOrdinal*<br/>
-[in]列号。
+中列号。
 
-*wType*<br/>
-[in]数据类型。
+wType<br/>
+中数据类型。
 
 *nColumnSize*<br/>
-[in]列大小 （字节）。
+中列大小（字节）。
 
 *pData*<br/>
-[in]指向存储在缓冲区中的列数据的指针。
+中指向存储在缓冲区中的列数据的指针。
 
 *pLength*<br/>
-[in]指向字段长度，如果所需的指针。
+中指向字段长度的指针（如果需要）。
 
 *pStatus*<br/>
-[in]指向要绑定到的列状态，如果所需的变量的指针。
+中指向要绑定到列状态的变量的指针（如果需要）。
 
 ### <a name="remarks"></a>备注
 
-若要使用此函数，必须首先调用[CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md)。 无法添加更多的项中指定的列数比`CreateAccessor`。
+若要使用此函数，必须先调用[CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md)。 不能添加比 `CreateAccessor`中指定的列数更多的条目。
 
-## <a name="addparameterentry"></a> Cmanualaccessor:: Addparameterentry
+## <a name="cmanualaccessoraddparameterentry"></a><a name="addparameterentry"></a>CManualAccessor：： AddParameterEntry
 
-将参数项添加到参数项结构。
+向参数输入结构添加参数项。
 
 ### <a name="syntax"></a>语法
 
@@ -123,38 +121,38 @@ void AddParameterEntry(DBORDINAL nOrdinal,
    DBPARAMIO eParamIO = DBPARAMIO_INPUT) throw ();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅[DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))中*OLE DB 程序员参考*。
+请参阅*OLE DB 程序员参考*中的[DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 。
 
 *nOrdinal*<br/>
-[in]参数数目。
+中参数编号。
 
-*wType*<br/>
-[in]数据类型。
+wType<br/>
+中数据类型。
 
 *nColumnSize*<br/>
-[in]列大小 （字节）。
+中列大小（字节）。
 
 *pData*<br/>
-[in]指向存储在缓冲区中的列数据的指针。
+中指向存储在缓冲区中的列数据的指针。
 
 *pLength*<br/>
-[in]指向字段长度，如果所需的指针。
+中指向字段长度的指针（如果需要）。
 
 *pStatus*<br/>
-[in]指向要绑定到的列状态，如果所需的变量的指针。
+中指向要绑定到列状态的变量的指针（如果需要）。
 
 *eParamIO*<br/>
-[in]指定绑定与之关联的参数是否为输入、 输入/输出或输出参数。
+中指定与绑定关联的参数是否为输入、输入/输出或输出参数。
 
 ### <a name="remarks"></a>备注
 
-若要使用此函数，必须首先调用[CreateParameterAccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md)。
+若要使用此函数，必须先调用[CreateParameterAccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md)。
 
-## <a name="createaccessor"></a> CManualAccessor::CreateAccessor
+## <a name="cmanualaccessorcreateaccessor"></a><a name="createaccessor"></a>CManualAccessor：： CreateAccessor
 
-列绑定结构分配内存并初始化列数据成员。
+为列绑定结构分配内存并初始化列数据成员。
 
 ### <a name="syntax"></a>语法
 
@@ -164,28 +162,28 @@ HRESULT CreateAccessor(int nBindEntries,
    DBLENGTH nBufferSize) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *nBindEntries*<br/>
-[in]列数。 该数目应与匹配对的调用次数[cmanualaccessor:: Addbindentry](../../data/oledb/cmanualaccessor-addbindentry.md)函数。
+中列数。 此数字应匹配对[CManualAccessor：： AddBindEntry](../../data/oledb/cmanualaccessor-addbindentry.md)函数的调用数。
 
 *pBuffer*<br/>
-[in]指向缓冲区的输出列的存储位置的指针。
+中指向存储输出列的缓冲区的指针。
 
 *nBufferSize*<br/>
-[in]以字节为单位的缓冲区的大小。
+中缓冲区的大小（以字节为单位）。
 
 ### <a name="return-value"></a>返回值
 
-一个标准的 HRESULT 值。
+标准的 HRESULT 值之一。
 
 ### <a name="remarks"></a>备注
 
-在调用之前调用此函数`CManualAccessor::AddBindEntry`函数。
+在调用 `CManualAccessor::AddBindEntry` 函数之前调用此函数。
 
-## <a name="createparameteraccessor"></a> CManualAccessor::CreateParameterAccessor
+## <a name="cmanualaccessorcreateparameteraccessor"></a><a name="createparameteraccessor"></a>CManualAccessor：： CreateParameterAccessor
 
-参数绑定结构分配内存并初始化参数数据成员。
+为参数绑定结构分配内存并初始化参数数据成员。
 
 ### <a name="syntax"></a>语法
 
@@ -195,26 +193,26 @@ HRESULT CreateParameterAccessor(int nBindEntries,
    DBLENGTH nBufferSize) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *nBindEntries*<br/>
-[in]列数。
+中列数。
 
 *pBuffer*<br/>
-[in]指向缓冲区的输入的列的存储位置的指针。
+中指向存储输入列的缓冲区的指针。
 
 *nBufferSize*<br/>
-[in]以字节为单位的缓冲区的大小。
+中缓冲区的大小（以字节为单位）。
 
 ### <a name="return-value"></a>返回值
 
-一个标准的 HRESULT 值。
+标准的 HRESULT 值之一。
 
 ### <a name="remarks"></a>备注
 
-您必须调用此函数之前调用[AddParameterEntry](../../data/oledb/cmanualaccessor-addparameterentry.md)。
+在调用[AddParameterEntry](../../data/oledb/cmanualaccessor-addparameterentry.md)之前，必须调用此函数。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [DBViewer](../../overview/visual-cpp-samples.md)<br/>
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>

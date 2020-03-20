@@ -6,17 +6,17 @@ helpviewer_keywords:
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
 ms.openlocfilehash: 5fe7d6876b094c84fe3d4cdbba417106edcca528
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856366"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79545539"
 ---
 # <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>如何：定义和使用类和结构 (C++/CLI)
 
 本文介绍如何在/Cli 中C++定义和使用用户定义的引用类型和值类型。
 
-##  <a name="BKMK_Contents"></a> Contents
+##  <a name="contents"></a><a name="BKMK_Contents"></a> Contents
 
 [对象实例化](#BKMK_Object_instantiation)
 
@@ -38,7 +38,7 @@ ms.locfileid: "78856366"
 
 [析构函数和终结器](#BKMK_Destructors_and_finalizers)
 
-##  <a name="BKMK_Object_instantiation"></a>对象实例化
+##  <a name="object-instantiation"></a><a name="BKMK_Object_instantiation"></a>对象实例化
 
 引用（ref）类型只能在托管堆上实例化，而不能在堆栈或本机堆上实例化。 值类型可以在堆栈或托管堆上实例化。
 
@@ -93,7 +93,7 @@ int main() {
 }
 ```
 
-##  <a name="BKMK_Implicitly_abstract_classes"></a>隐式抽象类
+##  <a name="implicitly-abstract-classes"></a><a name="BKMK_Implicitly_abstract_classes"></a>隐式抽象类
 
 *隐式抽象类*不能实例化。 如果类的基类型是一个接口，并且类未实现所有接口的成员函数，则该类将隐式成为抽象类。
 
@@ -121,7 +121,7 @@ int main() {
 }
 ```
 
-##  <a name="BKMK_Type_visibility"></a>类型可见性
+##  <a name="type-visibility"></a><a name="BKMK_Type_visibility"></a>类型可见性
 
 可以控制公共语言运行时（CLR）类型的可见性，以便在引用程序集时，程序集中的类型在程序集外可见或不可见。
 
@@ -218,7 +218,7 @@ int main() {
 in Public_Class
 ```
 
-##  <a name="BKMK_Member_visibility"></a>成员可见性
+##  <a name="member-visibility"></a><a name="BKMK_Member_visibility"></a>成员可见性
 
 通过使用 `public`、`protected`和 `private` 的访问说明符对，可以从程序集外部访问公共类的成员，而不是从程序集访问
 
@@ -226,7 +226,7 @@ in Public_Class
 
 |说明符|效果|
 |---------------|------------|
-|public|可在程序集内部和外部访问成员。  有关详细信息，请参阅[public](../cpp/public-cpp.md) 。|
+|公共|可在程序集内部和外部访问成员。  有关详细信息，请参阅[public](../cpp/public-cpp.md) 。|
 |专用|成员不可访问，它既不在程序集内部也不是外部。  有关详细信息，请参阅[私有](../cpp/private-cpp.md)。|
 |protected|成员可在程序集内部和外部访问，但只能用于派生类型。  有关详细信息，请参阅[受保护](../cpp/protected-cpp.md)。|
 |内部|成员在程序集内部是公共的，而在程序集外是私有的。  `internal` 是上下文相关的关键字。  有关详细信息，请参阅[上下文相关关键字](../extensions/context-sensitive-keywords-cpp-component-extensions.md)。|
@@ -406,7 +406,7 @@ exiting function of derived class
 =======================
 ```
 
-##  <a name="BKMK_Public_and_private_native_classes"></a>公共和私有本机类
+##  <a name="public-and-private-native-classes"></a><a name="BKMK_Public_and_private_native_classes"></a>公共和私有本机类
 
 可以从托管类型引用本机类型。  例如，托管类型中的函数可以采用类型为本机结构的参数。  如果托管类型和函数在程序集中是公共的，则本机类型必须也是公共的。
 
@@ -445,7 +445,7 @@ int main() {
 }
 ```
 
-##  <a name="BKMK_Static_constructors"></a>静态构造函数
+##  <a name="static-constructors"></a><a name="BKMK_Static_constructors"></a>静态构造函数
 
 CLR 类型（例如类或结构）可以具有可用于初始化静态数据成员的静态构造函数。  静态构造函数最多调用一次，并在第一次访问该类型的任何静态成员之前调用。
 
@@ -491,13 +491,13 @@ in static constructor
 11
 ```
 
-##  <a name="BKMK_Semantics_of_the_this_pointer"></a>This 指针的语义
+##  <a name="semantics-of-the-this-pointer"></a><a name="BKMK_Semantics_of_the_this_pointer"></a>This 指针的语义
 
 使用视觉对象C++定义类型时，引用类型中的 `this` 指针的类型为 "句柄"。 值类型中的 `this` 指针的类型为 "内部指针"。
 
 调用默认索引器时，`this` 指针的这些不同语义可能导致意外的行为。 下一个示例演示了访问引用类型和值类型中的默认索引器的正确方法。
 
-有关详细信息，请参阅。
+有关详细信息，请参阅
 
 - [对象句柄运算符 (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)
 
@@ -546,7 +546,7 @@ int main() {
 10.89
 ```
 
-##  <a name="BKMK_Hide_by_signature_functions"></a>按签名隐藏函数
+##  <a name="hide-by-signature-functions"></a><a name="BKMK_Hide_by_signature_functions"></a>按签名隐藏函数
 
 在标准C++中，基类中的函数由派生类中具有相同名称的函数隐藏，即使派生类函数没有相同数量或种类的参数也是如此。 这称为*按名称隐藏*语义。 在引用类型中，只有当名称和参数列表相同时，基类中的函数才能由派生类中的函数隐藏。 这称为 "*按签名隐藏*" 语义。
 
@@ -654,7 +654,7 @@ Derived::Test4
 97
 ```
 
-##  <a name="BKMK_Copy_constructors"></a>复制构造函数
+##  <a name="copy-constructors"></a><a name="BKMK_Copy_constructors"></a>复制构造函数
 
 C++标准表明在移动对象时调用了复制构造函数，以便在同一地址创建并销毁对象。
 
@@ -719,7 +719,7 @@ S object 1 being destroyed, this=0018F37C
 S object 0 being destroyed, this=0018F378
 ```
 
-##  <a name="BKMK_Destructors_and_finalizers"></a>析构函数和终结器
+##  <a name="destructors-and-finalizers"></a><a name="BKMK_Destructors_and_finalizers"></a>析构函数和终结器
 
 引用类型中的析构函数执行资源的确定性清理。 终结器清除非托管资源，并可由垃圾回收器由析构函数或不确定地来确定。 有关标准C++中的析构函数的信息，请参阅[析构函数](../cpp/destructors-cpp.md)。
 

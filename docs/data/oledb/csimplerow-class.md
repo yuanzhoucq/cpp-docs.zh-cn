@@ -12,7 +12,6 @@ f1_keywords:
 - CSimpleRow.AddRefRow
 - CSimpleRow.Compare
 - CSimpleRow::Compare
-- CSimpleRow
 - ATL::CSimpleRow::CSimpleRow
 - CSimpleRow.CSimpleRow
 - ATL.CSimpleRow.CSimpleRow
@@ -35,16 +34,16 @@ helpviewer_keywords:
 - m_dwRef
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
-ms.openlocfilehash: 19b90f4454e784907366ef6cf7e3e7e1b9ada799
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 00d8164425ada573020971f66312b2282cc72c45
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390927"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545563"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow 类
 
-提供的行控点，在中使用的默认实现[IRowsetImpl](../../data/oledb/irowsetimpl-class.md)类。
+提供行句柄的默认实现，该实现在[IRowsetImpl](../../data/oledb/irowsetimpl-class.md)类中使用。
 
 ## <a name="syntax"></a>语法
 
@@ -62,8 +61,8 @@ class CSimpleRow
 
 |||
 |-|-|
-|[AddRefRow](#addrefrow)|将引用计数添加到现有的行控点。|
-|[Compare](#compare)|比较两个行，以查看它们是否引用同一个行实例。|
+|[AddRefRow](#addrefrow)|向现有的行句柄添加引用数。|
+|[比较](#compare)|比较两行，看它们是否引用相同的行实例。|
 |[CSimpleRow](#csimplerow)|构造函数。|
 |[ReleaseRow](#releaserow)|释放行。|
 
@@ -71,16 +70,16 @@ class CSimpleRow
 
 |||
 |-|-|
-|[m_dwRef](#dwref)|为现有的行句柄的引用计数。|
-|[m_iRowset](#irowset)|表示光标的行集的索引。|
+|[m_dwRef](#dwref)|对现有行句柄的引用计数。|
+|[m_iRowset](#irowset)|表示游标的行集的索引。|
 
 ## <a name="remarks"></a>备注
 
-行控点在逻辑上就结果行的唯一标记。 `IRowsetImpl` 创建一个新`CSimpleRow`为每个行中请求[irowsetimpl:: Getnextrows](../../data/oledb/irowsetimpl-getnextrows.md)。 `CSimpleRow` 因为它的默认模板自变量也可以使用的行控点，您自己的实现替换`IRowsetImpl`。 到替换此类的唯一要求是能够提供接受类型的单个参数的构造函数替换类**长**。
+行句柄以逻辑方式为结果行的唯一标记。 `IRowsetImpl` 将为[IRowsetImpl：： GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md)中请求的每一行创建一个新的 `CSimpleRow`。 还可以将 `CSimpleRow` 替换为您自己的行句柄实现，因为它是 `IRowsetImpl`的默认模板参数。 替换此类的唯一要求是让替换类提供接受**长**类型的单个参数的构造函数。
 
-## <a name="addrefrow"></a> CSimpleRow::AddRefRow
+## <a name="csimplerowaddrefrow"></a><a name="addrefrow"></a>CSimpleRow：： AddRefRow
 
-将引用计数添加到现有的行控点，以线程安全的方式。
+以线程安全的方式将引用计数添加到现有行句柄。
 
 ### <a name="syntax"></a>语法
 
@@ -88,9 +87,9 @@ class CSimpleRow
 DWORD AddRefRow();
 ```
 
-## <a name="compare"></a> CSimpleRow::Compare
+## <a name="csimplerowcompare"></a><a name="compare"></a>CSimpleRow：： Compare
 
-比较两个行，以查看它们是否引用同一个行实例。
+比较两行，看它们是否引用相同的行实例。
 
 ### <a name="syntax"></a>语法
 
@@ -98,16 +97,16 @@ DWORD AddRefRow();
 HRESULT Compare(CSimpleRow* pRow);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *pRow*<br/>
-指向 `CSimpleRow` 对象的指针。
+一个指向 `CSimpleRow` 对象的指针。
 
 ### <a name="return-value"></a>返回值
 
-HRESULT 值，通常为 S_OK，指示两个行是相同的行实例，或 S_FALSE，指示两个行都不同。 请参阅[IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85))中*OLE DB 程序员参考*有关其他可能的返回值。
+HRESULT 值通常为 S_OK，指示两行是同一行实例，或 S_FALSE，指示两行不同。 有关其他可能的返回值，请参阅*OLE DB 程序员参考*中的[IRowsetIdentity：： IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) 。
 
-## <a name="csimplerow"></a> Csimplerow:: Csimplerow
+## <a name="csimplerowcsimplerow"></a><a name="csimplerow"></a>CSimpleRow：： CSimpleRow
 
 构造函数。
 
@@ -117,18 +116,18 @@ HRESULT 值，通常为 S_OK，指示两个行是相同的行实例，或 S_FALS
 CSimpleRow(DBCOUNTITEM iRowsetCur);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *iRowsetCur*<br/>
-[in]当前行集的索引。
+中当前行集的索引。
 
 ### <a name="remarks"></a>备注
 
-集[m_iRowset](../../data/oledb/csimplerow-m-irowset.md)到*iRowsetCur*。
+将[m_iRowset](../../data/oledb/csimplerow-m-irowset.md)设置为*iRowsetCur*。
 
-## <a name="releaserow"></a> CSimpleRow::ReleaseRow
+## <a name="csimplerowreleaserow"></a><a name="releaserow"></a>CSimpleRow：： ReleaseRow
 
-释放行以线程安全的方式。
+以线程安全的方式发布行。
 
 ### <a name="syntax"></a>语法
 
@@ -136,9 +135,9 @@ CSimpleRow(DBCOUNTITEM iRowsetCur);
 DWORD ReleaseRow();
 ```
 
-## <a name="dwref"></a> CSimpleRow::m_dwRef
+## <a name="csimplerowm_dwref"></a><a name="dwref"></a>CSimpleRow：： m_dwRef
 
-为现有的行句柄的引用计数。
+对现有行句柄的引用计数。
 
 ### <a name="syntax"></a>语法
 
@@ -146,9 +145,9 @@ DWORD ReleaseRow();
 DWORD m_dwRef;
 ```
 
-## <a name="irowset"></a> CSimpleRow::m_iRowset
+## <a name="csimplerowm_irowset"></a><a name="irowset"></a>CSimpleRow：： m_iRowset
 
-表示光标的行集的索引。
+表示游标的行集的索引。
 
 ### <a name="syntax"></a>语法
 
@@ -156,7 +155,7 @@ DWORD m_dwRef;
 KeyType m_iRowset;
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

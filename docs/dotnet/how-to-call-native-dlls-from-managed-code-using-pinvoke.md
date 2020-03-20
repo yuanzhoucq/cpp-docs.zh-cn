@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 PInvoke 从托管代码调用本机 Dll
+title: 如何：使用 PInvoke 从托管代码调用本机 DLL
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,26 +8,26 @@ helpviewer_keywords:
 - marshaling [C++], calling native DLLs
 - data marshaling [C++], calling native DLLs
 ms.assetid: 3273eb4b-38d1-4619-92a6-71bda542be72
-ms.openlocfilehash: e51e094cc013250fc254a09e279745f1f9c108ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1eb5d5669c49dd49a411c275f8845dbbab989df3
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222806"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545089"
 ---
-# <a name="how-to-call-native-dlls-from-managed-code-using-pinvoke"></a>如何：使用 PInvoke 从托管代码调用本机 Dll
+# <a name="how-to-call-native-dlls-from-managed-code-using-pinvoke"></a>如何：使用 PInvoke 从托管代码调用本机 DLL
 
-可以从使用平台调用 (P/Invoke) 功能的托管代码调用非托管 Dll 中实现的函数。 如果该 DLL 的源代码不可用，P/Invoke 是唯一的选项之间的互操作。 但是，与其他.NET 语言，Visual 不同C++提供了 P/Invoke 的替代方法。 有关详细信息，请参阅[使用C++互操作 (隐式 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。
+可使用平台调用（P/Invoke）功能从托管代码调用非托管 Dll 中实现的函数。 如果 DLL 的源代码不可用，则 P/Invoke 是用于互操作的唯一选项。 但是，与其他 .NET 语言不同， C++ Visual 提供了 P/Invoke 的替代方法。 有关详细信息，请[参阅C++ Using 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)。
 
 ## <a name="example"></a>示例
 
-下面的代码示例使用 Win32 [GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics)函数以检索屏幕以像素为单位的当前分辨率。
+下面的代码示例使用 Win32 [GetSystemMetrics](/windows/win32/api/winuser/nf-winuser-getsystemmetrics)函数来检索屏幕的当前分辨率（以像素为单位）。
 
-对于仅使用内部类型作为参数和返回值的函数，没有额外的工作是必需的。 其他数据类型，如函数指针、 数组和结构，需要确保正确的数据封送处理的其他属性。
+对于仅使用内部类型作为参数和返回值的函数，不需要额外的工作。 其他数据类型（如函数指针、数组和结构）需要其他特性来确保正确的数据封送处理。
 
-尽管不是必需的很好的做法使 P/Invoke 声明的值类的静态成员，以便它们不在全局命名空间，在此示例中所示。
+尽管这不是必需的，但最好使 P/Invoke 声明成为值类的静态成员，使它们不存在于全局命名空间中，如本示例中所示。
 
-```
+```cpp
 // pinvoke_basic.cpp
 // compile with: /clr
 using namespace System;
@@ -52,6 +52,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [在 C++ 中使用显式 PInvoke（DllImport 特性）](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

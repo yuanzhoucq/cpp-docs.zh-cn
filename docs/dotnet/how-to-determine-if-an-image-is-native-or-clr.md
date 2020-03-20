@@ -1,5 +1,5 @@
 ---
-title: 如何：确定图像是否为本机模式或 CLR
+title: 如何：确定映像为本机映像还是 CLR 映像
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,24 +8,24 @@ helpviewer_keywords:
 - /clr compiler option [C++], detecting use in compilation
 - common language runtime, /clr compiler option
 ms.assetid: 5a854822-6172-4b22-b236-320165412568
-ms.openlocfilehash: 541581e0f172c8ce2601e2e476ccd03a49757f80
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5149440e172b764278c5ee816827c2d13e2b4c0e
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387339"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545287"
 ---
-# <a name="how-to-determine-if-an-image-is-native-or-clr"></a>如何：确定图像是否为本机模式或 CLR
+# <a name="how-to-determine-if-an-image-is-native-or-clr"></a>如何：确定映像为本机映像还是 CLR 映像
 
-一种方法来确定某个映像是否已生成公共语言运行时是使用**dumpbin**[/CLRHEADER](../build/reference/clrheader.md)。
+确定是否为公共语言运行时生成的映像的一种方法是使用**dumpbin**[/CLRHEADER](../build/reference/clrheader.md)。
 
-以编程方式还可以检查是否为公共语言运行时生成的映像。 有关详细信息，请参阅[如何：检测 /clr 编译](../dotnet/how-to-detect-clr-compilation.md)。
+还可以通过编程方式检查是否为公共语言运行时生成了映像。 有关详细信息，请参阅[如何：检测/Clr 编译](../dotnet/how-to-detect-clr-compilation.md)。
 
 ## <a name="example"></a>示例
 
-下面的示例确定是否生成的映像以在公共语言运行时上运行。
+下面的示例确定是否生成了要在公共语言运行时上运行的映像。
 
-```
+```cpp
 // detect_image_type.cpp
 // compile with: /clr
 using namespace System;
@@ -81,6 +81,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [使用 C++ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)

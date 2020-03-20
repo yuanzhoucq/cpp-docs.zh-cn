@@ -37,7 +37,6 @@ f1_keywords:
 - ATL::CRowset::CRowset
 - ATL::CRowset<TAccessor>::CRowset
 - ATL.CRowset.CRowset
-- CRowset
 - CRowset<TAccessor>.CRowset
 - CRowset::CRowset
 - ATL.CRowset<TAccessor>.CRowset
@@ -84,7 +83,6 @@ f1_keywords:
 - ATL.CRowset.GetDataHere
 - ATL.CRowset<TAccessor>.GetOriginalData
 - CRowset<TAccessor>::GetOriginalData
-- GetOriginalData
 - ATL::CRowset<TAccessor>::GetOriginalData
 - ATL.CRowset.GetOriginalData
 - CRowset::GetOriginalData
@@ -98,7 +96,6 @@ f1_keywords:
 - CRowset<TAccessor>::GetRowStatus
 - ATL.CRowset.GetRowStatus
 - CRowset<TAccessor>.GetRowStatus
-- GetRowStatus
 - ATL.CRowset<TAccessor>.Insert
 - CRowset.Insert
 - CRowset<TAccessor>.Insert
@@ -109,7 +106,6 @@ f1_keywords:
 - ATL::CRowset::Insert
 - CRowset::IsSameRow
 - CRowset.IsSameRow
-- IsSameRow
 - ATL::CRowset::IsSameRow
 - ATL.CRowset.IsSameRow
 - CRowset<TAccessor>::IsSameRow
@@ -129,7 +125,6 @@ f1_keywords:
 - ATL.CRowset.MoveLast
 - ATL::CRowset::MoveLast
 - CRowset<TAccessor>.MoveLast
-- MoveLast
 - CRowset::MoveLast
 - ATL.CRowset<TAccessor>.MoveLast
 - CRowset.MoveLast
@@ -143,7 +138,6 @@ f1_keywords:
 - ATL::CRowset::MoveNext
 - CRowset<TAccessor>.MovePrev
 - CRowset.MovePrev
-- MovePrev
 - CRowset::MovePrev
 - ATL.CRowset.MovePrev
 - ATL::CRowset<TAccessor>::MovePrev
@@ -154,11 +148,9 @@ f1_keywords:
 - ATL::CRowset<TAccessor>::MoveToBookmark
 - ATL.CRowset.MoveToBookmark
 - ATL.CRowset<TAccessor>.MoveToBookmark
-- MoveToBookmark
 - CRowset::MoveToBookmark
 - CRowset.MoveToBookmark
 - CRowset<TAccessor>::MoveToBookmark
-- MoveToRatio
 - CRowset<TAccessor>::MoveToRatio
 - CRowset::MoveToRatio
 - CRowset<TAccessor>.MoveToRatio
@@ -167,7 +159,6 @@ f1_keywords:
 - CRowset.MoveToRatio
 - ATL.CRowset<TAccessor>.MoveToRatio
 - ATL::CRowset<TAccessor>::MoveToRatio
-- ReleaseRows
 - CRowset::ReleaseRows
 - ATL::CRowset<TAccessor>::ReleaseRows
 - CRowset<TAccessor>.ReleaseRows
@@ -177,7 +168,6 @@ f1_keywords:
 - CRowset<TAccessor>::ReleaseRows
 - ATL::CRowset::ReleaseRows
 - ATL.CRowset<TAccessor>.SetData
-- SetData
 - ATL::CRowset::SetData
 - CRowset<TAccessor>.SetData
 - CRowset::SetData
@@ -238,16 +228,16 @@ helpviewer_keywords:
 - Update method
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-ms.openlocfilehash: dc4f619fb0dba924693682c927247e809fe2cfe9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 689cd3a1f7496ad75bf83e0b1a2a14f7bd1b1f6f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62361947"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545575"
 ---
 # <a name="crowset-class"></a>CRowset 类
 
-封装 OLE DB 行集对象和多个相关接口，并提供行集数据的操作方法。
+封装一个 OLE DB 行集对象和多个相关接口，并为行集数据提供操作方法。
 
 ## <a name="syntax"></a>语法
 
@@ -256,10 +246,10 @@ template <class TAccessor = CAccessorBase>
 class CRowset
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *TAccessor*<br/>
-一个访问器类。 默认值为 `CAccessorBase`。
+一个访问器类。 默认为 `CAccessorBase`。
 
 ## <a name="requirements"></a>要求
 
@@ -271,40 +261,40 @@ class CRowset
 
 |||
 |-|-|
-|[AddRefRows](#addrefrows)|递增与当前行相关联的引用计数。|
-|[关闭](#close)|释放行和当前`IRowset`接口。|
-|[Compare](#compare)|比较两个创建一个书签，使用[IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539(v=vs.85))。|
-|[CRowset](#crowset)|创建一个新`CRowset`对象，并 （可选） 将其与`IRowset`作为参数提供的接口。|
-|[删除](#delete)|从行集使用删除的行[IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85))。|
-|[FindNextRow](#findnextrow)|后指定的书签查找下一个匹配行。|
-|[GetApproximatePosition](#getapproximateposition)|返回对应于一个书签的行的近似位置。|
-|[GetData](#getdata)|从行的行集的副本检索数据。|
+|[AddRefRows](#addrefrows)|递增与当前行关联的引用计数。|
+|[关闭](#close)|释放行和当前 `IRowset` 接口。|
+|[比较](#compare)|使用[IRowsetLocate：： Compare](/previous-versions/windows/desktop/ms709539(v=vs.85))比较两个书签。|
+|[CRowset](#crowset)|创建新的 `CRowset` 对象，并（可选）将其与作为参数提供的 `IRowset` 接口相关联。|
+|[删除](#delete)|使用[IRowsetChange： DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85))删除行集中的行。|
+|[FindNextRow](#findnextrow)|查找指定书签后面的下一个匹配行。|
+|[GetApproximatePosition](#getapproximateposition)|返回对应于书签的行的近似位置。|
+|[GetData](#getdata)|从行的行集合副本中检索数据。|
 |[GetDataHere](#getdatahere)|从指定的缓冲区中检索数据。|
-|[GetOriginalData](#getoriginaldata)|检索最近从提取或传输到数据源，忽略挂起的更改的数据。|
-|[GetRowStatus](#getrowstatus)|返回的所有行的状态。|
-|[插入](#insert)|创建并将插入新行使用[IRowsetChange:InsertRow](/previous-versions/windows/desktop/ms716921(v=vs.85))。|
-|[IsSameRow](#issamerow)|将指定的行与当前行进行比较。|
-|[MoveFirst](#movefirst)|将下一步提取位置重新定位到的初始位置。|
-|[MoveLast](#movelast)|将移动到最后一个记录。|
-|[MoveNext](#movenext)|从下一步的连续行或指定的数目的下一行之外的位置提取数据。|
+|[GetOriginalData](#getoriginaldata)|检索最近从或传输到数据源的数据，忽略挂起的更改。|
+|[GetRowStatus](#getrowstatus)|返回所有行的状态。|
+|[插入](#insert)|使用[IRowsetChange： InsertRow](/previous-versions/windows/desktop/ms716921(v=vs.85))创建并插入新行。|
+|[IsSameRow](#issamerow)|将指定行与当前行进行比较。|
+|[MoveFirst](#movefirst)|将下一个提取位置重新定位到初始位置。|
+|[MoveLast](#movelast)|移到最后一条记录。|
+|[MoveNext](#movenext)|从下一个连续行或指定数目的位置（在下一行之后）提取数据。|
 |[MovePrev](#moveprev)|移动到上一条记录。|
-|[MoveToBookmark](#movetobookmark)|从该书签提取用书签标记的行或指定的偏移量处的行。|
-|[MoveToRatio](#movetoratio)|提取从行集中的小数位置开始的行。|
-|[ReleaseRows](#releaserows)|调用[irowset:: Releaserows](/previous-versions/windows/desktop/ms719771(v=vs.85))释放当前的行句柄。|
-|[SetData](#setdata)|设置行使用的一个或多个列中数据值[IRowsetChange:SetData](/previous-versions/windows/desktop/ms721232(v=vs.85))。|
-|[撤消](#undo)|撤消自上次提取的行所做任何更改或[更新](../../data/oledb/crowset-update.md)。|
-|[更新](#update)|传输所有挂起的自上次提取或更新后对当前行所做的更改。|
-|[UpdateAll](#updateall)|将任何挂起的更改自上次提取或更新后对所有行进行传输。|
+|[MoveToBookmark](#movetobookmark)|提取书签所标记的行，或从该书签指定偏移量处的行。|
+|[MoveToRatio](#movetoratio)|从行集中的小数位置开始提取行。|
+|[ReleaseRows](#releaserows)|调用[IRowset：： ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85))以释放当前的行句柄。|
+|[SetData](#setdata)|使用[IRowsetChange： SetData](/previous-versions/windows/desktop/ms721232(v=vs.85))设置行的一列或多列中的数据值。|
+|[撤消](#undo)|撤消自上次提取或[更新](../../data/oledb/crowset-update.md)以来对行所做的任何更改。|
+|[Update](#update)|传输自上次提取或更新以来对当前行所做的所有挂起的更改。|
+|[UpdateAll](#updateall)|传输自上次提取或更新以来对所有行所做的所有挂起的更改。|
 
 ## <a name="remarks"></a>备注
 
-在 OLE DB 行集是通过该程序设置和检索数据的对象。
+在 OLE DB 中，行集是程序用来设置和检索数据的对象。
 
-此类不是为了进行实例化传递，但作为模板参数`CTable`或`CCommand`(`CRowset`是默认值)。
+此类不应实例化，而是作为模板参数传递到 `CTable` 或 `CCommand` （`CRowset` 为默认值）。
 
-## <a name="addrefrows"></a> CRowset::AddRefRows
+## <a name="crowsetaddrefrows"></a><a name="addrefrows"></a>CRowset：： AddRefRows
 
-调用[irowset:: Addrefrows](/previous-versions/windows/desktop/ms719619(v=vs.85))增加 （1) 的引用计数与相关联的当前行句柄。
+调用[IRowset：： AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85))以递增（一）与当前行句柄关联的引用计数。
 
 ### <a name="syntax"></a>语法
 
@@ -318,11 +308,11 @@ HRESULT AddRefRows() throw();
 
 ### <a name="remarks"></a>备注
 
-此方法递增当前行句柄的引用计数。 调用[ReleaseRows](../../data/oledb/crowset-releaserows.md)要递减计数。 移动方法返回的行具有引用计数之一。
+此方法会递增当前行句柄的引用数。 调用[ReleaseRows](../../data/oledb/crowset-releaserows.md)以减少计数。 Move 方法返回的行的引用计数为1。
 
-## <a name="close"></a> CRowset::Close
+## <a name="crowsetclose"></a><a name="close"></a>CRowset：： Close
 
-释放行和当前[IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85))接口。
+释放行和当前的[IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85))接口。
 
 ### <a name="syntax"></a>语法
 
@@ -334,9 +324,9 @@ void Close() throw();
 
 此方法释放行集合中当前包含的所有行。
 
-## <a name="compare"></a> CRowset::Compare
+## <a name="crowsetcompare"></a><a name="compare"></a>CRowset：： Compare
 
-比较两个创建一个书签，使用[IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539(v=vs.85))。
+使用[IRowsetLocate：： Compare](/previous-versions/windows/desktop/ms709539(v=vs.85))比较两个书签。
 
 ### <a name="syntax"></a>语法
 
@@ -346,16 +336,16 @@ HRESULT Compare(const CBookmarkBase& bookmark1,
    DBCOMPARE* pComparison) const throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *Bookmark1*<br/>
-[in]要比较的第一个书签。
+中要比较的第一个书签。
 
 *Bookmark2*<br/>
-[in]要比较的第二个书签。
+中要比较的第二个书签。
 
 *pComparison*<br/>
-[out]指向比较的结果的指针。
+弄指向比较结果的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -363,13 +353,13 @@ HRESULT Compare(const CBookmarkBase& bookmark1,
 
 ### <a name="remarks"></a>备注
 
-此方法需要的可选接口`IRowsetLocate`，这可能不支持对所有提供程序; 如果这是这种情况，该方法将返回 E_NOINTERFACE。 您还必须设置`DBPROP_IRowsetLocate`为 VARIANT_TRUE 之前调用`Open`命令，其中包含行集的表上。
+此方法需要 `IRowsetLocate`的可选接口，该接口在所有提供程序上可能不受支持;如果是这种情况，则该方法将返回 E_NOINTERFACE。 还必须在对包含行集的表或命令调用 `Open` 之前，将 `DBPROP_IRowsetLocate` 设置为 VARIANT_TRUE。
 
 有关在使用者中使用书签的信息，请参阅[使用书签](../../data/oledb/using-bookmarks.md)。
 
-## <a name="crowset"></a> CRowset::CRowset
+## <a name="crowsetcrowset"></a><a name="crowset"></a>CRowset：： CRowset
 
-创建一个新`CRowset`对象，并 （可选） 将其与[IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85))作为参数提供的接口。
+创建新的 `CRowset` 对象，并（可选）将其与作为参数提供的[IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85))接口相关联。
 
 ### <a name="syntax"></a>语法
 
@@ -379,14 +369,14 @@ CRowset();
 CRowset(IRowset* pRowset);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *pRowset*<br/>
 [in] 指向将与此类关联的 `IRowset` 接口的指针。
 
-## <a name="delete"></a> CRowset::Delete
+## <a name="crowsetdelete"></a><a name="delete"></a>CRowset：:D e)
 
-调用[IRowsetChange::DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85))从行集中删除当前行。
+调用[IRowsetChange：:D eleterows](/previous-versions/windows/desktop/ms724362(v=vs.85))删除行集中的当前行。
 
 ### <a name="syntax"></a>语法
 
@@ -398,9 +388,9 @@ HRESULT Delete() const throw();
 
 标准的 HRESULT。
 
-## <a name="findnextrow"></a> CRowset::FindNextRow
+## <a name="crowsetfindnextrow"></a><a name="findnextrow"></a>CRowset：： FindNextRow
 
-后指定的书签查找下一个匹配行。
+查找指定书签后面的下一个匹配行。
 
 ### <a name="syntax"></a>语法
 
@@ -415,31 +405,31 @@ HRESULT FindNextRow(DBCOMPAREOP op,
    CBookmarkBase* pBookmark = NULL) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-*op*<br/>
-[in]要在比较行值中使用的操作。 值，请参阅[irowsetfind:: Findnextrow](/previous-versions/windows/desktop/ms723091(v=vs.85))。
+*基金*<br/>
+中用于比较行值的操作。 有关值，请参阅[IRowsetFind：： FindNextRow](/previous-versions/windows/desktop/ms723091(v=vs.85))。
 
 *pData*<br/>
-[in]指向要匹配的值的指针。
+中指向要匹配的值的指针。
 
-*wType*<br/>
-[in]指示数据类型的缓冲区的值部分。 有关类型指示符的信息，请参阅[数据类型](/previous-versions/windows/desktop/ms723969(v=vs.85))中*OLE DB 程序员参考*Windows SDK 中。
+wType<br/>
+中指示缓冲区的值部分的数据类型。 有关类型指示器的信息，请参阅 Windows SDK 中*OLE DB 程序员参考*中的[数据类型](/previous-versions/windows/desktop/ms723969(v=vs.85))。
 
 *nLength*<br/>
-[in]使用者数据结构分配数据值的长度 （字节）。 有关详细信息，请参阅的说明`cbMaxLen`中[DBBINDING 结构](/previous-versions/windows/desktop/ms716845(v=vs.85))中*OLE DB 程序员参考。*
+中为数据值分配的使用者数据结构的长度（以字节为单位）。 有关详细信息，请参阅*OLE DB 程序员参考*中的[DBBINDING 结构](/previous-versions/windows/desktop/ms716845(v=vs.85))中 `cbMaxLen` 的说明。
 
-*bPrecision*<br/>
-[in]使用获取数据时的最大精度。 使用仅当*wType*是 DBTYPE_NUMERIC。 有关详细信息，请参阅[转换涉及 DBTYPE_NUMERIC 或 DBTYPE_DECIMAL](/previous-versions/windows/desktop/ms719714(v=vs.85))中*OLE DB 程序员参考*。
+bPrecision<br/>
+中获取数据时使用的最大精度。 仅在 DBTYPE_NUMERIC *wType*时使用。 有关详细信息，请参阅*OLE DB 程序员参考*中[涉及 DBTYPE_NUMERIC 或 DBTYPE_DECIMAL 的转换](/previous-versions/windows/desktop/ms719714(v=vs.85))。
 
-*bScale*<br/>
-[in]获取数据时，使用小数位数。 使用仅当*wType* DBTYPE_NUMERIC 或 DBTYPE_DECIMAL。 有关详细信息，请参阅[转换涉及 DBTYPE_NUMERIC 或 DBTYPE_DECIMAL](/previous-versions/windows/desktop/ms719714(v=vs.85))中*OLE DB 程序员参考*。
+bScale<br/>
+中获取数据时使用的小数位数。 仅当*wType*为 DBTYPE_NUMERIC 或 DBTYPE_DECIMAL 时使用。 有关详细信息，请参阅*OLE DB 程序员参考*中[涉及 DBTYPE_NUMERIC 或 DBTYPE_DECIMAL 的转换](/previous-versions/windows/desktop/ms719714(v=vs.85))。
 
 *bSkipCurrent*<br/>
-[in]从其开始搜索的书签的行数。
+中书签中开始搜索的行数。
 
 *pBookmark*<br/>
-[in]要启动的搜索位置的书签。
+中要开始搜索的位置的书签。
 
 ### <a name="return-value"></a>返回值
 
@@ -447,13 +437,13 @@ HRESULT FindNextRow(DBCOMPAREOP op,
 
 ### <a name="remarks"></a>备注
 
-此方法需要的可选接口`IRowsetFind`，这可能不支持对所有提供程序; 如果这是这种情况，该方法将返回 E_NOINTERFACE。 您还必须设置`DBPROP_IRowsetFind`为 VARIANT_TRUE 之前调用`Open`命令，其中包含行集的表上。
+此方法需要 `IRowsetFind`的可选接口，该接口在所有提供程序上可能不受支持;如果是这种情况，则该方法将返回 E_NOINTERFACE。 还必须在对包含行集的表或命令调用 `Open` 之前，将 `DBPROP_IRowsetFind` 设置为 VARIANT_TRUE。
 
 有关在使用者中使用书签的信息，请参阅[使用书签](../../data/oledb/using-bookmarks.md)。
 
-## <a name="getapproximateposition"></a> CRowset::GetApproximatePosition
+## <a name="crowsetgetapproximateposition"></a><a name="getapproximateposition"></a>CRowset：： GetApproximatePosition
 
-返回对应于一个书签的行的近似位置。
+返回对应于书签的行的近似位置。
 
 ### <a name="syntax"></a>语法
 
@@ -463,16 +453,16 @@ HRESULT GetApproximatePosition(const CBookmarkBase* pBookmark,
    DBCOUNTITEM* pcRows) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *pBookmark*<br/>
-[in]指向一个书签，用于标识其位置是要查找的行的指针。 如果只是必需的行计数，则为 NULL。
+中一个指针，指向用于标识要查找其位置的行的书签。 如果只需要行计数，则为 NULL。
 
 *pPosition*<br/>
-[out]指向位置的指针位置`GetApproximatePosition`返回的行的位置。 如果位置不需要为 NULL。
+弄一个指针，指向 `GetApproximatePosition` 返回该行位置的位置。 如果不需要该位置，则为 NULL。
 
 *pcRows*<br/>
-[out]指向位置的指针位置`GetApproximatePosition`返回的总行数。 如果不需要的行计数，则为 NULL。
+弄指向 `GetApproximatePosition` 返回总行数的位置的指针。 如果不需要行计数，则为 NULL。
 
 ### <a name="return-value"></a>返回值
 
@@ -480,13 +470,13 @@ HRESULT GetApproximatePosition(const CBookmarkBase* pBookmark,
 
 ### <a name="remarks"></a>备注
 
-此方法需要的可选接口`IRowsetScroll`，这可能不支持对所有提供程序; 如果这是这种情况，该方法将返回 E_NOINTERFACE。 您还必须设置`DBPROP_IRowsetScroll`为 VARIANT_TRUE 之前调用`Open`命令，其中包含行集的表上。
+此方法需要 `IRowsetScroll`的可选接口，该接口在所有提供程序上可能不受支持;如果是这种情况，则该方法将返回 E_NOINTERFACE。 还必须在对包含行集的表或命令调用 `Open` 之前，将 `DBPROP_IRowsetScroll` 设置为 VARIANT_TRUE。
 
 有关在使用者中使用书签的信息，请参阅[使用书签](../../data/oledb/using-bookmarks.md)。
 
-## <a name="getdata"></a> CRowset::GetData
+## <a name="crowsetgetdata"></a><a name="getdata"></a>CRowset：：
 
-从行的行集的副本检索数据。
+从行的行集合副本中检索数据。
 
 ### <a name="syntax"></a>语法
 
@@ -496,10 +486,10 @@ HRESULT GetData() throw();
 HRESULT GetData(int nAccessor) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *nAccessor*<br/>
-[in]要用于访问数据的访问器 （零偏移量） 索引号。
+中要用于访问数据的访问器的（零偏移量）索引号。
 
 ### <a name="return-value"></a>返回值
 
@@ -507,11 +497,11 @@ HRESULT GetData(int nAccessor) throw();
 
 ### <a name="remarks"></a>备注
 
-如果指定不是在为自动访问器的取值函数[BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)，使用此方法以显式获取数据，通过传递取值函数数量。
+如果指定的访问器不是[BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)中的 autoaccessor，请使用此方法通过传递访问器编号来显式获取数据。
 
-## <a name="getdatahere"></a> CRowset::GetDataHere
+## <a name="crowsetgetdatahere"></a><a name="getdatahere"></a>CRowset：： GetDataHere
 
-从当前行中检索数据并将其放到指定的缓冲区。
+检索当前行中的数据，并将其放入指定的缓冲区。
 
 ### <a name="syntax"></a>语法
 
@@ -520,13 +510,13 @@ HRESULT GetDataHere(int nAccessor,
    void* pBuffer) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *nAccessor*<br/>
-[in]要用于访问数据的访问器的索引号。
+中要用于访问数据的访问器的索引号。
 
 *pBuffer*<br/>
-[out]要将当前记录的数据放置到的缓冲区。
+弄要在其中放置当前记录的数据的缓冲区。
 
 ### <a name="return-value"></a>返回值
 
@@ -534,11 +524,11 @@ HRESULT GetDataHere(int nAccessor,
 
 ### <a name="remarks"></a>备注
 
-有关如何使用此函数的示例，请参阅[MultiRead 的示例](../../overview/visual-cpp-samples.md)。
+有关如何使用此函数的示例，请参阅[MultiRead 示例](../../overview/visual-cpp-samples.md)。
 
-## <a name="getoriginaldata"></a> CRowset::GetOriginalData
+## <a name="crowsetgetoriginaldata"></a><a name="getoriginaldata"></a>CRowset：： GetOriginalData
 
-调用`IRowsetUpdate::GetOriginalData`检索最近从提取或传输到数据源的数据。
+调用 `IRowsetUpdate::GetOriginalData` 检索最近从数据源提取或传输到数据源的数据。
 
 ### <a name="syntax"></a>语法
 
@@ -552,13 +542,13 @@ HRESULT GetOriginalData() throw();
 
 ### <a name="remarks"></a>备注
 
-此方法检索的数据从最近提取或传输到数据源;它不会检索基于挂起的更改的值。
+此方法检索最近从数据源提取或传输到数据源的数据;它不会基于挂起的更改检索值。
 
-此方法需要的可选接口`IRowsetUpdate`，这可能不支持对所有提供程序; 如果这是这种情况，该方法将返回 E_NOINTERFACE。 您还必须设置`DBPROP_IRowsetUpdate`为 VARIANT_TRUE 之前调用`Open`命令，其中包含行集的表上。
+此方法需要 `IRowsetUpdate`的可选接口，该接口在所有提供程序上可能不受支持;如果是这种情况，则该方法将返回 E_NOINTERFACE。 还必须在对包含行集的表或命令调用 `Open` 之前，将 `DBPROP_IRowsetUpdate` 设置为 VARIANT_TRUE。
 
-## <a name="getrowstatus"></a> CRowset::GetRowStatus
+## <a name="crowsetgetrowstatus"></a><a name="getrowstatus"></a>CRowset：： GetRowStatus
 
-返回的所有行的状态。
+返回所有行的状态。
 
 ### <a name="syntax"></a>语法
 
@@ -566,10 +556,10 @@ HRESULT GetOriginalData() throw();
 HRESULT GetRowStatus(DBPENDINGSTATUS* pStatus) const throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *pStatus*<br/>
-[out]指向一个位置的其中`GetRowStatus`返回的状态值。 请参阅中的 OLE DB 程序员参考 DBPENDINGSTATUS。
+弄指向 `GetRowStatus` 返回状态值的位置的指针。 请参阅 OLE DB 程序员参考中的 DBPENDINGSTATUS。
 
 ### <a name="return-value"></a>返回值
 
@@ -577,11 +567,11 @@ HRESULT GetRowStatus(DBPENDINGSTATUS* pStatus) const throw();
 
 ### <a name="remarks"></a>备注
 
-此方法需要的可选接口`IRowsetUpdate`，这可能不支持对所有提供程序; 如果这是这种情况，该方法将返回 E_NOINTERFACE。 您还必须设置`DBPROP_IRowsetUpdate`为 VARIANT_TRUE 之前调用`Open`命令，其中包含行集的表上。
+此方法需要 `IRowsetUpdate`的可选接口，该接口在所有提供程序上可能不受支持;如果是这种情况，则该方法将返回 E_NOINTERFACE。 还必须在对包含行集的表或命令调用 `Open` 之前，将 `DBPROP_IRowsetUpdate` 设置为 VARIANT_TRUE。
 
-## <a name="insert"></a> CRowset::Insert
+## <a name="crowsetinsert"></a><a name="insert"></a>CRowset：： Insert
 
-创建并初始化新行使用访问器中的数据。
+使用访问器中的数据创建并初始化新行。
 
 ### <a name="syntax"></a>语法
 
@@ -590,13 +580,13 @@ HRESULT Insert(int nAccessor = 0,
    bool bGetHRow = false) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *nAccessor*<br/>
-[in]要用于插入数据的访问器的数目。
+中用于插入数据的访问器的数目。
 
 *bGetHRow*<br/>
-[in]指示是否检索为插入的行的句柄。
+中指示是否检索插入行的句柄。
 
 ### <a name="return-value"></a>返回值
 
@@ -604,21 +594,21 @@ HRESULT Insert(int nAccessor = 0,
 
 ### <a name="remarks"></a>备注
 
-此方法需要的可选接口`IRowsetChange`，这可能不支持对所有提供程序; 如果这是这种情况，该方法将返回 E_NOINTERFACE。 您还必须设置`DBPROP_IRowsetChange`为 VARIANT_TRUE 之前调用`Open`命令，其中包含行集的表上。
+此方法需要 `IRowsetChange`的可选接口，该接口在所有提供程序上可能不受支持;如果是这种情况，则该方法将返回 E_NOINTERFACE。 还必须在对包含行集的表或命令调用 `Open` 之前，将 `DBPROP_IRowsetChange` 设置为 VARIANT_TRUE。
 
-如果一个或多个列不是可写，则插入可能会失败。 修改光标映射以更正此问题。
+如果一列或多列不可写，则插入可能会失败。 修改光标映射以更正此问题。
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何通过行集访问数据源，然后将使用一个表中的行集的字符串。
+下面的示例演示如何通过行集访问数据源，然后使用该行集中的表插入字符串。
 
-首先，通过将一个新的 ATL 对象插入到你的项目中创建的表类。 例如，右键单击工作区窗格中的项目并选择**新的 ATL 对象**。 从**数据访问**类别中，选择**使用者**。 创建类型的使用者对象**表**。 (选择**表**直接从表中创建行集; 选择**命令**创建通过 SQL 命令的行集。)选择数据源，指定用来访问该数据源的表。 如果调用使用者对象**CCustomerTable**，然后，可实现您插入的代码，如下所示：
+首先，通过将新 ATL 对象插入到项目中来创建一个表类。 例如，右键单击 "工作区" 窗格中的项目，然后选择 "**新建 ATL 对象**"。 从 "**数据访问**" 类别中，选择 "**使用者**"。 创建类型为**Table**的使用者对象。 （选择**表**直接从表创建行集; 选择**命令**会通过 SQL 命令创建行集。）选择一个数据源，并指定要通过其访问该数据源的表。 如果调用使用者对象**CCustomerTable**，则需实现插入代码，如下所示：
 
 [!code-cpp[NVC_OLEDB_Consumer#10](../../data/oledb/codesnippet/cpp/crowset-insert_1.cpp)]
 
-## <a name="issamerow"></a> CRowset::IsSameRow
+## <a name="crowsetissamerow"></a><a name="issamerow"></a>CRowset：： IsSameRow
 
-将指定的行与当前行进行比较。
+将指定行与当前行进行比较。
 
 ### <a name="syntax"></a>语法
 
@@ -626,18 +616,18 @@ HRESULT Insert(int nAccessor = 0,
 HRESULT IsSameRow(HROW hRow) const throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *hRow*<br/>
-[in]要与当前行进行比较的行句柄。
+中要与当前行进行比较的行的句柄。
 
 ### <a name="return-value"></a>返回值
 
-标准的 HRESULT。 则为 S_OK，指示行相同。 其他值，请参阅[IRowsetIndentity::IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85))中*OLE DB 程序员参考*Windows SDK 中。
+标准的 HRESULT。 S_OK 指示行是相同的。 有关其他值，请参阅 Windows SDK 中*OLE DB 程序员参考*中的[IRowsetIndentity：： IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) 。
 
-## <a name="movefirst"></a> CRowset::MoveFirst
+## <a name="crowsetmovefirst"></a><a name="movefirst"></a>CRowset：： MoveFirst
 
-将光标移到初始位置，并检索初始行。
+将光标移至初始位置，并检索初始行。
 
 ### <a name="syntax"></a>语法
 
@@ -651,9 +641,9 @@ HRESULT MoveFirst() throw();
 
 ### <a name="remarks"></a>备注
 
-调用[irowset:: Restartposition](/previous-versions/windows/desktop/ms712877(v=vs.85))来重新定位的初始位置 （行集创建时的下一步提取位置的位置） 的下一步提取位置，并检索初始行。
+调用[IRowset：： RestartPosition](/previous-versions/windows/desktop/ms712877(v=vs.85))将下一个提取位置重新定位到初始位置（创建行集时的下一个提取位置的位置）并检索初始行。
 
-## <a name="movelast"></a> CRowset::MoveLast
+## <a name="crowsetmovelast"></a><a name="movelast"></a>CRowset：： MoveLast
 
 将光标移到最后一行。
 
@@ -669,13 +659,13 @@ HRESULT MoveLast() throw();
 
 ### <a name="remarks"></a>备注
 
-调用[irowset:: Restartposition](/previous-versions/windows/desktop/ms712877(v=vs.85))若要重新定位的下一步提取位置到最后一个位置，并检索最后一行。
+调用[IRowset：： RestartPosition](/previous-versions/windows/desktop/ms712877(v=vs.85))将下一个提取位置重新定位到最后一个位置并检索最后一行。
 
-此方法要求您设置`DBPROP_CANSCROLLBACKWARDS`为 VARIANT_TRUE 之前调用`Open`命令，其中包含行集的表上。 (为提高性能，你可能还要设置`DBPROP_QUICKRESTART`为 VARIANT_TRUE。)
+此方法要求在对包含行集的表或命令调用 `Open` 之前，将 `DBPROP_CANSCROLLBACKWARDS` 设置为 VARIANT_TRUE。 （为了获得更好的性能，你还可以将 `DBPROP_QUICKRESTART` 设置为 VARIANT_TRUE。）
 
-## <a name="movenext"></a> CRowset::MoveNext
+## <a name="crowsetmovenext"></a><a name="movenext"></a>CRowset：： MoveNext
 
-将光标移到下一条记录。
+将光标移动到下一条记录。
 
 ### <a name="syntax"></a>语法
 
@@ -686,33 +676,33 @@ HRESULT MoveNext(LONG lSkip,
    bool bForward= true) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *lSkip*<br/>
-[in]正在提取前要跳过的行数。
+中提取之前要跳过的行数。
 
 *bForward*<br/>
-[in]传递 **，则返回 true**要向前移动到下一条记录， **false**向后移动。
+中传递**true**以便前进到下一条记录，设置为**false**则向后移动。
 
 ### <a name="return-value"></a>返回值
 
-标准的 HRESULT。 当已达到行集末尾时，返回 DB_S_ENDOFROWSET。
+标准的 HRESULT。 当到达行集的末尾时，将返回 DB_S_ENDOFROWSET。
 
 ### <a name="remarks"></a>备注
 
-提取从下一步的连续行`CRowset`对象，记住的以前的位置。 （可选） 你可以选择跳过一些*lSkip*行或向后移动。
+从 `CRowset` 对象中提取下一个顺序行，并记住上一个位置。 您也可以选择跳过*lSkip*行或向后移动。
 
-此方法要求你设置以下属性之前调用`Open`对表或包含行集的命令：
+此方法要求在对包含行集的表或命令调用 `Open` 之前设置以下属性：
 
-- `DBPROP_CANSCROLLBACKWARDS` 如果必须为 VARIANT_TRUE *lSkip* < 0
+- 如果*lSkip* < 0，则必须 VARIANT_TRUE `DBPROP_CANSCROLLBACKWARDS`
 
-- `DBPROP_CANFETCHBACKWARDS` 如果必须为 VARIANT_TRUE *bForward* = false
+- 如果*bForward* = false，则必须 VARIANT_TRUE `DBPROP_CANFETCHBACKWARDS`
 
-否则为 (如果*lSkip* > = 0 和*bForward* = true)，不需要设置的任何其他属性。
+否则（如果*lSkip* > = 0， *bForward* = true），则不需要设置任何其他属性。
 
-## <a name="moveprev"></a> CRowset::MovePrev
+## <a name="crowsetmoveprev"></a><a name="moveprev"></a>CRowset：： MovePrev
 
-将光标移到上一条记录。
+将光标移动到上一条记录。
 
 ### <a name="syntax"></a>语法
 
@@ -726,11 +716,11 @@ HRESULT MovePrev() throw();
 
 ### <a name="remarks"></a>备注
 
-此方法要求您设置或者`DBPROP_CANFETCHBACKWARDS`或`DBPROP_CANSCROLLBACKWARDS`为 VARIANT_TRUE 之前调用`Open`命令，其中包含行集的表上。
+此方法要求在对包含行集的表或命令调用 `Open` 之前，将 `DBPROP_CANFETCHBACKWARDS` 或 `DBPROP_CANSCROLLBACKWARDS` 设置为 VARIANT_TRUE。
 
-## <a name="movetobookmark"></a> CRowset::MoveToBookmark
+## <a name="crowsetmovetobookmark"></a><a name="movetobookmark"></a>CRowset：： MoveToBookmark
 
-提取标记的书签或指定的偏移量处的行的行 (*lSkip*) 从该书签。
+提取书签标记的行，或从该书签指定偏移量（*lSkip*）的行。
 
 ### <a name="syntax"></a>语法
 
@@ -739,13 +729,13 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
    LONG lSkip = 0) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-*bookmark*<br/>
+*书签*<br/>
 [in] 标记要从其提取数据的位置的书签。
 
 *lSkip*<br/>
-[in] 从书签到目标行的行数。 如果*lSkip*为零，则提取的第一行是书签的行。 如果*lSkip*为 1，提取的第一行是标有书签的行后的行。 如果*lSkip*为-1，提取的第一行是标有书签的行前的行。
+[in] 从书签到目标行的行数。 如果*lSkip*为零，则提取的第一行是带有书签的行。 如果*lSkip*为1，则提取的第一行是位于书签的行之后的行。 如果*lSkip*为-1，则提取的第一行是位于书签的行前面的行。
 
 ### <a name="return-value"></a>返回值
 
@@ -753,13 +743,13 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 ### <a name="remarks"></a>备注
 
-此方法需要的可选接口`IRowsetLocate`，这可能不支持对所有提供程序; 如果这是这种情况，该方法将返回 E_NOINTERFACE。 您还必须设置`DBPROP_IRowsetLocate`为 VARIANT_TRUE 并将`DBPROP_CANFETCHBACKWARDS`为 VARIANT_TRUE 之前调用`Open`命令，其中包含行集的表上。
+此方法需要 `IRowsetLocate`的可选接口，该接口在所有提供程序上可能不受支持;如果是这种情况，则该方法将返回 E_NOINTERFACE。 还必须将 `DBPROP_IRowsetLocate` 设置为 VARIANT_TRUE 并将 `DBPROP_CANFETCHBACKWARDS` 设置为 VARIANT_TRUE，然后再对包含行集的表或命令调用 `Open`。
 
 有关在使用者中使用书签的信息，请参阅[使用书签](../../data/oledb/using-bookmarks.md)。
 
-## <a name="movetoratio"></a> CRowset::MoveToRatio
+## <a name="crowsetmovetoratio"></a><a name="movetoratio"></a>CRowset：： MoveToRatio
 
-提取从行集中的小数位置开始的行。
+从行集中的小数位置开始提取行。
 
 ### <a name="syntax"></a>语法
 
@@ -768,16 +758,16 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
    DBCOUNTITEM nDenominator,bool bForward = true) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *nNumerator*<br/>
-[in]用于确定小数分子从中提取数据的位置。
+中用于确定从中提取数据的小数位置的分子。
 
 *nDenominator*<br/>
-[in]用于确定小数分母从中提取数据的位置。
+中用于确定从中提取数据的分数的分母。
 
 *bForward*<br/>
-[in]指示是否向前或向后移动。 默认值为转发。
+中指示是向前还是向后移动。 默认值为 forward。
 
 ### <a name="return-value"></a>返回值
 
@@ -785,17 +775,17 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
 
 ### <a name="remarks"></a>备注
 
-`MoveToRatio` 提取行根据大约为以下公式：
+`MoveToRatio` 根据以下公式提取行：
 
 `(nNumerator *  RowsetSize ) / nDenominator`
 
-其中`RowsetSize`是行集，以行为单位的大小。 此公式的准确性取决于特定的提供程序。 有关详细信息，请参阅[irowsetscroll::](/previous-versions/windows/desktop/ms709602(v=vs.85))。
+其中 `RowsetSize` 是行集的大小，以行为单位。 此公式的准确性取决于特定的提供程序。 有关详细信息，请参阅[IRowsetScroll：： GetRowsAtRatio](/previous-versions/windows/desktop/ms709602(v=vs.85))。
 
-此方法需要的可选接口`IRowsetScroll`，这可能不支持对所有提供程序; 如果这是这种情况，该方法将返回 E_NOINTERFACE。 您还必须设置`DBPROP_IRowsetScroll`为 VARIANT_TRUE 之前调用`Open`命令，其中包含行集的表上。
+此方法需要 `IRowsetScroll`的可选接口，该接口在所有提供程序上可能不受支持;如果是这种情况，则该方法将返回 E_NOINTERFACE。 还必须在对包含行集的表或命令调用 `Open` 之前，将 `DBPROP_IRowsetScroll` 设置为 VARIANT_TRUE。
 
-## <a name="releaserows"></a> CRowset::ReleaseRows
+## <a name="crowsetreleaserows"></a><a name="releaserows"></a>CRowset：： ReleaseRows
 
-调用[irowset:: Releaserows](/previous-versions/windows/desktop/ms719771(v=vs.85))释放当前的行句柄。
+调用[IRowset：： ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85))以释放当前的行句柄。
 
 ### <a name="syntax"></a>语法
 
@@ -807,9 +797,9 @@ HRESULT ReleaseRows() throw();
 
 标准的 HRESULT。
 
-## <a name="setdata"></a> CRowset::SetData
+## <a name="crowsetsetdata"></a><a name="setdata"></a>CRowset：： SetData
 
-设置中的某行的一个或多个列的数据值。
+设置行的一列或多列中的数据值。
 
 ### <a name="syntax"></a>语法
 
@@ -819,10 +809,10 @@ HRESULT SetData() const throw();
 HRESULT SetData(int nAccessor) const throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *nAccessor*<br/>
-[in]要用于访问数据的访问器的数目。
+中要用于访问数据的访问器的编号。
 
 ### <a name="return-value"></a>返回值
 
@@ -830,15 +820,15 @@ HRESULT SetData(int nAccessor) const throw();
 
 ### <a name="remarks"></a>备注
 
-有关`SetData`接受任何参数，所有访问器的窗体用于进行更新。 通常情况下调用`SetData`若要在行中的列中设置数据值，然后调用[更新](../../data/oledb/crowset-update.md)传输这些更改。
+对于不接受参数的 `SetData` 窗体，所有访问器都用于更新。 通常调用 `SetData` 来设置行中的列中的数据值，然后调用[Update](../../data/oledb/crowset-update.md)来传输这些更改。
 
-此方法需要的可选接口`IRowsetChange`，这可能不支持对所有提供程序; 如果这是这种情况，该方法将返回 E_NOINTERFACE。 您还必须设置`DBPROP_IRowsetChange`为 VARIANT_TRUE 之前调用`Open`命令，其中包含行集的表上。
+此方法需要 `IRowsetChange`的可选接口，该接口在所有提供程序上可能不受支持;如果是这种情况，则该方法将返回 E_NOINTERFACE。 还必须在对包含行集的表或命令调用 `Open` 之前，将 `DBPROP_IRowsetChange` 设置为 VARIANT_TRUE。
 
-如果一个或多个列不是可写，则可能会失败的设置操作。 修改光标映射以更正此问题。
+如果一列或多列不可写，则设置操作可能失败。 修改光标映射以更正此问题。
 
-## <a name="undo"></a> CRowset::Undo
+## <a name="crowsetundo"></a><a name="undo"></a>CRowset：： Undo
 
-撤消自上次提取的行所做任何更改或[更新](../../data/oledb/crowset-update.md)。
+撤消自上次提取或[更新](../../data/oledb/crowset-update.md)以来对行所做的任何更改。
 
 ### <a name="syntax"></a>语法
 
@@ -848,16 +838,16 @@ HRESULT Undo(DBCOUNTITEM* pcRows = NULL,
    DBROWSTATUS* pStatus = NULL) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *pcRows*<br/>
-[out]指向位置的指针位置`Undo`返回它曾尝试撤消如果所需的行数。
+弄一个指针，指向 `Undo` 在需要时返回尝试撤消的行数的位置。
 
 *phRow*<br/>
-[out]指向位置的指针位置`Undo`返回到它尝试撤消如果所需的所有行的句柄数组。
+弄一个指针，指向 `Undo` 在需要时将句柄的数组返回给其尝试撤消的所有行的位置。
 
 *pStatus*<br/>
-[out]指向位置的指针位置`Undo`返回的行状态值。 如果返回任何状态*pStatus*为 null。
+弄指向 `Undo` 返回行状态值的位置的指针。 如果*pStatus*为 null，则不返回状态。
 
 ### <a name="return-value"></a>返回值
 
@@ -865,11 +855,11 @@ HRESULT Undo(DBCOUNTITEM* pcRows = NULL,
 
 ### <a name="remarks"></a>备注
 
-此方法需要的可选接口`IRowsetUpdate`，这可能不支持对所有提供程序; 如果这是这种情况，该方法将返回 E_NOINTERFACE。 您还必须设置`DBPROP_IRowsetUpdate`为 VARIANT_TRUE 之前调用`Open`命令，其中包含行集的表上。
+此方法需要 `IRowsetUpdate`的可选接口，该接口在所有提供程序上可能不受支持;如果是这种情况，则该方法将返回 E_NOINTERFACE。 还必须在对包含行集的表或命令调用 `Open` 之前，将 `DBPROP_IRowsetUpdate` 设置为 VARIANT_TRUE。
 
-## <a name="update"></a> CRowset::Update
+## <a name="crowsetupdate"></a><a name="update"></a>CRowset：： Update
 
-传输任何挂起的更改对当前行进行自上次提取或`Update`对其调用。
+传输自上次提取或 `Update` 调用后对当前行进行的任何挂起的更改。
 
 ### <a name="syntax"></a>语法
 
@@ -879,16 +869,16 @@ HRESULT Update(DBCOUNTITEM* pcRows = NULL,
    DBROWSTATUS* pStatus = NULL) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *pcRows*<br/>
-[out]指向位置的指针位置`Update`返回它尝试更新，如果所需的行数。
+弄一个指针，指向 `Update` 返回其尝试更新的行数（如果需要）的位置。
 
 *phRow*<br/>
-[out]指向位置的指针位置`Update`返回它曾尝试更新行的句柄。 如果返回任何句柄*phRow*为 null。
+弄一个指针，指向 `Update` 返回其尝试更新的行的句柄的位置。 如果*phRow*为 null，则不返回句柄。
 
 *pStatus*<br/>
-[out]指向位置的指针位置`Update`返回的行状态值。 如果返回任何状态*pStatus*为 null。
+弄指向 `Update` 返回行状态值的位置的指针。 如果*pStatus*为 null，则不返回状态。
 
 ### <a name="return-value"></a>返回值
 
@@ -896,13 +886,13 @@ HRESULT Update(DBCOUNTITEM* pcRows = NULL,
 
 ### <a name="remarks"></a>备注
 
-将任何挂起的更改自上次提取或更新该行以来对当前行进行传输 (使用`Update`或[UpdateAll](../../data/oledb/crowset-updateall.md))。 通常情况下调用[SetData](../../data/oledb/crowset-setdata.md)若要设置行中的列中的数据值，然后调用`Update`传输这些更改。
+传输自上次提取或更新行后对当前行进行的任何挂起的更改（使用 `Update` 或[UpdateAll](../../data/oledb/crowset-updateall.md)）。 通常调用[SetData](../../data/oledb/crowset-setdata.md)来设置行中的列中的数据值，然后调用 `Update` 传输这些更改。
 
-此方法需要的可选接口`IRowsetUpdate`，这可能不支持对所有提供程序; 如果这是这种情况，该方法将返回 E_NOINTERFACE。 您还必须设置`DBPROP_IRowsetUpdate`为 VARIANT_TRUE 之前调用`Open`命令，其中包含行集的表上。
+此方法需要 `IRowsetUpdate`的可选接口，该接口在所有提供程序上可能不受支持;如果是这种情况，则该方法将返回 E_NOINTERFACE。 还必须在对包含行集的表或命令调用 `Open` 之前，将 `DBPROP_IRowsetUpdate` 设置为 VARIANT_TRUE。
 
-## <a name="updateall"></a> CRowset::UpdateAll
+## <a name="crowsetupdateall"></a><a name="updateall"></a>CRowset：： UpdateAll
 
-传输任何挂起的更改对所有行进行自上次提取或`Update`对其调用。
+传输自上次提取或 `Update` 调用后对所有行所做的所有挂起的更改。
 
 ### <a name="syntax"></a>语法
 
@@ -912,33 +902,33 @@ HRESULT UpdateAll(DBCOUNTITEM* pcRows = NULL,
    DBROWSTATUS** ppStatus = NULL) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *pcRows*<br/>
-[out]指向位置的指针位置`UpdateAll`返回它尝试更新，如果所需的行数。
+弄一个指针，指向 `UpdateAll` 返回其尝试更新的行数（如果需要）的位置。
 
 *pphRow*<br/>
-[out]指向在其中的内存的指针`UpdateAll`返回它曾尝试更新行的句柄。 如果返回任何句柄*pphRow*为 null。
+弄一个指向内存的指针，该内存用于 `UpdateAll` 返回试图更新的行的句柄。 如果*pphRow*为 null，则不返回句柄。
 
 *ppStatus*<br/>
-[out]指向位置的指针位置`Update`返回的行状态值。 如果返回任何状态*ppStatus*为 null。
+弄指向 `Update` 返回行状态值的位置的指针。 如果*ppStatus*为 null，则不返回状态。
 
 ### <a name="remarks"></a>备注
 
-将任何挂起的更改，因为这些行上次提取或更新使用对所有行进行传输[更新](../../data/oledb/crowset-update.md)或`UpdateAll`。 `UpdateAll` 将更新已修改，而不考虑是否仍有句柄为其每一行 (请参阅*pphRow*) 或不。
+传输自上次提取[或 `UpdateAll`更新](../../data/oledb/crowset-update.md)这些行后，对所有行进行的任何挂起的更改。 `UpdateAll` 将更新所有已修改的行，而不管是否仍有句柄（请参阅*pphRow*）。
 
-例如，如果您使用`Insert`若要在行集中插入五个行，你可以调用`Update`五次或调用`UpdateAll`一次将其所有更新。
+例如，如果使用 `Insert` 在行集中插入五行，则可以调用 `Update` 五次，也可以调用 `UpdateAll` 一次以更新所有行。
 
-此方法需要的可选接口`IRowsetUpdate`，这可能不支持对所有提供程序; 如果这是这种情况，该方法将返回 E_NOINTERFACE。 您还必须设置`DBPROP_IRowsetUpdate`为 VARIANT_TRUE 之前调用`Open`命令，其中包含行集的表上。
+此方法需要 `IRowsetUpdate`的可选接口，该接口在所有提供程序上可能不受支持;如果是这种情况，则该方法将返回 E_NOINTERFACE。 还必须在对包含行集的表或命令调用 `Open` 之前，将 `DBPROP_IRowsetUpdate` 设置为 VARIANT_TRUE。
 
 ### <a name="return-value"></a>返回值
 
 标准的 HRESULT。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [DBViewer 示例](../../overview/visual-cpp-samples.md)<br/>
-[MultiRead 的示例](../../overview/visual-cpp-samples.md)<br/>
-[MultiRead 的属性示例](../../overview/visual-cpp-samples.md)<br/>
+[MultiRead 示例](../../overview/visual-cpp-samples.md)<br/>
+[MultiRead 特性示例](../../overview/visual-cpp-samples.md)<br/>
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)

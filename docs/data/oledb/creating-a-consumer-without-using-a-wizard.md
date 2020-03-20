@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: e8241cfe-5faf-48f8-9de3-241203de020b
-ms.openlocfilehash: 421723ed561e8ed986a64024c4c5d29c9fba6110
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: 85e95afa92c8a968865d9a3031e1a309e68ae7d3
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525122"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "79544698"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>不使用向导创建使用者
 
@@ -17,7 +17,7 @@ ms.locfileid: "65525122"
 
 若要在不使用 ATL OLE DB 使用者向导的情况下添加 OLE DB 使用者支持，请执行以下操作：
 
-- 在 pch.h 文件中，追加以下 `#include` 语句：
+- 在*pch*文件中追加以下 `#include` 语句：
 
     ```cpp
     #include <atlbase.h>
@@ -40,7 +40,7 @@ ms.locfileid: "65525122"
     class CMyTableName : public CCommand<CAccessor<CMyTableNameAccessor>>
     ```
 
-- 调用 `CoInitialize` 来初始化 COM。 调用是在主代码中进行。 例如:
+- 调用 `CoInitialize` 来初始化 COM。 调用是在主代码中进行。 例如：
 
     ```cpp
     HRESULT hr = CoInitialize(NULL);
@@ -56,7 +56,7 @@ ms.locfileid: "65525122"
     hr = rs.Open();            // (Open also executes the command)
     ```
 
-- （可选）使用 `CDBPropSet::AddProperty` 设置行集属性，并将它们作为参数传递给 `rs.Open`。 有关如何完成此操作的示例，请参阅[使用者向导生成的方法](../../data/oledb/consumer-wizard-generated-methods.md)中的“`GetRowsetProperties`”。
+- （可选）使用 `CDBPropSet::AddProperty` 设置行集属性，并将它们作为参数传递给 `rs.Open`。 有关如何完成此操作的示例，请参阅`GetRowsetProperties`使用者向导生成的方法[中的“](../../data/oledb/consumer-wizard-generated-methods.md)”。
 
 - 现在可以使用行集来检索/控制数据了。
 
@@ -68,7 +68,7 @@ ms.locfileid: "65525122"
     ds.Close();
     ```
 
-   如果使用的是命令，建议在 `Close` 后面调用 `ReleaseCommand`。 [CCommand::Close](../../data/oledb/ccommand-close.md) 中的代码示例展示了如何调用 `Close` 和 `ReleaseCommand`。
+   如果使用的是命令，建议在 `ReleaseCommand` 后面调用 `Close`。 [CCommand::Close](../../data/oledb/ccommand-close.md) 中的代码示例展示了如何调用 `Close` 和 `ReleaseCommand`。
 
 - 调用 `CoUnInitialize` 来取消初始化 COM。 调用是在主代码中进行。
 
@@ -76,6 +76,6 @@ ms.locfileid: "65525122"
     CoUninitialize();
     ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [创建 OLE DB 使用者](../../data/oledb/creating-an-ole-db-consumer.md)

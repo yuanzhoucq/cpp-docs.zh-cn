@@ -10,36 +10,36 @@ helpviewer_keywords:
 - throwing exceptions, managed exceptions
 - Visual C++, handling managed exceptions
 ms.assetid: 40ce8931-1ecc-491a-815f-733b23fcba35
-ms.openlocfilehash: e2aed98d9131b3d7b96cdc3e3297823d69d0ad38
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf241d4e599ad58c2e39680d8ed4e4e250b42b18
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393787"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545377"
 ---
 # <a name="basic-concepts-in-using-managed-exceptions"></a>使用托管异常中的基本概念
 
-本主题讨论托管应用程序中的异常处理。 也就是说，使用编译的应用程序 **/clr**编译器选项。
+本主题讨论托管应用程序中的异常处理。 也就是说，使用 **/clr**编译器选项编译的应用程序。
 
-## <a name="in-this-topic"></a>在本主题中
+## <a name="in-this-topic"></a>本主题内容
 
-- [引发的异常在 /clr](#vcconbasicconceptsinusingmanagedexceptionsanchor1)
+- [在/clr 下引发异常](#vcconbasicconceptsinusingmanagedexceptionsanchor1)
 
-- [Try/Catch 块的 CLR 扩展](#vcconbasicconceptsinusingmanagedexceptionsanchor2)
+- [CLR 扩展的 Try/Catch 块](#vcconbasicconceptsinusingmanagedexceptionsanchor2)
 
 ## <a name="remarks"></a>备注
 
-如果使用编译 **/clr**选项，您可以处理 CLR 异常，以及标准<xref:System.Exception>类提供许多有用的方法，用于处理 CLR 异常和建议作为用户定义的异常的基类类。
+如果使用 **/clr**选项进行编译，则可以处理 clr 异常以及标准 <xref:System.Exception> 类提供许多用于处理 clr 异常的有用方法，并建议将其用作用户定义的异常类的基类。
 
-捕获从接口派生的异常类型下，不支持 **/clr**。 此外，公共语言运行时不会不允许您捕获堆栈溢出异常;堆栈溢出异常将终止该进程。
+在 **/clr**下，不支持捕获从接口派生的异常类型。 此外，公共语言运行时不允许捕获堆栈溢出异常;堆栈溢出异常将终止进程。
 
-有关在托管和非托管应用程序中的异常处理之间的差异的详细信息，请参阅[差异在异常处理行为下托管扩展中的C++ ](../dotnet/differences-in-exception-handling-behavior-under-clr.md)。
+有关托管和非托管应用程序中的异常处理之间的差异的详细信息，请参阅[ C++的 "托管扩展" 下的异常处理行为的差异](../dotnet/differences-in-exception-handling-behavior-under-clr.md)。
 
-##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor1"></a> 引发的异常在 /clr
+##  <a name="throwing-exceptions-under-clr"></a><a name="vcconbasicconceptsinusingmanagedexceptionsanchor1"></a>在/clr 下引发异常
 
-C++引发表达式扩展为 CLR 类型引发一个句柄。 下面的示例创建一个自定义异常类型，然后引发该类型的实例：
+将C++扩展 throw 表达式以引发 CLR 类型的句柄。 下面的示例创建一个自定义异常类型，并引发该类型的实例：
 
-```
+```cpp
 // clr_exception_handling.cpp
 // compile with: /clr /c
 ref struct MyStruct: public System::Exception {
@@ -53,9 +53,9 @@ void GlobalFunction() {
 }
 ```
 
-引发之前，必须将装箱值类型：
+在引发之前，必须对值类型进行装箱：
 
-```
+```cpp
 // clr_exception_handling_2.cpp
 // compile with: /clr /c
 value struct MyValueStruct {
@@ -68,11 +68,11 @@ void GlobalFunction() {
 }
 ```
 
-##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor2"></a> Try/Catch 块的 CLR 扩展
+##  <a name="trycatch-blocks-for-clr-extensions"></a><a name="vcconbasicconceptsinusingmanagedexceptionsanchor2"></a>CLR 扩展的 Try/Catch 块
 
-相同**尝试**/**捕获**块结构可用于捕获 CLR 和本机异常：
+同一**try**/**catch**块结构可用于同时捕获 CLR 和本机异常：
 
-```
+```cpp
 // clr_exception_handling_3.cpp
 // compile with: /clr
 using namespace System;
@@ -117,7 +117,7 @@ int main() {
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>输出
 
 ```
 In 'catch(CMyClass& catchC)'
@@ -126,25 +126,25 @@ In 'catch(MyStruct^ catchException)'
 11
 ```
 
-### <a name="order-of-unwinding-for-c-objects"></a>你可以为展开的顺序C++对象
+### <a name="order-of-unwinding-for-c-objects"></a>C++对象的展开顺序
 
-展开发生在任何C++具有析构函数可能引发函数和处理函数之间的运行时堆栈上的对象。 因为 CLR 类型的分配堆上，展开不适用于它们。
+对于包含析构函数C++的任何对象（在引发函数与处理函数之间可能位于运行时堆栈上），将发生展开。 因为 CLR 类型是在堆上分配的，所以展开不应用于它们。
 
-引发的异常事件的顺序是按如下所示：
+引发的异常的事件顺序如下所示：
 
-1. 运行时遍历堆栈以查找适当的 catch 子句，或对于 SEH，除了 SEH，以捕获异常的筛选器。 Catch 子句按词汇顺序首先搜索，然后动态向下调用堆栈。
+1. 运行时将遍历查找适当的 catch 子句的堆栈，对于 SEH，则会遍历该堆栈（SEH 除外）来捕获异常。 先按词法顺序搜索 Catch 子句，然后在调用堆栈中动态向下搜索。
 
-1. 一旦找到正确的处理程序，堆栈的展开到该点。 每个函数调用堆栈上，会销毁了其本地对象和块被执行 __finally，从大多数由里向外嵌套。
+1. 找到正确的处理程序后，堆栈将被展开到该点。 对于堆栈上的每个函数调用，其本地对象是销毁的，并且从最嵌套的外部执行 __finally 块。
 
-1. 展开堆栈后，执行 catch 子句。
+1. 堆栈展开后，会执行 catch 子句。
 
-### <a name="catching-unmanaged-types"></a>捕获非托管的类型
+### <a name="catching-unmanaged-types"></a>捕获非托管类型
 
-时引发的非托管的对象类型，则将其包装的类型异常<xref:System.Runtime.InteropServices.SEHException>。 搜索相应时**捕获**子句中，有两种可行方法。
+当引发非托管对象类型时，将使用 <xref:System.Runtime.InteropServices.SEHException>类型的异常进行包装。 搜索相应的**catch**子句时，有两种可能的情况。
 
-- 如果一个本机C++遇到类型、 解包，相比所遇到的类型异常。 这种比较允许一个本机C++类型以正常方式捕获。
+- 如果遇到本机C++类型，则会将异常解包，并将其与遇到的类型进行比较。 此比较允许以正常C++方式捕获本机类型。
 
-- 但是，如果**捕获**类型的子句**SEHException**或首先检查任何其基类，该子句将截获的异常。 因此，应将捕获的所有 catch 子句本机C++首先类型之前任何 catch 子句的 CLR 类型。
+- 但是，如果首先检查类型为**SEHException**的**catch**子句或其任何基类，子句将截获该异常。 因此，应将捕获本机C++类型的所有 catch 子句放在 CLR 类型的任何 catch 子句之前。
 
 请注意：
 
@@ -152,19 +152,19 @@ In 'catch(MyStruct^ catchException)'
 catch(Object^)
 ```
 
-和
+and
 
 ```
 catch(...)
 ```
 
-同时会捕获任何则引发该异常的类型包括 SEH 异常。
+将捕获任何引发的类型，包括 SEH 异常。
 
-如果非托管的类型由 catch(Object^) 捕获，它不会销毁则引发该异常的对象。
+如果 catch （Object ^）捕获非托管类型，则不会销毁引发的对象。
 
-当引发或捕捉非托管异常时，我们建议你使用[/EHsc](../build/reference/eh-exception-handling-model.md)编译器选项代替 **/EHs**或 **/EHa**。
+引发或捕获非托管异常时，建议使用[/ehsc](../build/reference/eh-exception-handling-model.md)编译器选项，而不是 **/ehs**或 **/eha**。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [异常处理](../extensions/exception-handling-cpp-component-extensions.md)<br/>
 [safe_cast](../extensions/safe-cast-cpp-component-extensions.md)<br/>
